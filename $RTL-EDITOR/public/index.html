@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hebrew Markdown Editor</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Files</h3>
+                <button id="refresh-btn">↻</button>
+            </div>
+            <div class="file-tree" id="file-tree">
+                Loading files...
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="tabs" id="tabs"></div>
+            <div class="editor-container">
+                <div class="editor-placeholder" id="editor-placeholder">
+                    Select a file to start editing
+                </div>
+                <div class="editor-pane" id="editor-pane" style="display: none;">
+                    <!--
+                        <div class="editor-toolbar">
+                            <span class="file-path" id="current-file-path"></span>
+                        </div>
+                    -->
+                    <textarea id="editor" placeholder="Start writing your markdown..."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/public/app.js"></script>
+</body>
+</html>
