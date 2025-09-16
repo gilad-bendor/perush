@@ -1,5 +1,8 @@
 #!/usr/local/bin/node
 
+// After downloading a Google-Doc as a Markdown file, run this script to convert it to a more suitable format for right-to-left text.
+// The created file's name will end with ".rtl.md"
+
 const fs = require('fs');
 
 const googleDriveMdFilePath = process.argv[2];
@@ -14,7 +17,7 @@ const convertedFilePath = googleDriveMdFilePath.replace(/((\.doc)?\.md)?$/, '.rt
 // א  x  \u05d0
 // ת  x  \u05ea
 // ט  x  \u05d8
-// נ  x  \u05e0
+// ס  x  \u05e1
 const convertedFileContent = googleDriveMdFileContent
     // Main index
     .replace(/(^\[.+]\(.+\)\n+){5,}/m, "<!-- INDEX START -->\n<!-- INDEX END -->\n\n")
@@ -32,8 +35,8 @@ const convertedFileContent = googleDriveMdFileContent
     .replace(/\t/g, '    ')
     // Pasukim
     .replace(/^## \*\*([\u05d0-\u05ea]+) ([\u05d0-\u05ea]+)\*\*  (.*)/gm, "> $1 $2: $3  \n")
-    .replace(/^## ([\u05d0-\u05e0][\u05d0-\u05d8]?) ([\u05d0-\u05e0][\u05d0-\u05d8]?)  (.*)/gm, "> $1 $2: $3  \n")
-    .replace(/^## \*\*([\u05d0-\u05e0][\u05d0-\u05d8]?) ([\u05d0-\u05e0][\u05d0-\u05d8]?)\*\*  ?(.*)/gm, "> $1 $2: $3  \n")
+    .replace(/^## ([\u05d0-\u05e1][\u05d0-\u05d8]?) ([\u05d0-\u05e1][\u05d0-\u05d8]?)  (.*)/gm, "> $1 $2: $3  \n")
+    .replace(/^## \*\*([\u05d0-\u05e1][\u05d0-\u05d8]?) ([\u05d0-\u05e1][\u05d0-\u05d8]?)\*\*  ?(.*)/gm, "> $1 $2: $3  \n")
     // Collapse multiple newlines
     .replace(/\n{3,}/g, '\n\n')
     // Collapse empty lines between psukim
