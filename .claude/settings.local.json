@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./list-files-range.js :*)",
+      "Bash(./list-files-range.js :* :*)"
+    ],
+    "deny": []
+  }
+}
