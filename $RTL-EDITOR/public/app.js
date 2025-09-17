@@ -1,24 +1,32 @@
 class MarkdownEditor {
     constructor() {
+        // Get the HTML of the editor template and remove it from the DOM.
+        const editorTemplateElement = document.querySelector('.editor');
+        this.editorTemplate = editorTemplateElement.outerHTML;
+        editorTemplateElement.remove();
+
         this.tabs = new Map();
         this.activeTab = null;
-        this.activeTabIsInitializing = false;
         this.autosaveTimer = null;
         this.scrollPositions = new Map();
-        this.init();
+        this.expandedFolders = new Set();
+        this.fileTreeElements = new Map();
+        this.init().catch(console.error);
     }
 
     async init() {
-        this.bindEvents();
-        await this.loadFiles();
-        this.restoreSession();
+        this.bindGlobalEvents();
+        await this.restoreSession();
+        await this.loadFilesTree();
     }
 
-    bindEvents() {
-        document.getElementById('refresh-btn').addEventListener('click', () => this.loadFiles());
+    bindGlobalEvents() {
+        document.getElementById('refresh-btn').addEventListener('click', () => this.loadFilesTree());
+        window.addEventListener('beforeunload', () => this.saveSession());
+    }
 
-        const editor = document.getElementById('editor');
-        editor.addEventListener('keydown', (event) => {
+    bindEditorEvents(editorTextarea, filePath) {
+        editorTextarea.addEventListener('keydown', (event) => {
             // console.log(event)
             let targetCursorPos;
 
@@ -26,23 +34,22 @@ class MarkdownEditor {
             if (event.code === 'Home') {
                 if (event.metaKey) {
                     targetCursorPos = 0; // Move to start of text if Cmd+Home
-                    editor.scrollTop = 0;
+                    editorTextarea.scrollTop = 0;
                 } else {
-                    const text = editor.value;
-                    const cursorPos = editor.selectionStart;
+                    const text = editorTextarea.value;
+                    const cursorPos = editorTextarea.selectionStart;
                     targetCursorPos = text.lastIndexOf('\n', cursorPos - 1) + 1;
                 }
             }
 
             // Override macOS annoying "End" key behavior: move to end of line, instead scrolling to end of text.
             if (event.code === 'End') {
-                const text = editor.value;
+                const text = editorTextarea.value;
                 if (event.metaKey) {
                     targetCursorPos = text.length; // Move to end of text if Cmd+End
-                    editor.scrollTop = 1000000000;
+                    editorTextarea.scrollTop = 1000000000;
                 } else {
-                    const cursorPos = editor.selectionStart;
-                    const lineStart = text.lastIndexOf('\n', cursorPos - 1) + 1;
+                    const cursorPos = editorTextarea.selectionStart;
                     targetCursorPos = text.indexOf('\n', cursorPos);
                     if (targetCursorPos === -1) {
                         targetCursorPos = text.length; // If no newline, go to end of text
@@ -58,34 +65,26 @@ class MarkdownEditor {
 
             if (targetCursorPos !== undefined) {
                 event.preventDefault();
-                editor.setSelectionRange(targetCursorPos, targetCursorPos);
-                editor.focus();
+                editorTextarea.setSelectionRange(targetCursorPos, targetCursorPos);
+                editorTextarea.focus();
             }
         });
 
-        editor.addEventListener('input', () => {
-            if (this.activeTab) {
-                this.tabs.get(this.activeTab).isDirty = true;
-                this.updateTabTitle(this.activeTab);
-                this.scheduleAutosave();
-            }
+        editorTextarea.addEventListener('input', () => {
+            this.tabs.get(filePath).isDirty = true;
+            this.updateTabTitle(filePath);
+            this.scheduleAutosave();
         });
 
-        editor.addEventListener('scroll', () => {
-            if (this.activeTab) {
-                this.saveScrollPosition();
-            }
-        });
-
-        window.addEventListener('beforeunload', () => {
-            this.saveSession();
+        editorTextarea.addEventListener('scroll', () => {
+            this.saveScrollPosition(filePath);
         });
     }
 
-    async loadFiles() {
+    async loadFilesTree() {
         const fileTree = document.getElementById('file-tree');
         fileTree.innerHTML = 'Loading files...';
-        
+
         try {
             const response = await fetch('/api/files');
             const files = await response.json();
@@ -96,183 +95,181 @@ class MarkdownEditor {
         }
     }
 
-    renderFileTree(files, container, level = 0) {
+    renderFileTree(files, container, level = 0, parentPath = '') {
         container.innerHTML = '';
-        
+
         files.forEach(file => {
             const fileItem = document.createElement('div');
             fileItem.className = `file-item ${file.type}`;
             fileItem.style.paddingLeft = `${12 + level * 16}px`;
             fileItem.textContent = file.name;
-            
+
+            const currentPath = parentPath ? `${parentPath}/${file.name}` : file.name;
+
             if (file.type === 'file') {
-                fileItem.addEventListener('click', () => this.openFile(file.path, file.name));
+                fileItem.addEventListener('click', () => this.openFile(file.path, file.name, true));
+                this.fileTreeElements.set(file.path, fileItem);
+                if (this.activeTab === file.path) {
+                    fileItem.classList.add('active');
+                }
             } else {
                 fileItem.addEventListener('click', () => {
                     const children = fileItem.nextElementSibling;
                     if (children) {
-                        children.style.display = children.style.display === 'none' ? 'block' : 'none';
+                        const isExpanded = children.style.display !== 'none';
+                        children.style.display = isExpanded ? 'none' : 'block';
+
+                        if (isExpanded) {
+                            this.expandedFolders.delete(currentPath);
+                        } else {
+                            this.expandedFolders.add(currentPath);
+                        }
+                        this.saveSession();
                     }
                 });
             }
-            
+
             container.appendChild(fileItem);
-            
+
             if (file.type === 'directory' && file.children && file.children.length > 0) {
                 const childrenContainer = document.createElement('div');
                 childrenContainer.className = 'file-children';
-                this.renderFileTree(file.children, childrenContainer, level + 1);
+
+                // Check if this folder should be expanded based on saved state
+                const isExpanded = this.expandedFolders.has(currentPath);
+                childrenContainer.style.display = isExpanded ? 'block' : 'none';
+
+                this.renderFileTree(file.children, childrenContainer, level + 1, currentPath);
                 container.appendChild(childrenContainer);
             }
         });
     }
 
-    async openFile(filePath, fileName) {
-        if (this.tabs.has(filePath)) {
-            this.switchToTab(filePath);
+    async openFile(filePath, fileName, setAsActive = true) {
+        console.log(`openFile(filePath=${JSON.stringify(filePath)}, fileName=${JSON.stringify(fileName)}, setAsActive=${setAsActive})`);
+        try {
+            if (! this.tabs.has(filePath)) {
+                // Create the tab-title element.
+                const tabElement = document.createElement('button');
+                tabElement.className = 'tab';
+                tabElement.innerHTML = `[title-will-be-set-shortly]<span class="tab-close">&times;</span>`;
+                tabElement.querySelector('.tab-close').addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    this.closeTab(filePath).catch(console.error);
+                });
+                tabElement.addEventListener('click', () => this.switchToTab(filePath).catch(console.error));
+                document.getElementById('tabs').appendChild(tabElement);
+
+                // Build the editor <textarea> from the template.
+                const wrapper = document.createElement('div');
+                wrapper.innerHTML = this.editorTemplate;
+                const editorTextarea = wrapper.firstElementChild;
+                document.querySelector('.editor-pane').appendChild(editorTextarea);
+                this.bindEditorEvents(editorTextarea, filePath);
+
+                try {
+                    // Load file content from server.
+                    const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`);
+                    const data = await response.json();
+                    if (!response.ok) {
+                        throw new Error(data.error || 'Failed to load file');
+                    }
+                    editorTextarea.dataset.filePath = filePath;
+                    editorTextarea.value = data.content;
+                    if (this.isRtlFile(fileName)) {
+                        editorTextarea.classList.add('rtl');
+                    }
+                } catch (error) {
+                    console.error(`Failed to load ${JSON.stringify(filePath)}: `, error);
+                    this.closeTab(filePath).catch(console.error);
+                    return;
+                }
+
+                this.tabs.set(filePath, {
+                    filePath,
+                    fileName,
+                    originalContent: editorTextarea.value,
+                    isDirty: false,
+                    editorTextarea,
+                    tabElement,
+                    abortAutoScrolling: false,
+                });
+                this.updateTabTitle(filePath);
+            }
+
+            if (setAsActive) {
+                await this.switchToTab(filePath); // will call this.saveSession()
+                this.saveSession();
+            }
+        } catch (error) {
+            console.log(`Error opening file: ${error.message}`);
+        }
+    }
+
+    async switchToTab(filePath) {
+        console.log(`switchToTab(${JSON.stringify(filePath)})`);
+        const tabData = this.tabs.get(filePath);
+        if (!tabData) {
+            console.error('Tab data not found for filePath:', filePath);
             return;
         }
 
-        try {
-            const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`);
-            const data = await response.json();
-            
-            if (!response.ok) {
-                throw new Error(data.error || 'Failed to load file');
-            }
-
-            this.tabs.set(filePath, {
-                fileName,
-                content: data.content,
-                originalContent: data.content,
-                isDirty: false,
-                isRTL: this.isRtlFile(fileName)
-            });
-
-            this.createTab(filePath, fileName);
-            this.switchToTab(filePath);
-            this.saveSession();
-        } catch (error) {
-            alert(`Error opening file: ${error.message}`);
+        // Un-activate the old tab and editor.
+        const oldTabData = this.tabs.get(this.activeTab);
+        if (oldTabData) {
+            oldTabData.tabElement.classList.remove('active');
+            oldTabData.editorTextarea.classList.remove('active');
+            this.fileTreeElements.get(oldTabData.filePath)?.classList.remove('active');
         }
-    }
 
-    createTab(filePath, fileName) {
-        const tabsContainer = document.getElementById('tabs');
-        
-        const tab = document.createElement('button');
-        tab.className = 'tab';
-        tab.innerHTML = `
-            ${fileName}
-            <span class="tab-close" onclick="event.stopPropagation(); editor.closeTab('${filePath}')">&times;</span>
-        `;
-        tab.addEventListener('click', () => this.switchToTab(filePath));
-        
-        tabsContainer.appendChild(tab);
-    }
+        // Activate the new tab and editor.
+        tabData.tabElement.classList.add('active');
+        tabData.editorTextarea.classList.add('active');
+        const fileTreeElement = this.fileTreeElements.get(tabData.filePath);
+        fileTreeElement?.classList.add('active');
+        fileTreeElement?.scrollIntoViewIfNeeded();
 
-    switchToTab(filePath) {
-        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-        
-        const tabs = Array.from(document.querySelectorAll('.tab'));
-        const tabIndex = Array.from(this.tabs.keys()).indexOf(filePath);
-        if (tabs[tabIndex]) {
-            tabs[tabIndex].classList.add('active');
+        tabData.editorTextarea.focus();
+
+        // It seems that in Chrome, when a <textarea> is focused, it is auto-scrolling to the cursor, which we don't want.
+        tabData.abortAutoScrolling = true;
+        setTimeout(() => tabData.abortAutoScrolling = false, 100);
+
+        if (!tabData.editorTextarea._wasEverVisible_) {
+            tabData.editorTextarea._wasEverVisible_ = true;
+            this.restoreScrollPosition(filePath);
         }
 
         this.activeTab = filePath;
-        this.activeTabIsInitializing = true;
-        const tabData = this.tabs.get(filePath);
-        
-        const editor = document.getElementById('editor');
-        const placeholder = document.getElementById('editor-placeholder');
-        const editorPane = document.getElementById('editor-pane');
-        // const filePath2 = document.getElementById('current-file-path');
-        
-        placeholder.style.display = 'none';
-        editorPane.style.display = 'flex';
-        
-        editor.value = tabData.content;
-        editor.className = tabData.isRTL ? 'rtl' : '';
-        // filePath2.textContent = filePath;
-        
-        this.restoreScrollPosition(filePath);
         this.saveSession();
-        editor.focus();
     }
 
-    closeTab(filePath) {
+    async closeTab(filePath) {
         const tabData = this.tabs.get(filePath);
-        
+
+        // If the tab is dirty, delay closing it to allow autosave to kick in.
         if (tabData && tabData.isDirty) {
-            if (!confirm('File has unsaved changes. Close anyway?')) {
-                return;
-            }
+            console.log('Delaying close of dirty tab: ', filePath);
+            setTimeout(() => this.closeTab(filePath).catch(console.error), 1000);
+            return;
+        }
+
+        const tabToActivate = this.tabs.keys()[0]
+        if (tabToActivate) {
+            await this.switchToTab(tabToActivate);
+        } else {
+            this.activeTab = null;
         }
 
         this.tabs.delete(filePath);
-        
-        const tabs = Array.from(document.querySelectorAll('.tab'));
-        const tabKeys = Array.from(this.tabs.keys());
-        const tabIndex = tabKeys.indexOf(filePath);
-        
-        if (tabs.length > tabIndex) {
-            tabs[tabKeys.indexOf(filePath) + (this.tabs.has(filePath) ? 0 : 1)]?.remove();
-        }
-        
-        tabs.forEach((tab, index) => {
-            if (tab.textContent.includes(this.tabs.get(tabKeys[index])?.fileName || '')) {
-                tab.remove();
-                return false;
-            }
-        });
-
-        if (this.activeTab === filePath) {
-            if (this.tabs.size > 0) {
-                const nextTab = this.tabs.keys().next().value;
-                this.switchToTab(nextTab);
-            } else {
-                this.activeTab = null;
-                this.activeTabIsInitializing = false;
-                document.getElementById('editor-placeholder').style.display = 'flex';
-                document.getElementById('editor-pane').style.display = 'none';
-            }
-        }
-        
-        this.scrollPositions.delete(filePath);
-        this.updateTabsDisplay();
+        tabData.tabElement.remove();
         this.saveSession();
-    }
-
-    updateTabsDisplay() {
-        const tabsContainer = document.getElementById('tabs');
-        tabsContainer.innerHTML = '';
-        
-        for (const [filePath, tabData] of this.tabs) {
-            this.createTab(filePath, tabData.fileName);
-        }
-        
-        if (this.activeTab && this.tabs.has(this.activeTab)) {
-            const tabs = Array.from(document.querySelectorAll('.tab'));
-            const activeIndex = Array.from(this.tabs.keys()).indexOf(this.activeTab);
-            if (tabs[activeIndex]) {
-                tabs[activeIndex].classList.add('active');
-            }
-        }
     }
 
     updateTabTitle(filePath) {
         const tabData = this.tabs.get(filePath);
-        const tabs = Array.from(document.querySelectorAll('.tab'));
-        const tabIndex = Array.from(this.tabs.keys()).indexOf(filePath);
-        
-        if (tabs[tabIndex] && tabData) {
-            const fileName = tabData.fileName;
-            const title = tabData.isDirty ? `${fileName} •` : fileName;
-            tabs[tabIndex].innerHTML = `
-                ${title}
-                <span class="tab-close" onclick="event.stopPropagation(); editor.closeTab('${filePath}')">&times;</span>
-            `;
+        if (tabData) {
+            tabData.tabElement.firstChild.data = tabData.isDirty ? `${tabData.fileName} •` : tabData.fileName;
         }
     }
 
@@ -280,82 +277,42 @@ class MarkdownEditor {
         if (this.autosaveTimer) {
             clearTimeout(this.autosaveTimer);
         }
-        
+
         this.autosaveTimer = setTimeout(() => {
             if (this.activeTab && this.tabs.get(this.activeTab)?.isDirty) {
                 this.autosave();
             }
-        }, 2000);
+        }, 1000);
     }
 
     async autosave() {
         if (!this.activeTab) return;
 
-        const tabData = this.tabs.get(this.activeTab);
-        const editor = document.getElementById('editor');
-        
-        tabData.content = editor.value;
-        
+
         try {
+            console.log(`Auto saving ${this.activeTab}`);
+            const tabData = this.tabs.get(this.activeTab);
+            const currentContent = tabData.editorTextarea.value;
             const response = await fetch(`/api/file/${encodeURIComponent(this.activeTab)}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ content: tabData.content })
+                body: JSON.stringify({ content: currentContent })
             });
-            
+
             const result = await response.json();
-            
+
             if (!response.ok) {
                 throw new Error(result.error || 'Failed to autosave file');
             }
-            
+
             tabData.isDirty = false;
-            tabData.originalContent = tabData.content;
+            tabData.originalContent = currentContent;
             this.updateTabTitle(this.activeTab);
-            
+
         } catch (error) {
             console.error('Autosave failed:', error);
-        }
-    }
-
-    async saveCurrentFile() {
-        if (!this.activeTab) return;
-
-        const tabData = this.tabs.get(this.activeTab);
-        const editor = document.getElementById('editor');
-        const saveBtn = document.getElementById('save-btn');
-        
-        tabData.content = editor.value;
-        
-        saveBtn.textContent = 'Saving...';
-        saveBtn.disabled = true;
-        
-        try {
-            const response = await fetch(`/api/file/${encodeURIComponent(this.activeTab)}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ content: tabData.content })
-            });
-            
-            const result = await response.json();
-            
-            if (!response.ok) {
-                throw new Error(result.error || 'Failed to save file');
-            }
-            
-            tabData.isDirty = false;
-            tabData.originalContent = tabData.content;
-            this.updateTabTitle(this.activeTab);
-            
-        } catch (error) {
-            alert(`Error saving file: ${error.message}`);
-        } finally {
-            saveBtn.textContent = 'Save';
-            saveBtn.disabled = false;
         }
     }
 
@@ -363,66 +320,52 @@ class MarkdownEditor {
         const sessionData = {
             openTabs: Array.from(this.tabs.keys()),
             activeTab: this.activeTab,
-            scrollPositions: Object.fromEntries(this.scrollPositions)
+            scrollPositions: Object.fromEntries(this.scrollPositions),
+            expandedFolders: Array.from(this.expandedFolders)
         };
+        console.log('Saving session: ', sessionData);
         localStorage.setItem('markdownEditor.session', JSON.stringify(sessionData));
     }
 
     async restoreSession() {
-        const sessionData = localStorage.getItem('markdownEditor.session');
-        if (!sessionData) return;
+        const sessionJson = localStorage.getItem('markdownEditor.session');
+        if (!sessionJson) return;
 
         try {
-            const session = JSON.parse(sessionData);
-            this.scrollPositions = new Map(Object.entries(session.scrollPositions || {}));
-
-            for (const filePath of session.openTabs || []) {
-                try {
-                    const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`);
-                    const data = await response.json();
-                    
-                    if (response.ok) {
-                        const fileName = filePath.split('/').pop();
-                        this.tabs.set(filePath, {
-                            fileName,
-                            content: data.content,
-                            originalContent: data.content,
-                            isDirty: false,
-                            isRTL: this.isRtlFile(fileName)
-                        });
-                        this.createTab(filePath, fileName);
-                    }
-                } catch (error) {
-                    console.warn(`Failed to restore tab: ${filePath}`, error);
-                }
-            }
-
-            if (session.activeTab && this.tabs.has(session.activeTab)) {
-                this.switchToTab(session.activeTab);
-            } else if (this.tabs.size > 0) {
-                this.switchToTab(this.tabs.keys().next().value);
+            const sessionData = JSON.parse(sessionJson);
+            console.log('Restoring session: ', sessionData);
+            this.scrollPositions = new Map(Object.entries(sessionData.scrollPositions || {}));
+            this.expandedFolders = new Set(sessionData.expandedFolders || []);
+            for (const filePath of sessionData.openTabs || []) {
+                const fileName = filePath.split('/').pop();
+                this.openFile(filePath, fileName, filePath === sessionData.activeTab).catch(console.error);
             }
         } catch (error) {
             console.error('Failed to restore session:', error);
         }
     }
 
-    saveScrollPosition() {
-        if (!this.activeTab || this.activeTabIsInitializing) return;
-        const editor = document.getElementById('editor');
-        // console.log('Saving scroll position: ', editor.scrollTop);
-        this.scrollPositions.set(this.activeTab, editor.scrollTop);
+    saveScrollPosition(filePath) {
+        const tabData = this.tabs.get(filePath);
+        if (tabData.abortAutoScrolling) {
+            console.warn(`Ignoring scroll event for ${JSON.stringify(filePath)}}: `, tabData.editorTextarea.scrollTop);
+            tabData.editorTextarea.scrollTop = this.scrollPositions.get(this.activeTab);
+            return;
+        }
+        console.log(`Saving scroll position for ${JSON.stringify(filePath)}: `, tabData.editorTextarea.scrollTop);
+        this.scrollPositions.set(this.activeTab, tabData.editorTextarea.scrollTop);
         this.saveSession();
     }
 
     restoreScrollPosition(filePath) {
         if (!this.scrollPositions.has(filePath)) return;
-        const editor = document.getElementById('editor');
-        setTimeout(() => {
-            // console.log('Restoring scroll position: ', this.scrollPositions.get(filePath));
-            editor.scrollTop = this.scrollPositions.get(filePath);
-            this.activeTabIsInitializing = false;
-        }, 10);
+        const editorTextarea = this.tabs.get(filePath).editorTextarea;
+        const targetScrollTop = this.scrollPositions.get(filePath);
+        console.log(`Restoring scroll position of ${JSON.stringify(filePath)}: ${targetScrollTop}`);
+        editorTextarea.scrollTop = targetScrollTop;
+        if (editorTextarea.scrollTop !== targetScrollTop) {
+            console.warn(`Failed to restore scrollTop of ${JSON.stringify(filePath)} to ${targetScrollTop}, got ${editorTextarea.scrollTop} instead.`);
+        }
     }
 
     isRtlFile(fileName) {
@@ -430,4 +373,5 @@ class MarkdownEditor {
     }
 }
 
-const editor = new MarkdownEditor();
+// Initialize the MarkdownEditor.
+new MarkdownEditor();

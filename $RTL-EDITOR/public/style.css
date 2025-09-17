@@ -72,7 +72,7 @@ body {
     background: #404040;
 }
 
-.file-item.selected {
+.file-item.active {
     background: #007acc;
 }
 
@@ -105,13 +105,14 @@ body {
 .tabs {
     background: #f8f8f8;
     border-bottom: 1px solid #ddd;
+    line-height: 1px;
     /* display: flex; */
-    min-height: 36px;
-    overflow-x: auto;
+    /* min-height: 36px; */
+    /* overflow-x: auto; */
 }
 
 .tab {
-    padding: 8px 16px;
+    padding: 0 8px;
     background: #e8e8e8;
     border: none;
     border-right: 1px solid #ddd;
@@ -146,15 +147,6 @@ body {
     flex-direction: column;
 }
 
-.editor-placeholder {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    font-size: 16px;
-}
-
 .editor-pane {
     flex: 1;
     display: flex;
@@ -170,26 +162,12 @@ body {
     gap: 12px;
 }
 
-#save-btn {
-    padding: 6px 12px;
-    background: #007acc;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 13px;
-}
-
-#save-btn:hover {
-    background: #005a9e;
-}
-
 .file-path {
     font-size: 13px;
     color: #666;
 }
 
-#editor {
+.editor {
     flex: 1;
     border: none;
     padding: 16px;
@@ -199,9 +177,17 @@ body {
     resize: none;
     outline: none;
     direction: ltr;
+    /* hide unless active (note - using display:none triggers a Chrome layout bug): */
+    visibility: hidden;
+    position: absolute;
+    left: 1000%;
+}
+.editor.active {
+    visibility: inherit;
+    position: inherit;
 }
 
-#editor.rtl {
+.editor.rtl {
     direction: rtl;
     text-align: right;
     font-family: 'David', 'Narkisim', 'Times New Roman', serif;
