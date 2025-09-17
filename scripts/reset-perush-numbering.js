@@ -327,7 +327,14 @@ async function task3() {
             const fromLocation = locationToFileFormat(fileInfo.locations[0]);
             const toLocation = locationToFileFormat(fileInfo.locations[fileInfo.locations.length - 1]);
 
-            const newFileName = `${newSequence}-${bookName}-${fromLocation}-${toLocation}-${freeText}.rtl.md`;
+            const normalizedFreeText = freeText
+                .replace(/[\u05b0-\u05c7\u0591-\u05af\u05ef-\u05f4]/g, '') // Remove Hebrew diacritics and cantillation marks
+                .replace(/\P{L}/gu, '_') // convert non-letter characters to underscores
+                .replace(/_+/g, '_') // collapse and trim underscores
+                .replace(/^_/, '')
+                .replace(/_$/, '')
+
+            const newFileName = `${newSequence}-${bookName}-${fromLocation}-${toLocation}-${normalizedFreeText}.rtl.md`;
 
             if (newFileName !== fileInfo.fileName) {
                 const oldPath = path.join(fileInfo.folder, fileInfo.fileName);
