@@ -254,15 +254,22 @@ class MarkdownEditor {
             return;
         }
 
-        const tabToActivate = this.tabs.keys()[0]
-        if (tabToActivate) {
-            await this.switchToTab(tabToActivate);
-        } else {
-            this.activeTab = null;
+        this.tabs.delete(filePath);
+
+        if (filePath === this.activeTab) {
+            const tabToActivate = this.tabs.keys().next().value;
+            if (tabToActivate) {
+                await this.switchToTab(tabToActivate);
+            } else {
+                this.activeTab = null;
+            }
         }
 
-        this.tabs.delete(filePath);
+        // Cleanup DOM.
         tabData.tabElement.remove();
+        tabData.editorTextarea.remove();
+        this.fileTreeElements.get(tabData.filePath)?.classList.remove('active');
+
         this.saveSession();
     }
 
