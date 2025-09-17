@@ -82,9 +82,14 @@ const { execSync } = require('child_process');
 
 // Book names in Hebrew
 const BOOK_NAMES = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'];
+const TORA_BASE_DIR = './תנך/תורה';
+
+const torahFiles = BOOK_NAMES.map(bookName => `${TORA_BASE_DIR}/${bookName}.rtl.md`);
 
 // Global data structures
 let orderedVersesArray = [];
+let usedVersesToFilePathMap = new Map();
+let allVersesMap = new Map();
 let orphanVersesMap = new Map();
 let filesArray = [];
 
@@ -102,6 +107,7 @@ let filesArray = [];
 
 /**
  * Extract verse lines from file content
+ * @param {string} filePath
  * @param {string} content - File content
  * @returns {string[]} Array of verse location strings
  */
@@ -129,6 +135,8 @@ function extractVerseLines(filePath, content) {
 /**
  * Convert location string to file format
  * Example: "בראשית כד ז" -> "כד_ז"
+ * @param {string} locationString
+ * @returns {string}
  */
 function locationToFileFormat(locationString) {
     const parts = locationString.split(' ');
@@ -141,11 +149,13 @@ function locationToFileFormat(locationString) {
 /**
  * Extract book name from folder path
  * Example: './פירוש/1000-בראשית' -> { folderName: '1000-בראשית', baseSequence: 1000, bookName: 'בראשית' }
+ * @param {string} folderPath
+ * @returns {{ folderName: string, baseSequence: number, bookName: string }}
  */
 function parseFolderName(folderPath) {
     const match = /(?:^|\/)(\d{4})-(בראשית|שמות|ויקרא|במדבר|דברים)(?:\/|$)/.exec(folderPath);
     if (!match) {
-        throw new Error(`Invalid folder name: ${folderPath}`);
+        throw new Error(`Invalid folder name ${JSON.stringify(folderPath)}`);
     }
     return {
         baseSequence: parseInt(match[1]),
@@ -160,20 +170,13 @@ function parseFolderName(folderPath) {
 async function task1() {
     console.log('TASK 1: Reading Torah files...');
 
-    const torahFiles = [
-        './תנך/תורה/בראשית.rtl.md',
-        './תנך/תורה/שמות.rtl.md',
-        './תנך/תורה/ויקרא.rtl.md',
-        './תנך/תורה/במדבר.rtl.md',
-        './תנך/תורה/דברים.rtl.md'
-    ];
-
     for (const filePath of torahFiles) {
         try {
             const content = await fs.readFile(filePath, 'utf8');
             const verseLines = extractVerseLines(filePath, content);
 
             for (const verse of verseLines) {
+                allVersesMap.set(verse, orderedVersesArray.length);
                 orphanVersesMap.set(verse, orderedVersesArray.length);
                 orderedVersesArray.push(verse);
             }
@@ -190,6 +193,8 @@ async function task1() {
 
 /**
  * Get all RTL markdown files recursively
+ * @param {string} dirPath
+ * @returns {Promise<Array<{ folder: string, fileName: string, fullPath: string }>>}
  */
 async function getAllRtlFiles(dirPath) {
     const files = [];
@@ -241,9 +246,13 @@ async function task2() {
             };
 
             for (const verse of verseLines) {
-                if (!orphanVersesMap.has(verse)) {
-                    throw new Error(`Invalid verse location: ${verse} in file ${file.fullPath}`);
+                if (!allVersesMap.has(verse)) {
+                    throw new Error(`Verse location ${JSON.stringify(verse)} in file ${JSON.stringify(file.fullPath)} not found anywhere under ${JSON.stringify(TORA_BASE_DIR)}`);
                 }
+                if (!orphanVersesMap.has(verse)) {
+                    throw new Error(`Verse location ${JSON.stringify(verse)} already exists another file:    ${JSON.stringify(usedVersesToFilePathMap.get(verse))}`);
+                }
+                usedVersesToFilePathMap.set(verse, file.fullPath);
 
                 const index = orphanVersesMap.get(verse);
                 fileInfo.locations.push(verse);
@@ -305,11 +314,11 @@ async function task3() {
             // Parse current filename
             const fileNameMatch = fileInfo.fileName.match(/^(\d{4})-(בראשית|שמות|ויקרא|במדבר|דברים)-([א-ת]{1,2})_([א-ת]{1,2})-([א-ת]{1,2})_([א-ת]{1,2})-(.+)\.rtl\.md$/);
             if (!fileNameMatch) {
-                throw new Error(`Invalid file name format: ${fileInfo.fileName}`);
+                throw new Error(`Invalid file name format ${JSON.stringify(fileInfo.fileName)}`);
             }
             const [_whole, _sequence, _bookName, _fromPerek, _fromPasuk, _toPerek, _toPasuk, freeText] = fileNameMatch;
             if (_bookName !== fileInfo.bookName) {
-                throw new Error(`Book name mismatch the folder in file name: ${fileInfo.folder}/${fileInfo.fileName}`);
+                throw new Error(`Book name mismatch the folder in file name ${JSON.stringify(`${fileInfo.folder}/${fileInfo.fileName}`)}`);
             }
 
             // Build new filename components
