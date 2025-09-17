@@ -18,7 +18,7 @@ Sequences (both [base-sequence] and [sequence]) are 4-digits numbers.
 [book-name] is one of בראשית, שמות, ויקרא, במדבר, דברים.
 [location] has this syntax: `[perek]_[pasuk]`
 
-A sample path may be:     ./פירוש/1000-בראשית/1060-בראשית-ח_א-ט_יט-קריסת המבול.rtl.md
+A sample path may be:     ./פירוש/1-בראשית/1060-בראשית-ח_א-ט_יט-קריסת המבול.rtl.md
 This means that the file contains the biblical verses of בראשית - from perek ח pasuk א, to perek ט pasuk יט.
 
 Each of these *.rtl.md files contains many text-lines, but we are only interested in "verse lines".
@@ -43,7 +43,7 @@ In each file - for each "verse line" - remember the string "[book-name] [perek] 
 Build the Array `filesArray` whose elements matches this TypeScript schema:
 
 type FileInfo = {
-    folder: string; // Example: './פירוש/1000-בראשית'
+    folder: string; // Example: './פירוש/1-בראשית'
     fileName: string; // Example: '1060-בראשית-ח_א-ט_יט-קריסת המבול.rtl.md'
     bookName: string; // Derived from the folder. Example: 'בראשית'
     locations: string[]; // An array of all the location strings (syntax as before: "[book-name] [perek] [pasuk]") from the file's contents - Example item: "בראשית כד ז"
@@ -148,17 +148,17 @@ function locationToFileFormat(locationString) {
 
 /**
  * Extract book name from folder path
- * Example: './פירוש/1000-בראשית' -> { folderName: '1000-בראשית', baseSequence: 1000, bookName: 'בראשית' }
+ * Example: './פירוש/1-בראשית' -> { folderName: '1-בראשית', baseSequence: 1000, bookName: 'בראשית' }
  * @param {string} folderPath
  * @returns {{ folderName: string, baseSequence: number, bookName: string }}
  */
 function parseFolderName(folderPath) {
-    const match = /(?:^|\/)(\d{4})-(בראשית|שמות|ויקרא|במדבר|דברים)(?:\/|$)/.exec(folderPath);
+    const match = /(?:^|\/)(\d)-(בראשית|שמות|ויקרא|במדבר|דברים)(?:\/|$)/.exec(folderPath);
     if (!match) {
         throw new Error(`Invalid folder name ${JSON.stringify(folderPath)}`);
     }
     return {
-        baseSequence: parseInt(match[1]),
+        baseSequence: parseInt(match[1]) * 1000, // for example - the folder '4-במדבר' should have baseSequence 4000
         bookName: match[2],
         folderName: `${match[1]}-${match[2]}`
     };

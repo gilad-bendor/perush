@@ -355,7 +355,7 @@ class MarkdownEditor {
     saveScrollPosition(filePath) {
         const tabData = this.tabs.get(filePath);
         if (tabData.abortAutoScrolling) {
-            console.warn(`Ignoring scroll event for ${JSON.stringify(filePath)}}: `, tabData.editorTextarea.scrollTop);
+            console.log(`    (ignoring scroll event for ${JSON.stringify(filePath)} with scrollTop=${tabData.editorTextarea.scrollTop})`);
             tabData.editorTextarea.scrollTop = this.scrollPositions.get(this.activeTab);
             return;
         }
