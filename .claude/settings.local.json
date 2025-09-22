@@ -1,8 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(./list-files-range.js :*)",
-      "Bash(./list-files-range.js :* :*)"
+      "Bash(./list-files-range.js:*)",
+      "Bash(./list-files-range.js:* :*)",
+      "Read(//Users/giladben-dor/Library/Application Support/Claude/**)",
+      "Read(//Users/giladben-dor/Library/Logs/Claude/**)"
     ],
     "deny": []
   }

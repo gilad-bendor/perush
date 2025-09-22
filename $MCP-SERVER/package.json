@@ -1,0 +1,24 @@
+{
+  "name": "biblical-commentary-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for accessing Hebrew biblical commentary files and tools",
+  "type": "module",
+  "main": "mcp-server.ts",
+  "scripts": {
+    "setup-mcp-server": "./setup-mcp-server.sh",
+    "build": "./setup-mcp-server.sh && tsc",
+    "start": "./setup-mcp-server.sh && ts-node --esm mcp-server.ts",
+    "dev": "./setup-mcp-server.sh && ts-node --esm --watch mcp-server.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
