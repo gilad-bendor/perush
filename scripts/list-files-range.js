@@ -53,10 +53,10 @@ try {
     if (locations.length === 0 || locations.length > 2) {
         console.log('Usage: list-files-range.js book_perek_pasuk [book_perek_pasuk]');
         console.log('Examples:');
-        console.log('  ./list-files-range.js בראשית_יא_*');
-        console.log('  ./list-files-range.js שמות_מב_ז שמות_מג_ד');
-        console.log('  ./list-files-range.js במדבר_*_*');
-        console.log('  ./list-files-range.js *_*_*');
+        console.log('  ./scripts/list-files-range.js בראשית_יא_*');
+        console.log('  ./scripts/list-files-range.js שמות_מב_ז שמות_מג_ד');
+        console.log('  ./scripts/list-files-range.js במדבר_*_*');
+        console.log('  ./scripts/list-files-range.js *_*_*');
         process.exit(1);
     }
     if (locations.length === 1) {
