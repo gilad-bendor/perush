@@ -1,3 +1,4 @@
+import * as fs from "fs";
 import * as path from "path";
 import {fileURLToPath} from "url";
 import {Server} from "@modelcontextprotocol/sdk/server/index.js";
@@ -10,6 +11,8 @@ import {searchCommentaryRegexp, searchCommentaryText} from "../scripts/search-fi
 const baseDir = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 process.chdir(baseDir);
 
+const mcpInstructions = fs.readFileSync(path.join(baseDir, '$MCP-SERVER', 'mcp-instructions.rtl.md'), "utf8");
+
 class BiblicalCommentaryServer {
     constructor() {
         this.server = new Server(
@@ -18,6 +21,7 @@ class BiblicalCommentaryServer {
                 version: "1.0.0",
             },
             {
+                instructions: mcpInstructions,
                 capabilities: {
                     tools: {},
                 },
@@ -59,27 +63,27 @@ class BiblicalCommentaryServer {
                             required: ["start_range"],
                         },
                     },
-                    {
-                        name: "search_commentary_files_by_text",
-                        description: [
-                                'Like the `grep -F` command - for searching commentary files.',
-                                'Every matched line is output like this:  full-path: line-text' +
-                                'The search ignores Hebrew points/accents, and treats final letters as standard letters (\'ךםןףץ\' is the same as \'כמנפצ\').' +
-                                'Example usage:',
-                                '  search_commentary_files_by_text {"search_term": "מים"}',
-                                'IMPORTANT: This tool should only be used if the exact search term is known. Normally - the tool "list_commentary_files_range" is preferred.'
-                            ].join('\n'),
-                        inputSchema: {
-                            type: "object",
-                            properties: {
-                                search_term: {
-                                    type: "string",
-                                    description: "Hebrew or English term to search for in commentary files",
-                                },
-                            },
-                            required: ["search_term"],
-                        },
-                    },
+                    // {
+                    //     name: "search_commentary_files_by_text",
+                    //     description: [
+                    //             'Like the `grep -F` command - for searching commentary files.',
+                    //             'Every matched line is output like this:  full-path: line-text' +
+                    //             'The search ignores Hebrew points/accents, and treats final letters as standard letters (\'ךםןףץ\' is the same as \'כמנפצ\').' +
+                    //             'Example usage:',
+                    //             '  search_commentary_files_by_text {"search_term": "מים"}',
+                    //             'IMPORTANT: This tool should only be used if the exact search term is known. Normally - the tool "list_commentary_files_range" is preferred.'
+                    //         ].join('\n'),
+                    //     inputSchema: {
+                    //         type: "object",
+                    //         properties: {
+                    //             search_term: {
+                    //                 type: "string",
+                    //                 description: "Hebrew or English term to search for in commentary files",
+                    //             },
+                    //         },
+                    //         required: ["search_term"],
+                    //     },
+                    // },
                     {
                         name: "search_commentary_files_by_regexp",
                         description: [
@@ -114,8 +118,8 @@ class BiblicalCommentaryServer {
                 switch (name) {
                     case "list_commentary_files_range":
                         return this.listFilesRange(args);
-                    case "search_commentary_files_by_text":
-                        return this.searchCommentaryText(args);
+                    // case "search_commentary_files_by_text":
+                    //     return this.searchCommentaryText(args);
                     case "search_commentary_files_by_regexp":
                         return this.searchCommentaryRegexp(args);
                     default:
@@ -161,19 +165,19 @@ class BiblicalCommentaryServer {
         }
     }
 
-    /**
-     * Search commentary files for the specified text term.
-     * @param {{ search_term: string }} args
-     * @returns {{content: [{type: string, text: string}]}}
-     */
-    searchCommentaryText(args) {
-        try {
-            const { matches, limitIsHit } = searchCommentaryText(args?.search_term);
-            return this.innerSearchCommentary(matches, limitIsHit);
-        } catch (error) {
-            throw new Error(`Failed to search commentary text: ${error.stack || error.message}`);
-        }
-    }
+    // /**
+    //  * Search commentary files for the specified text term.
+    //  * @param {{ search_term: string }} args
+    //  * @returns {{content: [{type: string, text: string}]}}
+    //  */
+    // searchCommentaryText(args) {
+    //     try {
+    //         const { matches, limitIsHit } = searchCommentaryText(args?.search_term);
+    //         return this.innerSearchCommentary(matches, limitIsHit);
+    //     } catch (error) {
+    //         throw new Error(`Failed to search commentary text: ${error.stack || error.message}`);
+    //     }
+    // }
 
     /**
      * Search commentary files for the specified regular expression pattern.

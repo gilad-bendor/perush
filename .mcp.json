@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "biblical-commentary-server": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["$MCP-SERVER/mcp-server.js"],
+      "env": {}
+    }
+  }
+}

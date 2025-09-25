@@ -1,14 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(./scripts/list-files-range.js :*)",
-      "Bash(./scripts/list-files-range.js :* :*)",
-      "Bash(./scripts/search-files.js :*)",
-      "Bash(./scripts/search-files.js --regexp :*)",
       "Read(//Users/giladben-dor/Library/Application Support/Claude/**)",
       "Read(//Users/giladben-dor/Library/Logs/Claude/**)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "mcp__biblical-commentary-server__list_commentary_files_range",
+      "mcp__biblical-commentary-server__search_commentary_files_by_regexp"
     ],
     "deny": []
-  }
+  },
+  "enabledMcpjsonServers": [
+    "biblical-commentary-server"
+  ]
 }
