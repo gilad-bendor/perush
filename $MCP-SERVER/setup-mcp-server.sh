@@ -5,9 +5,9 @@ CLAUDE_CONFIG="$HOME/Library/Application Support/Claude/claude_desktop_config.js
 # The JSON file "$CLAUDE_CONFIG" should contain the path ".mcpServers.biblical-commentary" with the value $MCP_CONFIG_JSON
 MCP_CONFIG_JSON='
   {
-    "command": "bash",
+    "command": "node",
     "args": [
-      "'"$( realpath "mcp-server.sh" )"'"
+      "'"$( realpath "mcp-server.js" )"'"
     ],
     "cwd": "'"$( realpath "." )"'",
     "env": {

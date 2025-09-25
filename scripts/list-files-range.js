@@ -5,7 +5,7 @@ const path = require('path');
 
 // --------------------------------------------------------------------------------------------------------------------
 
-const baseDir = 'פירוש';
+const perushDir = 'פירוש';
 
 const booksToIndex = {
     'בראשית': 0,
@@ -47,41 +47,55 @@ const hebrewNumerals = {
 
 // --------------------------------------------------------------------------------------------------------------------
 
-try {
-    // Parse command line arguments
-    const locations = process.argv.slice(2);
-    if (locations.length === 0 || locations.length > 2) {
-        console.log('Usage: list-files-range.js book_perek_pasuk [book_perek_pasuk]');
-        console.log('Examples:');
-        console.log('  ./scripts/list-files-range.js בראשית_יא_*');
-        console.log('  ./scripts/list-files-range.js שמות_מב_ז שמות_מג_ד');
-        console.log('  ./scripts/list-files-range.js במדבר_*_*');
-        console.log('  ./scripts/list-files-range.js *_*_*');
+// Check if this script is being run directly or imported as a module
+if (require.main === module) {
+    // CLI mode
+    try {
+        // Parse command line arguments
+        const locations = process.argv.slice(2);
+        if (locations.length === 0 || locations.length > 2) {
+            console.log('Usage: list-files-range.js book_perek_pasuk [book_perek_pasuk]');
+            console.log('Examples:');
+            console.log('  ./scripts/list-files-range.js בראשית_יא_*');
+            console.log('  ./scripts/list-files-range.js שמות_מב_ז שמות_מג_ד');
+            console.log('  ./scripts/list-files-range.js במדבר_*_*');
+            console.log('  ./scripts/list-files-range.js *_*_*');
+            process.exit(1);
+        }
+        if (locations.length === 1) {
+            locations.push(locations[0]);
+        }
+
+        // Parse locations.
+        const parsedLocations = locations.map((location, locationIndex) => parseLocation(location, locationIndex === 0 ? 'from' : 'to'));
+
+        const filesList = listFilesInRange(parsedLocations[0], parsedLocations[1]);
+        console.log(filesList.join('\n'));
+
+        process.exit(0);
+    } catch (error) {
+        console.error('Error:', error.message);
         process.exit(1);
     }
-    if (locations.length === 1) {
-        locations.push(locations[0]);
-    }
-
-    // Parse locations.
-    const parsedLocations = locations.map((location, locationIndex) => {
-        const match = location.match(/^(בראשית|שמות|ויקרא|במדבר|דברים|\*)_([א-ת]{1,2}|\*)_([א-ת]{1,2}|\*)$/);
-        if (!match) {
-            throw new Error(`Invalid location argument ${JSON.stringify(location)}`);
-        }
-        const [_whole, book, perek, pasuk] = match;
-        return buildLocation(book, perek, pasuk, locationIndex === 0 ? 'from' : 'to');
-    });
-
-    listFilesInRange(parsedLocations[0], parsedLocations[1]);
-
-    process.exit(0);
-} catch (error) {
-    console.error('Error:', error.message);
-    process.exit(1);
 }
 
 // --------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Similar to buildLocation() - but the location is given as a string in the format book_perek_pasuk.
+ * @param {string} locationString
+ * @param {'from'|'to'|'point'} mode
+ * @returns {{ book: string, perek: number, pasuk: number }}
+ * @throws {Error} - If wildcards are used inappropriately, or if values are invalid.
+ */
+function parseLocation(locationString, mode) {
+    const match = locationString.match(/^(בראשית|שמות|ויקרא|במדבר|דברים|\*)_([א-ת]{1,2}|\*)_([א-ת]{1,2}|\*)$/);
+    if (!match) {
+        throw new Error(`Invalid location argument ${JSON.stringify(locationString)}`);
+    }
+    const [_whole, book, perek, pasuk] = match;
+    return buildLocation(book, perek, pasuk, mode);
+}
 
 /**
  * Helper function to build a location object { book, perek, pasuk }, replacing wildcards with actual values.
@@ -182,20 +196,29 @@ function parseFileName(dir, fileName) {
  * List all the files in the specified range.
  * @param {{ book: string, perek: number, pasuk: number }} from
  * @param {{ book: string, perek: number, pasuk: number }} to
+ * @returns {{ dirPath: string, fileName: string }[]} - List of file paths in the specified range.
  */
 function listFilesInRange(from, to) {
     // Scan the dirs of every book.
+    const filesList = [];
     for (const bookDir of Object.values(booksToDir)) {
-        const dirPath = path.join(baseDir, bookDir);
+        const dirPath = path.join(perushDir, bookDir);
 
         // Scan the files of the book.
         const fileNames = fs.readdirSync(dirPath).filter(fileName => fileName.endsWith('.rtl.md'));
         for (const fileName of fileNames) {
             const parsedFileName = parseFileName(dirPath, fileName);
             if (compareLocations(parsedFileName.to, from) >= 0 && compareLocations(parsedFileName.from, to) <= 0) {
-                console.log(path.join(dirPath, fileName));
+                filesList.push(path.join(dirPath, fileName));
             }
         }
     }
+    return filesList;
 }
 
+
+// Export functions for module usage
+module.exports = {
+    parseLocation,
+    listFilesInRange,
+};

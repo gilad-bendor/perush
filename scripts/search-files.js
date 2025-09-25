@@ -6,41 +6,44 @@ const path = require('path');
 const perushDir = './פירוש';
 const maxSearchResults = 100;
 
-// Parse command line arguments
-const args = process.argv.slice(2);
-if (args.length === 0) {
-    showUsage();
-}
-let useRegexp = false;
-let searchString = '';
-if (args.length === 1) {
-    searchString = args[0];
-} else if (args.length === 2 && args[0] === '--regexp') {
-    useRegexp = true;
-    searchString = args[1];
-} else {
-    showUsage();
-}
-if (!searchString) {
-    showUsage();
-}
-
-// Perform the search
-try {
-    const matches = useRegexp
-        ? searchCommentaryRegexp(searchString)
-        : searchCommentaryText(searchString);
-    if (matches.length === 0) {
-        console.error('No matches found.');
-    } else {
-        matches.forEach(match => console.log(match));
-        if (matches.length === maxSearchResults) {
-            console.error(`\n(Results limited to ${maxSearchResults} matches)`);
-        }
+// Check if this script is being run directly or imported as a module
+if (require.main === module) {
+    // CLI mode
+    const args = process.argv.slice(2);
+    if (args.length === 0) {
+        showUsage();
     }
-} catch (error) {
-    console.error(`Search error: ${error.message}`);
-    process.exit(1);
+    let useRegexp = false;
+    let searchString = '';
+    if (args.length === 1) {
+        searchString = args[0];
+    } else if (args.length === 2 && args[0] === '--regexp') {
+        useRegexp = true;
+        searchString = args[1];
+    } else {
+        showUsage();
+    }
+    if (!searchString) {
+        showUsage();
+    }
+
+    // Perform the search
+    try {
+        const { matches, limitIsHit } = useRegexp
+            ? searchCommentaryRegexp(searchString)
+            : searchCommentaryText(searchString);
+        if (matches.length === 0) {
+            console.error('No matches found.');
+        } else {
+            matches.forEach(match => console.log(`${match.filePath}: ${match.lineText}`));
+            if (limitIsHit) {
+                console.error(`\n(Results limited to ${limitIsHit} matches)`);
+            }
+        }
+    } catch (error) {
+        console.error(`Search error: ${error.message}`);
+        process.exit(1);
+    }
 }
 
 // ----------------------------------------------------------------------------------------------------
@@ -61,7 +64,69 @@ function showUsage() {
     process.exit(1);
 }
 
-// Make basic normalization of any string that may contain some Hebrew parts.
+/**
+ * @param {string} searchTerm
+ * @returns {{matches: {filePath: string, lineText: string}[], limitIsHit: (number|undefined)}}
+ */
+function searchCommentaryText(searchTerm) {
+    searchTerm = normalizeHebrew(searchTerm);
+    return innerSearchCommentary((line) => line.includes(searchTerm));
+}
+
+/**
+ * @param {string} searchPattern
+ * @returns {{matches: {filePath: string, lineText: string}[], limitIsHit: (number|undefined)}}
+ */
+function searchCommentaryRegexp(searchPattern) {
+    const searchRegExp = new RegExp(normalizeHebrew(searchPattern));
+    return innerSearchCommentary((line) => searchRegExp.test(line));
+}
+
+/**
+ * Recursively scan the current directory for *.rtl.md files, and search each line with lineMatcher.
+ * Return up to `maxSearchResults` matching lines with their full paths. Example output line:
+ *   .../1050-בראשית-ד_יז-ד_כו-שושלת_קין.rtl.md: עִירָד = עיר + רְדִיַיה: אותם מסדרים - שנולדו מתוך יצירתיות וחידוש
+ * @param {function(string): boolean} lineMatcher - Function that returns true for matching lines.
+ * @returns {{matches: {filePath: string, lineText: string}[], limitIsHit: (number|undefined)}}
+ */
+function innerSearchCommentary(lineMatcher) {
+    const matches = [];
+
+    // Scan all *.rtl.md files under the perushDir directory, and recurse into subdirectories.
+    try {
+        const entries = fs.readdirSync(perushDir, { encoding: 'utf-8', withFileTypes: true, recursive: true });
+        for (const entry of entries) {
+            if (entry.isFile() && entry.name.endsWith('.rtl.md')) {
+                const filePath = path.join(entry.path, entry.name);
+                try {
+                    const content = fs.readFileSync(filePath, 'utf-8');
+                    const lines = content.split('\n');
+                    for (const lineText of lines) {
+                        if (lineMatcher(normalizeHebrew(lineText))) {
+                            matches.push({filePath, lineText});
+                        }
+                    }
+                } catch (error) {
+                    console.error(`Error reading file ${filePath}: ${error.message}`);
+                }
+            }
+        }
+    } catch (error) {
+        console.error(`Error scanning directory ${perushDir}: ${error.message}`);
+        process.exit(1);
+    }
+
+    return {
+        matches: matches.slice(0, maxSearchResults),
+        limitIsHit: matches.length > maxSearchResults ? maxSearchResults : undefined,
+    };
+}
+
+/**
+ * Make basic normalization of any string that may contain some Hebrew parts.
+ * @param {string} str
+ * @returns {string}
+ */
 function normalizeHebrew(str) {
     return str
         // Shin - from Unicode-combination to single Unicode:  שׁ --> שׁ
@@ -86,45 +151,8 @@ function normalizeHebrew(str) {
         .replace(/ץ/g, 'צ');
 }
 
-function searchCommentaryText(searchTerm) {
-    searchTerm = normalizeHebrew(searchTerm);
-    return innerSearchCommentary((line) => line.includes(searchTerm));
-}
-
-function searchCommentaryRegexp(searchPattern) {
-    const searchRegExp = new RegExp(normalizeHebrew(searchPattern));
-    return innerSearchCommentary((line) => searchRegExp.test(line));
-}
-
-// Recursively scan the current directory for *.rtl.md files, and search each line with lineMatcher.
-// Return up to `maxSearchResults` matching lines with their full paths. Example output line:
-//   .../1050-בראשית-ד_יז-ד_כו-שושלת_קין.rtl.md: עִירָד = עיר + רְדִיַיה: אותם מסדרים - שנולדו מתוך יצירתיות וחידוש
-function innerSearchCommentary(lineMatcher) {
-    const matches = [];
-
-    // Scan all *.rtl.md files under the perushDir directory, and recurse into subdirectories.
-    try {
-        const entries = fs.readdirSync(perushDir, { encoding: 'utf-8', withFileTypes: true, recursive: true });
-        for (const entry of entries) {
-            if (entry.isFile() && entry.name.endsWith('.rtl.md')) {
-                const filePath = path.join(entry.path, entry.name);
-                try {
-                    const content = fs.readFileSync(filePath, 'utf-8');
-                    const lines = content.split('\n');
-                    for (const line of lines) {
-                        if (lineMatcher(normalizeHebrew(line))) {
-                            matches.push(`${filePath}: ${line}`);
-                        }
-                    }
-                } catch (error) {
-                    console.error(`Error reading file ${filePath}: ${error.message}`);
-                }
-            }
-        }
-    } catch (error) {
-        console.error(`Error scanning directory ${perushDir}: ${error.message}`);
-        process.exit(1);
-    }
-
-    return matches.slice(0, maxSearchResults);
-}
+// Export functions for module usage
+module.exports = {
+    searchCommentaryText,
+    searchCommentaryRegexp,
+};

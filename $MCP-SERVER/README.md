@@ -25,7 +25,7 @@ npm start
 
 The server runs on stdio and provides four main tools:
 
-### 1. list_files_range
+### 1. list_commentary_files_range
 
 Find biblical commentary files by verse range using the custom CLI tool.
 
@@ -35,26 +35,13 @@ Find biblical commentary files by verse range using the custom CLI tool.
 
 ```bash
 # Test verses range
-./mcp-server.ts list_files_range '{
+./mcp-server.js list_commentary_files_range '{
   "start_range": "בראשית_יא_טו",
   "end_range": "בראשית_יב_ג"
 }'
 ```
 
-### 2. read_commentary_file
-
-Read the content of a specific commentary file.
-
-**Parameters:**
-- `filename` (required): The filename to read (usually from `list_files_range` results)
-
-```bash
-./mcp-server.ts read_commentary_file '{
-  "filename": "1040-בראשית-ד_א-ד_טז-הבל_וקין.rtl.md"
-}'
-```
-
-### 3. search_commentary
+### 2. search_commentary_files_by_text
 
 Search for specific terms or concepts within commentary files.
 
@@ -63,12 +50,12 @@ Search for specific terms or concepts within commentary files.
 
 ```bash
 # Search for Hebrew term
-./mcp-server.ts search_commentary '{
+./mcp-server.js search_commentary_files_by_text '{
   "search_term": "ציביליזציה"
 }'
 ```
 
-### 4. search_commentary_regexp
+### 3. search_commentary_files_by_regexp
 
 Search for patterns using regular expressions within commentary files.
 
@@ -77,7 +64,7 @@ Search for patterns using regular expressions within commentary files.
 
 ```bash
 # Search for Hebrew words starting with specific letters
-./mcp-server.ts search_commentary_regexp '{
+./mcp-server.js search_commentary_files_by_regexp '{
   "search_pattern": "ציביליזציה|תרבות"
 }'
 ```
@@ -86,7 +73,7 @@ Search for patterns using regular expressions within commentary files.
 
 ```bash
 # List all available tools
-./mcp-server.ts tools/list
+./mcp-server.js tools/list
 ```
 
 This will return the schema for all four tools with their parameter definitions and descriptions.
