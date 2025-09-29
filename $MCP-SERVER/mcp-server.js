@@ -1,17 +1,14 @@
-import * as fs from "fs";
 import * as path from "path";
 import {fileURLToPath} from "url";
 import {Server} from "@modelcontextprotocol/sdk/server/index.js";
 import {StdioServerTransport} from "@modelcontextprotocol/sdk/server/stdio.js";
 import {CallToolRequestSchema, ErrorCode, ListToolsRequestSchema, McpError,} from "@modelcontextprotocol/sdk/types.js";
 import {listFilesInRange, parseLocation} from "../scripts/list-files-range.js";
-import {searchCommentaryRegexp, searchCommentaryText} from "../scripts/search-files.js";
+import {searchCommentaryRegexp} from "../scripts/search-files.js";
 
 // Change working directory to the project root.
 const baseDir = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 process.chdir(baseDir);
-
-const mcpInstructions = fs.readFileSync(path.join(baseDir, '$MCP-SERVER', 'mcp-instructions.rtl.md'), "utf8");
 
 class BiblicalCommentaryServer {
     constructor() {
@@ -21,7 +18,6 @@ class BiblicalCommentaryServer {
                 version: "1.0.0",
             },
             {
-                instructions: mcpInstructions,
                 capabilities: {
                     tools: {},
                 },
@@ -87,15 +83,15 @@ class BiblicalCommentaryServer {
                     {
                         name: "search_commentary_files_by_regexp",
                         description: [
-                                'Like the `grep` command - for searching commentary files, using JavaScript-flavor regular expressions.' +
-                                'Every matched line is output like this:  full-path: line-text' +
-                                'The search ignores Hebrew points/accents, and treats final letters as standard letters (\'ךםןףץ\' is the same as \'כמנפצ\').' +
-                                'Example usages:',
-                                '  search_commentary_files_by_regexp {"search_pattern": "מים.*ארץ"}',
-                                'Search for Biblical verse:',
-                                '  search_commentary_files_by_regexp {"search_pattern": "^> [^:]*: ארץ"}',
-                                'IMPORTANT: This tool should only be used if the exact search pattern is known. Normally - the tool "list_commentary_files_range" is preferred.'
-                            ].join('\n'),
+                            'Like the `grep` command - for searching commentary files, using JavaScript-flavor regular expressions.' +
+                            'Every matched line is output like this:  full-path: line-text' +
+                            'The search ignores Hebrew points/accents, and treats final letters as standard letters (\'ךםןףץ\' is the same as \'כמנפצ\').' +
+                            'Example usages:',
+                            '  search_commentary_files_by_regexp {"search_pattern": "מים.*ארץ"}',
+                            'Search for Biblical verse:',
+                            '  search_commentary_files_by_regexp {"search_pattern": "^> [^:]*: ארץ"}',
+                            'IMPORTANT: This tool should only be used if the exact search pattern is known. Normally - the tool "list_commentary_files_range" is preferred.'
+                        ].join('\n'),
                         inputSchema: {
                             type: "object",
                             properties: {

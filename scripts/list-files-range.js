@@ -196,7 +196,7 @@ function parseFileName(dir, fileName) {
  * List all the files in the specified range.
  * @param {{ book: string, perek: number, pasuk: number }} from
  * @param {{ book: string, perek: number, pasuk: number }} to
- * @returns {{ dirPath: string, fileName: string }[]} - List of file paths in the specified range.
+ * @returns {string[]} - List of file paths in the specified range.
  */
 function listFilesInRange(from, to) {
     // Scan the dirs of every book.
