@@ -57,12 +57,6 @@ class MarkdownEditor {
                 }
             }
 
-            // On macOS on Hebrew - the key to the left of "z" produces "IntlBackslash" code, but we want it to produce a backquote "`".
-            if (event.code === 'IntlBackslash') {
-                document.execCommand('insertText', false, '`');
-                event.preventDefault();
-            }
-
             if (targetCursorPos !== undefined) {
                 event.preventDefault();
                 editorTextarea.setSelectionRange(targetCursorPos, targetCursorPos);
