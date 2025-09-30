@@ -2,4 +2,4 @@
 .idea/
 /$RTL-EDITOR/node_modules/
 /$MCP-SERVER/node_modules
-/_scratch_.rtl.md
+/_scratch_*.rtl.md
