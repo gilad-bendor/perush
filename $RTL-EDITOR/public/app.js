@@ -57,6 +57,24 @@ class MarkdownEditor {
                 }
             }
 
+            // On macOS on Hebrew - the key to the left of "1" produces ";" - but we want it to produce backquote "`".
+            if (event.code === 'Backquote' && event.key === ';' && event.keyCode === 186) {
+                document.execCommand('insertText', false, '`');
+                event.preventDefault();
+            }
+
+            // On macOS on Hebrew - the key to the bottom-left of "Enter" produces "ֿ " code (Unicode 5bf), but we want it to produce a backquote "\".
+            if (event.code === 'Backslash' && event.key === '\u05bf' && event.keyCode === 220) {
+                document.execCommand('insertText', false, '\\');
+                event.preventDefault();
+            }
+
+            // // On macOS on Hebrew - the key to the left of "z" produces nothing - but we want it to produce ???.
+            // if (event.code === 'IntlBackslash' && event.key === 'Unidentified' && event.keyCode === 192) {
+            //     document.execCommand('insertText', false, '???');
+            //     event.preventDefault();
+            // }
+
             if (targetCursorPos !== undefined) {
                 event.preventDefault();
                 editorTextarea.setSelectionRange(targetCursorPos, targetCursorPos);
