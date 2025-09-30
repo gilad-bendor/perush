@@ -7,6 +7,7 @@ OUTPUT_FILE="_scratch_prompt-without-mcp.rtl.md"
 # Read perush file paths from stdin.
 echo "Paste the path of all relevant perush files, one per line, followed by Ctrl-D:" 1>&2
 IFS=$'\n' read -r -d '' -a PERUSH_PATHS <<< "$( cat )"$'\0' || true
+echo 1>&2
 
 {
   # Add the file CLAUDE.md - up to (and excluding) the section "## חיפוש קבצי פירוש רלבנטיים".
