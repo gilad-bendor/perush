@@ -60,12 +60,10 @@ body {
 }
 
 .file-item {
-    padding: 6px 12px;
     cursor: pointer;
-    border-radius: 4px;
     font-size: 13px;
     user-select: none;
-    margin-bottom: 2px;
+    white-space: nowrap;
 }
 
 .file-item:hover {
@@ -87,11 +85,12 @@ body {
 
 .file-item.file::before {
     content: "📄 ";
-    margin-right: 4px;
+    margin-right: 0;
 }
 
 .file-children {
-    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 1px dotted gray;
 }
 
 .main-content {

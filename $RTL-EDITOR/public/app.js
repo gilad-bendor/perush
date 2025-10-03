@@ -113,7 +113,6 @@ class MarkdownEditor {
         files.forEach(file => {
             const fileItem = document.createElement('div');
             fileItem.className = `file-item ${file.type}`;
-            fileItem.style.paddingLeft = `${12 + level * 16}px`;
             fileItem.textContent = file.name;
 
             const currentPath = parentPath ? `${parentPath}/${file.name}` : file.name;
