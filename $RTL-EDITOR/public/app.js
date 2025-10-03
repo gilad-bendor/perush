@@ -28,33 +28,36 @@ class MarkdownEditor {
     bindEditorEvents(editorTextarea, filePath) {
         editorTextarea.addEventListener('keydown', (event) => {
             // console.log(event)
-            let targetCursorPos;
+            const { selectionStart, selectionEnd } = editorTextarea;
+            let targetSelection;
 
             // Override macOS annoying "Home" key behavior: move to start of line, instead scrolling to start of text.
             if (event.code === 'Home') {
+                const text = editorTextarea.value;
+                let newStart;
                 if (event.metaKey) {
-                    targetCursorPos = 0; // Move to start of text if Cmd+Home
+                    newStart = 0; // Move to start of text if Cmd+Home
                     editorTextarea.scrollTop = 0;
                 } else {
-                    const text = editorTextarea.value;
-                    const cursorPos = editorTextarea.selectionStart;
-                    targetCursorPos = text.lastIndexOf('\n', cursorPos - 1) + 1;
+                    newStart = text.lastIndexOf('\n', selectionStart - 1) + 1;
                 }
+                targetSelection = { start: newStart, end: event.shiftKey ? selectionEnd : newStart };
             }
 
             // Override macOS annoying "End" key behavior: move to end of line, instead scrolling to end of text.
             if (event.code === 'End') {
                 const text = editorTextarea.value;
+                let newEnd;
                 if (event.metaKey) {
-                    targetCursorPos = text.length; // Move to end of text if Cmd+End
+                    newEnd = text.length; // Move to end of text if Cmd+End
                     editorTextarea.scrollTop = 1000000000;
                 } else {
-                    const cursorPos = editorTextarea.selectionStart;
-                    targetCursorPos = text.indexOf('\n', cursorPos);
-                    if (targetCursorPos === -1) {
-                        targetCursorPos = text.length; // If no newline, go to end of text
+                    newEnd = text.indexOf('\n', selectionStart);
+                    if (newEnd === -1) {
+                        newEnd = text.length; // If no newline, go to end of text
                     }
                 }
+                targetSelection = { start: event.shiftKey ? selectionStart : newEnd, end: newEnd };
             }
 
             // On macOS on Hebrew - the key to the left of "1" produces ";" - but we want it to produce backquote "`".
@@ -75,10 +78,16 @@ class MarkdownEditor {
             //     event.preventDefault();
             // }
 
-            if (targetCursorPos !== undefined) {
+            if (targetSelection !== undefined) {
                 event.preventDefault();
-                editorTextarea.setSelectionRange(targetCursorPos, targetCursorPos);
+                editorTextarea.setSelectionRange(targetSelection.start, targetSelection.end);
                 editorTextarea.focus();
+            }
+
+            // If the user presses Escape, we want to briefly highlight the current cursor position, and scroll to it if needed.
+            if (event.code === 'Escape') {
+                editorTextarea.setSelectionRange(Math.max(0, selectionStart - 1), selectionEnd + 1);
+                setTimeout(() => editorTextarea.setSelectionRange(selectionStart, selectionEnd), 100);
             }
         });
 
