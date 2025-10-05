@@ -95,9 +95,16 @@ let filesArray = [];
 
 (async () => {
     try {
+        // Read Torah files and build ordered verses.
         await task1();
+
+        // Build filesArray.
+        // Along the way, fix syntax errors in the Torah files.
         await task2();
+
+        // Sort and rename files.
         await task3();
+
         console.log(`Processing completed successfully (${filesArray.length} files)`);
     } catch (error) {
         console.error('Fatal error:', error.message);
@@ -165,7 +172,7 @@ function parseFolderName(folderPath) {
 }
 
 /**
- * TASK 1: Read Torah files and build ordered verses
+ * TASK 1: Read Torah files and build ordered verses.
  */
 async function task1() {
     console.log('TASK 1: Reading Torah files...');
@@ -225,6 +232,7 @@ async function getAllRtlFiles(dirPath) {
 
 /**
  * TASK 2: Build filesArray
+ * Along the way, fix syntax errors in the Torah files.
  */
 async function task2() {
     console.log('TASK 2: Processing commentary files...');
@@ -234,7 +242,16 @@ async function task2() {
 
     for (const file of rtlFiles) {
         try {
-            const content = await fs.readFile(file.fullPath, 'utf8');
+            let content = await fs.readFile(file.fullPath, 'utf8');
+
+            // Fix syntax errors in the Torah file.
+            const fixedContent = fixSyntaxErrors(content);
+            if (fixedContent !== content) {
+                await fs.writeFile(file.fullPath, fixedContent, 'utf8');
+                console.log(`  Fixed syntax errors in ${path.basename(file.fullPath)}`);
+                content = fixedContent;
+            }
+
             const verseLines = extractVerseLines(file.fullPath, content);
 
             const fileInfo = {
@@ -283,6 +300,16 @@ async function task2() {
     }
 
     console.log('All verses found in commentary files!');
+}
+
+
+/**
+ * Fix syntax errors in a Torah file.
+ */
+function fixSyntaxErrors(originalContent) {
+    return originalContent
+        // In <ניתוח-לשוני> - use standard double-quotes instead of Hebrew double-quotes
+        .replace(/(<ניתוח-לשוני[^>]+מוקד=)["'״](.*?)["'״]([^>]*>)/g, '$1"$2"$3');
 }
 
 /**
