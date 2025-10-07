@@ -1,3 +1,11 @@
+import { EditorView, basicSetup } from 'https://esm.sh/codemirror';
+import { keymap } from 'https://esm.sh/@codemirror/view';
+import { markdown } from 'https://esm.sh/@codemirror/lang-markdown';
+import { Compartment } from 'https://esm.sh/@codemirror/state';
+import { indentWithTab } from 'https://esm.sh/@codemirror/commands';
+import { syntaxHighlighting, HighlightStyle } from 'https://esm.sh/@codemirror/language';
+import { tags } from 'https://esm.sh/@lezer/highlight';
+
 class MarkdownEditor {
     constructor() {
         // Get the HTML of the editor template and remove it from the DOM.
@@ -11,6 +19,7 @@ class MarkdownEditor {
         this.scrollPositions = new Map();
         this.expandedFolders = new Set();
         this.fileTreeElements = new Map();
+        this.directionCompartment = new Compartment();
         this.init().catch(console.error);
     }
 
@@ -25,81 +34,85 @@ class MarkdownEditor {
         window.addEventListener('beforeunload', () => this.saveSession());
     }
 
-    bindEditorEvents(editorTextarea, filePath) {
-        editorTextarea.addEventListener('keydown', (event) => {
-            // console.log(event)
-            const { selectionStart, selectionEnd } = editorTextarea;
-            let targetSelection;
+    createEditorView(filePath, fileName, initialContent) {
+        const isRtl = this.isRtlFile(fileName);
 
-            // Override macOS annoying "Home" key behavior: move to start of line, instead scrolling to start of text.
-            if (event.code === 'Home') {
-                const text = editorTextarea.value;
-                let newStart;
-                if (event.metaKey) {
-                    newStart = 0; // Move to start of text if Cmd+Home
-                    editorTextarea.scrollTop = 0;
-                } else {
-                    newStart = text.lastIndexOf('\n', selectionStart - 1) + 1;
+        // Create custom markdown highlighting
+        const markdownHighlighting = syntaxHighlighting(HighlightStyle.define([
+            { tag: tags.heading1, fontSize: "2em", fontWeight: "bold" },
+            { tag: tags.heading2, fontSize: "1.5em", fontWeight: "bold" },
+            { tag: tags.heading3, fontSize: "1.3em", fontWeight: "bold" },
+            { tag: tags.heading4, fontSize: "1.1em", fontWeight: "bold" },
+            { tag: tags.heading5, fontSize: "1em", fontWeight: "bold" },
+            { tag: tags.heading6, fontSize: "0.9em", fontWeight: "bold" },
+            { tag: tags.quote, color: "#666", fontStyle: "italic" },
+            { tag: tags.strong, fontWeight: "bold" },
+            { tag: tags.emphasis, fontStyle: "italic" },
+            { tag: tags.link, color: "#0066cc", textDecoration: "underline" },
+            { tag: tags.monospace, fontFamily: "'Monaco', 'Menlo', 'Ubuntu Mono', monospace", background: "#f4f4f4" }
+        ]));
+
+        const extensions = [
+            basicSetup,
+            markdown(),
+            markdownHighlighting,
+            keymap.of([indentWithTab]),
+            this.directionCompartment.of(EditorView.contentAttributes.of({ dir: isRtl ? 'rtl' : 'ltr' })),
+            EditorView.updateListener.of((update) => {
+                if (update.docChanged) {
+                    this.tabs.get(filePath).isDirty = true;
+                    this.updateTabTitle(filePath);
+                    this.scheduleAutosave();
                 }
-                targetSelection = { start: newStart, end: event.shiftKey ? selectionEnd : newStart };
-            }
+            }),
+            EditorView.domEventHandlers({
+                scroll: () => {
+                    this.saveScrollPosition(filePath);
+                },
+                keydown: (event, view) => {
+                    const { state } = view;
 
-            // Override macOS annoying "End" key behavior: move to end of line, instead scrolling to end of text.
-            if (event.code === 'End') {
-                const text = editorTextarea.value;
-                let newEnd;
-                if (event.metaKey) {
-                    newEnd = text.length; // Move to end of text if Cmd+End
-                    editorTextarea.scrollTop = 1000000000;
-                } else {
-                    newEnd = text.indexOf('\n', selectionStart);
-                    if (newEnd === -1) {
-                        newEnd = text.length; // If no newline, go to end of text
+                    // On macOS on Hebrew - the key to the left of "1" produces ";" - but we want it to produce backquote "`".
+                    if (event.code === 'Backquote' && event.key === ';' && event.keyCode === 186) {
+                        view.dispatch(state.replaceSelection('`'));
+                        event.preventDefault();
+                    }
+
+                    // On macOS on Hebrew - the key to the bottom-left of "Enter" produces "ֿ " code (Unicode 5bf), but we want it to produce a backslash "\".
+                    if (event.code === 'Backslash' && event.key === '\u05bf' && event.keyCode === 220) {
+                        view.dispatch(state.replaceSelection('\\'));
+                        event.preventDefault();
                     }
                 }
-                targetSelection = { start: event.shiftKey ? selectionStart : newEnd, end: newEnd };
-            }
+            }),
+            EditorView.lineWrapping,
+            EditorView.theme({
+                "&": { height: "100%" },
+                ".cm-scroller": { overflow: "auto" },
+                "&.cm-focused": { outline: "none" }
+            }, { dark: false })
+        ];
 
-            // On macOS on Hebrew - the key to the left of "1" produces ";" - but we want it to produce backquote "`".
-            if (event.code === 'Backquote' && event.key === ';' && event.keyCode === 186) {
-                document.execCommand('insertText', false, '`');
-                event.preventDefault();
-            }
+        if (isRtl) {
+            extensions.push(EditorView.theme({
+                ".cm-content": {
+                    fontFamily: "'David', 'Narkisim', 'Times New Roman', serif"
+                }
+            }));
+        }
 
-            // On macOS on Hebrew - the key to the bottom-left of "Enter" produces "ֿ " code (Unicode 5bf), but we want it to produce a backquote "\".
-            if (event.code === 'Backslash' && event.key === '\u05bf' && event.keyCode === 220) {
-                document.execCommand('insertText', false, '\\');
-                event.preventDefault();
-            }
-
-            // // On macOS on Hebrew - the key to the left of "z" produces nothing - but we want it to produce ???.
-            // if (event.code === 'IntlBackslash' && event.key === 'Unidentified' && event.keyCode === 192) {
-            //     document.execCommand('insertText', false, '???');
-            //     event.preventDefault();
-            // }
-
-            if (targetSelection !== undefined) {
-                event.preventDefault();
-                editorTextarea.setSelectionRange(targetSelection.start, targetSelection.end);
-                editorTextarea.focus();
-            }
-
-            // If the user presses Escape, we want to briefly highlight the current cursor position, and scroll to it if needed.
-            if (event.code === 'Escape') {
-                editorTextarea.setSelectionRange(Math.max(0, selectionStart - 1), selectionEnd + 1);
-                setTimeout(() => editorTextarea.setSelectionRange(selectionStart, selectionEnd), 100);
-            }
+        const editorView = new EditorView({
+            doc: initialContent,
+            extensions,
+            parent: document.querySelector('.editor-pane')
         });
 
-        editorTextarea.addEventListener('input', () => {
-            this.tabs.get(filePath).isDirty = true;
-            this.updateTabTitle(filePath);
-            this.scheduleAutosave();
-        });
+        editorView.dom.classList.add('editor');
+        if (isRtl) {
+            editorView.dom.classList.add('rtl');
+        }
 
-        editorTextarea.addEventListener('scroll', () => {
-            this.saveScrollPosition(filePath);
-        });
+        return editorView;
     }
 
     async loadFilesTree() {
@@ -180,13 +193,7 @@ class MarkdownEditor {
                 tabElement.addEventListener('click', () => this.switchToTab(filePath).catch(console.error));
                 document.getElementById('tabs').appendChild(tabElement);
 
-                // Build the editor <textarea> from the template.
-                const wrapper = document.createElement('div');
-                wrapper.innerHTML = this.editorTemplate;
-                const editorTextarea = wrapper.firstElementChild;
-                document.querySelector('.editor-pane').appendChild(editorTextarea);
-                this.bindEditorEvents(editorTextarea, filePath);
-
+                let content;
                 try {
                     // Load file content from server.
                     const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`);
@@ -194,23 +201,22 @@ class MarkdownEditor {
                     if (!response.ok) {
                         throw new Error(data.error || 'Failed to load file');
                     }
-                    editorTextarea.dataset.filePath = filePath;
-                    editorTextarea.value = data.content;
-                    if (this.isRtlFile(fileName)) {
-                        editorTextarea.classList.add('rtl');
-                    }
+                    content = data.content;
                 } catch (error) {
                     console.error(`Failed to load ${JSON.stringify(filePath)}: `, error);
                     this.closeTab(filePath).catch(console.error);
                     return;
                 }
 
+                // Build the editor from CodeMirror
+                const editorView = this.createEditorView(filePath, fileName, content);
+
                 this.tabs.set(filePath, {
                     filePath,
                     fileName,
-                    originalContent: editorTextarea.value,
+                    originalContent: content,
                     isDirty: false,
-                    editorTextarea,
+                    editorView,
                     tabElement,
                     abortAutoScrolling: false,
                 });
@@ -218,7 +224,7 @@ class MarkdownEditor {
             }
 
             if (setAsActive) {
-                await this.switchToTab(filePath); // will call this.saveSession()
+                await this.switchToTab(filePath);
                 this.saveSession();
             }
         } catch (error) {
@@ -238,25 +244,25 @@ class MarkdownEditor {
         const oldTabData = this.tabs.get(this.activeTab);
         if (oldTabData) {
             oldTabData.tabElement.classList.remove('active');
-            oldTabData.editorTextarea.classList.remove('active');
+            oldTabData.editorView.dom.classList.remove('active');
             this.fileTreeElements.get(oldTabData.filePath)?.classList.remove('active');
         }
 
         // Activate the new tab and editor.
         tabData.tabElement.classList.add('active');
-        tabData.editorTextarea.classList.add('active');
+        tabData.editorView.dom.classList.add('active');
         const fileTreeElement = this.fileTreeElements.get(tabData.filePath);
         fileTreeElement?.classList.add('active');
         fileTreeElement?.scrollIntoViewIfNeeded();
 
-        tabData.editorTextarea.focus();
+        tabData.editorView.focus();
 
-        // It seems that in Chrome, when a <textarea> is focused, it is auto-scrolling to the cursor, which we don't want.
+        // It seems that in Chrome, when CodeMirror is focused, it may auto-scroll to the cursor
         tabData.abortAutoScrolling = true;
         setTimeout(() => tabData.abortAutoScrolling = false, 100);
 
-        if (!tabData.editorTextarea._wasEverVisible_) {
-            tabData.editorTextarea._wasEverVisible_ = true;
+        if (!tabData.editorView._wasEverVisible_) {
+            tabData.editorView._wasEverVisible_ = true;
             this.restoreScrollPosition(filePath);
         }
 
@@ -287,7 +293,7 @@ class MarkdownEditor {
 
         // Cleanup DOM.
         tabData.tabElement.remove();
-        tabData.editorTextarea.remove();
+        tabData.editorView.destroy();
         this.fileTreeElements.get(tabData.filePath)?.classList.remove('active');
 
         this.saveSession();
@@ -315,11 +321,10 @@ class MarkdownEditor {
     async autosave() {
         if (!this.activeTab) return;
 
-
         try {
             console.log(`Auto saving ${this.activeTab}`);
             const tabData = this.tabs.get(this.activeTab);
-            const currentContent = tabData.editorTextarea.value;
+            const currentContent = tabData.editorView.state.doc.toString();
             const response = await fetch(`/api/file/${encodeURIComponent(this.activeTab)}`, {
                 method: 'POST',
                 headers: {
@@ -375,23 +380,23 @@ class MarkdownEditor {
     saveScrollPosition(filePath) {
         const tabData = this.tabs.get(filePath);
         if (tabData.abortAutoScrolling) {
-            console.log(`    (ignoring scroll event for ${JSON.stringify(filePath)} with scrollTop=${tabData.editorTextarea.scrollTop})`);
-            tabData.editorTextarea.scrollTop = this.scrollPositions.get(this.activeTab);
+            console.log(`    (ignoring scroll event for ${JSON.stringify(filePath)} with scrollTop=${tabData.editorView.scrollDOM.scrollTop})`);
+            tabData.editorView.scrollDOM.scrollTop = this.scrollPositions.get(this.activeTab);
             return;
         }
-        console.log(`Saving scroll position for ${JSON.stringify(filePath)}: `, tabData.editorTextarea.scrollTop);
-        this.scrollPositions.set(this.activeTab, tabData.editorTextarea.scrollTop);
+        console.log(`Saving scroll position for ${JSON.stringify(filePath)}: `, tabData.editorView.scrollDOM.scrollTop);
+        this.scrollPositions.set(this.activeTab, tabData.editorView.scrollDOM.scrollTop);
         this.saveSession();
     }
 
     restoreScrollPosition(filePath) {
         if (!this.scrollPositions.has(filePath)) return;
-        const editorTextarea = this.tabs.get(filePath).editorTextarea;
+        const editorView = this.tabs.get(filePath).editorView;
         const targetScrollTop = this.scrollPositions.get(filePath);
         console.log(`Restoring scroll position of ${JSON.stringify(filePath)}: ${targetScrollTop}`);
-        editorTextarea.scrollTop = targetScrollTop;
-        if (editorTextarea.scrollTop !== targetScrollTop) {
-            console.warn(`Failed to restore scrollTop of ${JSON.stringify(filePath)} to ${targetScrollTop}, got ${editorTextarea.scrollTop} instead.`);
+        editorView.scrollDOM.scrollTop = targetScrollTop;
+        if (editorView.scrollDOM.scrollTop !== targetScrollTop) {
+            console.warn(`Failed to restore scrollTop of ${JSON.stringify(filePath)} to ${targetScrollTop}, got ${editorView.scrollDOM.scrollTop} instead.`);
         }
     }
 
@@ -401,4 +406,4 @@ class MarkdownEditor {
 }
 
 // Initialize the MarkdownEditor.
-new MarkdownEditor();
+document.addEventListener('DOMContentLoaded', () => new MarkdownEditor());
