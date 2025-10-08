@@ -20,12 +20,65 @@ class MarkdownEditor {
 
     async init() {
         this.bindGlobalEvents();
+        this.restoreSidebarWidth();
         await this.restoreSession();
         await this.loadFilesTree();
     }
 
     bindGlobalEvents() {
         window.addEventListener('beforeunload', () => this.saveSession());
+        this.initSplitter();
+    }
+
+    initSplitter() {
+        const splitter = document.getElementById('splitter');
+        const sidebar = document.querySelector('.sidebar');
+        let isDragging = false;
+        let startX = 0;
+        let startWidth = 0;
+
+        splitter.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+            startWidth = sidebar.offsetWidth;
+            splitter.classList.add('dragging');
+            document.body.style.cursor = 'col-resize';
+            document.body.style.userSelect = 'none';
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+
+            const delta = e.clientX - startX;
+            const newWidth = Math.max(150, Math.min(startWidth + delta, window.innerWidth - 300));
+            sidebar.style.width = `${newWidth}px`;
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                splitter.classList.remove('dragging');
+                document.body.style.cursor = '';
+                document.body.style.userSelect = '';
+                this.saveSidebarWidth();
+            }
+        });
+
+        window.addEventListener('resize', () => this.restoreSidebarWidth());
+    }
+
+    saveSidebarWidth() {
+        const sidebar = document.querySelector('.sidebar');
+        const ratio = sidebar.offsetWidth / window.innerWidth;
+        localStorage.setItem('markdownEditor.sidebarRatio', ratio);
+    }
+
+    restoreSidebarWidth() {
+        const savedRatio = localStorage.getItem('markdownEditor.sidebarRatio') || 0.25;
+        const sidebar = document.querySelector('.sidebar');
+        const width = Math.max(150, Math.min(savedRatio * window.innerWidth, window.innerWidth - 300));
+        sidebar.style.width = `${width}px`;
     }
 
     createEditorView(filePath, fileName, initialContent) {
