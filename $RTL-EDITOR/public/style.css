@@ -160,11 +160,6 @@ body {
     flex: 0 0 100%; /* take up full height */
 }
 
-.editor-wrapper.rtl {
-    direction: rtl;
-    text-align: right;
-}
-
 /* CodeMirror editor styling */
 .cm-editor {
     height: 100%;
@@ -177,6 +172,10 @@ body {
 
 .cm-content {
     padding: 16px;
+}
+
+.editor-wrapper.rtl .cm-layer {
+    left: 0.5em !important; /* this seems to fix an RTL issue with the selection-range and the cursor positioning */
 }
 
 .loading {

@@ -82,7 +82,7 @@ class MarkdownEditor {
     }
 
     createEditorView(filePath, fileName, initialContent) {
-        const isRtl = this.isRtlFile(fileName);
+        const isRtl = this.isRtlFile(filePath);
 
         // Create custom markdown highlighting
         const monospaceCss = { background: "rgba(128, 128, 128, .1)", fontSize: "0.9em", fontFamily: "sans-serif", WebkitTextStroke: "0.3px black" }
@@ -254,7 +254,7 @@ class MarkdownEditor {
 
                 // Build a <div> wrapper for the editor to allow easier styling.
                 const editorWrapper = document.createElement('div');
-                editorWrapper.className = 'editor-wrapper';
+                editorWrapper.className = 'editor-wrapper' + (this.isRtlFile(filePath) ? ' rtl' : '');
                 editorWrapper.appendChild(editorView.dom);
                 document.querySelector('.editor-pane').appendChild(editorWrapper);
 
@@ -449,8 +449,8 @@ class MarkdownEditor {
         }
     }
 
-    isRtlFile(fileName) {
-        return fileName.endsWith('.rtl.md') || fileName === 'CLAUDE.md';
+    isRtlFile(filePath) {
+        return filePath.endsWith('.rtl.md') || filePath === 'CLAUDE.md';
     }
 }
 
