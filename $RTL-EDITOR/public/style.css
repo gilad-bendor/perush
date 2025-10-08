@@ -182,3 +182,52 @@ body {
     opacity: 0.5;
     pointer-events: none;
 }
+
+/* Monospace font for list indentation characters */
+.cm-list-indent-monospace {
+    font-family: monospace;
+    font-size: 0.75em;
+}
+
+/* Multi-level list support */
+.cm-list-level-1 {
+    text-indent: -1em;
+    padding-right: -1em !important;
+    border-right: 1em solid transparent;
+}
+.cm-list-level-2 {
+    text-indent: -2em;
+    padding-right: -2em !important;
+    border-right: 2em solid transparent;
+}
+.cm-list-level-3 {
+    text-indent: -3em;
+    padding-right: -3em !important;
+    border-right: 3em solid transparent;
+}
+.cm-list-level-4 {
+    text-indent: -4em;
+    padding-right: -4em !important;
+    border-right: 4em solid transparent;
+}
+.cm-list-level-5 {
+    text-indent: -5em;
+    padding-right: -5em !important;
+    border-right: 5em solid transparent;
+}
+.cm-list-level-6 {
+    text-indent: -6em;
+    padding-right: -6em !important;
+    border-right: 6em solid transparent;
+}
+
+/* Syntax highlighting for special HTML tags */
+.cm-html-ניתוח-לשוני {
+    background: #ffe8e8;
+}
+.cm-html-הקבלה-היסטורית {
+    background: #e0f0ff;
+}
+.cm-html-עיון {
+    background: #e8ffe8;
+}
