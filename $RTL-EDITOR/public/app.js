@@ -25,7 +25,6 @@ class MarkdownEditor {
     }
 
     bindGlobalEvents() {
-        document.getElementById('refresh-btn').addEventListener('click', () => this.loadFilesTree());
         window.addEventListener('beforeunload', () => this.saveSession());
     }
 
