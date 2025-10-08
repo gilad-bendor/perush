@@ -162,7 +162,6 @@ body {
     overflow-y: hidden;
     flex: 1;  /* shrink to height 0 - since there is a .editor-wrapper.active that doesn't shrink and takes 100% height */
     border: none;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-size: 14px;
     line-height: 1.6;
     outline: none;
@@ -187,7 +186,6 @@ body {
 }
 
 .cm-scroller {
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-size: 14px;
     line-height: 1.6;
 }

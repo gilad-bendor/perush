@@ -33,6 +33,7 @@ class MarkdownEditor {
         const isRtl = this.isRtlFile(fileName);
 
         // Create custom markdown highlighting
+        const monospaceCss = { background: "rgba(128, 128, 128, .1)", fontSize: "0.9em", fontFamily: "sans-serif", WebkitTextStroke: "0.3px black" }
         const markdownHighlighting = syntaxHighlighting(HighlightStyle.define([
             { tag: tags.heading1, fontSize: "2em", fontWeight: "bold" },
             { tag: tags.heading2, fontSize: "1.5em", fontWeight: "bold" },
@@ -40,11 +41,11 @@ class MarkdownEditor {
             { tag: tags.heading4, fontSize: "1.1em", fontWeight: "bold" },
             { tag: tags.heading5, fontSize: "1em", fontWeight: "bold" },
             { tag: tags.heading6, fontSize: "0.9em", fontWeight: "bold" },
-            { tag: tags.quote, color: "#666", fontStyle: "italic" },
+            { tag: tags.quote, ...monospaceCss },
             { tag: tags.strong, fontWeight: "bold" },
             { tag: tags.emphasis, fontStyle: "italic" },
             { tag: tags.link, color: "#0066cc", textDecoration: "underline" },
-            { tag: tags.monospace, fontFamily: "'Monaco', 'Menlo', 'Ubuntu Mono', monospace", background: "#f4f4f4" }
+            { tag: tags.monospace, ...monospaceCss }
         ]));
 
         const extensions = [
