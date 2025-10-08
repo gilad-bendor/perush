@@ -8,11 +8,6 @@ import { tags } from 'https://esm.sh/@lezer/highlight';
 
 class MarkdownEditor {
     constructor() {
-        // Get the HTML of the editor template and remove it from the DOM.
-        const editorTemplateElement = document.querySelector('.editor');
-        this.editorTemplate = editorTemplateElement.outerHTML;
-        editorTemplateElement.remove();
-
         this.tabs = new Map();
         this.activeTab = null;
         this.autosaveTimer = null;
@@ -101,18 +96,11 @@ class MarkdownEditor {
             }));
         }
 
-        const editorView = new EditorView({
+        return new EditorView({
             doc: initialContent,
             extensions,
             parent: document.querySelector('.editor-pane')
         });
-
-        editorView.dom.classList.add('editor');
-        if (isRtl) {
-            editorView.dom.classList.add('rtl');
-        }
-
-        return editorView;
     }
 
     async loadFilesTree() {
@@ -211,12 +199,19 @@ class MarkdownEditor {
                 // Build the editor from CodeMirror
                 const editorView = this.createEditorView(filePath, fileName, content);
 
+                // Build a <div> wrapper for the editor to allow easier styling.
+                const editorWrapper = document.createElement('div');
+                editorWrapper.className = 'editor-wrapper';
+                editorWrapper.appendChild(editorView.dom);
+                document.querySelector('.editor-pane').appendChild(editorWrapper);
+
                 this.tabs.set(filePath, {
                     filePath,
                     fileName,
                     originalContent: content,
                     isDirty: false,
                     editorView,
+                    editorWrapper,
                     tabElement,
                     abortAutoScrolling: false,
                 });
@@ -244,13 +239,13 @@ class MarkdownEditor {
         const oldTabData = this.tabs.get(this.activeTab);
         if (oldTabData) {
             oldTabData.tabElement.classList.remove('active');
-            oldTabData.editorView.dom.classList.remove('active');
+            oldTabData.editorWrapper.classList.remove('active');
             this.fileTreeElements.get(oldTabData.filePath)?.classList.remove('active');
         }
 
         // Activate the new tab and editor.
         tabData.tabElement.classList.add('active');
-        tabData.editorView.dom.classList.add('active');
+        tabData.editorWrapper.classList.add('active');
         const fileTreeElement = this.fileTreeElements.get(tabData.filePath);
         fileTreeElement?.classList.add('active');
         fileTreeElement?.scrollIntoViewIfNeeded();
@@ -261,8 +256,8 @@ class MarkdownEditor {
         tabData.abortAutoScrolling = true;
         setTimeout(() => tabData.abortAutoScrolling = false, 100);
 
-        if (!tabData.editorView._wasEverVisible_) {
-            tabData.editorView._wasEverVisible_ = true;
+        if (!tabData.editorWrapper._wasEverVisible_) {
+            tabData.editorWrapper._wasEverVisible_ = true;
             this.restoreScrollPosition(filePath);
         }
 
@@ -294,6 +289,7 @@ class MarkdownEditor {
         // Cleanup DOM.
         tabData.tabElement.remove();
         tabData.editorView.destroy();
+        tabData.editorWrapper.remove();
         this.fileTreeElements.get(tabData.filePath)?.classList.remove('active');
 
         this.saveSession();
@@ -385,7 +381,7 @@ class MarkdownEditor {
             return;
         }
         console.log(`Saving scroll position for ${JSON.stringify(filePath)}: `, tabData.editorView.scrollDOM.scrollTop);
-        this.scrollPositions.set(this.activeTab, tabData.editorView.scrollDOM.scrollTop);
+        this.scrollPositions.set(filePath, tabData.editorView.scrollDOM.scrollTop);
         this.saveSession();
     }
 
