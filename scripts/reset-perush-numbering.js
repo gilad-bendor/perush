@@ -309,7 +309,7 @@ async function task2() {
 function fixSyntaxErrors(originalContent) {
     return originalContent
         // In <ניתוח-לשוני> - use standard double-quotes instead of Hebrew double-quotes
-        .replace(/(<ניתוח-לשוני[^>]+מוקד=)["'״](.*?)["'״]([^>]*>)/g, '$1"$2"$3');
+        .replace(/(<ניתוח-לשוני[^>]+ביטוי=)["'״](.*?)["'״]([^>]*>)/g, '$1"$2"$3');
 }
 
 /**
