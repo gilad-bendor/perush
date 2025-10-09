@@ -9,7 +9,8 @@
       "WebSearch",
       "WebFetch(domain:en.wikipedia.org)",
       "WebFetch(domain:plato.stanford.edu)",
-      "WebFetch(domain:iep.utm.edu)"
+      "WebFetch(domain:iep.utm.edu)",
+      "Bash(cp:*)"
     ],
     "deny": []
   },
