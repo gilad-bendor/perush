@@ -471,115 +471,121 @@ const listLinePlugin = ViewPlugin.fromClass(
         buildDecorations(view) {
             const builder = new RangeSetBuilder();
 
-            // We want to add classes to the list lines to allow CSS to style them with hanging indents,
-            //  and also to support multi-level lists.
-            for (let { from, to } of view.visibleRanges) {
-                // Suppose these Markdown lines:
-                //
-                // - Item 1                          --> listIndentationsStack=[2]   (no indentation, and "- " is 2 chars)
-                //   This is a continuation line     --> listIndentationsStack=[2]   (2 spaces indentation, still under Item 1)
-                //   1. Nested Item 1.1              --> listIndentationsStack=[2,5] (2 spaces indentation, and "1. " is 3 chars, new nested list)
-                //      Continuation of Item 1.1     --> listIndentationsStack=[2,5] (5 spaces indentation, still under Nested Item 1.1)
-                // - Item 2                          --> listIndentationsStack=[2]   (no indentation, back to Item 2)
-                // Normal text line                  --> listIndentationsStack=[]    (no indentation, not a list)
-                //
-                const listIndentationsStack = [];
+            // Suppose these Markdown lines:
+            //
+            // - Item 1                          --> listIndentationsStack=[2]   (no indentation, and "- " is 2 chars)
+            //   This is a continuation line     --> listIndentationsStack=[2]   (2 spaces indentation, still under Item 1)
+            //   1. Nested Item 1.1              --> listIndentationsStack=[2,5] (2 spaces indentation, and "1. " is 3 chars, new nested list)
+            //      Continuation of Item 1.1     --> listIndentationsStack=[2,5] (5 spaces indentation, still under Nested Item 1.1)
+            // - Item 2                          --> listIndentationsStack=[2]   (no indentation, back to Item 2)
+            // Normal text line                  --> listIndentationsStack=[]    (no indentation, not a list)
+            //
+            const listIndentationsStack = [];
 
-                // Trace HTML tags stack: the tags MUST open and close at the start of lines (allowing for indentation).
-                // Suppose these HTML lines:
-                //
-                // aaa                                        --> htmlTagsStack=[]
-                // <foo hey="1">                              --> htmlTagsStack=["foo"]
-                //   bbb                                      --> htmlTagsStack=["foo"]
-                //   <bar>                                    --> htmlTagsStack=["foo","bar"]
-                //     ccc                                    --> htmlTagsStack=["foo","bar"]
-                //   </bar>                                   --> htmlTagsStack=["foo","bar"]
-                //   ddd                                      --> htmlTagsStack=["foo"]
-                // </foo>                                     --> htmlTagsStack=["foo"]
-                // eee                                        --> htmlTagsStack=[]
-                const htmlTagsStack = [];
+            // Trace HTML tags stack: the tags MUST open and close at the start of lines (allowing for indentation).
+            // Suppose these HTML lines:
+            //
+            // aaa                                        --> htmlTagsStack=[]
+            // <foo hey="1">                              --> htmlTagsStack=["foo"]
+            //   bbb                                      --> htmlTagsStack=["foo"]
+            //   <bar>                                    --> htmlTagsStack=["foo","bar"]
+            //     ccc                                    --> htmlTagsStack=["foo","bar"]
+            //   </bar>                                   --> htmlTagsStack=["foo","bar"]
+            //   ddd                                      --> htmlTagsStack=["foo"]
+            // </foo>                                     --> htmlTagsStack=["foo"]
+            // eee                                        --> htmlTagsStack=[]
+            const htmlTagsStack = [];
 
-                for (let pos = from; pos <= to;) {
-                    const line = view.state.doc.lineAt(pos);
-                    const lineText = line.text;
-                    const trimmedText = lineText.trimStart();
+            // Scan text-lines in the document.
+            // Note: we process the ENTIRE document to maintain context (like HTML tag stacks) from lines above the viewport.
+            //  We could optimize this by only scanning the visible viewport and a few lines above it - like this:  for (let { from, to } of view.visibleRanges) { ... }
+            const from = 0;
+            const to = view.state.doc.length;
+            let lineNumber = 0;
+            for (let pos = from; pos <= to; ) {
+                lineNumber++;
+                const line = view.state.doc.lineAt(pos);
+                const lineText = line.text;
+                const trimmedText = lineText.trimStart();
+                if (trimmedText) {
 
-                    if (trimmedText) {
+                    // ---------- Handle HTML tags ----------
 
-                        // ---------- Handle HTML tags ----------
+                    // Check for HTML tags that open or close at the start of the line (after indentation)
+                    const htmlTagMatch = /^<(\/?)([-\p{L}\d]+)(?:>| .*>)/u.exec(trimmedText);
+                    console.log(`Line: `, JSON.stringify(lineText), `     `, htmlTagMatch);
 
-                        // Check for HTML tags that open or close at the start of the line (after indentation)
-                        const htmlTagMatch = /^<(\/?)([-\p{L}\d]+)(?:>| .*>)/u.exec(trimmedText);
-                        console.log(`Line: `, JSON.stringify(lineText), `     `, htmlTagMatch);
-
-                        if (htmlTagMatch?.[1] === '') {
-                            // Opening tag
-                            htmlTagsStack.push(htmlTagMatch[2]);
-                        }
-
-                        // If we are inside any HTML tags, mark the entire line
-                        let lineClass = '';
-                        if (htmlTagsStack.length > 0) {
-                            lineClass = htmlTagsStack.map(tag => `cm-html-${tag}`).join(' ');
-                            const decoration = Decoration.line({
-                                class: lineClass
-                            });
-                            builder.add(line.from, line.from, decoration);
-                        }
-
-                        if (htmlTagMatch?.[1] === '/' && htmlTagMatch[2] === htmlTagsStack.at(-1)) {
-                            // Closing tag
-                            htmlTagsStack.pop();
-                        }
-
-                        // ---------- Handle List Items ----------
-
-                        // Clean up the stack based on current indentation.
-                        const indentation = lineText.length - trimmedText.length;
-                        while (listIndentationsStack.length > 0 && indentation < listIndentationsStack.at(-1)) {
-                            listIndentationsStack.pop();
-                        }
-
-                        // Check if line starts with list marker: -, *, +, or numbered list
-                        const listItemMatch = /^([-*+]|\d+\.)\s/.exec(trimmedText);
-                        if (listItemMatch) {
-                            // This is a list item - calculate its level based on indentation
-                            const innerIndentation = indentation + (listItemMatch?.[0]?.length ?? 0);
-                            listIndentationsStack.push(innerIndentation);
-                        }
-
-                        const level = listIndentationsStack.length;
-                        if (level > 0) {
-                            const decoration = Decoration.line({
-                                class: `cm-list-line cm-list-level-${level}`
-                            });
-                            builder.add(line.from, line.from, decoration);
-
-                            // Apply monospace font to the first listIndentationsStack.at(-1) characters of the line
-                            const indentChars = listIndentationsStack.at(-1);
-                            if (indentChars > 0 && indentChars <= lineText.length) {
-                                const monospaceMark = Decoration.mark({
-                                    class: `cm-list-line cm-list-indent-monospace${lineClass ? ` ${lineClass}` : ''}`
-                                });
-                                builder.add(line.from, line.from + indentChars, monospaceMark);
-                            }
-                        }
-
-                        // ---------- Make end-of-line spaces visible ----------
-
-                        const terminalSpacesCount = / *$/.exec(lineText)?.[0]?.length;
-                        if (terminalSpacesCount) {
-                            const spaceMark = Decoration.mark({
-                                class: 'cm-visible-space'
-                            });
-                            for (let i = line.from + lineText.length - terminalSpacesCount; i < line.from + lineText.length; i++) {
-                                builder.add(i, i + 1, spaceMark);
-                            }
-                        }
+                    if (htmlTagMatch?.[1] === '') {
+                        // Opening tag
+                        htmlTagsStack.push(htmlTagMatch[2]);
                     }
 
-                    pos = line.to + 1;
+                    // If we are inside any HTML tags, mark the entire line
+                    let lineClass = '';
+                    if (htmlTagsStack.length > 0) {
+                        lineClass = htmlTagsStack.map(tag => `cm-html-${tag}`).join(' ');
+                        const decoration = Decoration.line({
+                            class: lineClass
+                        });
+                        builder.add(line.from, line.from, decoration);
+                    }
+
+                    if (htmlTagMatch?.[1] === '/' && htmlTagMatch[2] === htmlTagsStack.at(-1)) {
+                        // Closing tag
+                        htmlTagsStack.pop();
+                    }
+
+                    // ---------- Handle List Items ----------
+
+                    // Clean up the stack based on current indentation.
+                    const indentation = lineText.length - trimmedText.length;
+                    while (listIndentationsStack.length > 0 && indentation < listIndentationsStack.at(-1)) {
+                        listIndentationsStack.pop();
+                    }
+
+                    // Check if line starts with list marker: -, *, +, or numbered list
+                    const listItemMatch = /^([-*+]|\d+\.)\s/.exec(trimmedText);
+                    if (listItemMatch) {
+                        // This is a list item - calculate its level based on indentation
+                        const innerIndentation = indentation + (listItemMatch?.[0]?.length ?? 0);
+                        listIndentationsStack.push(innerIndentation);
+                    }
+
+                    const level = listIndentationsStack.length;
+                    if (level > 0) {
+                        const decoration = Decoration.line({
+                            class: `cm-list-line cm-list-level-${level}`
+                        });
+                        builder.add(line.from, line.from, decoration);
+
+                        // Apply monospace font to the first listIndentationsStack.at(-1) characters of the line
+                        const indentChars = listIndentationsStack.at(-1);
+                        if (indentChars > 0 && indentChars <= lineText.length) {
+                            const monospaceMark = Decoration.mark({
+                                class: `cm-list-line cm-list-indent-monospace${lineClass ? ` ${lineClass}` : ''}`
+                            });
+                            builder.add(line.from, line.from + indentChars, monospaceMark);
+                        }
+                    }
                 }
+
+                // ---------- Make end-of-line spaces visible ----------
+
+                const terminalSpacesCount = / *$/.exec(lineText)?.[0]?.length;
+                if (terminalSpacesCount) {
+                    const spaceMark = Decoration.mark({
+                        class: 'cm-visible-space'
+                    });
+                    for (let i = line.from + lineText.length - terminalSpacesCount; i < line.from + lineText.length; i++) {
+                        builder.add(i, i + 1, spaceMark);
+                    }
+                }
+
+                pos = line.to + 1;
+            }
+
+            if (lineNumber > 10000) {
+                console.warn(`Document is very long (${lineNumber} lines) - performance may be slow because we scan the *whole* document, rather than just the visible lines.`);
             }
 
             return builder.finish();

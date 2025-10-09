@@ -235,6 +235,7 @@ body {
 /* Visible spaces - show mid-dot for spaces */
 .cm-visible-space {
     font-family: monospace;
+    font-size: 0.8em;
 }
 .cm-visible-space::before {
     content: '·';
@@ -242,8 +243,9 @@ body {
     display: inline-block;
     width: 0;
     left: -1.2em;
-    color: #808080;
+    color: rgba(128,128,128,0.7);
     font-family: system-ui;
+    font-size: 0.8rem;
     pointer-events: none;
     user-select: none;
 }
