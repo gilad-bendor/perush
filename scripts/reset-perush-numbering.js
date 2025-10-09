@@ -29,11 +29,11 @@ A "verse line" has this syntax:
 === TASK 1 ===
 
 Read these files in order (these immutable files contains ALL the verses in the books - in order):
-   ./תנך/תורה/בראשית.rtl.md
-   ./תנך/תורה/שמות.rtl.md
-   ./תנך/תורה/ויקרא.rtl.md
-   ./תנך/תורה/במדבר.rtl.md
-   ./תנך/תורה/דברים.rtl.md
+   ./תנך-מנוקד/תורה/בראשית.rtl.md
+   ./תנך-מנוקד/תורה/שמות.rtl.md
+   ./תנך-מנוקד/תורה/ויקרא.rtl.md
+   ./תנך-מנוקד/תורה/במדבר.rtl.md
+   ./תנך-מנוקד/תורה/דברים.rtl.md
 In each file - for each "verse line" - remember the string "[book-name] [perek] [pasuk]" in order.
 1. Store these strings in the Array `orderedVersesArray` (will never change)
 2. Store these strings in the Map `orphanVersesMap` (key is the string, and value is the index into `orderedVersesArray`): verses that are found under './פירוש' are removed from this Map. This Set is expected to be empty at the end.
@@ -82,7 +82,7 @@ const { execSync } = require('child_process');
 
 // Book names in Hebrew
 const BOOK_NAMES = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'];
-const TORA_BASE_DIR = './תנך/תורה';
+const TORA_BASE_DIR = './תנך-מנוקד/תורה';
 
 const torahFiles = BOOK_NAMES.map(bookName => `${TORA_BASE_DIR}/${bookName}.rtl.md`);
 
