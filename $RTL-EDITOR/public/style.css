@@ -231,3 +231,19 @@ body {
 .cm-html-עיון {
     background: #e8ffe8;
 }
+
+/* Visible spaces - show mid-dot for spaces */
+.cm-visible-space {
+    font-family: monospace;
+}
+.cm-visible-space::before {
+    content: '·';
+    position: relative;
+    display: inline-block;
+    width: 0;
+    left: -1.2em;
+    color: #808080;
+    font-family: system-ui;
+    pointer-events: none;
+    user-select: none;
+}

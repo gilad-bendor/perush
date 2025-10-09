@@ -503,6 +503,7 @@ const listLinePlugin = ViewPlugin.fromClass(
                     const line = view.state.doc.lineAt(pos);
                     const lineText = line.text;
                     const trimmedText = lineText.trimStart();
+
                     if (trimmedText) {
 
                         // ---------- Handle HTML tags ----------
@@ -561,6 +562,18 @@ const listLinePlugin = ViewPlugin.fromClass(
                                     class: `cm-list-line cm-list-indent-monospace${lineClass ? ` ${lineClass}` : ''}`
                                 });
                                 builder.add(line.from, line.from + indentChars, monospaceMark);
+                            }
+                        }
+
+                        // ---------- Make end-of-line spaces visible ----------
+
+                        const terminalSpacesCount = / *$/.exec(lineText)?.[0]?.length;
+                        if (terminalSpacesCount) {
+                            const spaceMark = Decoration.mark({
+                                class: 'cm-visible-space'
+                            });
+                            for (let i = line.from + lineText.length - terminalSpacesCount; i < line.from + lineText.length; i++) {
+                                builder.add(i, i + 1, spaceMark);
                             }
                         }
                     }
