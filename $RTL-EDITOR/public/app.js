@@ -238,7 +238,6 @@ class MarkdownEditor {
 
     async updateFileFromServer(filePath) {
         const tabData = this.tabs.get(filePath);
-
         // Load file content from server.
         if (!tabData || tabData.autosaveTimeoutId) {
             return;
@@ -267,7 +266,11 @@ class MarkdownEditor {
                 changes: { from: 0, to: editorView.state.doc.length, insert: contentOnServer }
             });
             editorView.scrollDOM.scrollTop = originalScrollTop;
-            editorView.dispatch({ selection: originalSelection });
+            try {
+                editorView.dispatch({selection: originalSelection});
+            } catch (error) {
+                // Probably "RangeError: Selection points outside of document" - ignore.
+            }
             tabData.contentAtServer = contentOnServer;
             tabData.isDirty = false;
             this.updateTabTitle(filePath);
@@ -419,6 +422,7 @@ class MarkdownEditor {
         clearTimeout(tabData.autosaveTimeoutId);
         tabData.autosaveTimeoutId = setTimeout(async () => {
             if (!tabData.isDirty) {
+                tabData.autosaveTimeoutId = null;
                 return;
             }
             tabData.autosaveTimeoutId = '===SAVING==='; // not setting to null yet, to disable updateFileFromServer()
@@ -614,36 +618,37 @@ const listLinePlugin = ViewPlugin.fromClass(
                 const line = view.state.doc.lineAt(pos);
                 const lineText = line.text;
                 const trimmedText = lineText.trimStart();
+
+                // ---------- Handle HTML tags ----------
+
+                // Check for HTML tags that open or close at the start of the line (after indentation)
+                const htmlTagMatch = /^<(\/?)([-\p{L}\d]+)(?:>| .*>)/u.exec(trimmedText);
+                // console.log(`Line: `, JSON.stringify(lineText), `     `, htmlTagMatch);
+
+                if (htmlTagMatch?.[1] === '') {
+                    // Opening tag
+                    htmlTagsStack.push(htmlTagMatch[2]);
+                }
+
+                // If we are inside any HTML tags, mark the entire line
+                let lineClass = '';
+                if (htmlTagsStack.length > 0) {
+                    lineClass = htmlTagsStack.map(tag => `cm-html-${tag}`).join(' ');
+                    const decoration = Decoration.line({
+                        class: lineClass
+                    });
+                    builder.add(line.from, line.from, decoration);
+                }
+
+                if (htmlTagMatch?.[1] === '/' && htmlTagMatch[2] === htmlTagsStack.at(-1)) {
+                    // Closing tag
+                    htmlTagsStack.pop();
+                }
+
+
+                // ---------- Handle List Items ----------
+
                 if (trimmedText) {
-
-                    // ---------- Handle HTML tags ----------
-
-                    // Check for HTML tags that open or close at the start of the line (after indentation)
-                    const htmlTagMatch = /^<(\/?)([-\p{L}\d]+)(?:>| .*>)/u.exec(trimmedText);
-                    // console.log(`Line: `, JSON.stringify(lineText), `     `, htmlTagMatch);
-
-                    if (htmlTagMatch?.[1] === '') {
-                        // Opening tag
-                        htmlTagsStack.push(htmlTagMatch[2]);
-                    }
-
-                    // If we are inside any HTML tags, mark the entire line
-                    let lineClass = '';
-                    if (htmlTagsStack.length > 0) {
-                        lineClass = htmlTagsStack.map(tag => `cm-html-${tag}`).join(' ');
-                        const decoration = Decoration.line({
-                            class: lineClass
-                        });
-                        builder.add(line.from, line.from, decoration);
-                    }
-
-                    if (htmlTagMatch?.[1] === '/' && htmlTagMatch[2] === htmlTagsStack.at(-1)) {
-                        // Closing tag
-                        htmlTagsStack.pop();
-                    }
-
-                    // ---------- Handle List Items ----------
-
                     // Clean up the stack based on current indentation.
                     const indentation = lineText.length - trimmedText.length;
                     while (listIndentationsStack.length > 0 && indentation < listIndentationsStack.at(-1)) {
@@ -674,6 +679,15 @@ const listLinePlugin = ViewPlugin.fromClass(
                             builder.add(line.from, line.from + indentChars, monospaceMark);
                         }
                     }
+                }
+
+                // ---------- Handle "---" ----------
+
+                if (/^---+$/.test(trimmedText)) {
+                    const decoration = Decoration.line({
+                        class: 'cm-horizontal-rule'
+                    });
+                    builder.add(line.from, line.from, decoration);
                 }
 
                 // ---------- Make end-of-line spaces visible ----------

@@ -183,6 +183,20 @@ body {
     pointer-events: none;
 }
 
+/* Markdown "---" horizontal rule styling */
+.cm-horizontal-rule {
+    position: relative;
+}
+.cm-horizontal-rule::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 2px solid rgba(128,128,128,0.3);
+    z-index: 0;
+}
+
 /* Monospace font for list indentation characters */
 .cm-list-indent-monospace {
     font-family: monospace;
@@ -224,6 +238,7 @@ body {
 /* Syntax highlighting for special HTML tags */
 .cm-html-ניתוח-לשוני {
     background: #ffe8e8;
+    font-size: 0.7em;
 }
 .cm-html-הקבלה-היסטורית {
     background: #e0f0ff;
