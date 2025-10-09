@@ -6,12 +6,14 @@ import { indentWithTab } from 'https://esm.sh/@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle } from 'https://esm.sh/@codemirror/language';
 import { tags } from 'https://esm.sh/@lezer/highlight';
 
+// Interval to check for file updates from server (in milliseconds).
+const UPDATE_FILE_FROM_SERVER_INTERVAL_MS = 1000;
+
 class MarkdownEditor {
     constructor() {
         this.tabs = new Map();
         this.activeTab = null;
-        this.autosaveTimer = null;
-        this.scrollPositions = new Map();
+        this.tabStates = new Map();
         this.expandedFolders = new Set();
         this.fileTreeElements = new Map();
         this.directionCompartment = new Compartment();
@@ -71,7 +73,7 @@ class MarkdownEditor {
     saveSidebarWidth() {
         const sidebar = document.querySelector('.sidebar');
         const ratio = sidebar.offsetWidth / window.innerWidth;
-        localStorage.setItem('markdownEditor.sidebarRatio', ratio);
+        localStorage.setItem('markdownEditor.sidebarRatio', String(ratio));
     }
 
     restoreSidebarWidth() {
@@ -100,6 +102,7 @@ class MarkdownEditor {
             { tag: tags.monospace, ...monospaceCss }
         ]));
 
+        // noinspection JSUnusedGlobalSymbols
         const extensions = [
             basicSetup,
             markdown(),
@@ -111,7 +114,11 @@ class MarkdownEditor {
                 if (update.docChanged) {
                     this.tabs.get(filePath).isDirty = true;
                     this.updateTabTitle(filePath);
-                    this.scheduleAutosave();
+                    this.scheduleAutosave(filePath);
+                }
+                // Track selection/cursor changes
+                if (update.selectionSet) {
+                    this.saveSelectionState(filePath);
                 }
             }),
             EditorView.domEventHandlers({
@@ -220,6 +227,53 @@ class MarkdownEditor {
         });
     }
 
+    async loadFileFromServer(filePath) {
+        const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`);
+        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.error || 'Failed to load file');
+        }
+        return data.content;
+    }
+
+    async updateFileFromServer(filePath) {
+        const tabData = this.tabs.get(filePath);
+
+        // Load file content from server.
+        if (!tabData || tabData.autosaveTimeoutId) {
+            return;
+        }
+        const contentOnServer = await this.loadFileFromServer(filePath);
+        if (tabData.autosaveTimeoutId) {
+            return;
+        }
+
+        // If content has changed on server, prompt user to reload or keep local changes.
+        const currentContent = tabData.editorView.state.doc.toString();
+        if (currentContent !== contentOnServer) {
+            // console.log(`File ${JSON.stringify(filePath)} has changed on server:`);
+            // console.log('----- UI content -----');
+            // console.log(currentContent);
+            // console.log('----- New content from server -----');
+            // console.log(contentOnServer);
+            // console.log('----------------------------------');
+            alert(`The file\n    ${filePath}\n has changed on the server: updating.`);
+
+            // Remember original scroll position and selection.
+            const editorView = tabData.editorView;
+            const originalScrollTop = editorView.scrollDOM.scrollTop;
+            const originalSelection = editorView.state.selection;
+            editorView.dispatch({
+                changes: { from: 0, to: editorView.state.doc.length, insert: contentOnServer }
+            });
+            editorView.scrollDOM.scrollTop = originalScrollTop;
+            editorView.dispatch({ selection: originalSelection });
+            tabData.contentAtServer = contentOnServer;
+            tabData.isDirty = false;
+            this.updateTabTitle(filePath);
+        }
+    }
+
     async openFile(filePath, fileName, setAsActive = true) {
         console.log(`openFile(filePath=${JSON.stringify(filePath)}, fileName=${JSON.stringify(fileName)}, setAsActive=${setAsActive})`);
         try {
@@ -238,12 +292,7 @@ class MarkdownEditor {
                 let content;
                 try {
                     // Load file content from server.
-                    const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`);
-                    const data = await response.json();
-                    if (!response.ok) {
-                        throw new Error(data.error || 'Failed to load file');
-                    }
-                    content = data.content;
+                    content = await this.loadFileFromServer(filePath);
                 } catch (error) {
                     console.error(`Failed to load ${JSON.stringify(filePath)}: `, error);
                     this.closeTab(filePath).catch(console.error);
@@ -262,12 +311,14 @@ class MarkdownEditor {
                 this.tabs.set(filePath, {
                     filePath,
                     fileName,
-                    originalContent: content,
+                    contentAtServer: content,
                     isDirty: false,
                     editorView,
                     editorWrapper,
                     tabElement,
                     abortAutoScrolling: false,
+                    updateFileFromServerIntervalId: null,
+                    autosaveTimeoutId: null,
                 });
                 this.updateTabTitle(filePath);
             }
@@ -295,6 +346,7 @@ class MarkdownEditor {
             oldTabData.tabElement.classList.remove('active');
             oldTabData.editorWrapper.classList.remove('active');
             this.fileTreeElements.get(oldTabData.filePath)?.classList.remove('active');
+            clearInterval(oldTabData.updateFileFromServerIntervalId);
         }
 
         // Activate the new tab and editor.
@@ -312,8 +364,14 @@ class MarkdownEditor {
 
         if (!tabData.editorWrapper._wasEverVisible_) {
             tabData.editorWrapper._wasEverVisible_ = true;
-            this.restoreScrollPosition(filePath);
+            this.restoreTabState(filePath);
         }
+
+        // Periodically check for file updates from server.
+        tabData.updateFileFromServerIntervalId = setInterval(
+            () => this.updateFileFromServer(filePath).catch(console.error),
+            UPDATE_FILE_FROM_SERVER_INTERVAL_MS
+        );
 
         this.activeTab = filePath;
         this.saveSession();
@@ -356,26 +414,37 @@ class MarkdownEditor {
         }
     }
 
-    scheduleAutosave() {
-        if (this.autosaveTimer) {
-            clearTimeout(this.autosaveTimer);
-        }
-
-        this.autosaveTimer = setTimeout(() => {
-            if (this.activeTab && this.tabs.get(this.activeTab)?.isDirty) {
-                this.autosave();
+    scheduleAutosave(filePath) {
+        const tabData = this.tabs.get(filePath);
+        clearTimeout(tabData.autosaveTimeoutId);
+        tabData.autosaveTimeoutId = setTimeout(async () => {
+            if (!tabData.isDirty) {
+                return;
             }
+            tabData.autosaveTimeoutId = '===SAVING==='; // not setting to null yet, to disable updateFileFromServer()
+            try {
+                await this.autosave(filePath).catch(console.error);
+            } catch (error) {
+                console.error('Autosave failed:', error);
+            }
+            tabData.autosaveTimeoutId = null;
         }, 1000);
     }
 
-    async autosave() {
-        if (!this.activeTab) return;
+    async autosave(filePath) {
+        const tabData = this.tabs.get(filePath);
+        if (!tabData || !tabData.isDirty) {
+            return;
+        }
 
         try {
-            console.log(`Auto saving ${this.activeTab}`);
-            const tabData = this.tabs.get(this.activeTab);
+            console.log(`Auto saving ${filePath}`);
+
+            // Just before auto-saving, make sure we have the latest version from server.
+            await this.updateFileFromServer(filePath);
+
             const currentContent = tabData.editorView.state.doc.toString();
-            const response = await fetch(`/api/file/${encodeURIComponent(this.activeTab)}`, {
+            const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -390,8 +459,8 @@ class MarkdownEditor {
             }
 
             tabData.isDirty = false;
-            tabData.originalContent = currentContent;
-            this.updateTabTitle(this.activeTab);
+            tabData.contentAtServer = currentContent;
+            this.updateTabTitle(filePath);
 
         } catch (error) {
             console.error('Autosave failed:', error);
@@ -402,7 +471,7 @@ class MarkdownEditor {
         const sessionData = {
             openTabs: Array.from(this.tabs.keys()),
             activeTab: this.activeTab,
-            scrollPositions: Object.fromEntries(this.scrollPositions),
+            tabStates: Object.fromEntries(this.tabStates),
             expandedFolders: Array.from(this.expandedFolders)
         };
         console.log('Saving session: ', sessionData);
@@ -416,7 +485,7 @@ class MarkdownEditor {
         try {
             const sessionData = JSON.parse(sessionJson);
             console.log('Restoring session: ', sessionData);
-            this.scrollPositions = new Map(Object.entries(sessionData.scrollPositions || {}));
+            this.tabStates = new Map(Object.entries(sessionData.tabStates || {}));
             this.expandedFolders = new Set(sessionData.expandedFolders || []);
             for (const filePath of sessionData.openTabs || []) {
                 const fileName = filePath.split('/').pop();
@@ -429,24 +498,61 @@ class MarkdownEditor {
 
     saveScrollPosition(filePath) {
         const tabData = this.tabs.get(filePath);
+        const tabState = this.tabStates.get(filePath) ?? {};
         if (tabData.abortAutoScrolling) {
             console.log(`    (ignoring scroll event for ${JSON.stringify(filePath)} with scrollTop=${tabData.editorView.scrollDOM.scrollTop})`);
-            tabData.editorView.scrollDOM.scrollTop = this.scrollPositions.get(this.activeTab);
+            tabData.editorView.scrollDOM.scrollTop = tabState.scrollTop ?? 0;
             return;
         }
         console.log(`Saving scroll position for ${JSON.stringify(filePath)}: `, tabData.editorView.scrollDOM.scrollTop);
-        this.scrollPositions.set(filePath, tabData.editorView.scrollDOM.scrollTop);
+        this.tabStates.set(filePath, {...tabState, scrollTop: tabData.editorView.scrollDOM.scrollTop });
         this.saveSession();
     }
 
-    restoreScrollPosition(filePath) {
-        if (!this.scrollPositions.has(filePath)) return;
+    saveSelectionState(filePath) {
+        const tabData = this.tabs.get(filePath);
+        if (!tabData) return;
+
+        const tabState = this.tabStates.get(filePath) ?? {};
+        const selection = tabData.editorView.state.selection.main;
+
+        // Save selection as serializable object with anchor and head positions
+        this.tabStates.set(filePath, {
+            ...tabState,
+            selection: {
+                anchor: selection.anchor,
+                head: selection.head
+            }
+        });
+        this.saveSession();
+    }
+
+    restoreTabState(filePath) {
+        const tabState = this.tabStates.get(filePath);
+        if (!tabState) {
+            return;
+        }
         const editorView = this.tabs.get(filePath).editorView;
-        const targetScrollTop = this.scrollPositions.get(filePath);
-        console.log(`Restoring scroll position of ${JSON.stringify(filePath)}: ${targetScrollTop}`);
-        editorView.scrollDOM.scrollTop = targetScrollTop;
-        if (editorView.scrollDOM.scrollTop !== targetScrollTop) {
-            console.warn(`Failed to restore scrollTop of ${JSON.stringify(filePath)} to ${targetScrollTop}, got ${editorView.scrollDOM.scrollTop} instead.`);
+        console.log(`Restoring tab state of ${JSON.stringify(filePath)}: `, tabState);
+
+        // Restore scroll position.
+        editorView.scrollDOM.scrollTop = tabState.scrollTop;
+        if (editorView.scrollDOM.scrollTop !== tabState.scrollTop) {
+            console.warn(`Failed to restore scrollTop of ${JSON.stringify(filePath)} to ${tabState.scrollTop}, got ${editorView.scrollDOM.scrollTop} instead.`);
+        }
+
+        // Restore text selection/cursor position.
+        if (tabState.selection) {
+            const { anchor, head } = tabState.selection;
+            const docLength = editorView.state.doc.length;
+
+            // Ensure positions are within document bounds
+            const validAnchor = Math.min(anchor, docLength);
+            const validHead = Math.min(head, docLength);
+
+            editorView.dispatch({
+                selection: { anchor: validAnchor, head: validHead }
+            });
         }
     }
 
@@ -462,6 +568,7 @@ const listLinePlugin = ViewPlugin.fromClass(
             this.decorations = this.buildDecorations(view);
         }
 
+        // noinspection JSUnusedGlobalSymbols
         update(update) {
             if (update.docChanged || update.viewportChanged) {
                 this.decorations = this.buildDecorations(update.view);
@@ -513,7 +620,7 @@ const listLinePlugin = ViewPlugin.fromClass(
 
                     // Check for HTML tags that open or close at the start of the line (after indentation)
                     const htmlTagMatch = /^<(\/?)([-\p{L}\d]+)(?:>| .*>)/u.exec(trimmedText);
-                    console.log(`Line: `, JSON.stringify(lineText), `     `, htmlTagMatch);
+                    // console.log(`Line: `, JSON.stringify(lineText), `     `, htmlTagMatch);
 
                     if (htmlTagMatch?.[1] === '') {
                         // Opening tag
