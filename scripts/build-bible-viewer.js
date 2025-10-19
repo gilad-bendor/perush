@@ -27,6 +27,7 @@ const BIBLEHUB_INPUT_FILE = path.join(__dirname, '..', '..', 'hebrew', 'data', '
 const BIBLE_VIEWER_OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'bible-viewer.html');
 const MAX_SEARCH_RESULTS = 1000;
 const FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS = 3000; // after clicking a verse, ignore mouse-enter events for this many milliseconds
+const CHAPTERS_IN_BIBLE = 929;
 
 /**
  * For debug - load only books that match this regexp (null = load all).
@@ -304,8 +305,11 @@ const biblehubData = [];
 
 try {
     // These variables only live in the browser:
-    let addedBooksCount = 0;
+    let lastAddedBookName = '';
+    let addedChaptersCount = 0;
+    let lastAddedChapterIndexInBook = 0;
     let lastVerseMouseEnterTime = 0;
+    let allDataWasAdded = false;
 
     /**
      * Each item is either a function-reference or a [constant's name, its value] - that will be inserted into the HTML.
@@ -314,6 +318,7 @@ try {
     const functionsAndConstants = [
         ['MAX_SEARCH_RESULTS', MAX_SEARCH_RESULTS],
         ['FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS', FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS],
+        ['CHAPTERS_IN_BIBLE', CHAPTERS_IN_BIBLE],
         ['hebrewBookNames', hebrewBookNames],
         ['hebrewWordTypes', hebrewWordTypes],
         ['hebrewLetters', hebrewLetters],
@@ -331,6 +336,8 @@ try {
         escapeHtml,
         initBiblehubData,
         addBookData,
+        addChapterData,
+        bibleDataAdded,
         showMessage,
         setCentralLeftVisibilityAndClear,
         resetVerseElementBehaviour,
@@ -558,98 +565,107 @@ try {
 
     /**
      * This function only lives in the browser:
-     * Given a whole book's encoded data, process it into JavaScript data-structures and HTML.
+     * Prepare to receive the chapters of a book: addChapterData() is expected to be called soon.
      * @param {string} hebrewBookName
-     * @param {string[][]} bookData - chapters --> encoded-verses - see encodeWordsWithStrongNumbers()
      */
-    function addBookData(hebrewBookName, bookData) {
-        // Show loading progress in the bottom bar
-        showMessage(
-            `Loading (`+
-            `<div style="display: inline-block; width: 2.5em; text-align: right;">`+
-            `${String(Math.round(100 * addedBooksCount / hebrewBookNames.length)).padStart(2)}%`+
-            `</div>):  `+
-            `<div style="display: inline-block; width: 10em; text-align: right;">${hebrewBookName}</div>`,
-            'bottom-bar',
-        );
-        addedBooksCount++;
-
-        // Prepare
-        const versesContainerElement = document.getElementById('verses-container');
-
+    function addBookData(hebrewBookName) {
         // Add the book-header to the HTML
+        const versesContainerElement = document.getElementById('verses-container');
         const bookHeaderElement = document.createElement('div');
         bookHeaderElement.className = 'book-header';
         bookHeaderElement.appendChild(document.createTextNode(hebrewBookName));
         versesContainerElement.appendChild(bookHeaderElement);
+        lastAddedBookName = hebrewBookName;
+        lastAddedChapterIndexInBook = 0;
+    }
 
-        // Scan book's chapters
-        let lastChapterIndex = -1;
-        for (const [chapterIndex, chapterData] of bookData.entries()) {
-            const chapterHebrewNumber = numberToHebrew(chapterIndex);
+    /**
+     * This function only lives in the browser:
+     * Given a whole chapter's data (encoded verses), process it into JavaScript data-structures and HTML.
+     * @param {string} chapterData - chapters --> encoded-verses - see encodeWordsWithStrongNumbers()
+     */
+    function addChapterData(...chapterData) {
+        // Show loading progress in the bottom bar
+        const chapterHebrewNumber = numberToHebrew(lastAddedChapterIndexInBook);
+        showMessage(
+            `Loading (` +
+            `<div style="display: inline-block; width: 2.5em; text-align: right;">` +
+            `${String(Math.round(100 * addedChaptersCount / CHAPTERS_IN_BIBLE)).padStart(2)}%` +
+            `</div>):  ` +
+            `<div style="display: inline-block; width: 12em; text-align: right;">${lastAddedBookName} ${chapterHebrewNumber}</div>`,
+            'bottom-bar',
+        );
 
-            // When a new chapter begins - add the chapter-header to the HTML
-            if (chapterIndex !== lastChapterIndex) {
-                lastChapterIndex = chapterIndex;
-                const chapterHeaderElement = document.createElement('div');
-                chapterHeaderElement.className = 'chapter-header';
-                chapterHeaderElement.appendChild(document.createTextNode(`   ${hebrewBookName}  ${chapterHebrewNumber}   `));
-                versesContainerElement.appendChild(chapterHeaderElement);
-            }
+        // Prepare
+        const versesContainerElement = document.getElementById('verses-container');
 
-            // Scan chapter's verses
-            for (const [verseIndex, verseData] of chapterData.entries()) {
-                const verseHebrewNumber = numberToHebrew(verseIndex);
-                const wordsWithStrongNumbers = decodeWordsWithStrongNumbers(verseData);
-                const words = wordsWithStrongNumbers.map(([word]) => normalizeHebrewText(word));
-                const strongs = wordsWithStrongNumbers.map(([, strong]) => strong);
-                const readableVerse = words.join(' ');
-                const searchableVerse =
-                    ' ' +    // Spaces at beginning and end, to simplify searching for whole words
-                    wordsWithStrongNumbers.map(([word, strongNumber]) =>
-                        hebrewFinalsToRegulars(
-                            normalizeHebrewText(word)
-                                .replace(nonHebrewLettersRegex, '') // Remove Points/Accents
-                        ) +
-                        `<${strongNumber}>`
-                    ).join(' ') +
-                    ' ';    // Spaces at beginning and end, to simplify searching for whole words
+        // Add the chapter-header to the HTML
+        const chapterHeaderElement = document.createElement('div');
+        chapterHeaderElement.className = 'chapter-header';
+        chapterHeaderElement.appendChild(document.createTextNode(`   ${lastAddedBookName}  ${chapterHebrewNumber}   `));
+        versesContainerElement.appendChild(chapterHeaderElement);
 
-                // Add the verse to the HTML
-                const verseElement = document.createElement('div');
-                verseElement.className = 'verse';
-                verseElement.dataset.book = hebrewBookName;
-                verseElement.dataset.chapter = String(chapterIndex);
-                verseElement.dataset.verse = String(verseIndex);
-                verseElement.dataset.index = String(allVerses.length);
-                verseElement.dataset.searchable = searchableVerse; // TODO: remove if turns out to be slow
-                resetVerseElementBehaviour(verseElement);
-                verseElement.appendChild(document.createTextNode(readableVerse));
-                versesContainerElement.appendChild(verseElement);
+        // Scan chapter's verses
+        for (const [verseIndex, verseData] of chapterData.entries()) {
+            const verseHebrewNumber = numberToHebrew(verseIndex);
+            const wordsWithStrongNumbers = decodeWordsWithStrongNumbers(verseData);
+            const words = wordsWithStrongNumbers.map(([word]) => normalizeHebrewText(word));
+            const strongs = wordsWithStrongNumbers.map(([, strong]) => strong);
+            const readableVerse = words.join(' ');
+            const searchableVerse =
+                ' ' +    // Spaces at beginning and end, to simplify searching for whole words
+                wordsWithStrongNumbers.map(([word, strongNumber]) =>
+                    hebrewFinalsToRegulars(
+                        normalizeHebrewText(word)
+                            .replace(nonHebrewLettersRegex, '') // Remove Points/Accents
+                    ) +
+                    `<${strongNumber}>`
+                ).join(' ') +
+                ' ';    // Spaces at beginning and end, to simplify searching for whole words
 
-                // Store the verse in allVerses.
-                allVerses.push({
-                    book: hebrewBookName,
-                    chapter: chapterHebrewNumber,
-                    verse: verseHebrewNumber,
-                    readableVerse,
-                    searchableVerse,
-                    words,
-                    strongs,
-                    verseElement,
-                });
-            }
+            // Add the verse to the HTML
+            const verseElement = document.createElement('div');
+            verseElement.className = 'verse';
+            verseElement.dataset.book = lastAddedBookName;
+            verseElement.dataset.chapter = String(lastAddedChapterIndexInBook);
+            verseElement.dataset.verse = String(verseIndex);
+            verseElement.dataset.index = String(allVerses.length);
+            verseElement.dataset.searchable = searchableVerse; // TODO: remove if turns out to be slow
+            resetVerseElementBehaviour(verseElement);
+            verseElement.appendChild(document.createTextNode(readableVerse));
+            versesContainerElement.appendChild(verseElement);
+
+            // Store the verse in allVerses.
+            allVerses.push({
+                book: lastAddedBookName,
+                chapter: chapterHebrewNumber,
+                verse: verseHebrewNumber,
+                readableVerse,
+                searchableVerse,
+                words,
+                strongs,
+                verseElement,
+            });
         }
 
-        if (addedBooksCount === hebrewBookNames.length) {
-            // All books have been added: mark the page as loaded.
-            showMessage('', 'bottom-bar');
+        lastAddedChapterIndexInBook++;
+        addedChaptersCount++;
+        console.log(`addedChaptersCount = `, addedChaptersCount, '     time-since-load: ', (Date.now() - performance.timing.navigationStart) / 1000); // TODO: remove debug
+    }
 
-            // The info-icon starts of as highlighted, to draw the user's attention to it,
-            //  and immediately after the page is loaded, it is gradually un-highlighted.
-            /** @type {HTMLElement} */ const infoIconElement = document.querySelector(`.info-icon`);
-            infoIconElement.style.backgroundColor = "transparent";
-        }
+    /**
+     * This function only lives in the browser:
+     * Called once all bible data has been added (addBookData() and addChapterData() are all called).
+     */
+    function bibleDataAdded() {
+        // All books have been added: mark the page as loaded.
+        allDataWasAdded = true;
+        showMessage('', 'bottom-bar');
+
+        // The info-icon starts of as highlighted, to draw the user's attention to it,
+        //  and immediately after the page is loaded, it is gradually un-highlighted.
+        /** @type {HTMLElement} */ const infoIconElement = document.querySelector(`.info-icon`);
+        infoIconElement.style.backgroundColor = "transparent";
     }
 
     function clearSearch() {
@@ -669,6 +685,11 @@ try {
         setCentralLeftVisibilityAndClear(true);
         const searchQuery = searchInputElement.value;
         showMessage(`חיפוש: <span class='code'>${escapeHtml(searchQuery)}</span>`, 'search-results');
+
+        // Warn if data is still being loaded
+        if (!allDataWasAdded) {
+            showMessage(`<div class="error-message">הנתונים עדיין נטענים - התוצאות יהיו חלקיות!\nאנא המתן מספר שניות ונסה שוב</div>`, 'search-results');
+        }
 
         let searchRegExp;
         try {
@@ -885,40 +906,46 @@ function addBiblehubDataToHtml() {
 }
 
 /**
- * Per book, add a <script> tag with the book's data encoded in Base64. Example:
- *     <script>
- *         addBookData("בראשית", [
- *              [ // Chapter 1
- *                  "...base64-encoded-data...", // Verse 1
- *                  "...base64-encoded-data...", // Verse 2
- *                  ...
- *              ],
- *              [ // Chapter 2
- *                  "...base64-encoded-data...", // Verse 1
- *                  "...base64-encoded-data...", // Verse 2
- *                  ...
- *              ],
- *              ...
- *         ]);
- *     </script>
+ * Per book, add <script> tags with the book's data encoded in Base64. Example:
+ *    <script> addBookData("בראשית"); </script>
+ *    <script>
+ *        addChapterData(    // Chapter 1
+ *            "...base64-encoded-data...",    // Verse 1
+ *            "...base64-encoded-data...",    // Verse 2
+ *            ...
+ *        );
+ *    </script>
+ *    <script>
+ *        addChapterData(    // Chapter 2
+ *            "...base64-encoded-data...",    // Verse 1
+ *            "...base64-encoded-data...",    // Verse 2
+ *            ...
+ *        );
+ *    </script>
+ *    ...
+ *    <script> bibleDataAdded(); </script>
  */
 function addBibleTextToHtml() {
+    let addedChaptersCount = 0;
+    html.push('\n\n<script> ');
     for (const [hebrewBookName, bookData] of Object.entries(bsbData)) {
-        html.push('\n<script>\n');
-        html.push('addBookData(', JSON.stringify(hebrewBookName), ', [\n');
+        html.push('addBookData(', JSON.stringify(hebrewBookName), ');\n');
         if (!FILTER_LOADED_BOOKS_REGEXP || hebrewBookName.match(FILTER_LOADED_BOOKS_REGEXP)) {
             for (const [chapterIndex, chaptersData] of bookData.entries()) {
-                html.push('\t[ // ', numberToHebrew(chapterIndex), '\n');
+                html.push('addChapterData( // ', numberToHebrew(chapterIndex), '\n');
                 for (const [verseIndex, verseData] of chaptersData.entries()) {
                     const base64EncodedVerse = encodeWordsWithStrongNumbers(verseData);
                     html.push('    ', JSON.stringify(base64EncodedVerse), ', // ', numberToHebrew(verseIndex), '\n');
                 }
-                html.push('\t],\n');
+                html.push(');');
+                addedChaptersCount++;
+                if (addedChaptersCount % 10 === 0) {
+                    html.push(' </script><script> ');
+                }
             }
         }
-        html.push(']);\n');
-        html.push('</script>\n');
     }
+    html.push('\n bibleDataAdded(); </script>\n');
 }
 
 
@@ -1506,6 +1533,7 @@ function getSkeletonHtml() {
                      <ul>
                        <li> <code>.</code> - מתאימה לכל תו בודד
                        <li> <code>[...]</code> אחד מכמה <strong>אותיות</strong> - למשל <code>[אבג]</code> - מתאימה לאחת מהאותיות א, ב או ג
+                       <li> <code>[^...]</code> כל אות <strong>חוץ</strong> מכמה <strong>אותיות</strong> - למשל <code>[^אבג]</code> - מתאימה לכל אות <strong>חוץ</strong> מהאותיות א, ב או ג
                        <li> <code>⓪|⓪|⓪</code> אחד מכמה <strong>ביטויים</strong> - למשל <code>(אבג|דהו)</code> - מתאימה ל״אבג״ או ל״דהו״
                        <li> <code>(...)</code> מֵאָחֶד ״ביטוי מורכב״ (רצף של ״ביטויים פשוטים״) ל״ביטוי פשוט״ - למשל <code>(אבג|דהו|[לנ]ס@)</code> - מתאימה ל״אבג״ או ל״דהו״
                      </ul>
@@ -1527,8 +1555,11 @@ function getSkeletonHtml() {
 <script>
     const bsbData = [];
     const biblehubData = [];
-    let addedBooksCount = 0;
+    let lastAddedBookName = '';
+    let addedChaptersCount = 0;
+    let lastAddedChapterIndexInBook = 0;
     let lastVerseMouseEnterTime = 0;
+    let allDataWasAdded = false;
 
     // Dynamically added JavaScript code will go here
 
