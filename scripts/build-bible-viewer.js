@@ -117,21 +117,17 @@ const wordTypesToHebrew = {
 };
 const hebrewWordTypes = Object.values(wordTypesToHebrew);
 
-/**
- * All the letters in Hebrew, with Shin represented by two characters: שּׁ and שּׂ
- * @type {string}
- */
+/** All the letters in Hebrew, with Shin represented by two characters: שּׁ and שּׂ */
 const hebrewLetters = 'אבגדהוזחטיךכלםמןנסעףפץצקרשׁשׂת';
 
-/**
- * All the Hebrew characters that are not letters
- * @type {string}
- */
-const hebrewNonLetters =
-    '\u05b0\u05b1\u05b2\u05b3\u05b4\u05b5\u05b6\u05b7\u05b8\u05b9\u05ba\u05bb\u05bc\u05bd\u05bf\u05c0\u05c3\u05c4\u05c5\u05c6' + // Points
-    '\u0591\u0592\u0593\u0594\u0595\u0596\u0597\u0598\u0599\u059a\u059b\u059c\u059d\u059e\u059f\u05a0\u05a1\u05a3\u05a4\u05a5\u05a6\u05a7\u05a8\u05a9\u05aa\u05ab\u05ac\u05ad\u05ae' + // Accents
-    '\u200d'; // Zero-width joiner: when placed between two characters that would otherwise not be connected, causes them to be printed in their connected forms
+/** All the Hebrew "Points" characters (Nikud).*/
+const hebrewPoints ='\u05b0\u05b1\u05b2\u05b3\u05b4\u05b5\u05b6\u05b7\u05b8\u05b9\u05ba\u05bb\u05bc\u05bf\u05c0\u05c3\u05c4\u05c5\u05c6'; // excluding \u05bd = Meteg
 
+/** All the Hebrew "Accents" characters (Teamim) */
+const hebrewAccents = '\u0591\u0592\u0593\u0594\u0595\u0596\u0597\u0598\u0599\u059a\u059b\u059c\u059d\u059e\u059f\u05a0\u05a1\u05a3\u05a4\u05a5\u05a6\u05a7\u05a8\u05a9\u05aa\u05ab\u05ac\u05ad\u05ae\u05bd'; // including \u05bd = Meteg
+
+/** All the Hebrew characters that are not letters */
+const hebrewNonLetters = hebrewPoints + hebrewAccents + '\u200d'; // Zero-width joiner: when placed between two characters that would otherwise not be connected, causes them to be printed in their connected forms
 
 /**
  * All the characters that may appear in a Hebrew word (letters, points, accents).
@@ -147,6 +143,8 @@ const hebrewCharacterToIndex = Object.fromEntries(
 );
 
 const nonHebrewLettersRegex = new RegExp(`[^${hebrewLetters}]`, 'g');
+const hebrewPointsRegex = new RegExp(`[${hebrewPoints}]`, 'g');
+const hebrewAccentsRegex = new RegExp(`[${hebrewAccents}]`, 'g');
 const hebrewNonLettersRegex = new RegExp(`[${hebrewNonLetters}]`, 'g');
 
 
@@ -305,6 +303,9 @@ const biblehubData = [];
 
 try {
     // These variables only live in the browser:
+    let showLocations = true;
+    let showPoints = true;
+    let showAccents = true;
     let lastAddedBookName = '';
     let addedChaptersCount = 0;
     let lastAddedChapterIndexInBook = 0;
@@ -322,9 +323,13 @@ try {
         ['hebrewBookNames', hebrewBookNames],
         ['hebrewWordTypes', hebrewWordTypes],
         ['hebrewLetters', hebrewLetters],
+        ['hebrewPoints', hebrewPoints],
+        ['hebrewAccents', hebrewAccents],
         ['hebrewNonLetters', hebrewNonLetters],
         ['hebrewCharacters', hebrewCharacters],
         ['nonHebrewLettersRegex', nonHebrewLettersRegex],
+        ['hebrewPointsRegex', hebrewPointsRegex],
+        ['hebrewAccentsRegex', hebrewAccentsRegex],
         ['hebrewNonLettersRegex', hebrewNonLettersRegex],
         ['allVerses', allVerses],
         domIsLoaded,
@@ -345,8 +350,16 @@ try {
         handleVerseMouseClick,
         handleVerseMouseDoubleClick,
         performSearch,
+        normalizeSearchRegExp,
+        replaceInRegExpSource,
         clearSearch,
+        fixVisibleVerse,
         showInfoDialog,
+        toggleLocations,
+        togglePoints,
+        toggleAccents,
+        setHashParameters,
+        getHashParameter,
     ];
 
     /**
@@ -511,6 +524,15 @@ try {
                     if (event.clientX >= rect.left && event.clientX <= rect.right &&
                         event.clientY >= rect.top && event.clientY <= rect.bottom) {
                         // Found the clicked word - initiate a search for its Strong number.
+                        if (showLocations) {
+                            // If showing locations, then each line is prefixed by the location string,
+                            //  that contains probably 2 words - so we need to adjust the wordIndex accordingly.
+                            wordIndex -= fixVisibleVerse('', 'a', 'b', 'c').split(' ').length - 1;
+                            if (wordIndex < 0) {
+                                // The double-click was made on the location: ignore it.
+                                break wordsScan;
+                            }
+                        }
                         const verseInfo = allVerses[Number(verseElement.dataset.index)];
                         strongNumberToSearchFor = verseInfo.strongs[wordIndex];
                         if (strongNumberToSearchFor) {
@@ -632,7 +654,7 @@ try {
             verseElement.dataset.index = String(allVerses.length);
             verseElement.dataset.searchable = searchableVerse; // TODO: remove if turns out to be slow
             resetVerseElementBehaviour(verseElement);
-            verseElement.appendChild(document.createTextNode(readableVerse));
+            verseElement.appendChild(document.createTextNode(fixVisibleVerse(readableVerse, lastAddedBookName, chapterHebrewNumber, verseHebrewNumber)));
             versesContainerElement.appendChild(verseElement);
 
             // Store the verse in allVerses.
@@ -650,7 +672,6 @@ try {
 
         lastAddedChapterIndexInBook++;
         addedChaptersCount++;
-        console.log(`addedChaptersCount = `, addedChaptersCount, '     time-since-load: ', (Date.now() - performance.timing.navigationStart) / 1000); // TODO: remove debug
     }
 
     /**
@@ -698,9 +719,8 @@ try {
             // The match is "whole" - i.e. <10[12]> will match strong-numbers 101, 102 - but not 1010 or 3102.
             const searchQueryWithStrongNumbers = searchQuery.replace(/<(.*?)>/g, (wholeMatch, strongNumbersRegExpSource) => {
                 try {
-                    let normalizedStrongNumbersRegExpSource = fixShinSin(hebrewFinalsToRegulars(strongNumbersRegExpSource))
-                        // Replace @ with a RegExp that matches any sequence of אהוי letters - or nothing
-                        .replace(/@/g, '[אהוי]*')
+                    // Normalize the inner RegExp.
+                    let normalizedStrongNumbersRegExpSource = normalizeSearchRegExp(strongNumbersRegExpSource, true);
 
                     // Find all strong-numbers that match strongNumbersRegExpSource.
                     /** @type {number[]} */ const matchingStrongNumbers = [];
@@ -733,16 +753,8 @@ try {
                 }
             });
 
-            // Build the search RegExp
-            let searchRegExpSource = fixShinSin(hebrewFinalsToRegulars(searchQueryWithStrongNumbers))
-                // Collapse multiple spaces into one space
-                .replace(/\s+/g, ' ')
-                // Remove all Hebrew characters that are not letters
-                .replace(hebrewNonLettersRegex, '')
-                // Replace @ with a RegExp that matches any sequence of אהוי letters - or nothing
-                .replace(/@/g, '[אהוי]*')
-                // When a space is NOT preceded by <...> - then match any strong-number
-                .replace(/([^>]) /g, '$1<\d+> ');
+            // Normalize the search RegExp
+            let searchRegExpSource = normalizeSearchRegExp(searchQueryWithStrongNumbers, false);
             showMessage(`<div style="display: inline-block; direction: rtl;">RegExp:</div> <span class='code'>${escapeHtml(searchRegExpSource)}</span>`, 'search-results');
 
             if (!searchRegExpSource.trim()) {
@@ -813,19 +825,24 @@ try {
                     highlightedVerseElement.scrollIntoViewIfNeeded({behavior: 'smooth', block: 'center'});
                 });
                 searchMatchElement.classList.add('highlighted-verse');
-                searchMatchElement.innerHTML = verseInfo.words
-                    .map((word, wordIndex) => {
-                        const parts = [];
-                        if (highlightWordIndexes.has(wordIndex) && !highlightWordIndexes.has(wordIndex - 1)) {
-                            parts.push(`<span class="highlighted-word">`);
-                        }
-                        parts.push(word);
-                        if (highlightWordIndexes.has(wordIndex) && !highlightWordIndexes.has(wordIndex + 1)) {
-                            parts.push(`</span>`);
-                        }
-                        return parts.join('');
-                    })
-                    .join(' ');
+                searchMatchElement.innerHTML = fixVisibleVerse(
+                    verseInfo.words
+                        .map((word, wordIndex) => {
+                            const parts = [];
+                            if (highlightWordIndexes.has(wordIndex) && !highlightWordIndexes.has(wordIndex - 1)) {
+                                parts.push(`<span class="highlighted-word">`);
+                            }
+                            parts.push(word);
+                            if (highlightWordIndexes.has(wordIndex) && !highlightWordIndexes.has(wordIndex + 1)) {
+                                parts.push(`</span>`);
+                            }
+                            return parts.join('');
+                        })
+                        .join(' '),
+                    verseInfo.book,
+                    verseInfo.chapter,
+                    verseInfo.verse
+                );
                 searchResultsElement.appendChild(searchMatchElement);
 
                 // Add a highlighted copy of the verse into the main text (this will hide the original verse via CSS)
@@ -848,6 +865,81 @@ try {
 
     /**
      * This function only lives in the browser:
+     * Given a search RegExp source, normalize it.
+     * @param {string} searchRegExpSource
+     * @param {boolean} isInsideAngleBrackets
+     * @returns {string}
+     */
+    function normalizeSearchRegExp(searchRegExpSource, isInsideAngleBrackets) {
+        searchRegExpSource = fixShinSin(hebrewFinalsToRegulars(searchRegExpSource))
+        if (!isInsideAngleBrackets) {
+            // Collapse multiple spaces into one space
+            searchRegExpSource = searchRegExpSource.replace(/\s+/g, ' ');
+            // Remove all Hebrew characters that are not letters
+            searchRegExpSource = searchRegExpSource.replace(hebrewNonLettersRegex, '');
+        }
+
+        // Replace @ with a RegExp that matches any sequence of אהוי letters - or nothing
+        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /@/g, 'אהוי', '[אהוי]*');
+        // Replace # with any single letter
+        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /#/g, 'א-ת', '[א-ת]');
+
+        if (!isInsideAngleBrackets) {
+            // When a space is NOT preceded by <...> - then match any strong-number
+            searchRegExpSource = searchRegExpSource.replace(/([^>]) /g, '$1<\\d+> ');
+        }
+
+        return searchRegExpSource;
+    }
+
+    /**
+     * This function only lives in the browser:
+     * Given a RegExp source, search for all occurrences of searchRegExpSource,
+     *  and replace them with either:
+     * - replaceToIfInsideBrackets - if the occurrence is inside brackets, or
+     * - replaceToIfOutsideBrackets - if the occurrence is outside brackets.
+     * @param {string} regExpSource
+     * @param {RegExp} replaceRegExp
+     * @param {string} replaceToIfInsideBrackets
+     * @param {string} replaceToIfOutsideBrackets
+     * @returns {string}
+     */
+    function replaceInRegExpSource(regExpSource, replaceRegExp, replaceToIfInsideBrackets, replaceToIfOutsideBrackets) {
+        return regExpSource.replace(
+            replaceRegExp,
+            (wholeMatch, ...args) => {
+                const matchIndex = args[args.length - 2];
+                const beforeMatch = regExpSource.substring(0, matchIndex);
+                return (/\[[^\]]*$/.test(beforeMatch))
+                    ? replaceToIfInsideBrackets
+                    : replaceToIfOutsideBrackets;
+            });
+    }
+
+    /**
+     * Hide points/accents if needed, and add location if needed.
+     * @param {string} verseWithPointsAndAccents
+     * @param {string} bookName
+     * @param {string} chapterHebrewNumber
+     * @param {string} verseHebrewNumber
+     * @returns {string}
+     */
+    function fixVisibleVerse(verseWithPointsAndAccents, bookName, chapterHebrewNumber, verseHebrewNumber) {
+        let visibleVerse = verseWithPointsAndAccents;
+        if (!showPoints) {
+            visibleVerse = visibleVerse.replace(hebrewPointsRegex, '');
+        }
+        if (!showAccents) {
+            visibleVerse = visibleVerse.replace(hebrewAccentsRegex, '');
+        }
+        if (showLocations) {
+            visibleVerse = `(${bookName} ${chapterHebrewNumber}:${verseHebrewNumber}) ${visibleVerse}`;
+        }
+        return visibleVerse;
+    }
+
+    /**
+     * This function only lives in the browser:
      * Show the info-dialog.
      */
     function showInfoDialog() {
@@ -856,6 +948,84 @@ try {
         /** @type {HTMLDialogElement} */ const infoDialogCloseButtonElement = document.querySelector('.info-dialog-close-button');
         infoDialogCloseButtonElement.focus();
         infoDialogCloseButtonElement.addEventListener('click', () => infoDialogElement.close());
+    }
+
+    /**
+     * This function only lives in the browser:
+     * Toggle showing/hiding locations for each verse.
+     */
+    function toggleLocations() {
+        if (showLocations) {
+            setHashParameters({'show-locations': undefined});
+            document.location.reload();
+        } else {
+            setHashParameters({'show-locations': ''});
+            document.location.reload();
+        }
+    }
+
+    /**
+     * This function only lives in the browser:
+     * Toggle showing/hiding points in the text.
+     */
+    function togglePoints() {
+        if (showPoints) {
+            setHashParameters({'hide-points': ''});
+            document.location.reload();
+        } else {
+            setHashParameters({'hide-points': undefined});
+            document.location.reload();
+        }
+    }
+
+    /**
+     * This function only lives in the browser:
+     * Toggle showing/hiding accents in the text.
+     */
+    function toggleAccents() {
+        if (showAccents) {
+            setHashParameters({'hide-accents': ''});
+            document.location.reload();
+        } else {
+            setHashParameters({'hide-accents': undefined});
+            document.location.reload();
+        }
+    }
+
+    /**
+     * This function only lives in the browser:
+     * Set the URL hash parameters (format: "#key1=value&key2=value2...").
+     * Per entry in the parameters - set hash-parameter, or delete it if the value is undefined.
+     * @param {Record<string, string | undefined>} parameters
+     */
+    function setHashParameters(parameters) {
+        let hash = document.location.hash;
+        for (const [key, value] of Object.entries(parameters)) {
+            // First, remove the parameter if it exists
+            hash = hash.replace(new RegExp(`(?<=[#&])${encodeURIComponent(key)}(=([^&]*))?(?=&|$)`), '');
+
+            // Now, if the value is defined - add it.
+            if (value !== undefined) {
+                const separator = (hash === '' || hash === '#') ? '#' : '&';
+                hash += `${separator}${encodeURIComponent(key)}${value ? `=${encodeURIComponent(value)}` : ''}`;
+            }
+        }
+        hash = hash.replace(/&+/, '&').replace(/&$/, ''); // Remove duplicated and trailing &'s
+        if (document.location.hash !== hash) {
+            document.location.hash = hash;
+        }
+    }
+
+    /**
+     * This function only lives in the browser:
+     * Get a URL hash parameter's value (format: "#key1=value&key2=value2...").
+     * @param {string} parameterName
+     * @returns {string | undefined}
+     */
+    function getHashParameter(parameterName) {
+        const hash = document.location.hash;
+        const match = hash.match(new RegExp(`(?<=[#&])${encodeURIComponent(parameterName)}(=([^&]*))?(?:&|$)`));
+        return match ? decodeURIComponent(match[2]) : undefined;
     }
 
     // Insert some functions and constants into the HTML.
@@ -1213,22 +1383,6 @@ function getSkeletonHtml() {
             overflow: hidden;
         }
 
-        .info-icon {
-            cursor: pointer;
-            position: absolute;
-            left: 0;
-            margin: 0.2em;
-            font-size: 1.5em;
-            background-color: orangered;
-            transition: background-color 0.3s ease;
-            border-radius: 50%;
-            width: 0.85em;
-            height: 0.85em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
         .hidden {
             display: none !important;
         }
@@ -1261,13 +1415,18 @@ function getSkeletonHtml() {
             flex: 0;
             border-top: 1px solid gray;
             background: rgba(128,128,128,0.1);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.2em;
+            padding-left: 10px;
         }
 
         #bottom-message-bar {
             flex: 0;
             white-space: pre;
             background: rgba(128,128,128,0.1);
-            margin: 0 0.5em;
+            padding: 0 0.5em;
         }
 
         /* -------- central-area flex-row -------- */
@@ -1347,7 +1506,59 @@ function getSkeletonHtml() {
             display: none;
         }
 
-        /* -------- search -------- */
+        /* -------- footer-icons -------- */
+
+        .footer-icon {
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid black;
+            width: 1.1em;
+            height: 1.1em;
+            text-align: center;
+        }
+
+        .info-icon {
+            background-color: orangered;
+            transition: background-color 0.3s ease;
+        }
+        
+        .icon-disabled {
+            position: absolute;
+            transform: translateX(-0.1em) translateY(-0.3em) rotate(45deg);
+            font-size: 150%;
+            font-weight: 500;
+        }
+
+        .locations-icon {
+            display: inline-block;
+            overflow: hidden;
+        }
+        .locations-icon-inner {
+            transform: translateY(-0.15em);
+            font-weight: 900;
+        }
+
+
+        .accents-icon {
+            display: inline-block;
+            overflow: hidden;
+        }
+        .accents-icon-inner {
+            /* in order to show the accent-unicode, it MUST be preceded by a Hebrew letter, which we don't want to show */
+            transform: translateY(-1.6em) translateX(0.05em) scale(3);
+        }
+
+        .points-icon {
+            display: inline-block;
+            overflow: hidden;
+        }
+        .points-icon-inner {
+            /* in order to show the point-unicode, it MUST be preceded by a Hebrew letter, which we don't want to show */
+            transform: translateY(-1.6em) translateX(-0.1em) scale(3);
+            font-weight: 100;
+        }
+
+        /* -------- search-bar -------- */
 
         .search-wrapper {
             display: flex;
@@ -1355,6 +1566,7 @@ function getSkeletonHtml() {
             align-items: center;
             gap: 0.5em;
             padding: 0.3em 0.5em 0.1em 0.5em;
+            width: 100%;
         }
         #search-input {
             width: 100%;
@@ -1442,7 +1654,6 @@ function getSkeletonHtml() {
    </style>
 </head>
 <body>
-    <div class="info-icon" onclick="showInfoDialog()">ⓘ</div>
     <div class="header"><!-- Bible Viewer --></div>
     <div class="central-area">
         <div class="central-left hidden">
@@ -1458,14 +1669,25 @@ function getSkeletonHtml() {
         </div>
     </div>
     <div class="footer">
-        <form onsubmit="performSearch(event)">
-            <div class="search-wrapper">
-                <label for="search-input">חיפוש:</label>
-                <input type="text" id="search-input" value="קרא">
-                <button class="search-button">חפש</button>
-                <div class="search-trash-icon" onclick="clearSearch()">⌫</div>
-            </div>
+        <form class="search-wrapper" onsubmit="performSearch(event)">
+            <label for="search-input">חיפוש:</label>
+            <input type="text" id="search-input" value="קרא">
+            <button class="search-button">חפש</button>
+            <div class="search-trash-icon" onclick="clearSearch()">⌫</div>
         </form>
+        <div class="footer-icon locations-icon" onclick="toggleLocations()" title="הצגת\\הסתרת מיקומים">
+            <div class="icon-disabled">|</div>
+            <div class="locations-icon-inner">⌖</div>
+        </div>
+        <div class="footer-icon points-icon" onclick="togglePoints()" title="הצגת\\הסתרת ניקוד">
+            <div class="icon-disabled">|</div>
+            <div class="points-icon-inner">אֻ</div>
+        </div>
+        <div class="footer-icon accents-icon" onclick="toggleAccents()" title="הצגת\\הסתרת טעמים">
+            <div class="icon-disabled">|</div>
+            <div class="accents-icon-inner">א֑</div>
+        </div>
+        <div class="footer-icon info-icon" onclick="showInfoDialog()" title="הצגת מסך עזרה">i</div>
     </div>
     <div id="bottom-message-bar">&nbsp</div>
     
@@ -1510,6 +1732,12 @@ function getSkeletonHtml() {
                         </ul>
                     </li>
                     <li>
+                        התו <code>#</code> מתאים לאות אחת בדיוק. דוגמה:
+                        <ul class="examples">
+                            <li> <code>ה#לך</code> ימצא: <code>הולך</code>, <code>המלך</code>, <code>הפלך</code>, וכו'
+                        </ul>
+                    </li>
+                    <li>
                         <code>&lt;...&gt;</code> (סוגריים משולשים) מאפשרים חיפוש לפי מספרי סטרונג או מילות היסוד. <br>
                         הטקסט בתוך הסוגרים הוא בעצמו ביטוי-רגולרי (regular expression). <br>
                         דוגמאות:
@@ -1533,7 +1761,7 @@ function getSkeletonHtml() {
                      <ul>
                        <li> <code>.</code> - מתאימה לכל תו בודד
                        <li> <code>[...]</code> אחד מכמה <strong>אותיות</strong> - למשל <code>[אבג]</code> - מתאימה לאחת מהאותיות א, ב או ג
-                       <li> <code>[^...]</code> כל אות <strong>חוץ</strong> מכמה <strong>אותיות</strong> - למשל <code>[^אבג]</code> - מתאימה לכל אות <strong>חוץ</strong> מהאותיות א, ב או ג
+                       <li> <code>[^...]</code> כל אות <strong>חוץ</strong> מכמה אותיות - למשל <code>[^אבג]</code> - מתאימה לכל אות - חוץ מהאותיות א, ב או ג
                        <li> <code>⓪|⓪|⓪</code> אחד מכמה <strong>ביטויים</strong> - למשל <code>(אבג|דהו)</code> - מתאימה ל״אבג״ או ל״דהו״
                        <li> <code>(...)</code> מֵאָחֶד ״ביטוי מורכב״ (רצף של ״ביטויים פשוטים״) ל״ביטוי פשוט״ - למשל <code>(אבג|דהו|[לנ]ס@)</code> - מתאימה ל״אבג״ או ל״דהו״
                      </ul>
@@ -1555,11 +1783,24 @@ function getSkeletonHtml() {
 <script>
     const bsbData = [];
     const biblehubData = [];
+    let showLocations = getHashParameter('show-locations') !== undefined;
+    let showPoints = getHashParameter('hide-points') === undefined;
+    let showAccents = getHashParameter('hide-accents') === undefined;
     let lastAddedBookName = '';
     let addedChaptersCount = 0;
     let lastAddedChapterIndexInBook = 0;
     let lastVerseMouseEnterTime = 0;
     let allDataWasAdded = false;
+
+    if (showLocations) {
+        document.querySelector('.locations-icon .icon-disabled').remove();
+    }
+    if (showPoints) {
+        document.querySelector('.points-icon .icon-disabled').remove();
+    }
+    if (showAccents) {
+        document.querySelector('.accents-icon .icon-disabled').remove();
+    }
 
     // Dynamically added JavaScript code will go here
 
