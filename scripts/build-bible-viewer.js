@@ -28,6 +28,7 @@ const BIBLE_VIEWER_OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'bible-viewe
 const MAX_SEARCH_RESULTS = 1000;
 const FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS = 3000; // after clicking a verse, ignore mouse-enter events for this many milliseconds
 const CHAPTERS_IN_BIBLE = 929;
+const MAX_CHAPTERS_IN_BOOK = 150;
 const WORD_TYPE_INDEX_VERB = 0;
 
 /**
@@ -61,33 +62,23 @@ const allVerses = [];
  * @type {Record<string, string>}
  */
 const bsbBookNamesToHebrew = {
+    // תורה:
     Genesis: 'בראשית',
     Exodus: 'שמות',
     Leviticus: 'ויקרא',
     Numbers: 'במדבר',
     Deuteronomy: 'דברים',
+    // נביאים ראשונים:
     Joshua: 'יהושע',
     Judges: 'שופטים',
-    Ruth: 'רות',
     Samuel1: 'שמואל-א',
     Samuel2: 'שמואל-ב',
     Kings1: 'מלכים-א',
     Kings2: 'מלכים-ב',
-    Chronicles1: 'דברי-הימים-א',
-    Chronicles2: 'דברי-הימים-ב',
-    Ezra: 'עזרא',
-    Nehemiah: 'נחמיה',
-    Esther: 'אסתר',
-    Job: 'איוב',
-    Psalm: 'תהילים',
-    Proverbs: 'משלי',
-    Ecclesiastes: 'קהלת',
-    SongOfSolomon: 'שיר-השירים',
+    // נביאים אחרונים:
     Isaiah: 'ישעיהו',
     Jeremiah: 'ירמיהו',
-    Lamentations: 'איכה',
     Ezekiel: 'יחזקאל',
-    Daniel: 'דניאל',
     Hosea: 'הושע',
     Joel: 'יואל',
     Amos: 'עמוס',
@@ -100,6 +91,21 @@ const bsbBookNamesToHebrew = {
     Haggai: 'חגי',
     Zechariah: 'זכריה',
     Malachi: 'מלאכי',
+    // כתובים:
+    Chronicles1: 'דברי-הימים-א',
+    Chronicles2: 'דברי-הימים-ב',
+    Psalm: 'תהילים',
+    Job: 'איוב',
+    Proverbs: 'משלי',
+    Ruth: 'רות',
+    SongOfSolomon: 'שיר-השירים',
+    Ecclesiastes: 'קהלת',
+    Lamentations: 'איכה',
+    Esther: 'אסתר',
+    Daniel: 'דניאל',
+    Ezra: 'עזרא',
+    Nehemiah: 'נחמיה',
+
 };
 const hebrewBookNames = Object.values(bsbBookNamesToHebrew);
 
@@ -312,6 +318,9 @@ try {
     let showAccents = true;
     let lastAddedBookName = '';
     let addedChaptersCount = 0;
+    /** @type {Record<string, HTMLElement>} */ let bookNameToTocElement = {};
+    /** @type {Record<string, number>} */ let bookNameToChaptersCount = {};
+    /** @type {Record<string, Record<number, HTMLElement>>} */ let bookNameToChapterToFirstVerseElement = {};
     let lastAddedChapterIndexInBook = 0;
     let lastVerseMouseEnterTime = 0;
     let allDataWasAdded = false;
@@ -324,6 +333,7 @@ try {
         ['MAX_SEARCH_RESULTS', MAX_SEARCH_RESULTS],
         ['FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS', FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS],
         ['CHAPTERS_IN_BIBLE', CHAPTERS_IN_BIBLE],
+        ['MAX_CHAPTERS_IN_BOOK', MAX_CHAPTERS_IN_BOOK],
         ['WORD_TYPE_INDEX_VERB', WORD_TYPE_INDEX_VERB],
         ['hebrewBookNames', hebrewBookNames],
         ['hebrewWordTypes', hebrewWordTypes],
@@ -345,6 +355,7 @@ try {
         decodeWordsWithStrongNumbers,
         escapeHtml,
         initBiblehubData,
+        initTocHtml,
         addBookData,
         addChapterData,
         bibleDataAdded,
@@ -359,6 +370,7 @@ try {
         replaceInRegExpSource,
         clearSearch,
         fixVisibleVerse,
+        scrollToTop,
         showInfoDialog,
         toggleLocations,
         togglePoints,
@@ -372,7 +384,7 @@ try {
      * Initializations once the DOM is loaded (not including the data <script> tags).
      */
     function domIsLoaded() {
-        showMessage(`Loading page...`, 'bottom-bar');
+        showMessage(`הדף בטעינה...`, 'bottom-bar');
 
         // Initialize the splitter between the left sidebar and the main area.
         (() => {
@@ -592,10 +604,59 @@ try {
 
     /**
      * This function only lives in the browser:
+     * Populate the table-of-contents (TOC) with Hebrew book names and chapter numbers.
+     */
+    function initTocHtml() {
+        // Add Hebrew book names to the TOC
+        let bibleTocBooksSectionElement = document.getElementById('bible-toc-books').firstElementChild;
+        for (const hebrewBookName of hebrewBookNames) {
+            if (hebrewBookName === 'יהושע' || hebrewBookName === 'ישעיהו' || hebrewBookName === 'דברי-הימים-א') {
+                bibleTocBooksSectionElement = bibleTocBooksSectionElement.nextElementSibling;
+            }
+            const bookTocElement = document.createElement('div');
+            bookTocElement.className = 'bible-toc-book bible-toc-book-unloaded';
+            bookTocElement.appendChild(document.createTextNode(hebrewBookName));
+            bibleTocBooksSectionElement.appendChild(bookTocElement);
+            bookNameToTocElement[hebrewBookName] = bookTocElement;
+            bookTocElement.addEventListener('click', () => {
+                const currentlySelectedBookElement = document.querySelector('.bible-toc-book-selected');
+                if (currentlySelectedBookElement) {
+                    currentlySelectedBookElement.classList.remove('bible-toc-book-selected');
+                }
+                bookTocElement.classList.add('bible-toc-book-selected');
+                for (const [chapterIndex, chapterTocElement] of [...document.querySelectorAll('.bible-toc-chapter')].entries()) {
+                    const classListMethod = (chapterIndex < bookNameToChaptersCount[hebrewBookName]) ? 'add' : 'remove';
+                    chapterTocElement.classList[classListMethod]('bible-toc-chapter-visible');
+                }
+            });
+        }
+
+        // Add Hebrew chapter-numbers to the TOC
+        const bibleTocChaptersElement = document.getElementById('bible-toc-chapters');
+        for (let chapterIndex = 0; chapterIndex < MAX_CHAPTERS_IN_BOOK; chapterIndex++) {
+            const chapterTocElement = document.createElement('div');
+            chapterTocElement.className = 'bible-toc-chapter';
+            chapterTocElement.appendChild(document.createTextNode(numberToHebrew(chapterIndex)));
+            bibleTocChaptersElement.appendChild(chapterTocElement);
+            chapterTocElement.addEventListener('click', () => {
+                /** @type {HTMLElement} */ const currentlySelectedBookElement = document.querySelector('.bible-toc-book-selected');
+                if (currentlySelectedBookElement) {
+                    const hebrewBookName = currentlySelectedBookElement.innerText;
+                    bookNameToChapterToFirstVerseElement[hebrewBookName]?.[chapterIndex]?.scrollIntoView();
+                }
+            });
+        }
+    }
+
+    /**
+     * This function only lives in the browser:
      * Prepare to receive the chapters of a book: addChapterData() is expected to be called soon.
      * @param {string} hebrewBookName
      */
     function addBookData(hebrewBookName) {
+        // Mark the last-added book as loaded in the TOC.
+        bookNameToTocElement[lastAddedBookName]?.classList?.remove('bible-toc-book-unloaded');
+
         // Add the book-header to the HTML
         const versesContainerElement = document.getElementById('verses-container');
         const bookHeaderElement = document.createElement('div');
@@ -604,6 +665,7 @@ try {
         versesContainerElement.appendChild(bookHeaderElement);
         lastAddedBookName = hebrewBookName;
         lastAddedChapterIndexInBook = 0;
+        bookNameToChapterToFirstVerseElement[lastAddedBookName] = {'0': bookHeaderElement};
     }
 
     /**
@@ -615,7 +677,7 @@ try {
         // Show loading progress in the bottom bar
         const chapterHebrewNumber = numberToHebrew(lastAddedChapterIndexInBook);
         showMessage(
-            `Loading (` +
+            `הדף בטעינה (` +
             `<div style="display: inline-block; width: 2.5em; text-align: right;">` +
             `${String(Math.round(100 * addedChaptersCount / CHAPTERS_IN_BIBLE)).padStart(2)}%` +
             `</div>):  ` +
@@ -631,6 +693,7 @@ try {
         chapterHeaderElement.className = 'chapter-header';
         chapterHeaderElement.appendChild(document.createTextNode(`   ${lastAddedBookName}  ${chapterHebrewNumber}   `));
         versesContainerElement.appendChild(chapterHeaderElement);
+        bookNameToChapterToFirstVerseElement[lastAddedBookName][lastAddedChapterIndexInBook] ??= chapterHeaderElement;
 
         // Scan chapter's verses
         for (const [verseIndex, verseData] of chapterData.entries()) {
@@ -677,6 +740,7 @@ try {
 
         lastAddedChapterIndexInBook++;
         addedChaptersCount++;
+        bookNameToChaptersCount[lastAddedBookName] = lastAddedChapterIndexInBook;
     }
 
     /**
@@ -684,6 +748,9 @@ try {
      * Called once all bible data has been added (addBookData() and addChapterData() are all called).
      */
     function bibleDataAdded() {
+        // Mark the last-added book as loaded in the TOC.
+        bookNameToTocElement[lastAddedBookName]?.classList?.remove('bible-toc-book-unloaded');
+
         // All books have been added: mark the page as loaded.
         allDataWasAdded = true;
         showMessage('', 'bottom-bar');
@@ -968,6 +1035,14 @@ try {
 
     /**
      * This function only lives in the browser:
+     * Scroll the biblical text to the top.
+     */
+    function scrollToTop() {
+        document.querySelector('.central-right').scrollTop = 0;
+    }
+
+    /**
+     * This function only lives in the browser:
      * Show the info-dialog.
      */
     function showInfoDialog() {
@@ -1078,6 +1153,9 @@ try {
     // Populate biblehubData
     addBiblehubDataToHtml();
 
+    // Add table-of-contents HTML
+    addTocHtml();
+
     // Add actual Bible text: books --> chapters --> verses --> words-with-Strong-numbers
     addBibleTextToHtml();
 
@@ -1091,6 +1169,17 @@ try {
     process.exit(1);
 }
 
+/**
+ * Add table-of-contents HTML
+ * This will add to the HTML a <script> tag that calls initTocHtml(),
+ *  which will populate the TOC with Hebrew book names and chapter numbers.
+ */
+function addTocHtml() {
+    html.push(
+        '\n<script>\n',
+        'initTocHtml();\n',
+        '</script>\n');
+}
 
 /**
  * Populate biblehubData:
@@ -1126,7 +1215,8 @@ function addBiblehubDataToHtml() {
 function addBibleTextToHtml() {
     let addedChaptersCount = 0;
     html.push('\n\n<script> ');
-    for (const [hebrewBookName, bookData] of Object.entries(bsbData)) {
+    for (const hebrewBookName of hebrewBookNames) {
+        const bookData = bsbData[hebrewBookName];
         html.push('addBookData(', JSON.stringify(hebrewBookName), ');\n');
         if (!FILTER_LOADED_BOOKS_REGEXP || hebrewBookName.match(FILTER_LOADED_BOOKS_REGEXP)) {
             for (const [chapterIndex, chaptersData] of bookData.entries()) {
@@ -1401,6 +1491,14 @@ function getSkeletonHtml() {
     <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzVBMVEUAAAAOOIOEu+VXjMPD6/+d1PdJg75sq92a0fVuotJZlMt5u+len9VimMxRjcZPk842b7Awaax2r95bndT///+3//8UXakZXqgLLHcIKXUPPokNNoEIMn8OO4cPSJUMNH8HMH0PR5MOOYQNMXsQTZkx5/9e9/8TTpkLL3sOOIRYisB2ptN6q9d3qddrn9BLgrxHe7Z7q9eEtuCGuuWHveiDuOR6sN1on9I4cLBOg7x5q9iEtuB3sOBmn9M/eLYXT5hsodJZlcwQR5JVjMRnodZcm9NFgb4AE2tTj8hHhsQAAVonYaZJicdBhMQiXKMmY6k7f8I4fcAiX6YYVqAkb7kmcLkWVJ4OQ48bZbEeZ7INQIwWXakcarcdarccYKoRTJgWYK4dZbAUTpgSUp4VYK0eZbAaV6EECFERT5wUXKkWYrAbZbIeYqwZVJ4AAEgOQYwTUp4VWaUYXakaXqobXacaV6ERQo0DFmELMXwKMXwAD1yZw+aiyemSwumEv+2Dv+5/uuh/st671+682vKx1fLF3/Oozu2Av+98u+11s+ZsqNynyumy1PB4uOx6vvGMxfHJ4fSNw+11ue1wsudoqN9enda/2fCOwOpttOt1u/B2vPG72vOeyu5ss+pnrOVgpN9XmdRQldO00u2mzOxiq+ZlsOt2uOvK4fSMwethq+ddpeFWndtNk9I8iM5sp93S5PSqzuuUw+nF3vLp8vqHvOdToOBQm9xKlNZCi84pesYwg85mpNytz+y82PDZ6vfd6/ZqqN04itM2hs8vfcYicr8pe8gtgM01h9E7jNQ3i9RqqN7k7/na6PVcm9Unecchcb4ic8ErfcotgMwvgs0tgc1yqdzw9vvW5fI9hMcbarkfcMAidMMldsUmeMYld8Yld8V+rtuZvuEqc70YZ7Yba7scbb4dbr8cbb0cbLseargXZLQXZbYYZrYZZbT///8DorAWAAAAe3RSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAROlhYORAKX7/s+Ou9XQoTmfn5lREGj4sFR/HwQwSdmAMZzsoWJ93aIyLX1B8Pt7MNcf79bB/Gwx1D2NZBAj619PSzPAIWU46rq41RFQUNDQW1/KyDAAAAAWJLR0QUkt/JNQAAAAd0SU1FB+YMFwkwLgi20KsAAAEbSURBVBjTARAB7/4AAAECAwQqKywtLi8FBgcBAAABCAkwMTIzNDQ1Njc4CgsBAAwNOTo7e3x9fn+APD0+Dg8AED9AgYKDhIWGh4iJikFCEQASQ0SLjI2Oj5CRkpOURUYTAEdIlZaXmJmam5ydnp+gSUoAS0yhoqOkpaanqKmqq6xNTgBPUK2ur7CxsrO0tba3uFFSAFNUubq7vL2jvr/AwcLDVVYAV1jExcbHyMnKy8zNzs9ZWgAUW1zQztHS09TV1tfYXV4VABZfYNna29zd3t/g4eJhYhcAGABjZOPk5ebm5+jpZWYUGQAaG2doaWrq6+zta2xtbhwdAAEeHwBvcHFyc3R1dhQgIQEAAAEiIyQld3h5eiYnKCkBAArmcOanB9qzAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTEyLTIzVDA5OjQ4OjI1KzAwOjAw+m2ntAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0xMi0yM1QwOTo0ODoyNSswMDowMIswHwgAAAAASUVORK5CYII=">
     <title>Bible Viewer</title>
     <style>
+        /* TODO: Will this solve the Mobile issue? */
+        html {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
         body {
             direction: rtl;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -1441,6 +1539,7 @@ function getSkeletonHtml() {
 
         .footer {
             flex: 0;
+            width: 100vw;
             border-top: 1px solid gray;
             background: rgba(128,128,128,0.1);
             display: flex;
@@ -1448,13 +1547,6 @@ function getSkeletonHtml() {
             align-items: center;
             gap: 0.2em;
             padding-left: 10px;
-        }
-
-        #bottom-message-bar {
-            flex: 0;
-            white-space: pre;
-            background: rgba(128,128,128,0.1);
-            padding: 0 0.5em;
         }
 
         /* -------- central-area flex-row -------- */
@@ -1490,6 +1582,48 @@ function getSkeletonHtml() {
             display: flex;
             flex-direction: column;
             background: white;
+        }
+
+        /* -------- TOC (table-of-contents) -------- */
+
+        #bible-toc {
+            margin: 10px 10px 0 10px;
+        }
+        #bible-toc-books {
+        }
+        .bible-toc-books-section {
+        }
+        .bible-toc-book {
+            display: inline-block;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+        .bible-toc-book.bible-toc-book-unloaded {
+            user-select: none;
+            pointer-events: none;
+            color: rgba(128,128,128,0.5);
+            text-decoration: none;
+            cursor: default;
+        }
+        .bible-toc-book-selected {
+            background: rgba(128,128,128,0.2);
+        }
+        #bible-toc-chapters {
+            border: 1px solid rgba(128,128,128,0.5);
+            margin-top: 10px;
+        }
+        .bible-toc-chapter {
+            display: inline-block;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+            margin: 0 5px;
+            visibility: hidden;
+        }
+        .bible-toc-chapter.bible-toc-chapter-visible {
+            visibility: visible;
         }
 
         /* -------- verses -------- */
@@ -1534,8 +1668,28 @@ function getSkeletonHtml() {
             display: none;
         }
 
-        /* -------- footer-icons -------- */
+        /* -------- footer -------- */
 
+        .footer-search-and-message-bar {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        #bottom-message-bar {
+            flex: 0;
+            white-space: pre;
+            padding: 0 0.5em;
+        }
+
+        .footer-icons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.3em;
+            padding: 0.3em;
+            box-sizing: border-box;
+        }
+        
         .footer-icon {
             cursor: pointer;
             border-radius: 50%;
@@ -1565,8 +1719,7 @@ function getSkeletonHtml() {
             transform: translateY(-0.15em);
             font-weight: 900;
         }
-
-
+        
         .accents-icon {
             display: inline-block;
             overflow: hidden;
@@ -1645,7 +1798,10 @@ function getSkeletonHtml() {
         .info-dialog-content {
             flex: 1;
             overflow-y: auto;                            
-            padding: 0 10px;
+            padding: 0 10px 10px 10px;
+        }
+        .info-dialog-email {
+            text-align: center;
         }
         .info-dialog-close-button {
             flex: 0;
@@ -1692,32 +1848,57 @@ function getSkeletonHtml() {
         <div class="splitter hidden" id="splitter"></div>
         <div class="central-right">
             <div id="verses-container">
+                <div id="bible-toc">
+                    <div id="bible-toc-books">
+                        <div id="bible-toc-books-section"> תורה:
+                            <!-- Hebrew book-names will be dynamically added here -->
+                        </div>
+                        <div id="bible-toc-books-section"> נביאים ראשונים:
+                            <!-- Hebrew book-names will be dynamically added here -->
+                        </div>
+                        <div id="bible-toc-books-section"> נביאים אחרונים:
+                            <!-- Hebrew book-names will be dynamically added here -->
+                        </div>
+                        <div id="bible-toc-books-section"> כתובים:
+                            <!-- Hebrew book-names will be dynamically added here -->
+                        </div>
+                    </div>
+                    <div id="bible-toc-chapters">
+                        <!-- Chapter hebrew-numbers will be dynamically added here -->
+                    </div>
+                </div>
                 <!-- Verses will be dynamically added here -->
             </div>
         </div>
     </div>
     <div class="footer">
-        <form class="search-wrapper" onsubmit="performSearch(event)">
-            <label for="search-input">חיפוש:</label>
-            <input type="text" id="search-input" value="קרא">
-            <button class="search-button">חפש</button>
-            <div class="search-trash-icon" onclick="clearSearch()">⌫</div>
-        </form>
-        <div class="footer-icon locations-icon" onclick="toggleLocations()" title="הצגת\\הסתרת מיקומים">
-            <div class="icon-disabled">|</div>
-            <div class="locations-icon-inner">⌖</div>
+        <div class="footer-search-and-message-bar">
+            <form class="search-wrapper" onsubmit="performSearch(event)">
+                <label for="search-input">חיפוש:</label>
+                <input type="text" id="search-input" value="קרא">
+                <button class="search-button">חפש</button>
+                <div class="search-trash-icon" onclick="clearSearch()">⌫</div>
+            </form>
+            <div id="bottom-message-bar">&nbsp</div>
         </div>
-        <div class="footer-icon points-icon" onclick="togglePoints()" title="הצגת\\הסתרת ניקוד">
-            <div class="icon-disabled">|</div>
-            <div class="points-icon-inner">אֻ</div>
+        <div class="footer-icons">
+            <div></div>
+            <div class="footer-icon scroll-top-icon" onclick="scrollToTop()" title="גלילה עד הסוף למעלה">⇧</div>
+            <div class="footer-icon info-icon" onclick="showInfoDialog()" title="הצגת מסך עזרה">i</div>
+            <div class="footer-icon locations-icon" onclick="toggleLocations()" title="הצגת\\הסתרת מיקומים">
+                <div class="icon-disabled">|</div>
+                <div class="locations-icon-inner">⌖</div>
+            </div>
+            <div class="footer-icon points-icon" onclick="togglePoints()" title="הצגת\\הסתרת ניקוד">
+                <div class="icon-disabled">|</div>
+                <div class="points-icon-inner">אֻ</div>
+            </div>
+            <div class="footer-icon accents-icon" onclick="toggleAccents()" title="הצגת\\הסתרת טעמים">
+                <div class="icon-disabled">|</div>
+                <div class="accents-icon-inner">א֑</div>
+            </div>
         </div>
-        <div class="footer-icon accents-icon" onclick="toggleAccents()" title="הצגת\\הסתרת טעמים">
-            <div class="icon-disabled">|</div>
-            <div class="accents-icon-inner">א֑</div>
-        </div>
-        <div class="footer-icon info-icon" onclick="showInfoDialog()" title="הצגת מסך עזרה">i</div>
     </div>
-    <div id="bottom-message-bar">&nbsp</div>
     
     <dialog id="info-dialog">
         <div class="info-dialog-main">
@@ -1801,8 +1982,12 @@ function getSkeletonHtml() {
                        <li> <code>⓪{2,4}</code> - בין 2 ל-4 מופעים של ⓪
                     </ul>
                 </ul>
-            </div>
     
+                <div class="info-dialog-email">
+                    <a href="mailto:gilad.bendor@gmail.com">gilad.bendor@gmail.com</a>
+                </div>
+            </div>
+            
             <button class="info-dialog-close-button">סגור</button>
         </div>
     </dialog>
@@ -1816,6 +2001,9 @@ function getSkeletonHtml() {
     let showAccents = getHashParameter('hide-accents') === undefined;
     let lastAddedBookName = '';
     let addedChaptersCount = 0;
+    let bookNameToTocElement = {};
+    let bookNameToChaptersCount = {};
+    let bookNameToChapterToFirstVerseElement = {};
     let lastAddedChapterIndexInBook = 0;
     let lastVerseMouseEnterTime = 0;
     let allDataWasAdded = false;
