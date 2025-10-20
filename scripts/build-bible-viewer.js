@@ -30,6 +30,7 @@ const FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS = 3000; // after clicking a verse,
 const CHAPTERS_IN_BIBLE = 929;
 const MAX_CHAPTERS_IN_BOOK = 150;
 const WORD_TYPE_INDEX_VERB = 0;
+const MAX_LENGTH_OF_RECENT_SEARCHES = 2000;
 
 /**
  * For debug - load only books that match this regexp (null = load all).
@@ -166,11 +167,11 @@ const hebrewNonLettersRegex = new RegExp(`[${hebrewNonLetters}]`, 'g');
 // ----------------------------------------------------------------------------------
 
 /**
- * bsbData[hebrewBookName][hebrewChapterNumber][hebrewVerseNumber] = [ [word1, strong1], [word2, strong2], ... ]
+ * bookNamesToData[hebrewBookName][hebrewChapterNumber][hebrewVerseNumber] = [ [word1, strong1], [word2, strong2], ... ]
  * @type {Record<string, [string,number][][][]>}
  */
-const bsbData = {};
-(() => { // populate bsbData
+const bookNamesToData = {};
+(() => { // populate bookNamesToData
     /** @type {string | null} */
     let currentHebrewBookName = '===no-book-name===';
     /** @type {number | null} */
@@ -196,7 +197,22 @@ const bsbData = {};
             if (bsbBookName === 'bookName') {
                 continue; // Skip header line
             }
-            const normalizedHebrewWord = normalizeHebrewText(hebrewWord);
+            const normalizedHebrewWord = normalizeHebrewText(
+                hebrewWord.replace(/ש/g, () => {
+                    // The BSB data has few cases of ש without a Sin/Shin point:
+                    if (hebrewWord.replace(new RegExp(`[^ש${hebrewLetters}]`, 'g'), '').includes('ישׂשכר')) {
+                        // Special case: the word "יששכר" is sometimes written without a Sin/Shin point on the second ש.
+                        return 'שׂ';
+                    } else if (hebrewWord === 'שֵיבָ֖ה') {
+                        return 'שׂ';
+                    } else if (hebrewWord === 'אִ֥יש' || hebrewWord === 'חמש' || hebrewWord === 'שָמַ֖יִם') {
+                        return 'שׁ';
+                    } else {
+                        throw new Error(`Found unnormalized ש (without a Sin/Shin point) in word ${JSON.stringify(hebrewWord)}`);
+                    }
+                })
+            );
+
             if (!normalizedHebrewWord) {
                 throw new Error(`Missing Hebrew word in line ${line}`);
             }
@@ -204,7 +220,7 @@ const bsbData = {};
                 throw new Error(`Strong number ${strongNumber} is out of range`);
             }
 
-            // Parse book-name, and maintain a reference into the relevant bsbData[...]
+            // Parse book-name, and maintain a reference into the relevant bookNamesToData[...]
             const bsbHebrewBookName = bsbBookNamesToHebrew[bsbBookName];
             if (!bsbHebrewBookName) {
                 throw new Error(`Unknown BSB book name ${JSON.stringify(bsbBookName)}`);
@@ -215,10 +231,10 @@ const bsbData = {};
                 currentHebrewChapterSequence = 0;
                 currentHebrewVerseSequence = 0;
                 currentBookData = [];
-                bsbData[currentHebrewBookName] = currentBookData;
+                bookNamesToData[currentHebrewBookName] = currentBookData;
             }
 
-            // Parse chapter-sequence, and maintain a reference into the relevant bsbData[...][...]
+            // Parse chapter-sequence, and maintain a reference into the relevant bookNamesToData[...][...]
             const chapterSequenceNumber = parseInt(chapterSequence);
             if (isNaN(chapterSequenceNumber)) {
                 throw new Error(`Invalid chapter sequence number ${JSON.stringify(chapterSequence)}`);
@@ -234,7 +250,7 @@ const bsbData = {};
                 currentBookData.push(currentChapterData);
             }
 
-            // Parse verse-sequence, and maintain a reference into the relevant bsbData[...][...][...]
+            // Parse verse-sequence, and maintain a reference into the relevant bookNamesToData[...][...][...]
             const verseSequenceNumber = parseInt(verseSequence);
             if (isNaN(verseSequenceNumber)) {
                 throw new Error(`Invalid verse sequence number ${JSON.stringify(verseSequence)}`);
@@ -264,12 +280,12 @@ const bsbData = {};
 
 
 /**
- * biblehubData[strong-number] --> [hebrew-word, word-type-index, searchable-hebrew-word]
+ * strongNumbersToData[strong-number] --> [hebrew-word, word-type-index, searchable-hebrew-word]
  *    note: searchable-hebrew-word is only populated in the browser!
  * @type {[string, number, string?][]}
  */
-const biblehubData = [];
-(() => { // populate biblehubData
+const strongNumbersToData = [];
+(() => { // populate strongNumbersToData
     const wordTypesToIndex = Object.fromEntries(
         Object.keys(wordTypesToHebrew).map((wordType, index) => [wordType, index])
     );
@@ -288,14 +304,14 @@ const biblehubData = [];
             if (wordTypeIndex === undefined) {
                 throw new Error(`Unknown word type ${JSON.stringify(englishWordType)}\n    in line: ${JSON.stringify(line)}\n    of file ${JSON.stringify(BIBLEHUB_INPUT_FILE)}`);
             }
-            biblehubData[strongNumber] = [normalizeHebrewText(hebrewWordWithPoints), wordTypeIndex];
+            strongNumbersToData[strongNumber] = [normalizeHebrewText(hebrewWordWithPoints), wordTypeIndex];
         }
     }
 
     // Fill missing entries - some strong-numbers are not defined (for example, 0)
-    for (let strongNumber = 0; strongNumber < biblehubData.length; strongNumber++) {
-        if (!biblehubData[strongNumber]) {
-            biblehubData[strongNumber] = [
+    for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
+        if (!strongNumbersToData[strongNumber]) {
+            strongNumbersToData[strongNumber] = [
                 ' ', // using a single space, because encodeHebrewText() can't handle empty words
                 hebrewWordTypes.length, // not using -1 because encodeWordsWithStrongNumbers can't handle negatives
             ];
@@ -324,6 +340,7 @@ try {
     let lastAddedChapterIndexInBook = 0;
     let lastVerseMouseEnterTime = 0;
     let allDataWasAdded = false;
+    /** @type {string[]} */ let recentSearches = [];
 
     /**
      * Each item is either a function-reference or a [constant's name, its value] - that will be inserted into the HTML.
@@ -335,6 +352,7 @@ try {
         ['CHAPTERS_IN_BIBLE', CHAPTERS_IN_BIBLE],
         ['MAX_CHAPTERS_IN_BOOK', MAX_CHAPTERS_IN_BOOK],
         ['WORD_TYPE_INDEX_VERB', WORD_TYPE_INDEX_VERB],
+        ['MAX_LENGTH_OF_RECENT_SEARCHES', MAX_LENGTH_OF_RECENT_SEARCHES],
         ['hebrewBookNames', hebrewBookNames],
         ['hebrewWordTypes', hebrewWordTypes],
         ['hebrewLetters', hebrewLetters],
@@ -348,13 +366,14 @@ try {
         ['hebrewNonLettersRegex', hebrewNonLettersRegex],
         ['allVerses', allVerses],
         domIsLoaded,
+        initRecentSearches,
         numberToHebrew,
         fixShinSin,
         normalizeHebrewText,
         hebrewFinalsToRegulars,
         decodeWordsWithStrongNumbers,
         escapeHtml,
-        initBiblehubData,
+        initStrongNumbersData,
         initTocHtml,
         addBookData,
         addChapterData,
@@ -385,6 +404,8 @@ try {
      */
     function domIsLoaded() {
         showMessage(`הדף בטעינה...`, 'bottom-bar');
+
+        initRecentSearches(true);
 
         // Initialize the splitter between the left sidebar and the main area.
         (() => {
@@ -420,6 +441,55 @@ try {
                 }
             });
         })();
+    }
+
+    /**
+     * Read the recent-searches from localStorage.recentSearches, and populate them into #recent-searches
+     */
+    function initRecentSearches(isInitialCall) {
+        /** @type {HTMLInputElement} */ const searchInputElement = document.getElementById('search-input');
+        const recentSearchesElement = document.getElementById('recent-searches');
+
+        // Only on page-load - initialize.
+        if (isInitialCall) {
+            // Make the search input-box persistent.
+            searchInputElement.value = localStorage.lastSearchText || '';
+            searchInputElement.addEventListener('input', e => localStorage.lastSearchText = searchInputElement.value);
+
+            // Only show the recent-searches when the search input-box is focused.
+            // Note: on blur, we delay the hiding just a bit, so the click on the recent-search-text can be captured.
+            if (isInitialCall) {
+                searchInputElement.addEventListener('focus', () => {
+                    recentSearchesElement.style.display = 'initial';
+                    recentSearchesElement.scrollTop = recentSearchesElement.scrollHeight; // Scroll to the bottom
+                });
+                searchInputElement.addEventListener('blur', () => {
+                    setTimeout(() => recentSearchesElement.style.display = 'none', 100)
+                });
+            }
+
+            // Read the recent-searches from localStorage
+            try {
+                recentSearches = JSON.parse(localStorage.recentSearches || '[]');
+            } catch (error) {
+                console.error('Cant parse localStorage.recentSearches: ', error);
+            }
+        }
+
+        // Populate #recent-searches
+        recentSearchesElement.innerHTML = '';
+        for (const recentSearch of recentSearches) {
+            const recentSearchTextElement = document.createElement('div');
+            recentSearchTextElement.classList.add('recent-search-text');
+            recentSearchTextElement.appendChild(document.createTextNode(recentSearch));
+            recentSearchesElement.appendChild(recentSearchTextElement);
+            recentSearchTextElement.addEventListener('click', () => {
+                searchInputElement.value = recentSearch;
+                localStorage.lastSearchText = recentSearch;
+                performSearch();
+            });
+        }
+        recentSearchesElement.style.visibility = recentSearches.length ? '' : 'hidden';
     }
 
     /**
@@ -575,21 +645,21 @@ try {
 
     /**
      * This function only lives in the browser:
-     * Given the encoded biblehubData, add the searchable-hebrew-word to each entry.
-     * @param {string} encodedBiblehubData
+     * Given the encoded strongNumbersToData, add the searchable-hebrew-word to each entry.
+     * @param {string} encodedStrongNumbersData
      */
-    function initBiblehubData(encodedBiblehubData) {
-        // Decode the encoded biblehubData into the real biblehubData
-        biblehubData.push(
+    function initStrongNumbersData(encodedStrongNumbersData) {
+        // Decode the encoded strongNumbersToData into the real strongNumbersToData
+        strongNumbersToData.push(
             ...decodeWordsWithStrongNumbers(
-                encodedBiblehubData
+                encodedStrongNumbersData
             )
         );
 
-        // Per biblehubData item - which is currently [hebrew-word, word-type-index] -
+        // Per strongNumbersToData item - which is currently [hebrew-word, word-type-index] -
         //  add the 3rd item: searchable-hebrew-word.
-        for (let strongNumber = 0; strongNumber < biblehubData.length; strongNumber++) {
-            const entry = biblehubData[strongNumber];
+        for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
+            const entry = strongNumbersToData[strongNumber];
             const [hebrewWordWithPoints, wordTypeIndex] = entry;
             if (wordTypeIndex !==  hebrewWordTypes.length) {
                 entry.push(
@@ -767,16 +837,35 @@ try {
         document.querySelectorAll('.highlighted-verse').forEach((/** @type {HTMLElement} */ element) => element.remove());
     }
 
+    /**
+     * Perform research by the value in the search-box.
+     * @param {Event?} event
+     */
     function performSearch(event) {
-        event.preventDefault(); // stops the page reload
+        event?.preventDefault(); // stops the page reload
 
         /** @type {HTMLInputElement} */ const searchInputElement = document.getElementById('search-input');
         /** @type {HTMLElement} */ const searchResultsElement = document.querySelector('.search-results');
+        const searchQuery = searchInputElement.value;
+        searchInputElement.blur(); // so that the recent-searches are hidden
+
+        // Maintain localStorage.recentSearches: move/append the current search at the end.
+        const recentSearchesObject = Object.fromEntries(recentSearches.map(recentSearch => [recentSearch, true]));
+        delete recentSearchesObject[searchQuery];
+        recentSearchesObject[searchQuery] = true;
+        while (true) {  // make sure the recent searches are not too long
+            recentSearches = Object.keys(recentSearchesObject);
+            if (JSON.stringify(recentSearches).length <= MAX_LENGTH_OF_RECENT_SEARCHES) {
+                break;
+            }
+            delete recentSearchesObject[Object.keys(recentSearchesObject)[0]];
+        }
+        localStorage.recentSearches = JSON.stringify(recentSearches);
+        initRecentSearches(false);
 
         // Show the verbatim search-query on the left sidebar
         clearSearch();
         setCentralLeftVisibilityAndClear(true);
-        const searchQuery = searchInputElement.value;
         showMessage(`חיפוש: <span class='code'>${escapeHtml(searchQuery)}</span>`, 'search-results');
 
         // Warn if data is still being loaded
@@ -811,8 +900,8 @@ try {
                     // Find all strong-numbers that match strongNumbersRegExpSource.
                     /** @type {number[]} */ const matchingStrongNumbers = [];
                     const strongNumberRegExp = new RegExp(`^(${normalizedStrongNumbersRegExpSource})$`);
-                    for (let strongNumber = 0; strongNumber < biblehubData.length; strongNumber++) {
-                        const [_strongNumberWord, wordTypeIndex, searchableWord] = biblehubData[strongNumber];
+                    for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
+                        const [_strongNumberWord, wordTypeIndex, searchableWord] = strongNumbersToData[strongNumber];
                         if (strongNumberRegExp.test(String(strongNumber)) ||
                             strongNumberRegExp.test(searchableWord)) {
                             if (!onlyAllowVerbs || (wordTypeIndex === WORD_TYPE_INDEX_VERB)) {
@@ -829,7 +918,7 @@ try {
                     showMessage(
                         `<span class='code'>${escapeHtml(wholeMatch)}</span> מתורגם ל: <span class='code'>${escapeHtml(replacement)}</span>${
                             matchingStrongNumbers.map(strongNumber =>
-                                `\n    <a href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>  =  ${biblehubData[strongNumber][0]}  (${hebrewWordTypes[biblehubData[strongNumber][1]]})`
+                                `\n    <a href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>  =  ${strongNumbersToData[strongNumber][0]}  (${hebrewWordTypes[strongNumbersToData[strongNumber][1]]})`
                             ).join('')
                         }`,
                         'search-results');
@@ -963,9 +1052,10 @@ try {
 
         // Handle "standard shin": ש  -->  שׂשׁ
         // When inside brackets, do not add surrounding ( ) - to avoid nested brackets.
-        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /-ש/g, '-רשׂשׁ', '-(שׂשׁ)');
-        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /ש-/g, 'שׂשׁת-', '(שׂשׁ)-');
-        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /ש/g, 'שׂשׁ', '(שׂשׁ)');
+        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /(?<!ת)-ת/g, '-רשׂשׁת', '-ת');
+        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /-ש/g, '-רשׂשׁ', '-[שׂשׁ]');
+        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /ש-/g, 'שׂשׁת-', '[שׂשׁ]-');
+        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /ש/g, 'שׂשׁ', '[שׂשׁ]');
 
         if (!isInsideAngleBrackets) {
             // Collapse multiple spaces into one space
@@ -1150,7 +1240,7 @@ try {
         )
     );
 
-    // Populate biblehubData
+    // Populate strongNumbersToData
     addBiblehubDataToHtml();
 
     // Add table-of-contents HTML
@@ -1182,13 +1272,13 @@ function addTocHtml() {
 }
 
 /**
- * Populate biblehubData:
- * This will add to the HTML a <script> tag with the biblehubData encoded in Base64.
+ * Populate strongNumbersToData:
+ * This will add to the HTML a <script> tag with the strongNumbersToData encoded in Base64.
  */
 function addBiblehubDataToHtml() {
     html.push(
         '\n<script>\n',
-        'initBiblehubData(', JSON.stringify(encodeWordsWithStrongNumbers(biblehubData)), ');\n',
+        'initStrongNumbersData(', JSON.stringify(encodeWordsWithStrongNumbers(strongNumbersToData)), ');\n',
         '</script>\n');
 }
 
@@ -1216,7 +1306,7 @@ function addBibleTextToHtml() {
     let addedChaptersCount = 0;
     html.push('\n\n<script> ');
     for (const hebrewBookName of hebrewBookNames) {
-        const bookData = bsbData[hebrewBookName];
+        const bookData = bookNamesToData[hebrewBookName];
         html.push('addBookData(', JSON.stringify(hebrewBookName), ');\n');
         if (!FILTER_LOADED_BOOKS_REGEXP || hebrewBookName.match(FILTER_LOADED_BOOKS_REGEXP)) {
             for (const [chapterIndex, chaptersData] of bookData.entries()) {
@@ -1307,19 +1397,6 @@ function fixShinSin(hebrewText) {
  */
 function normalizeHebrewText(hebrewText) {
     const normalized = fixShinSin(hebrewText)
-        .replace(/ש/g, () => {
-            // The BSB data has few cases of ש without a Sin/Shin point:
-            if (hebrewText.replace(new RegExp(`[^ש${hebrewLetters}]`, 'g'), '').includes('ישׂשכר')) {
-                // Special case: the word "יששכר" is sometimes written without a Sin/Shin point on the second ש.
-                return 'שׁ';
-            } else if (hebrewText === 'שֵיבָ֖ה') {
-                return 'שׁ';
-            } else if (hebrewText === 'אִ֥יש' || hebrewText === 'חמש' || hebrewText === 'שָמַ֖יִם') {
-                return 'שׁ';
-            } else {
-                throw new Error(`Found unnormalized ש (without a Sin/Shin point) in word ${JSON.stringify(hebrewText)}`);
-            }
-        })
         .replace(/־/g, '') // remove Maqaf
         .replace(/׃[פסנ]*$/, ''); // remove פרשייה פתוחה/סגורה
 
@@ -1681,6 +1758,29 @@ function getSkeletonHtml() {
             white-space: pre;
             padding: 0 0.5em;
         }
+        
+        .search-input-wrapper {
+             position: relative;
+             width: 100%;
+        }
+        
+        #recent-searches {
+            display: none; /* only visible when the search-box has the focus */
+            position: absolute;
+            border: 1px solid black;
+            background: white;
+            width: 100%;
+            max-height: calc(100vh - 4em);
+            overflow: auto;
+            bottom: 1.3em;
+            padding: 2px 5px;
+        }
+        .recent-search-text {
+             cursor: pointer;
+        }
+        .recent-search-text:hover {
+             background-color: rgba(128,128,128,0.2);
+        }
 
         .footer-icons {
             display: grid;
@@ -1875,7 +1975,12 @@ function getSkeletonHtml() {
         <div class="footer-search-and-message-bar">
             <form class="search-wrapper" onsubmit="performSearch(event)">
                 <label for="search-input">חיפוש:</label>
-                <input type="text" id="search-input" value="קרא">
+                <div class="search-input-wrapper">
+                    <div id="recent-searches">
+                        <!-- Dynamically populated -->
+                    </div>
+                    <input type="text" id="search-input">
+                </div>
                 <button class="search-button">חפש</button>
                 <div class="search-trash-icon" onclick="clearSearch()">⌫</div>
             </form>
@@ -1994,8 +2099,8 @@ function getSkeletonHtml() {
 </body>
 </html>
 <script>
-    const bsbData = [];
-    const biblehubData = [];
+    const bookNamesToData = [];
+    const strongNumbersToData = [];
     let showLocations = getHashParameter('show-locations') !== undefined;
     let showPoints = getHashParameter('hide-points') === undefined;
     let showAccents = getHashParameter('hide-accents') === undefined;
@@ -2007,6 +2112,7 @@ function getSkeletonHtml() {
     let lastAddedChapterIndexInBook = 0;
     let lastVerseMouseEnterTime = 0;
     let allDataWasAdded = false;
+    let recentSearches;
 
     if (showLocations) {
         document.querySelector('.locations-icon .icon-disabled').remove();
