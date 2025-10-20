@@ -329,6 +329,8 @@ const strongNumbersToData = [];
 
 try {
     // These variables only live in the browser:
+    /** @type {((()=>void)|number)[]} */ let initTasks = [];
+    let initTasksTimeoutId = 0;
     let showLocations = true;
     let showPoints = true;
     let showAccents = true;
@@ -365,6 +367,7 @@ try {
         ['hebrewAccentsRegex', hebrewAccentsRegex],
         ['hebrewNonLettersRegex', hebrewNonLettersRegex],
         ['allVerses', allVerses],
+        initTask,
         domIsLoaded,
         initRecentSearches,
         numberToHebrew,
@@ -397,6 +400,41 @@ try {
         setHashParameters,
         getHashParameter,
     ];
+
+    /**
+     * Register a function to be executes as soon as possible.
+     * Registering a number will cause a delay of that many milliseconds.
+     * @param {(()=>void)|number} functionsOrDelays
+     */
+    function initTask(...functionsOrDelays) {
+        if (functionsOrDelays) {
+            // Register a new task.
+            initTasks.push(...functionsOrDelays);
+        }
+        if (initTasks.length === 0) {
+            // Nothing more to do.
+            return;
+        }
+        if (initTasksTimeoutId) {
+            // A timeout is already registered to take care of pending tasks.
+            return;
+        }
+
+        // Handle the next task.
+        const nextTask = initTasks.shift();
+        if (typeof nextTask === 'function') {
+            nextTask();
+            initTask();
+        } else {
+            initTasksTimeoutId = setTimeout(
+                () => {
+                    initTasksTimeoutId = 0;
+                    initTask();
+                },
+                nextTask);
+        }
+    }
+
 
     /**
      * This function only lives in the browser:
@@ -790,7 +828,7 @@ try {
             verseElement.dataset.chapter = String(lastAddedChapterIndexInBook);
             verseElement.dataset.verse = String(verseIndex);
             verseElement.dataset.index = String(allVerses.length);
-            verseElement.dataset.searchable = searchableVerse; // TODO: remove if turns out to be slow
+            verseElement.dataset.searchable = searchableVerse;
             resetVerseElementBehaviour(verseElement);
             verseElement.appendChild(document.createTextNode(fixVisibleVerse(readableVerse, lastAddedBookName, chapterHebrewNumber, verseHebrewNumber)));
             versesContainerElement.appendChild(verseElement);
@@ -1267,7 +1305,7 @@ try {
 function addTocHtml() {
     html.push(
         '\n<script>\n',
-        'initTocHtml();\n',
+        'initTask(200, initTocHtml);\n',
         '</script>\n');
 }
 
@@ -1278,7 +1316,7 @@ function addTocHtml() {
 function addBiblehubDataToHtml() {
     html.push(
         '\n<script>\n',
-        'initStrongNumbersData(', JSON.stringify(encodeWordsWithStrongNumbers(strongNumbersToData)), ');\n',
+        'initTask(() => initStrongNumbersData(', JSON.stringify(encodeWordsWithStrongNumbers(strongNumbersToData)), '));\n',
         '</script>\n');
 }
 
@@ -1304,26 +1342,27 @@ function addBiblehubDataToHtml() {
  */
 function addBibleTextToHtml() {
     let addedChaptersCount = 0;
-    html.push('\n\n<script> ');
+    html.push('\n\n<script>\n');
     for (const hebrewBookName of hebrewBookNames) {
         const bookData = bookNamesToData[hebrewBookName];
-        html.push('addBookData(', JSON.stringify(hebrewBookName), ');\n');
+        html.push('initTask(() => addBookData(', JSON.stringify(hebrewBookName), '));\n');
         if (!FILTER_LOADED_BOOKS_REGEXP || hebrewBookName.match(FILTER_LOADED_BOOKS_REGEXP)) {
             for (const [chapterIndex, chaptersData] of bookData.entries()) {
-                html.push('addChapterData( // ', numberToHebrew(chapterIndex), '\n');
+                html.push('initTask(() => addChapterData( // ', numberToHebrew(chapterIndex), '\n');
                 for (const [verseIndex, verseData] of chaptersData.entries()) {
                     const base64EncodedVerse = encodeWordsWithStrongNumbers(verseData);
                     html.push('    ', JSON.stringify(base64EncodedVerse), ', // ', numberToHebrew(verseIndex), '\n');
                 }
-                html.push(');');
+                html.push('));\n');
                 addedChaptersCount++;
                 if (addedChaptersCount % 10 === 0) {
-                    html.push(' </script><script> ');
+                    html.push('initTask(20);\n');
+                    html.push('</script><script>\n');
                 }
             }
         }
     }
-    html.push('\n bibleDataAdded(); </script>\n');
+    html.push('\ninitTask(bibleDataAdded);\n</script>\n');
 }
 
 
@@ -2103,6 +2142,10 @@ ${
 }
 // This is injected at the END of the HTML
 function scriptAtTheEndOfHtml() {
+    // noinspection JSUnusedLocalSymbols
+    let initTasks = [];
+    // noinspection JSUnusedLocalSymbols
+    let initTasksTimeoutId = 0;
     // noinspection JSUnusedLocalSymbols
     const bookNamesToData = [];
     // noinspection JSUnusedLocalSymbols
