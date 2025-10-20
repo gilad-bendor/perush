@@ -28,6 +28,7 @@ const BIBLE_VIEWER_OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'bible-viewe
 const MAX_SEARCH_RESULTS = 1000;
 const FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS = 3000; // after clicking a verse, ignore mouse-enter events for this many milliseconds
 const CHAPTERS_IN_BIBLE = 929;
+const WORD_TYPE_INDEX_VERB = 0;
 
 /**
  * For debug - load only books that match this regexp (null = load all).
@@ -116,6 +117,9 @@ const wordTypesToHebrew = {
     ['word']: 'סוג לא ידוע',
 };
 const hebrewWordTypes = Object.values(wordTypesToHebrew);
+if (Object.keys(wordTypesToHebrew)[WORD_TYPE_INDEX_VERB] !== 'Verb') {
+    throw new Error(`WORD_TYPE_INDEX_VERB (${WORD_TYPE_INDEX_VERB}) does not point to 'Verb'`);
+}
 
 /** All the letters in Hebrew, with Shin represented by two characters: שּׁ and שּׂ */
 const hebrewLetters = 'אבגדהוזחטיךכלםמןנסעףפץצקרשׁשׂת';
@@ -320,6 +324,7 @@ try {
         ['MAX_SEARCH_RESULTS', MAX_SEARCH_RESULTS],
         ['FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS', FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS],
         ['CHAPTERS_IN_BIBLE', CHAPTERS_IN_BIBLE],
+        ['WORD_TYPE_INDEX_VERB', WORD_TYPE_INDEX_VERB],
         ['hebrewBookNames', hebrewBookNames],
         ['hebrewWordTypes', hebrewWordTypes],
         ['hebrewLetters', hebrewLetters],
@@ -712,12 +717,26 @@ try {
             showMessage(`<div class="error-message">הנתונים עדיין נטענים - התוצאות יהיו חלקיות!\nאנא המתן מספר שניות ונסה שוב</div>`, 'search-results');
         }
 
+        // 2xy2 - investigate 2-letters proto-semitic roots
+        // Replace 2xy2 with a group of possible hebrew words that correspond to the root.
+        const preprocessedSearchQuery = searchQuery.replace(/^2(.)(.)2$/, '<' + [
+            '$1$2',     // שב
+            'נ$1$2',    // נשב
+            'י$1$2',    // ישב
+            '$1ו$2',    // שוב
+            '$1י$2',    // שיב
+            '$1$2ה',    // שבה
+            '$1$2$2',   // שבב
+            '$1$2$1$2', // שבשב
+        ].join('|') + '>');
+        const onlyAllowVerbs = (preprocessedSearchQuery !== searchQuery);
+
         let searchRegExp;
         try {
             // If <...inner-RegExp...> are used - replace it to "<(strong-number-1|strong-number-2|...>"
             //  with all the strong-numbers that matches the inner-RegExp - either strong-number's hebrew-word match, or numeric match.
             // The match is "whole" - i.e. <10[12]> will match strong-numbers 101, 102 - but not 1010 or 3102.
-            const searchQueryWithStrongNumbers = searchQuery.replace(/<(.*?)>/g, (wholeMatch, strongNumbersRegExpSource) => {
+            const searchQueryWithStrongNumbers = preprocessedSearchQuery.replace(/<(.*?)>/g, (wholeMatch, strongNumbersRegExpSource) => {
                 try {
                     // Normalize the inner RegExp.
                     let normalizedStrongNumbersRegExpSource = normalizeSearchRegExp(strongNumbersRegExpSource, true);
@@ -726,10 +745,12 @@ try {
                     /** @type {number[]} */ const matchingStrongNumbers = [];
                     const strongNumberRegExp = new RegExp(`^(${normalizedStrongNumbersRegExpSource})$`);
                     for (let strongNumber = 0; strongNumber < biblehubData.length; strongNumber++) {
-                        const [_strongNumberWord, _wordTypeIndex, searchableWord] = biblehubData[strongNumber];
+                        const [_strongNumberWord, wordTypeIndex, searchableWord] = biblehubData[strongNumber];
                         if (strongNumberRegExp.test(String(strongNumber)) ||
                             strongNumberRegExp.test(searchableWord)) {
-                            matchingStrongNumbers.push(strongNumber);
+                            if (!onlyAllowVerbs || (wordTypeIndex === WORD_TYPE_INDEX_VERB)) {
+                                matchingStrongNumbers.push(strongNumber);
+                            }
                         }
                     }
                     if (matchingStrongNumbers.length === 0) {
@@ -872,6 +893,13 @@ try {
      */
     function normalizeSearchRegExp(searchRegExpSource, isInsideAngleBrackets) {
         searchRegExpSource = fixShinSin(hebrewFinalsToRegulars(searchRegExpSource))
+
+        // Handle "standard shin": ש  -->  שׂשׁ
+        // When inside brackets, do not add surrounding ( ) - to avoid nested brackets.
+        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /-ש/g, '-רשׂשׁ', '-(שׂשׁ)');
+        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /ש-/g, 'שׂשׁת-', '(שׂשׁ)-');
+        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /ש/g, 'שׂשׁ', '(שׂשׁ)');
+
         if (!isInsideAngleBrackets) {
             // Collapse multiple spaces into one space
             searchRegExpSource = searchRegExpSource.replace(/\s+/g, ' ');
