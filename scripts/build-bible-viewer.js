@@ -762,6 +762,7 @@ try {
             bibleTocBooksSectionElement.appendChild(bookTocElement);
             bookNameToTocElement[hebrewBookName] = bookTocElement;
             bookTocElement.addEventListener('click', () => {
+                document.getElementById('bible-toc-chapters').style.display = 'block'; // first click will make the chapters-box visible
                 const currentlySelectedBookElement = document.querySelector('.bible-toc-book-selected');
                 if (currentlySelectedBookElement) {
                     currentlySelectedBookElement.classList.remove('bible-toc-book-selected');
@@ -1787,6 +1788,7 @@ function getSkeletonHtml() {
         #bible-toc-chapters {
             border: 1px solid rgba(128,128,128,0.5);
             margin-top: 10px;
+            display: none; /* first click on a book-name will make the chapters-box visible */
         }
         .bible-toc-chapter {
             display: inline-block;
