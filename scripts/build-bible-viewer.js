@@ -1971,6 +1971,10 @@ function getSkeletonHtml() {
             border-style: solid;
             border-color: black transparent transparent transparent;
         }
+        .info-attention-bubble-header {
+            font-weight: bold;
+            text-decoration: underline;
+        }
         .info-dialog-icons .info-attention-bubble {
             display: none; /* don't show the bubble inside the info-dialog's icons-legend */
         }
@@ -2153,7 +2157,7 @@ function getSkeletonHtml() {
             </div>
             <div class="footer-icon info-icon" onclick="showInfoDialog()" title="הצגת מסך עזרה">
                 <div class="footer-icon-inner">i</div>
-                <div class="info-attention-bubble">click for <br> information</div>
+                <div class="info-attention-bubble"><div class="info-attention-bubble-header">טוען...</div> לחץ להצגת <br>  אינפורמציה</div>
             </div>
             <div class="footer-icon locations-icon" onclick="toggleLocations()" title="הצגת\\הסתרת מיקומים">
                 <div class="icon-disabled">|</div>
