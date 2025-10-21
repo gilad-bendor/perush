@@ -898,10 +898,10 @@ try {
         allDataWasAdded = true;
         showMessage('', 'bottom-bar');
 
-        // The info-icon starts of as highlighted, to draw the user's attention to it,
-        //  and immediately after the page is loaded, it is gradually un-highlighted.
-        /** @type {HTMLElement} */ const infoIconElement = document.querySelector(`.info-icon`);
-        infoIconElement.style.backgroundColor = "transparent";
+        // Stop the blinking of the info-icon attention-bubble.
+        /** @type {HTMLElement} */ const infoIconElement = document.querySelector(`.info-attention-bubble`);
+        infoIconElement.style.opacity = '0';
+        setTimeout(() => infoIconElement.style.display = 'none', 500);
     }
 
     function clearSearch() {
@@ -1904,8 +1904,9 @@ function getSkeletonHtml() {
         }
 
         .info-icon {
-            background-color: orangered;
             transition: background-color 0.3s ease;
+            position: relative; /* for the attention-bubble placement */
+            overflow: initial !important;
         }
         
         .icon-disabled {
@@ -1937,6 +1938,41 @@ function getSkeletonHtml() {
             font-weight: 100;
         }
 
+        /* -------- info-icon's attention-bubble -------- */
+
+        /* The speech bubble */
+        .info-attention-bubble {
+            position: absolute;
+            bottom: 2em;
+            left: -0.3em;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 3px 5px;
+            font-size: 0.9em;
+            white-space: nowrap;
+            animation: colorShift 2s infinite ease-in-out;
+            transition: opacity 0.3s ease;
+        }
+        @keyframes colorShift {
+            0%   { background-color: #fcc; }
+            50%  { background-color: white; }
+            100% { background-color: #fcc; }
+        }
+        .info-attention-bubble::after { /* The little triangle pointing to the icon */
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            left: 0.4em;
+            width: 0;
+            height: 0;
+            border-width: 7px 7px 0 7px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+        .info-dialog-icons .info-attention-bubble {
+            display: none; /* don't show the bubble inside the info-dialog's icons-legend */
+        }
+        
         /* -------- search-bar -------- */
 
         .search-wrapper {
@@ -2115,6 +2151,7 @@ function getSkeletonHtml() {
             </div>
             <div class="footer-icon info-icon" onclick="showInfoDialog()" title="הצגת מסך עזרה">
                 <div class="footer-icon-inner">i</div>
+                <div class="info-attention-bubble">click for <br> information</div>
             </div>
             <div class="footer-icon locations-icon" onclick="toggleLocations()" title="הצגת\\הסתרת מיקומים">
                 <div class="icon-disabled">|</div>
