@@ -536,9 +536,10 @@ try {
      *   - target='dialog' - show (override and possibly clear) a modal dialog with the message
      * @param {string} messageHtml - empty string to clear the message
      * @param {'bottom-bar'|'search-results'|'dialog'?} target
+     * @param {string?} extraClassNames (only when target='search-results')
      * @returns {HTMLElement} The HTMLElement that contains the message
      */
-    function showMessage(messageHtml, target) {
+    function showMessage(messageHtml, target, extraClassNames) {
         switch (target) {
             case 'bottom-bar': {
                 const bottomMessageBarElement = document.getElementById('bottom-message-bar');
@@ -548,7 +549,7 @@ try {
             case 'search-results': {
                 const searchResultsElement = document.querySelector('.search-results');
                 const messageWrapperElement = document.createElement('div');
-                messageWrapperElement.className = 'search-message';
+                messageWrapperElement.className = 'search-message' + (extraClassNames ? ` ${extraClassNames}` : '');
                 messageWrapperElement.innerHTML = messageHtml;
                 searchResultsElement.appendChild(messageWrapperElement);
                 return messageWrapperElement;
@@ -947,7 +948,7 @@ try {
                     if (matchingStrongNumbers.length === 0) {
                         throw new Error('No matching Strong numbers');
                     }
-                    const replacement = `<(${matchingStrongNumbers.join('|')})>`;
+                    const replacement = `(#+<(${matchingStrongNumbers.join('|')})>)`;
 
                     // Report the matching strong-numbers on the left sidebar.
                     showMessage(
@@ -967,7 +968,8 @@ try {
 
             // Normalize the search RegExp
             let searchRegExpSource = normalizeSearchRegExp(searchQueryWithStrongNumbers, false);
-            showMessage(`<div style="display: inline-block; direction: rtl;">RegExp:</div> <span class='code'>${escapeHtml(searchRegExpSource)}</span>`, 'search-results');
+            showMessage('ביטוי-רגולרי סופי:', 'search-results');
+            showMessage(`/${escapeHtml(searchRegExpSource)}/g`, 'search-results', 'search-result-regexp');
 
             if (!searchRegExpSource.trim()) {
                 throw new Error('חיפוש ריק - אנא הזן ביטוי לחיפוש');
@@ -988,7 +990,7 @@ try {
          * Note that searchableVerse is made of words with Strong numbers, e.g. " בְּרֵאשִׁית<7225> בָּרָא<1254> אֱלֹהִים<430> ... "
          *  and is surrounded by spaces.
          * @param verseInfo
-         * @param offset
+         * @param {number} offset
          */
         function searchableVerseOffsetToWordIndex(verseInfo, offset) {
             if (offset < 0 || offset >= verseInfo.searchableVerse.length) {
@@ -1006,12 +1008,12 @@ try {
                 searchRegExp,
                 (wholeMatch, ...args) => {
                     // Find the offsets-range of the match (in verseInfo.searchableVerse)
-                    const matchStartOffset = args[args.length - 2];
+                    /** @type {number} */ const matchStartOffset = args[args.length - 2];
                     const matchEndOffset = matchStartOffset + wholeMatch.length;
 
                     // Convert to a words-range (in verseInfo.words)
-                    const fromWordIndex = searchableVerseOffsetToWordIndex(verseInfo, matchStartOffset);
-                    const toWordIndex = searchableVerseOffsetToWordIndex(verseInfo, matchEndOffset);
+                    const fromWordIndex = searchableVerseOffsetToWordIndex(verseInfo, matchStartOffset + (wholeMatch.startsWith(' ') ? 1 : 0));
+                    const toWordIndex = searchableVerseOffsetToWordIndex(verseInfo, matchEndOffset - (wholeMatch.endsWith(' ') ? 1 : 0));
 
                     // Mark the words to be highlighted
                     highlightWordIndexes ??= new Set();
@@ -1102,11 +1104,11 @@ try {
         // Replace @ with a RegExp that matches any sequence of אהוי letters - or nothing
         searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /@/g, 'אהוי', '[אהוי]*');
         // Replace # with any single letter
-        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /#/g, 'א-ת', '[א-ת]');
+        searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /#/g, 'א-ת', '[א-תשׂשׁ]');
 
         if (!isInsideAngleBrackets) {
             // When a space is NOT preceded by <...> - then match any strong-number
-            searchRegExpSource = searchRegExpSource.replace(/([^>]) /g, '$1<\\d+> ');
+            searchRegExpSource = searchRegExpSource.replace(/([^>]) /g, '$1(<\\d+>|) ');
         }
 
         return searchRegExpSource;
@@ -1624,10 +1626,6 @@ function getSkeletonHtml() {
             font-weight: bold;
         }
 
-        .code {
-            font-family: monospace;
-        }
-
         /* -------- main flex-column -------- */
 
         .central-area {
@@ -1804,6 +1802,8 @@ function getSkeletonHtml() {
         }
         .recent-search-text {
              cursor: pointer;
+             white-space: pre-wrap;
+             font-family: monospace;
         }
         .recent-search-text:hover {
              background-color: rgba(128,128,128,0.2);
@@ -1874,6 +1874,7 @@ function getSkeletonHtml() {
         }
         #search-input {
             width: 100%;
+            font-family: monospace;
         }
         .search-button {
             cursor: pointer;
@@ -1896,6 +1897,12 @@ function getSkeletonHtml() {
         }
         .search-message + :not(.search-message) {
             margin-top: 0.5em;
+        }
+
+        .search-result-regexp {
+            direction: ltr;
+            font-family: monospace;
+            white-space: pre-line;
         }
 
         /* -------- info-dialog -------- */
@@ -1963,6 +1970,7 @@ function getSkeletonHtml() {
             background-color: rgba(128,128,128,0.2);
             border-radius: 3px;
             font-family: monospace;
+            white-space: pre;
             display: inline-block;
         }
         #info-dialog ul.examples {
@@ -2126,7 +2134,7 @@ function getSkeletonHtml() {
                 <ul>
                    <li> תווי התאמה:
                      <ul>
-                       <li> <code>.</code> - מתאימה לכל תו בודד
+                       <li> <code>.</code> - מתאימה לכל תו בודד <strong>כולל רווח</strong> (המשמעות היא ש-<code>.*</code> יכול לכסות כמה מילים)
                        <li> <code>[...]</code> אחד מכמה <strong>אותיות</strong> - למשל <code>[אבג]</code> - מתאימה לאחת מהאותיות א, ב או ג
                        <li> <code>[^...]</code> כל אות <strong>חוץ</strong> מכמה אותיות - למשל <code>[^אבג]</code> - מתאימה לכל אות - חוץ מהאותיות א, ב או ג
                        <li> <code>⓪|⓪|⓪</code> אחד מכמה <strong>ביטויים</strong> - למשל <code>(אבג|דהו)</code> - מתאימה ל״אבג״ או ל״דהו״
@@ -2139,6 +2147,30 @@ function getSkeletonHtml() {
                        <li> <code>⓪?</code> - אפס או מופע אחד של ⓪
                        <li> <code>⓪{2,4}</code> - בין 2 ל-4 מופעים של ⓪
                     </ul>
+                </ul>
+                
+                <div class="info-dialog-h2"> חיפושים לדוגמה: </div>
+                <ul>
+                    <li> <code> ה@ל@ך #*פנ</code> - מילה שמתחילה (בגלל הרווח) ב״ה״,
+                        ואז אולי אותיות אהוי, ואז ״ל״, ואז אולי אותיות אהוי, ואז ״ך״ או ״כ״ בסוף המילה (בגלל הרווח),
+                        ואז כל רצף(בגלל ה-<code>*</code> - כלומר אפס או יותר מופעים של הביטוי הקודם) <strong>אותיות</strong> (בלי דילוג על מילים), ואז האותיות ״פנ״ או ״פן״:                     
+                        <ul>
+                            <li> יוֹמָ֔ם <strong>הֹלֵ֤ךְ לִפְנֵיהֶם֙</strong> אַתָּ֨ה
+                        </ul>
+                    <li> <code> ה@ל@ך .*פנ</code> - כנ״ל, אבל בגלל שיש <code>.</code> במקום <code>#</code> - אז כל רצף שהוא - כולל דילוג על מילים שלמות: 
+                        <ul>
+                            <li> אָ֚נָה <strong>הָלַ֣ךְ דּוֹדֵ֔ךְ הַיָּפָ֖ה בַּנָּשִׁ֑ים אָ֚נָה פָּנָ֣ה</strong> דוֹדֵ֔ךְ וּנְבַקְשֶׁ֖נּוּ עִמָּֽךְ
+                        </ul>                   
+                   <li> <code>&lt;הלך|נפל&gt; #*פנ</code> - כל הטייה של השורשים ״הלך״ או ״נפל״, ואז (כמו בדוגמה למעלה) כל רצף אותיות ואז האותיות ״פנ״ או ״פן״:
+                        <ul>
+                            <li> יִשְׁלַ֨ח מַלְאָכ֤וֹ <strong>הִתְהַלַּ֣כְתִּי לְפָנָ֗יו</strong> אֲשֶׁר
+                            <li> לֶחָֽרֶב <strong>וְנָפְל֥וּ לִפְנֵיכֶ֖ם</strong> אֶת אֹיְבֵיכֶ֑ם
+                        </ul>
+                   <li> <code></code> - 
+                   <li> <code></code> - 
+                   <li> <code></code> - 
+                   <li> <code></code> - 
+                   <li> <code></code> - 
                 </ul>
                 
                 <div class="info-dialog-h1"> לחצנים בשורת החיפוש (למטה): </div>
