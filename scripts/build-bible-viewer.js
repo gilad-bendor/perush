@@ -939,7 +939,7 @@ try {
         // Show the verbatim search-query on the left sidebar
         clearSearch();
         setCentralLeftVisibilityAndClear(true);
-        showMessage(`חיפוש: <span class='code'>${escapeHtml(searchQuery)}</span>`, 'search-results');
+        showMessage(`חיפוש: <code>${escapeHtml(searchQuery)}</code>`, 'search-results');
 
         // Warn if data is still being loaded
         if (!allDataWasAdded) {
@@ -989,7 +989,7 @@ try {
 
                     // Report the matching strong-numbers on the left sidebar.
                     showMessage(
-                        `<span class='code'>${escapeHtml(wholeMatch)}</span> מתורגם ל: <span class='code'>${escapeHtml(replacement)}</span>${
+                        `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>${
                             matchingStrongNumbers.map(strongNumber =>
                                 `\n    <a href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>  =  ${strongNumbersToData[strongNumber][0]}  (${hebrewWordTypes[strongNumbersToData[strongNumber][1]]})`
                             ).join('')
@@ -1826,6 +1826,7 @@ function getSkeletonHtml() {
         }
 
         .verse {
+            margin: 0 5px;
         }
         .verse:hover {
             background: rgba(128,128,128,0.2);
@@ -1997,7 +1998,6 @@ function getSkeletonHtml() {
             cursor: pointer;
         }
         .search-results {
-            margin: 10px;
         }
         .recently-clicked-verse {
             background: rgba(128,128,128,0.2) !important;
@@ -2008,6 +2008,7 @@ function getSkeletonHtml() {
             border-top: 1px solid gray;
             border-bottom: 1px solid gray;
             white-space: pre;
+            padding: 0 5px;
         }
         .search-message + .search-message {
             border-top: none;
@@ -2015,11 +2016,15 @@ function getSkeletonHtml() {
         .search-message + :not(.search-message) {
             margin-top: 0.5em;
         }
-
+        .search-message code {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
         .search-result-regexp {
             direction: ltr;
             font-family: monospace;
-            white-space: pre-line;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
         }
 
         /* -------- info-dialog -------- */
