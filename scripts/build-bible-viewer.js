@@ -1906,6 +1906,10 @@ function getSkeletonHtml() {
             padding: 0;
         }
         
+        #info-dialog ul {
+            margin-top: 0;
+        }
+        
         .info-dialog-main {
             max-width: 90vw;
             display: flex;
@@ -2051,7 +2055,8 @@ function getSkeletonHtml() {
                 דף זה מיועד לחוקרי תנ"ך ומתעניינים בלשון המקרא, ללא צורך בידע טכני מוקדם. <br>
 
                 <div class="info-dialog-h1"> מספרי סטרונג </div>
-                דף זה משתמש ב״מספרי סטרונג״: כל מילה בתנ״ך משוייכת למספר מסויים על פי משמעותו - על כל הטיותיו וצורותיו. <br>
+                דף זה משתמש ב״<a href="https://en.wikipedia.org/wiki/Strong's_Concordance#Strong's_numbers" target="_blank">מספרי סטרונג</a>״:
+                כל מילה בתנ״ך משוייכת למספר מסויים על פי משמעותו - על כל הטיותיו וצורותיו. <br>
                 יש לשים לב שיתכן ששורש מסויים יהיה בעל כמה משמעויות - ויפוצל לכמה מספרי סטרונג - למשל - השורש ע.נ.ה מפוצל לשלוש מספרים:
                 <ul>
                     <li> <a href="https://biblehub.com/hebrew/6030.htm" target="_blank">6030</a> - לענות, לתת תשובה, לשיר
