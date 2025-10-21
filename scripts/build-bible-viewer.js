@@ -366,6 +366,7 @@ try {
         ['hebrewNonLettersRegex', hebrewNonLettersRegex],
         ['allVerses', allVerses],
         domIsLoaded,
+        initInfoDialog,
         initRecentSearches,
         numberToHebrew,
         fixShinSin,
@@ -405,6 +406,20 @@ try {
     function domIsLoaded() {
         showMessage(`הדף בטעינה...`, 'bottom-bar');
 
+        // #_MOBILE_FIX_# Instead of setting the <body> to use "flex" with "height: 100vh" (which causes problems with mobile)
+        //  we set the footer as "position:fixed; bottom: 0" and dynamically resize the central-area.
+        function resizeHandler() {
+            /** @type {HTMLElement} */ const centralAreaElement = document.querySelector('.central-area');
+            /** @type {HTMLElement} */ const footerElement = document.querySelector('.footer');
+            centralAreaElement.style.height = (window.innerHeight - footerElement.clientHeight) + 'px';
+        }
+        window.addEventListener('resize', resizeHandler);
+        resizeHandler();
+
+        // Finalize the HTML in the information-dialog.
+        initInfoDialog();
+
+        // Read the recent-searches from localStorage.recentSearches, and populate them into #recent-searches
         initRecentSearches(true);
 
         // Initialize the splitter between the left sidebar and the main area.
@@ -441,6 +456,27 @@ try {
                 }
             });
         })();
+    }
+
+    /**
+     * Finalize the HTML in the information-dialog.
+     */
+    function initInfoDialog() {
+        /** @type {HTMLInputElement} */ const infoDialogIconsElement = document.querySelector('.info-dialog-icons');
+        for (const footerIconElement of document.querySelectorAll('.footer-icon')) {
+            /** @type {HTMLInputElement} */ const clonedIconElement = footerIconElement.cloneNode(true);
+            const titleText = clonedIconElement.getAttribute('title');
+            clonedIconElement.removeAttribute('onclick');
+            clonedIconElement.removeAttribute('title');
+            clonedIconElement.style.backgroundColor = 'initial';
+
+            const infoDialogIconWrapperElement = document.createElement('div');
+            infoDialogIconWrapperElement.className = 'info-dialog-footer-icon';
+            infoDialogIconWrapperElement.appendChild(clonedIconElement);
+            infoDialogIconWrapperElement.appendChild(document.createTextNode(titleText));
+
+            infoDialogIconsElement.appendChild(infoDialogIconWrapperElement);
+        }
     }
 
     /**
@@ -1741,6 +1777,7 @@ function getSkeletonHtml() {
             display: flex;
             flex-direction: column;
             width: 100%;
+            margin-left: 10px;
         }
 
         #bottom-message-bar {
@@ -1781,6 +1818,8 @@ function getSkeletonHtml() {
         }
         
         .footer-icon {
+            display: inline-block;
+            overflow: hidden;
             cursor: pointer;
             border-radius: 50%;
             border: 2px solid black;
@@ -1801,29 +1840,23 @@ function getSkeletonHtml() {
             font-weight: 500;
         }
 
-        .locations-icon {
-            display: inline-block;
-            overflow: hidden;
+        .search-trash-icon .footer-icon-inner {
+            transform: translateY(-0.05em) translateX(-0.05em);
         }
-        .locations-icon-inner {
+        .scroll-top-icon .footer-icon-inner {
+            transform: translateY(-0.05em);
+        }
+        .info-icon .footer-icon-inner {
+        }
+        .locations-icon .footer-icon-inner {
             transform: translateY(-0.15em);
             font-weight: 900;
         }
-        
-        .accents-icon {
-            display: inline-block;
-            overflow: hidden;
-        }
-        .accents-icon-inner {
+        .accents-icon .footer-icon-inner {
             /* in order to show the accent-unicode, it MUST be preceded by a Hebrew letter, which we don't want to show */
             transform: translateY(-1.6em) translateX(0.05em) scale(3);
         }
-
-        .points-icon {
-            display: inline-block;
-            overflow: hidden;
-        }
-        .points-icon-inner {
+        .points-icon .footer-icon-inner {
             /* in order to show the point-unicode, it MUST be preceded by a Hebrew letter, which we don't want to show */
             transform: translateY(-1.6em) translateX(-0.1em) scale(3);
             font-weight: 100;
@@ -1868,16 +1901,16 @@ function getSkeletonHtml() {
         /* -------- info-dialog -------- */
 
         #info-dialog {
-            top: 5vh;
+            top: 0;
+            bottom: 0;
             padding: 0;
+            overflow-y: hidden;
         }
         
         .info-dialog-main {
             max-width: 90vw;
-            height: 90vh;
             display: flex;
             flex-direction: column;
-            /*background-color: #f0f0f0;*/
         }
         
         .info-dialog-top-bar {
@@ -1925,6 +1958,12 @@ function getSkeletonHtml() {
         #info-dialog ul.examples {
             list-style-type: disclosure-closed;
         }
+        
+        .info-dialog-footer-icon {
+            margin: 0 1em 3px 0;
+            display: flex;
+            gap: 0.5em;
+        }
    </style>
 </head>
 <body>
@@ -1971,25 +2010,30 @@ function getSkeletonHtml() {
                     <input type="text" id="search-input">
                 </div>
                 <button class="search-button">חפש</button>
-                <div class="search-trash-icon" onclick="clearSearch()">⌫</div>
             </form>
             <div id="bottom-message-bar">&nbsp</div>
         </div>
         <div class="footer-icons">
-            <div></div>
-            <div class="footer-icon scroll-top-icon" onclick="scrollToTop()" title="גלילה עד הסוף למעלה">⇧</div>
-            <div class="footer-icon info-icon" onclick="showInfoDialog()" title="הצגת מסך עזרה">i</div>
+            <div class="footer-icon search-trash-icon" onclick="clearSearch()" title="נקה את החיפוש">
+                <div class="footer-icon-inner">⌫</div>
+            </div>
+            <div class="footer-icon scroll-top-icon" onclick="scrollToTop()" title="גלילה עד הסוף למעלה">
+                <div class="footer-icon-inner">⇧</div>
+            </div>
+            <div class="footer-icon info-icon" onclick="showInfoDialog()" title="הצגת מסך עזרה">
+                <div class="footer-icon-inner">i</div>
+            </div>
             <div class="footer-icon locations-icon" onclick="toggleLocations()" title="הצגת\\הסתרת מיקומים">
                 <div class="icon-disabled">|</div>
-                <div class="locations-icon-inner">⌖</div>
+                <div class="footer-icon-inner">⌖</div>
             </div>
             <div class="footer-icon points-icon" onclick="togglePoints()" title="הצגת\\הסתרת ניקוד">
                 <div class="icon-disabled">|</div>
-                <div class="points-icon-inner">אֻ</div>
+                <div class="footer-icon-inner">אֻ</div>
             </div>
             <div class="footer-icon accents-icon" onclick="toggleAccents()" title="הצגת\\הסתרת טעמים">
                 <div class="icon-disabled">|</div>
-                <div class="accents-icon-inner">א֑</div>
+                <div class="footer-icon-inner">א֑</div>
             </div>
         </div>
     </div>
@@ -2009,7 +2053,7 @@ function getSkeletonHtml() {
                     <li><strong> חיפוש חכם:</strong> חיפוש מתקדם באמצעות "ביטויים רגולריים" (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions#using_special_characters" target="_blank">regular expressions</a>) עם מעט הרחבות - יוסבר בהמשך
                 </ul>
                 
-                <div class="info-dialog-h1">🔍 מערכת החיפוש המתקדמת</div>
+                <div class="info-dialog-h1"> מערכת החיפוש המתקדמת </div>
                 
                 <div class="info-dialog-h2"> חיפושים פשוטים ושימוש ברווחים </div>
                 <ul>
@@ -2076,6 +2120,11 @@ function getSkeletonHtml() {
                        <li> <code>⓪{2,4}</code> - בין 2 ל-4 מופעים של ⓪
                     </ul>
                 </ul>
+                
+                <div class="info-dialog-h1"> לחצנים בשורת החיפוש (למטה): </div>
+                <div class="info-dialog-icons">
+                    <!-- filled dynamically from the actual footer-icons -->
+                </div>
     
                 <div class="info-dialog-email">
                     <a href="mailto:gilad.bendor@gmail.com">gilad.bendor@gmail.com</a>
@@ -2142,17 +2191,6 @@ function scriptAtTheEndOfHtml() {
     const hebrewCharacterToIndex = Object.fromEntries(
         [...hebrewCharacters].map((char, index) => [char, index]),
     );
-
-    // #_MOBILE_FIX_# Instead of setting the <body> to use "flex" with "height: 100vh" (which causes problems with mobile)
-    //  we set the footer as "position:fixed; bottom: 0" and dynamically resize the central-area.
-    function resizeHandler() {
-        const height = window.innerHeight;
-        /** @type {HTMLElement} */ const centralAreaElement = document.querySelector('.central-area');
-        /** @type {HTMLElement} */ const footerElement = document.querySelector('.footer');
-        centralAreaElement.style.height = (window.innerHeight - footerElement.clientHeight) + 'px';
-    }
-    window.addEventListener('resize', resizeHandler);
-    resizeHandler();
 
     domIsLoaded();
 }
