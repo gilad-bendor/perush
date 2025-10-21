@@ -433,32 +433,56 @@ try {
             let startOffset = 0;
             let startSize = 0;
 
-            splitter.addEventListener('mousedown', (e) => {
+            function dragStart(_startOffset) {
                 isDragging = true;
-                startOffset = e[isMobileMode() ? 'clientY' : 'clientX'];
-                startSize = centralLeft[isMobileMode() ? 'offsetHeight' : 'offsetWidth'];
+                startOffset = _startOffset;
+                startSize = isMobileMode() ? centralLeft.offsetHeight : centralLeft.offsetWidth;
                 splitter.classList.add('dragging');
                 document.body.style.userSelect = 'none';
-                e.preventDefault();
-            });
+                // console.log(`Drag: started at offset ${startOffset}`);
+            }
 
-            document.addEventListener('mousemove', (e) => {
+            function dragChange(currentOffset) {
                 if (!isDragging) return;
                 const delta = isMobileMode()
-                    ? (startOffset - e.clientY)
-                    : (e.clientX - startOffset);
+                    ? (startOffset - currentOffset)
+                    : (currentOffset - startOffset);
                 const newSize = startSize + delta;
                 centralLeft.style[isMobileMode() ? 'height' : 'width'] = `${newSize}px`;
-            });
+                // console.log(`Drag: changed:    current-offset: ${currentOffset}    delta: ${delta}`);
+            }
 
-            document.addEventListener('mouseup', () => {
+            function dragEnd() {
                 if (isDragging) {
                     isDragging = false;
                     splitter.classList.remove('dragging');
                     document.body.style.cursor = '';
                     document.body.style.userSelect = '';
+                    // console.log(`Drag: ended`);
                 }
+            }
+
+            // Desktop: mouse events.
+            splitter.addEventListener('mousedown', (event) => {
+                dragStart(isMobileMode() ? event.clientY : event.clientX);
+                event.preventDefault();
             });
+            document.addEventListener('mousemove', (event) => {
+                dragChange(isMobileMode() ? event.clientY : event.clientX);
+            });
+            document.addEventListener('mouseup', dragEnd);
+
+            // Mobile: touch events
+            splitter.addEventListener('touchstart', (event) => {
+                const touch = event.touches[0];
+                dragStart(isMobileMode() ? touch.clientY : touch.clientX);
+                event.preventDefault();
+            }, { passive: false });
+            document.addEventListener('touchmove', (event) => {
+                const touch = event.touches[0];
+                dragChange(isMobileMode() ? touch.clientY : touch.clientX);
+            }, { passive: false });
+            document.addEventListener('touchend', dragEnd);
         })();
     }
 
