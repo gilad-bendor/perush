@@ -2027,6 +2027,19 @@ function getSkeletonHtml() {
             overflow-wrap: anywhere;
         }
 
+        /* lines between results, and a bit of vertical margins */
+        .search-results .verse {
+            border-top: 1px solid gray;
+            padding-bottom: 2px;
+        }
+        .search-results .highlighted-word {
+            padding-bottom: 2px;
+        }
+        .search-results .verse:last-child {
+            border-bottom: 1px solid gray;
+            margin-bottom: 10px;
+        }
+
         /* -------- info-dialog -------- */
 
         #info-dialog {
