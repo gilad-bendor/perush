@@ -818,8 +818,7 @@ try {
      * Called once all bible data has been added (addBookData() and addChapterData() are all called).
      */
     function bibleDataAdded() {
-        // Mark the last-added book as loaded in the TOC.
-        bookNameToTocElement[lastAddedBookName]?.classList?.remove('bible-toc-book-unloaded');
+        addBookData('סוף');
 
         // All books have been added: mark the page as loaded.
         allDataWasAdded = true;
@@ -1572,10 +1571,12 @@ function getSkeletonHtml() {
             direction: rtl;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
+            overflow: hidden;
+            /* #_MOBILE_FIX_# not using these because it doesn't work well on mobile (the footer is pushed out of screen due to the top-address-bar):
             display: flex;
             flex-direction: column;
             height: 100vh;
-            overflow: hidden;
+            */
         }
 
         .hidden {
@@ -1593,12 +1594,6 @@ function getSkeletonHtml() {
 
         /* -------- main flex-column -------- */
 
-        .header {
-            text-align: center;
-            flex: 0;
-            text-decoration: underline;
-        }
-
         .central-area {
             flex: 1;
             display: flex;
@@ -1607,6 +1602,9 @@ function getSkeletonHtml() {
         }
 
         .footer {
+            position: fixed; /* #_MOBILE_FIX_# this is critical for mobile */
+            bottom: 0;
+            
             flex: 0;
             width: 100vw;
             border-top: 1px solid gray;
@@ -1930,7 +1928,6 @@ function getSkeletonHtml() {
    </style>
 </head>
 <body>
-    <div class="header"><!-- Bible Viewer --></div>
     <div class="central-area">
         <div class="central-left hidden">
             <div class="search-results">
@@ -2145,6 +2142,17 @@ function scriptAtTheEndOfHtml() {
     const hebrewCharacterToIndex = Object.fromEntries(
         [...hebrewCharacters].map((char, index) => [char, index]),
     );
+
+    // #_MOBILE_FIX_# Instead of setting the <body> to use "flex" with "height: 100vh" (which causes problems with mobile)
+    //  we set the footer as "position:fixed; bottom: 0" and dynamically resize the central-area.
+    function resizeHandler() {
+        const height = window.innerHeight;
+        /** @type {HTMLElement} */ const centralAreaElement = document.querySelector('.central-area');
+        /** @type {HTMLElement} */ const footerElement = document.querySelector('.footer');
+        centralAreaElement.style.height = (window.innerHeight - footerElement.clientHeight) + 'px';
+    }
+    window.addEventListener('resize', resizeHandler);
+    resizeHandler();
 
     domIsLoaded();
 }
