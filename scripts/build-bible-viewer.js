@@ -1850,6 +1850,7 @@ function getSkeletonHtml() {
             display: flex;
             flex-direction: column;
             width: 100%;
+            max-width: calc(100vw - 100px);
             margin-left: 10px;
         }
 
@@ -1857,6 +1858,7 @@ function getSkeletonHtml() {
             flex: 0;
             white-space: pre;
             padding: 0 0.5em;
+            width: 100%;
         }
         
         .search-input-wrapper {
