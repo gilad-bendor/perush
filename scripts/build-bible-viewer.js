@@ -2167,25 +2167,25 @@ function getSkeletonHtml() {
             <div id="bottom-message-bar">&nbsp</div>
         </div>
         <div class="footer-icons">
-            <div class="footer-icon search-trash-icon" onclick="clearSearch()" title="נקה את החיפוש">
+            <div class="footer-icon search-trash-icon" onclick="clearSearch()" title="נקה את&#10;תוצאות החיפוש">
                 <div class="footer-icon-inner">⌫</div>
             </div>
-            <div class="footer-icon scroll-top-icon" onclick="scrollToTop()" title="גלילה עד הסוף למעלה">
+            <div class="footer-icon scroll-top-icon" onclick="scrollToTop()" title="גלילה עד&#10;הסוף למעלה">
                 <div class="footer-icon-inner">⇧</div>
             </div>
             <div class="footer-icon info-icon" onclick="showInfoDialog()" title="הצגת מסך עזרה">
                 <div class="footer-icon-inner">i</div>
                 <div class="info-attention-bubble"><div class="info-attention-bubble-header">טוען...</div> לחץ להצגת <br>  אינפורמציה</div>
             </div>
-            <div class="footer-icon locations-icon" onclick="toggleLocations()" title="הצגת\\הסתרת מיקומים">
+            <div class="footer-icon locations-icon" onclick="toggleLocations()" title='הצגת/הסתרת מיקומים,&#10;למשל "(בראשית א א)"'>
                 <div class="icon-disabled">|</div>
                 <div class="footer-icon-inner">⌖</div>
             </div>
-            <div class="footer-icon points-icon" onclick="togglePoints()" title="הצגת\\הסתרת ניקוד">
+            <div class="footer-icon points-icon" onclick="togglePoints()" title="הצגת/הסתרת ניקוד">
                 <div class="icon-disabled">|</div>
                 <div class="footer-icon-inner">אֻ</div>
             </div>
-            <div class="footer-icon accents-icon" onclick="toggleAccents()" title="הצגת\\הסתרת טעמים">
+            <div class="footer-icon accents-icon" onclick="toggleAccents()" title="הצגת/הסתרת טעמים">
                 <div class="icon-disabled">|</div>
                 <div class="footer-icon-inner">א֑</div>
             </div>
