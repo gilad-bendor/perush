@@ -1904,7 +1904,6 @@ function getSkeletonHtml() {
             top: 0;
             bottom: 0;
             padding: 0;
-            overflow-y: hidden;
         }
         
         .info-dialog-main {
@@ -1913,10 +1912,12 @@ function getSkeletonHtml() {
             flex-direction: column;
         }
         
-        .info-dialog-top-bar {
-            flex: 0;
-            margin-top: 0 !important;
+        .info-dialog-top-bar.info-dialog-h1 {
+            position: sticky;
+            top: 0;
+            background-color: white;
             padding: 0 10px;
+            margin: 0 0 10px 0;
         }
         .info-dialog-content {
             flex: 1;
@@ -1926,11 +1927,16 @@ function getSkeletonHtml() {
         .info-dialog-email {
             text-align: center;
         }
+        .info-dialog-footer {
+            position: sticky;
+            bottom: 0;
+            background-color: white;
+            text-align: center;
+        }
         .info-dialog-close-button {
-            flex: 0;
             background-color: rgba(128,128,128,0.5);
             padding: 2px 10px;
-            margin: 0 auto 5px auto;
+            margin: 5px;
         }
         
         .info-dialog-h1 {
@@ -2042,8 +2048,17 @@ function getSkeletonHtml() {
         <div class="info-dialog-main">
             <div class="info-dialog-h1 info-dialog-top-bar"> כלי לחיפוש וחקר לשוני בתנ״ך - מדריך</div>
             <div class="info-dialog-content">
-                דף זה מיועד לחוקרי תנ"ך ומתעניינים בלשון המקרא, ללא צורך בידע טכני מוקדם.
-                
+                דף זה מיועד לחוקרי תנ"ך ומתעניינים בלשון המקרא, ללא צורך בידע טכני מוקדם. <br>
+
+                <div class="info-dialog-h1"> מספרי סטרונג </div>
+                דף זה משתמש ב״מספרי סטרונג״: כל מילה בתנ״ך משוייכת למספר מסויים על פי משמעותו - על כל הטיותיו וצורותיו. <br>
+                יש לשים לב שיתכן ששורש מסויים יהיה בעל כמה משמעויות - ויפוצל לכמה מספרי סטרונג - למשל - השורש ע.נ.ה מפוצל לשלוש מספרים:
+                <ul>
+                    <li> <a href="https://biblehub.com/hebrew/6030.htm" target="_blank">6030</a> - לענות, לתת תשובה, לשיר
+                    <li> <a href="https://biblehub.com/hebrew/6031.htm" target="_blank">6031</a> - לֵעָנוֹת ולהכאיב
+                    <li> <a href="https://biblehub.com/hebrew/6032.htm" target="_blank">6032</a> - ארמית (בספר דניאל)
+                </ul>
+
                 <div class="info-dialog-h1"> תכונות עיקריות </div>
                 <ul>
                     <li><strong> תצוגת טקסט מלא:</strong> הכלי מציג את כל טקסט התנ"ך, כאשר כל פסוק מופיע בשורה נפרדת
@@ -2131,7 +2146,9 @@ function getSkeletonHtml() {
                 </div>
             </div>
             
-            <button class="info-dialog-close-button">סגור</button>
+            <div class="info-dialog-footer">
+                <button class="info-dialog-close-button">סגור</button>
+            </div>
         </div>
     </dialog>
 </body>
