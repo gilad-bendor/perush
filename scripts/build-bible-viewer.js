@@ -132,10 +132,11 @@ if (Object.keys(wordTypesToHebrew)[WORD_TYPE_INDEX_VERB] !== 'Verb') {
 const hebrewLetters = 'אבגדהוזחטיךכלםמןנסעףפץצקרשׁשׂת';
 
 /** All the Hebrew "Points" characters (Nikud).*/
-const hebrewPoints ='\u05b0\u05b1\u05b2\u05b3\u05b4\u05b5\u05b6\u05b7\u05b8\u05b9\u05ba\u05bb\u05bc\u05bf\u05c0\u05c3\u05c4\u05c5\u05c6'; // excluding \u05bd = Meteg
+const hebrewPoints ='\u05b0\u05b1\u05b2\u05b3\u05b4\u05b5\u05b6\u05b7\u05b8\u05b9\u05ba\u05bb\u05bc\u05bf\u05c3\u05c4\u05c5\u05c6'; // excluding \u05bd=Meteg and \u05c0=Peseq
 
 /** All the Hebrew "Accents" characters (Teamim) */
-const hebrewAccents = '\u0591\u0592\u0593\u0594\u0595\u0596\u0597\u0598\u0599\u059a\u059b\u059c\u059d\u059e\u059f\u05a0\u05a1\u05a3\u05a4\u05a5\u05a6\u05a7\u05a8\u05a9\u05aa\u05ab\u05ac\u05ad\u05ae\u05bd'; // including \u05bd = Meteg
+const hebrewAccents = '\u0591\u0592\u0593\u0594\u0595\u0596\u0597\u0598\u0599\u059a\u059b\u059c\u059d\u059e\u059f\u05a0\u05a1\u05a3\u05a4\u05a5\u05a6\u05a7\u05a8\u05a9\u05aa\u05ab\u05ac\u05ad\u05ae' +
+    '\u05bd\u05c0'; // including \u05bd=Meteg and \u05c0=Peseq
 
 /** All the Hebrew characters that are not letters */
 const hebrewNonLetters = hebrewPoints + hebrewAccents + '\u200d'; // Zero-width joiner: when placed between two characters that would otherwise not be connected, causes them to be printed in their connected forms
@@ -366,6 +367,7 @@ try {
         ['hebrewNonLettersRegex', hebrewNonLettersRegex],
         ['allVerses', allVerses],
         domIsLoaded,
+        isMobileMode,
         initInfoDialog,
         initRecentSearches,
         numberToHebrew,
@@ -411,7 +413,8 @@ try {
         function resizeHandler() {
             /** @type {HTMLElement} */ const centralAreaElement = document.querySelector('.central-area');
             /** @type {HTMLElement} */ const footerElement = document.querySelector('.footer');
-            centralAreaElement.style.height = (window.innerHeight - footerElement.clientHeight) + 'px';
+            document.documentElement.style.setProperty('--footer-height', footerElement.clientHeight + 'px');
+            document.documentElement.style.setProperty('--central-area-height', (window.innerHeight - footerElement.clientHeight) + 'px');
         }
         window.addEventListener('resize', resizeHandler);
         resizeHandler();
@@ -427,24 +430,25 @@ try {
             /** @type {HTMLElement} */ const splitter = document.getElementById('splitter');
             /** @type {HTMLElement} */ const centralLeft = document.querySelector('.central-left');
             let isDragging = false;
-            let startX = 0;
-            let startWidth = 0;
+            let startOffset = 0;
+            let startSize = 0;
 
             splitter.addEventListener('mousedown', (e) => {
                 isDragging = true;
-                startX = e.clientX;
-                startWidth = centralLeft.offsetWidth;
+                startOffset = e[isMobileMode() ? 'clientY' : 'clientX'];
+                startSize = centralLeft[isMobileMode() ? 'offsetHeight' : 'offsetWidth'];
                 splitter.classList.add('dragging');
-                document.body.style.cursor = 'col-resize';
                 document.body.style.userSelect = 'none';
                 e.preventDefault();
             });
 
             document.addEventListener('mousemove', (e) => {
                 if (!isDragging) return;
-                const delta = e.clientX - startX;
-                const newWidth = startWidth + delta;
-                centralLeft.style.width = `${newWidth}px`;
+                const delta = isMobileMode()
+                    ? (startOffset - e.clientY)
+                    : (e.clientX - startOffset);
+                const newSize = startSize + delta;
+                centralLeft.style[isMobileMode() ? 'height' : 'width'] = `${newSize}px`;
             });
 
             document.addEventListener('mouseup', () => {
@@ -456,6 +460,14 @@ try {
                 }
             });
         })();
+    }
+
+    /**
+     * This function only lives in the browser:
+     * Return true if the layout is in mobile-mode, where the splitter is horizontal instead of vertical.
+     */
+    function isMobileMode() {
+        return (getComputedStyle(document.body).getPropertyValue('--display-mode') === 'mobile');
     }
 
     /**
@@ -1435,7 +1447,7 @@ function fixShinSin(hebrewText) {
 function normalizeHebrewText(hebrewText) {
     const normalized = fixShinSin(hebrewText)
         .replace(/־/g, '') // remove Maqaf
-        .replace(/׃[פסנ]*$/, ''); // remove פרשייה פתוחה/סגורה
+        .replace(/׃[פס׆]*$/, ''); // remove סוף-פסוק, ופרשייה פתוחה/סגורה
 
     // Validate that all characters are valid Hebrew characters
     for (const char of normalized) {
@@ -1605,6 +1617,12 @@ function getSkeletonHtml() {
     <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzVBMVEUAAAAOOIOEu+VXjMPD6/+d1PdJg75sq92a0fVuotJZlMt5u+len9VimMxRjcZPk842b7Awaax2r95bndT///+3//8UXakZXqgLLHcIKXUPPokNNoEIMn8OO4cPSJUMNH8HMH0PR5MOOYQNMXsQTZkx5/9e9/8TTpkLL3sOOIRYisB2ptN6q9d3qddrn9BLgrxHe7Z7q9eEtuCGuuWHveiDuOR6sN1on9I4cLBOg7x5q9iEtuB3sOBmn9M/eLYXT5hsodJZlcwQR5JVjMRnodZcm9NFgb4AE2tTj8hHhsQAAVonYaZJicdBhMQiXKMmY6k7f8I4fcAiX6YYVqAkb7kmcLkWVJ4OQ48bZbEeZ7INQIwWXakcarcdarccYKoRTJgWYK4dZbAUTpgSUp4VYK0eZbAaV6EECFERT5wUXKkWYrAbZbIeYqwZVJ4AAEgOQYwTUp4VWaUYXakaXqobXacaV6ERQo0DFmELMXwKMXwAD1yZw+aiyemSwumEv+2Dv+5/uuh/st671+682vKx1fLF3/Oozu2Av+98u+11s+ZsqNynyumy1PB4uOx6vvGMxfHJ4fSNw+11ue1wsudoqN9enda/2fCOwOpttOt1u/B2vPG72vOeyu5ss+pnrOVgpN9XmdRQldO00u2mzOxiq+ZlsOt2uOvK4fSMwethq+ddpeFWndtNk9I8iM5sp93S5PSqzuuUw+nF3vLp8vqHvOdToOBQm9xKlNZCi84pesYwg85mpNytz+y82PDZ6vfd6/ZqqN04itM2hs8vfcYicr8pe8gtgM01h9E7jNQ3i9RqqN7k7/na6PVcm9Unecchcb4ic8ErfcotgMwvgs0tgc1yqdzw9vvW5fI9hMcbarkfcMAidMMldsUmeMYld8Yld8V+rtuZvuEqc70YZ7Yba7scbb4dbr8cbb0cbLseargXZLQXZbYYZrYZZbT///8DorAWAAAAe3RSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAROlhYORAKX7/s+Ou9XQoTmfn5lREGj4sFR/HwQwSdmAMZzsoWJ93aIyLX1B8Pt7MNcf79bB/Gwx1D2NZBAj619PSzPAIWU46rq41RFQUNDQW1/KyDAAAAAWJLR0QUkt/JNQAAAAd0SU1FB+YMFwkwLgi20KsAAAEbSURBVBjTARAB7/4AAAECAwQqKywtLi8FBgcBAAABCAkwMTIzNDQ1Njc4CgsBAAwNOTo7e3x9fn+APD0+Dg8AED9AgYKDhIWGh4iJikFCEQASQ0SLjI2Oj5CRkpOURUYTAEdIlZaXmJmam5ydnp+gSUoAS0yhoqOkpaanqKmqq6xNTgBPUK2ur7CxsrO0tba3uFFSAFNUubq7vL2jvr/AwcLDVVYAV1jExcbHyMnKy8zNzs9ZWgAUW1zQztHS09TV1tfYXV4VABZfYNna29zd3t/g4eJhYhcAGABjZOPk5ebm5+jpZWYUGQAaG2doaWrq6+zta2xtbhwdAAEeHwBvcHFyc3R1dhQgIQEAAAEiIyQld3h5eiYnKCkBAArmcOanB9qzAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTEyLTIzVDA5OjQ4OjI1KzAwOjAw+m2ntAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0xMi0yM1QwOTo0ODoyNSswMDowMIswHwgAAAAASUVORK5CYII=">
     <title>Bible Viewer</title>
     <style>
+        :root {
+            --display-mode: desktop;
+            --footer-height: 0; /* calculated dynamically */
+            --central-area-height: 0; /* calculated dynamically */
+        }
+        
         body {
             direction: rtl;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -1629,10 +1647,10 @@ function getSkeletonHtml() {
         /* -------- main flex-column -------- */
 
         .central-area {
-            flex: 1;
             display: flex;
             flex-direction: row-reverse;
             overflow: hidden;
+            height: var(--central-area-height);
         }
 
         .footer {
@@ -1683,6 +1701,37 @@ function getSkeletonHtml() {
             display: flex;
             flex-direction: column;
             background: white;
+        }
+        
+        /* CSS rules for Mobile (where the viewport width is small) */
+        @media (max-width: 768px) {
+            body {
+                --display-mode: mobile;
+            }
+        
+            .central-area {
+                flex-direction: column-reverse;
+            }
+    
+            .central-left {
+                width: initial;
+                min-width: initial;
+                max-width: initial;
+                height: 30vh;
+                min-height: calc(0.1 * var(--central-area-height));
+                max-height: calc(0.9 * var(--central-area-height));
+            }
+    
+            .splitter {
+                width: initial;
+                height: 5px;
+                cursor: row-resize;
+            }
+    
+            .central-right {
+                min-width: initial;
+                min-height: 0;
+            }
         }
 
         /* -------- TOC (table-of-contents) -------- */
@@ -2166,11 +2215,6 @@ function getSkeletonHtml() {
                             <li> יִשְׁלַ֨ח מַלְאָכ֤וֹ <strong>הִתְהַלַּ֣כְתִּי לְפָנָ֗יו</strong> אֲשֶׁר
                             <li> לֶחָֽרֶב <strong>וְנָפְל֥וּ לִפְנֵיכֶ֖ם</strong> אֶת אֹיְבֵיכֶ֑ם
                         </ul>
-                   <li> <code></code> - 
-                   <li> <code></code> - 
-                   <li> <code></code> - 
-                   <li> <code></code> - 
-                   <li> <code></code> - 
                 </ul>
                 
                 <div class="info-dialog-h1"> לחצנים בשורת החיפוש (למטה): </div>
