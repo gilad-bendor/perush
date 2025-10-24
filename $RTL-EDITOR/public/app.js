@@ -4,6 +4,7 @@ import { markdown } from 'https://esm.sh/@codemirror/lang-markdown';
 import { Compartment, RangeSetBuilder } from 'https://esm.sh/@codemirror/state';
 import { indentWithTab } from 'https://esm.sh/@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle } from 'https://esm.sh/@codemirror/language';
+import { RegExpCursor, SearchQuery } from "https://esm.sh/@codemirror/search"
 import { tags } from 'https://esm.sh/@lezer/highlight';
 
 // Interval to check for file updates from server (in milliseconds).
@@ -17,7 +18,7 @@ class MarkdownEditor {
         this.expandedFolders = new Set();
         this.fileTreeElements = new Map();
         this.directionCompartment = new Compartment();
-        this.init().catch(console.error);
+        this.init().catch(consoleError);
     }
 
     async init() {
@@ -174,7 +175,7 @@ class MarkdownEditor {
             this.renderFileTree(files, fileTree);
         } catch (error) {
             fileTree.innerHTML = 'Error loading files';
-            console.error('Failed to load files:', error);
+            consoleError('Failed to load files:', error);
         }
     }
 
@@ -250,12 +251,7 @@ class MarkdownEditor {
         // If content has changed on server, prompt user to reload or keep local changes.
         const currentContent = tabData.editorView.state.doc.toString();
         if (currentContent !== contentOnServer) {
-            // console.log(`File ${JSON.stringify(filePath)} has changed on server:`);
-            // console.log('----- UI content -----');
-            // console.log(currentContent);
-            // console.log('----- New content from server -----');
-            // console.log(contentOnServer);
-            // console.log('----------------------------------');
+            consoleWarn(`File ${JSON.stringify(filePath)} has changed on server:`, {uiContent: currentContent, contentOnServer});
             alert(`The file\n    ${filePath}\n has changed on the server: updating.`);
 
             // Remember original scroll position and selection.
@@ -278,7 +274,7 @@ class MarkdownEditor {
     }
 
     async openFile(filePath, fileName, setAsActive = true) {
-        console.log(`openFile(filePath=${JSON.stringify(filePath)}, fileName=${JSON.stringify(fileName)}, setAsActive=${setAsActive})`);
+        consoleLog(`openFile(filePath=${JSON.stringify(filePath)}, fileName=${JSON.stringify(fileName)}, setAsActive=${setAsActive})`);
         try {
             if (! this.tabs.has(filePath)) {
                 // Create the tab-title element.
@@ -287,9 +283,9 @@ class MarkdownEditor {
                 tabElement.innerHTML = `[title-will-be-set-shortly]<span class="tab-close">&times;</span>`;
                 tabElement.querySelector('.tab-close').addEventListener('click', (event) => {
                     event.stopPropagation();
-                    this.closeTab(filePath).catch(console.error);
+                    this.closeTab(filePath).catch(consoleError);
                 });
-                tabElement.addEventListener('click', () => this.switchToTab(filePath).catch(console.error));
+                tabElement.addEventListener('click', () => this.switchToTab(filePath).catch(consoleError));
                 document.getElementById('tabs').appendChild(tabElement);
 
                 let content;
@@ -297,8 +293,8 @@ class MarkdownEditor {
                     // Load file content from server.
                     content = await this.loadFileFromServer(filePath);
                 } catch (error) {
-                    console.error(`Failed to load ${JSON.stringify(filePath)}: `, error);
-                    this.closeTab(filePath).catch(console.error);
+                    consoleError(`Failed to load ${JSON.stringify(filePath)}: `, error);
+                    this.closeTab(filePath).catch(consoleError);
                     return;
                 }
 
@@ -331,15 +327,15 @@ class MarkdownEditor {
                 this.saveSession();
             }
         } catch (error) {
-            console.log(`Error opening file: ${error.message}`);
+            consoleError(`Error opening file: ${error.message}`);
         }
     }
 
     async switchToTab(filePath) {
-        console.log(`switchToTab(${JSON.stringify(filePath)})`);
+        consoleLog(`switchToTab(${JSON.stringify(filePath)})`);
         const tabData = this.tabs.get(filePath);
         if (!tabData) {
-            console.error('Tab data not found for filePath:', filePath);
+            consoleError('Tab data not found for filePath:', filePath);
             return;
         }
 
@@ -372,7 +368,7 @@ class MarkdownEditor {
 
         // Periodically check for file updates from server.
         tabData.updateFileFromServerIntervalId = setInterval(
-            () => this.updateFileFromServer(filePath).catch(console.error),
+            () => this.updateFileFromServer(filePath).catch(consoleError),
             UPDATE_FILE_FROM_SERVER_INTERVAL_MS
         );
 
@@ -385,8 +381,8 @@ class MarkdownEditor {
 
         // If the tab is dirty, delay closing it to allow autosave to kick in.
         if (tabData && tabData.isDirty) {
-            console.log('Delaying close of dirty tab: ', filePath);
-            setTimeout(() => this.closeTab(filePath).catch(console.error), 1000);
+            consoleLog('Delaying close of dirty tab: ', filePath);
+            setTimeout(() => this.closeTab(filePath).catch(consoleError), 1000);
             return;
         }
 
@@ -427,9 +423,9 @@ class MarkdownEditor {
             }
             tabData.autosaveTimeoutId = '===SAVING==='; // not setting to null yet, to disable updateFileFromServer()
             try {
-                await this.autosave(filePath).catch(console.error);
+                await this.autosave(filePath).catch(consoleError);
             } catch (error) {
-                console.error('Autosave failed:', error);
+                consoleError('Autosave failed:', error);
             }
             tabData.autosaveTimeoutId = null;
         }, 1000);
@@ -442,7 +438,7 @@ class MarkdownEditor {
         }
 
         try {
-            console.log(`Auto saving ${filePath}`);
+            consoleLog(`Auto saving ${filePath}`);
 
             // Just before auto-saving, make sure we have the latest version from server.
             await this.updateFileFromServer(filePath);
@@ -467,7 +463,7 @@ class MarkdownEditor {
             this.updateTabTitle(filePath);
 
         } catch (error) {
-            console.error('Autosave failed:', error);
+            consoleError('Autosave failed:', error);
         }
     }
 
@@ -478,7 +474,7 @@ class MarkdownEditor {
             tabStates: Object.fromEntries(this.tabStates),
             expandedFolders: Array.from(this.expandedFolders)
         };
-        console.log('Saving session: ', sessionData);
+        // consoleLog('Saving session: ', sessionData);
         localStorage.setItem('markdownEditor.session', JSON.stringify(sessionData));
     }
 
@@ -488,15 +484,15 @@ class MarkdownEditor {
 
         try {
             const sessionData = JSON.parse(sessionJson);
-            console.log('Restoring session: ', sessionData);
+            consoleLog('Restoring session: ', sessionData);
             this.tabStates = new Map(Object.entries(sessionData.tabStates || {}));
             this.expandedFolders = new Set(sessionData.expandedFolders || []);
             for (const filePath of sessionData.openTabs || []) {
                 const fileName = filePath.split('/').pop();
-                this.openFile(filePath, fileName, filePath === sessionData.activeTab).catch(console.error);
+                this.openFile(filePath, fileName, filePath === sessionData.activeTab).catch(consoleError);
             }
         } catch (error) {
-            console.error('Failed to restore session:', error);
+            consoleError('Failed to restore session:', error);
         }
     }
 
@@ -504,11 +500,11 @@ class MarkdownEditor {
         const tabData = this.tabs.get(filePath);
         const tabState = this.tabStates.get(filePath) ?? {};
         if (tabData.abortAutoScrolling) {
-            console.log(`    (ignoring scroll event for ${JSON.stringify(filePath)} with scrollTop=${tabData.editorView.scrollDOM.scrollTop})`);
+            // consoleLog(`    (ignoring scroll event for ${JSON.stringify(filePath)} with scrollTop=${tabData.editorView.scrollDOM.scrollTop})`);
             tabData.editorView.scrollDOM.scrollTop = tabState.scrollTop ?? 0;
             return;
         }
-        console.log(`Saving scroll position for ${JSON.stringify(filePath)}: `, tabData.editorView.scrollDOM.scrollTop);
+        // consoleLog(`Saving scroll position for ${JSON.stringify(filePath)}: `, tabData.editorView.scrollDOM.scrollTop);
         this.tabStates.set(filePath, {...tabState, scrollTop: tabData.editorView.scrollDOM.scrollTop });
         this.saveSession();
     }
@@ -537,12 +533,12 @@ class MarkdownEditor {
             return;
         }
         const editorView = this.tabs.get(filePath).editorView;
-        console.log(`Restoring tab state of ${JSON.stringify(filePath)}: `, tabState);
+        consoleLog(`Restoring tab state of ${JSON.stringify(filePath)}: `, tabState);
 
         // Restore scroll position.
         editorView.scrollDOM.scrollTop = tabState.scrollTop;
         if (editorView.scrollDOM.scrollTop !== tabState.scrollTop) {
-            console.warn(`Failed to restore scrollTop of ${JSON.stringify(filePath)} to ${tabState.scrollTop}, got ${editorView.scrollDOM.scrollTop} instead.`);
+            consoleWarn(`Failed to restore scrollTop of ${JSON.stringify(filePath)} to ${tabState.scrollTop}, got ${editorView.scrollDOM.scrollTop} instead.`);
         }
 
         // Restore text selection/cursor position.
@@ -623,7 +619,7 @@ const listLinePlugin = ViewPlugin.fromClass(
 
                 // Check for HTML tags that open or close at the start of the line (after indentation)
                 const htmlTagMatch = /^<(\/?)([-\p{L}\d]+)(?:>| .*>)/u.exec(trimmedText);
-                // console.log(`Line: `, JSON.stringify(lineText), `     `, htmlTagMatch);
+                // consoleLog(`Line: `, JSON.stringify(lineText), `     `, htmlTagMatch);
 
                 if (htmlTagMatch?.[1] === '') {
                     // Opening tag
@@ -706,7 +702,7 @@ const listLinePlugin = ViewPlugin.fromClass(
             }
 
             if (lineNumber > 10000) {
-                console.warn(`Document is very long (${lineNumber} lines) - performance may be slow because we scan the *whole* document, rather than just the visible lines.`);
+                consoleWarn(`Document is very long (${lineNumber} lines) - performance may be slow because we scan the *whole* document, rather than just the visible lines.`);
             }
 
             return builder.finish();
@@ -717,5 +713,67 @@ const listLinePlugin = ViewPlugin.fromClass(
     },
 );
 
+// HORRIBLE PATCH to CodeMirror to ignore Hebrew Nikud/Punctuation on search
+//  (not including RegExp search).
+(() => {
+    // When searching - ALWAYS use RegExpQuery - and never use StringQuery,
+    //  so our override of RegExpCursor.prototype.next is always used.
+    const originalSearchCreate = SearchQuery.prototype.create;
+    SearchQuery.prototype.create = function () {
+        // debugger;
+        lastSearchIsRegExp = this.regexp;
+        this.regexp = true;
+        const query = originalSearchCreate.apply(this, arguments); // this.regexp ? new RegExpQuery(this) : new StringQuery(this)
+        this.regexp = lastSearchIsRegExp;
+        return query;
+    }
+    let lastSearchIsRegExp;
+
+    // When doing a non-RegExp search, we override to make RegExp search;
+    // HOWEVER, in that case, we manipulate the RegExp instance to ignore Hebrew Nikud/Punctuation
+    const originalRegExpCursorNext = RegExpCursor.prototype.next;
+    RegExpCursor.prototype.next = function () {
+        if (!this._ALREADY_PATCHED_RE_) {
+            this._ALREADY_PATCHED_RE_ = true;
+            if (!lastSearchIsRegExp) {
+                this.re = new RegExp(
+                    this.re.source
+                        .replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")
+                        .replace(/[אבגדהוזחטיךכלםמןנסעףפץצקרששׁשׂת]/g, searchCharactersToOmit + '$&' + searchCharactersToOmit),
+                    this.re.flags);
+            } else {
+                consoleWarn(`NOTE! Currently, RegExp search doesn't ignore Hebrew Nikud/Punctuation`)
+            }
+        }
+        return originalRegExpCursorNext.apply(this, arguments);
+    }
+
+    const searchCharactersToOmit = '[\u05b0\u05b1\u05b2\u05b3\u05b4\u05b5\u05b6\u05b7\u05b8\u05b9\u05ba\u05bb\u05bc\u05bd\u05be\u05bf\u05c0\u05c1\u05c2\u05c3\u05c4\u05c5\u05c6\u05c7\u0591\u0592\u0593\u0594\u0595\u0596\u0597\u0598\u0599\u059a\u059b\u059c\u059d\u059e\u059f\u05a0\u05a1\u05a2\u05a3\u05a4\u05a5\u05a6\u05a7\u05a8\u05a9\u05aa\u05ab\u05ac\u05ad\u05ae\u05af\u05ef\u05f0\u05f1\u05f2\u05f3\u05f4\ufb1d\ufb1e\ufb1f\ufb20\ufb21\ufb22\ufb23\ufb24\ufb25\ufb26\ufb27\ufb28\ufb29\ufb2c\ufb2d\ufb2e\ufb2f\ufb30\ufb31\ufb32\ufb33\ufb34\ufb35\ufb36\ufb38\ufb39\ufb3a\ufb3b\ufb3c\ufb3e\ufb40\ufb41\ufb43\ufb44\ufb46\ufb47\ufb48\ufb49\ufb4a\ufb4b\ufb4c\ufb4d\ufb4e\ufb4f]*';
+})();
+
 // Initialize the MarkdownEditor.
 document.addEventListener('DOMContentLoaded', () => new MarkdownEditor());
+
+
+
+
+/**
+ * Use log-methods that adds the log-time (as seconds since page's start-time)
+ * @param {keyof Console} logMethod
+ * @param {any[]} args
+ */
+function _logByMethod(logMethod, args) {
+    const prefix = `${(Date.now() - performance.timeOrigin).toFixed(3).padStart(9)}: `;
+    if (typeof args[0] === 'string') {
+        args[0] = prefix + args[0];
+    } else {
+        args = [prefix, ...args];
+    }
+    console[logMethod](...args);
+}
+function consoleLog() { _logByMethod('log', arguments); }
+function consoleInfo() { _logByMethod('info', arguments); }
+function consoleWarn() { _logByMethod('warn', arguments); }
+function consoleError() { _logByMethod('error', arguments); }
+function consoleGroup() { _logByMethod('group', arguments); }
+function consoleGroupCollapsed() { _logByMethod('groupCollapsed', arguments); }

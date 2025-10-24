@@ -174,6 +174,16 @@ body {
     padding: 16px;
 }
 
+/* Red underline under search results (bolder underline under the *current* result) */
+.cm-searchMatch {
+    border: 0 solid red;
+    border-bottom-width: 1px;
+}
+.cm-searchMatch.cm-searchMatch-selected {
+    border-bottom-width: 2px;
+
+}
+
 .editor-wrapper.rtl .cm-layer {
     left: 0.5em !important; /* this seems to fix an RTL issue with the selection-range and the cursor positioning */
 }
@@ -206,32 +216,26 @@ body {
 /* Multi-level list support */
 .cm-list-level-1 {
     text-indent: -1em;
-    padding-right: -1em !important;
     border-right: 1em solid transparent;
 }
 .cm-list-level-2 {
     text-indent: -2em;
-    padding-right: -2em !important;
     border-right: 2em solid transparent;
 }
 .cm-list-level-3 {
     text-indent: -3em;
-    padding-right: -3em !important;
     border-right: 3em solid transparent;
 }
 .cm-list-level-4 {
     text-indent: -4em;
-    padding-right: -4em !important;
     border-right: 4em solid transparent;
 }
 .cm-list-level-5 {
     text-indent: -5em;
-    padding-right: -5em !important;
     border-right: 5em solid transparent;
 }
 .cm-list-level-6 {
     text-indent: -6em;
-    padding-right: -6em !important;
     border-right: 6em solid transparent;
 }
 
@@ -246,21 +250,29 @@ body {
 .cm-html-עיון {
     background: #e8ffe8;
 }
+.cm-html-מדרש {
+    background: #f0e8ff;
+}
 
 /* Visible spaces - show mid-dot for spaces */
 .cm-visible-space {
     font-family: monospace;
     font-size: 0.8em;
+    line-height: 0;
 }
 .cm-visible-space::before {
     content: '·';
     position: relative;
     display: inline-block;
     width: 0;
-    left: -1.2em;
+    left: -0.1em;
     color: rgba(128,128,128,0.7);
     font-family: system-ui;
     font-size: 0.8rem;
+    line-height: 0;
     pointer-events: none;
     user-select: none;
+}
+.cm-list-line .cm-visible-space::before {
+    text-indent: 0;
 }
