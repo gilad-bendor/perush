@@ -343,6 +343,7 @@ try {
     let allDataWasAdded = false;
     /** @type {string[]} */ let recentSearches = [];
     /** @type {HTMLElement|undefined} */ let focusedRecentSearchTextElement = undefined;
+    let timeNearWhichToNotShowRecentSearches = 0;
 
     /**
      * Each item is either a function-reference or a [constant's name, its value] - that will be inserted into the HTML.
@@ -523,7 +524,6 @@ try {
     function initRecentSearches(isInitialCall) {
         /** @type {HTMLInputElement} */ const searchInputElement = document.getElementById('search-input');
         const recentSearchesElement = document.getElementById('recent-searches');
-        let lastWindowFocusTime = 0;
 
         // Only on page-load - initialize.
         if (isInitialCall) {
@@ -537,8 +537,7 @@ try {
                 setRecentSearchesVisibility(true);
             });
             searchInputElement.addEventListener('focus', () => {
-                console.log('input focus');
-                if ((Date.now() - lastWindowFocusTime) > 100) { // ignore if the focus was given to the whole window
+                if ((Date.now() - timeNearWhichToNotShowRecentSearches) > 100) { // ignore if the focus was given to the whole window
                     setRecentSearchesVisibility(true);
                 }
             });
@@ -599,7 +598,7 @@ try {
             }
 
             // Track the last time that the window got the focus.
-            window.addEventListener('focus', () => lastWindowFocusTime = Date.now())
+            window.addEventListener('focus', () => timeNearWhichToNotShowRecentSearches = Date.now())
         }
 
         // Populate #recent-searches
@@ -995,6 +994,9 @@ try {
         /** @type {HTMLElement} */ const centralLeftElement = document.querySelector('.central-left');
         const searchQuery = searchInputElement.value;
         setRecentSearchesVisibility(false);
+
+        // Set the focus back to the input-field.
+        timeNearWhichToNotShowRecentSearches = Date.now();
         searchInputElement.focus();
 
         // Maintain localStorage.recentSearches: move/append the current search at the end.
@@ -2438,6 +2440,9 @@ function scriptAtTheEndOfHtml() {
     let recentSearches;
     // noinspection JSUnusedLocalSymbols
     let focusedRecentSearchTextElement;
+    // noinspection JSUnusedLocalSymbols
+    let timeNearWhichToNotShowRecentSearches = 0;
+
 
     if (showLocations) {
         document.querySelector('.locations-icon .icon-disabled').remove();
