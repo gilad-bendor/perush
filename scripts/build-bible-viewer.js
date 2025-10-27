@@ -523,6 +523,7 @@ try {
     function initRecentSearches(isInitialCall) {
         /** @type {HTMLInputElement} */ const searchInputElement = document.getElementById('search-input');
         const recentSearchesElement = document.getElementById('recent-searches');
+        let lastWindowFocusTime = 0;
 
         // Only on page-load - initialize.
         if (isInitialCall) {
@@ -535,7 +536,12 @@ try {
                 localStorage.lastSearchText = searchInputElement.value;
                 setRecentSearchesVisibility(true);
             });
-            searchInputElement.addEventListener('focus', () => setRecentSearchesVisibility(true));
+            searchInputElement.addEventListener('focus', () => {
+                console.log('input focus');
+                if ((Date.now() - lastWindowFocusTime) > 100) { // ignore if the focus was given to the whole window
+                    setRecentSearchesVisibility(true);
+                }
+            });
             searchInputElement.addEventListener('blur', () => {
                 // Note: on blur, we delay the hiding just a bit, so the click on the recent-search-text can be captured.
                 setTimeout(() => setRecentSearchesVisibility(false), 100)
@@ -570,13 +576,18 @@ try {
                     case 'End':
                         newFocusedRecentSearchTextElement = recentSearchesElement.lastElementChild;
                         break;
+                    case 'Escape':
+                        setRecentSearchesVisibility(false);
+                        return;
                 }
                 if (newFocusedRecentSearchTextElement) {
+                    event.preventDefault();
+                    setRecentSearchesVisibility(true);
                     newFocusedRecentSearchTextElement.scrollIntoViewIfNeeded({behavior: 'smooth'});
                     focusedRecentSearchTextElement?.classList?.remove('focused');
                     focusedRecentSearchTextElement = newFocusedRecentSearchTextElement;
                     focusedRecentSearchTextElement.classList.add('focused');
-
+                    searchInputElement.value = focusedRecentSearchTextElement.innerText;
                 }
             });
 
@@ -586,6 +597,9 @@ try {
             } catch (error) {
                 console.error('Cant parse localStorage.recentSearches: ', error);
             }
+
+            // Track the last time that the window got the focus.
+            window.addEventListener('focus', () => lastWindowFocusTime = Date.now())
         }
 
         // Populate #recent-searches
