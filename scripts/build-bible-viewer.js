@@ -342,6 +342,7 @@ try {
     let lastVerseMouseEnterTime = 0;
     let allDataWasAdded = false;
     /** @type {string[]} */ let recentSearches = [];
+    /** @type {HTMLElement|undefined} */ let focusedRecentSearchTextElement = undefined;
 
     /**
      * Each item is either a function-reference or a [constant's name, its value] - that will be inserted into the HTML.
@@ -382,6 +383,7 @@ try {
         addChapterData,
         bibleDataAdded,
         showMessage,
+        setRecentSearchesVisibility,
         setCentralLeftVisibilityAndClear,
         resetVerseElementBehaviour,
         handleVerseMouseEnter,
@@ -526,19 +528,57 @@ try {
         if (isInitialCall) {
             // Make the search input-box persistent.
             searchInputElement.value = localStorage.lastSearchText || '';
-            searchInputElement.addEventListener('input', () => localStorage.lastSearchText = searchInputElement.value);
 
-            // Only show the recent-searches when the search input-box is focused.
-            // Note: on blur, we delay the hiding just a bit, so the click on the recent-search-text can be captured.
-            if (isInitialCall) {
-                searchInputElement.addEventListener('focus', () => {
-                    recentSearchesElement.style.display = 'initial';
-                    recentSearchesElement.scrollTop = recentSearchesElement.scrollHeight; // Scroll to the bottom
-                });
-                searchInputElement.addEventListener('blur', () => {
-                    setTimeout(() => recentSearchesElement.style.display = 'none', 100)
-                });
-            }
+            // Show the recent-searches when the search input-box is focused,
+            //  and hide when blurred (but keep shown if blurred due to a search).
+            searchInputElement.addEventListener('input', () => {
+                localStorage.lastSearchText = searchInputElement.value;
+                setRecentSearchesVisibility(true);
+            });
+            searchInputElement.addEventListener('focus', () => setRecentSearchesVisibility(true));
+            searchInputElement.addEventListener('blur', () => {
+                // Note: on blur, we delay the hiding just a bit, so the click on the recent-search-text can be captured.
+                setTimeout(() => setRecentSearchesVisibility(false), 100)
+            });
+
+            // Allow up/down arrows to traverse the recent-search-texts items.
+            searchInputElement.addEventListener('keydown', (event) => {
+                let newFocusedRecentSearchTextElement = undefined;
+                const skipCount = event.key.startsWith('Page') ? 5 : 1;
+                switch (event.key) {
+                    case 'ArrowUp':
+                    case 'PageUp':
+                        newFocusedRecentSearchTextElement = focusedRecentSearchTextElement;
+                        for (let i = 0; i < skipCount; i++) {
+                            newFocusedRecentSearchTextElement = newFocusedRecentSearchTextElement
+                                ? newFocusedRecentSearchTextElement.previousElementSibling ?? recentSearchesElement.firstElementChild
+                                : recentSearchesElement.lastElementChild;
+                        }
+                        break;
+                    case 'ArrowDown':
+                    case 'PageDown':
+                        newFocusedRecentSearchTextElement = focusedRecentSearchTextElement;
+                        for (let i = 0; i < skipCount; i++) {
+                            newFocusedRecentSearchTextElement = newFocusedRecentSearchTextElement
+                                ? newFocusedRecentSearchTextElement.nextElementSibling ?? recentSearchesElement.lastElementChild
+                                : recentSearchesElement.firstElementChild;
+                        }
+                        break;
+                    case 'Home':
+                        newFocusedRecentSearchTextElement = recentSearchesElement.firstElementChild;
+                        break;
+                    case 'End':
+                        newFocusedRecentSearchTextElement = recentSearchesElement.lastElementChild;
+                        break;
+                }
+                if (newFocusedRecentSearchTextElement) {
+                    newFocusedRecentSearchTextElement.scrollIntoViewIfNeeded({behavior: 'smooth'});
+                    focusedRecentSearchTextElement?.classList?.remove('focused');
+                    focusedRecentSearchTextElement = newFocusedRecentSearchTextElement;
+                    focusedRecentSearchTextElement.classList.add('focused');
+
+                }
+            });
 
             // Read the recent-searches from localStorage
             try {
@@ -560,8 +600,27 @@ try {
                 localStorage.lastSearchText = recentSearch;
                 performSearch();
             });
+            recentSearchTextElement.addEventListener('mousemove', () => {
+                focusedRecentSearchTextElement?.classList?.remove('focused');
+                focusedRecentSearchTextElement = recentSearchTextElement;
+                focusedRecentSearchTextElement.classList.add('focused');
+            });
         }
         recentSearchesElement.style.visibility = recentSearches.length ? '' : 'hidden';
+    }
+
+    /**
+     * Show or hide the recent-searches list above the search input-field.
+     * @param {boolean} visible
+     */
+    function setRecentSearchesVisibility(visible) {
+        const recentSearchesElement = document.getElementById('recent-searches');
+        if (!visible) {
+            recentSearchesElement.style.display = 'none';
+        } else if (recentSearchesElement.style.display !== 'initial') {
+            recentSearchesElement.style.display = 'initial';
+            recentSearchesElement.scrollTop = recentSearchesElement.scrollHeight; // Scroll to the bottom
+        }
     }
 
     /**
@@ -921,7 +980,8 @@ try {
         /** @type {HTMLElement} */ const searchResultsElement = document.querySelector('.search-results');
         /** @type {HTMLElement} */ const centralLeftElement = document.querySelector('.central-left');
         const searchQuery = searchInputElement.value;
-        searchInputElement.blur(); // so that the recent-searches are hidden
+        setRecentSearchesVisibility(false);
+        searchInputElement.focus();
 
         // Maintain localStorage.recentSearches: move/append the current search at the end.
         const recentSearchesObject = Object.fromEntries(recentSearches.map(recentSearch => [recentSearch, true]));
@@ -973,7 +1033,7 @@ try {
 
                     // Find all strong-numbers that match strongNumbersRegExpSource.
                     /** @type {number[]} */ const matchingStrongNumbers = [];
-                    const strongNumberRegExp = new RegExp(`^(${normalizedStrongNumbersRegExpSource})$`);
+                    const strongNumberRegExp = new RegExp(`^(?:${normalizedStrongNumbersRegExpSource})$`);
                     for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
                         const [_strongNumberWord, wordTypeIndex, searchableWord] = strongNumbersToData[strongNumber];
                         if (strongNumberRegExp.test(String(strongNumber)) ||
@@ -1148,7 +1208,7 @@ try {
 
         if (!isInsideAngleBrackets) {
             // When a space is NOT preceded by <...> - then match any strong-number
-            searchRegExpSource = searchRegExpSource.replace(/([^>]) /g, '$1(<\\d+>|) ');
+            searchRegExpSource = searchRegExpSource.replace(/([^>]) /g, '$1(?:<\\d+>|) ');
         }
 
         return searchRegExpSource;
@@ -1886,7 +1946,7 @@ function getSkeletonHtml() {
              white-space: pre-wrap;
              font-family: monospace;
         }
-        .recent-search-text:hover {
+        .recent-search-text.focused {
              background-color: rgba(128,128,128,0.2);
         }
 
@@ -2362,6 +2422,8 @@ function scriptAtTheEndOfHtml() {
     let allDataWasAdded = false;
     // noinspection JSUnusedLocalSymbols
     let recentSearches;
+    // noinspection JSUnusedLocalSymbols
+    let focusedRecentSearchTextElement;
 
     if (showLocations) {
         document.querySelector('.locations-icon .icon-disabled').remove();
