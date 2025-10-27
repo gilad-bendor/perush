@@ -919,6 +919,7 @@ try {
 
         /** @type {HTMLInputElement} */ const searchInputElement = document.getElementById('search-input');
         /** @type {HTMLElement} */ const searchResultsElement = document.querySelector('.search-results');
+        /** @type {HTMLElement} */ const centralLeftElement = document.querySelector('.central-left');
         const searchQuery = searchInputElement.value;
         searchInputElement.blur(); // so that the recent-searches are hidden
 
@@ -1016,6 +1017,7 @@ try {
         } catch (error) {
             // Invalid RegExp
             showMessage(`<div class="error-message">${error.message}</div>`, 'search-results');
+            centralLeftElement.scrollTop = centralLeftElement.scrollHeight; // Failure: scroll search-results to the bottom
             return;
         }
 
@@ -1112,6 +1114,7 @@ try {
         } else {
             summaryMessage.innerHTML = `נמצאו ${matchesCount} תוצאות:`;  // shown at the top of the search-results
         }
+        centralLeftElement.scrollTop = 0; // Success: scroll search-results to the top
     }
 
     /**
