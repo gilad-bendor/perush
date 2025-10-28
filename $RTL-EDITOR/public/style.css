@@ -254,6 +254,15 @@ body {
     background: #f0e8ff;
 }
 
+/** Make the selection work well with .cm-html-ניתוח-לשוני etc. */
+.cm-layer.cm-selectionLayer {
+    z-index: initial !important;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+}
+
 /* Visible spaces - show mid-dot for spaces */
 .cm-visible-space {
     font-family: monospace;
