@@ -1,7 +1,7 @@
 import { EditorView, basicSetup } from 'https://esm.sh/codemirror';
 import { keymap, ViewPlugin, Decoration } from 'https://esm.sh/@codemirror/view';
 import { markdown } from 'https://esm.sh/@codemirror/lang-markdown';
-import { Compartment, RangeSetBuilder } from 'https://esm.sh/@codemirror/state';
+import { Compartment, RangeSetBuilder, Prec } from 'https://esm.sh/@codemirror/state';
 import { indentWithTab } from 'https://esm.sh/@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle } from 'https://esm.sh/@codemirror/language';
 import { RegExpCursor, SearchQuery } from "https://esm.sh/@codemirror/search"
@@ -103,12 +103,57 @@ class MarkdownEditor {
             { tag: tags.monospace, ...monospaceCss }
         ]));
 
+        // Custom key-handlers.
+        /** @type {{key: string, run: (view: EditorView) => boolean }[]} */ const specialKeyHandling = [];
+        if (isRtl) {
+            specialKeyHandling.push(
+                // Custom Home key handler for RTL mode:
+                // Fixes the issue where Home key in RTL mode moves cursor to "one-before-start" position
+                {
+                    key: "Home",
+                    run: (view) => {
+                        const { state } = view;
+                        const selection = state.selection.main;
+                        const line = state.doc.lineAt(selection.head);
+                        view.dispatch({
+                            selection: { anchor: line.from, head: line.from },
+                            scrollIntoView: true
+                        });
+                        return true;
+                    }
+                },
+                // On macOS on Hebrew - the key to the left of "1" produces ";" - but we want it to produce backquote "`".
+                {
+                    key: ';',
+                    run: (view) => {
+                        if (event.code !== 'Backquote' || event.keyCode !== 186) {
+                            return false;
+                        }
+                        view.dispatch(view.state.replaceSelection('`'));
+                        return true;
+                    }
+                },
+                // On macOS on Hebrew - the key to the bottom-left of "Enter" produces "ֿ " code (Unicode 5bf), but we want it to produce a backslash "\".
+                {
+                    key: '\u05bf',
+                    run: (view) => {
+                        if (event.code !== 'Backslash' || event.keyCode !== 220) {
+                            return false;
+                        }
+                        view.dispatch(view.state.replaceSelection('\\'));
+                        return true;
+                    }
+                },
+            );
+        }
+
         // noinspection JSUnusedGlobalSymbols
         const extensions = [
             basicSetup,
             markdown(),
             markdownHighlighting,
             listLinePlugin,
+            ...specialKeyHandling.map((keyRun) => Prec.high(keymap.of([keyRun]))),
             keymap.of([indentWithTab]),
             this.directionCompartment.of(EditorView.contentAttributes.of({ dir: isRtl ? 'rtl' : 'ltr' })),
             EditorView.updateListener.of((update) => {
@@ -126,21 +171,6 @@ class MarkdownEditor {
                 scroll: () => {
                     this.saveScrollPosition(filePath);
                 },
-                keydown: (event, view) => {
-                    const { state } = view;
-
-                    // On macOS on Hebrew - the key to the left of "1" produces ";" - but we want it to produce backquote "`".
-                    if (event.code === 'Backquote' && event.key === ';' && event.keyCode === 186) {
-                        view.dispatch(state.replaceSelection('`'));
-                        event.preventDefault();
-                    }
-
-                    // On macOS on Hebrew - the key to the bottom-left of "Enter" produces "ֿ " code (Unicode 5bf), but we want it to produce a backslash "\".
-                    if (event.code === 'Backslash' && event.key === '\u05bf' && event.keyCode === 220) {
-                        view.dispatch(state.replaceSelection('\\'));
-                        event.preventDefault();
-                    }
-                }
             }),
             EditorView.lineWrapping,
             EditorView.theme({
