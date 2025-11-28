@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="BUILD-BIBLE-VIEWER" type="NodeJSConfigurationType" path-to-js-file="build-bible-viewer.js" working-dir="$PROJECT_DIR$/scripts">
+  <configuration default="false" name="BUILD-BIBLE-VIEWER" type="NodeJSConfigurationType" path-to-js-file="$PROJECT_DIR$/$BIBLE-VIEWER/build-bible-viewer.js" working-dir="$PROJECT_DIR$/$BIBLE-VIEWER">
     <method v="2" />
   </configuration>
 </component>
