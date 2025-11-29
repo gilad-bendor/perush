@@ -1,3 +1,5 @@
+'use strict';
+
 const FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS = 3000; // after clicking a verse, ignore mouse-enter events for this many milliseconds
 const MAX_CHAPTERS_IN_BOOK = 150;
 const CHAPTERS_IN_BIBLE = 929;
@@ -685,7 +687,12 @@ function addChapterData(...chapterData) {
         const wordsWithStrongNumbers = decodeWordsWithStrongNumbers(verseData);
         const words = wordsWithStrongNumbers.map(([word]) => normalizeHebrewText(word));
         const strongs = wordsWithStrongNumbers.map(([, strong]) => strong);
-        const readableVerse = words.join(' ');
+        const readableVerse = fixVisibleVerse(
+            words.join(' '),
+            lastAddedBookName,
+            chapterHebrewNumber,
+            verseHebrewNumber
+        );
         const searchableVerse =
             ' ' +    // Spaces at beginning and end, to simplify searching for whole words
             wordsWithStrongNumbers.map(([word, strongNumber]) =>
@@ -706,7 +713,7 @@ function addChapterData(...chapterData) {
         verseElement.dataset.index = String(allVerses.length);
         verseElement.dataset.searchable = searchableVerse; // TODO: remove if turns out to be slow
         resetVerseElementBehaviour(verseElement);
-        verseElement.appendChild(document.createTextNode(fixVisibleVerse(readableVerse, lastAddedBookName, chapterHebrewNumber, verseHebrewNumber)));
+        verseElement.appendChild(document.createTextNode(readableVerse));
         versesContainerElement.appendChild(verseElement);
 
         // Store the verse in allVerses.
