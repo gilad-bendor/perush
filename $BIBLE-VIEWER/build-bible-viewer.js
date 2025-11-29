@@ -32,7 +32,7 @@ const WORD_TYPE_INDEX_VERB = 0;
  * For debug - load only books that match this regexp (null = load all).
  * @type {RegExp | null}
  */
-const FILTER_LOADED_BOOKS_REGEXP = /בראשית/; // TODO: null; //
+const FILTER_LOADED_BOOKS_REGEXP = null; // /בראשית/;
 
 /**
  * HTML builder - all items are joint to build the content of bible-viewer.html
