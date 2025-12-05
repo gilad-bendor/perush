@@ -88,7 +88,7 @@ class MarkdownEditor {
         const isRtl = this.isRtlFile(filePath);
 
         // Create custom markdown highlighting
-        const monospaceCss = { background: "rgba(128, 128, 128, .1)", fontSize: "0.9em", fontFamily: "sans-serif", WebkitTextStroke: "0.3px black" }
+        const monospaceCss = { background: "rgba(128, 128, 128, .1)", fontSize: "0.9em", fontFamily: "system-ui", WebkitTextStroke: "0.3px black" }
         const markdownHighlighting = syntaxHighlighting(HighlightStyle.define([
             { tag: tags.heading1, fontSize: "2em", fontWeight: "bold" },
             { tag: tags.heading2, fontSize: "1.5em", fontWeight: "bold" },
@@ -841,8 +841,11 @@ function _logByMethod(logMethod, args) {
     console[logMethod](...args);
 }
 function consoleLog() { _logByMethod('log', arguments); }
+// noinspection JSUnusedLocalSymbols
 function consoleInfo() { _logByMethod('info', arguments); }
 function consoleWarn() { _logByMethod('warn', arguments); }
 function consoleError() { _logByMethod('error', arguments); }
+// noinspection JSUnusedLocalSymbols
 function consoleGroup() { _logByMethod('group', arguments); }
+// noinspection JSUnusedLocalSymbols
 function consoleGroupCollapsed() { _logByMethod('groupCollapsed', arguments); }

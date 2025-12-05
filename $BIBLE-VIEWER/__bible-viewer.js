@@ -539,7 +539,7 @@ function copyVerseToClipboard(verseIndex, includeVerse, includeLocation) {
     const locationText = `${verseInfo.book} ${verseInfo.chapter}:${verseInfo.verse}`;
     let textToCopy;
     if (includeVerse && includeLocation) {
-        textToCopy = `${verseText} (${locationText})`
+        textToCopy = `\`${verseText}\` (${locationText})`
     } else if (includeVerse) {
         textToCopy = verseText;
     } else {
