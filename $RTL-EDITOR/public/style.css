@@ -193,6 +193,11 @@ body {
     pointer-events: none;
 }
 
+/* Patch - something went wrong on CodeMirror 5.65.20 */
+.cm-cursorLayer,.cm-selectionLayer {
+    transform: translateX(-0.5em);
+}
+
 /* Markdown "---" horizontal rule styling */
 .cm-horizontal-rule {
     position: relative;
