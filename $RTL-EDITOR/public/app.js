@@ -171,39 +171,39 @@ class MarkdownEditor {
                 scroll: () => {
                     this.saveScrollPosition(filePath);
                 },
-                ...(isRtl ? {
-                    // Fix RTL cursor positioning: when clicking to the left of line end,
-                    //  CodeMirror positions cursor one char to the right.
-                    mouseup: (event, view) => {
-                        // Only handle single clicks that didn't create a selection (no drag or double-click)
-                        const selection = view.state.selection.main;
-                        if (event.detail !== 1 || selection.anchor !== selection.head) {
-                            return false;
-                        }
-                        const pos = view.posAtCoords({ x: event.clientX, y: event.clientY });
-                        if (pos !== null) {
-                            const line = view.state.doc.lineAt(pos);
-
-                            // If clicked at end of line, ensure cursor goes to actual end
-                            let charIndex;
-                            for (charIndex = line.from; charIndex < line.to; charIndex++) {
-                                const charCoords = view.coordsAtPos(charIndex);
-                                if (charCoords) {
-                                    if (event.clientX >= charCoords.left) {
-                                        charIndex--;
-                                        break;
-                                    }
-                                }
-                            }
-                            view.dispatch({
-                                selection: { anchor: charIndex, head: charIndex },
-                                scrollIntoView: true
-                            });
-                            return true;
-                        }
-                        return false;
-                    }
-                } : {})
+                // ...(isRtl ? {
+                //     // Fix RTL cursor positioning: when clicking to the left of line end,
+                //     //  CodeMirror positions cursor one char to the right.
+                //     mouseup: (event, view) => {
+                //         // Only handle single clicks that didn't create a selection (no drag or double-click)
+                //         const selection = view.state.selection.main;
+                //         if (event.detail !== 1 || selection.anchor !== selection.head) {
+                //             return false;
+                //         }
+                //         const pos = view.posAtCoords({ x: event.clientX, y: event.clientY });
+                //         if (pos !== null) {
+                //             const line = view.state.doc.lineAt(pos);
+                //
+                //             // If clicked at end of line, ensure cursor goes to actual end
+                //             let charIndex;
+                //             for (charIndex = line.from; charIndex < line.to; charIndex++) {
+                //                 const charCoords = view.coordsAtPos(charIndex);
+                //                 if (charCoords) {
+                //                     if (event.clientX >= charCoords.left) {
+                //                         charIndex--;
+                //                         break;
+                //                     }
+                //                 }
+                //             }
+                //             view.dispatch({
+                //                 selection: { anchor: charIndex, head: charIndex },
+                //                 scrollIntoView: true
+                //             });
+                //             return true;
+                //         }
+                //         return false;
+                //     }
+                // } : {})
             }),
             EditorView.lineWrapping,
             EditorView.theme({
