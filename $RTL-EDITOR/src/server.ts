@@ -7,6 +7,13 @@ const MARKDOWN_DIR = "..";
 
 const exclusions = new Set(["$RTL-EDITOR", "scripts", ".idea", ".git", ".DS_Store"]);
 
+export type FileData = {
+    name: string;
+    type: "directory" | "file";
+    path: string;
+    children: FileData[];
+};
+
 async function ensureMarkdownDir() {
     try {
         await stat(MARKDOWN_DIR);
@@ -15,7 +22,7 @@ async function ensureMarkdownDir() {
     }
 }
 
-async function getMarkdownFiles(dir: string, basePath = ""): Promise<any[]> {
+async function getMarkdownFiles(dir: string, basePath = ""): Promise<FileData[]> {
     try {
         const entries = await readdir(dir, { withFileTypes: true });
         const files: any[] = [];

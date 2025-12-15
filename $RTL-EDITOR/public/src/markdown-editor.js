@@ -1,16 +1,19 @@
+import { RegExpCursor, SearchQuery } from "https://esm.sh/@codemirror/search"
 import { EditorView, basicSetup } from 'https://esm.sh/codemirror';
 import { keymap, ViewPlugin, Decoration } from 'https://esm.sh/@codemirror/view';
 import { markdown } from 'https://esm.sh/@codemirror/lang-markdown';
 import { Compartment, RangeSetBuilder, Prec } from 'https://esm.sh/@codemirror/state';
 import { indentWithTab } from 'https://esm.sh/@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle } from 'https://esm.sh/@codemirror/language';
-import { RegExpCursor, SearchQuery } from "https://esm.sh/@codemirror/search"
 import { tags } from 'https://esm.sh/@lezer/highlight';
 
-// Interval to check for file updates from server (in milliseconds).
-const UPDATE_FILE_FROM_SERVER_INTERVAL_MS = 1000;
+// noinspection ES6UnusedImports
+import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, consoleGroupCollapsed, consoleGroupEnd } from './logs.js';
+import { TabData } from "./tab-data.js";
+/** @typedef {import('../../src/server.ts').FileData} FileData */
 
-class MarkdownEditor {
+
+export class MarkdownEditor {
     constructor() {
         this.tabs = new Map();
         this.activeTab = null;
@@ -34,11 +37,12 @@ class MarkdownEditor {
     }
 
     initSplitter() {
-        const splitter = document.getElementById('splitter');
-        const sidebar = document.querySelector('.sidebar');
+        const splitter = /** @type {HTMLElement} */ (document.getElementById('splitter'));
+        const sidebar = /** @type {HTMLElement} */ (document.querySelector('.sidebar'));
         let isDragging = false;
         let startX = 0;
         let startWidth = 0;
+
 
         splitter.addEventListener('mousedown', (e) => {
             isDragging = true;
@@ -72,20 +76,25 @@ class MarkdownEditor {
     }
 
     saveSidebarWidth() {
-        const sidebar = document.querySelector('.sidebar');
+        const sidebar = /** @type {HTMLElement} */ (document.querySelector('.sidebar'));
         const ratio = sidebar.offsetWidth / window.innerWidth;
         localStorage.setItem('markdownEditor.sidebarRatio', String(ratio));
     }
 
     restoreSidebarWidth() {
-        const savedRatio = localStorage.getItem('markdownEditor.sidebarRatio') || 0.25;
-        const sidebar = document.querySelector('.sidebar');
+        const savedRatio = Number(localStorage.getItem('markdownEditor.sidebarRatio') || 0.25);
+        const sidebar = /** @type {HTMLElement} */ (document.querySelector('.sidebar'));
         const width = Math.max(150, Math.min(savedRatio * window.innerWidth, window.innerWidth - 300));
         sidebar.style.width = `${width}px`;
     }
 
-    createEditorView(filePath, fileName, initialContent) {
-        const isRtl = this.isRtlFile(filePath);
+    /**
+     * @param {TabData} tabData
+     * @param {string} initialContent
+     * @returns {EditorView}
+     */
+    createEditorView(tabData, initialContent) {
+        const isRtl = this.isRtlFile(tabData.filePath);
 
         // Create custom markdown highlighting
         const monospaceCss = { background: "rgba(128, 128, 128, .1)", fontSize: "0.9em", fontFamily: "system-ui", WebkitTextStroke: "0.3px black" }
@@ -126,6 +135,7 @@ class MarkdownEditor {
                 {
                     key: ';',
                     run: (view) => {
+                        // @ts-ignore
                         if (event.code !== 'Backquote' || event.keyCode !== 186) {
                             return false;
                         }
@@ -137,6 +147,7 @@ class MarkdownEditor {
                 {
                     key: '\u05bf',
                     run: (view) => {
+                        // @ts-ignore
                         if (event.code !== 'Backslash' || event.keyCode !== 220) {
                             return false;
                         }
@@ -158,18 +169,18 @@ class MarkdownEditor {
             this.directionCompartment.of(EditorView.contentAttributes.of({ dir: isRtl ? 'rtl' : 'ltr' })),
             EditorView.updateListener.of((update) => {
                 if (update.docChanged) {
-                    this.tabs.get(filePath).isDirty = true;
-                    this.updateTabTitle(filePath);
-                    this.scheduleAutosave(filePath);
+                    tabData.isDirty = true;
+                    tabData.updateTitle();
+                    tabData.scheduleAutosave();
                 }
                 // Track selection/cursor changes
                 if (update.selectionSet) {
-                    this.saveSelectionState(filePath);
+                    tabData.saveSelectionState();
                 }
             }),
             EditorView.domEventHandlers({
                 scroll: () => {
-                    this.saveScrollPosition(filePath);
+                    tabData.saveScrollPosition();
                 },
                 // ...(isRtl ? {
                 //     // Fix RTL cursor positioning: when clicking to the left of line end,
@@ -224,12 +235,12 @@ class MarkdownEditor {
         return new EditorView({
             doc: initialContent,
             extensions,
-            parent: document.querySelector('.editor-pane')
+            parent: /** @type {Element} */ (document.querySelector('.editor-pane'))
         });
     }
 
     async loadFilesTree() {
-        const fileTree = document.getElementById('file-tree');
+        const fileTree = /** @type {HTMLElement} */ (document.getElementById('file-tree'));
         fileTree.innerHTML = 'Loading files...';
 
         try {
@@ -242,6 +253,12 @@ class MarkdownEditor {
         }
     }
 
+    /**
+     * @param {FileData[]} files
+     * @param {HTMLElement} container
+     * @param {number} level
+     * @param {string} parentPath
+     */
     renderFileTree(files, container, level = 0, parentPath = '') {
         container.innerHTML = '';
 
@@ -260,10 +277,10 @@ class MarkdownEditor {
                 }
             } else {
                 fileItem.addEventListener('click', () => {
-                    const children = fileItem.nextElementSibling;
-                    if (children) {
-                        const isExpanded = children.style.display !== 'none';
-                        children.style.display = isExpanded ? 'none' : 'block';
+                    const childrenHolderElement = /** @type {HTMLElement | null} */ (fileItem.nextElementSibling);
+                    if (childrenHolderElement) {
+                        const isExpanded = childrenHolderElement.style.display !== 'none';
+                        childrenHolderElement.style.display = isExpanded ? 'none' : 'block';
 
                         if (isExpanded) {
                             this.expandedFolders.delete(currentPath);
@@ -291,6 +308,10 @@ class MarkdownEditor {
         });
     }
 
+    /**
+     * @param {string} filePath
+     * @returns {Promise<string>}
+     */
     async loadFileFromServer(filePath) {
         const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`);
         const data = await response.json();
@@ -300,42 +321,11 @@ class MarkdownEditor {
         return data.content;
     }
 
-    async updateFileFromServer(filePath) {
-        const tabData = this.tabs.get(filePath);
-        // Load file content from server.
-        if (!tabData || tabData.autosaveTimeoutId) {
-            return;
-        }
-        const contentOnServer = await this.loadFileFromServer(filePath);
-        if (tabData.autosaveTimeoutId) {
-            return;
-        }
-
-        // If content has changed on server, prompt user to reload or keep local changes.
-        const currentContent = tabData.editorView.state.doc.toString();
-        if (currentContent !== contentOnServer) {
-            consoleWarn(`File ${JSON.stringify(filePath)} has changed on server:`, {uiContent: currentContent, contentOnServer});
-            alert(`The file\n    ${filePath}\n has changed on the server: updating.`);
-
-            // Remember original scroll position and selection.
-            const editorView = tabData.editorView;
-            const originalScrollTop = editorView.scrollDOM.scrollTop;
-            const originalSelection = editorView.state.selection;
-            editorView.dispatch({
-                changes: { from: 0, to: editorView.state.doc.length, insert: contentOnServer }
-            });
-            editorView.scrollDOM.scrollTop = originalScrollTop;
-            try {
-                editorView.dispatch({selection: originalSelection});
-            } catch (error) {
-                // Probably "RangeError: Selection points outside of document" - ignore.
-            }
-            tabData.contentAtServer = contentOnServer;
-            tabData.isDirty = false;
-            this.updateTabTitle(filePath);
-        }
-    }
-
+    /**
+     * @param {string} filePath
+     * @param {string} fileName
+     * @param {boolean} setAsActive
+     */
     async openFile(filePath, fileName, setAsActive = true) {
         consoleLog(`openFile(filePath=${JSON.stringify(filePath)}, fileName=${JSON.stringify(fileName)}, setAsActive=${setAsActive})`);
         try {
@@ -344,12 +334,12 @@ class MarkdownEditor {
                 const tabElement = document.createElement('button');
                 tabElement.className = 'tab';
                 tabElement.innerHTML = `[title-will-be-set-shortly]<span class="tab-close">&times;</span>`;
-                tabElement.querySelector('.tab-close').addEventListener('click', (event) => {
+                /** @type {HTMLElement} */ (tabElement.querySelector('.tab-close')).addEventListener('click', (event) => {
                     event.stopPropagation();
                     this.closeTab(filePath).catch(consoleError);
                 });
                 tabElement.addEventListener('click', () => this.switchToTab(filePath).catch(consoleError));
-                document.getElementById('tabs').appendChild(tabElement);
+                /** @type {HTMLElement} */ (document.getElementById('tabs')).appendChild(tabElement);
 
                 let content;
                 try {
@@ -361,28 +351,23 @@ class MarkdownEditor {
                     return;
                 }
 
-                // Build the editor from CodeMirror
-                const editorView = this.createEditorView(filePath, fileName, content);
-
                 // Build a <div> wrapper for the editor to allow easier styling.
                 const editorWrapper = document.createElement('div');
                 editorWrapper.className = 'editor-wrapper' + (this.isRtlFile(filePath) ? ' rtl' : '');
-                editorWrapper.appendChild(editorView.dom);
-                document.querySelector('.editor-pane').appendChild(editorWrapper);
+                /** @type {HTMLElement} */ (document.querySelector('.editor-pane')).appendChild(editorWrapper);
 
-                this.tabs.set(filePath, {
-                    filePath,
-                    fileName,
-                    contentAtServer: content,
-                    isDirty: false,
-                    editorView,
-                    editorWrapper,
-                    tabElement,
-                    abortAutoScrolling: false,
-                    updateFileFromServerIntervalId: null,
-                    autosaveTimeoutId: null,
-                });
-                this.updateTabTitle(filePath);
+                // Create TabData instance
+                const tabData = new TabData(this, filePath, fileName, content, null, editorWrapper, tabElement);
+
+                // Build the editor from CodeMirror (needs tabData for event handlers)
+                /** @type {EditorView} */
+                const editorView = this.createEditorView(tabData, content);
+                tabData.editorView = editorView;
+
+                editorWrapper.appendChild(editorView.dom);
+
+                this.tabs.set(filePath, tabData);
+                tabData.updateTitle();
             }
 
             if (setAsActive) {
@@ -390,10 +375,13 @@ class MarkdownEditor {
                 this.saveSession();
             }
         } catch (error) {
-            consoleError(`Error opening file: ${error.message}`);
+            consoleError(`Error opening file: ${/** @type {Error} */ (error).message}`);
         }
     }
 
+    /**
+     * @param {string} filePath
+     */
     async switchToTab(filePath) {
         consoleLog(`switchToTab(${JSON.stringify(filePath)})`);
         const tabData = this.tabs.get(filePath);
@@ -405,40 +393,19 @@ class MarkdownEditor {
         // Un-activate the old tab and editor.
         const oldTabData = this.tabs.get(this.activeTab);
         if (oldTabData) {
-            oldTabData.tabElement.classList.remove('active');
-            oldTabData.editorWrapper.classList.remove('active');
-            this.fileTreeElements.get(oldTabData.filePath)?.classList.remove('active');
-            clearInterval(oldTabData.updateFileFromServerIntervalId);
+            oldTabData.deactivate();
         }
 
         // Activate the new tab and editor.
-        tabData.tabElement.classList.add('active');
-        tabData.editorWrapper.classList.add('active');
-        const fileTreeElement = this.fileTreeElements.get(tabData.filePath);
-        fileTreeElement?.classList.add('active');
-        fileTreeElement?.scrollIntoViewIfNeeded();
-
-        tabData.editorView.focus();
-
-        // It seems that in Chrome, when CodeMirror is focused, it may auto-scroll to the cursor
-        tabData.abortAutoScrolling = true;
-        setTimeout(() => tabData.abortAutoScrolling = false, 100);
-
-        if (!tabData.editorWrapper._wasEverVisible_) {
-            tabData.editorWrapper._wasEverVisible_ = true;
-            this.restoreTabState(filePath);
-        }
-
-        // Periodically check for file updates from server.
-        tabData.updateFileFromServerIntervalId = setInterval(
-            () => this.updateFileFromServer(filePath).catch(consoleError),
-            UPDATE_FILE_FROM_SERVER_INTERVAL_MS
-        );
+        tabData.activate();
 
         this.activeTab = filePath;
         this.saveSession();
     }
 
+    /**
+     * @param {string} filePath
+     */
     async closeTab(filePath) {
         const tabData = this.tabs.get(filePath);
 
@@ -461,74 +428,13 @@ class MarkdownEditor {
         }
 
         // Cleanup DOM.
-        tabData.tabElement.remove();
-        tabData.editorView.destroy();
-        tabData.editorWrapper.remove();
-        this.fileTreeElements.get(tabData.filePath)?.classList.remove('active');
+        if (tabData) {
+            tabData.destroy();
+        }
 
         this.saveSession();
     }
 
-    updateTabTitle(filePath) {
-        const tabData = this.tabs.get(filePath);
-        if (tabData) {
-            tabData.tabElement.firstChild.data = tabData.isDirty ? `${tabData.fileName} •` : tabData.fileName;
-        }
-    }
-
-    scheduleAutosave(filePath) {
-        const tabData = this.tabs.get(filePath);
-        clearTimeout(tabData.autosaveTimeoutId);
-        tabData.autosaveTimeoutId = setTimeout(async () => {
-            if (!tabData.isDirty) {
-                tabData.autosaveTimeoutId = null;
-                return;
-            }
-            tabData.autosaveTimeoutId = '===SAVING==='; // not setting to null yet, to disable updateFileFromServer()
-            try {
-                await this.autosave(filePath).catch(consoleError);
-            } catch (error) {
-                consoleError('Autosave failed:', error);
-            }
-            tabData.autosaveTimeoutId = null;
-        }, 1000);
-    }
-
-    async autosave(filePath) {
-        const tabData = this.tabs.get(filePath);
-        if (!tabData || !tabData.isDirty) {
-            return;
-        }
-
-        try {
-            consoleLog(`Auto saving ${filePath}`);
-
-            // Just before auto-saving, make sure we have the latest version from server.
-            await this.updateFileFromServer(filePath);
-
-            const currentContent = tabData.editorView.state.doc.toString();
-            const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ content: currentContent })
-            });
-
-            const result = await response.json();
-
-            if (!response.ok) {
-                throw new Error(result.error || 'Failed to autosave file');
-            }
-
-            tabData.isDirty = false;
-            tabData.contentAtServer = currentContent;
-            this.updateTabTitle(filePath);
-
-        } catch (error) {
-            consoleError('Autosave failed:', error);
-        }
-    }
 
     saveSession() {
         const sessionData = {
@@ -559,86 +465,30 @@ class MarkdownEditor {
         }
     }
 
-    saveScrollPosition(filePath) {
-        const tabData = this.tabs.get(filePath);
-        const tabState = this.tabStates.get(filePath) ?? {};
-        if (tabData.abortAutoScrolling) {
-            // consoleLog(`    (ignoring scroll event for ${JSON.stringify(filePath)} with scrollTop=${tabData.editorView.scrollDOM.scrollTop})`);
-            tabData.editorView.scrollDOM.scrollTop = tabState.scrollTop ?? 0;
-            return;
-        }
-        // consoleLog(`Saving scroll position for ${JSON.stringify(filePath)}: `, tabData.editorView.scrollDOM.scrollTop);
-        this.tabStates.set(filePath, {...tabState, scrollTop: tabData.editorView.scrollDOM.scrollTop });
-        this.saveSession();
-    }
-
-    saveSelectionState(filePath) {
-        const tabData = this.tabs.get(filePath);
-        if (!tabData) return;
-
-        const tabState = this.tabStates.get(filePath) ?? {};
-        const selection = tabData.editorView.state.selection.main;
-
-        // Save selection as serializable object with anchor and head positions
-        this.tabStates.set(filePath, {
-            ...tabState,
-            selection: {
-                anchor: selection.anchor,
-                head: selection.head
-            }
-        });
-        this.saveSession();
-    }
-
-    restoreTabState(filePath) {
-        const tabState = this.tabStates.get(filePath);
-        if (!tabState) {
-            return;
-        }
-        const editorView = this.tabs.get(filePath).editorView;
-        consoleLog(`Restoring tab state of ${JSON.stringify(filePath)}: `, tabState);
-
-        // Restore scroll position.
-        editorView.scrollDOM.scrollTop = tabState.scrollTop;
-        if (editorView.scrollDOM.scrollTop !== tabState.scrollTop) {
-            consoleWarn(`Failed to restore scrollTop of ${JSON.stringify(filePath)} to ${tabState.scrollTop}, got ${editorView.scrollDOM.scrollTop} instead.`);
-        }
-
-        // Restore text selection/cursor position.
-        if (tabState.selection) {
-            const { anchor, head } = tabState.selection;
-            const docLength = editorView.state.doc.length;
-
-            // Ensure positions are within document bounds
-            const validAnchor = Math.min(anchor, docLength);
-            const validHead = Math.min(head, docLength);
-
-            editorView.dispatch({
-                selection: { anchor: validAnchor, head: validHead }
-            });
-        }
-    }
-
+    /**
+     * @param {string} filePath
+     * @returns {boolean}
+     */
     isRtlFile(filePath) {
         return filePath.endsWith('.rtl.md') || filePath === 'CLAUDE.md';
     }
 }
 
 // Plugin to add class to list lines for hanging indent and multi-level support
+// noinspection JSUnusedGlobalSymbols
 const listLinePlugin = ViewPlugin.fromClass(
     class {
-        constructor(view) {
+        constructor(/** @type {EditorView} */ view) {
             this.decorations = this.buildDecorations(view);
         }
 
-        // noinspection JSUnusedGlobalSymbols
-        update(update) {
+        update(/** @type {{ docChanged: boolean, viewportChanged: boolean, view: EditorView}} */ update) {
             if (update.docChanged || update.viewportChanged) {
                 this.decorations = this.buildDecorations(update.view);
             }
         }
 
-        buildDecorations(view) {
+        buildDecorations(/** @type {EditorView} */ view) {
             const builder = new RangeSetBuilder();
 
             // Suppose these Markdown lines:
@@ -650,7 +500,7 @@ const listLinePlugin = ViewPlugin.fromClass(
             // - Item 2                          --> listIndentationsStack=[2]   (no indentation, back to Item 2)
             // Normal text line                  --> listIndentationsStack=[]    (no indentation, not a list)
             //
-            const listIndentationsStack = [];
+            /** @type {number[]} */ const listIndentationsStack = [];
 
             // Trace HTML tags stack: the tags MUST open and close at the start of lines (allowing for indentation).
             // Suppose these HTML lines:
@@ -710,7 +560,7 @@ const listLinePlugin = ViewPlugin.fromClass(
                 if (trimmedText) {
                     // Clean up the stack based on current indentation.
                     const indentation = lineText.length - trimmedText.length;
-                    while (listIndentationsStack.length > 0 && indentation < listIndentationsStack.at(-1)) {
+                    while (listIndentationsStack.length > 0 && indentation < /** @type {number} */ (listIndentationsStack.at(-1))) {
                         listIndentationsStack.pop();
                     }
 
@@ -730,7 +580,7 @@ const listLinePlugin = ViewPlugin.fromClass(
                         builder.add(line.from, line.from, decoration);
 
                         // Apply monospace font to the first listIndentationsStack.at(-1) characters of the line
-                        const indentChars = listIndentationsStack.at(-1);
+                        const indentChars = /** @type {number} */ (listIndentationsStack.at(-1));
                         if (indentChars > 0 && indentChars <= lineText.length) {
                             const monospaceMark = Decoration.mark({
                                 class: `cm-list-line cm-list-indent-monospace${lineClass ? ` ${lineClass}` : ''}`
@@ -772,30 +622,34 @@ const listLinePlugin = ViewPlugin.fromClass(
         }
     },
     {
-        decorations: v => v.decorations
+        // @ts-ignore
+        decorations: (v) => v.decorations
     },
 );
+
 
 // HORRIBLE PATCH to CodeMirror to ignore Hebrew Nikud/Punctuation on search
 //  (not including RegExp search).
 (() => {
     // When searching - ALWAYS use RegExpQuery - and never use StringQuery,
     //  so our override of RegExpCursor.prototype.next is always used.
-    const originalSearchCreate = SearchQuery.prototype.create;
-    SearchQuery.prototype.create = function () {
+    const originalSearchCreate = /** @type {any} */ (SearchQuery.prototype).create;
+    /** @type {any} */ (SearchQuery.prototype).create = /** @this {{regexp: boolean | RegExp | undefined}} */ function () {
         lastSearchIsRegExp = this.regexp;
         this.regexp = true;
         const query = originalSearchCreate.apply(this, arguments); // this.regexp ? new RegExpQuery(this) : new StringQuery(this)
         this.regexp = lastSearchIsRegExp;
         return query;
-    }
-    let lastSearchIsRegExp;
+    };
+    /** @type {boolean | RegExp | undefined} */ let lastSearchIsRegExp;
 
     // When doing a non-RegExp search, we override to make RegExp search;
     // HOWEVER, in that case, we manipulate the RegExp instance to ignore Hebrew Nikud/Punctuation
     const originalRegExpCursorNext = RegExpCursor.prototype.next;
-    RegExpCursor.prototype.next = function () {
+    RegExpCursor.prototype.next = /** @this {{re: RegExp}} */ function () {
+        // @ts-ignore
         if (!this._ALREADY_PATCHED_RE_) {
+            // @ts-ignore
             this._ALREADY_PATCHED_RE_ = true;
             if (!lastSearchIsRegExp) {
                 const patchedRegExpSource = this.re.source
@@ -814,38 +668,9 @@ const listLinePlugin = ViewPlugin.fromClass(
                 consoleWarn(`NOTE! Currently, RegExp search doesn't ignore Hebrew Nikud/Punctuation`)
             }
         }
+        // @ts-ignore
         return originalRegExpCursorNext.apply(this, arguments);
     }
 
     const searchCharactersToOmit = '[\\u05b0\\u05b1\\u05b2\\u05b3\\u05b4\\u05b5\\u05b6\\u05b7\\u05b8\\u05b9\\u05ba\\u05bb\\u05bc\\u05bd\\u05be\\u05bf\\u05c0\\u05c1\\u05c2\\u05c3\\u05c4\\u05c5\\u05c6\\u05c7\\u0591\\u0592\\u0593\\u0594\\u0595\\u0596\\u0597\\u0598\\u0599\\u059a\\u059b\\u059c\\u059d\\u059e\\u059f\\u05a0\\u05a1\\u05a2\\u05a3\\u05a4\\u05a5\\u05a6\\u05a7\\u05a8\\u05a9\\u05aa\\u05ab\\u05ac\\u05ad\\u05ae\\u05af\\u05ef\\u05f0\\u05f1\\u05f2\\u05f3\\u05f4\\ufb1d\\ufb1e\\ufb1f\\ufb20\\ufb21\\ufb22\\ufb23\\ufb24\\ufb25\\ufb26\\ufb27\\ufb28\\ufb29\\ufb2c\\ufb2d\\ufb2e\\ufb2f\\ufb30\\ufb31\\ufb32\\ufb33\\ufb34\\ufb35\\ufb36\\ufb38\\ufb39\\ufb3a\\ufb3b\\ufb3c\\ufb3e\\ufb40\\ufb41\\ufb43\\ufb44\\ufb46\\ufb47\\ufb48\\ufb49\\ufb4a\\ufb4b\\ufb4c\\ufb4d\\ufb4e\\ufb4f]*';
 })();
-
-// Initialize the MarkdownEditor.
-document.addEventListener('DOMContentLoaded', () => new MarkdownEditor());
-
-
-
-
-/**
- * Use log-methods that adds the log-time (as seconds since page's start-time)
- * @param {keyof Console} logMethod
- * @param {any[]} args
- */
-function _logByMethod(logMethod, args) {
-    const prefix = `${(Date.now() - performance.timeOrigin).toFixed(3).padStart(9)}: `;
-    if (typeof args[0] === 'string') {
-        args[0] = prefix + args[0];
-    } else {
-        args = [prefix, ...args];
-    }
-    console[logMethod](...args);
-}
-function consoleLog() { _logByMethod('log', arguments); }
-// noinspection JSUnusedLocalSymbols
-function consoleInfo() { _logByMethod('info', arguments); }
-function consoleWarn() { _logByMethod('warn', arguments); }
-function consoleError() { _logByMethod('error', arguments); }
-// noinspection JSUnusedLocalSymbols
-function consoleGroup() { _logByMethod('group', arguments); }
-// noinspection JSUnusedLocalSymbols
-function consoleGroupCollapsed() { _logByMethod('groupCollapsed', arguments); }

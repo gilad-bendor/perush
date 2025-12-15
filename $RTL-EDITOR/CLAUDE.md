@@ -8,6 +8,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - Tabbed Markdown editor in right panel  
 - RTL layout support for `*.rtl.md` files
 - Real-time file editing and saving
+- Full server/client sync: every change in the client (UI) is soon saved to the server,
+   and the client periodically polls changes from the server.
 
 ## Setup
 
