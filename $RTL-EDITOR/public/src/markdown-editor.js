@@ -113,6 +113,7 @@ export class MarkdownEditor {
         ]));
 
         // Custom key-handlers.
+        // Tye actual type is KeyBinding[] - see $RTL-EDITOR/node_modules/@codemirror/view/dist/index.d.ts
         /** @type {{key: string, run: (view: EditorView) => boolean }[]} */ const specialKeyHandling = [];
         if (isRtl) {
             specialKeyHandling.push(
@@ -121,11 +122,11 @@ export class MarkdownEditor {
                 {
                     key: "Home",
                     run: (view) => {
-                        const { state } = view;
+                        const {state} = view;
                         const selection = state.selection.main;
                         const line = state.doc.lineAt(selection.head);
                         view.dispatch({
-                            selection: { anchor: line.from, head: line.from },
+                            selection: {anchor: line.from, head: line.from},
                             scrollIntoView: true
                         });
                         return true;
@@ -155,6 +156,38 @@ export class MarkdownEditor {
                         return true;
                     }
                 },
+                // On macOS on Hebrew - Shift+A types "שׁ" (Shin).
+                // Normally, Alt+A should type "שׂ" (Sin) - but Chrome doesn't seem to receive this keyboard event.
+                // So as a patch -  Left-Shift+A types "שׁ" (Shin)
+                //           and - Right-Shift+A types "שׂ" (Sin).
+                {
+                    key: '\u05c1',
+                    run: (view) => {
+                        if (lastShiftIsRight) {
+                            // Very soon, the editor will apply this event and add "Shin" (regardless if we return true or false).
+                            // To avert that, we set a timer to replace that Shin with Sin.
+                            const offset = view.state.selection.main.from;
+                            setTimeout(() => {
+                                // First - make sure that the range [offset, offset+2] contains Shin
+                                const text = view.state.doc.sliceString(offset, offset + 2);
+                                if (text !== '\u05e9\u05c1') {  // Check if it's Shin (ש with right dot)
+                                    return;  // Not Shin, don't replace
+                                }
+
+                                // Delete the Shin character and insert Sin instead
+                                view.dispatch({
+                                    changes: {
+                                        from: offset,
+                                        to: offset + 2,  // Hebrew character + diacritic = 2 code units
+                                        insert: '\u05e9\u05c2'  // Sin (ש with left dot)
+                                    }
+                                });
+                            }, 10);
+                            return true;
+                        }
+                        return false;
+                    }
+                },
             );
         }
 
@@ -181,6 +214,14 @@ export class MarkdownEditor {
             EditorView.domEventHandlers({
                 scroll: () => {
                     tabData.saveScrollPosition();
+                },
+                keydown: (event) => {
+                    // Trace if the last-pressed Shift was left or right.
+                    if (event.code === 'ShiftRight') {
+                        lastShiftIsRight = true;
+                    } else if (event.code === 'ShiftLeft') {
+                        lastShiftIsRight = false;
+                    }
                 },
                 // ...(isRtl ? {
                 //     // Fix RTL cursor positioning: when clicking to the left of line end,
@@ -223,6 +264,7 @@ export class MarkdownEditor {
                 "&.cm-focused": { outline: "none" }
             }, { dark: false })
         ];
+        let lastShiftIsRight = false
 
         if (isRtl) {
             extensions.push(EditorView.theme({
