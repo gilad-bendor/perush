@@ -5,7 +5,7 @@ const MAX_CHAPTERS_IN_BOOK = 150;
 const CHAPTERS_IN_BIBLE = 929;
 const MAX_LENGTH_OF_RECENT_SEARCHES = 2000;
 const WORD_TYPE_INDEX_VERB = 0;
-const MAX_SEARCH_RESULTS = 1000;
+const MAX_SEARCH_RESULTS = 10000;
 
 const strongNumbersToData = [];
 const showLocations = getHashParameter('show-locations') !== undefined;
@@ -147,6 +147,9 @@ function domIsLoaded() {
 
     // Read the recent-searches from localStorage.recentSearches, and populate them into #recent-searches
     initRecentSearches(true);
+
+    // Special handling of copy-to-clipboard (Ctrl+C): add verses' locations.
+    captureCopyToClipboard();
 
     // Initialize the splitter between the left sidebar and the main area.
     (() => {
@@ -357,6 +360,110 @@ function setRecentSearchesVisibility(visible) {
     }
 }
 
+// Special handling of copy-to-clipboard (Ctrl+C): add verses' locations.
+function captureCopyToClipboard() {
+    document.addEventListener('copy', (event) => {
+        const clipboardBuilder = [];
+        let versesCount = 0;
+
+        /**
+         * This is called whenever a text-excerpt is encountered.
+         * If the text belongs to a new verse, or if a verse is done - add verse's location.
+         * @param {number|null} verseIndex
+         */
+        function encounteredVerseIndex(verseIndex) {
+            if (verseIndex !== lastVerseIndex) {
+                const verseInfo = allVerses[lastVerseIndex];
+                if (verseInfo) {
+                    // A verse is closed.
+                    clipboardBuilder.push('`', ' (', verseInfo.book, ' ', verseInfo.chapter, ':', verseInfo.verse, ')');
+                    versesCount++;
+                }
+                if (typeof verseIndex === 'number') {
+                    // A verse is opened.
+                    if (clipboardBuilder.length > 0) {
+                        clipboardBuilder.push('\n');
+                    }
+                    clipboardBuilder.push('`');
+                }
+                lastVerseIndex = verseIndex;
+            }
+        }
+        let lastVerseIndex = null;
+
+        // Scan all ranges of the selection.
+        const selection = window.getSelection();
+        for (let rangeIndex = 0; rangeIndex < selection.rangeCount; rangeIndex++) {
+            const selectionRange = selection.getRangeAt(rangeIndex);
+            const {startContainer, startOffset, endContainer, endOffset} = selectionRange;
+
+            /**
+             * Handle a text-node that overlaps with the selection.
+             * @param {Text} node
+             */
+            function handleNode(node) {
+                // Ignore hidden texts.
+                if (node.parentElement?.computedStyleMap().get('display')?.toString() === 'none') {
+                    return;
+                }
+
+                // If the text is inside a verse - then find the text's verse-index.
+                /** @type {HTMLElement} */ let verseElement;
+                for (verseElement = node.parentElement; verseElement && !verseElement.classList.contains('verse'); verseElement = verseElement.parentElement) {
+                }
+                const verseIndex = parseInt(verseElement?.dataset?.index) ?? null;
+                encounteredVerseIndex(verseIndex);
+
+                // Add the text-excerpt.
+                const selectedText = node.textContent.slice(
+                    (node === startContainer) ? startOffset : 0,
+                    (node === endContainer) ? endOffset : node.length
+                );
+                clipboardBuilder.push(selectedText);
+            }
+
+            // Walk the selection's text-nodes.
+            if ((startContainer === endContainer) && (startContainer.nodeType === document.TEXT_NODE)) {
+                handleNode(startContainer);
+            } else {
+                const walker = document.createTreeWalker(
+                    selectionRange.commonAncestorContainer,
+                    NodeFilter.SHOW_TEXT
+                );
+                let node;
+                while (node = walker.nextNode()) {
+                    // Skip nodes entirely before or after the range
+                    if (selectionRange.comparePoint(node, node.data.length) < 0) {
+                        // Node is before range.
+                        continue;
+                    }
+                    if (selectionRange.comparePoint(node, 0) > 0) {
+                        // Node is after range.
+                        break;
+                    }
+                    handleNode(node);
+                }
+            }
+        }
+
+        // Close any un-closed verse.
+        encounteredVerseIndex(null);
+
+        // Copy to clipboard.
+        if (clipboardBuilder.length > 0) {
+            const textToCopy = clipboardBuilder.join('');
+            copyTextToClipboard(
+                textToCopy,
+                (versesCount <= 1)
+                    ? `הטקסט שהועתק:\n`
+                    : `הועתקו ${versesCount} פסוקים\n`);
+        }
+
+        event.preventDefault();
+        return false;
+    });
+}
+
 /**
  * This function only lives in the browser:
  * Show a message in:
@@ -545,6 +652,15 @@ function copyVerseToClipboard(verseIndex, includeVerse, includeLocation) {
     } else {
         textToCopy = locationText;
     }
+    copyTextToClipboard(textToCopy, `הטקסט שהועתק:\n`);
+}
+
+/**
+ * Copy some text to the clipboard, and show a brief dialog.
+ * @param {string} textToCopy
+ * @param {string} dialogPrefix
+ */
+function copyTextToClipboard(textToCopy, dialogPrefix) {
     navigator.clipboard.writeText(textToCopy).catch(console.error);
 
     // Show a dialog for 1 second.
@@ -552,7 +668,9 @@ function copyVerseToClipboard(verseIndex, includeVerse, includeLocation) {
     const dialogElement = document.createElement('dialog');
     dialogElement.classList.add('copied-text-dialog');
     dialogElement.setAttribute('open', 'true');
-    dialogElement.innerText = `הטקסט שהועתק:\n${textToCopy}`;
+    dialogElement.innerText =
+        dialogPrefix +
+        textToCopy.replace(/^((?:.*\n){10})([\s\S]*)$/, '$1...');  // ellipsis if too many lines
     document.body.appendChild(dialogElement);
     setTimeout(() => dialogElement.remove(), 1000);
 }
@@ -734,6 +852,7 @@ function addChapterData(...chapterData) {
     bookNameToChaptersCount[lastAddedBookName] = lastAddedChapterIndexInBook;
 }
 
+// noinspection JSUnusedGlobalSymbols
 /**
  * This function only lives in the browser:
  * Called once all bible data has been added (addBookData() and addChapterData() are all called).
