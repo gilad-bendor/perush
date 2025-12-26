@@ -1,7 +1,18 @@
 // noinspection ES6UnusedImports
 import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, consoleGroupCollapsed, consoleGroupEnd } from './logs.js';
+import { MarkdownEditor } from './markdown-editor.js';
+import { EditorView } from 'https://esm.sh/codemirror';
 
 export class TabData {
+    /**
+     * @param {MarkdownEditor} markdownEditor
+     * @param {string} filePath
+     * @param {string} fileName
+     * @param {string} contentAtServer
+     * @param {EditorView} editorView
+     * @param {HTMLDivElement} editorWrapper
+     * @param {HTMLButtonElement} tabElement
+     */
     constructor(markdownEditor, filePath, fileName, contentAtServer, editorView, editorWrapper, tabElement) {
         this.markdownEditor = markdownEditor;
         this.filePath = filePath;
@@ -18,7 +29,9 @@ export class TabData {
     }
 
     updateTitle() {
-        this.tabElement.firstChild.data = this.isDirty ? `${this.fileName} •` : this.fileName;
+        /** @type {Text} */(this.tabElement.firstChild).data = this.isDirty
+                ? `${this.fileName} •`
+                : this.fileName;
     }
 
     scheduleAutosave() {
@@ -69,7 +82,7 @@ export class TabData {
             this.updateTitle();
 
         } catch (error) {
-            consoleError('Autosave failed:', error);
+            consoleError(`Autosave failed for ${JSON.stringify(this.filePath)}:`, error);
         }
     }
 
@@ -190,8 +203,8 @@ export class TabData {
         this.abortAutoScrolling = true;
         setTimeout(() => this.abortAutoScrolling = false, 100);
 
-        if (!this.editorWrapper._wasEverVisible_) {
-            this.editorWrapper._wasEverVisible_ = true;
+        if (!/** @type {any} */(this.editorWrapper)._wasEverVisible_) {
+            /** @type {any} */(this.editorWrapper)._wasEverVisible_ = true;
             this.restoreState();
         }
 

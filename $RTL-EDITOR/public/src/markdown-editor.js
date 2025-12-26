@@ -355,12 +355,16 @@ export class MarkdownEditor {
      * @returns {Promise<string>}
      */
     async loadFileFromServer(filePath) {
-        const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`);
-        const data = await response.json();
-        if (!response.ok) {
-            throw new Error(data.error || 'Failed to load file');
+        try {
+            const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`);
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.error || 'Unknown error');
+            }
+            return data.content;
+        } catch (error) {
+            throw new Error(`Failed to load file ${JSON.stringify(filePath)}: ${error}`);
         }
-        return data.content;
     }
 
     /**
@@ -399,7 +403,7 @@ export class MarkdownEditor {
                 /** @type {HTMLElement} */ (document.querySelector('.editor-pane')).appendChild(editorWrapper);
 
                 // Create TabData instance
-                const tabData = new TabData(this, filePath, fileName, content, null, editorWrapper, tabElement);
+                const tabData = new TabData(this, filePath, fileName, content, /** @type {any} */(null), editorWrapper, tabElement);
 
                 // Build the editor from CodeMirror (needs tabData for event handlers)
                 /** @type {EditorView} */

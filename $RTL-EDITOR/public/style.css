@@ -193,6 +193,12 @@ body {
     pointer-events: none;
 }
 
+.warn-sign {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 /* Markdown "---" horizontal rule styling */
 .cm-horizontal-rule {
     position: relative;
