@@ -4,7 +4,6 @@
 //                                                      |           |            |               |            |
 //                                                   updated     verified     updated         updated     unchanged
 
-
 /**************************************************************************************
 
 The folder './פירוש' has this structure:
@@ -80,9 +79,12 @@ const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
 
-// Book names in Hebrew
+// Ensure we're running from the repo's base directory
+process.chdir(path.join(__dirname, '..'));
+
 const BOOK_NAMES = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'];
 const TORA_BASE_DIR = './תנך-מנוקד/תורה';
+const PERUSH_BASE_DIR = './פירוש';
 
 const torahFiles = BOOK_NAMES.map(bookName => `${TORA_BASE_DIR}/${bookName}.rtl.md`);
 
@@ -179,7 +181,7 @@ async function task1() {
 
     for (const filePath of torahFiles) {
         try {
-            const content = await fs.readFile(filePath, 'utf8');
+            const content = /** @type {string} */(await fs.readFile(filePath, 'utf8'));
             const verseLines = extractVerseLines(filePath, content);
 
             for (const verse of verseLines) {
@@ -199,7 +201,7 @@ async function task1() {
 }
 
 /**
- * Get all RTL markdown files recursively
+ * Get all RTL Markdown files recursively
  * @param {string} dirPath
  * @returns {Promise<Array<{ folder: string, fileName: string, fullPath: string }>>}
  */
@@ -237,21 +239,12 @@ async function getAllRtlFiles(dirPath) {
 async function task2() {
     console.log('TASK 2: Processing commentary files...');
 
-    const rtlFiles = await getAllRtlFiles('./פירוש');
+    const rtlFiles = await getAllRtlFiles(PERUSH_BASE_DIR);
     console.log(`Found ${rtlFiles.length} RTL files`);
 
     for (const file of rtlFiles) {
         try {
-            let content = await fs.readFile(file.fullPath, 'utf8');
-
-            // Fix syntax errors in the Torah file.
-            const fixedContent = fixSyntaxErrors(content);
-            if (fixedContent !== content) {
-                await fs.writeFile(file.fullPath, fixedContent, 'utf8');
-                console.log(`  Fixed syntax errors in ${path.basename(file.fullPath)}`);
-                content = fixedContent;
-            }
-
+            let content = /** @type {string} */(await fs.readFile(file.fullPath, 'utf8'));
             const verseLines = extractVerseLines(file.fullPath, content);
 
             const fileInfo = {
@@ -296,21 +289,12 @@ async function task2() {
         for (const verse of orphanVersesMap.keys()) {
             console.log(`  > ${verse}`);
         }
-        throw new Error(`${orphanVersesMap.size} verses not found under './פירוש'`);
+        throw new Error(`${orphanVersesMap.size} verses not found under '${PERUSH_BASE_DIR}'`);
     }
 
     console.log('All verses found in commentary files!');
 }
 
-
-/**
- * Fix syntax errors in a Torah file.
- */
-function fixSyntaxErrors(originalContent) {
-    return originalContent
-        // In <ניתוח-לשוני> - use standard double-quotes instead of Hebrew double-quotes
-        .replace(/(<ניתוח-לשוני[^>]+ביטוי=)["'״](.*?)["'״]([^>]*>)/g, '$1"$2"$3');
-}
 
 /**
  * TASK 3: Sort and rename files
