@@ -34,7 +34,16 @@ async function getMarkdownFiles(dir: string, basePath = ""): Promise<FileData[]>
             const fullPath = join(dir, entry.name);
             const relativePath = join(basePath, entry.name);
 
-            if (entry.isDirectory()) {
+            // Use stat() instead of checking entry type to follow symbolic links
+            let stats;
+            try {
+                stats = await stat(fullPath);
+            } catch {
+                // Skip entries that can't be accessed
+                continue;
+            }
+
+            if (stats.isDirectory()) {
                 const children = await getMarkdownFiles(fullPath, relativePath);
                 files.push({
                     name: entry.name,
@@ -42,7 +51,7 @@ async function getMarkdownFiles(dir: string, basePath = ""): Promise<FileData[]>
                     path: relativePath,
                     children
                 });
-            } else if (entry.isFile() && extname(entry.name) === ".md") {
+            } else if (stats.isFile() && extname(entry.name) === ".md") {
                 files.push({
                     name: entry.name,
                     type: "file",

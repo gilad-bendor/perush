@@ -94,7 +94,7 @@ export class MarkdownEditor {
      * @returns {EditorView}
      */
     createEditorView(tabData, initialContent) {
-        const isRtl = this.isRtlFile(tabData.filePath);
+        const isRtl = this.isRtlFile(tabData.filePath, initialContent);
 
         // Create custom markdown highlighting
         const monospaceCss = { background: "rgba(128, 128, 128, .1)", fontSize: "0.9em", fontFamily: "system-ui", WebkitTextStroke: "0.3px black" }
@@ -399,7 +399,7 @@ export class MarkdownEditor {
 
                 // Build a <div> wrapper for the editor to allow easier styling.
                 const editorWrapper = document.createElement('div');
-                editorWrapper.className = 'editor-wrapper' + (this.isRtlFile(filePath) ? ' rtl' : '');
+                editorWrapper.className = 'editor-wrapper' + (this.isRtlFile(filePath, content) ? ' rtl' : '');
                 /** @type {HTMLElement} */ (document.querySelector('.editor-pane')).appendChild(editorWrapper);
 
                 // Create TabData instance
@@ -513,10 +513,32 @@ export class MarkdownEditor {
 
     /**
      * @param {string} filePath
+     * @param {string} [content]
      * @returns {boolean}
      */
-    isRtlFile(filePath) {
-        return filePath.endsWith('.rtl.md') || filePath === 'CLAUDE.md';
+    isRtlFile(filePath, content) {
+        // Check explicit RTL file extensions
+        if (filePath.endsWith('.rtl.md') || filePath === 'CLAUDE.md') {
+            return true;
+        }
+
+        // For .md files, check if first relevant line (line with a letter) contains Hebrew but not English
+        if (content && filePath.endsWith('.md')) {
+            const lines = content.split('\n');
+            for (const line of lines) {
+                const trimmed = line.trim();
+                if (trimmed) {
+                    // Check if contains Hebrew but not English
+                    const hasHebrew = /[\u0590-\u05FF]/.test(trimmed);
+                    const hasEnglish = /[a-zA-Z]/.test(trimmed);
+                    if (hasHebrew || hasEnglish) {
+                        return hasHebrew && !hasEnglish;
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 }
 
