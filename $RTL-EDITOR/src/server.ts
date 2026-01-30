@@ -45,12 +45,15 @@ async function getMarkdownFiles(dir: string, basePath = ""): Promise<FileData[]>
 
             if (stats.isDirectory()) {
                 const children = await getMarkdownFiles(fullPath, relativePath);
-                files.push({
-                    name: entry.name,
-                    type: "directory",
-                    path: relativePath,
-                    children
-                });
+                // Only include directories that have .md file descendants
+                if (children.length > 0) {
+                    files.push({
+                        name: entry.name,
+                        type: "directory",
+                        path: relativePath,
+                        children
+                    });
+                }
             } else if (stats.isFile() && extname(entry.name) === ".md") {
                 files.push({
                     name: entry.name,
