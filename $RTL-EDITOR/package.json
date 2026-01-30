@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Hebrew Markdown RTL Editor with file browser",
   "scripts": {
-    "dev": "bun run --watch ./src/* --watch ./public/* src/server.ts",
-    "start": "bun run src/server.ts",
+    "kill-server": "lsof -ti:4000 | xargs kill -9 2>/dev/null || true",
+    "dev": "bun run kill-server && bun run --watch ./src/* --watch ./public/* src/server.ts",
+    "start": "bun run kill-server && bun run src/server.ts",
     "test:browser": "bun run playwright-test.ts"
   },
   "devDependencies": {

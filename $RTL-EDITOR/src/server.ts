@@ -5,7 +5,7 @@ import { readdir, stat, readFile, writeFile, mkdir, rename, unlink } from "fs/pr
 const PORT = 4000;
 const MARKDOWN_DIR = "..";
 
-const exclusions = new Set(["$RTL-EDITOR", "scripts", ".idea", ".git", ".DS_Store"]);
+const exclusions = new Set(["scripts", ".idea", ".git", ".DS_Store"]);
 
 export type FileData = {
     name: string;

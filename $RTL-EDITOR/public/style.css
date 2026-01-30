@@ -174,6 +174,11 @@ body {
     padding: 16px;
 }
 
+/* RTL content - smaller right padding */
+.editor-wrapper.rtl .cm-content {
+    padding-right: 8px;
+}
+
 /* Red underline under search results (bolder underline under the *current* result) */
 .cm-searchMatch {
     border: 0 solid red;
@@ -217,7 +222,7 @@ body {
     font-size: 0.75em;
 }
 
-/* Multi-level list support - RTL (default, border-right for Hebrew) */
+/* Multi-level list support - RTL (border-right for Hebrew) */
 .editor-wrapper.rtl .cm-list-level-1 {
     text-indent: -1em;
     border-right: 1em solid transparent;
@@ -243,30 +248,30 @@ body {
     border-right: 6em solid transparent;
 }
 
-/* Multi-level list support - LTR (padding-left for English) */
+/* Multi-level list support - LTR (border-left for English) */
 .editor-wrapper:not(.rtl) .cm-list-level-1 {
     text-indent: -1em;
-    padding-left: 1em;
+    border-left: 1em solid transparent;
 }
 .editor-wrapper:not(.rtl) .cm-list-level-2 {
     text-indent: -2em;
-    padding-left: 2em;
+    border-left: 2em solid transparent;
 }
 .editor-wrapper:not(.rtl) .cm-list-level-3 {
     text-indent: -3em;
-    padding-left: 3em;
+    border-left: 3em solid transparent;
 }
 .editor-wrapper:not(.rtl) .cm-list-level-4 {
     text-indent: -4em;
-    padding-left: 4em;
+    border-left: 4em solid transparent;
 }
 .editor-wrapper:not(.rtl) .cm-list-level-5 {
     text-indent: -5em;
-    padding-left: 5em;
+    border-left: 5em solid transparent;
 }
 .editor-wrapper:not(.rtl) .cm-list-level-6 {
     text-indent: -6em;
-    padding-left: 6em;
+    border-left: 6em solid transparent;
 }
 
 /* Syntax highlighting for special HTML tags */
