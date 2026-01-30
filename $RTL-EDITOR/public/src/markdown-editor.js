@@ -1,11 +1,11 @@
-import { RegExpCursor, SearchQuery } from "https://esm.sh/@codemirror/search"
-import { EditorView, basicSetup } from 'https://esm.sh/codemirror';
-import { keymap, ViewPlugin, Decoration } from 'https://esm.sh/@codemirror/view';
-import { markdown } from 'https://esm.sh/@codemirror/lang-markdown';
-import { Compartment, RangeSetBuilder, Prec } from 'https://esm.sh/@codemirror/state';
-import { indentWithTab } from 'https://esm.sh/@codemirror/commands';
-import { syntaxHighlighting, HighlightStyle } from 'https://esm.sh/@codemirror/language';
-import { tags } from 'https://esm.sh/@lezer/highlight';
+import { RegExpCursor, SearchQuery } from "@codemirror/search"
+import { EditorView, basicSetup } from 'codemirror';
+import { keymap, ViewPlugin, Decoration } from '@codemirror/view';
+import { markdown } from '@codemirror/lang-markdown';
+import { Compartment, RangeSetBuilder, Prec } from '@codemirror/state';
+import { indentWithTab } from '@codemirror/commands';
+import { syntaxHighlighting, HighlightStyle } from '@codemirror/language';
+import { tags } from '@lezer/highlight';
 
 // noinspection ES6UnusedImports
 import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, consoleGroupCollapsed, consoleGroupEnd } from './logs.js';

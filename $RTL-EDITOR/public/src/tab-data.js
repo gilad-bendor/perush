@@ -1,7 +1,7 @@
 // noinspection ES6UnusedImports
 import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, consoleGroupCollapsed, consoleGroupEnd } from './logs.js';
 import { MarkdownEditor } from './markdown-editor.js';
-import { EditorView } from 'https://esm.sh/codemirror';
+import { EditorView } from 'codemirror';
 
 export class TabData {
     /**

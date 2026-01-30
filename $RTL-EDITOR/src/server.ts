@@ -94,6 +94,19 @@ serve({
             }
         }
 
+        // Serve node_modules for frontend imports
+        if (url.pathname.startsWith("/node_modules/")) {
+            const filePath = `.${url.pathname}`;
+            try {
+                const content = await file(filePath).arrayBuffer();
+                return new Response(content, {
+                    headers: { "Content-Type": "application/javascript" }
+                });
+            } catch {
+                return new Response("Not Found", { status: 404 });
+            }
+        }
+
         if (url.pathname === "/api/files") {
             await ensureMarkdownDir();
             const files = await getMarkdownFiles(MARKDOWN_DIR);
