@@ -5,20 +5,21 @@
     "": {
       "name": "hebrew-markdown-editor",
       "dependencies": {
-        "bun": "^1.1.30",
+        "bun": "^1.3.8",
       },
       "devDependencies": {
-        "@codemirror/commands": "^6.10.0",
+        "@codemirror/commands": "^6.10.1",
         "@codemirror/lang-markdown": "^6.5.0",
-        "@codemirror/language": "^6.11.3",
-        "@codemirror/search": "^6.5.11",
-        "@codemirror/state": "^6.5.2",
-        "@codemirror/view": "^6.39.4",
+        "@codemirror/language": "^6.12.1",
+        "@codemirror/search": "^6.6.0",
+        "@codemirror/state": "^6.5.4",
+        "@codemirror/view": "^6.39.11",
         "@lezer/highlight": "^1.2.3",
-        "@types/bun": "^1.2.22",
-        "@types/node": "^20.0.0",
+        "@types/bun": "^1.3.8",
+        "@types/node": "^20.19.30",
         "codemirror": "^6.0.2",
-        "typescript": "^5.0.0",
+        "playwright": "^1.58.0",
+        "typescript": "^5.9.3",
       },
     },
   },
@@ -94,6 +95,12 @@
     "codemirror": ["codemirror@6.0.2", "", { "dependencies": { "@codemirror/autocomplete": "^6.0.0", "@codemirror/commands": "^6.0.0", "@codemirror/language": "^6.0.0", "@codemirror/lint": "^6.0.0", "@codemirror/search": "^6.0.0", "@codemirror/state": "^6.0.0", "@codemirror/view": "^6.0.0" } }, "sha512-VhydHotNW5w1UGK0Qj96BwSk/Zqbp9WbnyK2W/eVMv4QyF41INRGpjUhFJY7/uDNuudSc33a/PKr4iDqRduvHw=="],
 
     "crelt": ["crelt@1.0.6", "", {}, "sha512-VQ2MBenTq1fWZUH9DJNGti7kKv6EeAuYr3cLwxUWhIu1baTaXh4Ib5W2CqHVqib4/MqbYGJqiL3Zb8GJZr3l4g=="],
+
+    "fsevents": ["fsevents@2.3.2", "", { "os": "darwin" }, "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="],
+
+    "playwright": ["playwright@1.58.0", "", { "dependencies": { "playwright-core": "1.58.0" }, "optionalDependencies": { "fsevents": "2.3.2" }, "bin": { "playwright": "cli.js" } }, "sha512-2SVA0sbPktiIY/MCOPX8e86ehA/e+tDNq+e5Y8qjKYti2Z/JG7xnronT/TXTIkKbYGWlCbuucZ6dziEgkoEjQQ=="],
+
+    "playwright-core": ["playwright-core@1.58.0", "", { "bin": { "playwright-core": "cli.js" } }, "sha512-aaoB1RWrdNi3//rOeKuMiS65UCcgOVljU46At6eFcOFPFHWtd2weHRRow6z/n+Lec0Lvu0k9ZPKJSjPugikirw=="],
 
     "style-mod": ["style-mod@4.1.3", "", {}, "sha512-i/n8VsZydrugj3Iuzll8+x/00GH2vnYsk1eomD8QiRrSAeW6ItbCQDtfXCeJHd0iwiNagqjQkvpvREEPtW3IoQ=="],
 
