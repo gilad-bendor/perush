@@ -184,9 +184,7 @@ body {
 
 }
 
-.editor-wrapper.rtl .cm-layer {
-    left: 0.5em !important; /* this seems to fix an RTL issue with the selection-range and the cursor positioning */
-}
+/* RTL cursor/selection positioning - removed the previous "left: 0.5em" fix as it was causing an offset issue */
 
 .loading {
     opacity: 0.5;
@@ -219,30 +217,56 @@ body {
     font-size: 0.75em;
 }
 
-/* Multi-level list support */
-.cm-list-level-1 {
+/* Multi-level list support - RTL (default, border-right for Hebrew) */
+.editor-wrapper.rtl .cm-list-level-1 {
     text-indent: -1em;
     border-right: 1em solid transparent;
 }
-.cm-list-level-2 {
+.editor-wrapper.rtl .cm-list-level-2 {
     text-indent: -2em;
     border-right: 2em solid transparent;
 }
-.cm-list-level-3 {
+.editor-wrapper.rtl .cm-list-level-3 {
     text-indent: -3em;
     border-right: 3em solid transparent;
 }
-.cm-list-level-4 {
+.editor-wrapper.rtl .cm-list-level-4 {
     text-indent: -4em;
     border-right: 4em solid transparent;
 }
-.cm-list-level-5 {
+.editor-wrapper.rtl .cm-list-level-5 {
     text-indent: -5em;
     border-right: 5em solid transparent;
 }
-.cm-list-level-6 {
+.editor-wrapper.rtl .cm-list-level-6 {
     text-indent: -6em;
     border-right: 6em solid transparent;
+}
+
+/* Multi-level list support - LTR (padding-left for English) */
+.editor-wrapper:not(.rtl) .cm-list-level-1 {
+    text-indent: -1em;
+    padding-left: 1em;
+}
+.editor-wrapper:not(.rtl) .cm-list-level-2 {
+    text-indent: -2em;
+    padding-left: 2em;
+}
+.editor-wrapper:not(.rtl) .cm-list-level-3 {
+    text-indent: -3em;
+    padding-left: 3em;
+}
+.editor-wrapper:not(.rtl) .cm-list-level-4 {
+    text-indent: -4em;
+    padding-left: 4em;
+}
+.editor-wrapper:not(.rtl) .cm-list-level-5 {
+    text-indent: -5em;
+    padding-left: 5em;
+}
+.editor-wrapper:not(.rtl) .cm-list-level-6 {
+    text-indent: -6em;
+    padding-left: 6em;
 }
 
 /* Syntax highlighting for special HTML tags */
