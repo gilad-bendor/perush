@@ -71,34 +71,10 @@ NOTES:
 `;
 
 import * as bible from './bible-utils.js';
-
-// ============================================================================
-// Constants
-// ============================================================================
-
-const ARAMAIC_SECTIONS = {
-    'דניאל': [{ startChapter: 1, startVerse: 3, endChapter: 6, endVerse: 27 }],
-    'עזרא': [
-        { startChapter: 3, startVerse: 7, endChapter: 5, endVerse: 17 },
-        { startChapter: 6, startVerse: 11, endChapter: 6, endVerse: 25 }
-    ],
-    'ירמיהו': [{ startChapter: 9, startVerse: 10, endChapter: 9, endVerse: 10 }],
-    'בראשית': [{ startChapter: 30, startVerse: 46, endChapter: 30, endVerse: 46 }],
-};
-
-const SECTION_NAMES = {
-    'תורה': ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'],
-    'נביאים': [
-        'יהושע', 'שופטים', 'שמואל-א', 'שמואל-ב', 'מלכים-א', 'מלכים-ב',
-        'ישעיהו', 'ירמיהו', 'יחזקאל',
-        'הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה',
-        'נחום', 'חבקוק', 'צפניה', 'חגי', 'זכריה', 'מלאכי'
-    ],
-    'כתובים': [
-        'דברי-הימים-א', 'דברי-הימים-ב', 'תהילים', 'איוב', 'משלי',
-        'רות', 'שיר-השירים', 'קהלת', 'איכה', 'אסתר', 'דניאל', 'עזרא', 'נחמיה'
-    ],
-};
+import {
+    SECTION_NAMES,
+    isAramaicVerse,
+} from './bible-utils.js';
 
 // Hebrew letter categories for morphological detection
 const LETTERS = {
@@ -145,21 +121,6 @@ const SUFFIX_PATTERNS = {
 // ============================================================================
 // Helpers
 // ============================================================================
-
-function isAramaicVerse(book, chapterIndex, verseIndex) {
-    const sections = ARAMAIC_SECTIONS[book];
-    if (!sections) return false;
-
-    for (const section of sections) {
-        if (chapterIndex > section.startChapter && chapterIndex < section.endChapter) return true;
-        if (chapterIndex === section.startChapter && chapterIndex === section.endChapter) {
-            return verseIndex >= section.startVerse && verseIndex <= section.endVerse;
-        }
-        if (chapterIndex === section.startChapter && verseIndex >= section.startVerse) return true;
-        if (chapterIndex === section.endChapter && verseIndex <= section.endVerse) return true;
-    }
-    return false;
-}
 
 function parseRange(rangeStr) {
     if (!rangeStr) return null;
@@ -476,7 +437,7 @@ function analyzeMorphology(query, options) {
         // It's a root search
         const root = query.slice(1, -1);
         const strongs = bible.findStrongNumbers(root);
-        strongNumbers = strongs.map(s => s.strong);
+        strongNumbers = strongs.map(s => s.strongNumber);
     } else {
         throw new Error(`Invalid query: ${query}. Use Strong's number (e.g., 8104) or root (e.g., <שמר>)`);
     }

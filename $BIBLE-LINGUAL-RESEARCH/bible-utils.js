@@ -787,6 +787,429 @@ function getWordTypes() {
 }
 
 // ============================================================================
+// Biblical Sections Constants
+// ============================================================================
+
+/** Torah books */
+const TORAH = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'];
+
+/** Early prophets */
+const NEVIIM_RISHONIM = ['יהושע', 'שופטים', 'שמואל-א', 'שמואל-ב', 'מלכים-א', 'מלכים-ב'];
+
+/** Later prophets */
+const NEVIIM_ACHARONIM = [
+    'ישעיהו', 'ירמיהו', 'יחזקאל',
+    'הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה',
+    'נחום', 'חבקוק', 'צפניה', 'חגי', 'זכריה', 'מלאכי'
+];
+
+/** All prophets */
+const NEVIIM = [...NEVIIM_RISHONIM, ...NEVIIM_ACHARONIM];
+
+/** Writings */
+const KETUVIM = [
+    'דברי-הימים-א', 'דברי-הימים-ב', 'תהילים', 'איוב', 'משלי',
+    'רות', 'שיר-השירים', 'קהלת', 'איכה', 'אסתר', 'דניאל', 'עזרא', 'נחמיה'
+];
+
+/** Section definitions with display names */
+const SECTIONS = [
+    { name: 'תורה', books: TORAH },
+    { name: 'נביאים ראשונים', books: NEVIIM_RISHONIM },
+    { name: 'נביאים אחרונים', books: NEVIIM_ACHARONIM },
+    { name: 'כתובים', books: KETUVIM },
+];
+
+/** Section name mapping (Hebrew names to book arrays) */
+const SECTION_NAMES = {
+    'תורה': TORAH,
+    'נביאים': NEVIIM,
+    'נביאים-ראשונים': NEVIIM_RISHONIM,
+    'נביאים-אחרונים': NEVIIM_ACHARONIM,
+    'כתובים': KETUVIM,
+};
+
+// ============================================================================
+// Aramaic Sections
+// ============================================================================
+
+/**
+ * Aramaic sections (verse ranges that are in Aramaic, not Hebrew)
+ * Format: { book: [{startChapter, startVerse, endChapter, endVerse}] }
+ * Note: chapters and verses are 0-indexed
+ */
+const ARAMAIC_SECTIONS = {
+    'דניאל': [
+        { startChapter: 1, startVerse: 3, endChapter: 6, endVerse: 27 } // Actually 2:4-7:28
+    ],
+    'עזרא': [
+        { startChapter: 3, startVerse: 7, endChapter: 5, endVerse: 17 }, // 4:8-6:18
+        { startChapter: 6, startVerse: 11, endChapter: 6, endVerse: 25 } // 7:12-26
+    ],
+    'ירמיהו': [
+        { startChapter: 9, startVerse: 10, endChapter: 9, endVerse: 10 } // 10:11 (single verse)
+    ],
+    'בראשית': [
+        { startChapter: 30, startVerse: 46, endChapter: 30, endVerse: 46 } // 31:47 (two words)
+    ],
+};
+
+/**
+ * Check if a verse is in an Aramaic section
+ * @param {string} book - Hebrew book name
+ * @param {number} chapterIndex - 0-indexed chapter
+ * @param {number} verseIndex - 0-indexed verse
+ * @returns {boolean}
+ */
+function isAramaicVerse(book, chapterIndex, verseIndex) {
+    const sections = ARAMAIC_SECTIONS[book];
+    if (!sections) return false;
+
+    for (const section of sections) {
+        if (chapterIndex > section.startChapter && chapterIndex < section.endChapter) {
+            return true;
+        }
+        if (chapterIndex === section.startChapter && chapterIndex === section.endChapter) {
+            return verseIndex >= section.startVerse && verseIndex <= section.endVerse;
+        }
+        if (chapterIndex === section.startChapter && verseIndex >= section.startVerse) {
+            return true;
+        }
+        if (chapterIndex === section.endChapter && verseIndex <= section.endVerse) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// ============================================================================
+// Word Type Aliases
+// ============================================================================
+
+/**
+ * Type name mappings (various forms -> canonical English)
+ */
+const TYPE_ALIASES = {
+    // English variations
+    'verb': 'Verb',
+    'noun': 'Noun',
+    'name': 'Name',
+    'adjective': 'Adjective',
+    'adverb': 'Adverb',
+    'pronoun': 'Pronoun',
+    'preposition': 'Preposition',
+    'interjection': 'Interjection',
+    'conjunction': 'Conjunction',
+    'derived-verb': 'Derived-Verb',
+    // Hebrew variations (without nikud)
+    'פועל': 'Verb',
+    'שם': 'Noun',
+    'שם עצם': 'Noun',
+    'שם פרטי': 'Name',
+    'שם תואר': 'Adjective',
+    'תואר הפועל': 'Adverb',
+    'שם גוף': 'Pronoun',
+    'מלת יחס': 'Preposition',
+    'מלת קריאה': 'Interjection',
+    'מלת חיבור': 'Conjunction',
+};
+
+/**
+ * Type display order for organized output
+ */
+const TYPE_ORDER = [
+    'Verb',
+    'Derived-Verb',
+    'Noun',
+    'Adjective',
+    'Adverb',
+    'Pronoun',
+    'Preposition',
+    'Conjunction',
+    'Interjection',
+    'Name',
+];
+
+// ============================================================================
+// Stopwords
+// ============================================================================
+
+/**
+ * Common function words (stopwords) to filter from co-occurrence results
+ */
+const STOPWORDS = new Set([
+    'את', 'אשר', 'על', 'אל', 'מן', 'עם', 'כי', 'לא', 'כל', 'גם',
+    'או', 'אם', 'הנה', 'זה', 'זאת', 'הוא', 'היא', 'הם', 'הן',
+    'אני', 'אנחנו', 'אתה', 'את', 'אתם', 'אתן', 'לו', 'לה', 'להם',
+    'בו', 'בה', 'בהם', 'לי', 'לך', 'לנו', 'לכם', 'ממנו', 'ממנה',
+    'עליו', 'עליה', 'עליהם', 'אליו', 'אליה', 'אליהם', 'אתו', 'אתה',
+    'כן', 'לפני', 'אחרי', 'תחת', 'עד', 'בין', 'למען', 'יען',
+    'פן', 'בלי', 'בלתי', 'אך', 'רק', 'מאד', 'עתה', 'אז', 'שם', 'פה',
+]);
+
+/**
+ * Stopwords as Strong's numbers - very common function words to weight lower
+ */
+const STOPWORD_STRONGS = new Set([
+    853,   // את - direct object marker
+    834,   // אשר - which, that
+    5921,  // על - on, upon
+    413,   // אל - to, toward
+    4480,  // מן - from
+    5973,  // עם - with
+    3588,  // כי - for, because
+    3808,  // לא - not
+    3605,  // כל - all
+    1571,  // גם - also
+]);
+
+/**
+ * Check if a word is a stopword (using normalized form)
+ * @param {string} word - Hebrew word
+ * @returns {boolean}
+ */
+function isStopword(word) {
+    const normalized = removeNikud(word);
+    return STOPWORDS.has(normalized);
+}
+
+// ============================================================================
+// Range Parsing
+// ============================================================================
+
+/**
+ * Parse a range string into a filter function
+ * @param {string} rangeStr - Range specification (e.g., "בראשית", "בראשית 1-11", "תורה")
+ * @returns {{books: Set<string>, chapterFilter: (book: string, chapter: number) => boolean} | null}
+ */
+function parseRange(rangeStr) {
+    if (!rangeStr) return null;
+
+    // Check if it's a section name
+    if (SECTION_NAMES[rangeStr]) {
+        return {
+            books: new Set(SECTION_NAMES[rangeStr]),
+            chapterFilter: () => true,
+        };
+    }
+
+    // Check if it's a book name (possibly with chapter range)
+    const parts = rangeStr.split(/\s+/);
+    const bookName = parts[0];
+
+    if (!hebrewBookNames.includes(bookName)) {
+        throw new Error(`Unknown book or section: ${bookName}`);
+    }
+
+    // Just book name, no chapter range
+    if (parts.length === 1) {
+        return {
+            books: new Set([bookName]),
+            chapterFilter: () => true,
+        };
+    }
+
+    // Book with chapter range
+    const chapterRange = parts.slice(1).join(' ');
+    const rangeMatch = chapterRange.match(/^(\d+)(?:-(\d+))?$/);
+
+    if (!rangeMatch) {
+        throw new Error(`Invalid chapter range: ${chapterRange}`);
+    }
+
+    const startChapter = parseInt(rangeMatch[1]) - 1; // Convert to 0-indexed
+    const endChapter = rangeMatch[2] ? parseInt(rangeMatch[2]) - 1 : startChapter;
+
+    return {
+        books: new Set([bookName]),
+        chapterFilter: (book, chapterIndex) => {
+            return book === bookName && chapterIndex >= startChapter && chapterIndex <= endChapter;
+        },
+    };
+}
+
+/**
+ * Get which section a book belongs to
+ * @param {string} book - Hebrew book name
+ * @returns {string} - Section name
+ */
+function getBookSection(book) {
+    for (const section of SECTIONS) {
+        if (section.books.includes(book)) return section.name;
+    }
+    return 'unknown';
+}
+
+// ============================================================================
+// Hebrew Number Utilities
+// ============================================================================
+
+/**
+ * Hebrew letter values for number parsing
+ */
+const hebrewLetterValues = {
+    'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9,
+    'י': 10, 'כ': 20, 'ך': 20, 'ל': 30, 'מ': 40, 'ם': 40, 'נ': 50, 'ן': 50,
+    'ס': 60, 'ע': 70, 'פ': 80, 'ף': 80, 'צ': 90, 'ץ': 90,
+    'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400,
+};
+
+/**
+ * Convert Hebrew numeral string to number
+ * Handles טו (15) and טז (16) special cases
+ * @param {string} hebrewNum - Hebrew numeral string (e.g., "א", "יא", "כג")
+ * @returns {number} - The numeric value (1-indexed)
+ */
+function hebrewToNumber(hebrewNum) {
+    if (!hebrewNum || hebrewNum.trim() === '') {
+        throw new Error('Empty Hebrew number');
+    }
+
+    // Remove any non-Hebrew characters (quotes, geresh, etc.)
+    const cleaned = hebrewNum.replace(/[^א-ת]/g, '');
+
+    if (cleaned === '') {
+        throw new Error(`Invalid Hebrew number: ${hebrewNum}`);
+    }
+
+    let total = 0;
+    for (const char of cleaned) {
+        const value = hebrewLetterValues[char];
+        if (value === undefined) {
+            throw new Error(`Unknown Hebrew numeral character: ${char}`);
+        }
+        total += value;
+    }
+
+    return total;
+}
+
+/**
+ * Parse a number that could be Arabic (1, 23) or Hebrew (א, כג)
+ * @param {string} numStr - Number string
+ * @returns {number} - 1-indexed number
+ */
+function parseHebrewOrArabicNumber(numStr) {
+    const trimmed = numStr.trim();
+
+    // Check if it's Arabic numerals
+    if (/^\d+$/.test(trimmed)) {
+        return parseInt(trimmed, 10);
+    }
+
+    // Must be Hebrew numerals
+    return hebrewToNumber(trimmed);
+}
+
+// ============================================================================
+// Occurrence Counting (Cached)
+// ============================================================================
+
+/** @type {Map<number, number> | null} */
+let _occurrenceCounts = null;
+
+/**
+ * Build occurrence counts for all Strong's numbers
+ * @returns {Map<number, number>}
+ */
+function buildOccurrenceCounts() {
+    if (_occurrenceCounts) return _occurrenceCounts;
+
+    const allVerses = buildAllVerses();
+    const counts = new Map();
+
+    for (const verse of allVerses) {
+        for (const strongNum of verse.strongs) {
+            if (strongNum > 0) {
+                counts.set(strongNum, (counts.get(strongNum) || 0) + 1);
+            }
+        }
+    }
+
+    _occurrenceCounts = counts;
+    return counts;
+}
+
+/**
+ * Get occurrence count for a Strong's number
+ * @param {number} strongNumber
+ * @returns {number}
+ */
+function getOccurrenceCount(strongNumber) {
+    const counts = buildOccurrenceCounts();
+    return counts.get(strongNumber) || 0;
+}
+
+// ============================================================================
+// Example Retrieval
+// ============================================================================
+
+/**
+ * Get example verses for a Strong's number
+ * @param {number} strongNumber
+ * @param {number} count - Number of examples to retrieve
+ * @returns {Object[]}
+ */
+function getExamples(strongNumber, count) {
+    const searchResult = search(`<${strongNumber}>`, { maxResults: count * 3 });
+
+    // Try to get diverse examples (different books)
+    const seenBooks = new Set();
+    const examples = [];
+
+    for (const match of searchResult.matches) {
+        if (examples.length >= count) break;
+
+        // Prefer examples from different books
+        if (seenBooks.has(match.verse.book) && examples.length < count - 1) {
+            continue;
+        }
+
+        seenBooks.add(match.verse.book);
+
+        // Get the matched word(s)
+        const matchedWords = match.matchedWordIndexes.map(i => match.verse.words[i]);
+
+        examples.push({
+            location: match.verse.location,
+            text: removeTeamim(match.verse.text),
+            matchedWords: matchedWords.map(w => removeTeamim(w)),
+        });
+    }
+
+    // If we didn't get enough diverse examples, fill from what we have
+    if (examples.length < count) {
+        for (const match of searchResult.matches) {
+            if (examples.length >= count) break;
+            if (examples.some(e => e.location === match.verse.location)) continue;
+
+            const matchedWords = match.matchedWordIndexes.map(i => match.verse.words[i]);
+            examples.push({
+                location: match.verse.location,
+                text: removeTeamim(match.verse.text),
+                matchedWords: matchedWords.map(w => removeTeamim(w)),
+            });
+        }
+    }
+
+    return examples;
+}
+
+// ============================================================================
+// Utility Functions
+// ============================================================================
+
+/**
+ * Format a word with optional nikud removal
+ * @param {string} word
+ * @param {boolean} noPoints - If true, remove nikud
+ * @returns {string}
+ */
+function formatWord(word, noPoints = false) {
+    return noPoints ? removeNikud(word) : word;
+}
+
+// ============================================================================
 // Module Exports
 // ============================================================================
 
@@ -813,12 +1236,58 @@ export {
     makeSearchable,
     numberToHebrew,
     normalizeHebrewText,
+    formatWord,
 };
 
-// Constants for advanced use
+// Hebrew number parsing
 export {
+    hebrewToNumber,
+    parseHebrewOrArabicNumber,
+};
+
+// Biblical section constants
+export {
+    TORAH,
+    NEVIIM_RISHONIM,
+    NEVIIM_ACHARONIM,
+    NEVIIM,
+    KETUVIM,
+    SECTIONS,
+    SECTION_NAMES,
     hebrewBookNames,
     hebrewWordTypes,
+};
+
+// Aramaic handling
+export {
+    ARAMAIC_SECTIONS,
+    isAramaicVerse,
+};
+
+// Word type handling
+export {
+    TYPE_ALIASES,
+    TYPE_ORDER,
+};
+
+// Stopwords
+export {
+    STOPWORDS,
+    STOPWORD_STRONGS,
+    isStopword,
+};
+
+// Range parsing
+export {
+    parseRange,
+    getBookSection,
+};
+
+// Occurrence counting
+export {
+    buildOccurrenceCounts,
+    getOccurrenceCount,
+    getExamples,
 };
 
 // Internal utilities (exported for edge cases, prefer higher-level functions)

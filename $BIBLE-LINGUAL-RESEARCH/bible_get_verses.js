@@ -71,67 +71,13 @@ NOTES:
 `;
 
 import * as bible from './bible-utils.js';
+import {
+    hebrewToNumber,
+    parseHebrewOrArabicNumber,
+} from './bible-utils.js';
 
-// ============================================================================
-// Hebrew Number Parsing
-// ============================================================================
-
-/**
- * Hebrew letter values for number parsing
- */
-const hebrewLetterValues = {
-    'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9,
-    'י': 10, 'כ': 20, 'ך': 20, 'ל': 30, 'מ': 40, 'ם': 40, 'נ': 50, 'ן': 50,
-    'ס': 60, 'ע': 70, 'פ': 80, 'ף': 80, 'צ': 90, 'ץ': 90,
-    'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400,
-};
-
-/**
- * Convert Hebrew numeral string to number
- * Handles טו (15) and טז (16) special cases
- * @param {string} hebrewNum - Hebrew numeral string (e.g., "א", "יא", "כג")
- * @returns {number} - The numeric value (1-indexed)
- */
-function hebrewToNumber(hebrewNum) {
-    if (!hebrewNum || hebrewNum.trim() === '') {
-        throw new Error('Empty Hebrew number');
-    }
-
-    // Remove any non-Hebrew characters (quotes, geresh, etc.)
-    const cleaned = hebrewNum.replace(/[^א-ת]/g, '');
-
-    if (cleaned === '') {
-        throw new Error(`Invalid Hebrew number: ${hebrewNum}`);
-    }
-
-    let total = 0;
-    for (const char of cleaned) {
-        const value = hebrewLetterValues[char];
-        if (value === undefined) {
-            throw new Error(`Unknown Hebrew numeral character: ${char}`);
-        }
-        total += value;
-    }
-
-    return total;
-}
-
-/**
- * Parse a number that could be Arabic (1, 23) or Hebrew (א, כג)
- * @param {string} numStr - Number string
- * @returns {number} - 1-indexed number
- */
-function parseNumber(numStr) {
-    const trimmed = numStr.trim();
-
-    // Check if it's Arabic numerals
-    if (/^\d+$/.test(trimmed)) {
-        return parseInt(trimmed, 10);
-    }
-
-    // Must be Hebrew numerals
-    return hebrewToNumber(trimmed);
-}
+// Alias for backward compatibility
+const parseNumber = parseHebrewOrArabicNumber;
 
 // ============================================================================
 // Reference Parsing

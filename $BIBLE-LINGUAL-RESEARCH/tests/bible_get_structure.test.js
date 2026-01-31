@@ -16,7 +16,7 @@ import {
     NEVIIM_RISHONIM,
     NEVIIM_ACHARONIM,
     KETUVIM,
-    ARAMAIC_SECTIONS,
+    ARAMAIC_SECTIONS_DISPLAY,
 } from '../bible_get_structure.js';
 
 // ============================================================================
@@ -104,14 +104,14 @@ test('SECTIONS has 4 sections', () => {
     assertEqual(SECTIONS[3].name, 'כתובים');
 });
 
-test('ARAMAIC_SECTIONS defined correctly', () => {
-    assertTrue('דניאל' in ARAMAIC_SECTIONS);
-    assertTrue('עזרא' in ARAMAIC_SECTIONS);
-    assertTrue('ירמיהו' in ARAMAIC_SECTIONS);
-    assertTrue('בראשית' in ARAMAIC_SECTIONS);
+test('ARAMAIC_SECTIONS_DISPLAY defined correctly', () => {
+    assertTrue('דניאל' in ARAMAIC_SECTIONS_DISPLAY);
+    assertTrue('עזרא' in ARAMAIC_SECTIONS_DISPLAY);
+    assertTrue('ירמיהו' in ARAMAIC_SECTIONS_DISPLAY);
+    assertTrue('בראשית' in ARAMAIC_SECTIONS_DISPLAY);
 
-    assertEqual(ARAMAIC_SECTIONS['דניאל'][0].start, '2:4');
-    assertEqual(ARAMAIC_SECTIONS['ירמיהו'][0].start, '10:11');
+    assertEqual(ARAMAIC_SECTIONS_DISPLAY['דניאל'][0].start, '2:4');
+    assertEqual(ARAMAIC_SECTIONS_DISPLAY['ירמיהו'][0].start, '10:11');
 });
 
 // ------------------------------------------

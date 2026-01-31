@@ -68,117 +68,13 @@ NOTES:
 `;
 
 import * as bible from './bible-utils.js';
-
-// ============================================================================
-// Constants
-// ============================================================================
-
-// Common function words (stopwords) to filter from results
-const STOPWORDS = new Set([
-    'את', 'אשר', 'על', 'אל', 'מן', 'עם', 'כי', 'לא', 'כל', 'גם',
-    'או', 'אם', 'הנה', 'זה', 'זאת', 'הוא', 'היא', 'הם', 'הן',
-    'אני', 'אנחנו', 'אתה', 'את', 'אתם', 'אתן', 'לו', 'לה', 'להם',
-    'בו', 'בה', 'בהם', 'לי', 'לך', 'לנו', 'לכם', 'ממנו', 'ממנה',
-    'עליו', 'עליה', 'עליהם', 'אליו', 'אליה', 'אליהם', 'אתו', 'אתה',
-    'כן', 'לפני', 'אחרי', 'תחת', 'עד', 'בין', 'למען', 'יען',
-    'פן', 'בלי', 'בלתי', 'אך', 'רק', 'מאד', 'עתה', 'אז', 'שם', 'פה',
-]);
-
-// Aramaic sections (for filtering)
-const ARAMAIC_SECTIONS = {
-    'דניאל': [{ startChapter: 1, startVerse: 3, endChapter: 6, endVerse: 27 }],
-    'עזרא': [
-        { startChapter: 3, startVerse: 7, endChapter: 5, endVerse: 17 },
-        { startChapter: 6, startVerse: 11, endChapter: 6, endVerse: 25 }
-    ],
-    'ירמיהו': [{ startChapter: 9, startVerse: 10, endChapter: 9, endVerse: 10 }],
-    'בראשית': [{ startChapter: 30, startVerse: 46, endChapter: 30, endVerse: 46 }],
-};
-
-// Section names for range filtering
-const SECTION_NAMES = {
-    'תורה': ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'],
-    'נביאים': [
-        'יהושע', 'שופטים', 'שמואל-א', 'שמואל-ב', 'מלכים-א', 'מלכים-ב',
-        'ישעיהו', 'ירמיהו', 'יחזקאל',
-        'הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה',
-        'נחום', 'חבקוק', 'צפניה', 'חגי', 'זכריה', 'מלאכי'
-    ],
-    'כתובים': [
-        'דברי-הימים-א', 'דברי-הימים-ב', 'תהילים', 'איוב', 'משלי',
-        'רות', 'שיר-השירים', 'קהלת', 'איכה', 'אסתר', 'דניאל', 'עזרא', 'נחמיה'
-    ],
-};
-
-// ============================================================================
-// Helpers
-// ============================================================================
-
-/**
- * Check if a verse is in an Aramaic section
- */
-function isAramaicVerse(book, chapterIndex, verseIndex) {
-    const sections = ARAMAIC_SECTIONS[book];
-    if (!sections) return false;
-
-    for (const section of sections) {
-        if (chapterIndex > section.startChapter && chapterIndex < section.endChapter) return true;
-        if (chapterIndex === section.startChapter && chapterIndex === section.endChapter) {
-            return verseIndex >= section.startVerse && verseIndex <= section.endVerse;
-        }
-        if (chapterIndex === section.startChapter && verseIndex >= section.startVerse) return true;
-        if (chapterIndex === section.endChapter && verseIndex <= section.endVerse) return true;
-    }
-    return false;
-}
-
-/**
- * Check if a word is a stopword (normalized form)
- */
-function isStopword(word) {
-    const normalized = bible.removeNikud(word);
-    return STOPWORDS.has(normalized);
-}
-
-/**
- * Parse range specification
- */
-function parseRange(rangeStr) {
-    if (!rangeStr) return null;
-
-    if (SECTION_NAMES[rangeStr]) {
-        return { books: new Set(SECTION_NAMES[rangeStr]), chapterFilter: () => true };
-    }
-
-    const bookNames = bible.getBookNames();
-    const parts = rangeStr.split(/\s+/);
-    const bookName = parts[0];
-
-    if (!bookNames.includes(bookName)) {
-        throw new Error(`Unknown book or section: ${bookName}`);
-    }
-
-    if (parts.length === 1) {
-        return { books: new Set([bookName]), chapterFilter: () => true };
-    }
-
-    const chapterRange = parts.slice(1).join(' ');
-    const rangeMatch = chapterRange.match(/^(\d+)(?:-(\d+))?$/);
-
-    if (!rangeMatch) {
-        throw new Error(`Invalid chapter range: ${chapterRange}`);
-    }
-
-    const startChapter = parseInt(rangeMatch[1]) - 1;
-    const endChapter = rangeMatch[2] ? parseInt(rangeMatch[2]) - 1 : startChapter;
-
-    return {
-        books: new Set([bookName]),
-        chapterFilter: (book, chapterIndex) => {
-            return book === bookName && chapterIndex >= startChapter && chapterIndex <= endChapter;
-        },
-    };
-}
+import {
+    STOPWORDS,
+    SECTION_NAMES,
+    isAramaicVerse,
+    isStopword,
+    parseRange,
+} from './bible-utils.js';
 
 /**
  * Check if query word matches a word in verse

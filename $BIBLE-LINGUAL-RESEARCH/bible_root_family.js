@@ -69,45 +69,16 @@ NOTES:
 `;
 
 import * as bible from './bible-utils.js';
+import {
+    TYPE_ALIASES,
+    TYPE_ORDER,
+    getOccurrenceCount,
+    getExamples,
+} from './bible-utils.js';
 
 // ============================================================================
 // Constants
 // ============================================================================
-
-// Type name mappings (various forms -> canonical English)
-const TYPE_ALIASES = {
-    // English variations
-    'verb': 'Verb',
-    'noun': 'Noun',
-    'name': 'Name',
-    'adjective': 'Adjective',
-    'adverb': 'Adverb',
-    'pronoun': 'Pronoun',
-    'preposition': 'Preposition',
-    'interjection': 'Interjection',
-    'conjunction': 'Conjunction',
-    'derived-verb': 'Derived-Verb',
-    // Hebrew variations
-    'פועל': 'Verb',
-    'שם': 'Noun',
-    'שם עצם': 'Noun',
-    'שם פרטי': 'Name',
-    'שם תואר': 'Adjective',
-};
-
-// Type display order for organized output
-const TYPE_ORDER = [
-    'Verb',
-    'Derived-Verb',
-    'Noun',
-    'Adjective',
-    'Adverb',
-    'Pronoun',
-    'Preposition',
-    'Conjunction',
-    'Interjection',
-    'Name',
-];
 
 // Guttural consonants (phonetically similar)
 const GUTTURALS = new Set(['א', 'ה', 'ח', 'ע']);
@@ -121,17 +92,6 @@ const PHONETIC_GROUPS = [
     new Set(['א', 'ה', 'ח', 'ע']), // Gutturals
     new Set(['נ', 'מ']),           // Nasals
 ];
-
-// Aramaic sections (for filtering)
-const ARAMAIC_SECTIONS = {
-    'דניאל': [{ startChapter: 1, startVerse: 3, endChapter: 6, endVerse: 27 }],
-    'עזרא': [
-        { startChapter: 3, startVerse: 7, endChapter: 5, endVerse: 17 },
-        { startChapter: 6, startVerse: 11, endChapter: 6, endVerse: 25 }
-    ],
-    'ירמיהו': [{ startChapter: 9, startVerse: 10, endChapter: 9, endVerse: 10 }],
-    'בראשית': [{ startChapter: 30, startVerse: 46, endChapter: 30, endVerse: 46 }],
-};
 
 // ============================================================================
 // Root Normalization
@@ -246,41 +206,6 @@ function getPhoneticVariants(root) {
 // Strong's Number Lookup
 // ============================================================================
 
-// Cache for occurrence counts
-let _occurrenceCounts = null;
-
-/**
- * Build occurrence counts for all Strong's numbers
- * @returns {Map<number, number>}
- */
-function buildOccurrenceCounts() {
-    if (_occurrenceCounts) return _occurrenceCounts;
-
-    const allVerses = bible.getAllVerses();
-    const counts = new Map();
-
-    for (const verse of allVerses) {
-        for (const strongNum of verse.strongs) {
-            if (strongNum > 0) {
-                counts.set(strongNum, (counts.get(strongNum) || 0) + 1);
-            }
-        }
-    }
-
-    _occurrenceCounts = counts;
-    return counts;
-}
-
-/**
- * Get occurrence count for a Strong's number
- * @param {number} strongNumber
- * @returns {number}
- */
-function getOccurrenceCount(strongNumber) {
-    const counts = buildOccurrenceCounts();
-    return counts.get(strongNumber) || 0;
-}
-
 /**
  * Find all Strong's numbers matching a root pattern
  * @param {string} root
@@ -325,54 +250,6 @@ function findStrongsByRoot(root, options = {}) {
     }
 
     return results;
-}
-
-/**
- * Get example verses for a Strong's number
- * @param {number} strongNumber
- * @param {number} count
- * @returns {Object[]}
- */
-function getExamples(strongNumber, count) {
-    const searchResult = bible.search(`<${strongNumber}>`, { maxResults: count * 3 });
-
-    const seenBooks = new Set();
-    const examples = [];
-
-    for (const match of searchResult.matches) {
-        if (examples.length >= count) break;
-
-        if (seenBooks.has(match.verse.book) && examples.length < count - 1) {
-            continue;
-        }
-
-        seenBooks.add(match.verse.book);
-
-        const matchedWords = match.matchedWordIndexes.map(i => match.verse.words[i]);
-
-        examples.push({
-            location: match.verse.location,
-            text: bible.removeTeamim(match.verse.text),
-            matchedWords: matchedWords.map(w => bible.removeTeamim(w)),
-        });
-    }
-
-    // Fill remaining if needed
-    if (examples.length < count) {
-        for (const match of searchResult.matches) {
-            if (examples.length >= count) break;
-            if (examples.some(e => e.location === match.verse.location)) continue;
-
-            const matchedWords = match.matchedWordIndexes.map(i => match.verse.words[i]);
-            examples.push({
-                location: match.verse.location,
-                text: bible.removeTeamim(match.verse.text),
-                matchedWords: matchedWords.map(w => bible.removeTeamim(w)),
-            });
-        }
-    }
-
-    return examples;
 }
 
 /**

@@ -54,85 +54,16 @@ NOTES:
 `;
 
 import * as bible from './bible-utils.js';
-
-// ============================================================================
-// Constants
-// ============================================================================
-
-// Stopwords - very common words to weight lower
-const STOPWORD_STRONGS = new Set([
-    853,   // את - direct object marker
-    834,   // אשר - which, that
-    5921,  // על - on, upon
-    413,   // אל - to, toward
-    4480,  // מן - from
-    5973,  // עם - with
-    3588,  // כי - for, because
-    3808,  // לא - not
-    3605,  // כל - all
-    1571,  // גם - also
-]);
-
-const ARAMAIC_SECTIONS = {
-    'דניאל': [{ startChapter: 1, startVerse: 3, endChapter: 6, endVerse: 27 }],
-    'עזרא': [
-        { startChapter: 3, startVerse: 7, endChapter: 5, endVerse: 17 },
-        { startChapter: 6, startVerse: 11, endChapter: 6, endVerse: 25 }
-    ],
-    'ירמיהו': [{ startChapter: 9, startVerse: 10, endChapter: 9, endVerse: 10 }],
-    'בראשית': [{ startChapter: 30, startVerse: 46, endChapter: 30, endVerse: 46 }],
-};
-
-const SECTION_NAMES = {
-    'תורה': ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'],
-    'נביאים': [
-        'יהושע', 'שופטים', 'שמואל-א', 'שמואל-ב', 'מלכים-א', 'מלכים-ב',
-        'ישעיהו', 'ירמיהו', 'יחזקאל',
-        'הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה',
-        'נחום', 'חבקוק', 'צפניה', 'חגי', 'זכריה', 'מלאכי'
-    ],
-    'כתובים': [
-        'דברי-הימים-א', 'דברי-הימים-ב', 'תהילים', 'איוב', 'משלי',
-        'רות', 'שיר-השירים', 'קהלת', 'איכה', 'אסתר', 'דניאל', 'עזרא', 'נחמיה'
-    ],
-};
+import {
+    STOPWORD_STRONGS,
+    isAramaicVerse,
+    parseRange,
+    parseHebrewOrArabicNumber,
+} from './bible-utils.js';
 
 // ============================================================================
 // Helpers
 // ============================================================================
-
-function isAramaicVerse(book, chapterIndex, verseIndex) {
-    const sections = ARAMAIC_SECTIONS[book];
-    if (!sections) return false;
-
-    for (const section of sections) {
-        if (chapterIndex > section.startChapter && chapterIndex < section.endChapter) return true;
-        if (chapterIndex === section.startChapter && chapterIndex === section.endChapter) {
-            return verseIndex >= section.startVerse && verseIndex <= section.endVerse;
-        }
-        if (chapterIndex === section.startChapter && verseIndex >= section.startVerse) return true;
-        if (chapterIndex === section.endChapter && verseIndex <= section.endVerse) return true;
-    }
-    return false;
-}
-
-function parseRange(rangeStr) {
-    if (!rangeStr) return null;
-
-    if (SECTION_NAMES[rangeStr]) {
-        return { books: new Set(SECTION_NAMES[rangeStr]), chapterFilter: () => true };
-    }
-
-    const bookNames = bible.getBookNames();
-    const parts = rangeStr.split(/\s+/);
-    const bookName = parts[0];
-
-    if (!bookNames.includes(bookName)) {
-        throw new Error(`Unknown book or section: ${bookName}`);
-    }
-
-    return { books: new Set([bookName]), chapterFilter: () => true };
-}
 
 /**
  * Parse a verse reference like "בראשית 1:1" or "בראשית א:א"
@@ -153,33 +84,14 @@ function parseReference(ref) {
     }
 
     // Parse chapter and verse (could be Arabic or Hebrew numerals)
-    const chapter = parseNumber(chapterStr);
-    const verse = parseNumber(verseStr);
+    const chapter = parseHebrewOrArabicNumber(chapterStr);
+    const verse = parseHebrewOrArabicNumber(verseStr);
 
     return { book: bookName, chapter, verse };
 }
 
-/**
- * Parse a number (Arabic or Hebrew)
- */
-function parseNumber(str) {
-    if (/^\d+$/.test(str)) {
-        return parseInt(str, 10);
-    }
-
-    // Hebrew numerals
-    const hebrewValues = {
-        'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9,
-        'י': 10, 'כ': 20, 'ל': 30, 'מ': 40, 'נ': 50, 'ס': 60, 'ע': 70, 'פ': 80, 'צ': 90,
-        'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400,
-    };
-
-    let value = 0;
-    for (const char of str) {
-        value += hebrewValues[char] || 0;
-    }
-    return value;
-}
+// Alias for backward compatibility with existing exports
+const parseNumber = parseHebrewOrArabicNumber;
 
 // ============================================================================
 // Argument Parsing

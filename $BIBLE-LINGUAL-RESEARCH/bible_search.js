@@ -126,136 +126,14 @@ NOTES:
 `;
 
 import * as bible from './bible-utils.js';
-
-// ============================================================================
-// Constants
-// ============================================================================
-
-// Biblical sections
-const TORAH = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'];
-const NEVIIM_RISHONIM = ['יהושע', 'שופטים', 'שמואל-א', 'שמואל-ב', 'מלכים-א', 'מלכים-ב'];
-const NEVIIM_ACHARONIM = [
-    'ישעיהו', 'ירמיהו', 'יחזקאל',
-    'הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה',
-    'נחום', 'חבקוק', 'צפניה', 'חגי', 'זכריה', 'מלאכי'
-];
-const NEVIIM = [...NEVIIM_RISHONIM, ...NEVIIM_ACHARONIM];
-const KETUVIM = [
-    'דברי-הימים-א', 'דברי-הימים-ב', 'תהילים', 'איוב', 'משלי',
-    'רות', 'שיר-השירים', 'קהלת', 'איכה', 'אסתר', 'דניאל', 'עזרא', 'נחמיה'
-];
-
-// Section name mapping (Hebrew names to book arrays)
-const SECTION_NAMES = {
-    'תורה': TORAH,
-    'נביאים': NEVIIM,
-    'נביאים-ראשונים': NEVIIM_RISHONIM,
-    'נביאים-אחרונים': NEVIIM_ACHARONIM,
-    'כתובים': KETUVIM,
-};
-
-// Aramaic sections (verse ranges that are in Aramaic, not Hebrew)
-// Format: { book: [{startChapter, startVerse, endChapter, endVerse}] }
-const ARAMAIC_SECTIONS = {
-    'דניאל': [
-        { startChapter: 1, startVerse: 3, endChapter: 6, endVerse: 27 } // Actually 2:4-7:28, using 0-indexed
-    ],
-    'עזרא': [
-        { startChapter: 3, startVerse: 7, endChapter: 5, endVerse: 17 }, // 4:8-6:18
-        { startChapter: 6, startVerse: 11, endChapter: 6, endVerse: 25 } // 7:12-26
-    ],
-    'ירמיהו': [
-        { startChapter: 9, startVerse: 10, endChapter: 9, endVerse: 10 } // 10:11 (single verse)
-    ],
-    'בראשית': [
-        { startChapter: 30, startVerse: 46, endChapter: 30, endVerse: 46 } // 31:47 (two words)
-    ],
-};
-
-// ============================================================================
-// Helper Functions
-// ============================================================================
-
-/**
- * Check if a verse is in an Aramaic section
- * @param {string} book - Hebrew book name
- * @param {number} chapterIndex - 0-indexed chapter
- * @param {number} verseIndex - 0-indexed verse
- * @returns {boolean}
- */
-function isAramaicVerse(book, chapterIndex, verseIndex) {
-    const sections = ARAMAIC_SECTIONS[book];
-    if (!sections) return false;
-
-    for (const section of sections) {
-        // Check if verse is within the Aramaic range
-        if (chapterIndex > section.startChapter && chapterIndex < section.endChapter) {
-            return true;
-        }
-        if (chapterIndex === section.startChapter && chapterIndex === section.endChapter) {
-            return verseIndex >= section.startVerse && verseIndex <= section.endVerse;
-        }
-        if (chapterIndex === section.startChapter && verseIndex >= section.startVerse) {
-            return true;
-        }
-        if (chapterIndex === section.endChapter && verseIndex <= section.endVerse) {
-            return true;
-        }
-    }
-    return false;
-}
-
-/**
- * Parse a range string into a filter function
- * @param {string} rangeStr - Range specification (e.g., "בראשית", "בראשית 1-11", "תורה")
- * @returns {{books: Set<string>, chapterFilter: (book: string, chapter: number) => boolean} | null}
- */
-function parseRange(rangeStr) {
-    if (!rangeStr) return null;
-
-    // Check if it's a section name
-    if (SECTION_NAMES[rangeStr]) {
-        return {
-            books: new Set(SECTION_NAMES[rangeStr]),
-            chapterFilter: () => true,
-        };
-    }
-
-    // Check if it's a book name (possibly with chapter range)
-    const bookNames = bible.getBookNames();
-    const parts = rangeStr.split(/\s+/);
-    const bookName = parts[0];
-
-    if (!bookNames.includes(bookName)) {
-        throw new Error(`Unknown book or section: ${bookName}`);
-    }
-
-    // Just book name, no chapter range
-    if (parts.length === 1) {
-        return {
-            books: new Set([bookName]),
-            chapterFilter: () => true,
-        };
-    }
-
-    // Book with chapter range
-    const chapterRange = parts.slice(1).join(' ');
-    const rangeMatch = chapterRange.match(/^(\d+)(?:-(\d+))?$/);
-
-    if (!rangeMatch) {
-        throw new Error(`Invalid chapter range: ${chapterRange}`);
-    }
-
-    const startChapter = parseInt(rangeMatch[1]) - 1; // Convert to 0-indexed
-    const endChapter = rangeMatch[2] ? parseInt(rangeMatch[2]) - 1 : startChapter;
-
-    return {
-        books: new Set([bookName]),
-        chapterFilter: (book, chapterIndex) => {
-            return book === bookName && chapterIndex >= startChapter && chapterIndex <= endChapter;
-        },
-    };
-}
+import {
+    TORAH,
+    NEVIIM,
+    KETUVIM,
+    ARAMAIC_SECTIONS,
+    isAramaicVerse,
+    parseRange,
+} from './bible-utils.js';
 
 /**
  * Parse command line arguments

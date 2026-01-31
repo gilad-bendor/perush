@@ -79,34 +79,21 @@ NOTES:
 `;
 
 import * as bible from './bible-utils.js';
+import {
+    TORAH,
+    NEVIIM_RISHONIM,
+    NEVIIM_ACHARONIM,
+    KETUVIM,
+    SECTIONS,
+    hebrewToNumber,
+} from './bible-utils.js';
 
 // ============================================================================
-// Constants
+// Aramaic Sections (with human-readable format for this tool)
 // ============================================================================
 
-// Biblical sections
-const TORAH = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'];
-const NEVIIM_RISHONIM = ['יהושע', 'שופטים', 'שמואל-א', 'שמואל-ב', 'מלכים-א', 'מלכים-ב'];
-const NEVIIM_ACHARONIM = [
-    'ישעיהו', 'ירמיהו', 'יחזקאל',
-    'הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה',
-    'נחום', 'חבקוק', 'צפניה', 'חגי', 'זכריה', 'מלאכי'
-];
-const KETUVIM = [
-    'דברי-הימים-א', 'דברי-הימים-ב', 'תהילים', 'איוב', 'משלי',
-    'רות', 'שיר-השירים', 'קהלת', 'איכה', 'אסתר', 'דניאל', 'עזרא', 'נחמיה'
-];
-
-// Section definitions with display names
-const SECTIONS = [
-    { name: 'תורה', books: TORAH },
-    { name: 'נביאים ראשונים', books: NEVIIM_RISHONIM },
-    { name: 'נביאים אחרונים', books: NEVIIM_ACHARONIM },
-    { name: 'כתובים', books: KETUVIM },
-];
-
-// Aramaic sections (verse ranges that are in Aramaic, not Hebrew)
-const ARAMAIC_SECTIONS = {
+// Aramaic sections with human-readable format for display
+const ARAMAIC_SECTIONS_DISPLAY = {
     'דניאל': [
         { start: '2:4', end: '7:28', description: 'עיקר ספר דניאל' }
     ],
@@ -164,7 +151,7 @@ function buildStructure() {
             chapterCount: 0,
             versesPerChapter: [],
             totalVerses: 0,
-            aramaicSections: ARAMAIC_SECTIONS[bookName] || null,
+            aramaicSections: ARAMAIC_SECTIONS_DISPLAY[bookName] || null,
         });
     }
 
@@ -255,27 +242,8 @@ function parseArgs(args) {
     return options;
 }
 
-/**
- * Parse a Hebrew number string
- * @param {string} hebrewNum
- * @returns {number}
- */
-function parseHebrewNumber(hebrewNum) {
-    const values = {
-        'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9,
-        'י': 10, 'כ': 20, 'ך': 20, 'ל': 30, 'מ': 40, 'ם': 40, 'נ': 50, 'ן': 50,
-        'ס': 60, 'ע': 70, 'פ': 80, 'ף': 80, 'צ': 90, 'ץ': 90,
-        'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400,
-    };
-
-    let total = 0;
-    for (const char of hebrewNum) {
-        if (values[char] !== undefined) {
-            total += values[char];
-        }
-    }
-    return total;
-}
+// parseHebrewNumber - use hebrewToNumber from bible-utils.js
+const parseHebrewNumber = hebrewToNumber;
 
 // ============================================================================
 // Output Formatting
@@ -530,7 +498,7 @@ export {
     NEVIIM_RISHONIM,
     NEVIIM_ACHARONIM,
     KETUVIM,
-    ARAMAIC_SECTIONS,
+    ARAMAIC_SECTIONS_DISPLAY,
 };
 
 // Run main if executed directly

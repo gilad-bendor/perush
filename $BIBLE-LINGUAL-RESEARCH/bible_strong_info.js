@@ -113,74 +113,11 @@ LINGUISTIC INSIGHT:
 `;
 
 import * as bible from './bible-utils.js';
-
-// ============================================================================
-// Constants
-// ============================================================================
-
-// Type name mappings (various forms -> canonical English)
-const TYPE_ALIASES = {
-    // English variations
-    'verb': 'Verb',
-    'noun': 'Noun',
-    'name': 'Name',
-    'adjective': 'Adjective',
-    'adverb': 'Adverb',
-    'pronoun': 'Pronoun',
-    'preposition': 'Preposition',
-    'interjection': 'Interjection',
-    'conjunction': 'Conjunction',
-    'derived-verb': 'Derived-Verb',
-    // Hebrew variations (without nikud)
-    'פועל': 'Verb',
-    'שם': 'Noun',
-    'שם עצם': 'Noun',
-    'שם פרטי': 'Name',
-    'שם תואר': 'Adjective',
-    'תואר הפועל': 'Adverb',
-    'שם גוף': 'Pronoun',
-    'מלת יחס': 'Preposition',
-    'מלת קריאה': 'Interjection',
-    'מלת חיבור': 'Conjunction',
-};
-
-// ============================================================================
-// Occurrence Counting (cached)
-// ============================================================================
-
-let _occurrenceCounts = null;
-
-/**
- * Build occurrence counts for all Strong's numbers
- * @returns {Map<number, number>}
- */
-function buildOccurrenceCounts() {
-    if (_occurrenceCounts) return _occurrenceCounts;
-
-    const allVerses = bible.getAllVerses();
-    const counts = new Map();
-
-    for (const verse of allVerses) {
-        for (const strongNum of verse.strongs) {
-            if (strongNum > 0) {
-                counts.set(strongNum, (counts.get(strongNum) || 0) + 1);
-            }
-        }
-    }
-
-    _occurrenceCounts = counts;
-    return counts;
-}
-
-/**
- * Get occurrence count for a Strong's number
- * @param {number} strongNumber
- * @returns {number}
- */
-function getOccurrenceCount(strongNumber) {
-    const counts = buildOccurrenceCounts();
-    return counts.get(strongNumber) || 0;
-}
+import {
+    TYPE_ALIASES,
+    getOccurrenceCount,
+    getExamples,
+} from './bible-utils.js';
 
 // ============================================================================
 // Query Parsing
@@ -329,57 +266,6 @@ function lookupByHebrew(pattern, options) {
     }
 
     return results;
-}
-
-/**
- * Get example verses for a Strong's number
- * @param {number} strongNumber
- * @param {number} count
- * @returns {Object[]}
- */
-function getExamples(strongNumber, count) {
-    const searchResult = bible.search(`<${strongNumber}>`, { maxResults: count * 3 });
-
-    // Try to get diverse examples (different books)
-    const seenBooks = new Set();
-    const examples = [];
-
-    for (const match of searchResult.matches) {
-        if (examples.length >= count) break;
-
-        // Prefer examples from different books
-        if (seenBooks.has(match.verse.book) && examples.length < count - 1) {
-            continue;
-        }
-
-        seenBooks.add(match.verse.book);
-
-        // Get the matched word(s)
-        const matchedWords = match.matchedWordIndexes.map(i => match.verse.words[i]);
-
-        examples.push({
-            location: match.verse.location,
-            text: bible.removeTeamim(match.verse.text),
-            matchedWords: matchedWords.map(w => bible.removeTeamim(w)),
-        });
-    }
-
-    // If we didn't get enough diverse examples, fill from what we have
-    if (examples.length < count) {
-        for (const match of searchResult.matches) {
-            if (examples.length >= count) break;
-            if (examples.some(e => e.location === match.verse.location)) continue;
-
-            const matchedWords = match.matchedWordIndexes.map(i => match.verse.words[i]);
-            examples.push({
-                location: match.verse.location,
-                text: bible.removeTeamim(match.verse.text),
-                matchedWords: matchedWords.map(w => bible.removeTeamim(w)),
-            });
-        }
-    }
-
-    return examples;
 }
 
 // ============================================================================

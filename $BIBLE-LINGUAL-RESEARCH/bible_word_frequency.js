@@ -67,111 +67,16 @@ NOTES:
 `;
 
 import * as bible from './bible-utils.js';
-
-// ============================================================================
-// Constants
-// ============================================================================
-
-const TORAH = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'];
-const NEVIIM_RISHONIM = ['יהושע', 'שופטים', 'שמואל-א', 'שמואל-ב', 'מלכים-א', 'מלכים-ב'];
-const NEVIIM_ACHARONIM = [
-    'ישעיהו', 'ירמיהו', 'יחזקאל',
-    'הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה',
-    'נחום', 'חבקוק', 'צפניה', 'חגי', 'זכריה', 'מלאכי'
-];
-const KETUVIM = [
-    'דברי-הימים-א', 'דברי-הימים-ב', 'תהילים', 'איוב', 'משלי',
-    'רות', 'שיר-השירים', 'קהלת', 'איכה', 'אסתר', 'דניאל', 'עזרא', 'נחמיה'
-];
-
-const SECTIONS = [
-    { name: 'תורה', books: TORAH },
-    { name: 'נביאים ראשונים', books: NEVIIM_RISHONIM },
-    { name: 'נביאים אחרונים', books: NEVIIM_ACHARONIM },
-    { name: 'כתובים', books: KETUVIM },
-];
-
-const SECTION_NAMES = {
-    'תורה': TORAH,
-    'נביאים': [...NEVIIM_RISHONIM, ...NEVIIM_ACHARONIM],
-    'נביאים-ראשונים': NEVIIM_RISHONIM,
-    'נביאים-אחרונים': NEVIIM_ACHARONIM,
-    'כתובים': KETUVIM,
-};
-
-// Aramaic sections
-const ARAMAIC_SECTIONS = {
-    'דניאל': [{ startChapter: 1, startVerse: 3, endChapter: 6, endVerse: 27 }],
-    'עזרא': [
-        { startChapter: 3, startVerse: 7, endChapter: 5, endVerse: 17 },
-        { startChapter: 6, startVerse: 11, endChapter: 6, endVerse: 25 }
-    ],
-    'ירמיהו': [{ startChapter: 9, startVerse: 10, endChapter: 9, endVerse: 10 }],
-    'בראשית': [{ startChapter: 30, startVerse: 46, endChapter: 30, endVerse: 46 }],
-};
-
-// ============================================================================
-// Helpers
-// ============================================================================
-
-function isAramaicVerse(book, chapterIndex, verseIndex) {
-    const sections = ARAMAIC_SECTIONS[book];
-    if (!sections) return false;
-
-    for (const section of sections) {
-        if (chapterIndex > section.startChapter && chapterIndex < section.endChapter) return true;
-        if (chapterIndex === section.startChapter && chapterIndex === section.endChapter) {
-            return verseIndex >= section.startVerse && verseIndex <= section.endVerse;
-        }
-        if (chapterIndex === section.startChapter && verseIndex >= section.startVerse) return true;
-        if (chapterIndex === section.endChapter && verseIndex <= section.endVerse) return true;
-    }
-    return false;
-}
-
-function getBookSection(book) {
-    for (const section of SECTIONS) {
-        if (section.books.includes(book)) return section.name;
-    }
-    return 'unknown';
-}
-
-function parseRange(rangeStr) {
-    if (!rangeStr) return null;
-
-    if (SECTION_NAMES[rangeStr]) {
-        return { books: new Set(SECTION_NAMES[rangeStr]), chapterFilter: () => true };
-    }
-
-    const bookNames = bible.getBookNames();
-    const parts = rangeStr.split(/\s+/);
-    const bookName = parts[0];
-
-    if (!bookNames.includes(bookName)) {
-        throw new Error(`Unknown book or section: ${bookName}`);
-    }
-
-    if (parts.length === 1) {
-        return { books: new Set([bookName]), chapterFilter: () => true };
-    }
-
-    const chapterRange = parts.slice(1).join(' ');
-    const rangeMatch = chapterRange.match(/^(\d+)(?:-(\d+))?$/);
-
-    if (!rangeMatch) {
-        throw new Error(`Invalid chapter range: ${chapterRange}`);
-    }
-
-    const startChapter = parseInt(rangeMatch[1]) - 1;
-    const endChapter = rangeMatch[2] ? parseInt(rangeMatch[2]) - 1 : startChapter;
-
-    return {
-        books: new Set([bookName]),
-        chapterFilter: (book, chapterIndex) => {
-            return book === bookName && chapterIndex >= startChapter && chapterIndex <= endChapter;
-        },
-    };
-}
+import {
+    TORAH,
+    NEVIIM_RISHONIM,
+    NEVIIM_ACHARONIM,
+    KETUVIM,
+    SECTIONS,
+    isAramaicVerse,
+    parseRange,
+    getBookSection,
+} from './bible-utils.js';
 
 // ============================================================================
 // Argument Parsing
