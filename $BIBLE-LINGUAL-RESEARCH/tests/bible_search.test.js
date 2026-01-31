@@ -4,7 +4,7 @@
 /**
  * Tests for bible_search.js
  *
- * Run with: node bible_search.test.js
+ * Run with: ./bible_search.test.js
  */
 
 import {

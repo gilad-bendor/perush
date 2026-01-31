@@ -4,7 +4,7 @@
 /**
  * Tests for bible_strong_info.js
  *
- * Run with: node bible_strong_info.test.js
+ * Run with: ./bible_strong_info.test.js
  */
 
 import {

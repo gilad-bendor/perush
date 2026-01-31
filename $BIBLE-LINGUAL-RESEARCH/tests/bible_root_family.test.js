@@ -4,7 +4,7 @@
 /**
  * Tests for bible_root_family.js
  *
- * Run with: node bible_root_family.test.js
+ * Run with: ./bible_root_family.test.js
  */
 
 import {

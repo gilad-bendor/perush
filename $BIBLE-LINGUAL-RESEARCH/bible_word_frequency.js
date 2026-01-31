@@ -11,7 +11,7 @@ INTENT/GOAL:
     (earlier vs later biblical texts).
 
 SYNTAX:
-    node bible_word_frequency.js <query> [options]
+    ./bible_word_frequency.js <query> [options]
 
 QUERY:
     Same patterns as bible_search.js:
@@ -42,22 +42,22 @@ RANGE SYNTAX (same as bible_get_verses):
 
 EXAMPLES:
     # Word frequency across all books
-    node bible_word_frequency.js "אלהים"
+    ./bible_word_frequency.js "אלהים"
 
     # Frequency of "light" concept by section
-    node bible_word_frequency.js "<אור>" --group-by=section
+    ./bible_word_frequency.js "<אור>" --group-by=section
 
     # Chapter-level analysis in Isaiah
-    node bible_word_frequency.js "<אור>" --range="ישעיהו" --group-by=chapter
+    ./bible_word_frequency.js "<אור>" --range="ישעיהו" --group-by=chapter
 
     # Top 10 books using word
-    node bible_word_frequency.js "שלום" --top=10
+    ./bible_word_frequency.js "שלום" --top=10
 
     # Only show books with 5+ occurrences
-    node bible_word_frequency.js "ברית" --min=5
+    ./bible_word_frequency.js "ברית" --min=5
 
     # JSON for further analysis
-    node bible_word_frequency.js "<מים>" --format=json
+    ./bible_word_frequency.js "<מים>" --format=json
 
 NOTES:
     - Aramaic sections excluded by default

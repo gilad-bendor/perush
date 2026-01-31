@@ -2,30 +2,5 @@
   "name": "bible-lingual-research",
   "version": "1.0.0",
   "description": "Biblical Hebrew linguistic research tools",
-  "type": "module",
-  "main": "bible-utils.js",
-  "scripts": {
-    "search": "node bible-utils.js",
-    "bible-search": "node bible_search.js",
-    "bible-verses": "node bible_get_verses.js",
-    "bible-structure": "node bible_get_structure.js",
-    "bible-strong": "node bible_strong_info.js",
-    "bible-frequency": "node bible_word_frequency.js",
-    "bible-root": "node bible_root_family.js",
-    "bible-cooccur": "node bible_cooccurrences.js",
-    "bible-semantic": "node bible_semantic_field.js",
-    "bible-parallels": "node bible_find_parallels.js",
-    "bible-morph": "node bible_morphology.js",
-    "test": "node tests/bible_search.test.js && node tests/bible_get_verses.test.js && node tests/bible_get_structure.test.js && node tests/bible_strong_info.test.js && node tests/bible_word_frequency.test.js && node tests/bible_root_family.test.js && node tests/bible_cooccurrences.test.js && node tests/bible_semantic_field.test.js && node tests/bible_find_parallels.test.js && node tests/bible_morphology.test.js",
-    "test:search": "node tests/bible_search.test.js",
-    "test:verses": "node tests/bible_get_verses.test.js",
-    "test:structure": "node tests/bible_get_structure.test.js",
-    "test:strong": "node tests/bible_strong_info.test.js",
-    "test:frequency": "node tests/bible_word_frequency.test.js",
-    "test:root": "node tests/bible_root_family.test.js",
-    "test:cooccur": "node tests/bible_cooccurrences.test.js",
-    "test:semantic": "node tests/bible_semantic_field.test.js",
-    "test:parallels": "node tests/bible_find_parallels.test.js",
-    "test:morph": "node tests/bible_morphology.test.js"
-  }
+  "type": "module"
 }

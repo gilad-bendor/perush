@@ -4,7 +4,7 @@
 /**
  * Tests for bible_morphology.js
  *
- * Run with: node bible_morphology.test.js
+ * Run with: ./bible_morphology.test.js
  */
 
 import {

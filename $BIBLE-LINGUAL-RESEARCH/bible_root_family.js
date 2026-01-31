@@ -15,7 +15,7 @@ INTENT/GOAL:
     methodology.
 
 SYNTAX:
-    node bible_root_family.js <root> [options]
+    ./bible_root_family.js <root> [options]
 
 ROOT FORMAT:
     3-letter root:
@@ -38,19 +38,19 @@ OPTIONS:
 
 EXAMPLES:
     # Explore the root א.ו.ר (light)
-    node bible_root_family.js אור
+    ./bible_root_family.js אור
 
     # Explore 2-letter proto-Semitic root שב (return/dwell)
-    node bible_root_family.js שב
+    ./bible_root_family.js שב
 
     # Filter to verbs only
-    node bible_root_family.js מלך --type=verb
+    ./bible_root_family.js מלך --type=verb
 
     # Include phonetically similar roots
-    node bible_root_family.js אור --phonetic
+    ./bible_root_family.js אור --phonetic
 
     # Show occurrence counts and examples
-    node bible_root_family.js אור --show-occurrences --show-examples=2
+    ./bible_root_family.js אור --show-occurrences --show-examples=2
 
 TREE FORMAT:
     The "tree" format shows hierarchical relationships:
@@ -79,6 +79,9 @@ import {
 // ============================================================================
 // Constants
 // ============================================================================
+
+// All Hebrew consonants (for root expansion)
+const HEBREW_CONSONANTS = 'אבגדהוזחטיכלמנסעפצקרשת';
 
 // Guttural consonants (phonetically similar)
 const GUTTURALS = new Set(['א', 'ה', 'ח', 'ע']);
@@ -139,17 +142,22 @@ function expand2LetterRoot(root) {
         c1 + 'ו' + c2,       // With ו infix: שוב
         c1 + 'י' + c2,       // With י infix: שיב
         c1 + 'א' + c2,       // With א infix: שאב
+        c1 + c2 + c2,        // Geminate: שבב
         c1 + c2 + 'ה',       // With ה suffix: שבה
         c1 + c2 + 'א',       // With א suffix: שבא
         c1 + c2 + 'י',       // With י suffix: שבי
         c1 + c2 + 'ע',       // With ע suffix: שבע
-        c1 + c2 + c2,        // Geminate: שבב
         c1 + c2 + 'ר',       // With ר suffix: שבר
         c1 + c2 + 'ת',       // With ת suffix: שבת
-        c1 + c2 + 'ן',       // With ן suffix: שבן
         c1 + c2 + 'ל',       // With ל suffix: שבל
         c1 + c2 + 'נ',       // With נ suffix: שבנ
+        c1 + c2 + c1 + c2,   // Reduplication: שבשב
     ];
+
+    // Add all possible third letters: שבא, שבב, שבג, ...
+    for (const c3 of HEBREW_CONSONANTS) {
+        expansions.push(c1 + c2 + c3);
+    }
 
     // Remove duplicates
     return [...new Set(expansions)];
@@ -264,7 +272,7 @@ function collectWordForms(strongNumber, maxSamples = 100) {
 
     for (const match of searchResult.matches) {
         for (const idx of match.matchedWordIndexes) {
-            const word = bible.removeTeamim(match.verse.words[idx]);
+            const word = match.verse.words[idx];
             forms.add(word);
         }
     }

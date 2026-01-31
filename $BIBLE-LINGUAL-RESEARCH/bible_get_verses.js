@@ -11,7 +11,7 @@ INTENT/GOAL:
     for understanding word usage.
 
 SYNTAX:
-    node bible_get_verses.js <reference> [options]
+    ./bible_get_verses.js <reference> [options]
 
 REFERENCE FORMATS (flexible parsing):
     Single verse:
@@ -38,19 +38,19 @@ OPTIONS:
 
 EXAMPLES:
     # Get Genesis 1:1
-    node bible_get_verses.js "בראשית 1:1"
+    ./bible_get_verses.js "בראשית 1:1"
 
     # Get Genesis 1:1 with 2 verses of context before/after
-    node bible_get_verses.js "בראשית 1:1" --context=2
+    ./bible_get_verses.js "בראשית 1:1" --context=2
 
     # Get entire first chapter of Genesis
-    node bible_get_verses.js "בראשית 1"
+    ./bible_get_verses.js "בראשית 1"
 
     # Cross-chapter range with Strong's numbers
-    node bible_get_verses.js "בראשית 1:26-2:3" --include-strongs
+    ./bible_get_verses.js "בראשית 1:26-2:3" --include-strongs
 
     # Get Exodus verses without vowel points
-    node bible_get_verses.js "שמות 3:14" --no-points
+    ./bible_get_verses.js "שמות 3:14" --no-points
 
 OUTPUT:
     Default format shows:
@@ -401,9 +401,6 @@ function parseArgs(args) {
 function formatVerseText(verse, options, isContext = false) {
     let text = verse.text;
 
-    // Always remove teamim (accents)
-    text = bible.removeTeamim(text);
-
     // Conditionally remove nikud
     if (options.noPoints) {
         text = bible.removeNikud(text);
@@ -412,8 +409,8 @@ function formatVerseText(verse, options, isContext = false) {
     // Add Strong's numbers if requested
     if (options.includeStrongs) {
         const words = options.noPoints
-            ? verse.words.map(w => bible.removeNikud(bible.removeTeamim(w)))
-            : verse.words.map(w => bible.removeTeamim(w));
+            ? verse.words.map(w => bible.removeNikud(w))
+            : verse.words;
 
         text = words.map((word, i) => {
             const strong = verse.strongs[i];
@@ -455,15 +452,14 @@ function formatMarkdown(result, options) {
         const isContext = i < result.mainStartIdx || i > result.mainEndIdx;
 
         let text = verse.text;
-        text = bible.removeTeamim(text);
         if (options.noPoints) {
             text = bible.removeNikud(text);
         }
 
         if (options.includeStrongs) {
             const words = options.noPoints
-                ? verse.words.map(w => bible.removeNikud(bible.removeTeamim(w)))
-                : verse.words.map(w => bible.removeTeamim(w));
+                ? verse.words.map(w => bible.removeNikud(w))
+                : verse.words;
 
             text = words.map((word, i) => {
                 const strong = verse.strongs[i];
@@ -492,14 +488,13 @@ function formatJson(result, options) {
         contextAfter: result.contextAfter,
         verses: result.verses.map((verse, i) => {
             let text = verse.text;
-            text = bible.removeTeamim(text);
             if (options.noPoints) {
                 text = bible.removeNikud(text);
             }
 
             const words = options.noPoints
-                ? verse.words.map(w => bible.removeNikud(bible.removeTeamim(w)))
-                : verse.words.map(w => bible.removeTeamim(w));
+                ? verse.words.map(w => bible.removeNikud(w))
+                : verse.words;
 
             return {
                 location: verse.location,

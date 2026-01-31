@@ -28,6 +28,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+const VERBOSE = false;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -35,7 +37,10 @@ const __dirname = path.dirname(__filename);
 // Configuration
 // ============================================================================
 
+// A line per word in the bible. Example line:    Isaiah	46	2	קָרְס֤וּ	7164	The gods cower	424039
 const BSB_INPUT_FILE = path.join(__dirname, '..', '..', 'hebrew', 'data', 'bsb', 'bsb-words.basic.csv');
+
+// A line per Strong's number. Example line:    | עֲמֹרָה           | עמרה           | Name         | [ 6017 ](https://biblehub.com/hebrew/6017.htm) |
 const BIBLEHUB_INPUT_FILE = path.join(__dirname, '..', '..', 'hebrew', 'data', 'biblehub', 'biblehub-entries-index.md');
 
 const WORD_TYPE_INDEX_VERB = 0;
@@ -203,14 +208,15 @@ function hebrewFinalsToRegulars(hebrewText) {
 }
 
 /**
- * Normalize Hebrew text: fix shin/sin, remove maqaf, remove sof-pasuk
+ * Normalize Hebrew text: fix shin/sin, remove maqaf, remove sof-pasuk, remove teamim
  * @param {string} hebrewText
  * @returns {string}
  */
 function normalizeHebrewText(hebrewText) {
     const normalized = fixShinSin(hebrewText)
         .replace(/־/g, '')
-        .replace(/׃[פס׆]*$/, '');
+        .replace(/׃[פס׆]*$/, '')
+        .replace(hebrewAccentsRegex, '');
 
     // Validate characters
     for (const char of normalized) {
@@ -228,15 +234,6 @@ function normalizeHebrewText(hebrewText) {
  */
 function removeNikud(hebrewText) {
     return hebrewText.replace(hebrewPointsRegex, '');
-}
-
-/**
- * Remove teamim (cantillation marks) from text
- * @param {string} hebrewText
- * @returns {string}
- */
-function removeTeamim(hebrewText) {
-    return hebrewText.replace(hebrewAccentsRegex, '');
 }
 
 /**
@@ -299,7 +296,9 @@ let _allVerses = null;
 function loadBsbData() {
     if (_bookNamesToData) return _bookNamesToData;
 
-    console.error('Loading Bible data from', BSB_INPUT_FILE);
+    if (VERBOSE) {
+        console.error('Loading Bible data from', BSB_INPUT_FILE);
+    }
 
     /** @type {Map<string, [string, number][][][]>} */
     const bookNamesToData = new Map();
@@ -392,7 +391,9 @@ function loadBsbData() {
     }
 
     _bookNamesToData = bookNamesToData;
-    console.error(`Loaded ${bookNamesToData.size} books`);
+    if (VERBOSE) {
+        console.error(`Loaded ${bookNamesToData.size} books`);
+    }
     return bookNamesToData;
 }
 
@@ -403,7 +404,9 @@ function loadBsbData() {
 function loadStrongData() {
     if (_strongNumbersToData) return _strongNumbersToData;
 
-    console.error('Loading Strong\'s data from', BIBLEHUB_INPUT_FILE);
+    if (VERBOSE) {
+        console.error('Loading Strong\'s data from', BIBLEHUB_INPUT_FILE);
+    }
 
     /** @type {StrongData[]} */
     const strongNumbersToData = [];
@@ -445,7 +448,9 @@ function loadStrongData() {
     }
 
     _strongNumbersToData = strongNumbersToData;
-    console.error(`Loaded ${strongNumbersToData.length} Strong's numbers`);
+    if (VERBOSE) {
+        console.error(`Loaded ${strongNumbersToData.length} Strong's numbers`);
+    }
     return strongNumbersToData;
 }
 
@@ -496,7 +501,9 @@ function buildAllVerses() {
     }
 
     _allVerses = allVerses;
-    console.error(`Built ${allVerses.length} verses`);
+    if (VERBOSE) {
+        console.error(`Built ${allVerses.length} verses`);
+    }
     return allVerses;
 }
 
@@ -1172,8 +1179,8 @@ function getExamples(strongNumber, count) {
 
         examples.push({
             location: match.verse.location,
-            text: removeTeamim(match.verse.text),
-            matchedWords: matchedWords.map(w => removeTeamim(w)),
+            text: match.verse.text,
+            matchedWords,
         });
     }
 
@@ -1186,8 +1193,8 @@ function getExamples(strongNumber, count) {
             const matchedWords = match.matchedWordIndexes.map(i => match.verse.words[i]);
             examples.push({
                 location: match.verse.location,
-                text: removeTeamim(match.verse.text),
-                matchedWords: matchedWords.map(w => removeTeamim(w)),
+                text: match.verse.text,
+                matchedWords,
             });
         }
     }
@@ -1232,7 +1239,6 @@ export {
 // Text processing utilities
 export {
     removeNikud,
-    removeTeamim,
     makeSearchable,
     numberToHebrew,
     normalizeHebrewText,
@@ -1296,65 +1302,8 @@ export {
     hebrewFinalsToRegulars,
     hebrewLetters,
     hebrewPoints,
-    hebrewAccents,
     hebrewCharacters,
     hebrewPointsRegex,
-    hebrewAccentsRegex,
     hebrewNonLettersRegex,
     nonHebrewLettersRegex,
 };
-
-// ============================================================================
-// CLI Test Interface
-// ============================================================================
-
-// Check if running as main module (ES module style)
-const isMainModule = process.argv[1] && import.meta.url === `file://${process.argv[1]}`;
-
-if (isMainModule) {
-    // Run as CLI: node bible-utils.js "<search query>"
-    const args = process.argv.slice(2);
-
-    if (args.length === 0) {
-        console.log('Usage: node bible-utils.js "<search query>"');
-        console.log('');
-        console.log('Examples:');
-        console.log('  node bible-utils.js "אור"          # Simple search');
-        console.log('  node bible-utils.js "<216>"        # Strong\'s number');
-        console.log('  node bible-utils.js "<אור>"        # Root word');
-        console.log('  node bible-utils.js "ה@ל@ך"        # Pattern with matres');
-        console.log('  node bible-utils.js "2שב2"         # Proto-Semitic root');
-        process.exit(0);
-    }
-
-    const query = args.join(' ');
-    console.log(`\nSearching for: ${query}\n`);
-
-    try {
-        const result = search(query, { maxResults: 20 });
-
-        if (result.strongMatches.length > 0) {
-            console.log('Strong\'s numbers matched:');
-            for (const sm of result.strongMatches.slice(0, 10)) {
-                console.log(`  H${sm.strongNumber}: ${sm.word} (${sm.type})`);
-            }
-            if (result.strongMatches.length > 10) {
-                console.log(`  ... and ${result.strongMatches.length - 10} more`);
-            }
-            console.log('');
-        }
-
-        console.log(`Regex: /${result.normalizedRegex}/g`);
-        console.log(`Found: ${result.totalMatches} matches${result.truncated ? ' (truncated)' : ''}\n`);
-
-        for (const match of result.matches) {
-            const highlightedWords = match.verse.words.map((word, i) =>
-                match.matchedWordIndexes.includes(i) ? `**${word}**` : word
-            ).join(' ');
-            console.log(`(${match.verse.location}) ${highlightedWords}`);
-        }
-    } catch (error) {
-        console.error('Error:', error.message);
-        process.exit(1);
-    }
-}

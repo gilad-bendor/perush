@@ -14,7 +14,7 @@ INTENT/GOAL:
     understanding the metaphorical mappings in allegorical interpretation.
 
 SYNTAX:
-    node bible_semantic_field.js <concept> [options]
+    ./bible_semantic_field.js <concept> [options]
 
 CONCEPT FORMAT:
     Same as bible_search.js:
@@ -37,16 +37,16 @@ OPTIONS:
 
 EXAMPLES:
     # Map the semantic field of "מים" (water)
-    node bible_semantic_field.js "<מים>"
+    ./bible_semantic_field.js "<מים>"
 
     # Explore with depth 2 (associations of associations)
-    node bible_semantic_field.js "<אור>" --depth=2
+    ./bible_semantic_field.js "<אור>" --depth=2
 
     # Focus on verbs related to a concept
-    node bible_semantic_field.js "מלך" --category=verb
+    ./bible_semantic_field.js "מלך" --category=verb
 
     # High-strength associations only
-    node bible_semantic_field.js "<ברית>" --min-strength=0.2
+    ./bible_semantic_field.js "<ברית>" --min-strength=0.2
 
 GRAPH FORMAT:
     The "graph" format outputs DOT notation for visualization:
@@ -281,7 +281,7 @@ function findDirectAssociations(query, options) {
 
             if (!cooccurrenceCounts.has(key)) {
                 cooccurrenceCounts.set(key, {
-                    word: bible.removeTeamim(word),
+                    word: word,
                     searchable: key,
                     count: 0,
                     strongSet: new Set(),
@@ -298,7 +298,7 @@ function findDirectAssociations(query, options) {
                 entry.examples.push({
                     location: verse.location,
                     book: verse.book,
-                    text: bible.removeTeamim(verse.text),
+                    text: verse.text,
                 });
             }
         }

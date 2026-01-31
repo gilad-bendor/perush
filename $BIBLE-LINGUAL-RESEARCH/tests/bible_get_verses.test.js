@@ -4,7 +4,7 @@
 /**
  * Tests for bible_get_verses.js
  *
- * Run with: node bible_get_verses.test.js
+ * Run with: ./bible_get_verses.test.js
  */
 
 import {

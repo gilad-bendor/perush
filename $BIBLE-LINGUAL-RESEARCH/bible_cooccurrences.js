@@ -17,7 +17,7 @@ INTENT/GOAL:
     meaning.
 
 SYNTAX:
-    node bible_cooccurrences.js <word> [word2] [options]
+    ./bible_cooccurrences.js <word> [word2] [options]
 
 MODES:
     Single word:    Find what co-occurs with this word
@@ -47,16 +47,16 @@ OPTIONS:
 
 EXAMPLES:
     # What words appear with "מים" (water)?
-    node bible_cooccurrences.js "<מים>"
+    ./bible_cooccurrences.js "<מים>"
 
     # Specific co-occurrence: מים and ארץ
-    node bible_cooccurrences.js "<מים>" "<ארץ>" --show-examples=3
+    ./bible_cooccurrences.js "<מים>" "<ארץ>" --show-examples=3
 
     # Adjacent co-occurrence (fixed phrases)
-    node bible_cooccurrences.js "יהוה" "אלהים" --proximity=adjacent
+    ./bible_cooccurrences.js "יהוה" "אלהים" --proximity=adjacent
 
     # Co-occurrences within 3 words
-    node bible_cooccurrences.js "<טוב>" --proximity=3
+    ./bible_cooccurrences.js "<טוב>" --proximity=3
 
 NOTES:
     - Aramaic sections excluded by default
@@ -264,7 +264,7 @@ function analyzeCooccurrences(query, options = {}) {
 
             // Get key for grouping
             let key;
-            let displayWord = bible.removeTeamim(word);
+            let displayWord = word;
 
             if (options.byStrong && strongNum > 0) {
                 key = `H${strongNum}`;
@@ -300,9 +300,9 @@ function analyzeCooccurrences(query, options = {}) {
                 entry.examples.push({
                     location: verse.location,
                     book: verse.book,
-                    text: bible.removeTeamim(verse.text),
-                    matchedWord: bible.removeTeamim(verse.words[match.matchedWordIndexes[0]]),
-                    cooccurWord: bible.removeTeamim(word),
+                    text: verse.text,
+                    matchedWord: verse.words[match.matchedWordIndexes[0]],
+                    cooccurWord: word,
                 });
             }
         }
@@ -440,13 +440,13 @@ function analyzeWordPair(query1, query2, options = {}) {
 
         // Get matched words
         const verse = data1.match.verse;
-        const word1 = bible.removeTeamim(verse.words[data1.positions[0]]);
-        const word2 = bible.removeTeamim(verse.words[data2.positions[0]]);
+        const word1 = verse.words[data1.positions[0]];
+        const word2 = verse.words[data2.positions[0]];
 
         cooccurringVerses.push({
             location,
             book: verse.book,
-            text: bible.removeTeamim(verse.text),
+            text: verse.text,
             word1,
             word2,
             distance: minDistance === Infinity ? null : minDistance,

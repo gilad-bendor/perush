@@ -11,7 +11,7 @@ INTENT/GOAL:
     optimized for uncovering linguistic patterns and word relationships.
 
 SYNTAX:
-    node bible_search.js <query> [options]
+    ./bible_search.js <query> [options]
 
 QUERY PATTERNS:
 
@@ -66,25 +66,25 @@ SPECIAL RANGES:
 
 EXAMPLES:
     # Find all forms of "light"
-    node bible_search.js "<אור>"
+    ./bible_search.js "<אור>"
 
     # Find verb "to walk" with all conjugations
-    node bible_search.js "<הלך>" --group-by=book
+    ./bible_search.js "<הלך>" --group-by=book
 
     # Pattern: any form of קדש root
-    node bible_search.js "ק@ד@ש"
+    ./bible_search.js "ק@ד@ש"
 
     # Co-occurrence: water and earth in same verse
-    node bible_search.js " מים .* ארץ "
+    ./bible_search.js " מים .* ארץ "
 
     # Proto-Semitic root analysis
-    node bible_search.js "2שב2"
+    ./bible_search.js "2שב2"
 
     # Search only in Torah, show summary
-    node bible_search.js "<ברא>" --range="תורה" --format=summary
+    ./bible_search.js "<ברא>" --range="תורה" --format=summary
 
     # Quick count
-    node bible_search.js "אלהים" --count-only
+    ./bible_search.js "אלהים" --count-only
 
 OUTPUT FORMATS:
 

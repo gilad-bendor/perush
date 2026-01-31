@@ -4,7 +4,7 @@
 /**
  * Tests for bible_word_frequency.js
  *
- * Run with: node bible_word_frequency.test.js
+ * Run with: ./bible_word_frequency.test.js
  */
 
 import {

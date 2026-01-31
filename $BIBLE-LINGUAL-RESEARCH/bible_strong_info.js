@@ -11,7 +11,7 @@ INTENT/GOAL:
     homographs (same spelling, different meaning) and tracking word families.
 
 SYNTAX:
-    node bible_strong_info.js <query> [options]
+    ./bible_strong_info.js <query> [options]
 
 QUERY TYPES:
 
@@ -46,7 +46,7 @@ WORD TYPES (English / Hebrew):
 
 EXAMPLES:
     # Look up Strong's H216 (light)
-    node bible_strong_info.js 216
+    ./bible_strong_info.js 216
 
     Output:
         H216: אוֹר
@@ -55,7 +55,7 @@ EXAMPLES:
         BibleHub: https://biblehub.com/hebrew/216.htm
 
     # Find all Strong's for root אור
-    node bible_strong_info.js אור
+    ./bible_strong_info.js אור
 
     Output:
         Found 4 Strong's numbers for "אור":
@@ -77,7 +77,7 @@ EXAMPLES:
           Occurrences: 5
 
     # Find all Strong's for אור, verbs only, with examples
-    node bible_strong_info.js אור --type=verb --show-examples=2
+    ./bible_strong_info.js אור --type=verb --show-examples=2
 
     Output:
         Found 1 Strong's number for "אור" (verb):
@@ -90,7 +90,7 @@ EXAMPLES:
             (שמות יג:כא) לְהָאִיר לָהֶם
 
     # Get a range of Strong's numbers (useful for exploring)
-    node bible_strong_info.js 215-220
+    ./bible_strong_info.js 215-220
 
 NOTES ON STRONG'S NUMBERS:
     - Strong's numbers were created by James Strong in 1890

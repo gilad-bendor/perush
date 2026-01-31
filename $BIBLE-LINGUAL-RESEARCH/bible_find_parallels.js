@@ -15,7 +15,7 @@ INTENT/GOAL:
     - Helps understand word meaning through parallel substitution
 
 SYNTAX:
-    node bible_find_parallels.js <reference> [options]
+    ./bible_find_parallels.js <reference> [options]
 
 OPTIONS:
     --min-similarity=N  Minimum similarity score (0-1, default: 0.3)
@@ -30,13 +30,13 @@ OPTIONS:
 
 EXAMPLES:
     # Find verses parallel to Genesis 1:1
-    node bible_find_parallels.js "בראשית 1:1"
+    ./bible_find_parallels.js "בראשית 1:1"
 
     # Find parallels in different books only
-    node bible_find_parallels.js "דברים 6:4" --different-book
+    ./bible_find_parallels.js "דברים 6:4" --different-book
 
     # Higher similarity threshold
-    node bible_find_parallels.js "תהילים 23:1" --min-similarity=0.4
+    ./bible_find_parallels.js "תהילים 23:1" --min-similarity=0.4
 
 SIMILARITY CALCULATION:
     Similarity is based on:
@@ -325,7 +325,7 @@ function findParallels(sourceRef, options) {
         return {
             source: {
                 reference: sourceVerse.location,
-                text: bible.removeTeamim(sourceVerse.text),
+                text: sourceVerse.text,
                 strongs: sourceVerse.strongs.filter(s => s > 0),
             },
             parallels: [],
@@ -386,7 +386,7 @@ function findParallels(sourceRef, options) {
             results.push({
                 reference: candidate.location,
                 book: candidate.book,
-                text: bible.removeTeamim(candidate.text),
+                text: candidate.text,
                 similarity: parseFloat(similarity.toFixed(3)),
                 sharedStrongs,
                 sharedWords,
@@ -402,7 +402,7 @@ function findParallels(sourceRef, options) {
         source: {
             reference: sourceVerse.location,
             book: sourceVerse.book,
-            text: bible.removeTeamim(sourceVerse.text),
+            text: sourceVerse.text,
             strongs: sourceVerse.strongs.filter(s => s > 0 && !STOPWORD_STRONGS.has(s)),
         },
         parallels: results.slice(0, options.maxResults),

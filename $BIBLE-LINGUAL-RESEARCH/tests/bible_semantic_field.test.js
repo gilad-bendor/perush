@@ -4,7 +4,7 @@
 /**
  * Tests for bible_semantic_field.js
  *
- * Run with: node bible_semantic_field.test.js
+ * Run with: ./bible_semantic_field.test.js
  */
 
 import {

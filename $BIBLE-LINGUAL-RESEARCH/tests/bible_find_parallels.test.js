@@ -4,7 +4,7 @@
 /**
  * Tests for bible_find_parallels.js
  *
- * Run with: node bible_find_parallels.test.js
+ * Run with: ./bible_find_parallels.test.js
  */
 
 import {

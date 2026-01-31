@@ -11,7 +11,7 @@ INTENT/GOAL:
     understanding the scope of analysis.
 
 SYNTAX:
-    node bible_get_structure.js [book] [chapter] [options]
+    ./bible_get_structure.js [book] [chapter] [options]
 
 ARGUMENTS:
     (none)          List all books with chapter counts, organized by section
@@ -30,7 +30,7 @@ OPTIONS:
 
 EXAMPLES:
     # List all books with chapter counts
-    node bible_get_structure.js
+    ./bible_get_structure.js
 
     Output:
         תורה:
@@ -44,7 +44,7 @@ EXAMPLES:
           ...
 
     # Get chapters in Genesis
-    node bible_get_structure.js בראשית
+    ./bible_get_structure.js בראשית
 
     Output:
         בראשית - 50 פרקים:
@@ -54,13 +54,13 @@ EXAMPLES:
           ...
 
     # Get verse count for specific chapter
-    node bible_get_structure.js בראשית 1
+    ./bible_get_structure.js בראשית 1
 
     Output:
         בראשית פרק א: 31 פסוקים
 
     # JSON output for programmatic use
-    node bible_get_structure.js בראשית --format=json
+    ./bible_get_structure.js בראשית --format=json
 
 ARAMAIC SECTIONS:
     Certain portions of the Bible are in Aramaic rather than Hebrew:

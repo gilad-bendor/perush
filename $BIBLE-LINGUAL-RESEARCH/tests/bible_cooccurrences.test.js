@@ -4,7 +4,7 @@
 /**
  * Tests for bible_cooccurrences.js
  *
- * Run with: node bible_cooccurrences.test.js
+ * Run with: ./bible_cooccurrences.test.js
  */
 
 import {

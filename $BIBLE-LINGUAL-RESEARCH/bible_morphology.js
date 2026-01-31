@@ -17,8 +17,8 @@ INTENT/GOAL:
     WHERE it appears.
 
 SYNTAX:
-    node bible_morphology.js <strong-number> [options]
-    node bible_morphology.js "<root>" [options]
+    ./bible_morphology.js <strong-number> [options]
+    ./bible_morphology.js "<root>" [options]
 
 OPTIONS:
     --group-by=MODE     Grouping: "form" (default), "binyan", "prefix", "suffix"
@@ -30,16 +30,16 @@ OPTIONS:
 
 EXAMPLES:
     # Analyze verb "שמר" (to guard/keep) by Strong's number
-    node bible_morphology.js 8104
+    ./bible_morphology.js 8104
 
     # Analyze by root (finds all Strong's for that root)
-    node bible_morphology.js "<שמר>"
+    ./bible_morphology.js "<שמר>"
 
     # Group by prefix patterns
-    node bible_morphology.js 8104 --group-by=prefix
+    ./bible_morphology.js 8104 --group-by=prefix
 
     # Group by suffix patterns (for nouns with possessives)
-    node bible_morphology.js 1285 --group-by=suffix
+    ./bible_morphology.js 1285 --group-by=suffix
 
 MORPHOLOGICAL PATTERNS DETECTED:
 
@@ -141,7 +141,7 @@ function parseRange(rangeStr) {
  * Get the consonants only (remove nikud, teamim, and shin/sin dots)
  */
 function getConsonants(word) {
-    let result = bible.removeTeamim(bible.removeNikud(word));
+    let result = bible.removeNikud(word);
     // Also remove shin dot (U+05C1) and sin dot (U+05C2)
     result = result.replace(/[\u05C1\u05C2]/g, '');
     return result;
@@ -161,7 +161,7 @@ function getFirstConsonant(word) {
  * Detect prefix pattern
  */
 function detectPrefix(word) {
-    const clean = bible.removeTeamim(word);
+    const clean = word;
     const consonants = getConsonants(word);
 
     if (consonants.length === 0) return { prefix: 'none', description: 'empty' };
@@ -235,7 +235,7 @@ function detectPrefix(word) {
  * Detect suffix pattern
  */
 function detectSuffix(word) {
-    const clean = bible.removeTeamim(word);
+    const clean = word;
     const consonants = getConsonants(word);
 
     // Check possessive suffixes first (more specific)
@@ -553,7 +553,7 @@ function analyzeMorphology(query, options) {
  */
 function detectBinyan(occurrence) {
     const consonants = getConsonants(occurrence.word);
-    const clean = bible.removeTeamim(occurrence.word);
+    const clean = occurrence.word;
 
     // Check for Niphal (נ prefix in perfect, or vowel pattern)
     if (consonants.startsWith('נ') && consonants.length > 3) {
@@ -635,7 +635,6 @@ function getGroupDescription(key, groupBy, sampleOcc) {
 // ============================================================================
 
 function formatWord(word, noPoints) {
-    word = bible.removeTeamim(word);
     return noPoints ? bible.removeNikud(word) : word;
 }
 
