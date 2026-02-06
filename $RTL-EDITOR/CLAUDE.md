@@ -85,7 +85,11 @@ Use these files for testing (in `test-files/` directory):
 4. Test with both English and Hebrew files
 
 ### Debugging with Playwright
+
 The project includes `playwright-test.ts` for browser automation and debugging.
+Playwright is the **primary tool for investigating visual/UI bugs** in this editor.
+
+#### Quick-start CLI usage
 
 ```bash
 # Open browser and keep it open for inspection (headed mode)
@@ -107,7 +111,7 @@ bun run playwright-test.ts --url=http://localhost:4000 --eval="document.querySel
 bun run playwright-test.ts --url=http://localhost:4000 --headless --screenshot=test.png
 ```
 
-#### Playwright Options
+#### CLI Options
 - `--url=<url>` - URL to open (default: http://localhost:3000, use http://localhost:4000 for this project)
 - `--headless` - Run without visible browser window
 - `--screenshot=<path>` - Save screenshot to file
@@ -118,13 +122,88 @@ bun run playwright-test.ts --url=http://localhost:4000 --headless --screenshot=t
 - `--console` - Log browser console messages
 - `--eval=<code>` - Execute JavaScript in browser context
 
+#### Writing custom Playwright diagnostic scripts
+
+For complex visual bugs (cursor positioning, RTL layout, selection behavior, etc.),
+write a **custom TypeScript Playwright script** and run it with `bun run <script.ts>`.
+This is much more powerful than the CLI flags above.
+
+**Prerequisites:** The dev server must be running (`bun run dev` on port 4000).
+
+**Key patterns for custom scripts:**
+
+1. **Accessing the EditorView** — `app.js` exposes the editor as `window._editor`:
+   ```js
+   const result = await page.evaluate(() => {
+     const editor = window._editor;
+     const tabData = editor.tabs.get(editor.activeTab);
+     const view = tabData.editorView;  // This is the CodeMirror EditorView
+     // Now you can call view.state, view.posAtCoords(), view.coordsAtPos(), etc.
+   });
+   ```
+   NOTE: `cmView` is NOT accessible on the `.cm-editor` DOM element in Playwright's
+   evaluate context. Always use `window._editor` instead.
+
+2. **Opening a file programmatically** — the file tree starts with directories collapsed:
+   ```js
+   // Expand all directories first
+   await page.evaluate(() => {
+     document.querySelectorAll('.file-children').forEach(el => {
+       (el as HTMLElement).style.display = 'block';
+     });
+   });
+   // Then click the file
+   const file = page.locator('.file-item.file', { hasText: 'FILENAME' });
+   await file.scrollIntoViewIfNeeded();
+   await file.click();
+   ```
+
+3. **Taking screenshots with visual markers** (useful for click-vs-cursor analysis):
+   ```js
+   await page.evaluate(({x, y}) => {
+     const marker = document.createElement('div');
+     marker.style.cssText = `position:fixed; left:${x}px; top:${y-15}px; width:2px; height:30px; background:red; z-index:99999; pointer-events:none;`;
+     document.body.appendChild(marker);
+   }, { x: clickX, y: clickY });
+   await page.screenshot({ path: 'debug.png' });
+   ```
+
+4. **Headed mode** — launches a real visible Chrome window for manual inspection:
+   ```ts
+   const browser = await chromium.launch({ headless: false, slowMo: 200 });
+   ```
+   Use `await page.waitForTimeout(30000)` to keep it open for observation.
+
+5. **Measuring cursor accuracy** — compare click position vs cursor DOM position:
+   ```js
+   await page.mouse.click(x, y);
+   const cursor = await page.evaluate(() => {
+     const el = document.querySelector('.editor-wrapper.active .cm-cursor');
+     return el?.getBoundingClientRect().left;
+   });
+   console.log(`click=${x}, cursor=${cursor}, delta=${cursor - x}`);
+   ```
+
 #### Useful Selectors for Debugging
 - `.file-tree` - File tree container
 - `.file-item.file` - File entries in tree
 - `.file-item.directory` - Directory entries in tree
 - `.editor-wrapper` - Editor container (check for `.rtl` class)
+- `.editor-wrapper.active` - Currently visible editor (use this to scope queries)
 - `.cm-editor` - CodeMirror editor root
-- `.cm-content` - Editor content area
-- `.cm-line` - Individual lines
+- `.cm-content` - Editor content area (has `direction: rtl` for RTL files)
+- `.cm-line` - Individual text lines
+- `.cm-cursor` - Cursor element (positioned absolutely within `.cm-cursorLayer`)
+- `.cm-cursorLayer` - Cursor overlay layer (absolute, `direction: ltr`, starts at scroller left)
+- `.cm-selectionLayer` - Selection highlight layer
+- `.cm-gutters` - Line number gutter (`position: sticky`, always on the LEFT side)
 - `.tab` - Tab buttons
 - `.tab.active` - Currently active tab
+
+### Known RTL quirks
+
+- **Cursor layer uses LTR coordinates**: `.cm-cursorLayer` has `direction: ltr` even when content is `direction: rtl`. The cursor's CSS `left` is always relative to the scroller's left edge (which includes the gutter width of ~36px).
+- **Gutter is always on the left**: Even for RTL files, the line-number gutter is on the left side. The content area starts after the gutter.
+- **Short RTL lines and empty space**: RTL text is right-aligned within the `.cm-line` element. Clicking in the empty space to the LEFT of short text correctly places the cursor at end-of-line (the leftmost text position in RTL). This is expected CodeMirror behavior.
+- **Previous cursor offset attempts**: There have been two prior attempts to fix RTL cursor positioning — a CSS `left: 0.5em` rule (removed, caused offset issues) and a commented-out `mouseup` handler in `markdown-editor.js` (lines ~226-258). See the comments in the code for details.
+- **Font fallback**: RTL content uses `fontFamily: 'David', 'Narkisim', 'Times New Roman', serif`. David and Narkisim are not standard macOS fonts — Playwright's Chromium will likely fall back to Times New Roman, which may produce different character metrics than the user's browser.

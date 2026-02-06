@@ -272,6 +272,23 @@ export class MarkdownEditor {
                     fontFamily: "'David', 'Narkisim', 'Times New Roman', serif"
                 }
             }));
+
+            // Fix RTL cursor/selection offset caused by vertical scrollbar.
+            // When the scroller has a vertical scrollbar, it takes space from the right side.
+            // RTL text shifts left accordingly, but CodeMirror's cursor/selection layers
+            // don't account for this shift. We compensate by translating those layers.
+            extensions.push(ViewPlugin.fromClass(class {
+                constructor(/** @type {EditorView} */ view) { this.adjustLayers(view); }
+                update(/** @type {{view: EditorView}} */ update) { this.adjustLayers(update.view); }
+                adjustLayers(/** @type {EditorView} */ view) {
+                    const scrollbarWidth = view.scrollDOM.offsetWidth - view.scrollDOM.clientWidth;
+                    const transform = scrollbarWidth > 0 ? `translateX(${scrollbarWidth}px)` : '';
+                    for (const sel of '.cm-cursorLayer,.cm-selectionLayer'.split(',')) {
+                        const el = /** @type {HTMLElement | null} */ (view.dom.querySelector(sel));
+                        if (el) el.style.transform = transform;
+                    }
+                }
+            }));
         }
 
         return new EditorView({

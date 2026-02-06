@@ -189,7 +189,7 @@ body {
 
 }
 
-/* RTL cursor/selection positioning - removed the previous "left: 0.5em" fix as it was causing an offset issue */
+/* RTL cursor/selection offset fix: see ViewPlugin in markdown-editor.js (rtl scrollbar fix) */
 
 .loading {
     opacity: 0.5;
