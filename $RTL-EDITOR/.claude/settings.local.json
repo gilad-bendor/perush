@@ -16,8 +16,5 @@
       "Bash(node:*)"
     ],
     "deny": []
-  },
-  "disabledMcpjsonServers": [
-    "biblical-commentary-server"
-  ]
+  }
 }

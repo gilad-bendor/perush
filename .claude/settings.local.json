@@ -4,8 +4,6 @@
       "Read(//Users/giladben-dor/Library/Application Support/Claude/**)",
       "Read(//Users/giladben-dor/Library/Logs/Claude/**)",
       "Bash(chmod:*)",
-      "mcp__biblical-commentary-server__list_commentary_files_range",
-      "mcp__biblical-commentary-server__search_commentary_files_by_regexp",
       "WebSearch",
       "WebFetch(domain:en.wikipedia.org)",
       "WebFetch(domain:plato.stanford.edu)",

@@ -2,7 +2,7 @@
 set -o pipefail
 cd "$( dirname "$( dirname "$( realpath "$0" )" )" )" || exit 1
 
-OUTPUT_FILE="_scratch_prompt-without-mcp.rtl.md"
+OUTPUT_FILE="_scratch_prompt.rtl.md"
 
 # Read perush file paths from stdin.
 echo "Paste the path of all relevant perush files, one per line, followed by Ctrl-D:" 1>&2
@@ -11,15 +11,42 @@ echo 1>&2
 
 {
   # Add the file CLAUDE.md - up to (and excluding) the section "## חיפוש קבצי פירוש רלבנטיים".
-  gawk '/^## חיפוש קבצי פירוש רלבנטיים/ { exit(0); } { print }' CLAUDE.md
+  grep -v "פירוש/הקדמה-לפירוש.rtl.md" CLAUDE.md |
+  gawk '
+    /^# / {
+      main_section = $0;
+      print "main_section=\"" main_section "\"" > "/dev/stderr"
+    }
+    (main_section != "# קבצי הפירוש") {
+      print;
+    }
+  '
+
 
   # Add all the perush files specified by the user.
-  for PERUSH_PATH in "${PERUSH_PATHS[@]}" ; do
+  for PERUSH_PATH in "פירוש/הקדמה-לפירוש.rtl.md" "${PERUSH_PATHS[@]}" ; do
     if [[ -f "$PERUSH_PATH" ]]; then
       echo "Adding file:  \"$PERUSH_PATH\"" 1>&2
       PERUSH_FILENAME="$( basename "$PERUSH_PATH" )"
+
+      if [[ "$PERUSH_PATH" == "פירוש/הקדמה-לפירוש.rtl.md" ]] ; then
+        PERUSH_FILE_NICKNAME='"הקדמה לפירוש"'
+      else
+        PERUSH_FILE_NICKNAME="$( gawk '
+                match($0, /^[0-9]+-(בראשית|שמות|ויקרא|במדבר|דברים)-([א-ת][א-ת]?)_([א-ת][א-ת]?)-([א-ת][א-ת]?)_([א-ת][א-ת]?)-(.*)\.rtl\.md$/, m) {
+                  gsub(/[-_]/, " ", m[6]);
+                  print m[1] " פרק " m[2] " פסוק " m[3] " עד פרק " m[4] " פסוק " m[5] ": \"" m[6] "\"";
+                  next;
+                }
+                {
+                  print "ERROR: Invalid perush-file name: \"" $0 "\"" > "/dev/stderr"
+                  exit(1);
+                }
+            ' <<< "$PERUSH_FILENAME" )"
+      fi
+
       echo
-      echo "=== START OF PERUSH-FILE \"$PERUSH_FILENAME\" ==="
+      echo "=== התחלת מקטע: $PERUSH_FILE_NICKNAME ==="
 
       # Add the file content, trimming multiple blank lines to a single blank line, and making sure it has a leading and terminating empty-line.
       {
@@ -43,7 +70,7 @@ echo 1>&2
           }
         }
       '
-      echo "=== END OF PERUSH-FILE \"$PERUSH_FILENAME\" ==="
+      echo "=== סיום מקטע: $PERUSH_FILE_NICKNAME ==="
       echo
     else
       echo "Ignoring non-file:  \"$PERUSH_PATH\"" 1>&2
