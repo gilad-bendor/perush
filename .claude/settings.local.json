@@ -3,12 +3,22 @@
     "allow": [
       "Read(//Users/giladben-dor/Library/Application Support/Claude/**)",
       "Read(//Users/giladben-dor/Library/Logs/Claude/**)",
-      "Bash(chmod:*)",
       "WebSearch",
       "WebFetch(domain:en.wikipedia.org)",
       "WebFetch(domain:plato.stanford.edu)",
       "WebFetch(domain:iep.utm.edu)",
-      "Bash(cp:*)"
+      "Bash(chmod:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(echo:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(gawk:*)",
+      "Bash(node:*)",
+      "Bash(./scripts/hebrew-grep:*)"
     ],
     "deny": []
   }

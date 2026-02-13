@@ -87,6 +87,10 @@ export class TabData {
     }
 
     async updateFromServer() {
+        // Do not alert and move the focus to the browser - if the browser os not already focused.
+        if (!document.hasFocus()) {
+            return;
+        }
         // Load file content from server.
         if (this.autosaveTimeoutId) {
             return;

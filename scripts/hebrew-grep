@@ -1,0 +1,119 @@
+#!/usr/local/bin/node
+
+const usage=`
+    Usage: hebrew-grep [regular-expression] [one or more files and folders...]
+    
+    Usage examples:
+      - Find the *whole* word "נחש" in a Perush file (notice how we wrap "נחש" with spaces):
+          hebrew-grep ' נחש ' פירוש/1-בראשית/1030-בראשית-ב_יח-ג_כד-אדם_ואשה.rtl.md
+      - Find any word that includes "נ" then "ח" then "ש", in the whole book of Genesis (folders are searched recursively):
+          hebrew-grep 'נ[^ ]*ח[^ ]*ש' פירוש/1-בראשית
+    
+    When searching a line in a file:
+      - The search ignores Hebrew nikud (Punctuation)
+      - The search treats all non-Hebrew-sequences as a single space
+      - Space is added before the first line, and after the last line
+    The result: the search only see space-delimited list of Hebrew words (every word has a single space in both ends).
+    
+    The output is YAML like, following this format:
+    
+    - file-path
+      - line-number: [book perek:pasuk]<tab>full-matched-line
+      - ...
+    - file-path
+      - ...
+      - ...
+    
+    Full example:
+          hebrew-grep 'נ[^ ]*ח[^ ]*ש' פירוש/1-בראשית
+          - פירוש/1-בראשית/1030-בראשית-ב_יח-ג_כד-אדם_ואשה.rtl.md
+            - 77: [בראשית ג:א]	> בראשית ג א: וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה אֲשֶׁר עָשָׂה יְהוָה אֱלֹהִים; וַיֹּאמֶר אֶל הָאִשָּׁה אַף כִּי אָמַר אֱלֹהִים לֹא תֹאכְלוּ מִכֹּל עֵץ הַגָּן.
+            - 101: [בראשית ג:ג]	האישה מוצאת את עצמה במציאות שבה מסוכן להיות עירומה וללא מחיצות (לזרום עם הנחש) ומסוכן לאכול כל תובנה בחופשיות (לאכול מעץ החיים).
+`.replace(/\n    /g, '\n').trim()
+
+const fs = require('fs')
+const path = require('path')
+
+// Hebrew nikud (vowel points and cantillation marks) — excludes maqaf (U+05BE),
+// paseq (U+05C0), sof pasuq (U+05C3), nun hafukha (U+05C6) so they act as word separators.
+const NIKUD_RE = /[\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7]/g
+
+// Hebrew letters: alef (U+05D0) through tav (U+05EA)
+const NON_HEBREW_RE = /[^\u05D0-\u05EA]+/g
+
+// Verse quote line: > book chapter verse: ...
+const VERSE_RE = /^>\s*(\S+)\s+(\S+)\s+(\S+)\s*:/
+
+function normalizeForSearch(line) {
+  let s = line.replace(NIKUD_RE, '')
+  s = s.replace(NON_HEBREW_RE, ' ')
+  return ' ' + s + ' '
+}
+
+function collectFiles(target) {
+  let stat
+  try { stat = fs.statSync(target) } catch { return [] }
+  if (stat.isFile()) return [target]
+  if (stat.isDirectory()) {
+    const results = []
+    for (const entry of fs.readdirSync(target, { recursive: true })) {
+      const full = path.join(target, String(entry))
+      try { if (fs.statSync(full).isFile()) results.push(full) } catch {}
+    }
+    return results.sort()
+  }
+  return []
+}
+
+function searchFile(filePath, regex) {
+  let content
+  try { content = fs.readFileSync(filePath, 'utf-8') } catch { return [] }
+  const lines = content.split('\n')
+  let currentRef = null
+  const matches = []
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    const verseMatch = line.match(VERSE_RE)
+    if (verseMatch) {
+      currentRef = `${verseMatch[1]} ${verseMatch[2]}:${verseMatch[3]}`
+    }
+    const normalized = normalizeForSearch(line)
+    if (regex.test(normalized)) {
+      const ref = currentRef ? `[${currentRef}]` : ''
+      matches.push({ lineNum: i + 1, ref, line: line.trimEnd() })
+    }
+  }
+  return matches
+}
+
+// --- main ---
+
+const args = process.argv.slice(2)
+if (args.length < 2 || args.includes('--help') || args.includes('-h')) {
+  console.log(usage)
+  process.exit(args.length < 2 && !args.includes('--help') && !args.includes('-h') ? 1 : 0)
+}
+
+const pattern = args[0]
+const targets = args.slice(1)
+
+let regex
+try {
+  regex = new RegExp(pattern)
+} catch (e) {
+  console.error(`Invalid regex: ${pattern}\n${e.message}`)
+  process.exit(1)
+}
+
+const files = targets.flatMap(t => collectFiles(t))
+
+for (const file of files) {
+  const matches = searchFile(file, regex)
+  if (matches.length > 0) {
+    console.log(`- ${file}`)
+    for (const m of matches) {
+      console.log(`  - ${m.lineNum}: ${m.ref}\t${m.line}`)
+    }
+  }
+}

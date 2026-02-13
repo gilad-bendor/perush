@@ -535,7 +535,7 @@ export class MarkdownEditor {
      */
     isRtlFile(filePath, content) {
         // Check explicit RTL file extensions
-        if (filePath.endsWith('.rtl.md') || filePath === 'CLAUDE.md') {
+        if (filePath.endsWith('.rtl.md')) {
             return true;
         }
 
