@@ -239,7 +239,8 @@ async function getAllRtlFiles(dirPath) {
 async function task2() {
     console.log('TASK 2: Processing commentary files...');
 
-    const rtlFiles = await getAllRtlFiles(PERUSH_BASE_DIR);
+    const rtlFiles = (await getAllRtlFiles(PERUSH_BASE_DIR))
+        .filter(rtlFile => rtlFile.fileName !== 'הקדמה-לפירוש.rtl.md');
     console.log(`Found ${rtlFiles.length} RTL files`);
 
     for (const file of rtlFiles) {

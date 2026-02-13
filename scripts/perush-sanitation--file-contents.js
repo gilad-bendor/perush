@@ -111,6 +111,7 @@ function commitChanges() {
  */
 function sanitizeFile(fileInfo) {
     try {
+        replaceNbsp(fileInfo);
         fixHtmlQuotes(fileInfo);
         verifyMarkdownLinks(fileInfo);
     } catch (error) {
@@ -118,6 +119,14 @@ function sanitizeFile(fileInfo) {
     }
 }
 
+
+/**
+ * Replace all NBSP (non-breaking spaces) with normal spaces.
+ * @param {FileInfo} fileInfo
+ */
+function replaceNbsp(fileInfo) {
+    fileInfo.effectiveContent = fileInfo.effectiveContent.replace(/\u00A0/g, ' ');
+}
 
 /**
  * Given a Markdown file with:
