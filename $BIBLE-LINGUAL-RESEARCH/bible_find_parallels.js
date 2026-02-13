@@ -24,7 +24,6 @@ OPTIONS:
     --different-book    Only find parallels in different books
     --highlight         Highlight matching words in output
     --range=RANGE       Limit search to specific range
-    --include-aramaic   Include Aramaic sections
     --no-points         Remove nikud from output
     --format=FORMAT     Output format: "text" (default), "json"
 
@@ -50,13 +49,12 @@ SIMILARITY CALCULATION:
 NOTES:
     - Similarity matching uses Strong's numbers, not just spelling
     - Common words (את, אשר) are weighted lower
-    - Aramaic sections excluded by default
+    - Aramaic sections excluded (not relevant for Hebrew linguistic research)
 `;
 
 import * as bible from './bible-utils.js';
 import {
     STOPWORD_STRONGS,
-    isAramaicVerse,
     parseRange,
     parseHebrewOrArabicNumber,
 } from './bible-utils.js';
@@ -106,7 +104,6 @@ function parseArgs(args) {
         differentBook: false,
         highlight: false,
         range: null,
-        includeAramaic: false,
         noPoints: false,
         format: 'text',
         help: false,
@@ -129,8 +126,6 @@ function parseArgs(args) {
             options.highlight = true;
         } else if (arg.startsWith('--range=')) {
             options.range = arg.substring(8);
-        } else if (arg === '--include-aramaic') {
-            options.includeAramaic = true;
         } else if (arg === '--no-points') {
             options.noPoints = true;
         } else if (arg.startsWith('--format=')) {
@@ -172,8 +167,6 @@ function buildIDF(options) {
     let total = 0;
 
     for (const verse of allVerses) {
-        if (!options.includeAramaic && isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
-
         total++;
         const seenStrongs = new Set();
 
@@ -289,7 +282,6 @@ function buildInvertedIndex(options) {
             if (!rangeFilter.books.has(verse.book)) continue;
             if (!rangeFilter.chapterFilter(verse.book, verse.chapterIndex)) continue;
         }
-        if (!options.includeAramaic && isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
 
         const seenStrongs = new Set();
 
@@ -314,10 +306,6 @@ function buildInvertedIndex(options) {
 function findParallels(sourceRef, options) {
     const { book, chapter, verse } = parseReference(sourceRef);
     const sourceVerse = findVerse(book, chapter, verse);
-
-    if (!options.includeAramaic && isAramaicVerse(sourceVerse.book, sourceVerse.chapterIndex, sourceVerse.verseIndex)) {
-        throw new Error('Source verse is in Aramaic section. Use --include-aramaic to search.');
-    }
 
     const sourceSig = getVerseSignature(sourceVerse);
 
@@ -519,7 +507,6 @@ export {
     parseReference,
     parseRange,
     parseNumber,
-    isAramaicVerse,
     buildIDF,
     getVerseSignature,
     calculateSimilarity,

@@ -24,7 +24,6 @@ OPTIONS:
     --group-by=MODE     Grouping: "form" (default), "binyan", "prefix", "suffix"
     --show-examples=N   Show N examples per form (default: 2)
     --range=RANGE       Limit to specific range
-    --include-aramaic   Include Aramaic sections
     --no-points         Remove nikud from output
     --format=FORMAT     Output format: "text" (default), "json"
 
@@ -67,13 +66,12 @@ MORPHOLOGICAL PATTERNS DETECTED:
 NOTES:
     - This tool detects patterns from spelling, not from tagged data
     - Accuracy is limited by ambiguous forms
-    - Aramaic sections excluded by default
+    - Aramaic sections excluded (not relevant for Hebrew linguistic research)
 `;
 
 import * as bible from './bible-utils.js';
 import {
     SECTION_NAMES,
-    isAramaicVerse,
 } from './bible-utils.js';
 
 // Hebrew letter categories for morphological detection
@@ -346,7 +344,6 @@ function parseArgs(args) {
         groupBy: 'form',
         showExamples: 2,
         range: null,
-        includeAramaic: false,
         noPoints: false,
         format: 'text',
         help: false,
@@ -363,8 +360,6 @@ function parseArgs(args) {
             options.showExamples = parseInt(arg.substring(16), 10);
         } else if (arg.startsWith('--range=')) {
             options.range = arg.substring(8);
-        } else if (arg === '--include-aramaic') {
-            options.includeAramaic = true;
         } else if (arg === '--no-points') {
             options.noPoints = true;
         } else if (arg.startsWith('--format=')) {
@@ -402,9 +397,6 @@ function findOccurrences(strongNum, options) {
     for (const verse of allVerses) {
         // Filter by range
         if (rangeFilter && !rangeFilter.books.has(verse.book)) continue;
-
-        // Filter Aramaic
-        if (!options.includeAramaic && isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
 
         // Find matching words
         for (let i = 0; i < verse.strongs.length; i++) {
@@ -798,7 +790,6 @@ async function main() {
 export {
     parseArgs,
     parseRange,
-    isAramaicVerse,
     detectPrefix,
     detectSuffix,
     detectForm,

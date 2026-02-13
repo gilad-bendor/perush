@@ -10,7 +10,6 @@
 import {
     parseArgs,
     parseRange,
-    isAramaicVerse,
     isStopword,
     analyzeCooccurrences,
     analyzeWordPair,
@@ -126,11 +125,6 @@ test('parses --range option', () => {
     assertEqual(opts.range, 'בראשית');
 });
 
-test('parses --include-aramaic option', () => {
-    const opts = parseArgs(['מים', '--include-aramaic']);
-    assertTrue(opts.includeAramaic);
-});
-
 test('parses --include-stopwords option', () => {
     const opts = parseArgs(['מים', '--include-stopwords']);
     assertTrue(opts.includeStopwords);
@@ -185,22 +179,6 @@ test('parses single book', () => {
 
 test('throws on unknown book', () => {
     assertThrows(() => parseRange('unknown'), 'Unknown book');
-});
-
-// ------------------------------------------
-console.log('\nisAramaicVerse:');
-// ------------------------------------------
-
-test('identifies Genesis 31:47 as Aramaic', () => {
-    assertTrue(isAramaicVerse('בראשית', 30, 46));
-});
-
-test('identifies non-Aramaic verse', () => {
-    assertTrue(!isAramaicVerse('בראשית', 0, 0));
-});
-
-test('identifies Daniel Aramaic section', () => {
-    assertTrue(isAramaicVerse('דניאל', 2, 5));
 });
 
 // ------------------------------------------

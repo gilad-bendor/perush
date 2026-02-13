@@ -476,6 +476,24 @@ function buildAllVerses() {
                 const verseData = chapterData[verseIndex];
                 const verseHebrew = numberToHebrew(verseIndex);
 
+                // Skip Aramaic verses - make them completely unsearchable
+                if (isAramaicVerse(hebrewBookName, chapterIndex, verseIndex)) {
+                    allVerses.push({
+                        book: hebrewBookName,
+                        chapterIndex,
+                        verseIndex,
+                        chapter: chapterHebrew,
+                        verse: verseHebrew,
+                        location: `${hebrewBookName} ${chapterHebrew}:${verseHebrew}`,
+                        words: [],
+                        strongs: [],
+                        text: 'ARAMAIC-VERSE-SKIPPED',
+                        searchableVerse: '',
+                        isAramaic: true,
+                    });
+                    continue;
+                }
+
                 const words = verseData.map(([word]) => normalizeHebrewText(word));
                 const strongs = verseData.map(([, strong]) => strong);
 
@@ -1262,12 +1280,6 @@ export {
     SECTION_NAMES,
     hebrewBookNames,
     hebrewWordTypes,
-};
-
-// Aramaic handling
-export {
-    ARAMAIC_SECTIONS,
-    isAramaicVerse,
 };
 
 // Word type handling

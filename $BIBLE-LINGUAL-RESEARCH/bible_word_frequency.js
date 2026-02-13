@@ -25,7 +25,6 @@ OPTIONS:
     --range=RANGE           Limit analysis to specific range
     --top=N                 Show only top N results (default: show all)
     --min=N                 Only show groups with at least N occurrences
-    --include-aramaic       Include Aramaic sections
     --no-points             Remove nikud from output
     --format=FORMAT         Output format: "text" (default), "json", "chart"
     --sort=MODE             Sort by: "count" (default), "biblical"
@@ -60,7 +59,7 @@ EXAMPLES:
     ./bible_word_frequency.js "<מים>" --format=json
 
 NOTES:
-    - Aramaic sections excluded by default
+    - Aramaic sections excluded (not relevant for Hebrew linguistic research)
     - Accents always stripped
     - Nikud shown by default
     - Zero-count books/chapters are omitted from output
@@ -73,7 +72,6 @@ import {
     NEVIIM_ACHARONIM,
     KETUVIM,
     SECTIONS,
-    isAramaicVerse,
     parseRange,
     getBookSection,
 } from './bible-utils.js';
@@ -89,7 +87,6 @@ function parseArgs(args) {
         range: null,
         top: null,
         min: null,
-        includeAramaic: false,
         noPoints: false,
         format: 'text',
         sort: 'count',
@@ -109,8 +106,6 @@ function parseArgs(args) {
             options.top = parseInt(arg.substring(6));
         } else if (arg.startsWith('--min=')) {
             options.min = parseInt(arg.substring(6));
-        } else if (arg === '--include-aramaic') {
-            options.includeAramaic = true;
         } else if (arg === '--no-points') {
             options.noPoints = true;
         } else if (arg.startsWith('--format=')) {
@@ -159,11 +154,6 @@ function analyzeFrequency(query, options) {
         if (rangeFilter) {
             if (!rangeFilter.books.has(verse.book)) continue;
             if (!rangeFilter.chapterFilter(verse.book, verse.chapterIndex)) continue;
-        }
-
-        // Apply Aramaic filter
-        if (!options.includeAramaic) {
-            if (isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
         }
 
         // Count matched words (not just verses)
@@ -365,7 +355,6 @@ export {
     parseRange,
     analyzeFrequency,
     getBookSection,
-    isAramaicVerse,
     SECTIONS,
     TORAH,
     NEVIIM_RISHONIM,

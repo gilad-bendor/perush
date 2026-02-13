@@ -11,7 +11,6 @@ import {
     parseArgs,
     parseRange,
     performSearch,
-    isAramaicVerse,
     highlightVerse,
     groupByBook,
     groupByStrong,
@@ -20,7 +19,6 @@ import {
     TORAH,
     NEVIIM,
     KETUVIM,
-    ARAMAIC_SECTIONS,
 } from '../bible_search.js';
 
 // ============================================================================
@@ -119,11 +117,6 @@ test('parses --range option', () => {
 test('parses --no-points option', () => {
     const result = parseArgs(['אור', '--no-points']);
     assertTrue(result.noPoints);
-});
-
-test('parses --include-aramaic option', () => {
-    const result = parseArgs(['אור', '--include-aramaic']);
-    assertTrue(result.includeAramaic);
 });
 
 test('parses --count-only option', () => {
@@ -227,38 +220,6 @@ test('throws on unknown book', () => {
 
 test('throws on invalid chapter range', () => {
     assertThrows(() => parseRange('בראשית abc'), 'Invalid chapter range');
-});
-
-// ------------------------------------------
-console.log('\nisAramaicVerse:');
-// ------------------------------------------
-
-test('Genesis 31:47 is Aramaic', () => {
-    assertTrue(isAramaicVerse('בראשית', 30, 46)); // 31:47 (0-indexed)
-});
-
-test('Genesis 1:1 is not Aramaic', () => {
-    assertFalse(isAramaicVerse('בראשית', 0, 0));
-});
-
-test('Jeremiah 10:11 is Aramaic', () => {
-    assertTrue(isAramaicVerse('ירמיהו', 9, 10)); // 10:11 (0-indexed)
-});
-
-test('Jeremiah 10:10 is not Aramaic', () => {
-    assertFalse(isAramaicVerse('ירמיהו', 9, 9));
-});
-
-test('Jeremiah 10:12 is not Aramaic', () => {
-    assertFalse(isAramaicVerse('ירמיהו', 9, 11));
-});
-
-test('Daniel chapter 3 is Aramaic', () => {
-    assertTrue(isAramaicVerse('דניאל', 2, 0)); // Chapter 3 (0-indexed)
-});
-
-test('Non-Aramaic book is not Aramaic', () => {
-    assertFalse(isAramaicVerse('ישעיהו', 0, 0));
 });
 
 // ------------------------------------------
@@ -367,32 +328,25 @@ test('KETUVIM contains writings', () => {
     assertTrue(KETUVIM.includes('דניאל'));
 });
 
-test('ARAMAIC_SECTIONS is defined', () => {
-    assertTrue('דניאל' in ARAMAIC_SECTIONS);
-    assertTrue('עזרא' in ARAMAIC_SECTIONS);
-    assertTrue('ירמיהו' in ARAMAIC_SECTIONS);
-    assertTrue('בראשית' in ARAMAIC_SECTIONS);
-});
-
 // ------------------------------------------
 console.log('\nperformSearch (integration):');
 // ------------------------------------------
 
 test('basic search finds results', () => {
-    const result = performSearch('אור', { maxResults: 10, includeAramaic: false });
+    const result = performSearch('אור', { maxResults: 10 });
     assertTrue(result.matches.length > 0);
     assertTrue(result.filteredCount > 0);
 });
 
 test('Strong number search works', () => {
-    const result = performSearch('<430>', { maxResults: 10, includeAramaic: false });
+    const result = performSearch('<430>', { maxResults: 10 });
     assertTrue(result.matches.length > 0);
     assertTrue(result.strongMatches.length > 0);
     assertEqual(result.strongMatches[0].strongNumber, 430);
 });
 
 test('range filter limits to Torah', () => {
-    const result = performSearch('אלהים', { maxResults: 100, range: 'תורה', includeAramaic: false });
+    const result = performSearch('אלהים', { maxResults: 100, range: 'תורה' });
     assertTrue(result.matches.length > 0);
     for (const match of result.matches) {
         assertTrue(TORAH.includes(match.verse.book), `${match.verse.book} should be in Torah`);
@@ -400,7 +354,7 @@ test('range filter limits to Torah', () => {
 });
 
 test('range filter limits to single book', () => {
-    const result = performSearch('אלהים', { maxResults: 100, range: 'בראשית', includeAramaic: false });
+    const result = performSearch('אלהים', { maxResults: 100, range: 'בראשית' });
     assertTrue(result.matches.length > 0);
     for (const match of result.matches) {
         assertEqual(match.verse.book, 'בראשית');
@@ -408,7 +362,7 @@ test('range filter limits to single book', () => {
 });
 
 test('range filter with chapter range', () => {
-    const result = performSearch('אלהים', { maxResults: 100, range: 'בראשית 1-2', includeAramaic: false });
+    const result = performSearch('אלהים', { maxResults: 100, range: 'בראשית 1-2' });
     assertTrue(result.matches.length > 0);
     for (const match of result.matches) {
         assertEqual(match.verse.book, 'בראשית');
@@ -416,37 +370,27 @@ test('range filter with chapter range', () => {
     }
 });
 
-test('Aramaic filtering works', () => {
-    // Search in Daniel which has Aramaic sections
-    const withAramaic = performSearch('אלהא', { maxResults: 100, range: 'דניאל', includeAramaic: true });
-    const withoutAramaic = performSearch('אלהא', { maxResults: 100, range: 'דניאל', includeAramaic: false });
-    // Results should differ if there are matches in Aramaic sections
-    // (This tests that the filter is applied; actual counts depend on data)
-    assertTrue(withAramaic.filteredCount >= withoutAramaic.filteredCount,
-        'Including Aramaic should have >= results than excluding');
-});
-
 test('count-only mode returns empty matches array', () => {
-    const result = performSearch('אור', { maxResults: 10, countOnly: true, includeAramaic: false });
+    const result = performSearch('אור', { maxResults: 10, countOnly: true });
     assertEqual(result.matches.length, 0);
     assertTrue(result.filteredCount > 0);
 });
 
 test('maxResults truncates results', () => {
-    const result = performSearch('את', { maxResults: 5, includeAramaic: false });
+    const result = performSearch('את', { maxResults: 5 });
     assertEqual(result.matches.length, 5);
     assertTrue(result.truncated);
 });
 
 test('pattern search with @ works', () => {
     // ה@ל@ך should match הלך, הולך, etc.
-    const result = performSearch('ה@ל@ך', { maxResults: 10, includeAramaic: false });
+    const result = performSearch('ה@ל@ך', { maxResults: 10 });
     assertTrue(result.matches.length > 0);
 });
 
 test('exact word boundary search', () => {
     // " אור " should only match exact word אור
-    const result = performSearch(' אור ', { maxResults: 10, includeAramaic: false });
+    const result = performSearch(' אור ', { maxResults: 10 });
     assertTrue(result.matches.length > 0);
 });
 

@@ -12,7 +12,6 @@ import {
     parseRange,
     analyzeFrequency,
     getBookSection,
-    isAramaicVerse,
 } from '../bible_word_frequency.js';
 
 // ============================================================================
@@ -134,18 +133,6 @@ test('returns correct section for writings', () => {
 });
 
 // ------------------------------------------
-console.log('\nisAramaicVerse:');
-// ------------------------------------------
-
-test('identifies Genesis 31:47 as Aramaic', () => {
-    assertTrue(isAramaicVerse('בראשית', 30, 46));
-});
-
-test('identifies non-Aramaic verse', () => {
-    assertTrue(!isAramaicVerse('בראשית', 0, 0));
-});
-
-// ------------------------------------------
 console.log('\nparseRange:');
 // ------------------------------------------
 
@@ -170,20 +157,20 @@ console.log('\nanalyzeFrequency (integration):');
 // ------------------------------------------
 
 test('analyzes frequency by book', () => {
-    const result = analyzeFrequency('אור', { groupBy: 'book', includeAramaic: false });
+    const result = analyzeFrequency('אור', { groupBy: 'book' });
     assertTrue(result.total > 0);
     assertTrue(result.distribution.length > 0);
     assertEqual(result.groupBy, 'book');
 });
 
 test('analyzes frequency by section', () => {
-    const result = analyzeFrequency('אור', { groupBy: 'section', includeAramaic: false });
+    const result = analyzeFrequency('אור', { groupBy: 'section' });
     assertTrue(result.total > 0);
     assertTrue(result.distribution.length <= 4); // Max 4 sections
 });
 
 test('analyzes frequency with range filter', () => {
-    const result = analyzeFrequency('אור', { groupBy: 'book', range: 'בראשית', includeAramaic: false });
+    const result = analyzeFrequency('אור', { groupBy: 'book', range: 'בראשית' });
     assertTrue(result.total > 0);
     for (const item of result.distribution) {
         assertEqual(item.key, 'בראשית');
@@ -191,19 +178,19 @@ test('analyzes frequency with range filter', () => {
 });
 
 test('applies top filter', () => {
-    const result = analyzeFrequency('אור', { groupBy: 'book', top: 3, includeAramaic: false });
+    const result = analyzeFrequency('אור', { groupBy: 'book', top: 3 });
     assertTrue(result.distribution.length <= 3);
 });
 
 test('applies min filter', () => {
-    const result = analyzeFrequency('אור', { groupBy: 'book', min: 10, includeAramaic: false });
+    const result = analyzeFrequency('אור', { groupBy: 'book', min: 10 });
     for (const item of result.distribution) {
         assertTrue(item.count >= 10);
     }
 });
 
 test('calculates percentages', () => {
-    const result = analyzeFrequency('אור', { groupBy: 'book', includeAramaic: false });
+    const result = analyzeFrequency('אור', { groupBy: 'book' });
     for (const item of result.distribution) {
         assertTrue(parseFloat(item.percentage) >= 0);
         assertTrue(parseFloat(item.percentage) <= 100);

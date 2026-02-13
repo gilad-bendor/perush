@@ -26,7 +26,6 @@ SECTIONS:
 
 OPTIONS:
     --format=FORMAT     Output format: "text" (default), "json"
-    --include-aramaic   Include info about Aramaic sections
 
 EXAMPLES:
     # List all books with chapter counts
@@ -62,20 +61,11 @@ EXAMPLES:
     # JSON output for programmatic use
     ./bible_get_structure.js בראשית --format=json
 
-ARAMAIC SECTIONS:
-    Certain portions of the Bible are in Aramaic rather than Hebrew:
-    - דניאל 2:4-7:28
-    - עזרא 4:8-6:18, 7:12-26
-    - ירמיהו 10:11 (single verse)
-    - בראשית 31:47 (two words)
-
-    These sections require different linguistic analysis. The --include-aramaic
-    flag will mark these sections in the output.
-
 NOTES:
     - Chapter and verse numbers in output use Hebrew numerals for consistency
     - Internal processing uses 0-indexed numbers
     - This tool is read-only and fast (uses cached structure data)
+    - Aramaic sections excluded (not relevant for Hebrew linguistic research)
 `;
 
 import * as bible from './bible-utils.js';
@@ -89,27 +79,6 @@ import {
 } from './bible-utils.js';
 
 // ============================================================================
-// Aramaic Sections (with human-readable format for this tool)
-// ============================================================================
-
-// Aramaic sections with human-readable format for display
-const ARAMAIC_SECTIONS_DISPLAY = {
-    'דניאל': [
-        { start: '2:4', end: '7:28', description: 'עיקר ספר דניאל' }
-    ],
-    'עזרא': [
-        { start: '4:8', end: '6:18', description: 'מכתבים ותעודות' },
-        { start: '7:12', end: '7:26', description: 'מכתב ארתחשסתא' }
-    ],
-    'ירמיהו': [
-        { start: '10:11', end: '10:11', description: 'פסוק בודד' }
-    ],
-    'בראשית': [
-        { start: '31:47', end: '31:47', description: 'שתי מילים: יגר שהדותא' }
-    ],
-};
-
-// ============================================================================
 // Structure Building
 // ============================================================================
 
@@ -120,7 +89,6 @@ const ARAMAIC_SECTIONS_DISPLAY = {
  * @property {number} chapterCount - Number of chapters
  * @property {number[]} versesPerChapter - Array of verse counts per chapter
  * @property {number} totalVerses - Total verses in the book
- * @property {Object[]} [aramaicSections] - Aramaic sections if present
  */
 
 /**
@@ -151,7 +119,6 @@ function buildStructure() {
             chapterCount: 0,
             versesPerChapter: [],
             totalVerses: 0,
-            aramaicSections: ARAMAIC_SECTIONS_DISPLAY[bookName] || null,
         });
     }
 
@@ -204,7 +171,6 @@ function parseArgs(args) {
         book: null,
         chapter: null,
         format: 'text',
-        includeAramaic: false,
         help: false,
     };
 
@@ -215,8 +181,6 @@ function parseArgs(args) {
             options.help = true;
         } else if (arg.startsWith('--format=')) {
             options.format = arg.substring(9);
-        } else if (arg === '--include-aramaic') {
-            options.includeAramaic = true;
         } else if (!arg.startsWith('-')) {
             // Positional argument
             if (options.book === null) {
@@ -270,12 +234,6 @@ function formatAllBooksText(options) {
                 const paddedName = bookName.padStart(15);
                 lines.push(`  ${paddedName}    ${book.chapterCount} פרקים`);
 
-                if (options.includeAramaic && book.aramaicSections) {
-                    for (const aram of book.aramaicSections) {
-                        lines.push(`    [ארמית: ${aram.start}-${aram.end}]`);
-                    }
-                }
-
                 totalBooks++;
                 totalChapters += book.chapterCount;
                 totalVerses += book.totalVerses;
@@ -309,14 +267,6 @@ function formatBookText(bookName, options) {
         const chapterHebrew = bible.numberToHebrew(i);
         const verseCount = book.versesPerChapter[i];
         lines.push(`  פרק ${chapterHebrew.padStart(3)} - ${verseCount} פסוקים`);
-    }
-
-    if (options.includeAramaic && book.aramaicSections) {
-        lines.push('');
-        lines.push('מקטעים ארמיים:');
-        for (const aram of book.aramaicSections) {
-            lines.push(`  ${aram.start}-${aram.end}: ${aram.description}`);
-        }
     }
 
     lines.push('');
@@ -366,9 +316,6 @@ function formatAllBooksJson(options) {
                     name: book.name,
                     chapters: book.chapterCount,
                     totalVerses: book.totalVerses,
-                    ...(options.includeAramaic && book.aramaicSections
-                        ? { aramaicSections: book.aramaicSections }
-                        : {}),
                 };
             }),
         })),
@@ -405,9 +352,6 @@ function formatBookJson(bookName, options) {
             chapterHebrew: bible.numberToHebrew(i),
             verses,
         })),
-        ...(options.includeAramaic && book.aramaicSections
-            ? { aramaicSections: book.aramaicSections }
-            : {}),
     };
 
     console.log(JSON.stringify(output, null, 2));
@@ -498,7 +442,6 @@ export {
     NEVIIM_RISHONIM,
     NEVIIM_ACHARONIM,
     KETUVIM,
-    ARAMAIC_SECTIONS_DISPLAY,
 };
 
 // Run main if executed directly

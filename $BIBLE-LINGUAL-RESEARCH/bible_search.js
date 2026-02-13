@@ -53,7 +53,6 @@ OPTIONS:
     --group-by=MODE         Group results: "none" (default), "book", "strong"
     --range=RANGE           Limit to range: "בראשית", "בראשית 1-10", "תורה"
     --no-points             Remove nikud from output
-    --include-aramaic       Include Aramaic sections (excluded by default)
     --format=FORMAT         Output format: "text" (default), "json", "summary"
     --count-only            Only show count, not verses
 
@@ -118,7 +117,7 @@ OUTPUT FORMATS:
         }
 
 NOTES:
-    - Aramaic sections are EXCLUDED by default (use --include-aramaic to include)
+    - Aramaic sections are EXCLUDED (not relevant for Hebrew linguistic research)
     - Accents are ALWAYS stripped (no linguistic value for this analysis)
     - Nikud is ON by default (aids readability)
     - Results are ordered by biblical order (Genesis to Chronicles)
@@ -130,8 +129,6 @@ import {
     TORAH,
     NEVIIM,
     KETUVIM,
-    ARAMAIC_SECTIONS,
-    isAramaicVerse,
     parseRange,
 } from './bible-utils.js';
 
@@ -147,7 +144,6 @@ function parseArgs(args) {
         groupBy: 'none',
         range: null,
         noPoints: false,
-        includeAramaic: false,
         format: 'text',
         countOnly: false,
         help: false,
@@ -174,9 +170,6 @@ function parseArgs(args) {
             i++;
         } else if (arg === '--no-points') {
             options.noPoints = true;
-            i++;
-        } else if (arg === '--include-aramaic') {
-            options.includeAramaic = true;
             i++;
         } else if (arg.startsWith('--format=')) {
             options.format = arg.substring(9);
@@ -324,14 +317,6 @@ function performSearch(query, options) {
             const verse = match.verse;
             if (!rangeFilter.books.has(verse.book)) return false;
             return rangeFilter.chapterFilter(verse.book, verse.chapterIndex);
-        });
-    }
-
-    // Apply Aramaic filter (exclude by default)
-    if (!options.includeAramaic) {
-        filteredMatches = filteredMatches.filter(match => {
-            const verse = match.verse;
-            return !isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex);
         });
     }
 
@@ -561,7 +546,6 @@ export {
     parseArgs,
     parseRange,
     performSearch,
-    isAramaicVerse,
     highlightVerse,
     groupByBook,
     groupByStrong,
@@ -570,7 +554,6 @@ export {
     TORAH,
     NEVIIM,
     KETUVIM,
-    ARAMAIC_SECTIONS,
 };
 
 // Run main if executed directly

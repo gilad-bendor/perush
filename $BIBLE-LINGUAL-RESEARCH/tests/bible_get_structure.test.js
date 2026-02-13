@@ -16,7 +16,6 @@ import {
     NEVIIM_RISHONIM,
     NEVIIM_ACHARONIM,
     KETUVIM,
-    ARAMAIC_SECTIONS_DISPLAY,
 } from '../bible_get_structure.js';
 
 // ============================================================================
@@ -104,16 +103,6 @@ test('SECTIONS has 4 sections', () => {
     assertEqual(SECTIONS[3].name, 'כתובים');
 });
 
-test('ARAMAIC_SECTIONS_DISPLAY defined correctly', () => {
-    assertTrue('דניאל' in ARAMAIC_SECTIONS_DISPLAY);
-    assertTrue('עזרא' in ARAMAIC_SECTIONS_DISPLAY);
-    assertTrue('ירמיהו' in ARAMAIC_SECTIONS_DISPLAY);
-    assertTrue('בראשית' in ARAMAIC_SECTIONS_DISPLAY);
-
-    assertEqual(ARAMAIC_SECTIONS_DISPLAY['דניאל'][0].start, '2:4');
-    assertEqual(ARAMAIC_SECTIONS_DISPLAY['ירמיהו'][0].start, '10:11');
-});
-
 // ------------------------------------------
 console.log('\nparseHebrewNumber:');
 // ------------------------------------------
@@ -164,22 +153,16 @@ test('parses --format option', () => {
     assertEqual(opts.format, 'json');
 });
 
-test('parses --include-aramaic option', () => {
-    const opts = parseArgs(['--include-aramaic']);
-    assertTrue(opts.includeAramaic);
-});
-
 test('parses --help option', () => {
     const opts = parseArgs(['--help']);
     assertTrue(opts.help);
 });
 
 test('parses combined arguments', () => {
-    const opts = parseArgs(['בראשית', '10', '--format=json', '--include-aramaic']);
+    const opts = parseArgs(['בראשית', '10', '--format=json']);
     assertEqual(opts.book, 'בראשית');
     assertEqual(opts.chapter, 10);
     assertEqual(opts.format, 'json');
-    assertTrue(opts.includeAramaic);
 });
 
 test('throws on invalid format', () => {

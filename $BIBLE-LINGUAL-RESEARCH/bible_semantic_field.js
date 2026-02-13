@@ -31,7 +31,6 @@ OPTIONS:
     --category=CAT      Focus on category: noun, verb, all (default: all)
     --show-examples=N   Show N examples for key relationships
     --range=RANGE       Limit to specific range
-    --include-aramaic   Include Aramaic sections
     --no-points         Remove nikud from output
     --format=FORMAT     Output format: "text" (default), "json", "graph"
 
@@ -65,14 +64,13 @@ ASSOCIATION STRENGTH:
 
 NOTES:
     - Computationally intensive for depth > 1
-    - Aramaic sections excluded by default
+    - Aramaic sections excluded (not relevant for Hebrew linguistic research)
 `;
 
 import * as bible from './bible-utils.js';
 import {
     STOPWORDS,
     SECTION_NAMES,
-    isAramaicVerse,
     isStopword,
     parseRange,
 } from './bible-utils.js';
@@ -104,7 +102,6 @@ function parseArgs(args) {
         category: null,
         showExamples: 0,
         range: null,
-        includeAramaic: false,
         noPoints: false,
         format: 'text',
         help: false,
@@ -128,8 +125,6 @@ function parseArgs(args) {
             options.showExamples = parseInt(arg.substring(16), 10);
         } else if (arg.startsWith('--range=')) {
             options.range = arg.substring(8);
-        } else if (arg === '--include-aramaic') {
-            options.includeAramaic = true;
         } else if (arg === '--no-points') {
             options.noPoints = true;
         } else if (arg.startsWith('--format=')) {
@@ -177,7 +172,6 @@ function buildWordFrequencies(options) {
             if (!rangeFilter.books.has(verse.book)) continue;
             if (!rangeFilter.chapterFilter(verse.book, verse.chapterIndex)) continue;
         }
-        if (!options.includeAramaic && isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
 
         for (let i = 0; i < verse.words.length; i++) {
             const word = verse.words[i];
@@ -252,7 +246,6 @@ function findDirectAssociations(query, options) {
             if (!rangeFilter.books.has(verse.book)) continue;
             if (!rangeFilter.chapterFilter(verse.book, verse.chapterIndex)) continue;
         }
-        if (!options.includeAramaic && isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
 
         if (matchedLocations.has(verse.location)) continue;
         matchedLocations.add(verse.location);
@@ -312,7 +305,6 @@ function findDirectAssociations(query, options) {
             if (!rangeFilter.books.has(verse.book)) continue;
             if (!rangeFilter.chapterFilter(verse.book, verse.chapterIndex)) continue;
         }
-        if (!options.includeAramaic && isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
         totalVerses++;
     }
 
@@ -323,7 +315,6 @@ function findDirectAssociations(query, options) {
             if (!rangeFilter.books.has(verse.book)) continue;
             if (!rangeFilter.chapterFilter(verse.book, verse.chapterIndex)) continue;
         }
-        if (!options.includeAramaic && isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
 
         const seenInVerse = new Set();
         for (const word of verse.words) {
@@ -634,7 +625,6 @@ async function main() {
 export {
     parseArgs,
     parseRange,
-    isAramaicVerse,
     isStopword,
     calculatePMI,
     findDirectAssociations,

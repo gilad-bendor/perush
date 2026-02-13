@@ -12,7 +12,6 @@ import {
     parseReference,
     parseRange,
     parseNumber,
-    isAramaicVerse,
     buildIDF,
     getVerseSignature,
     calculateSimilarity,
@@ -112,11 +111,6 @@ test('parses --range option', () => {
     assertEqual(opts.range, 'תורה');
 });
 
-test('parses --include-aramaic option', () => {
-    const opts = parseArgs(['בראשית 1:1', '--include-aramaic']);
-    assertTrue(opts.includeAramaic);
-});
-
 test('parses --no-points option', () => {
     const opts = parseArgs(['בראשית 1:1', '--no-points']);
     assertTrue(opts.noPoints);
@@ -211,18 +205,6 @@ test('parses section name', () => {
 test('parses single book', () => {
     const result = parseRange('בראשית');
     assertTrue(result.books.has('בראשית'));
-});
-
-// ------------------------------------------
-console.log('\nisAramaicVerse:');
-// ------------------------------------------
-
-test('identifies Genesis 31:47 as Aramaic', () => {
-    assertTrue(isAramaicVerse('בראשית', 30, 46));
-});
-
-test('identifies non-Aramaic verse', () => {
-    assertTrue(!isAramaicVerse('בראשית', 0, 0));
 });
 
 // ------------------------------------------
@@ -328,13 +310,13 @@ console.log('\nbuildIDF (integration):');
 // ------------------------------------------
 
 test('builds IDF weights', () => {
-    const { idf, total } = buildIDF({ includeAramaic: false });
+    const { idf, total } = buildIDF({});
     assertTrue(idf.size > 0, 'Expected IDF to have entries');
     assertTrue(total > 0, 'Expected total verses > 0');
 });
 
 test('high-frequency words have lower IDF', () => {
-    const { idf } = buildIDF({ includeAramaic: false });
+    const { idf } = buildIDF({});
     // H430 (אלהים) is very common
     // H8675 is rare (or doesn't exist)
     const commonIDF = idf.get(430) || 10;  // אלהים

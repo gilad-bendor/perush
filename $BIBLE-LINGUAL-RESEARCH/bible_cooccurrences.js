@@ -40,7 +40,6 @@ OPTIONS:
     --show-examples=N   Show N example verses for each co-occurrence
     --by-strong         Group results by Strong's number instead of word
     --range=RANGE       Limit to specific range
-    --include-aramaic   Include Aramaic sections
     --include-stopwords Include function words in results
     --no-points         Remove nikud from output
     --format=FORMAT     Output format: "text" (default), "json"
@@ -59,7 +58,7 @@ EXAMPLES:
     ./bible_cooccurrences.js "<טוב>" --proximity=3
 
 NOTES:
-    - Aramaic sections excluded by default
+    - Aramaic sections excluded (not relevant for Hebrew linguistic research)
     - Common function words (את, אשר, על, etc.) are filtered from results
       unless --include-stopwords is used
     - Results sorted by frequency (most common first)
@@ -71,7 +70,6 @@ import * as bible from './bible-utils.js';
 import {
     STOPWORDS,
     SECTION_NAMES,
-    isAramaicVerse,
     isStopword,
     parseRange,
 } from './bible-utils.js';
@@ -115,7 +113,6 @@ function parseArgs(args) {
         showExamples: 0,
         byStrong: false,
         range: null,
-        includeAramaic: false,
         includeStopwords: false,
         noPoints: false,
         format: 'text',
@@ -141,8 +138,6 @@ function parseArgs(args) {
             options.byStrong = true;
         } else if (arg.startsWith('--range=')) {
             options.range = arg.substring(8);
-        } else if (arg === '--include-aramaic') {
-            options.includeAramaic = true;
         } else if (arg === '--include-stopwords') {
             options.includeStopwords = true;
         } else if (arg === '--no-points') {
@@ -218,11 +213,6 @@ function analyzeCooccurrences(query, options = {}) {
         if (rangeFilter) {
             if (!rangeFilter.books.has(verse.book)) continue;
             if (!rangeFilter.chapterFilter(verse.book, verse.chapterIndex)) continue;
-        }
-
-        // Apply Aramaic filter
-        if (!options.includeAramaic) {
-            if (isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
         }
 
         // Skip if we've already processed this verse
@@ -385,7 +375,6 @@ function analyzeWordPair(query1, query2, options = {}) {
             if (!rangeFilter.books.has(verse.book)) continue;
             if (!rangeFilter.chapterFilter(verse.book, verse.chapterIndex)) continue;
         }
-        if (!options.includeAramaic && isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
 
         if (!locations1.has(verse.location)) {
             locations1.set(verse.location, { match, positions: [] });
@@ -399,7 +388,6 @@ function analyzeWordPair(query1, query2, options = {}) {
             if (!rangeFilter.books.has(verse.book)) continue;
             if (!rangeFilter.chapterFilter(verse.book, verse.chapterIndex)) continue;
         }
-        if (!options.includeAramaic && isAramaicVerse(verse.book, verse.chapterIndex, verse.verseIndex)) continue;
 
         if (!locations2.has(verse.location)) {
             locations2.set(verse.location, { match, positions: [] });
@@ -686,7 +674,6 @@ async function main() {
 export {
     parseArgs,
     parseRange,
-    isAramaicVerse,
     isStopword,
     analyzeCooccurrences,
     analyzeWordPair,

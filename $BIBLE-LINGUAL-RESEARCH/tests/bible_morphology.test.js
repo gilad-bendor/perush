@@ -10,7 +10,6 @@
 import {
     parseArgs,
     parseRange,
-    isAramaicVerse,
     detectPrefix,
     detectSuffix,
     detectForm,
@@ -111,11 +110,6 @@ test('parses --range option', () => {
     assertEqual(opts.range, 'בראשית');
 });
 
-test('parses --include-aramaic option', () => {
-    const opts = parseArgs(['8104', '--include-aramaic']);
-    assertTrue(opts.includeAramaic);
-});
-
 test('parses --no-points option', () => {
     const opts = parseArgs(['8104', '--no-points']);
     assertTrue(opts.noPoints);
@@ -165,18 +159,6 @@ test('parses single book', () => {
 
 test('throws on unknown range', () => {
     assertThrows(() => parseRange('unknown'), 'Unknown range');
-});
-
-// ------------------------------------------
-console.log('\nisAramaicVerse:');
-// ------------------------------------------
-
-test('identifies Genesis 31:47 as Aramaic', () => {
-    assertTrue(isAramaicVerse('בראשית', 30, 46));
-});
-
-test('identifies non-Aramaic verse', () => {
-    assertTrue(!isAramaicVerse('בראשית', 0, 0));
 });
 
 // ------------------------------------------
@@ -335,15 +317,15 @@ console.log('\nfindOccurrences (integration):');
 // ------------------------------------------
 
 test('finds occurrences of Strong\'s number', () => {
-    const result = findOccurrences(8104, { includeAramaic: false });
+    const result = findOccurrences(8104, {});
     assertTrue(result.length > 0, 'Expected at least one occurrence');
     assertTrue(result[0].word !== undefined, 'Expected word property');
     assertTrue(result[0].location !== undefined, 'Expected location property');
 });
 
 test('respects range filter', () => {
-    const fullResult = findOccurrences(8104, { includeAramaic: false });
-    const rangeResult = findOccurrences(8104, { includeAramaic: false, range: 'בראשית' });
+    const fullResult = findOccurrences(8104, {});
+    const rangeResult = findOccurrences(8104, { range: 'בראשית' });
     assertTrue(rangeResult.length < fullResult.length, 'Range filter should reduce results');
     for (const occ of rangeResult) {
         assertEqual(occ.book, 'בראשית');
@@ -355,7 +337,7 @@ console.log('\nanalyzeMorphology (integration):');
 // ------------------------------------------
 
 test('analyzes by Strong\'s number', () => {
-    const result = analyzeMorphology('8104', { groupBy: 'form', showExamples: 2, includeAramaic: false });
+    const result = analyzeMorphology('8104', { groupBy: 'form', showExamples: 2 });
     assertEqual(result.query, '8104');
     assertTrue(result.totalOccurrences > 0);
     assertTrue(result.groups.length > 0);
@@ -364,7 +346,7 @@ test('analyzes by Strong\'s number', () => {
 });
 
 test('groups by form', () => {
-    const result = analyzeMorphology('8104', { groupBy: 'form', showExamples: 2, includeAramaic: false });
+    const result = analyzeMorphology('8104', { groupBy: 'form', showExamples: 2 });
     assertEqual(result.groupBy, 'form');
     // Should have common form categories
     const formKeys = result.groups.map(g => g.key);
@@ -372,7 +354,7 @@ test('groups by form', () => {
 });
 
 test('groups by prefix', () => {
-    const result = analyzeMorphology('8104', { groupBy: 'prefix', showExamples: 2, includeAramaic: false });
+    const result = analyzeMorphology('8104', { groupBy: 'prefix', showExamples: 2 });
     assertEqual(result.groupBy, 'prefix');
     // Should have prefix categories
     const prefixKeys = result.groups.map(g => g.key);
@@ -380,12 +362,12 @@ test('groups by prefix', () => {
 });
 
 test('groups by suffix', () => {
-    const result = analyzeMorphology('8104', { groupBy: 'suffix', showExamples: 2, includeAramaic: false });
+    const result = analyzeMorphology('8104', { groupBy: 'suffix', showExamples: 2 });
     assertEqual(result.groupBy, 'suffix');
 });
 
 test('groups by binyan', () => {
-    const result = analyzeMorphology('8104', { groupBy: 'binyan', showExamples: 2, includeAramaic: false });
+    const result = analyzeMorphology('8104', { groupBy: 'binyan', showExamples: 2 });
     assertEqual(result.groupBy, 'binyan');
     // Verbs should show binyan categories
     const binyanKeys = result.groups.map(g => g.key);
@@ -393,7 +375,7 @@ test('groups by binyan', () => {
 });
 
 test('includes examples in groups', () => {
-    const result = analyzeMorphology('8104', { groupBy: 'form', showExamples: 3, includeAramaic: false });
+    const result = analyzeMorphology('8104', { groupBy: 'form', showExamples: 3 });
     for (const group of result.groups) {
         assertTrue(group.examples.length <= 3, 'Should respect showExamples limit');
         if (group.count > 0) {
@@ -403,7 +385,7 @@ test('includes examples in groups', () => {
 });
 
 test('calculates percentages', () => {
-    const result = analyzeMorphology('8104', { groupBy: 'form', showExamples: 2, includeAramaic: false });
+    const result = analyzeMorphology('8104', { groupBy: 'form', showExamples: 2 });
     let totalPercent = 0;
     for (const group of result.groups) {
         assertTrue(group.percentage !== undefined, 'Should have percentage');
@@ -414,7 +396,7 @@ test('calculates percentages', () => {
 });
 
 test('sorts groups by count descending', () => {
-    const result = analyzeMorphology('8104', { groupBy: 'form', showExamples: 2, includeAramaic: false });
+    const result = analyzeMorphology('8104', { groupBy: 'form', showExamples: 2 });
     for (let i = 1; i < result.groups.length; i++) {
         assertTrue(result.groups[i - 1].count >= result.groups[i].count,
             'Groups should be sorted by count descending');
@@ -422,11 +404,11 @@ test('sorts groups by count descending', () => {
 });
 
 test('throws on invalid query', () => {
-    assertThrows(() => analyzeMorphology('invalid', { groupBy: 'form', showExamples: 2, includeAramaic: false }), 'Invalid query');
+    assertThrows(() => analyzeMorphology('invalid', { groupBy: 'form', showExamples: 2 }), 'Invalid query');
 });
 
 test('throws on unknown Strong\'s number', () => {
-    assertThrows(() => analyzeMorphology('999999', { groupBy: 'form', showExamples: 2, includeAramaic: false }), 'not found');
+    assertThrows(() => analyzeMorphology('999999', { groupBy: 'form', showExamples: 2 }), 'not found');
 });
 
 // ============================================================================

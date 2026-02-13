@@ -32,7 +32,6 @@ OPTIONS:
     --show-occurrences      Show occurrence count for each word
     --show-examples=N       Show N examples per Strong's number
     --phonetic              Include phonetically similar roots
-    --include-aramaic       Include Aramaic forms
     --no-points             Remove nikud from output
     --format=FORMAT         Output format: "text" (default), "json", "tree"
 
@@ -65,7 +64,7 @@ NOTES:
     - This tool is essential for the "allegorical dictionary" methodology
     - Finding unified ancient meanings requires examining ALL derivatives
     - Consider both semantic AND phonetic relationships
-    - Aramaic cognates can illuminate Hebrew meanings
+    - Aramaic sections excluded (not relevant for Hebrew linguistic research)
 `;
 
 import * as bible from './bible-utils.js';
@@ -405,7 +404,6 @@ function parseArgs(args) {
         showOccurrences: false,
         showExamples: 0,
         phonetic: false,
-        includeAramaic: false,
         noPoints: false,
         format: 'text',
         help: false,
@@ -425,8 +423,6 @@ function parseArgs(args) {
             options.showExamples = parseInt(arg.substring(16), 10);
         } else if (arg === '--phonetic') {
             options.phonetic = true;
-        } else if (arg === '--include-aramaic') {
-            options.includeAramaic = true;
         } else if (arg === '--no-points') {
             options.noPoints = true;
         } else if (arg.startsWith('--format=')) {

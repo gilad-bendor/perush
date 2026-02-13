@@ -10,7 +10,6 @@
 import {
     parseArgs,
     parseRange,
-    isAramaicVerse,
     isStopword,
     calculatePMI,
     findDirectAssociations,
@@ -120,11 +119,6 @@ test('parses --range option', () => {
     assertEqual(opts.range, 'בראשית');
 });
 
-test('parses --include-aramaic option', () => {
-    const opts = parseArgs(['מים', '--include-aramaic']);
-    assertTrue(opts.includeAramaic);
-});
-
 test('parses --no-points option', () => {
     const opts = parseArgs(['מים', '--no-points']);
     assertTrue(opts.noPoints);
@@ -175,18 +169,6 @@ test('parses single book', () => {
     const result = parseRange('בראשית');
     assertTrue(result.books.has('בראשית'));
     assertEqual(result.books.size, 1);
-});
-
-// ------------------------------------------
-console.log('\nisAramaicVerse:');
-// ------------------------------------------
-
-test('identifies Genesis 31:47 as Aramaic', () => {
-    assertTrue(isAramaicVerse('בראשית', 30, 46));
-});
-
-test('identifies non-Aramaic verse', () => {
-    assertTrue(!isAramaicVerse('בראשית', 0, 0));
 });
 
 // ------------------------------------------
