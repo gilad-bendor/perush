@@ -25,9 +25,47 @@ While Drash allows high interpretive freedom (the interpreter freely creates con
 - **Good** (low degrees of freedom): `וַיַּרְא אֱלֹהִים אֶת הָאוֹר כִּי טוֹב` — the dictionary mandates: ראייה = cognition, אור = public discourse, טוב = socially desired. Result: "The recognition that public discourse is valuable and worth institutionalizing." Every word is dictionary-driven; no interpretive freedom is needed.
 - **Bad** (high degrees of freedom): interpreting `הַתַּנִּינִם הַגְּדֹלִים` as something specific. We do now that these are big creatures of the water, and the dictionary says חיה = narrative and מים = motivation; But we have no references beyond that - so any specific interpretation is a speculation. This kind of interpretation belongs inside `<מדרש>` tags.
 
+# Cognitive Mode
+
+Working on the commentary requires a specific way of reading — different from both traditional religious reading and standard academic criticism.
+
+## The Reverse-Engineering Test
+
+The strongest quality test: **put yourself in the shoes of a writer who must craft a text that works on two layers simultaneously** — a surface mythological story and a hidden cultural-sociological story. Then ask: given both constraints, would the writer pick *exactly these words*?
+
+Three outcomes:
+- **"Yes, exactly these words"**: strong interpretation. The text is *optimized* for dual-layer encoding — no better word choice exists for serving both layers.
+- **"This word is odd or unnecessary on the surface, but perfect for the hidden layer"**: the strongest signal. When the surface story doesn't need a word but the dictionary makes it inevitable, the interpretation gains extraordinary credibility. (Example: `הִוא נָתְנָה` — masculine pronoun for the woman. The surface story doesn't need this. The hidden layer uses it to signal agency.)
+- **"The word is natural on the surface, but the hidden reading requires a stretch"**: midrash zone. The dictionary technically maps, but the writer had no reason to pick *this* word to encode *this* cultural meaning. Flag with `<מדרש>` tags.
+
+This test complements the degrees-of-freedom criterion: degrees of freedom measures whether the dictionary *constrains* the reading; the reverse-engineering test measures whether the text was *designed* for it.
+
+## Suspicious Reading
+
+Every word in the biblical text is potentially a dictionary carrier. Don't let words pass as "connective tissue" or "stylistic variation." Words like `גַם` (also), `הִנֵּה` (behold), `כִּי` (because/that), and especially `כֹּל` (all) often carry significant weight in the hidden layer. Grammatical anomalies — unexpected gender, unusual verb form, surprising word order — are signals, not scribal errors.
+
+## Architectonic Awareness
+
+Always hold the larger structure while working on a verse:
+- What cultural transition does this *passage* describe?
+- What position does this passage hold in its *sequence*?
+- What came before, and what tension does this passage resolve or create?
+
+A verse that seems cryptic in isolation often becomes transparent when you see the cultural transition it serves.
+
+## Dialectical Thinking
+
+Every cultural development contains the seed of its counter-development. Class formation creates class struggle. Moral codification creates rigidity. Institutional solutions create institutional corruption. When the text describes a development, the next passage typically addresses the tension it created. Expect this — and note when the text breaks the pattern.
+
 # The Dictionary (המילון)
 
 The dictionary below contains only **primitive definitions** — concepts whose meaning cannot be reliably derived from other dictionary entries or from root analysis. Derived concepts (such as נחש, קין, הבל, חנוך, and most named characters and places) are established within the commentary segments themselves and accessed through cross-referencing when needed (see "Cross-Referencing Recurring Concepts" below).
+
+**Structural relationships between entries** — the dictionary is not a flat list. Key organizing axes:
+- **Complexity scale**: צומח (insights) → חיה (local narrative) → אדם (authoritative narrative). Each level incorporates and governs the levels below it.
+- **Population hierarchy**: עפר (individuals) → אדמה (general population) → אדם (the narrative a population forges). The אדם rises from the אדמה and eventually disintegrates back into it.
+- **Elite/popular axis**: איש (elite, leadership-oriented) ↔ אישה (popular, identity-oriented). This polarity drives many stories and generates dialectical tension.
+- **Inner/outer axis**: ארץ (how we experience ourselves) ↔ שמים (how we experience the boundary with the outside). Both are subconscious; שמים is a kind of מים.
 
 ## Concepts of Light: Thought
 
@@ -69,7 +107,12 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 - **אלהים** = a kind of indefinable force that pushes the world toward development in a certain direction - like the Hegelian concept "Weltgeist." Possibly derived from the preposition "אל" (toward), as in "אֵלֶיהֶם."
 - **יהוה** = the experience of reality as-it-is. Probably derived from the root "היה": הָיָה הוֹוֶה ויִהְיֶה (was, is, will be).
 - **יהוה אלהים** = the full reality — both the experience of how things are (`יהוה`) and the developmental force driving them somewhere (`אלהים`). Literal reading: "reality [that is also] directional."
-  **The choice of divine name in the text is a signal, not a stylistic variation.** Pay close attention to which name appears.
+
+  **The choice of divine name is a powerful reading signal — not a stylistic variation:**
+  - **`אלהים` alone**: the process is driven by developmental necessity — an impersonal force pushing culture forward (dominant in the Seven Days of Creation).
+  - **`יהוה` alone**: the process is driven by problems and pressures in existing reality — culture responds to what *is* (dominant in Cain and Abel).
+  - **`יהוה אלהים`**: the full picture — reality as experienced *and* the developmental force within it (dominant in the Garden of Eden).
+  - **A switch mid-passage**: a character or culture perceives reality through a different lens (e.g., the woman using `אלהים` alone in Genesis 3:1 — she suddenly sees reality as a constraining force).
 
 - **אדמה** (soil) = the general population in the relevant context. From the soil the אדם (human/narrative) is formed, and to it a culture eventually disintegrates.
   **עפר** (dust) = the individuals that compose a society: `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה`.
@@ -144,13 +187,48 @@ The traditional reading creates a powerful "gravitational pull" toward familiar 
 
 **The translated stories will NEVER contain** "earthly" events like wars, geography, or any concrete-realistic aspect. Instead, the stories describe the **impact** of such events on the cultural-sociological plane: how a great war affects a culture's experience and worldview.
 
+# The Interpretive Process
+
+This section describes how to interpret a passage — the core intellectual work. (The Workflow section below describes the session-level procedure.)
+
+## Step 1: Identify the Cultural Transition (Top-Down)
+
+Before translating word by word, read the full passage and ask: **what cultural development is being described here?** Key signals:
+- **The divine name**: which name appears — and whether it switches mid-passage — signals what *kind* of process drives the narrative (see divine name signals in the Dictionary).
+- **The cast**: which archetypes appear (אדם, אישה, נחש, etc.), and in what configuration? What are the power dynamics?
+- **The arc**: does the passage describe formation, conflict, collapse, synthesis, or institutionalization?
+
+Formulate a tentative thesis: "This passage describes the process of [X]."
+
+## Step 2: Translate Within the Frame (Bottom-Up)
+
+Work verse by verse, word by word. At each word:
+1. **Dictionary hit?** → Apply the definition directly.
+2. **Proper noun or unfamiliar term?** → Apply root analysis, or cross-reference where it was first interpreted.
+3. **Recurring action verb** (ידע, הרה, ילד, נתן, לקח, הלך, ישב, קם, etc.)? → These carry interpretive weight established in earlier segments. Check how they were used before.
+4. **Grammatical anomaly?** → Unusual gender, unexpected conjugation, surprising word order — treat as a deliberate signal.
+5. **"Small" word** (כי, גם, הנה, כל, את)? → Don't skip. These are often critical in the hidden layer.
+
+## Step 3: Converge
+
+The top-down thesis and the bottom-up translation must align. If they don't:
+- The thesis may be wrong — revise it.
+- A word may require deeper analysis — flag with `TODO:`.
+- The passage may genuinely resist — note the difficulty honestly.
+
+The best interpretive moments happen when a puzzling word becomes inevitable once you adjust the thesis, or when bottom-up work reveals a cultural dynamic you hadn't anticipated from the top-down reading.
+
+## Step 4: Ground the Abstraction
+
+Cultural-sociological processes are inherently abstract. The commentary must make them concrete: use analogies, "imagine this" scenarios, or modern parallels so the reader can *feel* what a cultural transition was like — not just parse it logically. If you cannot ground an interpretation in something tangible, the interpretation may be too vague.
+
 # Workflow
 
 In each session, we focus on one or more commentary segments (files) that I will specify.
 
 **Process for working on a segment:**
 1. Read the target segment AND 2-3 segments before and after it (for context and continuity).
-2. Go through the biblical text word by word, applying the dictionary.
+2. Interpret the passage using the process described in "The Interpretive Process" above.
 3. Check **coherence** on multiple axes:
    - **Narrative flow**: does the cultural story connect logically to adjacent segments?
    - **Developmental plausibility**: are the stages in the right order (e.g., no institutional bureaucracy before class stratification)?
@@ -164,7 +242,7 @@ In each session, we focus on one or more commentary segments (files) that I will
 
 # Cross-Referencing Recurring Concepts
 
-Many interpretive concepts are not in the dictionary but are first established in earlier commentary segments: archetypes (נחש, קין, הבל), named characters, place names with root-derived meanings, and recurring dynamics.
+Many interpretive concepts are not in the dictionary but are first established in earlier commentary segments: archetypes (נחש, קין, הבל), named characters, place names with root-derived meanings, recurring dynamics, and **action verbs that acquire consistent interpretive meanings through usage** (e.g., ידע = to constrain/define; הרה/ילד = a new narrative emerging from constraint; נתן = forcing engagement; לקח = extraction/appropriation). Treat recurring verbs with the same cross-referencing rigor as named characters.
 
 When you encounter such a concept while working on a segment:
 1. **Search** the commentary files for where it was first interpreted, using `./scripts/hebrew-grep` (see below).
