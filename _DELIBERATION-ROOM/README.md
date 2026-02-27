@@ -1,27 +1,29 @@
 # Suggestions
 
-- % --> _
+```
+claude --model opus --allow-dangerously-skip-permissions --chrome --permission-mode bypassPermissions
+```
+
 - add <מאחורי-הקלעים> ... </מאחורי-הקלעים> ?
 - config.ts !!
 
----
 
-I want the code development to always be made with unit-tests.
-Also - I want some kind of a "system test" - by emulating the user clicking in the UI.
-What would be the best methodology for these UI tests?
-
-- - -
-
-Update CLAUDE.md that the coding must be joined with unit-tests and with UI tests (that serve as system tests)
+CLAUDE.md is using ClaudeCode Agent SDK - but I am not sure that everything that I need is indeed provided by the SDK.
+Please carefully analyze what feature we assume that the SDK provides, and create the file ./SMOKE_TEST_CLAUDE_CODE_SDK/CLAUDE.md
+This file will be used by a fresh ClaudeCode session that will run under ./SMOKE_TEST_CLAUDE_CODE_SDK/ and that will create a live smoke-test that makes sure the SDK will provide us with everything that we need.
+That session should be instructed to continuously update its CLAUDE.md with the progress and findings.
 
 ---
 
 I believe that CLAUDE.md is now a complete design-document.
-Please analyze it and:
-1. Define the high-level components - and update into CLAUDE.md
-2. Define the development milestones - and update into the new file DEVELOPMENT-STATUS.md
+Please analyze it and author DEVELOPMENT-STATUS.md like this:
+1. Define the high-level components list - including test-related components (such as the ClaudeCode SDK mockup)
+2. Define tentative development milestones 
 3. Build the foundational files and folders (consider copying from ../_RTL-EDITOR/tsconfig.json and ../_RTL-EDITOR/package.json) 
-4. DEVELOPMENT-STATUS.md should be built with the goal of supporting the long sequence of development: a fresh session should be able to read it and understand what the next task is, until completion.
+
+DEVELOPMENT-STATUS.md should be built with the goal of supporting the long sequence of the application's development: a fresh session should be able to read it and understand what the next task is, until completion.
+
+Before proceeding - 
 
 ---
 
@@ -33,6 +35,32 @@ Please analyze it and:
 
 
 
+
+
+
+---
+
+Let's discuss frameworks:
+- Bun
+- HTMX + Tailwind
+- UI end-to-end tests: Playwright
+- Unit-Tests: ???
+- Think deeply: what other frameworks are needed?
+
+- - -
+
+I agree with all your conclusions.
+I will take care of the SDK smoke test very soon.
+
+One more "private framework": stub ClaudeCode: same interface as ClaudeCode SDK - but the request is expected to explicitly contain the result (as YAML?).
+This will allow fast tests (both unit-tests and UI) - so it's worth the effort.
+
+Important items to include in CLAUDE.md:
+1. Emphasize that the coding **must be joined with unit-tests** and when possible - also with **UI end-to-end tests**
+2. Configurations (almost any tweakable numbers, strings, etc.) should be placed in src/config.ts - and be well documented
+
+Please update CLAUDE.md with your conclusions and my notes.
+Remember that it should be the source of truth for the application's code-vibing development - so be thorough.
 
 ---
 

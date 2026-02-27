@@ -644,6 +644,7 @@ async function recreateSymlink(sessionId: string, worktreePath: string): Promise
 Add to `_DELIBERATION-ROOM/.gitignore` (on `main`):
 ```
 meetings/
+public/style.css
 ```
 
 The `meetings/` directory on `main` is just a mount point for worktrees — it should never contain tracked files on `main`.
@@ -932,13 +933,14 @@ The deliberation is in Hebrew. This is not "RTL support" — it's **RTL-first de
 
 1. **`dir="rtl"` on the `<html>` element.** The entire page is RTL by default. The conversation flows right-to-left. The agent panel is on the left (the "end" side in RTL).
 
-2. **CSS Logical Properties** throughout — never physical `left`/`right`:
-   - `margin-inline-start` not `margin-left`
-   - `padding-inline-end` not `padding-right`
-   - `inset-inline-start` not `left`
-   - `border-inline-start` not `border-left`
+2. **Tailwind logical properties** throughout — never physical `left`/`right`:
+   - `ms-4` not `ml-4` (margin-inline-start)
+   - `pe-2` not `pr-2` (padding-inline-end)
+   - `start-0` not `left-0` (inset-inline-start)
+   - `border-s` not `border-l` (border-inline-start)
+   Tailwind v3.3+ has full CSS logical property support. Use logical utilities exclusively — physical direction utilities (`ml-`, `mr-`, `pl-`, `pr-`, `left-`, `right-`) are forbidden.
 
-3. **CSS Grid with named areas** for the main layout (not Flexbox):
+3. **CSS Grid with named areas** for the main layout (not Flexbox). Defined in `public/input.css` (not Tailwind utilities — grid-template-areas is too complex for utility classes):
    ```css
    .deliberation-room {
      display: grid;
@@ -1357,6 +1359,7 @@ interface Meeting {
   lastEngagedAt?: FormattedTime;  // timestamp of the last ConversationMessage
   sessionIds: Record<AgentId | "manager", string>;  // AI-Agent session IDs for this meeting's participants + manager
                                                      // Updated on session creation and recovery
+  totalCostEstimate?: number;  // accumulated estimated API cost in USD (updated per-cycle)
 }
 ```
 
@@ -1503,16 +1506,22 @@ The server will be launched from the root directory (or will resolve paths relat
 | Runtime | **Bun** | Consistent with the project ecosystem (see `../_RTL-EDITOR`); native WebSocket support in `Bun.serve()` |
 | Language | **TypeScript** | Type safety for the complex message schemas; consistent with the project |
 | Web server | **Bun.serve()** | HTTP + WebSocket in a single API; no external server framework needed |
-| Frontend | **Vanilla HTML/CSS/JS** | No framework, no build step — consistent with `../_RTL-EDITOR`. Single-page application. |
+| Frontend | **Vanilla HTML/JS + Tailwind CSS** | No JS framework, no bundling. Tailwind provides utility-first CSS with RTL logical properties (`ms-*`, `me-*`, `ps-*`, `pe-*`, `start-*`, `end-*`). Single-page application. |
 | Agent sessions | **@anthropic-ai/claude-agent-sdk** | All phases — persistent sessions for agents (Opus) and manager (Sonnet), with tools and streaming via `includePartialMessages` |
+| Validation | **zod** | Runtime schema validation at every boundary: WebSocket messages, AI-Agent assessment/selection output, meeting.json deserialization, frontmatter parsing. Defines TypeScript types from the same schema — single source of truth for shapes. |
+| Frontmatter | **gray-matter** | Parses YAML frontmatter from persona `.md` files (extract frontmatter + content body in one call) |
 | Persistence | **Git branches (worktrees)** | Each meeting on an orphan branch; `meeting.json` + session files committed per-cycle; zero meeting data on `main`; git itself is the database (`git branch --list`, `git show`, `git log`) |
-| Testing | **Playwright** | Browser automation for visual/UI debugging (see Testing section below) |
+| Unit tests | **bun:test** | Built into Bun, Jest-compatible API, zero config. Every module gets a `.test.ts` companion. |
+| E2E tests | **Playwright** | Browser automation for visual/UI testing — especially RTL layout, streaming text, and WebSocket-driven state transitions |
 
 ### Key Dependencies
 
 ```json
 {
   "@anthropic-ai/claude-agent-sdk": "...",
+  "zod": "...",
+  "gray-matter": "...",
+  "tailwindcss": "...",
   "playwright": "..."
 }
 ```
@@ -1531,6 +1540,7 @@ _DELIBERATION-ROOM/
 ├── CLAUDE.md              ← this file (development guide)
 ├── package.json
 ├── tsconfig.json
+├── tailwind.config.ts     ← Tailwind configuration (RTL, font stack, custom colors)
 ├── playwright-test.ts     ← Playwright browser testing helper
 ├── participant-agents/    ← AI-Agent persona files (loaded by session manager to build system prompts)
 │   ├── _base-prefix.md            ← shared prefix prepended to ALL AI-Agents (dictionary, common instructions)
@@ -1546,15 +1556,28 @@ _DELIBERATION-ROOM/
 │   ├── session-manager.ts ← persistent Agent SDK sessions (creation, feeding, streaming, recovery,
 │   │                         move+symlink, worktree management, sessions-index management)
 │   ├── conversation.ts    ← conversation state management (git-as-database: worktree I/O + git show)
-│   ├── types.ts           ← shared TypeScript interfaces
-│   └── config.ts          ← model selection, cost caps, paths, port, getClaudeProjectDir()
+│   ├── types.ts           ← shared TypeScript interfaces and zod schemas
+│   ├── config.ts          ← ALL configurable values (see "Configuration" section below)
+│   ├── stub-sdk.ts        ← Agent SDK stub for testing (see "Stub Agent SDK" section below)
+│   ├── server.test.ts     ← unit tests for server
+│   ├── orchestrator.test.ts      ← unit tests for orchestrator
+│   ├── session-manager.test.ts   ← unit tests for session manager
+│   ├── conversation.test.ts      ← unit tests for conversation store
+│   ├── types.test.ts      ← unit tests for zod schemas and type utilities
+│   └── config.test.ts     ← unit tests for config utilities
 ├── public/
 │   ├── index.html         ← main interface (landing page + deliberation UI)
-│   ├── style.css          ← RTL-first styling
+│   ├── input.css          ← Tailwind input file (@tailwind directives)
+│   ├── style.css          ← Tailwind-generated output (gitignored, built by tailwindcss CLI)
 │   └── src/
 │       ├── app.js         ← frontend entry point, WebSocket client, DOM orchestration
 │       ├── conversation-view.js  ← conversation feed rendering, streaming display
 │       └── agent-panel.js        ← agent panel tabs, assessment display, tool activity
+├── tests/
+│   └── e2e/
+│       ├── landing-page.test.ts      ← Playwright: meeting creation, list, resume
+│       ├── conversation.test.ts      ← Playwright: streaming, RTL, phase transitions
+│       └── mock-ws-server.ts         ← Mock WebSocket server for deterministic frontend E2E tests
 └── meetings/              ← worktree mount point (gitignored on main, NEVER tracked on main)
     └── <meeting-id>/      ← worktree for sessions/<meeting-id> branch (exists only while active)
         ├── meeting.json           ← meeting record (conversation, assessments, decisions)
@@ -1574,25 +1597,160 @@ AI-Agent personas live in `participant-agents/` (see "AI-Agent Personas" section
 # Install dependencies
 bun install
 
-# Start the server (port 4100)
+# Start the server (port 4100) + Tailwind watcher
 bun run dev
+
+# Or run components separately:
+bun run dev:server    # Bun server with --watch
+bun run dev:css       # Tailwind CSS watcher
+
+# Run unit tests
+bun test
+
+# Run unit tests in watch mode
+bun test --watch
 
 # Open in browser
 open http://localhost:4100
 ```
 
-The `dev` script should use `--watch` for auto-reload during development (same pattern as `../_RTL-EDITOR`). The kill-port pattern (`lsof -ti:4100 | xargs kill -9`) should be included in the dev script.
+**`package.json` scripts**:
+```json
+{
+  "scripts": {
+    "dev": "bun run dev:css & bun run dev:server",
+    "dev:server": "lsof -ti:4100 | xargs kill -9 2>/dev/null; bun --watch src/server.ts",
+    "dev:css": "bunx tailwindcss -i public/input.css -o public/style.css --watch",
+    "build:css": "bunx tailwindcss -i public/input.css -o public/style.css --minify",
+    "test": "bun test",
+    "test:e2e": "bun run tests/e2e/landing-page.test.ts && bun run tests/e2e/conversation.test.ts"
+  }
+}
+```
 
 Meeting lifecycle (create, resume, end) is managed entirely through the browser UI — no CLI arguments needed.
 
+### First-Run Preconditions
+
+Before `bun run dev` works for the first time:
+
+1. **`bun install`** — install all dependencies.
+2. **`meetings/` directory** — created automatically if missing, but listed in `.gitignore`. Will not exist after a fresh clone.
+3. **Claude SDK authentication** — the `claude` CLI must be installed and authenticated (`claude` should work from the terminal). Required for real Agent SDK sessions (not for stub mode).
+4. **Git config** — set `core.quotepath=false` to prevent Hebrew filenames from being escaped to octal in `git status`/`git branch` output, which would break our branch listing parser:
+   ```bash
+   git config core.quotepath false
+   ```
+5. **Tailwind build** — run `bun run build:css` once (or `bun run dev` which does it automatically) to generate `public/style.css` from `public/input.css`.
+
+### Configuration
+
+**All configurable values live in `src/config.ts`** — this is the single source of truth for every tweakable number, string, path, timeout, model name, cost cap, and behavioral parameter in the system. This file must be well-documented with JSDoc comments explaining what each value controls and its valid range.
+
+Categories of configuration:
+
+| Category | Examples |
+|----------|---------|
+| **Network** | Server port, WebSocket reconnection intervals, Director input timeout |
+| **Models** | Participant-Agent model (`claude-opus-4-6`), Manager model (`claude-sonnet-4-6`), model IDs for stub mode |
+| **Cost caps** | `maxBudgetUsd` per speech, `maxTurns` per speech |
+| **Paths** | `DELIBERATION_DIR`, `PARTICIPANT_AGENTS_DIR`, `MEETINGS_DIR`, root project dir, `getClaudeProjectDir()` |
+| **Git** | Session branch prefix (`sessions/`), tag prefix (`session-cycle/`), commit message templates |
+| **Timing** | Director input timeout (10 min), WebSocket reconnection backoff (1s/2s/4s/max 30s), vibe bar fade duration (300ms), attention button pulse duration (600ms) |
+| **UI** | Speaker color palette, font stack, panel collapse defaults |
+| **Assessment** | selfImportance/humanImportance scale (1-10), assessment prompt templates |
+| **Stub mode** | Whether to use the stub SDK (see below), default stub response delay |
+
+**Design rule**: If a value appears as a magic number or hardcoded string anywhere in the codebase, it belongs in `config.ts`. When implementing a feature, extract all constants to `config.ts` immediately — do not leave them inline "for now."
+
 ### Testing
 
-Test each component independently before integration:
-1. **Session Manager**: Can it create persistent sessions? Can it feed messages and extract structured assessments? Can it stream speech output? Does session recovery work after a simulated crash? Does the move+symlink capture work correctly? Does worktree creation/removal work? Do per-cycle commits land on the right branch? Does `ensureSessionInIndex` correctly maintain `sessions-index.json`? Does `getClaudeProjectDir()` derive the correct path?
-2. **WebSocket Protocol**: Does the message schema work end-to-end? Use a programmatic WebSocket client (no browser needed) for protocol testing.
-3. **Conversation Store**: Can it list meetings from git branches? Can it read ended meetings via `git show`? Can it read/write active meetings via worktree file I/O? Are writes atomic? Does resume correctly re-attach worktrees and recreate symlinks?
-4. **Orchestrator**: Does the full cycle work end-to-end? Do sessions maintain context across cycles?
-5. **Frontend**: Visual/RTL testing with Playwright (see below).
+**Mandatory rule: every implementation task must be accompanied by tests.** Code without tests is incomplete code. When implementing a feature:
+
+1. **Write unit tests** (`bun:test`) for the module being implemented. Every `.ts` file in `src/` should have a companion `.test.ts` file.
+2. **Write E2E tests** (Playwright) when the feature has a visible UI component — landing page interactions, conversation rendering, streaming display, phase transitions.
+3. **Run tests before considering a task done.** A feature that passes manual inspection but has no automated tests is not finished.
+
+#### Unit Tests (`bun:test`)
+
+Test each module in isolation. Use the stub SDK (see below) to avoid API calls in tests.
+
+**What to test per module**:
+
+1. **`types.ts`**: Zod schema validation — valid inputs pass, invalid inputs fail with expected errors. `FormattedTime` create/parse round-trip. Type utilities.
+2. **`config.ts`**: `getClaudeProjectDir()` path derivation for various CWDs. Config value types and defaults.
+3. **`conversation.ts`**: Meeting CRUD via git branches. Atomic file writes. Meeting listing from branches. Reading ended meetings via `git show`. Worktree creation/removal. Cycle truncation for rollback.
+4. **`session-manager.ts`**: Session creation (via stub). Message feeding and assessment extraction. Speech streaming. Session recovery after simulated crash. Move+symlink capture. `ensureSessionInIndex`. Template marker resolution (includes, variables, iterators, computed markers). Frontmatter parsing.
+5. **`orchestrator.ts`**: Full cycle with stub SDK — assessment → selection → speech. Attention flag mechanics. Phase transitions. Graceful shutdown. Director timeout handling.
+6. **`server.ts`**: WebSocket message routing. HTTP endpoint responses. Reconnection/sync behavior.
+
+**Test patterns**:
+```typescript
+import { describe, test, expect, beforeEach, afterEach } from "bun:test";
+import { createStubSDK } from "./stub-sdk";
+
+describe("session-manager", () => {
+  test("extractAssessment parses valid JSON from agent response", () => {
+    // ...
+  });
+
+  test("extractAssessment throws on malformed response", () => {
+    // ...
+  });
+});
+```
+
+#### E2E Tests (Playwright)
+
+Located in `tests/e2e/`. Use `mock-ws-server.ts` to replay canned WebSocket event sequences — this avoids API costs and makes tests deterministic.
+
+**What to test**:
+1. **Landing page**: Meeting creation form, participant selection toggles, meeting list rendering, empty state.
+2. **Conversation**: Message rendering, RTL layout, streaming text appending, phase indicator updates, speaker color-coding.
+3. **Agent panel**: Tab switching, assessment display, importance badges, collapse/expand.
+4. **Interactions**: Attention button states, rollback dialog, vibe bar transitions, Director input submission.
+
+#### Stub Agent SDK
+
+`src/stub-sdk.ts` provides a **drop-in replacement for the Agent SDK** with the same interface — but the caller explicitly provides the expected response (as YAML or structured data) within the query prompt itself.
+
+**Purpose**: Fast, deterministic, cost-free testing — both unit tests and UI E2E tests. The stub is the foundation that makes test-driven development practical for this project.
+
+**How it works**:
+
+1. The stub implements the same `query()` interface as the real Agent SDK — returning an async iterable of messages with the same type signatures (`system/init`, `assistant`, `result`, etc.).
+2. When calling `query()`, the prompt includes a YAML block that specifies the expected response:
+   ```
+   הודעה חדשה מ-milo: ...content...
+   מה ההערכה שלך?
+
+   ---stub-response---
+   selfImportance: 7
+   humanImportance: 4
+   summary: "יש כאן בעיה מילונית חמורה עם המילה 'נחש'"
+   ---end-stub-response---
+   ```
+3. The stub parses the YAML between the markers and returns it as if the AI-Agent had produced that response — with proper message type wrapping, session ID generation, and optional streaming simulation.
+4. For speech responses, the stub supports multi-chunk streaming with configurable delay between chunks.
+
+**Activation**: Controlled by a config flag in `src/config.ts` (`USE_STUB_SDK`). When `true`, the session manager instantiates the stub instead of the real SDK. The orchestrator and all other code are unaware of the difference — the interface is identical.
+
+**The stub must be maintained alongside the real SDK interface.** When the real SDK interface changes (new message types, new fields), the stub must be updated to match. This is a small cost for the enormous benefit of fast, free, deterministic tests.
+
+```typescript
+// Usage in tests:
+import { createStubSDK } from "./stub-sdk";
+
+const sdk = createStubSDK();
+const query = sdk.query({
+  prompt: `...actual prompt...\n\n---stub-response---\nselfImportance: 8\nhumanImportance: 3\nsummary: "test"\n---end-stub-response---`,
+  options: { model: "claude-opus-4-6" }
+});
+
+for await (const msg of query) {
+  // Same message types as the real SDK
+}
+```
 
 ### Error Handling
 
@@ -1603,12 +1761,80 @@ Test each component independently before integration:
 - If the server restarts mid-meeting, all persistent sessions are lost (Agent SDK state is in-memory). The last completed cycle is recovered from `meeting.json` in the worktree (or via `git show` if the worktree was removed). The session manager re-attaches the worktree if needed, recreates symlinks, and attempts to resume existing sessions (using saved session IDs); if that fails, new sessions are created, fed the conversation transcript, and captured (move+symlink into worktree). The meeting resumes from the last saved state when the browser reconnects. This is acceptable for a local single-user tool.
 - **Worktree conflicts**: If `git worktree add` fails because a worktree already exists at the path (e.g., from a previous crash), the session manager runs `git worktree remove --force` first, then retries. If the branch already exists but has no worktree, `git worktree add <path> <branch>` re-attaches it.
 
+### Graceful Shutdown
+
+The server must handle `SIGINT` (Ctrl+C) and `SIGTERM` gracefully — especially during development when the server is restarted frequently:
+
+1. **Interrupt active queries**: If any Agent SDK `query()` calls are in progress, call `.interrupt()` on each.
+2. **Commit current state**: If a meeting is active with pending changes, commit whatever state exists to the session branch (`"Server shutdown: partial cycle"`).
+3. **Remove worktree cleanly**: Call `git worktree remove` for the active meeting's worktree.
+4. **Close WebSocket connections**: Send an `{ type: "error", message: "Server shutting down" }` to all connected clients before closing.
+5. **Exit**: Process exits cleanly.
+
+Without graceful shutdown, repeated server restarts during development accumulate broken state: dangling worktrees, uncommitted session files, orphaned symlinks. This is implemented via `process.on("SIGINT", ...)` and `process.on("SIGTERM", ...)`.
+
+### Git State Preconditions
+
+At meeting start, the system should check for potential conflicts:
+
+- **Uncommitted perush changes on `main`**: If `git diff --name-only` shows modified files under `פירוש/` or `ניתוחים-לשוניים/`, warn the Director before proceeding. Agent-initiated perush changes during the meeting could conflict with or accidentally include these unrelated modifications.
+- **Dirty worktree state**: If `meetings/` contains leftover directories from a previous crash, clean them up (`git worktree remove --force`) before creating new worktrees.
+
+### Cost Tracking
+
+The system tracks estimated API costs per meeting. The `meeting.json` schema includes a `totalCostEstimate` field (added by the orchestrator after each cycle, based on approximate input/output token counts × model rates). This estimate is displayed in the vibe bar during active meetings and in the meeting list on the landing page.
+
+This is an **estimate**, not an exact accounting — the real cost depends on prompt caching hit rates which vary. But it provides essential visibility when a meeting could spend $10+.
+
+### Idempotency Principle
+
+**Every operation that mutates state must be idempotent — safe to retry after a crash.** This is a foundational design principle, not an optimization. Key implications:
+
+- `captureSession` must check if the file is already in the worktree before moving.
+- `ensureSessionInIndex` must check if the entry already exists before adding.
+- `recreateSymlink` must handle existing symlinks (remove and recreate).
+- `commitCycle` must handle "nothing to commit" gracefully.
+- `createMeetingWorktree` must handle "worktree already exists" (remove and recreate).
+
+When implementing any function that creates, moves, or writes files: first check if the target state already exists.
+
+### Import Dependency Graph
+
+Circular imports are a structural problem that must be prevented. The dependency graph between `src/` modules flows strictly downward:
+
+```
+types.ts          ← no imports from src/ (only external: zod)
+config.ts         ← imports only types.ts
+conversation.ts   ← imports types.ts, config.ts
+session-manager.ts ← imports types.ts, config.ts, conversation.ts, stub-sdk.ts
+orchestrator.ts   ← imports all above
+server.ts         ← imports orchestrator.ts, types.ts, config.ts
+stub-sdk.ts       ← imports only types.ts
+```
+
+**No upward arrows.** If `conversation.ts` ever needs something from `orchestrator.ts`, that's a design smell — extract the shared logic into a lower-level module.
+
+### `sessions-index.json` Concurrent Access
+
+The server writes to `sessions-index.json` (under `~/.claude/projects/`); Claude Code also reads and writes this file during normal operation. Concurrent access can corrupt the file.
+
+**Mitigation**: Use a read-modify-write pattern with a retry loop (read, parse, check if entry exists, write atomically). Accept that the index is best-effort — the JSONL session files are the authoritative source of truth. If the index is corrupted, the system should recover by scanning JSONL files, not by crashing.
+
+### Session Branch Cleanup
+
+After many meetings, `git branch --list "sessions/*"` accumulates branches. The system does not auto-delete branches (meetings are valuable historical artifacts). However:
+
+- The landing page meeting list should handle many branches gracefully (show only the N most recent, with a "show all" option).
+- Document how to manually prune old branches: `git branch -D sessions/<old-meeting-id>`.
+
 ### Code Style
 
 - Follow the patterns established in `../_RTL-EDITOR` for Bun/TypeScript conventions.
 - Keep the orchestrator loop readable — it's the heart of the system and should read like pseudocode.
 - Design for extensibility: adding a new Participant-Agent should require only adding a persona file with proper frontmatter — no code changes. Agent-specific logic should be driven by the persona files and the `meeting.participants` array — never by hardcoded agent IDs.
 - The frontend is vanilla JS — no transpilation, no bundling. Keep it simple and readable. Use ES modules (`import`/`export`) loaded directly by the browser (same pattern as `../_RTL-EDITOR`).
+- **Desktop-only**: The UI is designed for desktop browsers. No responsive/mobile layout. Do not add responsive breakpoints.
+- **Use zod schemas at every boundary**: WebSocket messages (both directions), AI-Agent responses (assessment JSON, selection JSON), `meeting.json` deserialization, frontmatter parsing. Define schemas in `types.ts` and validate at the point of ingestion. When parsing AI output, use `.safeParse()` — never trust that the agent returned valid JSON.
 
 ## Testing & Debugging with Playwright
 
@@ -1750,7 +1976,7 @@ Unlike the static RTL-EDITOR, the deliberation UI is **event-driven and asynchro
 - **Timing**: Messages arrive at unpredictable times via WebSocket. Tests must use `waitForSelector`/`waitForFunction` rather than fixed delays.
 - **Streaming text**: Verify that streaming chunks append correctly, maintain RTL direction, and scroll properly.
 - **State transitions**: The UI cycles through phases (assessing → selecting → speaking → human-turn). Tests should verify that phase transitions update the UI correctly.
-- **Mock server for frontend testing**: For testing the frontend in isolation, create a mock WebSocket server that replays canned event sequences. This avoids API costs and makes tests deterministic.
+- **Mock server for frontend testing**: Use `tests/e2e/mock-ws-server.ts` — a mock WebSocket server that replays canned event sequences. This avoids API costs and makes tests deterministic. The stub SDK (see `src/stub-sdk.ts`) handles the backend side; the mock WS server handles the frontend side.
 
 ## Key Design Decisions (Settled)
 
@@ -1766,7 +1992,7 @@ These decisions were reached through deliberation and should not be revisited wi
 
 5. **TypeScript + Bun**: Consistent with the project ecosystem. Bun provides native WebSocket support in `Bun.serve()` — no external WebSocket library needed.
 
-6. **No framework (backend or frontend)**: Custom orchestrator, vanilla HTML/CSS/JS frontend. The system has a small, configurable set of Participants with a specific protocol — frameworks add complexity without proportional value. The frontend is a single page with straightforward DOM manipulation.
+6. **No JS framework (backend or frontend)**: Custom orchestrator, vanilla HTML/JS frontend with Tailwind CSS. The system has a small, configurable set of Participants with a specific protocol — JS frameworks add complexity without proportional value. The frontend is a single page with straightforward DOM manipulation. Tailwind handles CSS (see #24); no JS framework needed (see #25).
 
 7. **"Vibe" comments**: The Conversation-Manager-Agent produces a short atmospheric comment with each Participant selection, displayed in a sticky bar as a stage direction (not a conversation message). This helps the Director read the room quickly.
 
@@ -1801,6 +2027,18 @@ These decisions were reached through deliberation and should not be revisited wi
 22. **Attention button**: A UI button in the vibe bar that lets the Director request the floor without interrupting the current cycle. The mechanism is a simple in-memory flag (`attentionRequested`) that forces the Conversation-Manager-Agent to select the Director at the next selection phase. The manager still produces its vibe comment. The flag is ephemeral (not persisted) and consumed after the Director speaks. Defense-in-depth: the orchestrator overrides the manager's response if the flag is set. Rationale: the Director should never feel locked out of their own deliberation — but shouldn't have to interrupt valuable agent analysis to get in.
 
 23. **Per-message in-meeting rollback**: Every human message in the conversation feed has a hover-visible rollback button (`↩`). Clicking it opens a confirmation dialog showing what will be discarded, then executes a 6-phase rollback: (1) abort active cycles, (2) reset the session branch to the target cycle's commit, (3) roll back perush files on main if needed (using correlated tags), (4) recreate all agent sessions from the rolled-back transcript, (5) commit the recovery, (6) present the human message for inline editing with "send as-is" or "send edited" options. All sessions are recreated (not just post-rollback speakers) because all have accumulated invalid context. Rollback to the opening prompt (cycle 0) is supported. No undo — discarded cycles exist in the git reflog for manual recovery only. Rationale: (a) the Director frequently wants to "retry from here" after a conversation takes a wrong turn; (b) per-message buttons (like AI chat apps) are more intuitive than a separate rollback UI; (c) the confirmation dialog prevents accidents; (d) the edit-after-rollback flow lets the Director course-correct precisely.
+
+24. **Tailwind CSS (not vanilla CSS)**: Utility-first CSS with built-in RTL logical properties (`ms-*`, `me-*`, `ps-*`, `pe-*`, `start-*`, `end-*`). Eliminates the risk of physical `left`/`right` properties. Requires a build step (`tailwindcss` CLI), handled by the dev script. Rationale: (a) Claude Code generates Tailwind classes fluently — one of the best-represented CSS frameworks in training data; (b) logical properties for RTL are built-in, not opt-in; (c) eliminates a growing custom `style.css` file.
+
+25. **Vanilla JS (not HTMX or any frontend framework)**: The frontend uses explicit DOM manipulation with vanilla JS, receiving JSON messages over WebSocket. Rationale for choosing vanilla JS over HTMX: (a) the WebSocket protocol is already well-specified with JSON messages — converting to HTMX's HTML-over-the-wire model would fight the spec; (b) Claude Code handles explicit DOM manipulation more reliably than HTMX's declarative attribute-driven behavior when debugging; (c) the streaming speech use case (the core UX) needs custom JS regardless; (d) every line is explicit and inspectable — no framework magic to reason about.
+
+26. **zod for validation at every boundary**: Zod schemas define the shape of WebSocket messages, AI-Agent responses (assessments, selections), `meeting.json`, and persona frontmatter. TypeScript types are inferred from the same schemas — single source of truth. Rationale: (a) AI output parsing is the most fragile boundary in the system — agents can return malformed JSON, and zod catches this at ingestion; (b) zod schemas serve as machine-readable contracts that Claude Code can read and implement against during vibe-coding; (c) eliminates an entire class of "data shape mismatch" bugs.
+
+27. **Stub Agent SDK for testing**: A drop-in replacement (`src/stub-sdk.ts`) with the same `query()` interface as the real Agent SDK, where expected responses are embedded in the prompt as YAML blocks. Activated via config flag (`USE_STUB_SDK`). Rationale: (a) unit tests and E2E tests must run without API calls — no cost, no latency, deterministic; (b) the same stub works for both `bun:test` unit tests and Playwright E2E tests; (c) maintaining the stub alongside the real interface is a small cost for the enormous benefit of test-driven development.
+
+28. **Test-driven development**: Every implementation task must be accompanied by unit tests (`bun:test`) and, when there is a visible UI component, E2E tests (Playwright). Code without tests is incomplete code. The stub SDK makes this practical by eliminating API cost and latency from the test loop.
+
+29. **Centralized configuration**: All configurable values (numbers, strings, paths, timeouts, model names, cost caps) live in `src/config.ts` with JSDoc documentation. No magic numbers or hardcoded strings in other modules. This is the first place to look when tuning the system's behavior.
 
 ## Open Design Questions (To Be Resolved)
 
