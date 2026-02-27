@@ -1,9 +1,9 @@
-# %BIBLE-VIEWER - Hebrew Bible Search & Viewing Tool
+# _BIBLE-VIEWER - Hebrew Bible Search & Viewing Tool
 
 ## Project Purpose
 
 This sub-project is part of the larger "perush" (פירוש) project - a methodological allegorical interpretation of the Hebrew Bible.
-The %BIBLE-VIEWER provides a powerful web-based tool for searching and exploring the Hebrew Bible text, with particular emphasis on linguistic analysis through Strong's number support.
+The _BIBLE-VIEWER provides a powerful web-based tool for searching and exploring the Hebrew Bible text, with particular emphasis on linguistic analysis through Strong's number support.
 
 The tool is publicly accessible at:
 https://gilad-bendor.github.io/perush/bible-viewer.html
@@ -105,7 +105,7 @@ A Node.js script that generates a self-contained HTML file (this happened once -
 
 ### File Structure
 ```
-%BIBLE-VIEWER/
+_BIBLE-VIEWER/
 ├── build-bible-viewer.js   # Build script (Node.js)
 ├── __bible-viewer.html     # HTML template
 ├── __bible-viewer.js       # Client-side JavaScript (1300+ lines)
@@ -136,4 +136,4 @@ node build-bible-viewer.js
 
 ## Programmatic Bible Utilities
 
-**NOTE**: The "sibling" project `../%BIBLE-LINGUAL-RESEARCH` provides CLI tools for ClaudeCode to perform similar research.
+**NOTE**: The "sibling" project `../_BIBLE-LINGUAL-RESEARCH` provides CLI tools for ClaudeCode to perform similar research.

@@ -236,7 +236,7 @@ Agent SDK sessions produce JSONL files (one JSON object per line, appended incre
 
 We make them git-tracked using two complementary strategies:
 
-1. **Git worktrees with orphan branches**: Each meeting gets its own orphan branch (`sessions/<meeting-id>`) with a worktree checked out at `%DELIBERATION-ROOM/meetings/<meeting-id>/`. All meeting data — `meeting.json`, session JSONL files, session directories — lives on this branch, **never on `main`**. The session manager controls all commits to the branch at well-defined safe points (after each cycle).
+1. **Git worktrees with orphan branches**: Each meeting gets its own orphan branch (`sessions/<meeting-id>`) with a worktree checked out at `_DELIBERATION-ROOM/meetings/<meeting-id>/`. All meeting data — `meeting.json`, session JSONL files, session directories — lives on this branch, **never on `main`**. The session manager controls all commits to the branch at well-defined safe points (after each cycle).
 
 2. **Move+symlink**: After a session is created, its directory is moved from `~/.claude/projects/` into the meeting's worktree, and a symlink is placed at the original location. Claude Code follows symlinks transparently (standard `fs.readFile`/`fs.appendFile` behavior), so it continues operating normally — while the actual file lives in the worktree under git control.
 
@@ -277,9 +277,9 @@ Each meeting gets its own **orphan branch** and **worktree**. Orphan branches sh
 Repository structure (conceptual):
 
 main branch:
-  %DELIBERATION-ROOM/src/...     ← source code
-  %DELIBERATION-ROOM/public/...  ← frontend
-  %DELIBERATION-ROOM/CLAUDE.md   ← this file
+  _DELIBERATION-ROOM/src/...     ← source code
+  _DELIBERATION-ROOM/public/...  ← frontend
+  _DELIBERATION-ROOM/CLAUDE.md   ← this file
   (NO meeting data)
 
 sessions/bereshit-2-4-eden branch (orphan):
@@ -298,7 +298,7 @@ sessions/bereshit-3-1-nachash branch (orphan):
 **On disk during an active meeting**:
 
 ```
-%DELIBERATION-ROOM/
+_DELIBERATION-ROOM/
   meetings/                       ← gitignored on main (worktree mount point)
     bereshit-2-4-eden/            ← worktree for sessions/bereshit-2-4-eden branch
       meeting.json
@@ -327,7 +327,7 @@ async function createMeetingWorktree(meetingId: string): Promise<string> {
 
 This creates:
 - A new orphan branch `sessions/<meeting-id>` (no parent commits, no shared history with `main`).
-- A worktree at `%DELIBERATION-ROOM/meetings/<meeting-id>/` checked out on that branch.
+- A worktree at `_DELIBERATION-ROOM/meetings/<meeting-id>/` checked out on that branch.
 - The worktree is a fully functional git working directory — `git -C <path> add/commit` works naturally.
 
 ##### The Move+Symlink Operation
@@ -635,13 +635,13 @@ async function recreateSymlink(sessionId: string, worktreePath: string): Promise
 
 | What | Where | Branch |
 |------|-------|--------|
-| Source code, frontend, CLAUDE.md | `%DELIBERATION-ROOM/` | `main` |
+| Source code, frontend, CLAUDE.md | `_DELIBERATION-ROOM/` | `main` |
 | `meeting.json` (public conversation, assessments, decisions) | `meetings/<meeting-id>/meeting.json` | `sessions/<meeting-id>` |
 | AI-Agent session JSONL (internal reasoning, tool usage) | `meetings/<meeting-id>/<session-id>.jsonl` | `sessions/<meeting-id>` |
 | AI-Agent session directories (subagents) | `meetings/<meeting-id>/<session-id>/` | `sessions/<meeting-id>` |
 | Symlinks to session files | `~/.claude/projects/...` | *(not tracked — local, ephemeral)* |
 
-Add to `%DELIBERATION-ROOM/.gitignore` (on `main`):
+Add to `_DELIBERATION-ROOM/.gitignore` (on `main`):
 ```
 meetings/
 ```
@@ -953,7 +953,7 @@ The deliberation is in Hebrew. This is not "RTL support" — it's **RTL-first de
 
 5. **Input field**: `dir="auto"` — Hebrew input is RTL, English commands like `/end` are LTR, auto-detected by the first strong character.
 
-6. **Font stack**: `'David', 'Narkisim', 'Times New Roman', serif` — consistent with `../%RTL-EDITOR`. David and Narkisim are Hebrew-optimized fonts; Times New Roman is the cross-platform fallback.
+6. **Font stack**: `'David', 'Narkisim', 'Times New Roman', serif` — consistent with `../_RTL-EDITOR`. David and Narkisim are Hebrew-optimized fonts; Times New Roman is the cross-platform fallback.
 
 ### Speaker Color-Coding
 
@@ -1368,7 +1368,7 @@ This schema records everything: the public conversation, the private assessments
 
 ### Atomic File Writes
 
-`meeting.json` is written atomically using the temp-file-then-rename pattern (as in `../%RTL-EDITOR/src/server.ts`): write to a temporary file in the worktree, then `rename()` to the final path. This prevents corruption if the server crashes mid-write. The subsequent `git commit` on the session branch happens only after the write is confirmed.
+`meeting.json` is written atomically using the temp-file-then-rename pattern (as in `../_RTL-EDITOR/src/server.ts`): write to a temporary file in the worktree, then `rename()` to the final path. This prevents corruption if the server crashes mid-write. The subsequent `git commit` on the session branch happens only after the write is confirmed.
 
 ## AI-Agent Personas
 
@@ -1489,7 +1489,7 @@ The Conversation-Manager-Agent (`_conversation-manager.md`) is fundamentally dif
 
 ## Execution Context
 
-**Critical distinction**: This project (`%DELIBERATION-ROOM/`) is where the deliberation software is **developed**. But the software **runs** from the root project directory (`../`), because the agents need access to:
+**Critical distinction**: This project (`_DELIBERATION-ROOM/`) is where the deliberation software is **developed**. But the software **runs** from the root project directory (`../`), because the agents need access to:
 - `../CLAUDE.md` — the dictionary and interpretive methodology (injected into agent system prompts)
 - `../פירוש/` — the commentary segments (accessed by agents via tools)
 - `../scripts/hebrew-grep` — the Hebrew search tool (used by agents via Bash)
@@ -1500,10 +1500,10 @@ The server will be launched from the root directory (or will resolve paths relat
 
 | Component | Technology | Why |
 |-----------|-----------|-----|
-| Runtime | **Bun** | Consistent with the project ecosystem (see `../%RTL-EDITOR`); native WebSocket support in `Bun.serve()` |
+| Runtime | **Bun** | Consistent with the project ecosystem (see `../_RTL-EDITOR`); native WebSocket support in `Bun.serve()` |
 | Language | **TypeScript** | Type safety for the complex message schemas; consistent with the project |
 | Web server | **Bun.serve()** | HTTP + WebSocket in a single API; no external server framework needed |
-| Frontend | **Vanilla HTML/CSS/JS** | No framework, no build step — consistent with `../%RTL-EDITOR`. Single-page application. |
+| Frontend | **Vanilla HTML/CSS/JS** | No framework, no build step — consistent with `../_RTL-EDITOR`. Single-page application. |
 | Agent sessions | **@anthropic-ai/claude-agent-sdk** | All phases — persistent sessions for agents (Opus) and manager (Sonnet), with tools and streaming via `includePartialMessages` |
 | Persistence | **Git branches (worktrees)** | Each meeting on an orphan branch; `meeting.json` + session files committed per-cycle; zero meeting data on `main`; git itself is the database (`git branch --list`, `git show`, `git log`) |
 | Testing | **Playwright** | Browser automation for visual/UI debugging (see Testing section below) |
@@ -1526,7 +1526,7 @@ Minimal dependency footprint. No multi-agent frameworks (no LangChain, no AutoGe
 ## Project Structure
 
 ```
-%DELIBERATION-ROOM/
+_DELIBERATION-ROOM/
 ├── .gitignore             ← includes "meetings/" (worktree mount point, not tracked on main)
 ├── CLAUDE.md              ← this file (development guide)
 ├── package.json
@@ -1569,7 +1569,7 @@ AI-Agent personas live in `participant-agents/` (see "AI-Agent Personas" section
 ### Running the System
 
 ```bash
-# From the %DELIBERATION-ROOM directory:
+# From the _DELIBERATION-ROOM directory:
 
 # Install dependencies
 bun install
@@ -1581,7 +1581,7 @@ bun run dev
 open http://localhost:4100
 ```
 
-The `dev` script should use `--watch` for auto-reload during development (same pattern as `../%RTL-EDITOR`). The kill-port pattern (`lsof -ti:4100 | xargs kill -9`) should be included in the dev script.
+The `dev` script should use `--watch` for auto-reload during development (same pattern as `../_RTL-EDITOR`). The kill-port pattern (`lsof -ti:4100 | xargs kill -9`) should be included in the dev script.
 
 Meeting lifecycle (create, resume, end) is managed entirely through the browser UI — no CLI arguments needed.
 
@@ -1605,10 +1605,10 @@ Test each component independently before integration:
 
 ### Code Style
 
-- Follow the patterns established in `../%RTL-EDITOR` for Bun/TypeScript conventions.
+- Follow the patterns established in `../_RTL-EDITOR` for Bun/TypeScript conventions.
 - Keep the orchestrator loop readable — it's the heart of the system and should read like pseudocode.
 - Design for extensibility: adding a new Participant-Agent should require only adding a persona file with proper frontmatter — no code changes. Agent-specific logic should be driven by the persona files and the `meeting.participants` array — never by hardcoded agent IDs.
-- The frontend is vanilla JS — no transpilation, no bundling. Keep it simple and readable. Use ES modules (`import`/`export`) loaded directly by the browser (same pattern as `../%RTL-EDITOR`).
+- The frontend is vanilla JS — no transpilation, no bundling. Keep it simple and readable. Use ES modules (`import`/`export`) loaded directly by the browser (same pattern as `../_RTL-EDITOR`).
 
 ## Testing & Debugging with Playwright
 
@@ -1776,9 +1776,9 @@ These decisions were reached through deliberation and should not be revisited wi
 
 10. **Natural speech rhythm**: No hard word-count constraint on Participant-Agent speeches. The guidance is conversational: deliver your point well, pass the ball, keep it dynamic. Participant-Agents are explicitly allowed to say "nothing to add" — silence is better than noise.
 
-11. **Personas in `participant-agents/` with template system**: AI-Agent personas live in `%DELIBERATION-ROOM/participant-agents/`. Non-underscore files are AI-Agent entry points with YAML frontmatter (containing `englishName`, `hebrewName`, `managerIntro`, `managerTip`) and undergo template marker resolution (`${include:...}`, `${EnglishName}`, `${HebrewName}`, `${each:participant}`, `${speakerIds}`). Underscore-prefix files serve special roles: `_base-prefix.md` (shared prefix for ALL AI-Agents — dictionary, common instructions), `_agents-prefix.md` (Participant-Agent-only prefix — introduces fellow Participants via `${each:participant}` markers), `_conversation-manager.md` (orchestration logic). System prompt construction: Participant-Agents get `_base-prefix.md` + `_agents-prefix.md` + resolved agent file; the Conversation-Manager-Agent gets `_base-prefix.md` + resolved `_conversation-manager.md`. Current Participant-Agent names: **Milo/מיילו** (Dictionary Purist), **Archi/ארצ'י** (Architect), **Kashia/קשיא** (Skeptic), **Barak/ברק** (Ideator). The Director is **The Director/המנחה**. The Conversation-Manager-Agent is unnamed.
+11. **Personas in `participant-agents/` with template system**: AI-Agent personas live in `_DELIBERATION-ROOM/participant-agents/`. Non-underscore files are AI-Agent entry points with YAML frontmatter (containing `englishName`, `hebrewName`, `managerIntro`, `managerTip`) and undergo template marker resolution (`${include:...}`, `${EnglishName}`, `${HebrewName}`, `${each:participant}`, `${speakerIds}`). Underscore-prefix files serve special roles: `_base-prefix.md` (shared prefix for ALL AI-Agents — dictionary, common instructions), `_agents-prefix.md` (Participant-Agent-only prefix — introduces fellow Participants via `${each:participant}` markers), `_conversation-manager.md` (orchestration logic). System prompt construction: Participant-Agents get `_base-prefix.md` + `_agents-prefix.md` + resolved agent file; the Conversation-Manager-Agent gets `_base-prefix.md` + resolved `_conversation-manager.md`. Current Participant-Agent names: **Milo/מיילו** (Dictionary Purist), **Archi/ארצ'י** (Architect), **Kashia/קשיא** (Skeptic), **Barak/ברק** (Ideator). The Director is **The Director/המנחה**. The Conversation-Manager-Agent is unnamed.
 
-12. **Execution from root directory**: The deliberation software is developed here (`%DELIBERATION-ROOM/`) but accesses the root project directory (`../`), giving agents access to commentary files, scripts, and the full CLAUDE.md. The ClaudeCode processes should have `../` as their CWD.
+12. **Execution from root directory**: The deliberation software is developed here (`_DELIBERATION-ROOM/`) but accesses the root project directory (`../`), giving agents access to commentary files, scripts, and the full CLAUDE.md. The ClaudeCode processes should have `../` as their CWD.
 
 13. **Web server, not tmux**: The deliberation UI runs in the browser, served by a Bun web server on port 4100. Rationale: (a) tmux cannot render Hebrew RTL text correctly — for a Hebrew-language deliberation system, this is a fundamental blocker; (b) the browser provides proper font rendering, streaming text display, collapsible panels, and visual richness that tmux cannot; (c) the browser-based landing page replaces CLI arguments for meeting lifecycle management.
 

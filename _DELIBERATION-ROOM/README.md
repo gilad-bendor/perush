@@ -20,7 +20,7 @@ I believe that CLAUDE.md is now a complete design-document.
 Please analyze it and:
 1. Define the high-level components - and update into CLAUDE.md
 2. Define the development milestones - and update into the new file DEVELOPMENT-STATUS.md
-3. Build the foundational files and folders (consider copying from ../%RTL-EDITOR/tsconfig.json and ../%RTL-EDITOR/package.json) 
+3. Build the foundational files and folders (consider copying from ../_RTL-EDITOR/tsconfig.json and ../_RTL-EDITOR/package.json) 
 4. DEVELOPMENT-STATUS.md should be built with the goal of supporting the long sequence of development: a fresh session should be able to read it and understand what the next task is, until completion.
 
 ---
@@ -71,7 +71,7 @@ The UI lists all the historic meetings (most recent on top):
 - The user can view (read-only) all other meetings
 
 In addition - the user can start a new meeting.
-The "enter meeting" UI should also allow the user to select the participants from the pool of participant-agents (./%DELIBERATION-ROOM/participant-agents/*.md - excluding files that starts with underscore).
+The "enter meeting" UI should also allow the user to select the participants from the pool of participant-agents (./_DELIBERATION-ROOM/participant-agents/*.md - excluding files that starts with underscore).
 The selected participant-agents can't change once a session is started.
 
 # While Inside a Meeting - Special UI Actions
@@ -107,9 +107,9 @@ This is quite unusual, so you will need to be extra creative...
 
 Good. Now:
 Currently, each participant is an agent - declared at .claude/agents/*.md
-I want to remove these files. Instead - each agent will reside at ./%DELIBERATION-ROOM/participant-agents/*.md
+I want to remove these files. Instead - each agent will reside at ./_DELIBERATION-ROOM/participant-agents/*.md
 
-The files under ./%DELIBERATION-ROOM/participant-agents/ are:
+The files under ./_DELIBERATION-ROOM/participant-agents/ are:
 - _agents-prefix.md (not used directly: this is always prefixed to the content of *all* the files below)
 - archi.md (normal participant-agent)
 - kashia.md (normal participant-agent)
@@ -130,7 +130,7 @@ For now - do not update CLAUDE.md - just ideate...
 
 - - -
 
-So now - few improvements to ./%DELIBERATION-ROOM/participant-agents/ :
+So now - few improvements to ./_DELIBERATION-ROOM/participant-agents/ :
 The "normal" agent-prompt-files ("normal" = doesn't start with underscore) also undergoes markers-resolution - for now:
   - ${EnglishName} and ${HebrewName} (these will probably appear in _conversation-manager.md)
   - ${include:_conversation-manager.md}  (this will appear in the agent-prompt-files)
@@ -148,7 +148,7 @@ I want to establish a consistent taxonomy that should be used across the project
 - AI-Agents ::= Participant-Agents + Conversation-Manager-Agent
 - Participant ::= Participant-Agent + Director
 
-Please update CLAUDE.md (and maybe ./%DELIBERATION-ROOM/participant-agents/*.md ?)
+Please update CLAUDE.md (and maybe ./_DELIBERATION-ROOM/participant-agents/*.md ?)
 
 ---
 

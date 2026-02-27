@@ -1,2 +1,2 @@
 #!/bin/bash
-"$( dirname "$( dirname "$( realpath "$0" )" )" )/%BIBLE-VIEWER/build-bible-viewer.js"
+"$( dirname "$( dirname "$( realpath "$0" )" )" )/_BIBLE-VIEWER/build-bible-viewer.js"

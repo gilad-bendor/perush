@@ -113,7 +113,7 @@ export class MarkdownEditor {
         ]));
 
         // Custom key-handlers.
-        // Tye actual type is KeyBinding[] - see %RTL-EDITOR/node_modules/@codemirror/view/dist/index.d.ts
+        // Tye actual type is KeyBinding[] - see _RTL-EDITOR/node_modules/@codemirror/view/dist/index.d.ts
         /** @type {{key: string, run: (view: EditorView) => boolean }[]} */ const specialKeyHandling = [];
         if (isRtl) {
             specialKeyHandling.push(
