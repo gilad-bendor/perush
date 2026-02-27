@@ -7,6 +7,7 @@ claude --model opus --allow-dangerously-skip-permissions --chrome --permission-m
 - add <מאחורי-הקלעים> ... </מאחורי-הקלעים> ?
 - config.ts !!
 
+---
 
 CLAUDE.md is using ClaudeCode Agent SDK - but I am not sure that everything that I need is indeed provided by the SDK.
 Please carefully analyze what feature we assume that the SDK provides, and create the file ./SMOKE_TEST_CLAUDE_CODE_SDK/CLAUDE.md
@@ -23,7 +24,9 @@ Please analyze it and author DEVELOPMENT-STATUS.md like this:
 
 DEVELOPMENT-STATUS.md should be built with the goal of supporting the long sequence of the application's development: a fresh session should be able to read it and understand what the next task is, until completion.
 
-Before proceeding - 
+This is a super critical task, as it will affect the whole development process.
+Ask me anything.
+
 
 ---
 

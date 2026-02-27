@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Main deliberation layout — CSS Grid (not Tailwind utilities — too complex for utility classes) */
+.deliberation-room {
+  display: grid;
+  grid-template-areas:
+    "conversation sidebar"
+    "vibe         sidebar"
+    "input        sidebar";
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 1fr auto auto;
+  height: 100vh;
+  /* In RTL, "conversation" is on the right, "sidebar" on the left — automatic */
+}
+
+.deliberation-room .conversation-feed { grid-area: conversation; }
+.deliberation-room .vibe-bar          { grid-area: vibe; }
+.deliberation-room .human-input       { grid-area: input; }
+.deliberation-room .agent-panel       { grid-area: sidebar; }
+
+/* Sidebar collapsed state */
+.deliberation-room:has(.agent-panel.collapsed) {
+  grid-template-columns: 1fr 48px;
+}
