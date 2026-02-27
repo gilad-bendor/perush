@@ -1,0 +1,155 @@
+# Suggestions
+
+- % --> _
+- add <מאחורי-הקלעים> ... </מאחורי-הקלעים> ?
+- config.ts !!
+
+---
+
+I want the code development to always be made with unit-tests.
+Also - I want some kind of a "system test" - by emulating the user clicking in the UI.
+What would be the best methodology for these UI tests?
+
+- - -
+
+Update CLAUDE.md that the coding must be joined with unit-tests and with UI tests (that serve as system tests)
+
+---
+
+I believe that CLAUDE.md is now a complete design-document.
+Please analyze it and:
+1. Define the high-level components - and update into CLAUDE.md
+2. Define the development milestones - and update into the new file DEVELOPMENT-STATUS.md
+3. Build the foundational files and folders (consider copying from ../%RTL-EDITOR/tsconfig.json and ../%RTL-EDITOR/package.json) 
+4. DEVELOPMENT-STATUS.md should be built with the goal of supporting the long sequence of development: a fresh session should be able to read it and understand what the next task is, until completion.
+
+---
+
+
+
+
+
+
+
+
+
+
+---
+
+It seems that CLAUDE.md is almost ready to serve as the design-document by which the application could be built.
+In this special session - I need you to deeply analyze CLAUDE.md - and detect and *high level* and *architectural* gaps: gaps that will make me think "I wish I had though about this sooner..."
+Later sessions will proceed in the development path: this session is focused solely on finding gap.
+Analyze deeply and thoroughly.
+
+---
+
+Add another participant-agent: an ideator - out of the box thinker, allowed interesting yet "out there" ideas, break out of the "normal" deliberation. Maybe somewhat of an ADHD mentality. Because this agent is naturally very intrusive - it should only "jump in" if it has a really interesting idea.
+First - deliberate with me on the nature of the ideator (later we will pick a name, and create the agent prompt)
+The goal here is to enrich the meeting and make it better at helping develop the perush, so please read both ./CLAUDE.md and ../CLAUDE.md
+This session should be very deep, and relates to psychology and human-dynamics.
+
+
+---
+
+I want to define a methodology:
+To support rolling back, then:
+1. After each meeting-cycle that actually altered perush-files, create a tag-id `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-id>`
+2. Tag the meeting-branch and the main branch
+3. *Asynchronously* push to git-remote
+
+A "rollback action" is always made via git - to a given tag-id.
+Please update CLAUDE.md
+
+---
+
+UI session:
+
+# The opening page
+
+The UI lists all the historic meetings (most recent on top):
+- The user can continue the most recent meeting
+- The user can view (read-only) all other meetings
+
+In addition - the user can start a new meeting.
+The "enter meeting" UI should also allow the user to select the participants from the pool of participant-agents (./%DELIBERATION-ROOM/participant-agents/*.md - excluding files that starts with underscore).
+The selected participant-agents can't change once a session is started.
+
+# While Inside a Meeting - Special UI Actions
+
+- The user can click the "Attention" button: it will let this cycle continue uninterrupted: the only change is that the next time the conversation-manager is activated - it will be strictly instructed to choose the human (the conversation-manager is still needed for the "vibe summary")
+- The user can click the "Rollback" button: Immediately abort, and rollback to any past user-prompt in the meeting (may involve some sessions-git-rollback). After the rollback - the user can edit that prompt (*requires explicit confirmation*).
+
+---
+
+I am thinking:
+Let every participant-agent to be emulated via a **CONTINUOUSLY EXECUTING** ClaudeCode session.
+This should reduce tokens consumption, right?
+Even the "Conversation Manager" should be like that (although it is not a real "participant" - it has a special role and output format).
+What do you think?
+
+- - -
+
+I need your help as a ClaudeCode CLI internals expert:
+Question: ClaudeCode CLI does keep a history of the sessions, allowing to resume an old session. What technology is used for this persistency?
+Can the internal ClaudeCode persistency files become git-ed, so I can use git to rollback and/or fork sessions?
+What can you tell me?
+(FYI - I use MacOs, but a cross-platform solution is obviously preferred)
+
+- - -
+
+Very good.
+Now, I would like you to think outside the box:
+The proposed solution would accumulate lots of commits in our git (which is not so bad - but also not so nice).
+So, can you think of any weird technical solution that - per deliberation - create a git-branch out of the very first commit in the project's history - and somehow commit the ClaudeCode-folder into that branch - and mot into the main branch?
+This is quite unusual, so you will need to be extra creative...
+
+---
+
+Good. Now:
+Currently, each participant is an agent - declared at .claude/agents/*.md
+I want to remove these files. Instead - each agent will reside at ./%DELIBERATION-ROOM/participant-agents/*.md
+
+The files under ./%DELIBERATION-ROOM/participant-agents/ are:
+- _agents-prefix.md (not used directly: this is always prefixed to the content of *all* the files below)
+- archi.md (normal participant-agent)
+- kashia.md (normal participant-agent)
+- milo.md (normal participant-agent)
+- _conversation-manager.md (the special agent that navigates the meeting)
+
+Whenever a ClaudeCode session starts - then [ _agents-prefix.md + *.md ] is used as the system-prompt.
+
+- - -
+
+OK. Time to get creative:
+Each participant-agent should have a name in English, and in Hebrew, by which it is known by everyone (other participant-agents, the Conversation-Manager-Agent, and the director).
+The English/Hebrew names must sound the same.
+Can you select intuitive names?
+Note: the Conversation-Manager-Agent doesn't need a name - because it "lives in the shadows" - no one ever reference him, and the director (human) is only known as "The Director"
+
+For now - do not update CLAUDE.md - just ideate...
+
+- - -
+
+So now - few improvements to ./%DELIBERATION-ROOM/participant-agents/ :
+The "normal" agent-prompt-files ("normal" = doesn't start with underscore) also undergoes markers-resolution - for now:
+  - ${EnglishName} and ${HebrewName} (these will probably appear in _conversation-manager.md)
+  - ${include:_conversation-manager.md}  (this will appear in the agent-prompt-files)
+
+The agent-prompt-files will contain a frontmatter - that will include - for example - the English/Hebrew names (to resolve ${EnglishName} and ${HebrewName} by).
+Please update CLAUDE.md
+
+- - -
+
+Very good.
+I want to establish a consistent taxonomy that should be used across the project to reference the various agents:
+- Participant-Agent (the "normal" agent-prompt-files)
+- Conversation-Manager-Agent
+- Director (the human)
+- AI-Agents ::= Participant-Agents + Conversation-Manager-Agent
+- Participant ::= Participant-Agent + Director
+
+Please update CLAUDE.md (and maybe ./%DELIBERATION-ROOM/participant-agents/*.md ?)
+
+---
+
+
