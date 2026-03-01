@@ -10,6 +10,7 @@
 
 import { resolve, join } from "path";
 import { homedir } from "os";
+import type { MeetingId, SpeakerId } from "./types";
 
 // ---------------------------------------------------------------------------
 // Network
@@ -130,7 +131,7 @@ export const TAG_PREFIX = "session-cycle/";
 export const COMMIT_INITIAL = "Initial: meeting created";
 
 /** Commit message template for a cycle: `Cycle N: <speaker>` */
-export function commitCycleMessage(cycleNumber: number, speaker: string): string {
+export function commitCycleMessage(cycleNumber: number, speaker: SpeakerId): string {
   return `Cycle ${cycleNumber}: ${speaker}`;
 }
 
@@ -141,7 +142,7 @@ export const COMMIT_MEETING_ENDED = "Meeting ended";
 export const COMMIT_SERVER_SHUTDOWN = "Server shutdown: partial cycle";
 
 /** Commit message template for session recovery */
-export function commitSessionRecovery(agentId: string): string {
+export function commitSessionRecovery(agentId: string): string { // AgentId | "manager"
   return `Session recovery: ${agentId}`;
 }
 
@@ -151,7 +152,7 @@ export function commitRollback(targetCycle: number): string {
 }
 
 /** Commit message template for perush update on main */
-export function commitPerushUpdate(cycleNumber: number, meetingId: string): string {
+export function commitPerushUpdate(cycleNumber: number, meetingId: MeetingId): string {
   return `Cycle ${cycleNumber}: perush update (${meetingId})`;
 }
 

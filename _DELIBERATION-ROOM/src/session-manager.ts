@@ -232,7 +232,7 @@ export async function resolveTemplate(
   filename: string,
   meetingParticipants: AgentDefinition[],
   /** Exclude this agent ID from the participant list (for the agent's own template) */
-  excludeAgentId?: string,
+  excludeAgentId?: AgentId,
 ): Promise<string> {
   // Read the target file
   const body = await readAgentFileBody(filename);
@@ -359,10 +359,10 @@ async function getQueryFn(): Promise<(params: { prompt: string; options?: Record
 // ---------------------------------------------------------------------------
 
 /** Track active sessions: agentId/manager → sessionId */
-const sessionRegistry = new Map<string, string>();
+const sessionRegistry = new Map<AgentId | "manager", string>();
 
 /** Track active queries for interrupt support */
-const activeQueries = new Map<string, AnyQuery>();
+const activeQueries = new Map<AgentId | "manager", AnyQuery>();
 
 /**
  * Create a new session for an agent and return the session ID.

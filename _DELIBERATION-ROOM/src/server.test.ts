@@ -168,10 +168,12 @@ describe("handleHttpRequest", () => {
     // We can't fully test WS upgrade without a real server,
     // but we can test that the path triggers upgrade attempt
     const req = new Request("http://localhost:4100/ws");
-    const server = {
-      upgrade: () => false, // Simulate failed upgrade
-    };
-    const res = await handleHttpRequest(req, server);
+    const res = await handleHttpRequest(
+        req,
+        {
+          upgrade: () => false, // Simulate failed upgrade
+        },
+    );
     expect(res.status).toBe(400); // Failed upgrade returns 400
   });
 });
@@ -237,7 +239,7 @@ describe("handleWsMessage", () => {
 
   test("rejects unknown message types", async () => {
     const { ws, messages } = createFakeWs();
-    await handleWsMessage(ws as any, JSON.stringify({ type: "unknown-type" }));
+    await handleWsMessage(ws as any, JSON.stringify({ type: "unknown-type", messageId: "C0" }));
 
     expect(messages).toHaveLength(1);
     expect(messages[0].type).toBe("error");
@@ -248,6 +250,7 @@ describe("handleWsMessage", () => {
     const { ws, messages } = createFakeWs();
     await handleWsMessage(ws as any, JSON.stringify({
       type: "start-meeting",
+      messageId: "C1",
       // Missing title, openingPrompt, participants
     }));
 
@@ -259,7 +262,7 @@ describe("handleWsMessage", () => {
     const { ws, messages } = createFakeWs();
     connectedClients.add(ws as any);
 
-    await handleWsMessage(ws as any, JSON.stringify({ type: "attention" }));
+    await handleWsMessage(ws as any, JSON.stringify({ type: "attention", messageId: "C2" }));
 
     // Should receive attention-ack
     const ack = messages.find(m => m.type === "attention-ack");
@@ -270,6 +273,7 @@ describe("handleWsMessage", () => {
     const { ws, messages } = createFakeWs();
     await handleWsMessage(ws as any, JSON.stringify({
       type: "command",
+      messageId: "C3",
       command: "/end",
     }));
 
@@ -284,6 +288,7 @@ describe("handleWsMessage", () => {
     // handleHumanSpeech doesn't throw if no one is waiting — it just does nothing
     await handleWsMessage(ws as any, JSON.stringify({
       type: "human-speech",
+      messageId: "C4",
       content: "test speech",
     }));
 
@@ -295,6 +300,7 @@ describe("handleWsMessage", () => {
     const { ws, messages } = createFakeWs();
     await handleWsMessage(ws as any, JSON.stringify({
       type: "view-meeting",
+      messageId: "C5",
       meetingId: "nonexistent-meeting-id",
     }));
 
@@ -307,6 +313,7 @@ describe("handleWsMessage", () => {
     const { ws, messages } = createFakeWs();
     await handleWsMessage(ws as any, JSON.stringify({
       type: "resume-meeting",
+      messageId: "C6",
       meetingId: "non-existent-meeting-id",
     }));
 
@@ -320,6 +327,7 @@ describe("handleWsMessage", () => {
     const { ws, messages } = createFakeWs();
     await handleWsMessage(ws as any, JSON.stringify({
       type: "rollback",
+      messageId: "C7",
       targetCycleNumber: 1,
     }));
 
@@ -341,6 +349,7 @@ describe("meeting lifecycle via WebSocket", () => {
 
     await handleWsMessage(ws as any, JSON.stringify({
       type: "start-meeting",
+      messageId: "C10",
       title: "Test Meeting",
       openingPrompt: "Let's discuss",
       participants: ["milo", "archi"],
@@ -367,6 +376,7 @@ describe("meeting lifecycle via WebSocket", () => {
 
     await handleWsMessage(ws as any, JSON.stringify({
       type: "start-meeting",
+      messageId: "C11",
       title: "Test",
       openingPrompt: "prompt",
       participants: ["nonexistent-agent"],
@@ -392,6 +402,7 @@ describe("meeting lifecycle via WebSocket", () => {
     // End it via command
     await handleWsMessage(ws as any, JSON.stringify({
       type: "command",
+      messageId: "C12",
       command: "/end",
     }));
 

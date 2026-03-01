@@ -7,12 +7,12 @@
 
 import { querySelectorMust } from "./utils.js";
 
-/**
- * @typedef {Object} Assessment
- * @property {number} selfImportance  - 1–10, how urgently the agent wants to speak
- * @property {number} humanImportance - 1–10, how important the agent thinks Director input is
- * @property {string} summary         - One-sentence summary of what the agent would say
- */
+/** @typedef {import('../../src/types.ts').AgentDefinition} AgentDefinition */
+/** @typedef {import('../../src/types.ts').AgentId} AgentId */
+/** @typedef {import('../../src/types.ts').SpeakerId} SpeakerId */
+/** @typedef {import('../../src/types.ts').PrivateAssessment} PrivateAssessment */
+
+/** @typedef {Omit<PrivateAssessment, 'agent'>} Assessment */
 
 /**
  * @typedef {Object} ToolActivityEntry
@@ -25,8 +25,8 @@ export class AgentPanel {
   /**
    * @param {HTMLElement} tabsContainer    - The `#agent-tabs` element (tab buttons)
    * @param {HTMLElement} contentContainer - The `#agent-tab-content` element (tab body)
-   * @param {import("./utils.js").AgentDefinition[]} agents - Agents participating in this meeting
-   * @param {(id: string) => import("./utils.js").SpeakerColorSet} speakerColor - Resolves agent ID to color set
+   * @param {AgentDefinition[]} agents - Agents participating in this meeting
+   * @param {(id: SpeakerId) => import("./utils.js").SpeakerColorSet} speakerColor - Resolves agent ID to color set
    */
   constructor(tabsContainer, contentContainer, agents, speakerColor) {
     this.tabsContainer = tabsContainer;
@@ -34,11 +34,11 @@ export class AgentPanel {
     this.agents = agents;
     this.speakerColor = speakerColor;
 
-    /** @type {string | null} Currently selected tab's agent ID */
+    /** @type {AgentId | null} Currently selected tab's agent ID */
     this.activeTab = null;
-    /** @type {Record<string, Assessment>} Latest assessment per agent */
+    /** @type {Record<AgentId, Assessment>} Latest assessment per agent */
     this.assessments = {};
-    /** @type {Record<string, ToolActivityEntry[]>} Tool activity log per agent */
+    /** @type {Record<AgentId, ToolActivityEntry[]>} Tool activity log per agent */
     this.toolActivities = {};
 
     this._renderTabs();
@@ -47,7 +47,7 @@ export class AgentPanel {
   /**
    * Stores the latest assessment for an agent, updates its importance badge,
    * and re-renders the content pane if this agent's tab is active.
-   * @param {string} agentId
+   * @param {AgentId} agentId
    * @param {Assessment} assessment
    */
   setAssessment(agentId, assessment) {
@@ -60,7 +60,7 @@ export class AgentPanel {
 
   /**
    * Appends a tool-usage entry for an agent and re-renders if their tab is active.
-   * @param {string} agentId
+   * @param {AgentId} agentId
    * @param {string} toolName
    * @param {"started" | "completed"} status
    * @param {string} [detail]
@@ -77,7 +77,7 @@ export class AgentPanel {
 
   /**
    * Expands the panel (if collapsed) and activates the given agent's tab.
-   * @param {string} agentId
+   * @param {AgentId} agentId
    */
   openForAgent(agentId) {
     const panel = querySelectorMust(".agent-panel");
@@ -120,7 +120,7 @@ export class AgentPanel {
 
   /**
    * Highlights the selected tab and renders its content pane.
-   * @param {string} agentId
+   * @param {AgentId} agentId
    */
   _switchTab(agentId) {
     this.activeTab = agentId;
@@ -141,7 +141,7 @@ export class AgentPanel {
 
   /**
    * Renders the content pane for the given agent (assessment + tool activity).
-   * @param {string} agentId
+   * @param {AgentId} agentId
    */
   _renderContent(agentId) {
     const agent = this.agents.find((a) => a.id === agentId);
@@ -198,7 +198,7 @@ export class AgentPanel {
 
   /**
    * Updates the colored dot on an agent's tab (green ≤3, yellow ≤6, red >6).
-   * @param {string} agentId
+   * @param {AgentId} agentId
    * @param {number} selfImportance - 1–10
    */
   _updateBadge(agentId, selfImportance) {

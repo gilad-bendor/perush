@@ -55,6 +55,8 @@ At server start, the session manager scans `participant-agents/` for all non-und
 
 The result is cached for the server's lifetime (re-read on server restart).
 
+**Important**: When adding or removing a Participant-Agent file, also update the `AgentId` type in `src/types.ts` — its literal union members should mirror the set of agent filenames (without `.md`). The type accepts any string at runtime (via `(string & {})`), but the literal members provide IDE autocomplete suggestions.
+
 ### REST Endpoint
 
 ```

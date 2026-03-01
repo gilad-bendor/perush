@@ -4,13 +4,16 @@
  * Serves static frontend files, REST API for meeting management,
  * and WebSocket for real-time deliberation communication.
  *
- * Imports from: orchestrator.ts, types.ts, config.ts
+ * Imports from: orchestrator.ts, types.ts, config.ts, context.ts
  */
+
+// Import context FIRST — hijacks console.log/error/etc with [messageId] prefix.
+import { runWithContext, prettyLog } from "./context";
 
 import { join, extname } from "path";
 import { readFile, stat } from "fs/promises";
 import { SERVER_PORT, DELIBERATION_DIR } from "./config";
-import { ClientMessageSchema, type ServerMessage } from "./types";
+import { ClientMessageSchema, type ServerMessage, type SpeakerId } from "./types";
 import {
   setEventHandlers,
   startMeeting,
@@ -95,9 +98,29 @@ type ServerWebSocket<T> = {
   data: T;
 };
 
+// ---------------------------------------------------------------------------
+// Server message ID counter
+// ---------------------------------------------------------------------------
+
+let serverMessageSeq = 0;
+
+/** Returns the next server message ID: "S1", "S2", ... */
+function nextServerMessageId(): string {
+  return `S${++serverMessageSeq}`;
+}
+
+/** Distributes Omit across union members, preserving the discriminated union. */
+type DistributiveOmit<T, K extends string> = T extends unknown ? Omit<T, K> : never;
+
+/** Message body without messageId — callers don't assign IDs, broadcast/sendTo do. */
+type ServerMessageBody = DistributiveOmit<ServerMessage, "messageId">;
+
 /** Broadcast a message to all connected WebSocket clients. */
-function broadcast(message: ServerMessage): void {
-  const json = JSON.stringify(message);
+function broadcast(message: ServerMessageBody): void {
+  const messageId = nextServerMessageId();
+  const withId = { messageId, ...message };
+  console.log(`WS >>> (broadcast) ${message.type} (${messageId})\n${prettyLog(withId).replace(/^/gm, '    ')}`);
+  const json = JSON.stringify(withId);
   for (const ws of connectedClients) {
     try {
       ws.send(json);
@@ -108,9 +131,12 @@ function broadcast(message: ServerMessage): void {
 }
 
 /** Send a message to a single client. */
-function sendTo(ws: ServerWebSocket<unknown>, message: ServerMessage): void {
+function sendTo(ws: ServerWebSocket<unknown>, message: ServerMessageBody): void {
+  const messageId = nextServerMessageId();
+  const withId = { messageId, ...message };
+  console.log(`WS >-> (sendTo) ${message.type} (${messageId})\n${prettyLog(withId)}`);
   try {
-    ws.send(JSON.stringify(message));
+    ws.send(JSON.stringify(withId));
   } catch {
     connectedClients.delete(ws);
   }
@@ -168,9 +194,9 @@ let deliberationLoopActive = false;
  * Run the deliberation loop: cycles run until the meeting ends.
  * Each cycle takes the last speech and runs: assess → select → speak.
  */
-async function runDeliberationLoop(lastSpeaker: string, lastContent: string): Promise<void> {
+async function runDeliberationLoop(lastSpeaker: SpeakerId, lastContent: string): Promise<void> {
   deliberationLoopActive = true;
-  let speaker = lastSpeaker;
+  let speaker: SpeakerId = lastSpeaker;
   let content = lastContent;
 
   while (deliberationLoopActive && getMeeting()) {
@@ -219,6 +245,11 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
 
   const msg = result.data;
 
+  // Run the handler within the context of this client message.
+  // All console output (including from async continuations) will be prefixed with its messageId.
+  return runWithContext(msg, async () => {
+  console.log(`WS <<< ${msg.type}\n${prettyLog(msg).replace(/^/gm, '    ')}`);
+
   switch (msg.type) {
     case "start-meeting": {
       try {
@@ -229,7 +260,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
           currentPhase: getPhase(),
         });
         // Start the deliberation loop with the opening prompt
-        runDeliberationLoop("human", msg.openingPrompt);
+        runDeliberationLoop("human", msg.openingPrompt).catch(console.error);
       } catch (err: any) {
         sendTo(ws, { type: "error", message: err?.message || "Failed to start meeting" });
       }
@@ -247,10 +278,10 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
         // Resume the deliberation loop from the last speech
         const lastCycle = meeting.cycles[meeting.cycles.length - 1];
         if (lastCycle) {
-          runDeliberationLoop(lastCycle.speech.speaker, lastCycle.speech.content);
+          runDeliberationLoop(lastCycle.speech.speaker, lastCycle.speech.content).catch(console.error);
         } else {
           // No cycles yet — resume from opening prompt
-          runDeliberationLoop("human", meeting.openingPrompt);
+          runDeliberationLoop("human", meeting.openingPrompt).catch(console.error);
         }
       } catch (err: any) {
         sendTo(ws, { type: "error", message: err?.message || "Failed to resume meeting" });
@@ -315,6 +346,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
       break;
     }
   }
+  }); // end runWithContext
 }
 
 // ---------------------------------------------------------------------------

@@ -4,6 +4,10 @@
  * Speaker color palettes, phase display names, and DOM query helpers.
  */
 
+/** @typedef {import('../../src/types.ts').Phase} Phase */
+/** @typedef {import('../../src/types.ts').AgentId} AgentId */
+/** @typedef {import('../../src/types.ts').SpeakerId} SpeakerId */
+
 /**
  * @typedef {Object} SpeakerColorSet
  * @property {string} bg    - Tailwind background class
@@ -27,7 +31,7 @@ export const FALLBACK_COLOR = { bg: "bg-stone-50", border: "border-stone-300", t
 
 /**
  * Returns the color set for a speaker, falling back to {@link FALLBACK_COLOR}.
- * @param {string} speakerId
+ * @param {SpeakerId} speakerId
  * @returns {SpeakerColorSet}
  */
 export function speakerColor(speakerId) {
@@ -36,7 +40,7 @@ export function speakerColor(speakerId) {
 
 /**
  * Maps a cycle phase identifier to its Hebrew display name.
- * @param {string} phase - One of "idle" | "assessing" | "selecting" | "speaking" | "human-turn" | "rolling-back"
+ * @param {Phase} phase
  * @returns {string}
  */
 export function phaseDisplayName(phase) {

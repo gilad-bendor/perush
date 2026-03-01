@@ -12,7 +12,7 @@ import { $ } from "bun";
 import { join } from "path";
 import { readFile, writeFile, rename, stat, mkdir } from "fs/promises";
 import { stringify as yamlStringify, parse as yamlParse } from "yaml";
-import type { Meeting, MeetingSummary } from "./types";
+import type { Meeting, MeetingId, MeetingSummary, SpeakerId } from "./types";
 import { MeetingSchema } from "./types";
 import {
   DELIBERATION_DIR,
@@ -33,7 +33,7 @@ import {
  * Generate a meeting ID from the title and start time.
  * Produces a URL-safe slug: lowercase alphanumeric + hyphens.
  */
-export function generateMeetingId(title: string, startedAt: Date): string {
+export function generateMeetingId(title: string, startedAt: Date): MeetingId {
   const dateStr = [
     startedAt.getFullYear(),
     String(startedAt.getMonth() + 1).padStart(2, "0"),
@@ -73,7 +73,7 @@ async function getGitRoot(): Promise<string> {
  * Create a new meeting with an orphan branch and worktree.
  * Returns the worktree path.
  */
-export async function createMeetingWorktree(meetingId: string): Promise<string> {
+export async function createMeetingWorktree(meetingId: MeetingId): Promise<string> {
   const worktreePath = join(MEETINGS_DIR, meetingId);
   const branchName = `${SESSION_BRANCH_PREFIX}${meetingId}`;
   const gitRoot = await getGitRoot();
@@ -117,7 +117,7 @@ export async function initializeMeeting(worktreePath: string, meeting: Meeting):
 /**
  * End a meeting: final commit + remove worktree.
  */
-export async function endMeeting(meetingId: string, worktreePath: string): Promise<void> {
+export async function endMeeting(meetingId: MeetingId, worktreePath: string): Promise<void> {
   const gitRoot = await getGitRoot();
 
   // Final commit (allow empty in case no changes since last cycle)
@@ -136,7 +136,7 @@ export async function endMeeting(meetingId: string, worktreePath: string): Promi
  * Resume a meeting: re-attach the worktree to the existing branch.
  * Returns the worktree path.
  */
-export async function resumeMeeting(meetingId: string): Promise<string> {
+export async function resumeMeeting(meetingId: MeetingId): Promise<string> {
   const worktreePath = join(MEETINGS_DIR, meetingId);
   const branchName = `${SESSION_BRANCH_PREFIX}${meetingId}`;
   const gitRoot = await getGitRoot();
@@ -185,7 +185,7 @@ export async function readActiveMeeting(worktreePath: string): Promise<Meeting> 
 /**
  * Read meeting.yaml from an ended meeting via `git show`.
  */
-export async function readEndedMeeting(meetingId: string): Promise<Meeting> {
+export async function readEndedMeeting(meetingId: MeetingId): Promise<Meeting> {
   const branchName = `${SESSION_BRANCH_PREFIX}${meetingId}`;
   const gitRoot = await getGitRoot();
   const result = await $`git -C ${gitRoot} show ${branchName}:meeting.yaml`.quiet();
@@ -202,7 +202,7 @@ export async function readEndedMeeting(meetingId: string): Promise<Meeting> {
 export async function commitCycle(
   worktreePath: string,
   cycleNumber: number,
-  speaker: string,
+  speaker: SpeakerId,
 ): Promise<void> {
   await $`git -C ${worktreePath} add -A`.quiet();
   const message = commitCycleMessage(cycleNumber, speaker);
@@ -220,7 +220,7 @@ export async function commitCycle(
 /**
  * Check if a meeting is currently active (has a worktree on disk).
  */
-export async function isMeetingActive(meetingId: string): Promise<boolean> {
+export async function isMeetingActive(meetingId: MeetingId): Promise<boolean> {
   try {
     await stat(join(MEETINGS_DIR, meetingId));
     return true;
@@ -320,7 +320,7 @@ export async function commitWithMessage(worktreePath: string, message: string): 
 export async function findCycleCommit(
   worktreePath: string,
   cycleNumber: number,
-  speaker: string,
+  speaker: SpeakerId,
 ): Promise<string | null> {
   const message = commitCycleMessage(cycleNumber, speaker);
   try {
@@ -359,7 +359,7 @@ export async function detectPerushChanges(): Promise<string[]> {
  */
 export async function commitPerushChangesOnMain(
   cycleNumber: number,
-  meetingId: string,
+  meetingId: MeetingId,
 ): Promise<string | null> {
   const gitRoot = await getGitRoot();
   const message = commitPerushUpdate(cycleNumber, meetingId);
@@ -377,7 +377,7 @@ export async function commitPerushChangesOnMain(
  * Generate a tag ID for cross-branch correlation.
  * Format: session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-id>
  */
-export function generateTagId(meetingId: string, now?: Date): string {
+export function generateTagId(meetingId: MeetingId, now?: Date): string {
   const d = now ?? new Date();
   const ts = [
     d.getFullYear(),
@@ -402,7 +402,7 @@ export function generateTagId(meetingId: string, now?: Date): string {
  */
 export async function createCorrelatedTags(
   worktreePath: string,
-  meetingId: string,
+  meetingId: MeetingId,
 ): Promise<string | null> {
   const gitRoot = await getGitRoot();
   const tagId = generateTagId(meetingId);
@@ -428,7 +428,7 @@ export async function createCorrelatedTags(
  * Async push tags and branches to remote (fire-and-forget).
  * Does NOT block the deliberation loop. Failures are logged but not thrown.
  */
-export function asyncPush(tagId: string, meetingId: string): void {
+export function asyncPush(tagId: string, meetingId: MeetingId): void {
   (async () => {
     try {
       const gitRoot = await getGitRoot();
@@ -448,7 +448,7 @@ export function asyncPush(tagId: string, meetingId: string): void {
 export async function tagPerushChangesIfNeeded(
   worktreePath: string,
   cycleNumber: number,
-  meetingId: string,
+  meetingId: MeetingId,
 ): Promise<string | null> {
   const changedFiles = await detectPerushChanges();
   if (changedFiles.length === 0) return null;
@@ -502,7 +502,7 @@ export async function resetSessionBranchToCycle(
  * Returns tag IDs sorted chronologically.
  */
 export async function findTagsAfterCycle(
-  meetingId: string,
+  meetingId: MeetingId,
   afterCycleNumber: number,
 ): Promise<string[]> {
   const gitRoot = await getGitRoot();
@@ -528,7 +528,7 @@ export async function findTagsAfterCycle(
  * Stashes any uncommitted perush changes first.
  */
 export async function rollbackPerushOnMain(
-  meetingId: string,
+  meetingId: MeetingId,
   targetCycleNumber: number,
 ): Promise<{ stashed: boolean; rolledBack: boolean }> {
   const gitRoot = await getGitRoot();

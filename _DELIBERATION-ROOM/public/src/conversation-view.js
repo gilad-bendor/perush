@@ -8,10 +8,13 @@
 
 import { querySelectorMust } from "./utils.js";
 
+/** @typedef {import('../../src/types.ts').Meeting} Meeting */
+/** @typedef {import('../../src/types.ts').SpeakerId} SpeakerId */
+
 /**
  * @typedef {Object} MessageEntry
  * @property {HTMLElement} el         - The DOM element for this message
- * @property {string}      speaker    - Speaker ID ("human" | agent ID)
+ * @property {SpeakerId}   speaker    - Speaker ID ("human" | agent ID)
  * @property {number}      cycleNumber - Index in the messages array (0 = opening prompt)
  * @property {string}      content    - Accumulated text content
  */
@@ -20,8 +23,8 @@ export class ConversationView {
   /**
    * @param {HTMLElement} container - The `#conversation-messages` element
    * @param {Object}      options
-   * @param {(id: string) => string}  options.speakerDisplayName - Resolves speaker ID to Hebrew display name
-   * @param {(id: string) => import("./utils.js").SpeakerColorSet} options.speakerColor - Resolves speaker ID to color set
+   * @param {(id: SpeakerId) => string}  options.speakerDisplayName - Resolves speaker ID to Hebrew display name
+   * @param {(id: SpeakerId) => import("./utils.js").SpeakerColorSet} options.speakerColor - Resolves speaker ID to color set
    * @param {boolean}                 [options.readOnly=false]   - Disables rollback icons when true
    * @param {((cycle: number, preview: string, total: number) => void) | null} [options.onRollback=null] - Rollback request callback
    */
@@ -54,7 +57,7 @@ export class ConversationView {
 
   /**
    * Adds a completed speech to the feed.
-   * @param {string} speaker   - Speaker ID
+   * @param {SpeakerId} speaker - Speaker ID
    * @param {string} content   - Full speech text
    * @param {string} timestamp - FormattedTime string (display only)
    */
@@ -73,8 +76,8 @@ export class ConversationView {
 
   /**
    * Appends a streaming text chunk. Creates a new streaming message if needed.
-   * @param {string} speaker - Speaker ID
-   * @param {string} delta   - Text fragment to append
+   * @param {SpeakerId} speaker - Speaker ID
+   * @param {string} delta     - Text fragment to append
    */
   appendChunk(speaker, delta) {
     if (!this.streamingMessage || this.streamingMessage.dataset.speaker !== speaker) {
@@ -102,7 +105,7 @@ export class ConversationView {
 
   /**
    * Marks a streaming speech as finalized (removes streaming indicator).
-   * @param {string} speaker - Speaker ID whose stream has ended
+   * @param {SpeakerId} speaker - Speaker ID whose stream has ended
    */
   finalizeSpeech(speaker) {
     if (this.streamingMessage && this.streamingMessage.dataset.speaker === speaker) {
@@ -152,7 +155,7 @@ export class ConversationView {
    * Replaces a message's content with an editable textarea (post-rollback).
    * Dispatches a `"human-edit-submit"` CustomEvent on submit.
    * @param {number} cycleNumber - The cycle whose human message to make editable
-   * @param {Object} meeting     - Current meeting state (used for opening prompt fallback)
+   * @param {Meeting} meeting    - Current meeting state (used for opening prompt fallback)
    */
   enableEditing(cycleNumber, meeting) {
     const entry = this.messages.find((m) => m.cycleNumber === cycleNumber);
@@ -208,7 +211,7 @@ export class ConversationView {
   /**
    * Builds the DOM element for a single conversation message.
    * Human messages include a hover-visible rollback button (unless read-only).
-   * @param {string} speaker
+   * @param {SpeakerId} speaker
    * @param {string} content
    * @param {number} cycleNumber
    * @returns {HTMLElement}

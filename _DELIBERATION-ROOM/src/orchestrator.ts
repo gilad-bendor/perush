@@ -9,6 +9,7 @@
 
 import type {
   Meeting,
+  MeetingId,
   AgentId,
   SpeakerId,
   Phase,
@@ -242,7 +243,7 @@ export async function runCycle(
   // ------ ASSESSMENT PHASE ------
   setPhase("assessing");
 
-  const assessments: Record<string, PrivateAssessment> = {};
+  const assessments: Record<string, PrivateAssessment> = {}; // keyed by AgentId
 
   // Assess in parallel (all participants except last speaker)
   const assessmentPromises = currentMeeting.participants
@@ -517,7 +518,7 @@ export async function handleRollback(
  * Re-attaches the worktree, reads the meeting state, and attempts to
  * resume or recover agent sessions.
  */
-export async function resumeMeetingById(meetingId: string): Promise<Meeting> {
+export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> {
   if (currentMeeting) {
     throw new Error("A meeting is already active. End it before resuming another.");
   }
@@ -634,10 +635,10 @@ function buildSelectionPrompt(
 
 function pickFallbackSpeaker(
   lastSpeaker: SpeakerId,
-  assessments: Record<string, PrivateAssessment>,
+  assessments: Record<string, PrivateAssessment>, // keyed by AgentId
 ): string {
   // Pick the agent with the highest selfImportance, excluding last speaker
-  let best: { id: string; score: number } | null = null;
+  let best: { id: string; score: number } | null = null; // id is AgentId
   for (const [id, assessment] of Object.entries(assessments)) {
     if (id === lastSpeaker) continue;
     if (!best || assessment.selfImportance > best.score) {

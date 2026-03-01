@@ -7,6 +7,21 @@
  * attention, rollback, panel toggle).
  */
 
+/** @typedef {import('../../src/types.ts').ServerMessage} ServerMessage */
+/** @typedef {import('../../src/types.ts').ClientMessage} ClientMessage */
+/** @typedef {Extract<ServerMessage, {type: "sync"}>} WsSync */
+/** @typedef {Extract<ServerMessage, {type: "phase"}>} WsPhase */
+/** @typedef {Extract<ServerMessage, {type: "vibe"}>} WsVibe */
+/** @typedef {Extract<ServerMessage, {type: "rollback-progress"}>} WsRollbackProgress */
+/** @typedef {import('../../src/types.ts').Meeting} Meeting */
+/** @typedef {import('../../src/types.ts').AgentDefinition} AgentDefinition */
+/** @typedef {import('../../src/types.ts').PrivateAssessment} PrivateAssessment */
+/** @typedef {import('../../src/types.ts').MeetingSummary} MeetingSummary */
+/** @typedef {import('../../src/types.ts').Phase} Phase */
+/** @typedef {import('../../src/types.ts').AgentId} AgentId */
+/** @typedef {import('../../src/types.ts').SpeakerId} SpeakerId */
+/** @typedef {import('../../src/types.ts').MeetingId} MeetingId */
+
 import { ConversationView } from "./conversation-view.js";
 import { AgentPanel } from "./agent-panel.js";
 import { speakerColor, phaseDisplayName, querySelectorMust, prettyLog } from "./utils.js";
@@ -17,20 +32,25 @@ import { speakerColor, phaseDisplayName, querySelectorMust, prettyLog } from "./
 const WS_LOG_EPOCH = performance.now();
 
 /**
- * Returns a formatted prefix for WebSocket log lines.
- * Format: `[WS HH:MM:SS.NNN <ms>ms `
- * @param {string} arrow - Direction indicator (">>>" or "<<<")
+ * Log a WebSocket message.
+ * @param {'server --> client'|'client --> server'} arrow
+ * @param {ServerMessage|ClientMessage} msg
  * @returns {string}
  */
-function wsLogPrefix(arrow) {
+function logWsMessage(arrow, msg) {
   const now = new Date();
   const hh = String(now.getHours()).padStart(2, "0");
   const mm = String(now.getMinutes()).padStart(2, "0");
   const ss = String(now.getSeconds()).padStart(2, "0");
   const ms = String(now.getMilliseconds()).padStart(3, "0");
   const elapsed = String(Math.round(performance.now() - WS_LOG_EPOCH)).padStart(6, " ");
-  return `[WS ${hh}:${mm}:${ss}.${ms} ${elapsed}ms ${arrow}]`;
+  console.groupCollapsed(`[ WS ${arrow} ${hh}:${mm}:${ss}.${ms} ${elapsed}ms ${msg.messageId} ${msg.type} ]`, msg);
+  console.log(prettyLog(msg));
+  console.groupEnd();
 }
+
+/** @type {number} Client message sequence counter for messageId ("C1", "C2", ...). */
+let clientMessageSeq = 0;
 
 /** @type {number} Initial reconnection delay (ms), doubles on each failure. */
 const WS_RECONNECT_BASE = 1000;
@@ -47,7 +67,7 @@ let reconnectDelay = WS_RECONNECT_BASE;
 let reconnectTimer = null;
 /** @type {"landing" | "deliberation" | "view-only"} */
 let pageState = "landing";
-/** @type {Object | null} The active/viewed meeting object from the server. */
+/** @type {Meeting | null} The active/viewed meeting object from the server. */
 let currentMeeting = null;
 /** @type {string} Current cycle phase. */
 let currentPhase = "idle";
@@ -55,7 +75,7 @@ let currentPhase = "idle";
 let readOnly = false;
 /** @type {number | null} Cycle number being edited after rollback. */
 let editingCycle = null;
-/** @type {Array<Object>} Cached agent definitions from `/api/agents`. */
+/** @type {AgentDefinition[]} Cached agent definitions from `/api/agents`. */
 let agentDefinitions = [];
 /** @type {ConversationView | null} */
 let conversationView = null;
@@ -90,7 +110,7 @@ const $rollbackConfirm = document.getElementById("rollback-confirm");
 
 /**
  * Resolves a speaker ID to its Hebrew display name.
- * @param {string} speakerId - "human" or an agent ID
+ * @param {SpeakerId} speakerId - "human" or an agent ID
  * @returns {string}
  */
 function speakerDisplayName(speakerId) {
@@ -114,10 +134,8 @@ function connectWs() {
 
   ws.addEventListener("message", (event) => {
     try {
-      const msg = JSON.parse(event.data);
-      console.groupCollapsed(wsLogPrefix("<<<"), msg.type);
-      console.log(prettyLog(msg));
-      console.groupEnd();
+      const msg = /** @type {ServerMessage} */(JSON.parse(event.data));
+      logWsMessage("server --> client", msg);
       handleServerMessage(msg);
     } catch (err) {
       console.error("Failed to parse WS message:", err);
@@ -148,13 +166,15 @@ function scheduleReconnect() {
 
 /**
  * Sends a JSON message over the WebSocket (no-op if disconnected).
- * @param {Object} msg
+ * @param {ClientMessage} msg
  */
 function sendWs(msg) {
   if (ws && ws.readyState === WebSocket.OPEN) {
-    console.groupCollapsed(wsLogPrefix(">>>"), msg.type);
-    console.log(prettyLog(msg));
-    console.groupEnd();
+    msg = {
+      messageId: `C${++clientMessageSeq}`,
+      ...msg,
+    };
+    logWsMessage("client --> server", msg);
     ws.send(JSON.stringify(msg));
   }
 }
@@ -163,7 +183,7 @@ function sendWs(msg) {
 
 /**
  * Routes an incoming server message to the appropriate handler.
- * @param {Object} msg - Parsed JSON from the WebSocket
+ * @param {ServerMessage} msg - Parsed JSON from the WebSocket
  */
 function handleServerMessage(msg) {
   switch (msg.type) {
@@ -212,7 +232,10 @@ function handleServerMessage(msg) {
   }
 }
 
-/** Handles a full state sync (sent on connect/reconnect). */
+/**
+ * Handles a full state sync (sent on connect/reconnect).
+ * @param {WsSync} msg
+ */
 function handleSync(msg) {
   currentMeeting = msg.meeting;
   currentPhase = msg.currentPhase || "idle";
@@ -225,13 +248,19 @@ function handleSync(msg) {
   }
 }
 
-/** Updates UI for a cycle-phase transition. */
+/**
+ * Updates UI for a cycle-phase transition.
+ * @param {WsPhase} msg
+ */
 function handlePhase(msg) {
   currentPhase = msg.phase;
   updatePhaseUI(msg.phase, msg.activeSpeaker);
 }
 
-/** Displays the manager's vibe comment and next-speaker indicator. */
+/**
+ * Displays the manager's vibe comment and next-speaker indicator.
+ * @param {WsVibe} msg
+ */
 function handleVibe(msg) {
   $vibeText.textContent = msg.vibe;
   $vibeNext.textContent = msg.nextSpeaker ? `הבא: ${speakerDisplayName(msg.nextSpeaker)}` : "";
@@ -262,7 +291,10 @@ function handleAttentionAck() {
   setTimeout(() => $attentionBtn.classList.remove("animate-pulse"), 600);
 }
 
-/** Displays rollback progress steps as system messages. */
+/**
+ * Displays rollback progress steps as system messages.
+ * @param {WsRollbackProgress} msg
+ */
 function handleRollbackProgress(msg) {
   conversationView?.addSystemMessage(`חזרה: ${msg.step}${msg.detail ? " — " + msg.detail : ""}`, "info");
 }
@@ -272,8 +304,8 @@ function handleRollbackProgress(msg) {
 /**
  * Applies visual changes to the vibe bar, input field, and agent panel
  * based on the current cycle phase.
- * @param {string} phase          - Current phase identifier
- * @param {string} [activeSpeaker] - Agent ID of the current speaker (if speaking phase)
+ * @param {Phase}  phase           - Current phase identifier
+ * @param {SpeakerId} [activeSpeaker] - Agent ID of the current speaker (if speaking phase)
  */
 function updatePhaseUI(phase, activeSpeaker) {
   $vibePhase.textContent = phaseDisplayName(phase);
@@ -402,7 +434,7 @@ function renderMeetingState() {
       cycle.speech.timestamp
     );
     // Show assessments in agent panel
-    for (const [agentId, assessment] of Object.entries(cycle.assessments)) {
+    for (const [agentId, assessment] of /** @type {[string, PrivateAssessment][]} */ (Object.entries(cycle.assessments))) {
       agentPanel.setAssessment(agentId, assessment);
     }
   }
@@ -507,7 +539,7 @@ async function loadMeetingList() {
 /**
  * Renders meeting cards in the landing page list.
  * The most recent meeting gets a prominent "resume" button.
- * @param {Array<Object>} meetings - Sorted by most recent first
+ * @param {MeetingSummary[]} meetings - Sorted by most recent first
  */
 function renderMeetingList(meetings) {
   if (!meetings || meetings.length === 0) {
@@ -706,7 +738,7 @@ async function init() {
   connectWs();
 }
 
-init();
+init().catch(console.error);
 
 // Export for testing
 export { speakerDisplayName };
