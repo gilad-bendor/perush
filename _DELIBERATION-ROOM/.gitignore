@@ -1,6 +1,0 @@
-node_modules/
-meetings/
-public/style.css
-.idea/
-*.log
-bun.lock

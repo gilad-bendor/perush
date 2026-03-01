@@ -24,3 +24,36 @@
 .deliberation-room:has(.agent-panel.collapsed) {
   grid-template-columns: 1fr 48px;
 }
+
+/* Hide tab bar and content when collapsed */
+.agent-panel.collapsed #agent-tabs,
+.agent-panel.collapsed #agent-tab-content {
+  display: none;
+}
+
+/* Streaming message indicator */
+.message.streaming .message-content::after {
+  content: "▍";
+  animation: blink 0.8s step-end infinite;
+  color: #a3a3a3;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Faded messages (rollback preview) */
+.message.faded {
+  transition: opacity 0.3s ease;
+}
+
+/* Editing state */
+.message.editing {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+/* Rollback icon visibility on message hover */
+.message:hover .rollback-icon {
+  opacity: 1 !important;
+}
