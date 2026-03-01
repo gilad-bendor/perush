@@ -9,9 +9,28 @@
 
 import { ConversationView } from "./conversation-view.js";
 import { AgentPanel } from "./agent-panel.js";
-import { speakerColor, phaseDisplayName, querySelectorMust } from "./utils.js";
+import { speakerColor, phaseDisplayName, querySelectorMust, prettyLog } from "./utils.js";
 
 // ---- Constants --------------------------------------------------------------
+
+/** @type {number} Page load timestamp for elapsed-time logging. */
+const WS_LOG_EPOCH = performance.now();
+
+/**
+ * Returns a formatted prefix for WebSocket log lines.
+ * Format: `[WS HH:MM:SS.NNN <ms>ms `
+ * @param {string} arrow - Direction indicator (">>>" or "<<<")
+ * @returns {string}
+ */
+function wsLogPrefix(arrow) {
+  const now = new Date();
+  const hh = String(now.getHours()).padStart(2, "0");
+  const mm = String(now.getMinutes()).padStart(2, "0");
+  const ss = String(now.getSeconds()).padStart(2, "0");
+  const ms = String(now.getMilliseconds()).padStart(3, "0");
+  const elapsed = String(Math.round(performance.now() - WS_LOG_EPOCH)).padStart(6, " ");
+  return `[WS ${hh}:${mm}:${ss}.${ms} ${elapsed}ms ${arrow}]`;
+}
 
 /** @type {number} Initial reconnection delay (ms), doubles on each failure. */
 const WS_RECONNECT_BASE = 1000;
@@ -96,6 +115,9 @@ function connectWs() {
   ws.addEventListener("message", (event) => {
     try {
       const msg = JSON.parse(event.data);
+      console.groupCollapsed(wsLogPrefix("<<<"), msg.type);
+      console.log(prettyLog(msg));
+      console.groupEnd();
       handleServerMessage(msg);
     } catch (err) {
       console.error("Failed to parse WS message:", err);
@@ -130,6 +152,9 @@ function scheduleReconnect() {
  */
 function sendWs(msg) {
   if (ws && ws.readyState === WebSocket.OPEN) {
+    console.groupCollapsed(wsLogPrefix(">>>"), msg.type);
+    console.log(prettyLog(msg));
+    console.groupEnd();
     ws.send(JSON.stringify(msg));
   }
 }
