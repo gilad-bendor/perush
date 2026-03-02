@@ -59,8 +59,8 @@ Clicking the rollback icon opens a **modal dialog** overlaid on the deliberation
 - Re-read `meeting.yaml` from the now-reset worktree.
 
 **Phase 4 — Perush File Rollback** (main branch, if needed):
-- Check for correlated tags (`session-cycle/*--<meeting-id>/*`) for cycles after the target.
-- If perush changes exist after the rollback point: stash any uncommitted main changes (`git stash push -m "Pre-rollback stash" -- פירוש/ ניתוחים-לשוניים/`), then `git reset --hard <tag>/main` to the most recent tag at or before the target cycle.
+- Check for correlated tags (`session-cycle/<meeting-id>/c*/main`) for cycles after the target.
+- If perush changes exist after the rollback point: stash any uncommitted main changes (`git stash push -m "Pre-rollback stash" -- פירוש/ ניתוחים-לשוניים/`), then restore perush files from `session-cycle/<meeting-id>/c<N>/main` (the most recent tag at or before the target cycle).
 - If no perush changes after target: main is left untouched.
 - Notify the Director via `rollback-progress` if changes were stashed.
 

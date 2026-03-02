@@ -66,6 +66,26 @@ The deliberation is in Hebrew. This is **RTL-first design**.
 
 Implemented palette: human=blue, milo=emerald, archi=violet, kashia=rose, barak=amber. Colors should be distinguishable and scale to N participants.
 
+## URL Routing
+
+The app uses client-side URL routing with `history.pushState`:
+
+| URL | Page | Behavior |
+|-----|------|----------|
+| `/` | Landing page | Meeting list + new meeting form |
+| `/meeting/<id>` | Deliberation page | Sends `join-meeting` over WS; server auto-detects active vs. ended |
+
+**Navigation flow:**
+- Creating a meeting → URL updates to `/meeting/<new-id>` after sync
+- Clicking "view" on a meeting card → navigates to `/meeting/<id>`
+- Clicking "resume" on a meeting card → sends `resume-meeting`, URL updates after sync
+- Browser back from deliberation → returns to `/`
+- Direct URL access (`/meeting/<id>`) → sends `join-meeting` on WS connect
+
+**Server SPA routing:** Any request to `/meeting/*` serves `index.html`. The frontend JS reads the URL to determine what to display.
+
+**Reconnection:** On WS reconnect, if the URL is `/meeting/<id>`, the client re-sends `join-meeting` to restore state.
+
 ## Meeting Lifecycle in the Browser
 
 ### Landing Page

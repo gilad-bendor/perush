@@ -25,7 +25,8 @@ import {
 import { resetStubState } from "./stub-sdk";
 import { resetAgentCache } from "./session-manager";
 import { DELIBERATION_DIR } from "./config";
-import type { ServerMessage } from "./types";
+import {MeetingId, meetingIdToBranchName, MeetingSummary, ServerMessage} from "./types";
+import {generateMeetingId} from "./conversation.ts";
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -52,19 +53,19 @@ function createFakeWs(): {
 }
 
 // Unique meeting IDs for cleanup
-let testMeetingId: string;
-function testId(): string {
-  return `srv-test-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+let testMeetingId: MeetingId;
+function testId(): MeetingId {
+  return generateMeetingId(`srv-test-${Math.random().toString(36).slice(2, 6)}`, new Date());
 }
 
 // Cleanup helper
-async function cleanupMeeting(meetingId: string): Promise<void> {
+async function cleanupMeeting(meetingId: MeetingId): Promise<void> {
   try {
     const { $ } = await import("bun");
     const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
     const worktreePath = join(gitRoot, "_DELIBERATION-ROOM/meetings", meetingId);
     try { await $`git worktree remove --force ${worktreePath}`.quiet(); } catch {}
-    try { await $`git branch -D sessions/${meetingId}`.quiet(); } catch {}
+    try { await $`git branch -D ${meetingIdToBranchName(meetingId)}`.quiet(); } catch {}
   } catch {}
 }
 
@@ -133,7 +134,7 @@ describe("handleHttpRequest", () => {
     const res = await handleHttpRequest(req, {});
     expect(res.status).toBe(200);
 
-    const body = await res.json();
+    const body: MeetingSummary[] = await res.json();
     expect(Array.isArray(body)).toBe(true);
   });
 

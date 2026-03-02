@@ -18,7 +18,7 @@ try {
   const q = query({
     prompt: "Say OK",
     options: {
-      model: "claude-haiku-4-5-20251001",
+      model: "claude-haiku-4-5",
       maxTurns: 1,
       permissionMode: "bypassPermissions",
       allowDangerouslySkipPermissions: true,

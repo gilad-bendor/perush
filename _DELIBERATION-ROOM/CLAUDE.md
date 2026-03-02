@@ -305,6 +305,7 @@ These files contain detailed specifications that are **not needed in every sessi
 | [CLAUDE-TOPICS/DESIGN-DECISIONS.md](CLAUDE-TOPICS/DESIGN-DECISIONS.md) | Before revisiting any settled architectural decision |
 | [CLAUDE-TOPICS/PERSONAS.md](CLAUDE-TOPICS/PERSONAS.md) | Working on template resolution, system prompt construction, or adding new agents |
 | [CLAUDE-TOPICS/UI.md](CLAUDE-TOPICS/UI.md) | Working on frontend layout, RTL design, attention button, or meeting lifecycle UI |
+| [CLAUDE-TOPICS/PLAYWRIGHT-DEBUGGING.md](CLAUDE-TOPICS/PLAYWRIGHT-DEBUGGING.md) | Simulating the app via Playwright, interactive debugging, diagnosing UI/server issues |
 
 ## Open Design Questions
 

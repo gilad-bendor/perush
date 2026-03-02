@@ -38,7 +38,7 @@
 
 18. **Port 4100**: Separate from RTL-EDITOR's port 4000.
 
-19. **Cross-branch tagging for rollback**: Correlated tags (`<tag-id>/main` + `<tag-id>/session`) capture synchronized state of both branches when perush files are altered. Tags pushed async (fire-and-forget).
+19. **Cross-branch tagging for rollback**: Correlated tags (`session-cycle/<meeting-id>/c<N>/main` + `session-cycle/<meeting-id>/c<N>/session`) capture synchronized state of both branches when perush files are altered. Tags pushed async (fire-and-forget).
 
 20. **Git worktrees for session isolation + move+symlink for session capture**: Each meeting gets an orphan branch with a worktree. Session files moved from `~/.claude/projects/` and symlinked back. No lock files, no pre-commit hooks.
 

@@ -82,6 +82,59 @@ let conversationView = null;
 /** @type {AgentPanel | null} */
 let agentPanel = null;
 
+// ---- URL Routing ------------------------------------------------------------
+
+/**
+ * Extract the meeting ID from the current URL, or null if on landing.
+ * Matches: /meeting/<id>
+ * @returns {string | null}
+ */
+function getMeetingIdFromUrl() {
+  const match = location.pathname.match(/^\/meeting\/(.+)$/);
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+/**
+ * Navigate to a URL and update the page state.
+ * @param {string} path - The URL path to navigate to
+ * @param {boolean} [replace=false] - Use replaceState instead of pushState
+ */
+function navigateTo(path, replace = false) {
+  if (replace) {
+    history.replaceState(null, "", path);
+  } else {
+    history.pushState(null, "", path);
+  }
+  routeFromUrl();
+}
+
+/**
+ * Read the current URL and set up the correct page state.
+ * If on /meeting/<id>, sends join-meeting over WebSocket.
+ * If on /, shows the landing page.
+ */
+function routeFromUrl() {
+  const meetingId = getMeetingIdFromUrl();
+  if (meetingId) {
+    // We're on /meeting/<id> — request meeting data from server
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      sendWs({ type: "join-meeting", meetingId });
+    }
+    // If WS isn't ready, the open handler will send join-meeting.
+  } else {
+    // We're on / — show landing
+    currentMeeting = null;
+    readOnly = false;
+    conversationView = null;
+    agentPanel = null;
+    showLanding();
+  }
+}
+
+window.addEventListener("popstate", () => {
+  routeFromUrl();
+});
+
 // ---- DOM References ---------------------------------------------------------
 
 const $landingPage = document.getElementById("landing-page");
@@ -130,6 +183,12 @@ function connectWs() {
     reconnectDelay = WS_RECONNECT_BASE;
     $reconnecting.classList.add("hidden");
     document.documentElement.dataset.wsReady = "true";
+
+    // If we're on a meeting URL, request its state
+    const meetingId = getMeetingIdFromUrl();
+    if (meetingId) {
+      sendWs({ type: "join-meeting", meetingId });
+    }
   });
 
   ws.addEventListener("message", (event) => {
@@ -166,7 +225,7 @@ function scheduleReconnect() {
 
 /**
  * Sends a JSON message over the WebSocket (no-op if disconnected).
- * @param {ClientMessage} msg
+ * @param {Omit<ClientMessage, 'messageId'>} msg
  */
 function sendWs(msg) {
   if (ws && ws.readyState === WebSocket.OPEN) {
@@ -243,6 +302,11 @@ function handleSync(msg) {
   editingCycle = msg.editingCycle ?? null;
 
   if (currentMeeting) {
+    // Ensure URL reflects the meeting we're viewing
+    const expectedPath = `/meeting/${encodeURIComponent(currentMeeting.meetingId)}`;
+    if (location.pathname !== expectedPath) {
+      history.pushState(null, "", expectedPath);
+    }
     showDeliberation();
     renderMeetingState();
   }
@@ -279,6 +343,11 @@ function handleYourTurn() {
 function handleError(message) {
   // Show error in conversation as a system message
   conversationView?.addSystemMessage(message, "error");
+
+  // If we're on a meeting URL but have no meeting loaded, the meeting doesn't exist
+  if (getMeetingIdFromUrl() && !currentMeeting) {
+    setTimeout(() => navigateTo("/", true), 2000);
+  }
 }
 
 /** Transitions the attention button to its activated (amber) state. */
@@ -527,7 +596,7 @@ function renderParticipantCards() {
 async function loadMeetingList() {
   try {
     const res = await fetch("/api/meetings");
-    const meetings = await res.json();
+    /** @type {MeetingSummary[]} */ const meetings = await res.json();
     renderMeetingList(meetings);
   } catch (err) {
     console.error("Failed to load meetings:", err);
@@ -588,7 +657,7 @@ function renderMeetingList(meetings) {
 
     const viewBtn = querySelectorMust(".view-btn", card);
     viewBtn.addEventListener("click", () => {
-      sendWs({ type: "view-meeting", meetingId: meeting.meetingId });
+      navigateTo(`/meeting/${encodeURIComponent(meeting.meetingId)}`);
     });
 
     $meetingList.appendChild(card);
@@ -705,7 +774,7 @@ $backToLanding.addEventListener("click", () => {
     readOnly = false;
     conversationView = null;
     agentPanel = null;
-    showLanding();
+    navigateTo("/");
   } else {
     // Active meeting — confirm
     if (confirm("יש פגישה פעילה. בחר /end כדי לסיים אותה תחילה.")) {
@@ -731,11 +800,13 @@ document.addEventListener("human-edit-submit", (e) => {
 
 // ---- Initialize -------------------------------------------------------------
 
-/** Loads agents and meetings, then opens the WebSocket connection. */
+/** Loads agents, opens the WebSocket connection, and routes based on URL. */
 async function init() {
   await loadAgents();
-  await loadMeetingList();
   connectWs();
+  // Route based on current URL — if on /, shows landing (which loads meeting list);
+  // if on /meeting/<id>, the WS open handler will send join-meeting.
+  routeFromUrl();
 }
 
 init().catch(console.error);

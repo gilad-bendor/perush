@@ -74,18 +74,28 @@ const syncWithCycles = {
   currentPhase: "idle",
 };
 
+/** URL for the test meeting (navigated to instead of root). */
+const meetingUrl = (server: ReturnType<typeof createMockServer>) =>
+  `${server.url}/meeting/test-conv-1`;
+
 beforeAll(async () => {
   mockServer = createMockServer({
     port: 4203,
-    onConnectEvents: [{ message: syncMessage }],
+    onMessageEvents: {
+      "join-meeting": [{ message: syncMessage }],
+    },
   });
 
   browser = await chromium.launch({ headless: true });
 });
 
 afterEach(async () => {
-  if (page && !page.isClosed()) {
-    await page.close();
+  try {
+    if (page && !page.isClosed()) {
+      await page.close();
+    }
+  } catch {
+    // Page may already be closed by test cleanup or browser context failure
   }
 });
 
@@ -95,9 +105,9 @@ afterAll(async () => {
 });
 
 describe("deliberation UI", () => {
-  test("sync message transitions from landing to deliberation", async () => {
+  test("join-meeting transitions from landing to deliberation", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
 
     // Wait for deliberation page to appear
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
@@ -111,7 +121,7 @@ describe("deliberation UI", () => {
 
   test("opening prompt renders as first message", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     const messages = await page.$$(".message");
@@ -123,7 +133,7 @@ describe("deliberation UI", () => {
 
   test("messages have RTL direction", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector(".message", { timeout: 3000 });
 
     const dir = await page.evaluate(() => {
@@ -135,7 +145,7 @@ describe("deliberation UI", () => {
 
   test("vibe bar shows phase indicator", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     const phaseText = await page.textContent("#vibe-phase");
@@ -144,7 +154,7 @@ describe("deliberation UI", () => {
 
   test("back button is visible during deliberation", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     const backBtn = await page.$("#back-to-landing");
@@ -156,7 +166,7 @@ describe("deliberation UI", () => {
 
   test("agent panel starts collapsed", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     const isCollapsed = await page.evaluate(() =>
@@ -167,7 +177,7 @@ describe("deliberation UI", () => {
 
   test("agent panel can be toggled", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     // Use evaluate to trigger the click directly (avoids z-index overlay issues)
@@ -192,7 +202,7 @@ describe("deliberation UI", () => {
 
   test("human input is disabled when not human-turn", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     const disabled = await page.evaluate(() =>
@@ -203,7 +213,7 @@ describe("deliberation UI", () => {
 
   test("speech message from server renders in conversation", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     // Send a speech from mock server
@@ -226,7 +236,7 @@ describe("deliberation UI", () => {
 
   test("streaming chunks append to message", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     // Send chunks
@@ -252,7 +262,7 @@ describe("deliberation UI", () => {
 
   test("phase change to human-turn enables input", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     // Change phase to human-turn
@@ -271,7 +281,7 @@ describe("deliberation UI", () => {
 
   test("vibe bar updates on vibe message", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     mockServer.broadcast({
@@ -290,7 +300,7 @@ describe("deliberation UI", () => {
 
   test("error message renders in conversation", async () => {
     page = await browser.newPage();
-    await page.goto(mockServer.url);
+    await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     mockServer.broadcast({ type: "error", message: "שגיאה בהערכה" });
@@ -306,12 +316,14 @@ describe("sync with existing cycles", () => {
   test("renders all cycle messages from sync", async () => {
     const cyclesMock = createMockServer({
       port: 4204,
-      onConnectEvents: [{ message: syncWithCycles }],
+      onMessageEvents: {
+        "join-meeting": [{ message: syncWithCycles }],
+      },
     });
 
     try {
       page = await browser.newPage();
-      await page.goto(cyclesMock.url);
+      await page.goto(`${cyclesMock.url}/meeting/test-conv-1`);
       await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
       // Should have 3 messages: opening + 2 cycle speeches
@@ -334,25 +346,31 @@ describe("sync with existing cycles", () => {
       const thirdSpeaker = await messages[2].getAttribute("data-speaker");
       expect(thirdSpeaker).toBe("archi");
     } finally {
-      await cyclesMock.stop();
+      // Close page before stopping server to avoid page.close() hanging in afterEach
+      // (Bun's server.stop(true) severs the WS, leaving the page in a state where close() blocks)
+      if (page && !page.isClosed()) await page.close();
+      cyclesMock.stop();
     }
   });
 
   test("vibe shows last cycle decision", async () => {
     const cyclesMock = createMockServer({
       port: 4205,
-      onConnectEvents: [{ message: syncWithCycles }],
+      onMessageEvents: {
+        "join-meeting": [{ message: syncWithCycles }],
+      },
     });
 
     try {
       page = await browser.newPage();
-      await page.goto(cyclesMock.url);
+      await page.goto(`${cyclesMock.url}/meeting/test-conv-1`);
       await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
       const vibeText = await page.textContent("#vibe-text");
       expect(vibeText).toContain("הגיע הזמן לשמוע את המנחה");
     } finally {
-      await cyclesMock.stop();
+      if (page && !page.isClosed()) await page.close();
+      cyclesMock.stop();
     }
   });
 });
@@ -362,12 +380,14 @@ describe("view-only mode", () => {
     const viewOnlySync = { ...syncWithCycles, readOnly: true };
     const viewMock = createMockServer({
       port: 4206,
-      onConnectEvents: [{ message: viewOnlySync }],
+      onMessageEvents: {
+        "join-meeting": [{ message: viewOnlySync }],
+      },
     });
 
     try {
       page = await browser.newPage();
-      await page.goto(viewMock.url);
+      await page.goto(`${viewMock.url}/meeting/test-conv-1`);
       await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
       // Human input should be hidden
@@ -382,7 +402,8 @@ describe("view-only mode", () => {
       );
       expect(bannerHidden).toBe(false);
     } finally {
-      await viewMock.stop();
+      if (page && !page.isClosed()) await page.close();
+      viewMock.stop();
     }
   });
 });

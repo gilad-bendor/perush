@@ -378,6 +378,8 @@ export async function createSession(
   const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
   const tools = agentId === "manager" ? MANAGER_TOOLS : PARTICIPANT_TOOLS;
 
+  console.log(`[session-mgr] createSession START for ${agentId} (model=${model}, stub=${USE_STUB_SDK})`);
+
   const queryFn = await getQueryFn();
   const query = queryFn({
     prompt: initialPrompt,
@@ -406,6 +408,7 @@ export async function createSession(
   if (!sessionId) throw new Error(`Failed to create session for ${agentId}`);
 
   sessionRegistry.set(agentId, sessionId);
+  console.log(`[session-mgr] createSession DONE for ${agentId} (sessionId=${sessionId}), registry=[${[...sessionRegistry.keys()].join(', ')}]`);
   return { sessionId, responseText };
 }
 
@@ -418,7 +421,10 @@ export async function feedMessage(
   prompt: string,
 ): Promise<string> {
   const sessionId = sessionRegistry.get(agentId);
-  if (!sessionId) throw new Error(`No session found for ${agentId}`);
+  if (!sessionId) {
+    console.error(`[session-mgr] feedMessage FAILED: No session for ${agentId}. Registry=[${[...sessionRegistry.keys()].join(', ')}]`);
+    throw new Error(`No session found for ${agentId}`);
+  }
 
   const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
 
@@ -583,6 +589,7 @@ export function getAllSessionIds(): Record<string, string> {
 
 /** Clear all sessions (for testing or meeting end). */
 export function clearSessions(): void {
+  console.log(`[session-mgr] clearSessions (had ${sessionRegistry.size} sessions)`);
   sessionRegistry.clear();
   activeQueries.clear();
 }

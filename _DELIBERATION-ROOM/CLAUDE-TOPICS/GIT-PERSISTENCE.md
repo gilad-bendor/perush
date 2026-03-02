@@ -52,7 +52,7 @@ main branch:
   _DELIBERATION-ROOM/CLAUDE.md   ← this file
   (NO meeting data)
 
-sessions/bereshit-2-4-eden branch (orphan):
+sessions/2026-02-01--10-41--bereshit-2-4-eden branch (orphan):
   meeting.yaml                    ← meeting record (conversation, assessments, decisions)
   <session-uuid-1>.jsonl          ← milo's session transcript
   <session-uuid-1>/              ← milo's session directory
@@ -65,7 +65,7 @@ sessions/bereshit-2-4-eden branch (orphan):
 ```
 _DELIBERATION-ROOM/
   meetings/                       ← gitignored on main (worktree mount point)
-    bereshit-2-4-eden/            ← worktree for sessions/bereshit-2-4-eden branch
+    bereshit-2-4-eden/            ← worktree for sessions/2026-02-01--10-41--bereshit-2-4-eden branch
       meeting.yaml
       <session-uuid>.jsonl        ← real file (symlinked from ~/.claude/projects/...)
       <session-uuid>/
@@ -79,12 +79,12 @@ At meeting start, after generating the meeting ID:
 ```typescript
 import { $ } from "bun";
 
-async function createMeetingWorktree(meetingId: string): Promise<string> {
+async function createMeetingWorktree(meetingId: MeetingId): Promise<string> {
   const worktreePath = join(DELIBERATION_DIR, "meetings", meetingId);
   const branchName = `sessions/${meetingId}`;
 
   // Create orphan branch + worktree in one command (requires git 2.42+)
-  await $`git worktree add --orphan -b ${branchName} ${worktreePath}`;
+  await $`git worktree add --orphan -b ${meetingIdToBranchName(meetingId)} ${worktreePath}`;
 
   return worktreePath;
 }
@@ -160,14 +160,14 @@ Participant-Agents have tool access during their speech phase and can modify com
 
 **Detection**: After each cycle's session-branch commit, the orchestrator checks `git diff --name-only` on the main working tree. If any files under `פירוש/` or `ניתוחים-לשוניים/` have changed, the tagging procedure is triggered.
 
-**Tag ID format**: `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-id>`
+Two git tags are created per cycle (when perush files change):
+- `session-cycle/<meeting-id>/c<N>/main`    = `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-title>/c<N>/main`    → points to the commit on `main` that includes the perush changes
+- `session-cycle/<meeting-id>/c<N>/session` = `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-title>/c<N>/session` → points to the corresponding cycle commit on `sessions/<meeting-id>`
 
-Two git tags are created:
-- `<tag-id>/main` → points to the commit on `main` that includes the perush changes
-- `<tag-id>/session` → points to the corresponding cycle commit on `sessions/<meeting-id>`
+The Tag-ID-Prefix is: `session-cycle/<meeting-id>` = `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-title>`
 
 ```typescript
-async function tagPerushChanges(meetingId: string, worktreePath: string, cycleNumber: number): Promise<void> {
+async function tagPerushChanges(meetingId: MeetingId, worktreePath: string, cycleNumber: number): Promise<void> {
   const diff = await $`git diff --name-only`;
   const lines = diff.stdout.toString().trim().split("\n");
   const perushChanged = lines.some(f => f.startsWith("פירוש/") || f.startsWith("ניתוחים-לשוניים/"));
@@ -177,16 +177,14 @@ async function tagPerushChanges(meetingId: string, worktreePath: string, cycleNu
   await $`git add פירוש/ ניתוחים-לשוניים/`;
   await $`git commit -m ${"Cycle " + cycleNumber + ": perush update (" + meetingId + ")"}`;
 
-  const now = new Date();
-  const ts = now.toISOString().replace(/T/, "--").replace(/:/g, "-").replace(/\..+/, "");
-  const tagId = `session-cycle/${ts}--${meetingId}`;
-
-  await $`git tag ${tagId}/main HEAD`;
+  // Tag main's HEAD: session-cycle/<meeting-id>/c<N>/main
+  await $`git tag ${cycleTagMain(meetingId, cycleNumber)} HEAD`;
+  // Tag session branch's HEAD: session-cycle/<meeting-id>/c<N>/session
   const sessionHead = (await $`git -C ${worktreePath} rev-parse HEAD`).stdout.toString().trim();
-  await $`git tag ${tagId}/session ${sessionHead}`;
+  await $`git tag ${cycleTagSession(meetingId, cycleNumber)} ${sessionHead}`;
 
   // Async push (fire-and-forget — does NOT block the next cycle)
-  pushAsync(tagId, meetingId);
+  asyncPush(meetingId, cycleNumber);
 }
 ```
 
@@ -194,13 +192,13 @@ async function tagPerushChanges(meetingId: string, worktreePath: string, cycleNu
 
 ```bash
 # List available rollback points for a meeting
-git tag --list "session-cycle/*--bereshit-2-4-eden/*"
+git tag --list "session-cycle/2026-02-01--10-41--bereshit-2-4-eden/c*/main"
 
-# Roll back main to a specific tag
-git reset --hard session-cycle/2026-02-27--14-30-00--bereshit-2-4-eden/main
+# Roll back main to a specific cycle's tag (e.g., cycle 3)
+git reset --hard session-cycle/2026-02-01--10-41--bereshit-2-4-eden/c3/main
 
 # Roll back the session branch to the correlated tag
-git -C meetings/bereshit-2-4-eden reset --hard session-cycle/2026-02-27--14-30-00--bereshit-2-4-eden/session
+git -C meetings/bereshit-2-4-eden reset --hard session-cycle/2026-02-01--10-41--bereshit-2-4-eden/c3/session
 ```
 
 ### Git as the Meeting Database
@@ -215,8 +213,8 @@ async function listMeetings(): Promise<MeetingSummary[]> {
 }
 
 // Read an ended meeting (no worktree needed)
-async function readEndedMeeting(meetingId: string): Promise<Meeting> {
-  const result = await $`git show sessions/${meetingId}:meeting.yaml`;
+async function readEndedMeeting(meetingId: MeetingId): Promise<Meeting> {
+  const result = await $`git show ${meetingIdToBranchName(meetingId)}:meeting.yaml`;
   return yamlParse(result.stdout.toString());
 }
 
@@ -231,7 +229,7 @@ async function readActiveMeeting(worktreePath: string): Promise<Meeting> {
 ### Ending a Meeting (Worktree Removal)
 
 ```typescript
-async function endMeeting(meetingId: string, worktreePath: string): Promise<void> {
+async function endMeeting(meetingId: MeetingId, worktreePath: string): Promise<void> {
   await $`git -C ${worktreePath} add -A`;
   await $`git -C ${worktreePath} commit -m "Meeting ended" --allow-empty`;
   await $`git worktree remove ${worktreePath}`;
@@ -243,11 +241,10 @@ After removal: the branch persists with full commit history; the directory is go
 ### Resuming a Meeting (Worktree Re-attach)
 
 ```typescript
-async function resumeMeeting(meetingId: string): Promise<string> {
+async function resumeMeeting(meetingId: MeetingId): Promise<string> {
   const worktreePath = join(DELIBERATION_DIR, "meetings", meetingId);
-  const branchName = `sessions/${meetingId}`;
 
-  await $`git worktree add ${worktreePath} ${branchName}`;
+  await $`git worktree add ${worktreePath} ${meetingIdToBranchName(meetingId)}`;
 
   const meeting = await readActiveMeeting(worktreePath);
   for (const [agentId, sessionId] of Object.entries(meeting.sessionIds)) {

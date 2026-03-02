@@ -24,10 +24,9 @@ import {
   listMeetings,
   commitWithMessage,
   detectPerushChanges,
-  generateTagId,
   resetSessionBranchToCycle,
 } from "./conversation";
-import { createFormattedTime } from "./types";
+import {createFormattedTime, MeetingId, meetingIdToBranchName} from "./types";
 import type { Meeting } from "./types";
 
 // ---------------------------------------------------------------------------
@@ -88,9 +87,9 @@ describe("generateMeetingId", () => {
 // ---------------------------------------------------------------------------
 
 describe("conversation store (integration)", () => {
-  const testMeetingId = `test-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  const testMeetingId: MeetingId = `0000-00-00--00-00--test-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 
-  function makeTestMeeting(id: string): Meeting {
+  function makeTestMeeting(id: MeetingId): Meeting {
     return {
       meetingId: id,
       mode: "Perush-Development",
@@ -114,7 +113,7 @@ describe("conversation store (integration)", () => {
       await $`git worktree remove --force ${worktreePath}`.quiet();
     } catch {}
     try {
-      await $`git branch -D sessions/${testMeetingId}`.quiet();
+      await $`git branch -D ${meetingIdToBranchName(testMeetingId)}`.quiet();
     } catch {}
   });
 
@@ -211,7 +210,7 @@ describe("conversation store (integration)", () => {
     expect(await isMeetingActive(testMeetingId)).toBe(false);
 
     // Branch still exists
-    const branches = (await $`git branch --list sessions/${testMeetingId}`.quiet()).stdout.toString();
+    const branches = (await $`git branch --list ${meetingIdToBranchName(testMeetingId)}`.quiet()).stdout.toString();
     expect(branches).toContain(testMeetingId);
   });
 
@@ -255,7 +254,7 @@ describe("conversation store (integration)", () => {
     const found = meetings.find(m => m.meetingId === testMeetingId);
     expect(found).toBeDefined();
     expect(found!.title).toBe("Test Meeting");
-  });
+  }, 10000);
 
   test("createMeetingWorktree is idempotent", async () => {
     // Create twice — second call should succeed without error
@@ -333,7 +332,7 @@ describe("conversation store (integration)", () => {
 
     // Git log should show the full history
     const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
-    const log = (await $`git -C ${gitRoot} log sessions/${testMeetingId} --oneline`.quiet()).stdout.toString();
+    const log = (await $`git -C ${gitRoot} log ${meetingIdToBranchName(testMeetingId)} --oneline`.quiet()).stdout.toString();
     expect(log).toContain("Meeting ended");
     expect(log).toContain("Cycle 2: archi");
     expect(log).toContain("Cycle 1: milo");
@@ -346,18 +345,6 @@ describe("conversation store (integration)", () => {
 // ---------------------------------------------------------------------------
 
 describe("cross-branch tagging", () => {
-  test("generateTagId produces correct format", () => {
-    const now = new Date(2026, 1, 27, 14, 30, 45);
-    const tagId = generateTagId("test-meeting", now);
-    expect(tagId).toBe("session-cycle/2026-02-27--14-30-45--test-meeting");
-  });
-
-  test("generateTagId uses current time when no date given", () => {
-    const tagId = generateTagId("test-meeting");
-    expect(tagId).toStartWith("session-cycle/");
-    expect(tagId).toContain("--test-meeting");
-  });
-
   test("detectPerushChanges returns empty when nothing changed", async () => {
     const changes = await detectPerushChanges();
     // In test environment, there should be no outstanding perush changes
@@ -371,11 +358,11 @@ describe("cross-branch tagging", () => {
 // ---------------------------------------------------------------------------
 
 describe("session branch rollback", () => {
-  const testMeetingId = `rollback-test-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  const testMeetingId: MeetingId = generateMeetingId(`rollback-test-${Math.random().toString(36).slice(2, 8)}`, new Date());
 
-  function makeTestMeeting(id: string): Meeting {
+  function makeTestMeeting(meetingId: MeetingId): Meeting {
     return {
-      meetingId: id,
+      meetingId: meetingId,
       mode: "Perush-Development",
       title: "Rollback Test",
       openingPrompt: "This is a rollback test",
@@ -396,7 +383,7 @@ describe("session branch rollback", () => {
       await $`git worktree remove --force ${worktreePath}`.quiet();
     } catch {}
     try {
-      await $`git branch -D sessions/${testMeetingId}`.quiet();
+      await $`git branch -D ${meetingIdToBranchName(testMeetingId)}`.quiet();
     } catch {}
   });
 

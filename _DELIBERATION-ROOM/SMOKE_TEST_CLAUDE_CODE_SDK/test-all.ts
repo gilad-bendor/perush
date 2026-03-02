@@ -15,7 +15,7 @@ delete cleanEnv.CLAUDE_CODE_ENTRYPOINT;
 delete cleanEnv.CLAUDE_CODE_SSE_PORT;
 
 const baseOpts = {
-  model: "claude-haiku-4-5-20251001",
+  model: "claude-haiku-4-5",
   maxTurns: 1,
   permissionMode: "bypassPermissions" as const,
   allowDangerouslySkipPermissions: true,

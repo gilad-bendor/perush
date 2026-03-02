@@ -72,7 +72,7 @@ const response = query({
 for await (const msg of response) { ... }
 ```
 
-**Test**: Call `query()` with a simple prompt and `model: "claude-haiku-4-5-20251001"`. Collect all messages and log their types.
+**Test**: Call `query()` with a simple prompt and `model: "claude-haiku-4-5"`. Collect all messages and log their types.
 
 ```
 Status: PASS
@@ -423,7 +423,7 @@ Notes:
     }
 
     modelUsage: {
-      "claude-haiku-4-5-20251001": {
+      "claude-haiku-4-5": {
         inputTokens: 10, outputTokens: 51,
         cacheReadInputTokens: 16050, cacheCreationInputTokens: 685,
         costUSD: 0.00272625, contextWindow: 200000, maxOutputTokens: 32000

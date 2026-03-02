@@ -15,8 +15,6 @@ import {
   getClaudeProjectDir,
   getCleanEnv,
   SDK_ENV_VARS_TO_STRIP,
-  SESSION_BRANCH_PREFIX,
-  TAG_PREFIX,
   COMMIT_INITIAL,
   COMMIT_MEETING_ENDED,
   commitCycleMessage,
@@ -35,6 +33,7 @@ import {
   DICTIONARY_INJECTION_POINT,
   ESTIMATED_COST_PER_CYCLE,
 } from "./config";
+import {SESSION_BRANCH_PREFIX, TAG_PREFIX} from "./types.ts";
 
 // ---------------------------------------------------------------------------
 // Network config
@@ -146,7 +145,6 @@ describe("getClaudeProjectDir", () => {
 
 describe("getCleanEnv", () => {
   test("strips CLAUDECODE env vars", () => {
-    const originalEnv = process.env;
     process.env.CLAUDECODE = "1";
     process.env.CLAUDE_CODE_ENTRYPOINT = "test";
     process.env.CLAUDE_CODE_SSE_PORT = "12345";
@@ -207,7 +205,7 @@ describe("Git config", () => {
   });
 
   test("commitPerushUpdate formats correctly", () => {
-    expect(commitPerushUpdate(3, "eden-meeting")).toBe("Cycle 3: perush update (eden-meeting)");
+    expect(commitPerushUpdate(3, "0000-00-00--00-00--eden-meeting")).toBe("Cycle 3: perush update (0000-00-00--00-00--eden-meeting)");
   });
 });
 

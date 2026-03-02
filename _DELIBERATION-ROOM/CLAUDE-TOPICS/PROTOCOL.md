@@ -64,6 +64,10 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // View a past meeting in read-only mode
 { type: "view-meeting", meetingId: string }
 
+// Join a meeting by URL — server auto-detects: if active, sends live sync; if ended, sends read-only sync.
+// Primary entry point for URL-based navigation (/meeting/<id>).
+{ type: "join-meeting", meetingId: string }
+
 // Director requests the floor — current cycle continues uninterrupted;
 // next selection phase will force the manager to choose the Director.
 { type: "attention" }
@@ -76,7 +80,9 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 
 ## Reconnection
 
-When the browser disconnects and reconnects (network blip, laptop sleep, page refresh), the server sends a `sync` message with the full `Meeting` state and current phase. The client reconstructs the UI from this state. The orchestrator continues running regardless of browser connection state — the browser is a view, not the process owner.
+When the browser disconnects and reconnects (network blip, laptop sleep, page refresh), the client reads the current URL. If on `/meeting/<id>`, it sends `join-meeting` to request the meeting state. The server responds with a `sync` message containing the full `Meeting` state and current phase. The client reconstructs the UI from this state. The orchestrator continues running regardless of browser connection state — the browser is a view, not the process owner.
+
+The server does **not** auto-send sync on WebSocket connect — the client must request it via `join-meeting`.
 
 Client-side reconnection logic: on WebSocket `close` event, attempt reconnect with exponential backoff (1s, 2s, 4s, max 30s). Show a "Reconnecting..." indicator in the UI.
 

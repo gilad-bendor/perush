@@ -23,7 +23,7 @@ import { resolve, join } from "path";
 const DELIBERATION_DIR = resolve(import.meta.dir, "..");
 const MEETINGS_DIR = join(DELIBERATION_DIR, "meetings");
 const PORT = 4199;
-const HAIKU_MODEL = "claude-haiku-4-5-20251001";
+const HAIKU_MODEL = "claude-haiku-4-5";
 
 // ---------------------------------------------------------------------------
 // Guard: skip unless explicitly requested

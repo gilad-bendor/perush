@@ -4,7 +4,7 @@
 **SDK**: `@anthropic-ai/claude-agent-sdk@0.2.62`
 **Claude Code**: v2.1.62
 **Runtime**: Bun 1.3.8 (macOS arm64)
-**Test model**: `claude-haiku-4-5-20251001` (cost minimization)
+**Test model**: `claude-haiku-4-5` (cost minimization)
 
 ---
 
@@ -243,7 +243,7 @@ Always the first message. Emitted on every `query()` call, including resumes.
   subtype: "init",
   session_id: "01781ec6-...",           // UUID — stable across resumes
   uuid: "957f85e4-...",                 // unique per message
-  model: "claude-haiku-4-5-20251001",
+  model: "claude-haiku-4-5",
   cwd: "/Users/.../perush",
   tools: ["Read", "Bash", "Grep", "Glob"],  // reflects the `tools` option
   permissionMode: "bypassPermissions",
@@ -341,7 +341,7 @@ Final message. Two variants:
     // ...
   },
   modelUsage: {
-    "claude-haiku-4-5-20251001": {
+    "claude-haiku-4-5": {
       inputTokens: 10, outputTokens: 51,
       cacheReadInputTokens: 16050, cacheCreationInputTokens: 685,
       costUSD: 0.00272625, contextWindow: 200000, maxOutputTokens: 32000

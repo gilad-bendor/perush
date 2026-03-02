@@ -132,6 +132,11 @@ export function createMockServer(options: MockServerOptions = {}) {
         return Response.json(meetings);
       }
 
+      // SPA catch-all: /meeting/* paths served by the frontend router
+      if (pathname.startsWith("/meeting/")) {
+        return serveStaticFile("/", PUBLIC_DIR, MIME_TYPES);
+      }
+
       // Static files
       return serveStaticFile(pathname, PUBLIC_DIR, MIME_TYPES);
     },
@@ -162,7 +167,7 @@ export function createMockServer(options: MockServerOptions = {}) {
     server,
     port: server.port,
     url: `http://localhost:${server.port}`,
-    stop: () => server.stop(),
+    stop: () => server.stop(true),
     broadcast: (msg: Record<string, unknown>) => {
       const json = JSON.stringify(msg);
       for (const ws of clients) {

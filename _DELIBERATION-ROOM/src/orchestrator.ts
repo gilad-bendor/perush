@@ -190,7 +190,7 @@ export async function startMeeting(
     participants: participantIds,
     cycles: [],
     startedAt: createFormattedTime(),
-    sessionIds: {},
+    sessionIds: {} as Meeting['sessionIds'],
   };
 
   // Create sessions for each participant + manager
@@ -294,7 +294,7 @@ export async function runCycle(
 
   // Apply attention override
   if (attentionRequested) {
-    decision = { ...decision, nextSpeaker: "Director" };
+    decision = { ...decision, nextSpeaker: "human" };
     attentionRequested = false;
   }
 
@@ -636,16 +636,16 @@ function buildSelectionPrompt(
 function pickFallbackSpeaker(
   lastSpeaker: SpeakerId,
   assessments: Record<string, PrivateAssessment>, // keyed by AgentId
-): string {
+): SpeakerId {
   // Pick the agent with the highest selfImportance, excluding last speaker
-  let best: { id: string; score: number } | null = null; // id is AgentId
-  for (const [id, assessment] of Object.entries(assessments)) {
+  let best: { id: AgentId; score: number } | null = null; // id is AgentId
+  for (const [id, assessment] of Object.entries(assessments) as unknown as [AgentId, PrivateAssessment][]) {
     if (id === lastSpeaker) continue;
     if (!best || assessment.selfImportance > best.score) {
       best = { id, score: assessment.selfImportance };
     }
   }
-  return best?.id ?? "Director";
+  return best?.id ?? "human";
 }
 
 /**

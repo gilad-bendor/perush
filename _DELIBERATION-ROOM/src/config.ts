@@ -121,12 +121,6 @@ export function getCleanEnv(): Record<string, string> {
 // Git
 // ---------------------------------------------------------------------------
 
-/** Branch prefix for meeting branches */
-export const SESSION_BRANCH_PREFIX = "sessions/";
-
-/** Tag prefix for cross-branch rollback tags */
-export const TAG_PREFIX = "session-cycle/";
-
 /** Commit message for initial meeting creation */
 export const COMMIT_INITIAL = "Initial: meeting created";
 

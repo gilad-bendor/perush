@@ -8,7 +8,7 @@
  * Imports from: config.ts (only)
  */
 
-import { query as sdkQuery } from "@anthropic-ai/claude-agent-sdk";
+import {Options, query as sdkQuery} from "@anthropic-ai/claude-agent-sdk";
 import { SDK_ENV_VARS_TO_STRIP } from "./config";
 
 // ---------------------------------------------------------------------------
@@ -105,7 +105,7 @@ export function realQuery(params: {
   const prompt = stripStubResponseBlocks(rawPrompt);
 
   // Build SDK options
-  const sdkOptions: Record<string, unknown> = {};
+  const sdkOptions: Options = {};
 
   if (options.model) sdkOptions.model = options.model;
   if (options.resume) sdkOptions.resume = options.resume;
@@ -126,7 +126,7 @@ export function realQuery(params: {
   sdkOptions.allowDangerouslySkipPermissions = true;
 
   // Call the real SDK
-  const q = sdkQuery({ prompt, options: sdkOptions as any });
+  const q = sdkQuery({ prompt, options: sdkOptions });
 
   return q as unknown as SDKQueryResult;
 }

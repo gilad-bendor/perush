@@ -42,17 +42,80 @@ import {assertZodTypeMatch} from "./types-asserts.ts";
  * while the literal members still surface in IDE autocomplete suggestions.
  * Agent IDs are dynamic (discovered from persona files), so this must accept any string.
  */
+export const AgentIdSchema = z.string();
 export type AgentId =
     | "archi"
     | "barak"
     | "kashia"
-    | "milo";
+    | "milo"
+    | (string & {});
 
 /** Speaker ID — an agent or the human director */
+export const SpeakerIdSchema = z.string();
 export type SpeakerId = AgentId | "human";
 
 /** Meeting ID — slug derived from title + timestamp */
-export type MeetingId = string;
+export const MeetingIdSchema = z.string() as z.ZodType<MeetingId>;
+export type MeetingId = `${number}-${number}-${number}--${number}-${number}--${string}`;
+
+/** Git Tag ID — "session-cycle/<meeting-id> */
+export const TagIdPrefixSchema = z.string() as z.ZodType<TagIdPrefix>;
+export type TagIdPrefix = `${typeof TAG_PREFIX}${MeetingId}`;
+
+/** Git Tag ID — "session-cycle/<meeting-id>/c<N>/main */
+export const TagIdMainSchema = z.string() as z.ZodType<TagIdMain>;
+export type TagIdMain = `${typeof TAG_PREFIX}${MeetingId}/c${number}/main`;
+
+/** Git Tag ID — "session-cycle/<meeting-id>/c<N>/session */
+export const TagIdSessionSchema = z.string() as z.ZodType<TagIdSession>;
+export type TagIdSession = `${typeof TAG_PREFIX}${MeetingId}/c${number}/session`;
+
+/** Git Branch Name — "sessions/<meeting-id> */
+export const BranchNameSchema = z.string() as z.ZodType<BranchName>;
+export type BranchName = `${typeof SESSION_BRANCH_PREFIX}${MeetingId}`;
+
+/** Message ID — "C<number>" for client-messages, or "S<number>" for server messages */
+export const MessageIdSchema = z.string() as z.ZodType<MessageId>;
+export type MessageId = `${"S"|"C"}${number}`;
+
+// ---------------------------------------------------------------------------
+// Git Branch-Name / Tag-Id
+// ---------------------------------------------------------------------------
+
+/** Branch prefix for meeting branches */
+export const SESSION_BRANCH_PREFIX = "sessions/";
+
+/** Tag prefix for cross-branch rollback tags */
+export const TAG_PREFIX = "session-cycle/";
+
+/** Tag suffix for "main" tag-ids */
+export const TAG_SUFFIX_MAIN = "/main";
+
+/** Tag suffix for "session" tag-ids */
+export const TAG_SUFFIX_SESSION = "/session";
+
+export function meetingIdToBranchName(meetingId: MeetingId): BranchName {
+  return `${SESSION_BRANCH_PREFIX}${meetingId}`;
+}
+export function branchNameToMeetingId(branchName: BranchName): MeetingId {
+  if (!branchName.startsWith(SESSION_BRANCH_PREFIX)) {
+    throw new Error(`Invalid branch name ${JSON.stringify(branchName)}`);
+  }
+  return branchName.replace(SESSION_BRANCH_PREFIX, "") as MeetingId;
+}
+
+export function meetingIdToTagIdPrefix(meetingId: MeetingId): TagIdPrefix {
+  return `${TAG_PREFIX}${meetingId}`;
+}
+
+export function cycleTagMain(meetingId: MeetingId, cycleNumber: number): TagIdMain {
+  return `${TAG_PREFIX}${meetingId}/c${cycleNumber}${TAG_SUFFIX_MAIN}` as TagIdMain;
+}
+
+export function cycleTagSession(meetingId: MeetingId, cycleNumber: number): TagIdSession {
+  return `${TAG_PREFIX}${meetingId}/c${cycleNumber}${TAG_SUFFIX_SESSION}` as TagIdSession;
+}
+
 
 // ---------------------------------------------------------------------------
 // FormattedTime — display string + epoch ms
@@ -95,7 +158,7 @@ assertZodTypeMatch<MeetingMode, typeof MeetingModeSchema>(true);
 // ---------------------------------------------------------------------------
 
 export const AgentDefinitionSchema = z.object({
-  id: z.string(),
+  id: AgentIdSchema,
   englishName: z.string(),
   hebrewName: z.string(),
   roleTitle: z.string(),
@@ -104,7 +167,7 @@ export const AgentDefinitionSchema = z.object({
   filePath: z.string(),
 });
 export type AgentDefinition = {
-  id: string; // AgentId
+  id: AgentId;
   englishName: string;
   hebrewName: string;
   roleTitle: string;
@@ -119,12 +182,12 @@ assertZodTypeMatch<AgentDefinition, typeof AgentDefinitionSchema>(true);
 // ---------------------------------------------------------------------------
 
 export const ConversationMessageSchema = z.object({
-  speaker: z.string(), // SpeakerId
+  speaker: SpeakerIdSchema,
   content: z.string(),
   timestamp: z.string(), // FormattedTime
 });
 export type ConversationMessage = {
-  speaker: string; // SpeakerId — kept as string for Zod compatibility
+  speaker: SpeakerId;
   content: string;
   timestamp: FormattedTime;
 };
@@ -135,13 +198,13 @@ assertZodTypeMatch<ConversationMessage, typeof ConversationMessageSchema>(true);
 // ---------------------------------------------------------------------------
 
 export const PrivateAssessmentSchema = z.object({
-  agent: z.string(), // AgentId
+  agent: AgentIdSchema,
   selfImportance: z.number().int().min(1).max(10),
   humanImportance: z.number().int().min(1).max(10),
   summary: z.string(),
 });
 export type PrivateAssessment = {
-  agent: string; // AgentId
+  agent: AgentId;
   selfImportance: number;
   humanImportance: number;
   summary: string;
@@ -153,11 +216,11 @@ assertZodTypeMatch<PrivateAssessment, typeof PrivateAssessmentSchema>(true);
 // ---------------------------------------------------------------------------
 
 export const ManagerDecisionSchema = z.object({
-  nextSpeaker: z.string(), // SpeakerId — validated against meeting participants at runtime
+  nextSpeaker: SpeakerIdSchema, // validated against meeting participants at runtime
   vibe: z.string(),
 });
 export type ManagerDecision = {
-  nextSpeaker: string; // SpeakerId — validated at runtime against meeting participants
+  nextSpeaker: SpeakerId;
   vibe: string;
 };
 assertZodTypeMatch<ManagerDecision, typeof ManagerDecisionSchema>(true);
@@ -175,7 +238,7 @@ export const CycleRecordSchema = z.object({
 export type CycleRecord = {
   cycleNumber: number;
   speech: ConversationMessage;
-  assessments: Record<string, PrivateAssessment>; // Record<AgentId, PrivateAssessment>
+  assessments: Record<string, PrivateAssessment>;
   managerDecision: ManagerDecision;
 };
 assertZodTypeMatch<CycleRecord, typeof CycleRecordSchema>(true);
@@ -185,15 +248,15 @@ assertZodTypeMatch<CycleRecord, typeof CycleRecordSchema>(true);
 // ---------------------------------------------------------------------------
 
 export const MeetingSchema = z.object({
-  meetingId: z.string(),
+  meetingId: MeetingIdSchema,
   mode: MeetingModeSchema,
   title: z.string(),
   openingPrompt: z.string(),
-  participants: z.array(z.string()).min(1), // AgentId[]
+  participants: z.array(AgentIdSchema).min(1), // AgentId[]
   cycles: z.array(CycleRecordSchema),
   startedAt: z.string(), // FormattedTime
   lastEngagedAt: z.string().optional(), // FormattedTime
-  sessionIds: z.record(z.string(), z.string()), // Record<AgentId | "manager", sessionId>
+  sessionIds: z.record(z.string(), z.string()),
   totalCostEstimate: z.number().optional(),
 });
 export type Meeting = {
@@ -201,11 +264,11 @@ export type Meeting = {
   mode: MeetingMode;
   title: string;
   openingPrompt: string;
-  participants: string[]; // AgentId[] — kept as string[] for Zod compatibility
+  participants: AgentId[];
   cycles: CycleRecord[];
   startedAt: FormattedTime;
   lastEngagedAt?: FormattedTime;
-  sessionIds: Record<string, string>; // Record<AgentId | "manager", string>
+  sessionIds: Record<string, string>;
   totalCostEstimate?: number;
 };
 assertZodTypeMatch<Meeting, typeof MeetingSchema>(true);
@@ -215,13 +278,13 @@ assertZodTypeMatch<Meeting, typeof MeetingSchema>(true);
 // ---------------------------------------------------------------------------
 
 export const MeetingSummarySchema = z.object({
-  meetingId: z.string(),
+  meetingId: MeetingIdSchema,
   branch: z.string(),
   lastActivity: z.string(),
   lastCommitMsg: z.string(),
   title: z.string().optional(),
   cycleCount: z.number().optional(),
-  participants: z.array(z.string()).optional(),
+  participants: z.array(AgentIdSchema).optional(),
 });
 export type MeetingSummary = {
   meetingId: MeetingId;
@@ -230,7 +293,7 @@ export type MeetingSummary = {
   lastCommitMsg: string;
   title?: string;
   cycleCount?: number;
-  participants?: string[]; // AgentId[]
+  participants?: AgentId[];
 };
 assertZodTypeMatch<MeetingSummary, typeof MeetingSummarySchema>(true);
 
@@ -240,15 +303,15 @@ assertZodTypeMatch<MeetingSummary, typeof MeetingSummarySchema>(true);
 
 export const WsSpeechSchema = z.object({
   type: z.literal("speech"),
-  messageId: z.string(),
-  speaker: z.string(),
+  messageId: MessageIdSchema,
+  speaker: SpeakerIdSchema,
   content: z.string(),
   timestamp: z.string(),
 });
 export type WsSpeech = {
   type: "speech";
-  messageId: string;
-  speaker: string; // SpeakerId
+  messageId: MessageId;
+  speaker: SpeakerId;
   content: string;
   timestamp: FormattedTime;
 };
@@ -256,42 +319,42 @@ assertZodTypeMatch<WsSpeech, typeof WsSpeechSchema>(true);
 
 export const WsSpeechChunkSchema = z.object({
   type: z.literal("speech-chunk"),
-  messageId: z.string(),
-  speaker: z.string(),
+  messageId: MessageIdSchema,
+  speaker: SpeakerIdSchema,
   delta: z.string(),
 });
 export type WsSpeechChunk = {
   type: "speech-chunk";
-  messageId: string;
-  speaker: string; // SpeakerId
+  messageId: MessageId;
+  speaker: SpeakerId;
   delta: string;
 };
 assertZodTypeMatch<WsSpeechChunk, typeof WsSpeechChunkSchema>(true);
 
 export const WsSpeechDoneSchema = z.object({
   type: z.literal("speech-done"),
-  messageId: z.string(),
-  speaker: z.string(),
+  messageId: MessageIdSchema,
+  speaker: SpeakerIdSchema,
 });
 export type WsSpeechDone = {
   type: "speech-done";
-  messageId: string;
-  speaker: string; // SpeakerId
+  messageId: MessageId;
+  speaker: SpeakerId;
 };
 assertZodTypeMatch<WsSpeechDone, typeof WsSpeechDoneSchema>(true);
 
 export const WsAssessmentSchema = z.object({
   type: z.literal("assessment"),
-  messageId: z.string(),
-  agent: z.string(),
+  messageId: MessageIdSchema,
+  agent: AgentIdSchema,
   selfImportance: z.number(),
   humanImportance: z.number(),
   summary: z.string(),
 });
 export type WsAssessment = {
   type: "assessment";
-  messageId: string;
-  agent: string; // AgentId
+  messageId: MessageId;
+  agent: AgentId;
   selfImportance: number;
   humanImportance: number;
   summary: string;
@@ -300,16 +363,16 @@ assertZodTypeMatch<WsAssessment, typeof WsAssessmentSchema>(true);
 
 export const WsToolActivitySchema = z.object({
   type: z.literal("tool-activity"),
-  messageId: z.string(),
-  agent: z.string(),
+  messageId: MessageIdSchema,
+  agent: AgentIdSchema,
   toolName: z.string(),
   status: z.enum(["started", "completed"]),
   detail: z.string().optional(),
 });
 export type WsToolActivity = {
   type: "tool-activity";
-  messageId: string;
-  agent: string; // AgentId
+  messageId: MessageId;
+  agent: AgentId;
   toolName: string;
   status: "started" | "completed";
   detail?: string;
@@ -318,45 +381,45 @@ assertZodTypeMatch<WsToolActivity, typeof WsToolActivitySchema>(true);
 
 export const WsVibeSchema = z.object({
   type: z.literal("vibe"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
   vibe: z.string(),
-  nextSpeaker: z.string(),
+  nextSpeaker: SpeakerIdSchema,
 });
 export type WsVibe = {
   type: "vibe";
-  messageId: string;
+  messageId: MessageId;
   vibe: string;
-  nextSpeaker: string; // SpeakerId
+  nextSpeaker: SpeakerId;
 };
 assertZodTypeMatch<WsVibe, typeof WsVibeSchema>(true);
 
 export const WsPhaseSchema = z.object({
   type: z.literal("phase"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
   phase: z.enum(["assessing", "selecting", "speaking", "human-turn", "idle", "rolling-back"]),
-  activeSpeaker: z.string().optional(),
+  activeSpeaker: SpeakerIdSchema.optional(),
 });
 export type WsPhase = {
   type: "phase";
-  messageId: string;
+  messageId: MessageId;
   phase: "assessing" | "selecting" | "speaking" | "human-turn" | "idle" | "rolling-back";
-  activeSpeaker?: string; // SpeakerId
+  activeSpeaker?: SpeakerId;
 };
 assertZodTypeMatch<WsPhase, typeof WsPhaseSchema>(true);
 
 export const WsYourTurnSchema = z.object({
   type: z.literal("your-turn"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
 });
 export type WsYourTurn = {
   type: "your-turn";
-  messageId: string;
+  messageId: MessageId;
 };
 assertZodTypeMatch<WsYourTurn, typeof WsYourTurnSchema>(true);
 
 export const WsSyncSchema = z.object({
   type: z.literal("sync"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
   meeting: MeetingSchema,
   currentPhase: z.string(),
   readOnly: z.boolean().optional(),
@@ -364,7 +427,7 @@ export const WsSyncSchema = z.object({
 });
 export type WsSync = {
   type: "sync";
-  messageId: string;
+  messageId: MessageId;
   meeting: Meeting;
   currentPhase: string;
   readOnly?: boolean;
@@ -374,35 +437,35 @@ assertZodTypeMatch<WsSync, typeof WsSyncSchema>(true);
 
 export const WsErrorSchema = z.object({
   type: z.literal("error"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
   message: z.string(),
 });
 export type WsError = {
   type: "error";
-  messageId: string;
+  messageId: MessageId;
   message: string;
 };
 assertZodTypeMatch<WsError, typeof WsErrorSchema>(true);
 
 export const WsAttentionAckSchema = z.object({
   type: z.literal("attention-ack"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
 });
 export type WsAttentionAck = {
   type: "attention-ack";
-  messageId: string;
+  messageId: MessageId;
 };
 assertZodTypeMatch<WsAttentionAck, typeof WsAttentionAckSchema>(true);
 
 export const WsRollbackProgressSchema = z.object({
   type: z.literal("rollback-progress"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
   step: z.enum(["aborting", "git-reset", "perush-rollback", "session-recovery", "complete"]),
   detail: z.string().optional(),
 });
 export type WsRollbackProgress = {
   type: "rollback-progress";
-  messageId: string;
+  messageId: MessageId;
   step: "aborting" | "git-reset" | "perush-rollback" | "session-recovery" | "complete";
   detail?: string;
 };
@@ -444,86 +507,98 @@ assertZodTypeMatch<ServerMessage, typeof ServerMessageSchema>(true);
 
 export const WsHumanSpeechSchema = z.object({
   type: z.literal("human-speech"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
   content: z.string(),
 });
 export type WsHumanSpeech = {
   type: "human-speech";
-  messageId: string;
+  messageId: MessageId;
   content: string;
 };
 assertZodTypeMatch<WsHumanSpeech, typeof WsHumanSpeechSchema>(true);
 
 export const WsCommandSchema = z.object({
   type: z.literal("command"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
   command: z.string(),
 });
 export type WsCommand = {
   type: "command";
-  messageId: string;
+  messageId: MessageId;
   command: string;
 };
 assertZodTypeMatch<WsCommand, typeof WsCommandSchema>(true);
 
 export const WsStartMeetingSchema = z.object({
   type: z.literal("start-meeting"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
   title: z.string().min(1),
   openingPrompt: z.string().min(1),
-  participants: z.array(z.string()).min(1),
+  participants: z.array(AgentIdSchema).min(1),
 });
 export type WsStartMeeting = {
   type: "start-meeting";
-  messageId: string;
+  messageId: MessageId;
   title: string;
   openingPrompt: string;
-  participants: string[]; // AgentId[]
+  participants: AgentId[]
 };
 assertZodTypeMatch<WsStartMeeting, typeof WsStartMeetingSchema>(true);
 
 export const WsResumeMeetingSchema = z.object({
   type: z.literal("resume-meeting"),
-  messageId: z.string(),
-  meetingId: z.string(),
+  messageId: MessageIdSchema,
+  meetingId: MeetingIdSchema,
 });
 export type WsResumeMeeting = {
   type: "resume-meeting";
-  messageId: string;
+  messageId: MessageId;
   meetingId: MeetingId;
 };
 assertZodTypeMatch<WsResumeMeeting, typeof WsResumeMeetingSchema>(true);
 
 export const WsViewMeetingSchema = z.object({
   type: z.literal("view-meeting"),
-  messageId: z.string(),
-  meetingId: z.string(),
+  messageId: MessageIdSchema,
+  meetingId: MeetingIdSchema,
 });
 export type WsViewMeeting = {
   type: "view-meeting";
-  messageId: string;
+  messageId: MessageId;
   meetingId: MeetingId;
 };
 assertZodTypeMatch<WsViewMeeting, typeof WsViewMeetingSchema>(true);
 
+export const WsJoinMeetingSchema = z.object({
+  type: z.literal("join-meeting"),
+  messageId: MessageIdSchema,
+  meetingId: MeetingIdSchema,
+});
+export type WsJoinMeeting = {
+  type: "join-meeting";
+  messageId: MessageId;
+  meetingId: MeetingId;
+};
+assertZodTypeMatch<WsJoinMeeting, typeof WsJoinMeetingSchema>(true);
+
 export const WsAttentionSchema = z.object({
   type: z.literal("attention"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
 });
 export type WsAttention = {
   type: "attention";
-  messageId: string;
+  messageId: MessageId;
 };
 assertZodTypeMatch<WsAttention, typeof WsAttentionSchema>(true);
 
 export const WsRollbackSchema = z.object({
   type: z.literal("rollback"),
-  messageId: z.string(),
+  messageId: MessageIdSchema,
   targetCycleNumber: z.number().int().min(0),
 });
 export type WsRollback = {
   type: "rollback";
-  messageId: string;
+  messageId: MessageId;
   targetCycleNumber: number;
 };
 assertZodTypeMatch<WsRollback, typeof WsRollbackSchema>(true);
@@ -535,6 +610,7 @@ export const ClientMessageSchema = z.discriminatedUnion("type", [
   WsStartMeetingSchema,
   WsResumeMeetingSchema,
   WsViewMeetingSchema,
+  WsJoinMeetingSchema,
   WsAttentionSchema,
   WsRollbackSchema,
 ]);
@@ -544,6 +620,7 @@ export type ClientMessage =
   | WsStartMeeting
   | WsResumeMeeting
   | WsViewMeeting
+  | WsJoinMeeting
   | WsAttention
   | WsRollback;
 assertZodTypeMatch<ClientMessage, typeof ClientMessageSchema>(true);

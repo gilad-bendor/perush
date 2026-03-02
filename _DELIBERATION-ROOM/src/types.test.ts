@@ -11,7 +11,7 @@ import {
   MeetingSchema,
   MeetingSummarySchema,
   ServerMessageSchema,
-  ClientMessageSchema,
+  ClientMessageSchema, MeetingSummary, ServerMessage, ClientMessage, Meeting,
 } from "./types";
 
 // ---------------------------------------------------------------------------
@@ -227,8 +227,8 @@ describe("CycleRecordSchema", () => {
 // ---------------------------------------------------------------------------
 
 describe("MeetingSchema", () => {
-  const validMeeting = {
-    meetingId: "test-meeting-001",
+  const validMeeting: Meeting = {
+    meetingId: "2026-02-01--10-41--test-meeting-001",
     mode: "Perush-Development" as const,
     title: "גן עדן",
     openingPrompt: "בואו נדון בבראשית ב:ד",
@@ -270,9 +270,9 @@ describe("MeetingSchema", () => {
 
 describe("MeetingSummarySchema", () => {
   test("accepts valid summary", () => {
-    const summary = {
-      meetingId: "test-001",
-      branch: "sessions/test-001",
+    const summary: MeetingSummary = {
+      meetingId: "2026-02-01--10-41--test-001",
+      branch: "sessions/2026-02-01--10-41--test-001",
       lastActivity: "2026-02-27",
       lastCommitMsg: "Cycle 5: milo",
     };
@@ -280,9 +280,9 @@ describe("MeetingSummarySchema", () => {
   });
 
   test("accepts optional fields", () => {
-    const summary = {
-      meetingId: "test-001",
-      branch: "sessions/test-001",
+    const summary: MeetingSummary = {
+      meetingId: "2026-02-01--10-41--test-001",
+      branch: "sessions/2026-02-01--10-41--test-001",
       lastActivity: "2026-02-27",
       lastCommitMsg: "Cycle 5: milo",
       title: "גן עדן",
@@ -299,17 +299,17 @@ describe("MeetingSummarySchema", () => {
 
 describe("ServerMessageSchema", () => {
   test("accepts speech message", () => {
-    const msg = { type: "speech" as const, messageId: "S1", speaker: "milo", content: "הערה", timestamp: createFormattedTime() };
+    const msg: ServerMessage = { type: "speech" as const, messageId: "S1", speaker: "milo", content: "הערה", timestamp: createFormattedTime() };
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });
 
   test("accepts speech-chunk message", () => {
-    const msg = { type: "speech-chunk" as const, messageId: "S2", speaker: "milo", delta: "חלק" };
+    const msg: ServerMessage = { type: "speech-chunk" as const, messageId: "S2", speaker: "milo", delta: "חלק" };
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });
 
   test("accepts assessment message", () => {
-    const msg = {
+    const msg: ServerMessage = {
       type: "assessment" as const,
       messageId: "S3",
       agent: "milo",
@@ -321,17 +321,17 @@ describe("ServerMessageSchema", () => {
   });
 
   test("accepts vibe message", () => {
-    const msg = { type: "vibe" as const, messageId: "S4", vibe: "הדיון זורם", nextSpeaker: "archi" };
+    const msg: ServerMessage = { type: "vibe" as const, messageId: "S4", vibe: "הדיון זורם", nextSpeaker: "archi" };
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });
 
   test("accepts phase message", () => {
-    const msg = { type: "phase" as const, messageId: "S5", phase: "assessing" as const };
+    const msg: ServerMessage = { type: "phase" as const, messageId: "S5", phase: "assessing" as const };
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });
 
   test("accepts phase message with activeSpeaker", () => {
-    const msg = { type: "phase" as const, messageId: "S6", phase: "speaking" as const, activeSpeaker: "milo" };
+    const msg: ServerMessage = { type: "phase" as const, messageId: "S6", phase: "speaking" as const, activeSpeaker: "milo" };
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });
 
@@ -342,12 +342,12 @@ describe("ServerMessageSchema", () => {
   });
 
   test("accepts error message", () => {
-    const msg = { type: "error" as const, messageId: "S8", message: "something went wrong" };
+    const msg: ServerMessage = { type: "error" as const, messageId: "S8", message: "something went wrong" };
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });
 
   test("accepts rollback-progress message", () => {
-    const msg = { type: "rollback-progress" as const, messageId: "S9", step: "git-reset" as const, detail: "resetting..." };
+    const msg: ServerMessage = { type: "rollback-progress" as const, messageId: "S9", step: "git-reset" as const, detail: "resetting..." };
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });
 
@@ -362,17 +362,17 @@ describe("ServerMessageSchema", () => {
 
 describe("ClientMessageSchema", () => {
   test("accepts human-speech message", () => {
-    const msg = { type: "human-speech" as const, messageId: "C1", content: "הנה הערתי" };
+    const msg: ClientMessage = { type: "human-speech" as const, messageId: "C1", content: "הנה הערתי" };
     expect(ClientMessageSchema.parse(msg)).toEqual(msg);
   });
 
   test("accepts command message", () => {
-    const msg = { type: "command" as const, messageId: "C2", command: "/end" };
+    const msg: ClientMessage = { type: "command" as const, messageId: "C2", command: "/end" };
     expect(ClientMessageSchema.parse(msg)).toEqual(msg);
   });
 
   test("accepts start-meeting message", () => {
-    const msg = {
+    const msg: ClientMessage = {
       type: "start-meeting" as const,
       messageId: "C3",
       title: "גן עדן",
@@ -403,17 +403,17 @@ describe("ClientMessageSchema", () => {
   });
 
   test("accepts attention message", () => {
-    const msg = { type: "attention" as const, messageId: "C6" };
+    const msg: ClientMessage = { type: "attention" as const, messageId: "C6" };
     expect(ClientMessageSchema.parse(msg)).toEqual(msg);
   });
 
   test("accepts rollback message", () => {
-    const msg = { type: "rollback" as const, messageId: "C7", targetCycleNumber: 3 };
+    const msg: ClientMessage = { type: "rollback" as const, messageId: "C7", targetCycleNumber: 3 };
     expect(ClientMessageSchema.parse(msg)).toEqual(msg);
   });
 
   test("accepts rollback to cycle 0 (opening prompt)", () => {
-    const msg = { type: "rollback" as const, messageId: "C8", targetCycleNumber: 0 };
+    const msg: ClientMessage = { type: "rollback" as const, messageId: "C8", targetCycleNumber: 0 };
     expect(ClientMessageSchema.parse(msg)).toEqual(msg);
   });
 

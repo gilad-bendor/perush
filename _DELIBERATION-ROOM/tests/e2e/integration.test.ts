@@ -14,6 +14,11 @@ let serverProc: ReturnType<typeof Bun.spawn>;
 const PORT = 4100; // Matches SERVER_PORT in config.ts
 
 beforeAll(async () => {
+  // Kill any orphan server on the test port from a previous run
+  try {
+    Bun.spawnSync(["bash", "-c", `lsof -ti:${PORT} | xargs kill -9 2>/dev/null`]);
+  } catch {}
+
   // Start the real server with stub SDK on a test port
   serverProc = Bun.spawn(
     ["bun", "run", "src/server.ts"],

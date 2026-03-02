@@ -304,6 +304,32 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
       break;
     }
 
+    case "join-meeting": {
+      try {
+        // If this meeting is currently active, send live state (lightweight)
+        const activeMeeting = getMeeting();
+        if (activeMeeting && activeMeeting.meetingId === msg.meetingId) {
+          sendTo(ws, {
+            type: "sync",
+            meeting: activeMeeting,
+            currentPhase: getPhase(),
+          });
+        } else {
+          // Not active — view-only from git
+          const meetingData = await readEndedMeeting(msg.meetingId);
+          sendTo(ws, {
+            type: "sync",
+            meeting: meetingData,
+            currentPhase: "idle",
+            readOnly: true,
+          });
+        }
+      } catch (err: any) {
+        sendTo(ws, { type: "error", message: `Failed to join meeting: ${err?.message}` });
+      }
+      break;
+    }
+
     case "human-speech": {
       handleHumanSpeech(msg.content);
       break;
@@ -346,6 +372,8 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
       break;
     }
   }
+
+  console.log(`WS --- ${msg.type} done`);
   }); // end runWithContext
 }
 
@@ -383,6 +411,11 @@ async function handleHttpRequest(req: Request, server: any): Promise<Response> {
     return Response.json(meetings);
   }
 
+  // SPA catch-all: /meeting/* paths are handled by the frontend router
+  if (pathname.startsWith("/meeting/")) {
+    return serveStaticFile("/", PUBLIC_DIR, MIME_TYPES);
+  }
+
   // Static file serving
   return serveStaticFile(pathname, PUBLIC_DIR, MIME_TYPES);
 }
@@ -407,16 +440,7 @@ export async function createServer(port: number = SERVER_PORT): Promise<ReturnTy
     websocket: {
       open(ws) {
         connectedClients.add(ws as any);
-
-        // Send sync if a meeting is active
-        const meeting = getMeeting();
-        if (meeting) {
-          sendTo(ws as any, {
-            type: "sync",
-            meeting,
-            currentPhase: getPhase(),
-          });
-        }
+        // No auto-sync: the client sends join-meeting based on its URL.
       },
       message(ws, message) {
         const raw = typeof message === "string" ? message : message.toString();

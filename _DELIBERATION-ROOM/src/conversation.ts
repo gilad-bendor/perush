@@ -12,13 +12,22 @@ import { $ } from "bun";
 import { join } from "path";
 import { readFile, writeFile, rename, stat, mkdir } from "fs/promises";
 import { stringify as yamlStringify, parse as yamlParse } from "yaml";
-import type { Meeting, MeetingId, MeetingSummary, SpeakerId } from "./types";
+import {
+  AgentId,
+  BranchName,
+  branchNameToMeetingId, cycleTagMain, cycleTagSession,
+  Meeting,
+  MeetingId,
+  meetingIdToBranchName,
+  meetingIdToTagIdPrefix,
+  MeetingSummary,
+  SESSION_BRANCH_PREFIX,
+  SpeakerId,
+} from "./types";
 import { MeetingSchema } from "./types";
 import {
   DELIBERATION_DIR,
   MEETINGS_DIR,
-  SESSION_BRANCH_PREFIX,
-  TAG_PREFIX,
   COMMIT_INITIAL,
   COMMIT_MEETING_ENDED,
   commitCycleMessage,
@@ -34,25 +43,20 @@ import {
  * Produces a URL-safe slug: lowercase alphanumeric + hyphens.
  */
 export function generateMeetingId(title: string, startedAt: Date): MeetingId {
-  const dateStr = [
-    startedAt.getFullYear(),
-    String(startedAt.getMonth() + 1).padStart(2, "0"),
-    String(startedAt.getDate()).padStart(2, "0"),
-  ].join("-");
-
-  const timeStr = [
-    String(startedAt.getHours()).padStart(2, "0"),
-    String(startedAt.getMinutes()).padStart(2, "0"),
-  ].join("-");
-
   // Slugify: keep Hebrew (as-is), Latin, digits; replace everything else with hyphens
   const slug = title
-    .trim()
-    .replace(/[^\p{L}\p{N}]+/gu, "-") // replace non-letter/non-digit runs with hyphens
-    .replace(/^-+|-+$/g, "")           // strip leading/trailing hyphens
-    .toLowerCase();
+      .trim()
+      .replace(/[^\p{L}\p{N}]+/gu, "-") // replace non-letter/non-digit runs with hyphens
+      .replace(/^-+|-+$/g, "")           // strip leading/trailing hyphens
+      .toLowerCase();
 
-  return `${dateStr}--${timeStr}--${slug || "meeting"}`;
+  return `${
+    startedAt.getFullYear()}-${
+    String(startedAt.getMonth() + 1).padStart(2, "0") as unknown as number}-${
+    String(startedAt.getDate()).padStart(2, "0") as unknown as number}--${
+    String(startedAt.getHours()).padStart(2, "0") as unknown as number}-${
+    String(startedAt.getMinutes()).padStart(2, "0") as unknown as number}--${
+    slug || "meeting"}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -75,7 +79,7 @@ async function getGitRoot(): Promise<string> {
  */
 export async function createMeetingWorktree(meetingId: MeetingId): Promise<string> {
   const worktreePath = join(MEETINGS_DIR, meetingId);
-  const branchName = `${SESSION_BRANCH_PREFIX}${meetingId}`;
+  const branchName = meetingIdToBranchName(meetingId);
   const gitRoot = await getGitRoot();
 
   // Ensure the meetings directory exists
@@ -138,7 +142,7 @@ export async function endMeeting(meetingId: MeetingId, worktreePath: string): Pr
  */
 export async function resumeMeeting(meetingId: MeetingId): Promise<string> {
   const worktreePath = join(MEETINGS_DIR, meetingId);
-  const branchName = `${SESSION_BRANCH_PREFIX}${meetingId}`;
+  const branchName = meetingIdToBranchName(meetingId);
   const gitRoot = await getGitRoot();
 
   // Ensure the meetings directory exists
@@ -186,7 +190,7 @@ export async function readActiveMeeting(worktreePath: string): Promise<Meeting> 
  * Read meeting.yaml from an ended meeting via `git show`.
  */
 export async function readEndedMeeting(meetingId: MeetingId): Promise<Meeting> {
-  const branchName = `${SESSION_BRANCH_PREFIX}${meetingId}`;
+  const branchName = meetingIdToBranchName(meetingId);
   const gitRoot = await getGitRoot();
   const result = await $`git -C ${gitRoot} show ${branchName}:meeting.yaml`.quiet();
   return MeetingSchema.parse(yamlParse(result.stdout.toString()));
@@ -254,12 +258,12 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
     const [branch, date, lastCommitMsg] = line.split("|");
     if (!branch) continue;
 
-    const meetingId = branch.replace(SESSION_BRANCH_PREFIX, "");
+    const meetingId = branchNameToMeetingId(branch as BranchName);
 
     // Try to read meeting metadata from the branch
     let title: string | undefined;
     let cycleCount: number | undefined;
-    let participants: string[] | undefined;
+    let participants: AgentId[] | undefined;
 
     try {
       const meetingYaml = await $`git -C ${gitRoot} show ${branch}:meeting.yaml`.quiet();
@@ -374,53 +378,31 @@ export async function commitPerushChangesOnMain(
 }
 
 /**
- * Generate a tag ID for cross-branch correlation.
- * Format: session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-id>
- */
-export function generateTagId(meetingId: MeetingId, now?: Date): string {
-  const d = now ?? new Date();
-  const ts = [
-    d.getFullYear(),
-    "-",
-    String(d.getMonth() + 1).padStart(2, "0"),
-    "-",
-    String(d.getDate()).padStart(2, "0"),
-    "--",
-    String(d.getHours()).padStart(2, "0"),
-    "-",
-    String(d.getMinutes()).padStart(2, "0"),
-    "-",
-    String(d.getSeconds()).padStart(2, "0"),
-  ].join("");
-
-  return `${TAG_PREFIX}${ts}--${meetingId}`;
-}
-
-/**
  * Create correlated tags on both main and the session branch.
- * Tags: <tag-id>/main → HEAD of main, <tag-id>/session → HEAD of session branch.
+ * Tags: session-cycle/<meeting-id>/main → HEAD of main, session-cycle/<meeting-id>/session → HEAD of session branch.
+ * Return true if tags are created.
  */
 export async function createCorrelatedTags(
   worktreePath: string,
   meetingId: MeetingId,
-): Promise<string | null> {
+  cycleNumber: number,
+): Promise<boolean> {
   const gitRoot = await getGitRoot();
-  const tagId = generateTagId(meetingId);
 
   try {
     // Tag main's HEAD
-    await $`git -C ${gitRoot} tag ${tagId}/main HEAD`.quiet();
+    await $`git -C ${gitRoot} tag ${cycleTagMain(meetingId, cycleNumber)} HEAD`.quiet();
 
     // Tag session branch's HEAD
     const sessionHead = (
       await $`git -C ${worktreePath} rev-parse HEAD`.quiet()
     ).stdout.toString().trim();
-    await $`git -C ${gitRoot} tag ${tagId}/session ${sessionHead}`.quiet();
+    await $`git -C ${gitRoot} tag ${cycleTagSession(meetingId, cycleNumber)} ${sessionHead}`.quiet();
 
-    return tagId;
+    return true;
   } catch (err) {
     console.error(`Failed to create correlated tags: ${err}`);
-    return null;
+    return false;
   }
 }
 
@@ -428,14 +410,13 @@ export async function createCorrelatedTags(
  * Async push tags and branches to remote (fire-and-forget).
  * Does NOT block the deliberation loop. Failures are logged but not thrown.
  */
-export function asyncPush(tagId: string, meetingId: MeetingId): void {
+export function asyncPush(meetingId: MeetingId, cycleNumber: number): void {
   (async () => {
     try {
       const gitRoot = await getGitRoot();
-      const branchName = `${SESSION_BRANCH_PREFIX}${meetingId}`;
-      await $`git -C ${gitRoot} push origin ${tagId}/main ${tagId}/session main ${branchName}`.quiet();
+      await $`git -C ${gitRoot} push origin ${cycleTagMain(meetingId, cycleNumber)} ${cycleTagSession(meetingId, cycleNumber)} main ${meetingIdToBranchName(meetingId)}`.quiet();
     } catch (err) {
-      console.error(`Async push failed for ${tagId}: ${err}`);
+      console.error(`Async push failed for meeting-id ${meetingId}: ${err}`);
     }
   })();
 }
@@ -443,26 +424,26 @@ export function asyncPush(tagId: string, meetingId: MeetingId): void {
 /**
  * Full cross-branch tagging flow after a cycle.
  * Detects perush changes → commits on main → creates correlated tags → async push.
- * Returns the tag ID if tagging occurred, null otherwise.
+ * Returns true if tagging occurred.
  */
 export async function tagPerushChangesIfNeeded(
   worktreePath: string,
   cycleNumber: number,
   meetingId: MeetingId,
-): Promise<string | null> {
+): Promise<boolean> {
   const changedFiles = await detectPerushChanges();
-  if (changedFiles.length === 0) return null;
+  if (changedFiles.length === 0) return false;
 
   const commitHash = await commitPerushChangesOnMain(cycleNumber, meetingId);
-  if (!commitHash) return null;
+  if (!commitHash) return false;
 
-  const tagId = await createCorrelatedTags(worktreePath, meetingId);
-  if (!tagId) return null;
+  const areTagsCreated = await createCorrelatedTags(worktreePath, meetingId, cycleNumber);
+  if (!areTagsCreated) return false;
 
   // Fire-and-forget push
-  asyncPush(tagId, meetingId);
+  asyncPush(meetingId, cycleNumber);
 
-  return tagId;
+  return true;
 }
 
 // ---------------------------------------------------------------------------
@@ -498,43 +479,87 @@ export async function resetSessionBranchToCycle(
 }
 
 /**
- * Find all correlated tags for a meeting that are after a given cycle.
- * Returns tag IDs sorted chronologically.
+ * Find all per-cycle main tags for this meeting with cycle number > targetCycleNumber.
+ * Returns sorted array of { cycleNumber, tagName } in ascending cycle order.
  */
-export async function findTagsAfterCycle(
+async function findTagsAfterCycle(
   meetingId: MeetingId,
-  afterCycleNumber: number,
-): Promise<string[]> {
+  targetCycleNumber: number,
+): Promise<{ cycleNumber: number; tagName: string }[]> {
   const gitRoot = await getGitRoot();
-  try {
-    const result = await $`git -C ${gitRoot} tag --list ${TAG_PREFIX}*--${meetingId}/*`.quiet();
-    const allTags = result.stdout.toString().trim().split("\n").filter(Boolean);
+  const prefix = meetingIdToTagIdPrefix(meetingId);
 
-    // Extract unique tag base IDs (without /main or /session suffix)
-    const tagBaseSet = new Set<string>();
-    for (const tag of allTags) {
-      const base = tag.replace(/\/(main|session)$/, "");
-      tagBaseSet.add(base);
+  try {
+    const result = await $`git -C ${gitRoot} tag --list ${prefix}/c*/main`.quiet();
+    const output = result.stdout.toString().trim();
+    if (!output) return [];
+
+    const parsed: { cycleNumber: number; tagName: string }[] = [];
+    for (const tag of output.split("\n")) {
+      const match = tag.match(/\/c(\d+)\/main$/);
+      if (match) {
+        const cycle = parseInt(match[1], 10);
+        if (cycle > targetCycleNumber) {
+          parsed.push({ cycleNumber: cycle, tagName: tag });
+        }
+      }
     }
 
-    return Array.from(tagBaseSet).sort();
+    return parsed.sort((a, b) => a.cycleNumber - b.cycleNumber);
   } catch {
     return [];
   }
 }
 
 /**
- * Roll back perush files on main to the state before a specific tag.
- * Stashes any uncommitted perush changes first.
+ * Find the latest per-cycle main tag at or before targetCycleNumber.
+ * Returns the tag name, or null if none found.
+ */
+async function findLatestTagAtOrBefore(
+  meetingId: MeetingId,
+  targetCycleNumber: number,
+): Promise<string | null> {
+  const gitRoot = await getGitRoot();
+  const prefix = meetingIdToTagIdPrefix(meetingId);
+
+  try {
+    const result = await $`git -C ${gitRoot} tag --list ${prefix}/c*/main`.quiet();
+    const output = result.stdout.toString().trim();
+    if (!output) return null;
+
+    let best: { cycleNumber: number; tagName: string } | null = null;
+    for (const tag of output.split("\n")) {
+      const match = tag.match(/\/c(\d+)\/main$/);
+      if (match) {
+        const cycle = parseInt(match[1], 10);
+        if (cycle <= targetCycleNumber && (!best || cycle > best.cycleNumber)) {
+          best = { cycleNumber: cycle, tagName: tag };
+        }
+      }
+    }
+
+    return best?.tagName ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Roll back perush files on main to the state at or before a target cycle.
+ *
+ * Finds per-cycle tags created during this meeting. If any perush changes
+ * were committed on main after the target cycle, restores perush files
+ * to their state at (or before) the target cycle using `git checkout`.
+ * Does NOT rewrite main's history — creates a new commit instead.
  */
 export async function rollbackPerushOnMain(
   meetingId: MeetingId,
   targetCycleNumber: number,
 ): Promise<{ stashed: boolean; rolledBack: boolean }> {
   const gitRoot = await getGitRoot();
-  const tags = await findTagsAfterCycle(meetingId, targetCycleNumber);
+  const tagsAfter = await findTagsAfterCycle(meetingId, targetCycleNumber);
 
-  if (tags.length === 0) {
+  if (tagsAfter.length === 0) {
     return { stashed: false, rolledBack: false };
   }
 
@@ -548,12 +573,33 @@ export async function rollbackPerushOnMain(
     } catch {}
   }
 
-  // Find the earliest tag (the one at or before the target cycle)
-  // and reset main to that point
-  // For simplicity: the first tag in sorted order is the earliest
-  const firstTag = tags[0];
+  // Determine which ref to restore perush files from:
+  // - A tag at or before the target cycle (the "good" state), OR
+  // - The parent of the earliest post-target tag (state before any meeting perush changes)
+  const goodTag = await findLatestTagAtOrBefore(meetingId, targetCycleNumber);
+  const restoreRef = goodTag ?? `${tagsAfter[0].tagName}~1`;
+
   try {
-    await $`git -C ${gitRoot} reset --hard ${firstTag}/main`.quiet();
+    // Restore perush files to the target state (each dir separately for robustness)
+    try {
+      await $`git -C ${gitRoot} checkout ${restoreRef} -- פירוש/`.quiet();
+    } catch {}
+    try {
+      await $`git -C ${gitRoot} checkout ${restoreRef} -- ניתוחים-לשוניים/`.quiet();
+    } catch {}
+
+    // Commit the restored files
+    try {
+      await $`git -C ${gitRoot} commit -m ${"Rollback perush files to cycle " + targetCycleNumber} --allow-empty`.quiet();
+    } catch {}
+
+    // Clean up invalidated tags (post-target, both main and session)
+    for (const { tagName } of tagsAfter) {
+      const sessionTag = tagName.replace(/\/main$/, "/session");
+      try { await $`git -C ${gitRoot} tag -d ${tagName}`.quiet(); } catch {}
+      try { await $`git -C ${gitRoot} tag -d ${sessionTag}`.quiet(); } catch {}
+    }
+
     return { stashed, rolledBack: true };
   } catch {
     return { stashed, rolledBack: false };

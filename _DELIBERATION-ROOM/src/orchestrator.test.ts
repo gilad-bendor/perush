@@ -26,11 +26,12 @@ import {
 import type { OrchestratorEvents } from "./orchestrator";
 import { resetStubState } from "./stub-sdk";
 import { resetAgentCache } from "./session-manager";
-import type { PrivateAssessment, Phase } from "./types";
+import {PrivateAssessment, Phase, meetingIdToBranchName, MeetingId} from "./types";
+import {generateMeetingId} from "./conversation.ts";
 
 // Unique test meeting IDs to avoid collisions
-function testId(): string {
-  return `orch-test-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+function testId(): MeetingId {
+  return generateMeetingId(`orch-test-${Math.random().toString(36).slice(2, 6)}`, new Date());
 }
 
 // Collect events for assertions
@@ -70,12 +71,12 @@ function createEventCollector(): { events: CollectedEvents; handlers: Partial<Or
 }
 
 // Cleanup helper — remove test worktrees and branches
-async function cleanupMeeting(meetingId: string): Promise<void> {
+async function cleanupMeeting(meetingId: MeetingId): Promise<void> {
   try {
     const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
     const worktreePath = join(gitRoot, "_DELIBERATION-ROOM/meetings", meetingId);
     try { await $`git worktree remove --force ${worktreePath}`.quiet(); } catch {}
-    try { await $`git branch -D sessions/${meetingId}`.quiet(); } catch {}
+    try { await $`git branch -D ${meetingIdToBranchName(meetingId)}`.quiet(); } catch {}
   } catch {}
 }
 
@@ -83,7 +84,7 @@ async function cleanupMeeting(meetingId: string): Promise<void> {
 // Test setup
 // ---------------------------------------------------------------------------
 
-let testMeetingId: string;
+let testMeetingId: MeetingId;
 
 beforeEach(() => {
   resetOrchestrator();
@@ -464,7 +465,7 @@ describe("resumeMeetingById", () => {
     const meeting = await startMeeting("Test", "Opening", ["milo"]);
     testMeetingId = meeting.meetingId;
 
-    await expect(resumeMeetingById("some-other-id")).rejects.toThrow("already active");
+    await expect(resumeMeetingById(generateMeetingId("some-other-id", new Date()))).rejects.toThrow("already active");
   });
 
   test("resumes an ended meeting with correct state", async () => {

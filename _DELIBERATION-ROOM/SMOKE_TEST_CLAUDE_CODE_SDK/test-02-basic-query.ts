@@ -25,7 +25,7 @@ const safetyTimer = setTimeout(() => {
 const q = query({
   prompt: "Respond with exactly: SMOKE_TEST_OK. Nothing else.",
   options: {
-    model: "claude-haiku-4-5-20251001",
+    model: "claude-haiku-4-5",
     includePartialMessages: true,
     systemPrompt: "You are a minimal test bot. Respond exactly as instructed, with no extra text.",
     maxTurns: 1,
