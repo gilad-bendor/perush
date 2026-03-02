@@ -8,7 +8,7 @@ Agent SDK sessions produce JSONL files (one JSON object per line, appended incre
 
 We make them git-tracked using two complementary strategies:
 
-1. **Git worktrees with orphan branches**: Each meeting gets its own orphan branch (`sessions/<meeting-id>`) with a worktree checked out at `_DELIBERATION-ROOM/meetings/<meeting-id>/`. All meeting data — `meeting.yaml`, session JSONL files, session directories — lives on this branch, **never on `main`**. The session manager controls all commits to the branch at well-defined safe points (after each cycle).
+1. **Git worktrees with orphan branches**: Each meeting gets its own orphan branch (`sessions/<meeting-id>`) with a worktree checked out at `_DELIBERATION-ROOM/.meetings/<meeting-id>/`. All meeting data — `meeting.yaml`, session JSONL files, session directories — lives on this branch, **never on `main`**. The session manager controls all commits to the branch at well-defined safe points (after each cycle).
 
 2. **Move+symlink**: After a session is created, its directory is moved from `~/.claude/projects/` into the meeting's worktree, and a symlink is placed at the original location. Claude Code follows symlinks transparently (standard `fs.readFile`/`fs.appendFile` behavior), so it continues operating normally — while the actual file lives in the worktree under git control.
 
@@ -64,7 +64,7 @@ sessions/2026-02-01--10-41--bereshit-2-4-eden branch (orphan):
 
 ```
 _DELIBERATION-ROOM/
-  meetings/                       ← gitignored on main (worktree mount point)
+  .meetings/                      ← gitignored on main (worktree mount point)
     bereshit-2-4-eden/            ← worktree for sessions/2026-02-01--10-41--bereshit-2-4-eden branch
       meeting.yaml
       <session-uuid>.jsonl        ← real file (symlinked from ~/.claude/projects/...)
@@ -80,7 +80,7 @@ At meeting start, after generating the meeting ID:
 import { $ } from "bun";
 
 async function createMeetingWorktree(meetingId: MeetingId): Promise<string> {
-  const worktreePath = join(DELIBERATION_DIR, "meetings", meetingId);
+  const worktreePath = join(DELIBERATION_DIR, ".meetings", meetingId);
   const branchName = `sessions/${meetingId}`;
 
   // Create orphan branch + worktree in one command (requires git 2.42+)
@@ -92,7 +92,7 @@ async function createMeetingWorktree(meetingId: MeetingId): Promise<string> {
 
 This creates:
 - A new orphan branch `sessions/<meeting-id>` (no parent commits, no shared history with `main`).
-- A worktree at `_DELIBERATION-ROOM/meetings/<meeting-id>/` checked out on that branch.
+- A worktree at `_DELIBERATION-ROOM/.meetings/<meeting-id>/` checked out on that branch.
 - The worktree is a fully functional git working directory — `git -C <path> add/commit` works naturally.
 
 ### The Move+Symlink Operation
@@ -108,7 +108,7 @@ async function captureSession(sessionId: string, worktreePath: string): Promise<
   const sourcePath = join(claudeProjectDir, sessionId);
   const targetPath = join(worktreePath, sessionId);
 
-  // Move: ~/.claude/projects/<project>/<session-id> → meetings/<meeting-id>/<session-id>
+  // Move: ~/.claude/projects/<project>/<session-id> → ./.meetings/<meeting-id>/<session-id>
   await rename(sourcePath, targetPath);
 
   // Symlink back: ~/.claude/projects/<project>/<session-id> → realpath of target
@@ -242,7 +242,7 @@ After removal: the branch persists with full commit history; the directory is go
 
 ```typescript
 async function resumeMeeting(meetingId: MeetingId): Promise<string> {
-  const worktreePath = join(DELIBERATION_DIR, "meetings", meetingId);
+  const worktreePath = join(DELIBERATION_DIR, ".meetings", meetingId);
 
   await $`git worktree add ${worktreePath} ${meetingIdToBranchName(meetingId)}`;
 
@@ -257,13 +257,13 @@ async function resumeMeeting(meetingId: MeetingId): Promise<string> {
 
 ### What Gets Git-Tracked (and Where)
 
-| What | Where | Branch |
-|------|-------|--------|
-| Source code, frontend, CLAUDE.md | `_DELIBERATION-ROOM/` | `main` |
-| `meeting.yaml` (conversation, assessments, decisions) | `meetings/<meeting-id>/meeting.yaml` | `sessions/<meeting-id>` |
-| AI-Agent session JSONL (internal reasoning, tool usage) | `meetings/<meeting-id>/<session-id>.jsonl` | `sessions/<meeting-id>` |
-| AI-Agent session directories (subagents) | `meetings/<meeting-id>/<session-id>/` | `sessions/<meeting-id>` |
-| Symlinks to session files | `~/.claude/projects/...` | *(not tracked — local, ephemeral)* |
+| What | Where                                       | Branch |
+|------|---------------------------------------------|--------|
+| Source code, frontend, CLAUDE.md | `_DELIBERATION-ROOM/`                       | `main` |
+| `meeting.yaml` (conversation, assessments, decisions) | `.meetings/<meeting-id>/meeting.yaml`       | `sessions/<meeting-id>` |
+| AI-Agent session JSONL (internal reasoning, tool usage) | `.meetings/<meeting-id>/<session-id>.jsonl` | `sessions/<meeting-id>` |
+| AI-Agent session directories (subagents) | `.meetings/<meeting-id>/<session-id>/`      | `sessions/<meeting-id>` |
+| Symlinks to session files | `~/.claude/projects/...`                    | *(not tracked — local, ephemeral)* |
 
 ### The Complete Session Lifecycle
 

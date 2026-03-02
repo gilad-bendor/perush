@@ -107,7 +107,7 @@ describe("conversation store (integration)", () => {
     try {
       const worktreePath = join(
         (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim(),
-        "_DELIBERATION-ROOM/meetings",
+        "_DELIBERATION-ROOM/.meetings",
         testMeetingId,
       );
       await $`git worktree remove --force ${worktreePath}`.quiet();
@@ -377,7 +377,7 @@ describe("session branch rollback", () => {
     try {
       const worktreePath = join(
         (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim(),
-        "_DELIBERATION-ROOM/meetings",
+        "_DELIBERATION-ROOM/.meetings",
         testMeetingId,
       );
       await $`git worktree remove --force ${worktreePath}`.quiet();

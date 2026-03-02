@@ -214,7 +214,7 @@ _DELIBERATION-ROOM/
 │       ├── conversation.test.ts
 │       ├── integration.test.ts
 │       └── mock-ws-server.ts
-└── meetings/              ← worktree mount point (gitignored)
+└── .meetings/              ← worktree mount point (gitignored)
 ```
 
 ## Development Guidelines
@@ -249,18 +249,28 @@ open http://localhost:4100
 
 **All configurable values live in `src/config.ts`** — the single source of truth. Categories: network, models, cost caps, paths, git templates, timing, UI, assessment, SDK environment, stub mode. **No magic numbers in other files.**
 
-Key env-overridable values: `PARTICIPANT_MODEL`, `MANAGER_MODEL`, `SERVER_PORT`.
+Key env-overridable values: `PARTICIPANT_MODEL`, `MANAGER_MODEL`, `SERVER_PORT`, `LOG_PATH`.
+
+### Log File
+
+All `console.log/error/warn/info/debug` output is automatically written to a log file by `src/context.ts`. The log includes the context prefix (`[C1]`, `[N/A]`) and a level tag (`LOG`, `ERR`, `WRN`, `INF`, `DBG`).
+
+- **Path**: `process.env.LOG_PATH`, or `./.logs/YYYY-MM-DD--HH-MM-SS-NNN.log` (timestamped at app startup).
+- **Durability**: fsynced after every write.
+- **Resilience**: if the file is deleted while the app is running, it is recreated on the next log.
+- **Debugging**: use `tail -f .logs/*.log` to watch logs in real time while the server runs. This is especially useful during Playwright debugging sessions — you can read the log file to see server-side events without restarting the server.
 
 ### Import Dependency Graph
 
 ```
 types.ts          ← no src/ imports (only zod)
 config.ts         ← types.ts
+context.ts        ← types.ts (+ node:fs, node:util)
 conversation.ts   ← types.ts, config.ts
 stub-sdk.ts       ← types.ts
 session-manager.ts ← types.ts, config.ts, conversation.ts, stub-sdk.ts
 orchestrator.ts   ← all above
-server.ts         ← orchestrator.ts, types.ts, config.ts
+server.ts         ← orchestrator.ts, types.ts, config.ts, context.ts
 ```
 
 **No upward arrows.** No circular imports.

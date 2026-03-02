@@ -100,7 +100,7 @@ describe("Path config", () => {
   });
 
   test("MEETINGS_DIR is inside DELIBERATION_DIR", () => {
-    expect(MEETINGS_DIR).toBe(join(DELIBERATION_DIR, "meetings"));
+    expect(MEETINGS_DIR).toBe(join(DELIBERATION_DIR, ".meetings"));
   });
 
   test("ROOT_CLAUDE_MD points to ../CLAUDE.md", () => {

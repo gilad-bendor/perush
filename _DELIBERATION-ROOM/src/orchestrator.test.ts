@@ -74,7 +74,7 @@ function createEventCollector(): { events: CollectedEvents; handlers: Partial<Or
 async function cleanupMeeting(meetingId: MeetingId): Promise<void> {
   try {
     const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
-    const worktreePath = join(gitRoot, "_DELIBERATION-ROOM/meetings", meetingId);
+    const worktreePath = join(gitRoot, "_DELIBERATION-ROOM/.meetings", meetingId);
     try { await $`git worktree remove --force ${worktreePath}`.quiet(); } catch {}
     try { await $`git branch -D ${meetingIdToBranchName(meetingId)}`.quiet(); } catch {}
   } catch {}

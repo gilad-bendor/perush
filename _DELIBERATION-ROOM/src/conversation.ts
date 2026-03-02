@@ -82,7 +82,7 @@ export async function createMeetingWorktree(meetingId: MeetingId): Promise<strin
   const branchName = meetingIdToBranchName(meetingId);
   const gitRoot = await getGitRoot();
 
-  // Ensure the meetings directory exists
+  // Ensure the .meetings directory exists
   await mkdir(MEETINGS_DIR, { recursive: true });
 
   // Clean up if worktree already exists (idempotent)
@@ -145,7 +145,7 @@ export async function resumeMeeting(meetingId: MeetingId): Promise<string> {
   const branchName = meetingIdToBranchName(meetingId);
   const gitRoot = await getGitRoot();
 
-  // Ensure the meetings directory exists
+  // Ensure the .meetings directory exists
   await mkdir(MEETINGS_DIR, { recursive: true });
 
   // Clean up if worktree already exists (crash recovery)

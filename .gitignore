@@ -12,6 +12,7 @@
 !.vscode/launch.json
 !.vscode/tasks.json
 *.log
+.logs/
 node_modules/
 /_DELIBERATION-ROOM/meetings/
 /_RTL-EDITOR/node_modules/

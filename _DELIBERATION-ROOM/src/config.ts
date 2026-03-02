@@ -65,7 +65,7 @@ export const ROOT_PROJECT_DIR = resolve(DELIBERATION_DIR, "..");
 export const PARTICIPANT_AGENTS_DIR = join(DELIBERATION_DIR, "participant-agents");
 
 /** Worktree mount point for active meetings (gitignored on main) */
-export const MEETINGS_DIR = join(DELIBERATION_DIR, "meetings");
+export const MEETINGS_DIR = join(DELIBERATION_DIR, ".meetings");
 
 /** Main CLAUDE.md with dictionary and methodology */
 export const ROOT_CLAUDE_MD = join(ROOT_PROJECT_DIR, "CLAUDE.md");

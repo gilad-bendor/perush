@@ -21,14 +21,10 @@ cd /path/to/perush
 USE_STUB_SDK=true bun run _DELIBERATION-ROOM/src/server.ts
 ```
 
-To capture server logs for debugging:
+All server output is automatically written to a **log file** under `.logs/` (see "Log File" in the main `CLAUDE.md`). To watch logs in real time while debugging:
 
 ```bash
-USE_STUB_SDK=true bun run _DELIBERATION-ROOM/src/server.ts > /tmp/delib-server.log 2>&1 &
-# Check logs:
-tail -f /tmp/delib-server.log
-# Stop later:
-kill $(lsof -ti :4100)
+tail -f .logs/*.log
 ```
 
 **Important**: The server must run from the root `perush/` directory, not from `_DELIBERATION-ROOM/`. See "Execution Context" in the main `CLAUDE.md`.
@@ -214,7 +210,13 @@ await page.evaluate((msg) => {
 
 ### Read Server Logs
 
-Server logs use `[messageId]` prefixes from `context.ts`. Key log patterns:
+All server output is automatically written to a log file under `.logs/` (path shown at startup). Each line has the format:
+
+```
+2026-03-02T09:28:38.239Z [LOG] [C10] WS <<< start-meeting
+```
+
+The `[messageId]` prefix from `context.ts` is preserved. Key log patterns:
 
 - `WS <<< <type>` — incoming client message
 - `WS >>> (broadcast) <type> (<msgId>)` — outgoing broadcast
@@ -224,15 +226,20 @@ Server logs use `[messageId]` prefixes from `context.ts`. Key log patterns:
 - `[session-mgr] clearSessions` — sessions wiped (meeting end or recovery)
 
 ```bash
+# Watch live logs while debugging
+tail -f .logs/*.log
+
 # Watch for session issues
-grep '\[session-mgr\]' /tmp/delib-server.log
+grep '\[session-mgr\]' .logs/*.log
 
 # Watch for errors
-grep -i 'error\|failed\|FAILED' /tmp/delib-server.log
+grep '\[ERR\]' .logs/*.log
 
 # Watch WebSocket traffic
-grep 'WS ' /tmp/delib-server.log | head -50
+grep 'WS ' .logs/*.log | head -50
 ```
+
+The log file survives even if the terminal is lost. If the log file is deleted while the server is running, it is recreated automatically on the next log line.
 
 ### Screenshots at Key Moments
 
@@ -249,7 +256,7 @@ Use the `Read` tool to view PNG screenshots — Claude Code can read images.
 
 ### Adding Debug Console.logs to Server Code
 
-When server behavior is unclear, add temporary `console.log` statements to the relevant module (`session-manager.ts`, `orchestrator.ts`, `server.ts`), then restart the server. Bun picks up changes on restart — no build step needed.
+When server behavior is unclear, add temporary `console.log` statements to the relevant module (`session-manager.ts`, `orchestrator.ts`, `server.ts`), then restart the server. Bun picks up changes on restart — no build step needed. All `console.*` output is automatically captured in the log file — use `tail -f .logs/*.log` to watch new lines appear in real time.
 
 Useful places to add logging:
 - `session-manager.ts: createSession` — trace session creation and registry state
