@@ -7,6 +7,8 @@
 // Pretty-print utility (YAML-like, for WS message logging)
 // ---------------------------------------------------------------------------
 
+import {LogCategory, logError} from "./logs.ts";
+
 /**
  * Serializes a value into a compact, human-readable YAML-like string.
  * Mirrors the client-side `prettyLog` in `public/src/utils.js`.
@@ -67,4 +69,8 @@ function _prettyLines(
         return lines;
     }
     return [`${indent}${String(val)}`];
+}
+
+export function wrapDanglingPromise(logCategory: LogCategory, promiseDescription: string, promise: Promise<any>) {
+    promise.catch(error => logError(logCategory, `Throw in promise ${JSON.stringify(promiseDescription)}: ${error}`));
 }

@@ -24,7 +24,7 @@ import {
   DIRECTOR_TIMEOUT_MS,
   ESTIMATED_COST_PER_CYCLE,
 } from "./config";
-import { logDebug, logWarn, logError } from "./logs";
+import { logInfo, logWarn, logError } from "./logs";
 import {
   createMeetingWorktree,
   initializeMeeting,
@@ -153,7 +153,7 @@ export async function startMeeting(
   openingPrompt: string,
   participantIds: AgentId[],
 ): Promise<Meeting> {
-  logDebug("orchestrator", `startMeeting: "${title}" with [${participantIds.join(", ")}]`);
+  logInfo("orchestrator", `startMeeting: "${title}" with [${participantIds.join(", ")}]`);
   if (currentMeeting) {
     throw new Error("A meeting is already active. End it before starting a new one.");
   }
@@ -221,7 +221,7 @@ export async function startMeeting(
   currentMeeting = meeting;
   await initializeMeeting(worktreePath, meeting);
 
-  logDebug("orchestrator", `startMeeting: done → ${meetingId}`);
+  logInfo("orchestrator", `startMeeting: done → ${meetingId}`);
   return meeting;
 }
 
@@ -242,7 +242,7 @@ export async function runCycle(
   }
 
   const cycleNumber = currentMeeting.cycles.length + 1;
-  logDebug("orchestrator", `runCycle ${cycleNumber}: lastSpeaker=${lastSpeaker}`);
+  logInfo("orchestrator", `runCycle ${cycleNumber}: lastSpeaker=${lastSpeaker}`);
 
   // ------ ASSESSMENT PHASE ------
   setPhase("assessing");
@@ -269,7 +269,7 @@ export async function runCycle(
     });
 
   await Promise.all(assessmentPromises);
-  logDebug("orchestrator", `runCycle ${cycleNumber}: ${Object.keys(assessments).length} assessment(s) collected`);
+  logInfo("orchestrator", `runCycle ${cycleNumber}: ${Object.keys(assessments).length} assessment(s) collected`);
 
   // ------ SELECTION PHASE ------
   setPhase("selecting");
@@ -300,14 +300,14 @@ export async function runCycle(
 
   // Apply attention override
   if (attentionRequested) {
-    logDebug("orchestrator", `runCycle ${cycleNumber}: attention override → human`);
+    logInfo("orchestrator", `runCycle ${cycleNumber}: attention override → human`);
     decision = { ...decision, nextSpeaker: "human" };
     attentionRequested = false;
   }
 
   // Resolve speaker name to ID
   const nextSpeakerId = resolveNextSpeaker(decision.nextSpeaker);
-  logDebug("orchestrator", `runCycle ${cycleNumber}: selected → ${nextSpeakerId} (vibe: "${decision.vibe}")`);
+  logInfo("orchestrator", `runCycle ${cycleNumber}: selected → ${nextSpeakerId} (vibe: "${decision.vibe}")`);
   events.onVibe(decision.vibe, nextSpeakerId);
 
   // ------ SPEECH PHASE ------
@@ -384,7 +384,7 @@ export async function runCycle(
     events.onError(`Tagging failed: ${err}`);
   }
 
-  logDebug("orchestrator", `runCycle ${cycleNumber}: done (speaker=${speech.speaker}, cost≈$${currentMeeting.totalCostEstimate?.toFixed(2)})`);
+  logInfo("orchestrator", `runCycle ${cycleNumber}: done (speaker=${speech.speaker}, cost≈$${currentMeeting.totalCostEstimate?.toFixed(2)})`);
   setPhase("idle");
   return cycle;
 }
@@ -397,7 +397,7 @@ export async function endCurrentMeeting(): Promise<void> {
     throw new Error("No active meeting");
   }
 
-  logDebug("orchestrator", `endCurrentMeeting: ${currentMeeting.meetingId} (${currentMeeting.cycles.length} cycles)`);
+  logInfo("orchestrator", `endCurrentMeeting: ${currentMeeting.meetingId} (${currentMeeting.cycles.length} cycles)`);
 
   // Interrupt any active queries
   await interruptAll();
@@ -414,7 +414,7 @@ export async function endCurrentMeeting(): Promise<void> {
   currentWorktreePath = null;
   meetingParticipantDefs = [];
   setPhase("idle");
-  logDebug("orchestrator", `endCurrentMeeting: done`);
+  logInfo("orchestrator", `endCurrentMeeting: done`);
 }
 
 /**
@@ -460,7 +460,7 @@ export async function handleRollback(
   }
 
   const meetingId = currentMeeting.meetingId;
-  logDebug("orchestrator", `handleRollback: meeting ${meetingId}, target cycle ${targetCycleNumber} (current: ${currentMeeting.cycles.length})`);
+  logInfo("orchestrator", `handleRollback: meeting ${meetingId}, target cycle ${targetCycleNumber} (current: ${currentMeeting.cycles.length})`);
 
   // Phase 1: Abort active queries
   setPhase("rolling-back");
@@ -486,7 +486,7 @@ export async function handleRollback(
   }
 
   // Phase 4: Session recovery — recreate all agent sessions from rolled-back transcript
-  logDebug("orchestrator", `handleRollback: recovering sessions for ${currentMeeting.participants.length} participants + manager`);
+  logInfo("orchestrator", `handleRollback: recovering sessions for ${currentMeeting.participants.length} participants + manager`);
   onProgress?.("session-recovery", "משחזר סשנים...");
   clearSessions();
 
@@ -524,7 +524,7 @@ export async function handleRollback(
   await commitWithMessage(currentWorktreePath, commitRollback(targetCycleNumber));
 
   // Phase 6: Send sync with editingCycle (done by the caller — server.ts)
-  logDebug("orchestrator", `handleRollback: done → meeting now has ${currentMeeting.cycles.length} cycles`);
+  logInfo("orchestrator", `handleRollback: done → meeting now has ${currentMeeting.cycles.length} cycles`);
   setPhase("idle");
   events.onSync(currentMeeting, "idle", false, targetCycleNumber);
 }
@@ -536,7 +536,7 @@ export async function handleRollback(
  * resume or recover agent sessions.
  */
 export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> {
-  logDebug("orchestrator", `resumeMeetingById: ${meetingId}`);
+  logInfo("orchestrator", `resumeMeetingById: ${meetingId}`);
   if (currentMeeting) {
     throw new Error("A meeting is already active. End it before resuming another.");
   }
@@ -582,7 +582,7 @@ export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> 
   await writeMeetingAtomic(worktreePath, currentMeeting);
   await commitWithMessage(worktreePath, "Meeting resumed");
 
-  logDebug("orchestrator", `resumeMeetingById: done (${currentMeeting.cycles.length} cycles restored)`);
+  logInfo("orchestrator", `resumeMeetingById: done (${currentMeeting.cycles.length} cycles restored)`);
   setPhase("idle");
   return currentMeeting;
 }
@@ -608,7 +608,7 @@ export function resetOrchestrator(): void {
 // ---------------------------------------------------------------------------
 
 function setPhase(phase: Phase, activeSpeaker?: SpeakerId): void {
-  logDebug("orchestrator", `phase: ${currentPhase} → ${phase}${activeSpeaker ? ` (speaker: ${activeSpeaker})` : ""}`);
+  logInfo("orchestrator", `phase: ${currentPhase} → ${phase}${activeSpeaker ? ` (speaker: ${activeSpeaker})` : ""}`);
   currentPhase = phase;
   events.onPhaseChange(phase, activeSpeaker);
 }

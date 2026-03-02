@@ -10,7 +10,7 @@
 
 import {Options, query as sdkQuery} from "@anthropic-ai/claude-agent-sdk";
 import {SDK_ENV_VARS_TO_STRIP} from "./config";
-import {logDebug, logError, logsConfig, logWarn} from "./logs.ts";
+import {logInfo, logError, logsConfig, logWarn} from "./logs.ts";
 
 // ---------------------------------------------------------------------------
 // Environment cleanup
@@ -133,7 +133,7 @@ export function realQuery(params: {
   const qid = ++queryCounter;
 
   // Log the request
-  logDebug("sdk", `Q${qid} >>> REQUEST`, {
+  logInfo("sdk", `Q${qid} >>> REQUEST`, {
     prompt,
     options: {
       model: sdkOptions.model,
@@ -179,15 +179,15 @@ function wrapWithLogging(inner: SDKQueryResult, qid: number): SDKQueryResult {
         // Log every message with its type/subtype for traceability
         const msgType = msg?.type ?? "unknown";
         const msgSubtype = msg?.subtype ? `.${msg.subtype}` : "";
-        logDebug("sdk", `Q${qid} <<< MSG #${idx} (${msgType}${msgSubtype})`, msg);
+        logInfo("sdk", `Q${qid} <<< MSG #${idx} (${msgType}${msgSubtype})`, msg);
       } else {
-        logDebug("sdk", `Q${qid} <<< DONE (${msgIndex} messages total)`);
+        logInfo("sdk", `Q${qid} <<< DONE (${msgIndex} messages total)`);
       }
       return result;
     },
 
     async return(value?: void) {
-      logDebug("sdk", `Q${qid} <<< RETURN (iterator closed after ${msgIndex} messages)`);
+      logInfo("sdk", `Q${qid} <<< RETURN (iterator closed after ${msgIndex} messages)`);
       return inner.return ? inner.return(value) : { done: true as const, value: undefined };
     },
 

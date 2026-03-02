@@ -29,10 +29,3 @@ export function runWithContext<T>(msg: ClientMessage, fn: () => T): T {
 export function getContext(): ClientMessage | undefined {
   return asyncLocalStorage.getStore();
 }
-
-/** Get the prefix string for the current context: "[C1]" or "[N/A]". */
-export function getContextPrefix(): string {
-  const ctx = getContext();
-  return ctx?.messageId ? `[${ctx.messageId}]` : "[N/A]";
-}
-

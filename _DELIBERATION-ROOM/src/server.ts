@@ -33,8 +33,8 @@ import {
   readEndedMeeting,
 } from "./meetings-db.ts";
 
-import {prettyLog} from "./utils.ts";
-import {logDebug, logError, wrapDanglingPromise} from "./logs.ts";
+import {prettyLog, wrapDanglingPromise} from "./utils.ts";
+import {logInfo, logError} from "./logs.ts";
 
 // ---------------------------------------------------------------------------
 // MIME types for static file serving
@@ -120,7 +120,7 @@ type ServerMessageBody = DistributiveOmit<ServerMessage, "messageId">;
 function broadcast(message: ServerMessageBody): void {
   const messageId = nextServerMessageId();
   const withId = { messageId, ...message };
-  logDebug("server", `WS >>> (broadcast) ${message.type} (${messageId})\n${prettyLog(withId).replace(/^/gm, '    ')}`);
+  logInfo("server", `WS >>> (broadcast) ${message.type} (${messageId})\n${prettyLog(withId).replace(/^/gm, '    ')}`);
   const json = JSON.stringify(withId);
   for (const ws of connectedClients) {
     try {
@@ -135,7 +135,7 @@ function broadcast(message: ServerMessageBody): void {
 function sendTo(ws: ServerWebSocket<unknown>, message: ServerMessageBody): void {
   const messageId = nextServerMessageId();
   const withId = { messageId, ...message };
-  logDebug("server", `WS >-> (sendTo) ${message.type} (${messageId})\n${prettyLog(withId)}`);
+  logInfo("server", `WS >-> (sendTo) ${message.type} (${messageId})\n${prettyLog(withId)}`);
   try {
     ws.send(JSON.stringify(withId));
   } catch {
@@ -196,7 +196,7 @@ let deliberationLoopActive = false;
  * Each cycle takes the last speech and runs: assess → select → speak.
  */
 async function runDeliberationLoop(lastSpeaker: SpeakerId, lastContent: string): Promise<void> {
-  logDebug("server", `deliberation loop starting (lastSpeaker=${lastSpeaker})`);
+  logInfo("server", `deliberation loop starting (lastSpeaker=${lastSpeaker})`);
   deliberationLoopActive = true;
   let speaker: SpeakerId = lastSpeaker;
   let content = lastContent;
@@ -219,12 +219,12 @@ async function runDeliberationLoop(lastSpeaker: SpeakerId, lastContent: string):
     }
   }
 
-  logDebug("server", `deliberation loop ended`);
+  logInfo("server", `deliberation loop ended`);
   deliberationLoopActive = false;
 }
 
 function stopDeliberationLoop(): void {
-  logDebug("server", `deliberation loop stopped`);
+  logInfo("server", `deliberation loop stopped`);
   deliberationLoopActive = false;
 }
 
@@ -252,7 +252,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
   // Run the handler within the context of this client message.
   // All console output (including from async continuations) will be prefixed with its messageId.
   return runWithContext(msg, async () => {
-    logDebug("server", `WS <<< ${msg.type}\n${prettyLog(msg).replace(/^/gm, '    ')}`);
+    logInfo("server", `WS <<< ${msg.type}\n${prettyLog(msg).replace(/^/gm, '    ')}`);
 
     switch (msg.type) {
       case "start-meeting": {
@@ -389,7 +389,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
       }
     }
 
-    logDebug("server", `WS --- ${msg.type} done`);
+    logInfo("server", `WS --- ${msg.type} done`);
   }); // end runWithContext
 }
 
@@ -456,7 +456,7 @@ export async function createServer(port: number = SERVER_PORT): Promise<ReturnTy
     websocket: {
       open(ws) {
         connectedClients.add(ws as any);
-        logDebug("server", `WS client connected (total: ${connectedClients.size})`);
+        logInfo("server", `WS client connected (total: ${connectedClients.size})`);
       },
       message(ws, message) {
         const raw = typeof message === "string" ? message : message.toString();
@@ -464,7 +464,7 @@ export async function createServer(port: number = SERVER_PORT): Promise<ReturnTy
       },
       close(ws) {
         connectedClients.delete(ws as any);
-        logDebug("server", `WS client disconnected (total: ${connectedClients.size})`);
+        logInfo("server", `WS client disconnected (total: ${connectedClients.size})`);
       },
     },
   });
@@ -475,7 +475,7 @@ export async function createServer(port: number = SERVER_PORT): Promise<ReturnTy
 // ---------------------------------------------------------------------------
 
 async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<void> {
-  logDebug("server", `graceful shutdown initiated (${connectedClients.size} client(s), meeting=${getMeeting()?.meetingId ?? "none"})`);
+  logInfo("server", `graceful shutdown initiated (${connectedClients.size} client(s), meeting=${getMeeting()?.meetingId ?? "none"})`);
 
   // Notify clients
   broadcast({ type: "error", message: "Server shutting down" });
@@ -501,7 +501,7 @@ async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<v
   // Stop the server
   server.stop();
 
-  logDebug("server", `shutdown complete`);
+  logInfo("server", `shutdown complete`);
   process.exit(0);
 }
 
@@ -511,7 +511,7 @@ async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<v
 
 if (import.meta.main) {
   const server = await createServer();
-  logDebug("server", `Deliberation Room server running on http://localhost:${server.port}`);
+  logInfo("server", `Deliberation Room server running on http://localhost:${server.port}`);
 
   process.on("SIGINT", () => gracefulShutdown(server));
   process.on("SIGTERM", () => gracefulShutdown(server));
