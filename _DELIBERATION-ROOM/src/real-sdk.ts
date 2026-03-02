@@ -5,11 +5,12 @@
  * making the two interchangeable. The session-manager selects which one
  * to use based on the USE_STUB_SDK config flag.
  *
- * Imports from: config.ts (only)
+ * Imports from: config.ts, context.ts
  */
 
 import {Options, query as sdkQuery} from "@anthropic-ai/claude-agent-sdk";
-import { SDK_ENV_VARS_TO_STRIP } from "./config";
+import { SDK_ENV_VARS_TO_STRIP, logsConfig } from "./config";
+import { prettyLog } from "./context";
 
 // ---------------------------------------------------------------------------
 // Environment cleanup
@@ -24,6 +25,26 @@ import { SDK_ENV_VARS_TO_STRIP } from "./config";
  */
 for (const key of SDK_ENV_VARS_TO_STRIP) {
   delete process.env[key];
+}
+
+// ---------------------------------------------------------------------------
+// SDK Logging
+// ---------------------------------------------------------------------------
+
+const LOG_PREFIX = "[sdk]";
+let queryCounter = 0;
+
+/**
+ * Log an SDK event in YAML format, gated behind logsConfig.sdk.
+ * All SDK log lines share the [sdk] prefix for easy filtering.
+ */
+function sdkLog(label: string, data?: unknown): void {
+  if (!logsConfig.sdk) return;
+  if (data === undefined) {
+    console.log(`${LOG_PREFIX} ${label}`);
+  } else {
+    console.log(`${LOG_PREFIX} ${label}:\n${prettyLog(data).replace(/^/gm, '    ')}`);
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -94,6 +115,7 @@ export interface SDKQueryResult {
  *   - Passes options through to the real SDK (systemPrompt, tools, etc.)
  *   - Always sets bypassPermissions (agents run autonomously)
  *   - Strips SDK_ENV_VARS_TO_STRIP from process.env (done at module load)
+ *   - Logs every SDK call and response when logsConfig.sdk is enabled
  */
 export function realQuery(params: {
   prompt: string;
@@ -125,10 +147,80 @@ export function realQuery(params: {
   sdkOptions.permissionMode = "bypassPermissions";
   sdkOptions.allowDangerouslySkipPermissions = true;
 
+  // Assign a query ID for correlating log lines
+  const qid = ++queryCounter;
+
+  // Log the request
+  sdkLog(`Q${qid} >>> REQUEST`, {
+    prompt,
+    options: {
+      model: sdkOptions.model,
+      resume: sdkOptions.resume,
+      systemPrompt: sdkOptions.systemPrompt
+        ? `(${typeof sdkOptions.systemPrompt === "string" ? sdkOptions.systemPrompt.length : JSON.stringify(sdkOptions.systemPrompt).length} chars)`
+        : undefined,
+      includePartialMessages: sdkOptions.includePartialMessages,
+      maxTurns: sdkOptions.maxTurns,
+      maxBudgetUsd: sdkOptions.maxBudgetUsd,
+      cwd: sdkOptions.cwd,
+      tools: sdkOptions.tools,
+    },
+  });
+
   // Call the real SDK
   const q = sdkQuery({ prompt, options: sdkOptions });
 
-  return q as unknown as SDKQueryResult;
+  // Wrap the iterator to log every yielded message
+  return wrapWithLogging(q as unknown as SDKQueryResult, qid);
+}
+
+/**
+ * Wrap an SDKQueryResult to log every message it yields.
+ * Preserves the interrupt() method and async iterable protocol.
+ */
+function wrapWithLogging(inner: SDKQueryResult, qid: number): SDKQueryResult {
+  if (!logsConfig.sdk) return inner;
+
+  let msgIndex = 0;
+
+  const wrapper: SDKQueryResult = {
+    [Symbol.asyncIterator]() {
+      return wrapper;
+    },
+
+    async next(...args: [] | [undefined]) {
+      const result = await inner.next(...args);
+      if (!result.done) {
+        const msg = result.value;
+        const idx = ++msgIndex;
+
+        // Log every message with its type/subtype for traceability
+        const msgType = msg?.type ?? "unknown";
+        const msgSubtype = msg?.subtype ? `.${msg.subtype}` : "";
+        sdkLog(`Q${qid} <<< MSG #${idx} (${msgType}${msgSubtype})`, msg);
+      } else {
+        sdkLog(`Q${qid} <<< DONE (${msgIndex} messages total)`);
+      }
+      return result;
+    },
+
+    async return(value?: void) {
+      sdkLog(`Q${qid} <<< RETURN (iterator closed after ${msgIndex} messages)`);
+      return inner.return ? inner.return(value) : { done: true as const, value: undefined };
+    },
+
+    async throw(e?: unknown) {
+      sdkLog(`Q${qid} <<< THROW`, { error: String(e) });
+      return inner.throw ? inner.throw(e) : { done: true as const, value: undefined };
+    },
+
+    async interrupt() {
+      sdkLog(`Q${qid} <<< INTERRUPT (after ${msgIndex} messages)`);
+      return inner.interrupt();
+    },
+  };
+
+  return wrapper;
 }
 
 // Re-export for testing

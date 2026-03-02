@@ -14,7 +14,7 @@
 *.log
 .logs/
 node_modules/
-/_DELIBERATION-ROOM/meetings/
+/_DELIBERATION-ROOM/.meetings/
 /_RTL-EDITOR/node_modules/
 /_MCP-SERVER/node_modules
 _scratch*.md
