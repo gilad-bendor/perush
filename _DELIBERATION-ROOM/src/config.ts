@@ -8,17 +8,13 @@
  * Imports only from: types.ts
  */
 
-import { resolve, join } from "path";
-import { homedir } from "os";
-import type { MeetingId, SpeakerId } from "./types";
+import {join, resolve} from "path";
+import {homedir} from "os";
+import type {MeetingId, SpeakerId} from "./types";
 
 // ---------------------------------------------------------------------------
 // Logs
 // ---------------------------------------------------------------------------
-
-export const logsConfig = {
-  sdk: true, // Log every sdk call and response
-} as const;
 
 
 // ---------------------------------------------------------------------------

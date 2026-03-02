@@ -8,7 +8,7 @@
  *   - Creating, feeding, and streaming sessions
  *   - Extracting structured data (assessments, selections) from responses
  *
- * Imports from: types.ts, config.ts, stub-sdk.ts
+ * Imports from: types.ts, config.ts, context.ts, stub-sdk.ts
  */
 
 import { readdir, readFile } from "fs/promises";
@@ -31,12 +31,14 @@ import {
   MAX_TURNS_PER_SPEECH,
   USE_STUB_SDK,
   ROOT_PROJECT_DIR,
+
 } from "./config";
 import {
   stubQuery,
   type StubQuery,
 } from "./stub-sdk";
 import type { SDKQueryResult } from "./real-sdk";
+import {logDebug, logWarn, logError} from "./logs.ts";
 
 // ---------------------------------------------------------------------------
 // Agent Discovery
@@ -53,6 +55,7 @@ let cachedAgents: AgentDefinition[] | null = null;
 export async function discoverAgents(): Promise<AgentDefinition[]> {
   if (cachedAgents) return cachedAgents;
 
+  logDebug("session-manager", `discoverAgents: scanning ${PARTICIPANT_AGENTS_DIR}`);
   const files = await readdir(PARTICIPANT_AGENTS_DIR);
   const agentFiles = files.filter(f => f.endsWith(".md") && !f.startsWith("_"));
 
@@ -85,6 +88,7 @@ export async function discoverAgents(): Promise<AgentDefinition[]> {
   // Sort alphabetically by ID for deterministic ordering
   agents.sort((a, b) => a.id.localeCompare(b.id));
   cachedAgents = agents;
+  logDebug("session-manager", `discoverAgents: found [${agents.map(a => a.id).join(", ")}]`);
   return agents;
 }
 
@@ -288,6 +292,7 @@ export async function buildSystemPrompt(
   agentId: AgentId | "manager",
   meetingParticipants: AgentDefinition[],
 ): Promise<string> {
+  logDebug("session-manager", `buildSystemPrompt: ${agentId}`);
   // Read and inject dictionary into base prefix
   const basePrefix = await readAgentFileBody(BASE_PREFIX_FILE);
   const dictionary = await extractDictionary();
@@ -378,7 +383,7 @@ export async function createSession(
   const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
   const tools = agentId === "manager" ? MANAGER_TOOLS : PARTICIPANT_TOOLS;
 
-  console.log(`[session-mgr] createSession START for ${agentId} (model=${model}, stub=${USE_STUB_SDK})`);
+  logDebug("sessions", `createSession START for ${agentId} (model=${model}, stub=${USE_STUB_SDK})`);
 
   const queryFn = await getQueryFn();
   const query = queryFn({
@@ -408,7 +413,7 @@ export async function createSession(
   if (!sessionId) throw new Error(`Failed to create session for ${agentId}`);
 
   sessionRegistry.set(agentId, sessionId);
-  console.log(`[session-mgr] createSession DONE for ${agentId} (sessionId=${sessionId}), registry=[${[...sessionRegistry.keys()].join(', ')}]`);
+  logDebug("sessions", `createSession DONE for ${agentId} (sessionId=${sessionId}), registry=[${[...sessionRegistry.keys()].join(', ')}]`);
   return { sessionId, responseText };
 }
 
@@ -422,10 +427,11 @@ export async function feedMessage(
 ): Promise<string> {
   const sessionId = sessionRegistry.get(agentId);
   if (!sessionId) {
-    console.error(`[session-mgr] feedMessage FAILED: No session for ${agentId}. Registry=[${[...sessionRegistry.keys()].join(', ')}]`);
+    logError("session-manager", `feedMessage: no session for ${agentId}`, { registry: [...sessionRegistry.keys()] });
     throw new Error(`No session found for ${agentId}`);
   }
 
+  logDebug("session-manager", `feedMessage: ${agentId} (session=${sessionId})`);
   const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
 
   const queryFn = await getQueryFn();
@@ -435,6 +441,7 @@ export async function feedMessage(
       resume: sessionId,
       model,
       maxTurns: 1,
+      cwd: ROOT_PROJECT_DIR,
     },
   });
 
@@ -448,6 +455,7 @@ export async function feedMessage(
   }
 
   activeQueries.delete(agentId);
+  logDebug("session-manager", `feedMessage: ${agentId} done (${responseText.length} chars)`);
   return responseText;
 }
 
@@ -462,6 +470,9 @@ export async function* streamSpeech(
   const sessionId = sessionRegistry.get(agentId);
   if (!sessionId) throw new Error(`No session found for ${agentId}`);
 
+  logDebug("session-manager", `streamSpeech: ${agentId} (session=${sessionId})`);
+
+
   const model = PARTICIPANT_MODEL;
   const tools = PARTICIPANT_TOOLS;
 
@@ -475,6 +486,7 @@ export async function* streamSpeech(
       includePartialMessages: true,
       maxTurns: MAX_TURNS_PER_SPEECH,
       maxBudgetUsd: MAX_BUDGET_PER_SPEECH,
+      cwd: ROOT_PROJECT_DIR,
     },
   });
 
@@ -495,6 +507,7 @@ export async function* streamSpeech(
   }
 
   activeQueries.delete(agentId);
+  logDebug("session-manager", `streamSpeech: ${agentId} done (${fullText.length} chars)`);
   yield { type: "done", fullText };
 }
 
@@ -504,6 +517,7 @@ export async function* streamSpeech(
 export async function interruptSpeech(agentId: AgentId | "manager"): Promise<void> {
   const query = activeQueries.get(agentId);
   if (query) {
+    logDebug("session-manager", `interruptSpeech: ${agentId}`);
     await query.interrupt();
     activeQueries.delete(agentId);
   }
@@ -513,6 +527,9 @@ export async function interruptSpeech(agentId: AgentId | "manager"): Promise<voi
  * Interrupt all active queries (for meeting end, rollback, etc.)
  */
 export async function interruptAll(): Promise<void> {
+  if (activeQueries.size > 0) {
+    logDebug("session-manager", `interruptAll: interrupting ${activeQueries.size} query(ies) [${[...activeQueries.keys()].join(", ")}]`);
+  }
   const promises = [...activeQueries.entries()].map(async ([_id, query]) => {
     await query.interrupt();
   });
@@ -536,7 +553,10 @@ export function extractAssessment(
   try {
     // Try to find JSON in the response (it might be wrapped in text)
     const jsonMatch = responseText.match(/\{[\s\S]*}/);
-    if (!jsonMatch) return null;
+    if (!jsonMatch) {
+      logWarn("session-manager", `extractAssessment: no JSON found for ${agentId}`);
+      return null;
+    }
 
     const parsed = JSON.parse(jsonMatch[0]);
     const result = PrivateAssessmentSchema.safeParse({
@@ -546,8 +566,14 @@ export function extractAssessment(
       summary: parsed.summary,
     });
 
+    if (!result.success) {
+      logWarn("session-manager", `extractAssessment: zod validation failed for ${agentId}`, result.error.issues);
+    } else {
+      logDebug("session-manager", `extractAssessment: ${agentId} → self=${result.data.selfImportance}, human=${result.data.humanImportance}`);
+    }
     return result.success ? result.data : null;
-  } catch {
+  } catch (err) {
+    logWarn("session-manager", `extractAssessment: parse error for ${agentId}`, err);
     return null;
   }
 }
@@ -559,7 +585,10 @@ export function extractAssessment(
 export function extractManagerDecision(responseText: string): ManagerDecision | null {
   try {
     const jsonMatch = responseText.match(/\{[\s\S]*}/);
-    if (!jsonMatch) return null;
+    if (!jsonMatch) {
+      logWarn("session-manager", `extractManagerDecision: no JSON found`);
+      return null;
+    }
 
     const parsed = JSON.parse(jsonMatch[0]);
     const result = ManagerDecisionSchema.safeParse({
@@ -567,8 +596,14 @@ export function extractManagerDecision(responseText: string): ManagerDecision | 
       vibe: parsed.vibe,
     });
 
+    if (!result.success) {
+      logWarn("session-manager", `extractManagerDecision: zod validation failed`, result.error.issues);
+    } else {
+      logDebug("session-manager", `extractManagerDecision: nextSpeaker="${result.data.nextSpeaker}"`);
+    }
     return result.success ? result.data : null;
-  } catch {
+  } catch (err) {
+    logWarn("session-manager", `extractManagerDecision: parse error`, err);
     return null;
   }
 }
@@ -589,7 +624,7 @@ export function getAllSessionIds(): Record<string, string> {
 
 /** Clear all sessions (for testing or meeting end). */
 export function clearSessions(): void {
-  console.log(`[session-mgr] clearSessions (had ${sessionRegistry.size} sessions)`);
+  logDebug("sessions", `clearSessions (had ${sessionRegistry.size} sessions)`);
   sessionRegistry.clear();
   activeQueries.clear();
 }

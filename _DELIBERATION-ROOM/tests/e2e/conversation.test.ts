@@ -1,5 +1,5 @@
 /**
- * conversation.test.ts — E2E tests for the live deliberation UI.
+ * meetings-db.test.ts — E2E tests for the live deliberation UI.
  *
  * Uses Playwright with a mock WebSocket server for deterministic testing.
  * Tests streaming, RTL, phase transitions, agent panel, vibe bar.

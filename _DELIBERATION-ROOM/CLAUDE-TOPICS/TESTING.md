@@ -12,7 +12,7 @@ Test each module in isolation. Use the stub SDK (see below) to avoid API calls i
 
 1. **`types.ts`**: Zod schema validation — valid inputs pass, invalid inputs fail with expected errors. `FormattedTime` create/parse round-trip. Type utilities.
 2. **`config.ts`**: `getClaudeProjectDir()` path derivation for various CWDs. Config value types and defaults.
-3. **`conversation.ts`**: Meeting CRUD via git branches. Atomic file writes. Meeting listing from branches. Reading ended meetings via `git show`. Worktree creation/removal. Cycle truncation for rollback.
+3. **`meetings-db.ts`**: Meeting CRUD via git branches. Atomic file writes. Meeting listing from branches. Reading ended meetings via `git show`. Worktree creation/removal. Cycle truncation for rollback.
 4. **`session-manager.ts`**: Session creation (via stub). Message feeding and assessment extraction. Speech streaming. Session recovery after simulated crash. Move+symlink capture. Template marker resolution (includes, variables, iterators, computed markers). Frontmatter parsing.
 5. **`orchestrator.ts`**: Full cycle with stub SDK — assessment → selection → speech. Attention flag mechanics. Phase transitions. Graceful shutdown. Director timeout handling.
 6. **`server.ts`**: WebSocket message routing. HTTP endpoint responses. Reconnection/sync behavior.

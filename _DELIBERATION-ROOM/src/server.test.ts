@@ -26,7 +26,7 @@ import { resetStubState } from "./stub-sdk";
 import { resetAgentCache } from "./session-manager";
 import { DELIBERATION_DIR } from "./config";
 import {MeetingId, meetingIdToBranchName, MeetingSummary, ServerMessage} from "./types";
-import {generateMeetingId} from "./conversation.ts";
+import {generateMeetingId} from "./meetings-db.ts";
 
 // ---------------------------------------------------------------------------
 // Helpers

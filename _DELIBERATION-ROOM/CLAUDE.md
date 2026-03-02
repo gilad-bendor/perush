@@ -194,7 +194,7 @@ _DELIBERATION-ROOM/
 │   ├── server.ts          ← Bun web server (HTTP + WebSocket), entry point
 │   ├── orchestrator.ts    ← deliberation loop, phase management
 │   ├── session-manager.ts ← Agent SDK sessions, template resolution, agent discovery
-│   ├── conversation.ts    ← git-as-database: worktrees, meeting CRUD
+│   ├── meetings-db.ts    ← git-as-database: worktrees, meeting CRUD
 │   ├── types.ts           ← zod schemas and TypeScript types
 │   ├── config.ts          ← ALL configurable values
 │   ├── stub-sdk.ts        ← Agent SDK stub for testing
@@ -211,7 +211,7 @@ _DELIBERATION-ROOM/
 ├── tests/
 │   └── e2e/
 │       ├── landing-page.test.ts
-│       ├── conversation.test.ts
+│       ├── meetings-db.test.ts
 │       ├── integration.test.ts
 │       └── mock-ws-server.ts
 └── .meetings/              ← worktree mount point (gitignored)
@@ -266,9 +266,9 @@ All `console.log/error/warn/info/debug` output is automatically written to a log
 types.ts          ← no src/ imports (only zod)
 config.ts         ← types.ts
 context.ts        ← types.ts (+ node:fs, node:util)
-conversation.ts   ← types.ts, config.ts
+meetings-db.ts   ← types.ts, config.ts
 stub-sdk.ts       ← types.ts
-session-manager.ts ← types.ts, config.ts, conversation.ts, stub-sdk.ts
+session-manager.ts ← types.ts, config.ts, meetings-db.ts, stub-sdk.ts
 orchestrator.ts   ← all above
 server.ts         ← orchestrator.ts, types.ts, config.ts, context.ts
 ```
@@ -308,7 +308,7 @@ These files contain detailed specifications that are **not needed in every sessi
 
 | File | When to Read |
 |------|-------------|
-| [CLAUDE-TOPICS/GIT-PERSISTENCE.md](CLAUDE-TOPICS/GIT-PERSISTENCE.md) | Working on `conversation.ts`, `session-manager.ts`, or debugging git/worktree/symlink issues |
+| [CLAUDE-TOPICS/GIT-PERSISTENCE.md](CLAUDE-TOPICS/GIT-PERSISTENCE.md) | Working on `meetings-db.ts`, `session-manager.ts`, or debugging git/worktree/symlink issues |
 | [CLAUDE-TOPICS/PROTOCOL.md](CLAUDE-TOPICS/PROTOCOL.md) | Working on WebSocket layer, adding message types, or debugging communication |
 | [CLAUDE-TOPICS/TESTING.md](CLAUDE-TOPICS/TESTING.md) | Writing or debugging tests, using Playwright, CSS selectors for debugging |
 | [CLAUDE-TOPICS/ROLLBACK.md](CLAUDE-TOPICS/ROLLBACK.md) | Working on the rollback feature (6-phase flow, edge cases, UI) |

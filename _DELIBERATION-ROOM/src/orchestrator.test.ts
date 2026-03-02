@@ -27,7 +27,7 @@ import type { OrchestratorEvents } from "./orchestrator";
 import { resetStubState } from "./stub-sdk";
 import { resetAgentCache } from "./session-manager";
 import {PrivateAssessment, Phase, meetingIdToBranchName, MeetingId} from "./types";
-import {generateMeetingId} from "./conversation.ts";
+import {generateMeetingId} from "./meetings-db.ts";
 
 // Unique test meeting IDs to avoid collisions
 function testId(): MeetingId {

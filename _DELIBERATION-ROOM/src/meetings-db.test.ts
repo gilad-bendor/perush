@@ -1,5 +1,5 @@
 /**
- * conversation.test.ts — Tests for the git-as-database conversation store.
+ * meetings-db.test.ts — Tests for the git-as-database conversation store.
  *
  * These tests create temporary git repos to avoid polluting the real repo.
  * Each test gets a fresh, isolated git environment.
@@ -25,12 +25,12 @@ import {
   commitWithMessage,
   detectPerushChanges,
   resetSessionBranchToCycle,
-} from "./conversation";
+} from "./meetings-db.ts";
 import {createFormattedTime, MeetingId, meetingIdToBranchName} from "./types";
 import type { Meeting } from "./types";
 
 // ---------------------------------------------------------------------------
-// We need to override the paths used by conversation.ts for testing.
+// We need to override the paths used by meetings-db.ts for testing.
 // Since the module uses constants from config.ts, we'll test functions
 // that accept paths as parameters directly, and test the ID generation
 // and atomic writes in isolation.

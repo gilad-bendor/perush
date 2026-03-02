@@ -1,5 +1,5 @@
 /**
- * conversation.ts — Git-as-database conversation store.
+ * meetings-db.ts — Git-as-database conversation store.
  *
  * Each meeting lives on its own orphan branch (sessions/<meeting-id>).
  * Active meetings use a git worktree for regular file I/O.
@@ -33,6 +33,7 @@ import {
   commitCycleMessage,
   commitPerushUpdate,
 } from "./config";
+import {logDebug, logWarn, logError} from "./logs.ts";
 
 // ---------------------------------------------------------------------------
 // Meeting ID generation
@@ -78,6 +79,7 @@ async function getGitRoot(): Promise<string> {
  * Returns the worktree path.
  */
 export async function createMeetingWorktree(meetingId: MeetingId): Promise<string> {
+  logDebug("meetings-db", `createMeetingWorktree: ${meetingId}`);
   const worktreePath = join(MEETINGS_DIR, meetingId);
   const branchName = meetingIdToBranchName(meetingId);
   const gitRoot = await getGitRoot();
@@ -88,6 +90,7 @@ export async function createMeetingWorktree(meetingId: MeetingId): Promise<strin
   // Clean up if worktree already exists (idempotent)
   try {
     await stat(worktreePath);
+    logWarn("meetings-db", `createMeetingWorktree: existing worktree found, removing: ${worktreePath}`);
     await $`git -C ${gitRoot} worktree remove --force ${worktreePath}`.quiet();
   } catch {
     // Doesn't exist — good
@@ -96,6 +99,7 @@ export async function createMeetingWorktree(meetingId: MeetingId): Promise<strin
   // Delete the branch if it already exists (idempotent for re-creation)
   try {
     await $`git -C ${gitRoot} branch -D ${branchName}`.quiet();
+    logWarn("meetings-db", `createMeetingWorktree: deleted existing branch: ${branchName}`);
   } catch {
     // Doesn't exist — good
   }
@@ -106,6 +110,7 @@ export async function createMeetingWorktree(meetingId: MeetingId): Promise<strin
   // Step 2: Switch to an orphan branch inside the worktree (empties the index)
   await $`git -C ${worktreePath} switch --orphan ${branchName}`.quiet();
 
+  logDebug("meetings-db", `createMeetingWorktree: done → ${worktreePath} on ${branchName}`);
   return worktreePath;
 }
 
@@ -113,15 +118,18 @@ export async function createMeetingWorktree(meetingId: MeetingId): Promise<strin
  * Write the initial meeting.yaml and make the first commit.
  */
 export async function initializeMeeting(worktreePath: string, meeting: Meeting): Promise<void> {
+  logDebug("meetings-db", `initializeMeeting: ${meeting.meetingId} (${meeting.participants.length} participants)`);
   await writeMeetingAtomic(worktreePath, meeting);
   await $`git -C ${worktreePath} add -A`.quiet();
   await $`git -C ${worktreePath} commit -m ${COMMIT_INITIAL}`.quiet();
+  logDebug("meetings-db", `initializeMeeting: initial commit done`);
 }
 
 /**
  * End a meeting: final commit + remove worktree.
  */
 export async function endMeeting(meetingId: MeetingId, worktreePath: string): Promise<void> {
+  logDebug("meetings-db", `endMeeting: ${meetingId}`);
   const gitRoot = await getGitRoot();
 
   // Final commit (allow empty in case no changes since last cycle)
@@ -134,6 +142,7 @@ export async function endMeeting(meetingId: MeetingId, worktreePath: string): Pr
 
   // Remove the worktree (the branch persists)
   await $`git -C ${gitRoot} worktree remove ${worktreePath}`.quiet();
+  logDebug("meetings-db", `endMeeting: done, worktree removed`);
 }
 
 /**
@@ -141,6 +150,7 @@ export async function endMeeting(meetingId: MeetingId, worktreePath: string): Pr
  * Returns the worktree path.
  */
 export async function resumeMeeting(meetingId: MeetingId): Promise<string> {
+  logDebug("meetings-db", `resumeMeeting: ${meetingId}`);
   const worktreePath = join(MEETINGS_DIR, meetingId);
   const branchName = meetingIdToBranchName(meetingId);
   const gitRoot = await getGitRoot();
@@ -151,6 +161,7 @@ export async function resumeMeeting(meetingId: MeetingId): Promise<string> {
   // Clean up if worktree already exists (crash recovery)
   try {
     await stat(worktreePath);
+    logWarn("meetings-db", `resumeMeeting: stale worktree found, removing: ${worktreePath}`);
     await $`git -C ${gitRoot} worktree remove --force ${worktreePath}`.quiet();
   } catch {
     // Doesn't exist — good
@@ -159,6 +170,7 @@ export async function resumeMeeting(meetingId: MeetingId): Promise<string> {
   // Re-attach worktree to the existing branch
   await $`git -C ${gitRoot} worktree add ${worktreePath} ${branchName}`.quiet();
 
+  logDebug("meetings-db", `resumeMeeting: done → ${worktreePath}`);
   return worktreePath;
 }
 
@@ -190,6 +202,7 @@ export async function readActiveMeeting(worktreePath: string): Promise<Meeting> 
  * Read meeting.yaml from an ended meeting via `git show`.
  */
 export async function readEndedMeeting(meetingId: MeetingId): Promise<Meeting> {
+  logDebug("meetings-db", `readEndedMeeting: ${meetingId}`);
   const branchName = meetingIdToBranchName(meetingId);
   const gitRoot = await getGitRoot();
   const result = await $`git -C ${gitRoot} show ${branchName}:meeting.yaml`.quiet();
@@ -208,12 +221,13 @@ export async function commitCycle(
   cycleNumber: number,
   speaker: SpeakerId,
 ): Promise<void> {
+  logDebug("meetings-db", `commitCycle: cycle ${cycleNumber}, speaker: ${speaker}`);
   await $`git -C ${worktreePath} add -A`.quiet();
   const message = commitCycleMessage(cycleNumber, speaker);
   try {
     await $`git -C ${worktreePath} commit -m ${message}`.quiet();
   } catch {
-    // Nothing to commit — that's fine (idempotent)
+    logDebug("meetings-db", `commitCycle: nothing to commit (cycle ${cycleNumber})`);
   }
 }
 
@@ -238,6 +252,7 @@ export async function isMeetingActive(meetingId: MeetingId): Promise<boolean> {
  * Returns summaries sorted by most recent activity first.
  */
 export async function listMeetings(): Promise<MeetingSummary[]> {
+  logDebug("meetings-db", `listMeetings`);
   const gitRoot = await getGitRoot();
 
   // Use Bun.spawn because Bun's shell template interprets %(…) as syntax
@@ -286,6 +301,7 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
     });
   }
 
+  logDebug("meetings-db", `listMeetings: found ${summaries.length} meeting(s)`);
   return summaries;
 }
 
@@ -297,6 +313,7 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
  * Remove dangling worktrees from previous crashes.
  */
 export async function cleanupDanglingWorktrees(): Promise<void> {
+  logDebug("meetings-db", `cleanupDanglingWorktrees`);
   const gitRoot = await getGitRoot();
   await $`git -C ${gitRoot} worktree prune`.quiet();
 }
@@ -309,11 +326,12 @@ export async function cleanupDanglingWorktrees(): Promise<void> {
  * Commit with a custom message (for rollback, recovery, shutdown, etc.)
  */
 export async function commitWithMessage(worktreePath: string, message: string): Promise<void> {
+  logDebug("meetings-db", `commitWithMessage: "${message}"`);
   await $`git -C ${worktreePath} add -A`.quiet();
   try {
     await $`git -C ${worktreePath} commit -m ${message} --allow-empty`.quiet();
   } catch {
-    // Nothing to commit
+    logDebug("meetings-db", `commitWithMessage: nothing to commit`);
   }
 }
 
@@ -330,8 +348,10 @@ export async function findCycleCommit(
   try {
     const result = await $`git -C ${worktreePath} log --all --format=%H --grep=${message} -1`.quiet();
     const hash = result.stdout.toString().trim();
+    logDebug("meetings-db", `findCycleCommit: cycle ${cycleNumber} → ${hash || "not found"}`);
     return hash || null;
   } catch {
+    logWarn("meetings-db", `findCycleCommit: git log failed for cycle ${cycleNumber}`);
     return null;
   }
 }
@@ -349,9 +369,13 @@ export async function detectPerushChanges(): Promise<string[]> {
   try {
     const result = await $`git -C ${gitRoot} diff --name-only`.quiet();
     const lines = result.stdout.toString().trim().split("\n").filter(Boolean);
-    return lines.filter(
+    const changed = lines.filter(
       f => f.startsWith("פירוש/") || f.startsWith("ניתוחים-לשוניים/"),
     );
+    if (changed.length > 0) {
+      logDebug("meetings-db", `detectPerushChanges: ${changed.length} file(s) changed`, changed);
+    }
+    return changed;
   } catch {
     return [];
   }
@@ -365,14 +389,18 @@ export async function commitPerushChangesOnMain(
   cycleNumber: number,
   meetingId: MeetingId,
 ): Promise<string | null> {
+  logDebug("meetings-db", `commitPerushChangesOnMain: cycle ${cycleNumber}, meeting ${meetingId}`);
   const gitRoot = await getGitRoot();
   const message = commitPerushUpdate(cycleNumber, meetingId);
 
   try {
     await $`git -C ${gitRoot} add פירוש/ ניתוחים-לשוניים/`.quiet();
     await $`git -C ${gitRoot} commit -m ${message}`.quiet();
-    return (await $`git -C ${gitRoot} rev-parse HEAD`.quiet()).stdout.toString().trim();
+    const hash = (await $`git -C ${gitRoot} rev-parse HEAD`.quiet()).stdout.toString().trim();
+    logDebug("meetings-db", `commitPerushChangesOnMain: committed ${hash.slice(0, 8)}`);
+    return hash;
   } catch {
+    logWarn("meetings-db", `commitPerushChangesOnMain: nothing to commit`);
     return null;
   }
 }
@@ -401,7 +429,7 @@ export async function createCorrelatedTags(
 
     return true;
   } catch (err) {
-    console.error(`Failed to create correlated tags: ${err}`);
+    logError("meetings-db", `Failed to create correlated tags: ${err}`);
     return false;
   }
 }
@@ -416,7 +444,7 @@ export function asyncPush(meetingId: MeetingId, cycleNumber: number): void {
       const gitRoot = await getGitRoot();
       await $`git -C ${gitRoot} push origin ${cycleTagMain(meetingId, cycleNumber)} ${cycleTagSession(meetingId, cycleNumber)} main ${meetingIdToBranchName(meetingId)}`.quiet();
     } catch (err) {
-      console.error(`Async push failed for meeting-id ${meetingId}: ${err}`);
+      logError("meetings-db", `Async push failed for meeting-id ${meetingId}: ${err}`);
     }
   })();
 }
@@ -434,6 +462,8 @@ export async function tagPerushChangesIfNeeded(
   const changedFiles = await detectPerushChanges();
   if (changedFiles.length === 0) return false;
 
+  logDebug("meetings-db", `tagPerushChangesIfNeeded: cycle ${cycleNumber} — committing + tagging`);
+
   const commitHash = await commitPerushChangesOnMain(cycleNumber, meetingId);
   if (!commitHash) return false;
 
@@ -443,6 +473,7 @@ export async function tagPerushChangesIfNeeded(
   // Fire-and-forget push
   asyncPush(meetingId, cycleNumber);
 
+  logDebug("meetings-db", `tagPerushChangesIfNeeded: done, push initiated`);
   return true;
 }
 
@@ -458,12 +489,14 @@ export async function resetSessionBranchToCycle(
   worktreePath: string,
   targetCycleNumber: number,
 ): Promise<void> {
+  logDebug("meetings-db", `resetSessionBranchToCycle: target cycle ${targetCycleNumber}`);
   if (targetCycleNumber === 0) {
     // Roll back to the initial commit
     const hash = (
       await $`git -C ${worktreePath} log --format=%H --reverse`.quiet()
     ).stdout.toString().trim().split("\n")[0];
     if (hash) {
+      logDebug("meetings-db", `resetSessionBranchToCycle: resetting to initial commit ${hash.slice(0, 8)}`);
       await $`git -C ${worktreePath} reset --hard ${hash}`.quiet();
     }
   } else {
@@ -474,6 +507,7 @@ export async function resetSessionBranchToCycle(
     const result = await $`git -C ${worktreePath} log --format=%H --grep=${grepPattern} -1`.quiet();
     const hash = result.stdout.toString().trim();
     if (!hash) throw new Error(`No commit found for cycle ${targetCycleNumber}`);
+    logDebug("meetings-db", `resetSessionBranchToCycle: resetting to ${hash.slice(0, 8)}`);
     await $`git -C ${worktreePath} reset --hard ${hash}`.quiet();
   }
 }
@@ -556,17 +590,22 @@ export async function rollbackPerushOnMain(
   meetingId: MeetingId,
   targetCycleNumber: number,
 ): Promise<{ stashed: boolean; rolledBack: boolean }> {
+  logDebug("meetings-db", `rollbackPerushOnMain: meeting ${meetingId}, target cycle ${targetCycleNumber}`);
   const gitRoot = await getGitRoot();
   const tagsAfter = await findTagsAfterCycle(meetingId, targetCycleNumber);
 
   if (tagsAfter.length === 0) {
+    logDebug("meetings-db", `rollbackPerushOnMain: no tags after cycle ${targetCycleNumber}, nothing to roll back`);
     return { stashed: false, rolledBack: false };
   }
+
+  logDebug("meetings-db", `rollbackPerushOnMain: ${tagsAfter.length} tag(s) to roll back`, tagsAfter.map(t => t.tagName));
 
   // Stash uncommitted perush changes if any
   let stashed = false;
   const uncommitted = await detectPerushChanges();
   if (uncommitted.length > 0) {
+    logDebug("meetings-db", `rollbackPerushOnMain: stashing ${uncommitted.length} uncommitted file(s)`);
     try {
       await $`git -C ${gitRoot} stash push -m "Pre-rollback stash" -- פירוש/ ניתוחים-לשוניים/`.quiet();
       stashed = true;
@@ -578,6 +617,7 @@ export async function rollbackPerushOnMain(
   // - The parent of the earliest post-target tag (state before any meeting perush changes)
   const goodTag = await findLatestTagAtOrBefore(meetingId, targetCycleNumber);
   const restoreRef = goodTag ?? `${tagsAfter[0].tagName}~1`;
+  logDebug("meetings-db", `rollbackPerushOnMain: restoring from ref ${restoreRef}`);
 
   try {
     // Restore perush files to the target state (each dir separately for robustness)
@@ -600,8 +640,10 @@ export async function rollbackPerushOnMain(
       try { await $`git -C ${gitRoot} tag -d ${sessionTag}`.quiet(); } catch {}
     }
 
+    logDebug("meetings-db", `rollbackPerushOnMain: done (stashed=${stashed})`);
     return { stashed, rolledBack: true };
-  } catch {
+  } catch (err) {
+    logError("meetings-db", `rollbackPerushOnMain: failed`, err);
     return { stashed, rolledBack: false };
   }
 }

@@ -9,7 +9,7 @@
     "build:css": "bunx tailwindcss -i public/input.css -o public/style.css --minify",
     "test": "bun test",
     "test:smoke": "REAL_SDK_TEST=true bun test tests/real-sdk-smoke.test.ts",
-    "test:e2e": "bun run tests/e2e/landing-page.test.ts && bun run tests/e2e/conversation.test.ts"
+    "test:e2e": "bun run tests/e2e/landing-page.test.ts && bun run tests/e2e/meetings-db.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/claude-agent-sdk": "^0.2.0",

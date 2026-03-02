@@ -9,8 +9,8 @@
  */
 
 import {Options, query as sdkQuery} from "@anthropic-ai/claude-agent-sdk";
-import { SDK_ENV_VARS_TO_STRIP, logsConfig } from "./config";
-import { prettyLog } from "./context";
+import {SDK_ENV_VARS_TO_STRIP} from "./config";
+import {logDebug, logError, logsConfig, logWarn} from "./logs.ts";
 
 // ---------------------------------------------------------------------------
 // Environment cleanup
@@ -27,25 +27,7 @@ for (const key of SDK_ENV_VARS_TO_STRIP) {
   delete process.env[key];
 }
 
-// ---------------------------------------------------------------------------
-// SDK Logging
-// ---------------------------------------------------------------------------
-
-const LOG_PREFIX = "[sdk]";
 let queryCounter = 0;
-
-/**
- * Log an SDK event in YAML format, gated behind logsConfig.sdk.
- * All SDK log lines share the [sdk] prefix for easy filtering.
- */
-function sdkLog(label: string, data?: unknown): void {
-  if (!logsConfig.sdk) return;
-  if (data === undefined) {
-    console.log(`${LOG_PREFIX} ${label}`);
-  } else {
-    console.log(`${LOG_PREFIX} ${label}:\n${prettyLog(data).replace(/^/gm, '    ')}`);
-  }
-}
 
 // ---------------------------------------------------------------------------
 // Stub-response block stripping
@@ -151,7 +133,7 @@ export function realQuery(params: {
   const qid = ++queryCounter;
 
   // Log the request
-  sdkLog(`Q${qid} >>> REQUEST`, {
+  logDebug("sdk", `Q${qid} >>> REQUEST`, {
     prompt,
     options: {
       model: sdkOptions.model,
@@ -197,25 +179,25 @@ function wrapWithLogging(inner: SDKQueryResult, qid: number): SDKQueryResult {
         // Log every message with its type/subtype for traceability
         const msgType = msg?.type ?? "unknown";
         const msgSubtype = msg?.subtype ? `.${msg.subtype}` : "";
-        sdkLog(`Q${qid} <<< MSG #${idx} (${msgType}${msgSubtype})`, msg);
+        logDebug("sdk", `Q${qid} <<< MSG #${idx} (${msgType}${msgSubtype})`, msg);
       } else {
-        sdkLog(`Q${qid} <<< DONE (${msgIndex} messages total)`);
+        logDebug("sdk", `Q${qid} <<< DONE (${msgIndex} messages total)`);
       }
       return result;
     },
 
     async return(value?: void) {
-      sdkLog(`Q${qid} <<< RETURN (iterator closed after ${msgIndex} messages)`);
+      logDebug("sdk", `Q${qid} <<< RETURN (iterator closed after ${msgIndex} messages)`);
       return inner.return ? inner.return(value) : { done: true as const, value: undefined };
     },
 
     async throw(e?: unknown) {
-      sdkLog(`Q${qid} <<< THROW`, { error: String(e) });
+      logError("sdk", `Q${qid} <<< THROW`, { error: String(e) });
       return inner.throw ? inner.throw(e) : { done: true as const, value: undefined };
     },
 
     async interrupt() {
-      sdkLog(`Q${qid} <<< INTERRUPT (after ${msgIndex} messages)`);
+      logWarn("sdk", `Q${qid} <<< INTERRUPT (after ${msgIndex} messages)`);
       return inner.interrupt();
     },
   };

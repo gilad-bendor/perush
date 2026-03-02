@@ -8,7 +8,7 @@
  */
 
 // Import context FIRST — hijacks console.log/error/etc with [messageId] prefix.
-import { runWithContext, prettyLog } from "./context";
+import { runWithContext } from "./context";
 
 import { join, extname } from "path";
 import { readFile, stat } from "fs/promises";
@@ -33,7 +33,10 @@ import {
 import {
   listMeetings,
   readEndedMeeting,
-} from "./conversation";
+} from "./meetings-db.ts";
+
+import {prettyLog} from "./utils.ts";
+import {logDebug, logError} from "./logs.ts";
 
 // ---------------------------------------------------------------------------
 // MIME types for static file serving
@@ -195,6 +198,7 @@ let deliberationLoopActive = false;
  * Each cycle takes the last speech and runs: assess → select → speak.
  */
 async function runDeliberationLoop(lastSpeaker: SpeakerId, lastContent: string): Promise<void> {
+  logDebug("server", `deliberation loop starting (lastSpeaker=${lastSpeaker})`);
   deliberationLoopActive = true;
   let speaker: SpeakerId = lastSpeaker;
   let content = lastContent;
@@ -217,10 +221,12 @@ async function runDeliberationLoop(lastSpeaker: SpeakerId, lastContent: string):
     }
   }
 
+  logDebug("server", `deliberation loop ended`);
   deliberationLoopActive = false;
 }
 
 function stopDeliberationLoop(): void {
+  logDebug("server", `deliberation loop stopped`);
   deliberationLoopActive = false;
 }
 
@@ -440,7 +446,7 @@ export async function createServer(port: number = SERVER_PORT): Promise<ReturnTy
     websocket: {
       open(ws) {
         connectedClients.add(ws as any);
-        // No auto-sync: the client sends join-meeting based on its URL.
+        logDebug("server", `WS client connected (total: ${connectedClients.size})`);
       },
       message(ws, message) {
         const raw = typeof message === "string" ? message : message.toString();
@@ -448,6 +454,7 @@ export async function createServer(port: number = SERVER_PORT): Promise<ReturnTy
       },
       close(ws) {
         connectedClients.delete(ws as any);
+        logDebug("server", `WS client disconnected (total: ${connectedClients.size})`);
       },
     },
   });
@@ -458,7 +465,7 @@ export async function createServer(port: number = SERVER_PORT): Promise<ReturnTy
 // ---------------------------------------------------------------------------
 
 async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<void> {
-  console.log("\nShutting down gracefully...");
+  logDebug("server", `graceful shutdown initiated (${connectedClients.size} client(s), meeting=${getMeeting()?.meetingId ?? "none"})`);
 
   // Notify clients
   broadcast({ type: "error", message: "Server shutting down" });
@@ -471,7 +478,7 @@ async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<v
     try {
       await endCurrentMeeting();
     } catch (err) {
-      console.error("Error ending meeting during shutdown:", err);
+      logError("server", "Error ending meeting during shutdown", err);
     }
   }
 
@@ -484,7 +491,7 @@ async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<v
   // Stop the server
   server.stop();
 
-  console.log("Shutdown complete.");
+  logDebug("server", `shutdown complete`);
   process.exit(0);
 }
 

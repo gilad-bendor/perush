@@ -1,6 +1,6 @@
 # Git Persistence & Session Lifecycle
 
-> **Spin-out from `CLAUDE.md`.** Read when working on `conversation.ts`, `session-manager.ts`, or debugging git-related issues.
+> **Spin-out from `CLAUDE.md`.** Read when working on `meetings-db.ts`, `session-manager.ts`, or debugging git-related issues.
 
 ## Session File Persistence (Git Worktrees + Move+Symlink)
 
