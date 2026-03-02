@@ -53,6 +53,9 @@ export function logError(logCategory: LogCategory, label: string, data?: unknown
     }
 }
 
+export function wrapDanglingPromise(logCategory: LogCategory, promiseDescription: string, promise: Promise<any>) {
+    promise.catch(error => logError(logCategory, `Throw in promise ${JSON.stringify(promiseDescription)}: ${error}`));
+}
 
 
 

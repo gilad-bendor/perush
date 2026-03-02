@@ -7,9 +7,7 @@
  * Imports from: orchestrator.ts, types.ts, config.ts, context.ts
  */
 
-// Import context FIRST — hijacks console.log/error/etc with [messageId] prefix.
 import { runWithContext } from "./context";
-
 import { join, extname } from "path";
 import { readFile, stat } from "fs/promises";
 import { SERVER_PORT, DELIBERATION_DIR } from "./config";
@@ -36,7 +34,7 @@ import {
 } from "./meetings-db.ts";
 
 import {prettyLog} from "./utils.ts";
-import {logDebug, logError} from "./logs.ts";
+import {logDebug, logError, wrapDanglingPromise} from "./logs.ts";
 
 // ---------------------------------------------------------------------------
 // MIME types for static file serving
@@ -122,7 +120,7 @@ type ServerMessageBody = DistributiveOmit<ServerMessage, "messageId">;
 function broadcast(message: ServerMessageBody): void {
   const messageId = nextServerMessageId();
   const withId = { messageId, ...message };
-  console.log(`WS >>> (broadcast) ${message.type} (${messageId})\n${prettyLog(withId).replace(/^/gm, '    ')}`);
+  logDebug("server", `WS >>> (broadcast) ${message.type} (${messageId})\n${prettyLog(withId).replace(/^/gm, '    ')}`);
   const json = JSON.stringify(withId);
   for (const ws of connectedClients) {
     try {
@@ -137,7 +135,7 @@ function broadcast(message: ServerMessageBody): void {
 function sendTo(ws: ServerWebSocket<unknown>, message: ServerMessageBody): void {
   const messageId = nextServerMessageId();
   const withId = { messageId, ...message };
-  console.log(`WS >-> (sendTo) ${message.type} (${messageId})\n${prettyLog(withId)}`);
+  logDebug("server", `WS >-> (sendTo) ${message.type} (${messageId})\n${prettyLog(withId)}`);
   try {
     ws.send(JSON.stringify(withId));
   } catch {
@@ -254,74 +252,61 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
   // Run the handler within the context of this client message.
   // All console output (including from async continuations) will be prefixed with its messageId.
   return runWithContext(msg, async () => {
-  console.log(`WS <<< ${msg.type}\n${prettyLog(msg).replace(/^/gm, '    ')}`);
+    logDebug("server", `WS <<< ${msg.type}\n${prettyLog(msg).replace(/^/gm, '    ')}`);
 
-  switch (msg.type) {
-    case "start-meeting": {
-      try {
-        const meeting = await startMeeting(msg.title, msg.openingPrompt, msg.participants);
-        broadcast({
-          type: "sync",
-          meeting,
-          currentPhase: getPhase(),
-        });
-        // Start the deliberation loop with the opening prompt
-        runDeliberationLoop("human", msg.openingPrompt).catch(console.error);
-      } catch (err: any) {
-        sendTo(ws, { type: "error", message: err?.message || "Failed to start meeting" });
-      }
-      break;
-    }
-
-    case "resume-meeting": {
-      try {
-        const meeting = await resumeMeetingById(msg.meetingId);
-        broadcast({
-          type: "sync",
-          meeting,
-          currentPhase: getPhase(),
-        });
-        // Resume the deliberation loop from the last speech
-        const lastCycle = meeting.cycles[meeting.cycles.length - 1];
-        if (lastCycle) {
-          runDeliberationLoop(lastCycle.speech.speaker, lastCycle.speech.content).catch(console.error);
-        } else {
-          // No cycles yet — resume from opening prompt
-          runDeliberationLoop("human", meeting.openingPrompt).catch(console.error);
-        }
-      } catch (err: any) {
-        sendTo(ws, { type: "error", message: err?.message || "Failed to resume meeting" });
-      }
-      break;
-    }
-
-    case "view-meeting": {
-      try {
-        const meetingData = await readEndedMeeting(msg.meetingId);
-        sendTo(ws, {
-          type: "sync",
-          meeting: meetingData,
-          currentPhase: "idle",
-          readOnly: true,
-        });
-      } catch (err: any) {
-        sendTo(ws, { type: "error", message: `Failed to load meeting: ${err?.message}` });
-      }
-      break;
-    }
-
-    case "join-meeting": {
-      try {
-        // If this meeting is currently active, send live state (lightweight)
-        const activeMeeting = getMeeting();
-        if (activeMeeting && activeMeeting.meetingId === msg.meetingId) {
-          sendTo(ws, {
+    switch (msg.type) {
+      case "start-meeting": {
+        try {
+          const meeting = await startMeeting(msg.title, msg.openingPrompt, msg.participants);
+          broadcast({
             type: "sync",
-            meeting: activeMeeting,
+            meeting,
             currentPhase: getPhase(),
           });
-        } else {
-          // Not active — view-only from git
+          // Start the deliberation loop with the opening prompt
+          wrapDanglingPromise(
+              "server",
+              "Start deliberation after human's meeting-opening prompt",
+              runDeliberationLoop("human", msg.openingPrompt),
+          );
+        } catch (err: any) {
+          sendTo(ws, { type: "error", message: err?.message || "Failed to start meeting" });
+        }
+        break;
+      }
+
+      case "resume-meeting": {
+        try {
+          const meeting = await resumeMeetingById(msg.meetingId);
+          broadcast({
+            type: "sync",
+            meeting,
+            currentPhase: getPhase(),
+          });
+          // Resume the deliberation loop from the last speech
+          const lastCycle = meeting.cycles[meeting.cycles.length - 1];
+          if (lastCycle) {
+            wrapDanglingPromise(
+                "server",
+                `Start deliberation after ${lastCycle.speech.speaker}'s prompt`,
+                runDeliberationLoop(lastCycle.speech.speaker, lastCycle.speech.content),
+            );
+          } else {
+            // No cycles yet — resume from opening prompt
+            wrapDanglingPromise(
+                "server",
+                `Start deliberation after human's prompt`,
+                runDeliberationLoop("human", meeting.openingPrompt),
+            );
+          }
+        } catch (err: any) {
+          sendTo(ws, { type: "error", message: err?.message || "Failed to resume meeting" });
+        }
+        break;
+      }
+
+      case "view-meeting": {
+        try {
           const meetingData = await readEndedMeeting(msg.meetingId);
           sendTo(ws, {
             type: "sync",
@@ -329,57 +314,82 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
             currentPhase: "idle",
             readOnly: true,
           });
+        } catch (err: any) {
+          sendTo(ws, { type: "error", message: `Failed to load meeting: ${err?.message}` });
         }
-      } catch (err: any) {
-        sendTo(ws, { type: "error", message: `Failed to join meeting: ${err?.message}` });
+        break;
       }
-      break;
-    }
 
-    case "human-speech": {
-      handleHumanSpeech(msg.content);
-      break;
-    }
+      case "join-meeting": {
+        try {
+          // If this meeting is currently active, send live state (lightweight)
+          const activeMeeting = getMeeting();
+          if (activeMeeting && activeMeeting.meetingId === msg.meetingId) {
+            sendTo(ws, {
+              type: "sync",
+              meeting: activeMeeting,
+              currentPhase: getPhase(),
+            });
+          } else {
+            // Not active — view-only from git
+            const meetingData = await readEndedMeeting(msg.meetingId);
+            sendTo(ws, {
+              type: "sync",
+              meeting: meetingData,
+              currentPhase: "idle",
+              readOnly: true,
+            });
+          }
+        } catch (err: any) {
+          sendTo(ws, { type: "error", message: `Failed to join meeting: ${err?.message}` });
+        }
+        break;
+      }
 
-    case "command": {
-      if (msg.command === "/end") {
+      case "human-speech": {
+        handleHumanSpeech(msg.content);
+        break;
+      }
+
+      case "command": {
+        if (msg.command === "/end") {
+          try {
+            stopDeliberationLoop();
+            await endCurrentMeeting();
+            broadcast({ type: "phase", phase: "idle" });
+          } catch (err: any) {
+            sendTo(ws, { type: "error", message: err?.message || "Failed to end meeting" });
+          }
+        }
+        break;
+      }
+
+      case "attention": {
+        handleAttention();
+        sendTo(ws, { type: "attention-ack" });
+        break;
+      }
+
+      case "rollback": {
         try {
           stopDeliberationLoop();
-          await endCurrentMeeting();
-          broadcast({ type: "phase", phase: "idle" });
-        } catch (err: any) {
-          sendTo(ws, { type: "error", message: err?.message || "Failed to end meeting" });
-        }
-      }
-      break;
-    }
-
-    case "attention": {
-      handleAttention();
-      sendTo(ws, { type: "attention-ack" });
-      break;
-    }
-
-    case "rollback": {
-      try {
-        stopDeliberationLoop();
-        await handleRollback(msg.targetCycleNumber, (step, detail) => {
-          broadcast({
-            type: "rollback-progress",
-            step: step as any,
-            detail,
+          await handleRollback(msg.targetCycleNumber, (step, detail) => {
+            broadcast({
+              type: "rollback-progress",
+              step: step as any,
+              detail,
+            });
           });
-        });
-        // After rollback completes, the orchestrator sends sync with editingCycle.
-        // The deliberation loop will restart when the Director submits their edited message.
-      } catch (err: any) {
-        sendTo(ws, { type: "error", message: err?.message || "Rollback failed" });
+          // After rollback completes, the orchestrator sends sync with editingCycle.
+          // The deliberation loop will restart when the Director submits their edited message.
+        } catch (err: any) {
+          sendTo(ws, { type: "error", message: err?.message || "Rollback failed" });
+        }
+        break;
       }
-      break;
     }
-  }
 
-  console.log(`WS --- ${msg.type} done`);
+    logDebug("server", `WS --- ${msg.type} done`);
   }); // end runWithContext
 }
 
@@ -501,7 +511,7 @@ async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<v
 
 if (import.meta.main) {
   const server = await createServer();
-  console.log(`Deliberation Room server running on http://localhost:${server.port}`);
+  logDebug("server", `Deliberation Room server running on http://localhost:${server.port}`);
 
   process.on("SIGINT", () => gracefulShutdown(server));
   process.on("SIGTERM", () => gracefulShutdown(server));
