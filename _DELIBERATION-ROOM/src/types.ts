@@ -471,6 +471,16 @@ export type WsRollbackProgress = {
 };
 assertZodTypeMatch<WsRollbackProgress, typeof WsRollbackProgressSchema>(true);
 
+export const WsMeetingEndedSchema = z.object({
+  type: z.literal("meeting-ended"),
+  messageId: MessageIdSchema,
+});
+export type WsMeetingEnded = {
+  type: "meeting-ended";
+  messageId: MessageId;
+};
+assertZodTypeMatch<WsMeetingEnded, typeof WsMeetingEndedSchema>(true);
+
 /** Discriminated union of all server→client messages */
 export const ServerMessageSchema = z.discriminatedUnion("type", [
   WsSpeechSchema,
@@ -485,6 +495,7 @@ export const ServerMessageSchema = z.discriminatedUnion("type", [
   WsErrorSchema,
   WsAttentionAckSchema,
   WsRollbackProgressSchema,
+  WsMeetingEndedSchema,
 ]);
 export type ServerMessage =
   | WsSpeech
@@ -498,7 +509,8 @@ export type ServerMessage =
   | WsSync
   | WsError
   | WsAttentionAck
-  | WsRollbackProgress;
+  | WsRollbackProgress
+  | WsMeetingEnded;
 assertZodTypeMatch<ServerMessage, typeof ServerMessageSchema>(true);
 
 // ---------------------------------------------------------------------------

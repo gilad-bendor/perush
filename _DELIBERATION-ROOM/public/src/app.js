@@ -288,6 +288,9 @@ function handleServerMessage(msg) {
     case "rollback-progress":
       handleRollbackProgress(msg);
       break;
+    case "meeting-ended":
+      handleMeetingEnded();
+      break;
   }
 }
 
@@ -358,6 +361,16 @@ function handleAttentionAck() {
   // Pulse animation
   $attentionBtn.classList.add("animate-pulse");
   setTimeout(() => $attentionBtn.classList.remove("animate-pulse"), 600);
+}
+
+/** Handles meeting-ended: resets state and navigates to landing. */
+function handleMeetingEnded() {
+  currentMeeting = null;
+  readOnly = false;
+  editingCycle = null;
+  conversationView = null;
+  agentPanel = null;
+  navigateTo("/");
 }
 
 /**

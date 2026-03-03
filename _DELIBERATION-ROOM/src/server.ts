@@ -23,6 +23,7 @@ import {
   resumeMeetingById,
   getMeeting,
   getPhase,
+  cancelHumanTurn,
 } from "./orchestrator";
 import {
   discoverAgents,
@@ -191,6 +192,9 @@ function setupOrchestratorEvents(): void {
 
 let deliberationLoopActive = false;
 
+/** Resolves when the deliberation loop finishes after being stopped. */
+let loopDoneResolver: (() => void) | null = null;
+
 /**
  * Run the deliberation loop: cycles run until the meeting ends.
  * Each cycle takes the last speech and runs: assess → select → speak.
@@ -214,6 +218,10 @@ async function runDeliberationLoop(lastSpeaker: SpeakerId, lastContent: string):
         broadcast({ type: "error", message: "המנחה לא הגיב — הדיון מושהה." });
         break;
       }
+      if (err?.message?.includes("Meeting ended")) {
+        // Clean exit — meeting was ended during human turn
+        break;
+      }
       broadcast({ type: "error", message: `Cycle error: ${err?.message || err}` });
       break;
     }
@@ -221,11 +229,33 @@ async function runDeliberationLoop(lastSpeaker: SpeakerId, lastContent: string):
 
   logInfo("server", `deliberation loop ended`);
   deliberationLoopActive = false;
+
+  // Signal that the loop is done
+  if (loopDoneResolver) {
+    loopDoneResolver();
+    loopDoneResolver = null;
+  }
 }
 
-function stopDeliberationLoop(): void {
-  logInfo("server", `deliberation loop stopped`);
+/**
+ * Stop the deliberation loop and wait for it to finish.
+ * Returns immediately if the loop is not active.
+ */
+async function stopDeliberationLoop(): Promise<void> {
+  if (!deliberationLoopActive) return;
+  logInfo("server", `deliberation loop stopping...`);
   deliberationLoopActive = false;
+
+  // Unblock the loop if it's waiting for human speech
+  cancelHumanTurn();
+
+  // Wait for the loop to actually finish (up to 5s safety net)
+  await Promise.race([
+    new Promise<void>(resolve => { loopDoneResolver = resolve; }),
+    new Promise<void>(resolve => setTimeout(resolve, 5000)),
+  ]);
+
+  logInfo("server", `deliberation loop stopped`);
 }
 
 // ---------------------------------------------------------------------------
@@ -354,9 +384,9 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
       case "command": {
         if (msg.command === "/end") {
           try {
-            stopDeliberationLoop();
+            await stopDeliberationLoop();
             await endCurrentMeeting();
-            broadcast({ type: "phase", phase: "idle" });
+            broadcast({ type: "meeting-ended" });
           } catch (err: any) {
             sendTo(ws, { type: "error", message: err?.message || "Failed to end meeting" });
           }
@@ -372,7 +402,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
 
       case "rollback": {
         try {
-          stopDeliberationLoop();
+          await stopDeliberationLoop();
           await handleRollback(msg.targetCycleNumber, (step, detail) => {
             broadcast({
               type: "rollback-progress",
@@ -481,7 +511,7 @@ async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<v
   broadcast({ type: "error", message: "Server shutting down" });
 
   // Stop deliberation loop
-  stopDeliberationLoop();
+  await stopDeliberationLoop();
 
   // End active meeting if any
   if (getMeeting()) {

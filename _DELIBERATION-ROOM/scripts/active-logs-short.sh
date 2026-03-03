@@ -3,5 +3,9 @@
 cd "$( dirname "$( realpath "$0" )" )/.." || exit 1
 log_path="$( ./scripts/active-logs-path.sh )"
 if [[ -n "$log_path" ]] ; then
-  grep -v '^    ' "$log_path"
+  if [[ "${1:-}" == "-f" ]] ; then
+    tail -f "$log_path" | grep -v '^    '
+  else
+    grep -v '^    ' "$log_path"
+  fi
 fi

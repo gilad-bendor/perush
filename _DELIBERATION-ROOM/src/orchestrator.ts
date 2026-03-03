@@ -425,6 +425,7 @@ export function handleHumanSpeech(content: string): void {
     cancelDirectorTimeout();
     humanTurnResolver(content);
     humanTurnResolver = null;
+    humanTurnRejecter = null;
   }
 }
 
@@ -597,6 +598,7 @@ export function resetOrchestrator(): void {
   attentionRequested = false;
   meetingParticipantDefs = [];
   humanTurnResolver = null;
+  humanTurnRejecter = null;
   directorTimeoutOverride = null;
   cancelDirectorTimeout();
   clearSessions();
@@ -687,22 +689,29 @@ function resolveNextSpeaker(nextSpeaker: string): SpeakerId {
 function waitForHumanSpeech(): Promise<string> {
   return new Promise<string>((resolve, reject) => {
     humanTurnResolver = resolve;
+    humanTurnRejecter = reject;
 
     // Set timeout
     directorTimeoutId = setTimeout(() => {
       if (humanTurnResolver) {
         humanTurnResolver = null;
+        humanTurnRejecter = null;
         reject(new Error("Director timeout"));
       }
     }, getDirectorTimeoutMs());
   });
 }
 
-function cancelHumanTurn(): void {
+/** Resolver to reject the human-turn promise on cancellation */
+let humanTurnRejecter: ((err: Error) => void) | null = null;
+
+export function cancelHumanTurn(): void {
   cancelDirectorTimeout();
-  if (humanTurnResolver) {
-    humanTurnResolver = null;
+  if (humanTurnRejecter) {
+    humanTurnRejecter(new Error("Meeting ended"));
+    humanTurnRejecter = null;
   }
+  humanTurnResolver = null;
 }
 
 function cancelDirectorTimeout(): void {

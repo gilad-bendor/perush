@@ -15,19 +15,11 @@ This guide covers **ad-hoc interactive debugging** — launching the server, dri
 **Always use `USE_STUB_SDK=true` for simulation and debugging** — this avoids real API calls ($$$) and makes behavior deterministic. The stub SDK returns canned responses embedded in each prompt.
 
 ```bash
-# Start from the ROOT project directory (parent of _DELIBERATION-ROOM),
-# because agents need access to ../CLAUDE.md and ../פירוש/
-cd /path/to/perush
-USE_STUB_SDK=true bun run _DELIBERATION-ROOM/src/server.ts
+cd /path/to/perush/_DELIBERATION-ROOM
+USE_STUB_SDK=true bun run dev # this will auto-kill any running server
 ```
 
-All server output is automatically written to a **log file** under `.logs/` (see "Log File" in the main `CLAUDE.md`). To watch logs in real time while debugging:
-
-```bash
-tail -f .logs/*.log
-```
-
-**Important**: The server must run from the root `perush/` directory, not from `_DELIBERATION-ROOM/`. See "Execution Context" in the main `CLAUDE.md`.
+See "Log File" in the main `CLAUDE.md` to learn how to view the app's logs
 
 ### Real SDK Mode
 
@@ -35,8 +27,7 @@ Only use the real SDK when specifically testing agent behavior (costs money):
 
 ```bash
 # Cheap: override models to Haiku
-PARTICIPANT_MODEL=claude-haiku-4-5 MANAGER_MODEL=claude-haiku-4-5 \
-  bun run _DELIBERATION-ROOM/src/server.ts
+PARTICIPANT_MODEL=claude-haiku-4-5 MANAGER_MODEL=claude-haiku-4-5 bun run dev
 ```
 
 If running inside a Claude Code session, the real SDK may fail with "Claude Code process exited with code 1" — the `SDK_ENV_VARS_TO_STRIP` cleanup in `real-sdk.ts` handles known env vars, but other environment conflicts may exist. The stub SDK does not have this limitation.
@@ -226,17 +217,20 @@ The `[messageId]` prefix from `context.ts` is preserved. Key log patterns:
 - `[session-mgr] clearSessions` — sessions wiped (meeting end or recovery)
 
 ```bash
-# Watch live logs while debugging
-tail -f .logs/*.log
+# Watch live logs while debugging (full, with YAML payloads)
+./scripts/active-logs-full.sh -f
+
+# Watch live logs, header lines only (no YAML payloads)
+./scripts/active-logs-short.sh -f
 
 # Watch for session issues
-grep '\[session-mgr\]' .logs/*.log
+./scripts/active-logs-full.sh | grep '\[session-mgr\]'
 
 # Watch for errors
-grep '\[ERR\]' .logs/*.log
+./scripts/active-logs-full.sh | grep '\[ERROR\]'
 
 # Watch WebSocket traffic
-grep 'WS ' .logs/*.log | head -50
+./scripts/active-logs-full.sh | grep 'WS ' | head -50
 ```
 
 The log file survives even if the terminal is lost. If the log file is deleted while the server is running, it is recreated automatically on the next log line.
