@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Multi-agent deliberation system for biblical commentary analysis",
   "scripts": {
-    "dev": "bun run dev:css & PARTICIPANT_MODEL=claude-haiku-4-5 MANAGER_MODEL=claude-haiku-4-5 bun run dev:server",
+    "dev-model-haiku": "bun run dev:css & PARTICIPANT_MODEL=claude-haiku-4-5 MANAGER_MODEL=claude-haiku-4-5 bun run dev:server",
+    "dev-model-default": "bun run dev:css & bun run dev:server",
     "dev:server": "lsof -ti:4100 | xargs kill -9 2>/dev/null; bun --watch src/server.ts",
     "dev:css": "bunx tailwindcss -i public/input.css -o public/style.css --watch",
     "build:css": "bunx tailwindcss -i public/input.css -o public/style.css --minify",

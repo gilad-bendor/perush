@@ -124,7 +124,7 @@ bun run playwright-test.ts --url=http://localhost:4100 --headless --screenshot=t
 
 For complex visual bugs (RTL layout, streaming text, WebSocket state, etc.), write a **custom TypeScript Playwright script** and run it with `bun run <script.ts>`. This is much more powerful than the CLI flags above.
 
-**Prerequisites:** The dev server must be running (`bun run dev` on port 4100).
+**Prerequisites:** The dev server must be running (`bun run dev-model-haiku` on port 4100).
 
 **Key patterns for custom scripts:**
 

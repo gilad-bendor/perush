@@ -7,7 +7,7 @@ This guide covers **ad-hoc interactive debugging** — launching the server, dri
 ## Prerequisites
 
 1. Dependencies installed: `bun install`
-2. CSS built: `bun run build:css` (or use `bun run dev` which runs it automatically)
+2. CSS built: `bun run build:css` (or use `bun run dev-model-haiku` which runs it automatically)
 3. No other process on port 4100 (check with `lsof -i :4100`)
 
 ## Starting the Server
@@ -16,7 +16,7 @@ This guide covers **ad-hoc interactive debugging** — launching the server, dri
 
 ```bash
 cd /path/to/perush/_DELIBERATION-ROOM
-USE_STUB_SDK=true bun run dev # this will auto-kill any running server
+USE_STUB_SDK=true bun run dev-model-haiku # this will auto-kill any running server
 ```
 
 See "Log File" in the main `CLAUDE.md` to learn how to view the app's logs
@@ -26,8 +26,7 @@ See "Log File" in the main `CLAUDE.md` to learn how to view the app's logs
 Only use the real SDK when specifically testing agent behavior (costs money):
 
 ```bash
-# Cheap: override models to Haiku
-PARTICIPANT_MODEL=claude-haiku-4-5 MANAGER_MODEL=claude-haiku-4-5 bun run dev
+bun run dev-model-haiku
 ```
 
 If running inside a Claude Code session, the real SDK may fail with "Claude Code process exited with code 1" — the `SDK_ENV_VARS_TO_STRIP` cleanup in `real-sdk.ts` handles known env vars, but other environment conflicts may exist. The stub SDK does not have this limitation.

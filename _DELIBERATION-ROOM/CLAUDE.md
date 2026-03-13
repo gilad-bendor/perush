@@ -226,7 +226,8 @@ _DELIBERATION-ROOM/
 bun install
 
 # Start the server (port 4100) + Tailwind watcher
-bun run dev
+bun run dev-model-default   # Costly: only the user is allowed to execute this 
+bun run dev-model-haiku     # ClaudeCode is allowed to execute this
 
 # Run unit tests
 bun test
@@ -243,7 +244,7 @@ open http://localhost:4100
 1. `bun install`
 2. Claude CLI installed and authenticated (for real SDK sessions)
 3. `git config core.quotepath false` (Hebrew filenames in branch listings)
-4. `bun run build:css` (or `bun run dev` which runs it automatically)
+4. `bun run build:css` (or `bun run dev-model-default` / `bun run dev-model-haiku` which run it automatically)
 
 ### Configuration
 
