@@ -144,12 +144,11 @@ For complex visual bugs (RTL layout, streaming text, WebSocket state, etc.), wri
    await page.click('.human-input .submit-btn');
    ```
 
-3. **Inspecting agent panels**:
+3. **Inspecting process labels** (expandable traces per agent per interaction):
    ```js
-   await page.click('.agent-panel-toggle');
-   await page.click('.agent-tab[data-agent="kashia"]');
-   const assessment = await page.evaluate(() => {
-     return document.querySelector('.agent-tab-content.active .assessment')?.textContent;
+   await page.click('.process-label');
+   const content = await page.evaluate(() => {
+     return document.querySelector('.process-label-content')?.textContent;
    });
    ```
 
@@ -169,14 +168,7 @@ For complex visual bugs (RTL layout, streaming text, WebSocket state, etc.), wri
 - `.vibe-bar.human-turn` - Vibe bar in "Director's turn" state
 - `.human-input` - Director input area
 - `.human-input textarea` - The actual textarea
-- `.agent-panel` - Participant-Agent side panel container
-- `.agent-panel.collapsed` - Collapsed state
-- `.agent-tab` - Individual Participant-Agent tab
-- `.agent-tab[data-agent="..."]` - Specific Participant-Agent tab
-- `.agent-tab-content` - Tab content area
-- `.assessment` - Assessment display
-- `.tool-activity` - Tool usage display
-- `.importance-badge` - selfImportance indicator on tab
+- `.process-label` - Expandable process trace label
 - `.landing-page` - Meeting creation/resume page
 - `.meeting-list` - Previous meetings list
 - `.participant-card` - Participant selection toggle card (landing page)

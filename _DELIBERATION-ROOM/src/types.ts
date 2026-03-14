@@ -405,24 +405,6 @@ export type WsAssessment = {
 };
 assertZodTypeMatch<WsAssessment, typeof WsAssessmentSchema>(true);
 
-export const WsToolActivitySchema = z.object({
-  type: z.literal("tool-activity"),
-  messageId: MessageIdSchema,
-  agent: AgentIdSchema,
-  toolName: z.string(),
-  status: z.enum(["started", "completed"]),
-  detail: z.string().optional(),
-});
-export type WsToolActivity = {
-  type: "tool-activity";
-  messageId: MessageId;
-  agent: AgentId;
-  toolName: string;
-  status: "started" | "completed";
-  detail?: string;
-};
-assertZodTypeMatch<WsToolActivity, typeof WsToolActivitySchema>(true);
-
 export const WsVibeSchema = z.object({
   type: z.literal("vibe"),
   messageId: MessageIdSchema,
@@ -597,7 +579,6 @@ export const ServerMessageSchema = z.discriminatedUnion("type", [
   WsSpeechChunkSchema,
   WsSpeechDoneSchema,
   WsAssessmentSchema,
-  WsToolActivitySchema,
   WsVibeSchema,
   WsPhaseSchema,
   WsYourTurnSchema,
@@ -616,7 +597,6 @@ export type ServerMessage =
   | WsSpeechChunk
   | WsSpeechDone
   | WsAssessment
-  | WsToolActivity
   | WsVibe
   | WsPhase
   | WsYourTurn

@@ -133,7 +133,7 @@ export function parseStubYaml(text: string): Record<string, string | number | bo
   let i = 0;
   while (i < lines.length) {
     const line = lines[i];
-    const match = line.match(/^(\w+)\s*:\s*(.*)/);
+    const match = line.match(/^([\w\p{L}]+)\s*:\s*(.*)/u);
     if (match) {
       const key = match[1];
       let value = match[2].trim();

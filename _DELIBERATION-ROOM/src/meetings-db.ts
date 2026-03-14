@@ -10,7 +10,7 @@
 
 import { $ } from "bun";
 import { join } from "path";
-import { readFile, writeFile, rename, stat, mkdir } from "fs/promises";
+import { readFile, writeFile, rename, unlink, stat, mkdir } from "fs/promises";
 import { stringify as yamlStringify, parse as yamlParse } from "yaml";
 import {
   AgentId,
@@ -51,13 +51,16 @@ export function generateMeetingId(title: string, startedAt: Date): MeetingId {
       .replace(/^-+|-+$/g, "")           // strip leading/trailing hyphens
       .toLowerCase();
 
+  // Random suffix to avoid collisions if two meetings share the same title and minute
+  const rand = Math.random().toString(36).slice(2, 5);
+
   return `${
     startedAt.getFullYear()}-${
     String(startedAt.getMonth() + 1).padStart(2, "0") as unknown as number}-${
     String(startedAt.getDate()).padStart(2, "0") as unknown as number}--${
     String(startedAt.getHours()).padStart(2, "0") as unknown as number}-${
     String(startedAt.getMinutes()).padStart(2, "0") as unknown as number}--${
-    slug || "meeting"}`;
+    slug || "meeting"}-${rand}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -187,7 +190,13 @@ export async function writeMeetingAtomic(worktreePath: string, meeting: Meeting)
   const content = yamlStringify(meeting);
 
   await writeFile(tempPath, content, "utf-8");
-  await rename(tempPath, targetPath);
+  try {
+    await rename(tempPath, targetPath);
+  } catch (err) {
+    // Clean up orphaned temp file before re-throwing
+    try { await unlink(tempPath); } catch { /* best-effort */ }
+    throw err;
+  }
 }
 
 /**
@@ -316,6 +325,16 @@ export async function cleanupDanglingWorktrees(): Promise<void> {
   logInfo("meetings-db", `cleanupDanglingWorktrees`);
   const gitRoot = await getGitRoot();
   await $`git -C ${gitRoot} worktree prune`.quiet();
+}
+
+/**
+ * Ensure git config settings required by the project (Hebrew filenames, etc.).
+ * Safe to call multiple times — sets values idempotently on the local repo.
+ */
+export async function ensureGitConfig(): Promise<void> {
+  const gitRoot = await getGitRoot();
+  await $`git -C ${gitRoot} config core.quotepath false`.quiet();
+  logInfo("meetings-db", `ensureGitConfig: core.quotepath=false`);
 }
 
 // ---------------------------------------------------------------------------

@@ -8,7 +8,7 @@
  */
 
 import { runWithContext } from "./context";
-import { join, extname } from "path";
+import { join, extname, resolve } from "path";
 import { readFile, stat } from "fs/promises";
 import { SERVER_PORT, DELIBERATION_DIR } from "./config";
 import { ClientMessageSchema, type ServerMessage, type SpeakerId } from "./types";
@@ -66,9 +66,15 @@ export async function serveStaticFile(
   publicDir: string,
   mimeTypes: Record<string, string>,
 ): Promise<Response> {
+  const resolvedPublicDir = resolve(publicDir);
   const filePath = (pathname === "/" || pathname === "")
-    ? join(publicDir, "index.html")
-    : join(publicDir, pathname);
+    ? join(resolvedPublicDir, "index.html")
+    : resolve(join(resolvedPublicDir, pathname));
+
+  // Prevent directory traversal attacks
+  if (!filePath.startsWith(resolvedPublicDir)) {
+    return new Response("Not found", { status: 404 });
+  }
 
   try {
     const fileStat = await stat(filePath);
@@ -243,6 +249,10 @@ function broadcastPauseState(): void {
 /**
  * If paused, wait until unpaused. Returns immediately if not paused.
  * Returns false if the loop was stopped while waiting.
+ *
+ * NOTE: Uses polling (setInterval 200ms) to detect loop-stop while paused.
+ * A Promise.race approach would be cleaner, but this is acceptable for a
+ * single-user app where pause/unpause is infrequent.
  */
 async function waitIfPaused(): Promise<boolean> {
   if (!paused) return true;

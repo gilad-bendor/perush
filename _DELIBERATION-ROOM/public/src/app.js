@@ -383,7 +383,6 @@ function handleMeetingEnded() {
   readOnly = false;
   editingCycle = null;
   conversationView = null;
-  agentPanel = null;
   navigateTo("/");
 }
 
@@ -564,6 +563,7 @@ function updateCostDisplay() {
 async function loadAgents() {
   try {
     const res = await fetch("/api/agents");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     agentDefinitions = await res.json();
     renderParticipantCards();
   } catch (err) {
@@ -619,6 +619,7 @@ function renderParticipantCards() {
 async function loadMeetingList() {
   try {
     const res = await fetch("/api/meetings");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     /** @type {MeetingSummary[]} */ const meetings = await res.json();
     renderMeetingList(meetings);
   } catch (err) {

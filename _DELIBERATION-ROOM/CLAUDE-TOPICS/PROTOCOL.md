@@ -19,9 +19,6 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // A Participant-Agent's private assessment (shown in that agent's panel)
 { type: "assessment", agent: AgentId, selfImportance: number, humanImportance: number, summary: string }
 
-// Tool activity during Participant-Agent speech (shown in that agent's panel)
-{ type: "tool-activity", agent: AgentId, toolName: string, status: "started" | "completed", detail?: string }
-
 // The Conversation-Manager-Agent's vibe + next speaker decision
 { type: "vibe", vibe: string, nextSpeaker: SpeakerId }
 

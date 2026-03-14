@@ -53,7 +53,9 @@ export class ConversationView {
 
     this.container.innerHTML = "";
 
-    // Disable auto-scroll when the user scrolls up
+    // Disable auto-scroll when the user scrolls up.
+    // NOTE: This listener is never removed. Acceptable for a single-user desktop app
+    // where ConversationView is rarely recreated within a session.
     const feed = this.container.closest(".conversation-feed");
     if (feed) {
       feed.addEventListener("scroll", () => {

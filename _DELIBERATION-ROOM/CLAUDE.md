@@ -210,13 +210,22 @@ _DELIBERATION-ROOM/
 │   ├── archi.md                   ← Architect
 │   ├── kashia.md                  ← Skeptic
 │   └── barak.md                   ← Ideator
+├── scripts/
+│   ├── active-logs-path.sh        ← path to most recent log file
+│   ├── active-logs-full.sh        ← print/follow full log content
+│   ├── active-logs-short.sh       ← print/follow header lines only
+│   └── DANGER-DELETE-ALL-MEETINGS.sh
 ├── src/
 │   ├── server.ts          ← Bun web server (HTTP + WebSocket), entry point
 │   ├── orchestrator.ts    ← deliberation loop, phase management
 │   ├── session-manager.ts ← Agent SDK sessions, template resolution, agent discovery
-│   ├── meetings-db.ts    ← git-as-database: worktrees, meeting CRUD
+│   ├── meetings-db.ts     ← git-as-database: worktrees, meeting CRUD
 │   ├── types.ts           ← zod schemas and TypeScript types
+│   ├── types-asserts.ts   ← compile-time Zod↔TS type alignment checks
 │   ├── config.ts          ← ALL configurable values
+│   ├── logs.ts            ← logging (console + file), category toggles
+│   ├── context.ts         ← AsyncLocalStorage for request context (messageId)
+│   ├── utils.ts           ← shared utilities (prettyLog, wrapDanglingPromise)
 │   ├── stub-sdk.ts        ← Agent SDK stub for testing
 │   ├── real-sdk.ts        ← Real Agent SDK adapter
 │   └── *.test.ts          ← unit tests (one per module)
@@ -227,11 +236,13 @@ _DELIBERATION-ROOM/
 │   └── src/
 │       ├── app.js         ← WebSocket client, page routing
 │       ├── conversation-view.js  ← message feed, streaming, process labels
-│       └── process-label.js      ← expandable process labels (replaced agent-panel.js)
+│       ├── process-label.js      ← expandable process labels
+│       └── utils.js       ← frontend utilities
 ├── tests/
+│   ├── real-sdk-smoke.test.ts     ← real SDK smoke test (~$0.10)
 │   └── e2e/
 │       ├── landing-page.test.ts
-│       ├── meetings-db.test.ts
+│       ├── conversation.test.ts
 │       ├── integration.test.ts
 │       └── mock-ws-server.ts
 └── .meetings/              ← worktree mount point (gitignored)
@@ -279,14 +290,17 @@ All logging goes through `src/logs.ts` via `logInfo()`, `logWarn()`, `logError()
 ### Import Dependency Graph
 
 ```
-types.ts          ← no src/ imports (only zod)
-config.ts         ← types.ts
-context.ts        ← types.ts (+ node:fs, node:util)
-meetings-db.ts   ← types.ts, config.ts
-stub-sdk.ts       ← types.ts
-session-manager.ts ← types.ts, config.ts, meetings-db.ts, stub-sdk.ts
-orchestrator.ts   ← all above
-server.ts         ← orchestrator.ts, types.ts, config.ts, context.ts
+types.ts           ← types-asserts.ts (compile-time only), zod
+config.ts          ← types.ts
+context.ts         ← types.ts (+ node:async_hooks)
+utils.ts           ← (no src/ imports)
+logs.ts            ← context.ts, utils.ts (+ node:fs, node:path)
+meetings-db.ts     ← types.ts, config.ts, logs.ts
+stub-sdk.ts        ← config.ts
+real-sdk.ts        ← config.ts, logs.ts
+session-manager.ts ← types.ts, config.ts, stub-sdk.ts, real-sdk.ts, logs.ts
+orchestrator.ts    ← types.ts, config.ts, meetings-db.ts, session-manager.ts, logs.ts
+server.ts          ← types.ts, config.ts, context.ts, orchestrator.ts, session-manager.ts, meetings-db.ts, utils.ts, logs.ts
 ```
 
 **No upward arrows.** No circular imports.

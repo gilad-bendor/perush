@@ -43,6 +43,7 @@ import {
   rollbackPerushOnMain,
   detectPerushChanges,
   cleanupDanglingWorktrees,
+  ensureGitConfig,
 } from "./meetings-db.ts";
 import {
   discoverAgents,
@@ -170,6 +171,7 @@ export async function startMeeting(
   }
 
   // Git state preconditions
+  await ensureGitConfig();
   await cleanupDanglingWorktrees();
   const uncommittedPerush = await detectPerushChanges();
   if (uncommittedPerush.length > 0) {

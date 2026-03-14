@@ -164,7 +164,10 @@ export class ProcessLabel {
         break;
       case "tool-call":
         div.className = "font-mono text-indigo-700 bg-indigo-50 rounded px-1.5 py-0.5";
-        div.innerHTML = `<span class="font-semibold">\u{1F527} ${evt.toolName || "tool"}:</span>`;
+        const toolLabel = document.createElement("span");
+        toolLabel.className = "font-semibold";
+        toolLabel.textContent = `\u{1F527} ${evt.toolName || "tool"}:`;
+        div.appendChild(toolLabel);
         const inputPre = document.createElement("pre");
         inputPre.className = "whitespace-pre-wrap text-[11px] mt-0.5 max-h-32 overflow-y-auto";
         inputPre.textContent = evt.toolInput || evt.content;
@@ -172,7 +175,10 @@ export class ProcessLabel {
         break;
       case "tool-result":
         div.className = "font-mono text-teal-700 bg-teal-50 rounded px-1.5 py-0.5";
-        div.innerHTML = `<span class="font-semibold">\u2705 ${evt.toolName || "result"}:</span>`;
+        const resultLabel = document.createElement("span");
+        resultLabel.className = "font-semibold";
+        resultLabel.textContent = `\u2705 ${evt.toolName || "result"}:`;
+        div.appendChild(resultLabel);
         const resultPre = document.createElement("pre");
         resultPre.className = "whitespace-pre-wrap text-[11px] mt-0.5 max-h-32 overflow-y-auto";
         resultPre.textContent = evt.content.length > 1000 ? evt.content.slice(0, 1000) + "\u2026" : evt.content;

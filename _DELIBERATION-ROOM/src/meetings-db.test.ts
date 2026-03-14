@@ -50,7 +50,7 @@ describe("generateMeetingId", () => {
   test("slugifies title", () => {
     const date = new Date(2026, 1, 27, 14, 30, 0);
     const id = generateMeetingId("Test Meeting", date);
-    expect(id).toBe("2026-02-27--14-30--test-meeting");
+    expect(id).toMatch(/^2026-02-27--14-30--test-meeting-[a-z0-9]{3}$/);
   });
 
   test("handles Hebrew titles", () => {
@@ -63,19 +63,19 @@ describe("generateMeetingId", () => {
   test("handles empty title", () => {
     const date = new Date(2026, 1, 27, 14, 30, 0);
     const id = generateMeetingId("", date);
-    expect(id).toBe("2026-02-27--14-30--meeting");
+    expect(id).toMatch(/^2026-02-27--14-30--meeting-[a-z0-9]{3}$/);
   });
 
   test("strips leading/trailing hyphens from slug", () => {
     const date = new Date(2026, 1, 27, 14, 30, 0);
     const id = generateMeetingId("  --test--  ", date);
-    expect(id).toBe("2026-02-27--14-30--test");
+    expect(id).toMatch(/^2026-02-27--14-30--test-[a-z0-9]{3}$/);
   });
 
   test("handles special characters", () => {
     const date = new Date(2026, 1, 27, 14, 30, 0);
     const id = generateMeetingId("test@#$%meeting", date);
-    expect(id).toBe("2026-02-27--14-30--test-meeting");
+    expect(id).toMatch(/^2026-02-27--14-30--test-meeting-[a-z0-9]{3}$/);
   });
 });
 
