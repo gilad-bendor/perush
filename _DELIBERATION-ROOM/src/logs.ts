@@ -62,7 +62,7 @@ function logByMethod(consoleMethod: "info" | "warn" | "error", logCategory: LogC
         ? ""
         : `\n${prettyLog(data).replace(/^/gm, '    ')}`;
     const timing = String(Date.now() - fileCreationTime).padStart(8, "0");
-    const logLevel = `[${consoleMethod.toUpperCase()}]`.padEnd(7)
+    const logLevel = `[${consoleMethod.toUpperCase()}]`.padEnd(7);
     const context = getContext();
     const contextString = context?.messageId ? `[${context.messageId}]` : "[N/A]";
     const fullLog = `${timing} ${logLevel} [${logCategory}] [${contextString}] ${label}${dataAugmentation}`;

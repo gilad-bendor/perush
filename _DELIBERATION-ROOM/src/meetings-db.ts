@@ -54,13 +54,11 @@ export function generateMeetingId(title: string, startedAt: Date): MeetingId {
   // Random suffix to avoid collisions if two meetings share the same title and minute
   const rand = Math.random().toString(36).slice(2, 5);
 
-  return `${
-    startedAt.getFullYear()}-${
-    String(startedAt.getMonth() + 1).padStart(2, "0") as unknown as number}-${
-    String(startedAt.getDate()).padStart(2, "0") as unknown as number}--${
-    String(startedAt.getHours()).padStart(2, "0") as unknown as number}-${
-    String(startedAt.getMinutes()).padStart(2, "0") as unknown as number}--${
-    slug || "meeting"}-${rand}`;
+  const mo = String(startedAt.getMonth() + 1).padStart(2, "0");
+  const dd = String(startedAt.getDate()).padStart(2, "0");
+  const hh = String(startedAt.getHours()).padStart(2, "0");
+  const mi = String(startedAt.getMinutes()).padStart(2, "0");
+  return `${startedAt.getFullYear()}-${mo}-${dd}--${hh}-${mi}--${slug || "meeting"}-${rand}` as MeetingId;
 }
 
 // ---------------------------------------------------------------------------
