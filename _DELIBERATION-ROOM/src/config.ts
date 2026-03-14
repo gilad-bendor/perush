@@ -44,6 +44,23 @@ export const PARTICIPANT_MODEL = process.env.PARTICIPANT_MODEL || "claude-opus-4
 export const MANAGER_MODEL = process.env.MANAGER_MODEL || "claude-sonnet-4-6";
 
 // ---------------------------------------------------------------------------
+// Effort levels (auto-derived from model)
+// ---------------------------------------------------------------------------
+
+/** SDK effort levels */
+export type EffortLevel = "low" | "medium" | "high";
+
+/**
+ * Derive the effort level from a model string.
+ * haiku → low, sonnet → medium, opus → high.
+ */
+export function effortForModel(model: string): EffortLevel {
+  if (model.includes("haiku")) return "low";
+  if (model.includes("opus")) return "high";
+  return "medium"; // sonnet or unknown
+}
+
+// ---------------------------------------------------------------------------
 // Cost caps
 // ---------------------------------------------------------------------------
 

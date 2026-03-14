@@ -2,34 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Main deliberation layout — CSS Grid (not Tailwind utilities — too complex for utility classes) */
+/* Main deliberation layout — single column, full width */
 .deliberation-room {
   display: grid;
   grid-template-areas:
-    "conversation sidebar"
-    "vibe         sidebar"
-    "input        sidebar";
-  grid-template-columns: 1fr 300px;
+    "conversation"
+    "vibe"
+    "input";
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
   height: 100vh;
-  /* In RTL, "conversation" is on the right, "sidebar" on the left — automatic */
 }
 
 .deliberation-room .conversation-feed { grid-area: conversation; }
 .deliberation-room .vibe-bar          { grid-area: vibe; }
 .deliberation-room .human-input       { grid-area: input; }
-.deliberation-room .agent-panel       { grid-area: sidebar; }
-
-/* Sidebar collapsed state */
-.deliberation-room:has(.agent-panel.collapsed) {
-  grid-template-columns: 1fr 48px;
-}
-
-/* Hide tab bar and content when collapsed */
-.agent-panel.collapsed #agent-tabs,
-.agent-panel.collapsed #agent-tab-content {
-  display: none;
-}
 
 /* Streaming message indicator */
 .message.streaming .message-content::after {
@@ -56,4 +43,9 @@
 /* Rollback icon visibility on message hover */
 .message:hover .rollback-icon {
   opacity: 1 !important;
+}
+
+/* Process labels */
+.process-label .process-pill:hover {
+  opacity: 0.85;
 }

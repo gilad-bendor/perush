@@ -65,6 +65,7 @@ function stripStubResponseBlocks(prompt: string): string {
 export interface RealQueryOptions {
   resume?: string;
   model?: string;
+  effort?: "low" | "medium" | "high";
   systemPrompt?: string;
   includePartialMessages?: boolean;
   maxTurns?: number;
@@ -112,6 +113,7 @@ export function realQuery(params: {
   const sdkOptions: Options = {};
 
   if (options.model) sdkOptions.model = options.model;
+  if (options.effort) sdkOptions.effort = options.effort;
   if (options.resume) sdkOptions.resume = options.resume;
   if (options.systemPrompt) sdkOptions.systemPrompt = options.systemPrompt;
   if (options.includePartialMessages) sdkOptions.includePartialMessages = true;
@@ -137,6 +139,7 @@ export function realQuery(params: {
     prompt,
     options: {
       model: sdkOptions.model,
+      effort: sdkOptions.effort,
       resume: sdkOptions.resume,
       systemPrompt: sdkOptions.systemPrompt
         ? `(${typeof sdkOptions.systemPrompt === "string" ? sdkOptions.systemPrompt.length : JSON.stringify(sdkOptions.systemPrompt).length} chars)`

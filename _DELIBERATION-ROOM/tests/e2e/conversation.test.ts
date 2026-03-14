@@ -164,40 +164,20 @@ describe("deliberation UI", () => {
     expect(isHidden).toBe(false);
   });
 
-  test("agent panel starts collapsed", async () => {
+  test("agent panel is removed (replaced by process labels)", async () => {
     page = await browser.newPage();
     await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
-    const isCollapsed = await page.evaluate(() =>
-      document.querySelector(".agent-panel")?.classList.contains("collapsed")
+    const panelExists = await page.evaluate(() =>
+      document.querySelector(".agent-panel") !== null
     );
-    expect(isCollapsed).toBe(true);
-  });
+    expect(panelExists).toBe(false);
 
-  test("agent panel can be toggled", async () => {
-    page = await browser.newPage();
-    await page.goto(meetingUrl(mockServer));
-    await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
-
-    // Use evaluate to trigger the click directly (avoids z-index overlay issues)
-    await page.evaluate(() => {
-      (document.getElementById("panel-toggle") as HTMLButtonElement).click();
-    });
-
-    const isCollapsed = await page.evaluate(() =>
-      document.querySelector(".agent-panel")?.classList.contains("collapsed")
+    const toggleExists = await page.evaluate(() =>
+      document.getElementById("panel-toggle") !== null
     );
-    expect(isCollapsed).toBe(false);
-
-    // Click again to collapse
-    await page.evaluate(() => {
-      (document.getElementById("panel-toggle") as HTMLButtonElement).click();
-    });
-    const isCollapsedAgain = await page.evaluate(() =>
-      document.querySelector(".agent-panel")?.classList.contains("collapsed")
-    );
-    expect(isCollapsedAgain).toBe(true);
+    expect(toggleExists).toBe(false);
   });
 
   test("human input is disabled when not human-turn", async () => {

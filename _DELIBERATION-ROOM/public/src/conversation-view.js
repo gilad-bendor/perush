@@ -7,6 +7,7 @@
  */
 
 import { querySelectorMust } from "./utils.js";
+import { ProcessLabel, AssessmentGroup } from "./process-label.js";
 
 /** @typedef {import('../../src/types.ts').Meeting} Meeting */
 /** @typedef {import('../../src/types.ts').SpeakerId} SpeakerId */
@@ -41,6 +42,14 @@ export class ConversationView {
     this.streamingMessage = null;
     /** @type {boolean} True if user has scrolled up from the bottom */
     this.userScrolled = false;
+
+    /** @type {(id: import('../../src/types.ts').AgentId | "manager") => string} Resolves agent ID to Hebrew display name */
+    this.agentDisplayName = options.agentDisplayName || ((id) => id);
+
+    /** @type {Map<string, ProcessLabel>} processId → ProcessLabel */
+    this.processLabels = new Map();
+    /** @type {Map<number, AssessmentGroup>} cycleNumber → AssessmentGroup */
+    this.assessmentGroups = new Map();
 
     this.container.innerHTML = "";
 
@@ -187,6 +196,103 @@ export class ConversationView {
     querySelectorMust(".edit-send", contentEl).addEventListener("click", () => {
       this._submitEdit(entry, textarea.value.trim() || originalContent);
     });
+  }
+
+  // ---- Process Labels --------------------------------------------------------
+
+  /**
+   * Start tracking a new process (live mode).
+   * @param {string} processId
+   * @param {import('../../src/types.ts').ProcessKind} processKind
+   * @param {import('../../src/types.ts').AgentId | "manager"} agent
+   * @param {number} cycleNumber
+   */
+  startProcess(processId, processKind, agent, cycleNumber) {
+    const displayName = this.agentDisplayName(agent);
+    const label = new ProcessLabel(processId, processKind, agent, displayName);
+    this.processLabels.set(processId, label);
+
+    if (processKind === "assessment") {
+      // Group assessments together
+      if (!this.assessmentGroups.has(cycleNumber)) {
+        const group = new AssessmentGroup(cycleNumber);
+        this.assessmentGroups.set(cycleNumber, group);
+        this.container.appendChild(group.el);
+      }
+      this.assessmentGroups.get(cycleNumber).addLabel(label);
+    } else {
+      // Manager selection or agent speech — standalone in the timeline
+      const wrapper = document.createElement("div");
+      wrapper.className = "process-wrapper mb-2";
+      wrapper.appendChild(label.el);
+      this.container.appendChild(wrapper);
+    }
+    this._scrollToBottom();
+  }
+
+  /**
+   * Append an event to an existing process (live mode).
+   * @param {string} processId
+   * @param {import('../../src/types.ts').ProcessEventKind} eventKind
+   * @param {string} content
+   * @param {string} [toolName]
+   * @param {string} [toolInput]
+   */
+  addProcessEvent(processId, eventKind, content, toolName, toolInput) {
+    const label = this.processLabels.get(processId);
+    if (label) {
+      label.addEvent(eventKind, content, toolName, toolInput);
+    }
+  }
+
+  /**
+   * Mark a process as complete (live mode).
+   * @param {string} processId
+   */
+  endProcess(processId) {
+    const label = this.processLabels.get(processId);
+    if (label) {
+      label.finalize();
+    }
+  }
+
+  /**
+   * Render process records from a persisted cycle (sync/reconnect).
+   * @param {import('../../src/types.ts').ProcessRecord[]} processes
+   * @param {number} cycleNumber
+   */
+  renderPersistedProcesses(processes, cycleNumber) {
+    if (!processes || processes.length === 0) return;
+
+    // Group assessments
+    const assessments = processes.filter(p => p.processKind === "assessment");
+    const others = processes.filter(p => p.processKind !== "assessment");
+
+    if (assessments.length > 0) {
+      const group = new AssessmentGroup(cycleNumber);
+      for (const proc of assessments) {
+        const displayName = this.agentDisplayName(proc.agent);
+        const label = new ProcessLabel(proc.processId, proc.processKind, proc.agent, displayName);
+        label.loadEvents(proc.events);
+        label.finalize();
+        group.addLabel(label);
+        this.processLabels.set(proc.processId, label);
+      }
+      this.container.appendChild(group.el);
+    }
+
+    for (const proc of others) {
+      const displayName = this.agentDisplayName(proc.agent);
+      const label = new ProcessLabel(proc.processId, proc.processKind, proc.agent, displayName);
+      label.loadEvents(proc.events);
+      label.finalize();
+      this.processLabels.set(proc.processId, label);
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "process-wrapper mb-2";
+      wrapper.appendChild(label.el);
+      this.container.appendChild(wrapper);
+    }
   }
 
   // ---- Private ---------------------------------------------------------------

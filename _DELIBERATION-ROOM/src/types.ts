@@ -226,6 +226,46 @@ export type ManagerDecision = {
 assertZodTypeMatch<ManagerDecision, typeof ManagerDecisionSchema>(true);
 
 // ---------------------------------------------------------------------------
+// Process records — full SDK interaction traces per cycle
+// ---------------------------------------------------------------------------
+
+export const ProcessEventKindSchema = z.enum(["prompt", "thinking", "text", "tool-call", "tool-result"]);
+export type ProcessEventKind = "prompt" | "thinking" | "text" | "tool-call" | "tool-result";
+assertZodTypeMatch<ProcessEventKind, typeof ProcessEventKindSchema>(true);
+
+export const ProcessKindSchema = z.enum(["assessment", "manager-selection", "agent-speech"]);
+export type ProcessKind = "assessment" | "manager-selection" | "agent-speech";
+assertZodTypeMatch<ProcessKind, typeof ProcessKindSchema>(true);
+
+export const ProcessEventRecordSchema = z.object({
+  eventKind: ProcessEventKindSchema,
+  content: z.string(),
+  toolName: z.string().optional(),
+  toolInput: z.string().optional(),
+});
+export type ProcessEventRecord = {
+  eventKind: ProcessEventKind;
+  content: string;
+  toolName?: string;
+  toolInput?: string;
+};
+assertZodTypeMatch<ProcessEventRecord, typeof ProcessEventRecordSchema>(true);
+
+export const ProcessRecordSchema = z.object({
+  processId: z.string(),
+  processKind: ProcessKindSchema,
+  agent: z.string(), // AgentId | "manager"
+  events: z.array(ProcessEventRecordSchema),
+});
+export type ProcessRecord = {
+  processId: string;
+  processKind: ProcessKind;
+  agent: AgentId | "manager";
+  events: ProcessEventRecord[];
+};
+assertZodTypeMatch<ProcessRecord, typeof ProcessRecordSchema>(true);
+
+// ---------------------------------------------------------------------------
 // Cycle record
 // ---------------------------------------------------------------------------
 
@@ -234,12 +274,14 @@ export const CycleRecordSchema = z.object({
   speech: ConversationMessageSchema,
   assessments: z.record(z.string(), PrivateAssessmentSchema),
   managerDecision: ManagerDecisionSchema,
+  processes: z.array(ProcessRecordSchema).optional(),
 });
 export type CycleRecord = {
   cycleNumber: number;
   speech: ConversationMessage;
   assessments: Record<string, PrivateAssessment>;
   managerDecision: ManagerDecision;
+  processes?: ProcessRecord[];
 };
 assertZodTypeMatch<CycleRecord, typeof CycleRecordSchema>(true);
 
@@ -307,6 +349,7 @@ export const WsSpeechSchema = z.object({
   speaker: SpeakerIdSchema,
   content: z.string(),
   timestamp: z.string(),
+  cycleCost: z.number().optional(),
 });
 export type WsSpeech = {
   type: "speech";
@@ -314,6 +357,7 @@ export type WsSpeech = {
   speaker: SpeakerId;
   content: string;
   timestamp: FormattedTime;
+  cycleCost?: number;
 };
 assertZodTypeMatch<WsSpeech, typeof WsSpeechSchema>(true);
 
@@ -424,6 +468,7 @@ export const WsSyncSchema = z.object({
   currentPhase: z.string(),
   readOnly: z.boolean().optional(),
   editingCycle: z.number().optional(),
+  paused: z.boolean().optional(),
 });
 export type WsSync = {
   type: "sync";
@@ -432,6 +477,7 @@ export type WsSync = {
   currentPhase: string;
   readOnly?: boolean;
   editingCycle?: number;
+  paused?: boolean;
 };
 assertZodTypeMatch<WsSync, typeof WsSyncSchema>(true);
 
@@ -481,6 +527,70 @@ export type WsMeetingEnded = {
 };
 assertZodTypeMatch<WsMeetingEnded, typeof WsMeetingEndedSchema>(true);
 
+export const WsProcessStartSchema = z.object({
+  type: z.literal("process-start"),
+  messageId: MessageIdSchema,
+  processId: z.string(),
+  processKind: ProcessKindSchema,
+  agent: z.string(), // AgentId | "manager"
+  cycleNumber: z.number().int().positive(),
+});
+export type WsProcessStart = {
+  type: "process-start";
+  messageId: MessageId;
+  processId: string;
+  processKind: ProcessKind;
+  agent: AgentId | "manager";
+  cycleNumber: number;
+};
+assertZodTypeMatch<WsProcessStart, typeof WsProcessStartSchema>(true);
+
+export const WsProcessEventSchema = z.object({
+  type: z.literal("process-event"),
+  messageId: MessageIdSchema,
+  processId: z.string(),
+  eventKind: ProcessEventKindSchema,
+  content: z.string(),
+  toolName: z.string().optional(),
+  toolInput: z.string().optional(),
+});
+export type WsProcessEvent = {
+  type: "process-event";
+  messageId: MessageId;
+  processId: string;
+  eventKind: ProcessEventKind;
+  content: string;
+  toolName?: string;
+  toolInput?: string;
+};
+assertZodTypeMatch<WsProcessEvent, typeof WsProcessEventSchema>(true);
+
+export const WsProcessDoneSchema = z.object({
+  type: z.literal("process-done"),
+  messageId: MessageIdSchema,
+  processId: z.string(),
+});
+export type WsProcessDone = {
+  type: "process-done";
+  messageId: MessageId;
+  processId: string;
+};
+assertZodTypeMatch<WsProcessDone, typeof WsProcessDoneSchema>(true);
+
+export const WsPauseStateSchema = z.object({
+  type: z.literal("pause-state"),
+  messageId: MessageIdSchema,
+  paused: z.boolean(),
+  blocking: z.boolean(),
+});
+export type WsPauseState = {
+  type: "pause-state";
+  messageId: MessageId;
+  paused: boolean;
+  blocking: boolean;
+};
+assertZodTypeMatch<WsPauseState, typeof WsPauseStateSchema>(true);
+
 /** Discriminated union of all server→client messages */
 export const ServerMessageSchema = z.discriminatedUnion("type", [
   WsSpeechSchema,
@@ -496,6 +606,10 @@ export const ServerMessageSchema = z.discriminatedUnion("type", [
   WsAttentionAckSchema,
   WsRollbackProgressSchema,
   WsMeetingEndedSchema,
+  WsProcessStartSchema,
+  WsProcessEventSchema,
+  WsProcessDoneSchema,
+  WsPauseStateSchema,
 ]);
 export type ServerMessage =
   | WsSpeech
@@ -510,7 +624,11 @@ export type ServerMessage =
   | WsError
   | WsAttentionAck
   | WsRollbackProgress
-  | WsMeetingEnded;
+  | WsMeetingEnded
+  | WsProcessStart
+  | WsProcessEvent
+  | WsProcessDone
+  | WsPauseState;
 assertZodTypeMatch<ServerMessage, typeof ServerMessageSchema>(true);
 
 // ---------------------------------------------------------------------------
@@ -615,6 +733,16 @@ export type WsRollback = {
 };
 assertZodTypeMatch<WsRollback, typeof WsRollbackSchema>(true);
 
+export const WsTogglePauseSchema = z.object({
+  type: z.literal("toggle-pause"),
+  messageId: MessageIdSchema,
+});
+export type WsTogglePause = {
+  type: "toggle-pause";
+  messageId: MessageId;
+};
+assertZodTypeMatch<WsTogglePause, typeof WsTogglePauseSchema>(true);
+
 /** Discriminated union of all client→server messages */
 export const ClientMessageSchema = z.discriminatedUnion("type", [
   WsHumanSpeechSchema,
@@ -625,6 +753,7 @@ export const ClientMessageSchema = z.discriminatedUnion("type", [
   WsJoinMeetingSchema,
   WsAttentionSchema,
   WsRollbackSchema,
+  WsTogglePauseSchema,
 ]);
 export type ClientMessage =
   | WsHumanSpeech
@@ -634,7 +763,8 @@ export type ClientMessage =
   | WsViewMeeting
   | WsJoinMeeting
   | WsAttention
-  | WsRollback;
+  | WsRollback
+  | WsTogglePause;
 assertZodTypeMatch<ClientMessage, typeof ClientMessageSchema>(true);
 
 // ---------------------------------------------------------------------------

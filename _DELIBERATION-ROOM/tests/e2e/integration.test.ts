@@ -103,6 +103,9 @@ describe("full integration (stub SDK)", () => {
     // Wait for deliberation page
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 10000 });
 
+    // Unpause the deliberation loop (starts paused by default)
+    await page.click("#pause-btn");
+
     // Should see the opening prompt as first message
     await page.waitForSelector(".message", { timeout: 5000 });
 

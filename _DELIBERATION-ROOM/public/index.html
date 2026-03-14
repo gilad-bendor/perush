@@ -77,7 +77,7 @@
   <div id="deliberation-page" class="deliberation-room hidden">
 
     <!-- Conversation Feed -->
-    <div class="conversation-feed overflow-y-auto p-4 border-s border-stone-200">
+    <div class="conversation-feed overflow-y-auto p-4">
       <!-- View-only banner -->
       <div id="view-only-banner" class="hidden bg-stone-100 border border-stone-300 rounded px-4 py-2 mb-4 text-center text-sm text-stone-600">
         מצב צפייה בלבד
@@ -88,7 +88,14 @@
     </div>
 
     <!-- Vibe Bar -->
-    <div class="vibe-bar border-t border-s border-stone-200 px-4 py-2 flex items-center gap-3 bg-stone-50 transition-all duration-300">
+    <div class="vibe-bar border-t border-stone-200 px-4 py-2 flex items-center gap-3 bg-stone-50 transition-all duration-300">
+      <button
+        id="pause-btn"
+        class="text-sm border border-stone-300 text-stone-600 rounded px-3 py-1 hover:bg-stone-100 transition-colors"
+        title="השהה/המשך"
+      >
+        &#x25B6; המשך
+      </button>
       <span class="text-amber-700 font-bold">✦</span>
       <span id="vibe-text" class="flex-1 text-sm text-stone-600">ממתין...</span>
       <span id="vibe-next" class="text-sm text-stone-500"></span>
@@ -104,7 +111,7 @@
     </div>
 
     <!-- Human Input -->
-    <div class="human-input border-t border-s border-stone-200 p-3 bg-white">
+    <div class="human-input border-t border-stone-200 p-3 bg-white">
       <div class="flex gap-2 items-end">
         <label for="human-input-textarea"></label>
         <textarea
@@ -125,27 +132,6 @@
       </div>
     </div>
 
-    <!-- Agent Panel (Sidebar) -->
-    <div class="agent-panel collapsed border-s border-stone-200 bg-white overflow-hidden flex flex-col">
-      <!-- Toggle strip -->
-      <button
-        id="panel-toggle"
-        class="w-full py-2 px-1 text-xs text-stone-500 hover:text-stone-700 hover:bg-stone-50 transition-colors border-b border-stone-200 text-center"
-        title="הצג/הסתר פאנל סוכנים"
-      >
-        &#x25C0;
-      </button>
-
-      <!-- Tabs -->
-      <div id="agent-tabs" class="flex border-b border-stone-200 overflow-x-auto">
-        <!-- Tabs populated dynamically -->
-      </div>
-
-      <!-- Tab content -->
-      <div id="agent-tab-content" class="flex-1 overflow-y-auto p-3 text-sm">
-        <p class="text-stone-400">בחר סוכן מהלשוניות למעלה</p>
-      </div>
-    </div>
   </div>
 
   <!-- ================================================================= -->

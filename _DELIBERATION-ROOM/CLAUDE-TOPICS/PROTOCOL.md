@@ -44,6 +44,18 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 
 // Progress updates during a rollback operation
 { type: "rollback-progress", step: "aborting" | "git-reset" | "perush-rollback" | "session-recovery" | "complete", detail?: string }
+
+// Signals start of an SDK process (assessment, manager selection, or agent speech)
+{ type: "process-start", processId: string, processKind: "assessment" | "manager-selection" | "agent-speech", agent: AgentId | "manager", cycleNumber: number }
+
+// A single event within a process (prompt, thinking, text output, tool call, tool result)
+{ type: "process-event", processId: string, eventKind: "prompt" | "thinking" | "text" | "tool-call" | "tool-result", content: string, toolName?: string, toolInput?: string }
+
+// Signals end of a process
+{ type: "process-done", processId: string }
+
+// Pause state update (paused = toggle state, blocking = pause is actively preventing next cycle)
+{ type: "pause-state", paused: boolean, blocking: boolean }
 ```
 
 ## Client → Server Messages
@@ -76,6 +88,9 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // targetCycleNumber = the cycle containing the human message to roll back to.
 // 0 = roll back to the opening prompt (before any cycles).
 { type: "rollback", targetCycleNumber: number }
+
+// Toggle play/pause — pauses/resumes the deliberation loop (doesn't interrupt running cycles)
+{ type: "toggle-pause" }
 ```
 
 ## Reconnection

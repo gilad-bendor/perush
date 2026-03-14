@@ -18,11 +18,14 @@ import type {
   ManagerDecision,
   ConversationMessage,
   AgentDefinition,
+  ProcessKind,
+  ProcessEventKind,
+  ProcessRecord,
+  ProcessEventRecord,
 } from "./types";
 import { createFormattedTime } from "./types";
 import {
   DIRECTOR_TIMEOUT_MS,
-  ESTIMATED_COST_PER_CYCLE,
 } from "./config";
 import { logInfo, logWarn, logError } from "./logs";
 import {
@@ -51,6 +54,8 @@ import {
   extractAssessment,
   extractManagerDecision,
   clearSessions,
+  resetCycleCost,
+  getCycleCost,
 } from "./session-manager";
 
 // ---------------------------------------------------------------------------
@@ -59,7 +64,7 @@ import {
 
 export interface OrchestratorEvents {
   onPhaseChange: (phase: Phase, activeSpeaker?: SpeakerId) => void;
-  onSpeech: (speaker: SpeakerId, content: string, timestamp: string) => void;
+  onSpeech: (speaker: SpeakerId, content: string, timestamp: string, cycleCost: number) => void;
   onSpeechChunk: (speaker: SpeakerId, delta: string) => void;
   onSpeechDone: (speaker: SpeakerId) => void;
   onAssessment: (assessment: PrivateAssessment) => void;
@@ -67,6 +72,9 @@ export interface OrchestratorEvents {
   onYourTurn: () => void;
   onError: (message: string) => void;
   onSync: (meeting: Meeting, phase: Phase, readOnly?: boolean, editingCycle?: number) => void;
+  onProcessStart: (processId: string, processKind: ProcessKind, agent: AgentId | "manager", cycleNumber: number) => void;
+  onProcessEvent: (processId: string, eventKind: ProcessEventKind, content: string, toolName?: string, toolInput?: string) => void;
+  onProcessDone: (processId: string) => void;
 }
 
 // ---------------------------------------------------------------------------
@@ -102,6 +110,9 @@ function createNoopEvents(): OrchestratorEvents {
     onYourTurn: () => {},
     onError: () => {},
     onSync: () => {},
+    onProcessStart: () => {},
+    onProcessEvent: () => {},
+    onProcessDone: () => {},
   };
 }
 
@@ -242,7 +253,32 @@ export async function runCycle(
   }
 
   const cycleNumber = currentMeeting.cycles.length + 1;
+  resetCycleCost();
   logInfo("orchestrator", `runCycle ${cycleNumber}: lastSpeaker=${lastSpeaker}`);
+
+  // Track all process records for this cycle
+  const processes: ProcessRecord[] = [];
+
+  // Helper: create a process record and emit start/event/done
+  function createProcessTracker(processKind: ProcessKind, agent: AgentId | "manager") {
+    const processId = `c${cycleNumber}-${processKind}-${agent}`;
+    const processEvents: ProcessEventRecord[] = [];
+    const record: ProcessRecord = { processId, processKind, agent, events: processEvents };
+    processes.push(record);
+
+    events.onProcessStart(processId, processKind, agent, cycleNumber);
+
+    return {
+      processId,
+      emit(eventKind: ProcessEventKind, content: string, toolName?: string, toolInput?: string) {
+        processEvents.push({ eventKind, content, toolName, toolInput });
+        events.onProcessEvent(processId, eventKind, content, toolName, toolInput);
+      },
+      done() {
+        events.onProcessDone(processId);
+      },
+    };
+  }
 
   // ------ ASSESSMENT PHASE ------
   setPhase("assessing");
@@ -253,9 +289,13 @@ export async function runCycle(
   const assessmentPromises = currentMeeting.participants
     .filter(id => id !== lastSpeaker)
     .map(async (agentId) => {
+      const tracker = createProcessTracker("assessment", agentId);
       try {
         const prompt = buildAssessmentPrompt(lastSpeaker, lastContent);
-        const response = await feedMessage(agentId, prompt);
+        tracker.emit("prompt", prompt);
+        const response = await feedMessage(agentId, prompt, (eventKind, content, toolName, toolInput) => {
+          tracker.emit(eventKind, content, toolName, toolInput);
+        });
         const assessment = extractAssessment(agentId, response);
         if (assessment) {
           assessments[agentId] = assessment;
@@ -265,6 +305,8 @@ export async function runCycle(
         // Assessment failure is non-fatal — proceed with partial assessments
         logWarn("orchestrator", `runCycle ${cycleNumber}: assessment failed for ${agentId}`, err);
         events.onError(`Assessment failed for ${agentId}: ${err}`);
+      } finally {
+        tracker.done();
       }
     });
 
@@ -276,9 +318,13 @@ export async function runCycle(
 
   let decision: ManagerDecision;
 
+  const managerTracker = createProcessTracker("manager-selection", "manager");
   try {
     const selectionPrompt = buildSelectionPrompt(lastSpeaker, lastContent, assessments);
-    const managerResponse = await feedMessage("manager", selectionPrompt);
+    managerTracker.emit("prompt", selectionPrompt);
+    const managerResponse = await feedMessage("manager", selectionPrompt, (eventKind, content, toolName, toolInput) => {
+      managerTracker.emit(eventKind, content, toolName, toolInput);
+    });
     const parsed = extractManagerDecision(managerResponse);
 
     if (!parsed) {
@@ -296,6 +342,8 @@ export async function runCycle(
       vibe: "שגיאה בבחירת דובר.",
     };
     events.onError(`Selection failed: ${err}`);
+  } finally {
+    managerTracker.done();
   }
 
   // Apply attention override
@@ -324,7 +372,7 @@ export async function runCycle(
       content: humanContent,
       timestamp: createFormattedTime(),
     };
-    events.onSpeech("human", humanContent, speech.timestamp);
+    events.onSpeech("human", humanContent, speech.timestamp, getCycleCost());
   } else {
     // Agent speech
     setPhase("speaking", nextSpeakerId);
@@ -332,18 +380,31 @@ export async function runCycle(
     const speechPrompt = "נבחרת לדבר. הנה תגובתך.\n\n---stub-response---\ntext: תגובת הסוכן.\n---end-stub-response---";
     let fullText = "";
 
+    const speechTracker = createProcessTracker("agent-speech", nextSpeakerId);
+    speechTracker.emit("prompt", speechPrompt);
+
     try {
       for await (const event of streamSpeech(nextSpeakerId, speechPrompt)) {
         if (event.type === "chunk") {
           events.onSpeechChunk(nextSpeakerId, event.text);
+          // Text chunks are accumulated; we'll emit a single "text" event at done
+        } else if (event.type === "thinking") {
+          speechTracker.emit("thinking", event.text);
+        } else if (event.type === "tool-call") {
+          speechTracker.emit("tool-call", event.input, event.toolName, event.input);
+        } else if (event.type === "tool-result") {
+          speechTracker.emit("tool-result", event.output, event.toolName);
         } else if (event.type === "done") {
           fullText = event.fullText;
+          speechTracker.emit("text", fullText);
         }
       }
     } catch (err) {
       fullText = `[שגיאה: ${err}]`;
       logError("orchestrator", `runCycle ${cycleNumber}: speech failed for ${nextSpeakerId}`, err);
       events.onError(`Speech failed for ${nextSpeakerId}: ${err}`);
+    } finally {
+      speechTracker.done();
     }
 
     speech = {
@@ -352,7 +413,7 @@ export async function runCycle(
       timestamp: createFormattedTime(),
     };
     events.onSpeechDone(nextSpeakerId);
-    events.onSpeech(nextSpeakerId, fullText, speech.timestamp);
+    events.onSpeech(nextSpeakerId, fullText, speech.timestamp, getCycleCost());
   }
 
   // ------ RECORD & COMMIT ------
@@ -361,12 +422,14 @@ export async function runCycle(
     speech,
     assessments,
     managerDecision: decision,
+    processes,
   };
 
   currentMeeting.cycles.push(cycle);
   currentMeeting.lastEngagedAt = speech.timestamp;
+  const cycleCost = getCycleCost();
   currentMeeting.totalCostEstimate =
-    (currentMeeting.totalCostEstimate ?? 0) + ESTIMATED_COST_PER_CYCLE;
+    (currentMeeting.totalCostEstimate ?? 0) + cycleCost;
 
   await writeMeetingAtomic(currentWorktreePath, currentMeeting);
   await commitCycleGit(currentWorktreePath, cycleNumber, speech.speaker);

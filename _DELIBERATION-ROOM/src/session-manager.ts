@@ -14,7 +14,7 @@
 import { readdir, readFile } from "fs/promises";
 import { join, basename } from "path";
 import matter from "gray-matter";
-import type { AgentDefinition, AgentId, PrivateAssessment, ManagerDecision } from "./types";
+import type { AgentDefinition, AgentId, PrivateAssessment, ManagerDecision, ProcessEventKind } from "./types";
 import { AgentDefinitionSchema, PrivateAssessmentSchema, ManagerDecisionSchema } from "./types";
 import {
   PARTICIPANT_AGENTS_DIR,
@@ -25,6 +25,7 @@ import {
   DICTIONARY_INJECTION_POINT,
   PARTICIPANT_MODEL,
   MANAGER_MODEL,
+  effortForModel,
   PARTICIPANT_TOOLS,
   MANAGER_TOOLS,
   MAX_BUDGET_PER_SPEECH,
@@ -370,6 +371,26 @@ const sessionRegistry = new Map<AgentId | "manager", string>();
 const activeQueries = new Map<AgentId | "manager", AnyQuery>();
 
 /**
+ * Accumulated cost (USD) from SDK interactions since the last reset.
+ * The orchestrator calls resetCycleCost() at cycle start and
+ * getCycleCost() at cycle end to get actual spend per cycle.
+ */
+let cycleCostAccumulator = 0;
+
+/** Reset the per-cycle cost accumulator. Call at the start of each cycle. */
+export function resetCycleCost(): void { cycleCostAccumulator = 0; }
+
+/** Get the accumulated cost since the last reset. */
+export function getCycleCost(): number { return cycleCostAccumulator; }
+
+/** Extract total_cost_usd from an SDK result message and add to accumulator. */
+function accumulateCost(msg: any): void {
+  if (msg.type === "result" && typeof (msg as any).total_cost_usd === "number") {
+    cycleCostAccumulator += (msg as any).total_cost_usd;
+  }
+}
+
+/**
  * Create a new session for an agent and return the session ID.
  * The session is created via an initial query() call.
  *
@@ -383,13 +404,15 @@ export async function createSession(
   const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
   const tools = agentId === "manager" ? MANAGER_TOOLS : PARTICIPANT_TOOLS;
 
-  logInfo("sessions", `createSession START for ${agentId} (model=${model}, stub=${USE_STUB_SDK})`);
+  const effort = effortForModel(model);
+  logInfo("sessions", `createSession START for ${agentId} (model=${model}, effort=${effort}, stub=${USE_STUB_SDK})`);
 
   const queryFn = await getQueryFn();
   const query = queryFn({
     prompt: initialPrompt,
     options: {
       model,
+      effort,
       systemPrompt,
       tools,
       cwd: ROOT_PROJECT_DIR,
@@ -408,6 +431,7 @@ export async function createSession(
     if (msg.type === "result" && (msg as any).subtype === "success") {
       responseText = (msg as any).result ?? "";
     }
+    accumulateCost(msg);
   }
 
   if (!sessionId) throw new Error(`Failed to create session for ${agentId}`);
@@ -417,13 +441,20 @@ export async function createSession(
   return { sessionId, responseText };
 }
 
+/** Callback for process events emitted during SDK interactions. */
+export type ProcessEventCallback = (eventKind: ProcessEventKind, content: string, toolName?: string, toolInput?: string) => void;
+
 /**
  * Feed a message into an existing session and get the full response.
  * Uses the resume pattern with the session's ID.
+ *
+ * If `onEvent` is provided, all intermediate SDK events (thinking, text,
+ * tool calls, tool results) are forwarded through it.
  */
 export async function feedMessage(
   agentId: AgentId | "manager",
   prompt: string,
+  onEvent?: ProcessEventCallback,
 ): Promise<string> {
   const sessionId = sessionRegistry.get(agentId);
   if (!sessionId) {
@@ -431,8 +462,9 @@ export async function feedMessage(
     throw new Error(`No session found for ${agentId}`);
   }
 
-  logInfo("session-manager", `feedMessage: ${agentId} (session=${sessionId})`);
   const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
+  const effort = effortForModel(model);
+  logInfo("session-manager", `feedMessage: ${agentId} (session=${sessionId}, effort=${effort})`);
 
   const queryFn = await getQueryFn();
   const query = queryFn({
@@ -440,6 +472,7 @@ export async function feedMessage(
     options: {
       resume: sessionId,
       model,
+      effort,
       maxTurns: 1,
       cwd: ROOT_PROJECT_DIR,
     },
@@ -449,9 +482,13 @@ export async function feedMessage(
 
   let responseText = "";
   for await (const msg of query) {
+    if (onEvent) {
+      emitProcessEvents(msg, onEvent);
+    }
     if (msg.type === "result" && (msg as any).subtype === "success") {
       responseText = (msg as any).result ?? "";
     }
+    accumulateCost(msg);
   }
 
   activeQueries.delete(agentId);
@@ -459,21 +496,30 @@ export async function feedMessage(
   return responseText;
 }
 
+/** Event types yielded by streamSpeech */
+export type SpeechStreamEvent =
+  | { type: "chunk"; text: string }
+  | { type: "thinking"; text: string }
+  | { type: "tool-call"; toolName: string; input: string }
+  | { type: "tool-result"; toolName: string; output: string }
+  | { type: "done"; fullText: string };
+
 /**
- * Feed a message and stream the response as an async generator of text chunks.
+ * Feed a message and stream the response as an async generator of events.
  * Used for Participant-Agent speeches.
+ * Yields text chunks, thinking blocks, tool calls/results, and a final done event.
  */
 export async function* streamSpeech(
   agentId: AgentId,
   prompt: string,
-): AsyncGenerator<{ type: "chunk"; text: string } | { type: "done"; fullText: string }> {
+): AsyncGenerator<SpeechStreamEvent> {
   const sessionId = sessionRegistry.get(agentId);
   if (!sessionId) throw new Error(`No session found for ${agentId}`);
 
-  logInfo("session-manager", `streamSpeech: ${agentId} (session=${sessionId})`);
-
-
   const model = PARTICIPANT_MODEL;
+  const effort = effortForModel(model);
+  logInfo("session-manager", `streamSpeech: ${agentId} (session=${sessionId}, effort=${effort})`);
+
   const tools = PARTICIPANT_TOOLS;
 
   const queryFn = await getQueryFn();
@@ -482,6 +528,7 @@ export async function* streamSpeech(
     options: {
       resume: sessionId,
       model,
+      effort,
       tools,
       includePartialMessages: true,
       maxTurns: MAX_TURNS_PER_SPEECH,
@@ -494,16 +541,48 @@ export async function* streamSpeech(
 
   let fullText = "";
   for await (const msg of query) {
+    // Stream text deltas
     if (msg.type === "stream_event") {
-      const delta = (msg as any).event?.delta?.text;
-      if (delta) {
-        fullText += delta;
-        yield { type: "chunk", text: delta };
+      const event = (msg as any).event;
+      const delta = event?.delta;
+      if (delta?.type === "text_delta" && delta.text) {
+        fullText += delta.text;
+        yield { type: "chunk", text: delta.text };
+      } else if (delta?.type === "thinking_delta" && delta.thinking) {
+        yield { type: "thinking", text: delta.thinking };
       }
+    }
+    // Full assistant message — extract thinking and tool_use blocks
+    if (msg.type === "assistant") {
+      const content = (msg as any).message?.content;
+      if (Array.isArray(content)) {
+        for (const block of content) {
+          if (block.type === "thinking" && block.thinking) {
+            yield { type: "thinking", text: block.thinking };
+          } else if (block.type === "tool_use") {
+            yield {
+              type: "tool-call",
+              toolName: block.name ?? "unknown",
+              input: typeof block.input === "string" ? block.input : JSON.stringify(block.input),
+            };
+          }
+        }
+      }
+    }
+    // Tool results
+    if (msg.type === "tool_progress" || msg.type === "tool_use_summary") {
+      const toolName = (msg as any).tool_name ?? (msg as any).name ?? "unknown";
+      const output = (msg as any).content ?? (msg as any).result ?? "";
+      yield {
+        type: "tool-result",
+        toolName,
+        output: typeof output === "string" ? output : JSON.stringify(output),
+      };
     }
     if (msg.type === "result" && (msg as any).subtype === "success") {
       fullText = (msg as any).result ?? fullText;
     }
+    accumulateCost(msg);
   }
 
   activeQueries.delete(agentId);
@@ -605,6 +684,42 @@ export function extractManagerDecision(responseText: string): ManagerDecision | 
   } catch (err) {
     logWarn("session-manager", `extractManagerDecision: parse error`, err);
     return null;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// SDK Event → ProcessEvent normalization
+// ---------------------------------------------------------------------------
+
+/**
+ * Extract process events from a raw SDK message and forward via callback.
+ * Called for non-streaming interactions (assessments, manager selection).
+ */
+function emitProcessEvents(msg: any, onEvent: ProcessEventCallback): void {
+  // Full assistant message — extract text, thinking, tool_use blocks
+  if (msg.type === "assistant") {
+    const content = msg.message?.content;
+    if (Array.isArray(content)) {
+      for (const block of content) {
+        if (block.type === "thinking" && block.thinking) {
+          onEvent("thinking", block.thinking);
+        } else if (block.type === "text" && block.text) {
+          onEvent("text", block.text);
+        } else if (block.type === "tool_use") {
+          onEvent("tool-call", typeof block.input === "string" ? block.input : JSON.stringify(block.input), block.name ?? "unknown", typeof block.input === "string" ? block.input : JSON.stringify(block.input));
+        } else if (block.type === "tool_result") {
+          const output = typeof block.content === "string" ? block.content : JSON.stringify(block.content);
+          onEvent("tool-result", output, block.tool_use_id ?? "unknown");
+        }
+      }
+    }
+  }
+
+  // Tool progress / summary
+  if (msg.type === "tool_progress" || msg.type === "tool_use_summary") {
+    const toolName = msg.tool_name ?? msg.name ?? "unknown";
+    const output = msg.content ?? msg.result ?? "";
+    onEvent("tool-result", typeof output === "string" ? output : JSON.stringify(output), toolName);
   }
 }
 

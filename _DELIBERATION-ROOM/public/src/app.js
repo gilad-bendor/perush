@@ -23,7 +23,6 @@
 /** @typedef {import('../../src/types.ts').MeetingId} MeetingId */
 
 import { ConversationView } from "./conversation-view.js";
-import { AgentPanel } from "./agent-panel.js";
 import { speakerColor, phaseDisplayName, querySelectorMust, prettyLog } from "./utils.js";
 
 // ---- Constants --------------------------------------------------------------
@@ -77,10 +76,12 @@ let readOnly = false;
 let editingCycle = null;
 /** @type {AgentDefinition[]} Cached agent definitions from `/api/agents`. */
 let agentDefinitions = [];
+/** @type {boolean} Whether the deliberation loop is paused. */
+let isPaused = true;
+/** @type {boolean} Whether the pause is actively blocking a new cycle. */
+let pauseBlocking = false;
 /** @type {ConversationView | null} */
 let conversationView = null;
-/** @type {AgentPanel | null} */
-let agentPanel = null;
 
 // ---- URL Routing ------------------------------------------------------------
 
@@ -126,7 +127,6 @@ function routeFromUrl() {
     currentMeeting = null;
     readOnly = false;
     conversationView = null;
-    agentPanel = null;
     showLanding();
   }
 }
@@ -147,6 +147,7 @@ const $vibeText = document.getElementById("vibe-text");
 const $vibeNext = document.getElementById("vibe-next");
 const $vibePhase = document.getElementById("vibe-phase");
 const $vibeCost = document.getElementById("vibe-cost");
+const $pauseBtn = document.getElementById("pause-btn");
 const $attentionBtn = document.getElementById("attention-btn");
 const $humanInput = document.getElementById("human-input-textarea");
 const $humanSubmit = document.getElementById("human-submit-btn");
@@ -254,9 +255,9 @@ function handleServerMessage(msg) {
       break;
     case "speech":
       conversationView?.addSpeech(msg.speaker, msg.content, msg.timestamp);
-      // Increment client-side cost estimate
-      if (currentMeeting) {
-        currentMeeting.totalCostEstimate = (currentMeeting.totalCostEstimate || 0) + 0.50;
+      // Update client-side cost from server-reported actual cost
+      if (currentMeeting && msg.cycleCost != null) {
+        currentMeeting.totalCostEstimate = (currentMeeting.totalCostEstimate || 0) + msg.cycleCost;
         updateCostDisplay();
       }
       break;
@@ -267,11 +268,7 @@ function handleServerMessage(msg) {
       conversationView?.finalizeSpeech(msg.speaker);
       break;
     case "assessment":
-      agentPanel?.setAssessment(msg.agent, {
-        selfImportance: msg.selfImportance,
-        humanImportance: msg.humanImportance,
-        summary: msg.summary,
-      });
+      // Assessments now visible via process labels; no separate panel
       break;
     case "vibe":
       handleVibe(msg);
@@ -291,6 +288,18 @@ function handleServerMessage(msg) {
     case "meeting-ended":
       handleMeetingEnded();
       break;
+    case "process-start":
+      conversationView?.startProcess(msg.processId, msg.processKind, msg.agent, msg.cycleNumber);
+      break;
+    case "process-event":
+      conversationView?.addProcessEvent(msg.processId, msg.eventKind, msg.content, msg.toolName, msg.toolInput);
+      break;
+    case "process-done":
+      conversationView?.endProcess(msg.processId);
+      break;
+    case "pause-state":
+      handlePauseState(msg.paused, msg.blocking);
+      break;
   }
 }
 
@@ -303,6 +312,11 @@ function handleSync(msg) {
   currentPhase = msg.currentPhase || "idle";
   readOnly = msg.readOnly || false;
   editingCycle = msg.editingCycle ?? null;
+
+  // Restore pause state from sync
+  if (msg.paused != null) {
+    handlePauseState(msg.paused, false);
+  }
 
   if (currentMeeting) {
     // Ensure URL reflects the meeting we're viewing
@@ -408,9 +422,6 @@ function updatePhaseUI(phase, activeSpeaker) {
     case "speaking":
       disableHumanInput();
       $attentionBtn.classList.remove("hidden");
-      if (activeSpeaker) {
-        agentPanel?.openForAgent(activeSpeaker);
-      }
       break;
     case "idle":
       disableHumanInput();
@@ -471,10 +482,12 @@ function showDeliberation() {
     $viewOnlyBanner.classList.remove("hidden");
     querySelectorMust(".human-input").classList.add("hidden");
     $attentionBtn.classList.add("hidden");
+    $pauseBtn.classList.add("hidden");
   } else {
     $viewOnlyBanner.classList.add("hidden");
     querySelectorMust(".human-input").classList.remove("hidden");
     $attentionBtn.classList.remove("hidden");
+    $pauseBtn.classList.remove("hidden");
   }
 }
 
@@ -491,15 +504,11 @@ function renderMeetingState() {
     speakerColor,
     readOnly,
     onRollback: readOnly ? null : handleRollbackRequest,
+    agentDisplayName: (id) => {
+      if (id === "manager") return "\u05DE\u05E0\u05D4\u05DC";
+      return speakerDisplayName(id);
+    },
   });
-
-  // Initialize agent panel with meeting participants
-  const tabsContainer = document.getElementById("agent-tabs");
-  const contentContainer = document.getElementById("agent-tab-content");
-  const meetingAgents = agentDefinitions.filter((a) =>
-    currentMeeting.participants.includes(a.id)
-  );
-  agentPanel = new AgentPanel(tabsContainer, contentContainer, meetingAgents, speakerColor);
 
   // Render opening prompt as first message
   conversationView.addSpeech(
@@ -508,17 +517,18 @@ function renderMeetingState() {
     currentMeeting.startedAt
   );
 
-  // Render all existing cycles
+  // Render all existing cycles with their process records
   for (const cycle of currentMeeting.cycles) {
+    // Render persisted process labels (assessments, manager, speech)
+    if (cycle.processes && cycle.processes.length > 0) {
+      conversationView.renderPersistedProcesses(cycle.processes, cycle.cycleNumber);
+    }
+    // Render the public speech
     conversationView.addSpeech(
       cycle.speech.speaker,
       cycle.speech.content,
       cycle.speech.timestamp
     );
-    // Show assessments in agent panel
-    for (const [agentId, assessment] of /** @type {[string, PrivateAssessment][]} */ (Object.entries(cycle.assessments))) {
-      agentPanel.setAssessment(agentId, assessment);
-    }
   }
 
   // Handle edit-after-rollback
@@ -740,6 +750,43 @@ $attentionBtn.addEventListener("click", () => {
   sendWs({ type: "attention" });
 });
 
+// ---- Play/Pause Button ------------------------------------------------------
+
+$pauseBtn.addEventListener("click", () => {
+  sendWs({ type: "toggle-pause" });
+});
+
+/**
+ * Updates the play/pause button state.
+ * @param {boolean} newPaused   - Whether the loop is paused
+ * @param {boolean} newBlocking - Whether the pause is actively preventing a new cycle
+ */
+function handlePauseState(newPaused, newBlocking) {
+  isPaused = newPaused;
+  pauseBlocking = newBlocking;
+  updatePauseButton();
+}
+
+/** Renders the pause button based on current state. */
+function updatePauseButton() {
+  if (isPaused) {
+    $pauseBtn.innerHTML = "&#x25B6; המשך"; // ▶ Play
+    if (pauseBlocking) {
+      // Highlight: pause is actively blocking iterations
+      $pauseBtn.classList.remove("border-stone-300", "text-stone-600", "hover:bg-stone-100");
+      $pauseBtn.classList.add("border-red-400", "text-red-700", "bg-red-50", "hover:bg-red-100");
+    } else {
+      // Normal paused state (not yet blocking)
+      $pauseBtn.classList.remove("border-red-400", "text-red-700", "bg-red-50", "hover:bg-red-100");
+      $pauseBtn.classList.add("border-stone-300", "text-stone-600", "hover:bg-stone-100");
+    }
+  } else {
+    $pauseBtn.innerHTML = "&#x23F8; השהה"; // ⏸ Pause
+    $pauseBtn.classList.remove("border-red-400", "text-red-700", "bg-red-50", "hover:bg-red-100");
+    $pauseBtn.classList.add("border-stone-300", "text-stone-600", "hover:bg-stone-100");
+  }
+}
+
 // ---- Rollback ---------------------------------------------------------------
 
 /** @type {number | null} Cycle number awaiting confirmation in the rollback modal. */
@@ -786,7 +833,6 @@ $backToLanding.addEventListener("click", () => {
     currentMeeting = null;
     readOnly = false;
     conversationView = null;
-    agentPanel = null;
     navigateTo("/");
   } else {
     // Active meeting — confirm
@@ -794,15 +840,6 @@ $backToLanding.addEventListener("click", () => {
       // Do nothing — they need to /end first
     }
   }
-});
-
-// ---- Panel Toggle -----------------------------------------------------------
-
-document.getElementById("panel-toggle").addEventListener("click", () => {
-  const panel = querySelectorMust(".agent-panel");
-  panel.classList.toggle("collapsed");
-  const btn = document.getElementById("panel-toggle");
-  btn.textContent = panel.classList.contains("collapsed") ? "\u25C0" : "\u25B6";
 });
 
 // ---- Post-Rollback Edit Submission ------------------------------------------

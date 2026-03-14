@@ -79,7 +79,12 @@ For everything else — architecture, implementation, infrastructure — this fi
 5. Speech added to conversation → commit to session branch → back to step 1
 ```
 
-**Privacy invariant**: Participant-Agents see only the public conversation. They do NOT see each other's assessments or the Manager's reasoning.
+Every SDK interaction in steps 2-4 emits process events (prompt, thinking, text, tool calls, tool results) that are:
+- **Streamed live** to the browser via `process-start` / `process-event` / `process-done` WebSocket messages
+- **Persisted** in `meeting.yaml` as `ProcessRecord[]` per cycle, so full traces survive reconnect/reload
+- **Rendered** in the conversation timeline as expandable colored labels (one per agent per interaction)
+
+**Privacy invariant**: Participant-Agents see only the public conversation. They do NOT see each other's assessments or the Manager's reasoning. However, the **Director (human)** sees everything via the UI's expandable process labels.
 
 ### Session Setup
 
@@ -128,11 +133,26 @@ interface PrivateAssessment {
 
 // A cycle = assess previous speech → select next speaker → that speaker speaks.
 // `speech` is the speech PRODUCED during this cycle.
+interface ProcessEventRecord {
+  eventKind: "prompt" | "thinking" | "text" | "tool-call" | "tool-result";
+  content: string;
+  toolName?: string;
+  toolInput?: string;
+}
+
+interface ProcessRecord {
+  processId: string;
+  processKind: "assessment" | "manager-selection" | "agent-speech";
+  agent: AgentId | "manager";
+  events: ProcessEventRecord[];
+}
+
 interface CycleRecord {
   cycleNumber: number;
   speech: ConversationMessage;
   assessments: Record<AgentId, PrivateAssessment>;
   managerDecision: { nextSpeaker: SpeakerId; vibe: string };
+  processes?: ProcessRecord[];  // full SDK interaction traces (prompts, thinking, tools, output)
 }
 
 interface Meeting {
@@ -206,8 +226,8 @@ _DELIBERATION-ROOM/
 │   ├── style.css          ← Tailwind output (gitignored)
 │   └── src/
 │       ├── app.js         ← WebSocket client, page routing
-│       ├── conversation-view.js  ← message feed, streaming
-│       └── agent-panel.js        ← collapsible panel, tabs, assessments
+│       ├── conversation-view.js  ← message feed, streaming, process labels
+│       └── process-label.js      ← expandable process labels (replaced agent-panel.js)
 ├── tests/
 │   └── e2e/
 │       ├── landing-page.test.ts
@@ -282,6 +302,24 @@ server.ts         ← orchestrator.ts, types.ts, config.ts, context.ts
 - **Atomic writes**: `meeting.yaml` written via temp-file-then-rename.
 - **RTL-first**: Tailwind logical properties only (`ms-`, `me-`, `ps-`, `pe-`, `start-`, `end-`). Physical `left`/`right` is **forbidden**.
 
+### Keeping Documentation Up to Date
+
+**After every change**, evaluate whether `CLAUDE.md` or any `CLAUDE-TOPICS/*.md` file needs updating. These files are the project's source of truth — stale documentation causes compounding errors across sessions.
+
+**You MUST update documentation when a change:**
+- Adds, removes, or renames files, modules, or directories referenced in the project structure.
+- Changes architecture, data flow, schemas, or the import dependency graph.
+- Introduces new conventions, configuration values, or environment variables.
+- Alters the WebSocket protocol, meeting lifecycle, or session management behavior.
+- Modifies the testing approach or adds new test categories.
+- Resolves or introduces an open design question.
+
+**Where to update:**
+- **`CLAUDE.md`**: for changes to architecture, project structure, taxonomy, schemas, development guidelines, or anything in the main reference.
+- **`CLAUDE-TOPICS/*.md`**: for changes scoped to a specific topic (protocol, git persistence, testing, UI, etc.).
+
+**Do not let documentation drift.** A code change without a corresponding doc update (when warranted) is incomplete.
+
 ### Error Handling
 
 - **Session failure**: Apply session recovery (new session, feed transcript, capture, update `meeting.yaml`). If recovery fails too, notify the Director.
@@ -326,7 +364,7 @@ These files contain detailed specifications that are **not needed in every sessi
 
 8. **`outputFormat`**: SDK supports constrained JSON output for assessments/selections. Could eliminate malformed-JSON errors.
 
-9. **`effort` option**: `"low"` for assessments, `"high"` for speeches. Could reduce latency/cost.
+9. ~~**`effort` option**~~: **Implemented** — auto-derived from model: haiku→low, sonnet→medium, opus→high. See `effortForModel()` in `config.ts`.
 
 10. **`forkSession`**: Simplified session recovery that retains internal reasoning (not just public transcript).
 

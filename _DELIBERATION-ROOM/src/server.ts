@@ -153,8 +153,8 @@ function setupOrchestratorEvents(): void {
     onPhaseChange: (phase, activeSpeaker) => {
       broadcast({ type: "phase", phase, activeSpeaker });
     },
-    onSpeech: (speaker, content, timestamp) => {
-      broadcast({ type: "speech", speaker, content, timestamp });
+    onSpeech: (speaker, content, timestamp, cycleCost) => {
+      broadcast({ type: "speech", speaker, content, timestamp, cycleCost });
     },
     onSpeechChunk: (speaker, delta) => {
       broadcast({ type: "speech-chunk", speaker, delta });
@@ -181,7 +181,16 @@ function setupOrchestratorEvents(): void {
       broadcast({ type: "error", message });
     },
     onSync: (meeting, currentPhase, readOnly, editingCycle) => {
-      broadcast({ type: "sync", meeting, currentPhase, readOnly, editingCycle });
+      broadcast({ type: "sync", meeting, currentPhase, readOnly, editingCycle, paused });
+    },
+    onProcessStart: (processId, processKind, agent, cycleNumber) => {
+      broadcast({ type: "process-start", processId, processKind, agent, cycleNumber });
+    },
+    onProcessEvent: (processId, eventKind, content, toolName, toolInput) => {
+      broadcast({ type: "process-event", processId, eventKind, content, toolName, toolInput });
+    },
+    onProcessDone: (processId) => {
+      broadcast({ type: "process-done", processId });
     },
   });
 }
@@ -195,6 +204,78 @@ let deliberationLoopActive = false;
 /** Resolves when the deliberation loop finishes after being stopped. */
 let loopDoneResolver: (() => void) | null = null;
 
+// ---------------------------------------------------------------------------
+// Pause state
+// ---------------------------------------------------------------------------
+
+/** When true, the deliberation loop will not start new cycles. */
+let paused = true;
+
+/** Resolver to unblock the loop when unpaused. */
+let unpauseResolver: (() => void) | null = null;
+
+/** Returns the current pause state. */
+export function isPaused(): boolean {
+  return paused;
+}
+
+/** Toggle pause and broadcast the new state. */
+function togglePause(): void {
+  paused = !paused;
+  logInfo("server", `pause toggled → ${paused ? "PAUSED" : "PLAYING"}`);
+
+  if (!paused && unpauseResolver) {
+    // Unblock the waiting loop
+    unpauseResolver();
+    unpauseResolver = null;
+  }
+
+  broadcastPauseState();
+}
+
+/** Broadcast the current pause state, including whether it's actively blocking. */
+function broadcastPauseState(): void {
+  // "blocking" = paused AND the loop is active AND we're between cycles (idle phase)
+  const blocking = paused && deliberationLoopActive && getPhase() === "idle";
+  broadcast({ type: "pause-state", paused, blocking });
+}
+
+/**
+ * If paused, wait until unpaused. Returns immediately if not paused.
+ * Returns false if the loop was stopped while waiting.
+ */
+async function waitIfPaused(): Promise<boolean> {
+  if (!paused) return true;
+
+  // Broadcast that we're blocking
+  broadcastPauseState();
+
+  // Wait for unpause or loop stop
+  await new Promise<void>((resolve) => {
+    unpauseResolver = resolve;
+
+    // Also resolve if the loop is stopped
+    const checkInterval = setInterval(() => {
+      if (!deliberationLoopActive) {
+        clearInterval(checkInterval);
+        resolve();
+      }
+    }, 200);
+
+    // Clean up interval when resolved normally
+    const origResolver = unpauseResolver;
+    unpauseResolver = () => {
+      clearInterval(checkInterval);
+      origResolver?.();
+    };
+  });
+
+  // After unpausing, broadcast non-blocking state
+  if (!paused) broadcastPauseState();
+
+  return deliberationLoopActive;
+}
+
 /**
  * Run the deliberation loop: cycles run until the meeting ends.
  * Each cycle takes the last speech and runs: assess → select → speak.
@@ -206,6 +287,10 @@ async function runDeliberationLoop(lastSpeaker: SpeakerId, lastContent: string):
   let content = lastContent;
 
   while (deliberationLoopActive && getMeeting()) {
+    // Wait if paused (blocks until unpaused or loop stopped)
+    if (!(await waitIfPaused())) break;
+    if (!deliberationLoopActive || !getMeeting()) break;
+
     try {
       const cycle = await runCycle(speaker, content);
       if (!cycle || !deliberationLoopActive) break;
@@ -245,6 +330,12 @@ async function stopDeliberationLoop(): Promise<void> {
   if (!deliberationLoopActive) return;
   logInfo("server", `deliberation loop stopping...`);
   deliberationLoopActive = false;
+
+  // Unblock the loop if it's waiting for pause
+  if (unpauseResolver) {
+    unpauseResolver();
+    unpauseResolver = null;
+  }
 
   // Unblock the loop if it's waiting for human speech
   cancelHumanTurn();
@@ -292,6 +383,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
             type: "sync",
             meeting,
             currentPhase: getPhase(),
+            paused,
           });
           // Start the deliberation loop with the opening prompt
           wrapDanglingPromise(
@@ -312,6 +404,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
             type: "sync",
             meeting,
             currentPhase: getPhase(),
+            paused,
           });
           // Resume the deliberation loop from the last speech
           const lastCycle = meeting.cycles[meeting.cycles.length - 1];
@@ -359,6 +452,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
               type: "sync",
               meeting: activeMeeting,
               currentPhase: getPhase(),
+              paused,
             });
           } else {
             // Not active — view-only from git
@@ -415,6 +509,11 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
         } catch (err: any) {
           sendTo(ws, { type: "error", message: err?.message || "Rollback failed" });
         }
+        break;
+      }
+
+      case "toggle-pause": {
+        togglePause();
         break;
       }
     }
