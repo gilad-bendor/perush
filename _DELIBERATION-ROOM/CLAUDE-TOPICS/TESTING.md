@@ -4,6 +4,16 @@
 
 **Mandatory rule: every implementation task must be accompanied by tests.** Code without tests is incomplete code.
 
+## Running Tests
+
+**Always capture full output to a temp file** so failure analysis doesn't require re-running the suite:
+
+```bash
+TMP=$(mktemp /tmp/bun-test.XXXXX); bun test 2>&1 | tee "$TMP" | tail -5; echo "Full output: $TMP"
+```
+
+This gives an inline summary (pass/fail counts) and saves the full output for immediate `Read` if failures need investigation. **Never re-run the test suite just to try a different grep pattern** — read the temp file instead.
+
 ## Unit Tests (`bun:test`)
 
 Test each module in isolation. Use the stub SDK (see below) to avoid API calls in tests.

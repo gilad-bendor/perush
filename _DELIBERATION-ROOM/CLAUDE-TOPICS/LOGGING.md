@@ -13,7 +13,7 @@ All logging goes through `src/logs.ts` via `logInfo()`, `logWarn()`, `logError()
 Every log entry starts with a single header line:
 
 ```
-TTTTTTTT [LEVEL] [category] [[context]] label
+TTTTTTTT [LEVEL] [category] [context] label
 ```
 
 | Field | Example | Meaning |
@@ -21,13 +21,13 @@ TTTTTTTT [LEVEL] [category] [[context]] label
 | `TTTTTTTT` | `00003842` | Milliseconds since app startup, zero-padded to 8 digits |
 | `[LEVEL]` | `[INFO]`, `[WARN]`, `[ERROR]` | Severity, padded to 7 chars |
 | `[category]` | `[sdk]`, `[orchestrator]` | Log category from `logsConfig` |
-| `[[context]]` | `[[C12]]`, `[[N/A]]` | The WebSocket `messageId` that triggered this operation (`C<n>` for client messages, `S<n>` for server messages), or `[N/A]` if outside a request context |
+| `[context]` | `[C12]`, `[N/A]` | The WebSocket `messageId` that triggered this operation (`C<n>` for client messages, `S<n>` for server messages), or `[N/A]` if outside a request context |
 | `label` | `Assessment done for milo` | Free-text description |
 
 When data is attached (the optional `data` parameter), it is rendered as YAML on subsequent lines, each **indented with 4 spaces**:
 
 ```
-00003842 [INFO]  [orchestrator] [[C5]] Assessment done for milo
+00003842 [INFO]  [orchestrator] [C5] Assessment done for milo
     selfImportance: 7
     humanImportance: 5
     summary: "..."

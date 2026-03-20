@@ -109,30 +109,29 @@ afterEach(async () => {
 
 describe("startMeeting", () => {
   test("creates a meeting with participants and sessions", async () => {
-    const meeting = await startMeeting("Test", "Opening prompt", ["milo", "archi"]);
+    const meeting = await startMeeting("Test", ["milo", "archi"]);
 
     expect(meeting.meetingId).toBeTruthy();
     expect(meeting.title).toBe("Test");
-    expect(meeting.openingPrompt).toBe("Opening prompt");
+    expect(meeting.openingPrompt).toBeUndefined();
     expect(meeting.participants).toEqual(["milo", "archi"]);
     expect(meeting.cycles).toHaveLength(0);
-    expect(meeting.sessionIds.milo).toBeTruthy();
-    expect(meeting.sessionIds.archi).toBeTruthy();
-    expect(meeting.sessionIds.manager).toBeTruthy();
+    // Sessions are created lazily — not at meeting start
+    expect(Object.keys(meeting.sessionIds)).toHaveLength(0);
 
     // Store the meeting ID for cleanup
     testMeetingId = meeting.meetingId;
   });
 
   test("rejects starting a second meeting", async () => {
-    const meeting = await startMeeting("Test", "prompt", ["milo"]);
+    const meeting = await startMeeting("Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
-    await expect(startMeeting("Test2", "prompt2", ["milo"])).rejects.toThrow("already active");
+    await expect(startMeeting("Test2", ["milo"])).rejects.toThrow("already active");
   });
 
   test("rejects empty participants", async () => {
-    await expect(startMeeting("Test", "prompt", [])).rejects.toThrow("No valid participants");
+    await expect(startMeeting("Test", [])).rejects.toThrow("No valid participants");
   });
 });
 
@@ -145,7 +144,7 @@ describe("runCycle", () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Test", "Opening", ["milo", "archi"]);
+    const meeting = await startMeeting("Test", ["milo", "archi"]);
     testMeetingId = meeting.meetingId;
 
     const cycle = await runCycle("human", "Opening prompt text");
@@ -184,7 +183,7 @@ describe("runCycle", () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Test", "Opening", ["milo", "archi"]);
+    const meeting = await startMeeting("Test", ["milo", "archi"]);
     testMeetingId = meeting.meetingId;
 
     await runCycle("milo", "Milo's speech");
@@ -196,7 +195,7 @@ describe("runCycle", () => {
   });
 
   test("multiple cycles accumulate correctly", async () => {
-    const meeting = await startMeeting("Test", "Opening", ["milo", "archi"]);
+    const meeting = await startMeeting("Test", ["milo", "archi"]);
     testMeetingId = meeting.meetingId;
 
     await runCycle("human", "First prompt");
@@ -223,7 +222,7 @@ describe("attention flag", () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Test", "Opening", ["milo", "archi"]);
+    const meeting = await startMeeting("Test", ["milo", "archi"]);
     testMeetingId = meeting.meetingId;
 
     handleAttention();
@@ -262,7 +261,7 @@ describe("human turn", () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Test", "Opening", ["milo"]);
+    const meeting = await startMeeting("Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     handleAttention(); // Force human turn
@@ -280,7 +279,7 @@ describe("human turn", () => {
   });
 
   test("director timeout rejects the promise", async () => {
-    const meeting = await startMeeting("Test", "Opening", ["milo"]);
+    const meeting = await startMeeting("Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     handleAttention();
@@ -296,7 +295,7 @@ describe("human turn", () => {
 
 describe("endCurrentMeeting", () => {
   test("cleans up all state", async () => {
-    const meeting = await startMeeting("Test", "Opening", ["milo"]);
+    const meeting = await startMeeting("Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     await endCurrentMeeting();
@@ -319,7 +318,7 @@ describe("event emission", () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Test", "Opening", ["milo", "archi"]);
+    const meeting = await startMeeting("Test", ["milo", "archi"]);
     testMeetingId = meeting.meetingId;
 
     await runCycle("human", "Opening text");
@@ -332,7 +331,7 @@ describe("event emission", () => {
     const { handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Test", "Opening", ["milo"]);
+    const meeting = await startMeeting("Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     // Run a cycle — should succeed even if some assessments fail
@@ -352,7 +351,7 @@ describe("phase tracking", () => {
   });
 
   test("returns to idle after cycle", async () => {
-    const meeting = await startMeeting("Test", "Opening", ["milo"]);
+    const meeting = await startMeeting("Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     await runCycle("human", "test");
@@ -373,7 +372,7 @@ describe("handleRollback", () => {
     const { handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Rollback Test", "Opening prompt", ["milo", "archi"]);
+    const meeting = await startMeeting("Rollback Test", ["milo", "archi"]);
     testMeetingId = meeting.meetingId;
 
     // Run two cycles
@@ -396,7 +395,7 @@ describe("handleRollback", () => {
   });
 
   test("rolls back to a specific cycle", async () => {
-    const meeting = await startMeeting("Rollback Test", "Opening", ["milo", "archi"]);
+    const meeting = await startMeeting("Rollback Test", ["milo", "archi"]);
     testMeetingId = meeting.meetingId;
 
     await runCycle("human", "Opening prompt");
@@ -417,7 +416,7 @@ describe("handleRollback", () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Rollback Test", "Opening", ["milo"]);
+    const meeting = await startMeeting("Rollback Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     await runCycle("human", "Opening");
@@ -441,7 +440,7 @@ describe("handleRollback", () => {
 
 describe("cost tracking", () => {
   test("totalCostEstimate accumulates per cycle", async () => {
-    const meeting = await startMeeting("Cost Test", "Opening", ["milo", "archi"]);
+    const meeting = await startMeeting("Cost Test", ["milo", "archi"]);
     testMeetingId = meeting.meetingId;
 
     expect(getMeeting()!.totalCostEstimate).toBeUndefined();
@@ -462,14 +461,14 @@ describe("cost tracking", () => {
 
 describe("resumeMeetingById", () => {
   test("throws if another meeting is already active", async () => {
-    const meeting = await startMeeting("Test", "Opening", ["milo"]);
+    const meeting = await startMeeting("Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     await expect(resumeMeetingById(generateMeetingId("some-other-id", new Date()))).rejects.toThrow("already active");
   });
 
   test("resumes an ended meeting with correct state", async () => {
-    const meeting = await startMeeting("Resume Test", "Opening", ["milo", "archi"]);
+    const meeting = await startMeeting("Resume Test", ["milo", "archi"]);
     testMeetingId = meeting.meetingId;
 
     await runCycle("human", "Opening prompt");
@@ -492,7 +491,7 @@ describe("resumeMeetingById", () => {
   });
 
   test("runs additional cycles after resume", async () => {
-    const meeting = await startMeeting("Resume Test", "Opening", ["milo"]);
+    const meeting = await startMeeting("Resume Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     await runCycle("human", "Opening");

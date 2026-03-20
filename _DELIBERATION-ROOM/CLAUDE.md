@@ -346,6 +346,10 @@ server.ts          ← types.ts, config.ts, context.ts, orchestrator.ts, session
 
 `SIGINT`/`SIGTERM` → interrupt active queries → commit current state → remove worktree → close WebSocket connections → exit.
 
+### No Memory — Use Git-Tracked Docs Instead
+
+**Do not use Claude Code's memory feature** (`~/.claude/projects/.../memory/`). All persistent knowledge belongs in `CLAUDE.md` or `CLAUDE-TOPICS/*.md` — these are in git, so they survive cloning to a new location. When you learn something that should persist across sessions, update the relevant doc file directly without asking.
+
 ### Testing
 
 Every implementation task must include tests. Unit tests use the stub SDK. E2E tests use mock WS server or real server + stub SDK. For full testing guidelines, see [CLAUDE-TOPICS/TESTING.md](CLAUDE-TOPICS/TESTING.md).

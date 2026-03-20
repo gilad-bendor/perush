@@ -15,6 +15,7 @@ import { ClientMessageSchema, type ServerMessage, type SpeakerId } from "./types
 import {
   setEventHandlers,
   startMeeting,
+  setOpeningPrompt,
   runCycle,
   endCurrentMeeting,
   handleHumanSpeech,
@@ -32,6 +33,7 @@ import {
 import {
   listMeetings,
   readEndedMeeting,
+  deleteMeetingsByTitle,
 } from "./meetings-db.ts";
 
 import {prettyLog, wrapDanglingPromise} from "./utils.ts";
@@ -388,19 +390,16 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
     switch (msg.type) {
       case "start-meeting": {
         try {
-          const meeting = await startMeeting(msg.title, msg.openingPrompt, msg.participants);
+          const meeting = await startMeeting(msg.title, msg.participants);
+          // Unpause — the meeting starts waiting for the first human prompt
+          paused = false;
           broadcast({
             type: "sync",
             meeting,
             currentPhase: getPhase(),
             paused,
           });
-          // Start the deliberation loop with the opening prompt
-          wrapDanglingPromise(
-              "server",
-              "Start deliberation after human's meeting-opening prompt",
-              runDeliberationLoop("human", msg.openingPrompt),
-          );
+          // No deliberation loop yet — it starts when the first human speech arrives
         } catch (err: any) {
           sendTo(ws, { type: "error", message: err?.message || "Failed to start meeting" });
         }
@@ -424,14 +423,15 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
                 `Start deliberation after ${lastCycle.speech.speaker}'s prompt`,
                 runDeliberationLoop(lastCycle.speech.speaker, lastCycle.speech.content),
             );
-          } else {
-            // No cycles yet — resume from opening prompt
+          } else if (meeting.openingPrompt) {
+            // No cycles but has opening prompt — resume from it
             wrapDanglingPromise(
                 "server",
                 `Start deliberation after human's prompt`,
                 runDeliberationLoop("human", meeting.openingPrompt),
             );
           }
+          // else: no cycles and no opening prompt — wait for first human speech
         } catch (err: any) {
           sendTo(ws, { type: "error", message: err?.message || "Failed to resume meeting" });
         }
@@ -481,7 +481,17 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
       }
 
       case "human-speech": {
-        handleHumanSpeech(msg.content);
+        if (!deliberationLoopActive && getMeeting()) {
+          // First prompt (or post-rollback edit) — set opening prompt and start the loop
+          setOpeningPrompt(msg.content);
+          wrapDanglingPromise(
+            "server",
+            "Start deliberation after human's prompt",
+            runDeliberationLoop("human", msg.content),
+          );
+        } else {
+          handleHumanSpeech(msg.content);
+        }
         break;
       }
 
@@ -558,6 +568,19 @@ async function handleHttpRequest(req: Request, server: any): Promise<Response> {
       // Agents not yet discovered
       const agents = await discoverAgents();
       return Response.json(agents);
+    }
+  }
+
+  if (pathname === "/api/meetings" && req.method === "DELETE") {
+    const title = url.searchParams.get("title");
+    if (!title) {
+      return Response.json({ error: "Missing 'title' query parameter" }, { status: 400 });
+    }
+    try {
+      const deleted = await deleteMeetingsByTitle(title);
+      return Response.json({ deleted });
+    } catch (err: any) {
+      return Response.json({ error: err?.message || "Failed to delete meetings" }, { status: 500 });
     }
   }
 

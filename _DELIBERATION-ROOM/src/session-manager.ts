@@ -339,9 +339,9 @@ type AnyQuery = SDKQueryResult | StubQuery;
  * This avoids importing the real SDK when USE_STUB_SDK is true
  * (which would trigger env cleanup and SDK initialization unnecessarily).
  */
-let _realQueryFn: ((params: { prompt: string; options?: Record<string, unknown> }) => AnyQuery) | null = null;
+let _realQueryFn: ((params: { prompt: string; options: Record<string, unknown> }) => AnyQuery) | null = null;
 
-async function getRealQueryFn(): Promise<(params: { prompt: string; options?: Record<string, unknown> }) => AnyQuery> {
+async function getRealQueryFn(): Promise<(params: { prompt: string; options: Record<string, unknown> }) => AnyQuery> {
   if (!_realQueryFn) {
     const mod = await import("./real-sdk");
     _realQueryFn = mod.realQuery as any;
@@ -353,7 +353,7 @@ async function getRealQueryFn(): Promise<(params: { prompt: string; options?: Re
  * Get the appropriate query function based on configuration.
  * Returns stubQuery when USE_STUB_SDK is true, realQuery otherwise.
  */
-async function getQueryFn(): Promise<(params: { prompt: string; options?: Record<string, unknown> }) => AnyQuery> {
+async function getQueryFn(): Promise<(params: { prompt: string; options: Record<string, unknown> }) => AnyQuery> {
   if (USE_STUB_SDK) {
     return stubQuery as any;
   }
@@ -369,6 +369,43 @@ const sessionRegistry = new Map<AgentId | "manager", string>();
 
 /** Track active queries for interrupt support */
 const activeQueries = new Map<AgentId | "manager", AnyQuery>();
+
+// ---------------------------------------------------------------------------
+// Meeting Context (for lazy session creation)
+// ---------------------------------------------------------------------------
+
+/** Meeting title — used for priming prompts when creating sessions lazily. */
+let meetingTitle: string = "";
+
+/** Participant definitions for the current meeting — needed by ensureSession. */
+let meetingParticipantDefs: AgentDefinition[] = [];
+
+/**
+ * Register the current meeting's context so sessions can be created lazily.
+ * Called by the orchestrator at meeting start (before any cycles).
+ */
+export function registerMeeting(title: string, participantDefs: AgentDefinition[]): void {
+  meetingTitle = title;
+  meetingParticipantDefs = participantDefs;
+  logInfo("session-manager", `registerMeeting: "${title}" with [${participantDefs.map(d => d.id).join(", ")}]`);
+}
+
+/**
+ * Ensure a session exists for the given agent, creating it lazily if needed.
+ * Returns the session ID.
+ */
+async function ensureSession(agentId: AgentId | "manager"): Promise<string> {
+  const existing = sessionRegistry.get(agentId);
+  if (existing) return existing;
+
+  logInfo("session-manager", `ensureSession: creating session for ${agentId} (lazy)`);
+  const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
+  const primingPrompt = agentId === "manager"
+    ? `פתיחת דיון. הנושא: ${meetingTitle}\n\n---stub-response---\ntext: מוכן לנהל.\n---end-stub-response---`
+    : `פתיחת דיון: ${meetingTitle}\n\n---stub-response---\ntext: מוכן לדיון.\n---end-stub-response---`;
+  const { sessionId } = await createSession(agentId, systemPrompt, primingPrompt);
+  return sessionId;
+}
 
 /**
  * Accumulated cost (USD) from SDK interactions since the last reset.
@@ -411,6 +448,7 @@ export async function createSession(
   const query = queryFn({
     prompt: initialPrompt,
     options: {
+      title: `${agentId} | create-session`,
       model,
       effort,
       systemPrompt,
@@ -456,11 +494,7 @@ export async function feedMessage(
   prompt: string,
   onEvent?: ProcessEventCallback,
 ): Promise<string> {
-  const sessionId = sessionRegistry.get(agentId);
-  if (!sessionId) {
-    logError("session-manager", `feedMessage: no session for ${agentId}`, { registry: [...sessionRegistry.keys()] });
-    throw new Error(`No session found for ${agentId}`);
-  }
+  const sessionId = await ensureSession(agentId);
 
   const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
   const effort = effortForModel(model);
@@ -470,6 +504,7 @@ export async function feedMessage(
   const query = queryFn({
     prompt,
     options: {
+      title: `${agentId} | feed-message`,
       resume: sessionId,
       model,
       effort,
@@ -499,6 +534,7 @@ export async function feedMessage(
 /** Event types yielded by streamSpeech */
 export type SpeechStreamEvent =
   | { type: "chunk"; text: string }
+  | { type: "thinking-chunk"; text: string }
   | { type: "thinking"; text: string }
   | { type: "tool-call"; toolName: string; input: string }
   | { type: "tool-result"; toolName: string; output: string }
@@ -513,8 +549,7 @@ export async function* streamSpeech(
   agentId: AgentId,
   prompt: string,
 ): AsyncGenerator<SpeechStreamEvent> {
-  const sessionId = sessionRegistry.get(agentId);
-  if (!sessionId) throw new Error(`No session found for ${agentId}`);
+  const sessionId = await ensureSession(agentId);
 
   const model = PARTICIPANT_MODEL;
   const effort = effortForModel(model);
@@ -526,6 +561,7 @@ export async function* streamSpeech(
   const query = queryFn({
     prompt,
     options: {
+      title: `${agentId} | speech (streamed)`,
       resume: sessionId,
       model,
       effort,
@@ -540,6 +576,7 @@ export async function* streamSpeech(
   activeQueries.set(agentId, query);
 
   let fullText = "";
+  let thinkingAccumulator = "";
   for await (const msg of query) {
     // Stream text deltas
     if (msg.type === "stream_event") {
@@ -549,16 +586,19 @@ export async function* streamSpeech(
         fullText += delta.text;
         yield { type: "chunk", text: delta.text };
       } else if (delta?.type === "thinking_delta" && delta.thinking) {
-        yield { type: "thinking", text: delta.thinking };
+        thinkingAccumulator += delta.thinking;
+        yield { type: "thinking-chunk", text: delta.thinking };
       }
     }
-    // Full assistant message — extract thinking and tool_use blocks
+    // Full assistant message — extract tool_use blocks.
+    // Thinking blocks are skipped here: we already accumulated them from thinking_delta events.
+    // If no deltas arrived (e.g. streaming disabled), fall back to the assistant block.
     if (msg.type === "assistant") {
       const content = (msg as any).message?.content;
       if (Array.isArray(content)) {
         for (const block of content) {
-          if (block.type === "thinking" && block.thinking) {
-            yield { type: "thinking", text: block.thinking };
+          if (block.type === "thinking" && block.thinking && !thinkingAccumulator) {
+            thinkingAccumulator = block.thinking;
           } else if (block.type === "tool_use") {
             yield {
               type: "tool-call",
@@ -587,6 +627,9 @@ export async function* streamSpeech(
 
   activeQueries.delete(agentId);
   logInfo("session-manager", `streamSpeech: ${agentId} done (${fullText.length} chars)`);
+  if (thinkingAccumulator) {
+    yield { type: "thinking", text: thinkingAccumulator };
+  }
   yield { type: "done", fullText };
 }
 
@@ -737,11 +780,13 @@ export function getAllSessionIds(): Record<string, string> {
   return Object.fromEntries(sessionRegistry.entries());
 }
 
-/** Clear all sessions (for testing or meeting end). */
+/** Clear all sessions and meeting context (for testing or meeting end). */
 export function clearSessions(): void {
   logInfo("sessions", `clearSessions (had ${sessionRegistry.size} sessions)`);
   sessionRegistry.clear();
   activeQueries.clear();
+  meetingTitle = "";
+  meetingParticipantDefs = [];
 }
 
 /** Register an existing session ID (for meeting resume). */

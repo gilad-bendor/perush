@@ -293,7 +293,7 @@ export const MeetingSchema = z.object({
   meetingId: MeetingIdSchema,
   mode: MeetingModeSchema,
   title: z.string(),
-  openingPrompt: z.string(),
+  openingPrompt: z.string().optional(),
   participants: z.array(AgentIdSchema).min(1), // AgentId[]
   cycles: z.array(CycleRecordSchema),
   startedAt: z.string(), // FormattedTime
@@ -305,7 +305,7 @@ export type Meeting = {
   meetingId: MeetingId;
   mode: MeetingMode;
   title: string;
-  openingPrompt: string;
+  openingPrompt?: string;
   participants: AgentId[];
   cycles: CycleRecord[];
   startedAt: FormattedTime;
@@ -643,14 +643,12 @@ export const WsStartMeetingSchema = z.object({
   type: z.literal("start-meeting"),
   messageId: MessageIdSchema,
   title: z.string().min(1),
-  openingPrompt: z.string().min(1),
   participants: z.array(AgentIdSchema).min(1),
 });
 export type WsStartMeeting = {
   type: "start-meeting";
   messageId: MessageId;
   title: string;
-  openingPrompt: string;
   participants: AgentId[]
 };
 assertZodTypeMatch<WsStartMeeting, typeof WsStartMeetingSchema>(true);

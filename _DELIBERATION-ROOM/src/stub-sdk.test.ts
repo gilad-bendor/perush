@@ -97,7 +97,7 @@ describe("stubQuery — basic", () => {
   test("yields system init message first", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: hello\n---end-stub-response---",
-      options: { model: "test-model" },
+      options: { title: "test", model: "test-model" },
     });
 
     const messages: StubSDKMessage[] = [];
@@ -113,6 +113,7 @@ describe("stubQuery — basic", () => {
   test("init message contains session_id", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: x\n---end-stub-response---",
+      options: { title: "test" },
     });
 
     for await (const msg of q) {
@@ -128,6 +129,7 @@ describe("stubQuery — basic", () => {
     for (let i = 0; i < 3; i++) {
       const q = stubQuery({
         prompt: "test\n---stub-response---\ntext: x\n---end-stub-response---",
+        options: { title: "test" },
       });
       for await (const msg of q) {
         if (msg.type === "system") {
@@ -142,6 +144,7 @@ describe("stubQuery — basic", () => {
   test("yields assistant message with response text", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: hello world\n---end-stub-response---",
+      options: { title: "test" },
     });
 
     const messages: StubSDKMessage[] = [];
@@ -157,6 +160,7 @@ describe("stubQuery — basic", () => {
   test("yields result message last", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: done\n---end-stub-response---",
+      options: { title: "test" },
     });
 
     const messages: StubSDKMessage[] = [];
@@ -180,6 +184,7 @@ describe("stubQuery — JSON response", () => {
   test("returns JSON-stringified data when no text key", async () => {
     const q = stubQuery({
       prompt: `test\n---stub-response---\nselfImportance: 7\nhumanImportance: 4\nsummary: "test summary"\n---end-stub-response---`,
+      options: { title: "test" },
     });
 
     const messages: StubSDKMessage[] = [];
@@ -203,7 +208,7 @@ describe("stubQuery — streaming", () => {
   test("emits stream_event messages when includePartialMessages is true", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: This is a longer response for streaming\n---end-stub-response---",
-      options: { includePartialMessages: true },
+      options: { title: "test", includePartialMessages: true },
     });
 
     const streamEvents: StubSDKStreamEvent[] = [];
@@ -225,7 +230,7 @@ describe("stubQuery — streaming", () => {
     const fullText = "This is a longer response that will be chunked for streaming";
     const q = stubQuery({
       prompt: `test\n---stub-response---\ntext: ${fullText}\n---end-stub-response---`,
-      options: { includePartialMessages: true },
+      options: { title: "test", includePartialMessages: true },
     });
 
     let accumulated = "";
@@ -241,7 +246,7 @@ describe("stubQuery — streaming", () => {
   test("does not emit stream_event when includePartialMessages is false", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: some response\n---end-stub-response---",
-      options: { includePartialMessages: false },
+      options: { title: "test", includePartialMessages: false },
     });
 
     for await (const msg of q) {
@@ -260,6 +265,7 @@ describe("stubQuery — session resume", () => {
     let sessionId = "";
     const q1 = stubQuery({
       prompt: "first\n---stub-response---\ntext: hello\n---end-stub-response---",
+      options: { title: "test" },
     });
     for await (const msg of q1) {
       if (msg.type === "system") {
@@ -273,7 +279,7 @@ describe("stubQuery — session resume", () => {
     // Second query: resume
     const q2 = stubQuery({
       prompt: "second\n---stub-response---\ntext: world\n---end-stub-response---",
-      options: { resume: sessionId },
+      options: { title: "test", resume: sessionId },
     });
     for await (const msg of q2) {
       if (msg.type === "system") {
@@ -292,7 +298,7 @@ describe("stubQuery — interrupt", () => {
   test("interrupt() stops the generator", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: a very long response that should be interrupted before completion surely\n---end-stub-response---",
-      options: { includePartialMessages: true },
+      options: { title: "test", includePartialMessages: true },
     });
 
     const messages: StubSDKMessage[] = [];
@@ -312,7 +318,7 @@ describe("stubQuery — interrupt", () => {
   test("return() stops the generator (AsyncGenerator standard)", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: long text here\n---end-stub-response---",
-      options: { includePartialMessages: true },
+      options: { title: "test", includePartialMessages: true },
     });
 
     const messages: StubSDKMessage[] = [];
@@ -337,6 +343,7 @@ describe("stubQuery — no response block", () => {
   test("returns empty JSON when no stub-response markers", async () => {
     const q = stubQuery({
       prompt: "just a plain prompt with no stub markers",
+      options: { title: "test" },
     });
 
     const messages: StubSDKMessage[] = [];
@@ -357,7 +364,7 @@ describe("stubQuery — options in init", () => {
   test("init message reflects the model option", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: x\n---end-stub-response---",
-      options: { model: "claude-opus-4-6" },
+      options: { title: "test", model: "claude-opus-4-6" },
     });
 
     for await (const msg of q) {
@@ -371,7 +378,7 @@ describe("stubQuery — options in init", () => {
   test("init message reflects tools option", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: x\n---end-stub-response---",
-      options: { tools: ["Read", "Grep"] },
+      options: { title: "test", tools: ["Read", "Grep"] },
     });
 
     for await (const msg of q) {

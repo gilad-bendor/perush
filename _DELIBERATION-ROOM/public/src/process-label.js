@@ -51,6 +51,43 @@ export class ProcessLabel {
    * @param {string} [toolInput]
    */
   addEvent(eventKind, content, toolName, toolInput) {
+    // Thinking: accumulate streaming chunks into a single div.
+    // During streaming, chunks arrive as small deltas followed by one final
+    // complete thinking event. We render a single div that grows, and only
+    // push to this.events when the final complete event arrives.
+    if (eventKind === "thinking") {
+      if (this._activeThinkingEl) {
+        // Subsequent thinking event — accumulate or finalize
+        const isFinal = content.length >= this._activeThinkingContent.length;
+        const span = this._activeThinkingEl.querySelector(".thinking-text");
+        if (isFinal) {
+          // Final complete thinking — persist it and stop accumulating
+          if (span) {
+            span.textContent = content.length > 500 ? content.slice(0, 500) + "\u2026" : content;
+          }
+          this.events.push({ eventKind, content, toolName, toolInput });
+          this._activeThinkingEl = null;
+          this._activeThinkingContent = "";
+          this._updateBadge();
+        } else {
+          // Streaming chunk — just grow the display
+          this._activeThinkingContent += content;
+          if (span) {
+            const text = this._activeThinkingContent;
+            span.textContent = text.length > 500 ? text.slice(0, 500) + "\u2026" : text;
+          }
+        }
+        return;
+      }
+      // First thinking event — create the div but don't persist yet
+      this._activeThinkingContent = content;
+      if (this.expanded) {
+        this._appendEventEl({ eventKind, content, toolName, toolInput });
+        // _appendEventEl sets this._activeThinkingEl
+      }
+      return;
+    }
+
     this.events.push({ eventKind, content, toolName, toolInput });
     if (this.expanded) {
       this._appendEventEl(this.events[this.events.length - 1]);
@@ -107,7 +144,7 @@ export class ProcessLabel {
 
     // Expansion area (hidden by default)
     const expansion = document.createElement("div");
-    expansion.className = "process-expansion hidden mt-1 border rounded p-2 text-xs space-y-1 max-h-96 overflow-y-auto";
+    expansion.className = "process-expansion hidden mt-1 border rounded p-2 text-xs space-y-1";
     expansion.style.borderColor = color.dot;
     expansion.style.backgroundColor = "rgba(0,0,0,0.02)";
     el.appendChild(expansion);
@@ -126,8 +163,13 @@ export class ProcessLabel {
       for (const evt of this.events) {
         this._appendEventEl(evt);
       }
+      // If there's an in-progress thinking stream, render it too
+      if (this._activeThinkingContent && !this._activeThinkingEl) {
+        this._appendEventEl({ eventKind: "thinking", content: this._activeThinkingContent });
+      }
     } else {
       expansion.classList.add("hidden");
+      this._activeThinkingEl = null; // DOM is gone; will recreate on next expand
     }
   }
 
@@ -146,17 +188,20 @@ export class ProcessLabel {
         div.className = "text-stone-400 border-b border-stone-200 pb-1 mb-1";
         div.innerHTML = `<span class="font-semibold">\u25B6 Prompt:</span>`;
         const promptText = document.createElement("pre");
-        promptText.className = "whitespace-pre-wrap mt-0.5 text-[11px] max-h-40 overflow-y-auto";
+        promptText.className = "whitespace-pre-wrap mt-0.5 text-[11px]";
         promptText.textContent = evt.content;
         div.appendChild(promptText);
         break;
       case "thinking":
-        div.className = "italic text-stone-500 bg-stone-50 rounded px-1.5 py-0.5";
+        div.className = "italic text-stone-500 bg-stone-50 rounded px-1.5 py-0.5 border-2";
         div.innerHTML = `<span class="font-semibold not-italic text-stone-400">\u{1F4AD}</span> `;
         const thinkText = document.createElement("span");
-        thinkText.className = "whitespace-pre-wrap";
+        thinkText.className = "whitespace-pre-wrap thinking-text";
         thinkText.textContent = evt.content.length > 500 ? evt.content.slice(0, 500) + "\u2026" : evt.content;
         div.appendChild(thinkText);
+        // Track as the active thinking element for streaming accumulation
+        this._activeThinkingEl = div;
+        this._activeThinkingContent = evt.content;
         break;
       case "text":
         div.className = "text-stone-800 whitespace-pre-wrap";

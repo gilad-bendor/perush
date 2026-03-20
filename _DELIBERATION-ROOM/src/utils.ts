@@ -13,37 +13,29 @@ import {LogCategory, logError} from "./logs.ts";
  * Serializes a value into a compact, human-readable YAML-like string.
  * Mirrors the client-side `prettyLog` in `public/src/utils.js`.
  */
-export function prettyLog(value: unknown, maxStringLen = 200): string {
-    return _prettyLines(value, 0, maxStringLen)
+export function prettyLog(value: unknown): string {
+    return _prettyLines(value, 0)
         .join("\n")
         .replace(/:\n *\|\n/g, ": |\n");
 }
 
-function _prettyLines(
-    val: unknown,
-    depth: number,
-    maxStr: number,
-): string[] {
+function _prettyLines(val: unknown, depth: number): string[] {
     const indent = "  ".repeat(depth);
     if (val === null || val === undefined) return [`${indent}${val}`];
     if (typeof val === "boolean" || typeof val === "number")
         return [`${indent}${val}`];
     if (typeof val === "string") {
-        const truncated =
-            val.length > maxStr
-                ? val.slice(0, maxStr) + `… (${val.length} chars)`
-                : val;
-        if (truncated.includes("\n")) {
-            const lines = truncated.split("\n");
+        if (val.includes("\n")) {
+            const lines = val.split("\n");
             return [`${indent}|`, ...lines.map((l) => `${indent}  ${l}`)];
         }
-        return [`${indent}${truncated}`];
+        return [`${indent}${val}`];
     }
     if (Array.isArray(val)) {
         if (val.length === 0) return [`${indent}[]`];
         const lines: string[] = [];
         for (const item of val) {
-            const sub = _prettyLines(item, depth + 1, maxStr);
+            const sub = _prettyLines(item, depth + 1);
             sub[0] = `${indent}- ${sub[0].trimStart()}`;
             lines.push(...sub);
         }
@@ -54,7 +46,7 @@ function _prettyLines(
         if (keys.length === 0) return [`${indent}{}`];
         const lines: string[] = [];
         for (const key of keys) {
-            const sub = _prettyLines((val as any)[key], depth + 1, maxStr);
+            const sub = _prettyLines((val as any)[key], depth + 1);
             if (
                 sub.length === 1 &&
                 !sub[0].trimStart().startsWith("|") &&

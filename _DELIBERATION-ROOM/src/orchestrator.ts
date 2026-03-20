@@ -49,12 +49,14 @@ import {
   discoverAgents,
   buildSystemPrompt,
   createSession,
+  registerMeeting,
   feedMessage,
   streamSpeech,
   interruptAll,
   extractAssessment,
   extractManagerDecision,
   clearSessions,
+  getAllSessionIds,
   resetCycleCost,
   getCycleCost,
 } from "./session-manager";
@@ -157,12 +159,11 @@ function getDirectorTimeoutMs(): number {
 /**
  * Start a new meeting.
  *
- * Creates git infrastructure, builds system prompts, initializes AI-Agent
- * sessions, and commits the initial state.
+ * Creates git infrastructure and commits the initial state.
+ * Sessions are created lazily on first use (during the first cycle).
  */
 export async function startMeeting(
   title: string,
-  openingPrompt: string,
   participantIds: AgentId[],
 ): Promise<Meeting> {
   logInfo("orchestrator", `startMeeting: "${title}" with [${participantIds.join(", ")}]`);
@@ -189,6 +190,9 @@ export async function startMeeting(
     throw new Error("No valid participants selected");
   }
 
+  // Register meeting context in session-manager for lazy session creation
+  registerMeeting(title, meetingParticipantDefs);
+
   // Generate meeting ID
   const meetingId = generateMeetingId(title, new Date());
 
@@ -196,39 +200,18 @@ export async function startMeeting(
   const worktreePath = await createMeetingWorktree(meetingId);
   currentWorktreePath = worktreePath;
 
-  // Build the meeting record
+  // Build the meeting record (no openingPrompt yet — set when first human speech arrives)
   const meeting: Meeting = {
     meetingId,
     mode: "Perush-Development",
     title,
-    openingPrompt,
     participants: participantIds,
     cycles: [],
     startedAt: createFormattedTime(),
-    sessionIds: {} as Meeting['sessionIds'],
+    sessionIds: {},
   };
 
-  // Create sessions for each participant + manager
   setPhase("idle");
-
-  for (const agentId of participantIds) {
-    const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
-    const { sessionId } = await createSession(
-      agentId,
-      systemPrompt,
-      `פתיחת דיון: ${openingPrompt}\n\n---stub-response---\ntext: מוכן לדיון.\n---end-stub-response---`,
-    );
-    meeting.sessionIds[agentId] = sessionId;
-  }
-
-  // Create manager session
-  const managerSystemPrompt = await buildSystemPrompt("manager", meetingParticipantDefs);
-  const { sessionId: managerSessionId } = await createSession(
-    "manager",
-    managerSystemPrompt,
-    `פתיחת דיון. הנושא: ${title}\n\n---stub-response---\ntext: מוכן לנהל.\n---end-stub-response---`,
-  );
-  meeting.sessionIds.manager = managerSessionId;
 
   // Persist and commit
   currentMeeting = meeting;
@@ -236,6 +219,16 @@ export async function startMeeting(
 
   logInfo("orchestrator", `startMeeting: done → ${meetingId}`);
   return meeting;
+}
+
+/**
+ * Set the opening prompt on the current meeting.
+ * Called when the first human speech arrives.
+ */
+export function setOpeningPrompt(content: string): void {
+  if (currentMeeting && !currentMeeting.openingPrompt) {
+    currentMeeting.openingPrompt = content;
+  }
 }
 
 /**
@@ -390,7 +383,11 @@ export async function runCycle(
         if (event.type === "chunk") {
           events.onSpeechChunk(nextSpeakerId, event.text);
           // Text chunks are accumulated; we'll emit a single "text" event at done
+        } else if (event.type === "thinking-chunk") {
+          // Stream to UI live but don't persist — the complete thinking comes later
+          events.onProcessEvent(speechTracker.processId, "thinking", event.text);
         } else if (event.type === "thinking") {
+          // Complete thinking block — persist this one
           speechTracker.emit("thinking", event.text);
         } else if (event.type === "tool-call") {
           speechTracker.emit("tool-call", event.input, event.toolName, event.input);
@@ -432,6 +429,9 @@ export async function runCycle(
   const cycleCost = getCycleCost();
   currentMeeting.totalCostEstimate =
     (currentMeeting.totalCostEstimate ?? 0) + cycleCost;
+
+  // Sync session IDs from registry (sessions may have been created lazily)
+  Object.assign(currentMeeting.sessionIds, getAllSessionIds());
 
   await writeMeetingAtomic(currentWorktreePath, currentMeeting);
   await commitCycleGit(currentWorktreePath, cycleNumber, speech.speaker);
@@ -561,6 +561,9 @@ export async function handleRollback(
     currentMeeting!.participants.includes(a.id),
   );
 
+  // Re-register meeting context for lazy session creation
+  registerMeeting(currentMeeting.title, meetingParticipantDefs);
+
   // Recreate participant sessions
   for (const agentId of currentMeeting.participants) {
     const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
@@ -622,6 +625,9 @@ export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> 
 
   // Attempt to recover sessions — create fresh ones from transcript
   clearSessions();
+
+  // Re-register meeting context for lazy session creation
+  registerMeeting(currentMeeting.title, meetingParticipantDefs);
 
   for (const agentId of currentMeeting.participants) {
     const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
@@ -686,7 +692,11 @@ function setPhase(phase: Phase, activeSpeaker?: SpeakerId): void {
  */
 function buildTranscriptPrompt(meeting: Meeting): string {
   const parts: string[] = [];
-  parts.push(`פתיחת דיון: ${meeting.openingPrompt}`);
+  if (meeting.openingPrompt) {
+    parts.push(`פתיחת דיון: ${meeting.openingPrompt}`);
+  } else {
+    parts.push(`פתיחת דיון: ${meeting.title}`);
+  }
 
   for (const cycle of meeting.cycles) {
     const speakerLabel = cycle.speech.speaker === "human" ? "המנחה" : cycle.speech.speaker;

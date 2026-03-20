@@ -79,6 +79,7 @@ export type StubSDKMessage =
   | StubSDKResultSuccess;
 
 export interface StubQueryOptions {
+  title: string;
   resume?: string;
   model?: string;
   systemPrompt?: string;
@@ -226,9 +227,9 @@ const sessionRegistry = new Map<string, { model: string; tools: string[] }>();
  */
 export function stubQuery(params: {
   prompt: string;
-  options?: StubQueryOptions;
+  options: StubQueryOptions;
 }): StubQuery {
-  const { prompt, options = {} } = params;
+  const { prompt, options } = params;
   let interrupted = false;
 
   // Determine session ID (resume existing or create new)

@@ -326,6 +326,11 @@ function handleSync(msg) {
     }
     showDeliberation();
     renderMeetingState();
+
+    // New meeting with no cycles and no opening prompt: enable input for first prompt
+    if (!currentMeeting.openingPrompt && currentMeeting.cycles.length === 0 && !readOnly) {
+      enableHumanInput();
+    }
   }
 }
 
@@ -400,9 +405,9 @@ function handleRollbackProgress(msg) {
  * Applies visual changes to the vibe bar, input field, and agent panel
  * based on the current cycle phase.
  * @param {Phase}  phase           - Current phase identifier
- * @param {SpeakerId} [activeSpeaker] - Agent ID of the current speaker (if speaking phase)
+ * @param {SpeakerId} [_activeSpeaker] - Agent ID of the current speaker (if speaking phase)
  */
-function updatePhaseUI(phase, activeSpeaker) {
+function updatePhaseUI(phase, _activeSpeaker) {
   $vibePhase.textContent = phaseDisplayName(phase);
 
   const vibeBar = querySelectorMust(".vibe-bar");
@@ -509,12 +514,14 @@ function renderMeetingState() {
     },
   });
 
-  // Render opening prompt as first message
-  conversationView.addSpeech(
-    "human",
-    currentMeeting.openingPrompt,
-    currentMeeting.startedAt
-  );
+  // Render opening prompt as first message (if set — new meetings start without one)
+  if (currentMeeting.openingPrompt) {
+    conversationView.addSpeech(
+      "human",
+      currentMeeting.openingPrompt,
+      currentMeeting.startedAt
+    );
+  }
 
   // Render all existing cycles with their process records
   for (const cycle of currentMeeting.cycles) {
@@ -661,6 +668,9 @@ function renderMeetingList(meetings) {
           .join("  ")
       : "";
 
+    // Count how many meetings share this title (for showing bulk-delete button)
+    const sameTitleCount = meetings.filter(m => (m.title || m.meetingId) === title).length;
+
     card.innerHTML = `
       <div class="font-semibold mb-1">${title}</div>
       <div class="text-xs text-stone-500 mb-2">${[date, cycles].filter(Boolean).join("  ·  ")}</div>
@@ -668,6 +678,7 @@ function renderMeetingList(meetings) {
       <div class="flex gap-2">
         ${index === 0 ? `<button class="resume-btn text-sm border border-amber-500 text-amber-700 rounded px-3 py-1 hover:bg-amber-50 transition-colors" data-meeting-id="${meeting.meetingId}">המשך דיון</button>` : ""}
         <button class="view-btn text-sm border border-stone-300 text-stone-600 rounded px-3 py-1 hover:bg-stone-50 transition-colors" data-meeting-id="${meeting.meetingId}">צפייה בלבד</button>
+        ${sameTitleCount > 1 ? `<button class="delete-by-title-btn text-sm border border-red-300 text-red-600 rounded px-3 py-1 hover:bg-red-50 transition-colors" data-title="${title.replace(/"/g, '&quot;')}" data-count="${sameTitleCount}">מחק ${sameTitleCount} &laquo;${title}&raquo;</button>` : ""}
       </div>
     `;
 
@@ -684,6 +695,24 @@ function renderMeetingList(meetings) {
       navigateTo(`/meeting/${encodeURIComponent(meeting.meetingId)}`);
     });
 
+    const deleteBtn = card.querySelector(".delete-by-title-btn");
+    if (deleteBtn) {
+      deleteBtn.addEventListener("click", async () => {
+        const meetingTitle = deleteBtn.dataset.title;
+
+        deleteBtn.disabled = true;
+        deleteBtn.textContent = "מוחק...";
+        try {
+          const res = await fetch(`/api/meetings?title=${encodeURIComponent(meetingTitle)}`, { method: "DELETE" });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          await loadMeetingList();
+        } catch (err) {
+          console.error("Failed to delete meetings:", err);
+          deleteBtn.textContent = "שגיאה";
+        }
+      });
+    }
+
     $meetingList.appendChild(card);
   });
 }
@@ -694,7 +723,6 @@ $newMeetingForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const title = document.getElementById("meeting-title").value.trim();
-  const openingPrompt = document.getElementById("opening-prompt").value.trim();
   const selectedParticipants = Array.from(
     document.querySelectorAll('input[name="participant"]:checked')
   ).map((cb) => cb.value);
@@ -707,7 +735,6 @@ $newMeetingForm.addEventListener("submit", (e) => {
   sendWs({
     type: "start-meeting",
     title,
-    openingPrompt,
     participants: selectedParticipants,
   });
 });

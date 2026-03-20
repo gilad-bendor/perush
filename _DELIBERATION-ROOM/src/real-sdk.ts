@@ -1,11 +1,44 @@
 /**
  * real-sdk.ts — Adapter wrapping the real @anthropic-ai/claude-agent-sdk.
  *
- * Provides `realQuery()` with the same call signature as `stubQuery()`,
- * making the two interchangeable. The session-manager selects which one
- * to use based on the USE_STUB_SDK config flag.
+ * ## What this module does
  *
- * Imports from: config.ts, context.ts
+ * Wraps the Agent SDK's `query()` into `realQuery()`, which has the same
+ * call signature as `stubQuery()` so the two are interchangeable. The
+ * session-manager (`session-manager.ts`) selects which one to use based
+ * on the `USE_STUB_SDK` config flag — this module is never imported directly
+ * by other code.
+ *
+ * ## How sessions work (query → iterate → resume)
+ *
+ * The Agent SDK operates as a stateless request/response loop over persistent
+ * server-side sessions. Each `realQuery()` call spawns a Claude Code
+ * subprocess, sends it a prompt, and returns an **async iterator** of
+ * messages. The caller drives the conversation by:
+ *
+ * 1. **Creating a session** — call `realQuery({ prompt, options })` without
+ *    `resume`. Iterate the result; the first `{ type: "system", subtype: "init" }`
+ *    message contains the `session_id`. The final `{ type: "result",
+ *    subtype: "success" }` message contains the response text.
+ *
+ * 2. **Resuming a session** — call `realQuery({ prompt, options: { resume: sessionId } })`.
+ *    The SDK reconnects to the existing session (preserving full context)
+ *    and the new prompt is appended as the next user turn.
+ *
+ * 3. **Interrupting** — call `result.interrupt()` on the returned object to
+ *    abort a running query mid-stream.
+ *
+ * Intermediate messages (thinking, text chunks, tool calls, tool results)
+ * are yielded between init and result, enabling streaming and process tracing.
+ *
+ * ## Where the full orchestration lives
+ *
+ * This module is a thin I/O adapter. The session lifecycle (create, feed,
+ * stream, interrupt, recover) is managed by `session-manager.ts`. The
+ * deliberation loop that decides *what* to send is in `orchestrator.ts`.
+ * For prompt construction and persona templates, see CLAUDE-TOPICS/PERSONAS.md.
+ *
+ * Imports from: config.ts, logs.ts
  */
 
 import {Options, query as sdkQuery} from "@anthropic-ai/claude-agent-sdk";
@@ -63,6 +96,7 @@ function stripStubResponseBlocks(prompt: string): string {
 
 /** Options accepted by realQuery — matches stubQuery's interface. */
 export interface RealQueryOptions {
+  title: string;
   resume?: string;
   model?: string;
   effort?: "low" | "medium" | "high";
@@ -102,9 +136,9 @@ export interface SDKQueryResult {
  */
 export function realQuery(params: {
   prompt: string;
-  options?: RealQueryOptions;
+  options: RealQueryOptions;
 }): SDKQueryResult {
-  const { prompt: rawPrompt, options = {} } = params;
+  const { prompt: rawPrompt, options } = params;
 
   // Strip stub response blocks from the prompt
   const prompt = stripStubResponseBlocks(rawPrompt);
@@ -135,7 +169,7 @@ export function realQuery(params: {
   const qid = ++queryCounter;
 
   // Log the request
-  logInfo("sdk", `Q${qid} >>> REQUEST`, {
+  logInfo("sdk", `Q${qid} >>> ${JSON.stringify(options.title)}`, {
     prompt,
     options: {
       model: sdkOptions.model,
@@ -156,14 +190,14 @@ export function realQuery(params: {
   const q = sdkQuery({ prompt, options: sdkOptions });
 
   // Wrap the iterator to log every yielded message
-  return wrapWithLogging(q as unknown as SDKQueryResult, qid);
+  return wrapWithLogging(q as unknown as SDKQueryResult, qid, options.title);
 }
 
 /**
  * Wrap an SDKQueryResult to log every message it yields.
  * Preserves the interrupt() method and async iterable protocol.
  */
-function wrapWithLogging(inner: SDKQueryResult, qid: number): SDKQueryResult {
+function wrapWithLogging(inner: SDKQueryResult, qid: number, title: string): SDKQueryResult {
   if (!logsConfig.sdk) return inner;
 
   let msgIndex = 0;
@@ -182,25 +216,25 @@ function wrapWithLogging(inner: SDKQueryResult, qid: number): SDKQueryResult {
         // Log every message with its type/subtype for traceability
         const msgType = msg?.type ?? "unknown";
         const msgSubtype = msg?.subtype ? `.${msg.subtype}` : "";
-        logInfo("sdk", `Q${qid} <<< MSG #${idx} (${msgType}${msgSubtype})`, msg);
+        logInfo("sdk", `Q${qid} <<< ${JSON.stringify(title)} - MSG #${idx} (${msgType}${msgSubtype})`, msg);
       } else {
-        logInfo("sdk", `Q${qid} <<< DONE (${msgIndex} messages total)`);
+        logInfo("sdk", `Q${qid} <<< ${JSON.stringify(title)} - DONE (${msgIndex} messages total)`);
       }
       return result;
     },
 
     async return(value?: void) {
-      logInfo("sdk", `Q${qid} <<< RETURN (iterator closed after ${msgIndex} messages)`);
+      logInfo("sdk", `Q${qid} <<< ${JSON.stringify(title)} - RETURN (iterator closed after ${msgIndex} messages)`);
       return inner.return ? inner.return(value) : { done: true as const, value: undefined };
     },
 
     async throw(e?: unknown) {
-      logError("sdk", `Q${qid} <<< THROW`, { error: String(e) });
+      logError("sdk", `Q${qid} <<< ${JSON.stringify(title)} - THROW`, { error: String(e) });
       return inner.throw ? inner.throw(e) : { done: true as const, value: undefined };
     },
 
     async interrupt() {
-      logWarn("sdk", `Q${qid} <<< INTERRUPT (after ${msgIndex} messages)`);
+      logWarn("sdk", `Q${qid} <<< ${JSON.stringify(title)} - INTERRUPT (after ${msgIndex} messages)`);
       return inner.interrupt();
     },
   };

@@ -252,7 +252,7 @@ describe("handleWsMessage", () => {
     await handleWsMessage(ws as any, JSON.stringify({
       type: "start-meeting",
       messageId: "C1",
-      // Missing title, openingPrompt, participants
+      // Missing title, participants
     }));
 
     expect(messages).toHaveLength(1);
@@ -352,7 +352,6 @@ describe("meeting lifecycle via WebSocket", () => {
       type: "start-meeting",
       messageId: "C10",
       title: "Test Meeting",
-      openingPrompt: "Let's discuss",
       participants: ["milo", "archi"],
     }));
 
@@ -367,8 +366,7 @@ describe("meeting lifecycle via WebSocket", () => {
     // Meeting should be active
     expect(getMeeting()).not.toBeNull();
 
-    // Stop the deliberation loop to prevent it from running in background
-    stopDeliberationLoop();
+    // No deliberation loop to stop — loop starts on first human speech
   });
 
   test("start-meeting rejects invalid participants", async () => {
@@ -379,7 +377,6 @@ describe("meeting lifecycle via WebSocket", () => {
       type: "start-meeting",
       messageId: "C11",
       title: "Test",
-      openingPrompt: "prompt",
       participants: ["nonexistent-agent"],
     }));
 
@@ -394,7 +391,7 @@ describe("meeting lifecycle via WebSocket", () => {
     setupOrchestratorEvents();
 
     // First start a meeting
-    const meeting = await startMeeting("Test", "prompt", ["milo"]);
+    const meeting = await startMeeting("Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     // Clear messages from setup
@@ -428,7 +425,7 @@ describe("orchestrator event wiring", () => {
     setupOrchestratorEvents();
 
     // Start a meeting — this triggers phase changes via the wired events
-    const meeting = await startMeeting("Test", "prompt", ["milo"]);
+    const meeting = await startMeeting("Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     // The orchestrator emits phase events during startMeeting

@@ -7,22 +7,22 @@
 The UI is designed for the Director reading Hebrew text, thinking carefully, and occasionally intervening — an **academic seminar**, not a fast chat app.
 
 ```
-┌──────────────────────────────────────────┬──────────────┐
+┌──────────────────────────────────────────┬───────────────┐
 │                                          │ Agent Panel   │
 │          SHARED CONVERSATION             │ (collapsible) │
 │      (scrolling feed, RTL, color-coded   │               │
 │       by speaker)                        │  ┌──────────┐ │
 │                                          │  │ Tabs:    │ │
 │                                          │  │ מילונאי  │ │
-│  [streaming indicator: milo typing…]  │  │ אדריכל   │ │
+│  [streaming indicator: milo typing...]   │  │ אדריכל   │ │
 │                                          │  │ מבקר     │ │
 │                                          │  └──────────┘ │
-├──────────────────────────────────────────┤              │
-│  ✦ vibe: הדיון זורם — כל צד מוסיף שכבה. │  [assessment] │
-│    next: האדריכל  ·  phase: speaking     │  [tool usage] │
-├──────────────────────────────────────────┤              │
-│  > Human input                     [↵]   │              │
-└──────────────────────────────────────────┴──────────────┘
+├──────────────────────────────────────────┤               │
+│  ✦ vibe: הדיון זורם — כל צד מוסיף שכבה.  │ [assessment]  │
+│    next: האדריכל  ·  phase: speaking     │ [tool usage]  │
+├──────────────────────────────────────────┤               │
+│  > Human input                     [↵]   │               │
+└──────────────────────────────────────────┴───────────────┘
 ```
 
 **Conversation area** (main, left): Scrolling feed of all public messages, color-coded by speaker. Streaming text appears in real-time with a typing indicator.

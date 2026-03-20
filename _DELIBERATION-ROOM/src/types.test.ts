@@ -376,7 +376,6 @@ describe("ClientMessageSchema", () => {
       type: "start-meeting" as const,
       messageId: "C3",
       title: "גן עדן",
-      openingPrompt: "בואו נדון",
       participants: ["milo", "archi"],
     };
     expect(ClientMessageSchema.parse(msg)).toEqual(msg);
@@ -387,7 +386,6 @@ describe("ClientMessageSchema", () => {
       type: "start-meeting",
       messageId: "C4",
       title: "",
-      openingPrompt: "test",
       participants: ["milo"],
     })).toThrow();
   });
@@ -397,7 +395,6 @@ describe("ClientMessageSchema", () => {
       type: "start-meeting",
       messageId: "C5",
       title: "test",
-      openingPrompt: "test",
       participants: [],
     })).toThrow();
   });

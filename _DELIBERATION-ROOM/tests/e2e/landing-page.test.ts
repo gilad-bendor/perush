@@ -159,7 +159,6 @@ describe("landing page", () => {
 
     // Fill required text fields
     await page.fill("#meeting-title", "Test");
-    await page.fill("#opening-prompt", "Test prompt");
 
     // Submit the form
     await page.click('button[type="submit"]');

@@ -78,39 +78,36 @@ export function querySelectorMust(selector, root = document) {
 
 /**
  * Serializes a value into a compact, human-readable YAML-like string for console logging.
- * Objects and arrays are indented; long strings are truncated.
- * @param {*} value - Any JSON-serializable value
- * @param {number} [maxStringLen=200] - Truncate strings longer than this
+ * Objects and arrays are indented;
+ * @param {any} value - Any JSON-serializable value
  * @returns {string}
  */
-export function prettyLog(value, maxStringLen = 200) {
-  return _prettyLines(value, 0, maxStringLen).join("\n").replace(/:\n *\|\n/g, ": |\n");
+export function prettyLog(value) {
+  return _prettyLines(value, 0).join("\n").replace(/:\n *\|\n/g, ": |\n");
 }
 
 /**
  * @param {*} val
  * @param {number} depth
- * @param {number} maxStr
  * @returns {string[]}
  */
-function _prettyLines(val, depth, maxStr) {
+function _prettyLines(val, depth) {
   const indent = "  ".repeat(depth);
   if (val === null || val === undefined) return [`${indent}${val}`];
   if (typeof val === "boolean" || typeof val === "number") return [`${indent}${val}`];
   if (typeof val === "string") {
-    const truncated = val.length > maxStr ? val.slice(0, maxStr) + `… (${val.length} chars)` : val;
     // Multi-line strings get a block-scalar style
-    if (truncated.includes("\n")) {
-      const lines = truncated.split("\n");
+    if (val.includes("\n")) {
+      const lines = val.split("\n");
       return [`${indent}|`, ...lines.map((l) => `${indent}  ${l}`)];
     }
-    return [`${indent}${truncated}`];
+    return [`${indent}${val}`];
   }
   if (Array.isArray(val)) {
     if (val.length === 0) return [`${indent}[]`];
     const lines = [];
     for (const item of val) {
-      const sub = _prettyLines(item, depth + 1, maxStr);
+      const sub = _prettyLines(item, depth + 1);
       sub[0] = `${indent}- ${sub[0].trimStart()}`;
       lines.push(...sub);
     }
@@ -121,7 +118,7 @@ function _prettyLines(val, depth, maxStr) {
     if (keys.length === 0) return [`${indent}{}`];
     const lines = [];
     for (const key of keys) {
-      const sub = _prettyLines(val[key], depth + 1, maxStr);
+      const sub = _prettyLines(val[key], depth + 1);
       if (sub.length === 1 && !sub[0].trimStart().startsWith("|") && !sub[0].trimStart().startsWith("-")) {
         // Inline: key: value
         lines.push(`${indent}${key}: ${sub[0].trimStart()}`);

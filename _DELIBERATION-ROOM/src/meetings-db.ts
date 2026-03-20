@@ -262,7 +262,7 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
   logInfo("meetings-db", `listMeetings`);
   const gitRoot = await getGitRoot();
 
-  // Use Bun.spawn because Bun's shell template interprets %(…) as syntax
+  // Use Bun.spawn because Bun's shell template interprets %(...) as syntax
   const formatStr = "%(refname:short)|%(committerdate:iso)|%(subject)";
   const proc = Bun.spawn(
     ["git", "-C", gitRoot, "branch", "--list", `${SESSION_BRANCH_PREFIX}*`, "--sort=-committerdate", `--format=${formatStr}`],
@@ -310,6 +310,67 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
 
   logInfo("meetings-db", `listMeetings: found ${summaries.length} meeting(s)`);
   return summaries;
+}
+
+// ---------------------------------------------------------------------------
+// Delete meetings by title
+// ---------------------------------------------------------------------------
+
+/**
+ * Delete all meetings whose title matches the given string.
+ * Removes worktrees, branches, and associated tags.
+ * Returns the number of meetings deleted.
+ */
+export async function deleteMeetingsByTitle(title: string): Promise<number> {
+  logInfo("meetings-db", `deleteMeetingsByTitle: "${title}"`);
+  const gitRoot = await getGitRoot();
+  const meetings = await listMeetings();
+  const matching = meetings.filter(m => m.title === title);
+
+  if (matching.length === 0) {
+    logInfo("meetings-db", `deleteMeetingsByTitle: no meetings found with title "${title}"`);
+    return 0;
+  }
+
+  logInfo("meetings-db", `deleteMeetingsByTitle: found ${matching.length} meeting(s) to delete`);
+
+  for (const meeting of matching) {
+    const worktreePath = join(MEETINGS_DIR, meeting.meetingId);
+    const branchName = meeting.branch;
+
+    // Remove worktree if it exists
+    try {
+      await stat(worktreePath);
+      await $`git -C ${gitRoot} worktree remove --force ${worktreePath}`.quiet();
+      logInfo("meetings-db", `deleteMeetingsByTitle: removed worktree ${worktreePath}`);
+    } catch {
+      // No worktree — fine
+    }
+
+    // Delete associated tags
+    const tagPrefix = meetingIdToTagIdPrefix(meeting.meetingId);
+    try {
+      const tagsResult = await $`git -C ${gitRoot} tag --list ${tagPrefix}/*`.quiet();
+      const tags = tagsResult.stdout.toString().trim().split("\n").filter(Boolean);
+      for (const tag of tags) {
+        try { await $`git -C ${gitRoot} tag -d ${tag}`.quiet(); } catch {}
+      }
+    } catch {}
+
+    // Delete the branch
+    try {
+      await $`git -C ${gitRoot} branch -D ${branchName}`.quiet();
+      logInfo("meetings-db", `deleteMeetingsByTitle: deleted branch ${branchName}`);
+    } catch {
+      logWarn("meetings-db", `deleteMeetingsByTitle: failed to delete branch ${branchName}`);
+    }
+  }
+
+  // Prune worktrees
+  await $`git -C ${gitRoot} worktree prune`.quiet();
+
+  logInfo("meetings-db", `deleteMeetingsByTitle: deleted ${matching.length} meeting(s)`);
+  return matching.length;
 }
 
 // ---------------------------------------------------------------------------

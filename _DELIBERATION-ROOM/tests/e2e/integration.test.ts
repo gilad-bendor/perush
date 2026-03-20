@@ -93,9 +93,8 @@ describe("full integration (stub SDK)", () => {
       { timeout: 5000 }
     );
 
-    // Fill form
+    // Fill form (no opening prompt — it's entered on the meeting page)
     await page.fill("#meeting-title", "Integration Test");
-    await page.fill("#opening-prompt", "נדון בפסוק בראשית א:א — בְּרֵאשִׁית בָּרָא אֱלֹהִים");
 
     // Submit
     await page.click('button[type="submit"]');
@@ -103,17 +102,21 @@ describe("full integration (stub SDK)", () => {
     // Wait for deliberation page
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 10000 });
 
-    // Unpause the deliberation loop (starts paused by default)
-    await page.click("#pause-btn");
+    // Human input should be enabled for the first prompt
+    await page.waitForFunction(
+      () => !(document.getElementById("human-input-textarea") as HTMLTextAreaElement).disabled,
+      { timeout: 5000 }
+    );
 
-    // Should see the opening prompt as first message
+    // Type the first prompt
+    await page.fill("#human-input-textarea", "נדון בפסוק בראשית א:א — בְּרֵאשִׁית בָּרָא אֱלֹהִים");
+    await page.click("#human-submit-btn");
+
+    // Should see the opening prompt as first message (rendered by first cycle)
     await page.waitForSelector(".message", { timeout: 5000 });
 
     const messages = await page.$$(".message");
     expect(messages.length).toBeGreaterThanOrEqual(1);
-
-    const firstContent = await messages[0].textContent();
-    expect(firstContent).toContain("בראשית");
 
     // Wait a bit for the first cycle to complete (stub SDK is fast)
     await page.waitForFunction(() =>

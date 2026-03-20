@@ -64,7 +64,7 @@ function logByMethod(consoleMethod: "info" | "warn" | "error", logCategory: LogC
     const timing = String(Date.now() - fileCreationTime).padStart(8, "0");
     const logLevel = `[${consoleMethod.toUpperCase()}]`.padEnd(7);
     const context = getContext();
-    const contextString = context?.messageId ? `[${context.messageId}]` : "[N/A]";
+    const contextString = context?.messageId ? context.messageId : "N/A";
     const fullLog = `${timing} ${logLevel} [${logCategory}] [${contextString}] ${label}${dataAugmentation}`;
     console[consoleMethod](fullLog);
     writeToLog(fullLog + "\n");

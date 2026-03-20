@@ -26,6 +26,7 @@ import {
   getAllSessionIds,
   clearSessions,
   registerSession,
+  registerMeeting,
 } from "./session-manager";
 import { resetStubState } from "./stub-sdk";
 import {
@@ -330,8 +331,17 @@ describe("feedMessage", () => {
     expect(response).toBe("assessment response");
   });
 
-  test("throws if no session exists", async () => {
-    await expect(feedMessage("milo", "test")).rejects.toThrow("No session found");
+  test("lazily creates session if none exists and registerMeeting was called", async () => {
+    const agents = await discoverAgents();
+    registerMeeting("Test Topic", agents.filter(a => a.id === "milo"));
+
+    const response = await feedMessage(
+      "milo",
+      "test message\n---stub-response---\ntext: lazy response\n---end-stub-response---",
+    );
+
+    expect(response).toBe("lazy response");
+    expect(getSessionId("milo")).toBeTruthy();
   });
 });
 
