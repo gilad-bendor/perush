@@ -484,6 +484,9 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
         if (!deliberationLoopActive && getMeeting()) {
           // First prompt (or post-rollback edit) — set opening prompt and start the loop
           setOpeningPrompt(msg.content);
+          // Broadcast immediately so the UI shows the opening prompt before the loop starts
+          const meeting = getMeeting()!;
+          broadcast({ type: "sync", meeting, currentPhase: "idle", readOnly: false, editingCycle: undefined, paused });
           wrapDanglingPromise(
             "server",
             "Start deliberation after human's prompt",

@@ -63,7 +63,7 @@ export class ProcessLabel {
         if (isFinal) {
           // Final complete thinking — persist it and stop accumulating
           if (span) {
-            span.textContent = content.length > 500 ? content.slice(0, 500) + "\u2026" : content;
+            span.textContent = content;
           }
           this.events.push({ eventKind, content, toolName, toolInput });
           this._activeThinkingEl = null;
@@ -73,8 +73,7 @@ export class ProcessLabel {
           // Streaming chunk — just grow the display
           this._activeThinkingContent += content;
           if (span) {
-            const text = this._activeThinkingContent;
-            span.textContent = text.length > 500 ? text.slice(0, 500) + "\u2026" : text;
+            span.textContent = this._activeThinkingContent;
           }
         }
         return;
@@ -136,7 +135,7 @@ export class ProcessLabel {
     // Spinner (while in progress)
     const spinner = document.createElement("span");
     spinner.className = "process-spinner";
-    spinner.textContent = "\u23F3";
+    spinner.textContent = "⏳";
     pill.appendChild(spinner);
 
     pill.addEventListener("click", () => this._toggle());
@@ -194,10 +193,10 @@ export class ProcessLabel {
         break;
       case "thinking":
         div.className = "process-event-thinking";
-        div.innerHTML = `<span class="process-event-thinking-icon">\u{1F4AD}</span> `;
+        div.innerHTML = `<span class="process-event-thinking-icon">💭</span> `;
         const thinkText = document.createElement("span");
         thinkText.className = "thinking-text";
-        thinkText.textContent = evt.content.length > 500 ? evt.content.slice(0, 500) + "\u2026" : evt.content;
+        thinkText.textContent = evt.content;
         div.appendChild(thinkText);
         // Track as the active thinking element for streaming accumulation
         this._activeThinkingEl = div;
@@ -211,7 +210,7 @@ export class ProcessLabel {
         div.className = "process-event-tool-call";
         const toolLabel = document.createElement("span");
         toolLabel.className = "process-event-label";
-        toolLabel.textContent = `\u{1F527} ${evt.toolName || "tool"}:`;
+        toolLabel.textContent = `🔧 ${evt.toolName || "tool"}:`;
         div.appendChild(toolLabel);
         const inputPre = document.createElement("pre");
         inputPre.className = "process-event-code";
@@ -222,11 +221,11 @@ export class ProcessLabel {
         div.className = "process-event-tool-result";
         const resultLabel = document.createElement("span");
         resultLabel.className = "process-event-label";
-        resultLabel.textContent = `\u2705 ${evt.toolName || "result"}:`;
+        resultLabel.textContent = `✅ ${evt.toolName || "result"}:`;
         div.appendChild(resultLabel);
         const resultPre = document.createElement("pre");
         resultPre.className = "process-event-code";
-        resultPre.textContent = evt.content.length > 1000 ? evt.content.slice(0, 1000) + "\u2026" : evt.content;
+        resultPre.textContent = evt.content;
         div.appendChild(resultPre);
         break;
     }
@@ -277,7 +276,7 @@ export class AssessmentGroup {
 
     const header = document.createElement("div");
     header.className = "assessment-group-header";
-    header.textContent = `\u{1F4CA} \u05D4\u05E2\u05E8\u05DB\u05D5\u05EA \u2014 \u05DE\u05D7\u05D6\u05D5\u05E8 ${this.cycleNumber}`;
+    header.textContent = `📊 הערכות — מחזור ${this.cycleNumber}`;
     el.appendChild(header);
 
     const labels = document.createElement("div");

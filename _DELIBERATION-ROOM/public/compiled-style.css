@@ -919,7 +919,6 @@ body {
   top: 1rem;
   inset-inline-end: 1rem;
   z-index: 30;
-  display: none;
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;

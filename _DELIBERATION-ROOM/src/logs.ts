@@ -61,7 +61,10 @@ function logByMethod(consoleMethod: "info" | "warn" | "error", logCategory: LogC
     const dataAugmentation = (data === undefined)
         ? ""
         : `\n${prettyLog(data).replace(/^/gm, '    ')}`;
-    const timing = String(Date.now() - fileCreationTime).padStart(8, "0");
+    const elapsedMs = Date.now() - fileCreationTime;
+    const seconds = Math.floor(elapsedMs / 1000);
+    const ms = elapsedMs % 1000;
+    const timing = `${String(seconds).padStart(5, "0")}.${String(ms).padStart(3, "0")}`;
     const logLevel = `[${consoleMethod.toUpperCase()}]`.padEnd(7);
     const context = getContext();
     const contextString = context?.messageId ? context.messageId : "N/A";

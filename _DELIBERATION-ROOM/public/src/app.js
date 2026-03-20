@@ -168,7 +168,7 @@ const $rollbackConfirm = document.getElementById("rollback-confirm");
  * @returns {string}
  */
 function speakerDisplayName(speakerId) {
-  if (speakerId === "human") return "\u05D4\u05DE\u05E0\u05D7\u05D4";
+  if (speakerId === "human") return "המנחה";
   const agent = agentDefinitions.find((a) => a.id === speakerId);
   return agent ? agent.hebrewName : speakerId;
 }
@@ -349,7 +349,7 @@ function handlePhase(msg) {
  */
 function handleVibe(msg) {
   $vibeText.textContent = msg.vibe;
-  $vibeNext.textContent = msg.nextSpeaker ? `\u05D4\u05D1\u05D0: ${speakerDisplayName(msg.nextSpeaker)}` : "";
+  $vibeNext.textContent = msg.nextSpeaker ? `הבא: ${speakerDisplayName(msg.nextSpeaker)}` : "";
 }
 
 /** Activates the Director's input field and highlights the vibe bar. */
@@ -373,7 +373,7 @@ function handleError(message) {
 
 /** Transitions the attention button to its activated (amber) state. */
 function handleAttentionAck() {
-  $attentionBtn.textContent = "\u270B \u05EA\u05E9\u05D5\u05DE\u05EA \u05DC\u05D1 \u2713";
+  $attentionBtn.textContent = "✋ תשומת לב ✓";
   $attentionBtn.classList.add("btn-attention--acknowledged");
   $attentionBtn.disabled = true;
   // Pulse animation
@@ -395,7 +395,7 @@ function handleMeetingEnded() {
  * @param {WsRollbackProgress} msg
  */
 function handleRollbackProgress(msg) {
-  conversationView?.addSystemMessage(`\u05D7\u05D6\u05E8\u05D4: ${msg.step}${msg.detail ? " \u2014 " + msg.detail : ""}`, "info");
+  conversationView?.addSystemMessage(`חזרה: ${msg.step}${msg.detail ? " — " + msg.detail : ""}`, "info");
 }
 
 // ---- Phase UI Updates -------------------------------------------------------
@@ -427,7 +427,7 @@ function updatePhaseUI(phase, _activeSpeaker) {
     case "idle":
       disableHumanInput();
       // Reset attention button
-      $attentionBtn.textContent = "\u270B \u05EA\u05E9\u05D5\u05DE\u05EA \u05DC\u05D1";
+      $attentionBtn.textContent = "✋ תשומת לב";
       $attentionBtn.classList.remove("btn-attention--acknowledged");
       $attentionBtn.disabled = false;
       break;
@@ -504,7 +504,7 @@ function renderMeetingState() {
     readOnly,
     onRollback: readOnly ? null : handleRollbackRequest,
     agentDisplayName: (id) => {
-      if (id === "manager") return "\u05DE\u05E0\u05D4\u05DC";
+      if (id === "manager") return "מנהל";
       return speakerDisplayName(id);
     },
   });
@@ -571,7 +571,7 @@ async function loadAgents() {
   } catch (err) {
     console.error("Failed to load agents:", err);
     $participantCards.innerHTML =
-      '<p class="form-error-inline">\u05E9\u05D2\u05D9\u05D0\u05D4 \u05D1\u05D8\u05E2\u05D9\u05E0\u05EA \u05D4\u05E1\u05D5\u05DB\u05E0\u05D9\u05DD</p>';
+      '<p class="form-error-inline">שגיאה בטעינת הסוכנים</p>';
   }
 }
 
@@ -624,7 +624,7 @@ async function loadMeetingList() {
   } catch (err) {
     console.error("Failed to load meetings:", err);
     $meetingList.innerHTML =
-      '<p class="form-error-inline">\u05E9\u05D2\u05D9\u05D0\u05D4 \u05D1\u05D8\u05E2\u05D9\u05E0\u05EA \u05D4\u05E4\u05D2\u05D9\u05E9\u05D5\u05EA</p>';
+      '<p class="form-error-inline">שגיאה בטעינת הפגישות</p>';
   }
 }
 
@@ -636,7 +636,7 @@ async function loadMeetingList() {
 function renderMeetingList(meetings) {
   if (!meetings || meetings.length === 0) {
     $meetingList.innerHTML =
-      '<p class="loading-text">\u05D0\u05D9\u05DF \u05E4\u05D2\u05D9\u05E9\u05D5\u05EA \u05E7\u05D5\u05D3\u05DE\u05D5\u05EA</p>';
+      '<p class="loading-text">אין פגישות קודמות</p>';
     return;
   }
 
@@ -650,7 +650,7 @@ function renderMeetingList(meetings) {
     const date = meeting.lastActivity
       ? new Date(meeting.lastActivity).toLocaleDateString("he-IL")
       : "";
-    const cycles = meeting.cycleCount != null ? `${meeting.cycleCount} \u05DE\u05D7\u05D6\u05D5\u05E8\u05D9\u05DD` : "";
+    const cycles = meeting.cycleCount != null ? `${meeting.cycleCount} מחזורים` : "";
     const participants = meeting.participants
       ? meeting.participants
           .map((id) => {
@@ -665,12 +665,12 @@ function renderMeetingList(meetings) {
 
     card.innerHTML = `
       <div class="meeting-card-title">${title}</div>
-      <div class="meeting-card-meta">${[date, cycles].filter(Boolean).join("  \u00B7  ")}</div>
+      <div class="meeting-card-meta">${[date, cycles].filter(Boolean).join("  ·  ")}</div>
       ${participants ? `<div class="meeting-card-participants">${participants}</div>` : ""}
       <div class="meeting-card-actions">
-        ${index === 0 ? `<button class="btn-meeting-resume" data-meeting-id="${meeting.meetingId}">\u05D4\u05DE\u05E9\u05DA \u05D3\u05D9\u05D5\u05DF</button>` : ""}
-        <button class="btn-meeting-view" data-meeting-id="${meeting.meetingId}">\u05E6\u05E4\u05D9\u05D9\u05D4 \u05D1\u05DC\u05D1\u05D3</button>
-        ${sameTitleCount > 1 ? `<button class="btn-meeting-delete" data-title="${title.replace(/"/g, '&quot;')}" data-count="${sameTitleCount}">\u05DE\u05D7\u05E7 ${sameTitleCount} &laquo;${title}&raquo;</button>` : ""}
+        ${index === 0 ? `<button class="btn-meeting-resume" data-meeting-id="${meeting.meetingId}">המשך דיון</button>` : ""}
+        <button class="btn-meeting-view" data-meeting-id="${meeting.meetingId}">צפייה בלבד</button>
+        ${sameTitleCount > 1 ? `<button class="btn-meeting-delete" data-title="${title.replace(/"/g, '&quot;')}" data-count="${sameTitleCount}">מחק ${sameTitleCount} &laquo;${title}&raquo;</button>` : ""}
       </div>
     `;
 
@@ -693,14 +693,14 @@ function renderMeetingList(meetings) {
         const meetingTitle = deleteBtn.dataset.title;
 
         deleteBtn.disabled = true;
-        deleteBtn.textContent = "\u05DE\u05D5\u05D7\u05E7...";
+        deleteBtn.textContent = "מוחק...";
         try {
           const res = await fetch(`/api/meetings?title=${encodeURIComponent(meetingTitle)}`, { method: "DELETE" });
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           await loadMeetingList();
         } catch (err) {
           console.error("Failed to delete meetings:", err);
-          deleteBtn.textContent = "\u05E9\u05D2\u05D9\u05D0\u05D4";
+          deleteBtn.textContent = "שגיאה";
         }
       });
     }
@@ -789,14 +789,14 @@ function handlePauseState(newPaused, newBlocking) {
 /** Renders the pause button based on current state. */
 function updatePauseButton() {
   if (isPaused) {
-    $pauseBtn.innerHTML = "&#x25B6; \u05D4\u05DE\u05E9\u05DA"; // Play
+    $pauseBtn.innerHTML = "&#x25B6; המשך"; // Play
     if (pauseBlocking) {
       $pauseBtn.classList.add("btn-vibe-control--blocking");
     } else {
       $pauseBtn.classList.remove("btn-vibe-control--blocking");
     }
   } else {
-    $pauseBtn.innerHTML = "&#x23F8; \u05D4\u05E9\u05D4\u05D4"; // Pause
+    $pauseBtn.innerHTML = "&#x23F8; השהה"; // Pause
     $pauseBtn.classList.remove("btn-vibe-control--blocking");
   }
 }
@@ -816,7 +816,7 @@ function handleRollbackRequest(cycleNumber, messagePreview, totalCycles) {
   pendingRollbackCycle = cycleNumber;
   $rollbackPreview.textContent = messagePreview;
   const discardCount = totalCycles - cycleNumber;
-  $rollbackWarning.textContent = `\u26A0 \u05E4\u05E2\u05D5\u05DC\u05D4 \u05D6\u05D5 \u05EA\u05DE\u05D7\u05E7 ${discardCount} \u05DE\u05D7\u05D6\u05D5\u05E8\u05D9\u05DD (\u05DE\u05D7\u05D6\u05D5\u05E8\u05D9\u05DD ${cycleNumber + 1}-${totalCycles})`;
+  $rollbackWarning.textContent = `⚠ פעולה זו תמחק ${discardCount} מחזורים (מחזורים ${cycleNumber + 1}-${totalCycles})`;
 
   // Fade messages after target
   conversationView?.fadeAfter(cycleNumber);
@@ -850,7 +850,7 @@ $backToLanding.addEventListener("click", () => {
     navigateTo("/");
   } else {
     // Active meeting — confirm
-    if (confirm("\u05D9\u05E9 \u05E4\u05D2\u05D9\u05E9\u05D4 \u05E4\u05E2\u05D9\u05DC\u05D4. \u05D1\u05D7\u05E8 /end \u05DB\u05D3\u05D9 \u05DC\u05E1\u05D9\u05D9\u05DD \u05D0\u05D5\u05EA\u05D4 \u05EA\u05D7\u05D9\u05DC\u05D4.")) {
+    if (confirm("יש פגישה פעילה. בחר /end כדי לסיים אותה תחילה.")) {
       // Do nothing — they need to /end first
     }
   }

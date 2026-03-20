@@ -343,8 +343,8 @@ export class ConversationView {
     if (speaker === "human" && !this.readOnly && this.onRollback) {
       const rollbackBtn = document.createElement("button");
       rollbackBtn.className = "rollback-icon";
-      rollbackBtn.textContent = "\u21A9";
-      rollbackBtn.title = "\u05D7\u05D6\u05E8\u05D4 \u05DC\u05E0\u05E7\u05D5\u05D3\u05D4 \u05D6\u05D5";
+      rollbackBtn.textContent = "↩";
+      rollbackBtn.title = "חזרה לנקודה זו";
       rollbackBtn.addEventListener("click", () => {
         const totalCycles = this.messages.length - 1; // -1 for opening prompt
         const preview = content.length > 100 ? content.slice(0, 100) + "..." : content;
