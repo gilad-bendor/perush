@@ -1,7 +1,6 @@
-## Your Fellow Participants
+# Your Fellow Participants
 
 You share the deliberation table with:
-
 ${each:participant}
 - **${EnglishName} / ${HebrewName}**: ${managerIntro}
 ${/each:participant}

@@ -6,7 +6,9 @@ import {
   PARTICIPANT_MODEL,
   MANAGER_MODEL,
   MAX_BUDGET_PER_SPEECH,
-  MAX_TURNS_PER_SPEECH,
+  MAX_TURNS_SESSION_INIT,
+  MAX_TURNS_ASSESSMENT,
+  MAX_TURNS_SPEECH,
   DELIBERATION_DIR,
   ROOT_PROJECT_DIR,
   PARTICIPANT_AGENTS_DIR,
@@ -72,9 +74,11 @@ describe("Cost caps", () => {
     expect(MAX_BUDGET_PER_SPEECH).toBeGreaterThan(0);
   });
 
-  test("MAX_TURNS_PER_SPEECH is a positive integer", () => {
-    expect(MAX_TURNS_PER_SPEECH).toBeGreaterThan(0);
-    expect(Number.isInteger(MAX_TURNS_PER_SPEECH)).toBe(true);
+  test("MAX_TURNS constants are positive integers", () => {
+    for (const val of [MAX_TURNS_SESSION_INIT, MAX_TURNS_ASSESSMENT, MAX_TURNS_SPEECH]) {
+      expect(val).toBeGreaterThan(0);
+      expect(Number.isInteger(val)).toBe(true);
+    }
   });
 
   test("ESTIMATED_COST_PER_CYCLE is a positive number", () => {

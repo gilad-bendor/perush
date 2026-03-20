@@ -29,7 +29,9 @@ import {
   PARTICIPANT_TOOLS,
   MANAGER_TOOLS,
   MAX_BUDGET_PER_SPEECH,
-  MAX_TURNS_PER_SPEECH,
+  MAX_TURNS_SESSION_INIT,
+  MAX_TURNS_ASSESSMENT,
+  MAX_TURNS_SPEECH,
   USE_STUB_SDK,
   ROOT_PROJECT_DIR,
 
@@ -454,7 +456,7 @@ export async function createSession(
       systemPrompt,
       tools,
       cwd: ROOT_PROJECT_DIR,
-      maxTurns: agentId === "manager" ? 1 : MAX_TURNS_PER_SPEECH,
+      maxTurns: agentId === "manager" ? MAX_TURNS_ASSESSMENT : MAX_TURNS_SESSION_INIT,
       maxBudgetUsd: agentId === "manager" ? 0.10 : MAX_BUDGET_PER_SPEECH,
     },
   });
@@ -508,7 +510,7 @@ export async function feedMessage(
       resume: sessionId,
       model,
       effort,
-      maxTurns: 1,
+      maxTurns: MAX_TURNS_ASSESSMENT,
       cwd: ROOT_PROJECT_DIR,
     },
   });
@@ -567,7 +569,7 @@ export async function* streamSpeech(
       effort,
       tools,
       includePartialMessages: true,
-      maxTurns: MAX_TURNS_PER_SPEECH,
+      maxTurns: MAX_TURNS_SPEECH,
       maxBudgetUsd: MAX_BUDGET_PER_SPEECH,
       cwd: ROOT_PROJECT_DIR,
     },

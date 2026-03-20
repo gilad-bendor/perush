@@ -67,8 +67,14 @@ export function effortForModel(model: string): EffortLevel {
 /** Max budget per speech query (USD) — generous safety net, not a constraint */
 export const MAX_BUDGET_PER_SPEECH = 2.0;
 
-/** Max agentic turns per speech query — generous safety net */
-export const MAX_TURNS_PER_SPEECH = 25;
+/** Max agentic turns: session creation for Participant-Agents (needs tools for initial exploration) */
+export const MAX_TURNS_SESSION_INIT = 25;
+
+/** Max agentic turns: assessments and manager selection (no tools, single response) */
+export const MAX_TURNS_ASSESSMENT = 25;
+
+/** Max agentic turns: participant speeches (agentic with tools) */
+export const MAX_TURNS_SPEECH = 25;
 
 /** Estimated cost per deliberation cycle (USD) — for display purposes */
 export const ESTIMATED_COST_PER_CYCLE = 0.50;

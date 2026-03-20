@@ -170,20 +170,18 @@ export function realQuery(params: {
 
   // Log the request
   logInfo("sdk", `Q${qid} >>> ${JSON.stringify(options.title)}`, {
-    prompt,
     options: {
       model: sdkOptions.model,
       effort: sdkOptions.effort,
       resume: sdkOptions.resume,
-      systemPrompt: sdkOptions.systemPrompt
-        ? `(${typeof sdkOptions.systemPrompt === "string" ? sdkOptions.systemPrompt.length : JSON.stringify(sdkOptions.systemPrompt).length} chars)`
-        : undefined,
       includePartialMessages: sdkOptions.includePartialMessages,
       maxTurns: sdkOptions.maxTurns,
       maxBudgetUsd: sdkOptions.maxBudgetUsd,
       cwd: sdkOptions.cwd,
       tools: sdkOptions.tools,
     },
+    systemPrompt: sdkOptions.systemPrompt ? `${"-".repeat(80)}\n\x1b[32m\n${sdkOptions.systemPrompt}\n\x1b[0m\n${"-".repeat(80)}` : undefined,
+    prompt: `${"-".repeat(80)}\n\x1b[32m\n${prompt}\n\x1b[0m\n${"-".repeat(80)}`,
   });
 
   // Call the real SDK
