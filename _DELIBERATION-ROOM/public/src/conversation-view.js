@@ -78,6 +78,17 @@ export class ConversationView {
       this._finalizeStreaming();
     }
 
+    // If the last message was a finalized streaming message from the same speaker,
+    // update it in place instead of creating a duplicate.
+    const last = this.messages[this.messages.length - 1];
+    if (last && last.speaker === speaker && last.el.dataset.wasStreaming === "true") {
+      const contentEl = querySelectorMust(".message-content", last.el);
+      contentEl.textContent = content;
+      last.content = content;
+      this._scrollToBottom();
+      return;
+    }
+
     const cycleNumber = this.messages.length; // 0 = opening prompt
     const el = this._createMessageEl(speaker, content, cycleNumber);
     this.container.appendChild(el);
@@ -99,6 +110,7 @@ export class ConversationView {
       const cycleNumber = this.messages.length;
       const el = this._createMessageEl(speaker, "", cycleNumber);
       el.classList.add("streaming");
+      el.dataset.wasStreaming = "true";
       this.container.appendChild(el);
       this.streamingMessage = el;
       this.messages.push({ el, speaker, cycleNumber, content: "" });

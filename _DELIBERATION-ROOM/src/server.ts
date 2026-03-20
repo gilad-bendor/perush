@@ -415,23 +415,26 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
             currentPhase: getPhase(),
             paused,
           });
-          // Resume the deliberation loop from the last speech
-          const lastCycle = meeting.cycles[meeting.cycles.length - 1];
-          if (lastCycle) {
-            wrapDanglingPromise(
-                "server",
-                `Start deliberation after ${lastCycle.speech.speaker}'s prompt`,
-                runDeliberationLoop(lastCycle.speech.speaker, lastCycle.speech.content),
-            );
-          } else if (meeting.openingPrompt) {
-            // No cycles but has opening prompt — resume from it
-            wrapDanglingPromise(
-                "server",
-                `Start deliberation after human's prompt`,
-                runDeliberationLoop("human", meeting.openingPrompt),
-            );
+          // Only start the deliberation loop if it's not already running
+          // (resumeMeetingById returns the active meeting if it's the same one)
+          if (!deliberationLoopActive) {
+            const lastCycle = meeting.cycles[meeting.cycles.length - 1];
+            if (lastCycle) {
+              wrapDanglingPromise(
+                  "server",
+                  `Start deliberation after ${lastCycle.speech.speaker}'s prompt`,
+                  runDeliberationLoop(lastCycle.speech.speaker, lastCycle.speech.content),
+              );
+            } else if (meeting.openingPrompt) {
+              // No cycles but has opening prompt — resume from it
+              wrapDanglingPromise(
+                  "server",
+                  `Start deliberation after human's prompt`,
+                  runDeliberationLoop("human", meeting.openingPrompt),
+              );
+            }
+            // else: no cycles and no opening prompt — wait for first human speech
           }
-          // else: no cycles and no opening prompt — wait for first human speech
         } catch (err: any) {
           sendTo(ws, { type: "error", message: err?.message || "Failed to resume meeting" });
         }
@@ -455,13 +458,14 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
 
       case "join-meeting": {
         try {
-          // If this meeting is currently active, send live state (lightweight)
+          // If this meeting is currently active, send live state with editing enabled
           const activeMeeting = getMeeting();
           if (activeMeeting && activeMeeting.meetingId === msg.meetingId) {
             sendTo(ws, {
               type: "sync",
               meeting: activeMeeting,
               currentPhase: getPhase(),
+              readOnly: false,
               paused,
             });
           } else {

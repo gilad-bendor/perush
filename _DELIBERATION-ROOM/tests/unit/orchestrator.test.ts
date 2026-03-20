@@ -460,11 +460,21 @@ describe("cost tracking", () => {
 // ---------------------------------------------------------------------------
 
 describe("resumeMeetingById", () => {
-  test("throws if another meeting is already active", async () => {
+  test("throws if a different meeting is already active", async () => {
     const meeting = await startMeeting("Test", ["milo"]);
     testMeetingId = meeting.meetingId;
 
     await expect(resumeMeetingById(generateMeetingId("some-other-id", new Date()))).rejects.toThrow("already active");
+  });
+
+  test("returns the active meeting if resuming the same meeting ID", async () => {
+    const meeting = await startMeeting("Test", ["milo"]);
+    testMeetingId = meeting.meetingId;
+
+    // Resuming the same meeting should succeed (no-op)
+    const resumed = await resumeMeetingById(testMeetingId);
+    expect(resumed).toBe(meeting);
+    expect(resumed.meetingId).toBe(testMeetingId);
   });
 
   test("resumes an ended meeting with correct state", async () => {

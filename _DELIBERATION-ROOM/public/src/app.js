@@ -842,18 +842,14 @@ $rollbackConfirm.addEventListener("click", () => {
 // ---- Back to Landing --------------------------------------------------------
 
 $backToLanding.addEventListener("click", () => {
-  // Only allow going back if read-only or no active meeting
-  if (readOnly || !currentMeeting) {
-    currentMeeting = null;
-    readOnly = false;
-    conversationView = null;
-    navigateTo("/");
-  } else {
-    // Active meeting — confirm
-    if (confirm("יש פגישה פעילה. בחר /end כדי לסיים אותה תחילה.")) {
-      // Do nothing — they need to /end first
-    }
-  }
+  // Always allow navigating back to landing.
+  // The active meeting (if any) stays active on the server — the client just
+  // switches to the landing page where it can browse other meetings (read-only)
+  // or re-enter the active meeting.
+  currentMeeting = null;
+  readOnly = false;
+  conversationView = null;
+  navigateTo("/");
 });
 
 // ---- Post-Rollback Edit Submission ------------------------------------------

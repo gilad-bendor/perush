@@ -607,6 +607,10 @@ export async function handleRollback(
 export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> {
   logInfo("orchestrator", `resumeMeetingById: ${meetingId}`);
   if (currentMeeting) {
+    if (currentMeeting.meetingId === meetingId) {
+      logInfo("orchestrator", `resumeMeetingById: meeting ${meetingId} is already active — returning it`);
+      return currentMeeting;
+    }
     throw new Error("A meeting is already active. End it before resuming another.");
   }
 

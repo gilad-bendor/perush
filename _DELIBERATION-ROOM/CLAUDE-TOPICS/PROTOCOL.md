@@ -67,14 +67,16 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // Start a new meeting (participants = selected agent IDs from the pool)
 { type: "start-meeting", title: string, openingPrompt: string, participants: AgentId[] }
 
-// Resume a previous meeting
+// Resume a previous meeting. If the meeting is already active, returns it without
+// restarting the deliberation loop — safe to call from any browser tab at any time.
 { type: "resume-meeting", meetingId: string }
 
 // View a past meeting in read-only mode
 { type: "view-meeting", meetingId: string }
 
-// Join a meeting by URL — server auto-detects: if active, sends live sync; if ended, sends read-only sync.
-// Primary entry point for URL-based navigation (/meeting/<id>).
+// Join a meeting by URL — server auto-detects: if active, sends live sync (readOnly: false,
+// enabling the Director's input); if ended, sends read-only sync. Primary entry point for
+// URL-based navigation (/meeting/<id>).
 { type: "join-meeting", meetingId: string }
 
 // Director requests the floor — current cycle continues uninterrupted;
@@ -100,7 +102,7 @@ Client-side reconnection logic: on WebSocket `close` event, attempt reconnect wi
 
 ## Multiple Tabs
 
-Multiple browser tabs receive the same broadcast (they're passive viewers). During the Director's turn, all tabs show the input field; whichever submits first wins. The server accepts the first response and broadcasts it.
+Multiple browser tabs receive the same broadcast. All tabs viewing the active meeting get full editing capabilities (not read-only). During the Director's turn, all tabs show the input field; whichever submits first wins. The server accepts the first response and broadcasts it. Tabs can freely navigate between the landing page and any meeting without affecting the server-side meeting state.
 
 ## Cost Profile Per Cycle
 

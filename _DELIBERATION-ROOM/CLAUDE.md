@@ -346,7 +346,7 @@ server.ts          ← types.ts, config.ts, context.ts, orchestrator.ts, session
 
 - **Session failure**: Apply session recovery (new session, feed transcript, capture, update `meeting.yaml`). If recovery fails too, notify the Director.
 - **Assessment failure**: Proceed with remaining assessments. Manager can select with partial data.
-- **Browser disconnect**: Orchestrator waits (up to 10 min). Sessions continue regardless of browser state.
+- **Browser disconnect/navigate away**: Orchestrator waits (up to 10 min). Sessions continue regardless of browser state. The Director can navigate to the landing page and back without affecting the active meeting. Resuming an already-active meeting is a no-op (returns the active meeting without restarting sessions or the loop).
 - **Server restart**: Sessions are lost. Meeting resumes from last `meeting.yaml` state via session recovery.
 - **Worktree conflicts**: `git worktree remove --force` first, then retry.
 

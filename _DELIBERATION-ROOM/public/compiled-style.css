@@ -695,11 +695,22 @@ body {
 
 .form-error {
   margin-top: 0.25rem;
-  display: none;
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity, 1));
+  display: none;
+}
+
+.deliberation-room:not(.form-error) {
+  display: grid;
+  grid-template-areas:
+    "conversation"
+    "vibe"
+    "input";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  height: 100vh;
 }
 
 .form-error-inline {
@@ -1074,7 +1085,6 @@ body {
 
 .view-only-banner {
   margin-bottom: 1rem;
-  display: none;
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -1090,6 +1100,18 @@ body {
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(87 83 78 / var(--tw-text-opacity, 1));
+  display: none;
+}
+
+.deliberation-room:not(.view-only-banner) {
+  display: grid;
+  grid-template-areas:
+    "conversation"
+    "vibe"
+    "input";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  height: 100vh;
 }
 
 /* --------------------------------------------------------------- */
@@ -1264,11 +1286,22 @@ body {
 }
 
 .vibe-cost {
-  display: none;
   font-size: 0.75rem;
   line-height: 1rem;
   --tw-text-opacity: 1;
   color: rgb(168 162 158 / var(--tw-text-opacity, 1));
+  display: none;
+}
+
+.deliberation-room:not(.vibe-cost) {
+  display: grid;
+  grid-template-areas:
+    "conversation"
+    "vibe"
+    "input";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  height: 100vh;
 }
 
 .btn-vibe-control {
@@ -1309,7 +1342,6 @@ body {
 }
 
 .btn-attention {
-  display: none;
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -1325,6 +1357,18 @@ body {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  display: none;
+}
+
+.deliberation-room:not(.btn-attention) {
+  display: grid;
+  grid-template-areas:
+    "conversation"
+    "vibe"
+    "input";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  height: 100vh;
 }
 
 .btn-attention:hover {
@@ -1424,9 +1468,20 @@ body {
 }
 
 .process-badge {
-  display: none;
   font-size: 10px;
   opacity: 0.6;
+  display: none;
+}
+
+.deliberation-room:not(.process-badge) {
+  display: grid;
+  grid-template-areas:
+    "conversation"
+    "vibe"
+    "input";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  height: 100vh;
 }
 
 .process-spinner {
@@ -1588,10 +1643,21 @@ body {
   inset: 0px;
   z-index: 50;
   display: flex;
-  display: none;
   align-items: center;
   justify-content: center;
   background-color: rgb(0 0 0 / 0.4);
+  display: none;
+}
+
+.deliberation-room:not(.modal-overlay) {
+  display: grid;
+  grid-template-areas:
+    "conversation"
+    "vibe"
+    "input";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  height: 100vh;
 }
 
 .modal-content {
@@ -1663,7 +1729,6 @@ body {
   top: 1rem;
   inset-inline-start: 50%;
   z-index: 40;
-  display: none;
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 9999px;
@@ -1680,6 +1745,18 @@ body {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  display: none;
+}
+
+.deliberation-room:not(.reconnecting-indicator) {
+  display: grid;
+  grid-template-areas:
+    "conversation"
+    "vibe"
+    "input";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  height: 100vh;
 }
 
 .sr-only {
@@ -1883,6 +1960,10 @@ body {
   transition-duration: 150ms;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* ================================================================= */
 
 /* BASE                                                              */
@@ -1903,7 +1984,7 @@ body {
 
 /* Main deliberation layout — single column, full width */
 
-.deliberation-room {
+.deliberation-room:not(.hidden) {
   display: grid;
   grid-template-areas:
     "conversation"

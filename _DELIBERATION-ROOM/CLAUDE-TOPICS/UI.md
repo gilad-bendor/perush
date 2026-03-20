@@ -77,10 +77,13 @@ The app uses client-side URL routing with `history.pushState`:
 
 **Navigation flow:**
 - Creating a meeting → URL updates to `/meeting/<new-id>` after sync
-- Clicking "view" on a meeting card → navigates to `/meeting/<id>`
+- Clicking "view" on a meeting card → navigates to `/meeting/<id>` (read-only if ended; full editor if it's the active meeting)
 - Clicking "resume" on a meeting card → sends `resume-meeting`, URL updates after sync
+- Back button from deliberation → always returns to `/` (active meeting stays active on server)
 - Browser back from deliberation → returns to `/`
 - Direct URL access (`/meeting/<id>`) → sends `join-meeting` on WS connect
+
+**Key invariant:** The back-to-landing button never ends or interrupts the active meeting. The Director can freely browse the meeting list and return to the active meeting. Use `/end` to explicitly end a meeting.
 
 **Server SPA routing:** Any request to `/meeting/*` serves `index.html`. The frontend JS reads the URL to determine what to display.
 

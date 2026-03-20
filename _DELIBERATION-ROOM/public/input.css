@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.hidden {
+  display: none !important;
+}
+
 /* ================================================================= */
 /* BASE                                                              */
 /* ================================================================= */
@@ -440,7 +444,7 @@
 /* ================================================================= */
 
 /* Main deliberation layout — single column, full width */
-.deliberation-room {
+.deliberation-room:not(.hidden) {
   display: grid;
   grid-template-areas:
     "conversation"
