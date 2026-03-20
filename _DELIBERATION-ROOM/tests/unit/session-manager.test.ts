@@ -27,14 +27,14 @@ import {
   clearSessions,
   registerSession,
   registerMeeting,
-} from "./session-manager";
-import { resetStubState } from "./stub-sdk";
+} from "../../src/session-manager";
+import { resetStubState } from "../../src/stub-sdk";
 import {
   PARTICIPANT_AGENTS_DIR,
   DICTIONARY_INJECTION_POINT,
   AGENTS_PREFIX_FILE,
   CONVERSATION_MANAGER_FILE,
-} from "./config";
+} from "../../src/config";
 
 beforeEach(() => {
   resetAgentCache();

@@ -116,12 +116,12 @@ export class ProcessLabel {
   _buildElement() {
     const color = speakerColor(this.agent);
     const el = document.createElement("div");
-    el.className = "process-label inline-block";
+    el.className = "process-label";
     el.dataset.processId = this.processId;
 
     // Pill (collapsed view)
     const pill = document.createElement("button");
-    pill.className = `process-pill inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-medium cursor-pointer transition-colors ${color.border} ${color.label} hover:${color.bg} animate-pulse`;
+    pill.className = `process-pill ${color.border} ${color.label} animate-pulse`;
     pill.style.borderWidth = "1.5px";
 
     const nameSpan = document.createElement("span");
@@ -130,12 +130,12 @@ export class ProcessLabel {
 
     // Event count badge
     const badge = document.createElement("span");
-    badge.className = "process-badge text-[10px] opacity-60 hidden";
+    badge.className = "process-badge";
     pill.appendChild(badge);
 
     // Spinner (while in progress)
     const spinner = document.createElement("span");
-    spinner.className = "process-spinner text-[10px] opacity-40";
+    spinner.className = "process-spinner";
     spinner.textContent = "\u23F3";
     pill.appendChild(spinner);
 
@@ -144,7 +144,7 @@ export class ProcessLabel {
 
     // Expansion area (hidden by default)
     const expansion = document.createElement("div");
-    expansion.className = "process-expansion hidden mt-1 border rounded p-2 text-xs space-y-1";
+    expansion.className = "process-expansion hidden";
     expansion.style.borderColor = color.dot;
     expansion.style.backgroundColor = "rgba(0,0,0,0.02)";
     el.appendChild(expansion);
@@ -185,18 +185,18 @@ export class ProcessLabel {
 
     switch (evt.eventKind) {
       case "prompt":
-        div.className = "text-stone-400 border-b border-stone-200 pb-1 mb-1";
-        div.innerHTML = `<span class="font-semibold">\u25B6 Prompt:</span>`;
+        div.className = "process-event-prompt";
+        div.innerHTML = `<span class="process-event-label">✍ פרומפט:</span>`;
         const promptText = document.createElement("pre");
-        promptText.className = "whitespace-pre-wrap mt-0.5 text-[11px]";
+        promptText.className = "process-event-pre";
         promptText.textContent = evt.content;
         div.appendChild(promptText);
         break;
       case "thinking":
-        div.className = "italic text-stone-500 bg-stone-50 rounded px-1.5 py-0.5 border-2";
-        div.innerHTML = `<span class="font-semibold not-italic text-stone-400">\u{1F4AD}</span> `;
+        div.className = "process-event-thinking";
+        div.innerHTML = `<span class="process-event-thinking-icon">\u{1F4AD}</span> `;
         const thinkText = document.createElement("span");
-        thinkText.className = "whitespace-pre-wrap thinking-text";
+        thinkText.className = "thinking-text";
         thinkText.textContent = evt.content.length > 500 ? evt.content.slice(0, 500) + "\u2026" : evt.content;
         div.appendChild(thinkText);
         // Track as the active thinking element for streaming accumulation
@@ -204,28 +204,28 @@ export class ProcessLabel {
         this._activeThinkingContent = evt.content;
         break;
       case "text":
-        div.className = "text-stone-800 whitespace-pre-wrap";
+        div.className = "process-event-text";
         div.textContent = evt.content;
         break;
       case "tool-call":
-        div.className = "font-mono text-indigo-700 bg-indigo-50 rounded px-1.5 py-0.5";
+        div.className = "process-event-tool-call";
         const toolLabel = document.createElement("span");
-        toolLabel.className = "font-semibold";
+        toolLabel.className = "process-event-label";
         toolLabel.textContent = `\u{1F527} ${evt.toolName || "tool"}:`;
         div.appendChild(toolLabel);
         const inputPre = document.createElement("pre");
-        inputPre.className = "whitespace-pre-wrap text-[11px] mt-0.5 max-h-32 overflow-y-auto";
+        inputPre.className = "process-event-code";
         inputPre.textContent = evt.toolInput || evt.content;
         div.appendChild(inputPre);
         break;
       case "tool-result":
-        div.className = "font-mono text-teal-700 bg-teal-50 rounded px-1.5 py-0.5";
+        div.className = "process-event-tool-result";
         const resultLabel = document.createElement("span");
-        resultLabel.className = "font-semibold";
+        resultLabel.className = "process-event-label";
         resultLabel.textContent = `\u2705 ${evt.toolName || "result"}:`;
         div.appendChild(resultLabel);
         const resultPre = document.createElement("pre");
-        resultPre.className = "whitespace-pre-wrap text-[11px] mt-0.5 max-h-32 overflow-y-auto";
+        resultPre.className = "process-event-code";
         resultPre.textContent = evt.content.length > 1000 ? evt.content.slice(0, 1000) + "\u2026" : evt.content;
         div.appendChild(resultPre);
         break;
@@ -273,15 +273,15 @@ export class AssessmentGroup {
 
   _buildElement() {
     const el = document.createElement("div");
-    el.className = "assessment-group border border-stone-300 rounded p-2 mb-2";
+    el.className = "assessment-group";
 
     const header = document.createElement("div");
-    header.className = "text-[10px] text-stone-400 mb-1 font-medium";
+    header.className = "assessment-group-header";
     header.textContent = `\u{1F4CA} \u05D4\u05E2\u05E8\u05DB\u05D5\u05EA \u2014 \u05DE\u05D7\u05D6\u05D5\u05E8 ${this.cycleNumber}`;
     el.appendChild(header);
 
     const labels = document.createElement("div");
-    labels.className = "assessment-labels flex flex-wrap gap-1.5";
+    labels.className = "assessment-labels";
     el.appendChild(labels);
 
     return el;

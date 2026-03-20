@@ -30,7 +30,7 @@ Test each module in isolation. Use the stub SDK (see below) to avoid API calls i
 **Test patterns**:
 ```typescript
 import { describe, test, expect, beforeEach, afterEach } from "bun:test";
-import { createStubSDK } from "./stub-sdk";
+import { createStubSDK } from "../../src/stub-sdk";
 
 describe("session-manager", () => {
   test("extractAssessment parses valid JSON from agent response", () => {
@@ -80,7 +80,7 @@ Located in `tests/e2e/`. Use `mock-ws-server.ts` to replay canned WebSocket even
 
 ```typescript
 // Usage in tests:
-import { createStubSDK } from "./stub-sdk";
+import { createStubSDK } from "../../src/stub-sdk";
 
 const sdk = createStubSDK();
 const query = sdk.query({

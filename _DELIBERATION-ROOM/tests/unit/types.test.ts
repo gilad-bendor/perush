@@ -12,7 +12,7 @@ import {
   MeetingSummarySchema,
   ServerMessageSchema,
   ClientMessageSchema, MeetingSummary, ServerMessage, ClientMessage, Meeting,
-} from "./types";
+} from "../../src/types";
 
 // ---------------------------------------------------------------------------
 // FormattedTime

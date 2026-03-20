@@ -32,8 +32,8 @@ import {
   CONVERSATION_MANAGER_FILE,
   DICTIONARY_INJECTION_POINT,
   ESTIMATED_COST_PER_CYCLE,
-} from "./config";
-import {SESSION_BRANCH_PREFIX, TAG_PREFIX} from "./types.ts";
+} from "../../src/config";
+import {SESSION_BRANCH_PREFIX, TAG_PREFIX} from "../../src/types.ts";
 
 // ---------------------------------------------------------------------------
 // Network config

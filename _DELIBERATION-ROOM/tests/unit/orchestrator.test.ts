@@ -22,12 +22,12 @@ import {
   setEventHandlers,
   setDirectorTimeout,
   resetOrchestrator,
-} from "./orchestrator";
-import type { OrchestratorEvents } from "./orchestrator";
-import { resetStubState } from "./stub-sdk";
-import { resetAgentCache } from "./session-manager";
-import {PrivateAssessment, Phase, meetingIdToBranchName, MeetingId} from "./types";
-import {generateMeetingId} from "./meetings-db.ts";
+} from "../../src/orchestrator";
+import type { OrchestratorEvents } from "../../src/orchestrator";
+import { resetStubState } from "../../src/stub-sdk";
+import { resetAgentCache } from "../../src/session-manager";
+import {PrivateAssessment, Phase, meetingIdToBranchName, MeetingId} from "../../src/types";
+import {generateMeetingId} from "../../src/meetings-db.ts";
 
 // Unique test meeting IDs to avoid collisions
 function testId(): MeetingId {

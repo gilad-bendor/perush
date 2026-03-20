@@ -6,8 +6,8 @@
  */
 
 import { describe, test, expect } from "bun:test";
-import { _stripStubResponseBlocks, realQuery } from "./real-sdk";
-import { USE_STUB_SDK } from "./config";
+import { _stripStubResponseBlocks, realQuery } from "../../src/real-sdk";
+import { USE_STUB_SDK } from "../../src/config";
 
 describe("stripStubResponseBlocks", () => {
   test("passes through prompt with no stub blocks", () => {

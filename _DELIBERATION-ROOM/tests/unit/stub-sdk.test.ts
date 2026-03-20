@@ -9,7 +9,7 @@ import {
   type StubSDKAssistantMessage,
   type StubSDKResultSuccess,
   type StubSDKStreamEvent,
-} from "./stub-sdk";
+} from "../../src/stub-sdk";
 
 beforeEach(() => {
   resetStubState();

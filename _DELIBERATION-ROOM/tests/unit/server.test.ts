@@ -15,18 +15,18 @@ import {
   connectedClients,
   stopDeliberationLoop,
   setupOrchestratorEvents,
-} from "./server";
+} from "../../src/server";
 import {
   resetOrchestrator,
   getMeeting,
   startMeeting,
   endCurrentMeeting,
-} from "./orchestrator";
-import { resetStubState } from "./stub-sdk";
-import { resetAgentCache } from "./session-manager";
-import { DELIBERATION_DIR } from "./config";
-import {MeetingId, meetingIdToBranchName, MeetingSummary, ServerMessage} from "./types";
-import {generateMeetingId} from "./meetings-db.ts";
+} from "../../src/orchestrator";
+import { resetStubState } from "../../src/stub-sdk";
+import { resetAgentCache } from "../../src/session-manager";
+import { DELIBERATION_DIR } from "../../src/config";
+import {MeetingId, meetingIdToBranchName, MeetingSummary, ServerMessage} from "../../src/types";
+import {generateMeetingId} from "../../src/meetings-db.ts";
 
 // ---------------------------------------------------------------------------
 // Helpers

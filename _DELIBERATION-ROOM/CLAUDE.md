@@ -196,13 +196,13 @@ The `participants` array is authoritative: all iteration (assessments, template 
 
 ```
 _DELIBERATION-ROOM/
-├── CLAUDE.md              ← this file
-├── CLAUDE-TOPICS/         ← spin-out detail files (see below)
+├── CLAUDE.md                      ← this file
+├── CLAUDE-TOPICS/                 ← spin-out detail files (see below)
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.ts
-├── playwright-test.ts     ← Playwright CLI helper
-├── participant-agents/    ← AI-Agent persona files
+├── playwright-test.ts             ← Playwright CLI helper
+├── participant-agents/            ← AI-Agent persona files
 │   ├── _base-prefix.md            ← shared prefix for ALL AI-Agents
 │   ├── _agents-prefix.md          ← Participant-Agent prefix (introduces fellow Participants)
 │   ├── _conversation-manager.md   ← Manager orchestration logic
@@ -216,36 +216,44 @@ _DELIBERATION-ROOM/
 │   ├── active-logs-short.sh       ← print/follow header lines only
 │   └── DANGER-DELETE-ALL-MEETINGS.sh
 ├── src/
-│   ├── server.ts          ← Bun web server (HTTP + WebSocket), entry point
-│   ├── orchestrator.ts    ← deliberation loop, phase management
-│   ├── session-manager.ts ← Agent SDK sessions, template resolution, agent discovery
-│   ├── meetings-db.ts     ← git-as-database: worktrees, meeting CRUD
-│   ├── types.ts           ← zod schemas and TypeScript types
-│   ├── types-asserts.ts   ← compile-time Zod↔TS type alignment checks
-│   ├── config.ts          ← ALL configurable values
-│   ├── logs.ts            ← logging (console + file), category toggles
-│   ├── context.ts         ← AsyncLocalStorage for request context (messageId)
-│   ├── utils.ts           ← shared utilities (prettyLog, wrapDanglingPromise)
-│   ├── stub-sdk.ts        ← Agent SDK stub for testing
-│   ├── real-sdk.ts        ← Real Agent SDK adapter
-│   └── *.test.ts          ← unit tests (one per module)
+│   ├── server.ts                  ← Bun web server (HTTP + WebSocket), entry point
+│   ├── orchestrator.ts            ← deliberation loop, phase management
+│   ├── session-manager.ts         ← Agent SDK sessions, template resolution, agent discovery
+│   ├── meetings-db.ts             ← git-as-database: worktrees, meeting CRUD
+│   ├── types.ts                   ← zod schemas and TypeScript types
+│   ├── types-asserts.ts           ← compile-time Zod↔TS type alignment checks
+│   ├── config.ts                  ← ALL configurable values
+│   ├── logs.ts                    ← logging (console + file), category toggles
+│   ├── context.ts                 ← AsyncLocalStorage for request context (messageId)
+│   ├── utils.ts                   ← shared utilities (prettyLog, wrapDanglingPromise)
+│   ├── stub-sdk.ts                ← Agent SDK stub for testing
+│   └── real-sdk.ts                ← Real Agent SDK adapter
 ├── public/
-│   ├── index.html         ← landing page + deliberation UI
-│   ├── input.css          ← Tailwind input
-│   ├── style.css          ← Tailwind output (gitignored)
+│   ├── index.html                 ← landing page + deliberation UI
+│   ├── input.css                  ← Tailwind input
+│   ├── compiled-style.css         ← Tailwind output (gitignored)
 │   └── src/
-│       ├── app.js         ← WebSocket client, page routing
-│       ├── conversation-view.js  ← message feed, streaming, process labels
-│       ├── process-label.js      ← expandable process labels
-│       └── utils.js       ← frontend utilities
+│       ├── app.js                 ← WebSocket client, page routing
+│       ├── conversation-view.js   ← message feed, streaming, process labels
+│       ├── process-label.js       ← expandable process labels
+│       └── utils.js               ← frontend utilities
 ├── tests/
+│   ├── unit/                      ← unit tests (one per src/ module)
+│   │   ├── config.test.ts
+│   │   ├── meetings-db.test.ts
+│   │   ├── orchestrator.test.ts
+│   │   ├── real-sdk.test.ts
+│   │   ├── server.test.ts
+│   │   ├── session-manager.test.ts
+│   │   ├── stub-sdk.test.ts
+│   │   └── types.test.ts
 │   ├── real-sdk-smoke.test.ts     ← real SDK smoke test (~$0.10)
 │   └── e2e/
 │       ├── landing-page.test.ts
 │       ├── conversation.test.ts
 │       ├── integration.test.ts
 │       └── mock-ws-server.ts
-└── .meetings/              ← worktree mount point (gitignored)
+└── .meetings/                     ← worktree mount point (gitignored)
 ```
 
 ## Development Guidelines

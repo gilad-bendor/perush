@@ -106,10 +106,10 @@ describe("landing page", () => {
 
   test("meeting list renders with mock data", async () => {
     await page.goto(mockServer.url);
-    await page.waitForSelector("#meeting-list .font-semibold");
+    await page.waitForSelector("#meeting-list .meeting-card-title");
 
     const titles = await page.$$eval(
-      "#meeting-list .font-semibold",
+      "#meeting-list .meeting-card-title",
       (els) => els.map((e) => e.textContent)
     );
     expect(titles.length).toBe(2);
@@ -119,12 +119,12 @@ describe("landing page", () => {
 
   test("first meeting has resume button, others only view", async () => {
     await page.goto(mockServer.url);
-    await page.waitForSelector("#meeting-list .font-semibold");
+    await page.waitForSelector("#meeting-list .meeting-card-title");
 
-    const resumeButtons = await page.$$(".resume-btn");
+    const resumeButtons = await page.$$(".btn-meeting-resume");
     expect(resumeButtons.length).toBe(1);
 
-    const viewButtons = await page.$$(".view-btn");
+    const viewButtons = await page.$$(".btn-meeting-view");
     expect(viewButtons.length).toBe(2);
   });
 

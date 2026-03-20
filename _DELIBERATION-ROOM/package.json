@@ -6,8 +6,8 @@
     "dev-model-haiku": "bun run dev:css & PARTICIPANT_MODEL=claude-haiku-4-5 MANAGER_MODEL=claude-haiku-4-5 bun run dev:server",
     "dev-model-default": "bun run dev:css & bun run dev:server",
     "dev:server": "lsof -ti:4100 | xargs kill -9 2>/dev/null; bun --watch src/server.ts",
-    "dev:css": "bunx tailwindcss -i public/input.css -o public/style.css --watch",
-    "build:css": "bunx tailwindcss -i public/input.css -o public/style.css --minify",
+    "dev:css": "bunx tailwindcss -i public/input.css -o public/compiled-style.css --watch",
+    "build:css": "bunx tailwindcss -i public/input.css -o public/compiled-style.css --minify",
     "test": "bun test",
     "test:smoke": "REAL_SDK_TEST=true bun test tests/real-sdk-smoke.test.ts",
     "test:e2e": "bun run tests/e2e/landing-page.test.ts && bun run tests/e2e/conversation.test.ts && bun run tests/e2e/integration.test.ts"

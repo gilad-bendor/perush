@@ -25,9 +25,9 @@ import {
   commitWithMessage,
   detectPerushChanges,
   resetSessionBranchToCycle,
-} from "./meetings-db.ts";
-import {createFormattedTime, MeetingId, meetingIdToBranchName} from "./types";
-import type { Meeting } from "./types";
+} from "../../src/meetings-db.ts";
+import {createFormattedTime, MeetingId, meetingIdToBranchName} from "../../src/types";
+import type { Meeting } from "../../src/types";
 
 // ---------------------------------------------------------------------------
 // We need to override the paths used by meetings-db.ts for testing.

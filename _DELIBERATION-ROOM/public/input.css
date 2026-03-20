@@ -2,6 +2,443 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================================================================= */
+/* BASE                                                              */
+/* ================================================================= */
+
+@layer base {
+  body {
+    @apply bg-stone-50 text-stone-900 font-serif min-h-screen;
+  }
+}
+
+/* ================================================================= */
+/* COMPONENTS                                                        */
+/* ================================================================= */
+
+@layer components {
+
+  /* --------------------------------------------------------------- */
+  /* Landing Page                                                    */
+  /* --------------------------------------------------------------- */
+
+  .landing-page {
+    @apply max-w-3xl mx-auto py-12 px-6;
+  }
+
+  .landing-title {
+    @apply text-3xl font-bold text-center mb-10;
+  }
+
+  .landing-section {
+    @apply bg-white rounded-lg shadow-sm border border-stone-200 p-6;
+  }
+
+  .landing-section-title {
+    @apply text-xl font-semibold mb-4;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Forms                                                           */
+  /* --------------------------------------------------------------- */
+
+  .new-meeting-form {
+    @apply space-y-4;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-stone-700 mb-1;
+  }
+
+  .form-input {
+    @apply w-full border border-stone-300 rounded px-3 py-2 text-base
+           focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500;
+  }
+
+  .form-submit-wrapper {
+    @apply pt-2;
+  }
+
+  .form-error {
+    @apply text-red-600 text-sm mt-1 hidden;
+  }
+
+  .form-error-inline {
+    @apply text-red-600 text-sm;
+  }
+
+  .loading-text {
+    @apply text-stone-400 text-sm;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Participant Cards                                               */
+  /* --------------------------------------------------------------- */
+
+  .participant-cards {
+    @apply flex flex-wrap gap-3;
+  }
+
+  .participant-card {
+    @apply cursor-pointer border-2 rounded-lg p-3 min-w-[120px] text-center transition-colors;
+  }
+
+  .participant-card.selected {
+    @apply border-amber-400 bg-amber-50;
+  }
+
+  .participant-card:not(.selected) {
+    @apply border-stone-200 bg-white;
+  }
+
+  .participant-card-name {
+    @apply font-bold text-base;
+  }
+
+  .participant-card-english {
+    @apply text-xs text-stone-500;
+  }
+
+  .participant-card-role {
+    @apply text-xs text-stone-400 mt-1;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Meeting List                                                    */
+  /* --------------------------------------------------------------- */
+
+  .meeting-card {
+    @apply border border-stone-200 rounded-lg p-4;
+  }
+
+  .meeting-card--recent {
+    @apply border-amber-300 bg-amber-50/30;
+  }
+
+  .meeting-card-title {
+    @apply font-semibold mb-1;
+  }
+
+  .meeting-card-meta {
+    @apply text-xs text-stone-500 mb-2;
+  }
+
+  .meeting-card-participants {
+    @apply text-xs text-stone-400 mb-3;
+  }
+
+  .meeting-card-actions {
+    @apply flex gap-2;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Buttons                                                         */
+  /* --------------------------------------------------------------- */
+
+  .btn-primary {
+    @apply w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2.5 px-4 rounded transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 border border-stone-300 rounded hover:bg-stone-50 transition-colors;
+  }
+
+  .btn-confirm {
+    @apply px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700 transition-colors;
+  }
+
+  .btn-send {
+    @apply bg-amber-600 hover:bg-amber-700 disabled:bg-stone-300 text-white font-semibold py-2 px-4 rounded transition-colors;
+  }
+
+  .btn-back {
+    @apply hidden fixed top-4 end-4 z-30 text-sm text-stone-500 hover:text-stone-700
+           bg-white border border-stone-300 rounded px-3 py-1 shadow-sm;
+  }
+
+  .btn-meeting-resume {
+    @apply text-sm border border-amber-500 text-amber-700 rounded px-3 py-1 hover:bg-amber-50 transition-colors;
+  }
+
+  .btn-meeting-view {
+    @apply text-sm border border-stone-300 text-stone-600 rounded px-3 py-1 hover:bg-stone-50 transition-colors;
+  }
+
+  .btn-meeting-delete {
+    @apply text-sm border border-red-300 text-red-600 rounded px-3 py-1 hover:bg-red-50 transition-colors;
+  }
+
+  .btn-edit-primary {
+    @apply text-sm bg-amber-600 text-white rounded px-3 py-1 hover:bg-amber-700 transition-colors;
+  }
+
+  .btn-edit-secondary {
+    @apply text-sm border border-stone-300 rounded px-3 py-1 hover:bg-stone-50 transition-colors;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Conversation Feed                                               */
+  /* --------------------------------------------------------------- */
+
+  .conversation-feed {
+    @apply overflow-y-auto p-4;
+  }
+
+  .conversation-messages {
+    @apply space-y-4;
+  }
+
+  .view-only-banner {
+    @apply hidden bg-stone-100 border border-stone-300 rounded px-4 py-2 mb-4 text-center text-sm text-stone-600;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Messages                                                        */
+  /* --------------------------------------------------------------- */
+
+  .message {
+    @apply p-3 rounded border-s-4;
+  }
+
+  .message-header {
+    @apply flex items-center gap-2 mb-1;
+  }
+
+  .message-speaker {
+    @apply font-semibold text-sm;
+  }
+
+  .message-content {
+    @apply text-base whitespace-pre-wrap;
+  }
+
+  .rollback-icon {
+    @apply opacity-0 text-stone-400 hover:text-amber-600 transition-opacity text-sm ms-auto;
+  }
+
+  .system-message {
+    @apply text-sm px-3 py-2 rounded border;
+  }
+
+  .system-message--error {
+    @apply bg-red-50 border-red-200 text-red-700;
+  }
+
+  .system-message--info {
+    @apply bg-stone-100 border-stone-200 text-stone-600;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Edit (post-rollback)                                            */
+  /* --------------------------------------------------------------- */
+
+  .edit-textarea {
+    @apply w-full border border-amber-300 rounded px-3 py-2 text-base resize-y min-h-[4rem];
+  }
+
+  .edit-actions {
+    @apply flex gap-2 mt-2;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Vibe Bar                                                        */
+  /* --------------------------------------------------------------- */
+
+  .vibe-bar {
+    @apply border-t border-stone-200 px-4 py-2 flex items-center gap-3 bg-stone-50 transition-all duration-300;
+  }
+
+  .vibe-bar--human-turn {
+    @apply bg-blue-50 border-blue-200;
+  }
+
+  .vibe-icon {
+    @apply text-amber-700 font-bold;
+  }
+
+  .vibe-text {
+    @apply flex-1 text-sm text-stone-600;
+  }
+
+  .vibe-next {
+    @apply text-sm text-stone-500;
+  }
+
+  .vibe-phase-badge {
+    @apply text-xs bg-stone-200 text-stone-600 px-2 py-0.5 rounded-full;
+  }
+
+  .vibe-cost {
+    @apply hidden text-xs text-stone-400;
+  }
+
+  .btn-vibe-control {
+    @apply text-sm border border-stone-300 text-stone-600 rounded px-3 py-1 hover:bg-stone-100 transition-colors;
+  }
+
+  .btn-vibe-control--blocking {
+    @apply border-red-400 text-red-700 bg-red-50 hover:bg-red-100;
+  }
+
+  .btn-attention {
+    @apply hidden text-sm border border-amber-500 text-amber-700 rounded px-3 py-1 hover:bg-amber-50 transition-colors;
+  }
+
+  .btn-attention--acknowledged {
+    @apply bg-amber-100 border-amber-600;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Human Input                                                     */
+  /* --------------------------------------------------------------- */
+
+  .human-input {
+    @apply border-t border-stone-200 p-3 bg-white;
+  }
+
+  .human-input-row {
+    @apply flex gap-2 items-end;
+  }
+
+  .human-textarea {
+    @apply flex-1 border border-stone-300 rounded px-3 py-2 text-base resize-none
+           focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500
+           disabled:bg-stone-100 disabled:text-stone-400;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Process Labels                                                  */
+  /* --------------------------------------------------------------- */
+
+  .process-label {
+    @apply inline-block;
+  }
+
+  .process-pill {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-medium cursor-pointer transition-colors;
+  }
+
+  .process-badge {
+    @apply text-[10px] opacity-60 hidden;
+  }
+
+  .process-spinner {
+    @apply text-[10px] opacity-40;
+  }
+
+  .process-expansion {
+    @apply border rounded p-2 text-xs space-y-1 !mt-0;
+  }
+
+  .process-wrapper {
+    @apply mb-2;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Process Events                                                  */
+  /* --------------------------------------------------------------- */
+
+  .process-event-prompt {
+    @apply text-stone-400 border-b border-stone-200 pb-1 mb-1 border-2;
+  }
+
+  .process-event-pre {
+    @apply whitespace-pre-wrap mt-0.5 text-[11px];
+  }
+
+  .process-event-thinking {
+    @apply italic text-stone-500 bg-stone-50 rounded px-1.5 py-0.5 border-2;
+  }
+
+  .process-event-thinking-icon {
+    @apply font-semibold not-italic text-stone-400;
+  }
+
+  .thinking-text {
+    @apply whitespace-pre-wrap;
+  }
+
+  .process-event-text {
+    @apply text-stone-800 whitespace-pre-wrap;
+  }
+
+  .process-event-tool-call {
+    @apply font-mono text-indigo-700 bg-indigo-50 rounded px-1.5 py-0.5;
+  }
+
+  .process-event-tool-result {
+    @apply font-mono text-teal-700 bg-teal-50 rounded px-1.5 py-0.5;
+  }
+
+  .process-event-label {
+    @apply font-semibold;
+  }
+
+  .process-event-code {
+    @apply whitespace-pre-wrap text-[11px] mt-0.5 max-h-32 overflow-y-auto;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Assessment Groups                                               */
+  /* --------------------------------------------------------------- */
+
+  .assessment-group {
+    @apply border border-stone-300 rounded p-2 mb-2;
+  }
+
+  .assessment-group-header {
+    @apply text-[10px] text-stone-400 mb-1 font-medium;
+  }
+
+  .assessment-labels {
+    @apply flex flex-wrap gap-1.5;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Modal                                                           */
+  /* --------------------------------------------------------------- */
+
+  .modal-overlay {
+    @apply hidden fixed inset-0 bg-black/40 z-50 flex items-center justify-center;
+  }
+
+  .modal-content {
+    @apply bg-white rounded-lg shadow-xl max-w-lg w-full mx-4 p-6;
+  }
+
+  .modal-title {
+    @apply text-lg font-semibold mb-4;
+  }
+
+  .modal-actions {
+    @apply flex gap-3 justify-end;
+  }
+
+  .rollback-preview {
+    @apply bg-stone-50 border border-stone-200 rounded p-3 mb-3 text-sm max-h-32 overflow-y-auto;
+  }
+
+  .rollback-warning {
+    @apply text-amber-700 text-sm mb-4;
+  }
+
+  .rollback-hint {
+    @apply text-sm text-stone-500 mb-4;
+  }
+
+  /* --------------------------------------------------------------- */
+  /* Reconnecting Indicator                                          */
+  /* --------------------------------------------------------------- */
+
+  .reconnecting-indicator {
+    @apply hidden fixed top-4 start-1/2 -translate-x-1/2 bg-amber-100 text-amber-800 text-sm px-4 py-2 rounded-full shadow z-40;
+  }
+}
+
+/* ================================================================= */
+/* CUSTOM (non-@apply rules)                                         */
+/* ================================================================= */
+
 /* Main deliberation layout — single column, full width */
 .deliberation-room {
   display: grid;
@@ -20,7 +457,7 @@
 
 /* Streaming message indicator */
 .message.streaming .message-content::after {
-  content: "▍";
+  content: "\25CD";
   animation: blink 0.8s step-end infinite;
   color: #a3a3a3;
 }

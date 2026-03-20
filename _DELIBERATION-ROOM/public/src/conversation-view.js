@@ -131,10 +131,8 @@ export class ConversationView {
    */
   addSystemMessage(text, level = "info") {
     const el = document.createElement("div");
-    const colorClass = level === "error"
-      ? "bg-red-50 border-red-200 text-red-700"
-      : "bg-stone-100 border-stone-200 text-stone-600";
-    el.className = `text-sm px-3 py-2 rounded border ${colorClass}`;
+    const levelClass = level === "error" ? "system-message--error" : "system-message--info";
+    el.className = `system-message ${levelClass}`;
     el.textContent = text;
     el.style.unicodeBidi = "plaintext";
     this.container.appendChild(el);
@@ -181,10 +179,10 @@ export class ConversationView {
       : entry.content;
 
     contentEl.innerHTML = `
-      <textarea class="edit-textarea w-full border border-amber-300 rounded px-3 py-2 text-base resize-y min-h-[4rem]" dir="auto">${originalContent}</textarea>
-      <div class="flex gap-2 mt-2">
-        <button class="edit-send-asis text-sm border border-stone-300 rounded px-3 py-1 hover:bg-stone-50 transition-colors">שלח כמו שהוא</button>
-        <button class="edit-send text-sm bg-amber-600 text-white rounded px-3 py-1 hover:bg-amber-700 transition-colors">שלח</button>
+      <textarea class="edit-textarea" dir="auto">${originalContent}</textarea>
+      <div class="edit-actions">
+        <button class="edit-send-asis btn-edit-secondary">שלח כמו שהוא</button>
+        <button class="edit-send btn-edit-primary">שלח</button>
       </div>
     `;
 
@@ -225,7 +223,7 @@ export class ConversationView {
     } else {
       // Manager selection or agent speech — standalone in the timeline
       const wrapper = document.createElement("div");
-      wrapper.className = "process-wrapper mb-2";
+      wrapper.className = "process-wrapper";
       wrapper.appendChild(label.el);
       this.container.appendChild(wrapper);
     }
@@ -291,7 +289,7 @@ export class ConversationView {
       this.processLabels.set(proc.processId, label);
 
       const wrapper = document.createElement("div");
-      wrapper.className = "process-wrapper mb-2";
+      wrapper.className = "process-wrapper";
       wrapper.appendChild(label.el);
       this.container.appendChild(wrapper);
     }
@@ -327,25 +325,24 @@ export class ConversationView {
   _createMessageEl(speaker, content, cycleNumber) {
     const color = this.speakerColor(speaker);
     const el = document.createElement("div");
-    el.className = `message p-3 rounded border-s-4 ${color.bg} ${color.border}`;
+    el.className = `message message-${speaker} ${color.bg} ${color.border}`;
     el.dataset.speaker = speaker;
     el.dataset.cycleNumber = String(cycleNumber);
     el.style.unicodeBidi = "plaintext";
 
     // Header: speaker name + rollback icon (for human messages)
     const header = document.createElement("div");
-    header.className = "flex items-center gap-2 mb-1";
+    header.className = "message-header";
 
     const label = document.createElement("span");
-    label.className = `font-semibold text-sm ${color.label}`;
+    label.className = `message-speaker ${color.label}`;
     label.textContent = this.speakerDisplayName(speaker);
     header.appendChild(label);
 
     // Rollback icon (only for human messages, not read-only)
     if (speaker === "human" && !this.readOnly && this.onRollback) {
       const rollbackBtn = document.createElement("button");
-      rollbackBtn.className =
-        "rollback-icon opacity-0 hover:opacity-100 focus:opacity-100 text-stone-400 hover:text-amber-600 transition-opacity text-sm ms-auto";
+      rollbackBtn.className = "rollback-icon";
       rollbackBtn.textContent = "\u21A9";
       rollbackBtn.title = "\u05D7\u05D6\u05E8\u05D4 \u05DC\u05E0\u05E7\u05D5\u05D3\u05D4 \u05D6\u05D5";
       rollbackBtn.addEventListener("click", () => {
@@ -360,7 +357,7 @@ export class ConversationView {
 
     // Content
     const contentEl = document.createElement("div");
-    contentEl.className = `message-content text-base ${color.text} whitespace-pre-wrap`;
+    contentEl.className = `message-content ${color.text}`;
     contentEl.style.unicodeBidi = "plaintext";
     contentEl.textContent = content;
     el.appendChild(contentEl);
