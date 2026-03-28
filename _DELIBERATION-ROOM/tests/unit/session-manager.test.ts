@@ -390,7 +390,8 @@ describe("feedMessage", () => {
     );
 
     expect(emitted).not.toContain("system-prompt");
-    expect(emitted).not.toContain("prompt");
+    // prompt IS emitted on every feedMessage call (for process tracing)
+    expect(emitted).toContain("prompt");
   });
 });
 

@@ -334,22 +334,6 @@ export function registerMeeting(title: string, participantDefs: AgentDefinition[
   logInfo("session-manager", `registerMeeting: "${title}" with [${participantDefs.map(d => d.id).join(", ")}]`);
 }
 
-/**
- * Ensure a session exists for the given agent, creating it lazily if needed.
- * Returns the session ID.
- */
-async function ensureSession(agentId: AgentId | "manager", onEvent?: ProcessEventCallback): Promise<string> {
-  const existing = sessionRegistry.get(agentId);
-  if (existing) return existing;
-
-  logInfo("session-manager", `ensureSession: creating session for ${agentId} (lazy)`);
-  const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
-  const primingPrompt = agentId === "manager"
-    ? `פתיחת דיון. הנושא: ${meetingTitle}\n\n---stub-response---\ntext: מוכן לנהל.\n---end-stub-response---`
-    : `פתיחת דיון: ${meetingTitle}\n\n---stub-response---\ntext: מוכן לדיון.\n---end-stub-response---`;
-  const { sessionId } = await createSession(agentId, systemPrompt, primingPrompt, onEvent);
-  return sessionId;
-}
 
 /**
  * Accumulated cost (USD) from SDK interactions since the last reset.
@@ -436,8 +420,11 @@ export async function createSession(
 export type ProcessEventCallback = (eventKind: ProcessEventKind, content: string, toolName?: string, toolInput?: string) => void;
 
 /**
- * Feed a message into an existing session and get the full response.
- * Uses the resume pattern with the session's ID.
+ * Feed a message into a session and get the full response.
+ *
+ * On the first call for an agent (no session yet), creates the session using
+ * the real prompt — no priming prompt. The session ID is captured from the
+ * SDK's system-init event and stored for subsequent calls (resume).
  *
  * If `onEvent` is provided, all intermediate SDK events (thinking, text,
  * tool calls, tool results) are forwarded through it.
@@ -447,31 +434,46 @@ export async function feedMessage(
   prompt: string,
   onEvent?: ProcessEventCallback,
 ): Promise<string> {
-  const sessionId = await ensureSession(agentId, onEvent);
-
+  const existingSessionId = sessionRegistry.get(agentId);
   const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
+  const tools = agentId === "manager" ? MANAGER_TOOLS : PARTICIPANT_TOOLS;
   const effort = effortForModel(model);
-  logInfo("session-manager", `feedMessage: ${agentId} (session=${sessionId}, effort=${effort})`);
+  logInfo("session-manager", `feedMessage: ${agentId} (session=${existingSessionId ?? "none"}, effort=${effort})`);
+
+  const queryOptions: Record<string, unknown> = {
+    title: `${agentId} | feed-message`,
+    model,
+    effort,
+    maxTurns: MAX_TURNS_ASSESSMENT,
+    cwd: ROOT_PROJECT_DIR,
+  };
+
+  if (existingSessionId) {
+    queryOptions.resume = existingSessionId;
+  } else {
+    // First interaction: create session with the real prompt (no throwaway priming)
+    const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
+    queryOptions.systemPrompt = systemPrompt;
+    queryOptions.tools = tools;
+    queryOptions.maxBudgetUsd = agentId === "manager" ? 0.10 : MAX_BUDGET_PER_SPEECH;
+    if (onEvent) onEvent("system-prompt", systemPrompt);
+  }
+
+  if (onEvent) onEvent("prompt", prompt);
 
   const queryFn = await getQueryFn();
-  const query = queryFn({
-    prompt,
-    options: {
-      title: `${agentId} | feed-message`,
-      resume: sessionId,
-      model,
-      effort,
-      maxTurns: MAX_TURNS_ASSESSMENT,
-      cwd: ROOT_PROJECT_DIR,
-    },
-  });
-
+  const query = queryFn({ prompt, options: queryOptions });
   activeQueries.set(agentId, query);
 
   let responseText = "";
   for await (const msg of query) {
-    if (onEvent) {
-      emitProcessEvents(msg, onEvent);
+    if (onEvent) emitProcessEvents(msg, onEvent);
+    if (msg.type === "system" && (msg as any).subtype === "init" && !existingSessionId) {
+      const newSessionId = (msg as any).session_id;
+      if (newSessionId) {
+        sessionRegistry.set(agentId, newSessionId);
+        logInfo("sessions", `feedMessage: created session for ${agentId} (sessionId=${newSessionId})`);
+      }
     }
     if (msg.type === "result" && (msg as any).subtype === "success") {
       responseText = (msg as any).result ?? "";
@@ -497,33 +499,42 @@ export type SpeechStreamEvent =
  * Feed a message and stream the response as an async generator of events.
  * Used for Participant-Agent speeches.
  * Yields text chunks, thinking blocks, tool calls/results, and a final done event.
+ *
+ * On the first call for an agent (no session yet), creates the session using
+ * the real prompt — no throwaway priming prompt.
  */
 export async function* streamSpeech(
   agentId: AgentId,
   prompt: string,
 ): AsyncGenerator<SpeechStreamEvent> {
-  const sessionId = await ensureSession(agentId);
-
+  const existingSessionId = sessionRegistry.get(agentId);
   const model = PARTICIPANT_MODEL;
   const effort = effortForModel(model);
-  logInfo("session-manager", `streamSpeech: ${agentId} (session=${sessionId}, effort=${effort})`);
+  logInfo("session-manager", `streamSpeech: ${agentId} (session=${existingSessionId ?? "none"}, effort=${effort})`);
 
-  const tools = PARTICIPANT_TOOLS;
+  const queryOptions: Record<string, unknown> = {
+    title: `${agentId} | speech (streamed)`,
+    model,
+    effort,
+    tools: PARTICIPANT_TOOLS,
+    includePartialMessages: true,
+    maxTurns: MAX_TURNS_SPEECH,
+    maxBudgetUsd: MAX_BUDGET_PER_SPEECH,
+    cwd: ROOT_PROJECT_DIR,
+  };
+
+  if (existingSessionId) {
+    queryOptions.resume = existingSessionId;
+  } else {
+    // First interaction: create session with the real prompt (no throwaway priming)
+    const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
+    queryOptions.systemPrompt = systemPrompt;
+  }
 
   const queryFn = await getQueryFn();
   const query = queryFn({
     prompt,
-    options: {
-      title: `${agentId} | speech (streamed)`,
-      resume: sessionId,
-      model,
-      effort,
-      tools,
-      includePartialMessages: true,
-      maxTurns: MAX_TURNS_SPEECH,
-      maxBudgetUsd: MAX_BUDGET_PER_SPEECH,
-      cwd: ROOT_PROJECT_DIR,
-    },
+    options: queryOptions,
   });
 
   activeQueries.set(agentId, query);
@@ -531,6 +542,14 @@ export async function* streamSpeech(
   let fullText = "";
   let thinkingAccumulator = "";
   for await (const msg of query) {
+    // Capture session ID on first interaction
+    if (msg.type === "system" && (msg as any).subtype === "init" && !existingSessionId) {
+      const newSessionId = (msg as any).session_id;
+      if (newSessionId) {
+        sessionRegistry.set(agentId, newSessionId);
+        logInfo("sessions", `streamSpeech: created session for ${agentId} (sessionId=${newSessionId})`);
+      }
+    }
     // Stream text deltas
     if (msg.type === "stream_event") {
       const event = (msg as any).event;
