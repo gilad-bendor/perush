@@ -215,17 +215,11 @@ export const IMPORTANCE_SCALE_MAX = 10;
 // Agent persona files
 // ---------------------------------------------------------------------------
 
-/** Shared prefix prepended to ALL AI-Agents */
-export const BASE_PREFIX_FILE = "_base-prefix.md";
-
-/** Participant-Agent-only prefix (introduces fellow participants) */
+/** Participant-Agent-only prefix (introduces fellow participants via @foreach) */
 export const AGENTS_PREFIX_FILE = "_agents-prefix.md";
 
 /** Conversation-Manager-Agent file */
 export const CONVERSATION_MANAGER_FILE = "_conversation-manager.md";
-
-/** Dictionary injection marker in _base-prefix.md */
-export const DICTIONARY_INJECTION_POINT = "<!-- DICTIONARY_INJECTION_POINT -->";
 
 // ---------------------------------------------------------------------------
 // Participant tools

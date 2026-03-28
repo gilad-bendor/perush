@@ -29,10 +29,8 @@ import {
   USE_STUB_SDK,
   PARTICIPANT_TOOLS,
   MANAGER_TOOLS,
-  BASE_PREFIX_FILE,
   AGENTS_PREFIX_FILE,
   CONVERSATION_MANAGER_FILE,
-  DICTIONARY_INJECTION_POINT,
   ESTIMATED_COST_PER_CYCLE,
 } from "../../src/config";
 import {SESSION_BRANCH_PREFIX, TAG_PREFIX} from "../../src/types.ts";
@@ -241,13 +239,8 @@ describe("Stub mode", () => {
 
 describe("Agent persona file config", () => {
   test("file names are correct", () => {
-    expect(BASE_PREFIX_FILE).toBe("_base-prefix.md");
     expect(AGENTS_PREFIX_FILE).toBe("_agents-prefix.md");
     expect(CONVERSATION_MANAGER_FILE).toBe("_conversation-manager.md");
-  });
-
-  test("dictionary injection point is an HTML comment", () => {
-    expect(DICTIONARY_INJECTION_POINT).toBe("<!-- DICTIONARY_INJECTION_POINT -->");
   });
 });
 

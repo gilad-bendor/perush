@@ -65,52 +65,63 @@ GET /api/agents
 
 Returns the cached agent definitions as a JSON array.
 
-## Template Marker Resolution
+## Template Directives (preprocess)
 
-Non-underscore agent files undergo **marker resolution** before being used as system prompts. The session manager processes markers in this order:
+All agent files are processed by the [`preprocess`](https://www.npmjs.com/package/preprocess) package in a single pass with `type: "html"`. Every included file is processed recursively with the same context.
 
-1. **Include markers** — `${include:<filename>}` is replaced with the contents of the referenced file (from `participant-agents/`) without the frontmatter.
+Available directives (HTML-comment syntax):
 
-2. **Variable markers** — `${EnglishName}`, `${HebrewName}`, and any future frontmatter-derived variables are replaced with values from the **current file's** frontmatter.
+| Directive | What it does |
+|-----------|-------------|
+| `<!-- @include filename.md -->` | Inline another file from `participant-agents/` (recursive, same context) |
+| `<!-- @echo dictionary -->` | Inject the full dictionary text extracted from `../CLAUDE.md` |
+| `<!-- @echo EnglishName -->` | Agent's own English name (from frontmatter) |
+| `<!-- @echo HebrewName -->` | Agent's own Hebrew name (from frontmatter) |
+| `<!-- @foreach $p in participantAgentEntries -->$p`<br>`<!-- @endfor -->` | Loop over fellow participants — each `$p` is a formatted bullet: `- **Name / שם**: intro` |
+| `<!-- @foreach $p in participantManagerEntries -->$p`<br>`<!-- @endfor -->` | Same loop with extended format: `- **Name / שם**: intro. *tip.*` |
+| `<!-- @echo speakerIds -->` | JSON-union of valid `nextSpeaker` values, e.g., `"Milo" \| "Archi" \| … \| "Director"` |
 
-3. **Iterator blocks** — `${each:participant}...${/each:participant}` repeats the enclosed template once per participant agent (all non-underscore files excluding the file currently being resolved). Inside the block, variable markers resolve against **each participant's** frontmatter in turn.
-
-4. **Computed markers** — `${speakerIds}` resolves to a JSON-style list of valid `nextSpeaker` values, e.g., `"Milo" | "Archi" | "Kashia" | "Director"`.
-
-**Resolution order matters**: includes first, then variables, then iterators, then computed markers.
+**Important — `@foreach` encoding**: preprocess's `@foreach` splits context values by comma if they look like plain text, which breaks descriptions that contain commas. The context values for participant loops are encoded as a JSON *object* keyed by index (`{"0":"entry0","1":"entry1"}`). This triggers `JSON.parse` in preprocess's foreach handler, which handles commas inside values correctly. See `toForEachContext()` in `session-manager.ts`.
 
 **Example flow** for `milo.md`:
 ```
-1. Read milo.md → parse frontmatter
-2. Resolve ${include:...} markers → inline included file contents
-3. Resolve ${EnglishName} → "Milo", ${HebrewName} → "מיילו"
-4. No iterator blocks or computed markers → skip
-5. Resolve _agents-prefix.md: expand ${each:participant} block with meeting's selected participants
-6. Prepend _base-prefix.md (with dictionary injected) + resolved _agents-prefix.md
-7. Result = complete system prompt for the milo session
+1. resolveTemplate("milo.md", meetingParticipants, "milo")
+2. Read file → gray-matter strips frontmatter
+3. buildPreprocessContext(): builds context with dictionary, participant loops, speakerIds
+4. preprocessLib.preprocess(content, context, {type:"html", srcDir:PARTICIPANT_AGENTS_DIR})
+   ↳ resolves <!-- @include _base-prefix.md --> → inlines base with <!-- @echo dictionary -->
+   ↳ resolves <!-- @include _agents-prefix.md --> → expands @foreach with milo excluded
+   ↳ any remaining @echo markers in persona content
+5. Returns fully resolved system prompt
 ```
 
 **Example flow** for `_conversation-manager.md`:
 ```
-1. Read _conversation-manager.md → parse frontmatter
-2. Resolve ${each:participant}...${/each:participant} blocks with selected participants
-3. Resolve ${speakerIds} → e.g., "Milo" | "Archi" | "Kashia" | "Barak" | "Director"
-4. Prepend _base-prefix.md (with dictionary) — NO _agents-prefix.md for the manager
-5. Result = complete system prompt for the conversation manager session
+1. resolveTemplate("_conversation-manager.md", meetingParticipants)
+2. Same single-pass preprocess call
+   ↳ resolves <!-- @include _base-prefix.md -->
+   ↳ expands <!-- @foreach $p in participantManagerEntries -->
+   ↳ substitutes <!-- @echo speakerIds -->
+3. Returns fully resolved system prompt
 ```
-
-**Note on resolution order**: In the actual implementation, iterators resolve BEFORE file-level variables (not the spec's variables→iterators) because file-level variable resolution would clobber markers inside iterator blocks.
 
 ## System Prompt Construction
 
+`buildSystemPrompt(agentId, meetingParticipants)` is now a thin wrapper: it calls `resolveTemplate(filename, meetingParticipants, excludeAgentId?)` once. All complexity lives in the template files and `buildPreprocessContext`.
+
+**Participant-Agent prompt structure** (declared in each agent .md file):
 ```
-Participant agents:       _base-prefix.md (with dictionary) + _agents-prefix.md (resolved) + resolved agent file
-Conversation manager:     _base-prefix.md (with dictionary) + resolved _conversation-manager.md
+<!-- @include _base-prefix.md -->      ← common instructions + dictionary (@echo dictionary)
+<!-- @include _agents-prefix.md -->    ← fellow participants (@foreach, excludes self)
+
+# Your Unique Identity: ...            ← persona-specific content
 ```
 
-- `_base-prefix.md` includes `<!-- DICTIONARY_INJECTION_POINT -->` where the session manager injects the full dictionary from `../CLAUDE.md` at runtime.
-- `_agents-prefix.md` includes `${each:participant}` markers resolved with the **meeting's selected participants'** frontmatter — introducing only the agents who are actually in the room.
-- The conversation manager does NOT get `_agents-prefix.md` — it has its own participant introductions inside `_conversation-manager.md`.
+**Manager prompt structure** (declared in `_conversation-manager.md`):
+```
+<!-- @include _base-prefix.md -->      ← common instructions + dictionary
+# Your Unique Identity: ...            ← manager-specific content with @foreach and @echo speakerIds
+```
 
 ## Design Principles
 

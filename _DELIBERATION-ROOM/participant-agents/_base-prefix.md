@@ -10,7 +10,7 @@ The commentary applies a **methodological allegorical interpretation** to the To
 
 **Core quality criterion**: A good interpretation follows necessarily from the dictionary and the text — minimal degrees of freedom. A poor interpretation requires "imagination" beyond what the dictionary dictates.
 
-<!-- DICTIONARY_INJECTION_POINT -->
+<!-- @echo dictionary -->
 
 # Common Instructions
 

@@ -31,7 +31,6 @@ import {
 import { resetStubState } from "../../src/stub-sdk";
 import {
   PARTICIPANT_AGENTS_DIR,
-  DICTIONARY_INJECTION_POINT,
   AGENTS_PREFIX_FILE,
   CONVERSATION_MANAGER_FILE,
 } from "../../src/config";
@@ -237,10 +236,8 @@ describe("buildSystemPrompt", () => {
     const prompt = await buildSystemPrompt("milo", allAgents);
 
     // Base prefix content (common instructions)
-    expect(prompt).toContain("Shared Context for All AI-Agents");
-    // Dictionary was injected (injection point should be gone)
-    expect(prompt).not.toContain(DICTIONARY_INJECTION_POINT);
-    // Dictionary content is present
+    expect(prompt).toContain("scholarly deliberation");
+    // Dictionary content is present (injection point replaced by @echo dictionary)
     expect(prompt).toContain("אור");
     // Agents prefix (fellow participants)
     expect(prompt).toContain("Fellow Participants");
@@ -263,7 +260,7 @@ describe("buildSystemPrompt", () => {
     const prompt = await buildSystemPrompt("manager", allAgents);
 
     // Base prefix
-    expect(prompt).toContain("Shared Context for All AI-Agents");
+    expect(prompt).toContain("scholarly deliberation");
     // Dictionary
     expect(prompt).toContain("אור");
     // Manager content

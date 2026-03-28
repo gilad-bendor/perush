@@ -14,15 +14,15 @@
 import { readdir, readFile } from "fs/promises";
 import { join, basename } from "path";
 import matter from "gray-matter";
+// @ts-ignore — no type declarations for preprocess
+import preprocessLib from "preprocess";
 import type { AgentDefinition, AgentId, PrivateAssessment, ManagerDecision, ProcessEventKind } from "./types";
 import { AgentDefinitionSchema, PrivateAssessmentSchema, ManagerDecisionSchema } from "./types";
 import {
   PARTICIPANT_AGENTS_DIR,
   ROOT_CLAUDE_MD,
-  BASE_PREFIX_FILE,
   AGENTS_PREFIX_FILE,
   CONVERSATION_MANAGER_FILE,
-  DICTIONARY_INJECTION_POINT,
   PARTICIPANT_MODEL,
   MANAGER_MODEL,
   effortForModel,
@@ -117,80 +117,64 @@ export function resetAgentCache(): void {
 // ---------------------------------------------------------------------------
 
 /**
- * Read a file from participant-agents/, stripping YAML frontmatter.
- * Returns just the Markdown body.
+ * Encode a string array for use with preprocess's `@foreach` directive.
+ *
+ * preprocess parses context values as:
+ *   - JSON (if the value contains `{...}`) → JSON.parse
+ *   - Otherwise → naive comma-split (BROKEN for strings containing commas)
+ *
+ * To safely pass an array of arbitrary strings, encode as a JSON *object*
+ * keyed by index: `{"0":"entry0","1":"entry1"}`. This triggers `JSON.parse`,
+ * which handles commas inside values correctly, and `Object.keys` preserves
+ * insertion order (numeric string keys sort ascending in modern JS).
  */
-async function readAgentFileBody(filename: string): Promise<string> {
-  const filePath = join(PARTICIPANT_AGENTS_DIR, filename);
-  const raw = await readFile(filePath, "utf-8");
-  const { content } = matter(raw);
-  return content.trim();
+function toForEachContext(entries: string[]): string {
+  return JSON.stringify(Object.fromEntries(entries.map((e, i) => [i, e])));
 }
 
 /**
- * Read a file's frontmatter as a Record.
+ * Build the preprocess context for a given agent file.
+ *
+ * - `frontmatter`: parsed YAML from the agent's .md file
+ * - `filteredParticipants`: meeting participants with the current agent excluded (for loops)
+ * - `allParticipants`: full meeting participant list (for speakerIds)
+ * - `dictionary`: extracted dictionary text from ../CLAUDE.md
  */
-async function readAgentFrontmatter(filename: string): Promise<Record<string, string>> {
-  const filePath = join(PARTICIPANT_AGENTS_DIR, filename);
-  const raw = await readFile(filePath, "utf-8");
-  const { data } = matter(raw);
-  return data as Record<string, string>;
-}
+function buildPreprocessContext(
+  frontmatter: Record<string, string>,
+  filteredParticipants: AgentDefinition[],
+  allParticipants: AgentDefinition[],
+  dictionary: string,
+): Record<string, string> {
+  // Agent-specific frontmatter values (used by @echo in agent persona files)
+  const ctx: Record<string, string> = {
+    EnglishName:  frontmatter.englishName  ?? "",
+    HebrewName:   frontmatter.hebrewName   ?? "",
+    managerIntro: frontmatter.managerIntro ?? "",
+    managerTip:   frontmatter.managerTip   ?? "",
+    dictionary,
+  };
 
-/**
- * Resolve ${include:<filename>} markers — inline included file content (without frontmatter).
- */
-function resolveIncludes(text: string, fileContents: Map<string, string>): string {
-  return text.replace(/\$\{include:([^}]+)}/g, (_match, filename: string) => {
-    return fileContents.get(filename.trim()) ?? `<!-- include not found: ${filename} -->`;
-  });
-}
+  // Participant entries for @foreach in _agents-prefix.md
+  ctx.participantAgentEntries = toForEachContext(
+    filteredParticipants.map(p =>
+      `- **${p.englishName} / ${p.hebrewName}**: ${p.managerIntro}`
+    )
+  );
 
-/**
- * Resolve ${VariableName} markers from a frontmatter record.
- */
-function resolveVariables(text: string, vars: Record<string, string>): string {
-  return text.replace(/\$\{(\w+)}/g, (_match, key: string) => {
-    // Only resolve known frontmatter keys (not iterator/computed markers)
-    if (key === "each" || key === "speakerIds") return _match;
-    return vars[key] ?? "";
-  });
-}
+  // Participant entries for @foreach in _conversation-manager.md
+  ctx.participantManagerEntries = toForEachContext(
+    filteredParticipants.map(p =>
+      `- **${p.englishName} / ${p.hebrewName}**: ${p.managerIntro}. *${p.managerTip}.*`
+    )
+  );
 
-/**
- * Resolve ${each:participant}...${/each:participant} blocks.
- * Repeats the enclosed template once per participant agent.
- */
-function resolveIterators(
-  text: string,
-  participants: AgentDefinition[],
-): string {
-  const iteratorRegex = /\$\{each:participant}([\s\S]*?)\$\{\/each:participant}/g;
+  // speakerIds uses the *full* participant list (unfiltered)
+  const ids = allParticipants.map(a => `"${a.englishName}"`);
+  ids.push('"Director"');
+  ctx.speakerIds = ids.join(" | ");
 
-  return text.replace(iteratorRegex, (_match, template: string) => {
-    return participants
-      .map(agent => {
-        let resolved = template;
-        resolved = resolved.replace(/\$\{EnglishName}/g, agent.englishName);
-        resolved = resolved.replace(/\$\{HebrewName}/g, agent.hebrewName);
-        resolved = resolved.replace(/\$\{managerIntro}/g, agent.managerIntro);
-        resolved = resolved.replace(/\$\{managerTip}/g, agent.managerTip);
-        resolved = resolved.replace(/\$\{roleTitle}/g, agent.roleTitle);
-        return resolved;
-      })
-      .join("");
-  });
-}
-
-/**
- * Resolve ${speakerIds} computed marker.
- * Produces a list like: "Milo" | "Archi" | "Kashia" | "Director"
- */
-function resolveSpeakerIds(text: string, participants: AgentDefinition[]): string {
-  const ids = participants.map(a => `"${a.englishName}"`);
-  ids.push(`"Director"`);
-  const speakerIdsStr = ids.join(" | ");
-  return text.replace(/\$\{speakerIds}/g, speakerIdsStr);
+  return ctx;
 }
 
 /**
@@ -220,113 +204,71 @@ export async function extractDictionary(): Promise<string> {
 }
 
 /**
- * Inject the dictionary content at the DICTIONARY_INJECTION_POINT marker.
- */
-function injectDictionary(text: string, dictionary: string): string {
-  return text.replace(DICTIONARY_INJECTION_POINT, dictionary);
-}
-
-/**
- * Full template resolution pipeline for an agent file.
+ * Resolve all template directives in an agent file via a single preprocess pass.
  *
- * Resolution order:
- * 1. Include markers (${include:filename})
- * 2. Variable markers (${EnglishName}, ${HebrewName}, etc.)
- * 3. Iterator blocks (${each:participant}...${/each:participant})
- * 4. Computed markers (${speakerIds})
+ * The file may use any preprocess HTML directives:
+ *   <!-- @include filename.md -->        — inline another file from participant-agents/
+ *   <!-- @echo EnglishName -->           — substitute a frontmatter variable
+ *   <!-- @echo dictionary -->            — inject the full dictionary text
+ *   <!-- @foreach $p in participantAgentEntries -->$p\n<!-- @endfor -->
+ *   <!-- @foreach $p in participantManagerEntries -->$p\n<!-- @endfor -->
+ *   <!-- @echo speakerIds -->            — JSON-union of valid nextSpeaker values
+ *
+ * Included files are processed recursively with the same context, so
+ * _base-prefix.md and _agents-prefix.md can be included from agent persona files
+ * and will have full access to all context variables.
  */
 export async function resolveTemplate(
   filename: string,
   meetingParticipants: AgentDefinition[],
-  /** Exclude this agent ID from the participant list (for the agent's own template) */
+  /** Exclude this agent from participantAgentEntries / participantManagerEntries loops */
   excludeAgentId?: AgentId,
 ): Promise<string> {
-  // Read the target file
-  const body = await readAgentFileBody(filename);
-  const frontmatter = await readAgentFrontmatter(filename);
+  const filePath = join(PARTICIPANT_AGENTS_DIR, filename);
+  const raw = await readFile(filePath, "utf-8");
+  const { content, data: frontmatter } = matter(raw);
 
-  // Prepare include cache
-  const includeCache = new Map<string, string>();
-
-  // Step 1: Resolve includes
-  const includeMatches = body.matchAll(/\$\{include:([^}]+)}/g);
-  for (const match of includeMatches) {
-    const includeName = match[1].trim();
-    if (!includeCache.has(includeName)) {
-      try {
-        const content = await readAgentFileBody(includeName);
-        includeCache.set(includeName, content);
-      } catch {
-        includeCache.set(includeName, `<!-- include not found: ${includeName} -->`);
-      }
-    }
-  }
-  let resolved = resolveIncludes(body, includeCache);
-
-  // Step 2: Resolve iterators BEFORE variables (iterator blocks handle their
-  // own internal variable resolution; file-level variables would clobber them)
   const filteredParticipants = excludeAgentId
     ? meetingParticipants.filter(a => a.id !== excludeAgentId)
     : meetingParticipants;
-  resolved = resolveIterators(resolved, filteredParticipants);
 
-  // Step 3: Resolve file-level variables from frontmatter (for any remaining markers)
-  const vars: Record<string, string> = {
-    EnglishName: frontmatter.englishName ?? "",
-    HebrewName: frontmatter.hebrewName ?? "",
-    managerIntro: frontmatter.managerIntro ?? "",
-    managerTip: frontmatter.managerTip ?? "",
-  };
-  resolved = resolveVariables(resolved, vars);
+  const dictionary = await extractDictionary();
+  const context = buildPreprocessContext(
+    frontmatter as Record<string, string>,
+    filteredParticipants,
+    meetingParticipants,
+    dictionary,
+  );
 
-  // Step 4: Resolve computed markers
-  resolved = resolveSpeakerIds(resolved, meetingParticipants);
-
-  return resolved;
+  return preprocessLib.preprocess(content, context, {
+    type: "html",
+    srcDir: PARTICIPANT_AGENTS_DIR,
+  }).trim();
 }
 
 /**
  * Build the complete system prompt for an agent.
  *
- * Participant-Agents: _base-prefix.md (with dictionary) + _agents-prefix.md (resolved) + resolved persona
- * Conversation-Manager: _base-prefix.md (with dictionary) + resolved _conversation-manager.md
+ * Each agent persona file starts with:
+ *   <!-- @include _base-prefix.md -->
+ *   <!-- @include _agents-prefix.md -->   (Participant-Agents only)
+ *
+ * _conversation-manager.md starts with:
+ *   <!-- @include _base-prefix.md -->
+ *
+ * A single resolveTemplate() call handles all includes, variables, and loops.
  */
 export async function buildSystemPrompt(
   agentId: AgentId | "manager",
   meetingParticipants: AgentDefinition[],
 ): Promise<string> {
   logInfo("session-manager", `buildSystemPrompt: ${agentId}`);
-  // Read and inject dictionary into base prefix
-  const basePrefix = await readAgentFileBody(BASE_PREFIX_FILE);
-  const dictionary = await extractDictionary();
-  const basePrefixWithDict = injectDictionary(basePrefix, dictionary);
-
   if (agentId === "manager") {
-    // Manager: base prefix + resolved conversation-manager.md
-    const managerBody = await resolveTemplate(
-      CONVERSATION_MANAGER_FILE,
-      meetingParticipants,
-    );
-    return `${basePrefixWithDict}\n\n${managerBody}`;
+    return resolveTemplate(CONVERSATION_MANAGER_FILE, meetingParticipants);
   }
-
-  // Participant-Agent: base prefix + agents prefix + resolved persona
-  const agentsPrefixBody = await readAgentFileBody(AGENTS_PREFIX_FILE);
-  // Resolve the agents prefix with the meeting's participants (excluding self)
-  const agentsPrefixResolved = resolveIterators(
-    agentsPrefixBody,
-    meetingParticipants.filter(a => a.id !== agentId),
-  );
-
   const agentDef = meetingParticipants.find(a => a.id === agentId);
   const filename = agentDef ? basename(agentDef.filePath) : `${agentId}.md`;
-  const personaResolved = await resolveTemplate(
-    filename,
-    meetingParticipants,
-    agentId,
-  );
-
-  return `${basePrefixWithDict}\n\n${agentsPrefixResolved}\n\n${personaResolved}`;
+  return resolveTemplate(filename, meetingParticipants, agentId);
 }
 
 // ---------------------------------------------------------------------------
