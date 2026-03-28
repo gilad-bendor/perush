@@ -287,7 +287,6 @@ export async function runCycle(
       const tracker = createProcessTracker("assessment", agentId);
       try {
         const prompt = buildAssessmentPrompt(lastSpeaker, lastContent);
-        tracker.emit("prompt", prompt);
         const response = await feedMessage(agentId, prompt, (eventKind, content, toolName, toolInput) => {
           tracker.emit(eventKind, content, toolName, toolInput);
         });
@@ -316,7 +315,6 @@ export async function runCycle(
   const managerTracker = createProcessTracker("manager-selection", "manager");
   try {
     const selectionPrompt = buildSelectionPrompt(lastSpeaker, lastContent, assessments);
-    managerTracker.emit("prompt", selectionPrompt);
     const managerResponse = await feedMessage("manager", selectionPrompt, (eventKind, content, toolName, toolInput) => {
       managerTracker.emit(eventKind, content, toolName, toolInput);
     });
