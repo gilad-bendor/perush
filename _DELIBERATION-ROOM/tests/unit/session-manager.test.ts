@@ -314,6 +314,29 @@ describe("createSession", () => {
     expect(getSessionId("milo")).toBe(s1.sessionId);
     expect(getSessionId("archi")).toBe(s2.sessionId);
   });
+
+  test("emits system-prompt and prompt events via onEvent when provided", async () => {
+    const emitted: Array<{ kind: string; content: string }> = [];
+    await createSession(
+      "milo",
+      "my system prompt",
+      "my initial prompt\n\n---stub-response---\ntext: hi\n---end-stub-response---",
+      (eventKind, content) => emitted.push({ kind: eventKind, content }),
+    );
+
+    expect(emitted[0]).toEqual({ kind: "system-prompt", content: "my system prompt" });
+    expect(emitted[1]).toEqual({ kind: "prompt", content: "my initial prompt\n\n---stub-response---\ntext: hi\n---end-stub-response---" });
+  });
+
+  test("does not emit events when onEvent is not provided", async () => {
+    // Should not throw — just runs without emitting
+    const { sessionId } = await createSession(
+      "milo",
+      "sp",
+      "p\n---stub-response---\ntext: ok\n---end-stub-response---",
+    );
+    expect(sessionId).toBeTruthy();
+  });
 });
 
 describe("feedMessage", () => {
@@ -339,6 +362,35 @@ describe("feedMessage", () => {
 
     expect(response).toBe("lazy response");
     expect(getSessionId("milo")).toBeTruthy();
+  });
+
+  test("emits system-prompt event when session is lazily created", async () => {
+    const agents = await discoverAgents();
+    registerMeeting("Test Topic", agents.filter(a => a.id === "milo"));
+
+    const emitted: string[] = [];
+    await feedMessage(
+      "milo",
+      "test\n---stub-response---\ntext: ok\n---end-stub-response---",
+      (eventKind) => emitted.push(eventKind),
+    );
+
+    expect(emitted[0]).toBe("system-prompt");
+    expect(emitted[1]).toBe("prompt");
+  });
+
+  test("does not emit system-prompt event when session already exists", async () => {
+    await createSession("milo", "sp", "init\n---stub-response---\ntext: init\n---end-stub-response---");
+
+    const emitted: string[] = [];
+    await feedMessage(
+      "milo",
+      "msg\n---stub-response---\ntext: ok\n---end-stub-response---",
+      (eventKind) => emitted.push(eventKind),
+    );
+
+    expect(emitted).not.toContain("system-prompt");
+    expect(emitted).not.toContain("prompt");
   });
 });
 

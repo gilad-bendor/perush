@@ -229,8 +229,8 @@ assertZodTypeMatch<ManagerDecision, typeof ManagerDecisionSchema>(true);
 // Process records — full SDK interaction traces per cycle
 // ---------------------------------------------------------------------------
 
-export const ProcessEventKindSchema = z.enum(["prompt", "thinking", "text", "tool-call", "tool-result"]);
-export type ProcessEventKind = "prompt" | "thinking" | "text" | "tool-call" | "tool-result";
+export const ProcessEventKindSchema = z.enum(["system-prompt", "prompt", "thinking", "text", "tool-call", "tool-result"]);
+export type ProcessEventKind = "system-prompt" | "prompt" | "thinking" | "text" | "tool-call" | "tool-result";
 assertZodTypeMatch<ProcessEventKind, typeof ProcessEventKindSchema>(true);
 
 export const ProcessKindSchema = z.enum(["assessment", "manager-selection", "agent-speech"]);

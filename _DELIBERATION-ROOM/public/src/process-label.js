@@ -183,6 +183,14 @@ export class ProcessLabel {
     div.style.unicodeBidi = "plaintext";
 
     switch (evt.eventKind) {
+      case "system-prompt":
+        div.className = "process-event-system-prompt";
+        div.innerHTML = `<span class="process-event-label">⚙ פרומפט-מערכת:</span>`;
+        const sysPromptText = document.createElement("pre");
+        sysPromptText.className = "process-event-pre";
+        sysPromptText.textContent = evt.content;
+        div.appendChild(sysPromptText);
+        break;
       case "prompt":
         div.className = "process-event-prompt";
         div.innerHTML = `<span class="process-event-label">✍ פרומפט:</span>`;

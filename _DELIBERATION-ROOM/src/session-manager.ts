@@ -338,7 +338,7 @@ export function registerMeeting(title: string, participantDefs: AgentDefinition[
  * Ensure a session exists for the given agent, creating it lazily if needed.
  * Returns the session ID.
  */
-async function ensureSession(agentId: AgentId | "manager"): Promise<string> {
+async function ensureSession(agentId: AgentId | "manager", onEvent?: ProcessEventCallback): Promise<string> {
   const existing = sessionRegistry.get(agentId);
   if (existing) return existing;
 
@@ -347,7 +347,7 @@ async function ensureSession(agentId: AgentId | "manager"): Promise<string> {
   const primingPrompt = agentId === "manager"
     ? `פתיחת דיון. הנושא: ${meetingTitle}\n\n---stub-response---\ntext: מוכן לנהל.\n---end-stub-response---`
     : `פתיחת דיון: ${meetingTitle}\n\n---stub-response---\ntext: מוכן לדיון.\n---end-stub-response---`;
-  const { sessionId } = await createSession(agentId, systemPrompt, primingPrompt);
+  const { sessionId } = await createSession(agentId, systemPrompt, primingPrompt, onEvent);
   return sessionId;
 }
 
@@ -381,12 +381,18 @@ export async function createSession(
   agentId: AgentId | "manager",
   systemPrompt: string,
   initialPrompt: string,
+  onEvent?: ProcessEventCallback,
 ): Promise<{ sessionId: string; responseText: string }> {
   const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
   const tools = agentId === "manager" ? MANAGER_TOOLS : PARTICIPANT_TOOLS;
 
   const effort = effortForModel(model);
   logInfo("sessions", `createSession START for ${agentId} (model=${model}, effort=${effort}, stub=${USE_STUB_SDK})`);
+
+  if (onEvent) {
+    onEvent("system-prompt", systemPrompt);
+    onEvent("prompt", initialPrompt);
+  }
 
   const queryFn = await getQueryFn();
   const query = queryFn({
@@ -407,6 +413,9 @@ export async function createSession(
   let responseText = "";
 
   for await (const msg of query) {
+    if (onEvent) {
+      emitProcessEvents(msg, onEvent);
+    }
     if (msg.type === "system" && (msg as any).subtype === "init") {
       sessionId = (msg as any).session_id;
     }
@@ -438,7 +447,7 @@ export async function feedMessage(
   prompt: string,
   onEvent?: ProcessEventCallback,
 ): Promise<string> {
-  const sessionId = await ensureSession(agentId);
+  const sessionId = await ensureSession(agentId, onEvent);
 
   const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
   const effort = effortForModel(model);
