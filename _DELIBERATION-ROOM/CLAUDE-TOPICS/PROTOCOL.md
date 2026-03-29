@@ -16,8 +16,8 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // Speech streaming completed (final content is in the preceding "speech" message)
 { type: "speech-done", speaker: SpeakerId }
 
-// A Participant-Agent's private assessment (shown in that agent's panel)
-{ type: "assessment", agent: AgentId, selfImportance: number, humanImportance: number, summary: string }
+// A Participant-Agent's private assessment (free-form text, shown in process labels)
+{ type: "assessment", agent: AgentId, text: string }
 
 // The Conversation-Manager-Agent's vibe + next speaker decision
 { type: "vibe", vibe: string, nextSpeaker: SpeakerId }

@@ -151,10 +151,10 @@ export function parseStubYaml(text: string): Record<string, string | number | bo
         continue;
       }
 
-      // Strip surrounding quotes
+      // Strip surrounding quotes and unescape \n
       if ((value.startsWith('"') && value.endsWith('"')) ||
           (value.startsWith("'") && value.endsWith("'"))) {
-        value = value.slice(1, -1);
+        value = value.slice(1, -1).replace(/\\n/g, "\n");
       }
 
       // Try number

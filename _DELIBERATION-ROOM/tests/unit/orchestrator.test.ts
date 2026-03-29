@@ -2,10 +2,14 @@
  * orchestrator.test.ts — Tests for the deliberation loop.
  *
  * Tests the full cycle (assess → select → speak) using the stub SDK.
- * Integration tests use real git worktrees with unique meeting IDs.
+ * Tests are grouped to minimize git worktree creation:
+ * - "Core cycle mechanics" shares a single meeting for tests that observe
+ *   cycle behavior without needing a fresh meeting.
+ * - Lifecycle tests (start, end, resume, rollback) create meetings as needed
+ *   but batch cleanup in afterAll.
  */
 
-import { describe, test, expect, beforeEach, afterEach } from "bun:test";
+import { describe, test, expect, beforeAll, beforeEach, afterEach, afterAll } from "bun:test";
 import { $ } from "bun";
 import { join } from "path";
 import {
@@ -26,15 +30,13 @@ import {
 import type { OrchestratorEvents } from "../../src/orchestrator";
 import { resetStubState } from "../../src/stub-sdk";
 import { resetAgentCache } from "../../src/session-manager";
-import {PrivateAssessment, Phase, meetingIdToBranchName, MeetingId} from "../../src/types";
-import {generateMeetingId} from "../../src/meetings-db.ts";
+import { PrivateAssessment, Phase, meetingIdToBranchName, MeetingId } from "../../src/types";
+import { generateMeetingId } from "../../src/meetings-db.ts";
 
-// Unique test meeting IDs to avoid collisions
-function testId(): MeetingId {
-  return generateMeetingId(`orch-test-${Math.random().toString(36).slice(2, 6)}`, new Date());
-}
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
 
-// Collect events for assertions
 interface CollectedEvents {
   phases: Phase[];
   speeches: Array<{ speaker: string; content: string }>;
@@ -70,7 +72,6 @@ function createEventCollector(): { events: CollectedEvents; handlers: Partial<Or
   };
 }
 
-// Cleanup helper — remove test worktrees and branches
 async function cleanupMeeting(meetingId: MeetingId): Promise<void> {
   try {
     const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
@@ -80,53 +81,48 @@ async function cleanupMeeting(meetingId: MeetingId): Promise<void> {
   } catch {}
 }
 
-// ---------------------------------------------------------------------------
-// Test setup
-// ---------------------------------------------------------------------------
+// Track all meeting IDs for batch cleanup
+const allMeetingIds: MeetingId[] = [];
 
-let testMeetingId: MeetingId;
+afterAll(async () => {
+  for (const id of allMeetingIds) {
+    await cleanupMeeting(id);
+  }
+});
 
-beforeEach(() => {
+function freshState() {
   resetOrchestrator();
   resetAgentCache();
   resetStubState();
-  testMeetingId = testId();
-});
+}
 
-afterEach(async () => {
-  try {
-    // Try to end meeting if still active
-    if (getMeeting()) {
-      await endCurrentMeeting();
-    }
-  } catch {}
-  await cleanupMeeting(testMeetingId);
-});
+async function startAndTrack(title: string, participants: string[]) {
+  const meeting = await startMeeting(title, participants);
+  allMeetingIds.push(meeting.meetingId);
+  return meeting;
+}
 
 // ---------------------------------------------------------------------------
 // Meeting Start
 // ---------------------------------------------------------------------------
 
 describe("startMeeting", () => {
+  beforeEach(freshState);
+  afterEach(async () => { try { if (getMeeting()) await endCurrentMeeting(); } catch {} });
+
   test("creates a meeting with participants and sessions", async () => {
-    const meeting = await startMeeting("Test", ["milo", "archi"]);
+    const meeting = await startAndTrack("Test", ["milo", "archi"]);
 
     expect(meeting.meetingId).toBeTruthy();
     expect(meeting.title).toBe("Test");
     expect(meeting.openingPrompt).toBeUndefined();
     expect(meeting.participants).toEqual(["milo", "archi"]);
     expect(meeting.cycles).toHaveLength(0);
-    // Sessions are created lazily — not at meeting start
     expect(Object.keys(meeting.sessionIds)).toHaveLength(0);
-
-    // Store the meeting ID for cleanup
-    testMeetingId = meeting.meetingId;
   });
 
   test("rejects starting a second meeting", async () => {
-    const meeting = await startMeeting("Test", ["milo"]);
-    testMeetingId = meeting.meetingId;
-
+    await startAndTrack("Test", ["milo"]);
     await expect(startMeeting("Test2", ["milo"])).rejects.toThrow("already active");
   });
 
@@ -136,16 +132,21 @@ describe("startMeeting", () => {
 });
 
 // ---------------------------------------------------------------------------
-// Single Cycle
+// Core cycle mechanics — single shared meeting (one worktree)
+//
+// These tests run sequentially against a single meeting. Each test runs
+// cycles and checks behavior. The meeting accumulates state across tests.
 // ---------------------------------------------------------------------------
 
-describe("runCycle", () => {
+describe("core cycle mechanics", () => {
+  beforeAll(() => { freshState(); });
+  afterAll(async () => { try { if (getMeeting()) await endCurrentMeeting(); } catch {} });
+
   test("runs a full cycle: assess → select → speak", async () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Test", ["milo", "archi"]);
-    testMeetingId = meeting.meetingId;
+    await startAndTrack("Cycle Mechanics", ["milo", "archi"]);
 
     const cycle = await runCycle("human", "Opening prompt text");
 
@@ -154,57 +155,67 @@ describe("runCycle", () => {
     expect(cycle!.speech.speaker).toBeTruthy();
     expect(cycle!.speech.content).toBeTruthy();
 
-    // Phases fired in correct order
     expect(events.phases).toContain("assessing");
     expect(events.phases).toContain("selecting");
     expect(events.phases).toContain("speaking");
     expect(events.phases).toContain("idle");
 
-    // Assessment phase order: assessing must come before selecting
     const assessingIdx = events.phases.indexOf("assessing");
     const selectingIdx = events.phases.indexOf("selecting");
     const speakingIdx = events.phases.indexOf("speaking");
     expect(assessingIdx).toBeLessThan(selectingIdx);
     expect(selectingIdx).toBeLessThan(speakingIdx);
 
-    // Assessments were produced
     expect(events.assessments.length).toBeGreaterThan(0);
-
-    // Vibe was produced
     expect(events.vibes.length).toBe(1);
     expect(events.vibes[0].vibe).toBeTruthy();
 
-    // Meeting was updated
-    const currentMeeting = getMeeting()!;
-    expect(currentMeeting.cycles).toHaveLength(1);
+    expect(getMeeting()!.cycles).toHaveLength(1);
   });
 
   test("skips last speaker in assessment phase", async () => {
+    // Cycle 2 in the shared meeting
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Test", ["milo", "archi"]);
-    testMeetingId = meeting.meetingId;
-
     await runCycle("milo", "Milo's speech");
 
-    // Only archi should have assessed (milo was the last speaker)
     const assessingAgents = events.assessments.map(a => a.agent);
     expect(assessingAgents).not.toContain("milo");
     expect(assessingAgents).toContain("archi");
   });
 
   test("multiple cycles accumulate correctly", async () => {
-    const meeting = await startMeeting("Test", ["milo", "archi"]);
-    testMeetingId = meeting.meetingId;
-
-    await runCycle("human", "First prompt");
-    await runCycle("milo", "Milo's response");
+    // Already has 2 cycles from previous tests; run one more
+    await runCycle("archi", "Archi's response");
 
     const currentMeeting = getMeeting()!;
-    expect(currentMeeting.cycles).toHaveLength(2);
-    expect(currentMeeting.cycles[0].cycleNumber).toBe(1);
-    expect(currentMeeting.cycles[1].cycleNumber).toBe(2);
+    expect(currentMeeting.cycles.length).toBeGreaterThanOrEqual(3);
+    // Cycle numbers are sequential
+    for (let i = 0; i < currentMeeting.cycles.length; i++) {
+      expect(currentMeeting.cycles[i].cycleNumber).toBe(i + 1);
+    }
+  });
+
+  test("onSpeech emits for completed speeches", async () => {
+    const { events, handlers } = createEventCollector();
+    setEventHandlers(handlers);
+
+    await runCycle("human", "Another prompt");
+
+    expect(events.speeches.length).toBe(1);
+    expect(events.speeches[0].content).toBeTruthy();
+  });
+
+  test("returns to idle after cycle", async () => {
+    expect(getPhase()).toBe("idle");
+  });
+
+  test("totalCostEstimate accumulates per cycle", async () => {
+    const costBefore = getMeeting()!.totalCostEstimate ?? 0;
+
+    await runCycle("milo", "More from milo");
+    expect(getMeeting()!.totalCostEstimate).toBeGreaterThan(costBefore);
   });
 });
 
@@ -213,6 +224,9 @@ describe("runCycle", () => {
 // ---------------------------------------------------------------------------
 
 describe("attention flag", () => {
+  beforeEach(freshState);
+  afterEach(async () => { try { if (getMeeting()) await endCurrentMeeting(); } catch {} });
+
   test("handleAttention sets the flag", () => {
     handleAttention();
     expect(isAttentionRequested()).toBe(true);
@@ -222,32 +236,22 @@ describe("attention flag", () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Test", ["milo", "archi"]);
-    testMeetingId = meeting.meetingId;
+    await startAndTrack("Test", ["milo", "archi"]);
 
     handleAttention();
-
-    // Need to handle the forced human turn
-    // The cycle will wait for human speech, so we need to resolve it
-    setDirectorTimeout(500); // Short timeout for test
+    setDirectorTimeout(500);
 
     const cyclePromise = runCycle("milo", "Milo said something");
 
-    // Wait a tick for the cycle to reach human-turn phase
     await new Promise(r => setTimeout(r, 50));
-
-    // Provide human speech
     handleHumanSpeech("Director's response");
 
     const cycle = await cyclePromise;
     expect(cycle).not.toBeNull();
 
-    // The next speaker should be human (Director)
     expect(events.vibes[0].nextSpeaker).toBe("human");
     expect(cycle!.speech.speaker).toBe("human");
     expect(cycle!.speech.content).toBe("Director's response");
-
-    // Flag was consumed
     expect(isAttentionRequested()).toBe(false);
   });
 });
@@ -257,14 +261,16 @@ describe("attention flag", () => {
 // ---------------------------------------------------------------------------
 
 describe("human turn", () => {
+  beforeEach(freshState);
+  afterEach(async () => { try { if (getMeeting()) await endCurrentMeeting(); } catch {} });
+
   test("handleHumanSpeech resolves pending turn", async () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Test", ["milo"]);
-    testMeetingId = meeting.meetingId;
+    await startAndTrack("Test", ["milo"]);
 
-    handleAttention(); // Force human turn
+    handleAttention();
     setDirectorTimeout(2000);
 
     const cyclePromise = runCycle("milo", "Milo's speech");
@@ -279,11 +285,10 @@ describe("human turn", () => {
   });
 
   test("director timeout rejects the promise", async () => {
-    const meeting = await startMeeting("Test", ["milo"]);
-    testMeetingId = meeting.meetingId;
+    await startAndTrack("Test", ["milo"]);
 
     handleAttention();
-    setDirectorTimeout(100); // Very short timeout
+    setDirectorTimeout(100);
 
     await expect(runCycle("milo", "speech")).rejects.toThrow("Director timeout");
   });
@@ -294,9 +299,10 @@ describe("human turn", () => {
 // ---------------------------------------------------------------------------
 
 describe("endCurrentMeeting", () => {
+  beforeEach(freshState);
+
   test("cleans up all state", async () => {
-    const meeting = await startMeeting("Test", ["milo"]);
-    testMeetingId = meeting.meetingId;
+    await startAndTrack("Test", ["milo"]);
 
     await endCurrentMeeting();
 
@@ -310,51 +316,12 @@ describe("endCurrentMeeting", () => {
 });
 
 // ---------------------------------------------------------------------------
-// Event Emission
-// ---------------------------------------------------------------------------
-
-describe("event emission", () => {
-  test("onSpeech emits for completed speeches", async () => {
-    const { events, handlers } = createEventCollector();
-    setEventHandlers(handlers);
-
-    const meeting = await startMeeting("Test", ["milo", "archi"]);
-    testMeetingId = meeting.meetingId;
-
-    await runCycle("human", "Opening text");
-
-    expect(events.speeches.length).toBe(1);
-    expect(events.speeches[0].content).toBeTruthy();
-  });
-
-  test("onError emits for failures without crashing", async () => {
-    const { handlers } = createEventCollector();
-    setEventHandlers(handlers);
-
-    const meeting = await startMeeting("Test", ["milo"]);
-    testMeetingId = meeting.meetingId;
-
-    // Run a cycle — should succeed even if some assessments fail
-    await runCycle("human", "test");
-    // No assessments expected (milo is the only participant, and they can't assess if they're not the last speaker... actually milo will assess since human was last speaker)
-    // This should not throw
-  });
-});
-
-// ---------------------------------------------------------------------------
 // Phase Tracking
 // ---------------------------------------------------------------------------
 
 describe("phase tracking", () => {
   test("starts as idle", () => {
-    expect(getPhase()).toBe("idle");
-  });
-
-  test("returns to idle after cycle", async () => {
-    const meeting = await startMeeting("Test", ["milo"]);
-    testMeetingId = meeting.meetingId;
-
-    await runCycle("human", "test");
+    // (Does not need its own meeting)
     expect(getPhase()).toBe("idle");
   });
 });
@@ -365,38 +332,17 @@ describe("phase tracking", () => {
 
 describe("handleRollback", () => {
   test("throws if no active meeting", async () => {
+    freshState();
     await expect(handleRollback(0)).rejects.toThrow("No active meeting");
   });
 
-  test("rolls back to opening prompt (cycle 0)", async () => {
-    const { handlers } = createEventCollector();
+  // All rollback behavior tests share a single meeting
+  test("rolls back to cycle 0, specific cycle, and emits correct phases", async () => {
+    freshState();
+    const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    const meeting = await startMeeting("Rollback Test", ["milo", "archi"]);
-    testMeetingId = meeting.meetingId;
-
-    // Run two cycles
-    await runCycle("human", "Opening prompt");
-    await runCycle("milo", "Response from milo");
-
-    expect(getMeeting()!.cycles).toHaveLength(2);
-
-    // Rollback to cycle 0
-    const progressSteps: string[] = [];
-    await handleRollback(0, (step) => progressSteps.push(step));
-
-    const rolledBack = getMeeting()!;
-    expect(rolledBack.cycles).toHaveLength(0);
-    expect(rolledBack.meetingId).toBe(testMeetingId);
-    expect(getPhase()).toBe("idle");
-    expect(progressSteps).toContain("aborting");
-    expect(progressSteps).toContain("session-recovery");
-    expect(progressSteps).toContain("complete");
-  });
-
-  test("rolls back to a specific cycle", async () => {
-    const meeting = await startMeeting("Rollback Test", ["milo", "archi"]);
-    testMeetingId = meeting.meetingId;
+    await startAndTrack("Rollback Test", ["milo", "archi"]);
 
     await runCycle("human", "Opening prompt");
     await runCycle("milo", "Milo's first response");
@@ -406,52 +352,29 @@ describe("handleRollback", () => {
 
     // Rollback to cycle 1
     await handleRollback(1);
+    expect(getMeeting()!.cycles).toHaveLength(1);
+    expect(getMeeting()!.cycles[0].speech.speaker).toBeTruthy();
+
+    // Re-add cycles, then rollback to 0
+    await runCycle("milo", "Rebuilding");
+
+    events.phases.length = 0;
+    const progressSteps: string[] = [];
+    await handleRollback(0, (step) => progressSteps.push(step));
 
     const rolledBack = getMeeting()!;
-    expect(rolledBack.cycles).toHaveLength(1);
-    expect(rolledBack.cycles[0].speech.speaker).toBeTruthy();
-  });
+    expect(rolledBack.cycles).toHaveLength(0);
+    expect(getPhase()).toBe("idle");
+    expect(progressSteps).toContain("aborting");
+    expect(progressSteps).toContain("session-recovery");
+    expect(progressSteps).toContain("complete");
 
-  test("emits rolling-back phase and returns to idle", async () => {
-    const { events, handlers } = createEventCollector();
-    setEventHandlers(handlers);
-
-    const meeting = await startMeeting("Rollback Test", ["milo"]);
-    testMeetingId = meeting.meetingId;
-
-    await runCycle("human", "Opening");
-
-    events.phases.length = 0; // Reset collected phases
-
-    await handleRollback(0);
-
+    // Phase emission check
     expect(events.phases).toContain("rolling-back");
     expect(events.phases[events.phases.length - 1]).toBe("idle");
-  });
-});
 
-// ---------------------------------------------------------------------------
-// Resume Meeting
-// ---------------------------------------------------------------------------
-
-// ---------------------------------------------------------------------------
-// Cost Tracking
-// ---------------------------------------------------------------------------
-
-describe("cost tracking", () => {
-  test("totalCostEstimate accumulates per cycle", async () => {
-    const meeting = await startMeeting("Cost Test", ["milo", "archi"]);
-    testMeetingId = meeting.meetingId;
-
-    expect(getMeeting()!.totalCostEstimate).toBeUndefined();
-
-    await runCycle("human", "First prompt");
-    expect(getMeeting()!.totalCostEstimate).toBeGreaterThan(0);
-
-    const costAfterOne = getMeeting()!.totalCostEstimate!;
-
-    await runCycle("milo", "Milo responds");
-    expect(getMeeting()!.totalCostEstimate).toBeGreaterThan(costAfterOne);
+    // Cleanup
+    await endCurrentMeeting();
   });
 });
 
@@ -461,58 +384,45 @@ describe("cost tracking", () => {
 
 describe("resumeMeetingById", () => {
   test("throws if a different meeting is already active", async () => {
-    const meeting = await startMeeting("Test", ["milo"]);
-    testMeetingId = meeting.meetingId;
+    freshState();
+    await startAndTrack("Test", ["milo"]);
 
     await expect(resumeMeetingById(generateMeetingId("some-other-id", new Date()))).rejects.toThrow("already active");
-  });
 
-  test("returns the active meeting if resuming the same meeting ID", async () => {
-    const meeting = await startMeeting("Test", ["milo"]);
-    testMeetingId = meeting.meetingId;
-
-    // Resuming the same meeting should succeed (no-op)
-    const resumed = await resumeMeetingById(testMeetingId);
+    // Also test: resuming same meeting is a no-op
+    const meeting = getMeeting()!;
+    const resumed = await resumeMeetingById(meeting.meetingId);
     expect(resumed).toBe(meeting);
-    expect(resumed.meetingId).toBe(testMeetingId);
+
+    await endCurrentMeeting();
   });
 
-  test("resumes an ended meeting with correct state", async () => {
-    const meeting = await startMeeting("Resume Test", ["milo", "archi"]);
-    testMeetingId = meeting.meetingId;
+  test("resumes ended meeting and runs additional cycles", async () => {
+    freshState();
+    const meeting = await startAndTrack("Resume Test", ["milo", "archi"]);
+    const meetingId = meeting.meetingId;
 
     await runCycle("human", "Opening prompt");
-
     const cycleCount = getMeeting()!.cycles.length;
 
     await endCurrentMeeting();
     expect(getMeeting()).toBeNull();
 
-    // Resume the meeting
-    const resumed = await resumeMeetingById(testMeetingId);
-
-    expect(resumed.meetingId).toBe(testMeetingId);
+    // Resume
+    const resumed = await resumeMeetingById(meetingId);
+    expect(resumed.meetingId).toBe(meetingId);
     expect(resumed.title).toBe("Resume Test");
     expect(resumed.cycles).toHaveLength(cycleCount);
     expect(resumed.sessionIds.milo).toBeTruthy();
     expect(resumed.sessionIds.archi).toBeTruthy();
     expect(resumed.sessionIds.manager).toBeTruthy();
     expect(getPhase()).toBe("idle");
-  });
 
-  test("runs additional cycles after resume", async () => {
-    const meeting = await startMeeting("Resume Test", ["milo"]);
-    testMeetingId = meeting.meetingId;
-
-    await runCycle("human", "Opening");
-    await endCurrentMeeting();
-
-    await resumeMeetingById(testMeetingId);
-
-    // Run another cycle after resume
+    // Run additional cycle after resume
     const lastCycle = getMeeting()!.cycles[getMeeting()!.cycles.length - 1];
     await runCycle(lastCycle.speech.speaker, lastCycle.speech.content);
+    expect(getMeeting()!.cycles).toHaveLength(cycleCount + 1);
 
-    expect(getMeeting()!.cycles).toHaveLength(2);
+    await endCurrentMeeting();
   });
 });

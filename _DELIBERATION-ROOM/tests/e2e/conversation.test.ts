@@ -45,9 +45,7 @@ const syncWithCycles = {
         assessments: {
           archi: {
             agent: "archi",
-            selfImportance: 6,
-            humanImportance: 4,
-            summary: "נקודה מעניינת מבחינת מבנה",
+            text: "אני: 6\nנקודה מעניינת מבחינת מבנה",
           },
         },
         managerDecision: { nextSpeaker: "Milo", vibe: "הדיון מתחיל להתפתח." },
@@ -62,9 +60,7 @@ const syncWithCycles = {
         assessments: {
           milo: {
             agent: "milo",
-            selfImportance: 3,
-            humanImportance: 5,
-            summary: "מסכים, אך יש לדייק במילון",
+            text: "אני: 3\nמסכים, אך יש לדייק במילון",
           },
         },
         managerDecision: { nextSpeaker: "Director", vibe: "הגיע הזמן לשמוע את המנחה." },

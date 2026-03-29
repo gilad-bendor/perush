@@ -65,7 +65,7 @@ For everything else — architecture, implementation, infrastructure — this fi
          │
          ▼
 2. ASSESSMENT — Feed to each Participant-Agent's session (parallel, except last speaker)
-   → Each returns: { selfImportance, humanImportance, summary }
+   → Two-phase: deep thinking (private, with tools), then free-text assessment for turn management
          │
          ▼
 3. SELECTION — Feed speech + assessments to Manager's session
@@ -126,9 +126,7 @@ interface ConversationMessage {
 
 interface PrivateAssessment {
   agent: AgentId;
-  selfImportance: number;     // 1-10
-  humanImportance: number;    // 1-10
-  summary: string;
+  text: string;               // free-form assessment text (no algorithmic parsing)
 }
 
 // A cycle = assess previous speech → select next speaker → that speaker speaks.

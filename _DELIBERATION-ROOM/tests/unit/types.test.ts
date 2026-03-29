@@ -122,48 +122,21 @@ describe("PrivateAssessmentSchema", () => {
   test("accepts valid assessment", () => {
     const assessment = {
       agent: "milo",
-      selfImportance: 7,
-      humanImportance: 4,
-      summary: "יש כאן בעיה מילונית",
+      text: "אני: 7\nיש כאן בעיה מילונית חמורה",
     };
     expect(PrivateAssessmentSchema.parse(assessment)).toEqual(assessment);
   });
 
-  test("rejects selfImportance out of range", () => {
+  test("rejects missing text", () => {
     expect(() => PrivateAssessmentSchema.parse({
       agent: "milo",
-      selfImportance: 0,
-      humanImportance: 5,
-      summary: "test",
-    })).toThrow();
-
-    expect(() => PrivateAssessmentSchema.parse({
-      agent: "milo",
-      selfImportance: 11,
-      humanImportance: 5,
-      summary: "test",
     })).toThrow();
   });
 
-  test("rejects non-integer importance", () => {
+  test("rejects missing agent", () => {
     expect(() => PrivateAssessmentSchema.parse({
-      agent: "milo",
-      selfImportance: 5.5,
-      humanImportance: 5,
-      summary: "test",
+      text: "אני: 5\nהערה כלשהי",
     })).toThrow();
-  });
-
-  test("accepts boundary values 1 and 10", () => {
-    const low = PrivateAssessmentSchema.parse({
-      agent: "milo", selfImportance: 1, humanImportance: 1, summary: "low",
-    });
-    expect(low.selfImportance).toBe(1);
-
-    const high = PrivateAssessmentSchema.parse({
-      agent: "milo", selfImportance: 10, humanImportance: 10, summary: "high",
-    });
-    expect(high.selfImportance).toBe(10);
   });
 });
 
@@ -199,9 +172,7 @@ describe("CycleRecordSchema", () => {
       assessments: {
         archi: {
           agent: "archi",
-          selfImportance: 5,
-          humanImportance: 3,
-          summary: "נקודה מעניינת",
+          text: "אני: 5\nנקודה מעניינת",
         },
       },
       managerDecision: {
@@ -313,9 +284,7 @@ describe("ServerMessageSchema", () => {
       type: "assessment" as const,
       messageId: "S3",
       agent: "milo",
-      selfImportance: 7,
-      humanImportance: 4,
-      summary: "test",
+      text: "אני: 7\ntest",
     };
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });

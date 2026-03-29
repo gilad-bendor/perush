@@ -26,6 +26,7 @@ import type {
 import { createFormattedTime } from "./types";
 import {
   DIRECTOR_TIMEOUT_MS,
+  USE_STUB_SDK,
 } from "./config";
 import { logInfo, logWarn, logError } from "./logs";
 import {
@@ -48,13 +49,12 @@ import {
 import {
   discoverAgents,
   buildSystemPrompt,
+  resolvePromptTemplate,
   createSession,
   registerMeeting,
   feedMessage,
   streamSpeech,
   interruptAll,
-  extractAssessment,
-  extractManagerDecision,
   clearSessions,
   getAllSessionIds,
   resetCycleCost,
@@ -89,6 +89,11 @@ let currentWorktreePath: string | null = null;
 let currentPhase: Phase = "idle";
 let attentionRequested = false;
 let meetingParticipantDefs: AgentDefinition[] = [];
+
+/** In-progress cycle's processes (not yet persisted to meeting.yaml). */
+let pendingProcesses: ProcessRecord[] | null = null;
+/** In-progress cycle number (for pending processes). */
+let pendingCycleNumber: number | null = null;
 
 /** Event handlers — set by the server */
 let events: OrchestratorEvents = createNoopEvents();
@@ -141,6 +146,12 @@ export function getMeeting(): Meeting | null {
 /** Get the current worktree path (or null). */
 export function getWorktreePath(): string | null {
   return currentWorktreePath;
+}
+
+/** Get processes from the in-progress cycle (not yet written to meeting.yaml). */
+export function getPendingProcesses(): { processes: ProcessRecord[]; cycleNumber: number } | null {
+  if (!pendingProcesses || pendingCycleNumber == null) return null;
+  return { processes: pendingProcesses, cycleNumber: pendingCycleNumber };
 }
 
 /** Override the director timeout (for testing). */
@@ -253,6 +264,8 @@ export async function runCycle(
 
   // Track all process records for this cycle
   const processes: ProcessRecord[] = [];
+  pendingProcesses = processes;
+  pendingCycleNumber = cycleNumber;
 
   // Helper: create a process record and emit start/event/done
   function createProcessTracker(processKind: ProcessKind, agent: AgentId | "manager") {
@@ -278,6 +291,10 @@ export async function runCycle(
   // ------ ASSESSMENT PHASE ------
   setPhase("assessing");
 
+  // Get the vibe from the previous cycle (if any) — agents see it before the speech
+  const prevCycle = currentMeeting.cycles[currentMeeting.cycles.length - 1];
+  const prevVibe = prevCycle?.managerDecision?.vibe;
+
   const assessments: Record<string, PrivateAssessment> = {}; // keyed by AgentId
 
   // Assess in parallel (all participants except last speaker)
@@ -286,15 +303,14 @@ export async function runCycle(
     .map(async (agentId) => {
       const tracker = createProcessTracker("assessment", agentId);
       try {
-        const prompt = buildAssessmentPrompt(lastSpeaker, lastContent);
+        const prompt = await buildAssessmentPrompt(lastSpeaker, lastContent, prevVibe);
         const response = await feedMessage(agentId, prompt, (eventKind, content, toolName, toolInput) => {
           tracker.emit(eventKind, content, toolName, toolInput);
         });
-        const assessment = extractAssessment(agentId, response);
-        if (assessment) {
-          assessments[agentId] = assessment;
-          events.onAssessment(assessment);
-        }
+        const assessmentText = extractAssessmentText(response);
+        const assessment: PrivateAssessment = { agent: agentId, text: assessmentText ?? response };
+        assessments[agentId] = assessment;
+        events.onAssessment(assessment);
       } catch (err) {
         // Assessment failure is non-fatal — proceed with partial assessments
         logWarn("orchestrator", `runCycle ${cycleNumber}: assessment failed for ${agentId}`, err);
@@ -310,28 +326,42 @@ export async function runCycle(
   // ------ SELECTION PHASE ------
   setPhase("selecting");
 
-  let decision: ManagerDecision;
+  let decision: ManagerDecision | null;
 
   const managerTracker = createProcessTracker("manager-selection", "manager");
   try {
-    const selectionPrompt = buildSelectionPrompt(lastSpeaker, lastContent, assessments);
+    const selectionPrompt = await buildSelectionPrompt(lastSpeaker, lastContent, assessments);
     const managerResponse = await feedMessage("manager", selectionPrompt, (eventKind, content, toolName, toolInput) => {
       managerTracker.emit(eventKind, content, toolName, toolInput);
     });
-    const parsed = extractManagerDecision(managerResponse);
 
-    if (!parsed) {
-      // Fallback: pick the agent with the highest selfImportance, or human
+    decision = parseManagerResponse(managerResponse);
+
+    // Retry once if parsing failed
+    if (!decision) {
+      const result = extractRecommendation(managerResponse);
+      const reason = "error" in result ? result.error : `שם המשתתף "${result.nextSpeakerRaw}" לא מוכר`;
+      logWarn("orchestrator", `runCycle ${cycleNumber}: manager selection parse failed, retrying: ${reason}`);
+
+      const retryPrompt = await buildSelectionRetryPrompt(reason);
+      const retryResponse = await feedMessage("manager", retryPrompt, (eventKind, content, toolName, toolInput) => {
+        managerTracker.emit(eventKind, content, toolName, toolInput);
+      });
+
+      decision = parseManagerResponse(retryResponse);
+    }
+
+    // Final fallback if retry also failed
+    if (!decision) {
+      logWarn("orchestrator", `runCycle ${cycleNumber}: manager selection retry also failed, falling back to Director`);
       decision = {
-        nextSpeaker: pickFallbackSpeaker(lastSpeaker, assessments),
+        nextSpeaker: pickFallbackSpeaker(lastSpeaker),
         vibe: "לא הצלחתי לקרוא את האווירה.",
       };
-    } else {
-      decision = parsed;
     }
   } catch (err) {
     decision = {
-      nextSpeaker: pickFallbackSpeaker(lastSpeaker, assessments),
+      nextSpeaker: pickFallbackSpeaker(lastSpeaker),
       vibe: "שגיאה בבחירת דובר.",
     };
     events.onError(`Selection failed: ${err}`);
@@ -346,15 +376,14 @@ export async function runCycle(
     attentionRequested = false;
   }
 
-  // Resolve speaker name to ID
-  const nextSpeakerId = resolveNextSpeaker(decision.nextSpeaker);
-  logInfo("orchestrator", `runCycle ${cycleNumber}: selected → ${nextSpeakerId} (vibe: "${decision.vibe}")`);
-  events.onVibe(decision.vibe, nextSpeakerId);
+  logInfo("orchestrator", `runCycle ${cycleNumber}: selected → ${decision.nextSpeaker} (vibe: "${decision.vibe}")`);
+  events.onVibe(decision.vibe, decision.nextSpeaker);
 
   // ------ SPEECH PHASE ------
+  const nextSpeaker = decision.nextSpeaker;
   let speech: ConversationMessage;
 
-  if (nextSpeakerId === "human") {
+  if (nextSpeaker === "human") {
     // Human turn
     setPhase("human-turn");
     events.onYourTurn();
@@ -368,18 +397,18 @@ export async function runCycle(
     events.onSpeech("human", humanContent, speech.timestamp, getCycleCost());
   } else {
     // Agent speech
-    setPhase("speaking", nextSpeakerId);
+    setPhase("speaking", nextSpeaker);
 
-    const speechPrompt = "נבחרת לדבר. הנה תגובתך.\n\n---stub-response---\ntext: תגובת הסוכן.\n---end-stub-response---";
+    const speechPrompt = await buildSpeechPrompt(decision.vibe);
     let fullText = "";
 
-    const speechTracker = createProcessTracker("agent-speech", nextSpeakerId);
+    const speechTracker = createProcessTracker("agent-speech", nextSpeaker);
     speechTracker.emit("prompt", speechPrompt);
 
     try {
-      for await (const event of streamSpeech(nextSpeakerId, speechPrompt)) {
+      for await (const event of streamSpeech(nextSpeaker, speechPrompt)) {
         if (event.type === "chunk") {
-          events.onSpeechChunk(nextSpeakerId, event.text);
+          events.onSpeechChunk(nextSpeaker, event.text);
           // Text chunks are accumulated; we'll emit a single "text" event at done
         } else if (event.type === "thinking-chunk") {
           // Stream to UI live but don't persist — the complete thinking comes later
@@ -398,19 +427,19 @@ export async function runCycle(
       }
     } catch (err) {
       fullText = `[שגיאה: ${err}]`;
-      logError("orchestrator", `runCycle ${cycleNumber}: speech failed for ${nextSpeakerId}`, err);
-      events.onError(`Speech failed for ${nextSpeakerId}: ${err}`);
+      logError("orchestrator", `runCycle ${cycleNumber}: speech failed for ${nextSpeaker}`, err);
+      events.onError(`Speech failed for ${nextSpeaker}: ${err}`);
     } finally {
       speechTracker.done();
     }
 
     speech = {
-      speaker: nextSpeakerId,
+      speaker: nextSpeaker,
       content: fullText,
       timestamp: createFormattedTime(),
     };
-    events.onSpeechDone(nextSpeakerId);
-    events.onSpeech(nextSpeakerId, fullText, speech.timestamp, getCycleCost());
+    events.onSpeechDone(nextSpeaker);
+    events.onSpeech(nextSpeaker, fullText, speech.timestamp, getCycleCost());
   }
 
   // ------ RECORD & COMMIT ------
@@ -430,6 +459,9 @@ export async function runCycle(
 
   // Sync session IDs from registry (sessions may have been created lazily)
   Object.assign(currentMeeting.sessionIds, getAllSessionIds());
+
+  pendingProcesses = null;
+  pendingCycleNumber = null;
 
   await writeMeetingAtomic(currentWorktreePath, currentMeeting);
   await commitCycleGit(currentWorktreePath, cycleNumber, speech.speaker);
@@ -565,7 +597,7 @@ export async function handleRollback(
   // Recreate participant sessions
   for (const agentId of currentMeeting.participants) {
     const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
-    const transcript = buildTranscriptPrompt(currentMeeting);
+    const transcript = await buildTranscriptPrompt(currentMeeting);
     const { sessionId } = await createSession(
       agentId,
       systemPrompt,
@@ -576,7 +608,7 @@ export async function handleRollback(
 
   // Recreate manager session
   const managerSystemPrompt = await buildSystemPrompt("manager", meetingParticipantDefs);
-  const managerTranscript = buildTranscriptPrompt(currentMeeting);
+  const managerTranscript = await buildTranscriptPrompt(currentMeeting);
   const { sessionId: managerSessionId } = await createSession(
     "manager",
     managerSystemPrompt,
@@ -633,7 +665,7 @@ export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> 
 
   for (const agentId of currentMeeting.participants) {
     const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
-    const transcript = buildTranscriptPrompt(currentMeeting);
+    const transcript = await buildTranscriptPrompt(currentMeeting);
     const { sessionId } = await createSession(
       agentId,
       systemPrompt,
@@ -644,7 +676,7 @@ export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> 
 
   // Recreate manager session
   const managerSystemPrompt = await buildSystemPrompt("manager", meetingParticipantDefs);
-  const managerTranscript = buildTranscriptPrompt(currentMeeting);
+  const managerTranscript = await buildTranscriptPrompt(currentMeeting);
   const { sessionId: managerSessionId } = await createSession(
     "manager",
     managerSystemPrompt,
@@ -682,6 +714,19 @@ export function resetOrchestrator(): void {
 // Internal helpers
 // ---------------------------------------------------------------------------
 
+/**
+ * Append a stub-response block to a prompt — only when running in stub mode.
+ * In production (real SDK), the LLM never sees these blocks.
+ */
+function withStubResponse(prompt: string, stubText: string): string {
+  if (!USE_STUB_SDK) return prompt;
+  if (stubText.includes("\n")) {
+    const indented = stubText.split("\n").map(l => `  ${l}`).join("\n");
+    return `${prompt}\n\n---stub-response---\ntext: |\n${indented}\n---end-stub-response---`;
+  }
+  return `${prompt}\n\n---stub-response---\ntext: ${stubText}\n---end-stub-response---`;
+}
+
 function setPhase(phase: Phase, activeSpeaker?: SpeakerId): void {
   logInfo("orchestrator", `phase: ${currentPhase} → ${phase}${activeSpeaker ? ` (speaker: ${activeSpeaker})` : ""}`);
   currentPhase = phase;
@@ -692,7 +737,7 @@ function setPhase(phase: Phase, activeSpeaker?: SpeakerId): void {
  * Build a transcript prompt from a meeting's conversation history.
  * Used for session recovery — feeds the full public conversation into a new session.
  */
-function buildTranscriptPrompt(meeting: Meeting): string {
+async function buildTranscriptPrompt(meeting: Meeting): Promise<string> {
   const parts: string[] = [];
   if (meeting.openingPrompt) {
     parts.push(`פתיחת דיון: ${meeting.openingPrompt}`);
@@ -705,59 +750,170 @@ function buildTranscriptPrompt(meeting: Meeting): string {
     parts.push(`\n${speakerLabel}: ${cycle.speech.content}`);
   }
 
-  parts.push(
-    "\n\n---stub-response---\ntext: שחזור סשן — מוכן להמשיך.\n---end-stub-response---",
-  );
-
-  return parts.join("\n");
+  const prompt = await resolvePromptTemplate("_transcript-prompt.md", {
+    transcriptContent: parts.join("\n"),
+  });
+  return withStubResponse(prompt, "שחזור סשן — מוכן להמשיך.");
 }
 
-function buildAssessmentPrompt(lastSpeaker: SpeakerId, lastContent: string): string {
+const ASSESSMENT_START_DELIMITER = "---התחלת הערכה להמשך הדיון---";
+const ASSESSMENT_END_DELIMITER = "---סיום הערכה להמשך הדיון---";
+const RECOMMENDATION_START_DELIMITER = "---התחלת המלצה להמשך הדיון---";
+const RECOMMENDATION_END_DELIMITER = "---סיום המלצה להמשך הדיון---";
+
+/**
+ * Extract the assessment block from an agent's response.
+ * Returns the text between the delimiters, or null if not found.
+ */
+function extractAssessmentText(response: string): string | null {
+  const startIdx = response.indexOf(ASSESSMENT_START_DELIMITER);
+  const endIdx = response.indexOf(ASSESSMENT_END_DELIMITER);
+  if (startIdx === -1 || endIdx === -1 || endIdx <= startIdx) return null;
+  return response.slice(startIdx + ASSESSMENT_START_DELIMITER.length, endIdx).trim();
+}
+
+/**
+ * Extract the manager's recommendation block from response text.
+ * Returns { nextSpeakerRaw, vibe } or null with a reason string.
+ */
+function extractRecommendation(response: string): { nextSpeakerRaw: string; vibe: string } | { error: string } {
+  const startIdx = response.indexOf(RECOMMENDATION_START_DELIMITER);
+  const endIdx = response.indexOf(RECOMMENDATION_END_DELIMITER);
+  if (startIdx === -1 || endIdx === -1 || endIdx <= startIdx) {
+    return { error: "לא נמצא בלוק המלצה בין הסימנים המתאימים" };
+  }
+
+  const block = response.slice(startIdx + RECOMMENDATION_START_DELIMITER.length, endIdx).trim();
+  const lines = block.split("\n");
+
+  // Parse first line: "הדובר הבא: <name>"
+  const firstLine = lines[0]?.trim() ?? "";
+  const speakerMatch = firstLine.match(/הדובר.*?:\s*(.+)/);
+  if (!speakerMatch) {
+    return { error: `השורה הראשונה לא בפורמט הנכון (צפוי: "הדובר הבא: <שם>"): "${firstLine}"` };
+  }
+
+  const nextSpeakerRaw = speakerMatch[1].trim();
+  const vibe = lines.slice(1).join("\n").trim();
+
+  return { nextSpeakerRaw, vibe };
+}
+
+async function buildAssessmentPrompt(lastSpeaker: SpeakerId, lastContent: string, vibe?: string): Promise<string> {
   const speakerLabel = lastSpeaker === "human" ? "המנחה" : lastSpeaker;
-  return `הודעה חדשה מ-${speakerLabel}: ${lastContent}\n\nמה ההערכה שלך?\n\nהחזר JSON:\n{"selfImportance": <1-10>, "humanImportance": <1-10>, "summary": "<משפט אחד>"}\n\n---stub-response---\nselfImportance: 5\nhumanImportance: 3\nsummary: "הערכה ראשונית"\n---end-stub-response---`;
+  const ctx: Record<string, string> = {
+    speakerLabel,
+    lastContent,
+    assessmentStartDelimiter: ASSESSMENT_START_DELIMITER,
+    assessmentEndDelimiter: ASSESSMENT_END_DELIMITER,
+  };
+  if (vibe) ctx.vibe = vibe;
+  const prompt = await resolvePromptTemplate("_assessment-prompt.md", ctx);
+  return withStubResponse(prompt, `חשבתי על הנקודה הזו לעומק.\n\n---התחלת הערכה להמשך הדיון---\nאני: 5\nיש לי כמה הערות לגבי המילון.\n---סיום הערכה להמשך הדיון---`);
 }
 
-function buildSelectionPrompt(
+async function buildSpeechPrompt(vibe: string): Promise<string> {
+  const prompt = await resolvePromptTemplate("_speech-prompt.md", { vibe });
+  return withStubResponse(prompt, "תגובת הסוכן.");
+}
+
+async function buildSelectionPrompt(
   lastSpeaker: SpeakerId,
   lastContent: string,
   assessments: Record<string, PrivateAssessment>,
-): string {
+): Promise<string> {
   const speakerLabel = lastSpeaker === "human" ? "המנחה" : lastSpeaker;
-  const assessmentsJson = JSON.stringify(assessments, null, 2);
 
-  const attentionLine = attentionRequested
-    ? "\n\n** המנחה ביקש את רשות הדיבור. עליך לבחור \"Director\" כדובר הבא. **\n"
-    : "";
+  // Build per-agent delimited assessment blocks
+  const assessmentBlocks = Object.entries(assessments)
+    .map(([agentId, assessment]) => {
+      const agentDef = meetingParticipantDefs.find(a => a.id === agentId);
+      const agentLabel = agentDef?.hebrewName ?? agentId;
+      return `---התחלת הערכה של ${agentLabel} להמשך הדיון---\n${assessment.text}\n---סיום הערכה של ${agentLabel} להמשך הדיון---`;
+    })
+    .join("\n\n");
 
-  return `הודעה חדשה מ-${speakerLabel}: ${lastContent}\n\nהנה ההערכות:\n${assessmentsJson}${attentionLine}\n\nמי מדבר הבא? החזר JSON:\n{"nextSpeaker": "<name>", "vibe": "<משפט בעברית>"}\n\n---stub-response---\nnextSpeaker: "Milo"\nvibe: "הדיון זורם."\n---end-stub-response---`;
+  // Build the valid speaker names for the output format hint
+  const speakerOptions = [
+    ...meetingParticipantDefs.map(a => a.hebrewName),
+    "המנחה",
+  ].join("/");
+
+  // First stub agent's Hebrew name for the stub response
+  const firstAgentHebrew = meetingParticipantDefs[0]?.hebrewName ?? "מיילו";
+
+  const ctx: Record<string, string> = {
+    speakerLabel,
+    lastContent,
+    assessmentBlocks,
+    speakerOptions,
+    recommendationStartDelimiter: RECOMMENDATION_START_DELIMITER,
+    recommendationEndDelimiter: RECOMMENDATION_END_DELIMITER,
+  };
+  if (attentionRequested) ctx.attentionLine = "true";
+
+  const prompt = await resolvePromptTemplate("_selection-prompt.md", ctx);
+  return withStubResponse(prompt, `נראה שיש התלבטות בין כמה משתתפים.\n\n${RECOMMENDATION_START_DELIMITER}\nהדובר הבא: ${firstAgentHebrew}\nהדיון זורם — כל צד מוסיף שכבה.\n${RECOMMENDATION_END_DELIMITER}`);
+}
+
+/**
+ * Parse a manager response into a ManagerDecision, or return null.
+ * Extracts the recommendation block, resolves the speaker name, extracts the vibe.
+ */
+function parseManagerResponse(response: string): ManagerDecision | null {
+  const result = extractRecommendation(response);
+  if ("error" in result) return null;
+
+  const resolved = resolveNextSpeaker(result.nextSpeakerRaw);
+  if (!resolved) return null;
+
+  return { nextSpeaker: resolved, vibe: result.vibe || "הדיון ממשיך." };
+}
+
+async function buildSelectionRetryPrompt(reason: string): Promise<string> {
+  const speakerOptions = [
+    ...meetingParticipantDefs.map(a => a.hebrewName),
+    "המנחה",
+  ].join("/");
+
+  const prompt = await resolvePromptTemplate("_selection-retry-prompt.md", {
+    reason,
+    speakerOptions,
+    recommendationStartDelimiter: RECOMMENDATION_START_DELIMITER,
+    recommendationEndDelimiter: RECOMMENDATION_END_DELIMITER,
+  });
+  const fallbackName = meetingParticipantDefs[0]?.hebrewName ?? "המנחה";
+  return withStubResponse(prompt, `${RECOMMENDATION_START_DELIMITER}\nהדובר הבא: ${fallbackName}\nהדיון זורם.\n${RECOMMENDATION_END_DELIMITER}`);
 }
 
 function pickFallbackSpeaker(
   lastSpeaker: SpeakerId,
-  assessments: Record<string, PrivateAssessment>, // keyed by AgentId
 ): SpeakerId {
-  // Pick the agent with the highest selfImportance, excluding last speaker
-  let best: { id: AgentId; score: number } | null = null; // id is AgentId
-  for (const [id, assessment] of Object.entries(assessments) as unknown as [AgentId, PrivateAssessment][]) {
-    if (id === lastSpeaker) continue;
-    if (!best || assessment.selfImportance > best.score) {
-      best = { id, score: assessment.selfImportance };
-    }
-  }
-  return best?.id ?? "human";
+  // Fallback when manager fails: hand it to the Director
+  return "human";
 }
 
 /**
- * Resolve a nextSpeaker value (English name or "Director") to a SpeakerId.
+ * Resolve a nextSpeaker value to a SpeakerId.
+ * Permissive: accepts Hebrew name, English name, agent ID, "המנחה", "Director", "human".
+ * Returns null if no match found.
  */
-function resolveNextSpeaker(nextSpeaker: string): SpeakerId {
-  if (nextSpeaker === "Director" || nextSpeaker === "human") return "human";
+function resolveNextSpeaker(nextSpeaker: string): SpeakerId | null {
+  const normalized = nextSpeaker.trim();
 
-  // Look up by English name
-  const agent = meetingParticipantDefs.find(
-    a => a.englishName.toLowerCase() === nextSpeaker.toLowerCase(),
+  // Director variants
+  if (normalized === "המנחה" || normalized === "Director" || normalized === "director" || normalized === "human") {
+    return "human";
+  }
+
+  // Try matching against all agent properties (case-insensitive for English)
+  const agent = meetingParticipantDefs.find(a =>
+    a.id === normalized ||
+    a.hebrewName === normalized ||
+    a.englishName.toLowerCase() === normalized.toLowerCase()
   );
-  return agent?.id ?? "human";
+
+  return agent?.id ?? null;
 }
 
 /**

@@ -325,7 +325,7 @@ function handleSync(msg) {
       history.pushState(null, "", expectedPath);
     }
     showDeliberation();
-    renderMeetingState();
+    renderMeetingState(msg);
 
     // New meeting with no cycles and no opening prompt: enable input for first prompt
     if (!currentMeeting.openingPrompt && currentMeeting.cycles.length === 0 && !readOnly) {
@@ -493,7 +493,7 @@ function showDeliberation() {
 // ---- Render Meeting State from Sync -----------------------------------------
 
 /** Rebuilds the full deliberation UI from `currentMeeting` (called after sync). */
-function renderMeetingState() {
+function renderMeetingState(syncMsg) {
   if (!currentMeeting) return;
 
   // Initialize sub-views
@@ -530,6 +530,11 @@ function renderMeetingState() {
       cycle.speech.content,
       cycle.speech.timestamp
     );
+  }
+
+  // Render processes from an in-progress cycle (not yet persisted in meeting.yaml)
+  if (syncMsg?.pendingProcesses?.length > 0 && syncMsg.pendingCycleNumber) {
+    conversationView.renderPersistedProcesses(syncMsg.pendingProcesses, syncMsg.pendingCycleNumber);
   }
 
   // Handle edit-after-rollback

@@ -195,19 +195,17 @@ assertZodTypeMatch<ConversationMessage, typeof ConversationMessageSchema>(true);
 
 // ---------------------------------------------------------------------------
 // Private assessment (per participant-agent, per cycle)
+// Free-form text extracted from the agent's response between delimiters.
+// No algorithmic parsing — the manager LLM reads these directly.
 // ---------------------------------------------------------------------------
 
 export const PrivateAssessmentSchema = z.object({
   agent: AgentIdSchema,
-  selfImportance: z.number().int().min(1).max(10),
-  humanImportance: z.number().int().min(1).max(10),
-  summary: z.string(),
+  text: z.string(),
 });
 export type PrivateAssessment = {
   agent: AgentId;
-  selfImportance: number;
-  humanImportance: number;
-  summary: string;
+  text: string;
 };
 assertZodTypeMatch<PrivateAssessment, typeof PrivateAssessmentSchema>(true);
 
@@ -391,17 +389,13 @@ export const WsAssessmentSchema = z.object({
   type: z.literal("assessment"),
   messageId: MessageIdSchema,
   agent: AgentIdSchema,
-  selfImportance: z.number(),
-  humanImportance: z.number(),
-  summary: z.string(),
+  text: z.string(),
 });
 export type WsAssessment = {
   type: "assessment";
   messageId: MessageId;
   agent: AgentId;
-  selfImportance: number;
-  humanImportance: number;
-  summary: string;
+  text: string;
 };
 assertZodTypeMatch<WsAssessment, typeof WsAssessmentSchema>(true);
 
@@ -451,6 +445,8 @@ export const WsSyncSchema = z.object({
   readOnly: z.boolean().optional(),
   editingCycle: z.number().optional(),
   paused: z.boolean().optional(),
+  pendingProcesses: z.array(ProcessRecordSchema).optional(),
+  pendingCycleNumber: z.number().optional(),
 });
 export type WsSync = {
   type: "sync";
@@ -460,6 +456,8 @@ export type WsSync = {
   readOnly?: boolean;
   editingCycle?: number;
   paused?: boolean;
+  pendingProcesses?: ProcessRecord[];
+  pendingCycleNumber?: number;
 };
 assertZodTypeMatch<WsSync, typeof WsSyncSchema>(true);
 

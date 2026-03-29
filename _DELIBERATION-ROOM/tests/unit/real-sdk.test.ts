@@ -11,13 +11,13 @@ import { USE_STUB_SDK } from "../../src/config";
 
 describe("stripStubResponseBlocks", () => {
   test("passes through prompt with no stub blocks", () => {
-    const prompt = "הודעה חדשה מ-milo: test content\n\nמה ההערכה שלך?";
+    const prompt = "=== התחלת הודעה מ-milo ===\ntest content\n=== סוף הודעה מ-milo ===";
     expect(_stripStubResponseBlocks(prompt)).toBe(prompt);
   });
 
   test("strips a single stub response block", () => {
-    const prompt = `הודעה חדשה מ-milo: test\n\nמה ההערכה שלך?\n\n---stub-response---\nselfImportance: 5\nhumanImportance: 3\nsummary: "test"\n---end-stub-response---`;
-    const expected = `הודעה חדשה מ-milo: test\n\nמה ההערכה שלך?`;
+    const prompt = `some prompt text\n\n---stub-response---\ntext: "stub response"\n---end-stub-response---`;
+    const expected = `some prompt text`;
     expect(_stripStubResponseBlocks(prompt)).toBe(expected);
   });
 

@@ -61,14 +61,13 @@ export class ProcessLabel {
         const isFinal = content.length >= this._activeThinkingContent.length;
         const span = this._activeThinkingEl.querySelector(".thinking-text");
         if (isFinal) {
-          // Final complete thinking — persist it and stop accumulating
+          // Final complete thinking — update persisted event and stop accumulating
           if (span) {
             span.textContent = content;
           }
-          this.events.push({ eventKind, content, toolName, toolInput });
+          this._activeThinkingEvent.content = content;
           this._activeThinkingEl = null;
           this._activeThinkingContent = "";
-          this._updateBadge();
         } else {
           // Streaming chunk — just grow the display
           this._activeThinkingContent += content;
@@ -78,10 +77,14 @@ export class ProcessLabel {
         }
         return;
       }
-      // First thinking event — create the div but don't persist yet
+      // First thinking event — persist immediately to maintain order
+      const thinkingEvent = { eventKind, content, toolName, toolInput };
+      this.events.push(thinkingEvent);
+      this._activeThinkingEvent = thinkingEvent;
       this._activeThinkingContent = content;
+      this._updateBadge();
       if (this.expanded) {
-        this._appendEventEl({ eventKind, content, toolName, toolInput });
+        this._appendEventEl(thinkingEvent);
         // _appendEventEl sets this._activeThinkingEl
       }
       return;
@@ -161,10 +164,6 @@ export class ProcessLabel {
       expansion.innerHTML = "";
       for (const evt of this.events) {
         this._appendEventEl(evt);
-      }
-      // If there's an in-progress thinking stream, render it too
-      if (this._activeThinkingContent && !this._activeThinkingEl) {
-        this._appendEventEl({ eventKind: "thinking", content: this._activeThinkingContent });
       }
     } else {
       expansion.classList.add("hidden");

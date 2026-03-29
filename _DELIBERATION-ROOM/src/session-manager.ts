@@ -16,8 +16,8 @@ import { join, basename } from "path";
 import matter from "gray-matter";
 // @ts-ignore — no type declarations for preprocess
 import preprocessLib from "preprocess";
-import type { AgentDefinition, AgentId, PrivateAssessment, ManagerDecision, ProcessEventKind } from "./types";
-import { AgentDefinitionSchema, PrivateAssessmentSchema, ManagerDecisionSchema } from "./types";
+import type { AgentDefinition, AgentId, ProcessEventKind } from "./types";
+import { AgentDefinitionSchema } from "./types";
 import {
   PARTICIPANT_AGENTS_DIR,
   ROOT_CLAUDE_MD,
@@ -137,13 +137,11 @@ function toForEachContext(entries: string[]): string {
  *
  * - `frontmatter`: parsed YAML from the agent's .md file
  * - `filteredParticipants`: meeting participants with the current agent excluded (for loops)
- * - `allParticipants`: full meeting participant list (for speakerIds)
  * - `dictionary`: extracted dictionary text from ../CLAUDE.md
  */
 function buildPreprocessContext(
   frontmatter: Record<string, string>,
   filteredParticipants: AgentDefinition[],
-  allParticipants: AgentDefinition[],
   dictionary: string,
 ): Record<string, string> {
   // Agent-specific frontmatter values (used by @echo in agent persona files)
@@ -168,11 +166,6 @@ function buildPreprocessContext(
       `- **${p.englishName} / ${p.hebrewName}**: ${p.managerIntro}. *${p.managerTip}.*`
     )
   );
-
-  // speakerIds uses the *full* participant list (unfiltered)
-  const ids = allParticipants.map(a => `"${a.englishName}"`);
-  ids.push('"Director"');
-  ctx.speakerIds = ids.join(" | ");
 
   return ctx;
 }
@@ -212,7 +205,6 @@ export async function extractDictionary(): Promise<string> {
  *   <!-- @echo dictionary -->            — inject the full dictionary text
  *   <!-- @foreach $p in participantAgentEntries -->$p\n<!-- @endfor -->
  *   <!-- @foreach $p in participantManagerEntries -->$p\n<!-- @endfor -->
- *   <!-- @echo speakerIds -->            — JSON-union of valid nextSpeaker values
  *
  * Included files are processed recursively with the same context, so
  * _base-prefix.md and _agents-prefix.md can be included from agent persona files
@@ -236,11 +228,32 @@ export async function resolveTemplate(
   const context = buildPreprocessContext(
     frontmatter as Record<string, string>,
     filteredParticipants,
-    meetingParticipants,
     dictionary,
   );
 
   return preprocessLib.preprocess(content, context, {
+    type: "html",
+    srcDir: PARTICIPANT_AGENTS_DIR,
+  }).trim();
+}
+
+/**
+ * Resolve a prompt template file with arbitrary context variables.
+ *
+ * Unlike resolveTemplate() (which builds full system prompts with frontmatter,
+ * dictionary, and participant loops), this is a lightweight resolver for
+ * per-cycle prompts (assessment, speech, selection, etc.).
+ *
+ * Template files live in participant-agents/ and use the same preprocess
+ * directives: <!-- @echo varName -->, <!-- @ifdef varName -->...<!-- @endif -->.
+ */
+export async function resolvePromptTemplate(
+  filename: string,
+  context: Record<string, string>,
+): Promise<string> {
+  const filePath = join(PARTICIPANT_AGENTS_DIR, filename);
+  const raw = await readFile(filePath, "utf-8");
+  return preprocessLib.preprocess(raw, context, {
     type: "html",
     srcDir: PARTICIPANT_AGENTS_DIR,
   }).trim();
@@ -629,77 +642,6 @@ export async function interruptAll(): Promise<void> {
   });
   await Promise.all(promises);
   activeQueries.clear();
-}
-
-// ---------------------------------------------------------------------------
-// Response Parsing
-// ---------------------------------------------------------------------------
-
-/**
- * Extract a PrivateAssessment from an agent's response text.
- * The response should contain JSON with selfImportance, humanImportance, summary.
- * Uses zod safeParse for robust validation.
- */
-export function extractAssessment(
-  agentId: AgentId,
-  responseText: string,
-): PrivateAssessment | null {
-  try {
-    // Try to find JSON in the response (it might be wrapped in text)
-    const jsonMatch = responseText.match(/\{[\s\S]*}/);
-    if (!jsonMatch) {
-      logWarn("session-manager", `extractAssessment: no JSON found for ${agentId}`);
-      return null;
-    }
-
-    const parsed = JSON.parse(jsonMatch[0]);
-    const result = PrivateAssessmentSchema.safeParse({
-      agent: agentId,
-      selfImportance: parsed.selfImportance,
-      humanImportance: parsed.humanImportance,
-      summary: parsed.summary,
-    });
-
-    if (!result.success) {
-      logWarn("session-manager", `extractAssessment: zod validation failed for ${agentId}`, result.error.issues);
-    } else {
-      logInfo("session-manager", `extractAssessment: ${agentId} → self=${result.data.selfImportance}, human=${result.data.humanImportance}`);
-    }
-    return result.success ? result.data : null;
-  } catch (err) {
-    logWarn("session-manager", `extractAssessment: parse error for ${agentId}`, err);
-    return null;
-  }
-}
-
-/**
- * Extract a ManagerDecision from the manager's response text.
- * The response should contain JSON with nextSpeaker and vibe.
- */
-export function extractManagerDecision(responseText: string): ManagerDecision | null {
-  try {
-    const jsonMatch = responseText.match(/\{[\s\S]*}/);
-    if (!jsonMatch) {
-      logWarn("session-manager", `extractManagerDecision: no JSON found`);
-      return null;
-    }
-
-    const parsed = JSON.parse(jsonMatch[0]);
-    const result = ManagerDecisionSchema.safeParse({
-      nextSpeaker: parsed.nextSpeaker,
-      vibe: parsed.vibe,
-    });
-
-    if (!result.success) {
-      logWarn("session-manager", `extractManagerDecision: zod validation failed`, result.error.issues);
-    } else {
-      logInfo("session-manager", `extractManagerDecision: nextSpeaker="${result.data.nextSpeaker}"`);
-    }
-    return result.success ? result.data : null;
-  } catch (err) {
-    logWarn("session-manager", `extractManagerDecision: parse error`, err);
-    return null;
-  }
 }
 
 // ---------------------------------------------------------------------------

@@ -31,7 +31,7 @@ The UI is designed for the Director reading Hebrew text, thinking carefully, and
 
 **Director input** (sticky bottom): A textarea. Always visible. Highlighted during the Director's turn. Dimmed but accepts `/end` at other times.
 
-**Participant-Agent panel** (right side, collapsible): Tabs — one per Participant-Agent. Shows assessments, tool activity. Collapsed by default. Opens automatically when a Participant-Agent is speaking. Shows **importance badges** (green/yellow/red) reflecting `selfImportance` scores.
+**Participant-Agent panel** (right side, collapsible): Tabs — one per Participant-Agent. Shows assessments, tool activity. Collapsed by default. Opens automatically when a Participant-Agent is speaking.
 
 ## RTL Design
 

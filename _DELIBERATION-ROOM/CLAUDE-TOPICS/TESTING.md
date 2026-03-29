@@ -27,6 +27,16 @@ Test each module in isolation. Use the stub SDK (see below) to avoid API calls i
 5. **`orchestrator.ts`**: Full cycle with stub SDK — assessment → selection → speech. Attention flag mechanics. Phase transitions. Graceful shutdown. Director timeout handling.
 6. **`server.ts`**: WebSocket message routing. HTTP endpoint responses. Reconnection/sync behavior.
 
+### Minimizing Git Overhead in Tests
+
+Git worktree creation (`createMeetingWorktree`) takes ~1.5s per call. Tests in `orchestrator.test.ts` and `meetings-db.test.ts` are the heaviest consumers. To keep the suite fast:
+
+- **Share worktrees across tests** using `beforeAll`/`afterAll` wherever possible. Group tests that can operate on the same meeting into a single `describe` block with a shared worktree.
+- **Batch cleanup**: track all meeting IDs and clean up in a single `afterAll` rather than per-test `afterEach`.
+- **Merge related assertions**: if two tests would both need to create a meeting + run cycles + test one thing, merge them into a single test that checks both things.
+- **Avoid `mock.module()`** for `meetings-db` — Bun leaks module mocks across test files in the same process, breaking unrelated tests (e.g., `server.test.ts`).
+- **Pure-logic tests** (e.g., `generateMeetingId`, `detectPerushChanges`) don't need worktrees — keep them in separate `describe` blocks.
+
 **Test patterns**:
 ```typescript
 import { describe, test, expect, beforeEach, afterEach } from "bun:test";
@@ -62,13 +72,18 @@ Located in `tests/e2e/`. Use `mock-ws-server.ts` to replay canned WebSocket even
 1. The stub implements the same `query()` interface as the real Agent SDK — returning an async iterable of messages with the same type signatures (`system/init`, `assistant`, `result`, etc.).
 2. When calling `query()`, the prompt includes a YAML block that specifies the expected response:
    ```
-   הודעה חדשה מ-milo: ...content...
-   מה ההערכה שלך?
+   === התחלת הודעה מ-milo ===
+   ...content...
+   === סוף הודעה מ-milo ===
+
+   # שלב ראשון: העמקה
+   ...
+
+   # שלב שני: הערכה להמשך הדיון
+   ...
 
    ---stub-response---
-   selfImportance: 7
-   humanImportance: 4
-   summary: "יש כאן בעיה מילונית חמורה עם המילה 'נחש'"
+   text: "חשבתי על הנקודה הזו.\n\n---התחלת הערכה להמשך הדיון---\nאני: 7\nיש כאן בעיה מילונית.\n---סיום הערכה להמשך הדיון---"
    ---end-stub-response---
    ```
 3. The stub parses the YAML between the markers and returns it as if the AI-Agent had produced that response — with proper message type wrapping, session ID generation, and optional streaming simulation.
@@ -84,7 +99,7 @@ import { createStubSDK } from "../../src/stub-sdk";
 
 const sdk = createStubSDK();
 const query = sdk.query({
-  prompt: `...actual prompt...\n\n---stub-response---\nselfImportance: 8\nhumanImportance: 3\nsummary: "test"\n---end-stub-response---`,
+  prompt: `...actual prompt...\n\n---stub-response---\ntext: "אני: 8\ntest"\n---end-stub-response---`,
   options: { model: "claude-opus-4-6" }
 });
 

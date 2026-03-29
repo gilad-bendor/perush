@@ -28,9 +28,7 @@ When data is attached (the optional `data` parameter), it is rendered as YAML on
 
 ```
 00003842 [INFO]  [orchestrator] [C5] Assessment done for milo
-    selfImportance: 7
-    humanImportance: 5
-    summary: "..."
+    text: "אני: 7\nיש כאן בעיה מילונית..."
 ```
 
 ## Helper Scripts

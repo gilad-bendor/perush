@@ -79,15 +79,13 @@ Available directives (HTML-comment syntax):
 | `<!-- @echo HebrewName -->` | Agent's own Hebrew name (from frontmatter) |
 | `<!-- @foreach $p in participantAgentEntries -->$p`<br>`<!-- @endfor -->` | Loop over fellow participants — each `$p` is a formatted bullet: `- **Name / שם**: intro` |
 | `<!-- @foreach $p in participantManagerEntries -->$p`<br>`<!-- @endfor -->` | Same loop with extended format: `- **Name / שם**: intro. *tip.*` |
-| `<!-- @echo speakerIds -->` | JSON-union of valid `nextSpeaker` values, e.g., `"Milo" \| "Archi" \| … \| "Director"` |
-
 **Important — `@foreach` encoding**: preprocess's `@foreach` splits context values by comma if they look like plain text, which breaks descriptions that contain commas. The context values for participant loops are encoded as a JSON *object* keyed by index (`{"0":"entry0","1":"entry1"}`). This triggers `JSON.parse` in preprocess's foreach handler, which handles commas inside values correctly. See `toForEachContext()` in `session-manager.ts`.
 
 **Example flow** for `milo.md`:
 ```
 1. resolveTemplate("milo.md", meetingParticipants, "milo")
 2. Read file → gray-matter strips frontmatter
-3. buildPreprocessContext(): builds context with dictionary, participant loops, speakerIds
+3. buildPreprocessContext(): builds context with dictionary, participant loops
 4. preprocessLib.preprocess(content, context, {type:"html", srcDir:PARTICIPANT_AGENTS_DIR})
    ↳ resolves <!-- @include _base-prefix.md --> → inlines base with <!-- @echo dictionary -->
    ↳ resolves <!-- @include _agents-prefix.md --> → expands @foreach with milo excluded
@@ -101,7 +99,6 @@ Available directives (HTML-comment syntax):
 2. Same single-pass preprocess call
    ↳ resolves <!-- @include _base-prefix.md -->
    ↳ expands <!-- @foreach $p in participantManagerEntries -->
-   ↳ substitutes <!-- @echo speakerIds -->
 3. Returns fully resolved system prompt
 ```
 
@@ -120,7 +117,7 @@ Available directives (HTML-comment syntax):
 **Manager prompt structure** (declared in `_conversation-manager.md`):
 ```
 <!-- @include _base-prefix.md -->      ← common instructions + dictionary
-# Your Unique Identity: ...            ← manager-specific content with @foreach and @echo speakerIds
+# Your Unique Identity: ...            ← manager-specific content with @foreach
 ```
 
 ## Design Principles
@@ -141,6 +138,6 @@ No hard length constraint. The guidance is conversational: deliver your point we
 ### The Conversation-Manager-Agent
 
 - It does NOT analyze biblical text or participate in the conversation.
-- It receives private assessments each cycle → outputs a Participant selection + vibe comment.
-- It runs as a **persistent Sonnet session** (not Opus) — no tools needed, structured JSON output.
-- Its heuristics prioritize: productive disagreement, balance across Participants, Director heartbeat (don't let 3+ Participant-Agent turns pass without Director input).
+- It receives free-text private assessments each cycle → outputs a next-speaker recommendation + public vibe text.
+- It runs as a **persistent Sonnet session** (not Opus) — no tools needed, Hebrew narrative output with delimiter-based parsing.
+- Its guidelines prioritize: productive disagreement, balance across Participants, Director heartbeat (don't let 3+ Participant-Agent turns pass without Director input).

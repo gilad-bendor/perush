@@ -177,13 +177,13 @@ describe("stubQuery — basic", () => {
 });
 
 // ---------------------------------------------------------------------------
-// stubQuery — JSON response (for assessments)
+// stubQuery — JSON response (non-text key)
 // ---------------------------------------------------------------------------
 
 describe("stubQuery — JSON response", () => {
   test("returns JSON-stringified data when no text key", async () => {
     const q = stubQuery({
-      prompt: `test\n---stub-response---\nselfImportance: 7\nhumanImportance: 4\nsummary: "test summary"\n---end-stub-response---`,
+      prompt: `test\n---stub-response---\nnextSpeaker: "Milo"\nvibe: "הדיון זורם."\n---end-stub-response---`,
       options: { title: "test" },
     });
 
@@ -194,9 +194,8 @@ describe("stubQuery — JSON response", () => {
 
     const result = messages.find(m => m.type === "result") as StubSDKResultSuccess;
     const parsed = JSON.parse(result.result);
-    expect(parsed.selfImportance).toBe(7);
-    expect(parsed.humanImportance).toBe(4);
-    expect(parsed.summary).toBe("test summary");
+    expect(parsed.nextSpeaker).toBe("Milo");
+    expect(parsed.vibe).toBe("הדיון זורם.");
   });
 });
 

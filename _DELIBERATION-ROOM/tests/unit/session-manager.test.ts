@@ -20,8 +20,6 @@ import {
   streamSpeech,
   interruptSpeech,
   interruptAll,
-  extractAssessment,
-  extractManagerDecision,
   getSessionId,
   getAllSessionIds,
   clearSessions,
@@ -176,25 +174,29 @@ describe("resolveTemplate", () => {
     expect(resolved).toContain("Dictionary Purist");
   });
 
-  test("resolves ${speakerIds} in _conversation-manager.md", async () => {
+  test("resolves participantManagerEntries in _conversation-manager.md", async () => {
     const resolved = await resolveTemplate(CONVERSATION_MANAGER_FILE, allAgents);
 
-    expect(resolved).toContain('"Milo"');
-    expect(resolved).toContain('"Archi"');
-    expect(resolved).toContain('"Director"');
-    // Should not contain the raw marker
-    expect(resolved).not.toContain("${speakerIds}");
+    // Each agent should appear with manager-specific format
+    expect(resolved).toContain("Milo / מיילו");
+    expect(resolved).toContain("Archi / ארצ'י");
+    // Director line is hardcoded in the template
+    expect(resolved).toContain("Director / המנחה");
+    // Raw template marker should be gone
+    expect(resolved).not.toContain("@foreach");
   });
 
-  test("${speakerIds} is scoped to meeting participants", async () => {
+  test("participantManagerEntries is scoped to meeting participants", async () => {
     const subset = allAgents.filter(a => a.id === "milo" || a.id === "kashia");
     const resolved = await resolveTemplate(CONVERSATION_MANAGER_FILE, subset);
 
-    expect(resolved).toContain('"Milo"');
-    expect(resolved).toContain('"Kashia"');
-    expect(resolved).toContain('"Director"');
-    expect(resolved).not.toContain('"Archi"');
-    expect(resolved).not.toContain('"Barak"');
+    expect(resolved).toContain("Milo / מיילו");
+    expect(resolved).toContain("Kashia / קשיא");
+    // Director is always present (hardcoded in template)
+    expect(resolved).toContain("Director / המנחה");
+    // Agents not in the meeting should NOT appear
+    expect(resolved).not.toContain("Archi / ארצ'י");
+    expect(resolved).not.toContain("Barak / ברק");
   });
 
   test("excludes the agent itself when excludeAgentId is set", async () => {
@@ -265,17 +267,18 @@ describe("buildSystemPrompt", () => {
     expect(prompt).toContain("אור");
     // Manager content
     expect(prompt).toContain("Conversation-Manager");
-    expect(prompt).toContain("nextSpeaker");
+    expect(prompt).toContain("which Participant should speak next");
     // Should NOT have agents prefix
     expect(prompt).not.toContain("Fellow Participants");
   });
 
-  test("manager prompt has resolved speakerIds", async () => {
+  test("manager prompt has resolved participant names", async () => {
     const prompt = await buildSystemPrompt("manager", allAgents);
 
-    expect(prompt).toContain('"Milo"');
-    expect(prompt).toContain('"Director"');
-    expect(prompt).not.toContain("${speakerIds}");
+    expect(prompt).toContain("Milo / מיילו");
+    expect(prompt).toContain("Director / המנחה");
+    // Template markers should be resolved
+    expect(prompt).not.toContain("@foreach");
   });
 });
 
@@ -435,88 +438,6 @@ describe("interruptAll", () => {
 // ---------------------------------------------------------------------------
 // Response Parsing
 // ---------------------------------------------------------------------------
-
-describe("extractAssessment", () => {
-  test("parses valid JSON assessment", () => {
-    const response = JSON.stringify({
-      selfImportance: 7,
-      humanImportance: 4,
-      summary: "יש כאן בעיה מילונית חמורה",
-    });
-
-    const assessment = extractAssessment("milo", response);
-    expect(assessment).not.toBeNull();
-    expect(assessment!.agent).toBe("milo");
-    expect(assessment!.selfImportance).toBe(7);
-    expect(assessment!.humanImportance).toBe(4);
-    expect(assessment!.summary).toBe("יש כאן בעיה מילונית חמורה");
-  });
-
-  test("handles JSON wrapped in text", () => {
-    const response = `Here is my assessment:\n${JSON.stringify({
-      selfImportance: 5,
-      humanImportance: 8,
-      summary: "test",
-    })}\nThat's my take.`;
-
-    const assessment = extractAssessment("archi", response);
-    expect(assessment).not.toBeNull();
-    expect(assessment!.agent).toBe("archi");
-    expect(assessment!.selfImportance).toBe(5);
-  });
-
-  test("returns null for invalid JSON", () => {
-    expect(extractAssessment("milo", "not json at all")).toBeNull();
-  });
-
-  test("returns null for missing required fields", () => {
-    const response = JSON.stringify({ selfImportance: 7 }); // missing humanImportance, summary
-    expect(extractAssessment("milo", response)).toBeNull();
-  });
-
-  test("returns null for out-of-range values", () => {
-    const response = JSON.stringify({
-      selfImportance: 15, // out of 1-10 range
-      humanImportance: 4,
-      summary: "test",
-    });
-    expect(extractAssessment("milo", response)).toBeNull();
-  });
-});
-
-describe("extractManagerDecision", () => {
-  test("parses valid JSON decision", () => {
-    const response = JSON.stringify({
-      nextSpeaker: "Milo",
-      vibe: "הדיון זורם — כל צד מוסיף שכבה.",
-    });
-
-    const decision = extractManagerDecision(response);
-    expect(decision).not.toBeNull();
-    expect(decision!.nextSpeaker).toBe("Milo");
-    expect(decision!.vibe).toBe("הדיון זורם — כל צד מוסיף שכבה.");
-  });
-
-  test("handles JSON wrapped in text", () => {
-    const response = `My decision:\n${JSON.stringify({
-      nextSpeaker: "Director",
-      vibe: "ממתינים להכרעתך.",
-    })}`;
-
-    const decision = extractManagerDecision(response);
-    expect(decision).not.toBeNull();
-    expect(decision!.nextSpeaker).toBe("Director");
-  });
-
-  test("returns null for invalid JSON", () => {
-    expect(extractManagerDecision("not json")).toBeNull();
-  });
-
-  test("returns null for missing fields", () => {
-    const response = JSON.stringify({ nextSpeaker: "Milo" }); // missing vibe
-    expect(extractManagerDecision(response)).toBeNull();
-  });
-});
 
 // ---------------------------------------------------------------------------
 // Session Management Utilities
