@@ -1,6 +1,6 @@
 # The Deliberation Room
 
-A multi-agent deliberation system where a configurable set of Participant-Agents and a Director (human scholar) participate in live, turn-managed analysis of biblical commentary, orchestrated by a Conversation-Manager-Agent. Running as a **web server** with the deliberation UI rendered in the browser.
+A multi-agent deliberation system where a configurable set of Participant-Agents and a Director (human scholar) participate in live, turn-managed analysis of biblical commentary, orchestrated by a Orchestrator-Agent. Running as a **web server** with the deliberation UI rendered in the browser.
 
 ## The Bigger Picture
 
@@ -17,12 +17,12 @@ For everything else — architecture, implementation, infrastructure — this fi
 | Term                           | Who                             | Definition                                                                                                                           |
 |--------------------------------|---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | **Participant-Agent**          | milo, archi, kashia, barak, ... | AI critic agents who participate in the deliberation. Discovered dynamically from `participant-agents/*.md` (ignoring `_*.md` files) |
-| **Conversation-Manager-Agent** | manager                         | Orchestrates turn-taking and reads the room. Mostly invisible to Participants - except for the "room vibe" summary                   |
+| **Orchestrator-Agent** | orchestrator                    | Orchestrates turn-taking and reads the room. Mostly invisible to Participants - except for the "room vibe" summary                   |
 | **Director**                   | the human scholar               | Steers the conversation, makes final decisions                                                                                       |
-| **Participant**                | Participant-Agents + Director   | Everyone who speaks (Manager is NOT a Participant)                                                                                   |
-| **AI-Agent**                   | Participant-Agents + Manager    | All AI agents in the system (Participant + Conversation-Manager-Agent)                                                               |
+| **Participant**                | Participant-Agents + Director   | Everyone who speaks (Orchestrator is NOT a Participant)                                                                               |
+| **AI-Agent**                   | Participant-Agents + Orchestrator | All AI agents in the system (Participant + Orchestrator-Agent)                                                               |
 
-**In TypeScript**: `AgentId = string` (from filenames, e.g., `"milo"`). `SpeakerId = AgentId | "human"`. Manager is `"manager"`.
+**In TypeScript**: `AgentId = string` (from filenames, e.g., `"milo"`). `SpeakerId = AgentId | "human"`. Orchestrator is `"orchestrator"`.
 
 ## Architecture
 
@@ -56,7 +56,7 @@ For everything else — architecture, implementation, infrastructure — this fi
 
 **Conversation Store**: Git branches as the database. Each meeting on an orphan branch (`sessions/<meeting-id>`). No meeting data on `main` — ever. See [CLAUDE-TOPICS/GIT-PERSISTENCE.md](CLAUDE-TOPICS/GIT-PERSISTENCE.md).
 
-**Session Manager**: Persistent Agent SDK sessions — one per AI-Agent. Participant-Agents use **Opus** with tools; Manager uses **Sonnet** without tools. Sessions accumulate context across the meeting. See [CLAUDE-TOPICS/PERSONAS.md](CLAUDE-TOPICS/PERSONAS.md) for template system.
+**Session Manager**: Persistent Agent SDK sessions — one per AI-Agent. Participant-Agents use **Opus** with tools; Orchestrator uses **Sonnet** without tools. Sessions accumulate context across the meeting. See [CLAUDE-TOPICS/PERSONAS.md](CLAUDE-TOPICS/PERSONAS.md) for template system.
 
 ### Per-Cycle Flow
 
@@ -68,7 +68,7 @@ For everything else — architecture, implementation, infrastructure — this fi
    → Two-phase: deep thinking (private, with tools), then free-text assessment for turn management
          │
          ▼
-3. SELECTION — Feed speech + assessments to Manager's session
+3. SELECTION — Feed speech + assessments to Orchestrator's session
    → Returns: { nextSpeaker, vibe }
          │
          ▼
@@ -84,7 +84,7 @@ Every SDK interaction in steps 2-4 emits process events (prompt, thinking, text,
 - **Persisted** in `meeting.yaml` as `ProcessRecord[]` per cycle, so full traces survive reconnect/reload
 - **Rendered** in the conversation timeline as expandable colored labels (one per agent per interaction)
 
-**Privacy invariant**: Participant-Agents see only the public conversation. They do NOT see each other's assessments or the Manager's reasoning. However, the **Director (human)** sees everything via the UI's expandable process labels.
+**Privacy invariant**: Participant-Agents see only the public conversation. They do NOT see each other's assessments or the Orchestrator's reasoning. However, the **Director (human)** sees everything via the UI's expandable process labels.
 
 ### Session Setup
 
@@ -93,7 +93,7 @@ Each AI-Agent runs as a persistent Agent SDK session with `resume: sessionId`. O
 | Session | Model | Tools | System Prompt |
 |---------|-------|-------|---------------|
 | Participant-Agents | Opus | `["Read", "Bash", "Grep", "Glob"]` | `_base-prefix.md` + dictionary + `_agents-prefix.md` + resolved persona |
-| Manager | Sonnet | `[]` | `_base-prefix.md` + dictionary + resolved `_conversation-manager.md` |
+| Orchestrator | Sonnet | `[]` | `_base-prefix.md` + dictionary + resolved `_orchestrator.md` |
 
 ### Session Recovery
 
@@ -113,8 +113,8 @@ interface AgentDefinition {
   englishName: string;
   hebrewName: string;
   roleTitle: string;          // Hebrew, from first # heading (e.g., "המילונאי")
-  managerIntro: string;
-  managerTip: string;
+  orchestratorIntro: string;
+  orchestratorTip: string;
   filePath: string;
 }
 
@@ -140,8 +140,8 @@ interface ProcessEventRecord {
 
 interface ProcessRecord {
   processId: string;
-  processKind: "assessment" | "manager-selection" | "agent-speech";
-  agent: AgentId | "manager";
+  processKind: "assessment" | "orchestrator-selection" | "agent-speech";
+  agent: AgentId | "orchestrator";
   events: ProcessEventRecord[];
 }
 
@@ -149,7 +149,7 @@ interface CycleRecord {
   cycleNumber: number;
   speech: ConversationMessage;
   assessments: Record<AgentId, PrivateAssessment>;
-  managerDecision: { nextSpeaker: SpeakerId; vibe: string };
+  orchestratorDecision: { nextSpeaker: SpeakerId; vibe: string };
   processes?: ProcessRecord[];  // full SDK interaction traces (prompts, thinking, tools, output)
 }
 
@@ -162,7 +162,7 @@ interface Meeting {
   cycles: CycleRecord[];
   startedAt: FormattedTime;
   lastEngagedAt?: FormattedTime;
-  sessionIds: Record<AgentId | "manager", string>;
+  sessionIds: Record<AgentId | "orchestrator", string>;
   totalCostEstimate?: number;
 }
 ```
@@ -203,7 +203,7 @@ _DELIBERATION-ROOM/
 ├── participant-agents/            ← AI-Agent persona files
 │   ├── _base-prefix.md            ← shared prefix for ALL AI-Agents
 │   ├── _agents-prefix.md          ← Participant-Agent prefix (introduces fellow Participants)
-│   ├── _conversation-manager.md   ← Manager orchestration logic
+│   ├── _orchestrator.md           ← Manager orchestration logic
 │   ├── milo.md                    ← Dictionary Purist
 │   ├── archi.md                   ← Architect
 │   ├── kashia.md                  ← Skeptic
@@ -287,7 +287,7 @@ open http://localhost:4100
 
 **All configurable values live in `src/config.ts`** — the single source of truth. Categories: network, models, cost caps, paths, git templates, timing, UI, assessment, SDK environment, stub mode. **No magic numbers in other files.**
 
-Key env-overridable values: `PARTICIPANT_MODEL`, `MANAGER_MODEL`, `SERVER_PORT`, `LOG_PATH`.
+Key env-overridable values: `PARTICIPANT_MODEL`, `ORCHESTRATOR_MODEL`, `SERVER_PORT`, `LOG_PATH`.
 
 ### Log File
 
@@ -343,7 +343,7 @@ server.ts          ← types.ts, config.ts, context.ts, orchestrator.ts, session
 ### Error Handling
 
 - **Session failure**: Apply session recovery (new session, feed transcript, capture, update `meeting.yaml`). If recovery fails too, notify the Director.
-- **Assessment failure**: Proceed with remaining assessments. Manager can select with partial data.
+- **Assessment failure**: Proceed with remaining assessments. Orchestrator can select with partial data.
 - **Browser disconnect/navigate away**: Orchestrator waits (up to 10 min). Sessions continue regardless of browser state. The Director can navigate to the landing page and back without affecting the active meeting. Resuming an already-active meeting is a no-op (returns the active meeting without restarting sessions or the loop).
 - **Server restart**: Sessions are lost. Meeting resumes from last `meeting.yaml` state via session recovery.
 - **Worktree conflicts**: `git worktree remove --force` first, then retry.

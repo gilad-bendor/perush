@@ -43,7 +43,7 @@ export class ConversationView {
     /** @type {boolean} True if user has scrolled up from the bottom */
     this.userScrolled = false;
 
-    /** @type {(id: import('../../src/types.ts').AgentId | "manager") => string} Resolves agent ID to Hebrew display name */
+    /** @type {(id: import('../../src/types.ts').AgentId | "orchestrator") => string} Resolves agent ID to Hebrew display name */
     this.agentDisplayName = options.agentDisplayName || ((id) => id);
 
     /** @type {Map<string, ProcessLabel>} processId → ProcessLabel */
@@ -216,7 +216,7 @@ export class ConversationView {
    * Start tracking a new process (live mode).
    * @param {string} processId
    * @param {import('../../src/types.ts').ProcessKind} processKind
-   * @param {import('../../src/types.ts').AgentId | "manager"} agent
+   * @param {import('../../src/types.ts').AgentId | "orchestrator"} agent
    * @param {number} cycleNumber
    */
   startProcess(processId, processKind, agent, cycleNumber) {
@@ -233,7 +233,7 @@ export class ConversationView {
       }
       this.assessmentGroups.get(cycleNumber).addLabel(label);
     } else {
-      // Manager selection or agent speech — standalone in the timeline
+      // Orchestrator selection or agent speech — standalone in the timeline
       const wrapper = document.createElement("div");
       wrapper.className = "process-wrapper";
       wrapper.appendChild(label.el);

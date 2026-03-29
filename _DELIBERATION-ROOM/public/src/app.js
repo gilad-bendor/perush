@@ -344,7 +344,7 @@ function handlePhase(msg) {
 }
 
 /**
- * Displays the manager's vibe comment and next-speaker indicator.
+ * Displays the orchestrator's vibe comment and next-speaker indicator.
  * @param {WsVibe} msg
  */
 function handleVibe(msg) {
@@ -504,7 +504,7 @@ function renderMeetingState(syncMsg) {
     readOnly,
     onRollback: readOnly ? null : handleRollbackRequest,
     agentDisplayName: (id) => {
-      if (id === "manager") return "מנהל";
+      if (id === "orchestrator") return "מנהל";
       return speakerDisplayName(id);
     },
   });
@@ -520,7 +520,7 @@ function renderMeetingState(syncMsg) {
 
   // Render all existing cycles with their process records
   for (const cycle of currentMeeting.cycles) {
-    // Render persisted process labels (assessments, manager, speech)
+    // Render persisted process labels (assessments, orchestrator, speech)
     if (cycle.processes && cycle.processes.length > 0) {
       conversationView.renderPersistedProcesses(cycle.processes, cycle.cycleNumber);
     }
@@ -545,7 +545,7 @@ function renderMeetingState(syncMsg) {
   // Update vibe from last cycle
   if (currentMeeting.cycles.length > 0) {
     const lastCycle = currentMeeting.cycles[currentMeeting.cycles.length - 1];
-    $vibeText.textContent = lastCycle.managerDecision.vibe;
+    $vibeText.textContent = lastCycle.orchestratorDecision.vibe;
   }
 
   // Show cost estimate if available

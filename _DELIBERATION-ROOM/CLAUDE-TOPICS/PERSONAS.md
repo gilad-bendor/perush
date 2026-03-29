@@ -14,13 +14,13 @@ All AI-Agent personas live in `participant-agents/`:
 | `archi.md` | **Archi / ארצ'י** | Participant-Agent | Architect (האדריכל) — structural coherence across the narrative |
 | `kashia.md` | **Kashia / קשיא** | Participant-Agent | Skeptic (המבקר) — intellectual honesty, degrees of freedom, reverse-engineering test |
 | `barak.md` | **Barak / ברק** | Participant-Agent | Ideator (ההברקה) — divergent insight, rare speaker by design |
-| `_conversation-manager.md` | — | Conversation-Manager-Agent | The orchestration logic (not a Participant) |
+| `_orchestrator.md` | — | Orchestrator-Agent | The orchestration logic (not a Participant) |
 
 **Naming convention**:
 - Files with an `_` prefix are special (shared prefix, orchestration logic). They are NOT direct agent files — they serve as includes or shared content.
 - Files without `_` are agent files that undergo template processing and have YAML frontmatter.
 - Each Participant-Agent has an **English name** and a **Hebrew name** (phonetically similar).
-- The Conversation-Manager-Agent has no public name — it "lives in the shadows."
+- The Orchestrator-Agent has no public name — it "lives in the shadows."
 - The Director is known as **"The Director"** / **"המנחה"**.
 
 ## Frontmatter
@@ -31,16 +31,16 @@ Each non-underscore agent file has YAML frontmatter:
 ---
 englishName: Milo
 hebrewName: מיילו
-managerIntro: "The Dictionary Purist. Audits word-level dictionary fidelity — catches untranslated words, loose synonyms, and narrative drift. Direct, factual, tends to speak frequently with short, pointed observations"
-managerTip: "Bring in when specific words need dictionary checking, when the discussion is drifting from the text, or when dictionary evidence could settle a dispute"
+orchestratorIntro: "The Dictionary Purist. Audits word-level dictionary fidelity — catches untranslated words, loose synonyms, and narrative drift. Direct, factual, tends to speak frequently with short, pointed observations"
+orchestratorTip: "Bring in when specific words need dictionary checking, when the discussion is drifting from the text, or when dictionary evidence could settle a dispute"
 ---
 ```
 
 Fields:
 - **`englishName`** / **`hebrewName`**: Display names, used for speaker labels, UI, and template resolution.
-- **`managerIntro`**: One-sentence profile for the Conversation Manager. Written from the manager's perspective.
-- **`managerTip`**: Guidance for the manager on when this agent is most valuable.
-- **`role`** (optional): Special role identifier. Currently only `_conversation-manager.md` uses `role: conversation-manager`.
+- **`orchestratorIntro`**: One-sentence profile for the Orchestrator. Written from the orchestrator's perspective.
+- **`orchestratorTip`**: Guidance for the orchestrator on when this agent is most valuable.
+- **`role`** (optional): Special role identifier. Currently only `_orchestrator.md` uses `role: orchestrator`.
 
 ## Agent Discovery
 
@@ -48,7 +48,7 @@ Participant-Agents are **discovered dynamically** from `participant-agents/` —
 
 At server start, the session manager scans `participant-agents/` for all non-underscore `.md` files:
 
-1. Parse the YAML frontmatter to extract `englishName`, `hebrewName`, `managerIntro`, `managerTip`.
+1. Parse the YAML frontmatter to extract `englishName`, `hebrewName`, `orchestratorIntro`, `orchestratorTip`.
 2. Extract the `roleTitle` by finding the first `# ` heading and pulling the parenthesized Hebrew text — e.g., from `# The Dictionary Purist (המילונאי)` extract `המילונאי`.
 3. Derive the `id` from the filename without `.md` (e.g., `milo.md` → `"milo"`).
 4. Build an `AgentDefinition` object and cache it.
@@ -78,7 +78,7 @@ Available directives (HTML-comment syntax):
 | `<!-- @echo EnglishName -->` | Agent's own English name (from frontmatter) |
 | `<!-- @echo HebrewName -->` | Agent's own Hebrew name (from frontmatter) |
 | `<!-- @foreach $p in participantAgentEntries -->$p`<br>`<!-- @endfor -->` | Loop over fellow participants — each `$p` is a formatted bullet: `- **Name / שם**: intro` |
-| `<!-- @foreach $p in participantManagerEntries -->$p`<br>`<!-- @endfor -->` | Same loop with extended format: `- **Name / שם**: intro. *tip.*` |
+| `<!-- @foreach $p in participantOrchestratorEntries -->$p`<br>`<!-- @endfor -->` | Same loop with extended format: `- **Name / שם**: intro. *tip.*` |
 **Important — `@foreach` encoding**: preprocess's `@foreach` splits context values by comma if they look like plain text, which breaks descriptions that contain commas. The context values for participant loops are encoded as a JSON *object* keyed by index (`{"0":"entry0","1":"entry1"}`). This triggers `JSON.parse` in preprocess's foreach handler, which handles commas inside values correctly. See `toForEachContext()` in `session-manager.ts`.
 
 **Example flow** for `milo.md`:
@@ -93,12 +93,12 @@ Available directives (HTML-comment syntax):
 5. Returns fully resolved system prompt
 ```
 
-**Example flow** for `_conversation-manager.md`:
+**Example flow** for `_orchestrator.md`:
 ```
-1. resolveTemplate("_conversation-manager.md", meetingParticipants)
+1. resolveTemplate("_orchestrator.md", meetingParticipants)
 2. Same single-pass preprocess call
    ↳ resolves <!-- @include _base-prefix.md -->
-   ↳ expands <!-- @foreach $p in participantManagerEntries -->
+   ↳ expands <!-- @foreach $p in participantOrchestratorEntries -->
 3. Returns fully resolved system prompt
 ```
 
@@ -114,10 +114,10 @@ Available directives (HTML-comment syntax):
 # Your Unique Identity: ...            ← persona-specific content
 ```
 
-**Manager prompt structure** (declared in `_conversation-manager.md`):
+**Orchestrator prompt structure** (declared in `_orchestrator.md`):
 ```
 <!-- @include _base-prefix.md -->      ← common instructions + dictionary
-# Your Unique Identity: ...            ← manager-specific content with @foreach
+# Your Unique Identity: ...            ← orchestrator-specific content with @foreach
 ```
 
 ## Design Principles
@@ -135,7 +135,7 @@ Participant-Agents **speak in Hebrew**. The persona files themselves are in Engl
 
 No hard length constraint. The guidance is conversational: deliver your point well, keep it dynamic. Forcing a contribution when you have nothing important is worse than a brief "אין לי הערות כאן."
 
-### The Conversation-Manager-Agent
+### The Orchestrator-Agent
 
 - It does NOT analyze biblical text or participate in the conversation.
 - It receives free-text private assessments each cycle → outputs a next-speaker recommendation + public vibe text.

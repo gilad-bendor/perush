@@ -156,7 +156,7 @@ export function realQuery(params: {
   if (options.cwd) sdkOptions.cwd = options.cwd;
 
   // Tool configuration: `tools` restricts available tools (SDK-confirmed behavior)
-  // `tools: []` = no tools (manager). `tools: ["Read", "Bash", ...]` = only those tools.
+  // `tools: []` = no tools (orchestrator). `tools: ["Read", "Bash", ...]` = only those tools.
   if (options.tools) {
     sdkOptions.tools = options.tools;
   }

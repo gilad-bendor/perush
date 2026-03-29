@@ -15,7 +15,7 @@ import type {
   Phase,
   CycleRecord,
   PrivateAssessment,
-  ManagerDecision,
+  OrchestratorDecision,
   ConversationMessage,
   AgentDefinition,
   ProcessKind,
@@ -75,7 +75,7 @@ export interface OrchestratorEvents {
   onYourTurn: () => void;
   onError: (message: string) => void;
   onSync: (meeting: Meeting, phase: Phase, readOnly?: boolean, editingCycle?: number) => void;
-  onProcessStart: (processId: string, processKind: ProcessKind, agent: AgentId | "manager", cycleNumber: number) => void;
+  onProcessStart: (processId: string, processKind: ProcessKind, agent: AgentId | "orchestrator", cycleNumber: number) => void;
   onProcessEvent: (processId: string, eventKind: ProcessEventKind, content: string, toolName?: string, toolInput?: string) => void;
   onProcessDone: (processId: string) => void;
 }
@@ -246,7 +246,7 @@ export function setOpeningPrompt(content: string): void {
  * Run a single deliberation cycle.
  *
  * 1. Assessment phase: each participant (except last speaker) assesses
- * 2. Selection phase: manager picks next speaker + vibe
+ * 2. Selection phase: orchestrator picks next speaker + vibe
  * 3. Speech phase: selected participant speaks (or human turn)
  * 4. Update meeting.yaml and commit
  */
@@ -268,7 +268,7 @@ export async function runCycle(
   pendingCycleNumber = cycleNumber;
 
   // Helper: create a process record and emit start/event/done
-  function createProcessTracker(processKind: ProcessKind, agent: AgentId | "manager") {
+  function createProcessTracker(processKind: ProcessKind, agent: AgentId | "orchestrator") {
     const processId = `c${cycleNumber}-${processKind}-${agent}`;
     const processEvents: ProcessEventRecord[] = [];
     const record: ProcessRecord = { processId, processKind, agent, events: processEvents };
@@ -293,7 +293,7 @@ export async function runCycle(
 
   // Get the vibe from the previous cycle (if any) — agents see it before the speech
   const prevCycle = currentMeeting.cycles[currentMeeting.cycles.length - 1];
-  const prevVibe = prevCycle?.managerDecision?.vibe;
+  const prevVibe = prevCycle?.orchestratorDecision?.vibe;
 
   const assessments: Record<string, PrivateAssessment> = {}; // keyed by AgentId
 
@@ -326,34 +326,34 @@ export async function runCycle(
   // ------ SELECTION PHASE ------
   setPhase("selecting");
 
-  let decision: ManagerDecision | null;
+  let decision: OrchestratorDecision | null;
 
-  const managerTracker = createProcessTracker("manager-selection", "manager");
+  const orchestratorTracker = createProcessTracker("orchestrator-selection", "orchestrator");
   try {
     const selectionPrompt = await buildSelectionPrompt(lastSpeaker, lastContent, assessments);
-    const managerResponse = await feedMessage("manager", selectionPrompt, (eventKind, content, toolName, toolInput) => {
-      managerTracker.emit(eventKind, content, toolName, toolInput);
+    const orchestratorResponse = await feedMessage("orchestrator", selectionPrompt, (eventKind, content, toolName, toolInput) => {
+      orchestratorTracker.emit(eventKind, content, toolName, toolInput);
     });
 
-    decision = parseManagerResponse(managerResponse);
+    decision = parseOrchestratorResponse(orchestratorResponse);
 
     // Retry once if parsing failed
     if (!decision) {
-      const result = extractRecommendation(managerResponse);
+      const result = extractRecommendation(orchestratorResponse);
       const reason = "error" in result ? result.error : `שם המשתתף "${result.nextSpeakerRaw}" לא מוכר`;
-      logWarn("orchestrator", `runCycle ${cycleNumber}: manager selection parse failed, retrying: ${reason}`);
+      logWarn("orchestrator", `runCycle ${cycleNumber}: orchestrator selection parse failed, retrying: ${reason}`);
 
       const retryPrompt = await buildSelectionRetryPrompt(reason);
-      const retryResponse = await feedMessage("manager", retryPrompt, (eventKind, content, toolName, toolInput) => {
-        managerTracker.emit(eventKind, content, toolName, toolInput);
+      const retryResponse = await feedMessage("orchestrator", retryPrompt, (eventKind, content, toolName, toolInput) => {
+        orchestratorTracker.emit(eventKind, content, toolName, toolInput);
       });
 
-      decision = parseManagerResponse(retryResponse);
+      decision = parseOrchestratorResponse(retryResponse);
     }
 
     // Final fallback if retry also failed
     if (!decision) {
-      logWarn("orchestrator", `runCycle ${cycleNumber}: manager selection retry also failed, falling back to Director`);
+      logWarn("orchestrator", `runCycle ${cycleNumber}: orchestrator selection retry also failed, falling back to Director`);
       decision = {
         nextSpeaker: pickFallbackSpeaker(lastSpeaker),
         vibe: "לא הצלחתי לקרוא את האווירה.",
@@ -366,7 +366,7 @@ export async function runCycle(
     };
     events.onError(`Selection failed: ${err}`);
   } finally {
-    managerTracker.done();
+    orchestratorTracker.done();
   }
 
   // Apply attention override
@@ -447,7 +447,7 @@ export async function runCycle(
     cycleNumber,
     speech,
     assessments,
-    managerDecision: decision,
+    orchestratorDecision: decision,
     processes,
   };
 
@@ -582,7 +582,7 @@ export async function handleRollback(
   }
 
   // Phase 4: Session recovery — recreate all agent sessions from rolled-back transcript
-  logInfo("orchestrator", `handleRollback: recovering sessions for ${currentMeeting.participants.length} participants + manager`);
+  logInfo("orchestrator", `handleRollback: recovering sessions for ${currentMeeting.participants.length} participants + orchestrator`);
   onProgress?.("session-recovery", "משחזר סשנים...");
   clearSessions();
 
@@ -606,15 +606,15 @@ export async function handleRollback(
     currentMeeting.sessionIds[agentId] = sessionId;
   }
 
-  // Recreate manager session
-  const managerSystemPrompt = await buildSystemPrompt("manager", meetingParticipantDefs);
-  const managerTranscript = await buildTranscriptPrompt(currentMeeting);
-  const { sessionId: managerSessionId } = await createSession(
-    "manager",
-    managerSystemPrompt,
-    managerTranscript,
+  // Recreate orchestrator session
+  const orchestratorSystemPrompt = await buildSystemPrompt("orchestrator", meetingParticipantDefs);
+  const orchestratorTranscript = await buildTranscriptPrompt(currentMeeting);
+  const { sessionId: orchestratorSessionId } = await createSession(
+    "orchestrator",
+    orchestratorSystemPrompt,
+    orchestratorTranscript,
   );
-  currentMeeting.sessionIds.manager = managerSessionId;
+  currentMeeting.sessionIds.orchestrator = orchestratorSessionId;
 
   // Phase 5: Commit the rollback
   onProgress?.("complete", "שחזור הושלם.");
@@ -674,15 +674,15 @@ export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> 
     currentMeeting.sessionIds[agentId] = sessionId;
   }
 
-  // Recreate manager session
-  const managerSystemPrompt = await buildSystemPrompt("manager", meetingParticipantDefs);
-  const managerTranscript = await buildTranscriptPrompt(currentMeeting);
-  const { sessionId: managerSessionId } = await createSession(
-    "manager",
-    managerSystemPrompt,
-    managerTranscript,
+  // Recreate orchestrator session
+  const orchestratorSystemPrompt = await buildSystemPrompt("orchestrator", meetingParticipantDefs);
+  const orchestratorTranscript = await buildTranscriptPrompt(currentMeeting);
+  const { sessionId: orchestratorSessionId } = await createSession(
+    "orchestrator",
+    orchestratorSystemPrompt,
+    orchestratorTranscript,
   );
-  currentMeeting.sessionIds.manager = managerSessionId;
+  currentMeeting.sessionIds.orchestrator = orchestratorSessionId;
 
   // Save updated session IDs and commit
   await writeMeetingAtomic(worktreePath, currentMeeting);
@@ -773,7 +773,7 @@ function extractAssessmentText(response: string): string | null {
 }
 
 /**
- * Extract the manager's recommendation block from response text.
+ * Extract the orchestrator's recommendation block from response text.
  * Returns { nextSpeakerRaw, vibe } or null with a reason string.
  */
 function extractRecommendation(response: string): { nextSpeakerRaw: string; vibe: string } | { error: string } {
@@ -857,10 +857,10 @@ async function buildSelectionPrompt(
 }
 
 /**
- * Parse a manager response into a ManagerDecision, or return null.
+ * Parse an orchestrator response into an OrchestratorDecision, or return null.
  * Extracts the recommendation block, resolves the speaker name, extracts the vibe.
  */
-function parseManagerResponse(response: string): ManagerDecision | null {
+function parseOrchestratorResponse(response: string): OrchestratorDecision | null {
   const result = extractRecommendation(response);
   if ("error" in result) return null;
 
@@ -889,7 +889,7 @@ async function buildSelectionRetryPrompt(reason: string): Promise<string> {
 function pickFallbackSpeaker(
   lastSpeaker: SpeakerId,
 ): SpeakerId {
-  // Fallback when manager fails: hand it to the Director
+  // Fallback when orchestrator fails: hand it to the Director
   return "human";
 }
 

@@ -293,7 +293,7 @@ Notes:
 
   For the Deliberation Room:
     - Participant-Agents: tools: ["Read", "Bash", "Grep", "Glob"] (restrict to these tools)
-    - Manager: tools: [] (no tools — CONFIRMED WORKING with empty array)
+    - Orchestrator: tools: [] (no tools — CONFIRMED WORKING with empty array)
     - All agents: also need allowedTools set or permissionMode: "bypassPermissions"
       to avoid permission prompts.
 
@@ -616,9 +616,9 @@ Notes:
   - NO JSONL file created on disk ← confirmed
   - Session cannot be resumed after the query completes
 
-  For the Deliberation Room's Conversation-Manager-Agent (Sonnet, no tools),
+  For the Deliberation Room's Orchestrator-Agent (Sonnet, no tools),
   this COULD be used to avoid disk writes — but since we want to track costs
-  and preserve the manager's reasoning for debugging, persistSession: true
+  and preserve the orchestrator's reasoning for debugging, persistSession: true
   is the right choice for all agents.
 ```
 
@@ -677,11 +677,11 @@ SDK features NOT assumed by the design that could be useful:
 
 4. **`persistSession: false` option**: Prevents JSONL file creation on disk. Could be used for ephemeral sessions (e.g., one-off cost estimates) where persistence isn't needed.
 
-5. **`thinking` option**: `{ type: 'adaptive' }` (default for Opus 4.6) or `{ type: 'disabled' }`. Could be used to disable thinking for the Manager (Sonnet) to reduce cost/latency, or to control thinking depth for different agent types.
+5. **`thinking` option**: `{ type: 'adaptive' }` (default for Opus 4.6) or `{ type: 'disabled' }`. Could be used to disable thinking for the Orchestrator (Sonnet) to reduce cost/latency, or to control thinking depth for different agent types.
 
 6. **`effort` option**: `'low' | 'medium' | 'high' | 'max'`. Could tune reasoning depth per agent — e.g., `effort: 'low'` for assessments (short structured output) vs `effort: 'high'` for speeches.
 
-7. **`outputFormat` option**: Structured JSON output with schema validation. Could replace manual JSON parsing for assessments and manager decisions — the SDK would enforce the schema.
+7. **`outputFormat` option**: Structured JSON output with schema validation. Could replace manual JSON parsing for assessments and orchestrator decisions — the SDK would enforce the schema.
 
 8. **`hooks` option**: Programmatic hooks for `PreToolUse`, `PostToolUse`, `Notification`, etc. Could be used to intercept and log tool usage, or to add custom behavior during agent execution.
 

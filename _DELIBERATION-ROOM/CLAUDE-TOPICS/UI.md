@@ -27,7 +27,7 @@ The UI is designed for the Director reading Hebrew text, thinking carefully, and
 
 **Conversation area** (main, left): Scrolling feed of all public messages, color-coded by speaker. Streaming text appears in real-time with a typing indicator.
 
-**Vibe bar** (sticky, between conversation and input): The Conversation-Manager-Agent's atmospheric comment, next Participant's name, current phase. Always visible. Subtle fade-transition (300ms). Changes visually during the Director's turn.
+**Vibe bar** (sticky, between conversation and input): The Orchestrator-Agent's atmospheric comment, next Participant's name, current phase. Always visible. Subtle fade-transition (300ms). Changes visually during the Director's turn.
 
 **Director input** (sticky bottom): A textarea. Always visible. Highlighted during the Director's turn. Dimmed but accepts `/end` at other times.
 
@@ -143,8 +143,8 @@ Located **in the vibe bar**, at the inline-end side (left side in RTL).
 1. Client sends `{ type: "attention" }` — fire-and-forget.
 2. Server sets `attentionRequested = true`, broadcasts `attention-ack`.
 3. Current cycle continues uninterrupted.
-4. At next selection phase: manager's prompt is augmented to force Director selection.
-5. Defense-in-depth: orchestrator **overrides** `nextSpeaker` regardless of manager response.
+4. At next selection phase: orchestrator's prompt is augmented to force Director selection.
+5. Defense-in-depth: orchestrator **overrides** `nextSpeaker` regardless of orchestrator response.
 6. Flag resets after Director speaks.
 
 **Edge cases**:

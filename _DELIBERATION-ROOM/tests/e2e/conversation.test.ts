@@ -24,7 +24,7 @@ const syncMessage = {
     participants: ["milo", "archi"],
     cycles: [],
     startedAt: "2026-02-27 14:30:00 (1772148600000)",
-    sessionIds: { milo: "s1", archi: "s2", manager: "s3" },
+    sessionIds: { milo: "s1", archi: "s2", orchestrator: "s3" },
   },
   currentPhase: "idle",
 };
@@ -48,7 +48,7 @@ const syncWithCycles = {
             text: "אני: 6\nנקודה מעניינת מבחינת מבנה",
           },
         },
-        managerDecision: { nextSpeaker: "Milo", vibe: "הדיון מתחיל להתפתח." },
+        orchestratorDecision: { nextSpeaker: "Milo", vibe: "הדיון מתחיל להתפתח." },
       },
       {
         cycleNumber: 2,
@@ -63,7 +63,7 @@ const syncWithCycles = {
             text: "אני: 3\nמסכים, אך יש לדייק במילון",
           },
         },
-        managerDecision: { nextSpeaker: "Director", vibe: "הגיע הזמן לשמוע את המנחה." },
+        orchestratorDecision: { nextSpeaker: "Director", vibe: "הגיע הזמן לשמוע את המנחה." },
       },
     ],
   },

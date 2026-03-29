@@ -162,8 +162,8 @@ export const AgentDefinitionSchema = z.object({
   englishName: z.string(),
   hebrewName: z.string(),
   roleTitle: z.string(),
-  managerIntro: z.string(),
-  managerTip: z.string(),
+  orchestratorIntro: z.string(),
+  orchestratorTip: z.string(),
   filePath: z.string(),
 });
 export type AgentDefinition = {
@@ -171,8 +171,8 @@ export type AgentDefinition = {
   englishName: string;
   hebrewName: string;
   roleTitle: string;
-  managerIntro: string;
-  managerTip: string;
+  orchestratorIntro: string;
+  orchestratorTip: string;
   filePath: string;
 };
 assertZodTypeMatch<AgentDefinition, typeof AgentDefinitionSchema>(true);
@@ -196,7 +196,7 @@ assertZodTypeMatch<ConversationMessage, typeof ConversationMessageSchema>(true);
 // ---------------------------------------------------------------------------
 // Private assessment (per participant-agent, per cycle)
 // Free-form text extracted from the agent's response between delimiters.
-// No algorithmic parsing — the manager LLM reads these directly.
+// No algorithmic parsing — the orchestrator LLM reads these directly.
 // ---------------------------------------------------------------------------
 
 export const PrivateAssessmentSchema = z.object({
@@ -210,18 +210,18 @@ export type PrivateAssessment = {
 assertZodTypeMatch<PrivateAssessment, typeof PrivateAssessmentSchema>(true);
 
 // ---------------------------------------------------------------------------
-// Manager decision
+// Orchestrator decision
 // ---------------------------------------------------------------------------
 
-export const ManagerDecisionSchema = z.object({
+export const OrchestratorDecisionSchema = z.object({
   nextSpeaker: SpeakerIdSchema, // validated against meeting participants at runtime
   vibe: z.string(),
 });
-export type ManagerDecision = {
+export type OrchestratorDecision = {
   nextSpeaker: SpeakerId;
   vibe: string;
 };
-assertZodTypeMatch<ManagerDecision, typeof ManagerDecisionSchema>(true);
+assertZodTypeMatch<OrchestratorDecision, typeof OrchestratorDecisionSchema>(true);
 
 // ---------------------------------------------------------------------------
 // Process records — full SDK interaction traces per cycle
@@ -231,8 +231,8 @@ export const ProcessEventKindSchema = z.enum(["system-prompt", "prompt", "thinki
 export type ProcessEventKind = "system-prompt" | "prompt" | "thinking" | "text" | "tool-call" | "tool-result";
 assertZodTypeMatch<ProcessEventKind, typeof ProcessEventKindSchema>(true);
 
-export const ProcessKindSchema = z.enum(["assessment", "manager-selection", "agent-speech"]);
-export type ProcessKind = "assessment" | "manager-selection" | "agent-speech";
+export const ProcessKindSchema = z.enum(["assessment", "orchestrator-selection", "agent-speech"]);
+export type ProcessKind = "assessment" | "orchestrator-selection" | "agent-speech";
 assertZodTypeMatch<ProcessKind, typeof ProcessKindSchema>(true);
 
 export const ProcessEventRecordSchema = z.object({
@@ -252,13 +252,13 @@ assertZodTypeMatch<ProcessEventRecord, typeof ProcessEventRecordSchema>(true);
 export const ProcessRecordSchema = z.object({
   processId: z.string(),
   processKind: ProcessKindSchema,
-  agent: z.string(), // AgentId | "manager"
+  agent: z.string(), // AgentId | "orchestrator"
   events: z.array(ProcessEventRecordSchema),
 });
 export type ProcessRecord = {
   processId: string;
   processKind: ProcessKind;
-  agent: AgentId | "manager";
+  agent: AgentId | "orchestrator";
   events: ProcessEventRecord[];
 };
 assertZodTypeMatch<ProcessRecord, typeof ProcessRecordSchema>(true);
@@ -271,14 +271,14 @@ export const CycleRecordSchema = z.object({
   cycleNumber: z.number().int().positive(),
   speech: ConversationMessageSchema,
   assessments: z.record(z.string(), PrivateAssessmentSchema),
-  managerDecision: ManagerDecisionSchema,
+  orchestratorDecision: OrchestratorDecisionSchema,
   processes: z.array(ProcessRecordSchema).optional(),
 });
 export type CycleRecord = {
   cycleNumber: number;
   speech: ConversationMessage;
   assessments: Record<string, PrivateAssessment>;
-  managerDecision: ManagerDecision;
+  orchestratorDecision: OrchestratorDecision;
   processes?: ProcessRecord[];
 };
 assertZodTypeMatch<CycleRecord, typeof CycleRecordSchema>(true);
@@ -512,7 +512,7 @@ export const WsProcessStartSchema = z.object({
   messageId: MessageIdSchema,
   processId: z.string(),
   processKind: ProcessKindSchema,
-  agent: z.string(), // AgentId | "manager"
+  agent: z.string(), // AgentId | "orchestrator"
   cycleNumber: z.number().int().positive(),
 });
 export type WsProcessStart = {
@@ -520,7 +520,7 @@ export type WsProcessStart = {
   messageId: MessageId;
   processId: string;
   processKind: ProcessKind;
-  agent: AgentId | "manager";
+  agent: AgentId | "orchestrator";
   cycleNumber: number;
 };
 assertZodTypeMatch<WsProcessStart, typeof WsProcessStartSchema>(true);

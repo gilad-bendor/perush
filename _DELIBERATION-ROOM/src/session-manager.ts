@@ -21,13 +21,12 @@ import { AgentDefinitionSchema } from "./types";
 import {
   PARTICIPANT_AGENTS_DIR,
   ROOT_CLAUDE_MD,
-  AGENTS_PREFIX_FILE,
-  CONVERSATION_MANAGER_FILE,
+  ORCHESTRATOR_FILE,
   PARTICIPANT_MODEL,
-  MANAGER_MODEL,
+  ORCHESTRATOR_MODEL,
   effortForModel,
   PARTICIPANT_TOOLS,
-  MANAGER_TOOLS,
+  ORCHESTRATOR_TOOLS,
   MAX_BUDGET_PER_SPEECH,
   MAX_TURNS_SESSION_INIT,
   MAX_TURNS_ASSESSMENT,
@@ -52,7 +51,7 @@ let cachedAgents: AgentDefinition[] | null = null;
 
 /**
  * Discover all available Participant-Agents by scanning participant-agents/*.md.
- * Excludes underscore-prefixed files (shared prefixes and manager).
+ * Excludes underscore-prefixed files (shared prefixes and orchestrator).
  * Results are cached for the server's lifetime.
  */
 export async function discoverAgents(): Promise<AgentDefinition[]> {
@@ -80,8 +79,8 @@ export async function discoverAgents(): Promise<AgentDefinition[]> {
       englishName: frontmatter.englishName ?? "",
       hebrewName: frontmatter.hebrewName ?? "",
       roleTitle,
-      managerIntro: frontmatter.managerIntro ?? "",
-      managerTip: frontmatter.managerTip ?? "",
+      orchestratorIntro: frontmatter.orchestratorIntro ?? "",
+      orchestratorTip: frontmatter.orchestratorTip ?? "",
       filePath,
     });
 
@@ -148,22 +147,22 @@ function buildPreprocessContext(
   const ctx: Record<string, string> = {
     EnglishName:  frontmatter.englishName  ?? "",
     HebrewName:   frontmatter.hebrewName   ?? "",
-    managerIntro: frontmatter.managerIntro ?? "",
-    managerTip:   frontmatter.managerTip   ?? "",
+    orchestratorIntro: frontmatter.orchestratorIntro ?? "",
+    orchestratorTip:   frontmatter.orchestratorTip   ?? "",
     dictionary,
   };
 
   // Participant entries for @foreach in _agents-prefix.md
   ctx.participantAgentEntries = toForEachContext(
     filteredParticipants.map(p =>
-      `- **${p.englishName} / ${p.hebrewName}**: ${p.managerIntro}`
+      `- **${p.englishName} / ${p.hebrewName}**: ${p.orchestratorIntro}`
     )
   );
 
-  // Participant entries for @foreach in _conversation-manager.md
-  ctx.participantManagerEntries = toForEachContext(
+  // Participant entries for @foreach in _orchestrator.md
+  ctx.participantOrchestratorEntries = toForEachContext(
     filteredParticipants.map(p =>
-      `- **${p.englishName} / ${p.hebrewName}**: ${p.managerIntro}. *${p.managerTip}.*`
+      `- **${p.englishName} / ${p.hebrewName}**: ${p.orchestratorIntro}. *${p.orchestratorTip}.*`
     )
   );
 
@@ -204,7 +203,7 @@ export async function extractDictionary(): Promise<string> {
  *   <!-- @echo EnglishName -->           — substitute a frontmatter variable
  *   <!-- @echo dictionary -->            — inject the full dictionary text
  *   <!-- @foreach $p in participantAgentEntries -->$p\n<!-- @endfor -->
- *   <!-- @foreach $p in participantManagerEntries -->$p\n<!-- @endfor -->
+ *   <!-- @foreach $p in participantOrchestratorEntries -->$p\n<!-- @endfor -->
  *
  * Included files are processed recursively with the same context, so
  * _base-prefix.md and _agents-prefix.md can be included from agent persona files
@@ -213,7 +212,7 @@ export async function extractDictionary(): Promise<string> {
 export async function resolveTemplate(
   filename: string,
   meetingParticipants: AgentDefinition[],
-  /** Exclude this agent from participantAgentEntries / participantManagerEntries loops */
+  /** Exclude this agent from participantAgentEntries / participantOrchestratorEntries loops */
   excludeAgentId?: AgentId,
 ): Promise<string> {
   const filePath = join(PARTICIPANT_AGENTS_DIR, filename);
@@ -266,18 +265,18 @@ export async function resolvePromptTemplate(
  *   <!-- @include _base-prefix.md -->
  *   <!-- @include _agents-prefix.md -->   (Participant-Agents only)
  *
- * _conversation-manager.md starts with:
+ * _orchestrator.md starts with:
  *   <!-- @include _base-prefix.md -->
  *
  * A single resolveTemplate() call handles all includes, variables, and loops.
  */
 export async function buildSystemPrompt(
-  agentId: AgentId | "manager",
+  agentId: AgentId | "orchestrator",
   meetingParticipants: AgentDefinition[],
 ): Promise<string> {
   logInfo("session-manager", `buildSystemPrompt: ${agentId}`);
-  if (agentId === "manager") {
-    return resolveTemplate(CONVERSATION_MANAGER_FILE, meetingParticipants);
+  if (agentId === "orchestrator") {
+    return resolveTemplate(ORCHESTRATOR_FILE, meetingParticipants);
   }
   const agentDef = meetingParticipants.find(a => a.id === agentId);
   const filename = agentDef ? basename(agentDef.filePath) : `${agentId}.md`;
@@ -321,11 +320,11 @@ async function getQueryFn(): Promise<(params: { prompt: string; options: Record<
 // Session Lifecycle
 // ---------------------------------------------------------------------------
 
-/** Track active sessions: agentId/manager → sessionId */
-const sessionRegistry = new Map<AgentId | "manager", string>();
+/** Track active sessions: agentId/orchestrator → sessionId */
+const sessionRegistry = new Map<AgentId | "orchestrator", string>();
 
 /** Track active queries for interrupt support */
-const activeQueries = new Map<AgentId | "manager", AnyQuery>();
+const activeQueries = new Map<AgentId | "orchestrator", AnyQuery>();
 
 // ---------------------------------------------------------------------------
 // Meeting Context (for lazy session creation)
@@ -375,13 +374,13 @@ function accumulateCost(msg: any): void {
  * Uses the stub SDK when USE_STUB_SDK is true, real SDK otherwise.
  */
 export async function createSession(
-  agentId: AgentId | "manager",
+  agentId: AgentId | "orchestrator",
   systemPrompt: string,
   initialPrompt: string,
   onEvent?: ProcessEventCallback,
 ): Promise<{ sessionId: string; responseText: string }> {
-  const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
-  const tools = agentId === "manager" ? MANAGER_TOOLS : PARTICIPANT_TOOLS;
+  const model = agentId === "orchestrator" ? ORCHESTRATOR_MODEL : PARTICIPANT_MODEL;
+  const tools = agentId === "orchestrator" ? ORCHESTRATOR_TOOLS : PARTICIPANT_TOOLS;
 
   const effort = effortForModel(model);
   logInfo("sessions", `createSession START for ${agentId} (model=${model}, effort=${effort}, stub=${USE_STUB_SDK})`);
@@ -401,8 +400,8 @@ export async function createSession(
       systemPrompt,
       tools,
       cwd: ROOT_PROJECT_DIR,
-      maxTurns: agentId === "manager" ? MAX_TURNS_ASSESSMENT : MAX_TURNS_SESSION_INIT,
-      maxBudgetUsd: agentId === "manager" ? 0.10 : MAX_BUDGET_PER_SPEECH,
+      maxTurns: agentId === "orchestrator" ? MAX_TURNS_ASSESSMENT : MAX_TURNS_SESSION_INIT,
+      maxBudgetUsd: agentId === "orchestrator" ? 0.10 : MAX_BUDGET_PER_SPEECH,
     },
   });
 
@@ -443,13 +442,13 @@ export type ProcessEventCallback = (eventKind: ProcessEventKind, content: string
  * tool calls, tool results) are forwarded through it.
  */
 export async function feedMessage(
-  agentId: AgentId | "manager",
+  agentId: AgentId | "orchestrator",
   prompt: string,
   onEvent?: ProcessEventCallback,
 ): Promise<string> {
   const existingSessionId = sessionRegistry.get(agentId);
-  const model = agentId === "manager" ? MANAGER_MODEL : PARTICIPANT_MODEL;
-  const tools = agentId === "manager" ? MANAGER_TOOLS : PARTICIPANT_TOOLS;
+  const model = agentId === "orchestrator" ? ORCHESTRATOR_MODEL : PARTICIPANT_MODEL;
+  const tools = agentId === "orchestrator" ? ORCHESTRATOR_TOOLS : PARTICIPANT_TOOLS;
   const effort = effortForModel(model);
   logInfo("session-manager", `feedMessage: ${agentId} (session=${existingSessionId ?? "none"}, effort=${effort})`);
 
@@ -468,7 +467,7 @@ export async function feedMessage(
     const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
     queryOptions.systemPrompt = systemPrompt;
     queryOptions.tools = tools;
-    queryOptions.maxBudgetUsd = agentId === "manager" ? 0.10 : MAX_BUDGET_PER_SPEECH;
+    queryOptions.maxBudgetUsd = agentId === "orchestrator" ? 0.10 : MAX_BUDGET_PER_SPEECH;
     if (onEvent) onEvent("system-prompt", systemPrompt);
   }
 
@@ -621,7 +620,7 @@ export async function* streamSpeech(
 /**
  * Interrupt an active speech query for an agent.
  */
-export async function interruptSpeech(agentId: AgentId | "manager"): Promise<void> {
+export async function interruptSpeech(agentId: AgentId | "orchestrator"): Promise<void> {
   const query = activeQueries.get(agentId);
   if (query) {
     logInfo("session-manager", `interruptSpeech: ${agentId}`);
@@ -650,7 +649,7 @@ export async function interruptAll(): Promise<void> {
 
 /**
  * Extract process events from a raw SDK message and forward via callback.
- * Called for non-streaming interactions (assessments, manager selection).
+ * Called for non-streaming interactions (assessments, orchestrator selection).
  */
 function emitProcessEvents(msg: any, onEvent: ProcessEventCallback): void {
   // Full assistant message — extract text, thinking, tool_use blocks
@@ -685,7 +684,7 @@ function emitProcessEvents(msg: any, onEvent: ProcessEventCallback): void {
 // ---------------------------------------------------------------------------
 
 /** Get the session ID for an agent. */
-export function getSessionId(agentId: AgentId | "manager"): string | undefined {
+export function getSessionId(agentId: AgentId | "orchestrator"): string | undefined {
   return sessionRegistry.get(agentId);
 }
 
@@ -704,6 +703,6 @@ export function clearSessions(): void {
 }
 
 /** Register an existing session ID (for meeting resume). */
-export function registerSession(agentId: AgentId | "manager", sessionId: string): void {
+export function registerSession(agentId: AgentId | "orchestrator", sessionId: string): void {
   sessionRegistry.set(agentId, sessionId);
 }

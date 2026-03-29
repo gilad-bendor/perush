@@ -280,7 +280,7 @@ MEETING START
 
 EACH CYCLE
 ├─ 1. Assessment phase (parallel query() calls)
-├─ 2. Selection phase (query() to manager)
+├─ 2. Selection phase (query() to orchestrator)
 ├─ 3. Speech phase (query() to selected agent, streamed via WebSocket)
 ├─ 4. Update meeting.yaml with cycle record
 ├─ 5. Commit to session branch: "Cycle N: <speaker>"

@@ -6,7 +6,7 @@ import {
   AgentDefinitionSchema,
   ConversationMessageSchema,
   PrivateAssessmentSchema,
-  ManagerDecisionSchema,
+  OrchestratorDecisionSchema,
   CycleRecordSchema,
   MeetingSchema,
   MeetingSummarySchema,
@@ -77,8 +77,8 @@ describe("AgentDefinitionSchema", () => {
     englishName: "Milo",
     hebrewName: "מיילו",
     roleTitle: "המילונאי",
-    managerIntro: "The Dictionary Purist.",
-    managerTip: "Bring in when words need checking.",
+    orchestratorIntro: "The Dictionary Purist.",
+    orchestratorTip: "Bring in when words need checking.",
     filePath: "/path/to/milo.md",
   };
 
@@ -141,18 +141,18 @@ describe("PrivateAssessmentSchema", () => {
 });
 
 // ---------------------------------------------------------------------------
-// ManagerDecision
+// OrchestratorDecision
 // ---------------------------------------------------------------------------
 
-describe("ManagerDecisionSchema", () => {
+describe("OrchestratorDecisionSchema", () => {
   test("accepts valid decision", () => {
     const decision = { nextSpeaker: "archi", vibe: "הדיון זורם" };
-    expect(ManagerDecisionSchema.parse(decision)).toEqual(decision);
+    expect(OrchestratorDecisionSchema.parse(decision)).toEqual(decision);
   });
 
   test("accepts human as next speaker", () => {
     const decision = { nextSpeaker: "human", vibe: "הגיע הזמן למנחה" };
-    expect(ManagerDecisionSchema.parse(decision)).toEqual(decision);
+    expect(OrchestratorDecisionSchema.parse(decision)).toEqual(decision);
   });
 });
 
@@ -175,7 +175,7 @@ describe("CycleRecordSchema", () => {
           text: "אני: 5\nנקודה מעניינת",
         },
       },
-      managerDecision: {
+      orchestratorDecision: {
         nextSpeaker: "milo",
         vibe: "דיון פורה",
       },
@@ -188,7 +188,7 @@ describe("CycleRecordSchema", () => {
       cycleNumber: 0,
       speech: { speaker: "milo", content: "x", timestamp: createFormattedTime() },
       assessments: {},
-      managerDecision: { nextSpeaker: "archi", vibe: "ok" },
+      orchestratorDecision: { nextSpeaker: "archi", vibe: "ok" },
     })).toThrow();
   });
 });
@@ -206,7 +206,7 @@ describe("MeetingSchema", () => {
     participants: ["milo", "archi", "kashia"],
     cycles: [],
     startedAt: createFormattedTime(),
-    sessionIds: { milo: "sess-1", archi: "sess-2", kashia: "sess-3", manager: "sess-4" },
+    sessionIds: { milo: "sess-1", archi: "sess-2", kashia: "sess-3", orchestrator: "sess-4" },
   };
 
   test("accepts valid meeting", () => {

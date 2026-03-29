@@ -40,8 +40,8 @@ export const DIRECTOR_TIMEOUT_MS = 10 * 60 * 1000;
 /** Model for Participant-Agent sessions (env-overridable for testing with Haiku) */
 export const PARTICIPANT_MODEL = process.env.PARTICIPANT_MODEL || "claude-opus-4-6";
 
-/** Model for Conversation-Manager-Agent session (env-overridable for testing with Haiku) */
-export const MANAGER_MODEL = process.env.MANAGER_MODEL || "claude-sonnet-4-6";
+/** Model for Orchestrator-Agent session (env-overridable for testing with Haiku) */
+export const ORCHESTRATOR_MODEL = process.env.ORCHESTRATOR_MODEL || "claude-sonnet-4-6";
 
 // ---------------------------------------------------------------------------
 // Effort levels (auto-derived from model)
@@ -70,7 +70,7 @@ export const MAX_BUDGET_PER_SPEECH = 2.0;
 /** Max agentic turns: session creation for Participant-Agents (needs tools for initial exploration) */
 export const MAX_TURNS_SESSION_INIT = 25;
 
-/** Max agentic turns: assessments and manager selection (no tools, single response) */
+/** Max agentic turns: assessments and orchestrator selection (no tools, single response) */
 export const MAX_TURNS_ASSESSMENT = 25;
 
 /** Max agentic turns: participant speeches (agentic with tools) */
@@ -164,7 +164,7 @@ export const COMMIT_MEETING_ENDED = "Meeting ended";
 export const COMMIT_SERVER_SHUTDOWN = "Server shutdown: partial cycle";
 
 /** Commit message template for session recovery */
-export function commitSessionRecovery(agentId: string): string { // AgentId | "manager"
+export function commitSessionRecovery(agentId: string): string { // AgentId | "orchestrator"
   return `Session recovery: ${agentId}`;
 }
 
@@ -218,8 +218,8 @@ export const IMPORTANCE_SCALE_MAX = 10;
 /** Participant-Agent-only prefix (introduces fellow participants via @foreach) */
 export const AGENTS_PREFIX_FILE = "_agents-prefix.md";
 
-/** Conversation-Manager-Agent file */
-export const CONVERSATION_MANAGER_FILE = "_conversation-manager.md";
+/** Orchestrator-Agent file */
+export const ORCHESTRATOR_FILE = "_orchestrator.md";
 
 // ---------------------------------------------------------------------------
 // Participant tools
@@ -228,5 +228,5 @@ export const CONVERSATION_MANAGER_FILE = "_conversation-manager.md";
 /** Tools available to Participant-Agent sessions */
 export const PARTICIPANT_TOOLS: string[] = ["Read", "Bash", "Grep", "Glob"];
 
-/** Tools available to Conversation-Manager-Agent session (none) */
-export const MANAGER_TOOLS: string[] = [];
+/** Tools available to Orchestrator-Agent session (none) */
+export const ORCHESTRATOR_TOOLS: string[] = [];

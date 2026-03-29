@@ -1,7 +1,7 @@
 /**
  * @file Expandable process label for the timeline.
  *
- * Each SDK interaction (assessment, manager selection, agent speech) is
+ * Each SDK interaction (assessment, orchestrator selection, agent speech) is
  * rendered as a small colored pill that expands on click to show the full
  * prompt, thinking, text output, tool calls, and tool results.
  */
@@ -27,7 +27,7 @@ export class ProcessLabel {
   /**
    * @param {string} processId
    * @param {ProcessKind} processKind
-   * @param {AgentId | "manager"} agent
+   * @param {AgentId | "orchestrator"} agent
    * @param {string} displayName - Hebrew name for the label
    */
   constructor(processId, processKind, agent, displayName) {

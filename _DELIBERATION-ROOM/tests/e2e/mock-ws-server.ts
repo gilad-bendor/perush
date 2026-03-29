@@ -29,8 +29,8 @@ export interface MockAgentDef {
   englishName: string;
   hebrewName: string;
   roleTitle: string;
-  managerIntro: string;
-  managerTip: string;
+  orchestratorIntro: string;
+  orchestratorTip: string;
   filePath: string;
 }
 
@@ -50,8 +50,8 @@ const DEFAULT_AGENTS: MockAgentDef[] = [
     englishName: "Milo",
     hebrewName: "מיילו",
     roleTitle: "המילונאי",
-    managerIntro: "Dictionary Purist",
-    managerTip: "Bring in for dictionary checks",
+    orchestratorIntro: "Dictionary Purist",
+    orchestratorTip: "Bring in for dictionary checks",
     filePath: "participant-agents/milo.md",
   },
   {
@@ -59,8 +59,8 @@ const DEFAULT_AGENTS: MockAgentDef[] = [
     englishName: "Archi",
     hebrewName: "ארצ'י",
     roleTitle: "האדריכל",
-    managerIntro: "Architect",
-    managerTip: "Bring in for structural analysis",
+    orchestratorIntro: "Architect",
+    orchestratorTip: "Bring in for structural analysis",
     filePath: "participant-agents/archi.md",
   },
   {
@@ -68,8 +68,8 @@ const DEFAULT_AGENTS: MockAgentDef[] = [
     englishName: "Kashia",
     hebrewName: "קשיא",
     roleTitle: "המבקר",
-    managerIntro: "Skeptic",
-    managerTip: "Bring in to challenge interpretations",
+    orchestratorIntro: "Skeptic",
+    orchestratorTip: "Bring in to challenge interpretations",
     filePath: "participant-agents/kashia.md",
   },
   {
@@ -77,8 +77,8 @@ const DEFAULT_AGENTS: MockAgentDef[] = [
     englishName: "Barak",
     hebrewName: "ברק",
     roleTitle: "ההברקה",
-    managerIntro: "Ideator",
-    managerTip: "Bring in for creative insight",
+    orchestratorIntro: "Ideator",
+    orchestratorTip: "Bring in for creative insight",
     filePath: "participant-agents/barak.md",
   },
 ];

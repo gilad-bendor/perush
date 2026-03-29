@@ -415,7 +415,7 @@ describe("resumeMeetingById", () => {
     expect(resumed.cycles).toHaveLength(cycleCount);
     expect(resumed.sessionIds.milo).toBeTruthy();
     expect(resumed.sessionIds.archi).toBeTruthy();
-    expect(resumed.sessionIds.manager).toBeTruthy();
+    expect(resumed.sessionIds.orchestrator).toBeTruthy();
     expect(getPhase()).toBe("idle");
 
     // Run additional cycle after resume

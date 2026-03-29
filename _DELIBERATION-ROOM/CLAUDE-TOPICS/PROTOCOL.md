@@ -19,7 +19,7 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // A Participant-Agent's private assessment (free-form text, shown in process labels)
 { type: "assessment", agent: AgentId, text: string }
 
-// The Conversation-Manager-Agent's vibe + next speaker decision
+// The Orchestrator-Agent's vibe + next speaker decision
 { type: "vibe", vibe: string, nextSpeaker: SpeakerId }
 
 // Current phase of the cycle
@@ -42,8 +42,8 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // Progress updates during a rollback operation
 { type: "rollback-progress", step: "aborting" | "git-reset" | "perush-rollback" | "session-recovery" | "complete", detail?: string }
 
-// Signals start of an SDK process (assessment, manager selection, or agent speech)
-{ type: "process-start", processId: string, processKind: "assessment" | "manager-selection" | "agent-speech", agent: AgentId | "manager", cycleNumber: number }
+// Signals start of an SDK process (assessment, orchestrator selection, or agent speech)
+{ type: "process-start", processId: string, processKind: "assessment" | "orchestrator-selection" | "agent-speech", agent: AgentId | "orchestrator", cycleNumber: number }
 
 // A single event within a process (prompt, thinking, text output, tool call, tool result)
 { type: "process-event", processId: string, eventKind: "prompt" | "thinking" | "text" | "tool-call" | "tool-result", content: string, toolName?: string, toolInput?: string }
@@ -80,7 +80,7 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 { type: "join-meeting", meetingId: string }
 
 // Director requests the floor — current cycle continues uninterrupted;
-// next selection phase will force the manager to choose the Director.
+// next selection phase will force the orchestrator to choose the Director.
 { type: "attention" }
 
 // Director initiates rollback to a specific human message.

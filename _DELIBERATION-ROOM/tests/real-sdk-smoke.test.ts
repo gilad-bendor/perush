@@ -47,7 +47,7 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
     env.NODE_ENV = "development";
     delete env.USE_STUB_SDK;
     env.PARTICIPANT_MODEL = HAIKU_MODEL;
-    env.MANAGER_MODEL = HAIKU_MODEL;
+    env.ORCHESTRATOR_MODEL = HAIKU_MODEL;
     env.SERVER_PORT = String(PORT);
 
     serverProc = Bun.spawn(["bun", "run", "src/server.ts"], {
@@ -256,7 +256,7 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
 
     // ------ Phase 2: Observe 2 completed cycles ------
     // Each completed cycle produces exactly one "speech" message.
-    // If the manager selects "Director", the auto-responder sends human speech.
+    // If the orchestrator selects "Director", the auto-responder sends human speech.
 
     console.log("[smoke] Waiting for cycle 1...");
     await waitFor(
@@ -351,17 +351,17 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
     expect(meeting.cycles[0].speech.content).toBeTruthy();
     expect(meeting.cycles[1].speech.content).toBeTruthy();
 
-    // Each cycle has a manager decision with vibe
+    // Each cycle has an orchestrator decision with vibe
     for (const cycle of meeting.cycles) {
-      expect(cycle.managerDecision).toBeTruthy();
-      expect(cycle.managerDecision.vibe).toBeTruthy();
+      expect(cycle.orchestratorDecision).toBeTruthy();
+      expect(cycle.orchestratorDecision.vibe).toBeTruthy();
       expect(typeof cycle.assessments).toBe("object");
     }
 
-    // Session IDs are recorded for all agents + manager
+    // Session IDs are recorded for all agents + orchestrator
     expect(meeting.sessionIds.milo).toBeTruthy();
     expect(meeting.sessionIds.archi).toBeTruthy();
-    expect(meeting.sessionIds.manager).toBeTruthy();
+    expect(meeting.sessionIds.orchestrator).toBeTruthy();
 
     // ------ Summary ------
 

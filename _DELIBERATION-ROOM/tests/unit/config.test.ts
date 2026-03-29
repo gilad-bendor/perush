@@ -4,7 +4,7 @@ import { homedir } from "os";
 import {
   SERVER_PORT,
   PARTICIPANT_MODEL,
-  MANAGER_MODEL,
+  ORCHESTRATOR_MODEL,
   MAX_BUDGET_PER_SPEECH,
   MAX_TURNS_SESSION_INIT,
   MAX_TURNS_ASSESSMENT,
@@ -28,9 +28,9 @@ import {
   IMPORTANCE_SCALE_MAX,
   USE_STUB_SDK,
   PARTICIPANT_TOOLS,
-  MANAGER_TOOLS,
+  ORCHESTRATOR_TOOLS,
   AGENTS_PREFIX_FILE,
-  CONVERSATION_MANAGER_FILE,
+  ORCHESTRATOR_FILE,
   ESTIMATED_COST_PER_CYCLE,
 } from "../../src/config";
 import {SESSION_BRANCH_PREFIX, TAG_PREFIX} from "../../src/types.ts";
@@ -58,8 +58,8 @@ describe("Model config", () => {
     expect(PARTICIPANT_MODEL).toContain("opus");
   });
 
-  test("MANAGER_MODEL is Sonnet", () => {
-    expect(MANAGER_MODEL).toContain("sonnet");
+  test("ORCHESTRATOR_MODEL is Sonnet", () => {
+    expect(ORCHESTRATOR_MODEL).toContain("sonnet");
   });
 });
 
@@ -240,7 +240,7 @@ describe("Stub mode", () => {
 describe("Agent persona file config", () => {
   test("file names are correct", () => {
     expect(AGENTS_PREFIX_FILE).toBe("_agents-prefix.md");
-    expect(CONVERSATION_MANAGER_FILE).toBe("_conversation-manager.md");
+    expect(ORCHESTRATOR_FILE).toBe("_orchestrator.md");
   });
 });
 
@@ -256,7 +256,7 @@ describe("Tool config", () => {
     expect(PARTICIPANT_TOOLS).toContain("Glob");
   });
 
-  test("MANAGER_TOOLS is empty", () => {
-    expect(MANAGER_TOOLS).toEqual([]);
+  test("ORCHESTRATOR_TOOLS is empty", () => {
+    expect(ORCHESTRATOR_TOOLS).toEqual([]);
   });
 });

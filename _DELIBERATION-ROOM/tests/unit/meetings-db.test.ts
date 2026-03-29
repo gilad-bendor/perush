@@ -44,7 +44,7 @@ function makeTestMeeting(id: MeetingId): Meeting {
     participants: ["milo", "archi"],
     cycles: [],
     startedAt: createFormattedTime(),
-    sessionIds: { milo: "sess-1", archi: "sess-2", manager: "sess-3" },
+    sessionIds: { milo: "sess-1", archi: "sess-2", orchestrator: "sess-3" },
   };
 }
 
@@ -144,7 +144,7 @@ describe("conversation store — read/write", () => {
         cycleNumber: 1,
         speech: { speaker: "milo", content: "test", timestamp: createFormattedTime() },
         assessments: {},
-        managerDecision: { nextSpeaker: "milo", vibe: "test vibe" },
+        orchestratorDecision: { nextSpeaker: "milo", vibe: "test vibe" },
       }],
     };
     await writeMeetingAtomic(worktreePath, updated);
@@ -273,7 +273,7 @@ describe("conversation store — lifecycle", () => {
         cycleNumber: 1,
         speech: { speaker: "milo", content: "First speech", timestamp: createFormattedTime() },
         assessments: { archi: { agent: "archi", text: "אני: 5\nok" } },
-        managerDecision: { nextSpeaker: "archi", vibe: "Getting started" },
+        orchestratorDecision: { nextSpeaker: "archi", vibe: "Getting started" },
       }],
     };
     await writeMeetingAtomic(worktreePath, cycle1Meeting);
@@ -288,7 +288,7 @@ describe("conversation store — lifecycle", () => {
           cycleNumber: 2,
           speech: { speaker: "archi", content: "Second speech", timestamp: createFormattedTime() },
           assessments: { milo: { agent: "milo", text: "אני: 7\ninteresting" } },
-          managerDecision: { nextSpeaker: "human", vibe: "Deep discussion" },
+          orchestratorDecision: { nextSpeaker: "human", vibe: "Deep discussion" },
         },
       ],
     };
@@ -303,7 +303,7 @@ describe("conversation store — lifecycle", () => {
     expect(ended.cycles).toHaveLength(2);
     expect(ended.cycles[0].speech.speaker).toBe("milo");
     expect(ended.cycles[1].speech.speaker).toBe("archi");
-    expect(ended.cycles[1].managerDecision.vibe).toBe("Deep discussion");
+    expect(ended.cycles[1].orchestratorDecision.vibe).toBe("Deep discussion");
 
     // Git log should show the full history
     const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
@@ -354,7 +354,7 @@ describe("session branch rollback", () => {
         cycleNumber: 1,
         speech: { speaker: "milo", content: "test speech", timestamp: createFormattedTime() },
         assessments: {},
-        managerDecision: { nextSpeaker: "archi", vibe: "test" },
+        orchestratorDecision: { nextSpeaker: "archi", vibe: "test" },
       }],
     };
     await writeMeetingAtomic(worktreePath, updated);
@@ -378,7 +378,7 @@ describe("session branch rollback", () => {
         cycleNumber: 1,
         speech: { speaker: "milo", content: "first", timestamp: createFormattedTime() },
         assessments: {},
-        managerDecision: { nextSpeaker: "archi", vibe: "starting" },
+        orchestratorDecision: { nextSpeaker: "archi", vibe: "starting" },
       }],
     };
     await writeMeetingAtomic(worktreePath, cycle1);
@@ -393,7 +393,7 @@ describe("session branch rollback", () => {
           cycleNumber: 2,
           speech: { speaker: "archi", content: "second", timestamp: createFormattedTime() },
           assessments: {},
-          managerDecision: { nextSpeaker: "human", vibe: "progressing" },
+          orchestratorDecision: { nextSpeaker: "human", vibe: "progressing" },
         },
       ],
     };

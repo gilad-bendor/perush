@@ -30,7 +30,7 @@ import { resetStubState } from "../../src/stub-sdk";
 import {
   PARTICIPANT_AGENTS_DIR,
   AGENTS_PREFIX_FILE,
-  CONVERSATION_MANAGER_FILE,
+  ORCHESTRATOR_FILE,
 } from "../../src/config";
 
 beforeEach(() => {
@@ -60,7 +60,7 @@ describe("discoverAgents", () => {
     const ids = agents.map(a => a.id);
     expect(ids).not.toContain("_base-prefix");
     expect(ids).not.toContain("_agents-prefix");
-    expect(ids).not.toContain("_conversation-manager");
+    expect(ids).not.toContain("_orchestrator");
   });
 
   test("parses frontmatter correctly", async () => {
@@ -68,8 +68,8 @@ describe("discoverAgents", () => {
     const milo = agents.find(a => a.id === "milo")!;
     expect(milo.englishName).toBe("Milo");
     expect(milo.hebrewName).toBe("מיילו");
-    expect(milo.managerIntro).toContain("Dictionary Purist");
-    expect(milo.managerTip).toContain("dictionary");
+    expect(milo.orchestratorIntro).toContain("Dictionary Purist");
+    expect(milo.orchestratorTip).toContain("dictionary");
   });
 
   test("extracts roleTitle from heading", async () => {
@@ -165,19 +165,19 @@ describe("resolveTemplate", () => {
     expect(resolved).not.toContain("Barak / ברק");
   });
 
-  test("resolves ${each:participant} in _conversation-manager.md", async () => {
-    const resolved = await resolveTemplate(CONVERSATION_MANAGER_FILE, allAgents);
+  test("resolves ${each:participant} in _orchestrator.md", async () => {
+    const resolved = await resolveTemplate(ORCHESTRATOR_FILE, allAgents);
 
-    // Should contain each agent with manager-specific fields
+    // Should contain each agent with orchestrator-specific fields
     expect(resolved).toContain("Milo / מיילו");
-    expect(resolved).toContain("managerTip" in {} ? "" : ""); // just check presence of expanded text
+    expect(resolved).toContain("orchestratorTip" in {} ? "" : ""); // just check presence of expanded text
     expect(resolved).toContain("Dictionary Purist");
   });
 
-  test("resolves participantManagerEntries in _conversation-manager.md", async () => {
-    const resolved = await resolveTemplate(CONVERSATION_MANAGER_FILE, allAgents);
+  test("resolves participantOrchestratorEntries in _orchestrator.md", async () => {
+    const resolved = await resolveTemplate(ORCHESTRATOR_FILE, allAgents);
 
-    // Each agent should appear with manager-specific format
+    // Each agent should appear with orchestrator-specific format
     expect(resolved).toContain("Milo / מיילו");
     expect(resolved).toContain("Archi / ארצ'י");
     // Director line is hardcoded in the template
@@ -186,9 +186,9 @@ describe("resolveTemplate", () => {
     expect(resolved).not.toContain("@foreach");
   });
 
-  test("participantManagerEntries is scoped to meeting participants", async () => {
+  test("participantOrchestratorEntries is scoped to meeting participants", async () => {
     const subset = allAgents.filter(a => a.id === "milo" || a.id === "kashia");
-    const resolved = await resolveTemplate(CONVERSATION_MANAGER_FILE, subset);
+    const resolved = await resolveTemplate(ORCHESTRATOR_FILE, subset);
 
     expect(resolved).toContain("Milo / מיילו");
     expect(resolved).toContain("Kashia / קשיא");
@@ -258,22 +258,22 @@ describe("buildSystemPrompt", () => {
     expect(fellowSection).toContain("Archi / ארצ'י");
   });
 
-  test("manager prompt includes base prefix + manager template", async () => {
-    const prompt = await buildSystemPrompt("manager", allAgents);
+  test("orchestrator prompt includes base prefix + orchestrator template", async () => {
+    const prompt = await buildSystemPrompt("orchestrator", allAgents);
 
     // Base prefix
     expect(prompt).toContain("scholarly deliberation");
     // Dictionary
     expect(prompt).toContain("אור");
-    // Manager content
-    expect(prompt).toContain("Conversation-Manager");
+    // Orchestrator content
+    expect(prompt).toContain("Orchestrator");
     expect(prompt).toContain("which Participant should speak next");
     // Should NOT have agents prefix
     expect(prompt).not.toContain("Fellow Participants");
   });
 
-  test("manager prompt has resolved participant names", async () => {
-    const prompt = await buildSystemPrompt("manager", allAgents);
+  test("orchestrator prompt has resolved participant names", async () => {
+    const prompt = await buildSystemPrompt("orchestrator", allAgents);
 
     expect(prompt).toContain("Milo / מיילו");
     expect(prompt).toContain("Director / המנחה");

@@ -119,10 +119,10 @@ await q.interrupt(); // graceful, no error, loop terminates
 
 **Verified**: `interrupt()` returned immediately, `for await` loop terminated cleanly, no error thrown.
 
-### 5. Tool-less Agent (Conversation Manager)
+### 5. Tool-less Agent (Orchestrator)
 
 ```typescript
-const managerQuery = query({
+const orchestratorQuery = query({
   prompt: "...",
   options: {
     model: "claude-sonnet-4-6",
@@ -150,7 +150,7 @@ These are differences between the design document (`../CLAUDE.md`) and actual SD
 | Session | Design (wrong) | Correct |
 |---------|----------------|---------|
 | Participant-Agents | `allowedTools: ["Read", "Bash", "Grep", "Glob"]` | `tools: ["Read", "Bash", "Grep", "Glob"]` |
-| Manager | *implied: no tools* | `tools: []` |
+| Orchestrator | *implied: no tools* | `tools: []` |
 
 Both also need:
 ```typescript

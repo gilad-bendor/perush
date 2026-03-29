@@ -2,11 +2,11 @@
 
 > **Spin-out from `CLAUDE.md`.** Consult before revisiting any settled design choice.
 
-1. **Persistent session architecture**: Each AI-Agent runs as a persistent Agent SDK session for the duration of a meeting. Participant-Agents use Opus (for both assessments and speeches); the Conversation-Manager-Agent uses Sonnet. Rationale: (a) AI-Agent continuity — agents accumulate understanding across cycles instead of being cold-started each time; (b) token efficiency — prompt caching on the stable session prefix makes Opus competitive with Sonnet on input costs, and context compression reduces tokens for long meetings; (c) simpler architecture — one invocation pattern (Agent SDK `query()` with `resume: sessionId`) instead of two (raw API + Agent SDK).
+1. **Persistent session architecture**: Each AI-Agent runs as a persistent Agent SDK session for the duration of a meeting. Participant-Agents use Opus (for both assessments and speeches); the Orchestrator-Agent uses Sonnet. Rationale: (a) AI-Agent continuity — agents accumulate understanding across cycles instead of being cold-started each time; (b) token efficiency — prompt caching on the stable session prefix makes Opus competitive with Sonnet on input costs, and context compression reduces tokens for long meetings; (c) simpler architecture — one invocation pattern (Agent SDK `query()` with `resume: sessionId`) instead of two (raw API + Agent SDK).
 
 2. **Git branches as the meeting database**: Each meeting lives on its own orphan branch (`sessions/<meeting-id>`) — no meeting data on `main`, ever. `meeting.yaml` + session JSONL files are committed per-cycle, creating a natural timeline. Listing meetings = listing branches; reading an ended meeting = `git show`. Rationale: (a) audit trail with per-cycle granularity; (b) `main` stays clean; (c) git provides the database operations without additional tooling; (d) session files live on the branch alongside `meeting.yaml`.
 
-3. **Director-controlled ending**: Only the Director ends a meeting. The Conversation-Manager-Agent signals readiness through "vibe" comments but never terminates autonomously.
+3. **Director-controlled ending**: Only the Director ends a meeting. The Orchestrator-Agent signals readiness through "vibe" comments but never terminates autonomously.
 
 4. **Director opens**: The Director provides the initial prompt that sets context and scope. The Participant-Agents respond to this opening.
 
@@ -14,7 +14,7 @@
 
 6. **No JS framework (backend or frontend)**: Custom orchestrator, vanilla HTML/JS frontend with Tailwind CSS. The system has a small, configurable set of Participants with a specific protocol — JS frameworks add complexity without proportional value.
 
-7. **"Vibe" comments**: The Conversation-Manager-Agent produces a short atmospheric comment with each Participant selection, displayed in a sticky bar as a stage direction (not a conversation message).
+7. **"Vibe" comments**: The Orchestrator-Agent produces a short atmospheric comment with each Participant selection, displayed in a sticky bar as a stage direction (not a conversation message).
 
 8. **Dialectical Participant-Agents with primary mandates**: Participant-Agents engage with each other's points but always through their own lens. Each has a strict primary mandate that keeps their voice distinct.
 
@@ -22,7 +22,7 @@
 
 10. **Natural speech rhythm**: No hard word-count constraint. The guidance is conversational: deliver your point well, pass the ball, keep it dynamic. Silence is better than noise.
 
-11. **Personas in `participant-agents/` with template system**: Non-underscore files are AI-Agent entry points with YAML frontmatter and undergo template marker resolution (`@include`, `@echo`, `@foreach`). Underscore-prefix files serve special roles. System prompt construction: Participant-Agents get `_base-prefix.md` + `_agents-prefix.md` + resolved agent file; the Conversation-Manager-Agent gets `_base-prefix.md` + resolved `_conversation-manager.md`.
+11. **Personas in `participant-agents/` with template system**: Non-underscore files are AI-Agent entry points with YAML frontmatter and undergo template marker resolution (`@include`, `@echo`, `@foreach`). Underscore-prefix files serve special roles. System prompt construction: Participant-Agents get `_base-prefix.md` + `_agents-prefix.md` + resolved agent file; the Orchestrator-Agent gets `_base-prefix.md` + resolved `_orchestrator.md`.
 
 12. **Execution from root directory**: The deliberation software is developed here (`_DELIBERATION-ROOM/`) but accesses the root project directory (`../`), giving agents access to commentary files, scripts, and the full CLAUDE.md.
 
@@ -44,7 +44,7 @@
 
 21. **Dynamic participant selection per meeting**: Participant-Agents discovered dynamically from `participant-agents/*.md`. Director selects per-meeting, selection is immutable. Adding a new agent requires only a `.md` file.
 
-22. **Attention button**: In-memory flag (`attentionRequested`) that forces the Director as next speaker. Defense-in-depth: orchestrator overrides the manager's response if the flag is set.
+22. **Attention button**: In-memory flag (`attentionRequested`) that forces the Director as next speaker. Defense-in-depth: orchestrator overrides the orchestrator's response if the flag is set.
 
 23. **Per-message in-meeting rollback**: 6-phase rollback flow: (1) abort active cycles, (2) git reset session branch, (3) perush rollback on main, (4) recreate all agent sessions, (5) commit recovery, (6) inline edit. All sessions recreated because all have accumulated invalid context.
 

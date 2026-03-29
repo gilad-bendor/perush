@@ -302,4 +302,4 @@ Or simply restart the server — sessions are lost on restart anyway.
 
 ### Stub SDK Deliberation Loop Runs Forever
 
-With the stub SDK, the manager always picks the same speaker and the loop never pauses for human turn. The loop will run indefinitely generating `"תגובת הסוכן."` messages. End the meeting via `/end` command when you've seen enough.
+With the stub SDK, the orchestrator always picks the same speaker and the loop never pauses for human turn. The loop will run indefinitely generating `"תגובת הסוכן."` messages. End the meeting via `/end` command when you've seen enough.

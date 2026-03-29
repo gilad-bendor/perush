@@ -65,8 +65,8 @@ Clicking the rollback icon opens a **modal dialog** overlaid on the deliberation
 - Notify the Director via `rollback-progress` if changes were stashed.
 
 **Phase 5 — Session Recovery**:
-- **All agent sessions are recreated** — not just the ones that spoke after the rollback point. All sessions have accumulated invalid context (private assessments, manager decisions, internal reasoning from discarded cycles). Clean sessions from the rolled-back transcript are the safest approach.
-- For each agent (all Participant-Agents + Conversation-Manager-Agent):
+- **All agent sessions are recreated** — not just the ones that spoke after the rollback point. All sessions have accumulated invalid context (private assessments, orchestrator decisions, internal reasoning from discarded cycles). Clean sessions from the rolled-back transcript are the safest approach.
+- For each agent (all Participant-Agents + Orchestrator-Agent):
   1. Create a new Agent SDK session (same persona, same model).
   2. Feed the conversation transcript from the rolled-back `meeting.yaml` as initial context.
   3. Capture the new session (move+symlink into worktree).
