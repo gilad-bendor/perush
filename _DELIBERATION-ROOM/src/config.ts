@@ -92,6 +92,9 @@ export const ROOT_PROJECT_DIR = resolve(DELIBERATION_DIR, "..");
 /** Participant-agent persona files */
 export const PARTICIPANT_AGENTS_DIR = join(DELIBERATION_DIR, "participant-agents");
 
+/** Prompt template files (assessment, speech, selection, etc.) */
+export const PROMPTS_DIR = join(DELIBERATION_DIR, "prompts");
+
 /** Worktree mount point for active meetings (gitignored on main) */
 export const MEETINGS_DIR = join(DELIBERATION_DIR, ".meetings");
 
@@ -216,10 +219,10 @@ export const IMPORTANCE_SCALE_MAX = 10;
 // ---------------------------------------------------------------------------
 
 /** Participant-Agent-only prefix (introduces fellow participants via @foreach) */
-export const AGENTS_PREFIX_FILE = "_agents-prefix.md";
+export const AGENTS_PREFIX_FILE = "system-prompt-agents-prefix.md";
 
 /** Orchestrator-Agent file */
-export const ORCHESTRATOR_FILE = "_orchestrator.md";
+export const ORCHESTRATOR_FILE = "system-prompt-orchestrator.md";
 
 // ---------------------------------------------------------------------------
 // Participant tools

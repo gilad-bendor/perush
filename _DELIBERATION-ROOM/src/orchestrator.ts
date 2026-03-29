@@ -750,9 +750,7 @@ async function buildTranscriptPrompt(meeting: Meeting): Promise<string> {
     parts.push(`\n${speakerLabel}: ${cycle.speech.content}`);
   }
 
-  const prompt = await resolvePromptTemplate("_transcript-prompt.md", {
-    transcriptContent: parts.join("\n"),
-  });
+  const prompt = parts.join("\n");
   return withStubResponse(prompt, "שחזור סשן — מוכן להמשיך.");
 }
 
@@ -808,12 +806,12 @@ async function buildAssessmentPrompt(lastSpeaker: SpeakerId, lastContent: string
     assessmentEndDelimiter: ASSESSMENT_END_DELIMITER,
   };
   if (vibe) ctx.vibe = vibe;
-  const prompt = await resolvePromptTemplate("_assessment-prompt.md", ctx);
+  const prompt = await resolvePromptTemplate("agent-assessment-prompt.md", ctx);
   return withStubResponse(prompt, `חשבתי על הנקודה הזו לעומק.\n\n---התחלת הערכה להמשך הדיון---\nאני: 5\nיש לי כמה הערות לגבי המילון.\n---סיום הערכה להמשך הדיון---`);
 }
 
 async function buildSpeechPrompt(vibe: string): Promise<string> {
-  const prompt = await resolvePromptTemplate("_speech-prompt.md", { vibe });
+  const prompt = await resolvePromptTemplate("agent-speech-prompt.md", { vibe });
   return withStubResponse(prompt, "תגובת הסוכן.");
 }
 
@@ -852,7 +850,7 @@ async function buildSelectionPrompt(
   };
   if (attentionRequested) ctx.attentionLine = "true";
 
-  const prompt = await resolvePromptTemplate("_selection-prompt.md", ctx);
+  const prompt = await resolvePromptTemplate("orchestrator-select-agent-prompt.md", ctx);
   return withStubResponse(prompt, `נראה שיש התלבטות בין כמה משתתפים.\n\n${RECOMMENDATION_START_DELIMITER}\nהדובר הבא: ${firstAgentHebrew}\nהדיון זורם — כל צד מוסיף שכבה.\n${RECOMMENDATION_END_DELIMITER}`);
 }
 
@@ -876,7 +874,7 @@ async function buildSelectionRetryPrompt(reason: string): Promise<string> {
     "המנחה",
   ].join("/");
 
-  const prompt = await resolvePromptTemplate("_selection-retry-prompt.md", {
+  const prompt = await resolvePromptTemplate("orchestrator-select-agent-prompt-retry.md", {
     reason,
     speakerOptions,
     recommendationStartDelimiter: RECOMMENDATION_START_DELIMITER,

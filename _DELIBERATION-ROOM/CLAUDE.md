@@ -92,8 +92,8 @@ Each AI-Agent runs as a persistent Agent SDK session with `resume: sessionId`. O
 
 | Session | Model | Tools | System Prompt |
 |---------|-------|-------|---------------|
-| Participant-Agents | Opus | `["Read", "Bash", "Grep", "Glob"]` | `_base-prefix.md` + dictionary + `_agents-prefix.md` + resolved persona |
-| Orchestrator | Sonnet | `[]` | `_base-prefix.md` + dictionary + resolved `_orchestrator.md` |
+| Participant-Agents | Opus | `["Read", "Bash", "Grep", "Glob"]` | `system-prompt-base-prefix.md` + dictionary + `system-prompt-agents-prefix.md` + resolved persona |
+| Orchestrator | Sonnet | `[]` | `system-prompt-base-prefix.md` + dictionary + resolved `system-prompt-orchestrator.md` |
 
 ### Session Recovery
 
@@ -201,13 +201,19 @@ _DELIBERATION-ROOM/
 ├── tailwind.config.ts
 ├── playwright-test.ts             ← Playwright CLI helper
 ├── participant-agents/            ← AI-Agent persona files
-│   ├── _base-prefix.md            ← shared prefix for ALL AI-Agents
-│   ├── _agents-prefix.md          ← Participant-Agent prefix (introduces fellow Participants)
-│   ├── _orchestrator.md           ← Manager orchestration logic
 │   ├── milo.md                    ← Dictionary Purist
 │   ├── archi.md                   ← Architect
 │   ├── kashia.md                  ← Skeptic
 │   └── barak.md                   ← Ideator
+├── prompts/                       ← Prompt templates (resolved by preprocess)
+│   ├── README.md
+│   ├── system-prompt-base-prefix.md        ← shared prefix for ALL AI-Agents
+│   ├── system-prompt-agents-prefix.md      ← Participant-Agent prefix (introduces fellow Participants)
+│   ├── system-prompt-orchestrator.md       ← Orchestrator system prompt
+│   ├── agent-assessment-prompt.md          ← per-cycle assessment prompt
+│   ├── agent-speech-prompt.md              ← per-cycle speech prompt
+│   ├── orchestrator-select-agent-prompt.md       ← orchestrator selection prompt
+│   └── orchestrator-select-agent-prompt-retry.md ← orchestrator selection retry
 ├── scripts/
 │   ├── active-logs-path.sh        ← path to most recent log file
 │   ├── active-logs-full.sh        ← print/follow full log content

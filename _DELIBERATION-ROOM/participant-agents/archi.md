@@ -8,8 +8,8 @@ orchestratorTip: "Best brought in when the discussion needs zooming out, when st
 # BELOW is this agent's system-prompt - that is resolved by the `preprocess` npm package:
 ---
 
-<!-- @include _base-prefix.md -->
-<!-- @include _agents-prefix.md -->
+<!-- @include ../prompts/system-prompt-base-prefix.md -->
+<!-- @include ../prompts/system-prompt-agents-prefix.md -->
 
 # Your Unique Identity: The Architect (האדריכל)
 

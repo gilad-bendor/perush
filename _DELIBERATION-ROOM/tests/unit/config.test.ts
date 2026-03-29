@@ -239,8 +239,8 @@ describe("Stub mode", () => {
 
 describe("Agent persona file config", () => {
   test("file names are correct", () => {
-    expect(AGENTS_PREFIX_FILE).toBe("_agents-prefix.md");
-    expect(ORCHESTRATOR_FILE).toBe("_orchestrator.md");
+    expect(AGENTS_PREFIX_FILE).toBe("system-prompt-agents-prefix.md");
+    expect(ORCHESTRATOR_FILE).toBe("system-prompt-orchestrator.md");
   });
 });
 

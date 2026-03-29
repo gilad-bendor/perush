@@ -22,7 +22,7 @@
 
 10. **Natural speech rhythm**: No hard word-count constraint. The guidance is conversational: deliver your point well, pass the ball, keep it dynamic. Silence is better than noise.
 
-11. **Personas in `participant-agents/` with template system**: Non-underscore files are AI-Agent entry points with YAML frontmatter and undergo template marker resolution (`@include`, `@echo`, `@foreach`). Underscore-prefix files serve special roles. System prompt construction: Participant-Agents get `_base-prefix.md` + `_agents-prefix.md` + resolved agent file; the Orchestrator-Agent gets `_base-prefix.md` + resolved `_orchestrator.md`.
+11. **Personas in `participant-agents/` with template system**: Agent persona files in `participant-agents/` are AI-Agent entry points with YAML frontmatter and undergo template marker resolution (`@include`, `@echo`, `@foreach`). Shared prompt templates live in `prompts/`. System prompt construction: Participant-Agents get `system-prompt-base-prefix.md` + `system-prompt-agents-prefix.md` + resolved agent file; the Orchestrator-Agent gets `system-prompt-base-prefix.md` + resolved `system-prompt-orchestrator.md`.
 
 12. **Execution from root directory**: The deliberation software is developed here (`_DELIBERATION-ROOM/`) but accesses the root project directory (`../`), giving agents access to commentary files, scripts, and the full CLAUDE.md.
 

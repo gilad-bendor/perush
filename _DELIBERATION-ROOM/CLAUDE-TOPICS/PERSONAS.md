@@ -4,21 +4,21 @@
 
 ## Persona Files
 
-All AI-Agent personas live in `participant-agents/`:
+Agent persona files live in `participant-agents/`; shared prompt templates live in `prompts/`:
 
 | File | Name | Type | Role |
 |------|------|------|------|
-| `_base-prefix.md` | — | *(shared prefix)* | Prepended to ALL AI-Agents — project context, common instructions, dictionary injection point |
-| `_agents-prefix.md` | — | *(shared prefix)* | Prepended to Participant-Agents only — introduces fellow Participants using `${each:participant}` markers |
-| `milo.md` | **Milo / מיילו** | Participant-Agent | Dictionary Purist (המילונאי) — word-level dictionary fidelity |
-| `archi.md` | **Archi / ארצ'י** | Participant-Agent | Architect (האדריכל) — structural coherence across the narrative |
-| `kashia.md` | **Kashia / קשיא** | Participant-Agent | Skeptic (המבקר) — intellectual honesty, degrees of freedom, reverse-engineering test |
-| `barak.md` | **Barak / ברק** | Participant-Agent | Ideator (ההברקה) — divergent insight, rare speaker by design |
-| `_orchestrator.md` | — | Orchestrator-Agent | The orchestration logic (not a Participant) |
+| `prompts/system-prompt-base-prefix.md` | — | *(shared prefix)* | Prepended to ALL AI-Agents — project context, common instructions, dictionary injection point |
+| `prompts/system-prompt-agents-prefix.md` | — | *(shared prefix)* | Prepended to Participant-Agents only — introduces fellow Participants using `${each:participant}` markers |
+| `participant-agents/milo.md` | **Milo / מיילו** | Participant-Agent | Dictionary Purist (המילונאי) — word-level dictionary fidelity |
+| `participant-agents/archi.md` | **Archi / ארצ'י** | Participant-Agent | Architect (האדריכל) — structural coherence across the narrative |
+| `participant-agents/kashia.md` | **Kashia / קשיא** | Participant-Agent | Skeptic (המבקר) — intellectual honesty, degrees of freedom, reverse-engineering test |
+| `participant-agents/barak.md` | **Barak / ברק** | Participant-Agent | Ideator (ההברקה) — divergent insight, rare speaker by design |
+| `prompts/system-prompt-orchestrator.md` | — | Orchestrator-Agent | The orchestration logic (not a Participant) |
 
 **Naming convention**:
-- Files with an `_` prefix are special (shared prefix, orchestration logic). They are NOT direct agent files — they serve as includes or shared content.
-- Files without `_` are agent files that undergo template processing and have YAML frontmatter.
+- Prompt templates (shared prefixes, per-cycle prompts, orchestrator system prompt) live in `prompts/`.
+- Agent persona files in `participant-agents/` undergo template processing and have YAML frontmatter.
 - Each Participant-Agent has an **English name** and a **Hebrew name** (phonetically similar).
 - The Orchestrator-Agent has no public name — it "lives in the shadows."
 - The Director is known as **"The Director"** / **"המנחה"**.
@@ -40,7 +40,7 @@ Fields:
 - **`englishName`** / **`hebrewName`**: Display names, used for speaker labels, UI, and template resolution.
 - **`orchestratorIntro`**: One-sentence profile for the Orchestrator. Written from the orchestrator's perspective.
 - **`orchestratorTip`**: Guidance for the orchestrator on when this agent is most valuable.
-- **`role`** (optional): Special role identifier. Currently only `_orchestrator.md` uses `role: orchestrator`.
+- **`role`** (optional): Special role identifier. Currently only `system-prompt-orchestrator.md` uses `role: orchestrator`.
 
 ## Agent Discovery
 
@@ -87,17 +87,17 @@ Available directives (HTML-comment syntax):
 2. Read file → gray-matter strips frontmatter
 3. buildPreprocessContext(): builds context with dictionary, participant loops
 4. preprocessLib.preprocess(content, context, {type:"html", srcDir:PARTICIPANT_AGENTS_DIR})
-   ↳ resolves <!-- @include _base-prefix.md --> → inlines base with <!-- @echo dictionary -->
-   ↳ resolves <!-- @include _agents-prefix.md --> → expands @foreach with milo excluded
+   ↳ resolves <!-- @include ../prompts/system-prompt-base-prefix.md --> → inlines base with <!-- @echo dictionary -->
+   ↳ resolves <!-- @include ../prompts/system-prompt-agents-prefix.md --> → expands @foreach with milo excluded
    ↳ any remaining @echo markers in persona content
 5. Returns fully resolved system prompt
 ```
 
-**Example flow** for `_orchestrator.md`:
+**Example flow** for `system-prompt-orchestrator.md`:
 ```
-1. resolveTemplate("_orchestrator.md", meetingParticipants)
+1. resolveTemplate("system-prompt-orchestrator.md", meetingParticipants, undefined, PROMPTS_DIR)
 2. Same single-pass preprocess call
-   ↳ resolves <!-- @include _base-prefix.md -->
+   ↳ resolves <!-- @include system-prompt-base-prefix.md -->
    ↳ expands <!-- @foreach $p in participantOrchestratorEntries -->
 3. Returns fully resolved system prompt
 ```
@@ -108,15 +108,15 @@ Available directives (HTML-comment syntax):
 
 **Participant-Agent prompt structure** (declared in each agent .md file):
 ```
-<!-- @include _base-prefix.md -->      ← common instructions + dictionary (@echo dictionary)
-<!-- @include _agents-prefix.md -->    ← fellow participants (@foreach, excludes self)
+<!-- @include ../prompts/system-prompt-base-prefix.md -->      ← common instructions + dictionary (@echo dictionary)
+<!-- @include ../prompts/system-prompt-agents-prefix.md -->    ← fellow participants (@foreach, excludes self)
 
 # Your Unique Identity: ...            ← persona-specific content
 ```
 
-**Orchestrator prompt structure** (declared in `_orchestrator.md`):
+**Orchestrator prompt structure** (declared in `prompts/system-prompt-orchestrator.md`):
 ```
-<!-- @include _base-prefix.md -->      ← common instructions + dictionary
+<!-- @include system-prompt-base-prefix.md -->      ← common instructions + dictionary
 # Your Unique Identity: ...            ← orchestrator-specific content with @foreach
 ```
 

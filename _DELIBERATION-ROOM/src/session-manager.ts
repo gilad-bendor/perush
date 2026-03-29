@@ -20,6 +20,7 @@ import type { AgentDefinition, AgentId, ProcessEventKind } from "./types";
 import { AgentDefinitionSchema } from "./types";
 import {
   PARTICIPANT_AGENTS_DIR,
+  PROMPTS_DIR,
   ROOT_CLAUDE_MD,
   ORCHESTRATOR_FILE,
   PARTICIPANT_MODEL,
@@ -152,14 +153,14 @@ function buildPreprocessContext(
     dictionary,
   };
 
-  // Participant entries for @foreach in _agents-prefix.md
+  // Participant entries for @foreach in system-prompt-agents-prefix.md
   ctx.participantAgentEntries = toForEachContext(
     filteredParticipants.map(p =>
       `- **${p.englishName} / ${p.hebrewName}**: ${p.orchestratorIntro}`
     )
   );
 
-  // Participant entries for @foreach in _orchestrator.md
+  // Participant entries for @foreach in system-prompt-orchestrator.md
   ctx.participantOrchestratorEntries = toForEachContext(
     filteredParticipants.map(p =>
       `- **${p.englishName} / ${p.hebrewName}**: ${p.orchestratorIntro}. *${p.orchestratorTip}.*`
@@ -199,23 +200,25 @@ export async function extractDictionary(): Promise<string> {
  * Resolve all template directives in an agent file via a single preprocess pass.
  *
  * The file may use any preprocess HTML directives:
- *   <!-- @include filename.md -->        — inline another file from participant-agents/
+ *   <!-- @include filename.md -->        — inline another file (relative to the file's directory)
  *   <!-- @echo EnglishName -->           — substitute a frontmatter variable
  *   <!-- @echo dictionary -->            — inject the full dictionary text
  *   <!-- @foreach $p in participantAgentEntries -->$p\n<!-- @endfor -->
  *   <!-- @foreach $p in participantOrchestratorEntries -->$p\n<!-- @endfor -->
  *
  * Included files are processed recursively with the same context, so
- * _base-prefix.md and _agents-prefix.md can be included from agent persona files
- * and will have full access to all context variables.
+ * system-prompt-base-prefix.md and system-prompt-agents-prefix.md can be included
+ * from agent persona files and will have full access to all context variables.
  */
 export async function resolveTemplate(
   filename: string,
   meetingParticipants: AgentDefinition[],
   /** Exclude this agent from participantAgentEntries / participantOrchestratorEntries loops */
   excludeAgentId?: AgentId,
+  /** Base directory for the template file (defaults to PARTICIPANT_AGENTS_DIR) */
+  baseDir: string = PARTICIPANT_AGENTS_DIR,
 ): Promise<string> {
-  const filePath = join(PARTICIPANT_AGENTS_DIR, filename);
+  const filePath = join(baseDir, filename);
   const raw = await readFile(filePath, "utf-8");
   const { content, data: frontmatter } = matter(raw);
 
@@ -232,7 +235,7 @@ export async function resolveTemplate(
 
   return preprocessLib.preprocess(content, context, {
     type: "html",
-    srcDir: PARTICIPANT_AGENTS_DIR,
+    srcDir: baseDir,
   }).trim();
 }
 
@@ -243,18 +246,18 @@ export async function resolveTemplate(
  * dictionary, and participant loops), this is a lightweight resolver for
  * per-cycle prompts (assessment, speech, selection, etc.).
  *
- * Template files live in participant-agents/ and use the same preprocess
+ * Template files live in prompts/ and use the same preprocess
  * directives: <!-- @echo varName -->, <!-- @ifdef varName -->...<!-- @endif -->.
  */
 export async function resolvePromptTemplate(
   filename: string,
   context: Record<string, string>,
 ): Promise<string> {
-  const filePath = join(PARTICIPANT_AGENTS_DIR, filename);
+  const filePath = join(PROMPTS_DIR, filename);
   const raw = await readFile(filePath, "utf-8");
   return preprocessLib.preprocess(raw, context, {
     type: "html",
-    srcDir: PARTICIPANT_AGENTS_DIR,
+    srcDir: PROMPTS_DIR,
   }).trim();
 }
 
@@ -262,11 +265,11 @@ export async function resolvePromptTemplate(
  * Build the complete system prompt for an agent.
  *
  * Each agent persona file starts with:
- *   <!-- @include _base-prefix.md -->
- *   <!-- @include _agents-prefix.md -->   (Participant-Agents only)
+ *   <!-- @include ../prompts/system-prompt-base-prefix.md -->
+ *   <!-- @include ../prompts/system-prompt-agents-prefix.md -->   (Participant-Agents only)
  *
- * _orchestrator.md starts with:
- *   <!-- @include _base-prefix.md -->
+ * system-prompt-orchestrator.md (in prompts/) starts with:
+ *   <!-- @include system-prompt-base-prefix.md -->
  *
  * A single resolveTemplate() call handles all includes, variables, and loops.
  */
@@ -276,7 +279,7 @@ export async function buildSystemPrompt(
 ): Promise<string> {
   logInfo("session-manager", `buildSystemPrompt: ${agentId}`);
   if (agentId === "orchestrator") {
-    return resolveTemplate(ORCHESTRATOR_FILE, meetingParticipants);
+    return resolveTemplate(ORCHESTRATOR_FILE, meetingParticipants, undefined, PROMPTS_DIR);
   }
   const agentDef = meetingParticipants.find(a => a.id === agentId);
   const filename = agentDef ? basename(agentDef.filePath) : `${agentId}.md`;

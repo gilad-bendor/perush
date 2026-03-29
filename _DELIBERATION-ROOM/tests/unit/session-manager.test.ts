@@ -29,6 +29,7 @@ import {
 import { resetStubState } from "../../src/stub-sdk";
 import {
   PARTICIPANT_AGENTS_DIR,
+  PROMPTS_DIR,
   AGENTS_PREFIX_FILE,
   ORCHESTRATOR_FILE,
 } from "../../src/config";
@@ -144,8 +145,8 @@ describe("resolveTemplate", () => {
     allAgents = await discoverAgents();
   });
 
-  test("resolves ${each:participant} in _agents-prefix.md", async () => {
-    const resolved = await resolveTemplate(AGENTS_PREFIX_FILE, allAgents);
+  test("resolves ${each:participant} in agents-prefix", async () => {
+    const resolved = await resolveTemplate(AGENTS_PREFIX_FILE, allAgents, undefined, PROMPTS_DIR);
 
     // Should contain each agent's name
     expect(resolved).toContain("Milo / מיילו");
@@ -157,7 +158,7 @@ describe("resolveTemplate", () => {
 
   test("scopes participants to meeting selection", async () => {
     const subset = allAgents.filter(a => a.id === "milo" || a.id === "archi");
-    const resolved = await resolveTemplate(AGENTS_PREFIX_FILE, subset);
+    const resolved = await resolveTemplate(AGENTS_PREFIX_FILE, subset, undefined, PROMPTS_DIR);
 
     expect(resolved).toContain("Milo / מיילו");
     expect(resolved).toContain("Archi / ארצ'י");
@@ -165,8 +166,8 @@ describe("resolveTemplate", () => {
     expect(resolved).not.toContain("Barak / ברק");
   });
 
-  test("resolves ${each:participant} in _orchestrator.md", async () => {
-    const resolved = await resolveTemplate(ORCHESTRATOR_FILE, allAgents);
+  test("resolves ${each:participant} in orchestrator prompt", async () => {
+    const resolved = await resolveTemplate(ORCHESTRATOR_FILE, allAgents, undefined, PROMPTS_DIR);
 
     // Should contain each agent with orchestrator-specific fields
     expect(resolved).toContain("Milo / מיילו");
@@ -174,8 +175,8 @@ describe("resolveTemplate", () => {
     expect(resolved).toContain("Dictionary Purist");
   });
 
-  test("resolves participantOrchestratorEntries in _orchestrator.md", async () => {
-    const resolved = await resolveTemplate(ORCHESTRATOR_FILE, allAgents);
+  test("resolves participantOrchestratorEntries in orchestrator prompt", async () => {
+    const resolved = await resolveTemplate(ORCHESTRATOR_FILE, allAgents, undefined, PROMPTS_DIR);
 
     // Each agent should appear with orchestrator-specific format
     expect(resolved).toContain("Milo / מיילו");
@@ -188,7 +189,7 @@ describe("resolveTemplate", () => {
 
   test("participantOrchestratorEntries is scoped to meeting participants", async () => {
     const subset = allAgents.filter(a => a.id === "milo" || a.id === "kashia");
-    const resolved = await resolveTemplate(ORCHESTRATOR_FILE, subset);
+    const resolved = await resolveTemplate(ORCHESTRATOR_FILE, subset, undefined, PROMPTS_DIR);
 
     expect(resolved).toContain("Milo / מיילו");
     expect(resolved).toContain("Kashia / קשיא");
@@ -201,7 +202,7 @@ describe("resolveTemplate", () => {
 
   test("excludes the agent itself when excludeAgentId is set", async () => {
     // When building milo's template, milo shouldn't appear in {each:participant}
-    const resolved = await resolveTemplate(AGENTS_PREFIX_FILE, allAgents, "milo");
+    const resolved = await resolveTemplate(AGENTS_PREFIX_FILE, allAgents, "milo", PROMPTS_DIR);
 
     // Should NOT contain Milo in the participant list
     expect(resolved).not.toContain("Milo / מיילו");
