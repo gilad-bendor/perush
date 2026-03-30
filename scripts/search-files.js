@@ -1,5 +1,20 @@
 #!/usr/bin/env node
 
+const usage=`
+    Usage: search-files.js [ --regexp ] "search string or regexp"
+    The --regexp flag enables JavaScript-flavor regular expression search.
+    Here are the normalizations that are applied on both the search string/regexp and the text being searched:
+      1. Normalize Sin and Shin from 2 Unicode characters to a single Unicode character
+      2. Replace Hebrew makaf (־) with standard hyphen (-)
+      3. Remove Hebrew points and accents
+      4. Replace final letters with standard letters
+    Examples:
+      ./scripts/search-files.js "מים"
+      ./scripts/search-files.js --regexp "מים.*ארץ"
+    Search for Biblical verse:
+      ./scripts/search-files.js --regexp "^> [^:]*: ארץ"
+`.replace(/\n    /g, '\n').trim()
+
 const fs = require('fs');
 const path = require('path');
 
@@ -49,18 +64,7 @@ if (require.main === module) {
 // ----------------------------------------------------------------------------------------------------
 
 function showUsage() {
-    console.error('Usage: search-files.js [ --regexp ] "search string or regexp"');
-    console.error('The --regexp flag enables JavaScript-flavor regular expression search.');
-    console.error('Here are the normalizations that are applied on both the search string/regexp and the text being searched:');
-    console.error('  1. Normalize Sin and Shin from 2 Unicode characters to a single Unicode character');
-    console.error('  2. Replace Hebrew makaf (־) with standard hyphen (-)');
-    console.error('  3. Remove Hebrew points and accents');
-    console.error('  4. Replace final letters with standard letters');
-    console.error('Examples:');
-    console.error('  ./scripts/search-files.js "מים"');
-    console.error('  ./scripts/search-files.js --regexp "מים.*ארץ"');
-    console.error('Search for Biblical verse:');
-    console.error('  ./scripts/search-files.js --regexp "^> [^:]*: ארץ"');
+    console.error(usage);
     process.exit(1);
 }
 
