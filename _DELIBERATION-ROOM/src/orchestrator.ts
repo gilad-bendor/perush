@@ -785,7 +785,7 @@ function extractRecommendation(response: string): { nextSpeakerRaw: string; vibe
   const lines = block.split("\n");
 
   // Parse first line: "הדובר הבא: <name>"
-  const firstLine = lines[0]?.trim() ?? "";
+  const firstLine = lines[0]?.trim()?.replace(/\*/g, '') ?? ""; // removing Markdown emphasis for more lenient parsing
   const speakerMatch = firstLine.match(/הדובר.*?:\s*(.+)/);
   if (!speakerMatch) {
     return { error: `השורה הראשונה לא בפורמט הנכון (צפוי: "הדובר הבא: <שם>"): "${firstLine}"` };

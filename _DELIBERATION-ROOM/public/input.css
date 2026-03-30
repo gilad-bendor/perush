@@ -334,10 +334,6 @@
     @apply border rounded p-2 text-xs space-y-1 !mt-0;
   }
 
-  .process-wrapper {
-    @apply mb-2;
-  }
-
   /* --------------------------------------------------------------- */
   /* Process Events                                                  */
   /* --------------------------------------------------------------- */
@@ -387,15 +383,11 @@
   /* --------------------------------------------------------------- */
 
   .assessment-group {
-    @apply border border-stone-300 rounded p-2 mb-2;
+    @apply border border-stone-300 rounded p-2 mb-2 flex flex-wrap gap-1.5 items-center;
   }
 
   .assessment-group-header {
-    @apply text-[10px] text-stone-400 mb-1 font-medium;
-  }
-
-  .assessment-labels {
-    @apply flex flex-wrap gap-1.5;
+    @apply text-[10px] text-stone-400 font-medium;
   }
 
   /* --------------------------------------------------------------- */

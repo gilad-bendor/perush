@@ -272,8 +272,8 @@ bun install
 bun run dev-model-default   # Costly: only the user is allowed to execute this 
 bun run dev-model-haiku     # ClaudeCode is allowed to execute this
 
-# Run unit tests
-bun test
+# Run unit tests — ALWAYS use this exact pattern (captures full output for investigation without re-running):
+TMP=$(mktemp /tmp/bun-test.XXXXX); bun test 2>&1 | tee "$TMP" | tail -5; echo "Full output file: $TMP"
 
 # Run real SDK smoke test (costs ~$0.10, requires claude CLI auth)
 bun run test:smoke

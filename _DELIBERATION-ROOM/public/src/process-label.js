@@ -271,10 +271,7 @@ export class AssessmentGroup {
    */
   addLabel(label) {
     this.labels.set(label.processId, label);
-    const container = this.el.querySelector(".assessment-labels");
-    if (container) {
-      container.appendChild(label.el);
-    }
+    this.el.appendChild(label.el);
   }
 
   _buildElement() {
@@ -283,12 +280,8 @@ export class AssessmentGroup {
 
     const header = document.createElement("div");
     header.className = "assessment-group-header";
-    header.textContent = `📊 הערכות — מחזור ${this.cycleNumber}`;
+    header.textContent = `מחזור ${this.cycleNumber}`;
     el.appendChild(header);
-
-    const labels = document.createElement("div");
-    labels.className = "assessment-labels";
-    el.appendChild(labels);
 
     return el;
   }

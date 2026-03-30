@@ -224,21 +224,13 @@ export class ConversationView {
     const label = new ProcessLabel(processId, processKind, agent, displayName);
     this.processLabels.set(processId, label);
 
-    if (processKind === "assessment") {
-      // Group assessments together
-      if (!this.assessmentGroups.has(cycleNumber)) {
-        const group = new AssessmentGroup(cycleNumber);
-        this.assessmentGroups.set(cycleNumber, group);
-        this.container.appendChild(group.el);
-      }
-      this.assessmentGroups.get(cycleNumber).addLabel(label);
-    } else {
-      // Orchestrator selection or agent speech — standalone in the timeline
-      const wrapper = document.createElement("div");
-      wrapper.className = "process-wrapper";
-      wrapper.appendChild(label.el);
-      this.container.appendChild(wrapper);
+    // All process kinds go into the same cycle group
+    if (!this.assessmentGroups.has(cycleNumber)) {
+      const group = new AssessmentGroup(cycleNumber);
+      this.assessmentGroups.set(cycleNumber, group);
+      this.container.appendChild(group.el);
     }
+    this.assessmentGroups.get(cycleNumber).addLabel(label);
     this._scrollToBottom();
   }
 
@@ -276,35 +268,16 @@ export class ConversationView {
   renderPersistedProcesses(processes, cycleNumber) {
     if (!processes || processes.length === 0) return;
 
-    // Group assessments
-    const assessments = processes.filter(p => p.processKind === "assessment");
-    const others = processes.filter(p => p.processKind !== "assessment");
-
-    if (assessments.length > 0) {
-      const group = new AssessmentGroup(cycleNumber);
-      for (const proc of assessments) {
-        const displayName = this.agentDisplayName(proc.agent);
-        const label = new ProcessLabel(proc.processId, proc.processKind, proc.agent, displayName);
-        label.loadEvents(proc.events);
-        label.finalize();
-        group.addLabel(label);
-        this.processLabels.set(proc.processId, label);
-      }
-      this.container.appendChild(group.el);
-    }
-
-    for (const proc of others) {
+    const group = new AssessmentGroup(cycleNumber);
+    for (const proc of processes) {
       const displayName = this.agentDisplayName(proc.agent);
       const label = new ProcessLabel(proc.processId, proc.processKind, proc.agent, displayName);
       label.loadEvents(proc.events);
       label.finalize();
+      group.addLabel(label);
       this.processLabels.set(proc.processId, label);
-
-      const wrapper = document.createElement("div");
-      wrapper.className = "process-wrapper";
-      wrapper.appendChild(label.el);
-      this.container.appendChild(wrapper);
     }
+    this.container.appendChild(group.el);
   }
 
   // ---- Private ---------------------------------------------------------------

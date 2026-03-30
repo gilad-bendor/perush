@@ -274,39 +274,82 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
   const output = stdoutText.trim();
   if (!output) return [];
 
-  const summaries: MeetingSummary[] = [];
+  // Parse branch listing into raw entries
+  const rawEntries = output.split("\n")
+    .map(line => {
+      const [branch, date, lastCommitMsg] = line.split("|");
+      if (!branch) return null;
+      return { branch, date: date || "", lastCommitMsg: lastCommitMsg || "" };
+    })
+    .filter((e): e is NonNullable<typeof e> => e !== null);
 
-  for (const line of output.split("\n")) {
-    const [branch, date, lastCommitMsg] = line.split("|");
-    if (!branch) continue;
+  // Batch-read all meeting.yaml files in a SINGLE git process using cat-file --batch.
+  // This avoids spawning N separate `git show` processes (which was the bottleneck).
+  const batchInput = rawEntries.map(e => `${e.branch}:meeting.yaml`).join("\n") + "\n";
+  const catFileProc = Bun.spawn(
+    ["git", "-C", gitRoot, "cat-file", "--batch"],
+    { stdin: "pipe", stdout: "pipe", stderr: "pipe" },
+  );
+  catFileProc.stdin.write(batchInput);
+  catFileProc.stdin.end();
+  const batchOutput = Buffer.from(await new Response(catFileProc.stdout).arrayBuffer());
+  await catFileProc.exited;
 
+  // Parse batch output: each entry is "<sha> blob <size>\n<content>\n" or "<ref> missing\n"
+  const yamlContents = new Map<string, string>();
+  let pos = 0;
+  for (const entry of rawEntries) {
+    const ref = `${entry.branch}:meeting.yaml`;
+    // Read the header line
+    const headerEnd = batchOutput.indexOf(0x0a, pos); // \n
+    if (headerEnd === -1) break;
+    const header = batchOutput.subarray(pos, headerEnd).toString();
+    pos = headerEnd + 1;
+
+    if (header.endsWith("missing")) continue;
+
+    // Parse "<sha> blob <size>"
+    const sizeStr = header.split(" ").pop();
+    const size = sizeStr ? parseInt(sizeStr, 10) : 0;
+    if (size > 0) {
+      yamlContents.set(ref, batchOutput.subarray(pos, pos + size).toString());
+      pos += size + 1; // +1 for the trailing \n after content
+    }
+  }
+
+  // Build summaries using the batch-read YAML content
+  const summaries: MeetingSummary[] = rawEntries.map(({ branch, date, lastCommitMsg }) => {
     const meetingId = branchNameToMeetingId(branch as BranchName);
-
-    // Try to read meeting metadata from the branch
     let title: string | undefined;
     let cycleCount: number | undefined;
     let participants: AgentId[] | undefined;
 
-    try {
-      const meetingYaml = await $`git -C ${gitRoot} show ${branch}:meeting.yaml`.quiet();
-      const meeting = yamlParse(meetingYaml.stdout.toString());
-      title = meeting.title;
-      cycleCount = meeting.cycles?.length;
-      participants = meeting.participants;
-    } catch {
-      // Branch might not have meeting.yaml yet — that's fine
+    const raw = yamlContents.get(`${branch}:meeting.yaml`);
+    if (raw) {
+      // Extract fields with regex — avoids full YAML parse (meeting.yaml can be huge)
+      const titleMatch = raw.match(/^title:\s*(.+)$/m);
+      title = titleMatch?.[1]?.trim().replace(/^["']|["']$/g, "");
+
+      const partMatch = raw.match(/^participants:\n((?:\s+-\s+.+\n)*)/m);
+      if (partMatch) {
+        participants = [...partMatch[1].matchAll(/^\s+-\s+(.+)$/gm)].map(m => m[1].trim() as AgentId);
+      }
+
+      // Count cycles by counting "- cycleNumber:" entries (much faster than parsing full YAML)
+      const cycleMatches = raw.match(/^  - cycleNumber:/gm);
+      cycleCount = cycleMatches?.length;
     }
 
-    summaries.push({
+    return {
       meetingId,
       branch,
-      lastActivity: date || "",
-      lastCommitMsg: lastCommitMsg || "",
+      lastActivity: date,
+      lastCommitMsg,
       title,
       cycleCount,
       participants,
-    });
-  }
+    };
+  });
 
   logInfo("meetings-db", `listMeetings: found ${summaries.length} meeting(s)`);
   return summaries;
