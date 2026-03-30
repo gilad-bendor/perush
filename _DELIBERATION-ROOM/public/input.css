@@ -11,6 +11,10 @@
 /* ================================================================= */
 
 @layer base {
+  html, :host {
+    @apply text-perush;
+  }
+
   body {
     @apply bg-stone-50 text-stone-900 font-serif min-h-screen;
   }
@@ -55,7 +59,7 @@
   }
 
   .form-input {
-    @apply w-full border border-stone-300 rounded px-3 py-2 text-base
+    @apply w-full border border-stone-300 rounded px-3 py-2 text-perush
            focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500;
   }
 
@@ -96,7 +100,7 @@
   }
 
   .participant-card-name {
-    @apply font-bold text-base;
+    @apply font-bold text-perush;
   }
 
   .participant-card-english {
@@ -213,7 +217,7 @@
   }
 
   .message-content {
-    @apply text-base whitespace-pre-wrap;
+    @apply text-perush whitespace-pre-wrap;
   }
 
   .rollback-icon {
@@ -237,7 +241,7 @@
   /* --------------------------------------------------------------- */
 
   .edit-textarea {
-    @apply w-full border border-amber-300 rounded px-3 py-2 text-base resize-y min-h-[4rem];
+    @apply w-full border border-amber-300 rounded px-3 py-2 text-perush resize-y min-h-[4rem];
   }
 
   .edit-actions {
@@ -305,7 +309,7 @@
   }
 
   .human-textarea {
-    @apply flex-1 border border-stone-300 rounded px-3 py-2 text-base resize-none
+    @apply flex-1 border border-stone-300 rounded px-3 py-2 text-perush resize-none
            focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500
            disabled:bg-stone-100 disabled:text-stone-400;
   }

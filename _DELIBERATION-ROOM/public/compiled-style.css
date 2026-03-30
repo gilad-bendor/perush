@@ -554,6 +554,11 @@ video {
   display: none;
 }
 
+html, :host {
+  font-size: 1rem;
+  line-height: 0.7;
+}
+
 body {
   min-height: 100vh;
   --tw-bg-opacity: 1;
@@ -674,7 +679,7 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 0.7;
 }
 
 .form-input:focus {
@@ -767,7 +772,7 @@ body {
 
 .participant-card-name {
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 0.7;
   font-weight: 700;
 }
 
@@ -1142,7 +1147,7 @@ body {
 .message-content {
   white-space: pre-wrap;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 0.7;
 }
 
 .rollback-icon {
@@ -1210,7 +1215,7 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 0.7;
 }
 
 .edit-actions {
@@ -1416,7 +1421,7 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 0.7;
 }
 
 .human-textarea:focus {

@@ -7,6 +7,9 @@ export default {
       fontFamily: {
         serif: ["David", "Narkisim", "Times New Roman", "serif"],
       },
+      fontSize: {
+        perush: ["1rem", { lineHeight: "0.7" }],
+      },
     },
   },
   plugins: [],

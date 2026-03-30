@@ -6,7 +6,7 @@
     "dev-model-haiku": "bun run dev:css & PARTICIPANT_MODEL=claude-haiku-4-5 ORCHESTRATOR_MODEL=claude-haiku-4-5 bun run dev:server",
     "dev-model-default": "bun run dev:css & bun run dev:server",
     "dev:server": "lsof -ti:4100 | xargs kill -9 2>/dev/null; bun --watch src/server.ts",
-    "dev:css": "bunx tailwindcss -i public/input.css -o public/compiled-style.css --watch",
+    "dev:css": "pkill -f 'tailwindcss -i public/input.css -o public/compiled-style.css --watch --poll' ; tail -f /dev/null | bunx tailwindcss -i public/input.css -o public/compiled-style.css --watch --poll",
     "build:css": "bunx tailwindcss -i public/input.css -o public/compiled-style.css --minify",
     "test": "bun test",
     "test:smoke": "REAL_SDK_TEST=true bun test tests/real-sdk-smoke.test.ts",
