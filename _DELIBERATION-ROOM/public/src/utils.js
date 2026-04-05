@@ -45,7 +45,7 @@ export function speakerColor(speakerId) {
  * @returns {string}
  */
 export function phaseDisplayName(phase) {
-  const names = {
+  /** @type {Record<Phase, string>} */ const names = {
     idle: "המתנה",
     assessing: "הערכה",
     selecting: "בחירה",
@@ -54,6 +54,20 @@ export function phaseDisplayName(phase) {
     "rolling-back": "חזרה",
   };
   return names[phase] || phase;
+}
+
+/**
+ * Sets `dir` on an element based on the first strong directional character in its text.
+ * Hebrew/Arabic → RTL, Latin → LTR. No-op if no strong character is found.
+ * @param {HTMLElement} el
+ */
+export function setDirectionByContent(el) {
+  const match = el.textContent?.match(/[\u0590-\u05FF\u0600-\u06FFa-zA-Z]/);
+  if (!match) return;
+  const code = match[0].charCodeAt(0);
+  const direction = code >= 0x0590 && code <= 0x06FF ? "rtl" : "ltr";
+  el.dir = direction;
+  el.style.direction = direction;
 }
 
 /**

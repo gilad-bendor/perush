@@ -6,7 +6,7 @@
  * prompt, thinking, text output, tool calls, and tool results.
  */
 
-import { speakerColor } from "./utils.js";
+import { speakerColor, setDirectionByContent } from "./utils.js";
 
 /** @typedef {import('../../src/types.ts').AgentId} AgentId */
 /** @typedef {import('../../src/types.ts').ProcessEventKind} ProcessEventKind */
@@ -180,7 +180,6 @@ export class ProcessLabel {
     if (!expansion) return;
 
     const div = document.createElement("div");
-    div.style.unicodeBidi = "plaintext";
 
     switch (evt.eventKind) {
       case "system-prompt":
@@ -189,6 +188,7 @@ export class ProcessLabel {
         const sysPromptText = document.createElement("pre");
         sysPromptText.className = "process-event-pre";
         sysPromptText.textContent = evt.content;
+        setDirectionByContent(sysPromptText);
         div.appendChild(sysPromptText);
         break;
       case "prompt":
@@ -197,6 +197,7 @@ export class ProcessLabel {
         const promptText = document.createElement("pre");
         promptText.className = "process-event-pre";
         promptText.textContent = evt.content;
+        setDirectionByContent(promptText);
         div.appendChild(promptText);
         break;
       case "thinking":
@@ -205,6 +206,7 @@ export class ProcessLabel {
         const thinkText = document.createElement("span");
         thinkText.className = "thinking-text";
         thinkText.textContent = evt.content;
+        setDirectionByContent(thinkText);
         div.appendChild(thinkText);
         // Track as the active thinking element for streaming accumulation
         this._activeThinkingEl = div;
@@ -213,6 +215,7 @@ export class ProcessLabel {
       case "text":
         div.className = "process-event-text";
         div.textContent = evt.content;
+        setDirectionByContent(div);
         break;
       case "tool-call":
         div.className = "process-event-tool-call";
@@ -223,6 +226,7 @@ export class ProcessLabel {
         const inputPre = document.createElement("pre");
         inputPre.className = "process-event-code";
         inputPre.textContent = evt.toolInput || evt.content;
+        setDirectionByContent(inputPre);
         div.appendChild(inputPre);
         break;
       case "tool-result":
@@ -234,9 +238,12 @@ export class ProcessLabel {
         const resultPre = document.createElement("pre");
         resultPre.className = "process-event-code";
         resultPre.textContent = evt.content;
+        setDirectionByContent(resultPre);
         div.appendChild(resultPre);
         break;
     }
+
+    setDirectionByContent(div);
 
     expansion.appendChild(div);
     // Auto-scroll expansion to bottom

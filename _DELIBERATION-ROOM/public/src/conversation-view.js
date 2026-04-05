@@ -6,7 +6,7 @@
  * edit-after-rollback, and message fading for rollback preview.
  */
 
-import { querySelectorMust } from "./utils.js";
+import {querySelectorMust, setDirectionByContent} from "./utils.js";
 import { ProcessLabel, AssessmentGroup } from "./process-label.js";
 
 /** @typedef {import('../../src/types.ts').Meeting} Meeting */
@@ -146,7 +146,7 @@ export class ConversationView {
     const levelClass = level === "error" ? "system-message--error" : "system-message--info";
     el.className = `system-message ${levelClass}`;
     el.textContent = text;
-    el.style.unicodeBidi = "plaintext";
+    setDirectionByContent(el)
     this.container.appendChild(el);
     this._scrollToBottom();
   }
@@ -313,7 +313,7 @@ export class ConversationView {
     el.className = `message message-${speaker} ${color.bg} ${color.border}`;
     el.dataset.speaker = speaker;
     el.dataset.cycleNumber = String(cycleNumber);
-    el.style.unicodeBidi = "plaintext";
+    setDirectionByContent(el);
 
     // Header: speaker name + rollback icon (for human messages)
     const header = document.createElement("div");
@@ -343,7 +343,7 @@ export class ConversationView {
     // Content
     const contentEl = document.createElement("div");
     contentEl.className = `message-content ${color.text}`;
-    contentEl.style.unicodeBidi = "plaintext";
+    setDirectionByContent(contentEl);
     contentEl.textContent = content;
     el.appendChild(contentEl);
 

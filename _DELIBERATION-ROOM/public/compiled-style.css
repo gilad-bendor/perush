@@ -1994,11 +1994,11 @@ body {
   grid-area: conversation;
 }
 
-.deliberation-room .status-read-bar {
+.deliberation-room .status-read-bar   {
   grid-area: status-read;
 }
 
-.deliberation-room .human-input {
+.deliberation-room .human-input       {
   grid-area: input;
 }
 
