@@ -87,6 +87,7 @@ export interface OrchestratorEvents {
 let currentMeeting: Meeting | null = null;
 let currentWorktreePath: string | null = null;
 let currentPhase: Phase = "idle";
+let currentActiveSpeaker: SpeakerId | undefined = undefined;
 let attentionRequested = false;
 let meetingParticipantDefs: AgentDefinition[] = [];
 
@@ -136,6 +137,11 @@ export function setEventHandlers(handlers: Partial<OrchestratorEvents>): void {
 /** Get the current phase. */
 export function getPhase(): Phase {
   return currentPhase;
+}
+
+/** Get the active speaker (only meaningful during "speaking" phase). */
+export function getActiveSpeaker(): SpeakerId | undefined {
+  return currentActiveSpeaker;
 }
 
 /** Get the current meeting (or null if no meeting active). */
@@ -222,7 +228,7 @@ export async function startMeeting(
     sessionIds: {},
   };
 
-  setPhase("idle");
+  setPhase("human-turn");
 
   // Persist and commit
   currentMeeting = meeting;
@@ -730,6 +736,7 @@ function withStubResponse(prompt: string, stubText: string): string {
 function setPhase(phase: Phase, activeSpeaker?: SpeakerId): void {
   logInfo("orchestrator", `phase: ${currentPhase} → ${phase}${activeSpeaker ? ` (speaker: ${activeSpeaker})` : ""}`);
   currentPhase = phase;
+  currentActiveSpeaker = activeSpeaker;
   events.onPhaseChange(phase, activeSpeaker);
 }
 
@@ -785,14 +792,16 @@ function extractRecommendation(response: string): { nextSpeakerRaw: string; stat
   const lines = block.split("\n");
 
   // Parse first line: "הדובר הבא: <name>"
-  const firstLine = lines[0]?.trim()?.replace(/\*/g, '') ?? ""; // removing Markdown emphasis for more lenient parsing
+  let firstLine = lines[0]?.trim() ?? "";
+  firstLine = firstLine.replace(/\*/g, ''); // removing Markdown emphasis for more lenient parsing
   const speakerMatch = firstLine.match(/הדובר.*?:\s*(.+)/);
   if (!speakerMatch) {
     return { error: `השורה הראשונה לא בפורמט הנכון (צפוי: "הדובר הבא: <שם>"): "${firstLine}"` };
   }
-
   const nextSpeakerRaw = speakerMatch[1].trim();
-  const statusRead = lines.slice(1).join("\n").trim();
+
+  let statusRead = lines.slice(1).join("\n").trim();
+  statusRead = statusRead.replace(/^(\*\*קריאת מצב:?\*\*|\*קריאת מצב:?\*|\[קריאת מצב:?]):?\s*|/, ""); // removing redundant LLM-generated "קריאת מצב" line
 
   return { nextSpeakerRaw, statusRead };
 }
@@ -885,7 +894,7 @@ async function buildSelectionRetryPrompt(reason: string): Promise<string> {
 }
 
 function pickFallbackSpeaker(
-  lastSpeaker: SpeakerId,
+  _lastSpeaker: SpeakerId,
 ): SpeakerId {
   // Fallback when orchestrator fails: hand it to the Director
   return "human";

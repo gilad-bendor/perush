@@ -24,6 +24,7 @@ import {
   resumeMeetingById,
   getMeeting,
   getPhase,
+  getActiveSpeaker,
   cancelHumanTurn,
   getPendingProcesses,
 } from "./orchestrator";
@@ -145,6 +146,7 @@ function broadcast(message: ServerMessageBody): void {
 function buildSyncBody(fields: {
   meeting: any;
   currentPhase: string;
+  activeSpeaker?: SpeakerId;
   readOnly?: boolean;
   editingCycle?: number | undefined;
   paused?: boolean;
@@ -409,7 +411,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
           const meeting = await startMeeting(msg.title, msg.participants);
           // Unpause — the meeting starts waiting for the first human prompt
           paused = false;
-          broadcast(buildSyncBody({ meeting, currentPhase: getPhase() }));
+          broadcast(buildSyncBody({ meeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker() }));
           // No deliberation loop yet — it starts when the first human speech arrives
         } catch (err: any) {
           sendTo(ws, { type: "error", message: err?.message || "Failed to start meeting" });
@@ -420,7 +422,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
       case "resume-meeting": {
         try {
           const meeting = await resumeMeetingById(msg.meetingId);
-          broadcast(buildSyncBody({ meeting, currentPhase: getPhase() }));
+          broadcast(buildSyncBody({ meeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker() }));
           // Only start the deliberation loop if it's not already running
           // (resumeMeetingById returns the active meeting if it's the same one)
           if (!deliberationLoopActive) {
@@ -462,7 +464,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
           // If this meeting is currently active, send live state with editing enabled
           const activeMeeting = getMeeting();
           if (activeMeeting && activeMeeting.meetingId === msg.meetingId) {
-            sendTo(ws, buildSyncBody({ meeting: activeMeeting, currentPhase: getPhase(), readOnly: false }));
+            sendTo(ws, buildSyncBody({ meeting: activeMeeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker(), readOnly: false }));
           } else {
             // Not active — view-only from git
             const meetingData = await readEndedMeeting(msg.meetingId);
@@ -480,7 +482,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
           setOpeningPrompt(msg.content);
           // Broadcast immediately so the UI shows the opening prompt before the loop starts
           const meeting = getMeeting()!;
-          broadcast(buildSyncBody({ meeting, currentPhase: "idle", readOnly: false, editingCycle: undefined }));
+          broadcast(buildSyncBody({ meeting, currentPhase: "idle", activeSpeaker: undefined, readOnly: false, editingCycle: undefined }));
           wrapDanglingPromise(
             "server",
             "Start deliberation after human's prompt",

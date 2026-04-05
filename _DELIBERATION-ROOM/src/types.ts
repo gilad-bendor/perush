@@ -441,6 +441,7 @@ export const WsSyncSchema = z.object({
   messageId: MessageIdSchema,
   meeting: MeetingSchema,
   currentPhase: z.string(),
+  activeSpeaker: SpeakerIdSchema.optional(),
   readOnly: z.boolean().optional(),
   editingCycle: z.number().optional(),
   paused: z.boolean().optional(),
@@ -452,6 +453,7 @@ export type WsSync = {
   messageId: MessageId;
   meeting: Meeting;
   currentPhase: string;
+  activeSpeaker?: SpeakerId;
   readOnly?: boolean;
   editingCycle?: number;
   paused?: boolean;

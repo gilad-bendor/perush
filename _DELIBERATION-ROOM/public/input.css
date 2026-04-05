@@ -268,10 +268,6 @@
     @apply flex-1 text-sm text-stone-600;
   }
 
-  .status-read-next {
-    @apply text-sm text-stone-500;
-  }
-
   .status-read-phase-badge {
     @apply text-xs bg-stone-200 text-stone-600 px-2 py-0.5 rounded-full;
   }
@@ -400,7 +396,7 @@
   /* --------------------------------------------------------------- */
 
   .modal-overlay {
-    @apply hidden fixed inset-0 bg-black/40 z-50 flex items-center justify-center;
+    @apply fixed inset-0 bg-black/40 z-50 flex items-center justify-center;
   }
 
   .modal-content {

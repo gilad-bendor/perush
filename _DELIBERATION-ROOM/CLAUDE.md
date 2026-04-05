@@ -220,7 +220,8 @@ _DELIBERATION-ROOM/
 ├── src/
 │   ├── server.ts                  ← Bun web server (HTTP + WebSocket), entry point
 │   ├── orchestrator.ts            ← deliberation loop, phase management
-│   ├── session-manager.ts         ← Agent SDK sessions, template resolution, agent discovery
+│   ├── agent-static-info.ts       ← agent discovery and static identity data (globally importable)
+│   ├── session-manager.ts         ← Agent SDK sessions, template resolution
 │   ├── meetings-db.ts             ← git-as-database: worktrees, meeting CRUD
 │   ├── types.ts                   ← zod schemas and TypeScript types
 │   ├── types-asserts.ts           ← compile-time Zod↔TS type alignment checks
@@ -308,9 +309,10 @@ logs.ts            ← context.ts, utils.ts (+ node:fs, node:path)
 meetings-db.ts     ← types.ts, config.ts, logs.ts
 stub-sdk.ts        ← config.ts
 real-sdk.ts        ← config.ts, logs.ts
-session-manager.ts ← types.ts, config.ts, stub-sdk.ts, real-sdk.ts, logs.ts
-orchestrator.ts    ← types.ts, config.ts, meetings-db.ts, session-manager.ts, logs.ts
-server.ts          ← types.ts, config.ts, context.ts, orchestrator.ts, session-manager.ts, meetings-db.ts, utils.ts, logs.ts
+agent-static-info.ts ← types.ts, config.ts, logs.ts
+session-manager.ts ← types.ts, config.ts, agent-static-info.ts, stub-sdk.ts, real-sdk.ts, logs.ts
+orchestrator.ts    ← types.ts, config.ts, meetings-db.ts, session-manager.ts, agent-static-info.ts, logs.ts
+server.ts          ← types.ts, config.ts, context.ts, orchestrator.ts, session-manager.ts, agent-static-info.ts, meetings-db.ts, utils.ts, logs.ts
 ```
 
 **No upward arrows.** No circular imports.

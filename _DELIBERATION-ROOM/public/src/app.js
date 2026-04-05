@@ -68,8 +68,10 @@ let reconnectTimer = null;
 let pageState = "landing";
 /** @type {Meeting | null} The active/viewed meeting object from the server. */
 let currentMeeting = null;
-/** @type {string} Current cycle phase. */
+/** @type {Phase} Current cycle phase. */
 let currentPhase = "idle";
+/** @type {string | undefined} Active speaker ID (meaningful during "speaking" phase). */
+let currentActiveSpeaker = undefined;
 /** @type {boolean} True when viewing a past meeting (no input). */
 let readOnly = false;
 /** @type {number | null} Cycle number being edited after rollback. */
@@ -144,7 +146,6 @@ const $participantCards = document.getElementById("participant-cards");
 const $noParticipantsError = document.getElementById("no-participants-error");
 const $meetingList = document.getElementById("meeting-list");
 const $statusReadText = document.getElementById("status-read-text");
-const $statusReadNext = document.getElementById("status-read-next");
 const $statusReadPhase = document.getElementById("status-read-phase");
 const $statusReadCost = document.getElementById("status-read-cost");
 const $pauseBtn = document.getElementById("pause-btn");
@@ -310,6 +311,7 @@ function handleServerMessage(msg) {
 function handleSync(msg) {
   currentMeeting = msg.meeting;
   currentPhase = msg.currentPhase || "idle";
+  currentActiveSpeaker = msg.activeSpeaker;
   readOnly = msg.readOnly || false;
   editingCycle = msg.editingCycle ?? null;
 
@@ -340,6 +342,7 @@ function handleSync(msg) {
  */
 function handlePhase(msg) {
   currentPhase = msg.phase;
+  currentActiveSpeaker = msg.activeSpeaker;
   updatePhaseUI(msg.phase, msg.activeSpeaker);
 }
 
@@ -349,7 +352,6 @@ function handlePhase(msg) {
  */
 function handleStatusRead(msg) {
   $statusReadText.textContent = msg.statusRead;
-  $statusReadNext.textContent = msg.nextSpeaker ? `הבא: ${speakerDisplayName(msg.nextSpeaker)}` : "";
 }
 
 /** Activates the Director's input field and highlights the status-read bar. */
@@ -404,10 +406,10 @@ function handleRollbackProgress(msg) {
  * Applies visual changes to the status-read bar, input field, and agent panel
  * based on the current cycle phase.
  * @param {Phase}  phase           - Current phase identifier
- * @param {SpeakerId} [_activeSpeaker] - Agent ID of the current speaker (if speaking phase)
+ * @param {SpeakerId} [activeSpeaker] - Agent ID of the current speaker (if speaking phase)
  */
-function updatePhaseUI(phase, _activeSpeaker) {
-  $statusReadPhase.textContent = phaseDisplayName(phase);
+function updatePhaseUI(phase, activeSpeaker) {
+  $statusReadPhase.textContent = phaseDisplayName(phase, activeSpeaker ? speakerDisplayName(activeSpeaker) : undefined);
 
   const statusReadBar = querySelectorMust(".status-read-bar");
 
@@ -547,15 +549,14 @@ function renderMeetingState(syncMsg) {
     const lastCycle = currentMeeting.cycles[currentMeeting.cycles.length - 1];
     $statusReadText.textContent = lastCycle.orchestratorDecision.statusRead;
   } else {
-    $statusReadText.textContent = "ממתין...";
-    $statusReadNext.textContent = "";
+    $statusReadText.textContent = "";
     $statusReadPhase.textContent = "";
   }
 
   // Show cost estimate if available
   updateCostDisplay();
 
-  updatePhaseUI(currentPhase);
+  updatePhaseUI(currentPhase, currentActiveSpeaker);
 }
 
 /** Updates the cost estimate shown in the status-read bar. */

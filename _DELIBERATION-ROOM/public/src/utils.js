@@ -17,6 +17,7 @@
  * @property {string} dot    - Hex color for dot/badge indicators
  */
 
+
 /** @type {Record<string, SpeakerColorSet>} Color palettes per known speaker, readable on light backgrounds. */
 export const SPEAKER_COLORS = {
   human: { bg: "bg-blue-50", border: "border-blue-300", text: "text-blue-900", label: "text-blue-700", dot: "#3b82f6" },
@@ -42,18 +43,19 @@ export function speakerColor(speakerId) {
 /**
  * Maps a cycle phase identifier to its Hebrew display name.
  * @param {Phase} phase
+ * @param {string} [speakerName] - Hebrew display name of the current speaker (if speaking phase)
  * @returns {string}
  */
-export function phaseDisplayName(phase) {
+export function phaseDisplayName(phase, speakerName) {
   /** @type {Record<Phase, string>} */ const names = {
-    idle: "המתנה",
-    assessing: "הערכה",
-    selecting: "בחירה",
-    speaking: "דיבור",
-    "human-turn": "תורך",
-    "rolling-back": "חזרה",
+    idle: "מוּשהֶה",
+    assessing: "המשתתפים חושבים",
+    selecting: "בחירת הדובר הבא",
+    speaking: `${speakerName || "מישהו"} מדבר`,
+    "human-turn": "תורך - הזן פרומפט",
+    "rolling-back": "חוזר אחורנית...",
   };
-  return names[phase] || phase;
+  return names[phase];
 }
 
 /**

@@ -19,6 +19,7 @@ import {prettyLog} from "./utils.ts";
 export const logsConfig = {
     "sdk": true, // Log every sdk call and response
     "sessions": true, // Log sessions state-changes
+    "agent-static-info": true, // Log agent discovery
     "session-manager": true, // Log session-management operations
     "meetings-db": true, // Log meetings-database operations
     "orchestrator": true, // Log meeting-orchestrations

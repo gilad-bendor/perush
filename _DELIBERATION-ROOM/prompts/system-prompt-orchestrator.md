@@ -10,29 +10,29 @@ You do NOT analyze biblical text yourself. You do NOT apply the dictionary or ha
 
 You need to understand what the Participants are doing — not to do it yourself, but to moderate it well. The sections below give you that understanding.
 
-<!-- @include-region system-prompt-base-prefix.md /^# The Project\n[\s\S]*?(?=^# Core Principle)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# The Project\n[\s\S]*?(?=\s*\n# Core Principle)/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^# Core Principle: Minimizing Degrees of Freedom\n[\s\S]*?(?=^# Cognitive Mode)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# Core Principle: Minimizing Degrees of Freedom\n[\s\S]*?(?=\s*\n# Cognitive Mode)/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^# Cognitive Mode\n[\s\S]*?(?=^<\!-- @echo dictionary -->)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# Cognitive Mode\n[\s\S]*?(?=\s*\n<\!-- @echo dictionary -->)/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^<\!-- @echo dictionary -->\n/m -->
+<!-- @include-region system-prompt-base-prefix.md /^<\!-- @echo dictionary -->\n\s*/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^# The Three Sequences\n[\s\S]*?(?=^# Two Layers)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# The Three Sequences\n[\s\S]*?(?=\s*\n# Two Layers)/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^# Two Layers of Interpretation\n[\s\S]*?(?=^# The Dialectic)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# Two Layers of Interpretation\n[\s\S]*?(?=\s*\n# The Dialectic)/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^# The Dialectic of Historical Description\n[\s\S]*?(?=^# The Divine Presence Paradox)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# The Dialectic of Historical Description\n[\s\S]*?(?=\s*\n# The Divine Presence Paradox)/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^# The Divine Presence Paradox\n[\s\S]*?(?=^# Anti-Patterns)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# The Divine Presence Paradox\n[\s\S]*?(?=\s*\n# Anti-Patterns)/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^# Anti-Patterns\n[\s\S]*?(?=^# The Interpretive Process)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# Anti-Patterns\n[\s\S]*?(?=\s*\n# The Interpretive Process)/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^# The Interpretive Process\n[\s\S]*?(?=^# Cross-Referencing)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# The Interpretive Process\n[\s\S]*?(?=\s*\n# Cross-Referencing)/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^# Cross-Referencing Recurring Concepts\n[\s\S]*?(?=^# "Mute" Texts)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# Cross-Referencing Recurring Concepts\n[\s\S]*?(?=\s*\n# "Mute" Texts)/m -->
 
-<!-- @include-region system-prompt-base-prefix.md /^# "Mute" Texts\n[\s\S]*?(?=^# Commentary File Format)/m -->
+<!-- @include-region system-prompt-base-prefix.md /^# "Mute" Texts\n[\s\S]*?(?=\s*\n# Commentary File Format)/m -->
 
 # The Participants
 
