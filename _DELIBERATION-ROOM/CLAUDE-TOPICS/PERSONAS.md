@@ -8,8 +8,7 @@ Agent persona files live in `participant-agents/`; shared prompt templates live 
 
 | File | Name | Type | Role |
 |------|------|------|------|
-| `prompts/system-prompt-base-prefix.md` | — | *(shared prefix)* | Prepended to ALL AI-Agents — project context, common instructions, dictionary injection point |
-| `prompts/system-prompt-agents-prefix.md` | — | *(shared prefix)* | Prepended to Participant-Agents only — introduces fellow Participants using `${each:participant}` markers |
+| `prompts/system-prompt-base-prefix.md` | — | *(shared prefix)* | Prepended to ALL AI-Agents — project context, common instructions, dictionary injection point, fellow participants |
 | `participant-agents/milo.md` | **Milo / מיילו** | Participant-Agent | Dictionary Purist (המילונאי) — word-level dictionary fidelity |
 | `participant-agents/archi.md` | **Archi / ארצ'י** | Participant-Agent | Architect (האדריכל) — structural coherence across the narrative |
 | `participant-agents/kashia.md` | **Kashia / קשיא** | Participant-Agent | Skeptic (המבקר) — intellectual honesty, degrees of freedom, reverse-engineering test |
@@ -87,8 +86,7 @@ Available directives (HTML-comment syntax):
 2. Read file → gray-matter strips frontmatter
 3. buildPreprocessContext(): builds context with dictionary, participant loops
 4. preprocessLib.preprocess(content, context, {type:"html", srcDir:PARTICIPANT_AGENTS_DIR})
-   ↳ resolves <!-- @include ../prompts/system-prompt-base-prefix.md --> → inlines base with <!-- @echo dictionary -->
-   ↳ resolves <!-- @include ../prompts/system-prompt-agents-prefix.md --> → expands @foreach with milo excluded
+   ↳ resolves <!-- @include ../prompts/system-prompt-base-prefix.md --> → inlines base with dictionary + @foreach participant list (milo excluded)
    ↳ any remaining @echo markers in persona content
 5. Returns fully resolved system prompt
 ```
@@ -108,8 +106,7 @@ Available directives (HTML-comment syntax):
 
 **Participant-Agent prompt structure** (declared in each agent .md file):
 ```
-<!-- @include ../prompts/system-prompt-base-prefix.md -->      ← common instructions + dictionary (@echo dictionary)
-<!-- @include ../prompts/system-prompt-agents-prefix.md -->    ← fellow participants (@foreach, excludes self)
+<!-- @include ../prompts/system-prompt-base-prefix.md -->      ← common instructions + dictionary + fellow participants (@foreach, excludes self)
 
 # Your Unique Identity: ...            ← persona-specific content
 ```

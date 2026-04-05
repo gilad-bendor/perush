@@ -56,24 +56,24 @@ export class ProcessLabel {
     // complete thinking event. We render a single div that grows, and only
     // push to this.events when the final complete event arrives.
     if (eventKind === "thinking") {
-      if (this._activeThinkingEl) {
-        // Subsequent thinking event — accumulate or finalize
-        const isFinal = content.length >= this._activeThinkingContent.length;
-        const span = this._activeThinkingEl.querySelector(".thinking-text");
+      if (this._activeThinkingEvent) {
+        // Subsequent thinking event — accumulate.
+        // The server sends N small delta chunks, then one final complete event
+        // whose length exceeds the accumulated deltas. Detect the final event
+        // by checking if the new content is longer than what we've accumulated
+        // (a single delta is always shorter than the full accumulation after 2+ chunks).
+        const isFinal = content.length > this._activeThinkingContent.length;
         if (isFinal) {
-          // Final complete thinking — update persisted event and stop accumulating
-          if (span) {
-            span.textContent = content;
-          }
-          this._activeThinkingEvent.content = content;
-          this._activeThinkingEl = null;
-          this._activeThinkingContent = "";
+          // Final complete thinking — replace accumulated text
+          this._activeThinkingContent = content;
         } else {
-          // Streaming chunk — just grow the display
+          // Streaming delta — append
           this._activeThinkingContent += content;
-          if (span) {
-            span.textContent = this._activeThinkingContent;
-          }
+        }
+        this._activeThinkingEvent.content = this._activeThinkingContent;
+        if (this._activeThinkingEl) {
+          const span = this._activeThinkingEl.querySelector(".thinking-text");
+          if (span) span.textContent = this._activeThinkingContent;
         }
         return;
       }
@@ -168,6 +168,7 @@ export class ProcessLabel {
     } else {
       expansion.classList.add("hidden");
       this._activeThinkingEl = null; // DOM is gone; will recreate on next expand
+      // Note: _activeThinkingEvent stays set — accumulation continues without DOM
     }
   }
 

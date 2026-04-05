@@ -29,7 +29,6 @@ import {
   USE_STUB_SDK,
   PARTICIPANT_TOOLS,
   ORCHESTRATOR_TOOLS,
-  AGENTS_PREFIX_FILE,
   ORCHESTRATOR_FILE,
   ESTIMATED_COST_PER_CYCLE,
 } from "../../src/config";
@@ -239,7 +238,6 @@ describe("Stub mode", () => {
 
 describe("Agent persona file config", () => {
   test("file names are correct", () => {
-    expect(AGENTS_PREFIX_FILE).toBe("system-prompt-agents-prefix.md");
     expect(ORCHESTRATOR_FILE).toBe("system-prompt-orchestrator.md");
   });
 });

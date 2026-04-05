@@ -153,7 +153,7 @@ function buildPreprocessContext(
     dictionary,
   };
 
-  // Participant entries for @foreach in system-prompt-agents-prefix.md
+  // Participant entries for @foreach in system-prompt-base-prefix.md
   ctx.participantAgentEntries = toForEachContext(
     filteredParticipants.map(p =>
       `- **${p.englishName} / ${p.hebrewName}**: ${p.orchestratorIntro}`
@@ -207,16 +207,16 @@ export async function extractDictionary(): Promise<string> {
  *   <!-- @foreach $p in participantOrchestratorEntries -->$p\n<!-- @endfor -->
  *
  * Included files are processed recursively with the same context, so
- * system-prompt-base-prefix.md and system-prompt-agents-prefix.md can be included
- * from agent persona files and will have full access to all context variables.
+ * system-prompt-base-prefix.md can be included from agent persona files
+ * and will have full access to all context variables.
  */
 export async function resolveTemplate(
   filename: string,
   meetingParticipants: AgentDefinition[],
   /** Exclude this agent from participantAgentEntries / participantOrchestratorEntries loops */
-  excludeAgentId?: AgentId,
+  excludeAgentId: AgentId | undefined,
   /** Base directory for the template file (defaults to PARTICIPANT_AGENTS_DIR) */
-  baseDir: string = PARTICIPANT_AGENTS_DIR,
+  baseDir: string,
 ): Promise<string> {
   const filePath = join(baseDir, filename);
   const raw = await readFile(filePath, "utf-8");
@@ -266,7 +266,6 @@ export async function resolvePromptTemplate(
  *
  * Each agent persona file starts with:
  *   <!-- @include ../prompts/system-prompt-base-prefix.md -->
- *   <!-- @include ../prompts/system-prompt-agents-prefix.md -->   (Participant-Agents only)
  *
  * system-prompt-orchestrator.md (in prompts/) starts with:
  *   <!-- @include system-prompt-base-prefix.md -->
@@ -283,7 +282,7 @@ export async function buildSystemPrompt(
   }
   const agentDef = meetingParticipants.find(a => a.id === agentId);
   const filename = agentDef ? basename(agentDef.filePath) : `${agentId}.md`;
-  return resolveTemplate(filename, meetingParticipants, agentId);
+  return resolveTemplate(filename, meetingParticipants, agentId, PARTICIPANT_AGENTS_DIR);
 }
 
 // ---------------------------------------------------------------------------

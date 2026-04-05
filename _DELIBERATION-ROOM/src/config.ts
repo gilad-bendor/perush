@@ -218,9 +218,6 @@ export const IMPORTANCE_SCALE_MAX = 10;
 // Agent persona files
 // ---------------------------------------------------------------------------
 
-/** Participant-Agent-only prefix (introduces fellow participants via @foreach) */
-export const AGENTS_PREFIX_FILE = "system-prompt-agents-prefix.md";
-
 /** Orchestrator-Agent file */
 export const ORCHESTRATOR_FILE = "system-prompt-orchestrator.md";
 

@@ -542,10 +542,14 @@ function renderMeetingState(syncMsg) {
     conversationView.enableEditing(editingCycle, currentMeeting);
   }
 
-  // Update vibe from last cycle
+  // Update vibe from last cycle (or reset for a fresh meeting)
   if (currentMeeting.cycles.length > 0) {
     const lastCycle = currentMeeting.cycles[currentMeeting.cycles.length - 1];
     $vibeText.textContent = lastCycle.orchestratorDecision.vibe;
+  } else {
+    $vibeText.textContent = "ממתין...";
+    $vibeNext.textContent = "";
+    $vibePhase.textContent = "";
   }
 
   // Show cost estimate if available

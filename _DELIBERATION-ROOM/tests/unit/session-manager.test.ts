@@ -30,7 +30,6 @@ import { resetStubState } from "../../src/stub-sdk";
 import {
   PARTICIPANT_AGENTS_DIR,
   PROMPTS_DIR,
-  AGENTS_PREFIX_FILE,
   ORCHESTRATOR_FILE,
 } from "../../src/config";
 
@@ -145,8 +144,8 @@ describe("resolveTemplate", () => {
     allAgents = await discoverAgents();
   });
 
-  test("resolves ${each:participant} in agents-prefix", async () => {
-    const resolved = await resolveTemplate(AGENTS_PREFIX_FILE, allAgents, undefined, PROMPTS_DIR);
+  test("resolves ${each:participant} in base-prefix", async () => {
+    const resolved = await resolveTemplate("system-prompt-base-prefix.md", allAgents, undefined, PROMPTS_DIR);
 
     // Should contain each agent's name
     expect(resolved).toContain("Milo / מיילו");
@@ -158,7 +157,7 @@ describe("resolveTemplate", () => {
 
   test("scopes participants to meeting selection", async () => {
     const subset = allAgents.filter(a => a.id === "milo" || a.id === "archi");
-    const resolved = await resolveTemplate(AGENTS_PREFIX_FILE, subset, undefined, PROMPTS_DIR);
+    const resolved = await resolveTemplate("system-prompt-base-prefix.md", subset, undefined, PROMPTS_DIR);
 
     expect(resolved).toContain("Milo / מיילו");
     expect(resolved).toContain("Archi / ארצ'י");
@@ -202,7 +201,7 @@ describe("resolveTemplate", () => {
 
   test("excludes the agent itself when excludeAgentId is set", async () => {
     // When building milo's template, milo shouldn't appear in {each:participant}
-    const resolved = await resolveTemplate(AGENTS_PREFIX_FILE, allAgents, "milo", PROMPTS_DIR);
+    const resolved = await resolveTemplate("system-prompt-base-prefix.md", allAgents, "milo", PROMPTS_DIR);
 
     // Should NOT contain Milo in the participant list
     expect(resolved).not.toContain("Milo / מיילו");
@@ -269,8 +268,8 @@ describe("buildSystemPrompt", () => {
     // Orchestrator content
     expect(prompt).toContain("Orchestrator");
     expect(prompt).toContain("which Participant should speak next");
-    // Should NOT have agents prefix
-    expect(prompt).not.toContain("Fellow Participants");
+    // Base prefix includes "Fellow Participants" (shared across all agents)
+    expect(prompt).toContain("Fellow Participants");
   });
 
   test("orchestrator prompt has resolved participant names", async () => {

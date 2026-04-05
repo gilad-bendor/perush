@@ -92,8 +92,8 @@ Each AI-Agent runs as a persistent Agent SDK session with `resume: sessionId`. O
 
 | Session | Model | Tools | System Prompt |
 |---------|-------|-------|---------------|
-| Participant-Agents | Opus | `["Read", "Bash", "Grep", "Glob"]` | `system-prompt-base-prefix.md` + dictionary + `system-prompt-agents-prefix.md` + resolved persona |
-| Orchestrator | Sonnet | `[]` | `system-prompt-base-prefix.md` + dictionary + resolved `system-prompt-orchestrator.md` |
+| Participant-Agents | Opus | `["Read", "Bash", "Grep", "Glob"]` | `system-prompt-base-prefix.md` (includes dictionary + fellow participants) + resolved persona |
+| Orchestrator | Sonnet | `[]` | `system-prompt-base-prefix.md` (includes dictionary + fellow participants) + resolved `system-prompt-orchestrator.md` |
 
 ### Session Recovery
 
@@ -207,8 +207,7 @@ _DELIBERATION-ROOM/
 │   └── barak.md                   ← Ideator
 ├── prompts/                       ← Prompt templates (resolved by preprocess)
 │   ├── README.md
-│   ├── system-prompt-base-prefix.md        ← shared prefix for ALL AI-Agents
-│   ├── system-prompt-agents-prefix.md      ← Participant-Agent prefix (introduces fellow Participants)
+│   ├── system-prompt-base-prefix.md        ← shared prefix for ALL AI-Agents (includes fellow participants)
 │   ├── system-prompt-orchestrator.md       ← Orchestrator system prompt
 │   ├── agent-assessment-prompt.md          ← per-cycle assessment prompt
 │   ├── agent-speech-prompt.md              ← per-cycle speech prompt

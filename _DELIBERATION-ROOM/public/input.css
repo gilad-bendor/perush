@@ -336,6 +336,7 @@
 
   .process-expansion {
     @apply border rounded p-2 text-xs space-y-1 !mt-0;
+    width: calc(100vw - 60px);
   }
 
   /* --------------------------------------------------------------- */

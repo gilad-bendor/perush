@@ -1510,6 +1510,7 @@ body {
   padding: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
+  width: calc(100vw - 60px);
 }
 
 /* --------------------------------------------------------------- */
@@ -1787,10 +1788,6 @@ body {
 
 .hidden {
   display: none;
-}
-
-.grow {
-  flex-grow: 1;
 }
 
 @keyframes pulse {
