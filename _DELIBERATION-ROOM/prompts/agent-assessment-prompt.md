@@ -1,5 +1,5 @@
-<!-- @ifdef vibe -->[אווירה בחדר]
-<!-- @echo vibe -->
+<!-- @ifdef statusRead -->[קריאת מצב]
+<!-- @echo statusRead -->
 
 <!-- @endif -->=== התחלת הודעה מ-<!-- @echo speakerLabel --> ===
 <!-- @echo lastContent -->

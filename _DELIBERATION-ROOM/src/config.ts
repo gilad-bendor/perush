@@ -191,7 +191,7 @@ export const COMMIT_MEETING_RESUMED = "Meeting resumed";
 // Timing / UI
 // ---------------------------------------------------------------------------
 
-/** Vibe bar fade-transition duration (ms) — client-side */
+/** StatusRead bar fade-transition duration (ms) — client-side */
 export const VIBE_FADE_MS = 300;
 
 /** Attention button pulse animation duration (ms) — client-side */

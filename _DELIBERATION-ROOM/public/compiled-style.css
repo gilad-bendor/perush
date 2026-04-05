@@ -711,7 +711,7 @@ body {
   display: grid;
   grid-template-areas:
     "conversation"
-    "vibe"
+    "status-read"
     "input";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
@@ -1112,7 +1112,7 @@ body {
   display: grid;
   grid-template-areas:
     "conversation"
-    "vibe"
+    "status-read"
     "input";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
@@ -1226,11 +1226,11 @@ body {
 
 /* --------------------------------------------------------------- */
 
-/* Vibe Bar                                                        */
+/* StatusRead Bar                                                        */
 
 /* --------------------------------------------------------------- */
 
-.vibe-bar {
+.status-read-bar {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -1248,20 +1248,20 @@ body {
   transition-duration: 300ms;
 }
 
-.vibe-bar--human-turn {
+.status-read-bar--human-turn {
   --tw-border-opacity: 1;
   border-color: rgb(191 219 254 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(239 246 255 / var(--tw-bg-opacity, 1));
 }
 
-.vibe-icon {
+.status-read-icon {
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(180 83 9 / var(--tw-text-opacity, 1));
 }
 
-.vibe-text {
+.status-read-text {
   flex: 1 1 0%;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1269,14 +1269,14 @@ body {
   color: rgb(87 83 78 / var(--tw-text-opacity, 1));
 }
 
-.vibe-next {
+.status-read-next {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(120 113 108 / var(--tw-text-opacity, 1));
 }
 
-.vibe-phase-badge {
+.status-read-phase-badge {
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(231 229 228 / var(--tw-bg-opacity, 1));
@@ -1290,7 +1290,7 @@ body {
   color: rgb(87 83 78 / var(--tw-text-opacity, 1));
 }
 
-.vibe-cost {
+.status-read-cost {
   font-size: 0.75rem;
   line-height: 1rem;
   --tw-text-opacity: 1;
@@ -1298,18 +1298,18 @@ body {
   display: none;
 }
 
-.deliberation-room:not(.vibe-cost) {
+.deliberation-room:not(.status-read-cost) {
   display: grid;
   grid-template-areas:
     "conversation"
-    "vibe"
+    "status-read"
     "input";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
   height: 100vh;
 }
 
-.btn-vibe-control {
+.btn-status-read-control {
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -1327,12 +1327,12 @@ body {
   transition-duration: 150ms;
 }
 
-.btn-vibe-control:hover {
+.btn-status-read-control:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 244 / var(--tw-bg-opacity, 1));
 }
 
-.btn-vibe-control--blocking {
+.btn-status-read-control--blocking {
   --tw-border-opacity: 1;
   border-color: rgb(248 113 113 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
@@ -1341,7 +1341,7 @@ body {
   color: rgb(185 28 28 / var(--tw-text-opacity, 1));
 }
 
-.btn-vibe-control--blocking:hover {
+.btn-status-read-control--blocking:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity, 1));
 }
@@ -1369,7 +1369,7 @@ body {
   display: grid;
   grid-template-areas:
     "conversation"
-    "vibe"
+    "status-read"
     "input";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
@@ -1482,7 +1482,7 @@ body {
   display: grid;
   grid-template-areas:
     "conversation"
-    "vibe"
+    "status-read"
     "input";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
@@ -1652,7 +1652,7 @@ body {
   display: grid;
   grid-template-areas:
     "conversation"
-    "vibe"
+    "status-read"
     "input";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
@@ -1751,7 +1751,7 @@ body {
   display: grid;
   grid-template-areas:
     "conversation"
-    "vibe"
+    "status-read"
     "input";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
@@ -1983,7 +1983,7 @@ body {
   display: grid;
   grid-template-areas:
     "conversation"
-    "vibe"
+    "status-read"
     "input";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
@@ -1994,11 +1994,11 @@ body {
   grid-area: conversation;
 }
 
-.deliberation-room .vibe-bar          {
-  grid-area: vibe;
+.deliberation-room .status-read-bar {
+  grid-area: status-read;
 }
 
-.deliberation-room .human-input       {
+.deliberation-room .human-input {
   grid-area: input;
 }
 

@@ -148,12 +148,12 @@ describe("PrivateAssessmentSchema", () => {
 
 describe("OrchestratorDecisionSchema", () => {
   test("accepts valid decision", () => {
-    const decision = { nextSpeaker: "archi", vibe: "הדיון זורם" };
+    const decision = { nextSpeaker: "archi", statusRead: "הדיון זורם" };
     expect(OrchestratorDecisionSchema.parse(decision)).toEqual(decision);
   });
 
   test("accepts human as next speaker", () => {
-    const decision = { nextSpeaker: "human", vibe: "הגיע הזמן למנחה" };
+    const decision = { nextSpeaker: "human", statusRead: "הגיע הזמן למנחה" };
     expect(OrchestratorDecisionSchema.parse(decision)).toEqual(decision);
   });
 });
@@ -179,7 +179,7 @@ describe("CycleRecordSchema", () => {
       },
       orchestratorDecision: {
         nextSpeaker: "milo",
-        vibe: "דיון פורה",
+        statusRead: "דיון פורה",
       },
     };
     expect(CycleRecordSchema.parse(cycle)).toEqual(cycle);
@@ -190,7 +190,7 @@ describe("CycleRecordSchema", () => {
       cycleNumber: 0,
       speech: { speaker: "milo", content: "x", timestamp: createFormattedTime() },
       assessments: {},
-      orchestratorDecision: { nextSpeaker: "archi", vibe: "ok" },
+      orchestratorDecision: { nextSpeaker: "archi", statusRead: "ok" },
     })).toThrow();
   });
 });
@@ -291,8 +291,8 @@ describe("ServerMessageSchema", () => {
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });
 
-  test("accepts vibe message", () => {
-    const msg: ServerMessage = { type: "vibe" as const, messageId: "S4", vibe: "הדיון זורם", nextSpeaker: "archi" };
+  test("accepts statusRead message", () => {
+    const msg: ServerMessage = { type: "status-read" as const, messageId: "S4", statusRead: "הדיון זורם", nextSpeaker: "archi" };
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });
 

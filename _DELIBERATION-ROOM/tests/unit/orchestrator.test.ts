@@ -42,7 +42,7 @@ interface CollectedEvents {
   speeches: Array<{ speaker: string; content: string }>;
   chunks: Array<{ speaker: string; delta: string }>;
   assessments: PrivateAssessment[];
-  vibes: Array<{ vibe: string; nextSpeaker: string }>;
+  statusReads: Array<{ statusRead: string; nextSpeaker: string }>;
   yourTurns: number;
   errors: string[];
 }
@@ -53,7 +53,7 @@ function createEventCollector(): { events: CollectedEvents; handlers: Partial<Or
     speeches: [],
     chunks: [],
     assessments: [],
-    vibes: [],
+    statusReads: [],
     yourTurns: 0,
     errors: [],
   };
@@ -65,7 +65,7 @@ function createEventCollector(): { events: CollectedEvents; handlers: Partial<Or
       onSpeech: (speaker, content) => collected.speeches.push({ speaker, content }),
       onSpeechChunk: (speaker, delta) => collected.chunks.push({ speaker, delta }),
       onAssessment: (assessment) => collected.assessments.push(assessment),
-      onVibe: (vibe, nextSpeaker) => collected.vibes.push({ vibe, nextSpeaker }),
+      onStatusRead: (statusRead, nextSpeaker) => collected.statusReads.push({ statusRead, nextSpeaker }),
       onYourTurn: () => collected.yourTurns++,
       onError: (msg) => collected.errors.push(msg),
     },
@@ -167,8 +167,8 @@ describe("core cycle mechanics", () => {
     expect(selectingIdx).toBeLessThan(speakingIdx);
 
     expect(events.assessments.length).toBeGreaterThan(0);
-    expect(events.vibes.length).toBe(1);
-    expect(events.vibes[0].vibe).toBeTruthy();
+    expect(events.statusReads.length).toBe(1);
+    expect(events.statusReads[0].statusRead).toBeTruthy();
 
     expect(getMeeting()!.cycles).toHaveLength(1);
   });
@@ -249,7 +249,7 @@ describe("attention flag", () => {
     const cycle = await cyclePromise;
     expect(cycle).not.toBeNull();
 
-    expect(events.vibes[0].nextSpeaker).toBe("human");
+    expect(events.statusReads[0].nextSpeaker).toBe("human");
     expect(cycle!.speech.speaker).toBe("human");
     expect(cycle!.speech.content).toBe("Director's response");
     expect(isAttentionRequested()).toBe(false);

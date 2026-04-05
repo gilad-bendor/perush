@@ -19,8 +19,8 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // A Participant-Agent's private assessment (free-form text, shown in process labels)
 { type: "assessment", agent: AgentId, text: string }
 
-// The Orchestrator-Agent's vibe + next speaker decision
-{ type: "vibe", vibe: string, nextSpeaker: SpeakerId }
+// The Orchestrator-Agent's status-read + next speaker decision
+{ type: "status-read", statusRead: string, nextSpeaker: SpeakerId }
 
 // Current phase of the cycle
 { type: "phase", phase: "assessing" | "selecting" | "speaking" | "human-turn" | "idle" | "rolling-back", activeSpeaker?: SpeakerId }

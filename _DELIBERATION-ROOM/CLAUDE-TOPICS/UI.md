@@ -1,33 +1,33 @@
 # Web UI Specification
 
-> **Spin-out from `CLAUDE.md`.** Read when working on the frontend (`public/`), the vibe bar, attention button, or UI layout.
+> **Spin-out from `CLAUDE.md`.** Read when working on the frontend (`public/`), the status-read bar, attention button, or UI layout.
 
 ## Layout
 
 The UI is designed for the Director reading Hebrew text, thinking carefully, and occasionally intervening — an **academic seminar**, not a fast chat app.
 
 ```
-┌──────────────────────────────────────────┬───────────────┐
-│                                          │ Agent Panel   │
-│          SHARED CONVERSATION             │ (collapsible) │
-│      (scrolling feed, RTL, color-coded   │               │
-│       by speaker)                        │  ┌──────────┐ │
-│                                          │  │ Tabs:    │ │
-│                                          │  │ מילונאי  │ │
-│  [streaming indicator: milo typing...]   │  │ אדריכל   │ │
-│                                          │  │ מבקר     │ │
-│                                          │  └──────────┘ │
-├──────────────────────────────────────────┤               │
-│  ✦ vibe: הדיון זורם — כל צד מוסיף שכבה.  │ [assessment]  │
-│    next: האדריכל  ·  phase: speaking     │ [tool usage]  │
-├──────────────────────────────────────────┤               │
-│  > Human input                     [↵]   │               │
-└──────────────────────────────────────────┴───────────────┘
+┌────────────────────────────────────────────────┬───────────────┐
+│                                                │ Agent Panel   │
+│          SHARED CONVERSATION                   │ (collapsible) │
+│      (scrolling feed, RTL, color-coded         │               │
+│       by speaker)                              │  ┌──────────┐ │
+│                                                │  │ Tabs:    │ │
+│                                                │  │ מילונאי  │ │
+│  [streaming indicator: milo typing...]         │  │ אדריכל   │ │
+│                                                │  │ מבקר     │ │
+│                                                │  └──────────┘ │
+├────────────────────────────────────────────────┤               │
+│  ✦ status-read: הדיון זורם — כל צד מוסיף שכבה. │ [assessment]  │
+│    next: האדריכל  ·  phase: speaking           │ [tool usage]  │
+├────────────────────────────────────────────────┤               │
+│  > Human input                     [↵]         │               │
+└────────────────────────────────────────────────┴───────────────┘
 ```
 
 **Conversation area** (main, left): Scrolling feed of all public messages, color-coded by speaker. Streaming text appears in real-time with a typing indicator.
 
-**Vibe bar** (sticky, between conversation and input): The Orchestrator-Agent's atmospheric comment, next Participant's name, current phase. Always visible. Subtle fade-transition (300ms). Changes visually during the Director's turn.
+**StatusRead bar** (sticky, between conversation and input): The Orchestrator-Agent's status-read comment, next Participant's name, current phase. Always visible. Subtle fade-transition (300ms). Changes visually during the Director's turn.
 
 **Director input** (sticky bottom): A textarea. Always visible. Highlighted during the Director's turn. Dimmed but accepts `/end` at other times.
 
@@ -123,14 +123,14 @@ The app uses client-side URL routing with `history.pushState`:
 
 When activated, the server sends `sync` with `readOnly: true`. Differences:
 - Human input textarea **hidden** (removed from DOM).
-- Vibe bar shows static "מצב צפייה" banner.
+- StatusRead bar shows static "מצב צפייה" banner.
 - No Attention or Rollback buttons.
 - Agent panel works normally for browsing.
 - Persistent banner at top.
 
 ## Attention Button
 
-Located **in the vibe bar**, at the inline-end side (left side in RTL).
+Located **in the status-read bar**, at the inline-end side (left side in RTL).
 
 **Three states**:
 1. **Idle**: `[ ✋ תשומת לב ]` — subtle, muted border.

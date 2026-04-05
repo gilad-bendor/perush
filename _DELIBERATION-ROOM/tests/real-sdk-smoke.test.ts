@@ -290,12 +290,12 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
       phases.some((p) => p === "speaking" || p === "human-turn"),
     ).toBe(true);
 
-    // Vibe messages: at least 2 (one per cycle)
-    const vibes = messages.filter((m) => m.type === "vibe");
-    expect(vibes.length).toBeGreaterThanOrEqual(2);
-    for (const v of vibes) {
-      expect(v.vibe).toBeTruthy();
-      expect(v.nextSpeaker).toBeTruthy();
+    // StatusRead messages: at least 2 (one per cycle)
+    const statusReads = messages.filter((m) => m.type === "status-read");
+    expect(statusReads.length).toBeGreaterThanOrEqual(2);
+    for (const statusRead of statusReads) {
+      expect(statusRead.statusRead).toBeTruthy();
+      expect(statusRead.nextSpeaker).toBeTruthy();
     }
 
     // Speech messages: at least 2 with non-empty content
@@ -351,10 +351,10 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
     expect(meeting.cycles[0].speech.content).toBeTruthy();
     expect(meeting.cycles[1].speech.content).toBeTruthy();
 
-    // Each cycle has an orchestrator decision with vibe
+    // Each cycle has an orchestrator decision with status-read
     for (const cycle of meeting.cycles) {
       expect(cycle.orchestratorDecision).toBeTruthy();
-      expect(cycle.orchestratorDecision.vibe).toBeTruthy();
+      expect(cycle.orchestratorDecision.statusRead).toBeTruthy();
       expect(typeof cycle.assessments).toBe("object");
     }
 

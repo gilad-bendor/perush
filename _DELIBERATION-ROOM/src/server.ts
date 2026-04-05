@@ -195,8 +195,8 @@ function setupOrchestratorEvents(): void {
         text: assessment.text,
       });
     },
-    onVibe: (vibe, nextSpeaker) => {
-      broadcast({ type: "vibe", vibe, nextSpeaker });
+    onStatusRead: (statusRead, nextSpeaker) => {
+      broadcast({ type: "status-read", statusRead, nextSpeaker });
     },
     onYourTurn: () => {
       broadcast({ type: "your-turn" });

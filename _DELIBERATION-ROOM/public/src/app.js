@@ -11,7 +11,7 @@
 /** @typedef {import('../../src/types.ts').ClientMessage} ClientMessage */
 /** @typedef {Extract<ServerMessage, {type: "sync"}>} WsSync */
 /** @typedef {Extract<ServerMessage, {type: "phase"}>} WsPhase */
-/** @typedef {Extract<ServerMessage, {type: "vibe"}>} WsVibe */
+/** @typedef {Extract<ServerMessage, {type: "status-read"}>} WsStatusRead */
 /** @typedef {Extract<ServerMessage, {type: "rollback-progress"}>} WsRollbackProgress */
 /** @typedef {import('../../src/types.ts').Meeting} Meeting */
 /** @typedef {import('../../src/types.ts').AgentDefinition} AgentDefinition */
@@ -143,10 +143,10 @@ const $newMeetingForm = document.getElementById("new-meeting-form");
 const $participantCards = document.getElementById("participant-cards");
 const $noParticipantsError = document.getElementById("no-participants-error");
 const $meetingList = document.getElementById("meeting-list");
-const $vibeText = document.getElementById("vibe-text");
-const $vibeNext = document.getElementById("vibe-next");
-const $vibePhase = document.getElementById("vibe-phase");
-const $vibeCost = document.getElementById("vibe-cost");
+const $statusReadText = document.getElementById("status-read-text");
+const $statusReadNext = document.getElementById("status-read-next");
+const $statusReadPhase = document.getElementById("status-read-phase");
+const $statusReadCost = document.getElementById("status-read-cost");
 const $pauseBtn = document.getElementById("pause-btn");
 const $attentionBtn = document.getElementById("attention-btn");
 const $humanInput = document.getElementById("human-input-textarea");
@@ -270,8 +270,8 @@ function handleServerMessage(msg) {
     case "assessment":
       // Assessments now visible via process labels; no separate panel
       break;
-    case "vibe":
-      handleVibe(msg);
+    case "status-read":
+      handleStatusRead(msg);
       break;
     case "your-turn":
       handleYourTurn();
@@ -344,20 +344,20 @@ function handlePhase(msg) {
 }
 
 /**
- * Displays the orchestrator's vibe comment and next-speaker indicator.
- * @param {WsVibe} msg
+ * Displays the orchestrator's status-read comment and next-speaker indicator.
+ * @param {WsStatusRead} msg
  */
-function handleVibe(msg) {
-  $vibeText.textContent = msg.vibe;
-  $vibeNext.textContent = msg.nextSpeaker ? `הבא: ${speakerDisplayName(msg.nextSpeaker)}` : "";
+function handleStatusRead(msg) {
+  $statusReadText.textContent = msg.statusRead;
+  $statusReadNext.textContent = msg.nextSpeaker ? `הבא: ${speakerDisplayName(msg.nextSpeaker)}` : "";
 }
 
-/** Activates the Director's input field and highlights the vibe bar. */
+/** Activates the Director's input field and highlights the status-read bar. */
 function handleYourTurn() {
   enableHumanInput();
-  // Visual emphasis on vibe bar
-  const vibeBar = querySelectorMust(".vibe-bar");
-  vibeBar.classList.add("vibe-bar--human-turn");
+  // Visual emphasis on status-read bar
+  const statusReadBar = querySelectorMust(".status-read-bar");
+  statusReadBar.classList.add("status-read-bar--human-turn");
 }
 
 /** Shows a server error as a system message in the conversation feed. */
@@ -401,23 +401,23 @@ function handleRollbackProgress(msg) {
 // ---- Phase UI Updates -------------------------------------------------------
 
 /**
- * Applies visual changes to the vibe bar, input field, and agent panel
+ * Applies visual changes to the status-read bar, input field, and agent panel
  * based on the current cycle phase.
  * @param {Phase}  phase           - Current phase identifier
  * @param {SpeakerId} [_activeSpeaker] - Agent ID of the current speaker (if speaking phase)
  */
 function updatePhaseUI(phase, _activeSpeaker) {
-  $vibePhase.textContent = phaseDisplayName(phase);
+  $statusReadPhase.textContent = phaseDisplayName(phase);
 
-  const vibeBar = querySelectorMust(".vibe-bar");
+  const statusReadBar = querySelectorMust(".status-read-bar");
 
-  // Reset vibe bar styling
-  vibeBar.classList.remove("vibe-bar--human-turn");
+  // Reset status-read bar styling
+  statusReadBar.classList.remove("status-read-bar--human-turn");
 
   switch (phase) {
     case "human-turn":
       enableHumanInput();
-      vibeBar.classList.add("vibe-bar--human-turn");
+      statusReadBar.classList.add("status-read-bar--human-turn");
       $attentionBtn.classList.add("hidden");
       break;
     case "speaking":
@@ -542,14 +542,14 @@ function renderMeetingState(syncMsg) {
     conversationView.enableEditing(editingCycle, currentMeeting);
   }
 
-  // Update vibe from last cycle (or reset for a fresh meeting)
+  // Update status-read from last cycle (or reset for a fresh meeting)
   if (currentMeeting.cycles.length > 0) {
     const lastCycle = currentMeeting.cycles[currentMeeting.cycles.length - 1];
-    $vibeText.textContent = lastCycle.orchestratorDecision.vibe;
+    $statusReadText.textContent = lastCycle.orchestratorDecision.statusRead;
   } else {
-    $vibeText.textContent = "ממתין...";
-    $vibeNext.textContent = "";
-    $vibePhase.textContent = "";
+    $statusReadText.textContent = "ממתין...";
+    $statusReadNext.textContent = "";
+    $statusReadPhase.textContent = "";
   }
 
   // Show cost estimate if available
@@ -558,13 +558,13 @@ function renderMeetingState(syncMsg) {
   updatePhaseUI(currentPhase);
 }
 
-/** Updates the cost estimate shown in the vibe bar. */
+/** Updates the cost estimate shown in the status-read bar. */
 function updateCostDisplay() {
   if (currentMeeting?.totalCostEstimate != null && currentMeeting.totalCostEstimate > 0) {
-    $vibeCost.textContent = `$${currentMeeting.totalCostEstimate.toFixed(2)}`;
-    $vibeCost.classList.remove("hidden");
+    $statusReadCost.textContent = `$${currentMeeting.totalCostEstimate.toFixed(2)}`;
+    $statusReadCost.classList.remove("hidden");
   } else {
-    $vibeCost.classList.add("hidden");
+    $statusReadCost.classList.add("hidden");
   }
 }
 
@@ -758,9 +758,9 @@ function submitHumanInput() {
   $humanInput.value = "";
   disableHumanInput();
 
-  // Reset vibe bar
-  const vibeBar = querySelectorMust(".vibe-bar");
-  vibeBar.classList.remove("vibe-bar--human-turn");
+  // Reset status-read bar
+  const statusReadBar = querySelectorMust(".status-read-bar");
+  statusReadBar.classList.remove("status-read-bar--human-turn");
 }
 
 $humanSubmit.addEventListener("click", submitHumanInput);
@@ -800,13 +800,13 @@ function updatePauseButton() {
   if (isPaused) {
     $pauseBtn.innerHTML = "&#x25B6; המשך"; // Play
     if (pauseBlocking) {
-      $pauseBtn.classList.add("btn-vibe-control--blocking");
+      $pauseBtn.classList.add("btn-status-read-control--blocking");
     } else {
-      $pauseBtn.classList.remove("btn-vibe-control--blocking");
+      $pauseBtn.classList.remove("btn-status-read-control--blocking");
     }
   } else {
     $pauseBtn.innerHTML = "&#x23F8; השהה"; // Pause
-    $pauseBtn.classList.remove("btn-vibe-control--blocking");
+    $pauseBtn.classList.remove("btn-status-read-control--blocking");
   }
 }
 

@@ -168,13 +168,13 @@ const msgCount = await page.evaluate(
 );
 
 // Get current phase text
-const phase = await page.textContent("#vibe-phase");
+const phase = await page.textContent("#status-read-phase");
 
 // Check if textarea is enabled
 const disabled = await page.locator("#human-input-textarea").isDisabled();
 
-// Read vibe text
-const vibe = await page.textContent("#vibe-text");
+// Read status-read text
+const statusRead = await page.textContent("#status-read-text");
 
 // Check which page is visible
 const onDeliberation = await page.evaluate(

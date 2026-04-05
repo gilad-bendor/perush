@@ -214,11 +214,11 @@ assertZodTypeMatch<PrivateAssessment, typeof PrivateAssessmentSchema>(true);
 
 export const OrchestratorDecisionSchema = z.object({
   nextSpeaker: SpeakerIdSchema, // validated against meeting participants at runtime
-  vibe: z.string(),
+  statusRead: z.string(),
 });
 export type OrchestratorDecision = {
   nextSpeaker: SpeakerId;
-  vibe: string;
+  statusRead: string;
 };
 assertZodTypeMatch<OrchestratorDecision, typeof OrchestratorDecisionSchema>(true);
 
@@ -398,19 +398,19 @@ export type WsAssessment = {
 };
 assertZodTypeMatch<WsAssessment, typeof WsAssessmentSchema>(true);
 
-export const WsVibeSchema = z.object({
-  type: z.literal("vibe"),
+export const WsStatusReadSchema = z.object({
+  type: z.literal("status-read"),
   messageId: MessageIdSchema,
-  vibe: z.string(),
+  statusRead: z.string(),
   nextSpeaker: SpeakerIdSchema,
 });
-export type WsVibe = {
-  type: "vibe";
+export type WsStatusRead = {
+  type: "status-read";
   messageId: MessageId;
-  vibe: string;
+  statusRead: string;
   nextSpeaker: SpeakerId;
 };
-assertZodTypeMatch<WsVibe, typeof WsVibeSchema>(true);
+assertZodTypeMatch<WsStatusRead, typeof WsStatusReadSchema>(true);
 
 export const WsPhaseSchema = z.object({
   type: z.literal("phase"),
@@ -576,7 +576,7 @@ export const ServerMessageSchema = z.discriminatedUnion("type", [
   WsSpeechChunkSchema,
   WsSpeechDoneSchema,
   WsAssessmentSchema,
-  WsVibeSchema,
+  WsStatusReadSchema,
   WsPhaseSchema,
   WsYourTurnSchema,
   WsSyncSchema,
@@ -594,7 +594,7 @@ export type ServerMessage =
   | WsSpeechChunk
   | WsSpeechDone
   | WsAssessment
-  | WsVibe
+  | WsStatusRead
   | WsPhase
   | WsYourTurn
   | WsSync

@@ -61,7 +61,7 @@ Located in `tests/e2e/`. Use `mock-ws-server.ts` to replay canned WebSocket even
 1. **Landing page**: Meeting creation form, participant selection toggles, meeting list rendering, empty state.
 2. **Conversation**: Message rendering, RTL layout, streaming text appending, phase indicator updates, speaker color-coding.
 3. **Agent panel**: Tab switching, assessment display, importance badges, collapse/expand.
-4. **Interactions**: Attention button states, rollback dialog, vibe bar transitions, Director input submission.
+4. **Interactions**: Attention button states, rollback dialog, status-read bar transitions, Director input submission.
 
 ## Stub Agent SDK
 
@@ -156,7 +156,7 @@ For complex visual bugs (RTL layout, streaming text, WebSocket state, etc.), wri
 1. **Waiting for WebSocket events** — the deliberation UI is event-driven:
    ```js
    await page.waitForSelector('.message[data-speaker="milo"]');
-   await page.waitForSelector('.vibe-bar.human-turn');
+   await page.waitForSelector('.status-read-bar.human-turn');
    await page.waitForFunction(() => {
      const streaming = document.querySelector('.message.streaming');
      return streaming && streaming.textContent.length > 100;
@@ -189,8 +189,8 @@ For complex visual bugs (RTL layout, streaming text, WebSocket state, etc.), wri
 - `.message` - Individual conversation message
 - `.message[data-speaker="milo"]` - Messages by specific Participant
 - `.message.streaming` - Currently streaming message
-- `.vibe-bar` - Vibe/status bar
-- `.vibe-bar.human-turn` - Vibe bar in "Director's turn" state
+- `.status-read-bar` - StatusRead/status bar
+- `.status-read-bar.human-turn` - StatusRead bar in "Director's turn" state
 - `.human-input` - Director input area
 - `.human-input textarea` - The actual textarea
 - `.process-label` - Expandable process trace label
@@ -198,7 +198,7 @@ For complex visual bugs (RTL layout, streaming text, WebSocket state, etc.), wri
 - `.meeting-list` - Previous meetings list
 - `.participant-card` - Participant selection toggle card (landing page)
 - `.participant-card.selected` - Selected participant card
-- `.attention-btn` - Attention button in vibe bar
+- `.attention-btn` - Attention button in status-read bar
 - `.attention-btn.activated` - Attention button after click (amber fill, disabled)
 - `.rollback-icon` - Per-message rollback icon (hover-visible on human messages)
 - `.rollback-modal` - Rollback confirmation dialog

@@ -71,7 +71,7 @@ export interface OrchestratorEvents {
   onSpeechChunk: (speaker: SpeakerId, delta: string) => void;
   onSpeechDone: (speaker: SpeakerId) => void;
   onAssessment: (assessment: PrivateAssessment) => void;
-  onVibe: (vibe: string, nextSpeaker: SpeakerId) => void;
+  onStatusRead: (statusRead: string, nextSpeaker: SpeakerId) => void;
   onYourTurn: () => void;
   onError: (message: string) => void;
   onSync: (meeting: Meeting, phase: Phase, readOnly?: boolean, editingCycle?: number) => void;
@@ -114,7 +114,7 @@ function createNoopEvents(): OrchestratorEvents {
     onSpeechChunk: () => {},
     onSpeechDone: () => {},
     onAssessment: () => {},
-    onVibe: () => {},
+    onStatusRead: () => {},
     onYourTurn: () => {},
     onError: () => {},
     onSync: () => {},
@@ -246,7 +246,7 @@ export function setOpeningPrompt(content: string): void {
  * Run a single deliberation cycle.
  *
  * 1. Assessment phase: each participant (except last speaker) assesses
- * 2. Selection phase: orchestrator picks next speaker + vibe
+ * 2. Selection phase: orchestrator picks next speaker + statusRead
  * 3. Speech phase: selected participant speaks (or human turn)
  * 4. Update meeting.yaml and commit
  */
@@ -291,9 +291,9 @@ export async function runCycle(
   // ------ ASSESSMENT PHASE ------
   setPhase("assessing");
 
-  // Get the vibe from the previous cycle (if any) — agents see it before the speech
+  // Get the status-read from the previous cycle (if any) — agents see it before the speech
   const prevCycle = currentMeeting.cycles[currentMeeting.cycles.length - 1];
-  const prevVibe = prevCycle?.orchestratorDecision?.vibe;
+  const prevStatusRead = prevCycle?.orchestratorDecision?.statusRead;
 
   const assessments: Record<string, PrivateAssessment> = {}; // keyed by AgentId
 
@@ -303,7 +303,7 @@ export async function runCycle(
     .map(async (agentId) => {
       const tracker = createProcessTracker("assessment", agentId);
       try {
-        const prompt = await buildAssessmentPrompt(lastSpeaker, lastContent, prevVibe);
+        const prompt = await buildAssessmentPrompt(lastSpeaker, lastContent, prevStatusRead);
         const response = await feedMessage(agentId, prompt, (eventKind, content, toolName, toolInput) => {
           tracker.emit(eventKind, content, toolName, toolInput);
         });
@@ -356,13 +356,13 @@ export async function runCycle(
       logWarn("orchestrator", `runCycle ${cycleNumber}: orchestrator selection retry also failed, falling back to Director`);
       decision = {
         nextSpeaker: pickFallbackSpeaker(lastSpeaker),
-        vibe: "לא הצלחתי לקרוא את האווירה.",
+        statusRead: "לא הצלחתי לקרוא את מצב הדיון.",
       };
     }
   } catch (err) {
     decision = {
       nextSpeaker: pickFallbackSpeaker(lastSpeaker),
-      vibe: "שגיאה בבחירת דובר.",
+      statusRead: "שגיאה בבחירת דובר.",
     };
     events.onError(`Selection failed: ${err}`);
   } finally {
@@ -376,8 +376,8 @@ export async function runCycle(
     attentionRequested = false;
   }
 
-  logInfo("orchestrator", `runCycle ${cycleNumber}: selected → ${decision.nextSpeaker} (vibe: "${decision.vibe}")`);
-  events.onVibe(decision.vibe, decision.nextSpeaker);
+  logInfo("orchestrator", `runCycle ${cycleNumber}: selected → ${decision.nextSpeaker} (statusRead: "${decision.statusRead}")`);
+  events.onStatusRead(decision.statusRead, decision.nextSpeaker);
 
   // ------ SPEECH PHASE ------
   const nextSpeaker = decision.nextSpeaker;
@@ -399,7 +399,7 @@ export async function runCycle(
     // Agent speech
     setPhase("speaking", nextSpeaker);
 
-    const speechPrompt = await buildSpeechPrompt(decision.vibe);
+    const speechPrompt = await buildSpeechPrompt(decision.statusRead);
     let fullText = "";
 
     const speechTracker = createProcessTracker("agent-speech", nextSpeaker);
@@ -573,7 +573,7 @@ export async function handleRollback(
 
   // Phase 3: Roll back perush files on main if needed
   onProgress?.("perush-rollback", "בודק שינויים בפירוש...");
-  const { stashed, rolledBack } = await rollbackPerushOnMain(
+  const { stashed } = await rollbackPerushOnMain(
     meetingId,
     targetCycleNumber,
   );
@@ -772,9 +772,9 @@ function extractAssessmentText(response: string): string | null {
 
 /**
  * Extract the orchestrator's recommendation block from response text.
- * Returns { nextSpeakerRaw, vibe } or null with a reason string.
+ * Returns { nextSpeakerRaw, statusRead } or null with a reason string.
  */
-function extractRecommendation(response: string): { nextSpeakerRaw: string; vibe: string } | { error: string } {
+function extractRecommendation(response: string): { nextSpeakerRaw: string; statusRead: string } | { error: string } {
   const startIdx = response.indexOf(RECOMMENDATION_START_DELIMITER);
   const endIdx = response.indexOf(RECOMMENDATION_END_DELIMITER);
   if (startIdx === -1 || endIdx === -1 || endIdx <= startIdx) {
@@ -792,12 +792,12 @@ function extractRecommendation(response: string): { nextSpeakerRaw: string; vibe
   }
 
   const nextSpeakerRaw = speakerMatch[1].trim();
-  const vibe = lines.slice(1).join("\n").trim();
+  const statusRead = lines.slice(1).join("\n").trim();
 
-  return { nextSpeakerRaw, vibe };
+  return { nextSpeakerRaw, statusRead };
 }
 
-async function buildAssessmentPrompt(lastSpeaker: SpeakerId, lastContent: string, vibe?: string): Promise<string> {
+async function buildAssessmentPrompt(lastSpeaker: SpeakerId, lastContent: string, statusRead?: string): Promise<string> {
   const speakerLabel = lastSpeaker === "human" ? "המנחה" : lastSpeaker;
   const ctx: Record<string, string> = {
     speakerLabel,
@@ -805,13 +805,13 @@ async function buildAssessmentPrompt(lastSpeaker: SpeakerId, lastContent: string
     assessmentStartDelimiter: ASSESSMENT_START_DELIMITER,
     assessmentEndDelimiter: ASSESSMENT_END_DELIMITER,
   };
-  if (vibe) ctx.vibe = vibe;
+  if (statusRead) ctx.statusRead = statusRead;
   const prompt = await resolvePromptTemplate("agent-assessment-prompt.md", ctx);
   return withStubResponse(prompt, `חשבתי על הנקודה הזו לעומק.\n\n---התחלת הערכה להמשך הדיון---\nאני: 5\nיש לי כמה הערות לגבי המילון.\n---סיום הערכה להמשך הדיון---`);
 }
 
-async function buildSpeechPrompt(vibe: string): Promise<string> {
-  const prompt = await resolvePromptTemplate("agent-speech-prompt.md", { vibe });
+async function buildSpeechPrompt(statusRead: string): Promise<string> {
+  const prompt = await resolvePromptTemplate("agent-speech-prompt.md", { statusRead });
   return withStubResponse(prompt, "תגובת הסוכן.");
 }
 
@@ -856,7 +856,7 @@ async function buildSelectionPrompt(
 
 /**
  * Parse an orchestrator response into an OrchestratorDecision, or return null.
- * Extracts the recommendation block, resolves the speaker name, extracts the vibe.
+ * Extracts the recommendation block, resolves the speaker name, extracts the status-read.
  */
 function parseOrchestratorResponse(response: string): OrchestratorDecision | null {
   const result = extractRecommendation(response);
@@ -865,7 +865,7 @@ function parseOrchestratorResponse(response: string): OrchestratorDecision | nul
   const resolved = resolveNextSpeaker(result.nextSpeakerRaw);
   if (!resolved) return null;
 
-  return { nextSpeaker: resolved, vibe: result.vibe || "הדיון ממשיך." };
+  return { nextSpeaker: resolved, statusRead: result.statusRead || "הדיון ממשיך." };
 }
 
 async function buildSelectionRetryPrompt(reason: string): Promise<string> {

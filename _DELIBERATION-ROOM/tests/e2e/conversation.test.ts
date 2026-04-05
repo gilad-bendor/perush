@@ -2,7 +2,7 @@
  * meetings-db.test.ts — E2E tests for the live deliberation UI.
  *
  * Uses Playwright with a mock WebSocket server for deterministic testing.
- * Tests streaming, RTL, phase transitions, agent panel, vibe bar.
+ * Tests streaming, RTL, phase transitions, agent panel, status-read bar.
  */
 
 import { describe, test, expect, beforeAll, afterAll, afterEach } from "bun:test";
@@ -48,7 +48,7 @@ const syncWithCycles = {
             text: "אני: 6\nנקודה מעניינת מבחינת מבנה",
           },
         },
-        orchestratorDecision: { nextSpeaker: "Milo", vibe: "הדיון מתחיל להתפתח." },
+        orchestratorDecision: { nextSpeaker: "Milo", statusRead: "הדיון מתחיל להתפתח." },
       },
       {
         cycleNumber: 2,
@@ -63,7 +63,7 @@ const syncWithCycles = {
             text: "אני: 3\nמסכים, אך יש לדייק במילון",
           },
         },
-        orchestratorDecision: { nextSpeaker: "Director", vibe: "הגיע הזמן לשמוע את המנחה." },
+        orchestratorDecision: { nextSpeaker: "Director", statusRead: "הגיע הזמן לשמוע את המנחה." },
       },
     ],
   },
@@ -139,12 +139,12 @@ describe("deliberation UI", () => {
     expect(dir).toBe("rtl");
   });
 
-  test("vibe bar shows phase indicator", async () => {
+  test("status-read bar shows phase indicator", async () => {
     page = await browser.newPage();
     await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
-    const phaseText = await page.textContent("#vibe-phase");
+    const phaseText = await page.textContent("#status-read-phase");
     expect(phaseText).toBeTruthy();
   });
 
@@ -255,23 +255,23 @@ describe("deliberation UI", () => {
     expect(disabled).toBe(false);
   });
 
-  test("vibe bar updates on vibe message", async () => {
+  test("status-read bar updates on statusRead message", async () => {
     page = await browser.newPage();
     await page.goto(meetingUrl(mockServer));
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     mockServer.broadcast({
-      type: "vibe",
-      vibe: "הדיון מתעמק — נראה שמתגבשת הסכמה.",
+      type: "status-read",
+      statusRead: "הדיון מתעמק — נראה שמתגבשת הסכמה.",
       nextSpeaker: "kashia",
     });
 
     await page.waitForFunction(() =>
-      document.getElementById("vibe-text")?.textContent?.includes("מתעמק")
+      document.getElementById("status-read-text")?.textContent?.includes("מתעמק")
     , { timeout: 3000 });
 
-    const vibeText = await page.textContent("#vibe-text");
-    expect(vibeText).toContain("מתעמק");
+    const statusReadText = await page.textContent("#status-read-text");
+    expect(statusReadText).toContain("מתעמק");
   });
 
   test("error message renders in conversation", async () => {
@@ -329,7 +329,7 @@ describe("sync with existing cycles", () => {
     }
   });
 
-  test("vibe shows last cycle decision", async () => {
+  test("statusRead shows last cycle decision", async () => {
     const cyclesMock = createMockServer({
       port: 4205,
       onMessageEvents: {
@@ -342,8 +342,8 @@ describe("sync with existing cycles", () => {
       await page.goto(`${cyclesMock.url}/meeting/test-conv-1`);
       await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
-      const vibeText = await page.textContent("#vibe-text");
-      expect(vibeText).toContain("הגיע הזמן לשמוע את המנחה");
+      const statusReadText = await page.textContent("#status-read-text");
+      expect(statusReadText).toContain("הגיע הזמן לשמוע את המנחה");
     } finally {
       if (page && !page.isClosed()) await page.close();
       cyclesMock.stop();

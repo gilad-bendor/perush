@@ -141,11 +141,11 @@ This includes the section "# The Deliberation" up to (excluding) "## Your Fellow
 
 **Orchestrator prompt structure** (declared in `prompts/system-prompt-orchestrator.md`):
 ```
-# Your Unique Identity: ...            ← orchestrator identity and role
-# The Methodology You Are Moderating   ← @include-region mosaic from base-prefix (project, core principle, cognitive mode, dictionary, sequences, layers, anti-patterns, interpretive process, cross-referencing, mute texts)
-# The Participants                     ← @foreach with introForOthers + noteForOrchestrator
-# Your Input / Output / How to Decide  ← orchestrator-specific instructions
-# The Vibe: Atmosphere and Observation  ← atmospheric signal + occasional substantive observations
+# Your Unique Identity: ...                    ← orchestrator identity and role
+# The Methodology You Are Moderating           ← @include-region mosaic from base-prefix (project, core principle, cognitive mode, dictionary, sequences, layers, anti-patterns, interpretive process, cross-referencing, mute texts)
+# The Participants                             ← @foreach with introForOthers + noteForOrchestrator
+# Your Input / Output / How to Decide          ← orchestrator-specific instructions
+# קריאת מצב — The Status Read              ← intellectual deliberation status + occasional substantive observations
 ```
 
 ## Design Principles
@@ -166,7 +166,7 @@ No hard length constraint. The guidance is conversational: deliver your point we
 ### The Orchestrator-Agent
 
 - It is a **substantive moderator** — it understands the methodology deeply enough to notice blind spots, premature convergence, and unaddressed elements, but does NOT analyze biblical text or propose interpretations itself.
-- It receives free-text private assessments each cycle → outputs a next-speaker recommendation + public vibe text.
-- The vibe serves two functions: (1) atmospheric signal (facial expressions, body language, energy) and (2) occasional substantive observations about the deliberation's coverage (unaddressed words, unapplied quality criteria, ignored layers). Substantive observations should be rare — woven into the atmospheric vibe, not separated from it.
+- It receives free-text private assessments each cycle → outputs a next-speaker recommendation + public status-read text.
+- The status-read summarizes the intellectual state of the deliberation (what's been covered, what's open, energy level) and occasionally includes substantive observations about blind spots (unaddressed words, unapplied quality criteria, ignored layers). Substantive observations should be rare — most status-reads are a short factual status.
 - It runs as a **persistent Opus session** — no tools needed, Hebrew narrative output with delimiter-based parsing.
 - Its guidelines prioritize: productive disagreement, balance across Participants, Director heartbeat (don't let 3+ Participant-Agent turns pass without Director input).

@@ -6,7 +6,7 @@
 
 2. **Git branches as the meeting database**: Each meeting lives on its own orphan branch (`sessions/<meeting-id>`) — no meeting data on `main`, ever. `meeting.yaml` + session JSONL files are committed per-cycle, creating a natural timeline. Listing meetings = listing branches; reading an ended meeting = `git show`. Rationale: (a) audit trail with per-cycle granularity; (b) `main` stays clean; (c) git provides the database operations without additional tooling; (d) session files live on the branch alongside `meeting.yaml`.
 
-3. **Director-controlled ending**: Only the Director ends a meeting. The Orchestrator-Agent signals readiness through "vibe" comments but never terminates autonomously.
+3. **Director-controlled ending**: Only the Director ends a meeting. The Orchestrator-Agent signals readiness through "status-read" comments but never terminates autonomously.
 
 4. **Director opens**: The Director provides the initial prompt that sets context and scope. The Participant-Agents respond to this opening.
 
@@ -14,7 +14,7 @@
 
 6. **No JS framework (backend or frontend)**: Custom orchestrator, vanilla HTML/JS frontend with Tailwind CSS. The system has a small, configurable set of Participants with a specific protocol — JS frameworks add complexity without proportional value.
 
-7. **"Vibe" comments**: The Orchestrator-Agent produces a short atmospheric comment with each Participant selection, displayed in a sticky bar as a stage direction (not a conversation message).
+7. **"Status-Read" comments**: The Orchestrator-Agent produces a short status-read comment with each Participant selection, displayed in a sticky bar as a stage direction (not a conversation message).
 
 8. **Dialectical Participant-Agents with primary mandates**: Participant-Agents engage with each other's points but always through their own lens. Each has a strict primary mandate that keeps their voice distinct.
 

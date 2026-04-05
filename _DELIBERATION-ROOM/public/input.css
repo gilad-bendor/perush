@@ -249,42 +249,42 @@
   }
 
   /* --------------------------------------------------------------- */
-  /* Vibe Bar                                                        */
+  /* StatusRead Bar                                                        */
   /* --------------------------------------------------------------- */
 
-  .vibe-bar {
+  .status-read-bar {
     @apply border-t border-stone-200 px-4 py-2 flex items-center gap-3 bg-stone-50 transition-all duration-300;
   }
 
-  .vibe-bar--human-turn {
+  .status-read-bar--human-turn {
     @apply bg-blue-50 border-blue-200;
   }
 
-  .vibe-icon {
+  .status-read-icon {
     @apply text-amber-700 font-bold;
   }
 
-  .vibe-text {
+  .status-read-text {
     @apply flex-1 text-sm text-stone-600;
   }
 
-  .vibe-next {
+  .status-read-next {
     @apply text-sm text-stone-500;
   }
 
-  .vibe-phase-badge {
+  .status-read-phase-badge {
     @apply text-xs bg-stone-200 text-stone-600 px-2 py-0.5 rounded-full;
   }
 
-  .vibe-cost {
+  .status-read-cost {
     @apply hidden text-xs text-stone-400;
   }
 
-  .btn-vibe-control {
+  .btn-status-read-control {
     @apply text-sm border border-stone-300 text-stone-600 rounded px-3 py-1 hover:bg-stone-100 transition-colors;
   }
 
-  .btn-vibe-control--blocking {
+  .btn-status-read-control--blocking {
     @apply border-red-400 text-red-700 bg-red-50 hover:bg-red-100;
   }
 
@@ -445,7 +445,7 @@
   display: grid;
   grid-template-areas:
     "conversation"
-    "vibe"
+    "status-read"
     "input";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
@@ -453,7 +453,7 @@
 }
 
 .deliberation-room .conversation-feed { grid-area: conversation; }
-.deliberation-room .vibe-bar          { grid-area: vibe; }
+.deliberation-room .status-read-bar   { grid-area: status-read; }
 .deliberation-room .human-input       { grid-area: input; }
 
 /* Streaming message indicator */

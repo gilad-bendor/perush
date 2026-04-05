@@ -14,13 +14,13 @@ For everything else — architecture, implementation, infrastructure — this fi
 
 ## Taxonomy
 
-| Term                           | Who                             | Definition                                                                                                                           |
-|--------------------------------|---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **Participant-Agent**          | milo, archi, kashia, barak, ... | AI critic agents who participate in the deliberation. Discovered dynamically from `participant-agents/*.md` (ignoring `_*.md` files) |
-| **Orchestrator-Agent** | orchestrator                    | Orchestrates turn-taking and reads the room. Mostly invisible to Participants - except for the "room vibe" summary                   |
-| **Director**                   | the human scholar               | Steers the conversation, makes final decisions                                                                                       |
-| **Participant**                | Participant-Agents + Director   | Everyone who speaks (Orchestrator is NOT a Participant)                                                                               |
-| **AI-Agent**                   | Participant-Agents + Orchestrator | All AI agents in the system (Participant + Orchestrator-Agent)                                                               |
+| Term                   | Who                               | Definition                                                                                                                           |
+|------------------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| **Participant-Agent**  | milo, archi, kashia, barak, ...   | AI critic agents who participate in the deliberation. Discovered dynamically from `participant-agents/*.md` (ignoring `_*.md` files) |
+| **Orchestrator-Agent** | orchestrator                      | Orchestrates turn-taking and reads the room. Mostly invisible to Participants - except for the "status-read" summary                 |
+| **Director**           | the human scholar                 | Steers the conversation, makes final decisions                                                                                       |
+| **Participant**        | Participant-Agents + Director     | Everyone who speaks (Orchestrator is NOT a Participant)                                                                              |
+| **AI-Agent**           | Participant-Agents + Orchestrator | All AI agents in the system (Participant + Orchestrator-Agent)                                                                       |
 
 **In TypeScript**: `AgentId = string` (from filenames, e.g., `"milo"`). `SpeakerId = AgentId | "human"`. Orchestrator is `"orchestrator"`.
 
@@ -69,7 +69,7 @@ For everything else — architecture, implementation, infrastructure — this fi
          │
          ▼
 3. SELECTION — Feed speech + assessments to Orchestrator's session
-   → Returns: { nextSpeaker, vibe }
+   → Returns: { nextSpeaker, statusRead }
          │
          ▼
 4. SPEECH — Selected Participant speaks (streamed via WebSocket, with tools)
@@ -148,7 +148,7 @@ interface CycleRecord {
   cycleNumber: number;
   speech: ConversationMessage;
   assessments: Record<AgentId, PrivateAssessment>;
-  orchestratorDecision: { nextSpeaker: SpeakerId; vibe: string };
+  orchestratorDecision: { nextSpeaker: SpeakerId; statusRead: string };
   processes?: ProcessRecord[];  // full SDK interaction traces (prompts, thinking, tools, output)
 }
 

@@ -183,7 +183,7 @@ describe("stubQuery — basic", () => {
 describe("stubQuery — JSON response", () => {
   test("returns JSON-stringified data when no text key", async () => {
     const q = stubQuery({
-      prompt: `test\n---stub-response---\nnextSpeaker: "Milo"\nvibe: "הדיון זורם."\n---end-stub-response---`,
+      prompt: `test\n---stub-response---\nnextSpeaker: "Milo"\nstatusRead: "הדיון זורם."\n---end-stub-response---`,
       options: { title: "test" },
     });
 
@@ -195,7 +195,7 @@ describe("stubQuery — JSON response", () => {
     const result = messages.find(m => m.type === "result") as StubSDKResultSuccess;
     const parsed = JSON.parse(result.result);
     expect(parsed.nextSpeaker).toBe("Milo");
-    expect(parsed.vibe).toBe("הדיון זורם.");
+    expect(parsed.statusRead).toBe("הדיון זורם.");
   });
 });
 
