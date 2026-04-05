@@ -8,7 +8,7 @@ Agent persona files live in `participant-agents/`; shared prompt templates live 
 
 | File | Name | Type | Role |
 |------|------|------|------|
-| `prompts/system-prompt-base-prefix.md` | — | *(shared prefix)* | Prepended to ALL AI-Agents — project context, common instructions, dictionary injection point, fellow participants |
+| `prompts/system-prompt-base-prefix.md` | — | *(shared prefix)* | Prepended to ALL AI-Agents — scholarly persona, deliberation mechanics, full interpretive methodology, dictionary injection point, fellow participants, per-agent `noteInSelfSystemPrompt` injection point |
 | `participant-agents/milo.md` | **Milo / מיילו** | Participant-Agent | Dictionary Purist (המילונאי) — word-level dictionary fidelity |
 | `participant-agents/archi.md` | **Archi / ארצ'י** | Participant-Agent | Architect (האדריכל) — structural coherence across the narrative |
 | `participant-agents/kashia.md` | **Kashia / קשיא** | Participant-Agent | Skeptic (המבקר) — intellectual honesty, degrees of freedom, reverse-engineering test |
@@ -30,7 +30,8 @@ Each non-underscore agent file has YAML frontmatter:
 ---
 englishName: Milo
 hebrewName: מיילו
-orchestratorIntro: "The Dictionary Purist. Audits word-level dictionary fidelity — catches untranslated words, loose synonyms, and narrative drift. Direct, factual, tends to speak frequently with short, pointed observations"
+noteInSelfSystemPrompt: "You are especially attuned to precision in language — the exact word, the exact root, the exact usage across the corpus."
+introForOthers: "The Dictionary Purist. Audits word-level dictionary fidelity — catches untranslated words, loose synonyms, and narrative drift. Direct, factual, tends to speak frequently with short, pointed observations"
 orchestratorTip: "Bring in when specific words need dictionary checking, when the discussion is drifting from the text, or when dictionary evidence could settle a dispute"
 ---
 ```
@@ -40,8 +41,9 @@ orchestratorTip: "Bring in when specific words need dictionary checking, when th
 
 **Dynamic fields** (stored in `frontmatterData: Record<string, string>`):
 All other frontmatter fields are captured dynamically. No code changes needed to add new fields — just add them to the frontmatter and reference them in templates. Standard dynamic fields:
-- **`orchestratorIntro`**: One-sentence profile for the Orchestrator. Written from the orchestrator's perspective.
+- **`introForOthers`**: One-sentence profile for the Orchestrator. Written from the orchestrator's perspective.
 - **`orchestratorTip`**: Guidance for the orchestrator on when this agent is most valuable.
+- **`noteInSelfSystemPrompt`**: A single sentence echoed into the shared Persona section of the base prefix, seeding the agent's distinctive intellectual orientation before any methodology sections. Bridges the shared scholarly identity with the agent's unique cognitive style.
 
 Dynamic fields are accessible in templates via:
 - **`<!-- @echo fieldName -->`** — in the agent's own persona file (for self-reference).
@@ -86,9 +88,9 @@ Available directives (HTML-comment syntax):
 | `<!-- @echo EnglishName -->` | Agent's own English name (from frontmatter) |
 | `<!-- @echo HebrewName -->` | Agent's own Hebrew name (from frontmatter) |
 | `<!-- @echo fieldName -->` | Any frontmatter field from the current agent's file |
-| `<!-- @foreach-agent $var in participantAgents -->`<br>`$var.englishName / $var.hebrewName: $var.orchestratorIntro`<br>`<!-- @endfor-agent -->` | Loop over participant agents with dot-access to any field (structural or `frontmatterData`) |
+| `<!-- @foreach-agent $var in participantAgents -->`<br>`$var.englishName / $var.hebrewName: $var.introForOthers`<br>`<!-- @endfor-agent -->` | Loop over participant agents with dot-access to any field (structural or `frontmatterData`) |
 
-The `@foreach-agent` directive supports dot-access on any `AgentDefinition` property: `id`, `englishName`, `hebrewName`, `roleTitle`, and any key in `frontmatterData`. For example, `$agent.orchestratorIntro` resolves to the agent's `frontmatterData.orchestratorIntro` value.
+The `@foreach-agent` directive supports dot-access on any `AgentDefinition` property: `id`, `englishName`, `hebrewName`, `roleTitle`, and any key in `frontmatterData`. For example, `$agent.introForOthers` resolves to the agent's `frontmatterData.introForOthers` value.
 
 **Example flow** for `milo.md`:
 ```
@@ -100,7 +102,7 @@ The `@foreach-agent` directive supports dot-access on any `AgentDefinition` prop
    ↳ resolves @echo markers (EnglishName, HebrewName, dictionary, etc.)
 5. Phase 2: resolveForEachAgent(afterPreprocess, { participantAgents: [...] })
    ↳ expands <!-- @foreach-agent $agent in participantAgents --> → one entry per fellow participant (milo excluded)
-   ↳ replaces $agent.englishName, $agent.orchestratorIntro, etc. with actual values
+   ↳ replaces $agent.englishName, $agent.introForOthers, etc. with actual values
 6. Returns fully resolved system prompt
 ```
 

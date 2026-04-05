@@ -79,7 +79,7 @@ describe("AgentDefinitionSchema", () => {
     roleTitle: "המילונאי",
     filePath: "/path/to/milo.md",
     frontmatterData: {
-      orchestratorIntro: "The Dictionary Purist.",
+      introForOthers: "The Dictionary Purist.",
       orchestratorTip: "Bring in when words need checking.",
     },
   };

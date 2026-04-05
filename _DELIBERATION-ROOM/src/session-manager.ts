@@ -135,7 +135,7 @@ export function resetAgentCache(): void {
  * `contextKey` maps to an array of AgentDefinition objects. Within the loop
  * body, `$var.fieldName` is replaced with the agent's property value. Supported
  * properties: `id`, `englishName`, `hebrewName`, `roleTitle`, and any key
- * present in `frontmatterData` (e.g., `$var.orchestratorIntro`).
+ * present in `frontmatterData` (e.g., `$var.introForOthers`).
  */
 function resolveForEachAgent(
   content: string,
@@ -172,7 +172,7 @@ function resolveForEachAgent(
  * - `dictionary`: extracted dictionary text from ../CLAUDE.md
  *
  * Note: frontmatter values from the current agent's file are exposed
- * directly as `@echo` variables (e.g., `<!-- @echo orchestratorIntro -->`).
+ * directly as `@echo` variables (e.g., `<!-- @echo introForOthers -->`).
  */
 function buildPreprocessContext(
   frontmatter: Record<string, string>,

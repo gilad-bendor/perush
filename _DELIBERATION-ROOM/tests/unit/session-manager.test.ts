@@ -68,7 +68,7 @@ describe("discoverAgents", () => {
     const milo = agents.find(a => a.id === "milo")!;
     expect(milo.englishName).toBe("Milo");
     expect(milo.hebrewName).toBe("מיילו");
-    expect(milo.frontmatterData.orchestratorIntro).toContain("Dictionary Purist");
+    expect(milo.frontmatterData.introForOthers).toContain("Dictionary Purist");
     expect(milo.frontmatterData.orchestratorTip).toContain("dictionary");
   });
 

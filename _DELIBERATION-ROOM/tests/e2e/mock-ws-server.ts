@@ -29,7 +29,7 @@ export interface MockAgentDef {
   englishName: string;
   hebrewName: string;
   roleTitle: string;
-  orchestratorIntro: string;
+  introForOthers: string;
   orchestratorTip: string;
   filePath: string;
 }
@@ -50,7 +50,7 @@ const DEFAULT_AGENTS: MockAgentDef[] = [
     englishName: "Milo",
     hebrewName: "מיילו",
     roleTitle: "המילונאי",
-    orchestratorIntro: "Dictionary Purist",
+    introForOthers: "Dictionary Purist",
     orchestratorTip: "Bring in for dictionary checks",
     filePath: "participant-agents/milo.md",
   },
@@ -59,7 +59,7 @@ const DEFAULT_AGENTS: MockAgentDef[] = [
     englishName: "Archi",
     hebrewName: "ארצ'י",
     roleTitle: "האדריכל",
-    orchestratorIntro: "Architect",
+    introForOthers: "Architect",
     orchestratorTip: "Bring in for structural analysis",
     filePath: "participant-agents/archi.md",
   },
@@ -68,7 +68,7 @@ const DEFAULT_AGENTS: MockAgentDef[] = [
     englishName: "Kashia",
     hebrewName: "קשיא",
     roleTitle: "המבקר",
-    orchestratorIntro: "Skeptic",
+    introForOthers: "Skeptic",
     orchestratorTip: "Bring in to challenge interpretations",
     filePath: "participant-agents/kashia.md",
   },
@@ -77,7 +77,7 @@ const DEFAULT_AGENTS: MockAgentDef[] = [
     englishName: "Barak",
     hebrewName: "ברק",
     roleTitle: "ההברקה",
-    orchestratorIntro: "Ideator",
+    introForOthers: "Ideator",
     orchestratorTip: "Bring in for creative insight",
     filePath: "participant-agents/barak.md",
   },

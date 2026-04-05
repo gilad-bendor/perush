@@ -171,7 +171,7 @@ export type AgentDefinition = {
   hebrewName: string;
   roleTitle: string;
   filePath: string;
-  /** All non-structural frontmatter fields (e.g., orchestratorIntro, orchestratorTip). */
+  /** All non-structural frontmatter fields (e.g., introForOthers, orchestratorTip). */
   frontmatterData: Record<string, string>;
 };
 assertZodTypeMatch<AgentDefinition, typeof AgentDefinitionSchema>(true);
