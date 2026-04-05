@@ -5,7 +5,7 @@
  * and response parsing. Uses real persona files from participant-agents/.
  */
 
-import { describe, test, expect, beforeAll, beforeEach } from "bun:test";
+import { describe, test, expect, beforeAll, beforeEach, afterAll } from "bun:test";
 import { join } from "path";
 import {
   discoverAgents,
@@ -208,6 +208,94 @@ describe("resolveTemplate", () => {
     // But should contain others
     expect(resolved).toContain("Archi / ארצ'י");
     expect(resolved).toContain("Kashia / קשיא");
+  });
+});
+
+describe("resolveIncludeRegion", () => {
+  // Lazy import to avoid circular issues — pull from the same module
+  let resolveIncludeRegion: typeof import("../../src/session-manager").resolveIncludeRegion;
+  const tmpDir = join(import.meta.dir, "__include-region-tmp");
+
+  beforeAll(async () => {
+    resolveIncludeRegion = (await import("../../src/session-manager")).resolveIncludeRegion;
+    const { mkdirSync, writeFileSync } = await import("fs");
+    mkdirSync(tmpDir, { recursive: true });
+    writeFileSync(join(tmpDir, "sample.md"), [
+      "# Header",
+      "",
+      "## Section A",
+      "Content of section A.",
+      "",
+      "## Section B",
+      "Content of section B.",
+      "",
+      "## Section C",
+      "Content of section C.",
+    ].join("\n"));
+  });
+
+  afterAll(async () => {
+    const { rmSync } = await import("fs");
+    rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  test("extracts a single matching region", async () => {
+    const input = `before\n<!-- @include-region sample.md /## Section B[\\s\\S]*?(?=## |$)/ -->\nafter`;
+    const result = await resolveIncludeRegion(input, tmpDir);
+    expect(result).toContain("Content of section B.");
+    expect(result).toStartWith("before\n");
+    expect(result).toEndWith("\nafter");
+    expect(result).not.toContain("@include-region");
+  });
+
+  test("throws when pattern matches nothing", async () => {
+    const input = `<!-- @include-region sample.md /## Nonexistent/ -->`;
+    await expect(resolveIncludeRegion(input, tmpDir)).rejects.toThrow("matched nothing");
+  });
+
+  test("throws when pattern matches multiple regions", async () => {
+    const input = `<!-- @include-region sample.md /## Section [A-Z]/ -->`;
+    await expect(resolveIncludeRegion(input, tmpDir)).rejects.toThrow("matched 3 regions");
+  });
+
+  test("throws when file not found", async () => {
+    const input = `<!-- @include-region nonexistent.md /foo/ -->`;
+    await expect(resolveIncludeRegion(input, tmpDir)).rejects.toThrow("file not found");
+  });
+
+  test("passes through content with no directives", async () => {
+    const input = "no directives here";
+    const result = await resolveIncludeRegion(input, tmpDir);
+    expect(result).toBe(input);
+  });
+
+  test("handles multiple directives in one content", async () => {
+    const input = [
+      `<!-- @include-region sample.md /## Section A[\\s\\S]*?(?=## |$)/ -->`,
+      "---",
+      `<!-- @include-region sample.md /## Section C[\\s\\S]*?(?=## |$)/ -->`,
+    ].join("\n");
+    const result = await resolveIncludeRegion(input, tmpDir);
+    expect(result).toContain("Content of section A.");
+    expect(result).toContain("Content of section C.");
+    expect(result).toContain("---");
+    expect(result).not.toContain("Content of section B.");
+  });
+
+  test("supports case-insensitive flag", async () => {
+    const input = `<!-- @include-region sample.md /## section b[\\s\\S]*?(?=## |$)/i -->`;
+    const result = await resolveIncludeRegion(input, tmpDir);
+    expect(result).toContain("Content of section B.");
+  });
+
+  test("throws when g flag is used", async () => {
+    const input = `<!-- @include-region sample.md /## Section A/g -->`;
+    await expect(resolveIncludeRegion(input, tmpDir)).rejects.toThrow('"g" flag is not allowed');
+  });
+
+  test("throws when g flag is combined with other flags", async () => {
+    const input = `<!-- @include-region sample.md /## Section A/gi -->`;
+    await expect(resolveIncludeRegion(input, tmpDir)).rejects.toThrow('"g" flag is not allowed');
   });
 });
 

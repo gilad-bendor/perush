@@ -74,16 +74,18 @@ Returns the cached agent definitions as a JSON array.
 
 ## Template Directives
 
-Template resolution is a two-phase process:
+Template resolution runs as a **fixpoint loop** — three phases execute repeatedly until a full iteration produces no changes (capped at `MAX_PREPROCESS_ITERATIONS` from `config.ts`). This means any phase can introduce directives that a subsequent or earlier phase resolves on the next iteration.
 
 1. **Phase 1 — `preprocess` library**: Resolves `@include`, `@echo`, `@ifdef`, and standard `@foreach` directives. Included files are processed recursively with the same context.
 2. **Phase 2 — Custom `@foreach-agent`**: Resolves `@foreach-agent` loops with dot-access on `AgentDefinition` properties (including `frontmatterData` fields). Runs after includes are inlined, so it works across included files.
+3. **Phase 3 — Custom `@include-region`**: Extracts a regex-matched region from a file. The included content re-enters the loop, so directives within the extracted region are resolved.
 
 Available directives (HTML-comment syntax):
 
 | Directive | What it does |
 |-----------|-------------|
 | `<!-- @include filename.md -->` | Inline another file (recursive, same context) |
+| `<!-- @include-region path/to/file.md /RegExp/ -->` | Extract the single region matching the RegExp from a file (see below) |
 | `<!-- @echo dictionary -->` | Inject the full dictionary text extracted from `../CLAUDE.md` |
 | `<!-- @echo EnglishName -->` | Agent's own English name (from frontmatter) |
 | `<!-- @echo HebrewName -->` | Agent's own Hebrew name (from frontmatter) |
@@ -92,27 +94,38 @@ Available directives (HTML-comment syntax):
 
 The `@foreach-agent` directive supports dot-access on any `AgentDefinition` property: `id`, `englishName`, `hebrewName`, `roleTitle`, and any key in `frontmatterData`. For example, `$agent.introForOthers` resolves to the agent's `frontmatterData.introForOthers` value.
 
+### `@include-region`
+
+Includes a **single regex-matched region** from a file, rather than the entire file.
+
+**Typical usage** — extracting a section from a Markdown file by heading boundaries:
+
+```html
+<!-- @include-region system-prompt-base-prefix.md /^# The Deliberation\n[\s\S]*(?=^## Your Fellow Participants\n)/m -->
+```
+
+This includes the section "# The Deliberation" up to (excluding) "## Your Fellow Participants". The `m` flag makes `^` match at line beginnings. This heading-boundary pattern is expected to cover most uses.
+
+- The RegExp must match **exactly one** region in the target file — throws on zero or multiple matches.
+- Optional flags (`i`, `m`, `u`, etc.) can follow the closing slash. The `s` (dotAll) flag is always on.
+- The `g` flag is **forbidden** (throws) — the directive's semantics require exactly-one matching.
+- The directive's resolution is the matched string, which then re-enters the fixpoint loop for further directive resolution.
+
 **Example flow** for `milo.md`:
 ```
 1. resolveTemplate("milo.md", meetingParticipants, "milo")
 2. Read file → gray-matter strips frontmatter
 3. buildPreprocessContext(): builds context with dictionary + all frontmatter as @echo vars
-4. Phase 1: preprocessLib.preprocess(content, context, ...)
-   ↳ resolves <!-- @include ../prompts/system-prompt-base-prefix.md --> → inlines base with dictionary
-   ↳ resolves @echo markers (EnglishName, HebrewName, dictionary, etc.)
-5. Phase 2: resolveForEachAgent(afterPreprocess, { participantAgents: [...] })
-   ↳ expands <!-- @foreach-agent $agent in participantAgents --> → one entry per fellow participant (milo excluded)
-   ↳ replaces $agent.englishName, $agent.introForOthers, etc. with actual values
+4. Fixpoint loop iteration 1:
+   Phase 1: preprocessLib.preprocess(content, context, ...)
+     ↳ resolves <!-- @include ... --> → inlines base with dictionary
+     ↳ resolves @echo markers (EnglishName, HebrewName, dictionary, etc.)
+   Phase 2: resolveForEachAgent(...)
+     ↳ expands <!-- @foreach-agent $agent in participantAgents --> with dot-access
+   Phase 3: resolveIncludeRegion(...)
+     ↳ resolves any <!-- @include-region ... --> directives
+5. Iteration 2: all phases produce no changes → loop terminates
 6. Returns fully resolved system prompt
-```
-
-**Example flow** for `system-prompt-orchestrator.md`:
-```
-1. resolveTemplate("system-prompt-orchestrator.md", meetingParticipants, undefined, PROMPTS_DIR)
-2. Same two-phase resolution
-   ↳ Phase 1: resolves <!-- @include system-prompt-base-prefix.md --> and @echo markers
-   ↳ Phase 2: expands <!-- @foreach-agent $agent in participantAgents --> with dot-access
-3. Returns fully resolved system prompt
 ```
 
 ## System Prompt Construction

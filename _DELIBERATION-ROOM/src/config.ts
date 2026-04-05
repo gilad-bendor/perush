@@ -95,6 +95,9 @@ export const PARTICIPANT_AGENTS_DIR = join(DELIBERATION_DIR, "participant-agents
 /** Prompt template files (assessment, speech, selection, etc.) */
 export const PROMPTS_DIR = join(DELIBERATION_DIR, "prompts");
 
+/** Max iterations for the directive-resolution fixpoint loop (safety cap) */
+export const MAX_PREPROCESS_ITERATIONS = 10;
+
 /** Worktree mount point for active meetings (gitignored on main) */
 export const MEETINGS_DIR = join(DELIBERATION_DIR, ".meetings");
 

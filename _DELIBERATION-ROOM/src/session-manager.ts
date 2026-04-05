@@ -22,6 +22,7 @@ import {
   PARTICIPANT_AGENTS_DIR,
   PROMPTS_DIR,
   ROOT_CLAUDE_MD,
+  MAX_PREPROCESS_ITERATIONS,
   ORCHESTRATOR_FILE,
   PARTICIPANT_MODEL,
   ORCHESTRATOR_MODEL,
@@ -125,6 +126,65 @@ export function resetAgentCache(): void {
 // ---------------------------------------------------------------------------
 
 /**
+ * Resolve `@include-region` directives in template content.
+ *
+ * Syntax:
+ *   <!-- @include-region path/to/file.md /RegExp/flags -->
+ *
+ * Reads the target file, finds all matches of the RegExp, and replaces the
+ * directive with the matched text. Throws if the RegExp matches zero or more
+ * than one region. Optional flags (e.g. `i`, `m`) are appended to the regex;
+ * `s` (dotAll) is always on. The `g` flag is forbidden (throws).
+ */
+export async function resolveIncludeRegion(content: string, srcDir: string): Promise<string> {
+  // Captures: (1) path, (2) pattern, (3) optional flags after closing slash
+  const directiveRe = /<!-- @include-region\s+(\S+)\s+\/(.+)\/([a-zA-Z]*)\s*-->/g;
+
+  const matches = [...content.matchAll(directiveRe)];
+  if (matches.length === 0) return content;
+
+  // Resolve all directives right-to-left so splice offsets stay valid
+  let result = content;
+  for (const m of matches.reverse()) {
+    const [fullMatch, relPath, pattern, userFlags] = m;
+    const filePath = join(srcDir, relPath!);
+
+    if (userFlags!.includes("g")) {
+      throw new Error(`@include-region: "g" flag is not allowed (pattern: /${pattern}/${userFlags})`);
+    }
+
+    let fileContent: string;
+    try {
+      fileContent = await readFile(filePath, "utf-8");
+    } catch (e) {
+      throw new Error(`@include-region: file not found: ${filePath}`);
+    }
+
+    // Always add "gs" internally — "g" for matchAll enumeration, "s" for dotAll.
+    // User flags (e.g. "i", "m") are merged in; duplicating "s" is harmless.
+    const regionRe = new RegExp(pattern!, "gs" + userFlags!);
+    const regionMatches = [...fileContent.matchAll(regionRe)];
+
+    if (regionMatches.length === 0) {
+      throw new Error(
+        `@include-region: pattern /${pattern}/${userFlags} matched nothing in ${filePath}`,
+      );
+    }
+    if (regionMatches.length > 1) {
+      throw new Error(
+        `@include-region: pattern /${pattern}/${userFlags} matched ${regionMatches.length} regions in ${filePath} (must match exactly 1)`,
+      );
+    }
+
+    const start = m.index!;
+    const end = start + fullMatch!.length;
+    result = result.slice(0, start) + regionMatches[0]![0] + result.slice(end);
+  }
+
+  return result;
+}
+
+/**
  * Custom `@foreach-agent` directive — resolves BEFORE the preprocess library.
  *
  * Syntax:
@@ -223,21 +283,15 @@ export async function extractDictionary(): Promise<string> {
 /**
  * Resolve all template directives in an agent file.
  *
- * Two-phase resolution:
- * 1. **Custom `@foreach-agent`** — resolves `<!-- @foreach-agent $var in key -->`
- *    loops with dot-access on AgentDefinition properties (including frontmatterData).
- * 2. **preprocess library** — resolves standard directives: `@include`, `@echo`,
- *    `@foreach`, `@ifdef`, etc.
+ * Resolution runs as a **fixpoint loop** — all phases execute repeatedly until
+ * a full iteration produces no changes (or MAX_PREPROCESS_ITERATIONS is hit):
  *
- * Included files (`@include`) are resolved by the preprocess library recursively.
- * Since `@foreach-agent` runs first on the top-level content only, included files
- * that use `@foreach-agent` must be inlined manually before this function is called,
- * OR those included files should use the standard `@foreach` directive instead.
+ * 1. **preprocess library** — `@include`, `@echo`, `@foreach`, `@ifdef`, etc.
+ * 2. **`@foreach-agent`** — loops with dot-access on AgentDefinition properties.
+ * 3. **`@include-region`** — extracts a regex-matched region from a file.
  *
- * In practice: `@foreach-agent` is used in participant-agent persona files and
- * the orchestrator prompt (top-level), while `system-prompt-base-prefix.md`
- * (included via `@include`) also uses `@foreach-agent` — so we resolve
- * `@include` first, then `@foreach-agent`, then the remaining preprocess pass.
+ * The loop ensures that directives introduced by any phase (e.g. an
+ * `@include-region` that pulls in content containing `@echo`) are resolved.
  */
 export async function resolveTemplate(
   filename: string,
@@ -266,17 +320,32 @@ export async function resolveTemplate(
     participantAgents: filteredParticipants,
   };
 
-  // Phase 1: Let preprocess resolve @include directives (and standard @echo/@foreach)
-  // so that included files are inlined before @foreach-agent runs.
-  const afterPreprocess = preprocessLib.preprocess(content, context, {
-    type: "html",
-    srcDir: baseDir,
-  });
+  // Run all resolution phases in a fixpoint loop: each phase may introduce
+  // directives that a subsequent (or earlier) phase needs to resolve.
+  // Loop until a full iteration produces no changes.
+  let resolved = content;
+  for (let i = 0; i < MAX_PREPROCESS_ITERATIONS; i++) {
+    const prev = resolved;
 
-  // Phase 2: Resolve @foreach-agent directives on the fully-inlined content
-  const afterAgentLoops = resolveForEachAgent(afterPreprocess, agentArrays);
+    // Phase 1: @include, @echo, @ifdef, @foreach (preprocess library)
+    resolved = preprocessLib.preprocess(resolved, context, {
+      type: "html",
+      srcDir: baseDir,
+    });
 
-  return afterAgentLoops.trim();
+    // Phase 2: @foreach-agent
+    resolved = resolveForEachAgent(resolved, agentArrays);
+
+    // Phase 3: @include-region
+    resolved = await resolveIncludeRegion(resolved, baseDir);
+
+    if (resolved === prev) break;
+    if (i === MAX_PREPROCESS_ITERATIONS - 1) {
+      throw new Error(`resolveTemplate: fixpoint not reached after ${MAX_PREPROCESS_ITERATIONS} iterations`);
+    }
+  }
+
+  return resolved.trim();
 }
 
 /**
@@ -295,10 +364,24 @@ export async function resolvePromptTemplate(
 ): Promise<string> {
   const filePath = join(PROMPTS_DIR, filename);
   const raw = await readFile(filePath, "utf-8");
-  return preprocessLib.preprocess(raw, context, {
-    type: "html",
-    srcDir: PROMPTS_DIR,
-  }).trim();
+
+  let resolved = raw;
+  for (let i = 0; i < MAX_PREPROCESS_ITERATIONS; i++) {
+    const prev = resolved;
+
+    resolved = preprocessLib.preprocess(resolved, context, {
+      type: "html",
+      srcDir: PROMPTS_DIR,
+    });
+    resolved = await resolveIncludeRegion(resolved, PROMPTS_DIR);
+
+    if (resolved === prev) break;
+    if (i === MAX_PREPROCESS_ITERATIONS - 1) {
+      throw new Error(`resolvePromptTemplate: fixpoint not reached after ${MAX_PREPROCESS_ITERATIONS} iterations`);
+    }
+  }
+
+  return resolved.trim();
 }
 
 /**
