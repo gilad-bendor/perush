@@ -32,7 +32,7 @@ englishName: Milo
 hebrewName: מיילו
 noteInSelfSystemPrompt: "You are especially attuned to precision in language — the exact word, the exact root, the exact usage across the corpus."
 introForOthers: "The Dictionary Purist. Audits word-level dictionary fidelity — catches untranslated words, loose synonyms, and narrative drift. Direct, factual, tends to speak frequently with short, pointed observations"
-orchestratorTip: "Bring in when specific words need dictionary checking, when the discussion is drifting from the text, or when dictionary evidence could settle a dispute"
+noteForOrchestrator: "Bring in when specific words need dictionary checking, when the discussion is drifting from the text, or when dictionary evidence could settle a dispute. If Milo is quiet, either dictionary fidelity is solid — or the conversation has drifted so far from the text that Milo has nothing to anchor to. The latter is a red flag."
 ---
 ```
 
@@ -41,8 +41,8 @@ orchestratorTip: "Bring in when specific words need dictionary checking, when th
 
 **Dynamic fields** (stored in `frontmatterData: Record<string, string>`):
 All other frontmatter fields are captured dynamically. No code changes needed to add new fields — just add them to the frontmatter and reference them in templates. Standard dynamic fields:
-- **`introForOthers`**: One-sentence profile for the Orchestrator. Written from the orchestrator's perspective.
-- **`orchestratorTip`**: Guidance for the orchestrator on when this agent is most valuable.
+- **`introForOthers`**: One-sentence profile visible to fellow participants and the orchestrator. Describes the agent's role and style.
+- **`noteForOrchestrator`**: Intelligence briefing for the orchestrator — when to bring this agent in, what their silence or score patterns mean, and what to watch for. Richer than a simple "tip" because the orchestrator is a substantive moderator who needs to understand each agent's engagement patterns.
 - **`noteInSelfSystemPrompt`**: A single sentence echoed into the shared Persona section of the base prefix, seeding the agent's distinctive intellectual orientation before any methodology sections. Bridges the shared scholarly identity with the agent's unique cognitive style.
 
 Dynamic fields are accessible in templates via:
@@ -141,8 +141,11 @@ This includes the section "# The Deliberation" up to (excluding) "## Your Fellow
 
 **Orchestrator prompt structure** (declared in `prompts/system-prompt-orchestrator.md`):
 ```
-<!-- @include system-prompt-base-prefix.md -->      ← common instructions + dictionary
-# Your Unique Identity: ...            ← orchestrator-specific content with @foreach
+# Your Unique Identity: ...            ← orchestrator identity and role
+# The Methodology You Are Moderating   ← @include-region mosaic from base-prefix (project, core principle, cognitive mode, dictionary, sequences, layers, anti-patterns, interpretive process, cross-referencing, mute texts)
+# The Participants                     ← @foreach with introForOthers + noteForOrchestrator
+# Your Input / Output / How to Decide  ← orchestrator-specific instructions
+# The Vibe: Atmosphere and Observation  ← atmospheric signal + occasional substantive observations
 ```
 
 ## Design Principles
@@ -162,7 +165,8 @@ No hard length constraint. The guidance is conversational: deliver your point we
 
 ### The Orchestrator-Agent
 
-- It does NOT analyze biblical text or participate in the conversation.
+- It is a **substantive moderator** — it understands the methodology deeply enough to notice blind spots, premature convergence, and unaddressed elements, but does NOT analyze biblical text or propose interpretations itself.
 - It receives free-text private assessments each cycle → outputs a next-speaker recommendation + public vibe text.
-- It runs as a **persistent Sonnet session** (not Opus) — no tools needed, Hebrew narrative output with delimiter-based parsing.
+- The vibe serves two functions: (1) atmospheric signal (facial expressions, body language, energy) and (2) occasional substantive observations about the deliberation's coverage (unaddressed words, unapplied quality criteria, ignored layers). Substantive observations should be rare — woven into the atmospheric vibe, not separated from it.
+- It runs as a **persistent Opus session** — no tools needed, Hebrew narrative output with delimiter-based parsing.
 - Its guidelines prioritize: productive disagreement, balance across Participants, Director heartbeat (don't let 3+ Participant-Agent turns pass without Director input).

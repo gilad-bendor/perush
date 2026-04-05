@@ -80,7 +80,7 @@ describe("AgentDefinitionSchema", () => {
     filePath: "/path/to/milo.md",
     frontmatterData: {
       introForOthers: "The Dictionary Purist.",
-      orchestratorTip: "Bring in when words need checking.",
+      noteForOrchestrator: "Bring in when words need checking.",
     },
   };
 

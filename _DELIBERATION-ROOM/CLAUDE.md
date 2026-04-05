@@ -56,7 +56,7 @@ For everything else — architecture, implementation, infrastructure — this fi
 
 **Conversation Store**: Git branches as the database. Each meeting on an orphan branch (`sessions/<meeting-id>`). No meeting data on `main` — ever. See [CLAUDE-TOPICS/GIT-PERSISTENCE.md](CLAUDE-TOPICS/GIT-PERSISTENCE.md).
 
-**Session Manager**: Persistent Agent SDK sessions — one per AI-Agent. Participant-Agents use **Opus** with tools; Orchestrator uses **Sonnet** without tools. Sessions accumulate context across the meeting. See [CLAUDE-TOPICS/PERSONAS.md](CLAUDE-TOPICS/PERSONAS.md) for template system.
+**Session Manager**: Persistent Agent SDK sessions — one per AI-Agent. Participant-Agents use **Opus** with tools; Orchestrator uses **Opus** without tools. Sessions accumulate context across the meeting. See [CLAUDE-TOPICS/PERSONAS.md](CLAUDE-TOPICS/PERSONAS.md) for template system.
 
 ### Per-Cycle Flow
 
@@ -93,7 +93,7 @@ Each AI-Agent runs as a persistent Agent SDK session with `resume: sessionId`. O
 | Session | Model | Tools | System Prompt |
 |---------|-------|-------|---------------|
 | Participant-Agents | Opus | `["Read", "Bash", "Grep", "Glob"]` | `system-prompt-base-prefix.md` (includes dictionary + fellow participants) + resolved persona |
-| Orchestrator | Sonnet | `[]` | `system-prompt-base-prefix.md` (includes dictionary + fellow participants) + resolved `system-prompt-orchestrator.md` |
+| Orchestrator | Opus | `[]` | Resolved `system-prompt-orchestrator.md` (includes methodology regions from base-prefix via `@include-region` + dictionary + participants) |
 
 ### Session Recovery
 
@@ -114,7 +114,7 @@ interface AgentDefinition {
   hebrewName: string;
   roleTitle: string;          // Hebrew, from first # heading (e.g., "מיילו המילונאי")
   filePath: string;
-  frontmatterData: Record<string, string>;  // all non-structural frontmatter fields (e.g., introForOthers, orchestratorTip)
+  frontmatterData: Record<string, string>;  // all non-structural frontmatter fields (e.g., introForOthers, noteForOrchestrator)
 }
 
 interface ConversationMessage {

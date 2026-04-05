@@ -69,7 +69,7 @@ describe("discoverAgents", () => {
     expect(milo.englishName).toBe("Milo");
     expect(milo.hebrewName).toBe("מיילו");
     expect(milo.frontmatterData.introForOthers).toContain("Dictionary Purist");
-    expect(milo.frontmatterData.orchestratorTip).toContain("dictionary");
+    expect(milo.frontmatterData.noteForOrchestrator).toContain("dictionary");
   });
 
   test("extracts roleTitle from heading", async () => {
@@ -170,7 +170,8 @@ describe("resolveTemplate", () => {
 
     // Should contain each agent with orchestrator-specific fields
     expect(resolved).toContain("Milo / מיילו");
-    expect(resolved).toContain("orchestratorTip" in {} ? "" : ""); // just check presence of expanded text
+    // noteForOrchestrator content should be expanded
+    expect(resolved).toContain("dictionary check");
     expect(resolved).toContain("Dictionary Purist");
   });
 
@@ -349,15 +350,15 @@ describe("buildSystemPrompt", () => {
   test("orchestrator prompt includes base prefix + orchestrator template", async () => {
     const prompt = await buildSystemPrompt("orchestrator", allAgents);
 
-    // Base prefix
-    expect(prompt).toContain("scholarly deliberation");
+    // Methodology regions from base-prefix
+    expect(prompt).toContain("methodological allegorical interpretation");
     // Dictionary
     expect(prompt).toContain("אור");
     // Orchestrator content
     expect(prompt).toContain("Orchestrator");
-    expect(prompt).toContain("which Participant should speak next");
-    // Base prefix includes "Fellow Participants" (shared across all agents)
-    expect(prompt).toContain("Fellow Participants");
+    expect(prompt).toContain("substantive moderator");
+    // Participants section
+    expect(prompt).toContain("The Participants");
   });
 
   test("orchestrator prompt has resolved participant names", async () => {
