@@ -68,23 +68,23 @@ describe("discoverAgents", () => {
     const milo = agents.find(a => a.id === "milo")!;
     expect(milo.englishName).toBe("Milo");
     expect(milo.hebrewName).toBe("מיילו");
-    expect(milo.orchestratorIntro).toContain("Dictionary Purist");
-    expect(milo.orchestratorTip).toContain("dictionary");
+    expect(milo.frontmatterData.orchestratorIntro).toContain("Dictionary Purist");
+    expect(milo.frontmatterData.orchestratorTip).toContain("dictionary");
   });
 
   test("extracts roleTitle from heading", async () => {
     const agents = await discoverAgents();
     const milo = agents.find(a => a.id === "milo")!;
-    expect(milo.roleTitle).toBe("המילונאי");
+    expect(milo.roleTitle).toBe("מיילו המילונאי");
 
     const archi = agents.find(a => a.id === "archi")!;
-    expect(archi.roleTitle).toBe("האדריכל");
+    expect(archi.roleTitle).toBe("ארצ'י האדריכל");
 
     const kashia = agents.find(a => a.id === "kashia")!;
-    expect(kashia.roleTitle).toBe("המבקר");
+    expect(kashia.roleTitle).toBe("קשיא הסקפטי");
 
     const barak = agents.find(a => a.id === "barak")!;
-    expect(barak.roleTitle).toBe("ההברקה");
+    expect(barak.roleTitle).toBe("ברק המבריק");
   });
 
   test("sets filePath correctly", async () => {

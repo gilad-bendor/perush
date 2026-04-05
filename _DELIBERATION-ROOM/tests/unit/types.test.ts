@@ -77,9 +77,11 @@ describe("AgentDefinitionSchema", () => {
     englishName: "Milo",
     hebrewName: "מיילו",
     roleTitle: "המילונאי",
-    orchestratorIntro: "The Dictionary Purist.",
-    orchestratorTip: "Bring in when words need checking.",
     filePath: "/path/to/milo.md",
+    frontmatterData: {
+      orchestratorIntro: "The Dictionary Purist.",
+      orchestratorTip: "Bring in when words need checking.",
+    },
   };
 
   test("accepts valid agent definition", () => {

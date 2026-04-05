@@ -35,11 +35,17 @@ orchestratorTip: "Bring in when specific words need dictionary checking, when th
 ---
 ```
 
-Fields:
+**Structural fields** (required, typed in `AgentDefinition`):
 - **`englishName`** / **`hebrewName`**: Display names, used for speaker labels, UI, and template resolution.
+
+**Dynamic fields** (stored in `frontmatterData: Record<string, string>`):
+All other frontmatter fields are captured dynamically. No code changes needed to add new fields — just add them to the frontmatter and reference them in templates. Standard dynamic fields:
 - **`orchestratorIntro`**: One-sentence profile for the Orchestrator. Written from the orchestrator's perspective.
 - **`orchestratorTip`**: Guidance for the orchestrator on when this agent is most valuable.
-- **`role`** (optional): Special role identifier. Currently only `system-prompt-orchestrator.md` uses `role: orchestrator`.
+
+Dynamic fields are accessible in templates via:
+- **`<!-- @echo fieldName -->`** — in the agent's own persona file (for self-reference).
+- **`$var.fieldName`** — inside `@foreach-agent` loops (for referencing other agents' fields).
 
 ## Agent Discovery
 
@@ -47,8 +53,8 @@ Participant-Agents are **discovered dynamically** from `participant-agents/` —
 
 At server start, the session manager scans `participant-agents/` for all non-underscore `.md` files:
 
-1. Parse the YAML frontmatter to extract `englishName`, `hebrewName`, `orchestratorIntro`, `orchestratorTip`.
-2. Extract the `roleTitle` by finding the first `# ` heading and pulling the parenthesized Hebrew text — e.g., from `# The Dictionary Purist (המילונאי)` extract `המילונאי`.
+1. Parse the YAML frontmatter to extract `englishName`, `hebrewName`, and all other fields into `frontmatterData`.
+2. Extract the `roleTitle` by finding the first `# ` heading and pulling the parenthesized Hebrew text — e.g., from `# ... Milo The Dictionary Purist (מיילו המילונאי)` extract `מיילו המילונאי`.
 3. Derive the `id` from the filename without `.md` (e.g., `milo.md` → `"milo"`).
 4. Build an `AgentDefinition` object and cache it.
 
@@ -64,39 +70,46 @@ GET /api/agents
 
 Returns the cached agent definitions as a JSON array.
 
-## Template Directives (preprocess)
+## Template Directives
 
-All agent files are processed by the [`preprocess`](https://www.npmjs.com/package/preprocess) package in a single pass with `type: "html"`. Every included file is processed recursively with the same context.
+Template resolution is a two-phase process:
+
+1. **Phase 1 — `preprocess` library**: Resolves `@include`, `@echo`, `@ifdef`, and standard `@foreach` directives. Included files are processed recursively with the same context.
+2. **Phase 2 — Custom `@foreach-agent`**: Resolves `@foreach-agent` loops with dot-access on `AgentDefinition` properties (including `frontmatterData` fields). Runs after includes are inlined, so it works across included files.
 
 Available directives (HTML-comment syntax):
 
 | Directive | What it does |
 |-----------|-------------|
-| `<!-- @include filename.md -->` | Inline another file from `participant-agents/` (recursive, same context) |
+| `<!-- @include filename.md -->` | Inline another file (recursive, same context) |
 | `<!-- @echo dictionary -->` | Inject the full dictionary text extracted from `../CLAUDE.md` |
 | `<!-- @echo EnglishName -->` | Agent's own English name (from frontmatter) |
 | `<!-- @echo HebrewName -->` | Agent's own Hebrew name (from frontmatter) |
-| `<!-- @foreach $p in participantAgentEntries -->$p`<br>`<!-- @endfor -->` | Loop over fellow participants — each `$p` is a formatted bullet: `- **Name / שם**: intro` |
-| `<!-- @foreach $p in participantOrchestratorEntries -->$p`<br>`<!-- @endfor -->` | Same loop with extended format: `- **Name / שם**: intro. *tip.*` |
-**Important — `@foreach` encoding**: preprocess's `@foreach` splits context values by comma if they look like plain text, which breaks descriptions that contain commas. The context values for participant loops are encoded as a JSON *object* keyed by index (`{"0":"entry0","1":"entry1"}`). This triggers `JSON.parse` in preprocess's foreach handler, which handles commas inside values correctly. See `toForEachContext()` in `session-manager.ts`.
+| `<!-- @echo fieldName -->` | Any frontmatter field from the current agent's file |
+| `<!-- @foreach-agent $var in participantAgents -->`<br>`$var.englishName / $var.hebrewName: $var.orchestratorIntro`<br>`<!-- @endfor-agent -->` | Loop over participant agents with dot-access to any field (structural or `frontmatterData`) |
+
+The `@foreach-agent` directive supports dot-access on any `AgentDefinition` property: `id`, `englishName`, `hebrewName`, `roleTitle`, and any key in `frontmatterData`. For example, `$agent.orchestratorIntro` resolves to the agent's `frontmatterData.orchestratorIntro` value.
 
 **Example flow** for `milo.md`:
 ```
 1. resolveTemplate("milo.md", meetingParticipants, "milo")
 2. Read file → gray-matter strips frontmatter
-3. buildPreprocessContext(): builds context with dictionary, participant loops
-4. preprocessLib.preprocess(content, context, {type:"html", srcDir:PARTICIPANT_AGENTS_DIR})
-   ↳ resolves <!-- @include ../prompts/system-prompt-base-prefix.md --> → inlines base with dictionary + @foreach participant list (milo excluded)
-   ↳ any remaining @echo markers in persona content
-5. Returns fully resolved system prompt
+3. buildPreprocessContext(): builds context with dictionary + all frontmatter as @echo vars
+4. Phase 1: preprocessLib.preprocess(content, context, ...)
+   ↳ resolves <!-- @include ../prompts/system-prompt-base-prefix.md --> → inlines base with dictionary
+   ↳ resolves @echo markers (EnglishName, HebrewName, dictionary, etc.)
+5. Phase 2: resolveForEachAgent(afterPreprocess, { participantAgents: [...] })
+   ↳ expands <!-- @foreach-agent $agent in participantAgents --> → one entry per fellow participant (milo excluded)
+   ↳ replaces $agent.englishName, $agent.orchestratorIntro, etc. with actual values
+6. Returns fully resolved system prompt
 ```
 
 **Example flow** for `system-prompt-orchestrator.md`:
 ```
 1. resolveTemplate("system-prompt-orchestrator.md", meetingParticipants, undefined, PROMPTS_DIR)
-2. Same single-pass preprocess call
-   ↳ resolves <!-- @include system-prompt-base-prefix.md -->
-   ↳ expands <!-- @foreach $p in participantOrchestratorEntries -->
+2. Same two-phase resolution
+   ↳ Phase 1: resolves <!-- @include system-prompt-base-prefix.md --> and @echo markers
+   ↳ Phase 2: expands <!-- @foreach-agent $agent in participantAgents --> with dot-access
 3. Returns fully resolved system prompt
 ```
 

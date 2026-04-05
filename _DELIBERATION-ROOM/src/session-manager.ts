@@ -75,14 +75,22 @@ export async function discoverAgents(): Promise<AgentDefinition[]> {
     const headingMatch = content.match(/^#\s+.*?\(([^)]+)\)/m);
     const roleTitle = headingMatch?.[1] ?? "";
 
+    // Separate structural fields from dynamic frontmatter data
+    const { englishName, hebrewName, ...restFrontmatter } = frontmatter;
+    const frontmatterData: Record<string, string> = {};
+    for (const [key, value] of Object.entries(restFrontmatter)) {
+      if (typeof value === "string") {
+        frontmatterData[key] = value;
+      }
+    }
+
     const agent = AgentDefinitionSchema.parse({
       id,
-      englishName: frontmatter.englishName ?? "",
-      hebrewName: frontmatter.hebrewName ?? "",
+      englishName: englishName ?? "",
+      hebrewName: hebrewName ?? "",
       roleTitle,
-      orchestratorIntro: frontmatter.orchestratorIntro ?? "",
-      orchestratorTip: frontmatter.orchestratorTip ?? "",
       filePath,
+      frontmatterData,
     });
 
     agents.push(agent);
@@ -117,55 +125,71 @@ export function resetAgentCache(): void {
 // ---------------------------------------------------------------------------
 
 /**
- * Encode a string array for use with preprocess's `@foreach` directive.
+ * Custom `@foreach-agent` directive — resolves BEFORE the preprocess library.
  *
- * preprocess parses context values as:
- *   - JSON (if the value contains `{...}`) → JSON.parse
- *   - Otherwise → naive comma-split (BROKEN for strings containing commas)
+ * Syntax:
+ *   <!-- @foreach-agent $var in contextKey -->
+ *   ... $var.fieldName ... $var.englishName ...
+ *   <!-- @endfor-agent -->
  *
- * To safely pass an array of arbitrary strings, encode as a JSON *object*
- * keyed by index: `{"0":"entry0","1":"entry1"}`. This triggers `JSON.parse`,
- * which handles commas inside values correctly, and `Object.keys` preserves
- * insertion order (numeric string keys sort ascending in modern JS).
+ * `contextKey` maps to an array of AgentDefinition objects. Within the loop
+ * body, `$var.fieldName` is replaced with the agent's property value. Supported
+ * properties: `id`, `englishName`, `hebrewName`, `roleTitle`, and any key
+ * present in `frontmatterData` (e.g., `$var.orchestratorIntro`).
  */
-function toForEachContext(entries: string[]): string {
-  return JSON.stringify(Object.fromEntries(entries.map((e, i) => [i, e])));
+function resolveForEachAgent(
+  content: string,
+  agentArrays: Record<string, AgentDefinition[]>,
+): string {
+  const directiveRe = /<!-- @foreach-agent (\$\w+) in (\w+) -->([\s\S]*?)<!-- @endfor-agent -->/g;
+
+  return content.replace(directiveRe, (_match, varName: string, contextKey: string, body: string) => {
+    const agents = agentArrays[contextKey];
+    if (!agents) return "";
+
+    // Build a regex that matches $var.anyProperty
+    const varDotRe = new RegExp(
+      varName.replace("$", "\\$") + "\\.(\\w+)",
+      "g",
+    );
+
+    return agents.map(agent => {
+      return body.replace(varDotRe, (_m: string, field: string) => {
+        // Check typed fields first, then frontmatterData
+        if (field in agent && field !== "frontmatterData" && field !== "filePath") {
+          return (agent as any)[field] as string;
+        }
+        return agent.frontmatterData[field] ?? "";
+      });
+    }).join("");
+  });
 }
 
 /**
  * Build the preprocess context for a given agent file.
  *
  * - `frontmatter`: parsed YAML from the agent's .md file
- * - `filteredParticipants`: meeting participants with the current agent excluded (for loops)
  * - `dictionary`: extracted dictionary text from ../CLAUDE.md
+ *
+ * Note: frontmatter values from the current agent's file are exposed
+ * directly as `@echo` variables (e.g., `<!-- @echo orchestratorIntro -->`).
  */
 function buildPreprocessContext(
   frontmatter: Record<string, string>,
-  filteredParticipants: AgentDefinition[],
   dictionary: string,
 ): Record<string, string> {
-  // Agent-specific frontmatter values (used by @echo in agent persona files)
   const ctx: Record<string, string> = {
     EnglishName:  frontmatter.englishName  ?? "",
     HebrewName:   frontmatter.hebrewName   ?? "",
-    orchestratorIntro: frontmatter.orchestratorIntro ?? "",
-    orchestratorTip:   frontmatter.orchestratorTip   ?? "",
     dictionary,
   };
 
-  // Participant entries for @foreach in system-prompt-base-prefix.md
-  ctx.participantAgentEntries = toForEachContext(
-    filteredParticipants.map(p =>
-      `- **${p.englishName} / ${p.hebrewName}**: ${p.orchestratorIntro}`
-    )
-  );
-
-  // Participant entries for @foreach in system-prompt-orchestrator.md
-  ctx.participantOrchestratorEntries = toForEachContext(
-    filteredParticipants.map(p =>
-      `- **${p.englishName} / ${p.hebrewName}**: ${p.orchestratorIntro}. *${p.orchestratorTip}.*`
-    )
-  );
+  // Expose all frontmatter keys as @echo variables
+  for (const [key, value] of Object.entries(frontmatter)) {
+    if (!(key in ctx) && typeof value === "string") {
+      ctx[key] = value;
+    }
+  }
 
   return ctx;
 }
@@ -197,23 +221,28 @@ export async function extractDictionary(): Promise<string> {
 }
 
 /**
- * Resolve all template directives in an agent file via a single preprocess pass.
+ * Resolve all template directives in an agent file.
  *
- * The file may use any preprocess HTML directives:
- *   <!-- @include filename.md -->        — inline another file (relative to the file's directory)
- *   <!-- @echo EnglishName -->           — substitute a frontmatter variable
- *   <!-- @echo dictionary -->            — inject the full dictionary text
- *   <!-- @foreach $p in participantAgentEntries -->$p\n<!-- @endfor -->
- *   <!-- @foreach $p in participantOrchestratorEntries -->$p\n<!-- @endfor -->
+ * Two-phase resolution:
+ * 1. **Custom `@foreach-agent`** — resolves `<!-- @foreach-agent $var in key -->`
+ *    loops with dot-access on AgentDefinition properties (including frontmatterData).
+ * 2. **preprocess library** — resolves standard directives: `@include`, `@echo`,
+ *    `@foreach`, `@ifdef`, etc.
  *
- * Included files are processed recursively with the same context, so
- * system-prompt-base-prefix.md can be included from agent persona files
- * and will have full access to all context variables.
+ * Included files (`@include`) are resolved by the preprocess library recursively.
+ * Since `@foreach-agent` runs first on the top-level content only, included files
+ * that use `@foreach-agent` must be inlined manually before this function is called,
+ * OR those included files should use the standard `@foreach` directive instead.
+ *
+ * In practice: `@foreach-agent` is used in participant-agent persona files and
+ * the orchestrator prompt (top-level), while `system-prompt-base-prefix.md`
+ * (included via `@include`) also uses `@foreach-agent` — so we resolve
+ * `@include` first, then `@foreach-agent`, then the remaining preprocess pass.
  */
 export async function resolveTemplate(
   filename: string,
   meetingParticipants: AgentDefinition[],
-  /** Exclude this agent from participantAgentEntries / participantOrchestratorEntries loops */
+  /** Exclude this agent from participant loops */
   excludeAgentId: AgentId | undefined,
   /** Base directory for the template file (defaults to PARTICIPANT_AGENTS_DIR) */
   baseDir: string,
@@ -229,14 +258,25 @@ export async function resolveTemplate(
   const dictionary = await extractDictionary();
   const context = buildPreprocessContext(
     frontmatter as Record<string, string>,
-    filteredParticipants,
     dictionary,
   );
 
-  return preprocessLib.preprocess(content, context, {
+  // Agent arrays available to @foreach-agent directives
+  const agentArrays: Record<string, AgentDefinition[]> = {
+    participantAgents: filteredParticipants,
+  };
+
+  // Phase 1: Let preprocess resolve @include directives (and standard @echo/@foreach)
+  // so that included files are inlined before @foreach-agent runs.
+  const afterPreprocess = preprocessLib.preprocess(content, context, {
     type: "html",
     srcDir: baseDir,
-  }).trim();
+  });
+
+  // Phase 2: Resolve @foreach-agent directives on the fully-inlined content
+  const afterAgentLoops = resolveForEachAgent(afterPreprocess, agentArrays);
+
+  return afterAgentLoops.trim();
 }
 
 /**

@@ -162,18 +162,17 @@ export const AgentDefinitionSchema = z.object({
   englishName: z.string(),
   hebrewName: z.string(),
   roleTitle: z.string(),
-  orchestratorIntro: z.string(),
-  orchestratorTip: z.string(),
   filePath: z.string(),
+  frontmatterData: z.record(z.string(), z.string()),
 });
 export type AgentDefinition = {
   id: AgentId;
   englishName: string;
   hebrewName: string;
   roleTitle: string;
-  orchestratorIntro: string;
-  orchestratorTip: string;
   filePath: string;
+  /** All non-structural frontmatter fields (e.g., orchestratorIntro, orchestratorTip). */
+  frontmatterData: Record<string, string>;
 };
 assertZodTypeMatch<AgentDefinition, typeof AgentDefinitionSchema>(true);
 

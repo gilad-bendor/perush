@@ -112,10 +112,9 @@ interface AgentDefinition {
   id: AgentId;
   englishName: string;
   hebrewName: string;
-  roleTitle: string;          // Hebrew, from first # heading (e.g., "המילונאי")
-  orchestratorIntro: string;
-  orchestratorTip: string;
+  roleTitle: string;          // Hebrew, from first # heading (e.g., "מיילו המילונאי")
   filePath: string;
+  frontmatterData: Record<string, string>;  // all non-structural frontmatter fields (e.g., orchestratorIntro, orchestratorTip)
 }
 
 interface ConversationMessage {
