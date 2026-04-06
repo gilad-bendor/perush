@@ -114,7 +114,7 @@ interface AgentDefinition {
   id: AgentId;
   englishName: string;
   hebrewName: string;
-  roleTitle: string;          // Hebrew, from first # heading (e.g., "מיילו המילונאי")
+  roleTitle: string;
   filePath: string;
   frontmatterData: Record<string, string>;  // all non-structural frontmatter fields (e.g., introForOthers, noteForOrchestrator)
 }

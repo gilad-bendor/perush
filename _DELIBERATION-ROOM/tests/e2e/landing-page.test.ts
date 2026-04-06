@@ -132,9 +132,6 @@ describe("landing page", () => {
     await page.goto(mockServer.url);
     await page.waitForSelector(".participant-card");
 
-    // Submit without filling anything — browser validation should block
-    const submitBtn = await page.$('button[type="submit"]');
-
     // Check title is required
     const titleInput = await page.$("#meeting-title");
     expect(await titleInput?.getAttribute("required")).toBe("");

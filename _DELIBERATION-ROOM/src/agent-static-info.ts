@@ -41,16 +41,12 @@ export async function discoverAgents(): Promise<AgentDefinition[]> {
   for (const file of agentFiles) {
     const filePath = join(PARTICIPANT_AGENTS_DIR, file);
     const raw = await readFile(filePath, "utf-8");
-    const { data: frontmatter, content } = matter(raw);
+    const { data: frontmatter } = matter(raw);
 
     const id = basename(file, ".md");
 
-    // Extract roleTitle from first # heading: e.g., "# The Dictionary Purist (המילונאי)"
-    const headingMatch = content.match(/^#\s+.*?\(([^)]+)\)/m);
-    const roleTitle = headingMatch?.[1] ?? "";
-
     // Separate structural fields from dynamic frontmatter data
-    const { englishName, hebrewName, ...restFrontmatter } = frontmatter;
+    const { englishName, hebrewName, roleTitle, ...restFrontmatter } = frontmatter;
     const frontmatterData: Record<string, string> = {};
     for (const [key, value] of Object.entries(restFrontmatter)) {
       if (typeof value === "string") {

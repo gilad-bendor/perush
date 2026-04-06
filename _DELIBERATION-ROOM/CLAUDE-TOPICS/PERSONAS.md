@@ -56,9 +56,8 @@ Participant-Agents are **discovered dynamically** from `participant-agents/` —
 At server start, the session manager scans `participant-agents/` for all non-underscore `.md` files:
 
 1. Parse the YAML frontmatter to extract `englishName`, `hebrewName`, and all other fields into `frontmatterData`.
-2. Extract the `roleTitle` by finding the first `# ` heading and pulling the parenthesized Hebrew text — e.g., from `# ... Milo The Dictionary Purist (מיילו המילונאי)` extract `מיילו המילונאי`.
-3. Derive the `id` from the filename without `.md` (e.g., `milo.md` → `"milo"`).
-4. Build an `AgentDefinition` object and cache it.
+2. Derive the `id` from the filename without `.md` (e.g., `milo.md` → `"milo"`).
+3. Build an `AgentDefinition` object and cache it.
 
 The result is cached for the server's lifetime (re-read on server restart).
 
