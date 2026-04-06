@@ -69,7 +69,7 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 
 ## Concepts of Light: Thought
 
-- **אור** / **ראייה** = thinking, public discourse, activation of a "collective consciousness."
+- **אור** / **ראייה** = contemplation, public discourse, activation of a "collective consciousness."
   Light and seeing may be limited to the cognitive level - not necessarily crystallized coherently.
 - **חושך** = existence and activity "on autopilot" - without thought or analysis.
 - The day cycle "...←בוקר←יום←ערב←לילה←בוקר←..." parallels the **Hegelian model** of dialectic and synthesis:
@@ -81,12 +81,12 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 ## Concepts of Speech: Naming
 
 - **אמירה** / **שמיעה** = naming, identification, articulation. "Saying" is naming a new concept or process; "hearing" is internalizing an external articulation.
-  **קריאה** (calling) by name = attaching a name to something: linking something with a symbol.
+  **קריאה** (calling) by name = attaching a name to something: linking something with a symbol, *institutionalizing* it into the social fabric.
 
 ## Sky and Earth: The Subconscious Experience of Existence
 
 - **מים** (water) = chaos, the unknown, the threatening, the promising, the malleable.
-  Water drives culture to action - positive or negative emotions: motivation and/or fear, aspiration or repulsion.
+  Water is both intimidating and activating, driving culture to action. Positive or negative emotions: motivation and fear, aspiration or repulsion.
   Water is necessary for change and development. Without water: stagnation (= **death** per the dictionary).
 - **ארץ** (earth/land) = existential experience: the basic **subconscious** way a culture understands itself in relation to the world. Intuition about how the world operates.
   Specific place names represent different systems of existential experience.
@@ -117,8 +117,8 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 - **אדמה** (soil) = the general population in the relevant context. From the soil the אדם (human/narrative) is formed, and to it a culture eventually disintegrates.
   **עפר** (dust) = the individuals that compose a society: `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה`.
 
-- **טוב** (good) = things desired according to social morality - the right path society expects one to follow.
-  **רע** (evil) = things forbidden according to social morality - behaviors society considers immoral.
+- **טוב** (good) = things that *feel* right and worthy. Usually — things desired according to social morality - the right path society expects one to follow.
+  **רע** (evil) = things that *feel* unworthy. Usually — things forbidden according to social morality - behaviors society considers immoral.
   **לדעת** (to know) = to form a moral opinion and judgment about something: to label it, to stigmatize.
 
 - **חיים** (life) = dynamism and change.
