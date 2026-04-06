@@ -681,33 +681,52 @@ export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> 
   // Re-register meeting context for lazy session creation
   registerMeeting(currentMeeting.title, meetingParticipantDefs);
 
-  for (const agentId of currentMeeting.participants) {
-    const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
-    const transcript = await buildTranscriptPrompt(currentMeeting);
-    const { sessionId } = await createSession(
-      agentId,
-      systemPrompt,
-      transcript,
+  // Only create sessions if the meeting has history to replay.
+  // An empty meeting (no cycles, no openingPrompt) is waiting for the first human prompt —
+  // sessions will be created lazily when the deliberation loop starts, just like startMeeting.
+  const hasHistory = currentMeeting.cycles.length > 0 || !!currentMeeting.openingPrompt;
+  if (hasHistory) {
+    for (const agentId of currentMeeting.participants) {
+      const systemPrompt = await buildSystemPrompt(agentId, meetingParticipantDefs);
+      const transcript = await buildTranscriptPrompt(currentMeeting);
+      const { sessionId } = await createSession(
+        agentId,
+        systemPrompt,
+        transcript,
+      );
+      currentMeeting.sessionIds[agentId] = sessionId;
+    }
+
+    // Recreate orchestrator session
+    const orchestratorSystemPrompt = await buildSystemPrompt("orchestrator", meetingParticipantDefs);
+    const orchestratorTranscript = await buildTranscriptPrompt(currentMeeting);
+    const { sessionId: orchestratorSessionId } = await createSession(
+      "orchestrator",
+      orchestratorSystemPrompt,
+      orchestratorTranscript,
     );
-    currentMeeting.sessionIds[agentId] = sessionId;
+    currentMeeting.sessionIds.orchestrator = orchestratorSessionId;
+
+    // Save updated session IDs and commit
+    await writeMeetingAtomic(worktreePath, currentMeeting);
+    await commitWithMessage(worktreePath, "Meeting resumed");
   }
 
-  // Recreate orchestrator session
-  const orchestratorSystemPrompt = await buildSystemPrompt("orchestrator", meetingParticipantDefs);
-  const orchestratorTranscript = await buildTranscriptPrompt(currentMeeting);
-  const { sessionId: orchestratorSessionId } = await createSession(
-    "orchestrator",
-    orchestratorSystemPrompt,
-    orchestratorTranscript,
-  );
-  currentMeeting.sessionIds.orchestrator = orchestratorSessionId;
+  // Determine correct phase: if the last cycle's orchestrator selected "human",
+  // the meeting was waiting for human input when it was interrupted — restore that state.
+  const lastCycle = currentMeeting.cycles[currentMeeting.cycles.length - 1];
+  const wasWaitingForHuman = lastCycle?.orchestratorDecision?.nextSpeaker === "human";
+  // Also treat no-cycles-no-openingPrompt as human-turn (waiting for first prompt)
+  const waitingForFirstPrompt = !lastCycle && !currentMeeting.openingPrompt;
 
-  // Save updated session IDs and commit
-  await writeMeetingAtomic(worktreePath, currentMeeting);
-  await commitWithMessage(worktreePath, "Meeting resumed");
+  if (wasWaitingForHuman || waitingForFirstPrompt) {
+    logInfo("orchestrator", `resumeMeetingById: restoring human-turn phase`);
+    setPhase("human-turn");
+  } else {
+    setPhase("idle");
+  }
 
   logInfo("orchestrator", `resumeMeetingById: done (${currentMeeting.cycles.length} cycles restored)`);
-  setPhase("idle");
   return currentMeeting;
 }
 

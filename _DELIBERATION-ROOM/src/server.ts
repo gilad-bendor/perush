@@ -425,9 +425,10 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
 
           const meeting = await resumeMeetingById(msg.meetingId);
           broadcast(buildSyncBody({ meeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker() }));
-          // Only start the deliberation loop if it's not already running
-          // (resumeMeetingById returns the active meeting if it's the same one)
-          if (!deliberationLoopActive) {
+          // Only start the deliberation loop if it's not already running AND
+          // the meeting isn't waiting for human input (orchestrator decided human is next,
+          // or no prompt has been entered yet)
+          if (!deliberationLoopActive && getPhase() !== "human-turn") {
             const lastCycle = meeting.cycles[meeting.cycles.length - 1];
             if (lastCycle) {
               wrapDanglingPromise(
@@ -443,7 +444,6 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
                   runDeliberationLoop("human", meeting.openingPrompt),
               );
             }
-            // else: no cycles and no opening prompt — wait for first human speech
           }
         } catch (err: any) {
           sendTo(ws, { type: "error", message: err?.message || "Failed to resume meeting" });
@@ -475,8 +475,8 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
 
             const meeting = await resumeMeetingById(msg.meetingId);
             broadcast(buildSyncBody({ meeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker(), readOnly: false }));
-            // Start the deliberation loop from the last cycle
-            if (!deliberationLoopActive) {
+            // Start the deliberation loop — but not if waiting for human input
+            if (!deliberationLoopActive && getPhase() !== "human-turn") {
               const lastCycle = meeting.cycles[meeting.cycles.length - 1];
               if (lastCycle) {
                 wrapDanglingPromise(
