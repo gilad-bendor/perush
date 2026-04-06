@@ -1275,13 +1275,6 @@ body {
   gap: 0.5rem;
 }
 
-.status-read-icon {
-  flex-shrink: 0;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(180 83 9 / var(--tw-text-opacity, 1));
-}
-
 .status-read-text {
   min-width: 0px;
   font-size: 0.875rem;
@@ -1420,7 +1413,6 @@ body {
 
 .human-textarea {
   flex: 1 1 0%;
-  resize: none;
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -1450,6 +1442,11 @@ body {
   background-color: rgb(245 245 244 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(168 162 158 / var(--tw-text-opacity, 1));
+}
+
+.human-textarea {
+  field-sizing: content;
+  max-height: 40vh;
 }
 
 /* --------------------------------------------------------------- */
