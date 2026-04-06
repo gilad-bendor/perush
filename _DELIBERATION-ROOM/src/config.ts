@@ -76,8 +76,6 @@ export const MAX_TURNS_ASSESSMENT = 25;
 /** Max agentic turns: participant speeches (agentic with tools) */
 export const MAX_TURNS_SPEECH = 25;
 
-/** Estimated cost per deliberation cycle (USD) — for display purposes */
-export const ESTIMATED_COST_PER_CYCLE = 0.50;
 
 // ---------------------------------------------------------------------------
 // Paths

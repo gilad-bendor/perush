@@ -57,8 +57,6 @@ import {
   interruptAll,
   clearSessions,
   getAllSessionIds,
-  resetCycleCost,
-  getCycleCost,
 } from "./session-manager";
 
 // ---------------------------------------------------------------------------
@@ -67,7 +65,7 @@ import {
 
 export interface OrchestratorEvents {
   onPhaseChange: (phase: Phase, activeSpeaker?: SpeakerId) => void;
-  onSpeech: (speaker: SpeakerId, content: string, timestamp: string, cycleCost: number) => void;
+  onSpeech: (speaker: SpeakerId, content: string, timestamp: string) => void;
   onSpeechChunk: (speaker: SpeakerId, delta: string) => void;
   onSpeechDone: (speaker: SpeakerId) => void;
   onAssessment: (assessment: PrivateAssessment) => void;
@@ -77,7 +75,7 @@ export interface OrchestratorEvents {
   onSync: (meeting: Meeting, phase: Phase, readOnly?: boolean, editingCycle?: number) => void;
   onProcessStart: (processId: string, processKind: ProcessKind, agent: AgentId | "orchestrator", cycleNumber: number) => void;
   onProcessEvent: (processId: string, eventKind: ProcessEventKind, content: string, toolName?: string, toolInput?: string) => void;
-  onProcessDone: (processId: string) => void;
+  onProcessDone: (processId: string, costUsd?: number) => void;
 }
 
 // ---------------------------------------------------------------------------
@@ -90,11 +88,6 @@ let currentPhase: Phase = "idle";
 let currentActiveSpeaker: SpeakerId | undefined = undefined;
 let attentionRequested = false;
 let meetingParticipantDefs: AgentDefinition[] = [];
-
-/** In-progress cycle's processes (not yet persisted to meeting.yaml). */
-let pendingProcesses: ProcessRecord[] | null = null;
-/** In-progress cycle number (for pending processes). */
-let pendingCycleNumber: number | null = null;
 
 /** Event handlers — set by the server */
 let events: OrchestratorEvents = createNoopEvents();
@@ -152,12 +145,6 @@ export function getMeeting(): Meeting | null {
 /** Get the current worktree path (or null). */
 export function getWorktreePath(): string | null {
   return currentWorktreePath;
-}
-
-/** Get processes from the in-progress cycle (not yet written to meeting.yaml). */
-export function getPendingProcesses(): { processes: ProcessRecord[]; cycleNumber: number } | null {
-  if (!pendingProcesses || pendingCycleNumber == null) return null;
-  return { processes: pendingProcesses, cycleNumber: pendingCycleNumber };
 }
 
 /** Override the director timeout (for testing). */
@@ -265,20 +252,18 @@ export async function runCycle(
   }
 
   const cycleNumber = currentMeeting.cycles.length + 1;
-  resetCycleCost();
+  let cycleCostAccumulator = 0;
   logInfo("orchestrator", `runCycle ${cycleNumber}: lastSpeaker=${lastSpeaker}`);
 
-  // Track all process records for this cycle
-  const processes: ProcessRecord[] = [];
-  pendingProcesses = processes;
-  pendingCycleNumber = cycleNumber;
+  // Initialize pending cycle on the meeting object (persisted between phases)
+  currentMeeting.pendingCycle = { cycleNumber, assessments: {}, processes: [] };
 
   // Helper: create a process record and emit start/event/done
   function createProcessTracker(processKind: ProcessKind, agent: AgentId | "orchestrator") {
     const processId = `c${cycleNumber}-${processKind}-${agent}`;
     const processEvents: ProcessEventRecord[] = [];
     const record: ProcessRecord = { processId, processKind, agent, events: processEvents };
-    processes.push(record);
+    currentMeeting!.pendingCycle!.processes.push(record);
 
     events.onProcessStart(processId, processKind, agent, cycleNumber);
 
@@ -288,8 +273,10 @@ export async function runCycle(
         processEvents.push({ eventKind, content, toolName, toolInput });
         events.onProcessEvent(processId, eventKind, content, toolName, toolInput);
       },
-      done() {
-        events.onProcessDone(processId);
+      done(costUsd: number = 0) {
+        record.costUsd = costUsd > 0 ? costUsd : undefined;
+        cycleCostAccumulator += costUsd;
+        events.onProcessDone(processId, record.costUsd);
       },
     };
   }
@@ -310,18 +297,18 @@ export async function runCycle(
       const tracker = createProcessTracker("assessment", agentId);
       try {
         const prompt = await buildAssessmentPrompt(lastSpeaker, lastContent, prevStatusRead);
-        const response = await feedMessage(agentId, prompt, (eventKind, content, toolName, toolInput) => {
+        const { text: response, costUsd } = await feedMessage(agentId, prompt, (eventKind, content, toolName, toolInput) => {
           tracker.emit(eventKind, content, toolName, toolInput);
         });
         const assessmentText = extractAssessmentText(response);
         const assessment: PrivateAssessment = { agent: agentId, text: assessmentText ?? response };
         assessments[agentId] = assessment;
         events.onAssessment(assessment);
+        tracker.done(costUsd);
       } catch (err) {
         // Assessment failure is non-fatal — proceed with partial assessments
         logWarn("orchestrator", `runCycle ${cycleNumber}: assessment failed for ${agentId}`, err);
         events.onError(`Assessment failed for ${agentId}: ${err}`);
-      } finally {
         tracker.done();
       }
     });
@@ -329,17 +316,23 @@ export async function runCycle(
   await Promise.all(assessmentPromises);
   logInfo("orchestrator", `runCycle ${cycleNumber}: ${Object.keys(assessments).length} assessment(s) collected`);
 
+  // Persist after assessment phase
+  currentMeeting.pendingCycle!.assessments = assessments;
+  await writeMeetingAtomic(currentWorktreePath, currentMeeting);
+
   // ------ SELECTION PHASE ------
   setPhase("selecting");
 
   let decision: OrchestratorDecision | null;
 
   const orchestratorTracker = createProcessTracker("orchestrator-selection", "orchestrator");
+  let orchestratorCost = 0;
   try {
     const selectionPrompt = await buildSelectionPrompt(lastSpeaker, lastContent, assessments);
-    const orchestratorResponse = await feedMessage("orchestrator", selectionPrompt, (eventKind, content, toolName, toolInput) => {
+    const { text: orchestratorResponse, costUsd } = await feedMessage("orchestrator", selectionPrompt, (eventKind, content, toolName, toolInput) => {
       orchestratorTracker.emit(eventKind, content, toolName, toolInput);
     });
+    orchestratorCost += costUsd;
 
     decision = parseOrchestratorResponse(orchestratorResponse);
 
@@ -350,9 +343,10 @@ export async function runCycle(
       logWarn("orchestrator", `runCycle ${cycleNumber}: orchestrator selection parse failed, retrying: ${reason}`);
 
       const retryPrompt = await buildSelectionRetryPrompt(reason);
-      const retryResponse = await feedMessage("orchestrator", retryPrompt, (eventKind, content, toolName, toolInput) => {
+      const { text: retryResponse, costUsd: retryCost } = await feedMessage("orchestrator", retryPrompt, (eventKind, content, toolName, toolInput) => {
         orchestratorTracker.emit(eventKind, content, toolName, toolInput);
       });
+      orchestratorCost += retryCost;
 
       decision = parseOrchestratorResponse(retryResponse);
     }
@@ -372,7 +366,7 @@ export async function runCycle(
     };
     events.onError(`Selection failed: ${err}`);
   } finally {
-    orchestratorTracker.done();
+    orchestratorTracker.done(orchestratorCost);
   }
 
   // Apply attention override
@@ -384,6 +378,10 @@ export async function runCycle(
 
   logInfo("orchestrator", `runCycle ${cycleNumber}: selected → ${decision.nextSpeaker} (statusRead: "${decision.statusRead}")`);
   events.onStatusRead(decision.statusRead, decision.nextSpeaker);
+
+  // Persist after selection phase
+  currentMeeting.pendingCycle!.orchestratorDecision = decision;
+  await writeMeetingAtomic(currentWorktreePath, currentMeeting);
 
   // ------ SPEECH PHASE ------
   const nextSpeaker = decision.nextSpeaker;
@@ -400,7 +398,7 @@ export async function runCycle(
       content: humanContent,
       timestamp: createFormattedTime(),
     };
-    events.onSpeech("human", humanContent, speech.timestamp, getCycleCost());
+    events.onSpeech("human", humanContent, speech.timestamp);
   } else {
     // Agent speech
     setPhase("speaking", nextSpeaker);
@@ -410,6 +408,7 @@ export async function runCycle(
 
     const speechTracker = createProcessTracker("agent-speech", nextSpeaker);
     speechTracker.emit("prompt", speechPrompt);
+    let speechCost = 0;
 
     try {
       for await (const event of streamSpeech(nextSpeaker, speechPrompt)) {
@@ -428,6 +427,7 @@ export async function runCycle(
           speechTracker.emit("tool-result", event.output, event.toolName);
         } else if (event.type === "done") {
           fullText = event.fullText;
+          speechCost = event.costUsd;
           speechTracker.emit("text", fullText);
         }
       }
@@ -436,7 +436,7 @@ export async function runCycle(
       logError("orchestrator", `runCycle ${cycleNumber}: speech failed for ${nextSpeaker}`, err);
       events.onError(`Speech failed for ${nextSpeaker}: ${err}`);
     } finally {
-      speechTracker.done();
+      speechTracker.done(speechCost);
     }
 
     speech = {
@@ -445,29 +445,29 @@ export async function runCycle(
       timestamp: createFormattedTime(),
     };
     events.onSpeechDone(nextSpeaker);
-    events.onSpeech(nextSpeaker, fullText, speech.timestamp, getCycleCost());
+    events.onSpeech(nextSpeaker, fullText, speech.timestamp);
   }
 
   // ------ RECORD & COMMIT ------
+  const pending = currentMeeting.pendingCycle!;
   const cycle: CycleRecord = {
     cycleNumber,
     speech,
-    assessments,
-    orchestratorDecision: decision,
-    processes,
+    assessments: pending.assessments,
+    orchestratorDecision: pending.orchestratorDecision!,
+    processes: pending.processes,
   };
 
   currentMeeting.cycles.push(cycle);
   currentMeeting.lastEngagedAt = speech.timestamp;
-  const cycleCost = getCycleCost();
   currentMeeting.totalCostEstimate =
-    (currentMeeting.totalCostEstimate ?? 0) + cycleCost;
+    (currentMeeting.totalCostEstimate ?? 0) + cycleCostAccumulator;
 
   // Sync session IDs from registry (sessions may have been created lazily)
   Object.assign(currentMeeting.sessionIds, getAllSessionIds());
 
-  pendingProcesses = null;
-  pendingCycleNumber = null;
+  // Clear pending cycle — it's now a committed cycle
+  delete currentMeeting.pendingCycle;
 
   await writeMeetingAtomic(currentWorktreePath, currentMeeting);
   await commitCycleGit(currentWorktreePath, cycleNumber, speech.speaker);
@@ -656,6 +656,18 @@ export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> 
 
   // Read meeting state
   currentMeeting = await readActiveMeeting(worktreePath);
+
+  // If a pending cycle exists (interrupted mid-cycle), account for its costs and discard
+  if (currentMeeting.pendingCycle) {
+    const pendingCosts = currentMeeting.pendingCycle.processes
+      .reduce((sum, p) => sum + (p.costUsd ?? 0), 0);
+    if (pendingCosts > 0) {
+      currentMeeting.totalCostEstimate =
+        (currentMeeting.totalCostEstimate ?? 0) + pendingCosts;
+      logInfo("orchestrator", `resumeMeetingById: accounting for interrupted cycle costs: $${pendingCosts.toFixed(4)}`);
+    }
+    delete currentMeeting.pendingCycle;
+  }
 
   // Discover agents and restore participant defs
   const allAgents = await discoverAgents();

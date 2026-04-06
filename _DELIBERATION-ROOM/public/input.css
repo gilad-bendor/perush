@@ -160,12 +160,13 @@
   }
 
   .btn-back {
-    @apply fixed top-4 end-4 z-30 text-sm text-stone-500 hover:text-stone-700
-           bg-white border border-stone-300 rounded px-3 py-1 shadow-sm;
+    @apply fixed top-1 end-4 z-30 text-sm text-stone-500 hover:text-stone-700
+           bg-white border border-stone-300 rounded px-2 py-0.5 shadow-sm;
+    --tw-bg-opacity: 0.3;
   }
 
   .btn-meeting-resume {
-    @apply text-sm border border-amber-500 text-amber-700 rounded px-3 py-1 hover:bg-amber-50 transition-colors;
+    @apply text-sm border border-amber-500 text-amber-700 rounded px-3 py-0 hover:bg-amber-50 transition-colors;
   }
 
   .btn-meeting-view {
@@ -260,12 +261,24 @@
     @apply bg-blue-50 border-blue-200;
   }
 
+  .status-read-controls {
+    @apply flex flex-col items-center shrink-0;
+  }
+
+  .status-read-content {
+    @apply flex-1 flex items-center gap-2 min-w-0;
+  }
+
   .status-read-icon {
-    @apply text-amber-700 font-bold;
+    @apply text-amber-700 font-bold shrink-0;
   }
 
   .status-read-text {
-    @apply flex-1 text-sm text-stone-600;
+    @apply text-sm text-stone-600 min-w-0;
+  }
+
+  .status-read-indicators {
+    @apply flex flex-col items-center shrink-0;
   }
 
   .status-read-phase-badge {
@@ -273,7 +286,7 @@
   }
 
   .status-read-cost {
-    @apply hidden text-xs text-stone-400;
+    @apply text-xs text-stone-400;
   }
 
   .btn-status-read-control {

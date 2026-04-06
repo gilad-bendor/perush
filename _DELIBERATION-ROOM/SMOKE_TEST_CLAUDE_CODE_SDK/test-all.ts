@@ -441,7 +441,7 @@ async function test_14(sessionId: string) {
       const lines = content.trim().split("\n");
       log(`\nJSONL lines: ${lines.length}`);
       if (lines.length > 0) {
-        const first = JSON.parse(lines[0]);
+        const first = JSON.parse(String(lines[0]));
         log(`First line fields: ${Object.keys(first).sort().join(", ")}`);
         log(`First line type: ${first.type}`);
       }
@@ -459,7 +459,7 @@ async function test_15(sessionId: string) {
   log(`Sessions found: ${sessions.length}`);
 
   if (sessions.length > 0) {
-    const sample = sessions[0];
+    const sample = sessions[0]!;
     log(`Sample session fields: ${Object.keys(sample).sort().join(", ")}`);
     log(`  sessionId: ${sample.sessionId}`);
 
@@ -700,7 +700,7 @@ async function test_getSessionMessages(sessionId: string) {
   log(`Messages for session ${sessionId}: ${messages.length}`);
 
   if (messages.length > 0) {
-    const sample = messages[0];
+    const sample = messages[0]!;
     log(`Sample message fields: ${Object.keys(sample).sort().join(", ")}`);
     log(`Types: ${messages.map(m => m.type).join(", ")}`);
   }

@@ -66,17 +66,19 @@ For everything else — architecture, implementation, infrastructure — this fi
          ▼
 2. ASSESSMENT — Feed to each Participant-Agent's session (parallel, except last speaker)
    → Two-phase: deep thinking (private, with tools), then free-text assessment for turn management
+   → pendingCycle written to meeting.yaml (intermediate persist)
          │
          ▼
 3. SELECTION — Feed speech + assessments to Orchestrator's session
    → Returns: { nextSpeaker, statusRead }
+   → pendingCycle updated in meeting.yaml (intermediate persist)
          │
          ▼
 4. SPEECH — Selected Participant speaks (streamed via WebSocket, with tools)
    OR Director's turn (await WebSocket input)
          │
          ▼
-5. Speech added to conversation → commit to session branch → back to step 1
+5. pendingCycle assembled into full CycleRecord → commit to session branch → back to step 1
 ```
 
 Every SDK interaction in steps 2-4 emits process events (prompt, thinking, text, tool calls, tool results) that are:
@@ -131,7 +133,7 @@ interface PrivateAssessment {
 // A cycle = assess previous speech → select next speaker → that speaker speaks.
 // `speech` is the speech PRODUCED during this cycle.
 interface ProcessEventRecord {
-  eventKind: "prompt" | "thinking" | "text" | "tool-call" | "tool-result";
+  eventKind: "system-prompt" | "prompt" | "thinking" | "text" | "tool-call" | "tool-result";
   content: string;
   toolName?: string;
   toolInput?: string;
@@ -142,6 +144,14 @@ interface ProcessRecord {
   processKind: "assessment" | "orchestrator-selection" | "agent-speech";
   agent: AgentId | "orchestrator";
   events: ProcessEventRecord[];
+  costUsd?: number;            // SDK total_cost_usd for this interaction
+}
+
+interface PendingCycle {
+  cycleNumber: number;
+  assessments: Record<AgentId, PrivateAssessment>;
+  orchestratorDecision?: OrchestratorDecision;
+  processes: ProcessRecord[];
 }
 
 interface CycleRecord {
@@ -156,9 +166,10 @@ interface Meeting {
   meetingId: MeetingId;
   mode: MeetingMode;
   title: string;
-  openingPrompt: string;
+  openingPrompt?: string;
   participants: AgentId[];    // immutable per-meeting
   cycles: CycleRecord[];
+  pendingCycle?: PendingCycle; // partial cycle in progress — persisted after each phase
   startedAt: FormattedTime;
   lastEngagedAt?: FormattedTime;
   sessionIds: Record<AgentId | "orchestrator", string>;

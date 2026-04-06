@@ -243,7 +243,8 @@ describe("attention flag", () => {
 
     const cyclePromise = runCycle("milo", "Milo said something");
 
-    await new Promise(r => setTimeout(r, 50));
+    // Wait until cycle reaches human-turn phase before sending speech
+    while (getPhase() !== "human-turn") await new Promise(r => setTimeout(r, 10));
     handleHumanSpeech("Director's response");
 
     const cycle = await cyclePromise;
@@ -275,7 +276,8 @@ describe("human turn", () => {
 
     const cyclePromise = runCycle("milo", "Milo's speech");
 
-    await new Promise(r => setTimeout(r, 50));
+    // Wait until cycle reaches human-turn phase before sending speech
+    while (getPhase() !== "human-turn") await new Promise(r => setTimeout(r, 10));
     handleHumanSpeech("Human's input");
 
     const cycle = await cyclePromise;

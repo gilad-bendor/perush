@@ -74,16 +74,22 @@
 
     <!-- StatusRead Bar -->
     <div class="status-read-bar">
-      <button id="pause-btn" class="btn-status-read-control" title="השהה/המשך">
-        &#x25B6; המשך
-      </button>
-      <span class="status-read-icon">✦</span>
-      <span id="status-read-text" class="status-read-text"></span>
-      <span id="status-read-phase" class="status-read-phase-badge"></span>
-      <span id="status-read-cost" class="status-read-cost" title="עלות משוערת"></span>
-      <button id="attention-btn" class="btn-attention" title="בקשת רשות דיבור">
-        &#x270B; תשומת לב
-      </button>
+      <div class="status-read-controls">
+        <button id="pause-btn" class="btn-status-read-control" title="השהה/המשך">
+          &#x25B6; המשך
+        </button>
+        <button id="attention-btn" class="btn-attention" title="בקשת רשות דיבור">
+          &#x270B; תשומת לב
+        </button>
+      </div>
+      <div class="status-read-content">
+        <span class="status-read-icon">✦</span>
+        <span id="status-read-text" class="status-read-text"></span>
+      </div>
+      <div class="status-read-indicators">
+        <span id="status-read-phase" class="status-read-phase-badge"></span>
+        <span id="status-read-cost" class="status-read-cost" title="עלות משוערת"></span>
+      </div>
     </div>
 
     <!-- Human Input -->

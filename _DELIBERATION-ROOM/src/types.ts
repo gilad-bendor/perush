@@ -253,12 +253,14 @@ export const ProcessRecordSchema = z.object({
   processKind: ProcessKindSchema,
   agent: z.string(), // AgentId | "orchestrator"
   events: z.array(ProcessEventRecordSchema),
+  costUsd: z.number().optional(),
 });
 export type ProcessRecord = {
   processId: string;
   processKind: ProcessKind;
   agent: AgentId | "orchestrator";
   events: ProcessEventRecord[];
+  costUsd?: number;
 };
 assertZodTypeMatch<ProcessRecord, typeof ProcessRecordSchema>(true);
 
@@ -283,6 +285,24 @@ export type CycleRecord = {
 assertZodTypeMatch<CycleRecord, typeof CycleRecordSchema>(true);
 
 // ---------------------------------------------------------------------------
+// Pending cycle — in-progress cycle data, persisted between phases
+// ---------------------------------------------------------------------------
+
+export const PendingCycleSchema = z.object({
+  cycleNumber: z.number().int().positive(),
+  assessments: z.record(z.string(), PrivateAssessmentSchema),
+  orchestratorDecision: OrchestratorDecisionSchema.optional(),
+  processes: z.array(ProcessRecordSchema),
+});
+export type PendingCycle = {
+  cycleNumber: number;
+  assessments: Record<string, PrivateAssessment>;
+  orchestratorDecision?: OrchestratorDecision;
+  processes: ProcessRecord[];
+};
+assertZodTypeMatch<PendingCycle, typeof PendingCycleSchema>(true);
+
+// ---------------------------------------------------------------------------
 // Meeting — the full meeting.yaml schema
 // ---------------------------------------------------------------------------
 
@@ -297,6 +317,7 @@ export const MeetingSchema = z.object({
   lastEngagedAt: z.string().optional(), // FormattedTime
   sessionIds: z.record(z.string(), z.string()),
   totalCostEstimate: z.number().optional(),
+  pendingCycle: PendingCycleSchema.optional(),
 });
 export type Meeting = {
   meetingId: MeetingId;
@@ -309,6 +330,7 @@ export type Meeting = {
   lastEngagedAt?: FormattedTime;
   sessionIds: Record<string, string>;
   totalCostEstimate?: number;
+  pendingCycle?: PendingCycle;
 };
 assertZodTypeMatch<Meeting, typeof MeetingSchema>(true);
 
@@ -324,6 +346,7 @@ export const MeetingSummarySchema = z.object({
   title: z.string().optional(),
   cycleCount: z.number().optional(),
   participants: z.array(AgentIdSchema).optional(),
+  totalCostEstimate: z.number().optional(),
 });
 export type MeetingSummary = {
   meetingId: MeetingId;
@@ -333,6 +356,7 @@ export type MeetingSummary = {
   title?: string;
   cycleCount?: number;
   participants?: AgentId[];
+  totalCostEstimate?: number;
 };
 assertZodTypeMatch<MeetingSummary, typeof MeetingSummarySchema>(true);
 
@@ -346,7 +370,6 @@ export const WsSpeechSchema = z.object({
   speaker: SpeakerIdSchema,
   content: z.string(),
   timestamp: z.string(),
-  cycleCost: z.number().optional(),
 });
 export type WsSpeech = {
   type: "speech";
@@ -354,7 +377,6 @@ export type WsSpeech = {
   speaker: SpeakerId;
   content: string;
   timestamp: FormattedTime;
-  cycleCost?: number;
 };
 assertZodTypeMatch<WsSpeech, typeof WsSpeechSchema>(true);
 
@@ -445,8 +467,6 @@ export const WsSyncSchema = z.object({
   readOnly: z.boolean().optional(),
   editingCycle: z.number().optional(),
   paused: z.boolean().optional(),
-  pendingProcesses: z.array(ProcessRecordSchema).optional(),
-  pendingCycleNumber: z.number().optional(),
 });
 export type WsSync = {
   type: "sync";
@@ -457,8 +477,6 @@ export type WsSync = {
   readOnly?: boolean;
   editingCycle?: number;
   paused?: boolean;
-  pendingProcesses?: ProcessRecord[];
-  pendingCycleNumber?: number;
 };
 assertZodTypeMatch<WsSync, typeof WsSyncSchema>(true);
 
@@ -550,11 +568,13 @@ export const WsProcessDoneSchema = z.object({
   type: z.literal("process-done"),
   messageId: MessageIdSchema,
   processId: z.string(),
+  costUsd: z.number().optional(),
 });
 export type WsProcessDone = {
   type: "process-done";
   messageId: MessageId;
   processId: string;
+  costUsd?: number;
 };
 assertZodTypeMatch<WsProcessDone, typeof WsProcessDoneSchema>(true);
 

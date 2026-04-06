@@ -26,7 +26,6 @@ import {
   getPhase,
   getActiveSpeaker,
   cancelHumanTurn,
-  getPendingProcesses,
 } from "./orchestrator";
 import {
   discoverAgents,
@@ -142,7 +141,7 @@ function broadcast(message: ServerMessageBody): void {
   }
 }
 
-/** Build a sync message body, automatically including any in-progress cycle processes. */
+/** Build a sync message body. pendingCycle is part of meeting — no special handling needed. */
 function buildSyncBody(fields: {
   meeting: any;
   currentPhase: string;
@@ -151,12 +150,10 @@ function buildSyncBody(fields: {
   editingCycle?: number | undefined;
   paused?: boolean;
 }): ServerMessageBody {
-  const pending = getPendingProcesses();
   return {
     type: "sync" as const,
     ...fields,
     paused: fields.paused ?? paused,
-    ...(pending ? { pendingProcesses: pending.processes, pendingCycleNumber: pending.cycleNumber } : {}),
   };
 }
 
@@ -164,7 +161,7 @@ function buildSyncBody(fields: {
 function sendTo(ws: ServerWebSocket<unknown>, message: ServerMessageBody): void {
   const messageId = nextServerMessageId();
   const withId = { messageId, ...message };
-  logInfo("server", `WS >-> (sendTo) ${message.type} (${messageId})\n${prettyLog(withId)}`);
+  logInfo("server", `WS >-> (sendTo) ${message.type} (${messageId})\n${prettyLog(withId).replace(/^/gm, '    ')}`);
   try {
     ws.send(JSON.stringify(withId));
   } catch {
@@ -181,8 +178,8 @@ function setupOrchestratorEvents(): void {
     onPhaseChange: (phase, activeSpeaker) => {
       broadcast({ type: "phase", phase, activeSpeaker });
     },
-    onSpeech: (speaker, content, timestamp, cycleCost) => {
-      broadcast({ type: "speech", speaker, content, timestamp, cycleCost });
+    onSpeech: (speaker, content, timestamp) => {
+      broadcast({ type: "speech", speaker, content, timestamp });
     },
     onSpeechChunk: (speaker, delta) => {
       broadcast({ type: "speech-chunk", speaker, delta });
@@ -215,8 +212,8 @@ function setupOrchestratorEvents(): void {
     onProcessEvent: (processId, eventKind, content, toolName, toolInput) => {
       broadcast({ type: "process-event", processId, eventKind, content, toolName, toolInput });
     },
-    onProcessDone: (processId) => {
-      broadcast({ type: "process-done", processId });
+    onProcessDone: (processId, costUsd) => {
+      broadcast({ type: "process-done", processId, costUsd });
     },
   });
 }

@@ -440,7 +440,8 @@ describe("feedMessage", () => {
       "new message\n---stub-response---\ntext: assessment response\n---end-stub-response---",
     );
 
-    expect(response).toBe("assessment response");
+    expect(response.text).toBe("assessment response");
+    expect(response.costUsd).toBeGreaterThanOrEqual(0);
   });
 
   test("lazily creates session if none exists and registerMeeting was called", async () => {
@@ -452,7 +453,7 @@ describe("feedMessage", () => {
       "test message\n---stub-response---\ntext: lazy response\n---end-stub-response---",
     );
 
-    expect(response).toBe("lazy response");
+    expect(response.text).toBe("lazy response");
     expect(getSessionId("milo")).toBeTruthy();
   });
 

@@ -30,7 +30,6 @@ import {
   PARTICIPANT_TOOLS,
   ORCHESTRATOR_TOOLS,
   ORCHESTRATOR_FILE,
-  ESTIMATED_COST_PER_CYCLE,
 } from "../../src/config";
 import {SESSION_BRANCH_PREFIX, TAG_PREFIX} from "../../src/types.ts";
 
@@ -78,9 +77,6 @@ describe("Cost caps", () => {
     }
   });
 
-  test("ESTIMATED_COST_PER_CYCLE is a positive number", () => {
-    expect(ESTIMATED_COST_PER_CYCLE).toBeGreaterThan(0);
-  });
 });
 
 // ---------------------------------------------------------------------------

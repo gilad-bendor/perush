@@ -256,11 +256,6 @@ function handleServerMessage(msg) {
       break;
     case "speech":
       conversationView?.addSpeech(msg.speaker, msg.content, msg.timestamp);
-      // Update client-side cost from server-reported actual cost
-      if (currentMeeting && msg.cycleCost != null) {
-        currentMeeting.totalCostEstimate = (currentMeeting.totalCostEstimate || 0) + msg.cycleCost;
-        updateCostDisplay();
-      }
       break;
     case "speech-chunk":
       conversationView?.appendChunk(msg.speaker, msg.delta);
@@ -297,6 +292,9 @@ function handleServerMessage(msg) {
       break;
     case "process-done":
       conversationView?.endProcess(msg.processId);
+      if (msg.costUsd != null && msg.costUsd > 0) {
+        accumulateCostFromProcess(msg.processId, msg.costUsd);
+      }
       break;
     case "pause-state":
       handlePauseState(msg.paused, msg.blocking);
@@ -327,7 +325,7 @@ function handleSync(msg) {
       history.pushState(null, "", expectedPath);
     }
     showDeliberation();
-    renderMeetingState(msg);
+    renderMeetingState();
 
     // New meeting with no cycles and no opening prompt: enable input for first prompt
     if (!currentMeeting.openingPrompt && currentMeeting.cycles.length === 0 && !readOnly) {
@@ -495,7 +493,7 @@ function showDeliberation() {
 // ---- Render Meeting State from Sync -----------------------------------------
 
 /** Rebuilds the full deliberation UI from `currentMeeting` (called after sync). */
-function renderMeetingState(syncMsg) {
+function renderMeetingState() {
   if (!currentMeeting) return;
 
   // Initialize sub-views
@@ -534,9 +532,12 @@ function renderMeetingState(syncMsg) {
     );
   }
 
-  // Render processes from an in-progress cycle (not yet persisted in meeting.yaml)
-  if (syncMsg?.pendingProcesses?.length > 0 && syncMsg.pendingCycleNumber) {
-    conversationView.renderPersistedProcesses(syncMsg.pendingProcesses, syncMsg.pendingCycleNumber);
+  // Render processes from the in-progress cycle (persisted in meeting.pendingCycle)
+  if (currentMeeting.pendingCycle?.processes?.length > 0) {
+    conversationView.renderPersistedProcesses(
+      currentMeeting.pendingCycle.processes,
+      currentMeeting.pendingCycle.cycleNumber,
+    );
   }
 
   // Handle edit-after-rollback
@@ -553,16 +554,61 @@ function renderMeetingState(syncMsg) {
     $statusReadPhase.textContent = "";
   }
 
-  // Show cost estimate if available
-  updateCostDisplay();
+  // Rebuild cost tracking from meeting state (reconnect scenario)
+  rebuildCostFromMeeting();
 
   updatePhaseUI(currentPhase, currentActiveSpeaker);
 }
 
+// ---- Cost Tracking (per-agent, from process-done messages) ------------------
+
+/** @type {Record<string, number>} agent/orchestrator → accumulated USD */
+const costByAgent = {};
+
+/**
+ * Accumulate cost from a process-done event.
+ * processId format: "c<N>-<kind>-<agent>" — extract agent from the suffix.
+ */
+function accumulateCostFromProcess(processId, costUsd) {
+  // Extract agent from processId (e.g. "c3-assessment-milo" → "milo")
+  const parts = processId.split("-");
+  const agent = parts.length >= 3 ? parts.slice(2).join("-") : "unknown";
+  costByAgent[agent] = (costByAgent[agent] || 0) + costUsd;
+  updateCostDisplay();
+}
+
+/** Rebuild costByAgent from persisted process records (for sync/reconnect). */
+function rebuildCostFromMeeting() {
+  for (const key of Object.keys(costByAgent)) delete costByAgent[key];
+  if (!currentMeeting) return;
+
+  // Walk all committed cycles → processes → costUsd
+  for (const cycle of currentMeeting.cycles) {
+    if (!cycle.processes) continue;
+    for (const proc of cycle.processes) {
+      if (proc.costUsd != null && proc.costUsd > 0) {
+        costByAgent[proc.agent] = (costByAgent[proc.agent] || 0) + proc.costUsd;
+      }
+    }
+  }
+
+  // Also walk the in-progress cycle (persisted between phases)
+  if (currentMeeting.pendingCycle?.processes) {
+    for (const proc of currentMeeting.pendingCycle.processes) {
+      if (proc.costUsd != null && proc.costUsd > 0) {
+        costByAgent[proc.agent] = (costByAgent[proc.agent] || 0) + proc.costUsd;
+      }
+    }
+  }
+  updateCostDisplay();
+}
+
 /** Updates the cost estimate shown in the status-read bar. */
 function updateCostDisplay() {
-  if (currentMeeting?.totalCostEstimate != null && currentMeeting.totalCostEstimate > 0) {
-    $statusReadCost.textContent = `$${currentMeeting.totalCostEstimate.toFixed(2)}`;
+  const totalCost = Object.values(costByAgent).reduce((sum, v) => sum + v, 0);
+
+  if (totalCost > 0) {
+    $statusReadCost.textContent = `$${totalCost.toFixed(2)}`;
     $statusReadCost.classList.remove("hidden");
   } else {
     $statusReadCost.classList.add("hidden");
@@ -661,6 +707,9 @@ function renderMeetingList(meetings) {
       ? new Date(meeting.lastActivity).toLocaleDateString("he-IL")
       : "";
     const cycles = meeting.cycleCount != null ? `${meeting.cycleCount} מחזורים` : "";
+    const cost = meeting.totalCostEstimate != null && meeting.totalCostEstimate > 0
+      ? `$${meeting.totalCostEstimate.toFixed(2)}`
+      : "";
     const participants = meeting.participants
       ? meeting.participants
           .map((id) => {
@@ -675,7 +724,7 @@ function renderMeetingList(meetings) {
 
     card.innerHTML = `
       <div class="meeting-card-title">${title}</div>
-      <div class="meeting-card-meta">${[date, cycles].filter(Boolean).join("  ·  ")}</div>
+      <div class="meeting-card-meta">${[date, cycles, cost].filter(Boolean).join("  ·  ")}</div>
       ${participants ? `<div class="meeting-card-participants">${participants}</div>` : ""}
       <div class="meeting-card-actions">
         ${index === 0 ? `<button class="btn-meeting-resume" data-meeting-id="${meeting.meetingId}">המשך דיון</button>` : ""}

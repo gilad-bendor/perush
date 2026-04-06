@@ -31,7 +31,7 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // Full meeting state (sent on connect/reconnect)
 // readOnly: true for view-only mode (past meetings)
 // editingCycle: set after rollback — signals the client to show an editable textarea for that cycle's human message
-{ type: "sync", meeting: Meeting, currentPhase: string, readOnly?: boolean, editingCycle?: number }
+{ type: "sync", meeting: Meeting, currentPhase: string, activeSpeaker?: SpeakerId, readOnly?: boolean, paused?: boolean, editingCycle?: number }
 
 // Error
 { type: "error", message: string }
@@ -48,8 +48,8 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // A single event within a process (prompt, thinking, text output, tool call, tool result)
 { type: "process-event", processId: string, eventKind: "prompt" | "thinking" | "text" | "tool-call" | "tool-result", content: string, toolName?: string, toolInput?: string }
 
-// Signals end of a process
-{ type: "process-done", processId: string }
+// Signals end of a process (costUsd = actual USD cost of this SDK interaction)
+{ type: "process-done", processId: string, costUsd?: number }
 
 // Pause state update (paused = toggle state, blocking = pause is actively preventing next cycle)
 { type: "pause-state", paused: boolean, blocking: boolean }

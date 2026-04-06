@@ -392,24 +392,12 @@ export function registerMeeting(title: string, participantDefs: AgentDefinition[
 }
 
 
-/**
- * Accumulated cost (USD) from SDK interactions since the last reset.
- * The orchestrator calls resetCycleCost() at cycle start and
- * getCycleCost() at cycle end to get actual spend per cycle.
- */
-let cycleCostAccumulator = 0;
-
-/** Reset the per-cycle cost accumulator. Call at the start of each cycle. */
-export function resetCycleCost(): void { cycleCostAccumulator = 0; }
-
-/** Get the accumulated cost since the last reset. */
-export function getCycleCost(): number { return cycleCostAccumulator; }
-
-/** Extract total_cost_usd from an SDK result message and add to accumulator. */
-function accumulateCost(msg: any): void {
-  if (msg.type === "result" && typeof (msg as any).total_cost_usd === "number") {
-    cycleCostAccumulator += (msg as any).total_cost_usd;
+/** Extract total_cost_usd from an SDK result message, or 0. */
+function extractCost(msg: any): number {
+  if (msg.type === "result" && typeof msg.total_cost_usd === "number") {
+    return msg.total_cost_usd;
   }
+  return 0;
 }
 
 /**
@@ -423,7 +411,7 @@ export async function createSession(
   systemPrompt: string,
   initialPrompt: string,
   onEvent?: ProcessEventCallback,
-): Promise<{ sessionId: string; responseText: string }> {
+): Promise<{ sessionId: string; responseText: string; costUsd: number }> {
   const model = agentId === "orchestrator" ? ORCHESTRATOR_MODEL : PARTICIPANT_MODEL;
   const tools = agentId === "orchestrator" ? ORCHESTRATOR_TOOLS : PARTICIPANT_TOOLS;
 
@@ -452,6 +440,7 @@ export async function createSession(
 
   let sessionId = "";
   let responseText = "";
+  let costUsd = 0;
 
   for await (const msg of query) {
     if (onEvent) {
@@ -463,14 +452,14 @@ export async function createSession(
     if (msg.type === "result" && (msg as any).subtype === "success") {
       responseText = (msg as any).result ?? "";
     }
-    accumulateCost(msg);
+    costUsd += extractCost(msg);
   }
 
   if (!sessionId) throw new Error(`Failed to create session for ${agentId}`);
 
   sessionRegistry.set(agentId, sessionId);
   logInfo("sessions", `createSession DONE for ${agentId} (sessionId=${sessionId}), registry=[${[...sessionRegistry.keys()].join(', ')}]`);
-  return { sessionId, responseText };
+  return { sessionId, responseText, costUsd };
 }
 
 /** Callback for process events emitted during SDK interactions. */
@@ -490,7 +479,7 @@ export async function feedMessage(
   agentId: AgentId | "orchestrator",
   prompt: string,
   onEvent?: ProcessEventCallback,
-): Promise<string> {
+): Promise<{ text: string; costUsd: number }> {
   const existingSessionId = sessionRegistry.get(agentId);
   const model = agentId === "orchestrator" ? ORCHESTRATOR_MODEL : PARTICIPANT_MODEL;
   const tools = agentId === "orchestrator" ? ORCHESTRATOR_TOOLS : PARTICIPANT_TOOLS;
@@ -523,6 +512,7 @@ export async function feedMessage(
   activeQueries.set(agentId, query);
 
   let responseText = "";
+  let costUsd = 0;
   for await (const msg of query) {
     if (onEvent) emitProcessEvents(msg, onEvent);
     if (msg.type === "system" && (msg as any).subtype === "init" && !existingSessionId) {
@@ -535,12 +525,12 @@ export async function feedMessage(
     if (msg.type === "result" && (msg as any).subtype === "success") {
       responseText = (msg as any).result ?? "";
     }
-    accumulateCost(msg);
+    costUsd += extractCost(msg);
   }
 
   activeQueries.delete(agentId);
   logInfo("session-manager", `feedMessage: ${agentId} done (${responseText.length} chars)`);
-  return responseText;
+  return { text: responseText, costUsd };
 }
 
 /** Event types yielded by streamSpeech */
@@ -550,7 +540,7 @@ export type SpeechStreamEvent =
   | { type: "thinking"; text: string }
   | { type: "tool-call"; toolName: string; input: string }
   | { type: "tool-result"; toolName: string; output: string }
-  | { type: "done"; fullText: string };
+  | { type: "done"; fullText: string; costUsd: number };
 
 /**
  * Feed a message and stream the response as an async generator of events.
@@ -597,6 +587,7 @@ export async function* streamSpeech(
 
   let fullText = "";
   let thinkingAccumulator = "";
+  let costUsd = 0;
   for await (const msg of query) {
     // Capture session ID on first interaction
     if (msg.type === "system" && (msg as any).subtype === "init" && !existingSessionId) {
@@ -650,7 +641,7 @@ export async function* streamSpeech(
     if (msg.type === "result" && (msg as any).subtype === "success") {
       fullText = (msg as any).result ?? fullText;
     }
-    accumulateCost(msg);
+    costUsd += extractCost(msg);
   }
 
   activeQueries.delete(agentId);
@@ -658,7 +649,7 @@ export async function* streamSpeech(
   if (thinkingAccumulator) {
     yield { type: "thinking", text: thinkingAccumulator };
   }
-  yield { type: "done", fullText };
+  yield { type: "done", fullText, costUsd };
 }
 
 /**

@@ -323,6 +323,7 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
     let title: string | undefined;
     let cycleCount: number | undefined;
     let participants: AgentId[] | undefined;
+    let totalCostEstimate: number | undefined;
 
     const raw = yamlContents.get(`${branch}:meeting.yaml`);
     if (raw) {
@@ -338,6 +339,13 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
       // Count cycles by counting "- cycleNumber:" entries (much faster than parsing full YAML)
       const cycleMatches = raw.match(/^  - cycleNumber:/gm);
       cycleCount = cycleMatches?.length;
+
+      // Extract totalCostEstimate
+      const costMatch = raw.match(/^totalCostEstimate:\s*(.+)$/m);
+      if (costMatch) {
+        const parsed = parseFloat(costMatch[1]);
+        if (!isNaN(parsed)) totalCostEstimate = parsed;
+      }
     }
 
     return {
@@ -348,6 +356,7 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
       title,
       cycleCount,
       participants,
+      totalCostEstimate,
     };
   });
 
@@ -621,8 +630,6 @@ export async function resetSessionBranchToCycle(
       await $`git -C ${worktreePath} reset --hard ${hash}`.quiet();
     }
   } else {
-    // Find the cycle commit by message pattern
-    const message = commitCycleMessage(targetCycleNumber, "");
     // Use grep with partial match (just "Cycle N:")
     const grepPattern = `Cycle ${targetCycleNumber}:`;
     const result = await $`git -C ${worktreePath} log --format=%H --grep=${grepPattern} -1`.quiet();

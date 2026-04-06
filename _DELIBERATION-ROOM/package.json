@@ -17,7 +17,7 @@
   "dependencies": {
     "@anthropic-ai/claude-agent-sdk": "^0.2.0",
     "baseline-browser-mapping": "^2.10.15",
-    "caniuse-lite": "^1.0.30001785",
+    "caniuse-lite": "^1.0.30001786",
     "gray-matter": "^4.0.3",
     "preprocess": "^3.2.0",
     "yaml": "^2.8.3",
