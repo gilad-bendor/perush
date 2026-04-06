@@ -716,7 +716,7 @@ function renderMeetingList(meetings) {
             const a = agentDefinitions.find((d) => d.id === id);
             return a ? a.hebrewName : id;
           })
-          .join("  ")
+          .join(", ")
       : "";
 
     // Count how many meetings share this title (for showing bulk-delete button)
@@ -725,7 +725,7 @@ function renderMeetingList(meetings) {
     card.innerHTML = `
       <div class="meeting-card-title">${title}</div>
       <div class="meeting-card-meta">${[date, cycles, cost].filter(Boolean).join("  ·  ")}</div>
-      ${participants ? `<div class="meeting-card-participants">${participants}</div>` : ""}
+      ${participants ? `<div class="meeting-card-participants">[${participants}]</div>` : ""}
       <div class="meeting-card-actions">
         ${index === 0 ? `<button class="btn-meeting-resume" data-meeting-id="${meeting.meetingId}">המשך דיון</button>` : ""}
         <button class="btn-meeting-view" data-meeting-id="${meeting.meetingId}">צפייה בלבד</button>

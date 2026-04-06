@@ -8,7 +8,7 @@ export default {
         serif: ["David", "Narkisim", "Times New Roman", "serif"],
       },
       fontSize: {
-        perush: ["1rem", { lineHeight: "0.7" }],
+        perush: ["1rem", { lineHeight: "1.2" }],
       },
     },
   },

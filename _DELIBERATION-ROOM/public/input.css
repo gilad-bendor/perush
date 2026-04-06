@@ -156,7 +156,7 @@
   }
 
   .btn-send {
-    @apply bg-amber-600 hover:bg-amber-700 disabled:bg-stone-300 text-white font-semibold py-2 px-4 rounded transition-colors;
+    @apply bg-amber-600 hover:bg-amber-700 disabled:bg-stone-300 text-white font-semibold py-2 px-4 rounded transition-colors self-stretch;
   }
 
   .btn-back {

@@ -418,6 +418,11 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
 
       case "resume-meeting": {
         try {
+          // Send preliminary sync immediately so the UI switches to the meeting page
+          // while sessions are being recovered (which can take 30+ seconds with real SDK)
+          const preliminaryMeeting = await readEndedMeeting(msg.meetingId);
+          sendTo(ws, buildSyncBody({ meeting: preliminaryMeeting, currentPhase: "idle", readOnly: false }));
+
           const meeting = await resumeMeetingById(msg.meetingId);
           broadcast(buildSyncBody({ meeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker() }));
           // Only start the deliberation loop if it's not already running
@@ -458,12 +463,37 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
 
       case "join-meeting": {
         try {
-          // If this meeting is currently active, send live state with editing enabled
+          // If this meeting is currently active, send live state
           const activeMeeting = getMeeting();
           if (activeMeeting && activeMeeting.meetingId === msg.meetingId) {
             sendTo(ws, buildSyncBody({ meeting: activeMeeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker(), readOnly: false }));
+          } else if (!activeMeeting) {
+            // No active meeting — auto-resume so the Director can interact.
+            // Send preliminary sync immediately (session recovery can take 30+ seconds).
+            const preliminaryMeeting = await readEndedMeeting(msg.meetingId);
+            sendTo(ws, buildSyncBody({ meeting: preliminaryMeeting, currentPhase: "idle", readOnly: false }));
+
+            const meeting = await resumeMeetingById(msg.meetingId);
+            broadcast(buildSyncBody({ meeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker(), readOnly: false }));
+            // Start the deliberation loop from the last cycle
+            if (!deliberationLoopActive) {
+              const lastCycle = meeting.cycles[meeting.cycles.length - 1];
+              if (lastCycle) {
+                wrapDanglingPromise(
+                    "server",
+                    `Start deliberation after ${lastCycle.speech.speaker}'s prompt`,
+                    runDeliberationLoop(lastCycle.speech.speaker, lastCycle.speech.content),
+                );
+              } else if (meeting.openingPrompt) {
+                wrapDanglingPromise(
+                    "server",
+                    `Start deliberation after human's prompt`,
+                    runDeliberationLoop("human", meeting.openingPrompt),
+                );
+              }
+            }
           } else {
-            // Not active — view-only from git
+            // Another meeting is active — view-only from git
             const meetingData = await readEndedMeeting(msg.meetingId);
             sendTo(ws, buildSyncBody({ meeting: meetingData, currentPhase: "idle", readOnly: true }));
           }

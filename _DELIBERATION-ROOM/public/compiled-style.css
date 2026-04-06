@@ -556,7 +556,7 @@ video {
 
 html, :host {
   font-size: 1rem;
-  line-height: 0.7;
+  line-height: 1.2;
 }
 
 body {
@@ -679,7 +679,7 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1rem;
-  line-height: 0.7;
+  line-height: 1.2;
 }
 
 .form-input:focus {
@@ -772,7 +772,7 @@ body {
 
 .participant-card-name {
   font-size: 1rem;
-  line-height: 0.7;
+  line-height: 1.2;
   font-weight: 700;
 }
 
@@ -905,6 +905,7 @@ body {
 }
 
 .btn-send {
+  align-self: stretch;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(217 119 6 / var(--tw-bg-opacity, 1));
@@ -1151,7 +1152,7 @@ body {
 .message-content {
   white-space: pre-wrap;
   font-size: 1rem;
-  line-height: 0.7;
+  line-height: 1.2;
 }
 
 .rollback-icon {
@@ -1219,7 +1220,7 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1rem;
-  line-height: 0.7;
+  line-height: 1.2;
 }
 
 .edit-actions {
@@ -1429,7 +1430,7 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1rem;
-  line-height: 0.7;
+  line-height: 1.2;
 }
 
 .human-textarea:focus {
