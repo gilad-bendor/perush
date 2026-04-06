@@ -319,6 +319,7 @@
            disabled:bg-stone-100 disabled:text-stone-400;
     field-sizing: content;
     max-height: 40vh;
+    direction: rtl;
   }
 
   /* --------------------------------------------------------------- */

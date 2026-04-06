@@ -616,7 +616,7 @@ Notes:
   - NO JSONL file created on disk ← confirmed
   - Session cannot be resumed after the query completes
 
-  For the Deliberation Room's Orchestrator-Agent (Sonnet, no tools),
+  For the Deliberation Room's Orchestrator-Agent (Opus),
   this COULD be used to avoid disk writes — but since we want to track costs
   and preserve the orchestrator's reasoning for debugging, persistSession: true
   is the right choice for all agents.
@@ -677,7 +677,7 @@ SDK features NOT assumed by the design that could be useful:
 
 4. **`persistSession: false` option**: Prevents JSONL file creation on disk. Could be used for ephemeral sessions (e.g., one-off cost estimates) where persistence isn't needed.
 
-5. **`thinking` option**: `{ type: 'adaptive' }` (default for Opus 4.6) or `{ type: 'disabled' }`. Could be used to disable thinking for the Orchestrator (Sonnet) to reduce cost/latency, or to control thinking depth for different agent types.
+5. **`thinking` option**: `{ type: 'adaptive' }` (default for Opus 4.6) or `{ type: 'disabled' }`. Could be used to disable thinking for the Orchestrator (Opus) to reduce cost/latency, or to control thinking depth for different agent types.
 
 6. **`effort` option**: `'low' | 'medium' | 'high' | 'max'`. Could tune reasoning depth per agent — e.g., `effort: 'low'` for assessments (short structured output) vs `effort: 'high'` for speeches.
 

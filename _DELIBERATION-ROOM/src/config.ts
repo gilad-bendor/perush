@@ -41,7 +41,7 @@ export const DIRECTOR_TIMEOUT_MS = 10 * 60 * 1000;
 export const PARTICIPANT_MODEL = process.env.PARTICIPANT_MODEL || "claude-opus-4-6";
 
 /** Model for Orchestrator-Agent session (env-overridable for testing with Haiku) */
-export const ORCHESTRATOR_MODEL = process.env.ORCHESTRATOR_MODEL || "claude-opus-4-6";
+export const ORCHESTRATOR_MODEL = process.env.ORCHESTRATOR_MODEL || PARTICIPANT_MODEL;
 
 // ---------------------------------------------------------------------------
 // Effort levels (auto-derived from model)

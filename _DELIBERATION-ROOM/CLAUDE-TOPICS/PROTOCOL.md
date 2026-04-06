@@ -106,10 +106,10 @@ Multiple browser tabs receive the same broadcast. All tabs viewing the active me
 
 ## Cost Profile Per Cycle
 
-| Phase | Model | Calls | Approx. Cost |
-|-------|-------|-------|-------------|
-| Assessment | Opus (persistent, cached) | 2-3 (parallel) | ~$0.05-0.10 |
-| Selection | Sonnet (persistent, cached) | 1 | ~$0.01 |
-| Speech | Opus (persistent, cached + tools) | 1 | ~$0.30-1.00 |
-| **Total per cycle** | | **4-5** | **~$0.50** |
-| **15-cycle meeting** | | | **~$7.50** |
+| Phase                | Model                             | Calls          | Approx. Cost |
+|----------------------|-----------------------------------|----------------|--------------|
+| Assessment           | Opus (persistent, cached)         | 2-3 (parallel) | ~$0.05-0.10  |
+| Selection            | Sonnet (persistent, cached)       | 1              | ~$0.01       |
+| Speech               | Opus (persistent, cached + tools) | 1              | ~$0.30-1.00  |
+| **Total per cycle**  |                                   | **4-5**        | **~$0.50**   |
+| **15-cycle meeting** |                                   |                | **~$7.50**   |

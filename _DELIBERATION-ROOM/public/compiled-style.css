@@ -1447,6 +1447,7 @@ body {
 .human-textarea {
   field-sizing: content;
   max-height: 40vh;
+  direction: rtl;
 }
 
 /* --------------------------------------------------------------- */

@@ -56,7 +56,7 @@ describe("Model config", () => {
     expect(PARTICIPANT_MODEL).toContain("opus");
   });
 
-  test("ORCHESTRATOR_MODEL is Sonnet", () => {
+  test("ORCHESTRATOR_MODEL is Opus", () => {
     expect(ORCHESTRATOR_MODEL).toContain("opus");
   });
 });
