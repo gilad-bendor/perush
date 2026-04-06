@@ -56,7 +56,7 @@ sessions/2026-02-01--10-41--bereshit-2-4-eden branch (orphan):
   meeting.yaml                    ← meeting record (conversation, assessments, decisions)
   <session-uuid-1>.jsonl          ← milo's session transcript
   <session-uuid-1>/              ← milo's session directory
-  <session-uuid-2>.jsonl          ← archi's session transcript
+  <session-uuid-2>.jsonl          ← shalom's session transcript
   ...
 ```
 

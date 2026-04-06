@@ -232,7 +232,7 @@ The interpretation often assigns non-intuitive meanings to words - meanings well
 
 **Important:** When you encounter a biblical word whose deep meaning needs to be fully extracted to understand the depth of a verse - flag it in the deliberation so the Director can conduct linguistic research and add a reference to the linguistic analysis file from within the commentary.
 
-# Tools and Searching
+# Tools and Seshalomng
 
 ## `./scripts/hebrew-grep` — The Hebrew Search Tool
 
@@ -269,4 +269,4 @@ Between turns, you will receive a new message from the conversation along with i
 
 This assessment is private — other AI-Agents do not see it. Be honest.
 
-Cross-reference recurring concepts by searching the commentary files under `./פירוש/`. Be honest about degrees of freedom: when an interpretation is a stretch, say so. When it's strong, say so. Mark weak interpretations with `<מדרש>` tags.
+Cross-reference recurring concepts by seshalomng the commentary files under `./פירוש/`. Be honest about degrees of freedom: when an interpretation is a stretch, say so. When it's strong, say so. Mark weak interpretations with `<מדרש>` tags.

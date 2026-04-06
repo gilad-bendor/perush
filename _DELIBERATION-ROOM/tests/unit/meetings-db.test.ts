@@ -40,10 +40,10 @@ function makeTestMeeting(id: MeetingId): Meeting {
     mode: "Perush-Development",
     title: "Test Meeting",
     openingPrompt: "This is a test",
-    participants: ["milo", "archi"],
+    participants: ["milo", "shalom"],
     cycles: [],
     startedAt: createFormattedTime(),
-    sessionIds: { milo: "sess-1", archi: "sess-2", orchestrator: "sess-3" },
+    sessionIds: { milo: "sess-1", shalom: "sess-2", orchestrator: "sess-3" },
   };
 }
 
@@ -120,7 +120,7 @@ describe("conversation store — read/write", () => {
   test("readActiveMeeting reads from worktree", async () => {
     const read = await readActiveMeeting(worktreePath);
     expect(read.meetingId).toBe(sharedId);
-    expect(read.participants).toEqual(["milo", "archi"]);
+    expect(read.participants).toEqual(["milo", "shalom"]);
   });
 
   test("writeMeetingAtomic + read round-trip", async () => {
@@ -271,8 +271,8 @@ describe("conversation store — lifecycle", () => {
       cycles: [{
         cycleNumber: 1,
         speech: { speaker: "milo", content: "First speech", timestamp: createFormattedTime() },
-        assessments: { archi: { agent: "archi", text: "אני: 5\nok" } },
-        orchestratorDecision: { nextSpeaker: "archi", statusRead: "Getting started" },
+        assessments: { shalom: { agent: "shalom", text: "אני: 5\nok" } },
+        orchestratorDecision: { nextSpeaker: "shalom", statusRead: "Getting started" },
       }],
     };
     await writeMeetingAtomic(worktreePath, cycle1Meeting);
@@ -285,14 +285,14 @@ describe("conversation store — lifecycle", () => {
         ...cycle1Meeting.cycles,
         {
           cycleNumber: 2,
-          speech: { speaker: "archi", content: "Second speech", timestamp: createFormattedTime() },
+          speech: { speaker: "shalom", content: "Second speech", timestamp: createFormattedTime() },
           assessments: { milo: { agent: "milo", text: "אני: 7\ninteresting" } },
           orchestratorDecision: { nextSpeaker: "human", statusRead: "Deep discussion" },
         },
       ],
     };
     await writeMeetingAtomic(worktreePath, cycle2Meeting);
-    await commitCycle(worktreePath, 2, "archi");
+    await commitCycle(worktreePath, 2, "shalom");
 
     // End
     await endMeeting(id, worktreePath);
@@ -301,14 +301,14 @@ describe("conversation store — lifecycle", () => {
     const ended = await readEndedMeeting(id);
     expect(ended.cycles).toHaveLength(2);
     expect(ended.cycles[0].speech.speaker).toBe("milo");
-    expect(ended.cycles[1].speech.speaker).toBe("archi");
+    expect(ended.cycles[1].speech.speaker).toBe("shalom");
     expect(ended.cycles[1].orchestratorDecision.statusRead).toBe("Deep discussion");
 
     // Git log should show the full history
     const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
     const log = (await $`git -C ${gitRoot} log ${meetingIdToBranchName(id)} --oneline`.quiet()).stdout.toString();
     expect(log).toContain("Meeting ended");
-    expect(log).toContain("Cycle 2: archi");
+    expect(log).toContain("Cycle 2: shalom");
     expect(log).toContain("Cycle 1: milo");
     expect(log).toContain("Initial: meeting created");
   });
@@ -353,7 +353,7 @@ describe("session branch rollback", () => {
         cycleNumber: 1,
         speech: { speaker: "milo", content: "test speech", timestamp: createFormattedTime() },
         assessments: {},
-        orchestratorDecision: { nextSpeaker: "archi", statusRead: "test" },
+        orchestratorDecision: { nextSpeaker: "shalom", statusRead: "test" },
       }],
     };
     await writeMeetingAtomic(worktreePath, updated);
@@ -377,7 +377,7 @@ describe("session branch rollback", () => {
         cycleNumber: 1,
         speech: { speaker: "milo", content: "first", timestamp: createFormattedTime() },
         assessments: {},
-        orchestratorDecision: { nextSpeaker: "archi", statusRead: "starting" },
+        orchestratorDecision: { nextSpeaker: "shalom", statusRead: "starting" },
       }],
     };
     await writeMeetingAtomic(worktreePath, cycle1);
@@ -390,14 +390,14 @@ describe("session branch rollback", () => {
         ...cycle1.cycles,
         {
           cycleNumber: 2,
-          speech: { speaker: "archi", content: "second", timestamp: createFormattedTime() },
+          speech: { speaker: "shalom", content: "second", timestamp: createFormattedTime() },
           assessments: {},
           orchestratorDecision: { nextSpeaker: "human", statusRead: "progressing" },
         },
       ],
     };
     await writeMeetingAtomic(worktreePath, cycle2);
-    await commitCycle(worktreePath, 2, "archi");
+    await commitCycle(worktreePath, 2, "shalom");
 
     // Reset to cycle 1
     await resetSessionBranchToCycle(worktreePath, 1);

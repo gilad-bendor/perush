@@ -194,7 +194,7 @@ describe("Git config", () => {
   });
 
   test("commitSessionRecovery formats correctly", () => {
-    expect(commitSessionRecovery("archi")).toBe("Session recovery: archi");
+    expect(commitSessionRecovery("shalom")).toBe("Session recovery: shalom");
   });
 
   test("commitRollback formats correctly", () => {

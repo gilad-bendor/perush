@@ -22,8 +22,8 @@
 export const SPEAKER_COLORS = {
   human: { bg: "bg-blue-50", border: "border-blue-300", text: "text-blue-900", label: "text-blue-700", dot: "#3b82f6" },
   milo: { bg: "bg-emerald-50", border: "border-emerald-300", text: "text-emerald-900", label: "text-emerald-700", dot: "#10b981" },
-  archi: { bg: "bg-violet-50", border: "border-violet-300", text: "text-violet-900", label: "text-violet-700", dot: "#8b5cf6" },
-  kashia: { bg: "bg-rose-50", border: "border-rose-300", text: "text-rose-900", label: "text-rose-700", dot: "#f43f5e" },
+  shalom: { bg: "bg-violet-50", border: "border-violet-300", text: "text-violet-900", label: "text-violet-700", dot: "#8b5cf6" },
+  ethan: { bg: "bg-rose-50", border: "border-rose-300", text: "text-rose-900", label: "text-rose-700", dot: "#f43f5e" },
   barak: { bg: "bg-amber-50", border: "border-amber-300", text: "text-amber-900", label: "text-amber-700", dot: "#f59e0b" },
   orchestrator: { bg: "bg-stone-100", border: "border-stone-800", text: "text-stone-900", label: "text-stone-800", dot: "#292524" },
 };

@@ -14,12 +14,12 @@ The UI is designed for the Director reading Hebrew text, thinking carefully, and
 │       by speaker)                              │  ┌──────────┐ │
 │                                                │  │ Tabs:    │ │
 │                                                │  │ מילונאי  │ │
-│  [streaming indicator: milo typing...]         │  │ אדריכל   │ │
+│  [streaming indicator: milo typing...]         │  │ הוליסטי  │ │
 │                                                │  │ מבקר     │ │
 │                                                │  └──────────┘ │
 ├────────────────────────────────────────────────┤               │
 │  ✦ status-read: הדיון זורם — כל צד מוסיף שכבה. │ [assessment]  │
-│    next: האדריכל  ·  phase: speaking           │ [tool usage]  │
+│    next: ההוליסטי  ·  phase: speaking          │ [tool usage]  │
 ├────────────────────────────────────────────────┤               │
 │  > Human input                     [↵]         │               │
 └────────────────────────────────────────────────┴───────────────┘
@@ -64,7 +64,7 @@ The deliberation is in Hebrew. This is **RTL-first design**.
 
 ## Speaker Color-Coding
 
-Implemented palette: human=blue, milo=emerald, archi=violet, kashia=rose, barak=amber. Colors should be distinguishable and scale to N participants.
+Implemented palette: human=blue, milo=emerald, shalom=violet, ethan=rose, barak=amber. Colors should be distinguishable and scale to N participants.
 
 ## URL Routing
 

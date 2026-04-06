@@ -6,14 +6,14 @@
 
 Agent persona files live in `participant-agents/`; shared prompt templates live in `prompts/`:
 
-| File | Name | Type | Role |
-|------|------|------|------|
-| `prompts/system-prompt-base-prefix.md` | — | *(shared prefix)* | Prepended to ALL AI-Agents — scholarly persona, deliberation mechanics, full interpretive methodology, dictionary injection point, fellow participants, per-agent `noteInSelfSystemPrompt` injection point |
-| `participant-agents/milo.md` | **Milo / מיילו** | Participant-Agent | Dictionary Purist (המילונאי) — word-level dictionary fidelity |
-| `participant-agents/archi.md` | **Archi / ארצ'י** | Participant-Agent | Architect (האדריכל) — structural coherence across the narrative |
-| `participant-agents/kashia.md` | **Kashia / קשיא** | Participant-Agent | Skeptic (המבקר) — intellectual honesty, degrees of freedom, reverse-engineering test |
-| `participant-agents/barak.md` | **Barak / ברק** | Participant-Agent | Ideator (ההברקה) — divergent insight, rare speaker by design |
-| `prompts/system-prompt-orchestrator.md` | — | Orchestrator-Agent | The orchestration logic (not a Participant) |
+| File                                    | Name              | Type               | Role                                                                                                                                                                                                       |
+|-----------------------------------------|-------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `prompts/system-prompt-base-prefix.md`  | —                 | *(shared prefix)*  | Prepended to ALL AI-Agents — scholarly persona, deliberation mechanics, full interpretive methodology, dictionary injection point, fellow participants, per-agent `noteInSelfSystemPrompt` injection point |
+| `participant-agents/milo.md`            | **Milo / מיילו**  | Participant-Agent  | Dictionary Purist (המילונאי) — word-level dictionary fidelity                                                                                                                                              |
+| `participant-agents/shalom.md`          | **Shalom / שלום** | Participant-Agent  | Holistic (ההוליסטי) — structural coherence across the narrative                                                                                                                                            |
+| `participant-agents/ethan.md`           | **Ethan / איתן**  | Participant-Agent  | Pedantic (הדייקן) — intellectual honesty, degrees of freedom, reverse-engineering test                                                                                                                     |
+| `participant-agents/barak.md`           | **Barak / ברק**   | Participant-Agent  | Ideator (המבריק) — divergent insight, rare speaker by design                                                                                                                                               |
+| `prompts/system-prompt-orchestrator.md` | —                 | Orchestrator-Agent | The orchestration logic (not a Participant)                                                                                                                                                                |
 
 **Naming convention**:
 - Prompt templates (shared prefixes, per-cycle prompts, orchestrator system prompt) live in `prompts/`.

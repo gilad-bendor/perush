@@ -352,7 +352,7 @@ describe("meeting lifecycle via WebSocket", () => {
       type: "start-meeting",
       messageId: "C10",
       title: "Test Meeting",
-      participants: ["milo", "archi"],
+      participants: ["milo", "shalom"],
     }));
 
     // Store meeting ID for cleanup

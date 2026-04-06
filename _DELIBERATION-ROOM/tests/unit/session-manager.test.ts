@@ -46,12 +46,12 @@ beforeEach(() => {
 describe("discoverAgents", () => {
   test("finds all non-underscore .md files", async () => {
     const agents = await discoverAgents();
-    // We know there are 4 agent files: archi, barak, kashia, milo
+    // We know there are 4 agent files: shalom, barak, ethan, milo
     expect(agents.length).toBe(4);
     const ids = agents.map(a => a.id);
     expect(ids).toContain("milo");
-    expect(ids).toContain("archi");
-    expect(ids).toContain("kashia");
+    expect(ids).toContain("shalom");
+    expect(ids).toContain("ethan");
     expect(ids).toContain("barak");
   });
 
@@ -77,11 +77,11 @@ describe("discoverAgents", () => {
     const milo = agents.find(a => a.id === "milo")!;
     expect(milo.roleTitle).toBe("מיילו המילונאי");
 
-    const archi = agents.find(a => a.id === "archi")!;
-    expect(archi.roleTitle).toBe("ארצ'י האדריכל");
+    const shalom = agents.find(a => a.id === "shalom")!;
+    expect(shalom.roleTitle).toBe("שלום ההוליסטי");
 
-    const kashia = agents.find(a => a.id === "kashia")!;
-    expect(kashia.roleTitle).toBe("קשיא הסקפטי");
+    const ethan = agents.find(a => a.id === "ethan")!;
+    expect(ethan.roleTitle).toBe("איתן הדייקן");
 
     const barak = agents.find(a => a.id === "barak")!;
     expect(barak.roleTitle).toBe("ברק המבריק");
@@ -96,7 +96,7 @@ describe("discoverAgents", () => {
   test("results are sorted alphabetically by ID", async () => {
     const agents = await discoverAgents();
     const ids = agents.map(a => a.id);
-    expect(ids).toEqual(["archi", "barak", "kashia", "milo"]);
+    expect(ids).toEqual(["shalom", "barak", "ethan", "milo"]);
   });
 
   test("results are cached", async () => {
@@ -149,19 +149,19 @@ describe("resolveTemplate", () => {
 
     // Should contain each agent's name
     expect(resolved).toContain("Milo / מיילו");
-    expect(resolved).toContain("Archi / ארצ'י");
-    expect(resolved).toContain("Kashia / קשיא");
+    expect(resolved).toContain("Shalom / שלום");
+    expect(resolved).toContain("Ethan / איתן");
     expect(resolved).toContain("Barak / ברק");
     expect(resolved).toContain("Director / המנחה");
   });
 
   test("scopes participants to meeting selection", async () => {
-    const subset = allAgents.filter(a => a.id === "milo" || a.id === "archi");
+    const subset = allAgents.filter(a => a.id === "milo" || a.id === "shalom");
     const resolved = await resolveTemplate("system-prompt-base-prefix.md", subset, undefined, PROMPTS_DIR);
 
     expect(resolved).toContain("Milo / מיילו");
-    expect(resolved).toContain("Archi / ארצ'י");
-    expect(resolved).not.toContain("Kashia");
+    expect(resolved).toContain("Shalom / שלום");
+    expect(resolved).not.toContain("Ethan");
     expect(resolved).not.toContain("Barak / ברק");
   });
 
@@ -180,7 +180,7 @@ describe("resolveTemplate", () => {
 
     // Each agent should appear with orchestrator-specific format
     expect(resolved).toContain("Milo / מיילו");
-    expect(resolved).toContain("Archi / ארצ'י");
+    expect(resolved).toContain("Shalom / שלום");
     // Director line is hardcoded in the template
     expect(resolved).toContain("Director / המנחה");
     // Raw template marker should be gone
@@ -188,15 +188,15 @@ describe("resolveTemplate", () => {
   });
 
   test("participantOrchestratorEntries is scoped to meeting participants", async () => {
-    const subset = allAgents.filter(a => a.id === "milo" || a.id === "kashia");
+    const subset = allAgents.filter(a => a.id === "milo" || a.id === "ethan");
     const resolved = await resolveTemplate(ORCHESTRATOR_FILE, subset, undefined, PROMPTS_DIR);
 
     expect(resolved).toContain("Milo / מיילו");
-    expect(resolved).toContain("Kashia / קשיא");
+    expect(resolved).toContain("Ethan / איתן");
     // Director is always present (hardcoded in template)
     expect(resolved).toContain("Director / המנחה");
     // Agents not in the meeting should NOT appear
-    expect(resolved).not.toContain("Archi / ארצ'י");
+    expect(resolved).not.toContain("Shalom / שלום");
     expect(resolved).not.toContain("Barak / ברק");
   });
 
@@ -207,8 +207,8 @@ describe("resolveTemplate", () => {
     // Should NOT contain Milo in the participant list
     expect(resolved).not.toContain("Milo / מיילו");
     // But should contain others
-    expect(resolved).toContain("Archi / ארצ'י");
-    expect(resolved).toContain("Kashia / קשיא");
+    expect(resolved).toContain("Shalom / שלום");
+    expect(resolved).toContain("Ethan / איתן");
   });
 });
 
@@ -344,7 +344,7 @@ describe("buildSystemPrompt", () => {
     // Count occurrences of "Milo / מיילו" — should appear in persona section only
     const fellowSection = prompt.split("Fellow Participants")[1]?.split("##")[0] ?? "";
     expect(fellowSection).not.toContain("Milo / מיילו");
-    expect(fellowSection).toContain("Archi / ארצ'י");
+    expect(fellowSection).toContain("Shalom / שלום");
   });
 
   test("orchestrator prompt includes base prefix + orchestrator template", async () => {
@@ -400,11 +400,11 @@ describe("createSession", () => {
 
   test("creates separate sessions for different agents", async () => {
     const s1 = await createSession("milo", "sp", "p\n---stub-response---\ntext: a\n---end-stub-response---");
-    const s2 = await createSession("archi", "sp", "p\n---stub-response---\ntext: b\n---end-stub-response---");
+    const s2 = await createSession("shalom", "sp", "p\n---stub-response---\ntext: b\n---end-stub-response---");
 
     expect(s1.sessionId).not.toBe(s2.sessionId);
     expect(getSessionId("milo")).toBe(s1.sessionId);
-    expect(getSessionId("archi")).toBe(s2.sessionId);
+    expect(getSessionId("shalom")).toBe(s2.sessionId);
   });
 
   test("emits system-prompt and prompt events via onEvent when provided", async () => {
@@ -536,12 +536,12 @@ describe("interruptAll", () => {
 describe("session management utilities", () => {
   test("getAllSessionIds returns all registered sessions", async () => {
     await createSession("milo", "sp", "p\n---stub-response---\ntext: a\n---end-stub-response---");
-    await createSession("archi", "sp", "p\n---stub-response---\ntext: b\n---end-stub-response---");
+    await createSession("shalom", "sp", "p\n---stub-response---\ntext: b\n---end-stub-response---");
 
     const all = getAllSessionIds();
     expect(Object.keys(all)).toHaveLength(2);
     expect(all.milo).toBeTruthy();
-    expect(all.archi).toBeTruthy();
+    expect(all.shalom).toBeTruthy();
   });
 
   test("clearSessions empties the registry", async () => {

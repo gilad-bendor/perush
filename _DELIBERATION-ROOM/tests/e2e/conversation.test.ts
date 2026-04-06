@@ -21,10 +21,10 @@ const syncMessage = {
     mode: "Perush-Development",
     title: "Test Deliberation",
     openingPrompt: "נדון בפסוק בראשית א:א",
-    participants: ["milo", "archi"],
+    participants: ["milo", "shalom"],
     cycles: [],
     startedAt: "2026-02-27 14:30:00 (1772148600000)",
-    sessionIds: { milo: "s1", archi: "s2", orchestrator: "s3" },
+    sessionIds: { milo: "s1", shalom: "s2", orchestrator: "s3" },
   },
   currentPhase: "idle",
 };
@@ -43,8 +43,8 @@ const syncWithCycles = {
           timestamp: "2026-02-27 14:31:00 (1772148660000)",
         },
         assessments: {
-          archi: {
-            agent: "archi",
+          shalom: {
+            agent: "shalom",
             text: "אני: 6\nנקודה מעניינת מבחינת מבנה",
           },
         },
@@ -53,7 +53,7 @@ const syncWithCycles = {
       {
         cycleNumber: 2,
         speech: {
-          speaker: "archi",
+          speaker: "shalom",
           content: "מבחינה מבנית, הפסוק הזה מהווה כותרת לכל סיפור הבריאה.",
           timestamp: "2026-02-27 14:32:00 (1772148720000)",
         },
@@ -216,9 +216,9 @@ describe("deliberation UI", () => {
     await page.waitForSelector("#deliberation-page:not(.hidden)", { timeout: 3000 });
 
     // Send chunks
-    mockServer.broadcast({ type: "speech-chunk", speaker: "archi", delta: "חלק " });
-    mockServer.broadcast({ type: "speech-chunk", speaker: "archi", delta: "ראשון " });
-    mockServer.broadcast({ type: "speech-chunk", speaker: "archi", delta: "של הודעה" });
+    mockServer.broadcast({ type: "speech-chunk", speaker: "shalom", delta: "חלק " });
+    mockServer.broadcast({ type: "speech-chunk", speaker: "shalom", delta: "ראשון " });
+    mockServer.broadcast({ type: "speech-chunk", speaker: "shalom", delta: "של הודעה" });
 
     // Wait for streaming message
     await page.waitForSelector(".message.streaming", { timeout: 3000 });
@@ -229,7 +229,7 @@ describe("deliberation UI", () => {
     expect(streamingContent).toContain("חלק ראשון של הודעה");
 
     // Finalize
-    mockServer.broadcast({ type: "speech-done", speaker: "archi" });
+    mockServer.broadcast({ type: "speech-done", speaker: "shalom" });
 
     await page.waitForFunction(() =>
       !document.querySelector(".message.streaming")
@@ -263,7 +263,7 @@ describe("deliberation UI", () => {
     mockServer.broadcast({
       type: "status-read",
       statusRead: "הדיון מתעמק — נראה שמתגבשת הסכמה.",
-      nextSpeaker: "kashia",
+      nextSpeaker: "ethan",
     });
 
     await page.waitForFunction(() =>
@@ -318,9 +318,9 @@ describe("sync with existing cycles", () => {
       const secondSpeaker = await messages[1].getAttribute("data-speaker");
       expect(secondSpeaker).toBe("milo");
 
-      // Third: archi's speech
+      // Third: shalom's speech
       const thirdSpeaker = await messages[2].getAttribute("data-speaker");
-      expect(thirdSpeaker).toBe("archi");
+      expect(thirdSpeaker).toBe("shalom");
     } finally {
       // Close page before stopping server to avoid page.close() hanging in afterEach
       // (Bun's server.stop(true) severs the WS, leaving the page in a state where close() blocks)

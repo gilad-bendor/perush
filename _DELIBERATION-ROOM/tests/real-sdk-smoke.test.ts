@@ -127,7 +127,7 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
     expect(agents.length).toBeGreaterThanOrEqual(2);
     const ids = agents.map((a) => a.id);
     expect(ids).toContain("milo");
-    expect(ids).toContain("archi");
+    expect(ids).toContain("shalom");
   });
 
   test("full deliberation: create → 2 cycles → end → verify git", async () => {
@@ -223,9 +223,9 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
     // Helper: count messages matching a predicate
     const countOf = (pred: (m: any) => boolean) => messages.filter(pred).length;
 
-    // ------ Phase 1: Create meeting (2 agents: milo + archi) ------
+    // ------ Phase 1: Create meeting (2 agents: milo + shalom) ------
 
-    console.log("[smoke] Starting meeting with milo + archi...");
+    console.log("[smoke] Starting meeting with milo + shalom...");
 
     ws.send(
       JSON.stringify({
@@ -234,7 +234,7 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
         openingPrompt:
           "נדון בפסוק הראשון: בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ. " +
           "מה משמעות המילים לפי המילון? השיבו בקצרה.",
-        participants: ["milo", "archi"],
+        participants: ["milo", "shalom"],
       }),
     );
 
@@ -252,7 +252,7 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
     console.log(`[smoke] Meeting created: ${meetingId}`);
 
     expect(meetingId).toBeTruthy();
-    expect(syncMsg.meeting.participants).toEqual(["milo", "archi"]);
+    expect(syncMsg.meeting.participants).toEqual(["milo", "shalom"]);
 
     // ------ Phase 2: Observe 2 completed cycles ------
     // Each completed cycle produces exactly one "speech" message.
@@ -344,7 +344,7 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
     const meeting = yamlParse(meetingYamlStr);
 
     expect(meeting.meetingId).toBe(meetingId);
-    expect(meeting.participants).toEqual(["milo", "archi"]);
+    expect(meeting.participants).toEqual(["milo", "shalom"]);
     expect(meeting.cycles.length).toBeGreaterThanOrEqual(2);
 
     // Each cycle has a speech with content
@@ -360,7 +360,7 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
 
     // Session IDs are recorded for all agents + orchestrator
     expect(meeting.sessionIds.milo).toBeTruthy();
-    expect(meeting.sessionIds.archi).toBeTruthy();
+    expect(meeting.sessionIds.shalom).toBeTruthy();
     expect(meeting.sessionIds.orchestrator).toBeTruthy();
 
     // ------ Summary ------

@@ -148,7 +148,7 @@ describe("PrivateAssessmentSchema", () => {
 
 describe("OrchestratorDecisionSchema", () => {
   test("accepts valid decision", () => {
-    const decision = { nextSpeaker: "archi", statusRead: "הדיון זורם" };
+    const decision = { nextSpeaker: "shalom", statusRead: "הדיון זורם" };
     expect(OrchestratorDecisionSchema.parse(decision)).toEqual(decision);
   });
 
@@ -172,8 +172,8 @@ describe("CycleRecordSchema", () => {
         timestamp: createFormattedTime(),
       },
       assessments: {
-        archi: {
-          agent: "archi",
+        shalom: {
+          agent: "shalom",
           text: "אני: 5\nנקודה מעניינת",
         },
       },
@@ -190,7 +190,7 @@ describe("CycleRecordSchema", () => {
       cycleNumber: 0,
       speech: { speaker: "milo", content: "x", timestamp: createFormattedTime() },
       assessments: {},
-      orchestratorDecision: { nextSpeaker: "archi", statusRead: "ok" },
+      orchestratorDecision: { nextSpeaker: "shalom", statusRead: "ok" },
     })).toThrow();
   });
 });
@@ -205,10 +205,10 @@ describe("MeetingSchema", () => {
     mode: "Perush-Development" as const,
     title: "גן עדן",
     openingPrompt: "בואו נדון בבראשית ב:ד",
-    participants: ["milo", "archi", "kashia"],
+    participants: ["milo", "shalom", "ethan"],
     cycles: [],
     startedAt: createFormattedTime(),
-    sessionIds: { milo: "sess-1", archi: "sess-2", kashia: "sess-3", orchestrator: "sess-4" },
+    sessionIds: { milo: "sess-1", shalom: "sess-2", ethan: "sess-3", orchestrator: "sess-4" },
   };
 
   test("accepts valid meeting", () => {
@@ -260,7 +260,7 @@ describe("MeetingSummarySchema", () => {
       lastCommitMsg: "Cycle 5: milo",
       title: "גן עדן",
       cycleCount: 5,
-      participants: ["milo", "archi"],
+      participants: ["milo", "shalom"],
     };
     expect(MeetingSummarySchema.parse(summary)).toEqual(summary);
   });
@@ -292,7 +292,7 @@ describe("ServerMessageSchema", () => {
   });
 
   test("accepts statusRead message", () => {
-    const msg: ServerMessage = { type: "status-read" as const, messageId: "S4", statusRead: "הדיון זורם", nextSpeaker: "archi" };
+    const msg: ServerMessage = { type: "status-read" as const, messageId: "S4", statusRead: "הדיון זורם", nextSpeaker: "shalom" };
     expect(ServerMessageSchema.parse(msg)).toEqual(msg);
   });
 
@@ -347,7 +347,7 @@ describe("ClientMessageSchema", () => {
       type: "start-meeting" as const,
       messageId: "C3",
       title: "גן עדן",
-      participants: ["milo", "archi"],
+      participants: ["milo", "shalom"],
     };
     expect(ClientMessageSchema.parse(msg)).toEqual(msg);
   });

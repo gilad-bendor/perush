@@ -74,12 +74,12 @@ describe("full integration (stub SDK)", () => {
     await page.waitForSelector(".participant-card", { timeout: 5000 });
 
     const cards = await page.$$(".participant-card");
-    expect(cards.length).toBeGreaterThanOrEqual(2); // At least milo and archi
+    expect(cards.length).toBeGreaterThanOrEqual(2); // At least milo and shalom
 
     // Check Hebrew names are rendered
     const text = await page.textContent("#participant-cards");
     expect(text).toContain("מיילו");
-    expect(text).toContain("ארצ'י");
+    expect(text).toContain("שלום");
   });
 
   test("create meeting and see opening prompt in conversation", async () => {

@@ -21,10 +21,10 @@ beforeAll(async () => {
         meetingId: "test-meeting-1",
         branch: "sessions/test-meeting-1",
         lastActivity: "2026-02-27T14:30:00Z",
-        lastCommitMsg: "Cycle 5: archi",
+        lastCommitMsg: "Cycle 5: shalom",
         title: "גן עדן — בראשית ב:ד",
         cycleCount: 5,
-        participants: ["milo", "archi", "kashia"],
+        participants: ["milo", "shalom", "ethan"],
       },
       {
         meetingId: "test-meeting-2",
@@ -33,7 +33,7 @@ beforeAll(async () => {
         lastCommitMsg: "Meeting ended",
         title: "הנחש — בראשית ג:א",
         cycleCount: 12,
-        participants: ["milo", "archi", "kashia", "barak"],
+        participants: ["milo", "shalom", "ethan", "barak"],
       },
     ],
   });
@@ -73,8 +73,8 @@ describe("landing page", () => {
       cards.map((c) => c.textContent())
     );
     expect(hebrewNames.some((n) => n?.includes("מיילו"))).toBe(true);
-    expect(hebrewNames.some((n) => n?.includes("ארצ'י"))).toBe(true);
-    expect(hebrewNames.some((n) => n?.includes("קשיא"))).toBe(true);
+    expect(hebrewNames.some((n) => n?.includes("שלום"))).toBe(true);
+    expect(hebrewNames.some((n) => n?.includes("איתן"))).toBe(true);
     expect(hebrewNames.some((n) => n?.includes("ברק"))).toBe(true);
   });
 

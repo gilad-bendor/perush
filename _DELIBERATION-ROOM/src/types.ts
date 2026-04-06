@@ -36,7 +36,7 @@ import {assertZodTypeMatch} from "./types-asserts.ts";
 // ---------------------------------------------------------------------------
 
 /**
- * Agent ID — derived from persona filename without .md (e.g., "milo", "archi").
+ * Agent ID — derived from persona filename without .md (e.g., "milo", "shalom").
  *
  * The `(string & {})` arm lets any string be assigned to AgentId without casting,
  * while the literal members still surface in IDE autocomplete suggestions.
@@ -44,9 +44,9 @@ import {assertZodTypeMatch} from "./types-asserts.ts";
  */
 export const AgentIdSchema = z.string();
 export type AgentId =
-    | "archi"
+    | "shalom"
     | "barak"
-    | "kashia"
+    | "ethan"
     | "milo"
     | (string & {});
 

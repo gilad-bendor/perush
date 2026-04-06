@@ -16,7 +16,7 @@ For everything else — architecture, implementation, infrastructure — this fi
 
 | Term                   | Who                               | Definition                                                                                                                           |
 |------------------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **Participant-Agent**  | milo, archi, kashia, barak, ...   | AI critic agents who participate in the deliberation. Discovered dynamically from `participant-agents/*.md` (ignoring `_*.md` files) |
+| **Participant-Agent**  | milo, shalom, ethan, barak, ...   | AI critic agents who participate in the deliberation. Discovered dynamically from `participant-agents/*.md` (ignoring `_*.md` files) |
 | **Orchestrator-Agent** | orchestrator                      | Orchestrates turn-taking and reads the room. Mostly invisible to Participants - except for the "status-read" summary                 |
 | **Director**           | the human scholar                 | Steers the conversation, makes final decisions                                                                                       |
 | **Participant**        | Participant-Agents + Director     | Everyone who speaks (Orchestrator is NOT a Participant)                                                                              |
@@ -204,55 +204,55 @@ The `participants` array is authoritative: all iteration (assessments, template 
 
 ```
 _DELIBERATION-ROOM/
-├── CLAUDE.md                      ← this file
-├── CLAUDE-TOPICS/                 ← spin-out detail files (see below)
+├── CLAUDE.md                                      ← this file
+├── CLAUDE-TOPICS/                                 ← spin-out detail files (see below)
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.ts
-├── playwright-test.ts             ← Playwright CLI helper
-├── participant-agents/            ← AI-Agent persona files
-│   ├── milo.md                    ← Dictionary Purist
-│   ├── archi.md                   ← Architect
-│   ├── kashia.md                  ← Skeptic
-│   └── barak.md                   ← Ideator
-├── prompts/                       ← Prompt templates (resolved by preprocess)
+├── playwright-test.ts                             ← Playwright CLI helper
+├── participant-agents/                            ← AI-Agent persona files
+│   ├── milo.md                                    ← The Dictionary Purist
+│   ├── shalom.md                                  ← The Holistic
+│   ├── ethan.md                                   ← The Pedantic
+│   └── barak.md                                   ← The Ideator
+├── prompts/                                       ← Prompt templates (resolved by preprocess)
 │   ├── README.md
-│   ├── system-prompt-base-prefix.md        ← shared prefix for ALL AI-Agents (includes fellow participants)
-│   ├── system-prompt-orchestrator.md       ← Orchestrator system prompt
-│   ├── agent-assessment-prompt.md          ← per-cycle assessment prompt
-│   ├── agent-speech-prompt.md              ← per-cycle speech prompt
-│   ├── orchestrator-select-agent-prompt.md       ← orchestrator selection prompt
-│   └── orchestrator-select-agent-prompt-retry.md ← orchestrator selection retry
+│   ├── system-prompt-base-prefix.md               ← shared prefix for ALL AI-Agents (includes fellow participants)
+│   ├── system-prompt-orchestrator.md              ← Orchestrator system prompt
+│   ├── agent-assessment-prompt.md                 ← per-cycle assessment prompt
+│   ├── agent-speech-prompt.md                     ← per-cycle speech prompt
+│   ├── orchestrator-select-agent-prompt.md        ← orchestrator selection prompt
+│   └── orchestrator-select-agent-prompt-retry.md  ← orchestrator selection retry
 ├── scripts/
-│   ├── active-logs-path.sh        ← path to most recent log file
-│   ├── active-logs-full.sh        ← print/follow full log content
-│   ├── active-logs-short.sh       ← print/follow header lines only
+│   ├── active-logs-path.sh                        ← path to most recent log file
+│   ├── active-logs-full.sh                        ← print/follow full log content
+│   ├── active-logs-short.sh                       ← print/follow header lines only
 │   └── DANGER-DELETE-ALL-MEETINGS.sh
 ├── src/
-│   ├── server.ts                  ← Bun web server (HTTP + WebSocket), entry point
-│   ├── orchestrator.ts            ← deliberation loop, phase management
-│   ├── agent-static-info.ts       ← agent discovery and static identity data (globally importable)
-│   ├── session-manager.ts         ← Agent SDK sessions, template resolution
-│   ├── meetings-db.ts             ← git-as-database: worktrees, meeting CRUD
-│   ├── types.ts                   ← zod schemas and TypeScript types
-│   ├── types-asserts.ts           ← compile-time Zod↔TS type alignment checks
-│   ├── config.ts                  ← ALL configurable values
-│   ├── logs.ts                    ← logging (console + file), category toggles
-│   ├── context.ts                 ← AsyncLocalStorage for request context (messageId)
-│   ├── utils.ts                   ← shared utilities (prettyLog, wrapDanglingPromise)
-│   ├── stub-sdk.ts                ← Agent SDK stub for testing
-│   └── real-sdk.ts                ← Real Agent SDK adapter
+│   ├── server.ts                                  ← Bun web server (HTTP + WebSocket), entry point
+│   ├── orchestrator.ts                            ← deliberation loop, phase management
+│   ├── agent-static-info.ts                       ← agent discovery and static identity data (globally importable)
+│   ├── session-manager.ts                         ← Agent SDK sessions, template resolution
+│   ├── meetings-db.ts                             ← git-as-database: worktrees, meeting CRUD
+│   ├── types.ts                                   ← zod schemas and TypeScript types
+│   ├── types-asserts.ts                           ← compile-time Zod↔TS type alignment checks
+│   ├── config.ts                                  ← ALL configurable values
+│   ├── logs.ts                                    ← logging (console + file), category toggles
+│   ├── context.ts                                 ← AsyncLocalStorage for request context (messageId)
+│   ├── utils.ts                                   ← shared utilities (prettyLog, wrapDanglingPromise)
+│   ├── stub-sdk.ts                                ← Agent SDK stub for testing
+│   └── real-sdk.ts                                ← Real Agent SDK adapter
 ├── public/
-│   ├── index.html                 ← landing page + deliberation UI
-│   ├── input.css                  ← Tailwind input
-│   ├── compiled-style.css         ← Tailwind output (gitignored)
+│   ├── index.html                                 ← landing page + deliberation UI
+│   ├── input.css                                  ← Tailwind input
+│   ├── compiled-style.css                         ← Tailwind output (gitignored)
 │   └── src/
-│       ├── app.js                 ← WebSocket client, page routing
-│       ├── conversation-view.js   ← message feed, streaming, process labels
-│       ├── process-label.js       ← expandable process labels
-│       └── utils.js               ← frontend utilities
+│       ├── app.js                                 ← WebSocket client, page routing
+│       ├── conversation-view.js                   ← message feed, streaming, process labels
+│       ├── process-label.js                       ← expandable process labels
+│       └── utils.js                               ← frontend utilities
 ├── tests/
-│   ├── unit/                      ← unit tests (one per src/ module)
+│   ├── unit/                                      ← unit tests (one per src/ module)
 │   │   ├── config.test.ts
 │   │   ├── meetings-db.test.ts
 │   │   ├── orchestrator.test.ts
@@ -261,13 +261,13 @@ _DELIBERATION-ROOM/
 │   │   ├── session-manager.test.ts
 │   │   ├── stub-sdk.test.ts
 │   │   └── types.test.ts
-│   ├── real-sdk-smoke.test.ts     ← real SDK smoke test (~$0.10)
+│   ├── real-sdk-smoke.test.ts                     ← real SDK smoke test (~$0.10)
 │   └── e2e/
 │       ├── landing-page.test.ts
 │       ├── conversation.test.ts
 │       ├── integration.test.ts
 │       └── mock-ws-server.ts
-└── .meetings/                     ← worktree mount point (gitignored)
+└── .meetings/                                     ← worktree mount point (gitignored)
 ```
 
 ## Development Guidelines
@@ -312,18 +312,18 @@ All logging goes through `src/logs.ts` via `logInfo()`, `logWarn()`, `logError()
 ### Import Dependency Graph
 
 ```
-types.ts           ← types-asserts.ts (compile-time only), zod
-config.ts          ← types.ts
-context.ts         ← types.ts (+ node:async_hooks)
-utils.ts           ← (no src/ imports)
-logs.ts            ← context.ts, utils.ts (+ node:fs, node:path)
-meetings-db.ts     ← types.ts, config.ts, logs.ts
-stub-sdk.ts        ← config.ts
-real-sdk.ts        ← config.ts, logs.ts
+types.ts             ← types-asserts.ts (compile-time only), zod
+config.ts            ← types.ts
+context.ts           ← types.ts (+ node:async_hooks)
+utils.ts             ← (no src/ imports)
+logs.ts              ← context.ts, utils.ts (+ node:fs, node:path)
+meetings-db.ts       ← types.ts, config.ts, logs.ts
+stub-sdk.ts          ← config.ts
+real-sdk.ts          ← config.ts, logs.ts
 agent-static-info.ts ← types.ts, config.ts, logs.ts
-session-manager.ts ← types.ts, config.ts, agent-static-info.ts, stub-sdk.ts, real-sdk.ts, logs.ts
-orchestrator.ts    ← types.ts, config.ts, meetings-db.ts, session-manager.ts, agent-static-info.ts, logs.ts
-server.ts          ← types.ts, config.ts, context.ts, orchestrator.ts, session-manager.ts, agent-static-info.ts, meetings-db.ts, utils.ts, logs.ts
+session-manager.ts   ← types.ts, config.ts, agent-static-info.ts, stub-sdk.ts, real-sdk.ts, logs.ts
+orchestrator.ts      ← types.ts, config.ts, meetings-db.ts, session-manager.ts, agent-static-info.ts, logs.ts
+server.ts            ← types.ts, config.ts, context.ts, orchestrator.ts, session-manager.ts, agent-static-info.ts, meetings-db.ts, utils.ts, logs.ts
 ```
 
 **No upward arrows.** No circular imports.
@@ -381,17 +381,17 @@ Every implementation task must include tests. Unit tests use the stub SDK. E2E t
 
 These files contain detailed specifications that are **not needed in every session**. Consult them when working on the relevant area:
 
-| File | When to Read |
-|------|-------------|
-| [CLAUDE-TOPICS/GIT-PERSISTENCE.md](CLAUDE-TOPICS/GIT-PERSISTENCE.md) | Working on `meetings-db.ts`, `session-manager.ts`, or debugging git/worktree/symlink issues |
-| [CLAUDE-TOPICS/PROTOCOL.md](CLAUDE-TOPICS/PROTOCOL.md) | Working on WebSocket layer, adding message types, or debugging communication |
-| [CLAUDE-TOPICS/TESTING.md](CLAUDE-TOPICS/TESTING.md) | Writing or debugging tests, using Playwright, CSS selectors for debugging |
-| [CLAUDE-TOPICS/ROLLBACK.md](CLAUDE-TOPICS/ROLLBACK.md) | Working on the rollback feature (6-phase flow, edge cases, UI) |
-| [CLAUDE-TOPICS/DESIGN-DECISIONS.md](CLAUDE-TOPICS/DESIGN-DECISIONS.md) | Before revisiting any settled architectural decision |
-| [CLAUDE-TOPICS/PERSONAS.md](CLAUDE-TOPICS/PERSONAS.md) | Working on template resolution, system prompt construction, or adding new agents |
-| [CLAUDE-TOPICS/UI.md](CLAUDE-TOPICS/UI.md) | Working on frontend layout, RTL design, attention button, or meeting lifecycle UI |
-| [CLAUDE-TOPICS/PLAYWRIGHT-DEBUGGING.md](CLAUDE-TOPICS/PLAYWRIGHT-DEBUGGING.md) | Simulating the app via Playwright, interactive debugging, diagnosing UI/server issues |
-| [CLAUDE-TOPICS/LOGGING.md](CLAUDE-TOPICS/LOGGING.md) | Log format, helper scripts (`active-logs-*.sh`), and debugging tips |
+| File                                                                           | When to Read                                                                                |
+|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| [CLAUDE-TOPICS/GIT-PERSISTENCE.md](CLAUDE-TOPICS/GIT-PERSISTENCE.md)           | Working on `meetings-db.ts`, `session-manager.ts`, or debugging git/worktree/symlink issues |
+| [CLAUDE-TOPICS/PROTOCOL.md](CLAUDE-TOPICS/PROTOCOL.md)                         | Working on WebSocket layer, adding message types, or debugging communication                |
+| [CLAUDE-TOPICS/TESTING.md](CLAUDE-TOPICS/TESTING.md)                           | Writing or debugging tests, using Playwright, CSS selectors for debugging                   |
+| [CLAUDE-TOPICS/ROLLBACK.md](CLAUDE-TOPICS/ROLLBACK.md)                         | Working on the rollback feature (6-phase flow, edge cases, UI)                              |
+| [CLAUDE-TOPICS/DESIGN-DECISIONS.md](CLAUDE-TOPICS/DESIGN-DECISIONS.md)         | Before revisiting any settled architectural decision                                        |
+| [CLAUDE-TOPICS/PERSONAS.md](CLAUDE-TOPICS/PERSONAS.md)                         | Working on template resolution, system prompt construction, or adding new agents            |
+| [CLAUDE-TOPICS/UI.md](CLAUDE-TOPICS/UI.md)                                     | Working on frontend layout, RTL design, attention button, or meeting lifecycle UI           |
+| [CLAUDE-TOPICS/PLAYWRIGHT-DEBUGGING.md](CLAUDE-TOPICS/PLAYWRIGHT-DEBUGGING.md) | Simulating the app via Playwright, interactive debugging, diagnosing UI/server issues       |
+| [CLAUDE-TOPICS/LOGGING.md](CLAUDE-TOPICS/LOGGING.md)                           | Log format, helper scripts (`active-logs-*.sh`), and debugging tips                         |
 
 ## Open Design Questions
 

@@ -111,12 +111,12 @@ describe("startMeeting", () => {
   afterEach(async () => { try { if (getMeeting()) await endCurrentMeeting(); } catch {} });
 
   test("creates a meeting with participants and sessions", async () => {
-    const meeting = await startAndTrack("Test", ["milo", "archi"]);
+    const meeting = await startAndTrack("Test", ["milo", "shalom"]);
 
     expect(meeting.meetingId).toBeTruthy();
     expect(meeting.title).toBe("Test");
     expect(meeting.openingPrompt).toBeUndefined();
-    expect(meeting.participants).toEqual(["milo", "archi"]);
+    expect(meeting.participants).toEqual(["milo", "shalom"]);
     expect(meeting.cycles).toHaveLength(0);
     expect(Object.keys(meeting.sessionIds)).toHaveLength(0);
   });
@@ -146,7 +146,7 @@ describe("core cycle mechanics", () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    await startAndTrack("Cycle Mechanics", ["milo", "archi"]);
+    await startAndTrack("Cycle Mechanics", ["milo", "shalom"]);
 
     const cycle = await runCycle("human", "Opening prompt text");
 
@@ -182,12 +182,12 @@ describe("core cycle mechanics", () => {
 
     const assessingAgents = events.assessments.map(a => a.agent);
     expect(assessingAgents).not.toContain("milo");
-    expect(assessingAgents).toContain("archi");
+    expect(assessingAgents).toContain("shalom");
   });
 
   test("multiple cycles accumulate correctly", async () => {
     // Already has 2 cycles from previous tests; run one more
-    await runCycle("archi", "Archi's response");
+    await runCycle("shalom", "Shalom's response");
 
     const currentMeeting = getMeeting()!;
     expect(currentMeeting.cycles.length).toBeGreaterThanOrEqual(3);
@@ -236,7 +236,7 @@ describe("attention flag", () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    await startAndTrack("Test", ["milo", "archi"]);
+    await startAndTrack("Test", ["milo", "shalom"]);
 
     handleAttention();
     setDirectorTimeout(500);
@@ -344,11 +344,11 @@ describe("handleRollback", () => {
     const { events, handlers } = createEventCollector();
     setEventHandlers(handlers);
 
-    await startAndTrack("Rollback Test", ["milo", "archi"]);
+    await startAndTrack("Rollback Test", ["milo", "shalom"]);
 
     await runCycle("human", "Opening prompt");
     await runCycle("milo", "Milo's first response");
-    await runCycle("archi", "Archi's response");
+    await runCycle("shalom", "Shalom's response");
 
     expect(getMeeting()!.cycles).toHaveLength(3);
 
@@ -401,7 +401,7 @@ describe("resumeMeetingById", () => {
 
   test("resumes ended meeting and runs additional cycles", async () => {
     freshState();
-    const meeting = await startAndTrack("Resume Test", ["milo", "archi"]);
+    const meeting = await startAndTrack("Resume Test", ["milo", "shalom"]);
     const meetingId = meeting.meetingId;
 
     await runCycle("human", "Opening prompt");
@@ -416,7 +416,7 @@ describe("resumeMeetingById", () => {
     expect(resumed.title).toBe("Resume Test");
     expect(resumed.cycles).toHaveLength(cycleCount);
     expect(resumed.sessionIds.milo).toBeTruthy();
-    expect(resumed.sessionIds.archi).toBeTruthy();
+    expect(resumed.sessionIds.shalom).toBeTruthy();
     expect(resumed.sessionIds.orchestrator).toBeTruthy();
     expect(getPhase()).toBe("idle");
 
