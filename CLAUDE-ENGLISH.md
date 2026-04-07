@@ -124,7 +124,7 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 - **חיים** (life) = dynamism and change.
   **מוות** (death) = stagnation: inability to respond, adapt, and change (unrelated to **הרג** (killing) - which is war and suppression between narratives).
 
-- **למעלה** / **למטה** (above/below) = the axis of sublimity/lowliness (various adjectives and actions related to ascent/descent or height relations, mountain/valley).
+- **למעלה** / **על** ↔ **למטה** / **תחת** (up / above ↔ down / under) = the axis of sublimity/lowliness (various adjectives and actions related to ascent/descent or height relations, mountain/valley).
 
 - **פנים** (face, before) = in-the-way-of, according-to-the-principles-of, what is already known about something.
   **אחור** (behind, back) = in another or unknown way, hidden and unknown.
