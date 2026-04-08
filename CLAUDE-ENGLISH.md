@@ -92,7 +92,7 @@ The dictionary below contains only **primitive definitions** — concepts whose 
   Specific place names represent different systems of existential experience.
   The proverb illustrates this well: "You can take the boy out of the village, but not the village out of the boy."
 - **שמים** (sky/heavens) = the basic **subconscious** way a culture understands the boundary between "self" and "outside" - between what can be manipulated and what is beyond reach.
-  The sky is NOT the outside itself - but the *internal perception* of what the outside is. Since this perception defines desire, motivation, and fear - the sky is a kind of "water." Literally: שמים = "שַם מים" (water there).
+  In Hebrew - "שמים" (sky) is "שַם+מים" → "there+water" → "there be chaos" → "the outside".
 
 ## The Material World - A Scale of Complexity
 
