@@ -145,22 +145,23 @@
                         </ul>
                     </li>
                     <li>
-                        <code>&lt;...&gt;</code> (סוגריים משולשים) מאפשרים חיפוש לפי מספרי סטרונג או מילות היסוד. <br>
-                        הטקסט בתוך הסוגרים הוא בעצמו ביטוי-רגולרי (regular expression). <br>
-                        דוגמאות:
+                        <code>&lt;מילה/סוג&gt;</code> או <code>&lt;מילה&gt;</code> או <code>&lt;/סוג&gt;</code> - (סוגריים משולשים) מאפשרים חיפוש לפי מספרי סטרונג, מילות היסוד, או סוג המילה (חלק הדיבר). <br>
+                        ה-<code>מילה</code> היא ביטוי-רגולרי (regular expression) לחיפוש לפי מספר סטרונג או מילת יסוד. <br>
+                        ה-<code>סוג</code> הוא ביטוי-רגולרי (regular expression) לחיפוש לפי הערכים: <span class="hebrew-word-types-as-codes"><!-- filled dynamically from wordTypesToHebrew --></span>.
                         <ul class="examples">
-                            <li> <code>&lt;6030&gt;</code> - ימצא את כל המופעים של מספר-סטרונג <a href="https://biblehub.com/hebrew/6030.htm" target="_blank">6030</a> (מובן מסויים של השורש ״ענה״)
-                            <li> <code>&lt;6030|6031&gt;</code> ימצא את כל המופעים של מספרי-סטרונג <a href="https://biblehub.com/hebrew/6030.htm" target="_blank">6030</a> ו-<a href="https://biblehub.com/hebrew/6031.htm" target="_blank">6031</a>
+                            <li> <code>&lt;6030&gt;</code> - ימצא את כל המופעים של מספר-סטרונג <a href="https://biblehub.com/hebrew/6030.htm" target="_blank">6030</a> (מובן מסויים של השורש ״ענה״).
+                            <li> <code>&lt;6030|6031&gt;</code> ימצא את כל המופעים של מספרי-סטרונג <a href="https://biblehub.com/hebrew/6030.htm" target="_blank">6030</a> ו-<a href="https://biblehub.com/hebrew/6031.htm" target="_blank">6031</a>.
                             <li> <code>&lt;ענה&gt;</code> - ימצא את כל המופעים של חמשת מספרי-סטרונג של המילה ״ענה״:
                                     <a href="https://biblehub.com/hebrew/6030.htm" target="_blank">6030</a>,
                                     <a href="https://biblehub.com/hebrew/6031.htm" target="_blank">6031</a>,
                                     <a href="https://biblehub.com/hebrew/6032.htm" target="_blank">6032</a>,
                                     <a href="https://biblehub.com/hebrew/6033.htm" target="_blank">6033</a>,
                                     <a href="https://biblehub.com/hebrew/6034.htm" target="_blank">6034</a>.
+                            <li> <code>&lt;חב#*/שם#*&gt;</code> ימצא את כל המופעים של מספרי-סטרונג שמתחילים ב-״חב״ <u>וגם</u> שסוג המילה הוא <code>שֵׁם-עֶצֶם</code> או <code>שֵׁם-פְּרָטִי</code> או <code>שֵׁם-תֹּאַר</code> או <code>שֵׁם-גּוּף</code>.
                         </ul>
                     </li>
                 </ul>
-                
+
                 <div class="info-dialog-h2">יכולות סטנדרטיות של ביטויים רגולריים (regular-expressions)</div>
                 לצורך הדוגמאות - הסימן <code>⓪</code> מציין ״ביטוי פשוט״ כלשהו - למשל <code>א</code>, <code>(אבג|דהו)</code>, <code>[אבג]</code>.
                 <ul>

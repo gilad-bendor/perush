@@ -7,7 +7,7 @@ const MAX_LENGTH_OF_RECENT_SEARCHES = 2000;
 const WORD_TYPE_INDEX_VERB = 0;
 const MAX_SEARCH_RESULTS = 10000;
 
-const strongNumbersToData = [];
+/** @type {[string, number][]} */ const strongNumbersToData = [];
 const showLocations = getHashParameter('show-locations') !== undefined;
 const showPoints = getHashParameter('hide-points') === undefined;
 const showAccents = getHashParameter('hide-accents') === undefined;
@@ -29,7 +29,8 @@ let timeNearWhichToNotShowRecentSearches = 0;
 /** @type {RegExp} */ let hebrewNonLettersRegex;
 /** @type {RegExp} */ let hebrewPointsRegex;
 /** @type {RegExp} */ let hebrewAccentsRegex;
-/** @type {string[]} */ let hebrewWordTypes;
+/** @type {string[]} */ let hebrewWordTypesVisual;
+/** @type {string[]} */ let hebrewWordTypesSearchable;
 /** @type {string[]} */ let hebrewBookNames;
 /** @type {(string) => string} */ let normalizeHebrewText;
 /** @type {(string) => string} */ let fixShinSin;
@@ -239,6 +240,11 @@ function initInfoDialog() {
 
         infoDialogIconsElement.appendChild(infoDialogIconWrapperElement);
     }
+
+    /** @type {HTMLInputElement} */ const wordTypesElement = document.querySelector('.hebrew-word-types-as-codes');
+    wordTypesElement.innerHTML = hebrewWordTypesVisual.map(
+        type => `<code>${fixShinSin(type).replace(/ /g, '-')}</code>`
+    ).join(', ');
 }
 
 /**
@@ -693,7 +699,7 @@ function initStrongNumbersData(encodedStrongNumbersData) {
     for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
         const entry = strongNumbersToData[strongNumber];
         const [hebrewWordWithPoints, wordTypeIndex] = entry;
-        if (wordTypeIndex !==  hebrewWordTypes.length) {
+        if (wordTypeIndex !==  hebrewWordTypesVisual.length) {
             entry.push(
                 hebrewFinalsToRegulars(
                     normalizeHebrewText(hebrewWordWithPoints)
@@ -818,7 +824,7 @@ function addChapterData(...chapterData) {
                     normalizeHebrewText(word)
                         .replace(nonHebrewLettersRegex, '') // Remove Points/Accents
                 ) +
-                `<${strongNumber}>`
+                `<${strongNumber}/${hebrewWordTypesSearchable[strongNumbersToData[strongNumber][1]]}>`
             ).join(' ') +
             ' ';    // Spaces at beginning and end, to simplify searching for whole words
 
@@ -933,41 +939,12 @@ function performSearch(event) {
 
     let searchRegExp;
     try {
-        // If <...inner-RegExp...> are used - replace it to "<(strong-number-1|strong-number-2|...>"
-        //  with all the strong-numbers that matches the inner-RegExp - either strong-number's hebrew-word match, or numeric match.
-        // The match is "whole" - i.e. <10[12]> will match strong-numbers 101, 102 - but not 1010 or 3102.
-        const searchQueryWithStrongNumbers = preprocessedSearchQuery.replace(/<(.*?)>/g, (wholeMatch, strongNumbersRegExpSource) => {
+        // If <...inner-RegExp...> are used - replace with a pattern that matches the data format <SNumber/Type>.
+        //  First, try matching inner-RegExp against word types (e.g. <פעל>, <שם#*>).
+        //  If no word types match, fall back to strong-number search (numeric or Hebrew root word).
+        const searchQueryWithStrongNumbers = preprocessedSearchQuery.replace(/<(.+?)>/g, (wholeMatch, innerRegExpSource) => {
             try {
-                // Normalize the inner RegExp.
-                let normalizedStrongNumbersRegExpSource = normalizeSearchRegExp(strongNumbersRegExpSource, true);
-
-                // Find all strong-numbers that match strongNumbersRegExpSource.
-                /** @type {number[]} */ const matchingStrongNumbers = [];
-                const strongNumberRegExp = new RegExp(`^(?:${normalizedStrongNumbersRegExpSource})$`);
-                for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
-                    const [_strongNumberWord, wordTypeIndex, searchableWord] = strongNumbersToData[strongNumber];
-                    if (strongNumberRegExp.test(String(strongNumber)) ||
-                        strongNumberRegExp.test(searchableWord)) {
-                        if (!onlyAllowVerbs || (wordTypeIndex === WORD_TYPE_INDEX_VERB)) {
-                            matchingStrongNumbers.push(strongNumber);
-                        }
-                    }
-                }
-                if (matchingStrongNumbers.length === 0) {
-                    throw new Error('No matching Strong numbers');
-                }
-                const replacement = `(#+<(${matchingStrongNumbers.join('|')})>)`;
-
-                // Report the matching strong-numbers on the left sidebar.
-                showMessage(
-                    `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>${
-                        matchingStrongNumbers.map(strongNumber =>
-                            `\n    <a href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>  =  ${strongNumbersToData[strongNumber][0]}  (${hebrewWordTypes[strongNumbersToData[strongNumber][1]]})`
-                        ).join('')
-                    }`,
-                    'search-results');
-
-                return replacement;
+                return expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs);
             } catch (error) {
                 // Invalid <...> RegExp
                 throw new Error(`Invalid RegExp inside <...>:\n    ${wholeMatch}\n  ${error.message}`);
@@ -1088,6 +1065,206 @@ function performSearch(event) {
 }
 
 /**
+ * If the search-string contains <...> - then this function will replace the "..." to the final search RegExp-string.
+ * The returned RegExp-string will be later transformed by normalizeSearchRegExp().
+ * @param {string} wholeMatch
+ * @param {string} innerRegExpSource
+ * @param {boolean} onlyAllowVerbs - if this is a "2xy2" search
+ * @returns {string}
+ */
+function expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs) {
+    // Normalize the inner RegExp (e.g. support "#" etc.) and split it over "/" or "\".
+    let [wordRegExpSource, typeRegExpSource] = normalizeSearchRegExp(innerRegExpSource, true).split(/[\/\\]/);
+    /** @type {number[]} */ const matchingStrongNumbers = [];
+    /** @type {string[]} */ const matchingWordTypeSearchables = [];
+    /** @type {Set<number>} */ const matchingWordTypeIndexes = new Set();
+
+    // Handle the second item: the word-type RegExp.
+    let typeReplacement = '[^>]+'; // default value
+    if (typeRegExpSource) {
+        // Find all word-types that match typeRegExpSource.
+        const typeRegExp = new RegExp(`^(?:${typeRegExpSource.replace(/ /g, '-')})$`);
+        for (const [wordTypeIndex, wordTypeSearchable] of hebrewWordTypesSearchable.entries()) {
+            if (typeRegExp.test(wordTypeSearchable)) {
+                matchingWordTypeSearchables.push(wordTypeSearchable);
+                matchingWordTypeIndexes.add(wordTypeIndex);
+            }
+        }
+        if (matchingWordTypeSearchables.length === 0) {
+            throw new Error('No matching word-types');
+        }
+        typeReplacement = `(${matchingWordTypeSearchables.join('|')})`;
+    }
+
+    // Handle the first item: a Strong-number/Word RegExp.
+    let wordReplacement = '[^>]+'; // default value
+    if (wordRegExpSource) {
+        // Find all strong-numbers that match typeRegExpSource.
+        const strongNumberRegExp = new RegExp(`^(?:${wordRegExpSource})$`);
+        for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
+            const [_strongNumberWord, wordTypeIndex, searchableWord] = strongNumbersToData[strongNumber];
+            if (strongNumberRegExp.test(String(strongNumber)) ||
+                strongNumberRegExp.test(searchableWord)) {
+                if (!onlyAllowVerbs || (wordTypeIndex === WORD_TYPE_INDEX_VERB)) {
+                    if ((matchingWordTypeIndexes.size === 0) || (matchingWordTypeIndexes.has(wordTypeIndex))) {
+                        matchingStrongNumbers.push(strongNumber);
+                    }
+                }
+            }
+        }
+        if (matchingStrongNumbers.length === 0) {
+            throw new Error('No matching Strong numbers');
+        }
+        wordReplacement = `(${matchingStrongNumbers.join('|')})`;
+    }
+
+    const replacement = `(#+<(${wordReplacement}/${typeReplacement})>)`;
+
+    // Report the matching strong-numbers on the left sidebar.
+    showMessage(
+        `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>${
+            matchingStrongNumbers.map(strongNumber =>
+                `\n    <a href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>  =  ${strongNumbersToData[strongNumber][0]}  (${hebrewWordTypesVisual[strongNumbersToData[strongNumber][1]]})`
+            ).join('')
+        }`,
+        'search-results');
+
+    return replacement;
+
+
+
+
+
+
+
+
+
+
+    // wordRegExp ||= '#+';
+    // typeRegExp ||= '#+';
+
+
+
+
+    // // Check for explicit separator (/ or \) splitting strong-number from word-type.
+    // // E.g. <40/שם-פרטי>, </פעל>, <הלך/>, <הלך/פעל>
+    // const separatorIndex = innerRegExpSource.search(/[/\\]/);
+    // if (separatorIndex >= 0) {
+    //     const leftPart = innerRegExpSource.substring(0, separatorIndex);
+    //     const rightPart = innerRegExpSource.substring(separatorIndex + 1);
+    //
+    //     // Left part: strong-number pattern (numeric or Hebrew root word).
+    //     let leftPattern = '\\d+'; // default: match any strong number
+    //     if (leftPart) {
+    //         const normalizedLeft = normalizeSearchRegExp(leftPart, true);
+    //         const leftRegExp = new RegExp(`^(?:${normalizedLeft})$`);
+    //         const matchingStrongNumbers = [];
+    //         for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
+    //             const [_strongNumberWord, wordTypeIndex, searchableWord] = strongNumbersToData[strongNumber];
+    //             if (leftRegExp.test(String(strongNumber)) || leftRegExp.test(searchableWord)) {
+    //                 if (!onlyAllowVerbs || (wordTypeIndex === WORD_TYPE_INDEX_VERB)) {
+    //                     matchingStrongNumbers.push(strongNumber);
+    //                 }
+    //             }
+    //         }
+    //         if (matchingStrongNumbers.length === 0) {
+    //             throw new Error('No matching Strong numbers for left side of separator');
+    //         }
+    //         leftPattern = `(?:${matchingStrongNumbers.join('|')})`;
+    //
+    //         showMessage(
+    //             `<code>${escapeHtml(wholeMatch)}</code> מספרי סטרונג: ${
+    //                 matchingStrongNumbers.map(sn =>
+    //                     `\n    <a href="https://biblehub.com/hebrew/${sn}.htm" target="_blank">H${sn}</a>  =  ${strongNumbersToData[sn][0]}  (${hebrewWordTypesVisual[strongNumbersToData[sn][1]]})`
+    //                 ).join('')
+    //             }`,
+    //             'search-results');
+    //     }
+    //
+    //     // Right part: word-type pattern.
+    //     let rightPattern = '[^>]*'; // default: match any type
+    //     if (rightPart) {
+    //         const normalizedRight = normalizeSearchRegExp(rightPart, true);
+    //         const rightRegExp = new RegExp(`^(?:${normalizedRight})$`);
+    //         const matchingTypes = hebrewWordTypesSearchable.filter(type => rightRegExp.test(type));
+    //         if (matchingTypes.length === 0) {
+    //             throw new Error('No matching word types for right side of separator');
+    //         }
+    //         rightPattern = `(?:${matchingTypes.join('|')})`;
+    //
+    //         showMessage(
+    //             `<code>${escapeHtml(wholeMatch)}</code> סוגי מילה: ${
+    //                 matchingTypes.map(type =>
+    //                     `\n    ${hebrewWordTypesVisual[hebrewWordTypesSearchable.indexOf(type)]}  (${type})`
+    //                 ).join('')
+    //             }`,
+    //             'search-results');
+    //     }
+    //
+    //     const replacement = `(#*<${leftPattern}[/\\\\]${rightPattern}>)`;
+    //     showMessage(
+    //         `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>`,
+    //         'search-results');
+    //     return replacement;
+    // }
+    //
+    // // No separator — auto-detect: try word types first, then strong numbers.
+    //
+    // // Normalize the inner RegExp.
+    // const normalizedInnerRegExpSource = normalizeSearchRegExp(innerRegExpSource, true);
+    // const innerRegExp = new RegExp(`^(?:${normalizedInnerRegExpSource})$`);
+    //
+    // // Try matching against word types first (e.g. <פעל>, <שם.#>).
+    // const matchingTypes = hebrewWordTypesSearchable.filter(type => innerRegExp.test(type));
+    // if (matchingTypes.length > 0) {
+    //     const replacement = `(#*<\\d+[/\\\\](?:${matchingTypes.join('|')})>)`;
+    //
+    //     // Report the matching word-types on the left sidebar.
+    //     showMessage(
+    //         `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>${
+    //             matchingTypes.map(type =>
+    //                 `\n    ${hebrewWordTypesVisual[hebrewWordTypesSearchable.indexOf(type)]}  (${type})`
+    //             ).join('')
+    //         }`,
+    //         'search-results');
+    //
+    //     return replacement;
+    // }
+    //
+    // // No word types matched - fall back to strong-number search.
+    // /** @type {number[]} */ const matchingStrongNumbers = [];
+    // for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
+    //     const [_strongNumberWord, wordTypeIndex, searchableWord] = strongNumbersToData[strongNumber];
+    //     if (innerRegExp.test(String(strongNumber)) ||
+    //         innerRegExp.test(searchableWord)) {
+    //         if (!onlyAllowVerbs || (wordTypeIndex === WORD_TYPE_INDEX_VERB)) {
+    //             matchingStrongNumbers.push(strongNumber);
+    //         }
+    //     }
+    // }
+    // if (matchingStrongNumbers.length === 0) {
+    //     throw new Error('No matching Strong numbers or word types');
+    // }
+    // const replacement = `(#*<(?:${matchingStrongNumbers.join('|')})[/\\\\][^>]*>)`;
+    //
+    // // Report the matching strong-numbers on the left sidebar.
+    // showMessage(
+    //     `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>${
+    //         matchingStrongNumbers.map(strongNumber =>
+    //             `\n    <a href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>  =  ${strongNumbersToData[strongNumber][0]}  (${hebrewWordTypesVisual[strongNumbersToData[strongNumber][1]]})`
+    //         ).join('')
+    //     }`,
+    //     'search-results');
+    //
+    // return replacement;
+}
+
+
+
+
+
+
+/**
  * This function only lives in the browser:
  * Given a search RegExp source, normalize it.
  * @param {string} searchRegExpSource
@@ -1114,11 +1291,11 @@ function normalizeSearchRegExp(searchRegExpSource, isInsideAngleBrackets) {
     // Replace @ with a RegExp that matches any sequence of אהוי letters - or nothing
     searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /@/g, 'אהוי', '[אהוי]*');
     // Replace # with any single letter
-    searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /#/g, 'א-ת', '[א-תשׂשׁ]');
+    searchRegExpSource = replaceInRegExpSource(searchRegExpSource, /#/g, 'א-ת', isInsideAngleBrackets ? '[-א-תשׂשׁ]' : '[א-תשׂשׁ]');
 
     if (!isInsideAngleBrackets) {
-        // When a space is NOT preceded by <...> - then match any strong-number
-        searchRegExpSource = searchRegExpSource.replace(/([^>]) /g, '$1(?:<\\d+>|) ');
+        // When a space is NOT preceded by > - optionally skip <SNumber/Type> before the space
+        searchRegExpSource = searchRegExpSource.replace(/([^>]) /g, '$1(?:<[^>]*>)? ');
     }
 
     return searchRegExpSource;

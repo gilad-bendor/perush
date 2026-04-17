@@ -114,10 +114,22 @@ const wordTypesToHebrew = {
     ['Conjunction']: 'מִלַּת חִבּוּר',
     ['word']: 'סוג לא ידוע',
 };
-const hebrewWordTypes = Object.values(wordTypesToHebrew);
+const hebrewWordTypesVisual = Object.values(wordTypesToHebrew);
 if (Object.keys(wordTypesToHebrew)[WORD_TYPE_INDEX_VERB] !== 'Verb') {
     throw new Error(`WORD_TYPE_INDEX_VERB (${WORD_TYPE_INDEX_VERB}) does not point to 'Verb'`);
 }
+
+// Yet unused
+const _binyansToHebrew = {
+    ['Qal']: 'פָּעַל',
+    ['Piel']: 'פִּיעֵל',
+    ['Hifil']: 'הִפְעִיל',
+    ['Qal_pass']: 'פּוּעַל',
+    ['Nifal']: 'נִפְעַל',
+    ['Pual']: 'פֻּעַל',
+    ['Hofal']: 'הָפְעַל',
+    ['Hitpael']: 'הִתְפַּעֵל',
+};
 
 /** All the letters in Hebrew, with Shin represented by two characters: שּׁ and שּׂ */
 const hebrewLetters = 'אבגדהוזחטיךכלםמןנסעףפץצקרשׁשׂת';
@@ -149,6 +161,15 @@ const nonHebrewLettersRegex = new RegExp(`[^${hebrewLetters}]`, 'g');
 const hebrewPointsRegex = new RegExp(`[${hebrewPoints}]`, 'g');
 const hebrewAccentsRegex = new RegExp(`[${hebrewAccents}]`, 'g');
 const hebrewNonLettersRegex = new RegExp(`[${hebrewNonLetters}]`, 'g');
+
+const hebrewWordTypesSearchable = hebrewWordTypesVisual.map(
+    type => fixShinSin(type)
+        .replace(hebrewNonLettersRegex, '')
+        .replace(/ך/g, 'כ').replace(/ם/g, 'מ').replace(/ן/g, 'נ').replace(/ף/g, 'פ').replace(/ץ/g, 'צ')
+        .replace(/ /g, '-')
+);
+// Extra entry for "missing" Strong numbers (whose word-type-index = hebrewWordTypesVisual.length)
+hebrewWordTypesSearchable.push(hebrewWordTypesSearchable.at(-1));
 
 
 
@@ -305,7 +326,7 @@ const strongNumbersToData = [];
         if (!strongNumbersToData[strongNumber]) {
             strongNumbersToData[strongNumber] = [
                 ' ', // using a single space, because encodeHebrewText() can't handle empty words
-                hebrewWordTypes.length, // not using -1 because encodeWordsWithStrongNumbers can't handle negatives
+                hebrewWordTypesVisual.length, // not using -1 because encodeWordsWithStrongNumbers can't handle negatives
             ];
         }
     }
@@ -332,7 +353,8 @@ try {
                     // ['WORD_TYPE_INDEX_VERB', WORD_TYPE_INDEX_VERB],
                     // ['MAX_LENGTH_OF_RECENT_SEARCHES', MAX_LENGTH_OF_RECENT_SEARCHES],
         ['hebrewBookNames', hebrewBookNames],
-        ['hebrewWordTypes', hebrewWordTypes],
+        ['hebrewWordTypesVisual', hebrewWordTypesVisual],
+        ['hebrewWordTypesSearchable', hebrewWordTypesSearchable],
                     // ['hebrewLetters', hebrewLetters],
                     // ['hebrewPoints', hebrewPoints],
                     // ['hebrewAccents', hebrewAccents],
