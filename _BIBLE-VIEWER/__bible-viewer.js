@@ -455,7 +455,8 @@ function captureCopyToClipboard() {
         // Close any un-closed verse.
         encounteredVerseIndex(null);
 
-        // Copy to clipboard.
+        // Copy to clipboard - only if we captured something. If the selection is inside an <input> or
+        //  <textarea>, window.getSelection() returns nothing, so we let the browser's native copy run.
         if (clipboardBuilder.length > 0) {
             const textToCopy = clipboardBuilder.join('');
             copyTextToClipboard(
@@ -463,10 +464,9 @@ function captureCopyToClipboard() {
                 (versesCount <= 1)
                     ? `הטקסט שהועתק:\n`
                     : `הועתקו ${versesCount} פסוקים\n`);
+            event.preventDefault();
+            return false;
         }
-
-        event.preventDefault();
-        return false;
     });
 }
 
