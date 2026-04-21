@@ -388,6 +388,35 @@ body {
     overflow-wrap: anywhere;
 }
 
+/* Per-<...>-group controls: "select all" / "deselect all" buttons that appear when a group has >2 Strong-numbers.
+   Indentation is produced by the preserved whitespace inside .search-message (white-space: pre). */
+.strong-filter-controls {
+    display: inline-block;
+}
+.strong-filter-button {
+    cursor: pointer;
+    font-size: 0.85em;
+    padding: 1px 6px;
+    margin: 0 2px;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 3px;
+    background: white;
+}
+.strong-filter-button:hover {
+    background: rgba(128,128,128,0.2);
+}
+
+/* One line per Strong-number: checkbox + biblehub reference + Hebrew word + word-type */
+.strong-filter-line {
+    display: inline; /* stay inside the preserved whitespace of .search-message */
+    cursor: pointer;
+}
+.strong-filter-checkbox {
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0 0 0 0.3em; /* RTL: visual gap before the biblehub-reference that follows */
+}
+
 /* lines between results, and a bit of vertical margins */
 .search-results .verse {
     border-top: 1px solid gray;

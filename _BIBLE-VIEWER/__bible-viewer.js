@@ -23,6 +23,11 @@ let allDataWasAdded = false;
 /** @type {HTMLElement|undefined} */ let focusedRecentSearchTextElement = undefined;
 let timeNearWhichToNotShowRecentSearches = 0;
 
+// Per-<...>-group checkbox state: groupIndex → Set of strong-numbers the user has unchecked.
+// Keyed implicitly by query text: whenever the query text changes, the map is cleared.
+/** @type {Map<number, Set<number>>} */ const strongNumberExclusions = new Map();
+/** @type {string} */ let lastSearchQueryForStrongFilters = '';
+
 // -------- these are auto-populated: see functionsAndConstants() --------
 /** @type {string} */ let hebrewCharacters;
 /** @type {RegExp} */ let nonHebrewLettersRegex;
@@ -151,6 +156,11 @@ function domIsLoaded() {
 
     // Special handling of copy-to-clipboard (Ctrl+C): add verses' locations.
     captureCopyToClipboard();
+
+    // Handle checkbox / select-all / deselect-all interactions inside the search-results sidebar.
+    //  Each <...> group in a search query renders a list of Strong-numbers with a checkbox per entry;
+    //  toggling any of them re-runs the search with the narrowed set.
+    initStrongFilterControls();
 
     // Initialize the splitter between the left sidebar and the main area.
     (() => {
@@ -364,6 +374,71 @@ function setRecentSearchesVisibility(visible) {
         recentSearchesElement.style.display = 'initial';
         recentSearchesElement.scrollTop = recentSearchesElement.scrollHeight; // Scroll to the bottom
     }
+}
+
+/**
+ * Attach delegated listeners on the search-results sidebar so that:
+ *  - toggling a Strong-number checkbox updates the exclusion-set for its <...> group and re-runs the search;
+ *  - clicking "select all" / "deselect all" for a <...> group clears / fills the exclusion-set and re-runs.
+ * The .search-results element is wiped on every search, but stays in the DOM, so one listener is enough.
+ */
+function initStrongFilterControls() {
+    /** @type {HTMLElement} */ const searchResultsElement = document.querySelector('.search-results');
+    /** @type {HTMLElement} */ const centralLeftElement = document.querySelector('.central-left');
+
+    // performSearch() always resets the sidebar's scroll position - but when the user toggles a checkbox,
+    //  that feels jarring (especially when the checkbox is far down the list). Restore after re-running.
+    function rerunSearchPreservingScroll() {
+        const savedScrollTop = centralLeftElement.scrollTop;
+        performSearch();
+        centralLeftElement.scrollTop = savedScrollTop;
+    }
+
+    searchResultsElement.addEventListener('change', (event) => {
+        /** @type {HTMLInputElement} */ const target = event.target;
+        if (!target.classList || !target.classList.contains('strong-filter-checkbox')) {
+            return;
+        }
+        const groupIndex = parseInt(target.dataset.groupIndex);
+        const strongNumber = parseInt(target.dataset.strong);
+        let excludedSet = strongNumberExclusions.get(groupIndex);
+        if (!excludedSet) {
+            excludedSet = new Set();
+            strongNumberExclusions.set(groupIndex, excludedSet);
+        }
+        if (target.checked) {
+            excludedSet.delete(strongNumber);
+        } else {
+            excludedSet.add(strongNumber);
+        }
+        rerunSearchPreservingScroll();
+    });
+
+    searchResultsElement.addEventListener('click', (event) => {
+        /** @type {HTMLElement} */ const target = event.target;
+        if (!target.classList || !target.classList.contains('strong-filter-button')) {
+            return;
+        }
+        /** @type {HTMLElement} */ const controlsElement = target.closest('.strong-filter-controls');
+        if (!controlsElement) {
+            return;
+        }
+        const groupIndex = parseInt(controlsElement.dataset.groupIndex);
+        const action = target.dataset.action;
+        if (action === 'select-all') {
+            strongNumberExclusions.delete(groupIndex);
+        } else if (action === 'deselect-all') {
+            // Find every Strong-number rendered for this group, and add them all to the exclusion-set.
+            /** @type {NodeListOf<HTMLInputElement>} */ const checkboxes =
+                controlsElement.parentElement.querySelectorAll(
+                    `.strong-filter-checkbox[data-group-index="${groupIndex}"]`);
+            const allStrongs = [...checkboxes].map(cb => parseInt(cb.dataset.strong));
+            strongNumberExclusions.set(groupIndex, new Set(allStrongs));
+        } else {
+            return;
+        }
+        rerunSearchPreservingScroll();
+    });
 }
 
 // Special handling of copy-to-clipboard (Ctrl+C): add verses' locations.
@@ -895,6 +970,12 @@ function performSearch(event) {
     const searchQuery = searchInputElement.value;
     setRecentSearchesVisibility(false);
 
+    // Reset the per-<...>-group checkbox exclusions whenever the query text changes.
+    if (searchQuery !== lastSearchQueryForStrongFilters) {
+        strongNumberExclusions.clear();
+        lastSearchQueryForStrongFilters = searchQuery;
+    }
+
     // Set the focus back to the input-field.
     timeNearWhichToNotShowRecentSearches = Date.now();
     searchInputElement.focus();
@@ -942,9 +1023,11 @@ function performSearch(event) {
         // If <...inner-RegExp...> are used - replace with a pattern that matches the data format <SNumber/Type>.
         //  First, try matching inner-RegExp against word types (e.g. <פעל>, <שם#*>).
         //  If no word types match, fall back to strong-number search (numeric or Hebrew root word).
+        let groupIndex = 0;
         const searchQueryWithStrongNumbers = preprocessedSearchQuery.replace(/<(.+?)>/g, (wholeMatch, innerRegExpSource) => {
+            const currentGroupIndex = groupIndex++;
             try {
-                return expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs);
+                return expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs, currentGroupIndex);
             } catch (error) {
                 // Invalid <...> RegExp
                 throw new Error(`Invalid RegExp inside <...>:\n    ${wholeMatch}\n  ${error.message}`);
@@ -1070,9 +1153,10 @@ function performSearch(event) {
  * @param {string} wholeMatch
  * @param {string} innerRegExpSource
  * @param {boolean} onlyAllowVerbs - if this is a "2xy2" search
+ * @param {number} groupIndex - the 0-based index of this <...> occurrence in the full query (used to key per-group checkbox state)
  * @returns {string}
  */
-function expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs) {
+function expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs, groupIndex) {
     // Normalize the inner RegExp (e.g. support "#" etc.) and split it over "/" or "\".
     let [wordRegExpSource, typeRegExpSource] = normalizeSearchRegExp(innerRegExpSource, true).split(/[\/\\]/);
     /** @type {number[]} */ const matchingStrongNumbers = [];
@@ -1118,145 +1202,48 @@ function expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs)
         wordReplacement = `(${matchingStrongNumbers.join('|')})`;
     }
 
+    // Apply per-<...>-group checkbox exclusions. The user may have unchecked some Strong-numbers
+    //  in a previous render; here we intersect the matchingStrongNumbers with the still-checked set.
+    const excludedSet = strongNumberExclusions.get(groupIndex) ?? new Set();
+    /** @type {number[]} */ const checkedStrongNumbers = (matchingStrongNumbers.length > 0)
+        ? matchingStrongNumbers.filter(strongNumber => !excludedSet.has(strongNumber))
+        : matchingStrongNumbers;
+    if ((matchingStrongNumbers.length > 0) && (checkedStrongNumbers.length > 0)) {
+        wordReplacement = `(${checkedStrongNumbers.join('|')})`;
+    }
+
     const replacement = `(#+<(${wordReplacement}/${typeReplacement})>)`;
 
-    // Report the matching strong-numbers on the left sidebar.
+    // Report the matching strong-numbers on the left sidebar - with a checkbox before each entry,
+    //  so the user can narrow the search to a subset without re-typing.
+    const showSelectAllButtons = (matchingStrongNumbers.length > 2);
+    const controlsHtml = showSelectAllButtons
+        ? `\n    <span class="strong-filter-controls" data-group-index="${groupIndex}">` +
+          `<button type="button" class="strong-filter-button" data-action="select-all">בחר הכל</button>` +
+          ` <button type="button" class="strong-filter-button" data-action="deselect-all">נקה הכל</button>` +
+          `</span>`
+        : '';
+    const linesHtml = matchingStrongNumbers.map(strongNumber => {
+        const isChecked = !excludedSet.has(strongNumber);
+        return `\n    <label class="strong-filter-line">` +
+               `<input type="checkbox" class="strong-filter-checkbox"` +
+               ` data-group-index="${groupIndex}" data-strong="${strongNumber}"${isChecked ? ' checked' : ''}>` +
+               `<a class="biblehub-reference" href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>` +
+               `  =  ${strongNumbersToData[strongNumber][0]}  (${hebrewWordTypesVisual[strongNumbersToData[strongNumber][1]]})` +
+               `</label>`;
+    }).join('');
     showMessage(
-        `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>${
-            matchingStrongNumbers.map(strongNumber =>
-                `\n    <a href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>  =  ${strongNumbersToData[strongNumber][0]}  (${hebrewWordTypesVisual[strongNumbersToData[strongNumber][1]]})`
-            ).join('')
-        }`,
+        `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>` +
+        controlsHtml + linesHtml,
         'search-results');
 
+    // If the user has unchecked every Strong-number in this group, there is nothing to search for.
+    //  We throw *after* rendering the checkboxes, so the user can re-check boxes to recover.
+    if ((matchingStrongNumbers.length > 0) && (checkedStrongNumbers.length === 0)) {
+        throw new Error('לא נבחר אף מספר-שורש - סמן לפחות אחד');
+    }
+
     return replacement;
-
-
-
-
-
-
-
-
-
-
-    // wordRegExp ||= '#+';
-    // typeRegExp ||= '#+';
-
-
-
-
-    // // Check for explicit separator (/ or \) splitting strong-number from word-type.
-    // // E.g. <40/שם-פרטי>, </פעל>, <הלך/>, <הלך/פעל>
-    // const separatorIndex = innerRegExpSource.search(/[/\\]/);
-    // if (separatorIndex >= 0) {
-    //     const leftPart = innerRegExpSource.substring(0, separatorIndex);
-    //     const rightPart = innerRegExpSource.substring(separatorIndex + 1);
-    //
-    //     // Left part: strong-number pattern (numeric or Hebrew root word).
-    //     let leftPattern = '\\d+'; // default: match any strong number
-    //     if (leftPart) {
-    //         const normalizedLeft = normalizeSearchRegExp(leftPart, true);
-    //         const leftRegExp = new RegExp(`^(?:${normalizedLeft})$`);
-    //         const matchingStrongNumbers = [];
-    //         for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
-    //             const [_strongNumberWord, wordTypeIndex, searchableWord] = strongNumbersToData[strongNumber];
-    //             if (leftRegExp.test(String(strongNumber)) || leftRegExp.test(searchableWord)) {
-    //                 if (!onlyAllowVerbs || (wordTypeIndex === WORD_TYPE_INDEX_VERB)) {
-    //                     matchingStrongNumbers.push(strongNumber);
-    //                 }
-    //             }
-    //         }
-    //         if (matchingStrongNumbers.length === 0) {
-    //             throw new Error('No matching Strong numbers for left side of separator');
-    //         }
-    //         leftPattern = `(?:${matchingStrongNumbers.join('|')})`;
-    //
-    //         showMessage(
-    //             `<code>${escapeHtml(wholeMatch)}</code> מספרי סטרונג: ${
-    //                 matchingStrongNumbers.map(sn =>
-    //                     `\n    <a href="https://biblehub.com/hebrew/${sn}.htm" target="_blank">H${sn}</a>  =  ${strongNumbersToData[sn][0]}  (${hebrewWordTypesVisual[strongNumbersToData[sn][1]]})`
-    //                 ).join('')
-    //             }`,
-    //             'search-results');
-    //     }
-    //
-    //     // Right part: word-type pattern.
-    //     let rightPattern = '[^>]*'; // default: match any type
-    //     if (rightPart) {
-    //         const normalizedRight = normalizeSearchRegExp(rightPart, true);
-    //         const rightRegExp = new RegExp(`^(?:${normalizedRight})$`);
-    //         const matchingTypes = hebrewWordTypesSearchable.filter(type => rightRegExp.test(type));
-    //         if (matchingTypes.length === 0) {
-    //             throw new Error('No matching word types for right side of separator');
-    //         }
-    //         rightPattern = `(?:${matchingTypes.join('|')})`;
-    //
-    //         showMessage(
-    //             `<code>${escapeHtml(wholeMatch)}</code> סוגי מילה: ${
-    //                 matchingTypes.map(type =>
-    //                     `\n    ${hebrewWordTypesVisual[hebrewWordTypesSearchable.indexOf(type)]}  (${type})`
-    //                 ).join('')
-    //             }`,
-    //             'search-results');
-    //     }
-    //
-    //     const replacement = `(#*<${leftPattern}[/\\\\]${rightPattern}>)`;
-    //     showMessage(
-    //         `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>`,
-    //         'search-results');
-    //     return replacement;
-    // }
-    //
-    // // No separator — auto-detect: try word types first, then strong numbers.
-    //
-    // // Normalize the inner RegExp.
-    // const normalizedInnerRegExpSource = normalizeSearchRegExp(innerRegExpSource, true);
-    // const innerRegExp = new RegExp(`^(?:${normalizedInnerRegExpSource})$`);
-    //
-    // // Try matching against word types first (e.g. <פעל>, <שם.#>).
-    // const matchingTypes = hebrewWordTypesSearchable.filter(type => innerRegExp.test(type));
-    // if (matchingTypes.length > 0) {
-    //     const replacement = `(#*<\\d+[/\\\\](?:${matchingTypes.join('|')})>)`;
-    //
-    //     // Report the matching word-types on the left sidebar.
-    //     showMessage(
-    //         `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>${
-    //             matchingTypes.map(type =>
-    //                 `\n    ${hebrewWordTypesVisual[hebrewWordTypesSearchable.indexOf(type)]}  (${type})`
-    //             ).join('')
-    //         }`,
-    //         'search-results');
-    //
-    //     return replacement;
-    // }
-    //
-    // // No word types matched - fall back to strong-number search.
-    // /** @type {number[]} */ const matchingStrongNumbers = [];
-    // for (let strongNumber = 0; strongNumber < strongNumbersToData.length; strongNumber++) {
-    //     const [_strongNumberWord, wordTypeIndex, searchableWord] = strongNumbersToData[strongNumber];
-    //     if (innerRegExp.test(String(strongNumber)) ||
-    //         innerRegExp.test(searchableWord)) {
-    //         if (!onlyAllowVerbs || (wordTypeIndex === WORD_TYPE_INDEX_VERB)) {
-    //             matchingStrongNumbers.push(strongNumber);
-    //         }
-    //     }
-    // }
-    // if (matchingStrongNumbers.length === 0) {
-    //     throw new Error('No matching Strong numbers or word types');
-    // }
-    // const replacement = `(#*<(?:${matchingStrongNumbers.join('|')})[/\\\\][^>]*>)`;
-    //
-    // // Report the matching strong-numbers on the left sidebar.
-    // showMessage(
-    //     `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>${
-    //         matchingStrongNumbers.map(strongNumber =>
-    //             `\n    <a href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>  =  ${strongNumbersToData[strongNumber][0]}  (${hebrewWordTypesVisual[strongNumbersToData[strongNumber][1]]})`
-    //         ).join('')
-    //     }`,
-    //     'search-results');
-    //
-    // return replacement;
 }
 
 
