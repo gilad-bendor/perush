@@ -119,7 +119,7 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 
 - **טוב** (good) = things that *feel* right and worthy. Usually — things desired according to social morality - the right path society expects one to follow.
   **רע** (evil) = things that *feel* unworthy. Usually — things forbidden according to social morality - behaviors society considers immoral.
-  **לדעת** (to know) = to form a moral opinion and judgment about something: to label it, to stigmatize.
+  **לדעת** (to know) = to form an opinion about something, to actively pin it down — to tell it: "you are such-and-such" — to label it, to stigmatize.
 
 - **חיים** (life) = dynamism and change.
   **מוות** (death) = stagnation: inability to respond, adapt, and change (unrelated to **הרג** (killing) - which is war and suppression between narratives).
@@ -133,14 +133,14 @@ The dictionary below contains only **primitive definitions** — concepts whose 
   **בא** / **ישב** (entered/sat) = settled into a comfort zone.
   **יצא** / **קם** (went out/rose) = left a comfort zone due to need or crisis.
 
-- **כל** (all) = absoluteness, completely, to the end. This motif is highly significant throughout many stories. A very powerful word whose presence in the text is always meaningful.
+- **כל** (all) = absoluteness, completely, to the end. This is a deep and basic feeling/experience/attitude in the psyche. This motif is highly significant throughout many stories. A very powerful word whose presence in the text is always meaningful.
 
 ## Additional Definitions
 
 - **רכוש** (property) = food + animals (insights + narratives).
 - **מלך** (king) = a human that rules over many humans: an "overarching narrative" serving as common denominator - a title - for a cluster of related cultures, enabling collective identity - a kind of confederation.
   **עיר** (city) = the cluster of people governed by the king.
-- **ברוך** (blessed) = something perceived as ideal, something people look up to.
+- **ברוך** (blessed) = an experience of sacredness, something greater than life itself — something perceived as ideal, something people look up to.
   **ארור** (cursed) = something perceived as dystopian, as a terrible state.
 - **מלאך** (angel/messenger) = "a messenger without a name" - a foreign, incomprehensible narrative (sometimes from outside - from the heavens) that interacts with an אדם (culture).
 - **אש** (fire) = a clear and absolute idea, containing no water (no room for motivation and change).
