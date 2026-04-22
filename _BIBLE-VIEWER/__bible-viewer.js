@@ -18,6 +18,9 @@ let addedChaptersCount = 0;
 /** @type {Record<string, Record<number, HTMLElement>>} */ let bookNameToChapterToFirstVerseElement = {};
 let lastAddedChapterIndexInBook = 0;
 let lastVerseMouseEnterTime = 0;
+// Strong-number of the word under cursor at the moment a verse was clicked.
+// Consumed once by applyVerseSelection() so the bottom-bar (with copy icons) still shows the word link.
+let pendingClickedStrongNumber = 0;
 let allDataWasAdded = false;
 /** @type {string[]} */ let recentSearches = [];
 /** @type {HTMLElement|undefined} */ let focusedRecentSearchTextElement = undefined;
@@ -640,17 +643,79 @@ function resetVerseElementBehaviour(verseElement) {
 
 /**
  * This function only lives in the browser:
- * When the mouse enters a verse, show its location (book, chapter, verse) in the bottom bar.
+ * When the mouse moves over a verse, show its location (book, chapter, verse) in the bottom bar,
+ *  plus info about the specific word under the cursor (strong-number, visual-word, word-type).
  * @param {MouseEvent} event
  */
 function handleVerseMouseEnter(event) {
     if ((Date.now() - lastVerseMouseEnterTime) > FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS) {
-        /** @type {HTMLElement} */ const clickedVerseElement = event.currentTarget;
-        const verseIndex = parseInt(clickedVerseElement.dataset.index);
+        /** @type {HTMLElement} */ const verseElement = event.currentTarget;
+        const verseIndex = parseInt(verseElement.dataset.index);
         const verseInfo = allVerses[verseIndex];
-        const bottomBarMessage = `<div class="bottom-bar-location-text">${verseInfo.book} ${verseInfo.chapter}:${verseInfo.verse}</div>`;
+        const strongNumber = findStrongNumberAtPoint(verseElement, verseInfo, event.clientX, event.clientY);
+        const bottomBarMessage =
+            `<div class="bottom-bar-location-text">` +
+            `${verseInfo.book} ${verseInfo.chapter}:${verseInfo.verse}` +
+            buildWordInfoHtml(strongNumber) +
+            `</div>`;
         showMessage(bottomBarMessage, 'bottom-bar');
     }
+}
+
+/**
+ * Given a verse element and screen coordinates, find the Strong-number of the word under the cursor.
+ * Uses caretPositionFromPoint to locate the text offset without mutating the DOM,
+ *  then counts spaces in the verse's text content up to that offset to derive the word index.
+ * @param {HTMLElement} verseElement
+ * @param {{strongs: number[]}} verseInfo
+ * @param {number} clientX
+ * @param {number} clientY
+ * @returns {number} Strong-number (0 if none - e.g. cursor is on whitespace or on the location prefix)
+ */
+function findStrongNumberAtPoint(verseElement, verseInfo, clientX, clientY) {
+    // Get the text node and offset at the cursor position.
+    /** @type {Node | null} */ let textNode = null;
+    /** @type {number} */ let offset = 0;
+    if (typeof document.caretPositionFromPoint === 'function') {
+        const pos = document.caretPositionFromPoint(clientX, clientY);
+        if (pos) { textNode = pos.offsetNode; offset = pos.offset; }
+    } else if (typeof document.caretRangeFromPoint === 'function') {
+        const range = document.caretRangeFromPoint(clientX, clientY);
+        if (range) { textNode = range.startContainer; offset = range.startOffset; }
+    }
+    if (!textNode || textNode.nodeType !== Node.TEXT_NODE || !verseElement.contains(textNode)) {
+        return 0;
+    }
+
+    // Build a range from the start of the verse to the cursor position, then stringify it.
+    // This correctly handles search-result verses that contain <span class="highlighted-word"> children.
+    const range = document.createRange();
+    range.setStart(verseElement, 0);
+    range.setEnd(textNode, offset);
+    let wordIndex = (range.toString().match(/ /g) || []).length;
+
+    // Adjust for the location prefix (e.g. "(בראשית א:א) ") when showLocations is enabled.
+    if (showLocations) {
+        wordIndex -= fixVisibleVerse('', 'a', 'b', 'c').split(' ').length - 1;
+        if (wordIndex < 0) return 0;
+    }
+
+    return verseInfo.strongs[wordIndex] || 0;
+}
+
+/**
+ * Build the HTML snippet that follows the verse-location in the bottom-bar:
+ *  the visual-word, a biblehub link (H<strong>), and the word-type.
+ * Returns an empty string if strongNumber is 0.
+ * @param {number} strongNumber
+ * @returns {string}
+ */
+function buildWordInfoHtml(strongNumber) {
+    if (!strongNumber) return '';
+    const [word, wordTypeIndex] = strongNumbersToData[strongNumber];
+    return ` - ${word}` +
+        ` (<a class="biblehub-reference" href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>` +
+        ` ${hebrewWordTypesVisual[wordTypeIndex]})`;
 }
 
 /**
@@ -663,6 +728,10 @@ function handleVerseMouseEnter(event) {
 function handleVerseMouseClick(event) {
     /** @type {HTMLElement} */ const clickedVerseElement = event.currentTarget;
     const verseIndex = parseInt(clickedVerseElement.dataset.index);
+    // Capture the word under cursor so applyVerseSelection() can preserve it in the bottom-bar
+    //  (without putting it in the URL hash).
+    pendingClickedStrongNumber = findStrongNumberAtPoint(
+        clickedVerseElement, allVerses[verseIndex], event.clientX, event.clientY);
     setHashState({verse: verseIndex});
 }
 
@@ -687,8 +756,10 @@ function applyVerseSelection(verseIndex) {
 
     // Show location + copy icons in the bottom bar, and freeze mouseenter updates for a few seconds.
     lastVerseMouseEnterTime = 0;
+    const strongNumber = pendingClickedStrongNumber;
+    pendingClickedStrongNumber = 0;
     const bottomBarMessage = [
-        `<div class="bottom-bar-location-text">${verseInfo.book} ${verseInfo.chapter}:${verseInfo.verse}</div>`,
+        `<div class="bottom-bar-location-text">${verseInfo.book} ${verseInfo.chapter}:${verseInfo.verse}${buildWordInfoHtml(strongNumber)}</div>`,
         `<div class="copy-verse-icon copy-verse-and-location-icon" onclick="copyVerseToClipboard(${verseIndex}, true, true)">`,
         `<div class="copy-verse-icon-inner">📋</div></div>`,
         `<div class="copy-verse-icon copy-verse-only-icon" onclick="copyVerseToClipboard(${verseIndex}, true, false)">`,
