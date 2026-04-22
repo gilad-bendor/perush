@@ -220,7 +220,7 @@ const sessionRegistry = new Map<string, { model: string; tools: string[] }>();
  * ```
  * const q = stubQuery({
  *   prompt: `Some prompt...\n\n---stub-response---\nkey: value\n---end-stub-response---`,
- *   options: { model: "claude-opus-4-6" }
+ *   options: { model: "claude-opus-4-7" }
  * });
  * for await (const msg of q) { ... }
  * ```

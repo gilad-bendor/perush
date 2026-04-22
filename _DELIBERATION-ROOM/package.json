@@ -5,7 +5,7 @@
   "scripts": {
     "dev-model-haiku": " export PARTICIPANT_MODEL=claude-haiku-4-5  ; bun run dev-model-default",
     "dev-model-sonnet": "export PARTICIPANT_MODEL=claude-sonnet-4-6 ; bun run dev-model-default",
-    "dev-model-opus": "  export PARTICIPANT_MODEL=claude-opus-4-6   ; bun run dev-model-default",
+    "dev-model-opus": "  export PARTICIPANT_MODEL=claude-opus-4-7   ; bun run dev-model-default",
     "dev-model-default": "bun run dev:css & sleep 3 ; bun run dev:server",
     "dev:server": "lsof -ti:4100 | xargs kill -9 2>/dev/null; bun --watch src/server.ts",
     "dev:css": "set -x ; pkill -f 'tailwindcss -i public/input.css -o public/compiled-style.css --watch --poll' ; bun run update-browsers-list ; tail -f /dev/null | bunx tailwindcss -i public/input.css -o public/compiled-style.css --watch --poll",

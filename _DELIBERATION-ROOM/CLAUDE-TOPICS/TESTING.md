@@ -100,7 +100,7 @@ import { createStubSDK } from "../../src/stub-sdk";
 const sdk = createStubSDK();
 const query = sdk.query({
   prompt: `...actual prompt...\n\n---stub-response---\ntext: "אני: 8\ntest"\n---end-stub-response---`,
-  options: { model: "claude-opus-4-6" }
+  options: { model: "claude-opus-4-7" }
 });
 
 for await (const msg of query) {

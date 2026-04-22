@@ -363,12 +363,12 @@ describe("stubQuery — options in init", () => {
   test("init message reflects the model option", async () => {
     const q = stubQuery({
       prompt: "test\n---stub-response---\ntext: x\n---end-stub-response---",
-      options: { title: "test", model: "claude-opus-4-6" },
+      options: { title: "test", model: "claude-opus-4-7" },
     });
 
     for await (const msg of q) {
       if (msg.type === "system") {
-        expect((msg as StubSDKSystemMessage).model).toBe("claude-opus-4-6");
+        expect((msg as StubSDKSystemMessage).model).toBe("claude-opus-4-7");
         break;
       }
     }

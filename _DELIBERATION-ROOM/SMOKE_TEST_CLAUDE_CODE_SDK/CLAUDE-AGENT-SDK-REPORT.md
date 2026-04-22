@@ -456,7 +456,7 @@ All options accepted by `query()`. Grouped by relevance to the Deliberation Room
 
 | Option | Type | Description | Tested |
 |--------|------|-------------|--------|
-| `model` | `string` | Model ID (e.g., `"claude-opus-4-6"`, `"claude-sonnet-4-6"`) | Yes |
+| `model` | `string` | Model ID (e.g., `"claude-opus-4-7"`, `"claude-sonnet-4-6"`) | Yes |
 | `systemPrompt` | `string \| { type: "preset", preset: "claude_code", append?: string }` | System prompt. Persists across resumes. | Yes |
 | `resume` | `string` | Session ID to resume. Full context retained. | Yes |
 | `tools` | `string[] \| { type: "preset", preset: "claude_code" }` | Base tool set. `[]` = no tools. | Yes |
@@ -565,7 +565,7 @@ This would replace manual JSON parsing with `.safeParse()` and eliminate malform
 options: { effort: "low" }
 
 // Speeches: deep analysis, tool use, high reasoning needed
-options: { effort: "high" }  // or "max" for Opus 4.6
+options: { effort: "high" }  // or "max" for Opus 4.7
 ```
 
 Could reduce assessment latency and cost without degrading quality (assessments are simple structured output).
