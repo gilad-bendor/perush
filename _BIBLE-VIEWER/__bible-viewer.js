@@ -24,9 +24,17 @@ let allDataWasAdded = false;
 let timeNearWhichToNotShowRecentSearches = 0;
 
 // Per-<...>-group checkbox state: groupIndex → Set of strong-numbers the user has unchecked.
-// Keyed implicitly by query text: whenever the query text changes, the map is cleared.
+// Rebuilt from the URL hash's "search-filter" parameter on every applyHashState().
 /** @type {Map<number, Set<number>>} */ const strongNumberExclusions = new Map();
-/** @type {string} */ let lastSearchQueryForStrongFilters = '';
+
+// --- URL-hash-driven application state ---
+// Hash keys: search, search-filter, verse, scroll. All user actions write here;
+// applyHashState() is the single apply path (load + popstate + programmatic pushState).
+/** @type {{search?: string, searchFilter?: string, verse?: number, scroll?: number}} */
+let lastAppliedHashState = {};
+let isApplyingHashState = false;
+let scrollTrackingEnabled = false;
+let scrollRafPending = false;
 
 // -------- these are auto-populated: see functionsAndConstants() --------
 /** @type {string} */ let hebrewCharacters;
@@ -221,6 +229,20 @@ function domIsLoaded() {
         }, { passive: false });
         document.addEventListener('touchend', dragEnd);
     })();
+
+    // Track the mid-screen verse while the user scrolls the main text.
+    /** @type {HTMLElement} */ const centralRightElement = document.querySelector('.central-right');
+    centralRightElement.addEventListener('scroll', handleCentralRightScroll, {passive: true});
+
+    // React to back/forward navigation. pushState/replaceState don't fire hashchange themselves
+    //  (setHashState() calls applyHashState() directly), but popstate does fire on back/forward,
+    //  and we also keep hashchange for robustness (e.g. user edits the URL manually).
+    window.addEventListener('popstate', applyHashState);
+    window.addEventListener('hashchange', applyHashState);
+
+    // Initial apply of whatever state is already in the URL hash (search-query pre-fills the input,
+    //  other transitions are deferred until their data loads).
+    applyHashState();
 }
 
 /**
@@ -384,14 +406,24 @@ function setRecentSearchesVisibility(visible) {
  */
 function initStrongFilterControls() {
     /** @type {HTMLElement} */ const searchResultsElement = document.querySelector('.search-results');
-    /** @type {HTMLElement} */ const centralLeftElement = document.querySelector('.central-left');
 
-    // performSearch() always resets the sidebar's scroll position - but when the user toggles a checkbox,
-    //  that feels jarring (especially when the checkbox is far down the list). Restore after re-running.
-    function rerunSearchPreservingScroll() {
-        const savedScrollTop = centralLeftElement.scrollTop;
-        performSearch();
-        centralLeftElement.scrollTop = savedScrollTop;
+    /**
+     * Given an updated exclusions Map, compute the new search-filter hash-value (or undefined for the
+     *  "natural" state where no Strong-numbers are excluded in any group) and push it into the hash.
+     * @param {Map<number, Set<number>>} newExclusions
+     */
+    function commitExclusions(newExclusions) {
+        const isNatural = [...newExclusions.values()].every(set => set.size === 0);
+        setHashState({searchFilter: isNatural ? undefined : serializeSearchFilter(newExclusions)});
+    }
+
+    /** @returns {Map<number, Set<number>>} */
+    function cloneExclusions() {
+        const copy = new Map();
+        for (const [gi, set] of strongNumberExclusions) {
+            copy.set(gi, new Set(set));
+        }
+        return copy;
     }
 
     searchResultsElement.addEventListener('change', (event) => {
@@ -401,17 +433,18 @@ function initStrongFilterControls() {
         }
         const groupIndex = parseInt(target.dataset.groupIndex);
         const strongNumber = parseInt(target.dataset.strong);
-        let excludedSet = strongNumberExclusions.get(groupIndex);
+        const newExclusions = cloneExclusions();
+        let excludedSet = newExclusions.get(groupIndex);
         if (!excludedSet) {
             excludedSet = new Set();
-            strongNumberExclusions.set(groupIndex, excludedSet);
+            newExclusions.set(groupIndex, excludedSet);
         }
         if (target.checked) {
             excludedSet.delete(strongNumber);
         } else {
             excludedSet.add(strongNumber);
         }
-        rerunSearchPreservingScroll();
+        commitExclusions(newExclusions);
     });
 
     searchResultsElement.addEventListener('click', (event) => {
@@ -425,19 +458,20 @@ function initStrongFilterControls() {
         }
         const groupIndex = parseInt(controlsElement.dataset.groupIndex);
         const action = target.dataset.action;
+        const newExclusions = cloneExclusions();
         if (action === 'select-all') {
-            strongNumberExclusions.delete(groupIndex);
+            newExclusions.delete(groupIndex);
         } else if (action === 'deselect-all') {
             // Find every Strong-number rendered for this group, and add them all to the exclusion-set.
             /** @type {NodeListOf<HTMLInputElement>} */ const checkboxes =
                 controlsElement.parentElement.querySelectorAll(
                     `.strong-filter-checkbox[data-group-index="${groupIndex}"]`);
             const allStrongs = [...checkboxes].map(cb => parseInt(cb.dataset.strong));
-            strongNumberExclusions.set(groupIndex, new Set(allStrongs));
+            newExclusions.set(groupIndex, new Set(allStrongs));
         } else {
             return;
         }
-        rerunSearchPreservingScroll();
+        commitExclusions(newExclusions);
     });
 }
 
@@ -607,7 +641,6 @@ function resetVerseElementBehaviour(verseElement) {
 /**
  * This function only lives in the browser:
  * When the mouse enters a verse, show its location (book, chapter, verse) in the bottom bar.
- * When a verse is clicked - sow the same - and also show the "copy-verse-*-icon"s.
  * @param {MouseEvent} event
  */
 function handleVerseMouseEnter(event) {
@@ -615,43 +648,65 @@ function handleVerseMouseEnter(event) {
         /** @type {HTMLElement} */ const clickedVerseElement = event.currentTarget;
         const verseIndex = parseInt(clickedVerseElement.dataset.index);
         const verseInfo = allVerses[verseIndex];
-        let bottomBarMessage = `<div class="bottom-bar-location-text">${verseInfo.book} ${verseInfo.chapter}:${verseInfo.verse}</div>`;
-        if (event.type === 'click') {
-            bottomBarMessage = [
-                bottomBarMessage,
-                `<div class="copy-verse-icon copy-verse-and-location-icon" onclick="copyVerseToClipboard(${verseIndex}, true, true)">`,
-                `<div class="copy-verse-icon-inner">📋</div></div>`,
-                `<div class="copy-verse-icon copy-verse-only-icon" onclick="copyVerseToClipboard(${verseIndex}, true, false)">`,
-                `<div class="copy-verse-icon-inner">א</div></div>`,
-                `<div class="copy-verse-icon copy-verse-location-only-icon" onclick="copyVerseToClipboard(${verseIndex}, false, true)">`,
-                `<div class="copy-verse-icon-inner">⌖</div></div>`,
-            ].join('');
-        }
+        const bottomBarMessage = `<div class="bottom-bar-location-text">${verseInfo.book} ${verseInfo.chapter}:${verseInfo.verse}</div>`;
         showMessage(bottomBarMessage, 'bottom-bar');
     }
 }
 
 /**
  * This function only lives in the browser:
- * When the user clicks a verse, show its location (book, chapter, verse) in the bottom bar,
- *  and freeze it for few seconds (e.g. don't let mouse-enter change it) so the user has a
- *  chance to copy it to the clipboard.
+ * When the user clicks a verse - write the verse-index into the URL hash.
+ * The actual visual effect (highlight, bottom-bar, scroll-into-view) is done by applyVerseSelection(),
+ *  which is invoked by applyHashState() in response to the hash change.
  * @param {MouseEvent} event
  */
 function handleVerseMouseClick(event) {
-    lastVerseMouseEnterTime = 0; // so that handleVerseMouseEnter(event) is not ignored
-    handleVerseMouseEnter(event);
-    lastVerseMouseEnterTime = Date.now();
+    /** @type {HTMLElement} */ const clickedVerseElement = event.currentTarget;
+    const verseIndex = parseInt(clickedVerseElement.dataset.index);
+    setHashState({verse: verseIndex});
+}
 
-    // Highlight the clicked verse (and un-highlight all others).
+/**
+ * Apply the visual effects of a verse being selected: highlight, bottom-bar with copy icons,
+ *  and scroll-into-view (a no-op if already visible).
+ * Called from applyHashState() whenever the "verse" hash parameter changes.
+ * @param {number} verseIndex
+ */
+function applyVerseSelection(verseIndex) {
+    const verseInfo = allVerses[verseIndex];
+    if (!verseInfo) return;
+
+    // Highlight the selected verse (and un-highlight all others).
     // Note that a single verse may appear multiple times in the text (e.g. Psalms 150:6), so highlight all of them.
     document.querySelectorAll('.recently-clicked-verse').forEach(
         (/** @type {HTMLElement} */ element) => element.classList.remove('recently-clicked-verse')
     );
-    /** @type {HTMLElement} */ const clickedVerseElement = event.currentTarget;
-    document.querySelectorAll(`.verse[data-index="${clickedVerseElement.dataset.index}"]`).forEach((verseElement) =>
+    document.querySelectorAll(`.verse[data-index="${verseIndex}"]`).forEach((verseElement) =>
         verseElement.classList.add('recently-clicked-verse')
     );
+
+    // Show location + copy icons in the bottom bar, and freeze mouseenter updates for a few seconds.
+    lastVerseMouseEnterTime = 0;
+    const bottomBarMessage = [
+        `<div class="bottom-bar-location-text">${verseInfo.book} ${verseInfo.chapter}:${verseInfo.verse}</div>`,
+        `<div class="copy-verse-icon copy-verse-and-location-icon" onclick="copyVerseToClipboard(${verseIndex}, true, true)">`,
+        `<div class="copy-verse-icon-inner">📋</div></div>`,
+        `<div class="copy-verse-icon copy-verse-only-icon" onclick="copyVerseToClipboard(${verseIndex}, true, false)">`,
+        `<div class="copy-verse-icon-inner">א</div></div>`,
+        `<div class="copy-verse-icon copy-verse-location-only-icon" onclick="copyVerseToClipboard(${verseIndex}, false, true)">`,
+        `<div class="copy-verse-icon-inner">⌖</div></div>`,
+    ].join('');
+    showMessage(bottomBarMessage, 'bottom-bar');
+    lastVerseMouseEnterTime = Date.now();
+
+    // Scroll the verse into view (prefer the highlighted clone if it exists; it sits in the same place).
+    /** @type {HTMLElement} */ const targetElement = verseInfo.highlightedVerseElement ?? verseInfo.verseElement;
+    // noinspection JSUnresolvedReference
+    if (typeof targetElement.scrollIntoViewIfNeeded === 'function') {
+        targetElement.scrollIntoViewIfNeeded({behavior: 'smooth', block: 'center'});
+    } else {
+        targetElement.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
 }
 
 /**
@@ -931,6 +986,10 @@ function addChapterData(...chapterData) {
     lastAddedChapterIndexInBook++;
     addedChaptersCount++;
     bookNameToChaptersCount[lastAddedBookName] = lastAddedChapterIndexInBook;
+
+    // Retry any hash-driven transition that was waiting for enough verses to load
+    //  (e.g. "verse=N" needs N + 200 verses in the DOM before we can simulate the click).
+    applyHashState();
 }
 
 // noinspection JSUnusedGlobalSymbols
@@ -949,36 +1008,57 @@ function bibleDataAdded() {
     /** @type {HTMLElement} */ const infoIconElement = document.querySelector(`.info-attention-bubble`);
     infoIconElement.style.opacity = '0';
     setTimeout(() => infoIconElement.style.display = 'none', 500);
-}
 
-function clearSearch() {
-    setCentralLeftVisibilityAndClear(false);
-    showMessage('', 'bottom-bar');
-    document.querySelectorAll('.highlighted-verse').forEach((/** @type {HTMLElement} */ element) => element.remove());
+    // Now that every verse is in the DOM, run any still-pending hash-driven transition
+    //  (the main one being a page-load "search=..." query) and enable scroll tracking.
+    applyHashState();
 }
 
 /**
- * Perform research by the value in the search-box.
+ * Clear the current search by removing search + search-filter from the URL hash.
+ * The visual cleanup (hiding the sidebar, removing highlighted-verse clones) happens in
+ *  clearSearchVisuals(), which is invoked from applyHashState() when "search" disappears from the hash.
+ */
+function clearSearch() {
+    setHashState({search: undefined, searchFilter: undefined});
+}
+
+function clearSearchVisuals() {
+    setCentralLeftVisibilityAndClear(false);
+    showMessage('', 'bottom-bar');
+    document.querySelectorAll('.highlighted-verse').forEach((/** @type {HTMLElement} */ element) => element.remove());
+    for (const verseInfo of allVerses) {
+        delete verseInfo.highlightedVerseElement;
+    }
+}
+
+/**
+ * Handler for the search-form submit, double-click-word, and recent-search click.
+ * Reads the search-box and pushes the new query into the URL hash; the actual search runs
+ *  from applyHashState() → executeSearch().
  * @param {{preventDefault: ()=>void}?} event
  */
 function performSearch(event) {
     event?.preventDefault(); // stops the page reload
+    /** @type {HTMLInputElement} */ const searchInputElement = document.getElementById('search-input');
+    setRecentSearchesVisibility(false);
+    timeNearWhichToNotShowRecentSearches = Date.now();
+    searchInputElement.focus();
+    // A fresh query invalidates any existing group-filter.
+    setHashState({search: searchInputElement.value, searchFilter: undefined});
+}
 
+/**
+ * Run the search currently stored in the URL hash (`search` + optional `search-filter`).
+ * Populates the sidebar, clones matched verses as highlighted-verse elements into the main area,
+ *  and updates recent-searches in localStorage.
+ * Called from applyHashState() — never write to the hash from here.
+ */
+function executeSearch() {
     /** @type {HTMLInputElement} */ const searchInputElement = document.getElementById('search-input');
     /** @type {HTMLElement} */ const searchResultsElement = document.querySelector('.search-results');
     /** @type {HTMLElement} */ const centralLeftElement = document.querySelector('.central-left');
     const searchQuery = searchInputElement.value;
-    setRecentSearchesVisibility(false);
-
-    // Reset the per-<...>-group checkbox exclusions whenever the query text changes.
-    if (searchQuery !== lastSearchQueryForStrongFilters) {
-        strongNumberExclusions.clear();
-        lastSearchQueryForStrongFilters = searchQuery;
-    }
-
-    // Set the focus back to the input-field.
-    timeNearWhichToNotShowRecentSearches = Date.now();
-    searchInputElement.focus();
 
     // Maintain localStorage.recentSearches: move/append the current search at the end.
     const recentSearchesObject = Object.fromEntries(recentSearches.map(recentSearch => [recentSearch, true]));
@@ -994,8 +1074,8 @@ function performSearch(event) {
     localStorage.recentSearches = JSON.stringify(recentSearches);
     initRecentSearches(false);
 
-    // Show the verbatim search-query on the left sidebar
-    clearSearch();
+    // Show the verbatim search-query on the left sidebar (clear prior visuals first).
+    clearSearchVisuals();
     setCentralLeftVisibilityAndClear(true);
     showMessage(`חיפוש: <code>${escapeHtml(searchQuery)}</code>`, 'search-results');
 
@@ -1102,11 +1182,8 @@ function performSearch(event) {
             }
             /** @type {HTMLElement} */ const searchMatchElement = verseInfo.verseElement.cloneNode(false);
             resetVerseElementBehaviour(searchMatchElement);
-            searchMatchElement.addEventListener('click', () => {
-                // When a search-result is clicked - scroll the relevant verse into view, and highlight it.
-                // noinspection JSUnresolvedReference
-                highlightedVerseElement.scrollIntoViewIfNeeded({behavior: 'smooth', block: 'center'});
-            });
+            // Note: the click-handler attached by resetVerseElementBehaviour writes verse=X into the
+            //  URL hash, and applyVerseSelection() then scrolls the highlighted clone into view.
             searchMatchElement.classList.add('highlighted-verse');
             searchMatchElement.innerHTML = fixVisibleVerse(
                 verseInfo.words
@@ -1430,6 +1507,273 @@ function getHashParameter(parameterName) {
     const hash = document.location.hash;
     const match = hash.match(new RegExp(`(?<=[#&])${encodeURIComponent(parameterName)}(=([^&]*))?(?:&|$)`));
     return match ? decodeURIComponent(match[2]) : undefined;
+}
+
+// ----------------------------------------------------------------------------
+// Hash-as-state layer
+//
+// The URL hash is the single source of truth for search + verse-selection + scroll position.
+// User actions write new hash values via setHashState(); applyHashState() diffs the hash against
+// lastAppliedHashState and runs only the needed transitions. Called:
+//   - once at the end of domIsLoaded() (initial apply)
+//   - on every popstate / hashchange (user hits back/forward, or the hash is edited)
+//   - after each addChapterData() and after bibleDataAdded() (retries deferred transitions
+//     once enough data has loaded)
+//   - directly after setHashState() (pushState/replaceState don't fire hashchange)
+// ----------------------------------------------------------------------------
+
+/**
+ * Read the current hash-driven state.
+ * @returns {{search?: string, searchFilter?: string, verse?: number, scroll?: number}}
+ */
+function getHashState() {
+    const verseRaw = getHashParameter('verse');
+    const scrollRaw = getHashParameter('scroll');
+    return {
+        search: getHashParameter('search'),
+        searchFilter: getHashParameter('search-filter'),
+        verse: (verseRaw !== undefined) ? parseInt(verseRaw) : undefined,
+        scroll: (scrollRaw !== undefined) ? parseInt(scrollRaw) : undefined,
+    };
+}
+
+/**
+ * Update the URL hash with the given partial state and invoke applyHashState().
+ * Use {replace: true} for continuous updates (e.g. scroll tracking) so history isn't cluttered.
+ * Use {recordAsApplied: true} to mark the new values as already-applied, suppressing the
+ *  corresponding apply-side effects — useful when the side-effect has already physically occurred
+ *  (e.g. scroll tracker: the scroll already happened, writing the hash is purely bookkeeping).
+ *
+ * @param {{search?: string|undefined, searchFilter?: string|undefined, verse?: number|undefined, scroll?: number|undefined}} partial
+ * @param {{replace?: boolean, recordAsApplied?: boolean}} [opts]
+ */
+function setHashState(partial, opts) {
+    const replace = !!(opts && opts.replace);
+    const recordAsApplied = !!(opts && opts.recordAsApplied);
+    const hashKeyByStateKey = {search: 'search', searchFilter: 'search-filter', verse: 'verse', scroll: 'scroll'};
+
+    // Start from the current hash string, then remove/replace managed keys.
+    let hash = document.location.hash;
+    for (const [stateKey, value] of Object.entries(partial)) {
+        const hashKey = hashKeyByStateKey[stateKey];
+        if (!hashKey) continue;
+        hash = hash.replace(new RegExp(`(?<=[#&])${encodeURIComponent(hashKey)}(=([^&]*))?(?=&|$)`), '');
+        if (value !== undefined && value !== null && value !== '') {
+            const separator = (hash === '' || hash === '#') ? '#' : '&';
+            hash += `${separator}${encodeURIComponent(hashKey)}=${encodeURIComponent(String(value))}`;
+        }
+    }
+    hash = hash.replace(/&+/g, '&').replace(/&$/, '').replace(/^#&/, '#');
+    if (hash === '#') hash = '';
+    if (hash === document.location.hash) {
+        return;
+    }
+
+    const newUrl = document.location.pathname + document.location.search + hash;
+    if (replace) {
+        history.replaceState(null, '', newUrl);
+    } else {
+        history.pushState(null, '', newUrl);
+    }
+
+    // For purely informational writes (e.g. scroll tracker recording the current mid-screen verse),
+    //  mark the values as applied so applyHashState() won't re-run their side-effects.
+    if (recordAsApplied) {
+        const stateKeys = ['search', 'searchFilter', 'verse', 'scroll'];
+        const stateAfterWrite = getHashState();
+        for (const key of stateKeys) {
+            if (key in partial) {
+                lastAppliedHashState[key] = stateAfterWrite[key];
+            }
+        }
+    }
+    applyHashState();
+}
+
+/**
+ * Serialize a Strong-number exclusions map into a compact URL-safe string.
+ * Format: "groupIdx-strong1.strong2~groupIdx-strong3..."   (empty groups are omitted)
+ * @param {Map<number, Set<number>>} exclusions
+ * @returns {string}
+ */
+function serializeSearchFilter(exclusions) {
+    const parts = [];
+    for (const [groupIdx, strongs] of exclusions) {
+        if (strongs.size === 0) continue;
+        parts.push(`${groupIdx}-${[...strongs].sort((a, b) => a - b).join('.')}`);
+    }
+    return parts.join('~');
+}
+
+/**
+ * Parse the string produced by serializeSearchFilter() back into a Map.
+ * @param {string} str
+ * @returns {Map<number, Set<number>>}
+ */
+function deserializeSearchFilter(str) {
+    const map = new Map();
+    if (!str) return map;
+    for (const groupPart of str.split('~')) {
+        const dashIdx = groupPart.indexOf('-');
+        if (dashIdx < 0) continue;
+        const groupIdx = parseInt(groupPart.substring(0, dashIdx));
+        if (!Number.isFinite(groupIdx)) continue;
+        const strongs = groupPart.substring(dashIdx + 1).split('.')
+            .map(s => parseInt(s))
+            .filter(n => Number.isFinite(n));
+        map.set(groupIdx, new Set(strongs));
+    }
+    return map;
+}
+
+/**
+ * The central apply function. Diffs the hash against lastAppliedHashState and runs only the
+ * needed transitions. Idempotent: re-entry and repeated calls are safe (deferred transitions
+ * stay in the diff until the relevant data is loaded).
+ */
+function applyHashState() {
+    if (isApplyingHashState) return;
+    isApplyingHashState = true;
+    try {
+        const state = getHashState();
+        const prev = lastAppliedHashState;
+
+        // Keep the search-input in sync with the hash, even if we can't run the search yet
+        //  (e.g. on initial load before all data is ready).
+        /** @type {HTMLInputElement} */ const searchInputElement = document.getElementById('search-input');
+        if (searchInputElement && state.search !== undefined && searchInputElement.value !== state.search) {
+            searchInputElement.value = state.search;
+            localStorage.lastSearchText = state.search;
+        }
+
+        // --- search / search-filter ---
+        const searchChanged = state.search !== prev.search;
+        const filterChanged = state.searchFilter !== prev.searchFilter;
+        if (searchChanged || filterChanged) {
+            if (state.search === undefined) {
+                // Search cleared.
+                strongNumberExclusions.clear();
+                if (prev.search !== undefined) {
+                    clearSearchVisuals();
+                }
+                lastAppliedHashState.search = undefined;
+                lastAppliedHashState.searchFilter = undefined;
+            } else if (allDataWasAdded) {
+                // Rebuild the exclusions map from the hash.
+                strongNumberExclusions.clear();
+                if (state.searchFilter) {
+                    for (const [gi, strongs] of deserializeSearchFilter(state.searchFilter)) {
+                        strongNumberExclusions.set(gi, strongs);
+                    }
+                }
+                // Preserve sidebar scroll when only the filter changed (checkbox toggle);
+                //  a fresh query resets scroll to top (current executeSearch() behavior).
+                /** @type {HTMLElement} */ const centralLeftElement = document.querySelector('.central-left');
+                const savedScroll = (!searchChanged && filterChanged) ? centralLeftElement.scrollTop : null;
+                executeSearch();
+                if (savedScroll !== null) centralLeftElement.scrollTop = savedScroll;
+                lastAppliedHashState.search = state.search;
+                lastAppliedHashState.searchFilter = state.searchFilter;
+            }
+            // else: data still loading; retry on next load milestone.
+        }
+
+        // --- verse selection ---
+        const verseChanged = state.verse !== prev.verse;
+        if (verseChanged) {
+            if (state.verse === undefined) {
+                document.querySelectorAll('.recently-clicked-verse').forEach(
+                    (/** @type {HTMLElement} */ el) => el.classList.remove('recently-clicked-verse')
+                );
+                // Clear the pinned copy-icons from the bottom bar so mouse-hover can update it again.
+                lastVerseMouseEnterTime = 0;
+                showMessage('', 'bottom-bar');
+                lastAppliedHashState.verse = undefined;
+            } else if (allDataWasAdded || (state.verse + 200 < allVerses.length)) {
+                // Per spec: simulate the click after the verse *and the next 200 verses* are loaded.
+                if (state.verse >= 0 && state.verse < allVerses.length) {
+                    applyVerseSelection(state.verse);
+                }
+                lastAppliedHashState.verse = state.verse;
+            }
+            // else: defer.
+        }
+
+        // --- scroll (only honored when verse is not set) ---
+        const scrollChanged = state.scroll !== prev.scroll;
+        if (scrollChanged) {
+            if (state.scroll === undefined) {
+                lastAppliedHashState.scroll = undefined;
+            } else if (state.verse === undefined &&
+                       (allDataWasAdded || (state.scroll + 200 < allVerses.length))) {
+                if (state.scroll >= 0 && state.scroll < allVerses.length) {
+                    const verseInfo = allVerses[state.scroll];
+                    if (verseInfo) {
+                        verseInfo.verseElement.scrollIntoView({block: 'center'});
+                    }
+                }
+                lastAppliedHashState.scroll = state.scroll;
+            }
+            // else: defer (or: verse is set, scroll is ignored and not recorded as applied).
+        }
+
+        // Once all data is loaded AND all deferred transitions have been applied, start tracking
+        //  user-initiated scroll events (writing them back to the "scroll" hash param).
+        if (allDataWasAdded && !scrollTrackingEnabled &&
+            lastAppliedHashState.search === state.search &&
+            lastAppliedHashState.searchFilter === state.searchFilter &&
+            lastAppliedHashState.verse === state.verse &&
+            lastAppliedHashState.scroll === state.scroll) {
+            scrollTrackingEnabled = true;
+        }
+    } finally {
+        isApplyingHashState = false;
+    }
+}
+
+/**
+ * Find the verse-index whose element is at the vertical center of the main scroll container.
+ * @returns {number | null}
+ */
+function getMidScreenVerseIndex() {
+    /** @type {HTMLElement} */ const container = document.querySelector('.central-right');
+    if (!container) return null;
+    const rect = container.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+    /** @type {HTMLElement} */ let el = document.elementFromPoint(x, y);
+    while (el && (!el.classList || !el.classList.contains('verse'))) {
+        el = el.parentElement;
+    }
+    if (!el) return null;
+    const idx = parseInt(el.dataset.index);
+    return Number.isFinite(idx) ? idx : null;
+}
+
+/**
+ * rAF-throttled handler for user-initiated scroll on .central-right. Writes the mid-screen verse
+ *  index into the "scroll" hash param (via history.replaceState — no history clutter).
+ * Suppressed while initial hash state is still being applied and while no verse is under the
+ *  cursor position.
+ */
+function handleCentralRightScroll() {
+    if (!scrollTrackingEnabled) return;
+    if (scrollRafPending) return;
+    scrollRafPending = true;
+    requestAnimationFrame(() => {
+        scrollRafPending = false;
+        if (!scrollTrackingEnabled) return;
+        const idx = getMidScreenVerseIndex();
+        if (idx === null) return;
+        const state = getHashState();
+        // Avoid redundant writes: if the pinned verse already sits at mid-screen, don't add a
+        //  scroll= that duplicates it; if scroll= already matches, nothing to do.
+        if (state.scroll === idx) return;
+        if (state.verse === idx && state.scroll === undefined) return;
+        // The scroll already physically happened — just record it; don't let applyHashState()
+        //  re-scroll in response.
+        setHashState({scroll: idx}, {replace: true, recordAsApplied: true});
+    });
 }
 
 /**
