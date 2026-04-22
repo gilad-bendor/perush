@@ -29,7 +29,7 @@ export class TabData {
     }
 
     updateTitle() {
-        /** @type {Text} */(this.tabElement.firstChild).data = this.isDirty
+        /** @type {Text} */(this.tabElement.lastChild).data = this.isDirty
                 ? `${this.fileName} •`
                 : this.fileName;
     }

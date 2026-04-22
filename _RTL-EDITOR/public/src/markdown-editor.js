@@ -197,6 +197,7 @@ export class MarkdownEditor {
             markdown(),
             markdownHighlighting,
             listLinePlugin,
+            // @ts-ignore
             ...specialKeyHandling.map((keyRun) => Prec.high(keymap.of([keyRun]))),
             keymap.of([indentWithTab]),
             this.directionCompartment.of(EditorView.contentAttributes.of({ dir: isRtl ? 'rtl' : 'ltr' })),
@@ -277,18 +278,26 @@ export class MarkdownEditor {
             // When the scroller has a vertical scrollbar, it takes space from the right side.
             // RTL text shifts left accordingly, but CodeMirror's cursor/selection layers
             // don't account for this shift. We compensate by translating those layers.
-            extensions.push(ViewPlugin.fromClass(class {
-                constructor(/** @type {EditorView} */ view) { this.adjustLayers(view); }
-                update(/** @type {{view: EditorView}} */ update) { this.adjustLayers(update.view); }
-                adjustLayers(/** @type {EditorView} */ view) {
-                    const scrollbarWidth = view.scrollDOM.offsetWidth - view.scrollDOM.clientWidth;
-                    const transform = scrollbarWidth > 0 ? `translateX(${scrollbarWidth}px)` : '';
-                    for (const sel of '.cm-cursorLayer,.cm-selectionLayer'.split(',')) {
-                        const el = /** @type {HTMLElement | null} */ (view.dom.querySelector(sel));
-                        if (el) el.style.transform = transform;
+            extensions.push(ViewPlugin.fromClass(
+                // @ts-ignore
+                class {
+                    constructor(/** @type {EditorView} */ view) {
+                        this.adjustLayers(view);
                     }
-                }
-            }));
+
+                    update(/** @type {{view: EditorView}} */ update) {
+                        this.adjustLayers(update.view);
+                    }
+
+                    adjustLayers(/** @type {EditorView} */ view) {
+                        const scrollbarWidth = view.scrollDOM.offsetWidth - view.scrollDOM.clientWidth;
+                        const transform = scrollbarWidth > 0 ? `translateX(${scrollbarWidth}px)` : '';
+                        for (const sel of '.cm-cursorLayer,.cm-selectionLayer'.split(',')) {
+                            const el = /** @type {HTMLElement | null} */ (view.dom.querySelector(sel));
+                            if (el) el.style.transform = transform;
+                        }
+                    }
+                }));
         }
 
         return new EditorView({
@@ -396,7 +405,7 @@ export class MarkdownEditor {
                 // Create the tab-title element.
                 const tabElement = document.createElement('button');
                 tabElement.className = 'tab';
-                tabElement.innerHTML = `[title-will-be-set-shortly]<span class="tab-close">&times;</span>`;
+                tabElement.innerHTML = `<span class="tab-close">&times;</span>[title-will-be-set-shortly]`;
                 /** @type {HTMLElement} */ (tabElement.querySelector('.tab-close')).addEventListener('click', (event) => {
                     event.stopPropagation();
                     this.closeTab(filePath).catch(consoleError);
@@ -562,6 +571,7 @@ export class MarkdownEditor {
 // Plugin to add class to list lines for hanging indent and multi-level support
 // noinspection JSUnusedGlobalSymbols
 const listLinePlugin = ViewPlugin.fromClass(
+    // @ts-ignore
     class {
         constructor(/** @type {EditorView} */ view) {
             this.decorations = this.buildDecorations(view);
