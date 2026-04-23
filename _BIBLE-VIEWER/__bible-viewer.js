@@ -444,7 +444,7 @@ function initStrongFilterControls() {
      */
     function commitExclusions(newExclusions) {
         const isNatural = [...newExclusions.values()].every(set => set.size === 0);
-        setHashState({searchFilter: isNatural ? undefined : serializeSearchFilter(newExclusions)});
+        setHashState({searchFilter: isNatural ? null : serializeSearchFilter(newExclusions)});
     }
 
     /** @returns {Map<number, Set<number>>} */
@@ -1118,7 +1118,7 @@ function bibleDataAdded() {
  *  clearSearchVisuals(), which is invoked from applyHashState() when "search" disappears from the hash.
  */
 function clearSearch() {
-    setHashState({search: undefined, searchFilter: undefined});
+    setHashState({search: null, searchFilter: null});
 }
 
 function clearSearchVisuals() {
@@ -1143,7 +1143,7 @@ function performSearch(event) {
     timeNearWhichToNotShowRecentSearches = Date.now();
     searchInputElement.focus();
     // A fresh query invalidates any existing group-filter.
-    setHashState({search: searchInputElement.value, searchFilter: undefined});
+    setHashState({search: searchInputElement.value || null, searchFilter: null});
 }
 
 /**
@@ -1511,10 +1511,12 @@ function fixVisibleVerse(verseWithPointsAndAccents, bookName, chapterHebrewNumbe
 
 /**
  * This function only lives in the browser:
- * Scroll the biblical text to the top.
+ * Scroll the biblical text to the top, un-pinning any selected verse.
  */
 function scrollToTop() {
     document.querySelector('.central-right').scrollTop = 0;
+    // Clear the hash-parameters "verse" and "scroll" - but only in 1 second - after the scroll is done.
+    setTimeout(() => setHashState({verse: null, scroll: null}), 100);
 }
 
 /**
@@ -1637,12 +1639,16 @@ function getHashState() {
 
 /**
  * Update the URL hash with the given partial state and invoke applyHashState().
+ * For each key in `partial`:
+ *   - `undefined` → no effect (leave the hash-parameter untouched);
+ *   - `null` → clear the hash-parameter;
+ *   - any other value → write that value.
  * Use {replace: true} for continuous updates (e.g. scroll tracking) so history isn't cluttered.
  * Use {recordAsApplied: true} to mark the new values as already-applied, suppressing the
  *  corresponding apply-side effects — useful when the side-effect has already physically occurred
  *  (e.g. scroll tracker: the scroll already happened, writing the hash is purely bookkeeping).
  *
- * @param {{search?: string|undefined, searchFilter?: string|undefined, verse?: number|undefined, scroll?: number|undefined}} partial
+ * @param {{search?: string|null, searchFilter?: string|null, verse?: number|null, scroll?: number|null}} partial
  * @param {{replace?: boolean, recordAsApplied?: boolean}} [opts]
  */
 function setHashState(partial, opts) {
@@ -1655,8 +1661,9 @@ function setHashState(partial, opts) {
     for (const [stateKey, value] of Object.entries(partial)) {
         const hashKey = hashKeyByStateKey[stateKey];
         if (!hashKey) continue;
+        if (value === undefined) continue;
         hash = hash.replace(new RegExp(`(?<=[#&])${encodeURIComponent(hashKey)}(=([^&]*))?(?=&|$)`), '');
-        if (value !== undefined && value !== null && value !== '') {
+        if (value !== null) {
             const separator = (hash === '' || hash === '#') ? '#' : '&';
             hash += `${separator}${encodeURIComponent(hashKey)}=${encodeURIComponent(String(value))}`;
         }
