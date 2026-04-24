@@ -1393,23 +1393,23 @@ function expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs,
     //  so the user can narrow the search to a subset without re-typing.
     const showSelectAllButtons = (matchingStrongNumbers.length > 2);
     const controlsHtml = showSelectAllButtons
-        ? `\n    <span class="strong-filter-controls" data-group-index="${groupIndex}">` +
+        ? `<div class="strong-filter-controls" data-group-index="${groupIndex}">` +
           `<button type="button" class="strong-filter-button" data-action="select-all">בחר הכל</button>` +
           ` <button type="button" class="strong-filter-button" data-action="deselect-all">נקה הכל</button>` +
-          `</span>`
+          `</div>`
         : '';
     const linesHtml = matchingStrongNumbers.map(strongNumber => {
         const isChecked = !excludedSet.has(strongNumber);
-        return `\n    <label class="strong-filter-line">` +
+        return `<div class="strong-filter-line">` +
                `<input type="checkbox" class="strong-filter-checkbox"` +
                ` data-group-index="${groupIndex}" data-strong="${strongNumber}"${isChecked ? ' checked' : ''}>` +
                `<a class="biblehub-reference" href="https://biblehub.com/hebrew/${strongNumber}.htm" target="_blank">H${strongNumber}</a>` +
                `  =  ${strongNumbersToData[strongNumber][0]}  (${hebrewWordTypesVisual[strongNumbersToData[strongNumber][1]]})` +
-               `</label>`;
+               `</div>`;
     }).join('');
     showMessage(
-        `<code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code>` +
-        controlsHtml + linesHtml,
+        controlsHtml + linesHtml +
+        `<div class="search-regexp-evolution"><code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code></div>`,
         'search-results');
 
     // If the user has unchecked every Strong-number in this group, there is nothing to search for.
