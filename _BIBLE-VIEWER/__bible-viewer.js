@@ -546,7 +546,7 @@ function captureCopyToClipboard() {
                 /** @type {HTMLElement} */ let verseElement;
                 for (verseElement = node.parentElement; verseElement && !verseElement.classList.contains('verse'); verseElement = verseElement.parentElement) {
                 }
-                const verseIndex = parseInt(verseElement?.dataset?.index) ?? null;
+                const verseIndex = verseElement ? parseInt(verseElement?.dataset?.index) ?? null : null;
                 encounteredVerseIndex(verseIndex);
 
                 // Add the text-excerpt.
