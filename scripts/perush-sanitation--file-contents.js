@@ -8,9 +8,13 @@ const path = require('path');
 // Ensure we're running from the repo's base directory
 process.chdir(path.join(__dirname, '..'));
 
-const BASE_DIR_PERUSH = './פירוש';
-const BASE_DIR_LINGUAL = './ניתוחים-לשוניים';
-const BASE_DIR_APPENDIX = './נספחים-לפירוש';
+const BASE_DIR_PERUSH = 'פירוש';
+const BASE_DIR_LINGUAL = 'ניתוחים-לשוניים';
+const BASE_DIR_APPENDIX = 'נספחים-לפירוש';
+const EXCLUDED_PATHS = new Set([
+    `${BASE_DIR_LINGUAL}/=== פרומפט תבניתי למחקר כללי ===.rtl.md`,
+    `${BASE_DIR_LINGUAL}/=== פרומפט תבניתי למחקר ניתוח-לשוני ===.rtl.md`,
+]);
 
 /** @typedef {'PERUSH' | 'LINGUAL' | 'APPENDIX'} FileType */
 /** @type {FileType} */ const FILE_TYPE_PERUSH = 'PERUSH';
@@ -63,7 +67,7 @@ function readDirectory(dir, fileType) {
         const filePath = path.join(dir, entry.name);
         if (entry.isDirectory()) {
             readDirectory(filePath, fileType);
-        } else if (entry.isFile() && entry.name.endsWith('.rtl.md')) {
+        } else if (entry.isFile() && entry.name.endsWith('.rtl.md') && !EXCLUDED_PATHS.has(filePath)) {
             console.log(`Reading file:    ${filePath}`);
             const originalContent = fs.readFileSync(filePath, 'utf8');
             filesInfo.set(filePath, { fileType, filePath, originalContent, effectiveContent: originalContent, errors: [] });

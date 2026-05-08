@@ -277,7 +277,7 @@ async function task2() {
                 throw new Error(`No verses found`);
             }
             filesArray.push(fileInfo);
-            console.log(`  Processed ${file.fileName}: ${fileInfo.locations.length} verses`);
+            console.log(`  Processed ${file.fullPath}: ${fileInfo.locations.length} verses`);
         } catch (error) {
             console.error(`Error processing ${file.fullPath}:`, error.message);
             throw error;
