@@ -489,10 +489,10 @@ function addBibleTextToHtml() {
     html.push('\n\n<script> ');
     for (const hebrewBookName of hebrewBookNames) {
         const bookData = bookNamesToData[hebrewBookName];
-        html.push('addBookData(', JSON.stringify(hebrewBookName), ');\n');
+        html.push('\n', 'addBookData(', JSON.stringify(hebrewBookName), ');');
         if (!FILTER_LOADED_BOOKS_REGEXP || hebrewBookName.match(FILTER_LOADED_BOOKS_REGEXP)) {
             for (const [chapterIndex, chaptersData] of bookData.entries()) {
-                html.push('addChapterData( // ', numberToHebrew(chapterIndex), '\n');
+                html.push('\n', 'addChapterData( // ', numberToHebrew(chapterIndex), '\n');
                 for (const [verseIndex, verseData] of chaptersData.entries()) {
                     const base64EncodedVerse = encodeWordsWithStrongNumbers(verseData);
                     html.push('    ', JSON.stringify(base64EncodedVerse), ', // ', numberToHebrew(verseIndex), '\n');
@@ -500,12 +500,12 @@ function addBibleTextToHtml() {
                 html.push(');');
                 addedChaptersCount++;
                 if (addedChaptersCount % 10 === 0) {
-                    html.push(' </script><script> ');
+                    html.push('\n</script><script> ');
                 }
             }
         }
     }
-    html.push('\n bibleDataAdded(); </script>\n');
+    html.push('\n\n', 'bibleDataAdded();\n</script>\n');
 }
 
 

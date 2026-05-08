@@ -136,6 +136,30 @@ function escapeHtml(text) {
         .replace(/\n/g, '&#10;');
 }
 
+function resizeHandler() {
+    // #_MOBILE_FIX_# Instead of setting the <body> to use "flex" with "height: 100vh" (which causes problems with mobile)
+    //  we set the footer as "position:fixed; bottom: 0" and dynamically resize the central-area.
+    /** @type {HTMLElement} */ const footerElement = document.querySelector('.footer');
+    document.documentElement.style.setProperty('--footer-height', footerElement.clientHeight + 'px');
+    document.documentElement.style.setProperty('--central-area-height', (window.innerHeight - footerElement.clientHeight) + 'px');
+
+    // Pin viewport dimensions to explicit pixel values so CSS rules that reference
+    //  --viewport-width / --viewport-height (in place of 100vw / 100vh) don't reflow on
+    //  every browser-fired resize event — only when this throttled handler runs.
+    document.documentElement.style.setProperty('--viewport-width', document.documentElement.clientWidth + 'px');
+    document.documentElement.style.setProperty('--viewport-height', document.documentElement.clientHeight + 'px');
+// // Pin <body>'s pixel size to match <html> — children using %-sizing stay stable between
+// //  throttled ticks instead of reflowing on every browser-fired resize event.
+// document.body.style.width = document.documentElement.clientWidth + 'px';
+// document.body.style.height = document.documentElement.clientHeight + 'px';
+
+    // Also adjust the font-size according to viewport width (so high-resolution screens look better).
+    // Linearly interpolates the --root-font-size CSS variable from the viewport width:
+    //   width=1382px → 20px  (= 125% of the default 16px browser font-size)
+    //   width=2480px → 24px  (= 150%)
+    const fontSizePx = 20 + (window.innerWidth - 1382) * 4 / 1098;
+    document.documentElement.style.setProperty('--root-font-size', fontSizePx + 'px');
+}
 
 
 
@@ -149,42 +173,6 @@ function escapeHtml(text) {
  */
 function domIsLoaded() {
     showMessage(`הדף בטעינה...`, 'bottom-bar');
-
-    function resizeHandler() {
-        // #_MOBILE_FIX_# Instead of setting the <body> to use "flex" with "height: 100vh" (which causes problems with mobile)
-        //  we set the footer as "position:fixed; bottom: 0" and dynamically resize the central-area.
-        /** @type {HTMLElement} */ const footerElement = document.querySelector('.footer');
-        document.documentElement.style.setProperty('--footer-height', footerElement.clientHeight + 'px');
-        document.documentElement.style.setProperty('--central-area-height', (window.innerHeight - footerElement.clientHeight) + 'px');
-
-        // Pin viewport dimensions to explicit pixel values so CSS rules that reference
-        //  --viewport-width / --viewport-height (in place of 100vw / 100vh) don't reflow on
-        //  every browser-fired resize event — only when this throttled handler runs.
-        document.documentElement.style.setProperty('--viewport-width', document.documentElement.clientWidth + 'px');
-        document.documentElement.style.setProperty('--viewport-height', document.documentElement.clientHeight + 'px');
-// // Pin <body>'s pixel size to match <html> — children using %-sizing stay stable between
-// //  throttled ticks instead of reflowing on every browser-fired resize event.
-// document.body.style.width = document.documentElement.clientWidth + 'px';
-// document.body.style.height = document.documentElement.clientHeight + 'px';
-
-        // Also adjust the font-size according to viewport width (so high-resolution screens look better).
-        // Linearly interpolates the --root-font-size CSS variable from the viewport width:
-        //   width=1382px → 20px  (= 125% of the default 16px browser font-size)
-        //   width=2480px → 24px  (= 150%)
-        const fontSizePx = 20 + (window.innerWidth - 1382) * 4 / 1098;
-        document.documentElement.style.setProperty('--root-font-size', fontSizePx + 'px');
-    }
-    // Throttle (not debounce): updating these CSS vars reflows the entire verse-DOM, so while
-    //  the user is dragging the window we coalesce updates to at most one per RESIZE_THROTTLE_MS.
-    let resizeHandlerTimeoutId = 0;
-    window.addEventListener('resize', () => {
-        if (resizeHandlerTimeoutId) return;
-        resizeHandlerTimeoutId = setTimeout(() => {
-            resizeHandlerTimeoutId = 0;
-            resizeHandler();
-        }, RESIZE_THROTTLE_MS);
-    });
-    resizeHandler();
 
     // Finalize the HTML in the information-dialog.
     initInfoDialog();
@@ -273,6 +261,18 @@ function domIsLoaded() {
     // Initial apply of whatever state is already in the URL hash (search-query pre-fills the input,
     //  other transitions are deferred until their data loads).
     applyHashState();
+
+    // Throttle (not debounce): updating these CSS vars reflows the entire verse-DOM, so while
+    //  the user is dragging the window we coalesce updates to at most one per RESIZE_THROTTLE_MS.
+    let resizeHandlerTimeoutId = 0;
+    window.addEventListener('resize', () => {
+        if (resizeHandlerTimeoutId) return;
+        resizeHandlerTimeoutId = setTimeout(() => {
+            resizeHandlerTimeoutId = 0;
+            resizeHandler();
+        }, RESIZE_THROTTLE_MS);
+    });
+    resizeHandler();
 }
 
 /**
@@ -1110,6 +1110,8 @@ function bibleDataAdded() {
     // Now that every verse is in the DOM, run any still-pending hash-driven transition
     //  (the main one being a page-load "search=..." query) and enable scroll tracking.
     applyHashState();
+
+    resizeHandler();
 }
 
 /**
