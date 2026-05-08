@@ -148,10 +148,6 @@ function resizeHandler() {
     //  every browser-fired resize event — only when this throttled handler runs.
     document.documentElement.style.setProperty('--viewport-width', document.documentElement.clientWidth + 'px');
     document.documentElement.style.setProperty('--viewport-height', document.documentElement.clientHeight + 'px');
-// // Pin <body>'s pixel size to match <html> — children using %-sizing stay stable between
-// //  throttled ticks instead of reflowing on every browser-fired resize event.
-// document.body.style.width = document.documentElement.clientWidth + 'px';
-// document.body.style.height = document.documentElement.clientHeight + 'px';
 
     // Also adjust the font-size according to viewport width (so high-resolution screens look better).
     // Linearly interpolates the --root-font-size CSS variable from the viewport width:
@@ -160,12 +156,6 @@ function resizeHandler() {
     const fontSizePx = 20 + (window.innerWidth - 1382) * 4 / 1098;
     document.documentElement.style.setProperty('--root-font-size', fontSizePx + 'px');
 }
-
-
-
-
-
-
 
 /**
  * This function only lives in the browser:
@@ -1063,7 +1053,7 @@ function addChapterData(...chapterData) {
         verseElement.dataset.chapter = String(lastAddedChapterIndexInBook);
         verseElement.dataset.verse = String(verseIndex);
         verseElement.dataset.index = String(allVerses.length);
-        verseElement.dataset.searchable = searchableVerse; // TODO: remove if turns out to be slow
+        verseElement.dataset.searchable = searchableVerse; // Helpful for debug. This can be removed - but seems to have no slowing effect on page-load time.
         resetVerseElementBehaviour(verseElement);
         verseElement.appendChild(document.createTextNode(readableVerse));
         versesContainerElement.appendChild(verseElement);
@@ -1100,7 +1090,7 @@ function bibleDataAdded() {
 
     // All books have been added: mark the page as loaded.
     allDataWasAdded = true;
-    showMessage('', 'bottom-bar');
+    showMessage(`הדף נטען - ${Math.round((Date.now() - performance.timing.navigationStart) / 100) / 10} שניות`, 'bottom-bar');
 
     // Stop the blinking of the info-icon attention-bubble.
     /** @type {HTMLElement} */ const infoIconElement = document.querySelector(`.info-attention-bubble`);

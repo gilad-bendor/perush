@@ -431,8 +431,18 @@ try {
     // Add actual Bible text: books --> chapters --> verses --> words-with-Strong-numbers
     addBibleTextToHtml();
 
+    // Tabs to spaces
+    let fullHtml = html.join('').replace(/[ \t]+$/gm, '');
+    for (;;) {
+        const replaced = fullHtml.replace(/^(\t*)    /gm, '$1\t');
+        if (fullHtml === replaced) {
+            break;
+        }
+        fullHtml = replaced;
+    }
+
     // Write the output file
-    fs.writeFileSync(BIBLE_VIEWER_OUTPUT_FILE, html.join(''), 'utf8');
+    fs.writeFileSync(BIBLE_VIEWER_OUTPUT_FILE, fullHtml, 'utf8');
     console.log(`Successfully built ${BIBLE_VIEWER_OUTPUT_FILE}`);
     process.exit(0);
 
@@ -677,8 +687,8 @@ function getSkeletonHtml() {
         .replace(
             /.*<!-- this will we auto-replaced: -->\n.*<script .*src="__bible-viewer.js"><\/script>/,
             () => // prevent auto-replacements
-                '    <script>\n' +
-                fs.readFileSync('__bible-viewer.js', 'utf8').replace(/^/gm, '        ') +
+                '<script>\n' +
+                fs.readFileSync('__bible-viewer.js', 'utf8').replace(/^/gm, '    ') +
                 '</script>\n'
         );
 }
