@@ -1400,8 +1400,19 @@ function expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs,
                `</div>`;
     }).join('');
     showMessage(
-        controlsHtml + linesHtml +
-        `<div class="search-regexp-evolution"><code>${escapeHtml(wholeMatch)}</code> מתורגם ל: <code>${escapeHtml(replacement)}</code></div>`,
+        [
+            controlsHtml,
+            linesHtml,
+            '<div class="search-regexp-evolution">',
+            '<code class="original-search-term">',
+            escapeHtml(wholeMatch),
+            '</code>',
+            onlyAllowVerbs ? ` (פעלים בלבד)` : '',
+            ' מתורגם ל: ',
+            '<code class="effective-search-term">',
+            escapeHtml(replacement),
+            '</code></div>',
+        ].join(''),
         'search-results');
 
     // If the user has unchecked every Strong-number in this group, there is nothing to search for.
