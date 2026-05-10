@@ -54,3 +54,39 @@
 התרגום נוהג להעניק למילים בטקסט משמעות לא אינטואיטיבית, אבל משמעות שמעוגנת היטב במהות של המילה: במקרים כאלה, הפירוש יכיל הפניה לקובץ ניתוח-לשוני - תחת התיקיה `./ניתוחים-לשוניים/`
 
 **חשוב:** במידה ואתה מוצא מילה מקראית שיש צורך למצות את המשמעות העמוקה שלה כדי להבין עומק של פסוק - בבקשה בקש ממני לבצע מחקר בלשני על המילה - ולהוסיף הפניה לקובץ הניתוח-הלשוני מתוך הפירוש.
+
+# עריכת קבצים עם ניקוד
+
+מאחר וההוראות טכניות וכוללות קוד ומונחים לועזיים - ההסברים להלן הם באנגלית:
+
+The Edit tool can fail with `String to replace not found` on Hebrew text that looks character-for-character identical to what Read returned. The cause is **Unicode combining-mark order**: niqqud (qamatz `ָ`, dagesh `ּ`, etc.) are combining marks, and the same visible word can be encoded with marks in different byte orders (e.g., letter+qamatz+dagesh vs. letter+dagesh+qamatz). Edit does exact byte matching and rejects strings that *look* right but differ in mark order. The error message is unhelpfully generic.
+
+**If Edit fails on Hebrew text with niqqud — do NOT retry with a re-typed `old_string`.** Re-typing reproduces the same wrong byte order. Switch to Python via Bash:
+
+1. Locate the target block using **niqqud-free anchors** — ASCII or unmarked Hebrew (e.g., `'- **כל** ='`, `'כל בהמה ובהמה״.'`). These match reliably regardless of mark order.
+2. Extract the block verbatim from the file with `content[start:end]` — don't retype the niqqud-bearing portion.
+3. Build the replacement (new niqqud you write is fine — its mark order needn't match anything pre-existing).
+4. `content.replace(old_block, new_block, 1)` and write back.
+
+```python
+path = '...'
+with open(path, 'r', encoding='utf-8') as f:
+    content = f.read()
+start = content.find('<niqqud-free start anchor>')
+end_anchor = '<niqqud-free end anchor>'
+end = content.find(end_anchor) + len(end_anchor)
+old_block = content[start:end]
+new_block = """..."""
+assert content.count(old_block) == 1
+content = content.replace(old_block, new_block, 1)
+with open(path, 'w', encoding='utf-8') as f:
+    f.write(content)
+```
+
+**Diagnostic** when two Hebrew strings look identical but don't match — find the first byte-level divergence:
+```python
+for i, (a, b) in enumerate(zip(actual, target)):
+    if a != b:
+        print(f"Diff at offset {i}: file={hex(ord(a))}, target={hex(ord(b))}")
+        break
+```
