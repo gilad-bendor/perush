@@ -104,15 +104,14 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 
 ## Important Additional Definitions
 
-- **אלהים** = a kind of indefinable force that pushes the world toward development in a certain direction - like the Hegelian concept "Weltgeist." Possibly derived from the preposition "אל" (toward), as in "אֵלֶיהֶם."
-- **יהוה** = the experience of reality as-it-is. Probably derived from the root "היה": הָיָה הוֹוֶה ויִהְיֶה (was, is, will be).
-- **יהוה אלהים** = the full reality — both the experience of how things are (`יהוה`) and the developmental force driving them somewhere (`אלהים`). Literal reading: "reality [that is also] directional."
+- **אלהים** = a kind of indefinable force that pushes the world toward development in a certain direction - like the Hegelian concept "Weltgeist". Possibly derived from the preposition "אל" (toward), as in "אֵלֶיהֶם".
+  **יהוה** = the experience of reality as-it-is. Probably derived from the root "היה": הָיָה הוֹוֶה ויִהְיֶה (was, is, will be).
+  **יהוה אלהים** = the full reality — both the experience of how things are (`יהוה`) and the developmental force driving them somewhere (`אלהים`). Literal reading: "reality *that is also* directional".
 
-  **The choice of divine name is a powerful reading signal — not a stylistic variation:**
-  - **`אלהים` alone**: the process is driven by developmental necessity — an impersonal force pushing culture forward (dominant in the Seven Days of Creation).
-  - **`יהוה` alone**: the process is driven by problems and pressures in existing reality — culture responds to what *is* (dominant in Cain and Abel).
-  - **`יהוה אלהים`**: the full picture — reality as experienced *and* the developmental force within it (dominant in the Garden of Eden).
-  - **A switch mid-passage**: a character or culture perceives reality through a different lens (e.g., the woman using `אלהים` alone in Genesis 3:1 — she suddenly sees reality as a constraining force).
+- **כל** (all) = the experience of absoluteness, completeness, to-the-end. A central and weighty motif.
+  Counter-intuitively — when the text says "כל X", it means "the *all-encompassing* X" (i.e., the X that aspires to include everything) — *not* "every X that exists"!
+  For example, `כָּל הַחַיָּה` (per the dictionary - חיה = narrative) means "narratives of the all-encompassing kind — narratives that aspire to explain everything", and *not* "each and every nerrative".
+  In other words: "כל" marks a quality, not a quantity — it signals that this X aspires to encompass everything.
 
 - **אדמה** (soil) = the general population in the relevant context. From the soil the אדם (human/narrative) is formed, and to it a culture eventually disintegrates.
   **עפר** (dust) = the individuals that compose a society: `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה`.
@@ -132,8 +131,6 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 - **אוהל** / **בית** (tent/house) = "comfort zone" - familiar modes of thought.
   **בא** / **ישב** (entered/sat) = settled into a comfort zone.
   **יצא** / **קם** (went out/rose) = left a comfort zone due to need or crisis.
-
-- **כל** (all) = absoluteness, completely, to the end. This is a deep and basic feeling/experience/attitude in the psyche. This motif is highly significant throughout many stories. A very powerful word whose presence in the text is always meaningful.
 
 ## Additional Definitions
 
