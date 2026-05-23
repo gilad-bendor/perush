@@ -1,0 +1,111 @@
+html {
+    direction: rtl;
+    font-size: 140%;
+}
+hr {
+    /*margin: 2rem 0;*/
+}
+
+.bible-columns-wrapper {
+    display: flex;
+    height: 25rem;
+}
+.bible-columns-wrapper-LettersToHtml_Pair {
+}
+.bible-columns-wrapper-LettersToHtml_PairSumDiff {
+}
+
+.bible-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 1.1rem;
+    text-align: center;
+    border-right: 1px solid #eee;
+}
+
+.bible-column-pair-extension {
+    position: relative;
+    flex-basis: 50%;
+}
+.bible-column-pair-extension[data-letter=" "] {
+    background-color: #eee;
+    opacity: 0.5;
+}
+.bible-column-pair-extension[data-letter="׃"] {
+    background-color: #eee;
+    opacity: 0.5;
+}
+.bible-column-pair-extension[data-letter="י"] {
+    background-color: #eee;
+    opacity: 0.5;
+}
+.bible-column-pair-extension[data-letter="וּ"] {
+    background-color: #eee;
+    opacity: 0.5;
+}
+.bible-column-pair-extension[data-letter="וֹ"] {
+    background-color: #eee;
+    opacity: 0.5;
+}
+
+
+
+.bible-column-pair-upper {
+}
+.bible-column-pair-upper .bible-column-marker-1 {
+    bottom: calc(50% + (50% - 0.6rem) * var(--var-0-to-1));
+}
+.bible-column-pair-upper .bible-column-marker-2 {
+    bottom: calc((50% - 0.6rem) * var(--var-0-to-1));
+}
+
+.bible-column-pair-letter {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 1.0rem;
+}
+.bible-column-pair-first-letter {
+    padding-left: 0.4rem;
+}
+.bible-column-pair-second-letter {
+    padding-right: 0.4rem;
+}
+
+.bible-column-pair-lower {
+}
+.bible-column-pair-lower .bible-column-marker-1 {
+    top: calc((50% - 0.6rem) * var(--var-0-to-1));
+}
+.bible-column-pair-lower .bible-column-marker-2 {
+    top: calc(50% + (50% - 0.6rem) * var(--var-0-to-1));
+}
+
+.bible-column-marker {
+    position: absolute;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: #888;
+    margin: 0 auto;
+    left: 0.25rem;
+}
+
+.bible-column-pair-extension[data-letter="SPLIT"] {
+    background: yellow;
+    width: 0 !important;
+}
+.bible-column-pair-letter[data-letter="SPLIT"] {
+    background: yellow;
+    width: 0 !important;
+    padding: 0 !important;
+}
+.bible-column-pair-split {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background: var(--var-color);
+    top: calc(100% * var(--var-0-to-1));
+    z-index: 1000;
+}
