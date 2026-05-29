@@ -1,5 +1,5 @@
-import {Mode} from "../mode";
-import {BibleLetterInfoByMode, getBibleLettersInfoByMode} from "../bible-text";
+import {Mode} from "../base/mode";
+import {BibleLetterInfoByMode, getBibleLettersInfoByMode} from "../base/bible-text";
 
 /**
  * Single "text-item": a very small range inside `biblicalAnnotatedText`
@@ -68,6 +68,6 @@ export abstract class LettersToHtml_Base {
     /**
      * Add HTML inside the <div class="bible-columns-wrapper">
      */
-    protected addColumnsWrapperHtml(htmlBuilder: string[]): void {
+    protected addColumnsWrapperHtml(_htmlBuilder: string[]): void {
     }
 }

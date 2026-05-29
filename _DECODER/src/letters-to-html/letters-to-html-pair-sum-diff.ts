@@ -1,4 +1,4 @@
-import {Mode} from "../mode";
+import {Mode} from "../base/mode";
 import {LettersToHtml_Pair, PairSide} from "./letters-to-html-pair";
 
 /**

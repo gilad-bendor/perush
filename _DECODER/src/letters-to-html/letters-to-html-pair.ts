@@ -1,6 +1,6 @@
-import {Mode} from "../mode";
+import {Mode} from "../base/mode";
 import {LettersToHtml_Base} from "./letters-to-html-base";
-import {BibleLetterInfoByMode} from "../bible-text";
+import {BibleLetterInfoByMode} from "../base/bible-text";
 
 export enum PairSide {
     FIRST_UPPER,    // visualized UPPER in the HTML column

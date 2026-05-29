@@ -33,10 +33,15 @@ hr {
     background-color: #eee;
     opacity: 0.5;
 }
+.bible-column-pair-extension[data-letter="־"] {
+    background-color: #eee;
+    opacity: 0.5;
+}
 .bible-column-pair-extension[data-letter="׃"] {
     background-color: #eee;
     opacity: 0.5;
 }
+/*
 .bible-column-pair-extension[data-letter="י"] {
     background-color: #eee;
     opacity: 0.5;
@@ -49,7 +54,7 @@ hr {
     background-color: #eee;
     opacity: 0.5;
 }
-
+*/
 
 
 .bible-column-pair-upper {
@@ -67,10 +72,10 @@ hr {
     height: 1.0rem;
 }
 .bible-column-pair-first-letter {
-    padding-left: 0.4rem;
+    align-self: flex-start;
 }
 .bible-column-pair-second-letter {
-    padding-right: 0.4rem;
+    align-self: flex-end;
 }
 
 .bible-column-pair-lower {

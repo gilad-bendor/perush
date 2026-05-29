@@ -1,11 +1,12 @@
-import {Mode, ShinSinMode, SpacingMode, VavMode, YudMode} from "./mode.ts";
+import {HeyMode, Mode, ShinSinMode, SpacingMode, VavMode, YudMode} from "./base/mode.ts";
 import {LettersToHtml_Pair} from "./letters-to-html/letters-to-html-pair";
-import {openHtmlInBrowser} from "./utils";
+import {openHtmlInBrowser} from "./base/utils";
 import {LettersToHtml_PairSumDiff} from "./letters-to-html/letters-to-html-pair-sum-diff";
 
 const mode: Mode = {
-    spacingMode: SpacingMode.SPACES_EVEN_WHEN_HYPHEN,
+    spacingMode: SpacingMode.NO_SPACING_NOR_HYPHENS,
     shinSinMode: ShinSinMode.SHIN_SIN_OFF,
+    heyMode: HeyMode.SKIP_HEY,
     vavMode: VavMode.SKIP_VAV,
     yudMode: YudMode.SKIP_YUD,
 }
