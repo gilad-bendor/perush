@@ -54,7 +54,7 @@ export class BibleLetterInfoByMode {
 }
 
 /**
- * Get a sequence of all the letters in the bible - with their info - according to a Mode.
+ * Like buildBibleLettersInfoByMode() - but with cache.
  */
 export function getBibleLettersInfoByMode(mode: Mode): BibleLetterInfoByMode[] {
     const modeDescription = modeToString(mode);
@@ -67,7 +67,11 @@ export function getBibleLettersInfoByMode(mode: Mode): BibleLetterInfoByMode[] {
     return result;
 }
 const perModeBibleLettersInfoCache: Map<string, BibleLetterInfoByMode[]> = new Map();
-function buildBibleLettersInfoByMode(mode: Mode): BibleLetterInfoByMode[] {
+
+/**
+ * Get a sequence of all the letters in the bible - with their info - according to a Mode.
+ */
+export function buildBibleLettersInfoByMode(mode: Mode): BibleLetterInfoByMode[] {
     // First - build a BibleLetterInfoByMode[] - ignoring mode.xMode === XMode.SKIP_X
     let lettersInfo = _buildBibleLettersInfoByMode_Basic(mode);
 

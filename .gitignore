@@ -19,5 +19,6 @@ node_modules/
 /_RTL-EDITOR/node_modules/
 /_MCP-SERVER/node_modules/
 /_DECODER/saved-htmls/
+/_DECODER/saved-reports/
 _scratch*.md
 /claude-code-semitic-linguist

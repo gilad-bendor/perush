@@ -1,6 +1,8 @@
 
 // noinspection JSUnusedGlobalSymbols
 
+import {enumValues} from "./utils.ts";
+
 /**
  * 'א' --> 1
  * 'ב' --> 2
@@ -45,8 +47,8 @@ export type Mode = {
 /**
  * Return a description of the Mode - so that same modes yield the same description
  */
-export function modeToString(mode: Mode): string {
-    return [
+export function modeToString(mode: Mode, padEnd = false): string {
+    const modeString = [
         'Mode{',
         SpacingMode[mode.spacingMode], ',',
         ShinSinMode[mode.shinSinMode], ',',
@@ -55,7 +57,42 @@ export function modeToString(mode: Mode): string {
         YudMode[mode.yudMode],
         '}',
     ].join('');
+    if (padEnd) {
+        if (_maxModeStringLength === undefined) {
+            _maxModeStringLength = [...getModeIterator()].reduce((current, mode) => Math.max(current, modeToString(mode).length), 0);
+        }
+        return modeString.padEnd(_maxModeStringLength);
+    } else {
+        return modeString;
+    }
 }
+let _maxModeStringLength: number | undefined = undefined;
+
+/** Iterate every combination of Mode */
+export function* getModeIterator(): Generator<Mode> {
+    for (const spacingMode of _valuesOfSpacingMode) {
+        for (const shinSinMode of _valuesOfShinSinMode) {
+            for (const heyMode of _valuesOfHeyMode) {
+                for (const vavMode of _valuesOfVavMode) {
+                    for (const yudMode of _valuesOfYudMode) {
+                        yield {
+                            spacingMode,
+                            shinSinMode,
+                            heyMode,
+                            vavMode,
+                            yudMode,
+                        };
+                    }
+                }
+            }
+        }
+    }
+}
+const _valuesOfSpacingMode = enumValues(SpacingMode);
+const _valuesOfShinSinMode = enumValues(ShinSinMode);
+const _valuesOfHeyMode = enumValues(HeyMode);
+const _valuesOfVavMode = enumValues(VavMode);
+const _valuesOfYudMode = enumValues(YudMode);
 
 export function normalizeHebrewChar(hebrewChar: string, mode: Mode): string | undefined {
     switch (hebrewChar) {
