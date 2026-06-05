@@ -13,7 +13,7 @@ export class LettersToHtml_Simple extends LettersToHtml_Base {
     constructor(
         options: {
             mode: Mode,
-            skipOneLetter: boolean,
+            skipOneLetter?: boolean,
         } & (
             {
             } | {
@@ -23,7 +23,7 @@ export class LettersToHtml_Simple extends LettersToHtml_Base {
         )
     ) {
         super(options.mode);
-        this.skipOneLetter = options.skipOneLetter;
+        this.skipOneLetter = options.skipOneLetter ?? false;
         // @ts-ignore
         this.transformLetterNormalizedMin = options.transformedNormalizedMin ?? 0;
         // @ts-ignore
@@ -128,5 +128,10 @@ export class LettersToHtml_Simple extends LettersToHtml_Base {
      */
     protected horizontalSplitPartsColors(): string[] {
         return ['#888', '#eee', '#ddd', '#eee', '#888'];
+    }
+
+    /** Only an upper bar (no lower bar). */
+    protected wrapperVariantClass(): string {
+        return 'bible-columns-wrapper-only-upper';
     }
 }

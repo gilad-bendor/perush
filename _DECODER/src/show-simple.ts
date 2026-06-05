@@ -13,11 +13,9 @@ const mode: Mode = {
 
 const html = [
     // --------------------------------------------------------------------------------
-    new LettersToHtml_Simple(       { mode, skipOneLetter: false }).allColumnsHtml,
+    new LettersToHtml_Simple(       { mode }).allColumnsHtml,
     // --------------------------------------------------------------------------------
-    new LettersToHtml_SimpleSumDiff({ mode, skipOneLetter: false }).allColumnsHtml,
-    // --------------------------------------------------------------------------------
-    new LettersToHtml_SimpleSumDiff({ mode, skipOneLetter: true  }).allColumnsHtml,
+    new LettersToHtml_SimpleSumDiff({ mode }).allColumnsHtml,
     // --------------------------------------------------------------------------------
 ].join('\n<hr>\n');
 openHtmlInBrowser(html);

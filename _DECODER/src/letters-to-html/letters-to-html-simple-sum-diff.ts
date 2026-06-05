@@ -16,11 +16,11 @@ export class LettersToHtml_SimpleSumDiff extends LettersToHtml_Simple {
     constructor(
         options: {
             mode: Mode,
-            skipOneLetter: boolean,
         }
     ) {
         super({
             ...options,
+            skipOneLetter: true,
             transformedNormalizedMin: 0,
             transformedNormalizedMax: 2,
         });

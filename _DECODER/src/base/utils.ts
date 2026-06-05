@@ -3,7 +3,7 @@ import {spawnSync} from "child_process";
 import {fileURLToPath} from "node:url";
 import {biblicalAnnotatedText, type BiblicalAnnotatedText} from "./bible-text.ts";
 
-const savedHtmlDir = fileURLToPath(new URL('../saved-htmls', import.meta.url));
+const savedHtmlDir = fileURLToPath(new URL('../../saved-htmls', import.meta.url));
 mkdirSync(savedHtmlDir, {recursive: true});
 
 export const browserTemplateCss: BiblicalAnnotatedText = readFileSync(fileURLToPath(new URL('../../browser-templates/browser-template.css', import.meta.url)), 'utf-8');

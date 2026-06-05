@@ -8,8 +8,16 @@ hr {
 
 .bible-columns-wrapper {
     display: flex;
-    height: 25rem;
 }
+/* Layout variants: an upper AND a lower bar, vs. an upper bar only.
+ * No explicit height here - the overall height is derived from the parts
+ * (.bible-column-bar + .bible-column-letter), so "only-upper" ends up shorter
+ * automatically while the bar keeps the exact same height as in "both-sides". */
+.bible-columns-wrapper-both-sides {
+}
+.bible-columns-wrapper-only-upper {
+}
+
 .bible-columns-wrapper-LettersToHtml_Pair {
 }
 .bible-columns-wrapper-LettersToHtml_PairSumDiff {
@@ -32,10 +40,12 @@ hr {
  * (LettersToHtml_Pair, LettersToHtml_Simple, ...).
  * ========================================================================== */
 
-/* A "bar" (extension) above/below a letter. */
+/* A "bar" (extension) above/below a letter. Its height drives the overall
+ * height of the visualization (the wrapper height is left to derive from it). */
 .bible-column-bar {
     position: relative;
-    flex-basis: 50%;
+    height: 11.5rem;
+    flex-shrink: 0;
 }
 .bible-column-bar[data-letter=" "] {
     background-color: #eee;
