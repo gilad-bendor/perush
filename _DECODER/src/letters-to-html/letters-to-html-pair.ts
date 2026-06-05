@@ -1,6 +1,6 @@
-import {Mode} from "../base/mode";
-import {LettersToHtml_Base} from "./letters-to-html-base";
-import {BibleLetterInfoByMode} from "../base/bible-text";
+import {type Mode} from "../base/mode.ts";
+import {LettersToHtml_Base} from "./letters-to-html-base.ts";
+import {BibleLetterInfoByMode} from "../base/bible-text.ts";
 
 export enum PairSide {
     FIRST_UPPER,    // visualized UPPER in the HTML column
@@ -109,17 +109,17 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
     ) {
         htmlBuilder.push(
             // Upper bar
-            `<div class="bible-column-pair-extension bible-column-pair-upper" style="--var-0-to-1: ${normalizedValues[PairSide.FIRST_UPPER]}" data-letter="${letterInfos[PairSide.FIRST_UPPER ].text}">`,
+            `<div class="bible-column-bar bible-column-bar-upper" style="--var-0-to-1: ${normalizedValues[PairSide.FIRST_UPPER]}" data-letter="${letterInfos[PairSide.FIRST_UPPER ].text}">`,
             ...(normalizedValues[PairSide.FIRST_UPPER] === undefined ? [] : [
                 `<div class="bible-column-marker bible-column-marker-2"></div>`,
                 `<div class="bible-column-marker bible-column-marker-1"></div>`,
             ]),
             `</div>`,
             // The pair of letters
-            `<div class="bible-column-pair-letter bible-column-pair-first-letter"  data-letter="${letterInfos[PairSide.FIRST_UPPER ].text}">${letterInfos[PairSide.FIRST_UPPER ].text}</div>`,
-            `<div class="bible-column-pair-letter bible-column-pair-second-letter" data-letter="${letterInfos[PairSide.SECOND_LOWER].text}">${letterInfos[PairSide.SECOND_LOWER].text}</div>`,
+            `<div class="bible-column-letter bible-column-letter-upper" data-letter="${letterInfos[PairSide.FIRST_UPPER ].text}">${letterInfos[PairSide.FIRST_UPPER ].text}</div>`,
+            `<div class="bible-column-letter bible-column-letter-lower" data-letter="${letterInfos[PairSide.SECOND_LOWER].text}">${letterInfos[PairSide.SECOND_LOWER].text}</div>`,
             // Lower bar
-            `<div class="bible-column-pair-extension bible-column-pair-lower" style="--var-0-to-1: ${normalizedValues[PairSide.SECOND_LOWER]}" data-letter="${letterInfos[PairSide.SECOND_LOWER].text}">`,
+            `<div class="bible-column-bar bible-column-bar-lower" style="--var-0-to-1: ${normalizedValues[PairSide.SECOND_LOWER]}" data-letter="${letterInfos[PairSide.SECOND_LOWER].text}">`,
             ...(normalizedValues[PairSide.SECOND_LOWER] === undefined ? [] : [
                 `<div class="bible-column-marker bible-column-marker-1"></div>`,
                 `<div class="bible-column-marker bible-column-marker-2"></div>`,
@@ -136,7 +136,7 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
         function addParts(pairSide: PairSide): string[] {
             const htmlParts: string[] = [];
             for (let partIndex = 0; partIndex < partsColors[pairSide].length; partIndex++) {
-                htmlParts.push(`<div class="bible-column-pair-split" style="--var-0-to-1: ${partIndex / (partsColors[pairSide].length - 1)}; --var-color: ${partsColors[pairSide][partIndex]}"></div>`);
+                htmlParts.push(`<div class="bible-column-split" style="--var-0-to-1: ${partIndex / (partsColors[pairSide].length - 1)}; --var-color: ${partsColors[pairSide][partIndex]}"></div>`);
             }
             return htmlParts;
         }
@@ -144,14 +144,14 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
         htmlBuilder.push(
             `<div class="bible-column">`,
                 // Upper bar
-                `<div class="bible-column-pair-extension bible-column-pair-upper" data-letter="SPLIT">`,
+                `<div class="bible-column-bar bible-column-bar-upper" data-letter="SPLIT">`,
                 ...addParts(PairSide.FIRST_UPPER),
                 `</div>`,
                 // The pair of letters
-                `<div class="bible-column-pair-letter bible-column-pair-first-letter"  data-letter="SPLIT">&nbsp;</div>`,
-                `<div class="bible-column-pair-letter bible-column-pair-second-letter" data-letter="SPLIT">&nbsp;</div>`,
+                `<div class="bible-column-letter bible-column-letter-upper" data-letter="SPLIT">&nbsp;</div>`,
+                `<div class="bible-column-letter bible-column-letter-lower" data-letter="SPLIT">&nbsp;</div>`,
                 // Lower bar
-                `<div class="bible-column-pair-extension bible-column-pair-lower" data-letter="SPLIT">`,
+                `<div class="bible-column-bar bible-column-bar-lower" data-letter="SPLIT">`,
                 ...addParts(PairSide.SECOND_LOWER),
                 `</div>`,
             `</div>`,

@@ -1,5 +1,5 @@
-import {Mode} from "../base/mode";
-import {LettersToHtml_Pair, PairSide} from "./letters-to-html-pair";
+import {type Mode} from "../base/mode.ts";
+import {LettersToHtml_Pair, PairSide} from "./letters-to-html-pair.ts";
 
 /**
  * Like LettersToHtml_Pair - but:

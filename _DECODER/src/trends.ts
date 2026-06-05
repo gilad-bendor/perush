@@ -1,9 +1,9 @@
-import {getTrendCombinations, getTrendOfLetters, Trend, trendToString, trendValues} from "./base/trend.ts";
-import {getModeIterator, Mode, modeToString} from "./base/mode.ts";
+import {getTrendCombinations, getTrendOfLetters, Trend, trendValues} from "./base/trend.ts";
+import {getModeIterator, type Mode, modeToString} from "./base/mode.ts";
 import {BibleLetterInfoByMode, buildBibleLettersInfoByMode} from "./base/bible-text.ts";
 import {fileURLToPath} from "node:url";
 import {mkdirSync, writeFileSync} from "node:fs";
-import {currentTimeAsString} from "./base/utils.ts";
+import {timeAsString} from "./base/utils.ts";
 
 const LOG_EVERY_MODE_TREND = false;
 const LOG_EVERY_TREND_MATCHING = false;
@@ -14,8 +14,8 @@ const MAX_TRENDS_DEPTH = 6;
 const MIN_OCCURRENCES = 100;
 
 class Statistics {
-    get sumUp(): number { return this.sumByTrend[Trend['🔼']]; }
-    get sumDown(): number { return this.sumByTrend[Trend['🔽']]; }
+    get sumUp(): number { return this.sumByTrend[Trend['^']]; }
+    get sumDown(): number { return this.sumByTrend[Trend['v']]; }
     get percentUp(): number { return this.sumUp / (this.sumUp + this.sumDown) * 100; }
     get percentDown(): number { return 100 - this.percentUp; }
     get roundPercentUp(): number { return Math.round(this.percentUp); }
@@ -42,7 +42,7 @@ class Statistics {
 
         let trendsString = this._trendsString;
         if (addTrends && !trendsString) {
-            trendsString = this.trendsCombination.map(trend => trendToString[trend]).join('') + '  '.repeat(MAX_TRENDS_DEPTH - this.trendsCombination.length);
+            trendsString = this.trendsCombination.map(trend => Trend[trend]).join('') + ' '.repeat(MAX_TRENDS_DEPTH - this.trendsCombination.length);
             this._trendsString = trendsString;
         }
 
@@ -98,7 +98,7 @@ for (let trendsDepth = MIN_TRENDS_DEPTH; trendsDepth <= MAX_TRENDS_DEPTH; trends
     logExaminationProgress();
 
     // Save the SORTED statistics to a file.
-    const saveFileNameSorted = `${savedLogsDir}/${currentTimeAsString()}.depth-${trendsDepth}.rtl.md`;
+    const saveFileNameSorted = `${savedLogsDir}/${timeAsString(new Date(startTime))}.depth-${trendsDepth}.rtl.md`;
     console.log(`Saving sorted statistics at ${saveFileNameSorted}`);
     writeFileSync(
         saveFileNameSorted,
@@ -111,7 +111,7 @@ console.log('Done All.');
 
 
 function examineSpecificAspect(bibleText: BibleLetterInfoByMode[], mode: Mode, trendsCombination: Trend[]): Statistics | undefined {
-    const trendsString = trendsCombination.map(trend => trendToString[trend]).join('');
+    const trendsString = trendsCombination.map(trend => Trend[trend]).join('');
     if (LOG_EVERY_TREND_MATCHING) {
         console.log(`\tTrends: ${trendsString}`);
     }
@@ -146,7 +146,7 @@ function examineSpecificAspect(bibleText: BibleLetterInfoByMode[], mode: Mode, t
                 const prefixSnippet = bibleText.slice(Math.max(0, startingLetterIndex - 10), startingLetterIndex).map(letterInfo => letterInfo.text);
                 const textSnippet = bibleText.slice(startingLetterIndex, scanLetterIndex + 1).map(letterInfo => letterInfo.text);
                 const suffixSnippet = bibleText.slice(scanLetterIndex + 1, scanLetterIndex + 11).map(letterInfo => letterInfo.text);
-                console.log(`\t\t${prefixSnippet.join('')}✪${textSnippet.join('')}✪${suffixSnippet.join('')}  ==> ${textSnippet.join(' ✪ ')}  ==>  ${trendToString[lastTrend]}`);
+                console.log(`\t\t${prefixSnippet.join('')}✪${textSnippet.join('')}✪${suffixSnippet.join('')}  ==> ${textSnippet.join(' ✪ ')}  ==>  ${Trend[lastTrend]}`);
             }
         }
     }

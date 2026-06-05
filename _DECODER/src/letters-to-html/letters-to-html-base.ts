@@ -1,5 +1,5 @@
-import {Mode} from "../base/mode";
-import {BibleLetterInfoByMode, getBibleLettersInfoByMode} from "../base/bible-text";
+import {type Mode} from "../base/mode.ts";
+import {BibleLetterInfoByMode, getBibleLettersInfoByMode} from "../base/bible-text.ts";
 
 /**
  * Single "text-item": a very small range inside `biblicalAnnotatedText`

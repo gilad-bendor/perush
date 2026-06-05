@@ -1,1 +1,1 @@
-biblical-annotated-text--HUMASHIM.txt
+biblical-annotated-text--SHORT.txt

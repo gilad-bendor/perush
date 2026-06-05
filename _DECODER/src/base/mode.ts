@@ -94,6 +94,12 @@ const _valuesOfHeyMode = enumValues(HeyMode);
 const _valuesOfVavMode = enumValues(VavMode);
 const _valuesOfYudMode = enumValues(YudMode);
 
+/**
+ * Given a Hebrew character (a letter, hyphen, end-of-verse-sign, space) and a Mode - return one of:
+ * 1. A letter: א to ת (ShinSinMode.SHIN_SIN_ON: return 'שׁ' or 'שׂ'. ShinSinMode.SHIN_SIN_OFF: return 'ש')
+ * 2. Space ' ' - that means "a non-letter that still takes up space in the bible letters sequence
+ * 3. undefined - this character should not appear in the bible letters sequence
+ */
 export function normalizeHebrewChar(hebrewChar: string, mode: Mode): string | undefined {
     switch (hebrewChar) {
         case ' ':

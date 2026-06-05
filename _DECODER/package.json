@@ -2,8 +2,12 @@
   "name": "bible-decoder",
   "version": "1.0.0",
   "description": "Out-there exploration of lower-entropy patterns in the bible",
+  "type": "module",
   "scripts": {
-    "show": "node src/show.ts"
+    "trends": "node src/trends.ts",
+    "show-pair": "node src/show-pair.ts",
+    "show-simple": "node src/show-simple.ts",
+    "test": "node --experimental-transform-types --test 'test/**/*.test.ts'"
   },
   "devDependencies": {
     "@types/node": "^25.9.1",

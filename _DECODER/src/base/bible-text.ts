@@ -1,6 +1,6 @@
 import {readFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
-import {hebrewLetterToNumeric, HeyMode, Mode, modeToString, normalizeHebrewChar, VavMode, YudMode} from "./mode";
+import {hebrewLetterToNumeric, HeyMode, type Mode, modeToString, normalizeHebrewChar, VavMode, YudMode} from "./mode.ts";
 
 /**
  * Biblical annotated text - line-per-verse. Verse/line sample:    `בְּרֵאשִׁית בָּרָא אֱלהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ` (בראשית א:א)

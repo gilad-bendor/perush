@@ -14,6 +14,8 @@ hr {
 }
 .bible-columns-wrapper-LettersToHtml_PairSumDiff {
 }
+.bible-columns-wrapper-LettersToHtml_Simple {
+}
 
 .bible-column {
     display: flex;
@@ -25,65 +27,71 @@ hr {
     border-right: 1px solid #eee;
 }
 
-.bible-column-pair-extension {
+/* ============================================================================
+ * Base column-part classes - shared by all LettersToHtml_* visualizers
+ * (LettersToHtml_Pair, LettersToHtml_Simple, ...).
+ * ========================================================================== */
+
+/* A "bar" (extension) above/below a letter. */
+.bible-column-bar {
     position: relative;
     flex-basis: 50%;
 }
-.bible-column-pair-extension[data-letter=" "] {
+.bible-column-bar[data-letter=" "] {
     background-color: #eee;
     opacity: 0.5;
 }
-.bible-column-pair-extension[data-letter="־"] {
+.bible-column-bar[data-letter="־"] {
     background-color: #eee;
     opacity: 0.5;
 }
-.bible-column-pair-extension[data-letter="׃"] {
+.bible-column-bar[data-letter="׃"] {
     background-color: #eee;
     opacity: 0.5;
 }
 /*
-.bible-column-pair-extension[data-letter="י"] {
+.bible-column-bar[data-letter="י"] {
     background-color: #eee;
     opacity: 0.5;
 }
-.bible-column-pair-extension[data-letter="וּ"] {
+.bible-column-bar[data-letter="וּ"] {
     background-color: #eee;
     opacity: 0.5;
 }
-.bible-column-pair-extension[data-letter="וֹ"] {
+.bible-column-bar[data-letter="וֹ"] {
     background-color: #eee;
     opacity: 0.5;
 }
 */
 
 
-.bible-column-pair-upper {
+.bible-column-bar-upper {
 }
-.bible-column-pair-upper .bible-column-marker-1 {
+.bible-column-bar-upper .bible-column-marker-1 {
     bottom: calc(50% + (50% - 0.6rem) * var(--var-0-to-1));
 }
-.bible-column-pair-upper .bible-column-marker-2 {
+.bible-column-bar-upper .bible-column-marker-2 {
     bottom: calc((50% - 0.6rem) * var(--var-0-to-1));
 }
 
-.bible-column-pair-letter {
+.bible-column-letter {
     flex-grow: 0;
     flex-shrink: 0;
     height: 1.0rem;
 }
-.bible-column-pair-first-letter {
+.bible-column-letter-upper {
     align-self: flex-start;
 }
-.bible-column-pair-second-letter {
+.bible-column-letter-lower {
     align-self: flex-end;
 }
 
-.bible-column-pair-lower {
+.bible-column-bar-lower {
 }
-.bible-column-pair-lower .bible-column-marker-1 {
+.bible-column-bar-lower .bible-column-marker-1 {
     top: calc((50% - 0.6rem) * var(--var-0-to-1));
 }
-.bible-column-pair-lower .bible-column-marker-2 {
+.bible-column-bar-lower .bible-column-marker-2 {
     top: calc(50% + (50% - 0.6rem) * var(--var-0-to-1));
 }
 
@@ -97,16 +105,16 @@ hr {
     left: 0.25rem;
 }
 
-.bible-column-pair-extension[data-letter="SPLIT"] {
+.bible-column-bar[data-letter="SPLIT"] {
     background: yellow;
     width: 0 !important;
 }
-.bible-column-pair-letter[data-letter="SPLIT"] {
+.bible-column-letter[data-letter="SPLIT"] {
     background: yellow;
     width: 0 !important;
     padding: 0 !important;
 }
-.bible-column-pair-split {
+.bible-column-split {
     position: absolute;
     width: 100vw;
     height: 1px;
