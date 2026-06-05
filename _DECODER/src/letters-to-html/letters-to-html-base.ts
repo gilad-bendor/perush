@@ -79,4 +79,16 @@ export abstract class LettersToHtml_Base {
     protected wrapperVariantClass(): string {
         return 'bible-columns-wrapper-both-sides';
     }
+
+    /**
+     * Render the optional tooltip attribute (` title="..."`) for a bar.
+     * Returns '' when there is no value (e.g. a space/hyphen bar) - so no tooltip is shown.
+     *
+     * Native `title` tooltips can't be styled with CSS, so `direction: ltr` cannot be applied to them.
+     * Instead we wrap the text in a Unicode LTR isolate (U+2066 … U+2069), which the tooltip's bidi
+     * rendering honors - otherwise the page's `direction: rtl` reorders strings like "-18Δ=1φ-19φ".
+     */
+    protected barTitleAttribute(title: string | undefined): string {
+        return title === undefined ? '' : ` title="⁦${title}⁩"`;
+    }
 }

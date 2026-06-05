@@ -2,7 +2,7 @@
 
 import {enumValues} from "./utils.ts";
 import {BibleLetterInfoByMode} from "./bible-text.ts";
-import {hebrewLetterToNumeric} from "./mode.ts";
+import {HEBREW_LETTER_COUNT} from "./mode.ts";
 
 /**
  * Suppose letter1 is ג and letter2 is ח - this is obviously "up".
@@ -36,8 +36,8 @@ export enum Trend {
 }
 export const trendValues = enumValues(Trend);
 
-/** Total number of letters in the (warped) cyclic scale. */
-export const HEBREW_LETTER_COUNT = hebrewLetterToNumeric.size;
+/** Total number of letters in the (warped) cyclic scale. Re-exported from mode.ts. */
+export {HEBREW_LETTER_COUNT};
 /** How many letters above letter1 are in the "up" range (warped - see comment on enum Trend) */
 export const TREND_UP_RANGE = 7;
 /** How many letters below letter1 are in the "down" range (warped - see comment on enum Trend) */
@@ -64,6 +64,35 @@ export function getTrendOfLetters(letterInfo1: BibleLetterInfoByMode, letterInfo
     if (forward <= TREND_UP_RANGE) return Trend['^'];
     if (forward >= HEBREW_LETTER_COUNT - TREND_DOWN_RANGE) return Trend['v'];
     return Trend['~'];
+}
+
+/**
+ * Return the phase difference between two letters - in the range (-0.5,+0.5]
+ * There are 22 letters - so the phases are א=0/22 to ת=21/22.
+ * For two actual letters the result lands between -10/22 and +11/22.
+ * Notice that:  getPhaseGapOfLetters(a,b) = -getPhaseGapOfLetters(b,a)
+ *   (except for opposite letters, whose gap is always +11/22 - since +0.5 is included but -0.5 is not).
+ * Examples:
+ *    phase-gap from ה (phase =  4/22) to ח (phase =  7/22) -->  +3/22
+ *    phase-gap from ב (phase =  1/22) to ש (phase = 20/22) -->  -3/22 (warp down)
+ *    phase-gap from א (phase =  0/22) to ל (phase = 11/22) --> +11/22 (completely opposite)
+ *
+ * Returns undefined if either letter has no numeric value (space/hyphen/end-of-verse).
+ */
+export function getPhaseGapOfLetters(letterInfo1: BibleLetterInfoByMode, letterInfo2: BibleLetterInfoByMode): number | undefined {
+    const numeric1 = letterInfo1.numeric;
+    const numeric2 = letterInfo2.numeric;
+    if (numeric1 === undefined || numeric2 === undefined) {
+        return undefined;
+    }
+    // Forward (cyclic) step distance in [0, HEBREW_LETTER_COUNT), then folded onto the short way
+    // around the circle: steps > half-a-turn become negative, landing in [-10 .. +11].
+    // (phase = (numeric - 1) / HEBREW_LETTER_COUNT, so the "-1" offset cancels in the difference.)
+    let steps = (numeric2 - numeric1 + HEBREW_LETTER_COUNT) % HEBREW_LETTER_COUNT;
+    if (steps > HEBREW_LETTER_COUNT / 2) {
+        steps -= HEBREW_LETTER_COUNT;
+    }
+    return steps / HEBREW_LETTER_COUNT;
 }
 
 /** Get an iterator over all the possible Trend[] of length "depth" */

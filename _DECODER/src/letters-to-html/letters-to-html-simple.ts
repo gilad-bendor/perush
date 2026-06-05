@@ -6,14 +6,12 @@ import {BibleLetterInfoByMode} from "../base/bible-text.ts";
  * Each column shows a single letter, with its numeric-value visualized on the UPPER bar (no lower bar).
  */
 export class LettersToHtml_Simple extends LettersToHtml_Base {
-    readonly skipOneLetter: boolean;
     protected transformLetterNormalizedMin: number;
     protected transformLetterNormalizedMax: number;
 
     constructor(
         options: {
             mode: Mode,
-            skipOneLetter?: boolean,
         } & (
             {
             } | {
@@ -23,7 +21,6 @@ export class LettersToHtml_Simple extends LettersToHtml_Base {
         )
     ) {
         super(options.mode);
-        this.skipOneLetter = options.skipOneLetter ?? false;
         // @ts-ignore
         this.transformLetterNormalizedMin = options.transformedNormalizedMin ?? 0;
         // @ts-ignore
@@ -35,24 +32,21 @@ export class LettersToHtml_Simple extends LettersToHtml_Base {
      * visualized with an UPPER bar in the HTML column.
      */
     buildHtmlForLettersInfo(startLetterOffset: number, htmlBuilder: string[]): { handledLettersCount: number } {
-        if (this.skipOneLetter) {
-            startLetterOffset++;
-        }
         const letterInfo: BibleLetterInfoByMode = this.allBibleLetterInfos[startLetterOffset];
         if (letterInfo) {
-            let renormalized: number | undefined = undefined;  // "normalized" is between 0 (min value) to 1 (max value)
-            // Transform the BibleLetterInfoByMode.normalized
-            const normalized = letterInfo.normalized;
-            if (normalized !== undefined) {
-                const transformedNormalized = this.transformLetterNormalized(normalized, startLetterOffset);
+            let renormalized: number | undefined = undefined;  // the CSS value - between 0 (min) and 1 (max)
+            // Transform the letter's phase
+            const phase = letterInfo.phase;
+            if (phase !== undefined) {
+                const transformedNormalized = this.transformLetterNormalized(phase, startLetterOffset);
                 if (transformedNormalized !== undefined) {
                     const min = this.transformLetterNormalizedMin;
                     const max = this.transformLetterNormalizedMax;
                     if (transformedNormalized < min) {
-                        throw new Error(`${this.constructor.name}.transformLetterNormalized(${normalized}) returned ${transformedNormalized} - which is lower than the minimum ${min}`);
+                        throw new Error(`${this.constructor.name}.transformLetterNormalized(${phase}) returned ${transformedNormalized} - which is lower than the minimum ${min}`);
                     }
                     if (transformedNormalized > max) {
-                        throw new Error(`${this.constructor.name}.transformLetterNormalized(${normalized}) returned ${transformedNormalized} - which is higher than the maximum ${max}`);
+                        throw new Error(`${this.constructor.name}.transformLetterNormalized(${phase}) returned ${transformedNormalized} - which is higher than the maximum ${max}`);
                     }
                     // Re-normalize the transformed value.
                     renormalized = (transformedNormalized - min) / (max - min);
@@ -80,7 +74,7 @@ export class LettersToHtml_Simple extends LettersToHtml_Base {
     ) {
         htmlBuilder.push(
             // Upper bar
-            `<div class="bible-column-bar bible-column-bar-upper" style="--var-0-to-1: ${normalizedValue}" data-letter="${letterInfo.text}">`,
+            `<div class="bible-column-bar bible-column-bar-upper"${this.barTitleAttribute(this.barTitle(letterInfo))} style="--var-0-to-1: ${normalizedValue}" data-letter="${letterInfo.text}">`,
             ...(normalizedValue === undefined ? [] : [
                 `<div class="bible-column-marker bible-column-marker-2"></div>`,
                 `<div class="bible-column-marker bible-column-marker-1"></div>`,
@@ -89,6 +83,15 @@ export class LettersToHtml_Simple extends LettersToHtml_Base {
             // The letter
             `<div class="bible-column-letter bible-column-letter-upper" data-letter="${letterInfo.text}">${letterInfo.text}</div>`,
         );
+    }
+
+    /** Tooltip text for the bar: the letter's phase, as "Nφ". undefined for space/hyphen/end-of-verse. */
+    protected barTitle(letterInfo: BibleLetterInfoByMode): string | undefined {
+        const numeric = letterInfo.numeric;
+        if (numeric === undefined) {
+            return undefined;
+        }
+        return `${numeric - 1}φ`;
     }
 
     /**
@@ -114,12 +117,12 @@ export class LettersToHtml_Simple extends LettersToHtml_Base {
     }
 
     /**
-     * Transform a BibleLetterInfoByMode.normalized.
+     * Transform a letter's `phase`.
      * `letterOffset` is the offset (into this.allBibleLetterInfos) of the letter
      * being transformed - so subclasses can reach neighboring letters (e.g. N-1).
      */
-    protected transformLetterNormalized(normalizedValue: number | undefined, letterOffset: number): number | undefined {
-        return normalizedValue;
+    protected transformLetterNormalized(phase: number | undefined, letterOffset: number): number | undefined {
+        return phase;
     }
 
     /**

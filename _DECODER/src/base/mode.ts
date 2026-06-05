@@ -11,6 +11,13 @@ import {enumValues} from "./utils.ts";
  */
 export const hebrewLetterToNumeric: Map<string, number> = new Map([...'אבגדהוזחטיכלמנסעפצקרשת'].map((hebrewLetter, index)=>[hebrewLetter, index + 1]));
 
+/** Number of letters in the Hebrew alphabet (22). The letter-space is treated as cyclic - see trend.ts. */
+export const HEBREW_LETTER_COUNT = hebrewLetterToNumeric.size;
+
+// *AFTER* HEBREW_LETTER_COUNT is calculated - also support Sin/Shin:
+hebrewLetterToNumeric.set('שׁ', hebrewLetterToNumeric.get('ש')!);
+hebrewLetterToNumeric.set('שׂ', hebrewLetterToNumeric.get('ש')!);
+
 export enum SpacingMode {
     SPACES_EVEN_WHEN_HYPHEN,
     SPACES_EXCEPT_WHEN_HYPHEN,

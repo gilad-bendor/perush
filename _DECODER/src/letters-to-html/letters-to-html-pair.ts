@@ -65,10 +65,7 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
             this.allBibleLetterInfos[startLetterOffset + 1],
         ];
         if (letterInfos[PairSide.FIRST_UPPER] && letterInfos[PairSide.SECOND_LOWER]) {
-            const transformedNormalizedPair = this.transformLetterNormalized([
-                letterInfos[PairSide.FIRST_UPPER].normalized,
-                letterInfos[PairSide.SECOND_LOWER].normalized,
-            ]);
+            const transformedNormalizedPair = this.transformLetterNormalized(letterInfos);
             const renormalized = this.renormalizeTransformedPair(letterInfos, transformedNormalizedPair);
 
             // Build the HTML.
@@ -88,11 +85,11 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
         letterInfos: [BibleLetterInfoByMode | undefined, BibleLetterInfoByMode | undefined],
         transformedNormalizedPair: [number | undefined, number | undefined],
     ): [number | undefined, number | undefined] {
-        const renormalized: [number | undefined, number | undefined] = [undefined, undefined];  // "normalized" is between 0 (min value) to 1 (max value)
+        const renormalized: [number | undefined, number | undefined] = [undefined, undefined];  // the CSS value - between 0 (min) and 1 (max)
         for (let pairSide = PairSide.FIRST_UPPER; pairSide <= PairSide.SECOND_LOWER; pairSide++) {
-            // Transform the BibleLetterInfoByMode.normalized
-            const normalized = letterInfos[pairSide]?.normalized;
-            if (normalized === undefined) {
+            // The letter's phase
+            const phase = letterInfos[pairSide]?.phase;
+            if (phase === undefined) {
                 continue;
             }
             const transformedNormalized = transformedNormalizedPair[pairSide];
@@ -102,10 +99,10 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
             const min = this.transformLetterNormalizedMin[pairSide];
             const max = this.transformLetterNormalizedMax[pairSide];
             if (transformedNormalized < min) {
-                throw new Error(`${this.constructor.name}.transformLetterNormalized(${normalized}, "${pairSideToString[pairSide]}") returned ${transformedNormalized} - which is lower than the minimum ${min}`);
+                throw new Error(`${this.constructor.name}: side "${pairSideToString[pairSide]}" (letter phase ${phase}) produced ${transformedNormalized} - which is lower than the minimum ${min}`);
             }
             if (transformedNormalized > max) {
-                throw new Error(`${this.constructor.name}.transformLetterNormalized(${normalized}, "${pairSideToString[pairSide]}") returned ${transformedNormalized} - which is higher than the maximum ${max}`);
+                throw new Error(`${this.constructor.name}: side "${pairSideToString[pairSide]}" (letter phase ${phase}) produced ${transformedNormalized} - which is higher than the maximum ${max}`);
             }
             // Re-normalize the transformed value.
             renormalized[pairSide] = (transformedNormalized - min) / (max - min);
@@ -128,7 +125,7 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
     ) {
         htmlBuilder.push(
             // Upper bar
-            `<div class="bible-column-bar bible-column-bar-upper" style="--var-0-to-1: ${normalizedValues[PairSide.FIRST_UPPER]}" data-letter="${letterInfos[PairSide.FIRST_UPPER ].text}">`,
+            `<div class="bible-column-bar bible-column-bar-upper"${this.barTitleAttribute(this.barTitle(PairSide.FIRST_UPPER, letterInfos))} style="--var-0-to-1: ${normalizedValues[PairSide.FIRST_UPPER]}" data-letter="${letterInfos[PairSide.FIRST_UPPER ].text}">`,
             ...(normalizedValues[PairSide.FIRST_UPPER] === undefined ? [] : [
                 `<div class="bible-column-marker bible-column-marker-2"></div>`,
                 `<div class="bible-column-marker bible-column-marker-1"></div>`,
@@ -138,13 +135,39 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
             `<div class="bible-column-letter bible-column-letter-upper" data-letter="${letterInfos[PairSide.FIRST_UPPER ].text}">${letterInfos[PairSide.FIRST_UPPER ].text}</div>`,
             `<div class="bible-column-letter bible-column-letter-lower" data-letter="${letterInfos[PairSide.SECOND_LOWER].text}">${letterInfos[PairSide.SECOND_LOWER].text}</div>`,
             // Lower bar
-            `<div class="bible-column-bar bible-column-bar-lower" style="--var-0-to-1: ${normalizedValues[PairSide.SECOND_LOWER]}" data-letter="${letterInfos[PairSide.SECOND_LOWER].text}">`,
-            ...(normalizedValues[PairSide.SECOND_LOWER] === undefined ? [] : [
-                `<div class="bible-column-marker bible-column-marker-1"></div>`,
-                `<div class="bible-column-marker bible-column-marker-2"></div>`,
-            ]),
+            `<div class="${this.lowerBarClasses()}"${this.barTitleAttribute(this.barTitle(PairSide.SECOND_LOWER, letterInfos))} style="--var-0-to-1: ${normalizedValues[PairSide.SECOND_LOWER]}" data-letter="${letterInfos[PairSide.SECOND_LOWER].text}">`,
+            ...this.lowerBarMarkersHtml(normalizedValues[PairSide.SECOND_LOWER]),
             `</div>`,
         );
+    }
+
+    /** CSS classes for the LOWER bar's <div>. */
+    protected lowerBarClasses(): string {
+        return 'bible-column-bar bible-column-bar-lower';
+    }
+
+    /** Marker <div>s inside the LOWER bar - two layers by default (the doubled "warp" visualization). */
+    protected lowerBarMarkersHtml(renormalizedValue: number | undefined): string[] {
+        if (renormalizedValue === undefined) {
+            return [];
+        }
+        return [
+            `<div class="bible-column-marker bible-column-marker-1"></div>`,
+            `<div class="bible-column-marker bible-column-marker-2"></div>`,
+        ];
+    }
+
+    /**
+     * Tooltip text for a bar: the phase of the letter on that side, as "Nφ".
+     * undefined when that side has no letter value (space/hyphen/end-of-verse).
+     * Overridden by sum/diff subclasses, where the bars show a relation between the two letters.
+     */
+    protected barTitle(pairSide: PairSide, letterInfos: [BibleLetterInfoByMode | undefined, BibleLetterInfoByMode | undefined]): string | undefined {
+        const numeric = letterInfos[pairSide]?.numeric;
+        if (numeric === undefined) {
+            return undefined;
+        }
+        return `${numeric - 1}φ`;
     }
 
     /**
@@ -169,17 +192,17 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
                 // The pair of letters
                 `<div class="bible-column-letter bible-column-letter-upper" data-letter="SPLIT">&nbsp;</div>`,
                 `<div class="bible-column-letter bible-column-letter-lower" data-letter="SPLIT">&nbsp;</div>`,
-                // Lower bar
-                `<div class="bible-column-bar bible-column-bar-lower" data-letter="SPLIT">`,
+                // Lower bar (matches the letter columns' lower-bar geometry)
+                `<div class="${this.lowerBarClasses()}" data-letter="SPLIT">`,
                 ...addParts(PairSide.SECOND_LOWER),
                 `</div>`,
             `</div>`,
         );
     }
 
-    /** Transform a BibleLetterInfoByMode.normalized */
-    protected transformLetterNormalized(normalizedValues: [number | undefined, number | undefined]): [number | undefined, number | undefined] {
-        return normalizedValues;
+    /** Map the pair of letters to the [UPPER, LOWER] bar values. By default: each letter's own phase. */
+    protected transformLetterNormalized(letterInfos: [BibleLetterInfoByMode | undefined, BibleLetterInfoByMode | undefined]): [number | undefined, number | undefined] {
+        return [letterInfos[PairSide.FIRST_UPPER]?.phase, letterInfos[PairSide.SECOND_LOWER]?.phase];
     }
 
     /**

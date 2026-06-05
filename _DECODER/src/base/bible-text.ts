@@ -1,6 +1,6 @@
 import {readFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
-import {hebrewLetterToNumeric, HeyMode, type Mode, modeToString, normalizeHebrewChar, VavMode, YudMode} from "./mode.ts";
+import {HEBREW_LETTER_COUNT, hebrewLetterToNumeric, HeyMode, type Mode, modeToString, normalizeHebrewChar, VavMode, YudMode} from "./mode.ts";
 
 /**
  * Biblical annotated text - line-per-verse. Verse/line sample:    `בְּרֵאשִׁית בָּרָא אֱלהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ` (בראשית א:א)
@@ -22,8 +22,14 @@ export class BibleLetterInfoByMode {
     /** A value in hebrewLetterToNumeric. undefined for space/hyphen/end-of-verse */
     readonly numeric: number | undefined;
 
-    /** Like numeric - but normalized between 0 and 1. undefined for space/hyphen/end-of-verse */
-    readonly normalized: number | undefined;
+    /**
+     * The letter's position on the cyclic alphabet, as a fraction of a full turn - a "phase" (angle):
+     * (numeric - 1) / HEBREW_LETTER_COUNT. So א=0, ב=1/22, ... ת=21/22, and a full turn (22/22 ≡ 0)
+     * wraps back to א - matching the warped/cyclic scale in trend.ts (where א and ת are neighbours).
+     * Fixed by the alphabet (not by which letters appear in the data).
+     * undefined for space/hyphen/end-of-verse.
+     */
+    readonly phase: number | undefined;
 
     /** Range into biblicalAnnotatedText. The range is always a few characters long: the letter and its Nikud. */
     readonly rangeInBible: readonly [number, number];
@@ -42,13 +48,14 @@ export class BibleLetterInfoByMode {
         const numeric = hebrewLetterToNumeric.get(letter);
         if (numeric === undefined) {
             this.numeric = undefined;
-            this.normalized = undefined;
+            this.phase = undefined;
         } else {
             if (typeof numeric !== 'number') {
                 throw new Error(`Invalid numeric for Hebrew character ${JSON.stringify(this.text[0])} at bible-range [${startIndex},${endIndex}] with mode ${modeToString(mode)}`);
             }
             this.numeric = numeric;
-            this.normalized = 0; // this will be overridden by buildBibleLettersInfoByMode()
+            // Cyclic phase - depends only on `numeric`, so it can be set right here. See the field doc.
+            this.phase = (numeric - 1) / HEBREW_LETTER_COUNT;
         }
     }
 }
@@ -87,27 +94,8 @@ export function buildBibleLettersInfoByMode(mode: Mode): BibleLetterInfoByMode[]
     // Only if Mode is HeyMode.SKIP_HEY
     lettersInfo = _buildBibleLettersInfoByMode_TreatTerminalHeyAsNikud(mode, lettersInfo);
 
-    // Find min/max numeric values.
-    let minNumeric: number = undefined as unknown as number;
-    let maxNumeric: number = undefined as unknown as number;
-    for (const letterInfo of lettersInfo) {
-        if (letterInfo.numeric !== undefined) {
-            if ((minNumeric === undefined) || (letterInfo.numeric < minNumeric)) {
-                minNumeric = letterInfo.numeric;
-            }
-            if ((maxNumeric === undefined) || (letterInfo.numeric > maxNumeric)) {
-                maxNumeric = letterInfo.numeric;
-            }
-        }
-    }
-    
-    // Populate normalized values.
-    for (const letterInfo of lettersInfo) {
-        if (letterInfo.numeric !== undefined) {
-            (letterInfo as any).normalized = (letterInfo.numeric - minNumeric) / (maxNumeric - minNumeric);
-        }
-    }
-
+    // Note: `phase` is set per-letter in the constructor (it depends only on `numeric`),
+    // so no global pass is needed here.
     return lettersInfo;
 }
 

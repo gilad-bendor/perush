@@ -13,7 +13,7 @@ const MAX_TRENDS_DEPTH = 6;
 
 const MIN_OCCURRENCES = 100;
 
-class Statistics {
+class TrendsCombinationStatistics {
     get sumUp(): number { return this.sumByTrend[Trend['^']]; }
     get sumDown(): number { return this.sumByTrend[Trend['v']]; }
     get percentUp(): number { return this.sumUp / (this.sumUp + this.sumDown) * 100; }
@@ -70,7 +70,7 @@ mkdirSync(savedLogsDir, {recursive: true});
 
 // Prepare for examinations.
 let examinationsCount = 0;
-const allStatistics: Statistics[] = [];
+const allStatistics: TrendsCombinationStatistics[] = [];
 const startTime = Date.now();
 function logExaminationProgress() {
     console.log(`[${String(Math.floor((Date.now() - startTime) / 1000)).padStart(8)} ] Examined ${examinationsCount} trends combinations (collected ${allStatistics.length} samples)`);
@@ -110,7 +110,7 @@ for (let trendsDepth = MIN_TRENDS_DEPTH; trendsDepth <= MAX_TRENDS_DEPTH; trends
 console.log('Done All.');
 
 
-function examineSpecificAspect(bibleText: BibleLetterInfoByMode[], mode: Mode, trendsCombination: Trend[]): Statistics | undefined {
+function examineSpecificAspect(bibleText: BibleLetterInfoByMode[], mode: Mode, trendsCombination: Trend[]): TrendsCombinationStatistics | undefined {
     const trendsString = trendsCombination.map(trend => Trend[trend]).join('');
     if (LOG_EVERY_TREND_MATCHING) {
         console.log(`\tTrends: ${trendsString}`);
@@ -151,5 +151,5 @@ function examineSpecificAspect(bibleText: BibleLetterInfoByMode[], mode: Mode, t
         }
     }
 
-    return new Statistics(mode, trendsCombination, sumByTrend);
+    return new TrendsCombinationStatistics(mode, trendsCombination, sumByTrend);
 }
