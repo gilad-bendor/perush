@@ -67,31 +67,48 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
                 letterInfos[PairSide.FIRST_UPPER].normalized,
                 letterInfos[PairSide.SECOND_LOWER].normalized,
             ]);
-            const renormalized: [number | undefined, number | undefined] = [undefined, undefined];  // "normalized" is between 0 (min value) to 1 (max value)
-            for (let pairSide = PairSide.FIRST_UPPER; pairSide <= PairSide.SECOND_LOWER; pairSide++) {
-                // Transform the BibleLetterInfoByMode.normalized
-                const normalized = letterInfos[pairSide].normalized;
-                if (normalized !== undefined) {
-                    const transformedNormalized = transformedNormalizedPair[pairSide];
-                    if (transformedNormalized !== undefined) {
-                        const min = this.transformLetterNormalizedMin[pairSide];
-                        const max = this.transformLetterNormalizedMax[pairSide];
-                        if (transformedNormalized < min) {
-                            throw new Error(`${this.constructor.name}.transformLetterNormalized(${normalized}, "${pairSideToString[pairSide]}") returned ${transformedNormalized} - which is lower than the minimum ${min}`);
-                        }
-                        if (transformedNormalized > max) {
-                            throw new Error(`${this.constructor.name}.transformLetterNormalized(${normalized}, "${pairSideToString[pairSide]}") returned ${transformedNormalized} - which is higher than the maximum ${max}`);
-                        }
-                        // Re-normalize the transformed value.
-                        renormalized[pairSide] = (transformedNormalized - min) / (max - min);
-                    }
-                }
-            }
+            const renormalized = this.renormalizeTransformedPair(letterInfos, transformedNormalizedPair);
 
             // Build the HTML.
             this.buildHtmlForPairOfLetters(letterInfos, renormalized, htmlBuilder);
         }
         return {handledLettersCount: 2};
+    }
+
+    /**
+     * Re-normalize each transformed value of a pair into the 0..1 range expected
+     * by the HTML/CSS, using this visualizer's per-side [min, max] bounds.
+     * A side is left `undefined` when its letter (or its transformed value) is
+     * missing - so callers that may lack one side (e.g. a missing predecessor)
+     * can pass `undefined` safely.
+     */
+    protected renormalizeTransformedPair(
+        letterInfos: [BibleLetterInfoByMode | undefined, BibleLetterInfoByMode | undefined],
+        transformedNormalizedPair: [number | undefined, number | undefined],
+    ): [number | undefined, number | undefined] {
+        const renormalized: [number | undefined, number | undefined] = [undefined, undefined];  // "normalized" is between 0 (min value) to 1 (max value)
+        for (let pairSide = PairSide.FIRST_UPPER; pairSide <= PairSide.SECOND_LOWER; pairSide++) {
+            // Transform the BibleLetterInfoByMode.normalized
+            const normalized = letterInfos[pairSide]?.normalized;
+            if (normalized === undefined) {
+                continue;
+            }
+            const transformedNormalized = transformedNormalizedPair[pairSide];
+            if (transformedNormalized === undefined) {
+                continue;
+            }
+            const min = this.transformLetterNormalizedMin[pairSide];
+            const max = this.transformLetterNormalizedMax[pairSide];
+            if (transformedNormalized < min) {
+                throw new Error(`${this.constructor.name}.transformLetterNormalized(${normalized}, "${pairSideToString[pairSide]}") returned ${transformedNormalized} - which is lower than the minimum ${min}`);
+            }
+            if (transformedNormalized > max) {
+                throw new Error(`${this.constructor.name}.transformLetterNormalized(${normalized}, "${pairSideToString[pairSide]}") returned ${transformedNormalized} - which is higher than the maximum ${max}`);
+            }
+            // Re-normalize the transformed value.
+            renormalized[pairSide] = (transformedNormalized - min) / (max - min);
+        }
+        return renormalized;
     }
 
     /**
