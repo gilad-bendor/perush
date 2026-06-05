@@ -3,7 +3,7 @@ import {LettersToHtml_Base} from "./letters-to-html-base.ts";
 import {BibleLetterInfoByMode} from "../base/bible-text.ts";
 
 /**
- * A single letter/space - visualized with an UPPER bar only (no lower bar).
+ * Each column shows a single letter, with its numeric-value visualized on the UPPER bar (no lower bar).
  */
 export class LettersToHtml_Simple extends LettersToHtml_Base {
     readonly skipOneLetter: boolean;

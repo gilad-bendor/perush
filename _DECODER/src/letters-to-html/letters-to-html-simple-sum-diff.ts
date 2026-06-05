@@ -4,20 +4,12 @@ import {PairSide} from "./letters-to-html-pair.ts";
 import {LettersToHtml_PairSumDiff} from "./letters-to-html-pair-sum-diff.ts";
 
 /**
- * Like LettersToHtml_PairSumDiff (upper bar = SUM, lower bar = DIFF, with BOTH
- * bars rendered) - but a "Simple"-style, single-letter-per-column visualization:
- * each column shows ONE letter (the current letter N) and advances one letter at
- * a time. The two bars relate that letter to its immediate predecessor:
- *   - upper bar = SUM  of letter N and letter N-1
- *   - lower bar = DIFF of letter N and letter N-1
- *
- * Contrast with LettersToHtml_PairSumDiff, whose sum/diff combine the two letters
- * that share a column (N and N+1), advancing two letters at a time. Here the
- * column's own letter (N) is combined with the *previous* column's letter (N-1).
- *
- * The sum/diff transform and its bounds (sum 0..2, diff -1..+1) are inherited
- * unchanged from LettersToHtml_PairSumDiff, with PairSide.FIRST_UPPER mapped to
- * the current letter N and PairSide.SECOND_LOWER to the previous letter N-1.
+ * Each column shows a single letter (N), advancing ONE letter at a time, and its
+ * relation to the PREVIOUS letter (N-1):
+ * - Their SUM  on the UPPER bar
+ * - Their DIFF on the LOWER bar
+ * (Contrast with PairSumDiff, which combines the two letters sharing a column and
+ * advances two letters at a time.)
  */
 export class LettersToHtml_SimpleSumDiff extends LettersToHtml_PairSumDiff {
     constructor(

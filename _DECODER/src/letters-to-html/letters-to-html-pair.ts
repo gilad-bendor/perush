@@ -9,7 +9,9 @@ export enum PairSide {
 export const pairSideToString = ['FIRST_UPPER', 'SECOND_LOWER'];
 
 /**
- * A pair of letters/space.
+ * Each column shows a PAIR of letters (letter-1 and letter-2), with each letter's numeric-value visualized:
+ * - Letter-1 on the UPPER bar
+ * - Letter-2 on the LOWER bar
  */
 export class LettersToHtml_Pair extends LettersToHtml_Base {
     readonly skipOneLetter: boolean;

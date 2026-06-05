@@ -2,9 +2,10 @@ import {type Mode} from "../base/mode.ts";
 import {LettersToHtml_Pair, PairSide} from "./letters-to-html-pair.ts";
 
 /**
- * Like LettersToHtml_Pair - but:
- *   - upper = SUM
- *   - lower = DIFF
+ * Each column shows a PAIR of letters (letter-1 and letter-2) and the relations between them:
+ * - Their SUM  on the UPPER bar
+ * - Their DIFF on the LOWER bar
+ * The two letters share a column, so this advances TWO letters at a time.
  */
 export class LettersToHtml_PairSumDiff extends LettersToHtml_Pair {
     constructor(
