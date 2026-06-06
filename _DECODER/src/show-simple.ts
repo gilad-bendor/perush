@@ -17,6 +17,8 @@ const html = [
     // --------------------------------------------------------------------------------
     new LettersToHtml_SimpleSumDiff({ mode }).allColumnsHtml,
     // --------------------------------------------------------------------------------
+    new LettersToHtml_SimpleSumDiff({ mode, doubleDiff: true }).allColumnsHtml,
+    // --------------------------------------------------------------------------------
 ].join('\n<hr>\n');
 openHtmlInBrowser(html);
 
