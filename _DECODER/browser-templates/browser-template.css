@@ -84,6 +84,13 @@ hr {
     bottom: calc((50% - 0.6rem) * var(--var-0-to-1));
 }
 
+/* Single-layer upper bar (the "diff" visualizers): FULL upper-bar height, with one marker showing the
+ * already-warp-aware phase-gap - so no doubled "warp" marker is needed.
+ * --var-0-to-1 = 0.5 is a zero gap (marker centered); 0 / 1 are the extremes. */
+.bible-column-bar-upper-single .bible-column-marker-1 {
+    bottom: calc((100% - 0.6rem) * var(--var-0-to-1));
+}
+
 .bible-column-letter {
     flex-grow: 0;
     flex-shrink: 0;

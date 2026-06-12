@@ -125,20 +125,64 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
     ) {
         htmlBuilder.push(
             // Upper bar
-            `<div class="bible-column-bar bible-column-bar-upper"${this.barTitleAttribute(this.barTitle(PairSide.FIRST_UPPER, letterInfos))} style="--var-0-to-1: ${normalizedValues[PairSide.FIRST_UPPER]}" data-letter="${letterInfos[PairSide.FIRST_UPPER ].text}">`,
-            ...(normalizedValues[PairSide.FIRST_UPPER] === undefined ? [] : [
-                `<div class="bible-column-marker bible-column-marker-2"></div>`,
-                `<div class="bible-column-marker bible-column-marker-1"></div>`,
-            ]),
+            `<div class="${this.upperBarClasses()}"${this.barTitleAttribute(this.barTitle(PairSide.FIRST_UPPER, letterInfos))} style="--var-0-to-1: ${normalizedValues[PairSide.FIRST_UPPER]}" data-letter="${letterInfos[PairSide.FIRST_UPPER ].text}">`,
+            ...this.upperBarMarkersHtml(normalizedValues[PairSide.FIRST_UPPER]),
             `</div>`,
             // The pair of letters
             `<div class="bible-column-letter bible-column-letter-upper" data-letter="${letterInfos[PairSide.FIRST_UPPER ].text}">${letterInfos[PairSide.FIRST_UPPER ].text}</div>`,
             `<div class="bible-column-letter bible-column-letter-lower" data-letter="${letterInfos[PairSide.SECOND_LOWER].text}">${letterInfos[PairSide.SECOND_LOWER].text}</div>`,
-            // Lower bar
-            `<div class="${this.lowerBarClasses()}"${this.barTitleAttribute(this.barTitle(PairSide.SECOND_LOWER, letterInfos))} style="--var-0-to-1: ${normalizedValues[PairSide.SECOND_LOWER]}" data-letter="${letterInfos[PairSide.SECOND_LOWER].text}">`,
-            ...this.lowerBarMarkersHtml(normalizedValues[PairSide.SECOND_LOWER]),
-            `</div>`,
         );
+        if (this.hasLowerBar()) {
+            htmlBuilder.push(
+                // Lower bar
+                `<div class="${this.lowerBarClasses()}"${this.barTitleAttribute(this.barTitle(PairSide.SECOND_LOWER, letterInfos))} style="--var-0-to-1: ${normalizedValues[PairSide.SECOND_LOWER]}" data-letter="${letterInfos[PairSide.SECOND_LOWER].text}">`,
+                ...this.lowerBarMarkersHtml(normalizedValues[PairSide.SECOND_LOWER]),
+                `</div>`,
+            );
+        }
+    }
+
+    /**
+     * Build a column showing a SINGLE letter with only an upper bar (no lower bar) - used by the
+     * "simple" sum/diff visualizers, which advance one letter at a time. The upper bar reuses this
+     * visualizer's own upper-bar hooks, so its style (double "sum" markers vs. single "diff" marker)
+     * matches the corresponding pair visualizer.
+     */
+    protected buildHtmlForSingleLetterUpperBar(
+        letterInfo: BibleLetterInfoByMode,
+        normalizedValue: number | undefined,
+        title: string | undefined,
+        htmlBuilder: string[],
+    ) {
+        htmlBuilder.push(
+            // Upper bar
+            `<div class="${this.upperBarClasses()}"${this.barTitleAttribute(title)} style="--var-0-to-1: ${normalizedValue}" data-letter="${letterInfo.text}">`,
+            ...this.upperBarMarkersHtml(normalizedValue),
+            `</div>`,
+            // The single letter
+            `<div class="bible-column-letter bible-column-letter-upper" data-letter="${letterInfo.text}">${letterInfo.text}</div>`,
+        );
+    }
+
+    /** Whether this visualizer renders a LOWER bar in addition to the upper bar. */
+    protected hasLowerBar(): boolean {
+        return true;
+    }
+
+    /** CSS classes for the UPPER bar's <div>. */
+    protected upperBarClasses(): string {
+        return 'bible-column-bar bible-column-bar-upper';
+    }
+
+    /** Marker <div>s inside the UPPER bar - two layers by default (the doubled "warp" visualization). */
+    protected upperBarMarkersHtml(renormalizedValue: number | undefined): string[] {
+        if (renormalizedValue === undefined) {
+            return [];
+        }
+        return [
+            `<div class="bible-column-marker bible-column-marker-2"></div>`,
+            `<div class="bible-column-marker bible-column-marker-1"></div>`,
+        ];
     }
 
     /** CSS classes for the LOWER bar's <div>. */
@@ -186,16 +230,22 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
         htmlBuilder.push(
             `<div class="bible-column">`,
                 // Upper bar
-                `<div class="bible-column-bar bible-column-bar-upper" data-letter="SPLIT">`,
+                `<div class="${this.upperBarClasses()}" data-letter="SPLIT">`,
                 ...addParts(PairSide.FIRST_UPPER),
                 `</div>`,
                 // The pair of letters
                 `<div class="bible-column-letter bible-column-letter-upper" data-letter="SPLIT">&nbsp;</div>`,
                 `<div class="bible-column-letter bible-column-letter-lower" data-letter="SPLIT">&nbsp;</div>`,
+        );
+        if (this.hasLowerBar()) {
+            htmlBuilder.push(
                 // Lower bar (matches the letter columns' lower-bar geometry)
                 `<div class="${this.lowerBarClasses()}" data-letter="SPLIT">`,
                 ...addParts(PairSide.SECOND_LOWER),
                 `</div>`,
+            );
+        }
+        htmlBuilder.push(
             `</div>`,
         );
     }
