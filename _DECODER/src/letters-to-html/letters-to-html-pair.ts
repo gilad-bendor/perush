@@ -18,6 +18,11 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
     protected transformLetterNormalizedMin: [number, number];
     protected transformLetterNormalizedMax: [number, number];
 
+    /** Each letter's own phase - the upper letter and the lower letter. */
+    get topTitleHtml(): string {
+        return 'φ φ';
+    }
+
     constructor(
         options: {
             mode: Mode,

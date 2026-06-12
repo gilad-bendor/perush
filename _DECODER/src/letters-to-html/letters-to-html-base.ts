@@ -11,6 +11,9 @@ export abstract class LettersToHtml_Base {
     readonly allBibleLetterInfos: BibleLetterInfoByMode[];
     private _allColumnsHtml?: string;
 
+    /** HTML shown at the top-right of the columns wrapper - a short title/legend for this visualizer. */
+    abstract readonly topTitleHtml: string;
+
     protected constructor(mode: Mode) {
         this.mode = mode;
         this.allBibleLetterInfos = getBibleLettersInfoByMode(mode);
@@ -20,6 +23,7 @@ export abstract class LettersToHtml_Base {
         if (!this._allColumnsHtml) {
             const htmlBuilder: string[] = [];
             htmlBuilder.push(`<div class="bible-columns-wrapper ${this.wrapperVariantClass()} bible-columns-wrapper-${this.constructor.name}">\n`)
+            htmlBuilder.push(`<div class="bible-columns-title"><div class="bible-columns-title-text">${this.topTitleHtml}</div></div>\n`)
             this.addColumnsWrapperHtml(htmlBuilder);
             let columnIndex = 0;
             let scanLetterOffset = 0;

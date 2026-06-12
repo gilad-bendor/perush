@@ -11,6 +11,11 @@ import {GAP_MAX, GAP_MIN, gapPhases, gapTitle, singleMarkerHtml} from "./letters
  * (Contrast with PairSum, which shows the SUM of the two phases instead of the gap.)
  */
 export class LettersToHtml_PairDiff extends LettersToHtml_Pair {
+    /** Warp-aware phase-GAP between the pair's two letters. */
+    get topTitleHtml(): string {
+        return 'Δ';
+    }
+
     constructor(
         options: {
             mode: Mode,

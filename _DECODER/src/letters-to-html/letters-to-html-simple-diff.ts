@@ -20,6 +20,11 @@ export class LettersToHtml_SimpleDiff extends LettersToHtml_PairDiff {
     /** When true, the bar shows the slope GAP(N,N-p) - GAP(N-p,N-2p) instead of just GAP(N,N-p). */
     readonly doubleDiff: boolean;
 
+    /** Phase-GAP (or its slope, Δ′, when doubleDiff), between N and N-p. */
+    get topTitleHtml(): string {
+        return `${this.doubleDiff ? 'Δ′' : 'Δ'} · p=${this.previousLetterOffset}`;
+    }
+
     constructor(
         options: {
             mode: Mode,

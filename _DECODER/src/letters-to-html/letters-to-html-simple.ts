@@ -9,6 +9,11 @@ export class LettersToHtml_Simple extends LettersToHtml_Base {
     protected transformLetterNormalizedMin: number;
     protected transformLetterNormalizedMax: number;
 
+    /** Each letter's own phase. */
+    get topTitleHtml(): string {
+        return 'φ';
+    }
+
     constructor(
         options: {
             mode: Mode,
@@ -121,7 +126,7 @@ export class LettersToHtml_Simple extends LettersToHtml_Base {
      * `letterOffset` is the offset (into this.allBibleLetterInfos) of the letter
      * being transformed - so subclasses can reach neighboring letters (e.g. N-1).
      */
-    protected transformLetterNormalized(phase: number | undefined, letterOffset: number): number | undefined {
+    protected transformLetterNormalized(phase: number | undefined, _letterOffset: number): number | undefined {
         return phase;
     }
 

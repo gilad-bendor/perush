@@ -20,6 +20,11 @@ export class LettersToHtml_SimpleSum extends LettersToHtml_PairSum {
     /** When true, the bar shows the slope SUM(N,N-p) - SUM(N-p,N-2p) instead of just SUM(N,N-p). */
     readonly doubleDiff: boolean;
 
+    /** SUM (or its slope, Σ′, when doubleDiff), of N and N-p. */
+    get topTitleHtml(): string {
+        return `${this.doubleDiff ? 'Σ′' : 'Σ'} · p=${this.previousLetterOffset}`;
+    }
+
     constructor(
         options: {
             mode: Mode,

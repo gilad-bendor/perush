@@ -11,6 +11,11 @@ import {SUM_MAX, SUM_MIN, sumPhases, sumTitle} from "./letters-to-html-sum-diff-
  * (Contrast with PairDiff, which shows the warp-aware phase-GAP instead of the sum.)
  */
 export class LettersToHtml_PairSum extends LettersToHtml_Pair {
+    /** SUM of the pair's two phases. */
+    get topTitleHtml(): string {
+        return 'Σ = φ + φ';
+    }
+
     constructor(
         options: {
             mode: Mode,

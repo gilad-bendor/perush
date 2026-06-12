@@ -2,12 +2,51 @@ html {
     direction: rtl;
     font-size: 140%;
 }
+
+/* A thin vertical line that follows the mouse x-position (driven by browser-template.js).
+ * Pinned to the viewport, transparent to events (clicks fall through), above everything. */
+.vertical-mouse-tracker {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-color: rgba(255, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translateX(var(--mouse-x, -10px));
+}
 hr {
     /*margin: 2rem 0;*/
 }
 
 .bible-columns-wrapper {
     display: flex;
+    position: relative;
+}
+/* Short title/legend (see LettersToHtml_Base.topTitleHtml), kept stuck to the right edge of the
+ * viewport during horizontal scroll. The outer element is a zero-width sticky anchor (flex/min-width/
+ * width all 0, so it never shifts the columns); the inner text is absolutely positioned and hangs
+ * leftward from the anchor's right edge, so the whole label stays visible. */
+.bible-columns-title {
+    position: sticky;
+    right: 0.25rem;
+    align-self: flex-start;
+    flex: 0 0 0;
+    min-width: 0;
+    width: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+.bible-columns-title-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    white-space: nowrap;
+    direction: ltr;
+    font-size: 0.8rem;
+    color: #888;
+    padding: 0.1rem 0.3rem;
 }
 /* Layout variants: an upper AND a lower bar, vs. an upper bar only.
  * No explicit height here - the overall height is derived from the parts
