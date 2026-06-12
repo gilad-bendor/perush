@@ -1,16 +1,17 @@
 import {readFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {HEBREW_LETTER_COUNT, hebrewLetterToNumeric, HeyMode, type Mode, modeToString, normalizeHebrewChar, VavMode, YudMode} from "./mode.ts";
+import {normalizeShinSin} from "./utils.ts";
 
 /**
  * Biblical annotated text - line-per-verse. Verse/line sample:    `בְּרֵאשִׁית בָּרָא אֱלהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ` (בראשית א:א)
  * Never contains "ש" (no dot) - only "שׁ" (Shin) and "שׂ" (Sin).
  */
 export type BiblicalAnnotatedText = string;
-export const biblicalAnnotatedText: BiblicalAnnotatedText = readFileSync(
+export const biblicalAnnotatedText: BiblicalAnnotatedText = normalizeShinSin(readFileSync(
     fileURLToPath(new URL('../../data/biblical-annotated-text.txt', import.meta.url)),
     'utf-8',
-);
+));
 
 /**
  * Immutable info of a single letter in a specific index in the biblical text.

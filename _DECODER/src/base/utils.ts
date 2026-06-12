@@ -42,3 +42,27 @@ export function enumValues<E extends Record<string, string | number>>(enumObject
 }
 
 export const HORIZONTAL_MAIN_SEPARATOR = '\n\n<div class="horizontal-main-separator"></div>\n\n';
+
+
+
+
+
+/**
+ * Make basic normalization of any string that may contain some Hebrew parts:
+ *   - Shin/Sin - from Unicode-combination to single Unicode:  שׁ --> שׁ,  	שׂ --> שׂ
+ */
+export function normalizeShinSin(str: string): string {
+    return (
+        str
+            // Shin - from Unicode-combination to single Unicode:  שׁ --> שׁ
+            .replace(
+                /\u05e9([\u0590-\u05c1\u05c3-\u05cf\u05eb-\u05FF]*)\u05c1/g,
+                `\ufb2a$1`,
+            )
+            // Sin - from Unicode-combination to single Unicode:  שׂ --> שׂ
+            .replace(
+                /\u05e9([\u0590-\u05c1\u05c3-\u05cf\u05eb-\u05FF]*)\u05c2/g,
+                `\ufb2b$1`,
+            ) // שׁ
+    );
+}
