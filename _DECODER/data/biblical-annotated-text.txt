@@ -1,1 +1,1 @@
-biblical-annotated-text--KINGS1.txt
+biblical-annotated-text--SHORT.txt

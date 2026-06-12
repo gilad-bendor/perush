@@ -7,7 +7,7 @@ const savedHtmlDir = fileURLToPath(new URL('../../saved-htmls', import.meta.url)
 mkdirSync(savedHtmlDir, {recursive: true});
 
 export const browserTemplateCss: BiblicalAnnotatedText = readFileSync(fileURLToPath(new URL('../../browser-templates/browser-template.css', import.meta.url)), 'utf-8');
-export const browserTemplateJs: BiblicalAnnotatedText = readFileSync(fileURLToPath(new URL('../../browser-templates/browser-template.css', import.meta.url)), 'utf-8');
+export const browserTemplateJs: BiblicalAnnotatedText = readFileSync(fileURLToPath(new URL('../../browser-templates/browser-template.js', import.meta.url)), 'utf-8');
 export const browserTemplateHtml: BiblicalAnnotatedText = readFileSync(fileURLToPath(new URL('../../browser-templates/browser-template.html', import.meta.url)), 'utf-8')
     .replace("/* INCLUDE browser-template.css */", browserTemplateCss.replace(/\n/g, '\n\t\t'))
     .replace("<!-- INCLUDE browser-template.js -->", browserTemplateJs.replace(/\n/g, '\n\t'))
