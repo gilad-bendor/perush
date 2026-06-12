@@ -14,7 +14,7 @@ export const pairSideToString = ['FIRST_UPPER', 'SECOND_LOWER'];
  * - Letter-2 on the LOWER bar
  */
 export class LettersToHtml_Pair extends LettersToHtml_Base {
-    readonly skipOneLetter: boolean;
+    readonly initialSkipCount: number;
     protected transformLetterNormalizedMin: [number, number];
     protected transformLetterNormalizedMax: [number, number];
 
@@ -26,7 +26,7 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
     constructor(
         options: {
             mode: Mode,
-            skipOneLetter: boolean,
+            initialSkipCount: number,
         } & (
             {
             } | {
@@ -41,7 +41,7 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
         )
     ) {
         super(options.mode);
-        this.skipOneLetter = options.skipOneLetter;
+        this.initialSkipCount = options.initialSkipCount;
         this.transformLetterNormalizedMin = [
             // @ts-ignore
             options.upperTransformedNormalizedMin ?? options.transformedNormalizedMin ?? 0,
@@ -62,9 +62,7 @@ export class LettersToHtml_Pair extends LettersToHtml_Base {
      * - the second is visualized LOWER in the HTML column
      */
     buildHtmlForLettersInfo(startLetterOffset: number, htmlBuilder: string[]): { handledLettersCount: number } {
-        if (this.skipOneLetter) {
-            startLetterOffset++;
-        }
+        startLetterOffset += this.initialSkipCount;
         const letterInfos: [BibleLetterInfoByMode, BibleLetterInfoByMode] = [
             this.allBibleLetterInfos[startLetterOffset],
             this.allBibleLetterInfos[startLetterOffset + 1],

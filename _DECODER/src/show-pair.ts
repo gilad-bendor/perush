@@ -14,17 +14,13 @@ const mode: Mode = {
 
 const html = [
     // --------------------------------------------------------------------------------
-    new LettersToHtml_Pair(    { mode, skipOneLetter: false }).allColumnsHtml,
+    new LettersToHtml_Pair(    { mode, initialSkipCount: 0 }).allColumnsHtml,
+    new LettersToHtml_PairDiff({ mode, initialSkipCount: 0 }).allColumnsHtml,
+    new LettersToHtml_PairDiff({ mode, initialSkipCount: 1 }).allColumnsHtml,
+    new LettersToHtml_PairSum( { mode, initialSkipCount: 0 }).allColumnsHtml,
+    new LettersToHtml_PairSum( { mode, initialSkipCount: 1 }).allColumnsHtml,
     // --------------------------------------------------------------------------------
-    new LettersToHtml_PairDiff({ mode, skipOneLetter: false }).allColumnsHtml,
-    // --------------------------------------------------------------------------------
-    new LettersToHtml_PairDiff({ mode, skipOneLetter: true  }).allColumnsHtml,
-    // --------------------------------------------------------------------------------
-    new LettersToHtml_PairSum( { mode, skipOneLetter: false }).allColumnsHtml,
-    // --------------------------------------------------------------------------------
-    new LettersToHtml_PairSum( { mode, skipOneLetter: true  }).allColumnsHtml,
-    // --------------------------------------------------------------------------------
-].join('\n<hr>\n');
+].join('\n\n');
 openHtmlInBrowser(html);
 
 console.log('Done.');

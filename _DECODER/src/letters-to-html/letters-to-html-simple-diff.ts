@@ -15,6 +15,8 @@ import {gapPhases, gapSlopeTitle, gapTitle, SLOPE_MAX, SLOPE_MIN, subtract} from
  * at a time; and with SimpleSum, which shows the SUM of the two phases instead of the gap.)
  */
 export class LettersToHtml_SimpleDiff extends LettersToHtml_PairDiff {
+    /** Letters between each bar */
+    readonly skipLettersCount: number;
     /** Compare the current letter N with the letter `previousLetterOffset` positions earlier. */
     readonly previousLetterOffset: number;
     /** When true, the bar shows the slope GAP(N,N-p) - GAP(N-p,N-2p) instead of just GAP(N,N-p). */
@@ -22,20 +24,28 @@ export class LettersToHtml_SimpleDiff extends LettersToHtml_PairDiff {
 
     /** Phase-GAP (or its slope, Δ′, when doubleDiff), between N and N-p. */
     get topTitleHtml(): string {
-        return `${this.doubleDiff ? 'Δ′' : 'Δ'} · p=${this.previousLetterOffset}`;
+        return `${this.doubleDiff ? 'Δ′' : 'Δ'} · p=${this.previousLetterOffset} · s=${this.skipLettersCount} · i=${this.initialSkipCount}`;
+    }
+
+    /** Halve the upper-bar height (the single marker positions itself relative to the bar's height). */
+    protected upperBarClasses(): string {
+        return `${super.upperBarClasses()} bible-column-bar-half`;
     }
 
     constructor(
         options: {
             mode: Mode,
+            initialSkipCount?: number,
+            skipLettersCount?: number,
             previousLetterOffset?: number,
             doubleDiff?: boolean,
         }
     ) {
         super({
             mode: options.mode,
-            skipOneLetter: false,
+            initialSkipCount: options.initialSkipCount ?? 0,
         });
+        this.skipLettersCount = options.skipLettersCount ?? 1;
         this.previousLetterOffset = options.previousLetterOffset ?? 1;
         this.doubleDiff = options.doubleDiff ?? false;
         if (this.doubleDiff) {
@@ -51,22 +61,25 @@ export class LettersToHtml_SimpleDiff extends LettersToHtml_PairDiff {
      * The bar is omitted whenever any letter it needs is missing (e.g. near the start of the text).
      */
     buildHtmlForLettersInfo(startLetterOffset: number, htmlBuilder: string[]): { handledLettersCount: number } {
-        const current = this.allBibleLetterInfos[startLetterOffset];
-        if (current) {
-            const p = this.previousLetterOffset;
-            const previous = this.allBibleLetterInfos[startLetterOffset - p];
-            const earlier = this.allBibleLetterInfos[startLetterOffset - 2 * p];
-
-            const value = this.doubleDiff
-                ? subtract(gapPhases(current, previous), gapPhases(previous, earlier))
-                : gapPhases(current, previous);
-            const title = this.doubleDiff
-                ? gapSlopeTitle(current, previous, earlier)
-                : gapTitle(current, previous);
-
-            const normalized = this.renormalizeTransformedPair([current, undefined], [value, undefined]);
-            this.buildHtmlForSingleLetterUpperBar(current, normalized[PairSide.FIRST_UPPER], title, htmlBuilder);
+        const offset = startLetterOffset + this.initialSkipCount;
+        const current = this.allBibleLetterInfos[offset];
+        if (!current) {
+            // Past the end (the skipped tail): consume the remaining offsets so the scan stops cleanly.
+            return {handledLettersCount: Math.max(1, this.allBibleLetterInfos.length - startLetterOffset)};
         }
-        return {handledLettersCount: 1};
+        const p = this.previousLetterOffset;
+        const previous = this.allBibleLetterInfos[offset - p];
+        const earlier = this.allBibleLetterInfos[offset - 2 * p];
+
+        const value = this.doubleDiff
+            ? subtract(gapPhases(current, previous), gapPhases(previous, earlier))
+            : gapPhases(current, previous);
+        const title = this.doubleDiff
+            ? gapSlopeTitle(current, previous, earlier)
+            : gapTitle(current, previous);
+
+        const normalized = this.renormalizeTransformedPair([current, undefined], [value, undefined]);
+        this.buildHtmlForSingleLetterUpperBar(current, normalized[PairSide.FIRST_UPPER], title, htmlBuilder);
+        return {handledLettersCount: this.skipLettersCount};
     }
 }

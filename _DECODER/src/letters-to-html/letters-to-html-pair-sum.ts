@@ -19,7 +19,7 @@ export class LettersToHtml_PairSum extends LettersToHtml_Pair {
     constructor(
         options: {
             mode: Mode,
-            skipOneLetter: boolean,
+            initialSkipCount: number,
         }
     ) {
         super({

@@ -40,3 +40,5 @@ export function timeAsString(date = new Date()): string {
 export function enumValues<E extends Record<string, string | number>>(enumObject: E): E[keyof E][] {
     return Object.values(enumObject).filter((value): value is E[keyof E] => typeof value === 'number');
 }
+
+export const HORIZONTAL_MAIN_SEPARATOR = '\n\n<div class="horizontal-main-separator"></div>\n\n';

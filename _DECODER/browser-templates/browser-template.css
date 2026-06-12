@@ -3,6 +3,13 @@ html {
     font-size: 140%;
 }
 
+.horizontal-main-separator {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    margin: 2px 0;
+}
+
 /* A thin vertical line that follows the mouse x-position (driven by browser-template.js).
  * Pinned to the viewport, transparent to events (clicks fall through), above everything. */
 .vertical-mouse-tracker {
@@ -85,6 +92,11 @@ hr {
     position: relative;
     height: 11.5rem;
     flex-shrink: 0;
+}
+/* Half-height bar modifier (e.g. LettersToHtml_SimpleDiff). Markers position themselves relative to
+ * the bar's own height, so they stay correct when it is halved. */
+.bible-column-bar-half {
+    height: calc(11.5rem / 2);
 }
 .bible-column-bar[data-letter=" "] {
     background-color: #eee;
