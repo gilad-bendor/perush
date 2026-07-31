@@ -112,6 +112,16 @@ body {
     border-bottom: 1px solid white;
 }
 
+.tab-read-only {
+    margin-left: 6px;
+    padding: 1px 6px;
+    background: #1a73e8;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 999px;
+}
+
 .tab-close {
     margin-right: 8px;
     color: #666;

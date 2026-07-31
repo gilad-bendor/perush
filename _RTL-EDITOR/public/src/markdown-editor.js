@@ -2,7 +2,7 @@ import { RegExpCursor, SearchQuery } from "@codemirror/search"
 import { EditorView, basicSetup } from 'codemirror';
 import { keymap, ViewPlugin, Decoration } from '@codemirror/view';
 import { markdown } from '@codemirror/lang-markdown';
-import { Compartment, RangeSetBuilder, Prec } from '@codemirror/state';
+import { Compartment, EditorState, RangeSetBuilder, Prec } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
@@ -21,6 +21,7 @@ export class MarkdownEditor {
         this.expandedFolders = new Set();
         this.fileTreeElements = new Map();
         this.directionCompartment = new Compartment();
+        this.readOnlyCompartment = new Compartment();
         this.init().catch(consoleError);
     }
 
@@ -201,6 +202,7 @@ export class MarkdownEditor {
             ...specialKeyHandling.map((keyRun) => Prec.high(keymap.of([keyRun]))),
             keymap.of([indentWithTab]),
             this.directionCompartment.of(EditorView.contentAttributes.of({ dir: isRtl ? 'rtl' : 'ltr' })),
+            this.readOnlyCompartment.of(EditorState.readOnly.of(tabData.readOnly)),
             EditorView.updateListener.of((update) => {
                 if (update.docChanged) {
                     tabData.isDirty = true;
@@ -378,7 +380,7 @@ export class MarkdownEditor {
 
     /**
      * @param {string} filePath
-     * @returns {Promise<string>}
+     * @returns {Promise<{ content: string; readOnly: boolean }>}
      */
     async loadFileFromServer(filePath) {
         try {
@@ -387,7 +389,7 @@ export class MarkdownEditor {
             if (!response.ok) {
                 throw new Error(data.error || 'Unknown error');
             }
-            return data.content;
+            return data;
         } catch (error) {
             throw new Error(`Failed to load file ${JSON.stringify(filePath)}: ${error}`);
         }
@@ -405,7 +407,7 @@ export class MarkdownEditor {
                 // Create the tab-title element.
                 const tabElement = document.createElement('button');
                 tabElement.className = 'tab';
-                tabElement.innerHTML = `<span class="tab-close">&times;</span>[title-will-be-set-shortly]`;
+                tabElement.innerHTML = `<span class="tab-close">&times;</span><span class="tab-title"></span>`;
                 /** @type {HTMLElement} */ (tabElement.querySelector('.tab-close')).addEventListener('click', (event) => {
                     event.stopPropagation();
                     this.closeTab(filePath).catch(consoleError);
@@ -413,15 +415,16 @@ export class MarkdownEditor {
                 tabElement.addEventListener('click', () => this.switchToTab(filePath).catch(consoleError));
                 /** @type {HTMLElement} */ (document.getElementById('tabs')).appendChild(tabElement);
 
-                let content;
+                let response;
                 try {
                     // Load file content from server.
-                    content = await this.loadFileFromServer(filePath);
+                    response = await this.loadFileFromServer(filePath);
                 } catch (error) {
                     consoleError(`Failed to load ${JSON.stringify(filePath)}: `, error);
                     this.closeTab(filePath).catch(consoleError);
                     return;
                 }
+                let {content, readOnly} = response;
 
                 // Build a <div> wrapper for the editor to allow easier styling.
                 const editorWrapper = document.createElement('div');
@@ -429,7 +432,7 @@ export class MarkdownEditor {
                 /** @type {HTMLElement} */ (document.querySelector('.editor-pane')).appendChild(editorWrapper);
 
                 // Create TabData instance
-                const tabData = new TabData(this, filePath, fileName, content, /** @type {any} */(null), editorWrapper, tabElement);
+                const tabData = new TabData(this, filePath, fileName, !!readOnly, content, /** @type {any} */(null), editorWrapper, tabElement);
 
                 // Build the editor from CodeMirror (needs tabData for event handlers)
                 /** @type {EditorView} */

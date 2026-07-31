@@ -2,21 +2,33 @@
 import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, consoleGroupCollapsed, consoleGroupEnd } from './logs.js';
 import { MarkdownEditor } from './markdown-editor.js';
 import { EditorView } from 'codemirror';
+import { EditorState } from '@codemirror/state';
 
 export class TabData {
     /**
      * @param {MarkdownEditor} markdownEditor
      * @param {string} filePath
      * @param {string} fileName
+     * @param {boolean} readOnly
      * @param {string} contentAtServer
      * @param {EditorView} editorView
      * @param {HTMLDivElement} editorWrapper
      * @param {HTMLButtonElement} tabElement
      */
-    constructor(markdownEditor, filePath, fileName, contentAtServer, editorView, editorWrapper, tabElement) {
+    constructor(
+        markdownEditor,
+        filePath,
+        fileName,
+        readOnly,
+        contentAtServer,
+        editorView,
+        editorWrapper,
+        tabElement,
+    ) {
         this.markdownEditor = markdownEditor;
         this.filePath = filePath;
         this.fileName = fileName;
+        this.readOnly = readOnly;
         // noinspection JSUnusedGlobalSymbols
         this.contentAtServer = contentAtServer;
         this.isDirty = false;
@@ -29,9 +41,32 @@ export class TabData {
     }
 
     updateTitle() {
-        /** @type {Text} */(this.tabElement.lastChild).data = this.isDirty
+        /** @type {HTMLElement} */(this.tabElement.querySelector('.tab-title')).textContent = this.isDirty
                 ? `${this.fileName} •`
                 : this.fileName;
+
+        // Read-only tabs get an "RO" badge after the file-name.
+        const existingBadge = this.tabElement.querySelector('.tab-read-only');
+        if (this.readOnly && !existingBadge) {
+            const badge = document.createElement('span');
+            badge.className = 'tab-read-only';
+            badge.textContent = 'RO';
+            this.tabElement.appendChild(badge);
+        } else if (!this.readOnly && existingBadge) {
+            existingBadge.remove();
+        }
+    }
+
+    /**
+     * Apply this.readOnly to the editor, so that a read-only tab cannot be edited.
+     * @param {boolean} readOnly
+     */
+    setReadOnly(readOnly) {
+        this.readOnly = readOnly;
+        this.editorView.dispatch({
+            effects: this.markdownEditor.readOnlyCompartment.reconfigure(EditorState.readOnly.of(readOnly))
+        });
+        this.updateTitle();
     }
 
     scheduleAutosave() {
@@ -52,7 +87,7 @@ export class TabData {
     }
 
     async autosave() {
-        if (!this.isDirty) {
+        if (!this.isDirty || this.readOnly) {
             return;
         }
 
@@ -95,16 +130,22 @@ export class TabData {
         if (this.autosaveTimeoutId) {
             return;
         }
-        const contentOnServer = await this.markdownEditor.loadFileFromServer(this.filePath);
+        const {content: contentOnServer, readOnly} = await this.markdownEditor.loadFileFromServer(this.filePath);
         if (this.autosaveTimeoutId) {
             return;
+        }
+        if (!!readOnly !== this.readOnly) {
+            this.setReadOnly(!!readOnly);
         }
 
         // If content has changed on server, prompt user to reload or keep local changes.
         const currentContent = this.editorView.state.doc.toString();
         if (currentContent !== contentOnServer) {
             consoleWarn(`File ${JSON.stringify(this.filePath)} has changed on server:`, {uiContent: currentContent, contentOnServer});
-            alert(`The file\n    ${this.filePath}\n has changed on the server: updating.`);
+            // For a read-only tab, the user has no local changes to lose - so update silently.
+            if (!this.readOnly && !readOnly) {
+                alert(`The file\n    ${this.filePath}\n has changed on the server: updating.`);
+            }
 
             // Remember original scroll position and selection.
             const originalScrollTop = this.editorView.scrollDOM.scrollTop;

@@ -19,4 +19,5 @@ node_modules/
 /_RTL-EDITOR/node_modules/
 /_MCP-SERVER/node_modules
 _scratch*.md
+_claude-output.script.rtl.md
 /claude-code-semitic-linguist
