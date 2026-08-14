@@ -63,7 +63,7 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 
 **Structural relationships between entries** — the dictionary is not a flat list. Key organizing axes:
 - **Complexity scale**: צומח (insights) → חיה (local narrative) → אדם (authoritative narrative). Each level incorporates and governs the levels below it.
-- **Population hierarchy**: עפר (individuals) → אדמה (general population) → אדם (the narrative a population forges). The אדם rises from the אדמה and eventually disintegrates back into it.
+- **Population hierarchy**: עפר (individuals) → אדמה (general population) → אדם (the narrative a population forges). An אדם is built out of a *patch* of אדמה — a bounded portion of the population, not the whole of it — and when it dissolves it falls back into עפר, into loose individuals.
 - **Elite/popular axis**: איש (elite, leadership-oriented) ↔ אישה (popular, identity-oriented). This polarity drives many stories and generates dialectical tension.
 - **Inner/outer axis**: ארץ (how we experience ourselves) ↔ שמים (how we experience the boundary with the outside). Both are subconscious; שמים is a kind of מים.
 
@@ -108,13 +108,13 @@ The dictionary below contains only **primitive definitions** — concepts whose 
   **יהוה** = the experience of reality as-it-is. Probably derived from the root "היה": הָיָה הוֹוֶה ויִהְיֶה (was, is, will be).
   **יהוה אלהים** = the full reality — both the experience of how things are (`יהוה`) and the developmental force driving them somewhere (`אלהים`). Literal reading: "reality *that is also* directional".
 
-- **כל** (all) = the experience of absoluteness, completeness, to-the-end. A central and weighty motif.
-  Counter-intuitively — when the text says "כל X", it means "the *all-encompassing* X" (i.e., the X that aspires to include everything) — *not* "every X that exists"!
-  For example, `כָּל הַחַיָּה` (per the dictionary - חיה = narrative) means "narratives of the all-encompassing kind — narratives that aspire to explain everything", and *not* "each and every nerrative".
-  In other words: "כל" marks a quality, not a quantity — it signals that this X aspires to encompass everything.
+- **כל** (all) = the drive to **totalize** — to integrate and explain the whole. A central and weighty motif.
+  Counter-intuitively — when the text says "כל X", it means "the *totalizing* X" (i.e., the X that aspires to totalize everything, to account for the entirety) — *not* "every X that exists"!
+  For example, `כָּל הַחַיָּה` (per the dictionary - חיה = narrative) means "narratives of the totalizing kind — narratives that aspire to explain everything", and *not* "each and every narrative".
+  In other words: "כל" marks a quality, not a quantity — it signals that this X aspires to totalize everything.
 
-- **אדמה** (soil) = the general population in the relevant context. From the soil the אדם (human/narrative) is formed, and to it a culture eventually disintegrates.
-  **עפר** (dust) = the individuals that compose a society: `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה`.
+- **אדמה** (soil) = the general population in the relevant context. An **אדם** (a specific culture) is built out of a *patch* of soil — a bounded portion of that population, not the population as a whole: `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה`.
+  **עפר** (dust) = the individuals that compose a society — what an אדם is made of, and what it falls back into when it dissolves: `כִּי עָפָר אַתָּה וְאֶל עָפָר תָּשׁוּב`.
 
 - **טוב** (good) = things that *feel* right and worthy. Usually — things desired according to social morality - the right path society expects one to follow.
   **רע** (evil) = things that *feel* unworthy. Usually — things forbidden according to social morality - behaviors society considers immoral.
