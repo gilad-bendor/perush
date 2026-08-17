@@ -14,7 +14,7 @@ OUTPUT_FILE="_claude-output.script.rtl.md"
 # window reveals the tallest row count for the current screen and font, and narrowing
 # it to TERMINAL_COLUMNS afterwards keeps that height. "number of rows"/"number of
 # columns" are properties of the *tab*, not of the window.
-TERMINAL_COLUMNS=150
+TERMINAL_COLUMNS=100
 
 # The recording holds no terminal geometry, but the renderer needs it to replay the
 # control stream faithfully - so write it as a first line ("rows=50 columns=203") and

@@ -408,6 +408,12 @@ body {
     mix-blend-mode: multiply;
 }
 
+/* User-prompts inside ClaudeCode transcripts (*.script.md / *.script.rtl.md) */
+.cm-user-prompt {
+    font-weight: bold;
+    background: rgba(0, 0, 255, 0.1);
+}
+
 /* Visible spaces - show mid-dot for spaces */
 .cm-visible-space {
     font-family: monospace;

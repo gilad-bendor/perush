@@ -136,10 +136,18 @@ serve({
                         // The recording is a raw VT/xterm control stream rather than text -
                         // replay it through a terminal emulator to recover what was on screen.
                         content = await renderTerminalOutput(content, { maxConsecutiveBlankLines: 1 });
-                        // Swap → and ←: the recorded glyphs are the ones the LTR terminal
-                        // showed, and the editor re-renders them in an RTL context.
+                        // Swap → and ← (and more left/right characters):
+                        // The recorded glyphs are the ones the LTR terminal showed,
+                        // and the editor re-renders them in an RTL context.
+                        for (const [a,b] of ["←→", "┌┐", "├┤", "└┘"]) {
+                            content = content
+                                .replace(new RegExp(a, "g"), "\u0000")
+                                .replace(new RegExp(b, "g"), a)
+                                .replace(/\u0000/g, b);
+                        }
+                        // Trim out line-suffixes of at least 3 spaces (2 spaces may be Markdown syntax).
                         content = content
-                            .replace(/←/g, "\u0000").replace(/→/g, "←").replace(/\u0000/g, "→");
+                            .replace(/   +$/gm, "");
                     }
 
                     return new Response(JSON.stringify({ content, readOnly: isScriptOutputFile || undefined }), {
