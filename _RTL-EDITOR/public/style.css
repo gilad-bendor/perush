@@ -416,6 +416,15 @@ body {
     mix-blend-mode: multiply;
 }
 
+/* Tables inside ClaudeCode transcripts (*.script.md / *.script.rtl.md):
+   ClaudeCode padded their cells to an exact number of terminal columns, so they line up
+   only in a monospace font ("white-space: pre" keeps a wide table from wrapping mid-row). */
+.cm-terminal-table {
+    font-family: monospace;
+    font-size: 0.8em;
+    white-space: pre;
+}
+
 /* User-prompts inside ClaudeCode transcripts (*.script.md / *.script.rtl.md) */
 .cm-user-prompt {
     font-weight: bold;

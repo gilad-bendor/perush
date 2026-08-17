@@ -272,7 +272,7 @@ export class MarkdownEditor {
         let lastShiftIsRight = false
 
         if (isScriptOutputFile) {
-            extensions.push(userPromptLinePlugin);
+            extensions.push(userPromptLinePlugin, terminalTableLinePlugin);
         }
 
         if (isRtl) {
@@ -814,6 +814,59 @@ const userPromptLinePlugin = ViewPlugin.fromClass(
                     builder.add(doc.line(lineNumber).from, doc.line(lineNumber).from, decoration);
                 }
                 lineNumber = blockEnd + 1;
+            }
+
+            return builder.finish();
+        }
+    },
+    {
+        // @ts-ignore
+        decorations: (v) => v.decorations
+    },
+);
+
+
+// Plugin to re-align the tables inside ClaudeCode transcripts (*.script.md / *.script.rtl.md).
+//
+// ClaudeCode draws a Markdown table with box-drawing characters, padding every cell with spaces
+// to an exact number of terminal columns:
+//     ┌─────────────┬──────────┐
+//     │ מוצא        │ עוף      │
+//     └─────────────┴──────────┘
+// The padding is already correct (Hebrew Nikud is zero-width, and is counted as such) - it just
+// needs a monospace font to line up, which is what the "cm-terminal-table" class does in style.css.
+//
+// noinspection JSUnusedGlobalSymbols
+const boxDrawingCharRegExp = /[─-╿]/;   // The Unicode "Box Drawing" block
+const terminalTableLinePlugin = ViewPlugin.fromClass(
+    // @ts-ignore
+    class {
+        constructor(/** @type {EditorView} */ view) {
+            this.decorations = this.buildDecorations(view);
+        }
+
+        update(/** @type {{ docChanged: boolean, viewportChanged: boolean, view: EditorView}} */ update) {
+            if (update.docChanged || update.viewportChanged) {
+                this.decorations = this.buildDecorations(update.view);
+            }
+        }
+
+        buildDecorations(/** @type {EditorView} */ view) {
+            const builder = new RangeSetBuilder();
+            const decoration = Decoration.line({
+                class: 'cm-terminal-table'
+            });
+
+            // Note: unlike the other plugins, each line stands on its own here -
+            //  so it is enough to scan just the visible lines.
+            for (const { from, to } of view.visibleRanges) {
+                for (let pos = from; pos <= to; ) {
+                    const line = view.state.doc.lineAt(pos);
+                    if (boxDrawingCharRegExp.test(line.text)) {
+                        builder.add(line.from, line.from, decoration);
+                    }
+                    pos = line.to + 1;
+                }
             }
 
             return builder.finish();
