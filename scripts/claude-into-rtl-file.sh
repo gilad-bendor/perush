@@ -1,14 +1,27 @@
 #!/bin/bash -eu
 
 # Open a "Terminal" (that supports RTL better than iTerm2)
-#  on the folder ../../ (e.g. .../perush/)
-#  and open "claude" session.
-# Argumenta to this script are added to the "claude" command.
+#  on the repo root (the folder holding this script's folder, e.g. .../perush/)
+#  and open a "claude" session there, recording it with "script".
+# Arguments to this script are added to the "claude" command.
 #
-# After this opens - open the file ../../_claude-script-output.rtl.md (e.g. .../perush/_claude-script-output.rtl.md)
+# Run this script *from the repo root* - the paths below are relative to the
+# current directory, while the new window cd-s to the repo root by itself.
+#
+# Each session is recorded into its own timestamped file under "claude-sessions/",
+# so previous transcripts are kept instead of being overwritten. The ".script.rtl.md"
+# suffix is what makes the RTL editor render the file as a Claude Code transcript.
+#
+# "_claude-output.script.rtl.md" (git-ignored) is a symlink to the newest transcript:
+# open *that* file in the RTL editor once, and every new session re-points it - so
+# there is no need to look up and open a new file per session.
 
 CLAUDE_COMMAND="claude --model opus --allow-dangerously-skip-permissions --chrome --permission-mode bypassPermissions $*"
-OUTPUT_FILE="_claude-output.script.rtl.md"
+OUTPUT_DIR="claude-sessions"
+OUTPUT_FILE="$OUTPUT_DIR/$( date "+%Y-%m-%d--%H-%M-%S" ).script.rtl.md"
+
+mkdir -p "$OUTPUT_DIR"
+ln -sf "$OUTPUT_FILE" _claude-output.script.rtl.md
 
 # Window width, in characters. The height is whatever the screen allows: zooming the
 # window reveals the tallest row count for the current screen and font, and narrowing

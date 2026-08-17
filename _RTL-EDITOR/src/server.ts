@@ -45,6 +45,11 @@ async function getMarkdownFiles(dir: string, basePath = ""): Promise<FileData[]>
             }
 
             if (stats.isDirectory()) {
+                // Symlinks to directories are not followed (avoids cycles / duplicate trees).
+                // Symlinks to files are listed like regular files.
+                if (entry.isSymbolicLink()) {
+                    continue;
+                }
                 const children = await getMarkdownFiles(fullPath, relativePath);
                 // Only include directories that have .md file descendants
                 if (children.length > 0) {
