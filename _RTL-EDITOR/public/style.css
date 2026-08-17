@@ -384,7 +384,7 @@ body {
     border-left: 6em solid transparent;
 }
 
-/* Syntax highlighting for special HTML tags */
+/* Syntax highlighting for "pseudo-tags" */
 .cm-html-ניתוח-לשוני {
     background: #ffe8e8;
     font-size: 0.7em;
@@ -397,6 +397,9 @@ body {
 }
 .cm-html-מדרש {
     background: #f0e8ff;
+}
+.cm-html-הצעת-קלוד {
+    background: #fff0e0;
 }
 
 /** Make the selection work well with .cm-html-ניתוח-לשוני etc. */

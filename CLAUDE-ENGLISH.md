@@ -288,6 +288,7 @@ Files are in Markdown format (`.rtl.md` for right-to-left Hebrew):
   - `<עיון>` ... `</עיון>` — a deep-dive essay on a relevant topic ("for advanced readers"). Tone is scholarly and essay-like: can engage external thinkers (Vico, Piaget, Baudrillard, Hegel) and place the interpretation in dialogue with other intellectual traditions. More abstract and theoretical than the main commentary text.
   - `<מדרש>` ... `</מדרש>` — an interpretation that isn't sufficiently constrained by the text, feels like a guess, or is simply unconvincing. Tone is tentative and exploratory, often using "אולי" (perhaps). Should be short. The reader should feel invited to disagree or skip entirely.
   - `<ניתוח-לשוני ביטוי="...expression from verse...">` ... `</ניתוח-לשוני>` — a linguistic analysis of a word from the verse. Content typically lives in separate files under `./ניתוחים-לשוניים/`; the tag in the commentary contains a summary and a reference link.
+  - `<הצעת-קלוד>` ... `</הצעת-קלוד>` — this is your way to add suggestions without modifying the existing text.
 - Lines starting with `TODO:` highlight problematic issues requiring future attention.
 - Cross-references between commentary segments use standard markdown links: `[ניתוח לשוני](../../ניתוחים-לשוניים/עד.rtl.md)`.
 - Verse references within interpretive text use the format `(בראשית ב:ח)` — book name, chapter, colon, verse.
@@ -376,3 +377,8 @@ for i, (a, b) in enumerate(zip(actual, target)):
         print(f"Diff at offset {i}: file={hex(ord(a))}, target={hex(ord(b))}")
         break
 ```
+
+# Restrictions on Modifying Existing Text
+
+**Important!** Do not modify existing text without my approval.
+On the other hand - you may always add/edit/delete `<הצעת-קלוד>` sections: that is exactly their purpose.
