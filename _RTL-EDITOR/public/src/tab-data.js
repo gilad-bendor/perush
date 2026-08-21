@@ -3,6 +3,7 @@ import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, conso
 import { MarkdownEditor } from './markdown-editor.js';
 import { EditorView } from 'codemirror';
 import { EditorState } from '@codemirror/state';
+import { formatTables, isAiGeneratedFile } from './tables.js';
 
 export class TabData {
     /**
@@ -14,6 +15,7 @@ export class TabData {
      * @param {EditorView} editorView
      * @param {HTMLDivElement} editorWrapper
      * @param {HTMLButtonElement} tabElement
+     * @param {boolean} isRtl
      */
     constructor(
         markdownEditor,
@@ -24,11 +26,15 @@ export class TabData {
         editorView,
         editorWrapper,
         tabElement,
+        isRtl,
     ) {
         this.markdownEditor = markdownEditor;
         this.filePath = filePath;
         this.fileName = fileName;
         this.readOnly = readOnly;
+        this.isRtl = isRtl;
+        // The file exactly as it is on the server - which is *not* what the editor holds, because
+        // tables are laid out (and, in an RTL file, mirrored) on the way in. See updateFromServer().
         // noinspection JSUnusedGlobalSymbols
         this.contentAtServer = contentAtServer;
         this.isDirty = false;
@@ -139,8 +145,14 @@ export class TabData {
         }
 
         // If content has changed on server, prompt user to reload or keep local changes.
+        // The comparison is against the *formatted* server content: the server stores tables
+        // un-mirrored and does not care about their alignment, so comparing raw text would
+        // report a difference on every poll and fight the auto-formatter forever.
         const currentContent = this.editorView.state.doc.toString();
-        if (currentContent !== contentOnServer) {
+        const formattedContentOnServer = isAiGeneratedFile(this.filePath)
+            ? contentOnServer                                   // never reformatted - see isAiGeneratedFile()
+            : formatTables(contentOnServer, this.isRtl).content;
+        if (currentContent !== formattedContentOnServer) {
             consoleWarn(`File ${JSON.stringify(this.filePath)} has changed on server:`, {uiContent: currentContent, contentOnServer});
             // For a read-only tab, the user has no local changes to lose - so update silently.
             if (!this.readOnly && !readOnly) {
@@ -151,7 +163,7 @@ export class TabData {
             const originalScrollTop = this.editorView.scrollDOM.scrollTop;
             const originalSelection = this.editorView.state.selection;
             this.editorView.dispatch({
-                changes: { from: 0, to: this.editorView.state.doc.length, insert: contentOnServer }
+                changes: { from: 0, to: this.editorView.state.doc.length, insert: formattedContentOnServer }
             });
             this.editorView.scrollDOM.scrollTop = originalScrollTop;
             try {

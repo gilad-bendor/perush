@@ -10,6 +10,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - Real-time file editing and saving
 - Full server/client sync: every change in the client (UI) is soon saved to the server,
    and the client periodically polls changes from the server.
+- Automatic table formatting: tables written in any of three formats are re-laid-out after
+   every edit (see "Table formatting" below). `*.ai.md` / `*.ai.rtl.md` are exempt.
 
 ## Setup
 
@@ -32,7 +34,9 @@ bun run build
 - `public/src/app.js` - Frontend entry point (imports markdown-editor.js)
 - `public/src/markdown-editor.js` - Main editor class with CodeMirror integration
 - `public/src/tab-data.js` - Tab state management
+- `public/src/tables.js` - Table parsing/formatting, shared by the browser and the server
 - `public/style.css` - Styling with RTL support
+- `tests/tables.test.ts` - Unit tests for `tables.js` (`bun test`)
 
 ## API Endpoin
 - `GET /api/files` - List all .md files in configured directory
@@ -48,7 +52,84 @@ Set `MARKDOWN_DIR` environment variable to specify the directory containing Mark
 ### RTL/LTR Detection
 - Files ending in `.rtl.md` are always RTL
 - Other `.md` files: check first non-empty line - RTL if contains Hebrew but not English
-- Detection happens in `MarkdownEditor.isRtlFile()` in `markdown-editor.js`
+- Detection happens in `isRtlFile()` in `tables.js`, which `MarkdownEditor.isRtlFile()` delegates to
+
+### Table formatting
+
+`public/src/tables.js` is the single source of truth for tables. It is plain ESM with no editor
+dependency, so `markdown-editor.js` imports it in the browser and `server.ts` imports it in Bun -
+which is what keeps both sides' idea of a table's layout identical.
+
+Three input formats are recognised and all collapse to one canonical box-drawing form:
+
+| format | looks like | where it comes from |
+|---|---|---|
+| NICE | `┌──┬──┐` | the on-disk spelling, and what an LTR file shows |
+| REVERSED-NICE | `┐──┬──┌` | the same table mirrored - what an RTL file shows |
+| MARKDOWN | `\| a \| b \|` | hand-written, or pasted from ClaudeCode |
+
+**Why REVERSED-NICE exists.** A `.rtl.md` file renders with `direction: rtl`, so the bidi algorithm
+mirrors the whole line and paints the *first* corner character on the right. Writing `┌` there draws
+a box with its corners hooked outwards; writing `┐` draws a closed box. So:
+
+- **On disk** a table is always NICE. `formatTables(content, false)` runs in the server's POST
+  handler, so the file reads correctly in git and every other tool.
+- **In the editor** an RTL file holds REVERSED-NICE. `formatTables(content, isRtl)` runs when the
+  file is loaded and again inside a `transactionFilter` after every edit.
+- Because the two are exact inverses, `TabData.updateFromServer()` must compare the editor's text
+  with `formatTables(serverContent, isRtl)` - comparing raw text would report a change on every
+  poll and fight the formatter forever.
+- For the same reason, "does this freshly-opened file need saving?" is **not** "does the editor's
+  text differ from the file's" - for an RTL file with a table those always differ. `openFile()`
+  asks whether the file already equals what the POST handler would write, i.e. whether
+  `formatTables(diskContent, false) === diskContent`. Get this wrong in one direction and every
+  RTL file is re-saved on open; get it wrong in the other and a file that somehow ended up
+  mirrored on disk can never be corrected, because the editor reads it back as already right.
+
+**Layout rules** (all decided in `renderTable()`):
+- Column width fits the content - one padding space either side of the widest cell, minimum 2.
+- Every row is treated alike: one padding space, then the cell's text. There is **no header row** -
+  a box table offers no way to mark one, so any special first-row treatment would be lost on the
+  next round-trip. A Markdown separator row becomes a plain rule and its `:---:` markers are dropped.
+- Cells are trimmed at both ends; spaces *inside* a cell are never touched.
+- Nothing is ever re-wrapped: a cell already split over several lines stays split where it was.
+- In a Markdown row, `\|` is a literal pipe rather than a cell separator.
+
+**Cursor handling.** `formatTables()` takes and returns document offsets, because re-laying a table
+out moves text under the cursor. A cursor sitting in a cell's trailing padding keeps its distance
+from the text (`CursorDescriptor.padding`) and the column is widened if need be - that is what makes
+"press space at the end of a cell, then type" put the new character one space after the content,
+even though the space itself is trimmed away.
+
+**AI-generated files are exempt.** `*.ai.md` and `*.ai.rtl.md` are verbatim records of what a model
+produced, so their content is never rewritten: `isAiGeneratedFile()` short-circuits the formatter in
+`openFile()`, in `TabData.updateFromServer()` and in the server's POST handler, and the table-aware
+keys are not installed. They are still *displayed* like any other file - monospace table lines and
+all - only their bytes are off limits. Add any new caller of `formatTables()` to that list.
+
+**Rules are drawn short.** A horizontal rule carries no text, so `isTableRuleLine()` tags it with
+`cm-table-rule-line` and `style.css` gives it a 6px line-height - a table takes far less vertical
+space that way. CodeMirror then makes the matching gutter element 6px too, but the line number
+inside keeps its own font-size and line-height and would collide with its neighbours, so
+`tableRuleGutterField` (a `gutterLineClass` provider) tags those gutter entries as
+`cm-table-rule-gutter` for the CSS to scale down.
+
+**Table lines must keep their metrics.** `.cm-table-line` sets a monospace font, but Markdown
+syntax highlighting styles spans *inside* the line - inline code (`` `...` ``) is system-ui at
+0.9em - which would shift every column to its right. `style.css` therefore forces
+`font-family`/`font-size`/`letter-spacing` back to `inherit` for `.cm-table-line *`. Any new
+highlight style that changes text metrics needs the same treatment.
+
+**Structural keys.** Enter / Cmd+Enter / Delete / Backspace inside a table go through
+`editTableAtCursor()`, which acts on the *cell* rather than the line:
+
+- `Enter` splits a cell across two lines of the same row; the other columns gain an empty line.
+- `Mod-Enter` (Cmd on macOS) starts a new row below the current one - empty when pressed at the end
+  of the cell's text, otherwise carrying whatever followed the cursor.
+- `Delete` / `Backspace` at a cell-line's end / start join that cell's lines back together, and the
+  row loses its last line once every column is empty there.
+
+A keystroke that would eat a box character is swallowed instead.
 
 ### CSS Patterns for RTL vs LTR
 - Each editor tab gets a wrapper div with class `editor-wrapper`
@@ -67,11 +148,24 @@ The editor uses CodeMirror 6. Key CSS classes:
 - `.cm-scroller` - Scrollable container
 - `.cm-content` - Contains all lines (has base padding)
 - `.cm-line` - Individual text lines
+- `.cm-table-line` - A line belonging to a table (monospace, `white-space: pre`)
+- `.cm-table-rule-line` - A table's horizontal rule, squeezed to a 6px line-height
+- `.cm-table-rule-gutter` - That rule's gutter entry, scaled to match (via `gutterLineClass`)
 - `.cm-layer` - Overlay layers for cursor and selection
 - `.cm-selectionLayer` - Selection highlight layer
 - `.cm-cursorLayer` - Cursor layer
 
 ## Testing & Debugging
+
+### Unit tests
+
+```bash
+bun test                 # runs tests/*.test.ts
+```
+
+`tests/tables.test.ts` covers `tables.js` end to end - format conversion, layout, cursor mapping and
+the structural key operations. It is much faster to iterate on than the browser, so reach for it
+first when changing table behaviour.
 
 ### Test Files
 Use these files for testing (in `test-files/` directory):
@@ -202,6 +296,9 @@ This is much more powerful than the CLI flags above.
 
 ### Known RTL quirks
 
+- **Box-drawing characters are mirrored in RTL files**: `┌` and `┐` swap places (and `├`/`┤`, `└`/`┘`)
+  between the editor's text and the file on disk. See "Table formatting" above - do not "fix" a
+  `.rtl.md` file that looks reversed in a terminal.
 - **Cursor layer uses LTR coordinates**: `.cm-cursorLayer` has `direction: ltr` even when content is `direction: rtl`. The cursor's CSS `left` is always relative to the scroller's left edge (which includes the gutter width of ~36px).
 - **Gutter is always on the left**: Even for RTL files, the line-number gutter is on the left side. The content area starts after the gutter.
 - **Short RTL lines and empty space**: RTL text is right-aligned within the `.cm-line` element. Clicking in the empty space to the LEFT of short text correctly places the cursor at end-of-line (the leftmost text position in RTL). This is expected CodeMirror behavior.

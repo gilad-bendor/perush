@@ -416,13 +416,33 @@ body {
     mix-blend-mode: multiply;
 }
 
-/* Tables inside ClaudeCode transcripts (*.script.md / *.script.rtl.md):
-   ClaudeCode padded their cells to an exact number of terminal columns, so they line up
-   only in a monospace font ("white-space: pre" keeps a wide table from wrapping mid-row). */
-.cm-terminal-table {
+/* Table lines, in every file.
+   Their cells are padded to an exact number of columns - by formatTables() in tables.js, or by
+   ClaudeCode in a *.script.md transcript - so they line up only in a monospace font
+   ("white-space: pre" keeps a wide table from wrapping mid-row). */
+.cm-table-line {
     font-family: monospace;
     font-size: 0.8em;
     white-space: pre;
+}
+/* A cell is padded to an exact number of columns, so nothing inside a table line may change the
+   text metrics. Markdown syntax highlighting does exactly that - an inline-code span (`...`) is
+   styled system-ui at 0.9em - which throws every column to its right out of line. Neutralise the
+   metric-bearing properties and keep the decorative ones, so inline code is still marked. */
+/* A table's horizontal rules carry no text - only "─" - so they need none of a row's height.
+   Their gutter entries have to shrink to match, or the line numbers overlap each other. */
+.cm-table-rule-line {
+    line-height: 6px;
+}
+.cm-table-rule-gutter {
+    font-size: 6px;
+    line-height: 6px;
+}
+.cm-table-line * {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    letter-spacing: inherit !important;
+    -webkit-text-stroke: 0 !important;
 }
 
 /* User-prompts inside ClaudeCode transcripts (*.script.md / *.script.rtl.md) */

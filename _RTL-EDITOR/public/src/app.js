@@ -2,7 +2,8 @@ import { MarkdownEditor } from "./markdown-editor.js";
 
 // Initialize the MarkdownEditor.
 document.addEventListener('DOMContentLoaded', () => {
-    new MarkdownEditor();
+    // Exposed as window._editor for browser-automation debugging (see CLAUDE.md).
+    window._editor = new MarkdownEditor();
     initHelpDialog();
 });
 

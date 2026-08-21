@@ -1,8 +1,8 @@
 import { RegExpCursor, SearchQuery } from "@codemirror/search"
 import { EditorView, basicSetup } from 'codemirror';
-import { keymap, ViewPlugin, Decoration } from '@codemirror/view';
+import { keymap, ViewPlugin, Decoration, gutterLineClass, GutterMarker } from '@codemirror/view';
 import { markdown } from '@codemirror/lang-markdown';
-import { Compartment, EditorState, RangeSetBuilder, Prec } from '@codemirror/state';
+import { Compartment, EditorState, RangeSetBuilder, Prec, StateField } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
@@ -10,6 +10,7 @@ import { tags } from '@lezer/highlight';
 // noinspection ES6UnusedImports
 import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, consoleGroupCollapsed, consoleGroupEnd } from './logs.js';
 import { TabData } from "./tab-data.js";
+import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, minimalReplacement } from "./tables.js";
 /** @typedef {import('../../src/server.ts').FileData} FileData */
 
 
@@ -99,6 +100,10 @@ export class MarkdownEditor {
 
         const isScriptOutputFile = isScriptOutputFilePath(tabData.filePath);
 
+        // An AI-generated file is kept byte-for-byte as the model wrote it - so it gets neither the
+        // table auto-formatter nor the table-aware keys. See isAiGeneratedFile().
+        const isAiGenerated = isAiGeneratedFile(tabData.filePath);
+
         // Create custom markdown highlighting
         const monospaceCss = { background: "rgba(128, 128, 128, .1)", fontSize: "0.9em", fontFamily: "system-ui", WebkitTextStroke: "0.3px black" }
         const markdownHighlighting = syntaxHighlighting(HighlightStyle.define([
@@ -117,7 +122,14 @@ export class MarkdownEditor {
 
         // Custom key-handlers.
         // Tye actual type is KeyBinding[] - see _RTL-EDITOR/node_modules/@codemirror/view/dist/index.d.ts
-        /** @type {{key: string, run: (view: EditorView) => boolean }[]} */ const specialKeyHandling = [];
+        /** @type {{key: string, run: (view: EditorView) => boolean }[]} */ const specialKeyHandling = isAiGenerated ? [] : [
+            // Inside a table these act on the *cell* rather than on the line - see editTableAtCursor().
+            // Mod-Enter comes first so that it is matched before the plain Enter binding.
+            { key: 'Mod-Enter', run: tableEditKeyHandler(isRtl, 'addRow') },
+            { key: 'Enter', run: tableEditKeyHandler(isRtl, 'split') },
+            { key: 'Delete', run: tableEditKeyHandler(isRtl, 'deleteForward') },
+            { key: 'Backspace', run: tableEditKeyHandler(isRtl, 'deleteBackward') },
+        ];
         if (isRtl) {
             specialKeyHandling.push(
                 // Custom Home key handler for RTL mode:
@@ -200,6 +212,9 @@ export class MarkdownEditor {
             markdown(),
             markdownHighlighting,
             listLinePlugin,
+            tableLinePlugin,
+            tableRuleGutterField,
+            ...(isAiGenerated ? [] : [autoFormatTablesExtension(isRtl)]),
             // @ts-ignore
             ...specialKeyHandling.map((keyRun) => Prec.high(keymap.of([keyRun]))),
             keymap.of([indentWithTab]),
@@ -272,7 +287,7 @@ export class MarkdownEditor {
         let lastShiftIsRight = false
 
         if (isScriptOutputFile) {
-            extensions.push(userPromptLinePlugin, terminalTableLinePlugin);
+            extensions.push(userPromptLinePlugin);
         }
 
         if (isRtl) {
@@ -431,16 +446,31 @@ export class MarkdownEditor {
                     return;
                 }
                 let {content, readOnly} = response;
+                const isRtl = this.isRtlFile(filePath, content);
+
+                // The file on disk holds tables in their un-mirrored form; the editor wants them
+                // laid out and - in an RTL file - mirrored. So the two texts differ for any RTL
+                // file that has a table, and "editor differs from disk" says nothing about whether
+                // the file needs writing. What does say so is whether the file is already in the
+                // form the server would write (see the POST handler): if it is not - because a
+                // table is still Markdown, is misaligned, or is mirrored the wrong way round -
+                // the tab starts dirty and autosaves the corrected text back.
+                const contentAtServer = content;
+                const needsSaving = !isAiGeneratedFile(filePath)
+                    && formatTables(content, false).content !== content;
+                if (!isAiGeneratedFile(filePath)) {
+                    content = formatTables(content, isRtl).content;
+                }
 
                 // Build a <div> wrapper for the editor to allow easier styling.
                 const editorWrapper = document.createElement('div');
                 editorWrapper.className = 'editor-wrapper'
-                    + (this.isRtlFile(filePath, content) ? ' rtl' : '')
+                    + (isRtl ? ' rtl' : '')
                     + (isScriptOutputFilePath(filePath) ? ' script-output' : '');
                 /** @type {HTMLElement} */ (document.querySelector('.editor-pane')).appendChild(editorWrapper);
 
                 // Create TabData instance
-                const tabData = new TabData(this, filePath, fileName, !!readOnly, content, /** @type {any} */(null), editorWrapper, tabElement);
+                const tabData = new TabData(this, filePath, fileName, !!readOnly, contentAtServer, /** @type {any} */(null), editorWrapper, tabElement, isRtl);
 
                 // Build the editor from CodeMirror (needs tabData for event handlers)
                 /** @type {EditorView} */
@@ -450,6 +480,10 @@ export class MarkdownEditor {
                 editorWrapper.appendChild(editorView.dom);
 
                 this.tabs.set(filePath, tabData);
+                if (!readOnly && needsSaving) {
+                    tabData.isDirty = true;
+                    tabData.scheduleAutosave();
+                }
                 tabData.updateTitle();
             }
 
@@ -554,28 +588,9 @@ export class MarkdownEditor {
      * @returns {boolean}
      */
     isRtlFile(filePath, content) {
-        // Check explicit RTL file extensions
-        if (filePath.endsWith('.rtl.md')) {
-            return true;
-        }
-
-        // For .md files, check if first relevant line (line with a letter) contains Hebrew but not English
-        if (content && filePath.endsWith('.md')) {
-            const lines = content.split('\n');
-            for (const line of lines) {
-                const trimmed = line.trim();
-                if (trimmed) {
-                    // Check if contains Hebrew but not English
-                    const hasHebrew = /[\u0590-\u05FF]/.test(trimmed);
-                    const hasEnglish = /[a-zA-Z]/.test(trimmed);
-                    if (hasHebrew || hasEnglish) {
-                        return hasHebrew && !hasEnglish;
-                    }
-                }
-            }
-        }
-
-        return false;
+        // The rule itself lives in tables.js, because the server needs the very same answer
+        // when it decides how to write a table back to disk.
+        return isRtlFile(filePath, content);
     }
 }
 
@@ -734,6 +749,114 @@ const listLinePlugin = ViewPlugin.fromClass(
 );
 
 
+// Keeps every table in the document laid out, after every single edit.
+//
+// The formatting is appended to the *same* transaction that carried the user's edit, rather
+// than dispatched separately, so that one Undo takes back the edit and its re-alignment
+// together, and so that the intermediate, ragged state is never rendered.
+//
+// formatTables() is idempotent, so a keystroke that does not disturb a table costs one
+// comparison and produces no change at all.
+//
+/**
+ * @param {boolean} isRtl
+ * @returns {import('@codemirror/state').Extension}
+ */
+function autoFormatTablesExtension(isRtl) {
+    return EditorState.transactionFilter.of((transaction) => {
+        if (!transaction.docChanged || transaction.startState.readOnly) {
+            return transaction;
+        }
+        const document = transaction.newDoc.toString();
+        const selection = transaction.newSelection.main;
+        const formatted = formatTables(document, isRtl, [selection.anchor, selection.head]);
+        if (formatted.content === document) {
+            return transaction;
+        }
+        return [transaction, {
+            changes: minimalReplacement(document, formatted.content),
+            selection: { anchor: formatted.positions[0], head: formatted.positions[1] },
+            // The changes are expressed against the document this transaction already produced.
+            sequential: true,
+        }];
+    });
+}
+
+/**
+ * Builds a key handler for one of the structural table edits - see editTableAtCursor(), whose
+ * three return values map onto: dispatch it / let CodeMirror handle the key / swallow the key.
+ *
+ * @param {boolean} isRtl
+ * @param {'split' | 'addRow' | 'deleteForward' | 'deleteBackward'} operation
+ * @returns {(view: EditorView) => boolean}
+ */
+function tableEditKeyHandler(isRtl, operation) {
+    return (view) => {
+        const { state } = view;
+        const selection = state.selection.main;
+        // With a selection there is a range to delete or replace: ordinary editing applies,
+        // and the auto-formatter tidies up whatever it leaves behind.
+        if (!selection.empty || state.readOnly) {
+            return false;
+        }
+        const document = state.doc.toString();
+        const result = editTableAtCursor(document, isRtl, selection.head, operation);
+        if (!result) {
+            // Not a cell-level operation - e.g. Delete in the middle of a cell's text, which is
+            // an ordinary Delete. CodeMirror performs it and the auto-formatter realigns.
+            return false;
+        }
+        if (result.content !== document) {
+            view.dispatch({
+                changes: minimalReplacement(document, result.content),
+                selection: { anchor: result.positions[0] },
+                scrollIntoView: true,
+            });
+        }
+        // Even when nothing changed the key is consumed - editTableAtCursor() only returns
+        // an unchanged document for a keystroke that would have broken the table's structure.
+        return true;
+    };
+}
+
+
+// Shrinks the line-number gutter alongside a table's horizontal rules.
+//
+// "cm-table-rule-line" squeezes a rule to a few pixels, and CodeMirror duly makes its gutter
+// element just as short - but the number inside keeps a full row's line-height and font-size, so
+// the numbers of nearby rules would be drawn on top of each other. This gives those gutter
+// elements a class of their own, which style.css scales to fit.
+//
+// noinspection JSUnusedGlobalSymbols
+const tableRuleGutterMarker = new (class extends GutterMarker {
+    elementClass = 'cm-table-rule-gutter';
+})();
+
+/**
+ * @param {EditorState} state
+ * @returns {import('@codemirror/state').RangeSet<GutterMarker>}
+ */
+function buildTableRuleGutterMarkers(state) {
+    const builder = new RangeSetBuilder();
+    for (let lineNumber = 1; lineNumber <= state.doc.lines; lineNumber++) {
+        const line = state.doc.line(lineNumber);
+        // The cheap test first: only a line drawn with box characters can be a rule.
+        if (boxDrawingCharRegExp.test(line.text) && isTableRuleLine(line.text)) {
+            builder.add(line.from, line.from, tableRuleGutterMarker);
+        }
+    }
+    return builder.finish();
+}
+
+const tableRuleGutterField = StateField.define({
+    create: (state) => buildTableRuleGutterMarkers(state),
+    update: (markers, transaction) =>
+        transaction.docChanged ? buildTableRuleGutterMarkers(transaction.state) : markers,
+    // @ts-ignore
+    provide: (field) => gutterLineClass.from(field),
+});
+
+
 /**
  * Is this a ClaudeCode transcript - a file generated by "script <file> claude ..."?
  * See isScriptOutputFile in server.ts.
@@ -826,19 +949,24 @@ const userPromptLinePlugin = ViewPlugin.fromClass(
 );
 
 
-// Plugin to re-align the tables inside ClaudeCode transcripts (*.script.md / *.script.rtl.md).
+// Plugin that puts every table line in a monospace font.
 //
-// ClaudeCode draws a Markdown table with box-drawing characters, padding every cell with spaces
-// to an exact number of terminal columns:
+// A table is drawn with box-drawing characters and its cells are padded with spaces to an exact
+// number of columns:
 //     ┌─────────────┬──────────┐
 //     │ מוצא        │ עוף      │
 //     └─────────────┴──────────┘
-// The padding is already correct (Hebrew Nikud is zero-width, and is counted as such) - it just
-// needs a monospace font to line up, which is what the "cm-terminal-table" class does in style.css.
+// The padding is kept correct by formatTables() in tables.js (Hebrew Nikud is zero-width, and is
+// counted as such) - it just needs a monospace font to line up, which is what the "cm-table-line"
+// class does in style.css. ClaudeCode transcripts (*.script.md / *.script.rtl.md) arrive already
+// drawn this way, so the same plugin serves them too.
+//
+// A line that is nothing but a horizontal rule gets "cm-table-rule-line" as well, so that the
+// separators between rows can be squeezed to a fraction of a row's height.
 //
 // noinspection JSUnusedGlobalSymbols
 const boxDrawingCharRegExp = /[─-╿]/;   // The Unicode "Box Drawing" block
-const terminalTableLinePlugin = ViewPlugin.fromClass(
+const tableLinePlugin = ViewPlugin.fromClass(
     // @ts-ignore
     class {
         constructor(/** @type {EditorView} */ view) {
@@ -853,8 +981,11 @@ const terminalTableLinePlugin = ViewPlugin.fromClass(
 
         buildDecorations(/** @type {EditorView} */ view) {
             const builder = new RangeSetBuilder();
-            const decoration = Decoration.line({
-                class: 'cm-terminal-table'
+            const rowDecoration = Decoration.line({
+                class: 'cm-table-line'
+            });
+            const ruleDecoration = Decoration.line({
+                class: 'cm-table-line cm-table-rule-line'
             });
 
             // Note: unlike the other plugins, each line stands on its own here -
@@ -863,7 +994,7 @@ const terminalTableLinePlugin = ViewPlugin.fromClass(
                 for (let pos = from; pos <= to; ) {
                     const line = view.state.doc.lineAt(pos);
                     if (boxDrawingCharRegExp.test(line.text)) {
-                        builder.add(line.from, line.from, decoration);
+                        builder.add(line.from, line.from, isTableRuleLine(line.text) ? ruleDecoration : rowDecoration);
                     }
                     pos = line.to + 1;
                 }
