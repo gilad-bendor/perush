@@ -36,6 +36,206 @@ export class MarkdownEditor {
     bindGlobalEvents() {
         window.addEventListener('beforeunload', () => this.saveSession());
         this.initSplitter();
+        this.initTabReordering();
+    }
+
+    // Lets the user drag a tab to a new place in the strip, the way a browser's tabs do.
+    //
+    // Pointer events are used rather than the HTML5 drag-and-drop API: that API insists on drawing
+    // its own drag image and gives no way to paint an insertion marker into the gap between tabs.
+    //
+    // The order of the tabs is not merely a DOM detail - saveSession() records it as
+    // Array.from(this.tabs.keys()) - so a drop has to reorder the Map as well; see
+    // reorderTabsFromDom().
+    initTabReordering() {
+        const tabsElement = /** @type {HTMLElement} */ (document.getElementById('tabs'));
+        // How far the pointer must travel before a press turns into a drag rather than a click.
+        const DRAG_THRESHOLD_PX = 4;
+
+        tabsElement.addEventListener('pointerdown', (event) => {
+            if (event.button !== 0) return;
+            const target = /** @type {HTMLElement} */ (event.target);
+            // The close button is not a drag handle.
+            if (target.closest('.tab-close')) return;
+            const draggedTab = /** @type {HTMLElement | null} */ (target.closest('.tab'));
+            if (!draggedTab || draggedTab.parentElement !== tabsElement) return;
+
+            const startX = event.clientX;
+            const startY = event.clientY;
+            let dragging = false;
+            let dropIndex = -1;
+            /** @type {HTMLElement | null} */
+            let indicator = null;
+
+            const startDrag = () => {
+                dragging = true;
+                draggedTab.classList.add('dragging');
+                document.body.style.userSelect = 'none';
+                document.body.style.cursor = 'grabbing';
+                indicator = document.createElement('div');
+                indicator.className = 'tab-drop-indicator';
+                tabsElement.appendChild(indicator);
+            };
+
+            /**
+             * @param {number} x
+             * @param {number} y
+             */
+            const updateDrag = (x, y) => {
+                // The tab itself follows the pointer, so that the gesture feels like carrying it.
+                draggedTab.style.transform = `translateX(${x - startX}px)`;
+
+                const position = this.tabDropPosition(tabsElement, draggedTab, x, y);
+                dropIndex = position.index;
+                const containerRect = tabsElement.getBoundingClientRect();
+                const marker = /** @type {HTMLElement} */ (indicator);
+                marker.style.left = `${position.gapX - containerRect.left - 1}px`;
+                marker.style.top = `${position.top - containerRect.top}px`;
+                marker.style.height = `${position.height}px`;
+            };
+
+            const finish = (/** @type {boolean} */ cancelled) => {
+                document.removeEventListener('pointermove', onPointerMove);
+                document.removeEventListener('pointerup', onPointerUp);
+                document.removeEventListener('pointercancel', onPointerCancel);
+                document.removeEventListener('keydown', onKeyDown, true);
+                if (!dragging) return;
+
+                indicator?.remove();
+                draggedTab.classList.remove('dragging');
+                draggedTab.style.transform = '';
+                document.body.style.userSelect = '';
+                document.body.style.cursor = '';
+
+                if (cancelled || dropIndex < 0) return;
+                const others = this.tabElements(tabsElement, draggedTab);
+                tabsElement.insertBefore(draggedTab, others[dropIndex] || null);
+                this.reorderTabsFromDom(tabsElement);
+            };
+
+            const onPointerMove = (/** @type {PointerEvent} */ moveEvent) => {
+                if (!dragging) {
+                    const moved = Math.abs(moveEvent.clientX - startX) + Math.abs(moveEvent.clientY - startY);
+                    if (moved < DRAG_THRESHOLD_PX) return;
+                    if (!this.tabElements(tabsElement, draggedTab).length) return;   // nothing to reorder
+                    startDrag();
+                }
+                updateDrag(moveEvent.clientX, moveEvent.clientY);
+            };
+            const onPointerUp = () => finish(false);
+            const onPointerCancel = () => finish(true);
+            const onKeyDown = (/** @type {KeyboardEvent} */ keyEvent) => {
+                if (keyEvent.key !== 'Escape') return;
+                keyEvent.stopPropagation();
+                keyEvent.preventDefault();
+                finish(true);
+            };
+
+            document.addEventListener('pointermove', onPointerMove);
+            document.addEventListener('pointerup', onPointerUp);
+            document.addEventListener('pointercancel', onPointerCancel);
+            document.addEventListener('keydown', onKeyDown, true);
+        });
+    }
+
+    /**
+     * The tab buttons of the strip, in DOM order, minus the one being dragged. The strip also holds
+     * the drop indicator while a drag is on, which is why this filters by class rather than taking
+     * every child.
+     *
+     * @param {HTMLElement} tabsElement
+     * @param {HTMLElement} [excluded]
+     * @returns {HTMLElement[]}
+     */
+    tabElements(tabsElement, excluded) {
+        return /** @type {HTMLElement[]} */ (Array.from(tabsElement.querySelectorAll(':scope > .tab')))
+            .filter(element => element !== excluded);
+    }
+
+    /**
+     * Where would a tab dropped at (x, y) land? Returns the index among the *other* tabs that the
+     * dragged tab would take, together with the geometry of the gap, for the marker to be drawn in.
+     *
+     * @param {HTMLElement} tabsElement
+     * @param {HTMLElement} draggedTab
+     * @param {number} x
+     * @param {number} y
+     * @returns {{ index: number, gapX: number, top: number, height: number }}
+     */
+    tabDropPosition(tabsElement, draggedTab, x, y) {
+        const tabs = this.tabElements(tabsElement, draggedTab);
+        const rects = tabs.map(element => element.getBoundingClientRect());
+        const isRtl = getComputedStyle(tabsElement).direction === 'rtl';
+
+        // Tabs wrap onto several rows once there are enough of them, so pick the row the pointer is
+        // on - the nearest one, if it is above or below them all - before looking at the gaps in it.
+        /** @type {number[]} */
+        let rowIndexes = [];
+        let bestDistance = Infinity;
+        for (const [index, rect] of rects.entries()) {
+            const distance = y < rect.top ? rect.top - y : (y > rect.bottom ? y - rect.bottom : 0);
+            if (distance < bestDistance) {
+                bestDistance = distance;
+                rowIndexes = [index];
+            } else if (distance === bestDistance) {
+                rowIndexes.push(index);
+            }
+        }
+
+        // Within the row, the gap is the one before the first tab whose middle the pointer has
+        // passed; "passed" runs the other way round when the strip is right-to-left.
+        const passed = (/** @type {DOMRect} */ rect) => {
+            const middle = (rect.left + rect.right) / 2;
+            return isRtl ? x > middle : x < middle;
+        };
+        const rowRect = rects[rowIndexes[0]];
+        for (const index of rowIndexes) {
+            if (passed(rects[index])) {
+                return {
+                    index,
+                    gapX: isRtl ? rects[index].right : rects[index].left,
+                    top: rowRect.top,
+                    height: rowRect.height,
+                };
+            }
+        }
+        const lastIndex = rowIndexes[rowIndexes.length - 1];
+        return {
+            index: lastIndex + 1,
+            gapX: isRtl ? rects[lastIndex].left : rects[lastIndex].right,
+            top: rowRect.top,
+            height: rowRect.height,
+        };
+    }
+
+    /**
+     * Brings this.tabs into line with the order of the tab buttons, after a drag has moved one.
+     *
+     * @param {HTMLElement} tabsElement
+     */
+    reorderTabsFromDom(tabsElement) {
+        /** @type {Map<HTMLElement, string>} */
+        const filePathByElement = new Map();
+        for (const [filePath, tabData] of this.tabs) {
+            filePathByElement.set(tabData.tabElement, filePath);
+        }
+
+        /** @type {Map<string, TabData>} */
+        const reordered = new Map();
+        for (const element of this.tabElements(tabsElement)) {
+            const filePath = filePathByElement.get(element);
+            const tabData = filePath === undefined ? undefined : this.tabs.get(filePath);
+            if (filePath !== undefined && tabData) {
+                reordered.set(filePath, tabData);
+            }
+        }
+        // A tab with no button of its own would otherwise be dropped altogether.
+        for (const [filePath, tabData] of this.tabs) {
+            if (!reordered.has(filePath)) reordered.set(filePath, tabData);
+        }
+
+        this.tabs = reordered;
+        this.saveSession();
     }
 
     initSplitter() {

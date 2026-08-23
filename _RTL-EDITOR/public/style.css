@@ -90,6 +90,8 @@ body {
     background: #f8f8f8;
     border-bottom: 1px solid #ddd;
     line-height: 1px;
+    /* The drop indicator of a tab drag is positioned against this strip - see initTabReordering(). */
+    position: relative;
 }
 
 .tab {
@@ -120,6 +122,24 @@ body {
     font-size: 10px;
     font-weight: bold;
     border-radius: 999px;
+}
+
+/* A tab on its way to a new place in the strip: it follows the pointer, and is faded so that the
+   gap it would land in - marked by .tab-drop-indicator - stays the eye-catching thing. */
+.tab.dragging {
+    opacity: 0.55;
+    z-index: 2;
+}
+
+/* The gap the dragged tab would be dropped into. */
+.tab-drop-indicator {
+    position: absolute;
+    width: 2px;
+    background: #1a73e8;
+    border-radius: 1px;
+    box-shadow: 0 0 4px rgba(26, 115, 232, 0.7);
+    pointer-events: none;
+    z-index: 3;
 }
 
 .tab-close {

@@ -10,6 +10,7 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - Real-time file editing and saving
 - Full server/client sync: every change in the client (UI) is soon saved to the server,
    and the client periodically polls changes from the server.
+- Tabs can be reordered by dragging them, with the target gap marked while the drag is on
 - Automatic table formatting: tables written in any of three formats are re-laid-out after
    every edit (see "Table formatting" below). `*.ai.md` / `*.ai.rtl.md` are exempt.
 
@@ -130,6 +131,27 @@ highlight style that changes text metrics needs the same treatment.
   row loses its last line once every column is empty there.
 
 A keystroke that would eat a box character is swallowed instead.
+
+### Tab reordering
+
+A tab is dragged to a new place in the strip by `initTabReordering()` in `markdown-editor.js`, which
+listens for `pointerdown` on `#tabs` rather than using the HTML5 drag-and-drop API - that API draws
+its own drag image and offers no way to paint a marker into the gap between two tabs.
+
+- A press becomes a drag only after the pointer has travelled a few pixels, so a plain click still
+  switches tabs; a press on `.tab-close` is never a drag.
+- While dragging, the tab follows the pointer (`transform`) and is faded (`.tab.dragging`), and a
+  `.tab-drop-indicator` bar is drawn in the gap the tab would land in. The strip is
+  `position: relative` for the indicator to be positioned against.
+- `tabDropPosition()` picks the *row* under the pointer first - tabs wrap onto several rows once
+  there are enough of them - and only then the gap within it, comparing the pointer against each
+  tab's horizontal middle. It reads the strip's computed `direction`, so a right-to-left strip
+  would work too.
+- Escape cancels the drag.
+- **The order is not merely a DOM detail.** `saveSession()` stores it as
+  `Array.from(this.tabs.keys())`, so a drop calls `reorderTabsFromDom()`, which rebuilds that Map in
+  the buttons' new order and saves the session. Move the elements without it and the order reverts
+  on the next reload.
 
 ### CSS Patterns for RTL vs LTR
 - Each editor tab gets a wrapper div with class `editor-wrapper`
