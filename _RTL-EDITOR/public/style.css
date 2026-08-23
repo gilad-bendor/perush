@@ -472,6 +472,15 @@ body {
     -webkit-text-stroke: 0 !important;
 }
 
+/* Markdown links - "[text](path)". They are already coloured by the syntax highlighting; while the
+   Cmd key is held (Ctrl off macOS) they also say that a click would open them - see
+   showLinksAsClickable() and MarkdownEditor.openLinkAtCoords() in markdown-editor.js. */
+.cm-content.cm-links-clickable .cm-md-link {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
 /* User-prompts inside ClaudeCode transcripts (*.script.md / *.script.rtl.md) */
 .cm-user-prompt {
     font-weight: bold;

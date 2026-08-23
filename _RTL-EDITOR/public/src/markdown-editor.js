@@ -11,6 +11,7 @@ import { tags } from '@lezer/highlight';
 import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, consoleGroupCollapsed, consoleGroupEnd } from './logs.js';
 import { TabData } from "./tab-data.js";
 import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, minimalReplacement } from "./tables.js";
+import { markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "./links.js";
 /** @typedef {import('../../src/server.ts').FileData} FileData */
 
 
@@ -412,6 +413,7 @@ export class MarkdownEditor {
             markdown(),
             markdownHighlighting,
             listLinePlugin,
+            markdownLinkPlugin,
             tableLinePlugin,
             tableRuleGutterField,
             ...(isAiGenerated ? [] : [autoFormatTablesExtension(isRtl)]),
@@ -435,14 +437,28 @@ export class MarkdownEditor {
                 scroll: () => {
                     tabData.saveScrollPosition();
                 },
-                keydown: (event) => {
+                keydown: (event, view) => {
                     // Trace if the last-pressed Shift was left or right.
                     if (event.code === 'ShiftRight') {
                         lastShiftIsRight = true;
                     } else if (event.code === 'ShiftLeft') {
                         lastShiftIsRight = false;
                     }
+                    showLinksAsClickable(view, isLinkModifier(event));
                 },
+                keyup: (event, view) => {
+                    showLinksAsClickable(view, isLinkModifier(event));
+                },
+                mousemove: (event, view) => {
+                    // Catches the modifier being pressed while the editor is not focused, and is
+                    // what makes the link under the pointer light up as the key goes down.
+                    showLinksAsClickable(view, isLinkModifier(event));
+                },
+                mouseout: (event, view) => {
+                    showLinksAsClickable(view, false);
+                },
+                // Cmd+click (Ctrl+click elsewhere) on a [text](path) link opens the linked file.
+                mousedown: (event, view) => this.openLinkAtCoords(event, view, tabData),
                 // ...(isRtl ? {
                 //     // Fix RTL cursor positioning: when clicking to the left of line end,
                 //     //  CodeMirror positions cursor one char to the right.
@@ -627,8 +643,11 @@ export class MarkdownEditor {
      * @param {string} filePath
      * @param {string} fileName
      * @param {boolean} setAsActive
+     * @param {string | null} insertAfterFilePath  place the new tab right after this one, rather
+     *        than at the end of the strip - which is where a file opened from a link belongs.
+     *        Ignored if the file is already open, or if that tab is gone.
      */
-    async openFile(filePath, fileName, setAsActive = true) {
+    async openFile(filePath, fileName, setAsActive = true, insertAfterFilePath = null) {
         consoleLog(`openFile(filePath=${JSON.stringify(filePath)}, fileName=${JSON.stringify(fileName)}, setAsActive=${setAsActive})`);
         try {
             if (! this.tabs.has(filePath)) {
@@ -641,11 +660,21 @@ export class MarkdownEditor {
                     this.closeTab(filePath).catch(consoleError);
                 });
                 tabElement.addEventListener('click', () => this.switchToTab(filePath).catch(consoleError));
-                /** @type {HTMLElement} */ (document.getElementById('tabs')).appendChild(tabElement);
+                const tabsElement = /** @type {HTMLElement} */ (document.getElementById('tabs'));
+                const insertAfterTab = insertAfterFilePath === null ? undefined : this.tabs.get(insertAfterFilePath);
+                if (insertAfterTab) {
+                    tabsElement.insertBefore(tabElement, insertAfterTab.tabElement.nextSibling);
+                } else {
+                    tabsElement.appendChild(tabElement);
+                }
 
                 const tabData = new TabData(this, filePath, fileName, tabElement);
                 this.tabs.set(filePath, tabData);
                 tabData.updateTitle();
+                // this.tabs is what saveSession() stores the order as, and the new tab has just
+                // been appended to it - so a tab placed mid-strip has to be sorted back in. Still
+                // synchronous, as the ordering rule above demands.
+                if (insertAfterTab) this.reorderTabsFromDom(tabsElement);
             }
 
             if (setAsActive) {
@@ -740,6 +769,60 @@ export class MarkdownEditor {
             tabData.updateTitle();
             tabData.scheduleAutosave();
         }
+    }
+
+    /**
+     * Cmd+click (Ctrl+click off macOS) on a [text](path) link: opens the linked file and moves the
+     * focus to it, rather than letting CodeMirror plant a second cursor there.
+     *
+     * @param {MouseEvent} event
+     * @param {EditorView} view
+     * @param {TabData} tabData
+     * @returns {boolean}   true if the click was taken, which stops CodeMirror handling it
+     */
+    openLinkAtCoords(event, view, tabData) {
+        if (event.button !== 0 || !isLinkModifier(event)) return false;
+
+        const pos = view.posAtCoords({ x: event.clientX, y: event.clientY });
+        if (pos === null) return false;
+        const line = view.state.doc.lineAt(pos);
+        const link = markdownLinkAt(line.text, pos - line.from);
+        // A click in a line's empty space still lands on a text position - which in an RTL line is
+        // the *start* or *end* of the line, either of which may be a link. So the pointer has to be
+        // over the link as it is actually painted, not merely over one of its offsets.
+        if (!link || !coordsWithinRange(view, line.from + link.from, line.from + link.to, event)) {
+            return false;
+        }
+
+        event.preventDefault();
+        this.openMarkdownLink(link.rawTarget, tabData.filePath).catch(consoleError);
+        return true;
+    }
+
+    /**
+     * Opens what a link points at: a file of the tree in a tab of its own, anything else in a
+     * browser tab.
+     *
+     * A file that is not open yet gets its tab right after the one the link was clicked in - the
+     * two are related, so they belong side by side - rather than at the end of the strip.
+     *
+     * @param {string} rawTarget    the text between the link's parentheses
+     * @param {string} fromFilePath the file the link was clicked in
+     */
+    async openMarkdownLink(rawTarget, fromFilePath) {
+        const resolved = resolveMarkdownLink(fromFilePath, rawTarget);
+        if (!resolved) {
+            consoleWarn(`Cannot open link ${JSON.stringify(rawTarget)} of ${JSON.stringify(fromFilePath)}`);
+            return;
+        }
+        if (resolved.kind === 'external') {
+            window.open(resolved.url, '_blank', 'noopener');
+            return;
+        }
+        // A path that names no file is not turned away here: openFile() leaves a "file not found"
+        // note in the tab, and picks the file up should it appear. See loadTabContent().
+        const fileName = /** @type {string} */ (resolved.path.split('/').pop());
+        await this.openFile(resolved.path, fileName, true, fromFilePath);
     }
 
     /**
@@ -1221,6 +1304,103 @@ const userPromptLinePlugin = ViewPlugin.fromClass(
 // separators between rows can be squeezed to a fraction of a row's height.
 //
 // noinspection JSUnusedGlobalSymbols
+// Marks every [text](path) link, so that the CSS can show it as clickable while the Cmd key is
+// held - see showLinksAsClickable() and MarkdownEditor.openLinkAtCoords().
+//
+// The links are found by scanning the visible lines rather than by walking the syntax tree: the
+// click handler has to answer the same question about a single line, and one regexp (links.js)
+// answering both keeps the highlight and the clickable area the same thing.
+// noinspection JSUnusedGlobalSymbols
+const markdownLinkPlugin = ViewPlugin.fromClass(
+    // @ts-ignore
+    class {
+        constructor(/** @type {EditorView} */ view) {
+            this.decorations = this.buildDecorations(view);
+        }
+
+        update(/** @type {{ docChanged: boolean, viewportChanged: boolean, view: EditorView}} */ update) {
+            if (update.docChanged || update.viewportChanged) {
+                this.decorations = this.buildDecorations(update.view);
+            }
+        }
+
+        buildDecorations(/** @type {EditorView} */ view) {
+            const builder = new RangeSetBuilder();
+            const linkDecoration = Decoration.mark({ class: 'cm-md-link' });
+
+            for (const { from, to } of view.visibleRanges) {
+                for (let pos = from; pos <= to; ) {
+                    const line = view.state.doc.lineAt(pos);
+                    for (const link of markdownLinksInLine(line.text)) {
+                        builder.add(line.from + link.from, line.from + link.to, linkDecoration);
+                    }
+                    pos = line.to + 1;
+                }
+            }
+
+            return builder.finish();
+        }
+    },
+    {
+        // @ts-ignore
+        decorations: (v) => v.decorations
+    },
+);
+
+/**
+ * Is this the modifier that turns a click on a link into "open it"? Cmd on macOS, Ctrl elsewhere -
+ * where Cmd does not exist and Ctrl+click is not the context-menu gesture it is on a Mac.
+ *
+ * @param {MouseEvent | KeyboardEvent} event
+ * @returns {boolean}
+ */
+function isLinkModifier(event) {
+    return isMac ? event.metaKey : event.ctrlKey;
+}
+const isMac = /Mac|iP(hone|ad|od)/.test(navigator.platform || navigator.userAgent);
+
+/**
+ * Turns the "links are clickable right now" hint on or off for a whole editor - the CSS then gives
+ * every .cm-md-link a pointer cursor and a heavier underline.
+ *
+ * @param {EditorView} view
+ * @param {boolean} clickable
+ */
+function showLinksAsClickable(view, clickable) {
+    view.contentDOM.classList.toggle('cm-links-clickable', clickable);
+}
+
+/**
+ * Is the pointer over the text of [from, to) as it is actually painted?
+ *
+ * A range can be painted as several rectangles - it may be wrapped over two lines, or split by the
+ * bidi algorithm - so every one of them is tried.
+ *
+ * @param {EditorView} view
+ * @param {number} from
+ * @param {number} to
+ * @param {MouseEvent} event
+ * @returns {boolean}
+ */
+function coordsWithinRange(view, from, to, event) {
+    try {
+        const start = view.domAtPos(from);
+        const end = view.domAtPos(to);
+        const range = document.createRange();
+        range.setStart(start.node, start.offset);
+        range.setEnd(end.node, end.offset);
+        return Array.from(range.getClientRects()).some(rect =>
+            event.clientX >= rect.left && event.clientX <= rect.right &&
+            event.clientY >= rect.top && event.clientY <= rect.bottom);
+    } catch (error) {
+        // Should the DOM not be where domAtPos() says - better to open the link than to swallow
+        // the click.
+        consoleWarn('Failed to measure a link\'s position: ', error);
+        return true;
+    }
+}
+
+
 const boxDrawingCharRegExp = /[─-╿]/;   // The Unicode "Box Drawing" block
 const tableLinePlugin = ViewPlugin.fromClass(
     // @ts-ignore

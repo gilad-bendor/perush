@@ -22,3 +22,5 @@ Hello Again!
 And this -
  a code block
 ```
+
+A link to the Hebrew test file: [בדיקה עברית](_TEST-HEBREW-RTL.rtl.md)

@@ -15,6 +15,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
    leaves a read-only note in its tab rather than losing it
 - Automatic table formatting: tables written in any of three formats are re-laid-out after
    every edit (see "Table formatting" below). `*.ai.md` / `*.ai.rtl.md` are exempt.
+- Cmd+click (Ctrl+click off macOS) on a `[text](path)` link opens the linked file and moves the
+   focus to it; a file that was not open yet gets its tab right after the linking one
 
 ## Setup
 
@@ -38,8 +40,10 @@ bun run build
 - `public/src/markdown-editor.js` - Main editor class with CodeMirror integration
 - `public/src/tab-data.js` - Tab state management
 - `public/src/tables.js` - Table parsing/formatting, shared by the browser and the server
+- `public/src/links.js` - Markdown-link parsing/resolution, behind Cmd+click-to-open
 - `public/style.css` - Styling with RTL support
 - `tests/tables.test.ts` - Unit tests for `tables.js` (`bun test`)
+- `tests/links.test.ts` - Unit tests for `links.js` (`bun test`)
 
 ## API Endpoin
 - `GET /api/files` - List all .md files in configured directory
@@ -65,11 +69,15 @@ which is what keeps both sides' idea of a table's layout identical.
 
 Three input formats are recognised and all collapse to one canonical box-drawing form:
 
-| format | looks like | where it comes from |
-|---|---|---|
-| NICE | `┌──┬──┐` | the on-disk spelling, and what an LTR file shows |
-| REVERSED-NICE | `┐──┬──┌` | the same table mirrored - what an RTL file shows |
-| MARKDOWN | `\| a \| b \|` | hand-written, or pasted from ClaudeCode |
+┌───────────────┬────────────────┬──────────────────────────────────────────────────┐
+│ format        │ looks like     │ where it comes from                              │
+├───────────────┼────────────────┼──────────────────────────────────────────────────┤
+│ NICE          │ `┌──┬──┐`      │ the on-disk spelling, and what an LTR file shows │
+├───────────────┼────────────────┼──────────────────────────────────────────────────┤
+│ REVERSED-NICE │ `┐──┬──┌`      │ the same table mirrored - what an RTL file shows │
+├───────────────┼────────────────┼──────────────────────────────────────────────────┤
+│ MARKDOWN      │ `\| a \| b \|` │ hand-written, or pasted from ClaudeCode          │
+└───────────────┴────────────────┴──────────────────────────────────────────────────┘
 
 **Why REVERSED-NICE exists.** A `.rtl.md` file renders with `direction: rtl`, so the bidi algorithm
 mirrors the whole line and paints the *first* corner character on the right. Writing `┌` there draws
@@ -192,6 +200,37 @@ its own drag image and offers no way to paint a marker into the gap between two 
   the buttons' new order and saves the session. Move the elements without it and the order reverts
   on the next reload. See "Tab loading and order" above.
 
+### Markdown links
+
+Cmd+click (Ctrl+click off macOS - where Cmd does not exist and Ctrl+click is not the context-menu
+gesture) on a `[text](path)` link opens the linked file. `public/src/links.js` holds the parsing,
+free of any editor dependency the way `tables.js` is, so it can be unit-tested on its own.
+
+- **One regexp answers both questions.** `markdownLinksInLine()` feeds `markdownLinkPlugin`, which
+  marks every link `.cm-md-link`, *and* `markdownLinkAt()`, which the click handler asks about the
+  clicked position - so what lights up under the Cmd key is exactly what a click would open.
+  The syntax tree is deliberately not used: it would answer a different question from the regexp,
+  and the two would drift apart.
+- **The pointer has to be over the link as painted, not merely over one of its offsets.** A click
+  in a line's empty space still lands on a text position - in an RTL line the left edge maps to the
+  *end* of the line, and a line that ends with a link would open it from anywhere to its left. So
+  `MarkdownEditor.openLinkAtCoords()` measures the link's client rects (`coordsWithinRange()`) and
+  only then takes the click. `markdownLinkAt()` excludes the link's end offset for the same reason.
+- **A taken click is swallowed** (`event.preventDefault()` and a `true` return), or CodeMirror
+  plants a second cursor where the link was.
+- `showLinksAsClickable()` toggles `cm-links-clickable` on the content DOM from the editor's own
+  keydown / keyup / mousemove handlers - no document-level listeners - which is why the highlight
+  also appears when the key goes down with the editor unfocused.
+- **Path resolution** (`resolveMarkdownLink()`) is against the linking file's own directory, or the
+  root of the served tree for a leading `/` - the same paths the file tree and `/api/file` use. An
+  `http(s)`/`mailto` target opens a browser tab instead; a `#anchor` keeps only the file part (there
+  is nowhere to put the anchor); a directory, and a `../` that climbs out of the served tree, open
+  nothing. A path that names no file is *not* turned away - the tab shows the usual "file not found"
+  note and picks the file up should it appear (see "Tab loading and order").
+- **The new tab goes right after the linking one**, not at the end of the strip: `openFile()` takes
+  an `insertAfterFilePath`, inserts the button there and calls `reorderTabsFromDom()` to sort
+  `this.tabs` to match - still synchronously, as that Map's order is the stored session order.
+
 ### CSS Patterns for RTL vs LTR
 - Each editor tab gets a wrapper div with class `editor-wrapper`
 - RTL files also get the `rtl` class: `<div class="editor-wrapper rtl">`
@@ -209,6 +248,7 @@ The editor uses CodeMirror 6. Key CSS classes:
 - `.cm-scroller` - Scrollable container
 - `.cm-content` - Contains all lines (has base padding)
 - `.cm-line` - Individual text lines
+- `.cm-md-link` - A `[text](path)` link; clickable-looking while `.cm-content` has `cm-links-clickable`
 - `.cm-table-line` - A line belonging to a table (monospace, `white-space: pre`)
 - `.cm-table-rule-line` - A table's horizontal rule, squeezed to a 6px line-height
 - `.cm-table-rule-gutter` - That rule's gutter entry, scaled to match (via `gutterLineClass`)
@@ -232,6 +272,8 @@ first when changing table behaviour.
 Use these files for testing (in `test-files/` directory):
 - `test-files/_TEST-ENGLISH-LTR.md` - English LTR test file
 - `test-files/_TEST-HEBREW-RTL.rtl.md` - Hebrew RTL test file
+
+Each links to the other, so Cmd+click can be tried in an LTR and an RTL file alike.
 
 ### Manual Testing
 1. Start server: `bun run dev`
