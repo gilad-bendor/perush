@@ -17,6 +17,7 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
    every edit (see "Table formatting" below). `*.ai.md` / `*.ai.rtl.md` are exempt.
 - Cmd+click (Ctrl+click off macOS) on a `[text](path)` link opens the linked file and moves the
    focus to it; a file that was not open yet gets its tab right after the linking one
+- Ctrl+1 .. Ctrl+9 show the 1st .. 9th tab
 
 ## Setup
 
@@ -178,6 +179,19 @@ Two consequences worth remembering:
   is never rewritten.
 - `loadTabContent()` bails out if `this.tabs.get(filePath) !== tabData` after the fetch - the tab was
   closed mid-flight, and building its editor now would leave an orphan pane in the editor pane.
+
+### Tab shortcuts
+
+`initTabShortcuts()` binds Ctrl+1 .. Ctrl+9 to the 1st .. 9th tab of the strip - which is
+`Array.from(this.tabs.keys())[n - 1]`, the same order the buttons and the session are in.
+
+The listener is on the **document, in the capture phase**: the shortcut has to work wherever the
+focus is, and it has to be seen before CodeMirror's key handling, which gets the keystroke first
+while the editor is focused. A digit with no tab of its own is left alone rather than swallowed.
+
+Ctrl rather than Cmd: on macOS Cmd+<digit> is the browser's own tab shortcut, and Ctrl+<digit> is
+free (on Windows and Linux it is Ctrl that Chrome keeps for itself, and the shortcut would not
+reach the page there).
 
 ### Tab reordering
 

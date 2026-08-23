@@ -38,6 +38,33 @@ export class MarkdownEditor {
         window.addEventListener('beforeunload', () => this.saveSession());
         this.initSplitter();
         this.initTabReordering();
+        this.initTabShortcuts();
+    }
+
+    /**
+     * Ctrl+1 .. Ctrl+9 show the 1st .. 9th tab of the strip.
+     *
+     * The listener is on the document and in the *capture* phase, so that the shortcut works
+     * wherever the focus happens to be - and, above all, so that it is seen before CodeMirror's own
+     * key handling, which would otherwise get the keystroke first while the editor is focused.
+     */
+    initTabShortcuts() {
+        document.addEventListener('keydown', (event) => {
+            if (!event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
+
+            // The digit is read off the *key* rather than the character: a Hebrew layout gives the
+            // digits as they are, but this way a layout that does not is no worse off.
+            const digit = /^(?:Digit|Numpad)([1-9])$/.exec(event.code)?.[1]
+                ?? (/^[1-9]$/.test(event.key) ? event.key : null);
+            if (!digit) return;
+
+            const filePath = Array.from(this.tabs.keys())[Number(digit) - 1];
+            if (filePath === undefined) return;         // fewer tabs than that - leave the key alone
+
+            event.preventDefault();
+            event.stopPropagation();
+            this.switchToTab(filePath).catch(consoleError);
+        }, true);
     }
 
     // Lets the user drag a tab to a new place in the strip, the way a browser's tabs do.
