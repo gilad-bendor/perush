@@ -7,43 +7,65 @@ import { formatTables, isAiGeneratedFile } from './tables.js';
 
 export class TabData {
     /**
+     * A tab starts out *un-loaded*: it has a name and a button, but no file content and no editor.
+     * The file is fetched the first time the tab is shown - see ensureLoaded().
+     *
+     * This is what keeps the tabs in order. openFile() creates every tab synchronously, so the
+     * order of this.tabs (which is what saveSession() stores) is the order of the buttons in the
+     * strip. Fetching the file first would order the Map by whichever file answered first.
+     *
      * @param {MarkdownEditor} markdownEditor
      * @param {string} filePath
      * @param {string} fileName
-     * @param {boolean} readOnly
-     * @param {string} contentAtServer
-     * @param {EditorView} editorView
-     * @param {HTMLDivElement} editorWrapper
      * @param {HTMLButtonElement} tabElement
-     * @param {boolean} isRtl
      */
     constructor(
         markdownEditor,
         filePath,
         fileName,
-        readOnly,
-        contentAtServer,
-        editorView,
-        editorWrapper,
         tabElement,
-        isRtl,
     ) {
         this.markdownEditor = markdownEditor;
         this.filePath = filePath;
         this.fileName = fileName;
-        this.readOnly = readOnly;
-        this.isRtl = isRtl;
+        this.tabElement = tabElement;
+
+        // Everything below is settled when the file is loaded - see MarkdownEditor.loadTabContent().
+        this.readOnly = false;
+        this.isRtl = false;
+        // Set when the file could not be read: the editor then holds a note saying so, rather than
+        // the tab being thrown away and the file dropped from the session.
+        this.isMissing = false;
         // The file exactly as it is on the server - which is *not* what the editor holds, because
         // tables are laid out (and, in an RTL file, mirrored) on the way in. See updateFromServer().
         // noinspection JSUnusedGlobalSymbols
-        this.contentAtServer = contentAtServer;
+        this.contentAtServer = '';
+        /** @type {EditorView | null} */
+        this.editorView = null;
+        /** @type {HTMLDivElement | null} */
+        this.editorWrapper = null;
+        /** @type {Promise<void> | null} */
+        this.loadPromise = null;
+
         this.isDirty = false;
-        this.editorView = editorView;
-        this.editorWrapper = editorWrapper;
-        this.tabElement = tabElement;
         this.abortAutoScrolling = false;
         this.updateFileFromServerIntervalId = null;
         this.autosaveTimeoutId = null;
+    }
+
+    /**
+     * Fetches the file and builds the editor - once. Every later call gets the same promise back,
+     * so that switching to a tab twice in quick succession does not load it twice.
+     *
+     * @returns {Promise<void>}
+     */
+    ensureLoaded() {
+        if (!this.loadPromise) {
+            this.loadPromise = this.markdownEditor.loadTabContent(this).catch((error) => {
+                consoleError(`Failed to load tab ${JSON.stringify(this.filePath)}: `, error);
+            });
+        }
+        return this.loadPromise;
     }
 
     updateTitle() {
@@ -69,6 +91,10 @@ export class TabData {
      */
     setReadOnly(readOnly) {
         this.readOnly = readOnly;
+        if (!this.editorView) {
+            this.updateTitle();     // not loaded yet - the editor will be built read-only
+            return;
+        }
         this.editorView.dispatch({
             effects: this.markdownEditor.readOnlyCompartment.reconfigure(EditorState.readOnly.of(readOnly))
         });
@@ -93,9 +119,10 @@ export class TabData {
     }
 
     async autosave() {
-        if (!this.isDirty || this.readOnly) {
+        if (!this.isDirty || this.readOnly || !this.editorView) {
             return;
         }
+        const editorView = this.editorView;
 
         try {
             consoleLog(`Auto saving ${this.filePath}`);
@@ -103,7 +130,7 @@ export class TabData {
             // Just before auto-saving, make sure we have the latest version from server.
             await this.updateFromServer();
 
-            const currentContent = this.editorView.state.doc.toString();
+            const currentContent = editorView.state.doc.toString();
             const response = await fetch(`/api/file/${encodeURIComponent(this.filePath)}`, {
                 method: 'POST',
                 headers: {
@@ -136,6 +163,23 @@ export class TabData {
         if (this.autosaveTimeoutId) {
             return;
         }
+        if (!this.editorView) {
+            return;                 // not loaded yet - there is nothing to compare against
+        }
+
+        // The tab of a missing file keeps looking for it: should the file appear, the note is
+        // replaced by a real editor. Until then there is nothing to compare, so leave it be.
+        if (this.isMissing) {
+            try {
+                await this.markdownEditor.loadFileFromServer(this.filePath);
+            } catch (error) {
+                return;             // still missing
+            }
+            await this.markdownEditor.loadTabContent(this);
+            return;
+        }
+
+        const editorView = this.editorView;
         const {content: contentOnServer, readOnly} = await this.markdownEditor.loadFileFromServer(this.filePath);
         if (this.autosaveTimeoutId) {
             return;
@@ -148,7 +192,7 @@ export class TabData {
         // The comparison is against the *formatted* server content: the server stores tables
         // un-mirrored and does not care about their alignment, so comparing raw text would
         // report a difference on every poll and fight the auto-formatter forever.
-        const currentContent = this.editorView.state.doc.toString();
+        const currentContent = editorView.state.doc.toString();
         const formattedContentOnServer = isAiGeneratedFile(this.filePath)
             ? contentOnServer                                   // never reformatted - see isAiGeneratedFile()
             : formatTables(contentOnServer, this.isRtl).content;
@@ -160,14 +204,14 @@ export class TabData {
             }
 
             // Remember original scroll position and selection.
-            const originalScrollTop = this.editorView.scrollDOM.scrollTop;
-            const originalSelection = this.editorView.state.selection;
-            this.editorView.dispatch({
+            const originalScrollTop = editorView.scrollDOM.scrollTop;
+            const originalSelection = editorView.state.selection;
+            editorView.dispatch({
                 changes: { from: 0, to: this.editorView.state.doc.length, insert: formattedContentOnServer }
             });
-            this.editorView.scrollDOM.scrollTop = originalScrollTop;
+            editorView.scrollDOM.scrollTop = originalScrollTop;
             try {
-                this.editorView.dispatch({selection: originalSelection});
+                editorView.dispatch({selection: originalSelection});
             } catch (error) {
                 // Probably "RangeError: Selection points outside of document" - ignore.
             }
@@ -178,18 +222,21 @@ export class TabData {
     }
 
     saveScrollPosition() {
+        if (!this.editorView) return;
+        const editorView = this.editorView;
         const tabState = this.markdownEditor.tabStates.get(this.filePath) ?? {};
         if (this.abortAutoScrolling) {
             // consoleLog(`    (ignoring scroll event for ${JSON.stringify(this.filePath)} with scrollTop=${this.editorView.scrollDOM.scrollTop})`);
-            this.editorView.scrollDOM.scrollTop = tabState.scrollTop ?? 0;
+            editorView.scrollDOM.scrollTop = tabState.scrollTop ?? 0;
             return;
         }
         // consoleLog(`Saving scroll position for ${JSON.stringify(this.filePath)}: `, this.editorView.scrollDOM.scrollTop);
-        this.markdownEditor.tabStates.set(this.filePath, {...tabState, scrollTop: this.editorView.scrollDOM.scrollTop });
+        this.markdownEditor.tabStates.set(this.filePath, {...tabState, scrollTop: editorView.scrollDOM.scrollTop });
         this.markdownEditor.saveSession();
     }
 
     saveSelectionState() {
+        if (!this.editorView) return;
         const tabState = this.markdownEditor.tabStates.get(this.filePath) ?? {};
         const selection = this.editorView.state.selection.main;
 
@@ -206,27 +253,28 @@ export class TabData {
 
     restoreState() {
         const tabState = this.markdownEditor.tabStates.get(this.filePath);
-        if (!tabState) {
+        if (!tabState || !this.editorView) {
             return;
         }
+        const editorView = this.editorView;
         consoleLog(`Restoring tab state of ${JSON.stringify(this.filePath)}: `, tabState);
 
         // Restore scroll position.
-        this.editorView.scrollDOM.scrollTop = tabState.scrollTop;
-        if (this.editorView.scrollDOM.scrollTop !== tabState.scrollTop) {
-            consoleWarn(`Failed to restore scrollTop of ${JSON.stringify(this.filePath)} to ${tabState.scrollTop}, got ${this.editorView.scrollDOM.scrollTop} instead.`);
+        editorView.scrollDOM.scrollTop = tabState.scrollTop;
+        if (editorView.scrollDOM.scrollTop !== tabState.scrollTop) {
+            consoleWarn(`Failed to restore scrollTop of ${JSON.stringify(this.filePath)} to ${tabState.scrollTop}, got ${editorView.scrollDOM.scrollTop} instead.`);
         }
 
         // Restore text selection/cursor position.
         if (tabState.selection) {
             const { anchor, head } = tabState.selection;
-            const docLength = this.editorView.state.doc.length;
+            const docLength = editorView.state.doc.length;
 
             // Ensure positions are within document bounds
             const validAnchor = Math.min(anchor, docLength);
             const validHead = Math.min(head, docLength);
 
-            this.editorView.dispatch({
+            editorView.dispatch({
                 selection: { anchor: validAnchor, head: validHead }
             });
         }
@@ -247,21 +295,36 @@ export class TabData {
         }
     }
 
-    activate() {
+    /**
+     * Shows this tab - fetching its file first, if this is the first time it is shown.
+     *
+     * @returns {Promise<void>}
+     */
+    async activate() {
         this.tabElement.classList.add('active');
-        this.editorWrapper.classList.add('active');
         const fileTreeElement = this.markdownEditor.fileTreeElements.get(this.filePath);
         fileTreeElement?.classList.add('active');
         fileTreeElement?.scrollIntoViewIfNeeded();
 
-        this.editorView.focus();
+        await this.ensureLoaded();
+        if (this.markdownEditor.activeTab !== this.filePath) {
+            return;                 // the user has switched away while the file was loading
+        }
+        const editorView = this.editorView;
+        const editorWrapper = this.editorWrapper;
+        if (!editorView || !editorWrapper) {
+            return;                 // loading failed outright - ensureLoaded() has logged it
+        }
+
+        editorWrapper.classList.add('active');
+        editorView.focus();
 
         // It seems that in Chrome, when CodeMirror is focused, it may auto-scroll to the cursor
         this.abortAutoScrolling = true;
         setTimeout(() => this.abortAutoScrolling = false, 100);
 
-        if (!/** @type {any} */(this.editorWrapper)._wasEverVisible_) {
-            /** @type {any} */(this.editorWrapper)._wasEverVisible_ = true;
+        if (!/** @type {any} */(editorWrapper)._wasEverVisible_) {
+            /** @type {any} */(editorWrapper)._wasEverVisible_ = true;
             this.restoreState();
         }
 
@@ -271,16 +334,26 @@ export class TabData {
 
     deactivate() {
         this.tabElement.classList.remove('active');
-        this.editorWrapper.classList.remove('active');
+        this.editorWrapper?.classList.remove('active');
         this.markdownEditor.fileTreeElements.get(this.filePath)?.classList.remove('active');
         this.stopServerUpdatePolling();
+    }
+
+    /**
+     * Throws the editor away, leaving the tab as it was before it was ever shown. Called when the
+     * tab is closed, and when a missing file has come back and its editor is rebuilt from it.
+     */
+    destroyEditor() {
+        this.editorView?.destroy();
+        this.editorWrapper?.remove();
+        this.editorView = null;
+        this.editorWrapper = null;
     }
 
     destroy() {
         this.stopServerUpdatePolling();
         this.tabElement.remove();
-        this.editorView.destroy();
-        this.editorWrapper.remove();
+        this.destroyEditor();
         this.markdownEditor.fileTreeElements.get(this.filePath)?.classList.remove('active');
     }
 }

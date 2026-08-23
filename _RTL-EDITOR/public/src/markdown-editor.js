@@ -617,6 +617,13 @@ export class MarkdownEditor {
     }
 
     /**
+     * Opens a tab for a file - or, if it is already open, just brings it to the front.
+     *
+     * Everything that settles the tab's *place* in the strip happens synchronously; the file itself
+     * is fetched only when the tab is first shown (TabData.ensureLoaded() -> loadTabContent()).
+     * That is what keeps a restored session in order: were the file awaited here, this.tabs - and
+     * with it saveSession() - would end up ordered by which file answered first.
+     *
      * @param {string} filePath
      * @param {string} fileName
      * @param {boolean} setAsActive
@@ -636,54 +643,8 @@ export class MarkdownEditor {
                 tabElement.addEventListener('click', () => this.switchToTab(filePath).catch(consoleError));
                 /** @type {HTMLElement} */ (document.getElementById('tabs')).appendChild(tabElement);
 
-                let response;
-                try {
-                    // Load file content from server.
-                    response = await this.loadFileFromServer(filePath);
-                } catch (error) {
-                    consoleError(`Failed to load ${JSON.stringify(filePath)}: `, error);
-                    this.closeTab(filePath).catch(consoleError);
-                    return;
-                }
-                let {content, readOnly} = response;
-                const isRtl = this.isRtlFile(filePath, content);
-
-                // The file on disk holds tables in their un-mirrored form; the editor wants them
-                // laid out and - in an RTL file - mirrored. So the two texts differ for any RTL
-                // file that has a table, and "editor differs from disk" says nothing about whether
-                // the file needs writing. What does say so is whether the file is already in the
-                // form the server would write (see the POST handler): if it is not - because a
-                // table is still Markdown, is misaligned, or is mirrored the wrong way round -
-                // the tab starts dirty and autosaves the corrected text back.
-                const contentAtServer = content;
-                const needsSaving = !isAiGeneratedFile(filePath)
-                    && formatTables(content, false).content !== content;
-                if (!isAiGeneratedFile(filePath)) {
-                    content = formatTables(content, isRtl).content;
-                }
-
-                // Build a <div> wrapper for the editor to allow easier styling.
-                const editorWrapper = document.createElement('div');
-                editorWrapper.className = 'editor-wrapper'
-                    + (isRtl ? ' rtl' : '')
-                    + (isScriptOutputFilePath(filePath) ? ' script-output' : '');
-                /** @type {HTMLElement} */ (document.querySelector('.editor-pane')).appendChild(editorWrapper);
-
-                // Create TabData instance
-                const tabData = new TabData(this, filePath, fileName, !!readOnly, contentAtServer, /** @type {any} */(null), editorWrapper, tabElement, isRtl);
-
-                // Build the editor from CodeMirror (needs tabData for event handlers)
-                /** @type {EditorView} */
-                const editorView = this.createEditorView(tabData, content);
-                tabData.editorView = editorView;
-
-                editorWrapper.appendChild(editorView.dom);
-
+                const tabData = new TabData(this, filePath, fileName, tabElement);
                 this.tabs.set(filePath, tabData);
-                if (!readOnly && needsSaving) {
-                    tabData.isDirty = true;
-                    tabData.scheduleAutosave();
-                }
                 tabData.updateTitle();
             }
 
@@ -693,6 +654,91 @@ export class MarkdownEditor {
             }
         } catch (error) {
             consoleError(`Error opening file: ${/** @type {Error} */ (error).message}`);
+        }
+    }
+
+    /**
+     * Fetches a tab's file and builds its editor - the deferred half of openFile(), run the first
+     * time the tab is shown, and again if a missing file has come back. See TabData.ensureLoaded().
+     *
+     * A file that cannot be read does not cost the user their tab: the editor holds a read-only
+     * note saying so, and the path stays in the strip and in the session.
+     *
+     * @param {TabData} tabData
+     */
+    async loadTabContent(tabData) {
+        const filePath = tabData.filePath;
+
+        let content;
+        let readOnly;
+        let isMissing = false;
+        try {
+            ({content, readOnly} = await this.loadFileFromServer(filePath));
+        } catch (error) {
+            consoleError(`Failed to load ${JSON.stringify(filePath)}: `, error);
+            content = `\n\`${filePath}\`\n\nfile not found`;
+            readOnly = true;
+            isMissing = true;
+        }
+        // The tab may have been closed while its file was on its way, in which case building an
+        // editor for it now would leave an orphan pane behind.
+        if (this.tabs.get(filePath) !== tabData) {
+            return;
+        }
+
+        const contentAtServer = content;
+        const isRtl = this.isRtlFile(filePath, content);
+
+        // The file on disk holds tables in their un-mirrored form; the editor wants them
+        // laid out and - in an RTL file - mirrored. So the two texts differ for any RTL
+        // file that has a table, and "editor differs from disk" says nothing about whether
+        // the file needs writing. What does say so is whether the file is already in the
+        // form the server would write (see the POST handler): if it is not - because a
+        // table is still Markdown, is misaligned, or is mirrored the wrong way round -
+        // the tab starts dirty and autosaves the corrected text back. (This now happens when the
+        // tab is first shown rather than when the session is restored, so a tab that is never
+        // opened is never rewritten.)
+        const reformats = !isMissing && !isAiGeneratedFile(filePath);
+        const needsSaving = reformats && formatTables(content, false).content !== content;
+        if (reformats) {
+            content = formatTables(content, isRtl).content;
+        }
+
+        // A rebuild (a missing file that has come back) starts from a clean slate.
+        tabData.destroyEditor();
+
+        tabData.isRtl = isRtl;
+        tabData.readOnly = !!readOnly;
+        tabData.isMissing = isMissing;
+        tabData.contentAtServer = contentAtServer;
+        tabData.isDirty = false;
+
+        // Build a <div> wrapper for the editor to allow easier styling.
+        const editorWrapper = document.createElement('div');
+        editorWrapper.className = 'editor-wrapper'
+            + (isRtl ? ' rtl' : '')
+            + (isScriptOutputFilePath(filePath) ? ' script-output' : '');
+        /** @type {HTMLElement} */ (document.querySelector('.editor-pane')).appendChild(editorWrapper);
+        tabData.editorWrapper = editorWrapper;
+
+        // Build the editor from CodeMirror (needs tabData for event handlers)
+        const editorView = this.createEditorView(tabData, content);
+        tabData.editorView = editorView;
+        editorWrapper.appendChild(editorView.dom);
+
+        // A tab rebuilt while it is the one on show has to be made visible again itself; on the
+        // usual path TabData.activate() does it, right after awaiting this.
+        if (this.activeTab === filePath) {
+            editorWrapper.classList.add('active');
+        }
+
+        tabData.tabElement.classList.toggle('missing', isMissing);
+        tabData.updateTitle();
+
+        if (!readOnly && needsSaving) {
+            tabData.isDirty = true;
+            tabData.updateTitle();
+            tabData.scheduleAutosave();
         }
     }
 
@@ -713,11 +759,13 @@ export class MarkdownEditor {
             oldTabData.deactivate();
         }
 
-        // Activate the new tab and editor.
-        tabData.activate();
-
+        // activate() waits for the file, so this.activeTab has to say where the user meant to be
+        // *before* the wait - that is how a switch made while a file is loading wins over it.
         this.activeTab = filePath;
         this.saveSession();
+
+        // Activate the new tab and editor.
+        await tabData.activate();
     }
 
     /**
@@ -773,9 +821,17 @@ export class MarkdownEditor {
             consoleLog('Restoring session: ', sessionData);
             this.tabStates = new Map(Object.entries(sessionData.tabStates || {}));
             this.expandedFolders = new Set(sessionData.expandedFolders || []);
+
+            // Every tab is created before any of them is shown: openFile() is synchronous up to
+            // this.tabs.set(), so the strip - and the session written back from it - comes up in
+            // the stored order. Only the active tab's file is fetched now; the others wait until
+            // they are first shown.
             for (const filePath of sessionData.openTabs || []) {
                 const fileName = filePath.split('/').pop();
-                this.openFile(filePath, fileName, filePath === sessionData.activeTab).catch(consoleError);
+                this.openFile(filePath, fileName, false).catch(consoleError);
+            }
+            if (sessionData.activeTab && this.tabs.has(sessionData.activeTab)) {
+                await this.switchToTab(sessionData.activeTab);
             }
         } catch (error) {
             consoleError('Failed to restore session:', error);

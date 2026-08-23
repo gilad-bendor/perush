@@ -11,6 +11,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - Full server/client sync: every change in the client (UI) is soon saved to the server,
    and the client periodically polls changes from the server.
 - Tabs can be reordered by dragging them, with the target gap marked while the drag is on
+- Tabs load lazily - a file is fetched when its tab is first shown; a file that cannot be read
+   leaves a read-only note in its tab rather than losing it
 - Automatic table formatting: tables written in any of three formats are re-laid-out after
    every edit (see "Table formatting" below). `*.ai.md` / `*.ai.rtl.md` are exempt.
 
@@ -132,6 +134,43 @@ highlight style that changes text metrics needs the same treatment.
 
 A keystroke that would eat a box character is swallowed instead.
 
+### Tab loading and order
+
+A tab is created **synchronously** by `openFile()` - button, `TabData`, `this.tabs.set()` - and its
+file is fetched only when the tab is first shown, by `TabData.ensureLoaded()` calling
+`MarkdownEditor.loadTabContent()`. Until then the `TabData` has no `editorView` and no
+`editorWrapper` (both are `null`), which is why so many of its methods start with a guard.
+
+**This is what keeps the tabs in order.** `saveSession()` stores the order as
+`Array.from(this.tabs.keys())`, so the Map's insertion order is the user-visible order. Awaiting the
+file before `this.tabs.set()` - as the code used to - ordered the Map by whichever file answered
+first, and every reload wrote back a differently-permuted session. (The *buttons* were always in the
+right order, because they were appended before the `await`; only the Map, and hence the stored
+session, drifted.) Keep every new tab-creating path free of `await` before `this.tabs.set()`.
+
+`restoreSession()` therefore creates all the tabs in a plain loop and only then switches to the
+active one, so a restored session costs exactly one file fetch.
+
+`TabData.activate()` is `async`: it marks the button active, awaits `ensureLoaded()`, and then - only
+if `markdownEditor.activeTab` still names it - shows the pane, focuses it and starts polling.
+`switchToTab()` sets `activeTab` *before* awaiting `activate()`, which is what makes a second switch
+during a slow load win over the first.
+
+**A file that cannot be read is not an error path that closes the tab.** `loadTabContent()` puts a four-line
+note - blank, `` `<path>` ``, blank, `file not found` - into a read-only editor, sets `tabData.isMissing`, and marks the
+button `.tab.missing`. The path stays in the session, so a file that is temporarily gone (a branch
+switch, a rename in progress) does not silently disappear from the strip. While such a tab is
+active, `updateFromServer()` keeps trying the file, and rebuilds the tab for real once it appears -
+which is the other caller of `loadTabContent()`, and the reason it starts by calling
+`tabData.destroyEditor()` and ends by re-adding the `active` class itself.
+
+Two consequences worth remembering:
+- The "file's tables are stale on disk → mark dirty and autosave the reformatted text" fix-up now
+  happens when a tab is first *shown*, not when the session is restored. A tab that is never opened
+  is never rewritten.
+- `loadTabContent()` bails out if `this.tabs.get(filePath) !== tabData` after the fetch - the tab was
+  closed mid-flight, and building its editor now would leave an orphan pane in the editor pane.
+
 ### Tab reordering
 
 A tab is dragged to a new place in the strip by `initTabReordering()` in `markdown-editor.js`, which
@@ -151,7 +190,7 @@ its own drag image and offers no way to paint a marker into the gap between two 
 - **The order is not merely a DOM detail.** `saveSession()` stores it as
   `Array.from(this.tabs.keys())`, so a drop calls `reorderTabsFromDom()`, which rebuilds that Map in
   the buttons' new order and saves the session. Move the elements without it and the order reverts
-  on the next reload.
+  on the next reload. See "Tab loading and order" above.
 
 ### CSS Patterns for RTL vs LTR
 - Each editor tab gets a wrapper div with class `editor-wrapper`

@@ -124,6 +124,13 @@ body {
     border-radius: 999px;
 }
 
+/* A tab whose file could not be read: it holds a read-only note instead of the file's content,
+   rather than the tab being thrown away - see MarkdownEditor.loadTabContent(). */
+.tab.missing .tab-title {
+    color: #b00020;
+    font-style: italic;
+}
+
 /* A tab on its way to a new place in the strip: it follows the pointer, and is faded so that the
    gap it would land in - marked by .tab-drop-indicator - stays the eye-catching thing. */
 .tab.dragging {
