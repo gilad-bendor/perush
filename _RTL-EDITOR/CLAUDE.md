@@ -18,6 +18,9 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - Cmd+click (Ctrl+click off macOS) on a `[text](path)` link opens the linked file and moves the
    focus to it; a file that was not open yet gets its tab right after the linking one
 - Ctrl+1 .. Ctrl+9 show the 1st .. 9th tab
+- The file tree keeps up with the disk: a file or folder created or deleted by anything else - git,
+   ClaudeCode, the Finder - shows up within a second, and a tab whose file was deleted turns into
+   the same "file not found" tab a reload would give it
 
 ## Setup
 
@@ -35,6 +38,7 @@ bun run build
 ## Project Structure
 
 - `src/server.ts` - Main Bun web server
+- `src/fs-changes.ts` - Tree snapshots, their differences, and the log a client polls
 - `public/` - Static frontend assets
 - `public/index.html` - Main interface
 - `public/src/app.js` - Frontend entry point (imports markdown-editor.js)
@@ -45,10 +49,11 @@ bun run build
 - `public/style.css` - Styling with RTL support
 - `tests/tables.test.ts` - Unit tests for `tables.js` (`bun test`)
 - `tests/links.test.ts` - Unit tests for `links.js` (`bun test`)
+- `tests/fs-changes.test.ts` - Unit tests for `fs-changes.ts` (`bun test`)
 
 ## API Endpoin
-- `GET /api/files` - List all .md files in configured directory
-- `GET /api/file/:path` - Read file content
+- `GET /api/files` - `{files, serverTimestamp}`: the whole tree, and a cursor to poll changes with
+- `GET /api/file/:path?since=<cursor>` - `{content, readOnly?, serverTimestamp, recentFsChanges?, fsChangesUnknown?}`
 - `POST /api/file/:path` - Save file content
 
 ## Configuration
@@ -213,6 +218,64 @@ its own drag image and offers no way to paint a marker into the gap between two 
   `Array.from(this.tabs.keys())`, so a drop calls `reorderTabsFromDom()`, which rebuilds that Map in
   the buttons' new order and saves the session. Move the elements without it and the order reverts
   on the next reload. See "Tab loading and order" above.
+
+### Watching the tree
+
+A file or folder created or deleted by anything outside the editor reaches the UI within a second,
+without a second polling loop: **the file poll carries it**. Every `GET /api/file/:path` sends the
+cursor the server last gave (`?since=`), and every answer - the 404 of a missing file included -
+brings back `serverTimestamp` and, when there is anything to report, `recentFsChanges`:
+
+```ts
+type FileSystemChange = { path: string; changeType: "created" | "deleted" };   // a folder ends with "/"
+```
+
+**The server notices changes by rescanning, not by reading the events.** Any `fs.watch` event
+schedules (150 ms debounce) a fresh walk of the tree, and `diffSnapshots()` against the previous
+snapshot is what gets logged. A walk costs ~20 ms and only happens when something really moved, and
+in exchange no event has to be interpreted - which matters, because macOS reports only
+`rename <path>` for both a creation and a deletion, and reports a folder moved in or out of the tree
+as a *single* event for the folder alone. Since both snapshots hold every path in full, a folder
+that comes or goes is reported as the folder **and** every file that was under it, with no special
+case anywhere. A periodic rescan (15 s) backs the watcher up, as `fs.watch` may drop events and a
+recursive watch is not supported on every platform. `isIgnoredWatchPath()` drops an event before it
+can cost a rescan - which is what keeps a busy `.git` from walking the tree all day.
+
+**The cursor is a timestamp the server issues** (`FsChangeLog.now()`), never the client's clock, and
+two rules make "everything since your cursor" exact:
+
+- Every timestamp it hands out is *strictly* greater than the last one issued or recorded. A change
+  landing in the same millisecond as the answer before it would otherwise fail the `at > since`
+  test and be lost for good - the log's clock never repeats itself.
+- The log knows how far back it can answer (`coversSince`). A cursor from before this server
+  started, or from beyond the trimmed window, is **not** answered with an empty list - that would
+  quietly claim nothing had happened. It gets `fsChangesUnknown`, and the client fetches the whole
+  tree again. This is what makes a server restart harmless.
+
+**The client re-fetches the tree rather than patching it.** Applying a change list to the rendered
+tree would mean re-deriving which folders still hold a `.md` file, and in what order, when the
+answer is one fetch away - and one that only happens when something did change.
+`loadFilesTree(true)` keeps the expanded folders (`this.expandedFolders`) and the scroll position,
+and clears `fileTreeElements` first, or a deleted file keeps an element nobody can see.
+
+**Why `/api/files` returns the cursor too.** The tree and the cursor have to come from the same
+answer. Take the cursor from a file poll a moment later instead, and a file created in between is
+in neither - and the tree stays wrong until the next change happens along.
+
+**A tab whose file goes gets the missing-file treatment - the very same one.**
+`TabData.applyFileSystemChange()` calls `loadTabContent()`, which finds nothing and leaves the tab
+exactly as a reload would: red italic title, "RO" badge, and a `file not found` note where the text
+was. There is deliberately no second, softer presentation for "deleted while open" - one state, one
+look, however the tab got there. A folder above the file counts as the file, matched by prefix.
+
+Two things follow from reusing that path:
+- **A dirty tab is left alone.** Rebuilding it would throw away text that is not on disk yet, and
+  the autosave already scheduled is about to write the file back - after which the `created` that
+  follows puts the tab right. Until then `this.isDeleted` keeps `updateFromServer()` from reporting
+  the 404 as a failure once a second.
+- **A file that comes back is loaded for real**, again through `loadTabContent()`. A tab that was
+  never shown has no editor to rebuild, so it just drops its cached `loadPromise` and is fetched
+  when it is finally shown.
 
 ### Markdown links
 

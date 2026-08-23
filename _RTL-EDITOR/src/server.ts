@@ -1,9 +1,12 @@
 import { file, serve } from "bun";
 import { join, extname, basename, dirname } from "path";
 import { readdir, stat, readFile, writeFile, mkdir, rename, unlink } from "fs/promises";
+import { watch } from "fs";
 import { renderTerminalOutput } from "./terminal-render";
 // The very module the browser loads - so that a table is laid out identically on both sides.
 import { formatTables, isAiGeneratedFile } from "../public/src/tables.js";
+import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes";
+import type { FileSystemChange } from "./fs-changes";
 
 const PORT = 4000;
 const MARKDOWN_DIR = "..";
@@ -80,6 +83,104 @@ async function getMarkdownFiles(dir: string, basePath = ""): Promise<FileData[]>
     }
 }
 
+// ----------------------------------------------------------------------------------------------
+// Watching the tree
+//
+// The client is told what has appeared and disappeared as an aside to the polling it already does
+// (see the /api/file GET handler). What the server has to do for that is notice the changes.
+//
+// It notices them by *rescanning*: any event from the watcher schedules a fresh walk of the tree,
+// and the difference against the previous snapshot is what gets logged. A walk costs ~20ms and
+// only happens when something actually moved, and in exchange the raw events - which on macOS say
+// only "rename <path>", and which a folder moved in or out of the tree may report as a single
+// event for the folder alone - never have to be interpreted. See diffSnapshots().
+//
+// A periodic rescan backs the watcher up, because fs.watch is allowed to drop events, and because
+// a recursive watch is not supported everywhere.
+
+const fsChangeLog = new FsChangeLog();
+let fsSnapshot = new Set<string>();
+
+/** How long to let events settle before rescanning - one rescan for a burst of them. */
+const RESCAN_DEBOUNCE_MS = 150;
+/** The safety net, for events the watcher never delivered. */
+const RESCAN_INTERVAL_MS = 15_000;
+
+let rescanTimer: ReturnType<typeof setTimeout> | null = null;
+let rescanning: Promise<void> | null = null;
+
+async function rescanTree(): Promise<void> {
+    // One at a time: a burst of events must not have two walks racing to log the same difference.
+    if (rescanning) return rescanning;
+    rescanning = (async () => {
+        try {
+            const nextSnapshot = snapshotOfTree(await getMarkdownFiles(MARKDOWN_DIR));
+            const changes = diffSnapshots(fsSnapshot, nextSnapshot);
+            fsSnapshot = nextSnapshot;
+            if (changes.length) {
+                fsChangeLog.record(changes);
+                console.log(`Filesystem: ${changes.map(c => `${c.changeType[0]} ${c.path}`).join(", ")}`);
+            }
+        } catch (error) {
+            console.error("Failed to rescan the tree:", error);
+        } finally {
+            rescanning = null;
+        }
+    })();
+    return rescanning;
+}
+
+function scheduleRescan() {
+    if (rescanTimer) clearTimeout(rescanTimer);
+    rescanTimer = setTimeout(() => {
+        rescanTimer = null;
+        void rescanTree();
+    }, RESCAN_DEBOUNCE_MS);
+}
+
+async function startWatchingTree() {
+    fsSnapshot = snapshotOfTree(await getMarkdownFiles(MARKDOWN_DIR));
+    fsChangeLog.startCovering();
+
+    try {
+        watch(MARKDOWN_DIR, { recursive: true }, (_eventType, filename) => {
+            if (isIgnoredWatchPath(filename && String(filename), exclusions)) return;
+            scheduleRescan();
+        });
+    } catch (error) {
+        console.error("Cannot watch the tree - falling back on the periodic rescan:", error);
+    }
+    setInterval(() => void rescanTree(), RESCAN_INTERVAL_MS);
+}
+
+/**
+ * What to tell a client about the tree, given the cursor it sent with its request.
+ *
+ * The cursor is a "serverTimestamp" this server handed out earlier - never the client's own clock.
+ * A client with no cursor yet (its first request) is simply given one. A cursor the log cannot
+ * answer for - from before this server started, or from beyond the log's window - gets
+ * `fsChangesUnknown`, which asks the client to fetch the whole tree again rather than to believe
+ * that nothing has happened.
+ */
+function fileSystemChangesSince(url: URL): {
+    serverTimestamp: number;
+    recentFsChanges?: FileSystemChange[];
+    fsChangesUnknown?: true;
+} {
+    const since = Number(url.searchParams.get("since"));
+    if (!Number.isFinite(since) || since <= 0) {
+        return { serverTimestamp: fsChangeLog.now() };
+    }
+    const changes = fsChangeLog.since(since);
+    if (changes === null) {
+        return { serverTimestamp: fsChangeLog.now(), fsChangesUnknown: true };
+    }
+    return {
+        serverTimestamp: fsChangeLog.now(),
+        ...(changes.length ? { recentFsChanges: changes } : {}),
+    };
+}
+
 serve({
     port: PORT,
     async fetch(request) {
@@ -121,7 +222,10 @@ serve({
         if (url.pathname === "/api/files") {
             await ensureMarkdownDir();
             const files = await getMarkdownFiles(MARKDOWN_DIR);
-            return new Response(JSON.stringify(files), {
+            // The cursor comes with the tree, and not from the client's first file poll a moment
+            // later: a file created in between would otherwise be in neither, and the tree would
+            // stay wrong until the next change.
+            return new Response(JSON.stringify({ files, serverTimestamp: fsChangeLog.now() }), {
                 headers: { "Content-Type": "application/json" }
             });
         }
@@ -159,11 +263,20 @@ serve({
                             .replace(/   +$/gm, "");
                     }
 
-                    return new Response(JSON.stringify({ content, readOnly: isScriptOutputFile || undefined }), {
+                    return new Response(JSON.stringify({
+                        content,
+                        readOnly: isScriptOutputFile || undefined,
+                        ...fileSystemChangesSince(url),
+                    }), {
                         headers: { "Content-Type": "application/json" }
                     });
                 } catch {
-                    return new Response(JSON.stringify({ error: "File not found" }), {
+                    // The changes travel with the 404 as well: a client whose only open tab is a
+                    // file that does not exist still has to hear about the rest of the tree.
+                    return new Response(JSON.stringify({
+                        error: "File not found",
+                        ...fileSystemChangesSince(url),
+                    }), {
                         status: 404,
                         headers: { "Content-Type": "application/json" }
                     });
@@ -238,3 +351,11 @@ async function writeFileSafe(filePath: string, fileContents: string): Promise<vo
 }
 
 console.log(`Server running at http://localhost:${PORT}`);
+
+// Take the first snapshot and start watching. Until this finishes, the change log answers "I cannot
+// tell" to any cursor - so a client that polls in the meantime fetches the tree again, rather than
+// being told that nothing has happened.
+void startWatchingTree().then(
+    () => console.log(`Watching ${fsSnapshot.size} files and folders under ${MARKDOWN_DIR}`),
+    (error) => console.error("Failed to start watching the tree:", error),
+);

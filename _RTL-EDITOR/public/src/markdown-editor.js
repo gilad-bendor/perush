@@ -22,6 +22,11 @@ export class MarkdownEditor {
         this.tabStates = new Map();
         this.expandedFolders = new Set();
         this.fileTreeElements = new Map();
+        // The "serverTimestamp" of the last answer the server gave us - the cursor it wants back on
+        // the next request, to tell us what has appeared and disappeared meanwhile. Null until the
+        // file tree is first fetched. See applyFileSystemChanges().
+        /** @type {number | null} */
+        this.fsTimestamp = null;
         this.directionCompartment = new Compartment();
         this.readOnlyCompartment = new Compartment();
         this.init().catch(consoleError);
@@ -573,18 +578,74 @@ export class MarkdownEditor {
         });
     }
 
-    async loadFilesTree() {
+    /**
+     * (Re-)fetches the file tree and renders it.
+     *
+     * Also **sets the cursor**: the tree and the "what has changed since" cursor have to come from
+     * the same answer, or a file created between the two would be in neither, and the tree would
+     * stay wrong until the next change happened to come along.
+     *
+     * The expanded folders and the scroll position survive a re-render - the first because
+     * renderFileTree() reads this.expandedFolders, the second because it is put back here.
+     *
+     * @param {boolean} isRefresh   true when the tree is already on screen, and should not be
+     *                              replaced by "Loading files..." while the new one is fetched
+     */
+    async loadFilesTree(isRefresh = false) {
         const fileTree = /** @type {HTMLElement} */ (document.getElementById('file-tree'));
-        fileTree.innerHTML = 'Loading files...';
+        if (!isRefresh) fileTree.innerHTML = 'Loading files...';
+        const scrollTop = fileTree.scrollTop;
 
         try {
             const response = await fetch('/api/files');
-            const files = await response.json();
+            const {files, serverTimestamp} = await response.json();
+            // The elements of the tree that is about to be thrown away must not be kept - a file
+            // that has just been deleted would otherwise keep an element nobody can see.
+            this.fileTreeElements.clear();
             this.renderFileTree(files, fileTree);
+            fileTree.scrollTop = scrollTop;
+            this.fsTimestamp = serverTimestamp ?? null;
         } catch (error) {
-            fileTree.innerHTML = 'Error loading files';
+            if (!isRefresh) fileTree.innerHTML = 'Error loading files';
             consoleError('Failed to load files:', error);
         }
+    }
+
+    /**
+     * Takes in what the server says has happened to the tree since our cursor - the "serverTimestamp"
+     * and "recentFsChanges" that every /api/file answer carries.
+     *
+     * The tree is not patched change by change; it is fetched again. Applying a change list to the
+     * rendered tree would mean re-deriving which folders still have a .md file under them, in which
+     * order, and the answer is already one fetch away - one that only happens when something really
+     * did change.
+     *
+     * @param {{ serverTimestamp?: number, recentFsChanges?: {path: string, changeType: 'created' | 'deleted'}[], fsChangesUnknown?: boolean }} data
+     */
+    applyFileSystemChanges(data) {
+        if (typeof data.serverTimestamp === 'number') {
+            // Answers can overtake one another; the cursor must never go backwards, or a change
+            // would be delivered - and the tree fetched - over and over.
+            this.fsTimestamp = Math.max(this.fsTimestamp ?? 0, data.serverTimestamp);
+        }
+
+        // The server cannot say what happened since a cursor that old (it has restarted, or the
+        // change log has moved past it) - so the tree is taken afresh rather than believed to be
+        // unchanged.
+        if (data.fsChangesUnknown) {
+            consoleLog('The server cannot say what has changed - reloading the file tree');
+            this.loadFilesTree(true).catch(consoleError);
+            return;
+        }
+
+        const changes = data.recentFsChanges;
+        if (!changes?.length) return;
+        consoleLog('Filesystem changes: ', changes);
+
+        for (const tabData of this.tabs.values()) {
+            tabData.applyFileSystemChange(changes);
+        }
+        this.loadFilesTree(true).catch(consoleError);
     }
 
     /**
@@ -647,9 +708,14 @@ export class MarkdownEditor {
      * @returns {Promise<{ content: string; readOnly: boolean }>}
      */
     async loadFileFromServer(filePath) {
+        // Every read of a file doubles as a poll of the tree: the cursor goes out with the request,
+        // and what has changed since comes back with the answer - including with a 404, which is
+        // what a tab holding a missing file gets, and it has to hear about the tree too.
+        const since = this.fsTimestamp === null ? '' : `?since=${this.fsTimestamp}`;
         try {
-            const response = await fetch(`/api/file/${encodeURIComponent(filePath)}`);
+            const response = await fetch(`/api/file/${encodeURIComponent(filePath)}${since}`);
             const data = await response.json();
+            this.applyFileSystemChanges(data);
             if (!response.ok) {
                 throw new Error(data.error || 'Unknown error');
             }

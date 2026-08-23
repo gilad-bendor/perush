@@ -36,6 +36,11 @@ export class TabData {
         // Set when the file could not be read: the editor then holds a note saying so, rather than
         // the tab being thrown away and the file dropped from the session.
         this.isMissing = false;
+        // Set when the file has been deleted on disk while the tab was open - reported by the
+        // server together with the polling, see MarkdownEditor.applyFileSystemChanges(). The tab
+        // then shows the same "file not found" note as one whose file was already gone when it was
+        // opened; this flag is what keeps the 404 from being reported as a failure meanwhile.
+        this.isDeleted = false;
         // The file exactly as it is on the server - which is *not* what the editor holds, because
         // tables are laid out (and, in an RTL file, mirrored) on the way in. See updateFromServer().
         // noinspection JSUnusedGlobalSymbols
@@ -66,6 +71,59 @@ export class TabData {
             });
         }
         return this.loadPromise;
+    }
+
+    /**
+     * Takes in what has happened to the tree, as far as it concerns this tab's own file.
+     *
+     * A folder counts as its whole content: the server reports the folder *and* every path that was
+     * under it (see diffSnapshots()), but the folder's own entry is matched by prefix too, so that
+     * a tab is caught either way.
+     *
+     * A file that goes leaves the tab looking **exactly** as it does when a file is missing at
+     * load time - red italic title, "RO" badge, and a "file not found" note where the text was -
+     * because it is the same code path: loadTabContent() finds nothing and writes the note itself.
+     * A file that comes back is loaded for real, again by the same path.
+     *
+     * The changes come shallowest-first, so the last one that names this file is the state to end
+     * up in - which is what a folder deleted and put back again amounts to.
+     *
+     * @param {{path: string, changeType: 'created' | 'deleted'}[]} changes
+     */
+    applyFileSystemChange(changes) {
+        /** @type {'created' | 'deleted' | null} */
+        let outcome = null;
+        for (const {path, changeType} of changes) {
+            const isAboutThisFile = path.endsWith('/')
+                ? this.filePath.startsWith(path)            // the folder holding it, at any depth
+                : path === this.filePath;
+            if (isAboutThisFile) outcome = changeType;
+        }
+        if (!outcome) return;
+
+        this.isDeleted = outcome === 'deleted';
+
+        if (this.isDeleted) {
+            // A tab that has never been shown has nothing to rebuild: when it is shown, it will
+            // find the file gone and write the note itself. One that already holds the note is
+            // there too.
+            if (!this.editorView || this.isMissing) return;
+            // Unsaved text is not thrown away for a file that is about to come back: the autosave
+            // already scheduled writes it out again, and the "created" that follows puts the tab
+            // right. Until then updateFromServer() keeps quiet about the 404 - see this.isDeleted.
+            if (this.isDirty) return;
+            this.markdownEditor.loadTabContent(this).catch(consoleError);
+            return;
+        }
+
+        // The file is back. A tab holding the note is rebuilt from it at once; one that was never
+        // shown drops its cached load, so that it is fetched for real when it is.
+        if (!this.isMissing) return;
+        if (this.editorView) {
+            this.markdownEditor.loadTabContent(this).catch(consoleError);
+        } else {
+            this.loadPromise = null;
+        }
     }
 
     updateTitle() {
@@ -180,7 +238,19 @@ export class TabData {
         }
 
         const editorView = this.editorView;
-        const {content: contentOnServer, readOnly} = await this.markdownEditor.loadFileFromServer(this.filePath);
+        /** @type {{content: string, readOnly?: boolean}} */
+        let fileAtServer;
+        try {
+            fileAtServer = await this.markdownEditor.loadFileFromServer(this.filePath);
+        } catch (error) {
+            // A file that has been deleted under an open tab is not a failure to report once a
+            // second: the deletion is already known, and the tab keeps the text it holds. (The
+            // request itself was not in vain - it carried the tree's cursor, and the answer, 404
+            // and all, brought back what has changed.)
+            if (this.isDeleted) return;
+            throw error;
+        }
+        const {content: contentOnServer, readOnly} = fileAtServer;
         if (this.autosaveTimeoutId) {
             return;
         }
