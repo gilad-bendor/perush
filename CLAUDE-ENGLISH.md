@@ -66,6 +66,7 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 - **Population hierarchy**: עפר (individuals) → אדמה (general population) → אדם (the narrative a population forges). An אדם is built out of a *patch* of אדמה — a bounded portion of the population, not the whole of it — and when it dissolves it falls back into עפר, into loose individuals.
 - **Elite/popular axis**: איש (elite, leadership-oriented) ↔ אישה (popular, identity-oriented). This polarity drives many stories and generates dialectical tension.
 - **Inner/outer axis**: ארץ (how we experience ourselves) ↔ שמים (how we experience the boundary with the outside). Both are subconscious; שמים is a kind of מים.
+- **Agency axis**: מעל (what acts upon us, beyond our reach) ↔ מתחת (what we act upon). This is the same boundary שמים marks — between what can be manipulated and what is beyond reach — cast in the language of height.
 
 ## Concepts of Light: Thought
 
@@ -78,10 +79,15 @@ The dictionary below contains only **primitive definitions** — concepts whose 
   3. **ערב** (evening, as in שתי-ועֵרב - weaving): synthesis and integration of insights.
   4. **לילה** (night): a "quiet" period between dialectics - processes occurring without public discourse: automatic activity, or even maturation of insights "from below." This leads back to morning, in an infinite cycle.
 
-## Concepts of Speech: Naming
+## Concepts of Speech: The Ideational Layer
 
-- **אמירה** / **שמיעה** = naming, identification, articulation. "Saying" is naming a new concept or process; "hearing" is internalizing an external articulation.
-  **קריאה** (calling) by name = attaching a name to something: linking something with a symbol, *institutionalizing* it into the social fabric.
+- **אמירה** / **שמיעה** = naming (giving a name), identification, articulation. "Saying" is naming a new concept or process; "hearing" is internalizing an external articulation.
+  The act of saying is so consequential that stories can sometimes be summarized through the sequence of sayings within them.
+  Saying — the giving of a name — is what makes genuine public discourse possible: discourse without adequate names is "crippled" discourse.
+- **קריאה** (calling by name, or calling to someone) = *institutionalizing* an idea within the culture's consciousness — establishing it as something future developments can lean upon (**sedimentation**).
+  Saying produces an idea; some ideas are then "called" — they become a built-in part of the culture.
+
+For an extended treatment — the full process ערפל → אמירה → אור → שיקוע, the parallels to modern concepts (speech-act theory, sedimentation, simulacrum), and the caveats — see [דיון על אמירה וקריאה](נספחים-לפירוש/בראשית-א--דיון-על-אמירה-וקריאה.rtl.md).
 
 ## Sky and Earth: The Subconscious Experience of Existence
 
@@ -110,8 +116,8 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 
 - **כל** (all) = the drive to **totalize** — to integrate and explain the whole. A central and weighty motif.
   Counter-intuitively — when the text says "כל X", it means "the *totalizing* X" (i.e., the X that aspires to totalize everything, to account for the entirety) — *not* "every X that exists"!
-  For example, `כָּל הַחַיָּה` (per the dictionary - חיה = narrative) means "narratives of the totalizing kind — narratives that aspire to explain everything", and *not* "each and every narrative".
-  In other words: "כל" marks a quality, not a quantity — it signals that this X aspires to totalize everything.
+  For example, `כָּל הַחַיָּה` (per the dictionary - חיה = narrative) means "narratives of the totalizing kind — narratives that aspire to explain the whole of their own domain", and *not* "each and every narrative".
+  In other words: "כל" marks a quality, not a quantity — it signals that this X aspires to totalize the whole of its own domain.
 
 - **אדמה** (soil) = the general population in the relevant context. An **אדם** (a specific culture) is built out of a *patch* of soil — a bounded portion of that population, not the population as a whole: `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה`.
   **עפר** (dust) = the individuals that compose a society — what an אדם is made of, and what it falls back into when it dissolves: `כִּי עָפָר אַתָּה וְאֶל עָפָר תָּשׁוּב`.
@@ -123,7 +129,13 @@ The dictionary below contains only **primitive definitions** — concepts whose 
 - **חיים** (life) = dynamism and change.
   **מוות** (death) = stagnation: inability to respond, adapt, and change (unrelated to **הרג** (killing) - which is war and suppression between narratives).
 
-- **למעלה** / **על** ↔ **למטה** / **תחת** (up / above ↔ down / under) = the axis of sublimity/lowliness (various adjectives and actions related to ascent/descent or height relations, mountain/valley).
+- **The height axis** (למעלה / על ↔ למטה / תחת) = the axis of **agency** — the capacity to act upon something (it underlies a wide range of vocabulary: ascent/descent, height relations, mountain/valley):
+  - **מעל** (above) = what acts upon us and that we cannot act upon: beyond reach, dictating, sublime.
+  - **מתחת** (below/under) = what we act upon: within reach, subject to our handling, taken for granted, routine.
+
+- **The weight axis** (כבד / כבוד ↔ קל / קלון / קללה) = the axis of **mass**:
+  - **כבד** (heavy) = something imposing, hard to move, impossible to ignore. Hence כבוד (honor).
+  - **קל** (light) = something of trivial value, easily moved — not something one must reckon with, something one may dismiss. Hence קלון (disgrace) and קללה (curse).
 
 - **פנים** (face, before) = in-the-way-of, according-to-the-principles-of, what is already known about something.
   **אחור** (behind, back) = in another or unknown way, hidden and unknown.

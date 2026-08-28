@@ -33,7 +33,7 @@ TERMINAL_COLUMNS=100
 # control stream faithfully - so write it as a first line ("rows=50 columns=203") and
 # have "script" append (-a) after it. \$(...) is escaped so that it is evaluated in the
 # new window, whose size is what "claude" actually sees.
-SHELL_COMMAND="cd $( dirname $( dirname "$0" ) ) && echo rows=\$(tput lines) columns=\$(tput cols) > $OUTPUT_FILE && script -Fa $OUTPUT_FILE $CLAUDE_COMMAND && exit"
+SHELL_COMMAND="echo 'Output file:    $OUTPUT_FILE' ; cd $( dirname $( dirname "$0" ) ) && echo rows=\$(tput lines) columns=\$(tput cols) > $OUTPUT_FILE && script -Fa $OUTPUT_FILE $CLAUDE_COMMAND && exit"
 
 # The window is created, themed and sized *before* the command runs in it - otherwise
 # the command starts first and "tput" reports the size from before the resize.
