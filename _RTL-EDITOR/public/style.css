@@ -472,6 +472,13 @@ body {
     -webkit-text-stroke: 0 !important;
 }
 
+/* *...* and **...** inside an inline-code span - `a *b* c`. Markdown gives a code span no emphasis
+   children of its own, so these are marked by inlineCodeEmphasisPlugin rather than by the syntax
+   highlighting; both forms read the same, as bold. */
+.cm-code-emphasis {
+    font-weight: bold;
+}
+
 /* Markdown links - "[text](path)". They are already coloured by the syntax highlighting; while the
    Cmd key is held (Ctrl off macOS) they also say that a click would open them - see
    showLinksAsClickable() and MarkdownEditor.openLinkAtCoords() in markdown-editor.js. */

@@ -20,6 +20,7 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - Ctrl+1 .. Ctrl+9 show the 1st .. 9th tab
 - Typing `*` or `` ` `` over a selection wraps it rather than replacing it - the way `(` already
    does; pressing `*` twice gives `**bold**`
+- `*...*` and `**...**` *inside* an inline-code span are shown bold, the way they are outside one
 - The file tree keeps up with the disk: a file or folder created or deleted by anything else - git,
    ClaudeCode, the Finder - shows up within a second, and a tab whose file was deleted turns into
    the same "file not found" tab a reload would give it
@@ -233,6 +234,28 @@ its own drag image and offers no way to paint a marker into the gap between two 
   `Array.from(this.tabs.keys())`, so a drop calls `reorderTabsFromDom()`, which rebuilds that Map in
   the buttons' new order and saves the session. Move the elements without it and the order reverts
   on the next reload. See "Tab loading and order" above.
+
+### Emphasis inside inline code
+
+Markdown says a code span is literal text, so `` `a *b* c` `` gets no `StrongEmphasis`/`Emphasis`
+children from the parser and the `{ tag: tags.strong }` rule of `markdownHighlighting` never fires
+inside one. The stars are meant as emphasis in this project's files all the same, so
+`inlineCodeEmphasisPlugin` decorates them with `.cm-code-emphasis` (`font-weight: bold` in
+`style.css`) - `*one*` and `**two**` alike, the marks included in the bold range the way `tags.strong`
+covers the `**` of a real `**bold**`.
+
+Unlike `markdownLinkPlugin`, this plugin asks the **syntax tree**. The question is exactly "which
+spans did the parser call `InlineCode`?", and a regexp for backticks would have to re-answer it - and
+would get fenced code blocks and escaped backticks wrong. *Within* such a span the parser has nothing
+more to say, so the stars themselves are found by regexp.
+
+**Asking the tree means watching the tree.** A long file is not parsed in one go - CodeMirror parses
+a slice at a time, in the background, and the transactions carrying each new slice change neither
+the document nor the viewport. So the plugin's `update()` rebuilds on
+`syntaxTree(update.startState) !== syntaxTree(update.state)` as well as on `docChanged` /
+`viewportChanged`. Leave that test out and a file big enough to miss the first parse slice shows no
+emphasis at all until its first edit. Any future plugin that reads the syntax tree needs the same
+third test; `markdownLinkPlugin` and `tableLinePlugin` scan the raw lines and so do not.
 
 ### Watching the tree
 

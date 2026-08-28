@@ -4,7 +4,7 @@ import { keymap, ViewPlugin, Decoration, gutterLineClass, GutterMarker } from '@
 import { markdown } from '@codemirror/lang-markdown';
 import { Compartment, EditorSelection, EditorState, RangeSetBuilder, Prec, StateField } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
-import { syntaxHighlighting, HighlightStyle } from '@codemirror/language';
+import { syntaxHighlighting, HighlightStyle, syntaxTree } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
 
 // noinspection ES6UnusedImports
@@ -450,6 +450,7 @@ export class MarkdownEditor {
             markdownHighlighting,
             listLinePlugin,
             markdownLinkPlugin,
+            inlineCodeEmphasisPlugin,
             tableLinePlugin,
             tableRuleGutterField,
             ...(isAiGenerated ? [] : [autoFormatTablesExtension(isRtl)]),
@@ -1423,6 +1424,71 @@ const userPromptLinePlugin = ViewPlugin.fromClass(
         decorations: (v) => v.decorations
     },
 );
+
+
+// Plugin that marks *...* and **...** *inside* an inline-code span - `a *b* c` - as bold.
+//
+// Markdown says a code span is literal text, so the parser gives it no StrongEmphasis/Emphasis
+// children and the { tag: tags.strong } rule of markdownHighlighting never fires there. The stars
+// are still meant as emphasis in this project's files, so they are decorated here instead.
+//
+// Unlike markdownLinkPlugin, this one asks the syntax tree rather than scanning the raw lines: the
+// question is exactly "which spans did the parser call InlineCode?", and a regexp for backticks
+// would have to re-answer it - and would get fenced code blocks and escaped backticks wrong.
+// Inside such a span, though, the parser has nothing more to say, so the stars are found by regexp.
+//
+// The marks are included in the bold range, the way tags.strong covers the ** of a real **bold**.
+// noinspection JSUnusedGlobalSymbols
+const inlineCodeEmphasisPlugin = ViewPlugin.fromClass(
+    // @ts-ignore
+    class {
+        constructor(/** @type {EditorView} */ view) {
+            this.decorations = this.buildDecorations(view);
+        }
+
+        update(/** @type {{ docChanged: boolean, viewportChanged: boolean, startState: EditorState, state: EditorState, view: EditorView}} */ update) {
+            // "the tree changed" matters as much as the other two here, and is easy to forget: a
+            // long file is parsed a slice at a time, in the background, and the transactions that
+            // carry each new slice change neither the document nor the viewport. Without this test
+            // a file big enough not to be parsed in one go shows no emphasis at all until its first
+            // edit - which is what finally rebuilds the decorations.
+            if (update.docChanged || update.viewportChanged
+                || syntaxTree(update.startState) !== syntaxTree(update.state)) {
+                this.decorations = this.buildDecorations(update.view);
+            }
+        }
+
+        buildDecorations(/** @type {EditorView} */ view) {
+            const builder = new RangeSetBuilder();
+            const decoration = Decoration.mark({ class: 'cm-code-emphasis' });
+
+            for (const { from, to } of view.visibleRanges) {
+                syntaxTree(view.state).iterate({
+                    from, to,
+                    enter: (node) => {
+                        if (node.name !== 'InlineCode') {
+                            return;
+                        }
+                        const text = view.state.doc.sliceString(node.from, node.to);
+                        for (const match of text.matchAll(inlineCodeEmphasisRegExp)) {
+                            builder.add(node.from + match.index, node.from + match.index + match[0].length, decoration);
+                        }
+                    }
+                });
+            }
+
+            return builder.finish();
+        }
+    },
+    {
+        // @ts-ignore
+        decorations: (v) => v.decorations
+    },
+);
+
+// **...** comes first, so that it wins over *...* over the same text. Neither may span a line
+// break, and neither may be empty - "**" on its own is not an emphasis of nothing.
+const inlineCodeEmphasisRegExp = /\*\*[^*\n]+\*\*|\*[^*\n]+\*/g;
 
 
 // Plugin that puts every table line in a monospace font.
