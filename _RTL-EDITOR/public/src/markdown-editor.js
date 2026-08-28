@@ -2,7 +2,7 @@ import { RegExpCursor, SearchQuery } from "@codemirror/search"
 import { EditorView, basicSetup } from 'codemirror';
 import { keymap, ViewPlugin, Decoration, gutterLineClass, GutterMarker } from '@codemirror/view';
 import { markdown } from '@codemirror/lang-markdown';
-import { Compartment, EditorState, RangeSetBuilder, Prec, StateField } from '@codemirror/state';
+import { Compartment, EditorSelection, EditorState, RangeSetBuilder, Prec, StateField } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
@@ -388,6 +388,10 @@ export class MarkdownEditor {
                         if (event.code !== 'Backquote' || event.keyCode !== 186) {
                             return false;
                         }
+                        // This handler bypasses EditorView.inputHandler, so the wrapping is done here too.
+                        if (wrapSelectionWith(view, '`')) {
+                            return true;
+                        }
                         view.dispatch(view.state.replaceSelection('`'));
                         return true;
                     }
@@ -449,6 +453,7 @@ export class MarkdownEditor {
             tableLinePlugin,
             tableRuleGutterField,
             ...(isAiGenerated ? [] : [autoFormatTablesExtension(isRtl)]),
+            wrapSelectionExtension(),
             // @ts-ignore
             ...specialKeyHandling.map((keyRun) => Prec.high(keymap.of([keyRun]))),
             keymap.of([indentWithTab]),
@@ -1190,6 +1195,45 @@ const listLinePlugin = ViewPlugin.fromClass(
 // formatTables() is idempotent, so a keystroke that does not disturb a table costs one
 // comparison and produces no change at all.
 //
+// Typing one of these over a selection wraps the selection instead of replacing it - the way
+// basicSetup's closeBrackets already treats "(" and the other bracket pairs. The selection is left
+// on the original text, so pressing the same key again wraps it once more: "123" -> "*123*" -> "**123**".
+const wrappingMarkers = ['*', '`'];
+
+/**
+ * @param {EditorView} view
+ * @param {string} marker
+ * @returns {boolean} whether the keystroke was taken
+ */
+function wrapSelectionWith(view, marker) {
+    const { state } = view;
+    if (state.readOnly || state.selection.ranges.every((range) => range.empty)) {
+        return false;
+    }
+    view.dispatch(state.changeByRange((range) => {
+        if (range.empty) {
+            return { changes: { from: range.from, insert: marker }, range: EditorSelection.cursor(range.from + marker.length) };
+        }
+        return {
+            changes: [{ from: range.from, insert: marker }, { from: range.to, insert: marker }],
+            range: EditorSelection.range(range.from + marker.length, range.to + marker.length),
+        };
+    }), { userEvent: 'input.type', scrollIntoView: true });
+    return true;
+}
+
+/**
+ * @returns {import('@codemirror/state').Extension}
+ */
+function wrapSelectionExtension() {
+    return EditorView.inputHandler.of((view, from, to, text) => {
+        if (from === to || !wrappingMarkers.includes(text)) {
+            return false;
+        }
+        return wrapSelectionWith(view, text);
+    });
+}
+
 /**
  * @param {boolean} isRtl
  * @returns {import('@codemirror/state').Extension}

@@ -18,6 +18,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - Cmd+click (Ctrl+click off macOS) on a `[text](path)` link opens the linked file and moves the
    focus to it; a file that was not open yet gets its tab right after the linking one
 - Ctrl+1 .. Ctrl+9 show the 1st .. 9th tab
+- Typing `*` or `` ` `` over a selection wraps it rather than replacing it - the way `(` already
+   does; pressing `*` twice gives `**bold**`
 - The file tree keeps up with the disk: a file or folder created or deleted by anything else - git,
    ClaudeCode, the Finder - shows up within a second, and a tab whose file was deleted turns into
    the same "file not found" tab a reload would give it
@@ -184,6 +186,19 @@ Two consequences worth remembering:
   is never rewritten.
 - `loadTabContent()` bails out if `this.tabs.get(filePath) !== tabData` after the fetch - the tab was
   closed mid-flight, and building its editor now would leave an orphan pane in the editor pane.
+
+### Wrapping a selection
+
+`basicSetup` brings CodeMirror's `closeBrackets`, which is why typing `(` over a selection already
+gives `(text)`. It only knows bracket pairs, so `*` and `` ` `` are handled by
+`wrapSelectionExtension()` - an `EditorView.inputHandler` that catches those two characters when the
+typed-over range is non-empty and inserts the marker at both ends instead.
+
+**The selection is left on the original text**, not on the wrapped result: that is what makes a
+second `*` turn `*text*` into `**text**` rather than `*(*text*)*`.
+
+The RTL-only `;`-types-a-backquote binding dispatches `replaceSelection()` itself and so never
+reaches an input handler - it calls `wrapSelectionWith()` first for the same reason.
 
 ### Tab shortcuts
 
