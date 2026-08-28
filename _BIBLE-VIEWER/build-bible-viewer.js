@@ -27,6 +27,7 @@ const BSB_INPUT_FILE = path.join(__dirname, '..', '..', 'hebrew', 'data', 'bsb',
 const BIBLEHUB_INPUT_FILE = path.join(__dirname, '..', '..', 'hebrew', 'data', 'biblehub', 'biblehub-entries-index.md');
 const BIBLE_VIEWER_OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'bible-viewer.html');
 const WORD_TYPE_INDEX_VERB = 0;
+const WORD_TYPE_INDEX_PROPER_NAME = 3;
 
 /**
  * For debug - load only books that match this regexp (null = load all).
@@ -117,6 +118,9 @@ const wordTypesToHebrew = {
 const hebrewWordTypesVisual = Object.values(wordTypesToHebrew);
 if (Object.keys(wordTypesToHebrew)[WORD_TYPE_INDEX_VERB] !== 'Verb') {
     throw new Error(`WORD_TYPE_INDEX_VERB (${WORD_TYPE_INDEX_VERB}) does not point to 'Verb'`);
+}
+if (Object.keys(wordTypesToHebrew)[WORD_TYPE_INDEX_PROPER_NAME] !== 'Name') {
+    throw new Error(`WORD_TYPE_INDEX_PROPER_NAME (${WORD_TYPE_INDEX_PROPER_NAME}) does not point to 'Name'`);
 }
 
 // Yet unused

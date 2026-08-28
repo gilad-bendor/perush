@@ -4,7 +4,8 @@ const FREEZE_VERSE_MOUSE_ENTER_AFTER_CLICK_MS = 3000; // after clicking a verse,
 const MAX_CHAPTERS_IN_BOOK = 150;
 const CHAPTERS_IN_BIBLE = 929;
 const MAX_LENGTH_OF_RECENT_SEARCHES = 2000;
-const WORD_TYPE_INDEX_VERB = 0;
+const WORD_TYPE_INDEX_VERB = 0;         // פֹּעַל - index into hebrewWordTypesVisual/hebrewWordTypesSearchable
+const WORD_TYPE_INDEX_PROPER_NAME = 3;  // שֵׁם פְּרָטִי - ditto
 const MAX_SEARCH_RESULTS = 10000;
 const RESIZE_THROTTLE_MS = 500;        // throttle: while the user keeps resizing, the unified resizeHandler (body-size, CSS vars, font-size) runs at most once per this many ms
 
@@ -1174,9 +1175,12 @@ function executeSearch() {
         showMessage(`<div class="error-message">הנתונים עדיין נטענים - התוצאות יהיו חלקיות!\n`+`אנא המתן מספר שניות ונסה שוב</div>`, 'search-results');
     }
 
-    // 2xy2 - investigate 2-letters proto-semitic roots
-    // Replace 2xy2 with a group of possible hebrew words that correspond to the root.
-    const preprocessedSearchQuery = searchQuery.replace(/^2(.)(.)2$/, '<' + [
+    // 2xy2 / 22xy22 - investigate 2-letters proto-semitic roots.
+    // Both forms are replaced by a <...> group of the possible Hebrew words that correspond to the root;
+    //  they differ only in which word-types of the matching Strong-numbers survive:
+    //   "2xy2"   - every word-type except proper-names (which are nearly always noise in a root investigation).
+    //   "22xy22" - verbs only.
+    const protoSemiticRootGroup = '<' + [
         '$1$2',     // שב
         'נ$1$2',    // נשב
         'י$1$2',    // ישב
@@ -1185,8 +1189,18 @@ function executeSearch() {
         '$1$2ה',    // שבה
         '$1$2$2',   // שבב
         '$1$2$1$2', // שבשב
-    ].join('|') + '>');
-    const onlyAllowVerbs = (preprocessedSearchQuery !== searchQuery);
+    ].join('|') + '>';
+    /** @type {{isAllowed: (wordTypeIndex: number) => boolean, label: string}} */
+    let wordTypeFilter = {isAllowed: () => true, label: ''};
+    let preprocessedSearchQuery = searchQuery.replace(/^22(.)(.)22$/, protoSemiticRootGroup);
+    if (preprocessedSearchQuery !== searchQuery) {
+        wordTypeFilter = {isAllowed: wordTypeIndex => (wordTypeIndex === WORD_TYPE_INDEX_VERB), label: ' (22XY22 ← פעלים בלבד. 2XY2 ← הכל בלי שמות פרטיים)'};
+    } else {
+        preprocessedSearchQuery = searchQuery.replace(/^2(.)(.)2$/, protoSemiticRootGroup);
+        if (preprocessedSearchQuery !== searchQuery) {
+            wordTypeFilter = {isAllowed: wordTypeIndex => (wordTypeIndex !== WORD_TYPE_INDEX_PROPER_NAME), label: ' (2XY2 ← הכל בלי שמות פרטיים. 22XY22 ← פעלים בלבד)'};
+        }
+    }
 
     let searchRegExp;
     try {
@@ -1197,7 +1211,7 @@ function executeSearch() {
         const searchQueryWithStrongNumbers = preprocessedSearchQuery.replace(/<(.+?)>/g, (wholeMatch, innerRegExpSource) => {
             const currentGroupIndex = groupIndex++;
             try {
-                return expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs, currentGroupIndex);
+                return expandSpecialSearchRange(wholeMatch, innerRegExpSource, wordTypeFilter, currentGroupIndex);
             } catch (error) {
                 // Invalid <...> RegExp
                 throw new Error(`Invalid RegExp inside <...>:\n    ${wholeMatch}\n  ${error.message}`);
@@ -1319,11 +1333,11 @@ function executeSearch() {
  * The returned RegExp-string will be later transformed by normalizeSearchRegExp().
  * @param {string} wholeMatch
  * @param {string} innerRegExpSource
- * @param {boolean} onlyAllowVerbs - if this is a "2xy2" search
+ * @param {{isAllowed: (wordTypeIndex: number) => boolean, label: string}} wordTypeFilter - narrows the matching Strong-numbers by word-type, plus the label describing that narrowing (see the "2xy2"/"22xy22" preprocessing)
  * @param {number} groupIndex - the 0-based index of this <...> occurrence in the full query (used to key per-group checkbox state)
  * @returns {string}
  */
-function expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs, groupIndex) {
+function expandSpecialSearchRange(wholeMatch, innerRegExpSource, wordTypeFilter, groupIndex) {
     // Normalize the inner RegExp (e.g. support "#" etc.) and split it over "/" or "\".
     let [wordRegExpSource, typeRegExpSource] = normalizeSearchRegExp(innerRegExpSource, true).split(/[\/\\]/);
     /** @type {number[]} */ const matchingStrongNumbers = [];
@@ -1356,7 +1370,7 @@ function expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs,
             const [_strongNumberWord, wordTypeIndex, searchableWord] = strongNumbersToData[strongNumber];
             if (strongNumberRegExp.test(String(strongNumber)) ||
                 strongNumberRegExp.test(searchableWord)) {
-                if (!onlyAllowVerbs || (wordTypeIndex === WORD_TYPE_INDEX_VERB)) {
+                if (wordTypeFilter.isAllowed(wordTypeIndex)) {
                     if ((matchingWordTypeIndexes.size === 0) || (matchingWordTypeIndexes.has(wordTypeIndex))) {
                         matchingStrongNumbers.push(strongNumber);
                     }
@@ -1407,7 +1421,7 @@ function expandSpecialSearchRange(wholeMatch, innerRegExpSource, onlyAllowVerbs,
             '<code class="original-search-term">',
             escapeHtml(wholeMatch),
             '</code>',
-            onlyAllowVerbs ? ` (פעלים בלבד)` : '',
+            wordTypeFilter.label,
             ' מתורגם ל: ',
             '<code class="effective-search-term">',
             escapeHtml(replacement),
