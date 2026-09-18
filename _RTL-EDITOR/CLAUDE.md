@@ -31,6 +31,10 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
    re-rendered within a second of any change, with an `index.html` in every folder - see "The HTML mirror" below
 - `<כלול-בהדפסה מקור="..." מ="..." עד="..." כותרות="+1">` embeds another Markdown file into this one -
    on the page only, never on disk. See "Embedding one file in another" below
+- `<תוכן-העניינים>` on a line of its own becomes a table of contents of the headings *below* it -
+   again on the page only. A file without that line gets no index. See "The table of contents" below
+- A ```` ```html ```` fenced block is written to the page as raw HTML, the fence lines gone - the one
+   way a file may put HTML of its own on its page. See "The raw-HTML fence" below
 - A print button beside the help button opens the current file's page in a tab of its own
 
 ## Setup
@@ -301,11 +305,12 @@ and closes at the start of a line, and `public/style.css` colours the names it k
 only place a new tag has to be added, `src/html/md-to-html.ts`'s `PAGE_STYLE` being the mirror's copy
 of it. The two lists are meant to hold the same names and the same colours.
 
-`<כלול-בהדפסה>` is the one pseudo-tag that *does* something: on the page it is replaced by the file it
-names (see "Embedding one file in another"). In the editor it is a marker like any other.
+Two pseudo-tags *do* something on the page, and only there - in the editor both are markers like any
+other: `<כלול-בהדפסה>` is replaced by the file it names (see "Embedding one file in another"),
+and `<תוכן-העניינים>` by the page's index of headings (see "The table of contents").
 
-**Except the void ones.** `<כלול-בהדפסה ...>` has no closing tag, the way HTML's own `<img>` has
-none - and nothing in the text says so, just as `<img>` is void because the spec says it is. So the
+**Except the void ones.** `<כלול-בהדפסה ...>` and `<תוכן-העניינים>` have no closing tag, the way
+HTML's own `<img>` has none - and nothing in the text says so, just as `<img>` is void because the spec says it is. So the
 names are listed, once, in `public/src/pseudo-tags.js` - plain ESM, imported by the browser and by
 Bun, like `tables.js` - and both sides ask `isVoidPseudoTag()`:
 
@@ -318,6 +323,9 @@ Bun, like `tables.js` - and both sides ask `isVoidPseudoTag()`:
 (`cm-html-עיון cm-html-כלול-בהדפסה`), and which background wins is decided by the order of the
 rules, not the order of the classes. A marker should keep its own colour wherever it sits, so its
 rule goes at the end of the block - the opposite of what a tag that *encloses* others would want.
+
+`<תוכן-העניינים>` is the one name `PAGE_STYLE` does not share, and deliberately: on the page that
+line is not a pseudo-tag box at all - it *is* the index, and wears `.index`.
 
 ### Emphasis inside inline code
 
@@ -431,15 +439,20 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
   centred. The name must hold a non-ASCII letter, which is what tells one from a real HTML tag, and
   it must be closed further down - otherwise the line is plain text. A **void** tag
   (`isVoidPseudoTag()`) closes nothing: its line is the whole box, and the caption all there is in it.
-- **Raw HTML is escaped** (`html: false`), as the editor shows it as text too.
+- **Raw HTML is escaped** (`html: false`), as the editor shows it as text too - except inside a
+  ```` ```html ```` fence, which goes to the page as it is. See "The raw-HTML fence" below.
 - `*` / `**` inside inline code are bold, stars removed.
-- **An index** opens every page with at least 3 headings of `#`..`###` (`renderIndex()`): a collapsible
-  `<nav class="index">` titled **תוכן העניינים** in an RTL page and **Contents** in an LTR one, indented
-  from the shallowest level present. Headings inside a pseudo-tag, quote or list are not listed - they
-  are details of that block. Every heading gets an `id` (words joined by `-`, niqqud and punctuation
-  dropped, `-2`, `-3` for repeats), with or without an index, so a link can point at a section.
+- **An index** goes where the file's `<תוכן-העניינים>` line stands, and nowhere else (`renderIndexes()`):
+  a collapsible `<nav class="index">` of the headings of `#`..`###` **below** it, titled
+  **תוכן העניינים** in an RTL page and **Contents** in an LTR one, indented from the shallowest
+  level present. Headings inside a pseudo-tag, quote or list are not listed - they are details of that
+  block. Every heading gets an `id` (words joined by `-`, niqqud and punctuation dropped, `-2`, `-3`
+  for repeats), whether it is listed or not, so a link can always point at a section. See "The table
+  of contents" below.
 - **Links** are rewritten by `mirroredHref()`: to a mirrored `.md` → its page; to anything else (an
   `*.ai.md`, an image) → back to the original, one folder further up.
+- **On paper** the page is laid out for the sheet, by an `@media print` block at the end of
+  `PAGE_STYLE`. See "Printing a page" below.
 
 **When a page is rendered** works like `make`: a page is stale when it is missing, older than any of the
 files it was built from, or older than the rendering code (`RENDERER_FILES`) - so a renderer change
@@ -537,6 +550,109 @@ the text is only a `\uE000error:<n>\uE000` marker line. That character is stripp
 is read - `toLines()` is the one door a file's text comes in by - so nothing a file could hold can be
 mistaken for one. A NUL would have been the obvious marker, and is not usable: markdown-it replaces it
 with U+FFFD before any rule sees it.
+
+### The raw-HTML fence
+
+A ```` ```html ```` fence is the one way a file can put HTML on its page: the fence's own lines go,
+and what was between them is written out untouched. Everything else stays escaped - `html: false` is
+what makes a stray `<div>` in the prose show as the four characters it is, and that is what the
+editor shows too.
+
+````text
+```html
+<div style="text-align: center">שורה באמצע</div>
+```
+````
+
+The rule is one override of markdown-it's own `fence` renderer, in `md-to-html.ts`; every other
+fence falls through to it and is still a `<pre><code>` block, `js` and unlabelled alike. The info
+string is read the way a language is - the first word, case ignored - so ```` ```HTML הערה ```` is a
+raw fence and ```` ```htmlish ```` is not.
+
+**Why a fence and not a tag.** The way out of the escaping has to be something a writer types on
+purpose, on lines of their own, and can see the whole extent of in the editor - not a `<` that
+happens to begin a word in the middle of a paragraph. A fence is already that shape, and the editor
+already draws it as a block. A file can therefore break its own page, which is the price of the
+capability; nothing a file writes by accident can.
+
+Two things it does *not* do, both worth knowing:
+
+- **The content is not Markdown.** `*b*`, `` `c` `` and `<עיון>` inside the fence reach the page as
+  those characters, not as emphasis, code or a pseudo-tag box.
+- **`<כלול-בהדפסה>` inside it is not expanded**, and neither is a heading inside it indexed -
+  `includes.ts` skips every fence (`fenceScanner()`), and the headings come from the token stream,
+  where a fence is one opaque token.
+
+### The table of contents
+
+`<תוכן-העניינים>`, alone on its line, is where the page's index of headings goes - and the only
+thing that puts one there. `renderIndexes()` in `md-to-html.ts` builds them; `indexTagRule()` marks
+the lines; the `index_tag` renderer rule drops each one into its own.
+
+**It used to be automatic**, on every page with at least three headings, and that is the change: a
+decision the file could not argue with. A short file got an index that only repeated what was already
+in sight, and a long one could not choose to open with its first paragraph instead. So the file says
+where, or says nothing and gets none - and with the count no longer deciding anything, a file that
+asks for an index gets one however few headings it has.
+
+**An index lists the headings below it, and only those.** A table of contents is the way into what
+comes next; a section already read is not something to be sent back to. So the tag's place in the
+file is a real choice and not only a matter of layout: put it under a chapter's opening paragraph and
+it indexes the chapter, put it halfway down and it indexes the second half, and a tag below the last
+heading is empty and leaves no trace.
+
+- **The line must hold nothing else.** Whitespace around the tag is fine - the indentation is the
+  block's own, as with any other - but a word beside it and the line is ordinary text.
+- **The tag is void** (`isVoidPseudoTag()`, see "Pseudo-tags"), and its block rule is registered
+  *before* `pseudo_tag`, which would otherwise draw the line as a caption box.
+- **Every heading still gets its `id`**, listed or not, so a link can always point at a section.
+  That is `documentHeadings()`'s other job, and why it runs for every page. It now runs for
+  `markdownToHtml()` too, which is why a bare `## x` renders as `<h2 id="x">` even without a page
+  around it.
+- **An index cannot be rendered from inside the token stream** - it is built from the stream around
+  it. `prepareDocument()` parses, puts every index in the env by its tag's token position, and only
+  then renders the body; the renderer rule reads back the one belonging to the line it is on. Hence
+  parse and render being two steps rather than one `markdown.render()`, and hence a `Map` rather than
+  a single string: two tags in one file hold different indexes.
+- **A tag with no heading below it drops its line** rather than showing an empty box.
+- The indentation is measured against the shallowest heading *of that index*, so a tag standing among
+  `##`s starts flush whatever the `#` above it is doing.
+
+**Beware the first line.** `isRtlFile()` decides a plain `.md` file's direction by its first line
+holding a letter, and `<תוכן-העניינים>` is Hebrew - so an English file that opens with the tag renders
+right-to-left. A `.rtl.md` file is unaffected, and so is any file with a line of prose above the tag.
+
+### Printing a page
+
+The print button, and a file like `פירוש/הדפסה.rtl.md` that exists only to be printed, make paper a real
+destination rather than a courtesy - so `PAGE_STYLE` ends with an `@media print` block. Every page
+gets it; nothing is special-cased to the one file.
+
+- **The margins move from the body to `@page`.** On screen the reading column is `main`'s
+  `max-width`; on paper it is the sheet, so `@page { margin }` sets it and `main` is let go.
+- **The backgrounds have to be asked for.** A browser drops every background when printing, and here
+  the colour is the thing that says whether a block is an `<עיון>` or a `<מדרש>` - so
+  `print-color-adjust: exact` on `body` (it inherits) brings the pseudo-tag boxes, the quote strips,
+  the shaded inline code and a table's header row back.
+- **Nothing is split that reads as one thing**: `break-inside: avoid` on a pseudo-tag box, a table, a
+  row, a quote and a list item, `break-after: avoid` on every heading, and `orphans`/`widows` on
+  paragraphs.
+- **Every `#` starts a new sheet.** An embedded file opens with its own, so a file that is a
+  collection of `<כלול-בהדפסה>` directives prints as the chapters it is, with the title and the
+  תוכן העניינים alone on page 1. `main > :first-child` is exempt, so no sheet comes out blank.
+  This is the one opinionated rule of the block - drop `h1 { break-before: page }` for a continuous
+  scroll instead.
+- **A collapsed index would print as its title alone**, so `<details>` is forced open on paper.
+- **Links lose the blue and the underline**: on paper a link cannot be followed, and only the words
+  are left to read.
+
+To see the result without a printer, Chrome will do it from the command line - no server needed,
+since a page in the mirror is a file:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --no-pdf-header-footer \
+    --print-to-pdf=/tmp/print.pdf "file://$PWD/../HTML-FROM-MD/<path>.html"
+```
 
 ### The print button
 

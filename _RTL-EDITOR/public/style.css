@@ -259,7 +259,7 @@ body {
     justify-content: center;
 }
 /* The print button takes the corner, and the help button moves over to make room for it. */
-.print-button { right: 2px; }
+.print-button { right: 2px; border-width: 0; }
 .help-button { right: 20px; }
 .help-button:hover, .print-button:hover:not(:disabled) {
     border-color: #007acc;
@@ -448,6 +448,13 @@ body {
        decides, so this comes last in the block: the marker's own colour wins wherever it sits. */
     & .cm-html-כלול-בהדפסה {
         background: #fffbc0;
+        font-weight: bold;
+    }
+    /* Void too, and marks where the page's index of headings goes (renderIndex() in
+       src/html/md-to-html.ts). It has no counterpart in PAGE_STYLE: on the page the line is not a
+       pseudo-tag box at all - it *is* the index. */
+    & .cm-html-תוכן-העניינים {
+        background: #d8f0f0;
         font-weight: bold;
     }
 }

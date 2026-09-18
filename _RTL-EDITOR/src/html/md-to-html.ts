@@ -12,17 +12,19 @@
 // - `<עיון>` ... `</עיון>` on lines of their own become a box captioned with the tag's name, holding
 //   the Markdown between them; a void tag (`<כלול-בהדפסה ...>`) becomes a box of its caption alone.
 // - `*...*` and `**...**` inside an inline-code span are bold, as inlineCodeEmphasisPlugin shows them.
+// - A ```html fence is written to the page as raw HTML, fence lines gone - the one way out of the
+//   escaping that everything else in a file gets.
 // - A `שגיאה-N` marker left by includes.ts becomes a dark-red block where the faulty directive was,
 //   and the page opens with the list of them.
-// - A file with enough headings opens with an index of them - "תוכן העניינים" in an RTL page,
-//   "Contents" in an LTR one.
+// - `<תוכן-העניינים>`, alone on its line, becomes an index of the headings below it - titled
+//   "תוכן העניינים" in an RTL page, "Contents" in an LTR one. A file without that line gets none.
 //
 // Pure: content in, HTML out. Which file goes where, and when, is html-mirror.ts's business.
 
 import MarkdownIt from "markdown-it";
 import type { StateBlock, StateCore, Token } from "markdown-it";
 import { isRtlFile, parseTables } from "../../public/src/tables.js";
-import { isVoidPseudoTag } from "../../public/src/pseudo-tags.js";
+import { INDEX_TAG_NAME, isVoidPseudoTag } from "../../public/src/pseudo-tags.js";
 import { errorLineIndex } from "./includes";
 import type { EmbedError } from "./includes";
 
@@ -40,6 +42,8 @@ type Env = {
     tablesByFirstLine?: Map<number, { lineCount: number, headerRows: number, rows: string[][][] }>;
     hrefFor?: (href: string) => string;
     errors?: EmbedError[];
+    /** What each `<תוכן-העניינים>` line stands for, by its token's position - they differ. */
+    indexesByToken?: Map<number, string>;
 };
 
 const markdown = new MarkdownIt({
@@ -133,7 +137,7 @@ function errorText(error: EmbedError): string {
     return `${escape(error.id)} &ndash; ${escape(error.file)}, שורה ${error.line}: ${escape(error.message)}`;
 }
 
-/** The list of every error, above the index - the first thing the page has to say. */
+/** The list of every error, at the head of the page - the first thing it has to say. */
 function renderErrors(errors: EmbedError[], isRtl: boolean): string {
     if (!errors.length) return "";
     const items = errors.map(error =>
@@ -228,6 +232,32 @@ markdown.renderer.rules.pseudo_tag_open = (tokens, index) => {
 markdown.renderer.rules.pseudo_tag_close = () => "</div>\n";
 
 // ------------------------------------------------------------------------------------------------
+// The raw-HTML fence
+//
+// A ```html fence is the one way a file can put HTML on its page. Everything else is escaped -
+// `html: false` is what makes a stray `<div>` in the prose show as the four characters it is - and
+// that stays true: the way out has to be something a writer types on purpose, on a line of its own,
+// and can see the whole extent of in the editor. A fence is exactly that shape, and the editor
+// already draws it as a block.
+//
+// The fence's own lines go; what was between them is written to the page untouched, not even
+// re-indented. A file may therefore break its own page, which is the price of the capability and
+// the reason it is not spelt `<html>` somewhere in a paragraph.
+
+/** The info string that makes a fence raw HTML - ```html, whatever follows it on the line. */
+const RAW_HTML_INFO = "html";
+
+const renderFence = markdown.renderer.rules.fence!;
+
+markdown.renderer.rules.fence = (tokens, index, options, env, renderer) => {
+    const token = tokens[index];
+    if (token.info.trim().split(/\s+/)[0].toLowerCase() !== RAW_HTML_INFO) {
+        return renderFence(tokens, index, options, env, renderer);
+    }
+    return token.content;
+};
+
+// ------------------------------------------------------------------------------------------------
 // Emphasis inside inline code
 
 // The same expression inlineCodeEmphasisPlugin uses: ** before *, neither empty nor across a line.
@@ -278,10 +308,24 @@ function safeDecodeUri(href: string): string {
 // ------------------------------------------------------------------------------------------------
 // The page
 
+/**
+ * The document parsed and ready to render: every heading has its `id`, and the index each
+ * `<תוכן-העניינים>` line stands for is in the env, where its renderer rule will find it.
+ *
+ * Both has to happen before the body is rendered, and both need the whole token stream, which is
+ * why parsing and rendering are two steps here rather than one `markdown.render()`.
+ */
+function prepareDocument(content: string, isRtl: boolean, options: RenderOptions): { tokens: Token[], env: Env } {
+    const env: Env = { hrefFor: options.hrefFor, errors: options.errors };
+    const tokens = markdown.parse(content, env);
+    env.indexesByToken = renderIndexes(tokens, isRtl, env);
+    return { tokens, env };
+}
+
 /** The body of the page - exported for the tests. */
 export function markdownToHtml(content: string, options: RenderOptions = {}): string {
-    const env: Env = { hrefFor: options.hrefFor, errors: options.errors };
-    return markdown.render(content, env);
+    const { tokens, env } = prepareDocument(content, isRtlFile("x.md", content), options);
+    return markdown.renderer.render(tokens, markdown.options, env);
 }
 
 /**
@@ -290,11 +334,8 @@ export function markdownToHtml(content: string, options: RenderOptions = {}): st
  * @param filePath  as the file tree names it - decides the direction and the fallback title
  */
 export function renderMarkdownPage(content: string, filePath: string, options: RenderOptions = {}): string {
-    const env: Env = { hrefFor: options.hrefFor, errors: options.errors };
-    const tokens = markdown.parse(content, env);
     const isRtl = isRtlFile(filePath, content);
-    // Before the body is rendered: it is what gives the headings their ids.
-    const index = renderIndex(tokens, isRtl, env);
+    const { tokens, env } = prepareDocument(content, isRtl, options);
     const errors = renderErrors(options.errors ?? [], isRtl);
     const body = markdown.renderer.render(tokens, markdown.options, env);
     const fileName = filePath.split("/").pop() ?? filePath;
@@ -312,7 +353,7 @@ export function renderMarkdownPage(content: string, filePath: string, options: R
 </head>
 <body class="${isRtl ? "rtl" : "ltr"}">
 <main>
-${errors}${index}${body}</main>
+${errors}${body}</main>
 </body>
 </html>
 `;
@@ -320,26 +361,83 @@ ${errors}${index}${body}</main>
 
 // ------------------------------------------------------------------------------------------------
 // The index
+//
+// `<תוכן-העניינים>`, alone on its line, is where the index goes - and the only thing that puts one
+// on a page. It lists the headings *below* it, which is why where it stands is a real choice and
+// not only a matter of layout. It was once added to every page automatically, which is a decision a file cannot argue
+// with: a short file got an index that only repeated what was already in sight, and a long one
+// could not choose to open with its first paragraph instead. So the file says where, or says
+// nothing and gets none.
+//
+// The tag is void (pseudo-tags.js), like `<כלול-בהדפסה>` and for the same reason - it has no
+// content of its own to close over - and the editor shows the line itself, as it shows every other
+// pseudo-tag.
 
 /** The deepest heading the index lists - below that it is a list of details, not of sections. */
 const INDEX_DEEPEST_LEVEL = 3;
-/** Fewer headings than this, and the index would only repeat what is already in sight. */
-const INDEX_MIN_ENTRIES = 3;
+
+/** `<תוכן-העניינים>` and nothing else on the line; the indentation, like any other block's, is its own. */
+const INDEX_TAG_LINE = new RegExp(`^<${INDEX_TAG_NAME}>\\s*$`);
+
+// Before the pseudo-tag rule, which would otherwise make a caption box of the line: this tag is a
+// marker for the renderer rather than a block to show.
+markdown.block.ruler.before("pseudo_tag", "index_tag", indexTagRule, { alt: ["paragraph", "reference", "blockquote", "list"] });
+
+function indexTagRule(state: StateBlock, startLine: number, _endLine: number, silent: boolean): boolean {
+    if (!INDEX_TAG_LINE.test(lineText(state, startLine))) return false;
+    if (silent) return true;
+    const token = state.push("index_tag", "nav", 0);
+    token.block = true;
+    token.map = [startLine, startLine + 1];
+    state.line = startLine + 1;
+    return true;
+}
+
+// An index is built from the token stream around it, so it cannot be rendered from inside it:
+// prepareDocument() puts them all in the env before the body is rendered, and this rule takes the
+// one that belongs to this line. A tag with no heading below it leaves its line out altogether
+// rather than showing an empty box.
+markdown.renderer.rules.index_tag = (_tokens, index, _options, env) => (env as Env).indexesByToken?.get(index) ?? "";
 
 /**
- * The index at the top of the page, or "" for a file with too few headings - and, either way, an
- * `id` on every heading of the document, so a link can point at a section.
+ * What each `<תוכן-העניינים>` line of the document stands for, by the position of its token -
+ * which is what its renderer rule has to go on.
+ *
+ * **An index lists the headings below it, and only those.** A table of contents is the way into
+ * what comes next; a section already read is not something to be sent back to. So a tag in the
+ * middle of a file indexes the second half of it, and one at the foot of a long chapter - where a
+ * reader arrives having read it - is empty and leaves no trace.
+ *
+ * Every heading gains an `id` here, whether the file asked for an index or not, so a link can
+ * always point at a section. That is this pass's other job, and why it runs for every page.
+ */
+function renderIndexes(tokens: Token[], isRtl: boolean, env: Env): Map<number, string> {
+    const entries = documentHeadings(tokens, env);
+    const indexes = new Map<number, string>();
+    tokens.forEach((token, position) => {
+        if (token.type !== "index_tag") return;
+        indexes.set(position, renderIndex(entries.filter(entry => entry.position > position), isRtl));
+    });
+    return indexes;
+}
+
+/** A heading of the document, as an index would list it - and where in the token stream it stands. */
+type HeadingEntry = { position: number, level: number, id: string, html: string };
+
+/**
+ * Every heading an index may list, in the order they stand in - and, on the way, an `id` on every
+ * heading there is, listable or not.
  *
  * Only headings of the document itself are listed: one inside a pseudo-tag, a quote or a list is a
  * detail of that block, not a section.
  */
-function renderIndex(tokens: Token[], isRtl: boolean, env: Env): string {
+function documentHeadings(tokens: Token[], env: Env): HeadingEntry[] {
     const usedIds = new Set<string>();
-    const entries: { level: number, id: string, html: string }[] = [];
+    const entries: HeadingEntry[] = [];
 
-    tokens.forEach((token, index) => {
+    tokens.forEach((token, position) => {
         if (token.type !== "heading_open") return;
-        const children = tokens[index + 1].children ?? [];
+        const children = tokens[position + 1].children ?? [];
         const id = uniqueId(headingSlug(children), usedIds);
         token.attrSet("id", id);
 
@@ -348,10 +446,15 @@ function renderIndex(tokens: Token[], isRtl: boolean, env: Env): string {
         // The entry is a link itself, so a link inside the heading keeps its text and loses its <a>.
         const inline = children.filter(child => child.type !== "link_open" && child.type !== "link_close");
         const html = markdown.renderer.renderInline(inline, markdown.options, env).trim();
-        if (html) entries.push({ level, id, html });
+        if (html) entries.push({ position, level, id, html });
     });
 
-    if (entries.length < INDEX_MIN_ENTRIES) return "";
+    return entries;
+}
+
+/** One index, of the headings given - or "" when there are none, which leaves the tag's line out. */
+function renderIndex(entries: HeadingEntry[], isRtl: boolean): string {
+    if (!entries.length) return "";
 
     // Indented relative to the shallowest heading present: a file whose sections are all ## starts flush.
     const topLevel = Math.min(...entries.map(entry => entry.level));
@@ -493,4 +596,33 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+
+/* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
+   real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
+@media print {
+    /* The reading column is the sheet, so the margins move from the body to the page box. */
+    @page { margin: 18mm 16mm; }
+    body { padding: 0; font-size: 11.5pt; }
+    main { max-width: none; }
+
+    /* The backgrounds are not decoration - the colour is what says whether a block is an עיון or a
+       מדרש - so they have to reach the paper, which by default they do not. Inherited, hence body. */
+    body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+
+    /* A heading belongs with what follows it; a box, a row or a quote is one thing and is not split. */
+    h1, h2, h3, h4, h5, h6 { break-after: avoid; break-inside: avoid; }
+    .pseudo-tag, blockquote, table, pre, tr, li { break-inside: avoid; }
+    p { orphans: 3; widows: 3; }
+
+    /* Every top-level heading opens a sheet: an embedded file begins with its own, so a collection
+       of them prints as the chapters it is. Drop this one rule for a continuous scroll instead. */
+    h1 { break-before: page; }
+    main > :first-child { break-before: auto; }
+
+    /* An index the reader had collapsed would otherwise print as its title and nothing else. */
+    .index details > :not(summary) { display: block; }
+
+    /* A link on paper cannot be followed; the blue and the underline are only noise. */
+    a { color: inherit; text-decoration: none; }
+}
 `;

@@ -10,13 +10,37 @@ describe("readable Markdown", () => {
     });
 
     test("the syntax characters are gone", () => {
-        expect(html("## כותרת")).toBe("<h2>כותרת</h2>");
+        expect(html("## כותרת")).toBe('<h2 id="כותרת">כותרת</h2>');
         expect(html("**מודגש** ו-*נטוי*")).toBe("<p><strong>מודגש</strong> ו-<em>נטוי</em></p>");
         expect(html("> בראשית א א")).toBe("<blockquote>\n<p>בראשית א א</p>\n</blockquote>");
     });
 
     test("raw HTML is shown as text, never let through", () => {
         expect(html('<div dir="rtl">')).toBe("<p>&lt;div dir=&quot;rtl&quot;&gt;</p>");
+    });
+});
+
+describe("the raw-HTML fence", () => {
+    test("a ```html fence goes to the page as it is, its own lines gone", () => {
+        expect(html('לפני\n\n```html\n<div class="x">שלום <b>עולם</b></div>\n```\n\nאחרי')).toBe([
+            "<p>לפני</p>",
+            '<div class="x">שלום <b>עולם</b></div>',
+            "<p>אחרי</p>",
+        ].join("\n"));
+    });
+
+    test("the text between the fences is not touched - not even text that is not HTML", () => {
+        expect(html("```html\na *b* `c` <עיון>\n```")).toBe("a *b* `c` <עיון>");
+    });
+
+    test("the info string is read as a language: `html` whatever follows it, and nothing else", () => {
+        expect(html("```HTML  הערה\n<hr>\n```")).toBe("<hr>");
+        expect(html("```htmlish\n<hr>\n```")).toBe('<pre><code class="language-htmlish">&lt;hr&gt;\n</code></pre>');
+    });
+
+    test("every other fence is still a code block, escaped", () => {
+        expect(html("```\n<div>x</div>\n```")).toBe("<pre><code>&lt;div&gt;x&lt;/div&gt;\n</code></pre>");
+        expect(html("```js\nlet a = 1 < 2;\n```")).toBe('<pre><code class="language-js">let a = 1 &lt; 2;\n</code></pre>');
     });
 });
 
@@ -96,7 +120,7 @@ describe("pseudo-tags", () => {
         expect(html("<עיון>\n### כותרת\n- פריט\n</עיון>")).toBe([
             '<div class="pseudo-tag" data-tag="עיון">',
             '<div class="pseudo-tag-caption">עיון</div>',
-            "<h3>כותרת</h3>",
+            '<h3 id="כותרת">כותרת</h3>',
             "<ul>",
             "<li>פריט</li>",
             "</ul>",
@@ -194,9 +218,10 @@ describe("links", () => {
 });
 
 describe("the index", () => {
-    const sections = "# חלק א\n## א1. ההצעה\n### פרט\n#### עמוק מדי\n# חלק ב\n";
+    const TAG = "<תוכן-העניינים>";
+    const sections = `${TAG}\n# חלק א\n## א1. ההצעה\n### פרט\n#### עמוק מדי\n# חלק ב\n`;
 
-    test("an RTL page opens with תוכן העניינים, linking every section down to ###", () => {
+    test("the tag's line becomes the index, linking every section down to ###", () => {
         const page = renderMarkdownPage(sections, "פירוש/a.rtl.md");
         expect(page).toMatch(/<main>\n<nav class="index">\n<details open>\n<summary>תוכן העניינים<\/summary>/);
         expect(page.match(/<li class="index-depth-(\d)">/g)).toEqual([
@@ -207,20 +232,64 @@ describe("the index", () => {
         expect(page).toContain(`<a href="#${encodeURIComponent("א1-ההצעה")}">א1. ההצעה</a>`);
     });
 
+    test("no tag, no index - but the headings still get their ids", () => {
+        const page = renderMarkdownPage(sections.replace(`${TAG}\n`, ""), "פירוש/a.rtl.md");
+        expect(page).not.toContain('class="index"');
+        expect(page).toContain('<h2 id="א1-ההצעה">');
+    });
+
+    test("the index stands where the tag stood, not at the top of the page", () => {
+        const page = renderMarkdownPage(`# כותרת\n\nפתיחה\n\n${TAG}\n\n## סעיף`, "a.rtl.md");
+        expect(page.indexOf("<p>פתיחה</p>")).toBeLessThan(page.indexOf('<nav class="index">'));
+        expect(page.indexOf('<nav class="index">')).toBeLessThan(page.indexOf('<h2 id="סעיף">'));
+    });
+
     test("an LTR page calls it Contents", () => {
-        const page = renderMarkdownPage("## One\n## Two\n## Three", "docs/notes.md");
+        const page = renderMarkdownPage(`Notes\n\n${TAG}\n## One\n## Two`, "docs/notes.md");
         expect(page).toContain("<summary>Contents</summary>");
         expect(page).toContain('<li class="index-depth-0"><a href="#one">One</a></li>');
     });
 
-    test("too few headings, no index - but the headings still get their ids", () => {
-        const page = renderMarkdownPage("# כותרת\nטקסט\n## סעיף", "a.rtl.md");
+    test("a single heading is index enough - the file asked for one", () => {
+        expect(renderMarkdownPage(`Notes\n\n${TAG}\n## One`, "docs/notes.md")).toContain('<a href="#one">One</a>');
+    });
+
+    test("an index lists the headings below it, and only those", () => {
+        const page = renderMarkdownPage(`## לפני\n${TAG}\n## אחרי`, "a.rtl.md");
+        expect(page).toContain(">אחרי</a>");
+        expect(page).not.toContain(">לפני</a>");
+        // The heading above it is not listed, but it is still a place a link can point at.
+        expect(page).toContain('<h2 id="לפני">');
+    });
+
+    test("a tag below the last heading leaves no trace", () => {
+        const page = renderMarkdownPage(`## א\n## ב\n\n${TAG}`, "a.rtl.md");
         expect(page).not.toContain('class="index"');
-        expect(page).toContain('<h1 id="כותרת">');
+        expect(page).not.toContain(TAG);
+    });
+
+    test("a file with no heading to list drops the tag's line rather than showing an empty box", () => {
+        const page = renderMarkdownPage(`${TAG}\n\nטקסט`, "a.rtl.md");
+        expect(page).not.toContain('class="index"');
+        expect(page).not.toContain(TAG);
+    });
+
+    test("anything else on the line, and it is an ordinary line of text", () => {
+        expect(html(`${TAG} כאן\n## סעיף`)).not.toContain('class="index"');
+        expect(html(`לפני ${TAG}\n## סעיף`)).not.toContain('class="index"');
+    });
+
+    test("every tag line of a file gets an index, each of what follows it", () => {
+        const page = renderMarkdownPage(`${TAG}\n## א\n${TAG}\n## ב`, "a.rtl.md");
+        const indexes = page.split('<nav class="index">').slice(1);
+        expect(indexes).toHaveLength(2);
+        expect(indexes[0]).toContain(">א</a>");
+        expect(indexes[1]).not.toContain(">א</a>");
+        expect(indexes[1]).toContain(">ב</a>");
     });
 
     test("niqqud and punctuation leave the id, and a repeated heading gets a distinct one", () => {
-        const page = renderMarkdownPage("## יוֹם רִאשׁוֹן: אוֹר\n## יום ראשון אור\n## `כָּל` - *המילה*", "a.rtl.md");
+        const page = renderMarkdownPage(`${TAG}\n## יוֹם רִאשׁוֹן: אוֹר\n## יום ראשון אור\n## \`כָּל\` - *המילה*`, "a.rtl.md");
         expect(page).toContain('<h2 id="יום-ראשון-אור">');
         expect(page).toContain('<h2 id="יום-ראשון-אור-2">');
         expect(page).toContain('<h2 id="כל-המילה">');
@@ -228,12 +297,12 @@ describe("the index", () => {
     });
 
     test("a heading inside a pseudo-tag is not a section", () => {
-        const page = renderMarkdownPage("## א\n## ב\n## ג\n<עיון>\n## בתוך העיון\n</עיון>", "a.rtl.md");
+        const page = renderMarkdownPage(`${TAG}\n## א\n<עיון>\n## בתוך העיון\n</עיון>`, "a.rtl.md");
         expect(page).not.toContain(">בתוך העיון</a>");
     });
 
     test("a link in a heading keeps its text, without nesting a link in the entry", () => {
-        const page = renderMarkdownPage("## [א](x.md)\n## ב\n## ג", "a.rtl.md");
+        const page = renderMarkdownPage(`${TAG}\n## [א](x.md)\n## ב`, "a.rtl.md");
         expect(page).toContain(`<a href="#${encodeURIComponent("א")}">א</a></li>`);
     });
 });

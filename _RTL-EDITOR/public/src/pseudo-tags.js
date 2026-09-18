@@ -14,7 +14,14 @@
  */
 export const INCLUDE_TAG_NAME = "כלול-בהדפסה";
 
-const VOID_PSEUDO_TAGS = new Set([INCLUDE_TAG_NAME]);
+/**
+ * The tag that marks where the page's index of headings goes - void for the same reason, and like
+ * the include tag it is the HTML mirror that acts on it (renderIndex() in src/html/md-to-html.ts),
+ * while the editor shows the line itself. A file with no such line gets no index.
+ */
+export const INDEX_TAG_NAME = "תוכן-העניינים";
+
+const VOID_PSEUDO_TAGS = new Set([INCLUDE_TAG_NAME, INDEX_TAG_NAME]);
 
 /**
  * Is this pseudo-tag one that stands alone on its line, with no closing tag?
