@@ -18,6 +18,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - Cmd+click (Ctrl+click off macOS) on a `[text](path)` link opens the linked file and moves the
    focus to it; a file that was not open yet gets its tab right after the linking one
 - Ctrl+1 .. Ctrl+9 show the 1st .. 9th tab
+- Showing a tab highlights its file in the tree, opening every folder above it and scrolling it
+   into view
 - Typing `*` or `` ` `` over a selection wraps it rather than replacing it - the way `(` already
    does; pressing `*` twice gives `**bold**`
 - `*...*` and `**...**` *inside* an inline-code span are shown bold, the way they are outside one

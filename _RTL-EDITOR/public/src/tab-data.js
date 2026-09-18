@@ -374,7 +374,7 @@ export class TabData {
         this.tabElement.classList.add('active');
         const fileTreeElement = this.markdownEditor.fileTreeElements.get(this.filePath);
         fileTreeElement?.classList.add('active');
-        fileTreeElement?.scrollIntoViewIfNeeded();
+        this.markdownEditor.revealFileInTree(this.filePath);
 
         await this.ensureLoaded();
         if (this.markdownEditor.activeTab !== this.filePath) {

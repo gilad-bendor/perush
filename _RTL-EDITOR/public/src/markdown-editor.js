@@ -710,6 +710,49 @@ export class MarkdownEditor {
     }
 
     /**
+     * Brings a file's entry in the tree into view, opening every folder above it on the way.
+     *
+     * The folders are opened in both places they are held: the `.file-children` elements that are
+     * on screen now, and `this.expandedFolders`, which is what renderFileTree() reads and what the
+     * session stores - so the folders stay open after the next tree fetch, and after a reload.
+     *
+     * A folder's path in `this.expandedFolders` is its names joined by "/", which is exactly the
+     * path the server gives a file, so the ancestors are the prefixes of the file's own path.
+     *
+     * @param {string} filePath
+     */
+    revealFileInTree(filePath) {
+        const fileTreeElement = this.fileTreeElements.get(filePath);
+        if (!fileTreeElement) return;       // not in the tree - nothing to scroll to
+
+        const folderNames = filePath.split('/');
+        folderNames.pop();                  // the file itself is not a folder
+        let folderPath = '';
+        let anyFolderOpened = false;
+        for (const folderName of folderNames) {
+            folderPath = folderPath ? `${folderPath}/${folderName}` : folderName;
+            if (!this.expandedFolders.has(folderPath)) {
+                this.expandedFolders.add(folderPath);
+                anyFolderOpened = true;
+            }
+        }
+        if (anyFolderOpened) this.saveSession();
+
+        // The elements on screen are opened by walking up from the file, rather than by looking
+        // each folder's element up - the display is a property of the children holder, and every
+        // one of them is on that path.
+        for (let element = fileTreeElement.parentElement; element; element = element.parentElement) {
+            if (element.classList.contains('file-children')) {
+                element.style.display = 'block';
+            } else if (element.id === 'file-tree') {
+                break;
+            }
+        }
+
+        fileTreeElement.scrollIntoViewIfNeeded();
+    }
+
+    /**
      * @param {string} filePath
      * @returns {Promise<{ content: string; readOnly: boolean }>}
      */
