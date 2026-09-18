@@ -8,7 +8,7 @@
     "start": "bun run kill-server && bun run src/server.ts",
     "test": "bun test",
     "test:browser": "bun run playwright-test.ts",
-    "build-html": "bun run src/build-html.ts",
+    "rebuild-whole-html-folder": "bun run src/rebuild-whole-html-folder.ts",
     "claude-into-rtl-file": "scripts/claude-into-rtl-file.sh"
   },
   "devDependencies": {

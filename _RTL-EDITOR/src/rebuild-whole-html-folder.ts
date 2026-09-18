@@ -1,8 +1,8 @@
-// Brings the whole HTML mirror up to date once, without starting the server:  bun run build-html
+// Brings the whole HTML mirror up to date once, without starting the server:  bun run rebuild-whole-html-folder
 // The server does the same at startup and keeps it up to date while it runs - see html-mirror.ts.
 
 import { snapshotOfTree } from "./fs-changes";
-import { HtmlMirror } from "./html-mirror";
+import { HtmlMirror } from "./html/html-mirror";
 import { getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
 
 const started = performance.now();

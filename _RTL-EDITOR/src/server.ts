@@ -8,7 +8,7 @@ import { formatTables, isAiGeneratedFile } from "../public/src/tables.js";
 import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes";
 import type { FileSystemChange } from "./fs-changes";
 import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
-import { HtmlMirror } from "./html-mirror";
+import { HtmlMirror } from "./html/html-mirror";
 import { writeFileSafe } from "./write-file-safe";
 
 const PORT = 4000;

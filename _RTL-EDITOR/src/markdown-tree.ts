@@ -1,8 +1,8 @@
-// The tree of Markdown files the editor shows - shared by the server and by scripts/build-html.ts.
+// The tree of Markdown files the editor shows - shared by the server and by rebuild-whole-html-folder.ts.
 
 import { join, extname } from "path";
 import { readdir, stat } from "fs/promises";
-import { HTML_MIRROR_DIR } from "./html-mirror";
+import { HTML_MIRROR_DIR } from "./html/html-mirror";
 
 /** The root of the served tree. Every path the API, the file tree and the HTML mirror use is relative to it. */
 export const MARKDOWN_DIR = "..";

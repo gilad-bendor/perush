@@ -352,7 +352,7 @@ function parseBlocks(lines) {
 
 /**
  * The tables of a document, as grids of cell texts - for a caller that *presents* a table rather
- * than laying it out again (src/md-to-html.ts turns each into an HTML <table>). Any of the three
+ * than laying it out again (src/html/md-to-html.ts turns each into an HTML <table>). Any of the three
  * formats is recognised, exactly as formatTables() recognises it.
  *
  * @param {string} content

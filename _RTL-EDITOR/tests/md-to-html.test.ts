@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { markdownToHtml, renderMarkdownPage } from "../src/md-to-html";
+import { markdownToHtml, renderMarkdownPage } from "../src/html/md-to-html";
 
 const html = (markdown: string) => markdownToHtml(markdown).trim();
 

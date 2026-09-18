@@ -18,7 +18,7 @@
 
 import MarkdownIt from "markdown-it";
 import type { StateBlock, StateCore, Token } from "markdown-it";
-import { isRtlFile, parseTables } from "../public/src/tables.js";
+import { isRtlFile, parseTables } from "../../public/src/tables.js";
 
 export type RenderOptions = {
     /** Rewrites a link's href - the page does not live next to the file it was made from. */

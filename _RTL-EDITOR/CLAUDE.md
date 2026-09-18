@@ -42,7 +42,7 @@ bun run dev
 bun run build
 
 # Bring ../HTML-FROM-MD up to date once, without the server
-bun run build-html
+bun run rebuild-whole-html-folder
 ```
 
 ## Project Structure
@@ -50,10 +50,11 @@ bun run build-html
 - `src/server.ts` - Main Bun web server
 - `src/fs-changes.ts` - Tree snapshots, their differences, and the log a client polls
 - `src/markdown-tree.ts` - The tree of `.md` files the editor shows, and the names it skips
-- `src/md-to-html.ts` - A Markdown file as a readable, self-contained HTML page
-- `src/html-mirror.ts` - Which file's page goes where, and keeping `../HTML-FROM-MD` up to date
-- `src/folder-index.ts` - The `index.html` of every folder of `../HTML-FROM-MD`
-- `src/build-html.ts` - `bun run build-html`
+- `src/html/` - The Markdown → HTML capability, entered through `HtmlMirror`
+- `src/html/md-to-html.ts` - A Markdown file as a readable, self-contained HTML page
+- `src/html/html-mirror.ts` - Which file's page goes where, and keeping `../HTML-FROM-MD` up to date
+- `src/html/folder-index.ts` - The `index.html` of every folder of `../HTML-FROM-MD`
+- `src/rebuild-whole-html-folder.ts` - `bun run rebuild-whole-html-folder`
 - `src/write-file-safe.ts` - Atomic file writes, shared by the POST handler and the mirror
 - `public/` - Static frontend assets
 - `public/index.html` - Main interface

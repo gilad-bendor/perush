@@ -3,8 +3,8 @@ import { mkdtemp, mkdir, readFile, rm, stat, utimes, writeFile } from "fs/promis
 import { existsSync } from "fs";
 import { tmpdir } from "os";
 import { dirname, join } from "path";
-import { HtmlMirror, htmlPathFor, isMirroredFile, mirroredHref } from "../src/html-mirror";
-import { folderIndexPages } from "../src/folder-index";
+import { HtmlMirror, htmlPathFor, isMirroredFile, mirroredHref } from "../src/html/html-mirror";
+import { folderIndexPages } from "../src/html/folder-index";
 
 describe("isMirroredFile", () => {
     test("every Markdown file gets a page", () => {

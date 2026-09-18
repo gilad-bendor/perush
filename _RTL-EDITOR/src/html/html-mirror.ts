@@ -18,7 +18,7 @@ import { readdir, readFile, rmdir, stat, unlink } from "fs/promises";
 import type { Stats } from "fs";
 import { renderMarkdownPage } from "./md-to-html";
 import { FOLDER_INDEX_NAME, folderIndexPages } from "./folder-index";
-import { writeFileSafe } from "./write-file-safe";
+import { writeFileSafe } from "../write-file-safe";
 
 /** The mirror's folder, at the root of the served tree. */
 export const HTML_MIRROR_DIR = "HTML-FROM-MD";
@@ -27,7 +27,7 @@ export const HTML_MIRROR_DIR = "HTML-FROM-MD";
 const RENDERER_FILES = [
     join(import.meta.dir, "md-to-html.ts"),
     join(import.meta.dir, "html-mirror.ts"),
-    join(import.meta.dir, "../public/src/tables.js"),
+    join(import.meta.dir, "../../public/src/tables.js"),
 ];
 
 /** How long a changed file is left to settle before its page is rendered - one render for a burst of saves. */
