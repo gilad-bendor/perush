@@ -9,7 +9,7 @@
 // - A table in any of tables.js's three formats becomes an HTML <table>, with no header row - the
 //   editor has none either (see renderTable() in tables.js).
 // - `<עיון>` ... `</עיון>` on lines of their own become a box captioned with the tag's name, holding
-//   the Markdown between them.
+//   the Markdown between them; a void tag (`<כלול-בהדפסה ...>`) becomes a box of its caption alone.
 // - `*...*` and `**...**` inside an inline-code span are bold, as inlineCodeEmphasisPlugin shows them.
 // - A file with enough headings opens with an index of them - "תוכן העניינים" in an RTL page,
 //   "Contents" in an LTR one.
@@ -19,6 +19,7 @@
 import MarkdownIt from "markdown-it";
 import type { StateBlock, StateCore, Token } from "markdown-it";
 import { isRtlFile, parseTables } from "../../public/src/tables.js";
+import { isVoidPseudoTag } from "../../public/src/pseudo-tags.js";
 
 export type RenderOptions = {
     /** Rewrites a link's href - the page does not live next to the file it was made from. */
@@ -98,6 +99,16 @@ function pseudoTagRule(state: StateBlock, startLine: number, endLine: number, si
     if (!open) return false;
     const [, name, attributes] = open;
 
+    // A void tag holds nothing and closes nothing - the line itself is the whole block, and all
+    // there is to show is its caption.
+    if (isVoidPseudoTag(name)) {
+        if (silent) return true;
+        pushOpenToken(state, name, attributes, [startLine, startLine + 1]);
+        state.push("pseudo_tag_close", "div", -1).block = true;
+        state.line = startLine + 1;
+        return true;
+    }
+
     // Only a tag that is closed further down is a block - otherwise the line is just text.
     let closingLine = -1;
     let depth = 0;
@@ -117,11 +128,7 @@ function pseudoTagRule(state: StateBlock, startLine: number, endLine: number, si
     if (closingLine < 0) return false;
     if (silent) return true;
 
-    const openToken = state.push("pseudo_tag_open", "div", 1);
-    openToken.block = true;
-    openToken.info = name;
-    openToken.meta = { attributeValues: [...attributes.matchAll(/=\s*(?:"([^"]*)"|'([^']*)'|(\S+))/g)].map(m => m[1] ?? m[2] ?? m[3]) };
-    openToken.map = [startLine, closingLine + 1];
+    pushOpenToken(state, name, attributes, [startLine, closingLine + 1]);
 
     const oldParentType = state.parentType;
     const oldLineMax = state.lineMax;
@@ -134,6 +141,14 @@ function pseudoTagRule(state: StateBlock, startLine: number, endLine: number, si
     state.push("pseudo_tag_close", "div", -1).block = true;
     state.line = closingLine + 1;
     return true;
+}
+
+function pushOpenToken(state: StateBlock, name: string, attributes: string, map: [number, number]): void {
+    const openToken = state.push("pseudo_tag_open", "div", 1);
+    openToken.block = true;
+    openToken.info = name;
+    openToken.meta = { attributeValues: [...attributes.matchAll(/=\s*(?:"([^"]*)"|'([^']*)'|(\S+))/g)].map(m => m[1] ?? m[2] ?? m[3]) };
+    openToken.map = map;
 }
 
 markdown.renderer.rules.pseudo_tag_open = (tokens, index) => {
@@ -373,6 +388,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="עיון"] { background: #e8ffe8; }
 .pseudo-tag[data-tag="מדרש"] { background: #f0e8ff; }
 .pseudo-tag[data-tag="הצעת-קלוד"] { background: #fff0e0; }
+/* A void tag: its caption is the whole box, so it keeps the full colour of a marker. */
+.pseudo-tag[data-tag="כלול-בהדפסה"] { background: #fffbc0; }
+.pseudo-tag[data-tag="כלול-בהדפסה"] > .pseudo-tag-caption { opacity: 1; margin: 0; }
 
 .index {
     margin: 0 0 1.5em;

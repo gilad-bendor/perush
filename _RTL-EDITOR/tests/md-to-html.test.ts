@@ -108,6 +108,21 @@ describe("pseudo-tags", () => {
         expect(html("<עיון>\nתוכן")).toBe("<p>&lt;עיון&gt;<br>\nתוכן</p>");
     });
 
+    test("a void tag is a box of its caption alone, and closes nothing", () => {
+        expect(html('טקסט\n<כלול-בהדפסה קטע="א">\nעוד טקסט')).toBe([
+            "<p>טקסט</p>",
+            '<div class="pseudo-tag" data-tag="כלול-בהדפסה">',
+            '<div class="pseudo-tag-caption">כלול-בהדפסה: א</div>',
+            "</div>",
+            "<p>עוד טקסט</p>",
+        ].join("\n"));
+    });
+
+    test("a void tag inside another tag leaves it closing as it was", () => {
+        const out = html("<עיון>\n<כלול-בהדפסה>\n</עיון>\nאחרי");
+        expect(out).toMatch(/<\/div>\n<\/div>\n<p>אחרי<\/p>$/);
+    });
+
     test("an ASCII tag name is not a pseudo-tag", () => {
         expect(html("<div>\ntext\n</div>")).not.toContain("pseudo-tag");
     });

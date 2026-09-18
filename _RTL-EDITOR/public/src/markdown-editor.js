@@ -12,6 +12,7 @@ import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, conso
 import { TabData } from "./tab-data.js";
 import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, minimalReplacement } from "./tables.js";
 import { markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "./links.js";
+import { isVoidPseudoTag } from "./pseudo-tags.js";
 /** @typedef {import('../../src/server.ts').FileData} FileData */
 
 
@@ -1136,15 +1137,20 @@ const listLinePlugin = ViewPlugin.fromClass(
                 const htmlTagMatch = /^<(\/?)([-\p{L}\d]+)(?:>| .*>)/u.exec(trimmedText);
                 // consoleLog(`Line: `, JSON.stringify(lineText), `     `, htmlTagMatch);
 
-                if (htmlTagMatch?.[1] === '') {
+                // A void tag - <כלול-בהדפסה ...>, the way HTML's own <img> is - has no closing tag, so it
+                // never joins the stack: it marks its own line, and nothing below it.
+                const voidTag = htmlTagMatch?.[1] === '' && isVoidPseudoTag(htmlTagMatch[2]) ? htmlTagMatch[2] : null;
+
+                if (htmlTagMatch?.[1] === '' && !voidTag) {
                     // Opening tag
                     htmlTagsStack.push(htmlTagMatch[2]);
                 }
 
-                // If we are inside any HTML tags, mark the entire line
+                // If we are inside any HTML tags - or this line is a void one - mark the entire line
                 let lineClass = '';
-                if (htmlTagsStack.length > 0) {
-                    lineClass = htmlTagsStack.map(tag => `cm-html-${tag}`).join(' ');
+                const lineTags = voidTag ? [...htmlTagsStack, voidTag] : htmlTagsStack;
+                if (lineTags.length > 0) {
+                    lineClass = lineTags.map(tag => `cm-html-${tag}`).join(' ');
                     const decoration = Decoration.line({
                         class: lineClass
                     });

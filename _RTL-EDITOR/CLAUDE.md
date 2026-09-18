@@ -63,6 +63,7 @@ bun run rebuild-whole-html-folder
 - `public/src/tab-data.js` - Tab state management
 - `public/src/tables.js` - Table parsing/formatting, shared by the browser and the server
 - `public/src/links.js` - Markdown-link parsing/resolution, behind Cmd+click-to-open
+- `public/src/pseudo-tags.js` - Which pseudo-tags are void, shared by the browser and the server
 - `public/style.css` - Styling with RTL support
 - `tests/tables.test.ts` - Unit tests for `tables.js` (`bun test`)
 - `tests/links.test.ts` - Unit tests for `links.js` (`bun test`)
@@ -250,6 +251,29 @@ its own drag image and offers no way to paint a marker into the gap between two 
   the buttons' new order and saves the session. Move the elements without it and the order reverts
   on the next reload. See "Tab loading and order" above.
 
+### Pseudo-tags
+
+`<עיון>` ... `</עיון>` and its like are the commentary's own markup (CLAUDE-HEBREW.md lists them).
+Neither side keeps a list of the names: the editor's `syntaxHighlightPlugin` tracks any tag that opens
+and closes at the start of a line, and `public/style.css` colours the names it knows - which is the
+only place a new tag has to be added, `src/html/md-to-html.ts`'s `PAGE_STYLE` being the mirror's copy
+of it. The two lists are meant to hold the same names and the same colours.
+
+**Except the void ones.** `<כלול-בהדפסה ...>` has no closing tag, the way HTML's own `<img>` has
+none - and nothing in the text says so, just as `<img>` is void because the spec says it is. So the
+names are listed, once, in `public/src/pseudo-tags.js` - plain ESM, imported by the browser and by
+Bun, like `tables.js` - and both sides ask `isVoidPseudoTag()`:
+
+- The editor's tag stack does not take it: it decorates its own line and nothing below it. Push it
+  and it is never popped, so the rest of the file wears its colour.
+- `pseudoTagRule()` does not look for a closing line, which for any other tag is what tells a block
+  from a line of plain text.
+
+**A void tag's colour comes last in the CSS.** A line inside another tag carries both classes
+(`cm-html-עיון cm-html-כלול-בהדפסה`), and which background wins is decided by the order of the
+rules, not the order of the classes. A marker should keep its own colour wherever it sits, so its
+rule goes at the end of the block - the opposite of what a tag that *encloses* others would want.
+
 ### Emphasis inside inline code
 
 Markdown says a code span is literal text, so `` `a *b* c` `` gets no `StrongEmphasis`/`Emphasis`
@@ -349,7 +373,8 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
 - **Pseudo-tags** - `<עיון>` ... `</עיון>`, each on a line of its own, indentation allowed - become a
   `.pseudo-tag` box whose first line is the tag's name (and any attribute values: `ניתוח-לשוני: רֶמֶשׂ`),
   centred. The name must hold a non-ASCII letter, which is what tells one from a real HTML tag, and
-  it must be closed further down - otherwise the line is plain text.
+  it must be closed further down - otherwise the line is plain text. A **void** tag
+  (`isVoidPseudoTag()`) closes nothing: its line is the whole box, and the caption all there is in it.
 - **Raw HTML is escaped** (`html: false`), as the editor shows it as text too.
 - `*` / `**` inside inline code are bold, stars removed.
 - **An index** opens every page with at least 3 headings of `#`..`###` (`renderIndex()`): a collapsible

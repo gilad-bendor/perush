@@ -28,6 +28,7 @@ const RENDERER_FILES = [
     join(import.meta.dir, "md-to-html.ts"),
     join(import.meta.dir, "html-mirror.ts"),
     join(import.meta.dir, "../../public/src/tables.js"),
+    join(import.meta.dir, "../../public/src/pseudo-tags.js"),
 ];
 
 /** How long a changed file is left to settle before its page is rendered - one render for a burst of saves. */

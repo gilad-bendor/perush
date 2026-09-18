@@ -432,6 +432,13 @@ body {
     & .cm-html-הצעת-קלוד {
         background: #fff0e0;
     }
+    /* A void tag (isVoidPseudoTag() in pseudo-tags.js): it marks its own line and encloses nothing.
+       A line inside another tag carries both classes, and CSS order - not the order of the classes -
+       decides, so this comes last in the block: the marker's own colour wins wherever it sits. */
+    & .cm-html-כלול-בהדפסה {
+        background: #fffbc0;
+        font-weight: bold;
+    }
 }
 
 /** Make the selection work well with .cm-html-ניתוח-לשוני etc. */
