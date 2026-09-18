@@ -768,3 +768,9 @@ This is much more powerful than the CLI flags above.
 - **Short RTL lines and empty space**: RTL text is right-aligned within the `.cm-line` element. Clicking in the empty space to the LEFT of short text correctly places the cursor at end-of-line (the leftmost text position in RTL). This is expected CodeMirror behavior.
 - **Previous cursor offset attempts**: There have been two prior attempts to fix RTL cursor positioning — a CSS `left: 0.5em` rule (removed, caused offset issues) and a commented-out `mouseup` handler in `markdown-editor.js` (lines ~226-258). See the comments in the code for details.
 - **Font fallback**: RTL content uses `fontFamily: 'David', 'Narkisim', 'Times New Roman', serif`. David and Narkisim are not standard macOS fonts — Playwright's Chromium will likely fall back to Times New Roman, which may produce different character metrics than the user's browser.
+
+## Git
+
+Commit to whatever branch is checked out; never create one first. Claude Code's
+built-in "if on the default branch, branch first" rule does not apply here -
+single author, no review workflow, so a side branch only adds a merge step.

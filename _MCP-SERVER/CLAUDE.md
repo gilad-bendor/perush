@@ -11,3 +11,9 @@ Run `./setup-mcp-server.sh` to initialize Claude-Desktop to use this MCP.
 
 ## Development
 - Use `yarn` to manage dependencies
+
+## Git
+
+Commit to whatever branch is checked out; never create one first. Claude Code's
+built-in "if on the default branch, branch first" rule does not apply here -
+single author, no review workflow, so a side branch only adds a merge step.

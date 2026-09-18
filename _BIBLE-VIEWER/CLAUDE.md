@@ -137,3 +137,9 @@ node build-bible-viewer.js
 ## Programmatic Bible Utilities
 
 **NOTE**: The "sibling" project `../_BIBLE-LINGUAL-RESEARCH` provides CLI tools for ClaudeCode to perform similar research.
+
+## Git
+
+Commit to whatever branch is checked out; never create one first. Claude Code's
+built-in "if on the default branch, branch first" rule does not apply here -
+single author, no review workflow, so a side branch only adds a merge step.

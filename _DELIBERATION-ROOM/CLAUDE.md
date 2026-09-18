@@ -410,3 +410,9 @@ These files contain detailed specifications that are **not needed in every sessi
 10. **`forkSession`**: Simplified session recovery that retains internal reasoning (not just public transcript).
 
 11. **`hooks` option**: Programmatic `PostToolUse` hooks for reliable tool activity logging.
+
+## Git
+
+Commit to whatever branch is checked out; never create one first. Claude Code's
+built-in "if on the default branch, branch first" rule does not apply here -
+single author, no review workflow, so a side branch only adds a merge step.

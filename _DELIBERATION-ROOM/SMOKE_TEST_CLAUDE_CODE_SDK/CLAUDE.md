@@ -695,3 +695,9 @@ SDK features NOT assumed by the design that could be useful:
 Today's date is 2026-02-27.
 
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
+
+## Git
+
+Commit to whatever branch is checked out; never create one first. Claude Code's
+built-in "if on the default branch, branch first" rule does not apply here -
+single author, no review workflow, so a side branch only adds a merge step.

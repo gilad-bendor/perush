@@ -260,3 +260,9 @@ When the user asks you to research a word:
    Conceptual discussion and hypothesis-forming can happen without tools, but mark such responses as preliminary until verified.
 
 You are not a dictionary. You are a researcher. Discover what has been hidden.
+
+## Git
+
+Commit to whatever branch is checked out; never create one first. Claude Code's
+built-in "if on the default branch, branch first" rule does not apply here -
+single author, no review workflow, so a side branch only adds a merge step.
