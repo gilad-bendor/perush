@@ -13,9 +13,12 @@ describe("isMirroredFile", () => {
         expect(isMirroredFile("_scratch_1.rtl.md")).toBe(true);
     });
 
-    test("except AI output and terminal recordings", () => {
-        expect(isMirroredFile("a.ai.md")).toBe(false);
-        expect(isMirroredFile("a.ai.rtl.md")).toBe(false);
+    test("AI output included - its bytes are verbatim, its reading is not", () => {
+        expect(isMirroredFile("a.ai.md")).toBe(true);
+        expect(isMirroredFile("a.ai.rtl.md")).toBe(true);
+    });
+
+    test("except the terminal recordings, which are not Markdown at all", () => {
         expect(isMirroredFile("claude-sessions/a.script.md")).toBe(false);
         expect(isMirroredFile("claude-sessions/a.script.rtl.md")).toBe(false);
     });
@@ -29,6 +32,13 @@ describe("htmlPathFor", () => {
     test("mirrors the path under HTML-FROM-MD, .md becoming .html", () => {
         expect(htmlPathFor("פירוש/1-בראשית/a.rtl.md")).toBe("HTML-FROM-MD/פירוש/1-בראשית/a.rtl.html");
         expect(htmlPathFor("notes.md")).toBe("HTML-FROM-MD/notes.html");
+    });
+
+    test("a path climbing out of the tree leaves the mirror's prefix behind", () => {
+        // What the /api/print/ handler checks for, to keep the endpoint from serving any .html on disk.
+        expect(htmlPathFor("../../../etc/passwd.md").startsWith("HTML-FROM-MD/")).toBe(false);
+        expect(htmlPathFor("a/../../b.md").startsWith("HTML-FROM-MD/")).toBe(false);
+        expect(htmlPathFor("a/../b.md")).toBe("HTML-FROM-MD/b.html");
     });
 
     test("an index.md does not take its folder's index.html", () => {
@@ -54,7 +64,7 @@ describe("mirroredHref", () => {
     });
 
     test("a file with no page is reached back in the tree - one folder further away", () => {
-        expect(mirroredHref(from, "b.ai.md")).toBe("../../../פירוש/1-בראשית/b.ai.md");
+        expect(mirroredHref(from, "b.script.md")).toBe("../../../פירוש/1-בראשית/b.script.md");
         expect(mirroredHref(from, "image.png")).toBe("../../../פירוש/1-בראשית/image.png");
         expect(mirroredHref("notes.md", "dir/")).toBe("../dir/");
     });
@@ -85,9 +95,18 @@ describe("HtmlMirror", () => {
 
     test("renders a missing page, and leaves a fresh one alone", async () => {
         await write("a/b.rtl.md", "# כותרת");
-        expect(await mirror().syncFile("a/b.rtl.md")).toBe("rendered");
+        const m = mirror();
+        expect(await m.syncFile("a/b.rtl.md")).toBe("rendered");
         expect(await readFile(page("a/b.rtl.md"), "utf-8")).toContain('<h1 id="כותרת">כותרת</h1>');
-        expect(await mirror().syncFile("a/b.rtl.md")).toBe("fresh");
+        expect(await m.syncFile("a/b.rtl.md")).toBe("fresh");
+    });
+
+    test("a mirror that knows no dependencies yet renders the page, and writes nothing", async () => {
+        await write("b.md", "one");
+        await mirror().syncFile("b.md");
+        // A fresh mirror cannot tell what the page was built from, so it has to build it again -
+        // which is the startup sweep, and why it costs almost no writes.
+        expect(await mirror().syncFile("b.md")).toBe("unchanged");
     });
 
     test("re-renders a page older than its file", async () => {
@@ -100,11 +119,26 @@ describe("HtmlMirror", () => {
         expect(await readFile(page("b.md"), "utf-8")).toContain("two");
     });
 
-    test("re-renders every page older than the renderer", async () => {
+    test("a renderer newer than the page keeps it from ever being called fresh", async () => {
         await write("b.md", "one");
-        await mirror().syncFile("b.md");
-        const renderedAt = (await stat(page("b.md"))).mtimeMs;
-        expect(await new HtmlMirror(root, renderedAt + 1).syncFile("b.md")).toBe("rendered");
+        const m = mirror();
+        await m.syncFile("b.md");
+        expect(await m.syncFile("b.md")).toBe("fresh");
+
+        // The same page and the same dependencies, but a renderer that has moved on since.
+        const newer = new HtmlMirror(root, Date.now() + 60_000);
+        await newer.syncFile("b.md");
+        expect(await newer.syncFile("b.md")).toBe("unchanged");
+    });
+
+    test("a page identical to the one on disk is touched, so the next sweep skips it", async () => {
+        await write("b.md", "one");
+        const m = mirror();
+        await m.syncFile("b.md");
+        const old = new Date(Date.now() - 60_000);
+        await utimes(page("b.md"), old, old);
+        expect(await mirror().syncFile("b.md")).toBe("unchanged");
+        expect((await stat(page("b.md"))).mtimeMs).toBeGreaterThan(old.getTime());
     });
 
     test("deletes the page of a file that is gone, and the folders left empty", async () => {
@@ -119,10 +153,16 @@ describe("HtmlMirror", () => {
         expect(await mirror().syncFile("x/y/b.md")).toBe("absent");
     });
 
-    test("never renders a verbatim record", async () => {
-        await write("a.ai.rtl.md", "text");
-        expect(await mirror().syncFile("a.ai.rtl.md")).toBe("absent");
-        expect(existsSync(page("a.ai.rtl.md"))).toBe(false);
+    test("renders AI output like anything else", async () => {
+        await write("a.ai.rtl.md", "| x | y |\n|---|---|\n| 1 | 2 |");
+        expect(await mirror().syncFile("a.ai.rtl.md")).toBe("rendered");
+        expect(await readFile(page("a.ai.rtl.md"), "utf-8")).toContain("<th>x</th>");
+    });
+
+    test("never renders a terminal recording", async () => {
+        await write("a.script.rtl.md", "text");
+        expect(await mirror().syncFile("a.script.rtl.md")).toBe("absent");
+        expect(existsSync(page("a.script.rtl.md"))).toBe(false);
     });
 
     test("syncTree renders the tree and deletes the pages it no longer holds", async () => {
@@ -158,6 +198,56 @@ describe("HtmlMirror", () => {
         const m = mirror();
         await m.syncTree(["x/", "x/b.md"]);
         expect((await m.syncTree(["x/", "x/b.md"])).removed).toBe(0);
+    });
+
+    test("a page embedding another file is rebuilt when that file changes", async () => {
+        await write("a.rtl.md", '# מארח\n<כלול-בהדפסה מקור="dir/b.rtl.md">');
+        await write("dir/b.rtl.md", "טקסט ראשון");
+        const m = mirror();
+        expect(await m.syncFile("a.rtl.md")).toBe("rendered");
+        expect(await readFile(page("a.rtl.md"), "utf-8")).toContain("טקסט ראשון");
+
+        await write("dir/b.rtl.md", "טקסט שני");
+        expect(await m.syncFile("a.rtl.md")).toBe("rendered");
+        expect(await readFile(page("a.rtl.md"), "utf-8")).toContain("טקסט שני");
+    });
+
+    test("an embedded file that changes brings every page that holds it along", async () => {
+        await write("a.rtl.md", '<כלול-בהדפסה מקור="b.rtl.md">');
+        await write("c.rtl.md", '<כלול-בהדפסה מקור="b.rtl.md">');
+        await write("b.rtl.md", "ראשון");
+        const m = mirror();
+        await m.syncTree(["a.rtl.md", "b.rtl.md", "c.rtl.md"]);
+
+        await write("b.rtl.md", "שני");
+        m.scheduleSync("b.rtl.md");
+        await Bun.sleep(600);
+        for (const holder of ["a.rtl.md", "c.rtl.md"]) {
+            expect(await readFile(page(holder), "utf-8")).toContain("שני");
+        }
+    });
+
+    test("a file that was missing when the page was built is a dependency all the same", async () => {
+        await write("a.rtl.md", '<כלול-בהדפסה מקור="b.rtl.md">');
+        const m = mirror();
+        await m.syncFile("a.rtl.md");
+        expect(await readFile(page("a.rtl.md"), "utf-8")).toContain("לא נמצא");
+
+        await write("b.rtl.md", "הנה הוא");
+        m.scheduleSync("b.rtl.md");
+        await Bun.sleep(600);
+        expect(await readFile(page("a.rtl.md"), "utf-8")).toContain("הנה הוא");
+    });
+
+    test("two files that embed each other settle rather than rebuild one another for ever", async () => {
+        await write("a.rtl.md", 'א\n<כלול-בהדפסה מקור="b.rtl.md">');
+        await write("b.rtl.md", 'ב\n<כלול-בהדפסה מקור="a.rtl.md">');
+        const m = mirror();
+        await m.syncTree(["a.rtl.md", "b.rtl.md"]);
+        m.scheduleSync("a.rtl.md");
+        await Bun.sleep(600);
+        expect(await readFile(page("a.rtl.md"), "utf-8")).toContain("הפניה מעגלית");
+        expect(await m.syncFile("a.rtl.md")).toBe("fresh");
     });
 
     test("a folder left with no page loses its index, and is removed", async () => {

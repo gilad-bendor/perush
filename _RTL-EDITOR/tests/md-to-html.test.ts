@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { markdownToHtml, renderMarkdownPage } from "../src/html/md-to-html";
+import type { EmbedError } from "../src/html/includes";
 
 const html = (markdown: string) => markdownToHtml(markdown).trim();
 
@@ -59,11 +60,26 @@ describe("tables", () => {
         expect(html("┌─────────┐\n│ `קוד`   │\n└─────────┘")).toContain("<td><code>קוד</code></td>");
     });
 
-    test("a Markdown table has no header row either", () => {
-        const out = html("| x | y |\n|---|---|\n| 1 | 2 |");
+    test("a Markdown table's declared header becomes a thead of th cells", () => {
+        expect(html("| x | y |\n|---|---|\n| 1 | 2 |")).toBe([
+            "<table>",
+            "<thead>", "<tr>", "<th>x</th>", "<th>y</th>", "</tr>", "</thead>",
+            "<tbody>", "<tr>", "<td>1</td>", "<td>2</td>", "</tr>", "</tbody>",
+            "</table>",
+        ].join("\n"));
+    });
+
+    test("a box table's doubled rule says the same thing", () => {
+        const out = html("┌───┬───┐\n│ x │ y │\n╞═══╪═══╡\n│ 1 │ 2 │\n└───┴───┘");
+        expect(out).toContain("<th>x</th>");
+        expect(out).toContain("<td>1</td>");
+        expect(out).not.toContain("═");
+    });
+
+    test("a Markdown table with no separator row declares no header", () => {
+        const out = html("| x | y |\n| 1 | 2 |");
         expect(out).not.toContain("<th");
         expect(out).toContain("<td>x</td>");
-        expect(out).toContain("<td>2</td>");
     });
 
     test("a table may follow a line of text directly", () => {
@@ -125,6 +141,48 @@ describe("pseudo-tags", () => {
 
     test("an ASCII tag name is not a pseudo-tag", () => {
         expect(html("<div>\ntext\n</div>")).not.toContain("pseudo-tag");
+    });
+});
+
+describe("the errors of the included files", () => {
+    const errors: EmbedError[] = [
+        { id: "שגיאה-1", file: "פירוש/a.rtl.md", line: 12, message: 'חסרה התכונה "מקור"' },
+        { id: "שגיאה-2", file: "פירוש/b.rtl.md", line: 3, message: "הפניה מעגלית" },
+    ];
+    const marker = (index: number) => `\uE000error:${index}\uE000`;
+
+    test("a marker becomes the block that says what is wrong, where it went wrong", () => {
+        expect(markdownToHtml(`לפני\n\n${marker(0)}\n\nאחרי`, { errors }).trim()).toBe([
+            "<p>לפני</p>",
+            '<div class="embed-error" id="שגיאה-1">שגיאה-1 &ndash; פירוש/a.rtl.md, שורה 12: חסרה התכונה &quot;מקור&quot;</div>',
+            "<p>אחרי</p>",
+        ].join("\n"));
+    });
+
+    test("a marker with no error behind it leaves nothing", () => {
+        expect(markdownToHtml(marker(7), { errors })).toBe("");
+    });
+
+    test("a line that merely looks like one is text", () => {
+        expect(markdownToHtml("error:0", { errors }).trim()).toBe("<p>error:0</p>");
+    });
+
+    test("the page opens with the list of them, each linking to its own block", () => {
+        const page = renderMarkdownPage(`${marker(0)}\n\n# כותרת\n\n${marker(1)}`, "פירוש/a.rtl.md", { errors });
+        const list = page.slice(page.indexOf("<main>"), page.indexOf("</nav>"));
+        expect(list).toContain("<div class=\"embed-errors-title\">שגיאות</div>");
+        expect(list).toContain(`<a href="#${encodeURIComponent("שגיאה-1")}">שגיאה-1 &ndash; פירוש/a.rtl.md, שורה 12:`);
+        expect(list).toContain(`<a href="#${encodeURIComponent("שגיאה-2")}">שגיאה-2 &ndash; פירוש/b.rtl.md, שורה 3:`);
+        // And before the index, which is itself before the body.
+        expect(page.indexOf('class="embed-errors"')).toBeLessThan(page.indexOf("<h1"));
+    });
+
+    test("an LTR page calls them Errors", () => {
+        expect(renderMarkdownPage(marker(0), "docs/notes.md", { errors })).toContain("<div class=\"embed-errors-title\">Errors</div>");
+    });
+
+    test("a page with no errors says nothing of them", () => {
+        expect(renderMarkdownPage("טקסט", "a.rtl.md")).not.toContain('<nav class="embed-errors">');
     });
 });
 

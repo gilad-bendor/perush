@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, mirrorBoxCharacters, parseTables, visualWidth } from "../public/src/tables.js";
+import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, mirrorBoxCharacters, parseTables, setHeaderAtCursor, visualWidth } from "../public/src/tables.js";
 
 /** Formats and returns just the text, for the common case where the cursor is irrelevant. */
 function format(content: string, isRtl = false): string {
@@ -44,6 +44,10 @@ describe("mirrorBoxCharacters", () => {
         expect(mirrorBoxCharacters(mirrorBoxCharacters(nice))).toBe(nice);
         expect(mirrorBoxCharacters(nice)).toBe("┐──┬──┌\n│ a│ b│\n┤──┼──├\n┘──┴──└");
     });
+
+    test("a header rule mirrors too", () => {
+        expect(mirrorBoxCharacters("╞══╪══╡")).toBe("╡══╪══╞");
+    });
 });
 
 describe("format conversion", () => {
@@ -56,14 +60,24 @@ describe("format conversion", () => {
         "│ three │ four │",
         "└───────┴──────┘",
     ].join("\n");
+    /** The same table, with its first row declared a header - the one rule drawn doubled. */
+    const expectedWithHeader = expected.replace("├───────┼──────┤", "╞═══════╪══════╡");
 
     test("Markdown becomes the box format", () => {
+        expect(format([
+            "| a | b |",
+            "| one | two |",
+            "| three | four |",
+        ].join("\n"))).toBe(expected);
+    });
+
+    test("a Markdown separator row makes the row above it the header", () => {
         expect(format([
             "| a | b |",
             "|---|---|",
             "| one | two |",
             "| three | four |",
-        ].join("\n"))).toBe(expected);
+        ].join("\n"))).toBe(expectedWithHeader);
     });
 
     test("a ragged Markdown table is squared up", () => {
@@ -72,7 +86,7 @@ describe("format conversion", () => {
             "|---|---|",
             "|one|two|",
             "|three|four|",
-        ].join("\n"))).toBe(expected);
+        ].join("\n"))).toBe(expectedWithHeader);
     });
 
     test("REVERSED-NICE input becomes NICE for an LTR file", () => {
@@ -84,9 +98,37 @@ describe("format conversion", () => {
     });
 
     test("all three formats agree", () => {
-        const markdown = "| a | b |\n|---|---|\n| one | two |\n| three | four |";
+        const markdown = "| a | b |\n| one | two |\n| three | four |";
         expect(format(markdown)).toBe(format(expected));
         expect(format(markdown)).toBe(format(mirrorBoxCharacters(expected)));
+    });
+
+    test("and they agree about the header too", () => {
+        const markdown = "| a | b |\n|---|---|\n| one | two |\n| three | four |";
+        expect(format(markdown)).toBe(format(expectedWithHeader));
+        expect(format(markdown)).toBe(format(mirrorBoxCharacters(expectedWithHeader)));
+    });
+
+    test("a header rule survives every round trip, in either direction", () => {
+        expect(format(expectedWithHeader, true)).toBe(mirrorBoxCharacters(expectedWithHeader));
+        expect(format(mirrorBoxCharacters(expectedWithHeader), false)).toBe(expectedWithHeader);
+        expect(format(expectedWithHeader, false)).toBe(expectedWithHeader);
+    });
+
+    test("a rule between two rows is read leniently - any of these is the header's", () => {
+        for (const rule of ["╞═══════╪══════╡", "╞───────┼──────╡", "┤═══════┼══════├",
+                            "╡═══════╪══════╞", "╞───────┼──────┤", "├═══════┼══════╡"]) {
+            expect(format(expected.replace("├───────┼──────┤", rule))).toBe(expectedWithHeader);
+        }
+    });
+
+    test("and a plain rule stays plain", () => {
+        expect(format(expected)).toBe(expected);
+    });
+
+    test("only the first doubled rule is the header's", () => {
+        const twice = expected.replace(/├───────┼──────┤/g, "╞═══════╪══════╡");
+        expect(format(twice)).toBe(expectedWithHeader);
     });
 
     test("is idempotent", () => {
@@ -100,7 +142,7 @@ describe("format conversion", () => {
         expect(format("| a | b |\n|:---|---:|\n| one | two |")).toBe([
             "┌─────┬─────┐",
             "│ a   │ b   │",
-            "├─────┼─────┤",
+            "╞═════╪═════╡",
             "│ one │ two │",
             "└─────┴─────┘",
         ].join("\n"));
@@ -108,8 +150,18 @@ describe("format conversion", () => {
 });
 
 describe("layout rules", () => {
-    test("every row is start-aligned - there is no header row", () => {
+    test("every row is start-aligned, the header included", () => {
         expect(format("| aa | b |\n|---|---|\n| c | dddd |")).toBe([
+            "┌────┬──────┐",
+            "│ aa │ b    │",
+            "╞════╪══════╡",
+            "│ c  │ dddd │",
+            "└────┴──────┘",
+        ].join("\n"));
+    });
+
+    test("a table that declares no header gets no doubled rule anywhere", () => {
+        expect(format("| aa | b |\n| c | dddd |")).toBe([
             "┌────┬──────┐",
             "│ aa │ b    │",
             "├────┼──────┤",
@@ -135,7 +187,7 @@ describe("layout rules", () => {
         expect(format("| לָאוֹר | b |\n|---|---|\n| c | d |")).toBe([
             "┌──────┬───┐",
             "│ לָאוֹר │ b │",
-            "├──────┼───┤",
+            "╞══════╪═══╡",
             "│ c    │ d │",
             "└──────┴───┘",
         ].join("\n"));
@@ -160,7 +212,7 @@ describe("layout rules", () => {
         expect(format("  | a | b |\n  |---|---|\n  | c | d |")).toBe([
             "  ┌───┬───┐",
             "  │ a │ b │",
-            "  ├───┼───┤",
+            "  ╞═══╪═══╡",
             "  │ c │ d │",
             "  └───┴───┘",
         ].join("\n"));
@@ -225,7 +277,7 @@ describe("cursor mapping", () => {
     test("a cursor on a Markdown separator row lands on the rule that replaces it", () => {
         const result = formatWithCursor("| a | b |\n|-%--|---|\n| c | d |");
         expect(result.split("\n")[2]).toContain("%");
-        expect(result.split("\n")[2].replace("%", "")).toBe("├───┼───┤");
+        expect(result.split("\n")[2].replace("%", "")).toBe("╞═══╪═══╡");
     });
 });
 
@@ -315,7 +367,7 @@ describe("escaped pipes", () => {
         expect(format("| a | x \\| y |\n|---|---|\n| b | c |")).toBe([
             "┌───┬────────┐",
             "│ a │ x \\| y │",
-            "├───┼────────┤",
+            "╞═══╪════════╡",
             "│ b │ c      │",
             "└───┴────────┘",
         ].join("\n"));
@@ -515,6 +567,73 @@ describe("ordinary deletion inside a cell", () => {
     });
 });
 
+describe("setHeaderAtCursor", () => {
+    /** The table's lines with a "%" cursor marker inserted - kept out of the fixtures, which have
+     *  to be exactly what the formatter would write. */
+    const at = (lines: string[], line: number, column: number) =>
+        lines.map((text, index) => index === line ? text.slice(0, column) + "%" + text.slice(column) : text)
+             .join("\n");
+
+    /**
+     * Applies the switch at the "%" marker and returns the result marked the same way, or
+     * "(ordinary)" for a keystroke this is none of the business of.
+     */
+    function press(marked: string, header: boolean, isRtl = false): string {
+        const position = marked.indexOf("%");
+        expect(position).toBeGreaterThanOrEqual(0);
+        const content = marked.slice(0, position) + marked.slice(position + 1);
+        const result = setHeaderAtCursor(content, isRtl, position, header);
+        if (!result) return "(ordinary)";
+        return result.content.slice(0, result.positions[0]) + "%" + result.content.slice(result.positions[0]);
+    }
+
+    const plain = ["┌───┬───┐", "│ a │ b │", "├───┼───┤", "│ c │ d │", "└───┴───┘"];
+    const header = ["┌───┬───┐", "│ a │ b │", "╞═══╪═══╡", "│ c │ d │", "└───┴───┘"];
+    const mirrored = (lines: string[]) => lines.map(mirrorBoxCharacters);
+
+    test('"=" on the rule below the first row makes it the header rule', () => {
+        expect(press(at(plain, 2, 2), true)).toBe(at(header, 2, 2));
+    });
+
+    test('"-" on the header rule makes it plain again, and the cursor stays put', () => {
+        expect(press(at(header, 2, 5), false)).toBe(at(plain, 2, 5));
+    });
+
+    test("in an RTL file the rule is drawn mirrored, as every other rule is", () => {
+        expect(press(at(mirrored(plain), 2, 2), true, true)).toBe(at(mirrored(header), 2, 2));
+    });
+
+    test("a rule already in the wanted state is left alone - and the keystroke still consumed", () => {
+        expect(press(at(header, 2, 2), true)).toBe(at(header, 2, 2));
+        expect(press(at(plain, 2, 2), false)).toBe(at(plain, 2, 2));
+    });
+
+    test("the top and bottom rules cannot carry a header, and swallow the keystroke", () => {
+        expect(press(at(plain, 0, 2), true)).toBe(at(plain, 0, 2));
+        expect(press(at(plain, 4, 2), true)).toBe(at(plain, 4, 2));
+    });
+
+    test("anywhere but on a rule it is an ordinary keystroke", () => {
+        expect(press(at(plain, 1, 3), true)).toBe("(ordinary)");           // in a cell
+        expect(press([...plain, "", "סתם %טקסט"].join("\n"), false)).toBe("(ordinary)");   // in prose below a table
+        expect(press("סתם %טקסט", false)).toBe("(ordinary)");              // in a file with no table at all
+    });
+
+    test("a deeper rule takes the header down to it, and one rule carries it at a time", () => {
+        const three = ["┌───┬───┐", "│ a │ b │", "├───┼───┤", "│ c │ d │", "├───┼───┤",
+                       "│ e │ f │", "└───┴───┘"];
+        const deep = ["┌───┬───┐", "│ a │ b │", "├───┼───┤", "│ c │ d │", "╞═══╪═══╡",
+                      "│ e │ f │", "└───┴───┘"];
+        expect(press(at(three, 4, 2), true)).toBe(at(deep, 4, 2));
+    });
+
+    test('"-" on a plain rule never clears a header the cursor is nowhere near', () => {
+        const withHeader = ["┌───┬───┐", "│ a │ b │", "╞═══╪═══╡", "│ c │ d │", "├───┼───┤",
+                            "│ e │ f │", "└───┴───┘"];
+        expect(press(at(withHeader, 4, 2), false)).toBe(at(withHeader, 4, 2));
+    });
+});
+
 describe("parseTables", () => {
     test("gives each table's place and its cells, row by row and line by line", () => {
         const content = [
@@ -528,8 +647,15 @@ describe("parseTables", () => {
             "| x | y |",
         ].join("\n");
         expect(parseTables(content)).toEqual([
-            { firstLine: 1, lineCount: 6, rows: [[["a", "b"], ["a2", ""]], [["c", "d"]]] },
-            { firstLine: 7, lineCount: 1, rows: [[["x", "y"]]] },
+            { firstLine: 1, lineCount: 6, headerRows: 0, rows: [[["a", "b"], ["a2", ""]], [["c", "d"]]] },
+            { firstLine: 7, lineCount: 1, headerRows: 0, rows: [[["x", "y"]]] },
         ]);
+    });
+
+    test("reports the header a table declares, in either format", () => {
+        expect(parseTables("| x | y |\n|---|---|\n| 1 | 2 |")[0].headerRows).toBe(1);
+        expect(parseTables("┌───┬───┐\n│ x │ y │\n╞═══╪═══╡\n│ 1 │ 2 │\n└───┴───┘")[0].headerRows).toBe(1);
+        expect(parseTables("┐───┬───┌\n│ x │ y │\n╡═══╪═══╞\n│ 1 │ 2 │\n┘───┴───└")[0].headerRows).toBe(1);
+        expect(parseTables("┌───┬───┐\n│ x │ y │\n├───┼───┤\n│ 1 │ 2 │\n└───┴───┘")[0].headerRows).toBe(0);
     });
 });

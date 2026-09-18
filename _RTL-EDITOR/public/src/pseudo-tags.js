@@ -7,7 +7,14 @@
 //
 // Which tag names these are cannot be worked out from the text - `<img>` is void because the HTML
 // spec says so, not because of how it is written - so this list is the definition.
-const VOID_PSEUDO_TAGS = new Set(["כלול-בהדפסה"]);
+/**
+ * The tag that embeds another Markdown file into this one - void because it has no content of its
+ * own to close over. What it *does* is src/html/includes.ts's business, and only the HTML mirror's:
+ * the editor shows the line itself, as it shows every other pseudo-tag.
+ */
+export const INCLUDE_TAG_NAME = "כלול-בהדפסה";
+
+const VOID_PSEUDO_TAGS = new Set([INCLUDE_TAG_NAME]);
 
 /**
  * Is this pseudo-tag one that stands alone on its line, with no closing tag?

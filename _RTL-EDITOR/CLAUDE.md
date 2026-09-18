@@ -15,6 +15,7 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
    leaves a read-only note in its tab rather than losing it
 - Automatic table formatting: tables written in any of three formats are re-laid-out after
    every edit (see "Table formatting" below). `*.ai.md` / `*.ai.rtl.md` are exempt.
+   A table that declares a header row keeps it - through the editor, the disk and git
 - Cmd+click (Ctrl+click off macOS) on a `[text](path)` link opens the linked file and moves the
    focus to it; a file that was not open yet gets its tab right after the linking one
 - Ctrl+1 .. Ctrl+9 show the 1st .. 9th tab
@@ -28,6 +29,9 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
    the same "file not found" tab a reload would give it
 - Every Markdown file of the tree is kept as a readable HTML page under `../HTML-FROM-MD/` (git-ignored),
    re-rendered within a second of any change, with an `index.html` in every folder - see "The HTML mirror" below
+- `<כלול-בהדפסה מקור="..." מ="..." עד="..." כותרות="+1">` embeds another Markdown file into this one -
+   on the page only, never on disk. See "Embedding one file in another" below
+- A print button beside the help button opens the current file's page in a tab of its own
 
 ## Setup
 
@@ -53,6 +57,7 @@ bun run rebuild-whole-html-folder
 - `src/html/` - The Markdown → HTML capability, entered through `HtmlMirror`
 - `src/html/md-to-html.ts` - A Markdown file as a readable, self-contained HTML page
 - `src/html/html-mirror.ts` - Which file's page goes where, and keeping `../HTML-FROM-MD` up to date
+- `src/html/includes.ts` - `<כלול-בהדפסה>`: one Markdown file embedded into another, and the errors of it
 - `src/html/folder-index.ts` - The `index.html` of every folder of `../HTML-FROM-MD`
 - `src/rebuild-whole-html-folder.ts` - `bun run rebuild-whole-html-folder`
 - `src/write-file-safe.ts` - Atomic file writes, shared by the POST handler and the mirror
@@ -68,12 +73,14 @@ bun run rebuild-whole-html-folder
 - `tests/tables.test.ts` - Unit tests for `tables.js` (`bun test`)
 - `tests/links.test.ts` - Unit tests for `links.js` (`bun test`)
 - `tests/fs-changes.test.ts` - Unit tests for `fs-changes.ts` (`bun test`)
-- `tests/md-to-html.test.ts` / `tests/html-mirror.test.ts` - Unit tests for the HTML mirror (`bun test`)
+- `tests/md-to-html.test.ts` / `tests/html-mirror.test.ts` / `tests/includes.test.ts` - Unit tests for
+   the HTML mirror (`bun test`)
 
 ## API Endpoin
 - `GET /api/files` - `{files, serverTimestamp}`: the whole tree, and a cursor to poll changes with
 - `GET /api/file/:path?since=<cursor>` - `{content, readOnly?, serverTimestamp, recentFsChanges?, fsChangesUnknown?}`
 - `POST /api/file/:path` - Save file content
+- `GET /api/print/:path` - the file's page from the HTML mirror, as a page - see "The print button"
 
 ## Configuration
 
@@ -124,12 +131,47 @@ a box with its corners hooked outwards; writing `┐` draws a closed box. So:
 
 **Layout rules** (all decided in `renderTable()`):
 - Column width fits the content - one padding space either side of the widest cell, minimum 2.
-- Every row is treated alike: one padding space, then the cell's text. There is **no header row** -
-  a box table offers no way to mark one, so any special first-row treatment would be lost on the
-  next round-trip. A Markdown separator row becomes a plain rule and its `:---:` markers are dropped.
+- Every row is treated alike: one padding space, then the cell's text, header row or not. What a
+  header changes is the *rule below it*, and nothing else - no alignment, no width, no styling,
+  because nothing else would survive the round trip through the box form. A Markdown separator
+  row's `:---:` alignment markers are therefore dropped.
 - Cells are trimmed at both ends; spaces *inside* a cell are never touched.
 - Nothing is ever re-wrapped: a cell already split over several lines stays split where it was.
 - In a Markdown row, `\|` is a literal pipe rather than a cell separator.
+
+**The header row.** A table may declare that its first row (or its first few) is a header. Each
+format says so in its own way, and `TableBlock.headerRows` is what the three agree on:
+
+- **MARKDOWN** says it with the `|---|---|` separator, as it always has. Only the *first* separator
+  of a table counts - a table has one header, and it is at the top.
+- **NICE** / **REVERSED-NICE** draw the rule below the header doubled: `╞═══╪═══╡`, mirrored to
+  `╡═══╪═══╞` in an RTL file, exactly as `┌` and `┐` are. It is always *written* in full, and read
+  **leniently**: a rule standing between two rows is the header's if either of its ends is `╞`/`╡`
+  **or** any part of it is drawn doubled. So `╞───┼───╡`, `┤═══┼═══├` and even the mixed `╞───┼───┤`
+  all say the same thing, and all come back as the canonical spelling.
+
+  The leniency is not politeness. `ruleKind()` turning a line away does not cost a header - it costs
+  the line its status as a rule, and a table with a non-rule in the middle is parsed as *two* tables
+  with a stray line between them. That is a garbled file, from one character being off.
+
+**Switching it on and off is a keystroke.** Typing `=` (or `═`) on a table's rule makes that rule the
+header rule; typing `-` (or `─`) makes it plain again. `setHeaderAtCursor()` does the work and
+`headerRuleExtension()` in `markdown-editor.js` catches the character - an `EditorView.inputHandler`
+rather than a key binding, because these are ordinary characters whose *insertion* is what has to be
+replaced: putting one into a rule line would break the drawing.
+
+- Only a rule standing **between two rows** can carry a header; on the top and bottom rules, which
+  are the box itself, the keystroke is swallowed rather than let through.
+- Typing `=` on a *deeper* rule moves the header down to it, so the rows above it all become header
+  rows. One rule carries the header at a time.
+- Typing `-` only clears a header when the cursor is on the header's own rule - otherwise it would
+  quietly remove a header the cursor is nowhere near.
+- Anywhere else - in a cell, in prose - `-` and `=` are ordinary characters, typed as usual.
+
+A table that declares no header, which is most of them, is drawn exactly as before: no doubled rule
+appears anywhere in it. The doubled rule is the *only* thing that carries a header through a save,
+which is why it had to exist: before it, a `*.ai.md` file kept its header (nothing rewrites those)
+and every other file lost it the first time the editor formatted it.
 
 **Cursor handling.** `formatTables()` takes and returns document offsets, because re-laying a table
 out moves text under the cursor. A cursor sitting in a cell's trailing padding keeps its distance
@@ -259,6 +301,9 @@ and closes at the start of a line, and `public/style.css` colours the names it k
 only place a new tag has to be added, `src/html/md-to-html.ts`'s `PAGE_STYLE` being the mirror's copy
 of it. The two lists are meant to hold the same names and the same colours.
 
+`<כלול-בהדפסה>` is the one pseudo-tag that *does* something: on the page it is replaced by the file it
+names (see "Embedding one file in another"). In the editor it is a marker like any other.
+
 **Except the void ones.** `<כלול-בהדפסה ...>` has no closing tag, the way HTML's own `<img>` has
 none - and nothing in the text says so, just as `<img>` is void because the spec says it is. So the
 names are listed, once, in `public/src/pseudo-tags.js` - plain ESM, imported by the browser and by
@@ -357,9 +402,18 @@ Two things follow from reusing that path:
 ### The HTML mirror
 
 Every `.md` file the file tree shows gets a page: `<path>/<name>.md` → `../HTML-FROM-MD/<path>/<name>.html`
-(so `X.rtl.md` → `X.rtl.html`). The verbatim records are left out - `*.ai.md`, `*.ai.rtl.md`,
-`*.script.md`, `*.script.rtl.md` (`isMirroredFile()`). The folder is git-ignored, and is itself in
-`exclusions`, as is `node_modules` - whose vendor READMEs would otherwise have been both listed and mirrored.
+(so `X.rtl.md` → `X.rtl.html`). Only the terminal recordings are left out - `*.script.md`,
+`*.script.rtl.md` (`isMirroredFile()`) - because they are a raw VT control stream rather than
+Markdown, and nothing but the GET handler's `renderTerminalOutput()` can make text of them.
+
+**AI output is mirrored like anything else.** Being a verbatim record is about the *bytes on disk* -
+`isAiGeneratedFile()` keeps the table formatter off those files - and says nothing about how they are
+read. Their tables are the Markdown a model wrote, header separator and all, which `parseTables()`
+understands; so they render as `<table>`s with a proper `<thead>`, and are the main reason a header
+row is worth carrying at all.
+
+The folder is git-ignored, and is itself in `exclusions`, as is `node_modules` - whose vendor READMEs
+would otherwise have been both listed and mirrored.
 
 **Rendering** (`md-to-html.ts`, markdown-it) aims to *look* like the editor - David for RTL, the same
 heading sizes, shaded inline code and quotes, the pseudo-tag colours - while *reading* like a
@@ -367,9 +421,11 @@ document: no Markdown syntax characters. The CSS is inlined into every page (`PA
 from `style.css` and the editor's `HighlightStyle` - change one, check the other. Beyond CommonMark:
 
 - **A single newline is a line break** (`breaks: true`) - the files are written a sentence per line.
-- **Tables** in any of the three formats become `<table>`, via `parseTables()` from `tables.js`, and
-  with **no header row**, as in the editor. markdown-it's own GFM table rule is disabled. A cell's lines
-  are joined with line breaks, and its Markdown is rendered.
+- **Tables** in any of the three formats become `<table>`, via `parseTables()` from `tables.js`.
+  A table that declares a header row (see "The header row" above) gets a `<thead>` of `<th>` cells -
+  bold, on a shaded strip; one that declares none gets a bare `<tbody>`, as in the editor.
+  markdown-it's own GFM table rule is disabled. A cell's lines are joined with line breaks, and its
+  Markdown is rendered.
 - **Pseudo-tags** - `<עיון>` ... `</עיון>`, each on a line of its own, indentation allowed - become a
   `.pseudo-tag` box whose first line is the tag's name (and any attribute values: `ניתוח-לשוני: רֶמֶשׂ`),
   centred. The name must hold a non-ASCII letter, which is what tells one from a real HTML tag, and
@@ -385,12 +441,27 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
 - **Links** are rewritten by `mirroredHref()`: to a mirrored `.md` → its page; to anything else (an
   `*.ai.md`, an image) → back to the original, one folder further up.
 
-**When a page is rendered** works like `make`: a page is stale when it is missing, older than its
-file, or older than the rendering code (`RENDERER_FILES`) - so a renderer change rebuilds every page,
-and a restart only redoes what went stale while the server was down. `HtmlMirror` is driven by
-`server.ts` from three places, with no hook in the POST handler:
+**When a page is rendered** works like `make`: a page is stale when it is missing, older than any of the
+files it was built from, or older than the rendering code (`RENDERER_FILES`) - so a renderer change
+rebuilds every page, and a restart only redoes what went stale while the server was down.
 
-- **Startup** - `syncTree()` over the first snapshot (~0.5 s to render all ~600 files, ~40 ms when fresh).
+"The files it was built from" is more than the one file, because `<כלול-בהדפסה>` embeds others into
+it. `HtmlMirror.dependencies` holds, per page, every file that went into it - the embedded ones at
+any depth, and the ones that were *meant* to be embedded but could not be read, because the day one
+of those appears the page has to change. `dependents` is the same map the other way round, which is
+what `scheduleSync()` fans a changed file out over. The map is flat, so no chain is ever walked.
+
+**A render is no longer the same thing as a write.** The dependencies of a page are known only once
+it has been rendered, so a mirror that has just been made knows none of them and renders the whole
+tree - which is what the startup sweep is for, and it costs ~0.8 s. What comes out is compared with
+the page on disk and written only if it differs, so that sweep normally writes nothing at all; a page
+that came out identical is `utimes()`d instead, or the next sweep would render it all over again.
+That comparison is also what stops two files that embed each other from rebuilding one another for
+ever: only a page whose content really changed makes its own dependents be re-synced.
+
+`HtmlMirror` is driven by `server.ts` from three places, with no hook in the POST handler:
+
+- **Startup** - `syncTree()` over the first snapshot (~0.8 s to render all ~600 files, ~40 ms when fresh).
 - **Every `fs.watch` event on a `.md` path** - `scheduleSync()`, debounced 300 ms per file. A file that
   is only *edited* is no change to the tree, so the rescan would never report it; the editor's own
   save arrives here too, as the rename at the end of `writeFileSafe()`. Files that come and go
@@ -418,6 +489,77 @@ holds a page is removed, deepest first - which is also what lets the folder itse
 A page is written after its file is read, so it ends up the newer of the two - which would hide an
 edit made *during* the render. `syncFile()` therefore re-stats the file afterwards and renders again
 if it moved.
+
+### Embedding one file in another
+
+`<כלול-בהדפסה מקור="..." מ="..." עד="..." כותרות="+1">` puts another Markdown file's text where the
+tag stands. It happens **in memory only, on the way to the HTML page**: no Markdown file is ever
+rewritten, and the editor shows the tag line itself. `src/html/includes.ts` holds all of it;
+`expandIncludes()` hands `md-to-html.ts` one Markdown document and the list of what was wrong with it.
+
+- **`מקור`** is mandatory: a *relative* path to a `.md` file within the served tree.
+- **`מ`** / **`עד`** name a heading of `מקור` by its text. `מ` starts at that heading's own line;
+  `עד` stops on the line *before* its heading - **עד ולא עד בכלל** - so `מ="פרק א" עד="פרק ב"` is
+  exactly the first chapter. Left out, they are the file's first and last non-blank lines. The text is
+  matched exactly first and then with the niqqud and punctuation stripped, because asking an author to
+  reproduce `## וַיֹּאמֶר אֱלֹהִים` character for character would make the attribute unusable here.
+  A heading that matches twice is an error: there is no way to say which was meant.
+- **`כותרות`** is a *signed* one-digit number, and moves every heading of the embedded block by it, so
+  `כותרות="-2"` turns a `### x` into a `# x`. Nested shifts compose - the inner file is expanded and
+  shifted first, and the outer shift then moves the result.
+- Every value must be wrapped in one of `"` `'` `׳` `״` and closed by **the same** character, and the
+  tag must stand alone on its line.
+
+**The seam is invisible.** The embedded text reads as if it had been written in place - no box, no
+caption - and its headings join the page's תוכן העניינים like any other. That is the whole point of a
+tag called "כלול בהדפסה".
+
+Three things follow from expanding *text* rather than tokens, and each is worth keeping in mind:
+
+- **A block is inserted flush-left, with a blank line on either side.** It is a document of its own and
+  must not run into the paragraph above it; the indentation of the tag line is ignored.
+- **An embedded file's links are rewritten**, to `/`-rooted paths, by `rootedTarget()`. A link is
+  written relative to the file it stands in, and that is not the file whose page this is about to
+  become. Rooted targets pass through unchanged, which is what lets a file embedded two levels deep be
+  rewritten once per level with the same result. Only a plain target is touched: one with a title after
+  it, or wrapped in `<>`, is left exactly as written, and so is a bare `#anchor`.
+- **A code fence is left alone** - a directive or a heading drawn inside one is sample text. Every scan
+  in the module goes through `fenceScanner()` for that reason.
+
+**An error is shown, not thrown.** A file with a typo in a directive still renders: the faulty line
+becomes a `שגיאה-N` block where it stood, and the page opens with the list of them all, each linking to
+its own block - white bold on dark red, both of them. The message is Hebrew, and names the file and
+line the fault is in, which for a nested embedding is not the file whose page it is. Cyclic references
+are one such error, reported with the whole chain (`a.md ← b.md ← c.md ← a.md`).
+
+The messages travel from `expandIncludes()` to the renderer in `RenderOptions.errors`; what is left in
+the text is only a `\uE000error:<n>\uE000` marker line. That character is stripped from every file that
+is read - `toLines()` is the one door a file's text comes in by - so nothing a file could hold can be
+mistaken for one. A NUL would have been the obvious marker, and is not usable: markdown-it replaces it
+with U+FFFD before any rule sees it.
+
+### The print button
+
+The small printer beside the help button (`#print-button`, `initPrintButton()`) opens the active
+file's page from the HTML mirror in a tab of its own, at `GET /api/print/<path>.md`. It is the only
+thing inside the editor that reads the mirror, and the server hands the page over rather than
+re-deriving it - there is only one renderer, and it has already run.
+
+Two things the handler does before serving:
+
+- **It brings the page up to date** (`syncFile()`). The mirror's own sync is debounced 300 ms, so a
+  file saved a moment ago may still have yesterday's page on disk - and what gets printed has to be
+  what is on the screen.
+- **It checks that the page is inside the mirror.** `htmlPathFor()` joins the path onto
+  `HTML-FROM-MD/` and normalizes it, so a `../` that climbed out has left the prefix behind - which
+  is exactly what the test is. Without it the endpoint would serve any `.html` file on the disk.
+  A file with no page at all (a `*.script.md`) gets a Hebrew error *page*, not a bare 404: it is
+  opening in a tab of its own and has to say something there.
+
+**The client opens the tab before it saves, not after.** A dirty file is written first (`autosave()`),
+but a `window.open()` issued after that await is no longer part of the click as the browser counts
+it, and a pop-up blocker takes it. So the tab is opened empty, synchronously, and its `location` set
+once the save settles - whether the save worked or not, because a stale page beats no page.
 
 ### Markdown links
 
@@ -618,8 +760,8 @@ This is much more powerful than the CLI flags above.
 
 ### Known RTL quirks
 
-- **Box-drawing characters are mirrored in RTL files**: `┌` and `┐` swap places (and `├`/`┤`, `└`/`┘`)
-  between the editor's text and the file on disk. See "Table formatting" above - do not "fix" a
+- **Box-drawing characters are mirrored in RTL files**: `┌` and `┐` swap places (and `├`/`┤`, `└`/`┘`,
+  and the header rule's `╞`/`╡`) between the editor's text and the file on disk. See "Table formatting" above - do not "fix" a
   `.rtl.md` file that looks reversed in a terminal.
 - **Cursor layer uses LTR coordinates**: `.cm-cursorLayer` has `direction: ltr` even when content is `direction: rtl`. The cursor's CSS `left` is always relative to the scroller's left edge (which includes the gutter width of ~36px).
 - **Gutter is always on the left**: Even for RTL files, the line-number gutter is on the left side. The content area starts after the gutter.

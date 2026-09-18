@@ -239,11 +239,10 @@ body {
     left: 0;
 }
 
-/* Help button (top-right) and dialog */
-.help-button {
+/* The two corner buttons (top-right), and the help dialog */
+.help-button, .print-button {
     position: fixed;
     top: 2px;
-    right: 2px;
     width: 12px;
     height: 12px;
     padding: 0;
@@ -259,7 +258,10 @@ body {
     align-items: center;
     justify-content: center;
 }
-.help-button:hover {
+/* The print button takes the corner, and the help button moves over to make room for it. */
+.print-button { right: 2px; }
+.help-button { right: 20px; }
+.help-button:hover, .print-button:hover:not(:disabled) {
     border-color: #007acc;
     color: #007acc;
 }
@@ -268,6 +270,15 @@ body {
     left: -0.27rem;
     top: -0.7rem;
     font-size: 200%;
+}
+/* Just inside the ring: any larger and the printer's body crosses the circle that holds it. */
+.print-button > svg {
+    width: 11px;
+    height: 11px;
+}
+.print-button:disabled {
+    opacity: 0.35;
+    cursor: default;
 }
 
 .help-overlay {

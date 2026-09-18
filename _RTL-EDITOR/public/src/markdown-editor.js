@@ -10,7 +10,7 @@ import { tags } from '@lezer/highlight';
 // noinspection ES6UnusedImports
 import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, consoleGroupCollapsed, consoleGroupEnd } from './logs.js';
 import { TabData } from "./tab-data.js";
-import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, minimalReplacement } from "./tables.js";
+import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, minimalReplacement, setHeaderAtCursor } from "./tables.js";
 import { markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "./links.js";
 import { isVoidPseudoTag } from "./pseudo-tags.js";
 /** @typedef {import('../../src/server.ts').FileData} FileData */
@@ -45,6 +45,53 @@ export class MarkdownEditor {
         this.initSplitter();
         this.initTabReordering();
         this.initTabShortcuts();
+        this.initPrintButton();
+    }
+
+    /**
+     * The print button opens the active file's page from the HTML mirror in a tab of its own.
+     *
+     * The tab is opened *synchronously*, while the click is still the browser's idea of a user
+     * gesture, and only then pointed at the URL - because a file with unsaved changes has to be
+     * written first, and a window opened after that await is taken for a pop-up and blocked.
+     * Printing what is on the screen rather than what was on disk a second ago is the whole point.
+     */
+    initPrintButton() {
+        this.printButton = /** @type {HTMLButtonElement | null} */ (document.getElementById('print-button'));
+        if (!this.printButton) {
+            return;
+        }
+        this.printButton.addEventListener('click', () => {
+            const filePath = this.activeTab;
+            if (!filePath) {
+                return;
+            }
+            const printTab = window.open('', '_blank');
+            const show = () => {
+                const url = `/api/print/${encodeURIComponent(filePath)}`;
+                if (printTab) {
+                    printTab.location.href = url;
+                } else {
+                    window.open(url, '_blank');     // a pop-up blocker took the first one
+                }
+            };
+            const tabData = this.tabs.get(filePath);
+            // autosave() swallows its own failures, so this always gets to show something - the
+            // page as the server last rendered it, which is the best there is to offer.
+            if (tabData && tabData.isDirty) {
+                tabData.autosave().finally(show);
+            } else {
+                show();
+            }
+        });
+        this.updatePrintButton();
+    }
+
+    /** There is nothing to print with no file open. */
+    updatePrintButton() {
+        if (this.printButton) {
+            this.printButton.disabled = !this.activeTab;
+        }
     }
 
     /**
@@ -454,7 +501,7 @@ export class MarkdownEditor {
             inlineCodeEmphasisPlugin,
             tableLinePlugin,
             tableRuleGutterField,
-            ...(isAiGenerated ? [] : [autoFormatTablesExtension(isRtl)]),
+            ...(isAiGenerated ? [] : [autoFormatTablesExtension(isRtl), headerRuleExtension(isRtl)]),
             wrapSelectionExtension(),
             // @ts-ignore
             ...specialKeyHandling.map((keyRun) => Prec.high(keymap.of([keyRun]))),
@@ -988,6 +1035,7 @@ export class MarkdownEditor {
         // activate() waits for the file, so this.activeTab has to say where the user meant to be
         // *before* the wait - that is how a switch made while a file is loading wins over it.
         this.activeTab = filePath;
+        this.updatePrintButton();
         this.saveSession();
 
         // Activate the new tab and editor.
@@ -1015,6 +1063,7 @@ export class MarkdownEditor {
                 await this.switchToTab(tabToActivate);
             } else {
                 this.activeTab = null;
+                this.updatePrintButton();
             }
         }
 
@@ -1281,6 +1330,46 @@ function wrapSelectionExtension() {
             return false;
         }
         return wrapSelectionWith(view, text);
+    });
+}
+
+/**
+ * What each of the four characters means when it is typed on a table's rule: whether the rule it
+ * lands on should become the header's. Both spellings of each, because the rule is drawn with the
+ * box-drawing "─"/"═" but the keyboard offers "-"/"=".
+ */
+const HEADER_RULE_KEYS = new Map([['=', true], ['═', true], ['-', false], ['─', false]]);
+
+/**
+ * Typing "=" on a table's rule makes it the header rule, and "-" makes it plain again - which is
+ * how a table's header is switched on and off.
+ *
+ * It has to be an input handler rather than a key binding: these are ordinary characters, and what
+ * is wanted is to *replace* their insertion. Inserting one into a rule line would break the drawing,
+ * so setHeaderAtCursor() redraws the whole rule instead - and on a rule that cannot carry a header
+ * (the top and bottom ones) it swallows the keystroke rather than let it through.
+ *
+ * @param {boolean} isRtl
+ * @returns {import('@codemirror/state').Extension}
+ */
+function headerRuleExtension(isRtl) {
+    return EditorView.inputHandler.of((view, from, to, text) => {
+        if (from !== to || !HEADER_RULE_KEYS.has(text) || view.state.readOnly) {
+            return false;
+        }
+        const document = view.state.doc.toString();
+        const result = setHeaderAtCursor(document, isRtl, from, HEADER_RULE_KEYS.get(text));
+        if (!result) {
+            return false;               // not on a rule - an ordinary "-" or "=", typed as usual
+        }
+        if (result.content !== document) {
+            view.dispatch({
+                changes: minimalReplacement(document, result.content),
+                selection: { anchor: result.positions[0] },
+                scrollIntoView: true,
+            }, { userEvent: 'input.type' });
+        }
+        return true;
     });
 }
 

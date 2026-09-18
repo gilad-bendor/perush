@@ -8,7 +8,7 @@ import { formatTables, isAiGeneratedFile } from "../public/src/tables.js";
 import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes";
 import type { FileSystemChange } from "./fs-changes";
 import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
-import { HtmlMirror } from "./html/html-mirror";
+import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile } from "./html/html-mirror";
 import { writeFileSafe } from "./write-file-safe";
 
 const PORT = 4000;
@@ -136,6 +136,19 @@ function fileSystemChangesSince(url: URL): {
     };
 }
 
+/** Whatever went wrong with a print request, it opened in a tab of its own and has to say so there. */
+function printErrorPage(message: string): Response {
+    const escape = (text: string) => text.replace(/[&<>"]/g, character =>
+        ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[character]!);
+    return new Response(
+        `<!doctype html>\n<html lang="he" dir="rtl">\n<head>\n<meta charset="utf-8">\n`
+        + `<title>אין גרסה להדפסה</title>\n`
+        + `<style>body { font-family: system-ui, sans-serif; padding: 2rem; color: #7a0f0f; }</style>\n`
+        + `</head>\n<body>\n<h1>אין גרסה להדפסה</h1>\n<p>${escape(message)}</p>\n</body>\n</html>\n`,
+        { status: 404, headers: { "Content-Type": "text/html; charset=utf-8" } },
+    );
+}
+
 serve({
     port: PORT,
     async fetch(request) {
@@ -154,7 +167,11 @@ serve({
                 const mimeType = filePath.endsWith(".css") ? "text/css" :
                     filePath.endsWith(".js") ? "application/javascript" : "text/plain";
                 return new Response(content, {
-                    headers: { "Content-Type": mimeType }
+                    // These are the project's own sources, edited all day long. With no header at
+                    // all the browser is free to cache them by its own guess - and then a reloaded
+                    // page runs yesterday's tables.js against today's server, which looks like a
+                    // bug in the editor rather than like a stale file.
+                    headers: { "Content-Type": mimeType, "Cache-Control": "no-cache" }
                 });
             } catch {
                 return new Response("Not Found", { status: 404 });
@@ -183,6 +200,32 @@ serve({
             return new Response(JSON.stringify({ files, serverTimestamp: fsChangeLog.now() }), {
                 headers: { "Content-Type": "application/json" }
             });
+        }
+
+        // The printable version of a file: its page from the HTML mirror, served as a page of its
+        // own. The editor's print button opens it in a new tab.
+        if (url.pathname.startsWith("/api/print/")) {
+            const filePath = decodeURIComponent(url.pathname.slice("/api/print/".length));
+            const pagePath = htmlPathFor(filePath);
+            // htmlPathFor() joins the path onto HTML-FROM-MD/ and normalizes it, so a "../" that
+            // climbed out of the mirror has left the prefix behind - which is what says so.
+            if (!isMirroredFile(filePath) || !pagePath.startsWith(`${HTML_MIRROR_DIR}/`)) {
+                return printErrorPage(`אין גרסה להדפסה לקובץ "${filePath}".`);
+            }
+            // Brought up to date first: the file may have been saved a moment ago, and the mirror's
+            // own sync is debounced - so the page on disk can still be the one before the last edit.
+            try {
+                await htmlMirror?.syncFile(filePath);
+            } catch (error) {
+                console.error(`Cannot render the printable version of ${filePath}:`, error);
+            }
+            try {
+                return new Response(await file(join(MARKDOWN_DIR, pagePath)).arrayBuffer(), {
+                    headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-cache" },
+                });
+            } catch {
+                return printErrorPage(`הקובץ "${filePath}" לא נמצא.`);
+            }
         }
 
         if (url.pathname.startsWith("/api/file/")) {

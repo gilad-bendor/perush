@@ -6,11 +6,14 @@
 //
 // - A single line break is a line break. The files are written a sentence per line, and the editor
 //   shows them that way; standard Markdown would run the lines together into one paragraph.
-// - A table in any of tables.js's three formats becomes an HTML <table>, with no header row - the
-//   editor has none either (see renderTable() in tables.js).
+// - A table in any of tables.js's three formats becomes an HTML <table>. Its header row, if it
+//   declares one - "|---|---|" in Markdown, a doubled "╞═══╪═══╡" rule in the box formats - becomes
+//   a <thead> of <th> cells; a table that declares none gets no header, as in the editor.
 // - `<עיון>` ... `</עיון>` on lines of their own become a box captioned with the tag's name, holding
 //   the Markdown between them; a void tag (`<כלול-בהדפסה ...>`) becomes a box of its caption alone.
 // - `*...*` and `**...**` inside an inline-code span are bold, as inlineCodeEmphasisPlugin shows them.
+// - A `שגיאה-N` marker left by includes.ts becomes a dark-red block where the faulty directive was,
+//   and the page opens with the list of them.
 // - A file with enough headings opens with an index of them - "תוכן העניינים" in an RTL page,
 //   "Contents" in an LTR one.
 //
@@ -20,15 +23,23 @@ import MarkdownIt from "markdown-it";
 import type { StateBlock, StateCore, Token } from "markdown-it";
 import { isRtlFile, parseTables } from "../../public/src/tables.js";
 import { isVoidPseudoTag } from "../../public/src/pseudo-tags.js";
+import { errorLineIndex } from "./includes";
+import type { EmbedError } from "./includes";
 
 export type RenderOptions = {
     /** Rewrites a link's href - the page does not live next to the file it was made from. */
     hrefFor?: (href: string) => string;
+    /**
+     * What is wrong with the document, as expandIncludes() found it - in the order the `שגיאה-N`
+     * markers of the content refer to them by.
+     */
+    errors?: EmbedError[];
 };
 
 type Env = {
-    tablesByFirstLine?: Map<number, { lineCount: number, rows: string[][][] }>;
+    tablesByFirstLine?: Map<number, { lineCount: number, headerRows: number, rows: string[][][] }>;
     hrefFor?: (href: string) => string;
+    errors?: EmbedError[];
 };
 
 const markdown = new MarkdownIt({
@@ -56,29 +67,85 @@ function boxTableRule(state: StateBlock, startLine: number, endLine: number, sil
     if (!table || startLine + table.lineCount > endLine) return false;
     if (silent) return true;
 
-    const { rows, lineCount } = table;
+    const { rows, lineCount, headerRows } = table;
 
     const nextLine = startLine + lineCount;
     state.push("table_open", "table", 1).map = [startLine, nextLine];
-    state.push("tbody_open", "tbody", 1);
-    for (const row of rows) {
+    // A <thead> only when the table says it has one; most of them do not, and get a bare <tbody>.
+    let section: "thead" | "tbody" | null = null;
+    rows.forEach((row, rowIndex) => {
+        const wanted = rowIndex < headerRows ? "thead" : "tbody";
+        if (section !== wanted) {
+            if (section) state.push(`${section}_close`, section, -1);
+            state.push(`${wanted}_open`, wanted, 1);
+            section = wanted;
+        }
+        const cell = wanted === "thead" ? "th" : "td";
         state.push("tr_open", "tr", 1);
         const columnCount = row[0]?.length ?? 0;
         for (let column = 0; column < columnCount; column++) {
-            state.push("td_open", "td", 1);
+            state.push(`${cell}_open`, cell, 1);
             const inline = state.push("inline", "", 0);
             // A cell split over several lines keeps its line breaks. The other columns of such a row
             // have been padded with empty lines, which must not turn into trailing breaks.
             inline.content = row.map(line => line[column] ?? "").join("\n").replace(/^\n+|\n+$/g, "");
             inline.children = [];
-            state.push("td_close", "td", -1);
+            state.push(`${cell}_close`, cell, -1);
         }
         state.push("tr_close", "tr", -1);
-    }
-    state.push("tbody_close", "tbody", -1);
+    });
+    if (section) state.push(`${section}_close`, section, -1);
     state.push("table_close", "table", -1);
     state.line = nextLine;
     return true;
+}
+
+// ------------------------------------------------------------------------------------------------
+// The errors of the included files
+//
+// expandIncludes() leaves a marker line where a faulty `<כלול-בהדפסה>` directive stood; here it
+// becomes the block that says so. The message itself travels in the env rather than in the line,
+// so that nothing a file could hold can be mistaken for one.
+
+markdown.block.ruler.before("code", "embed_error", embedErrorRule, { alt: ["paragraph", "reference", "blockquote", "list"] });
+
+function embedErrorRule(state: StateBlock, startLine: number, endLine: number, silent: boolean): boolean {
+    const index = errorLineIndex(lineText(state, startLine));
+    if (index === null) return false;
+    if (silent) return true;
+    const token = state.push("embed_error", "div", 0);
+    token.block = true;
+    token.meta = { index };
+    token.map = [startLine, startLine + 1];
+    state.line = startLine + 1;
+    return true;
+}
+
+markdown.renderer.rules.embed_error = (tokens, index, _options, env) => {
+    const error = (env as Env).errors?.[(tokens[index].meta as { index: number }).index];
+    if (!error) return "";
+    return `<div class="embed-error" id="${markdown.utils.escapeHtml(error.id)}">${errorText(error)}</div>\n`;
+};
+
+/** An error as both its own block and its entry at the top of the page read it. */
+function errorText(error: EmbedError): string {
+    const escape = markdown.utils.escapeHtml;
+    return `${escape(error.id)} &ndash; ${escape(error.file)}, שורה ${error.line}: ${escape(error.message)}`;
+}
+
+/** The list of every error, above the index - the first thing the page has to say. */
+function renderErrors(errors: EmbedError[], isRtl: boolean): string {
+    if (!errors.length) return "";
+    const items = errors.map(error =>
+        `<li><a href="#${markdown.utils.escapeHtml(encodeURIComponent(error.id))}">${errorText(error)}</a></li>`
+    ).join("\n");
+    return `<nav class="embed-errors">
+<div class="embed-errors-title">${isRtl ? "שגיאות" : "Errors"}</div>
+<ul>
+${items}
+</ul>
+</nav>
+`;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -213,7 +280,7 @@ function safeDecodeUri(href: string): string {
 
 /** The body of the page - exported for the tests. */
 export function markdownToHtml(content: string, options: RenderOptions = {}): string {
-    const env: Env = { hrefFor: options.hrefFor };
+    const env: Env = { hrefFor: options.hrefFor, errors: options.errors };
     return markdown.render(content, env);
 }
 
@@ -223,11 +290,12 @@ export function markdownToHtml(content: string, options: RenderOptions = {}): st
  * @param filePath  as the file tree names it - decides the direction and the fallback title
  */
 export function renderMarkdownPage(content: string, filePath: string, options: RenderOptions = {}): string {
-    const env: Env = { hrefFor: options.hrefFor };
+    const env: Env = { hrefFor: options.hrefFor, errors: options.errors };
     const tokens = markdown.parse(content, env);
     const isRtl = isRtlFile(filePath, content);
     // Before the body is rendered: it is what gives the headings their ids.
     const index = renderIndex(tokens, isRtl, env);
+    const errors = renderErrors(options.errors ?? [], isRtl);
     const body = markdown.renderer.render(tokens, markdown.options, env);
     const fileName = filePath.split("/").pop() ?? filePath;
     const title = firstHeadingText(tokens) ?? fileName.replace(/(\.rtl)?\.md$/, "");
@@ -244,7 +312,7 @@ export function renderMarkdownPage(content: string, filePath: string, options: R
 </head>
 <body class="${isRtl ? "rtl" : "ltr"}">
 <main>
-${index}${body}</main>
+${errors}${index}${body}</main>
 </body>
 </html>
 `;
@@ -372,7 +440,8 @@ pre { background: rgba(128, 128, 128, 0.1); padding: 0.5em 0.8em; overflow-x: au
 pre code { background: none; font-family: monospace; -webkit-text-stroke: 0; }
 
 table { border-collapse: collapse; }
-td { border: 1px solid #999; padding: 0.25em 0.6em; vertical-align: top; text-align: start; }
+td, th { border: 1px solid #999; padding: 0.25em 0.6em; vertical-align: top; text-align: start; }
+th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
@@ -391,6 +460,22 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 /* A void tag: its caption is the whole box, so it keeps the full colour of a marker. */
 .pseudo-tag[data-tag="כלול-בהדפסה"] { background: #fffbc0; }
 .pseudo-tag[data-tag="כלול-בהדפסה"] > .pseudo-tag-caption { opacity: 1; margin: 0; }
+
+/* Whatever else the page says, a faulty <כלול-בהדפסה> has to be impossible to read past. */
+.embed-errors, .embed-error {
+    background: #7a0f0f;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 0.4em 1em;
+    margin: 0 0 1em;
+}
+.embed-errors a, .embed-error a { color: white; text-decoration: none; }
+.embed-errors a:hover { text-decoration: underline; }
+.embed-errors-title { font-size: 1.2em; }
+.embed-errors ul { list-style: none; margin: 0.3em 0 0; padding: 0; }
+.embed-errors li { margin: 0.2em 0; }
+.embed-error code, .embed-errors code { background: rgba(255, 255, 255, 0.2); color: white; -webkit-text-stroke: 0; }
 
 .index {
     margin: 0 0 1.5em;

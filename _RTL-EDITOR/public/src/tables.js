@@ -8,6 +8,21 @@
 //   │ a  │ b  │         │ a  │ b  │            |---|---|
 //   └────┴────┘         ┘────┴────└            | 1 | 2 |
 //
+// A table may declare that its first row (or its first few) is a *header*. In MARKDOWN that is
+// what the "|---|---|" separator says; in the box formats the rule below the header is drawn
+// doubled, which is the only thing that tells one row from another there:
+//
+//   ┌────┬────┐
+//   │ a  │ b  │
+//   ╞════╪════╡      <- the header rule
+//   │ 1  │ 2  │
+//   └────┴────┘
+//
+// Nothing else about a header is remembered - no alignment, no styling - because nothing else
+// survives the round trip through the box form. A table with no header (most of them) is drawn
+// exactly as before: no doubled rule appears anywhere in it. Typing "=" or "-" on a rule switches
+// the two - see setHeaderAtCursor().
+//
 // REVERSED-NICE is the same table with its corner/tee characters mirrored. That form is
 // what an RTL document needs *in the editor*: a `.rtl.md` file renders with `direction: rtl`,
 // so the bidi algorithm mirrors the whole line and the corner that comes first in the text
@@ -49,19 +64,31 @@ const VERTICAL = '│';
 const HORIZONTAL = '─';
 
 // The characters that begin and end a horizontal rule, per rule kind, in un-mirrored order.
+// "header" is the rule below a header row, and is the one drawn with doubled lines.
 const RULE_ENDS = {
     top: ['┌', '┐'],
     middle: ['├', '┤'],
+    header: ['╞', '╡'],
     bottom: ['└', '┘'],
 };
-// The character a rule uses where a column boundary crosses it.
-const RULE_JUNCTIONS = { top: '┬', middle: '┼', bottom: '┴' };
+/** The character a rule uses where a column boundary crosses it. */
+const RULE_JUNCTIONS = { top: '┬', middle: '┼', header: '╪', bottom: '┴' };
+/** The character a rule is drawn with between its junctions. */
+const RULE_HORIZONTALS = { top: HORIZONTAL, middle: HORIZONTAL, header: '═', bottom: HORIZONTAL };
 
-const RULE_END_CHARACTERS = '┌┐├┤└┘';
-const RULE_BODY_CHARACTERS = '─┬┼┴';
+const RULE_END_CHARACTERS = '┌┐├┤└┘╞╡';
+const RULE_BODY_CHARACTERS = '─┬┼┴═╪';
+/** The ends of a rule that stands *between two rows* - a header rule or a plain one. */
+const ROW_RULE_END_CHARACTERS = '├┤╞╡';
+/** Of those, the ends that say "header" outright. */
+const HEADER_RULE_END_CHARACTERS = '╞╡';
+/** Any part of a rule drawn doubled says "header" just as loudly as its ends do. */
+const DOUBLED_RULE_CHARACTER = /[═╪]/;
 
 /** Mirrored counterparts - the only box characters that are not left/right symmetric. */
-const MIRRORED_BOX_CHARACTERS = { '┌': '┐', '┐': '┌', '├': '┤', '┤': '├', '└': '┘', '┘': '└' };
+const MIRRORED_BOX_CHARACTERS = {
+    '┌': '┐', '┐': '┌', '├': '┤', '┤': '├', '└': '┘', '┘': '└', '╞': '╡', '╡': '╞',
+};
 
 /**
  * Swaps every box-drawing character with its left/right mirror image, converting NICE
@@ -70,7 +97,7 @@ const MIRRORED_BOX_CHARACTERS = { '┌': '┐', '┐': '┌', '├': '┤', '┤
  * @returns {string}
  */
 export function mirrorBoxCharacters(text) {
-    return text.replace(/[┌┐├┤└┘]/g, (character) => MIRRORED_BOX_CHARACTERS[character]);
+    return text.replace(/[┌┐├┤└┘╞╡]/g, (character) => MIRRORED_BOX_CHARACTERS[character]);
 }
 
 /**
@@ -144,8 +171,17 @@ function splitIndent(line) {
  * Which kind of horizontal rule is this, if any? Works on both the NICE and the
  * REVERSED-NICE spelling, because the *pair* of end characters identifies the kind
  * regardless of which way round they are.
+ *
+ * Between two rows it is read *leniently*, because there the drawing carries a meaning a file may
+ * well have got only half right - and the cost of turning it away is not a lost header but a line
+ * that is no rule at all, which breaks the table in two. So a rule between two rows is the header's
+ * if either of its ends is "╞"/"╡" **or** any part of it is drawn doubled, and these all say the
+ * same thing and are all written back as the first:
+ *
+ *     ╞════╪════╡      ╞────┼────╡      ┤════┼════├      ╡════╪════╞
+ *
  * @param {string} body
- * @returns {'top' | 'middle' | 'bottom' | null}
+ * @returns {'top' | 'middle' | 'header' | 'bottom' | null}
  */
 function ruleKind(body) {
     if (body.length < 2) {
@@ -161,7 +197,11 @@ function ruleKind(body) {
             return null;
         }
     }
-    for (const kind of /** @type {const} */ (['top', 'middle', 'bottom'])) {
+    if (ROW_RULE_END_CHARACTERS.includes(first) && ROW_RULE_END_CHARACTERS.includes(last)) {
+        return HEADER_RULE_END_CHARACTERS.includes(first) || HEADER_RULE_END_CHARACTERS.includes(last)
+            || DOUBLED_RULE_CHARACTER.test(body) ? 'header' : 'middle';
+    }
+    for (const kind of /** @type {const} */ (['top', 'bottom'])) {
         const [left, right] = RULE_ENDS[kind];
         if ((first === left || first === right) && (last === left || last === right)) {
             return kind;
@@ -171,8 +211,8 @@ function ruleKind(body) {
 }
 
 /**
- * Is this whole line one of a table's horizontal rules - "┌───┬───┐", "├───┼───┤", "└───┴───┘"
- * or any of their mirrored spellings? Used by the editor to give those lines a much tighter
+ * Is this whole line one of a table's horizontal rules - "┌───┬───┐", "├───┼───┤", "╞═══╪═══╡",
+ * "└───┴───┘" or any of their mirrored spellings? Used by the editor to give those lines a much tighter
  * line-height than the rows they separate.
  *
  * @param {string} line   A full document line, indentation and all.
@@ -285,6 +325,9 @@ function markdownCellBounds(body) {
  *                                   rows preceded it - which is exactly the index of the rule
  *                                   that replaces it on output (rules are re-derived, so an
  *                                   input rule has no counterpart to be found by position).
+ * @property {number} headerRows     How many of the leading rows are the table's header - 0 for
+ *                                   the great majority of tables, which declare none. The header
+ *                                   rule is drawn after this many rows, and nowhere else.
  * @property {number} columnCount
  */
 
@@ -356,15 +399,16 @@ function parseBlocks(lines) {
  * formats is recognised, exactly as formatTables() recognises it.
  *
  * @param {string} content
- * @returns {{ firstLine: number, lineCount: number, rows: string[][][] }[]}
- *          `rows[rowIndex][lineInRow][columnIndex]` is a cell's trimmed text on one of its lines.
+ * @returns {{ firstLine: number, lineCount: number, headerRows: number, rows: string[][][] }[]}
+ *          `rows[rowIndex][lineInRow][columnIndex]` is a cell's trimmed text on one of its lines,
+ *          and the first `headerRows` of them are the table's header.
  */
 export function parseTables(content) {
     return parseBlocks(content.split('\n'))
         .filter((block) => block.type === 'table')
         .map((block) => {
-            const { firstLine, lineCount, rows } = /** @type {TableBlock} */ (block);
-            return { firstLine, lineCount, rows: rows.map((row) => row.lines) };
+            const { firstLine, lineCount, headerRows, rows } = /** @type {TableBlock} */ (block);
+            return { firstLine, lineCount, headerRows, rows: rows.map((row) => row.lines) };
         });
 }
 
@@ -393,10 +437,17 @@ function parseBoxTable(lines, from, to, indent) {
     /** @type {TableRow[]} */ const rows = [];
     /** @type {Map<number, number>} */ const ruleRows = new Map();
     /** @type {TableRow | null} */ let currentRow = null;
+    let headerRows = 0;
 
     for (let i = from; i < to; i++) {
         const { body } = splitIndent(lines[i]);
-        if (ruleKind(body) !== null) {
+        const kind = ruleKind(body);
+        if (kind !== null) {
+            // A doubled rule says the rows above it are the header. Only the first one counts:
+            // a table has one header, and it is at the top.
+            if (kind === 'header' && !headerRows) {
+                headerRows = rows.length;
+            }
             ruleRows.set(i, rows.length);
             currentRow = null;
             continue;
@@ -422,7 +473,7 @@ function parseBoxTable(lines, from, to, indent) {
         currentRow.sourceLines.push({ lineIndex: i, cellRanges });
     }
 
-    return finishTable(rows, ruleRows, from, to, indent);
+    return finishTable(rows, ruleRows, headerRows, from, to, indent);
 }
 
 /**
@@ -435,10 +486,16 @@ function parseBoxTable(lines, from, to, indent) {
 function parseMarkdownTable(lines, from, to, indent) {
     /** @type {TableRow[]} */ const rows = [];
     /** @type {Map<number, number>} */ const ruleRows = new Map();
+    let headerRows = 0;
 
     for (let i = from; i < to; i++) {
         const { body } = splitIndent(lines[i]);
         if (isMarkdownSeparatorRow(body)) {
+            // "|---|---|" is exactly what Markdown has to say about a header, and the first one
+            // is the header's: a separator before any row at all declares nothing.
+            if (!headerRows) {
+                headerRows = rows.length;
+            }
             ruleRows.set(i, rows.length);
             continue;
         }
@@ -453,7 +510,7 @@ function parseMarkdownTable(lines, from, to, indent) {
         rows.push({ lines: [cells], sourceLines: [{ lineIndex: i, cellRanges }] });
     }
 
-    return finishTable(rows, ruleRows, from, to, indent);
+    return finishTable(rows, ruleRows, headerRows, from, to, indent);
 }
 
 /**
@@ -461,12 +518,13 @@ function parseMarkdownTable(lines, from, to, indent) {
  * deal with ragged rows (which is what a half-typed edit looks like).
  * @param {TableRow[]} rows
  * @param {Map<number, number>} ruleRows
+ * @param {number} headerRows
  * @param {number} from
  * @param {number} to
  * @param {string} indent
  * @returns {TableBlock}
  */
-function finishTable(rows, ruleRows, from, to, indent) {
+function finishTable(rows, ruleRows, headerRows, from, to, indent) {
     let columnCount = 1;
     for (const row of rows) {
         for (const line of row.lines) {
@@ -480,7 +538,8 @@ function finishTable(rows, ruleRows, from, to, indent) {
             }
         }
     }
-    return { type: 'table', firstLine: from, lineCount: to - from, indent, rows, ruleRows, columnCount };
+    return { type: 'table', firstLine: from, lineCount: to - from, indent, rows, ruleRows,
+             headerRows: Math.min(headerRows, rows.length), columnCount };
 }
 
 
@@ -583,7 +642,7 @@ function binarySearchLine(lineStarts, position) {
  * @returns {{ lines: string[], resolve: (descriptor: CursorDescriptor) => { line: number, column: number } | null }}
  */
 function renderTable(block, blockIndex, isRtl, descriptors, outputFirstLine) {
-    const { rows, columnCount, indent } = block;
+    const { rows, columnCount, indent, headerRows } = block;
 
     // Every row is laid out the same way - there is no header row. A box table gives no way to
     // mark one, so treating the first row specially could not survive a round-trip anyway.
@@ -613,21 +672,23 @@ function renderTable(block, blockIndex, isRtl, descriptors, outputFirstLine) {
     /** @type {Map<string, {line: number, column: number}>} */ const cellPositions = new Map();
     /** @type {number[]} */ const rulePositions = [];
 
-    /** @param {'top' | 'middle' | 'bottom'} kind */
+    /** @param {'top' | 'middle' | 'header' | 'bottom'} kind */
     const pushRule = (kind) => {
         let [left, right] = RULE_ENDS[kind];
         if (isRtl) {
             [left, right] = [right, left];
         }
         const junction = RULE_JUNCTIONS[kind];
+        const horizontal = RULE_HORIZONTALS[kind];
         rulePositions.push(outputFirstLine + out.length);
-        out.push(indent + left + widths.map((width) => HORIZONTAL.repeat(width)).join(junction) + right);
+        out.push(indent + left + widths.map((width) => horizontal.repeat(width)).join(junction) + right);
     };
 
     pushRule('top');
     for (let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
         if (rowIndex > 0) {
-            pushRule('middle');
+            // The one rule that is not a plain one: the table's header ends here.
+            pushRule(rowIndex === headerRows ? 'header' : 'middle');
         }
         const row = rows[rowIndex];
         for (let lineInRow = 0; lineInRow < row.lines.length; lineInRow++) {
@@ -889,6 +950,10 @@ export function editTableAtCursor(content, isRtl, position, operation) {
         const started = new Array(block.columnCount).fill('');
         started[columnIndex] = text.slice(descriptor.offset);
         block.rows.splice(descriptor.rowIndex + 1, 0, { lines: [started], sourceLines: [] });
+        // A row started *within* the header belongs to it; one started right below it does not.
+        if (descriptor.rowIndex + 1 < block.headerRows) {
+            block.headerRows++;
+        }
         target = { kind: 'cell', blockIndex: descriptor.blockIndex, rowIndex: descriptor.rowIndex + 1,
                    lineInRow: 0, columnIndex, offset: 0, padding: 0 };
 
@@ -932,6 +997,54 @@ export function editTableAtCursor(content, isRtl, position, operation) {
     }
 
     return renderDocument(lines, blocks, isRtl, [target]);
+}
+
+/**
+ * Turns the rule the cursor is on into the header rule, or back into a plain one.
+ *
+ * This is what lets a header be switched on and off by typing: the editor catches "=" / "═" and
+ * "-" / "─" on a rule line and calls this instead of inserting the character, which on a rule line
+ * would break the drawing. Only a rule standing *between two rows* can carry a header - the top and
+ * bottom rules are the box itself - so on either of those the keystroke is simply swallowed.
+ *
+ * Switching a header *off* only does anything on the header's own rule: typing "-" on some other
+ * rule of the same table must not quietly remove a header the cursor is nowhere near.
+ *
+ * @param {string} content
+ * @param {boolean} isRtl
+ * @param {number} position   The cursor, as a document offset.
+ * @param {boolean} header    Whether this rule should be the header's.
+ * @returns {{ content: string, positions: number[] } | null}
+ *          null when the cursor is not on a table's rule at all, and the keystroke is an ordinary
+ *          one; otherwise the document to put in its place - unchanged when there is nothing to do,
+ *          which still consumes the keystroke.
+ */
+export function setHeaderAtCursor(content, isRtl, position, header) {
+    const lines = content.split('\n');
+    const blocks = parseBlocks(lines);
+    if (!blocks.some((block) => block.type === 'table')) {
+        return null;
+    }
+
+    const lineStarts = computeLineStarts(lines);
+    const descriptor = describeCursorAt(blocks, lineStarts, lines, clamp(position, 0, content.length));
+    if (descriptor.kind !== 'rule') {
+        return null;
+    }
+
+    const block = /** @type {TableBlock} */ (blocks[descriptor.blockIndex]);
+    const rowsBefore = /** @type {number} */ (descriptor.rowsBefore);
+    if (rowsBefore < 1 || rowsBefore >= block.rows.length) {
+        return { content, positions: [position] };
+    }
+
+    const wanted = header ? rowsBefore
+        : (block.headerRows === rowsBefore ? 0 : block.headerRows);
+    if (block.headerRows === wanted) {
+        return { content, positions: [position] };
+    }
+    block.headerRows = wanted;
+    return renderDocument(lines, blocks, isRtl, [descriptor]);
 }
 
 /**
