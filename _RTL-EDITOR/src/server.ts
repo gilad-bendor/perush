@@ -1,85 +1,23 @@
 import { file, serve } from "bun";
-import { join, extname, basename, dirname } from "path";
-import { readdir, stat, readFile, writeFile, mkdir, rename, unlink } from "fs/promises";
+import { join } from "path";
+import { readFile, stat, mkdir } from "fs/promises";
 import { watch } from "fs";
 import { renderTerminalOutput } from "./terminal-render";
 // The very module the browser loads - so that a table is laid out identically on both sides.
 import { formatTables, isAiGeneratedFile } from "../public/src/tables.js";
 import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes";
 import type { FileSystemChange } from "./fs-changes";
+import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
+import { HtmlMirror } from "./html-mirror";
+import { writeFileSafe } from "./write-file-safe";
 
 const PORT = 4000;
-const MARKDOWN_DIR = "..";
-
-const exclusions = new Set(["scripts", ".idea", ".git", ".DS_Store"]);
-
-export type FileData = {
-    name: string;
-    type: "directory" | "file";
-    path: string;
-    children: FileData[];
-};
 
 async function ensureMarkdownDir() {
     try {
         await stat(MARKDOWN_DIR);
     } catch {
         await mkdir(MARKDOWN_DIR, { recursive: true });
-    }
-}
-
-async function getMarkdownFiles(dir: string, basePath = ""): Promise<FileData[]> {
-    try {
-        const entries = await readdir(dir, { withFileTypes: true });
-        const files: any[] = [];
-
-        for (const entry of entries) {
-            if (exclusions.has(entry.name)) {
-                continue;
-            }
-            const fullPath = join(dir, entry.name);
-            const relativePath = join(basePath, entry.name);
-
-            // Use stat() instead of checking entry type to follow symbolic links
-            let stats;
-            try {
-                stats = await stat(fullPath);
-            } catch {
-                // Skip entries that can't be accessed
-                continue;
-            }
-
-            if (stats.isDirectory()) {
-                // Symlinks to directories are not followed (avoids cycles / duplicate trees).
-                // Symlinks to files are listed like regular files.
-                if (entry.isSymbolicLink()) {
-                    continue;
-                }
-                const children = await getMarkdownFiles(fullPath, relativePath);
-                // Only include directories that have .md file descendants
-                if (children.length > 0) {
-                    files.push({
-                        name: entry.name,
-                        type: "directory",
-                        path: relativePath,
-                        children
-                    });
-                }
-            } else if (stats.isFile() && extname(entry.name) === ".md") {
-                files.push({
-                    name: entry.name,
-                    type: "file",
-                    path: relativePath
-                });
-            }
-        }
-
-        return files.sort((a, b) => {
-            if (a.type === b.type) return a.name.localeCompare(b.name);
-            return a.type === "directory" ? -1 : 1;
-        });
-    } catch {
-        return [];
     }
 }
 
@@ -100,6 +38,8 @@ async function getMarkdownFiles(dir: string, basePath = ""): Promise<FileData[]>
 
 const fsChangeLog = new FsChangeLog();
 let fsSnapshot = new Set<string>();
+/** Created once the tree has been walked for the first time - see startWatchingTree(). */
+let htmlMirror: HtmlMirror | null = null;
 
 /** How long to let events settle before rescanning - one rescan for a burst of them. */
 const RESCAN_DEBOUNCE_MS = 150;
@@ -119,6 +59,8 @@ async function rescanTree(): Promise<void> {
             fsSnapshot = nextSnapshot;
             if (changes.length) {
                 fsChangeLog.record(changes);
+                // A folder that came or went lists each of its files, so this covers those too.
+                for (const change of changes) htmlMirror?.scheduleSync(change.path);
                 console.log(`Filesystem: ${changes.map(c => `${c.changeType[0]} ${c.path}`).join(", ")}`);
             }
         } catch (error) {
@@ -145,12 +87,25 @@ async function startWatchingTree() {
     try {
         watch(MARKDOWN_DIR, { recursive: true }, (_eventType, filename) => {
             if (isIgnoredWatchPath(filename && String(filename), exclusions)) return;
+            // A file merely edited - by the editor's own save, git, ClaudeCode - is no change to the
+            // tree, so the rescan would not report it; its HTML page has to hear about it from here.
+            htmlMirror?.scheduleSync(String(filename));
             scheduleRescan();
         });
     } catch (error) {
         console.error("Cannot watch the tree - falling back on the periodic rescan:", error);
     }
-    setInterval(() => void rescanTree(), RESCAN_INTERVAL_MS);
+    // The same rescan brings the HTML pages up to date - for an event fs.watch never delivered, and
+    // for everything that changed while the server was down.
+    htmlMirror = await HtmlMirror.create(MARKDOWN_DIR);
+    const syncHtmlMirror = async () => {
+        const { rendered, removed, indexes } = await htmlMirror!.syncTree(fsSnapshot);
+        if (rendered || removed || indexes) {
+            console.log(`HTML mirror: ${rendered} page(s) rendered, ${removed} removed, ${indexes} folder index(es) updated`);
+        }
+    };
+    void syncHtmlMirror();
+    setInterval(() => void rescanTree().then(syncHtmlMirror), RESCAN_INTERVAL_MS);
 }
 
 /**
@@ -314,41 +269,6 @@ serve({
         return new Response("Not Found", { status: 404 });
     }
 });
-
-// Like fs.promises.writeFile() with these differences:
-// 1. "Safe": will never write half-file.
-// 2. Will auto-create the directory if it does not exist.
-// We first write to a temporary file, and then rename it to the final file -
-//  so the operation is atomic (more thread-safe and crash-resilient).
-async function writeFileSafe(filePath: string, fileContents: string): Promise<void> {
-    const tmpFilePath = join(
-        dirname(filePath),
-        `.tmp.${basename(filePath)}.${Math.random().toString(36).substring(2)}`,
-    );
-
-    // Write the temporary file - with auto-creation of the directory.
-    try {
-        await writeFile(tmpFilePath, fileContents, 'utf-8');
-    } catch (error) {
-        if ((error as any).code !== 'ENOENT') {
-            throw error;
-        }
-        // Maybe the directory does not exist - create the directory and try to write the temporary file again.
-        await mkdir(dirname(tmpFilePath), { recursive: true });
-        await writeFile(tmpFilePath, fileContents, 'utf-8');
-    }
-
-    // Move the temporary file over the final file - this is atomic and thread-safe.
-    try {
-        await rename(tmpFilePath, filePath);
-    } catch (error) {
-        // Something went wrong when moving the temporary file over the final file: cleanup and throw.
-        try {
-            await unlink(tmpFilePath);
-        } catch {}
-        throw error;
-    }
-}
 
 console.log(`Server running at http://localhost:${PORT}`);
 

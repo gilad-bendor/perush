@@ -26,6 +26,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - The file tree keeps up with the disk: a file or folder created or deleted by anything else - git,
    ClaudeCode, the Finder - shows up within a second, and a tab whose file was deleted turns into
    the same "file not found" tab a reload would give it
+- Every Markdown file of the tree is kept as a readable HTML page under `../HTML-FROM-MD/` (git-ignored),
+   re-rendered within a second of any change, with an `index.html` in every folder - see "The HTML mirror" below
 
 ## Setup
 
@@ -38,12 +40,21 @@ bun run dev
 
 # Build for production
 bun run build
+
+# Bring ../HTML-FROM-MD up to date once, without the server
+bun run build-html
 ```
 
 ## Project Structure
 
 - `src/server.ts` - Main Bun web server
 - `src/fs-changes.ts` - Tree snapshots, their differences, and the log a client polls
+- `src/markdown-tree.ts` - The tree of `.md` files the editor shows, and the names it skips
+- `src/md-to-html.ts` - A Markdown file as a readable, self-contained HTML page
+- `src/html-mirror.ts` - Which file's page goes where, and keeping `../HTML-FROM-MD` up to date
+- `src/folder-index.ts` - The `index.html` of every folder of `../HTML-FROM-MD`
+- `src/build-html.ts` - `bun run build-html`
+- `src/write-file-safe.ts` - Atomic file writes, shared by the POST handler and the mirror
 - `public/` - Static frontend assets
 - `public/index.html` - Main interface
 - `public/src/app.js` - Frontend entry point (imports markdown-editor.js)
@@ -55,6 +66,7 @@ bun run build
 - `tests/tables.test.ts` - Unit tests for `tables.js` (`bun test`)
 - `tests/links.test.ts` - Unit tests for `links.js` (`bun test`)
 - `tests/fs-changes.test.ts` - Unit tests for `fs-changes.ts` (`bun test`)
+- `tests/md-to-html.test.ts` / `tests/html-mirror.test.ts` - Unit tests for the HTML mirror (`bun test`)
 
 ## API Endpoin
 - `GET /api/files` - `{files, serverTimestamp}`: the whole tree, and a cursor to poll changes with
@@ -316,6 +328,70 @@ Two things follow from reusing that path:
 - **A file that comes back is loaded for real**, again through `loadTabContent()`. A tab that was
   never shown has no editor to rebuild, so it just drops its cached `loadPromise` and is fetched
   when it is finally shown.
+
+### The HTML mirror
+
+Every `.md` file the file tree shows gets a page: `<path>/<name>.md` → `../HTML-FROM-MD/<path>/<name>.html`
+(so `X.rtl.md` → `X.rtl.html`). The verbatim records are left out - `*.ai.md`, `*.ai.rtl.md`,
+`*.script.md`, `*.script.rtl.md` (`isMirroredFile()`). The folder is git-ignored, and is itself in
+`exclusions`, as is `node_modules` - whose vendor READMEs would otherwise have been both listed and mirrored.
+
+**Rendering** (`md-to-html.ts`, markdown-it) aims to *look* like the editor - David for RTL, the same
+heading sizes, shaded inline code and quotes, the pseudo-tag colours - while *reading* like a
+document: no Markdown syntax characters. The CSS is inlined into every page (`PAGE_STYLE`), copied
+from `style.css` and the editor's `HighlightStyle` - change one, check the other. Beyond CommonMark:
+
+- **A single newline is a line break** (`breaks: true`) - the files are written a sentence per line.
+- **Tables** in any of the three formats become `<table>`, via `parseTables()` from `tables.js`, and
+  with **no header row**, as in the editor. markdown-it's own GFM table rule is disabled. A cell's lines
+  are joined with line breaks, and its Markdown is rendered.
+- **Pseudo-tags** - `<עיון>` ... `</עיון>`, each on a line of its own, indentation allowed - become a
+  `.pseudo-tag` box whose first line is the tag's name (and any attribute values: `ניתוח-לשוני: רֶמֶשׂ`),
+  centred. The name must hold a non-ASCII letter, which is what tells one from a real HTML tag, and
+  it must be closed further down - otherwise the line is plain text.
+- **Raw HTML is escaped** (`html: false`), as the editor shows it as text too.
+- `*` / `**` inside inline code are bold, stars removed.
+- **An index** opens every page with at least 3 headings of `#`..`###` (`renderIndex()`): a collapsible
+  `<nav class="index">` titled **תוכן העניינים** in an RTL page and **Contents** in an LTR one, indented
+  from the shallowest level present. Headings inside a pseudo-tag, quote or list are not listed - they
+  are details of that block. Every heading gets an `id` (words joined by `-`, niqqud and punctuation
+  dropped, `-2`, `-3` for repeats), with or without an index, so a link can point at a section.
+- **Links** are rewritten by `mirroredHref()`: to a mirrored `.md` → its page; to anything else (an
+  `*.ai.md`, an image) → back to the original, one folder further up.
+
+**When a page is rendered** works like `make`: a page is stale when it is missing, older than its
+file, or older than the rendering code (`RENDERER_FILES`) - so a renderer change rebuilds every page,
+and a restart only redoes what went stale while the server was down. `HtmlMirror` is driven by
+`server.ts` from three places, with no hook in the POST handler:
+
+- **Startup** - `syncTree()` over the first snapshot (~0.5 s to render all ~600 files, ~40 ms when fresh).
+- **Every `fs.watch` event on a `.md` path** - `scheduleSync()`, debounced 300 ms per file. A file that
+  is only *edited* is no change to the tree, so the rescan would never report it; the editor's own
+  save arrives here too, as the rename at the end of `writeFileSafe()`. Files that come and go
+  (a whole folder included) are also scheduled from the rescan's diff.
+- **The 15 s periodic rescan** - `syncTree()` again, for dropped events. It also deletes pages whose
+  file left the tree, and prunes the folders that leaves empty - **unless the tree is empty**, which
+  is far likelier a failed walk than a deleted project.
+
+**Folder indexes.** `HTML-FROM-MD/` and every folder under it get an `index.html`
+(`folder-index.ts`): a breadcrumb trail back up, the subfolders and then the pages directly in the folder, and then a nested
+list of every page anywhere under it - folders first, as in the file tree, each folder linking to its
+own index and showing how many pages it holds. A page is named by its file without `.rtl.html` /
+`.html`, unless two pages of the folder would then share a name - then both keep their full name.
+A file named `index.md` would take its folder's index, so its page is `index.md.html` (`htmlPathFor()`).
+
+An index depends only on *which* pages exist, so it is not dated like a page: `syncIndexes()` renders
+them all and writes only those whose content differs from the file on disk. It runs at the end of
+every sweep, and - debounced - whenever a single file's sync makes a page appear or disappear, which
+`HtmlMirror.pagedFiles` tracks between sweeps (it is `null` until the first sweep, so a lone sync
+never writes indexes that know nothing of the rest of the tree). An index whose folder no longer
+holds a page is removed, deepest first - which is also what lets the folder itself be pruned, since
+`removePage()` can only remove a folder once it is empty. The sweep's orphan check skips files named
+`index.html`, or it would delete the indexes as pages without a file.
+
+A page is written after its file is read, so it ends up the newer of the two - which would hide an
+edit made *during* the render. `syncFile()` therefore re-stats the file afterwards and renders again
+if it moved.
 
 ### Markdown links
 

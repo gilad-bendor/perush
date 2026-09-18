@@ -351,6 +351,24 @@ function parseBlocks(lines) {
 }
 
 /**
+ * The tables of a document, as grids of cell texts - for a caller that *presents* a table rather
+ * than laying it out again (src/md-to-html.ts turns each into an HTML <table>). Any of the three
+ * formats is recognised, exactly as formatTables() recognises it.
+ *
+ * @param {string} content
+ * @returns {{ firstLine: number, lineCount: number, rows: string[][][] }[]}
+ *          `rows[rowIndex][lineInRow][columnIndex]` is a cell's trimmed text on one of its lines.
+ */
+export function parseTables(content) {
+    return parseBlocks(content.split('\n'))
+        .filter((block) => block.type === 'table')
+        .map((block) => {
+            const { firstLine, lineCount, rows } = /** @type {TableBlock} */ (block);
+            return { firstLine, lineCount, rows: rows.map((row) => row.lines) };
+        });
+}
+
+/**
  * Appends a single line to the trailing plain block, starting one if needed.
  * @param {Block[]} blocks
  * @param {number} lineIndex

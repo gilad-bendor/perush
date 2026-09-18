@@ -5,7 +5,7 @@
 // (fs.watch, the rescans it triggers) lives in server.ts; everything here is testable on its own.
 
 import { extname } from "path";
-import type { FileData } from "./server";
+import type { FileData } from "./markdown-tree";
 
 export type FileSystemChange = {
     /** As the file tree and /api/file name it. A folder ends with "/". */

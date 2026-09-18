@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, mirrorBoxCharacters, visualWidth } from "../public/src/tables.js";
+import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, mirrorBoxCharacters, parseTables, visualWidth } from "../public/src/tables.js";
 
 /** Formats and returns just the text, for the common case where the cursor is irrelevant. */
 function format(content: string, isRtl = false): string {
@@ -512,5 +512,24 @@ describe("ordinary deletion inside a cell", () => {
 
     test("and at the very start of a single-line cell too", () => {
         expect(editTableAtCursor(table, false, cell, "deleteBackward")!.content).toBe(table);
+    });
+});
+
+describe("parseTables", () => {
+    test("gives each table's place and its cells, row by row and line by line", () => {
+        const content = [
+            "text",
+            "┌─────┬─────┐",
+            "│ a   │ b   │",
+            "│ a2  │     │",
+            "├─────┼─────┤",
+            "│ c   │ d   │",
+            "└─────┴─────┘",
+            "| x | y |",
+        ].join("\n");
+        expect(parseTables(content)).toEqual([
+            { firstLine: 1, lineCount: 6, rows: [[["a", "b"], ["a2", ""]], [["c", "d"]]] },
+            { firstLine: 7, lineCount: 1, rows: [[["x", "y"]]] },
+        ]);
     });
 });
