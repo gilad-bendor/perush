@@ -499,115 +499,16 @@ function initStrongFilterControls() {
 // Special handling of copy-to-clipboard (Ctrl+C): add verses' locations.
 function captureCopyToClipboard() {
     document.addEventListener('copy', (event) => {
-        const clipboardBuilder = [];
-        let versesCount = 0;
-
-        /**
-         * This is called whenever a text-excerpt is encountered.
-         * If the text belongs to a new verse, or if a verse is done - add verse's location.
-         * @param {number|null} verseIndex
-         */
-        function encounteredVerseIndex(verseIndex) {
-            if (verseIndex !== lastVerseIndex) {
-                encounteredHighlight(false);
-                const verseInfo = allVerses[lastVerseIndex];
-                if (verseInfo) {
-                    // A verse is closed.
-                    clipboardBuilder.push('`', ' (', verseInfo.book, ' ', verseInfo.chapter, ':', verseInfo.verse, ')');
-                    versesCount++;
-                }
-                if (typeof verseIndex === 'number') {
-                    // A verse is opened.
-                    if (clipboardBuilder.length > 0) {
-                        clipboardBuilder.push('\n');
-                    }
-                    clipboardBuilder.push('`');
-                }
-                lastVerseIndex = verseIndex;
-            }
-        }
-        let lastVerseIndex = null;
-
-        /**
-         * This is called whenever a text-excerpt is encountered, after encounteredVerseIndex():
-         *  words highlighted by the active search are wrapped in *...* - which the RTL-editor shows bold
-         *  even inside the verse's `...`.
-         * @param {boolean} isHighlighted
-         */
-        function encounteredHighlight(isHighlighted) {
-            if (isHighlighted !== insideHighlight) {
-                clipboardBuilder.push('*');
-                insideHighlight = isHighlighted;
-            }
-        }
-        let insideHighlight = false;
-
-        // Scan all ranges of the selection.
         const selection = window.getSelection();
+        const selectionRanges = [];
         for (let rangeIndex = 0; rangeIndex < selection.rangeCount; rangeIndex++) {
-            const selectionRange = selection.getRangeAt(rangeIndex);
-            const {startContainer, startOffset, endContainer, endOffset} = selectionRange;
-
-            /**
-             * Handle a text-node that overlaps with the selection.
-             * @param {Text} node
-             */
-            function handleNode(node) {
-                // Ignore hidden texts.
-                if (node.parentElement?.computedStyleMap().get('display')?.toString() === 'none') {
-                    return;
-                }
-
-                // If the text is inside a verse - then find the text's verse-index.
-                /** @type {HTMLElement} */ let verseElement;
-                for (verseElement = node.parentElement; verseElement && !verseElement.classList.contains('verse'); verseElement = verseElement.parentElement) {
-                }
-                const verseIndex = verseElement ? parseInt(verseElement?.dataset?.index) ?? null : null;
-                encounteredVerseIndex(verseIndex);
-
-                // Add the text-excerpt.
-                const selectedText = node.textContent.slice(
-                    (node === startContainer) ? startOffset : 0,
-                    (node === endContainer) ? endOffset : node.length
-                );
-                if (selectedText) {
-                    // An empty excerpt must not open a highlight - that would leave a stray "**".
-                    encounteredHighlight((verseIndex !== null) && !!node.parentElement?.closest('.highlighted-word'));
-                }
-                clipboardBuilder.push(selectedText);
-            }
-
-            // Walk the selection's text-nodes.
-            if ((startContainer === endContainer) && (startContainer.nodeType === document.TEXT_NODE)) {
-                handleNode(startContainer);
-            } else {
-                const walker = document.createTreeWalker(
-                    selectionRange.commonAncestorContainer,
-                    NodeFilter.SHOW_TEXT
-                );
-                let node;
-                while (node = walker.nextNode()) {
-                    // Skip nodes entirely before or after the range
-                    if (selectionRange.comparePoint(node, node.data.length) < 0) {
-                        // Node is before range.
-                        continue;
-                    }
-                    if (selectionRange.comparePoint(node, 0) > 0) {
-                        // Node is after range.
-                        break;
-                    }
-                    handleNode(node);
-                }
-            }
+            selectionRanges.push(selection.getRangeAt(rangeIndex));
         }
-
-        // Close any un-closed verse.
-        encounteredVerseIndex(null);
+        const {textToCopy, versesCount} = rangesToClipboardText(selectionRanges);
 
         // Copy to clipboard - only if we captured something. If the selection is inside an <input> or
         //  <textarea>, window.getSelection() returns nothing, so we let the browser's native copy run.
-        if (clipboardBuilder.length > 0) {
-            const textToCopy = clipboardBuilder.join('');
+        if (textToCopy) {
             copyTextToClipboard(
                 textToCopy,
                 (versesCount <= 1)
@@ -617,6 +518,120 @@ function captureCopyToClipboard() {
             return false;
         }
     });
+}
+
+/**
+ * The text that copying these ranges puts on the clipboard: every verse wrapped as `...` and followed by
+ *  its location, one verse per line, with the words highlighted by the active search wrapped in *...*.
+ * Used by the Ctrl+C handler (the ranges of the selection) and by the copy-all-results buttons.
+ * @param {Range[]} ranges
+ * @returns {{textToCopy: string, versesCount: number}}
+ */
+function rangesToClipboardText(ranges) {
+    const clipboardBuilder = [];
+    let versesCount = 0;
+
+    /**
+     * This is called whenever a text-excerpt is encountered.
+     * If the text belongs to a new verse, or if a verse is done - add verse's location.
+     * @param {number|null} verseIndex
+     */
+    function encounteredVerseIndex(verseIndex) {
+        if (verseIndex !== lastVerseIndex) {
+            encounteredHighlight(false);
+            const verseInfo = allVerses[lastVerseIndex];
+            if (verseInfo) {
+                // A verse is closed.
+                clipboardBuilder.push('`', ' (', verseInfo.book, ' ', verseInfo.chapter, ':', verseInfo.verse, ')');
+                versesCount++;
+            }
+            if (typeof verseIndex === 'number') {
+                // A verse is opened.
+                if (clipboardBuilder.length > 0) {
+                    clipboardBuilder.push('\n');
+                }
+                clipboardBuilder.push('`');
+            }
+            lastVerseIndex = verseIndex;
+        }
+    }
+    let lastVerseIndex = null;
+
+    /**
+     * This is called whenever a text-excerpt is encountered, after encounteredVerseIndex():
+     *  words highlighted by the active search are wrapped in *...* - which the RTL-editor shows bold
+     *  even inside the verse's `...`.
+     * @param {boolean} isHighlighted
+     */
+    function encounteredHighlight(isHighlighted) {
+        if (isHighlighted !== insideHighlight) {
+            clipboardBuilder.push('*');
+            insideHighlight = isHighlighted;
+        }
+    }
+    let insideHighlight = false;
+
+    // Scan all the ranges.
+    for (const selectionRange of ranges) {
+        const {startContainer, startOffset, endContainer, endOffset} = selectionRange;
+
+        /**
+         * Handle a text-node that overlaps with the selection.
+         * @param {Text} node
+         */
+        function handleNode(node) {
+            // Ignore hidden texts.
+            if (node.parentElement?.computedStyleMap().get('display')?.toString() === 'none') {
+                return;
+            }
+
+            // If the text is inside a verse - then find the text's verse-index.
+            /** @type {HTMLElement} */ let verseElement;
+            for (verseElement = node.parentElement; verseElement && !verseElement.classList.contains('verse'); verseElement = verseElement.parentElement) {
+            }
+            const verseIndex = verseElement ? parseInt(verseElement?.dataset?.index) ?? null : null;
+            encounteredVerseIndex(verseIndex);
+
+            // Add the text-excerpt.
+            const selectedText = node.textContent.slice(
+                (node === startContainer) ? startOffset : 0,
+                (node === endContainer) ? endOffset : node.length
+            );
+            if (selectedText) {
+                // An empty excerpt must not open a highlight - that would leave a stray "**".
+                encounteredHighlight((verseIndex !== null) && !!node.parentElement?.closest('.highlighted-word'));
+            }
+            clipboardBuilder.push(selectedText);
+        }
+
+        // Walk the selection's text-nodes.
+        if ((startContainer === endContainer) && (startContainer.nodeType === document.TEXT_NODE)) {
+            handleNode(startContainer);
+        } else {
+            const walker = document.createTreeWalker(
+                selectionRange.commonAncestorContainer,
+                NodeFilter.SHOW_TEXT
+            );
+            let node;
+            while (node = walker.nextNode()) {
+                // Skip nodes entirely before or after the range
+                if (selectionRange.comparePoint(node, node.data.length) < 0) {
+                    // Node is before range.
+                    continue;
+                }
+                if (selectionRange.comparePoint(node, 0) > 0) {
+                    // Node is after range.
+                    break;
+                }
+                handleNode(node);
+            }
+        }
+    }
+
+    // Close any un-closed verse.
+    encounteredVerseIndex(null);
+
+    return {textToCopy: clipboardBuilder.join(''), versesCount};
 }
 
 /**
@@ -1187,7 +1202,7 @@ function executeSearch() {
     // Show the verbatim search-query on the left sidebar (clear prior visuals first).
     clearSearchVisuals();
     setCentralLeftVisibilityAndClear(true);
-    showMessage(`חיפוש: <code>${escapeHtml(searchQuery)}</code>`, 'search-results');
+    const searchQueryMessage = showMessage(`חיפוש: <code>${escapeHtml(searchQuery)}</code>`, 'search-results');
 
     // Warn if data is still being loaded
     if (!allDataWasAdded) {
@@ -1222,11 +1237,11 @@ function executeSearch() {
     }
 
     let searchRegExp;
+    let groupIndex = 0;  // after the try: the number of <...> groups in the query
     try {
         // If <...inner-RegExp...> are used - replace with a pattern that matches the data format <SNumber/Type>.
         //  First, try matching inner-RegExp against word types (e.g. <פעל>, <שם#*>).
         //  If no word types match, fall back to strong-number search (numeric or Hebrew root word).
-        let groupIndex = 0;
         const searchQueryWithStrongNumbers = preprocessedSearchQuery.replace(/<(.+?)>/g, (wholeMatch, innerRegExpSource) => {
             const currentGroupIndex = groupIndex++;
             try {
@@ -1273,6 +1288,9 @@ function executeSearch() {
     }
 
     let matchesCount = 0;
+    // The results in the order they are shown, each with the Strong-numbers of its highlighted words -
+    //  which is what the "copy grouped results" button groups them by.
+    /** @type {{element: HTMLElement, strongNumbers: Set<number>}[]} */ const shownResults = [];
     for (const verseInfo of allVerses) {
         // Find all matches in verseInfo.searchableVerse - per match, get its start/end index in the verse
         /** @type {Set<number> | null} */ let highlightWordIndexes = null;
@@ -1327,6 +1345,10 @@ function executeSearch() {
                 verseInfo.verse
             );
             searchResultsElement.appendChild(searchMatchElement);
+            shownResults.push({
+                element: searchMatchElement,
+                strongNumbers: new Set([...highlightWordIndexes].map(wordIndex => verseInfo.strongs[wordIndex])),
+            });
 
             // Add a highlighted copy of the verse into the main text (this will hide the original verse via CSS)
             /** @type {HTMLElement} */ const highlightedVerseElement = searchMatchElement.cloneNode(true);
@@ -1344,7 +1366,85 @@ function executeSearch() {
     } else {
         summaryMessage.innerHTML = `נמצאו ${matchesCount} תוצאות:`;  // shown at the top of the search-results
     }
+    addCopyResultsButtons(searchQueryMessage, searchQuery, shownResults, groupIndex === 1);
     centralLeftElement.scrollTop = 0; // Success: scroll search-results to the top
+}
+
+/**
+ * Add the copy-all-results buttons to the search-query message at the top of the search-results:
+ *  - "Copy All Results" - whenever any result is shown.
+ *  - "Copy Grouped Results" - only when the query has exactly one <...> group (2xy2 and 22xy22 are one too)
+ *    that lists Strong-numbers to group by.
+ * @param {HTMLElement} searchQueryMessage
+ * @param {string} searchQuery
+ * @param {{element: HTMLElement, strongNumbers: Set<number>}[]} shownResults
+ * @param {boolean} hasSingleGroup
+ */
+function addCopyResultsButtons(searchQueryMessage, searchQuery, shownResults, hasSingleGroup) {
+    if (shownResults.length === 0) {
+        return;
+    }
+    const hasStrongLines = !!document.querySelector('.search-results .strong-filter-line');
+    const buttonsElement = document.createElement('span');
+    buttonsElement.className = 'copy-results-buttons';
+    for (const [isGrouped, icon, title] of [[false, '📋', 'Copy All Results'], [true, '🗂️', 'Copy Grouped Results']]) {
+        if (isGrouped && !(hasSingleGroup && hasStrongLines)) {
+            continue;
+        }
+        const buttonElement = document.createElement('button');
+        buttonElement.type = 'button';
+        buttonElement.className = 'copy-results-button';
+        buttonElement.title = title;
+        buttonElement.textContent = icon;
+        buttonElement.addEventListener('click', () => copySearchResults(searchQuery, shownResults, isGrouped));
+        buttonsElement.appendChild(buttonElement);
+    }
+    searchQueryMessage.appendChild(buttonsElement);
+}
+
+/**
+ * Copy the shown search results to the clipboard: the raw search text, and then per group -
+ *  the checked Strong-number lines (as shown in the search-results) followed by the group's verses,
+ *  in the same format as a Ctrl+C of them. Groups are separated by a blank line.
+ * Not grouped - a single group: all the checked lines, all the results.
+ * Grouped - a group per checked line of the query's only <...> group: the results whose highlighted
+ *  words include that Strong-number (so a result may appear in more than one group). Empty groups are left out.
+ * @param {string} searchQuery
+ * @param {{element: HTMLElement, strongNumbers: Set<number>}[]} shownResults
+ * @param {boolean} isGrouped
+ */
+function copySearchResults(searchQuery, shownResults, isGrouped) {
+    /** @type {HTMLElement[]} */ const checkedLines = [...document.querySelectorAll('.search-results .strong-filter-line')]
+        .filter(line => line.querySelector('.strong-filter-checkbox')?.checked);
+    const groups = isGrouped
+        ? checkedLines.map(line => {
+            const strongNumber = parseInt(line.querySelector('.strong-filter-checkbox').dataset.strong);
+            return {lines: [line], results: shownResults.filter(result => result.strongNumbers.has(strongNumber))};
+        })
+        : [{lines: checkedLines, results: shownResults}];
+
+    const textBlocks = [searchQuery];
+    let versesCount = 0;
+    let groupsCount = 0;
+    for (const group of groups) {
+        if (group.results.length === 0) {
+            continue;
+        }
+        const ranges = group.results.map(result => {
+            const range = document.createRange();
+            range.selectNodeContents(result.element);
+            return range;
+        });
+        const versesText = rangesToClipboardText(ranges);
+        versesCount += versesText.versesCount;
+        groupsCount++;
+        textBlocks.push([...group.lines.map(line => line.textContent), versesText.textToCopy].join('\n'));
+    }
+    copyTextToClipboard(
+        textBlocks.join('\n\n'),
+        isGrouped
+            ? `הועתקו ${versesCount} תוצאות ב-${groupsCount} קבוצות\n`
+            : `הועתקו ${versesCount} תוצאות\n`);
 }
 
 /**

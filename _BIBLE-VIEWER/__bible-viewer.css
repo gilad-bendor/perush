@@ -384,6 +384,22 @@ body {
     white-space: pre-wrap;
     overflow-wrap: anywhere;
 }
+/* The copy-all-results buttons, at the (visual) end of the search-query message. */
+.copy-results-buttons {
+    float: left;
+}
+.copy-results-button {
+    cursor: pointer;
+    padding: 0 3px;
+    margin: 0 1px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: none;
+}
+.copy-results-button:hover {
+    border-color: rgba(0,0,0,0.4);
+    background: rgba(128,128,128,0.2);
+}
 .search-result-regexp {
     direction: ltr;
     font-family: monospace;
