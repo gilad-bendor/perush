@@ -128,7 +128,9 @@ export async function renderTerminalOutput(
     content: string,
     options: RenderTerminalOptions = {},
 ): Promise<string> {
-    return (await renderTerminalLines(content, options)).join("\n");
+    return (await renderTerminalLines(content, options)).join("\n")
+        // Remove long sequences of several-digit numbers that Claude outputs
+        .replace(/\n(?: {6}\d{4,7} [-+ ].*\n){4,}/g, "\n");
 }
 
 /** Terminal geometry read off a recording's first line, plus the rest of the recording. */
