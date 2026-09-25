@@ -509,6 +509,7 @@ function captureCopyToClipboard() {
          */
         function encounteredVerseIndex(verseIndex) {
             if (verseIndex !== lastVerseIndex) {
+                encounteredHighlight(false);
                 const verseInfo = allVerses[lastVerseIndex];
                 if (verseInfo) {
                     // A verse is closed.
@@ -526,6 +527,20 @@ function captureCopyToClipboard() {
             }
         }
         let lastVerseIndex = null;
+
+        /**
+         * This is called whenever a text-excerpt is encountered, after encounteredVerseIndex():
+         *  words highlighted by the active search are wrapped in *...* - which the RTL-editor shows bold
+         *  even inside the verse's `...`.
+         * @param {boolean} isHighlighted
+         */
+        function encounteredHighlight(isHighlighted) {
+            if (isHighlighted !== insideHighlight) {
+                clipboardBuilder.push('*');
+                insideHighlight = isHighlighted;
+            }
+        }
+        let insideHighlight = false;
 
         // Scan all ranges of the selection.
         const selection = window.getSelection();
@@ -555,6 +570,10 @@ function captureCopyToClipboard() {
                     (node === startContainer) ? startOffset : 0,
                     (node === endContainer) ? endOffset : node.length
                 );
+                if (selectedText) {
+                    // An empty excerpt must not open a highlight - that would leave a stray "**".
+                    encounteredHighlight((verseIndex !== null) && !!node.parentElement?.closest('.highlighted-word'));
+                }
                 clipboardBuilder.push(selectedText);
             }
 
