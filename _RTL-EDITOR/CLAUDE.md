@@ -73,9 +73,11 @@ bun run rebuild-whole-html-folder
 - `public/src/tables.js` - Table parsing/formatting, shared by the browser and the server
 - `public/src/links.js` - Markdown-link parsing/resolution, behind Cmd+click-to-open
 - `public/src/pseudo-tags.js` - Which pseudo-tags are void, shared by the browser and the server
+- `public/src/hebrew-search.js` - What a plain Find matches in Hebrew text (niqqud, precomposed letters, shin/sin)
 - `public/style.css` - Styling with RTL support
 - `tests/tables.test.ts` - Unit tests for `tables.js` (`bun test`)
 - `tests/links.test.ts` - Unit tests for `links.js` (`bun test`)
+- `tests/hebrew-search.test.ts` - Unit tests for `hebrew-search.js` (`bun test`)
 - `tests/fs-changes.test.ts` - Unit tests for `fs-changes.ts` (`bun test`)
 - `tests/md-to-html.test.ts` / `tests/html-mirror.test.ts` / `tests/includes.test.ts` - Unit tests for
    the HTML mirror (`bun test`)
@@ -262,6 +264,23 @@ second `*` turn `*text*` into `**text**` rather than `*(*text*)*`.
 
 The RTL-only `;`-types-a-backquote binding dispatches `replaceSelection()` itself and so never
 reaches an input handler - it calls `wrapSelectionWith()` first for the same reason.
+
+### Searching Hebrew
+
+CodeMirror's Find is patched (the "HORRIBLE PATCH" at the end of `markdown-editor.js`) so that a plain,
+non-RegExp search goes through `hebrewSearchPattern()` in `public/src/hebrew-search.js`:
+
+- **Marks in the text are skipped** - niqqud, cantillation, maqaf, geresh/gershayim - so `נפש` finds `נַפְשֶׁךָ`.
+- **A letter matches its precomposed forms** (U+FB1D..U+FB4F): `שׁ` is often one character, U+FB2A, in a
+  pasted verse, and looks exactly like `ש` plus a dot. The forms are found by decomposing that range,
+  not listed by hand.
+- **A mark typed in the query must be on that letter** - written separately or baked into a precomposed
+  letter, in any order: `בּ` finds `בּ` and U+FB31, not a plain `ב`.
+- **Shin and sin**: a dot is not required, it *excludes the other one*. A dotless `ש` finds all of them;
+  `שׁ` finds `ש` and `שׁ`, never `שׂ`; `שׂ` finds `ש` and `שׂ`, never `שׁ`. A dotless shin in the text may be either.
+
+CodeMirror compiles with the `u` flag, where `\-` or `\,` outside a class is a syntax error - so only
+the RegExp syntax characters are escaped. A search with "regexp" ticked is left exactly as typed.
 
 ### Tab shortcuts
 

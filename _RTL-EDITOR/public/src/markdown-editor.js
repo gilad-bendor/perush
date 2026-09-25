@@ -13,6 +13,7 @@ import { TabData } from "./tab-data.js";
 import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, minimalReplacement, setHeaderAtCursor } from "./tables.js";
 import { markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "./links.js";
 import { isVoidPseudoTag } from "./pseudo-tags.js";
+import { hebrewSearchPattern } from "./hebrew-search.js";
 /** @typedef {import('../../src/server.ts').FileData} FileData */
 
 
@@ -1788,7 +1789,7 @@ const tableLinePlugin = ViewPlugin.fromClass(
 
 
 // HORRIBLE PATCH to CodeMirror to ignore Hebrew Nikud/Punctuation on search
-//  (not including RegExp search).
+//  (not including RegExp search). What a plain search matches is decided by hebrewSearchPattern().
 (() => {
     // When searching - ALWAYS use RegExpQuery - and never use StringQuery,
     //  so our override of RegExpCursor.prototype.next is always used.
@@ -1811,9 +1812,8 @@ const tableLinePlugin = ViewPlugin.fromClass(
             // @ts-ignore
             this._ALREADY_PATCHED_RE_ = true;
             if (!lastSearchIsRegExp) {
-                const patchedRegExpSource = this.re.source
-                    .replace(/[-[\]{}()*+?.,\\^$|#\x00-\x1f]/g, "\\$&")
-                    .replace(/[ א-ת]/g, letter => searchCharactersToOmit + (letterForms.get(letter) ?? letter) + searchCharactersToOmit);
+                // The query is still the text as typed - RegExp's `source` has only escaped its slashes and newlines.
+                const patchedRegExpSource = hebrewSearchPattern(this.re.source.replace(/\\\//g, '/').replace(/\\n/g, '\n'));
                 try {
                     this.re = new RegExp(patchedRegExpSource, this.re.flags);
                 } catch (error) {
@@ -1830,22 +1830,4 @@ const tableLinePlugin = ViewPlugin.fromClass(
         // @ts-ignore
         return originalRegExpCursorNext.apply(this, arguments);
     }
-
-    // Niqqud, cantillation, maqaf, sof pasuq, geresh/gershayim, and the varika (U+FB1E) - skipped wherever they are.
-    const searchCharactersToOmit = '[\\u0591-\\u05c7\\u05ef-\\u05f4\\ufb1e]*';
-
-    // A letter may also come precomposed with its marks - `שׁ` as the single U+FB2A, `בּ` as U+FB31 - which
-    // looks the same and is common in pasted verses. Each letter of the query matches all of its forms,
-    // as found by decomposing U+FB1D..U+FB4F (the one ligature of two letters, U+FB4F, is left out).
-    /** @type {Map<string, string>} */
-    const letterForms = new Map();
-    for (let code = 0xfb1d; code <= 0xfb4f; code++) {
-        const form = String.fromCharCode(code);
-        const decomposed = form.normalize('NFKD');
-        if (decomposed !== form && /^[א-ת][\u0591-\u05c7]*$/.test(decomposed)) {
-            const letter = decomposed[0];
-            letterForms.set(letter, (letterForms.get(letter) ?? `[${letter}`) + form);
-        }
-    }
-    for (const [letter, forms] of letterForms) letterForms.set(letter, forms + ']');
 })();
