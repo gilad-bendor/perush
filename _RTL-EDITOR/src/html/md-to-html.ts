@@ -54,6 +54,26 @@ const markdown = new MarkdownIt({
     typographer: false,
 });
 
+// A link target may hold spaces - `[x](מחקר ראשוני - פרומפט.rtl.md)` - as file names here do, and as the editor's
+// Cmd+click (links.js) already allows. CommonMark stops a bare target at the first space; this reads on to
+// the closing parenthesis, unless what follows the space is a title (`"t"`, `'t'`, `(t)`) or a newline.
+const parseLinkDestination = markdown.helpers.parseLinkDestination;
+markdown.helpers.parseLinkDestination = (str: string, start: number, max: number) => {
+    const result = parseLinkDestination(str, start, max);
+    if (!result.ok || str.charCodeAt(result.pos) !== 0x20) return result;
+    let level = 0;
+    let pos = result.pos;
+    for (; pos < max; pos++) {
+        const code = str.charCodeAt(pos);
+        if (code === 0x0a) return result;
+        if (code === 0x28) level++;
+        if (code === 0x29 && level-- === 0) break;
+    }
+    const target = str.slice(start, pos).trimEnd();
+    if (pos >= max || /\s["'(]/.test(target.slice(result.pos - start))) return result;
+    return { ok: true, pos: start + target.length, str: markdown.utils.unescapeAll(target) };
+};
+
 // Our table rule replaces the GFM one: it knows the box formats too, and makes no header row.
 markdown.disable("table");
 

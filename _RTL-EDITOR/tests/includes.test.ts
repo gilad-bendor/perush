@@ -283,6 +283,14 @@ describe("links of an embedded file", () => {
         expect(text).toBe("[אל](/x/d.md)");
     });
 
+    test("a target with spaces is rooted too, and one with a title is left alone", async () => {
+        const { text } = await expand("a.md", {
+            "a.md": '<כלול-בהדפסה מקור="dir/b.md">',
+            "dir/b.md": '[](מחקר ראשוני - פרומפט.md) [ת](c.md "כותרת")',
+        });
+        expect(text).toBe('[](/dir/מחקר ראשוני - פרומפט.md) [ת](c.md "כותרת")');
+    });
+
     test("the including file's own links are left as written", async () => {
         const { text } = await expand("dir/a.md", { "dir/a.md": "[אל](b.md)" });
         expect(text).toBe("[אל](b.md)");

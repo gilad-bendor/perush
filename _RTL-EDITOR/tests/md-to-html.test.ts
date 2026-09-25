@@ -211,6 +211,16 @@ describe("the errors of the included files", () => {
 });
 
 describe("links", () => {
+    test("a target may hold spaces, as file names here do", () => {
+        const out = markdownToHtml("[](./נפש/מחקר ראשוני - פרומפט.rtl.md) אחרי", { hrefFor: href => `[${href}]` });
+        expect(decodeURI(out.match(/href="([^"]*)"/)![1])).toBe("[./נפש/מחקר ראשוני - פרומפט.rtl.md]");
+        expect(out).toContain(">./נפש/מחקר ראשוני - פרומפט.rtl.md</a> אחרי");
+    });
+    test("a title after a space is still a title", () => {
+        const out = markdownToHtml('[a](x.md "the title")');
+        expect(out).toContain('title="the title"');
+        expect(out).toContain('href="x.md"');
+    });
     test("a link with no text shows its target, as written", () => {
         const out = markdownToHtml("[](../ניתוחים/עדן.rtl.md)", { hrefFor: href => `[${href}]` });
         expect(out).toContain(">../ניתוחים/עדן.rtl.md</a>");

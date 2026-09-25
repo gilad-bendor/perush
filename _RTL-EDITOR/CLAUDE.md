@@ -471,6 +471,8 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
 - **Links** are rewritten by `mirroredHref()`: to a mirrored `.md` → its page; to anything else (an
   `*.ai.md`, an image) → back to the original, one folder further up.
   A link with no text, `[](aaa/bbb.md)`, shows its target as written - `[aaa/bbb.md](aaa/bbb.md)`.
+  A target may hold spaces, `[x](מחקר ראשוני - פרומפט.rtl.md)`, as file names here do - CommonMark ends it at
+  the first space, so `md-to-html.ts` wraps markdown-it's `parseLinkDestination()`. A title after a space is still a title.
 - **On paper** the page is laid out for the sheet, by an `@media print` block at the end of
   `PAGE_STYLE`. See "Printing a page" below.
 
@@ -708,6 +710,8 @@ free of any editor dependency the way `tables.js` is, so it can be unit-tested o
   clicked position - so what lights up under the Cmd key is exactly what a click would open.
   The syntax tree is deliberately not used: it would answer a different question from the regexp,
   and the two would drift apart.
+  So `.cm-md-link` carries the link *colour* too, not only the syntax highlighting - which follows
+  CommonMark and would stop colouring a target at its first space, though a Cmd+click opens it.
 - **The pointer has to be over the link as painted, not merely over one of its offsets.** A click
   in a line's empty space still lands on a text position - in an RTL line the left edge maps to the
   *end* of the line, and a line that ends with a link would open it from anywhere to its left. So

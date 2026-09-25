@@ -358,7 +358,9 @@ function signed(shift: number): string {
 // A scheme ("https:", "mailto:") or a protocol-relative URL - not a path in the tree.
 const EXTERNAL_TARGET = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
 // Only a plain path is rewritten: one with a title after it, or wrapped in <>, is left as written.
-const PLAIN_TARGET = /^[^\s<>]+$/;
+// Spaces inside a path are fine - md-to-html.ts reads such a target to its closing parenthesis too.
+const PLAIN_TARGET = /^[^\s<>](?:[^<>]*[^\s<>])?$/;
+const TITLED_TARGET = /\s["'(]/;
 
 /**
  * The links of an embedded block, made to point at the same files from their new home.
@@ -394,7 +396,7 @@ function rewriteLinks(lines: string[], fromFilePath: string): string[] {
  * target is, percent-escapes and all - md-to-html.ts decodes it when it rewrites the href.
  */
 function rootedTarget(fromFilePath: string, rawTarget: string): string | null {
-    if (!PLAIN_TARGET.test(rawTarget) || EXTERNAL_TARGET.test(rawTarget)) return null;
+    if (!PLAIN_TARGET.test(rawTarget) || TITLED_TARGET.test(rawTarget) || EXTERNAL_TARGET.test(rawTarget)) return null;
     const hash = rawTarget.indexOf("#");
     const pathPart = hash < 0 ? rawTarget : rawTarget.slice(0, hash);
     const suffix = hash < 0 ? "" : rawTarget.slice(hash);

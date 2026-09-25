@@ -504,9 +504,15 @@ body {
     font-weight: bold;
 }
 
-/* Markdown links - "[text](path)". They are already coloured by the syntax highlighting; while the
-   Cmd key is held (Ctrl off macOS) they also say that a click would open them - see
-   showLinksAsClickable() and MarkdownEditor.openLinkAtCoords() in markdown-editor.js. */
+/* Markdown links - "[text](path)". Coloured here, over the whole span links.js finds, and not only by the
+   syntax highlighting: that follows CommonMark, which ends a target at its first space, and would leave
+   "(מחקר ראשוני - פרומפט.rtl.md)" uncoloured - though a Cmd+click opens it. While the Cmd key is held
+   (Ctrl off macOS) they also say that a click would open them - see showLinksAsClickable() and
+   MarkdownEditor.openLinkAtCoords() in markdown-editor.js. */
+.cm-md-link {
+    color: #0066cc;
+    text-decoration: underline;
+}
 .cm-content.cm-links-clickable .cm-md-link {
     cursor: pointer;
     text-decoration: underline;
