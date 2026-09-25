@@ -451,6 +451,7 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
   of contents" below.
 - **Links** are rewritten by `mirroredHref()`: to a mirrored `.md` → its page; to anything else (an
   `*.ai.md`, an image) → back to the original, one folder further up.
+  A link with no text, `[](aaa/bbb.md)`, shows its target as written - `[aaa/bbb.md](aaa/bbb.md)`.
 - **On paper** the page is laid out for the sheet, by an `@media print` block at the end of
   `PAGE_STYLE`. See "Printing a page" below.
 

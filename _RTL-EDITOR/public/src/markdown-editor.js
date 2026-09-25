@@ -1813,7 +1813,7 @@ const tableLinePlugin = ViewPlugin.fromClass(
             if (!lastSearchIsRegExp) {
                 const patchedRegExpSource = this.re.source
                     .replace(/[-[\]{}()*+?.,\\^$|#\x00-\x1f]/g, "\\$&")
-                    .replace(/([ אבגדהוזחטיךכלםמןנסעףפץצקרששׁשׂת])/g, searchCharactersToOmit + '$1' + searchCharactersToOmit);
+                    .replace(/[ א-ת]/g, letter => searchCharactersToOmit + (letterForms.get(letter) ?? letter) + searchCharactersToOmit);
                 try {
                     this.re = new RegExp(patchedRegExpSource, this.re.flags);
                 } catch (error) {
@@ -1831,5 +1831,21 @@ const tableLinePlugin = ViewPlugin.fromClass(
         return originalRegExpCursorNext.apply(this, arguments);
     }
 
-    const searchCharactersToOmit = '[\\u05b0\\u05b1\\u05b2\\u05b3\\u05b4\\u05b5\\u05b6\\u05b7\\u05b8\\u05b9\\u05ba\\u05bb\\u05bc\\u05bd\\u05be\\u05bf\\u05c0\\u05c1\\u05c2\\u05c3\\u05c4\\u05c5\\u05c6\\u05c7\\u0591\\u0592\\u0593\\u0594\\u0595\\u0596\\u0597\\u0598\\u0599\\u059a\\u059b\\u059c\\u059d\\u059e\\u059f\\u05a0\\u05a1\\u05a2\\u05a3\\u05a4\\u05a5\\u05a6\\u05a7\\u05a8\\u05a9\\u05aa\\u05ab\\u05ac\\u05ad\\u05ae\\u05af\\u05ef\\u05f0\\u05f1\\u05f2\\u05f3\\u05f4\\ufb1d\\ufb1e\\ufb1f\\ufb20\\ufb21\\ufb22\\ufb23\\ufb24\\ufb25\\ufb26\\ufb27\\ufb28\\ufb29\\ufb2c\\ufb2d\\ufb2e\\ufb2f\\ufb30\\ufb31\\ufb32\\ufb33\\ufb34\\ufb35\\ufb36\\ufb38\\ufb39\\ufb3a\\ufb3b\\ufb3c\\ufb3e\\ufb40\\ufb41\\ufb43\\ufb44\\ufb46\\ufb47\\ufb48\\ufb49\\ufb4a\\ufb4b\\ufb4c\\ufb4d\\ufb4e\\ufb4f]*';
+    // Niqqud, cantillation, maqaf, sof pasuq, geresh/gershayim, and the varika (U+FB1E) - skipped wherever they are.
+    const searchCharactersToOmit = '[\\u0591-\\u05c7\\u05ef-\\u05f4\\ufb1e]*';
+
+    // A letter may also come precomposed with its marks - `שׁ` as the single U+FB2A, `בּ` as U+FB31 - which
+    // looks the same and is common in pasted verses. Each letter of the query matches all of its forms,
+    // as found by decomposing U+FB1D..U+FB4F (the one ligature of two letters, U+FB4F, is left out).
+    /** @type {Map<string, string>} */
+    const letterForms = new Map();
+    for (let code = 0xfb1d; code <= 0xfb4f; code++) {
+        const form = String.fromCharCode(code);
+        const decomposed = form.normalize('NFKD');
+        if (decomposed !== form && /^[א-ת][\u0591-\u05c7]*$/.test(decomposed)) {
+            const letter = decomposed[0];
+            letterForms.set(letter, (letterForms.get(letter) ?? `[${letter}`) + form);
+        }
+    }
+    for (const [letter, forms] of letterForms) letterForms.set(letter, forms + ']');
 })();

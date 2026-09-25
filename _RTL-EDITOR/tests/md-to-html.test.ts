@@ -211,6 +211,10 @@ describe("the errors of the included files", () => {
 });
 
 describe("links", () => {
+    test("a link with no text shows its target, as written", () => {
+        const out = markdownToHtml("[](../ניתוחים/עדן.rtl.md)", { hrefFor: href => `[${href}]` });
+        expect(out).toContain(">../ניתוחים/עדן.rtl.md</a>");
+    });
     test("go through hrefFor, as written", () => {
         const out = markdownToHtml("[קישור](../ניתוחים/עדן.rtl.md#x)", { hrefFor: href => `[${href}]` });
         expect(decodeURI(out.match(/href="([^"]*)"/)![1])).toBe("[../ניתוחים/עדן.rtl.md#x]");

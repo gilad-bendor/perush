@@ -281,6 +281,23 @@ markdown.renderer.rules.code_inline = (tokens, index, _options, _env, renderer) 
 // ------------------------------------------------------------------------------------------------
 // Links
 
+// A link with no text of its own - `[](aaa/bbb.md)` - would be an invisible <a>; it shows its target instead,
+// as written. Pushed before rewrite_hrefs, so the text is the path in the file, not the page's href.
+markdown.core.ruler.push("empty_link_text", (state: StateCore) => {
+    for (const token of state.tokens) {
+        const children = token.children;
+        if (!children) continue;
+        for (let i = children.length - 2; i >= 0; i--) {
+            if (children[i].type !== "link_open" || children[i + 1].type !== "link_close") continue;
+            const href = children[i].attrGet("href");
+            if (!href) continue;
+            const text = new state.Token("text", "", 0);
+            text.content = safeDecodeUri(href);
+            children.splice(i + 1, 0, text);
+        }
+    }
+});
+
 markdown.core.ruler.push("rewrite_hrefs", (state: StateCore) => {
     const { hrefFor } = state.env as Env;
     if (!hrefFor) return;
