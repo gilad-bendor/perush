@@ -25,8 +25,20 @@ fi
 
 # Make sure Git is up-to-date (only if the current branch tracks an upstream).
 if git rev-parse --abbrev-ref --symbolic-full-name '@{u}' >/dev/null 2>&1 ; then
+  OLD_HEAD="$( git rev-parse HEAD )"
   if ! ( set -x ; git pull --ff-only ) > /tmp/git-pull-status 2>&1 ; then
     { echo "Can't git-pull:" ; cat /tmp/git-pull-status ; } 1>&2 || true
+    exit 2  # exit-code 2 causes Claude to show the output
+  fi
+  # Claude Code loads CLAUDE.md files and .claude/ settings *before* this hook runs -
+  # so if the pull changed them, this session is running with stale versions.
+  CHANGED_CONFIG="$( git diff --name-only "$OLD_HEAD" HEAD -- '.claude/' 'CLAUDE*.md' '**/CLAUDE*.md' )"
+  if [[ -n "$CHANGED_CONFIG" ]] ; then
+    {
+      echo "git-pull updated Claude's instructions/settings:"
+      echo "$CHANGED_CONFIG" | sed 's/^/  /'
+      echo "This session loaded the old versions before the pull - please start a new Claude session."
+    } 1>&2
     exit 2  # exit-code 2 causes Claude to show the output
   fi
 else
