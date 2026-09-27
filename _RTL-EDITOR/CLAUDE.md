@@ -738,10 +738,21 @@ printed - a list of links is no document to print - but every folder of the PDF 
 `index.html` of its own, listing its PDFs (see "Folder indexes" above).
 
 - **Printed from the page, not from the Markdown.** The page is what a reader sees, and its `@media print`
-  block (see "Printing a page") is already the layout meant for paper. So a PDF follows the same `make`
-  rule one step later: stale when missing, or older than its page or than `pdf-mirror.ts`.
+  block (see "Printing a page") is already the layout meant for paper.
+- **A PDF is judged by a stamp, not by dates.** Every PDF carries `/PerushSource` in its document info: an
+  MD5 of the page it was printed from, of `pdf-mirror.ts` and of where its links are pointed
+  (`sourceStamp()`), added after printing by `pdf-lib` (`withStamp()`). A PDF is stale when it is missing or
+  its stamp is not the one its page would give now. The HTML mirror's `make` rule could not be used one step
+  later, because the PDFs are committed: a fresh clone dates every file in whatever order git wrote it, which
+  would reprint PDFs that are right - or, worse, keep one printed from an older page. It also used to reprint
+  every PDF whenever a renderer edit made `syncPage()` re-date pages that came out identical.
+  - `readStamp()` reads only the first 8 KB: Chromium makes the document info object 1, and pdf-lib writes
+    objects in order. It falls back to the whole file. The PDF is saved without object streams, which would
+    compress the stamp out of sight.
+  - Both stamps - the page's and the PDF's - are cached by the file's `stat` (`cached()`), so a sweep reads
+    nothing that has not changed. A PDF without a stamp, or not printed by this code, is simply stale.
 - **HtmlMirror drives it**, through its `companion`: every `syncFile()` schedules the file's PDF, and every
-  sweep is one for the PDFs too - scheduling them all (a fresh one costs a `stat`) and deleting those
+  sweep is one for the PDFs too - scheduling them all (a fresh one costs two `stat`s) and deleting those
   whose file is gone. Nothing else - no watcher, no timer - has to know the PDFs exist.
 - **One browser, one file at a time, in the background.** Playwright's Chromium is launched when a PDF is
   due and closed after 30 s of nothing to do; `syncFile()` shares one print between the queue and the
