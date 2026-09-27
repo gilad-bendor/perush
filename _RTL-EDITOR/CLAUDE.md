@@ -28,7 +28,7 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - The file tree keeps up with the disk: a file or folder created or deleted by anything else - git,
    ClaudeCode, the Finder - shows up within a second, and a tab whose file was deleted turns into
    the same "file not found" tab a reload would give it
-- Every Markdown file of the tree is kept as a readable HTML page under `../HTML-FROM-MD/` (git-ignored),
+- Every Markdown file of the tree is kept as a readable HTML page under `../docs/_HTML-FROM-MD/` (committed, so GitHub Pages serves it),
    re-rendered within a second of any change, with an `index.html` in every folder - see "The HTML mirror" below
 - `<כלול-בהדפסה מקור="..." מ="..." עד="..." כותרות="+1">` embeds another Markdown file into this one -
    on the page only, never on disk. See "Embedding one file in another" below
@@ -36,7 +36,10 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
    again on the page only. A file without that line gets no index. See "The table of contents" below
 - A ```` ```html ```` fenced block is written to the page as raw HTML, the fence lines gone - the one
    way a file may put HTML of its own on its page. See "The raw-HTML fence" below
-- A print button beside the help button opens the current file's page in a tab of its own
+- Every page of the HTML mirror is also printed to a PDF under `../docs/_PDF-FROM-MD/`, easier to print and
+   to share - see "The PDF mirror" below
+- Two buttons beside the help button open the current file in a tab of its own: the printer its PDF,
+   the `</>` to its left its HTML page
 
 ## Setup
 
@@ -50,7 +53,7 @@ bun run dev
 # Build for production
 bun run build
 
-# Bring ../HTML-FROM-MD up to date once, without the server
+# Bring ../docs/_HTML-FROM-MD up to date once, without the server
 bun run rebuild-whole-html-folder
 ```
 
@@ -61,9 +64,10 @@ bun run rebuild-whole-html-folder
 - `src/markdown-tree.ts` - The tree of `.md` files the editor shows, and the names it skips
 - `src/html/` - The Markdown → HTML capability, entered through `HtmlMirror`
 - `src/html/md-to-html.ts` - A Markdown file as a readable, self-contained HTML page
-- `src/html/html-mirror.ts` - Which file's page goes where, and keeping `../HTML-FROM-MD` up to date
+- `src/html/html-mirror.ts` - Which file's page goes where, and keeping `../docs/_HTML-FROM-MD` up to date
 - `src/html/includes.ts` - `<כלול-בהדפסה>`: one Markdown file embedded into another, and the errors of it
-- `src/html/folder-index.ts` - The `index.html` of every folder of `../HTML-FROM-MD`
+- `src/html/folder-index.ts` - The `index.html` of every folder of `../docs/_HTML-FROM-MD`
+- `src/html/pdf-mirror.ts` - Every page of the HTML mirror printed to `../docs/_PDF-FROM-MD`, by Playwright's Chromium
 - `src/rebuild-whole-html-folder.ts` - `bun run rebuild-whole-html-folder`
 - `src/write-file-safe.ts` - Atomic file writes, shared by the POST handler and the mirror
 - `public/` - Static frontend assets
@@ -82,12 +86,16 @@ bun run rebuild-whole-html-folder
 - `tests/fs-changes.test.ts` - Unit tests for `fs-changes.ts` (`bun test`)
 - `tests/md-to-html.test.ts` / `tests/html-mirror.test.ts` / `tests/includes.test.ts` - Unit tests for
    the HTML mirror (`bun test`)
+- `tests/pdf-mirror.test.ts` - Unit tests for the PDF mirror - these print real PDFs, in Chromium
 
 ## API Endpoin
 - `GET /api/files` - `{files, serverTimestamp}`: the whole tree, and a cursor to poll changes with
 - `GET /api/file/:path?since=<cursor>` - `{content, readOnly?, serverTimestamp, recentFsChanges?, fsChangesUnknown?}`
 - `POST /api/file/:path` - Save file content
-- `GET /api/print/:path` - the file's page from the HTML mirror, as a page - see "The print button"
+- `GET /api/pdf/:path` - brings the file's PDF up to date, and redirects (302) to it under `/docs/_PDF-FROM-MD/` -
+  see "The print and HTML buttons"
+- `GET /api/html/:path` - the same for its page, under `/docs/_HTML-FROM-MD/`
+- `GET /docs/...` - `../docs/` as it is, the way GitHub Pages serves it: a folder is its `index.html`
 
 ## Configuration
 
@@ -429,7 +437,7 @@ Two things follow from reusing that path:
 
 ### The HTML mirror
 
-Every `.md` file the file tree shows gets a page: `<path>/<name>.md` → `../HTML-FROM-MD/<path>/<name>.html`
+Every `.md` file the file tree shows gets a page: `<path>/<name>.md` → `../docs/_HTML-FROM-MD/<path>/<name>.html`
 (so `X.rtl.md` → `X.rtl.html`). Only the terminal recordings are left out - `*.script.md`,
 `*.script.rtl.md` (`isMirroredFile()`) - because they are a raw VT control stream rather than
 Markdown, and nothing but the GET handler's `renderTerminalOutput()` can make text of them.
@@ -440,8 +448,16 @@ read. Their tables are the Markdown a model wrote, header separator and all, whi
 understands; so they render as `<table>`s with a proper `<thead>`, and are the main reason a header
 row is worth carrying at all.
 
-The folder is git-ignored, and is itself in `exclusions`, as is `node_modules` - whose vendor READMEs
-would otherwise have been both listed and mirrored.
+The folder lives under `docs/` and is **committed**, because `docs/` is what GitHub Pages serves - that is
+the point of it being there. `docs/.nojekyll` keeps Pages from running Jekyll, which would drop every
+file and folder whose name starts with `_` - both mirrors, and `_איסוף-מקדים/` and its like. It is written
+(`NO_JEKYLL_PATH`, with a line saying what it is) along with `docs/index.html`, so a `docs/` deleted whole
+comes back whole. The folder's own name,
+`HTML_MIRROR_NAME`, is in `exclusions` (which match a single path segment), as is `node_modules` - whose
+vendor READMEs would otherwise have been both listed and mirrored.
+
+On GitHub Pages only what is under `docs/` exists, so a link from a page to a file with no page of its
+own (an image, a `*.script.md`) - which leads back into the tree - is broken there, though it works locally.
 
 **Rendering** (`md-to-html.ts`, markdown-it) aims to *look* like the editor - David for RTL, the same
 heading sizes, shaded inline code and quotes, the pseudo-tag colours - while *reading* like a
@@ -469,8 +485,13 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
   block. Every heading gets an `id` (words joined by `-`, niqqud and punctuation dropped, `-2`, `-3`
   for repeats), whether it is listed or not, so a link can always point at a section. See "The table
   of contents" below.
+- **Links are written readably** - Hebrew as Hebrew, not `%D7%90` (`readableUrl()`, which replaces
+  markdown-it's `normalizeLink()`, and `readablePath()` for the indexes). Only what a URL cannot hold as it
+  is gets escaped - a space is still `%20` - and an escaped non-ASCII character already in the source is
+  decoded back. The browser encodes the link when it follows it. The two places this cannot reach: the
+  links inside a PDF, which the PDF format holds as ASCII, and the `Location` of the `/api/` redirects.
 - **Links** are rewritten by `mirroredHref()`: to a mirrored `.md` → its page; to anything else (an
-  `*.ai.md`, an image) → back to the original, one folder further up.
+  `*.ai.md`, an image) → back to the original, two folders further up.
   A link with no text, `[](aaa/bbb.md)`, shows its target as written - `[aaa/bbb.md](aaa/bbb.md)`.
   A target may hold spaces, `[x](מחקר ראשוני - פרומפט.rtl.md)`, as file names here do - CommonMark ends it at
   the first space, so `md-to-html.ts` wraps markdown-it's `parseLinkDestination()`. A title after a space is still a title.
@@ -506,12 +527,43 @@ ever: only a page whose content really changed makes its own dependents be re-sy
   file left the tree, and prunes the folders that leaves empty - **unless the tree is empty**, which
   is far likelier a failed walk than a deleted project.
 
-**Folder indexes.** `HTML-FROM-MD/` and every folder under it get an `index.html`
-(`folder-index.ts`): a breadcrumb trail back up, the subfolders and then the pages directly in the folder, and then a nested
+**Folder indexes.** `docs/_HTML-FROM-MD/` and every folder under it get an `index.html`
+(`folder-index.ts`): a breadcrumb trail back up, starting from `docs/index.html` - titled **פירוש** (`SITE_TITLE`) -
+and a `..` heading both lists, the subfolders and then the pages directly in the folder, and then a nested
 list of every page anywhere under it - folders first, as in the file tree, each folder linking to its
 own index and showing how many pages it holds. A page is named by its file without `.rtl.html` /
 `.html`, unless two pages of the folder would then share a name - then both keep their full name.
 A file named `index.md` would take its folder's index, so its page is `index.md.html` (`htmlPathFor()`).
+
+**What an index lists is what git would.** Only pages whose `.md` file git does not ignore - tracked, or
+new and not yet added (`git ls-files --cached --others --exclude-standard`) - and only the folders holding
+one; a folder with none gets no index. The pages of ignored files are still made, just not listed. When
+git cannot be asked (not a work tree) everything is listed.
+
+**Technical files.** A `.printignore`, in any folder, is read exactly like a `.gitignore` - git itself
+reads it (`--exclude-per-directory=.printignore`) - and the files it matches are *technical*: listed
+like any other, but as `li.technical`, hidden until the toggle at the top of every index,
+**הצג קבצים טכניים**, is ticked - a box stuck to the top of the viewport, however far the list is scrolled. A folder whose pages are all technical is technical itself, and a count
+that differs shows as two spans, `.plain-count` and `.all-count`, of which the CSS shows one.
+- **The toggle is the URL's hash**, `#show-technical` - off by default, so a link can be shared as it is
+  seen. Ticking it `pushState`s the hash, and `popstate`/`hashchange` put the page back in step, which
+  is what makes Back/Forward walk through the toggles.
+- **Every link of the index carries the hash on**, rewritten in place whenever the toggle moves - so
+  the next folder opens as this one was left, and so does a link copied or opened in a new tab.
+- With JavaScript off the technical files stay hidden: the hiding is CSS on `body:not(.show-technical)`.
+
+Neither a `.gitignore` nor a `.printignore` is a Markdown file, so an edit to one reaches the indexes
+through the 15 s sweep.
+
+**`docs/index.html`** - the page GitHub Pages opens with - is the index of `docs/` itself (`SITE_INDEX_PATH`,
+`siteIndexPage()`): the two mirrors, each with its count and linking to its own index, and any other page
+or PDF standing directly in `docs/` (`bible-viewer.html`) - and no nested list, which would only be every
+mirror over again. It is titled **פירוש** (`SITE_TITLE`), and every mirror's breadcrumb trail starts
+there, `פירוש / _HTML-FROM-MD / ...`, so a mirror's root index has a `..` too.
+
+**The PDF mirror's indexes are written here as well**, by the same `syncIndexes()`: it holds the very
+same pages as `.pdf`, so its indexes are the same lists, and working them out twice would only let the
+two drift apart. A PDF not printed yet is listed a moment before it exists.
 
 An index depends only on *which* pages exist, so it is not dated like a page: `syncIndexes()` renders
 them all and writes only those whose content differs from the file on disk. It runs at the end of
@@ -662,7 +714,8 @@ gets it; nothing is special-cased to the one file.
   paragraphs.
 - **Every `#` starts a new sheet.** An embedded file opens with its own, so a file that is a
   collection of `<כלול-בהדפסה>` directives prints as the chapters it is, with the title and the
-  תוכן העניינים alone on page 1. `main > :first-child` is exempt, so no sheet comes out blank.
+  תוכן העניינים alone on page 1. `main > :first-child` is exempt, so no sheet comes out blank - and so is the first `#` of the page
+  (`main > h1:first-of-type`), or a credit line above it would print as a sheet of its own.
   This is the one opinionated rule of the block - drop `h1 { break-before: page }` for a continuous
   scroll instead.
 - **A collapsed index would print as its title alone**, so `<details>` is forced open on paper.
@@ -674,24 +727,57 @@ since a page in the mirror is a file:
 
 ```bash
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --no-pdf-header-footer \
-    --print-to-pdf=/tmp/print.pdf "file://$PWD/../HTML-FROM-MD/<path>.html"
+    --print-to-pdf=/tmp/print.pdf "file://$PWD/../docs/_HTML-FROM-MD/<path>.html"
 ```
 
-### The print button
+### The PDF mirror
 
-The small printer beside the help button (`#print-button`, `initPrintButton()`) opens the active
-file's page from the HTML mirror in a tab of its own, at `GET /api/print/<path>.md`. It is the only
-thing inside the editor that reads the mirror, and the server hands the page over rather than
-re-deriving it - there is only one renderer, and it has already run.
+Every page of the HTML mirror is printed to a PDF (`pdf-mirror.ts`):
+`docs/_HTML-FROM-MD/<path>/<name>.html` → `docs/_PDF-FROM-MD/<path>/<name>.pdf`. The folder indexes are not
+printed - a list of links is no document to print - but every folder of the PDF mirror does get an
+`index.html` of its own, listing its PDFs (see "Folder indexes" above).
 
-Two things the handler does before serving:
+- **Printed from the page, not from the Markdown.** The page is what a reader sees, and its `@media print`
+  block (see "Printing a page") is already the layout meant for paper. So a PDF follows the same `make`
+  rule one step later: stale when missing, or older than its page or than `pdf-mirror.ts`.
+- **HtmlMirror drives it**, through its `companion`: every `syncFile()` schedules the file's PDF, and every
+  sweep is one for the PDFs too - scheduling them all (a fresh one costs a `stat`) and deleting those
+  whose file is gone. Nothing else - no watcher, no timer - has to know the PDFs exist.
+- **One browser, one file at a time, in the background.** Playwright's Chromium is launched when a PDF is
+  due and closed after 30 s of nothing to do; `syncFile()` shares one print between the queue and the
+  print button asking for the same file. The whole tree (~700 pages) takes a couple of minutes the first
+  time, and `rebuild-whole-html-folder` waits for it (`idle()`).
+- **The links are rewritten before printing** (`pointLinksAt()`). The page is loaded as a file, so every
+  link in it is a `file://` URL, and Chrome writes it into the PDF as it is - leading nowhere once the PDF
+  is shared. A link into `docs/` is pointed at GitHub Pages, and one to anything else in the repository
+  at GitHub (`publicUrls()`, from the `origin` remote; `https://<owner>.github.io/<repo>/` is the default
+  project-site URL, and a custom domain would have to be written in). A `#heading` link is left alone, so
+  it stays a link within the PDF.
+- **Size.** A PDF embeds its fonts, so each is some 300-600 KB - several hundred MB for the tree, which is
+  worth knowing before committing it all.
 
-- **It brings the page up to date** (`syncFile()`). The mirror's own sync is debounced 300 ms, so a
-  file saved a moment ago may still have yesterday's page on disk - and what gets printed has to be
-  what is on the screen.
+### The print and HTML buttons
+
+Two small buttons beside the help button open the active file in a tab of its own: the printer
+(`#print-button`) its PDF, at `GET /api/pdf/<path>.md`, and the `</>` to its left (`#html-button`)
+its page, at `GET /api/html/<path>.md`. `initPrintButton()` wires both to `openPublished()`. They are the
+only things inside the editor that read the mirrors, and the server hands over what is there rather
+than re-deriving it - there is only one renderer, and it has already run.
+
+**The endpoint redirects** (302) to the file under `/docs/...`, which the server serves as a folder of
+static files, the way GitHub Pages does. Serving the file's bytes at the `/api/` URL instead would break
+every relative link of the page - to the next page, to its folder's `index.html` - since they would be
+resolved against `/api/html/`. The `/docs/` handler normalizes the path and refuses one that leaves `docs/`.
+
+Two things the handler does before redirecting:
+
+- **It brings the page - and for the print button the PDF - up to date** (`syncFile()` of each). The
+  mirrors' own syncs are debounced and queued, so a file saved a moment ago may still have yesterday's
+  page or PDF on disk - and what is shown has to be what is on the screen.
 - **It checks that the page is inside the mirror.** `htmlPathFor()` joins the path onto
-  `HTML-FROM-MD/` and normalizes it, so a `../` that climbed out has left the prefix behind - which
+  `docs/_HTML-FROM-MD/` and normalizes it, so a `../` that climbed out has left the prefix behind - which
   is exactly what the test is. Without it the endpoint would serve any `.html` file on the disk.
+  `pdfPathFor()` is built on `htmlPathFor()`, so the one test covers both.
   A file with no page at all (a `*.script.md`) gets a Hebrew error *page*, not a bare 404: it is
   opening in a tab of its own and has to say something there.
 

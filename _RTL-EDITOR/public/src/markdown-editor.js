@@ -50,7 +50,8 @@ export class MarkdownEditor {
     }
 
     /**
-     * The print button opens the active file's page from the HTML mirror in a tab of its own.
+     * The print button opens the active file's PDF, from the PDF mirror, in a tab of its own - and the
+     * HTML button beside it the file's page from the HTML mirror.
      *
      * The tab is opened *synchronously*, while the click is still the browser's idea of a user
      * gesture, and only then pointed at the URL - because a file with unsaved changes has to be
@@ -58,40 +59,44 @@ export class MarkdownEditor {
      * Printing what is on the screen rather than what was on disk a second ago is the whole point.
      */
     initPrintButton() {
-        this.printButton = /** @type {HTMLButtonElement | null} */ (document.getElementById('print-button'));
-        if (!this.printButton) {
-            return;
-        }
-        this.printButton.addEventListener('click', () => {
-            const filePath = this.activeTab;
-            if (!filePath) {
-                return;
-            }
-            const printTab = window.open('', '_blank');
-            const show = () => {
-                const url = `/api/print/${encodeURIComponent(filePath)}`;
-                if (printTab) {
-                    printTab.location.href = url;
-                } else {
-                    window.open(url, '_blank');     // a pop-up blocker took the first one
-                }
-            };
-            const tabData = this.tabs.get(filePath);
-            // autosave() swallows its own failures, so this always gets to show something - the
-            // page as the server last rendered it, which is the best there is to offer.
-            if (tabData && tabData.isDirty) {
-                tabData.autosave().finally(show);
-            } else {
-                show();
-            }
-        });
+        this.publishedButtons = /** @type {HTMLButtonElement[]} */ (
+            [['print-button', 'pdf'], ['html-button', 'html']].flatMap(([id, endpoint]) => {
+                const button = /** @type {HTMLButtonElement | null} */ (document.getElementById(id));
+                button?.addEventListener('click', () => this.openPublished(endpoint));
+                return button ? [button] : [];
+            }));
         this.updatePrintButton();
     }
 
-    /** There is nothing to print with no file open. */
+    /** @param {string} endpoint  "pdf" for the PDF, "html" for the page */
+    openPublished(endpoint) {
+        const filePath = this.activeTab;
+        if (!filePath) {
+            return;
+        }
+        const newTab = window.open('', '_blank');
+        const show = () => {
+            const url = `/api/${endpoint}/${encodeURIComponent(filePath)}`;
+            if (newTab) {
+                newTab.location.href = url;
+            } else {
+                window.open(url, '_blank');     // a pop-up blocker took the first one
+            }
+        };
+        const tabData = this.tabs.get(filePath);
+        // autosave() swallows its own failures, so this always gets to show something - the
+        // version the server last made, which is the best there is to offer.
+        if (tabData && tabData.isDirty) {
+            tabData.autosave().finally(show);
+        } else {
+            show();
+        }
+    }
+
+    /** There is nothing to print, or to show, with no file open. */
     updatePrintButton() {
-        if (this.printButton) {
-            this.printButton.disabled = !this.activeTab;
+        for (const button of this.publishedButtons ?? []) {
+            button.disabled = !this.activeTab;
         }
     }
 

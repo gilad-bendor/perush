@@ -6,7 +6,7 @@ import { mkdir, rename, unlink, writeFile } from "fs/promises";
 // 2. Will auto-create the directory if it does not exist.
 // We first write to a temporary file, and then rename it to the final file -
 //  so the operation is atomic (more thread-safe and crash-resilient).
-export async function writeFileSafe(filePath: string, fileContents: string): Promise<void> {
+export async function writeFileSafe(filePath: string, fileContents: string | Uint8Array): Promise<void> {
     const tmpFilePath = join(
         dirname(filePath),
         `.tmp.${basename(filePath)}.${Math.random().toString(36).substring(2)}`,

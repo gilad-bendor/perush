@@ -55,6 +55,34 @@ const markdown = new MarkdownIt({
     typographer: false,
 });
 
+/**
+ * A URL as a reader would write it - Hebrew as Hebrew, not as `%D7%90`. Only what cannot stand in a URL
+ * as it is gets escaped: whitespace, control characters, the few ASCII characters a URL may not hold,
+ * and a `%` that starts no escape. An escaped non-ASCII character already in it is decoded back - the
+ * browser encodes it when it follows the link, and shows it decoded in the address bar all the same.
+ * `#` and `?` are kept, as a URL's own - see readablePath() for a path, where they are part of a name.
+ */
+export function readableUrl(url: string): string {
+    return url
+        .replace(/(?:%[89a-f][0-9a-f])+/gi, run => {
+            try {
+                return decodeURIComponent(run);
+            } catch {
+                return run;
+            }
+        })
+        .replace(/%(?![0-9a-f]{2})|[\u0000-\u0020\u007f"<>\\^`{|}]/gi, character => encodeURIComponent(character));
+}
+
+/** A file's path as an href - readableUrl()'s rule, but every `%`, `#` and `?` in it is part of a name. */
+export function readablePath(path: string): string {
+    return path.replace(/[%#?\u0000-\u0020\u007f"<>\\^`{|}]/g, character => encodeURIComponent(character));
+}
+
+// Every link of a page is written the readable way. markdown-it's own normalizeLink() percent-encodes
+// every non-ASCII character, and punycodes a host name - neither of which a reader wants to see.
+markdown.normalizeLink = readableUrl;
+
 // A link target may hold spaces - `[x](מחקר ראשוני - פרומפט.rtl.md)` - as file names here do, and as the editor's
 // Cmd+click (links.js) already allows. CommonMark stops a bare target at the first space; this reads on to
 // the closing parenthesis, unless what follows the space is a title (`"t"`, `'t'`, `(t)`) or a newline.
@@ -162,7 +190,7 @@ function errorText(error: EmbedError): string {
 function renderErrors(errors: EmbedError[], isRtl: boolean): string {
     if (!errors.length) return "";
     const items = errors.map(error =>
-        `<li><a href="#${markdown.utils.escapeHtml(encodeURIComponent(error.id))}">${errorText(error)}</a></li>`
+        `<li><a href="#${markdown.utils.escapeHtml(readableUrl(error.id))}">${errorText(error)}</a></li>`
     ).join("\n");
     return `<nav class="embed-errors">
 <div class="embed-errors-title">${isRtl ? "שגיאות" : "Errors"}</div>
@@ -497,7 +525,7 @@ function renderIndex(entries: HeadingEntry[], isRtl: boolean): string {
     // Indented relative to the shallowest heading present: a file whose sections are all ## starts flush.
     const topLevel = Math.min(...entries.map(entry => entry.level));
     const items = entries.map(({ level, id, html }) =>
-        `<li class="index-depth-${level - topLevel}"><a href="#${markdown.utils.escapeHtml(encodeURIComponent(id))}">${html}</a></li>`
+        `<li class="index-depth-${level - topLevel}"><a href="#${markdown.utils.escapeHtml(readableUrl(id))}">${html}</a></li>`
     ).join("\n");
     return `<nav class="index">
 <details open>
@@ -647,9 +675,11 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     p { orphans: 3; widows: 3; }
 
     /* Every top-level heading opens a sheet: an embedded file begins with its own, so a collection
-       of them prints as the chapters it is. Drop this one rule for a continuous scroll instead. */
+       of them prints as the chapters it is. Drop this one rule for a continuous scroll instead.
+       Not the first one, though: whatever stands above it - a line of credit, a link - would
+       otherwise be a sheet of its own, nearly blank. */
     h1 { break-before: page; }
-    main > :first-child { break-before: auto; }
+    main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }

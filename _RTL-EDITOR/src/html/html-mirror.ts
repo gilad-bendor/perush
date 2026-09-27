@@ -1,6 +1,7 @@
-// Every Markdown file of the tree, kept as a readable HTML page under HTML-FROM-MD/.
+// Every Markdown file of the tree, kept as a readable HTML page under docs/_HTML-FROM-MD/ - inside
+// docs/ so that GitHub Pages can serve it.
 //
-//     <path>/<name>.md   -->   HTML-FROM-MD/<path>/<name>.html
+//     <path>/<name>.md   -->   docs/_HTML-FROM-MD/<path>/<name>.html
 //
 // The mirror works like `make`: a page is (re-)rendered when it is missing, older than any of the
 // files it was built from, or older than the code that renders it - so a renderer change rebuilds
@@ -21,6 +22,11 @@
 // Every folder of the mirror, the root included, also gets an index.html listing its pages (see
 // folder-index.ts). An index depends only on which pages exist, so it is rewritten whenever its
 // content would change, rather than by date - and removed, with its folder, once no page is left under it.
+// The indexes list only the pages whose file git does not ignore, and mark as technical those a
+// .printignore names. docs/index.html, the page GitHub Pages opens with, is the root's index again.
+//
+// Whatever `companion` is set to (the PDF mirror - see pdf-mirror.ts) hears of every page synced, and
+// of every sweep.
 //
 // Nothing here decides *when* to look; server.ts calls scheduleSync() for a file the watcher saw
 // change, and syncTree() at startup and on its periodic rescan.
@@ -30,11 +36,33 @@ import { readdir, readFile, rmdir, stat, unlink, utimes } from "fs/promises";
 import type { Stats } from "fs";
 import { renderMarkdownPage } from "./md-to-html";
 import { expandIncludes } from "./includes";
-import { FOLDER_INDEX_NAME, folderIndexPages } from "./folder-index";
+import { FOLDER_INDEX_NAME, folderIndexPages, mirrorSummary, siteIndexPage } from "./folder-index";
+import type { MirrorSummary } from "./folder-index";
 import { writeFileSafe } from "../write-file-safe";
+import type { PageCompanion } from "./pdf-mirror";
 
-/** The mirror's folder, at the root of the served tree. */
-export const HTML_MIRROR_DIR = "HTML-FROM-MD";
+/** The mirror's folder, relative to the root of the served tree - under docs/, which GitHub Pages serves. */
+export const HTML_MIRROR_DIR = "docs/_HTML-FROM-MD";
+/** The mirror folder's own name - what its root index and every breadcrumb trail call it. */
+export const HTML_MIRROR_NAME = posix.basename(HTML_MIRROR_DIR);
+/** The PDF mirror's folder, beside the HTML mirror (see pdf-mirror.ts, which prints it). */
+export const PDF_MIRROR_DIR = "docs/_PDF-FROM-MD";
+/** The PDF mirror folder's own name. */
+export const PDF_MIRROR_NAME = posix.basename(PDF_MIRROR_DIR);
+/** The folder the mirrors stand in - docs/, which GitHub Pages serves. */
+export const SITE_DIR = posix.dirname(HTML_MIRROR_DIR);
+/** What the site is called - the title of docs/index.html, and the first step of every breadcrumb trail. */
+const SITE_TITLE = "פירוש";
+/** The index of docs/ itself - the page GitHub Pages opens with. */
+export const SITE_INDEX_PATH = posix.join(SITE_DIR, FOLDER_INDEX_NAME);
+/**
+ * Tells GitHub Pages to publish docs/ as it is. Without it Pages runs Jekyll, which drops every file
+ * and folder whose name starts with "_" - both mirrors among them. Only its presence counts; the text
+ * is for whoever finds it.
+ */
+export const NO_JEKYLL_PATH = posix.join(SITE_DIR, ".nojekyll");
+const NO_JEKYLL_TEXT = "Tells GitHub Pages to serve docs/ as is, without Jekyll - which would drop every name starting with \"_\".\n"
+    + "Written by _RTL-EDITOR (html-mirror.ts).\n";
 
 /** The code a page depends on besides its file - a change to any of them makes every page stale. */
 const RENDERER_FILES = [
@@ -76,6 +104,11 @@ export function htmlPathFor(mdPath: string): string {
     return posix.join(HTML_MIRROR_DIR, pagePath);
 }
 
+/** Where the PDF of a Markdown file goes, relative to the root of the served tree - its page's path, in the PDF mirror. */
+export function pdfPathFor(mdPath: string): string {
+    return posix.join(PDF_MIRROR_DIR, posix.relative(HTML_MIRROR_DIR, htmlPathFor(mdPath)).replace(/\.html$/, ".pdf"));
+}
+
 // A scheme ("https:", "mailto:") or a protocol-relative URL - not a path in the tree.
 const EXTERNAL_HREF = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
 
@@ -83,7 +116,7 @@ const EXTERNAL_HREF = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
  * A link's href as the *page* needs it, for a link written in the Markdown file `fromFilePath`.
  *
  * A link to a file that has a page of its own leads to that page. Anything else - a file with no
- * page, an image, a folder - leads back to the original, which is one folder further away from the
+ * page, an image, a folder - leads back to the original, which is two folders further away from the
  * page than from the file. A leading "/" is the root of the served tree, as in the editor.
  */
 export function mirroredHref(fromFilePath: string, href: string): string {
@@ -125,6 +158,8 @@ export class HtmlMirror {
      * file's sync knows nothing of the rest of the tree, and must not write indexes that say otherwise.
      */
     private pagedFiles: Set<string> | null = null;
+    /** Told of every page synced, and of every sweep - the PDF mirror, when there is one. */
+    companion: PageCompanion | null = null;
     /** md path -> every file its page was last built from, itself included (see the note at the top). */
     private readonly dependencies = new Map<string, Set<string>>();
     /** The same, the other way round: md path -> the pages that have to be rebuilt when it changes. */
@@ -187,6 +222,12 @@ export class HtmlMirror {
 
     /** Brings one file's page up to date now: renders it if stale, deletes it if the file is gone. */
     async syncFile(mdPath: string): Promise<SyncOutcome> {
+        const outcome = await this.syncPage(mdPath);
+        this.companion?.schedule(mdPath);
+        return outcome;
+    }
+
+    private async syncPage(mdPath: string): Promise<SyncOutcome> {
         const sourcePath = join(this.root, mdPath);
         const pagePath = join(this.root, htmlPathFor(mdPath));
 
@@ -301,10 +342,11 @@ export class HtmlMirror {
         let indexes = 0;
         if (mdPaths.length) {
             const wanted = new Set(mdPaths.map(htmlPathFor));
-            for (const pagePath of await this.listHtmlFiles(false)) {
+            for (const pagePath of await this.listMirrorFiles(HTML_MIRROR_DIR, ".html", false)) {
                 if (!wanted.has(pagePath) && await this.removePage(join(this.root, pagePath))) removed++;
             }
             this.pagedFiles = new Set(mdPaths);
+            await this.companion?.sweep(mdPaths);
             indexes = await this.syncIndexes();
         }
 
@@ -314,14 +356,38 @@ export class HtmlMirror {
     /**
      * Writes every folder's index whose content changed, and removes the indexes - and so the
      * folders - that no page is left under. @returns how many were written or removed.
+     *
+     * An index lists only the pages whose file git does not ignore - tracked, or new and not yet
+     * added - and marks as technical the ones a .printignore names (see gitListing()). Neither a
+     * .gitignore nor a .printignore is a Markdown file, so an edit to one reaches here through the
+     * periodic sweep, within 15 s.
      */
     async syncIndexes(): Promise<number> {
         if (!this.pagedFiles?.size) return 0;
-        const mirrorRoot = join(this.root, HTML_MIRROR_DIR);
-        const pages = [...this.pagedFiles].map(mdPath => posix.relative(HTML_MIRROR_DIR, htmlPathFor(mdPath)));
-        const wanted = folderIndexPages(pages, HTML_MIRROR_DIR);
-        let changed = 0;
+        const listing = await gitListing(this.root);
+        const listed = [...this.pagedFiles].filter(mdPath => !listing || listing.notIgnored.has(mdPath));
+        const technical = listed.filter(mdPath => listing?.technical.has(mdPath));
 
+        // The PDF mirror holds the same pages as this one, so its indexes are these very lists - it
+        // gets them here rather than working them out again. A PDF not printed yet is listed a moment early.
+        let changed = 0;
+        const mirrors: MirrorSummary[] = [];
+        for (const [mirrorDir, pathFor] of [[HTML_MIRROR_DIR, htmlPathFor], [PDF_MIRROR_DIR, pdfPathFor]] as const) {
+            const pageOf = (mdPath: string) => posix.relative(mirrorDir, pathFor(mdPath));
+            const pages = listed.map(pageOf);
+            const technicalPages = new Set(technical.map(pageOf));
+            const name = posix.basename(mirrorDir);
+            changed += await this.syncMirrorIndexes(mirrorDir, folderIndexPages(pages, name, technicalPages, SITE_TITLE));
+            mirrors.push(mirrorSummary(pages, name, technicalPages));
+        }
+        if (await this.syncSiteIndex(mirrors)) changed++;
+        return changed;
+    }
+
+    /** Writes a mirror's indexes whose content changed, and removes the ones no page is left under. */
+    private async syncMirrorIndexes(mirrorDir: string, wanted: Map<string, string>): Promise<number> {
+        const mirrorRoot = join(this.root, mirrorDir);
+        let changed = 0;
         for (const [indexPath, html] of wanted) {
             const fullPath = join(mirrorRoot, indexPath);
             if (await readFileOrNull(fullPath) !== html) {
@@ -331,37 +397,64 @@ export class HtmlMirror {
         }
 
         // Deepest first: a folder is empty - and removePage() prunes it - only once its subfolders are gone.
-        const stale = (await this.listHtmlFiles(true))
-            .filter(indexPath => !wanted.has(posix.relative(HTML_MIRROR_DIR, indexPath)))
+        const stale = (await this.listMirrorFiles(mirrorDir, ".html", true))
+            .filter(indexPath => !wanted.has(posix.relative(mirrorDir, indexPath)))
             .sort((a, b) => b.split("/").length - a.split("/").length);
         for (const indexPath of stale) {
-            if (await this.removePage(join(this.root, indexPath))) changed++;
+            if (await this.removePage(join(this.root, indexPath), mirrorDir)) changed++;
         }
         return changed;
     }
 
-    /** Every page - or every folder index - in the mirror, relative to the root of the served tree. */
-    private async listHtmlFiles(indexes: boolean): Promise<string[]> {
+    /**
+     * docs/index.html: what is directly in docs/ - the mirrors that list anything, and every other
+     * page or PDF standing there (bible-viewer.html). Removed once there is nothing to list.
+     * @returns whether the file changed.
+     */
+    private async syncSiteIndex(mirrors: MirrorSummary[]): Promise<boolean> {
+        const indexPath = join(this.root, SITE_INDEX_PATH);
+        const mirrorNames = new Set([HTML_MIRROR_NAME, PDF_MIRROR_NAME]);
+        let files: string[] = [];
         try {
-            const entries = await readdir(join(this.root, HTML_MIRROR_DIR), { recursive: true });
+            files = (await readdir(join(this.root, SITE_DIR), { withFileTypes: true }))
+                .filter(entry => entry.isFile() && /\.(html|pdf)$/.test(entry.name)
+                    && entry.name !== FOLDER_INDEX_NAME && !entry.name.startsWith(".") && !mirrorNames.has(entry.name))
+                .map(entry => entry.name);
+        } catch {}
+        if (!files.length && !mirrors.some(mirror => mirror.pageCount)) return await unlinkIfThere(indexPath);
+
+        // Whenever there is a site to serve, so that deleting docs/ whole is no harm: it all comes back.
+        const noJekyllPath = join(this.root, NO_JEKYLL_PATH);
+        if (await readFileOrNull(noJekyllPath) !== NO_JEKYLL_TEXT) await writeFileSafe(noJekyllPath, NO_JEKYLL_TEXT);
+
+        const html = siteIndexPage(SITE_TITLE, mirrors, files);
+        if (await readFileOrNull(indexPath) === html) return false;
+        await writeFileSafe(indexPath, html);
+        return true;
+    }
+
+    /** Every file of a mirror with this extension - its pages, or its indexes - relative to the root of the served tree. */
+    private async listMirrorFiles(mirrorDir: string, extension: string, indexes: boolean): Promise<string[]> {
+        try {
+            const entries = await readdir(join(this.root, mirrorDir), { recursive: true });
             return entries
-                .filter(entry => entry.endsWith(".html") && !posix.basename(entry).startsWith(".tmp."))
+                .filter(entry => entry.endsWith(extension) && !posix.basename(entry).startsWith(".tmp."))
                 .filter(entry => (posix.basename(entry) === FOLDER_INDEX_NAME) === indexes)
-                .map(entry => posix.join(HTML_MIRROR_DIR, entry));
+                .map(entry => posix.join(mirrorDir, entry));
         } catch {
             return [];
         }
     }
 
     /** Deletes a page, and then every folder above it that is left empty. @returns whether there was a page. */
-    private async removePage(pagePath: string): Promise<boolean> {
+    private async removePage(pagePath: string, mirrorDir = HTML_MIRROR_DIR): Promise<boolean> {
         try {
             await unlink(pagePath);
         } catch (error) {
             if ((error as NodeJS.ErrnoException).code === "ENOENT") return false;
             throw error;
         }
-        const mirrorRoot = join(this.root, HTML_MIRROR_DIR);
+        const mirrorRoot = join(this.root, mirrorDir);
         for (let dir = dirname(pagePath); dir.startsWith(mirrorRoot + "/"); dir = dirname(dir)) {
             try {
                 await rmdir(dir);           // fails - and ends the climb - on the first folder that is not empty
@@ -370,6 +463,53 @@ export class HtmlMirror {
             }
         }
         return true;
+    }
+}
+
+/**
+ * Which files of the tree the indexes list, as git sees them - or null when `root` is not in a git
+ * work tree, and git cannot be asked.
+ *
+ * - `notIgnored`: every file git does not ignore - the tracked ones, and the untracked ones not ignored.
+ * - `technical`: the files a `.printignore` matches. It is read exactly like a .gitignore - in any
+ *   folder, for the files under it - which is why git itself is asked to read it.
+ */
+async function gitListing(root: string): Promise<{ notIgnored: Set<string>; technical: Set<string> } | null> {
+    // -z: names as they are, where the default would quote every Hebrew one in octal escapes.
+    // --others: the untracked files too. --directory keeps the second walk out of untracked folders
+    // it would list whole (node_modules and the like), and "*.md" out of everything else.
+    const notIgnored = await gitLsFiles(root, ["--cached", "--others", "--exclude-standard"]);
+    const technical = await gitLsFiles(root, ["--cached", "--others", "--ignored", "--directory",
+        "--exclude-per-directory=.printignore", "--", "*.md"]);
+    if (!notIgnored || !technical) return null;
+
+    // A whole folder named in a .printignore comes back as the folder: "dir/".
+    const folders = [...technical].filter(path => path.endsWith("/"));
+    if (folders.length) {
+        for (const file of notIgnored) {
+            if (folders.some(folder => file.startsWith(folder))) technical.add(file);
+        }
+    }
+    return { notIgnored, technical };
+}
+
+async function gitLsFiles(root: string, args: string[]): Promise<Set<string> | null> {
+    try {
+        const git = Bun.spawn(["git", "ls-files", "-z", ...args], { cwd: root, stdout: "pipe", stderr: "ignore" });
+        const output = await new Response(git.stdout).text();
+        if (await git.exited !== 0) return null;
+        return new Set(output.split("\0").filter(Boolean));
+    } catch {
+        return null;
+    }
+}
+
+async function unlinkIfThere(path: string): Promise<boolean> {
+    try {
+        await unlink(path);
+        return true;
+    } catch {
+        return false;
     }
 }
 
