@@ -51,11 +51,36 @@ if git rev-parse --abbrev-ref --symbolic-full-name '@{u}' >/dev/null 2>&1 ; then
 
   # Claude Code loads `CLAUDE.md` files and `.claude/` settings *before* this hook runs -
   # so if the pull changed them, this session is running with stale versions.
-  CHANGED_CONFIG="$( git diff --name-only "$OLD_HEAD" HEAD -- '.claude/' 'CLAUDE*.md' '**/CLAUDE*.md' )"
-  if [[ -n "$CHANGED_CONFIG" ]] ; then
-    echo "git-pull updated Claude's instructions/settings:"
-    echo "$CHANGED_CONFIG" | sed 's/^/  /'
-    echo "This session loaded the old versions before the pull - please start a new Claude session."
+  # Stale instructions are fixed right here: this hook's stdout is added to Claude's context,
+  # so we re-emit the up-to-date `CLAUDE.md` (with its `@` imports).
+  # Stale settings (hooks, permissions) can't be fixed from here - only a new session helps.
+  CHANGED_INSTRUCTIONS="$( git diff --name-only "$OLD_HEAD" HEAD -- 'CLAUDE*.md' '**/CLAUDE*.md' '.claude/rules/' )"
+  if [[ -n "$CHANGED_INSTRUCTIONS" ]] ; then
+    echo "IMPORTANT - Instructions to Claude: git-pull updated the project instructions *after* you loaded them:"
+    echo "$CHANGED_INSTRUCTIONS" | sed 's/^/  /'
+    echo "The up-to-date project instructions follow. They REPLACE the project instructions (CLAUDE.md) you loaded earlier:"
+    echo
+    emit_instructions() {  # $1 = file ; prints it, then every file it imports with a line `@path`
+      local FILE="${1#./}"
+      [[ -f "$FILE" ]] || return 0
+      [[ " $EMITTED " == *" $FILE "* ]] && return 0
+      EMITTED="$EMITTED $FILE"
+      echo "<file path=\"$FILE\">"
+      cat "$FILE"
+      echo
+      echo "</file>"
+      local IMPORT
+      while read -r IMPORT ; do
+        emit_instructions "$( dirname "$FILE" )/${IMPORT#@}"
+      done < <( grep -oE '^@[^[:space:]]+' "$FILE" )
+    }
+    EMITTED=""
+    emit_instructions "CLAUDE.md"
+    echo
+  fi
+  CHANGED_SETTINGS="$( git diff --name-only "$OLD_HEAD" HEAD -- '.claude/settings.json' )"
+  if [[ -n "$CHANGED_SETTINGS" ]] ; then
+    echo "Instructions to Claude: Please tell the user that git-pull updated \`.claude/settings.json\` after this session loaded it - the new settings apply only from the next session."
   fi
 fi
 
