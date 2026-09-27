@@ -2,13 +2,14 @@
 
 import { join, extname } from "path";
 import { readdir, stat } from "fs/promises";
-import { HTML_MIRROR_DIR } from "./html/html-mirror";
+import { HTML_MIRROR_NAME } from "./html/html-mirror";
+import { PDF_MIRROR_NAME } from "./html/pdf-mirror";
 
 /** The root of the served tree. Every path the API, the file tree and the HTML mirror use is relative to it. */
 export const MARKDOWN_DIR = "..";
 
 /** Names skipped at any depth - neither shown in the tree nor watched. */
-export const exclusions = new Set(["scripts", ".idea", ".git", ".DS_Store", "node_modules", HTML_MIRROR_DIR]);
+export const exclusions = new Set(["scripts", ".idea", ".git", ".DS_Store", "node_modules", HTML_MIRROR_NAME, PDF_MIRROR_NAME]);
 
 export type FileData = {
     name: string;

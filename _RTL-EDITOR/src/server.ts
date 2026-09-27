@@ -1,5 +1,5 @@
 import { file, serve } from "bun";
-import { join } from "path";
+import { join, posix } from "path";
 import { readFile, stat, mkdir } from "fs/promises";
 import { watch } from "fs";
 import { renderScriptFileForEditor } from "./terminal-render";
@@ -8,7 +8,8 @@ import { formatTables, isAiGeneratedFile } from "../public/src/tables.js";
 import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes";
 import type { FileSystemChange } from "./fs-changes";
 import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
-import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile } from "./html/html-mirror";
+import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR } from "./html/html-mirror";
+import { PdfMirror, pdfPathFor } from "./html/pdf-mirror";
 import { writeFileSafe } from "./write-file-safe";
 
 const PORT = 4000;
@@ -40,6 +41,7 @@ const fsChangeLog = new FsChangeLog();
 let fsSnapshot = new Set<string>();
 /** Created once the tree has been walked for the first time - see startWatchingTree(). */
 let htmlMirror: HtmlMirror | null = null;
+let pdfMirror: PdfMirror | null = null;
 
 /** How long to let events settle before rescanning - one rescan for a burst of them. */
 const RESCAN_DEBOUNCE_MS = 150;
@@ -98,6 +100,8 @@ async function startWatchingTree() {
     // The same rescan brings the HTML pages up to date - for an event fs.watch never delivered, and
     // for everything that changed while the server was down.
     htmlMirror = await HtmlMirror.create(MARKDOWN_DIR);
+    pdfMirror = await PdfMirror.create(MARKDOWN_DIR);
+    htmlMirror.companion = pdfMirror;
     const syncHtmlMirror = async () => {
         const { rendered, removed, indexes } = await htmlMirror!.syncTree(fsSnapshot);
         if (rendered || removed || indexes) {
@@ -202,30 +206,55 @@ serve({
             });
         }
 
-        // The printable version of a file: its page from the HTML mirror, served as a page of its
-        // own. The editor's print button opens it in a new tab.
-        if (url.pathname.startsWith("/api/print/")) {
-            const filePath = decodeURIComponent(url.pathname.slice("/api/print/".length));
-            const pagePath = htmlPathFor(filePath);
-            // htmlPathFor() joins the path onto HTML-FROM-MD/ and normalizes it, so a "../" that
-            // climbed out of the mirror has left the prefix behind - which is what says so.
-            if (!isMirroredFile(filePath) || !pagePath.startsWith(`${HTML_MIRROR_DIR}/`)) {
+        // A file's page from the HTML mirror, or its PDF from the PDF mirror - what the editor's HTML
+        // and print buttons open in a new tab. Brought up to date, and then redirected to where it is
+        // under /docs/, so that the relative links of the page - and of the indexes it leads to - work.
+        const published = url.pathname.match(/^\/api\/(html|pdf)\/(.*)$/);
+        if (published) {
+            const asPdf = published[1] === "pdf";
+            const filePath = decodeURIComponent(published[2]);
+            const target = asPdf ? pdfPathFor(filePath) : htmlPathFor(filePath);
+            // htmlPathFor() joins the path onto docs/_HTML-FROM-MD/ and normalizes it, so a "../" that
+            // climbed out of the mirror has left the prefix behind - which is what says so. pdfPathFor()
+            // is built on it, so the one test covers both.
+            if (!isMirroredFile(filePath) || !htmlPathFor(filePath).startsWith(`${HTML_MIRROR_DIR}/`)) {
                 return printErrorPage(`אין גרסה להדפסה לקובץ "${filePath}".`);
             }
-            // Brought up to date first: the file may have been saved a moment ago, and the mirror's
-            // own sync is debounced - so the page on disk can still be the one before the last edit.
+            // The file may have been saved a moment ago, and the mirrors' own syncs are debounced and
+            // queued - so what is on disk can still be from before the last edit.
             try {
                 await htmlMirror?.syncFile(filePath);
+                if (asPdf) await pdfMirror?.syncFile(filePath);
             } catch (error) {
-                console.error(`Cannot render the printable version of ${filePath}:`, error);
+                console.error(`Cannot bring the ${asPdf ? "PDF" : "page"} of ${filePath} up to date:`, error);
             }
-            try {
-                return new Response(await file(join(MARKDOWN_DIR, pagePath)).arrayBuffer(), {
-                    headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-cache" },
-                });
-            } catch {
+            if (!(await file(join(MARKDOWN_DIR, target)).exists())) {
                 return printErrorPage(`הקובץ "${filePath}" לא נמצא.`);
             }
+            return new Response(null, {
+                status: 302,
+                headers: { Location: `/${target.split("/").map(encodeURIComponent).join("/")}`, "Cache-Control": "no-cache" },
+            });
+        }
+
+        // docs/ as it is - the mirrors, their indexes, and whatever else stands there - the way GitHub
+        // Pages serves it. A folder is its index.html.
+        if (url.pathname === `/${SITE_DIR}` || url.pathname.startsWith(`/${SITE_DIR}/`)) {
+            let path = posix.normalize(decodeURIComponent(url.pathname.slice(1)));
+            if (path !== SITE_DIR && !path.startsWith(`${SITE_DIR}/`)) {
+                return new Response("Not found", { status: 404 });
+            }
+            if (url.pathname.endsWith("/") || (await stat(join(MARKDOWN_DIR, path)).catch(() => null))?.isDirectory()) {
+                if (!url.pathname.endsWith("/")) {
+                    return new Response(null, { status: 301, headers: { Location: `${url.pathname}/${url.search}${url.hash}` } });
+                }
+                path = posix.join(path, "index.html");
+            }
+            const served = file(join(MARKDOWN_DIR, path));
+            if (!(await served.exists())) {
+                return new Response("Not found", { status: 404 });
+            }
+            return new Response(served, { headers: { "Cache-Control": "no-cache" } });
         }
 
         if (url.pathname.startsWith("/api/file/")) {

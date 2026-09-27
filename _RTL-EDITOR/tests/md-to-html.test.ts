@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { markdownToHtml, renderMarkdownPage } from "../src/html/md-to-html";
+import { markdownToHtml, readablePath, readableUrl, renderMarkdownPage } from "../src/html/md-to-html";
 import type { EmbedError } from "../src/html/includes";
 
 const html = (markdown: string) => markdownToHtml(markdown).trim();
@@ -195,8 +195,8 @@ describe("the errors of the included files", () => {
         const page = renderMarkdownPage(`${marker(0)}\n\n# כותרת\n\n${marker(1)}`, "פירוש/a.rtl.md", { errors });
         const list = page.slice(page.indexOf("<main>"), page.indexOf("</nav>"));
         expect(list).toContain("<div class=\"embed-errors-title\">שגיאות</div>");
-        expect(list).toContain(`<a href="#${encodeURIComponent("שגיאה-1")}">שגיאה-1 &ndash; פירוש/a.rtl.md, שורה 12:`);
-        expect(list).toContain(`<a href="#${encodeURIComponent("שגיאה-2")}">שגיאה-2 &ndash; פירוש/b.rtl.md, שורה 3:`);
+        expect(list).toContain(`<a href="#שגיאה-1">שגיאה-1 &ndash; פירוש/a.rtl.md, שורה 12:`);
+        expect(list).toContain(`<a href="#שגיאה-2">שגיאה-2 &ndash; פירוש/b.rtl.md, שורה 3:`);
         // And before the index, which is itself before the body.
         expect(page.indexOf('class="embed-errors"')).toBeLessThan(page.indexOf("<h1"));
     });
@@ -243,7 +243,7 @@ describe("the index", () => {
         ]);
         expect(page).not.toContain(">עמוק מדי</a>");
         expect(page).toContain('<h2 id="א1-ההצעה">');
-        expect(page).toContain(`<a href="#${encodeURIComponent("א1-ההצעה")}">א1. ההצעה</a>`);
+        expect(page).toContain(`<a href="#א1-ההצעה">א1. ההצעה</a>`);
     });
 
     test("no tag, no index - but the headings still get their ids", () => {
@@ -317,7 +317,7 @@ describe("the index", () => {
 
     test("a link in a heading keeps its text, without nesting a link in the entry", () => {
         const page = renderMarkdownPage(`${TAG}\n## [א](x.md)\n## ב`, "a.rtl.md");
-        expect(page).toContain(`<a href="#${encodeURIComponent("א")}">א</a></li>`);
+        expect(page).toContain(`<a href="#א">א</a></li>`);
     });
 });
 
@@ -333,5 +333,32 @@ describe("the page", () => {
         const page = renderMarkdownPage("Some text", "docs/notes.md");
         expect(page).toContain('<html dir="ltr">');
         expect(page).toContain("<title>notes</title>");
+    });
+});
+
+describe("readable links", () => {
+    test("Hebrew stays Hebrew - and an escaped one is decoded back", () => {
+        expect(readableUrl("א/ב.html#ג")).toBe("א/ב.html#ג");
+        expect(readableUrl("https://he.wikipedia.org/wiki/%D7%96%D7%9B%D7%A8")).toBe("https://he.wikipedia.org/wiki/זכר");
+        expect(markdownToHtml("[x](מחקר ראשוני - פרומפט.rtl.md)")).toContain('href="מחקר%20ראשוני%20-%20פרומפט.rtl.md"');
+    });
+
+    test("only what a URL cannot hold as it is is escaped", () => {
+        expect(readableUrl("a b\"c<d>")).toBe("a%20b%22c%3Cd%3E");
+        expect(readableUrl("100% of %41")).toBe("100%25%20of%20%41");          // an ASCII escape is left alone
+        expect(readableUrl("%D7")).toBe("%D7");                                 // half a letter: not decodable
+    });
+
+    test("in a path, # ? and % are part of a name", () => {
+        expect(readablePath("תיקייה/a#1?.html")).toBe("תיקייה/a%231%3F.html");
+        expect(readablePath("50%.html")).toBe("50%25.html");
+    });
+});
+
+describe("printing", () => {
+    test("every # opens a sheet but the first - whatever stands above it", () => {
+        const page = renderMarkdownPage("credit line\n\n# one\n\n# two", "a.md");
+        expect(page).toContain("h1 { break-before: page; }");
+        expect(page).toContain("main > h1:first-of-type { break-before: auto; }");
     });
 });

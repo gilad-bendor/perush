@@ -239,8 +239,8 @@ body {
     left: 0;
 }
 
-/* The two corner buttons (top-right), and the help dialog */
-.help-button, .print-button {
+/* The three corner buttons (top-right), and the help dialog */
+.help-button, .print-button, .html-button {
     position: fixed;
     top: 2px;
     width: 12px;
@@ -258,10 +258,11 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* The print button takes the corner, and the help button moves over to make room for it. */
+/* The print button takes the corner, the HTML button stands left of it, and the help button left of both. */
 .print-button { right: 2px; border-width: 0; }
-.help-button { right: 20px; }
-.help-button:hover, .print-button:hover:not(:disabled) {
+.html-button { right: 20px; border-width: 0; }
+.help-button { right: 38px; }
+.help-button:hover, .print-button:hover:not(:disabled), .html-button:hover:not(:disabled) {
     border-color: #007acc;
     color: #007acc;
 }
@@ -272,11 +273,11 @@ body {
     font-size: 200%;
 }
 /* Just inside the ring: any larger and the printer's body crosses the circle that holds it. */
-.print-button > svg {
+.print-button > svg, .html-button > svg {
     width: 11px;
     height: 11px;
 }
-.print-button:disabled {
+.print-button:disabled, .html-button:disabled {
     opacity: 0.35;
     cursor: default;
 }
