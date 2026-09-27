@@ -10,7 +10,11 @@
 //
 // We replay through @xterm/headless - the same VT parser xterm.js uses in the browser.
 
-import { Terminal } from "@xterm/headless";
+// A default import rather than `{ Terminal }`: the package is CommonJS, and Node (unlike Bun)
+// cannot pick named exports out of it - scripts/name-claude-sessions.js imports this module
+// under Node.
+import xterm from "@xterm/headless";
+const { Terminal } = xterm;
 
 export type RenderTerminalOptions = {
     /**
@@ -244,4 +248,27 @@ function collapseBlankLines(lines: string[], max: number): string[] {
         result.push(line);
     }
     return result;
+}
+
+/**
+ * The full transformation the RTL editor applies to a `.script.rtl.md` recording before
+ * showing it - shared by the editor's server and scripts/name-claude-sessions.js, so that
+ * both see the very same text.
+ */
+export async function renderScriptFileForEditor(content: string): Promise<string> {
+    content = await renderTerminalOutput(content, { maxConsecutiveBlankLines: 1 });
+    // Swap → and ←: the recorded glyphs are the ones the LTR terminal
+    // showed, and the editor re-renders them in an RTL context.
+    // Box-drawing characters used to be swapped here too; the editor's
+    // table formatter now decides their direction for every file alike
+    // (see formatTables() in public/src/tables.js).
+    for (const [a,b] of ["←→"]) {
+        content = content
+            .replace(new RegExp(a, "g"), "\u0000")
+            .replace(new RegExp(b, "g"), a)
+            .replace(/\u0000/g, b);
+    }
+    // Trim out line-suffixes of at least 3 spaces (2 spaces may be Markdown syntax).
+    return content
+        .replace(/   +$/gm, "");
 }

@@ -2,7 +2,7 @@ import { file, serve } from "bun";
 import { join } from "path";
 import { readFile, stat, mkdir } from "fs/promises";
 import { watch } from "fs";
-import { renderTerminalOutput } from "./terminal-render";
+import { renderScriptFileForEditor } from "./terminal-render";
 // The very module the browser loads - so that a table is laid out identically on both sides.
 import { formatTables, isAiGeneratedFile } from "../public/src/tables.js";
 import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes";
@@ -244,21 +244,7 @@ serve({
                         // See comment of isScriptOutputFile:
                         // The recording is a raw VT/xterm control stream rather than text -
                         // replay it through a terminal emulator to recover what was on screen.
-                        content = await renderTerminalOutput(content, { maxConsecutiveBlankLines: 1 });
-                        // Swap → and ←: the recorded glyphs are the ones the LTR terminal
-                        // showed, and the editor re-renders them in an RTL context.
-                        // Box-drawing characters used to be swapped here too; the editor's
-                        // table formatter now decides their direction for every file alike
-                        // (see formatTables() in public/src/tables.js).
-                        for (const [a,b] of ["←→"]) {
-                            content = content
-                                .replace(new RegExp(a, "g"), "\u0000")
-                                .replace(new RegExp(b, "g"), a)
-                                .replace(/\u0000/g, b);
-                        }
-                        // Trim out line-suffixes of at least 3 spaces (2 spaces may be Markdown syntax).
-                        content = content
-                            .replace(/   +$/gm, "");
+                        content = await renderScriptFileForEditor(content);
                     }
 
                     return new Response(JSON.stringify({
