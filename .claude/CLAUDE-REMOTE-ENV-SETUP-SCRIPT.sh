@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# NOTE: The environment snapshot (made after this script runs) also contains the repo's clone -
-#       and new sessions restore it and check out the snapshot's *stale* local branch
-#       (see https://github.com/anthropics/claude-code/issues/93585).
-#       `.claude/cloud-session-start.sh` then pulls - but only if the snapshot's commit contains that logic.
-#       Any edit to this script (in the environment's "Setup script" box) rebuilds the snapshot.
-#       Snapshot version: 2
+# === VERSION: 3 ===
+#
+# NOTE:
+# The environment snapshot (made after this script runs) also contains the repo's clone -
+#  and new sessions restore it and check out the snapshot's *stale* local branch
+#  (see https://github.com/anthropics/claude-code/issues/93585).
+# `.claude/cloud-session-start.sh` then pulls - but only if the snapshot's commit contains that logic.
+# Any edit to this script (in the environment's "Setup script" box) rebuilds the snapshot.
 
 # Install the latest Node.js 26 into /opt/node26 (saved with the environment snapshot)
 set -uo pipefail
