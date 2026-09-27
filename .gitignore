@@ -1,4 +1,11 @@
 .DS_Store
+*.log
+.logs/
+node_modules/
+_scratch*
+/_claude-output.script.rtl.md
+/claude-code-semitic-linguist
+
 .idea/
 !.idea/modules.xml
 !.idea/compiler.xml
@@ -6,19 +13,25 @@
 !.idea/inspectionProfiles/
 !.idea/runConfigurations/
 !.idea/vcs.xml
+
 .vscode/
 !.vscode/settings.json
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/tasks.json
-*.log
-.logs/
-node_modules/
+
 /_DELIBERATION-ROOM/.meetings/
 /_DELIBERATION-ROOM/public/compiled-style.css
-/_RTL-EDITOR/node_modules/
-/_MCP-SERVER/node_modules
-_scratch*.md
-_claude-output.script.rtl.md
-/claude-code-semitic-linguist
-/HTML-FROM-MD/
+
+# /docs/_HTML-FROM-MD/   and   /docs/_PDF-FROM-MD/
+/docs/_*-FROM-MD/_BIBLE-LINGUAL-RESEARCH/
+/docs/_*-FROM-MD/_BIBLE-VIEWER/
+/docs/_*-FROM-MD/_DELIBERATION-ROOM/
+/docs/_*-FROM-MD/_MCP-SERVER/
+/docs/_*-FROM-MD/_RTL-EDITOR/
+/docs/_*-FROM-MD/misc/2000-BASE-DOCS/
+/docs/_*-FROM-MD/misc/2025-09-14-A--build-intro/
+/docs/_*-FROM-MD/misc/פנייה לבלשנים/
+/docs/_*-FROM-MD/תנך-מנוקד/
+/docs/_*-FROM-MD/תנך-נקי/
+
