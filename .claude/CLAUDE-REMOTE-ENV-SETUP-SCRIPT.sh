@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Install the latest Node.js 26 into /opt/node26 (saved with the environment snapshot)
+set -uo pipefail
+DEST=/opt/node26
+BASE=https://nodejs.org/dist/latest-v26.x
+if [ ! -x "$DEST/bin/node" ]; then
+  mkdir -p "$DEST"
+  TARBALL=$(curl -fsSL "$BASE/SHASUMS256.txt" | grep -oE 'node-v26\.[0-9.]+-linux-x64\.tar\.xz' | head -1)
+  if [ -n "$TARBALL" ] && curl -fsSL "$BASE/$TARBALL" | tar -xJ -C "$DEST" --strip-components=1; then
+    echo "Installed $TARBALL from nodejs.org"
+  else
+    echo "nodejs.org failed - falling back to npm registry"
+    TMP=$(mktemp -d)
+    (cd "$TMP" && npm pack --silent node-linux-x64@26 >/dev/null) \
+      && tar -xzf "$TMP"/node-linux-x64-*.tgz -C "$DEST" --strip-components=1
+    rm -rf "$TMP"
+  fi
+fi
+"$DEST/bin/node" --version || echo "WARNING: Node 26 install failed"
+
+exit 0
