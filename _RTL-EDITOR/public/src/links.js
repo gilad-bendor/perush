@@ -54,12 +54,15 @@ export function markdownLinkAt(lineText, offsetInLine) {
  *
  * A path is relative to the linking file's own directory (or, if it starts with "/", to the root of
  * the served tree - which is what the file tree and the /api/file paths are relative to as well).
- * Anything that is not a path within that tree - an http(s) address, a bare "#anchor", a "../" that
- * climbs out of the root - is reported as such rather than turned into a file path.
+ * Anything that is not a path within that tree - an http(s) address, a "../" that climbs out of the
+ * root - is reported as such rather than turned into a file path.
+ *
+ * A "#somewhere" names a heading - of the linking file itself when it stands alone, of the file
+ * before it otherwise - and comes back as `anchor`, decoded; headingLineOfAnchor() finds it.
  *
  * @param {string} fromFilePath  the file the link was clicked in, as the server names it
  * @param {string} rawTarget     the text between the link's parentheses
- * @returns {{ kind: 'file', path: string } | { kind: 'external', url: string } | null}
+ * @returns {{ kind: 'file', path: string, anchor?: string } | { kind: 'external', url: string } | null}
  */
 export function resolveMarkdownLink(fromFilePath, rawTarget) {
     let target = rawTarget.trim();
@@ -78,17 +81,12 @@ export function resolveMarkdownLink(fromFilePath, rawTarget) {
     if (!target) return null;
     if (EXTERNAL_TARGET_REGEXP.test(target)) return { kind: 'external', url: target };
 
-    // "#somewhere" points inside the current file; "file.md#somewhere" at a place in another one -
-    // and we have nowhere to put the anchor, so only the file part is of use.
+    // "#somewhere" points inside the current file; "file.md#somewhere" at a place in another one.
     const hash = target.indexOf('#');
+    const anchor = hash >= 0 ? decodeTarget(target.slice(hash + 1)) : '';
     if (hash >= 0) target = target.slice(0, hash);
-    if (!target) return null;
-
-    try {
-        target = decodeURIComponent(target);
-    } catch {
-        // A stray "%" - take the target as it was written.
-    }
+    if (!target) return anchor ? { kind: 'file', path: fromFilePath, anchor } : null;
+    target = decodeTarget(target);
 
     // "dir/", "." and ".." name a directory, and there is no tab to open for one.
     if (target.endsWith('/') || /(^|\/)\.\.?$/.test(target)) return null;
@@ -103,5 +101,75 @@ export function resolveMarkdownLink(fromFilePath, rawTarget) {
         }
         segments.push(segment);
     }
-    return segments.length ? { kind: 'file', path: segments.join('/') } : null;
+    if (!segments.length) return null;
+    return anchor ? { kind: 'file', path: segments.join('/'), anchor } : { kind: 'file', path: segments.join('/') };
+}
+
+/** A link target's %-escapes decoded - or the target as it was written, if a stray "%" is not one. */
+function decodeTarget(target) {
+    try {
+        return decodeURIComponent(target);
+    } catch {
+        return target;
+    }
+}
+
+/**
+ * A heading's id: its words joined by a single "-", with the punctuation and niqqud gone.
+ *
+ * This is the id the HTML mirror gives the heading (md-to-html.ts calls it too), and so the anchor
+ * a link to it is written with.
+ *
+ * @param {string} text  the heading's text, its Markdown syntax already gone
+ * @returns {string}
+ */
+export function headingSlug(text) {
+    return text
+        .normalize("NFD")
+        .replace(/\p{M}/gu, "")
+        .replace(/[^\p{L}\p{N}\s_-]/gu, "")
+        .trim()
+        .replace(/[\s-]+/g, "-")
+        .toLowerCase();
+}
+
+/**
+ * The 0-based line of the heading an "#anchor" names, or -1 if none does.
+ *
+ * Headings get the ids the HTML mirror gives them - "-2", "-3" for repeats included. An anchor is
+ * first looked up exactly, and then loosely, with runs of "-" squeezed and niqqud and punctuation
+ * ignored: an anchor written by another tool (GitHub turns "א — ב" into "א--ב") still finds its
+ * heading. Only ATX headings ("## x") outside a code fence are seen.
+ *
+ * @param {string} text    the whole file
+ * @param {string} anchor  the anchor, without its "#" and already decoded
+ * @returns {number}
+ */
+export function headingLineOfAnchor(text, anchor) {
+    /** @type {{ line: number, id: string }[]} */
+    const headings = [];
+    const usedIds = new Set();
+    let fence = null;
+    text.split('\n').forEach((line, index) => {
+        const fenceMatch = line.match(/^ {0,3}(`{3,}|~{3,})/);
+        if (fenceMatch) {
+            if (!fence) fence = fenceMatch[1];
+            else if (fenceMatch[1][0] === fence[0] && fenceMatch[1].length >= fence.length) fence = null;
+            return;
+        }
+        if (fence) return;
+        const heading = line.match(/^ {0,3}#{1,6}(?:\s+(.*?))?(?:\s+#+)?\s*$/);
+        if (!heading) return;
+        const plain = (heading[1] ?? '').replace(/!?\[([^\]\n]*)]\([^)\n]*\)/g, '$1');
+        const base = headingSlug(plain) || 'section';
+        let id = base;
+        for (let n = 2; usedIds.has(id); n++) id = `${base}-${n}`;
+        usedIds.add(id);
+        headings.push({ line: index, id });
+    });
+
+    const exact = headings.find(heading => heading.id === anchor);
+    if (exact) return exact.line;
+    const loose = headingSlug(anchor);
+    return headings.find(heading => headingSlug(heading.id) === loose)?.line ?? -1;
 }

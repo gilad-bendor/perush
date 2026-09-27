@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "../public/src/links.js";
+import { headingLineOfAnchor, headingSlug, markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "../public/src/links.js";
 
 describe("markdownLinksInLine", () => {
     test("finds a link and its span", () => {
@@ -78,10 +78,14 @@ describe("resolveMarkdownLink", () => {
             .toEqual({ kind: "file", path: "a/100%.md" });
     });
 
-    test("drops an anchor, and refuses one that names no file", () => {
+    test("keeps an anchor, a bare one naming the linking file", () => {
         expect(resolveMarkdownLink("a/b.md", "c.md#somewhere"))
-            .toEqual({ kind: "file", path: "a/c.md" });
-        expect(resolveMarkdownLink("a/b.md", "#somewhere")).toBeNull();
+            .toEqual({ kind: "file", path: "a/c.md", anchor: "somewhere" });
+        expect(resolveMarkdownLink("a/b.md", "#somewhere"))
+            .toEqual({ kind: "file", path: "a/b.md", anchor: "somewhere" });
+        expect(resolveMarkdownLink("a/b.md", "#%D7%90-%D7%91"))
+            .toEqual({ kind: "file", path: "a/b.md", anchor: "א-ב" });
+        expect(resolveMarkdownLink("a/b.md", "#")).toBeNull();
     });
 
     test("takes the path out of <> and drops a title", () => {
@@ -115,5 +119,34 @@ describe("resolveMarkdownLink", () => {
         expect(resolveMarkdownLink("a/b.md", "..")).toBeNull();
         expect(resolveMarkdownLink("a/b.md", "sub/..")).toBeNull();
         expect(resolveMarkdownLink("a/b.md", ".")).toBeNull();
+    });
+});
+
+describe("headingLineOfAnchor", () => {
+    const text = [
+        "# כותרת",                             // 0
+        "## חלק א׳: ניתוח לשוני",               // 1
+        "```",
+        "## 1. מפת הנגזרות",                    // 3 - inside a fence
+        "```",
+        "### 1. מפת הנגזרות",                   // 5
+        "## [קישור](x.md) ו**הדגשה**",           // 6
+        "## כפול",                              // 7
+        "## כפול",                              // 8
+        "## א — ב",                             // 9
+    ].join("\n");
+
+    test("finds a heading by the id the HTML mirror gives it", () => {
+        expect(headingSlug("חלק א׳: ניתוח לשוני")).toBe("חלק-א-ניתוח-לשוני");
+        expect(headingLineOfAnchor(text, "חלק-א-ניתוח-לשוני")).toBe(1);
+        expect(headingLineOfAnchor(text, "1-מפת-הנגזרות")).toBe(5);
+        expect(headingLineOfAnchor(text, "קישור-והדגשה")).toBe(6);
+    });
+
+    test("numbers repeats, and reads an anchor loosely", () => {
+        expect(headingLineOfAnchor(text, "כפול")).toBe(7);
+        expect(headingLineOfAnchor(text, "כפול-2")).toBe(8);
+        expect(headingLineOfAnchor(text, "א--ב")).toBe(9);
+        expect(headingLineOfAnchor(text, "אין-כזו")).toBe(-1);
     });
 });

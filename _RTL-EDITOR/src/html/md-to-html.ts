@@ -25,6 +25,7 @@ import MarkdownIt from "markdown-it";
 import type { StateBlock, StateCore, Token } from "markdown-it";
 import { isRtlFile, parseTables } from "../../public/src/tables.js";
 import { INDEX_TAG_NAME, isVoidPseudoTag } from "../../public/src/pseudo-tags.js";
+import { headingSlug } from "../../public/src/links.js";
 import { errorLineIndex } from "./includes";
 import type { EmbedError } from "./includes";
 
@@ -475,7 +476,7 @@ function documentHeadings(tokens: Token[], env: Env): HeadingEntry[] {
     tokens.forEach((token, position) => {
         if (token.type !== "heading_open") return;
         const children = tokens[position + 1].children ?? [];
-        const id = uniqueId(headingSlug(children), usedIds);
+        const id = uniqueId(headingId(children), usedIds);
         token.attrSet("id", id);
 
         const level = Number(token.tag.slice(1));
@@ -509,18 +510,12 @@ ${items}
 `;
 }
 
-/** A heading's id: its words joined by a single "-", with the punctuation and niqqud gone. */
-function headingSlug(children: Token[]): string {
-    return children
+/** A heading's id - see headingSlug() in links.js, which the editor finds an "#anchor" by too. */
+function headingId(children: Token[]): string {
+    return headingSlug(children
         .filter(child => child.type === "text" || child.type === "code_inline")
         .map(child => child.content)
-        .join("")
-        .normalize("NFD")
-        .replace(/\p{M}/gu, "")
-        .replace(/[^\p{L}\p{N}\s_-]/gu, "")
-        .trim()
-        .replace(/[\s-]+/g, "-")
-        .toLowerCase();
+        .join(""));
 }
 
 function uniqueId(slug: string, usedIds: Set<string>): string {

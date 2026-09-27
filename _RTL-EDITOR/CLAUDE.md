@@ -17,7 +17,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
    every edit (see "Table formatting" below). `*.ai.md` / `*.ai.rtl.md` are exempt.
    A table that declares a header row keeps it - through the editor, the disk and git
 - Cmd+click (Ctrl+click off macOS) on a `[text](path)` link opens the linked file and moves the
-   focus to it; a file that was not open yet gets its tab right after the linking one
+   focus to it; a file that was not open yet gets its tab right after the linking one.
+   `path#heading` and a bare `#heading` put the cursor on that heading
 - Ctrl+1 .. Ctrl+9 show the 1st .. 9th tab
 - Showing a tab highlights its file in the tree, opening every folder above it and scrolling it
    into view
@@ -724,10 +725,15 @@ free of any editor dependency the way `tables.js` is, so it can be unit-tested o
   also appears when the key goes down with the editor unfocused.
 - **Path resolution** (`resolveMarkdownLink()`) is against the linking file's own directory, or the
   root of the served tree for a leading `/` - the same paths the file tree and `/api/file` use. An
-  `http(s)`/`mailto` target opens a browser tab instead; a `#anchor` keeps only the file part (there
-  is nowhere to put the anchor); a directory, and a `../` that climbs out of the served tree, open
+  `http(s)`/`mailto` target opens a browser tab instead; a directory, and a `../` that climbs out of the served tree, open
   nothing. A path that names no file is *not* turned away - the tab shows the usual "file not found"
   note and picks the file up should it appear (see "Tab loading and order").
+- **An `#anchor` goes to its heading** - `file.md#x` in that file, a bare `#x` in the linking one:
+  the cursor lands on the heading's line and the view scrolls it to the top (`goToAnchor()`).
+  `headingLineOfAnchor()` gives every heading the id the HTML mirror gives it - `headingSlug()` is
+  shared, `md-to-html.ts` imports it, so the anchor that works on the page works in the editor - and
+  falls back to a loose match (runs of `-` squeezed) for anchors written GitHub's way, `א--ב` for
+  `א — ב`. Only `#` headings outside a code fence are seen.
 - **The new tab goes right after the linking one**, not at the end of the strip: `openFile()` takes
   an `insertAfterFilePath`, inserts the button there and calls `reorderTabsFromDom()` to sort
   `this.tabs` to match - still synchronously, as that Map's order is the stored session order.

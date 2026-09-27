@@ -11,7 +11,7 @@ import { tags } from '@lezer/highlight';
 import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, consoleGroupCollapsed, consoleGroupEnd } from './logs.js';
 import { TabData } from "./tab-data.js";
 import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, minimalReplacement, setHeaderAtCursor } from "./tables.js";
-import { markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "./links.js";
+import { headingLineOfAnchor, markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "./links.js";
 import { isVoidPseudoTag } from "./pseudo-tags.js";
 import { hebrewSearchPattern } from "./hebrew-search.js";
 /** @typedef {import('../../src/server.ts').FileData} FileData */
@@ -996,6 +996,7 @@ export class MarkdownEditor {
      *
      * A file that is not open yet gets its tab right after the one the link was clicked in - the
      * two are related, so they belong side by side - rather than at the end of the strip.
+     * An "#anchor" then moves the cursor to the heading it names, in that file or in this one.
      *
      * @param {string} rawTarget    the text between the link's parentheses
      * @param {string} fromFilePath the file the link was clicked in
@@ -1012,8 +1013,37 @@ export class MarkdownEditor {
         }
         // A path that names no file is not turned away here: openFile() leaves a "file not found"
         // note in the tab, and picks the file up should it appear. See loadTabContent().
-        const fileName = /** @type {string} */ (resolved.path.split('/').pop());
-        await this.openFile(resolved.path, fileName, true, fromFilePath);
+        if (resolved.path !== fromFilePath) {
+            const fileName = /** @type {string} */ (resolved.path.split('/').pop());
+            await this.openFile(resolved.path, fileName, true, fromFilePath);
+        }
+        if (resolved.anchor !== undefined) this.goToAnchor(resolved.path, resolved.anchor);
+    }
+
+    /**
+     * Puts the cursor on the heading an "#anchor" names, and that heading at the top of the view.
+     *
+     * @param {string} filePath  a tab that has been shown, so its editor exists
+     * @param {string} anchor
+     */
+    goToAnchor(filePath, anchor) {
+        const tabData = this.tabs.get(filePath);
+        const view = tabData?.editorView;
+        if (!tabData || !view || this.activeTab !== filePath) return;
+        const lineIndex = headingLineOfAnchor(view.state.doc.toString(), anchor);
+        if (lineIndex < 0) {
+            consoleWarn(`No heading ${JSON.stringify(anchor)} in ${JSON.stringify(filePath)}`);
+            return;
+        }
+        // A tab that was just shown ignores scrolling for a moment (see TabData.activate()), and
+        // would put the old scroll position back over this one.
+        tabData.abortAutoScrolling = false;
+        const line = view.state.doc.line(lineIndex + 1);
+        view.dispatch({
+            selection: { anchor: line.from },
+            effects: EditorView.scrollIntoView(line.from, { y: 'start', yMargin: 20 }),
+        });
+        view.focus();
     }
 
     /**
