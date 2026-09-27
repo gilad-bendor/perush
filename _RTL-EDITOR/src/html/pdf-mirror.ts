@@ -3,10 +3,17 @@
 //     docs/_HTML-FROM-MD/<path>/<name>.html   -->   docs/_PDF-FROM-MD/<path>/<name>.pdf
 //
 // A PDF is printed from its HTML page, not from the Markdown file: the page is what the reader sees,
-// and its `@media print` block (md-to-html.ts) is already the layout meant for paper. So a PDF is
-// stale when it is missing or older than its page, or older than this code - the same `make` rule
-// the HTML mirror follows one step earlier. The folder indexes get no PDF; a list of links is no
-// document to print.
+// and its `@media print` block (md-to-html.ts) is already the layout meant for paper. The folder
+// indexes get no PDF; a list of links is no document to print.
+//
+// **A PDF carries the stamp of what it was printed from**, and is stale when that stamp is not the
+// one its page would give now - or when it is missing. The stamp is an MD5 of the page's content,
+// of this file's and of where the links are pointed (sourceStamp()), and it is written into the
+// PDF's document info as `/PerushSource`. Dates are not used, as they are for the HTML mirror: the
+// PDFs are committed, and a fresh clone dates every file by the order git happened to write it in -
+// which would reprint a PDF that is right, or, worse, keep one that is not. A stamp says the same
+// thing on any disk. Reading it costs a few KB of the file, and is cached by the file's stat, so
+// the 15 s sweep reads nothing that has not changed.
 //
 // Printing is Chromium's, through Playwright: one browser, launched when there is something to print
 // and closed again once the queue has been idle a while. The files are printed one at a time, in
@@ -24,8 +31,9 @@
 // every sweep of the tree is one here too, which deletes the PDFs whose file is gone.
 
 import { dirname, join, posix, resolve } from "path";
-import { readdir, rmdir, stat, unlink } from "fs/promises";
+import { open, readdir, readFile, rmdir, stat, unlink } from "fs/promises";
 import type { Stats } from "fs";
+import { createHash } from "crypto";
 import { pathToFileURL } from "url";
 import type { Browser } from "playwright";
 import { htmlPathFor, isMirroredFile, PDF_MIRROR_DIR, pdfPathFor } from "./html-mirror";
@@ -36,6 +44,15 @@ export { PDF_MIRROR_DIR, PDF_MIRROR_NAME, pdfPathFor } from "./html-mirror";
 
 /** The code a PDF depends on besides its page. */
 const RENDERER_FILES = [join(import.meta.dir, "pdf-mirror.ts")];
+
+/** The document-info key a PDF's stamp is kept under. */
+const STAMP_KEY = "PerushSource";
+
+/**
+ * How much of a PDF is read for its stamp before reading all of it. Chromium makes the document
+ * info object 1, and pdf-lib writes the objects in order, so it normally sits in the first ~500 bytes.
+ */
+const STAMP_HEAD_BYTES = 8192;
 
 /** How long the browser is kept once the queue runs dry - a burst of saves costs one launch. */
 const BROWSER_IDLE_MS = 30_000;
@@ -94,18 +111,20 @@ export class PdfMirror implements PageCompanion {
     private draining: Promise<void> | null = null;
     private browser: Promise<Browser> | null = null;
     private idleTimer: ReturnType<typeof setTimeout> | undefined;
+    /** The stamp of each page and each PDF last read, keyed by path - valid while `stats` still match. */
+    private readonly stamps = new Map<string, { stats: string, stamp: string | null }>();
 
     /**
-     * @param root             the root of the served tree
-     * @param rendererMtimeMs  PDFs older than this are stale whatever their page says
-     * @param urls             where the links of a PDF are pointed - null leaves them as they are
+     * @param root     the root of the served tree
+     * @param printer  what, besides its page, a PDF is printed by - a change to it reprints them all
+     * @param urls     where the links of a PDF are pointed - null leaves them as they are
      */
-    constructor(private readonly root: string, private readonly rendererMtimeMs: number,
+    constructor(private readonly root: string, private readonly printer: string,
                 private readonly urls: PublicUrls | null) {}
 
     static async create(root: string): Promise<PdfMirror> {
-        const mtimes = await Promise.all(RENDERER_FILES.map(async file => (await stat(file)).mtimeMs));
-        return new PdfMirror(root, Math.max(...mtimes), await publicUrls(root));
+        const code = await Promise.all(RENDERER_FILES.map(file => readFile(file, "utf-8")));
+        return new PdfMirror(root, code.join("\0"), await publicUrls(root));
     }
 
     /** Prints a file's PDF soon, if it is stale - in the background, one file at a time. */
@@ -151,19 +170,35 @@ export class PdfMirror implements PageCompanion {
         if (!page?.isFile()) {
             return await this.removePdf(pdfPath) ? "removed" : "absent";
         }
+        const stamp = await this.cached(pagePath, page, async () =>
+            sourceStamp(await readFile(pagePath, "utf-8"), this.printer, this.urls));
         const pdf = await statOrNull(pdfPath);
-        if (pdf && pdf.mtimeMs >= Math.max(page.mtimeMs, this.rendererMtimeMs)) return "fresh";
+        if (pdf && await this.cached(pdfPath, pdf, () => readStamp(pdfPath)) === stamp) return "fresh";
 
+        // Should the page change while it is printed, the PDF bears the old stamp - and is printed again.
         const browser = await this.launch();
         const tab = await browser.newPage();
+        let printed: Uint8Array;
         try {
             await tab.goto(pathToFileURL(resolve(pagePath)).href, { waitUntil: "load" });
             if (this.urls) await tab.evaluate(pointLinksAt, this.urls);
-            await writeFileSafe(pdfPath, await tab.pdf({ printBackground: true, preferCSSPageSize: true, format: "A4" }));
+            printed = await tab.pdf({ printBackground: true, preferCSSPageSize: true, format: "A4" });
         } finally {
             await tab.close();
         }
+        await writeFileSafe(pdfPath, await withStamp(printed, stamp));
+        this.stamps.delete(pdfPath);
         return "printed";
+    }
+
+    /** `compute()`, or what it gave last time for this path if the file has not changed since. */
+    private async cached<T extends string | null>(path: string, stats: Stats, compute: () => Promise<T>): Promise<T> {
+        const key = `${stats.mtimeMs}:${stats.size}:${stats.ino}`;
+        const known = this.stamps.get(path);
+        if (known?.stats === key) return known.stamp as T;
+        const stamp = await compute();
+        this.stamps.set(path, { stats: key, stamp });
+        return stamp;
     }
 
     /** Schedules every file, and deletes the PDFs whose file has no page any more. */
@@ -222,6 +257,44 @@ export class PdfMirror implements PageCompanion {
             }
         }
         return true;
+    }
+}
+
+/** What a PDF printed from this page, by this code, with its links pointed at `urls`, is stamped with. */
+export function sourceStamp(pageHtml: string, printer: string, urls: PublicUrls | null): string {
+    return createHash("md5").update(printer).update("\0").update(JSON.stringify(urls))
+        .update("\0").update(pageHtml).digest("hex");
+}
+
+/** A printed PDF with `stamp` added to its document info. */
+async function withStamp(pdf: Uint8Array, stamp: string): Promise<Uint8Array> {
+    // Imported here, like Playwright: only printing needs it.
+    const { PDFDict, PDFDocument, PDFName, PDFString } = await import("pdf-lib");
+    const document = await PDFDocument.load(pdf, { updateMetadata: false });
+    const { context } = document;
+    let info = context.trailerInfo.Info && context.lookupMaybe(context.trailerInfo.Info, PDFDict);
+    if (!info) context.trailerInfo.Info = context.register(info = context.obj({}));
+    info.set(PDFName.of(STAMP_KEY), PDFString.of(stamp));
+    // No object streams - they would compress the stamp out of readStamp()'s sight.
+    return document.save({ useObjectStreams: false });
+}
+
+/** The stamp a PDF was printed with - null for one printed without, or not by this code at all. */
+export async function readStamp(pdfPath: string): Promise<string | null> {
+    const pattern = new RegExp(`/${STAMP_KEY} \\(([0-9a-f]{32})\\)`);
+    try {
+        const file = await open(pdfPath);
+        try {
+            const head = Buffer.alloc(STAMP_HEAD_BYTES);
+            const { bytesRead } = await file.read(head, 0, STAMP_HEAD_BYTES, 0);
+            const found = head.subarray(0, bytesRead).toString("latin1").match(pattern);
+            if (found || bytesRead < STAMP_HEAD_BYTES) return found?.[1] ?? null;
+        } finally {
+            await file.close();
+        }
+        return (await readFile(pdfPath)).toString("latin1").match(pattern)?.[1] ?? null;
+    } catch {
+        return null;
     }
 }
 
