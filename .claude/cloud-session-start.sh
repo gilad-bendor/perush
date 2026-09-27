@@ -11,6 +11,24 @@ if [[ "${CLAUDE_CODE_REMOTE:-}" != "true" ]] ; then
   exit 0
 fi
 
+# Instructs Claude to guide the user through updating the environment's "Setup script".
+# Any change to the "Setup script" rebuilds the environment snapshot (which also holds the repo's clone).
+# $1 (optional): a reason to first increment the "Snapshot version" (the script itself may be up-to-date).
+print_setup_script_instructions() {
+  echo 'Instructions to Claude: To fix this - instruct the user to:'
+  local STEP=1
+  if [[ -n "${1:-}" ]] ; then
+    echo "$STEP. Increment the \"Snapshot version\" in \`.claude/CLAUDE-REMOTE-ENV-SETUP-SCRIPT.sh\` ($1), commit and push"
+    STEP=$(( STEP + 1 ))
+  fi
+  echo "$STEP. Copy the content of the file \`.claude/CLAUDE-REMOTE-ENV-SETUP-SCRIPT.sh\`"
+  echo "$(( STEP + 1 )). Open a Claude session on our repo and branch"
+  echo "$(( STEP + 2 )). At the top of the session, expand the options-icon to the left of the remote-environment name"
+  echo "$(( STEP + 3 )). Paste into the \"Setup script\" textbox"
+  echo "$(( STEP + 4 )). Start a new Claude session"
+  echo
+}
+
 # Make sure the expected Node version is installed and used.
 NODE_VERSION=26
 NODE_PATH="/opt/node$NODE_VERSION"
@@ -22,12 +40,7 @@ fi
 if ! node --version 2>/dev/null | grep -q "^v$NODE_VERSION\\." ; then
   echo "Instructions to Claude: Please warn the user Node v$NODE_VERSION is not installed:"
   ( set -x ; node --version ) 2>&1
-  echo 'Instructions to Claude: To fix the Node issue - instruct the user to:'
-  echo '1. Copy the content of the file `.claude/CLAUDE-REMOTE-ENV-SETUP-SCRIPT.sh`'
-  echo '2. Open a Claude session on our repo and branch'
-  echo '3. At the top of the session, expand the options-icon to the left of the remote-environment name'
-  echo '4. Paste into the "Setup script" textbox'
-  echo
+  print_setup_script_instructions
 fi
 
 # Cd to the project's dir
@@ -51,36 +64,13 @@ if git rev-parse --abbrev-ref --symbolic-full-name '@{u}' >/dev/null 2>&1 ; then
 
   # Claude Code loads `CLAUDE.md` files and `.claude/` settings *before* this hook runs -
   # so if the pull changed them, this session is running with stale versions.
-  # Stale instructions are fixed right here: this hook's stdout is added to Claude's context,
-  # so we re-emit the up-to-date `CLAUDE.md` (with its `@` imports).
-  # Stale settings (hooks, permissions) can't be fixed from here - only a new session helps.
-  CHANGED_INSTRUCTIONS="$( git diff --name-only "$OLD_HEAD" HEAD -- 'CLAUDE*.md' '**/CLAUDE*.md' '.claude/rules/' )"
-  if [[ -n "$CHANGED_INSTRUCTIONS" ]] ; then
-    echo "IMPORTANT - Instructions to Claude: git-pull updated the project instructions *after* you loaded them:"
-    echo "$CHANGED_INSTRUCTIONS" | sed 's/^/  /'
-    echo "The up-to-date project instructions follow. They REPLACE the project instructions (CLAUDE.md) you loaded earlier:"
-    echo
-    emit_instructions() {  # $1 = file ; prints it, then every file it imports with a line `@path`
-      local FILE="${1#./}"
-      [[ -f "$FILE" ]] || return 0
-      [[ " $EMITTED " == *" $FILE "* ]] && return 0
-      EMITTED="$EMITTED $FILE"
-      echo "<file path=\"$FILE\">"
-      cat "$FILE"
-      echo
-      echo "</file>"
-      local IMPORT
-      while read -r IMPORT ; do
-        emit_instructions "$( dirname "$FILE" )/${IMPORT#@}"
-      done < <( grep -oE '^@[^[:space:]]+' "$FILE" )
-    }
-    EMITTED=""
-    emit_instructions "CLAUDE.md"
-    echo
-  fi
-  CHANGED_SETTINGS="$( git diff --name-only "$OLD_HEAD" HEAD -- '.claude/settings.json' )"
-  if [[ -n "$CHANGED_SETTINGS" ]] ; then
-    echo "Instructions to Claude: Please tell the user that git-pull updated \`.claude/settings.json\` after this session loaded it - the new settings apply only from the next session."
+  # This happens because new sessions start from the environment snapshot's stale clone
+  # (see https://github.com/anthropics/claude-code/issues/93585) - so the snapshot must be rebuilt.
+  CHANGED_CONFIG="$( git diff --name-only "$OLD_HEAD" HEAD -- '.claude/' 'CLAUDE*.md' '**/CLAUDE*.md' )"
+  if [[ -n "$CHANGED_CONFIG" ]] ; then
+    echo "Instructions to Claude: Please warn the user that this session loaded stale instructions/settings - git-pull updated them only after they were loaded:"
+    echo "$CHANGED_CONFIG" | sed 's/^/  /'
+    print_setup_script_instructions "to rebuild the environment snapshot, whose repo clone is stale"
   fi
 fi
 
