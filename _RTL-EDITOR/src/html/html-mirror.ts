@@ -35,6 +35,7 @@ import { dirname, join, posix } from "path";
 import { readdir, readFile, rmdir, stat, unlink, utimes } from "fs/promises";
 import type { Stats } from "fs";
 import { renderMarkdownPage } from "./md-to-html";
+import type { Breadcrumb } from "./md-to-html";
 import { expandIncludes } from "./includes";
 import { FOLDER_INDEX_NAME, folderIndexPages, mirrorSummary, siteIndexPage } from "./folder-index";
 import type { MirrorSummary } from "./folder-index";
@@ -136,6 +137,20 @@ export function mirroredHref(fromFilePath: string, href: string): string {
     let relative = posix.relative(posix.join(HTML_MIRROR_DIR, fromDir), destination) || ".";
     if (pathPart.endsWith("/") && !relative.endsWith("/")) relative += "/";
     return relative + suffix;
+}
+
+/**
+ * The trail above a file's page - the one its folder's index opens with, and the page itself at the
+ * end of it: "פירוש / _HTML-FROM-MD / פירוש / 1-בראשית / <file>". Shown on screen only; the page's
+ * print style drops it, and with it every PDF does.
+ */
+export function pageBreadcrumbs(mdPath: string): Breadcrumb[] {
+    const pagePath = posix.relative(HTML_MIRROR_DIR, htmlPathFor(mdPath));
+    const folders = [SITE_TITLE, HTML_MIRROR_NAME, ...posix.dirname(pagePath).split("/").filter(name => name !== ".")];
+    return [
+        ...folders.map((name, depth) => ({ name, href: "../".repeat(folders.length - 1 - depth) + FOLDER_INDEX_NAME })),
+        { name: posix.basename(mdPath).replace(/(\.rtl)?\.md$/, "") },
+    ];
 }
 
 /**
@@ -246,6 +261,7 @@ export class HtmlMirror {
             const html = renderMarkdownPage(expanded.content, mdPath, {
                 hrefFor: href => mirroredHref(mdPath, href),
                 errors: expanded.errors,
+                breadcrumbs: pageBreadcrumbs(mdPath),
             });
 
             let outcome: SyncOutcome;

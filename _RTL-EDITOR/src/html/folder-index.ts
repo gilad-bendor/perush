@@ -1,7 +1,5 @@
 // An index.html for a mirror - _HTML-FROM-MD/ or _PDF-FROM-MD/ - and for each of its folders:
-//
-// 1. the subfolders and pages directly in the folder, and
-// 2. a nested list of every page anywhere under it - each folder linking to its own index.
+// the subfolders and pages directly in the folder, each subfolder linking to its own index.
 //
 // And one for the folder the mirrors stand in, docs/ - the page GitHub Pages opens with - listing
 // what is directly in it: the mirrors, and whatever else was put there (siteIndexPage()).
@@ -15,7 +13,7 @@
 
 import { posix } from "path";
 import MarkdownIt from "markdown-it";
-import { PAGE_STYLE, readablePath } from "./md-to-html";
+import { PAGE_STYLE, readablePath, renderBreadcrumbs } from "./md-to-html";
 
 /** The file name every folder's index takes. */
 export const FOLDER_INDEX_NAME = "index.html";
@@ -71,7 +69,7 @@ export function mirrorSummary(pages: Iterable<string>, name: string, technical: 
 
 /**
  * docs/index.html: what is directly in the folder the mirrors stand in - the mirrors, each linking to
- * its own index, and any other file there. No nested list: it would only be every mirror over again.
+ * its own index, and any other file there.
  */
 export function siteIndexPage(siteTitle: string, mirrors: MirrorSummary[], files: string[]): string {
     const root = newFolder("", siteTitle);
@@ -81,7 +79,7 @@ export function siteIndexPage(siteTitle: string, mirrors: MirrorSummary[], files
     root.files.push(...files);
     root.pageCount = files.length + mirrors.reduce((sum, mirror) => sum + mirror.pageCount, 0);
     root.plainCount = files.length + mirrors.reduce((sum, mirror) => sum + mirror.plainCount, 0);
-    return renderFolderIndex(root, siteTitle, new Set(), undefined, false);
+    return renderFolderIndex(root, siteTitle, new Set());
 }
 
 function folderTree(pages: Iterable<string>, rootName: string, technical: ReadonlySet<string>): Folder {
@@ -140,68 +138,46 @@ function href(relativePath: string): string {
     return escape(readablePath(relativePath));
 }
 
-/** How many pages - the plain ones while the toggle is off, all of them while it is on. */
-function countOf(folder: Folder): string {
-    return folder.plainCount === folder.pageCount
-        ? `<span class="count">(${folder.pageCount})</span>`
-        : `<span class="count"><span class="plain-count">(${folder.plainCount})</span>`
-            + `<span class="all-count">(${folder.pageCount})</span></span>`;
-}
-
-/** A subfolder, linking to its own index - with `nestedList` inside it, if given. */
-function folderItem(prefix: string, folder: Folder, nestedList = ""): string {
+/** A subfolder, linking to its own index. */
+function folderItem(folder: Folder): string {
     const technical = folder.plainCount ? "" : " technical";
-    return `<li class="folder${technical}"><a dir="auto" href="${href(`${prefix}${folder.name}/${FOLDER_INDEX_NAME}`)}">${escape(folder.name)}</a>`
-        + ` ${countOf(folder)}${nestedList && `\n${nestedList}`}</li>`;
+    return `<li class="folder${technical}"><a dir="auto" href="${href(`${folder.name}/${FOLDER_INDEX_NAME}`)}">${escape(folder.name)}</a></li>`;
 }
 
 /** @param folderPath  the files' folder, relative to the mirror's root - to tell the technical ones */
-function fileItems(prefix: string, folderPath: string, fileNames: string[], technicalFiles: ReadonlySet<string>): string[] {
+function fileItems(folderPath: string, fileNames: string[], technicalFiles: ReadonlySet<string>): string[] {
     const names = displayNames(fileNames);
     return fileNames.map(fileName => {
         const technical = technicalFiles.has(posix.join(folderPath, fileName)) ? " technical" : "";
-        return `<li class="file${technical}"><a dir="auto" href="${href(prefix + fileName)}">${escape(names.get(fileName)!)}</a></li>`;
+        return `<li class="file${technical}"><a dir="auto" href="${href(fileName)}">${escape(names.get(fileName)!)}</a></li>`;
     });
 }
 
-/**
- * @param siteTitle  the folder above `rootName`, if the trail goes up to it - see folderIndexPages()
- * @param withTree   whether to add the nested list of every page under the folder
- */
+/** @param siteTitle  the folder above `rootName`, if the trail goes up to it - see folderIndexPages() */
 function renderFolderIndex(folder: Folder, rootName: string, technicalFiles: ReadonlySet<string>,
-                           siteTitle?: string, withTree = true): string {
+                           siteTitle?: string): string {
     const segments = folder.path ? folder.path.split("/") : [];
 
     // Up the tree: the site, the root, then every folder down to this one - which is not a link to itself.
     const names = [...(siteTitle === undefined ? [] : [siteTitle]), rootName, ...segments];
-    const trail = `<nav class="breadcrumbs">${names.map((name, depth) => depth === names.length - 1
-        ? `<span dir="auto">${escape(name)}</span>`
-        : `<a dir="auto" href="${href("../".repeat(names.length - 1 - depth) + FOLDER_INDEX_NAME)}">${escape(name)}</a>`
-    ).join(" / ")}</nav>\n`;
+    const trail = `${renderBreadcrumbs(names.map((name, depth) => depth === names.length - 1
+        ? { name }
+        : { name, href: "../".repeat(names.length - 1 - depth) + FOLDER_INDEX_NAME }))}\n`;
 
     // Only where there is something for it to show or hide.
     const toggle = folder.plainCount < folder.pageCount
         ? `<label class="technical-toggle"><input type="checkbox" id="show-technical"> הצג קבצים טכניים</label>\n`
         : "";
 
-    // "..", heading both lists - in every folder but the top one, which has nowhere to go up to.
+    // "..", heading the list - in every folder but the top one, which has nowhere to go up to.
     const up = names.length > 1 ? [`<li class="folder up"><a href="../${FOLDER_INDEX_NAME}">..</a></li>`] : [];
 
     // A folder only has an index if some page is under it, so this list is never empty.
     const direct = `<ul class="files">\n${[
         ...up,
-        ...sortedFolders(folder).map(child => folderItem("", child)),
-        ...fileItems("", folder.path, sortedFiles(folder), technicalFiles),
+        ...sortedFolders(folder).map(folderItem),
+        ...fileItems(folder.path, sortedFiles(folder), technicalFiles),
     ].join("\n")}\n</ul>`;
-
-    const nested = (current: Folder, prefix: string): string => {
-        const items = [
-            ...(current === folder ? up : []),
-            ...sortedFolders(current).map(child => folderItem(prefix, child, nested(child, `${prefix}${child.name}/`))),
-            ...fileItems(prefix, current.path, sortedFiles(current), technicalFiles),
-        ];
-        return `<ul>\n${items.join("\n")}\n</ul>`;
-    };
 
     return `<!doctype html>
 <!-- Generated by _RTL-EDITOR - the index of a folder of ${escape(rootName)}. -->
@@ -218,11 +194,7 @@ ${toggle}${trail}
 <h1><bdi>${escape(folder.name)}</bdi></h1>
 <h2>קבצים בתיקייה</h2>
 ${direct}
-${withTree ? `<h2>כל הקבצים ${countOf(folder)}</h2>
-<div class="tree">
-${nested(folder, "")}
-</div>
-` : ""}</main>
+</main>
 <script>${INDEX_SCRIPT}</script>
 </body>
 </html>
@@ -231,21 +203,17 @@ ${nested(folder, "")}
 
 // The file tree's own marks, from public/style.css - and the technical pages, hidden until asked for.
 const INDEX_STYLE = `
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
 .folder-index h1 { margin-top: 0.3em; }
 .folder-index ul { list-style: none; padding-inline-start: 0; margin: 0 0 0.2em; }
-.folder-index .tree ul ul { padding-inline-start: 1.4em; border-inline-start: 1px dotted #aaa; margin-inline-start: 0.4em; }
 .folder-index li.folder::before { content: "📁 "; }
 .folder-index li.file::before { content: "📄 "; }
 .folder-index li.folder > a { font-weight: bold; }
-.folder-index .count { color: #888; font-weight: normal; font-size: 0.85em; }
 .technical-toggle {
     position: sticky; top: 0; z-index: 1; display: block; width: fit-content; margin-inline-start: auto;
     padding: 4px 8px; background: white; border: 1px solid #ddd; border-radius: 0 0 6px 6px;
     font-size: 0.9em; color: #444; cursor: pointer; user-select: none;
 }
-body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body.show-technical .plain-count { display: none; }
+body:not(.show-technical) .technical { display: none; }
 @media print { .technical-toggle { display: none; } }
 `;
 
