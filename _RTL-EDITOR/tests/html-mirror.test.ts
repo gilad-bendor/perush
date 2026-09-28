@@ -3,7 +3,7 @@ import { mkdtemp, mkdir, readFile, rm, stat, utimes, writeFile } from "fs/promis
 import { existsSync } from "fs";
 import { tmpdir } from "os";
 import { dirname, join } from "path";
-import { HtmlMirror, NO_JEKYLL_PATH, SITE_INDEX_PATH, htmlPathFor, isMirroredFile, mirroredHref } from "../src/html/html-mirror";
+import { HtmlMirror, NO_JEKYLL_PATH, SITE_INDEX_PATH, htmlPathFor, isMirroredFile, mirroredHref, pageBreadcrumbs } from "../src/html/html-mirror";
 import { folderIndexPages, mirrorSummary, siteIndexPage } from "../src/html/folder-index";
 
 describe("isMirroredFile", () => {
@@ -76,6 +76,26 @@ describe("mirroredHref", () => {
     });
 });
 
+describe("pageBreadcrumbs", () => {
+    test("up the tree the way the page's folder index goes, and the page's own name last", () => {
+        expect(pageBreadcrumbs("פירוש/1-בראשית/a.rtl.md")).toEqual([
+            { name: "פירוש", href: "../../../index.html" },
+            { name: "_HTML-FROM-MD", href: "../../index.html" },
+            { name: "פירוש", href: "../index.html" },
+            { name: "1-בראשית", href: "index.html" },
+            { name: "a" },
+        ]);
+    });
+
+    test("a page at the mirror's root starts from the site all the same", () => {
+        expect(pageBreadcrumbs("notes.md")).toEqual([
+            { name: "פירוש", href: "../index.html" },
+            { name: "_HTML-FROM-MD", href: "index.html" },
+            { name: "notes" },
+        ]);
+    });
+});
+
 describe("HtmlMirror", () => {
     let root: string;
     const RENDERER_MTIME = 1_000_000;       // long before any file the tests write
@@ -99,6 +119,7 @@ describe("HtmlMirror", () => {
         const m = mirror();
         expect(await m.syncFile("a/b.rtl.md")).toBe("rendered");
         expect(await readFile(page("a/b.rtl.md"), "utf-8")).toContain('<h1 id="כותרת">כותרת</h1>');
+        expect(await readFile(page("a/b.rtl.md"), "utf-8")).toContain('<nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / ');
         expect(await m.syncFile("a/b.rtl.md")).toBe("fresh");
     });
 

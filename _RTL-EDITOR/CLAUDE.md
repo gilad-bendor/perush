@@ -495,6 +495,10 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
   A link with no text, `[](aaa/bbb.md)`, shows its target as written - `[aaa/bbb.md](aaa/bbb.md)`.
   A target may hold spaces, `[x](מחקר ראשוני - פרומפט.rtl.md)`, as file names here do - CommonMark ends it at
   the first space, so `md-to-html.ts` wraps markdown-it's `parseLinkDestination()`. A title after a space is still a title.
+- **A breadcrumb trail** opens the page - the one its folder's index opens with, and the page's own
+  name at the end: `פירוש / _HTML-FROM-MD / פירוש / 1-בראשית / <file>`, every step but the last a link
+  up to that folder's index (`pageBreadcrumbs()`, rendered by `renderBreadcrumbs()`, which the folder
+  indexes share). On screen only: it is not printed, and so not in any PDF.
 - **On paper** the page is laid out for the sheet, by an `@media print` block at the end of
   `PAGE_STYLE`. See "Printing a page" below.
 
@@ -718,6 +722,8 @@ gets it; nothing is special-cased to the one file.
   (`main > h1:first-of-type`), or a credit line above it would print as a sheet of its own.
   This is the one opinionated rule of the block - drop `h1 { break-before: page }` for a continuous
   scroll instead.
+- **The breadcrumb trail is dropped** - a way around the site is no use on paper - which is what
+  keeps it out of every PDF of the PDF mirror, as Chromium prints them with this very block.
 - **A collapsed index would print as its title alone**, so `<details>` is forced open on paper.
 - **Links lose the blue and the underline**: on paper a link cannot be followed, and only the words
   are left to read.

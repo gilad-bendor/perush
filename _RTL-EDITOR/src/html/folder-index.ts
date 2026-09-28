@@ -15,7 +15,7 @@
 
 import { posix } from "path";
 import MarkdownIt from "markdown-it";
-import { PAGE_STYLE, readablePath } from "./md-to-html";
+import { PAGE_STYLE, readablePath, renderBreadcrumbs } from "./md-to-html";
 
 /** The file name every folder's index takes. */
 export const FOLDER_INDEX_NAME = "index.html";
@@ -174,10 +174,9 @@ function renderFolderIndex(folder: Folder, rootName: string, technicalFiles: Rea
 
     // Up the tree: the site, the root, then every folder down to this one - which is not a link to itself.
     const names = [...(siteTitle === undefined ? [] : [siteTitle]), rootName, ...segments];
-    const trail = `<nav class="breadcrumbs">${names.map((name, depth) => depth === names.length - 1
-        ? `<span dir="auto">${escape(name)}</span>`
-        : `<a dir="auto" href="${href("../".repeat(names.length - 1 - depth) + FOLDER_INDEX_NAME)}">${escape(name)}</a>`
-    ).join(" / ")}</nav>\n`;
+    const trail = `${renderBreadcrumbs(names.map((name, depth) => depth === names.length - 1
+        ? { name }
+        : { name, href: "../".repeat(names.length - 1 - depth) + FOLDER_INDEX_NAME }))}\n`;
 
     // Only where there is something for it to show or hide.
     const toggle = folder.plainCount < folder.pageCount
@@ -231,8 +230,6 @@ ${nested(folder, "")}
 
 // The file tree's own marks, from public/style.css - and the technical pages, hidden until asked for.
 const INDEX_STYLE = `
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
 .folder-index h1 { margin-top: 0.3em; }
 .folder-index ul { list-style: none; padding-inline-start: 0; margin: 0 0 0.2em; }
 .folder-index .tree ul ul { padding-inline-start: 1.4em; border-inline-start: 1px dotted #aaa; margin-inline-start: 0.4em; }
