@@ -495,6 +495,11 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
   A link with no text, `[](aaa/bbb.md)`, shows its target as written - `[aaa/bbb.md](aaa/bbb.md)`.
   A target may hold spaces, `[x](מחקר ראשוני - פרומפט.rtl.md)`, as file names here do - CommonMark ends it at
   the first space, so `md-to-html.ts` wraps markdown-it's `parseLinkDestination()`. A title after a space is still a title.
+- **A breadcrumb trail** opens the page - the one its folder's index opens with, and the page's own
+  name at the end: `פירוש / _HTML-FROM-MD / פירוש / 1-בראשית / <file>`, every step but the last a link
+  up to that folder's index (`pageBreadcrumbs()`, rendered by `renderBreadcrumbs()`, which the folder
+  indexes share). On screen only: it is not printed, and so not in any PDF. On a page - not on an
+  index - it cannot be selected, so a copy of the text does not bring the trail along.
 - **On paper** the page is laid out for the sheet, by an `@media print` block at the end of
   `PAGE_STYLE`. See "Printing a page" below.
 
@@ -529,9 +534,8 @@ ever: only a page whose content really changed makes its own dependents be re-sy
 
 **Folder indexes.** `docs/_HTML-FROM-MD/` and every folder under it get an `index.html`
 (`folder-index.ts`): a breadcrumb trail back up, starting from `docs/index.html` - titled **פירוש** (`SITE_TITLE`) -
-and a `..` heading both lists, the subfolders and then the pages directly in the folder, and then a nested
-list of every page anywhere under it - folders first, as in the file tree, each folder linking to its
-own index and showing how many pages it holds. A page is named by its file without `.rtl.html` /
+and a `..` heading the list of the subfolders and then the pages directly in the folder - folders first,
+as in the file tree, each linking to its own index. Nothing deeper is listed. A page is named by its file without `.rtl.html` /
 `.html`, unless two pages of the folder would then share a name - then both keep their full name.
 A file named `index.md` would take its folder's index, so its page is `index.md.html` (`htmlPathFor()`).
 
@@ -543,8 +547,8 @@ git cannot be asked (not a work tree) everything is listed.
 **Technical files.** A `.printignore`, in any folder, is read exactly like a `.gitignore` - git itself
 reads it (`--exclude-per-directory=.printignore`) - and the files it matches are *technical*: listed
 like any other, but as `li.technical`, hidden until the toggle at the top of every index,
-**הצג קבצים טכניים**, is ticked - a box stuck to the top of the viewport, however far the list is scrolled. A folder whose pages are all technical is technical itself, and a count
-that differs shows as two spans, `.plain-count` and `.all-count`, of which the CSS shows one.
+**הצג קבצים טכניים**, is ticked - a box stuck to the top of the viewport, however far the list is scrolled. A folder whose pages are all technical is technical itself.
+No index shows how many pages a folder holds.
 - **The toggle is the URL's hash**, `#show-technical` - off by default, so a link can be shared as it is
   seen. Ticking it `pushState`s the hash, and `popstate`/`hashchange` put the page back in step, which
   is what makes Back/Forward walk through the toggles.
@@ -556,9 +560,8 @@ Neither a `.gitignore` nor a `.printignore` is a Markdown file, so an edit to on
 through the 15 s sweep.
 
 **`docs/index.html`** - the page GitHub Pages opens with - is the index of `docs/` itself (`SITE_INDEX_PATH`,
-`siteIndexPage()`): the two mirrors, each with its count and linking to its own index, and any other page
-or PDF standing directly in `docs/` (`bible-viewer.html`) - and no nested list, which would only be every
-mirror over again. It is titled **פירוש** (`SITE_TITLE`), and every mirror's breadcrumb trail starts
+`siteIndexPage()`): the two mirrors, each linking to its own index, and any other page
+or PDF standing directly in `docs/` (`bible-viewer.html`). It is titled **פירוש** (`SITE_TITLE`), and every mirror's breadcrumb trail starts
 there, `פירוש / _HTML-FROM-MD / ...`, so a mirror's root index has a `..` too.
 
 **The PDF mirror's indexes are written here as well**, by the same `syncIndexes()`: it holds the very
@@ -718,6 +721,8 @@ gets it; nothing is special-cased to the one file.
   (`main > h1:first-of-type`), or a credit line above it would print as a sheet of its own.
   This is the one opinionated rule of the block - drop `h1 { break-before: page }` for a continuous
   scroll instead.
+- **The breadcrumb trail is dropped** - a way around the site is no use on paper - which is what
+  keeps it out of every PDF of the PDF mirror, as Chromium prints them with this very block.
 - **A collapsed index would print as its title alone**, so `<details>` is forced open on paper.
 - **Links lose the blue and the underline**: on paper a link cannot be followed, and only the words
   are left to read.

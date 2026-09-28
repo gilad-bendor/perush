@@ -37,7 +37,15 @@ export type RenderOptions = {
      * markers of the content refer to them by.
      */
     errors?: EmbedError[];
+    /**
+     * The way up from the page to the top of the site, shown above it (renderBreadcrumbs()) - and
+     * only on screen: a trail of links is nothing to print. Left out, the page has none.
+     */
+    breadcrumbs?: Breadcrumb[];
 };
+
+/** One step of a breadcrumb trail - a folder's index to go up to, or, with no href, the page itself. */
+export type Breadcrumb = { name: string; href?: string };
 
 type Env = {
     tablesByFirstLine?: Map<number, { lineCount: number, headerRows: number, rows: string[][][] }>;
@@ -403,6 +411,7 @@ export function renderMarkdownPage(content: string, filePath: string, options: R
     const isRtl = isRtlFile(filePath, content);
     const { tokens, env } = prepareDocument(content, isRtl, options);
     const errors = renderErrors(options.errors ?? [], isRtl);
+    const trail = options.breadcrumbs?.length ? `${renderBreadcrumbs(options.breadcrumbs)}\n` : "";
     const body = markdown.renderer.render(tokens, markdown.options, env);
     const fileName = filePath.split("/").pop() ?? filePath;
     const title = firstHeadingText(tokens) ?? fileName.replace(/(\.rtl)?\.md$/, "");
@@ -419,7 +428,7 @@ export function renderMarkdownPage(content: string, filePath: string, options: R
 </head>
 <body class="${isRtl ? "rtl" : "ltr"}">
 <main>
-${errors}${body}</main>
+${trail}${errors}${body}</main>
 </body>
 </html>
 `;
@@ -565,6 +574,18 @@ function firstHeadingText(tokens: Token[]): string | null {
     return text || null;
 }
 
+/**
+ * A breadcrumb trail - "a / b / c", every step but the one of the page itself linking up to its
+ * folder's index. The folder indexes (folder-index.ts) open with one too.
+ */
+export function renderBreadcrumbs(steps: Breadcrumb[]): string {
+    const escape = markdown.utils.escapeHtml;
+    return `<nav class="breadcrumbs">${steps.map(step => step.href === undefined
+        ? `<span dir="auto">${escape(step.name)}</span>`
+        : `<a dir="auto" href="${escape(readablePath(step.href))}">${escape(step.name)}</a>`
+    ).join(" / ")}</nav>`;
+}
+
 // The editor's look, from public/style.css and the HighlightStyle in markdown-editor.js - keep the
 // two in step when either changes. The folder indexes (folder-index.ts) build on it too.
 export const PAGE_STYLE = `
@@ -589,6 +610,9 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
+.breadcrumbs { color: #666; font-size: 0.95em; }
+.breadcrumbs a { color: inherit; }
+body:not(.folder-index) .breadcrumbs { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -680,6 +704,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
        otherwise be a sheet of its own, nearly blank. */
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
+
+    /* The way around the site, which paper - and so every PDF - has no use for. */
+    .breadcrumbs { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }

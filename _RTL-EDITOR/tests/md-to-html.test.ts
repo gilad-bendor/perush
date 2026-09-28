@@ -334,6 +334,14 @@ describe("the page", () => {
         expect(page).toContain('<html dir="ltr">');
         expect(page).toContain("<title>notes</title>");
     });
+
+    test("a breadcrumb trail, if given, opens the page - every step a link up but the page's own", () => {
+        const page = renderMarkdownPage("# כותרת", "פירוש/a.rtl.md",
+            { breadcrumbs: [{ name: "פירוש", href: "../index.html" }, { name: "a b", href: "index.html" }, { name: "a" }] });
+        expect(page).toContain('<main>\n<nav class="breadcrumbs"><a dir="auto" href="../index.html">פירוש</a> / '
+            + '<a dir="auto" href="index.html">a b</a> / <span dir="auto">a</span></nav>\n<h1');
+        expect(renderMarkdownPage("# כותרת", "פירוש/a.rtl.md")).not.toContain('<nav class="breadcrumbs">');
+    });
 });
 
 describe("readable links", () => {
@@ -360,5 +368,11 @@ describe("printing", () => {
         const page = renderMarkdownPage("credit line\n\n# one\n\n# two", "a.md");
         expect(page).toContain("h1 { break-before: page; }");
         expect(page).toContain("main > h1:first-of-type { break-before: auto; }");
+    });
+
+    test("the breadcrumb trail stays on screen - and out of every PDF", () => {
+        const page = renderMarkdownPage("# one", "a.md", { breadcrumbs: [{ name: "x", href: "index.html" }, { name: "a" }] });
+        const print = page.slice(page.indexOf("@media print"));
+        expect(print).toContain(".breadcrumbs { display: none; }");
     });
 });

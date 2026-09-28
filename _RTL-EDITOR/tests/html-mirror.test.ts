@@ -3,7 +3,7 @@ import { mkdtemp, mkdir, readFile, rm, stat, utimes, writeFile } from "fs/promis
 import { existsSync } from "fs";
 import { tmpdir } from "os";
 import { dirname, join } from "path";
-import { HtmlMirror, NO_JEKYLL_PATH, SITE_INDEX_PATH, htmlPathFor, isMirroredFile, mirroredHref } from "../src/html/html-mirror";
+import { HtmlMirror, NO_JEKYLL_PATH, SITE_INDEX_PATH, htmlPathFor, isMirroredFile, mirroredHref, pageBreadcrumbs } from "../src/html/html-mirror";
 import { folderIndexPages, mirrorSummary, siteIndexPage } from "../src/html/folder-index";
 
 describe("isMirroredFile", () => {
@@ -76,6 +76,26 @@ describe("mirroredHref", () => {
     });
 });
 
+describe("pageBreadcrumbs", () => {
+    test("up the tree the way the page's folder index goes, and the page's own name last", () => {
+        expect(pageBreadcrumbs("פירוש/1-בראשית/a.rtl.md")).toEqual([
+            { name: "פירוש", href: "../../../index.html" },
+            { name: "_HTML-FROM-MD", href: "../../index.html" },
+            { name: "פירוש", href: "../index.html" },
+            { name: "1-בראשית", href: "index.html" },
+            { name: "a" },
+        ]);
+    });
+
+    test("a page at the mirror's root starts from the site all the same", () => {
+        expect(pageBreadcrumbs("notes.md")).toEqual([
+            { name: "פירוש", href: "../index.html" },
+            { name: "_HTML-FROM-MD", href: "index.html" },
+            { name: "notes" },
+        ]);
+    });
+});
+
 describe("HtmlMirror", () => {
     let root: string;
     const RENDERER_MTIME = 1_000_000;       // long before any file the tests write
@@ -99,6 +119,7 @@ describe("HtmlMirror", () => {
         const m = mirror();
         expect(await m.syncFile("a/b.rtl.md")).toBe("rendered");
         expect(await readFile(page("a/b.rtl.md"), "utf-8")).toContain('<h1 id="כותרת">כותרת</h1>');
+        expect(await readFile(page("a/b.rtl.md"), "utf-8")).toContain('<nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / ');
         expect(await m.syncFile("a/b.rtl.md")).toBe("fresh");
     });
 
@@ -171,7 +192,7 @@ describe("HtmlMirror", () => {
         await write("dir/b.rtl.md", "b");
         expect(await mirror().syncTree(["a.md", "dir/", "dir/b.rtl.md"])).toEqual({ rendered: 2, removed: 0, indexes: 5 });   // both mirrors' indexes, and docs/index.html
 
-        expect(await mirror().syncTree(["a.md"])).toEqual({ rendered: 0, removed: 1, indexes: 5 });
+        expect(await mirror().syncTree(["a.md"])).toEqual({ rendered: 0, removed: 1, indexes: 4 });   // docs/index.html, showing no counts, is left as it was
         expect(existsSync(page("dir/b.rtl.md"))).toBe(false);
         expect(existsSync(join(root, "docs/_HTML-FROM-MD/dir"))).toBe(false);
     });
@@ -257,7 +278,7 @@ describe("HtmlMirror", () => {
         const m = mirror();
         await m.syncTree(["a.md", "x/", "x/y/", "x/y/b.md"]);
         await rm(join(root, "x"), { recursive: true });
-        expect(await m.syncTree(["a.md"])).toEqual({ rendered: 0, removed: 1, indexes: 7 });   // in both mirrors root rewritten, x and x/y removed - and docs/index.html
+        expect(await m.syncTree(["a.md"])).toEqual({ rendered: 0, removed: 1, indexes: 6 });   // in both mirrors root rewritten, x and x/y removed
         expect(existsSync(join(root, "docs/_HTML-FROM-MD/x"))).toBe(false);
         expect(existsSync(join(root, "docs/_HTML-FROM-MD/index.html"))).toBe(true);
     });
@@ -275,7 +296,7 @@ describe("HtmlMirror", () => {
         await writeFile(join(root, ".gitignore"), "/ignored/\n");
         git("add", "a.md");                                       // tracked or not makes no difference
         await mirror().syncTree(tree);
-        expect(await rootIndex()).toContain('href="kept/b.html"');
+        expect(await rootIndex()).toContain('href="kept/index.html"');
         expect(await rootIndex()).not.toContain("ignored");
         expect(existsSync(join(root, "docs/_HTML-FROM-MD/ignored/index.html"))).toBe(false);
         expect(existsSync(page("ignored/c.md"))).toBe(true);      // the page itself is still made
@@ -292,10 +313,11 @@ describe("HtmlMirror", () => {
         await mirror().syncTree(["a.md", "tech/", "tech/b.md", "x/", "x/c.md", "x/d.md"]);
         const index = await readFile(join(root, "docs/_HTML-FROM-MD/index.html"), "utf-8");
         expect(index).toContain('<li class="folder technical"><a dir="auto" href="tech/index.html">');
-        expect(index).toContain('<li class="file technical"><a dir="auto" href="x/c.html">');
-        expect(index).toContain('<li class="file"><a dir="auto" href="x/d.html">');
+        const x = await readFile(join(root, "docs/_HTML-FROM-MD/x/index.html"), "utf-8");
+        expect(x).toContain('<li class="file technical"><a dir="auto" href="c.html">');
+        expect(x).toContain('<li class="file"><a dir="auto" href="d.html">');
         expect(index).toContain('<li class="file"><a dir="auto" href="a.html">');
-        expect(index).toContain('<span class="plain-count">(2)</span><span class="all-count">(4)</span>');
+        expect(index).not.toContain('class="count"');
     });
 
     test("docs/index.html lists what is directly in docs/ - the two mirrors, and any other page there", async () => {
@@ -338,8 +360,8 @@ describe("folderIndexPages", () => {
     });
 
     test("lists the folder's own subfolders and then its own pages, by their names", () => {
-        const direct = section(indexes.get("פירוש/index.html")!, "<h2>קבצים בתיקייה</h2>", "<h2>כל הקבצים");
-        const folderLink = direct.indexOf(`href="1-בראשית/index.html">1-בראשית</a> <span class="count">(2)</span></li>`);
+        const direct = section(indexes.get("פירוש/index.html")!, "<h2>קבצים בתיקייה</h2>", "</main>");
+        const folderLink = direct.indexOf(`href="1-בראשית/index.html">1-בראשית</a></li>`);
         const fileLink = direct.indexOf(`href="הקדמה.rtl.html">הקדמה</a>`);
         expect(folderLink).toBeGreaterThanOrEqual(0);
         expect(fileLink).toBeGreaterThan(folderLink);
@@ -355,16 +377,15 @@ describe("folderIndexPages", () => {
 
     test("a folder holding only folders lists them", () => {
         const index = folderIndexPages(["x/y/a.html"], "_HTML-FROM-MD").get("x/index.html")!;
-        expect(section(index, "<h2>קבצים בתיקייה</h2>", "<h2>כל הקבצים")).toContain('href="y/index.html">y</a>');
+        expect(section(index, "<h2>קבצים בתיקייה</h2>", "</main>")).toContain('href="y/index.html">y</a>');
     });
 
-    test("then nests every page under it - folders first, each linking to its index", () => {
-        const all = section(indexes.get("index.html")!, "<h2>כל הקבצים", "</main>");
-        const order = ["פירוש/index.html", "פירוש/1-בראשית/index.html", "פירוש/1-בראשית/a.rtl.html", "פירוש/1-בראשית/b.rtl.html", "פירוש/הקדמה.rtl.html", "top.html"]
-            .map(path => all.indexOf(`href="${path}"`));
-        expect(order.every(position => position >= 0)).toBe(true);
-        expect([...order].sort((a, b) => a - b)).toEqual(order);
-        expect(all).toContain("(4)");
+    test("and nothing deeper - no nested list of every page under it", () => {
+        const index = indexes.get("index.html")!;
+        expect(index).toContain('href="פירוש/index.html"');
+        expect(index).toContain('href="top.html"');
+        expect(index).not.toContain("1-בראשית");
+        expect(index).not.toContain("<h2>כל הקבצים");
     });
 
     test("the root's trail is its name alone, and it has no \"..\"", () => {
@@ -373,12 +394,11 @@ describe("folderIndexPages", () => {
         expect(index).not.toContain(">..</a>");
     });
 
-    test("every other folder starts both of its lists with \"..\"", () => {
+    test("every other folder starts its list with \"..\"", () => {
         const index = indexes.get("פירוש/1-בראשית/index.html")!;
         const up = '<li class="folder up"><a href="../index.html">..</a></li>';
-        expect(index.split(up).length - 1).toBe(2);
-        expect(section(index, "<h2>קבצים בתיקייה</h2>", "<h2>כל הקבצים")).toContain(`<ul class="files">\n${up}`);
-        expect(section(index, "<h2>כל הקבצים", "</main>")).toContain(`<ul>\n${up}`);
+        expect(index.split(up).length - 1).toBe(1);
+        expect(section(index, "<h2>קבצים בתיקייה</h2>", "</main>")).toContain(`<ul class="files">\n${up}`);
     });
 
     test("a breadcrumb trail leads back up", () => {
@@ -389,10 +409,10 @@ describe("folderIndexPages", () => {
 });
 
 describe("siteIndexPage", () => {
-    test("a mirror's count is its pages', and one that lists nothing is left out", () => {
+    test("a mirror that lists nothing is left out", () => {
         const html = siteIndexPage("פירוש", [mirrorSummary(["a.html", "x/b.html"], "_HTML-FROM-MD", new Set(["x/b.html"])),
                                               mirrorSummary([], "_PDF-FROM-MD")], ["viewer.html"]);
-        expect(html).toContain('_HTML-FROM-MD</a> <span class="count"><span class="plain-count">(1)</span><span class="all-count">(2)</span></span>');
+        expect(html).toContain('href="_HTML-FROM-MD/index.html">_HTML-FROM-MD</a></li>');
         expect(html).not.toContain("_PDF-FROM-MD");
         expect(html).toContain("<title>פירוש</title>");
     });
@@ -407,9 +427,9 @@ describe("the technical toggle", () => {
         expect(index).toContain('<li class="file technical"><a dir="auto" href="t.html">');
     });
 
-    test("an index with no technical page shows a single count, and no toggle", () => {
+    test("an index with no technical page has no toggle - and no index shows counts", () => {
         const plain = folderIndexPages(["a.html"], "_HTML-FROM-MD").get("index.html")!;
-        expect(plain).toContain('<h2>כל הקבצים <span class="count">(1)</span></h2>');
+        expect(plain).not.toContain('class="count"');
         expect(plain).not.toContain('id="show-technical"');
     });
 
