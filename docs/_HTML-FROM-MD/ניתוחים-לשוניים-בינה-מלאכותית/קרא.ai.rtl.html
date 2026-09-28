@@ -27,6 +27,8 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
+.breadcrumbs { color: #666; font-size: 0.95em; }
+.breadcrumbs a { color: inherit; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -119,6 +121,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
+    /* The way around the site, which paper - and so every PDF - has no use for. */
+    .breadcrumbs { display: none; }
+
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
 
@@ -129,6 +134,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </head>
 <body class="rtl">
 <main>
+<nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">קרא.ai</span></nav>
 <p><a href="https://claude.ai/share/555d76b9-1005-491c-a77e-3982bf8fa6ef">Claude Opus 5</a> (based on a <a href="https://claude.ai/share/43eee85b-6c6c-4499-a39a-6b4e4558ed70">preparation session</a>)</p>
 <h1 id="השורש-קרא-בעברית-המקראית">השורש ק.ר.א בעברית המקראית</h1>
 <p><strong>ניתוח בלשני־היסטורי, תחבירי ופנומנולוגי — עם בחינת היחס אל ק.ר.ה</strong></p>

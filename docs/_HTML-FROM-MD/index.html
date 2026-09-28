@@ -27,6 +27,8 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
+.breadcrumbs { color: #666; font-size: 0.95em; }
+.breadcrumbs a { color: inherit; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -119,6 +121,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
+    /* The way around the site, which paper - and so every PDF - has no use for. */
+    .breadcrumbs { display: none; }
+
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
 
@@ -126,8 +131,6 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     a { color: inherit; text-decoration: none; }
 }
 
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
 .folder-index h1 { margin-top: 0.3em; }
 .folder-index ul { list-style: none; padding-inline-start: 0; margin: 0 0 0.2em; }
 .folder-index .tree ul ul { padding-inline-start: 1.4em; border-inline-start: 1px dotted #aaa; margin-inline-start: 0.4em; }
@@ -158,9 +161,9 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="folder technical"><a dir="auto" href="_DELIBERATION-ROOM/index.html">_DELIBERATION-ROOM</a> <span class="count"><span class="plain-count">(0)</span><span class="all-count">(24)</span></span></li>
 <li class="folder technical"><a dir="auto" href="_MCP-SERVER/index.html">_MCP-SERVER</a> <span class="count"><span class="plain-count">(0)</span><span class="all-count">(2)</span></span></li>
 <li class="folder technical"><a dir="auto" href="_RTL-EDITOR/index.html">_RTL-EDITOR</a> <span class="count"><span class="plain-count">(0)</span><span class="all-count">(3)</span></span></li>
-<li class="folder"><a dir="auto" href="misc/index.html">misc</a> <span class="count"><span class="plain-count">(26)</span><span class="all-count">(101)</span></span></li>
+<li class="folder"><a dir="auto" href="misc/index.html">misc</a> <span class="count"><span class="plain-count">(26)</span><span class="all-count">(33)</span></span></li>
 <li class="folder"><a dir="auto" href="הנגשה/index.html">הנגשה</a> <span class="count">(3)</span></li>
-<li class="folder"><a dir="auto" href="ניתוחים-לשוניים/index.html">ניתוחים-לשוניים</a> <span class="count">(47)</span></li>
+<li class="folder"><a dir="auto" href="ניתוחים-לשוניים/index.html">ניתוחים-לשוניים</a> <span class="count">(46)</span></li>
 <li class="folder"><a dir="auto" href="ניתוחים-לשוניים-בינה-מלאכותית/index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> <span class="count">(39)</span></li>
 <li class="folder"><a dir="auto" href="נספחים-לפירוש/index.html">נספחים-לפירוש</a> <span class="count">(4)</span></li>
 <li class="folder"><a dir="auto" href="פירוש/index.html">פירוש</a> <span class="count">(378)</span></li>
@@ -171,7 +174,7 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="file"><a dir="auto" href="CLAUDE-HEBREW.html">CLAUDE-HEBREW</a></li>
 <li class="file"><a dir="auto" href="CLAUDE.html">CLAUDE</a></li>
 </ul>
-<h2>כל הקבצים <span class="count"><span class="plain-count">(579)</span><span class="all-count">(685)</span></span></h2>
+<h2>כל הקבצים <span class="count"><span class="plain-count">(578)</span><span class="all-count">(616)</span></span></h2>
 <div class="tree">
 <ul>
 <li class="folder up"><a href="../index.html">..</a></li>
@@ -236,7 +239,7 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 </ul></li>
 <li class="file technical"><a dir="auto" href="_RTL-EDITOR/CLAUDE.html">CLAUDE</a></li>
 </ul></li>
-<li class="folder"><a dir="auto" href="misc/index.html">misc</a> <span class="count"><span class="plain-count">(26)</span><span class="all-count">(101)</span></span>
+<li class="folder"><a dir="auto" href="misc/index.html">misc</a> <span class="count"><span class="plain-count">(26)</span><span class="all-count">(33)</span></span>
 <ul>
 <li class="folder technical"><a dir="auto" href="misc/2000-BASE-DOCS/index.html">2000-BASE-DOCS</a> <span class="count"><span class="plain-count">(0)</span><span class="all-count">(6)</span></span>
 <ul>
@@ -280,80 +283,6 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="file"><a dir="auto" href="misc/ניסיון-לפירוש--המשכן/25-שמות-לא_יב-לא_יז-השבת.rtl.html">25-שמות-לא_יב-לא_יז-השבת</a></li>
 <li class="file"><a dir="auto" href="misc/ניסיון-לפירוש--המשכן/CLAUDE.html">CLAUDE</a></li>
 </ul></li>
-<li class="folder technical"><a dir="auto" href="misc/פנייה%20לבלשנים/index.html">פנייה לבלשנים</a> <span class="count"><span class="plain-count">(0)</span><span class="all-count">(68)</span></span>
-<ul>
-<li class="folder technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/index.html">פרומפטים-לניתוח-פסוקים</a> <span class="count"><span class="plain-count">(0)</span><span class="all-count">(65)</span></span>
-<ul>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/1.html">1</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/10.html">10</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/11.html">11</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/12.html">12</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/13.html">13</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/14.html">14</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/15.html">15</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/16.html">16</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/17.html">17</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/18.html">18</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/19.html">19</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/2.html">2</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/20.html">20</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/21.html">21</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/22.html">22</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/23.html">23</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/24.html">24</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/25.html">25</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/26.html">26</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/27.html">27</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/28.html">28</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/29.html">29</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/3.html">3</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/30.html">30</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/31.html">31</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/32.html">32</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/33.html">33</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/34.html">34</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/35.html">35</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/36.html">36</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/37.html">37</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/38.html">38</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/39.html">39</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/4.html">4</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/40.html">40</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/41.html">41</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/42.html">42</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/43.html">43</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/44.html">44</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/45.html">45</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/46.html">46</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/47.html">47</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/48.html">48</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/49.html">49</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/5.html">5</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/50.html">50</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/51.html">51</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/52.html">52</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/53.html">53</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/54.html">54</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/55.html">55</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/56.html">56</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/57.html">57</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/58.html">58</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/59.html">59</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/6.html">6</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/60.html">60</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/61.html">61</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/62.html">62</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/63.html">63</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/64.html">64</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/65.html">65</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/7.html">7</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/8.html">8</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/פרומפטים-לניתוח-פסוקים/9.html">9</a></li>
-</ul></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/existing-articles-search%20-%20prompt.html">existing-articles-search - prompt</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/existing-articles-search%20-%20results.html">existing-articles-search - results</a></li>
-<li class="file technical"><a dir="auto" href="misc/פנייה%20לבלשנים/verses-analysis-prompt.template.html">verses-analysis-prompt.template</a></li>
-</ul></li>
 </ul></li>
 <li class="folder"><a dir="auto" href="הנגשה/index.html">הנגשה</a> <span class="count">(3)</span>
 <ul>
@@ -361,7 +290,7 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="file"><a dir="auto" href="הנגשה/ניתוח-אתגרים.rtl.html">ניתוח-אתגרים</a></li>
 <li class="file"><a dir="auto" href="הנגשה/פירוש-לתורה-מונגש.rtl.html">פירוש-לתורה-מונגש</a></li>
 </ul></li>
-<li class="folder"><a dir="auto" href="ניתוחים-לשוניים/index.html">ניתוחים-לשוניים</a> <span class="count">(47)</span>
+<li class="folder"><a dir="auto" href="ניתוחים-לשוניים/index.html">ניתוחים-לשוניים</a> <span class="count">(46)</span>
 <ul>
 <li class="file"><a dir="auto" href="ניתוחים-לשוניים/===%20פרומפט%20תבניתי%20לתמצות%20ניתוח-לשוני%20===.rtl.html">=== פרומפט תבניתי לתמצות ניתוח-לשוני ===</a></li>
 <li class="file"><a dir="auto" href="ניתוחים-לשוניים/איש-אישה-אנוש.rtl.html">איש-אישה-אנוש</a></li>
@@ -399,7 +328,6 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="file"><a dir="auto" href="ניתוחים-לשוניים/קוה.rtl.html">קוה</a></li>
 <li class="file"><a dir="auto" href="ניתוחים-לשוניים/קרא.rtl.html">קרא</a></li>
 <li class="file"><a dir="auto" href="ניתוחים-לשוניים/רבה-רבב.rtl.html">רבה-רבב</a></li>
-<li class="file"><a dir="auto" href="ניתוחים-לשוניים/רמש.ai.rtl.html">רמש.ai</a></li>
 <li class="file"><a dir="auto" href="ניתוחים-לשוניים/רמש.rtl.html">רמש</a></li>
 <li class="file"><a dir="auto" href="ניתוחים-לשוניים/רקע-רקיע.rtl.html">רקע-רקיע</a></li>
 <li class="file"><a dir="auto" href="ניתוחים-לשוניים/שאל.rtl.html">שאל</a></li>

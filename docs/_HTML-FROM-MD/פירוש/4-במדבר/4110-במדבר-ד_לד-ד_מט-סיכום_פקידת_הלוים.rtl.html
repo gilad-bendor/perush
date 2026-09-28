@@ -27,6 +27,8 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
+.breadcrumbs { color: #666; font-size: 0.95em; }
+.breadcrumbs a { color: inherit; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -119,6 +121,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
+    /* The way around the site, which paper - and so every PDF - has no use for. */
+    .breadcrumbs { display: none; }
+
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
 
@@ -129,6 +134,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </head>
 <body class="rtl">
 <main>
+<nav class="breadcrumbs"><a dir="auto" href="../../../index.html">פירוש</a> / <a dir="auto" href="../../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="../index.html">פירוש</a> / <a dir="auto" href="index.html">4-במדבר</a> / <span dir="auto">4110-במדבר-ד_לד-ד_מט-סיכום_פקידת_הלוים</span></nav>
 <h1 id="סיכום-פקידת-הלוים">סיכום פקידת הלוים</h1>
 <blockquote>
 <p>במדבר ד לד: וַיִּפְקֹד מֹשֶׁה וְאַהֲרֹן וּנְשִׂיאֵי הָעֵדָה אֶת בְּנֵי הַקְּהָתִי לְמִשְׁפְּחֹתָם וּלְבֵית אֲבֹתָם.<br>
