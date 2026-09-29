@@ -1,0 +1,21 @@
+{
+  "name": "semitic-lexica-fetcher",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Locate, classify and (where legally possible) fetch comparative-Semitic lexica: DULAT, Johnstone's MSA lexicons, Leslau's Lexique soqotri, and their open substitutes.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test dist/tests/*.test.js",
+    "cli": "node dist/src/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "optionalDependencies": {
+    "pdfjs-dist": "^4.0.0"
+  }
+}
