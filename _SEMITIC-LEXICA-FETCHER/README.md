@@ -80,6 +80,8 @@ Google Books: create a free API key (Google Cloud console → Books API) and exp
 ## 7. Files
 
 ```
+reports/00-index.md      one full report per data source (bibliography, copyright, URLs, how to obtain, parsing notes)
+CLAUDE.md                maintainer notes: architecture, policy rules, how to add sources/fetchers/profiles, known unknowns
 src/registry.ts          the source catalogue (edit here when you learn something new)
 src/util/http.ts         polite client: per-host serialisation, delay, robots.txt, retries, cache
 src/util/robots.ts       robots.txt parser

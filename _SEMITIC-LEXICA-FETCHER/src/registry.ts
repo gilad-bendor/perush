@@ -25,7 +25,6 @@ export const SOURCES: SourceSpec[] = [
       doi: '10.1163/9789004288652',
       googleBooksIds: ['bh6oBgAAQBAJ'],
       urls: [
-        'https://brill.com/display/title/26466',
         'https://www.degruyterbrill.com/document/isbn/9789004288652/html',
         'https://play.google.com/store/books/details?id=bh6oBgAAQBAJ',
       ],
