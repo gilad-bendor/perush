@@ -36,7 +36,7 @@ import type { Stats } from "fs";
 import { createHash } from "crypto";
 import { pathToFileURL } from "url";
 import type { Browser } from "playwright";
-import { htmlPathFor, isMirroredFile, PDF_MIRROR_DIR, pdfPathFor } from "./html-mirror";
+import { htmlPathFor, isMirroredFile, logSiteChange, PDF_MIRROR_DIR, pdfPathFor } from "./html-mirror";
 import { writeFileSafe } from "../write-file-safe";
 
 // The PDF mirror's paths are html-mirror.ts's, which lists this mirror in its indexes too.
@@ -187,6 +187,7 @@ export class PdfMirror implements PageCompanion {
             await tab.close();
         }
         await writeFileSafe(pdfPath, await withStamp(printed, stamp));
+        logSiteChange(this.root, "wrote", pdfPath);
         this.stamps.delete(pdfPath);
         return "printed";
     }
@@ -248,6 +249,7 @@ export class PdfMirror implements PageCompanion {
             if ((error as NodeJS.ErrnoException).code === "ENOENT") return false;
             throw error;
         }
+        logSiteChange(this.root, "deleted", pdfPath);
         const mirrorRoot = join(this.root, PDF_MIRROR_DIR);
         for (let dir = dirname(pdfPath); dir.startsWith(mirrorRoot + "/"); dir = dirname(dir)) {
             try {
@@ -255,6 +257,7 @@ export class PdfMirror implements PageCompanion {
             } catch {
                 break;
             }
+            logSiteChange(this.root, "deleted folder", dir);
         }
         return true;
     }

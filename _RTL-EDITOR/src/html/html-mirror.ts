@@ -31,7 +31,7 @@
 // Nothing here decides *when* to look; server.ts calls scheduleSync() for a file the watcher saw
 // change, and syncTree() at startup and on its periodic rescan.
 
-import { dirname, join, posix } from "path";
+import { dirname, join, posix, relative } from "path";
 import { readdir, readFile, rmdir, stat, unlink, utimes } from "fs/promises";
 import type { Stats } from "fs";
 import { renderMarkdownPage } from "./md-to-html";
@@ -64,6 +64,15 @@ export const SITE_INDEX_PATH = posix.join(SITE_DIR, FOLDER_INDEX_NAME);
 export const NO_JEKYLL_PATH = posix.join(SITE_DIR, ".nojekyll");
 const NO_JEKYLL_TEXT = "Tells GitHub Pages to serve docs/ as is, without Jekyll - which would drop every name starting with \"_\".\n"
     + "Written by _RTL-EDITOR (html-mirror.ts).\n";
+
+/**
+ * Says on the console what was changed under docs/ - every file written or deleted there, and every
+ * folder deleted - by either mirror.
+ * @param fullPath  as joined onto `root`
+ */
+export function logSiteChange(root: string, change: "wrote" | "deleted" | "deleted folder", fullPath: string): void {
+    console.log(`docs/: ${change} ${relative(root, fullPath)}`);
+}
 
 /** The code a page depends on besides its file - a change to any of them makes every page stale. */
 const RENDERER_FILES = [
@@ -272,6 +281,7 @@ export class HtmlMirror {
                 if (!page || page.mtimeMs < newest) await touch(pagePath);
             } else {
                 await writeFileSafe(pagePath, html);
+                logSiteChange(this.root, "wrote", pagePath);
                 outcome = "rendered";
             }
 
@@ -408,6 +418,7 @@ export class HtmlMirror {
             const fullPath = join(mirrorRoot, indexPath);
             if (await readFileOrNull(fullPath) !== html) {
                 await writeFileSafe(fullPath, html);
+                logSiteChange(this.root, "wrote", fullPath);
                 changed++;
             }
         }
@@ -437,15 +448,23 @@ export class HtmlMirror {
                     && entry.name !== FOLDER_INDEX_NAME && !entry.name.startsWith(".") && !mirrorNames.has(entry.name))
                 .map(entry => entry.name);
         } catch {}
-        if (!files.length && !mirrors.some(mirror => mirror.pageCount)) return await unlinkIfThere(indexPath);
+        if (!files.length && !mirrors.some(mirror => mirror.pageCount)) {
+            if (!await unlinkIfThere(indexPath)) return false;
+            logSiteChange(this.root, "deleted", indexPath);
+            return true;
+        }
 
         // Whenever there is a site to serve, so that deleting docs/ whole is no harm: it all comes back.
         const noJekyllPath = join(this.root, NO_JEKYLL_PATH);
-        if (await readFileOrNull(noJekyllPath) !== NO_JEKYLL_TEXT) await writeFileSafe(noJekyllPath, NO_JEKYLL_TEXT);
+        if (await readFileOrNull(noJekyllPath) !== NO_JEKYLL_TEXT) {
+            await writeFileSafe(noJekyllPath, NO_JEKYLL_TEXT);
+            logSiteChange(this.root, "wrote", noJekyllPath);
+        }
 
         const html = siteIndexPage(SITE_TITLE, mirrors, files);
         if (await readFileOrNull(indexPath) === html) return false;
         await writeFileSafe(indexPath, html);
+        logSiteChange(this.root, "wrote", indexPath);
         return true;
     }
 
@@ -470,6 +489,7 @@ export class HtmlMirror {
             if ((error as NodeJS.ErrnoException).code === "ENOENT") return false;
             throw error;
         }
+        logSiteChange(this.root, "deleted", pagePath);
         const mirrorRoot = join(this.root, mirrorDir);
         for (let dir = dirname(pagePath); dir.startsWith(mirrorRoot + "/"); dir = dirname(dir)) {
             try {
@@ -477,6 +497,7 @@ export class HtmlMirror {
             } catch {
                 break;
             }
+            logSiteChange(this.root, "deleted folder", dir);
         }
         return true;
     }
