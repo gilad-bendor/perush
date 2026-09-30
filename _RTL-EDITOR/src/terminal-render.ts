@@ -67,7 +67,7 @@ export async function renderTerminalLines(
 
     let stream = content;
 
-    // scripts/claude-into-rtl-file.sh records the real geometry on a first line,
+    // scripts/claude-into-rtl-file--perush.sh records the real geometry on a first line,
     // ahead of the appended recording. Older recordings simply don't have it.
     const geometry = parseGeometryHeader(stream);
     if (geometry) {
@@ -142,7 +142,7 @@ export type GeometryHeader = { cols: number; rows: number; rest: string };
 
 /**
  * Reads a leading "rows=<n> columns=<n>" line, as written by
- * scripts/claude-into-rtl-file.sh before it hands the file to `script -Fa`.
+ * scripts/claude-into-rtl-file--perush.sh before it hands the file to `script -Fa`.
  *
  * Deliberately forgiving, and returns null on anything unexpected: recordings made
  * before this line existed - or by a plain `script` invocation - are still valid

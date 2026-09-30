@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="RUN CLAUDE INTO RTL FILE" type="ShConfigurationType">
+  <configuration default="false" name="קלוד-תימצות-ניתוח-לשוני" type="ShConfigurationType">
     <option name="SCRIPT_TEXT" value="bun run dev" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-    <option name="SCRIPT_PATH" value="$PROJECT_DIR$/scripts/claude-into-rtl-file.sh" />
+    <option name="SCRIPT_PATH" value="$PROJECT_DIR$/scripts/claude-into-rtl-file--lingual-summary.sh" />
     <option name="SCRIPT_OPTIONS" value="" />
     <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
     <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
