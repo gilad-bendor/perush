@@ -1,4 +1,4 @@
-# Prompts for "importing" Hebrew changes to English
+# Prompt for "importing" Hebrew changes to English
 
 ## DICTIONARY changes: `פירוש/הקדמה-לפירוש.rtl.md`:מילון  → `CLAUDE-ENGLISH.md` 
 
