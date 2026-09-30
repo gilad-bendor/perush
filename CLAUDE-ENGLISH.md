@@ -62,7 +62,7 @@ Every cultural development contains the seed of its counter-development. Class f
 The dictionary below contains only **primitive definitions** — concepts whose meaning cannot be reliably derived from other dictionary entries or from root analysis. Derived concepts (such as נחש, קין, הבל, חנוך, and most named characters and places) are established within the commentary segments themselves and accessed through cross-referencing when needed (see "Cross-Referencing Recurring Concepts" below).
 
 **Structural relationships between entries** — the dictionary is not a flat list. Key organizing axes:
-- **Complexity scale**: צומח (insights) → חיה (local narrative) → אדם (authoritative narrative). Each level incorporates and governs the levels below it.
+- **Complexity scale**: צומח (insights) → נפש (narrative): חיה (local narrative) → אדם (authoritative narrative). Each level incorporates and governs the levels below it.
 - **Population hierarchy**: עפר (individuals) → אדמה (general population) → אדם (the narrative a population forges). An אדם is built out of a *patch* of אדמה — a bounded portion of the population, not the whole of it — and when it dissolves it falls back into עפר, into loose individuals.
 - **Elite/popular axis**: איש (elite, leadership-oriented) ↔ אישה (popular, identity-oriented). This polarity drives many stories and generates dialectical tension.
 - **Inner/outer axis**: ארץ (how we experience ourselves) ↔ שמים (how we experience the boundary with the outside). Both are subconscious; שמים is a kind of מים.
@@ -103,10 +103,12 @@ For an extended treatment — the full process ערפל → אמירה → או�
 ## The Material World - A Scale of Complexity
 
 - **צומח** (plants) / **אכילה** (eating) = insights/models about the world. Without eating (internalizing new insights): bewilderment and inability to act (= **רעב**, hunger).
-- **חיה** (animal) = a "local" narrative - a non-authoritative narrative: one of many narratives existing in a culture.
-- **אדם** (human) = an **authoritative narrative** of a culture: a narrative that a culture enforces upon itself to forge an integral identity.
-  **איש** / **זכר** (man/male) = an elite narrative - one that sees itself as dictating and leading society.
-  **אישה** / **נקבה** (woman/female) = a popular narrative focused on identity and existence, not aspiring to lead or dictate direction.
+- **נפש** (soul, living being) = a story/narrative. Stories are characterized by a tendency to preserve themselves: to adapt and change according to circumstances and needs.
+  The נפש is "חיה" (alive) - it is dynamic and changing (see the definition of **חיים** (life) below).
+  - **חיות** (animals) = a "local" narrative - a non-authoritative narrative: one of many narratives existing in a culture.
+  - **אדם** (human) = an **authoritative narrative** of a culture: a narrative that a culture enforces upon itself to forge an integral identity.
+    **איש** / **זכר** (man/male) = an elite narrative - one that sees itself as dictating and leading society.
+    **אישה** / **נקבה** (woman/female) = a popular narrative focused on identity and existence, not aspiring to lead or dictate direction.
 
 ## Important Additional Definitions
 
