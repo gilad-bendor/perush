@@ -27,6 +27,9 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
+.breadcrumbs { color: #666; font-size: 0.95em; }
+.breadcrumbs a { color: inherit; }
+body:not(.folder-index) .breadcrumbs { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -119,6 +122,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
+    /* The way around the site, which paper - and so every PDF - has no use for. */
+    .breadcrumbs { display: none; }
+
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
 
@@ -126,21 +132,17 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     a { color: inherit; text-decoration: none; }
 }
 
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
 .folder-index h1 { margin-top: 0.3em; }
 .folder-index ul { list-style: none; padding-inline-start: 0; margin: 0 0 0.2em; }
-.folder-index .tree ul ul { padding-inline-start: 1.4em; border-inline-start: 1px dotted #aaa; margin-inline-start: 0.4em; }
 .folder-index li.folder::before { content: "📁 "; }
 .folder-index li.file::before { content: "📄 "; }
 .folder-index li.folder > a { font-weight: bold; }
-.folder-index .count { color: #888; font-weight: normal; font-size: 0.85em; }
 .technical-toggle {
     position: sticky; top: 0; z-index: 1; display: block; width: fit-content; margin-inline-start: auto;
     padding: 4px 8px; background: white; border: 1px solid #ddd; border-radius: 0 0 6px 6px;
     font-size: 0.9em; color: #444; cursor: pointer; user-select: none;
 }
-body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body.show-technical .plain-count { display: none; }
+body:not(.show-technical) .technical { display: none; }
 @media print { .technical-toggle { display: none; } }
 </style>
 </head>
@@ -179,38 +181,6 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="file"><a dir="auto" href="25-שמות-לא_יב-לא_יז-השבת.rtl.pdf">25-שמות-לא_יב-לא_יז-השבת</a></li>
 <li class="file"><a dir="auto" href="CLAUDE.pdf">CLAUDE</a></li>
 </ul>
-<h2>כל הקבצים <span class="count">(26)</span></h2>
-<div class="tree">
-<ul>
-<li class="folder up"><a href="../index.html">..</a></li>
-<li class="file"><a dir="auto" href="01-שמות-כה_א-כה_ט-תרומה_לבנית_המקדש.rtl.pdf">01-שמות-כה_א-כה_ט-תרומה_לבנית_המקדש</a></li>
-<li class="file"><a dir="auto" href="02-שמות-כה_י-כה_כב-הארון.rtl.pdf">02-שמות-כה_י-כה_כב-הארון</a></li>
-<li class="file"><a dir="auto" href="03-שמות-כה_כג-כה_ל-השולחן.rtl.pdf">03-שמות-כה_כג-כה_ל-השולחן</a></li>
-<li class="file"><a dir="auto" href="04-שמות-כה_לא-כה_מ-המנורה.rtl.pdf">04-שמות-כה_לא-כה_מ-המנורה</a></li>
-<li class="file"><a dir="auto" href="05-שמות-כו_א-כו_ו-יריעות_המשכן.rtl.pdf">05-שמות-כו_א-כו_ו-יריעות_המשכן</a></li>
-<li class="file"><a dir="auto" href="06-שמות-כו_ז-כו_יד-האוהל.rtl.pdf">06-שמות-כו_ז-כו_יד-האוהל</a></li>
-<li class="file"><a dir="auto" href="07-שמות-כו_טו-כו_ל-הקרשים.rtl.pdf">07-שמות-כו_טו-כו_ל-הקרשים</a></li>
-<li class="file"><a dir="auto" href="08-שמות-כו_לא-כו_לג-הפרכת.rtl.pdf">08-שמות-כו_לא-כו_לג-הפרכת</a></li>
-<li class="file"><a dir="auto" href="09-שמות-כו_לד-כו_לז-הכפרת_והמסך.rtl.pdf">09-שמות-כו_לד-כו_לז-הכפרת_והמסך</a></li>
-<li class="file"><a dir="auto" href="10-שמות-כז_א-כז_ח-המזבח.rtl.pdf">10-שמות-כז_א-כז_ח-המזבח</a></li>
-<li class="file"><a dir="auto" href="11-שמות-כז_ט-כז_יט-חצר_המשכן.rtl.pdf">11-שמות-כז_ט-כז_יט-חצר_המשכן</a></li>
-<li class="file"><a dir="auto" href="12-שמות-כז_כ-כז_כא-נר_תמיד.rtl.pdf">12-שמות-כז_כ-כז_כא-נר_תמיד</a></li>
-<li class="file"><a dir="auto" href="13-שמות-כח_א-כח_ה-בגדי_אהרון_ובניו_חשן_ואפוד.rtl.pdf">13-שמות-כח_א-כח_ה-בגדי_אהרון_ובניו_חשן_ואפוד</a></li>
-<li class="file"><a dir="auto" href="14-שמות-כח_ו-כח_יד-האפוד.rtl.pdf">14-שמות-כח_ו-כח_יד-האפוד</a></li>
-<li class="file"><a dir="auto" href="15-שמות-כח_טו-כח_ל-החשן.rtl.pdf">15-שמות-כח_טו-כח_ל-החשן</a></li>
-<li class="file"><a dir="auto" href="16-שמות-כח_לא-כח_לה-מעיל_האפוד.rtl.pdf">16-שמות-כח_לא-כח_לה-מעיל_האפוד</a></li>
-<li class="file"><a dir="auto" href="17-שמות-כח_לו-כח_מג-ציץ_הזהב_המצנפת_הכתנות_המכנסיים.rtl.pdf">17-שמות-כח_לו-כח_מג-ציץ_הזהב_המצנפת_הכתנות_המכנסיים</a></li>
-<li class="file"><a dir="auto" href="18-שמות-כט_א-כט_מו-טקס_קידוש_אהרן_ובניו.rtl.pdf">18-שמות-כט_א-כט_מו-טקס_קידוש_אהרן_ובניו</a></li>
-<li class="file"><a dir="auto" href="19-שמות-ל_א-ל_יא-מזבח_הקטורת.rtl.pdf">19-שמות-ל_א-ל_יא-מזבח_הקטורת</a></li>
-<li class="file"><a dir="auto" href="20-שמות-ל_יב-ל_טז-מחצית_השקל.rtl.pdf">20-שמות-ל_יב-ל_טז-מחצית_השקל</a></li>
-<li class="file"><a dir="auto" href="21-שמות-ל_יז-ל_כא-כיור_הנחושת.rtl.pdf">21-שמות-ל_יז-ל_כא-כיור_הנחושת</a></li>
-<li class="file"><a dir="auto" href="22-שמות-ל_כב-ל_לג-שמן_המשחה.rtl.pdf">22-שמות-ל_כב-ל_לג-שמן_המשחה</a></li>
-<li class="file"><a dir="auto" href="23-שמות-ל_לד-ל_לח-הקטורת.rtl.pdf">23-שמות-ל_לד-ל_לח-הקטורת</a></li>
-<li class="file"><a dir="auto" href="24-שמות-לא_א-לא_יא-בצלאל_וחכמי_הלב.rtl.pdf">24-שמות-לא_א-לא_יא-בצלאל_וחכמי_הלב</a></li>
-<li class="file"><a dir="auto" href="25-שמות-לא_יב-לא_יז-השבת.rtl.pdf">25-שמות-לא_יב-לא_יז-השבת</a></li>
-<li class="file"><a dir="auto" href="CLAUDE.pdf">CLAUDE</a></li>
-</ul>
-</div>
 </main>
 <script>
 (() => {

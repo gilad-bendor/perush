@@ -27,6 +27,9 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
+.breadcrumbs { color: #666; font-size: 0.95em; }
+.breadcrumbs a { color: inherit; }
+body:not(.folder-index) .breadcrumbs { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -119,6 +122,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
+    /* The way around the site, which paper - and so every PDF - has no use for. */
+    .breadcrumbs { display: none; }
+
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
 
@@ -129,6 +135,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </head>
 <body class="rtl">
 <main>
+<nav class="breadcrumbs"><a dir="auto" href="../../../index.html">פירוש</a> / <a dir="auto" href="../../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="../index.html">פירוש</a> / <a dir="auto" href="index.html">1-בראשית</a> / <span dir="auto">1420-בראשית-כט_א-כט_יא-יעקב_ורחל_גלילת_הבאר</span></nav>
 <blockquote>
 <p>בראשית כט א: וַיִּשָּׂא יַעֲקֹב רַגְלָיו; וַיֵּלֶךְ אַרְצָה בְנֵי קֶדֶם.<br>
 בראשית כט ב: וַיַּרְא וְהִנֵּה בְאֵר בַּשָּׂדֶה וְהִנֵּה שָׁם שְׁלֹשָׁה עֶדְרֵי צֹאן רֹבְצִים עָלֶיהָ כִּי מִן הַבְּאֵר הַהִוא יַשְׁקוּ הָעֲדָרִים; וְהָאֶבֶן גְּדֹלָה עַל פִּי הַבְּאֵר.<br>

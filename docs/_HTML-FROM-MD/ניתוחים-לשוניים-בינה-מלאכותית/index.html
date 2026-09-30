@@ -27,6 +27,9 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
+.breadcrumbs { color: #666; font-size: 0.95em; }
+.breadcrumbs a { color: inherit; }
+body:not(.folder-index) .breadcrumbs { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -119,6 +122,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
+    /* The way around the site, which paper - and so every PDF - has no use for. */
+    .breadcrumbs { display: none; }
+
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
 
@@ -126,21 +132,17 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     a { color: inherit; text-decoration: none; }
 }
 
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
 .folder-index h1 { margin-top: 0.3em; }
 .folder-index ul { list-style: none; padding-inline-start: 0; margin: 0 0 0.2em; }
-.folder-index .tree ul ul { padding-inline-start: 1.4em; border-inline-start: 1px dotted #aaa; margin-inline-start: 0.4em; }
 .folder-index li.folder::before { content: "📁 "; }
 .folder-index li.file::before { content: "📄 "; }
 .folder-index li.folder > a { font-weight: bold; }
-.folder-index .count { color: #888; font-weight: normal; font-size: 0.85em; }
 .technical-toggle {
     position: sticky; top: 0; z-index: 1; display: block; width: fit-content; margin-inline-start: auto;
     padding: 4px 8px; background: white; border: 1px solid #ddd; border-radius: 0 0 6px 6px;
     font-size: 0.9em; color: #444; cursor: pointer; user-select: none;
 }
-body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body.show-technical .plain-count { display: none; }
+body:not(.show-technical) .technical { display: none; }
 @media print { .technical-toggle { display: none; } }
 </style>
 </head>
@@ -152,10 +154,7 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <h2>קבצים בתיקייה</h2>
 <ul class="files">
 <li class="folder up"><a href="../index.html">..</a></li>
-<li class="folder"><a dir="auto" href="_איסוף-מקדים/index.html">_איסוף-מקדים</a> <span class="count">(4)</span></li>
-<li class="file"><a dir="auto" href="===%20הכנה%20למחקר%20ניתוח-לשוני%20-%20צמצום%20פסוקים%20===.rtl.html">=== הכנה למחקר ניתוח-לשוני - צמצום פסוקים ===</a></li>
-<li class="file"><a dir="auto" href="===%20פרומפט%20תבניתי%20למחקר%20כללי%20===.rtl.html">=== פרומפט תבניתי למחקר כללי ===</a></li>
-<li class="file"><a dir="auto" href="===%20פרומפט%20תבניתי%20למחקר%20ניתוח-לשוני%20===.rtl.html">=== פרומפט תבניתי למחקר ניתוח-לשוני ===</a></li>
+<li class="file"><a dir="auto" href="_פרומפט-ניתוח-לשוני.rtl.html">_פרומפט-ניתוח-לשוני</a></li>
 <li class="file"><a dir="auto" href="איש-אישה-אנוש.ai.rtl.html">איש-אישה-אנוש.ai</a></li>
 <li class="file"><a dir="auto" href="בהו.ai.rtl.html">בהו.ai</a></li>
 <li class="file"><a dir="auto" href="בהמה.ai.rtl.html">בהמה.ai</a></li>
@@ -164,6 +163,7 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="file"><a dir="auto" href="דור.ai.rtl.html">דור.ai</a></li>
 <li class="file"><a dir="auto" href="דשא.ai.rtl.html">דשא.ai</a></li>
 <li class="file"><a dir="auto" href="זכר.ai.rtl.html">זכר.ai</a></li>
+<li class="file"><a dir="auto" href="חרב.ai.rtl.html">חרב.ai</a></li>
 <li class="file"><a dir="auto" href="ירק.ai.rtl.html">ירק.ai</a></li>
 <li class="file"><a dir="auto" href="כבש-כיבוש.ai.rtl.html">כבש-כיבוש.ai</a></li>
 <li class="file"><a dir="auto" href="כל-כלה.ai.rtl.html">כל-כלה.ai</a></li>
@@ -173,6 +173,7 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="file"><a dir="auto" href="מלאכה.ai.rtl.html">מלאכה.ai</a></li>
 <li class="file"><a dir="auto" href="נפש.ai.rtl.html">נפש.ai</a></li>
 <li class="file"><a dir="auto" href="נקבה.ai.rtl.html">נקבה.ai</a></li>
+<li class="file"><a dir="auto" href="סנה.ai.rtl.html">סנה.ai</a></li>
 <li class="file"><a dir="auto" href="עוף-עיף.ai.rtl.html">עוף-עיף.ai</a></li>
 <li class="file"><a dir="auto" href="עשב.ai.rtl.html">עשב.ai</a></li>
 <li class="file"><a dir="auto" href="צבא.ai.rtl.html">צבא.ai</a></li>
@@ -189,60 +190,6 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="file"><a dir="auto" href="תהום.ai.rtl.html">תהום.ai</a></li>
 <li class="file"><a dir="auto" href="תנין.ai.rtl.html">תנין.ai</a></li>
 </ul>
-<h2>כל הקבצים <span class="count">(39)</span></h2>
-<div class="tree">
-<ul>
-<li class="folder up"><a href="../index.html">..</a></li>
-<li class="folder"><a dir="auto" href="_איסוף-מקדים/index.html">_איסוף-מקדים</a> <span class="count">(4)</span>
-<ul>
-<li class="folder"><a dir="auto" href="_איסוף-מקדים/נפש/index.html">נפש</a> <span class="count">(3)</span>
-<ul>
-<li class="file"><a dir="auto" href="_איסוף-מקדים/נפש/המחקר%20עצמו%20-%20פרומפט%20-%20רק%20הסיומת.rtl.html">המחקר עצמו - פרומפט - רק הסיומת</a></li>
-<li class="file"><a dir="auto" href="_איסוף-מקדים/נפש/מחקר%20ראשוני%20-%20איסוף%20פעלים%20-%20פרומפט.rtl.html">מחקר ראשוני - איסוף פעלים - פרומפט</a></li>
-<li class="file"><a dir="auto" href="_איסוף-מקדים/נפש/מחקר%20ראשוני%20-%20איסוף%20פעלים%20-%20תוצאות.rtl.html">מחקר ראשוני - איסוף פעלים - תוצאות</a></li>
-</ul></li>
-<li class="folder"><a dir="auto" href="_איסוף-מקדים/עוף-עיף/index.html">עוף-עיף</a> <span class="count">(1)</span>
-<ul>
-<li class="file"><a dir="auto" href="_איסוף-מקדים/עוף-עיף/עוף-עיף%20-%20קישורים%20מוטבעים.rtl.html">עוף-עיף - קישורים מוטבעים</a></li>
-</ul></li>
-</ul></li>
-<li class="file"><a dir="auto" href="===%20הכנה%20למחקר%20ניתוח-לשוני%20-%20צמצום%20פסוקים%20===.rtl.html">=== הכנה למחקר ניתוח-לשוני - צמצום פסוקים ===</a></li>
-<li class="file"><a dir="auto" href="===%20פרומפט%20תבניתי%20למחקר%20כללי%20===.rtl.html">=== פרומפט תבניתי למחקר כללי ===</a></li>
-<li class="file"><a dir="auto" href="===%20פרומפט%20תבניתי%20למחקר%20ניתוח-לשוני%20===.rtl.html">=== פרומפט תבניתי למחקר ניתוח-לשוני ===</a></li>
-<li class="file"><a dir="auto" href="איש-אישה-אנוש.ai.rtl.html">איש-אישה-אנוש.ai</a></li>
-<li class="file"><a dir="auto" href="בהו.ai.rtl.html">בהו.ai</a></li>
-<li class="file"><a dir="auto" href="בהמה.ai.rtl.html">בהמה.ai</a></li>
-<li class="file"><a dir="auto" href="ברך.ai.rtl.html">ברך.ai</a></li>
-<li class="file"><a dir="auto" href="דג.ai.rtl.html">דג.ai</a></li>
-<li class="file"><a dir="auto" href="דור.ai.rtl.html">דור.ai</a></li>
-<li class="file"><a dir="auto" href="דשא.ai.rtl.html">דשא.ai</a></li>
-<li class="file"><a dir="auto" href="זכר.ai.rtl.html">זכר.ai</a></li>
-<li class="file"><a dir="auto" href="ירק.ai.rtl.html">ירק.ai</a></li>
-<li class="file"><a dir="auto" href="כבש-כיבוש.ai.rtl.html">כבש-כיבוש.ai</a></li>
-<li class="file"><a dir="auto" href="כל-כלה.ai.rtl.html">כל-כלה.ai</a></li>
-<li class="file"><a dir="auto" href="כן.ai.rtl.html">כן.ai</a></li>
-<li class="file"><a dir="auto" href="כנף.ai.rtl.html">כנף.ai</a></li>
-<li class="file"><a dir="auto" href="מאוד.ai.rtl.html">מאוד.ai</a></li>
-<li class="file"><a dir="auto" href="מלאכה.ai.rtl.html">מלאכה.ai</a></li>
-<li class="file"><a dir="auto" href="נפש.ai.rtl.html">נפש.ai</a></li>
-<li class="file"><a dir="auto" href="נקבה.ai.rtl.html">נקבה.ai</a></li>
-<li class="file"><a dir="auto" href="עוף-עיף.ai.rtl.html">עוף-עיף.ai</a></li>
-<li class="file"><a dir="auto" href="עשב.ai.rtl.html">עשב.ai</a></li>
-<li class="file"><a dir="auto" href="צבא.ai.rtl.html">צבא.ai</a></li>
-<li class="file"><a dir="auto" href="צלם.ai.rtl.html">צלם.ai</a></li>
-<li class="file"><a dir="auto" href="קדש.ai.rtl.html">קדש.ai</a></li>
-<li class="file"><a dir="auto" href="קוה.ai.rtl.html">קוה.ai</a></li>
-<li class="file"><a dir="auto" href="קרא.ai.rtl.html">קרא.ai</a></li>
-<li class="file"><a dir="auto" href="רבה-רבב.ai.rtl.html">רבה-רבב.ai</a></li>
-<li class="file"><a dir="auto" href="רמש.ai.rtl.html">רמש.ai</a></li>
-<li class="file"><a dir="auto" href="רקע-רקיע.ai.rtl.html">רקע-רקיע.ai</a></li>
-<li class="file"><a dir="auto" href="שבת.ai.rtl.html">שבת.ai</a></li>
-<li class="file"><a dir="auto" href="שרץ.ai.rtl.html">שרץ.ai</a></li>
-<li class="file"><a dir="auto" href="תהו.ai.rtl.html">תהו.ai</a></li>
-<li class="file"><a dir="auto" href="תהום.ai.rtl.html">תהום.ai</a></li>
-<li class="file"><a dir="auto" href="תנין.ai.rtl.html">תנין.ai</a></li>
-</ul>
-</div>
 </main>
 <script>
 (() => {

@@ -27,6 +27,9 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
+.breadcrumbs { color: #666; font-size: 0.95em; }
+.breadcrumbs a { color: inherit; }
+body:not(.folder-index) .breadcrumbs { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -119,6 +122,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
+    /* The way around the site, which paper - and so every PDF - has no use for. */
+    .breadcrumbs { display: none; }
+
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
 
@@ -126,21 +132,17 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     a { color: inherit; text-decoration: none; }
 }
 
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
 .folder-index h1 { margin-top: 0.3em; }
 .folder-index ul { list-style: none; padding-inline-start: 0; margin: 0 0 0.2em; }
-.folder-index .tree ul ul { padding-inline-start: 1.4em; border-inline-start: 1px dotted #aaa; margin-inline-start: 0.4em; }
 .folder-index li.folder::before { content: "📁 "; }
 .folder-index li.file::before { content: "📄 "; }
 .folder-index li.folder > a { font-weight: bold; }
-.folder-index .count { color: #888; font-weight: normal; font-size: 0.85em; }
 .technical-toggle {
     position: sticky; top: 0; z-index: 1; display: block; width: fit-content; margin-inline-start: auto;
     padding: 4px 8px; background: white; border: 1px solid #ddd; border-radius: 0 0 6px 6px;
     font-size: 0.9em; color: #444; cursor: pointer; user-select: none;
 }
-body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body.show-technical .plain-count { display: none; }
+body:not(.show-technical) .technical { display: none; }
 @media print { .technical-toggle { display: none; } }
 </style>
 </head>
@@ -214,73 +216,6 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="file"><a dir="auto" href="1580-בראשית-מו_כח-מז_כו-בני_ישראל_במצרים.rtl.pdf">1580-בראשית-מו_כח-מז_כו-בני_ישראל_במצרים</a></li>
 <li class="file"><a dir="auto" href="1590-בראשית-מז_כז-נ_כו-מות_ישראל.rtl.pdf">1590-בראשית-מז_כז-נ_כו-מות_ישראל</a></li>
 </ul>
-<h2>כל הקבצים <span class="count">(61)</span></h2>
-<div class="tree">
-<ul>
-<li class="folder up"><a href="../index.html">..</a></li>
-<li class="file"><a dir="auto" href="1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.2.rtl.pdf">1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.2</a></li>
-<li class="file"><a dir="auto" href="1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.full.rtl.pdf">1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.full</a></li>
-<li class="file"><a dir="auto" href="1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.rtl.pdf">1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה</a></li>
-<li class="file"><a dir="auto" href="1020-בראשית-ב_ד-ב_יז-גן_עדן.rtl.pdf">1020-בראשית-ב_ד-ב_יז-גן_עדן</a></li>
-<li class="file"><a dir="auto" href="1030-בראשית-ב_יח-ג_כד-אדם_ואשה.rtl.pdf">1030-בראשית-ב_יח-ג_כד-אדם_ואשה</a></li>
-<li class="file"><a dir="auto" href="1040-בראשית-ד_א-ד_יז-הבל_וקין.rtl.pdf">1040-בראשית-ד_א-ד_יז-הבל_וקין</a></li>
-<li class="file"><a dir="auto" href="1050-בראשית-ד_יח-ד_כו-שלוש_התפתחויות.rtl.pdf">1050-בראשית-ד_יח-ד_כו-שלוש_התפתחויות</a></li>
-<li class="file"><a dir="auto" href="1060-בראשית-ה_א-ה_כז-שושלת_אדם_ושת_בלי_נח.rtl.pdf">1060-בראשית-ה_א-ה_כז-שושלת_אדם_ושת_בלי_נח</a></li>
-<li class="file"><a dir="auto" href="1070-בראשית-ה_כח-ה_לב-נח_וילדיו.rtl.pdf">1070-בראשית-ה_כח-ה_לב-נח_וילדיו</a></li>
-<li class="file"><a dir="auto" href="1080-בראשית-ו_א-ו_ח-העולם_ערב_המבול.rtl.pdf">1080-בראשית-ו_א-ו_ח-העולם_ערב_המבול</a></li>
-<li class="file"><a dir="auto" href="1090-בראשית-ו_ט-ז_כד-המבול.rtl.pdf">1090-בראשית-ו_ט-ז_כד-המבול</a></li>
-<li class="file"><a dir="auto" href="1100-בראשית-ח_א-ח_יט-קריסת_המבול.rtl.pdf">1100-בראשית-ח_א-ח_יט-קריסת_המבול</a></li>
-<li class="file"><a dir="auto" href="1110-בראשית-ח_כ-יא_כו-מקטעים_חסרי_פרוש.rtl.pdf">1110-בראשית-ח_כ-יא_כו-מקטעים_חסרי_פרוש</a></li>
-<li class="file"><a dir="auto" href="1120-בראשית-יא_כז-יא_לב-מסע_תרח_לכנען.rtl.pdf">1120-בראשית-יא_כז-יא_לב-מסע_תרח_לכנען</a></li>
-<li class="file"><a dir="auto" href="1130-בראשית-יב_א-יב_ח-מסע_אברם_לכנען.rtl.pdf">1130-בראשית-יב_א-יב_ח-מסע_אברם_לכנען</a></li>
-<li class="file"><a dir="auto" href="1140-בראשית-יב_ט-יג_ד-אברם_במצרים.rtl.pdf">1140-בראשית-יב_ט-יג_ד-אברם_במצרים</a></li>
-<li class="file"><a dir="auto" href="1150-בראשית-יג_ה-יג_יח-הפרדות_לוט.rtl.pdf">1150-בראשית-יג_ה-יג_יח-הפרדות_לוט</a></li>
-<li class="file"><a dir="auto" href="1160-בראשית-יד_א-טו_כא-מלחמת_ארבעה_בחמישה.rtl.pdf">1160-בראשית-יד_א-טו_כא-מלחמת_ארבעה_בחמישה</a></li>
-<li class="file"><a dir="auto" href="1170-בראשית-טז_א-טז_טז-הגר_ובריחתה.rtl.pdf">1170-בראשית-טז_א-טז_טז-הגר_ובריחתה</a></li>
-<li class="file"><a dir="auto" href="1180-בראשית-יז_א-יז_יד-הברית.rtl.pdf">1180-בראשית-יז_א-יז_יד-הברית</a></li>
-<li class="file"><a dir="auto" href="1190-בראשית-יז_טו-יז_כב-בשורת_יצחק.rtl.pdf">1190-בראשית-יז_טו-יז_כב-בשורת_יצחק</a></li>
-<li class="file"><a dir="auto" href="1200-בראשית-יז_כג-יז_כז-קיום_הברית.rtl.pdf">1200-בראשית-יז_כג-יז_כז-קיום_הברית</a></li>
-<li class="file"><a dir="auto" href="1210-בראשית-יח_א-יח_לג-שלושה_אנשים.rtl.pdf">1210-בראשית-יח_א-יח_לג-שלושה_אנשים</a></li>
-<li class="file"><a dir="auto" href="1220-בראשית-יט_א-יט_כט-הפיכת_סדום.rtl.pdf">1220-בראשית-יט_א-יט_כט-הפיכת_סדום</a></li>
-<li class="file"><a dir="auto" href="1230-בראשית-יט_ל-יט_לח-לוט_במערה.rtl.pdf">1230-בראשית-יט_ל-יט_לח-לוט_במערה</a></li>
-<li class="file"><a dir="auto" href="1240-בראשית-כ_א-כ_יח-אברהם_ואבימלך.rtl.pdf">1240-בראשית-כ_א-כ_יח-אברהם_ואבימלך</a></li>
-<li class="file"><a dir="auto" href="1250-בראשית-כא_א-כא_כא-הולדת_יצחק_וגרוש_ישמאל.rtl.pdf">1250-בראשית-כא_א-כא_כא-הולדת_יצחק_וגרוש_ישמאל</a></li>
-<li class="file"><a dir="auto" href="1260-בראשית-כא_כב-כא_לד-ברית_אברהם_ואבימלך.rtl.pdf">1260-בראשית-כא_כב-כא_לד-ברית_אברהם_ואבימלך</a></li>
-<li class="file"><a dir="auto" href="1270-בראשית-כב_א-כב_יט-עקדת_יצחק.rtl.pdf">1270-בראשית-כב_א-כב_יט-עקדת_יצחק</a></li>
-<li class="file"><a dir="auto" href="1280-בראשית-כב_כ-כב_כד-התפתחויות_בשולי_החברה_היהודית.rtl.pdf">1280-בראשית-כב_כ-כב_כד-התפתחויות_בשולי_החברה_היהודית</a></li>
-<li class="file"><a dir="auto" href="1290-בראשית-כג_א-כג_כ-מות_שרה.rtl.pdf">1290-בראשית-כג_א-כג_כ-מות_שרה</a></li>
-<li class="file"><a dir="auto" href="1300-בראשית-כד_א-כד_סז-שליחות_אליעזר.rtl.pdf">1300-בראשית-כד_א-כד_סז-שליחות_אליעזר</a></li>
-<li class="file"><a dir="auto" href="1310-בראשית-כה_א-כה_ו-שושלת_קטורה.rtl.pdf">1310-בראשית-כה_א-כה_ו-שושלת_קטורה</a></li>
-<li class="file"><a dir="auto" href="1320-בראשית-כה_ז-כה_יא-מות_אברהם.rtl.pdf">1320-בראשית-כה_ז-כה_יא-מות_אברהם</a></li>
-<li class="file"><a dir="auto" href="1330-בראשית-כה_יב-כה_יח-שושלת_ישמעאל.rtl.pdf">1330-בראשית-כה_יב-כה_יח-שושלת_ישמעאל</a></li>
-<li class="file"><a dir="auto" href="1340-בראשית-כה_יט-כה_כח-הולדת_עשיו_ויעקב.rtl.pdf">1340-בראשית-כה_יט-כה_כח-הולדת_עשיו_ויעקב</a></li>
-<li class="file"><a dir="auto" href="1350-בראשית-כה_כט-כה_לד-הנזיד_ומכירת_הבכורה.rtl.pdf">1350-בראשית-כה_כט-כה_לד-הנזיד_ומכירת_הבכורה</a></li>
-<li class="file"><a dir="auto" href="1360-בראשית-כו_א-כו_יא-יצחק_ואבימלך.rtl.pdf">1360-בראשית-כו_א-כו_יא-יצחק_ואבימלך</a></li>
-<li class="file"><a dir="auto" href="1370-בראשית-כו_יב-כו_כב-יצחק_והבארות.rtl.pdf">1370-בראשית-כו_יב-כו_כב-יצחק_והבארות</a></li>
-<li class="file"><a dir="auto" href="1380-בראשית-כו_כג-כו_לג-ברית_יצחק_ואבימלך.rtl.pdf">1380-בראשית-כו_כג-כו_לג-ברית_יצחק_ואבימלך</a></li>
-<li class="file"><a dir="auto" href="1390-בראשית-כו_לד-כח_ה-גניבת_הברכה.rtl.pdf">1390-בראשית-כו_לד-כח_ה-גניבת_הברכה</a></li>
-<li class="file"><a dir="auto" href="1400-בראשית-כח_ו-כח_ט-עשיו_ומחלת_בת_ישמעאל.rtl.pdf">1400-בראשית-כח_ו-כח_ט-עשיו_ומחלת_בת_ישמעאל</a></li>
-<li class="file"><a dir="auto" href="1410-בראשית-כח_י-כח_כב-סולם_יעקב.rtl.pdf">1410-בראשית-כח_י-כח_כב-סולם_יעקב</a></li>
-<li class="file"><a dir="auto" href="1420-בראשית-כט_א-כט_יא-יעקב_ורחל_גלילת_הבאר.rtl.pdf">1420-בראשית-כט_א-כט_יא-יעקב_ורחל_גלילת_הבאר</a></li>
-<li class="file"><a dir="auto" href="1430-בראשית-כט_יב-כט_ל-לבן_לאה_ורחל.rtl.pdf">1430-בראשית-כט_יב-כט_ל-לבן_לאה_ורחל</a></li>
-<li class="file"><a dir="auto" href="1440-בראשית-כט_לא-ל_כד-הולדת_השבטים.rtl.pdf">1440-בראשית-כט_לא-ל_כד-הולדת_השבטים</a></li>
-<li class="file"><a dir="auto" href="1450-בראשית-ל_כה-לב_א-הפרידה_מלבן.rtl.pdf">1450-בראשית-ל_כה-לב_א-הפרידה_מלבן</a></li>
-<li class="file"><a dir="auto" href="1460-בראשית-לב_ב-לג_טז-החזרה_לעשיו.rtl.pdf">1460-בראשית-לב_ב-לג_טז-החזרה_לעשיו</a></li>
-<li class="file"><a dir="auto" href="1470-בראשית-לג_יז-לד_לא-שכם_ודינה.rtl.pdf">1470-בראשית-לג_יז-לד_לא-שכם_ודינה</a></li>
-<li class="file"><a dir="auto" href="1480-בראשית-לה_א-לה_טו-ישראל.rtl.pdf">1480-בראשית-לה_א-לה_טו-ישראל</a></li>
-<li class="file"><a dir="auto" href="1490-בראשית-לה_טז-לה_כו-לידת_בנימין.rtl.pdf">1490-בראשית-לה_טז-לה_כו-לידת_בנימין</a></li>
-<li class="file"><a dir="auto" href="1500-בראשית-לה_כז-לה_כט-מות_יצחק.rtl.pdf">1500-בראשית-לה_כז-לה_כט-מות_יצחק</a></li>
-<li class="file"><a dir="auto" href="1510-בראשית-לו_א-לו_מג-תולדות_עשיו_והיפרדותו_מיעקב.rtl.pdf">1510-בראשית-לו_א-לו_מג-תולדות_עשיו_והיפרדותו_מיעקב</a></li>
-<li class="file"><a dir="auto" href="1520-בראשית-לז_א-לז_לו-יוסף_ומכירתו.rtl.pdf">1520-בראשית-לז_א-לז_לו-יוסף_ומכירתו</a></li>
-<li class="file"><a dir="auto" href="1530-בראשית-לח_א-לח_ל-יהודה_ותמר.rtl.pdf">1530-בראשית-לח_א-לח_ל-יהודה_ותמר</a></li>
-<li class="file"><a dir="auto" href="1540-בראשית-לט_א-מ_כג-יוסף_ובית_הסוהר.rtl.pdf">1540-בראשית-לט_א-מ_כג-יוסף_ובית_הסוהר</a></li>
-<li class="file"><a dir="auto" href="1550-בראשית-מא_א-מא_נו-חלומות_פרעה.rtl.pdf">1550-בראשית-מא_א-מא_נו-חלומות_פרעה</a></li>
-<li class="file"><a dir="auto" href="1560-בראשית-מא_נז-מו_ז-ירידות_השבטים_למצרים.rtl.pdf">1560-בראשית-מא_נז-מו_ז-ירידות_השבטים_למצרים</a></li>
-<li class="file"><a dir="auto" href="1570-בראשית-מו_ח-מו_כז-שושלת_יעקב.rtl.pdf">1570-בראשית-מו_ח-מו_כז-שושלת_יעקב</a></li>
-<li class="file"><a dir="auto" href="1580-בראשית-מו_כח-מז_כו-בני_ישראל_במצרים.rtl.pdf">1580-בראשית-מו_כח-מז_כו-בני_ישראל_במצרים</a></li>
-<li class="file"><a dir="auto" href="1590-בראשית-מז_כז-נ_כו-מות_ישראל.rtl.pdf">1590-בראשית-מז_כז-נ_כו-מות_ישראל</a></li>
-</ul>
-</div>
 </main>
 <script>
 (() => {

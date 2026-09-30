@@ -27,6 +27,9 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
+.breadcrumbs { color: #666; font-size: 0.95em; }
+.breadcrumbs a { color: inherit; }
+body:not(.folder-index) .breadcrumbs { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -119,6 +122,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
+    /* The way around the site, which paper - and so every PDF - has no use for. */
+    .breadcrumbs { display: none; }
+
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
 
@@ -126,21 +132,17 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     a { color: inherit; text-decoration: none; }
 }
 
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
 .folder-index h1 { margin-top: 0.3em; }
 .folder-index ul { list-style: none; padding-inline-start: 0; margin: 0 0 0.2em; }
-.folder-index .tree ul ul { padding-inline-start: 1.4em; border-inline-start: 1px dotted #aaa; margin-inline-start: 0.4em; }
 .folder-index li.folder::before { content: "📁 "; }
 .folder-index li.file::before { content: "📄 "; }
 .folder-index li.folder > a { font-weight: bold; }
-.folder-index .count { color: #888; font-weight: normal; font-size: 0.85em; }
 .technical-toggle {
     position: sticky; top: 0; z-index: 1; display: block; width: fit-content; margin-inline-start: auto;
     padding: 4px 8px; background: white; border: 1px solid #ddd; border-radius: 0 0 6px 6px;
     font-size: 0.9em; color: #444; cursor: pointer; user-select: none;
 }
-body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body.show-technical .plain-count { display: none; }
+body:not(.show-technical) .technical { display: none; }
 @media print { .technical-toggle { display: none; } }
 </style>
 </head>
@@ -152,23 +154,10 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <h2>קבצים בתיקייה</h2>
 <ul class="files">
 <li class="folder up"><a href="../index.html">..</a></li>
-<li class="folder"><a dir="auto" href="ג'מבטיסטה%20ויקו%20-%20המדע%20החדש/index.html">ג'מבטיסטה ויקו - המדע החדש</a> <span class="count">(2)</span></li>
+<li class="folder"><a dir="auto" href="ג'מבטיסטה%20ויקו%20-%20המדע%20החדש/index.html">ג'מבטיסטה ויקו - המדע החדש</a></li>
 <li class="file"><a dir="auto" href="בראשית-א--דיון-על-אמירה-וקריאה.rtl.pdf">בראשית-א--דיון-על-אמירה-וקריאה</a></li>
 <li class="file"><a dir="auto" href="בראשית-א--המוטיב-של-רעיון-מול-התגשמות.rtl.pdf">בראשית-א--המוטיב-של-רעיון-מול-התגשמות</a></li>
 </ul>
-<h2>כל הקבצים <span class="count">(4)</span></h2>
-<div class="tree">
-<ul>
-<li class="folder up"><a href="../index.html">..</a></li>
-<li class="folder"><a dir="auto" href="ג'מבטיסטה%20ויקו%20-%20המדע%20החדש/index.html">ג'מבטיסטה ויקו - המדע החדש</a> <span class="count">(2)</span>
-<ul>
-<li class="file"><a dir="auto" href="ג'מבטיסטה%20ויקו%20-%20המדע%20החדש/Original%20-%20French%20-%20Principes%20de%20la%20Philosophie%20de%20l-Histoire%20traduits%20de%20la%20Scienza%20nuova.pdf">Original - French - Principes de la Philosophie de l-Histoire traduits de la Scienza nuova</a></li>
-<li class="file"><a dir="auto" href="ג'מבטיסטה%20ויקו%20-%20המדע%20החדש/ג'מבטיסטה%20ויקו%20-%20המדע%20החדש.rtl.pdf">ג'מבטיסטה ויקו - המדע החדש</a></li>
-</ul></li>
-<li class="file"><a dir="auto" href="בראשית-א--דיון-על-אמירה-וקריאה.rtl.pdf">בראשית-א--דיון-על-אמירה-וקריאה</a></li>
-<li class="file"><a dir="auto" href="בראשית-א--המוטיב-של-רעיון-מול-התגשמות.rtl.pdf">בראשית-א--המוטיב-של-רעיון-מול-התגשמות</a></li>
-</ul>
-</div>
 </main>
 <script>
 (() => {

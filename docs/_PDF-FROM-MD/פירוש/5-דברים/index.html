@@ -27,6 +27,9 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
+.breadcrumbs { color: #666; font-size: 0.95em; }
+.breadcrumbs a { color: inherit; }
+body:not(.folder-index) .breadcrumbs { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -119,6 +122,9 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
+    /* The way around the site, which paper - and so every PDF - has no use for. */
+    .breadcrumbs { display: none; }
+
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
 
@@ -126,21 +132,17 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     a { color: inherit; text-decoration: none; }
 }
 
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
 .folder-index h1 { margin-top: 0.3em; }
 .folder-index ul { list-style: none; padding-inline-start: 0; margin: 0 0 0.2em; }
-.folder-index .tree ul ul { padding-inline-start: 1.4em; border-inline-start: 1px dotted #aaa; margin-inline-start: 0.4em; }
 .folder-index li.folder::before { content: "📁 "; }
 .folder-index li.file::before { content: "📄 "; }
 .folder-index li.folder > a { font-weight: bold; }
-.folder-index .count { color: #888; font-weight: normal; font-size: 0.85em; }
 .technical-toggle {
     position: sticky; top: 0; z-index: 1; display: block; width: fit-content; margin-inline-start: auto;
     padding: 4px 8px; background: white; border: 1px solid #ddd; border-radius: 0 0 6px 6px;
     font-size: 0.9em; color: #444; cursor: pointer; user-select: none;
 }
-body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body.show-technical .plain-count { display: none; }
+body:not(.show-technical) .technical { display: none; }
 @media print { .technical-toggle { display: none; } }
 </style>
 </head>
@@ -228,87 +230,6 @@ body:not(.show-technical) .technical, body:not(.show-technical) .all-count, body
 <li class="file"><a dir="auto" href="5740-דברים-לב_א-לג_כט-השירה.rtl.pdf">5740-דברים-לב_א-לג_כט-השירה</a></li>
 <li class="file"><a dir="auto" href="5750-דברים-לד_א-לד_יב-מות_משה.rtl.pdf">5750-דברים-לד_א-לד_יב-מות_משה</a></li>
 </ul>
-<h2>כל הקבצים <span class="count">(75)</span></h2>
-<div class="tree">
-<ul>
-<li class="folder up"><a href="../index.html">..</a></li>
-<li class="file"><a dir="auto" href="5010-דברים-א_א-א_ה-ההקשר_של_נאום_משה.rtl.pdf">5010-דברים-א_א-א_ה-ההקשר_של_נאום_משה</a></li>
-<li class="file"><a dir="auto" href="5020-דברים-א_ו-א_ח-על_סף_כיבוש_הארץ.rtl.pdf">5020-דברים-א_ו-א_ח-על_סף_כיבוש_הארץ</a></li>
-<li class="file"><a dir="auto" href="5030-דברים-א_ט-א_יח-הקמת_מערכת_משפט.rtl.pdf">5030-דברים-א_ט-א_יח-הקמת_מערכת_משפט</a></li>
-<li class="file"><a dir="auto" href="5040-דברים-א_יט-ב_א-סיפור_המרגלים.rtl.pdf">5040-דברים-א_יט-ב_א-סיפור_המרגלים</a></li>
-<li class="file"><a dir="auto" href="5050-דברים-ב_ב-ב_יג-אחווה_עם_בני_עשיו_ומואב.rtl.pdf">5050-דברים-ב_ב-ב_יג-אחווה_עם_בני_עשיו_ומואב</a></li>
-<li class="file"><a dir="auto" href="5060-דברים-ב_יד-ב_טז-ההמתנה_הארוכה_במדבר.rtl.pdf">5060-דברים-ב_יד-ב_טז-ההמתנה_הארוכה_במדבר</a></li>
-<li class="file"><a dir="auto" href="5070-דברים-ב_יז-ב_כג-אחווה_עם_בני_עמון.rtl.pdf">5070-דברים-ב_יז-ב_כג-אחווה_עם_בני_עמון</a></li>
-<li class="file"><a dir="auto" href="5080-דברים-ב_כד-ב_לז-המלחמה_בסיחון.rtl.pdf">5080-דברים-ב_כד-ב_לז-המלחמה_בסיחון</a></li>
-<li class="file"><a dir="auto" href="5090-דברים-ג_א-ג_יא-המלחמה_בעוג_מלך_הבשן.rtl.pdf">5090-דברים-ג_א-ג_יא-המלחמה_בעוג_מלך_הבשן</a></li>
-<li class="file"><a dir="auto" href="5100-דברים-ג_יב-ג_כ-עבר_הירדן_לראובני_ולגדי.rtl.pdf">5100-דברים-ג_יב-ג_כ-עבר_הירדן_לראובני_ולגדי</a></li>
-<li class="file"><a dir="auto" href="5110-דברים-ג_כא-ג_כח-המעבר_ליהושוע.rtl.pdf">5110-דברים-ג_כא-ג_כח-המעבר_ליהושוע</a></li>
-<li class="file"><a dir="auto" href="5120-דברים-ג_כט-ד_ט-שבח_משפטי_ה.rtl.pdf">5120-דברים-ג_כט-ד_ט-שבח_משפטי_ה</a></li>
-<li class="file"><a dir="auto" href="5130-דברים-ד_י-ד_יד-מעמד_הר_סיני_ברית_ומשפטים.rtl.pdf">5130-דברים-ד_י-ד_יד-מעמד_הר_סיני_ברית_ומשפטים</a></li>
-<li class="file"><a dir="auto" href="5140-דברים-ד_טו-ד_כ-ה_ללא_דמות.rtl.pdf">5140-דברים-ד_טו-ד_כ-ה_ללא_דמות</a></li>
-<li class="file"><a dir="auto" href="5150-דברים-ד_כא-ד_לא-הפרת_הברית_גלות_חזרה.rtl.pdf">5150-דברים-ד_כא-ד_לא-הפרת_הברית_גלות_חזרה</a></li>
-<li class="file"><a dir="auto" href="5160-דברים-ד_לב-ד_מ-עוצמת_ה_ויראתו.rtl.pdf">5160-דברים-ד_לב-ד_מ-עוצמת_ה_ויראתו</a></li>
-<li class="file"><a dir="auto" href="5170-דברים-ד_מא-ד_מט-הקצאת_שלוש_ערי_מקלט_וסקירת_הכיבושים.rtl.pdf">5170-דברים-ד_מא-ד_מט-הקצאת_שלוש_ערי_מקלט_וסקירת_הכיבושים</a></li>
-<li class="file"><a dir="auto" href="5180-דברים-ה_א-ה_ג-הר_סיני_כברית_בין_דורית.rtl.pdf">5180-דברים-ה_א-ה_ג-הר_סיני_כברית_בין_דורית</a></li>
-<li class="file"><a dir="auto" href="5190-דברים-ה_ד-ה_יח-עשרת_הדברות.rtl.pdf">5190-דברים-ה_ד-ה_יח-עשרת_הדברות</a></li>
-<li class="file"><a dir="auto" href="5200-דברים-ה_יט-ה_כז-פחד_העם_מפני_אש_ה_והסכמה_כללית_שמשה_יתווך.rtl.pdf">5200-דברים-ה_יט-ה_כז-פחד_העם_מפני_אש_ה_והסכמה_כללית_שמשה_יתווך</a></li>
-<li class="file"><a dir="auto" href="5210-דברים-ה_כח-ו_ט-הדרכות_ביראת_ה_מזוזה_ותפילין.rtl.pdf">5210-דברים-ה_כח-ו_ט-הדרכות_ביראת_ה_מזוזה_ותפילין</a></li>
-<li class="file"><a dir="auto" href="5220-דברים-ו_י-ו_יט-הכרת_הטוב_וייחוד_ה_ואזהרה.rtl.pdf">5220-דברים-ו_י-ו_יט-הכרת_הטוב_וייחוד_ה_ואזהרה</a></li>
-<li class="file"><a dir="auto" href="5230-דברים-ו_כ-ז_יא-כי_ישאלך_בנך.rtl.pdf">5230-דברים-ו_כ-ז_יא-כי_ישאלך_בנך</a></li>
-<li class="file"><a dir="auto" href="5240-דברים-ז_יב-ח_י-תוצאות_ההליכה_לפי_המשפטים.rtl.pdf">5240-דברים-ז_יב-ח_י-תוצאות_ההליכה_לפי_המשפטים</a></li>
-<li class="file"><a dir="auto" href="5250-דברים-ח_יא-ח_כ-תוצאות_שכחת_ה.rtl.pdf">5250-דברים-ח_יא-ח_כ-תוצאות_שכחת_ה</a></li>
-<li class="file"><a dir="auto" href="5260-דברים-ט_א-ט_ג-בטחון_בעזרת_ה_בכיבוש_הארץ.rtl.pdf">5260-דברים-ט_א-ט_ג-בטחון_בעזרת_ה_בכיבוש_הארץ</a></li>
-<li class="file"><a dir="auto" href="5270-דברים-ט_ד-י_יא-סקירה_היסטורית_לא_מחמיאה_כדי_למנוע_גאווה.rtl.pdf">5270-דברים-ט_ד-י_יא-סקירה_היסטורית_לא_מחמיאה_כדי_למנוע_גאווה</a></li>
-<li class="file"><a dir="auto" href="5280-דברים-י_יב-י_כא-אידאל_של_אהבה_מוחלטת_בין_העם_לה_ה_של_חברה_צודקת.rtl.pdf">5280-דברים-י_יב-י_כא-אידאל_של_אהבה_מוחלטת_בין_העם_לה_ה_של_חברה_צודקת</a></li>
-<li class="file"><a dir="auto" href="5290-דברים-י_כב-יא_ז-סקירה_הסטורית_משפלות_של_עבדים_דרך_נפלאות_ה.rtl.pdf">5290-דברים-י_כב-יא_ז-סקירה_הסטורית_משפלות_של_עבדים_דרך_נפלאות_ה</a></li>
-<li class="file"><a dir="auto" href="5300-דברים-יא_ח-יא_כה-ארץ_ישראל_מחוברת_לה_ומגיבה_להתנהגות_העם.rtl.pdf">5300-דברים-יא_ח-יא_כה-ארץ_ישראל_מחוברת_לה_ומגיבה_להתנהגות_העם</a></li>
-<li class="file"><a dir="auto" href="5310-דברים-יא_כו-יא_ל-הקדמה_לברכה_ולקללה_אזהרה_מאלוהים_אחרים.rtl.pdf">5310-דברים-יא_כו-יא_ל-הקדמה_לברכה_ולקללה_אזהרה_מאלוהים_אחרים</a></li>
-<li class="file"><a dir="auto" href="5320-דברים-יא_לא-יב_כח-זבחים_במקום_אחד_בלבד_איסור_אכילת_דם.rtl.pdf">5320-דברים-יא_לא-יב_כח-זבחים_במקום_אחד_בלבד_איסור_אכילת_דם</a></li>
-<li class="file"><a dir="auto" href="5330-דברים-יב_כט-יג_יט-סטייה_לחוקי_הגויים_נביא_שקר_מסיט_עיר_הנידחת.rtl.pdf">5330-דברים-יב_כט-יג_יט-סטייה_לחוקי_הגויים_נביא_שקר_מסיט_עיר_הנידחת</a></li>
-<li class="file"><a dir="auto" href="5340-דברים-יד_א-יד_כא-דיני_קדושה_ומאכלות_אסורות.rtl.pdf">5340-דברים-יד_א-יד_כא-דיני_קדושה_ומאכלות_אסורות</a></li>
-<li class="file"><a dir="auto" href="5350-דברים-יד_כב-יד_כט-מעשרות.rtl.pdf">5350-דברים-יד_כב-יד_כט-מעשרות</a></li>
-<li class="file"><a dir="auto" href="5360-דברים-טו_א-טו_יא-שמיטת_חובות_לאחיך.rtl.pdf">5360-דברים-טו_א-טו_יא-שמיטת_חובות_לאחיך</a></li>
-<li class="file"><a dir="auto" href="5370-דברים-טו_יב-טו_יח-שמיטת_עבדים_עם_מתנות.rtl.pdf">5370-דברים-טו_יב-טו_יח-שמיטת_עבדים_עם_מתנות</a></li>
-<li class="file"><a dir="auto" href="5380-דברים-טו_יט-טו_כג-בכור_בהמה_קודש_לה.rtl.pdf">5380-דברים-טו_יט-טו_כג-בכור_בהמה_קודש_לה</a></li>
-<li class="file"><a dir="auto" href="5390-דברים-טז_א-טז_יז-שלוש_רגלים.rtl.pdf">5390-דברים-טז_א-טז_יז-שלוש_רגלים</a></li>
-<li class="file"><a dir="auto" href="5400-דברים-טז_יח-טז_כ-עקרונות_מערכת_המשפט.rtl.pdf">5400-דברים-טז_יח-טז_כ-עקרונות_מערכת_המשפט</a></li>
-<li class="file"><a dir="auto" href="5410-דברים-טז_כא-יז_ז-משפט_מוות_לעבודה_זרה.rtl.pdf">5410-דברים-טז_כא-יז_ז-משפט_מוות_לעבודה_זרה</a></li>
-<li class="file"><a dir="auto" href="5420-דברים-יז_ח-יז_יג-התנהלות_מערכת_המשפט_ודין_מוות_למסרבים_לקבל_מרות.rtl.pdf">5420-דברים-יז_ח-יז_יג-התנהלות_מערכת_המשפט_ודין_מוות_למסרבים_לקבל_מרות</a></li>
-<li class="file"><a dir="auto" href="5430-דברים-יז_יד-יז_כ-דיני_מלך.rtl.pdf">5430-דברים-יז_יד-יז_כ-דיני_מלך</a></li>
-<li class="file"><a dir="auto" href="5440-דברים-יח_א-יח_ח-מעמדם_של_הכוהנים_והלויים_והתמיכה_בהם.rtl.pdf">5440-דברים-יח_א-יח_ח-מעמדם_של_הכוהנים_והלויים_והתמיכה_בהם</a></li>
-<li class="file"><a dir="auto" href="5450-דברים-יח_ט-יח_כב-המנעות_מקוסמים_נוכריים_ונביא_מקרב_אחיך.rtl.pdf">5450-דברים-יח_ט-יח_כב-המנעות_מקוסמים_נוכריים_ונביא_מקרב_אחיך</a></li>
-<li class="file"><a dir="auto" href="5460-דברים-יט_א-יט_יג-שלוש_ערי_מקלט_נוספות_ודיני_הרוצח.rtl.pdf">5460-דברים-יט_א-יט_יג-שלוש_ערי_מקלט_נוספות_ודיני_הרוצח</a></li>
-<li class="file"><a dir="auto" href="5470-דברים-יט_יד-יט_כא-דיני_עד_שקר.rtl.pdf">5470-דברים-יט_יד-יט_כא-דיני_עד_שקר</a></li>
-<li class="file"><a dir="auto" href="5480-דברים-כ_א-כ_ט-נוהל_לפני_קרב_נאום_הכהנים.rtl.pdf">5480-דברים-כ_א-כ_ט-נוהל_לפני_קרב_נאום_הכהנים</a></li>
-<li class="file"><a dir="auto" href="5490-דברים-כ_י-כ_כ-דיני_מלחמה.rtl.pdf">5490-דברים-כ_י-כ_כ-דיני_מלחמה</a></li>
-<li class="file"><a dir="auto" href="5500-דברים-כא_א-כא_ט-חלל_בשדה_וטכס_עגלה_ערופה.rtl.pdf">5500-דברים-כא_א-כא_ט-חלל_בשדה_וטכס_עגלה_ערופה</a></li>
-<li class="file"><a dir="auto" href="5510-דברים-כא_י-כא_יד-אשת_יפת_תואר.rtl.pdf">5510-דברים-כא_י-כא_יד-אשת_יפת_תואר</a></li>
-<li class="file"><a dir="auto" href="5520-דברים-כא_טו-כא_יז-הגנת_בן_אישה_שנואה.rtl.pdf">5520-דברים-כא_טו-כא_יז-הגנת_בן_אישה_שנואה</a></li>
-<li class="file"><a dir="auto" href="5530-דברים-כא_יח-כא_כא-בן_סורר_ומורה.rtl.pdf">5530-דברים-כא_יח-כא_כא-בן_סורר_ומורה</a></li>
-<li class="file"><a dir="auto" href="5540-דברים-כא_כב-כא_כג-קללת_אלהים_תלוי.rtl.pdf">5540-דברים-כא_כב-כא_כג-קללת_אלהים_תלוי</a></li>
-<li class="file"><a dir="auto" href="5550-דברים-כב_א-כב_ד-איסור_התעלמות_השבת_אבדה_ועזרה.rtl.pdf">5550-דברים-כב_א-כב_ד-איסור_התעלמות_השבת_אבדה_ועזרה</a></li>
-<li class="file"><a dir="auto" href="5560-דברים-כב_ה-כה_טז-רשימת_דינים.rtl.pdf">5560-דברים-כב_ה-כה_טז-רשימת_דינים</a></li>
-<li class="file"><a dir="auto" href="5570-דברים-כה_יז-כה_יט-זכור_את_אשר_עשה_לך_עמלק.rtl.pdf">5570-דברים-כה_יז-כה_יט-זכור_את_אשר_עשה_לך_עמלק</a></li>
-<li class="file"><a dir="auto" href="5580-דברים-כו_א-כו_יא-טכס_הבאת_ביכורים.rtl.pdf">5580-דברים-כו_א-כו_יא-טכס_הבאת_ביכורים</a></li>
-<li class="file"><a dir="auto" href="5590-דברים-כו_יב-כו_טו-טכס_הבאת_מעשר_של_שנה_שלישית.rtl.pdf">5590-דברים-כו_יב-כו_טו-טכס_הבאת_מעשר_של_שנה_שלישית</a></li>
-<li class="file"><a dir="auto" href="5600-דברים-כו_טז-כו_יט-עם_קודש_לתהילה.rtl.pdf">5600-דברים-כו_טז-כו_יט-עם_קודש_לתהילה</a></li>
-<li class="file"><a dir="auto" href="5610-דברים-כז_א-כז_ח-בניית_מזבח_בהר_עיבל_ביום_עבור_את_הירדן.rtl.pdf">5610-דברים-כז_א-כז_ח-בניית_מזבח_בהר_עיבל_ביום_עבור_את_הירדן</a></li>
-<li class="file"><a dir="auto" href="5620-דברים-כז_ט-כז_כו-הברכות_והקללות_בהר_גריזים_והר_עיבל.rtl.pdf">5620-דברים-כז_ט-כז_כו-הברכות_והקללות_בהר_גריזים_והר_עיבל</a></li>
-<li class="file"><a dir="auto" href="5630-דברים-כח_א-כח_יד-הברכות.rtl.pdf">5630-דברים-כח_א-כח_יד-הברכות</a></li>
-<li class="file"><a dir="auto" href="5640-דברים-כח_טו-כח_סט-הקללות.rtl.pdf">5640-דברים-כח_טו-כח_סט-הקללות</a></li>
-<li class="file"><a dir="auto" href="5650-דברים-כט_א-כט_ז-סקירה_היסטורית_של_המסע_במדבר_וראשית_ההתנחלות.rtl.pdf">5650-דברים-כט_א-כט_ז-סקירה_היסטורית_של_המסע_במדבר_וראשית_ההתנחלות</a></li>
-<li class="file"><a dir="auto" href="5660-דברים-כט_ח-כט_טז-ברית_לכל_הדורות.rtl.pdf">5660-דברים-כט_ח-כט_טז-ברית_לכל_הדורות</a></li>
-<li class="file"><a dir="auto" href="5670-דברים-כט_יז-כט_כז-הפרת_הברית_תוביל_לגלות.rtl.pdf">5670-דברים-כט_יז-כט_כז-הפרת_הברית_תוביל_לגלות</a></li>
-<li class="file"><a dir="auto" href="5680-דברים-כט_כח-ל_ט-בגלות_העם_יחזור_בתשובה_ויקובץ_לאקץ.rtl.pdf">5680-דברים-כט_כח-ל_ט-בגלות_העם_יחזור_בתשובה_ויקובץ_לאקץ</a></li>
-<li class="file"><a dir="auto" href="5690-דברים-ל_י-ל_כ-כי_קרוב_אליך_הדבר_מאוד_בפיך_ובלבבך_לעשותו.rtl.pdf">5690-דברים-ל_י-ל_כ-כי_קרוב_אליך_הדבר_מאוד_בפיך_ובלבבך_לעשותו</a></li>
-<li class="file"><a dir="auto" href="5700-דברים-לא_א-לא_ט-פרידת_משה_וסמיכת_יהושוע.rtl.pdf">5700-דברים-לא_א-לא_ט-פרידת_משה_וסמיכת_יהושוע</a></li>
-<li class="file"><a dir="auto" href="5710-דברים-לא_י-לא_יג-מעמד_הקהל_בסוכות_של_שנת_שמיטה.rtl.pdf">5710-דברים-לא_י-לא_יג-מעמד_הקהל_בסוכות_של_שנת_שמיטה</a></li>
-<li class="file"><a dir="auto" href="5720-דברים-לא_יד-לא_כד-דברי_ה_על_מות_משה_על_גלות_ועל_שירה_שתחזיר_את_העם_לה.rtl.pdf">5720-דברים-לא_יד-לא_כד-דברי_ה_על_מות_משה_על_גלות_ועל_שירה_שתחזיר_את_העם_לה</a></li>
-<li class="file"><a dir="auto" href="5730-דברים-לא_כה-לא_ל-מסירת_דברי_ה_על_הגלות_ומסירת_השירה.rtl.pdf">5730-דברים-לא_כה-לא_ל-מסירת_דברי_ה_על_הגלות_ומסירת_השירה</a></li>
-<li class="file"><a dir="auto" href="5740-דברים-לב_א-לג_כט-השירה.rtl.pdf">5740-דברים-לב_א-לג_כט-השירה</a></li>
-<li class="file"><a dir="auto" href="5750-דברים-לד_א-לד_יב-מות_משה.rtl.pdf">5750-דברים-לד_א-לד_יב-מות_משה</a></li>
-</ul>
-</div>
 </main>
 <script>
 (() => {
