@@ -14824,4 +14824,4 @@ Command: claude --model opus --allow-dangerously-skip-permissions --chrome --per
 [63G[38;2;153;153;153mnew[67Gtask?[73G[38;2;177;185;249m/clear[38;2;153;153;153m to[83Gsave[88G[38;2;177;185;249m102k[93Gtokens[39m
 [2C[5A[?2026l[?2026h[2D[5B[60C[2A[38;2;78;186;101m✔ Update installed · Restart to update[39m
 
-[2C[5A[?2026l(B[?2004h(B[?2004h(B[?2004h(B[?2004h(B[?2004h
+[2C[5A[?2026l(B[?2004h
