@@ -12,8 +12,7 @@ const BASE_DIR_PERUSH = 'פירוש';
 const BASE_DIR_LINGUAL = 'ניתוחים-לשוניים';
 const BASE_DIR_APPENDIX = 'נספחים-לפירוש';
 const EXCLUDED_PATHS = new Set([
-    `${BASE_DIR_LINGUAL}/=== פרומפט תבניתי למחקר כללי ===.rtl.md`,
-    `${BASE_DIR_LINGUAL}/=== פרומפט תבניתי למחקר ניתוח-לשוני ===.rtl.md`,
+    // `${BASE_DIR_LINGUAL}/_פרומפט-ניתוח-לשוני.rtl.md`,
 ]);
 
 /** @typedef {'PERUSH' | 'LINGUAL' | 'APPENDIX'} FileType */

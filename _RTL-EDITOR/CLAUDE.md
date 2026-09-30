@@ -450,7 +450,7 @@ row is worth carrying at all.
 
 The folder lives under `docs/` and is **committed**, because `docs/` is what GitHub Pages serves - that is
 the point of it being there. `docs/.nojekyll` keeps Pages from running Jekyll, which would drop every
-file and folder whose name starts with `_` - both mirrors, and `_איסוף-מקדים/` and its like. It is written
+file and folder whose name starts with `_` - both mirrors, and `איסוף-מקדים-לניתוחים-לשוניים/` and its like. It is written
 (`NO_JEKYLL_PATH`, with a line saying what it is) along with `docs/index.html`, so a `docs/` deleted whole
 comes back whole. The folder's own name,
 `HTML_MIRROR_NAME`, is in `exclusions` (which match a single path segment), as is `node_modules` - whose

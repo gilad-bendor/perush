@@ -10,7 +10,7 @@
 // 2. Ask Claude-Haiku (through the "claude" cli) for a title, in the transcript's main language.
 //    A session that was stopped before anything happened gets "SHOULD-PROBABLY-BE-DELETED",
 //    and an answer that cannot be parsed gets "UNKNOWN".
-// 3. Rename the file. If "_claude-output.script.rtl.md" (see scripts/claude-into-rtl-file.sh)
+// 3. Rename the file. If "_claude-output.script.rtl.md" (see scripts/claude-into-rtl-file--perush.sh)
 //    links to it, the link is re-pointed to the new name - the link itself is never renamed.
 //
 // Usage: name-claude-sessions.js [--max-sessions <max session-files to process>]

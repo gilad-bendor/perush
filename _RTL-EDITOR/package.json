@@ -8,8 +8,7 @@
     "start": "bun run kill-server && bun run src/server.ts",
     "test": "bun test",
     "test:browser": "bun run playwright-test.ts",
-    "rebuild-whole-html-folder": "bun run src/rebuild-whole-html-folder.ts",
-    "claude-into-rtl-file": "scripts/claude-into-rtl-file.sh"
+    "rebuild-whole-html-folder": "bun run src/rebuild-whole-html-folder.ts"
   },
   "devDependencies": {
     "@codemirror/commands": "^6.10.1",
