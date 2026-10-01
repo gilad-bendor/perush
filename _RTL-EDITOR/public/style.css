@@ -548,3 +548,16 @@ body {
 .cm-list-line .cm-visible-space::before {
     text-indent: 0;
 }
+
+/* The search panel's "N מופעים" - see CountingSearchPanel in markdown-editor.js */
+.cm-search .cm-search-count {
+    margin-inline-start: 0.5em;
+    font-size: 90%;
+    color: #555;
+    direction: rtl;
+    unicode-bidi: isolate;
+}
+.cm-search .cm-button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}

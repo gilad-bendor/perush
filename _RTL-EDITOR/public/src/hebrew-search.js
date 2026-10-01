@@ -33,11 +33,14 @@ for (let code = 0xfb1d; code <= 0xfb4f; code++) {
  *   precomposed letter, in any order: `בּ` finds `בּ` and U+FB31, but not a plain `ב`.
  * - A shin is a shin unless it says otherwise: `ש` and `שׁ` find `ש` and `שׁ` but never `שׂ`, and `שׂ` finds
  *   `ש` and `שׂ` but never `שׁ`.
+ * - With `looseWhitespace`, a run of whitespace matches any run of whitespace - `a b` finds `a` and `b`
+ *   with a line break and an indentation between them, the way a terminal recording wraps a line.
  * - Anything else is matched as it is.
  * @param {string} query
+ * @param {{looseWhitespace?: boolean}} [options]
  * @returns {string}
  */
-export function hebrewSearchPattern(query) {
+export function hebrewSearchPattern(query, { looseWhitespace = false } = {}) {
     /** @type {{letter: string, marks: string} | null} */
     let unit = null;
     let pattern = '';
@@ -45,7 +48,15 @@ export function hebrewSearchPattern(query) {
         if (unit) pattern += letterPattern(unit.letter, unit.marks);
         unit = null;
     };
+    let inWhitespace = false;
     for (const char of query) {
+        if (looseWhitespace && /^\s$/u.test(char)) {
+            closeUnit();
+            if (!inWhitespace) pattern += '\\s+';
+            inWhitespace = true;
+            continue;
+        }
+        inWhitespace = false;
         const decomposed = /[יִ-ﭏ]/.test(char) ? char.normalize('NFKD') : char;
         if (/^[א-ת]/.test(decomposed)) {
             closeUnit();

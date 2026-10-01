@@ -1,8 +1,8 @@
-import { RegExpCursor, SearchQuery } from "@codemirror/search"
+import { SearchQuery, closeSearchPanel, findNext, findPrevious, getSearchQuery, replaceAll, replaceNext, search, selectMatches, setSearchQuery } from "@codemirror/search"
 import { EditorView, basicSetup } from 'codemirror';
-import { keymap, ViewPlugin, Decoration, gutterLineClass, GutterMarker } from '@codemirror/view';
+import { keymap, ViewPlugin, Decoration, gutterLineClass, GutterMarker, runScopeHandlers } from '@codemirror/view';
 import { markdown } from '@codemirror/lang-markdown';
-import { Compartment, EditorSelection, EditorState, RangeSetBuilder, Prec, StateField } from '@codemirror/state';
+import { Compartment, EditorSelection, EditorState, Facet, RangeSetBuilder, Prec, StateField } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle, syntaxTree } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
@@ -500,6 +500,7 @@ export class MarkdownEditor {
         // noinspection JSUnusedGlobalSymbols
         const extensions = [
             basicSetup,
+            search({ createPanel: (view) => new CountingSearchPanel(view) }),
             markdown(),
             markdownHighlighting,
             listLinePlugin,
@@ -596,6 +597,7 @@ export class MarkdownEditor {
 
         if (isScriptOutputFile) {
             extensions.push(userPromptLinePlugin);
+            extensions.push(looseWhitespaceSearch.of(true));
         }
 
         if (isRtl) {
@@ -1823,46 +1825,260 @@ const tableLinePlugin = ViewPlugin.fromClass(
 );
 
 
-// HORRIBLE PATCH to CodeMirror to ignore Hebrew Nikud/Punctuation on search
-//  (not including RegExp search). What a plain search matches is decided by hebrewSearchPattern().
-(() => {
-    // When searching - ALWAYS use RegExpQuery - and never use StringQuery,
-    //  so our override of RegExpCursor.prototype.next is always used.
-    const originalSearchCreate = /** @type {any} */ (SearchQuery.prototype).create;
-    /** @type {any} */ (SearchQuery.prototype).create = /** @this {{regexp: boolean | RegExp | undefined}} */ function () {
-        lastSearchIsRegExp = this.regexp;
-        this.regexp = true;
-        const query = originalSearchCreate.apply(this, arguments); // this.regexp ? new RegExpQuery(this) : new StringQuery(this)
-        this.regexp = lastSearchIsRegExp;
-        return query;
-    };
-    /** @type {boolean | RegExp | undefined} */ let lastSearchIsRegExp;
+// The Find panel - CodeMirror's own SearchPanel (which it does not export), plus:
+//  - a "first" button, jumping to the first match of the document;
+//  - "N מופעים", the number of matches in the *whole* document, recounted on every change of the
+//    query or of the text;
+//  - every button but the close one disabled while there is no match.
+// Every input is autocomplete="off": on a reload Chrome refills form controls by name - even ones made
+//  later, as this panel is on Cmd+F - and without a change event, so a "regexp" left ticked before the
+//  reload came back ticked over a plain query. mount() then puts the query back into the inputs too.
+// The count goes through the query's own matcher, so it is the patched Hebrew search below that counts -
+//  the same matches next/previous walk through (see searchMatcher()).
+// Typed against @codemirror/view and /state, which @codemirror/search is built on - not the copies
+//  under codemirror/node_modules that the "codemirror" import's types point at. At runtime the
+//  import map makes them one and the same.
+/** @typedef {import('@codemirror/view').EditorView} SearchView */
+/** @typedef {import('@codemirror/state').EditorState} SearchEditorState */
+class CountingSearchPanel {
+    /** @param {SearchView} view */
+    constructor(view) {
+        this.view = view;
+        /** @type {SearchQuery} */
+        this.query = getSearchQuery(view.state);
+        this.commit = this.commit.bind(this);
+        const phrase = (/** @type {string} */ text) => view.state.phrase(text);
+        const field = (/** @type {string} */ name, /** @type {string} */ value, /** @type {string} */ placeholder, mainField = false) => {
+            const input = document.createElement('input');
+            Object.assign(input, { value, placeholder, className: 'cm-textfield', name });
+            input.setAttribute('aria-label', placeholder);
+            input.setAttribute('form', '');
+            input.setAttribute('autocomplete', 'off');
+            if (mainField) input.setAttribute('main-field', 'true');
+            input.addEventListener('change', this.commit);
+            // 'input' rather than CodeMirror's 'keyup': a paste or a cut by mouse changes the text too
+            input.addEventListener('input', this.commit);
+            return input;
+        };
+        const checkbox = (/** @type {string} */ name, /** @type {boolean} */ checked, /** @type {string} */ label) => {
+            const input = document.createElement('input');
+            Object.assign(input, { type: 'checkbox', name, checked });
+            input.setAttribute('form', '');
+            input.setAttribute('autocomplete', 'off');
+            input.addEventListener('change', this.commit);
+            const element = document.createElement('label');
+            element.append(input, phrase(label));
+            return { input, element };
+        };
+        /** @type {HTMLButtonElement[]} */
+        this.matchButtons = [];
+        const button = (/** @type {string} */ name, /** @type {(view: SearchView) => boolean} */ command, /** @type {string} */ label) => {
+            const element = document.createElement('button');
+            Object.assign(element, { className: 'cm-button', name, type: 'button', textContent: phrase(label) });
+            element.addEventListener('click', () => command(view));
+            this.matchButtons.push(element);
+            return element;
+        };
 
-    // When doing a non-RegExp search, we override to make RegExp search;
-    // HOWEVER, in that case, we manipulate the RegExp instance to ignore Hebrew Nikud/Punctuation
-    const originalRegExpCursorNext = RegExpCursor.prototype.next;
-    RegExpCursor.prototype.next = /** @this {{re: RegExp}} */ function () {
-        // @ts-ignore
-        if (!this._ALREADY_PATCHED_RE_) {
-            // @ts-ignore
-            this._ALREADY_PATCHED_RE_ = true;
-            if (!lastSearchIsRegExp) {
-                // The query is still the text as typed - RegExp's `source` has only escaped its slashes and newlines.
-                const patchedRegExpSource = hebrewSearchPattern(this.re.source.replace(/\\\//g, '/').replace(/\\n/g, '\n'));
-                try {
-                    this.re = new RegExp(patchedRegExpSource, this.re.flags);
-                } catch (error) {
-                    consoleError(`Failed to patch search:\n`+
-                        `    Original search: ${JSON.stringify(this.re.source)}\n`+
-                        `    Patched  search: ${JSON.stringify(patchedRegExpSource)}\n`+
-                        `    Flags: ${JSON.stringify(this.re.flags)}\n`+
-                        `    Error: `, error);
+        this.searchField = field('search', this.query.search, phrase('Find'), true);
+        this.replaceField = field('replace', this.query.replace, phrase('Replace'));
+        const caseBox = checkbox('case', this.query.caseSensitive, 'match case');
+        const reBox = checkbox('re', this.query.regexp, 'regexp');
+        const wordBox = checkbox('word', this.query.wholeWord, 'by word');
+        this.caseField = caseBox.input;
+        this.reField = reBox.input;
+        this.wordField = wordBox.input;
+        this.countLabel = document.createElement('span');
+        this.countLabel.className = 'cm-search-count';
+        const close = document.createElement('button');
+        Object.assign(close, { name: 'close', type: 'button', textContent: '×' });
+        close.setAttribute('aria-label', phrase('close'));
+        close.addEventListener('click', () => closeSearchPanel(view));
+
+        this.dom = document.createElement('div');
+        this.dom.className = 'cm-search';
+        this.dom.addEventListener('keydown', (event) => this.keydown(event));
+        this.dom.append(
+            this.searchField,
+            button('first', findFirst, 'first'),
+            button('next', findNext, 'next'),
+            button('prev', findPrevious, 'previous'),
+            button('select', selectMatches, 'all'),
+            caseBox.element, reBox.element, wordBox.element,
+            this.countLabel,
+            ...(view.state.readOnly ? [] : [
+                document.createElement('br'),
+                this.replaceField,
+                button('replace', replaceNext, 'replace'),
+                button('replaceAll', replaceAll, 'replace all'),
+            ]),
+            close,
+        );
+        this.recount();
+    }
+
+    commit() {
+        const query = new SearchQuery({
+            search: this.searchField.value,
+            caseSensitive: this.caseField.checked,
+            regexp: this.reField.checked,
+            wholeWord: this.wordField.checked,
+            replace: this.replaceField.value,
+        });
+        if (!query.eq(this.query)) {
+            this.query = query;
+            this.view.dispatch({ effects: setSearchQuery.of(query) });
+        }
+    }
+
+    /** @param {KeyboardEvent} event */
+    keydown(event) {
+        if (runScopeHandlers(this.view, event, 'search-panel')) {
+            event.preventDefault();
+        } else if (event.key === 'Enter' && event.target === this.searchField) {
+            event.preventDefault();
+            (event.shiftKey ? findPrevious : findNext)(this.view);
+        } else if (event.key === 'Enter' && event.target === this.replaceField) {
+            event.preventDefault();
+            replaceNext(this.view);
+        }
+    }
+
+    /** @param {import('@codemirror/view').ViewUpdate} update */
+    update(update) {
+        let queryChanged = false;
+        for (const transaction of update.transactions) {
+            for (const effect of transaction.effects) {
+                if (effect.is(setSearchQuery)) {
+                    queryChanged = true;
+                    if (!effect.value.eq(this.query)) this.setQuery(effect.value);
                 }
-            } else {
-                consoleWarn(`NOTE! Currently, RegExp search doesn't ignore Hebrew Nikud/Punctuation`)
             }
         }
-        // @ts-ignore
-        return originalRegExpCursorNext.apply(this, arguments);
+        if (queryChanged || update.docChanged) {
+            this.recount();
+        }
     }
+
+    /** @param {SearchQuery} query */
+    setQuery(query) {
+        this.query = query;
+        this.searchField.value = query.search;
+        this.replaceField.value = query.replace;
+        this.caseField.checked = query.caseSensitive;
+        this.reField.checked = query.regexp;
+        this.wordField.checked = query.wholeWord;
+    }
+
+    recount() {
+        const count = countMatches(this.view.state, this.query);
+        this.countLabel.textContent =
+            count === null ? (this.query.search ? 'ביטוי לא תקין' : '') :
+            count === 1 ? 'מופע אחד' :
+            `${count} מופעים`;
+        for (const button of this.matchButtons) {
+            button.disabled = !count;
+        }
+    }
+
+    mount() {
+        // Once in the page - where the browser may have refilled the inputs - they show the query again.
+        this.setQuery(this.query);
+        this.searchField.select();
+    }
+
+    get pos() { return 80; }
+    get top() { return false; }
+}
+
+/**
+ * How many matches the query has in the whole document; null for a query that cannot search
+ * (an empty one, or a broken regexp).
+ * @param {SearchEditorState} state
+ * @param {SearchQuery} query
+ */
+function countMatches(state, query) {
+    if (!query.valid) return null;
+    return searchMatcher(query).matchAll(state, Infinity).length;
+}
+
+/**
+ * The query's matcher as the search itself builds it - through create(), which the patch below
+ * routes to the Hebrew-aware RegExp search. query.getCursor() would not: for a plain query it walks
+ * a plain-string cursor, and would count other matches than next/previous visit.
+ * @param {SearchQuery} query
+ * @returns {{matchAll(state: SearchEditorState, limit: number): {from: number, to: number}[],
+ *            nextMatch(state: SearchEditorState, from: number, to: number): {from: number, to: number} | null}}
+ */
+function searchMatcher(query) {
+    return /** @type {any} */ (query).create();
+}
+
+/**
+ * Selects the first match of the document - "first" in the search panel.
+ * @param {SearchView} view
+ */
+function findFirst(view) {
+    const query = getSearchQuery(view.state);
+    if (!query.valid) return false;
+    const first = searchMatcher(query).nextMatch(view.state, 0, 0);
+    if (!first) return false;
+    const selection = EditorSelection.single(first.from, first.to);
+    view.dispatch({
+        selection,
+        effects: /** @type {any} */ (EditorView).scrollIntoView(selection.main, { y: 'center' }),
+        userEvent: 'select.search',
+    });
+    return true;
+}
+
+
+// Whether a plain search in this editor matches any run of whitespace for a run of whitespace in
+//  the query - on in a terminal recording (*.script.md / *.script.rtl.md), where a line the
+//  terminal wrapped has a line break and an indentation where the words had a space.
+//  See hebrewSearchPattern()'s `looseWhitespace`.
+/** @type {Facet<boolean, boolean>} */
+const looseWhitespaceSearch = Facet.define({ combine: (values) => values.some(Boolean) });
+
+// HORRIBLE PATCH to CodeMirror to ignore Hebrew Nikud/Punctuation on search
+//  (not including RegExp search). What a plain search matches is decided by hebrewSearchPattern().
+// A plain query is never searched as a string: create() - which builds the matcher that next, previous,
+//  the highlighting and CountingSearchPanel all use - is handed a RegExp query of the Hebrew-aware
+//  pattern instead. The pattern has to be built *here*, before any RegExpCursor sees it: the cursor
+//  compiles its query in its constructor, and the text as typed - "(" say - need not be a valid RegExp.
+// create() is not told which editor it is for, so a plain query's matcher holds a RegExp query for
+//  either value of looseWhitespaceSearch, and picks by the state each of its calls is handed.
+(() => {
+    const originalSearchCreate = /** @type {any} */ (SearchQuery.prototype).create;
+    /** @type {any} */ (SearchQuery.prototype).create = /** @this {SearchQuery & {unquoted: string}} */ function () {
+        if (this.regexp) {
+            return originalSearchCreate.apply(this, arguments);
+        }
+        /** @type {Map<boolean, any>} */
+        const matchers = new Map();
+        const matcher = (/** @type {boolean} */ looseWhitespace) => {
+            if (!matchers.has(looseWhitespace)) {
+                matchers.set(looseWhitespace, originalSearchCreate.call(new SearchQuery({
+                    // `unquoted` is the text as a plain search reads it - "\n" a newline, and so on.
+                    search: hebrewSearchPattern(this.unquoted, { looseWhitespace }),
+                    caseSensitive: this.caseSensitive,
+                    wholeWord: this.wholeWord,
+                    // A RegExp query's replacement expands $1, $&...; a plain one's is taken as it is.
+                    replace: this.replace.replace(/\$/g, '$$$$'),
+                    regexp: true,
+                })));
+            }
+            return matchers.get(looseWhitespace);
+        };
+        const forState = (/** @type {EditorState} */ state) => matcher(state.facet(looseWhitespaceSearch));
+        // The interface of CodeMirror's (unexported) QueryType - what its commands and highlighter call.
+        return {
+            spec: this,
+            nextMatch: (/** @type {EditorState} */ state, /** @type {number} */ from, /** @type {number} */ to) => forState(state).nextMatch(state, from, to),
+            prevMatch: (/** @type {EditorState} */ state, /** @type {number} */ from, /** @type {number} */ to) => forState(state).prevMatch(state, from, to),
+            matchAll: (/** @type {EditorState} */ state, /** @type {number} */ limit) => forState(state).matchAll(state, limit),
+            highlight: (/** @type {EditorState} */ state, /** @type {number} */ from, /** @type {number} */ to, /** @type {any} */ add) => forState(state).highlight(state, from, to, add),
+            getReplacement: (/** @type {any} */ result) => matcher(false).getReplacement(result),
+        };
+    };
 })();

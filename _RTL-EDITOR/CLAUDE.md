@@ -24,6 +24,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
    into view
 - Typing `*` or `` ` `` over a selection wraps it rather than replacing it - the way `(` already
    does; pressing `*` twice gives `**bold**`
+- Find (Cmd+F) shows how many matches the whole file holds, and has a "first" button; with no match
+   every button is disabled
 - `*...*` and `**...**` *inside* an inline-code span are shown bold, the way they are outside one
 - The file tree keeps up with the disk: a file or folder created or deleted by anything else - git,
    ClaudeCode, the Finder - shows up within a second, and a tab whose file was deleted turns into
@@ -287,6 +289,24 @@ non-RegExp search goes through `hebrewSearchPattern()` in `public/src/hebrew-sea
   letter, in any order: `בּ` finds `בּ` and U+FB31, not a plain `ב`.
 - **Shin and sin**: a dot is not required, it *excludes the other one*. A dotless `ש` finds all of them;
   `שׁ` finds `ש` and `שׁ`, never `שׂ`; `שׂ` finds `ש` and `שׂ`, never `שׁ`. A dotless shin in the text may be either.
+
+- **In a terminal recording** (`*.script.md`, `*.script.rtl.md`) a run of whitespace in the query matches any run
+  of whitespace (`\s+`): the terminal wraps a long line, and a Claude session indents the continuation, so
+  `a b` may well stand as `a`, a line break, some spaces and `b`. The editor of such a file carries the
+  `looseWhitespaceSearch` facet, and `hebrewSearchPattern()` its `looseWhitespace` option.
+
+The patch is at `SearchQuery.prototype.create()`: a plain query is turned into a RegExp query of the
+Hebrew pattern *before* any `RegExpCursor` is built, since the cursor compiles its query in its
+constructor and the text as typed (`(`, say) need not be a valid RegExp. `create()` is not told which editor it is
+for, so what it returns holds a matcher for each value of `looseWhitespaceSearch` and picks one by the
+state every call is handed. The replacement's `$` is
+escaped on the way, so a plain replace stays literal.
+
+**The Find panel** is `CountingSearchPanel`, given to `search({ createPanel })` - CodeMirror's own
+panel is not exported, so it is rebuilt, with a **first** button and an `N מופעים` label counting the
+matches of the *whole* document. The count is redone on every change of the query or of the text,
+through `create()` - not `query.getCursor()`, which for a plain query walks a string cursor and would
+count other matches than next/previous visit. Every button but `×` is disabled while there is no match.
 
 CodeMirror compiles with the `u` flag, where `\-` or `\,` outside a class is a syntax error - so only
 the RegExp syntax characters are escaped. A search with "regexp" ticked is left exactly as typed.
