@@ -881,7 +881,7 @@ free of any editor dependency the way `tables.js` is, so it can be unit-tested o
 
 In a line that mixes Hebrew and English, one spot on the screen can stand for two logical offsets, and
 the visual ends of a row are not its logical ends: `אאא ttt` is painted `ttt אאא`, so its far left is
-offset 4 (the *start* of "ttt") while the line ends at 7. Two patches keep the editor straight about it:
+offset 4 (the *start* of "ttt") while the line ends at 7. These patches keep the editor straight about it:
 
 - **`posAndSideAtCoords()` / `posAtCoords()`** (end of `markdown-editor.js`): a point beyond the text of a
   row - to the left of it in an RTL line - is the row's logical end, and one on the other side its logical
@@ -889,15 +889,44 @@ offset 4 (the *start* of "ttt") while the line ends at 7. Two patches keep the e
   patch is what makes End / Home / Shift+End / Cmd+arrows reach the real end of the line, what makes a
   selection be *painted* over all of its text (it used to skip the English part), and what makes a click or
   a drag past the end of a line land at its end. Hence no Home or End key binding of our own.
+- **A line's start is painted at its start edge** (`coordsAtPos()`, `moveByChar()`, `moveVertically()`, with
+  `lineEdgeAlias()` / `toLineEdge()`), and its end at the other edge - even when the line opens (ends) with a
+  run of the other direction. In `1. אאא` the "1" is a left-to-right run at the right end of an RTL line, and
+  CodeMirror painted offset 0 on its *left*, while what stood at the right edge was offset 1, *after* the "1":
+  Home seemed to land after the "1", and Backspace or a letter typed at the right edge acted after it. So the
+  line's start and the run's far end swap places for the caret: the start is painted where the far end was,
+  the arrows move from the start as from there, and an arrival there - by arrow, Up/Down or click - is an
+  arrival at the start. Only for a caret's side of ±1: the selection layer asks `coordsAtPos()` with ±2, and
+  its rectangles are untouched. A line that is one run throughout (an English line of an RTL file) is left
+  alone.
 - **`patches/@codemirror%2Fview@6.39.11.patch`** (`bun patch`, applied by `bun install`): CodeMirror's bidi
   algorithm forgot that a bracket pair resolved by rule N0 counts as a strong character for the pairs after
   it, so in `אאא [ttt](x.md)` it took `(x.md)` for LTR while the browser paints the parentheses RTL. Every
   Markdown link in Hebrew text was affected: the arrows moved the cursor the wrong way over the `(`, and a
   selection was painted in the wrong place. Upgrading `@codemirror/view` needs the patch carried over (or
-  dropped, if upstream fixed it).
+  dropped, if upstream fixed it). The same patch holds two changes to the selection layer, both for the line
+  start painted at the edge (above):
+  - A line a selection only touches - the start of `1. אאא` after Shift+Left from the line above it - gets an
+    empty piece, which CodeMirror measured with the selection's side of ±2, from the left of the "1" to the
+    right edge: the "1" looked selected though it was not. It is measured as a cursor there now (±1).
+  - The head of a non-empty range is painted on the side it holds (`r.assoc`), not always leaning into the
+    range. `bidiEdgeSelectionExtension()` sets that side through `rangeWithSide()` - an arrival at the left of
+    the "1" is painted there - since `EditorSelection.range()` takes no side; for every range CodeMirror makes
+    itself, the side it holds is the one it used to be painted with.
+  Re-making the patch (`bun patch @codemirror/view@6.39.11`, edit, `bun patch --commit ...`) adds an empty
+  `.bun-tag-*` file to it - drop that entry from the patch file.
+- **`bidiEdgeSelectionExtension()`**: Shift+Left / Shift+Right over a character whose two sides are the same
+  offset (by its side, `assoc`) - a step over it changed only the side, and a selection did not grow at all.
+  When a step keeps the head's offset, the character whose glyph lies between the two painted carets is
+  selected instead (`charSteppedOver()`); stepping back shrinks it to the caret it began as.
+- **`rowEdgeEnterExtension()`**: Enter with the caret painted at an edge of its row acts at that edge's logical end -
+  in an RTL row the right edge is its start, the left edge its end (`rowEdgeOf()`) - so Enter at the right edge of
+  `1. אאא` pushes the whole line down rather than splitting it after the "1". The cursor is moved first and Enter
+  left to the bindings after it (list continuation, indentation) - which is why it is `Prec.highest`: markdown's
+  own Enter is `Prec.high`.
 
 What remains is bidi itself, not a bug: arrows move *visually*, so one of the two offsets at a direction
-boundary is never visited by them - at the left end of `אאא ttt` the arrows stop at 4, End goes to 7.
+boundary in the middle of a line is never visited by them.
 
 ### CSS Patterns for RTL vs LTR
 - Each editor tab gets a wrapper div with class `editor-wrapper`
