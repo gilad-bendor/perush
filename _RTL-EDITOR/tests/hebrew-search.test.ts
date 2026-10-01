@@ -78,3 +78,23 @@ describe("anything else is matched as it is", () => {
         expect(find("weltgeist", "״Weltgeist״")).toBe("Weltgeist");
     });
 });
+
+describe("loose whitespace (terminal recordings)", () => {
+    const findLoose = (query: string, text: string) =>
+        text.match(new RegExp(hebrewSearchPattern(query, { looseWhitespace: true }), "gmui"))?.[0] ?? null;
+    test("a space finds a line break and the indentation after it", () => {
+        expect(findLoose("a b c", "x a\n    b c y")).toBe("a\n    b c");
+    });
+    test("a run of spaces in the query is one run", () => {
+        expect(findLoose("a  \t b", "a b")).toBe("a b");
+    });
+    test("Hebrew still skips its marks around the whitespace", () => {
+        expect(findLoose("רוח אלהים", "וְרוּחַ\n  אֱלֹהִים")).toBe("רוּחַ\n  אֱלֹהִים");
+    });
+    test("whitespace is still required", () => {
+        expect(findLoose("a b", "ab")).toBeNull();
+    });
+    test("off by default: a space is a space", () => {
+        expect(find("a b", "a\nb")).toBeNull();
+    });
+});
