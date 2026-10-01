@@ -74,6 +74,7 @@ bun run rebuild-whole-html-folder
 - `src/html/pdf-mirror.ts` - Every page of the HTML mirror printed to `../docs/_PDF-FROM-MD`, by Playwright's Chromium
 - `src/rebuild-whole-html-folder.ts` - `bun run rebuild-whole-html-folder`
 - `src/write-file-safe.ts` - Atomic file writes, shared by the POST handler and the mirror
+- `src/line-endings.ts` - A CRLF file stays CRLF over a save
 - `public/` - Static frontend assets
 - `public/index.html` - Main interface
 - `public/src/app.js` - Frontend entry point (imports markdown-editor.js)
@@ -88,6 +89,7 @@ bun run rebuild-whole-html-folder
 - `tests/links.test.ts` - Unit tests for `links.js` (`bun test`)
 - `tests/hebrew-search.test.ts` - Unit tests for `hebrew-search.js` (`bun test`)
 - `tests/fs-changes.test.ts` - Unit tests for `fs-changes.ts` (`bun test`)
+- `tests/line-endings.test.ts` - Unit tests for `line-endings.ts` (`bun test`)
 - `tests/md-to-html.test.ts` / `tests/html-mirror.test.ts` / `tests/includes.test.ts` - Unit tests for
    the HTML mirror (`bun test`)
 - `tests/pdf-mirror.test.ts` - Unit tests for the PDF mirror - these print real PDFs, in Chromium
@@ -227,6 +229,14 @@ highlight style that changes text metrics needs the same treatment.
   row loses its last line once every column is empty there.
 
 A keystroke that would eat a box character is swallowed instead.
+
+### Line endings
+
+The editor holds `\n` only - CodeMirror splits on `\r\n` too and joins with `\n` - so a CRLF file is
+handed out as `\n` text by `GET /api/file/` (`toLf()`), and `POST` writes it back with the line ending
+the file on disk already has (`lineEndingOf()`, `withLineEnding()` in `src/line-endings.ts`). Without
+that, the poll saw a difference on every comparison ("has changed on the server") and the first save
+turned the file into LF. A mixed file is written with its majority, a tie or a new file with `\n`.
 
 ### Tab loading and order
 
