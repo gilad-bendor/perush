@@ -1,0 +1,36 @@
+diff --git a/dist/index.cjs b/dist/index.cjs
+index f4747c0f231e74293da056e07a8cc95c2ef51e47..c822b0ce737e70a193cf48825107c68d1acabc2e 100644
+--- a/dist/index.cjs
++++ b/dist/index.cjs
+@@ -1012,8 +1012,12 @@ function processBracketPairs(line, rFrom, rTo, isolates, outerType) {
+                             let type = (flags & 2 /* Bracketed.EmbedInside */) ? outerType :
+                                 !(flags & 4 /* Bracketed.OppositeInside */) ? 0 :
+                                     (flags & 1 /* Bracketed.OppositeBefore */) ? oppositeType : outerType;
+-                            if (type)
++                            if (type) {
+                                 types[i] = types[BracketStack[sJ]] = type;
++                                // PATCHED (perush): a bracket pair resolved by N0 is a strong type for the pairs after it
++                                // ("check backwards before the opening paired bracket until the first strong type").
++                                context = type == outerType ? 0 : 1 /* Bracketed.OppositeBefore */;
++                            }
+                             sI = sJ;
+                             break;
+                         }
+diff --git a/dist/index.js b/dist/index.js
+index 9d78d57867ec416e35317d9ff5505fc7b423be13..2833f267f21da195eb12a4d607fd2d7fd7835079 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -1008,8 +1008,12 @@ function processBracketPairs(line, rFrom, rTo, isolates, outerType) {
+                             let type = (flags & 2 /* Bracketed.EmbedInside */) ? outerType :
+                                 !(flags & 4 /* Bracketed.OppositeInside */) ? 0 :
+                                     (flags & 1 /* Bracketed.OppositeBefore */) ? oppositeType : outerType;
+-                            if (type)
++                            if (type) {
+                                 types[i] = types[BracketStack[sJ]] = type;
++                                // PATCHED (perush): a bracket pair resolved by N0 is a strong type for the pairs after it
++                                // ("check backwards before the opening paired bracket until the first strong type").
++                                context = type == outerType ? 0 : 1 /* Bracketed.OppositeBefore */;
++                            }
+                             sI = sJ;
+                             break;
+                         }
