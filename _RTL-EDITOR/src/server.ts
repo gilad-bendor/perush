@@ -10,6 +10,7 @@ import type { FileSystemChange } from "./fs-changes";
 import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
 import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR } from "./html/html-mirror";
 import { PdfMirror, pdfPathFor } from "./html/pdf-mirror";
+import { lineEndingOf, toLf, withLineEnding } from "./line-endings";
 import { writeFileSafe } from "./write-file-safe";
 
 const PORT = 4000;
@@ -267,7 +268,8 @@ serve({
 
             if (request.method === "GET") {
                 try {
-                    let content = await readFile(fullPath, "utf-8");
+                    // The editor holds `\n` only; the POST handler puts the file's own line ending back.
+                    let content = toLf(await readFile(fullPath, "utf-8"));
 
                     if (isScriptOutputFile) {
                         // See comment of isScriptOutputFile:
@@ -311,7 +313,9 @@ serve({
                     const contentForDisk = isAiGeneratedFile(filePath)
                         ? content
                         : formatTables(content, false).content;
-                    await writeFileSafe(fullPath, contentForDisk);
+                    // Written with the line ending the file already has - see line-endings.ts.
+                    const onDisk = await readFile(fullPath, "utf-8").catch(() => "");
+                    await writeFileSafe(fullPath, withLineEnding(toLf(contentForDisk), lineEndingOf(onDisk)));
                     return new Response(JSON.stringify({ success: true }), {
                         headers: { "Content-Type": "application/json" }
                     });
