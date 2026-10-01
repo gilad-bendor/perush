@@ -126,6 +126,11 @@ body {
 
 /* A tab whose file could not be read: it holds a read-only note instead of the file's content,
    rather than the tab being thrown away - see MarkdownEditor.loadTabContent(). */
+/* Hidden rather than removed when the file is saved, so that the tab keeps its width - see updateTitle(). */
+.tab:not(.dirty) .tab-dirty {
+    visibility: hidden;
+}
+
 .tab.missing .tab-title {
     color: #b00020;
     font-style: italic;

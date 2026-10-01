@@ -127,9 +127,11 @@ export class TabData {
     }
 
     updateTitle() {
-        /** @type {HTMLElement} */(this.tabElement.querySelector('.tab-title')).textContent = this.isDirty
-                ? `${this.fileName} •`
-                : this.fileName;
+        /** @type {HTMLElement} */(this.tabElement.querySelector('.tab-title')).textContent = this.fileName;
+        // The dirty marker is always there, only hidden: were it added and removed, the tab would
+        // grow on every keystroke and shrink on every save - and when that makes the strip wrap
+        // onto one more row, the whole editor jumps down and back up a second later.
+        this.tabElement.classList.toggle('dirty', this.isDirty);
 
         // Read-only tabs get an "RO" badge after the file-name.
         const existingBadge = this.tabElement.querySelector('.tab-read-only');
