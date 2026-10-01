@@ -841,7 +841,7 @@ export class MarkdownEditor {
                 // Create the tab-title element.
                 const tabElement = document.createElement('button');
                 tabElement.className = 'tab';
-                tabElement.innerHTML = `<span class="tab-close">&times;</span><span class="tab-title"></span>`;
+                tabElement.innerHTML = `<span class="tab-close">&times;</span><span class="tab-title"></span><span class="tab-dirty"> •</span>`;
                 /** @type {HTMLElement} */ (tabElement.querySelector('.tab-close')).addEventListener('click', (event) => {
                     event.stopPropagation();
                     this.closeTab(filePath).catch(consoleError);
