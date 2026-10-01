@@ -24,6 +24,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
    into view
 - Typing `*` or `` ` `` over a selection wraps it rather than replacing it - the way `(` already
    does; pressing `*` twice gives `**bold**`
+- Typing `-->`, `<--`, `<->` gives `→`, `←`, `↔`, and `==>`, `<==`, `<=>` give `⇒`, `⇐`, `⇔` - the
+   other way round in an RTL file. See "Typed arrows" below
 - Find (Cmd+F) shows how many matches the whole file holds, and has a "first" button; with no match
    every button is disabled
 - `*...*` and `**...**` *inside* an inline-code span are shown bold, the way they are outside one
@@ -275,6 +277,21 @@ second `*` turn `*text*` into `**text**` rather than `*(*text*)*`.
 
 The RTL-only `;`-types-a-backquote binding dispatches `replaceSelection()` itself and so never
 reaches an input handler - it calls `wrapSelectionWith()` first for the same reason.
+
+### Typed arrows
+
+`typedArrowExtension()` - another `EditorView.inputHandler` - replaces `-->` `<--` `<->` by `→` `←` `↔`, and
+`==>` `<==` `<=>` by `⇒` `⇐` `⇔`, as the sequence's last character is typed.
+
+- **Cmd+Z right after it gives the three characters back.** The typed character is inserted first, and the
+  arrow is a second transaction, isolated in the history (`isolateHistory.of('full')`) - which is the way to
+  write a literal `-->`. The sequence is re-read after the insertion, as the table formatter may have moved it.
+- **In an RTL file the arrow is mirrored**: `-->` gives `←`, `<==` gives `⇒`. There `<` and `>` are painted
+  mirrored (bidi mirroring), so `-->` is *seen* pointing left, and the arrow has to keep pointing that way.
+  `↔` and `⇔` are the same either way.
+- **Code is converted too** - in these files a code span is mostly a quotation, not code.
+- **Only the `-->` that closes an HTML comment is left alone** (a `<!--` with no `-->` after it, anywhere above).
+- It comes after `headerRuleExtension()`, which keeps `-` and `=` on a table's rule for itself.
 
 ### Searching Hebrew
 

@@ -3,7 +3,7 @@ import { EditorView, basicSetup } from 'codemirror';
 import { keymap, ViewPlugin, Decoration, Direction, gutterLineClass, GutterMarker, runScopeHandlers } from '@codemirror/view';
 import { markdown } from '@codemirror/lang-markdown';
 import { Compartment, EditorSelection, EditorState, Facet, RangeSetBuilder, Prec, StateField } from '@codemirror/state';
-import { indentWithTab } from '@codemirror/commands';
+import { indentWithTab, isolateHistory } from '@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle, syntaxTree } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
 
@@ -496,6 +496,7 @@ export class MarkdownEditor {
             tableRuleGutterField,
             ...(isAiGenerated ? [] : [autoFormatTablesExtension(isRtl), headerRuleExtension(isRtl)]),
             wrapSelectionExtension(),
+            typedArrowExtension(isRtl),
             // @ts-ignore
             ...specialKeyHandling.map((keyRun) => Prec.high(keymap.of([keyRun]))),
             keymap.of([indentWithTab]),
@@ -1355,6 +1356,77 @@ function wrapSelectionExtension() {
         }
         return wrapSelectionWith(view, text);
     });
+}
+
+/**
+ * The three-character sequences that turn into an arrow as their last character is typed - a dash
+ * draws a single-lined arrow, an equals sign a double-lined one.
+ */
+const TYPED_ARROWS = new Map([
+    ['-->', '→'], ['<--', '←'], ['<->', '↔'],
+    ['==>', '⇒'], ['<==', '⇐'], ['<=>', '⇔'],
+]);
+
+/**
+ * In an RTL line "<" and ">" are painted mirrored, so a typed "-->" is seen pointing left - and the
+ * arrow it becomes has to point the way it was seen.
+ */
+const MIRRORED_ARROWS = new Map([['→', '←'], ['←', '→'], ['⇒', '⇐'], ['⇐', '⇒']]);
+
+/**
+ * Typing the last character of "-->", "<--", "<->" (or their "=" forms) replaces the sequence by
+ * its arrow - in an RTL file the arrow pointing the other way, as the sequence is seen there.
+ *
+ * The character is inserted first and the arrow is a transaction of its own, isolated in the
+ * history - so Cmd+Z right after it gives back the three characters as typed, which is the way to
+ * write a literal "-->" when one is wanted. The sequence is re-read after the insertion, as the
+ * table formatter may have moved it.
+ *
+ * Code is converted like any other text - in these files it is mostly quotation, not code. Only the
+ * "-->" that closes an HTML comment is left alone.
+ *
+ * @param {boolean} isRtl
+ * @returns {import('@codemirror/state').Extension}
+ */
+function typedArrowExtension(isRtl) {
+    return EditorView.inputHandler.of((view, from, to, text) => {
+        const { state } = view;
+        if (from !== to || from < 2 || state.readOnly || state.selection.ranges.length !== 1) {
+            return false;
+        }
+        const sequence = state.sliceDoc(from - 2, from) + text;
+        let arrow = TYPED_ARROWS.get(sequence);
+        if (!arrow || (sequence === '-->' && isInHtmlComment(state, from - 2))) {
+            return false;
+        }
+        if (isRtl) {
+            arrow = MIRRORED_ARROWS.get(arrow) ?? arrow;
+        }
+        view.dispatch({ changes: { from, insert: text }, selection: { anchor: from + text.length }, userEvent: 'input.type', scrollIntoView: true });
+        const end = view.state.selection.main.head;
+        if (view.state.sliceDoc(end - sequence.length, end) === sequence) {
+            view.dispatch({
+                changes: { from: end - sequence.length, to: end, insert: arrow },
+                selection: { anchor: end - sequence.length + arrow.length },
+                userEvent: 'input.type',
+                annotations: isolateHistory.of('full'),
+                scrollIntoView: true,
+            });
+        }
+        return true;
+    });
+}
+
+/**
+ * Whether `pos` stands after a "<!--" that no "-->" has closed yet.
+ *
+ * @param {EditorState} state
+ * @param {number} pos
+ * @returns {boolean}
+ */
+function isInHtmlComment(state, pos) {
+    const before = state.sliceDoc(0, pos);
+    return before.lastIndexOf('<!--') > before.lastIndexOf('-->');
 }
 
 /**
