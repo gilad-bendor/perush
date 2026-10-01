@@ -1,6 +1,6 @@
 import { SearchQuery, closeSearchPanel, findNext, findPrevious, getSearchQuery, replaceAll, replaceNext, search, selectMatches, setSearchQuery } from "@codemirror/search"
 import { EditorView, basicSetup } from 'codemirror';
-import { keymap, ViewPlugin, Decoration, gutterLineClass, GutterMarker, runScopeHandlers } from '@codemirror/view';
+import { keymap, ViewPlugin, Decoration, Direction, gutterLineClass, GutterMarker, runScopeHandlers } from '@codemirror/view';
 import { markdown } from '@codemirror/lang-markdown';
 import { Compartment, EditorSelection, EditorState, Facet, RangeSetBuilder, Prec, StateField } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
@@ -419,21 +419,7 @@ export class MarkdownEditor {
         ];
         if (isRtl) {
             specialKeyHandling.push(
-                // Custom Home key handler for RTL mode:
-                // Fixes the issue where Home key in RTL mode moves cursor to "one-before-start" position
-                {
-                    key: "Home",
-                    run: (view) => {
-                        const {state} = view;
-                        const selection = state.selection.main;
-                        const line = state.doc.lineAt(selection.head);
-                        view.dispatch({
-                            selection: {anchor: line.from, head: line.from},
-                            scrollIntoView: true
-                        });
-                        return true;
-                    }
-                },
+                // (Home and End need no handler of their own here - see the posAndSideAtCoords() patch.)
                 // On macOS on Hebrew - the key to the left of "1" produces ";" - but we want it to produce backquote "`".
                 {
                     key: ';',
@@ -2082,3 +2068,92 @@ const looseWhitespaceSearch = Facet.define({ combine: (values) => values.some(Bo
         };
     };
 })();
+
+
+// PATCH to CodeMirror: a point beyond the text of a row stands for the row's *logical* end (or start),
+//  not for whichever character happens to be painted at that edge.
+// In a line that mixes directions the two differ. `אאא ttt` is painted `ttt אאא`, with "ttt" running
+//  left to right - so its far left is the *start* of "ttt", offset 4, while the line ends at 7, between
+//  "ttt" and the space. CodeMirror finds the ends of a row by asking posAtCoords() about the editor's
+//  far left and far right, and so took offset 4 for the end of the line. Three things went wrong with it:
+//  - End (and Shift+End, Cmd+arrow - everything through moveToLineBoundary()) stopped before "ttt".
+//  - A selection was painted against a row ending at 4 - its "ttt" part came out with a negative
+//    width, and was not painted at all, though the selected text itself was right.
+//  - A click, or a drag, past the end of the line's text stopped before "ttt" too.
+// So a point to the line's "end" side of its row's text - the left in a right-to-left line - is the
+//  row's logical end, and one to the other side its logical start. A point over the text is left to
+//  CodeMirror. A row is a wrapped line's row on the screen; the rows of a line are in logical order,
+//  which is what lets rowAt() find a row's ends by binary search.
+(() => {
+    const originalPosAndSideAtCoords = EditorView.prototype.posAndSideAtCoords;
+    /** @this {EditorView} */
+    EditorView.prototype.posAndSideAtCoords = function (/** @type {{x: number, y: number}} */ coords, precise = true) {
+        const found = originalPosAndSideAtCoords.call(this, coords, precise);
+        if (!found) return found;
+        const row = rowAt(this, found.pos, found.assoc);
+        if (!row) return found;
+        const ltr = this.textDirectionAt(row.from) === Direction.LTR;
+        if (coords.x < row.left) {
+            return ltr ? { pos: row.from, assoc: 1 } : { pos: row.to, assoc: -1 };
+        }
+        if (coords.x > row.right) {
+            return ltr ? { pos: row.to, assoc: -1 } : { pos: row.from, assoc: 1 };
+        }
+        return found;
+    };
+    /** @this {EditorView} */
+    EditorView.prototype.posAtCoords = function (/** @type {{x: number, y: number}} */ coords, precise = true) {
+        const found = this.posAndSideAtCoords(coords, precise);
+        return found && found.pos;
+    };
+})();
+
+/**
+ * The row of the screen that `pos` is painted on: its logical range, and the horizontal extent of its
+ * text. Null when there is no text there to measure - an empty line, a widget, a line out of view.
+ * @param {EditorView} view
+ * @param {number} pos
+ * @param {number} assoc
+ * @returns {{from: number, to: number, left: number, right: number} | null}
+ */
+function rowAt(view, pos, assoc) {
+    const line = view.state.doc.lineAt(pos);
+    if (line.length === 0 || pos < view.viewport.from || pos > view.viewport.to) return null;
+    const here = view.coordsAtPos(pos, assoc || 1);
+    if (!here) return null;
+    const middle = (here.top + here.bottom) / 2;
+    const onRow = (/** @type {number} */ p, /** @type {-1 | 1} */ side) => {
+        const rect = view.coordsAtPos(p, side);
+        return !!rect && rect.top <= middle && rect.bottom >= middle;
+    };
+    // The last position still on the row, painted as the end of it; the first, as its start.
+    let from = line.from, to = line.to;
+    if (!onRow(to, -1)) {
+        let low = pos, high = line.to;   // onRow(low) holds, onRow(high) does not
+        while (high - low > 1) { const mid = (low + high) >> 1; if (onRow(mid, -1)) low = mid; else high = mid; }
+        to = low;
+    }
+    if (!onRow(from, 1)) {
+        let low = line.from, high = pos;   // onRow(high) holds, onRow(low) does not
+        while (high - low > 1) { const mid = (low + high) >> 1; if (onRow(mid, 1)) high = mid; else low = mid; }
+        from = high;
+    }
+    let lineElement;
+    try {
+        const { node } = view.domAtPos(line.from);
+        lineElement = /** @type {Element} */ (node.nodeType === Node.TEXT_NODE ? node.parentElement : node).closest('.cm-line');
+    } catch {
+        return null;
+    }
+    if (!lineElement) return null;
+    const range = document.createRange();
+    range.selectNodeContents(lineElement);
+    let left = Infinity, right = -Infinity;
+    for (const rect of range.getClientRects()) {
+        if (rect.width > 0 && rect.top <= middle && rect.bottom >= middle) {
+            left = Math.min(left, rect.left);
+            right = Math.max(right, rect.right);
+        }
+    }
+    return left < right ? { from, to, left, right } : null;
+}

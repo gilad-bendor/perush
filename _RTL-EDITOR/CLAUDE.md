@@ -860,6 +860,28 @@ free of any editor dependency the way `tables.js` is, so it can be unit-tested o
   an `insertAfterFilePath`, inserts the button there and calls `reorderTabsFromDom()` to sort
   `this.tabs` to match - still synchronously, as that Map's order is the stored session order.
 
+### Mixed-direction lines
+
+In a line that mixes Hebrew and English, one spot on the screen can stand for two logical offsets, and
+the visual ends of a row are not its logical ends: `אאא ttt` is painted `ttt אאא`, so its far left is
+offset 4 (the *start* of "ttt") while the line ends at 7. Two patches keep the editor straight about it:
+
+- **`posAndSideAtCoords()` / `posAtCoords()`** (end of `markdown-editor.js`): a point beyond the text of a
+  row - to the left of it in an RTL line - is the row's logical end, and one on the other side its logical
+  start (`rowAt()`). CodeMirror finds a row's ends by asking these about the editor's far edges, so this one
+  patch is what makes End / Home / Shift+End / Cmd+arrows reach the real end of the line, what makes a
+  selection be *painted* over all of its text (it used to skip the English part), and what makes a click or
+  a drag past the end of a line land at its end. Hence no Home or End key binding of our own.
+- **`patches/@codemirror%2Fview@6.39.11.patch`** (`bun patch`, applied by `bun install`): CodeMirror's bidi
+  algorithm forgot that a bracket pair resolved by rule N0 counts as a strong character for the pairs after
+  it, so in `אאא [ttt](x.md)` it took `(x.md)` for LTR while the browser paints the parentheses RTL. Every
+  Markdown link in Hebrew text was affected: the arrows moved the cursor the wrong way over the `(`, and a
+  selection was painted in the wrong place. Upgrading `@codemirror/view` needs the patch carried over (or
+  dropped, if upstream fixed it).
+
+What remains is bidi itself, not a bug: arrows move *visually*, so one of the two offsets at a direction
+boundary is never visited by them - at the left end of `אאא ttt` the arrows stop at 4, End goes to 7.
+
 ### CSS Patterns for RTL vs LTR
 - Each editor tab gets a wrapper div with class `editor-wrapper`
 - RTL files also get the `rtl` class: `<div class="editor-wrapper rtl">`
