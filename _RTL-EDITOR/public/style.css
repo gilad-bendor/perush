@@ -211,9 +211,13 @@ body {
     padding: 16px;
 }
 
-/* RTL content - smaller right padding */
-.editor-wrapper.rtl .cm-content {
-    padding-right: 8px;
+/* RTL content - some room on the right.
+   On the lines, not on .cm-content: CodeMirror paints a fully-selected line out to
+   `.cm-content`'s right edge minus the *line's* padding-right, so padding on .cm-content
+   made a multi-line selection run past the right end of every line but the first.
+   10px = CodeMirror's own 2px + 8px. */
+.editor-wrapper.rtl .cm-line {
+    padding-right: 10px;
 }
 
 /* Red underline under search results (bolder underline under the *current* result) */
