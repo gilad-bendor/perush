@@ -1,0 +1,14 @@
+{
+  "claudeMdExcludes": [
+    "!**/_DELIBERATION-ROOM/**"
+  ],
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "Bash(bun test:*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Bash(done)"
+    ]
+  }
+}

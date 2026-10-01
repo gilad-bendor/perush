@@ -1,0 +1,5 @@
+{
+  "claudeMdExcludes": [
+    "!**/SMOKE_TEST_CLAUDE_CODE_SDK/**"
+  ]
+}
