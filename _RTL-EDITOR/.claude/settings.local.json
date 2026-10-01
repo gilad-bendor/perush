@@ -1,4 +1,7 @@
 {
+  "claudeMdExcludes": [
+    "!**/_RTL-EDITOR/**"
+  ],
   "permissions": {
     "allow": [
       "Bash(mkdir:*)",
