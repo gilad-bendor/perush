@@ -1,5 +1,5 @@
 diff --git a/dist/index.cjs b/dist/index.cjs
-index f4747c0f231e74293da056e07a8cc95c2ef51e47..c822b0ce737e70a193cf48825107c68d1acabc2e 100644
+index f4747c0f231e74293da056e07a8cc95c2ef51e47..b0b62e8dc9c9ffceb73053e13eb837ad5f67b239 100644
 --- a/dist/index.cjs
 +++ b/dist/index.cjs
 @@ -1012,8 +1012,12 @@ function processBracketPairs(line, rFrom, rTo, isolates, outerType) {
@@ -16,8 +16,47 @@ index f4747c0f231e74293da056e07a8cc95c2ef51e47..c822b0ce737e70a193cf48825107c68d
                              sI = sJ;
                              break;
                          }
+@@ -9109,13 +9113,15 @@ function rectanglesForRange(view, className, range) {
+     // Gets passed from/to in line-local positions
+     function drawForLine(from, to, line) {
+         let top = 1e9, bottom = -1e9, horizontal = [];
+-        function addSpan(from, fromOpen, to, toOpen, dir) {
++        function addSpan(from, fromOpen, to, toOpen, dir, asCursor = false) {
+             // Passing 2/-2 is a kludge to force the view to return
+             // coordinates on the proper side of block widgets, since
+             // normalizing the side there, though appropriate for most
+             // coordsAtPos queries, would break selection drawing.
+-            let fromCoords = view.coordsAtPos(from, (from == line.to ? -2 : 2));
+-            let toCoords = view.coordsAtPos(to, (to == line.from ? 2 : -2));
++            // PATCHED (perush): an empty piece - a line the selection only touches - is measured where a
++            // cursor there is painted (1/-1), which is not always where the first or last span starts.
++            let fromCoords = view.coordsAtPos(from, asCursor ? (from == line.to ? -1 : 1) : (from == line.to ? -2 : 2));
++            let toCoords = view.coordsAtPos(to, asCursor ? (to == line.from ? 1 : -1) : (to == line.from ? 2 : -2));
+             if (!fromCoords || !toCoords)
+                 return;
+             top = Math.min(fromCoords.top, toCoords.top, top);
+@@ -9144,7 +9150,7 @@ function rectanglesForRange(view, className, range) {
+                 }
+             }
+         if (horizontal.length == 0)
+-            addSpan(start, from == null, end, to == null, view.textDirection);
++            addSpan(start, from == null, end, to == null, view.textDirection, start == end);
+         return { top, bottom, horizontal };
+     }
+     function drawForWidget(block, top) {
+@@ -9303,7 +9309,9 @@ const cursorLayer = layer({
+             let prim = r == state$1.selection.main;
+             if (r.empty || conf.drawRangeCursor) {
+                 let className = prim ? "cm-cursor cm-cursor-primary" : "cm-cursor cm-cursor-secondary";
+-                let cursor = r.empty ? r : state.EditorSelection.cursor(r.head, r.head > r.anchor ? -1 : 1);
++                // PATCHED (perush): the head of a non-empty range is painted on the side it holds (perush sets it
++                // when the side matters - at a direction boundary the two sides are painted apart).
++                let cursor = r.empty ? r : state.EditorSelection.cursor(r.head, r.assoc || (r.head > r.anchor ? -1 : 1));
+                 for (let piece of RectangleMarker.forRange(view, className, cursor))
+                     cursors.push(piece);
+             }
 diff --git a/dist/index.js b/dist/index.js
-index 9d78d57867ec416e35317d9ff5505fc7b423be13..2833f267f21da195eb12a4d607fd2d7fd7835079 100644
+index 9d78d57867ec416e35317d9ff5505fc7b423be13..98da7c87775ff2a5ceb36a394f2bcb44b2aaa7c3 100644
 --- a/dist/index.js
 +++ b/dist/index.js
 @@ -1008,8 +1008,12 @@ function processBracketPairs(line, rFrom, rTo, isolates, outerType) {
@@ -34,3 +73,42 @@ index 9d78d57867ec416e35317d9ff5505fc7b423be13..2833f267f21da195eb12a4d607fd2d7f
                              sI = sJ;
                              break;
                          }
+@@ -9104,13 +9108,15 @@ function rectanglesForRange(view, className, range) {
+     // Gets passed from/to in line-local positions
+     function drawForLine(from, to, line) {
+         let top = 1e9, bottom = -1e9, horizontal = [];
+-        function addSpan(from, fromOpen, to, toOpen, dir) {
++        function addSpan(from, fromOpen, to, toOpen, dir, asCursor = false) {
+             // Passing 2/-2 is a kludge to force the view to return
+             // coordinates on the proper side of block widgets, since
+             // normalizing the side there, though appropriate for most
+             // coordsAtPos queries, would break selection drawing.
+-            let fromCoords = view.coordsAtPos(from, (from == line.to ? -2 : 2));
+-            let toCoords = view.coordsAtPos(to, (to == line.from ? 2 : -2));
++            // PATCHED (perush): an empty piece - a line the selection only touches - is measured where a
++            // cursor there is painted (1/-1), which is not always where the first or last span starts.
++            let fromCoords = view.coordsAtPos(from, asCursor ? (from == line.to ? -1 : 1) : (from == line.to ? -2 : 2));
++            let toCoords = view.coordsAtPos(to, asCursor ? (to == line.from ? 1 : -1) : (to == line.from ? 2 : -2));
+             if (!fromCoords || !toCoords)
+                 return;
+             top = Math.min(fromCoords.top, toCoords.top, top);
+@@ -9139,7 +9145,7 @@ function rectanglesForRange(view, className, range) {
+                 }
+             }
+         if (horizontal.length == 0)
+-            addSpan(start, from == null, end, to == null, view.textDirection);
++            addSpan(start, from == null, end, to == null, view.textDirection, start == end);
+         return { top, bottom, horizontal };
+     }
+     function drawForWidget(block, top) {
+@@ -9298,7 +9304,9 @@ const cursorLayer = /*@__PURE__*/layer({
+             let prim = r == state.selection.main;
+             if (r.empty || conf.drawRangeCursor) {
+                 let className = prim ? "cm-cursor cm-cursor-primary" : "cm-cursor cm-cursor-secondary";
+-                let cursor = r.empty ? r : EditorSelection.cursor(r.head, r.head > r.anchor ? -1 : 1);
++                // PATCHED (perush): the head of a non-empty range is painted on the side it holds (perush sets it
++                // when the side matters - at a direction boundary the two sides are painted apart).
++                let cursor = r.empty ? r : EditorSelection.cursor(r.head, r.assoc || (r.head > r.anchor ? -1 : 1));
+                 for (let piece of RectangleMarker.forRange(view, className, cursor))
+                     cursors.push(piece);
+             }

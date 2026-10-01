@@ -497,8 +497,10 @@ export class MarkdownEditor {
             ...(isAiGenerated ? [] : [autoFormatTablesExtension(isRtl), headerRuleExtension(isRtl)]),
             wrapSelectionExtension(),
             typedArrowExtension(isRtl),
+            bidiEdgeSelectionExtension(),
             // @ts-ignore
             ...specialKeyHandling.map((keyRun) => Prec.high(keymap.of([keyRun]))),
+            rowEdgeEnterExtension(),
             keymap.of([indentWithTab]),
             this.directionCompartment.of(EditorView.contentAttributes.of({ dir: isRtl ? 'rtl' : 'ltr' })),
             this.readOnlyCompartment.of(EditorState.readOnly.of(tabData.readOnly)),
@@ -1430,6 +1432,153 @@ function isInHtmlComment(state, pos) {
 }
 
 /**
+ * Shift+Left / Shift+Right, made to select a character that stands at the edge of a mixed-direction
+ * row - the "1" of an RTL line `1. אאא`, which CodeMirror's own commands could not select at all.
+ *
+ * That "1" is a left-to-right run at the right end of a right-to-left line, and the two sides of it
+ * are not two offsets: its left side is offset 0 *and* offset 1 (painted after the "."), its right
+ * side offset 1 painted after the "1". A step over it moves the caret from one side to the other but
+ * leaves the offset where it was - for a cursor that is a visible move, for a selection none at all.
+ * So when a step keeps the head's offset and only changes its side, the character whose glyph lies
+ * between the two painted carets is the one stepped over, and it is selected - with the head on the
+ * side the caret was moving to. Every other step is CodeMirror's own, except that a selection
+ * shrunk back to nothing keeps the side it was shrunk to, which is what brings the caret back to
+ * where the selection began.
+ *
+ * @returns {import('@codemirror/state').Extension}
+ */
+function bidiEdgeSelectionExtension() {
+    const extend = (/** @type {EditorView} */ view, /** @type {boolean} */ left) => {
+        const forward = left === (view.textDirectionAt(view.state.selection.main.head) === Direction.RTL);
+        const selection = EditorSelection.create(view.state.selection.ranges.map((range) => {
+            const moved = view.moveByChar(range, forward);
+            if (moved.head !== range.head) {
+                return moved.head === range.anchor
+                    ? EditorSelection.cursor(moved.head, moved.assoc, moved.bidiLevel ?? undefined)
+                    : rangeWithSide(range.anchor, moved.head, moved.assoc, moved.bidiLevel ?? undefined);
+            }
+            const steppedOver = charSteppedOver(view, range.head, range.assoc || 1, moved.assoc || 1);
+            if (!steppedOver) {
+                return range;
+            }
+            const other = steppedOver.from === range.head ? steppedOver.to : steppedOver.from;
+            if (!range.empty) {
+                return other === range.anchor ? EditorSelection.cursor(range.head, moved.assoc) : EditorSelection.range(range.anchor, other);
+            }
+            // An empty range can grow either way round; the head goes where the caret was heading.
+            const target = view.coordsAtPos(range.head, moved.assoc || 1)?.left ?? 0;
+            const headX = (/** @type {number} */ head, /** @type {number} */ anchor) => view.coordsAtPos(head, head > anchor ? -1 : 1)?.left ?? Infinity;
+            return Math.abs(headX(other, range.head) - target) < Math.abs(headX(range.head, other) - target)
+                ? EditorSelection.range(range.head, other)
+                : EditorSelection.range(other, range.head);
+        }), view.state.selection.mainIndex);
+        view.dispatch(view.state.update({ selection, scrollIntoView: true, userEvent: 'select' }));
+        return true;
+    };
+    return Prec.high(keymap.of([
+        { key: 'Shift-ArrowLeft', run: (view) => extend(view, true) },
+        { key: 'Shift-ArrowRight', run: (view) => extend(view, false) },
+    ]));
+}
+
+/**
+ * Enter with the caret painted at the edge of its row acts at that edge's end of the row - the right
+ * edge of an RTL row is its start, the left edge its end - whatever offset the caret stands for.
+ *
+ * At the right edge of `1. אאא` the caret is offset 1, after the "1": the "1" is a left-to-right run, and
+ * its right side is its end. Enter there split the line after the "1", where what is seen is a caret at
+ * the start of the line. So the cursor is first moved to the row's start (or end), and Enter is then
+ * left to the bindings that follow - the list continuation, the indentation - exactly as if it had been
+ * there to begin with.
+ *
+ * @returns {import('@codemirror/state').Extension}
+ */
+function rowEdgeEnterExtension() {
+    return Prec.highest(keymap.of([{
+        key: 'Enter',
+        run: (view) => {
+            let moved = false;
+            const selection = EditorSelection.create(view.state.selection.ranges.map((range) => {
+                const edge = range.empty && rowEdgeOf(view, range.head, range.assoc || 1);
+                if (!edge || edge.pos === range.head) return range;
+                moved = true;
+                return EditorSelection.cursor(edge.pos, edge.assoc);
+            }), view.state.selection.mainIndex);
+            if (moved) view.dispatch({ selection });
+            return false;   // Enter itself is the next binding's
+        },
+    }]));
+}
+
+/**
+ * The logical end of its row that `pos` is painted at, when it is painted at either edge of the row:
+ * its start for the edge the row's direction starts from, its end for the other one. Null when it is
+ * painted anywhere else.
+ *
+ * @param {EditorView} view
+ * @param {number} pos
+ * @param {number} assoc
+ * @returns {{pos: number, assoc: -1 | 1} | null}
+ */
+function rowEdgeOf(view, pos, assoc) {
+    const row = rowAt(view, pos, assoc);
+    const caret = row && view.coordsAtPos(pos, assoc);
+    if (!row || !caret) return null;
+    const ltr = view.textDirectionAt(row.from) === Direction.LTR;
+    const start = /** @type {const} */ ({ pos: row.from, assoc: 1 }), end = /** @type {const} */ ({ pos: row.to, assoc: -1 });
+    if (Math.abs(caret.left - row.left) < 1) return ltr ? start : end;
+    if (Math.abs(caret.left - row.right) < 1) return ltr ? end : start;
+    return null;
+}
+
+/**
+ * EditorSelection.range(), with its head on the side `assoc` names. CodeMirror leans the head of a
+ * non-empty range into the range, whichever side it arrived at - and at a direction boundary the two
+ * sides are painted apart: after Shift+Left from the line above `1. אאא` reached the left of the "1",
+ * the caret was painted on its right. There is no public way to pass the side, so the range's flags are
+ * set as EditorSelection.range() sets them, with the side's bit swapped.
+ *
+ * @param {number} anchor
+ * @param {number} head
+ * @param {number} assoc
+ * @param {number} [bidiLevel]
+ * @returns {import('@codemirror/state').SelectionRange}
+ */
+function rangeWithSide(anchor, head, assoc, bidiLevel) {
+    const range = EditorSelection.range(anchor, head, undefined, bidiLevel);
+    if (range.empty || !assoc || assoc === range.assoc) return range;
+    const ASSOC_BEFORE = 8, ASSOC_AFTER = 16;   // @codemirror/state's RangeFlag
+    // @ts-ignore - flags and create() are internal
+    const flags = (range.flags & ~(ASSOC_BEFORE | ASSOC_AFTER)) | (assoc < 0 ? ASSOC_BEFORE : ASSOC_AFTER);
+    // @ts-ignore
+    return range.constructor.create(range.from, range.to, flags);
+}
+
+/**
+ * The character next to `pos` whose glyph lies between where `pos` is painted on its `fromSide` and
+ * where it is painted on its `toSide` - or null, when the two are the same spot.
+ *
+ * @param {EditorView} view
+ * @param {number} pos
+ * @param {number} fromSide
+ * @param {number} toSide
+ * @returns {{from: number, to: number} | null}
+ */
+function charSteppedOver(view, pos, fromSide, toSide) {
+    const a = view.coordsAtPos(pos, fromSide), b = view.coordsAtPos(pos, toSide);
+    if (!a || !b || Math.abs(a.left - b.left) < 1) return null;
+    const low = Math.min(a.left, b.left), high = Math.max(a.left, b.left);
+    const line = view.state.doc.lineAt(pos);
+    for (const from of [pos - 1, pos]) {
+        if (from < line.from || from >= line.to) continue;
+        const rect = view.coordsForChar(from);
+        const middle = rect && (rect.left + rect.right) / 2;
+        if (middle != null && middle > low && middle < high) return { from, to: from + 1 };
+    }
+    return null;
+}
+
+/**
  * What each of the four characters means when it is typed on a table's rule: whether the rule it
  * lands on should become the header's. Both spellings of each, because the rule is drawn with the
  * box-drawing "─"/"═" but the keyboard offers "-"/"=".
@@ -2160,11 +2309,19 @@ const looseWhitespaceSearch = Facet.define({ combine: (values) => values.some(Bo
     const originalPosAndSideAtCoords = EditorView.prototype.posAndSideAtCoords;
     /** @this {EditorView} */
     EditorView.prototype.posAndSideAtCoords = function (/** @type {{x: number, y: number}} */ coords, precise = true) {
-        const found = originalPosAndSideAtCoords.call(this, coords, precise);
+        const found = rowEndsAtCoords(this, coords, originalPosAndSideAtCoords.call(this, coords, precise));
+        return found && (toLineEdge(this, found.pos, found.assoc) ?? found);
+    };
+    /**
+     * @param {EditorView} view
+     * @param {{x: number, y: number}} coords
+     * @param {{pos: number, assoc: -1 | 1} | null} found
+     */
+    function rowEndsAtCoords(view, coords, found) {
         if (!found) return found;
-        const row = rowAt(this, found.pos, found.assoc);
+        const row = rowAt(view, found.pos, found.assoc);
         if (!row) return found;
-        const ltr = this.textDirectionAt(row.from) === Direction.LTR;
+        const ltr = view.textDirectionAt(row.from) === Direction.LTR;
         if (coords.x < row.left) {
             return ltr ? { pos: row.from, assoc: 1 } : { pos: row.to, assoc: -1 };
         }
@@ -2172,13 +2329,100 @@ const looseWhitespaceSearch = Facet.define({ combine: (values) => values.some(Bo
             return ltr ? { pos: row.to, assoc: -1 } : { pos: row.from, assoc: 1 };
         }
         return found;
-    };
+    }
     /** @this {EditorView} */
     EditorView.prototype.posAtCoords = function (/** @type {{x: number, y: number}} */ coords, precise = true) {
         const found = this.posAndSideAtCoords(coords, precise);
         return found && found.pos;
     };
 })();
+
+// PATCH to CodeMirror: the start of a line is painted at the line's start edge - the right edge of an
+//  RTL line - and its end at the other edge, even when the line opens (or ends) with a run of the other
+//  direction.
+// In `1. אאא` the "1" is a left-to-right run at the right end of the line, and CodeMirror paints offset 0,
+//  the start of that run, on its *left*: Home put the caret between the "1" and the ".", where it is seen
+//  as standing after the "1". What is painted at the right edge is offset 1, the run's end - after the "1",
+//  so that Backspace there deleted the "1" and a letter typed there went in after it.
+// So the line's start and the run's far end swap places, for the caret only:
+//  - coordsAtPos() paints the line's start where the run's far end was painted. Only for a side of ±1, which
+//    is what the caret asks for; the selection layer asks with ±2, and its rectangles are left as they were.
+//  - moveByChar() - the arrows, with or without Shift, by character or by word - moves from the line's start
+//    as it would from that end, and an arrival at that end is an arrival at the line's start.
+//  - moveVertically() and posAndSideAtCoords() (above) take an arrival at that end - by Up / Down, or by a
+//    click - for the line's start.
+// A line that is one run of the other direction throughout - an English line of an RTL file - is left alone:
+//  it is read as the text it is, and its start is the start of its first word.
+(() => {
+    const originalCoordsAtPos = EditorView.prototype.coordsAtPos;
+    /** @this {EditorView} */
+    EditorView.prototype.coordsAtPos = function (/** @type {number} */ pos, side = 1) {
+        if (Math.abs(side) <= 1) {
+            const line = this.state.doc.lineAt(pos);
+            const alias = pos === line.from ? lineEdgeAlias(this, line, true) : pos === line.to ? lineEdgeAlias(this, line, false) : null;
+            if (alias) {
+                const here = originalCoordsAtPos.call(this, pos, side);
+                const there = originalCoordsAtPos.call(this, alias.pos, alias.assoc);
+                if (here && there && there.top < here.bottom && here.top < there.bottom) return there;
+            }
+        }
+        return originalCoordsAtPos.call(this, pos, side);
+    };
+    const originalMoveByChar = EditorView.prototype.moveByChar;
+    /** @this {EditorView} */
+    EditorView.prototype.moveByChar = function (/** @type {import('@codemirror/state').SelectionRange} */ start, /** @type {boolean} */ forward, /** @type {any} */ by) {
+        const line = this.state.doc.lineAt(start.head);
+        const alias = start.head === line.from ? lineEdgeAlias(this, line, true) : start.head === line.to ? lineEdgeAlias(this, line, false) : null;
+        const moved = originalMoveByChar.call(this, alias ? EditorSelection.cursor(alias.pos, alias.assoc) : start, forward, by);
+        const edge = toLineEdge(this, moved.head, moved.assoc);
+        return edge ? EditorSelection.cursor(edge.pos, edge.assoc) : moved;
+    };
+    const originalMoveVertically = EditorView.prototype.moveVertically;
+    /** @this {EditorView} */
+    EditorView.prototype.moveVertically = function (/** @type {import('@codemirror/state').SelectionRange} */ start, /** @type {boolean} */ forward, /** @type {number} */ distance) {
+        const moved = originalMoveVertically.call(this, start, forward, distance);
+        const edge = toLineEdge(this, moved.head, moved.assoc);
+        return edge ? EditorSelection.cursor(edge.pos, edge.assoc, undefined, moved.goalColumn) : moved;
+    };
+})();
+
+/**
+ * Where a line's start (or end) would be painted if it were not the start of a run of the other
+ * direction: the far end of that run, and the side of it that is painted at the line's edge. Null when the
+ * line does not open (end) with such a run, and when the run is the whole line.
+ *
+ * @param {EditorView} view
+ * @param {import('@codemirror/state').Line} line
+ * @param {boolean} atStart
+ * @returns {{pos: number, assoc: -1 | 1} | null}
+ */
+function lineEdgeAlias(view, line, atStart) {
+    if (line.length === 0) return null;
+    const spans = view.bidiSpans(line);   // in visual order, from the line's start edge
+    const base = view.textDirectionAt(line.from) === Direction.LTR ? 0 : 1;
+    const span = spans[atStart ? 0 : spans.length - 1];
+    if (span.level % 2 === base) return null;
+    const pos = line.from + (atStart ? span.to : span.from);
+    if (pos === line.from || pos === line.to) return null;
+    return atStart ? { pos, assoc: -1 } : { pos, assoc: 1 };
+}
+
+/**
+ * The line's start (or end), when `pos` on its `assoc` side is where lineEdgeAlias() says the line's start
+ * (end) would have been painted - that spot is the line's start now. Null for any other position.
+ *
+ * @param {EditorView} view
+ * @param {number} pos
+ * @param {number} assoc
+ * @returns {{pos: number, assoc: -1 | 1} | null}
+ */
+function toLineEdge(view, pos, assoc) {
+    const line = view.state.doc.lineAt(pos);
+    const start = lineEdgeAlias(view, line, true), end = lineEdgeAlias(view, line, false);
+    if (start && start.pos === pos && assoc < 0) return { pos: line.from, assoc: 1 };
+    if (end && end.pos === pos && assoc > 0) return { pos: line.to, assoc: -1 };
+    return null;
+}
 
 /**
  * The row of the screen that `pos` is painted on: its logical range, and the horizontal extent of its
