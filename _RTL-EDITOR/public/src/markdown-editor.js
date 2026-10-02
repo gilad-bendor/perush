@@ -2,7 +2,7 @@ import { SearchQuery, closeSearchPanel, findNext, findPrevious, getSearchQuery, 
 import { EditorView, basicSetup } from 'codemirror';
 import { keymap, ViewPlugin, Decoration, Direction, gutterLineClass, GutterMarker, runScopeHandlers } from '@codemirror/view';
 import { markdown, insertNewlineContinueMarkupCommand, deleteMarkupBackward } from '@codemirror/lang-markdown';
-import { Compartment, EditorSelection, EditorState, Facet, RangeSetBuilder, Prec, StateField } from '@codemirror/state';
+import { Compartment, EditorSelection, EditorState, Facet, RangeSetBuilder, Prec, StateField, Transaction } from '@codemirror/state';
 import { indentWithTab, isolateHistory } from '@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle, syntaxTree } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
@@ -14,6 +14,7 @@ import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableR
 import { headingLineOfAnchor, markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "./links.js";
 import { isVoidPseudoTag } from "./pseudo-tags.js";
 import { hebrewSearchPattern } from "./hebrew-search.js";
+import { EditLocations } from "./edit-locations.js";
 /** @typedef {import('../../src/server.ts').FileData} FileData */
 
 
@@ -31,6 +32,8 @@ export class MarkdownEditor {
         this.fsTimestamp = null;
         this.directionCompartment = new Compartment();
         this.readOnlyCompartment = new Compartment();
+        // Where the user has edited, for Cmd+Shift+Backspace - see initLastEditLocationShortcut().
+        this.editLocations = new EditLocations();
         this.init().catch(consoleError);
     }
 
@@ -46,6 +49,7 @@ export class MarkdownEditor {
         this.initSplitter();
         this.initTabReordering();
         this.initTabShortcuts();
+        this.initLastEditLocationShortcut();
         this.initPrintButton();
     }
 
@@ -124,6 +128,53 @@ export class MarkdownEditor {
             event.stopPropagation();
             this.switchToTab(filePath).catch(consoleError);
         }, true);
+    }
+
+    /**
+     * Cmd+Shift+Backspace (Ctrl+Shift+Backspace off macOS) goes back to where the user last edited -
+     * IntelliJ's "Last Edit Location" - and, pressed again, to the edit before that, across files.
+     * See EditLocations in edit-locations.js for what counts as a location.
+     *
+     * On the document, in the capture phase, for the reasons initTabShortcuts() gives.
+     */
+    initLastEditLocationShortcut() {
+        document.addEventListener('keydown', (event) => {
+            if (event.key !== 'Backspace' || !event.shiftKey || event.altKey) return;
+            if (!(isMac ? event.metaKey && !event.ctrlKey : event.ctrlKey && !event.metaKey)) return;
+            event.preventDefault();
+            event.stopPropagation();
+            this.goToLastEditLocation().catch(consoleError);
+        }, true);
+    }
+
+    async goToLastEditLocation() {
+        const currentView = this.tabs.get(this.activeTab)?.editorView;
+        const target = currentView
+            ? this.editLocations.previous(this.activeTab, currentView.state.selection.main.head, lineOfState(currentView.state))
+            : this.editLocations.previous(null, 0, () => -1);
+        if (!target) return;
+
+        // A tab closed since the edit is opened again, right after the current one.
+        if (!this.tabs.has(target.filePath)) {
+            const fileName = /** @type {string} */ (target.filePath.split('/').pop());
+            await this.openFile(target.filePath, fileName, true, this.activeTab);
+        } else if (this.activeTab !== target.filePath) {
+            await this.switchToTab(target.filePath);
+        }
+        const tabData = this.tabs.get(target.filePath);
+        const view = tabData?.editorView;
+        if (!tabData || !view || this.activeTab !== target.filePath) return;
+
+        // A tab that was just shown ignores scrolling for a moment - see goToAnchor().
+        tabData.abortAutoScrolling = false;
+        // The text of a tab that was closed may have changed meanwhile, unseen by the locations.
+        const pos = Math.min(target.pos, view.state.doc.length);
+        view.dispatch({
+            selection: { anchor: pos },
+            effects: EditorView.scrollIntoView(pos, { y: 'center' }),
+            userEvent: 'select',
+        });
+        view.focus();
     }
 
     // Lets the user drag a tab to a new place in the strip, the way a browser's tabs do.
@@ -499,6 +550,7 @@ export class MarkdownEditor {
             wrapSelectionExtension(),
             typedArrowExtension(isRtl),
             bidiEdgeSelectionExtension(),
+            editLocationsExtension(this.editLocations, tabData.filePath),
             // @ts-ignore
             ...specialKeyHandling.map((keyRun) => Prec.high(keymap.of([keyRun]))),
             rowEdgeEnterExtension(),
@@ -1039,6 +1091,7 @@ export class MarkdownEditor {
         view.dispatch({
             selection: { anchor: line.from },
             effects: EditorView.scrollIntoView(line.from, { y: 'start', yMargin: 20 }),
+            userEvent: 'select',
         });
         view.focus();
     }
@@ -1062,6 +1115,7 @@ export class MarkdownEditor {
 
         // activate() waits for the file, so this.activeTab has to say where the user meant to be
         // *before* the wait - that is how a switch made while a file is loading wins over it.
+        if (this.activeTab !== filePath) this.editLocations.noteMove();
         this.activeTab = filePath;
         this.updatePrintButton();
         this.saveSession();
@@ -1329,6 +1383,41 @@ const listLinePlugin = ViewPlugin.fromClass(
 // It wraps a selection only on the *opening* bracket, though, and on a Hebrew keyboard layout the key
 // marked "(" types ")" - so ")" parenthesizes a selection too, as "(" does.
 const wrappingMarkers = ['*', '`', '״', '׳'];
+
+/**
+ * Keeps the edit locations of one file up to date - see EditLocations in edit-locations.js.
+ *
+ * Every change of the text is mapped through, whoever made it, and every change but a remote one
+ * (TabData.updateFromServer()) is an edit of the user's: the whitelisting of user events would miss
+ * the editor's own key handlers, several of which dispatch with none. A cursor move counts only when
+ * the user made it - the "select" user events, which CodeMirror gives arrows, clicks and searches.
+ *
+ * @param {EditLocations} editLocations
+ * @param {string} filePath
+ * @returns {import('@codemirror/state').Extension}
+ */
+function editLocationsExtension(editLocations, filePath) {
+    return EditorView.updateListener.of((update) => {
+        for (const transaction of update.transactions) {
+            if (transaction.docChanged) {
+                editLocations.map(filePath, (pos) => transaction.changes.mapPos(pos));
+                if (!transaction.annotation(Transaction.remote)) {
+                    editLocations.record(filePath, transaction.state.selection.main.head, lineOfState(transaction.state));
+                }
+            } else if (transaction.selection && transaction.isUserEvent('select')) {
+                editLocations.noteMove();
+            }
+        }
+    });
+}
+
+/**
+ * @param {EditorState} state
+ * @returns {(pos: number) => number}   the line a position is on, clamped to the document
+ */
+function lineOfState(state) {
+    return (pos) => state.doc.lineAt(Math.min(pos, state.doc.length)).number;
+}
 
 /**
  * @param {EditorView} view

@@ -2,8 +2,8 @@
 import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, consoleGroupCollapsed, consoleGroupEnd } from './logs.js';
 import { MarkdownEditor } from './markdown-editor.js';
 import { EditorView } from 'codemirror';
-import { EditorState } from '@codemirror/state';
-import { formatTables, isAiGeneratedFile } from './tables.js';
+import { EditorState, Transaction } from '@codemirror/state';
+import { formatTables, isAiGeneratedFile, minimalReplacement } from './tables.js';
 
 export class TabData {
     /**
@@ -275,18 +275,15 @@ export class TabData {
                 alert(`The file\n    ${this.filePath}\n has changed on the server: updating.`);
             }
 
-            // Remember original scroll position and selection.
+            // Only what differs is replaced, so that whatever points into the text - the selection,
+            // the edit locations of Cmd+Shift+Backspace - is carried over the change rather than
+            // collapsed to its start. Marked remote, so it is not taken for an edit of the user's.
             const originalScrollTop = editorView.scrollDOM.scrollTop;
-            const originalSelection = editorView.state.selection;
             editorView.dispatch({
-                changes: { from: 0, to: this.editorView.state.doc.length, insert: formattedContentOnServer }
+                changes: minimalReplacement(currentContent, formattedContentOnServer),
+                annotations: Transaction.remote.of(true),
             });
             editorView.scrollDOM.scrollTop = originalScrollTop;
-            try {
-                editorView.dispatch({selection: originalSelection});
-            } catch (error) {
-                // Probably "RangeError: Selection points outside of document" - ignore.
-            }
             this.contentAtServer = contentOnServer;
             this.isDirty = false;
             this.updateTitle();

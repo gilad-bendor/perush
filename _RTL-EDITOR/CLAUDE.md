@@ -20,6 +20,9 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
    focus to it; a file that was not open yet gets its tab right after the linking one.
    `path#heading` and a bare `#heading` put the cursor on that heading
 - Ctrl+1 .. Ctrl+9 show the 1st .. 9th tab
+- Cmd+Shift+Backspace (Ctrl+Shift+Backspace off macOS) goes back to the last edit location, and
+   further back on every press - across files, as IntelliJ's "Last Edit Location" does. See
+   "Last edit location" below
 - Showing a tab highlights its file in the tree, opening every folder above it and scrolling it
    into view
 - Typing `*`, `` ` ``, `״` or `׳` over a selection wraps it rather than replacing it - the way `(`,
@@ -84,12 +87,14 @@ bun run rebuild-whole-html-folder
 - `public/src/tab-data.js` - Tab state management
 - `public/src/tables.js` - Table parsing/formatting, shared by the browser and the server
 - `public/src/links.js` - Markdown-link parsing/resolution, behind Cmd+click-to-open
+- `public/src/edit-locations.js` - The edit locations behind Cmd+Shift+Backspace
 - `public/src/pseudo-tags.js` - Which pseudo-tags are void, shared by the browser and the server
 - `public/src/hebrew-search.js` - What a plain Find matches in Hebrew text (niqqud, precomposed letters, shin/sin)
 - `public/style.css` - Styling with RTL support
 - `tests/tables.test.ts` - Unit tests for `tables.js` (`bun test`)
 - `tests/links.test.ts` - Unit tests for `links.js` (`bun test`)
 - `tests/hebrew-search.test.ts` - Unit tests for `hebrew-search.js` (`bun test`)
+- `tests/edit-locations.test.ts` - Unit tests for `edit-locations.js` (`bun test`)
 - `tests/fs-changes.test.ts` - Unit tests for `fs-changes.ts` (`bun test`)
 - `tests/line-endings.test.ts` - Unit tests for `line-endings.ts` (`bun test`)
 - `tests/md-to-html.test.ts` / `tests/html-mirror.test.ts` / `tests/includes.test.ts` - Unit tests for
@@ -367,6 +372,35 @@ while the editor is focused. A digit with no tab of its own is left alone rather
 Ctrl rather than Cmd: on macOS Cmd+<digit> is the browser's own tab shortcut, and Ctrl+<digit> is
 free (on Windows and Linux it is Ctrl that Chrome keeps for itself, and the shortcut would not
 reach the page there).
+
+### Last edit location
+
+Cmd+Shift+Backspace (Ctrl off macOS) jumps to where the user last edited, and every further press one
+location further back - across files, a closed tab being opened again right after the current one.
+`EditLocations` in `public/src/edit-locations.js` holds the list, free of any editor dependency so it can
+be unit-tested; `editLocationsExtension()` feeds it from every editor, and `initLastEditLocationShortcut()`
+(document, capture phase, as for the tab shortcuts) walks it.
+
+- **A location is an offset, carried through every change.** Each transaction maps the file's
+  locations through its `ChangeSet` (`mapPos()`), so a line inserted above moves a location a line down
+  and a character inserted before it moves it one on. Text deleted around one collapses it to the spot.
+  A closed tab's locations are not mapped - nothing edits it - and are clamped on the jump, in case the
+  file changed on disk meanwhile.
+- **A new location starts at a move of the cursor the user made**: an edit after an arrow, a click, a
+  search or a switch of tab (`noteMove()`) is a new location; an edit right after another one, in the same
+  file, moves the newest location along. The moves are the `select*` user events, plus `switchToTab()`.
+- **Every change of the text is an edit except a remote one.** The editor's own key handlers do not all
+  give a user event, so the test is the other way round: `TabData.updateFromServer()` marks its change
+  `Transaction.remote`, and nothing else is excluded. Undo and redo are edits.
+- **One location per line**: recording one drops any older one on the same line, so a walk back never
+  stops twice at one place; and a location on the cursor's own line is passed over, so the first press
+  right after an edit goes to the edit *before* it. An edit ends the walk. At most 100 are kept, and none
+  survives a reload.
+- **A change from the server replaces only what differs** (`minimalReplacement()`), not the whole
+  document as it used to - which would have collapsed every location to offset 0. The cursor is carried
+  over the change the same way, instead of being put back by offset.
+- On macOS Chrome uses Cmd+Shift+Delete for "Clear browsing data"; the binding takes the key in the
+  capture phase and `preventDefault()`s it. Should Chrome ever keep it for itself, the binding changes.
 
 ### Tab reordering
 
