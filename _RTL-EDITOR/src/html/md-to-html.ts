@@ -120,6 +120,50 @@ markdown.helpers.parseLinkDestination = (str: string, start: number, max: number
 markdown.disable("table");
 
 // ------------------------------------------------------------------------------------------------
+// Lists
+
+// A line indented less than a list item's text is not part of the item. CommonMark would take it as a
+// "lazy" continuation of the item's last paragraph - `- bbb` and then `Here is list two:` on the next line
+// make one item of two lines - but the files here are written a sentence per line, and a line brought back
+// to the margin is meant as one that left the list. So such a line ends the paragraph it would have
+// continued, and with it the item: a terminator of the paragraph rule, and nothing else.
+markdown.block.ruler.before("paragraph", "dedent_ends_paragraph", dedentEndsParagraphRule, { alt: ["paragraph"] });
+
+function dedentEndsParagraphRule(state: StateBlock, startLine: number, _endLine: number, silent: boolean): boolean {
+    return silent && state.sCount[startLine] >= 0 && state.sCount[startLine] < state.blkIndent;
+}
+
+// A paragraph with a list right under it - no blank line between them - is the list's own heading line,
+// `Here is list one:`, and is drawn with no space below it. A blank line keeps the usual space.
+markdown.core.ruler.push("paragraph_heads_list", (state: StateCore) => {
+    const tokens = state.tokens;
+    for (let i = 2; i + 1 < tokens.length; i++) {
+        const list = tokens[i + 1];
+        if (tokens[i].type !== "paragraph_close" || (list.type !== "bullet_list_open" && list.type !== "ordered_list_open")) continue;
+        const open = tokens[i - 2];   // paragraph_open, inline, paragraph_close
+        if (open?.map && list.map && open.map[1] === list.map[0]) open.attrJoin("class", "heads-list");
+    }
+});
+
+// The other way round, too: a paragraph right under a list - `Here is list two:` after `- bbb` - follows on
+// from it, and the list is drawn with no space below it. A list's map takes in the blank line after it, so
+// whether there is one is read off the source.
+markdown.core.ruler.push("list_runs_on", (state: StateCore) => {
+    const tokens = state.tokens;
+    let lines: string[] | undefined;
+    for (let i = 1; i < tokens.length; i++) {
+        const paragraph = tokens[i];
+        const close = tokens[i - 1];
+        if (paragraph.type !== "paragraph_open" || !paragraph.map || paragraph.map[0] === 0) continue;
+        if (close.type !== "bullet_list_close" && close.type !== "ordered_list_close") continue;
+        lines ??= state.src.split("\n");
+        if (!/\S/.test(lines[paragraph.map[0] - 1] ?? "")) continue;
+        const open = tokens.findLast((token, j) => j < i && token.level === close.level && token.type === close.type.replace("_close", "_open"));
+        open?.attrJoin("class", "runs-on");
+    }
+});
+
+// ------------------------------------------------------------------------------------------------
 // Tables
 
 markdown.block.ruler.before("code", "box_table", boxTableRule, { alt: ["paragraph", "reference", "blockquote", "list"] });
@@ -627,7 +671,8 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { font-size: 0.95em; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
 /* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
 .breadcrumbs, .page-index { opacity: 0.7; }
 body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }

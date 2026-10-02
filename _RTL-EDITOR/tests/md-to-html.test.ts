@@ -20,6 +20,30 @@ describe("readable Markdown", () => {
     });
 });
 
+describe("lists", () => {
+    test("a line back at the margin leaves the list, rather than continuing its last item", () => {
+        expect(html("- א\n- ב\nשורה\n- ג")).toBe(
+            "<ul class=\"runs-on\">\n<li>א</li>\n<li>ב</li>\n</ul>\n<p class=\"heads-list\">שורה</p>\n<ul>\n<li>ג</li>\n</ul>");
+    });
+
+    test("a line indented as the item's text still continues it", () => {
+        expect(html("- א\n  עוד\n- ב")).toBe("<ul>\n<li>א<br>\nעוד</li>\n<li>ב</li>\n</ul>");
+        expect(html("1. א\n   עוד")).toBe("<ol>\n<li>א<br>\nעוד</li>\n</ol>");
+    });
+
+    test("a paragraph right above a list heads it; a blank line between them keeps them apart", () => {
+        expect(html("רשימה:\n- א")).toBe('<p class="heads-list">רשימה:</p>\n<ul>\n<li>א</li>\n</ul>');
+        expect(html("רשימה:\n\n- א")).toBe("<p>רשימה:</p>\n<ul>\n<li>א</li>\n</ul>");
+    });
+
+    test("a paragraph right below a list follows on from it; a blank line between them keeps them apart", () => {
+        expect(html("- א\n- ב\nשורה")).toBe('<ul class="runs-on">\n<li>א</li>\n<li>ב</li>\n</ul>\n<p>שורה</p>');
+        expect(html("- א\n- ב\n\nשורה")).toBe("<ul>\n<li>א</li>\n<li>ב</li>\n</ul>\n<p>שורה</p>");
+        expect(html("1. א\n   - ב\nשורה")).toBe(
+            '<ol class="runs-on">\n<li>א\n<ul>\n<li>ב</li>\n</ul>\n</li>\n</ol>\n<p>שורה</p>');
+    });
+});
+
 describe("the raw-HTML fence", () => {
     test("a ```html fence goes to the page as it is, its own lines gone", () => {
         expect(html('לפני\n\n```html\n<div class="x">שלום <b>עולם</b></div>\n```\n\nאחרי')).toBe([
