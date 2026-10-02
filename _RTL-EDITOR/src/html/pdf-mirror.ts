@@ -24,8 +24,9 @@
 // **The links are rewritten on the way.** The page is loaded as a file, so every link in it is a
 // file:// URL - which Chrome writes into the PDF as it is, and which leads nowhere once the PDF is
 // shared. A link into docs/ is pointed at the same file on GitHub Pages, and a link to anything else
-// in the repository at the file on GitHub (publicUrls()). A link within the page (`#heading`) is left
-// alone, which is what keeps the index of headings working inside the PDF.
+// in the repository at the file on GitHub (publicUrls()) - except a link to another page, which is
+// pointed at that page's PDF, `#heading` and all. A link within the page (`#heading`) stays one, which
+// is what keeps the index of headings working inside the PDF. See pointLinksAt().
 //
 // HtmlMirror drives it (the `companion` it is given): every page it syncs is scheduled here, and
 // every sweep of the tree is one here too, which deletes the PDFs whose file is gone.
@@ -36,7 +37,7 @@ import type { Stats } from "fs";
 import { createHash } from "crypto";
 import { pathToFileURL } from "url";
 import type { Browser } from "playwright";
-import { htmlPathFor, isMirroredFile, logSiteChange, PDF_MIRROR_DIR, pdfPathFor } from "./html-mirror";
+import { HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, logSiteChange, PDF_MIRROR_DIR, pdfPathFor } from "./html-mirror";
 import { writeFileSafe } from "../write-file-safe";
 
 // The PDF mirror's paths are html-mirror.ts's, which lists this mirror in its indexes too.
@@ -113,6 +114,8 @@ export class PdfMirror implements PageCompanion {
     private idleTimer: ReturnType<typeof setTimeout> | undefined;
     /** The stamp of each page and each PDF last read, keyed by path - valid while `stats` still match. */
     private readonly stamps = new Map<string, { stats: string, stamp: string | null }>();
+    /** The last PDF servedFrom() made - a PDF opened is likely to be asked for again in a moment. */
+    private served: { path: string, key: string, pdf: Uint8Array | null } | null = null;
 
     /**
      * @param root     the root of the served tree
@@ -181,7 +184,7 @@ export class PdfMirror implements PageCompanion {
         let printed: Uint8Array;
         try {
             await tab.goto(pathToFileURL(resolve(pagePath)).href, { waitUntil: "load" });
-            if (this.urls) await tab.evaluate(pointLinksAt, this.urls);
+            await tab.evaluate(pointLinksAt, this.linkTargets());
             printed = await tab.pdf({ printBackground: true, preferCSSPageSize: true, format: "A4" });
         } finally {
             await tab.close();
@@ -190,6 +193,11 @@ export class PdfMirror implements PageCompanion {
         logSiteChange(this.root, "wrote", pdfPath);
         this.stamps.delete(pdfPath);
         return "printed";
+    }
+
+    private linkTargets(): LinkTargets {
+        const mirror = (dir: string) => pathToFileURL(resolve(this.root, dir)).href + "/";
+        return { mirrors: [mirror(HTML_MIRROR_DIR), mirror(PDF_MIRROR_DIR)], urls: this.urls };
     }
 
     /** `compute()`, or what it gave last time for this path if the file has not changed since. */
@@ -212,6 +220,41 @@ export class PdfMirror implements PageCompanion {
         for (const pdfPath of await this.listPdfFiles()) {
             if (!wanted.has(pdfPath)) await this.removePdf(join(this.root, pdfPath));
         }
+    }
+
+    /**
+     * A PDF of the mirror as this server hands it out: its links to GitHub Pages pointed at `docsUrl`
+     * instead - the docs/ of the server it is read from - so that following one stays on that server.
+     * The file on disk keeps the public links, for the PDF that leaves this machine.
+     * @param pdfPath  relative to the root of the served tree
+     * @returns null when there is nothing to change - no public URL, or no link to it in the file
+     */
+    async servedFrom(pdfPath: string, docsUrl: string): Promise<Uint8Array | null> {
+        const published = this.urls?.docs[1];
+        if (!published || published === docsUrl) return null;
+        const fullPath = join(this.root, pdfPath);
+        const stats = await stat(fullPath);
+        const key = `${stats.mtimeMs}:${stats.size}:${stats.ino}:${docsUrl}`;
+        if (this.served?.path === fullPath && this.served.key === key) return this.served.pdf;
+
+        const bytes = await readFile(fullPath);
+        let pdf: Uint8Array | null = null;
+        if (bytes.includes(published, 0, "latin1")) {
+            const { PDFDict, PDFDocument, PDFName, PDFString } = await import("pdf-lib");
+            const document = await PDFDocument.load(bytes, { updateMetadata: false });
+            for (const [, object] of document.context.enumerateIndirectObjects()) {
+                if (!(object instanceof PDFDict)) continue;
+                const action = object.lookupMaybe(PDFName.of("A"), PDFDict);
+                const uri = action?.get(PDFName.of("URI"));
+                const href = uri && "decodeText" in uri ? (uri as { decodeText(): string }).decodeText() : null;
+                if (href?.startsWith(published)) {
+                    action!.set(PDFName.of("URI"), PDFString.of(docsUrl + href.slice(published.length)));
+                }
+            }
+            pdf = await document.save({ useObjectStreams: false });
+        }
+        this.served = { path: fullPath, key, pdf };
+        return pdf;
     }
 
     /** Closes the browser, if there is one - it is launched again when next needed. */
@@ -301,20 +344,82 @@ export async function readStamp(pdfPath: string): Promise<string | null> {
     }
 }
 
+/** Where the links of a page are pointed before it is printed - see pointLinksAt(). */
+type LinkTargets = {
+    /** file:// URLs of the two mirrors: a link to a page of the first is pointed at its PDF in the second. */
+    mirrors: [string, string];
+    urls: PublicUrls | null;
+};
+
 /**
  * Runs in the page, before it is printed: points every link at where it can be followed from a
- * shared PDF. A link within the page is left alone - it becomes a link within the PDF.
+ * shared PDF.
+ *
+ * - A link to another page is pointed at that page's PDF - one PDF leads to the next, as one page
+ *   does. A folder's `index.html` stays itself, as the PDF mirror has one of its own.
+ * - Its `#heading` becomes `#nameddest=<name>`, the way a PDF viewer is told where to scroll.
+ * - A link within the page is left a `#` link - it becomes a link within the PDF.
+ * - Every link is blue, as on the page, though the page's @media print block makes it plain ink.
+ *
+ * Chromium writes a named destination into the PDF only for an id some link of the page points to,
+ * and names it by the link's fragment as percent-encoded. Neither will do: a heading another PDF
+ * links to need not be linked from its own page, and a viewer decodes the fragment it is given
+ * (Chrome's once, so the name would have to be encoded twice for it - and pdf.js has its own idea).
+ * So every id is renamed to `pdfDestName()`'s spelling - plain ASCII, no `%`, so no viewer has
+ * anything to decode - and a hidden link points at each of them.
  */
-function pointLinksAt(urls: PublicUrls): void {
+function pointLinksAt({ mirrors: [htmlMirror, pdfMirror], urls }: LinkTargets): void {
+    /** An id as a PDF destination name: letters, digits and `-` as they are, every other byte `_XX`. */
+    const pdfDestName = (id: string) =>
+        encodeURIComponent(id).replace(/[_.!~*'()]/g, c => "%" + c.charCodeAt(0).toString(16).toUpperCase())
+            .replace(/%/g, "_");
+    const decoded = (fragment: string) => {
+        try {
+            return decodeURIComponent(fragment);
+        } catch {
+            return fragment;
+        }
+    };
+
     for (const link of document.querySelectorAll<HTMLAnchorElement>("a[href]")) {
-        if (link.getAttribute("href")!.startsWith("#")) continue;
-        for (const [local, published] of [urls.docs, urls.repo]) {
+        const href = link.getAttribute("href")!;
+        if (href.startsWith("#")) {
+            if (href.length > 1) link.setAttribute("href", "#" + pdfDestName(decoded(href.slice(1))));
+            continue;
+        }
+        const url = new URL(link.href);
+        if (url.protocol === "file:" && (url.origin + url.pathname).startsWith(htmlMirror)) {
+            const path = url.pathname.slice(new URL(htmlMirror).pathname.length);
+            if (/\.html$/.test(path) && !/(^|\/)index\.html$/.test(path)) {
+                const fragment = url.hash.slice(1);
+                link.href = pdfMirror + path.replace(/\.html$/, ".pdf")
+                    + (fragment ? "#nameddest=" + pdfDestName(decoded(fragment)) : "");
+            } else {
+                link.href = pdfMirror + path + url.hash;
+            }
+        }
+        for (const [local, published] of urls ? [urls.docs, urls.repo] : []) {
             if (link.href.startsWith(local)) {
                 link.href = published + link.href.slice(local.length);
                 break;
             }
         }
     }
+
+    // A PDF is read on a screen as often as on paper, and there a link can be followed - so it is
+    // blue and underlined, as on the page, though the page's @media print block makes it plain ink.
+    const style = document.head.appendChild(document.createElement("style"));
+    style.textContent = "@media print { a { color: #0066cc; text-decoration: underline; } }";
+
+    // Chromium makes a destination of an id only when a link points at it - so one does, unseen.
+    const targets = document.createElement("div");
+    targets.style.cssText = "position: absolute; top: 0; left: 0; width: 1px; height: 1px; overflow: hidden";
+    for (const element of document.querySelectorAll("[id]")) {
+        element.id = pdfDestName(element.id);
+        const link = targets.appendChild(document.createElement("a"));
+        link.href = "#" + element.id;
+    }
+    document.body.appendChild(targets);
 }
 
 async function statOrNull(path: string): Promise<Stats | null> {

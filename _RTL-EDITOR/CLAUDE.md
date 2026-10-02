@@ -101,7 +101,8 @@ bun run rebuild-whole-html-folder
 - `GET /api/pdf/:path` - brings the file's PDF up to date, and redirects (302) to it under `/docs/_PDF-FROM-MD/` -
   see "The print and HTML buttons"
 - `GET /api/html/:path` - the same for its page, under `/docs/_HTML-FROM-MD/`
-- `GET /docs/...` - `../docs/` as it is, the way GitHub Pages serves it: a folder is its `index.html`
+- `GET /docs/...` - `../docs/` as it is, the way GitHub Pages serves it: a folder is its `index.html`.
+  A PDF of the mirror is the one exception: its links to GitHub Pages are pointed back at this server
 
 ## Configuration
 
@@ -772,7 +773,8 @@ gets it; nothing is special-cased to the one file.
   keeps it out of every PDF of the PDF mirror, as Chromium prints them with this very block.
 - **A collapsed index would print as its title alone**, so `<details>` is forced open on paper.
 - **Links lose the blue and the underline**: on paper a link cannot be followed, and only the words
-  are left to read.
+  are left to read. Not in the PDF mirror, though: a PDF is read on a screen as often as on paper, so
+  `pointLinksAt()` puts the blue back before printing.
 
 To see the result without a printer, Chrome will do it from the command line - no server needed,
 since a page in the mirror is a file:
@@ -814,8 +816,23 @@ printed - a list of links is no document to print - but every folder of the PDF 
   link in it is a `file://` URL, and Chrome writes it into the PDF as it is - leading nowhere once the PDF
   is shared. A link into `docs/` is pointed at GitHub Pages, and one to anything else in the repository
   at GitHub (`publicUrls()`, from the `origin` remote; `https://<owner>.github.io/<repo>/` is the default
-  project-site URL, and a custom domain would have to be written in). A `#heading` link is left alone, so
-  it stays a link within the PDF.
+  project-site URL, and a custom domain would have to be written in). A `#heading` link stays a link
+  within the PDF.
+- **A link to another page leads to its PDF**, not to the page - one PDF leads to the next. A folder's
+  `index.html` stays itself (the PDF mirror has its own). A `#heading` on it becomes `#nameddest=<name>`,
+  which is how a PDF viewer is told where to scroll - and that needs two things Chromium does not do:
+  - **A destination for every heading.** Chromium writes one only for an id some link of the page points
+    to, so `pointLinksAt()` adds a hidden link to every id.
+  - **A name no viewer decodes.** Chromium names a destination by the link's fragment, percent-encoded,
+    and a viewer decodes the fragment it is given (Chrome's exactly once, pdf.js its own way). So every id
+    is renamed first, to plain ASCII with no `%` - letters, digits and `-` as they are, every other byte
+    `_XX` (`pdfDestName()`) - and the in-page links with it.
+- **Read from this server, a PDF's links lead back to it.** On disk they lead to GitHub Pages, for the
+  PDF that is shared; but a PDF opened at `localhost:4000/docs/...` should not send its reader off to
+  the published site, which may well be behind. So the `/docs/` handler serves a PDF of the mirror
+  through `PdfMirror.servedFrom()`, which points every link to GitHub Pages at the request's own
+  `<origin>/docs/` (pdf-lib, on the annotations; the last one made is cached). The links to GitHub -
+  to a file that has no page - are left as they are.
 - **Size.** A PDF embeds its fonts, so each is some 300-600 KB - several hundred MB for the tree, which is
   worth knowing before committing it all.
 
