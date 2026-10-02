@@ -9,7 +9,7 @@ import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "
 import type { FileSystemChange } from "./fs-changes";
 import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
 import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR } from "./html/html-mirror";
-import { PdfMirror, pdfPathFor } from "./html/pdf-mirror";
+import { PDF_MIRROR_DIR, PdfMirror, pdfPathFor } from "./html/pdf-mirror";
 import { lineEndingOf, toLf, withLineEnding } from "./line-endings";
 import { writeFileSafe } from "./write-file-safe";
 
@@ -254,6 +254,16 @@ serve({
             const served = file(join(MARKDOWN_DIR, path));
             if (!(await served.exists())) {
                 return new Response("Not found", { status: 404 });
+            }
+            // A PDF's links lead to GitHub Pages - unless it is read here, when they lead back here.
+            const local = path.endsWith(".pdf") && path.startsWith(`${PDF_MIRROR_DIR}/`)
+                ? await pdfMirror?.servedFrom(path, `${url.origin}/${SITE_DIR}/`).catch(error => {
+                    console.error(`Cannot point the links of ${path} here:`, error);
+                    return null;
+                })
+                : null;
+            if (local) {
+                return new Response(local as Uint8Array<ArrayBuffer>, { headers: { "Content-Type": "application/pdf", "Cache-Control": "no-cache" } });
             }
             return new Response(served, { headers: { "Cache-Control": "no-cache" } });
         }

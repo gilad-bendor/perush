@@ -108,14 +108,49 @@ describe("PdfMirror", () => {
     }, 30_000);
 
     test("its links lead to GitHub Pages and GitHub, not to this disk", async () => {
-        await write("x/a.md", "[b](b.md) [image](image.png) [here](#a)\n\n# a");
+        await write("x/a.md", "[b](b.md) [image](image.png) [here](#a) [folder](./)\n\n# a");
         await write("x/b.md", "b");
         await new HtmlMirror(root, 1_000_000).syncFile("x/a.md");
         await mirror.syncFile("x/a.md");
         const pdf = (await readFile(join(root, pdfPathFor("x/a.md")))).toString("latin1");
-        expect(pdf).toContain("https://example.github.io/repo/_HTML-FROM-MD/x/b.html");
+        expect(pdf).toContain("https://example.github.io/repo/_PDF-FROM-MD/x/b.pdf)");
         expect(pdf).toContain("https://github.com/example/repo/blob/main/x/image.png");
         expect(pdf).not.toContain("file://");
+    }, 30_000);
+
+    test("read from this server, a PDF's links lead back to this server - on disk, to GitHub Pages", async () => {
+        await write("x/a.md", "[b](b.md#ב) [image](image.png)");
+        await write("x/b.md", "# ב");
+        await new HtmlMirror(root, 1_000_000).syncFile("x/a.md");
+        await mirror.syncFile("x/a.md");
+        const served = await mirror.servedFrom(pdfPathFor("x/a.md"), "http://localhost:4000/docs/");
+        const text = Buffer.from(served!).toString("latin1");
+        expect(text).toContain("(http://localhost:4000/docs/_PDF-FROM-MD/x/b.pdf#nameddest=");
+        expect(text).toContain("https://github.com/example/repo/blob/main/x/image.png");
+        expect(text).not.toContain("example.github.io");
+        expect((await readFile(join(root, pdfPathFor("x/a.md")))).toString("latin1"))
+            .toContain("https://example.github.io/repo/_PDF-FROM-MD/x/b.pdf");
+        expect(await mirror.servedFrom(pdfPathFor("x/a.md"), "https://example.github.io/repo/")).toBeNull();
+    }, 30_000);
+
+    test("a link to a heading of another page scrolls its PDF there, by a destination with an ASCII name", async () => {
+        await write("x/a.md", "[b](b.md#שני_ב) [same](#ראשון)\n\n# ראשון");
+        await write("x/b.md", "# אחד\n\nטקסט\n\n# שני_ב\n\nטקסט");
+        const htmlMirror = new HtmlMirror(root, 1_000_000);
+        await htmlMirror.syncFile("x/a.md");
+        await htmlMirror.syncFile("x/b.md");
+        await mirror.syncFile("x/a.md");
+        await mirror.syncFile("x/b.md");
+        const name = (id: string) => encodeURIComponent(id).replace(/_/g, "%5F").replace(/%/g, "_");
+        const a = (await readFile(join(root, pdfPathFor("x/a.md")))).toString("latin1");
+        expect(a).toContain(`_PDF-FROM-MD/x/b.pdf#nameddest=${name("שני_ב")})`);
+        expect(a).toContain(`/Dest /${name("ראשון")}`);
+
+        // Every heading of b is a destination - though nothing in b links to it.
+        const { PDFDict, PDFDocument, PDFName } = await import("pdf-lib");
+        const b = await PDFDocument.load(await readFile(join(root, pdfPathFor("x/b.md"))));
+        const dests = b.catalog.lookup(PDFName.of("Dests"), PDFDict).keys().map(key => key.decodeText());
+        expect(dests).toEqual(expect.arrayContaining([name("אחד"), name("שני_ב")]));
     }, 30_000);
 
     test("HtmlMirror schedules every page it syncs, and a sweep deletes the orphans", async () => {
