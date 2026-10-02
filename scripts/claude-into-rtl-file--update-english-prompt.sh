@@ -19,6 +19,6 @@
 # Run this script *from the repo root*, like "claude-into-rtl-file--perush.sh".
 
 SYSTEM_PROMPT_FILE="CLAUDE-HEBREW.md"
-FIRST_PROMPT="Execute the commands in @CLAUDE-ENGLISH---PROMPT-FOR-UPDATING-FROM-HEBREW.md"
+FIRST_PROMPT="@CLAUDE-ENGLISH---PROMPT-FOR-UPDATING-FROM-HEBREW.md"
 
 "$( dirname "$0" )/claude-into-rtl-file--perush.sh" --setting-sources user --append-system-prompt-file "$SYSTEM_PROMPT_FILE" "$FIRST_PROMPT" "$@"
