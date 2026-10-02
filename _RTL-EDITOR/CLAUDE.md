@@ -37,7 +37,9 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - `<כלול-בהדפסה מקור="..." מ="..." עד="..." כותרות="+1">` embeds another Markdown file into this one -
    on the page only, never on disk. See "Embedding one file in another" below
 - `<תוכן-העניינים>` on a line of its own becomes a table of contents of the headings *below* it -
-   again on the page only. A file without that line gets no index. See "The table of contents" below
+   again on the page only. See "The table of contents" below
+- Every page of the HTML mirror with more than one `#`..`###` heading also opens with an index of them all,
+   under its breadcrumb trail - on screen only, so not in its PDF. See "The page index" below
 - A ```` ```html ```` fenced block is written to the page as raw HTML, the fence lines gone - the one
    way a file may put HTML of its own on its page. See "The raw-HTML fence" below
 - Every page of the HTML mirror is also printed to a PDF under `../docs/_PDF-FROM-MD/`, easier to print and
@@ -552,6 +554,17 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
   up to that folder's index (`pageBreadcrumbs()`, rendered by `renderBreadcrumbs()`, which the folder
   indexes share). On screen only: it is not printed, and so not in any PDF. On a page - not on an
   index - it cannot be selected, so a copy of the text does not bring the trail along.
+- **The page index** follows the trail (`renderPageIndex()`, asked for by `RenderOptions.pageIndex`, which
+  only `HtmlMirror` passes): every `#`..`###` of the page, wherever it stands - unlike `<תוכן-העניינים>`,
+  which lists only what is below it, this one is a way around the whole page. Only top-level headings, as in
+  any index (not those inside a pseudo-tag, quote or list), and only when there are at least two - an index of
+  one entry says nothing. It is `<nav class="index page-index">`, so it looks like the file's own index, and
+  like the trail it cannot be selected and is not printed (`display: none` in `@media print`) - which is
+  what keeps it out of every PDF. A file that asks for `<תוכן-העניינים>` gets both - except a file that
+  embeds others (`hasIncludeDirective()`: a `<כלול-בהדפסה>` line, faulty or not), which gets none: such a file
+  is a book, like `פירוש/הדפסה.rtl.md`, and has its own index if it wants one.
+- **The trail and the page index are faded** (`opacity: 0.7`), in the text's own colour with their links
+  in the usual blue - present, but quieter than the page they lead around.
 - **On paper** the page is laid out for the sheet, by an `@media print` block at the end of
   `PAGE_STYLE`. See "Printing a page" below.
 
