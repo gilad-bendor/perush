@@ -529,6 +529,14 @@ document: no Markdown syntax characters. The CSS is inlined into every page (`PA
 from `style.css` and the editor's `HighlightStyle` - change one, check the other. Beyond CommonMark:
 
 - **A single newline is a line break** (`breaks: true`) - the files are written a sentence per line.
+- **A line back at the margin leaves a list.** CommonMark takes a line indented less than a list item's text
+  as a "lazy" continuation of the item, so `- bbb` followed by `Here is list two:` was one item of two lines.
+  Here it ends the item and the list (`dedentEndsParagraphRule()`, a terminator of the paragraph rule); a line
+  indented as far as the item's text still continues it.
+- **A paragraph and a list with no blank line between them touch.** One right above a list heads it
+  (`.heads-list` on the `<p>`), one right below a list follows on from it (`.runs-on` on the `<ul>`/`<ol>`),
+  and either way there is no space between them. A blank line keeps the usual space. A list's `map` takes in
+  the blank line after it, so `list_runs_on` reads the source line above the paragraph instead.
 - **Tables** in any of the three formats become `<table>`, via `parseTables()` from `tables.js`.
   A table that declares a header row (see "The header row" above) gets a `<thead>` of `<th>` cells -
   bold, on a shaded strip; one that declares none gets a bare `<tbody>`, as in the editor.
@@ -560,7 +568,7 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
   A target may hold spaces, `[x](מחקר ראשוני - פרומפט.rtl.md)`, as file names here do - CommonMark ends it at
   the first space, so `md-to-html.ts` wraps markdown-it's `parseLinkDestination()`. A title after a space is still a title.
 - **A breadcrumb trail** opens the page - the one its folder's index opens with, and the page's own
-  name at the end: `פירוש / _HTML-FROM-MD / פירוש / 1-בראשית / <file>`, every step but the last a link
+  name at the end, with a line's space below it: `פירוש / _HTML-FROM-MD / פירוש / 1-בראשית / <file>`, every step but the last a link
   up to that folder's index (`pageBreadcrumbs()`, rendered by `renderBreadcrumbs()`, which the folder
   indexes share). On screen only: it is not printed, and so not in any PDF. On a page - not on an
   index - it cannot be selected, so a copy of the text does not bring the trail along.
