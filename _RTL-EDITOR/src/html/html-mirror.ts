@@ -36,7 +36,7 @@ import { readdir, readFile, rmdir, stat, unlink, utimes } from "fs/promises";
 import type { Stats } from "fs";
 import { renderMarkdownPage } from "./md-to-html";
 import type { Breadcrumb } from "./md-to-html";
-import { expandIncludes } from "./includes";
+import { expandIncludes, hasIncludeDirective } from "./includes";
 import { FOLDER_INDEX_NAME, folderIndexPages, mirrorSummary, siteIndexPage } from "./folder-index";
 import type { MirrorSummary } from "./folder-index";
 import { writeFileSafe } from "../write-file-safe";
@@ -271,6 +271,8 @@ export class HtmlMirror {
                 hrefFor: href => mirroredHref(mdPath, href),
                 errors: expanded.errors,
                 breadcrumbs: pageBreadcrumbs(mdPath),
+                // A file made of others - הדפסה.rtl.md - is a book, and has its own index if it wants one.
+                pageIndex: !hasIncludeDirective(content),
             });
 
             let outcome: SyncOutcome;

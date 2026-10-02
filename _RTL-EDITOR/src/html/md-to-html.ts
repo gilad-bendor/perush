@@ -42,6 +42,11 @@ export type RenderOptions = {
      * only on screen: a trail of links is nothing to print. Left out, the page has none.
      */
     breadcrumbs?: Breadcrumb[];
+    /**
+     * An index of every `#`..`###` of the page, right below the breadcrumb trail (renderPageIndex()) -
+     * on screen only, like the trail. Given whatever the file asks for with `<תוכן-העניינים>`.
+     */
+    pageIndex?: boolean;
 };
 
 /** One step of a breadcrumb trail - a folder's index to go up to, or, with no href, the page itself. */
@@ -389,11 +394,13 @@ function safeDecodeUri(href: string): string {
  * Both has to happen before the body is rendered, and both need the whole token stream, which is
  * why parsing and rendering are two steps here rather than one `markdown.render()`.
  */
-function prepareDocument(content: string, isRtl: boolean, options: RenderOptions): { tokens: Token[], env: Env } {
+function prepareDocument(content: string, isRtl: boolean, options: RenderOptions):
+        { tokens: Token[], env: Env, headings: HeadingEntry[] } {
     const env: Env = { hrefFor: options.hrefFor, errors: options.errors };
     const tokens = markdown.parse(content, env);
-    env.indexesByToken = renderIndexes(tokens, isRtl, env);
-    return { tokens, env };
+    const headings = documentHeadings(tokens, env);
+    env.indexesByToken = renderIndexes(tokens, headings, isRtl);
+    return { tokens, env, headings };
 }
 
 /** The body of the page - exported for the tests. */
@@ -409,9 +416,10 @@ export function markdownToHtml(content: string, options: RenderOptions = {}): st
  */
 export function renderMarkdownPage(content: string, filePath: string, options: RenderOptions = {}): string {
     const isRtl = isRtlFile(filePath, content);
-    const { tokens, env } = prepareDocument(content, isRtl, options);
+    const { tokens, env, headings } = prepareDocument(content, isRtl, options);
     const errors = renderErrors(options.errors ?? [], isRtl);
     const trail = options.breadcrumbs?.length ? `${renderBreadcrumbs(options.breadcrumbs)}\n` : "";
+    const pageIndex = options.pageIndex ? renderPageIndex(headings, isRtl) : "";
     const body = markdown.renderer.render(tokens, markdown.options, env);
     const fileName = filePath.split("/").pop() ?? filePath;
     const title = firstHeadingText(tokens) ?? fileName.replace(/(\.rtl)?\.md$/, "");
@@ -428,7 +436,7 @@ export function renderMarkdownPage(content: string, filePath: string, options: R
 </head>
 <body class="${isRtl ? "rtl" : "ltr"}">
 <main>
-${trail}${errors}${body}</main>
+${trail}${pageIndex}${errors}${body}</main>
 </body>
 </html>
 `;
@@ -486,8 +494,7 @@ markdown.renderer.rules.index_tag = (_tokens, index, _options, env) => (env as E
  * Every heading gains an `id` here, whether the file asked for an index or not, so a link can
  * always point at a section. That is this pass's other job, and why it runs for every page.
  */
-function renderIndexes(tokens: Token[], isRtl: boolean, env: Env): Map<number, string> {
-    const entries = documentHeadings(tokens, env);
+function renderIndexes(tokens: Token[], entries: HeadingEntry[], isRtl: boolean): Map<number, string> {
     const indexes = new Map<number, string>();
     tokens.forEach((token, position) => {
         if (token.type !== "index_tag") return;
@@ -527,8 +534,18 @@ function documentHeadings(tokens: Token[], env: Env): HeadingEntry[] {
     return entries;
 }
 
+/**
+ * The index every page of the mirror opens with, under its breadcrumb trail: all of its headings,
+ * `#`..`###`, wherever they stand - it is a way around the page, not the file's own table of
+ * contents. Like the trail it is on screen only, and cannot be selected, so a copy of the text does
+ * not bring it along. A page with one heading or none gets none: an index of one entry says nothing.
+ */
+function renderPageIndex(entries: HeadingEntry[], isRtl: boolean): string {
+    return entries.length > 1 ? renderIndex(entries, isRtl, "index page-index") : "";
+}
+
 /** One index, of the headings given - or "" when there are none, which leaves the tag's line out. */
-function renderIndex(entries: HeadingEntry[], isRtl: boolean): string {
+function renderIndex(entries: HeadingEntry[], isRtl: boolean, className = "index"): string {
     if (!entries.length) return "";
 
     // Indented relative to the shallowest heading present: a file whose sections are all ## starts flush.
@@ -536,7 +553,7 @@ function renderIndex(entries: HeadingEntry[], isRtl: boolean): string {
     const items = entries.map(({ level, id, html }) =>
         `<li class="index-depth-${level - topLevel}"><a href="#${markdown.utils.escapeHtml(readableUrl(id))}">${html}</a></li>`
     ).join("\n");
-    return `<nav class="index">
+    return `<nav class="${className}">
 <details open>
 <summary>${isRtl ? "תוכן העניינים" : "Contents"}</summary>
 <ul>
@@ -610,9 +627,10 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -680,6 +698,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -706,7 +726,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }

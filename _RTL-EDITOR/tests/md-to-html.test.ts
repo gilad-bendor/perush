@@ -373,6 +373,33 @@ describe("printing", () => {
     test("the breadcrumb trail stays on screen - and out of every PDF", () => {
         const page = renderMarkdownPage("# one", "a.md", { breadcrumbs: [{ name: "x", href: "index.html" }, { name: "a" }] });
         const print = page.slice(page.indexOf("@media print"));
-        expect(print).toContain(".breadcrumbs { display: none; }");
+        expect(print).toContain(".breadcrumbs, .page-index { display: none; }");
+    });
+});
+
+describe("the page index", () => {
+    const trail = [{ name: "x", href: "index.html" }, { name: "a" }];
+    const page = (content: string) => renderMarkdownPage(content, "a.rtl.md", { breadcrumbs: trail, pageIndex: true });
+
+    test("stands right below the breadcrumb trail, listing every # .. ### of the page", () => {
+        const out = page("פתיחה\n# א\n## ב\n### ג\n#### ד\n<תוכן-העניינים>\n## ה");
+        expect(out).toMatch(/<\/nav>\n<nav class="index page-index">\n<details open>/);
+        const start = out.indexOf('<nav class="index page-index">');
+        const index = out.slice(start, out.indexOf("</nav>", start));
+        expect(index.match(/<a href="#[^"]*">/g)).toEqual(['<a href="#א">', '<a href="#ב">', '<a href="#ג">', '<a href="#ה">']);
+        // The file's own index is still there, of what is below its tag.
+        expect(out).toContain('<nav class="index">');
+    });
+    test("is left out with one heading or none", () => {
+        expect(page("# א\n#### ב")).not.toContain("page-index\"");
+        expect(page("טקסט")).not.toContain("page-index\"");
+    });
+    test("only when asked for", () => {
+        expect(renderMarkdownPage("# א\n## ב", "a.rtl.md")).not.toContain("page-index\"");
+    });
+    test("cannot be selected, and is not printed", () => {
+        const out = page("# א\n## ב");
+        expect(out).toContain(".page-index { user-select: none; }");
+        expect(out.slice(out.indexOf("@media print"))).toContain(".page-index { display: none; }");
     });
 });

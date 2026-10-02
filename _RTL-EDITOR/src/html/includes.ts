@@ -107,6 +107,15 @@ export type ParsedIncludeLine =
 const IS_SPACE = /\s/;
 
 /**
+ * Does the file embed others - is there a `<כלול-בהדפסה>` line in it, outside a code fence?
+ * A faulty one counts too: it was meant to embed something.
+ */
+export function hasIncludeDirective(content: string): boolean {
+    const inFence = fenceScanner();
+    return toLines(content)!.some(line => !inFence(line) && parseIncludeLine(line).kind !== "none");
+}
+
+/**
  * A single line, read as a `<כלול-בהדפסה>` directive.
  *
  * A line that does not mention the tag at all is `none`; one that mentions it and gets it wrong is

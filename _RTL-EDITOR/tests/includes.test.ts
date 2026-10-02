@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { expandIncludes, parseIncludeLine } from "../src/html/includes";
+import { expandIncludes, hasIncludeDirective, parseIncludeLine } from "../src/html/includes";
 import type { EmbedError } from "../src/html/includes";
 
 const loaderFor = (files: Record<string, string>) =>
@@ -318,5 +318,14 @@ describe("errors", () => {
         const { text, errors } = await expand("a.md", { "a.md": "error:0" });
         expect(errors).toEqual([]);
         expect(text).toBe("error:0");
+    });
+});
+
+describe("hasIncludeDirective", () => {
+    test("a directive line, faulty or not, outside a fence", () => {
+        expect(hasIncludeDirective(`# א\n<כלול-בהדפסה מקור="b.md">`)).toBe(true);
+        expect(hasIncludeDirective(`<כלול-בהדפסה>`)).toBe(true);
+        expect(hasIncludeDirective("# א\n## ב")).toBe(false);
+        expect(hasIncludeDirective("```\n<כלול-בהדפסה מקור=\"b.md\">\n```")).toBe(false);
     });
 });
