@@ -310,6 +310,16 @@ reaches an input handler - it calls `wrapSelectionWith()` first for the same rea
 - **Only the `-->` that closes an HTML comment is left alone** (a `<!--` with no `-->` after it, anywhere above).
 - It comes after `headerRuleExtension()`, which keeps `-` and `=` on a table's rule for itself.
 
+### Enter in a list
+
+Enter continues a list or a quote with CodeMirror's own `insertNewlineContinueMarkup`, except that it never
+adds a blank line of its own (`markdownTightKeymap()`, installed in place of the keymap `markdown()` brings):
+
+- In a *loose* list - a blank line between items - CodeMirror inserts a blank line before the new item. The
+  command is run into a dispatch of ours that drops that line from what it inserts.
+- On an empty second item of a tight list it would push the item down, making the list loose;
+  `nonTightLists: false` has it remove the empty item's marker instead, as on any other empty item.
+
 ### Searching Hebrew
 
 CodeMirror's Find is patched (the "HORRIBLE PATCH" at the end of `markdown-editor.js`) so that a plain,

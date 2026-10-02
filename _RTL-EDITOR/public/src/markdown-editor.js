@@ -1,7 +1,7 @@
 import { SearchQuery, closeSearchPanel, findNext, findPrevious, getSearchQuery, replaceAll, replaceNext, search, selectMatches, setSearchQuery } from "@codemirror/search"
 import { EditorView, basicSetup } from 'codemirror';
 import { keymap, ViewPlugin, Decoration, Direction, gutterLineClass, GutterMarker, runScopeHandlers } from '@codemirror/view';
-import { markdown } from '@codemirror/lang-markdown';
+import { markdown, insertNewlineContinueMarkupCommand, deleteMarkupBackward } from '@codemirror/lang-markdown';
 import { Compartment, EditorSelection, EditorState, Facet, RangeSetBuilder, Prec, StateField } from '@codemirror/state';
 import { indentWithTab, isolateHistory } from '@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle, syntaxTree } from '@codemirror/language';
@@ -487,7 +487,8 @@ export class MarkdownEditor {
         const extensions = [
             basicSetup,
             search({ createPanel: (view) => new CountingSearchPanel(view) }),
-            markdown(),
+            markdown({ addKeymap: false }),
+            markdownTightKeymap(),
             markdownHighlighting,
             listLinePlugin,
             markdownLinkPlugin,
@@ -1488,6 +1489,51 @@ function bidiEdgeSelectionExtension() {
     return Prec.high(keymap.of([
         { key: 'Shift-ArrowLeft', run: (view) => extend(view, true) },
         { key: 'Shift-ArrowRight', run: (view) => extend(view, false) },
+    ]));
+}
+
+/**
+ * The keymap `markdown()` installs, with Enter never adding a blank line of its own.
+ *
+ * CodeMirror's Enter in a list keeps a loose list loose: under `- one`, a blank line, `- two`, Enter at
+ * the end of `- two` inserts a blank line *and* `- `. The new item is wanted, the blank line is not - so
+ * the command runs into a dispatch of ours, which drops the blank line from what it inserts. Its other
+ * blank line - Enter on an empty second item of a tight list pushing that item down - is switched off
+ * by `nonTightLists: false`, and the item's marker is removed instead.
+ *
+ * @returns {import('@codemirror/state').Extension}
+ */
+function markdownTightKeymap() {
+    const continueMarkup = insertNewlineContinueMarkupCommand({ nonTightLists: false });
+    /** @type {import('@codemirror/state').StateCommand} */
+    const enter = ({ state, dispatch }) => continueMarkup({
+        state,
+        dispatch: (tr) => {
+            let dropped = false;
+            /** @type {{from: number, to: number, insert: string}[]} */
+            const changes = [];
+            tr.changes.iterChanges((fromA, toA, _fromB, _toB, inserted) => {
+                const lines = inserted.toString().split('\n');
+                // "\n" + the blank line (indentation and `>` only) + "\n" + the new item's markup
+                if (lines.length === 3 && lines[0] === '' && !/[^\s>]/.test(lines[1])) {
+                    lines.splice(1, 1);
+                    dropped = true;
+                }
+                changes.push({ from: fromA, to: toA, insert: lines.join(state.lineBreak) });
+            });
+            if (!dropped) return dispatch(tr);
+            const changeSet = state.changes(changes);
+            dispatch(state.update({
+                changes: changeSet,
+                selection: state.selection.map(changeSet, 1),
+                scrollIntoView: true,
+                userEvent: 'input',
+            }));
+        },
+    });
+    return Prec.high(keymap.of([
+        { key: 'Enter', run: enter },
+        { key: 'Backspace', run: deleteMarkupBackward },
     ]));
 }
 
