@@ -1324,14 +1324,18 @@ const listLinePlugin = ViewPlugin.fromClass(
 // Typing one of these over a selection wraps the selection instead of replacing it - the way
 // basicSetup's closeBrackets already treats "(" and the other bracket pairs. The selection is left
 // on the original text, so pressing the same key again wraps it once more: "123" -> "*123*" -> "**123**".
-const wrappingMarkers = ['*', '`'];
+// closeBrackets quotes a selection with ' and " too, but knows nothing of the Hebrew gershayim and geresh.
+// It wraps a selection only on the *opening* bracket, though, and on a Hebrew keyboard layout the key
+// marked "(" types ")" - so ")" parenthesizes a selection too, as "(" does.
+const wrappingMarkers = ['*', '`', '״', '׳'];
 
 /**
  * @param {EditorView} view
  * @param {string} marker
+ * @param {string} [closingMarker] what goes after the selection - the marker itself unless given
  * @returns {boolean} whether the keystroke was taken
  */
-function wrapSelectionWith(view, marker) {
+function wrapSelectionWith(view, marker, closingMarker = marker) {
     const { state } = view;
     if (state.readOnly || state.selection.ranges.every((range) => range.empty)) {
         return false;
@@ -1341,7 +1345,7 @@ function wrapSelectionWith(view, marker) {
             return { changes: { from: range.from, insert: marker }, range: EditorSelection.cursor(range.from + marker.length) };
         }
         return {
-            changes: [{ from: range.from, insert: marker }, { from: range.to, insert: marker }],
+            changes: [{ from: range.from, insert: marker }, { from: range.to, insert: closingMarker }],
             range: EditorSelection.range(range.from + marker.length, range.to + marker.length),
         };
     }), { userEvent: 'input.type', scrollIntoView: true });
@@ -1353,7 +1357,13 @@ function wrapSelectionWith(view, marker) {
  */
 function wrapSelectionExtension() {
     return EditorView.inputHandler.of((view, from, to, text) => {
-        if (from === to || !wrappingMarkers.includes(text)) {
+        if (from === to) {
+            return false;
+        }
+        if (text === ')') {
+            return wrapSelectionWith(view, '(', ')');
+        }
+        if (!wrappingMarkers.includes(text)) {
             return false;
         }
         return wrapSelectionWith(view, text);

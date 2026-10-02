@@ -22,8 +22,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - Ctrl+1 .. Ctrl+9 show the 1st .. 9th tab
 - Showing a tab highlights its file in the tree, opening every folder above it and scrolling it
    into view
-- Typing `*` or `` ` `` over a selection wraps it rather than replacing it - the way `(` already
-   does; pressing `*` twice gives `**bold**`
+- Typing `*`, `` ` ``, `״` or `׳` over a selection wraps it rather than replacing it - the way `(`,
+   `"` and `'` already do; pressing `*` twice gives `**bold**`. `)` parenthesizes it too, like `(`
 - Typing `-->`, `<--`, `<->` gives `→`, `←`, `↔`, and `==>`, `<==`, `<=>` give `⇒`, `⇐`, `⇔` - the
    other way round in an RTL file. See "Typed arrows" below
 - Find (Cmd+F) shows how many matches the whole file holds, and has a "first" button; with no match
@@ -279,9 +279,13 @@ Two consequences worth remembering:
 ### Wrapping a selection
 
 `basicSetup` brings CodeMirror's `closeBrackets`, which is why typing `(` over a selection already
-gives `(text)`. It only knows bracket pairs, so `*` and `` ` `` are handled by
-`wrapSelectionExtension()` - an `EditorView.inputHandler` that catches those two characters when the
+gives `(text)` - and `"text"`, `'text'`. It only knows those pairs, so `*`, `` ` `` and the Hebrew
+`״` / `׳` are handled by
+`wrapSelectionExtension()` - an `EditorView.inputHandler` that catches those characters when the
 typed-over range is non-empty and inserts the marker at both ends instead.
+
+`closeBrackets` wraps only on the *opening* bracket, and on a Hebrew keyboard layout the key marked `(`
+types `)`. So the same handler takes `)` over a selection too and gives `(text)`.
 
 **The selection is left on the original text**, not on the wrapped result: that is what makes a
 second `*` turn `*text*` into `**text**` rather than `*(*text*)*`.
