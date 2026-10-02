@@ -62,10 +62,10 @@ Every cultural development contains the seed of its counter-development. Class f
 The dictionary below contains only **primitive definitions** — concepts whose meaning cannot be reliably derived from other dictionary entries or from root analysis. Derived concepts (such as נחש, קין, הבל, חנוך, and most named characters and places) are established within the commentary segments themselves and accessed through cross-referencing when needed (see "Cross-Referencing Recurring Concepts" below).
 
 **Structural relationships between entries** — the dictionary is not a flat list. Key organizing axes:
-- **Complexity scale**: צומח (insights) → נפש (narrative): חיה (local narrative) → אדם (authoritative narrative). Each level incorporates and governs the levels below it.
+- **Complexity scale**: צומח (insights) → יצורים (narratives): חיה (local narrative) → אדם (authoritative narrative). Each level incorporates and governs the levels below it.
 - **Population hierarchy**: עפר (individuals) → אדמה (general population) → אדם (the narrative a population forges). An אדם is built out of a *patch* of אדמה — a bounded portion of the population, not the whole of it — and when it dissolves it falls back into עפר, into loose individuals.
-- **Elite/popular axis**: איש (elite, leadership-oriented) ↔ אישה (popular, identity-oriented). This polarity drives many stories and generates dialectical tension.
-- **Inner/outer axis**: ארץ (how we experience ourselves) ↔ שמים (how we experience the boundary with the outside). Both are subconscious; שמים is a kind of מים.
+- **Elite/popular axis**: two pairs mark the same split, with different emphases — איש ↔ אישה (elite and popular bound together in solidarity and intimacy) and זכר ↔ נקבה (the elite dictates, the popular accepts the dictate — a sharp gap). This polarity drives many stories and generates dialectical tension.
+- **Inner/outer axis**: ארץ (how we experience ourselves) ↔ שמים (how we experience the boundary with the terrible outside). Both are subconscious; שמים is a kind of מים.
 - **Agency axis**: מעל (what acts upon us, beyond our reach) ↔ מתחת (what we act upon). This is the same boundary שמים marks — between what can be manipulated and what is beyond reach — cast in the language of height.
 
 ## Concepts of Light: Thought
@@ -91,24 +91,26 @@ For an extended treatment — the full process ערפל → אמירה → או�
 
 ## Sky and Earth: The Subconscious Experience of Existence
 
-- **מים** (water) = chaos, the unknown, the threatening, the promising, the malleable.
-  Water is both intimidating and activating, driving culture to action. Positive or negative emotions: motivation and fear, aspiration or repulsion.
-  Water is necessary for change and development. Without water: stagnation (= **death** per the dictionary).
+- **מים** (water) = chaos, the unknown, the threatening, the promising. The chaos may come from outside — from events in the world — or from within — from emotions and drives: a force that bursts in upon us and is beyond our control.
+  Water is both menacing and yearning, driving culture to action. Hence water also symbolizes motivation (fear/aspiration): water is necessary for change and development, and without water: stagnation (= **death** per the dictionary).
 - **ארץ** (earth/land) = existential experience: the basic **subconscious** way a culture understands itself in relation to the world. Intuition about how the world operates.
   Specific place names represent different systems of existential experience.
   The proverb illustrates this well: "You can take the boy out of the village, but not the village out of the boy."
-- **שמים** (sky/heavens) = the basic **subconscious** way a culture understands the boundary between "self" and "outside" - between what can be manipulated and what is beyond reach.
-  In Hebrew - "שמים" (sky) is "שַם+מים" → "there+water" → "there be chaos" → "the outside".
+- **שמים** (sky/heavens) = the basic **subconscious** way a culture understands the boundary between "us" and "the terrible outside": between what can be manipulated and what is beyond reach.
+  In Hebrew - "שמים" (sky) is "שַם+מים" → "there+water" → "there be chaos" → "the terrible outside" — absolute chaos, beyond any control.
 
 ## The Material World - A Scale of Complexity
 
 - **צומח** (plants) / **אכילה** (eating) = insights/models about the world. Without eating (internalizing new insights): bewilderment and inability to act (= **רעב**, hunger).
-- **נפש** (soul, living being) = a story/narrative. Stories are characterized by a tendency to preserve themselves: to adapt and change according to circumstances and needs.
-  The נפש is "חיה" (alive) - it is dynamic and changing (see the definition of **חיים** (life) below).
+- **יצורים** (creatures — animals and humans) = a story/narrative that the culture tells.
+  Creatures usually have a **נפש** (soul) = a tendency to preserve themselves (see [linguistic analysis](ניתוחים-לשוניים/נפש.rtl.md)).
+  The נפש is usually "חיה" (alive) (see the definition "**חיים** = dynamism and change" below): a נפש usually tends to adapt and change according to circumstances and needs.
   - **חיות** (animals) = a "local" narrative - a non-authoritative narrative: one of many narratives existing in a culture.
   - **אדם** (human) = an **authoritative narrative** of a culture: a narrative that a culture enforces upon itself to forge an integral identity.
-    **איש** / **זכר** (man/male) = an elite narrative - one that sees itself as dictating and leading society.
-    **אישה** / **נקבה** (woman/female) = a popular narrative focused on identity and existence, not aspiring to lead or dictate direction.
+    - **איש** / **אישה** (man/woman): the split between elite and popular — with emphasis on the solidarity and intimacy between them (`עֶצֶם מֵעֲצָמַי וּבָשָׂר מִבְּשָׂרִי` (בראשית ב:כג)).
+    - **זכר** / **נקבה** (male/female): the split between elite and popular — with emphasis on the sharp gap between them:
+      - **זכר** (male) = an elite narrative - one that sees itself as dictating and leading society (see [linguistic analysis](ניתוחים-לשוניים/זכר.rtl.md)).
+      - **נקבה** (female) = a popular narrative that accepts upon itself the dictates of the זכר (see [linguistic analysis](ניתוחים-לשוניים/נקבה.rtl.md)).
 
 ## Important Additional Definitions
 
@@ -129,7 +131,8 @@ For an extended treatment — the full process ערפל → אמירה → או�
   **לדעת** (to know) = to form an opinion about something, to actively pin it down — to tell it: "you are such-and-such" — to label it, to stigmatize.
 
 - **חיים** (life) = dynamism and change.
-  **מוות** (death) = stagnation: inability to respond, adapt, and change (unrelated to **הרג** (killing) - which is war and suppression between narratives).
+  **מוות** (death) = stagnation: inability to respond, adapt, and change.
+  (**הרג** (killing) is very different from death: killing is when the נפש fails — when a story fails to adapt to a new reality — usually due to pressure from a competing story.)
 
 - **The height axis** (למעלה / על ↔ למטה / תחת) = the axis of **agency** — the capacity to act upon something (it underlies a wide range of vocabulary: ascent/descent, height relations, mountain/valley):
   - **מעל** (above) = what acts upon us and that we cannot act upon: beyond reach, dictating, sublime.
@@ -303,6 +306,7 @@ Files are in Markdown format (`.rtl.md` for right-to-left Hebrew):
   - `<מדרש>` ... `</מדרש>` — an interpretation that isn't sufficiently constrained by the text, feels like a guess, or is simply unconvincing. Tone is tentative and exploratory, often using "אולי" (perhaps). Should be short. The reader should feel invited to disagree or skip entirely.
   - `<ניתוח-לשוני ביטוי="...expression from verse...">` ... `</ניתוח-לשוני>` — a linguistic analysis of a word from the verse. Content typically lives in separate files under `./ניתוחים-לשוניים/`; the tag in the commentary contains a summary and a reference link.
   - `<הצעת-קלוד>` ... `</הצעת-קלוד>` — this is your way to add suggestions without modifying the existing text.
+    **CRITICAL:** before modifying existing text (that is - before writing a <הצעת-קלוד>) - read the instructions-file `.claude/הנחיות-לעריכת-קבצי-פירוש.rtl.md` !
 - Lines starting with `TODO:` highlight problematic issues requiring future attention.
 - Cross-references between commentary segments use standard markdown links: `[ניתוח לשוני](../../ניתוחים-לשוניים/עד.rtl.md)`.
 - Verse references within interpretive text use the format `(בראשית ב:ח)` — book name, chapter, colon, verse.
