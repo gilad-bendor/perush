@@ -425,7 +425,7 @@ its own drag image and offers no way to paint a marker into the gap between two 
 
 ### Pseudo-tags
 
-`<עיון>` ... `</עיון>` and its like are the commentary's own markup (CLAUDE-HEBREW.md lists them).
+`<עיון>` ... `</עיון>` and its like are the commentary's own markup (`.claude/system-prompt--Hebrew--suffix.md` lists them).
 Neither side keeps a list of the names: the editor's `syntaxHighlightPlugin` tracks any tag that opens
 and closes at the start of a line, and `public/style.css` colours the names it knows - which is the
 only place a new tag has to be added, `src/html/md-to-html.ts`'s `PAGE_STYLE` being the mirror's copy

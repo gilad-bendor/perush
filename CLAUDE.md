@@ -1,1 +1,1 @@
-@CLAUDE-HEBREW.md
+@.claude/system-prompt--Hebrew.md
