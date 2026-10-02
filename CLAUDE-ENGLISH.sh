@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-# Execute this to make CLAUDE.md use the English version (CLAUDE-ENGLISH.md)
+# Execute this to make CLAUDE.md use the English version (.claude/system-prompt--English.md)
 # This has the potential of making ClaudeCode think more natively and deeply.
 
-echo "@CLAUDE-ENGLISH.md" > CLAUDE.md
+echo "@.claude/system-prompt--English.md" > CLAUDE.md
