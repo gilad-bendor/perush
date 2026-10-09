@@ -96,7 +96,7 @@ describe("discoverAgents", () => {
   test("results are sorted alphabetically by ID", async () => {
     const agents = await discoverAgents();
     const ids = agents.map(a => a.id);
-    expect(ids).toEqual(["shalom", "barak", "ethan", "milo"]);
+    expect(ids).toEqual(["barak", "ethan", "milo", "shalom"]);
   });
 
   test("results are cached", async () => {
@@ -313,6 +313,43 @@ describe("extractDictionary", () => {
     expect(dict).toContain("אדם");
     expect(dict).toContain("אלהים");
   });
+
+  describe("section boundaries (synthetic source)", () => {
+    const tmpDir = join(import.meta.dir, "__dictionary-tmp");
+    const write = async (name: string, lines: string[]) => {
+      const { mkdirSync, writeFileSync } = await import("fs");
+      mkdirSync(tmpDir, { recursive: true });
+      writeFileSync(join(tmpDir, name), lines.join("\n"));
+      return join(tmpDir, name);
+    };
+
+    afterAll(async () => {
+      const { rmSync } = await import("fs");
+      rmSync(tmpDir, { recursive: true, force: true });
+    });
+
+    test("starts at the heading, keeps deeper subsections, stops at the next same-level heading", async () => {
+      const path = await write("nested.md", [
+        "# הקדמה", "intro",
+        "## המילון (פונקצית ההמרה)", "entries",
+        "### תת-סעיף", "more entries",
+        "## סעיף הבא", "not dictionary",
+      ]);
+      expect(await extractDictionary(path)).toBe(
+        "## המילון (פונקצית ההמרה)\nentries\n### תת-סעיף\nmore entries",
+      );
+    });
+
+    test("runs to end of file when no later heading of the same level exists", async () => {
+      const path = await write("last.md", ["# המילון", "a", "## sub", "b"]);
+      expect(await extractDictionary(path)).toBe("# המילון\na\n## sub\nb");
+    });
+
+    test("throws (never silently omits the dictionary) when the heading is missing", async () => {
+      const path = await write("missing.md", ["# Something else", "המילון appears only in text"]);
+      await expect(extractDictionary(path)).rejects.toThrow("Dictionary heading not found");
+    });
+  });
 });
 
 describe("buildSystemPrompt", () => {
@@ -329,7 +366,8 @@ describe("buildSystemPrompt", () => {
     // Base prefix content (common instructions)
     expect(prompt).toContain("scholarly deliberation");
     // Dictionary content is present (injection point replaced by @echo dictionary)
-    expect(prompt).toContain("אור");
+    expect(prompt).toContain("## המילון");
+    expect(prompt).toContain("מושגים של אור");
     // Agents prefix (fellow participants)
     expect(prompt).toContain("Fellow Participants");
     // Milo's own persona
@@ -353,7 +391,8 @@ describe("buildSystemPrompt", () => {
     // Methodology regions from base-prefix
     expect(prompt).toContain("methodological allegorical interpretation");
     // Dictionary
-    expect(prompt).toContain("אור");
+    expect(prompt).toContain("## המילון");
+    expect(prompt).toContain("מושגים של אור");
     // Orchestrator content
     expect(prompt).toContain("Orchestrator");
     expect(prompt).toContain("substantive moderator");

@@ -19,7 +19,8 @@ import type { AgentDefinition, AgentId, ProcessEventKind } from "./types";
 import {
   PARTICIPANT_AGENTS_DIR,
   PROMPTS_DIR,
-  ROOT_CLAUDE_MD,
+  DICTIONARY_SOURCE_MD,
+  DICTIONARY_HEADING_PATTERN,
   MAX_PREPROCESS_ITERATIONS,
   ORCHESTRATOR_FILE,
   PARTICIPANT_MODEL,
@@ -177,29 +178,22 @@ function buildPreprocessContext(
 }
 
 /**
- * Extract the dictionary section from ../CLAUDE.md.
- * Returns everything between "# The Dictionary" heading and the next top-level heading.
+ * Extract the dictionary section from DICTIONARY_SOURCE_MD: from the "המילון" heading
+ * up to the next heading of the same or higher level.
+ * Throws if the section is missing — agents must never deliberate without the dictionary.
  */
-export async function extractDictionary(): Promise<string> {
-  const claudeMd = await readFile(ROOT_CLAUDE_MD, "utf-8");
+export async function extractDictionary(sourcePath: string = DICTIONARY_SOURCE_MD): Promise<string> {
+  const markdown = await readFile(sourcePath, "utf-8");
+  const match = DICTIONARY_HEADING_PATTERN.exec(markdown);
+  if (!match) throw new Error(`Dictionary heading not found in ${sourcePath}`);
 
-  // Find "# The Dictionary" or "# המילון" section
-  const dictStart = claudeMd.search(/^# The Dictionary/m);
-  if (dictStart === -1) {
-    // Try Hebrew
-    const hebrewStart = claudeMd.search(/^# המילון/m);
-    if (hebrewStart === -1) return "<!-- Dictionary not found in CLAUDE.md -->";
-    const nextHeading = claudeMd.slice(hebrewStart + 1).search(/^# /m);
-    return nextHeading === -1
-      ? claudeMd.slice(hebrewStart)
-      : claudeMd.slice(hebrewStart, hebrewStart + 1 + nextHeading);
-  }
-
-  const afterStart = claudeMd.slice(dictStart + 1);
-  const nextHeading = afterStart.search(/^# /m);
-  return nextHeading === -1
-    ? claudeMd.slice(dictStart)
-    : claudeMd.slice(dictStart, dictStart + 1 + nextHeading);
+  const level = match[1].length;
+  const afterHeading = markdown.slice(match.index + match[0].length);
+  const nextHeading = afterHeading.search(new RegExp(`^#{1,${level}} `, "m"));
+  const section = nextHeading === -1
+    ? markdown.slice(match.index)
+    : markdown.slice(match.index, match.index + match[0].length + nextHeading);
+  return section.trimEnd();
 }
 
 /**

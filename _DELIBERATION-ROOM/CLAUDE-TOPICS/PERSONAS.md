@@ -85,7 +85,7 @@ Available directives (HTML-comment syntax):
 |-----------|-------------|
 | `<!-- @include filename.md -->` | Inline another file (recursive, same context) |
 | `<!-- @include-region path/to/file.md /RegExp/ -->` | Extract the single region matching the RegExp from a file (see below) |
-| `<!-- @echo dictionary -->` | Inject the full dictionary text extracted from `../CLAUDE.md` |
+| `<!-- @echo dictionary -->` | Inject the dictionary section (`## המילון` heading down to the next heading of the same level) from `../פירוש/הקדמה-לפירוש.rtl.md`. Throws if the heading is missing — agents never run without the dictionary |
 | `<!-- @echo EnglishName -->` | Agent's own English name (from frontmatter) |
 | `<!-- @echo HebrewName -->` | Agent's own Hebrew name (from frontmatter) |
 | `<!-- @echo fieldName -->` | Any frontmatter field from the current agent's file |

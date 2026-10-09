@@ -83,12 +83,15 @@ async function createMeetingWorktree(meetingId: MeetingId): Promise<string> {
   const worktreePath = join(DELIBERATION_DIR, ".meetings", meetingId);
   const branchName = `sessions/${meetingId}`;
 
-  // Create orphan branch + worktree in one command (requires git 2.42+)
-  await $`git worktree add --orphan -b ${meetingIdToBranchName(meetingId)} ${worktreePath}`;
+  // Two steps instead of `worktree add --orphan` (which needs git 2.42+)
+  await $`git worktree add --detach --no-checkout ${worktreePath}`;
+  await $`git -C ${worktreePath} switch --orphan ${branchName}`;
 
   return worktreePath;
 }
 ```
+
+**`--no-checkout` is essential for speed**: without it, step 1 checks out all of `main` (~2,100 files, ~200 MB, mostly the generated `docs/`), only for `switch --orphan` to delete it all again. That took ~6–7s per meeting (which also blew bun's 5s test timeout); with `--no-checkout` it's ~0.1s.
 
 This creates:
 - A new orphan branch `sessions/<meeting-id>` (no parent commits, no shared history with `main`).
@@ -147,12 +150,15 @@ After each deliberation cycle completes (speech delivered, assessments recorded,
 
 ```typescript
 async function commitCycle(worktreePath: string, cycleNumber: number, speaker: SpeakerId): Promise<void> {
+  await assertMeetingWorktree(worktreePath);  // see "Worktree guard" below
   await $`git -C ${worktreePath} add -A`;
   await $`git -C ${worktreePath} commit -m ${"Cycle " + cycleNumber + ": " + speaker}`;
 }
 ```
 
 Each commit is an atomic snapshot of the meeting state after one cycle. **Timing**: Commits happen **between** cycles — after all writes are complete and before the next cycle begins. Since the session manager is the only process that commits to this branch, and it does so sequentially, there's no risk of committing mid-write. No lock files needed.
+
+**Worktree guard (`assertMeetingWorktree`)**: `.meetings/<id>` lives *inside* the main repo's working tree. If that directory exists but is no longer (or never was) a worktree, `git -C <path>` silently walks up to the **main repo**, and `add -A` / `commit` / `reset --hard` would act on `main` and the user's uncommitted work. This happened once: an orphaned async `initializeMeeting` left behind by a timed-out test committed the whole working tree to `main` as "Initial: meeting created". So every mutating worktree-scoped function (`initializeMeeting`, `endMeeting`, `commitCycle`, `commitWithMessage`, `resetSessionBranchToCycle`) first checks that the path is its own `--show-toplevel` and is on a `sessions/*` branch, and throws otherwise. Any new function that writes via `git -C ${worktreePath}` must call it too.
 
 ### Cross-Branch Tagging and Rollback
 

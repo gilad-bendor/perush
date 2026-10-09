@@ -4,7 +4,7 @@
 
 All logging goes through `src/logs.ts` via `logInfo()`, `logWarn()`, `logError()`. Each call specifies a **log category** (e.g., `"sdk"`, `"orchestrator"`, `"server"`) that can be toggled on/off in `logsConfig`. Output goes to both the console and a log file.
 
-- **Path**: `process.env.LOG_PATH`, or `./.logs/YYYY-MM-DD--HH-MM-SS-NNN.log` (timestamped at app startup).
+- **Path**: `process.env.LOG_PATH`, or `_DELIBERATION-ROOM/.logs/YYYY-MM-DD--HH-MM-SS-NNN.log` (timestamped at app startup). The directory is `LOGS_DIR` in `config.ts` — an absolute path, independent of the process cwd.
 - **Durability**: fsynced after every write.
 - **Resilience**: if the file is deleted while the app is running, it is recreated on the next log.
 
@@ -35,7 +35,7 @@ When data is attached (the optional `data` parameter), it is rendered as YAML on
 
 | Script | What it does |
 |--------|-------------|
-| `./scripts/active-logs-path.sh` | Prints the path to the most recent log file in `.logs/` |
+| `./scripts/active-logs-path.sh` | Prints the path to the most recent log file in `_DELIBERATION-ROOM/.logs/` (works from any cwd) |
 | `./scripts/active-logs-full.sh` | Prints the full content of the most recent log file |
 | `./scripts/active-logs-full.sh -f` | Follows the log file in real time (`tail -f`) |
 | `./scripts/active-logs-short.sh` | Prints only header lines (strips data lines), by filtering out lines starting with 4 spaces. Use this for a quick overview of what happened without the verbose YAML payloads |

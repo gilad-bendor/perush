@@ -10,7 +10,7 @@
 
 import { $ } from "bun";
 import { join } from "path";
-import { readFile, writeFile, rename, unlink, stat, mkdir } from "fs/promises";
+import { readFile, writeFile, rename, unlink, stat, mkdir, realpath } from "fs/promises";
 import { stringify as yamlStringify, parse as yamlParse } from "yaml";
 import {
   AgentId,
@@ -71,6 +71,26 @@ async function getGitRoot(): Promise<string> {
   return result.stdout.toString().trim();
 }
 
+/**
+ * Throw unless `worktreePath` is the root of its own worktree, on a session branch.
+ *
+ * `.meetings/<id>` lives inside the main repo's working tree, so if the worktree
+ * was removed (or never created) but the directory exists, a `git -C <path>`
+ * silently resolves to the MAIN repo — and `add -A` / `commit` / `reset --hard`
+ * would then act on `main` and the user's uncommitted work. Call this before
+ * every mutating git command scoped to a meeting worktree.
+ */
+async function assertMeetingWorktree(worktreePath: string): Promise<void> {
+  const expected = await realpath(worktreePath);
+  const toplevel = (await $`git -C ${worktreePath} rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
+  const branch = (await $`git -C ${worktreePath} symbolic-ref --short -q HEAD`.quiet().nothrow()).stdout.toString().trim();
+  if (toplevel !== expected || !branch.startsWith(SESSION_BRANCH_PREFIX)) {
+    const msg = `Refusing git write: ${worktreePath} is not a meeting worktree (toplevel: ${toplevel}, branch: ${branch || "<detached>"})`;
+    logError("meetings-db", msg);
+    throw new Error(msg);
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Worktree management
 // ---------------------------------------------------------------------------
@@ -106,8 +126,9 @@ export async function createMeetingWorktree(meetingId: MeetingId): Promise<strin
   }
 
   // Create orphan branch + worktree (compatible with git < 2.42 which lacks --orphan)
-  // Step 1: Create a detached worktree
-  await $`git -C ${gitRoot} worktree add --detach ${worktreePath}`.quiet();
+  // Step 1: Create a detached worktree. --no-checkout: step 2 empties the tree anyway,
+  // so checking out all of main (~200 MB, mostly docs/) would be pure waste (~6s).
+  await $`git -C ${gitRoot} worktree add --detach --no-checkout ${worktreePath}`.quiet();
   // Step 2: Switch to an orphan branch inside the worktree (empties the index)
   await $`git -C ${worktreePath} switch --orphan ${branchName}`.quiet();
 
@@ -120,6 +141,7 @@ export async function createMeetingWorktree(meetingId: MeetingId): Promise<strin
  */
 export async function initializeMeeting(worktreePath: string, meeting: Meeting): Promise<void> {
   logInfo("meetings-db", `initializeMeeting: ${meeting.meetingId} (${meeting.participants.length} participants)`);
+  await assertMeetingWorktree(worktreePath);
   await writeMeetingAtomic(worktreePath, meeting);
   await $`git -C ${worktreePath} add -A`.quiet();
   await $`git -C ${worktreePath} commit -m ${COMMIT_INITIAL}`.quiet();
@@ -134,6 +156,7 @@ export async function endMeeting(meetingId: MeetingId, worktreePath: string): Pr
   const gitRoot = await getGitRoot();
 
   // Final commit (allow empty in case no changes since last cycle)
+  await assertMeetingWorktree(worktreePath);
   await $`git -C ${worktreePath} add -A`.quiet();
   try {
     await $`git -C ${worktreePath} commit -m ${COMMIT_MEETING_ENDED} --allow-empty`.quiet();
@@ -229,6 +252,7 @@ export async function commitCycle(
   speaker: SpeakerId,
 ): Promise<void> {
   logInfo("meetings-db", `commitCycle: cycle ${cycleNumber}, speaker: ${speaker}`);
+  await assertMeetingWorktree(worktreePath);
   await $`git -C ${worktreePath} add -A`.quiet();
   const message = commitCycleMessage(cycleNumber, speaker);
   try {
@@ -457,6 +481,7 @@ export async function ensureGitConfig(): Promise<void> {
  */
 export async function commitWithMessage(worktreePath: string, message: string): Promise<void> {
   logInfo("meetings-db", `commitWithMessage: "${message}"`);
+  await assertMeetingWorktree(worktreePath);
   await $`git -C ${worktreePath} add -A`.quiet();
   try {
     await $`git -C ${worktreePath} commit -m ${message} --allow-empty`.quiet();
@@ -620,6 +645,7 @@ export async function resetSessionBranchToCycle(
   targetCycleNumber: number,
 ): Promise<void> {
   logInfo("meetings-db", `resetSessionBranchToCycle: target cycle ${targetCycleNumber}`);
+  await assertMeetingWorktree(worktreePath);
   if (targetCycleNumber === 0) {
     // Roll back to the initial commit
     const hash = (

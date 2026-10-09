@@ -9,7 +9,8 @@
 
 import { describe, test, expect, beforeAll, afterAll } from "bun:test";
 import { $ } from "bun";
-import { stat } from "fs/promises";
+import { stat, mkdtemp, mkdir, writeFile, rm } from "fs/promises";
+import { tmpdir } from "os";
 import { join } from "path";
 import {
   generateMeetingId,
@@ -405,5 +406,51 @@ describe("session branch rollback", () => {
     const resetMeeting = await readActiveMeeting(worktreePath);
     expect(resetMeeting.cycles).toHaveLength(1);
     expect(resetMeeting.cycles[0].speech.speaker).toBe("milo");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Safety: never let a meeting git write fall through to an enclosing repo
+// ---------------------------------------------------------------------------
+
+describe("assertMeetingWorktree guard", () => {
+  // A throwaway repo in the OS temp dir — never the real one — with a dirty
+  // file and a plain subdirectory standing in for a removed `.meetings/<id>`.
+  let repo: string;
+  let fakeWorktree: string;
+
+  beforeAll(async () => {
+    repo = await mkdtemp(join(tmpdir(), "meetings-db-guard-"));
+    await $`git -C ${repo} init -q`.quiet();
+    await writeFile(join(repo, "user-work.txt"), "uncommitted", "utf-8");
+    fakeWorktree = join(repo, ".meetings", "gone");
+    await mkdir(fakeWorktree, { recursive: true });
+  });
+
+  afterAll(async () => {
+    await rm(repo, { recursive: true, force: true });
+  });
+
+  const enclosingRepoHasNoCommits = async () =>
+    (await $`git -C ${repo} rev-parse -q --verify HEAD`.quiet().nothrow()).exitCode !== 0;
+
+  test("commitWithMessage refuses a directory that is not its own worktree", async () => {
+    await expect(commitWithMessage(fakeWorktree, "should not happen")).rejects.toThrow(/not a meeting worktree/);
+    expect(await enclosingRepoHasNoCommits()).toBe(true);
+  });
+
+  test("commitCycle refuses a directory that is not its own worktree", async () => {
+    await expect(commitCycle(fakeWorktree, 1, "milo")).rejects.toThrow(/not a meeting worktree/);
+    expect(await enclosingRepoHasNoCommits()).toBe(true);
+  });
+
+  test("initializeMeeting refuses (and writes nothing) outside a meeting worktree", async () => {
+    await expect(initializeMeeting(fakeWorktree, makeTestMeeting("guard" as MeetingId))).rejects.toThrow(/not a meeting worktree/);
+    expect(await stat(join(fakeWorktree, "meeting.yaml")).then(() => true, () => false)).toBe(false);
+    expect(await enclosingRepoHasNoCommits()).toBe(true);
+  });
+
+  test("resetSessionBranchToCycle refuses a directory that is not its own worktree", async () => {
+    await expect(resetSessionBranchToCycle(fakeWorktree, 0)).rejects.toThrow(/not a meeting worktree/);
   });
 });

@@ -2,13 +2,15 @@
  * logs.ts
  *
  * All console output is also written to a log file. The path is taken from
- * process.env.logFilePath, falling back to `./.logs/YYYY-MM-DD--HH-MM-SS-NNN.log`.
+ * process.env.LOG_PATH, falling back to `<LOGS_DIR>/YYYY-MM-DD--HH-MM-SS-NNN.log`
+ * (LOGS_DIR = `_DELIBERATION-ROOM/.logs/`, regardless of the process cwd).
  * Logs are fsynced after every write. If the file is deleted while the app is
  * running, it is recreated on the next log.
  */
 
 import {closeSync, fstatSync, fsyncSync, mkdirSync, openSync, statSync, writeSync,} from "node:fs";
-import {dirname} from "node:path";
+import {dirname, join} from "node:path";
+import {LOGS_DIR} from "./config.ts";
 import {getContext} from "./context.ts";
 import {prettyLog} from "./utils.ts";
 
@@ -128,7 +130,7 @@ const logFilePath =
         const now = new Date(fileCreationTime);
         const p = (n: number, w = 2) => String(n).padStart(w, "0");
         const ts = `${now.getFullYear()}-${p(now.getMonth() + 1)}-${p(now.getDate())}--${p(now.getHours())}-${p(now.getMinutes())}-${p(now.getSeconds())}-${p(now.getMilliseconds(), 3)}`;
-        return `.logs/${ts}.log`;
+        return join(LOGS_DIR, `${ts}.log`);
     })();
 
 let logFd: number | null = null;
