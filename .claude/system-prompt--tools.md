@@ -1,24 +1,30 @@
 # Technical Instructions for Working With Hebrew Files
 
-## Searching Hebrew Text: `./scripts/hebrew-grep`
+## Searching Hebrew Text: `./.claude/tools/hebrew-grep`
 
-Standard grep cannot search Hebrew in this project — niqqud (vowel marks like בְּרֵאשִׁית) and non-Hebrew characters (backticks, markdown) break pattern matching. **Always use `./scripts/hebrew-grep` instead of Grep/grep/rg for Hebrew text searches.**
+Standard grep cannot search Hebrew in this project — niqqud (vowel marks like בְּרֵאשִׁית) and non-Hebrew characters (backticks, markdown) break pattern matching. **Always use `./.claude/tools/hebrew-grep` instead of Grep/grep/rg for Hebrew text searches.**
 
 **How it works**: Before matching, every line is normalized — niqqud is stripped and all non-Hebrew sequences collapse to a single space. The search sees only space-delimited bare Hebrew words. Spaces are added at line boundaries, so `' נחש '` matches the whole word.
+The same normalization is applied to the pattern (so niqqud in the pattern is ignored too), plus:
+- **Final letters** are treated as regular letters (`ךםןףץ` = `כמנפצ`): `' ארץ'` also finds `ארצות`, `ארצה` - word-ends are already marked by the spaces.
+- **Shin**: a plain `ש` matches every Shin (undotted, `שׁ` and `שׂ`), while a dotted `שׁ` / `שׂ` matches only that dot - so it only finds vocalized text (the biblical verses), not the unvocalized commentary. Precomposed and decomposed Unicode forms are the same. Character classes that include `ש` (also as part of a range like `[א-ת]`) cover all its forms.
 
-**Usage**: `./scripts/hebrew-grep <JS RegExp> <files-or-folders...>`
+**Usage**: `./.claude/tools/hebrew-grep <JS RegExp> <files-or-folders...>`
 Folders are searched recursively. Output is YAML-like: file path, then matching lines with line numbers and verse references.
 
 **Examples**:
 ```bash
 # Find exact word אדמה across all commentary
-./scripts/hebrew-grep ' אדמה ' פירוש/
+./.claude/tools/hebrew-grep ' אדמה ' פירוש/
 
 # Find the word תרבות with any prefix in a specific file (will also find והתרבות)
-./scripts/hebrew-grep 'תרבות ' פירוש/1-בראשית/1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.rtl.md
+./.claude/tools/hebrew-grep 'תרבות ' פירוש/1-בראשית/1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.rtl.md
 
 # Find any word with "נ" followed by "ח" followed by "ש" in two files
-./scripts/hebrew-grep 'נ[^ ]*ח[^ ]*ש' פירוש/1-בראשית/1020-בראשית-ב_ד-ב_יז-גן_עדן.rtl.md פירוש/1-בראשית/1030-בראשית-ב_יח-ג_כד-אדם_ואשה.rtl.md
+./.claude/tools/hebrew-grep 'נ[^ ]*ח[^ ]*ש' פירוש/1-בראשית/1020-בראשית-ב_ד-ב_יז-גן_עדן.rtl.md פירוש/1-בראשית/1030-בראשית-ב_יח-ג_כד-אדם_ואשה.rtl.md
+
+# Find the verb עשׂה (Sin) in the verses - excluding words with Shin, like עשׁן
+./.claude/tools/hebrew-grep ' עשׂ' פירוש/1-בראשית/
 ```
 
 ## Editing Hebrew Files: Niqqud and Combining-Mark Order
