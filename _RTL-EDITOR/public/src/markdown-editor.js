@@ -1,6 +1,6 @@
 import { SearchQuery, closeSearchPanel, findNext, findPrevious, getSearchQuery, replaceAll, replaceNext, search, selectMatches, setSearchQuery } from "@codemirror/search"
 import { EditorView, basicSetup } from 'codemirror';
-import { keymap, ViewPlugin, Decoration, Direction, gutterLineClass, GutterMarker, runScopeHandlers } from '@codemirror/view';
+import { keymap, ViewPlugin, Decoration, MatchDecorator, Direction, gutterLineClass, GutterMarker, runScopeHandlers } from '@codemirror/view';
 import { markdown, insertNewlineContinueMarkupCommand, deleteMarkupBackward } from '@codemirror/lang-markdown';
 import { Compartment, EditorSelection, EditorState, Facet, RangeSetBuilder, Prec, StateField, Transaction } from '@codemirror/state';
 import { indentWithTab, isolateHistory } from '@codemirror/commands';
@@ -544,6 +544,7 @@ export class MarkdownEditor {
             listLinePlugin,
             markdownLinkPlugin,
             inlineCodeEmphasisPlugin,
+            todoPlugin,
             tableLinePlugin,
             tableRuleGutterField,
             ...(isAiGenerated ? [] : [autoFormatTablesExtension(isRtl), headerRuleExtension(isRtl)]),
@@ -2070,6 +2071,30 @@ const markdownLinkPlugin = ViewPlugin.fromClass(
             }
 
             return builder.finish();
+        }
+    },
+    {
+        // @ts-ignore
+        decorations: (v) => v.decorations
+    },
+);
+
+// Marks every TODO in the text (.cm-todo: bold, on yellow), so it is hard to miss.
+const todoMatcher = new MatchDecorator({
+    regexp: /\bTODO(:?)/g,
+    decoration: Decoration.mark({ class: 'cm-todo' }),
+});
+
+// noinspection JSUnusedGlobalSymbols
+const todoPlugin = ViewPlugin.fromClass(
+    // @ts-ignore
+    class {
+        constructor(/** @type {EditorView} */ view) {
+            this.decorations = todoMatcher.createDeco(view);
+        }
+
+        update(/** @type {import('@codemirror/view').ViewUpdate} */ update) {
+            this.decorations = todoMatcher.updateDeco(update, this.decorations);
         }
     },
     {
