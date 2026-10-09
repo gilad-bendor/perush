@@ -4,7 +4,7 @@ A multi-agent deliberation system where a configurable set of Participant-Agents
 
 ## The Bigger Picture
 
-This project is a sub-system of the **Perush** project — a methodological allegorical interpretation of the Torah. The full methodology, dictionary, and interpretive framework are documented in `../CLAUDE.md`. Consult that file when:
+This project is a sub-system of the **Perush** project — a methodological allegorical interpretation of the Torah. The full methodology, dictionary, and interpretive framework are documented in `../CLAUDE.md` (which `@`-imports `../.claude/system-prompt--Hebrew.md`; the dictionary itself is in `../פירוש/הקדמה-לפירוש.rtl.md`). Consult these when:
 
 - You need to understand the dictionary system, the interpretive method, or the quality criteria.
 - A design decision requires understanding what the AI-Agents are actually *analyzing*.
@@ -182,7 +182,7 @@ The `participants` array is authoritative: all iteration (assessments, template 
 ## Execution Context
 
 **Critical**: This project is **developed** in `_DELIBERATION-ROOM/` but **runs** from the root project directory (`../`), because agents need access to:
-- `../CLAUDE.md` — the dictionary (injected into system prompts)
+- `../פירוש/הקדמה-לפירוש.rtl.md` — the dictionary section (`## המילון`) is extracted from it and injected into system prompts (`DICTIONARY_SOURCE_MD` in `config.ts`)
 - `../פירוש/` — the commentary segments (accessed by agents via tools)
 - `../scripts/hebrew-grep` — the Hebrew search tool
 
@@ -267,7 +267,8 @@ _DELIBERATION-ROOM/
 │       ├── conversation.test.ts
 │       ├── integration.test.ts
 │       └── mock-ws-server.ts
-└── .meetings/                                     ← worktree mount point (gitignored)
+├── .meetings/                                     ← worktree mount point (gitignored)
+└── .logs/                                         ← server log files (gitignored)
 ```
 
 ## Development Guidelines
@@ -316,7 +317,7 @@ types.ts             ← types-asserts.ts (compile-time only), zod
 config.ts            ← types.ts
 context.ts           ← types.ts (+ node:async_hooks)
 utils.ts             ← (no src/ imports)
-logs.ts              ← context.ts, utils.ts (+ node:fs, node:path)
+logs.ts              ← config.ts, context.ts, utils.ts (+ node:fs, node:path)
 meetings-db.ts       ← types.ts, config.ts, logs.ts
 stub-sdk.ts          ← config.ts
 real-sdk.ts          ← config.ts, logs.ts

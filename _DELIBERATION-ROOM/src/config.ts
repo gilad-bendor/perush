@@ -99,8 +99,14 @@ export const MAX_PREPROCESS_ITERATIONS = 10;
 /** Worktree mount point for active meetings (gitignored on main) */
 export const MEETINGS_DIR = join(DELIBERATION_DIR, ".meetings");
 
-/** Main CLAUDE.md with dictionary and methodology */
-export const ROOT_CLAUDE_MD = join(ROOT_PROJECT_DIR, "CLAUDE.md");
+/** Log files directory (gitignored). Absolute, so it doesn't depend on the process cwd */
+export const LOGS_DIR = join(DELIBERATION_DIR, ".logs");
+
+/** Preface to the commentary — holds the dictionary section, injected via `<!-- @echo dictionary -->` */
+export const DICTIONARY_SOURCE_MD = join(ROOT_PROJECT_DIR, "פירוש", "הקדמה-לפירוש.rtl.md");
+
+/** Heading of the dictionary section inside DICTIONARY_SOURCE_MD (any heading level) */
+export const DICTIONARY_HEADING_PATTERN = /^(#+) המילון(?:\s.*)?$/m;
 
 /**
  * Derive the Claude Code projects directory for this project.

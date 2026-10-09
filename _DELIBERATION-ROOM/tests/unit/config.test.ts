@@ -13,7 +13,7 @@ import {
   ROOT_PROJECT_DIR,
   PARTICIPANT_AGENTS_DIR,
   MEETINGS_DIR,
-  ROOT_CLAUDE_MD,
+  DICTIONARY_SOURCE_MD,
   getClaudeProjectDir,
   getCleanEnv,
   SDK_ENV_VARS_TO_STRIP,
@@ -100,8 +100,9 @@ describe("Path config", () => {
     expect(MEETINGS_DIR).toBe(join(DELIBERATION_DIR, ".meetings"));
   });
 
-  test("ROOT_CLAUDE_MD points to ../CLAUDE.md", () => {
-    expect(ROOT_CLAUDE_MD).toBe(join(ROOT_PROJECT_DIR, "CLAUDE.md"));
+  test("DICTIONARY_SOURCE_MD points to an existing file under ../פירוש/", async () => {
+    expect(DICTIONARY_SOURCE_MD.startsWith(join(ROOT_PROJECT_DIR, "פירוש"))).toBe(true);
+    expect(await Bun.file(DICTIONARY_SOURCE_MD).exists()).toBe(true);
   });
 });
 

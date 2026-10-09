@@ -200,7 +200,7 @@ await page.evaluate((msg) => {
 
 ### Read Server Logs
 
-All server output is automatically written to a log file under `.logs/` (path shown at startup). Each line has the format:
+All server output is automatically written to a log file under `_DELIBERATION-ROOM/.logs/` (path shown at startup). Each line has the format:
 
 ```
 2026-03-02T09:28:38.239Z [LOG] [C10] WS <<< start-meeting
@@ -249,7 +249,7 @@ Use the `Read` tool to view PNG screenshots — Claude Code can read images.
 
 ### Adding Debug Console.logs to Server Code
 
-When server behavior is unclear, add temporary `console.log` statements to the relevant module (`session-manager.ts`, `orchestrator.ts`, `server.ts`), then restart the server. Bun picks up changes on restart — no build step needed. All `console.*` output is automatically captured in the log file — use `tail -f .logs/*.log` to watch new lines appear in real time.
+When server behavior is unclear, add temporary `console.log` statements to the relevant module (`session-manager.ts`, `orchestrator.ts`, `server.ts`), then restart the server. Bun picks up changes on restart — no build step needed. All `console.*` output is automatically captured in the log file — use `./scripts/active-logs-full.sh -f` to watch new lines appear in real time.
 
 Useful places to add logging:
 - `session-manager.ts: createSession` — trace session creation and registry state
