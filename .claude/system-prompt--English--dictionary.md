@@ -107,6 +107,11 @@ For an extended treatment and the connection to modern concepts - see [דיון 
 - **אש** (fire) = a clear and absolute idea, that has no water in it (no room for motivation and change).
   **זבח** / **מזבח** (sacrifice/altar) = (related to fire) the understanding of something as ideal: the sanctification and canonization of a state.
 
+### How to Treat Dictionary Entries
+
+- A dictionary entry is a field, not a word. For example: "the height axis" includes על (upon), מעל (above), עלה (went up), and עליון (uppermost) - do not draw distinctions within it that the dictionary does not make.
+- And conversely - every word in a verse carries weight: even a phrase considered "fixed" (such as `עַל פְּנֵי` - "upon the face of") can carry a meaning derived from the composition of the separate words in the phrase.
+
 ## The Right Way to Approach the Translated Stories
 
 Every segment of biblical text is translated into a cultural-sociological story.

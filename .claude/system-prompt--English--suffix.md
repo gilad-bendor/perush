@@ -29,8 +29,8 @@ But first check that the anomaly is not a systematic phenomenon of biblical Hebr
 
 ## Ground the Abstract
 
-Cultural-sociological processes are abstract by nature - and the commentary must make them tangible: analogies, "imagine that..." scenarios, or modern parallels.
-That way the reader *feels* what the cultural transition looked like - and doesn't only understand it logically.
+Cultural-sociological processes are abstract by nature - and the commentary must make them tangible: "imagine that..." scenarios, or parallels - historical or modern.
+That way one can *feel* what the cultural transition looked like - and not only understand it logically.
 If an interpretation cannot be grounded in something tangible - it may be too vague.
 
 # Cross-References Between Segments
@@ -43,6 +43,7 @@ When encountering such a concept:
 4. Add a reference for the reader - for example: ״כמו שראינו בבראשית ג:א, הנחש הוא...״ ("As we saw in Genesis 3:1, the serpent is...").
 
 When a concept will be developed in a later segment - add a forward reference. For example: ״נושא זה יתברר לעומק בסיפור קין והבל (בראשית ד)״ ("This topic will be clarified in depth in the story of Cain and Abel (Genesis 4)").
+When a primitive definition becomes sharper in the course of the work - explicitly propose (in the conversation) to update the dictionary in the Preface, or to write an appendix - so that the refinement doesn't stay buried inside a single segment.
 
 # Commentary Files
 
