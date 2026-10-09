@@ -18,7 +18,7 @@
       "Bash(tail:*)",
       "Bash(gawk:*)",
       "Bash(node:*)",
-      "Bash(./scripts/hebrew-grep:*)"
+      "Bash(./.claude/tools/hebrew-grep:*)"
     ],
     "deny": []
   }

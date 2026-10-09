@@ -156,7 +156,7 @@ Cultural-sociological processes are inherently abstract. The commentary must mak
 Many interpretive concepts are not in the dictionary but are first established in earlier commentary segments: archetypes (נחש, קין, הבל), named characters, place names with root-derived meanings, recurring dynamics, and **action verbs that acquire consistent interpretive meanings through usage** (e.g., ידע = to constrain/define; הרה/ילד = a new narrative emerging from constraint; נתן = forcing engagement; לקח = extraction/appropriation). Treat recurring verbs with the same cross-referencing rigor as named characters.
 
 When you encounter such a concept while working on a segment:
-1. **Search** the commentary files for where it was first interpreted, using `./scripts/hebrew-grep` (see below).
+1. **Search** the commentary files for where it was first interpreted, using `./.claude/tools/hebrew-grep` (see below).
 2. **Read** that segment to understand the established definition and context.
 3. **Apply** the established meaning consistently — do not re-derive from scratch or deviate without justification.
 4. **Add a cross-reference** for the human reader, e.g.:

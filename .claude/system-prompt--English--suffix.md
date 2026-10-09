@@ -37,7 +37,7 @@ If an interpretation cannot be grounded in something tangible - it may be too va
 
 Many concepts are not in the dictionary - they are established for the first time within the commentary segments themselves: archetypes (נחש, קין, הבל), characters and places, and recurring verbs (ידע, הרה, ילד, נתן, לקח...).
 When encountering such a concept:
-1. Search for where it was first interpreted - using `./scripts/hebrew-grep` (see below).
+1. Search for where it was first interpreted - using `./.claude/tools/hebrew-grep` (see below).
 2. Read that segment - and understand the meaning that was established there.
 3. Apply that meaning consistently: do not re-derive it from scratch, and do not deviate from it without justification.
 4. Add a reference for the reader - for example: ״כמו שראינו בבראשית ג:א, הנחש הוא...״ ("As we saw in Genesis 3:1, the serpent is...").
