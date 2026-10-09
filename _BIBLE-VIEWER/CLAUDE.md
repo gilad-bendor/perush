@@ -134,10 +134,6 @@ node build-bible-viewer.js
 - CSS Grid and Flexbox for layout
 - LocalStorage for recent searches persistence
 
-## Programmatic Bible Utilities
-
-**NOTE**: The "sibling" project `../_BIBLE-LINGUAL-RESEARCH` provides CLI tools for ClaudeCode to perform similar research.
-
 ## Git
 
 Commit to whatever branch is checked out; never create one first. Claude Code's
