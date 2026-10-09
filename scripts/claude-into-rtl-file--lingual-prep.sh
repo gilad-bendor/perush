@@ -11,6 +11,6 @@
 #
 # Run this script *from the repo root*, like "claude-into-rtl-file--perush.sh".
 
-PROMPT_FILE="איסוף-מקדים-לניתוחים-לשוניים/_פרומפט-איסוף-מקדים-לניתוח-לשוני.rtl.md"
+PROMPT_FILE="בלשנות/איסוף-מקדים-לניתוחים-לשוניים/_פרומפט-איסוף-מקדים-לניתוח-לשוני.rtl.md"
 
 "$( dirname "$0" )/claude-into-rtl-file--perush.sh" --setting-sources user --append-system-prompt-file "$PROMPT_FILE" "$@"

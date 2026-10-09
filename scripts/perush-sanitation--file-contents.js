@@ -9,7 +9,7 @@ const path = require('path');
 process.chdir(path.join(__dirname, '..'));
 
 const BASE_DIR_PERUSH = 'פירוש';
-const BASE_DIR_LINGUAL = 'ניתוחים-לשוניים';
+const BASE_DIR_LINGUAL = 'בלשנות/ניתוחים-לשוניים';
 const BASE_DIR_APPENDIX = 'נספחים-לפירוש';
 const EXCLUDED_PATHS = new Set([
     // `${BASE_DIR_LINGUAL}/_פרומפט-ניתוח-לשוני.rtl.md`,

@@ -85,7 +85,7 @@ The commentary files are in Markdown format.
 # Linguistic Analyses
 
 Biblical linguistics is an important area of expertise. You have excellent linguistic ability, but deep linguistic analysis needs to be performed with other tools that you don't have access to.
-The translation tends to give words in the text a non-intuitive meaning, but a meaning that is well anchored in the essence of the word: in such cases, the commentary will contain a reference to a linguistic-analysis file - under the folder `./ניתוחים-לשוניים/`
+The translation tends to give words in the text a non-intuitive meaning, but a meaning that is well anchored in the essence of the word: in such cases, the commentary will contain a reference to a linguistic-analysis file - under the folder `./בלשנות/ניתוחים-לשוניים/`
 
 Root analysis is a central tool of the commentary - especially for the names of people and places.
 When the root is transparent and the meaning fits the dictionary - it can be applied directly in the commentary. When the root is opaque or contested - mark it with `TODO:`.

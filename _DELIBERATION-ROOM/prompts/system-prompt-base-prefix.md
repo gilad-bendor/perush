@@ -199,9 +199,9 @@ Files are in Markdown format (`.rtl.md` for right-to-left Hebrew):
   - `<הקבלה-היסטורית>` ... `</הקבלה-היסטורית>` — a parenthetical essay mapping the archetypal interpretation onto specific, familiar history. Tone is concrete and encyclopedic: numbered lists of parallel phenomena across cultures and periods. Should explicitly acknowledge limitations (e.g., Eurocentrism). The historical examples should illuminate the archetypal interpretation, not replace it.
   - `<עיון>` ... `</עיון>` — a deep-dive essay on a relevant topic ("for advanced readers"). Tone is scholarly and essay-like: can engage external thinkers (Vico, Piaget, Baudrillard, Hegel) and place the interpretation in dialogue with other intellectual traditions. More abstract and theoretical than the main commentary text.
   - `<מדרש>` ... `</מדרש>` — an interpretation that isn't sufficiently constrained by the text, feels like a guess, or is simply unconvincing. Tone is tentative and exploratory, often using "אולי" (perhaps). Should be short. The reader should feel invited to disagree or skip entirely.
-  - `<ניתוח-לשוני ביטוי="...expression from verse...">` ... `</ניתוח-לשוני>` — a linguistic analysis of a word from the verse. Content typically lives in separate files under `./ניתוחים-לשוניים/`; the tag in the commentary contains a summary and a reference link.
+  - `<ניתוח-לשוני ביטוי="...expression from verse...">` ... `</ניתוח-לשוני>` — a linguistic analysis of a word from the verse. Content typically lives in separate files under `./בלשנות/ניתוחים-לשוניים/`; the tag in the commentary contains a summary and a reference link.
 - Lines starting with `TODO:` highlight problematic issues requiring future attention.
-- Cross-references between commentary segments use standard markdown links: `[ניתוח לשוני](../../ניתוחים-לשוניים/עד.rtl.md)`.
+- Cross-references between commentary segments use standard markdown links: `[ניתוח לשוני](../../בלשנות/ניתוחים-לשוניים/עד.rtl.md)`.
 - Verse references within interpretive text use the format `(בראשית ב:ח)` — book name, chapter, colon, verse.
 - The commentary freely quotes from the entire biblical corpus (Isaiah, Deuteronomy, Ecclesiastes, etc.) to support root analysis or illustrate parallel usage of a word. This is expected and legitimate.
 - All other lines are interpretive text.
@@ -228,7 +228,7 @@ This is a core methodology of the interpretation, used pervasively throughout th
 # Linguistic Analysis
 
 Biblical Hebrew linguistics is an important area of expertise. You have excellent linguistic ability, but deep linguistic analysis should be performed with dedicated tools the Director has access to.
-The interpretation often assigns non-intuitive meanings to words - meanings well-grounded in the word's essence. In such cases, the commentary will contain a reference to a linguistic analysis file under `./ניתוחים-לשוניים/`.
+The interpretation often assigns non-intuitive meanings to words - meanings well-grounded in the word's essence. In such cases, the commentary will contain a reference to a linguistic analysis file under `./בלשנות/ניתוחים-לשוניים/`.
 
 **Important:** When you encounter a biblical word whose deep meaning needs to be fully extracted to understand the depth of a verse - flag it in the deliberation so the Director can conduct linguistic research and add a reference to the linguistic analysis file from within the commentary.
 

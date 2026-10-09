@@ -49,14 +49,14 @@ For an extended treatment and the connection to modern concepts - see [דיון 
 
 - **צומח** (vegetation) / **אכילה** (eating) = insights/models about the world. Without eating (the internalization of new insights), bewilderment, confusion, and an inability to act develop (per the dictionary: **רעב**, hunger).
 - **יצורים** (creatures - animals and humans) = a story/narrative that the culture tells.
-  Creatures usually have a **נפש** = a tendency to preserve themselves (see [linguistic analysis](ניתוחים-לשוניים/נפש.rtl.md)).
+  Creatures usually have a **נפש** = a tendency to preserve themselves (see [linguistic analysis](בלשנות/ניתוחים-לשוניים/נפש.rtl.md)).
   The נפש is usually "חיה" (alive) (see the definition "**חיים** = dynamism and change" below): the נפש usually tends to adapt and change according to circumstances and needs.
   - **חיות** (animals) = a "local" narrative - a non-authoritative narrative: one of many narratives that exist within a culture.
   - **אדם** (human) = an **authoritative** narrative of a culture: a narrative that a culture enforces upon itself in order to forge an integral identity.
     - **איש** / **אישה** (man/woman): the split between elite and popular - with an emphasis on the solidarity and intimacy between them (`עֶצֶם מֵעֲצָמַי וּבָשָׂר מִבְּשָׂרִי` - בראשית ב:כג).
     - **זכר** / **נקבה** (male/female): the split between elite and popular - with an emphasis on the sharp gap between them:
-      - **זכר** (male) = an elite narrative - a narrative that sees itself as the one that dictates to and leads society (see [linguistic analysis](ניתוחים-לשוניים/זכר.rtl.md)).
-      - **נקבה** (female) = a popular narrative that accepts upon itself the dictates of the זכר (see [linguistic analysis](ניתוחים-לשוניים/נקבה.rtl.md)).
+      - **זכר** (male) = an elite narrative - a narrative that sees itself as the one that dictates to and leads society (see [linguistic analysis](בלשנות/ניתוחים-לשוניים/זכר.rtl.md)).
+      - **נקבה** (female) = a popular narrative that accepts upon itself the dictates of the זכר (see [linguistic analysis](בלשנות/ניתוחים-לשוניים/נקבה.rtl.md)).
 
 ### Important Additional Definitions
 
