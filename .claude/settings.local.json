@@ -18,7 +18,8 @@
       "Bash(tail:*)",
       "Bash(gawk:*)",
       "Bash(node:*)",
-      "Bash(./.claude/tools/hebrew-grep:*)"
+      "Bash(./.claude/tools/hebrew-grep:*)",
+      "Bash(./.claude/tools/files-of-verses:*)"
     ],
     "deny": []
   }

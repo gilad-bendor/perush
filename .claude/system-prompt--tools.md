@@ -27,6 +27,21 @@ Folders are searched recursively. Output is YAML-like: file path, then matching 
 ./.claude/tools/hebrew-grep ' עשׂ' פירוש/1-בראשית/
 ```
 
+## Finding the Commentary Files of Verses: `./.claude/tools/files-of-verses`
+
+Lists the paths of the commentary files (under `./פירוש/`) that cover the referenced verses - one path per line, in Torah order.
+Chapters and verses are Hebrew numerals (`ד`, `יב`, `טו`) or digits; quoting is optional.
+A reference that no file covers (e.g. a verse that doesn't exist) is an error (exit code 1).
+
+```bash
+./.claude/tools/files-of-verses בראשית ד:ז              # a single verse
+./.claude/tools/files-of-verses בראשית ד:א-ה            # verses 1-5 of chapter 4
+./.claude/tools/files-of-verses בראשית ד:א-ה:ג          # from 4:1 to 5:3
+./.claude/tools/files-of-verses בראשית ד                # the whole chapter (also: בראשית ד-ה)
+./.claude/tools/files-of-verses בראשית                  # the whole book
+./.claude/tools/files-of-verses בראשית ד:א שמות ב:ג     # from the first reference to the end of the second
+```
+
 ## Editing Hebrew Files: Niqqud and Combining-Mark Order
 
 The Edit tool can fail with `String to replace not found` on Hebrew text that looks character-for-character identical to what Read returned. The cause is **Unicode combining-mark order**: niqqud (qamatz `ָ`, dagesh `ּ`, etc.) are combining marks, and the same visible word can be encoded with marks in different byte orders (e.g., letter+qamatz+dagesh vs. letter+dagesh+qamatz). Edit does exact byte matching and rejects strings that *look* right but differ in mark order. The error message is unhelpfully generic.

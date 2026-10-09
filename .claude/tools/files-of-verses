@@ -1,0 +1,181 @@
+#!/usr/bin/env node
+
+const usage=`
+    Usage: files-of-verses <reference> [<reference>]
+
+    List the Perush files (one path per line) that cover the referenced verses.
+    Chapters and verses are Hebrew numerals (ד, יב, טו) or digits (4, 12, 15).
+
+    Examples:
+      files-of-verses בראשית ד:ז              (a single verse)
+      files-of-verses בראשית ד:א-ה            (verses 1-5 of chapter 4)
+      files-of-verses בראשית ד:א-ה:ג          (from 4:1 to 5:3)
+      files-of-verses בראשית ד                (the whole chapter)
+      files-of-verses בראשית ד-ה              (chapters 4 to 5)
+      files-of-verses בראשית                  (the whole book)
+      files-of-verses בראשית ד:א שמות ב:ג     (from the first reference to the end of the second)
+      files-of-verses 'בראשית 4:7'            (quoting is optional)
+`.replace(/\n    /g, '\n').trim()
+
+const fs = require('fs')
+const path = require('path')
+
+const projectDir = path.resolve(__dirname, '..', '..')
+const perushDir = path.join(projectDir, 'פירוש')
+
+const books = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים']
+
+const LETTER_VALUES = {
+  'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9,
+  'י': 10, 'כ': 20, 'ל': 30, 'מ': 40, 'נ': 50, 'ס': 60, 'ע': 70, 'פ': 80, 'צ': 90, 'ק': 100,
+}
+
+/**
+ * Parse a chapter/verse number: Hebrew numeral (ד, יב, טו, with optional geresh/gershayim) or digits.
+ * @param {string} str
+ * @returns {number}
+ */
+function parseNumber(str) {
+  if (/^\d+$/.test(str)) {
+    return Number(str)
+  }
+  const letters = str.replace(/["'׳״]/g, '')
+  if (!letters || ![...letters].every(letter => LETTER_VALUES[letter])) {
+    throw new Error(`Invalid chapter/verse number ${JSON.stringify(str)}`)
+  }
+  return [...letters].reduce((sum, letter) => sum + LETTER_VALUES[letter], 0)
+}
+
+/** A location in the Torah. A missing chapter/verse is expressed by 0 (at the start) or Infinity (at the end). */
+function location(book, perek, pasuk) {
+  return { book, perek, pasuk }
+}
+
+function compareLocations(loc1, loc2) {
+  return (books.indexOf(loc1.book) - books.indexOf(loc2.book))
+    || (loc1.perek - loc2.perek)
+    || (loc1.pasuk - loc2.pasuk)
+}
+
+/**
+ * Parse the command line into a { from, to } range.
+ * Grammar:  BOOK [CHAPTER[:VERSE][-[CHAPTER:]VERSE | -CHAPTER]] [BOOK [CHAPTER[:VERSE]]]
+ * @param {string[]} args
+ * @returns {{ from: object, to: object }}
+ */
+function parseRange(args) {
+  const tokens = args.join(' ').replace(/[־–—]/g, '-').trim().split(/\s+/).filter(Boolean)
+  const references = []
+  while (tokens.length > 0) {
+    const book = tokens.shift()
+    if (!books.includes(book)) {
+      throw new Error(`Unknown book name ${JSON.stringify(book)} (expected one of: ${books.join(', ')})`)
+    }
+    const spec = (tokens.length > 0 && !books.includes(tokens[0])) ? tokens.shift() : undefined
+    references.push(parseReference(book, spec))
+  }
+  if (references.length === 0 || references.length > 2) {
+    throw new Error('Expected one or two references')
+  }
+  if (references.length === 2 && references.some(reference => reference.hasRange)) {
+    throw new Error('A range ("-") is not allowed when two references are given')
+  }
+  const from = references[0].from
+  const to = references.at(-1).to
+  if (compareLocations(from, to) > 0) {
+    throw new Error('The range ends before it starts')
+  }
+  return { from, to }
+}
+
+/**
+ * @param {string} book
+ * @param {string|undefined} spec - e.g. 'ד', 'ד:ז', 'ד:א-ה', 'ד:א-ה:ג', 'ד-ה'
+ */
+function parseReference(book, spec) {
+  if (spec === undefined) {
+    return { from: location(book, 0, 0), to: location(book, Infinity, Infinity), hasRange: false }
+  }
+  const [start, end, ...rest] = spec.split('-')
+  if (rest.length > 0 || end === '') {
+    throw new Error(`Invalid reference ${JSON.stringify(`${book} ${spec}`)}`)
+  }
+  const [startPerek, startPasuk] = parseChapterVerse(book, spec, start)
+  const from = location(book, startPerek, startPasuk ?? 0)
+  let to
+  if (end === undefined) {
+    to = location(book, startPerek, startPasuk ?? Infinity)
+  } else if (end.includes(':')) {
+    const [endPerek, endPasuk] = parseChapterVerse(book, spec, end)
+    to = location(book, endPerek, endPasuk)
+  } else if (startPasuk !== undefined) {
+    to = location(book, startPerek, parseNumber(end))          // ד:א-ה  -->  verse range in the same chapter
+  } else {
+    to = location(book, parseNumber(end), Infinity)            // ד-ה    -->  chapter range
+  }
+  return { from, to, hasRange: end !== undefined }
+}
+
+/** Parse 'CHAPTER' or 'CHAPTER:VERSE' --> [perek, pasuk|undefined] */
+function parseChapterVerse(book, spec, str) {
+  const parts = str.split(':')
+  if (parts.length > 2 || parts.some(part => part === '')) {
+    throw new Error(`Invalid reference ${JSON.stringify(`${book} ${spec}`)}`)
+  }
+  return [parseNumber(parts[0]), parts[1] === undefined ? undefined : parseNumber(parts[1])]
+}
+
+/**
+ * Parse a Perush file name (NNNN-book-from-to-title.rtl.md) into its covered range.
+ */
+function parseFileName(fileName) {
+  const match = fileName.match(/^\d{4}-(בראשית|שמות|ויקרא|במדבר|דברים)-([א-ת]{1,3})_([א-ת]{1,3})-([א-ת]{1,3})_([א-ת]{1,3})-.+\.rtl\.md$/)
+  if (!match) {
+    return undefined
+  }
+  const [_whole, book, fromPerek, fromPasuk, toPerek, toPasuk] = match
+  return {
+    from: location(book, parseNumber(fromPerek), parseNumber(fromPasuk)),
+    to:   location(book, parseNumber(toPerek),   parseNumber(toPasuk)),
+  }
+}
+
+/**
+ * List the Perush files whose range overlaps [from, to], in Torah order.
+ */
+function listFilesInRange(from, to) {
+  const filesList = []
+  for (const bookDir of fs.readdirSync(perushDir).filter(dir => /^\d-/.test(dir)).sort()) {
+    for (const fileName of fs.readdirSync(path.join(perushDir, bookDir)).sort()) {
+      const range = parseFileName(fileName)
+      if (range && compareLocations(range.to, from) >= 0 && compareLocations(range.from, to) <= 0) {
+        filesList.push(path.join(perushDir, bookDir, fileName))
+      }
+    }
+  }
+  return filesList
+}
+
+// --- main ---
+
+const args = process.argv.slice(2)
+if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
+  console.log(usage)
+  process.exit(args.length === 0 ? 1 : 0)
+}
+
+try {
+  const { from, to } = parseRange(args)
+  const files = listFilesInRange(from, to)
+  if (files.length === 0) {
+    throw new Error(`No Perush file covers ${JSON.stringify(args.join(' '))} (does this verse exist?)`)
+  }
+  const relativeToProject = path.relative(projectDir, process.cwd())
+  const insideProject = !relativeToProject.startsWith('..') && !path.isAbsolute(relativeToProject)
+  for (const file of files) {
+    console.log(insideProject ? path.relative(process.cwd(), file) : file)
+  }
+} catch (error) {
+  console.error(`Error: ${error.message}`)
+  process.exit(1)
+}
