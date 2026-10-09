@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prompt for &quot;importing&quot; Hebrew changes to English</title>
+<title>Intro</title>
 <style>
 * { box-sizing: border-box; }
 body {
@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,19 +140,67 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="ltr">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../index.html">פירוש</a> / <a dir="auto" href="index.html">_HTML-FROM-MD</a> / <span dir="auto">CLAUDE-ENGLISH---PROMPT-FOR-UPDATING-FROM-HEBREW</span></nav>
-<h1 id="prompt-for-importing-hebrew-changes-to-english">Prompt for &quot;importing&quot; Hebrew changes to English</h1>
-<h2 id="dictionary-changes-פירושהקדמה-לפירושrtlmdמילון-claude-englishmd">DICTIONARY changes: <code>פירוש/הקדמה-לפירוש.rtl.md</code>:מילון  → <code>CLAUDE-ENGLISH.md</code></h2>
-<p>Analyze the uncommited changes in <code>פירוש/הקדמה-לפירוש.rtl.md</code> - focusing on the section &quot;# המילון (פונקצית ההמרה הספרותית)&quot; (including subsections).<br>
-Then, apply these changes into the section &quot;# The Dictionary (המילון)&quot; in <code>CLAUDE-ENGLISH.md</code><br>
-Be thorough and take your time: understand the Hebrew changes deeply, and craft the English translation with a holistic and contextual approach - so the English changes are harmonious inside <code>CLAUDE-ENGLISH.md</code>.</p>
-<h2 id="פירושהקדמה-לפירושrtlmd-any-section-claude-englishmd"><code>פירוש/הקדמה-לפירוש.rtl.md</code> (any section) --&gt; <code>CLAUDE-ENGLISH.md</code></h2>
-<p>Analyze the uncommited changes in <code>פירוש/הקדמה-לפירוש.rtl.md</code> - and then, apply these changes into <code>CLAUDE-ENGLISH.md</code><br>
-Remember that <code>CLAUDE-ENGLISH.md</code> includes what is written in both <code>פירוש/הקדמה-לפירוש.rtl.md</code> and <code>CLAUDE-HEBREW.md</code><br>
-Be thorough and take your time: understand the Hebrew changes deeply, and craft the English translation with a holistic and contextual approach - so the English changes are harmonious inside <code>CLAUDE-ENGLISH.md</code>.</p>
-<h2 id="claude-hebrewmd-claude-englishmd"><code>CLAUDE-HEBREW.md</code> --&gt; <code>CLAUDE-ENGLISH.md</code></h2>
-<p>Analyze the uncommited changes in <code>CLAUDE-HEBREW.md</code> - and then, apply these changes into <code>CLAUDE-ENGLISH.md</code><br>
-Remember that <code>CLAUDE-ENGLISH.md</code> includes what is written in both <code>פירוש/הקדמה-לפירוש.rtl.md</code> and <code>CLAUDE-HEBREW.md</code><br>
-Be thorough and take your time: understand the Hebrew changes deeply, and craft the English translation with a holistic and contextual approach - so the English changes are harmonious inside <code>CLAUDE-ENGLISH.md</code>.</p>
+<nav class="index page-index">
+<details open>
+<summary>Contents</summary>
+<ul>
+<li class="index-depth-0"><a href="#intro">Intro</a></li>
+<li class="index-depth-1"><a href="#how-are-the-system-prompt-files-structured">How are the system-prompt files structured:</a></li>
+<li class="index-depth-0"><a href="#the-task-import-changes-in-the-hebrew-system-prompt-to-the-english-system-prompt">The task: &quot;import&quot; changes in the Hebrew system-prompt - to the English system-prompt</a></li>
+</ul>
+</details>
+</nav>
+<h1 id="intro">Intro</h1>
+<p>We support Claude sessions with both <em>Hebrew</em> and <em>English</em> system-prompts.<br>
+We have comprehensive system-prompts in both languages (this session was started in a way that did not auto-load these system-prompts).</p>
+<h2 id="how-are-the-system-prompt-files-structured">How are the system-prompt files structured:</h2>
+<p>The file <code>CLAUDE.md</code> contains a single line: either <code>@.claude/system-prompt--Hebrew.md</code> or <code>@.claude/system-prompt--English.md</code></p>
+<p>The file <code>.claude/system-prompt--Hebrew.md</code> contains these three lines:</p>
+<pre><code>@system-prompt--Hebrew--prefix.rtl.md
+@../פירוש/הקדמה-לפירוש.rtl.md
+@system-prompt--Hebrew--suffix.rtl.md
+</code></pre>
+<p>The file <code>.claude/system-prompt--English.md</code> contains these three lines:</p>
+<pre><code>@system-prompt--English--prefix.md
+@system-prompt--English--perush-intro.md
+@system-prompt--English--suffix.md
+</code></pre>
+<p>So effectively, a Claude session reads <code>CLAUDE.md</code>, and then one of the <code>.claude/system-prompt--&lt;language&gt;.md</code> files, and then - the three &quot;real content&quot; files - the three parts of the system-prompt - in order:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Hebrew</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Part 1</td>
+<td><code>.claude/system-prompt--Hebrew--prefix.md</code></td>
+<td><code>.claude/system-prompt--English--prefix.md</code></td>
+</tr>
+<tr>
+<td>Part 2</td>
+<td><code>פירוש/הקדמה-לפירוש.rtl.md</code></td>
+<td><code>.claude/system-prompt--English--perush-intro.md</code></td>
+</tr>
+<tr>
+<td>Part 3</td>
+<td><code>.claude/system-prompt--Hebrew--suffix.md</code></td>
+<td><code>.claude/system-prompt--English--suffix.md</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="the-task-import-changes-in-the-hebrew-system-prompt-to-the-english-system-prompt">The task: &quot;import&quot; changes in the Hebrew system-prompt - to the English system-prompt</h1>
+<p>Please check which of the three Hebrew files has uncommited (staged or unstaged) changes, and &quot;import&quot; these changes into the matching English files.<br>
+Important: to properly understand the context of changes in the Hebrew files - you <em>must</em> first read the <em>whole</em> of the three Hebrew files - in order.</p>
+<p class="heads-list">Per changed Hebrew file:</p>
+<ul>
+<li>Analyze the uncommited changes in the Hebrew file, and understand them deeply and in their context.</li>
+<li>Apply these changes into the matching English file.</li>
+</ul>
+<p>Be thorough and take your time: understand the Hebrew changes deeply, and craft the English translation with a holistic and contextual approach - so the English changes are harmonious within the whole English system-prompt.</p>
 </main>
 </body>
 </html>

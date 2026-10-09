@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -140,8 +144,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <div class="pseudo-tag-caption">ניתוח-לשוני: שֶׁרֶץ</div>
 <p><code>שֶׁרֶץ</code> הוא חוויה של חיים רבים ותנועה בעומס חוּשי, או הִתְרַבוּת מתפרצת - באופן שקשה למעקב: תחושה של ״רבים מספוֹר״.<br>
 המושג <code>שֶׁרֶץ</code> אינו מתאר סוג מסוים של בעל חיים (חרקים, זוחלים, יצורים קטנים) אלא חוויה אנושית של עודפות חיים.</p>
-<p>הוא נע בין שני מוקדים משלימים:</p>
-<ul>
+<p class="heads-list">הוא נע בין שני מוקדים משלימים:</p>
+<ul class="runs-on">
 <li>המון־זז: מסה שרוחשת כאן ועכשיו ואי אפשר לפצלה לפרטים - עומס חושי:
 <ul>
 <li><code>וְשָׁרַץ הַיְאֹר צְפַרְדְּעִים וְעָלוּ וּבָאוּ</code> (שמות ח:ג)</li>
@@ -149,11 +153,11 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </li>
 <li>פוריות־מתפרצת: ייצור בלתי־פוסק של יצורים חדשים בקצב שלא ניתן לעקוב אחריו:
 <ul>
-<li><code>וּבְנֵי יִשְׂרָאֵל <strong>פָּרוּ וַיִּשְׁרְצוּ וַיִּרְבּוּ</strong> וַיַּעַצְמוּ בִּמְאֹד מְאֹד וַתִּמָּלֵא הָאָרֶץ אֹתָם</code> (שמות א:ז)<br>
-שני המוקדים חולקים ליבה אחת: כמות שלא־ניתנת־לשליטה־או־לעקיבה. לכן הפועל מופיע תמיד בזיקה למצע — המים שורצים, הארץ שורצת, היאור שורץ — המצע הוא המקום שבו העודפות מופיעה.</li>
+<li><code>וּבְנֵי יִשְׂרָאֵל <strong>פָּרוּ וַיִּשְׁרְצוּ וַיִּרְבּוּ</strong> וַיַּעַצְמוּ בִּמְאֹד מְאֹד וַתִּמָּלֵא הָאָרֶץ אֹתָם</code> (שמות א:ז)</li>
 </ul>
 </li>
 </ul>
+<p>שני המוקדים חולקים ליבה אחת: כמות שלא־ניתנת־לשליטה־או־לעקיבה. לכן הפועל מופיע תמיד בזיקה למצע — המים שורצים, הארץ שורצת, היאור שורץ — המצע הוא המקום שבו העודפות מופיעה.</p>
 <p>בדומה ל-<code>רֶמֶשׂ</code> - גם <code>שֶׁרֶץ</code> קשור לחוויה של אי־עקיבה, אך מזווית שונה: <code>רֶמֶשׂ</code> חמקמק, בעוד שה-<code>שֶׁרֶץ</code> עוֹדף.</p>
 <p>למיטיבי לכת - הסיכום המלא של <a href="../ניתוחים-לשוניים-בינה-מלאכותית/שרץ.ai.rtl.html">Claude Opus 4.7</a> - עם הפניות למחקרים באינטרנט.</p>
 </div>

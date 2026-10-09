@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,15 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../../index.html">פירוש</a> / <a dir="auto" href="../../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="../index.html">פירוש</a> / <a dir="auto" href="index.html">1-בראשית</a> / <span dir="auto">1020-בראשית-ב_ד-ב_יז-גן_עדן</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#הגן-בעדן-עולמם-של-הציידים-מלקטים">הגָן בעֵדֶן - עולמם של הציידים-מלקטים</a></li>
+<li class="index-depth-1"><a href="#האדם-הראשוני">האדם הראשוני</a></li>
+</ul>
+</details>
+</nav>
 <h1 id="הגן-בעדן-עולמם-של-הציידים-מלקטים">הגָן בעֵדֶן - עולמם של הציידים-מלקטים</h1>
 <p>&quot;אצל רבים הלכה והתחזקה הדעה שכולם שגו שגיאה נוראה ברדתם מהעצים.<br>
 היו שאמרו שגם עניין העצים עצמם היה צעד לא נבון, ומוטב היה לולא עזבו את האוקיינוסים מלכתחילה.&quot;<br>
@@ -187,7 +200,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <blockquote>
 <p>בראשית ב ז: וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה וַיִּפַּח בְּאַפָּיו נִשְׁמַת חַיִּים; וַיְהִי הָאָדָם לְנֶפֶשׁ חַיָּה.</p>
 </blockquote>
-<p>נזכיר ונחדד את המושגים <code>אָרֶץ</code>, <code>אֲדָמָה</code> ו<code>עָפָר</code>:</p>
+<p class="heads-list">נזכיר ונחדד את המושגים <code>אָרֶץ</code>, <code>אֲדָמָה</code> ו<code>עָפָר</code>:</p>
 <ul>
 <li><code>אָרֶץ</code>: כפי שכבר נאמר ביום הבריאה השלישי, ארץ מסמלת חוויות קיום שנוצרו בעקבות רצונות מול ״החוץ״ (השמים).</li>
 <li><code>אֲדָמָה</code>: המרחב המחשבתי שבו נוצרות קבוצות - שבו נוצרים נרטיבים (<code>אָדָם</code>) - כלומר - סך האוכלוסיה הרלבנטית.</li>
@@ -216,7 +229,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </blockquote>
 <p>מציאות הקיום (<code>יְהוָה אֱלֹהִים</code>) ב״גָן בעֵדֶן״ גורם למגוון הקבוצות (<code>הָאֲדָמָה</code>) לפתח תובנות (<code>וַיַּצְמַח</code>, <code>עֵץ</code>):<br>
 תובנות שהן אטרקטיביות (<code>נֶחְמָד</code>), נוטות לייצר דיון ציבורי (<code>לְמַרְאֶה</code>), ומרגישות נכונות להטמעה (<code>טוֹב לְמַאֲכָל</code>).</p>
-<p>מטקסט המקראי מחדד כאן רעיון עמוק: ציר שעליו ניתן לסווג תובנות. והטקסט המקראי חוזר על ההנגדה הזאת פעמיים:</p>
+<p class="heads-list">מטקסט המקראי מחדד כאן רעיון עמוק: ציר שעליו ניתן לסווג תובנות. והטקסט המקראי חוזר על ההנגדה הזאת פעמיים:</p>
 <ul>
 <li>מצד אחד: <code>עֵץ הַחַיִּים</code> - תובנות <strong>פרגמטיוֹת ודינאמיוֹת</strong> (לפי המילון - <code>חַיִּים</code>) שנגזרות וקשורות לעצם חווית הקיום של הגַּן בְּעֵדֶן (<code>בְּתוֹךְ הַגָּן</code>).<br>
 צד זה מקביל ל<code>נֶחְמָד לְמַרְאֶה</code> ומפרט אותו: תובנות שהן אטרקטיביות נוטות לייצר דיון ציבורי. זה כולל גם רעיונות חיוביים - למשל - יש פה הזדמנות להרוויח, וגם רעיונות שליליים - למשל - יש כאן סכנה שצריך להתכונן מולה).</li>
@@ -231,7 +244,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>מחשבות פרטיות על מהות המוּסר והזהוּת <strong>כחוויה פסיכולוגית</strong> - בגישה של הגדרות ותהליכים מסודרים:<br>
 יש המאמינים שמוּסר וזהוּת נובטים מתוך האדם פנימה, ויש המאמינים שהאדם מוּסלל לתוכם על ידי החברה. ובכן - גם וגם:</p>
 <h4 id="מהות-ותפקוד">מהות ותפקוד</h4>
-<p>הנחת העבודה היא שהחוויה הפסיכולוגית של מוּסר ושל זהוּת היא אותה חוויה, ושברמה הפסיכולוגית מוּסר וזהוּת הם זהים במידה רבה.<br>
+<p class="heads-list">הנחת העבודה היא שהחוויה הפסיכולוגית של מוּסר ושל זהוּת היא אותה חוויה, ושברמה הפסיכולוגית מוּסר וזהוּת הם זהים במידה רבה.<br>
 מוּסר וזהוּת הם, במהותם, תובנות של הנאה וכאב:</p>
 <ul>
 <li>כניעה ל״יצר הרע״ היא פעולה שמוּנעת מהנאה מיידית או כאב מיידי, ושמובילה לתחושה של בוּשה, בגידה במוּסר, ושבר בזהוּת - וגוררת כאב עמוק.</li>
@@ -248,15 +261,17 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 בילדות, הזיהוּי הזה ״מודבק״ על התנהגויות שההורים ״מאשרים״.<br>
 בהמשך החיים - ובעיקר בתחילת גיל ההתבגרות - הזיהוּי הזה ״מודבק״ על חברים, ואז כמובן על התנהגויות שהחברים ״מאשרים״.<br>
 בגיל ההתבגרות - ולפעמים גם אחריו - ה״הדבקה״ הזאת מתבצעת על אידאולוגיות: זה מייצר תפיסות של ״ככה אדם ראוי צריך להתנהג״.</p>
-<p>הערה חשובה: התיאור למעלה הוא על ״הצד החיובי״ - כלומר:</p>
-<ul>
+<p class="heads-list">הערה חשובה: התיאור למעלה הוא על ״הצד החיובי״ - כלומר:</p>
+<ul class="runs-on">
 <li>יש דברים שמסומנים כמוסריים, או כאחר-משמעותי</li>
-<li>״הדבקה״ מתרחשת כתוצאה מאישור והרמוניה<br>
-אבל בפעול הכל סימטרי לצד השלילי:</li>
-<li>יש דברים שמסומנים כלא-מוסריים, או כאחר-בזוּי</li>
-<li>״הדבקה הפוכה״ מתרחשת כתוצאה מדחייה (הפוך מאישור) וחוסר-הרמוניה<br>
-זה יכול להוביל לסימון משהו כלא-מוסרי אם אחרים-משמעותיים דוחים אותו, ואפילו סימון משהו כמוסרי רק בגלל שאחרים-בזוּיים מאשרים אותו.</li>
+<li>״הדבקה״ מתרחשת כתוצאה מאישור והרמוניה</li>
 </ul>
+<p class="heads-list">אבל בפעול הכל סימטרי לצד השלילי:</p>
+<ul class="runs-on">
+<li>יש דברים שמסומנים כלא-מוסריים, או כאחר-בזוּי</li>
+<li>״הדבקה הפוכה״ מתרחשת כתוצאה מדחייה (הפוך מאישור) וחוסר-הרמוניה</li>
+</ul>
+<p>זה יכול להוביל לסימון משהו כלא-מוסרי אם אחרים-משמעותיים דוחים אותו, ואפילו סימון משהו כמוסרי רק בגלל שאחרים-בזוּיים מאשרים אותו.</p>
 <p>בסופו של התהליך, אדם בוגר יכול - לעיתים - להגיע למצב שבו ה״אחר המשמעותי ביותר״ בנפשו הוא אידאולוגיה - ולא דמות אנושית כלשהי.<br>
 אדם כזה נושא את ערכי המוסר שלו בתוך עצמו: הוא כבר לא זקוק לאישור מאף גורם חיצוני. זהו ״אדם מוסרי״ - לטוב ולרע.</p>
 <h4 id="חשיבות">חשיבוּת</h4>
@@ -272,13 +287,13 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 בראשית ב יג: וְשֵׁם הַנָּהָר הַשֵּׁנִי גִּיחוֹן הוּא הַסּוֹבֵב אֵת כָּל אֶרֶץ כּוּשׁ.<br>
 בראשית ב יד: וְשֵׁם הַנָּהָר הַשְּׁלִישִׁי חִדֶּקֶל הוּא הַהֹלֵךְ קִדְמַת אַשּׁוּר; וְהַנָּהָר הָרְבִיעִי הוּא פְרָת.</p>
 </blockquote>
-<p>פסוקים אלה באים לפרט את חווית הקיום בגַּן בְּעֵדֶן:<br>
+<p class="heads-list">פסוקים אלה באים לפרט את חווית הקיום בגַּן בְּעֵדֶן:<br>
 ה<code>נָהָר</code> (כלומר שטף המים - הרצונות שמזינים ויוצרים את חווית החיים והתובנות) של הגן בעדן (חווית החיים שמבוססת על הנאה) מחולק לארבע זרמים עיקריים (<code>אַרְבָּעָה רָאשִׁים</code>), המיצגים ארבע סוגי הנאה/כאב בסיסיים - מהבסיסי (שמזוהה יותר עם תרבויות פרימיטיביות) לעִילִי (שמזוהה יותר עם תרבויות מפותחות):</p>
 <ol>
 <li><code>פִּישׁוֹן</code> - משורש פ.ו.שׁ - פְּשִׁיה/התפשׁטות. כלומר - הרצון להתפשט, לגדול ולהשתלט.<br>
 הנהר הזה מייצר (<code>סֹּבֵב</code> - מלשון סיבה) - חווית קיום (<code>אֶרֶץ</code>) תזזיתית ודינמית (<code>הַחֲוִילָה</code> - מהשורש ח.ו.ל - ריקוד, נפילה, חרדה).<div class="pseudo-tag" data-tag="מדרש">
 <div class="pseudo-tag-caption">מדרש</div>
-<p>ייתכן ש-<code>זָּהָב</code> = זֶה-הָב = תן לי את זה: <code>אֶרֶץ הַחֲוִילָה</code> מעודדת להשיג, לצבור, לתתרחב.<br>
+<p class="heads-list">ייתכן ש-<code>זָּהָב</code> = זֶה-הָב = תן לי את זה: <code>אֶרֶץ הַחֲוִילָה</code> מעודדת להשיג, לצבור, לתתרחב.<br>
 יתכן ש-<code>שָׁם הַבְּדֹלַח וְאֶבֶן הַשֹּׁהַם</code> מייצגים את הצד הבעייתי של <code>פִּישׁוֹן</code>:</p>
 <ul>
 <li><code>בְּדֹלַח</code> - אולי מלשון דליחות ועכירות: מריבות וסיכסוכים שנוצרים ממלחמות שליטה, כח, ותאווֹת.</li>
@@ -297,17 +312,17 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </li>
 <li><code>חִדֶּקֶל</code> - לא ברור.<div class="pseudo-tag" data-tag="מדרש">
 <div class="pseudo-tag-caption">מדרש</div>
-<p>אולי חד+קל:</p>
-<ul>
+<p class="heads-list">אולי חד+קל:</p>
+<ul class="runs-on">
 <li>חד: כמו חֶדְוָה (משורש ח.ד.ה): שמחה של כח וביטחון</li>
-<li>קל: כמו קָלוֹן (משורש ק.ל.ה): החשש מביזוי ובוּשה<br>
-הרצון להיות <code>אַשּׁוּר</code> - כלומר שהאחרים מאשרים אותו ותומכים בו, והפחד מקלון וחוסר אישור.</li>
+<li>קל: כמו קָלוֹן (משורש ק.ל.ה): החשש מביזוי ובוּשה</li>
 </ul>
+<p>הרצון להיות <code>אַשּׁוּר</code> - כלומר שהאחרים מאשרים אותו ותומכים בו, והפחד מקלון וחוסר אישור.</p>
 </div>
 </li>
 <li><code>פְרָת</code> - משורש פ.ר.ה - פריון ויצירה: ההנאה שביצירה, בניה ומימוש עצמי.</li>
 </ol>
-<p>ייתכן שסדר הנהרות הוא לפי רמת המורכבות התרבותית - ממוטיבציות שקשורות לתרבויות פרימיטיביות, למוטיבציות של תרבויות מתקדמות:</p>
+<p class="heads-list">ייתכן שסדר הנהרות הוא לפי רמת המורכבות התרבותית - ממוטיבציות שקשורות לתרבויות פרימיטיביות, למוטיבציות של תרבויות מתקדמות:</p>
 <ol>
 <li><code>פִּישׁוֹן</code> - תרבות ממוקדת חיי שפע</li>
 <li><code>גִּיחוֹן</code> - תרבות מיליטנטית ממוקדת עוצמה</li>

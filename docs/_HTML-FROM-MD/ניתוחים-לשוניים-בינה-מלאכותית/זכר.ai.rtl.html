@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,44 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">זכר.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#השורש-זכר-ושם-העצם-זכר-מחקר-בלשניהשוואתי">השורש ז.כ.ר ושם העצם זָכָר - מחקר בלשני־השוואתי</a></li>
+<li class="index-depth-1"><a href="#מבוא-שני-מישורי-המחקר">מבוא: שני מישורי המחקר</a></li>
+<li class="index-depth-0"><a href="#חלק-i-מישור-1-הבסיס-הסמיטי-מאומת">חלק I — מישור 1: הבסיס הסמיטי [✓ מאומת]</a></li>
+<li class="index-depth-1"><a href="#i1-השחזור-הפרוטושמי">I.1. השחזור הפרוטו־שמי</a></li>
+<li class="index-depth-1"><a href="#i2-אכדית-zakaru">I.2. אכדית — zakāru</a></li>
+<li class="index-depth-1"><a href="#i3-ערבית-קלאסית">I.3. ערבית קלאסית</a></li>
+<li class="index-depth-1"><a href="#i4-אוגריתית">I.4. אוגריתית</a></li>
+<li class="index-depth-1"><a href="#i5-כתובת-זכור-zakkur-מלך-חמת">I.5. כתובת זַכּוּר (Zakkur) — מלך חמת</a></li>
+<li class="index-depth-1"><a href="#i6-שדה-המשמעות-בעברית-מקראית">I.6. שדה המשמעות בעברית מקראית</a></li>
+<li class="index-depth-2"><a href="#הפועל-בבניינים-השונים">הפועל בבניינים השונים</a></li>
+<li class="index-depth-2"><a href="#שמות-עצם-נגזרים">שמות עצם נגזרים</a></li>
+<li class="index-depth-1"><a href="#i7-הזכירה-כקיום-הסכם-דפוס-מקראי-מובהק">I.7. הזכירה כקיום הסכם — דפוס מקראי מובהק</a></li>
+<li class="index-depth-2"><a href="#זכירה-אנושית-כקיום-מחויבות">זכירה אנושית כקיום מחויבות</a></li>
+<li class="index-depth-1"><a href="#i8-שם-העצם-זכר">I.8. שם העצם זָכָר</a></li>
+<li class="index-depth-2"><a href="#תיעוד-ופיזור">תיעוד ופיזור</a></li>
+<li class="index-depth-2"><a href="#הצימוד-הקבוע-זכר-ונקבה">הצימוד הקבוע &quot;זכר ונקבה&quot;</a></li>
+<li class="index-depth-2"><a href="#הופעה-חריגה-ירמיה-לא-כב">הופעה חריגה — ירמיה לא, כב</a></li>
+<li class="index-depth-1"><a href="#i9-תיאוריות-אטימולוגיות-לזכר">I.9. תיאוריות אטימולוגיות לזָכָר</a></li>
+<li class="index-depth-0"><a href="#חלק-ii-מישור-2-הפירוש-המערכתי-הצעת-קריאה-לא-קונצנזוס">חלק II — מישור 2: הפירוש המערכתי [⚠ הצעת קריאה, לא קונצנזוס]</a></li>
+<li class="index-depth-1"><a href="#ii1-ניסוח-ההצעה">II.1. ניסוח ההצעה</a></li>
+<li class="index-depth-1"><a href="#ii2-תמיכה-תיאורטית-מהפסיכולוגיה-והאנתרופולוגיה">II.2. תמיכה תיאורטית מהפסיכולוגיה והאנתרופולוגיה</a></li>
+<li class="index-depth-1"><a href="#ii3-תמיכה-טקסטואלית-הזירה-החזקה-ביותר">II.3. תמיכה טקסטואלית — הזירה החזקה ביותר</a></li>
+<li class="index-depth-1"><a href="#ii4-תמיכה-אקסטראמקראית-כתובת-זכור">II.4. תמיכה אקסטרא־מקראית — כתובת זכּור</a></li>
+<li class="index-depth-1"><a href="#ii5-סימטריה-מבנית-עם-נקב">II.5. סימטריה מבנית עם נ.ק.ב</a></li>
+<li class="index-depth-1"><a href="#ii6-מקריקצה-ושאלות-פתוחות">II.6. מקרי־קצה ושאלות פתוחות</a></li>
+<li class="index-depth-1"><a href="#ii7-הערכת-סבירות-ההצעה">II.7. הערכת סבירות ההצעה</a></li>
+<li class="index-depth-2"><a href="#חוזקות">חוזקות</a></li>
+<li class="index-depth-2"><a href="#הסתייגויות">הסתייגויות</a></li>
+<li class="index-depth-2"><a href="#מסקנה">מסקנה</a></li>
+<li class="index-depth-0"><a href="#מקורות">מקורות</a></li>
+<li class="index-depth-1"><a href="#ביבליוגרפיה-נוספת-ללא-קישורים-מקוונים-מלאים">ביבליוגרפיה נוספת (ללא קישורים מקוונים מלאים)</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/8006f9e9-cce3-4a95-979a-ef9c8b296cf8">Claude Opus 4.7</a></p>
 <h1 id="השורש-זכר-ושם-העצם-זכר-מחקר-בלשניהשוואתי">השורש ז.כ.ר ושם העצם זָכָר - מחקר בלשני־השוואתי</h1>
 <blockquote>
@@ -206,7 +248,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li><strong>להישבע</strong> (to swear)</li>
 </ul>
 <p>הצירוף הקבוע <strong>שֻׁמַ זַכָּארוּ</strong> (<em>šuma zakāru</em> — &quot;להגות שֵׁם&quot;) הוא נוסחת השבועה הסטנדרטית [מקור-3]. המשמעות הקוגניטיבית הצרופה של &quot;לזכור&quot; באכדית מבוצעת לרוב באמצעות פועל אחר (<em>ḫasāsu</em>) — מה שמהווה עדות חזקה לכך שמרכיב הדיבור הוא <strong>הראשוני</strong> בשורש זה.</p>
-<p>הצורה השמנית <strong>zikru / zikaru</strong> משמעה בעיקר:</p>
+<p class="heads-list">הצורה השמנית <strong>zikru / zikaru</strong> משמעה בעיקר:</p>
 <ul>
 <li>אזכור, ביטוי, אמירה, שֵׁם</li>
 <li>במקרים נדירים יותר: צורה הגויה במחשבה, דמות (משמעות משנית/הקשרית, למשל בקשרי גילגמש ויחזקאל טז [מקור-4])</li>
@@ -596,7 +638,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>הסימטריה הזו מספקת <strong>סיבה מבנית</strong> לכך ששני שמות המגדר נגזרו דווקא משני השורשים האלה: שניהם שורשים של פעולה מגדירה־קובעת. אחד מצד &quot;המקבל את ההגדרה&quot;, השני מצד &quot;המגדיר&quot;. ניתוחים פמיניסטיים של המבנה האסימטרי הזה הוצעו על ידי Phyllis Trible [מקור-26].</p>
 <h2 id="ii6-מקריקצה-ושאלות-פתוחות">II.6. מקרי־קצה ושאלות פתוחות</h2>
 <p><strong>(1) האכדית zikru:</strong> המשמעות &quot;צלם, פסל, רפליקה&quot; שהוצעה בתחילה לתמיכה — במחקר הקפדני יותר מתברר שהיא <strong>משנית</strong> באכדית; המשמעות הראשונית של zikru היא &quot;שם, אזכור, השבעה&quot; [מקור-4]. הקריאה כ&quot;דמות מקובעת באמירה&quot; אפשרית אך אינה הראיה החזקה.</p>
-<p><strong>(2) הערבית ḏakar = &quot;פאלוס&quot;:</strong> איך איבר מין מתחבר ל&quot;חוק והכרזה&quot;?</p>
+<p class="heads-list"><strong>(2) הערבית ḏakar = &quot;פאלוס&quot;:</strong> איך איבר מין מתחבר ל&quot;חוק והכרזה&quot;?</p>
 <ul>
 <li><strong>אלטרנטיבה א:</strong> הפאלוס כ&quot;איבר המצהיר/המטיל&quot; — &quot;החותם&quot; של מעשה ההזרעה.</li>
 <li><strong>אלטרנטיבה ב:</strong> התפתחות מטונימית מאוחרת בערבית מ&quot;זכר/מגדר&quot; → &quot;האיבר המאפיין את הזכר&quot;.</li>

@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,61 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">תהו.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#המילה-תהו-במקרא-ניתוח-בלשניהשוואתי">המילה ״תֹהוּ״ במקרא: ניתוח בלשני־השוואתי</a></li>
+<li class="index-depth-1"><a href="#1-הקדמה-שאלות-מנחות">1. הקדמה: שאלות מנחות</a></li>
+<li class="index-depth-1"><a href="#2-היקרויות-במקרא">2. היקרויות במקרא</a></li>
+<li class="index-depth-2"><a href="#טבלת-היקרויות">טבלת היקרויות</a></li>
+<li class="index-depth-2"><a href="#הערות-מבניות">הערות מבניות</a></li>
+<li class="index-depth-1"><a href="#3-ניתוח-מורפולוגי-וצורני">3. ניתוח מורפולוגי וצורני</a></li>
+<li class="index-depth-2"><a href="#אפשרויות-ניתוח-השורש">אפשרויות ניתוח השורש</a></li>
+<li class="index-depth-2"><a href="#הסיומת-ו">הסיומת ‎-וּ</a></li>
+<li class="index-depth-2"><a href="#זיווג-עם-בהו">זיווג עם ״בֹּהוּ״</a></li>
+<li class="index-depth-1"><a href="#4-אטימולוגיה-ולשונות-שמיות-משוות">4. אטימולוגיה ולשונות שמיות משוות</a></li>
+<li class="index-depth-2"><a href="#ערבית">ערבית</a></li>
+<li class="index-depth-2"><a href="#אכדית">אכדית</a></li>
+<li class="index-depth-2"><a href="#אוגריתית">אוגריתית</a></li>
+<li class="index-depth-2"><a href="#פיניקית-כנענית">פיניקית / כנענית</a></li>
+<li class="index-depth-2"><a href="#סיכום-אטימולוגי">סיכום אטימולוגי</a></li>
+<li class="index-depth-1"><a href="#5-ניתוח-סמנטי-טווח-המובנים">5. ניתוח סמנטי - טווח המובנים</a></li>
+<li class="index-depth-2"><a href="#א-מובן-גיאוגרפי-קונקרטי-שממה-מדבר">א. מובן גיאוגרפי-קונקרטי: שממה, מדבר</a></li>
+<li class="index-depth-2"><a href="#ב-מובן-ערכי-הבל-ריקנות-חוסר-תוחלת">ב. מובן ערכי: הבל, ריקנות, חוסר תוחלת</a></li>
+<li class="index-depth-2"><a href="#ג-מובן-קוסמולוגי-ראשיתי">ג. מובן קוסמולוגי-ראשיתי</a></li>
+<li class="index-depth-2"><a href="#ד-מובן-ביניים-בלבול-חוסר-אחיזה">ד. מובן ביניים: בלבול, חוסר אחיזה</a></li>
+<li class="index-depth-2"><a href="#דיון-סמנטי">דיון סמנטי</a></li>
+<li class="index-depth-1"><a href="#6-הצירוף-תהו-ובהו">6. הצירוף ״תֹהוּ וָבֹהוּ״</a></li>
+<li class="index-depth-2"><a href="#היקרויות">היקרויות</a></li>
+<li class="index-depth-2"><a href="#בהו-כשלעצמו">״בֹּהוּ״ כשלעצמו</a></li>
+<li class="index-depth-2"><a href="#תופעות-לשוניות-מקבילות">תופעות לשוניות מקבילות</a></li>
+<li class="index-depth-2"><a href="#פירוש-הצירוף">פירוש הצירוף</a></li>
+<li class="index-depth-1"><a href="#7-הגישות-המחקריות-המרכזיות">7. הגישות המחקריות המרכזיות</a></li>
+<li class="index-depth-2"><a href="#א-גישת-ה-chaoskampf-גישתו-של-גונקל-וההמשך">א. גישת ה-Chaoskampf - גישתו של גונקל וההמשך</a></li>
+<li class="index-depth-2"><a href="#ב-הגישה-הלא-מיתית-גישתו-של-טסומורה">ב. הגישה הלא-מיתית - גישתו של טסומורה</a></li>
+<li class="index-depth-2"><a href="#ג-הגישה-המדברית-מובן-ראשוני">ג. הגישה ה״מדברית״ - מובן ראשוני</a></li>
+<li class="index-depth-2"><a href="#ד-הגישה-הסלבית-תרבותית-של-אלת">ד. הגישה הסלבית-תרבותית של אלת</a></li>
+<li class="index-depth-2"><a href="#ה-גישות-בעברית">ה. גישות בעברית</a></li>
+<li class="index-depth-2"><a href="#ו-הצעת-lambert">ו. הצעת Lambert</a></li>
+<li class="index-depth-2"><a href="#ז-פירושים-פרטניים-בניזמננו-על-בראשית">ז. פירושים פרטניים בני־זמננו על בראשית</a></li>
+<li class="index-depth-2"><a href="#ח-גישות-מאוחרות-יותר">ח. גישות מאוחרות יותר</a></li>
+<li class="index-depth-1"><a href="#8-תרגומים-עתיקים">8. תרגומים עתיקים</a></li>
+<li class="index-depth-2"><a href="#תרגום-השבעים-lxx">תרגום השבעים (LXX)</a></li>
+<li class="index-depth-2"><a href="#תרגום-אונקלוס">תרגום אונקלוס</a></li>
+<li class="index-depth-2"><a href="#וולגטה-היירונימוס">וולגטה (היירונימוס)</a></li>
+<li class="index-depth-2"><a href="#תרגומים-יווניים-נוספים-מאסכולת-אקילס-סימכוס-תיאודוטיון">תרגומים יווניים נוספים (מאסכולת אקילס, סימכוס, תיאודוטיון)</a></li>
+<li class="index-depth-1"><a href="#9-גישה-פנומנולוגית-קוגניטיבית">9. גישה פנומנולוגית-קוגניטיבית</a></li>
+<li class="index-depth-2"><a href="#השאלה-המנחה">השאלה המנחה</a></li>
+<li class="index-depth-2"><a href="#הצעה-1-חוויית-האדם-במדבר-נטול-דרך">הצעה 1: חוויית האדם במדבר נטול דרך</a></li>
+<li class="index-depth-2"><a href="#הצעה-2-חוויית-הראייה-שאינה-מצליחה-לאחוז">הצעה 2: חוויית הראייה שאינה מצליחה לאחוז</a></li>
+<li class="index-depth-2"><a href="#הצעה-3-שילוב-מרחב-ללא-דיפרנציאציה">הצעה 3: שילוב - מרחב ללא דיפרנציאציה</a></li>
+<li class="index-depth-2"><a href="#השלכות">השלכות</a></li>
+<li class="index-depth-1"><a href="#10-סוגיות-פתוחות-וויכוחים-בני-זמננו">10. סוגיות פתוחות וויכוחים בני-זמננו</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/a4072044-f930-446d-afcb-926a5eb430ba">Claude Opus 4.7</a></p>
 <h1 id="המילה-תהו-במקרא-ניתוח-בלשניהשוואתי">המילה ״תֹהוּ״ במקרא: ניתוח בלשני־השוואתי</h1>
 <p><em>מחקר מסכם: אטימולוגיה, מורפולוגיה, ניתוח סמנטי, וגישות פרשניות מודרניות למילה ״תֹהוּ״ - כפי שהיא מופיעה בפסוק ״וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ״ (בראשית א, ב) ובמופעיה האחרים במקרא.</em></p>
@@ -428,7 +487,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li>איוב כו, ז: ״נֹטֶה צָפוֹן עַל תֹּהוּ״ - נטיית השמים על חלל ריק.</li>
 </ul>
 <h3 id="דיון-סמנטי">דיון סמנטי</h3>
-<p>ניתן לראות בכל המופעים שתי הבחנות סמנטיות עיקריות:</p>
+<p class="heads-list">ניתן לראות בכל המופעים שתי הבחנות סמנטיות עיקריות:</p>
 <ol>
 <li><strong>חלל פתוח חסר אחיזה</strong> (גיאוגרפי וקוסמי)</li>
 <li><strong>חוסר ממש/תוחלת</strong> (ערכי)</li>
@@ -451,7 +510,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <h3 id="תופעות-לשוניות-מקבילות">תופעות לשוניות מקבילות</h3>
 <p>צירופי חרוז דומים בעברית מקראית: ״הָבֵל הֲבָלִים״, ״שָׁמִיר וָשַׁיִת״, ״שֹׁד וָשֶׁבֶר״ - מערכת קבועה של זיווגי חרוז וצליל. בהקשר השוואתי-שמי: צירופי חרוז קבועים שכיחים בספרות אוגריתית - תכונת סגנון פואטית. ראו סקירה כללית של הצירוף ב-Wikipedia [מקור-10].</p>
 <h3 id="פירוש-הצירוף">פירוש הצירוף</h3>
-<p>שתי אפשרויות פרשניות מרכזיות:</p>
+<p class="heads-list">שתי אפשרויות פרשניות מרכזיות:</p>
 <ul>
 <li><strong>מרישמוס</strong> (merism): שני מושגים המכסים את כל הסקאלה (כמו ״ערב ובוקר״, ״השמים והארץ״).</li>
 <li><strong>הנדיאדיס</strong> (hendiadys): שתי מילים שיוצרות מושג אחד: ״תוהו ובוהו״ = ״ריקנות מוחלטת״ / ״שממה חסרת ממש״.</li>
@@ -460,7 +519,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <h2 id="7-הגישות-המחקריות-המרכזיות">7. הגישות המחקריות המרכזיות</h2>
 <h3 id="א-גישת-ה-chaoskampf-גישתו-של-גונקל-וההמשך">א. גישת ה-Chaoskampf - גישתו של גונקל וההמשך</h3>
 <p>Gunkel, <em>Schöpfung und Chaos in Urzeit und Endzeit</em> (1895) [מקור-4] טען לזיקה ישירה בין בראשית א לבין עלילת אנומה אליש הבבלית. ההתאמה המרכזית: תהום (tehōm) = תיאמת (Tiāmat). בעקבותיו דרשו חוקרים לקרוא את ״תֹהוּ וָבֹהוּ״ במסגרת קוסמולוגיה מיתית של מאבק יוצר-כאוס.</p>
-<p><strong>ממשיכים</strong>:</p>
+<p class="heads-list"><strong>ממשיכים</strong>:</p>
 <ul>
 <li>Anderson, <em>Creation versus Chaos</em> (1967) [מקור-11]</li>
 <li>Levenson, <em>Creation and the Persistence of Evil</em> (1988) [מקור-12]</li>
@@ -547,7 +606,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>מהי החוויה הראשונית הקונקרטית שמהפכה למילה ״תהו״?</p>
 <h3 id="הצעה-1-חוויית-האדם-במדבר-נטול-דרך">הצעה 1: חוויית האדם במדבר נטול דרך</h3>
 <p>האדם הקדום מכיר את העולם כמסומן: שבילים, נחלים, נוף מוכר, סימנים גיאוגרפיים. ה״תהו״ הוא המרחב שבו אין סימנים - הראייה נושקת לאופק ללא נקודות אחיזה. במצב כזה, האדם תועה (״ויתעם בתהו לא דרך״) - אובד את האוריינטציה.</p>
-<p>מהחוויה הקונקרטית הזו מצמיחה השפה השלכות מטפוריות:</p>
+<p class="heads-list">מהחוויה הקונקרטית הזו מצמיחה השפה השלכות מטפוריות:</p>
 <ul>
 <li>מקום שאין בו ערך = הבל (״תֹּהוּ אֲשֶׁר לֹא יוֹעִילוּ״)</li>
 <li>מצב של חוסר התמצאות = בלבול</li>
@@ -558,7 +617,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <h3 id="הצעה-3-שילוב-מרחב-ללא-דיפרנציאציה">הצעה 3: שילוב - מרחב ללא דיפרנציאציה</h3>
 <p>בלי הבחנות, בלי שונות, בלי נקודות התייחסות. האדם תופס את העולם דרך הבחנות (זה / לא-זה, פה / שם, יום / לילה). ה״תהו״ הוא מצב לפני שנעשה הבחנות. מתאים יפה לתיאור בריאה כפעולת הבחנה: ״ויבדל אלהים בין... ובין...״.</p>
 <h3 id="השלכות">השלכות</h3>
-<p>ניתן לראות את כל המופעים המקראיים כווריאציות של תפיסה יסודית זו:</p>
+<p class="heads-list">ניתן לראות את כל המופעים המקראיים כווריאציות של תפיסה יסודית זו:</p>
 <ul>
 <li>האלילים הם ״תהו״ כי אין להם הבחנה אמיתית מפיסת עץ.</li>
 <li>העושק הוא הטיית הדין ב-״תהו״ כי הוא משחית את ההבחנה בין צדיק לרשע.</li>

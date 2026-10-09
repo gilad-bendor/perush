@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,192 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="ltr">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../../index.html">פירוש</a> / <a dir="auto" href="../../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="../index.html">נספחים-לפירוש</a> / <a dir="auto" href="index.html">ג'מבטיסטה ויקו - המדע החדש</a> / <span dir="auto">Original - French - Principes de la Philosophie de l-Histoire traduits de la Scienza nuova</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>Contents</summary>
+<ul>
+<li class="index-depth-0"><a href="#avis-du-traducteur">AVIS DU TRADUCTEUR.</a></li>
+<li class="index-depth-0"><a href="#discours-sur-le-systeme-et-la-vie-de-vico">DISCOURS SUR LE SYSTÈME ET LA VIE DE VICO.</a></li>
+<li class="index-depth-0"><a href="#appendice-du-discours">APPENDICE DU DISCOURS.</a></li>
+<li class="index-depth-0"><a href="#table-des-matieres">TABLE DES MATIÈRES.</a></li>
+<li class="index-depth-0"><a href="#principes-de-la-philosophie-de-lhistoire">PRINCIPES DE LA PHILOSOPHIE DE L'HISTOIRE.</a></li>
+<li class="index-depth-0"><a href="#livre-premier">LIVRE PREMIER.</a></li>
+<li class="index-depth-1"><a href="#des-principes">DES PRINCIPES.</a></li>
+<li class="index-depth-0"><a href="#argument">ARGUMENT.</a></li>
+<li class="index-depth-0"><a href="#livre-premier-2">LIVRE PREMIER.</a></li>
+<li class="index-depth-1"><a href="#des-principes-2">DES PRINCIPES.</a></li>
+<li class="index-depth-0"><a href="#chapitre-premier">CHAPITRE PREMIER.</a></li>
+<li class="index-depth-1"><a href="#table-chronologique-ou-preparation-des-matieres-que-doit-mettre-en-œuvre-la-science-nouvelle">TABLE CHRONOLOGIQUE, OU PRÉPARATION DES MATIÈRES QUE DOIT METTRE EN ŒUVRE LA SCIENCE NOUVELLE.</a></li>
+<li class="index-depth-0"><a href="#chapitre-ii">CHAPITRE II.</a></li>
+<li class="index-depth-1"><a href="#axiomes">AXIOMES.</a></li>
+<li class="index-depth-1"><a href="#1-22-axiomes-generaux">1-22. AXIOMES GÉNÉRAUX.</a></li>
+<li class="index-depth-2"><a href="#1-4-refutation-des-opinions-que-lon-sest-formees-jusquici-des-commencemens-de-la-civilisation">1-4. Réfutation des opinions que l'on s'est formées jusqu'ici des commencemens de la civilisation.</a></li>
+<li class="index-depth-2"><a href="#5-15-fondemens-du-vrai">5-15. Fondemens du vrai.</a></li>
+<li class="index-depth-2"><a href="#16-22-fondemens-du-certain">16-22. Fondemens du certain.</a></li>
+<li class="index-depth-1"><a href="#23-114-axiomes-particuliers">23-114. AXIOMES PARTICULIERS.</a></li>
+<li class="index-depth-2"><a href="#23-28-division-des-peuples-anciens-en-hebreux-et-gentilsdeluge-universelgeans">23-28. Division des peuples anciens en Hébreux et Gentils.—Déluge universel.—Géans.</a></li>
+<li class="index-depth-2"><a href="#28-40-principes-de-la-theologie-pratiqueorigine-de-lidolatrie-de-la-divination-des-sacrifices">28-40. Principes de la théologie pratique.—Origine de l'idolâtrie, de la divination, des sacrifices.</a></li>
+<li class="index-depth-2"><a href="#41-46-principes-de-la-mythologie-historique">41-46. Principes de la Mythologie historique.</a></li>
+<li class="index-depth-2"><a href="#47-62-poetique">47-62. POÉTIQUE.</a></li>
+<li class="index-depth-2"><a href="#47-62-principe-des-caracteres-poetiques">47-62. Principe des caractères poétiques.</a></li>
+<li class="index-depth-2"><a href="#63-65-principes-etymologiques">63-65. Principes étymologiques.</a></li>
+<li class="index-depth-2"><a href="#66-86-principes-de-lhistoire-ideale">66-86. Principes de l'histoire idéale.</a></li>
+<li class="index-depth-2"><a href="#84-96-ancienne-histoire-romaine">84-96. Ancienne histoire romaine.</a></li>
+<li class="index-depth-2"><a href="#97-103-migration-des-peuples">97-103. Migration des peuples.</a></li>
+<li class="index-depth-2"><a href="#104-114-principes-du-droit-naturel">104-114. Principes du droit naturel.</a></li>
+<li class="index-depth-0"><a href="#chapitre-iii">CHAPITRE III.</a></li>
+<li class="index-depth-1"><a href="#trois-principes-fondamentaux">TROIS PRINCIPES FONDAMENTAUX.</a></li>
+<li class="index-depth-0"><a href="#chapitre-iv">CHAPITRE IV.</a></li>
+<li class="index-depth-1"><a href="#de-la-methode">DE LA MÉTHODE.</a></li>
+<li class="index-depth-0"><a href="#livre-second">LIVRE SECOND.</a></li>
+<li class="index-depth-1"><a href="#de-la-sagesse-poetique">DE LA SAGESSE POÉTIQUE.</a></li>
+<li class="index-depth-0"><a href="#argument-2">ARGUMENT.</a></li>
+<li class="index-depth-0"><a href="#livre-second-2">LIVRE SECOND.</a></li>
+<li class="index-depth-1"><a href="#de-la-sagesse-poetique-2">DE LA SAGESSE POÉTIQUE.</a></li>
+<li class="index-depth-0"><a href="#chapitre-premier-2">CHAPITRE PREMIER.</a></li>
+<li class="index-depth-1"><a href="#sujet-de-ce-livre">SUJET DE CE LIVRE.</a></li>
+<li class="index-depth-2"><a href="#i">§. I.</a></li>
+<li class="index-depth-2"><a href="#ii-de-la-sagesse-en-general">§. II. De la sagesse en général.</a></li>
+<li class="index-depth-2"><a href="#iii-exposition-et-division-de-la-sagesse-poetique">§. III. Exposition et division de la sagesse poétique.</a></li>
+<li class="index-depth-0"><a href="#chapitre-ii-2">CHAPITRE II.</a></li>
+<li class="index-depth-1"><a href="#de-la-metaphysique-poetique">DE LA MÉTAPHYSIQUE POÉTIQUE.</a></li>
+<li class="index-depth-2"><a href="#i-origine-de-la-poesie-de-lidolatrie-de-la-divination-et-des-sacrifices">§. I. Origine de la poésie, de l'idolâtrie, de la divination et des sacrifices.</a></li>
+<li class="index-depth-2"><a href="#ii-corollaires">§. II. COROLLAIRES</a></li>
+<li class="index-depth-2"><a href="#relatifs-aux-principaux-aspects-de-la-science-nouvelle">Relatifs aux principaux aspects de la science nouvelle.</a></li>
+<li class="index-depth-0"><a href="#chapitre-iii-2">CHAPITRE III.</a></li>
+<li class="index-depth-1"><a href="#de-la-logique-poetique">DE LA LOGIQUE POÉTIQUE.</a></li>
+<li class="index-depth-2"><a href="#i-2">§ I.</a></li>
+<li class="index-depth-2"><a href="#ii-corollaires-2">§. II. COROLLAIRES</a></li>
+<li class="index-depth-2"><a href="#relatifs-aux-tropes-aux-metamorphoses-poetiques-et-aux-monstres-des-poetes">Relatifs aux tropes, aux métamorphoses poétiques et aux monstres des poètes.</a></li>
+<li class="index-depth-2"><a href="#iii-corollaires">§. III. COROLLAIRES</a></li>
+<li class="index-depth-2"><a href="#relatifs-aux-caracteres-poetiques-employes-comme-signes-du-langage-par-les-premieres-nations">Relatifs aux caractères poétiques employés comme signes du langage par les premières nations.</a></li>
+<li class="index-depth-2"><a href="#iv-corollaires">§. IV. COROLLAIRES</a></li>
+<li class="index-depth-2"><a href="#v-corollaires">§. V. COROLLAIRES</a></li>
+<li class="index-depth-2"><a href="#relatifs-a-lorigine-de-lelocution-poetique-des-episodes-du-tour-du-nombre-du-chant-et-du-vers">Relatifs à l'origine de l'élocution poétique, des épisodes, du tour, du nombre, du chant et du vers.</a></li>
+<li class="index-depth-2"><a href="#vi-corollaires">§. VI. COROLLAIRES</a></li>
+<li class="index-depth-2"><a href="#relatifs-a-la-logique-des-esprits-cultives">Relatifs à la logique des esprits cultivés.</a></li>
+<li class="index-depth-0"><a href="#chapitre-iv-2">CHAPITRE IV.</a></li>
+<li class="index-depth-0"><a href="#de-la-morale-poetique-et-de-lorigine-des-vertus-vulgaires-qui-resulterent-de-linstitution-de-la-religion-et-des-mariages">DE LA MORALE POÉTIQUE, ET DE L'ORIGINE DES VERTUS VULGAIRES QUI RÉSULTÈRENT DE L'INSTITUTION DE LA RELIGION ET DES MARIAGES.</a></li>
+<li class="index-depth-0"><a href="#chapitre-v">CHAPITRE V.</a></li>
+<li class="index-depth-1"><a href="#du-gouvernement-de-la-famille-ou-economie-dans-les-ages-poetiques">DU GOUVERNEMENT DE LA FAMILLE, OU ÉCONOMIE, DANS LES ÂGES POÉTIQUES.</a></li>
+<li class="index-depth-2"><a href="#i-de-la-famille-composee-des-parens-et-des-enfans-sans-esclaves-ni-serviteurs">§. I. De la famille composée des parens et des enfans, sans esclaves ni serviteurs.</a></li>
+<li class="index-depth-2"><a href="#ii-des-familles-composees-de-serviteurs-anterieures-a-lexistence-des-cites-et-sans-lesquelles-cette-existence-etait-impossible">§. II. Des familles composées de serviteurs, antérieures à l'existence des cités, et sans lesquelles cette existence était impossible.</a></li>
+<li class="index-depth-2"><a href="#iii-corollaires-2">§. III. COROLLAIRES</a></li>
+<li class="index-depth-2"><a href="#relatifs-aux-contrats-qui-se-font-par-le-simple-consentement-des-parties">Relatifs aux contrats qui se font par le simple consentement des parties.</a></li>
+<li class="index-depth-0"><a href="#chapitre-vi">CHAPITRE VI.</a></li>
+<li class="index-depth-1"><a href="#de-la-politique-poetique">DE LA POLITIQUE POÉTIQUE.</a></li>
+<li class="index-depth-2"><a href="#i-origine-des-premieres-republiques-dans-la-forme-la-plus-rigoureusement-aristocratique">§. I. Origine des premières républiques, dans la forme la plus rigoureusement aristocratique.</a></li>
+<li class="index-depth-2"><a href="#ii-les-societes-politiques-sont-nees-toutes-de-certains-principes-eternels-des-fiefs">§. II. Les sociétés politiques sont nées toutes de certains principes éternels des fiefs.</a></li>
+<li class="index-depth-2"><a href="#iii-de-lorigine-du-cens-et-du-tresor-public-ærarium-chez-les-romains">§. III. De l'origine du cens et du trésor public (ærarium, chez les Romains).</a></li>
+<li class="index-depth-2"><a href="#iv-de-lorigine-des-comices-chez-les-romains">§ IV. De l'origine des comices chez les Romains.</a></li>
+<li class="index-depth-2"><a href="#v-corollaire">§. V. COROLLAIRE.</a></li>
+<li class="index-depth-2"><a href="#vi-suite-de-la-politique-heroique">§. VI. Suite de la politique héroïque.</a></li>
+<li class="index-depth-2"><a href="#vii-corollaires">§. VII. COROLLAIRES</a></li>
+<li class="index-depth-2"><a href="#viii-corollaire">§. VIII. COROLLAIRE</a></li>
+<li class="index-depth-0"><a href="#chapitre-vii">CHAPITRE VII.</a></li>
+<li class="index-depth-1"><a href="#de-la-physique-poetique">DE LA PHYSIQUE POÉTIQUE.</a></li>
+<li class="index-depth-2"><a href="#i-de-la-physiologie-poetique">§. I. De la physiologie poétique.</a></li>
+<li class="index-depth-2"><a href="#ii-corollaire">§. II. COROLLAIRE</a></li>
+<li class="index-depth-2"><a href="#iii-corollaire">§. III. COROLLAIRE</a></li>
+<li class="index-depth-0"><a href="#chapitre-viii">CHAPITRE VIII.</a></li>
+<li class="index-depth-0"><a href="#de-la-cosmographie-poetique">DE LA COSMOGRAPHIE POÉTIQUE.</a></li>
+<li class="index-depth-0"><a href="#chapitre-ix">CHAPITRE IX.</a></li>
+<li class="index-depth-0"><a href="#de-lastronomie-poetique">DE L'ASTRONOMIE POÉTIQUE.</a></li>
+<li class="index-depth-0"><a href="#chapitre-x">CHAPITRE X.</a></li>
+<li class="index-depth-0"><a href="#de-la-chronologie-poetique">DE LA CHRONOLOGIE POÉTIQUE.</a></li>
+<li class="index-depth-0"><a href="#canon-chronologique">CANON CHRONOLOGIQUE</a></li>
+<li class="index-depth-0"><a href="#chapitre-xi">CHAPITRE XI.</a></li>
+<li class="index-depth-1"><a href="#de-la-geographie-poetique">DE LA GÉOGRAPHIE POÉTIQUE.</a></li>
+<li class="index-depth-0"><a href="#conclusion-de-ce-livre">CONCLUSION DE CE LIVRE.</a></li>
+<li class="index-depth-0"><a href="#livre-troisieme">LIVRE TROISIÈME.</a></li>
+<li class="index-depth-1"><a href="#decouverte-du-veritable-homere">DÉCOUVERTE DU VÉRITABLE HOMÈRE.</a></li>
+<li class="index-depth-0"><a href="#argument-3">ARGUMENT.</a></li>
+<li class="index-depth-0"><a href="#livre-troisieme-2">LIVRE TROISIÈME.</a></li>
+<li class="index-depth-1"><a href="#decouverte-du-veritable-homere-2">DÉCOUVERTE DU VÉRITABLE HOMÈRE.</a></li>
+<li class="index-depth-1"><a href="#chapitre-i">CHAPITRE I.</a></li>
+<li class="index-depth-2"><a href="#de-la-sagesse-philosophique-que-lon-a-attribuee-a-homere">DE LA SAGESSE PHILOSOPHIQUE QUE L'ON A ATTRIBUÉE À HOMÈRE.</a></li>
+<li class="index-depth-1"><a href="#chapitre-ii-3">CHAPITRE II.</a></li>
+<li class="index-depth-2"><a href="#de-la-patrie-dhomere">DE LA PATRIE D'HOMÈRE.</a></li>
+<li class="index-depth-1"><a href="#chapitre-iii-3">CHAPITRE III.</a></li>
+<li class="index-depth-2"><a href="#du-temps-ou-vecut-homere">DU TEMPS OÙ VÉCUT HOMÈRE.</a></li>
+<li class="index-depth-1"><a href="#chapitre-iv-3">CHAPITRE IV.</a></li>
+<li class="index-depth-2"><a href="#pourquoi-le-genie-dhomere-dans-la-poesie-heroique-ne-peut-jamais-etre-egale-observations-sur-la-comedie-et-la-tragedie">POURQUOI LE GÉNIE D'HOMÈRE DANS LA POÉSIE HÉROÏQUE NE PEUT JAMAIS ÊTRE ÉGALÉ. OBSERVATIONS SUR LA COMÉDIE ET LA TRAGÉDIE.</a></li>
+<li class="index-depth-1"><a href="#chapitre-v-2">CHAPITRE V.</a></li>
+<li class="index-depth-2"><a href="#observations-philosophiques-devant-servir-a-la-decouverte-du-veritable-homere">OBSERVATIONS PHILOSOPHIQUES DEVANT SERVIR À LA DÉCOUVERTE DU VÉRITABLE HOMÈRE.</a></li>
+<li class="index-depth-1"><a href="#chapitre-vi-2">CHAPITRE VI.</a></li>
+<li class="index-depth-2"><a href="#observations-philologiques-qui-serviront-a-la-decouverte-de-veritable-homere">OBSERVATIONS PHILOLOGIQUES, QUI SERVIRONT À LA DÉCOUVERTE DE VÉRITABLE HOMÈRE.</a></li>
+<li class="index-depth-1"><a href="#chapitre-vii-2">CHAPITRE VII.</a></li>
+<li class="index-depth-2"><a href="#i-decouverte-du-veritable-homere">§. I. DÉCOUVERTE DU VÉRITABLE HOMÈRE.</a></li>
+<li class="index-depth-2"><a href="#ii-tout-ce-qui-etait-absurde-et-invraisemblable-dans-lhomere-que-lon-sest-figure-jusquici-devient-dans-notre-homere-convenance-et-necessite">§. II. Tout ce qui était absurde et invraisemblable dans l'Homère que l'on s'est figuré jusqu'ici, devient dans notre Homère convenance et nécessité.</a></li>
+<li class="index-depth-2"><a href="#iii-on-doit-trouver-dans-les-poemes-dhomere-les-deux-principales-sources-des-faits-relatifs-au-droit-naturel-des-gens-considere-chez-les-grecs">§. III. On doit trouver dans les poèmes d'Homère les deux principales sources des faits relatifs au droit naturel des gens, considéré chez les Grecs.</a></li>
+<li class="index-depth-0"><a href="#appendice">APPENDICE.</a></li>
+<li class="index-depth-1"><a href="#histoire-raisonnee-des-poetes-dramatiques-et-lyriques">Histoire raisonnée des poètes dramatiques et lyriques.</a></li>
+<li class="index-depth-0"><a href="#livre-quatrieme">LIVRE QUATRIÈME.</a></li>
+<li class="index-depth-1"><a href="#du-cours-que-suit-lhistoire-des-nations">DU COURS QUE SUIT L'HISTOIRE DES NATIONS.</a></li>
+<li class="index-depth-0"><a href="#argument-4">ARGUMENT.</a></li>
+<li class="index-depth-0"><a href="#livre-quatrieme-2">LIVRE QUATRIÈME.</a></li>
+<li class="index-depth-1"><a href="#du-cours-que-suit-lhistoire-des-nations-2">DU COURS QUE SUIT L'HISTOIRE DES NATIONS.</a></li>
+<li class="index-depth-1"><a href="#chapitre-i-2">CHAPITRE I.</a></li>
+<li class="index-depth-2"><a href="#introduction-trois-sortes-de-natures-de-mœurs-de-droits-naturels-de-gouvernemens">INTRODUCTION. TROIS SORTES DE NATURES, DE MŒURS, DE DROITS NATURELS, DE GOUVERNEMENS.</a></li>
+<li class="index-depth-2"><a href="#i-introduction">§. I. Introduction.</a></li>
+<li class="index-depth-2"><a href="#ii-trois-especes-de-natures">§. II. Trois espèces de natures.</a></li>
+<li class="index-depth-2"><a href="#iii-trois-sortes-de-mœurs">§. III. Trois sortes de mœurs.</a></li>
+<li class="index-depth-2"><a href="#iv-trois-especes-de-droits-naturels">§. IV. Trois espèces de droits naturels.</a></li>
+<li class="index-depth-2"><a href="#v-trois-especes-de-gouvernemens">§. V. Trois espèces de gouvernemens.</a></li>
+<li class="index-depth-0"><a href="#chapitre-ii-4">CHAPITRE II.</a></li>
+<li class="index-depth-1"><a href="#trois-especes-de-langues-et-de-caracteres">TROIS ESPÈCES DE LANGUES ET DE CARACTÈRES.</a></li>
+<li class="index-depth-2"><a href="#i-trois-especes-de-langues">§. I. Trois espèces de langues.</a></li>
+<li class="index-depth-2"><a href="#ii-trois-especes-de-caracteres">§. II. Trois espèces de caractères.</a></li>
+<li class="index-depth-0"><a href="#chapitre-iii-4">CHAPITRE III.</a></li>
+<li class="index-depth-1"><a href="#trois-especes-de-jurisprudences-dautorites-de-raisons-corollaires-relatifs-a-la-politique-et-au-droit-des-romains">TROIS ESPÈCES DE JURISPRUDENCES, D'AUTORITÉS, DE RAISONS; COROLLAIRES RELATIFS À LA POLITIQUE ET AU DROIT DES ROMAINS.</a></li>
+<li class="index-depth-2"><a href="#i-trois-especes-de-jurisprudences-ou-sagesses">§. I. Trois espèces de jurisprudences ou sagesses.</a></li>
+<li class="index-depth-2"><a href="#ii-trois-especes-dautorites">§. II. Trois espèces d'autorités.</a></li>
+<li class="index-depth-2"><a href="#iii-trois-especes-de-raisons">§. III. Trois espèces de raisons.</a></li>
+<li class="index-depth-2"><a href="#iv-corollaire">§. IV. COROLLAIRE.</a></li>
+<li class="index-depth-2"><a href="#v-corollaire-2">§. V. COROLLAIRE.</a></li>
+<li class="index-depth-0"><a href="#chapitre-iv-4">CHAPITRE IV.</a></li>
+<li class="index-depth-1"><a href="#trois-especes-de-jugemenscorollaire-relatif-au-duel-et-aux-represaillestrois-periodes-dans-lhistoire-des-mœurs-et-de-la-jurisprudence">TROIS ESPÈCES DE JUGEMENS.—COROLLAIRE RELATIF AU DUEL ET AUX REPRÉSAILLES.—TROIS PÉRIODES DANS L'HISTOIRE DES MŒURS ET DE LA JURISPRUDENCE.</a></li>
+<li class="index-depth-2"><a href="#i-trois-especes-de-jugemens">§. I. Trois espèces de jugemens.</a></li>
+<li class="index-depth-2"><a href="#ii-trois-periodes-dans-lhistoire-des-mœurs-et-de-la-jurisprudence-sectæ-temporum">§. II. Trois périodes dans l'histoire des mœurs et de la jurisprudence (sectæ temporum).</a></li>
+<li class="index-depth-0"><a href="#chapitre-v-3">CHAPITRE V.</a></li>
+<li class="index-depth-1"><a href="#autres-preuves-tirees-des-caracteres-propres-aux-aristocraties-heroiquesgarde-des-limites-des-ordres-politiques-des-lois">AUTRES PREUVES TIRÉES DES CARACTÈRES PROPRES AUX ARISTOCRATIES HÉROÏQUES.—GARDE DES LIMITES, DES ORDRES POLITIQUES, DES LOIS.</a></li>
+<li class="index-depth-2"><a href="#i-de-la-garde-et-conservation-des-limites">§. I. De la garde et conservation des limites.</a></li>
+<li class="index-depth-2"><a href="#ii-de-la-conservation-et-distinction-des-ordres-politiques">§. II. De la conservation et distinction des ordres politiques.</a></li>
+<li class="index-depth-2"><a href="#iii-de-la-conservation-des-lois">§. III. De la conservation des lois.</a></li>
+<li class="index-depth-0"><a href="#chapitre-vi-3">CHAPITRE VI.</a></li>
+<li class="index-depth-1"><a href="#autres-preuves-tirees-de-la-maniere-dont-chaque-forme-de-la-societe-se-combine-avec-la-precedenterefutation-de-bodin">AUTRES PREUVES TIRÉES DE LA MANIÈRE DONT CHAQUE FORME DE LA SOCIÉTÉ SE COMBINE AVEC LA PRÉCÉDENTE.—RÉFUTATION DE BODIN.</a></li>
+<li class="index-depth-2"><a href="#i-3">§. I.</a></li>
+<li class="index-depth-2"><a href="#ii-dune-loi-royale-eternelle-et-fondee-en-nature-en-vertu-de-laquelle-les-nations-vont-se-reposer-dans-la-monarchie">§. II. D'une loi royale, éternelle et fondée en nature, en vertu de laquelle les nations vont se reposer dans la monarchie.</a></li>
+<li class="index-depth-2"><a href="#iii-refutation-des-principes-de-la-politique-de-bodin">§. III. Réfutation des principes de la politique de Bodin.</a></li>
+<li class="index-depth-0"><a href="#chapitre-vii-3">CHAPITRE VII.</a></li>
+<li class="index-depth-1"><a href="#dernieres-preuves-a-lappui-de-nos-principes-sur-la-marche-des-societes">DERNIÈRES PREUVES À L'APPUI DE NOS PRINCIPES SUR LA MARCHE DES SOCIÉTÉS.</a></li>
+<li class="index-depth-2"><a href="#i-4">§. I.</a></li>
+<li class="index-depth-2"><a href="#ii-corollaire-2">§. II. COROLLAIRE.</a></li>
+<li class="index-depth-0"><a href="#livre-cinquieme">LIVRE CINQUIÈME.</a></li>
+<li class="index-depth-1"><a href="#retour-des-memes-revolutions">RETOUR DES MÊMES RÉVOLUTIONS</a></li>
+<li class="index-depth-1"><a href="#lorsque-les-societes-detruites-se-relevent-de-leurs-ruines">LORSQUE LES SOCIÉTÉS DÉTRUITES SE RELÈVENT DE LEURS RUINES.</a></li>
+<li class="index-depth-0"><a href="#argument-5">ARGUMENT.</a></li>
+<li class="index-depth-0"><a href="#livre-cinquieme-2">LIVRE CINQUIÈME.</a></li>
+<li class="index-depth-1"><a href="#retour-des-memes-revolutions-2">RETOUR DES MÊMES RÉVOLUTIONS</a></li>
+<li class="index-depth-1"><a href="#lorsque-les-societes-detruites-se-relevent-de-leurs-ruines-2">LORSQUE LES SOCIÉTÉS DÉTRUITES SE RELÈVENT DE LEURS RUINES.</a></li>
+<li class="index-depth-1"><a href="#chapitre-i-3">CHAPITRE I.</a></li>
+<li class="index-depth-2"><a href="#objet-de-ce-livreretour-de-lage-divin">OBJET DE CE LIVRE.—RETOUR DE L'ÂGE DIVIN.</a></li>
+<li class="index-depth-1"><a href="#chapitre-ii-5">CHAPITRE II.</a></li>
+<li class="index-depth-1"><a href="#comment-les-nations-parcourent-de-nouveau-la-carriere-quelles-ont-fournie-conformement-a-la-nature-eternelle-des-fiefs-que-lancien-droit-politique-des-romains-se-renouvela-dans-le-droit-feodal-retour-de-lage-heroique">COMMENT LES NATIONS PARCOURENT DE NOUVEAU LA CARRIÈRE QU'ELLES ONT FOURNIE, CONFORMÉMENT À LA NATURE ÉTERNELLE DES FIEFS. QUE L'ANCIEN DROIT POLITIQUE DES ROMAINS SE RENOUVELA DANS LE DROIT FÉODAL. (RETOUR DE L'ÂGE HÉROÏQUE.)</a></li>
+<li class="index-depth-1"><a href="#chapitre-iii-5">CHAPITRE III.</a></li>
+<li class="index-depth-2"><a href="#coup-dœil-sur-le-monde-politique-ancien-et-moderne-considere-relativement-au-but-de-la-science-nouvelle">COUP-D'ŒIL SUR LE MONDE POLITIQUE, ANCIEN ET MODERNE, CONSIDÉRÉ RELATIVEMENT AU BUT DE LA SCIENCE NOUVELLE.</a></li>
+<li class="index-depth-1"><a href="#chapitre-iv-5">CHAPITRE IV.</a></li>
+<li class="index-depth-2"><a href="#conclusiondune-republique-eternelle-fondee-dans-la-nature-par-la-providence-divine-et-qui-est-la-meilleure-possible-dans-chacune-de-ses-formes-diverses">CONCLUSION.—D'UNE RÉPUBLIQUE ÉTERNELLE FONDÉE DANS LA NATURE PAR LA PROVIDENCE DIVINE, ET QUI EST LA MEILLEURE POSSIBLE DANS CHACUNE DE SES FORMES DIVERSES.</a></li>
+<li class="index-depth-0"><a href="#addition">ADDITION</a></li>
+<li class="index-depth-0"><a href="#au-second-livre">AU SECOND LIVRE.</a></li>
+<li class="index-depth-2"><a href="#fin">FIN.</a></li>
+<li class="index-depth-0"><a href="#notes">Notes</a></li>
+<li class="index-depth-0"><a href="#start-full-license">START: FULL LICENSE</a></li>
+<li class="index-depth-0"><a href="#the-full-project-gutenberg-license">THE FULL PROJECT GUTENBERG LICENSE</a></li>
+<li class="index-depth-1"><a href="#please-read-this-before-you-distribute-or-use-this-work">PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://www.gutenberg.org/cache/epub/43307/pg43307-images.html">Source</a></p>
 <p>The Project Gutenberg eBook of Principes de la Philosophie de l'Histoire<br>
 This ebook is for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this ebook or online at www.gutenberg.org. If you are not located in the United States, you will have to check the laws of the country where you are located before using this eBook.<br>

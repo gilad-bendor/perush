@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,51 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">קדש.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#השורש-קדש-בעברית-המקראית">השורש ק־ד־שׁ בעברית המקראית</a></li>
+<li class="index-depth-1"><a href="#תוכן">תוכן</a></li>
+<li class="index-depth-1"><a href="#א-השאלה">א. השאלה</a></li>
+<li class="index-depth-1"><a href="#ב-הפריסה-ההשוואתית">ב. הפריסה ההשוואתית</a></li>
+<li class="index-depth-2"><a href="#ב1-אוגריתית">ב.1 אוגריתית</a></li>
+<li class="index-depth-2"><a href="#ב2-אכדית">ב.2 אכדית</a></li>
+<li class="index-depth-2"><a href="#ב3-מצרית-qedeshet">ב.3 מצרית — Qedeshet</a></li>
+<li class="index-depth-2"><a href="#ב4-סיכום-ההשוואה">ב.4 סיכום ההשוואה</a></li>
+<li class="index-depth-1"><a href="#ג-ההשערות-האטימולוגיות">ג. ההשערות האטימולוגיות</a></li>
+<li class="index-depth-2"><a href="#ג1-ההיסטוריה-הלקסיקוגרפית">ג.1 ההיסטוריה הלקסיקוגרפית</a></li>
+<li class="index-depth-2"><a href="#ג2-baudissin">ג.2 Baudissin</a></li>
+<li class="index-depth-2"><a href="#ג3-costecalde-קדושה-כשייכות-ולא-כהפרדה">ג.3 Costecalde — קדושה כשייכות ולא כהפרדה</a></li>
+<li class="index-depth-2"><a href="#ג4-הערכה-מבנית">ג.4 הערכה מבנית</a></li>
+<li class="index-depth-1"><a href="#ד-המורפולוגיה-מה-עושה-כל-בניין">ד. המורפולוגיה: מה עושה כל בניין</a></li>
+<li class="index-depth-2"><a href="#ד1-קל-נדיר-ומדבק">ד.1 קל — נדיר ומדבק</a></li>
+<li class="index-depth-2"><a href="#ד2-נפעל-התגלות-עצמית">ד.2 נפעל — התגלות עצמית</a></li>
+<li class="index-depth-2"><a href="#ד3-פיעל-פקטיטיבי-ודקלרטיבי-כאחד">ד.3 פיעל — פקטיטיבי ודקלרטיבי כאחד</a></li>
+<li class="index-depth-2"><a href="#ד4-הפעיל-העברת-בעלות">ד.4 הפעיל — העברת בעלות</a></li>
+<li class="index-depth-2"><a href="#ד5-התפעל-הכנה-עצמית">ד.5 התפעל — הכנה עצמית</a></li>
+<li class="index-depth-2"><a href="#ד6-שמות-העצם">ד.6 שמות העצם</a></li>
+<li class="index-depth-1"><a href="#ה-קדש-קדשה">ה. קָדֵשׁ / קְדֵשָׁה</a></li>
+<li class="index-depth-2"><a href="#ה1-הנתונים">ה.1 הנתונים</a></li>
+<li class="index-depth-2"><a href="#ה2-קריסת-מודל-זנות-המקדש">ה.2 קריסת מודל &quot;זנות המקדש&quot;</a></li>
+<li class="index-depth-2"><a href="#ה3-עמדת-הביניים-של-gruber">ה.3 עמדת הביניים של Gruber</a></li>
+<li class="index-depth-2"><a href="#ה4-המשמעות-הלשונית">ה.4 המשמעות הלשונית</a></li>
+<li class="index-depth-1"><a href="#ו-הפילוג-הפניםמקראי-p-מול-h-מול-d">ו. הפילוג הפנים־מקראי: P מול H מול D</a></li>
+<li class="index-depth-1"><a href="#ז-הזווית-הפנומנולוגית">ז. הזווית הפנומנולוגית</a></li>
+<li class="index-depth-1"><a href="#ח-סינתזה">ח. סינתזה</a></li>
+<li class="index-depth-2"><a href="#1-השורש-אינו-מציין-תכונה-הוא-מציין-וקטור">1. השורש אינו מציין תכונה. הוא מציין וקטור.</a></li>
+<li class="index-depth-2"><a href="#2-הסכימה-היסודית-הוצאה-ממחזור-השימוש-הרגיל">2. הסכימה היסודית: הוצאה ממחזור השימוש הרגיל</a></li>
+<li class="index-depth-2"><a href="#3-ההבדלה-היא-תוצאה-לא-הגדרה">3. ההבדלה היא תוצאה, לא הגדרה</a></li>
+<li class="index-depth-2"><a href="#4-הקדושה-מתנהגת-פיזיקלית-לפני-שהיא-מתנהגת-מוסרית">4. הקדושה מתנהגת פיזיקלית לפני שהיא מתנהגת מוסרית</a></li>
+<li class="index-depth-1"><a href="#ט-מחלוקות-פתוחות">ט. מחלוקות פתוחות</a></li>
+<li class="index-depth-1"><a href="#י-ביבליוגרפיה">י. ביבליוגרפיה</a></li>
+<li class="index-depth-2"><a href="#מילונים-אנציקלופדיות-וכלי-עזר">מילונים, אנציקלופדיות וכלי עזר</a></li>
+<li class="index-depth-2"><a href="#מונוגרפיות-ומאמרים">מונוגרפיות ומאמרים</a></li>
+<li class="index-depth-2"><a href="#טקסטים">טקסטים</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/34651d58-4bdb-450a-b7ed-47d272716bd5">Claude Opus 5</a></p>
 <h1 id="השורש-קדש-בעברית-המקראית">השורש ק־ד־שׁ בעברית המקראית</h1>
 <p><strong>מחקר בלשני־השוואתי בחמשת חומשי תורה</strong></p>

@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,36 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">הנגשה</a> / <span dir="auto">הרצף-הלימודי</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#הרצף-הלימודי-מה-לשתול-ובאיזה-סדר">הרצף הלימודי: מה לשתול, ובאיזה סדר</a></li>
+<li class="index-depth-0"><a href="#חלק-א-מה-צריך-להישאר-בסוף">חלק א: מה צריך להישאר בסוף</a></li>
+<li class="index-depth-0"><a href="#חלק-ב-רשימת-התובנות-הגרעיניות">חלק ב: רשימת התובנות הגרעיניות</a></li>
+<li class="index-depth-1"><a href="#אשכול-0-החוזה-עם-הקורא">אשכול 0: החוזה עם הקורא</a></li>
+<li class="index-depth-1"><a href="#אשכול-1-אור-דיבור-מיסוד">אשכול 1: אור, דיבור, מיסוד</a></li>
+<li class="index-depth-1"><a href="#אשכול-2-מים-ארץ-שמים">אשכול 2: מים, ארץ, שמים</a></li>
+<li class="index-depth-1"><a href="#אשכול-3-סולם-המורכבות-הלב-של-המערכת">אשכול 3: סולם המורכבות - הלב של המערכת</a></li>
+<li class="index-depth-1"><a href="#אשכול-4-צירים-ומילות-יחס">אשכול 4: צירים ומילות יחס</a></li>
+<li class="index-depth-1"><a href="#אשכול-5-הכוחות">אשכול 5: הכוחות</a></li>
+<li class="index-depth-1"><a href="#אשכול-6-המוטיבים-הגדולים-מטא-כלים-לקריאה">אשכול 6: המוטיבים הגדולים (מטא-כלים לקריאה)</a></li>
+<li class="index-depth-1"><a href="#אשכול-7-הרצף-של-שבעת-הימים">אשכול 7: הרצף של שבעת הימים</a></li>
+<li class="index-depth-1"><a href="#אשכול-8-הרצף-האנושי-גן-עדן-חנוך">אשכול 8: הרצף האנושי (גן עדן ← חנוך)</a></li>
+<li class="index-depth-1"><a href="#אשכול-9-הגילויים-רק-בסוף">אשכול 9: הגילויים - רק בסוף</a></li>
+<li class="index-depth-0"><a href="#חלק-ג-מפת-תלויות-מה-חייב-לבוא-לפני-מה">חלק ג: מפת תלויות - מה חייב לבוא לפני מה</a></li>
+<li class="index-depth-0"><a href="#חלק-ד-הרצף-המבנה-של-המסמך-המונגש">חלק ד: הרצף - המבנה של המסמך המונגש</a></li>
+<li class="index-depth-2"><a href="#פתח-דבר-שלוש-שאלות-קטנות"><strong>פתח דבר: שלוש שאלות קטנות</strong></a></li>
+<li class="index-depth-2"><a href="#חלק-א-כללי-המשחק-ת01-ת03"><strong>חלק א: כללי המשחק</strong> ← ת0.1-ת0.3</a></li>
+<li class="index-depth-2"><a href="#חלק-ב-המילון-בחמישה-אשכולות-אשכולות-1-5"><strong>חלק ב: המילון בחמישה אשכולות</strong> ← אשכולות 1-5</a></li>
+<li class="index-depth-2"><a href="#חלק-ג-שבעת-הימים-ביוגרפיה-של-תרבות-אשכולות-6-7"><strong>חלק ג: שבעת הימים - ביוגרפיה של תרבות</strong> ← אשכולות 6, 7</a></li>
+<li class="index-depth-2"><a href="#חלק-ד-הסיפור-האנושי-אשכול-8"><strong>חלק ד: הסיפור האנושי</strong> ← אשכול 8</a></li>
+<li class="index-depth-2"><a href="#חלק-ה-המנוע-אשכול-9"><strong>חלק ה: המנוע</strong> ← אשכול 9</a></li>
+<li class="index-depth-0"><a href="#חלק-ה-תקציב-תשומת-לב">חלק ה: תקציב תשומת לב</a></li>
+<li class="index-depth-0"><a href="#חלק-ו-מכשירי-ההוראה-ואיפה-כל-אחד-פועל">חלק ו: מכשירי ההוראה ואיפה כל אחד פועל</a></li>
+</ul>
+</details>
+</nav>
 <h1 id="הרצף-הלימודי-מה-לשתול-ובאיזה-סדר">הרצף הלימודי: מה לשתול, ובאיזה סדר</h1>
 <p>מסמך זה הוא שלב 2. הוא בונה את שלד המסמך המונגש: תחילה <strong>מה</strong> צריך להיכנס לראשו של הקורא, ואחר כך <strong>באיזה סדר</strong> - סדר שנגזר מאילוצי למידה ולא מסדר הפסוקים.</p>
 <hr>
@@ -278,7 +312,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 ת8.* (הסיפורים) ── דורשים את ת7.* + ת5.2 ──────┘
                                                  └──→ ת9.2, ת9.3, ת9.4
 </code></pre>
-<p><strong>מסקנות מבניות מהמפה:</strong></p>
+<p class="heads-list"><strong>מסקנות מבניות מהמפה:</strong></p>
 <ul>
 <li>אשכול 1 (אור\דיבור) הוא שורש: הוא לא תלוי בכלום ומזין כמעט הכל. הוא הולך ראשון.</li>
 <li>ת3.4 (אדם) הוא צוואר בקבוק: הוא דורש שלוש תובנות לפניו, והכל אחריו תלוי בו.</li>
@@ -290,7 +324,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>עקרון-על אחד: <strong>מוטיבציה → מנגנון → תרגול → גילוי.</strong> הקורא לא מקבל כלי לפני שהוא רוצה אותו.</p>
 <hr>
 <h3 id="פתח-דבר-שלוש-שאלות-קטנות"><strong>פתח דבר: שלוש שאלות קטנות</strong></h3>
-<p>שלוש תמיהות שאפשר לאמת בעצמך בטקסט תוך דקה:</p>
+<p class="heads-list">שלוש תמיהות שאפשר לאמת בעצמך בטקסט תוך דקה:</p>
 <ol>
 <li>בפרק א׳ הכל <code>כִּי טוֹב</code> - חוץ מהיום השני (השמים) והיום השביעי. למה דווקא השניים האלה?</li>
 <li>כל הפרק בנוי על <code>וַיֹּאמֶר</code> - <em>אמירה</em>, לא בנייה. למה הדיבור הוא פעולת היצירה?</li>

@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -140,13 +144,13 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <div class="pseudo-tag-caption">ניתוח-לשוני: רֶמֶשׂ</div>
 <p><code>רֶמֶשׂ</code> הוא חוויה של יצור הנע במרחב משלו, מעֵבֶר למעקב או לשליטה אנושיים.<br>
 היצור קיים, הוא חי, הוא נע - הוא מופיע ונעלם, נמצא ולא נמצא, חי בקצב משלו במרחב משלו.</p>
-<p>המונח חל גם על חיות קטנות וגם על גדולות:</p>
-<ul>
+<p class="heads-list">המונח חל גם על חיות קטנות וגם על גדולות:</p>
+<ul class="runs-on">
 <li>חיות יער בלילה האפל והנסתר: <code>תָּשֶׁת <strong>חֹשֶׁךְ</strong> וִיהִי לָיְלָה בּוֹ <strong>תִרְמֹשׂ</strong> כָּל חַיְתוֹ יָעַר</code> (תהילים קד:כ)</li>
 <li>יצורי הים הבלתי נגיש: <code>זֶה הַיָּם גָּדוֹל וּרְחַב יָדָיִם שָׁם <strong>רֶמֶשׂ</strong> <strong>וְאֵין מִסְפָּר</strong> חַיּוֹת קְטַנּוֹת עִם גְּדֹלוֹת</code> (תהילים קד:כה)</li>
-<li>בלתי ניתן לשליטה ובקרה: <code>וַתַּעֲשֶׂה אָדָם כִּדְגֵי הַיָּם כְּרֶמֶשׂ לֹא מֹשֵׁל בּוֹ</code> (חבקוק א:יד)<br>
-הגודל אינו רלוונטי; הרלוונטית היא אי־הנגישות של היצור לעין האדם ולסדר האדם.</li>
+<li>בלתי ניתן לשליטה ובקרה: <code>וַתַּעֲשֶׂה אָדָם כִּדְגֵי הַיָּם כְּרֶמֶשׂ לֹא מֹשֵׁל בּוֹ</code> (חבקוק א:יד)</li>
 </ul>
+<p>הגודל אינו רלוונטי; הרלוונטית היא אי־הנגישות של היצור לעין האדם ולסדר האדם.</p>
 <p>בדומה ל-<code>שֶׁרֶץ</code> - גם <code>רֶמֶשׂ</code> עומד בגבול יכולת־העקיבה האנושית, אך ההבדל ברור: ה<code>שֶׁרֶץ</code> חורג מהעקיבה דרך עודפות כמותית, וה<code>רֶמֶשׂ</code> חורג דרך חמקמקות מרחבית.</p>
 <p>למיטיבי לכת - הסיכום המלא של <a href="../ניתוחים-לשוניים-בינה-מלאכותית/רמש.ai.rtl.html">Claude Opus 4.7</a> - עם הפניות למחקרים באינטרנט.</p>
 </div>

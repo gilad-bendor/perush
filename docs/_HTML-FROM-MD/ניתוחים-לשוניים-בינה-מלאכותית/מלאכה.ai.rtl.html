@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,48 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">מלאכה.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#מלאכה-ומלאך-השורש-לאך-בעברית-המקראית">מְלָאכָה וּמַלְאָךְ — השורש ל־א־ך בעברית המקראית</a></li>
+<li class="index-depth-1"><a href="#ניתוח-בלשניהשוואתי-ופנומנולוגי">ניתוח בלשני־השוואתי ופנומנולוגי</a></li>
+<li class="index-depth-1"><a href="#1-הבעיה">1. הבעיה</a></li>
+<li class="index-depth-1"><a href="#2-מורפולוגיה">2. מורפולוגיה</a></li>
+<li class="index-depth-2"><a href="#21-משקל-ma-">2.1 משקל ma-</a></li>
+<li class="index-depth-2"><a href="#22-נטייה">2.2 נטייה</a></li>
+<li class="index-depth-2"><a href="#23-האלף">2.3 האל&quot;ף</a></li>
+<li class="index-depth-1"><a href="#3-השורש-lʾk">3. השורש √lʾk</a></li>
+<li class="index-depth-1"><a href="#4-עדות-השוואתית">4. עדות השוואתית</a></li>
+<li class="index-depth-2"><a href="#41-אוגריתית-נקודת-המוצא">4.1 אוגריתית — נקודת המוצא</a></li>
+<li class="index-depth-2"><a href="#42-געז-אתיופית-קלאסית-המערכת-השלמה">4.2 געז (אתיופית קלאסית) — המערכת השלמה</a></li>
+<li class="index-depth-2"><a href="#43-ערבית-קלאסית">4.3 ערבית קלאסית</a></li>
+<li class="index-depth-2"><a href="#44-ערבית-דרומית-עתיקה-סבאית-ומעינית">4.4 ערבית דרומית עתיקה (סבאית ומעינית)</a></li>
+<li class="index-depth-2"><a href="#45-פיניקית">4.5 פיניקית</a></li>
+<li class="index-depth-2"><a href="#46-ארמית">4.6 ארמית</a></li>
+<li class="index-depth-2"><a href="#47-אכדית">4.7 אכדית</a></li>
+<li class="index-depth-1"><a href="#5-השדה-הסמנטי-כיצד-שליחות-הפכה-לעבודה">5. השדה הסמנטי: כיצד &quot;שליחות&quot; הפכה ל&quot;עבודה&quot;</a></li>
+<li class="index-depth-2"><a href="#51-הרצף">5.1 הרצף</a></li>
+<li class="index-depth-2"><a href="#52-הטענה-המרכזית">5.2 הטענה המרכזית</a></li>
+<li class="index-depth-2"><a href="#53-ההבדל-בין-הצורות">5.3 ההבדל בין הצורות</a></li>
+<li class="index-depth-1"><a href="#6-המקבילה-האכדית-sipru">6. המקבילה האכדית: šipru</a></li>
+<li class="index-depth-1"><a href="#7-מלאכה-בשדה-הלקסיקלי-של-העשייה">7. &quot;מלאכה&quot; בשדה הלקסיקלי של העשייה</a></li>
+<li class="index-depth-1"><a href="#8-מלאכה-מול-מלאכת-עבודה-בחוקי-המועדות">8. &quot;מלאכה&quot; מול &quot;מלאכת עבודה&quot; בחוקי המועדות</a></li>
+<li class="index-depth-1"><a href="#9-מלאכה-בסיפור-הבריאה-והקשרה-למשכן">9. &quot;מלאכה&quot; בסיפור הבריאה והקשרה למשכן</a></li>
+<li class="index-depth-2"><a href="#91-מדוע-מלאכה-דווקא">9.1 מדוע &quot;מלאכה&quot; דווקא</a></li>
+<li class="index-depth-2"><a href="#92-ההקבלה-לסיום-המשכן">9.2 ההקבלה לסיום המשכן</a></li>
+<li class="index-depth-1"><a href="#10-מלאך-תפקיד-לא-ישות">10. &quot;מלאך&quot;: תפקיד, לא ישות</a></li>
+<li class="index-depth-1"><a href="#11-מחלוקות-והצעות-אלטרנטיביות">11. מחלוקות והצעות אלטרנטיביות</a></li>
+<li class="index-depth-2"><a href="#111-מלאך-מלך">11.1 מלאך ↔ מלך?</a></li>
+<li class="index-depth-2"><a href="#112-האם-מלאכה-רכוש-היא-הומונים">11.2 האם &quot;מלאכה = רכוש&quot; היא הומונים?</a></li>
+<li class="index-depth-2"><a href="#113-כשל-השורש-האזהרה-של-barr">11.3 כשל השורש — האזהרה של Barr</a></li>
+<li class="index-depth-1"><a href="#12-עדויות-מתרגומים-וממשלבים-מאוחרים">12. עדויות מתרגומים וממשלבים מאוחרים</a></li>
+<li class="index-depth-1"><a href="#13-סיכום-הטענות">13. סיכום הטענות</a></li>
+<li class="index-depth-1"><a href="#נספח-פריטים-שנבדקו-ולא-אומתו">נספח: פריטים שנבדקו ולא אומתו</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/a9b482f8-6497-477d-919e-6e079a0fd023">Claude Opus 5</a></p>
 <h1 id="מלאכה-ומלאך-השורש-לאך-בעברית-המקראית">מְלָאכָה וּמַלְאָךְ — השורש ל־א־ך בעברית המקראית</h1>
 <h2 id="ניתוח-בלשניהשוואתי-ופנומנולוגי">ניתוח בלשני־השוואתי ופנומנולוגי</h2>

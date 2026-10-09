@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,23 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">.claude</a> / <span dir="auto">הנחיות-לעריכת-קבצי-פירוש</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#הנחיות-לעריכת-קבצי-פירוש">הנחיות לעריכת קבצי פירוש</a></li>
+<li class="index-depth-1"><a href="#הכלל-הבסיסי">הכלל הבסיסי</a></li>
+<li class="index-depth-1"><a href="#בשביל-מה-קיימת-הצעת-קלוד">בשביל מה קיימת &lt;הצעת-קלוד&gt;</a></li>
+<li class="index-depth-1"><a href="#שני-סוגים-של-הצעות-ולא-מערבבים">שני סוגים של הצעות - ולא מערבבים</a></li>
+<li class="index-depth-1"><a href="#כללים-משותפים">כללים משותפים</a></li>
+<li class="index-depth-1"><a href="#הצעת-נוסח-סוגנוסח">הצעת נוסח (<code>סוג=&quot;נוסח&quot;</code>)</a></li>
+<li class="index-depth-2"><a href="#דוגמה-של-סוגנוסח">דוגמה של <code>סוג=&quot;נוסח&quot;</code></a></li>
+<li class="index-depth-2"><a href="#בדיקה-לפני-שמירה">בדיקה לפני שמירה</a></li>
+<li class="index-depth-1"><a href="#הצעת-דיון-סוגדיון">הצעת דיון (<code>סוג=&quot;דיון&quot;</code>)</a></li>
+<li class="index-depth-2"><a href="#דוגמה-של-סוגדיון">דוגמה של <code>סוג=&quot;דיון&quot;</code></a></li>
+</ul>
+</details>
+</nav>
 <h1 id="הנחיות-לעריכת-קבצי-פירוש">הנחיות לעריכת קבצי פירוש</h1>
 <h2 id="הכלל-הבסיסי">הכלל הבסיסי</h2>
 <p>אין לשנות טקסט קיים בלי אישור מפורש.<br>
@@ -147,7 +168,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 הצעה ארוכה ומפורטת מעבירה את עבודת הסינון אל המחבר - וזו בדיוק העבודה שקלוד אמור לעשות בשבילו.<br>
 לכן: לחשוב הרבה - ולכתוב מעט. לבחור את העיקר, ולוותר על השאר.</p>
 <h2 id="שני-סוגים-של-הצעות-ולא-מערבבים">שני סוגים של הצעות - ולא מערבבים</h2>
-<p>כל הצעה היא מסוג אחד בלבד:</p>
+<p class="heads-list">כל הצעה היא מסוג אחד בלבד:</p>
 <ul>
 <li><code>&lt;הצעת-קלוד סוג=&quot;נוסח&quot;&gt;</code> - טקסט מוכן להשתלה בפירוש (Copy+Paste). נכתב בקול של המחבר.</li>
 <li><code>&lt;הצעת-קלוד סוג=&quot;דיון&quot;&gt;</code> - רעיון, הערה או שאלה - לקריאה ולשיקול. נכתב כדי שיהיה קל להבין ולשפוט.</li>
@@ -157,8 +178,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <h2 id="כללים-משותפים">כללים משותפים</h2>
 <ol>
 <li><strong>רעיון אחד לכל הצעה.</strong> כמה רעיונות = כמה הצעות נפרדות, כל אחת במקום שאליו היא שייכת.</li>
-<li><strong>לבחור ולוותר.</strong> דיוקים משניים - לוותר עליהם, או לכל היותר שורה אחת בסוף תחת <strong>שוליים</strong>. אם יש יותר משלוש הצעות לאותו מקטע - לדרג, ולהשאיר רק את החשובות.</li>
-<li><strong>בלי מטא.</strong> לא לתאר את התהליך (״לא נגעתי בזה״, ״כאן ייקלטו השורות הקיימות״, ״הערת מינוח״). רק את התוכן.5</li>
+<li><strong>לבחור ולוותר.</strong> דיוקים משניים - לוותר עליהם, או לכל היותר שורה אחת בסוף תחת <strong>שוליים</strong>. אם יש יותר משלוש הצעות לאותו פסוק - לדרג, ולהשאיר רק את החשובות.</li>
+<li><strong>בלי מטא.</strong> לא לתאר את התהליך (״לא נגעתי בזה״, ״כאן ייקלטו השורות הקיימות״, ״הערת מינוח״). רק את התוכן.</li>
 <li><strong>להישאר בתוך המתודולוגיה.</strong> כל טענה מעוגנת בטקסט ובמילון. קריאה שאינה ״כבולה״ מספיק - לומר זאת במפורש (ובנוסח - לשים ב-<code>&lt;מדרש&gt;</code>).</li>
 <li><strong>לשמור על הקובץ נקי.</strong> הצעה ממוקמת ליד הפסוק שעליו היא מדברת. כשהצעה התיישנה או נקלטה - למחוק אותה. לא להוסיף הצעה חדשה שחוזרת על הצעה קיימת - לעדכן/להזיז את הקיימת.</li>
 <li><strong>שאלה למחבר - עדיף בשיחה.</strong> הצעה בקובץ היא למה שצריך לחיות ליד הטקסט. התלבטות פתוחה - לשאול בשיחה.</li>
@@ -168,7 +189,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 אחריה - שורת רווח ואז הטקסט עצמו, בדיוק כפי שיודבק.</p>
 <p><strong>שינוי מינימלי.</strong> עדיף להוסיף משפט או שניים - מאשר לשכתב פסקה. בשכתוב - לשמור כל משפט של המחבר שעובד, ולשנות רק את מה שצריך.</p>
 <p><strong>אורך</strong> - כמו הפירוש הקיים לפסוקים השכנים. אם הנוסח ארוך בהרבה - כנראה שנכנסו בו כמה רעיונות, ויש לבחור.</p>
-<p><strong>הקול של המחבר</strong> - הנוסח צריך לשאוף להיראות כאילו המחבר כתב אותו:</p>
+<p class="heads-list"><strong>הקול של המחבר</strong> - הנוסח צריך לשאוף להיראות כאילו המחבר כתב אותו:</p>
 <ul>
 <li>שורה אחת = מחשבה אחת. פסקאות קצרות.</li>
 <li>ציטוט מהפסוק ב-Backquote, וההסבר צמוד אליו: ״<code>וַיַּבְדֵּל</code> - ...״ או ״... (<code>עַל הָאָרֶץ</code>)״.</li>
@@ -177,19 +198,11 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li>עברית מדוברת ובהירה: ״לא״ ולא ״איננו\אינה״, ״בגלל ש״ ולא ״משום ש״, בלי מליצות.</li>
 <li>בלי דרמה רטורית: לא ״וכאן העוקץ״, ״והנה הנקודה״, ״וזהו פשרו״, ״התשובה הפוכה מן האינטואיציה״, ולא אפוריזמים מלוטשים לסיום פסקה.</li>
 <li>טון צנוע: ״נראה ש״, ״ייתכן ש״ - כשזה המצב.</li>
+<li>מתן המחשה היסטורית יכולה להיות בעלת כח הסברי רב. המחשות כאלה הן ״תיבול״ מומלץ.</li>
 <li>ניתוח לשוני - משפט אחד והפניה לקובץ הניתוח, לא דיון לשוני בתוך הפירוש.</li>
 <li>הרובד ההיסטורי ב-<code>&lt;הקבלה-היסטורית&gt;</code>, העמקה ב-<code>&lt;עיון&gt;</code>, ניחוש ב-<code>&lt;מדרש&gt;</code> - מובחנים ומובדלים מהפירוש עצמו.</li>
 </ul>
-<h2 id="הצעת-דיון-סוגדיון">הצעת דיון (<code>סוג=&quot;דיון&quot;</code>)</h2>
-<p>כאידאל - מבנה קבוע, כל סעיף שורה או שתיים (בהתאים לנסיבות):</p>
-<ul>
-<li><strong>העיקר:</strong> הרעיון במשפט אחד.</li>
-<li><strong>עיגון:</strong> הראיה מהטקסט - הקצרה והחזקה ביותר. לא כל הראיות.</li>
-<li><strong>מה זה נותן:</strong> מה משתנה בפירוש אם מקבלים את הרעיון.</li>
-<li><strong>ביטחון:</strong> חזק \ בינוני \ ניחוש - ובמה הוא חלש.</li>
-<li>(אופציונלי) <strong>שוליים:</strong> דיוקים משניים או בקשה למחקר בלשני - שורה אחת.</li>
-</ul>
-<h2 id="דוגמאות">דוגמאות</h2>
+<h3 id="דוגמה-של-סוגנוסח">דוגמה של <code>סוג=&quot;נוסח&quot;</code></h3>
 <p><strong>נוסח - לפני</strong> (קטע מתוך 12 פסקאות על <code>הָרֹמֶשֶׂת</code>, עם ארבעה ציטוטים מספרים אחרים):</p>
 <pre><code>ומדוע דווקא סיפורי הכיאוס הם שירדו אל מתחת לסף? התשובה הפוכה מן האינטואיציה: **לא משום שנחלשו, אלא משום שהצליחו.** ...
 וכאן העוקץ, והוא נעוץ במילה עצמה: ... התרבות חשה שהשתלטה על הכיאוס בדיוק במקום שהמילה אומרת שאין עליו שליטה. היא לא כבשה אותו - היא רק חדלה להביט.
@@ -202,7 +215,26 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 מעניין שזה קורה דווקא בגלל שהם הצליחו: סיפור שסוגר שאלה - הוא סיפור שמפסיקים לדבר עליו.
 &lt;/הצעת-קלוד&gt;
 </code></pre>
-<p><strong>דיון:</strong></p>
+<h3 id="בדיקה-לפני-שמירה">בדיקה לפני שמירה</h3>
+<ul>
+<li>האם השורה הראשונה מתארת את מהות ההצעה?</li>
+<li>האם יש כאן יותר מרעיון אחד?</li>
+<li>מה אפשר למחוק בלי לאבד את העיקר? (ואז - למחוק.)</li>
+<li>בנוסח: האם המחבר היה יכול לכתוב את זה? האם אפשר להדביק את זה כמו שזה?</li>
+<li>האם קורא שאינו מומחה יבין את זה בקריאה ראשונה?</li>
+<li>האם ההצעה סותרת משהו שכבר כתוב בקובץ - או הצעה אחרת שלי?</li>
+<li>האם ההצעה מקדמת את הכתיבה - או לוקחת הצידה?</li>
+</ul>
+<h2 id="הצעת-דיון-סוגדיון">הצעת דיון (<code>סוג=&quot;דיון&quot;</code>)</h2>
+<p class="heads-list">כאידאל - מבנה קבוע, כל סעיף שורה או שתיים (בהתאים לנסיבות):</p>
+<ul>
+<li><strong>העיקר:</strong> הרעיון במשפט אחד.</li>
+<li><strong>עיגון:</strong> הראיה מהטקסט - הקצרה והחזקה ביותר. לא כל הראיות.</li>
+<li><strong>מה זה נותן:</strong> מה משתנה בפירוש אם מקבלים את הרעיון.</li>
+<li><strong>ביטחון:</strong> חזק \ בינוני \ ניחוש - ובמה הוא חלש.</li>
+<li>(אופציונלי) <strong>שוליים:</strong> דיוקים משניים או בקשה למחקר בלשני - שורה אחת.</li>
+</ul>
+<h3 id="דוגמה-של-סוגדיון">דוגמה של <code>סוג=&quot;דיון&quot;</code></h3>
 <pre><code>&lt;הצעת-קלוד סוג=&quot;דיון&quot;&gt;
 **העיקר:** ייתכן ש-`בָּאָרֶץ` (פסוק כב) אינו סותר את `עַל הָאָרֶץ` - אלא מסיים תהליך.
 **עיגון:** מילת היחס של העוף משתנה לאורך שלושה פסוקים: `עַל הָאָרֶץ` (כ) ← אין מילת יחס (כא) ← `בָּאָרֶץ` (כב).
@@ -210,14 +242,6 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 **ביטחון:** בינוני - השלב האמצעי הוא קריאה של היעדר.
 &lt;/הצעת-קלוד&gt;
 </code></pre>
-<h2 id="בדיקה-לפני-שמירה">בדיקה לפני שמירה</h2>
-<ul>
-<li>האם השורה הראשונה מתארת את מהות ההצעה?</li>
-<li>האם יש כאן יותר מרעיון אחד?</li>
-<li>מה אפשר למחוק בלי לאבד את העיקר? (ואז - למחוק.)</li>
-<li>בנוסח: האם המחבר היה יכול לכתוב את זה? האם אפשר להדביק את זה כמו שזה?</li>
-<li>האם ההצעה מקדמת את הכתיבה - או לוקחת הצידה?</li>
-</ul>
 </main>
 </body>
 </html>

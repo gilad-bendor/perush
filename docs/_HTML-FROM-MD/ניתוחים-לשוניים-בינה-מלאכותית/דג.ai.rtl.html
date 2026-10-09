@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,41 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">דג.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#השורש-דג-בעברית-המקראית">השורש ד־ג בעברית המקראית</a></li>
+<li class="index-depth-1"><a href="#תוכן">תוכן</a></li>
+<li class="index-depth-1"><a href="#1-מעמד-השורש">1. מעמד ה&quot;שורש&quot;</a></li>
+<li class="index-depth-1"><a href="#2-הנתונים-המקראיים">2. הנתונים המקראיים</a></li>
+<li class="index-depth-2"><a href="#21-היקרויות-בתורה">2.1 היקרויות בתורה</a></li>
+<li class="index-depth-2"><a href="#22-החלוקה-בין-דג-לדגה">2.2 החלוקה בין דָּג לדָּגָה</a></li>
+<li class="index-depth-2"><a href="#23-מחוץ-לתורה">2.3 מחוץ לתורה</a></li>
+<li class="index-depth-2"><a href="#24-השתיקה-המשמעותית-ויקרא-יא">2.4 השתיקה המשמעותית: ויקרא יא</a></li>
+<li class="index-depth-1"><a href="#3-הנתונים-ההשוואתיים">3. הנתונים ההשוואתיים</a></li>
+<li class="index-depth-2"><a href="#31-האיזוגלוסה-dag-מול-nun-">3.1 האיזוגלוסה: *dāg- מול *nūn-</a></li>
+<li class="index-depth-2"><a href="#32-העדות-האוגריתית">3.2 העדות האוגריתית</a></li>
+<li class="index-depth-2"><a href="#33-בעיית-האלף-הדאג">3.3 בעיית האל&quot;ף: הַדָּאג</a></li>
+<li class="index-depth-2"><a href="#34-מבנה-הצורה-dag-ולא-dagg-">3.4 מבנה הצורה: *dāg- ולא *dagg-</a></li>
+<li class="index-depth-1"><a href="#4-השערת-הבסיס-הדועיצורי-הצגה-מפורשת-כהשערה">4. השערת הבסיס הדו־עיצורי — הצגה מפורשת כהשערה</a></li>
+<li class="index-depth-2"><a href="#41-מדוע-דגל-יוצא">4.1 מדוע דֶּגֶל יוצא</a></li>
+<li class="index-depth-2"><a href="#42-מדוע-ההשערה-נותרת-ספקולטיבית">4.2 מדוע ההשערה נותרת ספקולטיבית</a></li>
+<li class="index-depth-1"><a href="#5-דגן-דגון-והיסטוריה-של-טעות-מחקרית">5. דגן, דגון, והיסטוריה של טעות מחקרית</a></li>
+<li class="index-depth-2"><a href="#51-העמדה-המחקרית-העדכנית">5.1 העמדה המחקרית העדכנית</a></li>
+<li class="index-depth-2"><a href="#52-הנתונים-ההיסטוריים">5.2 הנתונים ההיסטוריים</a></li>
+<li class="index-depth-2"><a href="#53-אנטומיה-של-אטימולוגיה-עממית-בארבעה-שלבים">5.3 אנטומיה של אטימולוגיה עממית — בארבעה שלבים</a></li>
+<li class="index-depth-1"><a href="#6-וידגו-לרב">6. וַיִּדְגּוּ לָרֹב</a></li>
+<li class="index-depth-1"><a href="#7-ניתוח-פנומנולוגיקוגניטיבי">7. ניתוח פנומנולוגי־קוגניטיבי</a></li>
+<li class="index-depth-2"><a href="#71-חוויית-הכמות-הבלתינמנית">7.1 חוויית הכמות הבלתי־נמנית</a></li>
+<li class="index-depth-2"><a href="#72-חוויית-האטימות">7.2 חוויית האטימות</a></li>
+<li class="index-depth-2"><a href="#73-חוויית-הפסיביות">7.3 חוויית הפסיביות</a></li>
+<li class="index-depth-2"><a href="#74-המסקנה-בניסוח-מדויק">7.4 המסקנה, בניסוח מדויק</a></li>
+<li class="index-depth-1"><a href="#8-סיכום-שלוש-הטענות-המרכזיות">8. סיכום: שלוש הטענות המרכזיות</a></li>
+<li class="index-depth-1"><a href="#9-מקורות">9. מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/ffdc0294-9b5f-4808-a6ae-9314e79d6313">Claude Opus 5</a></p>
 <h1 id="השורש-דג-בעברית-המקראית">השורש ד־ג בעברית המקראית</h1>
 <p><strong>מחקר בלשני־היסטורי מאומת · ניתוח פנומנולוגי־קוגניטיבי</strong><br>

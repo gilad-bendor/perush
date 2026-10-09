@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -150,7 +154,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 שלב 1: מחקר ראשוני מעמיק<br>
 ═══════════════════════════════════════════════════════════════</p>
 <p>בשלב זה עליך לבצע מחקר מלא ועמוק על השורש שאבחר.</p>
-<p>דרישות השלב:</p>
+<p class="heads-list">דרישות השלב:</p>
 <ul>
 <li>אם צירפתי פסוקים - עבור על כל אחד מהם ובחן מה הוא מלמד על המילה. תן תשומת לב מיוחדת להיקרויות שאינן מתיישבות בקלות: הן לרוב המעניינות ביותר.</li>
 <li>תן תשובה מקיפה, מפורטת ועמוקה - אל תחסוך בתוכן מחשש להזיות.<br>
@@ -162,7 +166,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li>הצג את עצמך ואת נקודות המבט השונות בצורה אוביקטיבית.</li>
 </ul>
 <p>** חשוב מאוד: ** אל תציין עדיין קישורים - אלה יופיעו רק בשלב 2 (לאחר וידוא). בשלב זה מצוטטים מקורות בכתב בלבד (שם מחבר, כותרת, שנה, מקום פרסום).</p>
-<p>בסיום השלב הראשון:</p>
+<p class="heads-list">בסיום השלב הראשון:</p>
 <ul>
 <li>אמור לי במפורש: &quot;סיימתי את שלב 1 (מחקר ראשוני). אשמח לדבר על התוצאות - אילו חלקים להרחיב, לצמצם או לשנות.<br>
 כשאתה מרוצה מהמחקר הראשוני, אמור לי 'אשר שלב 1' כדי לעבור לשלב הוידוא.&quot;</li>
@@ -174,14 +178,14 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>** הנחת יסוד של שלב זה: ** כל פריט שלא ניתן לאמת באינטרנט - הוא הזיה.<br>
 זוהי הנחה חד-משמעית. אין &quot;ספק לטובת הנאשם&quot; ואין פרטים שנשארים במחקר &quot;עם אזהרה&quot;. פריט שלא אומת יורד מהמחקר.</p>
 <p>הגיון ההנחה: אם טענת במחקר שקיים מאמר מסוים, ספר, אדם, או עובדה - ולא הצלחת למצוא עקבות שלהם באינטרנט - סביר מאוד שהם תוצר של השלמה של המודל ולא ידע אמיתי. מוטב מחקר קצר ומדויק ממחקר עשיר ומפוקפק.</p>
-<p>עליך לאמת באינטרנט כל פרט במחקר:</p>
+<p class="heads-list">עליך לאמת באינטרנט כל פרט במחקר:</p>
 <ul>
 <li>כל ציטוט ישיר - מצא אותו במקור מקוון.</li>
 <li>כל מאמר או ספר שהזכרת - מצא אותו באינטרנט (JSTOR, Project MUSE, Google Books, Google Scholar, אתרי מו&quot;לים, Wikisource, וכד').</li>
 <li>כל אדם, מקום, או עובדה היסטורית - אמת.</li>
 <li>כל פסוק מקראי, ציטוט מספר, או כל טקסט מצוטט - מצא אותו במקור מוסמך (מאגרים רשמיים, Wikisource, וכד').</li>
 </ul>
-<p>במהלך הוידוא:</p>
+<p class="heads-list">במהלך הוידוא:</p>
 <ul>
 <li>השתמש בכלי החיפוש והגלישה שלך באופן נרחב (web_search, web_fetch).</li>
 <li>אל תחסוך בחיפושים. אם חיפוש אחד לא הניב תוצאה, נסה ניסוחים אחרים, שמות מחברים חלופיים, שנות פרסום שונות, וכד'.</li>
@@ -189,19 +193,19 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li><strong>חשוב:</strong> ודא שהפריט שמצאת הוא אכן הפריט שהתכוונת אליו, ולא משהו אחר בעל שם דומה. תבדוק את שמות המחברים, השנים, והתוכן בקפידה.</li>
 <li>פרק את הוידוא לקטגוריות: (א) ציטוטים ישירים, (ב) מקורות ביבליוגרפיים, (ג) עובדות ופרטים.</li>
 </ul>
-<p>** טיפול בפריטים שלא אומתו: **</p>
+<p class="heads-list">** טיפול בפריטים שלא אומתו: **</p>
 <ul>
 <li>פריט שלא נמצא אחרי חיפוש רציני = הזיה. הסר אותו מהמחקר המעודכן.</li>
 <li>אם הסרת פריט גורמת לחור לוגי במחקר (למשל: בלי הפריט, טענה מסוימת נותרת בלי ביסוס) - עליך לתקן גם את הטענה, לא רק את הפריט. או למצוא מקור מאומת חלופי, או לצמצם/להסיר את הטענה.</li>
 </ul>
-<p>תוצאת השלב - הצג לי:</p>
+<p class="heads-list">תוצאת השלב - הצג לי:</p>
 <ol>
 <li>טבלה מסודרת: לכל פריט מהמחקר המקורי - סטטוס הוידוא (✓ אומת / ✗ לא אומת - מוסר) וקישור למקור המאמת (עבור פריטים שאומתו).</li>
 <li>רשימת ההזיות שזוהו והוסרו - פרטים שכתבת בשלב 1 ולא הצלחת לאמת. לכל אחד, הסבר קצר מה חיפשת ומה מצאת (או לא מצאת).</li>
 <li>רשימת התיקונים הלוגיים - אם הסרת פריט דרשה תיקון של טענה במחקר, פרט את התיקונים.</li>
 <li>המחקר המעודכן - גרסה נקייה של המחקר, ללא כל ההזיות שזוהו. המחקר המעודכן כולל קישורים לכל מקור וציטוט. כל מה שנשאר במחקר המעודכן - אומת.</li>
 </ol>
-<p>בסיום השלב השני:</p>
+<p class="heads-list">בסיום השלב השני:</p>
 <ul>
 <li>אמור לי במפורש: &quot;סיימתי את שלב 2 (וידוא). המחקר עודכן - הסרתי X פריטים שלא אומתו ותיקנתי Y טענות שהתבססו עליהם.<br>
 ראה את טבלת הוידוא ואת המחקר המעודכן. כשתהיה מרוצה, אמור לי 'אשר שלב 2' כדי לעבור ליצירת קובץ Markdown.&quot;</li>
@@ -211,7 +215,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 שלב 3: יצירת קובץ Markdown (רק לאחר &quot;אשר שלב 2&quot;)<br>
 ═══════════════════════════════════════════════════════════════</p>
 <p>בשלב זה עליך ליצור את הקובץ Markdown <code>ניתוחים-לשוניים-בינה-מלאכותית/&lt;שורש&gt;.קישורים-מוטבעים.ai.rtl.md</code> המכיל את המחקר הסופי המאומת:</p>
-<p>דרישות הקובץ:</p>
+<p class="heads-list">דרישות הקובץ:</p>
 <ul>
 <li>פורמט Markdown תקני, מוכן להעתקה והדבקה.</li>
 <li>כותרת ראשית מתאימה (H1), תתי-כותרות (H2, H3) לפי הצורך.</li>
@@ -222,7 +226,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li>הנושא המרכזי של המחקר צריך להיות בולט בתחילת הקובץ.</li>
 </ul>
 <p>הצג את הקובץ באמצעות present_files.</p>
-<p>בסיום השלב השלישי:</p>
+<p class="heads-list">בסיום השלב השלישי:</p>
 <ul>
 <li>אמור לי במפורש: &quot;סיימתי את שלב 3 - יצרתי את הקובץ <code>ניתוחים-לשוניים-בינה-מלאכותית/&lt;שורש&gt;.קישורים-מוטבעים.ai.rtl.md</code> - כשתהיה מרוצה מהקובץ, אמור לי 'אשר שלב 3' כדי ליצור את הגרסה עם הקישורים הממוספרים.&quot;</li>
 <li>המתן לקלט ממני. אל תמשיך לשלב 4 עד שאשלח את המחרוזת המדויקת &quot;אשר שלב 3&quot;.</li>

@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,26 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">נספחים-לפירוש</a> / <span dir="auto">בראשית-א--דיון-על-אמירה-וקריאה</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#דיון-אמירה-וקריאה-בראשית-א">דיון: אמירה וקריאה (בראשית א)</a></li>
+<li class="index-depth-1"><a href="#1-שתי-פעולות-דיבור">1. שתי פעולות דיבור</a></li>
+<li class="index-depth-2"><a href="#כיוון-ההתאמה">כיווּן ההתאמה</a></li>
+<li class="index-depth-1"><a href="#2-העוגן-המקראי-הפרפורמטיביות-אינה-מיובאת">2. העוגן המקראי: הפרפורמטיביות אינה מיובאת</a></li>
+<li class="index-depth-2"><a href="#וקראתם-דרור-בארץ-ויקרא-כהי"><code>וּקְרָאתֶם דְּרוֹר בָּאָרֶץ</code> (ויקרא כה:י)</a></li>
+<li class="index-depth-2"><a href="#השורש-קרא">השורש ק.ר.א</a></li>
+<li class="index-depth-2"><a href="#האמירה-משיימת-הקריאה-ממסדת">האמירה משיימת, הקריאה ממסדת</a></li>
+<li class="index-depth-1"><a href="#3-התהליך-ערפל-אמירה-אור-שיקוע">3. התהליך: ערפל ← אמירה ← אוֹר ← שיקוע</a></li>
+<li class="index-depth-1"><a href="#4-סימולקרה">4. סימולקרה</a></li>
+<li class="index-depth-1"><a href="#5-פרק-א-כמעבדה">5. פרק א׳ כמעבדה</a></li>
+<li class="index-depth-2"><a href="#קריאה-וברכה-שני-מישורים-לא-שני-קטבים">קריאה וברכה: שני מישורים, לא שני קטבים</a></li>
+<li class="index-depth-2"><a href="#שני-סוגים-של-תת-מודע">שני סוגים של תת-מודע</a></li>
+<li class="index-depth-1"><a href="#6-הסתייגויות">6. הסתייגויות</a></li>
+</ul>
+</details>
+</nav>
 <h1 id="דיון-אמירה-וקריאה-בראשית-א">דיון: אמירה וקריאה (בראשית א)</h1>
 <p>נספח זה מרחיב שני ערכים במילון - <strong>אמירה</strong> ו<strong>קריאה</strong> - ואת התהליך שהם מגדירים יחד:</p>
 <blockquote>

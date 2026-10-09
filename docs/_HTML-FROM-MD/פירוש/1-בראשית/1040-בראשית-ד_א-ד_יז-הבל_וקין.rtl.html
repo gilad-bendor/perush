@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,16 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../../index.html">פירוש</a> / <a dir="auto" href="../../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="../index.html">פירוש</a> / <a dir="auto" href="index.html">1-בראשית</a> / <span dir="auto">1040-בראשית-ד_א-ד_יז-הבל_וקין</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#הבל-וקין">הבל וקין</a></li>
+<li class="index-depth-1"><a href="#הרג-הבל-ותוצאותיו">הרג הבל ותוצאותיו</a></li>
+<li class="index-depth-1"><a href="#ניסיון-התיקון-של-חנוך">ניסיון התיקון של חֲנוֹךְ</a></li>
+</ul>
+</details>
+</nav>
 <h2 id="הבל-וקין">הבל וקין</h2>
 <p>TODO: לתת כותרת יותר עמוקה</p>
 <p>הסיפור של הבל וקין ממשיך את סיפור הגן בעדן - אבל משנה מיקוד.<br>
@@ -162,7 +176,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 קַיִן מביא לעולם סיפור שבו יש <strong>משמעות לחיי אדם הפשוט</strong>: הערכה עמוקה לקִנְיָן המידות - לצעידה בדרך הנכונה למרות הקושי.</p>
 <div class="pseudo-tag" data-tag="הקבלה-היסטורית">
 <div class="pseudo-tag-caption">הקבלה-היסטורית</div>
-<p>המֵסֶר ״גם לאיכר הפשוט יש דרך משמעותית וחשיבות בעולם״ - הוא מסר בסיסי בתרבויות קדומות:</p>
+<p class="heads-list">המֵסֶר ״גם לאיכר הפשוט יש דרך משמעותית וחשיבות בעולם״ - הוא מסר בסיסי בתרבויות קדומות:</p>
 <ol>
 <li><strong>מצרים העתיקה</strong> (מהאלף הרביעי לפנה&quot;ס): מושג ה-<em>מַאַת</em> (Ma'at) - סדר קוסמי, צדק ואמת.<br>
 כל אדם, מפרעה ועד האיכר הפשוט, נדרש לחיות לפי מאת. בספר המתים, לב הנפטר נשקל מול נוצת מאת - לא העושר או המעמד קובעים, אלא האם חי בדרך הנכונה.</li>
@@ -190,7 +204,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>ההתגבשות של קַיִן מעוררת נרטיב ממשמע מנוּגד - ריאקציונרי - נרטיב של חוסר משמעות בדַוְוקָא: ״הֶבֶל״ = חוסר מטרה.<br>
 הֶבֶל הוא ריאקציה לנטל הסמוי של קַיִן: הדחף האנושי למצוא &quot;משמעות&quot; הוא עצמו מלכודת - הוא יוצר את החרדה שקַיִן מציע &quot;לפתור&quot; (&quot;לך בדרך ותהיה בעל ערך&quot;).<br>
 הֶבֶל יוצא מהמשחק: השאלה &quot;למה אני כאן&quot; היא עצמה הכלא.</p>
-<p>הבדלי הנרטיבים גוזרים גם נתיבי התפתחות שונים:</p>
+<p class="heads-list">הבדלי הנרטיבים גוזרים גם נתיבי התפתחות שונים:</p>
 <ul>
 <li>קַיִן ממוּקד בעבודת המידות: הוא מדבר אל ״הערכים האוניברסליים״ ונוטה לצמצם את חשיבותם של גבולות (קבוצות, עמים, תרבויות).<br>
 קַיִן פונה אל האוכלוסייה כולה - באידאל של ״לעבוד על עצמך״: <code>קַיִן הָיָה עֹבֵד אֲדָמָה</code>.</li>
@@ -199,7 +213,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </ul>
 <div class="pseudo-tag" data-tag="הקבלה-היסטורית">
 <div class="pseudo-tag-caption">הקבלה-היסטורית</div>
-<p>המסר של &quot;פשוט לחיות, בלי לחפש משמעות או להקריב על מזבח המידות&quot; - גם הוא מסר בסיסי בתרבויות קדומות:</p>
+<p class="heads-list">המסר של &quot;פשוט לחיות, בלי לחפש משמעות או להקריב על מזבח המידות&quot; - גם הוא מסר בסיסי בתרבויות קדומות:</p>
 <ol>
 <li><strong>מסופוטמיה</strong> (האלף השלישי-השני לפנה&quot;ס): עצת שִׁידוּרִי באפוס גילגמש.<br>
 גילגמש מחפש חיי נצח, אך נענה: &quot;כשהאלים בראו את האנושות, מוות הם הקצו לה... מלא כרסך, שמח יומם ולילה, עשה כל יום חג&quot;. קבלת המגבלה והנאה מההווה.</li>
@@ -239,7 +253,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <blockquote>
 <p>בראשית ד ו: וַיֹּאמֶר יְהוָה אֶל קָיִן:  לָמָּה חָרָה לָךְ וְלָמָּה נָפְלוּ פָנֶיךָ.</p>
 </blockquote>
-<p>קַיִן נכנס לחשבון-נפש וחיפוש דרך:</p>
+<p class="heads-list">קַיִן נכנס לחשבון-נפש וחיפוש דרך:</p>
 <ul>
 <li>למה אתה במצוקה (<code>לָמָּה חָרָה לָךְ</code>)? למה הידחקות הצידה היא בכלל דבר רע?</li>
 <li>מה גורם לכך שדרכך נתפסת כנחותה (<code>לָמָּה נָפְלוּ פָנֶיךָ</code>)?</li>
@@ -251,7 +265,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <blockquote>
 <p>בראשית ד ז: הֲלוֹא אִם תֵּיטִיב שְׂאֵת וְאִם לֹא תֵיטִיב לַפֶּתַח חַטָּאת רֹבֵץ; וְאֵלֶיךָ תְּשׁוּקָתוֹ וְאַתָּה תִּמְשָׁל בּוֹ.</p>
 </blockquote>
-<p>וכאן מגיעה עוד התפתחות דרמטית:</p>
+<p class="heads-list">וכאן מגיעה עוד התפתחות דרמטית:</p>
 <ol>
 <li>בתגובה לשאלה <code>לָמָּה נָפְלוּ פָנֶיךָ</code> - מה גורם לכך שדרכך נתפסת כנחותה:<br>
 קַיִן מנתח ומבין את הנִיראוּת הסלקטיבית של הבל - את זה שהעולם מתמקד ב<code>בְּכֹרוֹת צֹאנוֹ</code>, ולכן קַיִן בוחר להדגיש את הצד האפל של הבל:<br>
@@ -302,17 +316,17 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </blockquote>
 <p>תחושת התלישות גורמת להופעה של תובנה חדשה אצל קין: חוסר אונים.<br>
 קין מפנים שהמציאות היא (<code>וַיֹּאמֶר קַיִן אֶל יְהוָה</code>) שהוא לוקה בחיסרון מידות בלתי ניתן לתיקון (<code>גָּדוֹל עֲוֹנִי</code>), עד כדי חוסר אמון ביכולת שלו להמשיך ולשאת באחריותו כאליטה (<code>מִנְּשֹׂא</code>).</p>
-<p>קין מוצא את עצמו בעמדה פאסיבית - ״דברים רעים קורים לו״, ואין לו את הכלים כדי לתקן את המצב:</p>
+<p class="heads-list">קין מוצא את עצמו בעמדה פאסיבית - ״דברים רעים קורים לו״, ואין לו את הכלים כדי לתקן את המצב:</p>
 <ul>
 <li>מצד אחד - קין מבין שהמציאות היא שהוא לא נמצא באותו מקום של האוכלוסייה (<code>הֵן גֵּרַשְׁתָּ אֹתִי הַיּוֹם מֵעַל פְּנֵי הָאֲדָמָה</code> - לפי המילון <code>פְּנֵי</code> זה בדרך-של, על-פי-העקרונות-של).</li>
 <li>מצד שני - לקין אין את האומץ האינטלקטואלי להכיר במציאות ולהתמודד איתה כמות שהיא (<code>וּמִפָּנֶיךָ אֶסָּתֵר</code> - כלומר מפני <code>יְהוָה</code>): התמודדות כזאת היא מאיימת מדי וכואבת מדי, ועלולה להוביל למחיקת הזהות (להרג) של קין.</li>
 </ul>
-<p>קין מסיק שהעתיד שלו ימשיך את המצב הקיים שבו:</p>
-<ul>
+<p class="heads-list">קין מסיק שהעתיד שלו ימשיך את המצב הקיים שבו:</p>
+<ul class="runs-on">
 <li>קין נתפס כתלוש (<code>וְהָיִיתִי נָע וָנָד בָּאָרֶץ</code> - כמו מקודם - <code>נָע וָנָד תִּהְיֶה בָאָרֶץ</code>)</li>
-<li>קין מתחמק מהכרה במציאות (כמו מקודם - <code>וּמִפָּנֶיךָ אֶסָּתֵר</code>)<br>
-המסקנה היא שקין יהיה מאוד פגיע: כל נרטיב שיצליח ״לדייק״ את החסרונות של קין - להכריח אותו להתמודד עם המציאות במקום להיסתתר (<code>כָל מֹצְאִי</code>) יחסל את קין כנרטיב-ממשמע (<code>יַהַרְגֵנִי</code>).</li>
+<li>קין מתחמק מהכרה במציאות (כמו מקודם - <code>וּמִפָּנֶיךָ אֶסָּתֵר</code>)</li>
 </ul>
+<p>המסקנה היא שקין יהיה מאוד פגיע: כל נרטיב שיצליח ״לדייק״ את החסרונות של קין - להכריח אותו להתמודד עם המציאות במקום להיסתתר (<code>כָל מֹצְאִי</code>) יחסל את קין כנרטיב-ממשמע (<code>יַהַרְגֵנִי</code>).</p>
 <blockquote>
 <p>בראשית ד טו: וַיֹּאמֶר לוֹ יְהוָה לָכֵן כָּל הֹרֵג קַיִן שִׁבְעָתַיִם יֻקָּם; וַיָּשֶׂם יְהוָה לְקַיִן אוֹת לְבִלְתִּי הַכּוֹת אֹתוֹ כָּל מֹצְאוֹ.</p>
 </blockquote>

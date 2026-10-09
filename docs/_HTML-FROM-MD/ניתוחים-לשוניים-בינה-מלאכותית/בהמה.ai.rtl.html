@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,66 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">בהמה.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#בהמה-האטום-האילם-וזה-שנמצא-ברשותי">בְּהֵמָה — האטוּם, האילם, וזה שנמצא ברשותי</a></li>
+<li class="index-depth-1"><a href="#מחקר-בלשני-בעברית-מקראית-ובשמית-השוואתית">מחקר בלשני בעברית מקראית ובשמית השוואתית</a></li>
+<li class="index-depth-1"><a href="#תוכן-העניינים">תוכן העניינים</a></li>
+<li class="index-depth-1"><a href="#1-התזה">1. התזה</a></li>
+<li class="index-depth-1"><a href="#2-נתוני-יסוד-מורפולוגיה-ותפוצה">2. נתוני יסוד: מורפולוגיה ותפוצה</a></li>
+<li class="index-depth-2"><a href="#21-השורש-והצורה">2.1 השורש והצורה</a></li>
+<li class="index-depth-2"><a href="#22-היעדר-פועל-נתון-מהותי">2.2 היעדר פועל — נתון מהותי</a></li>
+<li class="index-depth-2"><a href="#23-נתוני-תפוצה">2.3 נתוני תפוצה</a></li>
+<li class="index-depth-1"><a href="#3-אטימולוגיה-עדות-הערבית">3. אטימולוגיה: עדות הערבית</a></li>
+<li class="index-depth-2"><a href="#31-ההגדרה-במילונאות-הערבית-הקלאסית">3.1 ההגדרה במילונאות הערבית הקלאסית</a></li>
+<li class="index-depth-2"><a href="#32-אשכול-השורש">3.2 אשכול השורש</a></li>
+<li class="index-depth-2"><a href="#33-המסקנה-הסמנטית">3.3 המסקנה הסמנטית</a></li>
+<li class="index-depth-2"><a href="#34-מבנה-מקביל-בערבית-ובעברית">3.4 מבנה מקביל בערבית ובעברית</a></li>
+<li class="index-depth-2"><a href="#35-הערה-זהירה-על-כיוון-השאילה">3.5 הערה זהירה על כיוון השאילה</a></li>
+<li class="index-depth-2"><a href="#36-היעדר-בענף-הארמי">3.6 היעדר בענף הארמי</a></li>
+<li class="index-depth-1"><a href="#4-האטימולוגיה-המצרית-היסטוריה-של-טעות">4. האטימולוגיה המצרית — היסטוריה של טעות</a></li>
+<li class="index-depth-1"><a href="#5-שלוש-רמות-השימוש-אוטוהיפונימיה">5. שלוש רמות השימוש: אוטו־היפונימיה</a></li>
+<li class="index-depth-2"><a href="#רמה-א-שםעל-כלל-בעלי-החיים-היבשתיים">רמה א' — שם־על: כלל בעלי החיים היבשתיים</a></li>
+<li class="index-depth-2"><a href="#רמה-ב-קטגוריה-מקבילה-ארבערגליים-גדולות">רמה ב' — קטגוריה מקבילה: ארבע־רגליים גדולות</a></li>
+<li class="index-depth-2"><a href="#רמה-ג-צמצום-מקנה-רכוש-חי-בהמת-עבודה">רמה ג' — צמצום: מקנה, רכוש חי, בהמת עבודה</a></li>
+<li class="index-depth-2"><a href="#מסקנת-הביניים">מסקנת הביניים</a></li>
+<li class="index-depth-1"><a href="#6-היחיד-מול-הרבים">6. היחיד מול הרבים</a></li>
+<li class="index-depth-1"><a href="#7-מערכת-הניגודים-בהמה-חיה-רמש">7. מערכת הניגודים: בהמה / חיה / רמש</a></li>
+<li class="index-depth-2"><a href="#71-בהמה-חיה-ניגוד-של-תפקיד-לא-של-מין">7.1 בהמה ↔ חיה — ניגוד של תפקיד, לא של מין</a></li>
+<li class="index-depth-2"><a href="#72-בהמה-רמש-ניגוד-של-מודוס-תנועה-וסף-נראות">7.2 בהמה ↔ רמש — ניגוד של מודוס תנועה וסף נראוּת</a></li>
+<li class="index-depth-2"><a href="#73-טבלת-הצירים">7.3 טבלת הצירים</a></li>
+<li class="index-depth-1"><a href="#8-מאדם-ועד-בהמה-המריזם-המכונן">8. &quot;מֵאָדָם וְעַד בְּהֵמָה&quot;: המריזם המכונן</a></li>
+<li class="index-depth-2"><a href="#שני-הקצוות-של-התמונה">שני הקצוות של התמונה</a></li>
+<li class="index-depth-1"><a href="#9-בהמה-כקוטב-האנתרופולוגי">9. בהמה כקוטב האנתרופולוגי</a></li>
+<li class="index-depth-2"><a href="#מדוע-דווקא-בהמה">מדוע דווקא בהמה?</a></li>
+<li class="index-depth-1"><a href="#10-עדות-התרגומים-העתיקים">10. עדות התרגומים העתיקים</a></li>
+<li class="index-depth-2"><a href="#101-κτηνος-הנכס">10.1 κτῆνος = &quot;הנכס&quot;</a></li>
+<li class="index-depth-2"><a href="#102-τετραποδα-בבראשית-אכד-היסוס-לא-פתרון">10.2 τετράποδα בבראשית א:כד — היסוס, לא פתרון</a></li>
+<li class="index-depth-1"><a href="#11-בהמות-שבאיוב-מטו">11. בְּהֵמוֹת שבאיוב מ:טו</a></li>
+<li class="index-depth-2"><a href="#עמדות-במחקר">עמדות במחקר</a></li>
+<li class="index-depth-2"><a href="#המקבילות-הבתרמקראיות">המקבילות הבתר־מקראיות</a></li>
+<li class="index-depth-2"><a href="#הנקודה-החשובה-למחקר-שלנו">הנקודה החשובה למחקר שלנו</a></li>
+<li class="index-depth-1"><a href="#12-מחלוקות-מדעיות">12. מחלוקות מדעיות</a></li>
+<li class="index-depth-2"><a href="#121-טהרה-וכשרות-מהו-הבסיס-לסימני-הטהרה">12.1 טהרה וכשרות: מהו הבסיס לסימני הטהרה?</a></li>
+<li class="index-depth-2"><a href="#122-האם-בהמה-בבראשית-א-היא-אנכרוניזם">12.2 האם בהמה בבראשית א היא אנכרוניזם?</a></li>
+<li class="index-depth-2"><a href="#123-בהמה-בהלכה-המאוחרת-שכבה-נפרדת">12.3 בהמה בהלכה המאוחרת — שכבה נפרדת</a></li>
+<li class="index-depth-1"><a href="#13-סינתזה-המודל-הפנומנולוגיקוגניטיבי">13. סינתזה: המודל הפנומנולוגי־קוגניטיבי</a></li>
+<li class="index-depth-2"><a href="#התוצאה">התוצאה</a></li>
+<li class="index-depth-2"><a href="#התשובה-לשאלת-המחקר">התשובה לשאלת המחקר</a></li>
+<li class="index-depth-1"><a href="#14-הערה-מתודולוגית-מה-הוסר-מן-המחקר">14. הערה מתודולוגית: מה הוסר מן המחקר</a></li>
+<li class="index-depth-1"><a href="#15-מקורות">15. מקורות</a></li>
+<li class="index-depth-2"><a href="#מילונים-ולקסיקונים">מילונים ולקסיקונים</a></li>
+<li class="index-depth-2"><a href="#דקדוק">דקדוק</a></li>
+<li class="index-depth-2"><a href="#נוסחי-מקרא-ותרגומים">נוסחי מקרא ותרגומים</a></li>
+<li class="index-depth-2"><a href="#פרשנות-וחקר-מקרא">פרשנות וחקר מקרא</a></li>
+<li class="index-depth-2"><a href="#טהרה-כשרות-וטקסונומיה-מקראית">טהרה, כשרות וטקסונומיה מקראית</a></li>
+<li class="index-depth-2"><a href="#סמנטיקה-קוגניטיבית-ואתנוביולוגיה">סמנטיקה קוגניטיבית ואתנו־ביולוגיה</a></li>
+<li class="index-depth-2"><a href="#היסטוריה-של-המחקר">היסטוריה של המחקר</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/dfd6ed44-a8ac-4e3a-9ee2-d9def676759a">Claude Opus 5</a></p>
 <h1 id="בהמה-האטום-האילם-וזה-שנמצא-ברשותי">בְּהֵמָה — האטוּם, האילם, וזה שנמצא ברשותי</h1>
 <h2 id="מחקר-בלשני-בעברית-מקראית-ובשמית-השוואתית">מחקר בלשני בעברית מקראית ובשמית השוואתית</h2>

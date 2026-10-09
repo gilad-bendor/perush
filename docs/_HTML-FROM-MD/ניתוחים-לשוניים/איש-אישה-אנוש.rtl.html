@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -138,19 +142,19 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים</a> / <span dir="auto">איש-אישה-אנוש</span></nav>
 <div class="pseudo-tag" data-tag="ניתוח-לשוני">
 <div class="pseudo-tag-caption">ניתוח-לשוני: איש-אישה-אנוש</div>
-<p>בניגוד לאינטואיציה - בסבירות גבוהה המקור של ״איש״ ושל ״אישה״ הם שורשים <strong>שונים</strong>, ומקור המילה ״אנוש״ הוא מהשורש של ״איש״.</p>
+<p class="heads-list">בניגוד לאינטואיציה - בסבירות גבוהה המקור של ״איש״ ושל ״אישה״ הם שורשים <strong>שונים</strong>, ומקור המילה ״אנוש״ הוא מהשורש של ״איש״.</p>
 <ul>
 <li>איש, אנוש, אנשים - כולם משורש פרוטו־שמי √ʾnš (שמשמעו &quot;אדם, פרט אנושי, אנושות&quot;).</li>
 <li>אישה, נשים - משורש פרוטו־שמי שונה, √ʾnθ (שמשמעו &quot;אישה, נקבה&quot;).</li>
 </ul>
 <p>האינטואיציה שלנו כדוברי עברית - להניח ש-״איש״ ו-״אישה״ הם מאותו שורש - היא טעות שנובעת מהצליל הדומה של השורשים הקדומים בעברית.</p>
-<p>הקונוטציות של המילים בתנ״ך - ההבדל בקצרה (מילה ← רובד ← מה היא מדגישה):</p>
+<p class="heads-list">הקונוטציות של המילים בתנ״ך - ההבדל בקצרה (מילה ← רובד ← מה היא מדגישה):</p>
 <ul>
 <li><strong>איש</strong> ← יום־יומי, פרוזאי ← פרטיות, נוכחות קונקרטית, סטטוס</li>
 <li><strong>אישה</strong> ← יום־יומי, פרוזאי ← נקביות ביולוגית (שורש שונה לחלוטין מ&quot;איש&quot;!)</li>
 <li><strong>אנוש</strong> ← פיוטי, נדיר ← אנושיות במובן הקיומי - שבריריות, תמותה</li>
 </ul>
-<p><strong>״איש״ בתנ״ך:</strong><br>
+<p class="heads-list"><strong>״איש״ בתנ״ך:</strong><br>
 הקונוטציה: יחידי, קונקרטי, נוכח. אם נקבל את הזיקה האפשרית לאכדית išu (&quot;יש&quot;) - האיש הוא ה־&quot;ה־יש&quot;, הנגלה הקונקרטי.</p>
 <ul>
 <li>אדם זכר בוגר - בניגוד לאישה, נער, ילד.</li>
@@ -159,20 +163,22 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li>דיסטריבוטיבי - אִישׁ אִישׁ = כל אחד ואחד.</li>
 <li>אופי/מהות - בצירופים: אִישׁ חַיִל, אִישׁ מִלְחָמָה, אִישׁ הָאֱלֹהִים, אִישׁ דָּמִים.</li>
 </ul>
-<p><strong>״אישה״ בתנ״ך:</strong><br>
+<p class="heads-list"><strong>״אישה״ בתנ״ך:</strong><br>
 הקונוטציה: נקביות ביולוגית כללית, שיישומה לאדם נגזר משימוש משני. בניגוד ל״איש״ (תכונה אנושית ייחודית) ו״אנוש״ (תכונת אנושיות בכלל), השורש של ״אישה״ הוא ביולוגי־מיני ולא ייחודי לאדם.</p>
 <ul>
 <li>אישה, רעיה - בני־זוגיות.</li>
 <li>נקביות ביולוגית - מהשורש הפרוטו־שמי √ʾnθ שמתאר נקביות באופן רחב (הערבית unθā מתארת ממין נקבה כתואר לכל יצור חי).</li>
 </ul>
 <p><strong>״אנוש״ בתנ״ך:</strong></p>
-<p>הקונוטציה: חולשה, תמותה, ארעיות, שבריריות. האדם בתור יצור־תמותה מול האל הנצחי. אדם הוא &quot;האחד שיכול לחלות, להיות חלש, למות&quot;.<br>
+<p class="heads-list">הקונוטציה: חולשה, תמותה, ארעיות, שבריריות. האדם בתור יצור־תמותה מול האל הנצחי. אדם הוא &quot;האחד שיכול לחלות, להיות חלש, למות&quot;.<br>
 מילה נדירה, פיוטית־ספרותית - כמעט לא מופיעה בפרוזה ההיסטורית, אלא בעיקר בספרות החכמה והפיוט: איוב (18 פעמים), תהילים, ישעיהו (במיוחד &quot;השני&quot;), משלי, דניאל:</p>
-<ul>
+<ul class="runs-on">
 <li><code>מָה אֱנוֹשׁ כִּי תִזְכְּרֶנּוּ וּבֶן אָדָם כִּי תִפְקְדֶנּוּ</code> (תהילים ח:ד)</li>
 <li><code>אֱנוֹשׁ כֶּחָצִיר יָמָיו כְּצִיץ הַשָּׂדֶה כֵּן יָצִיץ</code> (תהילים קג:טו)</li>
-<li><code>מָה אֱנוֹשׁ כִּי תְגַדְּלֶנּוּ וְכִי תָשִׁית אֵלָיו לִבֶּךָ</code> (איוב ז:יז)<br>
-הקונוטציה מתחזקת בקיומו של שורש √אנש במשמעות &quot;להיות חולה, חלש&quot;:</li>
+<li><code>מָה אֱנוֹשׁ כִּי תְגַדְּלֶנּוּ וְכִי תָשִׁית אֵלָיו לִבֶּךָ</code> (איוב ז:יז)</li>
+</ul>
+<p class="heads-list">הקונוטציה מתחזקת בקיומו של שורש √אנש במשמעות &quot;להיות חולה, חלש&quot;:</p>
+<ul>
 <li><code>לָמָּה הָיָה כְאֵבִי נֶצַח וּמַכָּתִי אֲנוּשָׁה מֵאֲנָה הֵרָפֵא</code> (ירמיהו טו:יח)</li>
 <li><code>וַיִּגֹּף יְהוָה אֶת הַיֶּלֶד אֲשֶׁר יָלְדָה אֵשֶׁת אוּרִיָּה לְדָוִד וַיֵּאָנַשׁ</code> (שמואל-ב יב:טו)</li>
 <li>מקבילה אכדית enšu = &quot;חלש&quot;.</li>

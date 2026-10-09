@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,40 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">נקבה.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#השורש-נקב-במקרא-ניתוח-בלשניקוגניטיבי">השורש נ.ק.ב במקרא — ניתוח בלשני־קוגניטיבי</a></li>
+<li class="index-depth-1"><a href="#עם-מיקוד-בשם-העצם-נקבה-female">עם מיקוד בשם העצם נְקֵבָה (female)</a></li>
+<li class="index-depth-1"><a href="#הקדמה-שני-מישורי-המחקר">הקדמה: שני מישורי המחקר</a></li>
+<li class="index-depth-0"><a href="#חלק-ראשון-התמונה-הבלשנית-ההיסטורית-מישור-א">חלק ראשון: התמונה הבלשנית-ההיסטורית (מישור א׳)</a></li>
+<li class="index-depth-1"><a href="#א-השאלה-הבסיסית-שורש-אחד-או-שניים">א. השאלה הבסיסית: שורש אחד או שניים?</a></li>
+<li class="index-depth-1"><a href="#ב-המשמעות-הפיזית-לנקב-לחדור">ב. המשמעות הפיזית — לנקב, לחדור</a></li>
+<li class="index-depth-2"><a href="#מופעים-מקראיים-מרכזיים">מופעים מקראיים מרכזיים</a></li>
+<li class="index-depth-2"><a href="#העדות-האפיגרפית-כתובת-השילוח">העדות האפיגרפית: כתובת השילוח</a></li>
+<li class="index-depth-1"><a href="#ג-המשמעות-לקרוא-בשם-לפרש-לציין-במפורש">ג. המשמעות &quot;לקרוא בשם, לפרש, לציין במפורש&quot;</a></li>
+<li class="index-depth-2"><a href="#הקשר-הסמנטי-בין-לנקב-ללקרוא-בשם">הקשר הסמנטי בין &quot;לנקב&quot; ל&quot;לקרוא בשם&quot;</a></li>
+<li class="index-depth-1"><a href="#ד-המשמעות-החמקמקה-לקלל">ד. המשמעות החמקמקה — לקלל</a></li>
+<li class="index-depth-2"><a href="#העדויות-המתחות">העדויות המתחות</a></li>
+<li class="index-depth-2"><a href="#גישות-מחקריות-מודרניות">גישות מחקריות מודרניות</a></li>
+<li class="index-depth-1"><a href="#ה-נקבה-שם-העצם-המוקד">ה. נְקֵבָה — שם העצם המוקד</a></li>
+<li class="index-depth-2"><a href="#מופעים-מרכזיים">מופעים מרכזיים</a></li>
+<li class="index-depth-2"><a href="#האטימולוגיה-הקונצנזואלית">האטימולוגיה הקונצנזואלית</a></li>
+<li class="index-depth-2"><a href="#הקושי-המודה-בתוך-המחקר">הקושי המודה בתוך המחקר</a></li>
+<li class="index-depth-1"><a href="#ו-התמונה-ההשוואתית-שמית">ו. התמונה ההשוואתית-שמית</a></li>
+<li class="index-depth-0"><a href="#חלק-שני-הפירוש-הפנומנולוגי-קוגניטיבי-המוצע-מישור-ב">חלק שני: הפירוש הפנומנולוגי-קוגניטיבי המוצע (מישור ב׳)</a></li>
+<li class="index-depth-1"><a href="#א-הגשטלט-המוצע">א. הגשטלט המוצע</a></li>
+<li class="index-depth-1"><a href="#ב-ניתוח-מחדש-של-המופעים-לאור-הגשטלט">ב. ניתוח מחדש של המופעים לאור הגשטלט</a></li>
+<li class="index-depth-1"><a href="#ג-תמיכה-חזקה-דפוס-מילוני-בעברית">ג. תמיכה חזקה: דפוס מילוני בעברית</a></li>
+<li class="index-depth-1"><a href="#ד-תמיכה-ערבית">ד. תמיכה ערבית</a></li>
+<li class="index-depth-1"><a href="#ה-תמיכה-תיאורטית-בלשנות-קוגניטיבית">ה. תמיכה תיאורטית: בלשנות קוגניטיבית</a></li>
+<li class="index-depth-1"><a href="#ו-הערכת-סבירות-הפירוש-המוצע">ו. הערכת סבירות הפירוש המוצע</a></li>
+<li class="index-depth-0"><a href="#חלק-שלישי-סינתזה-יחסי-שני-המישורים">חלק שלישי: סינתזה — יחסי שני המישורים</a></li>
+<li class="index-depth-0"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/e0cd28a3-a24c-4a81-9baa-13c4982a62d0">Claude Opus 4.7</a></p>
 <h1 id="השורש-נקב-במקרא-ניתוח-בלשניקוגניטיבי">השורש נ.ק.ב במקרא — ניתוח בלשני־קוגניטיבי</h1>
 <h2 id="עם-מיקוד-בשם-העצם-נקבה-female">עם מיקוד בשם העצם נְקֵבָה (female)</h2>
@@ -449,7 +487,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </ul>
 <h2 id="ו-הערכת-סבירות-הפירוש-המוצע">ו. הערכת סבירות הפירוש המוצע</h2>
 <p>יש להבחין בין שתי גרסאות של הטענה:</p>
-<p><strong>גרסה סינכרונית-קוגניטיבית</strong> (&quot;הגשטלט מאחד את המופעים באופן עקבי&quot;): <strong>סבירות גבוהה מאוד</strong>. נתמך היטב על-ידי:</p>
+<p class="heads-list"><strong>גרסה סינכרונית-קוגניטיבית</strong> (&quot;הגשטלט מאחד את המופעים באופן עקבי&quot;): <strong>סבירות גבוהה מאוד</strong>. נתמך היטב על-ידי:</p>
 <ul>
 <li>ההתאמה האלגנטית לכל המופעים המקראיים</li>
 <li>הדפוס המילוני המקביל בעברית (ח.ק.ק, ח.ר.ץ, וכו')</li>

@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,20 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../../index.html">פירוש</a> / <a dir="auto" href="../../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="../index.html">פירוש</a> / <a dir="auto" href="index.html">1-בראשית</a> / <span dir="auto">1560-בראשית-מא_נז-מו_ז-ירידות_השבטים_למצרים</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#ירידת-עשר-אחי-יוסף-מצרימה-התנכרות-מאסר-שמעון-הדרישה-לבנימין">ירידת עשר אחי יוסף מצרימה, התנכרות, מאסר שמעון, הדרישה לבנימין</a></li>
+<li class="index-depth-0"><a href="#סרוב-יעקב-להורדת-בנימין-הפצרות-ראובן-ויהודה">סרוב יעקב להורדת בנימין, הפצרות ראובן ויהודה</a></li>
+<li class="index-depth-0"><a href="#ירידת-האחים-ובנימין-למצרים-והכנות-למפגש-עם-יוסף">ירידת האחים ובנימין למצרים, והכנות למפגש עם יוסף</a></li>
+<li class="index-depth-0"><a href="#המפגש-עם-יוסף-שכרות-הטמנת-הגביע-הפללת-בנימין">המפגש עם יוסף, שכרות, הטמנת הגביע, הפללת בנימין</a></li>
+<li class="index-depth-0"><a href="#ערבות-האחים-לבנימין">ערבות האחים לבנימין</a></li>
+<li class="index-depth-0"><a href="#התוודעות-יוסף-לאחיו-והזמנה-משפחתית-למצרים">התוודעות יוסף לאחיו, והזמנה משפחתית למצרים</a></li>
+<li class="index-depth-0"><a href="#הבשורה-ליעקב-ואישור-מאלהים">הבשורה ליעקב, ואישור מאלהים</a></li>
+</ul>
+</details>
+</nav>
 <h2 id="ירידת-עשר-אחי-יוסף-מצרימה-התנכרות-מאסר-שמעון-הדרישה-לבנימין">ירידת עשר אחי יוסף מצרימה, התנכרות, מאסר שמעון, הדרישה לבנימין</h2>
 <blockquote>
 <p>בראשית מא נז: וְכָל הָאָרֶץ בָּאוּ מִצְרַיְמָה לִשְׁבֹּר אֶל יוֹסֵף:  כִּי חָזַק הָרָעָב בְּכָל הָאָרֶץ.<br>

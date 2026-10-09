@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,49 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">תהום.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#המילה-תהום-במקרא-ניתוח-בלשני-והשוואתי">המילה תְּהוֹם במקרא: ניתוח בלשני והשוואתי</a></li>
+<li class="index-depth-1"><a href="#תקציר">תקציר</a></li>
+<li class="index-depth-1"><a href="#א-מבוא-ומסגרת-המחקר">א. מבוא ומסגרת המחקר</a></li>
+<li class="index-depth-1"><a href="#ב-ההתפלגות-במקרא">ב. ההתפלגות במקרא</a></li>
+<li class="index-depth-2"><a href="#מופעים-מרכזיים">מופעים מרכזיים</a></li>
+<li class="index-depth-1"><a href="#ג-ניתוח-מורפולוגי-דקדוקי">ג. ניתוח מורפולוגי-דקדוקי</a></li>
+<li class="index-depth-2"><a href="#1-המין-הדקדוקי">1. המין הדקדוקי</a></li>
+<li class="index-depth-2"><a href="#2-צורת-הריבוי">2. צורת הריבוי</a></li>
+<li class="index-depth-2"><a href="#3-המשקל">3. המשקל</a></li>
+<li class="index-depth-2"><a href="#4-חוסר-היידוע">4. חוסר היידוע</a></li>
+<li class="index-depth-1"><a href="#ד-אטימולוגיה-ושחזור-פרוטו-שמי">ד. אטימולוגיה ושחזור פרוטו-שמי</a></li>
+<li class="index-depth-2"><a href="#השורש-הפרוטו-שמי">השורש הפרוטו-שמי</a></li>
+<li class="index-depth-2"><a href="#חידת-מין-השורש">חידת מין השורש</a></li>
+<li class="index-depth-1"><a href="#ה-ראיות-שמיות-השוואתיות">ה. ראיות שמיות השוואתיות</a></li>
+<li class="index-depth-2"><a href="#1-אכדית-tiamat-tiamtu-tamtu">1. אכדית: Tiāmat, tiāmtu, tâmtu</a></li>
+<li class="index-depth-2"><a href="#2-אוגריתית-thm-thmt">2. אוגריתית: thm, thmt</a></li>
+<li class="index-depth-2"><a href="#3-ערבית-tihama-tahama">3. ערבית: tihāma, tahama</a></li>
+<li class="index-depth-2"><a href="#4-אבלאית">4. אבלאית</a></li>
+<li class="index-depth-1"><a href="#ו-הוויכוח-על-קשר-תהום-tiamat">ו. הוויכוח על קשר תְּהוֹם-Tiāmat</a></li>
+<li class="index-depth-2"><a href="#העמדה-הקלאסית-הרמן-גונקל-ובית-מדרשו">העמדה הקלאסית: הרמן גוּנְקֵל ובית מדרשו</a></li>
+<li class="index-depth-2"><a href="#הביקורת-הפונולוגית-לשונית">הביקורת הפונולוגית-לשונית</a></li>
+<li class="index-depth-2"><a href="#העמדה-המודרנית-דייוויד-טסומורה">העמדה המודרנית: דייוויד טסומורה</a></li>
+<li class="index-depth-2"><a href="#עמדות-ביניים">עמדות ביניים</a></li>
+<li class="index-depth-2"><a href="#העמדה-האשורולוגית-וילפרד-למברט">העמדה האשורולוגית: וילפרד למברט</a></li>
+<li class="index-depth-1"><a href="#ז-ניתוח-פנומנולוגי-קוגניטיבי">ז. ניתוח פנומנולוגי-קוגניטיבי</a></li>
+<li class="index-depth-2"><a href="#השדה-הסמנטי-הראשוני">השדה הסמנטי הראשוני</a></li>
+<li class="index-depth-2"><a href="#היחס-בין-תהום-ים-מים">היחס בין תְּהוֹם, יָם, מַיִם</a></li>
+<li class="index-depth-2"><a href="#תהום-רבה-הצירוף">&quot;תְּהוֹם רַבָּה&quot; — הצירוף</a></li>
+<li class="index-depth-2"><a href="#חלוקת-התהומות-בקוסמולוגיה-המקראית">חלוקת התהומות בקוסמולוגיה המקראית</a></li>
+<li class="index-depth-1"><a href="#ח-תרגום-השבעים-והפצת-המושג">ח. תרגום השבעים והפצת המושג</a></li>
+<li class="index-depth-1"><a href="#ט-מוקדי-מחקר-נוספים">ט. מוקדי מחקר נוספים</a></li>
+<li class="index-depth-2"><a href="#1-תהום-וים-סוף-שירת-הים-שמות-טו">1. תְּהוֹם וים סוף — שירת הים (שמות טו)</a></li>
+<li class="index-depth-2"><a href="#2-תהום-בחוכמה-משלי-איוב">2. תְּהוֹם בחוכמה (משלי, איוב)</a></li>
+<li class="index-depth-1"><a href="#י-דמויות-מפתח-במחקר-ההיסטורי">י. דמויות מפתח במחקר ההיסטורי</a></li>
+<li class="index-depth-1"><a href="#יא-סיכום">יא. סיכום</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/a471a44e-83fb-40c9-9bda-2b5f4c296513">Claude Opus 4.7</a></p>
 <h1 id="המילה-תהום-במקרא-ניתוח-בלשני-והשוואתי">המילה תְּהוֹם במקרא: ניתוח בלשני והשוואתי</h1>
 <blockquote>

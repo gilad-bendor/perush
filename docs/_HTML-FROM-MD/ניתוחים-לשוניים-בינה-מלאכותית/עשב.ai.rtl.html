@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,52 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">עשב.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#עשב-ניתוח-בלשניפנומנולוגי-של-מונח-מקראי">עֶשֶׂב — ניתוח בלשני־פנומנולוגי של מונח מקראי</a></li>
+<li class="index-depth-1"><a href="#1-הצגת-השאלה">1. הצגת השאלה</a></li>
+<li class="index-depth-1"><a href="#2-הנתונים-הטקסטואליים">2. הנתונים הטקסטואליים</a></li>
+<li class="index-depth-2"><a href="#21-היקף">2.1 היקף</a></li>
+<li class="index-depth-2"><a href="#22-ההיקרויות-בתורה">2.2 ההיקרויות בתורה</a></li>
+<li class="index-depth-2"><a href="#23-היקרויות-מרכזיות-מחוץ-לתורה">2.3 היקרויות מרכזיות מחוץ לתורה</a></li>
+<li class="index-depth-2"><a href="#24-ארמית-מקראית">2.4 ארמית מקראית</a></li>
+<li class="index-depth-1"><a href="#3-מבנה-מורפולוגי">3. מבנה מורפולוגי</a></li>
+<li class="index-depth-2"><a href="#31-המשקל">3.1 המשקל</a></li>
+<li class="index-depth-2"><a href="#32-קולקטיב">3.2 קולקטיב</a></li>
+<li class="index-depth-2"><a href="#33-היעדר-פועל">3.3 היעדר פועל</a></li>
+<li class="index-depth-1"><a href="#4-בלשנות-היסטוריתהשוואתית">4. בלשנות היסטורית־השוואתית</a></li>
+<li class="index-depth-2"><a href="#41-הצורה-המשוחזרת">4.1 הצורה המשוחזרת</a></li>
+<li class="index-depth-2"><a href="#42-מקבילות-מאומתות">4.2 מקבילות מאומתות</a></li>
+<li class="index-depth-2"><a href="#43-העדות-מן-הערבית-הראיה-החזקה-לתיזת-האכילה">4.3 העדות מן הערבית — הראיה החזקה לתיזת האכילה</a></li>
+<li class="index-depth-2"><a href="#44-ההתאמה-הפונולוגית-עדות-הsin-הצדי">4.4 ההתאמה הפונולוגית — עדות ה־śin הצדי</a></li>
+<li class="index-depth-2"><a href="#45-חברים-כוזבים">4.5 &quot;חברים כוזבים&quot;</a></li>
+<li class="index-depth-2"><a href="#46-מה-אין-והוא-חשוב-לא-פחות">4.6 מה <strong>אין</strong> — והוא חשוב לא פחות</a></li>
+<li class="index-depth-1"><a href="#5-השדה-הסמנטי-מפת-המונחים">5. השדה הסמנטי: מפת המונחים</a></li>
+<li class="index-depth-2"><a href="#51-ההבחנה-עשב-דשא-הליבה-הטיעונית">5.1 ההבחנה עֵשֶׂב / דֶּשֶׁא — הליבה הטיעונית</a></li>
+<li class="index-depth-2"><a href="#52-מחלוקת-הלקסיקונים">5.2 מחלוקת הלקסיקונים</a></li>
+<li class="index-depth-2"><a href="#53-ההבחנה-עשב-חציר">5.3 ההבחנה עֵשֶׂב / חָצִיר</a></li>
+<li class="index-depth-1"><a href="#6-הניתוח-הפנומנולוגיקוגניטיבי">6. הניתוח הפנומנולוגי־קוגניטיבי</a></li>
+<li class="index-depth-2"><a href="#61-שלושת-הפרמטרים-החווייתיים">6.1 שלושת הפרמטרים החווייתיים</a></li>
+<li class="index-depth-2"><a href="#62-המבחן-השלילי-מה-עשב-אינו-עושה">6.2 המבחן השלילי: מה עֵשֶׂב אינו עושה</a></li>
+<li class="index-depth-2"><a href="#63-היעדר-הפועל-כראיה-קוגניטיבית">6.3 היעדר הפועל כראיה קוגניטיבית</a></li>
+<li class="index-depth-2"><a href="#64-מדוע-מזריע-זרע-ולא-פורח">6.4 מדוע &quot;מַזְרִיעַ זֶרַע&quot; ולא &quot;פורח&quot;?</a></li>
+<li class="index-depth-2"><a href="#65-בראשית-בה-וגיח-עשב-השדה-כמונח-חקלאי">6.5 בראשית ב:ה ו־ג:יח — עֵשֶׂב הַשָּׂדֶה כמונח חקלאי</a></li>
+<li class="index-depth-2"><a href="#66-עדות-הארמית-מקום-מול-מנה">6.6 עדות הארמית: מקום מול מנה</a></li>
+<li class="index-depth-1"><a href="#7-עדות-התרגומים-העתיקים">7. עדות התרגומים העתיקים</a></li>
+<li class="index-depth-1"><a href="#8-הרצף-ההיסטורי">8. הרצף ההיסטורי</a></li>
+<li class="index-depth-1"><a href="#9-נקודות-פתוחות">9. נקודות פתוחות</a></li>
+<li class="index-depth-1"><a href="#10-סיכום-התיזה">10. סיכום התיזה</a></li>
+<li class="index-depth-1"><a href="#11-הביבליוגרפיה-המאומתת">11. הביבליוגרפיה המאומתת</a></li>
+<li class="index-depth-2"><a href="#מילונים-ולקסיקונים">מילונים ולקסיקונים</a></li>
+<li class="index-depth-2"><a href="#בלשנות-שמית-והיסטורית">בלשנות שמית והיסטורית</a></li>
+<li class="index-depth-2"><a href="#פרשנות-ומחקר-מקרא">פרשנות ומחקר מקרא</a></li>
+<li class="index-depth-2"><a href="#צמחי-המקרא">צמחי המקרא</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/3a4e13ea-f559-49c5-b62d-fd1be2bde382">Claude Opus 5</a></p>
 <h1 id="עשב-ניתוח-בלשניפנומנולוגי-של-מונח-מקראי">עֶשֶׂב — ניתוח בלשני־פנומנולוגי של מונח מקראי</h1>
 <p><em>(גרסה עם קישורים ממוספרים)</em></p>

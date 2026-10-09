@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,36 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">נפש.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#נפש-מחקר-לשוני-של-שם-העצם-נפש-והפועל-נפש-במקרא">נֶפֶשׁ — מחקר לשוני של שם העצם נֶפֶשׁ והפועל נָפַשׁ במקרא</a></li>
+<li class="index-depth-2"><a href="#גרסה-עם-קישורים-ממוספרים">גרסה עם קישורים ממוספרים</a></li>
+<li class="index-depth-1"><a href="#תוכן-עניינים">תוכן עניינים</a></li>
+<li class="index-depth-1"><a href="#תקציר-הממצאים">תקציר הממצאים</a></li>
+<li class="index-depth-1"><a href="#חלק-א-ניתוח-לשוני">חלק א׳: ניתוח לשוני</a></li>
+<li class="index-depth-2"><a href="#1-תפוצה-ומורפולוגיה">1. תפוצה ומורפולוגיה</a></li>
+<li class="index-depth-2"><a href="#2-הפועל-נפש">2. הפועל נָפַשׁ</a></li>
+<li class="index-depth-2"><a href="#3-השוואה-שמיתהיסטורית">3. השוואה שמית־היסטורית</a></li>
+<li class="index-depth-2"><a href="#4-תולדות-המחקר">4. תולדות המחקר</a></li>
+<li class="index-depth-2"><a href="#5-מפת-המשמעויות">5. מפת המשמעויות</a></li>
+<li class="index-depth-2"><a href="#6-נפש-נשמה-ולבב">6. נפש, נשמה ולבב</a></li>
+<li class="index-depth-2"><a href="#7-מקרים-קשים">7. מקרים קשים</a></li>
+<li class="index-depth-2"><a href="#8-השלכות-לבראשית-אב">8. השלכות לבראשית א–ב</a></li>
+<li class="index-depth-1"><a href="#חלק-ב-נפש-כחוויה-של-השאיפה-לשימור-עצמי">חלק ב׳: נפש כחוויה של השאיפה לשימור עצמי</a></li>
+<li class="index-depth-2"><a href="#התזה">התזה</a></li>
+<li class="index-depth-2"><a href="#המופעים-של-השאיפה">המופעים של השאיפה</a></li>
+<li class="index-depth-2"><a href="#ההקשר-המחשבתי">ההקשר המחשבתי</a></li>
+<li class="index-depth-2"><a href="#מה-ההצעה-מסבירה-טוב-יותר-מהחלופות">מה ההצעה מסבירה טוב יותר מהחלופות</a></li>
+<li class="index-depth-2"><a href="#נפשי-במובן-אני-האם-השאיפה-נעלמת">&quot;נַפְשִׁי&quot; במובן &quot;אני&quot;: האם השאיפה נעלמת?</a></li>
+<li class="index-depth-2"><a href="#ניבויים-שאפשר-לבדוק">ניבויים שאפשר לבדוק</a></li>
+<li class="index-depth-2"><a href="#גבולות-ההצעה">גבולות ההצעה</a></li>
+<li class="index-depth-1"><a href="#ביבליוגרפיה">ביבליוגרפיה</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p>Claude Opus 5.5 (Claude Code)</p>
 <h1 id="נפש-מחקר-לשוני-של-שם-העצם-נפש-והפועל-נפש-במקרא">נֶפֶשׁ — מחקר לשוני של שם העצם נֶפֶשׁ והפועל נָפַשׁ במקרא</h1>
 <h3 id="גרסה-עם-קישורים-ממוספרים">גרסה עם קישורים ממוספרים</h3>
@@ -164,7 +198,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li><a href="#מקורות">מקורות</a></li>
 </ul>
 <hr>
-<p>המחקר בנוי בשני חלקים:</p>
+<p class="heads-list">המחקר בנוי בשני חלקים:</p>
 <ol>
 <li><strong>חלק א׳</strong> הוא ניתוח לשוני ניטרלי: תפוצה, מורפולוגיה, הפועל, העדות השמית, תולדות המחקר, מפת המשמעויות והמקרים הקשים.</li>
 <li><strong>חלק ב׳</strong> מציג ובוחן פירוש פנומנולוגי־קוגניטיבי אחד: שנֶפֶשׁ היא חוויית השאיפה של יצור חי להתמיד בחייו. החלק הזה מבחין בין מה שנשען על הנתונים המאומתים לבין מה שהוא קריאה פרשנית.</li>
@@ -228,7 +262,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p><strong>יחיד אחרי מספר.</strong> <code>שִׁבְעִים נָפֶשׁ</code> (שמות א ה [מקור-7]), <code>כׇּל נֶפֶשׁ שִׁשִּׁים וָשֵׁשׁ</code> (בראשית מו כו [מקור-8]).</p>
 </li>
 <li>
-<p><strong>שימוש אדוורביאלי.</strong></p>
+<p class="heads-list"><strong>שימוש אדוורביאלי.</strong></p>
 <ul>
 <li><code>לֹא נַכֶּנּוּ נָפֶשׁ</code> (בראשית לז כא [מקור-9])</li>
 <li><code>וְהִכָּהוּ נָפֶשׁ</code> (דברים יט ו [מקור-10])</li>
@@ -242,14 +276,14 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p><code>שֵׁשֶׁת יָמִים תַּעֲשֶׂה מַעֲשֶׂיךָ וּבַיּוֹם הַשְּׁבִיעִי תִּשְׁבֹּת לְמַעַן יָנוּחַ שׁוֹרְךָ וַחֲמֹרֶךָ וְיִנָּפֵשׁ בֶּן אֲמָתְךָ וְהַגֵּר</code> (שמות כג יב [מקור-13])</p>
 <p><code>וּבַיּוֹם הַשְּׁבִיעִי שָׁבַת וַיִּנָּפַשׁ</code> (שמות לא יז [מקור-14])</p>
 <p><code>וַיָּבֹא הַמֶּלֶךְ וְכׇל הָעָם אֲשֶׁר אִתּוֹ עֲיֵפִים וַיִּנָּפֵשׁ שָׁם</code> (שמואל-ב טז יד [מקור-15])</p>
-<p><strong>ניתוח:</strong></p>
+<p class="heads-list"><strong>ניתוח:</strong></p>
 <ul>
 <li><strong>שמואל-ב טז יד.</strong> עייפים מגיעים למקום ו&quot;נִנְפָשִׁים&quot;, כלומר חוזרים לנשום כסדרם. זה המקרה הברור ביותר.</li>
 <li><strong>שמות כג יב.</strong> שלוש דרגות: האדם <strong>שובת</strong> ממלאכה, הבהמה <strong>נחה</strong>, ובן האמה והגר <strong>נִנְפָשִׁים</strong>. דווקא מי שעובד בכפייה מקבל את הפועל הגופני ביותר.</li>
 <li><strong>שמות לא יז.</strong> אותו פועל נאמר על אלוהים ביום השביעי.</li>
 <li><strong>הבניין.</strong> נפעל בתפקיד מדיאלי: ההתאוששות &quot;קורית בי&quot;.</li>
 </ul>
-<p><strong>מקבילה אכדית.</strong> לפי CAD N/1 [מקור-16] (עמ' 288–290):</p>
+<p class="heads-list"><strong>מקבילה אכדית.</strong> לפי CAD N/1 [מקור-16] (עמ' 288–290):</p>
 <ul>
 <li><em>napāšu</em> A: &quot;to breathe freely, to relax; to expand, to become abundant&quot;.</li>
 <li>בבניין D: &quot;to let respire, to make feel easy&quot;.</li>
@@ -352,7 +386,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p><strong>אמנת הירושה של Esarhaddon.</strong> בסעיף 24 הנתינים מצווים לאהוב את יורש העצר Ashurbanipal <em><strong>kī napšātekunu</strong></em>, &quot;כנפשותיכם&quot; (Lauinger 2012 [מקור-34]; TheTorah [מקור-35]). Moran (1963) [מקור-36] הציב את הרקע הזה לאהבת האל בספר דברים. המקבילה המקראית:</p>
 <p><code>וַיִּכְרֹת יְהוֹנָתָן וְדָוִד בְּרִית בְּאַהֲבָתוֹ אֹתוֹ כְּנַפְשׁוֹ</code> (שמואל-א יח ג [מקור-37])</p>
 <h4 id="מקבילות-טיפולוגיות">מקבילות טיפולוגיות</h4>
-<p>אותו מסלול, מנשימה לחיים ולעצמי, מופיע גם בשפות שאינן קרובות לעברית (Wiktionary [מקור-38], מקור משני):</p>
+<p class="heads-list">אותו מסלול, מנשימה לחיים ולעצמי, מופיע גם בשפות שאינן קרובות לעברית (Wiktionary [מקור-38], מקור משני):</p>
 <ul>
 <li>סנסקריט <em>ātman</em>: נשימה ← עצמי ← כינוי חוזר.</li>
 <li>ψυχή נגזרת מ־ψύχω, &quot;לנשוף&quot;.</li>
@@ -522,7 +556,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <h4 id="מגרון-לחיים-ליצור-לאדם-ולעצמי">מגרון לחיים, ליצור, לאדם ולעצמי</h4>
 <ul>
 <li>
-<p><strong>נשימה.</strong></p>
+<p class="heads-list"><strong>נשימה.</strong></p>
 <ul>
 <li><code>וַיְהִי בְּצֵאת נַפְשָׁהּ כִּי מֵתָה</code> (בראשית לה יח [מקור-29])</li>
 <li><code>תָּשׇׁב נָא נֶפֶשׁ הַיֶּלֶד הַזֶּה עַל קִרְבּוֹ</code> (מלכים-א יז כא [מקור-63])</li>
@@ -530,7 +564,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </ul>
 </li>
 <li>
-<p><strong>רצון ותיאבון.</strong></p>
+<p class="heads-list"><strong>רצון ותיאבון.</strong></p>
 <ul>
 <li><code>בְּכׇל אַוַּת נַפְשְׁךָ</code> (דברים יב טו [מקור-66]; וכך גם יב כ, ויב כא בצורה <code>בְּכֹל אַוַּת נַפְשֶׁךָ</code>). <strong>בשלושת הפסוקים ההקשר הוא אכילת בשר.</strong></li>
 <li><code>בַּעֲבוּר תְּבָרֶכְךָ נַפְשִׁי</code> (בראשית כז ד [מקור-67]; וכך גם כז יט, כה, לא). הברכה קשורה לאכילת המטעמים.</li>
@@ -543,7 +577,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p><strong>החיים עצמם.</strong> <code>הִמָּלֵט עַל נַפְשֶׁךָ</code> (בראשית יט יז [מקור-69]); <code>וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ</code> (שמות כא כג [מקור-70]).</p>
 </li>
 <li>
-<p><strong>דם.</strong> המבנה בשלושת הפסוקים הוא של <strong>מיקום</strong>: היכן החיים נמצאים.</p>
+<p class="heads-list"><strong>דם.</strong> המבנה בשלושת הפסוקים הוא של <strong>מיקום</strong>: היכן החיים נמצאים.</p>
 <ul>
 <li><code>כִּי נֶפֶשׁ הַבָּשָׂר בַּדָּם הִוא</code> (ויקרא יז יא [מקור-71])</li>
 <li><code>כִּי הַדָּם הוּא הַנָּפֶשׁ</code> (דברים יב כג [מקור-72])</li>
@@ -555,7 +589,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p><strong>יצור.</strong> <code>שֶׁרֶץ נֶפֶשׁ חַיָּה</code> (בראשית א כ [מקור-76]); <code>תּוֹצֵא הָאָרֶץ נֶפֶשׁ חַיָּה לְמִינָהּ</code> (בראשית א כד [מקור-77]).</p>
 </li>
 <li>
-<p><strong>אדם כיחידה.</strong></p>
+<p class="heads-list"><strong>אדם כיחידה.</strong></p>
 <ul>
 <li><code>וְאֶת הַנֶּפֶשׁ אֲשֶׁר עָשׂוּ בְחָרָן</code> (בראשית יב ה [מקור-78])</li>
 <li><code>תֶּן לִי הַנֶּפֶשׁ וְהָרְכֻשׁ קַח לָךְ</code> (בראשית יד כא [מקור-79])</li>
@@ -566,7 +600,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p><strong>הנוסחה הכוהנית.</strong> <code>נֶפֶשׁ כִּי תֶחֱטָא</code> (ויקרא ד ב [מקור-4]; ה א [מקור-81]); <code>הַנֶּפֶשׁ הַחֹטֵאת הִיא תָמוּת</code> (יחזקאל יח ד [מקור-82]; יח כ).</p>
 </li>
 <li>
-<p><strong>עצמי.</strong></p>
+<p class="heads-list"><strong>עצמי.</strong></p>
 <ul>
 <li>כינוי חוזר: Schladt 2000 [מקור-39]; Heine &amp; Kuteva 2002 [מקור-83].</li>
 <li>ביחס לאלוהים: <code>נִשְׁבַּע יְהֹוָה צְבָאוֹת בְּנַפְשׁוֹ</code> (ירמיהו נא יד [מקור-84]; עמוס ו ח [מקור-85]). זה מקביל ל־<code>בִּי נִשְׁבַּעְתִּי</code> (בראשית כב טז [מקור-86]; ישעיהו מה כג [מקור-87]).</li>
@@ -588,7 +622,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p><strong>לבב, נפש ומאד.</strong> <code>וְאָהַבְתָּ אֵת יְהֹוָה אֱלֹהֶיךָ בְּכׇל לְבָבְךָ וּבְכׇל נַפְשְׁךָ וּבְכׇל מְאֹדֶךָ</code> (דברים ו ה [מקור-92]). הפרק של Wolff על הלב נקרא &quot;lēb(āb) – Reasonable Man&quot;. הרקע הבריתי (Moran, והאמנה של Esarhaddon עם <em>napšātu</em>) מראה שאהבה &quot;בכל נפשך&quot; נמדדת בחיים עצמם.</p>
 </li>
 <li>
-<p><strong>פנייה אל הנפש.</strong></p>
+<p class="heads-list"><strong>פנייה אל הנפש.</strong></p>
 <ul>
 <li><code>מַה תִּשְׁתּוֹחֲחִי נַפְשִׁי</code> (תהילים מב ו [מקור-93]; מב יב; מג ה)</li>
 <li><code>בָּרְכִי נַפְשִׁי</code> (תהילים קג א [מקור-94])</li>
@@ -662,66 +696,66 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <h3 id="המופעים-של-השאיפה">המופעים של השאיפה</h3>
 <ol>
 <li>
-<p><strong>נשימה.</strong> השאיפה נכנסת, נעצרת ויוצאת עם המוות.</p>
+<p class="heads-list"><strong>נשימה.</strong> השאיפה נכנסת, נעצרת ויוצאת עם המוות.</p>
 <ul>
 <li><code>וַיְהִי בְּצֵאת נַפְשָׁהּ כִּי מֵתָה</code> (בראשית לה יח [מקור-29])</li>
 <li><code>כִּי בָאוּ מַיִם עַד נָפֶשׁ</code> (תהילים סט ב [מקור-64])</li>
 </ul>
 </li>
 <li>
-<p><strong>תיאבון.</strong> השאיפה לבלוע, לאכול ולשתות, ובהרחבה המטאפורית גם התיאבון לחיים עצמם.</p>
+<p class="heads-list"><strong>תיאבון.</strong> השאיפה לבלוע, לאכול ולשתות, ובהרחבה המטאפורית גם התיאבון לחיים עצמם.</p>
 <ul>
 <li><code>נֶפֶשׁ שְׂבֵעָה תָּבוּס נֹפֶת וְנֶפֶשׁ רְעֵבָה כׇּל מַר מָתוֹק</code> (משלי כז ז [מקור-62])</li>
 <li>בצורה הקיצונית, השאול שבולע: <code>לָכֵן הִרְחִיבָה שְּׁאוֹל נַפְשָׁהּ וּפָעֲרָה פִיהָ לִבְלִי חֹק</code> (ישעיהו ה יד [מקור-27])</li>
 </ul>
 </li>
 <li>
-<p><strong>שיקום.</strong> זו משמעות הפועל: חזרה לאיזון אחרי מאמץ.</p>
+<p class="heads-list"><strong>שיקום.</strong> זו משמעות הפועל: חזרה לאיזון אחרי מאמץ.</p>
 <ul>
 <li><code>עֲיֵפִים וַיִּנָּפֵשׁ שָׁם</code> (שמואל-ב טז יד [מקור-15])</li>
 <li><code>שׁוּבִי נַפְשִׁי לִמְנוּחָיְכִי</code> (תהילים קטז ז [מקור-95])</li>
 </ul>
 </li>
 <li>
-<p><strong>תגובה והגנה.</strong> הנפש נמשכת אל מה שמקיים אותה ונגעלת ממה שמסכן אותה. זה גם השדה שמועבר לאלוהים.</p>
+<p class="heads-list"><strong>תגובה והגנה.</strong> הנפש נמשכת אל מה שמקיים אותה ונגעלת ממה שמסכן אותה. זה גם השדה שמועבר לאלוהים.</p>
 <ul>
 <li><code>וְנַפְשֵׁנוּ קָצָה בַּלֶּחֶם הַקְּלֹקֵל</code> (במדבר כא ה [מקור-60])</li>
 <li><code>וַתִּקְצַר נַפְשׁוֹ בַּעֲמַל יִשְׂרָאֵל</code> (שופטים י טז [מקור-88])</li>
 </ul>
 </li>
 <li>
-<p><strong>החיים עצמם.</strong> מה שמבקשים, מצילים, פודים, ומה שאובד במוות. הנפש נקראת בשמה בדיוק כשקיומה מוטל על הכף.</p>
+<p class="heads-list"><strong>החיים עצמם.</strong> מה שמבקשים, מצילים, פודים, ומה שאובד במוות. הנפש נקראת בשמה בדיוק כשקיומה מוטל על הכף.</p>
 <ul>
 <li><code>הִמָּלֵט עַל נַפְשֶׁךָ</code> (בראשית יט יז [מקור-69])</li>
 <li><code>וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ</code> (שמות כא כג [מקור-70])</li>
 </ul>
 </li>
 <li>
-<p><strong>המחיה.</strong> מה שמקיים את החיים נקרא בשם החיים עצמם.</p>
+<p class="heads-list"><strong>המחיה.</strong> מה שמקיים את החיים נקרא בשם החיים עצמם.</p>
 <ul>
 <li><code>כִּי נֶפֶשׁ הוּא חֹבֵל</code> (דברים כד ו [מקור-68]), על הרחיים שממושכנים.</li>
 <li>באכדית <em>napištu</em> פירושה גם &quot;livelihood, provisions, sustenance&quot; (CAD N/1 [מקור-16]).</li>
 </ul>
 </li>
 <li>
-<p><strong>הדם. שפיכתו פוגעת בשאיפה.</strong></p>
+<p class="heads-list"><strong>הדם. שפיכתו פוגעת בשאיפה.</strong></p>
 <ul>
 <li><code>כִּי הַדָּם הוּא הַנָּפֶשׁ</code> (דברים יב כג [מקור-72])</li>
 <li><code>כִּי נֶפֶשׁ הַבָּשָׂר בַּדָּם הִוא</code> (ויקרא יז יא [מקור-71])</li>
 </ul>
 </li>
 <li>
-<p><strong>היצור כנושא של השאיפה.</strong> &quot;נפש חיה&quot; היא כל מי שצריך מזון כדי להתקיים.</p>
+<p class="heads-list"><strong>היצור כנושא של השאיפה.</strong> &quot;נפש חיה&quot; היא כל מי שצריך מזון כדי להתקיים.</p>
 <ul>
 <li><code>וּלְכׇל חַיַּת הָאָרֶץ… אֲשֶׁר בּוֹ נֶפֶשׁ חַיָּה אֶת כׇּל יֶרֶק עֵשֶׂב לְאׇכְלָה</code> (בראשית א ל [מקור-116])</li>
 </ul>
-<p>האדם לא <em>מקבל</em> נפש, הוא <em>נעשה</em> נפש:</p>
+<p class="heads-list">האדם לא <em>מקבל</em> נפש, הוא <em>נעשה</em> נפש:</p>
 <ul>
 <li><code>וַיִּפַּח בְּאַפָּיו נִשְׁמַת חַיִּים וַיְהִי הָאָדָם לְנֶפֶשׁ חַיָּה</code> (בראשית ב ז [מקור-90])</li>
 </ul>
 </li>
 <li>
-<p><strong>חיים שבידי מישהו.</strong> נפשות הן חיים שתלויים במי שמחזיק בהם.</p>
+<p class="heads-list"><strong>חיים שבידי מישהו.</strong> נפשות הן חיים שתלויים במי שמחזיק בהם.</p>
 <ul>
 <li><strong>אחריות: להאכיל ולהגן.</strong>
 <ul>
@@ -742,7 +776,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </ul>
 </li>
 <li>
-<p><strong>הרחבת העצמי אל האחר.</strong> אהבה היא הכללת האחר במה שאני משמר.</p>
+<p class="heads-list"><strong>הרחבת העצמי אל האחר.</strong> אהבה היא הכללת האחר במה שאני משמר.</p>
 <ul>
 <li><code>בְּאַהֲבָתוֹ אֹתוֹ כְּנַפְשׁוֹ</code> (שמואל-א יח ג [מקור-37])</li>
 <li><code>וְנַפְשׁוֹ קְשׁוּרָה בְנַפְשׁוֹ</code> (בראשית מד ל [מקור-125])</li>
@@ -751,14 +785,14 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </ul>
 </li>
 <li>
-<p><strong>העצמי.</strong> &quot;נַפְשִׁי&quot; = אני, בעיקר כשהעצמי בסכנה, בצורך או בוויסות.</p>
+<p class="heads-list"><strong>העצמי.</strong> &quot;נַפְשִׁי&quot; = אני, בעיקר כשהעצמי בסכנה, בצורך או בוויסות.</p>
 <ul>
 <li><code>וְחָיְתָה נַפְשִׁי בִּגְלָלֵךְ</code> (בראשית יב יג [מקור-127])</li>
 <li><code>שִׁוִּיתִי וְדוֹמַמְתִּי נַפְשִׁי כְּגָמֻל עֲלֵי אִמּוֹ</code> (תהילים קלא ב [מקור-128])</li>
 </ul>
 </li>
 <li>
-<p><strong>המת.</strong> השאיפה ממשיכה גם אחרי המוות, אבל עכשיו החיים צריכים לספק אותה.</p>
+<p class="heads-list"><strong>המת.</strong> השאיפה ממשיכה גם אחרי המוות, אבל עכשיו החיים צריכים לספק אותה.</p>
 <ul>
 <li><strong>מצבת הקבר של KTMW (Katumuwa)</strong>, עבדו של המלך Panamuwa מן העיר Sam'al (Zincirli), מכ־735 לפנה&quot;ס. הוא מקריב &quot;a ram for my 'soul' (NBŠ) that (will be) in this stele&quot; (zincirli.uchicago.edu [מקור-31]).</li>
 <li>על פסל הדד שהקים המלך <strong>Panamuwa הראשון</strong> כתוב שה־<em>nbš</em> שלו &quot;אוכלת ושותה&quot; עם האל (Schaper 2020 [מקור-19]).</li>
@@ -873,7 +907,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </ul>
 <hr>
 <h2 id="ביבליוגרפיה">ביבליוגרפיה</h2>
-<p><strong>מילונים וכלי עבודה</strong></p>
+<p class="heads-list"><strong>מילונים וכלי עבודה</strong></p>
 <ul>
 <li>Brown, F., Driver, S. R., Briggs, C. A. <em>A Hebrew and English Lexicon of the Old Testament</em>. Oxford: Clarendon, 1906. [מקור-1]; [מקור-12]; [מקור-57]</li>
 <li>Koehler, L., Baumgartner, W. <em>The Hebrew and Aramaic Lexicon of the Old Testament</em>. Leiden: Brill, 1994–2000. [מקור-144]</li>
@@ -886,13 +920,13 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li>Waltke, B. K., O'Connor, M. <em>An Introduction to Biblical Hebrew Syntax</em>. Winona Lake, 1990. [מקור-147]</li>
 <li>Heine, B., Kuteva, T. <em>World Lexicon of Grammaticalization</em>. Cambridge, 2002. [מקור-83]</li>
 </ul>
-<p><strong>ערכים במילונים תאולוגיים</strong></p>
+<p class="heads-list"><strong>ערכים במילונים תאולוגיים</strong></p>
 <ul>
 <li>Westermann, C. &quot;נֶפֶשׁ næfæš Seele.&quot; <em>THAT</em> II (1976), cols. 71–96 = <em>TLOT</em> 2 (1997), 743–759.</li>
 <li>Seebass, H. &quot;נֶפֶשׁ næpæš.&quot; <em>ThWAT</em> V (1986), cols. 531–555 = <em>TDOT</em> IX (1998), 497–519. [מקור-2]</li>
 <li>Jacob, E. &quot;ψυχή κτλ. B.&quot; <em>TDNT</em> IX (1974), 617–631.</li>
 </ul>
-<p><strong>מונוגרפיות ומאמרים</strong></p>
+<p class="heads-list"><strong>מונוגרפיות ומאמרים</strong></p>
 <ul>
 <li>Briggs, C. A. &quot;The Use of נפש in the Old Testament.&quot; <em>JBL</em> 16 (1897), 17–30. [מקור-40]</li>
 <li>Dürr, L. &quot;Hebr. נפש = akk. napištu = Gurgel, Kehle.&quot; <em>ZAW</em> 43 (1925), 262–269. [מקור-41]</li>
@@ -928,13 +962,13 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li>Janowski, B. <em>Anthropologie des Alten Testaments</em>. Tübingen: Mohr Siebeck, 2019. [מקור-51]</li>
 <li>Schaper, J. &quot;Elements of a History of the Soul in North-West Semitic Texts: npš/nbš in the Hebrew Bible and the Katumuwa Inscription.&quot; <em>VT</em> 70/1 (2020), 156–176. [מקור-152]; [מקור-19]</li>
 </ul>
-<p><strong>פילוסופיה ומדעי הרגש</strong></p>
+<p class="heads-list"><strong>פילוסופיה ומדעי הרגש</strong></p>
 <ul>
 <li>Spinoza, B. <em>Ethics</em> III, P6–P7 (Curley trans.). [מקור-129]</li>
 <li>Damasio, A. <em>Looking for Spinoza: Joy, Sorrow, and the Feeling Brain</em>. Orlando: Harcourt, 2003; <em>The Strange Order of Things</em>. New York: Pantheon, 2018. [מקור-130]</li>
 <li>Rozin, P., Haidt, J., McCauley, C. &quot;Disgust.&quot; In <em>Handbook of Emotions</em>, 3rd ed. New York: Guilford, 2008, 757–776. [מקור-131]</li>
 </ul>
-<p><strong>טקסטים עתיקים</strong></p>
+<p class="heads-list"><strong>טקסטים עתיקים</strong></p>
 <ul>
 <li>KTU 1.5 I 14–16; 1.5 II 2–3; 1.18 IV 24–26, 36–37</li>
 <li>KAI 214, פסל הדד של המלך Panamuwa הראשון</li>

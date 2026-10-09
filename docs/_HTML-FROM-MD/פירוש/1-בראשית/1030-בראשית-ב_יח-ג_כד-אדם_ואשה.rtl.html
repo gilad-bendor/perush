@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,19 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../../index.html">פירוש</a> / <a dir="auto" href="../../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="../index.html">פירוש</a> / <a dir="auto" href="index.html">1-בראשית</a> / <span dir="auto">1030-בראשית-ב_יח-ג_כד-אדם_ואשה</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#האדם-מחפש-משמעות">האדם מחפש משמעות</a></li>
+<li class="index-depth-0"><a href="#מעמדות-חברתיים">מעמדות חברתיים</a></li>
+<li class="index-depth-0"><a href="#תרעומת-מעמדית">תרעומת מעמדית</a></li>
+<li class="index-depth-0"><a href="#מאבק-מעמדי">מאבק מעמדי</a></li>
+<li class="index-depth-0"><a href="#גיבוש-מבנה-מעמדי-יציב">גיבוש מבנה מעמדי יציב</a></li>
+<li class="index-depth-0"><a href="#המחיר-הקודר">המחיר הקודר</a></li>
+</ul>
+</details>
+</nav>
 <h2 id="האדם-מחפש-משמעות">האדם מחפש משמעות</h2>
 <blockquote>
 <p>בראשית ב יח: וַיֹּאמֶר יְהוָה אֱלֹהִים לֹא טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ; אֶעֱשֶׂה לּוֹ עֵזֶר כְּנֶגְדּוֹ.</p>
@@ -193,13 +210,13 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>בראשית ב כה: וַיִּהְיוּ שְׁנֵיהֶם עֲרוּמִּים הָאָדָם וְאִשְׁתּוֹ; וְלֹא יִתְבֹּשָׁשׁוּ.</p>
 </blockquote>
 <p>בשלב הזה - היחסים בין האדם לאישה הם אינטימיים לחלוטין (<code>עֲרוּמִּים</code>): אין מאבק מוסרי ביניהם - אין רכיב של בוּשה (<code>וְלֹא יִתְבֹּשָׁשׁוּ</code>).</p>
-<p>חשוב להבין איך נראית דינמיקה של חברה מעמדית - בשלב הראשוני מאוד:</p>
-<ul>
+<p class="heads-list">חשוב להבין איך נראית דינמיקה של חברה מעמדית - בשלב הראשוני מאוד:</p>
+<ul class="runs-on">
 <li>הקבוצה ה״אליטיסטית״ - שבשלב הזה עדיין לא מזהה את עצמה כ״אזרחים דרג א״,</li>
-<li>הקבוצה ה״עממית״ - שבשלב הזה עדיין לא מזהה את עצמה כ״אזרחים דרג ב״.<br>
-היחסים ביניהם הם לא יחסים של מתיחות ואיבה - פשוט כי הנרטיב המתאים לא הספיק להיווצר.<br>
-חוסר המודעות הזאת הוא ההמשך של <code>וַיַּפֵּל יְהוָה אֱלֹהִים תַּרְדֵּמָה עַל הָאָדָם וַיִּישָׁן</code>.</li>
+<li>הקבוצה ה״עממית״ - שבשלב הזה עדיין לא מזהה את עצמה כ״אזרחים דרג ב״.</li>
 </ul>
+<p>היחסים ביניהם הם לא יחסים של מתיחות ואיבה - פשוט כי הנרטיב המתאים לא הספיק להיווצר.<br>
+חוסר המודעות הזאת הוא ההמשך של <code>וַיַּפֵּל יְהוָה אֱלֹהִים תַּרְדֵּמָה עַל הָאָדָם וַיִּישָׁן</code>.</p>
 <p>בחוויה של האליטה (חוויה לא משׁוּיֵמֶת - חוויה טרום-נרטיבית) - האליטה היא ״הראש״ והקבוצה העממית היא ״הגוף״:<br>
 האליטה מתרגלת לחשוב על עצמה כאחראית, כמובילה, וכנושאת הראשית בעול של קיום החברה: ״מלח הארץ״.<br>
 האליטה עסוקה בלנווט בעולם - כלומר בלהבין את העולם - כלומר בלאכול מעצי הגן (לאכול תובנות על העולם).<br>
@@ -248,7 +265,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </blockquote>
 <p>האישה מאמצת ראית עולם (<code>וַתֵּרֶא הָאִשָּׁה</code>) שבה להבין זה מוסרי (<code>טוֹב הָעֵץ לְמַאֲכָל</code>) ולפתוח אופקים חדשים זה נחשק (<code>תַאֲוָה הוּא לָעֵינַיִם</code>) ולנתח את המציאות באופן ביקורתי זה רצוּי (<code>נֶחְמָד הָעֵץ לְהַשְׂכִּיל</code>).<br>
 ומרגע שהאישה ״אוכל״ את התובנה הזאת, ומתחילה ״לדעת״ ולהשתתף בהסללת המציאות (<code>וַתִּקַּח מִפִּרְיוֹ וַתֹּאכַל</code>) - אז לאדם (האליטה) אין ברירה אלא להיכנס ולשחק במגרש החדש שהאישה יזמה (<code>וַתִּתֵּן גַּם לְאִישָׁהּ עִמָּהּ וַיֹּאכַל</code>).</p>
-<p>מבחינת האישה זאת מהפכה:</p>
+<p class="heads-list">מבחינת האישה זאת מהפכה:</p>
 <ul>
 <li>ממצב של חוסר אונים נלמד - למסוּגָלוּת (Learned Helplessness → Self-Efficacy).</li>
 <li>מחוויה של שליטה חיצונית - לחוויה של שליטה פנימית: שינוי במוקד השליטה (External → Internal Locus of Control).</li>
@@ -311,7 +328,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>בראשית ג טו: וְאֵיבָה אָשִׁית בֵּינְךָ וּבֵין הָאִשָּׁה וּבֵין זַרְעֲךָ וּבֵין זַרְעָהּ:  הוּא יְשׁוּפְךָ רֹאשׁ וְאַתָּה תְּשׁוּפֶנּוּ עָקֵב.</p>
 </blockquote>
 <p>חַבָרוֹת אנושיות לאורך כל ההיסטוריה  - כמעט כעניין של הגדרה - עוינות קבוצות אוונגרדיות (<code>וְאֵיבָה אָשִׁית בֵּינְךָ וּבֵין הָאִשָּׁה וּבֵין זַרְעֲךָ וּבֵין זַרְעָהּ</code>).</p>
-<p>יש שני דרכים להבין את <code>הוּא יְשׁוּפְךָ רֹאשׁ וְאַתָּה תְּשׁוּפֶנּוּ עָקֵב</code> (<code>יְשׁוּפְךָ</code> - לאפוף מכל הצדדים - ראה <a href="../../ניתוחים-לשוניים/נשפ_שופ.rtl.html">ניתוח לשוני</a>):</p>
+<p class="heads-list">יש שני דרכים להבין את <code>הוּא יְשׁוּפְךָ רֹאשׁ וְאַתָּה תְּשׁוּפֶנּוּ עָקֵב</code> (<code>יְשׁוּפְךָ</code> - לאפוף מכל הצדדים - ראה <a href="../../ניתוחים-לשוניים/נשפ_שופ.rtl.html">ניתוח לשוני</a>):</p>
 <ol>
 <li>האדם יאפוף וירדוף את קבוצת האוונגרד ״ראש בראש״ - באופן גלוי ובעזרת ״ראשי הקהל״, אבל האוונגארד יתקיף את האדם בנקודות התורפה (<code>עָקֵב</code> כמו <code>יְהִי דָן נָחָשׁ עֲלֵי דֶרֶךְ שְׁפִיפֹן עֲלֵי אֹרַח הַנֹּשֵׁךְ <strong>עִקְּבֵי</strong> סוּס וַיִּפֹּל רֹכְבוֹ אָחוֹר</code> - בראשית מט:יז).</li>
 <li>האדם יאפוף וירדוף את קבוצת האוונגרד בהתחלה (<code>רֹאשׁ</code> - כמו <code>מִי הִגִּיד <strong>מֵרֹאשׁ</strong> וְנֵדָעָה <strong>וּמִלְּפָנִים</strong> וְנֹאמַר</code> - ישעיהו מא:כו), אבל בסופו של דבר (<code>עָקֵב</code> - כמו <code>וְהִתְבָּרֲכוּ בְזַרְעֲךָ כֹּל גּוֹיֵי הָאָרֶץ <strong>עֵקֶב</strong> אֲשֶׁר שָׁמַעְתָּ בְּקֹלִי</code> - בראשית כב:יח) קבוצת האוונגרד תשתלט על הקונצנזוס.</li>
@@ -322,7 +339,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>המתח המעמדי גורם סבל לאישה - סבל נפוץ ורב (<code>הַרְבָּה אַרְבֶּה עִצְּבוֹנֵךְ</code>).<br>
 אבל יש כאן תהליך חדש - שנובע מתוך הסבל הזה, ושהוא עצמו כרוך בסבל גדול: הריון.<br>
 מתוך המצוקה שבמתח המעמדי - האישה הָרַה (אולי אפילו קשור ל״הָר״ - האישה נהיית גבוהה וחשובה) ומייצרת <strong>נרטיב ממשמע חדש</strong> - סינטזה של הדיאלקטיקה שבין האליטה לעממיות (עוד על הריון והולדה - בראשית ג:כ ובראשית ד:א).</p>
-<p>יש שני דרכים להבין את <code>וְאֶל אִישֵׁךְ תְּשׁוּקָתֵךְ וְהוּא יִמְשָׁל בָּךְ</code>:</p>
+<p class="heads-list">יש שני דרכים להבין את <code>וְאֶל אִישֵׁךְ תְּשׁוּקָתֵךְ וְהוּא יִמְשָׁל בָּךְ</code>:</p>
 <ol>
 <li>האישה משתוקקת ״להיות ראוייה בעיני האליטה״ - האישה מאמצת את האידאלים החברתיים שהאליטה מגדירה: אופנה, חיתוך דיבור, אידאלים.</li>
 <li>האישה משתוקקת להשוות את מעמדה לזה של האדם (<code>וְאֶל אִישֵׁךְ תְּשׁוּקָתֵךְ</code>) - אבל בפועל הפער המעמדי נשמר (<code>וְהוּא יִמְשָׁל בָּךְ</code>).</li>
@@ -372,7 +389,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <blockquote>
 <p>בראשית ג כד: וַיְגָרֶשׁ אֶת הָאָדָם; וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן אֶת הַכְּרֻבִים וְאֵת לַהַט הַחֶרֶב הַמִּתְהַפֶּכֶת לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים.</p>
 </blockquote>
-<p>האדם מוצא את עצמו - בְעַל-כרחו - מחוץ לגן בעדן (<code>וַיְגָרֶשׁ אֶת הָאָדָם</code>).<br>
+<p class="heads-list">האדם מוצא את עצמו - בְעַל-כרחו - מחוץ לגן בעדן (<code>וַיְגָרֶשׁ אֶת הָאָדָם</code>).<br>
 ישנם שני מנגנונים שעוזרים לייצב את הריחוק מהגַּן בְּעֵדֶן מִקֶּדֶם (<code>וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן</code>) - וכדי לנטר ולווסת שינויים (<code>לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים</code>):</p>
 <ol>
 <li>חווית הקיום הראשונית של האדם היתה הגן בעדן: רדיפת הנאה ועִינוּג ובריחה מכאב (ראה בראשית ב:ח).<br>

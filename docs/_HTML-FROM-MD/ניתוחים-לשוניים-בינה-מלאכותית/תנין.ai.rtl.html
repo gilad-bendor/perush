@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,11 +140,40 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">תנין.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#הכרעת-הכאוס-הקדם-אנתרופומורפי-מיתוס-הקרב-הקוסמי-במיתולוגיות-הקדומות">הכרעת הכאוס הקדם-אנתרופומורפי: מיתוס הקרב הקוסמי במיתולוגיות הקדומות</a></li>
+<li class="index-depth-1"><a href="#מבוא-הגדרת-המוטיב">מבוא: הגדרת המוטיב</a></li>
+<li class="index-depth-1"><a href="#חלק-א-הגדרת-המוטיב-המהותי">חלק א': הגדרת המוטיב המהותי</a></li>
+<li class="index-depth-1"><a href="#חלק-ב-הצורך-הנפשי-התודעתי-שהוליד-את-המוטיב">חלק ב': הצורך הנפשי-התודעתי שהוליד את המוטיב</a></li>
+<li class="index-depth-2"><a href="#הגישה-הפנומנולוגית-אקזיסטנציאלית">הגישה הפנומנולוגית-אקזיסטנציאלית</a></li>
+<li class="index-depth-2"><a href="#הגישה-הפסיכואנליטית">הגישה הפסיכואנליטית</a></li>
+<li class="index-depth-2"><a href="#הגישה-הקוגניטיבית-אבולוציונית">הגישה הקוגניטיבית-אבולוציונית</a></li>
+<li class="index-depth-2"><a href="#הגישה-האנתרופולוגית-חברתית">הגישה האנתרופולוגית-חברתית</a></li>
+<li class="index-depth-2"><a href="#הגישה-הסטרוקטורלית-של-levi-strauss">הגישה הסטרוקטורלית של Lévi-Strauss</a></li>
+<li class="index-depth-2"><a href="#הגישה-המוסרית-סימבולית-של-ricoeur">הגישה המוסרית-סימבולית של Ricoeur</a></li>
+<li class="index-depth-2"><a href="#הגישה-האיכותית-חוויתית">הגישה האיכותית-חוויתית</a></li>
+<li class="index-depth-2"><a href="#מדוע-ההצפנה-הנחשיתהדרקונית">מדוע ההצפנה הנחשית/הדרקונית?</a></li>
+<li class="index-depth-1"><a href="#חלק-ג-המיתוסים">חלק ג': המיתוסים</a></li>
+<li class="index-depth-2"><a href="#1-המיתוס-האוגריתי-בעל-נגד-ים-בעל-נגד-לותן">1. המיתוס האוגריתי - בעל נגד ים / בעל נגד לותן</a></li>
+<li class="index-depth-2"><a href="#2-המיתוס-האכדי-בבלי-מרדוך-נגד-תיאמת">2. המיתוס האכדי-בבלי - מרדוך נגד תיאמת</a></li>
+<li class="index-depth-2"><a href="#3-המיתוס-המצרי-רע-נגד-אפופיס">3. המיתוס המצרי - רע נגד אפופיס</a></li>
+<li class="index-depth-2"><a href="#4-המוטיב-היווני-המאבקים-הקוסמוגוניים">4. המוטיב היווני - המאבקים הקוסמוגוניים</a></li>
+<li class="index-depth-2"><a href="#5-המיתוס-ההודי-אינדרה-נגד-ורטרה">5. המיתוס ההודי - אינדרה נגד ורטרה</a></li>
+<li class="index-depth-2"><a href="#6-המיתוס-הנורדי-תור-נגד-יורמונגאנד">6. המיתוס הנורדי - ת'ור נגד יורמונגאנד</a></li>
+<li class="index-depth-2"><a href="#7-המוטיב-המקראי-יהוה-נגד-ים-תנין-לויתן-רהב">7. המוטיב המקראי - יהוה נגד ים / תנין / לויתן / רהב</a></li>
+<li class="index-depth-1"><a href="#חלק-ד-הרהור-מסכם">חלק ד': הרהור מסכם</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/cffb0a71-a014-4b6e-a9d7-68a110978c97">Claude Opus 4.7</a></p>
 <h1 id="הכרעת-הכאוס-הקדם-אנתרופומורפי-מיתוס-הקרב-הקוסמי-במיתולוגיות-הקדומות">הכרעת הכאוס הקדם-אנתרופומורפי: מיתוס הקרב הקוסמי במיתולוגיות הקדומות</h1>
 <h2 id="מבוא-הגדרת-המוטיב">מבוא: הגדרת המוטיב</h2>
 <p>המוטיב שבמוקד המחקר הזה הוא אחד הנרטיבים המיתולוגיים העתיקים והמשמעותיים ביותר בתרבות האנושית. במחקר המודרני הוא מכונה בשמות שונים: <em>Chaoskampf</em> (&quot;קרב הכאוס&quot;) - מונח שטבע Hermann Gunkel ב-1895 בספרו [מקור-1]; <em>Combat Myth</em> (המיתוס הקרבי) - מונח שנקשר במיוחד ל-Joseph Fontenrose בספרו המונומנטלי [מקור-2] (1959); ו-<em>Dragon-Slaying Myth</em> (מיתוס הריגת הדרקון).</p>
-<p>המבנה הבסיסי של המוטיב כולל:</p>
+<p class="heads-list">המבנה הבסיסי של המוטיב כולל:</p>
 <ol>
 <li><strong>מצב קדמוני</strong>: קיום של ישות/יצור קוסמי אדיר, לעתים קרובות קשור למים, חושך, תוהו</li>
 <li><strong>האיום</strong>: היצור מאיים על הסדר הקוסמי או על האלים הצעירים</li>
@@ -193,7 +226,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>להלן המיתוסים שעומדים במבחן המהות של המוטיב: מאבק בין כאוס קדם-אנתרופומורפי לכוח קוסמי בעל פנים.</p>
 <h3 id="1-המיתוס-האוגריתי-בעל-נגד-ים-בעל-נגד-לותן">1. המיתוס האוגריתי - בעל נגד ים / בעל נגד לותן</h3>
 <p><strong>המקור הטקסטואלי</strong>: מחזור עלילות בעל (<em>Baal Cycle</em>), שנמצא בתגליות רס שמרא (אוגרית) בצפון סוריה בשנות ה-20-30 של המאה ה-20. הלוחות מתוארכים למאות 14-13 לפנה&quot;ס. פרסום המקיף ביותר של הטקסטים ופרשנותם נמצא אצל Mark S. Smith, [מקור-11] (Leiden: Brill, 1994).</p>
-<p><strong>הדמויות המרכזיות</strong>:</p>
+<p class="heads-list"><strong>הדמויות המרכזיות</strong>:</p>
 <ul>
 <li><strong>ים (Yamm)</strong> - אל הים, היצור הקדמון, נקרא גם &quot;נהר&quot; (Nahar) ו&quot;שפט נהר&quot; (Judge River). הוא מייצג את המים הקדמוניים הבלתי-מאולפים.</li>
 <li><strong>בעל (Baʿal)</strong> - אל הסערה והרעם, נראה כנער לוחם. נקרא &quot;רוכב הערבות&quot; (rkb ʿrpt).</li>
@@ -211,7 +244,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p><strong>מימד המוטיב המהותי</strong>: ים הוא כוח קדמוני חסר פנים - הים עצמו. בעל הוא האל האנתרופומורפי המובהק - נער לוחם, בעל נשק, בעל דיאלוג, בעל אחות (ענת) ואב (אל). ההכרעה של ים על ידי בעל היא הכרעת חוסר-הצורה הקדמוני על ידי הצורה האנושית.</p>
 <h3 id="2-המיתוס-האכדי-בבלי-מרדוך-נגד-תיאמת">2. המיתוס האכדי-בבלי - מרדוך נגד תיאמת</h3>
 <p><strong>המקור הטקסטואלי</strong>: <em>אנומה אליש</em> (<em>Enūma Eliš</em>), הפואמה הבבלית של הבריאה, המתוארכת (בגרסה הידועה לנו) סביב המאה ה-12 לפנה&quot;ס. נמצאה בספריית אשורבניפל בנינווה. גונקל, ב-[מקור-1] (1895), היה הראשון שטען שזהו המקור העיקרי להשפעה על מוטיב הבריאה-מתוך-כאוס במקרא.</p>
-<p><strong>הדמויות</strong>:</p>
+<p class="heads-list"><strong>הדמויות</strong>:</p>
 <ul>
 <li><strong>תיאמת (Tiāmat)</strong> - האם הקדמונית, אלת המים המלוחים. שמה קשור לשורש שמי <em>thm</em> (תהום).</li>
 <li><strong>אפסו (Apsû)</strong> - בן זוגה, המים המתוקים הקדמוניים.</li>
@@ -222,7 +255,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>המחקר המקיף ביותר של הקשר בין המיתוס הבבלי למיתוס המקראי נמצא אצל John Day, [מקור-12] (1985), וכן אצל Bernard Batto, [מקור-13] (1992).</p>
 <h3 id="3-המיתוס-המצרי-רע-נגד-אפופיס">3. המיתוס המצרי - רע נגד אפופיס</h3>
 <p><strong>המקור</strong>: <em>ספר המתים המצרי</em> (פרקים שונים) ו<em>ספר אם-דואט</em> (<em>Amduat</em>), מהממלכה החדשה (1550-1077 לפנה&quot;ס).</p>
-<p><strong>הדמויות</strong>:</p>
+<p class="heads-list"><strong>הדמויות</strong>:</p>
 <ul>
 <li><strong>אפופיס (Apep/Apophis)</strong> - נחש קוסמי עצום, אויבו הנצחי של רע. חי בתהום הקדמונית (נון), מאיים לבלוע את השמש מדי לילה.</li>
 <li><strong>רע (Ra)</strong> - אל השמש, בעל פני אדם וראש נץ.</li>
@@ -233,7 +266,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <h3 id="4-המוטיב-היווני-המאבקים-הקוסמוגוניים">4. המוטיב היווני - המאבקים הקוסמוגוניים</h3>
 <p><strong>המקור</strong>: הסיודוס, <em>תאוגוניה</em> (Theogonia), המאה ה-8-7 לפנה&quot;ס; אפולודורוס, <em>ביבליותקה</em>.</p>
 <p>במיתוס היווני יש שלושה שלבים של המאבק הקוסמוגוני, שכדאי להבחין ביניהם:</p>
-<p><strong>(א) אורנוס, קרונוס, זאוס - שלושה דורות</strong>:</p>
+<p class="heads-list"><strong>(א) אורנוס, קרונוס, זאוס - שלושה דורות</strong>:</p>
 <ul>
 <li><strong>כאוס</strong> (Χάος) - הישות הראשונה, &quot;פער&quot; או &quot;תהום פעורה&quot;. חסרת פנים לחלוטין.</li>
 <li><strong>גאיה</strong> (Γαῖα) - האדמה, הדור השני. כבר בעלת תווים אנתרופומורפיים, אך עדיין ישות קוסמית ענקית.</li>
@@ -241,7 +274,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li><strong>האולימפיים</strong> - הדור הרביעי, ילדי קרונוס. אנתרופומורפיים לחלוטין.</li>
 </ul>
 <p><strong>הטיטאנומכיה</strong>: מלחמה של 10 שנים בין האולימפיים לטיטאנים. זאוס מנצח בעזרת הקיקלופים (נותני הברק) ומשליך את הטיטאנים לטרטרוס.</p>
-<p><strong>(ב) זאוס נגד טיפון (Typhon)</strong>:</p>
+<p class="heads-list"><strong>(ב) זאוס נגד טיפון (Typhon)</strong>:</p>
 <ul>
 <li><strong>טיפון</strong> - יצור עצום, ילד של גאיה וטרטרוס. בעל 100 ראשי נחש/דרקון, קול נורא של כל החיות, מטיל אש מעיניו.</li>
 <li><strong>הקרב</strong>: בגרסת אפולודורוס, טיפון אפילו מצליח לכרות את גידיו של זאוס. זאוס בסופו של דבר מביסו בברקים ומשליכו מתחת להר אטנה.</li>
@@ -252,7 +285,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p><strong>הקשר לשמית</strong>: חוקרים רבים הצביעו על כך שמיתוס טיפון עשוי להיות יבוא ישיר מהמזרח הקרוב. Martin West, בספרו [מקור-14] (1997), מציג ראיות מקיפות להשפעה מזרחית על המיתולוגיה היוונית. Walter Burkert, ב-[מקור-15] (1992), מתמקד במיוחד בתקופה 750-650 לפנה&quot;ס כתקופה של העברה תרבותית מסיבית מהמזרח הקרוב ליוון.</p>
 <h3 id="5-המיתוס-ההודי-אינדרה-נגד-ורטרה">5. המיתוס ההודי - אינדרה נגד ורטרה</h3>
 <p><strong>המקור</strong>: ה<em>ריגוודה</em> (Rigveda), אוסף המנונות ההודי-הקדום, מתוארך ל-1500-1000 לפנה&quot;ס. ההמנון המרכזי בנושא הוא Rigveda 1.32.</p>
-<p><strong>הדמויות</strong>:</p>
+<p class="heads-list"><strong>הדמויות</strong>:</p>
 <ul>
 <li><strong>ורטרה (Vṛtra)</strong> - נחש/דרקון קוסמי. שמו מהשורש <em>vṛ-</em> (&quot;לחסום, לעטוף&quot;). גופו עוטף את ההרים ואוצר בתוכו את המים הקדמוניים.</li>
 <li><strong>אינדרה (Indra)</strong> - אל הסערה והמלחמה, הצעיר האנתרופומורפי.</li>
@@ -266,7 +299,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>Calvert Watkins, בספרו [מקור-16] (1995), הראה שיש נוסחה פואטית הודו-אירופית קדומה: &quot;הגיבור <em>הרג</em> את <em>הנחש</em>&quot; - נוסחה שמופיעה בהודית, בהודית-אירית, ביוונית, ובשפות נוספות.</p>
 <h3 id="6-המיתוס-הנורדי-תור-נגד-יורמונגאנד">6. המיתוס הנורדי - ת'ור נגד יורמונגאנד</h3>
 <p><strong>המקור</strong>: <em>האדה הפואטית</em> (<em>Poetic Edda</em>) ו<em>האדה בפרוזה</em> (<em>Prose Edda</em>) של סנורי סטורלוסון, המאה ה-13 לסה&quot;נ, המבוססים על מסורות קדומות.</p>
-<p><strong>הדמויות</strong>:</p>
+<p class="heads-list"><strong>הדמויות</strong>:</p>
 <ul>
 <li><strong>יורמונגאנד (Jörmungandr)</strong> - &quot;נחש מידגרד&quot;, נחש ים ענק הכובל את העולם כולו בגופו, תוקע את זנבו בפיו. בן של לוקי ואנגרבודה.</li>
 <li><strong>ת'ור (Thor)</strong> - אל הרעם, בעל הפטיש מיולניר.</li>
@@ -314,7 +347,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </tr>
 </tbody>
 </table>
-<p><strong>הקשר לבראשית א</strong>:</p>
+<p class="heads-list"><strong>הקשר לבראשית א</strong>:</p>
 <ul>
 <li>בראשית א:ב: &quot;וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם&quot; - המילה &quot;תְהוֹם&quot; קרובה אטימולוגית ל<em>Tiāmat</em>.</li>
 <li>בראשית א:כא: &quot;וַיִּבְרָא אֱלֹהִים אֶת הַתַּנִּינִם הַגְּדֹלִים&quot; - מה שהיה יריב הופך ליצור ברוא.</li>

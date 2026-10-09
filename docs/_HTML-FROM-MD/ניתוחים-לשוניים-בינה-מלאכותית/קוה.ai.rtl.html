@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,62 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">קוה.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#השורש-קוה-ונגזרותיו-תקוה-מקוה-קו">השורש ק.ו.ה ונגזרותיו: תִּקְוָה, מִקְוֶה, קַו</a></li>
+<li class="index-depth-1"><a href="#מחקר-לשוניהיסטורי-בעברית-מקראית-ובלשונות-שמיות-קדומות">מחקר לשוני־היסטורי בעברית מקראית ובלשונות שמיות קדומות</a></li>
+<li class="index-depth-1"><a href="#תוכן">תוכן</a></li>
+<li class="index-depth-1"><a href="#1-התזה-המרכזית">1. התזה המרכזית</a></li>
+<li class="index-depth-1"><a href="#2-המצאי-המקראי">2. המצאי המקראי</a></li>
+<li class="index-depth-2"><a href="#21-הפועל-49-היקרויות-ב45-פסוקים">2.1 הפועל — 49 היקרויות ב־45 פסוקים</a></li>
+<li class="index-depth-2"><a href="#22-השם-קו">2.2 השם קַו</a></li>
+<li class="index-depth-2"><a href="#23-תקוה-34-היקרויות-שני-שדות">2.3 תִּקְוָה — 34 היקרויות, שני שדות</a></li>
+<li class="index-depth-2"><a href="#24-מקוה-שלושה-שימושים-נפרדים">2.4 מִקְוֶה — שלושה שימושים נפרדים</a></li>
+<li class="index-depth-1"><a href="#3-ניתוח-מורפולוגי">3. ניתוח מורפולוגי</a></li>
+<li class="index-depth-1"><a href="#4-עדות-המילונים">4. עדות המילונים</a></li>
+<li class="index-depth-2"><a href="#bdb-1906">BDB (1906)</a></li>
+<li class="index-depth-2"><a href="#קליין-1987">קליין (1987)</a></li>
+<li class="index-depth-2"><a href="#מילונים-נוספים">מילונים נוספים</a></li>
+<li class="index-depth-1"><a href="#5-הראיות-מן-הבלשנות-השמית-ההשוואתית">5. הראיות מן הבלשנות השמית ההשוואתית</a></li>
+<li class="index-depth-2"><a href="#51-אכדית-הראיה-החזקה-ביותר">5.1 אכדית — הראיה החזקה ביותר</a></li>
+<li class="index-depth-2"><a href="#52-ערבית-הראיה-החדה-ביותר">5.2 ערבית — הראיה החדה ביותר</a></li>
+<li class="index-depth-2"><a href="#53-סורית-וארמית">5.3 סורית וארמית</a></li>
+<li class="index-depth-2"><a href="#54-אוגריתית-ראיה-חלשה-מאוד">5.4 אוגריתית — ראיה חלשה מאוד</a></li>
+<li class="index-depth-2"><a href="#55-מה-לא-נמצא">5.5 מה לא נמצא</a></li>
+<li class="index-depth-1"><a href="#6-הראיות-הפניםמקראיות">6. הראיות הפנים־מקראיות</a></li>
+<li class="index-depth-2"><a href="#61-חציית-הגבול-הכפולה-הראיה-המרכזית">6.1 חציית הגבול הכפולה — הראיה המרכזית</a></li>
+<li class="index-depth-2"><a href="#62-ירמיהו-גיז-מול-ישעיהו-נאה-אותה-תמונה-שני-בניינים">6.2 ירמיהו ג:יז מול ישעיהו נא:ה — אותה תמונה, שני בניינים</a></li>
+<li class="index-depth-2"><a href="#63-איוב-זו-הלשון-הכפולה">6.3 איוב ז:ו — הלשון הכפולה</a></li>
+<li class="index-depth-1"><a href="#7-קוה-אינה-לקוות">7. קוה אינה &quot;לקוות&quot;</a></li>
+<li class="index-depth-2"><a href="#71-הנתון-המכריע-קוה-לארוב">7.1 הנתון המכריע: קוה = לארוב</a></li>
+<li class="index-depth-2"><a href="#72-הכישלון-מנוסח-בלשון-חיתוך-חוט">7.2 הכישלון מנוסח בלשון חיתוך חוט</a></li>
+<li class="index-depth-2"><a href="#73-המילים-הנרדפות-ההבחנה">7.3 המילים הנרדפות — ההבחנה</a></li>
+<li class="index-depth-1"><a href="#8-השורש-בתורה">8. השורש בתורה</a></li>
+<li class="index-depth-1"><a href="#9-עדות-התרגומים-העתיקים">9. עדות התרגומים העתיקים</a></li>
+<li class="index-depth-1"><a href="#10-בעיות-טקסטואליות">10. בעיות טקסטואליות</a></li>
+<li class="index-depth-2"><a href="#101-תהלים-יטה-יצא-קום">10.1 תהלים יט:ה — &quot;יָצָא קַוָּם&quot;</a></li>
+<li class="index-depth-2"><a href="#102-ישעיהו-כחייג-צו-לצו-קו-לקו">10.2 ישעיהו כח:י,יג — &quot;צַו לָצָו קַו לָקָו&quot;</a></li>
+<li class="index-depth-2"><a href="#103-ישעיהו-יחבז-גוי-קוקו-ומבוסה">10.3 ישעיהו יח:ב,ז — &quot;גּוֹי קַו־קָו וּמְבוּסָה&quot;</a></li>
+<li class="index-depth-1"><a href="#11-ההמשך-ממשנה-עד-ההמנון">11. ההמשך: ממשנה עד ההמנון</a></li>
+<li class="index-depth-2"><a href="#לשון-חכמים">לשון חכמים</a></li>
+<li class="index-depth-2"><a href="#עברית-חדשה-וטופונימיה">עברית חדשה וטופונימיה</a></li>
+<li class="index-depth-1"><a href="#12-הצגת-העמדה-הנגדית">12. הצגת העמדה הנגדית</a></li>
+<li class="index-depth-2"><a href="#121-טיעון-בר-הכשל-האטימולוגי">12.1 טיעון בר — הכשל האטימולוגי</a></li>
+<li class="index-depth-2"><a href="#122-טיעון-החלוקה-המשלימה">12.2 טיעון החלוקה המשלימה</a></li>
+<li class="index-depth-2"><a href="#123-טיעון-המקריות-הסטטיסטית">12.3 טיעון המקריות הסטטיסטית</a></li>
+<li class="index-depth-2"><a href="#124-הסיכון-האכדי">12.4 הסיכון האכדי</a></li>
+<li class="index-depth-1"><a href="#13-שאלות-פתוחות">13. שאלות פתוחות</a></li>
+<li class="index-depth-1"><a href="#14-מקורות">14. מקורות</a></li>
+<li class="index-depth-2"><a href="#מהדורות-ומאגרי-טקסט">מהדורות ומאגרי טקסט</a></li>
+<li class="index-depth-2"><a href="#מילונים-וקונקורדנציות">מילונים וקונקורדנציות</a></li>
+<li class="index-depth-2"><a href="#לשונות-שמיות">לשונות שמיות</a></li>
+<li class="index-depth-2"><a href="#מחקרים">מחקרים</a></li>
+<li class="index-depth-2"><a href="#רקע-היסטורי-ותרבותי">רקע היסטורי ותרבותי</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/7c74960e-6db6-41db-bbc0-339bf0aa03b6">Claude Opus 5</a></p>
 <h1 id="השורש-קוה-ונגזרותיו-תקוה-מקוה-קו">השורש ק.ו.ה ונגזרותיו: תִּקְוָה, מִקְוֶה, קַו</h1>
 <h2 id="מחקר-לשוניהיסטורי-בעברית-מקראית-ובלשונות-שמיות-קדומות">מחקר לשוני־היסטורי בעברית מקראית ובלשונות שמיות קדומות</h2>

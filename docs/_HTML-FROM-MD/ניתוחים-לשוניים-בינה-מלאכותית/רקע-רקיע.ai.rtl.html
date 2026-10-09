@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,43 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">רקע-רקיע.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#חקר-השורש-רקע-במקרא-ומילת-הנגזרת-רקיע">חקר השורש ר.ק.ע במקרא ומילת הנגזרת &quot;רקיע&quot;</a></li>
+<li class="index-depth-1"><a href="#תוכן-עניינים">תוכן עניינים</a></li>
+<li class="index-depth-1"><a href="#א-הקדמה-ומבטעל">א. הקדמה ומבט־על</a></li>
+<li class="index-depth-1"><a href="#ב-השורש-בשפות-השמיות-מבט-השוואתי">ב. השורש בשפות השמיות (מבט השוואתי)</a></li>
+<li class="index-depth-2"><a href="#ארמית">ארמית</a></li>
+<li class="index-depth-2"><a href="#סורית">סורית</a></li>
+<li class="index-depth-2"><a href="#ערבית-קלאסית">ערבית קלאסית</a></li>
+<li class="index-depth-2"><a href="#ארמית-נוצרית-פלסטינית-christian-palestinian-aramaic">ארמית-נוצרית-פלסטינית (Christian-Palestinian Aramaic)</a></li>
+<li class="index-depth-2"><a href="#פיניקית">פיניקית</a></li>
+<li class="index-depth-2"><a href="#מסקנת-המבט-ההשוואתי">מסקנת המבט ההשוואתי</a></li>
+<li class="index-depth-1"><a href="#ג-השורש-רקע-במקרא-הפועל">ג. השורש ר.ק.ע במקרא - הפועל</a></li>
+<li class="index-depth-2"><a href="#טבלת-היקרויות-הפועל">טבלת היקרויות הפועל</a></li>
+<li class="index-depth-2"><a href="#פסוק-המפתח-איוב-לז-יח">פסוק המפתח: איוב ל&quot;ז י&quot;ח</a></li>
+<li class="index-depth-2"><a href="#תצפית-מרכזית-על-הפועל">תצפית מרכזית על הפועל</a></li>
+<li class="index-depth-1"><a href="#ד-המילה-רקיע-במקרא">ד. המילה &quot;רקיע&quot; במקרא</a></li>
+<li class="index-depth-2"><a href="#התפלגות-לפי-ספרים">התפלגות לפי ספרים</a></li>
+<li class="index-depth-2"><a href="#בראשית-פרק-א">בראשית פרק א'</a></li>
+<li class="index-depth-2"><a href="#יחזקאל">יחזקאל</a></li>
+<li class="index-depth-2"><a href="#תהלים">תהלים</a></li>
+<li class="index-depth-2"><a href="#דניאל">דניאל</a></li>
+<li class="index-depth-2"><a href="#ניתוח-מורפולוגי">ניתוח מורפולוגי</a></li>
+<li class="index-depth-1"><a href="#ה-ניתוח-פנומנולוגי-קוגניטיבי">ה. ניתוח פנומנולוגי-קוגניטיבי</a></li>
+<li class="index-depth-2"><a href="#החוויה-הבסיסית">החוויה הבסיסית</a></li>
+<li class="index-depth-2"><a href="#הקוגניציה-מה-האדם-הקדום-ראה-כשהביט-לשמיים">הקוגניציה: מה האדם הקדום ראה כשהביט לשמיים?</a></li>
+<li class="index-depth-2"><a href="#הרחבה-סמנטית">הרחבה סמנטית</a></li>
+<li class="index-depth-2"><a href="#ההיגיון-של-המטאפורה-הקוסמית">ההיגיון של המטאפורה הקוסמית</a></li>
+<li class="index-depth-2"><a href="#חיזוק-מהפיניקית">חיזוק מהפיניקית</a></li>
+<li class="index-depth-1"><a href="#ו-סיכום">ו. סיכום</a></li>
+<li class="index-depth-1"><a href="#ז-מקורות">ז. מקורות</a></li>
+<li class="index-depth-2"><a href="#הערה-על-מקורות-נוספים">הערה על מקורות נוספים</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/92fb8ee2-fe55-46cd-999d-09bb2b880295">Claude Opus 4.7</a></p>
 <h1 id="חקר-השורש-רקע-במקרא-ומילת-הנגזרת-רקיע">חקר השורש ר.ק.ע במקרא ומילת הנגזרת &quot;רקיע&quot;</h1>
 <blockquote>

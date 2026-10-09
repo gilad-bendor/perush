@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,30 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">רמש.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#רמש-מחקר-לשוני-של-השורש-רמש-במקרא">רֶמֶשׂ — מחקר לשוני של השורש ר.מ.שׂ במקרא</a></li>
+<li class="index-depth-1"><a href="#תוכן-עניינים">תוכן עניינים</a></li>
+<li class="index-depth-1"><a href="#חלק-א-ניתוח-השורש">חלק א׳: ניתוח השורש</a></li>
+<li class="index-depth-2"><a href="#1-תפוצה-במקרא-והיקרויות">1. תפוצה במקרא והיקרויות</a></li>
+<li class="index-depth-2"><a href="#2-ניתוח-מורפולוגי">2. ניתוח מורפולוגי</a></li>
+<li class="index-depth-2"><a href="#3-שדה-סמנטי-ומערכת-הקטגוריות">3. שדה סמנטי ומערכת הקטגוריות</a></li>
+<li class="index-depth-2"><a href="#4-השוואה-לקטגוריות-סמוכות">4. השוואה לקטגוריות סמוכות</a></li>
+<li class="index-depth-2"><a href="#5-השוואה-שמיתהיסטורית">5. השוואה שמית־היסטורית</a></li>
+<li class="index-depth-2"><a href="#6-תרגומים-עתיקים">6. תרגומים עתיקים</a></li>
+<li class="index-depth-2"><a href="#7-מחקר-מודרני">7. מחקר מודרני</a></li>
+<li class="index-depth-1"><a href="#חלק-ב-הערכת-הפירוש-הפנומנולוגיקוגניטיבי">חלק ב׳: הערכת הפירוש הפנומנולוגי־קוגניטיבי</a></li>
+<li class="index-depth-2"><a href="#תקציר-הפירוש">תקציר הפירוש</a></li>
+<li class="index-depth-2"><a href="#ראיות-תומכות">ראיות תומכות</a></li>
+<li class="index-depth-2"><a href="#ראיות-מאתגרות">ראיות מאתגרות</a></li>
+<li class="index-depth-2"><a href="#הצעת-סינתזה">הצעת סינתזה</a></li>
+<li class="index-depth-2"><a href="#הערכת-הפירוש">הערכת הפירוש</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/4fadb8f0-9d63-4ca3-b987-f720499d1049">Claude Opus 4.7</a></p>
 <h1 id="רמש-מחקר-לשוני-של-השורש-רמש-במקרא">רֶמֶשׂ — מחקר לשוני של השורש ר.מ.שׂ במקרא</h1>
 <blockquote>
@@ -158,7 +186,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li><a href="#מקורות">מקורות</a></li>
 </ul>
 <hr>
-<p>המחקר בנוי בשני שלבים:</p>
+<p class="heads-list">המחקר בנוי בשני שלבים:</p>
 <ol>
 <li>השלב הראשון (חלק א׳) הוא ניתוח לשוני ניטרלי של השורש ר.מ.ש: מיפוי ההיקרויות במקרא, ניתוח מורפולוגי, מיקום בשדה הסמנטי של קטגוריות בעלי־החיים, השוואה לשורשים מקבילים בלשונות שמיות אחרות (אכדית, ערבית, ארמית), בחינת התרגומים העתיקים וסקירת הספרות המחקרית המודרנית.<br>
 הניתוח בשלב זה מתבצע בלי הנחה מוקדמת לגבי משמעותו ה&quot;נכונה&quot; של השורש.</li>

@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,46 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">צלם.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#השורש-צלמ-ניתוח-בלשניהשוואתי">השורש צ.ל.מ – ניתוח בלשני־השוואתי</a></li>
+<li class="index-depth-1"><a href="#תוכן-עניינים">תוכן עניינים</a></li>
+<li class="index-depth-1"><a href="#מסגרת-המחקר">מסגרת המחקר</a></li>
+<li class="index-depth-1"><a href="#הופעות-במקרא">הופעות במקרא</a></li>
+<li class="index-depth-2"><a href="#פסל-דמות-חומרית-אובייקט-מעשה-ידי-אדם">פסל / דמות חומרית (אובייקט מעשה ידי אדם)</a></li>
+<li class="index-depth-2"><a href="#בצלם-אלוהים-הופעות-החומר-הכוהני">&quot;בצלם אלוהים&quot; – הופעות החומר הכוהני</a></li>
+<li class="index-depth-2"><a href="#הופעות-חידתיות-בתהלים">הופעות חידתיות בתהלים</a></li>
+<li class="index-depth-2"><a href="#ארמית-מקראית-ספר-דניאל">ארמית מקראית – ספר דניאל</a></li>
+<li class="index-depth-1"><a href="#בלשנות-השוואתית-שמית">בלשנות השוואתית שמית</a></li>
+<li class="index-depth-2"><a href="#אכדית-salmu">אכדית: ṣalmu</a></li>
+<li class="index-depth-2"><a href="#בעיית-ההומונימיה-salamu-ii-להיות-שחור">בעיית ההומונימיה: ṣalāmu II – &quot;להיות שחור&quot;</a></li>
+<li class="index-depth-2"><a href="#אוגריתית-slm">אוגריתית: ṣlm</a></li>
+<li class="index-depth-2"><a href="#העדות-המכרעת-ארמית-של-תל-פאחריא-מקור-3">העדות המכרעת: ארמית של תל פאחריא [מקור-3]</a></li>
+<li class="index-depth-2"><a href="#ערבית-הבעיה-הפונולוגית">ערבית – הבעיה הפונולוגית</a></li>
+<li class="index-depth-1"><a href="#שאלת-השורש-אחד-או-שניים">שאלת השורש – אחד או שניים?</a></li>
+<li class="index-depth-1"><a href="#צלמות-הבעיה-האטימולוגית-הקלאסית">צַלְמָוֶת – הבעיה האטימולוגית הקלאסית</a></li>
+<li class="index-depth-2"><a href="#הניתוח-המסורתי">הניתוח המסורתי</a></li>
+<li class="index-depth-2"><a href="#הניתוח-הבלשני-המודרני">הניתוח הבלשני המודרני</a></li>
+<li class="index-depth-1"><a href="#אידיאולוגיית-צלם-המלך-במזרח-הקדום">אידיאולוגיית &quot;צלם המלך&quot; במזרח הקדום</a></li>
+<li class="index-depth-2"><a href="#מסופוטמיה">מסופוטמיה</a></li>
+<li class="index-depth-2"><a href="#מצרים">מצרים</a></li>
+<li class="index-depth-2"><a href="#הדמוקרטיזציה-הרדיקלית-של-בראשית-א">הדמוקרטיזציה הרדיקלית של בראשית א</a></li>
+<li class="index-depth-2"><a href="#ספרות-מקצועית">ספרות מקצועית</a></li>
+<li class="index-depth-1"><a href="#צלם-vs-דמות">צֶלֶם vs דְּמוּת</a></li>
+<li class="index-depth-2"><a href="#העמדה-ההיסטורית-של-הכנסייה-הקדומה">העמדה ההיסטורית של הכנסייה הקדומה</a></li>
+<li class="index-depth-2"><a href="#העמדה-הבלשנית-המודרנית">העמדה הבלשנית המודרנית</a></li>
+<li class="index-depth-1"><a href="#המחלוקת-המודרנית-על-בצלם-אלוהים">המחלוקת המודרנית על &quot;בצלם אלוהים&quot;</a></li>
+<li class="index-depth-2"><a href="#1-המודל-הסובסטנטיבי-קלאסי">1. המודל הסובסטנטיבי (קלאסי)</a></li>
+<li class="index-depth-2"><a href="#2-המודל-הרלציוני-יחסי">2. המודל הרלציוני (יחסי)</a></li>
+<li class="index-depth-2"><a href="#3-המודל-הפונקציונלימלכותי-דומיננטי-כיום">3. המודל הפונקציונלי־מלכותי (דומיננטי כיום)</a></li>
+<li class="index-depth-2"><a href="#4-המודל-הקיומיקוגניטיבי">4. המודל הקיומי־קוגניטיבי</a></li>
+<li class="index-depth-1"><a href="#סינתזה-פנומנולוגיתקוגניטיבית">סינתזה פנומנולוגית־קוגניטיבית</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/8bd30541-273b-4316-a7a5-f6b5f04593d7">Claude Opus 4.7</a></p>
 <h1 id="השורש-צלמ-ניתוח-בלשניהשוואתי">השורש צ.ל.מ – ניתוח בלשני־השוואתי</h1>
 <blockquote>
@@ -207,7 +251,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </table>
 <p>המקרה של יחזקאל כג, יד חשוב במיוחד: שם צֶלֶם מתייחס ל<strong>תמונה דו־ממדית</strong> (חקוקה בששר, צבע אדום), מה שמערער את ההנחה שצֶלֶם הוא בהכרח אובייקט תלת־ממדי.</p>
 <h3 id="בצלם-אלוהים-הופעות-החומר-הכוהני">&quot;בצלם אלוהים&quot; – הופעות החומר הכוהני</h3>
-<p>שלוש בלבד:</p>
+<p class="heads-list">שלוש בלבד:</p>
 <ul>
 <li><strong>בראשית א, כו–כז</strong>: &quot;נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ כִּדְמוּתֵנוּ... וַיִּבְרָא אֱלֹהִים אֶת הָאָדָם בְּצַלְמוֹ בְּצֶלֶם אֱלֹהִים בָּרָא אֹתוֹ&quot;.</li>
 <li><strong>בראשית ה, ג</strong>: &quot;וַיּוֹלֶד בִּדְמוּתוֹ כְּצַלְמוֹ&quot; – שים לב להיפוך הסדר ולחילופי מילות היחס בהשוואה לבראשית א.</li>
@@ -219,7 +263,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li>תהלים עג, כ: &quot;בָּעִיר צַלְמָם תִּבְזֶה&quot; – פסוק קשה; חוקרים רבים הציעו לקרוא בַּהָקִיץ במקום בָּעִיר.</li>
 </ul>
 <h3 id="ארמית-מקראית-ספר-דניאל">ארמית מקראית – ספר דניאל</h3>
-<p>מילת המפתח של חזון נבוכדנצר וסיפור הצלם הזהב:</p>
+<p class="heads-list">מילת המפתח של חזון נבוכדנצר וסיפור הצלם הזהב:</p>
 <ul>
 <li><strong>דניאל ב</strong>: צלם של ארבע מתכות.</li>
 <li><strong>דניאל ג</strong>: הצלם הזהוב במישור דורא – 17 פעמים בפרק אחד.</li>
@@ -290,7 +334,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>צֵל + מָוֶת = &quot;צל מוות&quot;, אפלה קיצונית. הניקוד המסורתי תומך בקריאה זו: צַלְ + מָוֶת.</p>
 <h3 id="הניתוח-הבלשני-המודרני">הניתוח הבלשני המודרני</h3>
 <p>חוקרים רבים – החל מ־D. Winton Thomas [מקור-10] – הציעו לקרוא <strong>צַלְמוּת</strong>, צורת אבסטרקט עם סופית ־ût מהשורש צ.ל.מ במשמעות &quot;חושך עמוק&quot;.</p>
-<p>טיעוני התומכים:</p>
+<p class="heads-list">טיעוני התומכים:</p>
 <ol>
 <li><strong>הקשר</strong>: בכל המקומות שצלמות מופיעה, &quot;חושך עמוק&quot; מתאים יותר מאשר &quot;צל של מוות&quot; המטאפורי.</li>
 <li><strong>ההקבלה הפנים־מקראית</strong>: ברוב המקומות, צלמות מקבילה למילה אחרת לחושך (אופל, חושך, וכד').</li>
@@ -298,7 +342,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li><strong>תרגום השבעים</strong>: לעיתים מתורגם σκότος (חושך) ולא σκιὰ θανάτου (צל מוות).</li>
 <li><strong>הניקוד המסורתי</strong> הוא, לפי השערה זו, תוצאה של אטימולוגיה עממית (folk etymology).</li>
 </ol>
-<p>מאמרים מרכזיים בנושא:</p>
+<p class="heads-list">מאמרים מרכזיים בנושא:</p>
 <ul>
 <li>Winton Thomas 1962 [מקור-10] – המאמר המייסד.</li>
 <li>W. L. Michel 1984 [מקור-11] – פיתוח השיטה והרחבה.</li>
@@ -319,7 +363,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p><em>&quot;Ancient Egyptian sources frequently depict Pharaoh as god's representative on earth during his lifetime and as a god after his death... At times, he was also described as 'the living image of god x.'&quot;</em></p>
 </blockquote>
 <h3 id="הדמוקרטיזציה-הרדיקלית-של-בראשית-א">הדמוקרטיזציה הרדיקלית של בראשית א</h3>
-<p>כפי שטענו J. R. Middleton [מקור-14] ולפניו Phyllis Bird [מקור-15], בראשית א מבצע <strong>דמוקרטיזציה מהפכנית</strong> של רעיון הצלם:</p>
+<p class="heads-list">כפי שטענו J. R. Middleton [מקור-14] ולפניו Phyllis Bird [מקור-15], בראשית א מבצע <strong>דמוקרטיזציה מהפכנית</strong> של רעיון הצלם:</p>
 <ul>
 <li>לא רק המלך – אלא <strong>כל אדם, זכר ונקבה</strong>.</li>
 <li>האדם הוא &quot;צלם המלך/האל&quot; בעולם, שתפקידו לייצג אותו.</li>
@@ -336,7 +380,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <h2 id="צלם-vs-דמות">צֶלֶם vs דְּמוּת</h2>
 <p>בבראשית א, כו: &quot;נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ כִּדְמוּתֵנוּ&quot;. האם שתי המילים נרדפות או משלימות?</p>
 <h3 id="העמדה-ההיסטורית-של-הכנסייה-הקדומה">העמדה ההיסטורית של הכנסייה הקדומה</h3>
-<p>אבות הכנסייה הבחינו:</p>
+<p class="heads-list">אבות הכנסייה הבחינו:</p>
 <ul>
 <li><strong>εἰκών (צלם)</strong> = יכולת רציונלית, נשארת באדם.</li>
 <li><strong>ὁμοίωσις (דמות)</strong> = יכולת מוסרית־רוחנית, אובדת בחטא.<br>
@@ -345,7 +389,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <h3 id="העמדה-הבלשנית-המודרנית">העמדה הבלשנית המודרנית</h3>
 <p>הקונצנזוס: שתי המילים <strong>נרדפות פונקציונלית</strong> בהקשר זה. החלפת מילות היחס בין בראשית א (&quot;בְּצַלְמֵנוּ כִּדְמוּתֵנוּ&quot;) לבראשית ה (&quot;בִּדְמוּתוֹ כְּצַלְמוֹ&quot;) מצביעה על אי-קיומה של הבחנה סמנטית מוחלטת.</p>
 <p><strong>עדות מכרעת</strong>: בכתובת תל פאחריא [מקור-3] שתי המילים – צלמא ודמותא – משמשות <strong>לאותו פסל</strong>, לכל הדעות.</p>
-<p>מחקרים בנושא:</p>
+<p class="heads-list">מחקרים בנושא:</p>
 <ul>
 <li>D. J. A. Clines 1968 [מקור-20] – המאמר הקלאסי הטוען שדמות מציינת <em>resemblance</em> בעוד צלם מציינת <em>representation</em>. עם זאת, סוף סוף מסכים שהן קרובות מאוד.</li>
 <li>J. Barr 1968 [מקור-12].</li>
@@ -367,7 +411,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>מנקודת מבט פנומנולוגית־קוגניטיבית, המתעלמת מהפרשנות המסורתית ומתחילה מהחוויה:</p>
 <p>המוח האנושי הקדום נתקל בתופעה בסיסית: <strong>דבר אחד יכול לעמוד במקום דבר אחר</strong>. הילד רואה ציור של אבא ויודע &quot;זה אבא&quot;. הקדמון רואה פסל ויודע &quot;זה המלך&quot;. זוהי קוגניציה רפרזנטטיבית, וההכרה בה היא הישג קוגניטיבי בסיסי.</p>
 <p>צֶלֶם, אם נקרא בו את הליבה הקוגניטיבית, אינו רק &quot;דמות פיזית&quot; אלא <strong>מבנה רפרזנטציה אקטיבי</strong>: אובייקט (או ישות) המכיל בתוכו את &quot;נוכחותו&quot; של מקור אחר.</p>
-<p>במסגרת זו:</p>
+<p class="heads-list">במסגרת זו:</p>
 <ul>
 <li><strong>פסל המלך</strong> = הנציג האקטיבי של המלך.</li>
 <li><strong>אדם</strong> = הנציג האקטיבי של האלוהים בעולמו.</li>

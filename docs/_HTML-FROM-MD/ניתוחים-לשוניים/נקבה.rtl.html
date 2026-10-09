@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -139,7 +143,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <div class="pseudo-tag" data-tag="ניתוח-לשוני">
 <div class="pseudo-tag-caption">ניתוח-לשוני: נְקֵבָה</div>
 <p>נ.ק.ב הוא החוויה של פעולה ממוקדת, חודרת, מדויקת, ובלתי ניתנת לביטול או לטשטוש לאחר שבוצעה.</p>
-<p>שלושת המאפיינים המרכזיים:</p>
+<p class="heads-list">שלושת המאפיינים המרכזיים:</p>
 <ol>
 <li><strong>דיוק וממוקדות</strong> (היפך הפיזור או ההיסוס)</li>
 <li><strong>חדירה דרך התנגדות</strong> (היפך הריחוף או הסיבוב)</li>
@@ -148,7 +152,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>זה מה שמייחד &quot;לנקב&quot; מ&quot;לחתוך&quot; סתם, מ&quot;לקצוץ&quot;, או מ&quot;להכות&quot;. כשמנקבים — יוצרים סימן, מעבר, או הגדרה שלא ניתן למחוק.</p>
 <h2 id="ב-ניתוח-מחדש-של-המופעים-לאור-הגשטלט">ב. ניתוח מחדש של המופעים לאור הגשטלט</h2>
 <ul>
-<li><strong>נְקֵבָה:</strong> הנקבה היא מי ש<strong>עוברת פעולה חברתית של הגדרה</strong>. בחברה פטריארכלית היא מוגדרת על-ידי גברים — &quot;מנוּקבת&quot; במובן של &quot;קבועה במקומה התפקודי&quot;.<br>
+<li><strong>נְקֵבָה:</strong> הנקבה היא מי ש<strong>עוברת פעולה חברתית של הגדרה</strong>. בחברה פטריארכלית היא מוגדרת על-ידי זכרים — &quot;מנוּקבת&quot; במובן של &quot;קבועה במקומה התפקודי&quot;.<br>
 זה מתחבר לזיווג עם &quot;<a href="זכר.rtl.html">זכר</a>״: הצמד אינו רק אנטומי אלא תפקודי-חברתי.</li>
 <li><strong>הפיזי:</strong> כתובת השילוח חזקה במיוחד: &quot;וזה היה דבר הנקבה&quot; — לא סתם חציבה, אלא הרגע המכריע של פירוץ הסלע, רגע שאי אפשר לחזור ממנו.</li>
 <li><strong>&quot;לקרוא בשם&quot;:</strong> &quot;נָקְבָה שְׂכָרְךָ עָלַי&quot; אינו &quot;ציין&quot; אלא &quot;<strong>נעץ</strong> את שכרך באוזניי באופן שלא נוכל להתחמק ממנו&quot;. הפסוק החזק במיוחד: &quot;אֲשֶׁר פִּי ה' יִקֳּבֶנּוּ&quot; (ישעיה סב, ב) — ה' עצמו ינעץ-יקבע את השם החדש לעולמים.</li>

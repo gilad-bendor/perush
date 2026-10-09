@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,54 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">סנה.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#שם-העצם-סנה-בעברית-המקראית">שם העצם סְנֶה בעברית המקראית</a></li>
+<li class="index-depth-1"><a href="#תקציר-הטענה">תקציר הטענה</a></li>
+<li class="index-depth-1"><a href="#1-ההיקרויות">1. ההיקרויות</a></li>
+<li class="index-depth-1"><a href="#2-צורה-ודקדוק">2. צורה ודקדוק</a></li>
+<li class="index-depth-2"><a href="#21-הדגם">2.1 הדגם</a></li>
+<li class="index-depth-2"><a href="#22-הנון-הדגושה">2.2 הנו&quot;ן הדגושה</a></li>
+<li class="index-depth-2"><a href="#23-ההא-המיידעת-הסנה-כבר-בהופעה-הראשונה">2.3 הה&quot;א המיידעת — &quot;הַסְּנֶה&quot; כבר בהופעה הראשונה</a></li>
+<li class="index-depth-2"><a href="#24-שכני-סנה-חיריק-הסמיכות">2.4 <code>שֹׁכְנִי סְנֶה</code> — חיריק הסמיכות</a></li>
+<li class="index-depth-2"><a href="#25-אכל-בינוני-פעל-ללא-מם">2.5 <code>אֻכָּל</code> — בינוני פֻּעַל ללא מ&quot;ם</a></li>
+<li class="index-depth-1"><a href="#3-מעבר-על-ההיקרויות">3. מעבר על ההיקרויות</a></li>
+<li class="index-depth-2"><a href="#שמות-גב-וירא-מלאך-יהוה-אליו-בלבתאש-מתוך-הסנה-וירא-והנה-הסנה-בער-באש-והסנה-איננו-אכל">שמות ג:ב — <code>וַיֵּרָא מַלְאַךְ יְהוָה אֵלָיו בְּלַבַּת־אֵשׁ מִתּוֹךְ הַסְּנֶה וַיַּרְא וְהִנֵּה הַסְּנֶה בֹּעֵר בָּאֵשׁ וְהַסְּנֶה אֵינֶנּוּ אֻכָּל</code></a></li>
+<li class="index-depth-2"><a href="#שמות-גג-מדוע-לאיבער-הסנה">שמות ג:ג — <code>מַדּוּעַ לֹא־יִבְעַר הַסְּנֶה</code></a></li>
+<li class="index-depth-2"><a href="#שמות-גד-הפסוק-שבמוקד">שמות ג:ד — הפסוק שבמוקד</a></li>
+<li class="index-depth-2"><a href="#דברים-לגטז-וממגד-ארץ-ומלאה-ורצון-שכני-סנה">דברים לג:טז — <code>וּמִמֶּגֶד אֶרֶץ וּמְלֹאָהּ וּרְצוֹן שֹׁכְנִי סְנֶה</code></a></li>
+<li class="index-depth-2"><a href="#שמואל-א-ידד-צוק-בשם-סנה">שמואל א יד:ד — צוק בשם <code>סֶנֶּה</code></a></li>
+<li class="index-depth-2"><a href="#יהושע-טומט-קריתסנה-היא-דבר">יהושע טו:מט — <code>קִרְיַת־סַנָּה הִיא דְבִר</code></a></li>
+<li class="index-depth-1"><a href="#4-בלשנות-השוואתית">4. בלשנות השוואתית</a></li>
+<li class="index-depth-2"><a href="#41-הערך-ב-bdb">4.1 הערך ב-BDB</a></li>
+<li class="index-depth-2"><a href="#42-המקבילות">4.2 המקבילות</a></li>
+<li class="index-depth-2"><a href="#43-הערבית-סנה-וזוהר">4.3 הערבית: סֶנָּה, וזוהר</a></li>
+<li class="index-depth-2"><a href="#44-מלכודות-פונולוגיות">4.4 מלכודות פונולוגיות</a></li>
+<li class="index-depth-2"><a href="#45-משפחות-סמוכות">4.5 משפחות סמוכות</a></li>
+<li class="index-depth-1"><a href="#5-התרגומים-העתיקים">5. התרגומים העתיקים</a></li>
+<li class="index-depth-1"><a href="#6-זיהוי-בוטני">6. זיהוי בוטני</a></li>
+<li class="index-depth-1"><a href="#7-סנה-וסיני">7. סנה וסיני</a></li>
+<li class="index-depth-2"><a href="#71-משחק-המילים">7.1 משחק המילים</a></li>
+<li class="index-depth-2"><a href="#72-בער-באש-ארבע-פעמים-בדיוק">7.2 <code>בֹּעֵר בָּאֵשׁ</code> — ארבע פעמים בדיוק</a></li>
+<li class="index-depth-2"><a href="#73-מעמד-מקדים">7.3 מעמד מקדים</a></li>
+<li class="index-depth-2"><a href="#74-האטימולוגיה-של-סיני">7.4 האטימולוגיה של &quot;סיני&quot;</a></li>
+<li class="index-depth-2"><a href="#75-מבנה-דברים-לג">7.5 מבנה דברים לג</a></li>
+<li class="index-depth-1"><a href="#8-השדה-הסמנטי-אש-וקוץ">8. השדה הסמנטי: אש וקוץ</a></li>
+<li class="index-depth-1"><a href="#9-סינתזה-פנומנולוגית">9. סינתזה פנומנולוגית</a></li>
+<li class="index-depth-1"><a href="#10-תבנית-סצנה-שיח-על-הר-האלהים">10. תבנית סצנה: שיח על הר האלהים</a></li>
+<li class="index-depth-2"><a href="#101-העקדה">10.1 העקדה</a></li>
+<li class="index-depth-2"><a href="#102-סיפורי-הקדשה">10.2 סיפורי הקדשה</a></li>
+<li class="index-depth-1"><a href="#11-תולדות-המסורת-שיח-מקודש">11. תולדות המסורת: שיח מקודש?</a></li>
+<li class="index-depth-1"><a href="#12-סוגיות-פתוחות">12. סוגיות פתוחות</a></li>
+<li class="index-depth-1"><a href="#13-כיוונים-לפירוש-השערות-בלבד">13. כיוונים לפירוש (השערות בלבד)</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+<li class="index-depth-2"><a href="#מקורות-שהוסרו-מן-המחקר">מקורות שהוסרו מן המחקר</a></li>
+<li class="index-depth-1"><a href="#הערת-שיטה">הערת שיטה</a></li>
+</ul>
+</details>
+</nav>
 <h1 id="שם-העצם-סנה-בעברית-המקראית">שם העצם סְנֶה בעברית המקראית</h1>
 <p><strong>ניתוח בלשני־היסטורי, השוואתי ופנומנולוגי — מן השיח שבחורב אל ההר הבוער</strong></p>
 <blockquote>
@@ -636,7 +688,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </ol>
 <hr>
 <h2 id="13-כיוונים-לפירוש-השערות-בלבד">13. כיוונים לפירוש (השערות בלבד)</h2>
-<p>לפי מילון הפירוש:</p>
+<p class="heads-list">לפי מילון הפירוש:</p>
 <ul>
 <li><strong>צומח</strong> = תובנה / מודל. הסנה הוא צומח <strong>שאינו מאכל</strong> — מודל נמוך, סבוך, אולי דוקר, שקשה &quot;לאכול&quot; (להפנים).</li>
 <li><strong>אש</strong> = רעיון מוחלט. כאן היא <strong>שוכנת</strong> בתוך המודל הצנוע ואינה מכלה אותו — בניגוד מופגן לתבנית המקראית שבה אש־בקוץ היא כלייה (סעיף 8).</li>

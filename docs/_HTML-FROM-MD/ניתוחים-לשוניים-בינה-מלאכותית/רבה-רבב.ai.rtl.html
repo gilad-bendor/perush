@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,28 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">רבה-רבב.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#ניתוח-בלשני-השורשים-רבה-ו-רבב-במקרא">ניתוח בלשני: השורשים ר.ב.ה ו-ר.ב.ב במקרא</a></li>
+<li class="index-depth-1"><a href="#השאלה-המרכזית">השאלה המרכזית</a></li>
+<li class="index-depth-1"><a href="#תשובה-בקצרה">תשובה בקצרה</a></li>
+<li class="index-depth-1"><a href="#ניתוח-מפורט">ניתוח מפורט</a></li>
+<li class="index-depth-2"><a href="#א-הפסוקים-המכריעים-רבה-כדומיננטיעוצמתי">א. הפסוקים המכריעים – ר.ב.ה כ&quot;דומיננטי/עוצמתי&quot;</a></li>
+<li class="index-depth-2"><a href="#ב-הפסוקים-המכריעים-מן-החומש-בלבד">ב. הפסוקים המכריעים מן החומש בלבד</a></li>
+<li class="index-depth-2"><a href="#ג-הפרדה-בין-רבה-ו-רבב">ג. הפרדה בין ר.ב.ה ו-ר.ב.ב</a></li>
+<li class="index-depth-2"><a href="#ד-ההסבר-ההיסטורי-השוואתי">ד. ההסבר ההיסטורי-השוואתי</a></li>
+<li class="index-depth-2"><a href="#ה-עדות-מחזקת-התואר-והשם-רב">ה. עדות מחזקת – התואר והשם &quot;רב&quot;</a></li>
+<li class="index-depth-1"><a href="#מסקנות-עיקריות">מסקנות עיקריות</a></li>
+<li class="index-depth-2"><a href="#1-תשובה-ישירה-לשאלה-המקורית">1. תשובה ישירה לשאלה המקורית</a></li>
+<li class="index-depth-2"><a href="#2-התפלגות-המשמעויות-בין-השורשים">2. התפלגות המשמעויות בין השורשים</a></li>
+<li class="index-depth-2"><a href="#3-הסכמה-הקוגניטיבית-המשותפת">3. הסכמה הקוגניטיבית המשותפת</a></li>
+<li class="index-depth-2"><a href="#4-משמעות-עצמה-אינה-הרחבה-של-ריבוי">4. משמעות &quot;עצמה&quot; אינה הרחבה של &quot;ריבוי&quot;</a></li>
+<li class="index-depth-2"><a href="#5-הדפוס-בחומש">5. הדפוס בחומש</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/e800a23f-fc50-4cc5-b33b-609afa019390">Claude Opus 4.7</a></p>
 <h1 id="ניתוח-בלשני-השורשים-רבה-ו-רבב-במקרא">ניתוח בלשני: השורשים ר.ב.ה ו-ר.ב.ב במקרא</h1>
 <h2 id="השאלה-המרכזית">השאלה המרכזית</h2>
@@ -278,7 +304,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 </blockquote>
 <h4 id="רבה-דו-משמעי">ר.ב.ה – דו-משמעי</h4>
 <p>כפי שהוצג לעיל, ר.ב.ה נושא את שתי המשמעויות.</p>
-<p><strong>סטטיסטיקה גסה</strong> (מתוך ~197 מופעים שנסקרו):</p>
+<p class="heads-list"><strong>סטטיסטיקה גסה</strong> (מתוך ~197 מופעים שנסקרו):</p>
 <ul>
 <li>מספרי חד-משמעי: ~48%</li>
 <li>דו-משמעי (שתי האפשרויות): ~45%</li>

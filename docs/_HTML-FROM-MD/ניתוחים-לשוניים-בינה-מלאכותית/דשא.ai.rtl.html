@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,44 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">דשא.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#השורש-דשא-ושם-העצם-דשא">השורש ד.ש.א ושם העצם דֶּשֶׁא</a></li>
+<li class="index-depth-2"><a href="#מחקר-בלשניהיסטורי-בעברית-מקראית">מחקר בלשני־היסטורי בעברית מקראית</a></li>
+<li class="index-depth-1"><a href="#1-הנתונים">1. הנתונים</a></li>
+<li class="index-depth-2"><a href="#11-שם-העצם-דשא-ארבעעשרה-היקרויות">1.1 שם העצם דֶּשֶׁא — ארבע־עשרה היקרויות</a></li>
+<li class="index-depth-2"><a href="#12-הפועל-שתי-היקרויות-בלבד">1.2 הפועל — שתי היקרויות בלבד</a></li>
+<li class="index-depth-2"><a href="#13-הארמית-המקראית-שתי-היקרויות">1.3 הארמית המקראית — שתי היקרויות</a></li>
+<li class="index-depth-2"><a href="#14-ירמיהו-ניא-מחלוקת-לקסיקוגרפית-לא-טקסטואלית">1.4 ירמיהו נ׳:י״א — מחלוקת לקסיקוגרפית, לא טקסטואלית</a></li>
+<li class="index-depth-1"><a href="#2-מורפולוגיה-השורש-והמשקל">2. מורפולוגיה: השורש והמשקל</a></li>
+<li class="index-depth-2"><a href="#21-המשקל">2.1 המשקל</a></li>
+<li class="index-depth-2"><a href="#22-שם-עצם-קיבוציחומרי">2.2 שם עצם קיבוצי־חומרי</a></li>
+<li class="index-depth-2"><a href="#23-המושא-הפנימי">2.3 המושא הפנימי</a></li>
+<li class="index-depth-2"><a href="#24-הצעה-הפעיל-פנימי">2.4 הצעה: &quot;הפעיל פנימי&quot;</a></li>
+<li class="index-depth-2"><a href="#25-שאלת-הדנומינטיביות">2.5 שאלת הדנומינטיביות</a></li>
+<li class="index-depth-1"><a href="#3-השדה-הסמנטי-דשא-מול-שכניו">3. השדה הסמנטי: דֶּשֶׁא מול שכניו</a></li>
+<li class="index-depth-2"><a href="#31-עדות-מפתח-משלי-כזכה">3.1 עדות מפתח: משלי כ״ז:כ״ה</a></li>
+<li class="index-depth-2"><a href="#32-עדות-מפתח-מלכים-ב-יטכו">3.2 עדות מפתח: מלכים ב׳ י״ט:כ״ו</a></li>
+<li class="index-depth-1"><a href="#4-הצומת-הקשה-בראשית-איאיב">4. הצומת הקשה: בראשית א׳:י״א–י״ב</a></li>
+<li class="index-depth-1"><a href="#5-בלשנות-היסטוריתהשוואתית">5. בלשנות היסטורית־השוואתית</a></li>
+<li class="index-depth-2"><a href="#51-השחזור-d-t-ʾ">5.1 השחזור *d-ṯ-ʾ</a></li>
+<li class="index-depth-2"><a href="#52-אכדית-הראיה-למשמעות-שפע">5.2 אכדית — הראיה למשמעות &quot;שפע&quot;</a></li>
+<li class="index-depth-2"><a href="#53-ערבית-זהירות-הכרחית">5.3 ערבית — זהירות הכרחית</a></li>
+<li class="index-depth-2"><a href="#54-מה-אין">5.4 מה אין</a></li>
+<li class="index-depth-1"><a href="#6-שלילת-אטימולוגיות-עממיות-דשא-דשן">6. שלילת אטימולוגיות עממיות: דֶּשֶׁא ≠ דֶּשֶׁן</a></li>
+<li class="index-depth-1"><a href="#7-התרגומים-העתיקים-כעדות-סמנטית">7. התרגומים העתיקים כעדות סמנטית</a></li>
+<li class="index-depth-1"><a href="#8-סינתזה-הצעה-פנומנולוגיתקוגניטיבית">8. סינתזה: הצעה פנומנולוגית־קוגניטיבית</a></li>
+<li class="index-depth-2"><a href="#81-התרחיש-ההיסטוריחווייתי">8.1 התרחיש ההיסטורי־חווייתי</a></li>
+<li class="index-depth-2"><a href="#82-נוסח-מוצע-לערך-מילוני">8.2 נוסח מוצע לערך מילוני</a></li>
+<li class="index-depth-2"><a href="#83-ההשלכה-לבראשית-א">8.3 ההשלכה לבראשית א׳</a></li>
+<li class="index-depth-1"><a href="#9-הערה-על-העברית-החדשה">9. הערה על העברית החדשה</a></li>
+<li class="index-depth-1"><a href="#10-כלי-המחקר">10. כלי המחקר</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/8e64f250-f95f-4b2f-9018-eacab711d340">Claude Opus 5</a></p>
 <h1 id="השורש-דשא-ושם-העצם-דשא">השורש ד.ש.א ושם העצם דֶּשֶׁא</h1>
 <h3 id="מחקר-בלשניהיסטורי-בעברית-מקראית">מחקר בלשני־היסטורי בעברית מקראית</h3>

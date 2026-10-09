@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,43 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / <a dir="auto" href="../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="index.html">ניתוחים-לשוניים-בינה-מלאכותית</a> / <span dir="auto">מאוד.ai</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#מאד-מחקר-בלשניהיסטורי-מאומת">מְאֹד — מחקר בלשני־היסטורי מאומת</a></li>
+<li class="index-depth-1"><a href="#תוכן-העניינים">תוכן העניינים</a></li>
+<li class="index-depth-1"><a href="#1-מצב-השאלה">1. מצב השאלה</a></li>
+<li class="index-depth-1"><a href="#2-מורפולוגיה-ומעמד-תחבירי">2. מורפולוגיה ומעמד תחבירי</a></li>
+<li class="index-depth-1"><a href="#3-תפוצה">3. תפוצה</a></li>
+<li class="index-depth-1"><a href="#4-אטימולוגיה-והשוואה-שמית">4. אטימולוגיה והשוואה שמית</a></li>
+<li class="index-depth-2"><a href="#41-אכדית-המקבילה-החזקה-ביותר">4.1 אכדית — המקבילה החזקה ביותר</a></li>
+<li class="index-depth-2"><a href="#42-אוגריתית-ארבע-צורות">4.2 אוגריתית — ארבע צורות</a></li>
+<li class="index-depth-2"><a href="#43-אמרנה">4.3 אמרנה</a></li>
+<li class="index-depth-2"><a href="#44-ארמית-לקסמה-אחרת">4.4 ארמית — לקסמה אחרת</a></li>
+<li class="index-depth-2"><a href="#45-ערבית-שורש-הומונימי-לא-מקבילה">4.5 ערבית — שורש הומונימי, לא מקבילה</a></li>
+<li class="index-depth-1"><a href="#5-תחביר">5. תחביר</a></li>
+<li class="index-depth-2"><a href="#51-מצייןדרגה-שלאחר-הגרעין">5.1 מציין־דרגה שלאחר הגרעין</a></li>
+<li class="index-depth-2"><a href="#52-הקדמה-נדירה">5.2 הקדמה — נדירה</a></li>
+<li class="index-depth-2"><a href="#53-שליטת-מילות-יחס-הראיה-הנומינלית">5.3 שליטת מילות יחס — הראיה הנומינלית</a></li>
+<li class="index-depth-2"><a href="#54-הכפלה-חשופה">5.4 הכפלה חשופה</a></li>
+<li class="index-depth-2"><a href="#55-הגבלת-סלקציה">5.5 הגבלת סלקציה</a></li>
+<li class="index-depth-1"><a href="#6-השימושים-הנומינליים">6. השימושים הנומינליים</a></li>
+<li class="index-depth-2"><a href="#61-בראשית-לדיב-נסמך-לשם-עצם">6.1 בראשית לד:יב — נסמך לשם עצם</a></li>
+<li class="index-depth-2"><a href="#62-דברים-וה-ומלב-כגכה-נטיית-כינוי">6.2 דברים ו:ה ומל&quot;ב כג:כה — נטיית כינוי</a></li>
+<li class="index-depth-1"><a href="#7-מחלוקת-dahoodmarcus">7. מחלוקת Dahood–Marcus</a></li>
+<li class="index-depth-1"><a href="#8-עדי-תרגום-עתיקים">8. עדי תרגום עתיקים</a></li>
+<li class="index-depth-1"><a href="#9-ניתוח-פנומנולוגיקוגניטיבי">9. ניתוח פנומנולוגי־קוגניטיבי</a></li>
+<li class="index-depth-2"><a href="#91-המסלול-ההתפתחותי">9.1 המסלול ההתפתחותי</a></li>
+<li class="index-depth-2"><a href="#92-עדות-להלבנה-סמנטית-bleaching">9.2 עדות להלבנה סמנטית (bleaching)</a></li>
+<li class="index-depth-2"><a href="#93-layering-ולמה-זה-לא-חריג">9.3 Layering — ולמה זה לא חריג</a></li>
+<li class="index-depth-2"><a href="#94-פונקציה-שיחנית">9.4 פונקציה שיחנית</a></li>
+<li class="index-depth-1"><a href="#10-מחלוקות-פתוחות">10. מחלוקות פתוחות</a></li>
+<li class="index-depth-1"><a href="#מקורות">מקורות</a></li>
+<li class="index-depth-2"><a href="#ביבליוגרפיה-נוספת-אומתה-ביבליוגרפית-ללא-קישור-ישיר-לטקסט">ביבליוגרפיה נוספת (אומתה ביבליוגרפית, ללא קישור ישיר לטקסט)</a></li>
+</ul>
+</details>
+</nav>
 <p><a href="https://claude.ai/share/5fe01f0f-cffc-4d6a-a79d-e7899a66195d">Claude Opus 5</a></p>
 <h1 id="מאד-מחקר-בלשניהיסטורי-מאומת">מְאֹד — מחקר בלשני־היסטורי מאומת</h1>
 <p><em>(גרסה עם קישורים ממוספרים)</em></p>

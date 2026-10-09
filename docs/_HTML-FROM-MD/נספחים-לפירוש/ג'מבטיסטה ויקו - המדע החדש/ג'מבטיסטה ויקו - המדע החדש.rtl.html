@@ -27,9 +27,11 @@ li > ul, li > ol { margin: 0; }
 ul, ol { padding-inline-start: 1.6em; }
 
 a { color: #0066cc; text-decoration: underline; }
-.breadcrumbs { color: #666; font-size: 0.95em; }
-.breadcrumbs a { color: inherit; }
-body:not(.folder-index) .breadcrumbs { user-select: none; }
+.breadcrumbs { font-size: 0.95em; margin-bottom: 1em; }
+p.heads-list, ul.runs-on, ol.runs-on { margin-bottom: 0; }
+/* The way around the site, and around the page: in the text's own colour, links in theirs, all faded. */
+.breadcrumbs, .page-index { opacity: 0.7; }
+body:not(.folder-index) .breadcrumbs, .page-index { user-select: none; }
 hr { border: 0; border-top: 2px solid rgba(128, 128, 128, 0.3); margin: 1em 0; }
 
 code, blockquote {
@@ -50,10 +52,10 @@ th { background: rgba(128, 128, 128, 0.15); font-weight: bold; }
 .pseudo-tag {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 0.2em 0.9em 0.1em;
+    padding: 0 0.9em 0.1em;
     background: #f4f4f4;
 }
-.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; margin-bottom: 0.2em; }
+.pseudo-tag-caption { text-align: center; font-weight: bold; opacity: 0.7; }
 .pseudo-tag > :last-child { margin-bottom: 0.5em; }
 blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .pseudo-tag[data-tag="ניתוח-לשוני"] { background: #ffe8e8; font-size: 0.85em; }
@@ -97,6 +99,8 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.page-index { margin-top: 0.6em; }
+.page-index a { color: #0066cc; }
 
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
@@ -123,7 +127,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
-    .breadcrumbs { display: none; }
+    .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
@@ -136,6 +140,46 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <body class="rtl">
 <main>
 <nav class="breadcrumbs"><a dir="auto" href="../../../index.html">פירוש</a> / <a dir="auto" href="../../index.html">_HTML-FROM-MD</a> / <a dir="auto" href="../index.html">נספחים-לפירוש</a> / <a dir="auto" href="index.html">ג'מבטיסטה ויקו - המדע החדש</a> / <span dir="auto">ג'מבטיסטה ויקו - המדע החדש</span></nav>
+<nav class="index page-index">
+<details open>
+<summary>תוכן העניינים</summary>
+<ul>
+<li class="index-depth-0"><a href="#עקרונות-פילוסופיית-ההיסטוריה">עקרונות פילוסופיית ההיסטוריה</a></li>
+<li class="index-depth-1"><a href="#תרגום-מתוך-המדע-החדש-scienza-nuova-מאת-גאמבטיסטה-ויקו">תרגום מתוך &quot;המדע החדש&quot; (Scienza Nuova) מאת ג'אמבטיסטה ויקו</a></li>
+<li class="index-depth-1"><a href="#הקדמה">הקדמה</a></li>
+<li class="index-depth-1"><a href="#על-החיבור-ומחברו">על החיבור ומחברו</a></li>
+<li class="index-depth-2"><a href="#הקדמת-המתרגם">הקדמת המתרגם</a></li>
+<li class="index-depth-1"><a href="#חלק-ראשון-על-המערכת-הפילוסופית-של-ויקו">חלק ראשון: על המערכת הפילוסופית של ויקו</a></li>
+<li class="index-depth-2"><a href="#הקדמה-אחדות-המדע-החדש">הקדמה: אחדות המדע החדש</a></li>
+<li class="index-depth-2"><a href="#פילוסופיה-ופילולוגיה">פילוסופיה ופילולוגיה</a></li>
+<li class="index-depth-2"><a href="#השכל-הישר-כקריטריון">השכל הישר כקריטריון</a></li>
+<li class="index-depth-2"><a href="#שלושת-העידנים">שלושת העידנים</a></li>
+<li class="index-depth-2"><a href="#מייסדי-החברה-הקיקלופים-והענקים">מייסדי החברה: הקיקלופים והענקים</a></li>
+<li class="index-depth-2"><a href="#ילדות-המין-האנושי">ילדות המין האנושי</a></li>
+<li class="index-depth-2"><a href="#השפה-האלוהית-והגבורית">השפה האלוהית והגבורית</a></li>
+<li class="index-depth-2"><a href="#הומרוס-כטיפוס-אידיאלי">הומרוס כטיפוס אידיאלי</a></li>
+<li class="index-depth-1"><a href="#חלק-שני-מקורות-החברה">חלק שני: מקורות החברה</a></li>
+<li class="index-depth-2"><a href="#תחילת-הדת-והחברה">תחילת הדת והחברה</a></li>
+<li class="index-depth-2"><a href="#היווצרות-הערים">היווצרות הערים</a></li>
+<li class="index-depth-2"><a href="#המשפט-בעידנים-הראשונים">המשפט בעידנים הראשונים</a></li>
+<li class="index-depth-1"><a href="#חלק-שלישי-התפתחות-הממשלות">חלק שלישי: התפתחות הממשלות</a></li>
+<li class="index-depth-2"><a href="#ממשלות-הרואיות">ממשלות הרואיות</a></li>
+<li class="index-depth-2"><a href="#ממשלות-אנושיות-דמוקרטיה-ומלוכה">ממשלות אנושיות - דמוקרטיה ומלוכה</a></li>
+<li class="index-depth-2"><a href="#שקיעה-וחידוש">שקיעה וחידוש</a></li>
+<li class="index-depth-1"><a href="#חלק-רביעי-ימי-הביניים-וחידוש-המעגל">חלק רביעי: ימי הביניים וחידוש המעגל</a></li>
+<li class="index-depth-1"><a href="#חלק-חמישי-ההשגחה-העליונה-והמדע-החדש">חלק חמישי: ההשגחה העליונה והמדע החדש</a></li>
+<li class="index-depth-2"><a href="#הפלא-של-חוקת-העולם">הפלא של חוקת העולם</a></li>
+<li class="index-depth-1"><a href="#חלק-שישי-חייו-וגורלו-של-ויקו">חלק שישי: חייו וגורלו של ויקו</a></li>
+<li class="index-depth-2"><a href="#ילדותו-ולימודיו">ילדותו ולימודיו</a></li>
+<li class="index-depth-2"><a href="#חזרתו-לנאפולי-והתנגדותו-לקרטזיאניזם">חזרתו לנאפולי והתנגדותו לקרטזיאניזם</a></li>
+<li class="index-depth-2"><a href="#יצירותיו-וייסוד-המדע-החדש">יצירותיו וייסוד המדע החדש</a></li>
+<li class="index-depth-2"><a href="#קשיי-חייו-וסבלותיו">קשיי חייו וסבלותיו</a></li>
+<li class="index-depth-2"><a href="#מותו">מותו</a></li>
+<li class="index-depth-2"><a href="#מורשתו">מורשתו</a></li>
+<li class="index-depth-1"><a href="#סיכום">סיכום</a></li>
+</ul>
+</details>
+</nav>
 <p>תורגם ע״י Clause Opus 4.1 2025-10-09</p>
 <h1 id="עקרונות-פילוסופיית-ההיסטוריה">עקרונות פילוסופיית ההיסטוריה</h1>
 <h2 id="תרגום-מתוך-המדע-החדש-scienza-nuova-מאת-גאמבטיסטה-ויקו">תרגום מתוך &quot;המדע החדש&quot; (Scienza Nuova) מאת ג'אמבטיסטה ויקו</h2>
