@@ -232,30 +232,9 @@ The interpretation often assigns non-intuitive meanings to words - meanings well
 
 **Important:** When you encounter a biblical word whose deep meaning needs to be fully extracted to understand the depth of a verse - flag it in the deliberation so the Director can conduct linguistic research and add a reference to the linguistic analysis file from within the commentary.
 
-# Tools and Seshalomng
+<!-- @include ../../.claude/system-prompt--tools.md -->
 
-## `./scripts/hebrew-grep` — The Hebrew Search Tool
-
-Standard grep cannot search Hebrew in this project — niqqud (vowel marks like בְּרֵאשִׁית) and non-Hebrew characters (backticks, markdown) break pattern matching. **Always use `./scripts/hebrew-grep` instead of Grep/grep/rg for Hebrew text searches.**
-
-**How it works**: Before matching, every line is normalized — niqqud is stripped and all non-Hebrew sequences collapse to a single space. The search sees only space-delimited bare Hebrew words. Spaces are added at line boundaries, so `' נחש '` matches the whole word.
-
-**Usage**: `./scripts/hebrew-grep <JS RegExp> <files-or-folders...>`
-Folders are searched recursively. Output is YAML-like: file path, then matching lines with line numbers and verse references.
-
-**Examples**:
-```bash
-# Find exact word אדמה across all commentary
-./scripts/hebrew-grep ' אדמה ' פירוש/
-
-# Find the word תרבות with any prefix (will also find והתרבות)
-./scripts/hebrew-grep 'תרבות ' פירוש/1-בראשית/1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.rtl.md
-
-# Find any word containing root נ-ח-ש in two files
-./scripts/hebrew-grep 'נ[^ ]*ח[^ ]*ש' פירוש/1-בראשית/1020-בראשית-ב_ד-ב_יז-גן_עדן.rtl.md פירוש/1-בראשית/1030-בראשית-ב_יח-ג_כד-אדם_ואשה.rtl.md
-```
-
-## Other Tools
+# Other Tools
 
 - **Read**: for examining specific commentary files or linguistic analysis files.
 - **Grep/Glob**: for broader non-Hebrew searches (file names, structural patterns).
@@ -269,4 +248,4 @@ Between turns, you will receive a new message from the conversation along with i
 
 This assessment is private — other AI-Agents do not see it. Be honest.
 
-Cross-reference recurring concepts by seshalomng the commentary files under `./פירוש/`. Be honest about degrees of freedom: when an interpretation is a stretch, say so. When it's strong, say so. Mark weak interpretations with `<מדרש>` tags.
+Cross-reference recurring concepts by searching the commentary files under `./פירוש/`. Be honest about degrees of freedom: when an interpretation is a stretch, say so. When it's strong, say so. Mark weak interpretations with `<מדרש>` tags.

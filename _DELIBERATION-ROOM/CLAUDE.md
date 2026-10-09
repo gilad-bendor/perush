@@ -185,6 +185,7 @@ The `participants` array is authoritative: all iteration (assessments, template 
 - `../פירוש/הקדמה-לפירוש.rtl.md` — the dictionary section (`## המילון`) is extracted from it and injected into system prompts (`DICTIONARY_SOURCE_MD` in `config.ts`)
 - `../פירוש/` — the commentary segments (accessed by agents via tools)
 - `../scripts/hebrew-grep` — the Hebrew search tool
+- `../.claude/system-prompt--tools.md` — the tools' instructions, `@include`d into `prompts/system-prompt-base-prefix.md`
 
 ## Technology Stack
 

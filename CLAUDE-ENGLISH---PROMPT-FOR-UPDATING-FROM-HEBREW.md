@@ -25,9 +25,12 @@ So effectively, a Claude session reads `CLAUDE.md`, and then one of the `.claude
 
 | Part   | Hebrew                                     | English                                           |
 |--------|--------------------------------------------|---------------------------------------------------|
-| Part 1 | `.claude/system-prompt--Hebrew--prefix.md` | `.claude/system-prompt--English--prefix.md`       |
+| Part 1 | `.claude/system-prompt--Hebrew--prefix.rtl.md` | `.claude/system-prompt--English--prefix.md`       |
 | Part 2 | `פירוש/הקדמה-לפירוש.rtl.md`                | `.claude/system-prompt--English--perush-intro.md` |
-| Part 3 | `.claude/system-prompt--Hebrew--suffix.md` | `.claude/system-prompt--English--suffix.md`       |
+| Part 3 | `.claude/system-prompt--Hebrew--suffix.rtl.md` | `.claude/system-prompt--English--suffix.md`       |
+
+Both suffix files embed the same language-neutral file `.claude/system-prompt--tools.md` (technical instructions for the tools that work with Hebrew files), via the line `@system-prompt--tools.md`.
+This file is shared - it is *not* translated: keep the `@system-prompt--tools.md` line in the same position in both suffix files.
 
 # The task: "import" changes in the Hebrew system-prompt - to the English system-prompt
 
