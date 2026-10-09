@@ -17,17 +17,17 @@ The file `.claude/system-prompt--Hebrew.md` contains these three lines:
 The file `.claude/system-prompt--English.md` contains these three lines:
 ```
 @system-prompt--English--prefix.md
-@system-prompt--English--dictionary.md
+@system-prompt--English--perush-intro.md
 @system-prompt--English--suffix.md
 ```
 
 So effectively, a Claude session reads `CLAUDE.md`, and then one of the `.claude/system-prompt--<language>.md` files, and then - the three "real content" files - the three parts of the system-prompt - in order:
 
-| Part   | Hebrew                                     | English                                         |
-|--------|--------------------------------------------|-------------------------------------------------|
-| Part 1 | `.claude/system-prompt--Hebrew--prefix.md` | `.claude/system-prompt--English--prefix.md`     |
-| Part 2 | `פירוש/הקדמה-לפירוש.rtl.md`                | `.claude/system-prompt--English--dictionary.md` |
-| Part 3 | `.claude/system-prompt--Hebrew--suffix.md` | `.claude/system-prompt--English--suffix.md`     |
+| Part   | Hebrew                                     | English                                           |
+|--------|--------------------------------------------|---------------------------------------------------|
+| Part 1 | `.claude/system-prompt--Hebrew--prefix.md` | `.claude/system-prompt--English--prefix.md`       |
+| Part 2 | `פירוש/הקדמה-לפירוש.rtl.md`                | `.claude/system-prompt--English--perush-intro.md` |
+| Part 3 | `.claude/system-prompt--Hebrew--suffix.md` | `.claude/system-prompt--English--suffix.md`       |
 
 # The task: "import" changes in the Hebrew system-prompt - to the English system-prompt
 
