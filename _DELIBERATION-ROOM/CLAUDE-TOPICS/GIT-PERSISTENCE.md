@@ -156,9 +156,9 @@ Each commit is an atomic snapshot of the meeting state after one cycle. **Timing
 
 ### Cross-Branch Tagging and Rollback
 
-Participant-Agents have tool access during their speech phase and can modify commentary files under `פירוש/` or `ניתוחים-לשוניים/` (on `main`). To support rollback of these changes, the system creates **correlated tags** across both `main` and the session branch after any cycle that alters perush files.
+Participant-Agents have tool access during their speech phase and can modify commentary files under `פירוש/` or `בלשנות/ניתוחים-לשוניים/` (on `main`). To support rollback of these changes, the system creates **correlated tags** across both `main` and the session branch after any cycle that alters perush files.
 
-**Detection**: After each cycle's session-branch commit, the orchestrator checks `git diff --name-only` on the main working tree. If any files under `פירוש/` or `ניתוחים-לשוניים/` have changed, the tagging procedure is triggered.
+**Detection**: After each cycle's session-branch commit, the orchestrator checks `git diff --name-only` on the main working tree. If any files under `פירוש/` or `בלשנות/ניתוחים-לשוניים/` have changed, the tagging procedure is triggered.
 
 Two git tags are created per cycle (when perush files change):
 - `session-cycle/<meeting-id>/c<N>/main`    = `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-title>/c<N>/main`    → points to the commit on `main` that includes the perush changes
@@ -170,11 +170,11 @@ The Tag-ID-Prefix is: `session-cycle/<meeting-id>` = `session-cycle/YYYY-MM-DD--
 async function tagPerushChanges(meetingId: MeetingId, worktreePath: string, cycleNumber: number): Promise<void> {
   const diff = await $`git diff --name-only`;
   const lines = diff.stdout.toString().trim().split("\n");
-  const perushChanged = lines.some(f => f.startsWith("פירוש/") || f.startsWith("ניתוחים-לשוניים/"));
+  const perushChanged = lines.some(f => f.startsWith("פירוש/") || f.startsWith("בלשנות/ניתוחים-לשוניים/"));
 
   if (!perushChanged) return;
 
-  await $`git add פירוש/ ניתוחים-לשוניים/`;
+  await $`git add פירוש/ בלשנות/ניתוחים-לשוניים/`;
   await $`git commit -m ${"Cycle " + cycleNumber + ": perush update (" + meetingId + ")"}`;
 
   // Tag main's HEAD: session-cycle/<meeting-id>/c<N>/main

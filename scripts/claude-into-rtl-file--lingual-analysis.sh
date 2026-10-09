@@ -11,6 +11,6 @@
 #
 # Run this script *from the repo root*, like "claude-into-rtl-file--perush.sh".
 
-PROMPT_FILE="ניתוחים-לשוניים-בינה-מלאכותית/_פרומפט-ניתוח-לשוני.rtl.md"
+PROMPT_FILE="בלשנות/ניתוחים-לשוניים-בינה-מלאכותית/_פרומפט-ניתוח-לשוני.rtl.md"
 
 "$( dirname "$0" )/claude-into-rtl-file--perush.sh" --setting-sources user --append-system-prompt-file "$PROMPT_FILE" "$@"

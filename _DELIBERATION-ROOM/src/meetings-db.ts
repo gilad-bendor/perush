@@ -500,7 +500,7 @@ export async function detectPerushChanges(): Promise<string[]> {
     const result = await $`git -C ${gitRoot} diff --name-only`.quiet();
     const lines = result.stdout.toString().trim().split("\n").filter(Boolean);
     const changed = lines.filter(
-      f => f.startsWith("פירוש/") || f.startsWith("ניתוחים-לשוניים/"),
+      f => f.startsWith("פירוש/") || f.startsWith("בלשנות/ניתוחים-לשוניים/"),
     );
     if (changed.length > 0) {
       logInfo("meetings-db", `detectPerushChanges: ${changed.length} file(s) changed`, changed);
@@ -524,7 +524,7 @@ export async function commitPerushChangesOnMain(
   const message = commitPerushUpdate(cycleNumber, meetingId);
 
   try {
-    await $`git -C ${gitRoot} add פירוש/ ניתוחים-לשוניים/`.quiet();
+    await $`git -C ${gitRoot} add פירוש/ בלשנות/ניתוחים-לשוניים/`.quiet();
     await $`git -C ${gitRoot} commit -m ${message}`.quiet();
     const hash = (await $`git -C ${gitRoot} rev-parse HEAD`.quiet()).stdout.toString().trim();
     logInfo("meetings-db", `commitPerushChangesOnMain: committed ${hash.slice(0, 8)}`);
@@ -735,7 +735,7 @@ export async function rollbackPerushOnMain(
   if (uncommitted.length > 0) {
     logInfo("meetings-db", `rollbackPerushOnMain: stashing ${uncommitted.length} uncommitted file(s)`);
     try {
-      await $`git -C ${gitRoot} stash push -m "Pre-rollback stash" -- פירוש/ ניתוחים-לשוניים/`.quiet();
+      await $`git -C ${gitRoot} stash push -m "Pre-rollback stash" -- פירוש/ בלשנות/ניתוחים-לשוניים/`.quiet();
       stashed = true;
     } catch {}
   }
@@ -753,7 +753,7 @@ export async function rollbackPerushOnMain(
       await $`git -C ${gitRoot} checkout ${restoreRef} -- פירוש/`.quiet();
     } catch {}
     try {
-      await $`git -C ${gitRoot} checkout ${restoreRef} -- ניתוחים-לשוניים/`.quiet();
+      await $`git -C ${gitRoot} checkout ${restoreRef} -- בלשנות/ניתוחים-לשוניים/`.quiet();
     } catch {}
 
     // Commit the restored files
