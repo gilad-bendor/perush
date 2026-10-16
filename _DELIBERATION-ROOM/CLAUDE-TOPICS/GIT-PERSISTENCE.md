@@ -162,9 +162,9 @@ Each commit is an atomic snapshot of the meeting state after one cycle. **Timing
 
 ### Cross-Branch Tagging and Rollback
 
-Participant-Agents can modify commentary files during their speech phase (their prompt forbids it during private assessments, which run in parallel), only through `<הצעת-קלוד>` sections, under `פירוש/` or `בלשנות/ניתוחים-לשוניים/` (on `main`). To support rollback of these changes, the system creates **correlated tags** across both `main` and the session branch after any cycle that alters perush files.
+Participant-Agents can modify commentary files during their speech phase (their prompt forbids it during private assessments, which run in parallel), only through `<הצעת-קלוד>` sections, under the tracked folders - `PERUSH_TRACKED_PATHS` in `config.ts`: `פירוש/`, `נספחים-לפירוש/`, `בלשנות/ניתוחים-לשוניים/` - (on `main`). To support rollback of these changes, the system creates **correlated tags** across both `main` and the session branch after any cycle that alters perush files.
 
-**Detection**: After each cycle's session-branch commit, the orchestrator checks `git diff --name-only` on the main working tree. If any files under `פירוש/` or `בלשנות/ניתוחים-לשוניים/` have changed, the tagging procedure is triggered.
+**Detection**: After each cycle's session-branch commit, the orchestrator checks `git status --porcelain -z -- <tracked folders>` on the main working tree. If any file under them has changed (modified, staged, deleted or new), the tagging procedure is triggered.
 
 Two git tags are created per cycle (when perush files change):
 - `session-cycle/<meeting-id>/c<N>/main`    = `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-title>/c<N>/main`    → points to the commit on `main` that includes the perush changes

@@ -106,7 +106,7 @@ export const LOGS_DIR = join(DELIBERATION_DIR, ".logs");
  * The folders (relative to the project root) whose changes on main are attributed to a meeting:
  * committed after each cycle (and tagged), and restored on rollback.
  */
-export const PERUSH_TRACKED_PATHS = ["פירוש/", "בלשנות/ניתוחים-לשוניים/"];
+export const PERUSH_TRACKED_PATHS = ["פירוש/", "נספחים-לפירוש/", "בלשנות/ניתוחים-לשוניים/"];
 
 /**
  * Under tests (NODE_ENV=test - set by `bun test`, and by the E2E tests for the server they spawn) meetings never
