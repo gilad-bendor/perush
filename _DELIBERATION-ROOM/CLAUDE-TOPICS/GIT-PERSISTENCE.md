@@ -172,28 +172,24 @@ Two git tags are created per cycle (when perush files change):
 
 The Tag-ID-Prefix is: `session-cycle/<meeting-id>` = `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-title>`
 
+The tracked folders are `PERUSH_TRACKED_PATHS` in `config.ts`. The flow (`tagPerushChangesIfNeeded()` in `meetings-db.ts`):
+
 ```typescript
-async function tagPerushChanges(meetingId: MeetingId, worktreePath: string, cycleNumber: number): Promise<void> {
-  const diff = await $`git diff --name-only`;
-  const lines = diff.stdout.toString().trim().split("\n");
-  const perushChanged = lines.some(f => f.startsWith("פירוש/") || f.startsWith("בלשנות/ניתוחים-לשוניים/"));
+// Detect: git status --porcelain -z -- <tracked paths>  (modified, staged, deleted and new files;
+//         -z keeps Hebrew paths unquoted whatever core.quotepath is)
+const changed = await detectPerushChanges();
+if (changed.length === 0) return;
 
-  if (!perushChanged) return;
+// Commit - the pathspec keeps out whatever else the user happens to have staged
+await git(gitRoot, "add", "--", ...PERUSH_TRACKED_PATHS);
+await git(gitRoot, "commit", "-m", `Cycle ${cycleNumber}: perush update (${meetingId})`, "--", ...PERUSH_TRACKED_PATHS);
 
-  await $`git add פירוש/ בלשנות/ניתוחים-לשוניים/`;
-  // Pathspec: commit only the perush files - never whatever else the user happens to have staged
-  await $`git commit -m ${"Cycle " + cycleNumber + ": perush update (" + meetingId + ")"} -- פירוש/ בלשנות/ניתוחים-לשוניים/`;
-
-  // Tag main's HEAD: session-cycle/<meeting-id>/c<N>/main
-  await $`git tag ${cycleTagMain(meetingId, cycleNumber)} HEAD`;
-  // Tag session branch's HEAD: session-cycle/<meeting-id>/c<N>/session
-  const sessionHead = (await $`git -C ${worktreePath} rev-parse HEAD`).stdout.toString().trim();
-  await $`git tag ${cycleTagSession(meetingId, cycleNumber)} ${sessionHead}`;
-
-  // Async push (fire-and-forget — does NOT block the next cycle)
-  asyncPush(meetingId, cycleNumber);
-}
+// Tag main's HEAD (.../c<N>/main) and the session branch's HEAD (.../c<N>/session), then push (fire-and-forget)
 ```
+
+**Use the `git()` helper (argument list), not Bun's `` $`...` ``, for any command with literal Hebrew or a literal glob character.** Bun's shell (1.3.8) mangles literal Hebrew (`` $`git add פירוש/` `` passes `u05E4u05D9.../`) and expands a literal `*` as a filename glob (`` $`git tag --list ${prefix}/c*/main` `` fails - no file matches). Interpolated `${values}` are passed intact. Both bugs once made the whole flow - commit, tags, rollback - fail silently; `tests/unit/perush-on-main.test.ts` runs it against a scratch repo with the real Hebrew folder names.
+
+**Under tests (`NODE_ENV=test`) the whole flow is disabled** (`PERUSH_ON_MAIN_DISABLED` in `config.ts`): tests run real cycles, and must never commit to (and push) the real `main`. `perush-on-main.test.ts` enables it on a scratch repo via `setPerushGitRootForTests()`.
 
 **Rollback** via git:
 

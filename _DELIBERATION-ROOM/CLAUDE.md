@@ -257,6 +257,7 @@ _DELIBERATION-ROOM/
 │   │   ├── config.test.ts
 │   │   ├── meetings-db.test.ts
 │   │   ├── orchestrator.test.ts
+│   │   ├── perush-on-main.test.ts                 ← perush commit/tag/rollback on a scratch repo
 │   │   ├── real-sdk.test.ts
 │   │   ├── server.test.ts
 │   │   ├── session-manager.test.ts
@@ -339,6 +340,7 @@ server.ts            ← types.ts, config.ts, context.ts, orchestrator.ts, sessi
 - **Use zod `.safeParse()` at every boundary** — especially when parsing AI output.
 - **Idempotency**: every state-mutating operation must be safe to retry after a crash.
 - **Atomic writes**: `meeting.yaml` written via temp-file-then-rename.
+- **Git with literal Hebrew or globs**: use the `git()` helper in `meetings-db.ts` (argument list), never `` $`...` `` - see [GIT-PERSISTENCE.md](CLAUDE-TOPICS/GIT-PERSISTENCE.md).
 - **RTL-first**: Tailwind logical properties only (`ms-`, `me-`, `ps-`, `pe-`, `start-`, `end-`). Physical `left`/`right` is **forbidden**.
 
 ### Keeping Documentation Up to Date
