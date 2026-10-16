@@ -148,6 +148,9 @@ function normalizeClass(charClass) {
   return '[' + (negated ? '^' : '') + atoms.join('') + (closed ? ']' : '')
 }
 
+// Temporary local variants of Perush files (NNNN-book-from-to-title.<number>.rtl.md) - skipped when searching folders.
+const PERUSH_VARIANT_RE = /\.\d+\.rtl\.md$/
+
 function collectFiles(target) {
   let stat
   try { stat = fs.statSync(target) } catch { return [] }
@@ -156,6 +159,7 @@ function collectFiles(target) {
     const results = []
     for (const entry of fs.readdirSync(target, { recursive: true })) {
       const full = path.join(target, String(entry))
+      if (PERUSH_VARIANT_RE.test(full)) continue
       try { if (fs.statSync(full).isFile()) results.push(full) } catch {}
     }
     return results.sort()

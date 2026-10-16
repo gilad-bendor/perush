@@ -10,7 +10,7 @@ The same normalization is applied to the pattern (so niqqud in the pattern is ig
 - **Shin**: a plain `ש` matches every Shin (undotted, `שׁ` and `שׂ`), while a dotted `שׁ` / `שׂ` matches only that dot - so it only finds vocalized text (the biblical verses), not the unvocalized commentary. Precomposed and decomposed Unicode forms are the same. Character classes that include `ש` (also as part of a range like `[א-ת]`) cover all its forms.
 
 **Usage**: `./.claude/tools/hebrew-grep <JS RegExp> <files-or-folders...>`
-Folders are searched recursively. Output is YAML-like: file path, then matching lines with line numbers and verse references.
+Folders are searched recursively (skipping temporary local variants of commentary files, named `*.<number>.rtl.md`). Output is YAML-like: file path, then matching lines with line numbers and verse references.
 
 **Examples**:
 ```bash
