@@ -36,6 +36,7 @@ Paths in this file that start with `tools/`, `sources/` or a corpus folder are r
 שונות/תרגומי-טקסטים-קדומים/
 ├── translation-guidelines.md        ← this file (living)
 ├── tools/                           ← reusable scripts (fetchers, converters)
+├── הדפסה/                           ← one print stub per translation, mirroring the corpus folders (§7.4)
 ├── sources/                         ← raw material downloaded from the internet, one folder per SOURCE
 │   ├── .gitignore                   ← what is NOT committed to the public repo (see §8)
 │   ├── <Source-name>/README.md      ← every source folder has one (format: §2.2)
@@ -220,6 +221,7 @@ Added 2026-10-16: **`ORACC/cams-gkab--P363353--Uruk-List-of-Kings-and-Sages/`** 
 7. **Produce `translation.rtl.md`** from the annotated file (§7.1). Verify by script that its lines equal the annotated file's `>` lines.
 7a. **Run `tools/check_bible_quotes.py`** on every file, and fix every mismatch.
 8. **Update this file**: sources, tools, generalizable decisions, lessons learned, changelog.
+9. **Final step of every translation: create its print stub** (§7.4).
 
 For long texts, work in sections (e.g. 20–40 lines per session) and record progress in `project.md`.
 
@@ -432,6 +434,21 @@ Contains:
 - progress log (which lines are drafted / reviewed);
 - **parallels index**: a table of all [cognate] / [equivalent] / [divergence] / [absent] items, with lines and Bible verses. This index is the main product for the commentary.
 
+### 7.4 The print stub (`הדפסה/`), the final step of every translation
+Every `translation.rtl.md` gets a one-line file under `הדפסה/` that embeds it. The path mirrors the corpus folder, and the file is named after the project folder:
+
+```
+הדפסה/סיפורי-המבול-המסופוטמיים/1-אתרחסיס.rtl.md
+```
+with this single line as its content:
+```
+<כלול-בהדפסה מקור="../../סיפורי-המבול-המסופוטמיים/1-אתרחסיס/translation.rtl.md">
+```
+- `מקור` is resolved **relative to the folder of the stub**, not of `translation.rtl.md`. Hence the `../../` (one level more for a project nested deeper). A wrong path renders as an error box on the page, so check the stub's HTML page once.
+- A project folder directly under the root gets `הדפסה/<project>.rtl.md` with `מקור="../<project>/translation.rtl.md"`.
+- Why: the RTL editor mirrors every Markdown file to `docs/_HTML-FROM-MD/` and `docs/_PDF-FROM-MD/` (GitHub Pages). The stubs make `docs/_PDF-FROM-MD/שונות/תרגומי-טקסטים-קדומים/הדפסה/` hold exactly the finished translations, each as a clean PDF, without the sources and working files around them.
+- If a translation is split into several files (e.g. one per tablet), the stub embeds the combined file, or several `<כלול-בהדפסה>` lines in reading order.
+
 ## 8. Copyright and the public repository
 The repository is **public** on GitHub. Therefore:
 - `sources/.gitignore` keeps out of git:
@@ -497,3 +514,4 @@ When you write a tool that another session could reuse, put it here with a usage
 ## Changelog
 - **2026-10-16** – Created. Source collection for the Mesopotamian flood narratives (Gilgameš XI, Atrahasis, Sumerian Flood Story, Berossus) and reference tools; `ebl_fetch.py`; copyright policy; principles and formats. First project: `גילגמש-XI--סיפור-המבול/` (not yet started).
 - **2026-10-16** – The user asked for the *full* flood story and every other Mesopotamian flood story. The project was reorganized as a **corpus** (`סיפורי-המבול-המסופוטמיים/`, with `corpus.md` and shared `renderings.md`; §2, §6.6) of six projects: Atra-ḫasīs I–III, Gilg. XI 1–208, the Sumerian Flood Story, the other Akkadian versions (Ark, C₀, Nippur, Ugarit, Ḫattuša, W, BM 38917, U, z), Berossus + Abydenus, and flood references (nine texts). They were drafted by parallel sessions, then harmonized. New sources: eBL Atra-ḫasīs OB I, SB I–III, MB; Erra I; Gilg. I; the LXX; the Uruk sages list; the Dynastic Chronicle. New tool: `check_bible_quotes.py`. `ebl_fetch.py` fixed. Lessons added to §4.6, §5, §6.4, §6.7, §10 and §11. Niqqud and Uruk were confirmed by the user.
+- **2026-10-16** – Added the print stubs (`הדפסה/`, §7.4, workflow step 9) at the user's request, and created them for the six flood-corpus translations.
