@@ -160,50 +160,38 @@ Each commit is an atomic snapshot of the meeting state after one cycle. **Timing
 
 **Worktree guard (`assertMeetingWorktree`)**: `.meetings/<id>` lives *inside* the main repo's working tree. If that directory exists but is no longer (or never was) a worktree, `git -C <path>` silently walks up to the **main repo**, and `add -A` / `commit` / `reset --hard` would act on `main` and the user's uncommitted work. This happened once: an orphaned async `initializeMeeting` left behind by a timed-out test committed the whole working tree to `main` as "Initial: meeting created". So every mutating worktree-scoped function (`initializeMeeting`, `endMeeting`, `commitCycle`, `commitWithMessage`, `resetSessionBranchToCycle`) first checks that the path is its own `--show-toplevel` and is on a `sessions/*` branch, and throws otherwise. Any new function that writes via `git -C ${worktreePath}` must call it too.
 
-### Cross-Branch Tagging and Rollback
+### The Perush Files on Main
 
-Participant-Agents can modify commentary files during their speech phase (their prompt forbids it during private assessments, which run in parallel), only through `<הצעת-קלוד>` sections, under the tracked folders - `PERUSH_TRACKED_PATHS` in `config.ts`: `פירוש/`, `נספחים-לפירוש/`, `בלשנות/ניתוחים-לשוניים/` - (on `main`). To support rollback of these changes, the system creates **correlated tags** across both `main` and the session branch after any cycle that alters perush files.
+Participant-Agents can modify commentary files during their speech phase (their prompt forbids it during private assessments, which run in parallel), only through `<הצעת-קלוד>` sections. The Director edits them too, during the meeting. Each meeting tracks these edits on `main` - within its **scope** (`perushScope` in `meeting.yaml`, saved when the meeting is created):
+- `trackedPaths`: the folders - `PERUSH_TRACKED_PATHS` in `config.ts` at the time the meeting was created (`פירוש/`, `נספחים-לפירוש/`, `בלשנות/ניתוחים-לשוניים/`). Fixed for the meeting's lifetime, so rollback always uses the folders its commits used.
+- `ignoredPaths`: files inside them that the Director chose to leave out of the meeting - never committed, restored or stashed by it. Every git command gets them as `:(exclude,literal)<path>` pathspecs (`literal`: a file name may contain `[` or `*`).
 
-**Detection**: After each cycle's session-branch commit, the orchestrator checks `git status --porcelain -z -- <tracked folders>` on the main working tree. If any file under them has changed (modified, staged, deleted or new), the tagging procedure is triggered.
+Meetings created before the scope existed use the default scope.
 
-Two git tags are created per cycle (when perush files change):
-- `session-cycle/<meeting-id>/c<N>/main`    = `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-title>/c<N>/main`    → points to the commit on `main` that includes the perush changes
-- `session-cycle/<meeting-id>/c<N>/session` = `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-title>/c<N>/session` → points to the corresponding cycle commit on `sessions/<meeting-id>`
-
-The Tag-ID-Prefix is: `session-cycle/<meeting-id>` = `session-cycle/YYYY-MM-DD--HH-MM-SS--<meeting-title>`
-
-The tracked folders are `PERUSH_TRACKED_PATHS` in `config.ts`. The flow (`tagPerushChangesIfNeeded()` in `meetings-db.ts`):
+**Commits on main** (`commitPerushChanges()` in `meetings-db.ts`; messages in `config.ts`, each naming the meeting):
+- **Meeting start**: `perushBaseline` in `meeting.yaml` = main's commit when the meeting starts.
+- **Before an agent speaks**: the Director's edits so far → `Cycle N: Director's edits (<meeting-id>)`.
+- **After the speech**: the speaker's edits → `Cycle N: perush update by <speaker> (<meeting-id>)` (`by the Director` after a human turn). Then main's commit is recorded in the cycle record (`perushCommit`), *before* the cycle is committed to the session branch.
 
 ```typescript
-// Detect: git status --porcelain -z -- <tracked paths>  (modified, staged, deleted and new files;
-//         -z keeps Hebrew paths unquoted whatever core.quotepath is)
-const changed = await detectPerushChanges();
-if (changed.length === 0) return;
-
+// Detect: git status --porcelain -z --untracked-files=all -- <scope pathspec>
+//         (modified, staged, deleted and new files; -z keeps Hebrew paths unquoted whatever core.quotepath is)
 // Commit - the pathspec keeps out whatever else the user happens to have staged
-await git(gitRoot, "add", "--", ...PERUSH_TRACKED_PATHS);
-await git(gitRoot, "commit", "-m", `Cycle ${cycleNumber}: perush update (${meetingId})`, "--", ...PERUSH_TRACKED_PATHS);
-
-// Tag main's HEAD (.../c<N>/main) and the session branch's HEAD (.../c<N>/session).
-// Nothing is pushed - a tag push would also upload the main commit; pushing is left to the Director.
+await git(gitRoot, "add", "--all", "--", ...pathspec);
+await git(gitRoot, "commit", "-m", message, "--", ...pathspec);
 ```
+
+Edits the Director makes *while* an agent speaks can't be told apart from the agent's - they are credited to the agent.
+
+An empty pathspec (no tracked folder holds files git knows or would add) means *do nothing*: `git commit --` with no paths would commit the whole index. `commitPerushChanges()` returns null only when there is nothing to commit, and **throws when git fails** (e.g. an IDE's git holds `.git/index.lock`): the Director is told, and the cycle records no `perushCommit` - main's commit would lack the speaker's edits. Nothing is ever pushed - pushing `main` is left to the Director.
+
+**Rollback** to cycle T (`rollbackPerushOnMain()`): restores the scope's files from the commit recorded at the end of cycle T (`cycles[T-1].perushCommit`, or `perushBaseline` for T = 0) - including the Director's own edits made after T. First, uncommitted changes in the scope are committed (`Before rollback to cycle T: Director's edits (<meeting-id>)`) - nothing is lost, and nothing is hidden in a stash. If that commit fails, the rollback of the perush files is aborted (restoring would overwrite the uncommitted edits), and the Director is told. Then `git restore --source=<commit> --staged --worktree -- <scope pathspec>` (which also removes files added after `<commit>`), committed as `Rollback perush files to cycle T (<meeting-id>)`. Main's history is never rewritten. A meeting created before `perushCommit` existed has nothing recorded - its perush files are not rolled back, and the Director is told so.
+
+(Meetings created before this design have `session-cycle/<meeting-id>/c<N>/{main,session}` tags; they are no longer created or used - `deleteMeetingsByTitle()` still deletes them.)
 
 **Use the `git()` helper (argument list), not Bun's `` $`...` ``, for any command with literal Hebrew or a literal glob character.** Bun's shell (1.3.8) mangles literal Hebrew (`` $`git add פירוש/` `` passes `u05E4u05D9.../`) and expands a literal `*` as a filename glob (`` $`git tag --list ${prefix}/c*/main` `` fails - no file matches). Interpolated `${values}` are passed intact. Both bugs once made the whole flow - commit, tags, rollback - fail silently; `tests/unit/perush-on-main.test.ts` runs it against a scratch repo with the real Hebrew folder names.
 
 **Under tests (`NODE_ENV=test`) the whole flow is disabled** (`PERUSH_ON_MAIN_DISABLED` in `config.ts`): tests run real cycles, and must never commit to the real `main`. `perush-on-main.test.ts` enables it on a scratch repo via `setPerushGitRootForTests()`.
-
-**Rollback** via git:
-
-```bash
-# List available rollback points for a meeting
-git tag --list "session-cycle/2026-02-01--10-41--bereshit-2-4-eden/c*/main"
-
-# Roll back main to a specific cycle's tag (e.g., cycle 3)
-git reset --hard session-cycle/2026-02-01--10-41--bereshit-2-4-eden/c3/main
-
-# Roll back the session branch to the correlated tag
-git -C meetings/bereshit-2-4-eden reset --hard session-cycle/2026-02-01--10-41--bereshit-2-4-eden/c3/session
-```
 
 ### Git as the Meeting Database
 
@@ -286,9 +274,10 @@ EACH CYCLE
 ├─ 1. Assessment phase (parallel query() calls)
 ├─ 2. Selection phase (query() to orchestrator)
 ├─ 3. Speech phase (query() to selected agent, streamed via WebSocket)
-├─ 4. Update meeting.yaml with cycle record
-├─ 5. Commit to session branch: "Cycle N: <speaker>"
-├─ 6. IF perush files altered: commit on main + create correlated tags (no push)
+│     - before an agent speaks: commit the Director's perush edits on main
+├─ 4. Commit the speaker's perush edits on main; record main's commit (perushCommit)
+├─ 5. Update meeting.yaml with cycle record
+├─ 6. Commit to session branch: "Cycle N: <speaker>"
 
 MEETING END (/end command)
 ├─ 1. Final commit: "Meeting ended"

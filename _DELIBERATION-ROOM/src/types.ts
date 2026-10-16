@@ -62,14 +62,6 @@ export type MeetingId = `${number}-${number}-${number}--${number}-${number}--${s
 export const TagIdPrefixSchema = z.string() as z.ZodType<TagIdPrefix>;
 export type TagIdPrefix = `${typeof TAG_PREFIX}${MeetingId}`;
 
-/** Git Tag ID — "session-cycle/<meeting-id>/c<N>/main */
-export const TagIdMainSchema = z.string() as z.ZodType<TagIdMain>;
-export type TagIdMain = `${typeof TAG_PREFIX}${MeetingId}/c${number}/main`;
-
-/** Git Tag ID — "session-cycle/<meeting-id>/c<N>/session */
-export const TagIdSessionSchema = z.string() as z.ZodType<TagIdSession>;
-export type TagIdSession = `${typeof TAG_PREFIX}${MeetingId}/c${number}/session`;
-
 /** Git Branch Name — "sessions/<meeting-id> */
 export const BranchNameSchema = z.string() as z.ZodType<BranchName>;
 export type BranchName = `${typeof SESSION_BRANCH_PREFIX}${MeetingId}`;
@@ -85,14 +77,8 @@ export type MessageId = `${"S"|"C"}${number}`;
 /** Branch prefix for meeting branches */
 export const SESSION_BRANCH_PREFIX = "sessions/";
 
-/** Tag prefix for cross-branch rollback tags */
+/** Tag prefix of the cross-branch rollback tags of older meetings (deleted with their meeting) */
 export const TAG_PREFIX = "session-cycle/";
-
-/** Tag suffix for "main" tag-ids */
-export const TAG_SUFFIX_MAIN = "/main";
-
-/** Tag suffix for "session" tag-ids */
-export const TAG_SUFFIX_SESSION = "/session";
 
 export function meetingIdToBranchName(meetingId: MeetingId): BranchName {
   return `${SESSION_BRANCH_PREFIX}${meetingId}`;
@@ -108,13 +94,6 @@ export function meetingIdToTagIdPrefix(meetingId: MeetingId): TagIdPrefix {
   return `${TAG_PREFIX}${meetingId}`;
 }
 
-export function cycleTagMain(meetingId: MeetingId, cycleNumber: number): TagIdMain {
-  return `${TAG_PREFIX}${meetingId}/c${cycleNumber}${TAG_SUFFIX_MAIN}` as TagIdMain;
-}
-
-export function cycleTagSession(meetingId: MeetingId, cycleNumber: number): TagIdSession {
-  return `${TAG_PREFIX}${meetingId}/c${cycleNumber}${TAG_SUFFIX_SESSION}` as TagIdSession;
-}
 
 
 // ---------------------------------------------------------------------------
@@ -274,6 +253,7 @@ export const CycleRecordSchema = z.object({
   assessments: z.record(z.string(), PrivateAssessmentSchema),
   orchestratorDecision: OrchestratorDecisionSchema,
   processes: z.array(ProcessRecordSchema).optional(),
+  perushCommit: z.string().optional(),
 });
 export type CycleRecord = {
   cycleNumber: number;
@@ -281,6 +261,8 @@ export type CycleRecord = {
   assessments: Record<string, PrivateAssessment>;
   orchestratorDecision: OrchestratorDecision;
   processes?: ProcessRecord[];
+  /** The commit on main at the end of the cycle (after its perush commits) - what a rollback to this cycle restores */
+  perushCommit?: string;
 };
 assertZodTypeMatch<CycleRecord, typeof CycleRecordSchema>(true);
 
@@ -303,6 +285,22 @@ export type PendingCycle = {
 assertZodTypeMatch<PendingCycle, typeof PendingCycleSchema>(true);
 
 // ---------------------------------------------------------------------------
+// Perush scope — what a meeting commits and rolls back on main
+// ---------------------------------------------------------------------------
+
+export const PerushScopeSchema = z.object({
+  trackedPaths: z.array(z.string()),
+  ignoredPaths: z.array(z.string()),
+});
+export type PerushScope = {
+  /** Folders (relative to the project root, with a trailing "/") - fixed when the meeting is created */
+  trackedPaths: string[];
+  /** Files inside them that the Director chose to leave out of this meeting */
+  ignoredPaths: string[];
+};
+assertZodTypeMatch<PerushScope, typeof PerushScopeSchema>(true);
+
+// ---------------------------------------------------------------------------
 // Meeting — the full meeting.yaml schema
 // ---------------------------------------------------------------------------
 
@@ -318,6 +316,8 @@ export const MeetingSchema = z.object({
   sessionIds: z.record(z.string(), z.string()),
   totalCostEstimate: z.number().optional(),
   pendingCycle: PendingCycleSchema.optional(),
+  perushScope: PerushScopeSchema.optional(),
+  perushBaseline: z.string().optional(),
 });
 export type Meeting = {
   meetingId: MeetingId;
@@ -331,6 +331,10 @@ export type Meeting = {
   sessionIds: Record<string, string>;
   totalCostEstimate?: number;
   pendingCycle?: PendingCycle;
+  /** What the meeting commits and rolls back on main (missing in meetings created before it existed) */
+  perushScope?: PerushScope;
+  /** The commit on main when the meeting started - what a rollback to cycle 0 restores */
+  perushBaseline?: string;
 };
 assertZodTypeMatch<Meeting, typeof MeetingSchema>(true);
 

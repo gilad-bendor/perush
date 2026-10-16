@@ -103,8 +103,10 @@ export const MEETINGS_DIR = join(DELIBERATION_DIR, ".meetings");
 export const LOGS_DIR = join(DELIBERATION_DIR, ".logs");
 
 /**
- * The folders (relative to the project root) whose changes on main are attributed to a meeting:
- * committed after each cycle (and tagged), and restored on rollback.
+ * The folders (relative to the project root) whose files a NEW meeting tracks on main: the Director's and the
+ * agents' edits are committed, and restored on rollback. Each meeting saves this list when it is created
+ * (`perushScope` in meeting.yaml) - so editing it here affects only meetings created after a server restart.
+ * The UI shows the list, and points here.
  */
 export const PERUSH_TRACKED_PATHS = ["פירוש/", "נספחים-לפירוש/", "בלשנות/ניתוחים-לשוניים/"];
 
@@ -195,9 +197,36 @@ export function commitRollback(targetCycle: number): string {
   return `Rollback to cycle ${targetCycle} + session recovery`;
 }
 
-/** Commit message template for perush update on main */
-export function commitPerushUpdate(cycleNumber: number, meetingId: MeetingId): string {
-  return `Cycle ${cycleNumber}: perush update (${meetingId})`;
+// Commit messages for the perush files on main (each names the meeting, so main's log shows where a change came from)
+
+/** The Director's uncommitted perush work that the Director chose to include, when a meeting starts */
+export function commitPerushPreMeeting(meetingId: MeetingId): string {
+  return `Pre-meeting state (${meetingId})`;
+}
+
+/** The Director's uncommitted perush work that the Director chose to include, when a meeting resumes */
+export function commitPerushOnResume(meetingId: MeetingId): string {
+  return `Meeting resumed: Director's edits (${meetingId})`;
+}
+
+/** The Director's edits made during a cycle - committed before an agent speaks, so the agent's commit holds only its own edits */
+export function commitPerushDirectorEdits(cycleNumber: number, meetingId: MeetingId): string {
+  return `Cycle ${cycleNumber}: Director's edits (${meetingId})`;
+}
+
+/** The edits made by the speaker of a cycle */
+export function commitPerushUpdate(cycleNumber: number, speaker: SpeakerId, meetingId: MeetingId): string {
+  return `Cycle ${cycleNumber}: perush update by ${speaker === "human" ? "the Director" : speaker} (${meetingId})`;
+}
+
+/** Uncommitted perush work, committed before a rollback restores the files */
+export function commitPerushBeforeRollback(targetCycle: number, meetingId: MeetingId): string {
+  return `Before rollback to cycle ${targetCycle}: Director's edits (${meetingId})`;
+}
+
+/** The perush files restored by a rollback */
+export function commitPerushRollback(targetCycle: number, meetingId: MeetingId): string {
+  return `Rollback perush files to cycle ${targetCycle} (${meetingId})`;
 }
 
 /** Commit message for meeting resume */

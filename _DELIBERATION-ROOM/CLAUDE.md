@@ -160,6 +160,7 @@ interface CycleRecord {
   assessments: Record<AgentId, PrivateAssessment>;
   orchestratorDecision: { nextSpeaker: SpeakerId; statusRead: string };
   processes?: ProcessRecord[];  // full SDK interaction traces (prompts, thinking, tools, output)
+  perushCommit?: string;        // main's commit at the end of the cycle - what a rollback to it restores
 }
 
 interface Meeting {
@@ -174,6 +175,13 @@ interface Meeting {
   lastEngagedAt?: FormattedTime;
   sessionIds: Record<AgentId | "orchestrator", string>;
   totalCostEstimate?: number;
+  perushScope?: PerushScope;    // what the meeting commits/rolls back on main - see GIT-PERSISTENCE.md
+  perushBaseline?: string;      // main's commit when the meeting started - what a rollback to cycle 0 restores
+}
+
+interface PerushScope {
+  trackedPaths: string[];       // folders - PERUSH_TRACKED_PATHS (config.ts) when the meeting was created
+  ignoredPaths: string[];       // files inside them the Director chose to leave out
 }
 ```
 
@@ -257,7 +265,7 @@ _DELIBERATION-ROOM/
 │   │   ├── config.test.ts
 │   │   ├── meetings-db.test.ts
 │   │   ├── orchestrator.test.ts
-│   │   ├── perush-on-main.test.ts                 ← perush commit/tag/rollback on a scratch repo
+│   │   ├── perush-on-main.test.ts                 ← perush files on main: detect/commit/rollback on a scratch repo
 │   │   ├── real-sdk.test.ts
 │   │   ├── server.test.ts
 │   │   ├── session-manager.test.ts
