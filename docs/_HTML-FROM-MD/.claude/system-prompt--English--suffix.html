@@ -153,9 +153,6 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li class="index-depth-0"><a href="#commentary-files">Commentary Files</a></li>
 <li class="index-depth-1"><a href="#the-format-of-the-commentary-files">The Format of the Commentary Files</a></li>
 <li class="index-depth-0"><a href="#linguistic-analyses">Linguistic Analyses</a></li>
-<li class="index-depth-0"><a href="#technical-instructions-for-working-with-hebrew-files">Technical Instructions for Working With Hebrew Files</a></li>
-<li class="index-depth-1"><a href="#searching-hebrew-text-scriptshebrew-grep">Searching Hebrew Text: <code>./scripts/hebrew-grep</code></a></li>
-<li class="index-depth-1"><a href="#editing-hebrew-files-niqqud-and-combining-mark-order">Editing Hebrew Files: Niqqud and Combining-Mark Order</a></li>
 <li class="index-depth-0"><a href="#restrictions-on-modifying-existing-text">Restrictions on Modifying Existing Text</a></li>
 </ul>
 </details>
@@ -190,7 +187,7 @@ If an interpretation cannot be grounded in something tangible - it may be too va
 <p class="heads-list">Many concepts are not in the dictionary - they are established for the first time within the commentary segments themselves: archetypes (נחש, קין, הבל), characters and places, and recurring verbs (ידע, הרה, ילד, נתן, לקח...).<br>
 When encountering such a concept:</p>
 <ol>
-<li>Search for where it was first interpreted - using <code>./scripts/hebrew-grep</code> (see below).</li>
+<li>Search for where it was first interpreted - using <code>./.claude/tools/hebrew-grep</code> (see below).</li>
 <li>Read that segment - and understand the meaning that was established there.</li>
 <li>Apply that meaning consistently: do not re-derive it from scratch, and do not deviate from it without justification.</li>
 <li>Add a reference for the reader - for example: ״כמו שראינו בבראשית ג:א, הנחש הוא...״ (&quot;As we saw in Genesis 3:1, the serpent is...&quot;).</li>
@@ -243,50 +240,7 @@ The translation tends to give words in the text a non-intuitive meaning, but a m
 <p>Root analysis is a central tool of the commentary - especially for the names of people and places.<br>
 When the root is transparent and the meaning fits the dictionary - it can be applied directly in the commentary. When the root is opaque or contested - mark it with <code>TODO:</code>.</p>
 <p><strong>Important:</strong> if you find a biblical word whose deep meaning needs to be fully extracted in order to understand the depth of a verse - please ask me to conduct linguistic research on the word - and to add a reference to the linguistic-analysis file from within the commentary.</p>
-<h1 id="technical-instructions-for-working-with-hebrew-files">Technical Instructions for Working With Hebrew Files</h1>
-<h2 id="searching-hebrew-text-scriptshebrew-grep">Searching Hebrew Text: <code>./scripts/hebrew-grep</code></h2>
-<p>Standard grep cannot search Hebrew in this project — niqqud (vowel marks like בְּרֵאשִׁית) and non-Hebrew characters (backticks, markdown) break pattern matching. Always use <code>./scripts/hebrew-grep</code> instead.</p>
-<p><strong>How it works</strong>: Before matching, every line is normalized — niqqud is stripped and all non-Hebrew sequences collapse to a single space. The search sees only space-delimited bare Hebrew words. Spaces are added at line boundaries, so <code>' נחש '</code> matches the whole word.</p>
-<p><strong>Usage</strong>: <code>./scripts/hebrew-grep &lt;JS RegExp&gt; &lt;files-or-folders...&gt;</code><br>
-Folders are searched recursively. Output is YAML-like: file path, then matching lines with line numbers and verse references.</p>
-<p><strong>Examples</strong>:</p>
-<pre><code class="language-bash"># Find exact word אדמה across all commentary
-./scripts/hebrew-grep ' אדמה ' פירוש/
-
-# Find the word תרבות with any prefix in a specific file (will also find והתרבות)
-./scripts/hebrew-grep 'תרבות ' פירוש/1-בראשית/1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.rtl.md
-
-# Find any word with &quot;נ&quot; followed by &quot;ח&quot; followed by &quot;ש&quot; in two files
-./scripts/hebrew-grep 'נ[^ ]*ח[^ ]*ש' פירוש/1-בראשית/1020-בראשית-ב_ד-ב_יז-גן_עדן.rtl.md פירוש/1-בראשית/1030-בראשית-ב_יח-ג_כד-אדם_ואשה.rtl.md
-</code></pre>
-<h2 id="editing-hebrew-files-niqqud-and-combining-mark-order">Editing Hebrew Files: Niqqud and Combining-Mark Order</h2>
-<p>The Edit tool can fail with <code>String to replace not found</code> on Hebrew text that looks character-for-character identical to what Read returned. The cause is <strong>Unicode combining-mark order</strong>: niqqud (qamatz <code>ָ</code>, dagesh <code>ּ</code>, etc.) are combining marks, and the same visible word can be encoded with marks in different byte orders (e.g., letter+qamatz+dagesh vs. letter+dagesh+qamatz). Edit does exact byte matching and rejects strings that <em>look</em> right but differ in mark order. The error message is unhelpfully generic.</p>
-<p><strong>If Edit fails on Hebrew text with niqqud — do NOT retry with a re-typed <code>old_string</code>.</strong> Re-typing reproduces the same wrong byte order. Switch to Python via Bash:</p>
-<ol>
-<li>Locate the target block using <strong>niqqud-free anchors</strong> — ASCII or unmarked Hebrew (e.g., <code>'- <strong>כל</strong> ='</code>, <code>'כל בהמה ובהמה״.'</code>). These match reliably regardless of mark order.</li>
-<li>Extract the block verbatim from the file with <code>content[start:end]</code> — don't retype the niqqud-bearing portion.</li>
-<li>Build the replacement (new niqqud you write is fine — its mark order needn't match anything pre-existing).</li>
-<li><code>content.replace(old_block, new_block, 1)</code> and write back.</li>
-</ol>
-<pre><code class="language-python">path = '...'
-with open(path, 'r', encoding='utf-8') as f:
-    content = f.read()
-start = content.find('&lt;niqqud-free start anchor&gt;')
-end_anchor = '&lt;niqqud-free end anchor&gt;'
-end = content.find(end_anchor) + len(end_anchor)
-old_block = content[start:end]
-new_block = &quot;&quot;&quot;...&quot;&quot;&quot;
-assert content.count(old_block) == 1
-content = content.replace(old_block, new_block, 1)
-with open(path, 'w', encoding='utf-8') as f:
-    f.write(content)
-</code></pre>
-<p><strong>Diagnostic</strong> when two Hebrew strings look identical but don't match — find the first byte-level divergence:</p>
-<pre><code class="language-python">for i, (a, b) in enumerate(zip(actual, target)):
-    if a != b:
-        print(f&quot;Diff at offset {i}: file={hex(ord(a))}, target={hex(ord(b))}&quot;)
-        break
-</code></pre>
+<p>@system-prompt--tools.md</p>
 <h1 id="restrictions-on-modifying-existing-text">Restrictions on Modifying Existing Text</h1>
 <p><strong>Important!</strong> Do not modify existing text without the user's approval.<br>
 On the other hand - you may always add/edit/delete <code>&lt;הצעת-קלוד&gt;</code> sections: that is exactly their purpose.</p>

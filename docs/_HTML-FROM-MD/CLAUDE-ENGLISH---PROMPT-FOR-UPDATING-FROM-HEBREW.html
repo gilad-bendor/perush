@@ -177,7 +177,7 @@ We have comprehensive system-prompts in both languages (this session was started
 <tbody>
 <tr>
 <td>Part 1</td>
-<td><code>.claude/system-prompt--Hebrew--prefix.md</code></td>
+<td><code>.claude/system-prompt--Hebrew--prefix.rtl.md</code></td>
 <td><code>.claude/system-prompt--English--prefix.md</code></td>
 </tr>
 <tr>
@@ -187,11 +187,13 @@ We have comprehensive system-prompts in both languages (this session was started
 </tr>
 <tr>
 <td>Part 3</td>
-<td><code>.claude/system-prompt--Hebrew--suffix.md</code></td>
+<td><code>.claude/system-prompt--Hebrew--suffix.rtl.md</code></td>
 <td><code>.claude/system-prompt--English--suffix.md</code></td>
 </tr>
 </tbody>
 </table>
+<p>Both suffix files embed the same language-neutral file <code>.claude/system-prompt--tools.md</code> (technical instructions for the tools that work with Hebrew files), via the line <code>@system-prompt--tools.md</code>.<br>
+This file is shared - it is <em>not</em> translated: keep the <code>@system-prompt--tools.md</code> line in the same position in both suffix files.</p>
 <h1 id="the-task-import-changes-in-the-hebrew-system-prompt-to-the-english-system-prompt">The task: &quot;import&quot; changes in the Hebrew system-prompt - to the English system-prompt</h1>
 <p>Please check which of the three Hebrew files has uncommited (staged or unstaged) changes, and &quot;import&quot; these changes into the matching English files.<br>
 Important: to properly understand the context of changes in the Hebrew files - you <em>must</em> first read the <em>whole</em> of the three Hebrew files - in order.</p>

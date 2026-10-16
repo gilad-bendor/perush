@@ -153,9 +153,6 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <li class="index-depth-0"><a href="#קבצי-הפירוש">קבצי הפירוש</a></li>
 <li class="index-depth-1"><a href="#הפורמט-של-קבצי-הפירוש">הפורמט של קבצי הפירוש</a></li>
 <li class="index-depth-0"><a href="#ניתוחים-לשוניים">ניתוחים לשוניים</a></li>
-<li class="index-depth-0"><a href="#הוראות-טכניות-לעבודה-עם-קבצי-עברית">הוראות טכניות לעבודה עם קבצי עברית</a></li>
-<li class="index-depth-1"><a href="#searching-hebrew-text-scriptshebrew-grep">Searching Hebrew Text: <code>./scripts/hebrew-grep</code></a></li>
-<li class="index-depth-1"><a href="#editing-hebrew-files-niqqud-and-combining-mark-order">Editing Hebrew Files: Niqqud and Combining-Mark Order</a></li>
 <li class="index-depth-0"><a href="#הגבלות-על-שינוי-טקסט-קיים">הגבלות על שינוי טקסט קיים</a></li>
 </ul>
 </details>
@@ -190,7 +187,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p class="heads-list">מושגים רבים אינם במילון - אלא מתבררים לראשונה במקטעי הפירוש עצמם: ארכיטיפים (נחש, קין, הבל), דמויות ומקומות, ופעלים חוזרים (ידע, הרה, ילד, נתן, לקח...).<br>
 כשנתקלים במושג כזה:</p>
 <ol>
-<li>לחפש היכן פורש לראשונה - בעזרת <code>./scripts/hebrew-grep</code> (ראה בהמשך).</li>
+<li>לחפש היכן פורש לראשונה - בעזרת <code>./.claude/tools/hebrew-grep</code> (ראה בהמשך).</li>
 <li>לקרוא את המקטע ההוא - ולהבין את המשמעות שנקבעה בו.</li>
 <li>להחיל את המשמעות באופן עקבי: לא לגזור אותה מחדש, ולא לסטות ממנה בלי הצדקה.</li>
 <li>להוסיף הפניה לקורא - למשל: ״כמו שראינו בבראשית ג:א, הנחש הוא...״.</li>
@@ -243,51 +240,7 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 <p>ניתוח שורשים הוא כלי מרכזי בפירוש - במיוחד בשמות של אנשים ומקומות.<br>
 כשהשורש שקוף והמשמעות מתיישבת עם המילון - ניתן להחיל אותו ישירות בפירוש. כשהשורש עמום או שנוי במחלוקת - לסמן ב-<code>TODO:</code>.</p>
 <p><strong>חשוב:</strong> במידה ואתה מוצא מילה מקראית שיש צורך למצות את המשמעות העמוקה שלה כדי להבין עומק של פסוק - בבקשה בקש ממני לבצע מחקר בלשני על המילה - ולהוסיף הפניה לקובץ הניתוח-הלשוני מתוך הפירוש.</p>
-<h1 id="הוראות-טכניות-לעבודה-עם-קבצי-עברית">הוראות טכניות לעבודה עם קבצי עברית</h1>
-<p>מאחר וההוראות טכניות וכוללות קוד ומונחים לועזיים - ההסברים להלן הם באנגלית:</p>
-<h2 id="searching-hebrew-text-scriptshebrew-grep">Searching Hebrew Text: <code>./scripts/hebrew-grep</code></h2>
-<p>Standard grep cannot search Hebrew in this project — niqqud (vowel marks like בְּרֵאשִׁית) and non-Hebrew characters (backticks, markdown) break pattern matching. Always use <code>./scripts/hebrew-grep</code> instead.</p>
-<p><strong>How it works</strong>: Before matching, every line is normalized — niqqud is stripped and all non-Hebrew sequences collapse to a single space. The search sees only space-delimited bare Hebrew words. Spaces are added at line boundaries, so <code>' נחש '</code> matches the whole word.</p>
-<p><strong>Usage</strong>: <code>./scripts/hebrew-grep &lt;JS RegExp&gt; &lt;files-or-folders...&gt;</code><br>
-Folders are searched recursively. Output is YAML-like: file path, then matching lines with line numbers and verse references.</p>
-<p><strong>Examples</strong>:</p>
-<pre><code class="language-bash"># Find exact word אדמה across all commentary
-./scripts/hebrew-grep ' אדמה ' פירוש/
-
-# Find the word תרבות with any prefix in a specific file (will also find והתרבות)
-./scripts/hebrew-grep 'תרבות ' פירוש/1-בראשית/1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.rtl.md
-
-# Find any word with &quot;נ&quot; followed by &quot;ח&quot; followed by &quot;ש&quot; in two files
-./scripts/hebrew-grep 'נ[^ ]*ח[^ ]*ש' פירוש/1-בראשית/1020-בראשית-ב_ד-ב_יז-גן_עדן.rtl.md פירוש/1-בראשית/1030-בראשית-ב_יח-ג_כד-אדם_ואשה.rtl.md
-</code></pre>
-<h2 id="editing-hebrew-files-niqqud-and-combining-mark-order">Editing Hebrew Files: Niqqud and Combining-Mark Order</h2>
-<p>The Edit tool can fail with <code>String to replace not found</code> on Hebrew text that looks character-for-character identical to what Read returned. The cause is <strong>Unicode combining-mark order</strong>: niqqud (qamatz <code>ָ</code>, dagesh <code>ּ</code>, etc.) are combining marks, and the same visible word can be encoded with marks in different byte orders (e.g., letter+qamatz+dagesh vs. letter+dagesh+qamatz). Edit does exact byte matching and rejects strings that <em>look</em> right but differ in mark order. The error message is unhelpfully generic.</p>
-<p><strong>If Edit fails on Hebrew text with niqqud — do NOT retry with a re-typed <code>old_string</code>.</strong> Re-typing reproduces the same wrong byte order. Switch to Python via Bash:</p>
-<ol>
-<li>Locate the target block using <strong>niqqud-free anchors</strong> — ASCII or unmarked Hebrew (e.g., <code>'- <strong>כל</strong> ='</code>, <code>'כל בהמה ובהמה״.'</code>). These match reliably regardless of mark order.</li>
-<li>Extract the block verbatim from the file with <code>content[start:end]</code> — don't retype the niqqud-bearing portion.</li>
-<li>Build the replacement (new niqqud you write is fine — its mark order needn't match anything pre-existing).</li>
-<li><code>content.replace(old_block, new_block, 1)</code> and write back.</li>
-</ol>
-<pre><code class="language-python">path = '...'
-with open(path, 'r', encoding='utf-8') as f:
-    content = f.read()
-start = content.find('&lt;niqqud-free start anchor&gt;')
-end_anchor = '&lt;niqqud-free end anchor&gt;'
-end = content.find(end_anchor) + len(end_anchor)
-old_block = content[start:end]
-new_block = &quot;&quot;&quot;...&quot;&quot;&quot;
-assert content.count(old_block) == 1
-content = content.replace(old_block, new_block, 1)
-with open(path, 'w', encoding='utf-8') as f:
-    f.write(content)
-</code></pre>
-<p><strong>Diagnostic</strong> when two Hebrew strings look identical but don't match — find the first byte-level divergence:</p>
-<pre><code class="language-python">for i, (a, b) in enumerate(zip(actual, target)):
-    if a != b:
-        print(f&quot;Diff at offset {i}: file={hex(ord(a))}, target={hex(ord(b))}&quot;)
-        break
-</code></pre>
+<p>@system-prompt--tools.md</p>
 <h1 id="הגבלות-על-שינוי-טקסט-קיים">הגבלות על שינוי טקסט קיים</h1>
 <p><strong>חשוּב!</strong> אין לשנות טקסט קיים ללא אישור של המשתמש.<br>
 מצד שני - תמיד מותר להוסיף/לערוך/למחוק קטעי &lt;הצעת-קלוד&gt;: זהו בדיוק התפקיד שלהם.</p>
