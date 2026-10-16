@@ -127,8 +127,12 @@ function parseChapterVerse(book, spec, str) {
 
 /**
  * Parse a Perush file name (NNNN-book-from-to-title.rtl.md) into its covered range.
+ * Temporary local variants (NNNN-book-from-to-title.<number>.rtl.md) are ignored.
  */
 function parseFileName(fileName) {
+  if (/\.\d+\.rtl\.md$/.test(fileName)) {
+    return undefined
+  }
   const match = fileName.match(/^\d{4}-(בראשית|שמות|ויקרא|במדבר|דברים)-([א-ת]{1,3})_([א-ת]{1,3})-([א-ת]{1,3})_([א-ת]{1,3})-.+\.rtl\.md$/)
   if (!match) {
     return undefined
