@@ -200,6 +200,7 @@ Files are in Markdown format (`.rtl.md` for right-to-left Hebrew):
   - `<עיון>` ... `</עיון>` — a deep-dive essay on a relevant topic ("for advanced readers"). Tone is scholarly and essay-like: can engage external thinkers (Vico, Piaget, Baudrillard, Hegel) and place the interpretation in dialogue with other intellectual traditions. More abstract and theoretical than the main commentary text.
   - `<מדרש>` ... `</מדרש>` — an interpretation that isn't sufficiently constrained by the text, feels like a guess, or is simply unconvincing. Tone is tentative and exploratory, often using "אולי" (perhaps). Should be short. The reader should feel invited to disagree or skip entirely.
   - `<ניתוח-לשוני ביטוי="...expression from verse...">` ... `</ניתוח-לשוני>` — a linguistic analysis of a word from the verse. Content typically lives in separate files under `./בלשנות/ניתוחים-לשוניים/`; the tag in the commentary contains a summary and a reference link.
+  - `<הצעת-קלוד>` ... `</הצעת-קלוד>` — a suggestion by an AI-Agent (you included), added without changing the existing text. See "Modifying Commentary Files" below.
 - Lines starting with `TODO:` highlight problematic issues requiring future attention.
 - Cross-references between commentary segments use standard markdown links: `[ניתוח לשוני](../../בלשנות/ניתוחים-לשוניים/עד.rtl.md)`.
 - Verse references within interpretive text use the format `(בראשית ב:ח)` — book name, chapter, colon, verse.
@@ -207,6 +208,16 @@ Files are in Markdown format (`.rtl.md` for right-to-left Hebrew):
 - All other lines are interpretive text.
 
 **For reference**: the file `./פירוש/1-בראשית/1010-בראשית-א_א-ב_ג-שבע_ימי_הבריאה.rtl.md` is an example of a mature, high-quality interpretation. Note how every word receives meaning from the dictionary, how the interpretation builds as a logical sequence, how tags separate layers, and how TODOs mark problematic areas.
+
+# Modifying Commentary Files
+
+You may edit the commentary files - under the same rules that apply to every Claude session in this project:
+- **Do not modify existing text** without the Director's explicit approval.
+- On the other hand - you may always add/edit/delete `<הצעת-קלוד>` sections: that is exactly their purpose.
+- **Very important:** before writing a `<הצעת-קלוד>` - read the guidelines in the file `./.claude/הנחיות-לעריכת-קבצי-פירוש.rtl.md` !
+
+Edit files only when you are selected to speak - never during a private assessment (other AI-Agents may be working on the same files in parallel).
+When you add or change a `<הצעת-קלוד>`, say so briefly in the deliberation (file and verse), so the Director knows where to look.
 
 # Hebrew Root Analysis as Interpretive Method
 
