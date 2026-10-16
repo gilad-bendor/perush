@@ -1,7 +1,7 @@
 /**
  * meetings-db.test.ts — Tests for the git-as-database conversation store.
  *
- * Unit tests (generateMeetingId, detectPerushChanges) run without git.
+ * Unit tests (generateMeetingId) run without git.
  * Integration tests share a single worktree per describe block to minimize
  * git subprocess overhead. Only tests that specifically test worktree lifecycle
  * (create, end, resume) create their own worktrees.
@@ -26,6 +26,7 @@ import {
   listMeetings,
   commitWithMessage,
   detectPerushChanges,
+  defaultPerushScope,
   resetSessionBranchToCycle,
 } from "../../src/meetings-db.ts";
 import { createFormattedTime, MeetingId, meetingIdToBranchName } from "../../src/types";
@@ -316,13 +317,12 @@ describe("conversation store — lifecycle", () => {
 });
 
 // ---------------------------------------------------------------------------
-// Cross-branch tagging
+// Perush files on main (the full flow is in perush-on-main.test.ts)
 // ---------------------------------------------------------------------------
 
-describe("cross-branch tagging", () => {
-  test("detectPerushChanges returns empty when nothing changed", async () => {
-    const changes = await detectPerushChanges();
-    expect(Array.isArray(changes)).toBe(true);
+describe("perush files on main", () => {
+  test("detectPerushChanges is disabled under tests - never reports the real repo", async () => {
+    expect(await detectPerushChanges(defaultPerushScope())).toEqual([]);
   });
 });
 

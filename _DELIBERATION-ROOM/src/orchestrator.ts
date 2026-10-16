@@ -8,6 +8,7 @@
  */
 
 import type {
+  PerushScope,
   Meeting,
   MeetingId,
   AgentId,
@@ -27,6 +28,10 @@ import { createFormattedTime } from "./types";
 import {
   DIRECTOR_TIMEOUT_MS,
   USE_STUB_SDK,
+  commitPerushDirectorEdits,
+  commitPerushUpdate,
+  commitPerushBeforeRollback,
+  commitPerushRollback,
 } from "./config";
 import { logInfo, logWarn, logError } from "./logs";
 import {
@@ -39,10 +44,12 @@ import {
   commitCycle as commitCycleGit,
   commitWithMessage,
   generateMeetingId,
-  tagPerushChangesIfNeeded,
   resetSessionBranchToCycle,
   rollbackPerushOnMain,
   detectPerushChanges,
+  commitPerushChanges,
+  getPerushHead,
+  defaultPerushScope,
   cleanupDanglingWorktrees,
   ensureGitConfig,
 } from "./meetings-db.ts";
@@ -119,6 +126,30 @@ function createNoopEvents(): OrchestratorEvents {
 }
 
 // ---------------------------------------------------------------------------
+// Perush files on main
+// ---------------------------------------------------------------------------
+
+/** What the current meeting commits and rolls back on main (meetings created before it existed: the default) */
+function meetingPerushScope(): PerushScope {
+  return currentMeeting?.perushScope ?? defaultPerushScope();
+}
+
+/**
+ * Commit the uncommitted perush changes of the meeting's scope. A failure is reported to the Director, never fatal.
+ * Returns false if the commit failed.
+ */
+async function commitPerushSafely(message: string): Promise<boolean> {
+  try {
+    await commitPerushChanges(meetingPerushScope(), message);
+    return true;
+  } catch (err) {
+    logWarn("orchestrator", `commitPerushSafely: "${message}" failed`, err);
+    events.onError(`שמירת קבצי הפירוש ב-git נכשלה ("${message}"): ${err}`);
+    return false;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Public API
 // ---------------------------------------------------------------------------
 
@@ -178,7 +209,8 @@ export async function startMeeting(
   // Git state preconditions
   await ensureGitConfig();
   await cleanupDanglingWorktrees();
-  const uncommittedPerush = await detectPerushChanges();
+  const perushScope = defaultPerushScope();
+  const uncommittedPerush = await detectPerushChanges(perushScope);
   if (uncommittedPerush.length > 0) {
     events.onError(
       `אזהרה: יש שינויים לא שמורים בקבצי הפירוש (${uncommittedPerush.length} קבצים). ` +
@@ -213,6 +245,8 @@ export async function startMeeting(
     cycles: [],
     startedAt: createFormattedTime(),
     sessionIds: {},
+    perushScope,
+    perushBaseline: (await getPerushHead()) ?? undefined,
   };
 
   setPhase("human-turn");
@@ -400,6 +434,9 @@ export async function runCycle(
     };
     events.onSpeech("human", humanContent, speech.timestamp);
   } else {
+    // The Director's edits so far are committed first - so the agent's commit holds only its own edits
+    await commitPerushSafely(commitPerushDirectorEdits(cycleNumber, currentMeeting.meetingId));
+
     // Agent speech
     setPhase("speaking", nextSpeaker);
 
@@ -449,6 +486,22 @@ export async function runCycle(
   }
 
   // ------ RECORD & COMMIT ------
+  // The cycle was interrupted (a rollback or the meeting's end replaced the meeting while the speaker spoke)
+  if (!currentMeeting || currentMeeting.pendingCycle?.cycleNumber !== cycleNumber) {
+    logWarn("orchestrator", `runCycle ${cycleNumber}: interrupted - not recording the cycle`);
+    return null;
+  }
+
+  // The speaker's perush edits are committed on main, and main's commit is recorded - a rollback to this cycle
+  // restores it. If the commit failed, nothing is recorded: main's commit would lack the speaker's edits.
+  const meeting = currentMeeting;
+  const isPerushCommitted = await commitPerushSafely(commitPerushUpdate(cycleNumber, speech.speaker, meeting.meetingId));
+  const perushCommit = isPerushCommitted ? await getPerushHead().catch(() => null) : null;
+  if (currentMeeting !== meeting) {                    // replaced during the git work above
+    logWarn("orchestrator", `runCycle ${cycleNumber}: interrupted - not recording the cycle`);
+    return null;
+  }
+
   const pending = currentMeeting.pendingCycle!;
   const cycle: CycleRecord = {
     cycleNumber,
@@ -456,6 +509,7 @@ export async function runCycle(
     assessments: pending.assessments,
     orchestratorDecision: pending.orchestratorDecision!,
     processes: pending.processes,
+    ...(perushCommit ? { perushCommit } : {}),
   };
 
   currentMeeting.cycles.push(cycle);
@@ -471,19 +525,6 @@ export async function runCycle(
 
   await writeMeetingAtomic(currentWorktreePath, currentMeeting);
   await commitCycleGit(currentWorktreePath, cycleNumber, speech.speaker);
-
-  // Check for perush file changes and create cross-branch tags if needed
-  try {
-    await tagPerushChangesIfNeeded(
-      currentWorktreePath,
-      cycleNumber,
-      currentMeeting.meetingId,
-    );
-  } catch (err) {
-    // Tagging failure is non-fatal
-    logWarn("orchestrator", `runCycle ${cycleNumber}: tagging failed`, err);
-    events.onError(`Tagging failed: ${err}`);
-  }
 
   logInfo("orchestrator", `runCycle ${cycleNumber}: done (speaker=${speech.speaker}, cost≈$${currentMeeting.totalCostEstimate?.toFixed(2)})`);
   setPhase("idle");
@@ -577,14 +618,28 @@ export async function handleRollback(
   // Re-read the rolled-back meeting.yaml
   currentMeeting = await readActiveMeeting(currentWorktreePath);
 
-  // Phase 3: Roll back perush files on main if needed
-  onProgress?.("perush-rollback", "בודק שינויים בפירוש...");
-  const { stashed } = await rollbackPerushOnMain(
-    meetingId,
-    targetCycleNumber,
-  );
-  if (stashed) {
-    onProgress?.("perush-rollback", "שינויים לא שמורים בפירוש הועברו ל-stash.");
+  // Phase 3: Roll back the perush files on main - to the commit recorded at the end of the target cycle
+  onProgress?.("perush-rollback", "משחזר את קבצי הפירוש...");
+  const restoreCommit = targetCycleNumber === 0
+    ? currentMeeting.perushBaseline
+    : currentMeeting.cycles[targetCycleNumber - 1]?.perushCommit;
+  if (!restoreCommit) {
+    logWarn("orchestrator", `handleRollback: no recorded perush commit for cycle ${targetCycleNumber} - perush files not rolled back`);
+    onProgress?.("perush-rollback",
+        "לא נשמר מצב קבצי הפירוש של מחזור זה (פגישה ישנה, או ששמירת הקבצים נכשלה באותו מחזור) - קבצי הפירוש לא שוחזרו.");
+  } else {
+    const { checkpointed, rolledBack } = await rollbackPerushOnMain(
+      meetingPerushScope(),
+      restoreCommit,
+      commitPerushBeforeRollback(targetCycleNumber, meetingId),
+      commitPerushRollback(targetCycleNumber, meetingId),
+    );
+    if (checkpointed) {
+      onProgress?.("perush-rollback", "שינויים שלא נשמרו בקבצי הפירוש נשמרו ב-commit לפני השחזור.");
+    }
+    if (!rolledBack) {
+      events.onError("שחזור קבצי הפירוש נכשל, והם נשארו כפי שהיו - ראה את הלוג.");
+    }
   }
 
   // Phase 4: Session recovery — recreate all agent sessions from rolled-back transcript

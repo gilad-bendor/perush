@@ -58,11 +58,12 @@ Clicking the rollback icon opens a **modal dialog** overlaid on the deliberation
 - Reset: `git -C <worktree> reset --hard <commit>`.
 - Re-read `meeting.yaml` from the now-reset worktree.
 
-**Phase 4 — Perush File Rollback** (main branch, if needed):
-- Check for correlated tags (`session-cycle/<meeting-id>/c*/main`) for cycles after the target.
-- If perush changes exist after the rollback point: stash any uncommitted changes in the tracked folders (`git stash push --include-untracked -m "Pre-rollback stash" -- <PERUSH_TRACKED_PATHS>`), then restore the tracked folders with `git restore --source=<ref> --staged --worktree` (which also removes files added after `<ref>`) from `session-cycle/<meeting-id>/c<N>/main` (the most recent tag at or before the target cycle), and commit with the same pathspec.
-- If no perush changes after target: main is left untouched.
-- Notify the Director via `rollback-progress` if changes were stashed.
+**Phase 4 — Perush File Rollback** (main branch):
+- The restore point is recorded in the rolled-back `meeting.yaml`: `cycles[T-1].perushCommit` (main's commit at the end of cycle T), or `perushBaseline` for T = 0.
+- Uncommitted changes in the meeting's perush scope are committed first (`Before rollback to cycle T: Director's edits`) - nothing is lost, no stash.
+- The scope's files are restored from the restore point (`git restore --source=<commit> --staged --worktree`, which also removes files added later) and committed (`Rollback perush files to cycle T`). The Director's own edits after T are restored too; files the Director chose to ignore are never touched.
+- Meetings created before the restore points existed: the perush files are not rolled back, and `rollback-progress` says so.
+- See [GIT-PERSISTENCE.md](GIT-PERSISTENCE.md#the-perush-files-on-main).
 
 **Phase 5 — Session Recovery**:
 - **All agent sessions are recreated** — not just the ones that spoke after the rollback point. All sessions have accumulated invalid context (private assessments, orchestrator decisions, internal reasoning from discarded cycles). Clean sessions from the rolled-back transcript are the safest approach.

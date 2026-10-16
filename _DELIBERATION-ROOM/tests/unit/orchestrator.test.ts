@@ -12,6 +12,8 @@
 import { describe, test, expect, beforeAll, beforeEach, afterEach, afterAll } from "bun:test";
 import { $ } from "bun";
 import { join } from "path";
+import { mkdtemp, mkdir, writeFile, readFile, rm } from "fs/promises";
+import { tmpdir } from "os";
 import {
   startMeeting,
   runCycle,
@@ -31,7 +33,7 @@ import type { OrchestratorEvents } from "../../src/orchestrator";
 import { resetStubState } from "../../src/stub-sdk";
 import { resetAgentCache } from "../../src/session-manager";
 import { PrivateAssessment, Phase, meetingIdToBranchName, MeetingId } from "../../src/types";
-import { generateMeetingId } from "../../src/meetings-db.ts";
+import { generateMeetingId, setPerushGitRootForTests } from "../../src/meetings-db.ts";
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -377,6 +379,129 @@ describe("handleRollback", () => {
 
     // Cleanup
     await endCurrentMeeting();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Perush files on main - against a scratch repository (the real main is never touched by tests)
+// ---------------------------------------------------------------------------
+
+describe("perush files on main", () => {
+  const DIRECTOR_FILE = "פירוש/1-בראשית/1040-בראשית-ד_א-ד_יז-הבל_וקין.rtl.md";
+  const AGENT_FILE = "בלשנות/ניתוחים-לשוניים/עד.rtl.md";
+  let repo: string;
+
+  async function repoGit(...args: string[]): Promise<string> {
+    const proc = Bun.spawn(["git", "-C", repo, ...args], { stdout: "pipe", stderr: "pipe" });
+    const [stdout, stderr, exitCode] = await Promise.all([
+      new Response(proc.stdout).text(), new Response(proc.stderr).text(), proc.exited,
+    ]);
+    if (exitCode !== 0) throw new Error(`git ${args.join(" ")}: ${stderr}`);
+    return stdout;
+  }
+  async function write(file: string, content: string): Promise<void> {
+    await mkdir(join(repo, file, ".."), { recursive: true });
+    await writeFile(join(repo, file), content);
+  }
+  const filesOf = async (ref: string) =>
+    (await repoGit("show", "-z", "--name-only", "--no-renames", "--format=", ref)).split("\0").filter(Boolean);
+  const subjectOf = async (ref: string) => (await repoGit("log", "-1", "--format=%s", ref)).trim();
+
+  beforeEach(async () => {
+    repo = await mkdtemp(join(tmpdir(), "orchestrator-perush-"));
+    await repoGit("init", "-q", "-b", "main");
+    await repoGit("config", "user.name", "test");
+    await repoGit("config", "user.email", "test@example.com");
+    await write(DIRECTOR_FILE, "v0\n");
+    await write(AGENT_FILE, "v0\n");
+    await repoGit("add", "-A");
+    await repoGit("commit", "-q", "-m", "initial");
+    setPerushGitRootForTests(repo);
+  });
+
+  afterEach(async () => {
+    setPerushGitRootForTests(undefined);
+    try { if (getMeeting()) await endCurrentMeeting(); } catch {}
+    await rm(repo, { recursive: true, force: true });
+  });
+
+  test("a cycle commits the Director's edits and the speaking agent's edits separately, and records main's commit; rollback restores it", async () => {
+    freshState();
+    let agentEdited = false;
+    const { events, handlers } = createEventCollector();
+    setEventHandlers({
+      ...handlers,
+      // The speaking agent "edits a file" while it speaks
+      onSpeechChunk: (speaker) => {
+        if (!agentEdited) {
+          agentEdited = true;
+          wrapAgentEdit(write(AGENT_FILE, `edited by ${speaker}\n`));
+        }
+      },
+    });
+    let pendingAgentEdit: Promise<void> = Promise.resolve();
+    function wrapAgentEdit(promise: Promise<void>) { pendingAgentEdit = promise; }
+
+    const meeting = await startAndTrack("Perush On Main", ["milo", "shalom"]);
+    const baseline = (await repoGit("rev-parse", "HEAD")).trim();
+    expect(meeting.perushScope).toEqual({
+      trackedPaths: ["פירוש/", "נספחים-לפירוש/", "בלשנות/ניתוחים-לשוניים/"],
+      ignoredPaths: [],
+    });
+    expect(meeting.perushBaseline).toBe(baseline);
+
+    // The Director edits a file before the cycle
+    await write(DIRECTOR_FILE, "edited by the Director\n");
+    const cycle = await runCycle("human", "Opening prompt");
+    await pendingAgentEdit;
+    const speaker = cycle!.speech.speaker;
+    expect(speaker).not.toBe("human");
+    expect(agentEdited).toBe(true);
+
+    expect(await subjectOf("HEAD~1")).toBe(`Cycle 1: Director's edits (${meeting.meetingId})`);
+    expect(await filesOf("HEAD~1")).toEqual([DIRECTOR_FILE]);
+    expect(await subjectOf("HEAD")).toBe(`Cycle 1: perush update by ${speaker} (${meeting.meetingId})`);
+    expect(await filesOf("HEAD")).toEqual([AGENT_FILE]);
+    expect(cycle!.perushCommit).toBe((await repoGit("rev-parse", "HEAD")).trim());
+
+    // Rollback to cycle 0 restores the baseline
+    await handleRollback(0);
+    expect(await readFile(join(repo, DIRECTOR_FILE), "utf-8")).toBe("v0\n");
+    expect(await readFile(join(repo, AGENT_FILE), "utf-8")).toBe("v0\n");
+    expect(await subjectOf("HEAD")).toBe(`Rollback perush files to cycle 0 (${meeting.meetingId})`);
+    expect(events.errors).toEqual([]);
+  });
+
+  test("when committing on main fails, the Director is told - and the cycle records no (wrong) restore point", async () => {
+    freshState();
+    const { events, handlers } = createEventCollector();
+    setEventHandlers(handlers);
+    await startAndTrack("Commit Fails", ["milo", "shalom"]);
+    await write(DIRECTOR_FILE, "edited by the Director\n");
+    await writeFile(join(repo, ".git/index.lock"), "");                 // e.g. an IDE's git holds the lock
+
+    const cycle = await runCycle("human", "Opening prompt");
+
+    expect(cycle!.perushCommit).toBeUndefined();
+    expect(events.errors.some(error => error.includes("index.lock"))).toBe(true);
+  });
+
+  test("a meeting created before perushBaseline existed: rollback leaves the perush files alone, and says so", async () => {
+    freshState();
+    const { handlers } = createEventCollector();
+    setEventHandlers(handlers);
+    // Started with the flow off - so, like an old meeting, no baseline is saved in its meeting.yaml
+    setPerushGitRootForTests(undefined);
+    await startAndTrack("Old Meeting", ["milo"]);
+    expect(getMeeting()!.perushBaseline).toBeUndefined();
+    setPerushGitRootForTests(repo);
+    await write(DIRECTOR_FILE, "edited\n");
+
+    const progress: Array<string | undefined> = [];
+    await handleRollback(0, (_step, detail) => progress.push(detail));
+
+    expect(await readFile(join(repo, DIRECTOR_FILE), "utf-8")).toBe("edited\n");
+    expect(progress.some(detail => detail?.includes("לא שוחזרו"))).toBe(true);
   });
 });
 

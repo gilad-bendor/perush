@@ -38,7 +38,7 @@
 
 18. **Port 4100**: Separate from RTL-EDITOR's port 4000.
 
-19. **Cross-branch tagging for rollback**: Correlated tags (`session-cycle/<meeting-id>/c<N>/main` + `session-cycle/<meeting-id>/c<N>/session`) capture synchronized state of both branches when perush files are altered. Nothing is pushed automatically - pushing `main` (and the tags) is left to the Director.
+19. **Perush files on main - recorded commits, not tags**: Each meeting has a perush scope (tracked folders, saved at creation, minus files the Director chose to ignore). The Director's edits are committed before an agent speaks, the speaker's after; each cycle records main's commit (`perushCommit`), and rollback restores the scope from it. This replaced the earlier correlated `session-cycle/...` tags and the pre-rollback stash (which nothing ever popped). Nothing is pushed automatically. See [GIT-PERSISTENCE.md](GIT-PERSISTENCE.md#the-perush-files-on-main).
 
 20. **Git worktrees for session isolation + move+symlink for session capture**: Each meeting gets an orphan branch with a worktree. Session files moved from `~/.claude/projects/` and symlinked back. No lock files, no pre-commit hooks.
 

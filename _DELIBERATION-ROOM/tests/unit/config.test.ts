@@ -202,8 +202,9 @@ describe("Git config", () => {
     expect(commitRollback(5)).toBe("Rollback to cycle 5 + session recovery");
   });
 
-  test("commitPerushUpdate formats correctly", () => {
-    expect(commitPerushUpdate(3, "0000-00-00--00-00--eden-meeting")).toBe("Cycle 3: perush update (0000-00-00--00-00--eden-meeting)");
+  test("commitPerushUpdate formats correctly - naming the speaker", () => {
+    expect(commitPerushUpdate(3, "milo", "0000-00-00--00-00--eden-meeting")).toBe("Cycle 3: perush update by milo (0000-00-00--00-00--eden-meeting)");
+    expect(commitPerushUpdate(4, "human", "0000-00-00--00-00--eden-meeting")).toBe("Cycle 4: perush update by the Director (0000-00-00--00-00--eden-meeting)");
   });
 });
 

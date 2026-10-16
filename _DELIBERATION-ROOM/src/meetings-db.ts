@@ -15,12 +15,13 @@ import { stringify as yamlStringify, parse as yamlParse } from "yaml";
 import {
   AgentId,
   BranchName,
-  branchNameToMeetingId, cycleTagMain, cycleTagSession,
+  branchNameToMeetingId,
   Meeting,
   MeetingId,
   meetingIdToBranchName,
   meetingIdToTagIdPrefix,
   MeetingSummary,
+  PerushScope,
   SESSION_BRANCH_PREFIX,
   SpeakerId,
 } from "./types";
@@ -114,16 +115,28 @@ async function getPerushGitRoot(): Promise<string | null> {
   return getGitRoot();
 }
 
-/** The PERUSH_TRACKED_PATHS that git knows or that exist - a pathspec that matches nothing fails the whole git command */
-async function perushPathspec(gitRoot: string): Promise<string[]> {
+/** The default scope of a new meeting: PERUSH_TRACKED_PATHS, nothing ignored */
+export function defaultPerushScope(): PerushScope {
+  return { trackedPaths: [...PERUSH_TRACKED_PATHS], ignoredPaths: [] };
+}
+
+/**
+ * The git pathspec of a scope: its tracked folders (those holding files git knows or would add - a pathspec
+ * that matches nothing fails the whole git command), minus its ignored files.
+ * Empty when no tracked folder is left - and callers must then do nothing: "commit --" with no paths
+ * would commit the whole index.
+ */
+async function scopePathspec(gitRoot: string, scope: PerushScope): Promise<string[]> {
   const paths: string[] = [];
-  for (const trackedPath of PERUSH_TRACKED_PATHS) {
-    const exists = await stat(join(gitRoot, trackedPath)).then(() => true, () => false);
-    if (exists || (await git(gitRoot, "ls-files", "-z", "--", trackedPath)).length > 0) {
-      paths.push(trackedPath);
-    }
+  for (const trackedPath of scope.trackedPaths) {
+    // Files in the index, or new files that aren't gitignored - a folder with neither matches nothing
+    const known = (await git(gitRoot, "ls-files", "-z", "--", trackedPath)).length > 0
+        || (await git(gitRoot, "ls-files", "-z", "--others", "--exclude-standard", "--", trackedPath)).length > 0;
+    if (known) paths.push(trackedPath);
   }
-  return paths;
+  if (paths.length === 0) return [];
+  // "literal": file names are not globs (a name may contain "[" or "*")
+  return [...paths, ...scope.ignoredPaths.map(ignoredPath => `:(exclude,literal)${ignoredPath}`)];
 }
 
 /**
@@ -567,117 +580,92 @@ export async function findCycleCommit(
 }
 
 // ---------------------------------------------------------------------------
-// Cross-branch tagging (perush changes)
+// Perush files on main: detect, commit
 // ---------------------------------------------------------------------------
 
+/** An uncommitted change to a perush file, as `git status --porcelain` reports it */
+export type PerushChange = {
+  path: string;
+  /** The two-letter status code: " M" modified, "M " staged, "??" new, " D" deleted, "R " renamed, ... */
+  status: string;
+  /** For a rename or copy - the original path */
+  originalPath?: string;
+};
+
 /**
- * Detect whether any perush files (PERUSH_TRACKED_PATHS) were changed on main - modified, staged, deleted or new.
- * Returns the list of changed file paths, or empty array if none.
+ * The uncommitted changes (modified, staged, deleted or new) in the scope's files on main.
+ * Empty when the perush-on-main flow is disabled (under tests).
  */
-export async function detectPerushChanges(): Promise<string[]> {
+export async function detectPerushChanges(scope: PerushScope): Promise<PerushChange[]> {
   const gitRoot = await getPerushGitRoot();
   if (!gitRoot) return [];
-  try {
-    // -z: paths as they are (never quoted), whatever core.quotepath is.
-    // Each entry is "XY path"; a rename/copy entry is followed by its original path as a separate entry.
-    const entries = (await git(gitRoot, "status", "--porcelain", "-z", "--untracked-files=all", "--", ...PERUSH_TRACKED_PATHS))
-      .split("\0").filter(Boolean);
-    const changed: string[] = [];
-    for (let i = 0; i < entries.length; i++) {
-      changed.push(entries[i].slice(3));
-      if (/^[RC]/.test(entries[i])) i++;
-    }
-    if (changed.length > 0) {
-      logInfo("meetings-db", `detectPerushChanges: ${changed.length} file(s) changed`, changed);
-    }
-    return changed;
-  } catch {
-    return [];
+  const pathspec = await scopePathspec(gitRoot, scope);
+  if (pathspec.length === 0) return [];
+  // -z: paths as they are (never quoted), whatever core.quotepath is.
+  // Each entry is "XY path"; a rename/copy entry is followed by its original path as a separate entry.
+  const entries = (await git(gitRoot, "status", "--porcelain", "-z", "--untracked-files=all", "--", ...pathspec))
+    .split("\0").filter(Boolean);
+  const changes: PerushChange[] = [];
+  for (let i = 0; i < entries.length; i++) {
+    const change: PerushChange = { status: entries[i].slice(0, 2), path: entries[i].slice(3) };
+    if (/^[RC]/.test(entries[i])) change.originalPath = entries[++i];
+    changes.push(change);
   }
+  if (changes.length > 0) {
+    logInfo("meetings-db", `detectPerushChanges: ${changes.length} file(s) changed`, changes.map(change => change.path));
+  }
+  return changes;
 }
 
 /**
- * Commit perush file changes on main.
- * Returns the commit hash, or null if nothing to commit.
+ * Commit the uncommitted changes in the scope's files on main - or only in `onlyPaths` (files inside the scope).
+ * The pathspec keeps out whatever else the user happens to have staged.
+ * Returns the commit hash, or null if there was nothing to commit (nothing changed, or the flow is disabled).
+ * Throws when git fails (e.g. another process holds the index lock) - callers must not mistake that for "nothing to commit".
  */
-export async function commitPerushChangesOnMain(
-  cycleNumber: number,
-  meetingId: MeetingId,
+export async function commitPerushChanges(
+  scope: PerushScope,
+  message: string,
+  onlyPaths?: string[],
 ): Promise<string | null> {
-  logInfo("meetings-db", `commitPerushChangesOnMain: cycle ${cycleNumber}, meeting ${meetingId}`);
   const gitRoot = await getPerushGitRoot();
   if (!gitRoot) return null;
-  const message = commitPerushUpdate(cycleNumber, meetingId);
+  const pathspec = onlyPaths
+    ? onlyPaths.map(onlyPath => `:(literal)${onlyPath}`)
+    : await scopePathspec(gitRoot, scope);
+  if (pathspec.length === 0) return null;              // "commit --" with no paths would commit the whole index
 
-  try {
-    const pathspec = await perushPathspec(gitRoot);
-    if (pathspec.length === 0) return null;            // "commit --" with no paths would commit the whole index
-    await git(gitRoot, "add", "--", ...pathspec);
-    // Pathspec: commit only the perush files - never whatever else the user happens to have staged
-    await git(gitRoot, "commit", "-m", message, "--", ...pathspec);
-    const hash = (await git(gitRoot, "rev-parse", "HEAD")).trim();
-    logInfo("meetings-db", `commitPerushChangesOnMain: committed ${hash.slice(0, 8)}`);
-    return hash;
-  } catch (err) {
-    logWarn("meetings-db", `commitPerushChangesOnMain: nothing committed: ${err}`);
-    return null;
-  }
+  const changes = onlyPaths ? onlyPaths : (await detectPerushChanges(scope)).map(change => change.path);
+  if (changes.length === 0) return null;
+
+  // `add` fails on a path that is neither on disk nor in the index (the original path of a staged rename) -
+  // while `commit` needs it (to commit the rename's deletion side)
+  const addPathspec = onlyPaths ? await literalPathsKnownToGit(gitRoot, onlyPaths) : pathspec;
+  if (addPathspec.length > 0) await git(gitRoot, "add", "--all", "--", ...addPathspec);
+  await git(gitRoot, "commit", "-m", message, "--", ...pathspec);
+  const hash = (await git(gitRoot, "rev-parse", "HEAD")).trim();
+  logInfo("meetings-db", `commitPerushChanges: ${hash.slice(0, 8)} "${message}"`);
+  return hash;
 }
 
-/**
- * Create correlated tags on both main and the session branch.
- * Tags: session-cycle/<meeting-id>/main → HEAD of main, session-cycle/<meeting-id>/session → HEAD of session branch.
- * Return true if tags are created.
- */
-export async function createCorrelatedTags(
-  worktreePath: string,
-  meetingId: MeetingId,
-  cycleNumber: number,
-): Promise<boolean> {
+/** `:(literal)` pathspecs of the paths that exist on disk or in the index */
+async function literalPathsKnownToGit(gitRoot: string, paths: string[]): Promise<string[]> {
+  const literals = paths.map(path => `:(literal)${path}`);
+  const inIndex = new Set((await git(gitRoot, "ls-files", "-z", "--", ...literals)).split("\0").filter(Boolean));
+  const known: string[] = [];
+  for (const path of paths) {
+    if (inIndex.has(path) || await stat(join(gitRoot, path)).then(() => true, () => false)) {
+      known.push(`:(literal)${path}`);
+    }
+  }
+  return known;
+}
+
+/** The current commit of main - or null when the perush-on-main flow is disabled (under tests) */
+export async function getPerushHead(): Promise<string | null> {
   const gitRoot = await getPerushGitRoot();
-  if (!gitRoot) return false;
-
-  try {
-    // Tag main's HEAD
-    await $`git -C ${gitRoot} tag ${cycleTagMain(meetingId, cycleNumber)} HEAD`.quiet();
-
-    // Tag session branch's HEAD
-    const sessionHead = (
-      await $`git -C ${worktreePath} rev-parse HEAD`.quiet()
-    ).stdout.toString().trim();
-    await $`git -C ${gitRoot} tag ${cycleTagSession(meetingId, cycleNumber)} ${sessionHead}`.quiet();
-
-    return true;
-  } catch (err) {
-    logError("meetings-db", `Failed to create correlated tags: ${err}`);
-    return false;
-  }
-}
-
-/**
- * Full cross-branch tagging flow after a cycle.
- * Detects perush changes → commits on main → creates correlated tags.
- * Nothing is pushed: pushing main (and the tags, if wanted) is left to the Director.
- * Returns true if tagging occurred.
- */
-export async function tagPerushChangesIfNeeded(
-  worktreePath: string,
-  cycleNumber: number,
-  meetingId: MeetingId,
-): Promise<boolean> {
-  const changedFiles = await detectPerushChanges();
-  if (changedFiles.length === 0) return false;
-
-  logInfo("meetings-db", `tagPerushChangesIfNeeded: cycle ${cycleNumber} — committing + tagging`);
-
-  const commitHash = await commitPerushChangesOnMain(cycleNumber, meetingId);
-  if (!commitHash) return false;
-
-  const areTagsCreated = await createCorrelatedTags(worktreePath, meetingId, cycleNumber);
-  if (!areTagsCreated) return false;
-
-  logInfo("meetings-db", `tagPerushChangesIfNeeded: done`);
-  return true;
+  if (!gitRoot) return null;
+  return (await git(gitRoot, "rev-parse", "HEAD")).trim();
 }
 
 // ---------------------------------------------------------------------------
@@ -715,152 +703,47 @@ export async function resetSessionBranchToCycle(
 }
 
 /**
- * Find all per-cycle main tags for this meeting with cycle number > targetCycleNumber.
- * Returns sorted array of { cycleNumber, tagName } in ascending cycle order.
- */
-async function findTagsAfterCycle(
-  meetingId: MeetingId,
-  targetCycleNumber: number,
-): Promise<{ cycleNumber: number; tagName: string }[]> {
-  const gitRoot = await getPerushGitRoot();
-  if (!gitRoot) return [];
-  const prefix = meetingIdToTagIdPrefix(meetingId);
-
-  try {
-    // Not $`...`: Bun's shell would expand the literal "*" as a filename glob (and fail - no file matches)
-    const output = (await git(gitRoot, "tag", "--list", `${prefix}/c*/main`)).trim();
-    if (!output) return [];
-
-    const parsed: { cycleNumber: number; tagName: string }[] = [];
-    for (const tag of output.split("\n")) {
-      const match = tag.match(/\/c(\d+)\/main$/);
-      if (match) {
-        const cycle = parseInt(match[1], 10);
-        if (cycle > targetCycleNumber) {
-          parsed.push({ cycleNumber: cycle, tagName: tag });
-        }
-      }
-    }
-
-    return parsed.sort((a, b) => a.cycleNumber - b.cycleNumber);
-  } catch {
-    return [];
-  }
-}
-
-/**
- * Find the latest per-cycle main tag at or before targetCycleNumber.
- * Returns the tag name, or null if none found.
- */
-async function findLatestTagAtOrBefore(
-  meetingId: MeetingId,
-  targetCycleNumber: number,
-): Promise<string | null> {
-  const gitRoot = await getPerushGitRoot();
-  if (!gitRoot) return null;
-  const prefix = meetingIdToTagIdPrefix(meetingId);
-
-  try {
-    // Not $`...`: Bun's shell would expand the literal "*" as a filename glob (and fail - no file matches)
-    const output = (await git(gitRoot, "tag", "--list", `${prefix}/c*/main`)).trim();
-    if (!output) return null;
-
-    let best: { cycleNumber: number; tagName: string } | null = null;
-    for (const tag of output.split("\n")) {
-      const match = tag.match(/\/c(\d+)\/main$/);
-      if (match) {
-        const cycle = parseInt(match[1], 10);
-        if (cycle <= targetCycleNumber && (!best || cycle > best.cycleNumber)) {
-          best = { cycleNumber: cycle, tagName: tag };
-        }
-      }
-    }
-
-    return best?.tagName ?? null;
-  } catch {
-    return null;
-  }
-}
-
-/**
- * Roll back perush files on main to the state at or before a target cycle.
+ * Roll back the scope's files on main to their state at `restoreCommit` (the commit recorded at the end of
+ * the target cycle, or the meeting's baseline). Ignored files are never touched.
  *
- * Finds per-cycle tags created during this meeting. If any perush changes
- * were committed on main after the target cycle, restores perush files
- * to their state at (or before) the target cycle using `git checkout`.
- * Does NOT rewrite main's history — creates a new commit instead.
+ * Uncommitted changes in the scope are first committed (`checkpointMessage`) - so nothing is lost, and
+ * nothing is hidden in a stash. Then the files are restored - files added after `restoreCommit` are removed -
+ * and committed (`rollbackMessage`). Main's history is never rewritten.
  */
 export async function rollbackPerushOnMain(
-  meetingId: MeetingId,
-  targetCycleNumber: number,
-): Promise<{ stashed: boolean; rolledBack: boolean }> {
-  logInfo("meetings-db", `rollbackPerushOnMain: meeting ${meetingId}, target cycle ${targetCycleNumber}`);
+  scope: PerushScope,
+  restoreCommit: string,
+  checkpointMessage: string,
+  rollbackMessage: string,
+): Promise<{ checkpointed: boolean; rolledBack: boolean }> {
+  logInfo("meetings-db", `rollbackPerushOnMain: restoring from ${restoreCommit.slice(0, 8)}`);
   const gitRoot = await getPerushGitRoot();
-  if (!gitRoot) return { stashed: false, rolledBack: false };
-  const tagsAfter = await findTagsAfterCycle(meetingId, targetCycleNumber);
-
-  if (tagsAfter.length === 0) {
-    logInfo("meetings-db", `rollbackPerushOnMain: no tags after cycle ${targetCycleNumber}, nothing to roll back`);
-    return { stashed: false, rolledBack: false };
-  }
-
-  logInfo("meetings-db", `rollbackPerushOnMain: ${tagsAfter.length} tag(s) to roll back`, tagsAfter.map(t => t.tagName));
-
-  const pathspec = await perushPathspec(gitRoot);
+  if (!gitRoot) return { checkpointed: false, rolledBack: false };
+  const pathspec = await scopePathspec(gitRoot, scope);
   if (pathspec.length === 0) {                         // "commit --" with no paths would commit the whole index
     logWarn("meetings-db", `rollbackPerushOnMain: none of the tracked folders exists - nothing to roll back`);
-    return { stashed: false, rolledBack: false };
+    return { checkpointed: false, rolledBack: false };
   }
 
-  // Stash uncommitted perush changes if any
-  let stashed = false;
-  const uncommitted = await detectPerushChanges();
-  if (uncommitted.length > 0) {
-    logInfo("meetings-db", `rollbackPerushOnMain: stashing ${uncommitted.length} uncommitted file(s)`);
-    try {
-      await git(gitRoot, "stash", "push", "--include-untracked", "-m", "Pre-rollback stash", "--", ...pathspec);
-      stashed = true;
-    } catch (err) {
-      logWarn("meetings-db", `rollbackPerushOnMain: stash failed: ${err}`);
-    }
-  }
-
-  // Determine which ref to restore perush files from:
-  // - A tag at or before the target cycle (the "good" state), OR
-  // - The parent of the earliest post-target tag (state before any meeting perush changes)
-  const goodTag = await findLatestTagAtOrBefore(meetingId, targetCycleNumber);
-  const restoreRef = goodTag ?? `${tagsAfter[0].tagName}~1`;
-  logInfo("meetings-db", `rollbackPerushOnMain: restoring from ref ${restoreRef}`);
-
+  // Never restore over uncommitted edits that could not be committed first - they would be lost
+  let checkpointed: boolean;
   try {
-    // Restore perush files to the target state (each dir separately for robustness).
-    // `restore` (unlike `checkout <ref> -- path`) also removes files that were added after restoreRef.
-    for (const trackedPath of PERUSH_TRACKED_PATHS) {
-      try {
-        await git(gitRoot, "restore", `--source=${restoreRef}`, "--staged", "--worktree", "--", trackedPath);
-      } catch (err) {
-        logWarn("meetings-db", `rollbackPerushOnMain: restore of ${trackedPath} failed: ${err}`);
-      }
-    }
-
-    // Commit the restored files
-    try {
-      await git(gitRoot, "commit", "-m", `Rollback perush files to cycle ${targetCycleNumber}`, "--allow-empty", "--", ...pathspec);
-    } catch (err) {
-      logWarn("meetings-db", `rollbackPerushOnMain: commit failed: ${err}`);
-    }
-
-    // Clean up invalidated tags (post-target, both main and session)
-    for (const { tagName } of tagsAfter) {
-      const sessionTag = tagName.replace(/\/main$/, "/session");
-      try { await $`git -C ${gitRoot} tag -d ${tagName}`.quiet(); } catch {}
-      try { await $`git -C ${gitRoot} tag -d ${sessionTag}`.quiet(); } catch {}
-    }
-
-    logInfo("meetings-db", `rollbackPerushOnMain: done (stashed=${stashed})`);
-    return { stashed, rolledBack: true };
+    checkpointed = (await commitPerushChanges(scope, checkpointMessage)) !== null;
   } catch (err) {
-    logError("meetings-db", `rollbackPerushOnMain: failed`, err);
-    return { stashed, rolledBack: false };
+    logError("meetings-db", `rollbackPerushOnMain: committing the uncommitted changes failed - not rolling back`, err);
+    return { checkpointed: false, rolledBack: false };
   }
+
+  let rollbackCommit: string | null;
+  try {
+    // `restore` (unlike `checkout <ref> -- path`) also removes files that were added after restoreCommit
+    await git(gitRoot, "restore", `--source=${restoreCommit}`, "--staged", "--worktree", "--", ...pathspec);
+    rollbackCommit = await commitPerushChanges(scope, rollbackMessage);
+  } catch (err) {
+    logError("meetings-db", `rollbackPerushOnMain: restoring failed`, err);
+    return { checkpointed, rolledBack: false };
+  }
+  logInfo("meetings-db", `rollbackPerushOnMain: done (checkpointed=${checkpointed}, ` +
+      `${rollbackCommit ? `committed ${rollbackCommit.slice(0, 8)}` : "nothing changed"})`);
+  return { checkpointed, rolledBack: true };
 }
