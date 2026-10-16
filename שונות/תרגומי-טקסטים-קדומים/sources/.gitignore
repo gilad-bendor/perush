@@ -1,0 +1,52 @@
+# Policy (see ../translation-guidelines.md § "Copyright and the public repository"):
+# this repository is PUBLIC. Raw sources stay on the local disk; git keeps what's needed to re-obtain and understand them.
+
+# 1. Large binaries – re-downloadable from the URL recorded in each folder's README.md
+*.pdf
+*.zip
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+*.gif
+*.djvu
+*.exe
+*.dll
+
+# 2. Copyrighted or licence-unclear content – only the README.md is tracked
+eBL/*/
+eBL-fragmentarium/*
+!eBL-fragmentarium/README.md
+!eBL-fragmentarium/Dynastic-Chronicle--ABC-18/
+eBL-fragmentarium/Dynastic-Chronicle--ABC-18/*
+!eBL-fragmentarium/Dynastic-Chronicle--ABC-18/README.md
+SEAL/*
+!SEAL/README.md
+Kovacs-1989/*
+!Kovacs-1989/README.md
+Livius/*
+!Livius/README.md
+George-2007--SOAS-score-XI/*
+!George-2007--SOAS-score-XI/README.md
+TheTorah--Day-2021--flood-article-he/*
+!TheTorah--Day-2021--flood-article-he/README.md
+Wasserman-Cohen-2026--Carmel-he/*
+!Wasserman-Cohen-2026--Carmel-he/README.md
+Wasserman-2020--The-Flood-Akkadian-Sources/*
+!Wasserman-2020--The-Flood-Akkadian-Sources/README.md
+Heidel-1946/*
+!Heidel-1946/README.md
+Schoyen-Collection/*
+!Schoyen-Collection/README.md
+Marquez-Rowe-2016--AuOr-34--MB-Atrahasis-Babylon/*
+!Marquez-Rowe-2016--AuOr-34--MB-Atrahasis-Babylon/README.md
+Reference-tools/eBL-API/raw/
+Comparative-studies/*/*
+!Comparative-studies/*/README.md
+LXX-Rahlfs-1935--el-wikisource/*
+!LXX-Rahlfs-1935--el-wikisource/README.md
+
+# 3. Bulk corpora – large, re-downloadable (see the folder README)
+ETCSL/_bulk/*
+!ETCSL/_bulk/README.md

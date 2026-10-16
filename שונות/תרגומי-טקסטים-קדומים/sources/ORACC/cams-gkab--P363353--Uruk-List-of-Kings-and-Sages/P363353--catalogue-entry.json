@@ -1,0 +1,76 @@
+{
+ "langs": "0x08000000",
+ "project": "The Geography of Knowledge in Assyria and Babylonia, 700-200 BC (AH/E509258/1). Project members Marie-Françoise Besnier (HPS, Cambridge), full-time researcher (from 1.iii.2008 to 31.xii.2012); Philippe Clancier (HPS, Cambridge), full-time researcher (from 1.ix.2007 to 31.viii.2009); Graham Cunningham (HPS, Cambridge), part-time senior researcher (from 1.ix.2007 to 30.ix.2011); Ruth Horry (HPS, Cambridge), occasional website consultant; Frances Reynolds, part-time researcher (from 1.ix.2007 to 31.x.2008); Eleanor Robson (HPS, Cambridge), co-director; Kathryn Stevens (Classics, Cambridge), occasional research assistant; Steve Tinney (Penn Museum, Philadelphia), co-director; Greta Van Buylaere (HPS, Cambridge), full-time researcher (from 1.x.2009 to 31.iii.2011); with additional contributions from Niek Veldhuis, Philip Jones and Henry Stadhouders",
+ "checked": "31/01/2009",
+ "credits": "Created by Eleanor Robson for the AHRC-funded GKAB Project, 2009 and released under the Creative Commons Attribution Share-Alike license 3.0. Please cite this page as http://oracc.org/cams/gkab/P363353",
+ "date_of_origin": "SE.147.02.10",
+ "date_remarks": "165 BCE 16 May  (Antiochus IV, year 11)",
+ "designation": "BagM Beih. 02, 089",
+ "editor": "Eleanor Robson",
+ "excavation_no": "W 20030/007",
+ "findspot_remarks": "Resh temple library",
+ "findspot_square": "Le XVI 3",
+ "funder": "UK Arts and Humanities Research Council",
+ "genre": "Scholarly",
+ "id_text": "P363353",
+ "language": "Akkadian",
+ "language_remarks": "Akkadian",
+ "last_modified": "18/07/2016 16:50:20",
+ "lemmed": "17/01/2009",
+ "material": "clay",
+ "museum_no": "IM —",
+ "object_type": "tablet",
+ "owner": "National Museum of Iraq, Baghdad, Iraq",
+ "period": "Seleucid",
+ "principal": "Eleanor Robson",
+ "proof-read": "27/01/2009",
+ "proof-reader": "Philippe Clancier",
+ "provenience": "Uruk",
+ "pleiades_id": "912986",
+ "pleiades_coord": "[45.638752,31.32446]",
+ "record_id": "191",
+ "repository": "DSpace@Cambridge, University of Cambridge",
+ "subgenre": "List of apkallu",
+ "subgenre_remarks": "list of apkallu and ummanu",
+ "text_remarks": "colophon",
+ "translit_ed": "16/01/2009",
+ "uploaded": "31/01/2009",
+ "user": "Eleanor Robson",
+ "bibliography__book_title": [
+  "The Pantheon of Uruk during the Neo-Babylonian Period",
+  "XVIII. vorlaufiger Bericht über die von dem Deutschen Archäologischen Institut und der Deutschen Orient-Gesellschaft aus Mitteln der Deutschen Forschungsgemeinschaft unternommenen Ausgrabungen in Uruk-Warka",
+  "Gesellschaft und Kultur im alten Vorderasien",
+  "Babylonische und assyrische Kolophone"
+ ],
+ "bibliography__id_biblio": [
+  "R000028",
+  "R000031",
+  "R000044",
+  "R000097",
+  "R000312"
+ ],
+ "bibliography__journal_title": [
+  "Journal of Ancient Near Eastern Religions"
+ ],
+ "bibliography__shortref": [
+  "Beaulieu 2003",
+  "van Dijk 1962",
+  "Klotchkoff 1982",
+  "Hunger 1968",
+  "Lenzi 2008"
+ ],
+ "bibliography__volume_number": [
+  "8"
+ ],
+ "pr_joins__pages": [
+  "113",
+  "44–52",
+  "101B"
+ ],
+ "supergenre": "LIT",
+ "xproject": "CDLI",
+ "uri": "http://cdli.ucla.edu/P363353",
+ "trans": [
+  "en"
+ ]
+}

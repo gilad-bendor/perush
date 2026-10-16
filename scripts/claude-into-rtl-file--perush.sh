@@ -33,7 +33,14 @@ TERMINAL_COLUMNS=100
 # control stream faithfully - so write it as a first line ("rows=50 columns=203") and
 # have "script" append (-a) after it. \$(...) is escaped so that it is evaluated in the
 # new window, whose size is what "claude" actually sees.
-SHELL_COMMAND="echo 'Output file:    $OUTPUT_FILE' ; cd $( dirname $( dirname "$0" ) ) && echo rows=\$(tput lines) columns=\$(tput cols) > $OUTPUT_FILE && script -Fa $OUTPUT_FILE $CLAUDE_COMMAND && exit"
+#
+# CLAUDE_SESSION_DIR (optional environment variable): a folder, relative to the repo root,
+# to run "claude" in instead of the repo root. The transcript is still written under the
+# repo root's "claude-sessions/" - hence the absolute OUTPUT_PATH.
+REPO_ROOT="$( cd "$( dirname "$0" )/.." && pwd )"
+OUTPUT_PATH="$REPO_ROOT/$OUTPUT_FILE"
+SESSION_DIR="$REPO_ROOT/${CLAUDE_SESSION_DIR:-.}"
+SHELL_COMMAND="echo 'Output file:    $OUTPUT_FILE' ; cd '$SESSION_DIR' && echo rows=\$(tput lines) columns=\$(tput cols) > '$OUTPUT_PATH' && script -Fa '$OUTPUT_PATH' $CLAUDE_COMMAND && exit"
 
 # The window is created, themed and sized *before* the command runs in it - otherwise
 # the command starts first and "tput" reports the size from before the resize.

@@ -1,0 +1,27 @@
+vol,letters,year,isbn,page,pdf,http,mb
+1,"A, Part 1",1964,9780918986061,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-1-part-1,https://isac-assets.s3.amazonaws.com/isac-publications/cad_a1.pdf,200,42.4
+1,"A, Part 2",1968,9780918986078,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-1-part-2,https://isac-assets.s3.amazonaws.com/isac-publications/cad_a2.pdf,200,54.5
+2,B,1965,9780918986085,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-2-b,https://isac-assets.s3.amazonaws.com/isac-publications/cad_b.pdf,200,38.0
+3,D,1959,9780918986092,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-3-d,https://isac-assets.s3.amazonaws.com/isac-publications/cad_d.pdf,200,22.0
+4,E,1958,9780918986108,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-4-e,https://isac-assets.s3.amazonaws.com/isac-publications/cad_e.pdf,200,44.8
+5,G,1956,9780918986115,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-5-g,https://isac-assets.s3.amazonaws.com/isac-publications/cad_g.pdf,200,15.5
+6,Ḫ,1956,9780918986122,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-6-h,https://isac-assets.s3.amazonaws.com/isac-publications/cad_h.pdf,200,26.1
+7,I–J,1960,9780918986139,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-7-i-j,https://isac-assets.s3.amazonaws.com/isac-publications/cad_i-j.pdf,200,33.7
+8,K,1971,9780918986146,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-8-k,https://isac-assets.s3.amazonaws.com/isac-publications/cad_k.pdf,200,60.8
+9,L,1973,9780918986153,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-9-l,https://isac-assets.s3.amazonaws.com/isac-publications/cad_l.pdf,200,26.9
+10,"M, Part 1",1977,9780918986160,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-10-m-part-1,https://isac-assets.s3.amazonaws.com/isac-publications/cad_m1.pdf,200,44.2
+10,"M, Part 2",1977,9780918986160,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-10-m-part-2,https://isac-assets.s3.amazonaws.com/isac-publications/cad_m2.pdf,200,31.7
+11,"N, Part 1",1980,9780918986177,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-11-n-part-1,https://isac-assets.s3.amazonaws.com/isac-publications/cad_n1.pdf,200,39.0
+11,"N, Part 2",1980,9780918986177,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-11-n-part-2,https://isac-assets.s3.amazonaws.com/isac-publications/cad_n2.pdf,200,39.6
+12,P,2005,9781885923356,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-12-p,https://isac-assets.s3.amazonaws.com/isac-publications/CAD_P.pdf,200,4.8
+13,Q,1982,9780918986245,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-13-q,https://isac-assets.s3.amazonaws.com/isac-publications/cad_q.pdf,200,32.6
+14,R,1999,9781885923141,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-14-r,https://isac-assets.s3.amazonaws.com/isac-publications/cad_r.pdf,200,4.3
+15,S,1984,9780918986320,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-15-s,https://isac-assets.s3.amazonaws.com/isac-publications/cad_s.pdf,200,39.4
+16,Ṣ,1962,9780918986184,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-16-s,https://isac-assets.s3.amazonaws.com/isac-publications/cad_s_tsade.pdf,200,26.5
+17,"Š, Part 1",1989,9780918986559,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-17-s-part-1,https://isac-assets.s3.amazonaws.com/isac-publications/cad_s_shin_1.pdf,200,48.9
+17,"Š, Part 2",1992,9780918986788,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-17-s-part-2,https://isac-assets.s3.amazonaws.com/isac-publications/cad_s_shin_2.pdf,200,44.0
+17,"Š, Part 3",1992,9780918986795,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-17-s-part-3,https://isac-assets.s3.amazonaws.com/isac-publications/cad_s_shin_3.pdf,200,40.1
+18,T,2006,9781885923424,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-18-t,https://isac-assets.s3.amazonaws.com/isac-publications/cad_t.pdf,200,4.5
+19,Ṭ,2006,9781885923431,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-19-t,https://isac-assets.s3.amazonaws.com/isac-publications/cad_tet.pdf,200,1.7
+20,U–W,2010,9781885923783,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-20-u-w,https://isac-assets.s3.amazonaws.com/isac-publications/cad_u_w.pdf,200,4.2
+21,Z,1961,9780918986191,https://isac.uchicago.edu/publications/chicago-assyrian-dictionary-volume-21-z,https://isac-assets.s3.amazonaws.com/isac-publications/cad_z.pdf,200,17.4
