@@ -1,0 +1,538 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- This page is automatically generated from XML data files. Please do not edit by hand. Instead, modify the source XML and regenerate. --><head><title>Oracc: The Open Richly Annotated Cuneiform Corpus
+	- ATF Structure Tutorial</title><link rel="stylesheet" type="text/css" media="print" href="../../../../css/print.css" /><link rel="stylesheet" type="text/css" media="screen,projection" href="../../../../css/screen.css" /><link rel="stylesheet" type="text/css" media="screen,print" href="/css/cuneify-ob.css" title="oldbabylonian" /><link rel="stylesheet" type="text/css" media="screen,print" href="/css/cuneify-na.css" title="neoassyrian" /><script type="text/javascript"><!--
+	var sRoot = '/doc';
+    // --></script><script type="text/javascript" src="/js/library.js"></script><meta http-equiv="pics-label" content='(pics-1.1 &#34;http://www.icra.org/ratingsv02.html&#34; l gen true for &#34;http://oracc.museum.upenn.edu../../../..&#34; r (nz 1 vz 1 lz 1 oz 1 cz 1))' /><link rel="shortcut icon" href="../../../../favicon.ico" type="image/x-icon" /><link rel="P3Pv1" href="../../../../w3c/p3p.xml" /><link rel="top" title="" href="../../../../" /><link rel="up" title="Oracc ATF Primer" href="../../../../help/editinginatf/primer/" /><link rel="next" title="ATF Inline Tutorial" href="../../../../help/editinginatf/primer/inlinetutorial/" /><meta name="generator" content="Oracc ESP" /><meta http-equiv="content-type" content="text/html; charset=UTF-8" /><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" /><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" /><meta name="DC.title" content="ATF Structure Tutorial" /><meta name="DC.title.alternative" content="Structure tutorial" /><meta name="DC.identifier" scheme="DCTERMS.URI" content="http://oracc.museum.upenn.edu../../../../help/editinginatf/primer/structuretutorial/" /><meta name="DC.identifier" content="oracc-museum-upenn-edu/page/atftut" />
+		<meta name="DC.publisher" content="Ocracc" />
+		<meta name="DC.language" scheme="ISO 639-2/T" content="eng" />
+		<meta name="DC.rights.copyright" content="Creative Commons SA 3.0 2013" />
+		<meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text" /> 	
+		<meta name="DC.format" content="text/html" />
+		
+	
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32878242-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></head><body><div id="Header"><span id="HeadTitle"><a href="../../../../index.html" id="d2e17625" accesskey="1">Oracc: The Open Richly Annotated Cuneiform Corpus</a></span></div><div id="Menu"><div id="MenuCaption">Main menu</div><ul><li class="only"><a href="../../../../index.html" id="d2e17632" accesskey="1" class="only">Oracc</a></li><li class="only"><a href="http://oracc.museum.upenn.edu/projectlist.html" id="d2e17634" class="only">Projects</a></li><li class="closed"><a href="../../../../search/index.html" id="d2e17636" title="Search Oracc" accesskey="3" class="closed">Search</a></li><li class="open"><a href="../../../../help/index.html" id="d2e17638" title="Help page overview" accesskey="4" class="open">Help</a><ul><li class="closed"><a href="../../../../help/visitingoracc/index.html" id="d2e17641" title="Visiting Oracc: how to browse, sort, search, display, and reuse" accesskey="5" class="closed">Visiting Oracc</a></li><li class="closed"><a href="../../../../help/nammuandemacs/index.html" id="d2e17643" title="Using Nammu and Emacs for Oracc work" class="closed">Nammu and Emacs</a></li><li class="open"><a href="../../../../help/editinginatf/index.html" id="d2e17645" title="Working with ATF to edit texts" class="open">Editing in ATF</a><ul><li class="closed"><a href="../../../../help/editinginatf/cdliatf/index.html" id="d2e17648" title="CDLI ATF Primer" class="closed">CDLI ATF</a></li><li class="open"><a href="../../../../help/editinginatf/primer/index.html" id="d2e17650" title="Oracc ATF Primer" class="open">Primer</a><ul><li class="only"><div id="SelfInMenu" class="only">Structure tutorial</div></li><li class="only"><a href="../../../../help/editinginatf/primer/inlinetutorial/index.html" id="d2e17656" title="ATF Inline Tutorial" class="only">Inline tutorial</a></li></ul></li><li class="only"><a href="../../../../help/editinginatf/quickreference/index.html" id="d2e17658" title="ATF Quick Reference" class="only">Quick reference</a></li><li class="only"><a href="../../../../help/editinginatf/labels/index.html" id="d2e17660" class="only">Labels</a></li><li class="only"><a href="../../../../help/editinginatf/translations/index.html" id="d2e17662" class="only">Translations</a></li><li class="closed"><a href="../../../../help/editinginatf/metrology/index.html" id="d2e17664" title="Numbers and Metrology in Oracc Corpora" class="closed">Metrology</a></li><li class="only"><a href="../../../../help/editinginatf/protocols/index.html" id="d2e17666" title="ATF Protocols" class="only">Protocols</a></li><li class="only"><a href="../../../../help/editinginatf/scores/index.html" id="d2e17668" class="only">Scores</a></li><li class="only"><a href="../../../../help/editinginatf/composites/index.html" id="d2e17670" title="ATF Composites Conventions" class="only">Composites</a></li><li class="only"><a href="../../../../help/editinginatf/commentary/index.html" id="d2e17672" title="Base Text and Commentary" class="only">Commentary</a></li><li class="only"><a href="../../../../help/editinginatf/linkage/index.html" id="d2e17674" title="ATF Linkage" class="only">Linkage</a></li><li class="only"><a href="../../../../help/editinginatf/bilinguals/index.html" id="d2e17677" class="only">Bilinguals</a></li><li class="only"><a href="../../../../help/editinginatf/lexicaltexts/index.html" id="d2e17679" title="ATF Lexical Conventions" class="only">Lexical texts</a></li><li class="only"><a href="../../../../help/editinginatf/maths/index.html" id="d2e17681" title="Mathematical Notations in Oracc corpora" class="only">Maths</a></li><li class="only"><a href="../../../../help/editinginatf/complexlayouts/index.html" id="d2e17683" title="Complex Layouts in ATF" class="only">Complex layouts</a></li><li class="only"><a href="../../../../help/editinginatf/advancedconventions/index.html" id="d2e17685" title="ATF Advanced Conventions" class="only">Advanced conventions</a></li></ul></li><li class="closed"><a href="../../../../help/languages/index.html" id="d2e17687" title="Languages in Oracc" class="closed">Languages</a></li><li class="closed"><a href="../../../../help/lemmatising/index.html" id="d2e17689" title="Lemmatising ATF Files" class="closed">Lemmatising</a></li><li class="closed"><a href="../../../../help/convertingatf/index.html" id="d2e17691" title="Converting ATF to and from other formats" class="closed">Converting ATF</a></li><li class="closed"><a href="../../../../help/glossaries/index.html" id="d2e17693" class="closed">Glossaries</a></li><li class="closed"><a href="../../../../help/portals/index.html" id="d2e17695" title="Building a Portal Website" class="closed">Portals</a></li><li class="closed"><a href="../../../../help/managingprojects/index.html" id="d2e17697" title="Oracc Manager Documentation" class="closed">Managing projects</a></li></ul></li><li class="closed"><a href="../../../../about/index.html" id="d2e17699" title="About Oracc: Essentials for Oracc users" accesskey="6" class="closed">About</a></li><li class="closed"><a href="../../../../tools/index.html" id="d2e17701" title="Oracc webtools" class="closed">Tools</a></li><li class="closed"><a href="../../../../opendata/index.html" id="d2e17703" title="Open Data" class="closed">opendata</a></li></ul></div><div id="Content"><div id="Breadcrumb"><a href="../../../../index.html" id="d2e17706" accesskey="1">Oracc</a> &#187; <a href="../../../../help/index.html" id="d2e17708" title="Help page overview" accesskey="4">Help</a> &#187; <a href="../../../../help/editinginatf/index.html" id="d2e17710" title="Working with ATF to edit texts">Editing in ATF</a> &#187; <a href="../../../../help/editinginatf/primer/index.html" id="d2e17712" title="Oracc ATF Primer">Primer</a> &#187; Structure tutorial</div><h1 id="d2e17714">ATF Structure Tutorial</h1><div id="innerContent">
+    <p class="firstpara" id="d2e17718">This document gives a tutorial on how to type the
+    block structure features of texts in ATF, the ASCII Transliteration
+    Format.</p>
+
+<a id="h_introduction" name="h_introduction"></a><h2 id="d2e17722">Introduction</h2>
+<p id="d2e17725">We provide a simple introduction to typing ATF
+texts, describing the more common features first and filling in the
+details later.  Before explaining any specifics, here is a simple
+typical example of an ATF text:</p>
+<pre class="cookbook" id="d2e17728">
+&#38;P555555 = Some Publication 32
+@obverse
+1. 1(di&#353;) udu ba-ug₇
+$ reverse blank
+</pre>
+<p id="d2e17731">This example illustrates the four of the most common types of lines
+in an ATF text:</p>
+<dl id="d2e17735">
+<dt id="d2e17737">&#38;-lines</dt>
+<dd id="d2e17740">Every ATF text must start with an <code id="d2e17742">&#38;-lines</code>
+("and-lines") which normally gives the CDLI P-identifier and should
+also have a human-readable name following it after an '=' sign.</dd>
+<dt id="d2e17746">@-lines</dt>
+<dd id="d2e17749">Divisions in the text are specified using lines that start with an
+<code id="d2e17751">@</code> sign ("at-lines").  These are used to indicate object
+types, surfaces, divisions and columns.</dd>
+<dt id="d2e17755">$-lines</dt>
+<dd id="d2e17759">Descriptive asides concerning the preservation or state of the
+text are given using <code id="d2e17761">$-lines</code> ("dollar lines").  These
+look like ordinary sequences of words but they may be subject to
+strict rules.</dd>
+<dt id="d2e17765">Text lines</dt>
+<dd id="d2e17768">Lines beginning with non-spaces followed by a period followed by
+one or more spaces are lines of text.  The rules for transliteration
+are given in the <a href="../../../../help/editinginatf/primer/inlinetutorial/index.html" id="d2e17770" title="ATF Inline Tutorial">ATF Grapheme
+tutorial</a>.</dd>
+</dl>
+
+<a id="h_linetypes" name="h_linetypes"></a><h2 id="d2e17776">Line-types</h2>
+
+<a id="h_lines" name="h_lines"></a><h2 id="d2e17780">#-lines</h2>
+
+<p id="d2e17783">The other quite common type of line in an ATF file begins with the
+hash sign (<code id="d2e17785">#</code>).  There are two kinds of #-line: protocols
+and comments.</p>
+
+<a id="h_protocols" name="h_protocols"></a><h3 id="d2e17791">Protocols</h3>
+<p id="d2e17794">Protocols are statements which are interpreted or stored by the ATF
+processor but are not part of the text edition proper.  Protocols are
+all named and may trigger special processing within the ATF
+processor.</p>
+
+<p id="d2e17797">The details of protocols are beyond the scope of this tutorial; for
+now, it is enough to know that they look like this:</p>
+
+<pre class="cookbook" id="d2e17800">
+&#38;P123321 = Some Akkadian Text
+#atf: lang akk-x-oldbab
+1. i-na AN{+e}
+#note: This is a contrived note.</pre>
+
+<p id="d2e17803">Most protocols are a single line and do not require
+a blank line after them to separate them from a following protocol
+(the one exception is <code id="d2e17805">#note:</code>).</p>
+
+<p id="d2e17809">More information on protocols, what they are, where they are
+allowed and the rules about ordering of protocols is available in the
+<a href="../../../../help/editinginatf/protocols/index.html" id="d2e17811" title="ATF Protocols">protocols manual</a>.</p>
+
+
+
+<a id="h_comments" name="h_comments"></a><h3 id="d2e17817">Comments</h3>
+
+<p id="d2e17820">Comments are asides which are not part of the text edition or the
+annotation; they are useful for keeping odd bits of information in the
+file without it getting in the way of the text edition or
+annotation.</p>
+
+<p id="d2e17823">Comments are indicated in ATF by one or more lines beginning with
+the hash character (<code id="d2e17825">#</code>).</p>
+
+<p id="d2e17829">Comments look like protocols in that they begin with a hash-sign,
+but they may not begin with the sequence hash-name-colon.  Comments
+may be included within text transliterations but not before the first
+text in a file.  Comments must always follow any protocols which occur
+adjacent to them.</p>
+
+<p id="d2e17832">A sequence of lines beginning with hash-signs is a multi-line
+comment.  To separate multiple comments to the same line use a blank
+line in the ATF file.</p>
+
+<pre class="cookbook" id="d2e17836">
+1. a
+#a simple comment
+
+2. a
+#a longer comment which somewhat artificially extends
+#over multiple lines
+
+3. a
+#one comment to line 3.
+
+#another comment to line 3.
+
+4. a
+#Comments look a bit like protocols but there is no chance of
+#confusion: the ATF processor's scanning rules take care of that.
+
+5. a
+#lem: a[water]
+#note: If you want a comment to appear in the displayed text-edition 
+#use the '#note:' protocol instead.
+
+#and note that any comment must follow any other protocol, including
+#'#note:'.
+</pre>
+
+<p id="d2e17839">You can include note marks in the transliteration and after an
+<code id="d2e17841">#note:</code> by putting the note mark between caret signs
+(e.g., <code class="cookbook" id="d2e17844">^1^</code>).  You can also specify that
+a note corresponds to the label of a text line (or a range) by using
+the <code id="d2e17847">@notelabel{...}</code> notation, e.g., <code class="cookbook" id="d2e17850">#note: @notelabel{i 1} A note to column 1 line
+1.</code>.</p>
+
+<a id="h_lines" name="h_lines"></a><h2 id="d2e17855"><a id="andlines" name="andlines"><span id="highlight_andlines"></span></a>&#38;-lines</h2>
+
+<p id="d2e17859">&#38;-lines are used to introduce a new text and consist of two
+parts: the ID and the name.</p>
+
+<p id="d2e17862">For transliterations of exemplars, the ID is a 'P' followed by six
+digits, e.g., P123456.  This ID is assigned by CDLI and is the
+reference ID of the object in the main CDLI catalog; to get IDs for
+objects not in the CDLI catalog send an e-mail to
+cdli@cdli.ucla.edu.</p>
+
+<p id="d2e17866">The name of the text should be identical with the 'Designation'
+field in the CDLI main catalog; the ATF processor detects mismatches
+and reports the correct name.  This mechanism is designed to provide a
+check that the P-number in the ID actually references the text the
+transliterator intends.</p>
+
+
+<p id="d2e17869">In ATF the two parts of an &#38;-line are separated by
+space-equals-space, like this:</p>
+<pre class="cookbook" id="d2e17872">
+&#38;P000001 = ATU 3, pl. 011, W 6435,a</pre>
+<a id="h_lines" name="h_lines"></a><h2 id="d2e17876">@-lines</h2>
+
+<p id="d2e17879">@-lines are used for structural tags.  Several
+kinds of structure may be indicated using this mechanism: physical
+structure, e.g., objects, surfaces; manuscript structure, i.e.,
+columns; and document structure, e.g., divisions and colophons.  For
+clarity, we describe here only the structural features which are
+permitted in object transliterations, i.e., texts with an ID beginning
+with <code id="d2e17881">P</code>.  Documentation of structural conventions for
+composite texts is given in the <a href="../../../../help/editinginatf/composites/index.html" id="d2e17884" title="ATF Composites Conventions">composites
+manual</a>.</p>
+
+
+<a id="h_objects" name="h_objects"></a><h3 id="d2e17890">Objects</h3>
+
+<p id="d2e17893">The kind of object on which the inscription being transliterated is
+written is designated using one of the following tags:</p>
+
+<dl id="d2e17896">
+<dt id="d2e17898"><code class="cookbook" id="d2e17899">@tablet</code></dt>
+<dd id="d2e17902">The default, and therefore optional; object is a tablet.</dd>
+<dt id="d2e17905"><code class="cookbook" id="d2e17906">@envelope</code></dt>
+<dd id="d2e17909">Tablets and envelopes with the same P number can be transliterated
+separately using this tag.</dd>
+<dt id="d2e17912"><code class="cookbook" id="d2e17913">@prism</code></dt>
+<dd id="d2e17917">Object is a prism.</dd>
+<dt id="d2e17920"><code class="cookbook" id="d2e17921">@bulla</code></dt>
+<dd id="d2e17924">Object is a bulla.</dd>
+<dt id="d2e17927"><code class="cookbook" id="d2e17928">@fragment</code></dt>
+<dd id="d2e17931">Object is a fragment, with a fragment name (e.g., a letter)
+following the tag; may be used more than once to transliterate
+multiple fragments of an object, e.g.:
+<pre class="cookbook" id="d2e17933">
+&#38;P212121 = Some Fragmentary Object
+@fragment a
+1. a
+@fragment b
+1. a</pre></dd>
+<dt id="d2e17936"><code class="cookbook" id="d2e17937">@object</code></dt>
+<dd id="d2e17941">The generic object tag which must be followed by the type of the
+object, e.g. <code class="cookbook" id="d2e17943">@object Stone wig</code>.</dd>
+</dl>
+
+<a id="h_seals" name="h_seals"></a><h3 id="d2e17949">Seals</h3>
+
+<p id="d2e17952">A transliteration of the text inscribed on a physical seal object
+should be handled using the <code id="d2e17954">@object</code> tag:</p>
+
+<pre class="cookbook" id="d2e17959">
+&#38;P333444 = Some Seal
+@object seal
+1. da-da
+2. dumu du-du</pre>
+
+
+<a id="h_surfaces" name="h_surfaces"></a><h3 id="d2e17963">Surfaces</h3>
+
+<p id="d2e17966">Surfaces are principally the physical surfaces:</p>
+
+<dl id="d2e17969">
+<dt id="d2e17971"><code class="cookbook" id="d2e17972">@obverse</code>,
+    <code class="cookbook" id="d2e17975">@reverse</code></dt>
+<dd id="d2e17978">Obverse and reverse.</dd>
+<dt id="d2e17981"><code class="cookbook" id="d2e17982">@left</code>,
+    <code class="cookbook" id="d2e17985">@right</code>,
+    <code class="cookbook" id="d2e17988">@top</code>,
+    <code class="cookbook" id="d2e17991">@bottom</code></dt>
+<dd id="d2e17994">Specifiable edges, left right, top and bottom (as seen when
+looking at obverse of tablet).</dd>
+<dt id="d2e17997"><code class="cookbook" id="d2e17998">@face</code></dt>
+<dd id="d2e18002">Conventional designation for surfaces of a prism; must be followed
+by single lowercase letter indicating the face, e.g.:
+<pre class="cookbook" id="d2e18004">
+&#38;P123321 = Some Prism
+@prism
+@face a
+1. a
+@face b
+1. e</pre></dd>
+<dt id="d2e18007"><code class="cookbook" id="d2e18008">@surface</code></dt>
+<dd id="d2e18011">Generic surface tag which must be followed by name of surface,
+e.g.: <code class="cookbook" id="d2e18013">@surface shoulder</code>; <code class="cookbook" id="d2e18016">@surface side a</code>.</dd>
+<dt id="d2e18020"><code class="cookbook" id="d2e18021">@edge</code></dt>
+<dd id="d2e18024">Generic edge tag; may be followed by single lowercase letter
+to name the edge similarly to <code id="d2e18026">@face</code>.</dd>
+</dl>
+
+<a id="h_sealings" name="h_sealings"></a><h3 id="d2e18032">Sealings</h3>
+
+<p id="d2e18036">A transliteration of a sealing should be handled using the
+<code id="d2e18038">@seal</code> tag included like a surface after the
+transliteration of the object on which the sealing occurs:</p>
+
+<pre class="cookbook" id="d2e18042">
+&#38;P343434 = Some Sealed Tablet
+1. a
+$ seal 1
+
+@seal 1
+1. du-du</pre>
+
+<p id="d2e18045">The use of <code id="d2e18047">$ seal</code> anticipates the discussion of
+$-lines below; this mechanism can be used to indicate which sealings
+occur where on an object.</p>
+<a id="h_columns" name="h_columns"></a><h3 id="d2e18052">Columns</h3>
+
+<p id="d2e18055">Columns are indicated with the <code id="d2e18057">@column</code> tag, which may
+be omitted for single-column texts.  Column numbers must be given in
+arabic numerals:</p>
+<pre class="cookbook" id="d2e18062">
+&#38;P545454 = Some Columnar Text
+@column 1
+1. a
+@column 2
+1. e</pre>
+
+<a id="h_status" name="h_status"></a><h3 id="d2e18066">Status</h3>
+<p id="d2e18069">The status of some of the features indicated with @-lines can be
+indicated in a manner similar to that of graphemes; the notation is
+intended to be natural and to follow Assyriological conventions:</p>
+<pre class="cookbook" id="d2e18072">
+@obverse?</pre>
+<p id="d2e18075">Meaning: status of obverse/reverse uncertain</p>
+
+<pre class="cookbook" id="d2e18079">
+@reverse!*</pre>
+<p id="d2e18082">Meaning: collated; reverse correct despite designation in publication</p>
+
+<p id="d2e18085">Primes can be used where this makes sense:</p>
+<pre class="cookbook" id="d2e18088">
+@face a'
+
+@column 3'
+</pre>
+<a id="h_headings" name="h_headings"></a><h3 id="d2e18092">Headings</h3>
+
+<p id="d2e18096">Transliterations and composites can both contain headings, which take the form <code id="d2e18098">@h&#60;DIGIT&#62;</code>, where DIGIT is the outline-level of the heading, normally 1, 2 or 3.</p>
+
+<a id="h_milestones" name="h_milestones"></a><h3 id="d2e18103">Milestones</h3>
+<p id="d2e18106">For technical reasons it is impossible to interweave physical
+structure (of the kind described above for transliterated objects) and
+document structure (e.g., paragraph divisions).  This limitation is
+resolved by recourse to milestones.</p>
+
+<a id="h_divisions" name="h_divisions"></a><h3 id="d2e18110">Divisions</h3>
+
+<p id="d2e18113">Documentary divisions in a transliterated object are given using
+the <code id="d2e18115">@m</code> tag, with the milestone type given after an equals
+sign and the division type following; an optional division name or
+number may follow the division type:</p>
+
+<pre class="cookbook" id="d2e18120">
+@m=division paragraph 1
+
+@m=division colophon
+</pre>
+
+<a id="h_discourse" name="h_discourse"></a><h3 id="d2e18124">Discourse</h3>
+
+<p id="d2e18127">Simple support for discourse elements in administrative and scholarly
+texts is provided using shorthands which are also implemented as
+milestones.  These shorthands are:</p> 
+<ul id="d2e18130">
+<li id="d2e18132"><code class="cookbook" id="d2e18133">@catchline</code></li>
+<li id="d2e18136"><code class="cookbook" id="d2e18137">@colophon</code></li>
+<li id="d2e18140"><code class="cookbook" id="d2e18141">@date</code></li>
+<li id="d2e18144"><code class="cookbook" id="d2e18145">@signatures</code> and 
+    <code class="cookbook" id="d2e18148">@signature</code></li>
+<li id="d2e18151"><code class="cookbook" id="d2e18152">@summary</code></li>
+<li id="d2e18156"><code class="cookbook" id="d2e18157">@witnesses</code></li>
+</ul>
+
+<p id="d2e18161">These milestones must be specified between lines. If you need to mark a
+milestone in the middle of a line then you can split the line into two 
+(labeled, e.g., a and b) at the milestone.</p>
+<pre class="example" id="d2e18165">
+&#38;P787878 = Some Administrative Text
+1. 1(di&#353;) udu
+2. da-da
+3. &#353;u ba-ti
+@date
+4. u₄ 1-kam
+@left
+@summary
+1. 1(di&#353;) udu
+</pre>
+
+<pre class="example" id="d2e18168">
+&#38;P908908 = A Scholarly Text
+@colophon
+1a. UNUG{ki} 
+@date
+1b. {iti}AB U₄ 1-KAM₂
+2. MU 1.39@v-KAM₂ {m}an-ti-ʾi-ku-su LUGAL 
+</pre>
+<a id="h_lines" name="h_lines"></a><h2 id="d2e18172">$-lines</h2>
+<p id="d2e18175">$-lines are used to indicate information about the state of the
+text or object, or to describe features on the object which are not
+part of the transliteration proper.  They come in two flavours: strict
+and loose.</p>
+<p id="d2e18178"><strong id="d2e18179">Strict</strong> $-lines are subject to the restrictions in
+the table below; strict $-lines can be interpreted in their entirety
+by the ATF processor and the interpreted information can then be used
+by other programs.  Strict $-lines are the best practice.</p>
+<p id="d2e18184"><strong id="d2e18185">Loose</strong> $-lines are indicated by putting parentheses
+around the contents of the $-line.  This is a facility provided to
+enable annotation of features which are not covered by the strict
+$-line specification.  If the ATF processor detects that a loose
+$-line actually meets the criteria defined for strict $-lines it gives
+an advisory notice that the parentheses should be removed.</p>
+<p id="d2e18189">$-lines and comments are two quite different facilities, but
+experience has shown that transliterators can confuse the two.
+Comments are for information which does not belong in the
+transliteration and description of the text; comments are not
+displayed when the text is formatted for display or print.  $-lines
+are for information which is integral to an understanding of the
+textual data; $-lines are included when the text is displayed or
+printed.</p>
+<a id="h_seal" name="h_seal"></a><h3 id="d2e18193">Seal</h3>
+<p id="d2e18196">A particular use of $-lines is to indicate that a seal is used on
+an object; the form is:</p>
+<pre class="example" id="d2e18199">$ seal &#60;N&#62;</pre>
+<p id="d2e18203">Where <code id="d2e18205">N</code> is a number indicating which seal is used;
+if a transliteration of the seal is also given using the
+<code id="d2e18208">@seal</code> heading, the number following <code id="d2e18211">$ seal</code>
+should correspond to the number following <code id="d2e18214">@seal</code>.  See the
+<a href="#sh_seals" id="d2e18217" title="Jump to  on this page" onclick="if ( window.highlight ) window.setTimeout ( 'highlight ()', 100 )" onkeypress="if ( window.highlight ) window.setTimeout ( 'highlight ()', 100 )">example above.</a></p>
+
+<a id="h_state" name="h_state"></a><h3 id="d2e18221">State</h3>
+<p id="d2e18224">Most $-lines are used to give information about the state of the
+object being transliterated.  The conventions for this can be
+summarized as follows:</p>
+<table class="pretty" id="d2e18227">
+<caption id="d2e18229">Summary of Strict $-line Conventions for States</caption>
+<thead id="d2e18232">
+<tr id="d2e18234"><th id="d2e18235">Qualification</th><th id="d2e18237">Extent<sup id="d2e18239">1</sup></th><th id="d2e18241">Scope</th><th id="d2e18243">State</th></tr>
+</thead>
+<tfoot id="d2e18247">
+<tr id="d2e18249"><td colspan="5" id="d2e18250"><sup id="d2e18251">1</sup>The extent <code id="d2e18254">N</code> may be a
+number such as 1 or 5; a <code id="d2e18257">RANGE</code> gives two numbers
+separated by a hyphen, e.g., 3-5.</td></tr>
+<tr id="d2e18261"><td colspan="5" id="d2e18262"><sup id="d2e18263">2</sup><code id="d2e18265">OBJECT</code> is any object
+specifier as described above, e.g., tablet, object etc.</td></tr>
+<tr id="d2e18269"><td colspan="5" id="d2e18270"><sup id="d2e18271">3</sup><code id="d2e18273">SURFACE</code> is any surface
+specifier as described above, e.g., obverse, left etc.</td></tr>
+</tfoot>
+<tbody id="d2e18278">
+<tr id="d2e18280">
+<td id="d2e18282">
+at least<br id="d2e18284" />
+at most<br id="d2e18286" />
+about
+</td>
+<td id="d2e18289">
+n<br id="d2e18291" />
+several<br id="d2e18293" />
+some<br id="d2e18295" />
+NUMBER<br id="d2e18297" />
+RANGE<br id="d2e18299" />
+rest of<br id="d2e18302" />
+start of<br id="d2e18304" />
+beginning of<br id="d2e18306" />
+middle of<br id="d2e18308" />
+end of<br id="d2e18310" />
+</td>
+<td id="d2e18313">
+OBJECT<sup id="d2e18315">2</sup><br id="d2e18317" />
+SURFACE<sup id="d2e18319">3</sup><br id="d2e18321" />
+column<br id="d2e18323" />
+columns<br id="d2e18325" />
+line<br id="d2e18328" />
+lines<br id="d2e18330" />
+case<br id="d2e18332" />
+cases<br id="d2e18334" />
+surface
+</td>
+<td id="d2e18337">
+blank<br id="d2e18339" />
+broken<br id="d2e18341" />
+effaced<br id="d2e18343" />
+illegible<br id="d2e18345" />
+missing<br id="d2e18347" />
+traces
+</td>
+</tr>
+</tbody>
+</table>
+<a id="h_rulings" name="h_rulings"></a><h3 id="d2e18354">Rulings</h3>
+<p id="d2e18358">$-lines are also used to indicate noteworthy rulings on the
+tablet; ordinary case- or line-ruling should not be indicated with a
+$-line, but where a scribe has used a ruling to give additional
+information about the document structure this should be noted as:</p>
+<pre class="listing" id="d2e18361">
+(single | double | triple)   ruling
+</pre>
+<a id="h_examples" name="h_examples"></a><h3 id="d2e18365">Examples</h3>
+<p id="d2e18368">Strict $-lines look like this:</p>
+<pre class="cookbook" id="d2e18371">
+$ 3 lines blank
+$ rest of obverse missing
+</pre>
+<p id="d2e18375">A loose $-line looks like this:</p>
+<pre class="cookbook" id="d2e18378">
+$ (head of statue broken)
+</pre>
+<p id="d2e18381">A ruling $-line looks like this:</p>
+<pre class="cookbook" id="d2e18384">
+$ double ruling
+</pre>
+<a id="h_images" name="h_images"></a><h3 id="d2e18388">Images</h3>
+<p id="d2e18392">Inline images can be specified using the form:</p>
+<pre class="example" id="d2e18395">
+$ (image N = &#60;text&#62;)
+</pre>
+<p id="d2e18398">Where N is an image number consisting of digits followed by
+optional lowercase letters from a to z, and &#60;text&#62; is free text,
+giving a label for the image (which is copied through to the XHTML
+'alt' attribute on the &#60;img&#62; tag).</p>
+
+<pre class="cookbook" id="d2e18401">
+$ (image 1 = numbered diagram of triangle)
+</pre>
+
+<p id="d2e18404">At present, the implementation only works for XHTML which is
+produced within a project.  The ATF processor constructs a file name
+consisting of the text ID and the image's N value, joined by an at
+sign (e.g., <code id="d2e18406">P123456@1</code>).  The XHTML producer then emits an
+<code id="d2e18409">&#60;img&#62;</code> tag with the <code id="d2e18412">src</code> attribute set to
+<code id="d2e18415">/&#60;PROJECT&#62;/&#60;FILENAME&#62;.png</code>.</p>
+
+<p id="d2e18419">Thus, in the present implementation, there must exist an
+appropriately named file in the PNG graphics format residing in the
+project's <code id="d2e18421">images</code> directory.  The implementation is
+expected to support a more sophisticated locator mechanism in the
+future.</p>
+<a id="h_textlines" name="h_textlines"></a><h2 id="d2e18427">Text Lines</h2>
+<p id="d2e18430">Lines of transliterated text begin with a sequence of non-space
+characters followed by a period and a space (these are typically
+numbers, but that is not a requirement):</p>
+<pre class="cookbook" id="d2e18433">
+1.   a
+a+1. e
+2'.  i</pre>
+
+
+<p id="d2e18436">In ATF, lines containing only spaces are ignored; lines
+beginning with a space are continuation lines and the newline and
+leading spaces are dropped by the ATF processor:</p>
+<pre class="cookbook" id="d2e18439">
+1. a a a a 
+   a a a</pre>
+
+
+<p id="d2e18443">The content of lines is defined principally by the <a href="../../../../help/editinginatf/primer/inlinetutorial/index.html" id="d2e18445" title="ATF Inline Tutorial">Grapheme Description Language</a>, but there are
+some line-related ATF features which are not necessary for many users
+and which are dealt with in the <a href="../../../../help/editinginatf/advancedconventions/index.html" id="d2e18448" title="ATF Advanced Conventions">advanced
+documentation</a>.</p>
+
+18 Dec 2019
+<span class="obfuscatedEmailAddress" id="d2e18454">osc at oracc dot org</span>
+</div><div id="Authors"><p id="d2e18458">Steve Tinney</p></div><div id="CiteAs"><p id="d2e18461">Steve Tinney, 'ATF Structure Tutorial', <i id="d2e18463">Oracc: The Open Richly Annotated Cuneiform Corpus</i>, Oracc,  2019 [http://oracc.museum.upenn.edu/doc/help/editinginatf/primer/structuretutorial/<!--#config timefmt=", accessed %d %B %Y" --><!--#echo var="DATE_LOCAL" -->]</p></div><div id="EndContentSpace">&#160;</div></div><div id="BackToTop"><a href="#top" id="d2e18474" onclick="if ( window.highlight ) window.setTimeout ( 'highlight ()', 100 )" onkeypress="if ( window.highlight ) window.setTimeout ( 'highlight ()', 100 )">Back to top ^^</a></div><div id="FooterWhole">&#160;</div><div id="FooterRight"></div><div id="FooterLeft">
+<p><span class="imageinline"><a href="http://creativecommons.org/licenses/by-sa/3.0/" class="external" target="_blank" id="d2e18483" title="Link opens in new window: Creative Commons Attribution Share-Alike license"><img src="../../../../images/footer/cc88x31.png" alt="" id="d2e18484" /></a></span> Released under a <a href="../../../../about/licensing/index.html" id="d2e18486" title="Licensing statement" accesskey="8">Creative Commons Attribution Share-Alike license 3.0</a>, 2014. 
+<span class="imageinline"><a href="http://www.facebook.com/opencuneiform" class="external" target="_blank" id="d2e18490" title="Link opens in new window"><img src="../../../../images/footer/f_logo.png" alt="" id="d2e18491" /></a><span class="externallinktext"> [http://www.facebook.com/opencuneiform]</span></span> 
+<span class="imageinline"><a href="http://oracc.blogspot.com" class="external" target="_blank" id="d2e18494" title="Link opens in new window"><img src="../../../../images/footer/blogspot-icon.png" alt="" id="d2e18495" /></a><span class="externallinktext"> [http://oracc.blogspot.com]</span></span> 
+<span class="imageinline"><a href="http://www.twitter.com/oracctivity" class="external" target="_blank" id="d2e18498" title="Link opens in new window"><img src="../../../../images/footer/twitter-bird-light-bgs.png" alt="" id="d2e18499" /></a><span class="externallinktext"> [http://www.twitter.com/oracctivity]</span></span><br />
+<small>Oracc uses cookies only to collect Google Analytics data. Read more <a href="../../../../about/cookies/index.html" id="d2e18505" title="Cookies" accesskey="7">here</a>; see the stats <a href="http://www.seethestats.com/site/oracc.museum.upenn.edu" class="external" target="_blank" id="d2e18508" title="Link opens in new window">here</a><span class="externallinktext"> [http://www.seethestats.com/site/oracc.museum.upenn.edu]</span>; opt out <a href="http://tools.google.com/dlpage/gaoptout" class="external" target="_blank" id="d2e18511" title="Link opens in new window">here</a>.</small></p>
+</div><div id="URL">http://oracc.museum.upenn.edu/doc/help/editinginatf/primer/structuretutorial/</div></body>
+</html>

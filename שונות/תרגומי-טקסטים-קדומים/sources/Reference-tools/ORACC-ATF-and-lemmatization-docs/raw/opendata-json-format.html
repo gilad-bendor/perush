@@ -1,0 +1,530 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- This page is automatically generated from XML data files. Please do not edit by hand. Instead, modify the source XML and regenerate. --><head><title>Oracc: The Open Richly Annotated Cuneiform Corpus
+	- Oracc JSON Data: A brief introduction for programmers</title><link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" /><link rel="stylesheet" type="text/css" media="screen,projection" href="../../css/screen.css" /><link rel="stylesheet" type="text/css" media="screen,print" href="/css/cuneify-ob.css" title="oldbabylonian" /><link rel="stylesheet" type="text/css" media="screen,print" href="/css/cuneify-na.css" title="neoassyrian" /><script type="text/javascript"><!--
+	var sRoot = '/doc';
+    // --></script><script type="text/javascript" src="/js/library.js"></script><meta http-equiv="pics-label" content='(pics-1.1 &#34;http://www.icra.org/ratingsv02.html&#34; l gen true for &#34;http://oracc.museum.upenn.edu../..&#34; r (nz 1 vz 1 lz 1 oz 1 cz 1))' /><link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" /><link rel="P3Pv1" href="../../w3c/p3p.xml" /><link rel="top" title="" href="../../" /><link rel="up" title="Open Data" href="../../opendata/" /><link rel="prev" title="Oracc OIDS" href="../../opendata/oids/" /><meta name="generator" content="Oracc ESP" /><meta http-equiv="content-type" content="text/html; charset=UTF-8" /><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" /><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" /><meta name="DC.title" content="Oracc JSON Data: A brief introduction for programmers" /><meta name="DC.title.alternative" content="json" /><meta name="DC.identifier" scheme="DCTERMS.URI" content="http://oracc.museum.upenn.edu../../opendata/json/" /><meta name="DC.identifier" content="oracc-museum-upenn-edu/page/json" />
+		<meta name="DC.publisher" content="Ocracc" />
+		<meta name="DC.language" scheme="ISO 639-2/T" content="eng" />
+		<meta name="DC.rights.copyright" content="Creative Commons SA 3.0 2013" />
+		<meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text" /> 	
+		<meta name="DC.format" content="text/html" />
+		
+	
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32878242-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></head><body><div id="Header"><span id="HeadTitle"><a href="../../index.html" id="d2e71479" accesskey="1">Oracc: The Open Richly Annotated Cuneiform Corpus</a></span></div><div id="Menu"><div id="MenuCaption">Main menu</div><ul><li class="only"><a href="../../index.html" id="d2e71486" accesskey="1" class="only">Oracc</a></li><li class="only"><a href="http://oracc.museum.upenn.edu/projectlist.html" id="d2e71488" class="only">Projects</a></li><li class="closed"><a href="../../search/index.html" id="d2e71490" title="Search Oracc" accesskey="3" class="closed">Search</a></li><li class="closed"><a href="../../help/index.html" id="d2e71492" title="Help page overview" accesskey="4" class="closed">Help</a></li><li class="closed"><a href="../../about/index.html" id="d2e71494" title="About Oracc: Essentials for Oracc users" accesskey="6" class="closed">About</a></li><li class="closed"><a href="../../tools/index.html" id="d2e71496" title="Oracc webtools" class="closed">Tools</a></li><li class="open"><a href="../../opendata/index.html" id="d2e71498" title="Open Data" class="open">opendata</a><ul><li class="only"><a href="../../opendata/oids/index.html" id="d2e71501" title="Oracc OIDS" class="only">OIDs</a></li><li class="only"><div id="SelfInMenu" class="only">json</div></li></ul></li></ul></div><div id="Content"><div id="Breadcrumb"><a href="../../index.html" id="d2e71507" accesskey="1">Oracc</a> &#187; <a href="../../opendata/index.html" id="d2e71509" title="Open Data">opendata</a> &#187; json</div><h1 id="d2e71511">Oracc JSON Data: A brief introduction for programmers</h1><div id="innerContent">
+
+<a id="h_json" name="h_json"></a><h2 id="d2e71516">JSON</h2>
+
+<p id="d2e71519">Oracc makes much of its data available in JSON format, and more JSON data is planned.  All Oracc JSON files consist of a single object which have a "type" member and, in the case of project data, a "project" member.  The data structure for each type is described here.</p>
+
+<a id="h_topleveloraccdata" name="h_topleveloraccdata"></a><h3 id="d2e71523">Top-level Oracc Data</h3>
+
+<p id="d2e71526">Two files are provided at the top level: a simple list of public projects (projects.json) and a complex list of public projects analogous to the one-page listing of projects with blurbs (projectlist.json). In each case, these can be retrieved by prefixing them with an Oracc server name, e.g., http://oracc.org/projects.json or http://oracc.museum.upenn.edu/projects.json.</p>
+
+<dl id="d2e71530">
+<dt id="d2e71532">projects.json: type "projects"</dt>
+<dd id="d2e71535">Provides a simple list of project names which can be concatenated to an Oracc server name to provide the base URL for retrieving additional JSON objects:
+<pre id="d2e71537">
+{
+        "type": "projects",
+        "public": [
+                "aemw/alalakh/idrimi",
+                "amgg",
+                "armep",
+                "arrim",
+</pre>
+<p id="d2e71540">The <code id="d2e71542">public</code> array gives the project names in a form suitable for concatenating to the <code id="d2e71545">http://</code> URL for an Oracc server.  You can find the names of JSON files available for a project in the manifest, for which see below.</p>
+</dd>
+
+<dt id="d2e71550">projectlist.json: type "projectlist"</dt>
+<dd id="d2e71553">Provides a version of the data used in the project list at http://oracc.org/projectlist.html:
+<pre id="d2e71555">
+{
+        "type": "projectlist",
+        "projects": [{
+                "pathname": "rimanum",
+                "name": "The House of Prisoners",
+                "abbrev": "Rīm-Anum",
+                "blurb": "Rīm-Anum, king of Uruk (ca. 1741&#8211;1739 BC) revolted against Samsuiluna of Babylon, son of Hammurapi, and enjoyed a short-lived independence. The archive edited in this project derives from the house of prisoners (bīt asiri) that kept the prisoners of war. The editions and translations were prepared by Andrea Seri and accompanies her book \"The House of Prisoners\" (2013).    Buy the book from Harrassowitz.   "
+        } , {
+</pre>
+<p id="d2e71558">The <code id="d2e71560">projects</code> gives a list of objects, one per project.  Each object contains a subset of the material in the project's configuration object (or <code id="d2e71563">config.xml</code> within the Oracc installation.  This information is also available from each project's metadata.json, so the project list is primarily a convenience for anyone wanting to provide a summary of the projects available.</p>
+</dd>
+</dl>
+
+<a id="h_projectleveldata" name="h_projectleveldata"></a><h3 id="d2e71570">Project-level Data</h3>
+
+<p id="d2e71573">Oracc compiles project content into a collection of XML data structures which have additional annotation and linkage.  The goal is to expose all of this data in JSON format.</p>
+
+<dl id="d2e71576">
+
+<dt id="d2e71578">manifest.json: type "manifest"</dt>
+<dd id="d2e71581">For any given project name in <code id="d2e71583">/projects.json</code> you can retrieve <code id="d2e71586">/[PROJECT]/manifest.json</code> to discover which JSON formats are provided by the project. This gives a simple list of JSON files retrievable from a project.  For the project <code id="d2e71589">rimanum</code>, the URL <code id="d2e71592">http://oracc.org/rimanum/manifest.json</code>, yields the following:
+<pre id="d2e71595">
+{
+	"type": "manifest",
+	"project": "rimanum",
+	"files": [
+		"corpus.json",
+		"index-akk-x-oldbab.json",
+		"index-cat.json",
+		"index-lem.json",
+...
+        ],
+        "everything": "json.zip"
+}
+</pre>
+<p id="d2e71599">For each entry in the array <code id="d2e71601">files</code> you can retrieve, e.g., <code id="d2e71604">http://oracc.org/rimanum/corpus.json</code>.</p>
+</dd>
+
+<dt id="d2e71609">metadata.json: type "metadata"</dt>
+<dd id="d2e71612">This provides several objects: "config"--the configuration info for the project; "witnesses"--only present if projects use composite texts, this provides information on which manuscripts are witnesses of the composites in the project; and "formats", a collection of lists indicating the presence of transliterations, transliterations and lemmatized data in the project.
+<pre id="d2e71614">
+{
+	"type": "metadata",
+	"config": {
+		"pathname": "rimanum",
+		"name": "The House of Prisoners",
+		"abbrev": "R&#196;&#171;m-Anum",
+		...
+	},
+	"formats": {
+		"atf": [ "P295625","P296047","P296277","P296278", ... ],
+		"lem": [ "P295625","P296047","P296277","P296278","P296414", ... ],
+		"tr-en": [ "P295625","P296047","P296277","P296278", ... ],
+		"xtf": [ "P295625","P296047","P296277", ... ]
+	}
+}
+</pre>
+</dd>
+
+<dt id="d2e71618">catalogue.json: type "catalogue"</dt>
+<dd id="d2e71622">
+Provides the project's catalogue:
+<pre id="d2e71624">
+{
+	"type": "catalogue",
+	"project": "rimanum",
+	"members": {
+		"P295625": {
+			"author": "Simmons, Stephen D.",
+			"collection": "J. Pierpont Morgan Library Collection, Yale Babylonian Collection, New Haven, Connecticut, USA",
+			"date_of_origin": "Rim-Anum.01.10.01",
+			"dates_referenced": "Rim-Anum.01.10.01",
+			"designation": "YOS 14, 341",
+			"genre": "Administrative",
+			"height": "40",
+			"language": "Sumerian",
+			...
+</pre>
+<p id="d2e71627">Although projects may have their own catalogue fields, all projects provide at least one of id_text or id_composite (some use a mix); designation; period; and provenience.</p>
+</dd>
+
+<dt id="d2e71631">corpus.json: type "corpus"</dt>
+<dd id="d2e71634">The JSON file corpus.json is another manifest file: it lists the individual text editions that are located in the folder <code id="d2e71636">corpusjson/</code>:
+<pre id="d2e71639">
+{
+  "type": "corpus",
+  "project": "rimanum",
+  "members": {
+    "P295625": "corpusjson/P295625.json",
+    "P296047": "corpusjson/P296047.json",
+    "P296277": "corpusjson/P296277.json",
+    "P296278": "corpusjson/P296278.json",
+    "P296414": "corpusjson/P296414.json",
+    "P297038": "corpusjson/P297038.json",
+    "P311964": "corpusjson/P311964.json",
+    "P368396": "corpusjson/P368396.json",
+    "P368398": "corpusjson/P368398.json",
+    "P372766": "corpusjson/P372766.json",
+...
+</pre>
+</dd>
+
+<dt id="d2e71643">JSON for individual text editions: type "cdl"</dt>
+<dd id="d2e71646"><p id="d2e71647">Oracc text editions consist of two structures: one is the XML version of the user's transliteration.  The other is entirely generated by Oracc and provides access to the divisions, content, and lemmatization of the text in a relatively simple nested tree format.  In the Oracc world this format is called "XCL", or XML Chunks and Lemmas: the XCL tree has only three primary node types: <code id="d2e71649">c</code>, a chunk of text which may be the whole text, a sentence or unit, a clause, a phrase or possibly others; <code id="d2e71652">d</code>, a discontinuity, e.g., a line-break, a surface transition, damage to the content of the text; <code id="d2e71655">l</code>, a lemma, the lemmatization of the text.  The name of the array of children of any chunk node is called "cdl" based on these three members.</p>
+
+<p id="d2e71659">Discontinuities and lemmata have a "text" property which can be concatenated to create text fragments.</p>
+<pre id="d2e71662">
+{
+  "type": "cdl",
+  "project": "rimanum",
+  "textid": "P295625",
+  "cdl": [
+    {
+      "node": "c",
+      "type": "text",
+      "id": "P295625.U0",
+      "cdl": [
+        {
+          "node": "d",
+          "subtype": "tablet",
+          "type": "tablet",
+          "ref": "P295625.x374.1",
+          "label": "x374"
+        },
+        {
+          "node": "d",
+          "subtype": "obverse",
+          "type": "obverse",
+          "ref": "P295625.o.2",
+          "label": "o"
+        },
+        {
+          "node": "c",
+          "type": "discourse",
+          "subtype": "body",
+          "id": "P295625.U1",
+          "cdl": [
+            {
+              "node": "c",
+              "type": "sentence",
+              "id": "P295625.U2",
+              "label": "o 1 - r 2",
+              "cdl": [
+                {
+                  "node": "d",
+                  "type": "line-start",
+                  "ref": "P295625.3",
+                  "n": "1",
+                  "label": "o 1"
+                },
+                {
+                  "node": "l",
+                  "frag": "5(BAN₂)",
+                  "id": "P295625.l02b23",
+                  "ref": "P295625.3.1",
+                  "inst": "n",
+                  "f": {
+                    "lang": "akk-x-oldbab",
+                    "form": "5(BAN₂)",
+                    "pos": "n"
+                  }
+                },
+                {
+                  "node": "l",
+                  "frag": "6(SILA₃)",
+                  "id": "P295625.l02b24",
+                  "ref": "P295625.3.2",
+                  "inst": "n",
+                  "f": {
+                    "lang": "akk-x-oldbab",
+                    "form": "6(SILA₃)",
+                    "pos": "n"
+                  }
+                },
+                {
+                  "node": "l",
+                  "frag": "ZI₃.DA",
+                  "id": "P295625.l02b25",
+                  "ref": "P295625.3.3",
+                  "inst": "qēmu[flour]N",
+                  "sig": "@rimanum%akk-x-oldbab:ZI₃.DA=qēmu[flour//flour]N'N$qēmu",
+                  "f": {
+                    "lang": "akk-x-oldbab",
+                    "form": "ZI₃.DA",
+                    "cf": "qēmu",
+                    "gw": "flour",
+                    "sense": "flour",
+                    "norm": "qēmu",
+                    "pos": "N",
+                    "epos": "N"
+                  }
+                },
+                {
+                  "node": "d",
+                  "type": "line-start",
+                  "ref": "P295625.4",
+                  "n": "2",
+                  "label": "o 2"
+                },
+                {
+                  "node": "l",
+                  "frag": "⸢&#352;UKU",
+                  "id": "P295625.l02b26",
+                  "ref": "P295625.4.1",
+                  "inst": "kurummat[food allocation]N",
+                  "sig": "@rimanum%akk-x-oldbab:&#352;UKU=kurummatu[food allocation//food allocation]N'N$kurummat",
+                  "f": {
+                    "lang": "akk-x-oldbab",
+                    "form": "&#352;UKU",
+                    "cf": "kurummatu",
+                    "gw": "food allocation",
+                    "sense": "food allocation",
+                    "norm": "kurummat",
+                    "pos": "N",
+                    "epos": "N"
+                  }
+                },
+                {
+                  "node": "l",
+                  "frag": "E₂⸣",
+                  "id": "P295625.l02b27",
+                  "ref": "P295625.4.2",
+                  "inst": "bīt[house]N",
+                  "sig": "@rimanum%akk-x-oldbab:E₂=bītu[house//house]N'N$bīt",
+                  "f": {
+                    "lang": "akk-x-oldbab",
+                    "form": "E₂",
+                    "cf": "bītu",
+                    "gw": "house",
+                    "sense": "house",
+                    "norm": "bīt",
+                    "pos": "N",
+                    "epos": "N"
+                  }
+                },
+                {
+                  "node": "l",
+                  "frag": "a-si-ri",
+                  "id": "P295625.l02b28",
+                  "ref": "P295625.4.3",
+                  "inst": "asīrī[prisoner of war]N",
+                  "sig": "@rimanum%akk-x-oldbab:a-si-ri=asīru[captive//prisoner of war]N'N$asīrī",
+                  "f": {
+                    "lang": "akk-x-oldbab",
+                    "form": "a-si-ri",
+                    "cf": "asīru",
+                    "gw": "captive",
+                    "sense": "prisoner of war",
+                    "norm": "asīrī",
+                    "pos": "N",
+                    "epos": "N"
+                  }
+                },
+                {
+                  "node": "d",
+                  "frag": "/",
+                  "type": "punct",
+                  "ref": "P295625.4.4",
+                  "lang": "akk-x-oldbab",
+                  "gdl_delim": " "
+                },
+                {
+                  "node": "l",
+                  "frag": "ZI.GA",
+                  "id": "P295625.l02b29",
+                  "ref": "P295625.4.5",
+                  "inst": "ṣītu[expenditure]N",
+                  "sig": "@rimanum%akk-x-oldbab:ZI.GA=ṣītu[exit//expenditure]N'N$ṣītu",
+                  "f": {
+                    "lang": "akk-x-oldbab",
+                    "form": "ZI.GA",
+                    "cf": "ṣītu",
+                    "gw": "exit",
+                    "sense": "expenditure",
+                    "norm": "ṣītu",
+                    "pos": "N",
+                    "epos": "N"
+                  }
+                },
+...
+</pre>
+<p id="d2e71665">In the <code id="d2e71667">l</code> nodes of the example above, the "sig" property is the string version of the lemmatization associated with a word.  To reduce the size of the JSON files, the parsed versions of the sig properties are collected together in a separate object in the corpus, called "sigs":</p>
+<pre id="d2e71671">
+"sigs": {
+                "@rimanum%akk-x-oldbab:30-be-el-i₃-li₂=S&#238;n-bēl-ilī[00//00]PN'PN$S&#238;n-bēl-ilī": {
+                        "form": "30-be-el-i₃-li₂",
+                        "cf": "S&#238;n-bēl-ilī",
+                        "gw": "00",
+                        "sense": "00",
+                        "pos": "PN",
+                        "epos": "PN",
+                        "norm": "S&#238;n-bēl-ilī"
+
+                } ,
+</pre>
+<p id="d2e71674">You can use the string "sig" as a key to look up the parsed form.</p>
+
+</dd>
+
+<dt id="d2e71678">glossary-XXX.json: type "glossary"</dt>
+
+<dd id="d2e71682">
+<p id="d2e71684">The glossary files are named on a template which puts the language code in the place-holder XXX in the heading to the section.  For language <code id="d2e71686">akk</code> there is a glossary file <code id="d2e71689">glossary-XXX.json</code> and so on; you can see which ones are provided by checking the project's manifest.</p>
+<p id="d2e71693">Glossaries are a list of entries which give the distributional data on all of the facets of Oracc lemmatization, gathered under a series of headings for spellings (<code id="d2e71695">forms</code>); normalizations (<code id="d2e71698">norms</code>) and meanings (<code id="d2e71701">senses</code>.  The same data is also given for the full signatures which reference the entry (<code id="d2e71704">sigs</code>).</p>
+<p id="d2e71708">Several instance-related properties are common to many of these data:
+<dl id="d2e71710">
+<dt id="d2e71712">icount</dt>
+<dd id="d2e71715">The instance count for the datum.</dd>
+<dt id="d2e71718">ipct</dt>
+<dd id="d2e71721">The percentage of instances of the datum that this count represents.</dd>
+<dt id="d2e71724">xis</dt>
+<dd id="d2e71728">A reference to the compilation of instances that make up the count for the datum.</dd>
+</dl>
+</p>
+<p id="d2e71733">The second element of a glossary object is the set of xis data for the glossary: you can use the reference given in the xis property to access the list of word IDs which makes up the instance set to access the lemmatizations given in the corpus and traverse the context of any instance.</p>
+<pre id="d2e71736">
+{
+  "type": "glossary",
+  "project": "rimanum",
+  ...
+  "lang": "akk-x-oldbab",
+  "entries": [
+    {
+      "headword": "DUMU.EDUBA[(military) scribe]N",
+      "id": "akk-x-oldbab.x000021",
+      "icount": "7",
+      "ipct": "100",
+      "xis": "akk.r00000",
+      "cf": "DUMU.EDUBA",
+      "gw": "(military) scribe",
+      "pos": "N",
+      "forms": [
+        {
+          "type": "form",
+          "id": "akk-x-oldbab.x000229",
+          "n": "DUMU.E₂.DUB.BA",
+          "icount": "4",
+          "ipct": "57",
+          "xis": "akk.r00001"
+        },
+	...
+      ],
+      "norms": [
+        {
+          "id": "akk-x-oldbab.x000231",
+          "icount": "7",
+          "ipct": "100",
+          "xis": "akk.r00000",
+          "n": "DUMU.EDUBA",
+          "forms": [
+            {
+              "type": "normform",
+              "id": "akk-x-oldbab.x000232",
+              "ref": "akk-x-oldbab.x000229",
+              "icount": "4",
+              "ipct": "57",
+              "xis": "akk.r00001"
+            },
+	    ...
+          ]
+        }
+      ],
+      "senses": [
+        {
+          "type": "sense",
+          "id": "akk-x-oldbab.x000234",
+          "n": "DUMU.EDUBA[(military) scribe//(military) scribe]N'N",
+          "icount": "7",
+          "ipct": "100",
+          "xis": "akk.r00000",
+          "pos": "N",
+          "mng": "(military) scribe",
+          "forms": [
+            {
+              "type": "form",
+              "id": "akk-x-oldbab.x000235",
+              "n": "%akk-x-oldbab:DUMU.E₂.DUB.BA",
+              "icount": "4",
+              "ipct": "57",
+              "xis": "akk.r00001"
+            },
+	    ...
+          ],
+          "norms": [
+            {
+              "id": "akk-x-oldbab.x000237",
+              "n": "DUMU.EDUBA",
+              "icount": "7",
+              "ipct": "100",
+              "xis": "akk.r00000"
+            }
+          ],
+          "sigs": [
+            {
+              "type": "sig",
+              "id": "akk-x-oldbab.x000238",
+              "sig": "@rimanum%akk-x-oldbab:DUMU.E₂.DUB.BA.A=DUMU.EDUBA[(military) scribe//(military) scribe]N'N$DUMU.EDUBA",
+              "icount": "3",
+              "ipct": "43",
+              "xis": "akk.r00002"
+            },
+	    ...
+          ]
+        }
+      ]
+    },
+    ...
+  },
+  "instances": {
+    "akk.r0019f": [
+      "rimanum:P405412.8.4"
+    ],
+    "akk.r0019b": [
+      "rimanum:P405162.3.2",
+      "rimanum:P405163.3.2",
+      "rimanum:P405164.3.3",
+      "rimanum:P405165.4.3",
+      "rimanum:P405166.3.2",
+      "rimanum:P405167.3.3"
+    ],
+    "akk.r001a1": [
+      "rimanum:P372792.5.4",
+      "rimanum:P405339.4.3",
+      "rimanum:P405373.4.6",
+      "rimanum:P405379.5.3"
+    ],
+    ...
+
+
+</pre>
+</dd>
+
+<dt id="d2e71740">index-xxx.json: type "index"</dt>
+<dd id="d2e71743"><p id="d2e71744">The index-xxx.json files are exports of a subset of the index data created and used by the Oracc search engine, giving the keys the indexer has generated from the input words and the locations in which they occur in the corpus.  These keys may have been normalized using a variety of processes: accents are rendered as numeric indices; case may be foled; for English translation indexes a stemmer is used so that, e.g., "received" and "receives" will be gathered together under "receive" in the index.</p>
+<pre id="d2e71747">
+  {
+        "type": "index",
+        "project":"rimanum",
+        "name": "cat",
+        "keys": [{
+                "key": "1",
+                "count": "16",
+                "instances": [
+                        "rimanum:P405220","rimanum:P405220","rimanum:P405246","rimanum:P405246","rimanum:P405313","rimanum:P405313","
+                ]},{
+                "key": "3",
+                "count": "16",
+                "instances": [
+                        "rimanum:P405225","rimanum:P405225","rimanum:P405229","rimanum:P405229","rimanum:P405248","rimanum:P405248","
+                ]},{
+                "key": "5",
+                "count": "11",
+                "instances": [
+                        "rimanum:P405212","rimanum:P405212","rimanum:P405250","rimanum:P405250","rimanum:P405317","rimanum:P405317","
+                ]},{
+                "key": "6",
+                "count": "11",
+                "instances": [
+                        "rimanum:P405219","rimanum:P405219","rimanum:P405251","rimanum:P405251","rimanum:P405284","rimanum:P405318","
+                ]},{
+</pre>
+<p id="d2e71750">The text IDs are always qualified with a project name because any project can use texts from other projects.  For "txt", "lem" and "tra" index types, the instances are given as word IDs, so they can be used to locate the instance in the text edition.  A simple way of displaying instances is to use the URL <code id="d2e71752">http://oracc.org/PROJECT/INSTANCE_ID/html</code>, e.g., <code id="d2e71755">http://oracc.org/rimanum/P405219.4.1/html</code>.  If you omit the "/html" the text is loaded into the Oracc pager instead of retrieving the simple HTML version.</p>
+</dd>
+
+</dl>
+
+
+
+
+18 Dec 2019
+<span class="obfuscatedEmailAddress" id="d2e71764">osc at oracc dot org</span>
+
+</div><div id="Authors"><p id="d2e71768">Steve Tinney &#38; Eleanor Robson</p></div><div id="CiteAs"><p id="d2e71771">Steve Tinney &#38; Eleanor Robson, 'Oracc JSON Data: A brief introduction for programmers', <i id="d2e71773">Oracc: The Open Richly Annotated Cuneiform Corpus</i>, Oracc,  2019 [http://oracc.museum.upenn.edu/doc/opendata/json/<!--#config timefmt=", accessed %d %B %Y" --><!--#echo var="DATE_LOCAL" -->]</p></div><div id="EndContentSpace">&#160;</div></div><div id="BackToTop"><a href="#top" id="d2e71784" onclick="if ( window.highlight ) window.setTimeout ( 'highlight ()', 100 )" onkeypress="if ( window.highlight ) window.setTimeout ( 'highlight ()', 100 )">Back to top ^^</a></div><div id="FooterWhole">&#160;</div><div id="FooterRight"></div><div id="FooterLeft">
+<p><span class="imageinline"><a href="http://creativecommons.org/licenses/by-sa/3.0/" class="external" target="_blank" id="d2e71793" title="Link opens in new window: Creative Commons Attribution Share-Alike license"><img src="../../images/footer/cc88x31.png" alt="" id="d2e71794" /></a></span> Released under a <a href="../../about/licensing/index.html" id="d2e71796" title="Licensing statement" accesskey="8">Creative Commons Attribution Share-Alike license 3.0</a>, 2014. 
+<span class="imageinline"><a href="http://www.facebook.com/opencuneiform" class="external" target="_blank" id="d2e71800" title="Link opens in new window"><img src="../../images/footer/f_logo.png" alt="" id="d2e71801" /></a><span class="externallinktext"> [http://www.facebook.com/opencuneiform]</span></span> 
+<span class="imageinline"><a href="http://oracc.blogspot.com" class="external" target="_blank" id="d2e71804" title="Link opens in new window"><img src="../../images/footer/blogspot-icon.png" alt="" id="d2e71805" /></a><span class="externallinktext"> [http://oracc.blogspot.com]</span></span> 
+<span class="imageinline"><a href="http://www.twitter.com/oracctivity" class="external" target="_blank" id="d2e71808" title="Link opens in new window"><img src="../../images/footer/twitter-bird-light-bgs.png" alt="" id="d2e71809" /></a><span class="externallinktext"> [http://www.twitter.com/oracctivity]</span></span><br />
+<small>Oracc uses cookies only to collect Google Analytics data. Read more <a href="../../about/cookies/index.html" id="d2e71815" title="Cookies" accesskey="7">here</a>; see the stats <a href="http://www.seethestats.com/site/oracc.museum.upenn.edu" class="external" target="_blank" id="d2e71818" title="Link opens in new window">here</a><span class="externallinktext"> [http://www.seethestats.com/site/oracc.museum.upenn.edu]</span>; opt out <a href="http://tools.google.com/dlpage/gaoptout" class="external" target="_blank" id="d2e71821" title="Link opens in new window">here</a>.</small></p>
+</div><div id="URL">http://oracc.museum.upenn.edu/doc/opendata/json/</div></body></html>
