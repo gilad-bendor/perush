@@ -33,6 +33,12 @@ Cultural-sociological processes are abstract by nature - and the commentary must
 That way one can *feel* what the cultural transition looked like - and not only understand it logically.
 If an interpretation cannot be grounded in something tangible - it may be too vague.
 
+## Foreign Term in Parentheses
+
+When a technical concept is phrased in Hebrew - it is worth adding the foreign (non-Hebrew) term after it, in parentheses. For example: ״הוא לא מואנש (anthropomorphic)״ ("it is not anthropomorphized (anthropomorphic)"), ״שִׁיקּוּעַ (sedimentation)״.
+That way - a Hebrew reader understands from the Hebrew itself, and a reader who knows the professional literature can rely on the foreign term (and can also look it up).
+The Hebrew comes first, and must stand on its own: the foreign term is an aid - not a substitute for an explanation.
+
 # Cross-References Between Segments
 
 Many concepts are not in the dictionary - they are established for the first time within the commentary segments themselves: archetypes (נחש, קין, הבל), characters and places, and recurring verbs (ידע, הרה, ילד, נתן, לקח...).
@@ -44,6 +50,14 @@ When encountering such a concept:
 
 When a concept will be developed in a later segment - add a forward reference. For example: ״נושא זה יתברר לעומק בסיפור קין והבל (בראשית ד)״ ("This topic will be clarified in depth in the story of Cain and Abel (Genesis 4)").
 When a primitive definition becomes sharper in the course of the work - explicitly propose (in the conversation) to update the dictionary in the Preface, or to write an appendix - so that the refinement doesn't stay buried inside a single segment.
+
+## A Reference That Stands on Its Own
+
+The commentary is also published as a single printed book - without files, and without links that can be clicked.
+Therefore every reference must be understandable from its own text alone - as if the link did not exist:
+- Refer to a verse, an appendix, or a section within an appendix - by name: ״ראה הפירוש לפסוק א״ ("see the commentary on verse 1"), ״ראה ״מתי נולדים התנינים?״ בנספח ״תנינים, שרצים ועופות...״״ ("see 'When are the sea-monsters born?' in the appendix 'Sea-monsters, Swarming Creatures and Birds...'").
+- Do not refer to the file structure (״פתיחת הקובץ״ - "the opening of the file", ״הקובץ הזה״ - "this file"): a single book has no files. ״למעלה״ ("above") fits only what is close and in plain view - a distant place is referred to by the name of the verse or the section.
+- A generic link (like ״ניתוח לשוני״ - "linguistic analysis") - only when the immediate context makes clear what it points to: for example, right after the word that the analysis deals with.
 
 # Commentary Files
 
