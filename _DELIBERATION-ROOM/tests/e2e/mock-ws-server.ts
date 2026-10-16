@@ -42,6 +42,8 @@ export interface MockServerOptions {
   onConnectEvents?: MockEvent[];
   /** Events to send when a specific client message type is received */
   onMessageEvents?: Record<string, MockEvent[]>;
+  /** The response of /api/perush-scope */
+  perushScope?: { trackedPaths: string[]; trackedPathsSource: string };
 }
 
 const DEFAULT_AGENTS: MockAgentDef[] = [
@@ -96,9 +98,12 @@ export function createMockServer(options: MockServerOptions = {}) {
     meetings = [],
     onConnectEvents = [],
     onMessageEvents = {},
+    perushScope = { trackedPaths: ["פירוש/", "נספחים-לפירוש/"], trackedPathsSource: "src/config.ts (PERUSH_TRACKED_PATHS)" },
   } = options;
 
   const clients = new Set<ServerWebSocket<unknown>>();
+  /** Every client message received (parsed) - for tests to assert what the client sent */
+  const received: Array<Record<string, any>> = [];
 
   async function sendSequence(ws: ServerWebSocket<unknown>, events: MockEvent[]) {
     for (const event of events) {
@@ -131,6 +136,9 @@ export function createMockServer(options: MockServerOptions = {}) {
       if (pathname === "/api/meetings") {
         return Response.json(meetings);
       }
+      if (pathname === "/api/perush-scope") {
+        return Response.json(perushScope);
+      }
 
       // SPA catch-all: /meeting/* paths served by the frontend router
       if (pathname.startsWith("/meeting/")) {
@@ -151,6 +159,7 @@ export function createMockServer(options: MockServerOptions = {}) {
         const raw = typeof message === "string" ? message : new TextDecoder().decode(message as unknown as ArrayBuffer);
         try {
           const parsed = JSON.parse(raw);
+          received.push(parsed);
           const typeEvents = onMessageEvents[parsed.type];
           if (typeEvents) {
             sendSequence(ws as any, typeEvents).catch(console.error);
@@ -168,6 +177,7 @@ export function createMockServer(options: MockServerOptions = {}) {
     port: server.port,
     url: `http://localhost:${server.port}`,
     stop: () => server.stop(true),
+    received,
     broadcast: (msg: Record<string, unknown>) => {
       const json = JSON.stringify(msg);
       for (const ws of clients) {

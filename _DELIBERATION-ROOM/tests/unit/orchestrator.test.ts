@@ -486,6 +486,26 @@ describe("perush files on main", () => {
     expect(events.errors.some(error => error.includes("index.lock"))).toBe(true);
   });
 
+  test("a file ignored on resume stays ignored by a later rollback - not committed, not restored", async () => {
+    freshState();
+    const { handlers } = createEventCollector();
+    setEventHandlers(handlers);
+    const UNRELATED_FILE = "פירוש/1-בראשית/לא-קשור.rtl.md";
+    const meeting = await startAndTrack("Ignore On Resume", ["milo", "shalom"]);
+    await runCycle("human", "Opening prompt");
+    await endCurrentMeeting();
+
+    await write(UNRELATED_FILE, "the Director's unrelated work\n");
+    await resumeMeetingById(meeting.meetingId, { [UNRELATED_FILE]: "ignore" });
+    expect(getMeeting()!.perushScope!.ignoredPaths).toEqual([UNRELATED_FILE]);
+
+    await handleRollback(0);
+
+    expect(getMeeting()!.perushScope!.ignoredPaths).toEqual([UNRELATED_FILE]);
+    expect(await readFile(join(repo, UNRELATED_FILE), "utf-8")).toBe("the Director's unrelated work\n");
+    expect(await repoGit("log", "--all", "--format=%H", "--", UNRELATED_FILE)).toBe("");   // never committed
+  });
+
   test("a meeting created before perushBaseline existed: rollback leaves the perush files alone, and says so", async () => {
     freshState();
     const { handlers } = createEventCollector();

@@ -39,6 +39,12 @@
           <p id="no-participants-error" class="form-error">יש לבחור לפחות משתתף אחד</p>
         </div>
 
+        <p id="perush-scope-note" class="perush-scope-note">
+          <!-- Populated from /api/perush-scope -->
+        </p>
+
+        <p id="landing-error" class="form-error-inline hidden"></p>
+
         <div class="form-submit-wrapper">
           <button type="submit" class="btn-primary">
             התחל דיון
@@ -124,6 +130,33 @@
       <div class="modal-actions">
         <button id="rollback-cancel" class="btn-secondary">ביטול</button>
         <button id="rollback-confirm" class="btn-confirm">אישור חזרה</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- UNCOMMITTED PERUSH FILES DIALOG (before a meeting starts/resumes) -->
+  <!-- ================================================================= -->
+  <div id="uncommitted-modal" class="modal-overlay hidden">
+    <div class="modal-content modal-content--wide">
+      <h3 class="modal-title">שינויים שלא נשמרו בקבצי הפירוש</h3>
+      <p id="uncommitted-intro" class="uncommitted-intro"></p>
+      <ul class="uncommitted-legend">
+        <li><b>חלק מהדיון</b> - יישמר עכשיו ב-commit, כנקודת המוצא של הדיון.</li>
+        <li><b>התעלם</b> - הדיון לא ייגע בקובץ: לא ישמור אותו ולא ישחזר אותו.</li>
+      </ul>
+      <div class="uncommitted-bulk">
+        <button type="button" id="uncommitted-all-include" class="btn-link">כולם: חלק מהדיון</button>
+        <button type="button" id="uncommitted-all-ignore" class="btn-link">כולם: התעלם</button>
+      </div>
+      <div id="uncommitted-files" class="uncommitted-files">
+        <!-- One row per uncommitted file -->
+      </div>
+      <p id="uncommitted-scope" class="uncommitted-scope"></p>
+      <div class="modal-actions">
+        <button type="button" id="uncommitted-cancel" class="btn-secondary">ביטול</button>
+        <button type="button" id="uncommitted-recheck" class="btn-secondary" title="למשל, אחרי ששמרת (commit) את הקבצים בעצמך">בדוק שוב</button>
+        <button type="button" id="uncommitted-continue" class="btn-confirm" disabled>המשך</button>
       </div>
     </div>
   </div>

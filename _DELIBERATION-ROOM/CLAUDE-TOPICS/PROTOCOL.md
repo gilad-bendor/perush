@@ -53,6 +53,14 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 
 // Pause state update (paused = toggle state, blocking = pause is actively preventing next cycle)
 { type: "pause-state", paused: boolean, blocking: boolean }
+
+// A start/resume (or join, of an inactive meeting) is waiting for the Director's decisions about uncommitted
+// perush files in the meeting's scope. Sent only to the requesting client; nothing started. The client shows the
+// files, and re-sends start-meeting / resume-meeting (by `context`) with perushFileDecisions - for every file.
+// `decisions` echoes those already made. See "Uncommitted Perush Files" below.
+{ type: "uncommitted-changes", context: "start" | "resume", meetingId?: string,
+  changes: Array<{ path: string, status: string /* git porcelain XY */, originalPath?: string /* rename */ }>,
+  decisions: Record<string, "include" | "ignore">, trackedPaths: string[], trackedPathsSource: string }
 ```
 
 ## Client → Server Messages
@@ -64,12 +72,13 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // Slash commands (available at any time, not just during human turn)
 { type: "command", command: "/end" }
 
-// Start a new meeting (participants = selected agent IDs from the pool)
-{ type: "start-meeting", title: string, openingPrompt: string, participants: AgentId[] }
+// Start a new meeting (participants = selected agent IDs from the pool).
+// perushFileDecisions: by path - see "uncommitted-changes"
+{ type: "start-meeting", title: string, participants: AgentId[], perushFileDecisions?: Record<string, "include" | "ignore"> }
 
 // Resume a previous meeting. If the meeting is already active, returns it without
 // restarting the deliberation loop — safe to call from any browser tab at any time.
-{ type: "resume-meeting", meetingId: string }
+{ type: "resume-meeting", meetingId: string, perushFileDecisions?: Record<string, "include" | "ignore"> }
 
 // View a past meeting in read-only mode
 { type: "view-meeting", meetingId: string }
@@ -91,6 +100,14 @@ The browser connects to the server via a single WebSocket connection. Traffic is
 // Toggle play/pause — pauses/resumes the deliberation loop (doesn't interrupt running cycles)
 { type: "toggle-pause" }
 ```
+
+## Uncommitted Perush Files
+
+Before a meeting starts or resumes, every uncommitted change in its perush scope (see [GIT-PERSISTENCE.md](GIT-PERSISTENCE.md#the-perush-files-on-main)) needs the Director's decision:
+- **include** - part of the deliberation: committed now (`Pre-meeting state (<id>)` / `Meeting resumed: Director's edits (<id>)`), so the meeting's starting point contains it.
+- **ignore** - left out of this meeting: added to the meeting's `perushScope.ignoredPaths`, so the meeting never commits, restores or stashes it.
+
+A rename's original path goes with its decision. Until every change is decided, the server answers `uncommitted-changes` instead of starting/resuming (a "Recheck" is just re-sending the request - e.g. after the Director committed the files by hand). Files a meeting already ignores aren't asked about again. `GET /api/perush-scope` returns the folders new meetings track (`PERUSH_TRACKED_PATHS`) and where they are defined.
 
 ## Reconnection
 

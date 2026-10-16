@@ -169,7 +169,7 @@ Participant-Agents can modify commentary files during their speech phase (their 
 Meetings created before the scope existed use the default scope.
 
 **Commits on main** (`commitPerushChanges()` in `meetings-db.ts`; messages in `config.ts`, each naming the meeting):
-- **Meeting start**: `perushBaseline` in `meeting.yaml` = main's commit when the meeting starts.
+- **Meeting start / resume**: the Director decides about every uncommitted file in the scope (see [PROTOCOL.md](PROTOCOL.md#uncommitted-perush-files)): the included ones are committed (`Pre-meeting state (<meeting-id>)` / `Meeting resumed: Director's edits (<meeting-id>)`), the ignored ones are added to `ignoredPaths`. Then, at start, `perushBaseline` in `meeting.yaml` = main's commit.
 - **Before an agent speaks**: the Director's edits so far → `Cycle N: Director's edits (<meeting-id>)`.
 - **After the speech**: the speaker's edits → `Cycle N: perush update by <speaker> (<meeting-id>)` (`by the Director` after a human turn). Then main's commit is recorded in the cycle record (`perushCommit`), *before* the cycle is committed to the session branch.
 

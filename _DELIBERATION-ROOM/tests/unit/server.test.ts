@@ -7,7 +7,8 @@
 
 import { describe, test, expect, beforeEach, afterEach } from "bun:test";
 import { join } from "path";
-import { writeFile, rm } from "fs/promises";
+import { writeFile, rm, mkdtemp, mkdir } from "fs/promises";
+import { tmpdir } from "os";
 import {
   handleHttpRequest,
   handleWsMessage,
@@ -26,7 +27,7 @@ import { resetStubState } from "../../src/stub-sdk";
 import { resetAgentCache } from "../../src/session-manager";
 import { DELIBERATION_DIR } from "../../src/config";
 import {MeetingId, meetingIdToBranchName, MeetingSummary, ServerMessage} from "../../src/types";
-import {generateMeetingId} from "../../src/meetings-db.ts";
+import {generateMeetingId, setPerushGitRootForTests} from "../../src/meetings-db.ts";
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -410,6 +411,171 @@ describe("meeting lifecycle via WebSocket", () => {
 
     // Meeting should be null
     expect(getMeeting()).toBeNull();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Uncommitted perush files - the Director decides before a meeting starts or resumes
+// (against a scratch repository - the real main is never touched by tests)
+// ---------------------------------------------------------------------------
+
+describe("uncommitted perush files", () => {
+  const FILE_A = "פירוש/1-בראשית/1040-בראשית-ד_א-ד_יז-הבל_וקין.rtl.md";
+  const FILE_B = "נספחים-לפירוש/נספח.rtl.md";
+  const FILE_C = "פירוש/1-בראשית/חדש.rtl.md";
+  let repo: string;
+
+  async function repoGit(...args: string[]): Promise<string> {
+    const proc = Bun.spawn(["git", "-C", repo, ...args], { stdout: "pipe", stderr: "pipe" });
+    const [stdout, stderr, exitCode] = await Promise.all([
+      new Response(proc.stdout).text(), new Response(proc.stderr).text(), proc.exited,
+    ]);
+    if (exitCode !== 0) throw new Error(`git ${args.join(" ")}: ${stderr}`);
+    return stdout;
+  }
+  async function write(file: string, content: string): Promise<void> {
+    await mkdir(join(repo, file, ".."), { recursive: true });
+    await writeFile(join(repo, file), content);
+  }
+  const subjectOf = async (ref: string) => (await repoGit("log", "-1", "--format=%s", ref)).trim();
+  const filesOf = async (ref: string) =>
+    (await repoGit("show", "-z", "--name-only", "--no-renames", "--format=", ref)).split("\0").filter(Boolean).sort();
+  const send = (ws: unknown, message: object) => handleWsMessage(ws as any, JSON.stringify({ messageId: "C1", ...message }));
+  const askedAbout = (messages: ServerMessage[]) => messages.filter(m => m.type === "uncommitted-changes") as any[];
+
+  beforeEach(async () => {
+    repo = await mkdtemp(join(tmpdir(), "server-perush-"));
+    await repoGit("init", "-q", "-b", "main");
+    await repoGit("config", "user.name", "test");
+    await repoGit("config", "user.email", "test@example.com");
+    await write(FILE_A, "v0\n");
+    await write(FILE_B, "v0\n");
+    await repoGit("add", "-A");
+    await repoGit("commit", "-q", "-m", "initial");
+    setPerushGitRootForTests(repo);
+  });
+
+  afterEach(async () => {
+    setPerushGitRootForTests(undefined);
+    await rm(repo, { recursive: true, force: true });
+  });
+
+  test("/api/perush-scope tells the folders new meetings track, and where they are defined", async () => {
+    const res = await handleHttpRequest(new Request("http://localhost/api/perush-scope"), {} as any);
+    expect(await res.json()).toEqual({
+      trackedPaths: ["פירוש/", "נספחים-לפירוש/", "בלשנות/ניתוחים-לשוניים/"],
+      trackedPathsSource: "_DELIBERATION-ROOM/src/config.ts (PERUSH_TRACKED_PATHS)",
+    });
+  });
+
+  test("start: no uncommitted changes - the meeting starts right away", async () => {
+    const { ws, messages } = createFakeWs();
+    connectedClients.add(ws as any);
+    await send(ws, { type: "start-meeting", title: "Clean", participants: ["milo"] });
+    testMeetingId = getMeeting()!.meetingId;
+    expect(askedAbout(messages)).toEqual([]);
+    expect(getMeeting()!.perushBaseline).toBe((await repoGit("rev-parse", "HEAD")).trim());
+  });
+
+  test("start: asks about the uncommitted files - then commits the included ones and leaves out the ignored ones", async () => {
+    const { ws, messages } = createFakeWs();
+    connectedClients.add(ws as any);
+    await write(FILE_A, "the Director's work for this deliberation\n");
+    await write(FILE_B, "unrelated work\n");
+
+    // 1. No decisions yet - asked, nothing started
+    await send(ws, { type: "start-meeting", title: "With Changes", participants: ["milo"] });
+    expect(getMeeting()).toBeNull();
+    const [question] = askedAbout(messages);
+    expect(question.context).toBe("start");
+    expect(question.changes.map((change: any) => change.path).sort()).toEqual([FILE_A, FILE_B].sort());
+    expect(question.trackedPaths).toEqual(["פירוש/", "נספחים-לפירוש/", "בלשנות/ניתוחים-לשוניים/"]);
+    expect(question.trackedPathsSource).toContain("config.ts");
+
+    // 2. Partial decisions - asked again (with the decisions made so far), nothing started
+    messages.length = 0;
+    await send(ws, { type: "start-meeting", title: "With Changes", participants: ["milo"],
+      perushFileDecisions: { [FILE_A]: "include" } });
+    expect(getMeeting()).toBeNull();
+    expect(askedAbout(messages)[0].decisions).toEqual({ [FILE_A]: "include" });
+
+    // 3. All decided - started
+    messages.length = 0;
+    await send(ws, { type: "start-meeting", title: "With Changes", participants: ["milo"],
+      perushFileDecisions: { [FILE_A]: "include", [FILE_B]: "ignore" } });
+    const meeting = getMeeting()!;
+    testMeetingId = meeting.meetingId;
+    expect(askedAbout(messages)).toEqual([]);
+    expect(messages.some(m => m.type === "sync")).toBe(true);
+    expect(await subjectOf("HEAD")).toBe(`Pre-meeting state (${meeting.meetingId})`);
+    expect(await filesOf("HEAD")).toEqual([FILE_A]);
+    expect(meeting.perushBaseline).toBe((await repoGit("rev-parse", "HEAD")).trim());
+    expect(meeting.perushScope!.ignoredPaths).toEqual([FILE_B]);
+  });
+
+  test("start: an included rename commits both of its sides", async () => {
+    const { ws } = createFakeWs();
+    connectedClients.add(ws as any);
+    await repoGit("mv", FILE_A, FILE_C);
+    await send(ws, { type: "start-meeting", title: "Rename", participants: ["milo"],
+      perushFileDecisions: { [FILE_C]: "include" } });
+    testMeetingId = getMeeting()!.meetingId;
+    expect(await filesOf("HEAD")).toEqual([FILE_A, FILE_C].sort());
+  });
+
+  test("resume while another meeting is active: an error - before asking about any file", async () => {
+    const { ws, messages } = createFakeWs();
+    connectedClients.add(ws as any);
+    await send(ws, { type: "start-meeting", title: "First", participants: ["milo"] });
+    const first = getMeeting()!.meetingId;
+    testMeetingId = first;
+    await endCurrentMeeting();
+    await send(ws, { type: "start-meeting", title: "Second", participants: ["milo"] });
+    const second = getMeeting()!.meetingId;
+    await write(FILE_C, "new\n");
+
+    messages.length = 0;
+    await send(ws, { type: "resume-meeting", meetingId: first });
+    expect(askedAbout(messages)).toEqual([]);
+    expect((messages.find(m => m.type === "error") as any).message).toContain("already active");
+    await endCurrentMeeting();
+    await cleanupMeeting(second);
+  });
+
+  test("resume: asks about new uncommitted files - an ignored one is added to the meeting's saved scope", async () => {
+    const { ws, messages } = createFakeWs();
+    connectedClients.add(ws as any);
+    await write(FILE_B, "unrelated work\n");
+    await send(ws, { type: "start-meeting", title: "Resume Me", participants: ["milo"],
+      perushFileDecisions: { [FILE_B]: "ignore" } });
+    const meetingId = getMeeting()!.meetingId;
+    testMeetingId = meetingId;
+    await endCurrentMeeting();
+
+    // A new uncommitted file since; FILE_B is already ignored by the meeting - not asked about again
+    await write(FILE_C, "new\n");
+    messages.length = 0;
+    await send(ws, { type: "resume-meeting", meetingId });
+    expect(getMeeting()).toBeNull();
+    expect(messages.some(m => m.type === "sync")).toBe(false);          // the UI stays on the landing page
+    const [question] = askedAbout(messages);
+    expect(question).toMatchObject({ context: "resume", meetingId });
+    expect(question.changes.map((change: any) => change.path)).toEqual([FILE_C]);
+
+    // Opening the meeting's URL (join-meeting) asks the same
+    messages.length = 0;
+    await send(ws, { type: "join-meeting", meetingId });
+    expect(getMeeting()).toBeNull();
+    expect(askedAbout(messages)[0]).toMatchObject({ context: "resume", meetingId });
+
+    messages.length = 0;
+    await send(ws, { type: "resume-meeting", meetingId, perushFileDecisions: { [FILE_C]: "ignore" } });
+    expect(getMeeting()!.meetingId).toBe(meetingId);
+    expect(getMeeting()!.perushScope!.ignoredPaths).toEqual([FILE_B, FILE_C]);
+    stopDeliberationLoop();
+    await endCurrentMeeting();
+    const { readEndedMeeting } = await import("../../src/meetings-db.ts");
+    expect((await readEndedMeeting(meetingId)).perushScope!.ignoredPaths).toEqual([FILE_B, FILE_C]);
   });
 });
 

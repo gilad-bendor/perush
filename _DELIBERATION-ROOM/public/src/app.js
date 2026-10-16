@@ -21,6 +21,9 @@
 /** @typedef {import('../../src/types.ts').AgentId} AgentId */
 /** @typedef {import('../../src/types.ts').SpeakerId} SpeakerId */
 /** @typedef {import('../../src/types.ts').MeetingId} MeetingId */
+/** @typedef {import('../../src/types.ts').WsUncommittedChanges} WsUncommittedChanges */
+/** @typedef {import('../../src/types.ts').PerushChange} PerushChange */
+/** @typedef {import('../../src/types.ts').PerushFileDecision} PerushFileDecision */
 
 import { ConversationView } from "./conversation-view.js";
 import { speakerColor, phaseDisplayName, querySelectorMust, prettyLog } from "./utils.js";
@@ -84,6 +87,12 @@ let isPaused = true;
 let pauseBlocking = false;
 /** @type {ConversationView | null} */
 let conversationView = null;
+/**
+ * The start/resume request waiting for the Director's decisions about uncommitted perush files (re-sent with them),
+ * and the decisions made so far - by path (kept across "Recheck"s).
+ * @type {{ request: ClientMessage, changes: PerushChange[], decisions: Record<string, PerushFileDecision> } | null}
+ */
+let pendingPerushRequest = null;
 
 // ---- URL Routing ------------------------------------------------------------
 
@@ -160,6 +169,17 @@ const $rollbackPreview = document.getElementById("rollback-preview");
 const $rollbackWarning = document.getElementById("rollback-warning");
 const $rollbackCancel = document.getElementById("rollback-cancel");
 const $rollbackConfirm = document.getElementById("rollback-confirm");
+const $perushScopeNote = document.getElementById("perush-scope-note");
+const $landingError = document.getElementById("landing-error");
+const $uncommittedModal = document.getElementById("uncommitted-modal");
+const $uncommittedIntro = document.getElementById("uncommitted-intro");
+const $uncommittedFiles = document.getElementById("uncommitted-files");
+const $uncommittedScope = document.getElementById("uncommitted-scope");
+const $uncommittedAllInclude = document.getElementById("uncommitted-all-include");
+const $uncommittedAllIgnore = document.getElementById("uncommitted-all-ignore");
+const $uncommittedCancel = document.getElementById("uncommitted-cancel");
+const $uncommittedRecheck = document.getElementById("uncommitted-recheck");
+const $uncommittedContinue = document.getElementById("uncommitted-continue");
 
 // ---- Utility ----------------------------------------------------------------
 
@@ -299,6 +319,9 @@ function handleServerMessage(msg) {
     case "pause-state":
       handlePauseState(msg.paused, msg.blocking);
       break;
+    case "uncommitted-changes":
+      handleUncommittedChanges(msg);
+      break;
   }
 }
 
@@ -307,6 +330,9 @@ function handleServerMessage(msg) {
  * @param {WsSync} msg
  */
 function handleSync(msg) {
+  // A meeting started/resumed - no request is waiting for decisions about uncommitted perush files any more
+  pendingPerushRequest = null;
+  $uncommittedModal.classList.add("hidden");
   currentMeeting = msg.meeting;
   currentPhase = msg.currentPhase || "idle";
   currentActiveSpeaker = msg.activeSpeaker;
@@ -362,8 +388,15 @@ function handleYourTurn() {
 
 /** Shows a server error as a system message in the conversation feed. */
 function handleError(message) {
-  // Show error in conversation as a system message
+  // A start/resume that was waiting for decisions about uncommitted perush files failed - it's no longer pending
+  pendingPerushRequest = null;
+
+  // Show error in conversation as a system message - or, on the landing page, below the new-meeting form
   conversationView?.addSystemMessage(message, "error");
+  if (pageState === "landing") {
+    $landingError.textContent = message;
+    $landingError.classList.remove("hidden");
+  }
 
   // If we're on a meeting URL but have no meeting loaded, the meeting doesn't exist
   if (getMeetingIdFromUrl() && !currentMeeting) {
@@ -737,7 +770,7 @@ function renderMeetingList(meetings) {
     const resumeBtn = card.querySelector(".btn-meeting-resume");
     if (resumeBtn) {
       resumeBtn.addEventListener("click", () => {
-        sendWs({ type: "resume-meeting", meetingId: meeting.meetingId });
+        sendPerushRequest({ type: "resume-meeting", meetingId: meeting.meetingId });
       });
     }
 
@@ -783,12 +816,179 @@ $newMeetingForm.addEventListener("submit", (e) => {
     return;
   }
 
-  sendWs({
+  sendPerushRequest({
     type: "start-meeting",
     title,
     participants: selectedParticipants,
   });
 });
+
+// ---- Uncommitted Perush Files -----------------------------------------------
+// Before a meeting starts or resumes, the Director decides about each uncommitted file in the meeting's perush
+// folders: "include" (committed now - the meeting's starting point) or "ignore" (the meeting never touches it).
+// The server asks (`uncommitted-changes`) until every file is decided; the request is then re-sent with the decisions.
+
+/**
+ * Sends a start/resume request - remembering it, in case the server asks about uncommitted perush files.
+ * @param {ClientMessage} request
+ */
+function sendPerushRequest(request) {
+  pendingPerushRequest = { request, changes: [], decisions: {} };
+  $landingError.classList.add("hidden");
+  sendWs(request);
+}
+
+/** @param {WsUncommittedChanges} msg */
+function handleUncommittedChanges(msg) {
+  // The request this is about - the pending one, if it's the same request; otherwise (e.g. join-meeting on opening
+  // a meeting's URL) a "resume-meeting" of the meeting asked about
+  const pending = pendingPerushRequest;
+  const isSameRequest = msg.context === "start"
+    ? pending?.request.type === "start-meeting"
+    : pending?.request.type === "resume-meeting" && pending.request.meetingId === msg.meetingId;
+  const request = isSameRequest ? pending.request : { type: "resume-meeting", meetingId: msg.meetingId };
+  const decisions = { ...(isSameRequest ? pending.decisions : {}), ...msg.decisions };
+  pendingPerushRequest = { request, changes: msg.changes, decisions };
+
+  $uncommittedIntro.textContent = msg.context === "start"
+    ? "לפני שהדיון מתחיל - יש להחליט לגבי כל אחד מהקבצים האלה:"
+    : "לפני שהדיון ממשיך - יש להחליט לגבי כל אחד מהקבצים האלה (שינויים מאז הפעם הקודמת):";
+  $uncommittedScope.replaceChildren(...(msg.context === "start"
+    ? ["התיקיות שהדיון עוקב אחריהן: ", ...pathList(msg.trackedPaths), " - מוגדרות ב-", ltr(msg.trackedPathsSource), "."]
+    : ["התיקיות שהדיון הזה עוקב אחריהן (נשמרו כשנוצר): ", ...pathList(msg.trackedPaths),
+       ". לדיונים חדשים הן מוגדרות ב-", ltr(msg.trackedPathsSource), "."]));
+  renderUncommittedFiles();
+  $uncommittedModal.classList.remove("hidden");
+}
+
+/**
+ * Text as an isolated run in a given direction - so the bidi algorithm doesn't reorder it with its surroundings.
+ * @param {string} text
+ * @param {"ltr" | "rtl"} dir
+ */
+function isolated(text, dir) {
+  const element = document.createElement("bdi");
+  element.dir = dir;
+  element.textContent = text;
+  return element;
+}
+
+/** Latin text (code, a path in the code) as an isolated left-to-right run */
+function ltr(/** @type {string} */ text) {
+  return isolated(text, "ltr");
+}
+
+/**
+ * A Hebrew file path, read right-to-left ("פירוש/1-בראשית/..."), with its Latin extension (".rtl.md") isolated -
+ * otherwise the bidi algorithm moves the extension, or the slashes, to the wrong side.
+ * @param {string} path
+ */
+function pathNode(path) {
+  const [, base, extension] = path.match(/^(.*?)((?:\.[A-Za-z0-9]+)*)$/);
+  const element = isolated(base, "rtl");
+  if (extension) element.appendChild(isolated(extension, "ltr"));
+  return element;
+}
+
+/** @param {string[]} paths - as path nodes, separated by ", " */
+function pathList(paths) {
+  return paths.flatMap((path, index) => index === 0 ? [pathNode(path)] : [", ", pathNode(path)]);
+}
+
+/** Hebrew label of a `git status --porcelain` code (nodes - a rename's original path as an LTR run) */
+function perushChangeLabel(/** @type {PerushChange} */ change) {
+  if (change.status.includes("U") || change.status === "AA" || change.status === "DD") return ["התנגשות (merge) שלא נפתרה"];
+  if (change.originalPath) return ["שם הוחלף, היה: ", pathNode(change.originalPath)];
+  if (change.status === "??" || change.status.includes("A")) return ["חדש"];
+  if (change.status.includes("D")) return ["נמחק"];
+  return ["שונה"];
+}
+
+function renderUncommittedFiles() {
+  const { changes, decisions } = pendingPerushRequest;
+  $uncommittedFiles.innerHTML = "";
+  changes.forEach((change, index) => {
+    const row = document.createElement("div");
+    row.className = "uncommitted-file";
+
+    const path = document.createElement("div");
+    path.className = "uncommitted-file-path";
+    const status = document.createElement("div");
+    status.className = "uncommitted-file-status";
+    status.append(...perushChangeLabel(change));
+    path.append(pathNode(change.path), status);
+
+    const choices = document.createElement("div");
+    choices.className = "uncommitted-file-choices";
+    for (const [decision, label] of [["include", "חלק מהדיון"], ["ignore", "התעלם"]]) {
+      const choice = document.createElement("label");
+      choice.className = "uncommitted-file-choice";
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = `uncommitted-${index}`;
+      radio.value = decision;
+      radio.checked = decisions[change.path] === decision;
+      radio.addEventListener("change", () => {
+        decisions[change.path] = /** @type {PerushFileDecision} */ (decision);
+        updateUncommittedContinue();
+      });
+      choice.append(radio, label);
+      choices.appendChild(choice);
+    }
+
+    row.append(path, choices);
+    $uncommittedFiles.appendChild(row);
+  });
+  updateUncommittedContinue();
+}
+
+function updateUncommittedContinue() {
+  const { changes, decisions } = pendingPerushRequest;
+  $uncommittedContinue.disabled = !changes.every(change => decisions[change.path]);
+}
+
+/** @param {PerushFileDecision} decision */
+function decideAllUncommitted(decision) {
+  for (const change of pendingPerushRequest.changes) pendingPerushRequest.decisions[change.path] = decision;
+  renderUncommittedFiles();
+}
+
+$uncommittedAllInclude.addEventListener("click", () => decideAllUncommitted("include"));
+$uncommittedAllIgnore.addEventListener("click", () => decideAllUncommitted("ignore"));
+
+$uncommittedContinue.addEventListener("click", () => {
+  const { request, changes, decisions } = pendingPerushRequest;
+  const perushFileDecisions = Object.fromEntries(changes.map(change => [change.path, decisions[change.path]]));
+  $uncommittedModal.classList.add("hidden");
+  sendWs({ ...request, perushFileDecisions });
+});
+
+// "Recheck" - e.g. after the Director committed some files by hand: the server lists the files again
+// (or, if nothing is left uncommitted, starts/resumes right away). The decisions made so far are kept.
+$uncommittedRecheck.addEventListener("click", () => {
+  const { request } = pendingPerushRequest;
+  $uncommittedModal.classList.add("hidden");
+  sendWs({ ...request, perushFileDecisions: undefined });
+});
+
+$uncommittedCancel.addEventListener("click", () => {
+  $uncommittedModal.classList.add("hidden");
+  pendingPerushRequest = null;
+  if (getMeetingIdFromUrl()) navigateTo("/");          // opened by the meeting's URL - nothing was resumed
+});
+
+/** Shows the folders new meetings track, and where they are defined (`/api/perush-scope`). */
+async function loadPerushScopeNote() {
+  try {
+    const res = await fetch("/api/perush-scope");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const { trackedPaths, trackedPathsSource } = await res.json();
+    $perushScopeNote.replaceChildren("הדיון עוקב אחרי השינויים בתיקיות: ", ...pathList(trackedPaths),
+        ". הן מוגדרות ב-", ltr(trackedPathsSource), " - שינוי שם ייכנס לתוקף בדיונים חדשים, אחרי הפעלה מחדש של השרת.");
+  } catch (err) {
+    console.error("Failed to load the perush scope:", err);
+  }
+}
 
 // ---- Human Input ------------------------------------------------------------
 
@@ -922,6 +1122,7 @@ document.addEventListener("human-edit-submit", (e) => {
 /** Loads agents, opens the WebSocket connection, and routes based on URL. */
 async function init() {
   await loadAgents();
+  loadPerushScopeNote().catch(console.error);
   connectWs();
   // Route based on current URL — if on /, shows landing (which loads meeting list);
   // if on /meeting/<id>, the WS open handler will send join-meeting.

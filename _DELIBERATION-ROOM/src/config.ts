@@ -110,6 +110,9 @@ export const LOGS_DIR = join(DELIBERATION_DIR, ".logs");
  */
 export const PERUSH_TRACKED_PATHS = ["פירוש/", "נספחים-לפירוש/", "בלשנות/ניתוחים-לשוניים/"];
 
+/** Where PERUSH_TRACKED_PATHS is defined - shown in the UI, so the Director knows where to change it */
+export const PERUSH_TRACKED_PATHS_SOURCE = "_DELIBERATION-ROOM/src/config.ts (PERUSH_TRACKED_PATHS)";
+
 /**
  * Under tests (NODE_ENV=test - set by `bun test`, and by the E2E tests for the server they spawn) meetings never
  * commit, tag or roll back the perush files on the real main: tests run real cycles.
