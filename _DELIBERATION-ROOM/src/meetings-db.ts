@@ -106,7 +106,7 @@ export function setPerushGitRootForTests(gitRoot: string | undefined): void {
 /**
  * The root of the repository whose perush files the meetings commit, tag and roll back - or null when
  * this is disabled: under tests (NODE_ENV=test), unless a test set a scratch repository.
- * Tests run real cycles - and must never commit to (and push) the real main.
+ * Tests run real cycles - and must never commit to the real main.
  */
 async function getPerushGitRoot(): Promise<string | null> {
   if (perushGitRootForTests) return perushGitRootForTests;
@@ -655,24 +655,9 @@ export async function createCorrelatedTags(
 }
 
 /**
- * Async push tags and branches to remote (fire-and-forget).
- * Does NOT block the deliberation loop. Failures are logged but not thrown.
- */
-export function asyncPush(meetingId: MeetingId, cycleNumber: number): void {
-  (async () => {
-    try {
-      const gitRoot = await getPerushGitRoot();
-      if (!gitRoot) return;
-      await $`git -C ${gitRoot} push origin ${cycleTagMain(meetingId, cycleNumber)} ${cycleTagSession(meetingId, cycleNumber)} main ${meetingIdToBranchName(meetingId)}`.quiet();
-    } catch (err) {
-      logError("meetings-db", `Async push failed for meeting-id ${meetingId}: ${err}`);
-    }
-  })();
-}
-
-/**
  * Full cross-branch tagging flow after a cycle.
- * Detects perush changes → commits on main → creates correlated tags → async push.
+ * Detects perush changes → commits on main → creates correlated tags.
+ * Nothing is pushed: pushing main (and the tags, if wanted) is left to the Director.
  * Returns true if tagging occurred.
  */
 export async function tagPerushChangesIfNeeded(
@@ -691,10 +676,7 @@ export async function tagPerushChangesIfNeeded(
   const areTagsCreated = await createCorrelatedTags(worktreePath, meetingId, cycleNumber);
   if (!areTagsCreated) return false;
 
-  // Fire-and-forget push
-  asyncPush(meetingId, cycleNumber);
-
-  logInfo("meetings-db", `tagPerushChangesIfNeeded: done, push initiated`);
+  logInfo("meetings-db", `tagPerushChangesIfNeeded: done`);
   return true;
 }
 

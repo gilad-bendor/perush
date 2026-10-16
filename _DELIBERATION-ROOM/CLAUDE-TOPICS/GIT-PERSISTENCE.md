@@ -184,12 +184,13 @@ if (changed.length === 0) return;
 await git(gitRoot, "add", "--", ...PERUSH_TRACKED_PATHS);
 await git(gitRoot, "commit", "-m", `Cycle ${cycleNumber}: perush update (${meetingId})`, "--", ...PERUSH_TRACKED_PATHS);
 
-// Tag main's HEAD (.../c<N>/main) and the session branch's HEAD (.../c<N>/session), then push (fire-and-forget)
+// Tag main's HEAD (.../c<N>/main) and the session branch's HEAD (.../c<N>/session).
+// Nothing is pushed - a tag push would also upload the main commit; pushing is left to the Director.
 ```
 
 **Use the `git()` helper (argument list), not Bun's `` $`...` ``, for any command with literal Hebrew or a literal glob character.** Bun's shell (1.3.8) mangles literal Hebrew (`` $`git add פירוש/` `` passes `u05E4u05D9.../`) and expands a literal `*` as a filename glob (`` $`git tag --list ${prefix}/c*/main` `` fails - no file matches). Interpolated `${values}` are passed intact. Both bugs once made the whole flow - commit, tags, rollback - fail silently; `tests/unit/perush-on-main.test.ts` runs it against a scratch repo with the real Hebrew folder names.
 
-**Under tests (`NODE_ENV=test`) the whole flow is disabled** (`PERUSH_ON_MAIN_DISABLED` in `config.ts`): tests run real cycles, and must never commit to (and push) the real `main`. `perush-on-main.test.ts` enables it on a scratch repo via `setPerushGitRootForTests()`.
+**Under tests (`NODE_ENV=test`) the whole flow is disabled** (`PERUSH_ON_MAIN_DISABLED` in `config.ts`): tests run real cycles, and must never commit to the real `main`. `perush-on-main.test.ts` enables it on a scratch repo via `setPerushGitRootForTests()`.
 
 **Rollback** via git:
 
@@ -287,7 +288,7 @@ EACH CYCLE
 ├─ 3. Speech phase (query() to selected agent, streamed via WebSocket)
 ├─ 4. Update meeting.yaml with cycle record
 ├─ 5. Commit to session branch: "Cycle N: <speaker>"
-├─ 6. IF perush files altered: commit on main + create correlated tags + async push
+├─ 6. IF perush files altered: commit on main + create correlated tags (no push)
 
 MEETING END (/end command)
 ├─ 1. Final commit: "Meeting ended"

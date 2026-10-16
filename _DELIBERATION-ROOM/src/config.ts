@@ -110,7 +110,7 @@ export const PERUSH_TRACKED_PATHS = ["פירוש/", "נספחים-לפירוש/"
 
 /**
  * Under tests (NODE_ENV=test - set by `bun test`, and by the E2E tests for the server they spawn) meetings never
- * commit, tag, push or roll back the perush files on the real main: tests run real cycles.
+ * commit, tag or roll back the perush files on the real main: tests run real cycles.
  */
 export const PERUSH_ON_MAIN_DISABLED = process.env.NODE_ENV === "test";
 
