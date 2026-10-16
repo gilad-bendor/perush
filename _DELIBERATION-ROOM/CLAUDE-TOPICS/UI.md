@@ -101,6 +101,7 @@ The app uses client-side URL routing with `history.pushState`:
 │  │  כותרת: [______________________________________________] │     │
 │  │  פרומפט פתיחה: (multi-line textarea)                     │     │
 │  │  משתתפים: [toggle cards, all selected by default]        │     │
+│  │  (the tracked perush folders, and where they're defined) │     │
 │  │                        [ התחל דיון ]                     │     │
 │  └──────────────────────────────────────────────────────────┘     │
 │                                                                    │
@@ -118,6 +119,16 @@ The app uses client-side URL routing with `history.pushState`:
 **Continue vs. View-only**: Most recent meeting shows both buttons; others show only "צפייה בלבד".
 
 **Empty state**: "אין פגישות קודמות" in muted text.
+
+**Tracked perush folders**: below the participants, a note lists the folders new meetings track (`GET /api/perush-scope` - `PERUSH_TRACKED_PATHS`) and where they are defined, so the Director can change them in the code and restart the server.
+
+### Uncommitted Perush Files Dialog
+
+When a start/resume (or opening an inactive meeting's URL) gets `uncommitted-changes` (see [PROTOCOL.md](PROTOCOL.md#uncommitted-perush-files)), a modal lists the uncommitted files in the meeting's perush folders. For each: "חלק מהדיון" (committed now - the meeting's starting point) or "התעלם" (the meeting never touches it); "כולם: ..." decides all at once. "המשך" is enabled only when every file is decided, and re-sends the request with the decisions. "בדוק שוב" (e.g. after committing files by hand) re-sends it without decisions - the server lists the files again, or starts/resumes if none are left - and the decisions made so far are kept (by path). "ביטול" closes it (and, if opened by a meeting's URL, returns to the landing page). The modal also shows the meeting's tracked folders and where new meetings' folders are defined.
+
+A request that then fails (an `error` - e.g. committing the files failed) is no longer pending; on the landing page the error is shown below the new-meeting form (`#landing-error`). A dialog that isn't about the pending request (e.g. opened by `join-meeting`) always resumes the meeting it asks about - with no decisions carried over.
+
+Hebrew paths are shown as isolated right-to-left runs with their Latin extension isolated left-to-right (`pathNode()` in `app.js`); Latin code paths as left-to-right runs - otherwise the bidi algorithm scrambles them.
 
 ### View-Only Mode
 

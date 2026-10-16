@@ -300,6 +300,28 @@ export type PerushScope = {
 };
 assertZodTypeMatch<PerushScope, typeof PerushScopeSchema>(true);
 
+/** An uncommitted change to a perush file, as `git status --porcelain` reports it */
+export const PerushChangeSchema = z.object({
+  path: z.string(),
+  status: z.string(),
+  originalPath: z.string().optional(),
+});
+export type PerushChange = {
+  path: string;
+  /** The two-letter status code: " M" modified, "M " staged, "??" new, " D" deleted, "R " renamed, ... */
+  status: string;
+  /** For a rename or copy - the original path */
+  originalPath?: string;
+};
+assertZodTypeMatch<PerushChange, typeof PerushChangeSchema>(true);
+
+/**
+ * The Director's decision about an uncommitted perush file, when a meeting starts or resumes:
+ * "include" - part of the deliberation (committed now); "ignore" - left out of this meeting.
+ */
+export const PerushFileDecisionSchema = z.enum(["include", "ignore"]);
+export type PerushFileDecision = "include" | "ignore";
+
 // ---------------------------------------------------------------------------
 // Meeting — the full meeting.yaml schema
 // ---------------------------------------------------------------------------
@@ -596,6 +618,34 @@ export type WsPauseState = {
 };
 assertZodTypeMatch<WsPauseState, typeof WsPauseStateSchema>(true);
 
+export const WsUncommittedChangesSchema = z.object({
+  type: z.literal("uncommitted-changes"),
+  messageId: MessageIdSchema,
+  context: z.enum(["start", "resume"]),
+  meetingId: MeetingIdSchema.optional(),
+  changes: z.array(PerushChangeSchema),
+  decisions: z.record(z.string(), PerushFileDecisionSchema),
+  trackedPaths: z.array(z.string()),
+  trackedPathsSource: z.string(),
+});
+export type WsUncommittedChanges = {
+  type: "uncommitted-changes";
+  messageId: MessageId;
+  /** Which request is waiting for the Director's decisions - to be re-sent with them */
+  context: "start" | "resume";
+  /** For "resume" */
+  meetingId?: MeetingId;
+  /** The uncommitted changes in the meeting's scope */
+  changes: PerushChange[];
+  /** The decisions already made (by path) - the Director decides about the rest */
+  decisions: Record<string, PerushFileDecision>;
+  /** The meeting's tracked folders */
+  trackedPaths: string[];
+  /** Where new meetings' tracked folders are defined in the code */
+  trackedPathsSource: string;
+};
+assertZodTypeMatch<WsUncommittedChanges, typeof WsUncommittedChangesSchema>(true);
+
 /** Discriminated union of all server→client messages */
 export const ServerMessageSchema = z.discriminatedUnion("type", [
   WsSpeechSchema,
@@ -614,6 +664,7 @@ export const ServerMessageSchema = z.discriminatedUnion("type", [
   WsProcessEventSchema,
   WsProcessDoneSchema,
   WsPauseStateSchema,
+  WsUncommittedChangesSchema,
 ]);
 export type ServerMessage =
   | WsSpeech
@@ -631,7 +682,8 @@ export type ServerMessage =
   | WsProcessStart
   | WsProcessEvent
   | WsProcessDone
-  | WsPauseState;
+  | WsPauseState
+  | WsUncommittedChanges;
 assertZodTypeMatch<ServerMessage, typeof ServerMessageSchema>(true);
 
 // ---------------------------------------------------------------------------
@@ -667,12 +719,15 @@ export const WsStartMeetingSchema = z.object({
   messageId: MessageIdSchema,
   title: z.string().min(1),
   participants: z.array(AgentIdSchema).min(1),
+  perushFileDecisions: z.record(z.string(), PerushFileDecisionSchema).optional(),
 });
 export type WsStartMeeting = {
   type: "start-meeting";
   messageId: MessageId;
   title: string;
-  participants: AgentId[]
+  participants: AgentId[];
+  /** The Director's decisions about uncommitted perush files (by path) - see WsUncommittedChanges */
+  perushFileDecisions?: Record<string, PerushFileDecision>;
 };
 assertZodTypeMatch<WsStartMeeting, typeof WsStartMeetingSchema>(true);
 
@@ -680,11 +735,14 @@ export const WsResumeMeetingSchema = z.object({
   type: z.literal("resume-meeting"),
   messageId: MessageIdSchema,
   meetingId: MeetingIdSchema,
+  perushFileDecisions: z.record(z.string(), PerushFileDecisionSchema).optional(),
 });
 export type WsResumeMeeting = {
   type: "resume-meeting";
   messageId: MessageId;
   meetingId: MeetingId;
+  /** The Director's decisions about uncommitted perush files (by path) - see WsUncommittedChanges */
+  perushFileDecisions?: Record<string, PerushFileDecision>;
 };
 assertZodTypeMatch<WsResumeMeeting, typeof WsResumeMeetingSchema>(true);
 

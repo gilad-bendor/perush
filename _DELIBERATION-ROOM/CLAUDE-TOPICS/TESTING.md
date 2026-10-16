@@ -62,6 +62,7 @@ Located in `tests/e2e/`. Use `mock-ws-server.ts` to replay canned WebSocket even
 2. **Conversation**: Message rendering, RTL layout, streaming text appending, phase indicator updates, speaker color-coding.
 3. **Agent panel**: Tab switching, assessment display, importance badges, collapse/expand.
 4. **Interactions**: Attention button states, rollback dialog, status-read bar transitions, Director input submission.
+5. **Uncommitted perush files dialog** (`uncommitted-perush-dialog.test.ts`): the mock server answers `start-meeting` with `uncommitted-changes`; `mockServer.received` records what the client sends.
 
 ## Stub Agent SDK
 

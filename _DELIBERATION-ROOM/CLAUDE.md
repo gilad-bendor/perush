@@ -275,6 +275,7 @@ _DELIBERATION-ROOM/
 │   └── e2e/
 │       ├── landing-page.test.ts
 │       ├── conversation.test.ts
+│       ├── uncommitted-perush-dialog.test.ts
 │       ├── integration.test.ts
 │       └── mock-ws-server.ts
 ├── .meetings/                                     ← worktree mount point (gitignored)

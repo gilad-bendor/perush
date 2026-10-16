@@ -21,6 +21,7 @@ import {
   meetingIdToBranchName,
   meetingIdToTagIdPrefix,
   MeetingSummary,
+  PerushChange,
   PerushScope,
   SESSION_BRANCH_PREFIX,
   SpeakerId,
@@ -582,15 +583,6 @@ export async function findCycleCommit(
 // ---------------------------------------------------------------------------
 // Perush files on main: detect, commit
 // ---------------------------------------------------------------------------
-
-/** An uncommitted change to a perush file, as `git status --porcelain` reports it */
-export type PerushChange = {
-  path: string;
-  /** The two-letter status code: " M" modified, "M " staged, "??" new, " D" deleted, "R " renamed, ... */
-  status: string;
-  /** For a rename or copy - the original path */
-  originalPath?: string;
-};
 
 /**
  * The uncommitted changes (modified, staged, deleted or new) in the scope's files on main.

@@ -8,6 +8,8 @@
  */
 
 import type {
+  PerushChange,
+  PerushFileDecision,
   PerushScope,
   Meeting,
   MeetingId,
@@ -29,6 +31,8 @@ import {
   DIRECTOR_TIMEOUT_MS,
   USE_STUB_SDK,
   commitPerushDirectorEdits,
+  commitPerushPreMeeting,
+  commitPerushOnResume,
   commitPerushUpdate,
   commitPerushBeforeRollback,
   commitPerushRollback,
@@ -41,6 +45,7 @@ import {
   resumeMeeting as resumeMeetingGit,
   writeMeetingAtomic,
   readActiveMeeting,
+  readEndedMeeting,
   commitCycle as commitCycleGit,
   commitWithMessage,
   generateMeetingId,
@@ -135,6 +140,58 @@ function meetingPerushScope(): PerushScope {
 }
 
 /**
+ * Thrown when a meeting can't start or resume yet: the meeting's perush scope has uncommitted changes, and the
+ * Director hasn't decided about all of them. The server sends them to the Director (`uncommitted-changes`).
+ */
+export class UndecidedPerushChangesError extends Error {
+  constructor(readonly changes: PerushChange[], readonly scope: PerushScope) {
+    super(`${changes.length} uncommitted perush file(s) need the Director's decision`);
+  }
+}
+
+/**
+ * Apply the Director's decisions to the uncommitted changes of a scope: the paths to commit now ("include") and
+ * the paths to leave out of the meeting ("ignore") - a rename's original path goes with it.
+ * Throws UndecidedPerushChangesError if any change has no decision.
+ */
+async function resolvePerushDecisions(
+  scope: PerushScope,
+  decisions: Record<string, PerushFileDecision> = {},
+): Promise<{ includePaths: string[]; ignorePaths: string[] }> {
+  const changes = await detectPerushChanges(scope);
+  if (changes.some(change => !decisions[change.path])) {
+    throw new UndecidedPerushChangesError(changes, scope);
+  }
+  const includePaths: string[] = [];
+  const ignorePaths: string[] = [];
+  for (const change of changes) {
+    const paths = change.originalPath ? [change.path, change.originalPath] : [change.path];
+    (decisions[change.path] === "include" ? includePaths : ignorePaths).push(...paths);
+  }
+  return { includePaths, ignorePaths };
+}
+
+/** The perush scope a meeting will have when it resumes: its saved scope (or the default, for older meetings) */
+async function scopeOfStoredMeeting(meetingId: MeetingId): Promise<PerushScope> {
+  return (await readEndedMeeting(meetingId)).perushScope ?? defaultPerushScope();
+}
+
+/**
+ * Check - before anything else happens - that the Director decided about every uncommitted perush file of a meeting
+ * about to resume. Throws UndecidedPerushChangesError if not. Does nothing if the meeting is already active.
+ */
+export async function checkPerushDecisionsForResume(
+  meetingId: MeetingId,
+  decisions?: Record<string, PerushFileDecision>,
+): Promise<void> {
+  if (currentMeeting) {
+    if (currentMeeting.meetingId === meetingId) return;
+    throw new Error("A meeting is already active. End it before resuming another.");   // before asking about files
+  }
+  await resolvePerushDecisions(await scopeOfStoredMeeting(meetingId), decisions);
+}
+
+/**
  * Commit the uncommitted perush changes of the meeting's scope. A failure is reported to the Director, never fatal.
  * Returns false if the commit failed.
  */
@@ -200,6 +257,7 @@ function getDirectorTimeoutMs(): number {
 export async function startMeeting(
   title: string,
   participantIds: AgentId[],
+  perushFileDecisions?: Record<string, PerushFileDecision>,
 ): Promise<Meeting> {
   logInfo("orchestrator", `startMeeting: "${title}" with [${participantIds.join(", ")}]`);
   if (currentMeeting) {
@@ -209,14 +267,6 @@ export async function startMeeting(
   // Git state preconditions
   await ensureGitConfig();
   await cleanupDanglingWorktrees();
-  const perushScope = defaultPerushScope();
-  const uncommittedPerush = await detectPerushChanges(perushScope);
-  if (uncommittedPerush.length > 0) {
-    events.onError(
-      `אזהרה: יש שינויים לא שמורים בקבצי הפירוש (${uncommittedPerush.length} קבצים). ` +
-      `שינויים שיבוצעו על ידי סוכנים עלולים לכלול אותם בטעות.`,
-    );
-  }
 
   // Discover available agents
   const allAgents = await discoverAgents();
@@ -226,11 +276,18 @@ export async function startMeeting(
     throw new Error("No valid participants selected");
   }
 
+  // Uncommitted perush files: the Director decided about each (or UndecidedPerushChangesError is thrown).
+  // The included ones are committed now - the meeting's starting point; the ignored ones are left out of the meeting.
+  const perushScope = defaultPerushScope();
+  const { includePaths, ignorePaths } = await resolvePerushDecisions(perushScope, perushFileDecisions);
+  perushScope.ignoredPaths = ignorePaths;
+  const meetingId = generateMeetingId(title, new Date());
+  if (includePaths.length > 0) {
+    await commitPerushChanges(perushScope, commitPerushPreMeeting(meetingId), includePaths);
+  }
+
   // Register meeting context in session-manager for lazy session creation
   registerMeeting(title, meetingParticipantDefs);
-
-  // Generate meeting ID
-  const meetingId = generateMeetingId(title, new Date());
 
   // Create git worktree
   const worktreePath = await createMeetingWorktree(meetingId);
@@ -613,10 +670,13 @@ export async function handleRollback(
 
   // Phase 2: Reset session branch
   onProgress?.("git-reset", `מאפס לנקודת מחזור ${targetCycleNumber}...`);
+  const perushScope = meetingPerushScope();
   await resetSessionBranchToCycle(currentWorktreePath, targetCycleNumber);
 
-  // Re-read the rolled-back meeting.yaml
+  // Re-read the rolled-back meeting.yaml - keeping the current perush scope: files the Director chose to ignore
+  // later (on resume) must stay ignored - the rollback must not commit or restore them
   currentMeeting = await readActiveMeeting(currentWorktreePath);
+  currentMeeting.perushScope = perushScope;
 
   // Phase 3: Roll back the perush files on main - to the commit recorded at the end of the target cycle
   onProgress?.("perush-rollback", "משחזר את קבצי הפירוש...");
@@ -695,7 +755,10 @@ export async function handleRollback(
  * Re-attaches the worktree, reads the meeting state, and attempts to
  * resume or recover agent sessions.
  */
-export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> {
+export async function resumeMeetingById(
+  meetingId: MeetingId,
+  perushFileDecisions?: Record<string, PerushFileDecision>,
+): Promise<Meeting> {
   logInfo("orchestrator", `resumeMeetingById: ${meetingId}`);
   if (currentMeeting) {
     if (currentMeeting.meetingId === meetingId) {
@@ -705,12 +768,22 @@ export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> 
     throw new Error("A meeting is already active. End it before resuming another.");
   }
 
+  // Uncommitted perush files: the Director decided about each (or UndecidedPerushChangesError is thrown).
+  // The included ones are committed now; the ignored ones are added to the meeting's scope (below).
+  const perushScope = await scopeOfStoredMeeting(meetingId);
+  const { includePaths, ignorePaths } = await resolvePerushDecisions(perushScope, perushFileDecisions);
+  if (includePaths.length > 0) {
+    await commitPerushChanges(perushScope, commitPerushOnResume(meetingId), includePaths);
+  }
+
   // Re-attach worktree
   const worktreePath = await resumeMeetingGit(meetingId);
   currentWorktreePath = worktreePath;
 
   // Read meeting state
   currentMeeting = await readActiveMeeting(worktreePath);
+  const isPerushScopeChanged = !currentMeeting.perushScope || ignorePaths.length > 0;
+  currentMeeting.perushScope = { ...perushScope, ignoredPaths: [...perushScope.ignoredPaths, ...ignorePaths] };
 
   // If a pending cycle exists (interrupted mid-cycle), account for its costs and discard
   if (currentMeeting.pendingCycle) {
@@ -761,8 +834,9 @@ export async function resumeMeetingById(meetingId: MeetingId): Promise<Meeting> 
       orchestratorTranscript,
     );
     currentMeeting.sessionIds.orchestrator = orchestratorSessionId;
-
-    // Save updated session IDs and commit
+  }
+  if (hasHistory || isPerushScopeChanged) {
+    // Save updated session IDs (and perush scope) and commit
     await writeMeetingAtomic(worktreePath, currentMeeting);
     await commitWithMessage(worktreePath, "Meeting resumed");
   }

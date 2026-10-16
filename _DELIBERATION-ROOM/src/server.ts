@@ -10,8 +10,14 @@
 import { runWithContext } from "./context";
 import { join, extname, resolve } from "path";
 import { readFile, stat } from "fs/promises";
-import { SERVER_PORT, DELIBERATION_DIR } from "./config";
-import { ClientMessageSchema, type ServerMessage, type SpeakerId } from "./types";
+import { SERVER_PORT, DELIBERATION_DIR, PERUSH_TRACKED_PATHS, PERUSH_TRACKED_PATHS_SOURCE } from "./config";
+import {
+  ClientMessageSchema,
+  type MeetingId,
+  type PerushFileDecision,
+  type ServerMessage,
+  type SpeakerId,
+} from "./types";
 import {
   setEventHandlers,
   startMeeting,
@@ -22,6 +28,8 @@ import {
   handleAttention,
   handleRollback,
   resumeMeetingById,
+  checkPerushDecisionsForResume,
+  UndecidedPerushChangesError,
   getMeeting,
   getPhase,
   getActiveSpeaker,
@@ -155,6 +163,31 @@ function buildSyncBody(fields: {
     ...fields,
     paused: fields.paused ?? paused,
   };
+}
+
+/**
+ * If `err` says the Director must first decide about uncommitted perush files - ask (`uncommitted-changes`):
+ * the client re-sends its request (`start-meeting` / `resume-meeting`) with the decisions.
+ * Returns false for any other error.
+ */
+function askAboutUncommittedPerush(
+  ws: ServerWebSocket<unknown>,
+  err: unknown,
+  context: "start" | "resume",
+  decisions: Record<string, PerushFileDecision> | undefined,
+  meetingId?: MeetingId,
+): boolean {
+  if (!(err instanceof UndecidedPerushChangesError)) return false;
+  sendTo(ws, {
+    type: "uncommitted-changes",
+    context,
+    ...(meetingId ? { meetingId } : {}),
+    changes: err.changes,
+    decisions: decisions ?? {},
+    trackedPaths: err.scope.trackedPaths,
+    trackedPathsSource: PERUSH_TRACKED_PATHS_SOURCE,
+  });
+  return true;
 }
 
 /** Send a message to a single client. */
@@ -405,12 +438,13 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
     switch (msg.type) {
       case "start-meeting": {
         try {
-          const meeting = await startMeeting(msg.title, msg.participants);
+          const meeting = await startMeeting(msg.title, msg.participants, msg.perushFileDecisions);
           // Unpause — the meeting starts waiting for the first human prompt
           paused = false;
           broadcast(buildSyncBody({ meeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker() }));
           // No deliberation loop yet — it starts when the first human speech arrives
         } catch (err: any) {
+          if (askAboutUncommittedPerush(ws, err, "start", msg.perushFileDecisions)) break;
           sendTo(ws, { type: "error", message: err?.message || "Failed to start meeting" });
         }
         break;
@@ -418,12 +452,15 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
 
       case "resume-meeting": {
         try {
+          // First, the Director decides about uncommitted perush files (if any) - before the UI switches pages
+          await checkPerushDecisionsForResume(msg.meetingId, msg.perushFileDecisions);
+
           // Send preliminary sync immediately so the UI switches to the meeting page
           // while sessions are being recovered (which can take 30+ seconds with real SDK)
           const preliminaryMeeting = await readEndedMeeting(msg.meetingId);
           sendTo(ws, buildSyncBody({ meeting: preliminaryMeeting, currentPhase: "idle", readOnly: false }));
 
-          const meeting = await resumeMeetingById(msg.meetingId);
+          const meeting = await resumeMeetingById(msg.meetingId, msg.perushFileDecisions);
           broadcast(buildSyncBody({ meeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker() }));
           // Only start the deliberation loop if it's not already running AND
           // the meeting isn't waiting for human input (orchestrator decided human is next,
@@ -446,6 +483,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
             }
           }
         } catch (err: any) {
+          if (askAboutUncommittedPerush(ws, err, "resume", msg.perushFileDecisions, msg.meetingId)) break;
           sendTo(ws, { type: "error", message: err?.message || "Failed to resume meeting" });
         }
         break;
@@ -469,6 +507,9 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
             sendTo(ws, buildSyncBody({ meeting: activeMeeting, currentPhase: getPhase(), activeSpeaker: getActiveSpeaker(), readOnly: false }));
           } else if (!activeMeeting) {
             // No active meeting — auto-resume so the Director can interact.
+            // First, the Director decides about uncommitted perush files (if any): asked as for "resume-meeting",
+            // and the decisions come back in a "resume-meeting".
+            await checkPerushDecisionsForResume(msg.meetingId);
             // Send preliminary sync immediately (session recovery can take 30+ seconds).
             const preliminaryMeeting = await readEndedMeeting(msg.meetingId);
             sendTo(ws, buildSyncBody({ meeting: preliminaryMeeting, currentPhase: "idle", readOnly: false }));
@@ -498,6 +539,7 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
             sendTo(ws, buildSyncBody({ meeting: meetingData, currentPhase: "idle", readOnly: true }));
           }
         } catch (err: any) {
+          if (askAboutUncommittedPerush(ws, err, "resume", undefined, msg.meetingId)) break;
           sendTo(ws, { type: "error", message: `Failed to join meeting: ${err?.message}` });
         }
         break;
@@ -595,6 +637,11 @@ async function handleHttpRequest(req: Request, server: any): Promise<Response> {
       const agents = await discoverAgents();
       return Response.json(agents);
     }
+  }
+
+  // The folders new meetings track - shown on the landing page
+  if (pathname === "/api/perush-scope") {
+    return Response.json({ trackedPaths: PERUSH_TRACKED_PATHS, trackedPathsSource: PERUSH_TRACKED_PATHS_SOURCE });
   }
 
   if (pathname === "/api/meetings" && req.method === "DELETE") {
