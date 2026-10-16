@@ -42,3 +42,14 @@ The critical edition by **Andrew R. George** (editor and translator), revised by
 | `Gilgamesh-SB-I/` | Gilgameš SB I (prologue: "he brought back a report from before the flood") | | George |
 
 The other eBL Atra-ḫasīs chapters (OB II, OB III, OB Schøyen, SB IV–X, NA, other MB) had **no lines** on 2026-10-16: the edition is in progress. Re-check with `ebl_fetch.py`.
+
+### Added 2026-10-16 (third fetch: Enūma eliš, for the creation corpus)
+| Folder | Text | Lines | Editors / translator |
+|---|---|---|---|
+| `Enuma-elish-SB-I/` … `Enuma-elish-SB-VII/` | *Enūma eliš* ("Poem of Creation", eBL `L/1/2`), Standard Babylonian, Tablets I–VII | 162 / 162 / 138 / 146 / 158 / 166 / 166 = 1,098 | A. C. Heinrich (ed.), with Z. J. Földi and E. Jiménez (revision); translation B. R. Foster (with A. A. Fadhil; Arabic for I and VII) |
+
+- 23–75 manuscripts per tablet (Nineveh, Aššur, Kiš, Sippar, Babylon, Uruk, school tablets and commentaries). Each folder has the usual files (`reading-edition.md`, `glossary.md`, `manuscripts.md`, `bibliography.md`, `chapter.atf`, `_raw/`).
+- **Variant reconstructions:** eBL gives some lines two reconstructions (e.g. I 40: *qūlu liššakin-ma i niṣlal nīnu* and, in other manuscripts, *[…] mūšiš lū nēḫet*). `ebl_fetch.py` was fixed on 2026-10-16 to print them (`**N (variant, other manuscripts):**`) with their manuscripts; before, the second variant and its manuscripts were silently dropped. Count per tablet: I 8, II 2, III 2, IV 3, V 3, VI 11, VII 7.
+- **Parallel lines:** eBL lists, per line, the other lines of the poem that repeat it (Tiāmat's army I 129–162 = II 15–48 = III 19–52 = III 77–110, Marduk's conditions II 156–162 = III 58–64 = III 116–122, etc.). The project uses them to verify that repeated lines are translated identically.
+- **Usefulness:** the base text of the creation corpus project `סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/`. It supersedes King 1902, Langdon 1923 and Talon 2005, and incorporates many fragments that Lambert 2013 and Kämmerer & Metzler 2012 did not have. The eBL translation (Foster) is a rank-3 check; Lambert 2013 (*Babylonian Creation Myths*) is not available (paid).
+- **License:** as for the other eBL editions (treated as copyrighted; gitignored by `eBL/*/`).

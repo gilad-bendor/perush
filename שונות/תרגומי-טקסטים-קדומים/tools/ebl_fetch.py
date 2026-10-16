@@ -249,9 +249,10 @@ def main(argv):
     for ln in chap["lines"]:
         label = line_number_label(ln["number"])
         occurrence = seen.get(label, 0)
-        seen[label] = occurrence + 1
+        nvar = max(1, len(ln.get("variants", [])))  # each variant reconstruction has its own ATF block
+        seen[label] = occurrence + nvar
         block_list = blocks.get(label, [])
-        block = block_list[occurrence] if occurrence < len(block_list) else []
+        block = [b for blk in block_list[occurrence:occurrence + nvar] for b in blk]
         ms_atf = [b for b in block if not b.startswith(("#", "//", "$")) and " %n " not in b]
         ms_ids = [m.get("manuscriptId") for v in ln.get("variants", []) for m in v.get("manuscripts", [])]
         if len(ms_atf) == len(ms_ids):
@@ -281,10 +282,14 @@ def main(argv):
                 "Bibliography keys like [RN117: 889] are resolved in `bibliography.md` (RN117 = George 2003).\n\n")
         for ln, (label, forms) in zip(chap["lines"], line_lemmas):
             occurrence = seen.get(label, 0)
-            seen[label] = occurrence + 1
+            nvar = max(1, len(ln.get("variants", [])))  # each variant reconstruction has its own ATF block
+            seen[label] = occurrence + nvar
             block_list = blocks.get(label, [])
-            block = block_list[occurrence] if occurrence < len(block_list) else []
-            recon = next((b.split(" %n ", 1)[1] for b in block if " %n " in b), "")
+            block = [b for blk in block_list[occurrence:occurrence + nvar] for b in blk]
+            recons = [b.split(" %n ", 1)[1] for b in block if " %n " in b]
+            recon = recons[0] if recons else ""
+            # A line can have several variant reconstructions (eBL "variants"): the ATF repeats the line number.
+            variant_recons = recons[1:]
             tr = " ".join(parts_text(t.get("parts")) for t in ln.get("translation", []) if t.get("language") == "en")
             # Notes: the chapter ATF omits many of them, so take them from the JSON variants (fall back to the ATF).
             notes = []
@@ -306,6 +311,8 @@ def main(argv):
             section = "\n---\n\n" if ln.get("isBeginningOfSection") else ""
             f.write(f"{section}### {label}\n\n")
             f.write(f"- **N:** {recon}\n")
+            for vr in variant_recons:
+                f.write(f"- **N (variant, other manuscripts):** {vr}\n")
             if tr:
                 f.write(f"- **T:** {tr}\n")
             if forms:

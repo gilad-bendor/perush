@@ -203,13 +203,13 @@ If the folder's scope ever widens, the Baal Cycle and Deir ʿAllā come first.
 The user asked for the most relevant texts to be translated by subagents run **one at a time**; their own sub-subagents are also sequential.
 The order puts the highest benefit per cost first:
 
-| Run | Corpus folder | Content |
-|---|---|---|
-| 1 | `סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/` | Enūma eliš I–VII (item 1) |
-| 2 | `סיפורי-הבריאה-המסופוטמיים/2-…` | the creation and Eden companions (item 2) |
-| 3 | `חוקים-ובריתות/1-…` | Esarhaddon's Succession Treaty (item 3) |
-| 4 | `חוקים-ובריתות/2-…` | the Laws of Hammurabi (item 4) |
-| 5 | a new corpus or project folder | Gilgameš I–X, XII + OB II–III (item 5) |
-| 6 | `חוקים-ובריתות/3-…` | Eshnunna + MAL A (+ Lipit-Ištar, Ur-Namma if feasible) (item 6) |
+| Run | Corpus folder | Content | Status |
+|---|---|---|---|
+| 1 | `סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/` | Enūma eliš I–VII (item 1) | **Done (first draft), 2026-10-16**: 1,098 lines, annotated per tablet, translation, parallels index (`סיפורי-הבריאה-המסופוטמיים/parallels-index.md`), print stub. Open decisions in its `project.md`. |
+| 2 | `סיפורי-הבריאה-המסופוטמיים/2-…` | the creation and Eden companions (item 2) | not started |
+| 3 | `חוקים-ובריתות/1-…` | Esarhaddon's Succession Treaty (item 3) | not started |
+| 4 | `חוקים-ובריתות/2-…` | the Laws of Hammurabi (item 4) | not started |
+| 5 | a new corpus or project folder | Gilgameš I–X, XII + OB II–III (item 5) | not started |
+| 6 | `חוקים-ובריתות/3-…` | Eshnunna + MAL A (+ Lipit-Ištar, Ur-Namma if feasible) (item 6) | not started |
 
 Progress is recorded in each corpus's `corpus.md`.
