@@ -550,7 +550,8 @@ export async function commitPerushChangesOnMain(
 
   try {
     await $`git -C ${gitRoot} add פירוש/ בלשנות/ניתוחים-לשוניים/`.quiet();
-    await $`git -C ${gitRoot} commit -m ${message}`.quiet();
+    // Pathspec: commit only the perush files - never whatever else the user happens to have staged
+    await $`git -C ${gitRoot} commit -m ${message} -- פירוש/ בלשנות/ניתוחים-לשוניים/`.quiet();
     const hash = (await $`git -C ${gitRoot} rev-parse HEAD`.quiet()).stdout.toString().trim();
     logInfo("meetings-db", `commitPerushChangesOnMain: committed ${hash.slice(0, 8)}`);
     return hash;
@@ -784,7 +785,7 @@ export async function rollbackPerushOnMain(
 
     // Commit the restored files
     try {
-      await $`git -C ${gitRoot} commit -m ${"Rollback perush files to cycle " + targetCycleNumber} --allow-empty`.quiet();
+      await $`git -C ${gitRoot} commit -m ${"Rollback perush files to cycle " + targetCycleNumber} --allow-empty -- פירוש/ בלשנות/ניתוחים-לשוניים/`.quiet();
     } catch {}
 
     // Clean up invalidated tags (post-target, both main and session)
