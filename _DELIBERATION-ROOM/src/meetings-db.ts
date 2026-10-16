@@ -32,6 +32,8 @@ import {
   COMMIT_MEETING_ENDED,
   commitCycleMessage,
   commitPerushUpdate,
+  PERUSH_TRACKED_PATHS,
+  PERUSH_ON_MAIN_DISABLED,
 } from "./config";
 import {logInfo, logWarn, logError} from "./logs.ts";
 
@@ -69,6 +71,59 @@ export function generateMeetingId(title: string, startedAt: Date): MeetingId {
 async function getGitRoot(): Promise<string> {
   const result = await $`git -C ${DELIBERATION_DIR} rev-parse --show-toplevel`.quiet();
   return result.stdout.toString().trim();
+}
+
+/**
+ * Run git with an argument list, and return its stdout (throws on a non-zero exit).
+ *
+ * Use this - not Bun's $`...` - whenever an argument is written as a literal in the code and may contain
+ * non-ASCII text: Bun's shell turns literal Hebrew into "u05E4u05D9..." (Bun 1.3.8), so
+ * $`git add פירוש/` fails, while interpolated ${values} are fine.
+ */
+async function git(gitRoot: string, ...args: string[]): Promise<string> {
+  const proc = Bun.spawn(["git", "-C", gitRoot, ...args], { stdout: "pipe", stderr: "pipe" });
+  const [stdout, stderr, exitCode] = await Promise.all([
+    new Response(proc.stdout).text(),
+    new Response(proc.stderr).text(),
+    proc.exited,
+  ]);
+  if (exitCode !== 0) {
+    throw new Error(`git ${args.join(" ")} failed (exit ${exitCode}): ${(stderr || stdout).trim()}`);
+  }
+  return stdout;
+}
+
+// ---------------------------------------------------------------------------
+// Perush on main - the repository the meetings commit, tag and roll back the perush files in
+// ---------------------------------------------------------------------------
+
+/** A scratch repository that tests point the perush-on-main functions at */
+let perushGitRootForTests: string | undefined;
+export function setPerushGitRootForTests(gitRoot: string | undefined): void {
+  perushGitRootForTests = gitRoot;
+}
+
+/**
+ * The root of the repository whose perush files the meetings commit, tag and roll back - or null when
+ * this is disabled: under tests (NODE_ENV=test), unless a test set a scratch repository.
+ * Tests run real cycles - and must never commit to (and push) the real main.
+ */
+async function getPerushGitRoot(): Promise<string | null> {
+  if (perushGitRootForTests) return perushGitRootForTests;
+  if (PERUSH_ON_MAIN_DISABLED) return null;
+  return getGitRoot();
+}
+
+/** The PERUSH_TRACKED_PATHS that git knows or that exist - a pathspec that matches nothing fails the whole git command */
+async function perushPathspec(gitRoot: string): Promise<string[]> {
+  const paths: string[] = [];
+  for (const trackedPath of PERUSH_TRACKED_PATHS) {
+    const exists = await stat(join(gitRoot, trackedPath)).then(() => true, () => false);
+    if (exists || (await git(gitRoot, "ls-files", "-z", "--", trackedPath)).length > 0) {
+      paths.push(trackedPath);
+    }
+  }
+  return paths;
 }
 
 /**
@@ -426,8 +481,8 @@ export async function deleteMeetingsByTitle(title: string): Promise<number> {
     // Delete associated tags
     const tagPrefix = meetingIdToTagIdPrefix(meeting.meetingId);
     try {
-      const tagsResult = await $`git -C ${gitRoot} tag --list ${tagPrefix}/*`.quiet();
-      const tags = tagsResult.stdout.toString().trim().split("\n").filter(Boolean);
+      // Not $`...`: Bun's shell would expand the literal "*" as a filename glob (and fail - no file matches)
+      const tags = (await git(gitRoot, "tag", "--list", `${tagPrefix}/*`)).trim().split("\n").filter(Boolean);
       for (const tag of tags) {
         try { await $`git -C ${gitRoot} tag -d ${tag}`.quiet(); } catch {}
       }
@@ -516,17 +571,22 @@ export async function findCycleCommit(
 // ---------------------------------------------------------------------------
 
 /**
- * Detect whether any perush files were modified on main.
+ * Detect whether any perush files (PERUSH_TRACKED_PATHS) were changed on main - modified, staged, deleted or new.
  * Returns the list of changed file paths, or empty array if none.
  */
 export async function detectPerushChanges(): Promise<string[]> {
-  const gitRoot = await getGitRoot();
+  const gitRoot = await getPerushGitRoot();
+  if (!gitRoot) return [];
   try {
-    const result = await $`git -C ${gitRoot} diff --name-only`.quiet();
-    const lines = result.stdout.toString().trim().split("\n").filter(Boolean);
-    const changed = lines.filter(
-      f => f.startsWith("פירוש/") || f.startsWith("בלשנות/ניתוחים-לשוניים/"),
-    );
+    // -z: paths as they are (never quoted), whatever core.quotepath is.
+    // Each entry is "XY path"; a rename/copy entry is followed by its original path as a separate entry.
+    const entries = (await git(gitRoot, "status", "--porcelain", "-z", "--untracked-files=all", "--", ...PERUSH_TRACKED_PATHS))
+      .split("\0").filter(Boolean);
+    const changed: string[] = [];
+    for (let i = 0; i < entries.length; i++) {
+      changed.push(entries[i].slice(3));
+      if (/^[RC]/.test(entries[i])) i++;
+    }
     if (changed.length > 0) {
       logInfo("meetings-db", `detectPerushChanges: ${changed.length} file(s) changed`, changed);
     }
@@ -545,18 +605,21 @@ export async function commitPerushChangesOnMain(
   meetingId: MeetingId,
 ): Promise<string | null> {
   logInfo("meetings-db", `commitPerushChangesOnMain: cycle ${cycleNumber}, meeting ${meetingId}`);
-  const gitRoot = await getGitRoot();
+  const gitRoot = await getPerushGitRoot();
+  if (!gitRoot) return null;
   const message = commitPerushUpdate(cycleNumber, meetingId);
 
   try {
-    await $`git -C ${gitRoot} add פירוש/ בלשנות/ניתוחים-לשוניים/`.quiet();
+    const pathspec = await perushPathspec(gitRoot);
+    if (pathspec.length === 0) return null;            // "commit --" with no paths would commit the whole index
+    await git(gitRoot, "add", "--", ...pathspec);
     // Pathspec: commit only the perush files - never whatever else the user happens to have staged
-    await $`git -C ${gitRoot} commit -m ${message} -- פירוש/ בלשנות/ניתוחים-לשוניים/`.quiet();
-    const hash = (await $`git -C ${gitRoot} rev-parse HEAD`.quiet()).stdout.toString().trim();
+    await git(gitRoot, "commit", "-m", message, "--", ...pathspec);
+    const hash = (await git(gitRoot, "rev-parse", "HEAD")).trim();
     logInfo("meetings-db", `commitPerushChangesOnMain: committed ${hash.slice(0, 8)}`);
     return hash;
-  } catch {
-    logWarn("meetings-db", `commitPerushChangesOnMain: nothing to commit`);
+  } catch (err) {
+    logWarn("meetings-db", `commitPerushChangesOnMain: nothing committed: ${err}`);
     return null;
   }
 }
@@ -571,7 +634,8 @@ export async function createCorrelatedTags(
   meetingId: MeetingId,
   cycleNumber: number,
 ): Promise<boolean> {
-  const gitRoot = await getGitRoot();
+  const gitRoot = await getPerushGitRoot();
+  if (!gitRoot) return false;
 
   try {
     // Tag main's HEAD
@@ -597,7 +661,8 @@ export async function createCorrelatedTags(
 export function asyncPush(meetingId: MeetingId, cycleNumber: number): void {
   (async () => {
     try {
-      const gitRoot = await getGitRoot();
+      const gitRoot = await getPerushGitRoot();
+      if (!gitRoot) return;
       await $`git -C ${gitRoot} push origin ${cycleTagMain(meetingId, cycleNumber)} ${cycleTagSession(meetingId, cycleNumber)} main ${meetingIdToBranchName(meetingId)}`.quiet();
     } catch (err) {
       logError("meetings-db", `Async push failed for meeting-id ${meetingId}: ${err}`);
@@ -675,12 +740,13 @@ async function findTagsAfterCycle(
   meetingId: MeetingId,
   targetCycleNumber: number,
 ): Promise<{ cycleNumber: number; tagName: string }[]> {
-  const gitRoot = await getGitRoot();
+  const gitRoot = await getPerushGitRoot();
+  if (!gitRoot) return [];
   const prefix = meetingIdToTagIdPrefix(meetingId);
 
   try {
-    const result = await $`git -C ${gitRoot} tag --list ${prefix}/c*/main`.quiet();
-    const output = result.stdout.toString().trim();
+    // Not $`...`: Bun's shell would expand the literal "*" as a filename glob (and fail - no file matches)
+    const output = (await git(gitRoot, "tag", "--list", `${prefix}/c*/main`)).trim();
     if (!output) return [];
 
     const parsed: { cycleNumber: number; tagName: string }[] = [];
@@ -708,12 +774,13 @@ async function findLatestTagAtOrBefore(
   meetingId: MeetingId,
   targetCycleNumber: number,
 ): Promise<string | null> {
-  const gitRoot = await getGitRoot();
+  const gitRoot = await getPerushGitRoot();
+  if (!gitRoot) return null;
   const prefix = meetingIdToTagIdPrefix(meetingId);
 
   try {
-    const result = await $`git -C ${gitRoot} tag --list ${prefix}/c*/main`.quiet();
-    const output = result.stdout.toString().trim();
+    // Not $`...`: Bun's shell would expand the literal "*" as a filename glob (and fail - no file matches)
+    const output = (await git(gitRoot, "tag", "--list", `${prefix}/c*/main`)).trim();
     if (!output) return null;
 
     let best: { cycleNumber: number; tagName: string } | null = null;
@@ -746,7 +813,8 @@ export async function rollbackPerushOnMain(
   targetCycleNumber: number,
 ): Promise<{ stashed: boolean; rolledBack: boolean }> {
   logInfo("meetings-db", `rollbackPerushOnMain: meeting ${meetingId}, target cycle ${targetCycleNumber}`);
-  const gitRoot = await getGitRoot();
+  const gitRoot = await getPerushGitRoot();
+  if (!gitRoot) return { stashed: false, rolledBack: false };
   const tagsAfter = await findTagsAfterCycle(meetingId, targetCycleNumber);
 
   if (tagsAfter.length === 0) {
@@ -756,15 +824,23 @@ export async function rollbackPerushOnMain(
 
   logInfo("meetings-db", `rollbackPerushOnMain: ${tagsAfter.length} tag(s) to roll back`, tagsAfter.map(t => t.tagName));
 
+  const pathspec = await perushPathspec(gitRoot);
+  if (pathspec.length === 0) {                         // "commit --" with no paths would commit the whole index
+    logWarn("meetings-db", `rollbackPerushOnMain: none of the tracked folders exists - nothing to roll back`);
+    return { stashed: false, rolledBack: false };
+  }
+
   // Stash uncommitted perush changes if any
   let stashed = false;
   const uncommitted = await detectPerushChanges();
   if (uncommitted.length > 0) {
     logInfo("meetings-db", `rollbackPerushOnMain: stashing ${uncommitted.length} uncommitted file(s)`);
     try {
-      await $`git -C ${gitRoot} stash push -m "Pre-rollback stash" -- פירוש/ בלשנות/ניתוחים-לשוניים/`.quiet();
+      await git(gitRoot, "stash", "push", "--include-untracked", "-m", "Pre-rollback stash", "--", ...pathspec);
       stashed = true;
-    } catch {}
+    } catch (err) {
+      logWarn("meetings-db", `rollbackPerushOnMain: stash failed: ${err}`);
+    }
   }
 
   // Determine which ref to restore perush files from:
@@ -775,18 +851,22 @@ export async function rollbackPerushOnMain(
   logInfo("meetings-db", `rollbackPerushOnMain: restoring from ref ${restoreRef}`);
 
   try {
-    // Restore perush files to the target state (each dir separately for robustness)
-    try {
-      await $`git -C ${gitRoot} checkout ${restoreRef} -- פירוש/`.quiet();
-    } catch {}
-    try {
-      await $`git -C ${gitRoot} checkout ${restoreRef} -- בלשנות/ניתוחים-לשוניים/`.quiet();
-    } catch {}
+    // Restore perush files to the target state (each dir separately for robustness).
+    // `restore` (unlike `checkout <ref> -- path`) also removes files that were added after restoreRef.
+    for (const trackedPath of PERUSH_TRACKED_PATHS) {
+      try {
+        await git(gitRoot, "restore", `--source=${restoreRef}`, "--staged", "--worktree", "--", trackedPath);
+      } catch (err) {
+        logWarn("meetings-db", `rollbackPerushOnMain: restore of ${trackedPath} failed: ${err}`);
+      }
+    }
 
     // Commit the restored files
     try {
-      await $`git -C ${gitRoot} commit -m ${"Rollback perush files to cycle " + targetCycleNumber} --allow-empty -- פירוש/ בלשנות/ניתוחים-לשוניים/`.quiet();
-    } catch {}
+      await git(gitRoot, "commit", "-m", `Rollback perush files to cycle ${targetCycleNumber}`, "--allow-empty", "--", ...pathspec);
+    } catch (err) {
+      logWarn("meetings-db", `rollbackPerushOnMain: commit failed: ${err}`);
+    }
 
     // Clean up invalidated tags (post-target, both main and session)
     for (const { tagName } of tagsAfter) {

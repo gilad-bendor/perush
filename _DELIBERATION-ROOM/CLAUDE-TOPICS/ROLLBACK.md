@@ -60,7 +60,7 @@ Clicking the rollback icon opens a **modal dialog** overlaid on the deliberation
 
 **Phase 4 — Perush File Rollback** (main branch, if needed):
 - Check for correlated tags (`session-cycle/<meeting-id>/c*/main`) for cycles after the target.
-- If perush changes exist after the rollback point: stash any uncommitted main changes (`git stash push -m "Pre-rollback stash" -- פירוש/ בלשנות/ניתוחים-לשוניים/`), then restore perush files from `session-cycle/<meeting-id>/c<N>/main` (the most recent tag at or before the target cycle).
+- If perush changes exist after the rollback point: stash any uncommitted changes in the tracked folders (`git stash push --include-untracked -m "Pre-rollback stash" -- <PERUSH_TRACKED_PATHS>`), then restore the tracked folders with `git restore --source=<ref> --staged --worktree` (which also removes files added after `<ref>`) from `session-cycle/<meeting-id>/c<N>/main` (the most recent tag at or before the target cycle), and commit with the same pathspec.
 - If no perush changes after target: main is left untouched.
 - Notify the Director via `rollback-progress` if changes were stashed.
 

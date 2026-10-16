@@ -102,6 +102,18 @@ export const MEETINGS_DIR = join(DELIBERATION_DIR, ".meetings");
 /** Log files directory (gitignored). Absolute, so it doesn't depend on the process cwd */
 export const LOGS_DIR = join(DELIBERATION_DIR, ".logs");
 
+/**
+ * The folders (relative to the project root) whose changes on main are attributed to a meeting:
+ * committed after each cycle (and tagged), and restored on rollback.
+ */
+export const PERUSH_TRACKED_PATHS = ["פירוש/", "בלשנות/ניתוחים-לשוניים/"];
+
+/**
+ * Under tests (NODE_ENV=test - set by `bun test`, and by the E2E tests for the server they spawn) meetings never
+ * commit, tag, push or roll back the perush files on the real main: tests run real cycles.
+ */
+export const PERUSH_ON_MAIN_DISABLED = process.env.NODE_ENV === "test";
+
 /** Preface to the commentary — holds the dictionary section, injected via `<!-- @echo dictionary -->` */
 export const DICTIONARY_SOURCE_MD = join(ROOT_PROJECT_DIR, "פירוש", "הקדמה-לפירוש.rtl.md");
 
