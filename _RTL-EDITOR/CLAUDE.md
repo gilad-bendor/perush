@@ -475,6 +475,13 @@ the document nor the viewport. So the plugin's `update()` rebuilds on
 emphasis at all until its first edit. Any future plugin that reads the syntax tree needs the same
 third test; `markdownLinkPlugin` and `tableLinePlugin` scan the raw lines and so do not.
 
+### A backslash between code spans
+
+`` `a`\`b` `` is how the files write "a or b". CommonMark reads that `` \` `` as an escaped backtick, which
+leaves the second span unopened, so a backslash standing right after a backtick and right before one is a
+plain character instead - in the editor (`codeSeparatorExtension`, a Lezer inline parser before `Escape`)
+and on the page (`codeSeparatorRule` in `md-to-html.ts`, before markdown-it's `escape`). Change both together.
+
 ### Watching the tree
 
 A file or folder created or deleted by anything outside the editor reaches the UI within a second,
@@ -584,6 +591,7 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
 - **Raw HTML is escaped** (`html: false`), as the editor shows it as text too - except inside a
   ```` ```html ```` fence, which goes to the page as it is. See "The raw-HTML fence" below.
 - `*` / `**` inside inline code are bold, stars removed.
+- `` `a`\`b` `` is two code spans with a backslash between them - see "A backslash between code spans".
 - **An index** goes where the file's `<תוכן-העניינים>` line stands, and nowhere else (`renderIndexes()`):
   a collapsible `<nav class="index">` of the headings of `#`..`###` **below** it, titled
   **תוכן העניינים** in an RTL page and **Contents** in an LTR one, indented from the shallowest

@@ -78,6 +78,18 @@ describe("emphasis inside inline code", () => {
     });
 });
 
+describe("a backslash between two code spans", () => {
+    test("separates them, rather than escaping the backtick after it", () => {
+        expect(html("`a`\\`b`")).toBe("<p><code>a</code>\\<code>b</code></p>");
+        expect(html("`a`\\`b`\\`c`")).toBe("<p><code>a</code>\\<code>b</code>\\<code>c</code></p>");
+    });
+
+    test("still escapes a backtick anywhere else", () => {
+        expect(html("x \\`a`")).toBe("<p>x `a`</p>");
+        expect(html("`\\`")).toBe("<p><code>\\</code></p>");
+    });
+});
+
 describe("tables", () => {
     test("a box table becomes an HTML table with no header row", () => {
         const table = [
