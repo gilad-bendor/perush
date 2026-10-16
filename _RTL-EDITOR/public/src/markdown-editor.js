@@ -538,7 +538,7 @@ export class MarkdownEditor {
         const extensions = [
             basicSetup,
             search({ createPanel: (view) => new CountingSearchPanel(view) }),
-            markdown({ addKeymap: false }),
+            markdown({ addKeymap: false, extensions: [codeSeparatorExtension] }),
             markdownTightKeymap(),
             markdownHighlighting,
             listLinePlugin,
@@ -1581,6 +1581,24 @@ function bidiEdgeSelectionExtension() {
         { key: 'Shift-ArrowRight', run: (view) => extend(view, false) },
     ]));
 }
+
+/**
+ * `a`\`b` is how the files write "a or b": two code spans and a backslash between them. CommonMark reads
+ * that `\`` as an escaped backtick, which leaves the second span unopened - so a backslash right after a
+ * backtick and right before one is a plain character here. `codeSeparatorRule` in `md-to-html.ts` agrees.
+ */
+const codeSeparatorExtension = {
+    defineNodes: [{ name: "CodeSeparator" }],
+    parseInline: [{
+        name: "CodeSeparator",
+        before: "Escape",
+        parse(cx, next, pos) {
+            const backtick = 96;
+            if (next !== 92 || cx.char(pos - 1) !== backtick || cx.char(pos + 1) !== backtick) return -1;
+            return cx.addElement(cx.elt("CodeSeparator", pos, pos + 1));
+        },
+    }],
+};
 
 /**
  * The keymap `markdown()` installs, with Enter never adding a blank line of its own.

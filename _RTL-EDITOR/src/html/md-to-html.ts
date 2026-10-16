@@ -22,7 +22,7 @@
 // Pure: content in, HTML out. Which file goes where, and when, is html-mirror.ts's business.
 
 import MarkdownIt from "markdown-it";
-import type { StateBlock, StateCore, Token } from "markdown-it";
+import type { StateBlock, StateCore, StateInline, Token } from "markdown-it";
 import { isRtlFile, parseTables } from "../../public/src/tables.js";
 import { INDEX_TAG_NAME, isVoidPseudoTag } from "../../public/src/pseudo-tags.js";
 import { headingSlug } from "../../public/src/links.js";
@@ -121,6 +121,19 @@ markdown.disable("table");
 
 // ------------------------------------------------------------------------------------------------
 // Lists
+
+// `a`\`b` is how the files write "a or b": two code spans and a backslash between them. CommonMark reads
+// that `\`` as an escaped backtick, which leaves the second span unopened - so a backslash right after a
+// backtick and right before one is a plain character here. The editor's `codeSeparatorExtension` agrees.
+markdown.inline.ruler.before("escape", "code_separator", codeSeparatorRule);
+
+function codeSeparatorRule(state: StateInline, silent: boolean): boolean {
+    const { src, pos } = state;
+    if (src[pos] !== "\\" || src[pos - 1] !== "`" || src[pos + 1] !== "`") return false;
+    if (!silent) state.pending += "\\";
+    state.pos++;
+    return true;
+}
 
 // A line indented less than a list item's text is not part of the item. CommonMark would take it as a
 // "lazy" continuation of the item's last paragraph - `- bbb` and then `Here is list two:` on the next line
