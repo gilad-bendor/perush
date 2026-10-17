@@ -34,7 +34,7 @@ Vocalize at the first occurrence in each tablet; plain afterwards, except where 
 | Ḫumbaba (SB) / Ḫuwawa (OB) | חוּמְבָּבָה / חוּוָוה | Keep the form the text has; note at first occurrence. |
 | Šiduri (the ale-wife; *sābītu*) | שִׁידוּרִי | |
 | Ur-šanabi | אוּרְשַׁנַבִּי | |
-| Ūta-napišti (*rūqu*) | אוּתְנַפִּשְׁתִּי (הָרָחוֹק) | OB *Uta-naʾišti*: אוּתְנַאִישְׁתִּי, note. |
+| Ūta-napišti (*rūqu*) | אוּתְנַפִּשְׁתִּי (הָרָחוֹק) | OB *Ūta-naʾištim*: אוּתְנַאִישְׁתִּים (OB mimation kept), note. |
 | Ereškigal; Bēlet-ṣēri; Namtar; Ningišzida; Dumuzi; Etana; Šakkan; Irkalla | אֶרֶשְׁכִּיגַל; בֵּלֶת־צֵרִי; נַמְתָּר; נִינְגִּשְׁזִידָה; דּוּמוּזִי; אֵתָנָה; שַׁכַּן – **always vocalized**; אִירְכַּלָּה | Dumuzi: note `תַּמּוּז` (יחזקאל ח:יד). Šakkan unvocalized reads `שכן`. |
 | Mammītum; Anunnakkū; Igigū | מַמִּיתוּם; אֲנוּנָּכִּי; אִיגִיגִי | |
 | Bēlet-ilī; Mami (OB) | בֵּלֶת־אִילִי; מָמִי | |
@@ -323,9 +323,26 @@ Accepted as binding (context: `annotated-X.rtl.md`). Coordinator notes: *sābīt
 4. **Formula (§2):** `X – כשמעו את זאת,` confirmed (X 92, 163); *mindē-ma* = `אולי` (open decision 9).
 5. **verify.py:** add `ṭīdiš` to the allowed lemmas of the `טיט` check (X 68–69, 145–146, 245–246 are the fixed passage's *ṭiṭṭiš emû*).
 
+## 13. Merged after OB VA+BM and OB II (2026-10-17)
+Accepted as binding (context: `2-הנוסח-הבבלי-הקדום/annotated-OB-*.rtl.md`). Coordinator decisions: OB Ūta-naʾištim = `אוּתְנַאִישְׁתִּים`; *dâlu* = `סוֹבֵב` (not `נָע`, Gen 4:12); *awīliš ewû* = `הָיָה לְאָדָם` (beside *ṭiṭṭiš emû* = `הָיָה לְטִיט`); OB II 1–43 / SB I 243–288 and OB II 34–51, 60–63, 100–115 are the **first copies** for SB Tablet II where the Akkadian is identical.
+
+### From OB VA+BM
+1. **Names (§1):** Sursunabu = `סוּרְסוּנַבּוּ`; Ūta-naʾištim = `אוּתְנַאִישְׁתִּים` (or align to §1 `אוּתְנַאִישְׁתִּי`: open decision 1); Uruk-Eanna = `אוּרוּךְ־אַיַּכּוּ`.
+2. **Key terms (§4):** *dâlu* = `סוֹבֵב` (open decision 2; Gen 4:12 `נָע` tagged, not used); *êš* = `אָנָה`; *nawirtu* = `נְהָרָה` [cognate]; *sakāpu* noun = `תְּנוּמָה`; *karšu malû* = `מעיים מלאים`; *ḫidûta šakānu* = `שׂים שמחה`; *sâru* = `כִּרְכֵּר`, *mēlulu* (verb) = `חוּל`; *ebēbu* D stative = `מְנֻקֶּה`; *ṣubbû* = `שׁוּר` (always vocalized); *ṣeḫru* = `קָטָן`; *ṣabātu* "hold (life) in the hand" = `אָחַז בְּיָד`; *šūt abnim* (OB) = `אַנְשֵׁי הָאֶבֶן`.
+3. **Ordinary words (§5):** *būrtu* = `בְּאֵר`; *ašāšu* = `דָּאַג`; *dakāšu*/*daqāšu* = `*גָּחַן*`; *kibsu* = `שְׁבִיל`; *uzzu* = `זַעַם`; *nadānu* Št = `נִדְבַּר`; *ṭeḫû* D = `הִגִּישׁ`; *ṣertu* = `פִּטְמָה`; *ṣuppā* = `שישים אמה`; *mušēbiru* = `מַעֲבִיר`; *šūburu* = `הַעֲבָרָה` / `הַעֲבִיר`; *rigmu* = `קוֹל`; *-man* = `אוּלַי`.
+4. **Formula (§2):** OB *ana šâšum issaqqaram ana* Y = `X דיבר אליו, אל Y:` (as SB); OB *issaqqaram ana* Y alone = `דיבר אל Y:`; OB *ana šâšim* (to her) = `דיבר אליה`.
+
+### From OB II
+1. **Key terms (§4):** *awīliš ewû* = `הָיָה לְאָדָם` (beside *ṭiṭṭiš emû* = `הָיָה לְטִיט`: one verb, one Hebrew); *mutu* = `בַּעַל` "husband" / `גֶּבֶר` "man, warrior" by sense (open decision 3); *meḫru* = `שָׁוֶה` (with *maḫāru*); *ḫiāru* = `בָּחַר`, *ḫayyāru* = `בּוֹחֵר` (↔ Gen 6:2); *kallūtu* = `כְּלוּלוֹת`; *emūtu* = `חֲתֻנָּה`; *uklu* = `מַאֲכָל` [cognate]; *eṣemtu* = `עֶצֶם` [cognate]; *tarbaṣu* = `רֶבֶץ` [cognate ↔ Gen 4:7]; *gupru* = `סֻכָּה`; *libšu* = `מַלְבּוּשׁ`; *simat balāṭi* = `הָרָאוּי לַחַיִּים`; *akala šakānu* = `שָׂם לֶחֶם`; *pašāru* N "be released (mood)" = `נִפְשַׁר` (one Hebrew root for *pašāru*).
+2. **Names (§1):** Šamkatum (OB spelling) = `שַׁמְחַת` (open decision 2); Ninsunna = `נִינְסוּנָּה`; add to §7 "always vocalize": `שֵׁכָר` (vs "wages"), `לֻמַּד`, `שָׂח`/`שָׂחָה` (vs "swam"), `דְּבָרָהּ`, `אֵם`.
+3. **Ordinary words (§5):** *šamāḫu* = `פָּרַח`; *edēru* = `לָפַת`; *emēdu* = `סָמַךְ` (N `נִסְמַךְ`); *âru* = `הוֹלִיךְ`; *abāku* = `נֶעְתַּק`; *magāru* = `רָצָה`; *piāqu* = `צִמְצֵם`; *nagû* = `רִנֵּן`; *elēṣu* = `עָלַץ`, *ulṣu* = `עֲלִיצוּת`; *gallābu* = `גַּלָּב`; *assammu* = `גָּבִיעַ`; *šizbu* = `חָלָב`; *kašādu* D "chase off" = `הֵנִיס`; *lābu* = `לָבִיא`; *akāšu* = `צָעַד`; *ḫiāšu* = `חָשׁ`; *zikru* = `מַאֲמָר`; *ṣênu* = `טָעַן`; *ṣayyaḫu* = `עָרֵב`; *abunnatu* = `טַבּוּר`; *arāqu* = `הוֹרִיק`; *tāwītu* = `שִׂיחָה`; *kayyānu* = `תָּמִיד`; *nīqu* = `זֶבַח`; *padattu* = `גִּזְרָה`; *pagālu* = `חָסוֹן`; *anāpu* = `רָגַז`; *parāsu* = `קָטַע`; *līʾu* = `פַּר`; *lâdu* = `כָּפַף`; *igāru* = `קִיר`; *ratātu* = `זָע`; *nêʾu* = `הִפְנָה`; *ullû* = `מוּרָם`; *rīmtu* = `רְאֵמָה`; *nâšu* D = `הֵנִיעַ`.
+4. **Formula (§2):** OB two-line opening without *iqabbi*: `X פתחה את פיה,` / `ודיברה אל Y:`; OB *šunatam ipaššar* = `פושר חלום` (as SB).
+5. **verify.py**: nothing needed (no false positives for these tablets).
+
 ## Changelog
 - 2026-10-17: seed written by the corpus coordinator before Tablet I, from the flood, creation and law corpora and a reading of I, II, VI, VII, X and XI 207–328 in eBL.
 - 2026-10-17: §9 merged from Tablet I.
 - 2026-10-17: §10 merged from XI 209–328 and VI; *wabālu* / *warû* split; *šanāt pê* corrected.
 - 2026-10-17: §11 merged from Tablet VII.
 - 2026-10-17: §12 merged from Tablet X.
+- 2026-10-17: §13 merged from OB VA+BM and OB II.
