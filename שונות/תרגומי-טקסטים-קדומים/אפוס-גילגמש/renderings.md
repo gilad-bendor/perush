@@ -280,6 +280,27 @@ Coordinator's decisions on them:
 - `רֵעַ` is always vocalized (unvocalized `רע` after `יודע` reads "evil").
 - eBL's parallels field links I 254–265 to "SB II" 269–288: a false link (unrelated lines); ignore it.
 
+## 10. Merged after XI 209–328 and VI (2026-10-17)
+Accepted as binding (grep `annotated-XI.rtl.md` / `annotated-VI.rtl.md` for context), with these coordinator decisions:
+- ***wabālu* = `הֵבִיא` / `נָשָׂא` by sense** (the cognate יבל noted at XI 253); `הוֹבִיל` is reserved for *warû* (Tablet I). XI 253, 255, 262, 264, 297 were changed accordingly by the coordinator.
+- ***šanāt pê*** (§4) is corrected: VI 104, 110 read *sebe šanāti || pî lipaḫḫir* "for seven years … gather chaff" (`שבע שנים – מוץ תקבץ`); `מוֹץ` and `קִבֵּץ` stay.
+- *raggu* = `רָשָׁע` (open decision), *dumqu* = `חֶסֶד` (also "beauty", Isa 40:6; open decision: `נוֹי` where it means beauty).
+- The flood XI 160 `צברתי` is recorded as an open decision for the user (not edited: another corpus's harmonized text).
+
+### From XI 209–328
+1. **Key terms (§4):** *dumqu* = `חֶסֶד` (XI 252, 313–314; VI 6); *nipšu* = `נְשִׁיפָה` (XI 305; VI 119–123); *edû* I "tide, flood" = `אֵד` [cognate] (XI 315; creation corpus); *ittu* = `אוֹת` (+ *šakānu* = `שָׂם אוֹת`); *quliptu* = `נֶשֶׁל`; *eddettu* = `אָטָד`; *siḫiltu* = `עֹקֶץ`; *nemsû* = `כִּיּוֹר`; *paršīgu* = `צָנִיף`; *tēdīqu* = `גְּלִימָה`; *malû* "matted hair" = `פֶּרַע` (pl. `פְּרָעוֹת`); *kamānu* = `כַּוָּן` [cognate]; *epû* = `אָפָה` [cognate]; *erēšu* II = `שָׁאַל`; *ṣuḫru* = `נְעוּרִים`; *ramāku* = `טָבַל`; *mesû* = `רָחַץ` (already in I); *edēšu* = `חדש` [cognate].
+2. ***wabālu* = `הוֹבִיל`** [cognate יבל] corpus-wide, and *warû* (I 138, 160, 165, 207) to another verb (`הִנְחָה` / `נָהַג`); or the reverse – coordinator's choice (open decision 3).
+3. **Ordinary words (§5):** *gana* = `קוּם` (from Atra-ḫasīs); *anāḫu* = `יָגַע` (and *mānaḫtu* = `יְגִיעַ`); *ašāṭu* = `הִתְאַמֵּץ`; *dekû* = `הֵעִיר`; *nagaltû* = `הֵקִיץ`; *lapātu* = `נָגַע`; *ekkēmu* = `חוֹטֵף`; *kāru* = `נָמָל`; *nēberu* = `מַעְבָּר`; *zummû* = `נֶעְדַּר`; *kasû* "bind" = `כָּפַת`; *ṣapû* D = `הִשְׁרָה`; *rakābu* = `רָכַב`; *magillu* = `סִירָה`; *parīsu* = `מוֹט`; *rāṭu* = `רַהַט`; *rakāsu* = `רָכַס`; *šadādu* = `מָשַׁךְ`; *batāqu* = `בִּיתֵּק`; *nasāku* = `זָרַק`; *latāku* = `נִסָּה`; *kaṣû* = `קַר`; *šaqummiš* = `בִּדְמָמָה`; *ramānu* = `עַצְמִי`; *watû* = `מָצָא`; *naḫāsu* = `נָסוֹג`; *unūtu* = `כֵּלִים`; *raggu* / *ragāgu* = `רָשָׁע` / `הִרְשִׁיעַ` (pending open decision 1); *šīpa nadû* = `הֵטִיל כֶּתֶם`; *raṭbu* = `רָטֹב`; *bašālu* = `בָּשֵׁל`; *pēmtu* = `גֶּחָלִים`.
+4. **Formula:** *annīta ina šemêšu* with the subject first: `X – כשמעו את זאת,` (XI 287; VI 80 with `[כשמעה]`).
+5. **Note to the flood corpus (not edited):** flood XI 160 has `צברתי` for *attabak* (*tabāku*), against the shared rule that `צָבַר` is never used in the `>` lines (Gen 41:49) and the flood renderings' *tabāku* = `יָצַק`; worth a coordinator's look.
+
+### From VI
+1. **Names (§1):** Silili = `סִילִילִי`; Antu = `אַנְתּוּ` (already); *dannina* = `דַּנִּינָה` (transliterated); *allallu* (bird / "warrior") = `אַלַּלּוּ`.
+2. **Key terms (§4):** *ḫāwiru* = `חָתָן` (beside *mutu* = `בַּעַל`); *inbu* = `תְּנוּבָה` (never `פְּרִי`); *nukaribbu* = `גַּנָּן`; *lapātu* = `נָגַע`; *erretu* = `מְאֵרָה` (add to §4's ארר row); *pištu* = `חֶרְפָּה`; *ḫurdatu* = `עֶרְוָה` (or `פֹּת`, open decision 2); *nakāmu* = `אָגַר` (the storing verb of Gen 41 comparisons, beside *šapāku* = `שָׁפַךְ`); **correct §4 *šanāt pê*** to *sebe šanāti … pî* "seven years … chaff" (decision 13); *ikkaru* plene `אִיכָּר`; *imittu* = `יֶרֶךְ־הַיָּמִין`; *ṭapālu* = `הִכְפִּישׁ`; *ilūtu* = `אֵלוּת`; *dumqu* = `חֶסֶד` (with XI); *nipšu* = `נְשִׁיפָה` (with XI); *bikītu* = `בְּכִית`; *zikaru* = `זָכָר`; *banû* III = `יָפֶה`.
+3. **Ordinary words (§5):** *aḫāzu* "marry" = `בָּעַל`; *qiāšu* = `הֶעֱנִיק`; *ṣamādu* = `רָתַם`; *narkabtu* = `מֶרְכָּבָה`; *magarru* = `אוֹפָן`; *kamāsu* = `כָּרַע`; *biltu* = `מַשָּׂא`; *parû* = `פִּרְדָּה`; *mūru* = `עַיִר`; *alpu* = `שׁוֹר`; *kalû* "hold back" = `כָּלָא`; *napāṣu* = `נִפֵּץ`; *abātu* = `הָרַס`; *našāku* = `נָשַׁךְ`; *ḫarmu* = `מְאַהֵב`; *ḫarāru* = `כָּרָה`; *šuttu*/*šuttatu* = `שׁוּחָה`; *târu* D "turn into" = `הָפַךְ … לְ`; *ṭarādu* = `רָדַף`; *agāgu* = `קָצַף`; *nêru* = `קָטַל` (already); *maʾādu* Š = `הִרְבָּה`; *abālu* D = `יִבֵּשׁ`; *redû* = `נָהַג`; *ṣerretu* = `רֶסֶן`; *šaḫāṭu* = `זִנֵּק`; *nasāku* = `זָרַק`; *patru* = `סַכִּין`; *tikku* = `עֹרֶף`; *siqqu* = `קַרְסֹל`; *rêqu* = `רָחַק`; *šukênu* = `הִשְׁתַּחֲוָה`; *erru* = `קְרָבַיִם`; *alālu* = `תָּלָה`; *dagālu* = `צָפָה`; *apālu* = `עָנָה`; *tillu* = `קִשּׁוּטִים`; *ebēbu* D = `נִקָּה`; *zakû* = `זַךְ`; *maršu* = `צוֹאִי`; *aguḫḫu* = `אֵזוֹר`.
+4. **Formula (§2):** *išmē-ma X annâ qabâ Y* = `שמע X את אמירתה זו של Y` (VI 113, 154).
+
 ## Changelog
 - 2026-10-17: seed written by the corpus coordinator before Tablet I, from the flood, creation and law corpora and a reading of I, II, VI, VII, X and XI 207–328 in eBL.
 - 2026-10-17: §9 merged from Tablet I.
+- 2026-10-17: §10 merged from XI 209–328 and VI; *wabālu* / *warû* split; *šanāt pê* corrected.

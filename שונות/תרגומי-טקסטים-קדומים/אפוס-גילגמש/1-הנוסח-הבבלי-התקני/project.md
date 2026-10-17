@@ -278,3 +278,357 @@ Renderings fixed in this tablet (beyond `../renderings.md`), with the rejected a
 - **eBL's `Parallels:` field can point to the wrong chapter** (I 254–265 → "SB II" 269–288, which are other lines): compare the normalizations before copying Hebrew from a listed parallel.
 - **A homonym hidden by one Hebrew word can be the parallel** (*maḫāru* "stand opposite" and "be equal" ≈ `נֶגֶד`; *uznu* "ear" and "understanding"): note both senses at each occurrence, so the commentary sees the play the Akkadian makes.
 - **Vocalize a common word whose unvocalized form creates a false echo next to a key word** (`רֵעַ` after `יודע`, I 212).
+
+## Tablet XI (209–328)
+
+### Scope
+SB Tablet XI, the 120 eBL labels 209–328: the end of Ūta-napišti's speech and the sleep test (209–230), Gilgameš's denial and the bread as proof, "wherever I set my face, there is Death" (231–246), the banishment of Ur-šanabi and the washing and new garment (247–270), the departure and the secret of the plant (271–286), the dive into the Apsû (287–300), the journey, the pool and the snake (301–309), the lament (310–318) and the return to Uruk's wall (319–328 = I 18–23). Lines 1–208 are the flood corpus's (not re-translated; both files begin with a pointer). Manuscripts: Nineveh NinNA1 (C), NinNA2a (J₁), NinNA3a (W₁), NinNA4a (T₁), Aššur AššNA2, Kalḫu KalNA1, Babylon BabNB1. Well preserved except 286 (lost), 288, 310 and some line-ends (235–237, 244, 246, 283–284, 289–292).
+
+### Sources consulted
+- eBL `L/1/4` SB XI (`../../sources/eBL/Gilgamesh-SB-XI/reading-edition.md`, 209–328: N, T, L, notes, ATF; `manuscripts.md`).
+- The flood corpus's Gilg. XI 1–208 (`../../סיפורי-המבול-המסופוטמיים/2-גילגמש-XI--סיפור-המבול/`: annotated, renderings, project) for every repeated line and word; Atra-ḫasīs renderings (*gana* = `קוּם`).
+- `../renderings.md` (incl. §9), Tablet I (`annotated-I.rtl.md`, I 18–23 for 323–328), creation corpus renderings (*edû* "flood" = `אֵד`).
+- George's translation (eBL T), after drafting; Tchernichovsky 1924 (`../../sources/Ben-Yehuda--Tchernichovsky-1924/tablet-XI.rtl.md`) after pass (c).
+- The vocalized Bible through `../../tools/check_bible_quotes.py --show`.
+
+### Decisions
+1. **Files and quotes.** `annotated-XI.rtl.md` / `translation-XI.rtl.md` hold 209–328 only, with a Hebrew pointer to the flood corpus. 209 ends Ūta-napišti's speech begun in the flood corpus without quotation marks, so it has none; every speech that begins in 209–328 is in `"…"`.
+2. **Repeated lines** copied: 211 = 214 (marks), 212 = 219, 231 = 242 (= XI 1 with Ūta-napišti unvocalized), 234 ≈ 278 (= XI 8, own brackets), 294 = 322, 301–302 = 319–320 (journey formula, `../renderings.md` §2; `בֵּרוּ`, `פָּתְתוּ פַּת`, `שָׂמוּ` vocalized), 309 = XI 139 in the 3rd person, 323–328 = I 18–23 (+ vocative "אורשנבי" in 323; 327 without I 22's bracket; closing quote in 328). Command and execution 221–222 / 223–224, 253–261 / 262–270, 274–275 / 279–280, 289 / 292 differ only where the Akkadian does.
+3. **281** = XI 9 except that *lupte* has no *-ka*: `אגלה (לך), גילגמש, דבר נְצוּרָה,` – the brief asked for the flood Hebrew "exactly"; the parentheses are the one change the Akkadian requires (open decision 4).
+4. *gana* = `קוּם` (209, 221), from Atra-ḫasīs III vi 43 (flood corpus). It meets *tebû* = `קם` in Hebrew (and makes "קום, אל תשכב", a contrast that is Hebrew only; noted).
+5. *erēšu* II "request" = `שָׁאַל` (213; VI 71, 103), kept apart from *šeʾû* = `בִּקֵּשׁ` (XI 7) and *buʾʾû* = `חִפֵּשׂ` (XI 208): "the fellow who asked for life" ↔ Ps 21:5.
+6. *raggu* / *ragāgu* (220) = `רְשָׁעָה … תַּרְשִׁיעַ אוֹתָךְ` (`הִרְשִׁיעַ` "put in the wrong", Job 9:20). Rejected `רָעָה … תָּרֵעַ` (a verbal echo of `רַע מִנְּעֻרָיו`, 8:21, which *raggu* ≠ *lemnu* does not justify) and George's "deceitful … deceive" (`נוֹכֶלֶת … תְּנַכֵּל`). Open decision 1.
+7. The bread: *epû* = `אָפָה` [cognate]; *kurummatu* = `מָנָה` (§4); *šakānu* Gtn "line up" = `שׂים בזו אחר זו`; *ina rēšīšu* = `לִמְרַאֲשׁוֹתָיו`; *šābulu* = `יָבֵשׁ` (and *abālu* = `יָבֵשׁ`, 312); *muššuku* = `*כְּעוֹר*` (George's derivation from *mašku* "hide"; vocalized, since `כעור` reads "ugly"); *raṭbu* = `רָטֹב` [cognate]; *kamānu* = `כַּוָּן` [cognate, the loanword of Jer 7:18]; *bašālu* = `בָּשֵׁל` [cognate]; *šīpa nadû* = `הֵטִיל כֶּתֶם` in all four lines (228, 240, 261, 270); *pēmtu* = `גֶּחָלִים`.
+8. *eṣēru* = `צָר` (222 `צוּרִי`, vocalized); *edû* D "make known, mark" = `הוֹדִיעַ` (224), *lū edâkka* = `יהיו ידועים לך` (236): the `ידע` thread of Tablet I continues.
+9. *reḫû* "pour" (232) = `נִתְּכָה` (not `שָׁפַךְ`, the cognate of *šapāku*); *dekû* = `הֵעִיר`; *nagaltû* = `הֵקִיץ`; *lapātu* = `נָגַע` (216, 230, 233; VI 69).
+10. *ekkēmu* = `הַחוֹטֵף`; *bīt mayyāli* = `בֵּית מִשְׁכָּבִי` (literal; `חֲדַר מִשְׁכָּב`, Exod 7:28, in the apparatus); *pānī šakānu* = `שׂים פנים` (246).
+11. ***dumqu* = `חֶסֶד`** (252, 313–314; VI 6): "beauty" (`וְכָל חַסְדּוֹ כְּצִיץ הַשָּׂדֶה`, Isa 40:6, of flesh – exactly *dumuq šīri*) and "favour" (`עָשָׂה חֶסֶד`, Gen 40:14). Rejected `טוֹב` / `טוֹבָה` (the root is reserved for *ṭābu*), `נוֹי` (fits 252 and VI 6, not 313–314), `נָאֶה` (*damqu*, I 205). Open decision 2.
+12. *wabālu* = `הוֹבִיל` [cognate יבל] (253, 255, 262, 264, 297), as in the flood corpus's Atra-ḫasīs (*ūbil nāru*); Tablet I uses `הוביל` for *warû* – a collision (proposal 2).
+13. The washing: *malû* = `פֶּרַע` / `פְּרָעוֹת` (251, 254, 263; VI 1); *kasû* "bind" = `כָּפַת`; *nemsû* = `כִּיּוֹר`; *mesû* = `רָחַץ`; *kīma elli* = `כְּטָהוֹר`; *ṣapû* D = `הִשְׁרָה`; *ramāku* (304) = `טָבַל` (kept apart from *mesû*); *paršīgu* = `צָנִיף`; *tēdīqu* = `גְּלִימָה` (rejected `אַדֶּרֶת`, Esau's hair-cloak, Gen 25:25; `כֻּתֹּנֶת`, 3:21); *edēšu* = `חדש` [cognate], *edēšu līdiš* = `חָדוֹשׁ תִּתְחַדֵּשׁ`; *bāštu* = `הָדָר`.
+14. *anāḫu* = `יָגַע` (274, 279, 311; eBL lemmatizes *nâḫu* "rest" – a slip); *ašāṭu* = `הִתְאַמֵּץ`; *rakābu* = `רָכַב` [cognate]; *magillu* = `סִירָה`; *parīsu* = `מוֹט`; *ṭeḫû* D = `הִגִּישׁ`; *kibru* = `גָּדָה`.
+15. **The plant.** *šammu* = `עֵשֶׂב` (reserved); *eddettu* = `אָטָד` [cognate]; *šiknu … šakin* = `מַרְאֵהוּ שׂוּם` (the šakānu root kept); *siḫiltu* = `עֹקֶץ`; *amurdinnu* = `*וֶרֶד־הַבָּר*`; *saḫālu* = `דָּקַר` – no `קוֹץ`, `דַּרְדַּר`, `חוֹחַ` or `עֵץ`. *nikittu* = `*פְּעִימַת־הַלֵּב*` (George, after Watanabe; the older *niqittu* "anxiety" in the apparatus).
+16. The dive: *rāṭu* = `רַהַט` [cognate]; *rakāsu* = `רָכַס` [cognate]; *šadādu* = `מָשַׁךְ` (flood XI 187); *apsû* = `הָאַפְּסוּ`; *leqû* = `לָקַח` (291, the key verb of 3:22); *nasāḫu* = `נָסַח`; *batāqu* = `בִּיתֵּק` [cognate]; *nasāku* = `זָרַק` (293; VI 126).
+17. 298–300: *akālu* Š = `הֶאֱכִיל`; *latāku* = `נִסָּה`; *ṣeḫēru* = `הִצְעִיר` (§4); 299 translated from N (*šumma*), George 2003's *šumšu* "its name …" in the apparatus (open decision 5); *ṣuḫru* = `נְעוּרִים` (kept apart from *eṭlūtu* = `עֲלוּמִים`); *lūkul-ma lutūr* = `אוֹכְלָה, וְאָשׁוּבָה` – *târu* = `שׁוּב` makes the pair "eat … return" of 3:19 visible.
+18. The snake: *ṣerru* = `נָחָשׁ` (reserved, indefinite); *eṣēnu* = `הֵרִיחַ` (flood XI 161); **_nipšu_ = `נְשִׁיפָה`** (also VI 119–123, the Bull's snort; rejected `נִיחוֹחַ`, 8:21, and `רֵיחַ`, *erīšu*); *šaqummiš* = `בִּדְמָמָה`; *ina târīšu* = `בְּשׁוּבוֹ` (George "as it turned away"; the root שוב kept for 3:19); *quliptu* = `נֶשֶׁל`.
+19. 311–318: *mannīya* = `מִי`; *idu* = `זְרוֹעַ`; *dumqa šakānu* / *epēšu* = `שָׂם חֶסֶד` / `עָשָׂה חֶסֶד`; *ramānu* = `עַצְמִי`; *nēš qaqqari* = `אַרְיֵה הַקַּרְקַע` (§4); ***edû* I "tide" = `אֵד`** [cognate] (creation corpus, Ee VII 61), the homograph of *edû* II "know"; *našû* intransitive = `נִשָּׂא`; *tabāku* of tools = `נָטַשׁ` by sense (the flood corpus's `יָצַק` does not fit tools); *watû* = `מָצָא`; *ittu* = `אוֹת` with George (eBL lemmatizes *itti* "with"; open decision 6); *naḫāsu* = `נָסוֹג`; *ezēbu* = `עָזַב`.
+20. 323 adds only the vocative to I 18; *supūri* (KalNA1 only) is not translated, as in I 18.
+
+### Open decisions for the user
+1. *raggat amēlūtu iraggigki* (220): `רשעה האנושות – תרשיע אותך` (chosen) or `רעה האנושות – תרע לך` (closer to 8:21 `רַע`, but an echo the Akkadian does not justify)?
+2. *dumqu* = `חֶסֶד` (XI 252, 313–314; VI 6), or `נוֹי` (beauty) in XI 252 / VI 6 and `חֶסֶד` only in 313–314 (two Hebrew words for one Akkadian word)?
+3. *wabālu* = `הוֹבִיל` here and in the flood corpus, while Tablet I renders *warû* `הוֹבִיל` (I 138, 160, 165, 207): change *warû* in I to `הִנְחָה` / `נָהַג`, or *wabālu* here to `הֵבִיא`?
+4. XI 281 `אגלה (לך), גילגמש, דבר נְצוּרָה,` (the Akkadian lacks *-ka*), or the flood copy of XI 9 unchanged?
+5. XI 299: *šumma* (eBL, translated) or George 2003's *šumšu* ("Its name is 'The Old Man Grew Young'"), which is the reading most readers know?
+6. XI 317 *ana ittīya*: `לאות לי` (George) or `עמי` (eBL lemma *itti*)? Only the first gives the [cognate] with Gen 4:15 `וַיָּשֶׂם יְהוָה לְקַיִן אוֹת`.
+7. *gana* = `קוּם` (Atra-ḫasīs precedent) or `הָבָה` (which Atra-ḫasīs gives to *i*)? `קום` doubles *tebû* = `קם`.
+8. *kamānu* `כַּוָּן` is vocalized in its biblical (defective) form `כַּוָּנוֹ`; the plene strip-test form would be `כוונו`, which reads as a verb.
+
+### Progress log
+- 2026-10-17: read the brief, the whole guidelines, corpus, renderings (§9), this project file (Tablet I), the format models, flood XI 1–208 (annotated, renderings, project); ran `parallels_for.py XI --all`; read eBL XI 209–328 with notes and ATF.
+- Drafted 209–328 (120 entries) in one sequence; Hebrew header with the pointer to the flood corpus.
+- Pass (a) fidelity: every `>` line checked against N and the ATF: brackets set by the ATF (234, 247, 278, 282, 283, 284, 291 corrected; 248 left unbracketed against N's brackets because the roots survive in one manuscript); 220 `אוֹתָךְ` vocalized (feminine); the stray `[…]` in 291 placed outside the word.
+- Pass (b) consistency: formulas and repeats compared character by character; reserved strings grepped (`ידע` 224, 236 = *edû*; `שׂים` = *šakānu* only; `שוב` = *târu* only; `לקח` = *leqû*; `עשב` = *šammu*; `טוב` = *ṭābu* 256, 265; `נחש` = *ṣerru*; `אד` = *edû* I); every new string grepped against the earlier `>` lines; `verify.py` differences reviewed (below).
+- Pass (c) Hebrew: read through; plene/strip test applied to every vocalized word (`יְחוּדַּשׁ`, `חוּדַּשׁ`, `חָדוֹשׁ`, `בִּיתֵּק`, `אוֹכְלָה` corrected). Then Tchernichovsky 1924 XI 209ff. compared: he imports `וַיָּרַח הַנָּחָשׁ אֶת־רֵיחַ` (8:21), `נָשָׂא עָרוּם אֶת־הָעֵשֶׂב` (3:1), `כִּי־תִשְלַח אֵלָיו יָדְךָ וְאָכַלְתָּ` (3:22), `קוֹצִים`, `שַׁחֲרוּת־עוֹלָם וְחַיֵּי־עַד`, `לְתוֹלַעַת זוֹחֶלֶת עַל־פְּנֵי הָאֲדָמָה`; none is in the Akkadian; nothing changed in ours.
+- `python3 -I verify.py XI`: 120 entries = eBL 120, 120 translation lines, problems 0. `check_bible_quotes.py` on both files: 0 problems.
+- `translation-XI.rtl.md` built from the `>` lines (Hebrew introduction with the pointer, 8 sections, 21 footnotes).
+
+### Parallels index (Tablet XI)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 209 | ē tattīl šeššet urrī u sebe mušâti | אל תשכב שישה ימים ושבעה לילות | `וַיַּפֵּל יְהוָה אֱלֹהִים תַּרְדֵּמָה עַל הָאָדָם וַיִּישָׁן` (בראשית ב:כא) | [divergence] | Sleep imposed by God (and the woman built) vs. sleep as a test the man fails, a figure of death (243–246). The number of the flood storm (XI 128). |
+| 209 | ē tattīl | אל תשכב | `הִנֵּה לֹא יָנוּם וְלֹא יִישָׁן שׁוֹמֵר יִשְׂרָאֵל` (תהלים קכא:ד) | [equivalent] | Sleeplessness as a divine trait (cf. I 237). |
+| 211 | šittu kīma imbari inappuš elīšu | השינה כערפל נושבת עליו | `וַיַּפֵּל … תַּרְדֵּמָה עַל הָאָדָם` (בראשית ב:כא) | [divergence] | Sleep comes over the man from outside. *napāšu* ~ נפש [cognate root], here "waft". = 214. |
+| 213 | ša īrišu balāṭa | אשר שאל חיים | `חַיִּים שָׁאַל מִמְּךָ נָתַתָּה לּוֹ` (תהלים כא:ה) | [equivalent] | **Key.** *erēšu* = שָׁאַל; the king who asked for life and got it vs. the one who falls asleep at once. |
+| 213 | ša īrišu balāṭa | אשר שאל חיים | `וְעַתָּה פֶּן יִשְׁלַח יָדוֹ וְלָקַח גַּם מֵעֵץ הַחַיִּים וְאָכַל וָחַי לְעֹלָם` (בראשית ג:כב) | [divergence] | Life sought by man; refers back to XI 7 (`וחיים ביקשת`). |
+| 216 | liggeltâ amēlu | ויקיץ האדם | `וַיִּיקַץ יַעֲקֹב מִשְּׁנָתוֹ` (בראשית כח:טז) | [equivalent] | Waking; cf. `וַיִּיקַץ פַּרְעֹה` (מא:ד). Also 230, 241. |
+| 216 | lupussū-ma | גע בו | `וְלֹא תִגְּעוּ בּוֹ פֶּן תְּמֻתוּן` (בראשית ג:ג) | [divergence] | *lapātu* = נָגַע: here touching wakes a man from the "death" of sleep. |
+| 217 | litūr ina šulmi | ישוב בשלום | `וְשַׁבְתִּי בְשָׁלוֹם אֶל בֵּית אָבִי` (בראשית כח:כא) | [cognate] | *târu* = שוב and *šulmu* = שלום, both cognates, in the same phrase. Echo of the blessings of III 29–30 (George). |
+| 217 | litūr | ישוב | `עַד שׁוּבְךָ אֶל הָאֲדָמָה` (בראשית ג:יט) | [divergence] | *târu* = שוב (reserved): the return is to the city. |
+| 218 | litūr ana mātīšu | ישוב אל ארצו | `שׁוּב לְאַרְצְךָ וּלְמוֹלַדְתְּךָ` (בראשית לב:י) | [cognate] | Also `שׁוּב אֶל אֶרֶץ אֲבוֹתֶיךָ` (לא:ג). = 275, 280. |
+| 220 | raggat amēlūtu iraggigki | רשעה האנושות – תרשיע אותך | `כִּי יֵצֶר לֵב הָאָדָם רַע מִנְּעֻרָיו` (בראשית ח:כא) | [equivalent] | **Key.** A general statement on human wickedness by the flood's survivor, right after the flood story; in Genesis the reason for the flood (6:5) and for the promise (8:21). Here practical: man will lie about his sleep. Open decision 1. |
+| 220 | raggat amēlūtu | רשעה האנושות | `וַיַּרְא יְהוָה כִּי רַבָּה רָעַת הָאָדָם בָּאָרֶץ` (בראשית ו:ה) | [equivalent] | |
+| 220 | iraggigki | תרשיע אותך | `פִּי יַרְשִׁיעֵנִי` (איוב ט:כ) | [equivalent] | `הִרְשִׁיעַ` "put in the wrong": he will make her a liar. |
+| 221 | epî kurummātīšu … ina rēšīšu | אפי את מנותיו … למראשותיו | `וְהִנֵּה שְׁלֹשָׁה סַלֵּי חֹרִי עַל רֹאשִׁי` (בראשית מ:טז) | [equivalent] | **Key.** Bread at the head of a man, each unit a day (`שְׁלֹשֶׁת הַסַּלִּים שְׁלֹשֶׁת יָמִים הֵם`, מ:יח), ending in death (the baker). *epû* ~ אפה [cognate] (`שַׂר הָאֹפִים`). |
+| 221 | šitakkanī ina rēšīšu | ושׂימי … למראשותיו | `וַיִּקַּח מֵאַבְנֵי הַמָּקוֹם וַיָּשֶׂם מְרַאֲשֹׁתָיו וַיִּשְׁכַּב` (בראשית כח:יא) | [equivalent] | *šakānu* + "at his head" of a man lying down; cf. 223. |
+| 222 | ina igāri eṣrī | צוּרִי על הקיר | `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם` (בראשית ב:ז) | [cognate] | *eṣēru* = יצר root (rendered `צָר`); lexical only. |
+| 224 | ina igāri uddâššu | הודיעה לו על הקיר | `וַתִּפָּקַחְנָה עֵינֵי שְׁנֵיהֶם וַיֵּדְעוּ` (בראשית ג:ז) | [divergence] | *edû* D = ידע (reserved): the knowledge man gains is of his own weakness. Also 236. |
+| 225 | ištât šābulat kurummassu | הראשונה – יבשה מנתו | `זֶה לַחְמֵנוּ חָם הִצְטַיַּדְנוּ אֹתוֹ מִבָּתֵּינוּ … וְעַתָּה הִנֵּה יָבֵשׁ וְהָיָה נִקֻּדִים` (יהושע ט:יב) | [equivalent] | Dried, mouldy bread as evidence of elapsed time in a dispute (in Joshua forged). Also `יָבֵשׁ הָיָה נִקֻּדִים` (יהושע ט:ה) ↔ 228 *šīpa ittadi*. = 237. |
+| 226 | šaluštu raṭbat | השלישית – רטובה | `מִזֶּרֶם הָרִים יִרְטָבוּ` (איוב כד:ח) | [cognate] | *raṭbu* ~ רטב. |
+| 227 | kamānšu | כַּוָּנוֹ | `לַעֲשׂוֹת כַּוָּנִים לִמְלֶכֶת הַשָּׁמַיִם` (ירמיהו ז:יח) | [cognate] | The Hebrew word is the Akkadian loan; in Jeremiah the cakes of the Queen of Heaven (Ištar). Also `עָשִׂינוּ לָהּ כַּוָּנִים` (ירמיהו מד:יט). = 239. |
+| 229 | šeduštu bašlat | השישית – בשלה | `הִבְשִׁילוּ אַשְׁכְּלֹתֶיהָ עֲנָבִים` (בראשית מ:י) | [cognate] | *bašālu* ~ בשל; in the cupbearer's dream, beside the baker's (221). |
+| 230 | i(te)ggeltâ amēlu | והקיץ האדם | `וַיִּיקֶץ נֹחַ מִיֵּינוֹ` (בראשית ט:כד) | [equivalent] | The flood hero wakes his guest; Noah wakes himself. Count to seven with the change on the seventh, as XI 130, 147. |
+| 232 | šittu irḫû elīya | נִתְּכָה עליי השינה | `כִּי נָסַךְ עֲלֵיכֶם יְהוָה רוּחַ תַּרְדֵּמָה` (ישעיהו כט:י) | [equivalent] | Sleep "poured" over a man. Not `שפך` (*šapāku*). |
+| 243 | ayyikâni lullik | אָנָה אלך | `וַאֲנִי אָנָה אֲנִי בָא` (בראשית לז:ל) | [equivalent] | Reuben's cry; see 246. |
+| 244 | [šīrī]ya? uṣṣabbitu ekkēmu | ב[בשרי]? אחז החוטף | `וַיִּסְגֹּר בָּשָׂר תַּחְתֶּנָּה` (בראשית ב:כא) | [cognate] | *šīru* = בשר, but **restored** (CAD; von Soden *qerbīya*). Death as "the Snatcher". |
+| 245 | ina bīt mayyālīya ašib mūtu | בבית משכבי יושב המוות | `וּבָאוּ בְּבֵיתֶךָ וּבַחֲדַר מִשְׁכָּבְךָ וְעַל מִטָּתֶךָ` (שמות ז:כח) | [equivalent] | *bīt mayyāli* = `חֲדַר מִשְׁכָּב`. |
+| 245 | ašib mūtu | יושב המוות | `כִּי עָלָה מָוֶת בְּחַלּוֹנֵינוּ בָּא בְּאַרְמְנוֹתֵינוּ` (ירמיהו ט:כ) | [equivalent] | Death inside the house. |
+| 245 | mūtu | המוות | `כִּי בְּיוֹם אֲכָלְךָ מִמֶּנּוּ מוֹת תָּמוּת` (בראשית ב:יז) | [divergence] | *mūtu* = מוות [cognate]: punishment there, the human condition here. |
+| 246 | ašar [pānīya?] luškun šū mūtum-ma | באשר [פניי]? אשים – הוא המוות | `אָנָה אֵלֵךְ מֵרוּחֶךָ וְאָנָה מִפָּנֶיךָ אֶבְרָח` (תהלים קלט:ז) | [divergence] | **Key.** The same pattern ("where shall I go … there you are", קלט:ח `אִם אֶסַּק שָׁמַיִם שָׁם אָתָּה`); omnipresent God there, omnipresent Death here. |
+| 246 | [pānīya?] luškun | [פניי]? אשים | `וַיָּשֶׂם אֶת פָּנָיו הַר הַגִּלְעָד` (בראשית לא:כא) | [cognate] | *pānī šakānu* = שׂים פנים; "my face" restored. |
+| 248 | kāru liddīka nēberu lizērka | הנמל – ישליכך, המעבר – ימאס בך | `וַיְגָרֶשׁ אֶת הָאָדָם` (בראשית ג:כד) | [divergence] | Banishment of the one who let a man reach the forbidden place. *zêru* = מאס (flood XI 26, 39). |
+| 251 | iktasû malû pagaršu | כפתו פרעות את גוויתו | `גַּדֵּל פֶּרַע שְׂעַר רֹאשׁוֹ` (במדבר ו:ה) | [equivalent] | Gilgameš at the end looks like Enkidu at the start (I 103 `שָׂעִיר שֵׂעָר`). |
+| 252 | maškū uqtattû dumuq šīrīšu | העורות כילו את חסד בשרו | `כָּל הַבָּשָׂר חָצִיר וְכָל חַסְדּוֹ כְּצִיץ הַשָּׂדֶה` (ישעיהו מ:ו) | [equivalent] | *dumuq šīri* = "the חֶסֶד (beauty) of flesh", the same phrase. |
+| 252 | maškū | העורות | `וַיַּעַשׂ יְהוָה אֱלֹהִים לְאָדָם וּלְאִשְׁתּוֹ כָּתְנוֹת עוֹר וַיַּלְבִּשֵׁם` (בראשית ג:כא) | [divergence] | **Key.** *mašku* = עור: God's gift at the expulsion vs. the mourner's pelts that ruined his body, cast off (255, 264) for a royal robe (258). |
+| 253 | leqēšū-ma … ana namsê | קחהו … אל הכיור | `וְעָשִׂיתָ כִּיּוֹר נְחֹשֶׁת … לְרָחְצָה` (שמות ל:יח) | [equivalent] | *nemsû* = כיור. *leqû* = לקח (reserved). = 262. |
+| 254 | malêšu ina mê kīma elli limsi | את פרעותיו במים – כטהור ירחץ | `וְכִבֶּס הַמִּטַּהֵר אֶת בְּגָדָיו וְגִלַּח אֶת כָּל שְׂעָרוֹ וְרָחַץ בַּמַּיִם וְטָהֵר` (ויקרא יד:ח) | [equivalent] | Hair, water, purity, clothes in the same order (254–258). = 263. |
+| 254 | (254–258) | רחיצה ובגדים | `וַיְגַלַּח וַיְחַלֵּף שִׂמְלֹתָיו וַיָּבֹא אֶל פַּרְעֹה` (בראשית מא:יד) | [equivalent] | Joseph brought from the pit (`מִן הַבּוֹר`) is cleaned and reclothed; cf. `וְהִטַּהֲרוּ וְהַחֲלִיפוּ שִׂמְלֹתֵיכֶם` (לה:ב). |
+| 255 | liddi maškīšū-ma | ישליך את עורותיו | `וַתָּסַר בִּגְדֵי אַלְמְנוּתָהּ מֵעָלֶיהָ` (בראשית לח:יד) | [equivalent] | Casting off mourning garments. = 264. |
+| 256 | ṭāba … zumuršu | גווֹ הטוב | `וְהַנַּעֲרָ טֹבַת מַרְאֶה מְאֹד` (בראשית כד:טז) | [cognate] | *ṭābu* = טוב (beauty); `טוב` only for *ṭābu*. = 265. |
+| 257 | lū udduš parsīgu ša qaqqadīšu | יחודש הצניף אשר לראשו | `וָאֹמַר יָשִׂימוּ צָנִיף טָהוֹר עַל רֹאשׁוֹ` (זכריה ג:ה) | [equivalent] | Filthy clothes removed, clean turban and festal robes (`מַחֲלָצוֹת`, זכריה ג:ד). *edēšu* ~ חדש [cognate]. = 266. |
+| 258 | tēdīqa lū labiš ṣubat bāltīšu | גלימה – יהי לבוש, שמלת הדרו | `וַיַּלְבֵּשׁ אֹתוֹ בִּגְדֵי שֵׁשׁ` (בראשית מא:מב) | [equivalent] | Royal robing; *labāšu* ~ לבש [cognate] (`וַיַּלְבִּשֵׁם`, ג:כא). = 267. |
+| 261 | tēdīqu šīpa ay iddī edēšu līdiš | הגלימה – כתם אל תטיל, חדוש תתחדש | `שִׂמְלָתְךָ לֹא בָלְתָה מֵעָלֶיךָ` (דברים ח:ד) | [equivalent] | **Key.** A garment that does not wear out on the way until arrival; `לֹא בָלוּ שַׂלְמֹתֵיכֶם מֵעֲלֵיכֶם` (דברים כט:ד); `שַׂלְמֹתֵיהֶם לֹא בָלוּ` (נחמיה ט:כא). = 270. |
+| 261 | edēšu līdiš | חדוש תתחדש | `כָּתְנוֹת עוֹר וַיַּלְבִּשֵׁם` (בראשית ג:כא) | [divergence] | A divine garment in both; here new only until he reaches home – renewal is temporary, like the plant. |
+| 271 | irkabū eleppa | רכבו על הספינה | — | — | *rakābu* ~ רכב [cognate]; *elippu* = ספינה (never תֵּבָה). = X 169. |
+| 274 | illika ināḫa išūṭa | בא, יגע, התאמץ | `בְּזֵעַת אַפֶּיךָ תֹּאכַל לֶחֶם` (בראשית ג:יט) | [equivalent] | Toil without reward (cf. 311). = 279. |
+| 281 | lupte … amāt niṣirti | אגלה (לך) … דבר נצורה | `וּנְצֻרוֹת וְלֹא יְדַעְתָּם` (ישעיהו מח:ו) | [cognate] | The formula that opened the flood secret (XI 9) opens the secret of the plant. |
+| 283 | šammu šū kīma eddetti | עשב הוא – כאטד | `וְקוֹץ וְדַרְדַּר תַּצְמִיחַ לָךְ וְאָכַלְתָּ אֶת עֵשֶׂב הַשָּׂדֶה` (בראשית ג:יח) | [divergence] | **Key.** A thorny herb in one verse with עשב as punishment; here the thorny herb is the source of life. *šammu* = עשב (reserved, = I 108). |
+| 283 | šammu | עשב | `וְעֵץ הַחַיִּים בְּתוֹךְ הַגָּן` (בראשית ב:ט) | [divergence] | **Key.** The source of life is a herb in the deep, not a tree in a garden; it gives youth, not eternal life (`וָחַי לְעֹלָם`, ג:כב). |
+| 283 | eddettu | אָטָד | `וַיֹּאמְרוּ כָל הָעֵצִים אֶל הָאָטָד` (שופטים ט:יד) | [cognate] | Also `גֹּרֶן הָאָטָד` (בראשית נ:י). Restoration *šikinšu šakin* after G. Smith's copy. |
+| 284 | siḫilšu kīma amurdinni | עוקצו – כשל *ורד־הבר* | `כְּשׁוֹשַׁנָּה בֵּין הַחוֹחִים` (שיר השירים ב:ב) | [equivalent] | The old rose identification (Diakonoff); only the thorns matter (George). |
+| 284 | usaḫḫal [qātīka]? | [ידקור את ידיך]? | `לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` (בראשית ג:כד) | [divergence] | The plant guarded by its thorns and the deep; restored. |
+| 285 | šamma šâšu ikaššadā qātāka | אל העשב ההוא תגענה ידיך | `פֶּן יִשְׁלַח יָדוֹ וְלָקַח גַּם מֵעֵץ הַחַיִּים` (בראשית ג:כב) | [equivalent] | The hand that reaches the source of life. Idiom cf. `וְאִם לֹא תַשִּׂיג יָדוֹ` (ויקרא ה:יא). |
+| 288 | ipti r[āṭa] | פתח [רהט] | `בָּרְהָטִים בְּשִׁקְתוֹת הַמָּיִם` (בראשית ל:לח) | [cognate] | *rāṭu* ~ רהט; mostly restored. Cf. 316. |
+| 290 | ana apsî | אל האפסו | `וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן אֶת הַכְּרֻבִים … לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` (בראשית ג:כד) | [divergence] | Life guarded by distance and depth, not by cherubim. *apsû* ≠ `תְהוֹם` (א:ב). |
+| 291 | šū ilqe šammam-ma | הוא – לקח את העשב | `וְעַתָּה פֶּן יִשְׁלַח יָדוֹ וְלָקַח גַּם מֵעֵץ הַחַיִּים וְאָכַל וָחַי לְעֹלָם` (בראשית ג:כב) | [cognate] | **Key.** *leqû* = לקח: what God fears in Gen 3:22 Gilgameš does – "took" the source of life (and then loses it). |
+| 293 | tâmtu issukaššu ana kibrīša | הים זרקו אל גדתו | `וַיָּקֵא אֶת יוֹנָה אֶל הַיַּבָּשָׁה` (יונה ב:יא) | [equivalent] | Cast up from the deep onto land. |
+| 295 | šammu nikitti | עשב *פעימת־הלב* | `עֵץ הַחַיִּים` (בראשית ב:ט) | [divergence] | A named plant of vitality (George's reading; older "plant against anxiety"). |
+| 296 | ikaššadu napšassu | יגיע אדם אל נפשו | `וַיְהִי הָאָדָם לְנֶפֶשׁ חַיָּה` (בראשית ב:ז) | [cognate] | *napištu* = נפש. Cf. `נַפְשִׁי יְשׁוֹבֵב` (תהלים כג:ג) [equivalent] – "reaching", not "returning". |
+| 297 | ana libbi Uruk supūri | אל תוך אורוך־הדיר | `וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל וְאֶרֶךְ` (בראשית י:י) | [cognate] | Uruk = Erech. |
+| 298 | lūšākil šībam-ma | אאכיל זקן | `וַתִּתֵּן גַּם לְאִישָׁהּ עִמָּהּ וַיֹּאכַל` (בראשית ג:ו) | [divergence] | **Key.** One gives another to eat: in Genesis of the forbidden fruit, here of the life-giving plant, as a test before eating oneself. Cf. `הִוא נָתְנָה לִּי מִן הָעֵץ וָאֹכֵל` (ג:יב). *akālu* Š = הֶאֱכִיל [cognate]. |
+| 298 | šamma lultuk | ואת העשב אנסה | `אֲנַסֶּה נָּא רַק הַפַּעַם בַּגִּזָּה` (שופטים ו:לט) | [equivalent] | Testing a sign. |
+| 299 | šību iṣṣaḫir amēlu | הזקן הצעיר – האדם | `רֻטֲפַשׁ בְּשָׂרוֹ מִנֹּעַר יָשׁוּב לִימֵי עֲלוּמָיו` (איוב לג:כה) | [equivalent] | Rejuvenation; the "name" reading (*šumšu*) is George 2003's. |
+| 299 | iṣṣaḫir | הצעיר | `וַיָּשָׁב בְּשָׂרוֹ כִּבְשַׂר נַעַר קָטֹן וַיִּטְהָר` (מלכים ב ה:יד) | [equivalent] | Flesh returning to youth after immersion (cf. 304). |
+| 300 | lūkul-ma lutūr ana ša ṣuḫrīya | אוכלה, ואשובה אל (ימי) נעוריי | `בְּזֵעַת אַפֶּיךָ תֹּאכַל לֶחֶם עַד שׁוּבְךָ אֶל הָאֲדָמָה` (בראשית ג:יט) | [cognate] | **Key.** The same two verbs, *akālu* = אכל and *târu* = שוב: in Genesis eating in toil until the return to the ground; here eating the plant to return to youth. |
+| 300 | lutūr ana ša ṣuḫrīya | ואשובה אל (ימי) נעוריי | `יָשׁוּב לִימֵי עֲלוּמָיו` (איוב לג:כה) | [equivalent] | *târu* + youth = שוב + עלומים. |
+| 300 | lūkul-ma | אוכלה | `וְאָכַל וָחַי לְעֹלָם` (בראשית ג:כב) | [divergence] | Eating from the source of life – for youth, not for ever. |
+| 300 | ṣuḫrīya | נעוריי | `כִּי יֵצֶר לֵב הָאָדָם רַע מִנְּעֻרָיו` (בראשית ח:כא) | [equivalent] | *ṣuḫru* = נעורים; lexical only. |
+| 301 | ana ešrā bēr iksupū kusāpa | לעשרים ברו פתתו פת | `פָּתוֹת אֹתָהּ פִּתִּים` (ויקרא ב:ו) | [equivalent] | The journey formula (IV); *kasāpu* = פתת. = 319. |
+| 303 | būra … ša kaṣû mûša | בור אשר קרים מימיו | `מַיִם קָרִים עַל נֶפֶשׁ עֲיֵפָה` (משלי כה:כה) | [equivalent] | *būru* = בור (cf. `וְהַבּוֹר רֵק אֵין בּוֹ מָיִם`, בראשית לז:כד – lexical only). |
+| 304 | urid … mê irammuk | ירד … וטובל במים | `וַיֵּרֶד וַיִּטְבֹּל בַּיַּרְדֵּן שֶׁבַע פְּעָמִים … וַיָּשָׁב בְּשָׂרוֹ כִּבְשַׂר נַעַר קָטֹן` (מלכים ב ה:יד) | [divergence] | Going down and bathing restores Naaman's youth; here the bath is when youth is lost. |
+| 305 | ṣerru | נָחָשׁ | `וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה` (בראשית ג:א) | [equivalent] | **Key.** A snake at the source of life. Genesis's snake speaks, tempts and does not eat; this one is silent, tempts no one and takes the life-giving plant for itself. Indefinite ("a snake"). |
+| 305 | īteṣin nipiš šammi | הריח את נשיפת העשב | `וַיָּרַח יְהוָה אֶת רֵיחַ הַנִּיחֹחַ` (בראשית ח:כא) | [equivalent] | *eṣēnu* = הריח, the verb of the gods smelling the sacrifice (XI 161); *nipšu* = נשיפה, not ניחוח. |
+| 306 | šamma išši | ואת העשב נשא | `וַתִּקַּח מִפִּרְיוֹ וַתֹּאכַל` (בראשית ג:ו) | [divergence] | The snake carries off the plant; no eating is stated. *šaqummiš* "silently" restored. |
+| 307 | ina târīšu ittadi qulipta | בשובו – השליך נשל | `וְעַתָּה פֶּן יִשְׁלַח יָדוֹ וְלָקַח גַּם מֵעֵץ הַחַיִּים וְאָכַל וָחַי לְעֹלָם` (בראשית ג:כב) | [divergence] | **Key.** The snake, not man, gets renewal: an aetiology of the snake's sloughing and man's ageing. |
+| 307 | ina târīšu | בשובו | `כִּי עָפָר אַתָּה וְאֶל עָפָר תָּשׁוּב` (בראשית ג:יט) | [cognate] | *târu* = שוב: the snake's "return" brings renewal; man's, in Genesis, dust. |
+| 307 | ittadi qulipta | השליך נשל | `עַל גְּחֹנְךָ תֵלֵךְ וְעָפָר תֹּאכַל כָּל יְמֵי חַיֶּיךָ` (בראשית ג:יד) | [divergence] | Genesis's snake is cursed for all its days; this one is given new life. |
+| 308 | ittašab ibakki | ישב … בוכה | `וַיִּשָּׂא עֵשָׂו קֹלוֹ וַיֵּבְךְּ` (בראשית כז:לח) | [divergence] | Weeping for a lost blessing; cf. XI 138 (Ūta-napišti after the flood). |
+| 311 | ana mannīya … ināḫā idāya | למען מי … יגעו זרועותיי | `בְּעִצָּבוֹן תֹּאכְלֶנָּה כֹּל יְמֵי חַיֶּיךָ` (בראשית ג:יז) | [divergence] | Toil as man's lot; here toil whose fruit the snake took. Also ג:יט. |
+| 311 | ināḫā idāya | יגעו זרועותיי | `מַה יִּתְרוֹן לָאָדָם בְּכָל עֲמָלוֹ` (קהלת א:ג) | [equivalent] | |
+| 313 | ul aškun dumqa ana ramnīya | לא שׂמתי חסד לעצמי | `גֹּמֵל נַפְשׁוֹ אִישׁ חָסֶד` (משלי יא:יז) | [equivalent] | *dumqu* = חסד (decision 11). |
+| 314 | ana nēši ša qaqqari dumqa ētepuš | לאריה הקרקע עשיתי חסד | `וְעָשִׂיתָ נָּא עִמָּדִי חָסֶד` (בראשית מ:יד) | [equivalent] | *dumqa epēšu* = עשה חסד; Joseph's request, and the favour forgotten. |
+| 314 | nēš qaqqari | אריה הקרקע | `עַל גְּחֹנְךָ תֵלֵךְ וְעָפָר תֹּאכַל` (בראשית ג:יד) | [divergence] | **Key.** An epithet of the snake (George; or the chameleon): a creature "of the ground", like Genesis's snake. *qaqqaru* = קרקע, not אדמה (`אֲרוּרָה הָאֲדָמָה`, ג:יז). |
+| 315 | edû inaššâm-ma | האד נישא | `וְאֵד יַעֲלֶה מִן הָאָרֶץ וְהִשְׁקָה אֶת כָּל פְּנֵי הָאֲדָמָה` (בראשית ב:ו) | [cognate] | **Key.** *edû* "flood, tide" ~ אֵד: the rare word of Gen 2:6 is the word for the rising water that covers the plant's place. |
+| 317 | ša ana ittīya iššaknu | אשר לאות לי הושׂם | `וַיָּשֶׂם יְהוָה לְקַיִן אוֹת` (בראשית ד:טו) | [cognate] | *ittu* = אות and *šakānu* = שׂים, both cognates: a sign "set" for a man. Reading *ittu* is George's (eBL lemma *itti*); open decision 6. |
+| 317 | ana ittīya | לאות לי | `וְהָיְתָה לְאוֹת בְּרִית` (בראשית ט:יג) | [cognate] | The post-flood sign. |
+| 323 | elī-ma Ur-šanābi ina muḫḫi dūri ša Uruk | עלה, אורשנבי, על חומת אורוך | `וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל וְאֶרֶךְ` (בראשית י:י) | [cognate] | The epic ends where it began (I 18–23): instead of eternal life, a city and its wall. |
+| 325 | libittašu … agurrat | לבניה … לבנים שרופות | `הָבָה נִלְבְּנָה לְבֵנִים וְנִשְׂרְפָה לִשְׂרֵפָה` (בראשית יא:ג) | [equivalent] | = I 20. Pride that is stopped in Genesis, the lasting achievement here. |
+| 326 | sebet muntalkū | שבעת היועצים | `הֵמָּה הַגִּבֹּרִים אֲשֶׁר מֵעוֹלָם אַנְשֵׁי הַשֵּׁם` (בראשית ו:ד) | [divergence] | = I 21: the antediluvian sages. |
+
+### Lines shared with other tablets
+- **XI 1, 8 → 231, 242, 234, 278**: the speech formulas copied (231/242 with Ūta-napišti unvocalized after 212; 234/278 with their own brackets).
+- **XI 9–10 → 281–282**: 282 identical except brackets; 281 adds `(לך)` – see decision 3.
+- **XI 128 → 209**: `שישה ימים ושבעה לילות`.
+- **XI 139 → 309**: 3rd person (`אפו … דמעותיו`), as the Akkadian.
+- **I 18–23 → 323–328**: identical; 323 + `אורשנבי` and the opening quote; 327 unbracketed (*šār* preserved in NinNA1); 328 + closing quote.
+- **For X 169–170** (not yet translated): the first copy is here, `גילגמש ואורשנבי רכבו על הספינה,` / `את ה[סירה] השליכו (למים), הם – רכבו (עליה).` (X has its own brackets).
+- **For IV** (journey formula): 301–302 are the first copy: `לעשרים בֵּרוּ פָּתְתוּ פַּת,` / `לשלושים בֵּרוּ שָׂמוּ מלון.`
+- **For VIII 211, IX 136, X 92, 163**: `גילגמש – כשמעו את זאת,` (287).
+- `verify.py` lists 5 differences in repeated lines (I 18/XI 323, I 23/XI 328, XI 211/214, XI 281/9, XI 309/139) and 3 in marks only (I 22/XI 327, XI 226/238, XI 282/10): all justified above.
+
+### Proposals for the shared renderings
+1. **Key terms (§4):** *dumqu* = `חֶסֶד` (XI 252, 313–314; VI 6); *nipšu* = `נְשִׁיפָה` (XI 305; VI 119–123); *edû* I "tide, flood" = `אֵד` [cognate] (XI 315; creation corpus); *ittu* = `אוֹת` (+ *šakānu* = `שָׂם אוֹת`); *quliptu* = `נֶשֶׁל`; *eddettu* = `אָטָד`; *siḫiltu* = `עֹקֶץ`; *nemsû* = `כִּיּוֹר`; *paršīgu* = `צָנִיף`; *tēdīqu* = `גְּלִימָה`; *malû* "matted hair" = `פֶּרַע` (pl. `פְּרָעוֹת`); *kamānu* = `כַּוָּן` [cognate]; *epû* = `אָפָה` [cognate]; *erēšu* II = `שָׁאַל`; *ṣuḫru* = `נְעוּרִים`; *ramāku* = `טָבַל`; *mesû* = `רָחַץ` (already in I); *edēšu* = `חדש` [cognate].
+2. ***wabālu* = `הוֹבִיל`** [cognate יבל] corpus-wide, and *warû* (I 138, 160, 165, 207) to another verb (`הִנְחָה` / `נָהַג`); or the reverse – coordinator's choice (open decision 3).
+3. **Ordinary words (§5):** *gana* = `קוּם` (from Atra-ḫasīs); *anāḫu* = `יָגַע` (and *mānaḫtu* = `יְגִיעַ`); *ašāṭu* = `הִתְאַמֵּץ`; *dekû* = `הֵעִיר`; *nagaltû* = `הֵקִיץ`; *lapātu* = `נָגַע`; *ekkēmu* = `חוֹטֵף`; *kāru* = `נָמָל`; *nēberu* = `מַעְבָּר`; *zummû* = `נֶעְדַּר`; *kasû* "bind" = `כָּפַת`; *ṣapû* D = `הִשְׁרָה`; *rakābu* = `רָכַב`; *magillu* = `סִירָה`; *parīsu* = `מוֹט`; *rāṭu* = `רַהַט`; *rakāsu* = `רָכַס`; *šadādu* = `מָשַׁךְ`; *batāqu* = `בִּיתֵּק`; *nasāku* = `זָרַק`; *latāku* = `נִסָּה`; *kaṣû* = `קַר`; *šaqummiš* = `בִּדְמָמָה`; *ramānu* = `עַצְמִי`; *watû* = `מָצָא`; *naḫāsu* = `נָסוֹג`; *unūtu* = `כֵּלִים`; *raggu* / *ragāgu* = `רָשָׁע` / `הִרְשִׁיעַ` (pending open decision 1); *šīpa nadû* = `הֵטִיל כֶּתֶם`; *raṭbu* = `רָטֹב`; *bašālu* = `בָּשֵׁל`; *pēmtu* = `גֶּחָלִים`.
+4. **Formula:** *annīta ina šemêšu* with the subject first: `X – כשמעו את זאת,` (XI 287; VI 80 with `[כשמעה]`).
+5. **Note to the flood corpus (not edited):** flood XI 160 has `צברתי` for *attabak* (*tabāku*), against the shared rule that `צָבַר` is never used in the `>` lines (Gen 41:49) and the flood renderings' *tabāku* = `יָצַק`; worth a coordinator's look.
+
+### Lessons for the guidelines
+- **A coordinator's "copy exactly" can meet a one-morpheme difference** (XI 281 *lupte* vs XI 9 *luptēka*): change exactly that, mark it with `( )`, and record it as an open decision instead of copying silently.
+- **The plene strip test catches vocalized Pual and infinitive forms** (`יְחֻדַּשׁ` → `יחדש`, `חָדֹשׁ` → `חדש`, `בִּתֵּק`): write `יְחוּדַּשׁ`, `חָדוֹשׁ`, `בִּיתֵּק`.
+- **eBL's lemma for a verb can be the wrong root throughout a passage** (*ināḫa/ināḫā* lemmatized *nâḫu* "rest" in XI 274, 279, 311, where it is *anāḫu* "toil"): check the parallel line of the prologue (I 9) before trusting it.
+
+## Tablet VI
+
+### Scope
+SB Tablet VI, all 183 eBL labels: Gilgameš washes and dresses (1–5); Ištar's proposal (6–21); Gilgameš's refusal and the list of her lovers – Dumuzi, the *allallu*-bird, the lion, the horse, the shepherd, Išullānu the gardener (22–79); Ištar before Anu, the Bull of Heaven, the "seven years of chaff" (80–114); the Bull in Uruk and its killing (115–150); Ištar's curse, the haunch, her mourning, the horns for Lugalbanda (151–166); the procession "who is the finest among men?" and the night, Enkidu's dream (167–183). Manuscripts: Nineveh NinNA1a–b, NinNA2a–b, NinNA3a–c; Aššur AššNA1a, AššNA2; commentary quotations (lines 1, 69). Broken mainly in 25–45, 97–112, 134–146, 176–178. MB parallels from Emar₂ and Boǧ₂ are cited in the apparatus where eBL lists them.
+
+### Sources consulted
+- eBL `L/1/4` SB VI (`../../sources/eBL/Gilgamesh-SB-VI/reading-edition.md`: N, T, L, notes, ATF; `manuscripts.md`).
+- `../renderings.md` (incl. §9), Tablet I, Tablet XI 209–328 (this run), flood XI 1–208 and its renderings, Atra-ḫasīs renderings, creation corpus renderings, law corpus (*mutu*, *bēl*).
+- George's translation (eBL T), after drafting; Tchernichovsky 1924 Tablet VI (`../../sources/Ben-Yehuda--Tchernichovsky-1924/full-work--all-tablets.rtl.md`, from l. 1803) after pass (c).
+- The vocalized Bible through `../../tools/check_bible_quotes.py --show`.
+
+### Decisions
+1. **Speech marks**: Ištar 7–21, Gilgameš 24–79 (with Ištar's and Išullānu's quoted words 68–69, 71–74 in `'…'`, and the bird's cry 50 `'כנפי!'`), Ištar 84–86, 94–100, 108–112, 153, Anu 89–91, 103–105, Enkidu 130–140, 156–157, the procession 172–178.
+2. **Formulas**: the two-line speech formula (`../renderings.md` §2) in 22–23, 87–88, 101–102, 128–129, female 92–93, 106–107; *annâ ina šemêša* = `[כשמעה] את זאת` (80, bracketed by the ATF); *išmē-ma X annâ qabâ Y* = `שמע X את אמירתה זו של Y` (113, 154); *illakā dīmāša* = `זולגות דמעותיה` (83, as XI 139, 309).
+3. **Marriage words**: *ḫāwiru* = `חָתָן` (7, 42, 46; AššNA1a has *ḫatānu*, the cognate of `חָתָן`); *mutu* = `בַּעַל` (9, §9); *aššatu* = `אִשָּׁה`; *aḫāzu* "take in marriage" = `בָּעַל` (24, 32) – `אָחַז` is *ṣabātu* (§5), `לָקַח` is reserved, `נָשָׂא` is *našû* (6, 17, 65, 148).
+4. *inbu* = `תְּנוּבָה` (8; not `פְּרִי`, which would make the Hebrew echo 3:2–6 by itself); *qâšu qīšam* = `הַעֲנֵק הַעֲנִיקָה` (*qiāšu* = `הֶעֱנִיק`, also 165).
+5. *dumqu* = `חֶסֶד` (6), as XI 252, 313–314; *īnī našû* = `נָשָׂא עֵינַיִם` (6, 67) [cognate idiom ↔ Gen 39:7].
+6. *elmēšu* = `*חַשְׁמַל*` (11; the comparison with Ezek 1:4 is common but uncertain); *magarru* = `אוֹפָן`; *narkabtu* = `מֶרְכָּבָה`; *ṣamādu* = `רָתַם`; *ūmu* II = `*סְעָרוֹת*`.
+7. *parû* (19) = `פִּרְדָּה`: its cognate `פֶּרֶא` is reserved (Gen 16:12) and `פֶּרֶד` is *kūdanu* (12; X 53); *mūru* = `עַיִר` (vocalized `עִירְךָ`); *alpu* = `שׁוֹר` (21), while *alû* is always `שׁוֹר הַשָּׁמַיִם`.
+8. *ilūtu* = `אֵלוּת` (27; never a word with `אֱלֹה-`), *simat* = `הָרָאוּי לְ־`: 27–28 fix the Hebrew for VII 135–136 (`לחם הראוי לאֵלוּת`, `[סובא מובחר] … הראוי למלכות`).
+9. The insults 33–41: *kaṣāru* = `קָשַׁר`; *kalû* "hold back" = `כָּלָא` (as flood XI 133b); *zīqu* = `נְשִׁיבָה`; *napāṣu* = `נִפֵּץ`; *iṭṭû/ittû* = `חֵמָר` (George's "pitch"; eBL's lemma "seed-funnel" is the homonym); ***ṭapālu* = `הִכְפִּישׁ`** (37, 153, 177: one Hebrew verb for besmirching pitch and slanderous Gilgameš); *nādu* = `נֹאד`; *abātu* = `הָרַס`; *māt nukurti* = `אֶרֶץ אוֹיֵב` (not `אֵיבָה`, 3:15); *našāku* = `נָשַׁךְ`; *bēlu* = `בְּעָלִים`.
+10. The lovers: *ḫarmu* = `מְאַהֵב`; *napāšu* II "pluck" = `אֶפְרֹט`; *allallu* transliterated in 43 and 48 (George's pun "warrior/bird"); *šâmu* = `גָּזַר` throughout the refrain; *bitakkû* = `בְּכִי תְּמִידִי`; *ḫarāru* = `כָּרָה`, *šuttu* / *šuttatu* = `שׁוּחָה` (52, 119–123); *naʾdu* = `נֶאְדָּר` (not "נודע": `ידע` = *edû*); *ziqtu* = `דָּרְבָן`; *dalāḫu* = `דָּלַח` [cognate]; *utullu* = `בּוֹקֵר`; *tumru* = `עוּגוֹת רְצָפִים`; *šapāku* = `שָׁפַךְ` (30, 59; eBL lemmatizes 59 as the noun *išpiku* – a slip); *unīqu* = `גְּדִיָּה`; ***târu* D "turn into" = `הָפַךְ … לְ`** (61, 76, 79), following flood XI 119, 135 (`נהפך לטיט`): `שוב` stays for *târu* "return"; ***ṭarādu* D = `רָדַף`** (62), like *ṭardu* = `נִרְדָּף` (X), not `גֵּרֵשׁ` (3:24), noted; *šapru* = `כֶּסֶל`.
+11. **Išullānu**: *nukaribbu* = `גַּנָּן` [equivalent ↔ 2:15]; *šugarrû* = `*סל־תמרים*`; *kiššūtu* = `עָצְמָה` with the feminine suffix kept (`עוֹצְמָתֵךְ`); *i nīkul* = `הבה נאכלה` (*akālu* = `אָכַל`); *aṣû* Š = `הוֹצִיא`; *lapātu* = `נָגַע`; *ḫurdatu* = `עֶרְוָה` (allowed by §9 for words of the sense of *ūru*); *erēšu* = `שָׁאַל`; *epû* = `אָפָה`; *pištu* = `חֶרְפָּה`; *erretu* = `מְאֵרָה` (73, 86, 91 – the ארר root only here); *elpetu* = `*חַלְפָה*`; *kutummu* = `כְּסוּת`; *dallalu* = `*גַּמָּד*`; *mānaḫtu* = `יְגִיעַ` (root *anāḫu* = `יָגַע`); *miḫḫu* transliterated.
+12. Before Anu: *agāgu* = `קָצַף`; *nazāru* Gtn = `גִּדֵּף שוב ושוב`; *manû* D = `מִנָּה`; *gerû* = `הִתְגָּרָה`; *nêru* = `קָטַל`; *šubtu* = `מִשְׁכָּן`; *dannina* transliterated (`הַדַּנִּינָה`); *šaplātu* = `תַּחְתּוֹנִים` (not `תַּחְתִּיִּם`, 6:16); *elû* Š = `הֶעֱלָה`; *maʾādu* Š = `הִרְבָּה`.
+13. **The seven years (104, 110)**: N has the caesura *sebe šanāti || pî lipaḫḫir*, and George translates "for seven years let the widow … gather chaff": *šanāti* is a duration, *pî* the object. So `אלמנת אוּרוּךְ שבע שנים – מוץ תקבץ`, **not** the construct `שְׁנוֹת מוֹץ` of `../renderings.md` §4 (open decision 5). *paḫāru* D = `קִבֵּץ` [equivalent ↔ 41:35, 48]; *almattu* = `אַלְמָנָה`; *ikkaru* = `אִיכָּר` (plene, as in Atra-ḫasīs); *rabû* D = `גִּדֵּל`; *šammu* = `עֵשֶׂב` (105, 111); *nakāmu* "heap up" = `אָגַר` (108; never `צָבַר`); *šubšû* = `הֵבִיא לִכְלַל הֲוָיָה` (109; George "I made grow"); *uzzu* = `זַעַם`; *ṣerretu* = `רֶסֶן` (114; not to be confused with *ṣerru*).
+14. The Bull: *redû* = `נָהַג`; *abālu* D = `יִבֵּשׁ`; *appāru* = `*אֲגַם*` (not `אָחוּ`, 41:2); *maṭû* Dt = `הוּמְעַט`; *ammatu* = `אַמָּה`; *nipšu* = `נְשִׁיפָה` (as XI 305); *petû* N = `נִפְתַּח`; *maqātu* Gtn = `נפלו בזה אחר זה`; *qablu* "waist" = `מָתְנַיִם`; *šaḫāṭu* = `זִנֵּק` (125, 152); *nasāku* = `זָרַק`; *rupuštu* = `רִיר`; *kubru* = `עֹבִי`; *zibbatu* = `זָנָב`; *kabūtu* = `פֶּרֶשׁ`; *šarāḫu* Št = `הִתְפָּאֵר`; *apālu* = `עָנָה` (131; not `שִׁלֵּם`, the law corpus's *šullumu*); *kamāru* = `נֶעֱרַם` (`הנערמים`, avoiding a `ערומים` string); *dunnu* = `עֹז`; *lamādu* = `לָמַד`; *têrtu* = `*כַּוָּנָה*` (no `תּוֹרָה`); *saḫāru* = `חָזַר`; *kutallu* = `אֲחוֹרַיִם`; *siqqu* = `קַרְסֹל` (not `עָקֵב`, 3:15); *ṭābiḫu* = `טַבָּח`; *qardu* = `אַמִּיץ`; *lēʾû* = `מְיֻמָּן`; *tikku* = `עֹרֶף`; *naplaku* = `מְקוֹם הַשְּׁחִיטָה` (George; eBL lemma *naplaqtu* "knife"); *patru* = `סַכִּין` (not `מַאֲכֶלֶת`, Gen 22); *emēdu* here = `נָעַץ` by sense; *ṣâdu* = `סָבַב`.
+15. After the kill: *šukênu* = `הִשְׁתַּחֲוָה`; *rêqu* = `רָחַק` (the verb of *rūqu* `הָרָחוֹק`); *allû* = `אוֹי` (eBL lemma "that one" – a slip); *arūrūtu* "wail" = `יְלָלָה` (a false friend of `אָרוּר`); *ḫuppu* = `*קְפִיצַת־אֵבֶל*`; *šalāḫu* = `תָּלַשׁ`; *imittu* = `יֶרֶךְ־הַיָּמִין` (↔ `שׁוֹק הַיָּמִין`, Lev 7:32); *erru* = `קְרָבַיִם` (kept apart from *karšu* = `מֵעַיִם`); *alālu* = `תָּלָה`; *kezertu* = `כְּזֵרָה`; *ḫarimtu* = `זוֹנָה`; *(šamḫāti)* (NinNA1a only) not in the line, noted and footnoted; *bikītu* = `בְּכִית` [cognate]; *ummiānu* = `אֻמָּן`; *kiškattû* = `נַפָּח`; *nâdu* = `שִׁבַּח`; *manû* "mina" = `מָנֶה`; *šipku* = `שֶׁפֶךְ` (`שִׁפְכָּן`); *kurru* = `כֹּר`; *piššatu* = `מִשְׁחָה`; *uršu* = `חֶדֶר`, *ḫammūtu* = `שְׂרָרָה`.
+16. The procession: *Purattu* = `פְּרָת`; *ṣabātu* N = `נֶאֱחַז`; *dagālu* = `צָפָה`; *muttabbiltu* = `מְשָׁרֶתֶת`; ***banû* III "fine" = `יָפֶה`** (eBL lemmatizes *banû* "create" – a slip; `בָּנָה` stays for *banû* I); *zikaru* = `זָכָר` [cognate]; *eṭlūti* read as plural (`בעלמים`), against eBL's lemma (abstract *eṭlūtu*); *ḫidûta šakānu* = `שָׂם שִׂמְחָה`, the counterpart of 159 `שׂמה בְּכִית`; *nâlu* stative = `שׁוֹכֵב`, *ṣallu* = `יָשֵׁן`, *mayyālu* = `מִשְׁכָּב` (eBL lemma *mayāru* – a slip).
+17. *tillu* (1) = `קִשּׁוּטִים` (not `עֲדִי`, the flood corpus's *šukuttu*); *ebēbu* D = `נִקָּה` (kept apart from *ellu* = `טָהוֹר`); *qimmatu* = `תַּלְתַּלִּים` (not `קְוֻצּוֹת` = *itqu*); *maršu* = `צוֹאִי` [equivalent ↔ Zech 3:3–4]; *zakû* = `זַךְ` [cognate]; *ḫalāpu* = `הִתְעַטֵּף`, *naḫlaptu* = `מַעֲטֶה`; *aguḫḫu* = `אֵזוֹר`; *agû* = `כֶּתֶר`; *apāru* = `חָבַשׁ`.
+18. eBL's `Parallels:` field links VI 140 = VI 142: a data error (unrelated lines); 140 ~ 146 is the real pair.
+
+### Open decisions for the user
+1. *ḫāwiru* = `חָתָן` (7, 42, 46) beside *mutu* = `בַּעַל` (9): keep the two apart (chosen), or `בַּעַל` for both (Joel 1:8 `בַּעַל נְעוּרֶיהָ` would then be verbal in 46)?
+2. *ḫurdatu* (69) = `עֶרְוָה` (the same Hebrew as *ūru*, I 179, 187), or the rarer `פֹּת` (Isa 3:17 `פָּתְהֵן`) to keep the two Akkadian words apart?
+3. *aḫāzu* "marry" (24, 32) = `בָּעַל`, or `נָשָׂא` (the usual Hebrew idiom, at the cost of the *našû* rendering)?
+4. *elmēšu* (11) = `*חַשְׁמַל*` (a proposed cognate) or a neutral `*עִנְבָּר*`?
+5. VI 104, 110: `שבע שנים – מוץ תקבץ` (N's caesura; chosen) against `../renderings.md` §4 *šanāt pê* = `שְׁנוֹת מוֹץ`. If the coordinator prefers the construct, the line would read `אלמנת אורוך – שבע שנות מוץ תקבץ`.
+6. *ṭarādu* D (62) = `רָדַף` (chosen, like *ṭardu*) or `גֵּרֵשׁ` (the natural word, which echoes 3:24)?
+7. *(šamḫāti)* (158, one manuscript) left out of the line: or add it, since `../renderings.md` §1 foresees `שַׁמְחוֹת` here?
+8. *ilūtu* = `אֵלוּת` (27) binds VII 135: acceptable, or `אֱלֹהוּת` (more natural, but the string `אלוה` is close to the reserved `אֱלֹהִים`)?
+
+### Progress log
+- 2026-10-17 (after Tablet XI): ran `parallels_for.py VI --all`; read eBL VI (N, T, L, notes, ATF).
+- Drafted 1–183 (183 entries) in one sequence; Hebrew header and 14 sections.
+- Pass (a) fidelity: every `>` line against N and the ATF: 80 `[כשמעה]` (broken in all manuscripts though N does not bracket it); 91 `מארותייך` and 125 `זינק אנקידו` unbracketed (preserved in AššNA1a, against N's brackets); 105 `[אִיכַּר]` bracketed (ENGAR is inside the break of NinNA1b); bracket placement in 31–33 corrected; 50 the bird's cry in inner quotes.
+- Pass (b) consistency: the formulas and repeated lines (47/57, 49/61/76, 84–86/89–91, 104–105/110–111, 119/121/123, 120/122, 135–140/141–146, 113/154, 172–175) made identical where the Akkadian is (121/123 dash aligned with 119); reserved strings grepped (`ארר` only for *erretu*; `עשב` only for *šammu*; `שׂים` only for *šakānu*; `ידע` only 176 *edû*; no `צבר`, `פרי`, `פרא`, `עולם`, `ערום`); new strings grepped against earlier `>` lines (`עדי` replaced by `קישוטים` in 1).
+- Pass (c) Hebrew: plene strip test on vocalized words (`עִירְךָ`, `בּוֹשֶׂם`, `כיסא`, `לִדְלוֹחַ`, `עוּגוֹת`, `עוֹצְמָתֵךְ`, `האוֹכַל`, `אִיכַּר`, `האומנים` corrected). Tchernichovsky 1924 Tablet VI compared: he imports `וְהָיָה לִי לְקוֹץ וּלְדַרְדָּר` (3:18), `וּטְעַם מִלֶּחֶם־הָאֵלִים`, `תְּנָה לִי מִזַּרְעֲךָ`, `יְגָרְשׁוּהוּ`, `שְׁגַר אֲלָפֶיךָ` (Deut 28:4), `לְעוֹלָם`, `אֱלֹהֵי־הָאָבִיב`, vav-consecutive throughout; none is in the Akkadian; nothing changed in ours.
+- `python3 -I verify.py XI VI`: VI 183 entries = eBL 183, 183 translation lines; problems 0 (one listed difference, VI 140/142, is the eBL data error). `check_bible_quotes.py` on both files and this file: 0 problems.
+- `translation-VI.rtl.md` built from the `>` lines (introduction, 14 sections, 23 footnotes).
+
+### Parallels index (Tablet VI)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 1 | imsi malêšu | רחץ את פרעותיו | `וַיְגַלַּח וַיְחַלֵּף שִׂמְלֹתָיו` (בראשית מא:יד) | [equivalent] | Washing and changing before a decisive meeting; = XI 263 (the end of his journey). |
+| 1 | ubbib tillêšu | ניקה את קישוטיו | `וְלֹא שָׁתוּ אִישׁ עֶדְיוֹ עָלָיו` (שמות לג:ד) | [equivalent] | Ornaments of status. |
+| 3 | iddi maršūtīšu ittalbiš zakūtīšu | השליך את צואיו, התלבש בזכיו | `הָסִירוּ הַבְּגָדִים הַצֹּאִים מֵעָלָיו … וְהַלְבֵּשׁ אֹתְךָ מַחֲלָצוֹת` (זכריה ג:ד) | [equivalent] | Dirty clothes off, clean on; *zakû* ~ זך [cognate]. |
+| 3 | ittalbiš | התלבש | `וַיַּלְבִּשֵׁם` (בראשית ג:כא) | [divergence] | *labāšu* ~ לבש [cognate]; man clothes himself here, God clothes there. |
+| 4 | ittaḫlip | התעטף | `וַיְחַלֵּף שִׂמְלֹתָיו` (בראשית מא:יד) | [cognate] | *ḫalāpu* ~ חלף (root only; "wrap", not "change"). Also `חֲלִפוֹת שְׂמָלֹת` (מה:כב). |
+| 4 | rakis aguḫḫa | רכוס אזור | `וַיַּעֲשׂוּ לָהֶם חֲגֹרֹת` (בראשית ג:ז) | [divergence] | A belt of honour, not of shame. |
+| 6 | ana dumqi ša Gilgāmeš īnī ittaši | אל חסד גילגמש נשאה עיניה | `וַתִּשָּׂא אֵשֶׁת אֲדֹנָיו אֶת עֵינֶיהָ אֶל יוֹסֵף וַתֹּאמֶר שִׁכְבָה עִמִּי` (בראשית לט:ז) | [cognate] | **Key.** The same idiom (*īnī našû*): a woman of rank covets a handsome young man (`יְפֵה תֹאַר וִיפֵה מַרְאֶה`, לט:ו), proposes, is refused, takes revenge (VI 80ff. ↔ 39:13ff.). |
+| 6 | dumqu | חסד | `וַתִּשָּׂא חֵן וָחֶסֶד לְפָנָיו` (אסתר ב:יז) | [equivalent] | *dumqu* "beauty" = חסד (cf. Isa 40:6; XI 252). |
+| 6 | īnī ittaši | נשאה עיניה | `וַתֵּרֶא הָאִשָּׁה כִּי טוֹב הָעֵץ … וְכִי תַאֲוָה הוּא לָעֵינַיִם` (בראשית ג:ו) | [divergence] | The coveting eye, here of a goddess on a man. |
+| 7 | lū ḫāʾer attā | היה אתה החתן | `כְּחָתָן יֹצֵא מֵחֻפָּתוֹ` (תהלים יט:ו) | [cognate] | Only through AššNA1a's variant *ḫatānu* ~ חתן; the main text has *ḫāwiru*. |
+| 7 | alkam-ma … lū ḫāʾer | בוא … היה החתן | `וְאֶל אִישֵׁךְ תְּשׁוּקָתֵךְ וְהוּא יִמְשָׁל בָּךְ` (בראשית ג:טז) | [divergence] | The woman (goddess) takes the initiative. |
+| 8 | inbīka yâši qâšu qīšam-ma | את תנובותיך – לי הענק, העניקה | `וַתִּקַּח מִפִּרְיוֹ וַתֹּאכַל וַתִּתֵּן גַּם לְאִישָׁהּ` (בראשית ג:ו) | [divergence] | **Key.** In Genesis the woman takes fruit and gives it to the man; here the goddess asks the man for his "fruit" (sexual and generative). *inbu* rendered `תְּנוּבָה`, not `פְּרִי`. |
+| 8 | inbīka | תנובותיך | `יָבֹא דוֹדִי לְגַנּוֹ וְיֹאכַל פְּרִי מְגָדָיו` (שיר השירים ד:טז) | [equivalent] | Fruit as erotic metaphor. Cf. `וַיֹּאכַל תְּנוּבֹת שָׂדָי` (דברים לב:יג). |
+| 8 | qâšu qīšam | הענק, העניקה | `הַעֲנֵיק תַּעֲנִיק לוֹ` (דברים טו:יד) | [equivalent] | Infinitive + finite verb of "give". |
+| 9 | attā lū mutī-ma anāku lū aššatka | אתה – תהיה בעלי, ואני – אהיה אשתך | `עַל כֵּן יַעֲזָב אִישׁ אֶת אָבִיו וְאֶת אִמּוֹ וְדָבַק בְּאִשְׁתּוֹ` (בראשית ב:כד) | [divergence] | The marriage formula in the woman's mouth. *aššatu* ~ אשה [cognate]. |
+| 9 | mutu | בעל | `וְהִוא בְּעֻלַת בָּעַל` (בראשית כ:ג) | [equivalent] | *mutu* = בעל (§9). Cf. `תִּקְרְאִי אִישִׁי וְלֹא תִקְרְאִי לִי עוֹד בַּעְלִי` (הושע ב:יח). |
+| 10 | narkabta uqnâ u ḫurāṣa | מרכבה של לזורית וזהב | `וַיַּרְכֵּב אֹתוֹ בְּמִרְכֶּבֶת הַמִּשְׁנֶה אֲשֶׁר לוֹ` (בראשית מא:מג) | [cognate] | *narkabtu* ~ מרכבה. With 3–4 (clothes) and 16 (kneeling): the honours Joseph accepts from Pharaoh, Gilgameš refuses from Ištar. |
+| 11 | elmēšu | *חשמל* | `וּמִתּוֹכָהּ כְּעֵין הַחַשְׁמַל מִתּוֹךְ הָאֵשׁ` (יחזקאל א:ד) | [cognate?] | A proposed equation; with wheels (`מַרְאֵה הָאוֹפַנִּים`, יחזקאל א:טז) in a divine chariot. Uncertain. |
+| 15 | linaššiqū šēpīka | ינשקו את רגליך | `אַפַּיִם אֶרֶץ יִשְׁתַּחֲווּ לָךְ וַעֲפַר רַגְלַיִךְ יְלַחֵכוּ` (ישעיהו מט:כג) | [equivalent] | Submission at the feet. |
+| 16 | lū kamsū ina šaplīka šarrū | יהיו כורעים תחתיך מלכים | `יַעַבְדוּךָ עַמִּים` (בראשית כז:כט) | [equivalent] | Royal blessing; cf. `וַיִּקְרְאוּ לְפָנָיו אַבְרֵךְ` (מא:מג). |
+| 17 | liqit šadî u māti … bilta | לקט ההר והארץ … משא | `וְהוֹרִידוּ לָאִישׁ מִנְחָה` (בראשית מג:יא) | [equivalent] | Produce of the land as tribute; *liqtu* ~ לקט [cognate]. |
+| 18 | enzātūka … laḫrātūka tūʾamī līlidā | עזייך … רחלותיך – תאומים ילדו | `שְׁגַר אֲלָפֶיךָ וְעַשְׁתְּרוֹת צֹאנֶךָ` (דברים כח:ד) | [equivalent] | **Key.** The blessing of flock fertility, in Hebrew under the goddess's own name ("the Ashtarot of your flock"); Ištar promises it. |
+| 18 | tūʾamī | תאומים | `וְהִנֵּה תוֹמִם בְּבִטְנָהּ` (בראשית כה:כד) | [cognate] | Also *enzu* ~ עז, *laḫru* ~ רחל, *alādu* ~ ילד [cognate]. Cf. `שֶׁכֻּלָּם מַתְאִימוֹת` (שיר השירים ד:ב). |
+| 18 | līlidā | ילדו | `וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד וַיְהִי לוֹ צֹאן רַבּוֹת` (בראשית ל:מג) | [equivalent] | Jacob's flocks. |
+| 19 | mūrka | עירך | `אֹסְרִי לַגֶּפֶן עִירֹה` (בראשית מט:יא) | [equivalent] | *mūru* = עיר. *parû* (mule) ~ פרא [cognate] avoided (reserved, 16:12). |
+| 21 | šānina ai irši | מתחרה אל יקנה | `וּלְאָדָם לֹא מָצָא עֵזֶר כְּנֶגְדּוֹ` (בראשית ב:כ) | [equivalent] | "No rival" (I 63), here of an ox; lexical only. |
+| 24 | ana kâši aḫḫazūki | אותך אבעל | `כִּי יִקַּח אִישׁ אִשָּׁה וּבְעָלָהּ` (דברים כד:א) | [equivalent] | *aḫāzu* ~ אחז [cognate root] in the sense "marry". Restored context. |
+| 27 | akla simat ilūti | לחם הראוי לאֵלוּת | `וְאָכַל וָחַי לְעֹלָם` (בראשית ג:כב) | [divergence] | Food of the gods offered to man (cf. VII 135); *akalu* = לחם (`תֹּאכַל לֶחֶם`, ג:יט). Mostly restored. |
+| 33 | lā kāṣirat šurīpi | שאינה קושרת קרח | `וְקֶרַח בַּלָּיְלָה` (בראשית לא:מ) | [equivalent] | Lexical. Restored in part. |
+| 34 | ša lā ikallû šāra u zīqa | אשר לא תכלא רוח ונשיבה | `וַיִּכָּלֵא הַגֶּשֶׁם מִן הַשָּׁמָיִם` (בראשית ח:ב) | [cognate] | *kalû* ~ כלא, as flood XI 133b. |
+| 37 | ittû | חמר | `וְהַחֵמָר הָיָה לָהֶם לַחֹמֶר` (בראשית יא:ג) | [equivalent] | George's "pitch" (*iṭṭû* = חמר, flood XI 67); eBL's lemma differs. |
+| 38 | nādu | נאד | `וַתִּפְתַּח אֶת נֹאוד הֶחָלָב` (שופטים ד:יט) | [cognate] | |
+| 41 | šēnu munaššikat šēpī bēlīša | נעל הנושכת את רגל בעליה | `הַנֹּשֵׁךְ עִקְּבֵי סוּס` (בראשית מט:יז) | [cognate] | *našāku* ~ נשך: biting at the foot; cf. `וְאַתָּה תְּשׁוּפֶנּוּ עָקֵב` (ג:טו) [divergence]. |
+| 42 | ayyû ḫāmeraki ibūr ana dāriš | איזה חתן שלך התקיים לנצח | `וְאָכַל וָחַי לְעֹלָם` (בראשית ג:כב) | [divergence] | Closeness to the goddess brings no eternal life. *dāriš* = לנצח (never עולם). |
+| 43 | [ša ana šamê] īlû | [אשר אל השמים] עלה | `וַיַּעַל אֵלִיָּהוּ בַּסְעָרָה הַשָּׁמָיִם` (מלכים ב ב:יא) | [divergence] | None of the lovers ascended; cf. `וְאֵינֶנּוּ כִּי לָקַח אֹתוֹ אֱלֹהִים` (בראשית ה:כד). "To heaven" restored (George, tentative). |
+| 44 | ḫarmīki | מאהבייך | `אֵלְכָה אַחֲרֵי מְאַהֲבַי` (הושע ב:ז) | [equivalent] | The prophets' harlot and her lovers; `וְאַתְּ נָתַתְּ אֶת נְדָנַיִךְ לְכָל מְאַהֲבַיִךְ` (יחזקאל טז:לג). |
+| 46 | ana Dumuzi ḫāmiri ṣuḫrētīki | לדומוזי, חתן נעורייך | `אֱלִי כִּבְתוּלָה חֲגֻרַת שַׂק עַל בַּעַל נְעוּרֶיהָ` (יואל א:ח) | [equivalent] | **Key.** "The husband of her youth" lamented; *ṣuḫru* = נעורים. Cf. `הַעֹזֶבֶת אַלּוּף נְעוּרֶיהָ` (משלי ב:יז). |
+| 46 | Dumuzi | דומוזי | `וְהִנֵּה שָׁם הַנָּשִׁים יֹשְׁבוֹת מְבַכּוֹת אֶת הַתַּמּוּז` (יחזקאל ח:יד) | [cognate] | Dumuzi = Tammuz; the yearly weeping (47). |
+| 47 | šatta ana šatti bitakkâ taltīmīššu | שנה בשנה בכי תמידי גזרת לו | `מִיָּמִים יָמִימָה תֵּלַכְנָה בְּנוֹת יִשְׂרָאֵל לְתַנּוֹת לְבַת יִפְתָּח הַגִּלְעָדִי אַרְבַּעַת יָמִים בַּשָּׁנָה` (שופטים יא:מ) | [equivalent] | Annual lament for one who died. = 57 (Silili). |
+| 52 | tuḫtarrîšu šuttāti | כרית לו שוחות | `כִּי כָרוּ שׁוּחָה לְנַפְשִׁי` (ירמיהו יח:כ) | [equivalent] | *ḫarāru* = כרה, *šuttu* = שוחה. |
+| 52 | šuttāti | שוחות | `כִּי שׁוּחָה עֲמֻקָּה זוֹנָה` (משלי כג:כז) | [equivalent] | The harlot as a deep pit; cf. the Bull's pits (119–123). |
+| 54 | ištuḫḫa ziqtī u dirrata | שוט, דורבן ורצועה | `שׁוֹט לַסּוּס מֶתֶג לַחֲמוֹר` (משלי כו:ג) | [equivalent] | |
+| 56 | dalāḫa u šatâ | לדלוח ולשתות | `וַתִּדְלַח מַיִם בְּרַגְלֶיךָ` (יחזקאל לב:ב) | [cognate] | *dalāḫu* ~ דלח. |
+| 58 | rēʾâ nāqida utulla | הרועה, הנוקד, הבוקר | `וַיְהִי הֶבֶל רֹעֵה צֹאן` (בראשית ד:ב) | [cognate] | *rēʾû* ~ רעה; *nāqidu* = נוקד (`בַנֹּקְדִים`, עמוס א:א); *utullu* = בוקר (`כִּי בוֹקֵר אָנֹכִי`, עמוס ז:יד). |
+| 59 | tumrī išpukakki | עוגות רצפים שפך לך | `וְהִנֵּה מְרַאֲשֹׁתָיו עֻגַת רְצָפִים` (מלכים א יט:ו) | [equivalent] | *šapāku* ~ שפך [cognate] (not צבר). The shepherd's gift ↔ Abel's offering (`וְהֶבֶל הֵבִיא גַם הוּא מִבְּכֹרוֹת צֹאנוֹ`, בראשית ד:ד) [divergence]. |
+| 60 | uṭabbaḫakki unīqēti | טבח לך גדיות | `אָנֹכִי אֲשַׁלַּח גְּדִי עִזִּים מִן הַצֹּאן` (בראשית לח:יז) | [equivalent] | A kid as a gift to a woman (Judah and Tamar); *ṭabāḫu* ~ טבח [cognate] (`וּטְבֹחַ טֶבַח וְהָכֵן`, מג:טז). |
+| 61 | ana barbari tutterrīšu | לזאב הפכת אותו | `וּמוֹרַאֲכֶם וְחִתְּכֶם יִהְיֶה עַל כָּל חַיַּת הָאָרֶץ` (בראשית ט:ב) | [divergence] | The herdsman made a beast; his own dogs against him (63). *târu* D = הפך (not שוב). |
+| 62 | uṭarradūšu kaparrū | רודפים אותו נערי־הצאן | `וַיְגָרֶשׁ אֶת הָאָדָם` (בראשית ג:כד) | [equivalent] | *ṭarādu* D "drive away" (rendered `רדף`, open decision 6). |
+| 64 | Išullānu nukarib abīki | אישולנו, גנן אביך | `וַיִּקַּח יְהוָה אֱלֹהִים אֶת הָאָדָם וַיַּנִּחֵהוּ בְגַן עֵדֶן לְעָבְדָהּ וּלְשָׁמְרָהּ` (בראשית ב:טו) | [equivalent] | **Key.** The first man as gardener in God's garden; Išullānu gardener of Anu's orchard. *nukaribbu* = גנן. |
+| 65 | šugurrâ našâkki | סל־תמרים נשא לך | `וַתִּקַּח מִפִּרְיוֹ וַתֹּאכַל וַתִּתֵּן גַּם לְאִישָׁהּ` (בראשית ג:ו) | [divergence] | Here the gardener brings fruit to the woman. |
+| 66 | unammaru paššūrki | האיר את שולחנך | `תַּעֲרֹךְ לְפָנַי שֻׁלְחָן` (תהלים כג:ה) | [equivalent] | |
+| 67 | īna tattaššîšum-ma | עין נשאת אליו | `וַתִּשָּׂא אֵשֶׁת אֲדֹנָיו אֶת עֵינֶיהָ אֶל יוֹסֵף` (בראשית לט:ז) | [cognate] | As 6. |
+| 68 | kiššūtaki i nīkul | את עוצמתך – הבה נאכלה | `וַתֹּאכַל וַתִּתֵּן גַּם לְאִישָׁהּ עִמָּהּ וַיֹּאכַל` (בראשית ג:ו) | [cognate] | **Key.** *akālu* ~ אכל: eating as sexual metaphor in the woman's invitation. |
+| 68 | i nīkul | הבה נאכלה | `כֵּן דֶּרֶךְ אִשָּׁה מְנָאָפֶת אָכְלָה וּמָחֲתָה פִיהָ` (משלי ל:כ) | [equivalent] | |
+| 69 | qātka šūṣâm-ma luput ḫurdatni | ואת ידך הוצא, וגע בערוותנו | `וּמִפְּרִי הָעֵץ אֲשֶׁר בְּתוֹךְ הַגָּן אָמַר אֱלֹהִים לֹא תֹאכְלוּ מִמֶּנּוּ וְלֹא תִגְּעוּ בּוֹ פֶּן תְּמֻתוּן` (בראשית ג:ג) | [equivalent] | **Key.** "Eat … touch": the two verbs of the garden prohibition (in the woman's version) are the two verbs of Ištar's offer to the gardener (68–69). *lapātu* = נגע. |
+| 69 | qātka šūṣâm-ma | ואת ידך – הוצא | `פֶּן יִשְׁלַח יָדוֹ וְלָקַח גַּם מֵעֵץ הַחַיִּים` (בראשית ג:כב) | [equivalent] | Putting out the hand. Cf. `וְשָׁלְחָה יָדָהּ וְהֶחֱזִיקָה בִּמְבֻשָׁיו` (דברים כה:יא). |
+| 72 | ummī lā tēpâ anāku lā ākul | אמי – האם לא אפתה? אני – האם לא אכלתי? | `וַתֹּאכַל … וַיֹּאכַל` (בראשית ג:ו) | [divergence] | The man who refuses to eat from the woman: his mother's bread is enough. *epû* ~ אפה [cognate]. |
+| 73 | ša akkalu akla pišāti u errēti | האוכל לחם חרפות ומארות | `אֲרוּרָה הָאֲדָמָה בַּעֲבוּרֶךָ בְּעִצָּבוֹן תֹּאכְלֶנָּה` (בראשית ג:יז) | [cognate] | **Key.** *erretu* ~ ארר: "bread of curses" – Adam eats from a cursed ground after eating what the woman gave; Išullānu refuses the goddess's food because it is bread of curses. *akalu* = לחם (`בְּזֵעַת אַפֶּיךָ תֹּאכַל לֶחֶם`, ג:יט). |
+| 73 | akla pišāti | לחם חרפות | `אֹכְלֵי לֶחֶם הָעֲצָבִים` (תהלים קכז:ב) | [equivalent] | |
+| 74 | elpetu kutummūʾa | *חלפה* תהיה כסותי | `וַיִּתְפְּרוּ עֲלֵה תְאֵנָה וַיַּעֲשׂוּ לָהֶם חֲגֹרֹת` (בראשית ג:ז) | [divergence] | A covering of plants: in Genesis after eating, here the despised alternative to the goddess. |
+| 74 | kutummūʾa | כסותי | `כִּי הִוא כְסוּתֹה לְבַדָּהּ הִוא שִׂמְלָתוֹ לְעֹרוֹ בַּמֶּה יִשְׁכָּב` (שמות כב:כו) | [equivalent] | Covering against the night's cold. |
+| 76 | ana dallali tutterrīšu | ל*גמד* [הפכת אותו] | `אָרוּר אַתָּה מִכָּל הַבְּהֵמָה … עַל גְּחֹנְךָ תֵלֵךְ` (בראשית ג:יד) | [divergence] | Transformation into a low creature as punishment – here for refusing. *dallalu* uncertain (a frog?). |
+| 77 | ina qabal mānaḫātīšu | באמצע יגיעו | `וְאֶת יְגִיעַ כַּפַּי רָאָה אֱלֹהִים` (בראשית לא:מב) | [equivalent] | *mānaḫtu* = יגיע. |
+| 77 | tušēšibīšu ina qabal mānaḫātīšu | הושבת אותו באמצע יגיעו | `וַיַּנִּחֵהוּ בְגַן עֵדֶן לְעָבְדָהּ` (בראשית ב:טו) | [divergence] | The gardener "set" in the midst of his toil he can no longer do (78); cf. `בְּזֵעַת אַפֶּיךָ` (ג:יט). |
+| 81 | ištar uggugat | אשתר – קצופה | `וַיִּקְצֹף פַּרְעֹה עַל שְׁנֵי סָרִיסָיו` (בראשית מ:ב) | [equivalent] | *agāgu* = קצף. |
+| 84 | ittazzaranni | גידף אותי | `אָרוּר אַתָּה` (בראשית ג:יד) | [divergence] | *nazāru* "revile" (not *arāru*). |
+| 86 | pišātīya u errētīya | את חרפותיי ואת מארותיי | `אֲרוּרָה הָאֲדָמָה` (בראשית ג:יז) | [cognate] | *erretu* ~ ארר; Ištar calls the list of her lovers "curses" (= 91). |
+| 89 | aba lā attī tegrî | הלא את התגרית | `הָאִשָּׁה אֲשֶׁר נָתַתָּה עִמָּדִי הִוא נָתְנָה לִּי` (בראשית ג:יב) | [divergence] | The father puts the blame on the woman (in Genesis the man does). |
+| 99 | ušellâm-ma mītūti | אעלה את המתים | `אֶת מִי אַעֲלֶה לָּךְ וַיֹּאמֶר אֶת שְׁמוּאֵל הַעֲלִי לִי` (שמואל א כח:יא) | [equivalent] | *elû* Š = העלה, of the dead from the underworld; cf. `וְדֹרֵשׁ אֶל הַמֵּתִים` (דברים יח:יא). |
+| 99 | ikkalū balṭūti | ויאכלו את החיים | `וְאָכַל וָחַי לְעֹלָם` (בראשית ג:כב) | [divergence] | "Eat" and "the living": the dead will eat the living. |
+| 100 | ušamʾad mītūti | ארבה את המתים | `הַרְבָּה אַרְבֶּה עִצְּבוֹנֵךְ וְהֵרֹנֵךְ` (בראשית ג:טז) | [equivalent] | *maʾādu* Š = הרבה; the opposite of `פְּרוּ וּרְבוּ` (א:כח). |
+| 103 | šumma alâ terrešīnni | אם את שור השמים תשאלי ממני | — | — | *erēšu* = שאל (XI 213). |
+| 104 | almatti Uruk sebe šanāti pî lipaḫḫir | אלמנת אורוך שבע שנים – מוץ תקבץ | `וְקָמוּ שֶׁבַע שְׁנֵי רָעָב אַחֲרֵיהֶן` (בראשית מא:ל) | [divergence] | **Key.** Seven years of want, announced to a ruler who must prepare (cf. `שֶׁבַע שְׁנֵי רָעָב`, מא:כז). Not a construct "years of chaff" (decision 13). *sebe* ~ שבע [cognate]. |
+| 104 | pî lipaḫḫir | מוץ תקבץ | `וְיִקְבְּצוּ אֶת כָּל אֹכֶל הַשָּׁנִים הַטֹּבוֹת הַבָּאֹת הָאֵלֶּה` (בראשית מא:לה) | [equivalent] | **Key.** *paḫāru* D = קבץ: in Genesis food is gathered in the good years; here the widow will gather chaff in the bad ones. Also `וַיִּקְבֹּץ אֶת כָּל אֹכֶל שֶׁבַע שָׁנִים` (מא:מח). = 110. |
+| 104 | pî | מוץ | `כַּמֹּץ אֲשֶׁר תִּדְּפֶנּוּ רוּחַ` (תהלים א:ד) | [equivalent] | *pû* "chaff" = מוץ. |
+| 104 | almatti | אלמנת | `שְׁבִי אַלְמָנָה בֵית אָבִיךְ` (בראשית לח:יא) | [cognate] | *almattu* ~ אלמנה. |
+| 105 | [ikkar Uruk?] lirabbi šammī | [איכר אורוך?] יגדל עשב | `וְאָכַלְתָּ אֶת עֵשֶׂב הַשָּׂדֶה` (בראשית ג:יח) | [equivalent] | **Key.** *šammu* = עשב (reserved; = I 108, XI 283): fodder instead of grain for the years of want; in Genesis the food of the expelled man. *ikkaru* = איכר [loan] (`עֹבֵד אֲדָמָה`, ד:ב). "Farmer" restored here, preserved in 111. |
+| 105 | šammī | עשב | `תַּדְשֵׁא הָאָרֶץ דֶּשֶׁא עֵשֶׂב מַזְרִיעַ זֶרַע` (בראשית א:יא) | [equivalent] | |
+| 108 | [ … ] akkum | […] אגרתי | `וַיִּצְבֹּר יוֹסֵף בָּר כְּחוֹל הַיָּם הַרְבֵּה מְאֹד` (בראשית מא:מט) | [equivalent] | **Key.** Ištar has already stored up for the years of want, like Joseph. *nakāmu* "heap up" = אגר, never צבר (and not *šapāku*). Object lost. |
+| 108 | akkum | אגרתי | `אָגְרָה בַקָּצִיר מַאֲכָלָהּ` (משלי ו:ח) | [equivalent] | Also `אֹגֵר בַּקַּיִץ בֵּן מַשְׂכִּיל` (משלי י:ה). |
+| 109 | [ … ] ušabši | […] הבאתי לכלל הוויה | `וַתַּעַשׂ הָאָרֶץ בְּשֶׁבַע שְׁנֵי הַשָּׂבָע לִקְמָצִים` (בראשית מא:מז) | [equivalent] | Ištar "brought into being" (George "made grow") the stores; *šubšû* is the verb compared with `בָּרָא` (creation corpus). |
+| 110 | almatti … pî [uptaḫḫir] | אלמ[נת …] שנים – מוץ [קיבצה] | `וַיִּקְבֹּץ אֶת כָּל אֹכֶל שֶׁבַע שָׁנִים` (בראשית מא:מח) | [equivalent] | The verb restored; Ištar claims the measure done. |
+| 114 | ṣerret alêm-ma ana qātīša iškun | את רסן שור השמים בידה שׂם | `וְשַׂמְתִּי חַחִי בְּאַפֶּךָ וּמִתְגִּי בִּשְׂפָתֶיךָ` (ישעיהו לז:כט) | [equivalent] | *šakānu* + nose-rope. |
+| 117 | ūtabbil qišta appara u qanâ | ייבש את היער, את האגם ואת הקנה | `וַאֲגַמִּים אוֹבִישׁ` (ישעיהו מב:טו) | [equivalent] | Drying up as a divine act; cf. `יָבְשָׁה הָאָרֶץ` (בראשית ח:יד). |
+| 118 | sebe ammat nāru umdaṭṭi | שבע אמות הומעט הנהר | `חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם` (בראשית ז:כ) | [divergence] | Water measured in cubits: rising in the flood, falling here. *ammatu* ~ אמה [cognate]. |
+| 118 | umdaṭṭi | הומעט | `וַיַּחְסְרוּ הַמַּיִם` (בראשית ח:ג) | [equivalent] | |
+| 119 | šuttatu ippetē-ma | נפתחה שוחה | `וַתִּפְתַּח הָאָרֶץ אֶת פִּיהָ וַתִּבְלַע אֹתָם` (במדבר טז:לב) | [equivalent] | The earth opening and swallowing men (120–122). = 121, 123. |
+| 119 | ippetē-ma | נפתחה | `נִבְקְעוּ כָּל מַעְיְנֹת תְּהוֹם רַבָּה וַאֲרֻבֹּת הַשָּׁמַיִם נִפְתָּחוּ` (בראשית ז:יא) | [cognate] | *petû* N ~ נפתח. |
+| 119 | nipšīšu | בנשיפתו | — | — | *nipšu* = נשיפה, the same word as the "breath" of the plant the snake smelled (XI 305). |
+| 127 | kabūssu | פרשו | `וְאֶת בְּשַׂר הַפָּר וְאֶת עֹרוֹ וְאֶת פִּרְשׁוֹ` (שמות כט:יד) | [equivalent] | Lexical. *zibbatu* ~ זנב [cognate]. |
+| 139 | kī ṭābiḫi | כ[טבח] | `שַׂר הַטַּבָּחִים` (בראשית לט:א) | [cognate] | Lexical only; restored in 139, preserved in 145. |
+| 140 | patarka ummid | את סכינך נעץ | `וְשָׁחַט אֶת בֶּן הַבָּקָר לִפְנֵי יְהוָה` (ויקרא א:ה) | [divergence] | Slaughter of a bull, followed by the heart set before Šamaš (148); *patru* = סכין, not `הַמַּאֲכֶלֶת` (בראשית כב:ו). = 146. |
+| 148 | libbašu … ana pān Šamaš ištaknū | את לבו … לפני שמש שׂמו | `וְהִקְטִיר הַכֹּהֵן אֶת הַכֹּל הַמִּזְבֵּחָה` (ויקרא א:ט) | [equivalent] | Offering part of the killed animal to the god; cf. Noah's offering (בראשית ח:כ). |
+| 149 | uškennū | השתחוו | `וַיִּשְׁתַּחוּ אָרְצָה` (בראשית יח:ב) | [equivalent] | *šukênu* = השתחווה. |
+| 151 | īlī-ma Ištar ina muḫḫi dūri ša Uruk supūri | עלתה אשתר על חומת אורוך־הדיר | `וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל וְאֶרֶךְ` (בראשית י:י) | [cognate] | Uruk = Erech; the wall of I 18, XI 323. |
+| 152 | arūrūta | יללה | `אָרוּר אַתָּה` (בראשית ג:יד) | [absent] | False friend: *arūrūtu* "wail" is not ארר. |
+| 155 | išluḫ imitti alê | תלש את ירך־הימין של שור השמים | `וְאֵת שׁוֹק הַיָּמִין תִּתְּנוּ תְרוּמָה לַכֹּהֵן` (ויקרא ז:לב) | [equivalent] | The right haunch as the consecrated portion; here thrown at the goddess. *imittu* ~ ימין [cognate]. |
+| 157 | errīšu | קרביו | `וְקִרְבּוֹ וּכְרָעָיו יִרְחַץ בַּמָּיִם` (ויקרא א:ט) | [equivalent] | The victim's entrails. |
+| 158 | uptaḫḫir Ištar kezrēti … u ḫarimāti | קיבצה אשתר את הכזרות והזונות | `וַיַּחְשְׁבֶהָ לְזוֹנָה` (בראשית לח:טו) | [equivalent] | Women of Ištar's cult (Šamḫat's class, I 138); *(šamḫāti)* in one manuscript; cf. `הַקְּדֵשָׁה` (לח:כא). |
+| 158 | uptaḫḫir | קיבצה | `וְיִקְבְּצוּ אֶת כָּל אֹכֶל` (בראשית מא:לה) | [equivalent] | The same verb as 104 (the widow gathering chaff). |
+| 159 | bikīta iškun | שׂמה בכית | `וַיַּעַבְרוּ יְמֵי בְכִיתוֹ` (בראשית נ:ד) | [cognate] | *bikītu* ~ בכית; cf. `וַיַּעַשׂ לְאָבִיו אֵבֶל שִׁבְעַת יָמִים` (נ:י). Opposite: 179 `שׂם שמחה`. |
+| 160 | kiškattê | הנפחים | `חָרָשׁ נֹפֵחַ בְּאֵשׁ פֶּחָם` (ישעיהו נד:טז) | [equivalent] | |
+| 164 | šeššet kur šamnu | שישה כור שמן | — | — | *kurru* ~ כר, *šamnu* ~ שמן [cognate]. |
+| 167 | ina puratti imsû qātīšun | בפרת רחצו את ידיהם | `יִרְחֲצוּ אֶת יְדֵיהֶם עַל הָעֶגְלָה הָעֲרוּפָה בַנָּחַל` (דברים כא:ו) | [equivalent] | Hand-washing in running water after a killing. |
+| 167 | puratti | פרת | `וְהַנָּהָר הָרְבִיעִי הוּא פְרָת` (בראשית ב:יד) | [cognate] | |
+| 172 | mannum-ma bani ina eṭlūti | מי הוא היפה בעלמים | `מַה דּוֹדֵךְ מִדּוֹד הַיָּפָה בַּנָּשִׁים` (שיר השירים ה:ט) | [equivalent] | Question and answer on the fairest (`דּוֹדִי צַח וְאָדוֹם דָּגוּל מֵרְבָבָה`, שיר השירים ה:י); cf. `וַיְהִי יוֹסֵף יְפֵה תֹאַר וִיפֵה מַרְאֶה` (בראשית לט:ו). *banû* III, not *banû* "create" (eBL lemma slip). |
+| 173 | zikkarī | בזכרים | `זָכָר וּנְקֵבָה בָּרָא אֹתָם` (בראשית א:כז) | [cognate] | *zikaru* ~ זכר. |
+| 176 | nīdû | ידענו | `וַיֵּדְעוּ כִּי עֵירֻמִּם הֵם` (בראשית ג:ז) | [cognate] | *edû* = ידע (reserved); context lost. |
+| 181 | šunata inaṭṭal | חלום רואה | `וַיִּשְׁכַּב בַּמָּקוֹם הַהוּא וַיַּחֲלֹם` (בראשית כח:יא–יב) | [equivalent] | The dream of Enkidu's death (VII). |
+| 182 | šunata ipaššar | פושר חלום | `וַיֹּאמְרוּ אֵלָיו חֲלוֹם חָלַמְנוּ וּפֹתֵר אֵין אֹתוֹ` (בראשית מ:ח) | [equivalent] | *pašāru* = פשר (never פתר); cf. `מְפַשַּׁר חֶלְמִין` (דניאל ה:יב) [cognate]. |
+
+### Lines shared with other tablets
+- **VI 1 ~ XI 263** (`רחץ את פרעותיו` / `את פרעותיו במים – כטהור רחץ`): the same verb and object.
+- **VI 22–23, 87–88, 101–102, 128–129** use the two-line SB formula (`../renderings.md` §2); 92–93 and 106–107 its female form. VI 128 = III 228 = VII 28 and VI 129 = VII 29 (not yet translated) should copy `אנקידו פתח את פיו ואמר,` / `דיבר אל גילגמש:`.
+- **VI 27–28 ~ VII 135–136** (not yet translated): first copy here, `לחם הראוי לאֵלוּת` / `[סובא מובחר] … הראוי למלכות`.
+- **VI 82–83 ~ VII 91–92**: `הלכה אשתר לפני אנו אביה, [בוכה];` / `לפני אנתו אמה זולגות דמעותיה:` (VII has Enkidu before Šamaš).
+- **VI 61, 76 ~ VII 182** (*utterranni*): *târu* D "turn into" = `הָפַךְ … לְ`.
+- **VI 131 ~ I 252, 280; II 106** (*kamāru*): `הנערמים` / `נערמו`.
+- **VI 151 ~ I 18, XI 323**: `על חומת אורוך`.
+- **VI 168 ~ III 19–20**: `נאחזו (זה ביד זה), ובאים,`.
+- `verify.py` reports one difference, VI 140 / VI 142, an eBL data error (see decision 18).
+
+### Proposals for the shared renderings
+1. **Names (§1):** Silili = `סִילִילִי`; Antu = `אַנְתּוּ` (already); *dannina* = `דַּנִּינָה` (transliterated); *allallu* (bird / "warrior") = `אַלַּלּוּ`.
+2. **Key terms (§4):** *ḫāwiru* = `חָתָן` (beside *mutu* = `בַּעַל`); *inbu* = `תְּנוּבָה` (never `פְּרִי`); *nukaribbu* = `גַּנָּן`; *lapātu* = `נָגַע`; *erretu* = `מְאֵרָה` (add to §4's ארר row); *pištu* = `חֶרְפָּה`; *ḫurdatu* = `עֶרְוָה` (or `פֹּת`, open decision 2); *nakāmu* = `אָגַר` (the storing verb of Gen 41 comparisons, beside *šapāku* = `שָׁפַךְ`); **correct §4 *šanāt pê*** to *sebe šanāti … pî* "seven years … chaff" (decision 13); *ikkaru* plene `אִיכָּר`; *imittu* = `יֶרֶךְ־הַיָּמִין`; *ṭapālu* = `הִכְפִּישׁ`; *ilūtu* = `אֵלוּת`; *dumqu* = `חֶסֶד` (with XI); *nipšu* = `נְשִׁיפָה` (with XI); *bikītu* = `בְּכִית`; *zikaru* = `זָכָר`; *banû* III = `יָפֶה`.
+3. **Ordinary words (§5):** *aḫāzu* "marry" = `בָּעַל`; *qiāšu* = `הֶעֱנִיק`; *ṣamādu* = `רָתַם`; *narkabtu* = `מֶרְכָּבָה`; *magarru* = `אוֹפָן`; *kamāsu* = `כָּרַע`; *biltu* = `מַשָּׂא`; *parû* = `פִּרְדָּה`; *mūru* = `עַיִר`; *alpu* = `שׁוֹר`; *kalû* "hold back" = `כָּלָא`; *napāṣu* = `נִפֵּץ`; *abātu* = `הָרַס`; *našāku* = `נָשַׁךְ`; *ḫarmu* = `מְאַהֵב`; *ḫarāru* = `כָּרָה`; *šuttu*/*šuttatu* = `שׁוּחָה`; *târu* D "turn into" = `הָפַךְ … לְ`; *ṭarādu* = `רָדַף`; *agāgu* = `קָצַף`; *nêru* = `קָטַל` (already); *maʾādu* Š = `הִרְבָּה`; *abālu* D = `יִבֵּשׁ`; *redû* = `נָהַג`; *ṣerretu* = `רֶסֶן`; *šaḫāṭu* = `זִנֵּק`; *nasāku* = `זָרַק`; *patru* = `סַכִּין`; *tikku* = `עֹרֶף`; *siqqu* = `קַרְסֹל`; *rêqu* = `רָחַק`; *šukênu* = `הִשְׁתַּחֲוָה`; *erru* = `קְרָבַיִם`; *alālu* = `תָּלָה`; *dagālu* = `צָפָה`; *apālu* = `עָנָה`; *tillu* = `קִשּׁוּטִים`; *ebēbu* D = `נִקָּה`; *zakû* = `זַךְ`; *maršu* = `צוֹאִי`; *aguḫḫu* = `אֵזוֹר`.
+4. **Formula (§2):** *išmē-ma X annâ qabâ Y* = `שמע X את אמירתה זו של Y` (VI 113, 154).
+
+### Lessons for the guidelines
+- **A rendering-table entry can rest on a misreading of the line**: §4's *šanāt pê* "years of chaff" is not in the normalization, whose caesura separates *šanāti* (duration) from *pî* (object). Check every fixed phrase of the renderings against N's metre marks before copying it.
+- **eBL's lemmas in Tablet VI have at least twelve slips** (nēšu as "oath", šēnu/bēlu as verbs, išpukakki as a noun, ittû "seed-funnel", kāṣirat as *kašāru*, *šaqû* "be high", allû "that one", imittu "support", bani "create", īšu "confused", mayyāl as *mayāru*): parse each form; several would have created false Hebrew (`בָּנָה` for "fine", `שבועה` for "lion").
+- **A coordinator's key-case hint can carry a garbled Hebrew form** (the brief's `הָמִיר צֻחְרֵתֵךְ` for *ḫāmiri ṣuḫrētīki*): translate from the Akkadian and keep only the intended parallel (Joel 1:8).
