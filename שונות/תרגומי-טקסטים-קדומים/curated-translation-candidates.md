@@ -207,7 +207,7 @@ The order puts the highest benefit per cost first:
 |---|---|---|---|
 | 1 | `סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/` | Enūma eliš I–VII (item 1) | **Done (first draft), 2026-10-16**: 1,098 lines, annotated per tablet, translation, parallels index (`סיפורי-הבריאה-המסופוטמיים/parallels-index.md`), print stub. Open decisions in its `project.md`. |
 | 2 | `סיפורי-הבריאה-המסופוטמיים/2-טקסטי-בריאה-ועדן/` | the creation and Eden companions (item 2) | **Done (first draft), 2026-10-17**: all seven texts, 1,076 lines (Adapa MB + SB, Enki and Ninḫursaĝa with the Ur manuscript, Enki and Ninmaḫ, Song of the Hoe, the whole Grain and Sheep debate, the Founding of Eridu from eBL's BM 93014, KAR 4 from SEAL), annotated per text, translation, parallels merged into the corpus index, print stub. KAR 4 had a reliable base (SEAL + eBL). Open decisions at the end of its `project.md`. |
-| 3 | `חוקים-ובריתות/1-…` | Esarhaddon's Succession Treaty (item 3) | not started |
+| 3 | `חוקים-ובריתות/1-אמנת-הירושה-של-אסרחדון/` | Esarhaddon's Succession Treaty (item 3) | **Done (first draft), 2026-10-17**: all 691 composite entries (SAA 2 6) + the Tell Tayinat copy (SAA 2 15: variants in the apparatus, Tayinat-only lines tagged `{תיינת}`), annotated in seven parts by §, translation with § headings, 771 parallels rows keyed to Deuteronomy by chapter (`חוקים-ובריתות/parallels-index.md`), print stub. New corpus `חוקים-ובריתות/` (corpus.md, renderings.md). Open decisions in its `project.md`. |
 | 4 | `חוקים-ובריתות/2-…` | the Laws of Hammurabi (item 4) | not started |
 | 5 | a new corpus or project folder | Gilgameš I–X, XII + OB II–III (item 5) | not started |
 | 6 | `חוקים-ובריתות/3-…` | Eshnunna + MAL A (+ Lipit-Ištar, Ur-Namma if feasible) (item 6) | not started |

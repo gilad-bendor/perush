@@ -50,3 +50,7 @@ LXX-Rahlfs-1935--el-wikisource/*
 # 3. Bulk corpora – large, re-downloadable (see the folder README)
 ETCSL/_bulk/*
 !ETCSL/_bulk/README.md
+
+# 4. Large raw ORACC files (> 1 MB; re-downloadable: see the folder README)
+ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.json
+ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.html

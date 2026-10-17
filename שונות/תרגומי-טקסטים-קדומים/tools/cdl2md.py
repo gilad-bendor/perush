@@ -2,10 +2,13 @@
 # usage: python3 -I cdl2md.py <zip> <member-path> <out.md> <title> <url> [--morph]
 #   --morph (added 2026-10-16): append each word's ePSD2 morphological analysis (f.morph, e.g. {mu.n:~}) and
 #   base to the lem: line -- for Sumerian it decides hamtu/maru and the prefix chain (guidelines 4.6).
+#   --norm (added 2026-10-17): add a "norm:" line with each word's normalization (f.norm, e.g. Neo-Assyrian
+#   SAAo: issi, šumma) and print the contextual sense (f.sense) after the guide word when it differs.
 import sys, json, zipfile
 
 zf, member, out, title, url = sys.argv[1:6]
 MORPH = '--morph' in sys.argv[6:]
+NORM = '--norm' in sys.argv[6:]
 d = json.loads(zipfile.ZipFile(zf).read(member))
 
 
@@ -76,6 +79,8 @@ def flush():
     if cur:
         tr = ' '.join(cur['w']).replace('] [', ' ').replace('][', '')
         lines.append(f"**{cur['label']}** {tr}  ")
+        if NORM and any(x != '—' for x in cur['norm']):
+            lines.append(f"  norm: {' '.join(cur['norm'])}  ")
         lem = ' '.join(cur['lem'])
         if lem.strip():
             lines.append(f"  <sub>lem: {lem}</sub>  ")
@@ -92,7 +97,7 @@ def walk(nodes):
             t = n.get('type')
             if t == 'line-start':
                 flush()
-                cur = {'label': n.get('label') or n.get('n'), 'w': [], 'lem': []}
+                cur = {'label': n.get('label') or n.get('n'), 'w': [], 'lem': [], 'norm': []}
             elif t == 'nonx':
                 flush()
                 st = ' '.join(x for x in [n.get('extent', ''), n.get('scope', ''), n.get('state', '')] if x)
@@ -104,13 +109,17 @@ def walk(nodes):
             f = n.get('f', {})
             w = n.get('frag') or gdl(f.get('gdl', [])) or f.get('form', '')
             if cur is None:
-                cur = {'label': '?', 'w': [], 'lem': []}
+                cur = {'label': '?', 'w': [], 'lem': [], 'norm': []}
             cur['w'].append(w)
+            cur['norm'].append(f.get('norm') or '—')
             if f.get('cf'):
                 extra = ''
                 if MORPH and (f.get('morph') or f.get('base')):
                     extra = '{' + ';'.join(x for x in (f.get('morph', ''), f.get('base', '')) if x) + '}'
-                cur['lem'].append(f"{f['cf']}[{f.get('gw', '')}]{f.get('pos', '')}{extra}")
+                gw = f.get('gw', '')
+                if NORM and f.get('sense') and f['sense'] != gw:
+                    gw += '=' + f['sense']
+                cur['lem'].append(f"{f['cf']}[{gw}]{f.get('pos', '')}{extra}")
             else:
                 cur['lem'].append(f.get('pos', 'X') or 'X')
         elif k == 'll':  # ambiguous lemmatisation
@@ -124,6 +133,6 @@ flush()
 hdr = [f'# {title}', '', f'ORACC text {d.get("textid")} ({d.get("project")}), exported {d.get("UTC-timestamp")}. Licence: {d.get("license")}.',
        f'Web: {url}', '',
        'Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (ORACC conventions: ŋ = ĝ, [ ] = missing, ⸢ ⸣ = damaged, {d} = determinative);',
-       '"lem:" = ePSD2 lemmatisation citation-form[guide-word]POS for each word (X/u = unlemmatised)' + ('; {morph;base} = ePSD2 morphological analysis and base.' if MORPH else '.'), '']
+       '"lem:" = lemmatisation citation-form[guide-word]POS for each word (X/u = unlemmatised)' + ('; {morph;base} = ePSD2 morphological analysis and base' if MORPH else '') + ('; "norm:" = the project\'s normalization of each word (— = none); [gw=sense] = contextual sense' if NORM else '') + '.', '']
 open(out, 'w', encoding='utf-8').write('\n'.join(hdr + lines) + '\n')
 print('lines', sum(1 for l in lines if l.startswith('**')))
