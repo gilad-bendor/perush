@@ -339,6 +339,15 @@ Accepted as binding (context: `2-הנוסח-הבבלי-הקדום/annotated-OB-*
 4. **Formula (§2):** OB two-line opening without *iqabbi*: `X פתחה את פיה,` / `ודיברה אל Y:`; OB *šunatam ipaššar* = `פושר חלום` (as SB).
 5. **verify.py**: nothing needed (no false positives for these tablets).
 
+## 14. Merged after Tablet II (2026-10-17)
+Accepted as binding (context: `annotated-II.rtl.md`). Coordinator decisions: the §3.1 strings stay as written there (in plain plene spelling as in II 218a–229), including `הַדֶּרֶךְ` for *ḫarrānu šī* – a fixed-passage exception to §5's *ḫarrānu* = `אֹרַח`, noted; *napištu* "breath" in §3.1 = `נֶפֶשׁ`, *napīšu* (I 180, 188) = `נְשִׁימָה` – two lemmas, two words; III and V copy II's plain strings.
+
+1. **§3.1**: record the plene forms of the first copy (decision 5) as the binding strings, with "no final punctuation" for *išemmē-ma …* and *aššu šullumi erēni*; add the note that eBL's lemma in *napīssu* is *napīšu* (open decision 3); and decide *ḫarrānu šī* (open decision 1) before III.
+2. **Key terms (§4)**: *pūḫu* = `*תחליף*` (beside *meḫru* = `שווה`; open decision 6); *manû* (adj.) = `מָנוּי` [cognate ↔ Ps 90:12]; *šāru* = `רוּחַ` (never `הֶבֶל`); *namṣaru* = `חֶרֶב` (used); *ṭēma turru* = `הֵשִׁיב טַעַם` (open decision 4); *libbu našû* = `נְשָׂאוֹ לִבּוֹ`; *ṣeḫru* "young" = `צָעִיר` (open decision 5); *akītu* = `אָקִיתוּ`; *nāqidu* + suffix `נוֹקְדָם`.
+3. **Ordinary words (§5)**: *ezēḫu* N = `הֵחָגֵר`; *naburriš* = `כְּצָרִיחַ`; *dagālu* = `צָפָה` (used); *bêšu* = `זָז`; *râbu* = `רָעַד`; *nâšu* G = `נָע` (open decision 2); *ṣarpiš* = `בִּמְרִירוּת`; *kimtu u salātu* = `מִשְׁפָּחָה וּשְׁאֵר`; *wašāru* G stat. = `מִשְׁתַּלְשֵׁל`; *ramû* III G = `רָפָה`; *mitḫāriš* = `בְּשָׁוֶה`; *ṣarāpu* = `צָרַף`; *dimmatu* = `אֲנָקָה`; *tuša* = `כְּאִלּוּ`; *ekēpu* Gt = `מְמַשְׁמֵשׁ וּבָא`; *umāšu* = `*הֵיאָחֲזוּת*`; *ašamšūtu* = `עַלְעוֹל`; *pisnuqiš* = `כְּחַלָּשׁ`; *lemēnu* D = `הֵרַע`; *abātu* II = `נָס`; *kiškattû* = `כּוּר` (always vocalized); *mâḫu* = `יָצָא` (?); *gapāšu* = `נוֹעַז` (open decision 7); *maḫāru* G "confront" = `פָּגַשׁ`; *nakāsu* = `כָּרַת`; *šebēru* = `שָׁבַר`; *nigûtu* = `רִנָּה`; *raṣānu* = `הָמָה` (used); *milka malāku* = `יָעַץ עֵצָה`; *biltu* (weight) = `מַשָּׂא` + `(כל אחד)` for AM₃; *ḫūd libbi* = `שִׂמְחַת לֵב` (always vocalized `שִׂמְחַת`: verify.py's Šamḫat check).
+4. **§7 "always vocalize"**: add `כּוּר` (furnace / *kurru* measure), `אוֹרַח` (road / guest), `בָּרְכוּנִי`, `נְעַצֵּב` (cast / sad), `שִׂמְחַת` (Šamḫat), `הֵחָגֵר`, `בֵּרוּ` (every occurrence).
+5. **verify.py**: no change needed. A possible check: the §3.1 strings (as for §3.2 in X) for III and V.
+
 ## Changelog
 - 2026-10-17: seed written by the corpus coordinator before Tablet I, from the flood, creation and law corpora and a reading of I, II, VI, VII, X and XI 207–328 in eBL.
 - 2026-10-17: §9 merged from Tablet I.
@@ -346,3 +355,4 @@ Accepted as binding (context: `2-הנוסח-הבבלי-הקדום/annotated-OB-*
 - 2026-10-17: §11 merged from Tablet VII.
 - 2026-10-17: §12 merged from Tablet X.
 - 2026-10-17: §13 merged from OB VA+BM and OB II.
+- 2026-10-17: §14 merged from Tablet II.
