@@ -348,6 +348,15 @@ Accepted as binding (context: `annotated-II.rtl.md`). Coordinator decisions: the
 4. **§7 "always vocalize"**: add `כּוּר` (furnace / *kurru* measure), `אוֹרַח` (road / guest), `בָּרְכוּנִי`, `נְעַצֵּב` (cast / sad), `שִׂמְחַת` (Šamḫat), `הֵחָגֵר`, `בֵּרוּ` (every occurrence).
 5. **verify.py**: no change needed. A possible check: the §3.1 strings (as for §3.2 in X) for III and V.
 
+## 15. Merged after Tablet III (2026-10-17)
+Accepted as binding (context: `annotated-III.rtl.md`). Coordinator decisions: *kallatu* = `כַּלָּה` [cognate] stays; *ḫīrtu* stays `כַּלָּה` in I 75, 90 for now (open decision for the user: `בְּחִירָה`); *maṣṣartu* = `נְצִירָה` (keeps שמר out); *gerru* = `מְסִלָּה`, *ṭūdu* = `נָתִיב`; III 88–93 (the winds) is the first copy for V 159–165.
+
+1. **Names (§1)**: Aya = `אַיָּה` (always vocalized; *kallatu* = `הַכַּלָּה`); Irnini = `אִירְנִינִי`; Kurnugi = `כּוּרְנוּגִי` (vocalized, note "land of no return"); Egalmaḫ `אֵגַלְמַח` (used); Apsû = `אַפְּסוּ`; Marduk `מַרְדּוּךְ`; cultic women: *ugbabtu* = `כּוֹהֶנֶת־אוּגְבַּבְתּוּ`, *kulmašītu* = `כוּלְמַשִּׁית`, *qadištu* = `קְדֵשָׁה` (§4), *mārāt ilī* = `בְּנוֹת הָאֵלִים`, *šerku* = `נָתִין` (open decision 7).
+2. **Key terms (§4)**: *kallatu* = `כַּלָּה` [cognate] and *ḫīrtu* to another word (open decision 1); *qutrinnu* = `קְטוֹרֶת` [cognate], *qutrinna šakānu* = `שׂם קטורת` (Deut 33:10); *maṣṣartu* = `נְצִירָה` (pl. `נְצִירוֹת`; open decision 3) – add to the *naṣāru* row; *šalāmu* D = `הביא בשלום` (open decision 2); *paqādu* = `הִפְקִיד` [cognate] (11–12, 57); *kapāru* II "wipe" = `כִּפֵּר` [cognate] (Gen 32:21; open decision 5); *leqû ana mārūti* = `לקח לבן` (Esth 2:7), *liqûtu* = `נלקח`, *tarbûtu* = `מגודל`; *ṭēma šakānu* = `שׂם טַעַם` (Ezra 4:19); *dīna dânu* = `דן דין` (Jer 22:16); *pānī šakānu ana* = `שׂם פנים אל` (Gen 31:21); *ṣītu* = `מוֹצָא` (also "offspring"); *damāqu* D = `עשה חסד עם` (with *dumqu* = `חסד`); *burāšu* = `בְּרוֹשׁ` [cognate]; *quʾʾû* = `קִוָּה` [cognate]; *šanû* III D = `שָׁנָה` [cognate].
+3. **Ordinary words (§5)**: *ṭūdu* = `נָתִיב`; *gerru* = `מְסִלָּה` (open decision 6); *takālu* = `בָּטַח` (D `הִבְטִיחַ`); *miḫiṣtu*/*meḫṣu* = `מַחַץ`; *kullumu* D stat. = `הָרְאָה`; *gimru* = `כֹּל`; *narmaku* = `מֶרְחָץ`; *bīnu* = `אֶשֶׁל`; *tullal* = `בּוֹרִית`; *raqqatu* = `(אריג) דק`; *simmiltu* = `מַדְרֵגוֹת` (used); *surqinnu* = `מנחה` (used), *nindabû* = `תְּרוּמוֹת־לֶחֶם`; *dapīnu* = `עָרִיץ`; *itû* = `גְּבוּל`; *barārītu* = `דִּמְדּוּמִים`; *ruššû* = `אדמומית`; *puqqu* = `יִחֵל`; *nepelkû* Š = `הרחיב`; *nasāqu* Št = `הכשיר`; *arraku* / *kurrû* = `ארוך` / `קצר`; *purīdu* = `פְּסִיעָה`; *karāšu* = `מַחֲנֶה`; *emēdu* N (battle) = `נתקל ב־`; the wind names of 89–91 (first copies for V 159–163; *ziqqu* = `נְשִׁיבָה` as VI 34; *šuruppû* = `קָרָה`); *eṭû* = `חָשַׁךְ`; *ḫarāpu* Š = `הקדים`; *sissiktu* = `כָּנָף`; *ebbu* = `צַח`; *uʾʾurtu* = `צַו`; *ḫaṭṭu* = `שַׁרְבִיט`; *emēqu* = `חָכַם`; *watmu* = `אֶפְרוֹחַ`; *enšu* = `חַלָּשׁ`; *nizmatu* = `מַאֲוַי`; *šaḫtu* = `נִכְנָע`; *kutallu* = `אֲחוֹרַיִם`; *lasāmu* Gtn = `מִתְרוֹצֵץ`; *saḫāru* D = `הֶחֱזִיר`.
+4. **§7 "always vocalize"**: `אַיָּה` (Aya / "where?"), `גְּשָׁה`, `הָרְאָה`, `שׁוֹנָה` (repeats / different), `טַעַם` (decree / taste), `יְאַבֵּד` (Piel / Qal), `דִּין` (imperative / noun), `אַל` (vetitive / "to"), `תְּכַפֵּר` (wipe / atone).
+5. **verify.py**: no change needed for III. A §3.1-style check of the winds passage (88–93 against V 159–165) would help the V translator.
+
 ## Changelog
 - 2026-10-17: seed written by the corpus coordinator before Tablet I, from the flood, creation and law corpora and a reading of I, II, VI, VII, X and XI 207–328 in eBL.
 - 2026-10-17: §9 merged from Tablet I.
@@ -356,3 +365,4 @@ Accepted as binding (context: `annotated-II.rtl.md`). Coordinator decisions: the
 - 2026-10-17: §12 merged from Tablet X.
 - 2026-10-17: §13 merged from OB VA+BM and OB II.
 - 2026-10-17: §14 merged from Tablet II.
+- 2026-10-17: §15 merged from Tablet III.
