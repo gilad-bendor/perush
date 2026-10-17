@@ -39,7 +39,7 @@ All six projects are complete as first drafts, reviewed by their translators and
 | 1 | Atra-ḫasīs II | complete (first draft), harmonized: 484 numbered lines (SEAL segments A 1 – I 7i) + C₀ iv 1′–7′ appendix |
 | 1 | Atra-ḫasīs III | complete (first draft), harmonized: cols. i–viii + colophon, C₀ iv 8′–19′ appendix (Wasserman 2020 / SEAL 1517), 3 review passes |
 | 1 | Atra-ḫasīs, whole epic | `1-אתרחסיס/translation.rtl.md`: one reading file of Tablets I–III, **generated** from `translation-I/II/III.rtl.md` (edit those, then run `python3 -I 1-אתרחסיס/build_translation.py`, which rebuilds the file and verifies every numbered line against its source) |
-| 2 | Gilgameš XI 1–208 | complete (first draft), harmonized, 3 review passes |
+| 2 | Gilgameš XI 1–208 | complete (first draft), harmonized, 3 review passes. The rest of the epic (I–X, XI 209–328, XII, the OB tablets) is translated in `../אפוס-גילגמש/` (2026-10-18), whose combined translation embeds this one. |
 | 3 | Sumerian Flood Story | complete (first draft), harmonized: 89 ETCSL lines + 32 Ur ms. lines; cruxes still to check against Civil 1969 / Peterson 2018 |
 | 4 | Other Akkadian versions | complete (first draft), harmonized: Ark, C₀, J, I/I₁/I₂, J₁, W, BM 38917, U, z (274 entries) + synoptic motif table |
 | 5 | Berossus, Abydenus | complete (first draft), harmonized: 203 units (Oannes, king lists, flood fr. 7 Greek + Armenian, Abydenus) |
