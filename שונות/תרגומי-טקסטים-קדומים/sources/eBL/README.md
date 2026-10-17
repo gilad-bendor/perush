@@ -53,3 +53,10 @@ The other eBL Atra-ḫasīs chapters (OB II, OB III, OB Schøyen, SB IV–X, NA,
 - **Parallel lines:** eBL lists, per line, the other lines of the poem that repeat it (Tiāmat's army I 129–162 = II 15–48 = III 19–52 = III 77–110, Marduk's conditions II 156–162 = III 58–64 = III 116–122, etc.). The project uses them to verify that repeated lines are translated identically.
 - **Usefulness:** the base text of the creation corpus project `סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/`. It supersedes King 1902, Langdon 1923 and Talon 2005, and incorporates many fragments that Lambert 2013 and Kämmerer & Metzler 2012 did not have. The eBL translation (Foster) is a rank-3 check; Lambert 2013 (*Babylonian Creation Myths*) is not available (paid).
 - **License:** as for the other eBL editions (treated as copyrighted; gitignored by `eBL/*/`).
+
+### Added 2026-10-16 (creation corpus, project 2)
+| Folder | Text | Lines | Editors / translator |
+|---|---|---|---|
+| `Adapa-MB/` | *Adapa*, Middle Babylonian (Amarna, VAT 348 = EA 356), eBL `L/1/7` | 78 (primed numbering 1′–78′; obv. 1′–37′, rev. 38′–78′ approx.) | T. D. N. Mitto (ed.), rev. Z. J. Földi, A. C. Heinrich, E. Jiménez; translation B. R. Foster |
+| `Adapa-SB/` | *Adapa*, Standard Babylonian / NA fragments (MLC 1296, K 15072, K 8743, K 8214, K 9994; Rm 618 quotation) | 97 | same |
+Fetched with `tools/ebl_fetch.py L 1 7 "Middle Babylonian" -` and `… "Standard Babylonian" -`. Gitignored (§8). The eBL introduction mentions the Sumerian Adapa (Meturan and Nippur) and parallels to it in the notes; that version is not in eBL's corpus and was not fetched.

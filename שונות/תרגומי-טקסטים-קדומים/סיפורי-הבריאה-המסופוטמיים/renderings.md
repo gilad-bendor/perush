@@ -166,6 +166,59 @@ These are the decisions that matter most for the comparison. Each has its tag; i
 - *bukru* ↔ `בְּכוֹר`: in jB "son, offspring", not specifically the firstborn.
 - *pašāḫu* "to rest" has nothing to do with `פֶּסַח`.
 
+## 5. Added from project 2 (the creation and Eden companions), 2026-10-17
+Merged by the corpus coordinator from the seven texts' proposals (`2-טקסטי-בריאה-ועדן/project.md`); the project's own `renderings.md` has the full tables. These rows bind every later project of the corpus (and are the default for Sumerian texts elsewhere).
+
+### 5.1 Names
+| Original | Hebrew | Notes |
+|---|---|---|
+| Adapa; Ilabrat; Dumuzi; Gizzida / Ningišzida; Ninkarrak | אֲדָפָּה; אִילַבְּרַת; דּוּמוּזִי (note `תַּמּוּז`, יחזקאל ח:יד); גִּיזִּידָה / נִינְגִּשְׁזִידָה; נִינְכַּרַּךְ | *atra ḫasīsa* (Adapa's epithet) = `רַב־תְּבוּנָה`. |
+| Uttu (weaving goddess) / Utu (sun god) | אוּטּוּ / אוּתוּ | **Both always vocalized** (unvocalized `אותו` = "him", `אוטו` = "car"). |
+| Isimud; Damgalnuna; Namma; Ninmaḫ; Nin-ti; Umul | אִיסִימוּד; דַּמְגַּלְנוּנָּה; נַמָּה; נִינְמַח; נִין־תִּי; אוּמוּל | Nin-ti: both senses ("lady of the rib / of life") in the note. |
+| Uzumua (KAR 4) / Uzuea (Song of the Hoe, ETCSL reading) | אוּזוּמוּאָה / אוּזוּאֵאָה | Each text keeps its edition's reading; the note gives the other. Dur-an-ki = `דּוּר־אַנְקִי` ("bond of heaven and earth"). |
+| Illa-Alla (the slain gods of KAR 4); Ullegarra, Annegarra | אִילָּה־אַלָּה; אוּלֶּגַרָּה, אַנֶּגַרָּה | Older reading "Lamga" in the note. |
+| Lugaldukuga; Gilima; Papsukkal; Ningirima; Ezida | לוּגַל־דּוּכּוּגָּה; גִּילִימָה; פַּפְּסוּכַּל; נִינְגִּירִימָה; אֵזִידָה | Enūma eliš has the short form `לוּגַל־דּוּכּוּ`. |
+| Sumer (*ki-en-gi*); Magan; Elam; Urim; Nibru | שׁוּמֶר; מָגָן (always vocalized); עֵילָם; אוּר; נִיפּוּר | |
+| Šara; Keš; Nergal | שַׁרָא; כֵּשׁ (both always vocalized); נֵרְגַל (the biblical form, מלכים ב יז:ל) | |
+| Grain (*ezina₂*, Akk. *ašnan*) and Sheep (*u₈*, *laḫar*) personified | דָּגָן; כִּבְשָׂה | As names: no article, feminine. |
+
+### 5.2 Terms (Akkadian and Sumerian)
+| Original | Hebrew | Tag | Notes |
+|---|---|---|---|
+| *akal balāṭi* / *mê balāṭi*; *akal mūti* / *mê mūti* | לֶחֶם הַחַיִּים / מֵי הַחַיִּים; לֶחֶם הַמָּוֶת / מֵי הַמָּוֶת | [cognate] (*akalu*, *mû*, *mūtu*) | ↔ ג:כב (the tree of life) [equivalent]. |
+| *napištu dārītu*; *ana ūmī dārûti*; *ana ūmī ṣâti*; Sum. *zi da-ri₂* | חַיֵּי נֶצַח; לִימֵי נֶצַח; לִימֵי עַד | | **Never `לְעוֹלָם` / `חַיֵּי עוֹלָם`** (would pre-empt `וָחַי לְעֹלָם`, ג:כב). |
+| *nēmequ*; *uznu* (understanding); *rapša uzni*; *tašīmtu*; *šuklulu* | חָכְמָה; בִּינָה; רְחַב הַבִּינָה; הַבְחָנָה; שִׁכְלֵל [cognate] | | Sum. *nam-kug-zu* = `חָכְמָה`; *ĝeštug₂ daĝal* = `רְחַב הַבִּינָה`. None is `דַּעַת`. |
+| *leqû*; *târu* G/D | לָקַח [cognate]; שָׁב / הֵשִׁיב [cognate] | | `שוב` reserved for *târu* (*saḫāru* = `חָזַר`). ↔ ג:יט, כב–כג. |
+| *labāšu*; *lubāru*; *lubuštu*; *ṣubātu*; *karru* | לָבַשׁ; בֶּגֶד; לְבוּשׁ; שִׂמְלָה; מַעֲטֵה אֵבֶל | [cognate] (*labāšu*, *lubuštu*) | ↔ ג:כא [divergence]. |
+| *ṭābu* / Sum. *dug₃*; *damqu* / *sag₉*; Sum. *sig₅*; *banû* II (adj. "beautiful") | טוֹב; נָאֶה; מְעֻלֶּה; יָפֶה | [cognate] (*ṭābu*) | `טוֹב` only for *ṭābu* / *dug₃*, so every `טוב` in a line is a real counterpart of `כִּי טוֹב`. *banû* II is kept apart from *banû* = `בָּנָה`. |
+| *arāru*; Sum. *aš bal*; *nazāru*; Sum. *nam-erim₂ kud*, Akk. *māmītu* | אָרַר; קִלֵּל; גִּדֵּף; נִשְׁבַּע שְׁבוּעָה | [cognate] (*arāru*) | Enki and Ninḫursaĝa 220: an **oath**, not a curse (ETCSL's "cursed" is a false echo of ג:יד). |
+| Sum. *ĝar*; Akk. *šakānu* | שָׂם | [equivalent] | **Reserved**: every `שׂים` in a Hebrew line stands for *ĝar* / *šakānu*, so that it can be compared with `מִי שָׂם פֶּה לָאָדָם` (שמות ד:יא) and `וַיָּשֶׂם` (בראשית ב:ח). Sum. *ĝal₂*: placing an object = `נָתַן`; intransitive = `קַיָּם`; bringing into existence = `הֵבִיא לִכְלַל הֲוָיָה` (= *šubšû*). |
+| Sum. *mud*; *me-dim₂*; *kir₃* (clay); *šar₂* (clay) | חוֹלֵל (הַמְחוֹלָל); מִבְנֶה (= *binûtu*); קָרַץ (= *karāṣu*, איוב לג:ו); לָשׁ | [cognate] (*karāṣu*) | |
+| Work: *dullu*; *iškāru* / Sum. *eš₂-gar₃*; Sum. *kiĝ₂*; *al-tar*; *šupšikku* / *dub-sig* / *{ĝiš}dusu*; *allu* / *{ĝiš}al*; *u₃-šub*; *pisaĝ* | עָמָל; מִכְסָה; עֲבוֹדָה; הַבְּנִיָּה; סַל; מַעְדֵּר; מַלְבֵּן; טֶנֶא | [divergence] ↔ `לְעָבְדָהּ` (ב:טו); `לַעֲבֹד אֶת הָאֲדָמָה` (ג:כג) | **No root עבד for work nouns** other than *kiĝ₂*, so that every עבד in a line is a real counterpart of 2:5, 2:15, 3:23, 4:2. *u₃-šub* is never `תַּבְנִית` (reserved for *tamšīlu*). |
+| Herding and farming: *sipad*; *na-gada* / *nāqidu*; *engar* / *ikkaru*; *amaš*; *apin*; *šudul*; *erin₂*; *ab-sin₂*; *ki-du₆*; *šu-rin-na* / *tinūru* | רוֹעֶה; נוֹקֵד; אִכָּר; דִּיר; מַחֲרֵשָׁה; עֹל; צֶמֶד; תֶּלֶם; גֹּרֶן; תַּנּוּר | [cognate loans] `נוֹקֵד`, `אִכָּר`, `תַּנּוּר` | ↔ ד:ב (Abel and Cain). |
+| Gifts: *kadra*; *niĝ₂-ba*; *sa₂-dug₄* | תְּשׁוּרָה; מַתָּנָה; מִנְחָה | | `מִנְחָה` only for a regular offering (↔ ד:ג–ה). |
+| Water: Sum. *a dug₄*; *a dug₃* / *a sis*; *ed₃* (water); *ḫe₂-ĝal₂* / *ḫe-nun* | הִשְׁקָה [equivalent ↔ ב:ו]; מַיִם מְתוּקִים / מָרִים; עָלָה; שֶׁפַע / שֹׂבַע | | |
+| Purity: Sum. *kug*, *sikil*, *dadag*, *šen*; Akk. *ellu*, *ebbu*; D *ullulu*, *ubbubu* | טָהוֹר, זַךְ, בָּהִיר, נָקִי; טָהוֹר, זַךְ; טִהֵר, זִכֵּךְ | | |
+| Naming: Sum. *mu sa₄* / *sa₄*; *mu … zu* | קָרָא שֵׁם / קָרָא בְּשֵׁם; יָדַע שֵׁם | [equivalent] ↔ ב:יט–כ; ה:ב | `קָרָא` stays reserved for naming. |
+| Emergence: Sum. *ki dar*; *mu₂*; *pa e₃* / Akk. *šūpû* | בָּקַע (אֶת הָאָרֶץ); צָמַח / הִצְמִיחַ; הוֹפִיעַ | [divergence] ↔ ב:ז; [equivalent] ↔ `וַיַּצְמַח` (ב:ט) | *ki dar* is the Sumerian verb of sprouting. |
+| Sum. *ki* (earth, ground); Akk. *qaqqaru* | הָאָרֶץ; קַרְקַע | | **Never `אֲדָמָה`** (the `אָדָם`/`אֲדָמָה` pun is Hebrew only). This narrows the flood project-3 rule. |
+| "Dry land": *nābalu*, Sum. *pa-rim₄* / *bar-rim₄* (as against water); *bar-rim₄* (arid land) | יַבָּשָׁה [equivalent, tagged ↔ א:ט]; צִיָּה | | |
+| *šikin napišti* / Sum. *niĝ₂-zi-ĝal₂* | בַּעֲלֵי נֶפֶשׁ | [cognate] (*napištu*) ↔ א:כד, ל | Keeps `נֶפֶשׁ חַיָּה` reserved. |
+| *ul* / Sum. *nu-* + stative or preterite | לֹא (+ Nifal/Hophal, vocalized: `לֹא נַעֲשָׂה`) | [divergence] ↔ `טֶרֶם` (ב:ה) | **Never `טֶרֶם`** unless the original has a "not yet" construction: in four texts the modern "not yet" proved to be the translators' (ETCSL), not the Sumerian's or Akkadian's. |
+| *epēšu* cohortative 1 pl. (*i nīpuš*) | נַעֲשֶׂה (vocalized) | [equivalent] ↔ `נַעֲשֶׂה אָדָם` (א:כו) | KAR 4 obv. 16–20. |
+| Speech (Sumerian): *X Y-ra gu₃ mu-na-de₂-e*; *X mu-na-ni-ib-gi₄-gi₄*; *ur₅ ḫe₂-na-nam-ma*; *za₃-mi₂* | X אֶל Y פּוֹנֶה:; X מֵשִׁיב לוֹ:; כָּךְ אָכֵן הָיָה; תְּהִילָּה | | *ur₅ ḫe₂-na-nam-ma* ↔ `וַיְהִי כֵן` [equivalent]. |
+| Seeing and approaching: *qerēbu*; *ṭeḫû* / Sum. *te*; *igi du₈*; *šu gid₂*; *igi lugal gub* | קָרַב; נִגַּשׁ; רָאָה (`כִּרְאוֹתוֹ`); פָּשַׁט יָד; עָמַד לִפְנֵי הַמֶּלֶךְ | | ↔ ויקרא כא:יז–כג (`לֹא יִקְרַב`, `לֹא יִגַּשׁ`). Enūma eliš renders *ṭeḫû* `קָרַב` (open decision, below). |
+| Court: *šukkallu*; *mār šipri*; *tiru*; *e₂-mi₂* | וְזִיר; שָׁלִיחַ (not `מַלְאָךְ`); אִישׁ־חָצֵר; בֵּית הַנָּשִׁים | | |
+| Disabilities (Enki and Ninmaḫ) | the Sumerian description, translated | | `עִוֵּר`, `פִּסֵּחַ`, `אִלֵּם`, `חֵרֵשׁ`, `עֲקָרָה`, `סָרִיס` only in notes (open decision of text 3). |
+
+### 5.3 Traps of unvocalized Hebrew (string collisions with reserved words)
+`בראותו`, `בָּרִאשׁוֹנָה`, `בָּרֹאשׁ` (ב־ר־א: use `כִּרְאוֹתוֹ`, `תְּחִלָּה`, `רִאשׁוֹן`); `לשבת` "to sit" (use `לֵישֵׁב`); `שבתומל` (use `אשר בתומל`); `שדמות` (contains `דמות`); `עצבה` vs `עיצבה` (write plene); `נעשה` = `נַעֲשָׂה` / `נַעֲשֶׂה` (vocalize); `בשמים` "spices" / "in heaven", `חלבו` "his milk" / "his fat", `שכנו` "dwelt" / Šakkan (vocalize); `עֵין הַחַיִּים` sounds like `עֵץ הַחַיִּים` (keep the idiom, note the Hebrew-only assonance).
+
+### 5.4 Open between projects 1 and 2
+- *ṭeḫû*: Enūma eliš `קָרַב`; project 2 `נִגַּשׁ` (Adapa has both *qerēbu* and *ṭeḫû*). Proposal: `נִגַּשׁ` corpus-wide, Enūma eliš's *âru* then needs another verb. Left for the user.
+- *šipru*: still `פֹּעַל` (project 1 open decision 4); project 2 has no occurrence.
+
 ## Changelog
 - 2026-10-16 (after Tablet I): *ṣalālu* narrowed to `יָשֵׁן`; *sakāpu* = `שָׁכַב`, *šasû* = `צָעַק` added.
 - 2026-10-16: written before drafting Enūma eliš, from the flood corpus's shared renderings plus the creation-specific names and terms.
+- 2026-10-17: §5 added, merged from project 2's seven texts (names, the food-of-life and eternity terms, *ĝar* = `שָׂם` reserved, the work nouns without עבד, herding and farming, naming, *ki* never `אֲדָמָה`, no `טֶרֶם` without a "not yet" construction, the cohortative `נַעֲשֶׂה`, the string traps).

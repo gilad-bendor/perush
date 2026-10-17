@@ -1,10 +1,12 @@
-"""Regenerate the table of ../parallels-index.md from the tablet indexes in project.md.
+"""Regenerate the table of ../parallels-index.md from the parallels indexes of the corpus's projects.
 
 Usage (from any directory):  python3 -I build_parallels_index.py
 Reads every "### Parallels index (Tablet N)" table in project.md (columns: Line | Akkadian | Hebrew | Bible | Tag | Comment),
 files each row under its first Genesis reference (outside backticks; a bare "א:כא" means Genesis), otherwise its first
 reference, and rewrites everything after the line "## The table" in ../parallels-index.md (the key findings above it are
 kept). Atra-ḫasīs I rows citing Gen 1–5 (flood corpus) are appended as a cross-reference.
+Since 2026-10-17 it also reads project 2 (../2-טקסטי-בריאה-ועדן/project.md, "### Parallels index (<Text>)" tables,
+same columns) and labels every row with a short text siglum (EE = Enūma eliš; see SIGLA).
 """
 import os,re,sys
 A=os.path.dirname(os.path.abspath(__file__))
@@ -33,7 +35,17 @@ def tables(path, heading_re):
             cells=[c.strip() for c in l.strip().strip('|').split(' | ')]
             if len(cells)>=6: rows.append((cur,cells))
     return rows
-rows=tables(P, r'^### Parallels index \(Tablet (\w+)\)')
+rows=[('EE '+t,c) for t,c in tables(P, r'^### Parallels index \(Tablet (\w+)\)')]
+P2=os.path.join(A,"..","2-טקסטי-בריאה-ועדן","project.md")
+SIGLA={'Adapa':'Adapa','Enki and Ninḫursaĝa':'E&Nḫ','Enki and Ninmaḫ':'E&Nm','Song of the Hoe':'Hoe','Grain and Sheep':'G&S'}
+def sig(name):
+    for k,v in SIGLA.items():
+        if name.startswith(k): return v
+    if 'Eridu' in name: return 'Eridu'
+    if 'KAR' in name: return 'KAR 4'
+    return name
+if os.path.exists(P2):
+    rows+=[(sig(t),c) for t,c in tables(P2, r'^### Parallels index \((.+)\)\s*$')]
 def strip_quotes(c):  # refs only outside backticks
     return re.sub(r'`[^`]*`','',c)
 groups={}
@@ -53,15 +65,16 @@ def sect(k):
     return 'The rest of the Bible',3
 out=[]
 cur=None
-order={'I':1,'II':2,'III':3,'IV':4,'V':5,'VI':6,'VII':7}
+ORD=['EE I','EE II','EE III','EE IV','EE V','EE VI','EE VII','Adapa','E&Nḫ','E&Nm','Hoe','G&S','Eridu','KAR 4']
+order={k:i for i,k in enumerate(ORD)}
 n=0
 for k in sorted(groups):
     s,_=sect(k)
     if s!=cur:
         cur=s
         title = s if not s.startswith('בראשית') else f'Genesis {k[1]}'
-        out.append(f'\n### {title}\n\n| Verse | Enūma eliš | Akkadian | Hebrew rendering | Bible | Tag | Comment |\n|---|---|---|---|---|---|---|')
-    for (kk,t,line,akk,heb,bible,tag,com) in sorted(groups[k],key=lambda x:(order[x[1]],)):
+        out.append(f'\n### {title}\n\n| Verse | Text, line | Original | Hebrew rendering | Bible | Tag | Comment |\n|---|---|---|---|---|---|---|')
+    for (kk,t,line,akk,heb,bible,tag,com) in sorted(groups[k],key=lambda x:(order.get(x[1],99),)):
         verse = f'{kk[3]} {kk[4]}:{kk[5]}' if kk[0]!=99 else '—'
         out.append(f'| {verse} | {t} {line} | {akk} | {heb} | {bible} | {tag} | {com} |'); n+=1
 # Atrahasis I creation rows
@@ -72,6 +85,6 @@ for t,c in atr:
     rs=refs(strip_quotes(c[3]))
     if any(r[0]==0 and r[1]<=5 for r in rs):
         aout.append('| '+' | '.join(c[:6])+' |'); na+=1
-head=open(OUT,encoding='utf-8').read().split('## The table')[0]
+head=open(OUT,encoding='utf-8').read().split('\n## The table\n')[0]+'\n'
 open(OUT,'w',encoding='utf-8').write(head+'## The table\n'+'\n'.join(out)+'\n'+'\n'.join(aout)+'\n')
 print(n,'rows;',na,'Atr rows')

@@ -1,8 +1,11 @@
 # Convert an ORACC CDL corpusjson text to Markdown (transliteration + lemmatisation).
-# usage: python3 -I cdl2md.py <zip> <member-path> <out.md> <title> <url>
+# usage: python3 -I cdl2md.py <zip> <member-path> <out.md> <title> <url> [--morph]
+#   --morph (added 2026-10-16): append each word's ePSD2 morphological analysis (f.morph, e.g. {mu.n:~}) and
+#   base to the lem: line -- for Sumerian it decides hamtu/maru and the prefix chain (guidelines 4.6).
 import sys, json, zipfile
 
 zf, member, out, title, url = sys.argv[1:6]
+MORPH = '--morph' in sys.argv[6:]
 d = json.loads(zipfile.ZipFile(zf).read(member))
 
 
@@ -104,7 +107,10 @@ def walk(nodes):
                 cur = {'label': '?', 'w': [], 'lem': []}
             cur['w'].append(w)
             if f.get('cf'):
-                cur['lem'].append(f"{f['cf']}[{f.get('gw', '')}]{f.get('pos', '')}")
+                extra = ''
+                if MORPH and (f.get('morph') or f.get('base')):
+                    extra = '{' + ';'.join(x for x in (f.get('morph', ''), f.get('base', '')) if x) + '}'
+                cur['lem'].append(f"{f['cf']}[{f.get('gw', '')}]{f.get('pos', '')}{extra}")
             else:
                 cur['lem'].append(f.get('pos', 'X') or 'X')
         elif k == 'll':  # ambiguous lemmatisation
@@ -118,6 +124,6 @@ flush()
 hdr = [f'# {title}', '', f'ORACC text {d.get("textid")} ({d.get("project")}), exported {d.get("UTC-timestamp")}. Licence: {d.get("license")}.',
        f'Web: {url}', '',
        'Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (ORACC conventions: ŋ = ĝ, [ ] = missing, ⸢ ⸣ = damaged, {d} = determinative);',
-       '"lem:" = ePSD2 lemmatisation citation-form[guide-word]POS for each word (X/u = unlemmatised).', '']
+       '"lem:" = ePSD2 lemmatisation citation-form[guide-word]POS for each word (X/u = unlemmatised)' + ('; {morph;base} = ePSD2 morphological analysis and base.' if MORPH else '.'), '']
 open(out, 'w', encoding='utf-8').write('\n'.join(hdr + lines) + '\n')
 print('lines', sum(1 for l in lines if l.startswith('**')))

@@ -29,7 +29,8 @@ def norm(s):
 
 def key(book):
     """Loose book key: letters only, no matres (י/ו), so תהלים = תהילים, שמואל ב = שמואל-ב."""
-    return re.sub(r"[^א-ת]", "", book).replace("י", "").replace("ו", "")
+    b = re.sub(r"[^א-ת]", "", book)
+    return b[:1] + b[1:].replace("י", "").replace("ו", "")  # keep the first letter: יהושע ≠ הושע (fixed 2026-10-17)
 
 
 order = []  # verse keys in file order, to look ahead into the following verses
@@ -40,6 +41,7 @@ def load():
     for f in glob.glob(os.path.join(BIBLE, "*", "*.rtl.md")):
         book = os.path.basename(f).replace(".rtl.md", "")
         books[key(book)] = book
+        books["=" + re.sub(r"[^א-ת]", "", book)] = book  # exact key first (key() makes יהושע = הושע)
         for line in open(f, encoding="utf-8"):
             if line.startswith("> "):
                 i = line.find(": ")
@@ -60,7 +62,7 @@ def check(path, verses, books, default_book):
         rm = re.match(r"(?:(.+?) )?([א-ת]{1,3}):([א-ת]{1,3})$", ref)
         if not rm or not re.search(r"[֑-ׇ]", quote):
             continue  # not a vocalized quotation
-        book = books.get(key(rm.group(1))) if rm.group(1) else default_book
+        book = (books.get("=" + re.sub(r"[^א-ת]", "", rm.group(1))) or books.get(key(rm.group(1)))) if rm.group(1) else default_book
         if rm.group(1) and not book:
             # the "book" may be a Hebrew word preceding a bare reference; retry as default book
             book = default_book
@@ -82,7 +84,7 @@ def check(path, verses, books, default_book):
 def main(argv):
     verses, books = load()
     if argv[1:2] == ["--show"]:
-        book = books.get(key(argv[2]), argv[2])
+        book = books.get("=" + re.sub(r"[^א-ת]", "", argv[2])) or books.get(key(argv[2]), argv[2])
         for r in argv[3:]:
             c, v = r.split()
             print(f"{book} {c}:{v}: {verses.get((book, c, v), 'NOT FOUND')}")

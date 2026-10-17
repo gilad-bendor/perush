@@ -32,3 +32,10 @@ Manuscript siglum + column + line exactly as on the tablet (`C₁ i 2`, `C₂ i 
 
 ## Assessment
 Excellent for translation work: authoritative (= Wasserman 2020 edition), every word lemmatised with gloss, fully searchable text. Best machine-readable base for OB Atra-ḫasīs III (node 1517) and all MB/NA/LB flood fragments, and for Tablets I–II via the composites. Caveats: sign-level conventions slightly idiosyncratic (e.g. erasures as `{AT{`); some catalogue nodes are empty; no Tablet III "all periods" composite (the Flood is split by manuscript).
+
+## Added 2026-10-16 (creation corpus, project 2)
+| Sub-folder | SEAL no. | Text | Content |
+|---|---|---|---|
+| `KAR-4/` | **1600** | **KAR 4** ("When heaven had been separated from earth"), bilingual Sumerian–Akkadian, MA/NA | mss. A = VAT 9307 (Assur), B = K 4175+ (Nineveh), C = A 17643 (Chicago); 191 SEAL lines = about 75 composite lines with Sumerian line + Akkadian line (empty label `↳` = the Akkadian line), lemmatised Akkadian, line-by-line English translation (with "Akk." / "B" variants) |
+| `Adapa-MB-EA-356/` | 1557 | EA 356, Adapa and the South Wind (MB, Amarna) | transliteration only (no translation), 71 lines; second opinion on eBL `L/1/7` MB |
+Downloaded with a browser User-Agent (SEAL returns an error page to curl's default UA) and converted with the new `../../tools/seal2md.py`.

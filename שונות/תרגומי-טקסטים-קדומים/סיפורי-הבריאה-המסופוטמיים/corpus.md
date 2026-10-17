@@ -16,9 +16,9 @@ The user's standing decisions (from the flood corpus) apply here too:
 | # | Project folder | Text | Language, date | Relation to Genesis |
 |---|---|---|---|---|
 | 1 | `1-אנומה-אליש/` | **Enūma eliš**, Tablets I–VII (1,098 lines), the Babylonian Epic of Creation | Akkadian, SB; composed probably under Nebuchadnezzar I (late 12th cent. BCE); mss 9th–2nd cent. BCE | The main external control for Gen 1:1–2:3: Tiāmat / `תְּהוֹם`, the mingled waters, the sky made from half of Tiāmat, the eleven monsters ↔ the *tanninim*, the stars and the calendar ↔ the luminaries, man made from a god's blood ↔ Gen 1:26–28, the gods' rest ↔ 2:1–3, naming as rule, Babylon's bricks ↔ Gen 11, Marduk's bow ↔ Gen 9:13. |
-| 2 | `2-…` (planned; a later run) | **Creation and Eden companions**: Adapa (eBL `L/1/7`, MB + SB); Enki and Ninmaḫ (ETCSL 1.1.2); the Song of the Hoe (ETCSL 5.5.4); Enki and Ninḫursaĝ (ETCSL 1.1.1); the bilingual "Creation of the World by Marduk" (CT 13 35–38; King 1902, check eBL/CDLI); KAR 4 (the creation of man from the Lamga gods' blood; check SEAL); the cosmogonic prologue of Grain and Sheep (ETCSL 5.3.2) | Sumerian, Akkadian, bilingual; OB–NB | Gen 2–3: man from clay / from the ground (2:7, 3:19), the "not yet" chain (2:4b–5), the work of the garden (2:15), the bread and water of life refused (3:22), Dilmun ↔ Eden, the forbidden plants and the curse, Nin-ti and the rib (debated), primeval humans without bread or clothing (Gen 2–4). About 1,000 lines in all. |
+| 2 | `2-טקסטי-בריאה-ועדן/` | **Creation and Eden companions**: Adapa (eBL `L/1/7`, MB + SB); Enki and Ninmaḫ (ETCSL 1.1.2); the Song of the Hoe (ETCSL 5.5.4); Enki and Ninḫursaĝ (ETCSL 1.1.1); the bilingual "Creation of the World by Marduk" (CT 13 35–38; King 1902, check eBL/CDLI); KAR 4 (the creation of man from the Lamga gods' blood; check SEAL); the cosmogonic prologue of Grain and Sheep (ETCSL 5.3.2) | Sumerian, Akkadian, bilingual; OB–NB | Gen 2–3: man from clay / from the ground (2:7, 3:19), the "not yet" chain (2:4b–5), the work of the garden (2:15), the bread and water of life refused (3:22), Dilmun ↔ Eden, the forbidden plants and the curse, Nin-ti and the rib (debated), primeval humans without bread or clothing (Gen 2–4). About 1,000 lines in all. |
 
-**Reading order for the commentary:** 1 (Tablets I, IV, V, VI first), then 2.
+**Reading order for the commentary:** 1 (Tablets I, IV, V, VI first), then 2 (for Gen 2–3: Adapa, Enki and Ninḫursaĝa, Grain and Sheep, the Founding of Eridu; for Gen 1:26 and man's work: KAR 4, Enki and Ninmaḫ, the Song of the Hoe; for Ex 4:11 and Lev 21: Enki and Ninmaḫ 51–101).
 
 Atra-ḫasīs I (the creation of man from clay and a slain god's flesh and blood) is already translated in the flood corpus (`../סיפורי-המבול-המסופוטמיים/1-אתרחסיס/`). Its creation rows are cross-referenced in this corpus's `parallels-index.md`, so that the Gen 1–2 evidence is in one place.
 
@@ -33,15 +33,15 @@ Atra-ḫasīs I (the creation of man from clay and a slain god's flesh and blood
 | # | Project | Status |
 |---|---|---|
 | 1 | Enūma eliš I–VII | **complete (first draft)**, 2026-10-16: 1,098 lines (I 162, II 162, III 138, IV 146, V 158, VI 166, VII 166), each tablet with three review passes; repeated lines verified by script (`verify.py`); `translation.rtl.md` generated (`build_translation.py`); print stub `../הדפסה/סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש.rtl.md`. Open decisions for the user: `1-אנומה-אליש/project.md`. |
-| 2 | Creation and Eden companions | not started (run 2 of the translation plan) |
+| 2 | Creation and Eden companions | **complete (first draft)**, 2026-10-17: seven texts, 1,076 lines – Adapa (MB 78 + SB 97), Enki and Ninḫursaĝa 305, Enki and Ninmaḫ 142, Song of the Hoe 110, Grain and Sheep 193, Founding of Eridu (BM 93014) 67, KAR 4 84 – drafted text by text by sequential sub-agents, three review passes each, verified by `verify.py`; `translation.rtl.md` generated (`build_translation.py`); parallels merged into `parallels-index.md`; renderings merged into `renderings.md` §5; print stub `../הדפסה/סיפורי-הבריאה-המסופוטמיים/2-טקסטי-בריאה-ועדן.rtl.md`. Open decisions: end of `2-טקסטי-בריאה-ועדן/project.md`. |
 
 ### Corpus-level files
 | File | What |
 |---|---|
 | `renderings.md` | Shared renderings, binding for all projects. |
-| `parallels-index.md` | The projects' parallels indexes merged, ordered by Bible verse, with "Key findings for the commentary" at the top. |
+| `parallels-index.md` | The projects' parallels indexes merged, ordered by Bible verse, with "Key findings for the commentary" for each project at the top. Regenerate with `python3 -I 1-אנומה-אליש/build_parallels_index.py` (reads both projects). |
 
-## Notes for the next run (project 2)
+## Notes from the planning of project 2 (done; kept for reference)
 - Use the shared renderings: *banû* = `בָּנָה`, *ṭiṭṭu* = `טִיט`, *lullû* = `קַדְמוֹן`, *awīlu* = `אָדָם`, *dullu* = `עָמָל`, *šīmtu* = `גּוֹרָל`, *Apsû* = `(הָ)אַפְּסוּ`, *nabû* (to name) = `קָרָא (בְּשֵׁם)`, Sumerian *edin* = `עֲרָבָה` (never `עֵדֶן`).
 - Enki = `אֶנְקִי` / Ea = `אֵאָה`; Ninmaḫ = `נִינְמַח`; Ninḫursaĝ = `נִין־חֻרְסַגָּה` (flood corpus); Nintu = `נִינְתּוּ`; Adapa = `אֲדָפָּה`.
 - Enūma eliš VI 1–38 (man from Qingu's blood) and the Atra-ḫasīs creation scene are the comparison points for KAR 4 and Enki and Ninmaḫ.

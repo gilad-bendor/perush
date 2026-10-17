@@ -30,3 +30,10 @@ eBL-ATF: `@obverse/@reverse/@column n`, lines `1'.` etc. as on the tablet (prime
 
 ## Assessment
 Best free machine-readable source for the **Neo-Assyrian / late** Atra-ḫasīs material (K.3399+ recension, DT.42, BM.98977) and for **new late identifications** (BM.38917, BM.41330) that post-date Wasserman 2020. Not usable for the OB Flood tablet (no ATF for the Sippar tablets).
+
+## Added 2026-10-16 (creation corpus, project 2)
+| Museum no. | ATF lines | Notes |
+|---|---|---|
+| **BM.93014** (+ 82-3-23,101) | 72 | The bilingual **"Creation of the World by Marduk" / "Founding of Eridu"** (CT 13 35–38; King 1902 I 130–139; Lambert 2013 361–365; Ambos 2004 199–212, "II.E.2 MS A"): obv. 1–40 (Sumerian and Akkadian half-lines interleaved, `%sux … %sb …`), rev. 1′–27′ (the incantation's ritual part; rev. 27′ = incipit of the šuʾila *Ereqqu* 2). eBL genre "Magic: Varia: Building Rituals". Not lemmatised. A transliteration search of eBL (2026-10-16) found **no duplicate** of the obverse. |
+| **VAT.9307** | 126 | **KAR 4**, ms. A (Assur), the bilingual creation of man from the Alla gods, with a syllable alphabet in the left column (`ME-ME PAP-PAP & %sux … & %akk …`). Reference header has Borger's bibliography (Pettinato 1971 74ff.; Lambert 2013 350–360). |
+| **K.4175** (+ Sm 57 + 80-7-19,184 (+) 82-3-23,146) | 41 | **KAR 4 ms. B** (Nineveh, Ashurbanipal library; eBL catalogues it as "lists" because of the syllable-alphabet column). Lambert 2013 pl. 65–66. |
