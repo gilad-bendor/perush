@@ -45,3 +45,14 @@ Downloaded with a browser User-Agent (SEAL returns an error page to curl's defau
 - **Numbering:** SEAL's columns use the continuous stele numbering (I–XXIII obverse, XXIV–LI reverse): col. i–v = CDLI stele obv. 1–5 = composite lines 1–303; col. xlvii–li = stele rev. 24–28 = composite 3144′–3641′. Lines match the stele lines one to one.
 - **Readings differ from CDLI in places** (e.g. epilogue xlvii 1 *ki-na-a-at* where CDLI reads *di-na-a-at*): compare both.
 - Used as the second opinion and the lemmatisation for the prologue and epilogue of `חוקים-ובריתות/2-חוקי-חמורבי/`.
+
+## Added 2026-10-17 (Gilgameš corpus, `אפוס-גילגמש/`)
+| Sub-folder | SEAL no. | Text | Content |
+|---|---|---|---|
+| `Gilgamesh-OB/` | 1830 | Gilg. OB II (Penn, UM 29.13.570) | transliteration with per-word lemmas, translation (George 2003's, as on SEAL) |
+| | 1831 | Gilg. OB III (Yale, YBC 2178) | the same (the SEAL page has only part of the text) |
+| | 1534 | Gilg. OB VA+BM (Sippar; Šiduri) | the same |
+| | 1532 | Gilg. OB Schøyen 2 | the same |
+| | 1530 | Gilg. OB Nippur | the same |
+| | 1526 | Gilg. OB Harmal 1 | the same |
+Retrieved with a browser User-Agent and converted by `tools/seal2md.py`. Second opinion on the eBL OB chapters (`eBL/Gilgamesh-OB-*`, the base texts): the SEAL translation is George's, so it is not an independent rank-3 check; its lemmas and line labels (by column) are the value. Line labels: by column (`i 1'`), against eBL's running labels (`1'`, `a+1`, `b+1`): align by content.

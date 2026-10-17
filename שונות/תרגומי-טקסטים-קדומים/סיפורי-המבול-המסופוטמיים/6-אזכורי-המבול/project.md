@@ -54,6 +54,8 @@ Not found in an open edition (recorded in `../../sources/_records-only--paid-and
 - 2026-10-16: §1–§6 drafted (annotated + translation). Coordinator note received: partial niqqud. §1–§2 were drafted fully vocalized; to be fixed in the review pass.
 - 2026-10-16: §7–§9 drafted. Review passes done: (a) fidelity – every line checked against the edition; brackets per edition; (b) consistency – SKL 40 = Lagaš 1 = Death F 30/123 (`אחרי ששטף המבול`), SKL 1 = 41, §2 1–3 vs Death F 27–29 (differ only where the case ending differs); (c) Hebrew – niqqud reduced to names at first occurrence per section and ambiguous words (script in the session scratchpad; plene spelling restored by hand in §1–2). eBL notes re-checked after the coordinator regenerated the reading editions: one new note (Erra I 146, Cagni/Deller) added to the apparatus. **Status: all nine sections drafted and reviewed.**
 
+- 2026-10-17 (Gilgameš corpus coordinator): §6 Gilg. I 7 and 26 harmonized with XI 9 and the creation corpus: *niṣirtu* = `נְצוּרָה` (was `סוֹד`, which is reserved for *pirištu*): I 7 `את הנְּצוּרָה ראה`, I 26 `[פתח] את פתח נצורתה`. I 1–28 are now also line 1–28 of `../../אפוס-גילגמש/1-הנוסח-הבבלי-התקני/annotated-I.rtl.md`, which copies them verbatim (checked by `../../אפוס-גילגמש/verify.py`).
+
 ## Parallels index
 Tags per guidelines §6.4. "§" = section of this project; line numbers as in the edition.
 

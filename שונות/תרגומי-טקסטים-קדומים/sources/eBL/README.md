@@ -60,3 +60,10 @@ The other eBL Atra-ḫasīs chapters (OB II, OB III, OB Schøyen, SB IV–X, NA,
 | `Adapa-MB/` | *Adapa*, Middle Babylonian (Amarna, VAT 348 = EA 356), eBL `L/1/7` | 78 (primed numbering 1′–78′; obv. 1′–37′, rev. 38′–78′ approx.) | T. D. N. Mitto (ed.), rev. Z. J. Földi, A. C. Heinrich, E. Jiménez; translation B. R. Foster |
 | `Adapa-SB/` | *Adapa*, Standard Babylonian / NA fragments (MLC 1296, K 15072, K 8743, K 8214, K 9994; Rm 618 quotation) | 97 | same |
 Fetched with `tools/ebl_fetch.py L 1 7 "Middle Babylonian" -` and `… "Standard Babylonian" -`. Gitignored (§8). The eBL introduction mentions the Sumerian Adapa (Meturan and Nippur) and parallels to it in the notes; that version is not in eBL's corpus and was not fetched.
+
+### Added 2026-10-17 (the Gilgameš corpus, `אפוס-גילגמש/`)
+| Folder | Text | Lines (eBL labels) | Editors / translator |
+|---|---|---|---|
+| `Gilgamesh-SB-II/` … `Gilgamesh-SB-X/`, `Gilgamesh-SB-XII/` | *Poem of Gilgameš* (eBL `L/1/4`), Standard Babylonian Tablets II–X, XII (I and XI were fetched on 2026-10-16) | II 187, III 209, IV 175, V 274, VI 183, VII 219, VIII 206, IX 137, X 325, XII 139 | A. R. George (ed.), rev. G. Rozzi, E. Jiménez; translation George |
+| `Gilgamesh-OB-VA-BM/`, `-OB-II/`, `-OB-III/`, `-OB-Schoeyen2/`, `-OB-Nippur/`, `-OB-Harmal1/`, `-OB-Ishchali/`, `-OB-Harmal2/`, `-OB-IM/` | the Old Babylonian chapters (`"Old Babylonian" "VA+BM"`, `"II"`, `"III"`, `"Schøyen₂"`, `"Nippur"`, `"Harmal₁"`, `"Ishchali"`, `"Harmal₂"`, `"IM"`) | 87, 145, 219, 94, 26, 21, 47, 59, 45 | George (with A. C. Heinrich, M. Schlegelmilch and others, per file header) |
+Fetched with `tools/ebl_fetch.py L 1 4 "Standard Babylonian" <T> …` and `… "Old Babylonian" "<name>" …` (folder names ASCII: ₁ → 1, ø → oe, + → -). eBL also has OB UM, Schøyen₁, Schøyen₃, CUNES, SM and thirteen MB/NA chapters (`curation-surveys/availability-survey--2026-10-16.md`), not fetched. Gitignored (§8). **Usefulness:** the base texts of the Gilgameš corpus; the `Parallels:` field links every repeated line across SB tablets and to the OB/MB versions, which `אפוס-גילגמש/verify.py` uses. Note: lemma slips occur (I 100 *ṣēri* lemmatized "back").
