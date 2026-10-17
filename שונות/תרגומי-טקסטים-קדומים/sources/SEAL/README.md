@@ -39,3 +39,9 @@ Excellent for translation work: authoritative (= Wasserman 2020 edition), every 
 | `KAR-4/` | **1600** | **KAR 4** ("When heaven had been separated from earth"), bilingual Sumerian–Akkadian, MA/NA | mss. A = VAT 9307 (Assur), B = K 4175+ (Nineveh), C = A 17643 (Chicago); 191 SEAL lines = about 75 composite lines with Sumerian line + Akkadian line (empty label `↳` = the Akkadian line), lemmatised Akkadian, line-by-line English translation (with "Akk." / "B" variants) |
 | `Adapa-MB-EA-356/` | 1557 | EA 356, Adapa and the South Wind (MB, Amarna) | transliteration only (no translation), 71 lines; second opinion on eBL `L/1/7` MB |
 Downloaded with a browser User-Agent (SEAL returns an error page to curl's default UA) and converted with the new `../../tools/seal2md.py`.
+
+## Added 2026-10-17: `CH-Prologue-Epilogue--node-7520/`
+- **SEAL 7520**, "CH Prologue and Epilogue (Hammurāpi)" (M. P. Streck): the prologue (col. i–v) and epilogue (col. xlvii–li) of the Laws of Hammurabi on the Louvre stele, 800 lines, transliteration, **per-word lemmas**, and Streck's English translation (one paragraph, numbered by line). Raw `node-7520.html` (930 KB) + `node-7520.md` (`tools/seal2md.py`). Gitignored (SEAL/*).
+- **Numbering:** SEAL's columns use the continuous stele numbering (I–XXIII obverse, XXIV–LI reverse): col. i–v = CDLI stele obv. 1–5 = composite lines 1–303; col. xlvii–li = stele rev. 24–28 = composite 3144′–3641′. Lines match the stele lines one to one.
+- **Readings differ from CDLI in places** (e.g. epilogue xlvii 1 *ki-na-a-at* where CDLI reads *di-na-a-at*): compare both.
+- Used as the second opinion and the lemmatisation for the prologue and epilogue of `חוקים-ובריתות/2-חוקי-חמורבי/`.

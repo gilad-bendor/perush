@@ -16,10 +16,10 @@ The user's standing decisions (from the flood and creation corpora) apply:
 | # | Project folder | Text | Language, date | Relation to the Torah |
 |---|---|---|---|---|
 | 1 | `1-אמנת-הירושה-של-אסרחדון/` | **Esarhaddon's Succession Treaty** (SAA 2 6, "Vassal Treaties of Esarhaddon", 691 composite lines), with the **Tell Tayinat copy** (SAA 2 15, 443 lines) | Akkadian (Neo-Assyrian; the curse list partly Standard Babylonian), 672 BCE | Deut 13 (the duty to report the prophet, the ecstatic, the brother, the son, the daughter; to seize and kill the inciter); Deut 13:1 and 4:2 (do not alter the words); Deut 6:5 (love "as yourselves"); Deut 28:20–44 (the curse sequence Sîn → Šamaš → Ninurta → Venus ↔ 28:27–30; bronze sky and iron earth ↔ 28:23; cannibalism ↔ 28:53–57); Deut 29:9–14 (the oath of the absent generations); Deut 31:9–13, 24–26 (the written tablet kept and read); Lev 26:19, 29. |
-| 2 | `2-…` (planned) | **The Laws of Hammurabi**: prologue, about 282 laws, epilogue | Akkadian (OB), c. 1750 BCE | The Covenant Code (Exod 21–23) and Deut 19–25; the prologue and epilogue (justice, the stele, blessings and curses) ↔ the covenant frame. Base: CDLI P464358 (composite with normalization and English), checked against the Louvre stele and SEAL 7520 (`../curated-translation-candidates.md`, item 4). |
+| 2 | `2-חוקי-חמורבי/` | **The Laws of Hammurabi**: prologue, laws §1–§282 (the gap §66–§99 not in the base text), epilogue – 3,641 composite lines | Akkadian (OB), c. 1750 BCE | The Covenant Code (Exod 21–23) and Deut 19–25; the prologue and epilogue (justice, the stele, blessings and curses) ↔ the covenant frame. Base: CDLI P464358 (composite with normalization and English), checked against the Louvre stele and SEAL 7520 (`../curated-translation-candidates.md`, item 4). |
 | 3 | `3-…` (planned) | **The Laws of Eshnunna**, **Middle Assyrian Laws A**, **Lipit-Ištar**, **Ur-Namma** | Akkadian (OB, MA); Sumerian (Ur III, OB) | Eshnunna §53 ↔ Exod 21:35 (nearly verbatim); §54–57 goring ox and dog; §12–13 ↔ Exod 22:1–2. MAL A: Deut 22:23–29, 25:3, 25:5–12, Exod 22:17. Lipit-Ištar and Ur-Namma: bodily injury ↔ Exod 21:18–27; prologues and epilogues. Bases: CDLI P480696, ORACC `tcma` P281779, CDLI P464355, P432130 (item 6). |
 
-**Reading order for the commentary:** project 1 first for Deuteronomy (§10, §12, §18, §29 for Deut 13; §4, §57 and §35–36 for 13:1 and 4:2; §24 for 6:5; §25, §34 for 29:13–14; §35 for 31:9–13; §37–§56 and §63–§65 for 28:20–44 and 28:23; §47, §69, §75 for 28:53–57). Then project 2 for the Covenant Code; project 3 last.
+**Reading order for the commentary:** project 2 first for the Covenant Code (Exod 21–23: §250–252, §196–214, §117–126, §244–267; then Lev 18–20, 24, 25, Num 5, Deut 19–25 and the epilogue for Deut 27–28, Lev 26); project 1 first for Deuteronomy (§10, §12, §18, §29 for Deut 13; §4, §57 and §35–36 for 13:1 and 4:2; §24 for 6:5; §25, §34 for 29:13–14; §35 for 31:9–13; §37–§56 and §63–§65 for 28:20–44 and 28:23; §47, §69, §75 for 28:53–57). Project 3 last.
 
 ## Shared conventions for this corpus
 - **`renderings.md` in this folder is shared by all projects of the corpus.** It inherits the flood corpus's and the creation corpus's shared renderings (`../סיפורי-המבול-המסופוטמיים/renderings.md`, `../סיפורי-הבריאה-המסופוטמיים/renderings.md`) as its default: divine names, formulas and key terms are the same in all three corpora. It adds the legal and treaty terms (oath, curse, "if", the apodosis formulas) and records where it deviates from the earlier corpora, with the reason.
@@ -27,6 +27,7 @@ The user's standing decisions (from the flood and creation corpora) apply:
 - **Repeated formulas get identical Hebrew**, verified by script. Esarhaddon's treaty repeats the crown-prince formula about 60 times, the "if you …" clauses and the curse formulas hundreds of times.
 - A project translator does not edit the shared file during drafting; proposals go into the project's `project.md`, and the corpus coordinator merges them.
 - **Parallels index:** each project keeps its index (guidelines §7.3); `parallels-index.md` here merges them into one table ordered by Bible verse.
+- **Law terms:** `renderings.md` §5 (fixed for LH, binding for project 3): *šumma* = `אִם` always, *awīlum* = `אִישׁ` (`בֶּן אִישׁ`), *muškēnum* = `מִסְכֵּן`, *iddâk* = `יֵהָרֵג`, *maḫar ilim* = `לִפְנֵי הָאֵל`, *dīnum* = `דִּין`, *kīma* = `כְּ` (never `תַּחַת`), *nakāpu* = `נָגַף`.
 - **Recension tags** (guidelines §6.8): in project 1 a line, or words, translated from the Tell Tayinat copy because the composite (Nimrud) tablets are broken there are tagged `{תיינת}` / `{תיינת: …}`.
 
 ## Status
@@ -34,11 +35,11 @@ The user's standing decisions (from the flood and creation corpora) apply:
 | # | Project | Status |
 |---|---|---|
 | 1 | Esarhaddon's Succession Treaty + Tell Tayinat | **complete (first draft)**, 2026-10-17: 691 composite entries + 15 Tayinat-only entries (703 Hebrew lines in all, with the A-lines), seven parts (§1–9, 10–21, 22–29, 30–36, 37–56, 57–89, 90–107) by sequential sub-agents, three review passes each, harmonized by the coordinator, verified by `verify.py` (0 problems); `translation.rtl.md` generated (`build_translation.py`, 56 footnotes); 771 parallels rows merged into `parallels-index.md`; print stub `../הדפסה/חוקים-ובריתות/1-אמנת-הירושה-של-אסרחדון.rtl.md`. Open decisions: `1-אמנת-הירושה-של-אסרחדון/project.md`. |
-| 2 | Laws of Hammurabi | not started |
+| 2 | Laws of Hammurabi | **complete (first draft)**, 2026-10-17: all 3,641 composite lines (CDLI P464358, checked against the Louvre stele P249253 and SEAL 7520): prologue 1–303, §1–§65, end of §100, §101–§282, epilogue 3144′–3641′; the gap laws §66–§99 not translated (no open base text: open decision). Twelve annotated files by twelve sequential sub-agents in priority order, three review passes each, coordinator harmonization, `verify.py --strict` 0 problems; `translation.rtl.md` (topic and § headings, 130 footnotes); 1,263 parallels rows merged; print stub `../הדפסה/חוקים-ובריתות/2-חוקי-חמורבי.rtl.md`. Open decisions: `2-חוקי-חמורבי/project.md`. |
 | 3 | Eshnunna, MAL A, Lipit-Ištar, Ur-Namma | not started |
 
 ### Corpus-level files
 | File | What |
 |---|---|
 | `renderings.md` | Shared renderings, binding for all projects. |
-| `parallels-index.md` | The projects' parallels indexes merged, ordered by Bible verse, with "Key findings for the commentary" at the top. Regenerate with `python3 -I 1-אמנת-הירושה-של-אסרחדון/build_parallels_index.py`. |
+| `parallels-index.md` | The projects' parallels indexes merged, ordered by Bible verse (Exodus and Deuteronomy by chapter), with "Key findings for the commentary" (EST, LH) at the top. Regenerate with `python3 -I build_parallels_index.py` (this folder; it reads every project; the older `1-…/build_parallels_index.py` knows only project 1 – do not use it). |

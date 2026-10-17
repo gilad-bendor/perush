@@ -123,3 +123,29 @@ The flood corpus's shared renderings (`../סיפורי-המבול-המסופוט
 | *rābiṣu* (a demon "who lies in wait") | רוֹבֵץ | [cognate] ↔ `לַפֶּתַח חַטָּאת רֹבֵץ` (בראשית ד:ז) | Always with a note. |
 | *šēdu* | רוּחַ־מָגֵן | ≠ `שֵׁד` (false friend, creation corpus) | Also where it is listed among evil demons (EST l. 493): the note says so. |
 | *utukku* | אוּטוּקּוּ (a kind of demon; note) | | |
+
+## 5. Law terms shared by the law collections (fixed 2026-10-17 by the coordinator, before drafting project 2, the Laws of Hammurabi)
+Binding for projects 2 and 3 (LH, Eshnunna, MAL, Lipit-Ištar, Ur-Namma). LH's own formulas: `2-חוקי-חמורבי/renderings.md`.
+
+| Akkadian | Hebrew | Rejected | Echo | Reason |
+|---|---|---|---|---|
+| ***šumma*** (protasis of a case law), *u šumma* | **אִם**, **וְאִם** | `כִּי` for the main case | [equivalent] ↔ the casuistic `כִּי` / `אִם` of the Covenant Code (`וְהִכָּה אִישׁ אֶת רֵעֵהוּ` (שמות כא:יח), then `אִם יָקוּם` (שמות כא:יט)) | One particle for one particle. The Covenant Code's two-tier system (`כי` for the main case, `אם` for its sub-cases) is a feature of the Torah's own drafting; imposing it on LH would hide that. |
+| ***awīlum*** (law collections) | **אִישׁ**; *mār awīlim* = `בֶּן אִישׁ`, *mārat awīlim* = `בַּת אִישׁ`, *aššat awīlim* = `אֵשֶׁת אִישׁ`, *warad awīlim* = `עֶבֶד אִישׁ` | `אָדָם` (the narrative default of the flood and creation corpora; `בן אדם` would mean "a human being" and hide the class); `בֶּן־חוֹרִין` (an interpretation) | [equivalent] ↔ `אִישׁ` of the case laws (שמות כא:יב, יד, טז, כ); `בְּנֵי אִישׁ` "the high-born" (תהלים מט:ג; סב:י) | **Deviation from the flood and creation corpora** (*awīlu* = `אָדָם`), for the laws: *awīlum* is the legal person and the upper free class; `בן איש` keeps the class visible. |
+| ***muškēnum*** | **מִסְכֵּן** (always vocalized at the first occurrence in a file) | `עָנִי`, `דַּל` (Hebrew poverty terms with their own Torah laws); `הֶדְיוֹט` (Mishnaic, Greek); transliteration | [cognate loan] ↔ `מִסְכֵּן` (קהלת ד:יג; ט:טו–טז) | The Hebrew word comes from this Akkadian one. Note: a status ("commoner, palace dependent"), not "pitiable" (modern Hebrew trap). Open decision for the user. |
+| ***wardum*; *amtum*** | **עֶבֶד**; **אָמָה** | `שִׁפְחָה` for *amtum* | [equivalent]; [cognate] (*amtu* = `אָמָה`) | |
+| ***iddâk*** (N of *dâku*) | **יֵהָרֵג** (pl. `יֵהָרְגוּ`); G impersonal *idukkūšu* `יַהַרְגוּהוּ` | `יוּמַת`, `מוֹת יוּמָת` | [equivalent] ↔ `מוֹת יוּמָת` (שמות כא:יב, טו–יז; כב:יח) | Corpus §2 *dâku* = `הָרַג`. The Torah's emphatic `מוֹת יוּמָת` has no Akkadian counterpart: the difference must be visible. |
+| ***maḫar ilim***; *ina bīt ilim* | **לִפְנֵי הָאֵל**; `בְּבֵית הָאֵל` | `אֶל הָאֱלֹהִים` | [equivalent] ↔ `אֶל הָאֱלֹהִים` (שמות כא:ו; כב:ז–ח) | Corpus *ilu* = `אֵל`, never `אֱלֹהִים`. |
+| ***dīnum*; *dayyānum*; *dīnam dânu*; *dīnātum*** | **דִּין**; **דַּיָּן**; `דָּן דִּין`; `דִּינִים` (*dīnāt mīšarim* `דִּינֵי מֵישָׁרִים`) | `מִשְׁפָּט` (Akkadian *šipṭu* / *šapāṭu* is the cognate of `שׁפט`: reserve `מִשְׁפָּט` for it) | [cognate] ↔ `וְדַיַּן אַלְמָנוֹת` (תהלים סח:ו); [equivalent] ↔ `וְאֵלֶּה הַמִּשְׁפָּטִים` (שמות כא:א) | Corpus §2. |
+| ***mīšarum*; *kittum*** | **מֵישָׁרִים**; **אֱמֶת** | `צְדָקָה`, `צֶדֶק` (for *ṣidqu* / *ṣadāqu* only) | [cognate] `מֵישָׁרִים` ↔ `מֵישָׁרִים מִשְׁפָּט וּצְדָקָה` (תהלים צט:ד) | Corpus §2. |
+| ***šībū*** "witnesses"; *šībūtum* "testimony" | **עֵדִים**; **עֵדוּת** | | [equivalent] ↔ `עַל פִּי שְׁנֵי עֵדִים` (דברים יט:טו) | *šību* is literally "elder, grey-haired" (`שָׂב`): note at the first occurrence. In LH there is no *adê*, so `עֵדוּת` here is only "testimony". |
+| ***kīma*** in the "X for X" clauses (*alpam kīma alpim*, *wardam kīma wardim*) | **כְּ־** (`שׁוֹר כְּשׁוֹר`) | `תַּחַת` | [equivalent] ↔ `עַיִן תַּחַת עַיִן` (שמות כא:כד); `שׁוֹר תַּחַת הַשּׁוֹר` (שמות כא:לו) | Keep the Akkadian "like"; the Torah's "in place of" is its own. LH's eye-for-eye laws (§196–200) have no *kīma* at all: "they shall blind his eye". |
+| ***nakāpu*** "gore"; ***nakkāpû*** "habitual gorer" | **נָגַף**; **נַגָּף** (always vocalized) | `נָגַח`, `נַגָּח` | [cognate] ↔ `וְכִי יִגֹּף שׁוֹר` (שמות כא:לה); [equivalent] ↔ `שׁוֹר נַגָּח הוּא` (שמות כא:כט) | The real cognate is the Torah's own verb in 21:35. |
+| ***šūdû*** (Š of *edû* "know") "make known, notify" | **הוֹדִיעַ** | `הֵעִיד`, `הוּעַד` | [cognate] (ידע); [equivalent] ↔ `וְהוּעַד בִּבְעָלָיו` (שמות כא:כט) | |
+| ***bēl* + noun** (owner) | **בַּעַל** + noun | `אֲדוֹן` | [cognate] ↔ `וּבַעַל הַשּׁוֹר` (שמות כא:כח), `בַּעַל הַבַּיִת` (שמות כב:ז) | *bēlum* "lord, master" (of persons) stays `אָדוֹן` (corpus §0). |
+| ***šullumu*** (D of *šalāmu*) "make good" | **שִׁלֵּם** (reserved) | | [cognate] ↔ `שַׁלֵּם יְשַׁלֵּם` (שמות כא:לו; כב:ב–יד) | Other payment verbs: *riābu* = `הֶחֱלִיף`, *apālu* = `פָּרַע`, *nadānu* = `נָתַן`, *šaqālu* = `שָׁקַל`. |
+| ***andurārum*** | **דְּרוֹר** | `חָפְשִׁי`, `שְׁמִטָּה` | [cognate] ↔ `וּקְרָאתֶם דְּרוֹר` (ויקרא כה:י); [equivalent] ↔ `לַחָפְשִׁי חִנָּם` (שמות כא:ב) | Guidelines §6.7. |
+| ***maṣṣarūtum*** "deposit" | **נְצִירָה** | `פִּקָּדוֹן`, `לִשְׁמֹר` | [equivalent] ↔ `לִשְׁמֹר` (שמות כב:ו); `פִּקָּדוֹן` (ויקרא ה:כא) | Corpus *naṣāru* = `נָצַר`. |
+| ***kišpū***; *kaššāptum* | **כְּשָׁפִים**; `מְכַשֵּׁפָה` | | [cognate] ↔ `מְכַשֵּׁפָה לֹא תְחַיֶּה` (שמות כב:יז) | |
+| ***maḫāṣu*** "strike"; *lētu* "cheek" | **מָחַץ**; **לְחִי** | `הִכָּה` | [cognate] (`מָחַצְתִּי וַאֲנִי אֶרְפָּא`, דברים לב:לט); [equivalent] ↔ `וְכִי יַכֶּה אִישׁ` (שמות כא:כ) | |
+| ***ina idû*** "knowingly" | **בְּדַעַת** (`לֹא בְדַעַת`) | `בְּזָדוֹן`, `בִּשְׁגָגָה` | [equivalent] ↔ `בִּבְלִי דַעַת` (דברים יט:ד) | |
+| ***riksātum***; ***kunukkum***; ***ṭuppum*** | **תְּנָאִים**; **תְּעוּדָה חֲתוּמָה**; **לוּחַ** | `בְּרִית`, `אֲמָנָה` (that is *adê*) | | |
