@@ -662,11 +662,11 @@
 
 ### 84
 `abī | gilgāmeš | itta[zzar]anni`
-> "אבי, גילגמש גידף אותי שוב ושוב,
+> "אבי, גילגמש גידף אותי פעם אחר פעם,
 - **פירוק:** `abī` – "אבי"; `itta[zzar]anni` – *nazāru* "לגדף, לקלל" Gtn פרפקט (NinNA2b `it-ta-[na-a]z-za-ra-an-ni`), 3 זכר יחיד + *-anni* ("גידף אותי שוב ושוב").
 - **תרגומים:** George: "'O father, Gilgameš has been heaping abuse on me".
 - **הקבלה:** [divergence] `אָרוּר אַתָּה` (בראשית ג:יד) – *nazāru* "גידוף" (לא *arāru*; השורש ארר בתרגום רק ל־*erretu*, 86).
-- **הערות:** *nazāru* = `גִּדֵּף` (`../renderings.md` §4), Gtn = "שוב ושוב". השורש שמור בחלקו ב־NinNA2b ו־AššNA1a (`it-ta-a[z-za-r]a-an-ni`), ולכן אין סוגריים.
+- **הערות:** *nazāru* = `גִּדֵּף` (`../renderings.md` §4), Gtn = "פעם אחר פעם" (הרכז, אחרי לוח VII: לא "שוב ושוב", שהשורש שוב שמור ל־*târu*). השורש שמור בחלקו ב־NinNA2b ו־AššNA1a (`it-ta-a[z-za-r]a-an-ni`), ולכן אין סוגריים.
 
 ### 85
 `gilgāmeš | undennâ | p[išātī]ya`
