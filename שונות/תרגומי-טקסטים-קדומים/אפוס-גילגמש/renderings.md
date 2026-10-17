@@ -65,7 +65,7 @@ Identical Akkadian = identical Hebrew (guidelines §6.1). The split forms of a f
 | *išmē-ma* X *amāt* Y | שָׁמַע X אֶת דְּבַר Y | |
 | *šeššet urrī u sebe mūšāti* | שִׁשָּׁה יָמִים וְשִׁבְעָה לֵילוֹת | = XI 128 (flood). |
 | *ištēn ūma šanâ ūma* (*u šalša*) | יוֹם אֶחָד, יוֹם שֵׁנִי (וּשְׁלִישִׁי) | |
-| *ana ešrā bēr iksupū kusāpa / ana šalāšā bēr iškunū nubatta* | לְעֶשְׂרִים בֵּרוּ פָּתְתוּ פַּת, / לִשְׁלֹשִׁים בֵּרוּ שָׂמוּ מָלוֹן | IV (many times), XI 301–302, 319–320. *bēru* "double-hour, league" (c. 10 km) = `בֵּרוּ`, note at first occurrence. *kasāpu* = `פָּתַת` (ויקרא ב:ו); *nubattu* = `מָלוֹן` (creation corpus). |
+| *ana ešrā bēr iksupū kusāpa / ana šalāšā bēr iškunū nubatta* | לְעֶשְׂרִים בֵּרוּ פָּתְתוּ פַּת, / לִשְׁלֹשִׁים בֵּרוּ שָׂמוּ מָלוֹן | IV (many times), XI 301–302, 319–320. *bēru* "double-hour, league" (c. 10 km) = `בֵּרוּ`, note at first occurrence. *kasāpu* = **פָּתַת** (ויקרא ב:ו); *nubattu* = `מָלוֹן` (creation corpus). |
 | *ina māti dān emūqī īšu* | בָּאָרֶץ עַז הוּא, כֹּחַ יֵשׁ לוֹ | I 122, 149, 267, 290; II 162. |
 | *kīma kiṣri ša Anim dunnunā emūqāšu* | כְּגוּשׁ שֶׁל אָנוּ עַזִּים כֹּחוֹתָיו | George: "a lump of rock from the sky" (a meteorite). *kiṣru* = `גּוּשׁ`, note. |
 | *ummi Gilgāmeš emqet mūdât kalāma īde izakkar ana mārīša* | אֵם גִּלְגָּמֶשׁ, חֲכָמָה, יוֹדַעַת, אֶת הַכֹּל יָדְעָה, דִּבְּרָה אֶל בְּנָהּ: | And *Rīmat-Ninsun emqet …* `… דִּבְּרָה אֶל גִּלְגָּמֶשׁ:`. |
@@ -95,7 +95,7 @@ A copy may put a word in `[ ]` where its own manuscripts are broken (guidelines 
 | *aššu šullumi erēni* | לְמַעַן שְׁלוֹם הָאֲרָזִים |
 | *ana pulḫāti ša nišī išīmšu Ellil* | לְאֵימוֹת לָאֲנָשִׁים גָּזַר לוֹ אֶנְלִיל, |
 | *u ārid qištīšu iṣabbassu luʾtu* | וְהַיּוֹרֵד אֶל יַעֲרוֹ – תֹּאחֲזֵהוּ רִפְיוֹן. |
-Notes: *naṣāru* = `נָצַר` (never `שָׁמַר`): Gen 3:24 `לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` is the [equivalent], tagged in the apparatus (with `וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן אֶת הַכְּרֻבִים`). *sakāpu* "lie down, rest" = `נָם` (תהלים קכא:ד `לֹא יָנוּם וְלֹא יִישָׁן`), a deviation from Enūma eliš (`שָׁכַב`), because *nâlu* needs `שָׁכַב` (X 70, Job 14:12). *napištu* "breath" = `נֶפֶשׁ` (איוב מא:יג `נַפְשׁוֹ גֶּחָלִים תְּלַהֵט`, of Leviathan [cognate]). *šullumu* "keep safe" ~ `שָׁלֵם` [cognate]: `לְמַעַן שְׁלוֹם` keeps the root without `שָׁמַר`. *šâmu* = `גָּזַר`; `גּוֹרָל` is written only where the Akkadian has *šīmtu* (*išīmšu* "he decreed (it) for him" = `גָּזַר לוֹ`). *pulḫātu* = `אֵימוֹת` (creation corpus). *luʾtu* "feebleness" = `רִפְיוֹן`.
+Notes: *naṣāru* = `נָצַר` (never `שָׁמַר`): Gen 3:24 `לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` is the [equivalent], tagged in the apparatus (with `וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן אֶת הַכְּרֻבִים`). *sakāpu* "lie down, rest" = **נָם** (תהלים קכא:ד `לֹא יָנוּם וְלֹא יִישָׁן`), a deviation from Enūma eliš (`שָׁכַב`), because *nâlu* needs `שָׁכַב` (X 70, Job 14:12). *napištu* "breath" = **נֶפֶשׁ** (איוב מא:יג `נַפְשׁוֹ גֶּחָלִים תְּלַהֵט`, of Leviathan [cognate]). *šullumu* "keep safe" ~ `שָׁלֵם` [cognate]: `לְמַעַן שְׁלוֹם` keeps the root without `שָׁמַר`. *šâmu* = `גָּזַר`; `גּוֹרָל` is written only where the Akkadian has *šīmtu* (*išīmšu* "he decreed (it) for him" = `גָּזַר לוֹ`). *pulḫātu* = `אֵימוֹת` (creation corpus). *luʾtu* "feebleness" = `רִפְיוֹן`.
 
 ### 3.2 The ale-wife's, the boatman's and Ūta-napišti's question, and Gilgameš's answer (X 40–71, 113–148, 213–248; partly VIII)
 | X (first copy) | Akkadian | Hebrew |
@@ -144,7 +144,7 @@ Each occurrence is tagged in the apparatus and listed in the tablet's parallels 
 | *nadû* (throw down) | הִשְׁלִיךְ | [divergence] ↔ `וַיָּשֶׂם שָׁם אֶת הָאָדָם` (ב:ח) | I 100 *ittadi ina ṣēri*. |
 | *šakānu* | שָׂם | [equivalent] ↔ `וַיָּשֶׂם` (ב:ח); `וְאֵיבָה אָשִׁית` (ג:טו); `שֵׁם` + `שׂים` | **Reserved** (creation corpus §5.2): every `שׂים` stands for *šakānu*. Idioms by sense with a note (flood XI: *šakānu abūba* = `חוֹלֵל`). *šuma šakānu* = `שָׂם שֵׁם` ↔ `וְנַעֲשֶׂה לָּנוּ שֵׁם` (יא:ד) [equivalent; *šumu* = `שֵׁם` cognate]. |
 | *ṣēru* (open country) | שָׂדֶה | [equivalent] ↔ `חַיַּת הַשָּׂדֶה` (ב:יט–כ; ג:א, יד); `שִׂיחַ הַשָּׂדֶה` (ב:ה); `עֵשֶׂב הַשָּׂדֶה` (ג:יח); `אִישׁ שָׂדֶה` (כה:כז) | Binding from flood XI 86 (*būl ṣēri* = `בֶּהֱמַת הַשָּׂדֶה`); a deviation from Enūma eliš (`עֲרָבָה`), §8. Homograph: *ṣēru* "back" (*eli ṣērīšu* "upon him") = `עַל`, by sense; *ṣerru* "snake" = `נָחָשׁ`. |
-| *būlu*; *umāmu*; *nammaššû* | בְּהֵמָה (*būl ṣēri* = `בֶּהֱמַת הַשָּׂדֶה`); חַיָּה (*umām ṣēri* = `חַיַּת הַשָּׂדֶה`); הַנָּע (pl. `הַנָּעִים`) | [equivalent] ↔ `לַבְּהֵמָה … וּלְכֹל חַיַּת הַשָּׂדֶה` (ב:כ) | Flood: *nammaššû* is **never** `רֶמֶשׂ`. |
+| *būlu*; *umāmu*; *nammaššû* | בְּהֵמָה (*būl ṣēri* = `בֶּהֱמַת הַשָּׂדֶה`); חַיָּה (*umām ṣēri* = `חַיַּת הַשָּׂדֶה`); הַנָּע (pl. `הַנָּעִים`) | [equivalent] ↔ `לְכָל הַבְּהֵמָה וּלְעוֹף הַשָּׁמַיִם וּלְכֹל חַיַּת הַשָּׂדֶה` (ב:כ) | Flood: *nammaššû* is **never** `רֶמֶשׂ`. |
 | *šammu* | עֵשֶׂב | [equivalent] ↔ `וְאָכַלְתָּ אֶת עֵשֶׂב הַשָּׂדֶה` (ג:יח); [divergence] ↔ `עֵץ הַחַיִּים` (ב:ט; ג:כב) | One word for Enkidu's grass (I 108) and the plant of rejuvenation (XI 283–306): the source of life is a herb, not a tree. Not `צֶמַח` (would echo `יִצְמָח`, ב:ה, ט). |
 | *akālu*; *akalu* | אָכַל [cognate]; לֶחֶם | [equivalent] ↔ `בְּזֵעַת אַפֶּיךָ תֹּאכַל לֶחֶם` (ג:יט) | *akalu* is the root of `אכל`: noted. *akāla šūkulu* = `הֶאֱכִיל לֶחֶם`. Creation corpus: *akal balāṭi* = `לֶחֶם הַחַיִּים`. |
 | *šikaru*; *kurunnu*; *sīrāšu* | שֵׁכָר [cognate]; סֹבֶא מֻבְחָר; סֹבֶא | | Flood. *šatû* = `שָׁתָה` [cognate]; *šaqû* = `הִשְׁקָה` [cognate]. |
@@ -167,7 +167,7 @@ Each occurrence is tagged in the apparatus and listed in the tablet's parallels 
 | *šumu* | שֵׁם [cognate] | ↔ יא:ד; ו:ד | *šuma šakānu* = `שָׂם שֵׁם`; *nabû* (*nabi šumšu*) = `נִקְרָא שְׁמוֹ` (creation corpus: `קָרָא` reserved for *nabû*). |
 | *pašāru* | פָּשַׁר (`פּוֹשֵׁר`, `פֵּשֶׁר`) | [cognate] (Aramaic/late Hebrew); [equivalent] ↔ `פֹּתֵר`, `פִּתְרוֹן` (מ–מא) | §2. **Never `פָּתַר`** in the `>` lines. |
 | *šuttu*; *tabrīt mūši* | חֲלוֹם; חֶזְיוֹן לַיְלָה | [equivalent] ↔ מ–מא | Flood XI: *šuttu* = `חֲלוֹם`. |
-| *šanāt pê* (VI 104, 110) | שְׁנוֹת מוֹץ | [divergence] ↔ `שֶׁבַע שְׁנֵי רָעָב` (מא:כז, ל) | *pû* "chaff" = `מוֹץ` (תהלים א:ד). *sebe* = `שֶׁבַע` [cognate]. |
+| *šanāt pê* (VI 104, 110) | שְׁנוֹת מוֹץ | [divergence] ↔ `שֶׁבַע שְׁנֵי רָעָב` (מא:כז, ל) | *pû* "chaff" = **מוֹץ** (תהלים א:ד). *sebe* = `שֶׁבַע` [cognate]. |
 | *paḫāru* D (gather) | קִבֵּץ | [equivalent] ↔ `וְיִקְבְּצוּ אֶת כָּל אֹכֶל` (מא:לה); `וַיִּקְבֹּץ` (מא:מח) | Flood XI (*paḫāru* G/D = `הִתְקַבֵּץ` / `קִבֵּץ`). VI 104, 110. |
 | *šapāku* (heap up grain); *tabāku* | שָׁפַךְ [cognate]; יָצַק | [divergence] ↔ `וַיִּצְבֹּר יוֹסֵף בָּר` (מא:מט) | Flood shared. **`צָבַר` is not used** in the `>` lines (it would pre-empt Gen 41:49). |
 | *karû* (grain heap); *kurummatu* (ration); *ašnan* (grain) | כְּרִי [cognate]; מָנָה; דָּגָן | | Creation corpus (*karû*, *ašnan*). |
@@ -191,7 +191,7 @@ Each occurrence is tagged in the apparatus and listed in the tablet's parallels 
 | *eklētu*; *eṭûtu*; *nūru* | חֲשֵׁכָה; עֲלָטָה; אוֹר | | Flood shared (*eṭûtu*, *ekēlu* = `הֶחְשִׁיךְ`). IX: *dannat ekletu-ma ul ibašši nūru* fixed at the first copy. |
 | *ibru*; *râmu*; *ḫabābu* | רֵעַ; אָהַב [equivalent]; חִבֵּק | | Law corpus (*râmu* = `אָהַב`). *ḫabābu* "caress, embrace" (I 185, 254). |
 | *mašālu* (be like) | מָשׁוּל, הִמְשִׁיל [cognate] | | Creation corpus. *mitḫāru* = `שָׁוֶה`; *maḫāru* "match, be equal" = `שָׁוֶה` (flood XI) ↔ `עֵזֶר כְּנֶגְדּוֹ` (ב:יח, כ) [equivalent]: I 95, VII 95–96, never `כְּנֶגְדּוֹ`. *šāninu* "rival" = `מִתְחָרֶה`. |
-| *ṣayyādu*; *ḫābilu* | צַיָּד [cognate]; לוֹכֵד | ↔ `גִּבֹּר צַיִד` (י:ט); `אִישׁ יֹדֵעַ צַיִד אִישׁ שָׂדֶה` (כה:כז) | |
+| *ṣayyādu*; *ḫābilu* | צַיָּד [cognate]; לוֹכֵד | ↔ `גִבֹּר צַיִד` (י:ט); `אִישׁ יֹדֵעַ צַיִד אִישׁ שָׂדֶה` (כה:כז) | |
 | *mašqû* | שֹׁקֶת | [cognate root שקה] | `בְּשִׁקְתוֹת הַמָּיִם` (ל:לח). Not `מַשְׁקֶה`, which reads "drink". |
 | *rēʾû*; *nāqidu*; *ṣēnu*; *tarbaṣu*; *supūru* | רוֹעֶה [cognate]; נוֹקֵד [loan]; צֹאן; רֶבֶץ / דִּיר; דִּיר | ↔ `רֹעֵה צֹאן` (ד:ב) | Creation corpus (*nāqidu*). |
 | *ikkaru*; *errēšu* | אִכָּר [loan]; אָרִיס | ↔ `עֹבֵד אֲדָמָה` (ד:ב) | |
@@ -411,6 +411,9 @@ Accepted as binding (context: `annotated-IV.rtl.md`). The IV incubation cycle (b
 4. **§7 "always vocalize"**: `קָהֶה` (numb / "blunt" fem.), `כָּרוּ` (dug / "they hired"), `נִפְּחָה` (vs `נַפָּחָה` "smith"), `נוֹלַדְתָּ` (gender), `נָשִׂים` (we put / women), `יִנָּפְחוּ`, `בָּרָק`; and `גִּילְגָּמֶשׁ` with yod when the first occurrence stands in a repeated line (the defective `גִּלְגָּמֶשׁ` fails the strip test against `גילגמש`).
 5. **verify.py**: nothing needed. A §3.3 check (the canonical cycle strings against every copy, consonants only, like §3.2 for X) would serve OB Schøyen₂.
 
+## 21. After the small OB tablets (2026-10-18)
+The proposals of OB Schøyen₂, Nippur, Harmal₁, Ishchali, Harmal₂ and IM are in their sections of `2-הנוסח-הבבלי-הקדום/project.md` (names: Ebla `אֶבְלָה`, Ḫamran `חַמְרָן`, Ninsumuna `נִינְסוּמוּנָה`, Amurru `הָאֱמוֹרִי`, Harmal *Ḫubibi* `חוּבִּיבִי`); they bind any later OB work and are accepted as recorded there.
+
 ## Changelog
 - 2026-10-17: seed written by the corpus coordinator before Tablet I, from the flood, creation and law corpora and a reading of I, II, VI, VII, X and XI 207–328 in eBL.
 - 2026-10-17: §9 merged from Tablet I.
@@ -425,3 +428,4 @@ Accepted as binding (context: `annotated-IV.rtl.md`). The IV incubation cycle (b
 - 2026-10-18: §18 merged from Tablets IX and XII.
 - 2026-10-18: §19 merged from OB III.
 - 2026-10-18: §20 merged from Tablet IV.
+- 2026-10-18: §21 (small OB tablets).

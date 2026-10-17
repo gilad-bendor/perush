@@ -18,9 +18,14 @@ The Old Babylonian epic (*šūtur eli šarrī*, "Surpassing all kings"), c. 1800
 - OB names: Ḫuwawa = `חוּוָוה`; Sursunabu = `סוּרְסוּנַבּוּ` (= SB Ur-šanabi, noted); Ūta-naʾištim = `אוּתְנַאִישְׁתִּים` (noted); Šamḫat; Enkidu; Ninsun (OB *Ninsumun* = `נִינְסוּמוּן`).
 
 ## Open decisions for the user
-(Collected from the tablet sections by the coordinator.)
+Collected by the coordinator (2026-10-18); each tablet section below has its own list (VA+BM 6, II 7, III 7, Schøyen₂ 7, Nippur 4, Harmal₁ 4, Ishchali 5, Harmal₂ 4, IM 3). Cross-tablet:
+1. *dâlu* "wander" = `סוֹבֵב` (chosen, keeping `נָע` of Gen 4:12 out) or `נָע`.
+2. The OB spelling of Šamḫat (*Šamkatum* where the tablet writes it) – kept `שַׁמְחַת`.
+3. The Harmal spelling *Ḫubibi* = `חוּבִּיבִי` or the usual `חוּוָוה`.
+4. OB III 148 `העמדתי` (*šuma šuzuzzu*) vs 160/188 `אָשִׂים לי` (*šuma šakānu*): both kept distinct.
 
 ## Status / progress log
+- **2026-10-18: complete (first draft).** OB VA+BM 87, OB II 145, OB III 219, and the lower-priority Schøyen₂ 94, Nippur 26, Harmal₁ 21, Ishchali 47, Harmal₂ 59, IM 45 = 743 labels, by three sequential translators, three review passes each; `../verify.py --strict` 0 problems; `translation.rtl.md` built (narrative order); print stub `../../הדפסה/אפוס-גילגמש/2-הנוסח-הבבלי-הקדום.rtl.md`. Not translated: OB UM, Schøyen₁, Schøyen₃, CUNES, SM (small and broken; not fetched) and the MB/NA chapters.
 - 2026-10-17: eBL chapters fetched (VA+BM, II, III, Schøyen₂, Nippur, Harmal₁, Ishchali, Harmal₂, IM); SEAL pages saved; project brief written by the coordinator.
 
 ---
@@ -541,3 +546,494 @@ OB III (the Yale tablet, YBC 2178; eBL BabaOB1; the companion of OB II, by the s
 - **A per-run brief can misquote the key line**: the "*šumī lultakan*" of the prompt does not exist in OB III; the tablet has *šumī lū ušzīz* (148, *izuzzu* Š) and *šuma … luštaknam* (160, 188, *šakānu* Gt). Check every key-case quotation against the edition before building a parallel on it; here the difference itself is a finding (a name "set up" like a stele vs a name "placed").
 - **eBL's "=" between an OB and an SB line can join lines that share only a frame** (108 *nummât* vs SB *išemmē-ma … rimmāt*; 109 *libbīša* vs *qištīšu*): compare the normalizations word by word before copying a fixed passage.
 - **The tense of a rhetorical question carries the parallel**: *mannu … ēlû* (preterite + subjunctive) is "who went up", exactly Prov 30:4 `מִי עָלָה שָׁמַיִם`; the modal English ("can climb") hides it.
+
+## Tablet OB-Schoyen2
+
+### Scope
+OB Schøyen₂ (MS 3025, Schøyen Collection; eBL BabaOB1; provenance unknown, Babylonia), all 94 eBL labels (1a–84; tablet lines with two verses split a/b): obv. 1a–45 (Gilgameš lies down and asks the night for a dream; dream 1: the mountain that collapsed on him and the shining man who pulled him out; Enkidu's interpretation "the one you saw was King Šamaš; in days of distress he will take your hand"; the march to the land of Ebla; Gilgameš on the hill; the sleep "that spills over people"; dream 2: Adad cries out, lightning, "death was raining down", the god comes forth), lower edge 46–48, rev. 49–84 (Enkidu's interpretation "your dreams are favourable, a god is ⟨with⟩ you"; the march to Ḫamran, the mountain of the Amorite; they hear Ḫuwawa's voice daily; "the guardian of the cedar who turns back every breast"; the cedar's auras "covering the uplands"; Enkidu's terror and Gilgameš's "do not fear, Enkidu, protect me!"; the night camp; catch-line "my friend, I have seen a third (dream)!"). Single manuscript, almost complete; damaged: 1b, 9–10, 43–51, 53–60a, 78–81.
+
+### Sources consulted
+- eBL `L/1/4` OB Schøyen₂ (`../../sources/eBL/Gilgamesh-OB-Schoeyen2/reading-edition.md`: N, T, L, all notes – George 2003 (RN117) and the revised readings after cleaning (RN127), with Khait and Nurullin 2006 –, parallels, ATF; `glossary.md` for stems).
+- SEAL 1532 (`../../sources/SEAL/Gilgamesh-OB/node-1532--Gilg-OB-Schoyen2.md`): the old (2003) transliteration, lemmas and translation; used as a record of the readings eBL has revised (1b, 6, 9, 18, 38, 42, 52, 58, 61–62, 69–74, 78–81, 83).
+- `python3 -I parallels_for.py OB-Schoyen2 --all` (55 lines with parallels); `../renderings.md` incl. §9–§20 (the IV incubation cycle, §20, binding); the SB IV section of `../1-הנוסח-הבבלי-התקני/project.md` and `annotated-IV.rtl.md` (1–33, 84–109, 155–162, b+1′–b+7′, 210–219); OB II and OB III annotated files (formulas, 104–105, 77–78, 165–166); SB II 191.
+- George's translation (eBL T) after drafting; Tchernichovsky 1924 (ll. 1610–1735, his "Tablet V" = SB IV) after pass (c).
+- The vocalized Bible through `../../tools/check_bible_quotes.py --show`.
+
+### Decisions
+1. **Generated from one data file** (scratchpad `S2.txt` + `gen.py`): eBL's N and George's T are inserted by script; the annotated `>` lines and the clean translation are identical by construction (`gen.py` serves all six tablets of this run).
+2. **The IV cycle (§20) copied where the Akkadian is identical, changed exactly where it differs**: 30 = IV 93 `השינה הניתכת על האנשים – עליו נפלה.` (OB *imqussu* "fell on him" for SB *elīšu imqut*: same sense, same Hebrew); 29 `על כרעיו סמך את סנטרו,` (no name: IV 92 has *gilgāmeš*); 2 = 31 `באמצע (הלילה) הבהילה אותו שנתו,` (OB *ugallissu* "his sleep startled him", *galātu* D = `הבהיל` §19, for SB *uqatti* `כילה`); 3 = 32 `קם, שָׂח אל רֵעֵהוּ:` (no *-ma*, so no `ו`); 4a `רֵעִי, ראיתי חלום!`, 33a / 84 `ראיתי (חלום) שני / שלישי!` (OB has no *šuttu*: `(חלום)`); 34 `צעק אֲדַד, הארץ רועשת,` (IV 101: the heavens, the ground); 35 `היום חָבַשׁ (את ראשו)` (*apāru* = `חבש`, VI; IV 102 *ušḫarrir* `קפא`); 36 = IV 103; 37 G for SB Gtn (no `פעם אחר פעם`); 40–41 the OB words (*adī-ma kīam-ma*, *šuppūtum*, plural *itūrū laʾmiš* `נהפכו לאודים`).
+3. **The dream verbs**: *šittu* = `שֵׁנָה` (2, 30, 31, 83; never `תַּרְדֵּמָה` – Job 4:13 and Gen 15:12 only in the apparatus); *šuttu* = `חֲלוֹם`; ***pašāru* = `פּוֹשֵׁר`** (13a, 44a, 83) – this OB tablet has the cognate of `פֵּשֶׁר` where SB IV has *šumḫuru* (`מרצה לו את חלומו`); 83 *ipaššaršum* "revealed (the dream) to him" is `פושר לו` with the note of §2 (sense "tell"). *šasû* = `צָעַק` (34, 45). *dekû* = `הֵעִיר` (4b, 83): the OB waking question is the reverse of IV 18 – "why did you **not** rouse me?" – noted against 1 Sam 3:5.
+4. **83 follows the manuscript, not eBL's N**: N prints *šuttašu*, the ATF has *ši-it-ta-šu* (= *šittašu*), and George's own note parses it as the subject ("his sleep roused him"): `העירה אותו שנתו, ופושר לו:`. Likewise 31's eBL note "his dream startled him" is a slip for "his sleep".
+5. **38 *ennešu* = `נבוכותי`** (*ešû* N "be confused", George's revised reading); eBL's lemma *enēšu* "be weak" belongs to the old reading `en-ni-iš₇` (SEAL "I grew ever weaker"): lemma slip recorded. `נבוך` is new (IV left it as the rejected alternative for *šāšû* `מבולבל`, so the two lemmas stay apart).
+6. **The guardian lines**: 58, 60a *maṣṣar erēnim* = `נוצר הארז` (*maṣṣaru* = `נוֹצֵר`, never `שׁוֹמֵר`; the singular "cedar" as in the Akkadian, not §3.1's *nāṣir qišti erēni* `נוצר יער הארזים`); 59 = 60b *ša utarru kalīšina irātim* = `אשר משיב את כולן, את החזות` – the bodily image kept (George "repels every advance"), with *târu* D = `השיב` (the root שוב only for *târu*); 71 *mannum-ma ilam šâti igerrēšu* = `מי זה – האל ההוא – יתגרה בו,` and 72 `בָּאִיגִיגִי`, following §3.1 `מִי זֶה יִתְגָּרֶה בּוֹ בָּאִיגִיגִי?`; 73 *{d}hu* (eBL N *humbāba*) = `חוווה` (the OB name; the sign is the abbreviation of *{d}hu-wa-wa*, 16a).
+7. **The auras (*melemmū* = `זְהָרִים`)**: 62, 70 `[זהריו] / זהריו מכסים את הרמות` – the auras belong to the cedar (*-šu* on *erēnu*), not to Ḫuwawa: the forest itself radiates terror; *katāmu* = `כסה` (§17).
+8. **New words** (all grepped against every earlier `>` line; none in use for another lemma): *qâpu* = `קָרַס`; *seʾû* = `דָּחַק`; *lawû* = `סובב` (= XII *lamû*); *šalummatu* = `הוֹד` (zohar, nogah, bohaq, qeren are taken); *dannatu* = `מְצוּקָה` (`צרה` is *pašqu*, X); *parṣu* = `פֻּלְחָן` (creation corpus); *šipirtu* = `שְׁלִיחוּת` (`מלאכה` = *šipru*); *ešû* N = `נָבוֹךְ`; *laʾmu* = `אוּד` (Isa 7:4; `רמץ` = *tumru*, `גחלים` = *pēmtu*); *didallu* = `אֵפֶר`; *lēʾûtu* = `יְכוֹלֶת`; *mālaku* = `מַהֲלָךְ` (X 171); *ūmakkal* = `יום אחד`; *epēšu* Š (81) = `חולל` (`אחוללה`; `אעשה` would hide the Š; `עורר` is the root of *dekû* `הֵעִיר`); *raḫāṣu* I "rush" (54) = `שטף` (see proposal 3).
+9. **Names**: Ḫuwawa `חוּוָוה` (16a), Adad `אֲדַד` (34), Ebla `אֶבְלָה` (26; not biblical, transliterated), Ḫamran `חַמְרָן` (55), Igigi `בָּאִיגִיגִי` (72), and **Amurru = `הָאֱמוֹרִי`** (56; the biblical people, guidelines §6.4.6, plene with niqqud) – which makes Deut 1:7 `הַר הָאֱמֹרִי … וְהַלְּבָנוֹן` visible; `גִּילְגָּמֶשׁ` (1a, with yod, §20), `אֶנְקִידוּ` (13a); `שַׁמַשׁ`, `רֵעִי`, `רֵעֵהוּ`, `שָׂח`, `אֵל`, `הָבֵא`, `אַל` vocalized every time.
+10. **Readings recorded where eBL and SEAL differ** (eBL followed): 1b imperative *bila* "O night, bring!" (SEAL *ublaššu* "brought him"); 6 *iseʾʾânni* (SEAL *īsiḫanni* "girt me"); 9 *lābiš [iṭḫ]eam* (SEAL *labiš [pal]âm* "clad in a royal mantle"); 18 *parṣam ša mutim šipirti zikari* (SEAL "the one of death came forth"); 42 *ilum* (SEAL Šamaš); 52 *it⟨tī⟩ka* (SEAL *idka* "your arm"); 58 *iṭṭuššunūti* "watched them" (SEAL *īdēšu-ma* "knew him"); 62 *melemmāšu* (SEAL *šurmēni* "cypresses"); 72, 74 *ina igīgī*, *ina kibrātim* (SEAL *ina qātīšu* "in his hand").
+11. **eBL lemma slips recorded**: 28 *ittanaplas* lemmatized *naplāsu* (noun; it is *palāsu* N Gtn); 29 *zuqassu* as *suqtu* (as in IV); 38 (decision 5); 83 N *šuttašu* (decision 4); 84 *šaluštam* as *šalāš* "three" (it is *šalšu* "third").
+
+### Open decisions for the user
+1. ***dumqu* "beauty" (10)** = `חסד` (binding §10; Isa 40:6 `וְכָל חַסְדּוֹ כְּצִיץ הַשָּׂדֶה` tagged) or the open alternative `נוֹי` (`ובנוי – [נאה?]`), which a reader understands at once?
+2. ***šalummatu* = `הוֹד`** (8) – a new corpus word (Ps 21:6 `הוֹד וְהָדָר`): acceptable, or a neutral `זיו` (but *zīmu* = `זיו`, §3.2)?
+3. ***emūqu* as a body part (11) = `זרועותיי`** (George "upper arm"), the same Hebrew as *aḫu* in 8 – or the literal `כוחותיי` (keeps one lemma one word, but is opaque in Hebrew)?
+4. ***kašādu* + abstract object (53) = `תשיג`** (*kašāru* is `השיג`, §12) or the corpus's `תגיע אל תחבולותיך` (one Hebrew word for *kašādu*)?
+5. ***raḫāṣu* I (54) = `שטפו`** ("they rushed like a flood") against VII's `רמס` for the same lemma ("devastate") – a sense split, or force `רמסו`?
+6. **81 *lušēpiš* = `אחוללה`** (Š "have it done"; `חולל` also renders the idiom *šakānu abūba* in flood XI) or `אעשה` (simpler, hides the Š)?
+7. **1b `"חלום, לילה, הָבֵא(?)!"`** – the order of the Akkadian (dream first) kept; `"לילה, הָבֵא חלום!"` reads more easily.
+
+### Progress log
+- 2026-10-18: read the brief, the whole guidelines, corpus.md, renderings.md (incl. §9–§20), both project files with the IV, OB II and OB III sections, the format models and annotated-OB-III / annotated-IV; ran `parallels_for.py OB-Schoyen2 --all` (55 lines); read the whole eBL edition (N, T, L, all notes, ATF) and SEAL 1532.
+- Drafted all 94 entries in seven sections into one data file and generated `annotated-OB-Schoyen2.rtl.md` and `translation-OB-Schoyen2.rtl.md` (Hebrew introduction, 5 footnotes: 22, 30, 52, 58, 62).
+- Pass (a) fidelity: every `>` line against N and the ATF (brackets by the signs: 9 `[ניגש]`, 16b `[הלא]`, 44a–44b, 57 `[יום]`, 60a, 61, 63 `[כ]כרות`, 64 `ב[אה חר]דה`, 65a `נ[שא]`, 74, 78, 81; 36 and 41 unbracketed although IV brackets them – only one sign broken here); 14 `זה` → `(זה)` (an addition); 83 corrected to the ATF (*šittašu*).
+- Pass (b) consistency: the §20 strings and OB II 104–105, OB III 77–78, SB II 191 compared by `verify.py` (below); speech formulas (13b = 44b = 68b; 65b = 77b; 68a, 77a as OB III); reserved strings grepped in the plain `>` lines: `שׂים` only *šakānu* (51), `ידע` only *edû* (39, 81), שוב only *târu* (59, 60b `משיב`; 41 `נהפכו` for *târu* + ‑iš), no `שמר`, `תרדמה`, `קרא`, `פתר`, `טוב`, `עולם`, `אלוהים`, `עפר`, `טיט`, `עשב`, `עץ`, `נחש`, `לקח`; every new string grepped against all earlier `>` lines (`הוד` occurred only inside `הודיעה`; `קרס` only inside `קרסולו`; `אפר` only inside `אפרוח`, `ואפרוט`).
+- Pass (c) Hebrew: read aloud; kept the literal `זרועותיי – הוד חזק עליהן`, `אשר משיב את כולן, את החזות`, `מלון – נמו, שכבו`. Tchernichovsky 1924 has no Schøyen text (published 2003); his SB-IV dream passage imports `וְתַרְדֵּמָה נָפְלָה` (Gen 15:12), `בַּחֲצִי הַלַּיְלָה נָדְדָה שְׁנָתוֹ` (Esth 6:1), `הַאַתָּה קָרָאתָ לִי` (1 Sam 3), `טוֹב הַחֲלוֹם … וְזֶה פִּתְרוֹנוֹ` (Gen 40:12, 16), `הָיָה לְעָפָר מִן הָאֲדָמָה` (Gen 2:7) and `וַיַּשְׁכֵּם` – none in the Akkadian; nothing changed in ours.
+- `python3 -I verify.py OB-Schoyen2`: 94 entries = eBL 94, 94 translation lines, **problems: 0**; 39 differences in repeated lines (all justified below), 8 in brackets/marks only. `check_bible_quotes.py` on both files: 0 problems (5 first-draft mismatches fixed: Gen 46:2, Job 4:13 reference, 1 Kgs 18:42 `בִּרְכָּו`, Joel 1:18, Gen 21:14).
+
+### Parallels index (Tablet OB-Schoyen2)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 1a, 82 | sakip nīl; nubattam iskipū inīlū | נָם, שוכב; מלון – נמו, שכבו | `וַיָּלֶן שָׁם כִּי בָא הַשֶּׁמֶשׁ … וַיִּשְׁכַּב בַּמָּקוֹם הַהוּא` (בראשית כח:יא) | [equivalent] | **Key.** The traveller lies down for the night on the way and dreams (Gen 28:12); the tablet opens and closes with the same two verbs. |
+| 1b | šunatam mušiyatum bila | חלום, לילה, הָבֵא(?)! | `וַיֵּרָא אֵלָיו יְהוָה בַּלַּיְלָה הַהוּא` (בראשית כו:כד); `בְּמַרְאֹת הַלַּיְלָה` (בראשית מו:ב) | [equivalent] | The dream asked for (incubation); SB IV 87 asks the mountain. Reading as imperative is Khait–Nurullin/George (SEAL: "the night brought him"). |
+| 2, 31 | ina qablītim šittašu ugallissu | באמצע (הלילה) הבהילה אותו שנתו | `וַתִּתְפָּעֶם רוּחוֹ וּשְׁנָתוֹ נִהְיְתָה עָלָיו` (דניאל ב:א); `וַתִּפָּעֶם רוּחוֹ` (בראשית מא:ח) | [equivalent] | The dreamer startled out of sleep at midnight. |
+| 2, 31 | šittašu | שנתו | `וַיִּיקַץ יַעֲקֹב מִשְּׁנָתוֹ` (בראשית כח:טז) | [divergence] | *šittu* = `שינה` (never `תרדמה`); Jacob wakes in the morning, Gilgameš at midnight. |
+| 3, 13a | itbe ītawwâ ana ibrīšu; enkīdu šuttam ipaššar | קם, שָׂח אל רֵעֵהוּ; אנקידו פושר חלום | `וְהִנֵּה אִישׁ מְסַפֵּר לְרֵעֵהוּ חֲלוֹם` (שופטים ז:יג); `וַיַּעַן רֵעֵהוּ וַיֹּאמֶר אֵין זֹאת בִּלְתִּי אִם חֶרֶב גִּדְעוֹן` (שופטים ז:יד) | [equivalent] | **Key.** A dream told to a friend on the eve of battle and interpreted by the friend as victory. |
+| 13a, 44a, 83 | šuttam ipaššar | פושר חלום | `וּמִי יוֹדֵעַ פֵּשֶׁר דָּבָר` (קהלת ח:א) | [cognate] | *pašāru* / פשר; the OB tablet has it where SB IV has *šumḫuru*. |
+| 13a, 44a | šuttam ipaššar | פושר חלום | `וּפֹתֵר אֵין אֹתוֹ` (בראשית מ:ח) | [equivalent] | Joseph's `פֹּתֵר`; `פתר` is not used in the Hebrew. |
+| 4b | ammīnim lā tedkianni | למה לא העירותני? | `הִנְנִי כִּי קָרָאתָ לִּי` (שמואל א ג:ה) | [divergence] | SB IV 18 asks "did you not call me?" (as Samuel to Eli); the OB asks the reverse: why did you **not** rouse me. |
+| 4b, 33b | mādiš palḫat; eli šuttim … palḫat | מאוד מפחיד (היה); מפחיד (הוא) יותר | `פַּחַד קְרָאַנִי וּרְעָדָה` (איוב ד:יד) | [equivalent] | The terror of the night vision. |
+| 7, 20 | birkīya iltawi lūtum; ulawwa puluḫtašu birkīka | את ברכיי סובב רפיון; אימתו תסובב את ברכיך | `וּבִרְכַּיִם כֹּשְׁלוֹת אַמֵּצוּ` (ישעיהו לה:ג) | [equivalent] | Weak knees; *luʾtu* = `רפיון` of §3.1 (the feebleness that seizes whoever enters the forest). |
+| 8 | šalummatum | הוד | `הוֹד וְהָדָר תְּשַׁוֶּה עָלָיו` (תהלים כא:ו) | [equivalent] | Divine/royal radiance; new word (open decision 2). |
+| 10 | dumqam-ma | ובחסד | `וְכָל חַסְדּוֹ כְּצִיץ הַשָּׂדֶה` (ישעיהו מ:ו) | [equivalent] | `חסד` = "beauty" (binding *dumqu* = חסד; open decision 1). |
+| 12, 22 | ištalpanni; iṣabbat qātka | שלף אותי; יאחז בידך | `יִשְׁלַח מִמָּרוֹם יִקָּחֵנִי יַמְשֵׁנִי מִמַּיִם רַבִּים` (שמואל ב כב:יז) | [equivalent] | The god pulls the hero out from under the mountain. |
+| 15 | nukkur mimma | מנוכר הוא בכל | `וַיִּתְנַכֵּר אֲלֵיהֶם` (בראשית מב:ז) | [cognate] | *nakāru* / נכר (as IV 215). |
+| 18 | šipirti zikari | שליחות של זכר | `זָכָר וּנְקֵבָה בָּרָא אֹתָם` (בראשית א:כז) | [cognate] | *zikaru* / `זָכָר`; here "the task of a male" = single combat. Rests on George's revised reading (SEAL reads otherwise). |
+| 21 | u ša tāmurūšu šamaš-ma šarru | ואשר ראית אותו – שַׁמַשׁ הוא, המלך | `וְהִנֵּה הַשֶּׁמֶשׁ וְהַיָּרֵחַ וְאַחַד עָשָׂר כּוֹכָבִים מִשְׁתַּחֲוִים לִי` (בראשית לז:ט) | [divergence] | The sun in a dream: in Joseph's, his father; here the god who rescues. |
+| 21 | šamaš-ma šarru | שַׁמַשׁ הוא, המלך | `כִּי שֶׁמֶשׁ וּמָגֵן יְהוָה אֱלֹהִים` (תהלים פד:יב) | [equivalent] | The sun as protector. |
+| 22 | ina ūmī ša dannatim iṣabbat qātka | בימי מצוקה יאחז בידך | `לָאֵל הָעֹנֶה אֹתִי בְּיוֹם צָרָתִי וַיְהִי עִמָּדִי בַּדֶּרֶךְ אֲשֶׁר הָלָכְתִּי` (בראשית לה:ג) | [equivalent] | **Key.** The god who helps "in the day of distress" and is with the traveller on the road (Bethel). |
+| 22 | iṣabbat qātka | יאחז בידך | `וְאַחְזֵק בְּיָדֶךָ` (ישעיהו מב:ו); `אָחַזְתָּ בְּיַד-יְמִינִי` (תהלים עג:כג) | [equivalent] | The god takes the hand. |
+| 24 | īliṣ libbašū-ma pānūšu ittamrū | עלץ לבו, ופניו האירו | `עָלַץ לִבִּי בַּיהוָה` (שמואל א ב:א); `יָאֵר יְהוָה פָּנָיו אֵלֶיךָ` (במדבר ו:כה) | [equivalent] | = OB II 104–105. |
+| 26, 56 | ana māt-ibla; [ša]d amurrum wašbu | אל ארץ אֶבְלָה; [הר] (אשר) הָאֱמוֹרִי יושב (בו) | `וּבֹאוּ הַר הָאֱמֹרִי … וְהַלְּבָנוֹן עַד הַנָּהָר הַגָּדֹל נְהַר פְּרָת` (דברים א:ז) | [cognate] | **Key.** *Amurru* = `הָאֱמֹרִי`; the road from the Euphrates to the Lebanon passes "the mountain of the Amorite" in both. `[הר]` is restored (or *[mā]t* "land"). |
+| 56 | amurrum | הָאֱמוֹרִי | `כִּי לֹא שָׁלֵם עֲוֹן הָאֱמֹרִי עַד הֵנָּה` (בראשית טו:טז) | [cognate] | The name. |
+| 27 | īlī-ma gilgāmeš ana ṣēr šadîm | עלה גילגמש על גב ההר | `וַיַּעַל מֹשֶׁה אֶל הָהָר` (שמות כד:טו) | [equivalent] | Ascent before the revelation (dream 2: storm on the mountain). |
+| 29 | ina kimṣīšu ummidam zuqassu | על כרעיו סמך את סנטרו | `וַיִּגְהַר אַרְצָה וַיָּשֶׂם פָּנָיו בֵּין בִּרְכָּו` (מלכים א יח:מב) | [equivalent] | The incubation posture; Elijah awaits a sign from heaven. |
+| 30 | šittum rāḫiat nišī imqussu | השינה הניתכת על האנשים – עליו נפלה | `בִּנְפֹל תַּרְדֵּמָה עַל-אֲנָשִׁים` (איוב ד:יג) | [equivalent] | **Key.** The same phrase: sleep "falling on people" in a night vision. Hebrew `שינה` (*šittu*), not `תרדמה`. |
+| 30 | imqussu | עליו נפלה | `וְתַרְדֵּמָה נָפְלָה עַל אַבְרָם` (בראשית טו:יב) | [equivalent] | Sleep that "falls on" the man before the vision; *maqātu* = `נפל`. |
+| 33a | ibrī ātamar šanītam | ראיתי (חלום) שני | `וַיִּישָׁן וַיַּחֲלֹם שֵׁנִית` (בראשית מא:ה); `וַיַּחֲלֹם עוֹד חֲלוֹם אַחֵר` (בראשית לז:ט) | [equivalent] | A second dream after the first. |
+| 34–37 | issi adad; [i]briq birqum; innapiḫ išātum | צעק אדד; בָּרַק בָּרָק; נִפְּחָה אש | `וַיְהִי קֹלֹת וּבְרָקִים וְעָנָן כָּבֵד עַל הָהָר` (שמות יט:טז) | [equivalent] | Storm theophany on a mountain: voice, lightning, fire. |
+| 36 | [i]briq birqum | בָּרַק בָּרָק | `בְּרוֹק בָּרָק וּתְפִיצֵם` (תהלים קמד:ו) | [cognate] | The same figura etymologica. |
+| 36 | innapiḫ | נִפְּחָה | `וַיִּפַּח בְּאַפָּיו נִשְׁמַת חַיִּים` (בראשית ב:ז) | [cognate] | *napāḫu* / `נפח`, here of kindling fire. |
+| 37 | izannun mūtum | נִמְטָר מוות | `וַיהוָה הִמְטִיר עַל סְדֹם וְעַל עֲמֹרָה גָּפְרִית וָאֵשׁ` (בראשית יט:כד) | [equivalent] | Death/fire raining from the sky. |
+| 41 | itūrū laʾmiš | נהפכו לאודים | `כִּי עָפָר אַתָּה וְאֶל עָפָר תָּשׁוּב` (בראשית ג:יט) | [divergence] | *târu* + ‑iš "turn into"; `נהפך` (§20), the root שוב not used. |
+| 41 | laʾmiš | לאודים | `מִשְּׁנֵי זַנְבוֹת הָאוּדִים הָעֲשֵׁנִים הָאֵלֶּה` (ישעיהו ז:ד) | [equivalent] | Smouldering firebrands. |
+| 42 | ilum ittaṣi | הָאֵל יצא | `יְהוָה מִסִּינַי בָּא וְזָרַח מִשֵּׂעִיר לָמוֹ` (דברים לג:ב); `יְהוָה בְּצֵאתְךָ מִשֵּׂעִיר` (שופטים ה:ד) | [equivalent] | The god "comes forth" like the sunrise after the storm. eBL *ilum* (SEAL: Šamaš). |
+| 48 | inawwirā īnāka | ותאורנה עיניך | `רְאוּ נָא כִּי אֹרוּ עֵינַי` (שמואל א יד:כט) | [equivalent] | Eyes that "brighten" after fear and fatigue. |
+| 51 | tašakkanam ana didallī | תשׂים לאפר | `וָאוֹצִא אֵשׁ מִתּוֹכְךָ הִיא אֲכָלַתְךָ וָאֶתֶּנְךָ לְאֵפֶר עַל הָאָרֶץ` (יחזקאל כח:יח) | [equivalent] | Fire that turns into ashes – in Ezekiel the fate of the "cherub" in "Eden, the garden of God" (28:13–14). |
+| 52 | damqā šunātūka ilum it⟨tī⟩ka | נאים חלומותיך, אֵל ⟨עמך⟩ | `וְהִנֵּה אָנֹכִי עִמָּךְ וּשְׁמַרְתִּיךָ בְּכֹל אֲשֶׁר תֵּלֵךְ` (בראשית כח:טו) | [equivalent] | **Key.** The dream on the road means "God is with you"; rests on George's emendation *it⟨tī⟩ka* (SEAL *idka* "your arm"). |
+| 52 | ilum it⟨tī⟩ka | אֵל ⟨עמך⟩ | `אֱלֹהִים עִמְּךָ בְּכֹל אֲשֶׁר אַתָּה עֹשֶׂה` (בראשית כא:כב) | [equivalent] | Same formula; *ilu* = `אל` (never `אלוהים`). |
+| 57 | ūmišam ištenemmû rigim ḫuwāwa | [יום] יום שומעים (הם) את קול חוווה | `וַיִּשְׁמְעוּ אֶת קוֹל יְהוָה אֱלֹהִים מִתְהַלֵּךְ בַּגָּן` (בראשית ג:ח) | [equivalent] | **Key.** The voice heard from the forest/garden; in Genesis the hearers hide (3:8b), here Enkidu blanches (63–64). |
+| 57 | rigim ḫuwāwa | קול חוווה | `שׁוֹמֵעַ הוּא לְשִׁשִּׁים בֵּרוּ אֶת הֶמְיַת הַיַּעַר` (§3.1, SB II 222) | [divergence] | In the fixed passage the guardian hears the intruders; here they hear him. (Intra-corpus.) |
+| 58, 60a | maṣṣar erēnim | נוצר הארז | `וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן אֶת הַכְּרֻבִים … לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` (בראשית ג:כד) | [equivalent] | **Key.** The guardian of the gods' place; *maṣṣaru* = `נוֹצֵר`, never `שׁוֹמֵר`; here he "watches them" (*iṭṭuššunūti*, revised reading; SEAL "knew him"). |
+| 59, 60b | ša utarru kalīšina irātim | אשר משיב את כולן, את החזות | `וְאֵת לַהַט הַחֶרֶב הַמִּתְהַפֶּכֶת` (בראשית ג:כד) | [divergence] | The sword "turns every way" to keep off; the guardian "turns back every breast". *târu* D = `השיב`. |
+| 61, 69 | išši īnīšu ītamar erēnam; aššī-ma īnīya ātamar | נשא את עיניו, ראה את הארז; נשאתי … את עיניי, וראיתי | `וַיִּשָּׂא אַבְרָהָם אֶת עֵינָיו וַיַּרְא וְהִנֵּה אַיִל` (בראשית כב:יג); `וָאֶשָּׂא עֵינַי וָאֵרֶא בַּחֲלוֹם` (בראשית לא:י) | [cognate] | *īnā našû* / `נשא עיניים` + "see". 61 has the verb restored. |
+| 62, 70 | melemmāšu katim ḫursānī | זהריו מכסים את הרמות | `וְאֵת לַהַט הַחֶרֶב הַמִּתְהַפֶּכֶת` (בראשית ג:כד) | [equivalent] | **Key.** The aura (*melemmū* = `זְהָרִים`) at the forest; here it belongs to the cedar itself. 62 restored from 70. |
+| 62, 70 | melemmāšu katim | זהריו מכסים | `כִּסָּה שָׁמַיִם הוֹדוֹ` (חבקוק ג:ג) | [equivalent] | A radiance that "covers"; *katāmu* = `כסה`. |
+| 62, 70 | katim ḫursānī (of the cedar) | מכסים את הרמות | `כָּסּוּ הָרִים צִלָּהּ; וַעֲנָפֶיהָ אַרְזֵי-אֵל` (תהלים פ:יא) | [equivalent] | Mountains covered by the tree; "cedars of God". |
+| 63, 66, 75 | īriqū pānūšu | הוריקו פניו | `וְנֶהֶפְכוּ כָל פָּנִים לְיֵרָקוֹן` (ירמיהו ל:ו) | [cognate] | *arāqu* / ירק: faces turning pale-green with fear. |
+| 65a | gilgāmeš itbalam pānīšu | גילגמש נ[שא] את פניו | `הִנֵּה נָשָׂאתִי פָנֶיךָ` (בראשית יט:כא); `אוּלַי יִשָּׂא פָנָי` (בראשית לב:כא) | [equivalent] | "Bear the face" = take pity (*wabālu* Gt; OB III 77). |
+| 71–74 | mannum-ma ilam šâti igerrēšu … ina igīgī | מי זה – האל ההוא – יתגרה בו … בָּאִיגִיגִי | `מִי כָמֹכָה בָּאֵלִם יְהוָה` (שמות טו:יא) | [equivalent] | The rhetorical "who?" before an invincible god; Ḫuwawa called "god". |
+| 79 | [al]lak-mî it[tī]ka | '[אל]ך עמך' | `כִּי יְהוָה אֱלֹהֶיךָ הוּא הַהֹלֵךְ עִמָּךְ` (דברים לא:ו); `וְהִנֵּה אָנֹכִי עִמָּךְ` (בראשית כח:טו) | [equivalent] | The god who goes with the hero; reading partly restored, *šamšum?* uncertain. |
+| 80 | ē tādur enkīdu uṣur yâti | אַל תחרד, אנקידו, נְצוֹר אותי | `אַל תִּירָא אַבְרָם אָנֹכִי מָגֵן לָךְ` (בראשית טו:א) | [equivalent] | "Fear not" – said by the hero to his friend, who is asked to be the guard. |
+| 80 | uṣur yâti | נְצוֹר אותי | `לִשְׁמָרְךָ בְּכָל-דְּרָכֶיךָ` (תהלים צא:יא) | [equivalent] | Protection on the road; *naṣāru* = `נצר`, never `שמר`. |
+
+### Lines shared with other tablets
+- **SB IV (the §20 cycle)**: 30 = IV 93 (and 15, 48, 135, 176) in letters (marks only); changed exactly where the Akkadian changes (all listed by `verify.py`): 29 ≠ IV 92 etc. (no name, D for Gt); 2/31 ≠ IV 94 etc. (*ugallissu*); 3/32 ≠ IV 95 etc. (no *-ma*); 4a ~ IV 21 (no ordinal); 33a ≠ IV 54/99, 84 ~ IV 99 (no *šuttu*); 33b ~ IV 100 (frightening vs confused); 34 ≠ IV 101; 35 ≠ IV 102; 36 = IV 103 (marks only); 37 ≠ IV 104 (G vs Gtn); 40 ≠ IV 105; 41 ≠ IV 106; 27 ≠ IV 85 etc. (*ana ṣēr* for *ina muḫḫi*); 25/26 ≠ IV 82 (another stage formula); 44a ≠ IV 108 (*pašāru* vs *šumḫuru*); 14–16b ~ IV 215–216 (`מנוכר הוא בכל` copied); 21 ≠ IV b+3′, 22 ≠ IV b+4′ (eBL "=" links lines that share two words).
+- **OB II**: 24 = OB II 104–105 (identical). 63/66/75 ~ OB II 165–166 (`הוריקו פניו`).
+- **OB III**: 65a = OB III 77, 65b = OB III 78 (brackets only). 78 ~ OB III 191 (*libbu našû*).
+- **SB II 191**: 64, 67, 76 (`באה חרדה אל לבי.`; 76 identical in letters with the closing quotation mark; 64, 67 change the suffix).
+- **Within the tablet**: 2 = 31; 3 ~ 32; 15 = 16b (brackets); 59 = 60b (final mark); 61 ~ 69; 62 = 70 (brackets); 13b = 44b = 68b; 65b = 77b; 1a ~ 82.
+- **For later tablets**: OB Harmal₁ 1a–1b ~ 27–28, 3a ~ 4a, 10–13 ~ 14–22, 16b–17a ~ 17; OB Nippur a+6 ~ 21, 15 ~ 9 – the Harmal₁ and Nippur translators (this run) copy these.
+
+### Proposals for the shared renderings
+1. **Key terms (§4)**: *šalummatu* = `הוֹד` (open decision 2); *melemmū* of the cedar (62, 70) added to the *melammu* row and the Gen 3:24 rows, with Hab 3:3 and Ps 80:11; *maṣṣar erēnim* = `נוצר הארז` beside §3.1 *nāṣir qišti erēni*; *ša utarru irātim* = `אשר משיב … את החזות` (↔ Gen 3:24 `הַמִּתְהַפֶּכֶת`); Amurru = `הָאֱמוֹרִי` (Deut 1:7); *šittu … imqussu* = the §20 string (`עליו נפלה`); *pašāru* "tell (a dream)" = `פושר לו` (83).
+2. **Names (§1)**: Ebla = `אֶבְלָה`; Ḫamran = `חַמְרָן`; Amurru = `הָאֱמוֹרִי` (always vocalized: unvocalized `האמורי` is fine but `האמרי` defective must not appear).
+3. **Ordinary words (§5)**: *qâpu* = `קָרַס`; *seʾû* = `דָּחַק`; *lawû* / *lamû* = `סובב`; *dannatu* = `מְצוּקָה`; *parṣu* = `פֻּלְחָן`; *šipirtu* = `שְׁלִיחוּת`; *ešû* N = `נָבוֹךְ`; *laʾmu* = `אוּד`; *didallu* = `אֵפֶר`; *lēʾûtu* = `יְכוֹלֶת`; *mālaku* = `מַהֲלָךְ`; *ūmakkal* = `יום אחד`; *apāru* = `חבש` (confirmed); *epēšu* Š = `חולל` (open decision 6); *raḫāṣu* I "rush (like a flood)" = `שָׁטַף` beside VII's `רמס` "devastate" (open decision 5).
+4. **Formula (§2)**: OB `X פתח את פיו,` / `ודיבר אל Y:` with *izzaqqaram-ma* (68a–68b, 77a–77b) and *šuttam ipaššar* / *izzaqqaram-ma ana* Y = `פושר חלום,` / `ודיבר אל Y:` (13a–13b, 44a–44b).
+5. **verify.py**: nothing needed. eBL's "=" of 21/22 to IV b+3′/b+4′ and of 25/26 to IV 82 join lines that share only two words (add to the list of known false links).
+
+### Lessons for the guidelines
+- **An eBL normalization can contradict its own manuscript and note** (83 N *šuttašu* "his dream", ATF *ši-it-ta-šu* "his sleep", and George's note parsing "his sleep" as subject; 31's note "his dream startled him"): in dream texts, where *šittu* and *šuttu* differ by one vowel, read the signs before translating either word.
+- **An older edition kept beside the current one shows which parallels are new**: SEAL's 2003 readings lack the cedar's auras (62), the guardian who "watches them" (58), "a god is with you" (52) and the "rite of a man" (18); a parallel built on these must say that it rests on the revised reading.
+
+## Tablet OB-Nippur
+
+### Scope
+OB Nippur (IM 58451; eBL NipOB1), all 26 eBL labels: obv. 1–19 (the end of Enkidu's interpretation of a lost dream: "my friend, we have come close to the forest, the dreams are near, battle is swift"; Gilgameš will lock horns with Ḫuwawa and force his head down; "the old man you saw is your mighty god, the one who begot you, Lugalbanda"; Gilgameš's fourth dream: an Anzû-bird rising like a cloud, "its mouth fire, its breath death", and a man "strange of form" who seized its wings and cast it down), rev. a+0–a+6 after a gap (Enkidu's interpretation: the Anzû again; "while you fear its splendour, I will raise you up"; "the man you saw was mighty Šamaš"). Single manuscript; 16–19, a+0–a+2 damaged.
+
+### Sources consulted
+- eBL `L/1/4` OB Nippur (`../../sources/eBL/Gilgamesh-OB-Nippur/reading-edition.md`: N, T, L, the notes of George 2003 (RN117), ATF).
+- SEAL 1530 (`../../sources/SEAL/Gilgamesh-OB/node-1530--Gilg-OB-Nippur.md`): transliteration, lemmas, George's translation (13 *pu!?-lu!?-uḫ-tum-ma* "terror"; 3 as a question).
+- `python3 -I parallels_for.py OB-Nippur --all` (10 lines); `../renderings.md` §3.1 (OB III 111–112), §20; the Schøyen₂ section above (the dream formulas, *šalummatu* = `הוד`); SB IV 141, b+3′.
+- George's translation (eBL T) after drafting; Tchernichovsky 1924 has no Nippur text (published 1979); the Bible through `check_bible_quotes.py --show`.
+
+### Decisions
+1. **Generated from one data file** (scratchpad `NIP.txt` + `gen.py`), as Schøyen₂.
+2. **14 = a+3, the §3.1 line in the feminine**: OB III 111–112 / 198 `פיו – אש, ונפשו – מוות.` (*pīšu girrum-ma napīssu mūtum*) → `פיה – אש, נפשה – מוות.` (*pīša girrum napīssa*: feminine suffixes, no *-ma*, so no `ו`). What the guardian passage says of Ḫuwawa is said here of the dream's Anzû – and the Anzû is Ḫuwawa (3–4, a+4–a+6).
+3. **7–8 *puršumum … ilka wīrum, bāni qaqqadīka lugalbanda*** = `הישיש אשר ראית – אֵלְךָ הוא, הכביר, / בונה ראשך, לוּגַלְבַּנְדָּה."`: *wīru* read with George as the adjective "mighty" (= *gašru* `כביר`), not the god Wēr (`וֵר`, OB III 131: the forest's guardian); *bāni qaqqadim* "father" (a calque of Sumerian *saĝ-du₃*) kept literally, because its verb is *banû* = `בנה` (the creation verb, renderings §4); *puršumu* = `יָשִׁישׁ` (`זקן` is *šību*).
+4. **3 *namrīrī ša ilim*** = `בנגהות האל` (*namrīru* = `נֹגַהּ`, §4, plural `נְגֹהוֹת`): the auras of the guardian, ↔ Gen 3:24; "the god" is Ḫuwawa.
+5. **5 *tušabraqšu*** (*barāqu* Š, "batter, destroy", Malku *šubruqu* = *dâku*) = `*תרסקהו*` by sense, in italics, with the root ברק and Ps 144:6 in the apparatus (`תבריקהו` reads "you will make him shine"); *nakāpu* Gt = `התנגח` (as I 30 Gt `מנגח`; V's G `נגף`); *šapālu* D = `השפיל` [cognate].
+6. **a+5 *ušetbēka anāku*** = `אקימך אני!` (*tebû* Š = `הקים`; the Anzû "rose", *itbē-ma* `קמה`, 12): the friend who raises his friend (Qoh 4:10).
+7. **New words**: *arāḫu* = `מִהֵר` (stative `מהרה`); *šâʾu* = `דָּאָה` (Deut 28:49); *puršumu* = `יָשִׁישׁ`; *binītu* = `בִּנְיָה` (15, singular; creation corpus `בנויים` for the plural "creatures"); *wīru* = `כביר`; *namrīru* pl. = `נְגֹהוֹת`; *erpetu* = `ענן` (as V); *kappu* = `כנף` (as IV, VI).
+8. **Names**: Ḫuwawa `חוּוָוה` (4), Anzû `אַנְזוּ` (11, §1), Lugalbanda `לוּגַלְבַּנְדָּה` (8), `שַׁמַשׁ` (a+6), `אֵלְךָ` (7, always vocalized, §19).
+9. **a+0** (wholly lost; George restores 11 in the second person) is `"[…]` – not filled.
+
+### Open decisions for the user
+1. **5 `*תרסקהו*`** (by sense) or a root-keeping rendering such as `תכה אותו כברק` (adds "like lightning")?
+2. **8 `בונה ראשך`** (literal; *banû* visible) or the meaning `מולידך` / `אביך` (George "the one who begot you")?
+3. **7 *wīru* = `הכביר`** (George's adjective) or the older reading `וֵר` (the god Wēr), which would make Gilgameš's protector the forest's own guardian (OB III 131)?
+4. **10 *etqet eli* = `חולף הוא על`** (keeps *etēqu* = `חלף`) or the idiomatic `עולה הוא על` ("surpasses")?
+
+### Progress log
+- 2026-10-18: read eBL OB Nippur (N, T, L, notes, ATF) and SEAL 1530; `parallels_for.py OB-Nippur --all` (10 lines). Drafted 26 entries in three sections; generated both files (introduction; 2 footnotes: 7–8, a+4–a+5).
+- Pass (a): every line against N and the ATF; brackets 18 `[לפ]ניי`, a+1 `[קמה כ]ענן, ד[ואה]`; 11 changed from `הסתכלתי – ואנזו בשמים` to `הסתכלתי באַנְזוּ בשמים –` (*palāsu* + accusative).
+- Pass (b): 14/a+3 against OB III 111–112 (only the gender and the missing *-ma* differ); 9 against IV 141 and Schøyen₂ 33a/84; a+6 against Schøyen₂ 21 and IV b+3′; reserved strings: `בנה` only *banû* (8, `בונה`), `השליך` only *nadû* (18), no `שׂים`, `ידע`, שוב, `שמר`, `יצר`, `אלוהים`, `תרדמה`; new strings grepped (`ישיש`, `דואה`, `בנייה`, `נגהות`, `תתנגח`, `תשפיל`, `אקימך` – none for another lemma).
+- Pass (c): read aloud; kept `בונה ראשך` and `עומד בלילי` literal.
+- `python3 -I verify.py OB-Nippur`: 26 = 26, problems 0; 3 differences in repeated lines (14 ≠ OB III 111–112, 198: gender and *-ma*; 13 ≠ a+2: the copy's own break `[…]`). `check_bible_quotes.py`: 0 problems (Exod 4:3 and 1 Sam 2:8 corrected in the first draft).
+
+### Parallels index (Tablet OB-Nippur)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 1 | niqterib qištiš | קרבנו אל היער | `וַיְהִי כַּאֲשֶׁר הִקְרִיב לָבוֹא מִצְרָיְמָה` (בראשית יב:יא) | [cognate] | *qerēbu* / קרב: drawing near to the place of danger. |
+| 2 | šunātum qitrubā aruḫ tāḫāzum | חלומות קרבו, מהרה המלחמה | `קָרְבוּ הַיָּמִים וּדְבַר כָּל חָזוֹן` (יחזקאל יב:כג) | [cognate] | **Key.** The dream/vision "has come near" (to fulfilment); *qerēbu* / קרב. |
+| 2 | qitrubā … aruḫ | קרבו … מהרה | `כִּי קָרוֹב יוֹם אֵידָם וְחָשׁ עֲתִדֹת לָמוֹ` (דברים לב:לה) | [equivalent] | "Near" and "hastening" in one line. |
+| 3 | namrīrī ša ilim | נגהות האל | `וְאֵת לַהַט הַחֶרֶב הַמִּתְהַפֶּכֶת` (בראשית ג:כד) | [equivalent] | **Key.** The guardian's awe-inspiring auras (*namrīru*; §4 *melammu* row). |
+| 3 | namrīrī | נגהות | `וְנֹגַהּ לוֹ סָבִיב` (יחזקאל א:כז) | [equivalent] | Radiance around the divine figure. |
+| 5 | tattakkip-ma kīma lēʾim | תתנגח (בו), וכפר | `וְקַרְנֵי רְאֵם קַרְנָיו בָּהֶם עַמִּים יְנַגַּח` (דברים לג:יז) | [equivalent] | The hero as a goring bull. |
+| 5 | tušabraqšu | *תרסקהו* | `בְּרוֹק בָּרָק וּתְפִיצֵם` (תהלים קמד:ו) | [cognate] | *barāqu* Š "smite (as lightning)"; the root is hidden in our Hebrew (italics). |
+| 6 | rēšīšu tušappal | את ראשו תשפיל | `וּרְאֵה כָל גֵּאֶה וְהַשְׁפִּילֵהוּ` (איוב מ:יא) | [cognate] | *šapālu* / שפל. |
+| 6 | rēšīšu tušappal | את ראשו תשפיל | `הוּא יְשׁוּפְךָ רֹאשׁ` (בראשית ג:טו) | [divergence] | The enemy's head brought down; here a bull-wrestler's hold. |
+| 7 | puršumum ša tāmuru ilka wīrum | הישיש אשר ראית – אלך הוא, הכביר | `וְעַתִּיק יוֹמִין יְתִב` (דניאל ז:ט) | [equivalent] | **Key.** A god appearing as an old man in a night vision. |
+| 7 | ilka | אלך | `וֵאלֹהֵי אָבִי הָיָה עִמָּדִי` (בראשית לא:ה) | [equivalent] | The personal (ancestral) god as protector. |
+| 8 | bāni qaqqadīka | בונה ראשך | `וַיִּבֶן יְהוָה אֱלֹהִים אֶת הַצֵּלָע` (בראשית ב:כב) | [cognate] | *banû* / בנה in an idiom for "father" (Sumerian calque). |
+| 8 | bāni qaqqadīka lugalbanda | בונה ראשך, לוגלבנדה | `הֲלוֹא הוּא אָבִיךָ קָּנֶךָ הוּא עָשְׂךָ וַיְכֹנְנֶךָ` (דברים לב:ו) | [equivalent] | The god as father and maker. |
+| 11–12 | anzâm … itbē-ma kīma erpeti išaʾʾu | אנזו … קמה כענן, דואה | `כַּאֲשֶׁר יִדְאֶה הַנָּשֶׁר` (דברים כח:מט) | [equivalent] | *šâʾu* / `דאה`: the eagle's flight. |
+| 12 | kīma erpeti | כענן | `מִי אֵלֶּה כָּעָב תְּעוּפֶינָה` (ישעיהו ס:ח) | [equivalent] | Flying like a cloud. |
+| 11 | anzâm ina šamê | אנזו בשמים | `וַיֵּרֶד הָעַיִט עַל הַפְּגָרִים` (בראשית טו:יא) | [divergence] | A bird of prey in a vision; here the mythical Anzû. |
+| 13 | šunnû pānūša | משונים פניה | `וַיְשַׁנּוֹ אֶת טַעְמוֹ` (שמואל א כא:יד) | [cognate] | *šanû* / שנה "change, disfigure". |
+| 14, a+3 | pīša girrum napīssa mūtum | פיה – אש, נפשה – מוות | `נַפְשׁוֹ גֶּחָלִים תְּלַהֵט וְלַהַב מִפִּיו יֵצֵא` (איוב מא:יג) | [cognate] | **Key.** The §3.1 line of Ḫuwawa, here of the Anzû; *napīšu* / נפש, fire from the mouth (Leviathan). |
+| 14, a+3 | pīša girrum | פיה – אש | `וְאֵת לַהַט הַחֶרֶב` (בראשית ג:כד) | [equivalent] | The fiery guardian. |
+| 15 | šani binītam | שׁוֹנֶה בִּנְיָה | `וְהַבִּנְיָה וְקִירוֹתֶיהָ` (יחזקאל מא:יג) | [cognate] | *binītu* from *banû* / בנה. |
+| 16 | izzaz ina mušītīya | עומד בלילי | `וְהִנֵּה יְהוָה נִצָּב עָלָיו` (בראשית כח:יג) | [equivalent] | **Key.** The divine figure "standing" in the night dream (Bethel). |
+| 16 | izzaz | עומד | `וַיָּבֹא יְהוָה וַיִּתְיַצַּב וַיִּקְרָא כְפַעַם בְּפַעַם` (שמואל א ג:י) | [equivalent] | The figure stands by the sleeper. |
+| 18 | ittadīši ina maḫrīya | והשליך אותה לפניי | `וַיַּשְׁלִכֵהוּ אַרְצָה וַיְהִי לְנָחָשׁ` (שמות ד:ג) | [divergence] | Casting down as a sign; *nadû* = `השליך`. `לפניי` partly restored. |
+| a+4 | šalummassa tapallaḫam | מהודה פוחד אתה | `וַיִּירָא וַיֹּאמַר מַה נּוֹרָא הַמָּקוֹם הַזֶּה` (בראשית כח:יז) | [equivalent] | Fear of the divine radiance after the dream. |
+| a+5 | ušetbēka anāku | אקימך אני | `כִּי אִם יִפֹּלוּ הָאֶחָד יָקִים אֶת חֲבֵרוֹ` (קהלת ד:י) | [equivalent] | **Key.** The friend raises the friend ("two are better than one", 4:9). *tebû* Š = `הקים`. |
+| a+6 | eṭlum ša tāmuru šamaš dannu | העלם אשר ראית – שַׁמַשׁ העז | `כִּי שֶׁמֶשׁ וּמָגֵן יְהוָה אֱלֹהִים` (תהלים פד:יב) | [equivalent] | The sun-god as the rescuer in the dream (as Schøyen₂ 21). |
+
+### Lines shared with other tablets
+- **OB III / §3.1**: 14 = a+3 ~ OB III 111–112, 198 (`פיו – אש, ונפשו – מוות.` → `פיה – אש, נפשה – מוות.`: gender and the missing *-ma*; `verify.py` lists both).
+- **SB IV**: 9 ~ IV 141 (no *šuttu*: `(חלום)`); a+6 ~ IV b+3′ (`העלם אשר ראית`).
+- **OB Schøyen₂**: 9 ~ 33a, 84; 15 ~ 9; a+6 ~ 21; 17 ~ 11 (*ṣabātu* + arm); a+4 *šalummatu* = `הוד` (8).
+- **Within the tablet**: 12 = a+1 (brackets); 13 ~ a+2 (`…` / `[…] …`: each copy's own break; `verify.py` lists it); 14 = a+3.
+
+### Proposals for the shared renderings
+1. **Key terms (§4)**: *namrīru* plural = `נְגֹהוֹת` (3) in the *melammu* row; *bāni qaqqadi* = `בונה ראש` (8; ↔ Gen 2:22, Deut 32:6); the §3.1 line in the feminine (`פיה – אש, נפשה – מוות.`) noted under §3.1 as the Nippur copy.
+2. **Names (§1)**: Anzû `אַנְזוּ` (used); Lugalbanda (used).
+3. **Ordinary words (§5)**: *arāḫu* = `מִהֵר`; *šâʾu* = `דָּאָה`; *puršumu* = `יָשִׁישׁ`; *binītu* (sg.) = `בִּנְיָה`; *wīru* = `כביר`; *barāqu* Š = `*רסק*` (open decision 1); *tebû* Š = `הֵקִים`.
+
+### Lessons for the guidelines
+- **A fixed passage can migrate to another subject**: the guardian's "mouth fire, breath death" (§3.1) describes the dream's Anzû here. A fixed-passage check by string finds such a copy only if the gender and the clitics are allowed to vary; search the normalization of every new tablet for the key words of every fixed passage, not only for eBL's "=" links.
+
+## Tablet OB-Harmal1
+
+### Scope
+OB Harmal₁ (IM 52615; eBL ŠadOB1; Tell Harmal = ancient Šaduppûm), all 21 eBL labels: obv. 1a–9b (Enkidu's "go up to the crag of the mountain, look …"; Gilgameš wakes: "I have been robbed of the sleep of the gods!"; the dream: he seized wild bulls of the steppe, one split the ground with its bellowing and its dust "butted the sky", he bent before it; someone pulled him out and gave him water from his waterskin), rev. 10–17b (Enkidu's interpretation: "the god to whom we go – is he not the wild bull?"; "the countenance you saw was shining Šamaš; he will take our hand in hardships"; the one who gave water was "your god who honours your head, Lugalbanda"; "we shall join forces and do one thing, a feat that does not exist in the land"). Single manuscript; 1b, 7–9a damaged.
+
+### Sources consulted
+- eBL `L/1/4` OB Harmal₁ (`../../sources/eBL/Gilgamesh-OB-Harmal1/reading-edition.md`: N, T, L, notes of George 2003 (RN117), ATF); SEAL 1526 (George's translation).
+- `python3 -I parallels_for.py OB-Harmal1 --all` (10 lines); the Schøyen₂ and Nippur files of this run (the dream formulas, *dannatu* = `מצוקה`, *nukkur mimma*, *ilka … lugalbanda*); OB III 17; `../renderings.md`.
+- George's translation after drafting; Tchernichovsky 1924 has no Harmal text (published 1958–1977); the Bible through `check_bible_quotes.py --show`.
+
+### Decisions
+1. **Generated from one data file** (scratchpad `H1.txt` + `gen.py`).
+2. **2 *šittam ša ilī anāku ekmēku*** = `"שנת האלים – אני, ממני נחטפה!`: *šittu* = `שינה` (never `תרדמה`); *ekēmu* = `חטף` (the root of *ekkēmu* `חוטף`, §10); the double-accusative stative ("I am robbed of the sleep") becomes `ממני נחטפה` with the emphatic `אני` kept. The "sleep of the gods" ↔ `תַּרְדֵּמַת יְהוָה` (1 Sam 26:12) is in the apparatus.
+3. **Copies of Schøyen₂ and OB III changed exactly where the Akkadian changes**: 11 `הלא הָרְאֵם הוא? מנוכר הוא בכל!` (Schøyen₂ 15 with "wild bull" for "mountain"); 13 `במצוקות יאחז בידנו.` (Schøyen₂ 22 without "days", "our hand"); 12 `הזיו אשר ראית – שַׁמַשׁ המאיר;` (*zīmū*, Renger's reading; Schøyen₂ 21, Nippur a+6); 10 `"[האל], רֵעִי, אשר אליו אנו הולכים –`; 17b = OB III 17 (`מלאכה אשר איננה ב⟨ארץ⟩."`, the scribe's omission marked; George's "(yet)" not translated – no `טרם`).
+4. **16b–17a *nennemmid-ma*** = `ניסמך (זה על זה)` (*emēdu* N "join, lean on each other", OB II `נסמך`), against Schøyen₂ 17 *tennemmidā-ma* = `תיתקלו (זה בזה)` (*emēdu* N in battle, §15): one lemma, two senses by subject (we two vs you and he); `נַעֲשֶׂה` vocalized (§7).
+5. **15–16a *ilka mukabbit qaqqadīka lugalbanda*** = `אֵלְךָ, מכבד ראשך, לוּגַלְבַּנְדָּה.` – *kabātu* D = `כִּבֵּד` [cognate], literal with "head", beside Nippur 8 *bāni qaqqadīka* `בונה ראשך` (Ps 3:4 `כְּבוֹדִי וּמֵרִים רֹאשִׁי`).
+6. **1a *ana ṣūrim ša šadî*** = `אל צוּר? ההר` – the reading *ṣūrum* (Semitic "rock", Landsberger) kept with a question mark; George also allows a slip for *ṣērim* (Schøyen₂ 27 `גב`); eBL lemmatizes *ṣēru*.
+7. **New words** (grepped against every earlier `>` line): *ekēmu* = `חָטַף` (root of §10 `חוטף`); *nemû* = `*שומם*` (italic, George's guess *nawû*); *dalāḫu* = `דָּלַח` [cognate, Ezek 32:2]; *letû* = `פָּלַח` (`בקע` is *ḫepû* D); *usukku* = `לֶסֶת` (`לחי` is *lētu*); *kabātu* D = `כִּבֵּד`; *namru* = `מאיר`. *lapātu* stative = `נגוע` (§10 *lapātu* = `נגע`).
+8. **eBL lemma slips**: 4 *ṣērim* lemmatized "back" (it is "steppe", `שדה`); 1a (decision 6).
+
+### Open decisions for the user
+1. **2 `"שנת האלים – אני, ממני נחטפה!`** (keeps *anāku* and the root of *ekkēmu*) or the smoother `"נגזלה ממני שנת האלים!`?
+2. **1a `צוּר?`** (the cognate reading, ↔ Exod 33:21 `וְנִצַּבְתָּ עַל הַצּוּר`) or `גב` (assuming a scribal slip, as Schøyen₂ 27)?
+3. **3b *laptat* = `נגוע`** (literal "touched", the sense "ominous") or `מבשר רעה` (by sense)?
+4. **16b–17a `ניסמך (זה על זה)`** vs Schøyen₂ 17 `תיתקלו (זה בזה)` for *emēdu* N – keep the sense split, or one Hebrew verb for both?
+
+### Progress log
+- 2026-10-18: read eBL OB Harmal₁ and SEAL 1526; `parallels_for.py OB-Harmal1 --all`. Drafted 21 entries in two sections; generated both files (3 footnotes: 2, 9b, 16b–17b).
+- Pass (a): every line against N and the ATF; 8 `או[תי]` → `אותי` (only the suffix is broken); 9b `[השקה]`, 10 `[האל]`; 17b `⟨ארץ⟩` (the scribe's omission).
+- Pass (b): 11, 13 against Schøyen₂ 15, 22; 12 against Schøyen₂ 21 and Nippur a+6; 17b against OB III 17 (the final mark aligned to OB III's `."`; George's "!" not followed); vocalization (`הָרְאֵם`, `רְאֵמֵי`, `נַעֲשֶׂה`, `אֵלְךָ`, `שַׁמַשׁ`, `רֵעִי`); reserved strings: none of `תרדמה`, `שׂים`, `ידע`, שוב, `שמר`, `טרם`, `אלוהים`, `עפר`, `טיט`, `עשב`, `עץ`.
+- Pass (c): read aloud; kept `אבקו מתנגח בשמים`, `מכבד ראשך`.
+- `python3 -I verify.py OB-Harmal1`: 21 = 21, problems 0; 1 marks-only difference (17b / OB III 17: `⟨ ⟩`). `check_bible_quotes.py`: 0 problems.
+
+### Parallels index (Tablet OB-Harmal1)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 1a | elī-ma ana ṣūrim ša šadî | עלה אל צוּר? ההר | `וְנִצַּבְתָּ עַל הַצּוּר` (שמות לג:כא) | [cognate] | Ascent to the rock before the divine appearance (33:22 `וְשַׂמְתִּיךָ בְּנִקְרַת הַצּוּר`). Rests on the reading *ṣūrum* (perhaps a slip for *ṣērim* "back"). |
+| 2 | šittam ša ilī | שנת האלים | `כִּי תַּרְדֵּמַת יְהוָה נָפְלָה עֲלֵיהֶם` (שמואל א כו:יב) | [equivalent] | **Key.** "The sleep of the gods" ↔ "the deep sleep of the LORD". *šittu* = `שינה`. |
+| 2 | šittam ša ilī … ekmēku | שנת האלים … ממני נחטפה | `וַיַּפֵּל יְהוָה אֱלֹהִים תַּרְדֵּמָה עַל הָאָדָם וַיִּישָׁן` (בראשית ב:כא) | [divergence] | The god-sent sleep: in Genesis cast upon the man, here snatched from the dreamer as he wakes. |
+| 3b | kī laptat kī nemiat kī dalḫat | כמה נגוע, כמה *שומם*, כמה דלוח | `וַתִּדְלַח מַיִם בְּרַגְלֶיךָ` (יחזקאל לב:ב) | [cognate] | *dalāḫu* / דלח "make turbid". |
+| 3b | kī dalḫat | כמה דלוח | `וַתִּפָּעֶם רוּחוֹ` (בראשית מא:ח) | [equivalent] | The disturbing dream. |
+| 4, 11 | rīmī ṣērim; ul rīmum-ma | ראמי השדה; הלא הראם הוא? | `הוֹשִׁיעֵנִי מִפִּי אַרְיֵה; וּמִקַּרְנֵי רֵמִים עֲנִיתָנִי` (תהלים כב:כב) | [cognate] | *rīmu* / `רְאֵם`; the wild bull as the danger from which the god rescues (8–9b, 12–16a). |
+| 5a | iš-šasêšu qaqqaram ilette | בצעקתו את הקרקע פולח | `וַתִּבָּקַע הָאֲדָמָה אֲשֶׁר תַּחְתֵּיהֶם` (במדבר טז:לא) | [equivalent] | The ground split open. |
+| 9b, 14 | mê nādīšu išqianni / išqûka | מים מנאדו השקה אותי / אותך | `וַתִּפְתַּח אֶת נֹאוד הֶחָלָב וַתַּשְׁקֵהוּ` (שופטים ד:יט) | [cognate] | **Key.** *nādu* / `נֹאד` and *šaqû* / `השקה`, both cognate. |
+| 9b, 14 | mê nādīšu išqianni | מים מנאדו השקה אותי | `וַתְּמַלֵּא אֶת הַחֵמֶת מַיִם וַתַּשְׁקְ אֶת הַנָּעַר` (בראשית כא:יט) | [equivalent] | Rescue by water from a skin, given by the god's intervention. |
+| 12 | zīmū ša tāmuru šamaš namrum | הזיו אשר ראית – שַׁמַשׁ המאיר | `מַלְכָּא זִיוֹהִי שְׁנוֹהִי` (דניאל ה:ו) | [cognate] | *zīmu* / `זיו`. Reading *zīmū* is Renger's (others *rīmu*). |
+| 12 | šamaš namrum | שַׁמַשׁ המאיר | `כִּי שֶׁמֶשׁ וּמָגֵן יְהוָה אֱלֹהִים` (תהלים פד:יב) | [equivalent] | The sun-god as protector. |
+| 13 | ina dannātim iṣabbat qātni | במצוקות יאחז בידנו | `עִמּוֹ-אָנֹכִי בְצָרָה; אֲחַלְּצֵהוּ וַאֲכַבְּדֵהוּ` (תהלים צא:טו) | [equivalent] | The god with man in distress, rescuing and honouring (cf. 15–16a *mukabbit*). |
+| 13 | ina dannātim | במצוקות | `לָאֵל הָעֹנֶה אֹתִי בְּיוֹם צָרָתִי` (בראשית לה:ג) | [equivalent] | As Schøyen₂ 22. |
+| 15–16a | ilka mukabbit qaqqadīka lugalbanda | אֵלְךָ, מכבד ראשך, לוגלבנדה | `וְאַתָּה יְהוָה מָגֵן בַּעֲדִי; כְּבוֹדִי וּמֵרִים רֹאשִׁי` (תהלים ג:ד) | [equivalent] | **Key.** The protecting god who "honours the head"; *kabātu* D / כבד. |
+| 15–16a | mukabbit | מכבד | `כִּי מְכַבְּדַי אֲכַבֵּד` (שמואל א ב:ל) | [cognate] | *kabātu* D / `כִּבֵּד`. |
+| 16b–17a | nennemmid-ma ištiat neppeš | ניסמך (זה על זה), ואחת נַעֲשֶׂה | `טוֹבִים הַשְּׁנַיִם מִן הָאֶחָד` (קהלת ד:ט); `וְהַחוּט הַמְשֻׁלָּשׁ לֹא בִמְהֵרָה יִנָּתֵק` (קהלת ד:יב) | [equivalent] | Two friends joined against a danger (cf. Nippur a+5). |
+| 17b | šipram ša lā ibaššû ina ⟨mā⟩tim | מלאכה אשר איננה ב⟨ארץ⟩ | `הָבָה נִבְנֶה לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם` (בראשית יא:ד) | [divergence] | = OB III 17: an unprecedented undertaking; here an encouragement. No "not yet" (no `טרם`). |
+
+### Lines shared with other tablets
+- **OB III**: 17b = OB III 17 (marks only: `⟨ ⟩`).
+- **OB Schøyen₂**: 1a ~ 27 (imperative; *ṣūrim* for *ṣēr*); 1b ~ 28; 3a ~ 4a (*šuttam aṭṭul* for *ātamar šuttam*); 7 ~ 7–8 (*lawû*, *aḫu*); 8 ~ 12 (*šalāpu*); 10 ~ 14/16a; 11 ~ 15 (rīmu for šadû); 12 ~ 21; 13 ~ 22; 16b–17a ~ 17 (decision 4).
+- **OB Nippur**: 12 ~ a+6; 15–16a ~ 7–8 (*mukabbit* for *bāni*).
+- **SB IV**: 3a ~ IV 21 etc.; 10–11 ~ IV 215–216.
+
+### Proposals for the shared renderings
+1. **Key terms (§4)**: *šittu ša ilī* = `שנת האלים` (↔ 1 Sam 26:12, Gen 2:21) in the *šittu* row; *mukabbit qaqqadi* = `מכבד ראש` beside *bāni qaqqadi* = `בונה ראש`; *nādu* + *šaqû* = `נאד` + `השקה` (Judg 4:19).
+2. **Ordinary words (§5)**: *ekēmu* = `חָטַף`; *dalāḫu* = `דָּלַח`; *letû* = `פָּלַח`; *usukku* = `לֶסֶת`; *kabātu* D = `כִּבֵּד`; *nemû* = `*שומם*` (provisional); *emēdu* N "join forces" = `נסמך (זה על זה)` beside "clash" = `נתקל` (open decision 4).
+3. **§7 "always vocalize"**: `הָרְאֵם` with the article too (unvocalized `הראם` reads "did he show them?").
+
+### Lessons for the guidelines
+- **Small parallel tablets of one episode should be translated together, the best-preserved first**: Schøyen₂, Nippur and Harmal₁ share the interpretation formulas (*nukkur mimma*, "the one you saw – Šamaš", "he will take your hand", "your god Lugalbanda"); fixing them on Schøyen₂ made Harmal₁'s variants (wild bull for mountain, *zīmū* for *eṭlu*, "our hand", *mukabbit* for *bāni*) visible as exact one-word changes.
+
+## Tablet OB-Ishchali
+
+### Scope
+OB Ishchali (ISACM-A 22007; eBL NērOB1; Ishchali = ancient Nērebtum, Diyala), all 47 eBL labels: obv. 1′–15′, lower edge 16′–18′ (after a lost beginning: Ḫuwawa's plea; Enkidu: "Smite Ḫuwawa! why have you had mercy on him?"; Gilgameš: "now, my friend, we must achieve victory – the auras are escaping in the wood, the sheens are clouding over"; Enkidu: "catch a bird, and where will its chicks go? Let us look for the auras later … smite him again and slay his attendant"), rev. 19′–43′ and left edge a+1–a+2 (Gilgameš takes his axe, draws his sword and smites the neck, Enkidu encourages him; the blood carried by the ravines; "he slew the ogre, the forest's guardian, at whose yell Sirion and Lebanon were split"; the uplands trembled; after slaying the seven (auras) he took up ten talents of weapons, went down and trampled the forest, and opened the hidden abode of the Anunnakkū; Gilgameš felling the trees, Enkidu choosing timber; "Gilgameš, smite the cedar … thirty reeds long … the Euphrates"). Single manuscript; 1′–9′, 24′–29′, 32′–36′, 41′–a+2 damaged.
+
+### Sources consulted
+- eBL `L/1/4` OB Ishchali (`../../sources/eBL/Gilgamesh-OB-Ishchali/reading-edition.md`: N, T, L, notes of George 2003 (RN117) and Wasserman (RN2651), ATF). No SEAL page for this tablet.
+- `python3 -I parallels_for.py OB-Ishchali --all` (19 lines); SB V 133–318 (`../1-הנוסח-הבבלי-התקני/annotated-V.rtl.md`: 156, 250–256, 285–288, 300–318), SB X 93–94, IX 15–16, SB I 7, OB III 123, 171; `../renderings.md` §3.1, §4 (*melammu*, *naṣāru*), §16.
+- George's translation after drafting; Tchernichovsky 1924 has no text of this episode (Ishchali published 1957); the Bible through `check_bible_quotes.py --show`.
+
+### Decisions
+1. **Generated from one data file** (scratchpad `ISH.txt` + `gen.py`).
+2. ***nêru* = `קָטַל`** throughout (7′, 18′, 22′, 26′, 28′, 30′, 34′, 35′b), as SB V 287, 305, 307 – **also of the cedar in 41′** (`קטול את הארז!`): the same verb kills the guardian and the tree, and the Hebrew keeps it.
+3. **The guardian**: *maṣṣaru* = `נוֹצֵר` (26′, 30′, 34′; never `שומר`); 30′ *maṣṣaru qištim* = `נוצר היער` (SB V 37, 43); 34′ written *ma-ṣa-ru {giš}EREN* = `נוצר הארז` (eBL's N *qišti* corrected to the manuscript; George's T has "the cedar's guardian"); *ḫarḫaru* = `פָּרִיץ` (new; Ezek 18:10 "violent man", Isa 35:9 "ravenous beast" – both senses George weighs: "villain" and an older "monster").
+4. **The auras**: 12′–13′ *melemmū iḫalliqū … namrīrū irrupū ana erpi* = `הזהרים נמלטים ביער, / הזהרים נמלטים, והנגהות מתעננים לעב.` (*melemmū* = `זְהָרִים`, *namrīrū* = `נְגֹהוֹת` as Nippur 3; *ḫalāqu* G "escape" = `נמלט` (law corpus); *erēpu* = `מעונן` §9, present `מתעננים`; *erpu* = `עב`, new); 16′ `את הזהרים – אחר כך נבקשה`; 35′b *ištū-ma sebet inēru* = `אחרי ששבע קטל,` – the seven (auras), against SB V 307 "his seven sons".
+5. **15′ = SB V 250 + 251 in one line**: `"רֵעִי, צפור לכוד, אנה ילכו אפרוחיה?` – V's two half-lines joined, with V's words (`צפור לכוד`, `אנה ילכו אפרוחיה`); Deut 22:6 (the bird and its young) tagged [divergence], following Wasserman's note.
+6. **Copies of SB lines**: 21′ = X 94 `שלף חרב מחגורו,` (identical); 19′ `שמע גילגמש את מאמר עמיתו,` (V 285 with *rūʾu* `עמית` for *ibru*); 22′ `גילגמש קטל את הצוואר,` (V 287 without the object suffix); 20′ *ilqe ḫaṣṣinnam ina qātīšu* = `לקח גרזן בידו,` (*leqû* = `לקח`, reserved; IX/X have *išši … ana idīšu* `נשא … בזרועו`); 37′b `ירד, ורמס את היער.` (*raḫāṣu* = `רמס`, as V 300, 306 and VII); 39′ `גילגמש מבתק את העצים, אנקידו בוחר *גזעים*.` (*batāqu* D = `ביתק` §10, *ḫiāru* D = `בחר` §13 – V 311–312 have *nakāsu* `כורת`, *šeʾû* Gtn `מבקש ומבקש`; *urbazillu* = V's `*גזעים*`).
+7. **31′ *ša ana rigmīšu ultattû saria u labnān*** = `אשר לקולו נִפְלְחוּ שִׂרְיוֹן וְהַלְּבָנוֹן.` – the biblical names (§1; V 156 `התבקעו שִׂרְיוֹן וְהַלְּבָנוֹן`, there *ḫepû* and the heroes' stamping, here *letû* `פלח` (Harmal₁ 5a) and Ḫuwawa's yell). Ps 29:5–6 is the key parallel (voice, cedars, Lebanon and Sirion).
+8. **38′ *mūšab anunnakkī puzzuram ipte*** = `את מושב האֲנוּנָּכִּי הַצָּפוּן פתח.` – *puzzuru* = `צָפוּן` (new), not `נסתר`, because `נסתר` renders *katimtu* in I 7 (`ואת הנסתר פתח`): the two "opened the hidden" lines stay distinguishable (and are cross-referenced). *mūšabu* = `מושב` (OB III 123; ↔ Ezek 28:2).
+9. **New words**: *lītu* = `תְּשׁוּעָה` (11′; `ניצחון` barred: נצח is *dārû*); *gimilla šakānu ana ṣēri* = `שׂם גמול על` (9′); *ḫarḫaru* = `פריץ`; *erpu* = `עב`; *mutabbilu* = `מְשַׁמֵּשׁ` (`משרתות` occurs in VI); *šuškallu* = `שְׂבָכַת־הַקְּרָב` (`רשת` = *pūgu*, `מכמורת` = *šēšû*); *puzzuru* = `צָפוּן`; *ḫepû* (adj.) = `שבור` (35′, by sense); *libba epēšu* = `*עשה לב*` (23′, literal, italic); *rāʾû* (*rūʾu*) = `עמית` (§9).
+10. **Names**: `[ח]וּוָוה` (1′), `גִּילְגָּמֶשׁ` (6′), `אֶנְקִידוּ` (14′, first complete), `האֲנוּנָּכִּי` (38′), `שִׂרְיוֹן וְהַלְּבָנוֹן` (31′), `פְּרָת` (a+1); `אֵלֶיךָ` (7′, "your gods") vocalized against "to you".
+11. **eBL slips**: 34′ N *qišti* for the manuscript's *{giš}EREN*; 36′ *š[itta]* "two" lemmatized *šittu* "sleep"; 5′, 9′ *ṣēru* "back" correct here (*ana ṣēri* "towards, upon").
+
+### Open decisions for the user
+1. **11′ *lītu* = `תשועה`** ("victory", 2 Sam 23:10) – acceptable, or `גבורה` (but that is *qarrādūtu*, OB III)?
+2. **30′/34′ *ḫarḫaru* = `הפריץ`** or `המפלצת` (George's suspicion of the older sense) / `הנבל`?
+3. **23′ *libba īpuš* = `*עשה לב*`** (literal) or by sense `עודד` / `חיזק את לבו`?
+4. **18′ *mutabbilšu* = `משמשו`** – by sense (*wabālu* Gtn "attend, manage"); a root-keeping `נושאו (כליו)` would add words.
+5. **22′ `גילגמש קטל את הצוואר`** (literal object) or `קטל (אותו) בצוואר` (as V 287, which has the suffix)?
+
+### Progress log
+- 2026-10-18: read eBL OB Ishchali (all notes, ATF); `parallels_for.py OB-Ishchali --all`; printed the Hebrew of SB V 133–318, X 93–94, IX 15–16. Drafted 47 entries in three sections; generated both files (2 footnotes: 15′, 30′–31′).
+- Pass (a): every line against N and the ATF (brackets 1′ `[ח]וווה`, 6′, 7′, 9′, 10′, 11′ `[תשו]עה`, 36′ `ש[ני?]`, 42′ `[… אש]ר`; *ultatti⟨ū⟩* and *irtaḫi⟨ṣ⟩* noted, not marked in the Hebrew – only an ending is omitted); 34′ to the manuscript.
+- Pass (b): V 250–251, 285–288, 300, 307, 311–312, X 94, OB III 123, 171 compared (verify below); new strings grepped against all earlier `>` lines – changes: 38′ `הנסתר` → `הצפון` (I 7 has `הנסתר` for *katimtu*), 18′ `משרתו` → `משמשו` (VI `משרתות`); reserved: `לקח` only *leqû* (20′, 37′), `עץ` only *iṣu* (39′), `שׂים` only *šakānu* (9′, 11′), שוב only *târu* (18′), no `שמר`, `עולם`, `אלוהים`, `ידע`, `נחש`, `עפר`.
+- Pass (c): read aloud; kept `אבקו`-style literalism (`קטול את הארז`, `הזהרים נמלטים`). Tchernichovsky 1924 has no text here.
+- `python3 -I verify.py OB-Ishchali`: 47 = 47, problems 0; 3 differences (V 250, V 251 ≠ 15′: one OB line for two SB lines; OB III 123 ≠ 38′: different lines linked by eBL), 2 marks-only (X 94, X 165). `check_bible_quotes.py`: 0 problems.
+
+### Parallels index (Tablet OB-Ishchali)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 9′ | taštakan gimillam ana ṣērīšu | שׂמת גמול עליו | `גְּמָלַתְהוּ טוֹב וְלֹא רָע` (משלי לא:יב) | [cognate] | *gimillu* / `גמול` "a favour". |
+| 11′ | lītam nešakkan | [תשו]עה נשׂים | `וַיַּעַשׂ יְהוָה תְּשׁוּעָה גְדוֹלָה בַּיּוֹם הַהוּא` (שמואל ב כג:י) | [equivalent] | "Victory" in battle. |
+| 12′–13′, 16′ | melemmū iḫalliqū … namrīrū irrupū | הזהרים נמלטים … והנגהות מתעננים | `וְאֵת לַהַט הַחֶרֶב הַמִּתְהַפֶּכֶת` (בראשית ג:כד) | [divergence] | **Key.** The guardian's protective radiance (*melammu*, §4) escapes from the forest when the guardian is overcome; "seven" auras (35′b). |
+| 15′ | iṣṣūram bār-ma êšam illakū watmūšu | צפור לכוד, אנה ילכו אפרוחיה? | `כִּי יִקָּרֵא קַן צִפּוֹר לְפָנֶיךָ … לֹא תִקַּח הָאֵם עַל הַבָּנִים` (דברים כב:ו) | [divergence] | **Key.** The same proverb (bird and young), used to urge killing, in Deuteronomy to forbid it (Wasserman, RN2651, after A. Gai). |
+| 15′ | iṣṣūram … watmūšu | צפור … אפרוחיה | `וְהִכַּנִי אֵם עַל בָּנִים` (בראשית לב:יב) | [divergence] | Mother and young struck together. |
+| 17′ | watmū irtanappudū | אפרוחים משוטטים ומשוטטים | `נָע וָנָד תִּהְיֶה בָאָרֶץ` (בראשית ד:יב) | [equivalent] | *rapādu* (§3.2: tagged, never rendered `נד`). |
+| 20′ | ilqe ḫaṣṣinnam ina qātīšu | לקח גרזן בידו | `וַיִּקַּח אֲבִימֶלֶךְ אֶת הַקַּרְדֻּמּוֹת בְּיָדוֹ וַיִּכְרֹת שׂוֹכַת עֵצִים` (שופטים ט:מח) | [cognate] | *leqû* / `לקח` + "in his hand"; then the cutting of trees (39′). |
+| 20′ | ilqe … ina qātīšu | לקח … בידו | `וַיִּשְׁלַח אַבְרָהָם אֶת יָדוֹ וַיִּקַּח אֶת הַמַּאֲכֶלֶת` (בראשית כב:י) | [equivalent] | Taking the blade to kill. |
+| 23′ | enkīdu ibiršu īpuš libba | אנקידו, רֵעֵהוּ, *עשה לב* | `וַיְחַזֵּק אֶת יָדוֹ בֵּאלֹהִים` (שמואל א כג:טז) | [equivalent] | The friend's encouragement (Lambert/George's reading of the idiom). |
+| 25′ | dāmšu ubbalū … ḫarrū | את דמו נושאים … האפיקים | `קוֹל דְּמֵי אָחִיךָ צֹעֲקִים אֵלַי מִן הָאֲדָמָה` (בראשית ד:י); `אֲשֶׁר פָּצְתָה אֶת פִּיהָ לָקַחַת אֶת דְּמֵי אָחִיךָ` (בראשית ד:יא) | [cognate] | *dāmu* / `דם`; the slain one's blood taken by the land; here carried by the ravines. |
+| 25′ | ḫarrū | האפיקים | `וַתִּשָּׁבַרְנָה פֹרֹאתָיו בְּכֹל אֲפִיקֵי הָאָרֶץ` (יחזקאל לא:יב) | [equivalent] | The felled cedar's boughs in the ravines. |
+| 26′, 30′, 34′ | ḫuwāwa maṣṣaram inēr; inēr ḫarḫaram maṣṣaru qištim / erēni | את חוווה, הנוצר, קטל; קטל את הפריץ, נוצר היער / הארז | `וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן אֶת הַכְּרֻבִים … לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` (בראשית ג:כד) | [divergence] | **Key.** The guardian of the gods' forest is killed by the hero; in Genesis the guardian is set and man expelled. *maṣṣaru* = `נוצר`. |
+| 30′, 34′ | ḫarḫaram | הפריץ | `וּפְרִיץ חַיּוֹת בַּל יַעֲלֶנָּה` (ישעיהו לה:ט) | [equivalent] | `פריץ` "violent one / ravenous beast" (open decision 2). |
+| 31′ | ša ana rigmīšu ultattû saria u labnān | אשר לקולו נִפְלְחוּ שִׂרְיוֹן וְהַלְּבָנוֹן | `קוֹל יְהוָה שֹׁבֵר אֲרָזִים … וַיַּרְקִידֵם כְּמוֹ-עֵגֶל; לְבָנוֹן וְשִׂרְיֹן כְּמוֹ בֶן-רְאֵמִים` (תהלים כט:ה–ו) | [equivalent] | **Key.** A voice that shakes the pair Lebanon–Sirion and the cedars; here the voice of the forest's guardian. |
+| 31′ | saria | שִׂרְיוֹן | `צִידֹנִים יִקְרְאוּ לְחֶרְמוֹן שִׂרְיֹן` (דברים ג:ט) | [cognate] | *Sariya* (SB *Sirāra*) = `שִׂרְיֹן`, Hermon / Anti-Lebanon (§1). |
+| 33′ | irtutū kala ḫuršānim | זעו כל הרמה | `וַיֶּחֱרַד כָּל הָהָר מְאֹד` (שמות יט:יח) | [equivalent] | The whole mountain trembles. |
+| 35′b | ištū-ma sebet inēru | אחרי ששבע קטל | `וְאֵת לַהַט הַחֶרֶב` (בראשית ג:כד) | [divergence] | The seven (auras) slain; SB V 307 "his seven sons". *sebe* / `שבע` [cognate]. |
+| 37′b | urid-ma irtaḫiṣ qištam | ירד, ורמס את היער | `וְנִקַּף סִבְכֵי הַיַּעַר בַּבַּרְזֶל; וְהַלְּבָנוֹן בְּאַדִּיר יִפּוֹל` (ישעיהו י:לד) | [equivalent] | The forest and the Lebanon laid waste. |
+| 38′ | mūšab anunnakkī puzzuram ipte | את מושב האנונכי הצפון פתח | `מוֹשַׁב אֱלֹהִים יָשַׁבְתִּי בְּלֵב יַמִּים` (יחזקאל כח:ב) | [equivalent] | **Key.** The forest-mountain as the seat of the gods (§16 *mūšab ilī*). |
+| 38′ | puzzuram | הצפון | `יֹשֵׁב בְּסֵתֶר עֶלְיוֹן` (תהלים צא:א) | [equivalent] | The hidden abode of the god. |
+| 38′ | puzzuram ipte | הצפון פתח | `וַיְגָרֶשׁ אֶת הָאָדָם; וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן אֶת הַכְּרֻבִים` (בראשית ג:כד) | [divergence] | The hero, having killed the guardian, opens the gods' hidden place; in Genesis man is shut out of it. |
+| 39′ | gilgāmeš iṣṣī ubattaq | גילגמש מבתק את העצים | `לֹא תַשְׁחִית אֶת עֵצָהּ לִנְדֹּחַ עָלָיו גַּרְזֶן … וְאֹתוֹ לֹא תִכְרֹת` (דברים כ:יט) | [divergence] | Felling trees with the axe (20′); Deuteronomy forbids it. *iṣu* / `עץ` [cognate]. |
+| 39′ | iṣṣī ubattaq … erēnam | מבתק את העצים … הארז | `וְיִכְרְתוּ לִי אֲרָזִים מִן הַלְּבָנוֹן` (מלכים א ה:כ) | [equivalent] | Cedars of the Lebanon cut for a temple (the door for Enlil, OB IM, SB V 316–318). |
+| 39′ | iṣṣī ubattaq | מבתק את העצים | `מֵאָז שָׁכַבְתָּ לֹא יַעֲלֶה הַכֹּרֵת עָלֵינוּ` (ישעיהו יד:ח) | [divergence] | The cedars of Lebanon and their feller (the king of Babylon). |
+| 39′ | uḫarra urbazillī | בוחר *גזעים* | `מִכֹּל אֲשֶׁר בָּחָרוּ` (בראשית ו:ב) | [cognate] | *ḫiāru* / `בחר` (§13); a verbal link only. |
+| 41′ | nēr erēnam | קטול את הארז | `קוֹל יְהוָה שֹׁבֵר אֲרָזִים` (תהלים כט:ה) | [equivalent] | The cedar "killed" with the guardian's verb (*nêru*). *erēnu* / `ארז` [cognate]. |
+| a+1 | purattim | פְּרָת | `וְהַנָּהָר הָרְבִיעִי הוּא פְרָת` (בראשית ב:יד) | [cognate] | The Euphrates (the timber floated to Nippur, SB V 318). |
+
+### Lines shared with other tablets
+- **SB V**: 15′ = V 250 + 251 (joined; `verify.py` lists both); 19′ ~ V 285 (*rūʾu* for *ibru*); 22′ ~ V 287 (no suffix); 23′ ~ V 288 (another verb); 31′ ~ V 156 (another verb, same names); 35′b ~ V 307; 37′b ~ V 300 (`רומס את היער`); 39′ ~ V 311–312 (other verbs); a+1 ~ V 318.
+- **SB X / IX**: 21′ = X 94, X 165 (marks only); 20′ ~ IX 15, X 93 (*leqû … ina qātīšu* vs *našû … ana idīšu*).
+- **SB I 7**: 38′ ~ I 7 (`ואת הנסתר פתח` – *katimtu*; here *puzzuru* `הצפון`, decision 8).
+- **OB III**: 37′ ~ 171 (ten talents); 38′ ~ 123 (another line; eBL "=").
+- **Within the tablet**: 6′ = 14′ = 40′ (brackets; 14′ vocalized name); 30′ ~ 34′ (forest / cedar); 12′ ~ 13′.
+
+### Proposals for the shared renderings
+1. **Key terms (§4)**: *melemmū iḫalliqū* = `הזהרים נמלטים` and *sebet* (the seven auras) in the *melammu* row; *maṣṣar erēni* / *maṣṣar qišti* = `נוצר הארז` / `נוצר היער` (with Schøyen₂); *mūšab anunnakkī* = `מושב האנונכי` (↔ Ezek 28:2) with *puzzuru* = `צָפוּן`; *nêru* of trees = `קטל` (41′); Ps 29:5–6 added to the Lebanon/Sirion row.
+2. **Ordinary words (§5)**: *ḫarḫaru* = `פָּרִיץ`; *lītu* = `תְּשׁוּעָה`; *erpu* = `עָב`; *mutabbilu* = `מְשַׁמֵּשׁ`; *šuškallu* = `שְׂבָכַת־הַקְּרָב`; *ḫalāqu* G "escape" = `נמלט` (law corpus) beside D `אבד`; *letû* N/Dt = `נפלח`.
+3. **verify.py**: eBL's "=" OB III 123 / Ishchali 38′ is a false link (different lines).
+
+### Lessons for the guidelines
+- **A fresh Hebrew word for a new lemma must also be checked against the formulas of the prologue**: `הנסתר … פתח` was the natural rendering of 38′, but the same two words stand in SB I 7 for another Akkadian noun (*katimtu*); choosing `הצפון` keeps the two passages distinct while the apparatus links them.
+
+## Tablet OB-Harmal2
+
+### Scope
+OB Harmal₂ (IM 52750; eBL ŠadOB1, Tell Harmal), all 59 eBL labels (1-2, 3–26, 27-28, 29–53, left edge 56′–63′); legible only 4–6 ("let your shout boom like a kettledrum"), 11–20 ("when, my friend, … where Ḫuwawa comes and goes – there is a track, the path is straight"; "we have come to a place where one should not go!"; "let us set a weapon in Ḫuwawa's gate!"; Enkidu, "the … of the wild": "a tempest's onslaught – Ḫuwawa! like Adad he will swoop on us!"), 36–49 (in the woods; someone "set his face towards the auras"; "living, we are not alive, Gilgameš"; the guardian pleads: "guard my life for me, Gilgameš! The cow of the fold, Ninsumuna, bore you … from the mouth of Šamaš, the savage hero, I heard … let me guard for you cedar, cypress and juniper, the tallest trees, fit for a palace!"; "the wild-born was able to give counsel": "my friend, a man – Ḫuwawa does not …"). Single manuscript; 1–3, 7–10, 21–35, 49–63′ broken or undeciphered. The scribe writes the guardian's name *hu-bi-bi* (Ḫubibi) and Gilgameš *{d}bil₄*.
+
+### Sources consulted
+- eBL `L/1/4` OB Harmal₂ (`../../sources/eBL/Gilgamesh-OB-Harmal2/reading-edition.md`: N, T, L, the notes of George 2003 (RN117), ATF). No SEAL page.
+- `python3 -I parallels_for.py OB-Harmal2 --all` (9 lines); SB V 4–5, 43, 166–180, SB IV 26, 107, OB II 234–237, OB III 276; `../renderings.md` §3.1, §4, §15, §16.
+- George's translation after drafting; Tchernichovsky 1924 has no Harmal text; the Bible through `check_bible_quotes.py --show`.
+
+### Decisions
+1. **Generated from one data file** (scratchpad `H2.txt` + `gen.py`). Every label has an entry, also the 30 broken ones (`[…] … […]` as eBL's N).
+2. **The name as the tablet writes it**: *hu-bi-bi* = `חוּבִּיבִי` (14, 17, 20, 48; renderings §1 "keep the form the text has"; eBL normalizes *humbāba*, George translates Huwawa); noted in the header.
+3. **16 *nittalka ašru lā alākim*** = `באנו אל מקום לא ללכת (בו)!` – the infinitive phrase of §3.1 (`הַדֶּרֶךְ הַזֹּאת – לֹא לָלֶכֶת בָּהּ`) copied; ↔ Gen 3:24, Exod 3:5.
+4. **38 *balāṭam-ma ul balṭānu*** (a paronomastic infinitive, rare in OB, George) = `חָיֹה לא חיים אנו` – the Hebrew infinitive absolute, so that the construction of `מוֹת תָּמוּת` (Gen 2:17) and `לֹא מוֹת תְּמֻתוּן` (Gen 3:4) is visible; *ana ḫatāʾim* left untranslated (`ל…`).
+5. **The guardian's plea**: 41 *pūtu napištīya uṣram-ma* = `[מו]ל נפשי – נצור לי, גילגמש,` (*pūtu* = `מול` §9, *naṣāru* = `נצר`; George "have mercy on my life"); 46 *luṣṣurkkum erēnam šurmēnam supālam šīḫūtim iṣṣī* = `אנצרה לך ארז, שׁוּרְבִּין ו*עַרְעָר*, גבוהי [העצ]ים,` (V 176 `אנצרה לך הדס` copied for the verb); 47 `הראויים להיכל!"` (*simtu* = `הראוי ל־`). The guardian offers to "guard" (*naṣāru*) the trees **for** the man – the [divergence] with Gen 2:15, 3:24.
+6. **47 *waldam ṣērim mitlukam ileʾʾi*** = `ילוד השדה – להימלך יוכל:` (IV 26 `[א]שר נולד בש[דה – להימלך יוכל]` for the verb phrase; *waldu* = `ילוד` as I 30).
+7. **42 *ulidka littum ša supūri ninsumuna*** = `ילדה אותך עגלת הדיר, נִינְסוּמוּנָה!` – *littu* "cow" = `עֶגְלָה` (new; `פרה` is *arḫu* in I; OB II's *rīmtu* is `רְאֵמָה`); the long name form `נִינְסוּמוּנָה` (as OB II `נִינְסוּנָּה`).
+8. **43 *lāma*** = `קודם ש־` (§18 *lām*), never `טרם` (§6).
+9. **New words**: *wašṭu* = `*קשוח*` (18, uncertain reading); *miqittu* = `מַפֹּלֶת`; *supālu* = `*עַרְעָר*`; *littu* = `עגלה`; *kânu* = `כון` (6, creation corpus); *nēmedu* = `משען` (VI); *šaḫātu* = `נרתע` (§9); *meḫû* = `סופה` (III, V); *pānam ana … šakānu* = `שׂם פנים אל` (§15).
+10. **eBL lemma slips**: 18, 47 *ṣēri(m)* lemmatized "back" (it is "the wild", `שדה`).
+
+### Open decisions for the user
+1. **The name `חוּבִּיבִי`** (the tablet's spelling) or the normal OB `חוווה` with a note?
+2. **38 `חָיֹה לא חיים אנו`** (infinitive absolute, Gen 2:17's construction) or George's sense `איננו חיים באמת`?
+3. **42 *littu* = `עגלה`** (a new word to keep *arḫu* `פרה` apart) or `פרה` for both lemmas?
+4. **46 *supālu* = `*ערער*`** (a guess at "juniper") or the transliteration `סוּפָּלוּ`?
+
+### Progress log
+- 2026-10-18: read eBL OB Harmal₂ (all notes, ATF); `parallels_for.py OB-Harmal2 --all`; printed SB V 4–5, 43, 150–180. Drafted 59 entries in five sections (two of them broken lines only); generated both files (3 footnotes: 16, 38, 46–47).
+- Pass (a): every line against N and the ATF (5 `קול[ך …]`, 6 `[י]כונו`, 15 `[שׂ]וּם … שבי[ל]`, 20 `[חוביבי! כ]אֲדַד`, 41 `[מו]ל`, 44 `[ש]מעתי`, 46 `[העצ]ים`); every broken line entered as N gives it.
+- Pass (b): V 4–5, 43, 168–169, 176–177, IV 26, OB II 234–237 compared; reserved strings: `שׂים` only *šakānu* (15, 17, 37), `לקח` only *leqû* (18), `עץ` only *iṣu* (40, 46, 50), no `טרם`, `שמר`, `עולם`, `אלוהים`, `ידע`, `עפר`; new strings grepped against all earlier `>` lines (none of `עגלת`, `קשוח`, `מפלת`, `ערער`, `יכונו`).
+- Pass (c): read aloud; the broken lines left as the edition has them.
+- `python3 -I verify.py OB-Harmal2`: 59 = 59, problems 0; 1 difference (V 43 ≠ 5: brackets and the longer OB line). `check_bible_quotes.py`: 0 problems (two first-draft quotations corrected: a wrong Jer 32:39, Gen 6:4).
+
+### Parallels index (Tablet OB-Harmal2)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 5 | kīma lilissi liššapu rigimka | כתוף יתעבה קול[ך] | `קוֹל יְהוָה עַל הַמָּיִם` (תהלים כט:ג) | [equivalent] | The thundering voice (as SB V 43). |
+| 6 | likūnū | [י]כונו | `וַיְהִי כֵן` (בראשית א:ז) | [cognate] | *kânu* / כון; context lost. |
+| 14 | ša ḫubibi ittallaku | אשר חוביבי מתהלך | `וַיִּשְׁמְעוּ אֶת קוֹל יְהוָה אֱלֹהִים מִתְהַלֵּךְ בַּגָּן` (בראשית ג:ח) | [equivalent] | **Key.** The lord of the forest "walking about" in it (*alāku* Gtn = `התהלך`, §16). |
+| 15 | šakin kibsu šutēšur padānu | שׂוּם שביל, מיושר המשעול | `יַשְּׁרוּ בָּעֲרָבָה מְסִלָּה לֵאלֹהֵינוּ` (ישעיהו מ:ג) | [equivalent] | A straight path to the god's place (SB V 4–5). |
+| 16 | nittalka ašru lā alākim | באנו אל מקום לא ללכת (בו) | `וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן אֶת הַכְּרֻבִים … לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` (בראשית ג:כד) | [equivalent] | **Key.** A place one must not enter (cf. §3.1 *ul ša alāki*). |
+| 16 | ašru lā alākim | מקום לא ללכת | `אַל תִּקְרַב הֲלֹם; שַׁל נְעָלֶיךָ מֵעַל רַגְלֶיךָ` (שמות ג:ה) | [equivalent] | The holy, forbidden place. |
+| 19 | miqitti meḫê | מפלת סופה | `וְהִנֵּה רוּחַ גְּדוֹלָה בָּאָה מֵעֵבֶר הַמִּדְבָּר … וַיִּפֹּל` (איוב א:יט) | [equivalent] | A storm that "falls". |
+| 20 | kīma adad išâʾam ana ṣērīni | כאדד ידאה עלינו | `כַּאֲשֶׁר יִדְאֶה הַנָּשֶׁר` (דברים כח:מט) | [equivalent] | *šâʾu* / `דאה` (Nippur 12). |
+| 37 | pānam ana melammī ištakan | פנים אל הזהרים שׂם | `וַיָּשֶׂם אֶת פָּנָיו הַר הַגִּלְעָד` (בראשית לא:כא) | [cognate] | *pānī šakānu ana* / `שׂים פנים אל` (§15). |
+| 37 | melammī | הזהרים | `וְאֵת לַהַט הַחֶרֶב הַמִּתְהַפֶּכֶת` (בראשית ג:כד) | [equivalent] | The guardian's auras (§4). |
+| 38 | balāṭam-ma ul balṭānu | חָיֹה לא חיים אנו | `מוֹת תָּמוּת` (בראשית ב:יז); `לֹא מוֹת תְּמֻתוּן` (בראשית ג:ד) | [equivalent] | **Key.** The same paronomastic construction (infinitive + negation + finite verb of one root), here of life; *balāṭu* ≠ חיה etymologically. |
+| 38 | balāṭam-ma ul balṭānu | חָיֹה לא חיים אנו | `וְאָכַל וָחַי לְעֹלָם` (בראשית ג:כב) | [divergence] | Mortal life in the forest of the gods. |
+| 41 | pūtu napištīya uṣram-ma | [מו]ל נפשי – נצור לי | `וְנֹצֵר נַפְשְׁךָ הוּא יֵדָע` (משלי כד:יב) | [cognate] | *naṣāru* + *napištu* / `נצר` + `נפש`. |
+| 42 | ulidka littum ša supūri ninsumuna | ילדה אותך עגלת הדיר, נינסומונה | `אֲשֶׁר יָבֹאוּ בְּנֵי הָאֱלֹהִים אֶל בְּנוֹת הָאָדָם וְיָלְדוּ לָהֶם` (בראשית ו:ד) | [divergence] | The hero born of a goddess (cf. OB II 234–237, SB V 168); in Genesis the reverse (divine fathers, human mothers). |
+| 42 | littum | עגלת | `עֶגְלָה יְפֵה פִיָּה מִצְרָיִם` (ירמיהו מו:כ) | [equivalent] | The cow/heifer as an epithet. |
+| 44 | ina pī šamšim dapīnim qurādim | מפי שַׁמַשׁ, העריץ, הגיבור | `הֵמָּה הַגִּבֹּרִים אֲשֶׁר מֵעוֹלָם אַנְשֵׁי הַשֵּׁם` (בראשית ו:ד) | [equivalent] | *qurādu* = `גיבור` (§4), here of the sun-god. |
+| 46 | luṣṣurkkum erēnam šurmēnam supālam šīḫūtim iṣṣī | אנצרה לך ארז, שורבין ו*ערער*, גבוהי העצים | `לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` (בראשית ג:כד); `לְעָבְדָהּ וּלְשָׁמְרָהּ` (בראשית ב:טו) | [divergence] | **Key.** The guardian of the trees offers to guard them **for** the hero; *naṣāru* = `נצר`. |
+| 46 | erēnam šurmēnam … iṣṣī | ארז, שורבין … העצים | `אֲנִי אֶעֱשֶׂה אֶת כָּל חֶפְצְךָ בַּעֲצֵי אֲרָזִים וּבַעֲצֵי בְרוֹשִׁים` (מלכים א ה:כב) | [equivalent] | Cedar and cypress offered to a king for building. |
+| 46–47 | šīḫūtim iṣṣī simatu ēkalli | גבוהי העצים, הראויים להיכל | `כְּבוֹד הַלְּבָנוֹן אֵלַיִךְ יָבוֹא בְּרוֹשׁ תִּדְהָר וּתְאַשּׁוּר יַחְדָּו לְפָאֵר מְקוֹם מִקְדָּשִׁי` (ישעיהו ס:יג) | [equivalent] | The Lebanon's trees to adorn the (divine) house. |
+| 47 | waldam ṣērim mitlukam ileʾʾi | ילוד השדה – להימלך יוכל | `אִישׁ יֹדֵעַ צַיִד אִישׁ שָׂדֶה` (בראשית כה:כז) | [equivalent] | Enkidu "born in the wild" (*ṣēru* = `שדה`, §4), yet wise in counsel. |
+
+### Lines shared with other tablets
+- **SB V**: 5 ~ V 43 (`verify.py`: brackets and the longer OB line); 14–15 ~ V 4–5 (`שׂוּם שביל`, `מיושר`); 41 ~ V 173 (another verb: *eṭēru* `מלט`); 42 ~ V 168; 44–45 ~ V 169; 46–47 ~ V 176–177 (`אנצרה לך`); 48 ~ V 179.
+- **SB IV**: 47 ~ IV 26, 107 (`להימלך יוכל`).
+- **OB II / OB III**: 42 ~ OB II 234–237; 14 ~ OB III 276 (`מתהלך`).
+- **For OB IM**: 47 = OB IM 19 (*waldam ṣērim mitlukam ileʾʾi*) – copied there.
+
+### Proposals for the shared renderings
+1. **Names (§1)**: Ḫubibi (the Harmal spelling) = `חוּבִּיבִי`; Ninsumuna = `נִינְסוּמוּנָה`.
+2. **Key terms (§4)**: *balāṭam-ma ul balṭānu* = `חָיֹה לא חיים אנו` (↔ Gen 2:17, 3:4) in the *balāṭu* row; *luṣṣurkkum … iṣṣī* (the guardian guarding the trees for the hero) in the *naṣāru* row; *ašru lā alākim* = `מקום לא ללכת` beside §3.1.
+3. **Ordinary words (§5)**: *littu* = `עֶגְלָה`; *miqittu* = `מַפֹּלֶת`; *supālu* = `*עַרְעָר*`; *wašṭu* = `*קשוח*`; *waldu* = `ילוד`.
+
+### Lessons for the guidelines
+- **A badly broken tablet still yields its key line when every legible word is parsed**: Harmal₂'s one preserved grammatical rarity (the paronomastic infinitive *balāṭam-ma ul balṭānu*) is the closest Akkadian match in the corpus to the form of `מוֹת תָּמוּת`; render rare constructions with their Hebrew counterpart (here the infinitive absolute), not by sense.
+
+## Tablet OB-IM
+
+### Scope
+OB IM (IM 21180.X; eBL BabaOB1; provenance unknown, Babylonia), all 45 eBL labels: obv. 1–29 (broken opening: "… and let us sit down on our own" twice; "the guardian of the forest"; the killing of the guardian's sons "the Cricket, the Roarer, the Flyer, the Worm"; "he smote five times"; "he trampled the cedar forest and opened the hidden abode of the gods, the Anunnakkū"; the "wild-born" Enkidu's counsel: "by your strength you slew the guardian – what could shame you? Lay the forest low! Seek out for me a tall cedar whose top vies with the heavens; I will make a door … may no stranger draw near it, may a god love it! To Enlil's house let the Euphrates carry it; may the folk of Nippur rejoice, may Enlil delight in it!"), rev. 30–57 and top edge 58–59 almost wholly lost. Single manuscript.
+
+### Sources consulted
+- eBL `L/1/4` OB IM (`../../sources/eBL/Gilgamesh-OB-IM/reading-edition.md`: N, T, L, the notes of George 2003 (RN117) and Wasserman (RN2651), ATF). No SEAL page.
+- `python3 -I parallels_for.py OB-IM --all` (17 lines, all "cf."); SB V 300–319, SB II 229, OB III 123; the Ishchali and Harmal₂ files of this run (38′, 37′b, 47).
+- George's translation after drafting; Tchernichovsky 1924 has no text here; the Bible through `check_bible_quotes.py --show`.
+
+### Decisions
+1. **Generated from one data file** (scratchpad `IM.txt` + `gen.py`); every broken label entered as eBL's N gives it.
+2. **Copies of the Ishchali, Harmal₂ and SB V lines, changed exactly where the Akkadian changes**: 17b-18 `את מושב האלים, האֲנוּנָּכִּי, הַצָּפוּן פתח.` (Ishchali 38′ + *ilī*, as OB III 123); 17a `… רמס את יער הארזים,` (*raḫāṣu* = `רמס`, *qišti erēni* = §3.1 `יער הארזים`); 19 `ילוד השדה – להימלך יוכל,` (= Harmal₂ 47b); 20 `"בעוצמתך את הנוצר קטלת,` (V 305 in the singular); 22b `בַּקֵּשׁ לי ארז גבוה,` (V 314 `ארז גבוה`; *šeʾû* D imperative); 22c `אשר קדקודו מתחרה בשמים!` (V 315 *nakpu* `נוגף` → *šannu* `מתחרה`, *šanānu* as I 45, V 22); 23 `אעשה דלת אשר קנה רוחבה,` (V 316); 27 `אל בית אֶנְלִיל ישאנה פְּרָת,` (V 318 without "in Nippur"); 28 `ישמחו המון נִיפּוּר,` (V 319 with *ummānu* `המון` for *atmanu* `דבירי`); 13 the guardian's sons (V 308's `צרצר, שואג`, without the article, + *mupparšu* `מעופף` (IV 52), *mubattiru* `*זחל*`).
+3. **21-22a *mīnû ubaššakka … šunēl*** = `מה יבייש אותך? את יער ה⟨ארזים⟩ – הַשְׁכֵּב!` – *bâšu* = `בוש` [cognate] (guidelines §6.7), D = `בייש` (↔ Gen 2:25 `וְלֹא יִתְבֹּשָׁשׁוּ`); *nâlu* Š = `השכיב` (IV 90): the forest "laid down" with the verb of lying down to sleep.
+4. **6, 8 *i niwšib / nīšib wēdāni*** = `ונשבה לבדנו.` (*ēdēnu* = `לבד`, §11 ↔ Gen 2:18).
+5. **24 *ay irši šagammam*** = `אַל תקנה *פות*` (*rašû* = `קנה`, §4, kept against the idiomatic "have"); 25 *amāt* (eBL lemma *awātu* "word" – a slip: it is *ammatu* "cubit") = `אמה`; *lētu* = `לְחָיֶיהָ` (vocalized).
+6. **26 *ay iṭḫēšim aḫûm ilum lirāmši*** = `אַל יִגַּשׁ אליה זר, אֵל יאה[בנה]!` – *ṭeḫû* = `נגש`, *aḫû* = `זר`, *râmu* = `אהב`; the Hebrew `אַל … אֵל` sound-play is not in the Akkadian (*ay* … *ilum*) – both vocalized, noted; ↔ Num 18:7 `וְהַזָּר הַקָּרֵב יוּמָת`.
+7. **New words**: *mubattiru* = `*זחל*`; *ḫamšīšu* = `חמש פעמים`; *kiṣru* (pl., 12) = `גושים?` (§2 *kiṣru* = `גוש`); *ummānu* "folk" = `המון` (§5).
+8. **Names**: `האֲנוּנָּכִּי`, `אֶנְלִיל`, `פְּרָת`, `נִיפּוּר` vocalized; `רֵעֵהוּ`, `אַל`, `אֵל`, `יָגִיל`, `הַשְׁכֵּב`, `בַּקֵּשׁ` vocalized.
+9. **eBL slips**: 19 *ṣērim* lemmatized "back"; 25 *amāt* lemmatized *awātu*.
+
+### Open decisions for the user
+1. **26 `אַל יִגַּשׁ אליה זר, אֵל יאהבנה`** – the unintended Hebrew pun `אַל`/`אֵל` (vocalized) acceptable, or `בל יגש אליה זר`?
+2. **24 *rašû* = `תקנה`** (one Hebrew verb for *rašû*, §4) or by sense `אל יהיה לה פות`?
+3. **13 the sons' names without the article** (as V 308) or as proper names transliterated (`זִיזָנוּ`, `נָאֶרוּ`, `מוּפַּרְשׁוּ`, `מוּבַּתִּרוּ`)?
+
+### Progress log
+- 2026-10-18: read eBL OB IM (all notes, ATF); `parallels_for.py OB-IM --all`. Drafted 45 entries in three sections; generated both files (1 footnote: 22b–22c).
+- Pass (a): every line against N and the ATF (4 `[ידיים?]`, 9 `נוצ[ר היער]`, 13, 16 `[קטל]`, 21-22a `⟨ארזים⟩`, 26 `יאה[בנה]`).
+- Pass (b): V 300–319, Ishchali 37′b–38′, Harmal₂ 47, OB III 123 compared word by word (all eBL links are "cf.", so `verify.py` lists none); reserved strings: no `שׂים`, `ידע`, `לקח`, שוב, `שמר`, `עולם`, `אלוהים`, `עץ` (*iṣu* does not occur), `עפר`; new strings grepped (`זחל`, `חמש פעמים`, `מתחרה בשמים`, `יבייש`, `הַשְׁכֵּב` – none for another lemma).
+- Pass (c): read aloud.
+- `python3 -I verify.py OB-IM`: 45 = 45, problems 0, no repeated-line differences. `check_bible_quotes.py`: 0 problems (Gen 2:14 corrected to a quotation).
+
+### Parallels index (Tablet OB-IM)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 6, 8 | i niwšib wēdāni | ונשבה לבדנו | `לֹא טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ` (בראשית ב:יח) | [divergence] | *ēdēnu* = `לבד` (§11); the two friends "alone" together. Context broken. |
+| 9 | maṣṣar qištim | נוצ[ר היער] | `לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` (בראשית ג:כד) | [equivalent] | The guardian; *maṣṣaru* = `נוצר`. `היער` restored. |
+| 10 | iṣabbassu | יאחזהו | `וְהַיּוֹרֵד אֶל יַעֲרוֹ – תֹּאחֲזֵהוּ רִפְיוֹן` (§3.1, SB II 229) | [divergence] | Perhaps the §3.1 line; subject lost. (Intra-corpus.) |
+| 13 | zizānam inēru nāʾeram mupparšam mubattiram | את צרצר ק[טלו, את שוא]ג, את מעופף, את *זחל* | `וַיַּשְׁכֵּן … אֶת הַכְּרֻבִים וְאֵת לַהַט הַחֶרֶב` (בראשית ג:כד) | [divergence] | The guardian's (seven) sons/auras slain (SB V 307–308). |
+| 17a | irtaḫiṣ qištam ša erēni | רמס את יער הארזים | `וְאֶכְרֹת קוֹמַת אֲרָזָיו מִבְחַר בְּרֹשָׁיו … יַעַר כַּרְמִלּוֹ` (ישעיהו לז:כד) | [equivalent] | The hero who invades and fells the cedar forest of the Lebanon (Sennacherib's boast). |
+| 17b-18 | mūšab ilī enunakkī puzzuram ipte | את מושב האלים, האנונכי, הצפון פתח | `מוֹשַׁב אֱלֹהִים יָשַׁבְתִּי בְּלֵב יַמִּים` (יחזקאל כח:ב) | [equivalent] | **Key.** "The seat of the gods" (§16), as Ishchali 38′. |
+| 17b-18 | puzzuram ipte | הצפון פתח | `וַיְגָרֶשׁ אֶת הָאָדָם; וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן אֶת הַכְּרֻבִים` (בראשית ג:כד) | [divergence] | The gods' hidden place opened by the hero vs closed to man. |
+| 19 | waldam ṣērim | ילוד השדה | `אִישׁ יֹדֵעַ צַיִד אִישׁ שָׂדֶה` (בראשית כה:כז) | [equivalent] | Enkidu "born of the wild" (*ṣēru* = `שדה`). |
+| 20 | ina dunnīka-ma maṣṣaram tenēram | בעוצמתך את הנוצר קטלת | `וַיַּשְׁכֵּן … אֶת הַכְּרֻבִים … לִשְׁמֹר` (בראשית ג:כד) | [divergence] | The guardian killed (V 305). |
+| 21-22a | mīnû ubaššakka | מה יבייש אותך? | `וַיִּהְיוּ שְׁנֵיהֶם עֲרוּמִּים הָאָדָם וְאִשְׁתּוֹ; וְלֹא יִתְבֹּשָׁשׁוּ` (בראשית ב:כה) | [cognate] | *bâšu* / בוש; shame and its absence. |
+| 21-22a | ubaššakka | יבייש אותך | `כִּי זָנְתָה אִמָּם הֹבִישָׁה הוֹרָתָם` (הושע ב:ז) | [cognate] | The causative stem of בוש. |
+| 22b | šuwwiam erēnam šīham | בַּקֵּשׁ לי ארז גבוה | `וְעַל כָּל אַרְזֵי הַלְּבָנוֹן הָרָמִים וְהַנִּשָּׂאִים` (ישעיהו ב:יג) | [equivalent] | The lofty cedar. |
+| 22c | ša muḫḫašu šamāʾī šannu | אשר קדקודו מתחרה בשמים | `הָבָה נִבְנֶה לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם` (בראשית יא:ד) | [equivalent] | **Key.** A top that "rivals the heavens" (SB V 315 "butts the heavens"); cf. the tower whose head is in heaven. |
+| 22c | šamāʾī šannu | מתחרה בשמים | `הַשָּׁמַיִם אֶעֱלֶה מִמַּעַל לְכוֹכְבֵי אֵל אָרִים כִּסְאִי` (ישעיהו יד:יג) | [equivalent] | Rivalry with heaven (*šanānu* "rival"). |
+| 23 | lūpuš daltam | אעשה דלת | `וְאֵת פֶּתַח הַדְּבִיר עָשָׂה דַּלְתוֹת עֲצֵי שָׁמֶן` (מלכים א ו:לא) | [equivalent] | A temple door of choice wood. |
+| 26 | ay iṭḫēšim aḫûm | אַל יִגַּשׁ אליה זר | `וְהַזָּר הַקָּרֵב יוּמָת` (במדבר יח:ז) | [equivalent] | **Key.** No outsider may approach the god's door. *aḫû* = `זר`. |
+| 26 | ay iṭḫēšim aḫûm | אַל יִגַּשׁ אליה זר | `וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן אֶת הַכְּרֻבִים … לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` (בראשית ג:כד) | [divergence] | Access barred – here by a door made from the guardian's own cedar. |
+| 27 | ana bīti ellil libil purattum | אל בית אנליל ישאנה פרת | `וַאֲנִי אֲשִׂימֵם דֹּבְרוֹת בַּיָּם עַד הַמָּקוֹם אֲשֶׁר תִּשְׁלַח אֵלַי` (מלכים א ה:כג) | [equivalent] | Cedars of the Lebanon floated by water to the god's house. |
+| 27 | purattum | פְּרָת | `וְהַנָּהָר הָרְבִיעִי הוּא פְרָת` (בראשית ב:יד) | [cognate] | The Euphrates. |
+| 29 | lirīssim enlil | יגיל בה אנליל | `יִשְׂמַח יְהוָה בְּמַעֲשָׂיו` (תהלים קד:לא) | [equivalent] | The god delighting in the gift. |
+
+### Lines shared with other tablets
+- **SB V**: 13 ~ V 308; 17a ~ V 300; 20 ~ V 305 (number); 22b ~ V 314; 22c ~ V 315 (verb); 23 ~ V 316; 24–25 ~ V 317; 27 ~ V 318; 28 ~ V 319 (noun). All eBL links are "cf.", so `verify.py` lists none; each change is the Akkadian's.
+- **OB Ishchali**: 17a ~ 37′b; 17b-18 ~ 38′ (+ *ilī*); 11–12 ~ 32′–33′ (Wasserman); 14 ~ 30′ (George, uncertain).
+- **OB Harmal₂**: 19 = 47b (`ילוד השדה – להימלך יוכל`).
+- **OB III**: 17b-18 ~ 123.
+- **Within the tablet**: 6 = 8 (spelling variants only).
+
+### Proposals for the shared renderings
+1. **Key terms (§4)**: *ša muḫḫašu šamāʾī šannu* = `אשר קדקודו מתחרה בשמים` (↔ Gen 11:4) beside SB V 315 `נוגף בשמים`; *ay iṭḫēšim aḫûm* = `אל יגש אליה זר` (↔ Num 18:7); *bâšu* D = `בייש` [cognate ↔ Gen 2:25].
+2. **Ordinary words (§5)**: *mubattiru* = `*זחל*`; *ḫamšīšu* = `חמש פעמים`; *nâlu* Š = `הִשְׁכִּיב` (confirmed, IV 90) also of felling a forest.
+
+### Lessons for the guidelines
+- **Parallels that eBL marks only "cf." must still be compared word by word**: none of OB IM's seventeen SB/OB links is checked by `verify.py`, yet the tablet differs from SB V in exactly one word in most of them (*šannu* for *nakpu*, *ummān* for *atman*, singular for plural); writing each copy as "the first copy plus the Akkadian's change" makes these one-word differences legible for the commentary.

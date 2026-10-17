@@ -42,10 +42,22 @@ The commentary files: `../../../../פירוש/1-בראשית/1020-…-גן_עד�
 4. One translator per tablet (or group), sequentially, in the priority order; the coordinator reviews and merges between runs.
 
 ## Open decisions for the user
-(Collected from the tablet sections by the coordinator.)
+Collected by the coordinator (2026-10-18). The cross-tablet ones are listed here; each tablet section below has its own list (I 6, II 7, III 8, IV 8, V 8, VI 8, VII 11, VIII 8, IX 6, X 10, XI 8, XII 9 items), with the alternatives and the reasons.
 1. *saḫāru* in flood XI 150, 153, 156 (`שָׁבָה`): align to `חָזְרָה`, so that `שוב` stands only for *târu* (as here and in the creation corpus)? (`../renderings.md` §8.)
+2. Flood XI 160 has `צברתי` for *tabāku*, against the rule that `צָבַר` stays out of the Hebrew (Gen 41:49) and the flood renderings' own *tabāku* = `יָצַק`: change it to `יצקתי`?
+3. Reading aloud from a tablet (*šasû* Gtn): flood copy of I 27 `וקרא בקול`, VII 205 `צועקת (ממנו)`. `קָרָא` is reserved for *nabû* "to name": keep the exception in I 27, or change it?
+4. *dumqu*: `חֶסֶד` everywhere (Isa 40:6), or `נוֹי` where it means beauty (XI 252, VI 6, OB Schøyen₂ 10)?
+5. *raggu* (XI 220): `רָשָׁע` (chosen) or `רַע` (an echo of Gen 8:21 that the Akkadian may not justify)?
+6. *ḫīrtu* "chosen wife" (I 75, 90): `כַּלָּה` (shared with *kallatu*, its cognate) or `בְּחִירָה`?
+7. *ūru* "nakedness" (I 179, 187): `עֶרְוָה` or `מָעוֹר` (Hab 2:15)?
+8. The thorns (VII 118; XI 284; IX 188): `חוח וחדק` / `עֹקֶץ` (chosen, to keep `קוץ ודרדר` of Gen 3:18 out), or the natural `קוץ`?
+9. *mešēltu*: `משחזת` (VIII) vs `להב` (OB III).
+10. XII 85: eBL has Šamaš, not Nergal, opening the hole (the translation follows eBL).
+11. *bīt zaqīqi* (IV): `בית־מַשַּׁב` (common noun) or `בֵּית זַקִּיקוּ` (the dream god's name)?
+12. The purchase of Wasserman & Cohen 2026 (Hebrew, Carmel) for a comparison of the Hebrew name forms and renderings (guidelines §9) is still pending.
 
 ## Status / progress log
+- **2026-10-18: complete (first draft).** All twelve tablets as in eBL: I 300, II 187, III 209, IV 175, V 274, VI 183, VII 219, VIII 206, IX 137, X 325, XI 209–328 (120), XII 139 = 2,474 labels, drafted by eleven sequential translators in the user's priority order (I; XI 209–328 + VI; VII; X; [OB]; II; III; V; VIII; IX + XII; [OB III]; IV), three review passes each, renderings merged by the coordinator between runs (`../renderings.md` §9–§21). `../verify.py --strict`: 0 problems; `../build_translation.py`: `translation.rtl.md` built (XI 1–208 embedded from the flood corpus); `check_bible_quotes.py`: 0 problems; print stub `../../הדפסה/אפוס-גילגמש/1-הנוסח-הבבלי-התקני.rtl.md`.
 - 2026-10-17: sources fetched (eBL SB I–XII; OB II, III, VA+BM, Schøyen₂, Nippur, Harmal₁, Ishchali, Harmal₂, IM); corpus files, renderings seed, tools (`gilg_config.py`, `parallels_for.py`, `verify.py`) and the translator brief written by the coordinator.
 
 ---

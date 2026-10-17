@@ -37,13 +37,13 @@ TEXTS = [
     ("XII", SB, "Gilgamesh-SB-XII", "SB", "XII", None),
     ("OB-II", OB, "Gilgamesh-OB-II", "OB", "II", None),
     ("OB-III", OB, "Gilgamesh-OB-III", "OB", "III", None),
-    ("OB-VA+BM", OB, "Gilgamesh-OB-VA-BM", "OB", "VA+BM", None),
     ("OB-Schoyen2", OB, "Gilgamesh-OB-Schoeyen2", "OB", "Schøyen₂", None),
     ("OB-Nippur", OB, "Gilgamesh-OB-Nippur", "OB", "Nippur", None),
     ("OB-Harmal1", OB, "Gilgamesh-OB-Harmal1", "OB", "Harmal₁", None),
     ("OB-Ishchali", OB, "Gilgamesh-OB-Ishchali", "OB", "Ishchali", None),
     ("OB-Harmal2", OB, "Gilgamesh-OB-Harmal2", "OB", "Harmal₂", None),
     ("OB-IM", OB, "Gilgamesh-OB-IM", "OB", "IM", None),
+    ("OB-VA+BM", OB, "Gilgamesh-OB-VA-BM", "OB", "VA+BM", None),
 ]
 BY_KEY = {t[0]: t for t in TEXTS}
 BY_EBL = {(t[3], t[4]): t[0] for t in TEXTS}
