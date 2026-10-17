@@ -402,6 +402,15 @@ Accepted as binding (context: `2-הנוסח-הבבלי-הקדום/annotated-OB-I
 4. **Formula (§2)**: OB `X פתח את פיו,` / `ודיבר אל Y:` and the one-line `X פתח את פיו, ודיבר אל Y:` confirmed for the masculine (as OB II 147–148, 94–95); *siqra turru* = `מאמר השיב`.
 5. **verify.py**: no change needed; eBL's "=" links of 108/109/137/215 to SB II (decision 12) could be added to a list of known false links.
 
+## 20. Merged after Tablet IV (2026-10-18)
+Accepted as binding (context: `annotated-IV.rtl.md`). The IV incubation cycle (best copy IV 88–100) is fixed passage §3.3 for the OB dream tablets (Schøyen₂, Nippur, Harmal₁): copy its strings where the Akkadian is identical. A name whose first occurrence falls in a repeated line is vocalized identically in every copy.
+
+1. **Fixed passage (§3)**: the IV cycle (decision 2) as §3.3, with the plene strings above, for OB Schøyen₂ and any later copy.
+2. **Key terms (§4)**: *zaqīqu* = `מַשַּׁב` also in *bīt zaqīqi* = `בית־מַשַּׁב` (open decision 1); *šittu rēḫât nišī* = `השינה הניתכת על האנשים` (with Job 4:13 in the *šittu* row); *šasû* "call (someone)" = `צָעַק אֶל` (1 Sam 3 tagged); *maḫāru* Š *šuttam* = `מְרַצֶּה (לו) את חלומו`; *damqat šunatka* = `נאה חלומך`; *barāqu* / *birqu* = `בָּרַק` / `בָּרָק` [cognate]; *târu ana* "turn into" = `נֶהְפַּךְ לְ־` (add to the *târu* row: the flood corpus's usage, now in IV 106); *nakāru* D stative = `מְנֻכָּר` [cognate].
+3. **Ordinary words (§5)**: *ḫamû* = `קָהֶה`; *šāšû* = `מְבֻלְבָּל`; *qablītu* = `אמצע (הלילה)` (never `אַשְׁמֹרֶת`); *kinṣu* = `כְּרָעַיִם`; *kippatu* = `מַעְגָּל`; *uṣurtu* = `צִיּוּר`; *šēšû* = `מִכְמֹרֶת`; *šarbillu* = `סְעָרָה`; *maṣḫatu* = `קמח־המַצְחַתּוּ`; *leʾû* = `יָכֹל`; *mitluku* = `להימלך`; *ramāmu* = `רָעַשׁ`; *nablu* = `שַׁלְהֶבֶת`; *daʾāmu* = `דָּעַךְ`; *belû* = `כָּבָה`; *nebû* = `בּוֹהֵק`; *qatnu* = `דַּק`; *kurrû* = `קָצָר` (used); *ina ūmīšū-ma* = `בו ביום`; *ašar* = `במקום אשר`; *muḫḫu* in *ina muḫḫi* = `על קדקד`.
+4. **§7 "always vocalize"**: `קָהֶה` (numb / "blunt" fem.), `כָּרוּ` (dug / "they hired"), `נִפְּחָה` (vs `נַפָּחָה` "smith"), `נוֹלַדְתָּ` (gender), `נָשִׂים` (we put / women), `יִנָּפְחוּ`, `בָּרָק`; and `גִּילְגָּמֶשׁ` with yod when the first occurrence stands in a repeated line (the defective `גִּלְגָּמֶשׁ` fails the strip test against `גילגמש`).
+5. **verify.py**: nothing needed. A §3.3 check (the canonical cycle strings against every copy, consonants only, like §3.2 for X) would serve OB Schøyen₂.
+
 ## Changelog
 - 2026-10-17: seed written by the corpus coordinator before Tablet I, from the flood, creation and law corpora and a reading of I, II, VI, VII, X and XI 207–328 in eBL.
 - 2026-10-17: §9 merged from Tablet I.
@@ -415,3 +424,4 @@ Accepted as binding (context: `2-הנוסח-הבבלי-הקדום/annotated-OB-I
 - 2026-10-17: §17 merged from Tablet VIII.
 - 2026-10-18: §18 merged from Tablets IX and XII.
 - 2026-10-18: §19 merged from OB III.
+- 2026-10-18: §20 merged from Tablet IV.
