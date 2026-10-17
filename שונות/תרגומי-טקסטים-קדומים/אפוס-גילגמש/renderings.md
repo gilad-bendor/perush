@@ -375,6 +375,24 @@ Accepted as binding (context: `annotated-VIII.rtl.md`); *erṣetu* (netherworld)
 5. **§7 "always vocalize"**: `אוּלַי` (the river / "perhaps"), `לְשַׁמַשׁ` (the god / "to serve"), `נוֹסֵחַ` (tears out / version), `הֶרְאָה`, `עוֹבְיָם` ("clouds"), `שַׁיִשׁ` ("six"), `הַמְטַאטֵא` (sweeper / broom).
 6. **verify.py**: nothing needed for VIII.
 
+## 18. Merged after Tablets IX and XII (2026-10-18)
+Accepted as binding (context: `annotated-IX.rtl.md`, `annotated-XII.rtl.md`). The IX darkness refrain (IX 83, 141 and copies) is a fixed passage.
+
+### From IX
+1. **Fixed passage (§3)**: the IX refrain `עֲבָה החשכה, ואין אור;` / `אינה נותנת לו להסתכל לאחוריו.`; the *bēru* numerals (`בֵּרוּ אחד`, `שני בֵּרוּ` … `שנים־עשר בֵּרוּ`).
+2. **Names (§1)**: `הַר מָאשׁוּ` (used), `אֲרַלּוּ` (*arallû*, transliterated, `שְׁאוֹל` only tagged), `אַנְשֵׁי־הָעַקְרָב` (pl.); stones: `פַּפַּרְדִּלּוּ`, `*לָרוּשׁ*`, `סָסוּ`, `אַנְזַגּוּלְמֶה`, `אַבַּשְׁמוּ`, `שׁוּבּוּ`, `שָׁדָנוּ`, `אֲגוּסִיגוּ`.
+3. **Key terms (§4)**: *šapû* II (darkness) = `עָבָה`; *sāmtu* = `אוֹדֶם` (plene with niqqud); *isḫunnatu* = `אֶשְׁכּוֹל`; *ḫasḫaltu* = `עלווה`; *ḫarūbu* = `חָרוּב` [cognate]; *rašubbatu* = `מוֹרָא`; *galtu* = `אָיֹם`; *saḫāpu* = `סָחַף` [cognate]; *arāmu* "cover" = `עָטָה`; *imru* = `מַבָּט`; *supû* = `שַׁוְעָה`; *šupku* = `מַסָּד`; *elû* "top" = `פסגה`; *girtablilu* + *naṣāru* ↔ Gen 3:24 confirmed as the corpus's main guardian row; *urḫa/ḫarrāna ṣabātu* = `אחז דרך/אורח` (Job 17:9).
+4. **Ordinary words (§5)**: *parāru* D = `פורר`; *tānēḫu* = `אנחה`; *zinû* = `גבעול`; *išqillatu* = `צדפה`; *lām* = `קודם ל־`; *šalmiš* = `בשלום`; *abul šadî* = `שער ההר`; *iltānu* = `רוח הצפון`; *ḫiāpu* stative = `*מזוקק*`; *eṣēru* D = `צִייֵּר`.
+5. **§7 "always vocalize"**: `עֲבָה` (thick, fem.), `עֲרֵבָה` (pleasant / steppe / willow), `אוֹדֶם` (carnelian / man), `צִייֵּר`.
+
+### From XII
+1. **Formulas (§2)**: *erṣetu iṣbassu* = `הארץ אֲחָזַתְהוּ`; *ul iṣbassu* = `לא אֲחָזוֹ`; *ana erṣeti imqutanni* = `אל הארץ נפל לי`; *ultu erṣeti šūlû* = `העלה מן הארץ` (`אעלה לך`); the dialogue formula *ša … tāmur / ātamar* = `"את אשר … – ראית?" "ראיתי:`; prohibitive *lā* + present = `לא` + future (all corpora).
+2. **Names (§1)**: Asakku `אֲסַכּוּ`, Ninazu `נִינַאזוּ`, Ekur `אֵכּוּר`, Eridu `אֶרִידוּ`, Ningal `נִינְגַל`, Ur `אוּר` (biblical), *rābiṣu* `רוֹבֵץ` (common noun used as a title).
+3. **Key terms (§4)**: *ubāru* = `גֵּר`; *šabbiṭu* = `שֵׁבֶט` [cognate]; *šalamtu* = `נְבֵלָה`; *pāqidu* = `פּוֹקֵד` [cognate]; *napalsuḫu* = `הִתְפַּלֵּשׁ` [equivalent]; *arāru* III = `נִזְדַּעְזַע` (false friend of ARR); *šâlu* = `שָׁאַל` [cognate]; *uʾʾurtu* of the netherworld = `צו הארץ`; *zaqīqu* = `מַשַּׁב` without `רוח` when *utukku* is in the line; *utukku* = `רוּחַ` confirmed; *mekkû* always vocalized `מֵכּוּ`.
+4. **Ordinary words (§5)**: *pūru* = `צלוחית`; *tilpānu* = `מקל־זריקה`; *šênu* = `נעל` (vocalized); *lamû* = `סובב`; *būdu* = `כתף`; *aširtu* = `הוראה`; *gušūru* = `קורה`; *labīru* (objects) = `נושן`; *kalmatu* = `עש`; *nigiṣṣu* = `נקיק`; *takšû* = `אמתחת`; *ṣimdu* = `צמד`; *duppussû* = `זוטר`; *šurīnu* = `נֵס`; *tubqu* = `פינה`; *šukkultu* = `גרידות`; *diqāru* = `סיר`; *kusīpu* = `פתיתים`; *marṣiš* = `בכאב`; *išariš* = `ישר`; *išaru* = `אבר`; *ālittu* = `יולדת`.
+5. **§7 "always vocalize"**: `אֲחָזוֹ` (him / they held), `הַיְּשֵׁנָה` (asleep / old), `הֶעֱלָה` (brought up / the leaf), `תַּעֲלֶה`, `תִּנְעַל`, `אֵלוֹ` (his god / these), `כְּנֵס`, `בְּכֵה`, `תֵּשֵׁב`.
+6. **Collision to resolve**: *sikkatu* (flood XI 64, XII 103, 145) and *deššu* (VII 87) both `יתד` (open decision 7).
+
 ## Changelog
 - 2026-10-17: seed written by the corpus coordinator before Tablet I, from the flood, creation and law corpora and a reading of I, II, VI, VII, X and XI 207–328 in eBL.
 - 2026-10-17: §9 merged from Tablet I.
@@ -386,3 +404,4 @@ Accepted as binding (context: `annotated-VIII.rtl.md`); *erṣetu* (netherworld)
 - 2026-10-17: §15 merged from Tablet III.
 - 2026-10-17: §16 merged from Tablet V.
 - 2026-10-17: §17 merged from Tablet VIII.
+- 2026-10-18: §18 merged from Tablets IX and XII.
