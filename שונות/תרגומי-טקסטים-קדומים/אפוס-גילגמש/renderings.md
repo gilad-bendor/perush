@@ -393,6 +393,15 @@ Accepted as binding (context: `annotated-IX.rtl.md`, `annotated-XII.rtl.md`). Th
 5. **§7 "always vocalize"**: `אֲחָזוֹ` (him / they held), `הַיְּשֵׁנָה` (asleep / old), `הֶעֱלָה` (brought up / the leaf), `תַּעֲלֶה`, `תִּנְעַל`, `אֵלוֹ` (his god / these), `כְּנֵס`, `בְּכֵה`, `תֵּשֵׁב`.
 6. **Collision to resolve**: *sikkatu* (flood XI 64, XII 103, 145) and *deššu* (VII 87) both `יתד` (open decision 7).
 
+## 19. Merged after OB III (2026-10-18)
+Accepted as binding (context: `2-הנוסח-הבבלי-הקדום/annotated-OB-III.rtl.md`). *šuma šuzuzzu* = `הֶעֱמִיד שֵׁם`, *šuma šakānu* = `שָׂם שֵׁם`. *mešēltu*: open (VIII `משחזת`, OB III `להב`).
+
+1. **Key terms (§4)**: *šuma šakānu* Gt = `שָׂם (לו) שֵׁם` (160, 188; ↔ Gen 11:4, 2 Sam 7:23, Deut 12:5) and **šuma šuzuzzu (*izuzzu* Š) = `הֶעֱמִיד שֵׁם`** (148; ↔ 2 Sam 18:18, Deut 25:7) – two verbs, two Hebrew words; *darû* (stative verb) = `נִצְחִי` (with *dārû*); *dāriš* = `לָעַד` (vocalized); *ṣiāḫu* = `צָחַק` [cognate] (Gen 17:17, 18:12); *ernittu* = `מִשְׁאָלָה` (open decision 4; keeps נצח for *dārû*); *nawû* D = `שׁוֹמֵם`; *šatû* III (*tuqumtam šatû*) = `אָרַג תִּגְרָה`; *rūʾūtu* = `עֲמִיתוּת` (open decision 6); *kasāmu* = `קִצֵּץ` (cedars; *nakāsu* = `כרת`, *ḫaṣābu* = `גדע`); *naqû* = `נִסֵּךְ` (beside *nīqu* = `זֶבַח`).
+2. **Names (§1)**: Wēr = `וֵר` (always vocalized; a form of Adad); Anšan = `אַנְשָׁן`, *anšanû* = `אַנְשָׁנִי`; add to §7 "always vocalize": `וֵר`, `אֵלְךָ`, `אֵלִי` (*ilka*, *ilī*), `לָעַד`, `הֲשִׁיבֵנִי`, `יַרְאוּךָ`, `הִילְּלוּ`.
+3. **Ordinary words (§5)**: *ḫašāḫu* = `חָשַׁק`; *nâdu* D = `הִלֵּל`; *tabbītu* = `יְבָבָה`; *dâdānū* = `מֵיתְרֵי צַוָּאר`; *anāḫu* Št = `נֶאֱנַח`; *enēšu* = `חָלַשׁ`; *galātu* D = `הִבְהִיל`; *danānu* (noun) = `חוֹזֶק`; *qarrādūtu* = `גְּבוּרָה`; *mešēltu* (dagger) = `לַהַב` (VIII `מַשְׁחֶזֶת`: one lemma, two senses – coordinator's choice); *ṣipru* = `חוֹד`; *iḫzu* = `מִשְׁבֶּצֶת`; *têrtu* = `הַנְחָיָה`; *šibqū* = `תַּחְבּוּלוֹת`; *padānu* = `מִשְׁעוֹל`; *peḫû* = `חָסוּם`; *ṣamāru* = `שָׁאַף`; *nawāru* D stat. = `מוּאָר`; *šalāmu* G + ventive = `בָּא בְּשָׁלוֹם`; *šemû* Š = `הִשְׁמִיעַ`; *maḫāru* "stand against" (verbal noun / with weapons) = `עָמַד מוּל`, *māḫiru* = `מִתְמוֹדֵד` (open decision 5).
+4. **Formula (§2)**: OB `X פתח את פיו,` / `ודיבר אל Y:` and the one-line `X פתח את פיו, ודיבר אל Y:` confirmed for the masculine (as OB II 147–148, 94–95); *siqra turru* = `מאמר השיב`.
+5. **verify.py**: no change needed; eBL's "=" links of 108/109/137/215 to SB II (decision 12) could be added to a list of known false links.
+
 ## Changelog
 - 2026-10-17: seed written by the corpus coordinator before Tablet I, from the flood, creation and law corpora and a reading of I, II, VI, VII, X and XI 207–328 in eBL.
 - 2026-10-17: §9 merged from Tablet I.
@@ -405,3 +414,4 @@ Accepted as binding (context: `annotated-IX.rtl.md`, `annotated-XII.rtl.md`). Th
 - 2026-10-17: §16 merged from Tablet V.
 - 2026-10-17: §17 merged from Tablet VIII.
 - 2026-10-18: §18 merged from Tablets IX and XII.
+- 2026-10-18: §19 merged from OB III.
