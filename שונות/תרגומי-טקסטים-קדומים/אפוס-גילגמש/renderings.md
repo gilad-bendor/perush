@@ -357,6 +357,14 @@ Accepted as binding (context: `annotated-III.rtl.md`). Coordinator decisions: *k
 4. **§7 "always vocalize"**: `אַיָּה` (Aya / "where?"), `גְּשָׁה`, `הָרְאָה`, `שׁוֹנָה` (repeats / different), `טַעַם` (decree / taste), `יְאַבֵּד` (Piel / Qal), `דִּין` (imperative / noun), `אַל` (vetitive / "to"), `תְּכַפֵּר` (wipe / atone).
 5. **verify.py**: no change needed for III. A §3.1-style check of the winds passage (88–93 against V 159–165) would help the V translator.
 
+## 16. Merged after Tablet V (2026-10-17)
+Accepted as binding (context: `annotated-V.rtl.md`). Coordinator: V 283 *arrāt* = `מְאֵרוֹת` (verify.py now accepts eBL's lemma *arru*); no garden words for the forest.
+
+1. **Key terms (§4)**: *ṣillu* = `צֵל` [cognate] (9, 27, 94; Ezek 31:6, Ps 91:1, 121:5); *mūšab ilī* = `מושב האלים` [equivalent ↔ Ezek 28:2 `מוֹשַׁב אֱלֹהִים`]; *ḫalbu* = `חֹרֶשׁ`, *ṣarṣaru* = `סְבַךְ` (with *qištu* = `יַעַר`; **no garden word without *kirû***); *papallu* = `שָׁתִיל`; *šurmēnu* = `שׁוּרְבִּין` (open decision 4); *naḫlaptu* = `מַעֲטֶה` and *ḫalāpu* = `התעטף` (add to the *melammu* row: SB V's auras are "seven cloaks of radiance"); *eṭēru napišta* = `מִלֵּט נֶפֶשׁ` (≠ *ezēbu* Š `הציל`); *napšatuš šeʾû* = `בִּקֵּשׁ עַל נַפְשׁוֹ` (Esth 7:7); *labāru* = `הִזְקִין` (open decision 1); *qēbiru* = `קוֹבֵר`; *napāḫu* = `נָפַח` [cognate of Gen 2:7 `וַיִּפַּח`] and *nappāḫu* = `נַפָּח`; *šušlušu* = `מְשֻׁלָּשׁ` [cognate]; *enēqu* = `יָנַק` [cognate]; *atmanu* = `דְּבִיר`; *riqqu* = `בֹּשֶׂם`; *tušāru* = `יְשִׁימוֹן`; *libbātu* = `חָרוֹן`; *alāku* Gtn = `התהלך` (I 151, V 4) ↔ Gen 3:8.
+2. **Ordinary words (§5)**: *giṣṣu* = `נַעֲצוּץ`; *ḫâlu* = `נָזַל`, *ḫīlu* = `שְׂרָף`; *zanānu* G = `נִמְטַר` (Š `הִמְטִיר`); *ḫarru* = `אָפִיק`; *zizānu* = `צְרָצַר`; *šisītu* = `צְוָחָה`; *šamāru* II = `שׁוֹרֵר`; *ḫalālu* Š = `מַחֲלִיל`; *sukannīnu* = `תּוֹר` (always vocalized); *laqlaqqu* = `חֲסִידָה`; *riāšu* = `גָּל` (`יָגִיל`); *pagû* = `קוֹף`; *mīrānu* = `גּוּר`; *labû* = `צָוַח`; *nāru* / *tigû* = `מְנַגֵּן` / `מְתוֹפֵף`; *lilissu* = `תֹּף`; *kamālu* = `זָעַף`; *mašû* = `שָׁכַח`; *palālu* = `שָׁקַד`; *tākaltu* (sheath) = `נָדָן`; *lapātu* "smear" = `מָרַח` (beside "touch" `נָגַע`); *makû* = `דַּל`; *mušḫalṣītu* = `חֲלַקְלַקָּה`; *ašlu* = `אַגְמוֹן`; *ūṣu* = `שֶׁלַח`; *arkatu* = `יַרְכָתַיִם`; *ragāmu* = `רָעַם`; *nuʾû* = `בַּעַר`; *lillu* = `כְּסִיל` (§12); *raqqu* / *šeleppû* = `צַב־מַיִם` / `צָב`; *aḫû* = `זָר`; *napšāru* = `גָּרוֹן`; *nāʾeru* = `שׁוֹאֵג`; *tumru* = `רֶמֶץ`; *ištuḫḫu* = `שׁוֹט`; *šapāru* = `שָׁלַח`; *asīdu* = `עָקֵב`; *ṣalāmu* = `שָׁחַר` (vocalized); *sapānu* = `שִׁטַּח`; *unnīnu* = `תַּחֲנוּנִים`; *girûtu* = `מְרִיבָה`; *agru* = `שָׂכִיר`; *ekâm* = `הֵיכָן`; *bâru* = `לָכַד`; *rummû* = `הַרְפָּיָה` (plene `הרפייה`); *ḫašû* = `רֵאָה`; *ṭuḫdu* = `רֹב`; *dunnu* = `עָצְמָה`; *sumkīnu* = `שְׁבָבִים`; *terku* = `מַכָּה`; *muḫḫu* = `קָדְקֹד`; *mangu* = `*קִשְׁיוֹן*`; *uttūtu* = `בֶּהָלָה`; *apillû* = `כּוֹהֵן־אַפִּלּוּ`.
+3. **verify.py**: add *arru* to the allowed lemmas of the ARR check (V 283 *arrāt*, eBL's lemma for the plural of *arratu*), so that `מארות` can stand; then V 283 should change to `עד מארות … […]` (open decision 2).
+4. **§7 "always vocalize"**: `שָׁחַר` (black / dawn), `הַתּוֹר` (turtledove / turn), `כּוֹהֵן־אַפִּלּוּ` (`אפילו` "even"), `יִימָּלְכוּ` (consult / reign), `מַלֵּט`, `תִּסַּח`; and **plene before niqqud for Niphal / Piel forms with a written yod** (`יימלכו`, `ביתקו`, `יגוף`) – the strip test caught five.
+
 ## Changelog
 - 2026-10-17: seed written by the corpus coordinator before Tablet I, from the flood, creation and law corpora and a reading of I, II, VI, VII, X and XI 207–328 in eBL.
 - 2026-10-17: §9 merged from Tablet I.
@@ -366,3 +374,4 @@ Accepted as binding (context: `annotated-III.rtl.md`). Coordinator decisions: *k
 - 2026-10-17: §13 merged from OB VA+BM and OB II.
 - 2026-10-17: §14 merged from Tablet II.
 - 2026-10-17: §15 merged from Tablet III.
+- 2026-10-17: §16 merged from Tablet V.
