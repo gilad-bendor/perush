@@ -365,6 +365,16 @@ Accepted as binding (context: `annotated-V.rtl.md`). Coordinator: V 283 *arrāt*
 3. **verify.py**: add *arru* to the allowed lemmas of the ARR check (V 283 *arrāt*, eBL's lemma for the plural of *arratu*), so that `מארות` can stand; then V 283 should change to `עד מארות … […]` (open decision 2).
 4. **§7 "always vocalize"**: `שָׁחַר` (black / dawn), `הַתּוֹר` (turtledove / turn), `כּוֹהֵן־אַפִּלּוּ` (`אפילו` "even"), `יִימָּלְכוּ` (consult / reign), `מַלֵּט`, `תִּסַּח`; and **plene before niqqud for Niphal / Piel forms with a written yod** (`יימלכו`, `ביתקו`, `יגוף`) – the strip test caught five.
 
+## 17. Merged after Tablet VIII (2026-10-17)
+Accepted as binding (context: `annotated-VIII.rtl.md`); *erṣetu* (netherworld) = `הָאָרֶץ`, never `שְׁאוֹל` (XII follows).
+
+1. **Key terms (§4)**: *erṣetu* = `אֶרֶץ` confirmed for the netherworld formulas (`מלכת הארץ`, `הארץ הרחבה` for *erṣetu rapaštu*), with `שְׁאוֹל` only in the apparatus and the index (XII will need the same); *ṣalmu* = `צֶלֶם` (VIII 69, 72, 74) added to the Gen 1:26–27 rows with Exod 20:3, Deut 27:15 [divergence]; *dišpu* = `דְּבַשׁ` [cognate] beside *ḫimētu* = `חֶמְאָה`; *sikru* / *sekēru* = `סֶכֶר` / `סָכַר` [cognate ↔ Gen 8:2] (reserve סכר for *sekēru*; open decision 8 on flood XI 102); *kallatu* = `כַּלָּה` confirmed (VIII 59); *ikkaru* = `אִיכָּר` ↔ Joel 1:11, Amos 5:16; *qerbetu* = `נְאוֹת` and *merītu* = `מִרְעֶה`; *lallartu* = `סוֹפֶדֶת` (open decision 1); *nubbû* = `יִלֵּל`; *šittu* = `שֵׁנָה` (never `תַּרְדֵּמָה`); *manû* = `מָנֶה`; *išpatu* = `אַשְׁפָּה`; *marû* = `מְרִיא`; *ṭabāḫu* = `טָבַח`, *ṭābiḫu* = `טַבָּח`; *ebbūbu* = `אַבּוּב`; *alālu* = `הֵידָד`.
+2. **Names (§1)**: Ulāya = `אוּלַי` (**always vocalized**, add to §7); Ḫušbišag = `חוּשְׁבִּישָׁה`; Qāssa-ṭābat = `קַאסַּה־טָבַת`; Ninšuluḫḫatumma = `נִינְשׁוּלוּחַתוּמַּה`; Bibbu = `בִּבּוּ`; Dumuzi-abzu = `דּוּמוּזִי־אַבְּזוּ`; netherworld titles *sukkallu* `שַׂר`, *abarakkatu* `סוֹכֶנֶת`, *šābiṭu* `מְטַאטֵא`, *ṭābiḫu* `טַבָּח`, *mašḫaltappû* `מַשְׁחַלְתַּפּוּ`, *mušēširat bīti* `מיישרת הבית`.
+3. **Formulas (§2)**: *ištakan ana ibrīšu* = `שׂם לְרֵעֵהוּ`; *ana* DN … *šamaš uktallim* = `בעבור DN, …, לְשַׁמַשׁ הֶרְאָה:`; *limḫur* DN = `יקבל` / `תקבל` DN; *ana pān ibrīya lū ḫadât-ma / ḫadī-ma idāšu lillik* = `לקראת רֵעִי תהי שמחה, ולצדו תלך!` / `יהי שמח … ילך!`; *libkīka* / *libkûnikku* = `יבכה אותך` / `יבכו אותך`.
+4. **Ordinary words (§5)**: *ḫalāpu* I "slip through" = `חָמַק`; *serrēmu* = `חֲמוֹר בָּר`; *lulīmu* = `יַחְמוּר`; *dumāmu* = `*תַּן*`; *taskarinnu* = `תְּאַשּׁוּר` (open decision 4); *kaparru* = `נַעַר־הַצֹּאן`; *sābû* = `בַּעַל־הַמִּסְבָּאָה`; *ḫīqu* = `*מֶזֶג*`; *elû* (adj.) = `עֶלְיוֹן`; *tukultu* = `מִבְטָח`; *arītu* = `מָגֵן`; *isinnu* = `חַג`; *mukillu* = `מַחֲזִיק`; *nakādu* = `הָלַם`; *katāmu* = `כִּסָּה`; *nēštu* = `לְבִיאָה`; *baqāmu* = `מָרַט`; *qunnunu* = `מְסֻלְסָל`; *asakkiš* = `כדבר אסור`; *nappāḫu*, *kutimmu*, *qurqurru*, *kabšarru*, *zadimmu* (decision 6); *riksu* = `קֶשֶׁר`; *šukuttu* = `עֲדָיִים`; *parūtu* = `שַׁיִשׁ`; *kubru* = `עֹבִי`; *ḫutpalû* = `מַפֵּץ`; *naṣbatu* = `*ידית*`; *šikru* = `נִצָּב`; *nikkas* = `חֲצִי קָנֶה`; *ṣibittu* = `*אחיזה*`; *kussû* = `כִּסֵּא`; *werû* = `נְחֹשֶׁת`; *parzillu* = `בַּרְזֶל`; *šemeru* = `צָמִיד`; *šikkatu* = `פַּךְ`; *mešēltu* = `מַשְׁחֶזֶת`; *mallatu* = `קְעָרָה`; *paššūru* = `שֻׁלְחָן`; *kabru* = `שָׁמֵן`; *immeru* = `כֶּבֶשׂ`; *maḫāru* "receive" = `קִבֵּל`; *dayyānu* = `דַּיָּן` (plene `דיין`).
+5. **§7 "always vocalize"**: `אוּלַי` (the river / "perhaps"), `לְשַׁמַשׁ` (the god / "to serve"), `נוֹסֵחַ` (tears out / version), `הֶרְאָה`, `עוֹבְיָם` ("clouds"), `שַׁיִשׁ` ("six"), `הַמְטַאטֵא` (sweeper / broom).
+6. **verify.py**: nothing needed for VIII.
+
 ## Changelog
 - 2026-10-17: seed written by the corpus coordinator before Tablet I, from the flood, creation and law corpora and a reading of I, II, VI, VII, X and XI 207–328 in eBL.
 - 2026-10-17: §9 merged from Tablet I.
@@ -375,3 +385,4 @@ Accepted as binding (context: `annotated-V.rtl.md`). Coordinator: V 283 *arrāt*
 - 2026-10-17: §14 merged from Tablet II.
 - 2026-10-17: §15 merged from Tablet III.
 - 2026-10-17: §16 merged from Tablet V.
+- 2026-10-17: §17 merged from Tablet VIII.
