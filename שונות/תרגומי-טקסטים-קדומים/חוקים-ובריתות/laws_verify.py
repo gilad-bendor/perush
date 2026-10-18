@@ -31,7 +31,7 @@ RESERVED = [NB + w + NE for w in ['יומת', 'יומתו', 'ויומת', 'נג�
 # cuneiform counterparts are other words
 RESERVED += [NB + w + NE for w in ['יבם', 'יבמה', 'ייבם', 'יבמתו', 'יבמי', 'ליבם', 'מאורשה', 'ארוסה', 'אורשה', 'ארש', 'מוהר',
                                    'יכנו', 'הכה', 'יכה', 'ויכה', 'הכהו', 'יכוהו', 'הכו', 'המכה', 'יחצון', 'וחצו', 'יחצו',
-                                   'תחוס', 'מבשיו', 'יוסיף', 'נבלה', 'ענה', 'עינה', 'נאף', 'ינאף', 'הנואף', 'נואף']]
+                                   'תחוס', 'מבשיו', 'יוסיף', 'נבלה', 'ענה', 'עינה', 'הסיג', 'יסיג', 'מסיג', 'תסיג', 'נאף', 'ינאף', 'הנואף', 'נואף']]
 RESERVED_RE = [re.compile(p) for p in RESERVED]
 
 # lemma-gated Hebrew words: (Hebrew regex on the bare line, regex that the normalization / lemma / transliteration

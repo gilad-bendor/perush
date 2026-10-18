@@ -11,7 +11,8 @@ import os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'parallels-index.md')
 PROJECTS = [('EST', '1-אמנת-הירושה-של-אסרחדון'), ('LH', '2-חוקי-חמורבי'), ('LE', '3-חוקי-אשנונה'),
-            ('MAL', '4-החוקים-האשוריים-התיכונים-A'), ('LI', '5-חוקי-ליפית-אישתר'), ('UN', '6-חוקי-אור-נמה')]
+            ('MAL', '4-החוקים-האשוריים-התיכונים-A'), ('LI', '5-חוקי-ליפית-אישתר'), ('UN', '6-חוקי-אור-נמה'),
+            ('MALB', '7-החוקים-האשוריים-התיכונים-B')]
 BOOKS = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים', 'יהושע', 'שופטים', 'שמואל א', 'שמואל ב', 'מלכים א', 'מלכים ב',
          'ישעיהו', 'ירמיהו', 'יחזקאל', 'הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה', 'נחום', 'חבקוק', 'צפניה', 'חגי',
          'זכריה', 'מלאכי', 'תהלים', 'תהילים', 'משלי', 'איוב', 'שיר השירים', 'רות', 'איכה', 'קהלת', 'אסתר', 'דניאל',
@@ -70,7 +71,7 @@ out = [keep.rstrip('\n'), '', '## The table', '',
        'EST = Esarhaddon\'s Succession Treaty (composite line; "T col line" = Tell Tayinat); '
        'LH = the Laws of Hammurabi (§ and CDLI composite line; "prol." / "epil." = prologue / epilogue); '
        'LE = the Laws of Eshnunna (§ and CDLI composite line); MAL = the Middle Assyrian Laws, Tablet A (§ and tablet line, ORACC); '
-       'LI = the Laws of Lipit-Ištar; UN = the Laws of Ur-Namma (§ (Roth 1997) and CDLI composite line).', '']
+       'MALB = the Middle Assyrian Laws, Tablet B; LI = the Laws of Lipit-Ištar; UN = the Laws of Ur-Namma (§ (Roth 1997) and CDLI composite line).', '']
 cur = None
 for r in rows:
     b, c, v = key(r)

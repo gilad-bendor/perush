@@ -31,6 +31,15 @@ PROJECTS = {
                   ('2', 'laws-25-40', 'o iii 82', 'r v 106', 'החוקים §25–§40'),
                   ('3', 'laws-41-59', 'r vi 1', 'r viii 65', 'החוקים §41–§59 והקולופון')],
         'title': 'החוקים האשוריים התיכונים, לוח A',
+        'colophon': True,
+    },
+    'MALB': {
+        'folder': '7-החוקים-האשוריים-התיכונים-B',
+        'kind': 'oracc',
+        'lemmatised': os.path.join(SRC, 'ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/P281780--MAL-B--lemmatised.md'),
+        'translation': os.path.join(SRC, 'ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/P281780--MAL-B--translation-de-Ridder.md'),
+        'files': [('1', 'laws-1-20', None, None, 'החוקים §1–§20')],
+        'title': 'החוקים האשוריים התיכונים, לוח B',
     },
     'LI': {
         'folder': '5-חוקי-ליפית-אישתר',
@@ -176,7 +185,7 @@ def parse_oracc_mal(P):
             units.append((re.sub(r'\s+', ' ', m.group(1)).strip(), re.sub(r'\s+', ' ', m.group(2))))
     starts = {}
     for i, (lab, txt) in enumerate(units, 1):
-        starts[lab] = ('colophon' if i == 60 else str(i), txt)
+        starts[lab] = ('colophon' if (P.get('colophon') and i == len(units)) else str(i), txt)
     law = None
     for x in L:
         if x['n'] in starts:
@@ -198,7 +207,11 @@ def parse(key):
 
 def files(key, L=None):
     """the annotated files of a project with their label ranges resolved: [(num, slug, first, last, title)]"""
-    return PROJECTS[key]['files']
+    fs = PROJECTS[key]['files']
+    if any(f[2] is None for f in fs):
+        L = L or parse(key)
+        fs = [(f[0], f[1], f[2] or L[0]['n'], f[3] or L[-1]['n'], f[4]) for f in fs]
+    return fs
 
 
 def rows_of(L, first, last):
@@ -294,4 +307,7 @@ TOPICS = {
            ('9', 'עזיבת האשה והאלמנה'), ('12?', 'האוגבבתו; ההאשמות ומבחן הנהר'), ('15', 'החתן; העבד הנמלט'),
            ('18', 'חבלות בגוף'), ('23?', 'האלמנה בבית חמיה; האמה וגבירתה; המוחץ בת איש ואמה'),
            ('27', 'עדים'), ('29', 'שדות'), ('@b001', 'החוקים הנוספים (b001–f008): שכירות, ירושה, נצירה, נישואין, בקר')],
+    'MALB': [('1', 'האחים שלא חלקו את בית אביהם'), ('6', 'קניית שדה ובית: הכרזת הכרוז; בית שנהרס'),
+             ('8', 'התחום הגדול והתחום הקטן'), ('10', 'באר, מגדל, גן ולבנים בשדה שאינו שלו'),
+             ('17', 'מי ההשקיה: מי הבארות ומי אדד'), ('19', 'שדה העמית; תחום וציון בשדה שאינו שלו')],
 }

@@ -21,3 +21,6 @@
 
 ## Usefulness
 **Base text** of `חוקים-ובריתות/4-החוקים-האשוריים-התיכונים-A/`. Good (about 6% of the words in `[ ]`). de Ridder's English is a loose paraphrase with slips ("acts upon her as a bill", "het"): rank 3, consult after your own reading. ORACC's lemmatisation is the best lexical help (check every lemma: stem and form are not marked).
+
+## MAL B (added 2026-10-18)
+- `P281780--MAL-B--lemmatised.md` (`tools/cdl2md.py --norm`, member `tcma/laws/corpusjson/P281780.json`): **MAL B = KAV 2 (VAT 10001)**, 245 lines (`o ii 1` – `r vii 26`), §1–§20 (fields, boundaries, water). `P281780--MAL-B--translation-de-Ridder.md` (`tools/oracc_html2tr.py` from `https://oracc.museum.upenn.edu/tcma/P281780/html`; 20 units = §1–§20; CC BY-SA 3.0); the raw HTML `P281780--oracc-view.html` is gitignored. Base text of `חוקים-ובריתות/7-החוקים-האשוריים-התיכונים-B/`.
