@@ -1,0 +1,850 @@
+&P480696 = RIME 4.05.19.add03 (Laws of Eshnunna) composite 
+#atf: lang akk 
+@object composite text 
+@surface a 
+@prologue 
+1. _[...]-x u4 2(u) 1(disz)-kam_ 
+#tr.ts: ... ūmim 21 
+#tr.en: ... of day 21, 
+>>Q006412 001 
+2. _[...]-x_ {d}en-lil2-la2 {d}nin-a-zu 
+#tr.ts: ... enlila ninazu 
+#tr.en: ... of Enlil and Ninazu, 
+>>Q006412 002 
+3. _u4_ {disz}da-du-sza _nam-lugal_ esz3-nun-na{ki} 
+#tr.ts: ūm dadūša šarrūt ešnunna 
+#tr.en: when Daduša to the kingship of Ešnunna 
+>>Q006412 003 
+4. _ba-e3-a e2-ad-da-a-ni-sze3_ 
+#tr.ts: uṣima ana bīt abišu 
+#tr.en: ascended and into the house of his father, 
+>>Q006412 004 
+5. _i3-ku4-ra-am3 umbin?-ur-{d}utu{ki} 
+#tr.ts: ibūrma ṣupur-šamaš 
+#tr.en: entered, the Ṣupur-Šamaš 
+>>Q006412 005 
+6. _[...] gu2 bala ri-a_ {i7}idigna 
+#tr.ts: ... kišād ... idiglat 
+#tr.en: and ... on the far bank of the Tigris 
+>>Q006412 006 
+7. _[...] a-di mu 1(disz)-kam {gesz}tukul kal-ga ba-an-dab5_ 
+#tr.ts: ... adi šattim ištiat kakkī dannūti ikšud 
+#tr.en: ... within 1 year with mighty weapons he conquered. 
+>>Q006412 007 
+@law 1 
+8. _1(asz) gur sze_ a-na _1(disz) gin2 ku3-babbar_ 
+#tr.ts: 1 kurrum ûm ana 1 šiqil kaspim 
+#tr.en: 1 kor of barley (can be purchased) for 1 shekel of silver. 
+>>Q006412 008 
+9. _3(disz) sila3 i3-sag_ a-na _1(disz) gin2 ku3-babbar_ 
+#tr.ts: 3 qa šaman rūštim ana 1 šiqil kaspim 
+#tr.en: 3 liters of fine oil for 1 shekel of silver. 
+>>Q006412 009 
+10. _1(ban2) 2(disz) sila3 i3-gesz_ a-na _1(disz) gin2 ku3-babbar_ 
+#tr.ts: 1 (sūt) 2 qa šamnum ana 1 šiqil kaspim 
+#tr.en: 1ban2 2 liters of oil for 1 shekel of silver. 
+>>Q006412 010 
+11. _1(ban2) 5(disz) sila3 i3-szah2_ a-na _1(disz) gin2 ku3-babbar_ 
+#tr.ts: 1(sūt) 5 qa nāḫum ana 1 šiqil kaspim 
+#tr.en: 1 ban2 5 liters of lard for 1 shekel of silver. 
+>>Q006412 011 
+12. _4(barig) esir2?_ a-na _1(disz) gin2 ku3-babbar_ 
+#tr.ts: 4(sūt) ittûm ana 1 šiqil kaspim 
+#tr.en: 4 barig of bitumen for 1 shekel of silver. 
+>>Q006412 012 
+13. _6(disz) ma-na siki_ a-na _1(disz) gin2 ku3-babbar_ 
+#tr.ts: 6 mina šipātum ana 1 šiqil kaspim 
+#tr.en: 6 mina of wool for 1 shekel of silver. 
+>>Q006412 013 
+14. _2(asz) gur mun_ a-na _1(disz) gin2 ku3-babbar_ 
+#tr.ts: 2 kurrum ṭabtum ana 1 šiqil kaspim 
+#tr.en: 2 kor of salt for 1 shekel of silver. 
+>>Q006412 014 
+15. _1(asz) gur naga_ a-na _1(disz) gin2 ku3-babbar_ 
+#tr.ts: 1 kurrum uḫūlum ana 1 šiqil kaspim 
+#tr.en: 1 kor of potash for 1 shekel of silver. 
+>>Q006412 015 
+16. _3(disz) ma-na uruda_ a-na 1(disz) gin2 ku3-babbar_ 
+#tr.ts: 3 mina erûm ana 1 šiqil kaspim 
+#tr.en: 3 mina of copper for 1 shekel of silver. 
+>>Q006412 016 
+17. _2(disz) ma-na uruda_ ep-szum a-na _1(disz) gin2 ku3-babbar_ 
+#tr.ts: 2 mina erûm epšum ana 1 šiqil kaspim 
+#tr.en: 2 mina of wrought copper for 1 shekel of silver. 
+>>Q006412 017 
+@law 2 
+18. _1(disz) sila3 i3-gesz_ sza ni-is2-ha-tim _3(ban2) sze-bi_ 
+#tr.ts: 1 qa šamnum ša nisḫātim 3 sūt ûšu 
+#tr.en: 1 liter of oil, extract(?): 3 ban2 is its grain. 
+>>Q006412 018 
+19. _1(disz) sila3 i3-szah2_ sza ni-is2-ha-tim _2(ban2) 5(disz) sila3 sze-bi_ 
+#tr.ts: 1 qa naḫum ša nisḫātim 2 sūt 5 qa ûšu 
+#tr.en: 1 liter of lard, extract(?): 2 ban2 5 liters is its grain. 
+>>Q006412 019 
+20. _1(disz) sila3 esir2?_ sza ni-is2-ha-tim _8(disz) sila3 sze-bi_ 
+#tr.ts: 1 qa ittûm ša nisḫātim 8 qa ûšu 
+#tr.en: 1 liter of bitumen, extract(?): 8 liters is its grain. 
+>>Q006412 020 
+@law 3 
+21. _{gesz}mar-gid2-da_ qa2-du-um _gu4-hi-a_-sza u3 re-di-sza 
+#tr.ts: ereqqum qadum alpiša u rēdîša 
+#tr.en: A wagon together with its oxen and its driver: 
+>>Q006412 021 
+22. _1(barig) 4(ban2) sze a2-bi_ szum-ma _ku3-babbar 1/3(disz) _gin2 a2_-sza 
+#tr.ts: 1 pān 4 sūt ûm idūša šumma kaspum 1/3 šiqil idūša 
+#tr.en: 1 barig 4 ban2 of grain is its hire; if (paid in) silver: 1/3 shekel is its hire; 
+>>Q006412 022 
+23. ka-la u4-mi-im i-re-de-e-si 
+#tr.ts: kala ūmim ireddiši 
+#tr.en: for the entire day he shall drive it. 
+>>Q006412 023 
+@law 4 
+24. _a2 {gesz}ma2 1(asz) gur_-um _2(disz) sila3_ 
+#tr.ts: idi elippim 1 kurrum 2 qa 
+#tr.en: The hire of a boat is, per 1 kor: 2 liters; 
+>>Q006412 024 
+25. u3 _[n] sila3 a2 ma2-lah4 ka-la u4-mi i-re-de-szi 
+#tr.ts: u n qa idi malaḫḫim kala ūmim ireddiši 
+#tr.en: furthermore, n liters is the hire of the boatman; for the entire day he shall drive it. 
+>>Q006412 025 
+@law 5 
+26. szum-ma _ma2-lah4_ i-gi-ma _{gesz}ma2_ ut,-t,e4-eb-be 
+#tr.ts: šumma malaḫḫum igima elippam uṭṭebbe 
+#tr.en: If the boatman is negligent and the boat has caused to sink, 
+>>Q006412 026 
+27. ma-la u2-t,e4-eb-bu-u2 u2-ma-al-la 
+#tr.ts: mala uṭebbû umalla 
+#tr.en: as much as he caused to sink he shall restore. 
+>>Q006412 027 
+@law 6 
+28. szum-ma _lu2_ i-na nu-la-a-ni _{gesz}ma2_ la sza-at-tam 
+#tr.ts: šumma awīlum ina nulāni elippam la šattam 
+#tr.en: If a man, under fraudulent circumstances, a boat not his own 
+>>Q006412 028 
+29. is,-s,a-ba-at _1(u) gin2 ku3-babbar i3-la2-e_ 
+#tr.ts: iṣṣabat 10 šiqil kaspam išaqqal 
+#tr.en: has seized, 10 shekels of silver he shall weigh out. 
+>>Q006412 029 
+@law 7 
+30. _2(ban2) sze a2 sze-ku5-kin_ 
+#tr.ts: 2 sūt ûm idi ēṣidim 
+#tr.en: 2 ban2 of grain is the hire of a harvester; 
+>>Q006412 030 
+31. szum-ma _ku3-babbar_ 1(u) 2(disz) _sze a2-bi_ 
+#tr.ts: šumma kaspum 12 uṭṭet idūšu 
+#tr.en: if (paid in) silver, 12 barleycorns is his hire. 
+>>Q006412 031 
+@law 8 
+32. _1(ban2) sze a2_ za-ri-i 
+#tr.ts: 1 sūt ûm idi zārî 
+#tr.en: 1 ban2 of grain is the hire of a winnower. 
+>>Q006412 032 
+@law 9 
+33. _lu2 1(disz) gin2 ku3-babbar_ a-na _sze-ku5-kin_ a-na _{lu2}hun-ga2_ 
+#tr.ts: awīlum 1 šiqil kaspam ana eṣēdim ana agrim 
+#tr.en: A man 1 shekel of silver for harvesting to a hireling 
+>>Q006412 033 
+34. li-di-in-ma szum-ma re-su la u2-ki-il-ma 
+#tr.ts: iddinma šumma rēssu la ukilma 
+#tr.en: gave—if he (the workman) does not keep himself available to work and 
+>>Q006412 034 
+35. e-s,e-dam e-s,e-dam la e-s,i2-su _1(u) gin2 ku3-babbar_ 
+#tr.ts: eṣēdam eṣēdam la ēṣissu 10 šiqil kaspam 
+#tr.en: does not harvest for him, 10 shekels of silver 
+>>Q006412 035 
+36. _i3-la2-e_ 
+#tr.ts: išaqqal 
+#tr.en: he shall weigh out. 
+>>Q006412 036 
+@law 9a 
+37. _1(ban2) 5(disz) sila3 a2 {uruda}gur10-a_ u3 ku-s,i-rum 
+#tr.ts: 1 sūt 5 qa idi niggallim u kuṣirum 
+#tr.en: 1 ban2 5 liters is the hire of a sickle, and the broken blade(?) 
+>>Q006412 037 
+38. a-na be-li-szu-ma i-ta-a-ar 
+#tr.ts: ana bēlišuma itâr 
+#tr.en: to its owner shall revert. 
+>>Q006412 038 
+@law 10 
+39. _1(ban2) sze a2 ansze_ 
+#tr.ts: 1 sūt ûm idi imērim 
+#tr.en: 1 ban2 of grain is the hire of a donkey, 
+>>Q006412 039 
+40. u3 _1(ban2) sze a2_ re-di-szu ka-la u4-mi-im i-re-de-szu 
+#tr.ts: u 1 sūt ûm idi rēdîšu kala ūmim ireddišu 
+#tr.en: and 1 ban2 of grain is the hire of its driver; he shall drive it for the entire day. 
+>>Q006412 040 
+@law 11 
+41. _a2 {lu2}hun-ga2 1(disz) gin2 ku3-babbar 1(barig) sze sza3-gal-bi_ 
+#tr.ts: idi agrim 1 šiqil kaspum 1 pān ûm ukullêšu 
+#tr.en: The hire of a laborer is 1 shekel of silver, 1 barig of grain is his provender; 
+>>Q006412 041 
+42. _iti 1(disz)-kam_ i-la-ak 
+#tr.ts: warḫam ištēn illak 
+#tr.en: for 1 month he shall serve. 
+>>Q006412 042 
+@law 12 
+43. _lu2_ sza i-na _a-sza3 |MASZ.KAK.EN|_ 
+#tr.ts: awīlum ša ina eqel muškēnim 
+#tr.en: A man who in the field of a commoner 
+>>Q006412 043 
+44. i-na ku-ru-lim i-na mu-us,-la-lim is,-s,a-ba-tu 
+#tr.ts: ina kurullim ina muṣlalim iṣṣabbatu 
+#tr.en: among the sheaves at midday is seized 
+>>Q006412 044 
+45. _1(u) gin2 ku3-babbar i3-la2-e_ sza i-na mu-szi-im i-na ku-ru-lim 
+#tr.ts: 10 šiqil kaspam išaqqal ša ina mūšim ina kurullim 
+#tr.en: 10 shekels of silver shall weigh out; he who at night among the sheaves 
+>>Q006412 045 
+46. is,-s,a-ba-tu i-ma-a-at u2-ul i-ba-lu-ut, 
+#tr.ts: iṣṣabbatu imât ul iballuṭ 
+#tr.en: is seized shall die, he will not live. 
+>>Q006412 046 
+@law 13 
+47. _lu2_ sza i-na _e2_ sza _|MASZ.KAK.EN|_ i-na _e2_ i-na mu-us,-la-lim 
+#tr.ts: awīlum ša ina bitim ša muškēnim ina bitim ina muṣlalim 
+#tr.en: A man who in the house of a commoner, within the house, at midday, 
+>>Q006412 047 
+48. is,-s,a-ab-ba-tu _1(u) ku3-babbar i3-la2-e_ 
+#tr.ts: iṣṣabbatu 10 šiqil kaspam išaqqal 
+#tr.en: is seized, 10 shekels of silver shall weigh out; 
+>>Q006412 048 
+49. sza i-na mu-szi-im i-na _e2_ is,-s,a-ab-ba-tu 
+#tr.ts: ša ina mūšim ina bitim iṣṣabbatu 
+#tr.en: he who at night within the house is seized 
+>>Q006412 049 
+50. i-ma-a-at u2-ul i-ba-al-lu-ut, 
+#tr.ts: imât ul iballuṭ 
+#tr.en: shall die, he will not live. 
+>>Q006412 050 
+@law 14 
+51. _a2 {lu2}azlag 1(disz) tug2 5(disz) gin2 ku3-babbar_ li-bil-ma _1(disz) gin2 a2-bi_ 
+#tr.ts: idi ašlākim 1 lubuštum 5 šiqil kaspam libilma 1 šiqil idūšu 
+#tr.en: The hire of a fuller, per one garment valued at 5 shekels of silver—1 shekel is his hire; 
+>>Q006412 051 
+52. _1(u) gin2 ku3-babbar_ li-bi-il-ma 2(disz) gin2 a2-bi_ 
+#tr.ts: 10 šiqil kaspam libilma 2 šiqil idūšu 
+#tr.en: (per one garment) valued at 10 shekels of silver—2 shekels is his hire. 
+>>Q006412 052 
+@law 15 
+53. i-na qa-ti _sag-ir3_ u3 _geme2 dam-gar3_ u3 sa-bi-tum 
+#tr.ts: ina qāti wardim u amtim tamkārum u sābītum 
+#tr.en: From a male or female slave a merchant or an alewife 
+>>Q006412 053 
+54. _ku3-babbar sze_-a-am _siki i3-gesz_ a-di ma-di?-im u2-ul i-ma-ha-ar 
+#tr.ts: kaspam âm šipātim šamnam adi mādim ul imaḫḫar 
+#tr.en: silver, grain, wool, oil, or anything else shall not accept. 
+>>Q006412 054 
+@law 16 
+55. _dumu lu2_ la zi-zu u3 _sag-ir3_ u2-ul iq-qi2-a-ap 
+#tr.ts: mār awīlim la zizu u wardum ul iqqiap 
+#tr.en: The son of a man who has not yet received his inheritance share or a slave will not be advanced credit. 
+>>Q006412 055 
+@law 17 
+56. _dumu lu2_ a-na _e2_ e-mi-im ter-ha-tam li-bi-il-ma 
+#tr.ts: mār awīlim ana bit emim terḫatam libilma 
+#tr.en: Should a son of a man to the house of his father-in-law the bridewealth bring— 
+>>Q006412 056 
+57. szum-ma i-na ki-la-al-li-in isz-te-en a-na szi-im-tim 
+#tr.ts: šumma ina kilallin ištēn ana šimtim 
+#tr.en: if either (the groom or bride then) to his or her fate, 
+>>Q006412 057 
+58. it-ta-la-ak _ku3-babbar_ a-na be-li2-szu-ma i-ta-a-ar 
+#tr.ts: ittalak kaspum ana bēlišuma itâr 
+#tr.en: has gone, the silver to its original owner (i.e., the widower or his heir) shall revert. 
+>>Q006412 058 
+@law 18 
+59. szum-ma i-hu-us2-si-ma a-na _e2_-szu i-ru-ub 
+#tr.ts: šumma iḫussima ana bitišu irub 
+#tr.en: If he married her and his house she entered, 
+>>Q006412 059 
+60. lu-u2 a-hi-za-nu lu-u2 kal-la-tum a-na szi-im-tim it-ta-la-ak 
+#tr.ts: lu āḫizānu lu kallatum ana šimtim ittalak 
+#tr.en: and then either the groom or the bride goes to his or her fate has gone, 
+>>Q006412 060 
+61. ma-la ub-lu u2-ul u2-sze-s,e wa-tar-szu-ma i-le-eq-qe2 
+#tr.ts: mala ublu ul ušeṣṣi wataršuma ileqqe 
+#tr.en: all that he had brought he shall not take out, but only its excess shall he take. 
+>>Q006412 061 
+@law 18a 
+62. _1(disz) gin2 igi 6(disz)-gal2_ u3 _6(disz) sze masz_ u2-s,a-ab 
+#tr.ts: 1 šiqlum šadištam u 6 uṭṭet ṣibtam uṣṣab 
+#tr.en: Per 1 shekel (of silver) at the rate of 1/6 (shekel) and 6 barleycorns (= 36/180 or 20%) interest accrues; 
+>>Q006412 062 
+63. _1(asz) gur_-um _1(barig) 4(ban2) masz_ u2-s,a-ab 
+#tr.ts: 1 kurrum 1 pān 4 sūt ṣibtam uṣṣab 
+#tr.en: per kor (of grain) at the rate of 1 barig 4 ban2 liters (= 100/300 or 33%) interest accrues. 
+>>Q006412 063 
+@law 19 
+64. _lu2_ sza a-na me-eh-ri-szu i-na-ad-di-nu 
+#tr.ts: awīlum ša ana meḫrišu inaddinu 
+#tr.en: A man who against its corresponding commodity(?) lends 
+>>Q006412 064 
+65. i-na masz-kan2-nim u2-sza-ad-da-an 
+#tr.ts: ina maškannim ušaddan 
+#tr.en: at the threshing floor shall collect. 
+>>Q006412 065 
+@law 20 
+66. szum-ma _lu2 sze_-a-am a-na x x x 
+#tr.ts: šumma awīlum âm ... 
+#tr.en: If a man ... grain ... 
+>>Q006412 066 
+67. id-di-in-ma _sze_-a-am a-na _ku3-babbar_ i-te-pu!-usz 
+#tr.ts: iddinma âm ana kaspim uštepil 
+#tr.en: gave, and then the grain into silver has converted, 
+>>Q006412 067 
+68. i-na e-bu-ri _sze_-a-am u3 _masz-bi 1(asz) gur 1(barig) 4(ban2)_ 
+#tr.ts: ina ebūri âm u ṣibassu 1 kurrum 1 (pān) 4 (sūt) 
+#tr.en: at harvest the grain and the interest on it, per 1 kor, 1 barig 4 ban2 
+>>Q006412 068 
+69. i-le-eq-qe2 
+#tr.ts: ileqqe 
+#tr.en: he shall take 
+>>Q006412 069 
+@law 21 
+70. szum-ma _lu2 ku3-babbar_ a-na pa-ni-szu 
+#tr.ts: šumma awīlum kaspam ana pānišu 
+#tr.en: If a man silver for/to his/its ..., 
+>>Q006412 070 
+71. id-di-in _ku3-babbar_ u3 _masz-bi 1(disz) gin2 igi 6(disz)-gal2_ u3 _6(disz) sze_ 
+#tr.ts: iddin kaspam u ṣibassu 1 šiqlum šadištam u 6 uṭṭet 
+#tr.en: gave, the silver and the interest on it, per 1 shekel, 1/6 (shekel) and 6 barleycorns 
+>>Q006412 071 
+72. i-le-eq-qe 
+#tr.ts: ileqqe 
+#tr.en: he shall take. 
+>>Q006412 072 
+@law 22 
+73. szum-ma _lu2_ e-li _lu2_ mi-im-ma 
+#tr.ts: šumma awīlum eli awīlim mimma 
+#tr.en: If a man against another man a claim 
+>>Q006412 073 
+74. la i-szu-u2-ma _geme2 lu2_ it-te-pe be-el _geme2_ ni-isz _dingir_ i-za-kar 
+#tr.ts: la išūma amat awīlim ittepe bēl amtim niš ilim izakkar 
+#tr.en: has none, but he nonetheless takes the man’s slave woman as a distress, the owner of the slave woman an oath by the god shall swear: 
+>>Q006412 074 
+75. mi-im-ma e-li-ia la ti-szu-u2 _ku3-babbar_ 
+#tr.ts: mimma eliya la tišû kaspam 
+#tr.en: : “A claim against me you have none”; silver 
+>>Q006412 075 
+76. ma-la _sa10 geme2_-tim _i3-la2-e_ 
+#tr.ts: mala šīm(?) amtim išaqqal 
+#tr.en: as much as is the value(?) of the slave woman he (the distrainer) shall weigh out. 
+>>Q006412 076 
+@law 23 
+77. szum-ma _lu2_ e-li _lu2_ mi-im-ma la i-szu-ma 
+#tr.ts: šumma awīlum eli awīlim mimma la išūma 
+#tr.en: If a man against another man a claim has none, but 
+>>Q006412 077 
+78. _geme2 lu2_ it-te-pe2 ni-pu-tam i-na _e2_-szu ik-la-ma 
+#tr.ts: amat awīlim ittepe nipûtam ina bitišu iklāma 
+#tr.en: the man’s slave woman as a distress he has taken, the distress in his house detained, 
+>>Q006412 078 
+79. usz-ta-mi-it _2(disz) geme2_ a-na be-el _geme2_ i-ri-ab 
+#tr.ts: uštamit 2 amātim ana bēl amtim iriab 
+#tr.en: and causes her death, with two slave women for the owner of the slave woman he shall replace her. 
+>>Q006412 079 
+@law 24 
+80. szum-ma mi-im-ma e-li-su la i-su-ma 
+#tr.ts: šumma mimma elišu la išūma 
+#tr.en: If a claim against him he has none, but 
+>>Q006412 080 
+81. _dam |MASZ.KAK.EN| dumu |MASZ.KAK.EN|_ it-te-pe2 
+#tr.ts: aššat muškēnim mār muškēnim ittepe 
+#tr.en: the wife of a commoner or the child of a commoner as a distress he has taken, 
+>>Q006412 081 
+82. ni-pu-tam i-na _e2_-szu ik-la-a-ma usz-ta-mi-it di-in na-pi2-isz-tim 
+#tr.ts: nipûtam ina bitišu iklāma uštamit dīn napištim 
+#tr.en: the distress in his house detained, and causes her or his death, it is a capital offense— 
+>>Q006412 082 
+83. ne-pu-u2 sza ip-pu-u2 i-ma-a-at 
+#tr.ts: nēpû ša ippû imât 
+#tr.en: the distrainer who distrained shall die. 
+>>Q006412 083 
+@law 25 
+84. szum-ma _lu2_ a-na _e2_ e-mi is-si-ma e-mu-szu 
+#tr.ts: šumma awīlum ana bit emi issima emušu 
+#tr.en: If a man at the house of his father-in-law to claim (his bride), but his father-in-law 
+85. ik-szi-szu-ma _dumu-munus_-su a-na sza-ni-im it-ta-di-in 
+#tr.ts: ikšišuma mārassu ana šanîm ittadin 
+#tr.en: wronged(?) him and then his daughter to another has given, 
+>>Q006412 084 
+>>Q006412 085 
+86. a-bi ma-ar-tim ter-ha-at im-hu-ru ta-asz-na u2-ta-ar 
+#tr.ts: abi mārtim terḫat imḫuru tašna utâr 
+#tr.en: the father of the daughter two-fold the bridewealth that he received shall return. 
+>>Q006412 086 
+@law 26 
+87. szum-ma _lu2_ a-na _dumu-munus lu2_ ter-ha-tam u2-bil-ma 
+#tr.ts: šumma awīlum ana mārat awīlim terḫatam ubilma 
+#tr.en: If a man the bridewealth for the daughter of a man brought, but 
+>>Q006412 087 
+88. sza-nu-u2 ba-lum sza2-al a-bi-sza u3 um-mi-sza im-szu-u'-szi-ma it-ta-qa-ab-szi 
+#tr.ts: šanû balum šâl abiša u ummiša imšu’šima ittaqabši 
+#tr.en: another, without the consent of her father and mother, abducted her and then has deflowered her, 
+>>Q006412 088 
+89. di-in na-pi-isz-tim-ma i-ma-at 
+#tr.ts: dīn napištimma imât 
+#tr.en: it is indeed a capital offense—he shall die. 
+>>Q006412 089 
+@law 27 
+90. szum-ma _lu2 dumu-munus lu2_ ba-lum sza-al 
+#tr.ts: šumma awīlum mārat awīlim balum šâl 
+#tr.en: If a man the daughter of another man without the consent 
+>>Q006412 090 
+91. a-bi-sza u3 um-mi-sza i-hu-si-ma u2 kir-ra-am u2 ri-ik-sa-tim 
+#tr.ts: abiša u ummiša iḫussima u kirram u riksātim 
+#tr.en: of her father and mother married, and moreover the nuptial feast and the contract 
+>>Q006412 091 
+92. a-na a-bi-sza u3 um-mi-sa la isz-ku-un u4-mi _mu 1(disz)-kam_ i-na _e2_-szu 
+#tr.ts: ana abiša u ummiša la iškun ūmi šattim ištiat ina bitišu 
+#tr.en: for(?) her father and mother did not conclude, should she for even 1 year in his house 
+>>Q006412 092 
+93. li-szi-im-ma u2-ul _dam_ 
+#tr.ts: lišimma ul aššat 
+#tr.en: reside, she is not a wife. 
+>>Q006412 093 
+@law 28 
+94. szum-ma hi-pi2 ri-ik-sa-tim 
+#tr.ts: šumma hipi riksātim 
+#tr.en: If [it is broken] the contract 
+>>Q006412 094 
+95. u3 kir-ra-am a-na a-bi-sza u3 um-mi-sza isz-ku-un-ma 
+#tr.ts: u kirram ana abiša u ummiša iškunma 
+#tr.en: and the nuptial feast for(?) her father and mother he concluded and 
+>>Q006412 095 
+96. i-hu-us-si _dam_ u4-um i-na su-un _lu2_ is,-s,a-ab-ba-tu i-ma-at 
+#tr.ts: iḫussi aššat ūm ina sūn awīlim iṣṣabbatu imât 
+#tr.en: married her, she is indeed a wife; the day in the lap of a man she is seized, she shall die, 
+>>Q006412 096 
+97. u2-ul i-ba-al-lu-ut, 
+#tr.ts: ul iballuṭ 
+#tr.en: she will not live. 
+>>Q006412 097 
+@law 29 
+98. szum-ma _lu2_ i-na _kaskal_ se-eh-t,im u3 sa-ak-pi2-im it-ta-asz-la-al 
+#tr.ts: šumma awīlum ina ḫarrān šeḫṭim u sakpim ittašlal 
+#tr.en: If a man during a raiding expedition has been captured 
+>>Q006412 098 
+99. u3 lu-u2 na-ah-bu-tum it-ta-ah-ba-at u4-mi ar-ku-tim 
+#tr.ts: u lu naḫbutum ittaḫbat ūmi arkūtim 
+#tr.en: or abducted, or for a long time 
+>>Q006412 099 
+100. i-na ma-a-tim s,a-ni-tim-ma it-ta-sza-ab 
+#tr.ts: ina mātim šanitimma ittašab 
+#tr.en: even in a foreign land he has resided, 
+>>Q006412 100 
+101. asz-sza-su sza-nu-u2-um-ma i-ta-ha-az u3 _dumu_ it-ta-la-ad 
+#tr.ts: aššassu šanûmma itaḫaz u māram ittalad 
+#tr.en: his wife another has married and a son she bore, 
+>>Q006412 101 
+102. i-nu-u2-ma it-tu-ra-am asz-sza-su i-ta-ab-ba-al 
+#tr.ts: inūma ittūram aššassu itabbal 
+#tr.en: when he returns his wife he shall take back. 
+>>Q006412 102 
+@law 30 
+103. szum-ma _lu2_ iri-ki_-szu u3 be-el-szu i-ze-er-ma it-ta-ah-bi-it 
+#tr.ts: šumma awīlum ālšu u bēlšu izērma ittaḫbit 
+#tr.en: If a man his city and his master repudiated and then has flown, 
+>>Q006412 103 
+104. asz-sza-su sza-nu-u2-um-ma i-ta-ha-az i-nu-u-ma it-tu-ra-am 
+#tr.ts: aššassu šanûmma itaḫaz inūma ittūram 
+#tr.en: and his wife another has married, when he returns 
+>>Q006412 104 
+105. a-na asz-sza-ti-szu u2-ul i-ra-ag-ga-am 
+#tr.ts: ana aššatišu ul iraggam 
+#tr.en: to his wife he shall have no claim. 
+>>Q006412 105 
+@law 31 
+106. szum-ma _lu2 geme2 lu2_ it-ta-qa-ab 
+#tr.ts: šumma awīlum amat awīlim ittaqab 
+#tr.en: If a man the slave woman of a man has deflowered, 
+>>Q006412 106 
+107. _1/3(disz) ma-na ku3-babbar i3-la2-e_ u3 _geme2_ sza be-li2-sza-ma 
+#tr.ts: 1/3 mina kaspam išaqqal u amtum ša bēlišama 
+#tr.en: 1/3 mina of silver he shall weigh out, but the slave woman remains (the property) of her master. 
+>>Q006412 107 
+@law 32 
+108. szum-ma _lu2 dumu_-szu a-na szu-nu-qi2-im a-na tar-bi-tim id-di-in-ma 
+#tr.ts: šumma awīlum mārašu ana šūnuqim ana tarbitim iddinma 
+#tr.en: If a man his son for suckling and for rearing gave, but 
+>>Q006412 108 
+109. _sze-ba i3-ba siki-ba_ mu 3(disz)-kam_ la id-di-in _1(u) ma-na_ 
+#tr.ts: epram piššatam lubuštam šalaš šanātim la iddin 10 mina 
+#tr.en: the barley, oil, and clothing rations (to the caregiver) for 3 years did not give, 10 shekels of silver(!) 
+>>Q006412 109 
+110. tar-bi-it _dumu_-szu _i3-la2-e_-ma _dumu_-szu i-ta-a-ar-ru 
+#tr.ts: tarbit mārišu išaqqalma mārašu itarru 
+#tr.en: for the cost of the rearing of his son he shall weigh out, and his son he shall take away. 
+>>Q006412 110 
+@law 33 
+111. szum-ma _geme2_ u2-sa-ar-ri-ir-ma _dumu_-sza a-na _dumu-munus lu2_ it-ta-di 
+#tr.ts: šumma amtum usarrirma māraša ana mārat awīlim ittadin 
+#tr.en: If a slave woman acted to defraud and her son to a daughter of a man has given, 
+>>Q006412 111 
+112. i-nu-u2-ma ir-ta-bu-u2 be-el-szu i-ma-ar-szu 
+#tr.ts: inūma irtabû bēlšu immaršu 
+#tr.en: when he has grown up should his master see him, 
+>>Q006412 112 
+113. i-s,a-ab-ba-su-ma i-ta-ar-ru-szu 
+#tr.ts: iṣabbassuma itarrūšu 
+#tr.en: he shall seize him and take him away. 
+>>Q006412 113 
+@law 34 
+114. szum-ma _geme2 e2-gal dumu_-sza 
+#tr.ts: šumma amat ekallim māraša 
+#tr.en: If a slave woman of the palace her son 
+>>Q006412 114 
+115. lu _dumu-munus_-sa a-na _|MASZ.KAK.EN|_ a-na tar-bi-tim 
+#tr.ts: lu mārassa ana muškēnim ana tarbitim 
+#tr.en: or her daughter to a commoner for rearing 
+>>Q006412 115 
+116. it-ta-di-in _dumu_ lu _dumu-munus_ sza id-di-nu _e2-gal_-lum it-ta-ba-al 
+#tr.ts: ittadin māram lu mārtam ša iddinu ekallum itabbal 
+#tr.en: has given, the son or daughter whom she gave the palace shall remove. 
+>>Q006412 116 
+@law 35 
+117. u3 le-qu2-u2 sza mar _geme2 e2-gal_-lim 
+#tr.ts: u lēqû ša mār amat ekallim 
+#tr.en: However, an adoptor who the child of a slave woman of the palace 
+>>Q006412 117 
+118. il-qu2-u2 me-he-er-szu a-na _e2-gal_-lim i-ri-a-ab 
+#tr.ts: ilqû meḫeršu ana ekallim iriab 
+#tr.en: took (another slave of) equal value for the palace shall restore. 
+>>Q006412 118 
+@law 36 
+119. szum-ma _lu2_ bu-sze-szu a-na na-ap-t,a3-ri a-na ma-s,a-ar-tim 
+#tr.ts: šumma awīlum bušēšu ana napṭarim ana maṣṣartim 
+#tr.en: If a man his goods to a napṭaru for safekeeping 
+>>Q006412 119 
+120. id-di-in-ma _e2_ la pa-li-isz si-ip-pu la ha-li-isz 
+#tr.ts: iddinma bitum la pališ sippu la ḫališ 
+#tr.en: gave, and he (the napṭaru)—the house not broken into, the doorjamb not scraped, 
+>>Q006412 120 
+121. a-ap-tum la na-as3-ha-at bu-sze-e ma-s,a-ar-tim 
+#tr.ts: aptum la nasḫat bušē maṣṣartim 
+#tr.en: the window not forced—the goods for safekeeping 
+>>Q006412 121 
+122. sza id-di-nu-szum uh-ta-li-iq bu-se-e-su i-ri-a-ab-szum 
+#tr.ts: ša iddinušum uḫtalliq bušēšu iriabšum 
+#tr.en: which he gave to him has let go lost, his goods shall replace for him. 
+>>Q006412 122 
+@law 37 
+123. szum-ma _e2 lu2_ lu-uq-qu2-ut it-ti bu-sze-e _lu2_ ma-s,a-ar-tim 
+#tr.ts: šumma bit awīlim luqqut itti bušē awīl maṣṣartim 
+#tr.en: If the man’s house has been burglarized, and along with the goods which the depositor 
+>>Q006412 123 
+124. sza id-di-nu-szum hu-lu-uq be-el _e2_ ha-li-iq 
+#tr.ts: ša iddinušum ḫuluq bēl bitim ḫaliq 
+#tr.en: gave to him, a loss the owner of the house incurred, 
+>>Q006412 124 
+125. be-el _e2_-tim i-na _ka2_ {d}tiszpak ni-isz _dingir_ i-za-kar-szum-ma 
+#tr.ts: bēl bitim ina bāb tišpak niš ilim izakkaršumma 
+#tr.en: the owner of the house at the gate of Tišpak an oath shall swear to him: 
+>>Q006412 125 
+126. it-ti bu-sze-e-ka bu-szu-ia lu-u2 ha-al-qu2 
+#tr.ts: itti bušēka bušūya lu ḫalqū 
+#tr.en: “With your goods my own goods have gone lost; 
+>>Q006412 126 
+127. i-wi-tam u3 sa3-ar-tam la e-pu-szu i-za-kar-szum-ma 
+#tr.ts: iwitam u sartam la ēpušu izakkaršumma 
+#tr.en: a fraud or misdeed I have not committed”; thus shall he swear to him, and 
+>>Q006412 127 
+128. mi-im-ma e-li-szu u2-ul i-szu 
+#tr.ts: mimma elišu ul išu 
+#tr.en: a claim against him he has none. 
+>>Q006412 128 
+@law 38 
+129. szum-ma i-na at-hi-i isz-te-en zi-it-ta-szu a-na _ku3-babbar_ i-na-ad-di-in 
+#tr.ts: šumma ina atḫî ištēn zittašu ana kaspim inaddin 
+#tr.en: If, in a partnership, one his share for silver intends to sell, 
+>>Q006412 129 
+130. u3 a-hu-szu sza-ma-am ha-sze-eh qa2-ab-li-it sza-ni-i-im u2-ma-al-la 
+#tr.ts: u aḫušu šâmam ḫašeḫ qablit šanîm umalla 
+#tr.en: and his partner wishes to buy, any outside offer he shall match. 
+>>Q006412 130 
+@law 39 
+131. szum-ma _lu2_ i-ni-isz-ma _e2_-su a-na _ku3-babbar_ it-ta-di-in 
+#tr.ts: šumma awīlum inišma bissu ana kaspim ittadin 
+#tr.en: If a man became impoverished and his house for silver has sold, 
+>>Q006412 131 
+132. u4-um sza-a-ia-ma-nu i-na-ad-di-nu be-el _e2_-tim i-pa-t,a3-ar 
+#tr.ts: ūm šayyāmānum inaddinu bēl bitim ipaṭṭar 
+#tr.en: whenever the buyer offers it for sale, the owner of the house shall (have the right to) redeem it. 
+>>Q006412 132 
+@law 40 
+133. szum-ma _lu2 sag-ir3 geme2 gu4_ u3 szi-ma-am ma-la i-ba-szu-u2 
+#tr.ts: šumma awīlum wardam amtam alpam u šīmam mala ibaššû 
+#tr.en: If a man a slave, a slave woman, an ox, or any other purchase 
+>>Q006412 133 
+134. i-sza-am-ma na-di-na-nam la u2-ki-in szu-ma szar-ra-aq 
+#tr.ts: išāmma nādinānam la ukin šûma šarrāq 
+#tr.en: bought, but the seller cannot establish, it is he who is a thief. 
+>>Q006412 134 
+@law 41 
+135. szum-ma _u-bar_ na-ap-ta-rum u3 mu-du-u2 _kasz_-szu i-na-ad-di-in 
+#tr.ts: šumma ubarum napṭarum u mudû šikaršu inaddin 
+#tr.en: If a foreigner, a napṭaru, or a mudû his beer would sell, 
+>>Q006412 135 
+136. sa-bi-tum ma-hi-ra-at i-il-la-ku _kasz_ i-na-di-in-szum 
+#tr.ts: sābitum maḫirat illaku šikaram inaddinšum 
+#tr.en: the woman innkeeper at the current rate the beer shall sell for him. 
+>>Q006412 136 
+@law 42 
+137. szum-ma _lu2_ ap-pi _lu2_ is-su-uk-ma it-ta-ki-is 
+#tr.ts: šumma awīlum appi awīlim iššukma ittakis 
+#tr.en: If a man the nose of a man bit and has cut it off, 
+>>Q006412 137 
+138. _1(disz) ma-na ku3-babbar i3-la2-e igi 1(disz) ma-na zu2 1/2(disz) ma-na_ 
+#tr.ts: 1 mina kaspam išaqqal inu 1 mina šinnu 1/2 mina 
+#tr.en: 1 mina of silver he shall weigh out; an eye: 1 mina; a tooth: 1/2 mina; 
+>>Q006412 138 
+139. uz-nu _1/2(disz) ma-na_ me-he-es, le-tim _1(u) gin2 ku3-babbar i3-la2-e_ 
+#tr.ts: uznu 1/2 mina meḫeṣ lētim 10 šiqil kaspam išaqqal 
+#tr.en: an ear: 1/2 mina; a slap to the cheek: 10 shekels of silver he shall weigh out. 
+>>Q006412 139 
+@law 43 
+140. szum-ma _lu2_ u2-ba-an _lu2_ it-ta-ki-is 
+#tr.ts: šumma awīlum ubān awīlim ittakis 
+#tr.en: If a man the finger of a man has cut off, 
+>>Q006412 140 
+141. _2/3(disz) ma-na ku3-babbar i3-la2-e_ 
+#tr.ts: 2/3 mina kaspam išaqqal 
+#tr.en: 2/3 mina of silver he shall weigh out. 
+>>Q006412 141 
+@law 44 
+142. szum-ma _lu2_ a-wi-lam i-na su-qi2-im? 
+#tr.ts: šumma awīlum awīlam ina sūqim 
+#tr.en: If a man a man in the street(?) 
+>>Q006412 142 
+143. is2-ki-im-ma _szu_-su isz-te-ber5 _1/2(disz) ma-na ku3-babbar i3-la2-e_ 
+#tr.ts: iskimma qāssu ištebir 1/2 mina kaspam išaqqal 
+#tr.en: knocked down, and his hand has broken, 1/2 mina of silver he shall weigh out. 
+>>Q006412 143 
+@law 45 
+144. szum-ma _giri3_-szu isz-te-ber5 _1/2(disz) ma-na ku3-babbar i3-la2-e_ 
+#tr.ts: šumma šēpšu ištebir 1/2 mina kaspam išaqqal 
+#tr.en: If he his foot he has broken, 1/2 mina of silver he shall weigh out. 
+>>Q006412 144 
+@law 46 
+145. szum-ma _lu2_ a-wi-lam im-ha-as,-ma ki-ir-ra-szu isz-te-ber5 
+#tr.ts: šumma awīlum awīlam imḫaṣma kirrašu ištebir 
+#tr.en: If a man a man struck and collarbone has broken, 
+>>Q006412 145 
+146. _2/3(disz) ma-na ku3-babbar i3-la2-e_ 
+#tr.ts: 2/3 mina kaspam išaqqal 
+#tr.en: 2/3 mina of silver he shall weigh out. 
+# variant 1/3 mina 
+>>Q006412 146 
+@law 47 
+147. szum-ma _lu2_ i-na szi-ge-esz3-tim 
+#tr.ts: šumma awīlum ina šigištim 
+#tr.en: If a man in the course of a fray 
+>>Q006412 147 
+148. _lu2_ ik?-te-el _1(u) gin2 ku3-babbar i3-la2-e_ 
+#tr.ts: awīlam iktel 10 šiqil kaspam išaqqal 
+#tr.en: on a man should inflict(?) any other injuries(?), 10 shekels of silver he shall weigh out. 
+>>Q006412 148 
+@law 47a 
+149. szum-ma _lu2_ i-na re-es3-ba-tim 
+#tr.ts: šumma awīlum ina resbatim 
+#tr.en: If a man, in the course of a brawl, 
+>>Q006412 149 
+150. _dumu lu2_ usz-ta-mi-it 
+#tr.ts: mār awīlim uštamit 
+#tr.en: a son of a man has caused to die, 
+>>Q006412 150 
+151. _2/3(disz) ma-na ku3-babbar i3-la2-e_ 
+#tr.ts: 2/3 mina kaspam išaqqal 
+#tr.en: 2/3 mina of silver he shall weigh out. 
+>>Q006412 151 
+@law 48 
+152. u3 a-na di-nim sza _ku3-babbar_ isz-tu _1/3(disz) ma-na_ a-di _1(disz) ma-na_ 
+#tr.ts: u ana dīnim ša kaspim ištu 1/3 mina adi 1 mina 
+#tr.en: And for a case (involving a penalty) of silver from 1/3 mina to 1 mina, 
+>>Q006412 152 
+153. da-a-ia-nu di-nam u2-sza-ha-zu-szu-ma 
+#tr.ts: dayyānū dīnam ušaḫḫazušuma 
+#tr.en: the judges the case against him shall determine; however, 
+>>Q006412 153 
+154. a-wa-at na-pi2-isz-tim a-na _lugal_-ma 
+#tr.ts: awat napištim ana šarrimma 
+#tr.en: a capital case is only for the king. 
+>>Q006412 154 
+@law 49 
+155. szum-ma _lu2_ i-na _sag-ir3_ szar-qi2-im _geme2_ sza-ri-iq-tim 
+#tr.ts: šumma awīlum ina wardim šarqim amtim šariqtim 
+#tr.en: If a man with a stolen slave or a stolen slave woman 
+>>Q006412 155 
+156. it-ta-as,-ba-at _sag-ir3 sag-ir3 geme2 geme2_ i-re-ed-de 
+#tr.ts: ittaṣbat wardum wardam amtum amtam iredde 
+#tr.en: has been seized, a slave a slave, a slave woman a slave woman shall lead. 
+>>Q006412 156 
+@law 50 
+157. szum-ma _szagina_ sza-pir6 _i7_ be-el te-er-tim ma-la i-ba-asz-szu-u2 
+#tr.ts: šumma šakkanakkum šāpir nārim bēl têrtim mala ibaššû 
+#tr.en: If a military governor, a governor of waterways, or any person in a position of authority 
+>>Q006412 157 
+158. _sag-ir3_ hal-qa-am _geme2_ ha-li-iq-tam _gu4_ hal-qa-am _ansze_ hal-qa-am 
+#tr.ts: wardam ḫalqam amtam ḫaliqtam alpam ḫalqam imēram ḫalqam 
+#tr.en: a fugitive slave, fugitive slave woman, stray ox, or stray donkey , 
+>>Q006412 158 
+159. sza _e2-gal_-lim u3 _|MASZ.KAK.EN|_ is,-ba-at-ma a-na esz3-nun-na{ki} 
+#tr.ts: ša ekallim u muškēnim iṣbatma ana ešnunna 
+#tr.en: belonging either to the palace or to a commoner seized and to Ešnunna 
+>>Q006412 159 
+160. la ir-di-a-am i-na _e2_-szu-ma ik-ta-la u4-mi e-li _iti 1(disz)-kam_ 
+#tr.ts: la irdiamma ina bitišu iktala ūmi eli warḫim ištēn 
+#tr.en: did not lead it, but in his house has detained it and more than 1 month 
+>>Q006412 160 
+161. u2-sze-te-eq-ma _e2-gal_-lum szu-ur-qa-am it-ti-szu i-ta-wi 
+#tr.ts: ušētiqma ekallum šurqam ittišu itawwi 
+#tr.en: has let to elapse, the palace a charge of theft against him shall bring. 
+>>Q006412 161 
+@law 51 
+162. _sag-ir3_ u3 _geme2_ sza esz3-nun-na{ki} 
+#tr.ts: wardum u amtum ša ešnunna 
+#tr.en: A slave or slave woman belonging to (a resident of) Ešnunna 
+>>Q006412 162 
+163. sza ka-an-nam masz-ka-nam u3 ab-bu-tam sza-ak-nu 
+#tr.ts: ša kannam maškanam u abbuttam šaknu 
+#tr.en: who fetters, shackles, or a slave hairlock bears, 
+>>Q006412 163 
+164. _abul_ esz3-nun-na{ki} ba-lum be-li2-su u2-ul us,-s,i2 
+#tr.ts: abul ešnunna balum bēlišu ul uṣṣi 
+#tr.en: through the main city-gate of Ešnunna without his owner shall not exit. 
+>>Q006412 164 
+@law 52 
+165. _sag-ir3_ u3 _geme2_ sza it-ti _dumu_ szi-ip-ri-im na-as,-ru-ma 
+#tr.ts: wardum u amtum ša itti mār šiprim naṣruma 
+#tr.en: A slave or slave woman who, in the safekeeping of a foreign envoy 
+>>Q006412 165 
+166. _abul_ esz3-nun-na{ki} i-te-er-ba-am ka-an-nam ma-asz-ka-nam 
+#tr.ts: abul ešnunna iterbam kannam maškanam 
+#tr.en: the main city-gate of Ešnunna has entered, fetters, shackles, 
+>>Q006412 166 
+167. u3 ab-bu-tam isz-sza-ak-ka-an-ma a-na be-li2-szu na-s,e-er 
+#tr.ts: u abbuttam iššakkanma ana bēlišu naṣer 
+#tr.en: or a slave hairlock shall be made to bear, and for his owner will be guarded. 
+>>Q006412 167 
+@law 53 
+168. szum-ma _gu4 gu4_ ik-ki-im-ma usz-ta-mi-it 
+#tr.ts: šumma alpum alpam ikkimma uštamit 
+#tr.en: If an ox an ox gored, and has caused its death, 
+>>Q006412 168 
+169. szi-im _gu4_ ba-al-t,im u3 _uzu gu4_ mi-tim 
+#tr.ts: šīm alpim balṭim u šir alpim mitim 
+#tr.en: the value of the living ox and the meat of the dead ox 
+>>Q006412 169 
+170. be-el _gu4_ ki-la-al-la-an i-zu-uz-zu 
+#tr.ts: bēl alpim kilallān izuzzū 
+#tr.en: the two ox-owners shall divide. 
+>>Q006412 170 
+@law 54 
+171. szum-ma _gu4_ na-ka-pi2-ma 
+#tr.ts: šumma alpum nakkāpîma 
+#tr.en: If an ox is an habitual gorer and 
+>>Q006412 171 
+172. ba-ab-tum a-na be-li2-szu u2-sze-di-ma _gu4_-szu la u2-sze-szi-ir-ma 
+#tr.ts: bābtum ana bēlišu ušēdima alapšu la ušēširma 
+#tr.en: the gate its owner so notified, but his ox he did not keep in check and . 
+>>Q006412 172 
+173. _lu2_ ik-ki-im-ma usz-ta-mi-it be-el _gu4_ 
+#tr.ts: awīlam ikkimma uštamit bēl alpim 
+#tr.en: a man it gored and has caused his death, the owner of the ox 
+>>Q006412 173 
+174. _2/3(disz) ma-na ku3-babbar i3-la2-e_ 
+#tr.ts: 2/3 mina kaspam išaqqal 
+#tr.en: 2/3 mina of silver shall weigh out. 
+>>Q006412 174 
+@law 55 
+175. szum-ma _sag-ir3_ ik-ki-im-ma 
+#tr.ts: šumma wardam ikkimma 
+#tr.en: If it a slave gored and 
+>>Q006412 175 
+176. usz-ta-mi-it _1(u) 5(disz) gin2 ku3-babbar i3-la2-e_ 
+#tr.ts: uštamit 15 šiqil kaspam išaqqal 
+#tr.en: has caused his death, 15 shekels of silver he shall weigh out. 
+>>Q006412 176 
+@law 56 
+177. szum-ma _ur-gi7_ sze-gi-ma ba-ab-tum a-na be-li2-szu 
+#tr.ts: šumma kalbum šegîma bābtum ana bēlišu 
+#tr.en: If a mastiff is vicious and the gate its owner 
+>>Q006412 177 
+178. u2-sze-di-ma _ur-gi7_-szu la is,-s,u-ur-ma 
+#tr.ts: ušēdima kalabšu la iṣṣurma 
+#tr.en: so notified, but his mastiff he fails to control, and 
+>>Q006412 178 
+179. _lu2_ isz-szu-uk-ma usz-ta-mi-it 
+#tr.ts: awīlam iššukma uštamit 
+#tr.en: it a man bit, and has caused his death, 
+>>Q006412 179 
+180. be-el _ur-gi7 2/3(disz) ma-na ku3-babbar i3-la2-e_ 
+#tr.ts: bēl kalbim 2/3 mina kaspam išaqqal 
+#tr.en: the owner of the mastiff 2/3 mina of silver shall weigh out. 
+>>Q006412 180 
+@law 57 
+181. szum-ma _sag-ir3_ ik-ki-im-ma usz-ta-mit-it 
+#tr.ts: šumma wardam iššukma uštamit 
+#tr.en: If it a slave bit and has caused his death, 
+>>Q006412 181 
+182. _1(u) 5(disz) gin2 ku3-babbar i3-la2-e_ 
+#tr.ts: 15 šiqil kaspam išaqqal 
+#tr.en: 15 shekels of silver he shall weigh out. 
+>>Q006412 182 
+@law 58 
+183. szum-ma i-ga-rum i-qa-am-ma ba-ab-tum a-na be-el i-ga-ri 
+#tr.ts: šumma igārum iqāmma bābtum ana bēl igāri 
+#tr.en: If a wall is buckling and the gate the owner of the wall 
+>>Q006412 183 
+184. u2-sze-di-ma i-ga-ar-szu la u2-dan-nin-ma 
+#tr.ts: ušēdima igāršu la udanninma 
+#tr.en: so notified, but his wall he did not reinforce and 
+>>Q006412 184 
+185. i-ga-rum im-qu2-ut-ma _dumu lu2_ usz-ta-mi-it 
+#tr.ts: igārum imqutma mār awīlim uštamit 
+#tr.en: the wall collapsed and the a son of a man has caused to die— 
+>>Q006412 185 
+186. na-pi2-isz-tum s,i2-im-da-at szar-ri-im 
+#tr.ts: napištum ṣimdat šarrim 
+#tr.en: it is a capital case, it is (decided by) a royal decree. 
+>>Q006412 186 
+@law 59 
+187. szum-ma _lu2 dumu-mesz_ wu-ul-lu-ud-ma _dam_-su 
+#tr.ts: šumma awīlum māri wulludma aššassu 
+#tr.en: If a man children sired but his wife 
+>>Q006412 187 
+188. i-zi-im-ma sza-ni-tam i-ta-ha-az 
+#tr.ts: izimma šanitam itaḫaz 
+#tr.en: divorced and another has married, 
+>>Q006412 188 
+189. i-na _e2_ u3 ma-la i-ba-szu-u2 in-na-sa-ah-ma 
+#tr.ts: ina bitim u mala ibaššû63 innassaḫma 
+#tr.en: from the house and any possessions there may be he shall be expelled and 
+>>Q006412 189 
+190. wa-ar-ki sza i-ra-am-mu-ma it-ta-la-ak x x x _e2_ x x x 
+#tr.ts: warki ša irammuma ittallak ... bītum 
+#tr.en: after the one who ... he shall depart; ... the house ... . 
+>>Q006412 190 
+@law 60 
+191. szum-ma _lu2 en-nun_ 
+#tr.ts: šumma maṣṣārum 
+#tr.en: If a guard 
+>>Q006412 191 
+192. _e2_ i-na na-s,a-ri-im i-gu-ma pa-al-li-szu 
+#tr.ts: bītam ina naṣārim igûma pallišu 
+#tr.en: in guarding a house was negligent, and a burglar 
+>>Q006412 192 
+193. _e2_ ip-lu-usz u3 _lu2 en-nun e2_ sza ip-pa-al-szu 
+#tr.ts: bītam ipluš maṣṣār bīti ša ippalšu 
+#tr.en: the house burgled, guard of the house that was broken into ... 
+>>Q006412 193 
+194. [...] i-du-uk-ku ba-lum qa-ab-ri-szu 
+#tr.ts: ... idukkū balum qabrišu 
+#tr.en: ... the shall kill, and without a grave 
+>>Q006412 194 
+195. i-na pa-ni2 pi2-il-szi-im iq-qa-bi-ir 
+#tr.ts: ina pāni pilšim iqqabbir 
+#tr.en: at the breach he shall be buried. 
+>>Q006412 195 
+

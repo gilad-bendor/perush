@@ -11,6 +11,8 @@
 | `_bulk/epsd2-literary.zip` | Full JSON export of epsd2/literary (39.5 MB; 1,041 files: `catalogue.json` with 1,254 entries, `corpusjson/<Q|P>.json` CDL texts, glossaries `gloss-sux.json`, indices). Kept zipped. |
 | `_api-info/` | `oracc-json-index.html` (list of all 208 downloadable project zips), `projects.json`, `epsd2-literary-home.html`. |
 | `epsd2-literary--Q000357--Flood-Story/` | Flood Story composite (Q000357) and the Ur manuscript (P346146): raw CDL JSON, ORACC HTML view, Markdown conversions. |
+| `epsd2-royal--Q000947--Laws-of-Ur-Namma/`, `epsd2-royal--Q000613--Laws-of-Lipit-Ishtar/` | ePSD2 royal (CC0): lemmatised Ur-Namma (prologue, §1–§11 with § labels) and Lipit-Ištar prologue fragments, with morph; lexical help for projects 5–6 (added 2026-10-18; `_bulk/epsd2-royal.zip`). |
+| `tcma-laws--P281779--Middle-Assyrian-Laws-A/` | MAL A (TCMA, de Ridder 2021; CC BY-SA 3.0 / CC0 data): lemmatised + normalized text and the English; base text of `חוקים-ובריתות/4-החוקים-האשוריים-התיכונים-A/` (added 2026-10-18; own README). |
 
 ## Bulk/API mechanism (for future Sumerian work)
 - **Project zips:** `https://oracc.museum.upenn.edu/json/<project>.zip` with `/` → `-` (e.g. `epsd2-literary.zip`, `epsd2-royal.zip`, `etcsri.zip`, `dcclt.zip`, `obmc.zip`, `epsd2-earlylit.zip`). Index page: https://oracc.museum.upenn.edu/json/ . The build server `https://build-oracc.museum.upenn.edu/json/<project>.zip` also works (slightly newer/larger build; its index page returned HTTP 500).

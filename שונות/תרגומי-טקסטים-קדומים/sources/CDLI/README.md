@@ -39,3 +39,12 @@ n/a (no text). Use the museum numbers to match with Wasserman/SEAL sigla.
 
 ## Assessment
 Useful only for photos and hand copies to check readings (e.g. the CT 46 copies of the Sippar Flood tablet). Not a text source.
+
+## Law-collection composites (text sources; added 2026-10-17/18)
+Unlike the catalogue records above, these folders hold **full composite texts** (ATF with English, and for Akkadian a normalization), each with its own README:
+| Folder | Text | Base text of |
+|---|---|---|
+| `P464358--Laws-of-Hammurabi-composite/` | Laws of Hammurabi + the Louvre stele P249253 | `חוקים-ובריתות/2-חוקי-חמורבי/` |
+| `P480696--Laws-of-Eshnunna-composite/` | Laws of Eshnunna + exemplars A (IM 51059), B (IM 52614), C | `חוקים-ובריתות/3-חוקי-אשנונה/` |
+| `P464355--Laws-of-Lipit-Ishtar-composite/` | Laws of Lipit-Ištar + 13 exemplars | `חוקים-ובריתות/5-חוקי-ליפית-אישתר/` |
+| `P432130--Laws-of-Ur-Namma-composite/` | Laws of Ur-Namma + 9 exemplars (Ni 3191, MS 2064 …) | `חוקים-ובריתות/6-חוקי-אור-נמה/` |

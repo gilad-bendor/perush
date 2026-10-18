@@ -149,3 +149,84 @@ Binding for projects 2 and 3 (LH, Eshnunna, MAL, Lipit-Ištar, Ur-Namma). LH's o
 | ***maḫāṣu*** "strike"; *lētu* "cheek" | **מָחַץ**; **לְחִי** | `הִכָּה` | [cognate] (`מָחַצְתִּי וַאֲנִי אֶרְפָּא`, דברים לב:לט); [equivalent] ↔ `וְכִי יַכֶּה אִישׁ` (שמות כא:כ) | |
 | ***ina idû*** "knowingly" | **בְּדַעַת** (`לֹא בְדַעַת`) | `בְּזָדוֹן`, `בִּשְׁגָגָה` | [equivalent] ↔ `בִּבְלִי דַעַת` (דברים יט:ד) | |
 | ***riksātum***; ***kunukkum***; ***ṭuppum*** | **תְּנָאִים**; **תְּעוּדָה חֲתוּמָה**; **לוּחַ** | `בְּרִית`, `אֲמָנָה` (that is *adê*) | | |
+
+## 6. Projects 3–6: the other law collections (fixed 2026-10-18 by the coordinator, before drafting)
+Binding for Eshnunna (LE, project 3), the Middle Assyrian Laws A (MAL, project 4), Lipit-Ištar (LI, 5) and Ur-Namma (UN, 6), **on top of §5 and of LH's fixed formulas** (`2-חוקי-חמורבי/renderings.md` §1–§2, §4). **Rule: an Akkadian legal formula that LH has gets LH's Hebrew, letter for letter** (checked by `laws_verify.py`, which compares every identical normalization with LH and the other projects); a Sumerian formula gets the Hebrew of its standard Akkadian equivalent (Sum. *tukum-bi* = *šumma* = `אִם`; *la₂* "weigh" = *šaqālu* = `ישקול`; *gaz* = *dâku* = `יהרג`; *su(g)* "replace" = *riābu* = `יחליף`; *ra* "strike" = *maḫāṣu* = `מחץ`). Look up any word with `python3 -I laws_lookup.py '<regex>'` before fixing it.
+
+### 6.1 Shared by all four (and the Covenant-Code key words)
+| Original | Hebrew (plain plene) | Rejected | Echo | Reason |
+|---|---|---|---|---|
+| *imât* (G of *mâtu*) "he shall die"; *imât ul iballuṭ* | **ימות**; **ימות, לא יחיה** (fem. `תמות, לא תחיה`) | `יומת`, `מות יומת` | [cognate] *mâtu* = מות; [equivalent] ↔ `מוֹת יוּמָת` (שמות כא:יב); the idiom ↔ `כִּי מֵת אַתָּה וְלֹא תִחְיֶה` (מלכים ב כ:א; ישעיהו לח:א) | LE's active "he shall die" is neither LH's passive *iddâk* (`יהרג`) nor the Torah's `מוֹת יוּמָת`: three different formulas, kept visible. |
+| *zâzu* "divide" | **חלק** (`יחלוקו`; LH) | `חצה`, `יחצון` (Exod 21:35's verb; reserved) | [equivalent] ↔ `וְחָצוּ אֶת כַּסְפּוֹ וְגַם אֶת הַמֵּת יֶחֱצוּן` (שמות כא:לה) | LH's rendering of the same verb (inheritance). *mišlu* "half" = `חצי` is the noun of another verb. |
+| *šīmum* "price"; *balṭu* "alive"; *mītu* "dead"; *šīru* "flesh, meat" | **מחיר** (LH); **חי**; **מת**; **בשר** (corpus §0) | `כסף` for *šīmum* | [equivalent] `מחיר` ↔ `כַּסְפּוֹ` (שמות כא:לה); [cognate] `מת` ↔ `הַמֵּת`; [equivalent] `חי` ↔ `הַחַי` | |
+| *kilallān* "both" | **שניהם** (LH) | | [equivalent] ↔ `וּמֵתוּ גַּם שְׁנֵיהֶם` (דברים כב:כב) | |
+| *nakāpu*; *nakkāpû*; *šūdû*; *bābtum* | `נגף`; `נַגָּף`; `הודיע`; `רובע` (LH F32) | `נגח`, `הועד` | as LH F32 | LE writes *ikkim-ma* (= *ikkip-ma*). |
+| *ešēru* Š (*ušēšir*) "keep in order, control" (an animal) | **יישר** (`לא יישר את שורו`) | `ריסן` (that is LH's *sanāqu* D), `שמר` | [cognate] *ešēru* = ישר; [equivalent] ↔ `וְלֹא יִשְׁמְרֶנּוּ` (שמות כא:כט); `וְלֹא יִשְׁמְרֶנּוּ בְּעָלָיו` (שמות כא:לו) | LH prologue: *ešēru* Š = `המיישר`. |
+| *naṣāru* (of a dog, a slave, a house) | **נצר** (corpus) | `שמר` | [cognate] / [equivalent] ↔ `וְלֹא יִשְׁמְרֶנּוּ` (שמות כא:כט) | LE §56: the dog's owner "did not guard" it – the Akkadian verb that Exodus renders with `שמר`. |
+| *našāku* "bite"; *kalbum šegû* "a rabid (vicious) dog" | **נשך**; **כלב שוטה** | | [cognate] `נשך`; `כֶּלֶב שׁוֹטֶה` is the Mishnaic term (יומא ח:ו) | |
+| *igārum*; *qâpu* "lean, buckle"; *dunnunu* "reinforce"; *maqātu* | `קיר`; `נטה`; `חיזק`; `נפל` (LH) | | | |
+| *napištum* "a capital case" (LE §24, 26, 48, 58: *dīn napištim*, *awat napištim*, *napištum ṣimdat šarrim*) | `דין נפשות` (LH F36); `דבר נפשות`; `נפשות – תקנת המלך` (LH *ṣimdat šarrim* = `תקנת המלך`) | | [cognate] *napištu* = נפש | |
+| *ina mūšim*; *ina muṣlalim* | **בלילה**; **בצהריים** | | [equivalent] ↔ `אִם בַּמַּחְתֶּרֶת` / `אִם זָרְחָה הַשֶּׁמֶשׁ עָלָיו` (שמות כב:א–ב) | The Torah's criterion is the sun, LE's the time of day: both are "day / night". |
+| *sippu* "doorjamb"; *aptum* "window"; *palāšu* | **סף**; **חלון**; `פלש` (LH) | | [cognate] *sippu* = `סַף`; `פלש` (LH) | |
+| *qabru*; *qebēru* | `קבר` | | [cognate] ↔ `כִּי קָבוֹר תִּקְבְּרֶנּוּ` (דברים כא:כג) | |
+| *terḫatum*; *riksātum*; *kirrum* (the marriage feast?) | `מהר` (LH); `תנאים` (LH F35); translator of LE | | as LH | |
+| *sūnu* "lap" | `חיק` (LH) | | | `בחיק איש תיתפש` (LE §28). |
+| *ittû* (bitumen) | `חֵמָר` (flood corpus) | `כפר` (*kupru*) | | |
+| Measures: *kurrum*; *sūtum*; *qa*; *mana*; *šiqlum*; *uṭṭetum*; *ûm* / *še'um* | `כור`; `סאה` (pl. `סאים`, dual `סאתיים`); `קב` (pl. `קבים`); `מנה` (pl. `מנים`); `שקל`; `שעורה` (pl. `שעורות כסף`); `שעורים` | | | LH. *pānum* (PI, the "barig" = 6 *sūtu*): translator of LE (LH's CDLI reads PI as *parsiktum* = `פַּרְסִיכְתּוּ`). |
+| Tigris (*Idiglat*); Euphrates | `חִדֶּקֶל`; `פְּרָת` | | [cognate] (בראשית ב:יד) | Flood corpus. |
+| Eshnunna; Tišpak; Ninazu; Daduša | `אֶשְׁנֻנָּה`; `תִּישְׁפַּךְ`; `נִינַאזוּ`; `דָּדוּשָׁה` | | | LH prologue (243–245). |
+| Additional reserved words (checked by `laws_verify.py`): the root `יבם` (no cuneiform cognate), `מאורשה`, `ארוסה`, `ארש`, `מוהר`, `הכה`/`יכה`/`יכו`/`יכנו`/`המכה` (*maḫāṣu*, Sum. *ra* = `מחץ`), `יחצו`/`יחצון`/`וחצו`, `נבלה`, `ענה`/`עינה`, `תחוס`, `מבשיו`, `יוסיף`, `נאף`/`ינאף`/`נואף` | | | | Deut 22 / 25 and Exod 21:18–36 words whose cuneiform counterparts are other words. **Gated** (allowed only with their cognate): `בתולה` (*batultu*), `צעק` (*šasû*), `זונה` (*ḫarimtu*, Gilgameš corpus), `קדשה` (*qadištu*), `נגף` (*nakāpu*), `המית` (*mâtu* Š), `ישלם` (*šullumu*), `משפט` (*šipṭu*). |
+
+**Merged from the LE run (T1, 2026-10-18; `3-חוקי-אשנונה/project.md` Part T1):** PI (barig) = `פַּרְסִיכְתּוּ` (as LH); *lū* + preterite in a protasis ("suppose …") = Hebrew future, noted; *malû* D "make good" = `מילא` (`שילם` stays reserved for *šullumu*); *risbatum* "brawl" = `קטטה` (LH); *naqābu* "deflower" = `נִקֵּב` (open); *tarû* "take away" = `הסיע`; *bušû* "goods" = `חפצים`; *maṣṣāru* "guard" = `נוֹצֵר`; *pallišu* "burglar" = `פולש`; *ubāru* = `אורח` (not `גר`); *mār šiprim* = `שליח`; *meḫrum* = `שכמותו`; *maḫīrum* = `שער`; *mudû* = `מוֹדָע`; *šâlu* "consent (asking)" = `שאלת` (cognate). The opening of LE is a date formula (`## הפתיחה`), not a prologue.
+
+### 6.2 The Middle Assyrian Laws A (project 4; fixed before drafting)
+ORACC's normalization writes *h* for *ḫ* (*hīṭu*, *imahhuṣū*); the forms are Middle Assyrian (*aʾīlu*, *aššat aʾīle*, *iddan*, *ilaqqe*, perfect *ubtaʾʾerūš*).
+
+| Original | Hebrew (plain plene) | Rejected | Echo | Reason |
+|---|---|---|---|---|
+| *šumma aʾīlu*; *aššat aʾīle*; *mutu* (*mussa*); *sinniltu* | `אם איש`; `אשת איש`; `בעל` (`בעלה`); `אשה` | | LH F1, F16, *mutum* | |
+| *ḫīṭu* "penalty, punishment (for an offence)"; *ḫīṭu laššu* | **חטא**; **חטא אין** (word order as in the line; `לאשה חטא אין`) | `עונש` | [cognate] ↔ `אֵין לַנַּעֲרָ חֵטְא מָוֶת` (דברים כב:כו); `וְכִי יִהְיֶה בְאִישׁ חֵטְא מִשְׁפַּט מָוֶת` (דברים כא:כב) | Corpus §2 *ḫīṭu* = `חֵטְא`. In MAL it is the *penalty* due for an offence – exactly the sense of Deut 22:26 / 21:22 `חֵטְא מָוֶת`. |
+| *ḫīṭa emēdu* "impose a penalty" | **הטיל חטא** (`יטיל עליה`) | `ישית` (Exod 21:22 `כַּאֲשֶׁר יָשִׁית עָלָיו בַּעַל הָאִשָּׁה`: [equivalent] in the apparatus only) | [equivalent] ↔ שמות כא:כב | LH's `הטיל` is *nadû* "cast (a charge)"; MAL has no *nadû* in that sense. |
+| *arnu*; *aranša tanašši* | `עון`; `את עונה תשא` (LH F37) | | [equivalent] ↔ `וְהָאִשָּׁה הַהִוא תִּשָּׂא אֶת עֲוֹנָהּ` (במדבר ה:לא) | |
+| *niāku* "have (illicit) intercourse with"; *nāʾikānu* "the one who had intercourse"; *nīku* | **בא על**; **הבא עליה** (or `הבא (על האשה)`); **ביאה** | `נאף` (reserved: Lev 20:10; Exod 20:13), `שכב` (that is *nâlu* / *itūlu*, LH; Deut 22:22–29's verb), `שגל` (Deut 28:30) | [equivalent] ↔ `שֹׁכֵב עִם אִשָּׁה בְעֻלַת בַּעַל` (דברים כב:כב); `אִם בָּא אֶל אֵשֶׁת אָחִיו` (בראשית לח:ט) | The Mishnaic legal term `הַבָּא עַל` (אשת איש) renders the act without Deuteronomy's `שכב` and without the moral `נאף`. |
+| *bâru* D (*ubtaʾʾerūš*) "prove (the charge) against"; *kunnu* D (*uktaʾʾinūš*) "convict" | **בררו עליו**; **כוננו עליו** (the pair: `בררו עליו, כוננו עליו`) | | LH (*bâru* D `ברר`; F20 *kunnu* `כונן`) ↔ `וְהִנֵּה אֱמֶת נָכוֹן הַדָּבָר` (דברים יז:ד) | |
+| *idukkū(š)*; *iddan*; *ilaqqe*; *imaḫḫuṣū(š)* | `יהרגו(הו)`; `יתן`; `יקח`; `ימחצו(הו)` | `יכו` (reserved) | LH F4, F5, F9, F29 | |
+| *ina ḫaṭṭāte n imaḫḫuṣūš* | **<n> בשבטים ימחצוהו** | `מכות` | [equivalent] ↔ `אַרְבָּעִים יַכֶּנּוּ לֹא יֹסִיף` (דברים כה:ג); `בַּשֵּׁבֶט` (שמות כא:כ) | LH *ḫaṭṭu* = `שבט`. |
+| *šipar šarre … ūmāte eppaš* | **את מלאכת המלך … ימים יעשה** | | | LH *šipru* = `מלאכה`. |
+| *zaqānu* D "shave" | `גילח` | | [equivalent] ↔ `וְגִלְּחָה אֶת רֹאשָׁהּ` (דברים כא:יב) | |
+| *batultu* | **בתולה** | `נערה` | [cognate] ↔ `נַעֲרָ בְתוּלָה אֲשֶׁר לֹא אֹרָשָׂה` (דברים כב:כח); `בְּתוּלָה אֲשֶׁר לֹא אֹרָשָׂה` (שמות כב:טו) | Gated by `laws_verify.py`. |
+| *ṣēru*; *ina libbi āle*; *rebītu* | **שדה**; **בתוך העיר**; **רחוב** | `ערבה` | [equivalent] `שדה` ↔ `וְאִם בַּשָּׂדֶה יִמְצָא הָאִישׁ` (דברים כב:כה); `בָּעִיר` (דברים כב:כג); [cognate] `רחוב` | Gilgameš corpus *ṣēru* = `שָׂדֶה`; LH *rebītu* = `רחוב`. |
+| *emūqamma*; *ṣabātu*; *kašādu* "catch (in the act)" | **בכוח**; **תפש**; **השיג** | `אנס` (Mishnaic, an interpretation) | [equivalent] ↔ `וְהֶחֱזִיק בָּהּ הָאִישׁ` (דברים כב:כה); `וּתְפָשָׂהּ וְשָׁכַב עִמָּהּ` (דברים כב:כח) | LH *emūqu* = `כוח`, *ṣabātu* = `תפש`, *kašādu* = `השיג`. |
+| *magāru* "consent" | translator (not `אבה`, an EST reserved Deuteronomic word) | | | |
+| *išku* "testicle"; *ṣāltu* "fight" | **אשך**; translator (not `ריב`, `נצה`) | | [cognate] ↔ `מְרוֹחַ אָשֶׁךְ` (ויקרא כא:כ); [equivalent] `כִּי יִנָּצוּ אֲנָשִׁים יַחְדָּו` (דברים כה:יא) | |
+| *nakāsu*; *ubānu*; *appu*; *uznu*; *šapassu* | `קצץ` (LH); `אצבע`; `אף`; `אוזן`; `שפתו` | | [equivalent] `קצץ` ↔ `וְקַצֹּתָה אֶת כַּפָּהּ` (דברים כה:יב) – **the root is LH's rendering of *nakāsu*, not a cognate**: say so | |
+| *puṣṣunu* "veiled" (stative *paṣṣunat*) | **רעולה** (verb: translator) | `מכוסה`, `התכסה` (Gen 24:65; 38:14–15: the comparison verses) | [equivalent] ↔ `וַתִּקַּח הַצָּעִיף וַתִּתְכָּס` (בראשית כד:סה); `כִּי כִסְּתָה פָּנֶיהָ` (בראשית לח:טו) | |
+| *qadiltu* (MA *qadištu*); *ḫarīmtu*; *esirtu* "concubine" | **קדשה**; **זונה**; translator (`אסירה`? cognate *esēru* = `אסר`) | | [cognate] `קְדֵשָׁה` ↔ `אַיֵּה הַקְּדֵשָׁה` (בראשית לח:כא); [equivalent] `זונה` ↔ `וַיַּחְשְׁבֶהָ לְזוֹנָה` (בראשית לח:טו); `פִּילֶגֶשׁ` | Gated. |
+| *almattu*; *emu*; *mār emi*; *kallatu* | `אלמנה`; `חם`; `בן החם`; `כלה` | `יבם`, `יבמה` (reserved) | [cognate] `אַלְמָנָה` ↔ `שְׁבִי אַלְמָנָה בֵית אָבִיךְ` (בראשית לח:יא); **MAL has no *yābimu* term**: mark [absent] at the levirate-type laws (Deut 25:5–10) | LH. |
+| *napšāte umalla* "he shall pay lives" | `נפשות ימלא` (*malû* D = `מלא` [cognate]) | | [equivalent] ↔ `וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ` (שמות כא:כג) | |
+| *ša-libbiša* "her foetus" (lit. "what is in her womb"); *ṣalû* Š "cause to miscarry" | `את אשר בבטנה` (LH); **הפיל** | | [equivalent] ↔ `וְיָצְאוּ יְלָדֶיהָ` (שמות כא:כב) | LH's verb (*nadû* Š) is `השיל`; MAL's is another verb. |
+| *kišpū*; *ēpiš kišpē* | `כשפים`; `עושה כשפים` | | [cognate] ↔ `מְכַשֵּׁפָה לֹא תְחַיֶּה` (שמות כב:יז) | |
+| *Id* (the River ordeal) | `הנהר` (LH F33), *ana Id illak* `אל הנהר ילך` | | [divergence] ↔ במדבר ה:יא–לא | |
+
+### 6.3 The Sumerian laws (Lipit-Ištar, Ur-Namma; projects 5–6)
+Each Sumerian legal formula takes the Hebrew of its standard Akkadian equivalent (so that the same law in the two languages reads the same), and the Sumerian conventions of the earlier corpora (guidelines §5, Sumerian; `סיפורי-המבול-המסופוטמיים/3-…`, `סיפורי-הבריאה-המסופוטמיים/2-…`): *marû* = Hebrew future in the apodoses ("he shall pay"), *ḫamṭu* = past in the protases; ePSD2 lemma and morph in the **פירוק** field.
+
+| Sumerian (Akk. equivalent) | Hebrew | Echo | Note |
+|---|---|---|---|
+| *tukum-bi* (*šumma*) | `אם` | as F1 | |
+| *lu₂* (*awīlum*) | `איש` (`איש … איש` for *lu₂ lu₂-ra*) | as LH | |
+| *dumu-gi₇* (*mār banîm*) "free-born, native citizen" | **בן חורין** / `בת חורין` | `אזרח` (Lev 24:22; another opposition, native vs stranger) | Opposed to the slave (*arad₂*). |
+| *arad₂*; *geme₂*; *lugal* (of a slave) | `עבד`; `אמה`; `אדון` | as LH | |
+| *ku₃-babbar*; *gin₂*; *ma-na*; *še gur* | `כסף`; `שקל`; `מנה`; `כור שעורים` | | |
+| *la₂* "weigh (out)" (*šaqālu*) | `ישקול` | [cognate] of the Akkadian ↔ `כֶּסֶף יִשְׁקֹל` (שמות כב:טז) | LH F6. |
+| *gaz* (*dâku*) | `יהרג` (*i₃-gaz-e*); *gaz-e-dam* `יהרג` | ↔ `מוֹת יוּמָת` [equivalent] | LH F3. |
+| *su(g)* "replace" (*riābu*) | `יחליף` | ↔ `שַׁלֵּם יְשַׁלֵּם` [equivalent] | LH F7. |
+| *ra* "strike" (*maḫāṣu*) | `מחץ` | ↔ `וְכִי יַכֶּה אִישׁ` (שמות כא:כ) [equivalent] | LH F29; `הכה` reserved. |
+| *ama-ar-gi₄* (*andurāru*); *ama-ar-gi₄ … gar* | **דרור**; `דרורו יושם` / `דרור שמתי` | [equivalent via the Akkadian] ↔ `וּקְרָאתֶם דְּרוֹר` (ויקרא כה:י) | LH F24 *andurāršunu iššakkan* = `דרורם יושם`. |
+| *niĝ₂-si-sa₂* (*mīšaru*); *niĝ₂-gi-na* (*kittu*); *di* (*dīnu*); *di-ku₅* (*dayyānu*) | `מישרים`; `אמת`; `דין`; `דיין` | as LH | |
+| *nu-siki* "orphan"; *nu-ma-su* "widow"; *lu₂ niĝ₂-tuku* "the rich"; *lu₂ a₂-tuku* "the powerful" | **יתום**; **אלמנה**; `עשיר`; `בעל הכוח` | [equivalent] ↔ `כָּל אַלְמָנָה וְיָתוֹם לֹא תְעַנּוּן` (שמות כב:כא); `עֹשֶׂה מִשְׁפַּט יָתוֹם וְאַלְמָנָה` (דברים י:יח) | |
+| *ur₂-ra-na … nu₂* (*ina sūniša itūl*) | `בחיקה שכב` (LH) | ↔ `וְשָׁכַב עִמָּהּ` [equivalent] | The same formula in both languages. |
+| *nam-erim₂ ku₅* "take an oath" | `נשבע שבועה` | ↔ `שְׁבֻעַת יְהוָה` (שמות כב:י) | Creation corpus (Sumerian *nam-erim₂* = `שְׁבוּעָה`). |
+| *{d}id₂-lu₂-ru-gu₂* "the (divine) River that receives man" | `הנהר` (with a note on the name) | [divergence] ↔ במדבר ה | LH F33. |
+| *e₂ ad-da*; *ibila* | `בית האב`; `יורש` | | LH. |
+| *a-ša₃*; *ĝeškiri₆*; *e₂* | `שדה`; `גן`; `בית` | | LH. |

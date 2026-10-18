@@ -54,3 +54,4 @@ ETCSL/_bulk/*
 # 4. Large raw ORACC files (> 1 MB; re-downloadable: see the folder README)
 ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.json
 ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.html
+ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/*.html
