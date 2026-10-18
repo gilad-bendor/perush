@@ -42,7 +42,7 @@ GATED = [
     (NB + r'[ובלה]*בתול(ה|ת|ים|ות|תה|תו)?' + NE, r'batult|batūl|batul|batultu', '`בתולה` only for *batultu*'),
     (NB + r'[ובלה]*(צעק|צעקה|תצעק|יצעק|צעקו)' + NE, r'šasû|issi|išassi|tašassi|tassi|ištasi|iltasi|šisīt|šasāʾ|tasassi|isassi', '`צעק` only for *šasû*'),
     (NB + r'[ובלה]*(המית|והמית|ימית|תמית|המיתה|המיתו|ימיתו)' + NE, r'uštam[iī]t|šumūt|mâtu Š|ušmīt|ušmat|ušmāt|uštamīt|uš2|ug7', '`המית` only for *mâtu* Š'),
-    (NB + r'[ובלה]*(זונה|זונות)' + NE, r'ḫarimt|ḫarīmt|ḫarmat|kar-kid|harimt', '`זונה` only for *ḫarimtu* (Gilgameš corpus)'),
+    (NB + r'[ובלה]*(זונה|זונות)' + NE, r'ḫarimt|ḫarīmt|ḫarmat|kar-kid|kar-ke4|harimt', '`זונה` only for *ḫarimtu* (Gilgameš corpus)'),
     (NB + r'[ובלה]*(קדשה|קדשות)' + NE, r'qadišt|qadilt|nu-gig', '`קדשה` only for *qadištu*'),
     (NB + r'[ובלה]*(ישלם|ישלמו|ישלמנה|ישלמנו|שלם ישלם|ישלמה)' + NE, r'ušall[ai]m|šullum|ušallamū|ušallimū|uš?šallam|šalāmu', '`שלם` (D) only for *šullumu*'),
 ]
@@ -124,7 +124,7 @@ SUM = [
     (r'^tukum-bi\b|\btukum-bi\b', NB + r'ו?אם' + NE, 'tukum-bi = אם'),
     (r'\bi3-la2-e\b|\bi3-na-la2-e\b|\bhe2-na-la2-e\b', r'ישקול|תשקול|ישקלו', 'la2 = šaqālu = ישקול (LH F6)'),
     (r'\bi3-gaz-e\b|\bin-gaz-e\b|\bi3-gaz-e-dam\b|\bba-ab-gaz\b', NB + r'ו?[ית]הרג' + NE, 'gaz = dâku = יהרג (LH F3)'),
-    (r'\bib2-su-su\b|\bib2-su-su-ne\b|\bib2-su-su-e\b', r'יחליפ|תחליף', 'su = riābu = יחליף (LH F7)'),
+    (r'\bib2-su-su\b|\bib2-su-su-ne\b|\bib2-su-su-e\b', r'יחליפ|יחליף|תחליף', 'su = riābu = יחליף (LH F7)'),
     (r'\bku3-babbar\b', r'כסף', 'ku3-babbar = כסף'),
     (r'\bgeme2\b', r'אמה|אמת|אמהות|האמה|אמות', 'geme2 = אמה'),
     (r'\bARAD2\b|\bir11\b|\barad2\b', r'עבד', 'ARAD2 = עבד'),
