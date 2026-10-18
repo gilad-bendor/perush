@@ -32,9 +32,17 @@ def lawkey(s):
 def topic_for(law):
     t = None
     for first, name in topics:
-        if lawkey(law) >= lawkey(first):
+        if not first.startswith('@') and lawkey(law) >= lawkey(first):
             t = (first, name)
     return t
+
+
+def topic_at(label):
+    # a topic keyed by a composite label ('@b001'): starts at the section whose first line is that label
+    for first, name in topics:
+        if first == '@' + label:
+            return (first, name)
+    return None
 
 
 for f in C.files(key):
@@ -49,6 +57,10 @@ for f in C.files(key):
         l = l.rstrip('\n')
         if l.startswith('## '):
             h = l[3:].strip()
+            m0 = re.match(r'[^()]*\(\s*([^–\-)\s]+)', h)
+            t0 = topic_at(m0.group(1)) if m0 else None
+            if t0 and t0[0] not in done:
+                done.add(t0[0]); big = None; out += ['', f'## {t0[1]}', '']
             m = re.match(r'§\s*(\S+?)(?:[–-](\S+?))?\s*\(([^)]*)\)\s*:?\s*(.*)$', h)
             if m:
                 big = None
@@ -60,7 +72,8 @@ for f in C.files(key):
             elif h.startswith('הקולופון'):
                 out += ['', f'## {h}', '']
             else:
-                out += ['', f'### {h}', '']
+                h2 = re.sub(r'^(הפרולוג|האפילוג|הפתיחה)\s*\([^)]*\)\s*:\s*', '', h) if big else h
+                out += ['', f'### {h2}', '']
             continue
         m = re.match(r'<!--\s*טרם תורגם:\s*(.*?)\s*-->', l.strip())
         if m:
