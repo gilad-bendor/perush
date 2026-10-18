@@ -42,6 +42,8 @@ The commentary files: `../../../../פירוש/1-בראשית/1020-…-גן_עד�
 4. One translator per tablet (or group), sequentially, in the priority order; the coordinator reviews and merges between runs.
 
 ## Open decisions for the user
+**Settled on 2026-10-18 by the coordinator, at the user's request: see `../renderings.md` §12** (items 1, 3, 4 changed the text; the others confirm the choices below). The per-tablet lists below stand as chosen unless §12 says otherwise.
+
 Collected by the coordinator (2026-10-18). The cross-tablet ones are listed here; each tablet section below has its own list (I 6, II 7, III 8, IV 8, V 8, VI 8, VII 11, VIII 8, IX 6, X 10, XI 8, XII 9 items), with the alternatives and the reasons.
 1. *saḫāru* in flood XI 150, 153, 156 (`שָׁבָה`): align to `חָזְרָה`, so that `שוב` stands only for *târu* (as here and in the creation corpus)? (`../renderings.md` §8.)
 2. Flood XI 160 has `צברתי` for *tabāku*, against the rule that `צָבַר` stays out of the Hebrew (Gen 41:49) and the flood renderings' own *tabāku* = `יָצַק`: change it to `יצקתי`?
@@ -379,7 +381,7 @@ SB Tablet XI, the 120 eBL labels 209–328: the end of Ūta-napišti's speech an
 | 246 | [pānīya?] luškun | [פניי]? אשים | `וַיָּשֶׂם אֶת פָּנָיו הַר הַגִּלְעָד` (בראשית לא:כא) | [cognate] | *pānī šakānu* = שׂים פנים; "my face" restored. |
 | 248 | kāru liddīka nēberu lizērka | הנמל – ישליכך, המעבר – ימאס בך | `וַיְגָרֶשׁ אֶת הָאָדָם` (בראשית ג:כד) | [divergence] | Banishment of the one who let a man reach the forbidden place. *zêru* = מאס (flood XI 26, 39). |
 | 251 | iktasû malû pagaršu | כפתו פרעות את גוויתו | `גַּדֵּל פֶּרַע שְׂעַר רֹאשׁוֹ` (במדבר ו:ה) | [equivalent] | Gilgameš at the end looks like Enkidu at the start (I 103 `שָׂעִיר שֵׂעָר`). |
-| 252 | maškū uqtattû dumuq šīrīšu | העורות כילו את חסד בשרו | `כָּל הַבָּשָׂר חָצִיר וְכָל חַסְדּוֹ כְּצִיץ הַשָּׂדֶה` (ישעיהו מ:ו) | [equivalent] | *dumuq šīri* = "the חֶסֶד (beauty) of flesh", the same phrase. |
+| 252 | maškū uqtattû dumuq šīrīšu | העורות כילו את נוי בשרו | `כָּל הַבָּשָׂר חָצִיר וְכָל חַסְדּוֹ כְּצִיץ הַשָּׂדֶה` (ישעיהו מ:ו) | [equivalent] | *dumuq šīri* = "the חֶסֶד (beauty) of flesh", the same phrase. |
 | 252 | maškū | העורות | `וַיַּעַשׂ יְהוָה אֱלֹהִים לְאָדָם וּלְאִשְׁתּוֹ כָּתְנוֹת עוֹר וַיַּלְבִּשֵׁם` (בראשית ג:כא) | [divergence] | **Key.** *mašku* = עור: God's gift at the expulsion vs. the mourner's pelts that ruined his body, cast off (255, 264) for a royal robe (258). |
 | 253 | leqēšū-ma … ana namsê | קחהו … אל הכיור | `וְעָשִׂיתָ כִּיּוֹר נְחֹשֶׁת … לְרָחְצָה` (שמות ל:יח) | [equivalent] | *nemsû* = כיור. *leqû* = לקח (reserved). = 262. |
 | 254 | malêšu ina mê kīma elli limsi | את פרעותיו במים – כטהור ירחץ | `וְכִבֶּס הַמִּטַּהֵר אֶת בְּגָדָיו וְגִלַּח אֶת כָּל שְׂעָרוֹ וְרָחַץ בַּמַּיִם וְטָהֵר` (ויקרא יד:ח) | [equivalent] | Hair, water, purity, clothes in the same order (254–258). = 263. |
@@ -518,7 +520,7 @@ SB Tablet VI, all 183 eBL labels: Gilgameš washes and dresses (1–5); Ištar's
 | 3 | ittalbiš | התלבש | `וַיַּלְבִּשֵׁם` (בראשית ג:כא) | [divergence] | *labāšu* ~ לבש [cognate]; man clothes himself here, God clothes there. |
 | 4 | ittaḫlip | התעטף | `וַיְחַלֵּף שִׂמְלֹתָיו` (בראשית מא:יד) | [cognate] | *ḫalāpu* ~ חלף (root only; "wrap", not "change"). Also `חֲלִפוֹת שְׂמָלֹת` (מה:כב). |
 | 4 | rakis aguḫḫa | רכוס אזור | `וַיַּעֲשׂוּ לָהֶם חֲגֹרֹת` (בראשית ג:ז) | [divergence] | A belt of honour, not of shame. |
-| 6 | ana dumqi ša Gilgāmeš īnī ittaši | אל חסד גילגמש נשאה עיניה | `וַתִּשָּׂא אֵשֶׁת אֲדֹנָיו אֶת עֵינֶיהָ אֶל יוֹסֵף וַתֹּאמֶר שִׁכְבָה עִמִּי` (בראשית לט:ז) | [cognate] | **Key.** The same idiom (*īnī našû*): a woman of rank covets a handsome young man (`יְפֵה תֹאַר וִיפֵה מַרְאֶה`, לט:ו), proposes, is refused, takes revenge (VI 80ff. ↔ 39:13ff.). |
+| 6 | ana dumqi ša Gilgāmeš īnī ittaši | אל נוי גילגמש נשאה עיניה | `וַתִּשָּׂא אֵשֶׁת אֲדֹנָיו אֶת עֵינֶיהָ אֶל יוֹסֵף וַתֹּאמֶר שִׁכְבָה עִמִּי` (בראשית לט:ז) | [cognate] | **Key.** The same idiom (*īnī našû*): a woman of rank covets a handsome young man (`יְפֵה תֹאַר וִיפֵה מַרְאֶה`, לט:ו), proposes, is refused, takes revenge (VI 80ff. ↔ 39:13ff.). |
 | 6 | dumqu | חסד | `וַתִּשָּׂא חֵן וָחֶסֶד לְפָנָיו` (אסתר ב:יז) | [equivalent] | *dumqu* "beauty" = חסד (cf. Isa 40:6; XI 252). |
 | 6 | īnī ittaši | נשאה עיניה | `וַתֵּרֶא הָאִשָּׁה כִּי טוֹב הָעֵץ … וְכִי תַאֲוָה הוּא לָעֵינַיִם` (בראשית ג:ו) | [divergence] | The coveting eye, here of a goddess on a man. |
 | 7 | lū ḫāʾer attā | היה אתה החתן | `כְּחָתָן יֹצֵא מֵחֻפָּתוֹ` (תהלים יט:ו) | [cognate] | Only through AššNA1a's variant *ḫatānu* ~ חתן; the main text has *ḫāwiru*. |

@@ -436,14 +436,14 @@ The commentary asks of each word in Genesis: *why exactly this word?* These are 
 | 8:6, 8 | Atr. III iv 26 – v 29 (gap) | window, dove, crane (only in Ugarit I₂) | — | [equivalent] (I₂ only) | Lost in OB. |
 | 8:7 `וַיְשַׁלַּח אֶת הָעֹרֵב` (ח:ז); 8:8 `וַיְשַׁלַּח אֶת הַיּוֹנָה` (ח:ח) | Gilg. XI 148, 151, 154 | *ušēṣī-ma … umaššar* | הוצאתי יונה ושילחתיה | [equivalent] | *wuššuru* D ↔ `שִׁלַּח` Piel. |
 | 8:7–12 | Gilg. XI 148–156 | dove, swallow, raven | יונה, סנונית, עורב | [divergence]; *āribu* / `עֹרֵב` [cognate] | Order and number differ. |
-| 8:7 `יָצוֹא וָשׁוֹב` (ח:ז); 8:12 | Gilg. XI 156 | *itarri ul issaḫra* | אוכל, *מחטט*, *מתהפך* – ולא שב אליי | [divergence] | The bird that does not return: the raven in Gilgameš, the dove in Genesis. |
+| 8:7 `יָצוֹא וָשׁוֹב` (ח:ז); 8:12 | Gilg. XI 156 | *itarri ul issaḫra* | אוכל, *מחטט*, *מתהפך* – ולא חזר אליי | [divergence] | The bird that does not return: the raven in Gilgameš, the dove in Genesis. |
 | 8:7, 8, 11 | Gilg. XI 155 | *qarūra ša mê īmur* | הלך העורב, וראה את שפל המים | [equivalent] | `שפל המים`, not `קלו` / `חסרו`. |
 | 8:8 `לִרְאוֹת הֲקַלּוּ הַמַּיִם` (ח:ח) | I₂ 6 | *iṣṣūram-ma līmurakka kibra* | ציפור – ותראה לך קצה (של יבשה) | [equivalent]; *iṣṣūru* / צפור [cognate] | The god orders the bird; in Genesis Noah decides. |
 | 8:8 | Ab1.22 | πείρην ποιεύμενος εἴ κου γῆν ἴδοιεν | לנסות אם יראו … ארץ | [equivalent] | The purpose is stated, as in Genesis. LXX ≈ (ἰδεῖν εἰ). |
 | 8:7–12 | Berossus B7.4.2; 4.4; 4.6 | ἀφιέναι τῶν ὀρνέων τινά / τὰ ὄρνεα | שילח … מן העופות | [equivalent] (verb) / [divergence] (species) | No raven, no dove. LXX: ὄρνεα = `עוֹף`; ἀφίημι ≠ ἀπέστειλεν. |
 | 8:8–12 | Berossus B7.4.2–6 | three sendings: no return of a sign / a sign / no return | | [equivalent] (structure) | **Closer to Genesis than Gilgameš is.** |
 | 8:8–9 | I₂ 11–13 | *summata umaššir … ušāniḫi kappīša* | יונה חזקת כנפיים / שילחתי; הלכה וחזרה, / עייפה את כנפיה | [equivalent] | Dove first; she returns because she found no rest. |
-| 8:9 `וְלֹא מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף רַגְלָהּ` (ח:ט) | Gilg. XI 150, 153 | *manzāzu ul īpâššim-ma issaḫra* | מקום עמידה לא נראה לה, ושבה [אליי] | [equivalent] | The closest verbal match in the scene. `מקום עמידה`, not `מנוח`. |
+| 8:9 `וְלֹא מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף רַגְלָהּ` (ח:ט) | Gilg. XI 150, 153 | *manzāzu ul īpâššim-ma issaḫra* | מקום עמידה לא נראה לה, וחזרה [אליי] | [equivalent] | The closest verbal match in the scene. `מקום עמידה`, not `מנוח`. |
 | 8:9 | Berossus B7.4.3 | οὐ τροφὴν εὑρόντα οὔτε τόπον ὅπου καθίσαι, πάλιν ἐλθεῖν εἰς τὸ πλοῖον | לא מצאו לא מזון ולא מקום שבו ישבו, חזרו אל הספינה | [equivalent] | Food is added. LXX ≈ (οὐχ εὑροῦσα … ὑπέστρεψεν … εἰς τὴν κιβωτόν). |
 | 8:9 | Ab1.23 | ἀπορέουσαι ὅκη καθορμίσονται, παρὰ τὸν Σίσιθρον ὀπίσω κομίζονται | באין להן מוצא היכן יעגנו — חוזרות אל סיסיתרוס | [equivalent] | Return "to him". |
 | 8:9 | Ab3.7 | *nulla inventa sede, qua pes subsisteret* | לא מצאו מושב שבו תוכל רגל לעמוד | [equivalent] | Very close to Genesis; possibly assimilated by the Christian translator (reception). |

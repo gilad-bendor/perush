@@ -1032,7 +1032,7 @@ Outside Genesis 1–11: the lament for Enkidu (VIII 3–56) ↔ 2 Sam 1:19–27,
 |---|---|---|---|---|---|---|
 | בראשית לט:א | SB VI 139 | kī ṭābiḫi | כ[טבח] | `שַׂר הַטַּבָּחִים` (בראשית לט:א) | [cognate] | Lexical only; restored in 139, preserved in 145. |
 | בראשית לט:ו | OB II 31 | šani būnūšu | שונה תוארו | `וַיְהִי יוֹסֵף יְפֵה תֹאַר וִיפֵה מַרְאֶה` (בראשית לט:ו) | [equivalent] | Appearance (*būnu* = תואר) of the axe, which is a man (SB I 286). |
-| בראשית לט:ז | SB VI 6 | ana dumqi ša Gilgāmeš īnī ittaši | אל חסד גילגמש נשאה עיניה | `וַתִּשָּׂא אֵשֶׁת אֲדֹנָיו אֶת עֵינֶיהָ אֶל יוֹסֵף וַתֹּאמֶר שִׁכְבָה עִמִּי` (בראשית לט:ז) | [cognate] | **Key.** The same idiom (*īnī našû*): a woman of rank covets a handsome young man (`יְפֵה תֹאַר וִיפֵה מַרְאֶה`, לט:ו), proposes, is refused, takes revenge (VI 80ff. ↔ 39:13ff.). |
+| בראשית לט:ז | SB VI 6 | ana dumqi ša Gilgāmeš īnī ittaši | אל נוי גילגמש נשאה עיניה | `וַתִּשָּׂא אֵשֶׁת אֲדֹנָיו אֶת עֵינֶיהָ אֶל יוֹסֵף וַתֹּאמֶר שִׁכְבָה עִמִּי` (בראשית לט:ז) | [cognate] | **Key.** The same idiom (*īnī našû*): a woman of rank covets a handsome young man (`יְפֵה תֹאַר וִיפֵה מַרְאֶה`, לט:ו), proposes, is refused, takes revenge (VI 80ff. ↔ 39:13ff.). |
 | בראשית לט:ז | SB VI 67 | īna tattaššîšum-ma | עין נשאת אליו | `וַתִּשָּׂא אֵשֶׁת אֲדֹנָיו אֶת עֵינֶיהָ אֶל יוֹסֵף` (בראשית לט:ז) | [cognate] | As 6. |
 | בראשית לט:יב | SB I 182 | lubūšīki muṣṣî-ma elīki liṣlal | פרשי את לבושך, ויישן עלייך | `וַתִּתְפְּשֵׂהוּ בְּבִגְדוֹ לֵאמֹר שִׁכְבָה עִמִּי` (בראשית לט:יב) | [equivalent] | Garment and lying in a seduction scene. = 189. |
 
@@ -1607,7 +1607,7 @@ Outside Genesis 1–11: the lament for Enkidu (VIII 3–56) ↔ 2 Sam 1:19–27,
 | ישעיהו מ:ג | SB V 5 | šutēšurā … girru | מיושרות … המסילה | `יַשְּׁרוּ בָּעֲרָבָה מְסִלָּה לֵאלֹהֵינוּ` (ישעיהו מ:ג) | [equivalent] | The straight road to the god's place; *gerru* = מסילה (§15). |
 | ישעיהו מ:ג | OB Harmal2 15 | šakin kibsu šutēšur padānu | שׂוּם שביל, מיושר המשעול | `יַשְּׁרוּ בָּעֲרָבָה מְסִלָּה לֵאלֹהֵינוּ` (ישעיהו מ:ג) | [equivalent] | A straight path to the god's place (SB V 4–5). |
 | ישעיהו מ:ד | SB V 169 | ešret šadî taspun | עשרה הרים שיטחת | `כָּל גֶּיא יִנָּשֵׂא וְכָל הַר וְגִבְעָה יִשְׁפָּלוּ` (ישעיהו מ:ד) | [equivalent] | Levelled mountains. |
-| ישעיהו מ:ו | SB XI 252 | maškū uqtattû dumuq šīrīšu | העורות כילו את חסד בשרו | `כָּל הַבָּשָׂר חָצִיר וְכָל חַסְדּוֹ כְּצִיץ הַשָּׂדֶה` (ישעיהו מ:ו) | [equivalent] | *dumuq šīri* = "the חֶסֶד (beauty) of flesh", the same phrase. |
+| ישעיהו מ:ו | SB XI 252 | maškū uqtattû dumuq šīrīšu | העורות כילו את נוי בשרו | `כָּל הַבָּשָׂר חָצִיר וְכָל חַסְדּוֹ כְּצִיץ הַשָּׂדֶה` (ישעיהו מ:ו) | [equivalent] | *dumuq šīri* = "the חֶסֶד (beauty) of flesh", the same phrase. |
 | ישעיהו מ:ו | OB Schoyen2 10 | dumqam-ma | ובחסד | `וְכָל חַסְדּוֹ כְּצִיץ הַשָּׂדֶה` (ישעיהו מ:ו) | [equivalent] | `חסד` = "beauty" (binding *dumqu* = חסד; open decision 1). |
 | ישעיהו מ:יט | SB VIII 67 | nappāḫu … kutimmu kabšarru | נַפָּח … צורף, חרש־אבן | `הַפֶּסֶל נָסַךְ חָרָשׁ וְצֹרֵף בַּזָּהָב יְרַקְּעֶנּוּ` (ישעיהו מ:יט) | [equivalent] | The craftsmen who make an image (there mocked). |
 | ישעיהו מב:ו | OB Schoyen2 22 | iṣabbat qātka | יאחז בידך | `וְאַחְזֵק בְּיָדֶךָ` (ישעיהו מב:ו); `אָחַזְתָּ בְּיַד-יְמִינִי` (תהלים עג:כג) | [equivalent] | The god takes the hand. |

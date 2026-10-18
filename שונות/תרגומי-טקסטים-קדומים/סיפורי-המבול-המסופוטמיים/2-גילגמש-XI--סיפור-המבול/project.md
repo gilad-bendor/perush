@@ -162,9 +162,9 @@ Tags per guidelines §6.4. Hebrew = our rendering. Only the items that matter fo
 | 142–146 | Mount Nimuš holds the boat | על הר נימוש נשענה הספינה | 8:4 `עַל הָרֵי אֲרָרָט` | [equivalent] / [divergence] | |
 | 148, 151, 154 | *ušēṣī-ma … umaššar* | הוצאתי … ושילחתיה | 8:7–8 `וַיְשַׁלַּח` | [equivalent] | |
 | 148–156 | dove, swallow, raven | יונה, סנונית, עורב | 8:7–12 raven, dove ×3 | [divergence] | Order and number. *āribu* / `עֹרֵב` [cognate]. |
-| 150, 153 | *manzāzu ul īpâššim-ma issaḫra* | מקום עמידה לא נראה לה, ושבה אליי | 8:9 | [equivalent] | The closest verbal match in the scene. |
+| 150, 153 | *manzāzu ul īpâššim-ma issaḫra* | מקום עמידה לא נראה לה, וחזרה אליי | 8:9 | [equivalent] | The closest verbal match in the scene. |
 | 155 | *qarūra ša mê īmur* | ראה את שפל המים | 8:7, 8:8, 8:11 | [equivalent] | |
-| 156 | *itarri ul issaḫra* | מתהפך – ולא שב | 8:7 `יָצוֹא וָשׁוֹב`; 8:12 `וְלֹא יָסְפָה שׁוּב` | [divergence] | The bird that does not return: raven (Gilg) vs. dove (Gen). |
+| 156 | *itarri ul issaḫra* | מתהפך – ולא חזר | 8:7 `יָצוֹא וָשׁוֹב`; 8:12 `וְלֹא יָסְפָה שׁוּב` | [divergence] | The bird that does not return: raven (Gilg) vs. dove (Gen). |
 | 157–160 | libations and aromatics to the four winds, on the mountain top | זבחתי זבח … מנחה … קנה, ארז והדס | 8:20 `וַיִּבֶן נֹחַ מִזְבֵּחַ … וַיַּעַל עֹלֹת` | [divergence] | No altar, no burnt offering. |
 | 159 | *sebet u sebet* | שבעה ושבעה | 7:2–3 `שִׁבְעָה שִׁבְעָה` | [divergence] | Same number, different context. |
 | 161–162 | *ilū īṣinū irīša (ṭāba)* | האלים הריחו את הריח (הטוב) | 8:21 `וַיָּרַח יְהוָה אֶת רֵיחַ הַנִּיחֹחַ` | [equivalent]; *ṭābu* [cognate] טוב | The closest motif parallel. |

@@ -137,7 +137,7 @@ Because Atra-ḫasīs III and the other Akkadian versions will copy this Hebrew 
 | *emēdu* (*emid ḫīṭāšu*) | הַטֵּל | | | 185, 186 |
 | *summatu / sinuntu / āribu* | יוֹנָה / סְנוּנִית / עוֹרֵב | | Shared. | 148–156 |
 | *manzāzu* | מְקוֹם עֲמִידָה | `מָנוֹחַ` (ח:ט) | | 150, 153 |
-| *saḫāru* | שָׁב | | | 150, 153, 156 |
+| *saḫāru* | חָזַר | שָׁב | Not cognate with שוב; `שׁוּב` is reserved for *târu* in the Gilgameš and creation corpora, and `שָׁב` would pre-empt Gen 8:9, 12 (decided 2026-10-18). | 150, 153, 156 |
 | *qarūru* (*ša mê*) | שֵׁפֶל (הַמַּיִם) | `וַיַּחְסְרוּ`, `קַלּוּ` | | 155 |
 | *surqinnu* | מִנְחָה | `קְטֹרֶת` (reserved for OB *qutrinnu*) | Strewn offering (flour or aromatics). | 158, 168, 169 |
 | *naqû* | זָבַח | | | 157 |

@@ -34,6 +34,17 @@ The user's standing decisions (from the flood and creation corpora) apply:
 - **Law terms:** `renderings.md` §5 (fixed for LH, binding for project 3): *šumma* = `אִם` always, *awīlum* = `אִישׁ` (`בֶּן אִישׁ`), *muškēnum* = `מִסְכֵּן`, *iddâk* = `יֵהָרֵג`, *maḫar ilim* = `לִפְנֵי הָאֵל`, *dīnum* = `דִּין`, *kīma* = `כְּ` (never `תַּחַת`), *nakāpu* = `נָגַף`.
 - **Recension tags** (guidelines §6.8): in project 1 a line, or words, translated from the Tell Tayinat copy because the composite (Nimrud) tablets are broken there are tagged `{תיינת}` / `{תיינת: …}`.
 
+## The open decisions, settled (2026-10-18)
+The user delegated the open decisions of projects 1–7 to the coordinator ("use your judgment"). The translators' choices are **confirmed** and are binding from now on; each project's `project.md` keeps the alternatives and reasons:
+- *adê* = `אֲמָנָה` (not `בְּרִית`, not the debated cognate `עֵדוּת`, which is kept in the notes as a parallel).
+- Kings named in the Bible keep the biblical form (`אֵסַר־חַדֹּן`, `סַנְחֵרִיב`); the others are transcribed from the Akkadian (guidelines §6.4 rule 6).
+- *raggimu* = `נָבִיא`, *maḫḫû* = `מְשֻׁגָּע` (both with first-occurrence notes).
+- Tayinat's additions to lines intact at Nimrud stay in the apparatus.
+- *awīlum* = `אִישׁ` / `בֶּן אִישׁ`, *muškēnum* = `מִסְכֵּן` (the Hebrew word borrowed from it; the modern sense "pitiable" is explained at the first occurrence): the class tiers must stay visible.
+- Hammurabi = `חַמּוּרַבִּי` (the form Hebrew readers know; `חַמּוּרָפִּי` is given in the introduction).
+- LH §66–§99 (the erased stele columns) are **deferred**: they need Roth 1997 or Driver & Miles, which are not in hand (`sources/_records-only--Hammurabi-gap-laws-and-Hebrew/`).
+- The smaller choices of each project (e.g. `עדות שקרים`, LH §21 `יתלוהו?`, `נִקֵּב`, `בא על`, `בדיל`, `רעולה`, `פילגש`, `חֵלֶף`, `תחום`, `בן חורין`, `ארד`) stand as drafted.
+
 ## Status
 
 | # | Project | Status |

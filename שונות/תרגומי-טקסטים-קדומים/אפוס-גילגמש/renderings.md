@@ -258,7 +258,7 @@ Only for their Akkadian counterpart: `נָחָשׁ` (*ṣerru*), `עָפָר` (*
 - *ṣēru*: `שָׂדֶה` (flood XI) instead of Enūma eliš's `עֲרָבָה`: the same poem binds.
 - *sakāpu*: `נָם` instead of Enūma eliš's `שָׁכַב`: Gilgameš needs `שָׁכַב` for *nâlu* (X 70).
 - *edû*: `יָדַע` everywhere; flood XI 32 `הֵבִין` stays as it is (a different sense, "understand"), noted in the parallels index of XI.
-- *saḫāru*: flood XI 150, 153, 156 render it `שָׁב` (the birds "returned"); the creation corpus reserves `שׁוּב` for *târu*. In I–X, XII and XI 209–328, *saḫāru* = `חָזַר` / `חִזֵּר אַחֲרֵי`, *târu* = `שָׁב`. **Open decision for the user:** align flood XI 150/153/156 to `חָזְרָה`.
+- *saḫāru*: `חָזַר` / `חִזֵּר אַחֲרֵי` everywhere, *târu* = `שָׁב`. Flood XI 150, 153, 156 were aligned (`וחזרה`, `ולא חזר`) on 2026-10-18 (§12).
 - *niṣirtu*: flood §6 (I 7, 26) has `סוֹד`; flood XI 9 has `דְּבַר נְצוּרָה` and the creation corpus `נְצוּרָה`. Harmonized: I 7 `את הנצורה ראה`, I 26 `פתח הנצורה שלו` (the flood-§6 copy is changed to match, logged in its project.md).
 - *maḫāṣu*: law corpus `מָחַץ` kept.
 
@@ -429,3 +429,19 @@ The proposals of OB Schøyen₂, Nippur, Harmal₁, Ishchali, Harmal₂ and IM a
 - 2026-10-18: §19 merged from OB III.
 - 2026-10-18: §20 merged from Tablet IV.
 - 2026-10-18: §21 (small OB tablets).
+
+## 12. The open decisions, settled (2026-10-18)
+The user delegated these to the coordinator ("use your judgment"). Binding from now on:
+1. *saḫāru* = `חָזַר` also in flood XI 150, 153, 156 (changed there, with the XI renderings row, the flood parallels index and project.md). `שׁוּב` stands only for *târu*; `שָׁב` would also pre-empt Gen 8:9, 12, which *saḫāru* (not cognate) does not justify.
+2. Flood XI 160 `צברתי` (*tabāku* with a solid object) **stays**: it is the flood corpus's own harmonized decision (`harmonization-log.md`, objection 2: *tabāku* = `יָצַק` for liquids, `צָבַר` for solids), and reeds, cedar and myrtle under the offering raise no Gen 41:49 echo. The rule "no `צבר`" holds for I–X, XII, XI 209–328 and the OB tablets.
+3. *šasû* with a tablet as object (reading from writing) = `קָרָא בְּקוֹל`: I 27 stays, VII 205 is now `[לוח] נושאת, וקוראת בקול לפניה.` Meaning comes before the reservation of `קָרָא` for *nabû*; otherwise *šasû* stays `צָעַק`.
+4. *dumqu* "beauty" = `נוֹי` (VI 6 `אל נוי גילגמש`, XI 252 `נוי בשרו`, Isa 40:6 kept in the notes); `חֶסֶד` stays where it means "good, favour" (VII 182, XI 313–314). Modern readers hear `חסד` only as "kindness".
+5. *raggu* = `רָשָׁע` stays (no echo of Gen 8:21 `רַע` imposed).
+6. *ḫīrtu* = `כַּלָּה` stays: "bride" is its meaning in every context (I 75, 90; III 18; VII 160), and the overlap with *kallatu* is noted in the apparatus.
+7. *ūru* = `עֶרְוָה` stays.
+8. The thorns stay `חוח וחדק` / `עֹקֶץ`: biblical words of equal quality, so §6.4 rule 2 (do not pre-empt Gen 3:18 `קוץ ודרדר`) decides.
+9. *mešēltu*: `מַשְׁחֶזֶת` (VIII, an object of stone) and `לַהַב` (OB III, a blade weighed in talents) stay: two contexts, two senses.
+10. XII 85: the translation follows eBL (Šamaš), as it should; Nergal is mentioned in the note.
+11. *bīt zaqīqi* = `בית־מַשַּׁב` stays (common noun; the god Zaqīqu is named in the note).
+12. Wasserman & Cohen 2026: a purchase, still the user's decision (guidelines §9).
+
