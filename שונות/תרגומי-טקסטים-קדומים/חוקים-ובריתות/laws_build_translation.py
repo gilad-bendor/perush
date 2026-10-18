@@ -57,6 +57,8 @@ for f in C.files(key):
                     done.add(t[0]); out += ['', f'## {t[1]}', '']
                 law = m.group(1) + ('–' + m.group(2) if m.group(2) else '')
                 out += ['', f'### §{law} – {m.group(4).strip()}' if m.group(4).strip() else f'### §{law}', '']
+            elif h.startswith('הקולופון'):
+                out += ['', f'## {h}', '']
             else:
                 out += ['', f'### {h}', '']
             continue

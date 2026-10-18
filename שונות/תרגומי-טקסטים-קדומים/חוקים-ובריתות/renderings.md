@@ -193,7 +193,7 @@ ORACC's normalization writes *h* for *ḫ* (*hīṭu*, *imahhuṣū*); the forms
 | *idukkū(š)*; *iddan*; *ilaqqe*; *imaḫḫuṣū(š)* | `יהרגו(הו)`; `יתן`; `יקח`; `ימחצו(הו)` | `יכו` (reserved) | LH F4, F5, F9, F29 | |
 | *ina ḫaṭṭāte n imaḫḫuṣūš* | **<n> בשבטים ימחצוהו** | `מכות` | [equivalent] ↔ `אַרְבָּעִים יַכֶּנּוּ לֹא יֹסִיף` (דברים כה:ג); `בַּשֵּׁבֶט` (שמות כא:כ) | LH *ḫaṭṭu* = `שבט`. |
 | *šipar šarre … ūmāte eppaš* | **את מלאכת המלך … ימים יעשה** | | | LH *šipru* = `מלאכה`. |
-| *zaqānu* D "shave" | `גילח` | | [equivalent] ↔ `וְגִלְּחָה אֶת רֹאשָׁהּ` (דברים כא:יב) | |
+| *gadāmu* "cut off (the hair)" (§18–19; the tablet has no *zaqānu*) | `גדם` (T2) | `גילח` (kept free) | [equivalent] ↔ `וְגִלְּחָה אֶת רֹאשָׁהּ` (דברים כא:יב) | |
 | *batultu* | **בתולה** | `נערה` | [cognate] ↔ `נַעֲרָ בְתוּלָה אֲשֶׁר לֹא אֹרָשָׂה` (דברים כב:כח); `בְּתוּלָה אֲשֶׁר לֹא אֹרָשָׂה` (שמות כב:טו) | Gated by `laws_verify.py`. |
 | *ṣēru*; *ina libbi āle*; *rebītu* | **שדה**; **בתוך העיר**; **רחוב** | `ערבה` | [equivalent] `שדה` ↔ `וְאִם בַּשָּׂדֶה יִמְצָא הָאִישׁ` (דברים כב:כה); `בָּעִיר` (דברים כב:כג); [cognate] `רחוב` | Gilgameš corpus *ṣēru* = `שָׂדֶה`; LH *rebītu* = `רחוב`. |
 | *emūqamma*; *ṣabātu*; *kašādu* "catch (in the act)" | **בכוח**; **תפש**; **השיג** | `אנס` (Mishnaic, an interpretation) | [equivalent] ↔ `וְהֶחֱזִיק בָּהּ הָאִישׁ` (דברים כב:כה); `וּתְפָשָׂהּ וְשָׁכַב עִמָּהּ` (דברים כב:כח) | LH *emūqu* = `כוח`, *ṣabātu* = `תפש`, *kašādu* = `השיג`. |
@@ -230,3 +230,5 @@ Each Sumerian legal formula takes the Hebrew of its standard Akkadian equivalent
 | *{d}id₂-lu₂-ru-gu₂* "the (divine) River that receives man" | `הנהר` (with a note on the name) | [divergence] ↔ במדבר ה | LH F33. |
 | *e₂ ad-da*; *ibila* | `בית האב`; `יורש` | | LH. |
 | *a-ša₃*; *ĝeškiri₆*; *e₂* | `שדה`; `גן`; `בית` | | LH. |
+
+**Merged from MAL T2 (2026-10-18):** *niāku* = `בא על` (`הבא עליה`, `לביאה`); *emittu* = `הטלה`; *ṣāltu* = `מָדוֹן` (kept apart from LE's `קטטה` for *risbatum*); *puzru* = `בסתר`; *tappû* = `עמית` (open: `שותף`); *annaku* = `בדיל` (open: `עופרת`); *biltu* = `כיכר`; *aštammu* = `פונדק`; *mummirtu* = `סרסורית`; *zakû* = `זכאי`; *mā* (quotation particle) = quotation marks only; the slander formula `"על אשתך באים"` (iterative; there is no *kalūmā*). `laws_verify.py`: `בי?רר`, `כונ[ןנ]`.

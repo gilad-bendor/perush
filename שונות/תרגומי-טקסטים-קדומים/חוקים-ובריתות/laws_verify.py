@@ -107,8 +107,8 @@ AKK = [
     # Middle Assyrian (MAL A; ORACC norm writes h for ḫ)
     (r'\biddan\b', r'[ית]תן', 'F5 (MA iddan)'),
     (r'\bilaqqe', r'[ית]קח', 'F9 (MA ilaqqe)'),
-    (r'\bubtaʾʾer', r'ברר', 'LH bâru D = ברר'),
-    (r'\buktaʾʾin', r'כונן', 'LH F20 kunnu = כונן'),
+    (r'\bubtaʾʾer', r'בי?רר', 'LH bâru D = ברר'),
+    (r'\buktaʾʾin', r'כונ[ןנ]', 'LH F20 kunnu = כונן'),
     (r'\bimah?h?uṣ|\bimhaṣ|\bimahṣ', r'מח[וי]?[צץ]|מחצ', 'F29 (MA)'),
     (r'\b[hḫ][iī]ṭ(a|u|ašu|āni)\b', r'חטא|חטאו|חטאה|חטאים', 'corpus ḫīṭu = חטא'),
     (r'\bara[nm](ša|šu|a)?\b', r'עון|עונ', 'LH F37 arnu = עון'),
@@ -227,7 +227,7 @@ def main():
     if os.path.exists(tr) and not nums:
         tl = {}
         for l in open(tr, encoding='utf-8'):
-            m = re.match(r"\*\*(\S+?)\*\* (.*?)\s*$", l.rstrip())
+            m = re.match(r"\*\*([^*]+?)\*\* (.*?)\s*$", l.rstrip())  # labels may contain spaces (MAL: "o i 3")
             if m:
                 tl[m.group(1)] = re.sub(r'\[\^[^\]]+\]', '', m.group(2)).strip()
         for e in allents:
