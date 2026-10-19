@@ -8,6 +8,8 @@ It is based on two surveys, both kept in `curation-surveys/`:
 ## How the list is ordered
 
 **Relevance comes first**: how much a word-by-word reader of the Torah gains from a careful Hebrew translation with an apparatus (guidelines §1).
+
+**Update (2026-10-19): the user's interest is wider than the Bible.** In the user's words, it is "the soul of the ancient": how the Mesopotamians thought, felt, prayed and lived (guidelines §1, second purpose). The Bible ordering below stays, but from the next round a text also ranks high when it is a strong window onto the ancient mind, even with no Torah parallel. Tier 3 ("to expand horizons") is therefore **not** a low tier for this user; texts such as Ludlul, the Theodicy, the Descent of Ištar, the city laments, the love lyrics, the proverbs and the letters are full candidates.
 Within that, the list prefers what the user asked for:
 - texts in **good condition**;
 - **medium or large** texts, or several short texts that make one corpus together.
