@@ -215,3 +215,18 @@ The order puts the highest benefit per cost first:
 | 6 | `חוקים-ובריתות/3-…` – `7-…` | Eshnunna, MAL A, Lipit-Ištar, Ur-Namma (item 6) + MAL B | **Done (first draft), 2026-10-18**: LE all 195 lines (CDLI P480696, with exemplars A, B, C), MAL A all 828 lines (ORACC tcma P281779, §1–§59 + colophon), Lipit-Ištar all 503 lines (CDLI P464355, Sumerian), Ur-Namma all 628 lines (CDLI P432130, Sumerian, with Civil's additional laws; § concordance with Roth by content), and the optional MAL B (P281780, 245 lines, §1–§20) – 2,399 lines in five projects, nine sequential sub-agents, three review passes each, shared tools `laws_*.py` with LH's formulas enforced, 678 new parallels rows (`חוקים-ובריתות/parallels-index.md`, key findings for Exod 21–23, Deut 22–25 and the rest of the Torah at the top), print stubs. Open decisions in each `project.md`. |
 
 Progress is recorded in each corpus's `corpus.md`.
+
+---
+
+## Round 2 plan (2026-10-19)
+After the first round (the six runs above), the user widened the aim to "the soul of the ancients" (guidelines §1). The second round mixes the remaining Torah-relevant texts with the strongest windows onto the ancient mind. One run at a time (quota); each run's sub-agents also sequential.
+
+| Run | Content | Corpus / folder | Status |
+|---|---|---|---|
+| 1 | **The Debate between Bird and Fish** (ETCSL 5.3.5) + **Enki and the World Order** (ETCSL 1.1.3) | `סיפורי-הבריאה-המסופוטמיים/3-הציפור-והדג/`, `4-אנקי-וסדר-העולם/` | **Done (first draft), 2026-10-19**: Bird and Fish all 189 lines; Enki and the World Order all 465 lines (250–472 first); three sequential sub-agents, three review passes each, verified by script (`sumerian_tools.py`), translations generated, 255 parallels rows merged into `סיפורי-הבריאה-המסופוטמיים/parallels-index.md` with key findings (Gen 1:14, 1:20–23, Gen 4, 10–11, Deut 32:8), print stubs. Open decisions in both `project.md` files. |
+| 2 | **Ludlul bēl nēmeqi** I–V + **the Babylonian Theodicy** | (new corpus: wisdom and the righteous sufferer) | planned |
+| 3 | **The Lament for Ur** (ETCSL 2.2.2) + **the Curse of Agade** (ETCSL 2.1.5) | (new corpus: city laments) | planned |
+| 4 | **The Gudea Cylinders A–B** (ETCSL 2.1.7 / ORACC etcsri Q000377) | (new corpus: temple building) | planned |
+| 5 | **The Descent of Ištar** (eBL) + **Inana's Descent** (ETCSL 1.4.1) | (new corpus: the netherworld) | planned |
+| 6 | **Enmerkar and the Lord of Aratta** (ETCSL 1.8.2.3) + **the Sargon Birth Legend** | (Gen 11 and Ex 2) | planned |
+| 7 | **OB love lyrics** (ORACC AkkLove) + **Sumerian proverbs** (ETCSL 6.1) + **OB letters** (a selection) | (new corpus: everyday voices) | planned |

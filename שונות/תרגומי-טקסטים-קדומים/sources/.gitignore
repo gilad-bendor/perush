@@ -55,3 +55,6 @@ ETCSL/_bulk/*
 ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.json
 ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.html
 ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/*.html
+ORACC/epsd2-literary--Q000334--Enki-and-the-World-Order/*.json
+# the form index built by tools/sumerian_workbench.py (12 MB, regenerated on demand)
+ORACC/_bulk/*.json
