@@ -1,0 +1,36 @@
+# Key paid / restricted editions – records only (nothing downloaded)
+
+Checked 2026-10-16. Prices are approximate retail (new) and vary by seller.
+
+| Work | Publisher, year | Approx. price | E-book? | archive.org | Why it matters |
+|---|---|---|---|---|---|
+| **A. R. George, *The Babylonian Gilgamesh Epic: Introduction, Critical Edition and Cuneiform Texts*, 2 vols.** (xxxv+741, iii+743–986 pp., 147 pls.), ISBN 978-0-19-814922-4 | Oxford University Press, 2003 | List £175 at publication. Now ~US$570–620 new (Blackwell's), $1000+ from third-party sellers | No trade e-book found (print hardback only). Library: Oxford Scholarly Editions Online was not confirmed | An "open" upload at archive.org/details/andrew-george-the-babylonian-gilgamesh-epic-2003 is **unauthorized, not used**. No legal lending copy found | **The** critical edition: composite text, translation, full commentary on every line of XI (the Flood). eBL's text is a revised version of it. Essential for commentary questions; get it via a library (NLI/HUJI/TAU). |
+| A. R. George, *The Epic of Gilgamesh: The Babylonian Epic Poem and Other Texts in Akkadian and Sumerian* | Penguin Classics 1999; thoroughly revised 2nd ed. 2019/2020 | ~£10–12 / US$15–18 pbk | Yes (Kindle/Kobo etc.) | 2003 printing as **lending-only**: archive.org/details/isbn_9780140449198 | The best English translation for comparison (by the editor of the critical text), with indications of gaps. Cheap; buy the revised edition. |
+| S. Parpola (with M. Luukko & K. Fabritius), *The Standard Babylonian Epic of Gilgamesh* (State Archives of Assyria Cuneiform Texts 1) | Neo-Assyrian Text Corpus Project, Helsinki 1997; dist. Eisenbrauns/Penn State UP; ISBN 978-951-45-7760-4 | ~US$45 (MIT Press Bookstore) | No | **Lending-only**: archive.org/details/standardbabyloni0000unse | Cuneiform (normalized Neo-Assyrian sign forms), transliteration, glossary and sign list. A student edition and handy glossary, pre-George. |
+| B. R. Foster, *The Epic of Gilgamesh* (Norton Critical Edition) | W. W. Norton, 2001; 2nd ed. 2019 | ~US$20–25 pbk | Yes | Not found | A verse translation with notes and critical essays. Foster's *Before the Muses* (CDL, 3rd ed. 2005) also has Atrahasis. |
+| S. M. Maul, *Das Gilgamesch-Epos* | C. H. Beck, München 2005 (7th ed. 2017, 192 pp., ISBN 978-3-406-70933-3) | ~€24–26 new (used €17–23) | Possibly (not verified) | Not found | The standard modern **German** translation (based on new collations), with a very good commentary. Replaces Ungnad/Schott for German comparison. |
+| Sophus Helle, *Gilgamesh: A New Translation of the Ancient Epic* | Yale University Press, hb Oct 2021 (ISBN 978-0-300-25118-0); pb Nov 2022 (ISBN 978-0-300-26809-6) | pb ~£12 / US$16–18; hb ~US$25 | Yes | Not found | A recent, literary but accurate translation (based on George/eBL), with essays. Good for current English idiom. |
+| Kovacs 1989 (see `../Kovacs-1989/`) | Stanford UP | ~US$20–25 | — | Unauthorized patron upload exists (archive.org/details/epic-of-gilgamesh), not used | — |
+| J. Bottéro, *L'Épopée de Gilgameš* | Gallimard (L'aube des peuples), 1992 | ~€25 (not verified) | ? | — | The standard French translation. |
+| R. J. Tournay & A. Shaffer, *L'Épopée de Gilgamesh* | Cerf (LAPO 15), 1994 | used | — | — | French translation with commentary. Shaffer was a Hebrew University Assyriologist. |
+| A. Heidel 1946/1949 | U Chicago Press (Phoenix pbk still sold, ~US$25) | — | — | Lending-only (several) | Obtained legally from Faded Page (PD in Canada and in Israel), see `../Heidel-1946/`. |
+
+Also relevant and **open access**: N. Wasserman, *The Flood: The Akkadian Sources* (Peeters 2020, open access via OAPEN/DOAB). It is saved by another task in `../Wasserman-2020--The-Flood-Akkadian-Sources/`.
+
+## Added 2026-10-16 by the "flood references" project (`סיפורי-המבול-המסופוטמיים/6-אזכורי-המבול/`)
+Editions of the short flood-reference texts that are **not** open access. What *is* open was saved: the Uruk List of Kings and Sages (`../ORACC/cams-gkab--P363353--Uruk-List-of-Kings-and-Sages/`) and the eBL transliterations of the Dynastic Chronicle (`../eBL-fragmentarium/Dynastic-Chronicle--ABC-18/`).
+
+| Work | Publisher, year | Access / price | Why it matters |
+|---|---|---|---|
+| A. K. Grayson, *Assyrian and Babylonian Chronicles* (TCS 5), pp. 139–144 no. 18 "Dynastic Chronicle" | J. J. Augustin 1975; repr. Eisenbrauns 2000 | print ~US$50–70; archive.org lending only. (Livius.org hosts an English translation based on Grayson; copyrighted, not used) | Standard edition of ABC 18 (antediluvian kings, then the flood). |
+| J.-J. Glassner, *Mesopotamian Chronicles* (SBL WAW 19), no. 1 "Chronicle of the Single Monarchy" | SBL 2004 | ~US$40 pb | Updated edition and translation of the same chronicle. |
+| I. L. Finkel, "Bilingual Chronicle Fragments", *JCS* 32 (1980) 65–80 | ASOR / U Chicago Press (JSTOR) | JSTOR / article purchase | Adds BM 35572 and BM 40565 (the chronicle's bilingual opening). |
+| W. G. Lambert, "A new fragment from a list of antediluvian kings and Marduk's chariot", *Symbolae … F. M. Th. de Liagre Böhl dedicatae* (Leiden 1973) 271–280 | Brill 1973 | library | First edition of K 11624 (Ziusudra son of Ubar-Tutu in the chronicle). |
+| J. van Dijk, in *UVB* 18 (1962) 44–52 | Gebr. Mann 1962 | library | Editio princeps of the Uruk List of Kings and Sages (W 20030/7). |
+| A. Lenzi, "The Uruk List of Kings and Sages and Late Mesopotamian Scholarship", *JANER* 8 (2008) 137–169 | Brill | article purchase | The standard modern study and translation of W 20030/7. |
+| W. G. Lambert, *Babylonian Wisdom Literature* (Oxford 1960), pp. 92–95 "Counsels of Šuruppak" (Middle Assyrian fragment of the Akkadian version, from Assur) | Clarendon 1960; repr. Eisenbrauns 1996 | ~US$70; archive.org lending only | The only Akkadian witness to the prologue of the Instructions of Šuruppak. |
+| B. Alster, *Wisdom of Ancient Sumer* (CDL 2005), Šuruppak (incl. the Akkadian fragments) and "The Ballad of Early Rulers" (with the Emar and Ugarit bilingual versions) | CDL Press 2005 | ~US$70 | Standard edition of both texts; the bilingual Ballad (Emar 6/4 767; Ugaritica 5 164, RS 25.130) is where the names Alulu, Etana, Gilgameš, Ziusudra(?) survive. No open edition of the Akkadian/bilingual Ballad was found (checked ORACC aemw-ugarit, tcma-emar, SEAL, eBL). |
+| D. Arnaud, *Emar* 6/4 (1987) no. 767; J. Nougayrol, *Ugaritica* 5 (1968) no. 164 | ERC / Geuthner | library | Editiones principes of the bilingual Ballad. |
+| H. D. Galter, "*Ša lām abūbi*: Die Zeit vor der großen Flut in der mesopotamischen Überlieferung", in R. Rollinger (ed.), *Von Sumer bis Homer: Festschrift für Manfred Schretter* (Münster 2005) 269–301 | Ugarit-Verlag | library | Survey of the "before the flood" theme (Gilg. I 8; sages; king lists). |
+| A. Cavigneaux & F. N. H. Al-Rawi, *Gilgameš et la Mort* (CM 19, Styx 2000) | Brill | ~€100 | Edition of the Me-Turan Death of Bilgameš (Ziusudra passage). Also listed in `../_records-only--Sumerian-flood-secondary/`. |
+| L. Cagni, *L'epopea di Erra* (Studi Semitici 34, Rome 1969) | Istituto di studi del Vicino Oriente | library | The classic edition and commentary of Erra (quoted in the eBL notes as RN31). |
