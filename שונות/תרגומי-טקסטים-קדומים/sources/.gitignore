@@ -63,3 +63,9 @@ ORACC/_bulk/*.json
 Lenzi-2023--Suffering-in-Babylon--OBO-300/*
 !Lenzi-2023--Suffering-in-Babylon--OBO-300/README.md
 CCP/*/
+
+# 6. City-lament corpus sources (2026-10-19): raw ORACC JSON (> 1 MB); Kramer 1940 (free from ISAC, licence not stated) – README only
+ORACC/epsd2-literary--Q000379--Lament-for-Ur/*.json
+ORACC/epsd2-literary--Q000375--Curse-of-Agade/*.json
+Kramer-1940--AS-12--Lamentation-over-Ur/*
+!Kramer-1940--AS-12--Lamentation-over-Ur/README.md
