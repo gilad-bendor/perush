@@ -69,3 +69,8 @@ ORACC/epsd2-literary--Q000379--Lament-for-Ur/*.json
 ORACC/epsd2-literary--Q000375--Curse-of-Agade/*.json
 Kramer-1940--AS-12--Lamentation-over-Ur/*
 !Kramer-1940--AS-12--Lamentation-over-Ur/README.md
+
+# 7. Temple-building corpus sources (2026-10-20): raw ORACC JSON and HTML (> 1 MB) – re-obtainable (see the READMEs)
+ORACC/epsd2-royal--Q000377--Gudea-Cylinders/*.json
+ORACC/epsd2-royal--Q000377--Gudea-Cylinders/*.html
+ORACC/etcsri--Q000377--Gudea-Cylinders/*.html
