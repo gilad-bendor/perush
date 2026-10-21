@@ -10,7 +10,8 @@ Usage (from any directory):  python3 -I build_parallels_index.py
 3. Rewrites everything after the line `## The table` in parallels-index.md (the key findings above it are kept): every
    row filed under its highest-priority Bible reference – Genesis, Exodus, the rest of the Torah, the Former Prophets,
    Isaiah–Jeremiah–Ezekiel, the Twelve, Psalms, Wisdom and the Writings, rows without a verse; labels "IS <line>"
-   (the Descent of Ištar, eBL line) and "IN <line>" (Inana's Descent, ETCSL line).
+   (the Descent of Ištar, eBL line), "IN <line>" (Inana's Descent, ETCSL line), "NE <line>" (Nergal and Ereškigal, eBL
+   line; MB.… for the Amarna version) and "GEN <line>" (Bilgameš, Enkidu and the Netherworld, ETCSL line).
 Adapted (2026-10-21) from ../אגדות-מלכים/build_parallels_index.py (the merge step) – here the per-project tables are
 generated from the annotated files instead of written by hand.
 """
@@ -22,6 +23,10 @@ A = os.path.dirname(os.path.abspath(__file__))
 PROJECTS = [
     ('IS', os.path.join(A, '1-ירידת-אישתר'), ['annotated.rtl.md']),
     ('IN', os.path.join(A, '2-ירידת-אינאנה'), ['annotated-1.rtl.md', 'annotated-2.rtl.md']),
+    # Round 3, run 5 (2026-10-21)
+    ('NE', os.path.join(A, '3-נרגל-וארשכיגל'), ['annotated-MB.rtl.md', 'annotated-SB-1.rtl.md', 'annotated-SB-2.rtl.md']),
+    ('GEN', os.path.join(A, '4-גילגמש-אנקידו-והעולם-התחתון'),
+     ['annotated-1.rtl.md', 'annotated-2.rtl.md', 'annotated-3.rtl.md', 'annotated-4.rtl.md']),
 ]
 OUT = os.path.join(A, 'parallels-index.md')
 G = {'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9, 'י': 10, 'כ': 20, 'ל': 30, 'מ': 40, 'נ': 50,
@@ -64,6 +69,8 @@ def cell(s):
 def entries(paths):
     """Yield (label, source, hebrew, parallels-bullet) for every entry with a הקבלה bullet."""
     for p in paths:
+        if not os.path.exists(p):
+            continue
         lab = src = heb = None
         for l in open(p, encoding='utf-8'):
             l = l.rstrip('\n')
