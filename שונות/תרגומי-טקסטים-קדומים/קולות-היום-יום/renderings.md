@@ -51,11 +51,11 @@ Vocalized at the first occurrence in each annotated file; afterwards plain spell
 | *niĝ₂-gig DN* "taboo of DN" (= Akk. *ikkib* DN) | `תּוֹעֲבַת DN` | [equivalent] ↔ `מֹאזְנֵי מִרְמָה תּוֹעֲבַת יְהוָה` (משלי יא:א); `כִּי תוֹעֲבַת יְהוָה אֱלֹהֶיךָ כָּל עֹשֵׂה אֵלֶּה` (דברים כה:טז) | **Gated** (`תועבה` only *niĝ₂-gig* / *an-zil*). The lament corpus gave `תועבה` to *an-zil*: two Sumerian taboo words, one Hebrew word – an open decision (the user). |
 | *nam-kug-zu*; *ĝeštug₂*; *galam*; *lil₂* "fool"; *nu-zu* "ignorant" | `חָכְמָה`; `בִּינָה` / `אֹזֶן`; `נוֹכֵל`; `כְּסִיל` (= Akk. *lillu*); `אֵינוֹ יוֹדֵעַ` | | **Never**: `מָשָׁל` (the genre word of Proverbs has no counterpart in the tablets). `חכמה`/`חכם` only *nam-kug-zu* / *kug-zu*. |
 | *niĝ₂-tuku* "rich (man)"; *ukur₃* "poor (man)"; *niĝ₂-gur₁₁* "possessions"; *nam-ukur₃* "poverty"; *ḫe₂-ĝal₂* "abundance" | `עָשִׁיר`; `עָנִי`; `רְכוּשׁ`; `עֹנִי`; `שֶׁפַע` | ↔ `עָשִׁיר וָרָשׁ נִפְגָּשׁוּ` (משלי כב:ב) | *ukur₃* (Akk. *muškēnu* / *lapnu*): `עָנִי`, not `רָשׁ` / `מִסְכֵּן` (law corpus *muškēnum* = `מִסְכֵּן`, a class; the proverbs' poor man is a condition). |
-| *dam*; *mu-ud-na*; *dumu*; *ama*; *a-a* / *ad-da*; *šeš*; *nin₉*; *ki-sikil*; *ĝuruš*; *emi* "daughter-in-law"; *mussa* "son-in-law"; *ušbar* "father-in-law" | `אִשָּׁה` / `בַּעַל` (by gender); `בַּעַל` (spouse, husband); `בֵּן` / `בַּת`; `אֵם`; `אָב`; `אָח`; `אָחוֹת`; `עַלְמָה`; `בָּחוּר`; `כַּלָּה` ★; `חָתָן`; `חוֹתֵן` | | Sumerian *emi* = Akk. *kallatu* = `כַּלָּה` (law corpus). |
+| *dam*; *mu-ud-na*; *dumu*; *ama*; *a-a* / *ad-da*; *šeš*; *nin₉*; *ki-sikil*; *ĝuruš*; *emi* "daughter-in-law"; *mussa* "son-in-law"; *ušbar* "father-in-law" | `אִשָּׁה` / `בַּעַל` (by gender); `בֶּן־זוּג` / `בַּת־זוּג` (corrected at drafting: `בַּעַל` is *dam*'s); `בֵּן` / `בַּת`; `אֵם`; `אָב`; `אָח`; `אָחוֹת`; `עַלְמָה`; `בָּחוּר`; `כַּלָּה` ★; `חָתָן`; `חוֹתֵן` | | Sumerian *emi* = Akk. *kallatu* = `כַּלָּה` (law corpus). |
 | *ninda*; *kaš*; *a*; *mun*; *i₃*; *lal₃*; *ga*; *uzu*; *zid₂*; *še* | `לֶחֶם`; `שֵׁכָר` [cognate via Akk. *šikaru*]; `מַיִם`; `מֶלַח`; `שֶׁמֶן`; `דְּבַשׁ`; `חָלָב`; `בָּשָׂר`; `קֶמַח`; `שְׂעוֹרָה` | *kaš* ↔ `יַיִן וְשֵׁכָר אַל תֵּשְׁתְּ` (ויקרא י:ט) | Beer is `שֵׁכָר` (the cognate), not `בִּירָה`. |
 | *šag₄*; *eme*; *inim*; *ka*; *igi*; *šu*; *ĝiri₃* | `לֵב`; `לָשׁוֹן`; `דָּבָר`; `פֶּה`; `עַיִן` / `פָּנִים`; `יָד`; `רֶגֶל` | | |
 | *ka₅-a*; *ur*; *ur-maḫ*; *anše*; *gud*; *am*; *udu*; *šaḫ₂*; *maš-da₃*; *buru₅* (sparrow) | `שׁוּעָל`; `כֶּלֶב`; `אַרְיֵה`; `חֲמוֹר`; `שׁוֹר`; `רְאֵם`; `שֶׂה`; `חֲזִיר`; `צְבִי`; `דְּרוֹר`? (fix at first occurrence) | *ka₅-a* ↔ `אֶחֱזוּ לָנוּ שֻׁעָלִים שֻׁעָלִים קְטַנִּים מְחַבְּלִים כְּרָמִים` (שיר השירים ב:טו) [equivalent] | *am* = `רְאֵם` (laments). |
-| *ezen … nu-tuku* | `אֵין לוֹ חַג` | | The formula of 1.152–153 (and coll. 3.9). |
+| *giri₁₇-zal-še₃ nu-il₂* (corrected at drafting; the pre-set row read *ezen … nu-tuku*, which the tablets do not have) | `לְשָׂשׂוֹן – לֹא נָשָׂא` | | The formula of 1.152–1.153 and 3.9; checked by script. *ezen nu-tuku* (if it occurs elsewhere) = `אֵין לוֹ חַג`. |
 | *aš₂*; *in*; *inim-gig*; *lul* | `קְלָלָה`; `חֶרְפָּה`; `דָּבָר מַר`; `שֶׁקֶר` | | |
 | *nam*; *nam tar* | `גּוֹרָל`; `גָּזַר גּוֹרָל` | | |
 | *diĝir*; *diĝir-ĝu₁₀* | `אֵל`; `אֵלִי` ★ | | |
@@ -93,6 +93,12 @@ Vocalized at the first occurrence in each annotated file; afterwards plain spell
 - One Hebrew verb per joy lemma: *ḫadû* `שָׂמַח`, *riāšu* `גָּל`, *ḫašāšu* `שָׂשׂ`, *šâlu* `צָהַל`, *elēṣu* `עָלַץ`.
 - The project's own words: `1-שירי-אהבה/renderings.md`.
 
+**Project 2 (all 500 proverb lines, 2026-10-21):**
+- The formula of 1.152–1.153, 3.9 is *giri₁₇-zal-še₃ nu-il₂* = `לששון – לא נשא` (§3.2 corrected); *niĝ₂-gig DN* = `תּוֹעֲבַת DN` confirmed (3.118, 3.170, 3.171, 3.175), and without a god (1.23) `תּוֹעֵבָה הִיא`.
+- *gu₂* = `צַוָּאר` (runs 5–6); *kal* = `יָקָר`; *lu₂-kur₂* = `אִישׁ נָכְרִי`; *dim₂* = `עִצֵּב`; *uru₃* = `נָצַר`, *en-nu-uĝ₃* = `נְצִירָה`; *zid* (of persons) = `אִישׁ אֱמֶת`; *si sa₂* = `יֹשֶׁר`; *zeb* = `מָתוֹק`, *zil₂* = `נָעִים`; *mu-ud-na* = `בֶּן־זוּג` / `בַּת־זוּג`; *gi₄-in* = `שִׁפְחָה`; *ḫu-ru-um* = `נִבְעָר`; *lu₂-ki-inim-ma* = `עֵד`; *ḫi-li* = `עֲגָבִים` (= *kuzbu*); *e₂-dub-ba-a* = `בֵּית הַלּוּחוֹת`.
+- The words `עוֹלָם`, `צֶדֶק` / `צַדִּיק`, `כְּסִיל` (without *lil₂*), `מָשָׁל` do not occur in the 500 lines. The project's own words: `2-משלים-שומריים/renderings.md`.
+
 ## Changelog
 - 2026-10-21: created by the run-7 coordinator before drafting.
 - 2026-10-21: §9 project 1 merged (the coordinator).
+- 2026-10-21: §9 project 2 merged; §3.2 formula and *mu-ud-na* corrected.
