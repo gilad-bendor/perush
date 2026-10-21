@@ -187,6 +187,24 @@ Full list: `1-אנמרכר-ואדון-ארטה/project.md` ("Proposals (EA2)"). 
   329–331, 355–356), *ĝi₆-par₄ {ĝiš}meš₃ gibil-gin₇ gurun il₂-la-na* `בגיפר שלו, הנושא תנובה כעץ־מס צעיר,`.
 - **Tool:** the formula check ignores quotation marks; the `שוב` gate anchored (`תשובה` is not a hit).
 
+### 9.3 Part EA3 (308–469), 2026-10-21
+Full list: `1-אנמרכר-ואדון-ארטה/project.md` ("Proposals (EA3)"). Binding for EA4:
+- ***ur*** in the riddle 457–476 = `כלב` (Mittermayer; ETCSL "champion" recorded); *ur-gir₁₅* is also `כלב`.
+- **Fixed strings:** the sceptre 340–346 (for 382–388, 409–411): `'בשרביטי – שורשו: הַ־מֶה של הנסיכות;` / `ענפיו –
+  על כולבה – לצל עושה;` / `בענפיו המנצנצים – במקדש אאנה –` / `אִינַנָּה הטהורה – מתקררת בהם;` / `את השרביט –
+  כשיקטום (ממנו) – בידו יהיה!` / `כמחרוזת אודם, כמחרוזת ספיר – בידו יהיה!` / `אדון ארטה – לפניי – יוביל!' – אמור
+  לו!"`; the grain 282 = 330 `על חמורי־המשא – בתלותו,`; the dog riddle 457–461 (for 471–476): `'כלב – לא יהיה
+  שחור, כלב – לא יהיה לבן,` … `כלבי – עם כלבו – תחרות יעשה,` / `החזק – ייוודע!' – אמור לו!"`; the question 394–396
+  `ועתה – איש לאיש מה אמר?` … `מה שאיש לאיש אומר – כך אכן היה!`.
+- **Nouns:** *ĝidru* `שרביט`; *gi* `קנה`; *gi su-lim* `קנה־הזוהר`; *im* `טיט` (never `חמר`: that is *esir₂*); *dub*
+  `לוח`; *gi-gag* `קולמוס־הקנה`; *munu₄* `מַלְת`; *šag₄-ĝar* `רעב`; *aĝrig* `נאמן־הבית`; *itima* `החדר הפנימי`
+  (`היכל` is reserved for *e₂-gal*); *ab-ba-ab-ba* `הזקנים`; *ušumgal* `דרקון`; *edin* `ערבה`; *kaskal* and
+  *ḫar-ra-an* `דרך`; *gug* `אודם`; *na₄-gug-ĝiš-dili* `מחרוזת אודם`; the colours *gig₂* `שחור`, *babbar* `לבן`, *su₄*
+  `אדום`, *dara₄* `חום`, *sig₇-sig₇* `ירוק־צהוב`, *gun₃-gun₃* `מנומר`; *nam-me* `לא יהיה`.
+- **Particles:** *i₃-ne-eš₂* `ועתה`; *lu₂ lu₂-ra* `איש לאיש`; *ur₅ ḫe₂-en-na-nam-ma-am₃* `כך אכן היה` (confirmed).
+- **Tool:** the gated strings are tested on the bracket-free transliteration as well (`e₂-⸢gal⸣`); the "openly"
+  formula accepts a final `:`.
+
 ## Changelog
 - 2026-10-21: written before the first part, from the temple, lament, creation, flood, Gilgameš, law and wisdom
   corpora and a reading of both transliterations (the formula survey of §3; the echo-control list of §4).

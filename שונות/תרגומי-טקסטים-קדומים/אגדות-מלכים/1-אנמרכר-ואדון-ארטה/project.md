@@ -215,7 +215,7 @@ Deut 11); the peace of the beasts (Isa 11:6–9; 65:25).
   `שפרתו החזקה בהר הַ־מֶה הזכים [ילדה],` / `שעל עפר ארטה [גדל],` / `שמדד הפרה הנאמנה חלב [ינק],` / `ההולם נסיכות
   בכולבה, הר הַ־מֶה הגדולים –` / `לאנמרכר בן אוּתוּ –` / `את הדבר הזה – במקדש אאנה – כדבר טוב אומר לו;` / `בגיפר
   שלו, הנושא תנובה כעץ־מס צעיר,` / `למלכי, אדון כולבה – לידו אשיבנו!"`.
-- The grain strings (for 329–331, 355–356): `(אבל) שעורה – ברשתות־המשא – כשימלא,` / `על חמורי־המשא – כשיתלה,` /
+- The grain strings (for 329–331, 355–356): `(אבל) שעורה – ברשתות־המשא – כשימלא,` / `על חמורי־המשא – בתלותו,` (changed in EA3 so that 282 = 330) /
   `חמורי־חילוף – לצדם כשיעמיד,`; `בחצר ארטה – לכרי יערום`.
 - **Correction to renderings §3:** 235 *ur₅-gin₇ ḫu-mu-na-ab-be₂* (marû) is a question/wish (`כך אומַר לו?`), not
   "she said".
@@ -239,3 +239,91 @@ Deut 11); the peace of the beasts (Isa 11:6–9; 65:25).
 | 284 | tukum-bi kisal aratta{ki}-ka guru₇-še₃ mu-dub-be₂ | אם – בחצר ארטה – לכרי יערום | `וַיִּצְבֹּר יוֹסֵף בָּר כְּחוֹל הַיָּם הַרְבֵּה מְאֹד` (בראשית מא:מט) | equivalent | Heaping grain. *guru₇* = `כרי` [cognate loan]. |
 | 290 | … ur ad₆ sar-gin₇ šu-ta im-ta-ri | … ככלב הרודף אחר פגר – מידה תשליך | `וְהִשְׁלַכְתִּי אֶתְכֶם מֵעַל פָּנָי` (ירמיהו ז:טו) | equivalent | A deity casting off a city. *ad₆* = `פגר` [cognate via *pagru*]. |
 | 296 | ka-ni-gin₇ inim ka-na ba-an-sig₁₀ | כפיו שלו – את הדבר בפיו נתן | `וְנָתַתִּי דְבָרַי בְּפִיו וְדִבֶּר אֲלֵיהֶם` (דברים יח:יח); `הַדָּבָר אֲשֶׁר יָשִׂים אֱלֹהִים בְּפִי אֹתוֹ אֲדַבֵּר` (במדבר כב:לח) | equivalent | The word put into the messenger's mouth – the model of the prophet as envoy. |
+
+## Part EA3 (lines 308–469), 2026-10-21
+
+### Progress (EA3)
+- Drafted 308–469 (166 entries with 365B and the alternative lines A–D) plene; the repeated lines copied from
+  EA1–EA2 (`pars`): the delivery of the sceptre riddle 382–388 = 340–346 (388 ends "he indeed said to me" instead of
+  "say to him"), the grain 330–331 = 282–283, 356 = 329, the greeting 378–381, the commission and the journey formulas.
+- Review pass (a) fidelity: 327 *nundum* "lip" rendered `קצהו` (the reserved `שפה` had slipped in and was caught); 371
+  and 452 follow the signs (*sug₄* "empty", *lul* "false") with both readings in the notes.
+- Review pass (b) consistency: 282 and 330 (identical Sumerian) unified as `בתלותו` (tense-neutral); `היכל` kept for
+  *e₂-gal* only (390, 442 *itima* = `החדר הפנימי`); `מלאכת` (Tabernacle word) replaced by `פעולת` (440).
+- Review pass (c) Hebrew: `כְּעַיִר` vocalized (413: "foal", not "city"); `טובה` without *dug₃* removed (464).
+- Tools: the gate check also reads the bracket-free transliteration (`e₂-⸢gal⸣`); the "openly" formula accepts `:`.
+- `verify EA`: OK; `check_bible_quotes.py`: 0 problems (three quotations corrected: Lam 4:20, Isa 38:2, 1 Kgs 4:6).
+
+### Key findings (EA3)
+- **Famine and grain as power (308–360):** the city of grain feeds the starving mountain city – a contest won with
+  barley ↔ Joseph (Gen 41:54, 57; 47:13). [divergence]: Enmerkar sends the grain as a gift-challenge, not for sale;
+  and "Aratta's hunger was eased" (*šag₄-ĝar … la₂*) is said in the words of the city laments' restoration ("like the
+  gods returned to their seats", 359).
+- **Nisaba's "house of wisdom" (317–321)**: before the solution, Enmerkar enters the house of the goddess of writing,
+  whose attributes are "the tablet …, the clay …, the reed stylus of the assembly" – writing belongs to the goddess
+  before the king "invents" the letter (503) ↔ `וְהַלֻּחֹת מַעֲשֵׂה אֱלֹהִים הֵמָּה` (Exod 32:16) [equivalent].
+- **"A sceptre not of wood, not called by the name of wood" (398)**: a riddle about naming (*mu … sa₄* = `קרא שם`)
+  ↔ Gen 2:19 (the name fixes the thing); solved by **wisdom given by Enki** (420) ↔ `וַיִּתֵּן אֱלֹהִים חָכְמָה
+  לִשְׁלֹמֹה` (1 Kgs 5:9) – wisdom given by a god to a king to answer riddles (and 1 Kgs 10:1, the queen of Sheba's
+  riddles). The sceptre placed in the messenger's hand (434) ↔ Moses' staff (Exod 4:17); the deciding staff of
+  Num 17:23 (a miracle there, five-to-ten years of craft here) [divergence; our proposal].
+- **The lord of Aratta lies fasting in his inner room (390)** ↔ Ahab on his bed, not eating (1 Kgs 21:4); David's fast
+  (2 Sam 12:16) – the royal sulk/incubation.
+- **"What one said to another, so indeed it was" (394–396)** – `איש לאיש` (*lu₂ lu₂-ra*) ↔ `וַיֹּאמְרוּ אִישׁ אֶל
+  רֵעֵהוּ` (Gen 11:3): the council's agreement realized, in the formula of the Curse of Agade and of the invention of
+  writing (505) [equivalent].
+- **The third riddle is a dog of no colour (457–461)** (Mittermayer; ETCSL "champion"): the "champion" of ETCSL
+  would make a duel of representatives (2 Sam 2:14; 1 Sam 17); Mittermayer's lexical evidence (lists of coloured
+  dogs; a text where the dogs of Uruk and Aratta fight) makes it a dog-fight. Followed, flagged.
+- **The ancient mind:** the king measuring grain with the *lidga* and adding an allowance for the sparrows (an
+  accountant's piety); the riddle as a school-text game built on the lexical lists (the tree list 400–405); a mountain
+  city's elders wringing their hands against the wall; Inana's favour as the real prize; the slow craft of making a
+  thing that is no known material (five, ten years between sun and shade).
+
+### Open decisions (EA3)
+1. 309 "Utu of the Land": the god (ETCSL) or Enmerkar (Mittermayer)?
+2. 371–372 / 452–453: "in our hunger" (ETCSL) or "in deceit … with false carnelian" (Mittermayer; the signs *sug₄*,
+   *lul*)? We follow the signs.
+3. 457–461 *ur* "dog" (Mittermayer) or "champion" (ETCSL, Vanstiphout)?
+4. 425–432: what is the sceptre made of? (A cast in a reed? The text does not say.)
+5. 358 *ḫe₂-ĝal₂-la i₃-du₃* "was built in abundance" (literal) or "was filled with abundance" (ETCSL)?
+
+### Proposals for the corpus renderings (EA3)
+- *ur* `כלב` (457–475; and 290); *ur-gir₁₅* `כלב` (138): two Sumerian words, one Hebrew – recorded.
+- The sceptre strings 340–346 (for 382–388, 409–411): `'בשרביטי – שורשו: הַ־מֶה של הנסיכות;` / `ענפיו – על כולבה –
+  לצל עושה;` / `בענפיו המנצנצים – במקדש אאנה –` / `אִינַנָּה הטהורה – מתקררת בהם;` / `את השרביט – כשיקטום (ממנו) –
+  בידו יהיה!` / `כמחרוזת אודם, כמחרוזת ספיר – בידו יהיה!` / `אדון ארטה – לפניי – יוביל!' – אמור לו!"`.
+- *ĝidru* `שרביט`; *gi* `קנה`; *gi su-lim* `קנה־הזוהר`; *im* `טיט`; *dub* `לוח`; *gi-gag* `קולמוס־הקנה`; *munu₄*
+  `מַלְת`; *lidga* `מידת־הלִידְגָּה`; *šag₄-ĝar* `רעב`; *šag₄-tam* `שַׁגְתָּם`; *ra₂-gaba* `רַכָּב`; *aĝrig*
+  `נאמן־הבית`; *itima* `החדר הפנימי`; *ab-ba-ab-ba* `הזקנים`; *ušumgal* `דרקון`; *edin* `ערבה`; *kaskal* `דרך`;
+  *ḫar-ra-an* `דרך` (both!); *gug* `אודם`; *na₄-gug-ĝiš-dili* `מחרוזת אודם`; the trees `צפצפה`, `עץ־השִׁים־גִּיג`,
+  `ארז`, `שׁוּרְמֵן`, `חַשׁוּר`, `תמר`, `הָבְנִים`, `ערער`, `צפצפת־הפרת`; *nam-me* `לא יהיה`; colours *gig₂* `שחור`,
+  *babbar* `לבן`, *su₄* `אדום`, *dara₄* `חום`, *sig₇-sig₇* `ירוק־צהוב`, *gun₃-gun₃* `מנומר`.
+- *i₃-ne-eš₂* `ועתה`; *lu₂ lu₂-ra* `איש לאיש`; *ur₅ ḫe₂-en-na-nam-ma-am₃* `כך אכן היה` (confirmed).
+
+### Parallels index (EA3)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 310 | lugal-e {id₂}idigna {id₂}buranuna-bi-da im-ma-da-an-tab | המלך – את החדקל עם הפרת – הכפיל | `וְשֵׁם הַנָּהָר הַשְּׁלִישִׁי חִדֶּקֶל` (בראשית ב:יד) | equivalent | The two rivers of Mesopotamia, joined by the king. |
+| 317 | dub … im … gi-gag unken-na | הלוח …, הטיט …, קולמוס־הקנה של האספה | `וְהַלֻּחֹת מַעֲשֵׂה אֱלֹהִים הֵמָּה וְהַמִּכְתָּב מִכְתַּב אֱלֹהִים הוּא` (שמות לב:טז) | equivalent | Tablet, clay and stylus as the goddess's attributes, before the invention of the letter. |
+| 320 | {d}nisaba nin ĝeštug₂ daĝal-la-ke₄ | נִיסַבָּה, הגבירה רחבת הבינה | `וְרֹחַב לֵב כַּחוֹל אֲשֶׁר עַל שְׂפַת הַיָּם` (מלכים א ה:ט) | equivalent | "Breadth" of understanding. |
+| 334 | ḫar-ra-an aratta{ki}-ke₄ si bi₂-in-sa₂ | את דרך ארטה – יישר | `יַשְּׁרוּ בָּעֲרָבָה מְסִלָּה לֵאלֹהֵינוּ` (ישעיהו מ:ג) | equivalent | Making the road straight. |
+| 335 | nam-lu₂-ulu₃ kiši₆ ki-in-dar-ra-gin₇ | את האנשים – כנמלים מסדק־הסלע | `לֵךְ-אֶל-נְמָלָה עָצֵל; רְאֵה דְרָכֶיהָ וַחֲכָם` (משלי ו:ו) | equivalent | The ant column. |
+| 341 | pa-bi kul-aba₄{ki}-a an-dul₃-eš i₃-ak | ענפיו – על כולבה – לצל עושה | `בְּצִלּוֹ נִחְיֶה בַגּוֹיִם` (איכה ד:כ); `יְפֵה עָנָף וְחֹרֶשׁ מֵצַל` (יחזקאל לא:ג) | equivalent | The king (sceptre) as a shading tree. |
+| 357 | šeĝx an-na ud ĝal₂-la-gin₇ | כמטר השמים וכאור היום | `יִפְתַּח יְהוָה לְךָ אֶת אוֹצָרוֹ הַטּוֹב אֶת הַשָּׁמַיִם לָתֵת מְטַר אַרְצְךָ בְּעִתּוֹ` (דברים כח:יב) | equivalent | Rain as the source of plenty. |
+| 360 | aratta{ki} šag₄-ĝar-ra-ni am₃-la₂-[la₂] | ארטה – רעבונה הוקל | `וַיְהִי רָעָב בְּכָל הָאֲרָצוֹת וּבְכָל אֶרֶץ מִצְרַיִם הָיָה לָחֶם` (בראשית מא:נד); `וְכָל הָאָרֶץ בָּאוּ מִצְרַיְמָה לִשְׁבֹּר אֶל יוֹסֵף` (בראשית מא:נז) | equivalent | The land of grain feeds the starving land – grain as power. |
+| 360 | … šag₄-ĝar … | רעבונה הוקל | `וַיִּשְׁבֹּר לְמִצְרַיִם` (בראשית מא:נו) | divergence | Joseph sells the grain; Enmerkar sends it as a gift-challenge. |
+| 372 | {na₄}gug lul-[la-me-a] ga-mu-na-dur₂-ru-ne-en-de₃-en | באודם של מרמה – נשתטח | `וַיִּשְׁתַּחוּ אַרְצָה שֶׁבַע פְּעָמִים עַד גִּשְׁתּוֹ עַד אָחִיו` (בראשית לג:ג) | equivalent | Prostration before the senior; "in deceit" (Mittermayer) or "in hunger" (ETCSL). |
+| 374 | zag e₂-ĝar₈-e bi₂-ib-us₂-eš | לצד הקיר נשענו | `וַיַּסֵּב חִזְקִיָּהוּ פָּנָיו אֶל הַקִּיר` (ישעיהו לח:ב) | equivalent | Turning to the wall in distress (our proposal). |
+| 390 | itima?-a … ba-an-kur₉ šag₄-ka-tab-ba ba-an-nu₂ | אל החדר הפנימי … נכנס; בצום שכב | `וַיִּשְׁכַּב עַל מִטָּתוֹ וַיַּסֵּב אֶת פָּנָיו וְלֹא אָכַל לָחֶם` (מלכים א כא:ד); `וַיָּצָם דָּוִד צוֹם וּבָא וְלָן וְשָׁכַב אָרְצָה` (שמואל ב יב:טז) | equivalent | The king lying fasting in his inner room. |
+| 394 | i₃-ne-eš₂ lu₂ lu₂-u₃-ra a-na na-an-dug₄ | ועתה – איש לאיש מה אמר? | `וַיֹּאמְרוּ אִישׁ אֶל רֵעֵהוּ הָבָה נִלְבְּנָה לְבֵנִים` (בראשית יא:ג) | equivalent | "Man to man" (not "his fellow"). |
+| 396 | … ur₅ ḫe₂-en-na-nam-ma-am₃ | כך אכן היה | `וַיְהִי כֵן` (בראשית א:ז) | equivalent | The formula of realization (= Agade 272, EA 505). |
+| 398 | ĝidru ĝiš nam-me mu ĝiš na-an-sa₄-sa₄ | שרביט – עץ לא יהיה, בשם עץ לא ייקרא | `וְכֹל אֲשֶׁר יִקְרָא לוֹ הָאָדָם נֶפֶשׁ חַיָּה הוּא שְׁמוֹ` (בראשית ב:יט) | equivalent | The name fixes the thing; *mu sa₄* = `קרא שם`. |
+| 420 | en-me-er-kar₂-ra {d}en-ki-ke₄ ĝeštug₂ mu-na-an-šum₂ | לאנמרכר – אנקי – בינה נתן | `וַיִּתֵּן אֱלֹהִים חָכְמָה לִשְׁלֹמֹה וּתְבוּנָה הַרְבֵּה מְאֹד` (מלכים א ה:ט) | equivalent | A god gives a king wisdom – here to answer a riddle. |
+| 421 | aĝrig maḫ | נאמן־הבית הנשגב | `וַאֲחִישָׁר עַל הַבָּיִת` (מלכים א ד:ו) | equivalent | The royal steward. |
+| 432 | i₃ li i₃ li₂ | שמן משובח, שמן כתוש | `שֶׁמֶן זַיִת זָךְ כָּתִית לַמָּאוֹר` (שמות כז:כ) | equivalent | Beaten oil. |
+| 434 | ĝidru šu-na mu-un-na-ĝa₂-ĝa₂ | את השרביט – בידו – שָׂם | `וְאֶת הַמַּטֶּה הַזֶּה תִּקַּח בְּיָדֶךָ אֲשֶׁר תַּעֲשֶׂה בּוֹ אֶת הָאֹתֹת` (שמות ד:יז) | equivalent | The staff put in the envoy's hand (Exod 4: the same chapter as the heavy mouth). |
+| 434 | ĝidru | שרביט | `וְהִנֵּה פָּרַח מַטֵּה אַהֲרֹן לְבֵית לֵוִי` (במדבר יז:כג) | divergence | A staff decides a contest of primacy: by a god's miracle there, by years of craft here (our proposal). |
+| 444 | aratta{ki} u₈ sag₂-[gin₇] ḫe₂-em kaskal-bi [kur] ki-bal ḫe₂-em | ארטה – כרחל [מוכה] – היא אכן; דרכיה – [ארץ] מרי | `כִּי כָבֵד הָרָעָב מְאֹד; וַתֵּלַהּ אֶרֶץ מִצְרַיִם וְאֶרֶץ כְּנַעַן מִפְּנֵי הָרָעָב` (בראשית מז:יג) | equivalent | A land exhausted (our proposal). |
+| 455 | inim-ma dub maḫ-gin₇ šu mu-na-an-sig₁₀ | את הדבר – כלוח נשגב – בידו נתן | `וַיִּתֵּן אֶל מֹשֶׁה ... שְׁנֵי לֻחֹת הָעֵדֻת` (שמות לא:יח) | equivalent | The word given "like a tablet" – before writing exists in the story. |
+| 461 | a₂-ĝal₂ ḫe₂-zu | החזק – ייוודע! | `יָקוּמוּ נָא הַנְּעָרִים וִישַׂחֲקוּ לְפָנֵינוּ` (שמואל ב ב:יד) | divergence | A contest of representatives decides between kingdoms – dogs (Mittermayer) rather than champions (ETCSL). |

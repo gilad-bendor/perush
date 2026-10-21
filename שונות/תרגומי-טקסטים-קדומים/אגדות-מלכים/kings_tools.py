@@ -141,7 +141,7 @@ FORMULAS = {'EA': [
     (r'^igi mu-un-il₂ aratta\{ki\}-aš ba-te$', r'^עיניים נשא – אל ארטה קרב\.$', 'the arrival (§3)'),
     (r'ĝiri₃ ḫul₂(-la)? m[iu]-ni-in-gub$', r'רגל שמחה הציב\.$', 'the glad foot (§3)'),
     (r'^nam-nir-ĝal₂ lugal-a-na mu-un-zu$', r'^את סמכות מלכו – הודיע\.$', 'the authority (§3)'),
-    (r'^bur₂-ra-bi inim šag₄-ga-na bi₂-ib₂?-be₂$', r'^בגלוי – את דברי לבו אומר\.$', '"openly" (§3)'),
+    (r'^bur₂-ra-bi inim šag₄-ga-na bi₂-ib₂?-be₂$', r'^בגלוי – את דברי לבו אומר[.:]$', '"openly" (§3)'),
     (r'^kiĝ₂-gi₄-a en aratta\{ki\}-ra mu-na-ab-bal-e$', r'^השליח – אל אדון ארטה – \(את הדבר\) מוסר:$', 'the delivery (§3)'),
     (r'mu-e-ši-in-gi₄', r'אליך שלחני', '"has sent me to you" (§3)'),
     (r'dug₄-ga-ni nam-ĝu₁₀ taḫ-a-ni nam-ĝu₁₀$', r'אמירתו, מה לי\? תוספתו, מה לי\?$', '"what is it to me" (§3)'),
@@ -245,7 +245,7 @@ def check_reserved(key, label, heb, tr, problems):
     h = strip(FN.sub('', heb))
     for pat, allow in RESERVED[key].items():
         if re.search(pat, h):
-            if allow and any(re.search(a, tr) for a in allow):
+            if allow and any(re.search(a, tr) or re.search(a, norm_tr(tr)) for a in allow):
                 continue
             problems.append(f'{label}: reserved string /{pat}/ in "{heb}"' + (f' (allowed only with {allow})' if allow else ''))
 
