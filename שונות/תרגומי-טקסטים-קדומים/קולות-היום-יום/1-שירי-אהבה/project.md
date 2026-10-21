@@ -25,7 +25,9 @@ Wasserman 2016 via AkkLove (rank 3); the Gilgameš corpus renderings (binding).
 3. *šumšû* (07) and *biātu* (06) "spend the night" both = `לִין` (two Akkadian verbs, one Hebrew verb).
 4. *irimmu* "bead (love-charm)" = `חרוז` throughout (10, 15, 16, 04, 02); Wasserman "love-charm".
 5. *ḫabābu*: `חִבֵּק` (caress; Gilgameš binding) but `הָמָה` of the heart and of water (03 r.32; renderings §3.1) – one lemma, two Hebrew verbs by sense.
+6. *mēlulu* "play, dance" = `שִׂחֵק` (13 o.i.14', 14a o.6', 14e): a declared deviation from the Gilgameš corpus's `חוּל` / `מָחוֹל`, because here the verb takes an object ("play with my breasts"); `צחק` stays reserved for *ṣiāḫu*.
+7. *bānû* "builder, creator" (14a o.11') = `הַבּוֹנֶה`, following the creation corpus's *banû* = `בָּנָה`; Wasserman "the creator" (`בורא` is reserved for the Gen 1 comparison).
 
 ## Progress
 Drafted by the run-7 coordinator acting as the translator (no sub-agent tool was available; see `../handoff--round2-run7.md` §6), text by text in the priority order, with `kol_tools.py verify` and `check_bible_quotes.py` clean after each text:
-- 2026-10-21: LAOS 4 10 (39 lines), 15 (43), 16 (110), 04 (50; the shared lines copied from 16), 07 (43), 06 (62), 02 (23), 03 (36), 01 (142).
+- 2026-10-21: LAOS 4 10 (39 lines), 15 (43), 16 (110), 04 (50; the shared lines copied from 16), 07 (43), 06 (62), 02 (23), 03 (36), 01 (142), 13 (38), 18 (37), 17 (14), 05 (11), 14a–f (80).

@@ -128,7 +128,7 @@ RESERVED = {
     r'מנעול': [],
     B + P + r'פרי(ה|ו|ך|י)?' + E: [r'^SUX'],          # never in Akkadian (inbu = תנובה); allowed in Sumerian (gurun)
     B + P + r'דוד(י|ך|ו|ה|ים|יך|יו|ייך|יה|ינו|נו)?' + E: [r'dādu|dadū|dādū|da-a-d|da-di|da-du|šūdadu'],
-    r'אהב|אוהב|אהוב': [r'râmu|rāmu|raʾīmu|rāʾimu|ruʾāmu|narāmu|ritūmu|murtâmu|ki aĝ₂|ki-aĝ₂|ki aŋ₂|aŋ[measure]|aĝ₂'],
+    r'אהב|אוהב|אהוב': [r'râmu|rāmu|raʾīmu|rāʾimu|ruʾāmu|narāmu|ritūmu|murtâmu|na-ra-mi|ra-i-mi|ra-mi-|ki aĝ₂|ki-aĝ₂|ki aŋ₂|aŋ[measure]|aĝ₂'],
     r'צחק|צחוק': [r'ṣīhtu|ṣīḫtu|ṣiāhu|ṣiāḫu|ṣâhu|ṣīḫ|ṣīh|ṣūhiš|ṣūḫiš|ṣuhhu'],
     r'תפוח': [r'hašhūru|ḫašḫūru|ḫašḫur|hašhur|hašhur'],
     B + P + r'(גן|גנה|גנו|גני|גנים|גנת|גנך|גנם|גננו)' + E: [r'kirû|kiri₆|kirâ|kirî'],
