@@ -24,3 +24,18 @@ www.fadedpage.com
 el.wikisource.org
 # Added 2026-10-21 (run 6): a mirror of public-domain Assyriological books (King 1907), when archive.org is blocked.
 uodiyala.edu.iq
+# Added 2026-10-21 (the world survey, curated-translation-candidates--world.md): the base texts of its Tier 1 -
+# Ugaritic (CUC), Egyptian (AED-TEI) and Hittite (TLHdig) on Zenodo; Perseus, VedaWeb and AED-TEI through GitHub (git clone
+# and raw files; the github.com web pages and API are blocked); Vedic texts; the Avestan corpus; Cassuto's Hebrew Ugaritic
+# translation; the Hittite portal; Phoenician/Aramaic editions; the Aramaic lexicon; LSJ (Logeion).
+zenodo.org
+github.com
+raw.githubusercontent.com
+gretil.sub.uni-goettingen.de
+vedaweb.uni-koeln.de
+cab.geschkult.fu-berlin.de
+benyehuda.org
+hethport.net
+deaps.osu.edu
+cal.huc.edu
+anastrophe.uchicago.edu

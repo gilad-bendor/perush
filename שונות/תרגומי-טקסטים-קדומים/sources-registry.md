@@ -187,6 +187,8 @@ vols. I–II): a mirror when archive.org is blocked. (Use only for public-domain
 - **eBL fragmentarium**: `GET /api/fragments/<no>` gives the record, `atf` empty when not transliterated; the
 bibliography ids resolve at `/api/bibliography/<id>` (RN262 = Westenholz 1997, RN2877 = Jiménez 2018).
 - **ORACC AkkLove** (`akklove`, CC0, 2026-10-21): the zip has the texts and lemmas, Wasserman's translations are only in the per-text HTML view (`https://oracc.museum.upenn.edu/akklove/<id>/html`); both need the `tools/certs/` workaround. The project's MB/MA texts (LAOS 4 08, 09, 11, 12, 19, 21) are in the zip; the Isin incantations (LAOS 4 27–34) are not in the export.
+- **The world survey (2026-10-21)** tested about 150 more hosts (Egyptian, Ugaritic, Hittite, Vedic, Avestan, Greek, Chinese, Japanese, Nahuatl, Arabian …): each `curation-surveys/world-survey--*--2026-10-21.md` has them in its §4, and `curated-translation-candidates--world.md` §10 sums them up. Nothing from it is in `sources/` yet.
+
 ## 9. Paid sources
 
 Buying is the user's decision; ask before assuming. Status as of 2026-10-16, ranked by value for the current work:

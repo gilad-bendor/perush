@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-21 (Round 2 finished; the cross-corpus splits settled; the Round 3 plan made).
+Last updated: 2026-10-21 (Round 2 finished; the cross-corpus splits settled; the Round 3 plan made; the world survey done, Round 4 proposed).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -77,6 +77,15 @@ or one at a time in the table's order:
 | 5 | Nergal and Ereškigal, Bilgameš, Enkidu and the Netherworld (Gen 28:12; 1 Sam 28) | `העולם-התחתון/` projects 3–4 |
 | 6 | Maqlû I–VIII + the Ritual Tablet (Ex 22:17, Deut 18:10–11) | new `כשפים-ולחשים/` |
 
+**Round 4, proposed (the rest of the world, 2026-10-21; awaits the user's approval, §6).** At the user's request, ten
+regional surveys (`curation-surveys/world-survey--*`) were merged into **`curated-translation-candidates--world.md`**.
+Its §8 proposes the first non-Mesopotamian round, which can run alongside Round 3 (new corpora):
+**run 1, the Ugaritic myths** (the Baal Cycle + the short myths; base: CUC on Zenodo – for Gen 1:21, the unit being
+written); **run 2, Egyptian wisdom and creation** (Amenemope, Merikare, the Heavenly Cow, the Memphite Theology; base:
+AED-TEI); **run 3, Hesiod** (Theogony + Works and Days; base: Perseus + treebank); and the **fifth-day dossier** (its §5A).
+Each new language needs a name table, renderings with reserved-word gates, a translator brief and a converter from its
+base format before the first line.
+
 Parallel sessions edit the shared files only at the end of their run, in one commit, after `git pull --rebase` (the
 plan's last paragraph). The user's review of the Round 1–2 drafts can go on alongside. The Round 2 runs, for the record:
 
@@ -125,7 +134,16 @@ yourself** (renderings, harmonizing splits between corpora, scope details) and r
 **The cross-corpus splits were settled on 2026-10-21** (by the lead, under the rule above): the decisions, and the words kept
 by sense, are in `translation-guidelines.md` §6.7 ("Cross-corpus harmonization"); each corpus's `renderings.md` lists the
 lines it changed, and the `project.md` files mark their open decisions settled. All verifiers and `check_bible_quotes.py`
-passed afterwards. Still open:
+passed afterwards.
+
+**For the user, from the world survey (2026-10-21; `curated-translation-candidates--world.md` §7):**
+1. Widen the work beyond Mesopotamia, and approve Round 4 (Ugaritic myths, Egyptian wisdom and creation, Hesiod, the
+   fifth-day dossier)?
+2. Hebrew and Moabite inscriptions: a square-script transcription + a vocalized reading + the apparatus, instead of a
+   "translation"?
+3. A new apparatus tag, **[typological]**, for parallels from cultures with no contact with Israel (guidelines §6.4)?
+
+Still open:
 
 | Decision | Now | Where |
 |---|---|---|

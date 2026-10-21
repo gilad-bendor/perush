@@ -199,6 +199,8 @@ These are listed in the relevance survey §4:
 
 If the folder's scope ever widens, the Baal Cycle and Deir ʿAllā come first.
 
+**Update (2026-10-21):** the rest of the world is now surveyed in [`curated-translation-candidates--world.md`](curated-translation-candidates--world.md) (ten regional surveys in `curation-surveys/world-survey--*`). The Baal Cycle is its first recommendation; Deir ʿAllā is in its Tier 1 #6.
+
 ---
 
 ## Translation plan for this round (2026-10-16)
