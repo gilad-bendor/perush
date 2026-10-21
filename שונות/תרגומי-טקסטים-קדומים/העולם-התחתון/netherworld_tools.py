@@ -83,7 +83,7 @@ RESERVED = {
     r'כופר|' + B + P + r'כפר' + E: [r'kupr'],
     r'קטרת|קטורת': [r'qutr'],
     B + P + r'(חתן|חתני|חתנה|חתניהן|חתנך)' + E: [r'ḫāwir|ḫāʾir|ḫāmir|hāwiru'],
-    r'בוכה|בוכים|בוכות|בכה|בכו|בכתה|אבכה|תבכה|יבכה|בכי': [r'bak[kûiī]|ibak|lubk|er₂|er2'],
+    B + P + r'(בוכה|בוכים|בוכות|בכה|בכו|בכתה|אבכה|תבכה|יבכה|בכי|בוכי)' + E: [r'bak[kûiī]|ibak|lubk|er₂|er2|šeš₂|še₈'],
 }
 TRAPS = {  # stripped token (prefixes allowed) -> (name, source regex)
     'איננה': ('Inana (אִינַנָּה)', r'inana|inanna|ga-ša-an-na|Inanak'),
@@ -345,7 +345,7 @@ def verify(key, strict=False):
         if e['tr'] and e['heb']:
             by.setdefault(norm_tr(e['tr'][0]), []).append(k)
     for t, ks in by.items():
-        hs = {re.sub(r'[\[\]"“”⟨⟩?*]', '', strip(ent[k]['heb'][0])).strip() for k in ks}
+        hs = {re.sub(r'[\[\]"“”⟨⟩?*.,;:!\'–]', '', strip(ent[k]['heb'][0])).replace('  ', ' ').strip() for k in ks}
         if len(ks) > 1 and len(hs) > 1 and len(t.split()) > 2:
             notes.append(f'same source, different Hebrew: {ks}: {t}')
     tp = os.path.join(d, 'translation.rtl.md')
