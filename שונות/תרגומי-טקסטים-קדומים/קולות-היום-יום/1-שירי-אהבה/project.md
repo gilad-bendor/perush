@@ -27,7 +27,26 @@ Wasserman 2016 via AkkLove (rank 3); the Gilgameš corpus renderings (binding).
 5. *ḫabābu*: `חִבֵּק` (caress; Gilgameš binding) but `הָמָה` of the heart and of water (03 r.32; renderings §3.1) – one lemma, two Hebrew verbs by sense.
 6. *mēlulu* "play, dance" = `שִׂחֵק` (13 o.i.14', 14a o.6', 14e): a declared deviation from the Gilgameš corpus's `חוּל` / `מָחוֹל`, because here the verb takes an object ("play with my breasts"); `צחק` stays reserved for *ṣiāḫu*.
 7. *bānû* "builder, creator" (14a o.11') = `הַבּוֹנֶה`, following the creation corpus's *banû* = `בָּנָה`; Wasserman "the creator" (`בורא` is reserved for the Gen 1 comparison).
+8. *ṣabātu* = `תָּפַס` and *aḫāzu* = `אָחַז` [cognate] (22 o.12–r.32, 01 l.e.36, 13 o.ii.6'): a deviation from the Gilgameš corpus, where *ṣabātu* = `אָחַז`; this corpus has both verbs, and the Song's `אֲחַזְתִּיו` (3:4) needs the true cognate. 03 o.10 and 16 o.i.5, r.iv.4 were changed to `תפס` at review.
+9. *ṣawāru* "neck" = `צַוָּאר` [cognate] (22 r.35–36); the Gilgameš corpus gives `צוואר` to *kišādu* (not in this corpus).
+10. *ḫašāšu* "rejoice" = `שָׂשׂ` (10 r.12', 20 o.9); *šâlu* "rejoice" = `צָהַל` (15 o.i.27); *riāšu* `גָּל`, *ḫadû* `שָׂמַח`.
+11. *karānu* "vine" = `גֶּפֶן` where it is sown (23 o.8), `יַיִן` elsewhere (15 o.i.18, 02 o.9).
+12. *ruʾtu* "spittle, sap" = `רוֹק` (22; 14a o.12'), kept apart from the creation corpus's *rupuštu* `רִיר`.
 
 ## Progress
 Drafted by the run-7 coordinator acting as the translator (no sub-agent tool was available; see `../handoff--round2-run7.md` §6), text by text in the priority order, with `kol_tools.py verify` and `check_bible_quotes.py` clean after each text:
-- 2026-10-21: LAOS 4 10 (39 lines), 15 (43), 16 (110), 04 (50; the shared lines copied from 16), 07 (43), 06 (62), 02 (23), 03 (36), 01 (142), 13 (38), 18 (37), 17 (14), 05 (11), 14a–f (80).
+- 2026-10-21: LAOS 4 10 (39 lines), 15 (43), 16 (110), 04 (50; the shared lines copied from 16), 07 (43), 06 (62), 02 (23), 03 (36), 01 (142), 13 (38), 18 (37), 17 (14), 05 (11), 14a–f (80), 22 (38), 20 + 23–26 (69). All 835 lines drafted.
+
+### Review passes (2026-10-21, the coordinator)
+1. **Fidelity and Hebrew** (one read-through of every `>` line of the 25 texts against the ORACC normalization, `listing` view): fixed two glosses written inside `>` lines (`(=מוכתר)` 14a o.16', `(=ישיג)` 18 o.15; `(=קשה)` 01 o.ii.9) – moved to the notes; *ḫašāšu* unified (`שש` / `ישישו`, 20 o.9 had `יצהלו`, which collides with *šâlu*).
+2. **Consistency** (by script): a key-lemma check (every line with one of 50 key lemmas – *dādu*, *râmu*, *kuzbu*, *inbu*, *kirû*, *irimmu*, *ṭābu*, *aḫāzu*, *ṣabātu*, *târu*, *palāsu* … – must carry the fixed Hebrew; the misses were all broken words, ventive "come" = `בא`, or sense-renderings recorded above); `kol_tools.py verify LOVE` (reserved strings, gates, traps, identical source lines); the *aḫāzu* / *ṣabātu* collision found and fixed (decision 8).
+3. **Echo control and quotations**: every quotation converted to the `` `…` (Book ch:v) `` form so that `check_bible_quotes.py` sees it (17 had been written `` `…`, Book ch:v `` and were unchecked; all matched); a scan of the `>` lines for vav-consecutive and archaic forms (none); the new gate `אחז` (only *aḫāzu*).
+
+## Key findings (project 1)
+- **"To the garden you came down"** (22 o.8–9, Old Akkadian, Kiš): *kirîšum tūrdā … tūrdāma ana kirîm* = `לגן ירדתן … ירדתן אל הגן` ↔ `דּוֹדִי יָרַד לְגַנּוֹ` (שיר השירים ו:ב), `אֶל גִּנַּת אֱגוֹז יָרַדְתִּי` (ו:יא): the verb and the noun both [cognate / equivalent], some 1,500 years before the Song.
+- **The adjuration** (22 r.33–38): `משביע אני אותך … עד שצווארו וצווארך לא נצמדו – לא תרגעי!` ↔ `הִשְׁבַּעְתִּי אֶתְכֶם … אִם תָּעִירוּ … עַד שֶׁתֶּחְפָּץ` (ב:ז; ה:ח): the same frame (I adjure you + by whom + "until"), but by Ištar and Išḫara where the Song swears "by the gazelles and the hinds of the field".
+- **The counsel of father and mother reversed** (20 o.10–11): `אל תשבי לעצת אביך, אל תקחי את עצת אמך` against `שְׁמַע בְּנִי מוּסַר אָבִיךָ וְאַל-תִּטֹּשׁ תּוֹרַת אִמֶּךָ` (משלי א:ח).
+- **"Your love-making is good"**: *dādūka ṭābū* = `דּוֹדֶיךָ טובים` (13 o.i.6'; 10 o.9) ↔ `כִּי טוֹבִים דֹּדֶיךָ מִיָּיִן` (א:ב) – the closest phrase match of the corpus; with the Kiš wasf's *sissinnu* = `סַנְסִנֵּי` (13 o.i.11') ↔ the Song's hapax `סַנְסִנָּיו` (ז:ט) and the left hand (13 o.i.13' ↔ ב:ו; ח:ג).
+- **`לְכָה דוֹדִי`** (15 o.i.20 *alkam … i nīpuš*) ↔ ז:יב; the "shepherd … where do you lie down" of *tarbaṣu* (07 r.39) ↔ א:ז; the twin (14b) ↔ ד:ה; the oil (*šamnu*) and honey (*dišpu*) ↔ א:ג; ד:יא; "I called her, she did not turn to me" (26 o.5) ↔ `קְרָאתִיו וְלֹא עָנָנִי` (ה:ו).
+- **The patriarchal narratives**: *ṣīḫtu* "(erotic) laughter" = `צְחוֹק` ↔ `יִצְחָק מְצַחֵק אֵת רִבְקָה` (בראשית כו:ח) throughout; "I saw your face – you are a god" (03 o.17–18) ↔ בראשית לג:י; *amtu* (03 r.21) ↔ רות ג:ט; *šeriktu* "dowry" = `שִׁלּוּחִים` (03 r.26, 04 o.18) ↔ בראשית לא:יד; *aḫāt abiki* (18 o.19) ↔ ויקרא יח:יב; *qadištu* (20 o.12, 26 o.7) ↔ בראשית לח:כא.
+- **The ancient mind**: love as a force to be "seized" and "cast" (the incantations' *aḫāzu*, *nadû*); the goddess as patron of the girl; the king as the goddess's lover; jealousy, slander (*karṣī akālu* ↔ Aram. דניאל ג:ח) and gossip; the humour and obscenity of 18; the girl's work (dough, the baby on her hip, 26) set against desire.

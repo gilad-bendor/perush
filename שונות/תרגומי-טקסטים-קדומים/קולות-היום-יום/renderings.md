@@ -84,7 +84,15 @@ Vocalized at the first occurrence in each annotated file; afterwards plain spell
 `אותו` (Utu `אוּתוּ`), `איננה` (Inana `אִינַנָּה`), `אור` (Urim `אוּר`), `אן` (An `אַן`), `אנו` (Anu `אָנוּ`), `סין` (Sîn `סִין`), `באו` (Bau `בָּאוּ`), `ארורו` (Aruru `אֲרוּרוּ`), `דוד` / `דודי` / `דודים` (*dādu*: always vocalized), `כלה` (bride: `כַּלָּה`), `אמה` (slave woman `אָמָה`; Umma; cubit), `שנה` (sleep `שֵׁנָה` / year `שָׁנָה`: vocalize where both are possible), `אלי` (my god `אֵלִי`), `רעי` (`רֵעִי` my friend / `רַעְיִי`), `חם` (father-in-law `חָם` / hot), `אהבים` (`אֳהָבִים`).
 
 ## 9. Merged from the runs
-(Filled between translator ranges.)
+**Project 1 (all 25 texts, 2026-10-21):**
+- *aḫāzu* = `אָחַז` [cognate] (gated by script); *ṣabātu* = `תָּפַס` – a deviation from the Gilgameš corpus (*ṣabātu* = `אחז`), because this corpus has both and the Song's `אֲחַזְתִּיו` (ג:ד) must stay visible. A Sumerian *dab₅* (= *ṣabātu*) takes `תָּפַס`.
+- *mēlulu* = `שִׂחֵק` (deviation from Gilgameš `חוּל`: here it takes an object); `צחק` stays reserved for *ṣiāḫu*.
+- *ṣawāru* "neck" = `צַוָּאר` [cognate]; *šīnātu* = `שֶׁתֶן`; *sāqu* = `שׁוֹק` [cognate]; *warādu* = `יָרַד` [cognate]; *tamû* D = `הִשְׁבִּיעַ`.
+- *qadištu* = `קְדֵשָׁה`, *nadītu* = `נָדִיתוּ`, *kezertu* = `כְּזֵרָה`, *batultu* = `בְּתוּלָה` (the law and Gilgameš corpora); *šasû* = `צָעַק` (Gilgameš); *palāsu* N = `הִסְתַּכֵּל`; *ḫasāsu* = `הָגָה`.
+- The incantation closing *šiptum ul yâtu, šipat DN* = `הקסם אינו שלי: קסם DN`.
+- One Hebrew verb per joy lemma: *ḫadû* `שָׂמַח`, *riāšu* `גָּל`, *ḫašāšu* `שָׂשׂ`, *šâlu* `צָהַל`, *elēṣu* `עָלַץ`.
+- The project's own words: `1-שירי-אהבה/renderings.md`.
 
 ## Changelog
 - 2026-10-21: created by the run-7 coordinator before drafting.
+- 2026-10-21: §9 project 1 merged (the coordinator).
