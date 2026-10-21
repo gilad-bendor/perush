@@ -154,3 +154,88 @@ Deut 11); the peace of the beasts (Isa 11:6–9; 65:25).
 | 154 | eme i₃-kur₂ | לשון שונה | `וּמִשָּׁם הֱפִיצָם יְהוָה עַל פְּנֵי כָּל הָאָרֶץ` (בראשית יא:ט) | divergence | *kur₂* "be different" – no confusion (`בָּלַל` reserved), no scattering, no punishment; the god is Enki of wisdom. |
 | 154 | eme i₃-kur₂ | לשון שונה | `כִּי בְּלַעֲגֵי שָׂפָה וּבְלָשׁוֹן אַחֶרֶת יְדַבֵּר אֶל הָעָם הַזֶּה` (ישעיהו כח:יא) | equivalent | "Another tongue". |
 | 155 | eme nam-lu₂-ulu₃ 1 i₃-me-[a] | לשון האנושות – אחת היתה | `וַיְהִי כָל הָאָרֶץ שָׂפָה אֶחָת` (בראשית יא:א) | equivalent | The same "was" of the beginning; the order reversed (the spell ends where Gen 11 begins). |
+
+## Part EA2 (lines 156–307), 2026-10-21
+
+### Progress (EA2)
+- Drafted 156–307 (154 entries with 185A–B) plene from the data file; every repeated line copied from EA1's Hebrew
+  (`kings_tools.py pars EA 156 307`): the Zubi passage 164–169 (past tense of 108–113), the threat and demand 187–207
+  (= 115–135; the deviations of the delivery – *dag* "flee" for *dal* "fly" in 187, *ḫu-luḫ* "frighten" in 188,
+  *ĝa₂-ra* "for me" in 207 – rendered as deviations).
+- Review pass (a) fidelity: 235 corrected from "she said" to a question (marû *be₂* with *ḫe₂-*: Mittermayer); 247
+  "(ארץ) האויב" marked as added; 280 set in `*…*`.
+- Review pass (b) consistency: all formulas of renderings §3 (the commission, "say to him", "when he had spoken
+  thus", the journey, the arrival, the glad foot, the authority, "openly", the delivery, the greeting, "what is it to
+  me", "what my king said", *gu₃ de₂*, the messenger going to the mountain) checked by `verify` (FORMULAS); the
+  formula check now ignores quotation marks; *šu-a gi₄* `לידו השיב` (217, 267, 302) identical.
+- Review pass (c) Hebrew: `תשובה` was caught by the `שוב` gate (unanchored `תשוב`) – the gate anchored; read aloud.
+- `verify EA`: OK; `check_bible_quotes.py`: 0 problems (four quotations corrected: Jer 2:22, Exod 30:9 – a tsere,
+  1 Sam 24:5 – the verse number of this Bible, Jer 1:5 – a ketiv, now cited without quotation).
+
+### Key findings (EA2)
+- **The delivery omits the spell.** The messenger delivers the threat and the demand word for word (187–207 =
+  115–135), but of the spell of Nudimmud only its name: "say for me the spell of Nudimmud" (207). The text assumes
+  the spell is known – or (Mittermayer) it is Enki's "instruction" whose fulfilment comes later (495–496). [absent]
+- **The diplomatic formulas are the Bible's:** "Your father, my king, sent me to you" (176) ↔ `בִּנְךָ בֶן הֲדַד מֶלֶךְ
+  אֲרָם שְׁלָחַנִי אֵלֶיךָ` (2 Kgs 8:9), `כֹּה אָמַר אָחִיךָ יִשְׂרָאֵל` (Num 20:14); the host's "What is it to me?"
+  (178) ↔ `מַה לִּי וָלָךְ` (Judg 11:12; 2 Chr 35:21); "my king says thus" (186) ↔ `כֹּה אָמַר` (Gen 32:5;
+  2 Kgs 18:19). The kinship terms ("father", "son") rank kings.
+- **The messenger with the word put in his mouth** (296 *inim ka-na ba-an-sig₁₀*) ↔ `וְנָתַתִּי דְבָרַי בְּפִיו`
+  (Deut 18:18), `הַדָּבָר אֲשֶׁר יָשִׂים אֱלֹהִים בְּפִי` (Num 22:38): the prophetic office is modelled on the royal
+  messenger; here the human model itself, with its craft of exact repetition ("like his own mouth", 296, 302).
+- **The good tidings** (215 *inim dug₃*) ↔ `וְאֶל בְּשׂוֹרָה טוֹבָה יָבוֹא` (2 Sam 18:27); the runner on the mountains ↔
+  Isa 52:7.
+- **Enmerkar born and suckled in the mountains, raised on Aratta's soil** (184, 210–212; Mittermayer reads "Uruk" in
+  211): the king of the plain claims to be a son of the mountain he claims.
+- **The contest replaces war (253–261):** the lord of Aratta proposes an *a-da-min₃* – the word of the Sumerian
+  debate poems – and a proverb of two bulls. The condition of his submission is not defeat but Inana's choice (290:
+  "if she casts Aratta from her hand like a dog chasing a carcass").
+- **The ancient mind:** the messenger's journey by night and day (with the stars, with Utu); a king at a loss for an
+  answer, staring at his feet, sleepless (236–239) – the human comedy of a court; the riddle as diplomacy; the
+  piety of Aratta (libations of water and flour, prayer and supplication, 249–250); Inana as the goddess of both
+  cities, whose "dance" is battle (289).
+
+### Open decisions (EA2)
+1. 255–258 *teš₂ gu₇* "eat together" (literal) – an idiom for "measure oneself" (Mittermayer) or "eat everything up"
+   (ETCSL)? Kept literal.
+2. 211 *saḫar aratta{ki}-ka* (ETCSL, ORACC) or *[Uru]k* (Mittermayer)? We follow ETCSL.
+3. 158 *im 1* "a single rain" or "the south wind" (ETCSL)? Our `כגשם הניתך?`.
+4. 305 *NE* = *izi* "fire" (Mittermayer) or an unread sign? Our `(ליד) האש?`.
+
+### Proposals for the corpus renderings (EA2)
+- *dag* "flee, roam" `ברח` (`אבריח`; for 558–562 *šu … dag* `ברחה מ־`); *ḫu-luḫ* `הבהיל`; *sig₁₀* "put" `נתן`
+  (*inim ka-na … sig₁₀* `את הדבר בפיו נתן`); *šu-a gi₄* `לידו השיב`; *gaba-ri* `תשובה`; *gu₃ nun e/di* `קול גדול
+  השמיע`; *gu₃ … sig₁₀* `קול השמיע`; *ĝeštug₂ ĝar* `אוזן שׂם`; *a-da-min₃* `תחרות` (as *a-da*); *taka₄* `עזב`;
+  *saĝ šum₂* `ראש נתן`; *saĝ ĝar* `ראש שׂם`; *ud zal* `נגה`; *piriĝ* `לביא`; *ḫu-ri₂-in* `נשר`; *buru₅* `דרור?`;
+  *sa-par₄* `מכמורת`, *ĝiš-bur₂* `פח`; *sizkur … a-ra-zu* `בתפילה ובתחנון`; *šubur* `משרת`; *naĝa* `בורית`;
+  *taraḫ-maš* `תיש־היעל`; *muš-saĝ-kal* `הנחש המובחר`; *{d}lamma* `אֵלַת־הַמָּגֵן`; *ad₆* `פגר`; *guru₇* `כרי`;
+  *al-kad₅* `רשתות־המשא`; *anše barag la₂-e* `חמורי־המשא`; *anše-bal* `חמורי־חילוף`; *tukum-bi* `אם`; *i₃-ge-en*
+  `אם אכן` / `אכן`.
+- The answer formula 208–217 (for 526–535): `מה שתאמר לי – כשתאמר,` / `לזה שנזרע? מבעל זקן־הספיר [הקשור],` /
+  `שפרתו החזקה בהר הַ־מֶה הזכים [ילדה],` / `שעל עפר ארטה [גדל],` / `שמדד הפרה הנאמנה חלב [ינק],` / `ההולם נסיכות
+  בכולבה, הר הַ־מֶה הגדולים –` / `לאנמרכר בן אוּתוּ –` / `את הדבר הזה – במקדש אאנה – כדבר טוב אומר לו;` / `בגיפר
+  שלו, הנושא תנובה כעץ־מס צעיר,` / `למלכי, אדון כולבה – לידו אשיבנו!"`.
+- The grain strings (for 329–331, 355–356): `(אבל) שעורה – ברשתות־המשא – כשימלא,` / `על חמורי־המשא – כשיתלה,` /
+  `חמורי־חילוף – לצדם כשיעמיד,`; `בחצר ארטה – לכרי יערום`.
+- **Correction to renderings §3:** 235 *ur₅-gin₇ ḫu-mu-na-ab-be₂* (marû) is a question/wish (`כך אומַר לו?`), not
+  "she said".
+
+### Parallels index (EA2)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 164 | ḫur-saĝ zubi-še₃ bi₂-in-ed₃-de₃ | אל הַרְרֵי זוּבִּי – מעלה בו | `כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים כֵּן עָשָׂה` (בראשית ו:כב) | equivalent | Wish (73) → command (108) → execution (164) in the same words. |
+| 170 | ḫur-saĝ 5 ḫur-saĝ 6 ḫur-saĝ 7-e im-me-re-bal-bal | הררים חמישה, הררים שישה, הררים שבעה – חצה | `בְּשֵׁשׁ צָרוֹת יַצִּילֶךָּ וּבְשֶׁבַע לֹא יִגַּע בְּךָ רָע` (איוב ה:יט) | equivalent | The rising number as a literary form. *bal* = `חצה` = Akk. *nabalkutu* (SB I 17). |
+| 171 | igi mu-un-il₂ aratta{ki}-aš ba-te | עיניים נשא – אל ארטה קרב | `וַיִּשָּׂא אַבְרָהָם אֶת עֵינָיו וַיַּרְא אֶת הַמָּקוֹם מֵרָחֹק` (בראשית כב:ד) | equivalent | Lifting the eyes at the journey's end. |
+| 176 | a-a-zu lugal-ĝu₁₀ mu-e-ši-in-gi₄-in-nam | אביך, מלכי – אליך שלחני | `בִּנְךָ בֶן הֲדַד מֶלֶךְ אֲרָם שְׁלָחַנִי אֵלֶיךָ` (מלכים ב ח:ט); `כֹּה אָמַר אָחִיךָ יִשְׂרָאֵל` (במדבר כ:יד) | equivalent | Kinship terms of diplomatic rank ("father" = senior). |
+| 178 | lugal-za dug₄-ga-ni nam-ĝu₁₀ | מלכך – אמירתו, מה לי? | `מַה לִּי וָלָךְ כִּי בָאתָ אֵלַי לְהִלָּחֵם בְּאַרְצִי` (שופטים יא:יב); `מַה לִּי וָלָךְ מֶלֶךְ יְהוּדָה` (דברי הימים ב לה:כא) | equivalent | The host king's dismissive reply to an envoy. |
+| 186 | lugal-ĝu₁₀ na-ab-be₂-a | מלכי – כך הוא אומר | `כֹּה תֹאמְרוּן לַאדֹנִי לְעֵשָׂו: כֹּה אָמַר עַבְדְּךָ יַעֲקֹב` (בראשית לב:ה); `כֹּה אָמַר הַמֶּלֶךְ הַגָּדוֹל מֶלֶךְ אַשּׁוּר` (מלכים ב יח:יט) | equivalent | The messenger formula before the sender's words. |
+| 187 | … na-na?-ra-ab-dag-e | פן את עירו … אבריח | `פֶּן נָפוּץ עַל פְּנֵי כָל הָאָרֶץ` (בראשית יא:ד) | divergence | The delivered threat changes the verb (*dag* "flee" for *dal* "fly"). |
+| 207 | [nam-šub] {d}nu-dim₂-mud-ke₄ ĝa₂-ra dug₄-mu-na-ab | [את קסם] נוּדִימּוּד – בשבילי אמור [לו] | `הָבָה נֵרְדָה וְנָבְלָה שָׁם שְׂפָתָם` (בראשית יא:ז) | absent | The delivery names the spell but does not recite it. |
+| 215 | inim-bi eš₃ e₂-an-na-ka inim dug₃ ga-na-ab-dug₄ | את הדבר הזה … כדבר טוב אומר לו | `אִישׁ טוֹב זֶה וְאֶל בְּשׂוֹרָה טוֹבָה יָבוֹא` (שמואל ב יח:כז); `מַה נָּאווּ עַל הֶהָרִים רַגְלֵי מְבַשֵּׂר` (ישעיהו נב:ז) | equivalent | The runner with good tidings. |
+| 229 | nin gal an-na me ḫuš-a u₅-a | הגבירה … הרוכבת על הַ־מֶה הנוראים | `רֹכֵב שָׁמַיִם בְעֶזְרֶךָ וּבְגַאֲוָתוֹ שְׁחָקִים` (דברים לג:כו) | equivalent | The deity who rides. |
+| 236 | en-e šag₄ mu-un-sag₃ | האדון לבו היכה | `וַיַּךְ לֵב דָּוִד אֹתוֹ` (שמואל א כד:ה) | equivalent | "The heart strikes" as distress (our proposal). |
+| 243 | ḫur-saĝ gal {ĝiš}meš₃ an-da mu₂-a | ההררים הגדולים – עץ־מס הם, שעם השמים צמח | `רְבָה אִילָנָא וּתְקִף; וְרוּמֵהּ יִמְטֵא לִשְׁמַיָּא` (דניאל ד:ח); `הִנֵּה אַשּׁוּר אֶרֶז בַּלְּבָנוֹן` (יחזקאל לא:ג) | equivalent | The cosmic tree as a kingdom. |
+| 249 | a bal-bal-am₃ | מים מנסכים | `וְנֵסֶךְ לֹא תִסְּכוּ עָלָיו` (שמות ל:ט) | equivalent | Libation. |
+| 284 | tukum-bi kisal aratta{ki}-ka guru₇-še₃ mu-dub-be₂ | אם – בחצר ארטה – לכרי יערום | `וַיִּצְבֹּר יוֹסֵף בָּר כְּחוֹל הַיָּם הַרְבֵּה מְאֹד` (בראשית מא:מט) | equivalent | Heaping grain. *guru₇* = `כרי` [cognate loan]. |
+| 290 | … ur ad₆ sar-gin₇ šu-ta im-ta-ri | … ככלב הרודף אחר פגר – מידה תשליך | `וְהִשְׁלַכְתִּי אֶתְכֶם מֵעַל פָּנָי` (ירמיהו ז:טו) | equivalent | A deity casting off a city. *ad₆* = `פגר` [cognate via *pagru*]. |
+| 296 | ka-ni-gin₇ inim ka-na ba-an-sig₁₀ | כפיו שלו – את הדבר בפיו נתן | `וְנָתַתִּי דְבָרַי בְּפִיו וְדִבֶּר אֲלֵיהֶם` (דברים יח:יח); `הַדָּבָר אֲשֶׁר יָשִׂים אֱלֹהִים בְּפִי אֹתוֹ אֲדַבֵּר` (במדבר כב:לח) | equivalent | The word put into the messenger's mouth – the model of the prophet as envoy. |

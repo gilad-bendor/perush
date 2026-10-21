@@ -67,7 +67,7 @@ Gtn = iterative (`פַּעַם אַחַר פַּעַם`, never `שוב`).
 | *kiĝ₂-gi₄-a*; *lu₂-kiĝ₂-gi₄-a* | `שָׁלִיחַ`; `הַשָּׁלִיחַ` | (Agade 162). **`מַלְאָךְ` is reserved** (wisdom corpus; ↔ `וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים לְפָנָיו`, בראשית לב:ד) [equivalent]. |
 | *kiĝ₂-gi₄-a X-ra u₃-na-dug₄ u₃-na-de₃-taḫ* (the commission) | `שָׁלִיחַ, אֶל X – כְּשֶׁתְּדַבֵּר אֵלָיו, כְּשֶׁתּוֹסִיף לוֹ –` (X = `אֲדוֹן אָרַטָּה`; `מַלְכְּךָ, אֲדוֹן כּוּלַבָּה`) | 114, 219, 242, 339, 397, 456, 470; *2-kam-ma-še₃ / 3-kam-ma-še₃ u₃-na-dug₄ u₃-na-de₃-taḫ* `שֵׁנִית – כְּשֶׁתְּדַבֵּר אֵלָיו, כְּשֶׁתּוֹסִיף לוֹ –` / `שְׁלִישִׁית – …` (477, 486). *dug₄* = `דִּבֵּר`/`אָמַר`, *taḫ* = `הוֹסִיף`. |
 | *e-ne-ra dug₄-mu-na-ab* (end of the commission) | `– אֱמֹר לוֹ!` (plene `אמור לו!`) | 135, 207, 226, 293, 346, 411, 461, 476, 496. |
-| *ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka* | `כַּאֲשֶׁר כָּךְ אָמַר לוֹ –` | 218, 227, 294, 347, 389, 412, 462, 536; *ur₅-gin₇ ḫu-mu-na-ab-be₂* (235) `כָּךְ אָכֵן אָמְרָה לוֹ`. |
+| *ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka* | `כַּאֲשֶׁר כָּךְ אָמַר לוֹ –` | 218, 227, 294, 347, 389, 412, 462, 536; *ur₅-gin₇ ḫu-mu-na-ab-be₂* (235, marû: a question/wish) `כך אומַר לו?` (corrected in EA2, §9.2). |
 | *X Y-ra gu₃ mu-na-de₂-e*; *X mu-na-ni-ib-gi₄-gi₄* | `X אֶל Y פּוֹנֶה:`; `X מֵשִׁיב לוֹ:` (creation corpus) | 68, 443, 556; 228. *gu₃ de₂* never `קָרָא`. |
 | The messenger's journey: *ḫur-saĝ 5 ḫur-saĝ 6 ḫur-saĝ 7-e im-me-re-bal-bal* | `הֲרָרִים חֲמִשָּׁה, הֲרָרִים שִׁשָּׁה, הֲרָרִים שִׁבְעָה – חָצָה.` | 170, 509. *ḫur-saĝ* = `הֲרָרִים` (temple corpus); *bal* = `חָצָה` (= *nabalkutu*, SB I 17). |
 | *igi mu-un-il₂ aratta{ki}-aš ba-te* | `עֵינַיִם נָשָׂא – אֶל אָרַטָּה קָרַב.` | 171, 510 [equivalent ↔ `וַיִּשָּׂא אַבְרָהָם אֶת עֵינָיו וַיַּרְא אֶת הַמָּקוֹם מֵרָחֹק` (בראשית כב:ד)]. |
@@ -170,8 +170,22 @@ the Sumerian recurs):
   *gaba-šu-ĝar* `יריב`, *a-da* `תחרות`, *eme* `לשון`, *ka* `פה`, *anše* `חמור`, *barag* `שק`, *ḫi-li* `חן`,
   *taškarin* `תאשור`, *zag-du₈* `מזוזה`, *si-muš₂* `קרני־זוהר`, *agrun* `חדר`, *kug-me-a* `כּוּג־מֵאָה`, *a-eštub*
   `מֵי־הַשִּׁבּוּט` (always vocalized), *u₈* `רחל`.
-- **Tool:** Zubi and *a-eštub* added to the name traps; the `שוב` gate refined (catches `שב`, `השיב…`, `משיב`, not
+- **Tool (EA1):** Zubi and *a-eštub* added to the name traps; the `שוב` gate refined (catches `שב`, `השיב…`, `משיב`, not
   `שבו`/`השיבוט`); `מקינה` is caught by the `קינה` reservation (write `מן הקן`).
+
+### 9.2 Part EA2 (156–307), 2026-10-21
+Full list: `1-אנמרכר-ואדון-ארטה/project.md` ("Proposals (EA2)"). Binding for EA3–EA4:
+- **Verbs:** *dag* `ברח` (`אבריח`; *šu … dag* `ברחה מ־`); *ḫu-luḫ* `הבהיל`; *sig₁₀* "put" `נתן`; *šu-a gi₄* `לידו
+  השיב`; *gu₃ nun e/di* `קול גדול השמיע`; *gu₃ … sig₁₀* `קול השמיע`; *ĝeštug₂ ĝar* `אוזן שׂם`; *taka₄* `עזב`;
+  *saĝ šum₂* `ראש נתן`; *saĝ ĝar* `ראש שׂם`; *ud zal* `נגה`; *si* `מילא`; *dub* (grain) `ערם`; *gam* `כרע`.
+- **Nouns:** *a-da-min₃* `תחרות`; *gaba-ri* `תשובה`; *piriĝ* `לביא`; *ḫu-ri₂-in* `נשר`; *buru₅* `דרור?`; *sa-par₄*
+  `מכמורת`, *ĝiš-bur₂* `פח`; *šubur* `משרת`; *naĝa* `בורית`; *taraḫ-maš* `תיש־היעל`; *muš-saĝ-kal* `הנחש
+  המובחר`; *{d}lamma* `אֵלַת־הַמָּגֵן`; *ad₆* `פגר`; *guru₇* `כרי`; *{sa}al-kad₅* `רשתות־המשא`; *anše barag la₂-e*
+  `חמורי־המשא`; *anše-bal* `חמורי־חילוף`; *še* `שעורה`; *kisal gu₂-en-na* `חצר אולם־האספה`.
+- **Particles:** *tukum-bi* `אם` (law corpus); *i₃-ge-en* `אם אכן` / `אכן`; *a-gin₇* `איך`.
+- **Fixed strings:** the answer formula 208–217 (for 526–535, copied exactly), the grain lines 281–284 (for
+  329–331, 355–356), *ĝi₆-par₄ {ĝiš}meš₃ gibil-gin₇ gurun il₂-la-na* `בגיפר שלו, הנושא תנובה כעץ־מס צעיר,`.
+- **Tool:** the formula check ignores quotation marks; the `שוב` gate anchored (`תשובה` is not a hit).
 
 ## Changelog
 - 2026-10-21: written before the first part, from the temple, lament, creation, flood, Gilgameš, law and wisdom

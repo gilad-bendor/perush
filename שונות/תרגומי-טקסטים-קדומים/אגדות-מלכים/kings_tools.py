@@ -108,7 +108,7 @@ RESERVED_COMMON = {
     # general gated words of the Sumerian corpora
     r'טוב|טובה|טובים|טובות': [r'dug₃|du₁₀|ṭāb|ṭa-a-b|DÙG'],
     r'ברך|ברכ|יבורך|מבורך': [r'šud₃|dub₃|karāb|ka-ra-ab'],
-    B + r'ו?(ה|י|ת|א|נ|ל)?שוב' + E + '|' + B + r'ו?(ה|י|ת|א|נ|ל|לה|וה|מ)שיב(ה|ו|ני|נו|ם|הו|ים)?' + E + '|ישובו|ישוב|תשוב|' + B + r'ו?שבה?' + E: [r'\bgur|-gur|gi₄|gi4|\bgi\b|târ|ta-a-r|tu-ur'],
+    B + r'ו?(ה|י|ת|א|נ|ל)?שוב' + E + '|' + B + r'ו?(ה|י|ת|א|נ|ל|לה|וה|מ)שיב(ה|ו|ני|נו|ם|הו|ים)?' + E + '|' + B + r'ו?(ישובו|ישוב|תשוב|נשוב|אשוב)' + E + '|' + B + r'ו?שבה?' + E: [r'\bgur|-gur|gi₄|gi4|\bgi\b|târ|ta-a-r|tu-ur'],
     B + P + r'(עוף|עופות|עף|עפה|עפו|יעוף|תעוף)' + E: [r'\bdal|-dal|\bdal₃|i-ša-\'u|ša-\'u'],
     B + r'ו?ה?עבד|עבוד': [r'kiĝ₂|kin\b|arad₂|ARAD|ardu'],
     r'מקדש': [r'eš₃'],
@@ -265,7 +265,7 @@ def check_traps(label, heb, problems, tr=''):
 
 
 def check_formulas(key, label, heb, tr, problems):
-    h = re.sub(r'[\[\]⟨⟩]', '', strip(FN.sub('', heb))).strip()
+    h = re.sub(r'[\[\]⟨⟩"\'“”]', '', strip(FN.sub('', heb))).strip()
     t = norm_tr(tr)
     for trx, hrx, what in FORMULAS[key]:
         if re.search(trx, t) and not re.search(hrx, h):
