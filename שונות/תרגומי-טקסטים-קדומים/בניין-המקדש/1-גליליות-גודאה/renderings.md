@@ -82,8 +82,8 @@ Words and formulas used in this text only (the shared ones are in `../renderings
 ## Run 2 (A viii–xiv)
 | Sumerian | Hebrew | Tag | Notes | Lines |
 |---|---|---|---|---|
-| *li{ĝiš}* | `בְּרוֹשׁ` | cognate (Akk. *burāšu*) ↔ מלכים א ה:כב; ישעיהו ס:יג | Burnt as incense. Hence *šu-ur₂-men* ≠ `ברוש` (open decision 3). | A.viii.10, xiii.26 |
-| *{ĝiš}šu-ur₂-men₂*; *{ĝiš}za-ba-lum*; *{ĝiš}esi*; *{ĝiš}NE-ḫa-an* | `שׁוּרְמֵן`; `עַרְעָר`; `עץ־אֵסִי`; `עצי־נֶחַן?` | equivalent ↔ ישעיהו ס:יג | Revision of renderings §3 (*šu-ur₂-men* `ברוש`); *esi* = `הָבְנִים` in creation project 2 (open decision 5). | A.xii.4–7 |
+| *li{ĝiš}* | `בְּרוֹשׁ` | cognate (Akk. *burāšu*) ↔ מלכים א ה:כב; ישעיהו ס:יג | Burnt as incense. Hence *šu-ur₂-men* ≠ `ברוש` (it is `שׁוּרְבִּין`, 2026-10-21). | A.viii.10, xiii.26 |
+| *{ĝiš}šu-ur₂-men₂*; *{ĝiš}za-ba-lum*; *{ĝiš}esi*; *{ĝiš}NE-ḫa-an* | `שׁוּרְבִּין`; `עַרְעָר`; `עץ־אֵסִי`; `עצי־נֶחַן?` | equivalent ↔ ישעיהו ס:יג | Revision of renderings §3 (*šu-ur₂-men* `ברוש`); 2026-10-21 harmonization: `שׁוּרְבִּין` (was `שׁוּרְמֵן`; the Gilgameš form, cognate of Mishnaic `שׁוּרְבִּינָא`), also A.xv.28–29; *esi* = `הָבְנִים` in creation project 2 (open decision 5). | A.xii.4–7 |
 | *šim erin ir-sim diĝir-ra-kam*; *i₃-bi₂ … du₃* | `שרף ארז – ריח האלים הוא –`; `את עשנו – בנה` | equivalent ↔ בראשית ח:כא; שיר השירים ג:ו | `קטורת`, `ניחוח` reserved; the smoke "built" with *du₃*. | A.viii.11–12, xiii.27 |
 | *udu-i₃ gukkal maš₂ niga*; *{f}ešgar ĝiš nu-zu*; *kuš … durun* | `כבש שמן, כבש־אַלְיָה, גדי מפוטם`; `גדייה שלא ידעה זכר`; `על עורה – הושיב` | equivalent ↔ ויקרא ג:ט; במדבר לא:יח | | A.viii.8–9 |
 | *du₆-du₆ … sig*; *inim-ĝar*; *aḫ dug₄-ga* | `את התלים – שיטח`; `קוֹל־דָּבָר`; `רוק המאמר` | equivalent ↔ ישעיהו מ:ד | *inim-ĝar* fixed here (renderings §3); `בת קול` avoided. | A.viii.4–5, xiii.11 |
@@ -169,7 +169,7 @@ Words and formulas used in this text only (the shared ones are in `../renderings
 | *ad* | `קורה` (`קורות ארז`) | equivalent ↔ שיר השירים א:יז | ETCSL "rafts" (xv 34). | A.xv.27–31, 34 |
 | *kar maḫ*; Kan-sura | `הרציף הנשגב`; `כַּנְסוּרָה` | | | A.xv.35 |
 | *ḫa-u₃-na*; *na-lu-a* | `חָאוּנָה?`; `נָלוּאָה?` | | Cargo stones (?); transliterated. | A.xvi.7 |
-| *esir₂*; *esir₂ a-ba-al*; *igi-esir₂*; *im-babbar₂* | `חֵמָר`; `חֵמָר יָבֵשׁ?`; `…`; `טיט לבן` | equivalent ↔ בראשית יא:ג; cognate? ↔ בראשית ו:יד | `חֵמָר` always vocalized. Open decision 1. | A.xvi.8 |
+| *esir₂*; *esir₂ a-ba-al*; *igi-esir₂*; *im-babbar₂* | `חֵמָר`; `חֵמָר יָבֵשׁ?`; `…`; `טיט לבן` | equivalent ↔ בראשית יא:ג; cognate? ↔ בראשית ו:יד | `חֵמָר` always vocalized. Open decision 1 – settled 2026-10-21: stays. | A.xvi.8 |
 | Madga; Kimaš | `מַדְגָּה`; `כִּימַשׁ` | | ORACC reads *ki-la₂* for Kimaš. | A.xvi.9, 15 |
 | *niĝ₂ gal-gal … šu … il₂* | `דברים גדולים – יד לו נשאו` | | As A.xi.12 (`יד … ישאו`). | A.xvi.14 |
 | *ni₂-bi … pad₃* | `את עצמם … גילו` | equivalent ↔ איוב כח:א–ב | *pad₃* = `גילה`. | A.xvi.16 |
@@ -307,7 +307,7 @@ Words and formulas used in this text only (the shared ones are in `../renderings
 | *šembi₂-zid*; *šu tag dug₄* | `פוך`; `קישט` / `מקושט` | equivalent ↔ ישעיהו נד:יא; דברי הימים א כט:ב; cognate (*guḫlu*) ↔ יחזקאל כג:מ | E&Nḫ 230. | A.xxvii.9, 24; xxviii 2 |
 | *še-er-zid*; *i₃-ti* | `זיו`; `אור הירח` | equivalent ↔ שיר השירים ו:י | | A.xxvii.10; xxviii 1; xxx 8 |
 | *igi-bi*; *šag₄-bi*; *bar-bi* | `פניו`; `תוכו`; `חוצו` | | | A.xxvii.11–13 |
-| *nam-šub šir₃ ḫa-mun*; *im ḫa-mun* | `לחש ושיר תואמים`; `טיט תואם` | equivalent ↔ תהלים כט:ט | | A.xxvii.12, 20 |
+| *nam-šub šir₃ ḫa-mun*; *im ḫa-mun* | `קסם ושיר תואמים`; `טיט תואם` | equivalent ↔ תהלים כט:ט; divergence ↔ דברים יח:י | 2026-10-21 harmonization: *nam-šub* = `קֶסֶם` (was `לחש`). | A.xxvii.12, 20 |
 | *gu₂-en*; *ki di kud {d}a-nun* | `לשכת־המועצה`; `מקום שבו הָאֲנוּנָּה חותכים דין` | equivalent ↔ מלכים א ז:ז; תהלים פב:א | | A.xxvii.14–15 |
 | *a-lal₃*; *inim šudu₃*; *šukur₂* | `ה…`; `דבר ברכה`; `מנה` | equivalent ↔ מלאכי ג:י | | A.xxvii.16–17; xxviii 9 |
 | *urin … sig₉*; *anzud₂ … a₂ … bad* | `הנֵסים … התקועים`; `אַנְזוּד … כנף פרש` | equivalent; divergence ↔ שמות כה:כ; מלכים א ו:כז | `כרוב` reserved. | A.xxvii.18–19 |
@@ -432,7 +432,7 @@ Words and formulas used in this text only (the shared ones are in `../renderings
 | *guru₇*; *maš* (interest); *gu₂ gur*; *guru₇-du₆ guru₇-maš* | `כְּרִי`; `תַּרְבִּית`; `אגר` (`לאגור ולאגור`); `תילי־הכרי וערמות־הכרי` | cognate (*karû*); equivalent ↔ ויקרא כה:לו; משלי ו:ח | *gu₂ gur* and the heaps as EWO 27, 57, 329. | B.xi.22–23; xv.3–4 |
 | *saĝ-tun₃*; *engar* | `רושם השדות`; `אִכָּר` | cognate loan (*ikkaru*) ↔ ישעיהו סא:ה; equivalent ↔ דברי הימים א כז:כו | `אדמה` reserved. | B.xi.24; xv.11 |
 | *ambar*; *ḪI.SUḪUR*; *suḫur*; *ĝiš-gi*; *gi ḫenbur* | `בִּצָּה`; `דגי־חִי־סוּחוּר`; `דגי־סוּחוּר`; `סבך הקנים`; `נֵצֶר קָנֶה` | equivalent ↔ יחזקאל מז:ט–י | Creation §6.1. | B.xii.1–2; xiv.26 |
-| *ra-gaba* | `רַכָּב` | cognate (Akk. *rākibu*) ↔ מלכים ב ט:יז | **Deviation** from Agade 163 (`ספינת הרץ`): the Hebrew word is the Akkadian loan itself. | B.xii.3 |
+| *ra-gaba* | `צִיר` (always vocalized) | equivalent ↔ משלי יג:יז; cognate (Akk. *rākibu* ~ `רַכָּב`) ↔ מלכים ב ט:יז (apparatus) | 2026-10-21 harmonization: `צִיר` in all corpora (was `רַכָּב` here, `ספינת הרץ` in Agade 163). | B.xii.3 |
 | *lamma enkud*; *enkud*; *ku₃-ĝal₂* (= *gu₂-gal*) | `אֵלַת־הַמָּגֵן, הַגּוֹבֶה`; `גּוֹבֶה` (vocalized); `מפקח התעלות` | equivalent ↔ בראשית מא:לד | *enkud* as EWO 419; *gu₂-gal* as creation §6.2. | B.xii.5; xv.1 |
 | *na de₅*; *na de₅ šum₂* | `לתת עצה`; `עצה לתת` | | As A4 / B.vi.14. | B.xii.7, 9 |
 | *mušen … rin₂-rin₂*; *nunuz*; *e₂-DI*; *ama … buluĝ₃* | `את ציפוריה – *לאסוף ולאסוף*`; `ביצה`; `קן?`; `הָאִמּוֹת שלה – לגדל` | equivalent ↔ דברים כב:ו; תהלים פד:ד | *rin₂* as B.v.22. | B.xii.10–12 |
@@ -505,3 +505,5 @@ Words and formulas used in this text only (the shared ones are in `../renderings
 | *e₂ kur gal-gin₇ an-ne₂ us₂-sa*; *ni₂ me-lem₄-bi kalam-ma ru-a* | `הבית שכהר גדול לשמים מגיע,`; `שאימתו וזוהרו על הארץ מוטלים,` | equivalent ↔ בראשית יא:ד; כח:יב; תהלים מח:ג; שמות טו:טז; דברים ב:כה; תהלים עב:יט | *ri* = `הטיל` (`מוטלים`). | B.xxiv.9–10 |
 | *nam-nir-ĝal₂*; *kur-kur-re zu-a* | `הסמכות`; `הארצות ידעו` | equivalent ↔ מלכים א ח:מג | | B.xxiv.12–13 |
 | *za₃-mi₂ eĝer-bi* | `אחרית התהילה שלו.` | equivalent ↔ תהלים עב:כ; איוב לא:מ; ירמיהו נא:סד | The colophon as A.xxx.16, without A's copula (B has no *-im*; open decision B3.7). | B.xxiv.17 |
+
+2026-10-21 harmonization (the lead's cross-corpus decisions; corpus `../renderings.md` §9.8): *šu-ur₂-men* `שׁוּרְמֵן` → `שׁוּרְבִּין` (A.xii.5, A.xv.28–29); *ra-gaba* `רַכָּב` → `צִיר` (B.xii.3); *nam-šub* `לחש` → `קֶסֶם` (A.xxvii.12); lapis `סַפִּיר`, eye paint `פוך`, *šudu₃* `ברכה`, *esir₂* `חֵמָר`, *niĝ₂-gen₆-na* `הנכונה` unchanged. The rows above are fixed.
