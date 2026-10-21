@@ -85,5 +85,7 @@ Ištar) → SB I 13–32, II (the deeds, the challenge, the beasts).
 ## Status
 | # | Project | Status |
 |---|---|---|
-| 1 | Enmerkar and the Lord of Aratta | in progress |
-| 2 | The Sargon Birth Legend | in progress |
+| 1 | Enmerkar and the Lord of Aratta | **complete** (2026-10-21): 641 entries in four parts, three review passes each; `translation.rtl.md` built; open decisions in `project.md` (EA1–EA4) |
+| 2 | The Sargon Birth Legend | **complete on King 1907** (2026-10-21): 49 entries, three review passes; `translation.rtl.md` built; **to be checked against Westenholz 1997 and K 7249** (not reachable) |
+
+Print stubs: `../הדפסה/אגדות-מלכים/1-אנמרכר-ואדון-ארטה.rtl.md`, `../הדפסה/אגדות-מלכים/2-אגדת-הולדת-סרגון.rtl.md`. Hand-off: `handoff--round2-run6.md`.

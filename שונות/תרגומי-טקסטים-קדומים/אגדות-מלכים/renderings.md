@@ -76,7 +76,7 @@ Gtn = iterative (`פַּעַם אַחַר פַּעַם`, never `שוב`).
 | *bur₂-ra-bi inim šag₄-ga-na bi₂-ib₂-be₂* | `בְּגָלוּי – אֶת דִּבְרֵי לִבּוֹ אוֹמֵר.` | 174, 377, 513. *bur₂* "loosen, reveal" is gated `פשר` only for a dream (temple corpus): here `בגלוי`. |
 | *kiĝ₂-gi₄-a en aratta{ki}-ra mu-na-ab-bal-e* | `הַשָּׁלִיחַ – אֶל אֲדוֹן אָרַטָּה – (אֶת הַדָּבָר) מוֹסֵר:` | 175, 514. *bal* "transmit" (here) ≠ "cross" (170): recorded. |
 | *a-a-zu lugal-ĝu₁₀ mu-e-ši-in-gi₄-in-nam*; *en unug{ki}-ga en kul-aba₄{ki}-a-ke₄ mu-e-ši-in-gi₄-nam*; *en-me-er-kar₂ dumu {d}utu-ke₄ mu-e-ši-in-gi₄-nam* | `אָבִיךָ, מַלְכִּי – אֵלֶיךָ שְׁלָחַנִי;`; `אֲדוֹן אוּרוּךְ, אֲדוֹן כּוּלַבָּה – אֵלֶיךָ שְׁלָחַנִי.`; `אֶנְמֶרְכַּר בֶּן אוּתוּ – אֵלֶיךָ שְׁלָחַנִי.` | 176–177, 185, 378–379, 515–516. *gi₄* "send (back)" = `שָׁלַח` here (the `שוב` gate is not triggered). "Your father": the diplomatic language of seniority [equivalent ↔ `בִּנְךָ בֶן הֲדַד מֶלֶךְ אֲרָם שְׁלָחַנִי אֵלֶיךָ` (מלכים ב ח:ט)]. |
-| *lugal-za dug₄-ga-ni nam-ĝu₁₀ taḫ-a-ni nam-ĝu₁₀*; *lugal-ĝu₁₀ a-na bi₂-in-dug₄ a-na bi₂-in-taḫ-am₃* | `מַלְכְּךָ – אֲמִירָתוֹ, מַה לִּי? תּוֹסַפְתּוֹ, מַה לִּי?`; `מַלְכִּי – מָה אָמַר, מָה הוֹסִיף – (הִנֵּה):` | 178–179, 185A–B, 380–381, 517–518. [equivalent ↔ `מַה לִּי וָלָךְ מֶלֶךְ יְהוּדָה` (דברי הימים ב לה:כא); `מָה לִּי וָלָךְ כִּי בָאתָ אֵלַי לְהִלָּחֵם בְּאַרְצִי` (שופטים יא:יב)]. |
+| *lugal-za dug₄-ga-ni nam-ĝu₁₀ taḫ-a-ni nam-ĝu₁₀*; *lugal-ĝu₁₀ a-na bi₂-in-dug₄ a-na bi₂-in-taḫ-am₃* | `מַלְכְּךָ – אֲמִירָתוֹ, מַה לִּי? תּוֹסַפְתּוֹ, מַה לִּי?`; `מַלְכִּי – מָה אָמַר, מָה הוֹסִיף – (הִנֵּה):` | 178–179, 185A–B, 380–381, 517–518. [equivalent ↔ `מַה לִּי וָלָךְ מֶלֶךְ יְהוּדָה` (דברי הימים ב לה:כא); `מַה לִּי וָלָךְ כִּי בָאתָ אֵלַי לְהִלָּחֵם בְּאַרְצִי` (שופטים יא:יב)]. |
 | *en-e kiĝ₂-gi₄-a kur-še₃ du-ur₂* / *aratta{ki}-aš inim mu-na-ab-taḫ-e* | `הָאָדוֹן – לַשָּׁלִיחַ הַהוֹלֵךְ אֶל הָהָר –` / `אֶל אָרַטָּה – דָּבָר מוֹסִיף לוֹ:` | 156–157, 337–338, 433. |
 | *inim gal {d}inana gal-zu inim-ma-ke₄ me-a mu-na-ab-tum₃* | `אֶת הַדָּבָר הַגָּדוֹל שֶׁל אִינַנָּה, יוֹדַעַת הַדָּבָר – אָנָה יָבִיא?` | 72 (ḫu-), 107, 163 (with *gi-zu₂-lum-ma*). *tum₃* = `הֵבִיא` (temple corpus). |
 | The Zubi passage (73–78, 108–113, 164–169): *ḫur-saĝ zubi-še₃ … ed₃-de₃* / *ḫur-saĝ zubi-ta … ed₃-de₃* / *šušin{ki}-e kur an-ša₄-an{ki}-a-še₃* / *peš₂ tur-gin₇ giri₁₇ šu … ĝal₂* / *ḫur-saĝ gal-gal ni₂-ba lu-a* / *saḫar-ra … gur₄-gur₄* | the first translator fixes (EA1), the later copies follow with only the verbal forms changed (wish in 73–78, imperative/second person in 108–113, past in 164–169) | *giri₁₇ šu ĝal₂* = `הִשְׁתַּחֲוָה` (temple corpus *kiri₃ šu ĝal₂*); *peš₂ tur* "little mice" `כְּעַכְבָּרִים קְטַנִּים`. |
@@ -222,6 +222,16 @@ Ensuḫkešdana) and for the other corpora:
 - **Fixed strings:** `השליח – פיו כבד; אינו יכול להשיבו.`; `לפנים – הצבת דבר על טיט – לא היתה;`; `אחרי שהמבול
   גרף,`; the commission with `שנית` / `שלישית` (477, 486).
 
+### 9.5 The Sargon Birth Legend (SB), 2026-10-21
+Full list: `2-אגדת-הולדת-סרגון/project.md` ("Proposals (SB)"). The §4 decisions held against the tablet: *quppu ša
+šūri* `קֻפָּה של קנים`; ESIR (*iddî*) = *iṭṭû* `חֵמָר`; *nadû* `השליך`; *elû* Š `העלה`; *dālû* `דולה־המים` (fixed
+string `אַקִּי דולה־המים`); *ana mārūti* `לְבֵן` (vocalized); *rabû* D `גידל`; *šakānu* `שָׂם`. New: *entu* / *ēnetu*
+`אֵנְתּוּ` (law corpus); *puzru* `סתר`; *peḫû* `אטם`; *bābu* (of a box) `פתח`; *aḫu* (river) `גדה` (`שפה` is
+reserved); *nukaribbūtu* `גַּנָּנוּת`; *šarrūta epēšu* `מלכות עשה` (↔ 1 Kgs 21:7); *dannu* `חזק`; *ṣalmāt qaqqadi*
+`שחורי הראש`; *akkullu* `קרדום`; *erû* (metal) `נחושת`; *lamû* `סבב`; *nabalkutu* Gtn `חצה, פעם אחר פעם`; *nakāru* D
+`שינה`; *rapādu* `שוטט`; *purīmu* `פרא`; *parû* `פרד`; *ṣabītu* `צבייה`; *nēšu* `אריה`.
+
 ## Changelog
 - 2026-10-21: written before the first part, from the temple, lament, creation, flood, Gilgameš, law and wisdom
   corpora and a reading of both transliterations (the formula survey of §3; the echo-control list of §4).
+- 2026-10-21: §9.1–§9.5 merged after each part (EA1–EA4, SB); one quotation corrected (Judg 11:12 `מַה`).

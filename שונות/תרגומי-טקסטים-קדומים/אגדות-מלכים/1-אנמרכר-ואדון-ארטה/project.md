@@ -34,10 +34,13 @@ the scattering); Gen 10 (the nations by their tongues; Erech, Akkad); Exod 4:10 
 Deut 11); the peace of the beasts (Isa 11:6–9; 65:25).
 
 ## Open decisions
-(Collected from the parts below: EA1 1–6, …)
+Collected per part below ("Open decisions (EA1)" … "(EA4)"). The ones that matter most for the commentary:
+EA1 – the tense of 134–155 (decided by the forms: past) and *nam-šub* `קסם`; EA4.1 – 501 "his mouth" or "the matter"
+was heavy; EA4.3 – 540 "a peg"; EA3.3 – *ur* "dog" or "champion".
 
 ## Progress
-(Each part records its drafting and its three review passes here.)
+All four parts drafted and reviewed (three passes each) on 2026-10-21; `translation.rtl.md` built (641 lines);
+`verify EA --strict` OK. Details per part below ("Progress (EA1)" … "(EA4)").
 
 ## Part EA1 (lines 1–155), 2026-10-21
 
