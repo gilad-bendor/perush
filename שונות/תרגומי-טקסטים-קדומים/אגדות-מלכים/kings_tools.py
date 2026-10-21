@@ -108,7 +108,7 @@ RESERVED_COMMON = {
     # general gated words of the Sumerian corpora
     r'טוב|טובה|טובים|טובות': [r'dug₃|du₁₀|ṭāb|ṭa-a-b|DÙG'],
     r'ברך|ברכ|יבורך|מבורך': [r'šud₃|dub₃|karāb|ka-ra-ab'],
-    B + r'ו?(ה|י|ת|א|נ|ל)?שוב' + E + '|' + B + r'ו?(ה|י|ת|א|נ|ל)שיב|ישובו|ישוב|תשוב|' + B + r'ו?שבו?' + E + '|' + B + r'ו?שבה' + E: [r'\bgur|-gur|gi₄|gi4|\bgi\b|târ|ta-a-r|tu-ur'],
+    B + r'ו?(ה|י|ת|א|נ|ל)?שוב' + E + '|' + B + r'ו?(ה|י|ת|א|נ|ל|לה|וה|מ)שיב(ה|ו|ני|נו|ם|הו|ים)?' + E + '|ישובו|ישוב|תשוב|' + B + r'ו?שבה?' + E: [r'\bgur|-gur|gi₄|gi4|\bgi\b|târ|ta-a-r|tu-ur'],
     B + P + r'(עוף|עופות|עף|עפה|עפו|יעוף|תעוף)' + E: [r'\bdal|-dal|\bdal₃|i-ša-\'u|ša-\'u'],
     B + r'ו?ה?עבד|עבוד': [r'kiĝ₂|kin\b|arad₂|ARAD|ardu'],
     r'מקדש': [r'eš₃'],
@@ -127,7 +127,7 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     'אן': ('An (אַן)', r'(^|\s)an-(ne₂|ra|na)|\{d\}an\b|\ban-na\b'),
     'שומר': ('Sumer (שׁוּמֶר)', r'ki-en-gi'), 'אור': ('Urim (אוּר)', r'urim|uri₂'),
     'אנשן': ('Anšan (אַנְשָׁן)', r'anšan'), 'אכי': ('Aqqi (אַקִּי)', r'Ak-ki'),
-    'זובי': ('Zubi (זוּבִּי)', r'zu-bi'), 'אשתר': ('Ištar (אִשְׁתַּר)', r'Iš-tar'),
+    'זובי': ('Zubi (זוּבִּי)', r'zubi|zu-bi'), 'שיבוט': ('*a-eštub* (מֵי־הַשִּׁבּוּט; Modern "cloning")', r'a-eštub'), 'אשתר': ('Ištar (אִשְׁתַּר)', r'Iš-tar'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')

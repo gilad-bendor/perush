@@ -150,7 +150,28 @@ Akkad `אַכַּד`, *me* `הַ־מֶה` ★, *kiĝ₂-gi₄-a* `שָׁלִיח
 Šubur `שׁוּבּוּר`, Ḫamazi `חַמָזִי`, Zubi `זוּבִּי`, Azupirānu `אֲזוּפִּירָנוּ`, Aqqi `אַקִּי`.
 
 ## 9. Merged from the parts
-(Filled after each part: EA1, EA2, EA3, EA4, SB.)
+### 9.1 Part EA1 (1–155), 2026-10-21
+Full list: `1-אנמרכר-ואדון-ארטה/project.md` ("Proposals (EA1)"). Binding for EA2–EA4 (copy the strings exactly where
+the Sumerian recurs):
+- **Time words:** *ud-ba* / *ud-bi-a* = `אז` (always); *ud re-a* = `בימים ההם`.
+- ***kur***: before a country name `ארץ` (`ארץ אַנְשָׁן`, `ארץ דִּלְמוּן`, `ארץ מַרְטוּ`, `אֶרֶץ אַכַּד` for *ki-uri*);
+  otherwise `הר`; *kur-kur* `הארצות`; *ḫur-saĝ* `הררים`, *ḫur-saĝ zubi* `הַרְרֵי זוּבִּי` (★ Zubi).
+- **People:** *nam-lu₂-ulu₃* `האנושות`, + a city `אנשי X`; *lu₂-u₁₈-lu* `האדם`; *uĝ₃* `העם`; *erin₂* `החיל`.
+- **Verbs:** *pa e₃ ak* `הזהיר`; *galam* `בכשרון … עיבד`; *si sa₂* `יישר`; *sikil* `זיכה`; *mu₂* `הצמיח`; *de₆*
+  `נשא`; *tum₂* `הוביל`; *tum₃* `הביא`; *ed₃* `עלה`/`ירד`; *pad₃* `מצא`; *zig₃* `קם`; *gul* `הרס`; *dal* (caus.)
+  `העיף`; *saĝ keše₂* `ראש קשר`; *u₆ e* `התפעל`; *igi bar* `הביט`; *ĝizzal ak* `קשב עשה`; *na de₅* `עצה נתן`;
+  *dub₃ ĝar* `ברך שׂם`; *gu₂ ĝiš ĝar* `צוואר לעץ שׂם`.
+- **Fixed strings:** the messenger `שליח – יודע דבר, בעל כוח־עמידה –`; the question `את הדבר הגדול של אִינַנָּה,
+  יודעת הדבר – אנה יביא?`; the Zubi passage 108–113 (`אל הַרְרֵי זוּבִּי – תעלה בו!` / `מהַרְרֵי זוּבִּי – תרד עמו!` /
+  `שׁוּשַׁן – עד ארץ אַנְשָׁן –` / `כעכברים קטנים – לה ישתחוו!` / `ההררים הגדולים – ההומים מעצמם –` / `בעפר – לפניה
+  יתרפסו!`); the threat 115–123 and the demand 124–135 (template for 187–207, 487–496); the counsel 69–70 (for
+  626–627); `לְבֵנַת כולבה`; `ככסף בסדק־הסלע`; `כתר־הראש … חבש`; `הר הַ־מֶה הזכים`.
+- **Words:** *muš* `נחש`, *ĝiri₂* `עקרב`, *kir₄* `צבוע`, *ur-maḫ* `אריה`, *ur-gir₁₅* `כלב`, *ur-bar-ra* `זאב`,
+  *gaba-šu-ĝar* `יריב`, *a-da* `תחרות`, *eme* `לשון`, *ka* `פה`, *anše* `חמור`, *barag* `שק`, *ḫi-li* `חן`,
+  *taškarin* `תאשור`, *zag-du₈* `מזוזה`, *si-muš₂* `קרני־זוהר`, *agrun* `חדר`, *kug-me-a* `כּוּג־מֵאָה`, *a-eštub*
+  `מֵי־הַשִּׁבּוּט` (always vocalized), *u₈* `רחל`.
+- **Tool:** Zubi and *a-eštub* added to the name traps; the `שוב` gate refined (catches `שב`, `השיב…`, `משיב`, not
+  `שבו`/`השיבוט`); `מקינה` is caught by the `קינה` reservation (write `מן הקן`).
 
 ## Changelog
 - 2026-10-21: written before the first part, from the temple, lament, creation, flood, Gilgameš, law and wisdom
