@@ -1,0 +1,2 @@
+Tells GitHub Pages to serve docs/ as is, without Jekyll - which would drop every name starting with "_".
+Written by _RTL-EDITOR (html-mirror.ts).
