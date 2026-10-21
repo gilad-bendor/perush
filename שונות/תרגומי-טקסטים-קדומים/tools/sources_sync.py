@@ -44,6 +44,7 @@ import json
 import os
 import re
 import shutil
+import ssl
 import subprocess
 import sys
 import time
@@ -140,6 +141,34 @@ def http_get(url, retries=3, binary=False):
     return data
 
 
+# Some servers (ORACC) send their certificate without the intermediate one; a client must then supply it.
+# tools/certs/ holds such public intermediates; verification stays on (they chain to a root in the system store).
+_CERT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'certs')
+
+
+def _ssl_context_with_intermediates():
+    ctx = ssl.create_default_context()
+    for name in sorted(os.listdir(_CERT_DIR)) if os.path.isdir(_CERT_DIR) else []:
+        if name.endswith('.pem'):
+            ctx.load_verify_locations(cafile=os.path.join(_CERT_DIR, name))
+    return ctx
+
+
+def curl_cacert_args():
+    """curl arguments that add tools/certs/ to the CA store (for the curl fallback)."""
+    bundle = os.environ.get('CURL_CA_BUNDLE') or os.environ.get('SSL_CERT_FILE') or '/etc/ssl/certs/ca-certificates.crt'
+    pems = [os.path.join(_CERT_DIR, n) for n in sorted(os.listdir(_CERT_DIR))] if os.path.isdir(_CERT_DIR) else []
+    pems = [p for p in pems if p.endswith('.pem')]
+    if not pems or not os.path.exists(bundle):
+        return []
+    combined = os.path.join(_CERT_DIR, '.combined-ca-bundle.crt')      # local only (tools/certs/.gitignore)
+    with open(combined, 'wb') as out:
+        for f in [bundle] + pems:
+            with open(f, 'rb') as inp:
+                out.write(inp.read() + b'\n')
+    return ['--cacert', combined]
+
+
 def _http_get(url, ua, retries):
     last = None
     for attempt in range(retries):
@@ -155,9 +184,17 @@ def _http_get(url, ua, retries):
                 time.sleep(10 * (attempt + 1))
         except urllib.error.URLError as e:
             reason = str(e.reason)
+            if 'CERTIFICATE_VERIFY_FAILED' in reason:
+                # The server omits an intermediate certificate (e.g. ORACC): retry with tools/certs/ added.
+                try:
+                    req = urllib.request.Request(url, headers={'User-Agent': ua})
+                    with urllib.request.urlopen(req, timeout=120, context=_ssl_context_with_intermediates()) as r:
+                        return r.read()
+                except Exception as e2:
+                    reason = 'with tools/certs: %r' % (e2,)
             if 'CERTIFICATE_VERIFY_FAILED' in reason and shutil.which('curl'):
-                # Python's bundled CA store lacks some intermediate certificates (e.g. ORACC); curl uses the system's.
-                p = subprocess.run(['curl', '-sSfL', '--max-time', '600', '-A', ua, url], capture_output=True)
+                p = subprocess.run(['curl', '-sSfL', '--max-time', '600', '-A', ua] + curl_cacert_args() + [url],
+                                   capture_output=True)
                 if p.returncode == 0:
                     return p.stdout
                 reason = 'curl: ' + p.stderr.decode('utf-8', 'replace').strip()
