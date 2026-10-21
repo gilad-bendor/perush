@@ -291,6 +291,9 @@ def main(argv):
             # A line can have several variant reconstructions (eBL "variants"): the ATF repeats the line number.
             variant_recons = recons[1:]
             tr = " ".join(parts_text(t.get("parts")) for t in ln.get("translation", []) if t.get("language") == "en")
+            # Other languages (e.g. Mitto's German for Nergal and Ereškigal MB, 2026-10-21): printed as **T (xx):**.
+            tr_other = [(t.get("language"), parts_text(t.get("parts"))) for t in ln.get("translation", [])
+                        if t.get("language") not in (None, "en")]
             # Notes: the chapter ATF omits many of them, so take them from the JSON variants (fall back to the ATF).
             notes = []
             for v in ln.get("variants", []):
@@ -315,6 +318,9 @@ def main(argv):
                 f.write(f"- **N (variant, other manuscripts):** {vr}\n")
             if tr:
                 f.write(f"- **T:** {tr}\n")
+            for lang, text in tr_other:
+                if text:
+                    f.write(f"- **T ({lang}):** {text}\n")
             if forms:
                 gl = "; ".join(f"*{form}* ← {', '.join(lem)}{(' “' + short_gloss(lem[0]) + '”') if gloss(lem[0]) else ''}" for form, lem in forms)
                 f.write(f"- **L:** {gl}\n")
