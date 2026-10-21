@@ -128,8 +128,8 @@ RESERVED = {
     r'מנעול': [],
     B + P + r'פרי(ה|ו|ך|י)?' + E: [r'^SUX'],          # never in Akkadian (inbu = תנובה); allowed in Sumerian (gurun)
     B + P + r'דוד(י|ך|ו|ה|ים|יך|יו|ייך|יה|ינו|נו)?' + E: [r'dādu|dadū|dādū|da-a-d|da-di|da-du'],
-    r'אהב|אוהב|אהוב': [r'râmu|rāmu|raʾīmu|rāʾimu|ruʾāmu|narāmu|ritūmu|ki aĝ₂|ki-aĝ₂|ki aŋ₂|aŋ[measure]|aĝ₂'],
-    r'צחק|צחוק': [r'ṣīhtu|ṣīḫtu|ṣiāhu|ṣiāḫu|ṣâhu|ṣīḫ|ṣīh'],
+    r'אהב|אוהב|אהוב': [r'râmu|rāmu|raʾīmu|rāʾimu|ruʾāmu|narāmu|ritūmu|murtâmu|ki aĝ₂|ki-aĝ₂|ki aŋ₂|aŋ[measure]|aĝ₂'],
+    r'צחק|צחוק': [r'ṣīhtu|ṣīḫtu|ṣiāhu|ṣiāḫu|ṣâhu|ṣīḫ|ṣīh|ṣūhiš|ṣūḫiš|ṣuhhu'],
     r'תפוח': [r'hašhūru|ḫašḫūru|ḫašḫur|hašhur|hašhur'],
     B + P + r'(גן|גנה|גנו|גני|גנים|גנת|גנך|גנם|גננו)' + E: [r'kirû|kiri₆|kirâ|kirî'],
     B + P + r'(יונה|יונת|יונים|יונתי)' + E: [r'summatu|tu-gur₄|tu{mušen}|tu-gur4'],
@@ -153,7 +153,7 @@ RESERVED = {
     r'כסיל|אויל|אולת': [r'lil₂|lillu'],
     B + P + r'(טוב|טובה|טובים|טובות|טובו)' + E: [r'dug₃|du₁₀|ṭābu|ṭiābu|ṭūbu|ṭâbu|dug[good]'],
     B + r'ו?(ה|י|ת|א|נ|ל)?שוב' + E + '|' + B + r'ו?(ה|י|ת|א|נ|ל)שיב|ישובו|ישוב|תשוב|שבה|שבו': [r'gi₄|\bgur|-gur|târu|tuāru|gi[turn]|gur[turn]'],
-    r'ברך|ברכ|יבורך|מבורך': [r'karābu|ikribu|šud₃|šudu₃|kiriš'],
+    B + r'ו?[לבמה]?(ברך|בירך|ברכה|ברכת|ברכו|ברכה|בירכה|בירכו|יברך|תברך|אברך|נברך|מבורך|יבורך|בורך|ברוך|ברכות)' + E: [r'karābu|ikribu|šud₃|šudu₃|kiriš'],
     r'ארר|ארור|אורר': [r'arāru|nam\b.*ku₅|nam-ku₅'],
     r'קלל': [r'aš₂|(^|\s)aš(\s|$)|aš[curse]|arratu'],
     B + r'ו?[לבמהשכ]{0,2}(נכרי|נכריה|נכריים|נכרים|נכר|התנכר)' + E: [r'kur₂|nakru|lukur|nakāru'],
@@ -164,7 +164,7 @@ RESERVED = {
 TRAPS = {
     'אותו': ('Utu (אוּתוּ)', r'\{d\}utu\b|Utu\['), 'איננה': ('Inana (אִינַנָּה)', r'inana|inanna|Inanak'),
     'אור': ('Urim (אוּר)', r'urim|Urim'), 'אן': ('An (אַן)', r'(^|\s)an-(ne₂|ra|na)|\{d\}an\b|An\['),
-    'אנו': ('Anu (אָנוּ)', r'a-nu|anum|Anum\[|Anu\['), 'סין': ('Sîn (סִין)', r'Sîn|{d}EN\.ZU|{d}suen|30'),
+    'אנו': ('Anu (אָנוּ)', r'(^|\s)\{d\}a-nu|(^|\s)a-nu-(um|um₂|ni)|Anum\[|Anu\['), 'סין': ('Sîn (סִין)', r'Sîn|{d}EN\.ZU|{d}suen|30'),
     'באו': ('Bau (בָּאוּ)', r'ba-u₂|ba-ba₆'), 'ארורו': ('Aruru (אֲרוּרוּ)', r'a-ru-ru'),
     'דוד': ('dādu (דּוֹד)', r'dādu|da-di|da-du|da-a-d'), 'דודי': ('dādu (דּוֹדִי)', r'dādu|da-di|da-du|da-a-d'),
     'דודים': ('dādū (דּוֹדִים)', r'dādu|da-du|da-a-d'), 'כלה': ('kallatu (כַּלָּה)', r'kallatu|hīrtu|ḫīrtu|emi|e₂-gi₄'),
