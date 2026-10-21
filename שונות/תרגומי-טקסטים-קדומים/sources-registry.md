@@ -121,6 +121,10 @@ Added 2026-10-20. Base texts:
 - **`Thureau-Dangin-1905-1907--Gudea-Cylinders/`**: archive.org OCR of *Les cylindres de Goudéa* (1905, partial) and VAB 1 (1907, pp. 88–141), public domain, rank 5.
 - **`_records-only--Gudea-and-temple-building/`**: Edzard 1997 (RIME 3/1, the current edition), Wilson 1996, Averbeck 1987/1997/COS 2.155, Jacobsen 1987, Suter 1998/2000, Falkenstein 1953/1966, **Hurowitz 1985/1992 (the standard Bible comparison)**: none open.
 
+### 4.4k The netherworld: the Descent of Ištar and Inana's Descent (the netherworld corpus, `העולם-התחתון/`)
+- **`eBL/Descent-of-Ishtar-SB/`, `eBL/Descent-of-Ishtar-NA/`** (eBL `L/1/8`; SB 148 labels, NA 11 lines; gitignored, built-in `sources_sync.py` rule): the Akkadian base text, with Foster's translation (rank 3). Not available: Lapinkivi 2010 (SAACT 6), Dalley 1989, Talon 1988, Gabbay's study of 81 (cited through eBL's notes).
+- **`ETCSL/1.4.1--Inanas-Descent/`** (CC BY-NC-SA, committed): the Sumerian composite (440 entries) and translation; **`ORACC/epsd2-literary--Q000343--Inanas-Descent/`** (CC0, committed): ePSD2 lemma + morph for every line. Not available: Sladek 1974, Katz 2003, Buccellati 1982.
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).

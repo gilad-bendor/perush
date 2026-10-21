@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-21 (after Round 2, run 4; the guidelines split into a lean core and three sibling files).
+Last updated: 2026-10-21 (Round 2, runs 5–7 in parallel in Claude Cloud; run 5 done).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -52,6 +52,7 @@ All of it is a **first draft**: complete, verified by script, three review passe
 | `ספרות-החכמה-והצדיק-הסובל/` | 1 Ludlul I–V; 2 the Babylonian Theodicy | 822 | `wisdom_tools.py verify` |
 | `קינות-על-ערים/` | 1 the Lament for Ur; 2 the Curse of Agade (OB + Ur III) | 763 | `lament_tools.py verify --strict` |
 | `בניין-המקדש/` | 1 the Gudea Cylinders A–B | 1,300 | `temple_tools.py verify GU --strict` |
+| `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent | 599 | `netherworld_tools.py verify IS --strict`, `… verify IN --strict` |
 
 Every finished translation has a print stub in `הדפסה/` (guidelines §7.4). Each corpus has a `parallels-index.md`
 with its key findings at the top.
@@ -63,7 +64,7 @@ remaining runs of the Round 2 plan (`curated-translation-candidates.md`):
 
 | Run | Texts | Base text | New corpus |
 |---|---|---|---|
-| 5 | **The Descent of Ištar** + **Inana's Descent to the Netherworld** | eBL (Ištar); ETCSL 1.4.1 + ORACC (Inana) | the netherworld |
+| 5 | **The Descent of Ištar** + **Inana's Descent to the Netherworld** | eBL (Ištar); ETCSL 1.4.1 + ORACC (Inana) | the netherworld: **done (first draft), 2026-10-21**, `העולם-התחתון/` |
 | 6 | **Enmerkar and the Lord of Aratta** + **the Sargon Birth Legend** | ETCSL 1.8.2.3 + ORACC; King 1907 (public domain) or a newer open edition | Gen 11 (the confusion of tongues) and Exod 2 |
 | 7 | **OB love lyrics** + **Sumerian proverbs** (a selection) + **OB letters** (a selection) | ORACC AkkLove / SEAL; ETCSL 6.1; ORACC/CDLI letters | everyday voices |
 
@@ -109,6 +110,12 @@ Each `project.md` lists its own. These cross corpora, so they matter most:
 | Bitumen | (Gudea) | `חֵמָר` (Gen 11:3) or `כֹּפֶר` (Gen 6:14, the flood corpus) |
 | Gudea against earlier corpora | `שורמן`, `הנכונה`, `רכב`, `ברכה` | `ברוש`, `אמת`, `רץ`, `תפילה` (see `בניין-המקדש/1-גליליות-גודאה/project.md`) |
 | Sumerian *uĝ₃* "people" | `עָם` (laments) | `הָאֲנָשִׁים` (creation) |
+| *kur* (the netherworld) | `הָאָרֶץ` (= *erṣetu*; netherworld corpus) | `הַר` / `אֶרֶץ` "highland, foreign land" in the other Sumerian corpora (correct there: another sense) |
+| *sukkal* / *šukkallu* | `וְזִיר` (creation, temple, netherworld) | `שַׂר` (Gilgameš VIII) |
+| *uznu* / *ĝeštug₂* in "set the ear" | `אֹזֶן` (netherworld: the literal image) | `בִּינָה` (Gilgameš default) |
+| *ḫarrānu* / *ḫar-ra-an* | `אֹרַח` (Gilgameš, netherworld) | `דֶּרֶךְ` (laments) |
+| *kabattu* | `כָּבֵד` (wisdom, netherworld) | `רוּחַ` (Gilgameš) |
+| *ur₄* "pluck" | `קָטַף` (netherworld) | check the creation corpus (`אָסַף`?) |
 
 The decisions settled earlier (2026-10-18) are in the Gilgameš renderings §12, `חוקים-ובריתות/corpus.md` and the
 flood corpus renderings.
