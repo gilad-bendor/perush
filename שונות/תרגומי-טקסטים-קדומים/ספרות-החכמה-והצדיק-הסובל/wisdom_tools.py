@@ -99,7 +99,7 @@ RESERVED = [
     (W + r"(?:הנני|הנה)" + E, None, "annû 'yes' = הֵן (Ludlul's anna); הִנֵּנִי (Gen 22:1) only in the apparatus"),
     (W + r"(?:תחמוד|חמד|חמדה|יחמוד|חמדת)" + E, None, "Akkadian says 'lift the eyes to' (našû īnī) = נָשָׂא עֵינַיִם; לֹא תַחְמֹד (Ex 20:13 in the repository's numbering) only in the apparatus"),
     (W + r"(?:מוסר|מוסרי|תורה|תורת|תורתי)" + E, None, "ûrtu = צַו, tērtu = הוֹרָאָה, Sum. na = עֵצָה; מוּסָר / תּוֹרָה (Prov 1:8) only in the apparatus"),
-    (W + r"(?:שוחד|שחד|השוחד)" + E, ["ṭātu", "kadrû", "kadrā", "šulmānu"], "שֹׁחַד only for ṭātu (Ludlul IV; Ex 23:8, Deut 16:19)"),
+    (W + r"(?:שוחד|שחד|השוחד)" + E, ["ṭātu"], "שֹׁחַד only for ṭātu (Ludlul IV; Ex 23:8, Deut 16:19)"),
     (W + r"(?:כיס|הכיס|כיסו|כיסך|בכיסו|בכיס|כיסים)" + E, ["kīsu"], "כִּיס only for its cognate kīsu (Deut 25:13 `בְּכִיסְךָ`)"),
     (W + r"(?:סאה|הסאה|סאים|סאתים|בסאה|סאתו)" + E, ["sūtu"], "סְאָה only for its cognate sūtu"),
     (W + r"(?:מאזניים|מאזנים|מאזני|המאזניים|במאזניים|במאזני)" + E, ["zibānītu", "gišrinnu", "giš-rin₂", "gesrinnu"], "מֹאזְנַיִם only for zibānītu / gišrinnu (Lev 19:36)"),
