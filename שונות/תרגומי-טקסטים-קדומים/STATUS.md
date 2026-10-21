@@ -106,6 +106,11 @@ A coordinator (one agent per run) gets this brief, adapted to its texts:
 
 ## 6. Open decisions for the user
 
+**The user's standing rules (2026-10-21):** **no purchases** (paid or lending-only sources stay records-only: e.g. Westenholz 1997
+is not bought, so the Sargon Birth Legend stays on King 1907, with its caveat in the project); **decide minor things
+yourself** (renderings, harmonizing splits between corpora, scope details) and record each decision where it belongs
+(the corpus `renderings.md`, the `project.md`, this table). Only major choices go to the user.
+
 Each `project.md` lists its own. These cross corpora, so they matter most:
 
 | Decision | Now | Alternatives / where |
@@ -131,7 +136,7 @@ Each `project.md` lists its own. These cross corpora, so they matter most:
 | *ṣabātu* "seize" | `תָּפַס` (everyday voices, since *aḫāzu* = `אָחַז` [cognate] occurs there) | `אָחַז` (Gilgameš): should Gilgameš follow? |
 | *en₃-du* "song"; *guru₇* "granary" | `זֶמֶר`; `אָסָם` (everyday voices) | `זִמְרָה`; `כְּרִי` (legends of kings) – align |
 | *māru* "son" as a lover's endearment | `בֵּן` (literal; everyday voices) | `יַקִּיר` |
-| The Sargon Birth Legend's base text | King 1907 (our transcription from the page images) | check against Westenholz 1997, pp. 36–49, and K 7249 (the user would need to obtain them; see `sources-registry.md` §9) |
+| The Sargon Birth Legend's base text | King 1907 (our transcription from the page images) | Westenholz 1997, pp. 36–49, and K 7249 – not to be bought (the user's rule); check if an open copy appears |
 
 The decisions settled earlier (2026-10-18) are in the Gilgameš renderings §12, `חוקים-ובריתות/corpus.md` and the
 flood corpus renderings.
