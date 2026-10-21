@@ -18,8 +18,8 @@
       "Bash(tail:*)",
       "Bash(gawk:*)",
       "Bash(node:*)",
-      "Bash(./.claude/tools/hebrew-grep:*)",
-      "Bash(./.claude/tools/files-of-verses:*)"
+      "Bash(./claude/perush-tools/hebrew-grep:*)",
+      "Bash(./claude/perush-tools/files-of-verses:*)"
     ],
     "deny": []
   }

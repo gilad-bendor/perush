@@ -4,7 +4,7 @@ A multi-agent deliberation system where a configurable set of Participant-Agents
 
 ## The Bigger Picture
 
-This project is a sub-system of the **Perush** project — a methodological allegorical interpretation of the Torah. The full methodology, dictionary, and interpretive framework are documented in `../CLAUDE.md` (which `@`-imports `../.claude/system-prompt--Hebrew.md`; the dictionary itself is in `../פירוש/הקדמה-לפירוש.rtl.md`). Consult these when:
+This project is a sub-system of the **Perush** project — a methodological allegorical interpretation of the Torah. The full methodology, dictionary, and interpretive framework are documented in `../claude/perush-system-prompt/hebrew/` (the perush system-prompt; the dictionary itself is in `../פירוש/הקדמה-לפירוש.rtl.md`). Consult these when:
 
 - You need to understand the dictionary system, the interpretive method, or the quality criteria.
 - A design decision requires understanding what the AI-Agents are actually *analyzing*.
@@ -192,8 +192,8 @@ The `participants` array is authoritative: all iteration (assessments, template 
 **Critical**: This project is **developed** in `_DELIBERATION-ROOM/` but **runs** from the root project directory (`../`), because agents need access to:
 - `../פירוש/הקדמה-לפירוש.rtl.md` — the dictionary section (`## המילון`) is extracted from it and injected into system prompts (`DICTIONARY_SOURCE_MD` in `config.ts`)
 - `../פירוש/` — the commentary segments (accessed by agents via tools)
-- `../.claude/tools/hebrew-grep` — the Hebrew search tool
-- `../.claude/system-prompt--tools.md` — the tools' instructions, `@include`d into `prompts/system-prompt-base-prefix.md`
+- `../claude/perush-tools/hebrew-grep` — the Hebrew search tool
+- `../claude/perush-system-prompt/shared/system-prompt--tools.md` — the tools' instructions, `@include`d into `prompts/system-prompt-base-prefix.md`
 
 ## Technology Stack
 

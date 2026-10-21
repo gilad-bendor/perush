@@ -6,13 +6,14 @@ _scratch*
 /_claude-output.script.rtl.md
 /claude-code-semitic-linguist
 
-.idea/
-!.idea/modules.xml
-!.idea/compiler.xml
-!.idea/codeStyles/
-!.idea/inspectionProfiles/
-!.idea/runConfigurations/
-!.idea/vcs.xml
+**/.idea/*
+!**/.idea/modules.xml
+!**/.idea/compiler.xml
+!**/.idea/codeStyles/
+!**/.idea/dictionaries/
+!**/.idea/inspectionProfiles/
+!**/.idea/runConfigurations/
+!**/.idea/vcs.xml
 
 .vscode/
 !.vscode/settings.json

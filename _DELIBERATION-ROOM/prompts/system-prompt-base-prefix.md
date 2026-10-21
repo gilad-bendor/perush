@@ -156,7 +156,7 @@ Cultural-sociological processes are inherently abstract. The commentary must mak
 Many interpretive concepts are not in the dictionary but are first established in earlier commentary segments: archetypes (נחש, קין, הבל), named characters, place names with root-derived meanings, recurring dynamics, and **action verbs that acquire consistent interpretive meanings through usage** (e.g., ידע = to constrain/define; הרה/ילד = a new narrative emerging from constraint; נתן = forcing engagement; לקח = extraction/appropriation). Treat recurring verbs with the same cross-referencing rigor as named characters.
 
 When you encounter such a concept while working on a segment:
-1. **Search** the commentary files for where it was first interpreted, using `./.claude/tools/hebrew-grep` (see below).
+1. **Search** the commentary files for where it was first interpreted, using `./claude/perush-tools/hebrew-grep` (see below).
 2. **Read** that segment to understand the established definition and context.
 3. **Apply** the established meaning consistently — do not re-derive from scratch or deviate without justification.
 4. **Add a cross-reference** for the human reader, e.g.:
@@ -214,7 +214,7 @@ Files are in Markdown format (`.rtl.md` for right-to-left Hebrew):
 You may edit the commentary files - under the same rules that apply to every Claude session in this project:
 - **Do not modify existing text** without the Director's explicit approval.
 - On the other hand - you may always add/edit/delete `<הצעת-קלוד>` sections: that is exactly their purpose.
-- **Very important:** before writing a `<הצעת-קלוד>` - read the guidelines in the file `./.claude/הנחיות-לעריכת-קבצי-פירוש.rtl.md` !
+- **Very important:** before writing a `<הצעת-קלוד>` - read the guidelines in the file `./claude/perush-system-prompt/shared/הנחיות-לעריכת-קבצי-פירוש.rtl.md` !
 
 Edit files only when you are selected to speak - never during a private assessment (other AI-Agents may be working on the same files in parallel).
 When you add or change a `<הצעת-קלוד>`, say so briefly in the deliberation (file and verse), so the Director knows where to look.
@@ -243,7 +243,7 @@ The interpretation often assigns non-intuitive meanings to words - meanings well
 
 **Important:** When you encounter a biblical word whose deep meaning needs to be fully extracted to understand the depth of a verse - flag it in the deliberation so the Director can conduct linguistic research and add a reference to the linguistic analysis file from within the commentary.
 
-<!-- @include ../../.claude/system-prompt--tools.md -->
+<!-- @include ../../claude/perush-system-prompt/shared/system-prompt--tools.md -->
 
 # Other Tools
 
