@@ -1,0 +1,15 @@
+# The branch "auto-docs" holds nothing but docs/ - the site GitHub Pages serves (Pages: branch "auto-docs", folder
+# "/docs"). It is generated (by _RTL-EDITOR and _BIBLE-VIEWER on main), and kept at a single commit by
+# scripts/commit-auto-docs.sh on main. See scripts/ensure-docs-worktree.sh there.
+.DS_Store
+*.log
+node_modules/
+# Mirrors of scratch files (main ignores "_scratch*" everywhere).
+_scratch*
+# Mirrors of the sub-projects' own files - not published.
+/docs/_*-FROM-MD/_BIBLE-VIEWER/
+/docs/_*-FROM-MD/_DELIBERATION-ROOM/
+/docs/_*-FROM-MD/_RTL-EDITOR/
+# Mirrors of temporary local variants of Perush files (NNNN-book-from-to-title.<number>.rtl.md)
+/docs/_*-FROM-MD/פירוש/**/*.[0-9].rtl.*
+/docs/_*-FROM-MD/פירוש/**/*.[0-9][0-9].rtl.*
