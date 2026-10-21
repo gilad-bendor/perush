@@ -13,9 +13,12 @@
 #     formula, the bare Hebrew contains the fixed Hebrew – the SAME Hebrew as in the Laws of Hammurabi;
 #  6. cross-collection: an identical normalization (>= 2 words) in LH or in another project with different Hebrew is
 #     listed for review ("REVIEW"), as are identical normalizations inside the project;
-#  7. translation.rtl.md lines == annotated ">" lines (when no file number is given).
+#  7. translation.rtl.md lines == annotated ">" lines (when no file number is given);
+#  8. name traps: a name whose plain spelling is another word must be vocalized where the source has it
+#     (Inana = `אִינַנָּה`, 2026-10-21 cross-corpus harmonization: plain `איננה` reads "is not"); the old
+#     form `אִינַאנָּה` / `אינאנה` is flagged everywhere.
 # Written 2026-10-18.
-import sys, os, re, glob, collections
+import sys, os, re, glob, collections, unicodedata
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import laws_config as C
 
@@ -131,6 +134,14 @@ SUM = [
     (r'\b{d}i7\b|\bi7-de3\b|\bi7-lu2-ru-gu2', r'נהר', 'i7 = nāru = נהר (LH F33)'),
 ]
 
+# name traps: (regex on the transliteration / normalization, the vocalized Hebrew required in the raw '>' line,
+# regex of a forbidden form on the bare line, label)
+NAMES = [
+    (r'\{d\}inanna\b|\{d\}inana\b', 'אִינַנָּה', NB + r'[ובלהמש]*אינאנה' + NE,
+     'Inana = `אִינַנָּה`, always vocalized (2026-10-21 harmonization; not `אִינַאנָּה`)'),
+]
+NFC = lambda x: unicodedata.normalize('NFC', x)
+
 KEYTOK = ['šumma', 'awīlum', 'aʾīlu', 'iddâk', 'inaddin', 'išaqqal', 'iriab', 'ušallam', 'ileqqe', 'utâr', 'itâr', 'maḫar', 'kīma']
 
 
@@ -190,6 +201,9 @@ def main():
             for r in RESERVED_RE:
                 if r.search(h):
                     probs += 1; print(f'file {num} {e["n"]}: reserved /{r.pattern}/ in: {h}')
+            for sre, voc, bad, lab in NAMES:
+                if re.search(bad, h):
+                    probs += 1; print(f'file {num} {e["n"]}: {lab}: {h}')
             s = byn.get(e['n'])
             if not s:
                 continue
@@ -197,6 +211,9 @@ def main():
             for hre, lre, lab in GATED:
                 if re.search(hre, h) and not re.search(lre, src):
                     probs += 1; print(f'file {num} {e["n"]}: {lab}: {h}')
+            for sre, voc, bad, lab in NAMES:
+                if re.search(sre, src) and NFC(voc) not in NFC(e['heb'][0]):
+                    probs += 1; print(f'file {num} {e["n"]}: {lab}: {e["heb"][0]}')
             text = s['atf'] if sumerian else s['ts']
             for pat, heb, lab in forms:
                 if re.search(pat, text) and not re.search(heb, hb):

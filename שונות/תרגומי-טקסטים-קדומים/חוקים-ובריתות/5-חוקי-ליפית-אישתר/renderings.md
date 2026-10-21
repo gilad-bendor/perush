@@ -129,7 +129,7 @@ The rule is the same: a Sumerian word takes LH's Hebrew of its Akkadian equivale
 | Enlil; Nunamnir | `אֶנְלִיל` (plain `אנליל`, as LH); `נוּנַמְנִיר` | corpus §1; creation corpus | 3, 24, 34, 52, 85, 433′–498′ |
 | Ninisina | `נִין־אִיסִינָה` | creation corpus | 6 |
 | Utu | `אוּתוּ` (always vocalized: `אותו` "him") | flood corpus | 27, 430′, 438′, 485′ |
-| Inanna | `אִינַאנָּה` (plain `אינאנה`; `אִינַנָּה` would strip to `איננה` "is not") | creation corpus (plain form) | 51 |
+| Inanna | `אִינַנָּה` (**always vocalized**: plain `איננה` reads "is not"; 2026-10-21 harmonization, was `אִינַאנָּה`) | six corpora | 51 |
 | Ninurta | `נִינוּרְתָּה` | corpus §1 | 496′ |
 | Ašnan; Šakkan | `דָּגָן` (always vocalized; not the god Dagan `דָּגַן`); `שַׁכַּן` (always vocalized) | creation corpus §3 (*ašnan* = `דָּגָן`) | 478′ |
 | Lipit-Ištar | `לִיפִּית־אִישְׁתַּר` (plain `ליפית־אישתר`, as T5) | | 21, 35, 39, 84, 434′ |
@@ -186,3 +186,5 @@ The rule is the same: a Sumerian word takes LH's Hebrew of its Akkadian equivale
 | *u₄ da-ri₂* | *ūmī dārûti* | `לימי נצח` | `לעולם` | corpus §0 | 500′ |
 | *šagina*; *ša₃ e₂-gal*; *nu-banda₃* | *šakkanakku*; (*ša libbi ekalli*); *laputtû* | `מושל הצבא`; `(איש) פנים ההיכל`; `המפקח` | `שר הצבא` (Gen 21:22), `נוגש`, `שוטר` (Exod 5) | | 104′–106′ |
 | *ensi₂*; *ugnim* | *iššiakku*; *ummānu* | `מושל`; `החיל` | | LH 3384′, 3564′ | 467′, 97′ |
+
+2026-10-21 harmonization (cross-corpus decision 9): Inana = `אִינַנָּה`, always vocalized (six corpora), replacing `אִינַאנָּה` (51; the head of the translation; §4.1). `laws_verify.py LI` now requires the vocalized `אִינַנָּה` wherever the transliteration has *{d}inanna*.

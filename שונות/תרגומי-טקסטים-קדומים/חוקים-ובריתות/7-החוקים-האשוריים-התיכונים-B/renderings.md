@@ -68,7 +68,7 @@ Columns: Akkadian (ORACC `norm`; CDA lemma) | Hebrew | rejected | echo | lines.
 | ***qēpu*** | **`פקיד`** (`הפקידים`, `פקידי המלך`) | `נציב` | [equivalent] `וְיַפְקֵד פְּקִדִים` (בראשית מא:לד) | o iii 17, 24, 32, 43, 50 |
 | *edānu*; *lā mašāʾe* | `מועד`; `בלי לשכוח` | | | o iii 21–22 |
 | *ana sīr eqlišu* | `לפי (מידת) שדהו` | | | o iii 26; r vi 7, 26 |
-| *sukkallu*; *ṭupšarru* | `שר`; `סופר` | | [equivalent] `וְאֵלֶּה הַשָּׂרִים אֲשֶׁר לוֹ` (מלכים א ד:ב) | o iii 30–31 |
+| *sukkallu*; *ṭupšarru* | `וזיר` (`הוזירים`; 2026-10-21 harmonization, was `שר`); `סופר` | `שר` | [equivalent] `וְאֵלֶּה הַשָּׂרִים אֲשֶׁר לוֹ` (מלכים א ד:ב) | o iii 30–31 |
 | *izuzzu* | `עמד` (`יעמדו`; `זה עם זה יעמדו` for *ištu ahāʾiš izzazzū*) | | | o iii 32, 35; r vi 7, 25 |
 | ***tahūmu*** | **`תחום`** [cognate loan: Mishnaic/Aramaic `תְּחוּם` < Akk. *taḫūmu*] | **`גבול`** (reserved for Deut 19:14; 27:17; also LH *paṭṭu*) | [equivalent] `לֹא תַסִּיג גְּבוּל רֵעֲךָ` (דברים יט:יד) | o iv 11, 20; r vii 20 |
 | ***samāhu*** D; *summuhu* | **`עירב`** (`עירב`; o iv 35 `*מעורב*`) | **`הסיג`** (reserved: the Deuteronomic verb, not the Akkadian's meaning), `סיפח` (interpretive), `השיג` | [equivalent] `לֹא תַסִּיג` (דברים יט:יד); `שָׂדֶה בְשָׂדֶה יַקְרִיבוּ` (ישעיהו ה:ח) | o iv 12, 15, 25, 35 |
@@ -96,3 +96,5 @@ Columns: Akkadian (ORACC `norm`; CDA lemma) | Hebrew | rejected | echo | lines.
 | *tarāhu* | `*עדר*` (uncertain) | `חפר` (= *herû*) | | r vii 19 |
 | *lawû* | `הקיף` | | [equivalent] `בְּכָל גְּבֻלוֹ סָבִיב` (בראשית כג:יז) | r vii 20 |
 | ***kudurru***; ***kadāru*** D | **`ציון`**; **`ציין`** (noun and verb of one root, as in Akkadian) | `גבול`, `גבל` (reserved), `אבן גבול` | [equivalent] `אֲשֶׁר גָּבְלוּ רִאשֹׁנִים` (דברים יט:יד); `הַצִּיבִי לָךְ צִיֻּנִים` (ירמיהו לא:כ) | r vii 21 |
+
+2026-10-21 harmonization (cross-corpus decision 14): *sukkallu* = `וזיר` (as SUKKAL / *sukkal* in all corpora), replacing `שר`: o iii 30 `אחד מן השרים` → `אחד מן הוזירים`.
