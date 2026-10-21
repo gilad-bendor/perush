@@ -196,3 +196,81 @@ All proposals of `2-התאודיציה-הבבלית/project.md` § Th1 are **acc
 
 ### 10.6 After the Theodicy 144–297 (run 6, 2026-10-19)
 All proposals of `2-התאודיציה-הבבלית/project.md` § Th2 are **accepted** (grep `annotated-Th2.rtl.md`): *Narru* `נַרּוּ`, *Zulummar* `זוּלוּמָּר` (the commentary's identifications Enlil / Ea in the notes); *patāqu* `עִצֵּב`; *santak* `תדיר`; *ṣurru* `טוּחוֹת` (open); *nīru* `מוֹטָה` (`עול` = *abšānu*); *pūḫu* `תמורה`; *isḫappu* `בליעל`; *pašallu* `סְגוֹר` (`כֶּתֶם` would trip the `תם` check; open). Line 297's "shepherd, sun of the people" is **the king** (eBL; cf. Ludlul I 55), not Šamaš.
+
+## 11. Round 3, run 4 (2026-10-21): the Great Prayer to Šamaš, Counsels of Wisdom, the Dialogue of Pessimism, the Instructions of Šuruppag
+Fixed by the run's coordinator **before drafting**, for four parallel translators (one per text; guidelines §5.1 "Parallel texts of one corpus"). §1–§10 bind as before; this section adds what the four texts need, and wins where it is more specific. Translators propose additions in their `project.md`; the coordinator merges them into §11.x below.
+
+### 11.1 Names
+| Source | Hebrew | Notes |
+|---|---|---|
+| Šamaš (god); *šamšu* (sun) | שַׁמַשׁ; שֶׁמֶשׁ | **In SH both occur: vocalize every occurrence of both** (checked). CW, DP: the god only, vocalized at the first occurrence. |
+| Aya (Šamaš's bride) | אַיָּה – **always vocalized** (checked) | unvocalized "where?" |
+| Ebabbar | אֵבַּבַּר | "the shining house" (Šamaš's temple in Sippar and Larsa), in a note. |
+| Ḫubur; Kurnugê; *erṣet lā târi* | חֻבּוּר; כּוּרְנוּגִי; אֶרֶץ אֵין שׁוּב | the netherworld corpus (`../העולם-התחתון/renderings.md`); `שׁוּב` licensed by *târu*. |
+| Ninurta; Ninkasi; Nisaba; Utu (Sum.); Ubara-Tutu; Ziusudra; Šuruppag (person and city) | נִינוּרְתָּה; נִינְכָּסִי; נִיסָבָּה; אוּתוּ – **always vocalized** (`אותו` "him"); אוּבָּר־טוּטוּ; זִיוּסוּדְרָה; שׁוּרוּפַּךְ | Šuruppag as in the flood corpus §2 (its lines 1–13 are copied verbatim, checked). |
+| Išme-karāb; Enlil-banda (the Counsels' colophon names) | אִישְׁמֵה־כָּרָאבּ; אֶנְלִיל־בַּנְדָּה | CW A+104 (check the eBL normalization). |
+| *ištarītu*; *kulmašītu*; *ḫarimtu* | אִשְׁתַּרִית; כּוּלְמַשִּׁית; זוֹנָה | *ḫarimtu* = `זוֹנָה` (Gilgameš corpus, binding #2), [equivalent]; the cult women transliterated, explained in a note; `קְדֵשָׁה` only for *qadištu*. |
+
+### 11.2 Justice, trade and the Torah's commercial laws (SH 58–129, CW, DP 63–69)
+| Akkadian | Hebrew | Tag / reason |
+|---|---|---|
+| *dīnu*; *dânu*; *dayyānu*; *bēl dīni* | דִּין; דָּן; דַּיָּן; בַּעַל דִּין | law corpus. |
+| *kittu*; *kīnu*; *kīniš*; *mīšaru*; *išaru* | אֱמֶת; נֶאֱמָן; בֶּאֱמוּנָה; מֵישָׁרִים; יָשָׁר | §3. **No `צֶדֶק`** (checked): SH 110 *ša kīni ṣābit zibānīti* = `האוחז במאזניים בֶּאֱמוּנָה` against `מֹאזְנֵי צֶדֶק` (ויקרא יט:לו) is a [divergence] to note. |
+| *ṣalpu*; *ṣiliptu* / *ṣaliptu*; *ṣalāpu* | עִקֵּשׁ; עִקְּשׁוּת; עִקֵּשׁ (v.) | "crooked": [equivalent] ↔ `עִקְּשׁוּת פֶּה` (משלי ד:כד), `תּוֹעֲבַת יְהוָה עִקְּשֵׁי לֵב` (משלי יא:כ). |
+| *sartu* | מִרְמָה | "fraud, crime" (DP 40–45); [equivalent] ↔ `מֹאזְנֵי מִרְמָה תּוֹעֲבַת יְהוָה` (משלי יא:א). §3's *sarrātu* "lies" = `כְּזָבִים` stays where the sense is "lies": check `lemma 'sartu'` and record. |
+| *ṭātu* | שֹׁחַד (gated) | [equivalent] ↔ `וְשֹׁחַד לֹא תִקָּח` (שמות כג:ח), `לֹא תִקַּח שֹׁחַד` (דברים טז:יט); Ludlul IV. *māḫir ṭāti* = `לוֹקֵחַ שֹׁחַד`? – no: `לקח` is reserved for *leqû*, so *maḫāru* = `קִבֵּל` (`מקבל שוחד`); the Bible's `לָקַח שֹׁחַד` goes in the apparatus. |
+| *zibānītu*; *gišrinnu* | מֹאזְנַיִם (gated) | [equivalent] ↔ `מֹאזְנֵי צֶדֶק` (ויקרא יט:לו), `מֹאזְנֵי מִרְמָה` (משלי יא:א). |
+| *abnu*; *aban kīsi*; *kīsu* | אֶבֶן; אֶבֶן הַכִּיס; כִּיס (gated) | **[cognate] twice** ↔ `לֹא יִהְיֶה לְךָ בְּכִיסְךָ אֶבֶן וָאָבֶן` (דברים כה:יג); *kīsu* also "capital" (SH 104 *uḫallaq kīsa*): keep `כִּיס` and say so in the note. |
+| *sūtu*; *šiqlu*; *biltu* (talent); *uṭṭatu* (grain; a grain-weight) | סְאָה (gated) [cognate]; שֶׁקֶל; כִּכָּר; גַּרְגִּיר / דָּגָן by sense | the everyday-voices corpus (`שקל`, `ככר`). `אֵיפָה` never (↔ דברים כה:יד, in the apparatus). |
+| *ṣibtu* (interest); *ḫubullu* (interest-bearing debt); *nēmelu*; *atru*; *ummânu* (creditor; loan) | תּוֹסֶפֶת; חוֹב; רֶוַח; יֶתֶר; נוֹשֶׁה | LH precedents (*ṣibtum* `תוספת`, *ḫubullum* `חוב`). `נֶשֶׁךְ`, `תַּרְבִּית`, `רִבִּית` never (checked; ↔ שמות כב:כד, ויקרא כה:לו–לז, דברים כג:כ in the apparatus). *ummânu* "creditor" vs *ummânu* "scholar" (`אֻמָּן`, §4): different words, note it. |
+| *tamkāru*; *samallû*; *kāru* | תַּגָּר; שׁוּלְיַת־תַּגָּר (by sense); נָמֵל | law corpus (`תגר`). |
+| *arnu*; *arna šūzubulu* | עָוֹן; הֵטִיל עָוֹן (by sense) | §2. |
+| *abbūt enši ṣabātu* | אָחַז בַּעֲנִיַּת הַחַלָּשׁ? – fix in SH 99 | *ṣabātu* = `אָחַז` (§6.7 harmonization). |
+| *riābu* (requite); *gimlu*; *gamālu* | גָּמַל; חֶמְלָה; חָמַל | **A deviation from the law corpus** (`הֶחֱלִיף` "replace"): here the sense is "requite" (CW A+11, A+15, A+62), and `גָּמַל` is the Hebrew word ([equivalent] ↔ `גְּמָלַתְהוּ טוֹב וְלֹא רָע`, משלי לא:יב). *gamālu* stays `חָמַל` (the false friend). |
+
+### 11.3 Piety, parents, long life (CW, SH 130–166)
+| Akkadian | Hebrew | Tag / reason |
+|---|---|---|
+| *palāḫu*; *pāliḫ ili*; *puluḫtu* | יָרֵא; יְרֵא אֵל; יִרְאָה | §2. CW 9 *pilaḫšunūti* (father and mother) = `יְרָאֵם` [equivalent] ↔ `אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ` (ויקרא יט:ג). |
+| *kubbutu* (*kabātu* D) | כִּבֵּד (gated) | [cognate] ↔ `כַּבֵּד אֶת אָבִיךָ וְאֶת אִמֶּךָ` (שמות כ:יא; the repository numbers the Decalogue Ex 20:1–13 and Deut 5:6–18: print every verse first). |
+| *arāku* D + *ūmū* | הֶאֱרִיךְ יָמִים (gated) | [cognate] twice ↔ `לְמַעַן יַאֲרִכוּן יָמֶיךָ` (שמות כ:יא), `לְמַעַן יַאֲרִיכוּ יָמֶיךָ` (דברים כה:טו). Only where the Akkadian has *arāku* (CW A+91). |
+| *balāṭa uttar* (*watāru* D) | יוֹסִיף חַיִּים | **Not** `האריך ימים`: the Akkadian has neither *arāku* nor *ūmu*. [equivalent] ↔ `יִרְאַת יְהוָה תּוֹסִיף יָמִים` (משלי י:כז), and the weights law's `לְמַעַן יַאֲרִיכוּ יָמֶיךָ` (דברים כה:טו), noted. |
+| *ṭāb eli šamaš* / *ul ṭāb eli šamaš* | טוֹב עַל שַׁמַשׁ / לֹא טוֹב עַל שַׁמַשׁ | the Hebrew idiom of אסתר א:יט (`אִם עַל הַמֶּלֶךְ טוֹב`): literal and natural; `טוב` licensed by *ṭābu*. |
+| *ikkibu* | תּוֹעֵבָה (*ikkib Marduk* = `תּוֹעֲבַת מַרְדּוּךְ`) | the everyday-voices / law corpora; [equivalent] ↔ `תּוֹעֲבַת יְהוָה` (משלי יא:א; יב:כב; טז:ה). |
+| *ûrtu* | צַו | from *(w)âru* like *tērtu* (`הוֹרָאָה`): the debated link with `תּוֹרָה` goes in a note (`תּוֹרַת אִמֶּךָ`, משלי א:ח); `תּוֹרָה` / `מוּסָר` never in a `>` line (checked). |
+| *našû īnī* (*ana*) | נָשָׂא עֵינַיִם (אֶל) | literal; [equivalent] ↔ `וַתִּשָּׂא אֵשֶׁת אֲדֹנָיו אֶת עֵינֶיהָ אֶל יוֹסֵף` (בראשית לט:ז), `לֹא תַחְמֹד אֵשֶׁת רֵעֶךָ` (שמות כ:יג); `חמד` never (checked). |
+| *tappû*; *ibru*; *aššat / alti tappê* | חָבֵר; רֵעַ; אֵשֶׁת חֲבֵרוֹ | §3: *tappû* = `חבר`, so SH 88 is `אשת חברו`, against the Decalogue's `רֵעֶךָ` (a [divergence] in the word, an [equivalent] in the law). |
+| *zêru*; *zāʾiru* | שָׂנֵא; שׂוֹנֵא | law corpus; CW 45 ↔ `אִם רָעֵב שֹׂנַאֲךָ` (משלי כה:כא). |
+| *suppû*; *sullû* (n.); *teslītu*; *karābu*; *ikribu*; *labān appi* | תְּחִנָּה; תַּחֲנוּנִים; תַּחֲנוּן; בֵּרֵךְ; תְּפִלָּה; "שִׁפְשׁוּף הָאַף" (literal, §2) | §2 and the §6.7 harmonization; `lemma` before fixing. |
+| *niqû*; *qutrinnu*; *šagigurrû* | זֶבַח; קְטֹרֶת; נִדְבָה | `נדבה` [equivalent] (freewill offering, ויקרא כב:כא). |
+
+### 11.4 The Dialogue of Pessimism: the fixed refrain and its parts
+Every exchange repeats one frame; **one Hebrew for each part** (checked by `verify` through the repeated lines):
+| Akkadian | Hebrew |
+|---|---|
+| *arad mitanguranni* | `עֶבֶד, הִתְרַצֵּה לִי!` (*magāru* Gtn imperative, "keep complying with me"; the note gives Machinist's reading) |
+| *annû bēlī annû* | `הֵן, אֲדוֹנִי, הֵן!` (*annû* = Ludlul's *anna* `הֵן`; `הִנֵּנִי` of בראשית כב:א only in the apparatus, [equivalent]) |
+| *ē arad anāku … ul X* / *lā X* | `לֹא, עֶבֶד, אֲנִי … לֹא X!` |
+| *lā taX bēlī lā taX* | `אַל תX, אֲדוֹנִי, אַל תX!` |
+| *X bēlī X* (imperative) | `X, אֲדוֹנִי, X!` |
+| *amēlu ša …* | `הָאָדָם אֲשֶׁר …` (*amēlu* = `אָדָם`, the narrative corpora) |
+| *usātu*; *ēpiš usāti*; *bēl usāti* / *bēl lemutti* | עֶזְרָה; עוֹשֵׂה עֶזְרָה; בַּעַל עֶזְרָה / בַּעַל רָעָה (also SH 122, CW A+16) |
+| *enenna mīnû ṭāb* | `עַתָּה, מַה טּוֹב?` ↔ `מִי יוֹדֵעַ מַה טּוֹב לָאָדָם` (קהלת ו:יב) [equivalent] |
+
+### 11.5 Šuruppag (Sumerian): binding models
+- **The Sumerian precedents bind**: the everyday-voices corpus (`../קולות-היום-יום/renderings.md`: the proverbs' vocabulary – *niĝ₂-gen₆-na* `נְכוֹנָה`, *niĝ₂-gig* `תּוֹעֵבָה`, *kal* `יָקָר`, *zid* `אֱמֶת` / `אִישׁ אֱמֶת`, *si sa₂* `יֹשֶׁר`, *lu₂-kur₂* `אִישׁ נָכְרִי`, *ḫu-ru-um* `נִבְעָר`, *lil₂* `כְּסִיל`, *gu₂* `צַוָּאר`, *ku₇* `מָתוֹק`, *zeb* `עָרֵב`), then the creation and city-lament corpora (Sumerian), then the flood corpus §2 (Šuruppag 1–13).
+- **The frame:** *na de₅* = `נָתַן עֵצָה`, *na* = `עֵצָה`, *dumu-ĝu₁₀* = `בְּנִי` [equivalent ↔ `שְׁמַע בְּנִי מוּסַר אָבִיךָ`, משלי א:ח], *ĝizzal … ak* = `הִטָּה אֹזֶן` [equivalent ↔ `הַט אָזְנְךָ וּשְׁמַע דִּבְרֵי חֲכָמִים`, משלי כב:יז], *ab-ba* = `הַזָּקֵן` – all from the flood corpus §2. Lines 1–13 are copied verbatim; 73–82 and 143–152 copy them where the Sumerian is identical and change exactly what differs (`wisdom_tools.py sux SU` lists them).
+- **The prohibitive** *na-* + verb = `אַל` + future (`אַל תִּקְנֶה`), never `לֹא` (the Sumerian has a modal prefix, the English "you should not" hides it); *nu-* = `לֹא`; *ḫe₂-* by the morphology (wish or affirmative: legends-of-kings rule); *ša-* (affirmative, "then surely") = `הֲרֵי` or a plain future, fixed by the translator at its first occurrence and kept.
+- **Look for** (read the transliteration first; briefs say "look for", never "translate as"): a boundary (*ki-sur-ra*, `גְּבוּל` gated; ↔ דברים יט:יד, כז:יז – the survey's "do not move a boundary" may not be in this composite); surety (*šu du₈*, 19–20 ↔ משלי יא:טו, כב:כו); the neighbour's wife / a married woman (*nitalam*, 32–34 ↔ `לֹא תִנְאָף` (שמות כ:יב); משלי ו:כט); theft (28–31 ↔ `לֹא תִגְנֹב` (שמות כ:יב)); cursing (50); the slave girl (49, 131–133, 193); honour of the elder brother / mother / father (172–174, 255–260 ↔ שמות כ:יא); the palace as a river (94–96 ↔ קהלת א:ז `כָּל הַנְּחָלִים הֹלְכִים אֶל הַיָּם וְהַיָּם אֵינֶנּוּ מָלֵא`); the prayer that cools (139–140).
+- Reserved as in §8, licensed by the Sumerian words (`wisdom_tools.py` allow-lists): `טוב` *dug₃*; `ידע` *zu*; `שלם` *silim*; `רשע` *erim₂*; `חסד` *sag₉*; `עפר` *saḫar*; `טיט` *im*; `לקח` *dab₅* (flood line 9 only; elsewhere *dab₅* = `אָחַז` / `תָּפַס`, the everyday-voices rule); `ארר` *nam … kud*.
+
+### 11.6 Reserved in this run (checked by `wisdom_tools.py verify`, in addition to §8)
+Never: `נֶשֶׁךְ` / `תַּרְבִּית` / `רִבִּית`; `אֵיפָה` (and "where?" is `הֵיכָן`); `הִנֵּה` / `הִנֵּנִי`; `חָמַד`; `תּוֹרָה` / `מוּסָר`; `צֶדֶק` (§8). Gated: `שֹׁחַד` (*ṭātu*), `כִּיס` (*kīsu*), `סְאָה` (*sūtu*), `מֹאזְנַיִם` (*zibānītu*), `גְּבוּל` (*kudurru*, *miṣru*, *ki-sur-ra*), the root `כבד` (*kabātu* family, *kabattu*), the root `ארך` (*arāku*). Vocalize: `שַׁמַשׁ` / `שֶׁמֶשׁ` in SH; `אַיָּה`; `אוּתוּ`; `אָמָה` (*geme₂*).
+
+### 11.7 Files and order
+| Key | Project folder | Text | Base | Labels |
+|---|---|---|---|---|
+| SH | `3-התפילה-הגדולה-לשמש/` | the Great Prayer to Šamaš | eBL `L/3/4` (ed. G. Rozzi; tr. Foster): `../sources/eBL/Shamash-Hymn-SB/` | 1–200 |
+| CW | `4-עצות-חכמה/` | Counsels of Wisdom | eBL `L/2/3` (ed. Zs. J. Földi; tr. Foster): `../sources/eBL/Counsels-of-Wisdom-SB/` | 1–54, A+1–A+105 (159) |
+| DP | `5-דו-שיח-הפסימיות/` | the Dialogue of Pessimism | eBL `L/2/4` (ed. A. A. Fadhil; tr. Foster, Sarabia, Khatabe): `../sources/eBL/Dialogue-of-Pessimism-SB/` | 1–38, a+1–a+7, 39–86 (93) |
+| SU | `6-הוראות-שורופך/` | the Instructions of Šuruppag | ETCSL 5.6.1 (+ ORACC morph via `../tools/sumerian_workbench.py`): `../sources/ETCSL/5.6.1--Instructions-of-Shuruppag/` | 1–280 with 82A, 152A, 163A–B, 199A–B, 266A, 273A (288) |

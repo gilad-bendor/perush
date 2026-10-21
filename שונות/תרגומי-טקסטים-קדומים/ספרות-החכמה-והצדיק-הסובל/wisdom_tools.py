@@ -92,6 +92,23 @@ RESERVED = [
      "Akkadian has no ṣdq here: kittu = אֱמֶת, kīnu = נֶאֱמָן, išaru = יָשָׁר; never צַדִּיק / צֶדֶק (Job's key word)"),
     (W + r"(?:רשע|רשעים|רשעה|הרשיע)" + E, ["raggu", "ṣēnu", "lemnu", "raggiš", "ṣēnû", "rušû", "erim2[", "nig2-erim2[", "niĝ₂-erim₂"],
      "רָשָׁע only for raggu / ṣēnu (Gilgameš corpus raggu = רָשָׁע)"),
+    # Round 3, run 4 (2026-10-21): the Torah's laws of weights, bribes, interest, parents and long life
+    (W + r"(?:נשך|נשכו|תרבית|מרבית|רבית|ריבית)" + E, None,
+     "no נֶשֶׁךְ / תַּרְבִּית / רִבִּית (Ex 22:24, Lev 25:36–37): ṣibtu = תּוֹסֶפֶת (LH), ḫubullu = חוֹב; the Bible terms go in the apparatus"),
+    (W + r"(?:איפה|האיפה|ואיפה)" + E, None, "אֵיפָה (Deut 25:14) has no Akkadian counterpart here: sūtu = סְאָה [cognate]; for 'where' write הֵיכָן"),
+    (W + r"(?:הנני|הנה)" + E, None, "annû 'yes' = הֵן (Ludlul's anna); הִנֵּנִי (Gen 22:1) only in the apparatus"),
+    (W + r"(?:תחמוד|חמד|חמדה|יחמוד|חמדת)" + E, None, "Akkadian says 'lift the eyes to' (našû īnī) = נָשָׂא עֵינַיִם; לֹא תַחְמֹד (Ex 20:13 in the repository's numbering) only in the apparatus"),
+    (W + r"(?:מוסר|מוסרי|תורה|תורת|תורתי)" + E, None, "ûrtu = צַו, tērtu = הוֹרָאָה, Sum. na = עֵצָה; מוּסָר / תּוֹרָה (Prov 1:8) only in the apparatus"),
+    (W + r"(?:שוחד|שחד|השוחד)" + E, ["ṭātu", "kadrû", "kadrā", "šulmānu"], "שֹׁחַד only for ṭātu (Ludlul IV; Ex 23:8, Deut 16:19)"),
+    (W + r"(?:כיס|הכיס|כיסו|כיסך|בכיסו|בכיס|כיסים)" + E, ["kīsu"], "כִּיס only for its cognate kīsu (Deut 25:13 `בְּכִיסְךָ`)"),
+    (W + r"(?:סאה|הסאה|סאים|סאתים|בסאה|סאתו)" + E, ["sūtu"], "סְאָה only for its cognate sūtu"),
+    (W + r"(?:מאזניים|מאזנים|מאזני|המאזניים|במאזניים|במאזני)" + E, ["zibānītu", "gišrinnu", "giš-rin₂", "gesrinnu"], "מֹאזְנַיִם only for zibānītu / gišrinnu (Lev 19:36)"),
+    (W + r"(?:גבול|גבולו|גבולות|הגבול|גבולך)" + E, ["kudurru", "miṣru", "pāṭu", "taḫūmu", "ki-sur-ra", "ki-sur", "kisura"], "גְּבוּל only for kudurru / miṣru / ki-sur-ra (Deut 19:14, 27:17)"),
+    (W + r"(?:כבד|כיבד|כבדו|כבדה|יכבד|יכבדו|תכבד|כבדם|כבדהו|מכבד|נכבד|נכבדים|כבדי|כבדך)" + E,
+     ["kabātu", "kabtu", "kabattu", "kubbutu", "kabtūtu", "kabbaru", "dugud", "kubbuttu", "kibittu"],
+     "the root כבד only for the kabātu family (Ex 20:11 `כַּבֵּד אֶת אָבִיךָ`) and kabattu 'liver'"),
+    (W + r"(?:יאריך|יאריכו|האריך|הארכת|תאריך|אורך|ארוך|ארוכים|ארוכה|ארך)" + E, ["arāku", "arku", "urruku", "arkatu", "arkiš", "urruk", "mūrak"],
+     "the root ארך only for its cognate arāku (Ex 20:11, Deut 5:15, 25:15 in the repository's numbering)"),
 ]
 
 # Unvocalized strings that read as another word. (regex on the RAW line, lemma prefixes that make the hit an
@@ -114,6 +131,14 @@ TRAPS = [
     (RW + r"אן" + RE_, ["An["], "An must be vocalized אַן"),
     (RW + r"אמה" + RE_, ["geme2["], "geme₂ 'slave woman' must be vocalized אָמָה (unvocalized: 'cubit', 'her mother')"),
     (RW + r"(?:מה|המה)" + RE_, ["me[essence"], "the me must be vocalized הַ־מֶה (unvocalized: 'what')"),
+]
+
+
+# Traps checked only in some files: (keys, regex on the RAW line, lemma prefixes or None = always, why)
+KEY_TRAPS = [
+    ({"SH"}, RW + r"שמש" + RE_, ["Šamaš", "šamšu"],
+     "both the god (שַׁמַשׁ) and the sun (שֶׁמֶשׁ) occur in this text: vocalize every occurrence (guidelines §6.7)"),
+    ({"SH", "CW", "DP"}, RW + r"איה" + RE_, ["Aya"], "Aya must be vocalized אַיָּה (unvocalized: 'where?')"),
 ]
 
 
@@ -248,7 +273,7 @@ def verify(keys, strict=False):
                         continue
                     print(f"RESERVED {key} {k}: /{rx[:60]}…/ – {why}\n    {ent[k]}\n    lemmas: {', '.join(lem.get(k, []))}")
                     bad += 1
-            for rx, lemmas, why in TRAPS:
+            for rx, lemmas, why in TRAPS + [(t[1], t[2], t[3]) for t in KEY_TRAPS if key in t[0]]:
                 if re.search(rx, ent[k]) and (lemmas is None or lemma_ok(lem.get(k, []), lemmas)):
                     print(f"UNVOCALIZED {key} {k}: {why}\n    {ent[k]}")
                     bad += 1
