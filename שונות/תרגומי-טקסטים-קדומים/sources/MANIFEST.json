@@ -4201,6 +4201,68 @@
    }
   },
   {
+   "id": "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/King-1907--Chronicles-II.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://uodiyala.edu.iq/uploads/PDF%20ELIBRARY%20UODIYALA/EL45/CHRONICLES%20CONCERNING%20EARLY%20Babylonian%20Kings%20v.2.pdf",
+   "note": "public domain (1907); pages 87–96 = PDF pages 103–112",
+   "files": {
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/King-1907--Chronicles-II.pdf": [
+     6359375,
+     "cb99d6611ef43751315d5d7ef7e45d3fcbc4afee61032bcb174ad6b20bde1ce7"
+    ]
+   }
+  },
+  {
+   "id": "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/King-1907--Chronicles-II.pdf",
+   "note": "pdftoppm -f 103 -l 112 -r 220 -png (p087 at -r 150); renamed p087…p096",
+   "files": {
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/p087.png": [
+     197007,
+     "dd3ab32ba35902a008774ecc6af280f73fa794330ceb2f9782c07fda41ca803c"
+    ],
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/p088.png": [
+     271975,
+     "3b38caacc4d5f6873aa198ea0e598e66bdd336610d303b4fa1cfff77e84b9880"
+    ],
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/p089.png": [
+     247833,
+     "f768133f852a10341d3e23b694ebe8ee139b0b0fefd56ab12e63b887b0a60694"
+    ],
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/p090.png": [
+     215759,
+     "eaef6d241d4f65ad8fbed35bf283839c59e8c8eef7ab87042d4f1d0bb7802ed7"
+    ],
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/p091.png": [
+     218231,
+     "36b40e7d48175a084220812155b637c0fadc2f83b86f95514ec4a777fb059e09"
+    ],
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/p092.png": [
+     251338,
+     "6a866253b893983646acb5cc5b06e91964b4f70d5a08ed14138701857fe63a4c"
+    ],
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/p093.png": [
+     237644,
+     "f91f42c38f0c209172b42e6818d732037b270bb315ef23c3212ff11a7d9b0441"
+    ],
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/p094.png": [
+     148169,
+     "4b375ed832cb0b89c4e2f886c7f752f3e61eb97aedace10167b7f774ae1fb48f"
+    ],
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/p095.png": [
+     219348,
+     "71063657804b3a463f71353fbcf48264ca43908c58f1d0a25a346865b6de1e47"
+    ],
+    "King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/p096.png": [
+     167728,
+     "5553cdb82921704ce26203d01a266a988e06b29546a954a05218daf35dc9ff00"
+    ]
+   }
+  },
+  {
    "id": "Kovacs-1989/ancienttexts_tab11.raw.html",
    "kind": "url",
    "tier": "archive",
@@ -4412,6 +4474,32 @@
    }
   },
   {
+   "id": "Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/Mittermayer_2009_Enmerkara_und_der_Herr_von_Arata.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://www.zora.uzh.ch/server/api/core/bitstreams/73c3fd8b-32cc-48c0-9f25-7f7a912c966c/content",
+   "note": "ZORA green OA, no CC licence",
+   "files": {
+    "Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/Mittermayer_2009_Enmerkara_und_der_Herr_von_Arata.pdf": [
+     8952848,
+     "9e9a3c05080048813acaae116de7742565823bd579329a784c61d6e30176b213"
+    ]
+   }
+  },
+  {
+   "id": "Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/mittermayer-2009.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "Mittermayer_2009_Enmerkara_und_der_Herr_von_Arata.pdf",
+   "note": "pdftotext -layout",
+   "files": {
+    "Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/mittermayer-2009.txt": [
+     1073216,
+     "04f7c0b72c71723b5fa46d18724d5e19d12ab35991b21467a3f7a618cfdb55ba"
+    ]
+   }
+  },
+  {
    "id": "Muss-Arnolt-1901/cu31924083983944.pdf",
    "kind": "archive-org",
    "tier": "archive",
@@ -4464,6 +4552,344 @@
    }
   },
   {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-01--P392087.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P392087/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-01--P392087.html": [
+     225805,
+     "472ef259afec08e0e264771a2f58435665e3262912ccf779573a27e04dd70a4c"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-02--P251898.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P251898/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-02--P251898.html": [
+     43590,
+     "0aa6ebe76e3338ce20c4827d4d60940ca1e4a7da5ae2f591df0c7ef5b5fa9edf"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-03--P254179.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P254179/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-03--P254179.html": [
+     77263,
+     "f07e334c85f8d2e15030f424e1efd89418474990d90d2b054849069cb1245f86"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-04--P252226.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P252226/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-04--P252226.html": [
+     96776,
+     "0d227e044b12883acbe3aa1e3d006bb4a6e29d6bc07af310df51329edae4a4cb"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-05--P251711.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P251711/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-05--P251711.html": [
+     33380,
+     "b26c5ba0e27b0fbb547987c73fe46a089203ed0cc81943d08daa4e2336b2acc0"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-06--P424004.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P424004/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-06--P424004.html": [
+     82444,
+     "b9c4d2d2036afb3e13402f56291a6bc39cb235b413a36bcf37fb536cf908d7e3"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-07--X001001.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/X001001/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-07--X001001.html": [
+     89897,
+     "e5b2216132b46b9ba60928e26bf63c5bee6f6b4607e015abf29e608aec0d0b50"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-10--X001003.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/X001003/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-10--X001003.html": [
+     108884,
+     "58aa02d59207ece7acd77e2320d0835dd977d75da8436e2e86572d9056e38d17"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-13--X001006.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/X001006/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-13--X001006.html": [
+     65008,
+     "7cb50f6f0ad3807ac946b3f06fb998dc186761be6e780ba8c30a0a6e2254de3a"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14a--X001007.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/X001007/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14a--X001007.html": [
+     49776,
+     "f498e5641ef7b6ba2d89ae001364b8a39988c2ddba33fdeeca4d24e68dad09da"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14b--X001008.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/X001008/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14b--X001008.html": [
+     14429,
+     "34e7a1a763a83467b34212a857bf8aa7df9aa6611036fbdc472e0ef0a355db83"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14c--X001009.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/X001009/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14c--X001009.html": [
+     15638,
+     "45502d3b358bba7f2cb3ae7dc1b97ab875f99f24cbc18481eca366ebf975b391"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14d--X001010.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/X001010/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14d--X001010.html": [
+     13313,
+     "14733074ac369187478f941d532af1c65d644d51375ecad634229d916c9f748e"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14e--X001011.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/X001011/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14e--X001011.html": [
+     13295,
+     "918e7211df9390a19a7794f995e43c84f7adb30ec76a8b861185c9c7b738d441"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14f--X001012.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/X001012/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-14f--X001012.html": [
+     9854,
+     "84b28eaf6a393554766d6cafd72b499cbb695a5823c01d220c8102f79a032582"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-15--P305850.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P305850/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-15--P305850.html": [
+     104796,
+     "2477d5ee6d6e67093369a2167bce2e322ee6fcb84a6b5e7297051d418a187dcf"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-16--X001013.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/X001013/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-16--X001013.html": [
+     202242,
+     "fa0e9dda8c23990bfccfba90faf8536aaec532df5041d47c5af7ab0d61f355e0"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-17--P429343.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P429343/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-17--P429343.html": [
+     22266,
+     "fc9b0dde54aa0aa95b7f193ed04e22bf07d338d2c470c068405dca3cc9bdbd90"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-18--P252332.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P252332/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-18--P252332.html": [
+     91979,
+     "aeb99b81c02a8a069fa6ab762684509e7cb6726afd08b868621622a0c5bbd316"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-20--P252006.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P252006/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-20--P252006.html": [
+     37677,
+     "8285426f485747d35d609faf97e7349c57f5d107d6473a752b03b99f410f0516"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-22--P285640.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P285640/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-22--P285640.html": [
+     54801,
+     "7fb906fc0b1822925a21857d3fdc97866087cdf8de0f4845e095267914558cbe"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-23--P252071.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P252071/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-23--P252071.html": [
+     12652,
+     "51f146ad84325e0846018c0d6e2301ea007301a62447b3c3e8c6ee97780c391d"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-24--P274691.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P274691/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-24--P274691.html": [
+     16148,
+     "daca46d7ca5b74b172106f2bf2d9ed09433e40e3befeb2e7c366ee20176eaab7"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-25--P305832.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P305832/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-25--P305832.html": [
+     21511,
+     "6e6ab0ff1a41cbf98f7b938c99b4d0a70cba146a457a9192af606e1977046ebb"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-26--P296059.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/akklove/P296059/html",
+   "note": "per-text view (Wasserman's translation; CC0)",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/LAOS4-26--P296059.html": [
+     50404,
+     "cb0e32ddc0340daaf83c80b801e37210235987c9d9b2920c33321f34764ac6d2"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/akklove--Akkadian-Love-Literature/akklove.zip",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/json/akklove.zip",
+   "note": "AkkLove JSON export (CC0); TLS: tools/certs/",
+   "files": {
+    "ORACC/akklove--Akkadian-Love-Literature/akklove.zip": [
+     2194305,
+     "442cdf74e81bf21fa62f612bd9213dd377dce30c32e01885fa1b28d93a85c08d"
+    ]
+   }
+  },
+  {
    "id": "ORACC/epsd2-literary--Q000334--Enki-and-the-World-Order/Q000334.cdl.json",
    "kind": "oracc-member",
    "tier": "work",
@@ -4476,6 +4902,19 @@
     ]
    },
    "member": "epsd2/literary/corpusjson/Q000334.json"
+  },
+  {
+   "id": "ORACC/epsd2-literary--Q000369--Enmerkar-and-the-Lord-of-Aratta/Q000369.cdl.json",
+   "kind": "unzip",
+   "tier": "work",
+   "source": "ORACC/_bulk/epsd2-literary.zip",
+   "note": "member epsd2/literary/corpusjson/Q000369.json",
+   "files": {
+    "ORACC/epsd2-literary--Q000369--Enmerkar-and-the-Lord-of-Aratta/Q000369.cdl.json": [
+     5422597,
+     "029eb4e161d8285afeb9b8bf4bb7a6d9beeb9f4a398574d52322b2cb206bda4d"
+    ]
+   }
   },
   {
    "id": "ORACC/epsd2-literary--Q000375--Curse-of-Agade/Q000375.cdl.json",
@@ -5421,6 +5860,84 @@
     "Wasserman-Cohen-2026--Carmel-he/ynet-article.rtl.md": [
      13832,
      "690c2ae295285e30b4f71997fed9cd2dce52bc5643a23952ac69f91a80e96e5a"
+    ]
+   }
+  },
+  {
+   "id": "eBL-fragmentarium--Sargon-Birth-Legend/BM.47449.atf",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "eBL-fragmentarium--Sargon-Birth-Legend/BM.47449.json",
+   "note": "the json's atf field (col. 4', a fable extract)",
+   "files": {
+    "eBL-fragmentarium--Sargon-Birth-Legend/BM.47449.atf": [
+     563,
+     "909c2fe4420e9cb6c3f152fe25d46fea5e828e6c8eebea0ced61fa98c484551d"
+    ]
+   }
+  },
+  {
+   "id": "eBL-fragmentarium--Sargon-Birth-Legend/BM.47449.json",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://www.ebl.lmu.de/api/fragments/BM.47449",
+   "note": "eBL fragmentarium record (no transliteration of the legend)",
+   "files": {
+    "eBL-fragmentarium--Sargon-Birth-Legend/BM.47449.json": [
+     62903,
+     "2ec4948b1f24c5e6484e92e5f895e3f37a773a010b21be23ef3c035c8cd866bc"
+    ]
+   }
+  },
+  {
+   "id": "eBL-fragmentarium--Sargon-Birth-Legend/K.3401.json",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://www.ebl.lmu.de/api/fragments/K.3401",
+   "note": "eBL fragmentarium record (no transliteration of the legend)",
+   "files": {
+    "eBL-fragmentarium--Sargon-Birth-Legend/K.3401.json": [
+     9362,
+     "22e4c9da8211a10042b3d9de5c8ea7161130e69368584845052e1a82f578140f"
+    ]
+   }
+  },
+  {
+   "id": "eBL-fragmentarium--Sargon-Birth-Legend/K.4470.json",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://www.ebl.lmu.de/api/fragments/K.4470",
+   "note": "eBL fragmentarium record (no transliteration of the legend)",
+   "files": {
+    "eBL-fragmentarium--Sargon-Birth-Legend/K.4470.json": [
+     8064,
+     "571898c4b053064823c44054f703c9fe893b0d87fcdf3fc07b717571407d786f"
+    ]
+   }
+  },
+  {
+   "id": "eBL-fragmentarium--Sargon-Birth-Legend/K.7249.json",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://www.ebl.lmu.de/api/fragments/K.7249",
+   "note": "eBL fragmentarium record (no transliteration of the legend)",
+   "files": {
+    "eBL-fragmentarium--Sargon-Birth-Legend/K.7249.json": [
+     8388,
+     "ad780c46f8191430e08f84b38997730123111d3a878ddd9c288feaa67138d55b"
+    ]
+   }
+  },
+  {
+   "id": "eBL-fragmentarium--Sargon-Birth-Legend/Sm.2118.json",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://www.ebl.lmu.de/api/fragments/Sm.2118",
+   "note": "eBL fragmentarium record (no transliteration of the legend)",
+   "files": {
+    "eBL-fragmentarium--Sargon-Birth-Legend/Sm.2118.json": [
+     9738,
+     "dee32aa9d1eb90cfc7a6f49c254dcfd1ea3f403e1044906ba95473d9d273f784"
     ]
    }
   },
@@ -6418,6 +6935,86 @@
     ]
    },
    "raw_files": 130
+  },
+  {
+   "id": "eBL/Descent-of-Ishtar-NA/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "8",
+    "Neo-Assyrian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Descent-of-Ishtar-NA/_raw/chapter-display.json": [
+     117066,
+     "9abdc7111b1248aa9366c9f2a68d5d0150ffb9602c8656938de38d47d4faef35"
+    ],
+    "eBL/Descent-of-Ishtar-NA/bibliography.md": [
+     1956,
+     "798f477c6f1c5c02657ed3dad66152867be14ed379521f94b72716f56df584b3"
+    ],
+    "eBL/Descent-of-Ishtar-NA/chapter.atf": [
+     2306,
+     "1cedd249a13749afe8bc74cf97912e946b4802d83fc757e8fe67ec5b2b0c309c"
+    ],
+    "eBL/Descent-of-Ishtar-NA/glossary.md": [
+     11043,
+     "a09705e27c08aefba60a8e128b4b841bb564acd8f1e841e2abd8c947e76b66ad"
+    ],
+    "eBL/Descent-of-Ishtar-NA/manuscripts.md": [
+     695,
+     "7ced550d8abe6551c50bc669353fadaee4662c6a5a1461a052039dab5bc4d191"
+    ],
+    "eBL/Descent-of-Ishtar-NA/reading-edition.md": [
+     5877,
+     "377ab735a5dfecfd305e561b67bfa9de2e7cf08e3b0e75d181e06a71f4fbf96e"
+    ]
+   },
+   "raw_files": 43
+  },
+  {
+   "id": "eBL/Descent-of-Ishtar-SB/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "8",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Descent-of-Ishtar-SB/_raw/chapter-display.json": [
+     3090068,
+     "30d7c851e757d28853b625dc1297c02910a2267d0176a0c7989eb6e6a5c15e45"
+    ],
+    "eBL/Descent-of-Ishtar-SB/bibliography.md": [
+     2662,
+     "e0983606d94bd06a14c6abf326301d1eabb4a2f785ad2d9b1a32f4e18899e55e"
+    ],
+    "eBL/Descent-of-Ishtar-SB/chapter.atf": [
+     44054,
+     "af8256f84075a9372ca83b6d6eeec0ae0b54b45ab5a8d3ca04887f33dd99f7ff"
+    ],
+    "eBL/Descent-of-Ishtar-SB/glossary.md": [
+     91829,
+     "3d4aa02a8797e3d348de2e36ecc37f4904fc226dc201963c710b635df5abc4f3"
+    ],
+    "eBL/Descent-of-Ishtar-SB/manuscripts.md": [
+     1113,
+     "396488a1e011399388feb47555f8ccd21640fc4b89d6ff09a0b0af079cc81c62"
+    ],
+    "eBL/Descent-of-Ishtar-SB/reading-edition.md": [
+     101328,
+     "c1279c79cb6b521b243dacd3d535af4cc2842954800ad7ef5bb06cec84de2390"
+    ]
+   },
+   "raw_files": 286
   },
   {
    "id": "eBL/Enuma-elish-SB-I/",

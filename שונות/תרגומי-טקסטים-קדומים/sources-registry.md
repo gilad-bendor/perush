@@ -151,6 +151,12 @@ Access: No"), Lewis 1980, Jiménez 2018, CT 13 42–43 and CT 46 46 (copies on a
 Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1968, Jacobsen 1992, Vanstiphout
 1994, Alster 1973, Klein 2004), Jacobsen 1987, Black et al. 2004.
 
+### 4.4m Everyday voices: OB love lyrics, Sumerian proverbs, Sumerian letters (`קולות-היום-יום/`)
+- **`ORACC/akklove--Akkadian-Love-Literature/`** – ORACC **AkkLove**, "Akkadian Love Literature" (N. Wasserman et al., based on Wasserman 2016 = LAOS 4): the 25 OB / Old Akkadian love texts (LAOS 4 01–07, 10, 13, 14a–f, 15–18, 20, 22–26), each as `LAOS4-NN--<id>--lemmatised.md` (transliteration, Wasserman's normalization, lemmas; `tools/cdl2md.py --norm`) and `…--translation.md` (Wasserman's English, line by line; `tools/oracc_html2tr.py`), with `texts.tsv` (the catalogue). **CC0.** Base of `קולות-היום-יום/1-שירי-אהבה/`. The Middle Babylonian / Middle Assyrian texts of the project (LAOS 4 08, 09, 11, 12, 19, 21) are in the zip but were not converted (outside "OB"; a later run). The Isin incantations (LAOS 4 27–34) are not in the export.
+- **`ETCSL/6.1.01--Proverbs-Collection-1/`**, **`ETCSL/6.1.02--Proverbs-Collection-2-6/`**, **`ETCSL/6.1.03--Proverbs-Collection-3/`** – the composite (c-file) and ETCSL's translation (t-file), with `transliteration.md` / `translation.md` (`tools/etcsl2md.py`); **CC BY-NC-SA**, committed; with **`ORACC/epsd2-literary--Q000795--Proverbs-Collection-1/`**, **`…Q000796…`**, **`…Q000797…`** (`Qxxxxxx--lemmatised-morph.md`: lemma + morph of every word; CC0). Base of `2-משלים-שומריים/`. Alster 1997 and Gordon 1959 are © (records only: not owned).
+- **`ETCSL/5.5.1--Message-of-Ludigira-to-his-mother/`** and the literary letters **`ETCSL/3.3.01--Letter-Ur-saga-to-a-king/`**, **`3.3.06--Letter-Aba-tah-lugalga-to-his-brothers/`**, **`3.3.07--Letter-Ugubi-to-his-mother/`**, **`3.3.08--Letter-Shamash-tab-to-Ilak-niid/`**, **`3.3.10--Letter-Inanaka-to-Nintinuga/`**, **`3.3.11--Letter-Inim-Inana-to-Enlil-massu/`**, **`3.3.12--Letter-Inim-Inana-to-Lugal-ibila/`**, **`3.3.20--Letter-Gudea-to-his-personal-deity/`** (c + t files and their Markdown), with **`ORACC/epsd2-literary--Q000775`, `Q000573`, `Q000578`, `Q000579`, `Q000580`, `Q000582`, `Q000583`, `Q000584`, `Q000592`** (lemma + morph). Base of `3-מכתבים/`. CC BY-NC-SA / CC0, committed.
+- Not obtained: the OB Akkadian private letters (AbB) – CDLI answered 503 all day (2026-10-21) and Archibab (`www.archibab.fr`) is not on the allowlist; Alster 1997 and Gordon 1959 (proverbs) are © (records only).
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).
@@ -180,6 +186,7 @@ Mittermayer 2009 downloaded as documented for Lenzi.
 vols. I–II): a mirror when archive.org is blocked. (Use only for public-domain items.)
 - **eBL fragmentarium**: `GET /api/fragments/<no>` gives the record, `atf` empty when not transliterated; the
 bibliography ids resolve at `/api/bibliography/<id>` (RN262 = Westenholz 1997, RN2877 = Jiménez 2018).
+- **ORACC AkkLove** (`akklove`, CC0, 2026-10-21): the zip has the texts and lemmas, Wasserman's translations are only in the per-text HTML view (`https://oracc.museum.upenn.edu/akklove/<id>/html`); both need the `tools/certs/` workaround. The project's MB/MA texts (LAOS 4 08, 09, 11, 12, 19, 21) are in the zip; the Isin incantations (LAOS 4 27–34) are not in the export.
 ## 9. Paid sources
 
 Buying is the user's decision; ask before assuming. Status as of 2026-10-16, ranked by value for the current work:

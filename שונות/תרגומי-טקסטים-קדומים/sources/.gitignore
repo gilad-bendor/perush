@@ -64,6 +64,9 @@ ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.html
 ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/*.html
 ORACC/epsd2-literary--Q000334--Enki-and-the-World-Order/*.json
 ORACC/epsd2-literary--Q000369--Enmerkar-and-the-Lord-of-Aratta/*.json
+# AkkLove (round 2, run 7; the folder has its own .gitignore too): the raw zip and HTML views
+ORACC/akklove--Akkadian-Love-Literature/*.html
+ORACC/akklove--Akkadian-Love-Literature/*.json
 # the form index built by tools/sumerian_workbench.py (12 MB, regenerated on demand)
 ORACC/_bulk/*.json
 

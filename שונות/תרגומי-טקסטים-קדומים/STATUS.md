@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-21 (Round 2, runs 5–7 in parallel in Claude Cloud; run 5 done).
+Last updated: 2026-10-21 (Round 2 finished: runs 5–7 ran in parallel in Claude Cloud).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -35,6 +35,8 @@ Last updated: 2026-10-21 (Round 2, runs 5–7 in parallel in Claude Cloud; run 5
 - **Claude Cloud:** a special allowance, so no quotas are expected. Work at full speed, and run **independent runs in
   parallel** (different corpora). Inside one long text, keep the sequential translator chain. If a limit is hit, record
   it in §5.1 of the guidelines and fall back to one at a time.
+- **Sub-agents cannot start sub-agents** (guidelines §5.1): a coordinator started as a sub-agent translates its texts
+  itself. For real translator chains, make the session itself the coordinator (one run per session).
 - **Commit and push to `main` often:** after every finished section, not only at the end of a run. A cloud VM can be
   reclaimed, and a session can end; work that is pushed survives. Never commit `docs/` at the repo root (the RTL editor
   regenerates it; the user commits it).
@@ -54,20 +56,24 @@ All of it is a **first draft**: complete, verified by script, three review passe
 | `בניין-המקדש/` | 1 the Gudea Cylinders A–B | 1,300 | `temple_tools.py verify GU --strict` |
 | `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent | 599 | `netherworld_tools.py verify IS --strict`, `… verify IN --strict` |
 | `אגדות-מלכים/` | 1 Enmerkar and the Lord of Aratta; 2 the Sargon Birth Legend (on King 1907 only: check against Westenholz 1997) | 690 | `kings_tools.py verify EA --strict`, `… verify SB --strict` |
+| `קולות-היום-יום/` | 1 OB / Old Akkadian love lyrics and incantations (LAOS 4, 25 texts); 2 Sumerian proverbs (coll. 1 complete, selections of 2–3); 3 Lu-diĝira + eight Sumerian letters | 1,513 | `kol_tools.py verify LOVE PROV LET --strict` |
 
 Every finished translation has a print stub in `הדפסה/` (guidelines §7.4). Each corpus has a `parallels-index.md`
 with its key findings at the top.
 
 ## 4. What is next
 
-The user paused the work after Round 2, run 4 (2026-10-20), and resumes it by starting the next session. The
-remaining runs of the Round 2 plan (`curated-translation-candidates.md`):
+**Round 2 is finished** (runs 5–7, 2026-10-21, in parallel in Claude Cloud). Next: the user's review of the drafts and
+the open decisions (§6, and each `project.md`); then a Round 3 plan (not yet made). Leftovers of Round 2 that a Round 3
+could take: the OB Akkadian private letters (AbB; CDLI was down), the MB/MA love texts (LAOS 4 08, 09, 11, 12, 19, 21),
+the Sargon Birth Legend against Westenholz 1997, and the candidates still open in `curated-translation-candidates.md`
+(Etana, Nergal and Ereškigal, the Great Prayer to Šamaš, Advice to a Prince, Anzû …). The Round 2 runs:
 
 | Run | Texts | Base text | New corpus |
 |---|---|---|---|
 | 5 | **The Descent of Ištar** + **Inana's Descent to the Netherworld** | eBL (Ištar); ETCSL 1.4.1 + ORACC (Inana) | the netherworld: **done (first draft), 2026-10-21**, `העולם-התחתון/` |
 | 6 | **Enmerkar and the Lord of Aratta** + **the Sargon Birth Legend** | ETCSL 1.8.2.3 + ORACC; King 1907 (public domain) or a newer open edition | Gen 11 and Exod 2: **done (first draft), 2026-10-21**, `אגדות-מלכים/` |
-| 7 | **OB love lyrics** + **Sumerian proverbs** (a selection) + **OB letters** (a selection) | ORACC AkkLove / SEAL; ETCSL 6.1; ORACC/CDLI letters | everyday voices |
+| 7 | **OB love lyrics** + **Sumerian proverbs** (a selection) + **OB letters** (a selection) | ORACC AkkLove / SEAL; ETCSL 6.1; ORACC/CDLI letters | everyday voices: **done (first draft), 2026-10-21**, `קולות-היום-יום/` (the OB Akkadian letters not obtained: CDLI 503) |
 
 Runs 5, 6 and 7 are independent (different corpora): in the cloud they can run in parallel, each as its own
 coordinator with its own sequential translator chain. Each run is briefed as in §5 below.
@@ -120,6 +126,11 @@ Each `project.md` lists its own. These cross corpora, so they matter most:
 | *šembi₂-zid* (eye paint) | `פוּךְ` (legends of kings, ↔ 2 Kgs 9:30) | `כָּחָל` (netherworld) – align |
 | Dumuzi's vocalization | at every occurrence (netherworld) | at the first occurrence per file (legends of kings) |
 | *nam-šub* "incantation" | `קֶסֶם` (legends of kings) | check the temple and lament corpora; cf. *šiptu* above |
+| *za-gin₃* / *uqnû* "lapis lazuli" | `לָזוּרִית` (Gilgameš, everyday voices) | `סַפִּיר` (netherworld, legends of kings) – align |
+| *niĝ₂-gig* (proverbs) and *an-zil* (laments) | both `תּוֹעֵבָה` | keep, or give one another word |
+| *ṣabātu* "seize" | `תָּפַס` (everyday voices, since *aḫāzu* = `אָחַז` [cognate] occurs there) | `אָחַז` (Gilgameš): should Gilgameš follow? |
+| *en₃-du* "song"; *guru₇* "granary" | `זֶמֶר`; `אָסָם` (everyday voices) | `זִמְרָה`; `כְּרִי` (legends of kings) – align |
+| *māru* "son" as a lover's endearment | `בֵּן` (literal; everyday voices) | `יַקִּיר` |
 | The Sargon Birth Legend's base text | King 1907 (our transcription from the page images) | check against Westenholz 1997, pp. 36–49, and K 7249 (the user would need to obtain them; see `sources-registry.md` §9) |
 
 The decisions settled earlier (2026-10-18) are in the Gilgameš renderings §12, `חוקים-ובריתות/corpus.md` and the
