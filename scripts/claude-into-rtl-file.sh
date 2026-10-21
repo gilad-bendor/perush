@@ -21,7 +21,14 @@
 
 cd "$( dirname "$0" )/.." || exit 1
 
-CLAUDE_COMMAND="claude --model opus --allow-dangerously-skip-permissions --chrome --permission-mode bypassPermissions $*"
+# Rules for every launcher session - added to its system prompt (next to a wrapper's --append-system-prompt-file).
+# The same rule is in CLAUDE.md, for sessions started without a launcher (which load CLAUDE.md - launcher sessions
+# do not). The folder is named by its full path: a session may run in a subfolder (CLAUDE_SESSION_DIR).
+# The command runs in a new Terminal window via AppleScript: no ' " ` characters in it (and no $ but the ones here).
+DOCS_DIR="$( pwd )/docs/"
+SESSION_RULES="Git: never commit the folder $DOCS_DIR (docs/ at the repo root) - it holds the HTML/PDF mirrors, which the RTL editor regenerates by itself, and the user commits them separately. Exclude it from every commit (e.g. git commit -- the paths, or git restore --staged $DOCS_DIR before committing), unless the user explicitly asks to commit it."
+
+CLAUDE_COMMAND="claude --model opus --allow-dangerously-skip-permissions --chrome --permission-mode bypassPermissions --append-system-prompt '$SESSION_RULES' $*"
 OUTPUT_DIR="claude-sessions"
 OUTPUT_FILE="$OUTPUT_DIR/$( date "+%Y-%m-%d--%H-%M-%S" ).script.rtl.md"
 
