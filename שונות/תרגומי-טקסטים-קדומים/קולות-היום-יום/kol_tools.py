@@ -146,7 +146,7 @@ RESERVED = {
     r'שמאל': [r'šumēlu|gub₃'],
     B + r'ו?(קום|קומי|קומה|קומו)' + E: [r'tebû|zig₃|gana'],
     B + r'ו?(לכה|לכי|לכו)' + E: [r'alāku|ĝen|ŋen|(^|\s)du(\s|$)'],
-    B + r'ו?(בוא|בואי|בואה|בואו)' + E: [r'erēbu|bâʾu|ku₄|kur[enter]|ĝen|ŋen'],
+    B + r'ו?(בוא|בואי|בואה|בואו)' + E: [r'erēbu|bâʾu|ku₄|kur\[enter\]|ĝen|ŋen|men\[go\]|ĝa₂-nu'],
     r'חכמה|' + B + P + r'(חכם|חכמים|חכמת)' + E: [r'nam-kug-zu|kug-zu|nēmequ|emqu|namkugzu|kugzu'],
     r'תועב': [r'niĝ₂-gig|niŋ₂-gig|an-zil|ikkib|niŋgig'],
     r'רשע': [r'erim₂|raggu|niŋerim|nig₂-erim'],
