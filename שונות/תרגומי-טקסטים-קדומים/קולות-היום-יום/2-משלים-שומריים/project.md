@@ -22,7 +22,7 @@ ETCSL composite lines with the segment letter (`A1` … `D138`, `E1`, `F1`, `G1`
 4. *il₂* "lift, carry, support" = `נָשָׂא` throughout, also in *dam nu-il₂* (1.153, 3.9), where Hebrew `נשא אשה` "marry" is a possible but not certain reading (ETCSL "support").
 5. *sig₁₀* "put" by sense: `הונח` (1.38, 1.159), `שולם` (1.28, a purchase "put down"), `נבדק` (1.196, "put to the test"), `כבוש` (1.96).
 6. *dirig* = `עוֹלֶה עַל` in comparisons (1.57, 1.154, 1.193, 2.60), but "float downstream" in 1.83–1.84 (`שטה במורד`) and "overflow" in 1.96, 1.101.
-7. *zeb* "sweet, good" = `מָתוֹק` (1.126, 1.190), keeping `טוֹב` for *dug₃*; *zil₂* = `נָעִים`; *sag₉* = `נָאֶה`.
+7. *zeb* "sweet, pleasant" = `עָרֵב` (1.126, 1.190), keeping `טוֹב` for *dug₃* and `מָתוֹק` for *ku₇* (5.5.1); *zil₂* = `נָעִים`; *sag₉* = `נָאֶה`; *ḫi-li* = `חֵן` (1.197; changed at the letters from `עֲגָבִים`, because 5.5.1 uses it of the mother).
 8. *buru₅* = `דְּרוֹר` (1.18); *ḫu-ru-um* = `נִבְעָר` (3.103; ETCSL "fool"; `כְּסִיל` stays for *lil₂*); *gi₄-in* = `שִׁפְחָה`, *geme₂* = `אָמָה` ★.
 
 ## Progress

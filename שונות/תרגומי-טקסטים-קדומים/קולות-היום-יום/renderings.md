@@ -95,7 +95,7 @@ Vocalized at the first occurrence in each annotated file; afterwards plain spell
 
 **Project 2 (all 500 proverb lines, 2026-10-21):**
 - The formula of 1.152–1.153, 3.9 is *giri₁₇-zal-še₃ nu-il₂* = `לששון – לא נשא` (§3.2 corrected); *niĝ₂-gig DN* = `תּוֹעֲבַת DN` confirmed (3.118, 3.170, 3.171, 3.175), and without a god (1.23) `תּוֹעֵבָה הִיא`.
-- *gu₂* = `צַוָּאר` (runs 5–6); *kal* = `יָקָר`; *lu₂-kur₂* = `אִישׁ נָכְרִי`; *dim₂* = `עִצֵּב`; *uru₃* = `נָצַר`, *en-nu-uĝ₃* = `נְצִירָה`; *zid* (of persons) = `אִישׁ אֱמֶת`; *si sa₂* = `יֹשֶׁר`; *zeb* = `מָתוֹק`, *zil₂* = `נָעִים`; *mu-ud-na* = `בֶּן־זוּג` / `בַּת־זוּג`; *gi₄-in* = `שִׁפְחָה`; *ḫu-ru-um* = `נִבְעָר`; *lu₂-ki-inim-ma* = `עֵד`; *ḫi-li* = `עֲגָבִים` (= *kuzbu*); *e₂-dub-ba-a* = `בֵּית הַלּוּחוֹת`.
+- *gu₂* = `צַוָּאר` (runs 5–6); *kal* = `יָקָר`; *lu₂-kur₂* = `אִישׁ נָכְרִי`; *dim₂* = `עִצֵּב`; *uru₃* = `נָצַר`, *en-nu-uĝ₃* = `נְצִירָה`; *zid* (of persons) = `אִישׁ אֱמֶת`; *si sa₂* = `יֹשֶׁר`; *zeb* = `עָרֵב`, *ku₇* = `מָתוֹק`, *zil₂* = `נָעִים`; *mu-ud-na* = `בֶּן־זוּג` / `בַּת־זוּג`; *gi₄-in* = `שִׁפְחָה`; *ḫu-ru-um* = `נִבְעָר`; *lu₂-ki-inim-ma* = `עֵד`; *ḫi-li* = `חֵן` (= Akk. *kuzbu*, which project 1 renders `עֲגָבִים`: the Sumerian word is broader); *e₂-dub-ba-a* = `בֵּית הַלּוּחוֹת`.
 - The words `עוֹלָם`, `צֶדֶק` / `צַדִּיק`, `כְּסִיל` (without *lil₂*), `מָשָׁל` do not occur in the 500 lines. The project's own words: `2-משלים-שומריים/renderings.md`.
 
 ## Changelog

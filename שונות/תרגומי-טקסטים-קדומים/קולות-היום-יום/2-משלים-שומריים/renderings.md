@@ -15,13 +15,13 @@ Words used only in this project (the corpus `../renderings.md` binds first). Tab
 | *ama-a-tud* | `יְלִיד בַּיִת` | ↔ בראשית יז:יב | | 1.47 |
 | *mu-ud-na* | `בֶּן־זוּג` / `בַּת־זוּג` | | open decision 3 | 1.108, 1.125, 1.128 |
 | *giri₁₇-zal-še₃ nu-il₂* | `לששון – לא נשא` | | formula (script) | 1.152–1.153, 3.9 |
-| *zeb*; *zil₂* | `מָתוֹק`; `נָעִים` | | decision 7 | 1.126, 1.190; 1.58 |
+| *zeb*; *zil₂*; *ku₇* | `עָרֵב`; `נָעִים`; `מָתוֹק` | *zeb* ↔ שיר השירים ב:יד | decision 7 | 1.126, 1.190; 1.58; LUD 39 |
 | *ĝiš-šub* | `חֵלֶק` | | `גּוֹרָל` = *nam* | 1.145 |
 | *igi il₂* | `נָשָׂא עֵינַיִם` | [equivalent] | | 1.146 |
 | *dam tuku*; *dam taka₄* | `לָקַח אִשָּׁה`; `עָזַב` | ↔ דברים כד:א | | 1.146, 1.160, 2.124 |
 | *nu-ĝar-ra* | `זְדוֹנִי` | | `רָשָׁע` = *erim₂* | 1.151, 1.154 |
 | *a₂-sag₃* | `אַסַג` | | the disease demon | 1.154 |
-| *ḫi-li* | `עֲגָבִים` | | = *kuzbu* | 1.197 |
+| *ḫi-li* | `חֵן` | ↔ משלי לא:ל | = Akk. *kuzbu* (`עֲגָבִים` in project 1), broader in Sumerian (the mother's charm, 5.5.1) | 1.197; LUD |
 | *e₂-gi₄-a* | `כַּלָּה` ★ | | = *kallatu* | 1.198, 3.44 |
 | *gi₄-in*; *geme₂* | `שִׁפְחָה`; `אָמָה` ★ | | | 1.190, 3.41; 3.183 |
 | *si sa₂* | `יֹשֶׁר` (`קרניו אינן שוות` for *si nu-sa₂*) | [= *mīšaru*] ↔ ישעיהו נט:יד | `צֶדֶק` never | 1.157, 3.190 |

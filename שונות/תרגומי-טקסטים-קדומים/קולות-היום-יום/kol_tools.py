@@ -131,7 +131,7 @@ RESERVED = {
     r'אהב|אוהב|אהוב': [r'râmu|rāmu|raʾīmu|rāʾimu|ruʾāmu|narāmu|ritūmu|murtâmu|na-ra-mi|ra-i-mi|ra-mi-|ki aĝ₂|ki-aĝ₂|ki aŋ₂|aŋ[measure]|aĝ₂'],
     r'צחק|צחוק': [r'ṣīhtu|ṣīḫtu|ṣiāhu|ṣiāḫu|ṣâhu|ṣīḫ|ṣīh|ṣūhiš|ṣūḫiš|ṣuhhu'],
     r'תפוח': [r'hašhūru|ḫašḫūru|ḫašḫur|hašhur|hašhur'],
-    B + P + r'(גן|גנה|גנו|גני|גנים|גנת|גנך|גנם|גננו)' + E: [r'kirû|kiri₆|kirâ|kirî'],
+    B + r'(?!מגן)' + P + r'(גן|גנה|גנו|גני|גנים|גנת|גנך|גנם|גננו)' + E: [r'kirû|kiri₆|kirâ|kirî'],
     B + P + r'(יונה|יונת|יונים|יונתי)' + E: [r'summatu|tu-gur₄|tu{mušen}|tu-gur4'],
     r'דבש': [r'dišpu|lal₃'],
     B + P + r'(יין|יינו|ייני|יינה)' + E: [r'karānu|kurunnu|ĝeštin|ŋeštin'],
@@ -154,7 +154,7 @@ RESERVED = {
     B + P + r'(טוב|טובה|טובים|טובות|טובו)' + E: [r'dug₃|du₁₀|ṭābu|ṭiābu|ṭūbu|ṭâbu|dug[good]'],
     B + r'ו?(ה|י|ת|א|נ|ל)?שוב' + E + '|' + B + r'ו?(ה|י|ת|א|נ|ל)שיב|' + B + r'ו?(ישובו|ישוב|תשוב|שבה|שבו|שבתי|שבת)' + E: [r'gi₄|\bgur|-gur|târu|tuāru|tūru|gi[turn]|gur[turn]'],
     B + r'ו?[לבמה]?(ברך|בירך|ברכה|ברכת|ברכו|ברכה|בירכה|בירכו|יברך|תברך|אברך|נברך|מבורך|יבורך|בורך|ברוך|ברכות)' + E: [r'karābu|ikribu|šud₃|šudu₃|kiriš'],
-    r'ארר|ארור|אורר': [r'arāru|nam\b.*ku₅|nam-ku₅'],
+    r'ארר|ארור|אורר': [r'arāru|nam\b.*ku₅|nam-ku₅|a-ru-ru|Aruru'],
     r'קלל': [r'aš₂|(^|\s)aš(\s|$)|aš[curse]|arratu'],
     B + r'ו?[לבמהשכ]{0,2}(נכרי|נכריה|נכריים|נכרים|נכר|התנכר)' + E: [r'kur₂|nakru|lukur|nakāru'],
     B + P + r'(עבד|עבדו|עבדי|עבדך|עבדים)' + E: [r'arad|wardu|ir₃|ARAD|IR₃'],
@@ -176,11 +176,12 @@ PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|
 FN = re.compile(r'\[\^[^\]]+\]')
 # fixed formulas: (regex on the transliteration, required regex on the stripped `>` line, description)
 FORMULAS = [
-    (r'u₃-na(-a)?-dug₄', r'אמור:?', 'letter opening *X-ra u₃-na-dug₄* = `אל X אֱמֹר:` (renderings §3.3)'),
+    (r'-ra u₃-na(-a)?-dug₄', r'אמור:?', 'letter opening *X-ra u₃-na-dug₄* = `אל X אֱמֹר:` (renderings §3.3)'),
     (r'na-ab-be₂-a$', r'^זה אשר .* אומר:$', 'letter opening *Y na-ab-be₂-a* = `זֶה אֲשֶׁר Y אוֹמֵר:`'),
     (r'a-ma-ru-kam', r'מבול הוא!', 'letter closing *a-ma-ru-kam* = `מַבּוּל הוּא!`'),
     (r'niĝ₂-gig', r'תועבת|תועבה', '*niĝ₂-gig* = `תּוֹעֵבָה`'),
     (r'ezen nu-(ub-)?tuku', r'אין לו חג', '*ezen nu-tuku* = `אֵין לוֹ חַג`'),
+    (r'ĝiškim .*ga-mu-ra-ab-šum₂', r'אות.* אתן לך:', '*ĝiškim … ga-mu-ra-ab-šum₂* = `אוֹת … אֶתֵּן לְךָ:` (5.5.1)'),
     (r'giri₁₇-zal-še₃ nu-il₂', r'לששון – לא נשא', '*giri₁₇-zal-še₃ nu-il₂* = `לְשָׂשׂוֹן – לֹא נָשָׂא` (1.152–1.153)'),
 ]
 
