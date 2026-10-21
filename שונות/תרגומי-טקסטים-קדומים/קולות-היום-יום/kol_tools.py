@@ -159,6 +159,7 @@ RESERVED = {
     B + r'ו?[לבמהשכ]{0,2}(נכרי|נכריה|נכריים|נכרים|נכר|התנכר)' + E: [r'kur₂|nakru|lukur|nakāru'],
     B + P + r'(עבד|עבדו|עבדי|עבדך|עבדים)' + E: [r'arad|wardu|ir₃|ARAD|IR₃'],
     B + P + r'(מבול)' + E: [r'amaru|a-ma-ru|abūbu'],
+    r'אחז|אחוז': [r'ahāzu|aḫāzu|a-ha-az|ha-a-zu|a-hu-uz'],          # aḫāzu [cognate]; ṣabātu = תפס
 }
 # name traps: stripped token (prefixes allowed) -> (name, licensing regex on the line)
 TRAPS = {
