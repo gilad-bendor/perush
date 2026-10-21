@@ -53,6 +53,7 @@ All of it is a **first draft**: complete, verified by script, three review passe
 | `קינות-על-ערים/` | 1 the Lament for Ur; 2 the Curse of Agade (OB + Ur III) | 763 | `lament_tools.py verify --strict` |
 | `בניין-המקדש/` | 1 the Gudea Cylinders A–B | 1,300 | `temple_tools.py verify GU --strict` |
 | `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent | 599 | `netherworld_tools.py verify IS --strict`, `… verify IN --strict` |
+| `אגדות-מלכים/` | 1 Enmerkar and the Lord of Aratta; 2 the Sargon Birth Legend (on King 1907 only: check against Westenholz 1997) | 690 | `kings_tools.py verify EA --strict`, `… verify SB --strict` |
 
 Every finished translation has a print stub in `הדפסה/` (guidelines §7.4). Each corpus has a `parallels-index.md`
 with its key findings at the top.
@@ -65,7 +66,7 @@ remaining runs of the Round 2 plan (`curated-translation-candidates.md`):
 | Run | Texts | Base text | New corpus |
 |---|---|---|---|
 | 5 | **The Descent of Ištar** + **Inana's Descent to the Netherworld** | eBL (Ištar); ETCSL 1.4.1 + ORACC (Inana) | the netherworld: **done (first draft), 2026-10-21**, `העולם-התחתון/` |
-| 6 | **Enmerkar and the Lord of Aratta** + **the Sargon Birth Legend** | ETCSL 1.8.2.3 + ORACC; King 1907 (public domain) or a newer open edition | Gen 11 (the confusion of tongues) and Exod 2 |
+| 6 | **Enmerkar and the Lord of Aratta** + **the Sargon Birth Legend** | ETCSL 1.8.2.3 + ORACC; King 1907 (public domain) or a newer open edition | Gen 11 and Exod 2: **done (first draft), 2026-10-21**, `אגדות-מלכים/` |
 | 7 | **OB love lyrics** + **Sumerian proverbs** (a selection) + **OB letters** (a selection) | ORACC AkkLove / SEAL; ETCSL 6.1; ORACC/CDLI letters | everyday voices |
 
 Runs 5, 6 and 7 are independent (different corpora): in the cloud they can run in parallel, each as its own
@@ -116,6 +117,10 @@ Each `project.md` lists its own. These cross corpora, so they matter most:
 | *ḫarrānu* / *ḫar-ra-an* | `אֹרַח` (Gilgameš, netherworld) | `דֶּרֶךְ` (laments) |
 | *kabattu* | `כָּבֵד` (wisdom, netherworld) | `רוּחַ` (Gilgameš) |
 | *ur₄* "pluck" | `קָטַף` (netherworld) | check the creation corpus (`אָסַף`?) |
+| *šembi₂-zid* (eye paint) | `פוּךְ` (legends of kings, ↔ 2 Kgs 9:30) | `כָּחָל` (netherworld) – align |
+| Dumuzi's vocalization | at every occurrence (netherworld) | at the first occurrence per file (legends of kings) |
+| *nam-šub* "incantation" | `קֶסֶם` (legends of kings) | check the temple and lament corpora; cf. *šiptu* above |
+| The Sargon Birth Legend's base text | King 1907 (our transcription from the page images) | check against Westenholz 1997, pp. 36–49, and K 7249 (the user would need to obtain them; see `sources-registry.md` §9) |
 
 The decisions settled earlier (2026-10-18) are in the Gilgameš renderings §12, `חוקים-ובריתות/corpus.md` and the
 flood corpus renderings.

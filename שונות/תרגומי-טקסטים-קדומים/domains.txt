@@ -22,3 +22,5 @@ www.fadedpage.com
 # sources/fetch-recipes.tsv - and archive.org redirects downloads to changing hosts (dn….archive.org), so it works
 # only with "Full" network access. The translation work does not need it.
 el.wikisource.org
+# Added 2026-10-21 (run 6): a mirror of public-domain Assyriological books (King 1907), when archive.org is blocked.
+uodiyala.edu.iq

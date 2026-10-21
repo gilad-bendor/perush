@@ -125,6 +125,32 @@ Added 2026-10-20. Base texts:
 - **`eBL/Descent-of-Ishtar-SB/`, `eBL/Descent-of-Ishtar-NA/`** (eBL `L/1/8`; SB 148 labels, NA 11 lines; gitignored, built-in `sources_sync.py` rule): the Akkadian base text, with Foster's translation (rank 3). Not available: Lapinkivi 2010 (SAACT 6), Dalley 1989, Talon 1988, Gabbay's study of 81 (cited through eBL's notes).
 - **`ETCSL/1.4.1--Inanas-Descent/`** (CC BY-NC-SA, committed): the Sumerian composite (440 entries) and translation; **`ORACC/epsd2-literary--Q000343--Inanas-Descent/`** (CC0, committed): ePSD2 lemma + morph for every line. Not available: Sladek 1974, Katz 2003, Buccellati 1982.
 
+### 4.4l Legends of kings: Enmerkar and the Lord of Aratta; the Sargon Birth Legend (`אגדות-מלכים/`)
+- **`ETCSL/1.8.2.3--Enmerkar-and-the-Lord-of-Aratta/`**: ETCSL c.1.8.2.3 (641 composite entries: 1–636 with 11A,
+106A, 185A, 185B, 365B and the alternative lines A–D of one manuscript for 400–403; no 369, 608–610), TEI +
+Markdown from the local bulk zip, committed (CC BY-NC-SA). **Base text** of `אגדות-מלכים/1-אנמרכר-ואדון-ארטה/`.
+- **`ORACC/epsd2-literary--Q000369--Enmerkar-and-the-Lord-of-Aratta/`**: the same composite with ePSD2 lemma + morph
+for every word (CC0; `.md` committed, the 5.4 MB raw JSON git-ignored by the folder's own `.gitignore`). ORACC's
+export leaves lines with variants unlabelled and calls ETCSL's alternative line C "Š": `אגדות-מלכים/kings_tools.py
+conc EA` aligns them (one to one). The zip also has three Ur manuscripts (P346132, P346147, P346534), not extracted.
+- **`Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/`**: C. Mittermayer, *Enmerkara und der Herr von
+Arata* (OBO 239, 2009), **open access** on ZORA (green OA, no CC licence stated → git-ignored by the folder's own
+`.gitignore`, like Lenzi 2023): the current critical edition (reconstructed text + German translation, score,
+commentary, plates). Its OCR text layer is poor for the Sumerian, usable for the German.
+- **`King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/`**: L. W. King 1907, vol. II, Appendix I "The Legend
+of Sargon" (pp. 87–96), public domain; PDF from the University of Diyala e-library (archive.org blocked), page
+images, and **our hand transcription from the page images** (`legend-of-sargon--King-1907-pp87-96.md`, committed;
+the PDF/PNGs are ignored by the existing `*.pdf`/`*.png` rules). **Base text** of `אגדות-מלכים/2-אגדת-הולדת-סרגון/`
+– the only open transliteration reachable (see §7 for its limits).
+- **`eBL-fragmentarium--Sargon-Birth-Legend/`**: the eBL fragmentarium records of K 3401 + Sm 2118, K 4470, BM 47449,
+K 7249 (catalogue and bibliography; **eBL has no transliteration of the legend**; BM 47449's only transliterated
+column, 4′, belongs to a disputation/fable extract, Jiménez 2018). Git-ignored by the folder's own `.gitignore`
+(eBL policy); README committed.
+- **`_records-only--Legends-of-kings/`**: Westenholz 1997 (the current Sargon edition; © Eisenbrauns, MUSE "Open
+Access: No"), Lewis 1980, Jiménez 2018, CT 13 42–43 and CT 46 46 (copies on archive.org), CDLI P365306/7/3 (503),
+Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1968, Jacobsen 1992, Vanstiphout
+1994, Alster 1973, Klein 2004), Jacobsen 1987, Black et al. 2004.
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).
@@ -143,6 +169,17 @@ Added 2026-10-20. Base texts:
 - **ZORA** (University of Zurich repository; OBO volumes are open access there): the DSpace 7 API works from a script: `GET https://www.zora.uzh.ch/server/api/core/items/<uuid>?embed=bundles` → the ORIGINAL bundle's `bitstreams` → `_links.content.href` (the PDF). Check the item's rights fields: open access is not a licence.
 - **CCP** (Cuneiform Commentaries Project, Yale): per-text pages `https://ccp.yale.edu/P<number>` (introduction, transliteration, translation, notes) download with a browser User-Agent; © CCP. eBL quotes the same commentaries as `…Com…` / `…Quo…` manuscripts: check the museum number against CCP before calling one new.
 
+- **Seen in the cloud, 2026-10-21 (round 2, run 6):** **CDLI** (`cdli.earth`) answered 503 "CDLI is temporarily offline … security update" all day on 2026-10-21 (five
+tries, 15:00–?); `cdli.mpiwg-berlin.mpg.de` redirects to it.
+- **HathiTrust**: `catalog.hathitrust.org/api/volumes/brief/…` works; `babel.hathitrust.org` (full text, page images)
+answers scripts with a Cloudflare challenge (403) – a browser is needed.
+- **Google Books API** and **Wikimedia/Wikisource API** answered 429 (rate limit) to the proxy; not retried.
+- **ZORA** (`www.zora.uzh.ch`): the DSpace search `server/api/discover/search/objects?query=…` finds OBO volumes;
+Mittermayer 2009 downloaded as documented for Lenzi.
+- **University of Diyala e-library** (`uodiyala.edu.iq`) hosts PDFs of public-domain Assyriological books (King 1907
+vols. I–II): a mirror when archive.org is blocked. (Use only for public-domain items.)
+- **eBL fragmentarium**: `GET /api/fragments/<no>` gives the record, `atf` empty when not transliterated; the
+bibliography ids resolve at `/api/bibliography/<id>` (RN262 = Westenholz 1997, RN2877 = Jiménez 2018).
 ## 9. Paid sources
 
 Buying is the user's decision; ask before assuming. Status as of 2026-10-16, ranked by value for the current work:

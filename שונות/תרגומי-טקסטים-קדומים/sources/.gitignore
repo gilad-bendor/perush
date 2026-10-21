@@ -46,6 +46,13 @@ Comparative-studies/*/*
 !Comparative-studies/*/README.md
 LXX-Rahlfs-1935--el-wikisource/*
 !LXX-Rahlfs-1935--el-wikisource/README.md
+# legends of kings (round 2, run 6; each folder also has its own .gitignore)
+Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/*
+!Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/README.md
+!Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/.gitignore
+eBL-fragmentarium--Sargon-Birth-Legend/*
+!eBL-fragmentarium--Sargon-Birth-Legend/README.md
+!eBL-fragmentarium--Sargon-Birth-Legend/.gitignore
 
 # 3. Bulk corpora – large, re-downloadable (see the folder README)
 ETCSL/_bulk/*
@@ -56,6 +63,7 @@ ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.json
 ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.html
 ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/*.html
 ORACC/epsd2-literary--Q000334--Enki-and-the-World-Order/*.json
+ORACC/epsd2-literary--Q000369--Enmerkar-and-the-Lord-of-Aratta/*.json
 # the form index built by tools/sumerian_workbench.py (12 MB, regenerated on demand)
 ORACC/_bulk/*.json
 
