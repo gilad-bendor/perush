@@ -232,7 +232,7 @@ Lemmas: ePSD2 citation forms (ORACC Q000332) or ETCSL forms. "Lines" lists the c
 | *dab₅*; *tug₂* | תָּפַס; בֶּגֶד | [equivalent] ↔ לט:יב | | 68, 248 |
 | *za-gin₃*; *gug*; *kug-sig₁₇*; *urud*; *{ĝiš}esi*; *siki*; *tug₂ maḫ*/*sig₅* | סַפִּיר (= lapis lazuli, note); אֹדֶם; זָהָב; נְחֹשֶׁת; הָבְנִים; צֶמֶר; בְּגָדִים נִשְׂגָּבִים / מְעֻלִּים | [equivalent] ↔ ב:יא–יב; יחזקאל כח:יג | *niĝ₂ al di* = `דְּבַר־חֵפֶץ` (not `נֶחְמָד`). | 49A–49O |
 | *sag₉*; *sig₅*; *dug₃* | נָאֶה; מְעֻלֶּה; טוֹב / מָתוֹק | [equivalent] (*dug₃*) ↔ `טוֹב` (ב:יב) | `טוֹב` only for *dug₃* (= Akk. *ṭābu*), as Adapa reserves it for *ṭābu*. | 49D, 49Q–R, 91 ff. |
-| *ur-gu-la*; *ur-bar-ra*; *ur-gir₁₅*; *sila₄*; *maš₂*; *šaḫ₂*; *uga*; *dar*; *tum₁₂*; *mušen an-na* | אַרְיֵה; זְאֵב; כֶּלֶב; טָלֶה; גְּדִי; חֲזִיר; עוֹרֵב; חֻגְלָה; יוֹנָה; עוֹף הַשָּׁמַיִם | [equivalent] ↔ ישעיהו יא:ו–ז; סה:כה; בראשית ב:יט | *dar* = `חֻגְלָה`, not `קוֹרֵא` (root קרא reserved). | 11–19 |
+| *ur-gu-la*; *ur-bar-ra*; *ur-gir₁₅*; *sila₄*; *maš₂*; *šaḫ₂*; *uga*; *dar*; *tum₁₂*; *mušen an-na* | אַרְיֵה; זְאֵב; כֶּלֶב; טָלֶה; גְּדִי; חֲזִיר; עוֹרֵב; חֻגְלָה; יוֹנָה; צִפּוֹר הַשָּׁמַיִם (was עוֹף הַשָּׁמַיִם; harmonization 2026-10-21) | [equivalent] ↔ ישעיהו יא:ו–ז; סה:כה; בראשית ב:יט | *dar* = `חֻגְלָה`, not `קוֹרֵא` (root קרא reserved). | 11–19 |
 | *igi-gig*, *saĝ-gig*; *um-ma*, *ab-ba*; *e-lu-lam*, *i-lu* | מַחֲלַת הָעַיִן, כְּאֵב הָרֹאשׁ; זְקֵנָה, זָקֵן; אֶלוּלָם, קִינָה | [equivalent] ↔ ישעיהו לג:כד; סה:יט–כ | | 20–28 |
 | *nu-* (negation) + marû in 11–28 | אֵינוֹ + participle | [divergence] ↔ `טֶרֶם` (ב:ה) | Not "not yet" (ETCSL): the Sumerian has a plain present negation. | 11–28 |
 
@@ -368,7 +368,7 @@ Lemmas: ePSD2 citation forms (ORACC Q000778) or ETCSL forms. "Lines" lists the c
 | *gub* (with agent); *tuš*; *sug₂*; *ku₄-ku₄* | הֶעֱמִיד; יָשַׁב; עוֹמְדִים; נִכְנָס | | Texts 2–3. | 33, 48, 54, 58, 60; 64; 22; 40, 42 |
 | *ur-saĝ*; *šul*; *idim* | גִּבּוֹר; הָעֶלֶם; נִכְבָּד | | Flood corpus §3a. | 40, 60, 77; 55, 76 |
 | *lum*; *lam* | שִׂגְשֵׂג; פָּרַח | [equivalent] ↔ `פְּרוּ וּרְבוּ` (א:כח) | Not `פָּרָה`. | 67, 94 |
-| *ušumgal*; *ur*; *mušen*; *al-ti-ri₂-gu₇* | דְּרָקוֹן־עֲנָק; כֶּלֶב; עוֹף; הָאַלְתִּירִיגוּ | [equivalent] ↔ `הַתַּנִּינִם` (א:כא) | *ušumgal* as text 3 / project 1. | 63, 83–84 |
+| *ušumgal*; *ur*; *mušen*; *al-ti-ri₂-gu₇* | דְּרָקוֹן־עֲנָק; כֶּלֶב; צִפּוֹר (was עוֹף; harmonization 2026-10-21); הָאַלְתִּירִיגוּ | [equivalent] ↔ `הַתַּנִּינִם` (א:כא) | *ušumgal* as text 3 / project 1. | 63, 83–84 |
 | *šita₂*; *{ĝiš}tukul*; *ti*; *mar-uru₅* | מַפֵּץ; נֶשֶׁק; חֵץ; אַשְׁפָּה | [equivalent] ↔ ישעיהו ב:ד | *tukul* = Akk. *kakku* (`נֶשֶׁק`). | 66 |
 | *izi la₂*; *la₂* | הֶעֱבִיר בָּאֵשׁ; תָּלָה / מְהֻדָּק | [equivalent] ↔ במדבר לא:כג | By sense. | 69; 7, 13 |
 | *bulug*; *gud-si-AŠ*; *bad₃* | יָתֵד?; כַּר; חוֹמָה | [equivalent] ↔ יחזקאל ד:ב (`כָּרִים`) | `כַּר` vocalized. | 7, 14; 15; 15, 86 |
@@ -528,7 +528,7 @@ Akkadian lemmas: eBL dictionary (our normalization of eBL's ATF); Sumerian in th
 | *kalālu* Š stat.; Št | שֻׁכְלַל; יִשְׁתַּכְלֵל | [cognate] | Text 1 *šuklulu* = `שִׁכְלֵל`. | 14, rev. 21′ |
 | *mitḫāriš*; *ṣīriš*; *ellu*; *ebbu* | יַחְדָּיו; בְּרוֹמְמוּת; טָהוֹר; זַךְ | | EE; *ellu*/*ebbu* = Sum. *kug*/*sikil* (text 2). | 1, 9, 15–16, rev. 15′–18′ |
 | *elēlu* D; *ebēbu* D; *niqnakku*; *gizillû*; *agubbû* | טִהֵר; זִכֵּךְ; מִקְטֶרֶת; לַפִּיד; אַגַּן־הַמַּיִם | [equivalent] ↔ דברי הימים ב כו:יט | | rev. 15′–18′ |
-| *tû*; *šiptu* / Sum. *en₂*; Sum. *ka-inim-ma* | לַחַשׁ; קֶסֶם; נֻסַּח־הַקֶּסֶם | | EE (open decision there). | 1, rev. 19′, 26′–27′ |
+| *tû*; *šiptu* / Sum. *en₂*; Sum. *ka-inim-ma* | לַחַשׁ; קֶסֶם; נֻסַּח־הַקֶּסֶם | | EE; settled 2026-10-21 (cross-corpus: *šiptu* / *nam-šub* / *tu₆* = `קֶסֶם`, Akk. *tû* = `לַחַשׁ`; rev. 19′ follows the Akkadian *tû*). | 1, rev. 19′, 26′–27′ |
 | *nuḫšu*; *ana ūmī ṣâti*; *parṣu*; *kiššatu* | עֲתֶרֶת; לִימֵי עַד; פֻּלְחָן; כָּל | | EE; never `לְעוֹלָם`. | rev. 10′, 19′–21′ |
 | *sukkallu*; *eršu* (Sum. *galanzu*); *māliku*; *narām libbi* | וְזִיר; פִּקֵּחַ; מְיַעֵץ; אֲהוּב לֵב | | Texts 1–2, EE. | rev. 12′–13′, 22′–23′ |
 | *ereqqi šamāmī* | עֲגָלַת הַשָּׁמַיִם | [equivalent?] ↔ איוב ט:ט | Ursa Minor. | rev. 27′ |
@@ -577,7 +577,7 @@ Akkadian lemmas: SEAL (checked with the eBL dictionary); Sumerian in the notes. 
 | *eqlu*; *ḫegallu*; *rabû* D; *dešû* D | שָׂדֶה; שֶׁפַע; הִרְבָּה; הִדְשִׁיא | [cognate] (*rabû* ~ רבה, *dešû* ~ דשא) ↔ א:יא, כח | | rev. 6–7, 14 |
 | *isinnu*; *šuklulu*; *naqû*; *mû kaṣûtu* | חַג; שִׁכְלֵל; נִסֵּךְ; מַיִם קָרִים | | EE; text 1. | rev. 8–9, 23 |
 | *šuma zakāru* Gtn (*tazzanakkar*) | הִזְכִּיר (תַּזְכִּיר ותזכיר) | [divergence] ↔ ג:כ; ה:ב | Corpus §3; not `קָרָא`. | rev. 12 |
-| *alpu*; *immeru*; *būlu*; *nūnu*; *iṣṣūru* | שׁוֹר; צֹאן; חַיָּה; דָּג; עוֹף | [divergence] ↔ א:כו | | rev. 13 |
+| *alpu*; *immeru*; *būlu*; *nūnu*; *iṣṣūru* | שׁוֹר; צֹאן; חַיָּה; דָּג; צִפּוֹר (was עוֹף; harmonization 2026-10-21: MUŠEN = Sum. *mušen* = `צִפּוֹר`) | [divergence] ↔ א:כו; [cognate] *iṣṣūru* = צִפּוֹר | | rev. 13 |
 | *pû ellu*; *kânu* D (honour) | פֶּה טָהוֹר; הוֹקִיר? | | Deviation by meaning (Decision 7). | rev. 15–16 |
 | *bēlūtu* | אֲדָנוּת | | Corpus §3 (SEAL lemma *bēltu* is a slip). | rev. 17 |
 | *ummânu*; *nuʾʾû* | אֻמָּן; בּוּר | [equivalent] ↔ שמות ד:יא | | rev. 19 |
@@ -588,6 +588,7 @@ Akkadian lemmas: SEAL (checked with the eBL dictionary); Sumerian in the notes. 
 | *pirištu*; *mūdû*; *kullumu*; *niṣirtu*; *gabarû labīru* | סוֹד; הַיּוֹדֵעַ; הֶרְאָה; נְצוּרָה; הֶעְתֵּק יָשָׁן | [cognate] (*niṣirtu* ~ נצר) | Colophons. | rev. 31; colophon B 5–6 |
 
 ## Changelog
+- 2026-10-21 harmonization (cross-corpus decisions, see the corpus `renderings.md` §8): *mušen* = `צִפּוֹר` (E&Nḫ 18, Hoe 83; KAR 4 rev. 13 *iṣṣūru*); Inana `אִינַנָּה` in the apparatus too (`אינאנה` replaced, incl. the Hoe heading 49–51); the [equivalent] note on `סַפִּיר` added at Hoe 12; *šiptu* = `קֶסֶם` / *tû* = `לַחַשׁ` settled; *šembizid* = `פּוּךְ`, *sukkal* = `וְזִיר`, *karû* = `כְּרִי` unchanged.
 - 2026-10-16: §1–3 written by the coordinator before drafting text 1, from the corpus renderings, the flood corpus's shared renderings and Sumerian project 3.
 - 2026-10-16: §4 "Text 1: Adapa" added by the text-1 translator. §1–3 unchanged and followed (*akalu*, *mû*, *mūtu*, *balāṭu*, *napištu dārītu*, *nēmequ*/*uznu*/*ḫasīsu*, *labāšu*, *lubāru*, *šamnu*/*pašāšu*, *ṣiāḫu*, *apkallu*, *nišū*, *awīlūtu*, *banû*, *zēru*, *šasû* as fixed). One usage differs from project 1's glossary (not from these sections): *ṭeḫû* = `נִגַּשׁ`, because its cognate-bearing synonym *qerēbu* = `קָרַב` occurs in the same text (project.md, Text 1, Decision 8).
 - 2026-10-16/17: §4 "Text 2: Enki and Ninḫursaĝa" added by the text-2 translator. §1–3 followed; three usages differ **by meaning** and are explained in project.md, Text 2, Decisions 9: Sum. *ki* "earth (from below)" = `הָאָרֶץ` without *an* (43, 54); *zi* as the body part "throat" = `נֶפֶשׁ` (264); *du₃* of trees = `נָטַע?` (227). The §2 row *aš bal*, *nam-erim₂* is specified (not changed): *nam-erim₂ kud* = `נִשְׁבַּע שְׁבוּעָה`.

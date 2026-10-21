@@ -10,6 +10,8 @@ Usage (from any directory):
       3. RESERVED strings (vocalization stripped) appear in a `>` line only when the entry's transliteration contains
          an allowed Sumerian word (listed per string); otherwise an error;
       4. TRAPS: names that read as Hebrew words when unvocalized (Utu, Uttu, Inana, *me*) must be vocalized;
+         Inana must be `אִינַנָּה`: the alef spelling (`אִינַאנָּה`, `אינאנה`) is an error even when vocalized
+         (cross-corpus harmonization, 2026-10-21);
       5. translation.rtl.md (if present): its numbered lines equal the annotated `>` lines one to one;
       and it REPORTS (not an error) every pair of entries with identical transliteration but different Hebrew.
   python3 -I sumerian_tools.py build KEY                build translation.rtl.md from translation--intro.rtl.md +
@@ -62,7 +64,10 @@ RESERVED = {
 }
 TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex): must carry niqqud when the name is there
     'אותו': ('Utu (אוּתוּ)', r'\butu\b'), 'אוטו': ('Uttu (אוּטּוּ)', r'uttu'),
-    'איננה': ('Inana (אִינַנָּה)', r'inana|inanna'), 'אינאנה': ('Inana (אִינַנָּה)', r'inana|inanna'),
+    'איננה': ('Inana (אִינַנָּה)', r'inana|inanna'),
+}
+WRONG_FORMS = {  # stripped token (prefixes allowed) -> (correct form, transliteration regex): an error even when vocalized
+    'אינאנה': ('Inana as `אִינַנָּה` (not `אִינַאנָּה`; harmonization 2026-10-21)', r'inana|inanna'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')
@@ -153,6 +158,9 @@ def check_traps(label, heb, problems, tr=''):
                 if (part == trap or base == trap) and re.search(rx, tr):
                     if not NIQQUD.search(tok):
                         problems.append(f'{label}: unvocalized "{tok}" reads as a Hebrew word: write {what}')
+            for wrong, (what, rx) in WRONG_FORMS.items():
+                if (part == wrong or base == wrong) and re.search(rx, tr):
+                    problems.append(f'{label}: "{tok}": write {what}')
         if re.search(r'־מה$', st) and re.search(r'\bme\b', tr) and not NIQQUD.search(tok.split('־')[-1]):
             problems.append(f'{label}: *me* must be vocalized (`הַ־מֶה`), got "{tok}"')
 

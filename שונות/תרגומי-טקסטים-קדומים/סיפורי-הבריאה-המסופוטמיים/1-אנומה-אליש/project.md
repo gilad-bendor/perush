@@ -267,7 +267,7 @@ Files: `annotated-II.rtl.md` (162 entries), `translation-II.rtl.md` (introductio
 3. **151 *rikab ūmī***: a noun "chariot of the storms" (`את רכב הסערות חיש הנהג`, following Foster) or an imperative "ride the storms" (eBL's lemma is the verb *rakābu*). Both keep the cognate רכב.
 4. **155 *bēlū ilī***: plural `אֲדוֹנֵי האלים` (the normalization has *bēlū*, and Marduk addresses the gods in the plural from 156), against Foster's and King's singular ("Lord of the gods", Anšar).
 5. **160 *kīma kâtunū-ma***: `במקומכם` ("in your place", Foster, King) or literal `כמוכם` ("like you").
-6. ***šiptu* = `קֶסֶם`**: biblical `קֶסֶם` is divination; the alternative `חֶבֶר` (Ps 58:6 `חוֹבֵר חֲבָרִים`) is exact but reads as "friend" unvocalized.
+6. ***šiptu* = `קֶסֶם`**: biblical `קֶסֶם` is divination; the alternative `חֶבֶר` (Ps 58:6 `חוֹבֵר חֲבָרִים`) is exact but reads as "friend" unvocalized. **Settled 2026-10-21** (the lead's cross-corpus harmonization): *šiptu* stays `קֶסֶם` (not `חֶבֶר`), with Sum. *nam-šub* / *tu₆* = `קֶסֶם` and Akk. *tû* = `לַחַשׁ` in all corpora.
 7. **119 *qaqqara inaṭṭal***: `ארצה מביט` (adverbial ארץ), to avoid `קרקע` (= *ammatu*, I 2) and `אדמה` (Gen 2).
 8. **62 *ḫulluqu***: `לאבד` (consistent with *ḫalāqu* D in Tablet I) rather than `להשמיד`.
 9. **1 *ukappit … pitiqša***: `לקטה … את מעוצביה`. Alternatives: `קיבצה`/`כינסה` (but `כנס`/`קבץ` are taken for *paḫāru*), `יצוריה` (rejected: pre-empts `וייצר`).
@@ -1058,7 +1058,7 @@ Files: `annotated-VII.rtl.md` (166 entries), `translation-VII.rtl.md` (introduct
 | 27 | 68 | *enbilulu ḫegal* | אן־בילולו־חֵגַּל | *ḫé-ĝál* "abundance" | צובר השפע לאנשים |
 | 28 | 70 | *sirsir* | סִירְסִיר | god of sailors | שופך ההר מעל תיאמת |
 | 29 | 76 | *sirsir malaḫ* | סירסיר־מַלָּח | *má-laḫ₄* "sailor" (= *malāḫu*) | תיאמת – רכובו, והוא – מלחה |
-| 30 | 78 | *gil* | גִּיל | *gil* "heap" (?) | שופך ערמות |
+| 30 | 78 | *gil* | גִּיל | *gil* "heap" (?) | שופך כרים |
 | 31 | 80 | *gilima* | גִּילִימָה | *gilim* "to twist, bind" (?) | מכונן פתיל האלים |
 | 32 | 82 | *agilima* | אַגִּילִימָה | uncertain | הגבוה, נוסח הכתר, סוקר השלג |
 | 33 | 84 | *zulum* | זוּלוּם | uncertain | מסמן כרים לאלים |

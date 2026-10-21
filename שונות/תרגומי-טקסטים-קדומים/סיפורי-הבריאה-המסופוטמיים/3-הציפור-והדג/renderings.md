@@ -56,6 +56,7 @@ Lemmas: ETCSL's TEI lemmas (ORACC has no text of 5.3.5). "Lines" = ETCSL labels.
 | *gu₃ de₂* | צעק | | Never `קרא`. | 25, 47 |
 | *sig₁₀*; *sa₂ sig₁₀* | שָׁת (vocalized); עצה שָׁת | [equivalent] ↔ תהלים יג:ג | Decision 6. | 72 (`הוטלה`, idiom), 102, 106, 109, 114, 149, 153 |
 | *sig₉* (quiet) | דממה | | Akk. gloss *šaqummiš*. | 103, 105 |
+| *ur₄* "gather"; *ur₄-ur₄* | אָסַף; אסף ואסף | | As EWO 65; was `קיבץ וקיבץ` (harmonization 2026-10-21). | 5 |
 | *ĝar* | שָׂם (always vocalized) | [equivalent] | Reserved (corpus §5.2). | 2, 5, 8, 10, 35, 67, 74, 75, 84, 95, 106, 108, 114, 119, 125, 126, 151, 164, 170 |
 | *gub* (trans.) / (intr.) | העמיד / עמד | | | 16, 25, 27, 34, 82, 117, 140 |
 | *DU.DU*, *du-du* | התהלך; noun התהלכות | | | 65, 73, 103, 129, 130, 168 |
@@ -88,7 +89,7 @@ Lemmas: ETCSL's TEI lemmas (ORACC has no text of 5.3.5). "Lines" = ETCSL labels.
 | *piriĝ*; *ḫu-ri₂-in*; *umbin* | לביא; נשר; ציפורן | [equivalent] ↔ יחזקאל א:י | Anzu-like bird. | 110, 118, 176 |
 | *mar-uru₅*; *u₁₈-lu*; *muru₉*; *ud* (storm) | סופה; רוח הדרום; ערפל; סערה | | | 65, 82, 112, 163 |
 | *lil₂* (*eš₃ lil₂*) | (מקדש־)רוחות | | | 106, 153 |
-| *za-gin₃* | ספיר | [equivalent] ↔ שמות כד:י | | 96, 133 |
+| *za-gin₃* | סַפִּיר (vocalized at 96) | [equivalent] ↔ שמות כד:י; יחזקאל א:כו | Biblical `סַפִּיר` = lapis lazuli (note at 96). | 96, 133 |
 | *galam*; *ḫu-ru*; *is-ḫab₂*; *saĝ šu (zig₃) dug₄* | נוכל; נחות; נבל; *משונה* | [equivalent] ↔ `עָרוּם` (ג:א) for *galam* | Decision 7. | 88, 122, 124 |
 | *nam-tag* | חטא | [equivalent] | | 94 |
 | *di*; *di-ku₅*; *ka-aš bar* | דין; דיין; הכריע (מכריע) | | corpus §6.3. | 139, 140, 147, 156 |
@@ -98,5 +99,6 @@ Lemmas: ETCSL's TEI lemmas (ORACC has no text of 5.3.5). "Lines" = ETCSL labels.
 | *ud ul re*; *ud ul-le₂-a* | הימים ההם הרחוקים | | Never `עולם`. | 1, 134 |
 
 ## Changelog
+- 2026-10-21 harmonization (cross-corpus decisions): *ur₄* = `אָסַף` (5 `קיבץ וקיבץ` → `אסף ואסף`); `הַסַּפִּירִי` vocalized at 96, its note completed; `אינאנה` in the apparatus → `אִינַנָּה`; *mušen* = `צִפּוֹר` now in all corpora (open decision 1 settled).
 - 2026-10-19: created by the coordinator (empty).
 - 2026-10-19: translator, run 1 (whole text): names, formulas and terms above.

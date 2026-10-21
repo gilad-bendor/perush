@@ -89,7 +89,7 @@ Lemmas: ETCSL's TEI lemmas and ORACC Q000334 (citation form, morph). "Lines" = E
 | *ki-gub*; *{mul}iku*; *{mul}{ĝiš}gigir*; *igi-nim* | מקום עמידה; כוכב השדה; כוכב המרכבה; הארץ העליונה | | | 288, 289 |
 | *ab* / *a-ab-ba*; *i-zi*; *ḫu-luḫ*; *me-lem₄*; *ḫuš* | ים; גל; מבעית; זוהר; נורא / זועף | | | 286, 290, 297, 304, 307, 374, 419 |
 | *saĝ … ĝar* | ראש … שָׂם | | Literal ("dare"). | 291 |
-| *šudu₃*; *a-ra-zu* | תפילה; תחנון | | Not `ברכה` (decision noted at 293). | 293 |
+| *šudu₃*; *a-ra-zu* | ברכה; תחנון | | `ברכה` (= Akk. *ikribu*) since the 2026-10-21 harmonization (was `תפילה`); *sizkur₂* = `תפילה`. | 293 |
 | *barag* | דוכן | | corpus §3 (*parakku*). | 294 |
 | *nun gal* | הנסיך הגדול | | Enki's epithet. | 296, 319, 335, 343 |
 | *u₅{mušen}*; *u₅* (verb) | שקנאי?; רכב | | Bird: ETCSL "pelican?", ORACC "goose". | 297, 418; 301, 313 |
@@ -248,7 +248,7 @@ The ★ rows above were followed (the appointment formula in 239; *ĝar*, *gub*,
 | *mu sa₄*; *mu pad₃*; *pad₃* | קרא שם; נקב (שם); בחר / מצא | [equivalent] ↔ ד:כה; כח:יט; ישעיהו סב:ב; דברים יב:ה | Decision 23. | 78, 94, 109, 147, 195, 216 |
 | *palil* | המוביל | | Not "ההולך בראש" (ברא). | 79 |
 | *nam-maḫ*; *du* (with *nam-maḫ*) | רוממות; *הכריז* | | | 81 |
-| *šudu₃*; *a-ra-zu*; *sug₂* | תפילה; תחנון; עומדים | | Annotated-2 293. | 83, 101, 103, 154 |
+| *šudu₃*; *a-ra-zu*; *sug₂* | ברכה; תחנון; עומדים | | Annotated-2 293; `ברכה` since the 2026-10-21 harmonization (was `תפילה`). | 83, 101, 103, 154 |
 | *ĝiri₃ gub* | רגלו עומדת / רגל מעמידים | | | 84, 136, 145 |
 | *im* (rain); *šeĝ₃* | גשם; נמטר | [equivalent] ↔ ב:ה; עמוס ד:ז | | 90 |
 | *a-eštub*; *a-u₃* | מי־האשתוב; גאות | [equivalent] ↔ מט:כה | | 91 |
@@ -258,7 +258,7 @@ The ★ rows above were followed (the appointment formula in 239; *ĝar*, *gub*,
 | *suḫur*; *suḫur-maš*; *eštub*; *u₂-lal₃*; *gi-zi*; *sun₄*; *kun* | דג־סוחור; דג־הסוחור־מש; דג־האשתוב; צמחי־הדבש; קני־הגיזי; זקן; זנב | [divergence] ↔ א:כ | | 97, 98, 163, 165 |
 | *buru₅{mušen}*; *gud₃*; *šeg₁₁ gi₄* | ציפור; קן; צפצוף משיב | [equivalent] ↔ תהלים קד:יב | Decision 26. | 99 |
 | *abgal*; *abrig*; *enkum*, *ninkum*; *ka-tu₆-ĝal₂*; *šag₄-gada-la₂*; *nam-išib*; *uz-ga* | חכם; איש־האברג; האנכום והנינכום; מלחש; לובש־הפשתן; טקס־הטהרה; אוזגה | [equivalent] ↔ יחזקאל מד:יז | | 102, 104, 142–144, 153 |
-| *šir₃*; *nam-šub* | שיר; לחש | | | 106, 112 |
+| *šir₃*; *nam-šub* | שיר; קסם | | *nam-šub* = `קֶסֶם` (= *šiptu*) since the 2026-10-21 harmonization (was `לחש`); Enmerkar 134 `שיר טהור, קסם`. | 106, 112 |
 | *ma₂-gur₈*; *ma₂*; *ma₂-gi₄-lum*; *ĝisal*; *gu₃ ra*; *gi-muš*; *ma₂-laḫ₅* | ספינת־המגור; ספינה; ספינת־המגילום; משוט; מכי־הקול; מוט־הדחיפה; מלח | [cognate] (*ma₂-laḫ₅* > `מַלָּח`) | | 107–115, 126–128, 160, 174, 182, 187 |
 | *a₂ sud*; *gu₂ mar* | זרוע האריך; צוואר הניח | | *mar* is not *ĝar*. | 110 |
 | *ensi₂*; *nu-banda₃* | מושל; ממונה | | | 113, 169, 173, 184 |
@@ -296,6 +296,7 @@ The ★ rows above were followed (the appointment formula in 239; *ĝar*, *gub*,
 | *a₂ šum₂*; *ḫulu*; *bad₃*; *niĝ₂-gur₁₁* | כוח נתן; השחית; חומה; רכוש | [equivalent] ↔ שמואל א ב:י; יחזקאל כו:ד | | 244–246 |
 
 ## Changelog
+- 2026-10-21 harmonization (cross-corpus decisions): *šudu₃* = `בְּרָכָה` (83, 293); *nam-šub* = `קֶסֶם` (106); `סַפִּיר` vocalized at 246 and 350 and the [equivalent] note added at 246; *me* = `הַ־מֶה`, *ur₄* = `אָסַף`, *guru₇* = `כְּרִי` confirmed.
 - 2026-10-19: created by the coordinator (empty).
 - 2026-10-19: translator, run 2 (lines 250–472): names, formulas (★ = binding for 1–249) and terms above.
 - 2026-10-19: translator, run 3 (lines 1–249): names, formulas and terms of the first part.
