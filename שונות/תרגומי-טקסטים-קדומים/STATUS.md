@@ -115,39 +115,23 @@ A coordinator (one agent per run) gets this brief, adapted to its texts:
 - **Report:** what was translated and verified; key findings for the Bible; what the texts show of the ancient
   mind; open decisions for the user; anything skipped or failed.
 
-## 6. Open decisions for the user
+## 6. Open decisions
 
 **The user's standing rules (2026-10-21):** **no purchases** (paid or lending-only sources stay records-only: e.g. Westenholz 1997
 is not bought, so the Sargon Birth Legend stays on King 1907, with its caveat in the project); **decide minor things
 yourself** (renderings, harmonizing splits between corpora, scope details) and record each decision where it belongs
 (the corpus `renderings.md`, the `project.md`, this table). Only major choices go to the user.
 
-Each `project.md` lists its own. These cross corpora, so they matter most:
+**The cross-corpus splits were settled on 2026-10-21** (by the lead, under the rule above): the decisions, and the words kept
+by sense, are in `translation-guidelines.md` §6.7 ("Cross-corpus harmonization"); each corpus's `renderings.md` lists the
+lines it changed, and the `project.md` files mark their open decisions settled. All verifiers and `check_bible_quotes.py`
+passed afterwards. Still open:
 
-| Decision | Now | Alternatives / where |
+| Decision | Now | Where |
 |---|---|---|
-| Inana's name | `אִינַנָּה` (creation, laments, temple) | `אִינַאנָּה` (laws corpus) |
-| The *me* (the divine powers and offices) | `הַ־מֶה` (creation 3–4, laments, temple) | `הַכֹּחוֹת הַנִּשְׂגָּבִים` (flood corpus) |
-| Bird | `צִפּוֹר` (Bird and Fish) | creation project 2 has `עוֹף` in Enki and Ninḫursaĝa 18 and the Song of the Hoe 83: align? |
-| *šiptu* "incantation" | `קֶסֶם` (wisdom) | `חֶבֶר` (Deut 18:11), recommended by the coordinator |
-| Bitumen | (Gudea) | `חֵמָר` (Gen 11:3) or `כֹּפֶר` (Gen 6:14, the flood corpus) |
-| Gudea against earlier corpora | `שורמן`, `הנכונה`, `רכב`, `ברכה` | `ברוש`, `אמת`, `רץ`, `תפילה` (see `בניין-המקדש/1-גליליות-גודאה/project.md`) |
-| Sumerian *uĝ₃* "people" | `עָם` (laments) | `הָאֲנָשִׁים` (creation) |
-| *kur* (the netherworld) | `הָאָרֶץ` (= *erṣetu*; netherworld corpus) | `הַר` / `אֶרֶץ` "highland, foreign land" in the other Sumerian corpora (correct there: another sense) |
-| *sukkal* / *šukkallu* | `וְזִיר` (creation, temple, netherworld) | `שַׂר` (Gilgameš VIII) |
-| *uznu* / *ĝeštug₂* in "set the ear" | `אֹזֶן` (netherworld: the literal image) | `בִּינָה` (Gilgameš default) |
-| *ḫarrānu* / *ḫar-ra-an* | `אֹרַח` (Gilgameš, netherworld) | `דֶּרֶךְ` (laments) |
-| *kabattu* | `כָּבֵד` (wisdom, netherworld) | `רוּחַ` (Gilgameš) |
-| *ur₄* "pluck" | `קָטַף` (netherworld) | check the creation corpus (`אָסַף`?) |
-| *šembi₂-zid* (eye paint) | `פוּךְ` (legends of kings, ↔ 2 Kgs 9:30) | `כָּחָל` (netherworld) – align |
-| Dumuzi's vocalization | at every occurrence (netherworld) | at the first occurrence per file (legends of kings) |
-| *nam-šub* "incantation" | `קֶסֶם` (legends of kings) | check the temple and lament corpora; cf. *šiptu* above |
-| *za-gin₃* / *uqnû* "lapis lazuli" | `לָזוּרִית` (Gilgameš, everyday voices) | `סַפִּיר` (netherworld, legends of kings) – align |
-| *niĝ₂-gig* (proverbs) and *an-zil* (laments) | both `תּוֹעֵבָה` | keep, or give one another word |
-| *ṣabātu* "seize" | `תָּפַס` (everyday voices, since *aḫāzu* = `אָחַז` [cognate] occurs there) | `אָחַז` (Gilgameš): should Gilgameš follow? |
-| *en₃-du* "song"; *guru₇* "granary" | `זֶמֶר`; `אָסָם` (everyday voices) | `זִמְרָה`; `כְּרִי` (legends of kings) – align |
-| *māru* "son" as a lover's endearment | `בֵּן` (literal; everyday voices) | `יַקִּיר` |
-| The Sargon Birth Legend's base text | King 1907 (our transcription from the page images) | Westenholz 1997, pp. 36–49, and K 7249 – not to be bought (the user's rule); check if an open copy appears |
+| The Sargon Birth Legend's base text | King 1907 (our transcription from the page images) | Westenholz 1997 is not to be bought (the user's rule): check again if an open copy appears |
+| **For the user:** *šipru* "work, task" | `מְלָאכָה` (Atra-ḫasīs, the other flood texts, Gilg. XI 180: ~13 lines) / `פֹּעַל` (Enūma eliš V 63, 141, VI 37, 57, 67: chosen so as not to pre-empt `מְלַאכְתּוֹ`, Gen 2:2–3) | Left to the user because it touches Gen 2:2–3. The lead recommends `מְלָאכָה` everywhere, tagged [equivalent]: by meaning it is the better word for an assigned task, and the link is real (both words grew from "sending": *šapāru*, `לאך`), so the rule against pre-empting (§6.4, among *equally good* renderings) does not apply. Changing it means 5 Enūma eliš lines and their notes. (*šipru lemnu* "an evil deed" = `מַעֲשֶׂה רַע` stays.) |
+| The per-text open decisions | see each `project.md` | minor ones: the next session on that corpus decides them (the user's rule) |
 
 The decisions settled earlier (2026-10-18) are in the Gilgameš renderings §12, `חוקים-ובריתות/corpus.md` and the
 flood corpus renderings.
