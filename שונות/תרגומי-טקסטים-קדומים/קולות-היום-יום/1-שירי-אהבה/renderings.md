@@ -26,7 +26,7 @@ Words used only in this project (the corpus `../renderings.md` binds first). Tab
 | *nipḫu* "flaring (of a star)" | `הִתְלַקְּחוּת` | | never `מָאוֹר` (Gen 1) | 20 o.2 |
 | *kuppuru* "wipe clean" | `כִּפֵּר` | [cognate] ↔ ויקרא טז:טז | uncertain (`*תכפר*`) | 20 o.14 |
 | *aštammu* | `פּוּנְדָּק` | | MAL corpus | 20 o.14 |
-| *šiptum ul yâtu, šipat DN* (the closing formula) | `הקסם אינו שלי: קסם DN` | | *šiptu* = `קֶסֶם` (open, STATUS §6) | 20 o.15–16 |
+| *šiptum ul yâtu, šipat DN* (the closing formula) | `הקסם אינו שלי: קסם DN` | | *šiptu* = `קֶסֶם` (settled 2026-10-21: kept) | 20 o.15–16 |
 | *pašāru* N "be soothed"; *ramû* D "release" | `הִפָּשֵׁר`; `הִרְפָּה` | | Gilgameš `פָּשַׁר`; law `הִרְפָּה` | 25 r.28 |
 | *ṣurru* "interior, heart" | `תּוֹךְ` | | `לֵב` = *libbu* | 25 r.26 |
 | *rīmtu* "wild cow" | `רְאֵמָה` | [cognate] of `רְאֵם` | | 20 o.9 |
@@ -34,4 +34,7 @@ Words used only in this project (the corpus `../renderings.md` binds first). Tab
 | *aḫu* "side, arm"; *idu* "arm" | `צַד`; `זְרוֹעַ` | | | 26 r.17; 22 r.25 |
 | *rakāsu* | `קָשַׁר` | | creation corpus `רָכַס` (cognate) for the raft | 26 r.18, r.24 |
 | *upellû*; *werû*; *abāru*; *sangû* | `פֶּחָם`; `נְחֹשֶׁת`; `עוֹפֶרֶת`; `סַנְגּוּ` | | | 24 o.4–7 |
-| *uqnû*; *ḫurāṣu*; *qarnu*; *zibbatu* | `לָזוּרִית`; `זָהָב`; `קֶרֶן`; `זָנָב` | *qarnu*, *zibbatu* [cognate]; *ḫurāṣu* ~ `חָרוּץ` | Gilgameš `לזורית` | 26 o.2–3 |
+| *uqnû*; *ḫurāṣu*; *qarnu*; *zibbatu* | `סַפִּיר`; `זָהָב`; `קֶרֶן`; `זָנָב` | *uqnû* [equivalent] ↔ שמות כד:י; יחזקאל א:כו; איוב כח:ו; *qarnu*, *zibbatu* [cognate]; *ḫurāṣu* ~ `חָרוּץ` | *uqnû* = *za-gin₃* = `סַפִּיר` (harmonization 2026-10-21; was `לָזוּרִית`, Gilgameš) | 26 o.2–3 |
+| *sukkallu* | `וְזִיר` | | harmonization 2026-10-21 (was `שַׂר`); all corpora | 06 o.i.23 |
+
+2026-10-21 harmonization (the lead's cross-corpus decisions; `../renderings.md` §9): *uqnû* `לָזוּרִית` → `סַפִּיר` (26 o.3, with the [equivalent] note), *sukkallu* `השר` → `הַוְּזִיר` (06 o.i.23); kept: *šiptu* `קֶסֶם` and the closing formula, *ṣabātu* `תָּפַס` / *aḫāzu* `אָחַז`, *māru* `בֵּן`; Inana `אִינַנָּה` in the apparatus too.

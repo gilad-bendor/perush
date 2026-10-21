@@ -20,7 +20,8 @@ Opening *X-ra u₃-na-dug₄* / *Y na-ab-be₂-a* = `אֶל X אֱמֹר:` / `ז
 4. *tukum-bi X an-na-kam* "if it is X's approval" = `אם רצון X הוא` (3.3.01 11, 3.3.10 19), keeping `טוֹב` for the one manuscript with *u₃-na-an-dug₃* (noted).
 5. *ušbar* = `חָם` from the wife's side (5.5.1 14), `חוֹתֵן` from the husband's side (proverb 1.169).
 6. *lul-aš* "falsely, in vain" = `לשווא` (3.3.06 7), `בלי שקר` (3.3.11 3, "beyond lying"); *lul* elsewhere `שֶׁקֶר`.
-7. *a-zu* = `רוֹפֵא`; *tu₆* (= *šiptu*) = `קֶסֶם` (the open cross-corpus choice); *mu₇-mu₇* = `לַחַשׁ`.
+7. *a-zu* = `רוֹפֵא`; *tu₆* (= *šiptu*) = `קֶסֶם` (the open cross-corpus choice); *mu₇-mu₇* = `לַחַשׁ`. **Settled 2026-10-21 (the lead's harmonization): *tu₆* = `קֶסֶם` kept.**
+8. **Settled 2026-10-21 (the lead's cross-corpus harmonization, `../renderings.md` §9):** *za-gin₃* = `סַפִּיר` [equivalent] (was `לָזוּרִית`; 3.3.01 1, 5.5.1 30, each with the note on Exod 24:10, Ezek 1:26, Job 28:6); *a-ra-zu* = `תַּחֲנוּן` (was `תפילה`; 3.3.10 6); *šudu₃* = `בְּרָכָה`, *sizkur₂* = `תְּפִלָּה` as before. Open: *šag₄-ne-ša₄* (= *unnīnu*) `תחנונים` (3.3.10 5) shares its root with *a-ra-zu* `תַּחֲנוּן` in the next line.
 
 ## Progress
 Drafted by the run-7 coordinator acting as the translator (see `../handoff--round2-run7.md` §6):

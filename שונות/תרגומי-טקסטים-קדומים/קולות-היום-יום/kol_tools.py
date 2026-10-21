@@ -160,6 +160,7 @@ RESERVED = {
     B + P + r'(עבד|עבדו|עבדי|עבדך|עבדים)' + E: [r'arad|wardu|ir₃|ARAD|IR₃'],
     B + P + r'(מבול)' + E: [r'amaru|a-ma-ru|abūbu'],
     r'אחז|אחוז': [r'ahāzu|aḫāzu|a-ha-az|ha-a-zu|a-hu-uz'],          # aḫāzu [cognate]; ṣabātu = תפס
+    r'לזורית': [],                                                  # harmonization 2026-10-21: za-gin₃ / uqnû = ספיר
 }
 # name traps: stripped token (prefixes allowed) -> (name, licensing regex on the line)
 TRAPS = {
@@ -171,9 +172,19 @@ TRAPS = {
     'דודים': ('dādū (דּוֹדִים)', r'dādu|da-du|da-a-d'), 'כלה': ('kallatu (כַּלָּה)', r'kallatu|kallātu|hīrtu|ḫīrtu|emi|e₂-gi₄'),
     'אמה': ('amtu / geme₂ (אָמָה)', r'geme₂|amtu|GEME₂'), 'אלי': ('my god (אֵלִי)', r'diĝir-ĝu₁₀|diŋir-ŋu₁₀|ilī\b|ilu\[god\].*-ia'),
     'אהבים': ('ritūmu (אֳהָבִים)', r'ritūmu'), 'בלילי': ('Belili (בֵּלִילִי)', r'bi-li-li|Belili'),
+    # harmonization 2026-10-21: always vocalized (unvocalized `צירי` = "birth pangs", `הפוך` = "reversed")
+    'ציר': ('ra-gaba (צִיר)', r'ra-gaba'), 'צירי': ('ra-gaba (צִירִי)', r'ra-gaba'), 'צירה': ('ra-gaba (צִירָהּ)', r'ra-gaba'),
+    'פוך': ('šembi (פּוּךְ)', r'šem-bi|šembi|šim-bi'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')
+
+
+def _br(rx):
+    """a transliteration regex that also matches across brackets / half-brackets (`[su]-uk-ka-al-lu`, `za-⸢gin₃⸣`)"""
+    return rx.replace('-', r'[\[\]⸢⸣]*-[\[\]⸢⸣]*')
+
+
 # fixed formulas: (regex on the transliteration, required regex on the stripped `>` line, description)
 FORMULAS = [
     (r'(-ra u₃-na(-a)?-dug₄|^u₃-na(-a)?-dug₄$|^\S+ u₃-na(-a)?-dug₄$)', r'אמור:?', 'letter opening *X-ra u₃-na-dug₄* = `אל X אֱמֹר:` (renderings §3.3)'),
@@ -184,6 +195,14 @@ FORMULAS = [
     (r'ezen nu-(ub-)?tuku', r'אין לו חג', '*ezen nu-tuku* = `אֵין לוֹ חַג`'),
     (r'ĝiškim .*ga-mu-ra-ab-šum₂', r'אות.* אתן לך:', '*ĝiškim … ga-mu-ra-ab-šum₂* = `אוֹת … אֶתֵּן לְךָ:` (5.5.1)'),
     (r'giri₁₇-zal-še₃ nu-il₂', r'לששון – לא נשא', '*giri₁₇-zal-še₃ nu-il₂* = `לְשָׂשׂוֹן – לֹא נָשָׂא` (1.152–1.153)'),
+    # the cross-corpus harmonization (2026-10-21, renderings §9): the one Hebrew of each source word
+    (_br(r'za-gin₃|uq-nu|uq-ni|ZA\.GIN'), r'ספיר', '*za-gin₃* / *uqnû* = `סַפִּיר` (harmonization 2026-10-21)'),
+    (_br(r'ra-gaba'), r'(^|[\s־])[ובלמהש]?ציר', '*ra-gaba* = `צִיר` (harmonization 2026-10-21)'),
+    (_br(r'guru₇'), r'(^|[\s־])[ובלמהשכ]?כרי', '*guru₇* = `כְּרִי` (harmonization 2026-10-21)'),
+    (_br(r'en₃-du'), r'זמר', '*en₃-du* = `זִמְרָה` (harmonization 2026-10-21)'),
+    (_br(r'šem-bi|šembi|šim-bi'), r'פו[ךכ]', '*šembi* = `פּוּךְ` (harmonization 2026-10-21)'),
+    (_br(r'a-ra-zu'), r'תחנו[ןנ]', '*a-ra-zu* = `תַּחֲנוּן` (harmonization 2026-10-21)'),
+    (_br(r'su-uk-ka-al|sukkal|SUKKAL'), r'וזיר', '*sukkallu* / *sukkal* = `וְזִיר` (harmonization 2026-10-21)'),
 ]
 
 

@@ -20,18 +20,19 @@ ORACC labels (= LAOS 4), written without spaces: `o.i.12` (obverse, column i, li
 Wasserman 2016 via AkkLove (rank 3); the Gilgameš corpus renderings (binding).
 
 ## Open decisions
-1. *māru* "son" as a term of endearment for the lover (07 o.9, 16 r.iii.23, 01 passim): rendered literally `בן` / `בני` (LAOS 4 03 o.4 `נער` by sense). Alternative: `יקירי` (Wasserman's "darling").
+1. *māru* "son" as a term of endearment for the lover (07 o.9, 16 r.iii.23, 01 passim): rendered literally `בן` / `בני` (LAOS 4 03 o.4 `נער` by sense). Alternative: `יקירי` (Wasserman's "darling"). **Settled 2026-10-21 (the lead's harmonization): `בֵּן` kept.**
 2. *sukannīnu* (a dove; 06 o.i.9, 17) = `תּוֹר`, because `יוֹנָה` is reserved for *summatu*; the identification of the species is uncertain.
 3. *šumšû* (07) and *biātu* (06) "spend the night" both = `לִין` (two Akkadian verbs, one Hebrew verb).
 4. *irimmu* "bead (love-charm)" = `חרוז` throughout (10, 15, 16, 04, 02); Wasserman "love-charm".
 5. *ḫabābu*: `חִבֵּק` (caress; Gilgameš binding) but `הָמָה` of the heart and of water (03 r.32; renderings §3.1) – one lemma, two Hebrew verbs by sense.
 6. *mēlulu* "play, dance" = `שִׂחֵק` (13 o.i.14', 14a o.6', 14e): a declared deviation from the Gilgameš corpus's `חוּל` / `מָחוֹל`, because here the verb takes an object ("play with my breasts"); `צחק` stays reserved for *ṣiāḫu*.
 7. *bānû* "builder, creator" (14a o.11') = `הַבּוֹנֶה`, following the creation corpus's *banû* = `בָּנָה`; Wasserman "the creator" (`בורא` is reserved for the Gen 1 comparison).
-8. *ṣabātu* = `תָּפַס` and *aḫāzu* = `אָחַז` [cognate] (22 o.12–r.32, 01 l.e.36, 13 o.ii.6'): a deviation from the Gilgameš corpus, where *ṣabātu* = `אָחַז`; this corpus has both verbs, and the Song's `אֲחַזְתִּיו` (3:4) needs the true cognate. 03 o.10 and 16 o.i.5, r.iv.4 were changed to `תפס` at review.
+8. *ṣabātu* = `תָּפַס` and *aḫāzu* = `אָחַז` [cognate] (22 o.12–r.32, 01 l.e.36, 13 o.ii.6'): a deviation from the Gilgameš corpus, where *ṣabātu* = `אָחַז`; this corpus has both verbs, and the Song's `אֲחַזְתִּיו` (3:4) needs the true cognate. 03 o.10 and 16 o.i.5, r.iv.4 were changed to `תפס` at review. **Settled 2026-10-21 (the lead's harmonization): kept – *ṣabātu* = `תָּפַס` in texts that also have *aḫāzu*.**
 9. *ṣawāru* "neck" = `צַוָּאר` [cognate] (22 r.35–36); the Gilgameš corpus gives `צוואר` to *kišādu* (not in this corpus).
 10. *ḫašāšu* "rejoice" = `שָׂשׂ` (10 r.12', 20 o.9); *šâlu* "rejoice" = `צָהַל` (15 o.i.27); *riāšu* `גָּל`, *ḫadû* `שָׂמַח`.
 11. *karānu* "vine" = `גֶּפֶן` where it is sown (23 o.8), `יַיִן` elsewhere (15 o.i.18, 02 o.9).
 12. *ruʾtu* "spittle, sap" = `רוֹק` (22; 14a o.12'), kept apart from the creation corpus's *rupuštu* `רִיר`.
+13. **Settled 2026-10-21 (the lead's cross-corpus harmonization, `../renderings.md` §9):** *uqnû* = *za-gin₃* = `סַפִּיר` [equivalent] (was `לָזוּרִית`; 26 o.3, with the note on Exod 24:10, Ezek 1:26, Job 28:6); *sukkallu* = `וְזִיר` (was `השר`; 06 o.i.23); *šiptu* = `קֶסֶם` kept (the closing formula of 20 unchanged); Inana `אִינַנָּה` in the apparatus too.
 
 ## Progress
 Drafted by the run-7 coordinator acting as the translator (no sub-agent tool was available; see `../handoff--round2-run7.md` §6), text by text in the priority order, with `kol_tools.py verify` and `check_bible_quotes.py` clean after each text:

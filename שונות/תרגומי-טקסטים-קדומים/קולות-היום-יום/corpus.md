@@ -30,4 +30,4 @@ Reading order: the love songs (project 1, ordered from the courtly divine songs 
 - `translator-brief--everyday.md` – the brief for the translators of this corpus.
 
 ## Status
-**First draft complete (2026-10-21):** project 1 835 lines, project 2 500 lines, project 3 178 lines – all drafted, three review passes each, `kol_tools.py verify LOVE PROV LET` OK, `check_bible_quotes.py` clean, translations built, `parallels-index.md` (492 rows), print stubs in `../הדפסה/קולות-היום-יום/`. Details: each `project.md` ("Progress", "Open decisions", "Key findings") and `handoff--round2-run7.md`.
+**First draft complete (2026-10-21):** project 1 835 lines, project 2 500 lines, project 3 178 lines – all drafted, three review passes each, `kol_tools.py verify LOVE PROV LET` OK, `check_bible_quotes.py` clean, translations built, `parallels-index.md` (492 rows; 506 after the 2026-10-21 harmonization), print stubs in `../הדפסה/קולות-היום-יום/`. Details: each `project.md` ("Progress", "Open decisions", "Key findings") and `handoff--round2-run7.md`.

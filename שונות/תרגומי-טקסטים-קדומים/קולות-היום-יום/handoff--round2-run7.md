@@ -60,6 +60,7 @@ For `tools.md` (corpus tools, in `קולות-היום-יום/`):
 - *ḫi-li*: `חֵן` (Sumerian, here) vs *kuzbu* `עֲגָבִים` (Akkadian).
 - *šiptu* / *tu₆* = `קֶסֶם` (followed here; the open choice of STATUS §6).
 - *māru* "son" as a lover's endearment: `בֵּן` (literal) or `יַקִּיר` (LAOS 4 07, 16, 01).
+- **Settled by the lead, 2026-10-21** (the cross-corpus harmonization; applied here, `renderings.md` §9): *za-gin₃* / *uqnû* = `סַפִּיר`; *niĝ₂-gig* / *an-zil* both `תּוֹעֵבָה`; *ṣabātu* `תָּפַס` where *aḫāzu* occurs; *šiptu* / *tu₆* `קֶסֶם`; *māru* `בֵּן`.
 
 ## 6. Limits
 - No Agent (sub-agent) tool was available to this coordinator: the "translator chain" was run by the coordinator itself, one range after another, each with the written translator brief applied; the review passes were also the coordinator's (partly script-assisted). No quota, rate limit, HTTP 429 or "session limit" was met.

@@ -16,7 +16,7 @@ ETCSL composite lines with the segment letter (`A1` … `D138`, `E1`, `F1`, `G1`
 1.65–1.66 = 2.118–2.119 (the city without dogs, the city of the lame): identical Hebrew (2.118 adds `הוא` for the copula *-am₃*). 1.152–1.153 = 3.9 (A22): the formula *giri₁₇-zal-še₃ nu-il₂* = `לששון – לא נשא` (not *ezen nu-tuku*, as the pre-set renderings said: corrected, and checked by `kol_tools.py`). 1.44 (A57) = 1.103 (B69) opening `מי שאוכל ואוכל דבר גדול`; 1.125 (C5) ≈ 3.112 (A205) `מן הדג את העצמות ילקט לי / אלקט לך`; 1.58 = 1.59 opening; 1.83 ≈ 1.84 (the boat of truth / of wickedness).
 
 ## Open decisions
-1. *niĝ₂-gig DN* = `תּוֹעֲבַת DN` (1.23, 3.118, 3.170, 3.171, 3.175): the lament corpus gives `תּוֹעֵבָה` to *an-zil* – two Sumerian taboo words, one Hebrew word (the user's decision; corpus renderings §3.2).
+1. *niĝ₂-gig DN* = `תּוֹעֲבַת DN` (1.23, 3.118, 3.170, 3.171, 3.175): the lament corpus gives `תּוֹעֵבָה` to *an-zil* – two Sumerian taboo words, one Hebrew word (corpus renderings §3.2). **Settled 2026-10-21 (the lead's harmonization): both `תּוֹעֵבָה`, kept.**
 2. *gu₂* "neck" = `צַוָּאר` (aligned with runs 5–6), although project 1 gives `צוואר` to Akk. *ṣawāru*; the idiom *gu₂ šub* "neglect" is kept literal (`השליך צוואר`, 1.21).
 3. *mu-ud-na* "spouse" = `בֶּן־זוּג` / `בַּת־זוּג` (C5, C13, B81), against the pre-set `בַּעַל`, which *dam* needs (C3 `בעלי` beside C5 `בן־זוגי`).
 4. *il₂* "lift, carry, support" = `נָשָׂא` throughout, also in *dam nu-il₂* (1.153, 3.9), where Hebrew `נשא אשה` "marry" is a possible but not certain reading (ETCSL "support").
@@ -24,6 +24,7 @@ ETCSL composite lines with the segment letter (`A1` … `D138`, `E1`, `F1`, `G1`
 6. *dirig* = `עוֹלֶה עַל` in comparisons (1.57, 1.154, 1.193, 2.60), but "float downstream" in 1.83–1.84 (`שטה במורד`) and "overflow" in 1.96, 1.101.
 7. *zeb* "sweet, pleasant" = `עָרֵב` (1.126, 1.190), keeping `טוֹב` for *dug₃* and `מָתוֹק` for *ku₇* (5.5.1); *zil₂* = `נָעִים`; *sag₉* = `נָאֶה`; *ḫi-li* = `חֵן` (1.197; changed at the letters from `עֲגָבִים`, because 5.5.1 uses it of the mother).
 8. *buru₅* = `דְּרוֹר` (1.18); *ḫu-ru-um* = `נִבְעָר` (3.103; ETCSL "fool"; `כְּסִיל` stays for *lil₂*); *gi₄-in* = `שִׁפְחָה`, *geme₂* = `אָמָה` ★.
+9. **Settled 2026-10-21 (the lead's cross-corpus harmonization, `../renderings.md` §9):** *ra-gaba* = `צִיר` (always vocalized; [equivalent] ↔ Prov 13:17, 25:13), was `רוכב (שליח)` (2.72, A129); *guru₇* = `כְּרִי` [cognate via *karû*], was `אסם` (1.146, D14); *en₃-du* = `זִמְרָה`, number kept (`זִמְרָתָהּ … בּוֹחֲנָהּ`, was `זמירותיה הן בוחניה`, 1.70, B19); *šembi* = `פּוּךְ` (always vocalized), was `כחל` (1.150, D22); *šudu₃* = `בְּרָכָה` (B64) as before.
 
 ## Progress
 Drafted by the run-7 coordinator acting as the translator (see `../handoff--round2-run7.md` §6), with `kol_tools.py verify` and `check_bible_quotes.py` clean after each file:

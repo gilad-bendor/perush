@@ -30,3 +30,6 @@ Words used only in this project (the corpus `../renderings.md` binds first). Tab
 | *ḫu-ru-um* | `נִבְעָר` | ↔ קהלת י:יד | `כְּסִיל` = *lil₂* | 3.103 |
 | *lu₂-ki-inim-ma* | `עֵד` | ↔ שמות כ:יב | | 3.118 |
 | *nu-banda₃*; *aĝrig*; *ugula*; *niĝir* | `מְפַקֵּחַ`; `הַמְּמֻנֶּה`; `מְנַהֵל־עֲבוֹדָה`; `כָּרוֹז` | *aĝrig* ↔ "אשר על הבית" | | 1.65, 1.33, 1.97, 1.32 |
+| *ra-gaba*; *guru₇*; *en₃-du*; *šembi* | `צִיר` ★; `כְּרִי`; `זִמְרָה` (`זִמְרָתָהּ`); `פּוּךְ` ★ | *ra-gaba* [equivalent] ↔ משלי יג:יז; כה:יג; *guru₇* [cognate via *karû*]; *šembi* [equivalent] ↔ מלכים ב ט:ל; ירמיהו ד:ל | harmonization 2026-10-21 (were `רוכב (שליח)`, `אסם`, `זמירות`, `כָּחָל`); `צִיר` and `פּוּךְ` always vocalized | 2.72 (A129); 1.146 (D14); 1.70 (B19); 1.150 (D22) |
+
+2026-10-21 harmonization (the lead's cross-corpus decisions; `../renderings.md` §9): the row above; kept: *niĝ₂-gig* `תּוֹעֵבָה` (also *an-zil*'s, in the laments), *šudu₃* `בְּרָכָה` (B64), *uĝ₃* by sense.
