@@ -590,6 +590,10 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
   (`isVoidPseudoTag()`) closes nothing: its line is the whole box, and the caption all there is in it.
 - **Raw HTML is escaped** (`html: false`), as the editor shows it as text too - except inside a
   ```` ```html ```` fence, which goes to the page as it is. See "The raw-HTML fence" below.
+- **A right-to-left page drops its HTML comments** - but only one whose `<!--` and `-->` each stand on a
+  line of their own, whitespace aside (`commentBlockRule()`): a note to the file's editor, like the
+  `GENERATED FILE` header the translation tools write. Any other comment is shown as text, as is one
+  inside a code fence. An LTR page keeps them all.
 - `*` / `**` inside inline code are bold, stars removed.
 - `` `a`\`b` `` is two code spans with a backslash between them - see "A backslash between code spans".
 - **An index** goes where the file's `<תוכן-העניינים>` line stands, and nowhere else (`renderIndexes()`):
