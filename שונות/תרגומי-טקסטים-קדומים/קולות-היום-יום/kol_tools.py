@@ -181,6 +181,7 @@ FORMULAS = [
     (r'a-ma-ru-kam', r'מבול הוא!', 'letter closing *a-ma-ru-kam* = `מַבּוּל הוּא!`'),
     (r'niĝ₂-gig', r'תועבת|תועבה', '*niĝ₂-gig* = `תּוֹעֵבָה`'),
     (r'ezen nu-(ub-)?tuku', r'אין לו חג', '*ezen nu-tuku* = `אֵין לוֹ חַג`'),
+    (r'giri₁₇-zal-še₃ nu-il₂', r'לששון – לא נשא', '*giri₁₇-zal-še₃ nu-il₂* = `לְשָׂשׂוֹן – לֹא נָשָׂא` (1.152–1.153)'),
 ]
 
 
