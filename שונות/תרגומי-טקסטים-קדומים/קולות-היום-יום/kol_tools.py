@@ -121,13 +121,13 @@ RESERVED = {
     B + P + r'משל(ים|י)?' + E: [],
     r'צדק|צדיק': [],
     B + P + r'(ה?הבל|הבלים)' + E: [],
-    r'יראת|' + B + P + r'מוסר' + E: [],
+    B + P + r'יראת' + '|' + B + P + r'מוסר' + E: [],
     r'אלהים|אלוהים|יהוה': [],
     r'שאול': [],
     r'עולם': [],
     r'מנעול': [],
     B + P + r'פרי(ה|ו|ך|י)?' + E: [r'^SUX'],          # never in Akkadian (inbu = תנובה); allowed in Sumerian (gurun)
-    B + P + r'דוד(י|ך|ו|ה|ים|יך|יו|ייך|יה|ינו|נו)?' + E: [r'dādu|dadū|dādū|da-a-d|da-di|da-du'],
+    B + P + r'דוד(י|ך|ו|ה|ים|יך|יו|ייך|יה|ינו|נו)?' + E: [r'dādu|dadū|dādū|da-a-d|da-di|da-du|šūdadu'],
     r'אהב|אוהב|אהוב': [r'râmu|rāmu|raʾīmu|rāʾimu|ruʾāmu|narāmu|ritūmu|murtâmu|ki aĝ₂|ki-aĝ₂|ki aŋ₂|aŋ[measure]|aĝ₂'],
     r'צחק|צחוק': [r'ṣīhtu|ṣīḫtu|ṣiāhu|ṣiāḫu|ṣâhu|ṣīḫ|ṣīh|ṣūhiš|ṣūḫiš|ṣuhhu'],
     r'תפוח': [r'hašhūru|ḫašḫūru|ḫašḫur|hašhur|hašhur'],
@@ -136,7 +136,7 @@ RESERVED = {
     r'דבש': [r'dišpu|lal₃'],
     B + P + r'(יין|יינו|ייני|יינה)' + E: [r'karānu|kurunnu|ĝeštin|ŋeštin'],
     B + P + r'(שמן|שמנים|שמנך|שמני)' + E: [r'šamnu|(^|\s|-)i₃(-|\s|$)|i₃-|ia₂|ellu'],
-    B + P + r'(כלה|כלתה|כלתו|כלתי|כלות)' + E: [r'kallatu|hīrtu|ḫīrtu|emi|e₂-gi₄-a|e₂-gi₄'],
+    B + P + r'(כלה|כלתה|כלתו|כלתי|כלות)' + E: [r'kallatu|kallātu|hīrtu|ḫīrtu|emi|e₂-gi₄-a|e₂-gi₄'],
     B + P + r'(ערש|ערשי|ערשה|ערשנו)' + E: [r'eršu'],
     r'משכב': [r'mayyālu|majālu|ki-nu₂|ki-nu₂'],
     B + P + r'(רעיה|רעיתי|רעיתו|רעייה)' + E: [r'marhītu|marḫītu'],
@@ -167,9 +167,9 @@ TRAPS = {
     'אנו': ('Anu (אָנוּ)', r'(^|\s)\{d\}a-nu|(^|\s)a-nu-(um|um₂|ni)|Anum\[|Anu\['), 'סין': ('Sîn (סִין)', r'Sîn|{d}EN\.ZU|{d}suen|30'),
     'באו': ('Bau (בָּאוּ)', r'ba-u₂|ba-ba₆'), 'ארורו': ('Aruru (אֲרוּרוּ)', r'a-ru-ru'),
     'דוד': ('dādu (דּוֹד)', r'dādu|da-di|da-du|da-a-d'), 'דודי': ('dādu (דּוֹדִי)', r'dādu|da-di|da-du|da-a-d'),
-    'דודים': ('dādū (דּוֹדִים)', r'dādu|da-du|da-a-d'), 'כלה': ('kallatu (כַּלָּה)', r'kallatu|hīrtu|ḫīrtu|emi|e₂-gi₄'),
+    'דודים': ('dādū (דּוֹדִים)', r'dādu|da-du|da-a-d'), 'כלה': ('kallatu (כַּלָּה)', r'kallatu|kallātu|hīrtu|ḫīrtu|emi|e₂-gi₄'),
     'אמה': ('amtu / geme₂ (אָמָה)', r'geme₂|amtu|GEME₂'), 'אלי': ('my god (אֵלִי)', r'diĝir-ĝu₁₀|diŋir-ŋu₁₀|ilī\b|ilu\[god\].*-ia'),
-    'אהבים': ('ritūmu (אֳהָבִים)', r'ritūmu'),
+    'אהבים': ('ritūmu (אֳהָבִים)', r'ritūmu'), 'בלילי': ('Belili (בֵּלִילִי)', r'bi-li-li|Belili'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')
