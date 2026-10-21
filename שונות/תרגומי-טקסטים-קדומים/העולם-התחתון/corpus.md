@@ -22,7 +22,7 @@ Rank 3: Foster in eBL (Akkadian); ETCSL's English (Sumerian). Not available here
 - **`renderings.md` binds both projects**: it fixes ONE Hebrew for the shared episodes, formulas and names (guidelines §5.2 "A formula takes the same Hebrew across languages"), inherits the Gilgameš corpus for the Akkadian netherworld vocabulary (`../אפוס-גילגמש/renderings.md`; Gilg. VII 184–192 = Ištar 4–11 and VI 97–100 ≈ Ištar 17–20 are copied from there) and the lament, temple and creation corpora for the Sumerian.
 - **Repeated lines get identical Hebrew**; `netherworld_tools.py verify` lists identical sources with different Hebrew (inside each text) and checks the fixed formulas, also across the two texts.
 - **The annotated files are the only source of the Hebrew**: `netherworld_tools.py build IS|IN` generates `translation.rtl.md` from `translation--intro.rtl.md` + the annotated `## ` headings, `>` lines and `הערת שוליים` bullets.
-- **Parallels index:** per file in `project.md` (`### Parallels index (<KEY>)`, KEY = IS, IN1, IN2; columns exactly `| Line | Source | Hebrew rendering | Bible | Tag | Comment |`), merged into `parallels-index.md` by `build_parallels_index.py`.
+- **Parallels index:** generated, not hand-written: `build_parallels_index.py` reads the annotated files' **הקבלה** bullets (one row per tag) and writes the table of each `project.md` (`### Parallels index (<KEY>)`, KEY = IS, IN; columns exactly `| Line | Source | Hebrew rendering | Bible | Tag | Comment |`) and the merged `parallels-index.md` (by Bible verse; the key findings above `## The table` are kept). Rerun it after any change to a **הקבלה** bullet.
 
 ## Tools (in this folder)
 | Script | What |
@@ -31,10 +31,12 @@ Rank 3: Foster in eBL (Akkadian); ETCSL's English (Sumerian). Not available here
 | `netherworld_tools.py build IS\|IN` | The clean translation, verified. |
 | `netherworld_tools.py lines IS\|IN FROM TO` | The base text's lines with eBL lemmas / ORACC lemma + morph (translator data). |
 | `netherworld_tools.py grep all '<regex>'` | The `>` lines of every corpus in the folder (niqqud stripped) matching a regex – grep before fixing a Hebrew word. |
-| `build_parallels_index.py` | `parallels-index.md` from the per-file tables (by biblical book order, with the key findings at the top). |
+| `build_parallels_index.py` | The projects' parallels tables (from the annotated **הקבלה** bullets) and `parallels-index.md` (by biblical book order, with the key findings at the top). |
 
 ## Status
 | # | Project | Status |
 |---|---|---|
-| 1 | The Descent of Ištar | in progress |
-| 2 | Inana's Descent | in progress |
+| 1 | The Descent of Ištar | **Done (first draft), 2026-10-21**: all 159 entries (SB 1–138 with the pluses, NA1–NA11); three review passes; `verify IS --strict` OK; translation (19 footnotes); print stub. |
+| 2 | Inana's Descent | **Done (first draft), 2026-10-21**: all 440 entries (1–412 with the pluses) in two files; three review passes; `verify IN --strict` OK; translation (24 footnotes); print stub. |
+
+The parallels index (`parallels-index.md`, 172 rows, key findings at the top) covers both. Translated by the corpus coordinator (no sub-agent tool in this cloud session), the Akkadian first, then the Sumerian.
