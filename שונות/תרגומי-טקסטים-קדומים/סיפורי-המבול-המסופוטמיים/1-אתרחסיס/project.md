@@ -41,6 +41,7 @@ eBL OB I + commentary; eBL SB I, II, III and MB Bab₂ with their commentaries; 
 - 2026-10-16: `annotated-I.rtl.md` drafted in seven sections: 1–56, 57–110g, 111–173, 174–246, 247–308, 309–351, 352–416 + colophon (≈400 entries, incl. the later-recension lines).
 - 2026-10-16: three review passes. (a) Fidelity: brackets checked against eBL/SEAL; restorations from later recensions labelled. (b) Consistency: every repeated line compared mechanically (44/46/58/60, 80–83, 93–96, 124–143, 146–152 / 159–165, 184–186 / 191–193, 202–213 / 217–226, 374–384 / 389–399 / 403–411): identical where the Akkadian is identical, differing only where it differs (e.g. 210 *i nišme* "let us hear" / 223 *išmû* "they heard"). Aligned with Tablet II on *niššīku* (נָסִיךְ), *sukkallu* (וְזִיר), *šerru* (עוֹלָל), *nagbu* (מַעֲמַקִּים), *tenēšētu* (בְּרִיּוֹת). (c) Hebrew: per the coordinator, niqqud reduced to partial (names at first occurrence, ambiguous words: `נִשָּׂאֶנּוּ`, `נָבֹלָּה`, `אִט`, `לַחַי`, `אוֹתוֹ`, `צָרָה`, `הַקְּדֵשָׁה`…); spelling made plene.
 - 2026-10-16: `translation-I.rtl.md` written (intro, 8 section headings, 12 footnotes).
+- 2026-10-21: cross-corpus harmonization (the lead's decision 5, settled): *šiptu* = `קֶסֶם` instead of `לחש` (249, 250a, 251). 271 *kuzbu* was `קסמה` and is now `עֲגָבֶיהָ` (the lead, 2026-10-21: *kuzbu* = `עֲגָבִים` as in Gilgameš and the everyday-voices corpus; `קֶסֶם` stays for *šiptu*).
 - **Open:** Lambert & Millard's own text for 334–416 was not available (SEAL used); the MB Babylon tablets of Márquez Rowe 2016 (`Marquez-Rowe-2016--…/`, PDF) were not collated beyond what eBL MB Bab₂ and SEAL already include; `eBL/Atrahasis-MB-*` other than Bab₂ were checked and do not belong to Tablet I.
 
 ### Parallels index (Tablet I)
@@ -223,6 +224,7 @@ Working files: `annotated-III.rtl.md`, `translation-III.rtl.md`.
 - 2026-10-16: cols. iv–viii, the colophon and the C₀ iv 8′–19′ appendix drafted. First draft of the whole tablet complete. Bible-quote checker: 0 problems.
 - 2026-10-16: three review passes. (a) Fidelity: every line re-read against SEAL/Wasserman's transliteration; brackets aligned (partial-word brackets allowed, as in Tablet I); speech quotation marks fixed (i 13, i 20); Wasserman's own inconsistencies resolved explicitly (i 46 *iqbi* vs *aqbi*; ii 32–33 translation vs transliteration; v 32 *zanānu* "rain" vs his "Providing food"). (b) Consistency: every `[מקבילה: גילגמש XI]` line compared with Gilg. XI `translation.rtl.md` word by word (table below); internal repeats checked (i 1–2 / 11–12; iii 51 / v 39–40; iii 53–54 / v 42–43; iv 4 / 13; ii 49 / 53; iv 12 / vi 23 / vi 40); formulas checked against Tablet I's and II's *actual lines* (I 188, 228, 354, 357, 372–373, 385–388; II A 9, E 155, G 13, G 28–29, I 6–7, E 161n). (c) Hebrew: lines read aloud as a sequence; plene spelling; niqqud only on names at first occurrence and ambiguous words (אֵלְכֶם, אֵלִי, שָׁנוּ, שָׂבְעָה, חָיָה, מְקֹרָה, נִכְּרוּ, הֲנִגַּשׁ, הִמָּלְכוּ, לוּ).
 - 2026-10-16: `translation-III.rtl.md` written (intro, 12 section headings, 268 numbered lines + fragment groups and the colophon, appendix C₀ iv 8–19, 21 footnotes). A script confirmed that every numbered line equals the annotated file's line. Bible-quote checker on both files: 0 problems.
+- 2026-10-21: cross-corpus harmonization (the lead's decision 1, settled): *uqnû* = `סַפִּיר` [equivalent] instead of `לָזוּרִית` (vi 3, identical with Gilg. XI 166), with the [equivalent] note (Exod 24:10, Ezek 1:26, Job 28:6).
 
 ### Base text and witnesses
 - **Base:** SEAL no. 1517 = Wasserman 2020, pp. 19–37 (transliteration, translation), commentary pp. 37–60: mss **C₁** (BM 78942+78971+80385) and **C₂** (MAH 16064), one tablet in two non-joining pieces, copied by Ipiq-Aya. Eight columns; c. half the 390 lines survive.
@@ -290,7 +292,7 @@ Wasserman/SEAL: column + line, with primes counting from the first preserved lin
 | v 35–36 | *kīma zubbī eli niqî paḫrū; īkulū niqâm* | כזבובים על הזבח מקובצים; אכלו את הזבח | 8:21 | [absent] / [divergence] | Gods swarm and eat; God smells. *zubbu* = זבוב [cognate]. |
 | v 41 | *Enlil iṭḫi-a ana qutrenni* | הנגש אנליל אל הקטורת | 8:21 | [absent] | The god who caused the flood is not at the offering. *qutrinnu* = קטורת [cognate]. |
 | v 44; vi 8 | *ubla pīkunu gamertam*; *ubla pīni … māmītam* | נשאתם כלה על פיכם; נשאנו יחד שבועה על פינו | Isa 54:9; 8:21; 9:11 | [divergence] | An oath to bring the flood vs. an oath never to bring it again. |
-| v 46 – vi 4 | the fly necklace (*zubbū … lū uqni kišādīya / luḫsus-ma ūmī*) | הזבובים… יהיו לזורית על צווארי / אזכור את הימים | 9:13–16 `אֶת קַשְׁתִּי נָתַתִּי בֶּעָנָן … לִזְכֹּר` | [equivalent] / [divergence] | A sky-coloured object hung "before" the gods as a memorial. |
+| v 46 – vi 4 | the fly necklace (*zubbū … lū uqni kišādīya / luḫsus-ma ūmī*) | הזבובים… יהיו ספיר על צווארי / אזכור את הימים | 9:13–16 `אֶת קַשְׁתִּי נָתַתִּי בֶּעָנָן … לִזְכֹּר` | [equivalent] / [divergence] | A sky-coloured object hung "before" the gods as a memorial. |
 | vi 5–10 | Enlil's anger at the survivor | את האנייה ראה…; איך חיה אדם בכליון? | 6:8; 7:23 `וַיִּשָּׁאֶר אַךְ נֹחַ`; 8:1 | [absent] | No god in Genesis is angry that someone survived. |
 | vi 9, 15 | *pirištu*; *kikkiša ušapta zikra* | מאין יצא הסוד?; לגדר־הקנה גילה את הדבר | 6:13 | [divergence] | A leaked secret vs. God's own disclosure. |
 | vi 18–19 | *[lū ē]puš …; [ušt]aṣṣira napištam* | אכן עשיתי…; נצרתי נפש | 6:19 `לְהַחֲיֹת`; 7:23 | [equivalent] | |
@@ -364,7 +366,7 @@ Wasserman/SEAL: column + line, with primes counting from the first preserved lin
 | iii 53 | 170 | אשר לא נמלכו, וחוללו את [המבול], | (as above) | *ša*; plural |
 | v 43; iii 54 | 171 | את האנשים אסף/אספו לכליון? | ואת אנשיי מנה לכליון. | *kamāsu* / *manû*; "my"; *u* |
 | v 46–47 | 165 | והיא ניגשה אל הזבובים הגדולים / אשר תלה אנו… | נשאה את הזבובים הגדולים שעשה אנו בְּצַחֲקוֹ: | verbs |
-| vi 2–3 | 166 | הזבובים ה[אלה] / יהיו לָזוּרִית על צווא[רי], | אלים! אלה יהיו לזורית על צווארי, | subject "these flies" |
+| vi 2–3 | 166 | הזבובים ה[אלה] / יהיו סַפִּיר על צווא[רי], | אלים! אלה יהיו סַפִּיר על צווארי, | subject "these flies" |
 | vi 4 | 167 | אזכור את הימים […] | את הימים האלה אזכור, ולעולם לא אשכח! | order; broken |
 | vi 5 | 172–173 | את האֳנִיָּה ראה ה[גיבור אנליל], | ראה את הספינה, וזעם אנליל. | *makurru* / *eleppu*; *qurādu* / *ezēzu* |
 | vi 6 | 174 | מלא חמה על הָאִיגִי[גִי]: | נמלא חמה על האלים, האיגיגי: | stative / Gt; no *ilī* |

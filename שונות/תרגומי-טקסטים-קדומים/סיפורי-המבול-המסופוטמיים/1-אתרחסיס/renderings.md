@@ -97,6 +97,7 @@ Columns: Akkadian | Hebrew | rejected alternatives | reason / tag | lines.
 | *ṭēmu* | טַעַם | | Shared. *ša īšû ṭēmam* = אֲשֶׁר לוֹ טַעַם. | 219, 235 |
 | *uppu* | תֹּף | | [equivalent]. | 210, 223 |
 | *Wê ila* | וֵא, אֵל | וֵא־אִילָא | See project.md, proposal. | 47, 219 |
+| *šiptu* | קֶסֶם | `לַחַשׁ` (until 2026-10-21; `לַחַשׁ` = Akk. *tû*) | The cross-corpus decision of 2026-10-21 (as Enūma eliš). | 249, 250a, 251 |
 
 ## Tablet II
 
@@ -274,6 +275,7 @@ Tablet III follows the recurring formulas of I.1 and II.1 (speech formulas; *Atr
 | *qutrinnu* | קְטֹרֶת | | Shared, [cognate]. | v 41 |
 | *alālu* | תָּלָה | | | v 47 |
 | *nelmenu* | צָרָה | | | v 50 |
+| *uqnû* | סַפִּיר | `לָזוּרִית` (until 2026-10-21) | [equivalent]: biblical `סַפִּיר` is lapis lazuli (Exod 24:10; Ezek 1:26; Job 28:6). Identical with Gilg. XI 166. | vi 3 |
 | *makurru* | אֳנִיָּה | סְפִינָה (= *eleppu*) | Different Akkadian word, so different Hebrew. | vi 5 |
 | *ayyû ša* / *nasāku* Š | כָּל אֲשֶׁר / הִשְׁלִיךְ | | `וַיַּשְׁלִכוּ אֶת תּוֹרָתְךָ אַחֲרֵי גַוָּם` (Neh 9:26). | vi 26 |
 | *gana* | קוּם | הָבָה (= *i*, Tablets I–II) | | vi 43 |
@@ -291,3 +293,5 @@ Tablet III follows the recurring formulas of I.1 and II.1 (speech formulas; *Atr
 | *zamāru* (n.) / *zamāru* D | זֶמֶר / זִמֵּר | שִׁיר | [cognate]. | viii 15, 19 |
 | *narbû* | גְּדֻלָּה | | | viii 17 |
 | *Ayyāru* (gu₄-si-sá) | אִיָּר | | [cognate]. | viii 27 |
+
+2026-10-21 harmonization (the lead's cross-corpus decisions): *šiptu* = `קֶסֶם` (I 249, 250a, 251; was `לחש`); *uqnû* = `סַפִּיר` [equivalent] (III vi 3; was `לָזוּרִית`). *sukkallu* / *šukkallu* = `וְזִיר` was already the rendering.

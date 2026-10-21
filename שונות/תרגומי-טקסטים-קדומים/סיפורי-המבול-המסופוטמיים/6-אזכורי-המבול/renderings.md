@@ -27,7 +27,7 @@ Words used in this project and not (yet) in the shared `../renderings.md`. The s
 | nam-til₃ kiĝ₂-kiĝ₂ | בִּקֵּשׁ חַיִּים | | | Ballad 10, 20 |
 | puḫrum | אֲסֵפָה | `עֵדָה` | shared | Death F 7, 30 |
 | gidim ★ | אִט | `רוּחַ` | shared *eṭemmu* | Death F 38–39 |
-| me | מֶה | `חֻקִּים` | untranslatable term; explained in a note | Death F 16 |
+| me | הַ־מֶה (always vocalized) | `חֻקִּים`, `מֶה` (until 2026-10-21) | untranslatable term; explained in a note; the cross-corpus form of 2026-10-21 | Death F 16 |
 | nam-tar (ĝiš-nu₂ nam-tar-ra) | (עֶרֶשׂ) הַגּוֹרָל | | = *šīmtu* (shared `גּוֹרָל`) | Death F 4 |
 | dili | לְבַדּוֹ | | [equivalent] `אַךְ` (ז:כג) | Death F 126 |
 | taka₄ | הוּשְׁאַר | `נִשְׁמַר` (ETCSL "preserved") | "leave behind" | Lagaš 4 |
@@ -58,6 +58,7 @@ Words used in this project and not (yet) in the shared `../renderings.md`. The s
 | *šipītu šamê u erṣeti* | תֶּפֶר הַשָּׁמַיִם וְהָאָרֶץ | | | Erra 133, 136, 170 |
 | *šiknāt napišti* | יְצוּרֵי הַנֶּפֶשׁ | | *napištu* = `נֶפֶשׁ` (shared) | Erra 137 |
 | *zēru* | זֶרַע | | [equivalent] ז:ג | Erra 138 |
+| *uqnû* (Sum. ZA.GIN₃) | סַפִּיר | `לָזוּרִיט` (until 2026-10-21) | [equivalent]: biblical `סַפִּיר` is lapis lazuli (Exod 24:10; Ezek 1:26; Job 28:6); the cross-corpus decision of 2026-10-21 | Gilg. I 27; Erra 154; Uruk List o 10 |
 | *šêtu* "to be left over" | נוֹתַר | | [equivalent] ז:כג | Erra 145 |
 | *rēḫu* | שְׁאֵרִית | | | Erra 146 |
 | *mēsu* / *elmēšu* | עֵץ הַמֵּסוּ / אֶבֶן הָאֶלְמֵשׁוּ | | untranslated names of materials | Erra 148–152 |
@@ -67,3 +68,5 @@ Words used in this project and not (yet) in the shared `../renderings.md`. The s
 | *tarṣu* (*ina tarṣi*) / *palû* (*ina palê*) | בִּימֵי / בִּתְקוּפַת | | | Uruk list |
 | *rēʾûtu* / Sum. nam-sipa | רְעִיָּה | | | Dyn. Chr. BM 35572 6′–9′ |
 | *ḫubūru* (Akk. of Sum. mu₇-mu₇) | הֲמֻלָּה | | shared | Dyn. Chr. K 11261 18′ |
+
+2026-10-21 harmonization (the lead's cross-corpus decisions): *uqnû* / ZA.GIN₃ = `סַפִּיר` (was `לָזוּרִיט`); *me* = `הַ־מֶה` (was `מֶה`).

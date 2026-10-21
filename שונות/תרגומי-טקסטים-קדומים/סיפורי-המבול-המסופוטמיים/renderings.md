@@ -190,6 +190,13 @@ Formulas:
 - SB speech formula over two lines: `X פָּתַח אֶת פִּיו וְאָמַר, / דִּבֵּר אֶל Y:`. The OB two-line form stays `… / וְדִבֵּר אֶל Y`.
 - *nappašu*: keep `פֶּתַח־אֲוִיר`. "פתחתי פתח־אוויר" is acceptable.
 
+2026-10-21 harmonization (the lead's cross-corpus decisions, binding for every corpus):
+- *uqnû* (Sum. *za-gin₃*, ZA.GIN₃) = `סַפִּיר` [equivalent], vocalized at its first occurrence in each file, with a first-occurrence note per text that biblical `סַפִּיר` is lapis lazuli, not the modern sapphire (Exod 24:10, Ezek 1:26, Job 28:6). Was `לָזוּרִית` (Atr. III vi 3; Gilg. XI 166 and its section heading) and `לָזוּרִיט` (project 6: Gilg. I 27, Erra I 154, Uruk List o 10).
+- Sum. *me* = `הַ־מֶה` (always vocalized); *me maḫ* = `הַ־מֶה הַנִּשְׂגָּבִים`. Was `הַכֹּחוֹת הַנִּשְׂגָּבִים` (Sum. Flood Story A 9 = B 8) and `מֶה` (Death of Bilgameš F 16).
+- *šiptu* (and Sum. *nam-šub*, *tu₆*) = `קֶסֶם`; Akk. *tû* = `לַחַשׁ`. Was `לחש` (Atr. I 249, 250a, 251; the apparatus's "spell of Nudimmud").
+- Inana = `אִינַנָּה`, always vocalized (already so); *sukkallu* / *šukkallu* = `וְזִיר` (already so in Atra-ḫasīs).
+- No occurrences in this corpus: *šembi*, *šu-ur₂-men* / *šurmēnu*, *ra-gaba*, *šudu₃* / *sizkur₂* / *a-ra-zu*, *mušen* (Berossus's Greek ὄρνεα keeps `עוֹפוֹת`), *ur₄*, *guru₇* / *karû* "grain heap", *en₃-du* (Atr. III viii 15 *zamāru* keeps its cognate `זֶמֶר`), *kabattu*.
+
 
 ## 4. Register reminders specific to the corpus
 - Sumerian and Greek texts use the same Hebrew for the same concept: the Sumerian *a-ma-ru* = `מַבּוּל`, the boat = `סְפִינָה`, and so on. Berossus's Greek πλοῖον = `סְפִינָה`, while σκάφος and λάρναξ get their own rendering with a note.
@@ -198,3 +205,4 @@ Formulas:
 ## Changelog
 - 2026-10-16: seed table written before drafting.
 - 2026-10-16: merged the proposals of all six projects (§3a). Changed: the slain god's name (`וֵא`), the *ubut* row, the *ṭēmu* senses, the *rigmu* scope, the boat words. Rejected: `רֶמֶשׂ` for *nammaššû* (replaced by `הַנָּע`), `שִׂרְטֵט` for *eṣēru*, `סָחַף` in the "after the flood" formula (replaced by `שָׁטַף`), `אֶשְׁנַב־אֲוִיר`.
+- 2026-10-21: cross-corpus harmonization (see the end of §3a): *uqnû* = `סַפִּיר`, *me* = `הַ־מֶה`, *šiptu* = `קֶסֶם`; every project that used the old forms updated.

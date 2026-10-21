@@ -518,7 +518,7 @@ The commentary asks of each word in Genesis: *why exactly this word?* These are 
 | 9:13–14 | Atr. II A 16 | *erpetu* | עננים | [divergence] | Rainless clouds / the cloud of the sign. |
 | 9:13–14 | Gilg. XI 98 | *urpatu ṣalimtu* | עלה מיסוד השמים ענן שחור | [equivalent] | Different function. |
 | 9:13–16; `רְכוּבוֹ` (תהלים קד:ג) | U r. 12′ | *rukub ilāni* | רכוב האלים | [cognate] (Ps) / [absent] | The cloud as a divine chariot. |
-| 9:16 `לִזְכֹּר בְּרִית עוֹלָם` (ט:טז) | Atr. III v 46 – vi 4 (partly restored) | *zubbū … lū uqni kišādīya*; *luḫsus-ma ūmī* | הזבובים ה[אלה] / יהיו לזורית על צווא[רי], / אזכור את הימים | [equivalent] / [divergence] | A sky-blue object hung "before" the gods as a memorial. |
+| 9:16 `לִזְכֹּר בְּרִית עוֹלָם` (ט:טז) | Atr. III v 46 – vi 4 (partly restored) | *zubbū … lū uqni kišādīya*; *luḫsus-ma ūmī* | הזבובים ה[אלה] / יהיו ספיר על צווא[רי], / אזכור את הימים | [equivalent] / [divergence] | A sky-blue object hung "before" the gods as a memorial. |
 | 9:12–17 | Gilg. XI 164–167 | lapis flies; "I shall remember these days" | הזבובים הגדולים …; את הימים האלה אזכור, ולעולם לא אשכח | [equivalent] / [divergence] | |
 | 9:12–17 | Atr. III viii 18–19 | *abūba ana kullat nišī uzammer šimeā* | את המבול – לכל האנשים / זימרתי. שמעו! | [absent]; *zamāru* = זמר [cognate] | A sung epic ends with "Listen!"; Genesis ends with a covenant and a sign. |
 

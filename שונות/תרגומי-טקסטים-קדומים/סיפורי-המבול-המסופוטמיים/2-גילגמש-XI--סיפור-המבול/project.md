@@ -117,6 +117,7 @@ The commentary already interprets `גֹפֶר`, `קִנִּים`, `כֹּפֶר`
   - All Bible quotations verified by script against `תנך-מנוקד/`.
 - 2026-10-16: `translation.rtl.md` produced from the annotated file (Hebrew introduction, 13 section headings, 209 numbered lines, 17 footnotes).
 - 2026-10-16: after the coordinator regenerated `reading-edition.md` (111 notes), I re-checked the new notes in ll. 1–208: 126, 129, 131, 132–133a and 175. 129, 131 and 132–133a were already covered from the ATF. I added George's view of the variant at 126, and the ms variant with Streck's reading at 175.
+- 2026-10-21: cross-corpus harmonization (the lead's decision 1, settled): *uqnû* = `סַפִּיר` [equivalent] instead of `לָזוּרִית` in 166 (and the heading of 157–171), with the [equivalent] note (Exod 24:10, Ezek 1:26, Job 28:6) at 166; the rainbow comparison at 167 kept. The Gilgameš corpus embeds this translation: its copy follows automatically.
 - **Open:** compare with Wasserman & Cohen 2026 if bought; ll. 209–328 out of scope.
 
 ## Parallels index
@@ -237,7 +238,7 @@ For the translators of Atra-ḫasīs III and of the other Akkadian versions (pro
 | 161 | OB III v 34 | Same words, order verb–subject: `הריחו האלים את הריח` | האלים הריחו את הריח, |
 | 163 | OB III v 35 | OB *[kīma zubb]ī eli niqî paḫrū* → `כזבובים על הזבח מקובצים` | האלים התקבצו כזבובים על בעל הזבח. |
 | 164 | OB III v 37 | OB *[Nin]tu itbê-ma* → `נינתו קמה` | מיד כשהגיעה בלת־אילי, |
-| 165–167 | OB III v 46–47; vi 2–4 | OB: *zubbū annûtum lū uqni kišādīya-ma / luḫsus-ma ūmī [annûtim]* → `הזבובים האלה / יהיו לזורית על צווארי / אזכור את הימים [האלה]` | נשאה את הזבובים הגדולים… / "אלים! אלה יהיו לזורית על צווארי, / את הימים האלה אזכור, ולעולם לא אשכח! |
+| 165–167 | OB III v 46–47; vi 2–4 | OB: *zubbū annûtum lū uqni kišādīya-ma / luḫsus-ma ūmī [annûtim]* → `הזבובים האלה / יהיו ספיר על צווארי / אזכור את הימים [האלה]` | נשאה את הזבובים הגדולים… / "אלים! אלה יהיו סַפִּיר על צווארי, / את הימים האלה אזכור, ולעולם לא אשכח! |
 | 169 | OB III v 41 | Opposite: *Enlil iṭḫi-a ana qutrenni* → `אנליל ניגש אל הקְטורת` (*qutrinnu* = shared `קְטֹרֶת`) | אנליל אל יבוא אל המנחה, |
 | 170 | OB III v 42; iii 53 | *ša* for *aššu*: `אשר לא נמלך, וחולל את המבול` | כי לא נמלך, וחולל את המבול, |
 | 171 | OB III v 43; iii 54 | OB *nišī ikmisū ana karāši* → `את האנשים כנס לכליון` | ואת אנשיי מנה לכליון. |

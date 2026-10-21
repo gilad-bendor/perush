@@ -76,6 +76,7 @@ See "Base text" above. Also: `../../sources/Poebel-1914--PBS-4-1/deluge-text-pp9
 - 2026-10-16: `annotated.rtl.md` drafted, all surviving lines: A 1–14, B 1–18, C 1–28, D 1–17, E 1–12; Ur obv. 1′–18′, rev. 1′–14′ (121 lines).
 - 2026-10-16: review passes done. (a) Fidelity: brackets re-checked against the ETCSL transliteration (B 9, C 20 corrected). (b) Consistency: repeated lines verified identical — A 9 = B 8; A 11 = C 9; D 9 = E 4; D 10 ≈ E 5; C 11 ≈ E 9 (opening); B 10 ≈ B 16; C 22 ≈ D 2; A 6 ≈ B 9. (c) Hebrew: read through; "הָרְעִיָּה" replaced (ambiguous with רַעְיָה "wife"). All Bible quotations checked mechanically against `תנך-מנוקד/`; Gilgameš XI line numbers checked against the eBL reading edition, Atra-ḫasīs references against SEAL 1517.
 - 2026-10-16: `translation.rtl.md` produced (checked by script: its 121 lines are identical to the annotated renderings). **Status: first complete draft.** Next: check the cruxes against Civil 1969 / Jacobsen 1981 / Peterson 2018 if obtained.
+- 2026-10-21: cross-corpus harmonization (the lead's decision 8, settled): *me maḫ* = `הַ־מֶה הַנִּשְׂגָּבִים` instead of `הַכֹּחוֹת הַנִּשְׂגָּבִים` (A 9 = B 8, still identical). Decision 5: the "spell of Nudimmud" (*nam-šub*) is `קסם נודימוד` in the apparatus and the introduction. Decision 9: Inana was already `אִינַנָּה` (one partly vocalized note fixed).
 
 
 ## Parallels index
