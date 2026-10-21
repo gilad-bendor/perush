@@ -10,8 +10,9 @@ IFS=$'\n' read -r -d '' -a PERUSH_PATHS <<< "$( cat )"$'\0' || true
 echo 1>&2
 
 {
-  # Add the file CLAUDE.md - up to (and excluding) the section "## חיפוש קבצי פירוש רלבנטיים".
-  grep -v "פירוש/הקדמה-לפירוש.rtl.md" CLAUDE.md |
+  # Add the Hebrew system-prompt (prefix and suffix) - without the section "# קבצי הפירוש".
+  # The perush intro ("פירוש/הקדמה-לפירוש.rtl.md") is added below, with the perush files.
+  cat claude/perush-system-prompt/hebrew/system-prompt--Hebrew--prefix.rtl.md claude/perush-system-prompt/hebrew/system-prompt--Hebrew--suffix.rtl.md |
   gawk '
     /^# / {
       main_section = $0;

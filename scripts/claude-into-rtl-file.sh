@@ -5,8 +5,11 @@
 #  and open a "claude" session there, recording it with "script".
 # Arguments to this script are added to the "claude" command.
 #
-# Run this script *from the repo root* - the paths below are relative to the
-# current directory, while the new window cd-s to the repo root by itself.
+# This script adds no context of its own: each "claude-into-rtl-file--<task>.sh" wrapper
+# picks the session's context (its system-prompt file, the folder it runs in, a first
+# prompt...) and passes it on as arguments - see e.g. "claude-into-rtl-file--perush-hebrew.sh".
+#
+# It can be run from any folder: it changes to the repo root first - the paths below are relative to it.
 #
 # Each session is recorded into its own timestamped file under "claude-sessions/",
 # so previous transcripts are kept instead of being overwritten. The ".script.rtl.md"
@@ -15,6 +18,8 @@
 # "_claude-output.script.rtl.md" (git-ignored) is a symlink to the newest transcript:
 # open *that* file in the RTL editor once, and every new session re-points it - so
 # there is no need to look up and open a new file per session.
+
+cd "$( dirname "$0" )/.." || exit 1
 
 CLAUDE_COMMAND="claude --model opus --allow-dangerously-skip-permissions --chrome --permission-mode bypassPermissions $*"
 OUTPUT_DIR="claude-sessions"
@@ -37,7 +42,7 @@ TERMINAL_COLUMNS=100
 # CLAUDE_SESSION_DIR (optional environment variable): a folder, relative to the repo root,
 # to run "claude" in instead of the repo root. The transcript is still written under the
 # repo root's "claude-sessions/" - hence the absolute OUTPUT_PATH.
-REPO_ROOT="$( cd "$( dirname "$0" )/.." && pwd )"
+REPO_ROOT="$( pwd )"
 OUTPUT_PATH="$REPO_ROOT/$OUTPUT_FILE"
 SESSION_DIR="$REPO_ROOT/${CLAUDE_SESSION_DIR:-.}"
 SHELL_COMMAND="echo 'Output file:    $OUTPUT_FILE' ; cd '$SESSION_DIR' && echo rows=\$(tput lines) columns=\$(tput cols) > '$OUTPUT_PATH' && script -Fa '$OUTPUT_PATH' $CLAUDE_COMMAND && exit"

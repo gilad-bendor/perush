@@ -143,8 +143,12 @@ export function realQuery(params: {
   // Strip stub response blocks from the prompt
   const prompt = stripStubResponseBlocks(rawPrompt);
 
-  // Build SDK options
-  const sdkOptions: Options = {};
+  // Build SDK options.
+  // settingSources: [] - load no settings files and no CLAUDE.md: the agents get only the system prompt
+  // built here. The repo root's CLAUDE.md and .claude/settings.json (its SessionStart hook) are the
+  // "session operator" of interactive sessions - not for these agents. This is the SDK's default in
+  // 0.2.x, but newer SDK docs describe loading everything by default - so it is explicit.
+  const sdkOptions: Options = { settingSources: [] };
 
   if (options.model) sdkOptions.model = options.model;
   if (options.effort) sdkOptions.effort = options.effort;

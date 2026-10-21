@@ -12,4 +12,4 @@ A good critical sense knows how to separate: what holds, what doesn't hold, and 
 
 Our discussion focuses on a methodological allegorical interpretation of the Book of Genesis.
 This interpretation is fundamentally different from any other known commentary.
-**Very important!** The content of the file [Preface to the Commentary](פירוש/הקדמה-לפירוש.rtl.md) appears *in full* (in English translation) immediately after this line - and it is the binding basis for everything that follows (there is no need to read the Hebrew file).
+**Very important!** The English translation of the file [Preface to the Commentary](../../../פירוש/הקדמה-לפירוש.rtl.md) - `claude/perush-system-prompt/english/system-prompt--English--perush-intro.md` - is the next file in the list of files you are to read *in full* - and it is the binding basis for everything that follows (there is no need to read the Hebrew file).

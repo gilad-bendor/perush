@@ -11,7 +11,7 @@
 
 This folder is part of the `perush` repository: a methodological, allegorical commentary on the Torah (see `פירוש/הקדמה-לפירוש.rtl.md`).
 The commentary reads the biblical text word by word and asks of each word: *why exactly this word?*
-(See the "reverse-engineering test" in `.claude/system-prompt--Hebrew--suffix.rtl.md`.)
+(See the "reverse-engineering test" in `claude/perush-system-prompt/hebrew/system-prompt--Hebrew--suffix.rtl.md`.)
 
 Ancient Near Eastern texts that the Bible knew, used, or argued with are the strongest external control for that question.
 In the Mesopotamian flood story, for example, we can see:
@@ -34,12 +34,13 @@ And the apparatus explains each text **on its own terms** as well: its gods, its
 
 ## 2. Folder layout and file conventions
 
-A session started by the `קלוד-תרגומי-טקסטים-קדומים` run configuration (`scripts/claude-into-rtl-file--ancient-translations.sh`) runs **in this folder**, with this file as its appended system prompt and without the repo's `CLAUDE.md`.
-Paths in this file that start with `tools/`, `sources/` or a corpus folder are relative to this folder. Repo-wide paths (`פירוש/`, `תנך-מנוקד/`, `.claude/`) are relative to the repo root, two levels up (`../../`).
+A session started by the `קלוד-תרגומי-טקסטים-קדומים` run configuration (`scripts/claude-into-rtl-file--ancient-translations.sh`) runs **in this folder**, with this file as its appended system prompt and without the repo's perush system-prompt (or any repo `CLAUDE.md`).
+Paths in this file that start with `tools/`, `sources/` or a corpus folder are relative to this folder. Repo-wide paths (`פירוש/`, `תנך-מנוקד/`, `claude/`) are relative to the repo root, two levels up (`../../`).
 
 ```
 שונות/תרגומי-טקסטים-קדומים/
 ├── translation-guidelines.md        ← this file (living)
+├── domains.txt                      ← the web hosts these sessions need (for a cloud session's network allowlist; §4.6)
 ├── tools/                           ← reusable scripts (fetchers, converters)
 ├── הדפסה/                           ← one print stub per translation, mirroring the corpus folders (§7.4)
 ├── sources/                         ← raw material downloaded from the internet, one folder per SOURCE
@@ -255,6 +256,7 @@ Added 2026-10-20. Base texts:
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).
 
 ### 4.6 Access notes (what works from a Claude session)
+- **`domains.txt`** lists every web host that this work uses (sources, APIs, repositories). A cloud session can reach only the hosts its environment allows, and that allowlist is set in the claude.ai UI only: the session operator probes the hosts in `domains.txt` and tells the user which to add. **When you start using a new host - add it to `domains.txt`** (one per line).
 - **eBL API** (no key): `https://www.ebl.lmu.de/api/texts/...` (*not* `/api/corpus/...`), `/api/words/<lemma>`, `/api/words?word=…`, `/api/corpus/query?lemmas=…` (concordance), `/api/fragments/<museum-no>`, `/api/bibliography/<id>`.
 - **eBL fragmentarium by genre**: `GET /api/fragments/query?genre=CANONICAL:Historiography:Chronicles` (URL-encode the path) lists a whole text family. Search it by genre before declaring a corpus complete: it holds unpublished identifications.
 - **eBL corpus chapters may exist without lines.** Check `lines` in the API response before assuming an edition exists.

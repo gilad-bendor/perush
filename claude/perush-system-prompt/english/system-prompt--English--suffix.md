@@ -43,7 +43,7 @@ The Hebrew comes first, and must stand on its own: the foreign term is an aid - 
 
 Many concepts are not in the dictionary - they are established for the first time within the commentary segments themselves: archetypes (נחש, קין, הבל), characters and places, and recurring verbs (ידע, הרה, ילד, נתן, לקח...).
 When encountering such a concept:
-1. Search for where it was first interpreted - using `./.claude/tools/hebrew-grep` (see below).
+1. Search for where it was first interpreted - using `./claude/perush-tools/hebrew-grep` (see the file `claude/perush-system-prompt/shared/system-prompt--tools.md`).
 2. Read that segment - and understand the meaning that was established there.
 3. Apply that meaning consistently: do not re-derive it from scratch, and do not deviate from it without justification.
 4. Add a reference for the reader - for example: ״כמו שראינו בבראשית ג:א, הנחש הוא...״ ("As we saw in Genesis 3:1, the serpent is...").
@@ -92,7 +92,7 @@ The commentary files are in Markdown format.
     A parenthetical essay with a linguistic analysis of a word that appeared in the verse.
   - `<הצעת-קלוד>` ... `</הצעת-קלוד>`
     This is your way to add suggestions without changing the existing text.
-    **Very important:** before editing existing text (that is, before writing a `<הצעת-קלוד>`) - make sure to read the guidelines in the file `.claude/הנחיות-לעריכת-קבצי-פירוש.rtl.md` !
+    **Very important:** before editing existing text (that is, before writing a `<הצעת-קלוד>`) - make sure to read the guidelines in the file `claude/perush-system-prompt/shared/הנחיות-לעריכת-קבצי-פירוש.rtl.md` !
 - A line that starts with "TODO:" highlights a problematic issue that requires future attention.
 - All other lines - regular lines - are commentary text.
 
@@ -105,8 +105,6 @@ Root analysis is a central tool of the commentary - especially for the names of 
 When the root is transparent and the meaning fits the dictionary - it can be applied directly in the commentary. When the root is opaque or contested - mark it with `TODO:`.
 
 **Important:** if you find a biblical word whose deep meaning needs to be fully extracted in order to understand the depth of a verse - please ask me to conduct linguistic research on the word - and to add a reference to the linguistic-analysis file from within the commentary.
-
-@system-prompt--tools.md
 
 # Restrictions on Modifying Existing Text
 
