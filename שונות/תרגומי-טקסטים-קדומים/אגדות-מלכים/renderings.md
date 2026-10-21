@@ -205,6 +205,23 @@ Full list: `1-אנמרכר-ואדון-ארטה/project.md` ("Proposals (EA3)"). 
 - **Tool:** the gated strings are tested on the bracket-free transliteration as well (`e₂-⸢gal⸣`); the "openly"
   formula accepts a final `:`.
 
+### 9.4 Part EA4 (470–636), 2026-10-21
+Full list: `1-אנמרכר-ואדון-ארטה/project.md` ("Proposals (EA4)"). For a later Enmerkar text (Enmerkar and
+Ensuḫkešdana) and for the other corpora:
+- **The writing passage:** *ka-ni dugud* `פיו כבד` (501–502; Mittermayer's *inim i₃-dugud* "the matter was heavy"
+  in the apparatus); *im* `טיט`, *im šu-rin-na* `טיט־התנור`; *im-e šu ra* `בטיט יד היכה`; *gub* (words on clay)
+  `הציב`; *dub-gin₇* `כלוח`; *ud-bi-ta … / i₃-ne-eš₂ …* `לפנים … / ועתה …`; *gag* `יתד`. `כתב` stays out of the
+  Hebrew (*sar* only).
+- **Nouns:** *tug₂* `בגד`; *saĝ-ki* `מצח`; *eš₂-gar₃* `מכסה`; *ĝiškim* `אוֹת` (vocalized); *a-ma-ru* `מבול`; *a
+  nam-til₃* `מֵי החיים`; *lil₂* `מַשַּׁב`; *ug* `לַיִשׁ`; *me-lem₄* `זוהר`; *um-ma* `הזקנה`; *ki-sikil* `עלמה`; *barag*
+  (dais) `כס`; *aga*, *men* `כתר`; *en₃-du* `זמרה`; *gig* `חיטה`; *gu₂* (pulse) `קטנית`; *eme₅* `אתון`; *dur₃* `עַיִר`
+  (vocalized); *ud₅* `עז`; *peš₃* `תאנה`; *ĝeštin* `גפן`; *ur igi-ĝal₂-la* `אוּר־אִיגִיגַלָּה` (name, open).
+- **Verbs:** *šu … dag* + object `שמטה מידה`; *šu taka₄* `שלח`; *šu ti* `קיבל`; *igi du₈* `ראה` (≠ *igi bar*
+  `הביט`); *dub₂* `נפץ`; *tar* `כרת`; *ur₃* `גרף`; *sud* (water) `הזה`; *gu₂ ĝar* "gather" `יחד שָׂם`; *ĝiš ĝal₂*
+  `(צוואר) בעץ נתן`; *šir₃ dug₄* `שיר דיבר`; *bal ak* `לעשות חליפין`.
+- **Fixed strings:** `השליח – פיו כבד; אינו יכול להשיבו.`; `לפנים – הצבת דבר על טיט – לא היתה;`; `אחרי שהמבול
+  גרף,`; the commission with `שנית` / `שלישית` (477, 486).
+
 ## Changelog
 - 2026-10-21: written before the first part, from the temple, lament, creation, flood, Gilgameš, law and wisdom
   corpora and a reading of both transliterations (the formula survey of §3; the echo-control list of §4).

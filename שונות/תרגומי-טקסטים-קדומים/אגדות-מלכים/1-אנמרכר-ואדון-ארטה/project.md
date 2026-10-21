@@ -327,3 +327,130 @@ Deut 11); the peace of the beasts (Isa 11:6–9; 65:25).
 | 444 | aratta{ki} u₈ sag₂-[gin₇] ḫe₂-em kaskal-bi [kur] ki-bal ḫe₂-em | ארטה – כרחל [מוכה] – היא אכן; דרכיה – [ארץ] מרי | `כִּי כָבֵד הָרָעָב מְאֹד; וַתֵּלַהּ אֶרֶץ מִצְרַיִם וְאֶרֶץ כְּנַעַן מִפְּנֵי הָרָעָב` (בראשית מז:יג) | equivalent | A land exhausted (our proposal). |
 | 455 | inim-ma dub maḫ-gin₇ šu mu-na-an-sig₁₀ | את הדבר – כלוח נשגב – בידו נתן | `וַיִּתֵּן אֶל מֹשֶׁה ... שְׁנֵי לֻחֹת הָעֵדֻת` (שמות לא:יח) | equivalent | The word given "like a tablet" – before writing exists in the story. |
 | 461 | a₂-ĝal₂ ḫe₂-zu | החזק – ייוודע! | `יָקוּמוּ נָא הַנְּעָרִים וִישַׂחֲקוּ לְפָנֵינוּ` (שמואל ב ב:יד) | divergence | A contest of representatives decides between kingdoms – dogs (Mittermayer) rather than champions (ETCSL). |
+
+## Part EA4 (lines 470–636), 2026-10-21
+
+### Progress (EA4)
+- Drafted 470–636 (164 entries; 608–610 are not in the composite) plene, from the transliteration and the ORACC
+  morph, then Mittermayer's commentary (pp. 289–310) and ch. 4.2 ("Die Schrifterfindung"). The repeated lines were
+  copied from EA1–EA3 (`pars`): the commission (470, 477 `שנית`, 486 `שלישית`), the colour list (471–473 from
+  457–459, with *tug₂* `בגד`), the dog (475–476 = 460–461), the threat (487–490 after 115–118, with the new verbs
+  *tar* `אכרות`, *dub₂* `אנפצנה`), the journey and the greeting (509–518 = 170–179), the answer formula (526–535 =
+  208–217; 531 *nam-en* `אדנות` for 213 *nam-nun* `נסיכות`), the counsel (626–627 after 69–70).
+- Review pass (a) fidelity: 473 *ga-* kept as "I will give" (Mittermayer reads "let him give you"); 482 *ḫe₂-* +
+  ḫamṭu = affirmative past (`אכן … שָׂם`), not ETCSL's wish; 594 Enmerkar as subject of *si* (our analysis); the
+  nested quotations (494 open until 496; 569–570 and 630 inside the speeches) corrected.
+- Review pass (b) consistency: *šu … dag* with an object `שמטה מידה` (558–562; EA2's intransitive `ברחה מ־` noted);
+  *igi du₈* `ראה` vs *igi bar* `הביט`; *ĝiš ĝal₂* `נתנה` (576) vs *gu₂ ĝiš ĝar* `צוואר לעץ שָׂם`; *lil₂* `מַשַּׁב`, *ug*
+  `לַיִשׁ`, *a nam-til₃* `מֵי החיים`, *ĝiškim* `אוֹת`, *šembi₂-zid* `פוך` from the earlier corpora; 454 / 537
+  (identical Sumerian, opposite verbs) recorded.
+- Review pass (c) Hebrew: `עֲיָרֵיהֶן` (599, "foals") and `אוֹתוֹ` (496, "his sign", not Utu) vocalized; `ירח` for the
+  moon (592; `לבנה` is gated); `ערבה` for *dug₃* of a song (585).
+- `verify EA`: OK (641 entries, all four parts); `check_bible_quotes.py`: 0 problems.
+
+### Key findings (EA4)
+- **The heavy mouth (501–502)** – the base text (ETCSL, ORACC) reads *ka-ni dugud* "his mouth was heavy" and the
+  messenger "cannot repeat it" ↔ `כִּי כְבַד פֶּה וּכְבַד לָשׁוֹן אָנֹכִי` (Exod 4:10) [equivalent; *dugud* = *kabtu*
+  = `כבד`]. **But Mittermayer reads the same signs (KA.NI) *inim i₃-dugud* "the matter was (too) weighty"** and rules
+  "his mouth" out (it would be *ka-ka-ni*); 448 *inim dugud* supports her. On her reading the counterpart moves to
+  `כִּי כָבֵד מִמְּךָ הַדָּבָר לֹא תוּכַל עֲשֹׂהוּ לְבַדֶּךָ` (Exod 18:18). Either way, the problem is solved by a
+  mediator: Aaron as a mouth (Exod 4:14–16), Jethro's division of labour (Exod 18) – and here a lump of clay.
+- **Exodus 4 in one place (our proposal):** the staff put in the envoy's hand (434 ↔ Exod 4:17), the sign (*ĝiškim* =
+  *ittu*, the cognate of `אוֹת`, 496 ↔ Exod 4:8), the heavy mouth (501 ↔ Exod 4:10) – a cluster of motifs of the
+  commissioned messenger.
+- **The invention of the letter (500–506)** is an etiology told in the narrator's own voice to the audience:
+  *ud-bi-ta* "formerly … (it) was not" / *i₃-ne-eš₂ … ud ne-a* "now, on this day, so it was" ↔ the Bible's narrator's
+  asides `כִּי לַנָּבִיא הַיּוֹם יִקָּרֵא לְפָנִים הָרֹאֶה` (1 Sam 9:9) and `וְזֹאת לְפָנִים בְּיִשְׂרָאֵל` (Ruth 4:7)
+  [equivalent] – there a custom that has vanished, here one that is born. The verb is *gub* "set up" (`הציב`), not
+  *sar* "write"; ETCSL's "wrote" and "tablet" are the English's. Mittermayer reads *kiseb-gin₇* "like a seal" (503):
+  seal on clay → word on clay → (in Sargon and Ur-Zababa) the envelope.
+- **"The word was a peg" (540)** – ETCSL's *gag* "nail, peg" (the emic name of cuneiform, as Modern Hebrew `כתב
+  היתדות`) is contested by Mittermayer's collation (*u₄-ba du₁₁-ga-ni-am₃*): no ancient source calls the script
+  "nails". Kept from the base, flagged (EA4.3).
+- **Iškur's storm and the wheat that grew by itself (542–553)** ↔ the storm theophany that brings rain (Judg 5:4; Ps
+  29:3; 18:8; 98:8) and `סְפִיחַ` (Lev 25:5) [equivalent]: the god intervenes at the moment of the lord of Aratta's
+  confusion, and the riddle-war is not decided by wit.
+- **A chosen people (566–568):** the people of Aratta "were separated from all people", "brought out from the people
+  by Dumuzi" ↔ `וָאַבְדִּל אֶתְכֶם מִן הָעַמִּים לִהְיוֹת לִי` (Lev 20:26), `לָקַחַת לוֹ גוֹי מִקֶּרֶב גּוֹי` (Deut
+  4:34) [equivalent] – the election by a god of love (Dumuzi), not of covenant.
+- **The flood as the watershed of history (571–576):** "those who stood before the flood", "after the flood had
+  swept over" (the Sumerian King List's formula) ↔ `אַחַר הַמַּבּוּל` (Gen 10:32), the survivors (Gen 7:23); the
+  water of life sprinkled on them (Num 19:17); and the surprise – Aratta once held Sumer's neck in the yoke (Jer 27:8).
+- **The end is trade, not conquest (611–625):** gold, silver and lapis prepared "for exchange" (*bal ak*), the
+  *iškaru* quota (Exod 5:8), heaped for Inana in the courtyard of E-ana – the demand of 484–485 fulfilled in Uruk; and
+  Inana seats Enmerkar beside her on the dais (594 ↔ Ps 45:10): the sacred marriage is the kingship.
+- **The ancient mind:** a message too long for memory; a king who invents a medium because his envoy is overloaded;
+  a reader who has never seen writing staring at the clay; the god of rain as the answer to a technological
+  triumph; a mountain people who trace their election to Dumuzi and their survival to the flood; a dispute between
+  cities ended by a trade agreement.
+
+### Open decisions (EA4)
+1. 501–502: *ka-ni dugud* "his mouth was heavy" (ETCSL, ORACC; followed) or *inim i₃-dugud* "the matter was weighty"
+   (Mittermayer)? The Bible parallel changes with the reading (Exod 4:10 / Exod 18:18).
+2. 481, 491 *du-a-ni*: "when he (the lord of Aratta) comes" (ETCSL; followed) or "when she (Inana) comes"
+   (Mittermayer)?
+3. 540: "the spoken word was a peg (= cuneiform)" (ETCSL; followed) or Mittermayer's re-reading?
+4. 569, 577 *ur igi-ĝal₂-la*: a name or title "Urigigala" (Mittermayer; transcribed `אוּר־אִיגִיגַלָּה`) or "the
+   clever champion" (ETCSL)?
+5. 495: "the word of Nudimmud" (Mittermayer) – would close the frame opened at 135; the base text has a lacuna.
+6. 538 *im šu-rin-na*: "oven(-fired) clay" (ETCSL; followed, *tinūru* = `תַּנּוּר`) or "the summary clay" (*šu-niĝin₂*,
+   Komoróczy, Klein, Mittermayer)?
+7. 588 the "old woman": Nisaba (Mittermayer)? 626–636: Inana speaking (Mittermayer)?
+
+### Proposals for the corpus renderings (EA4)
+- *tug₂* `בגד`; *gag* `יתד`; *saĝ-ki* `מצח`; *mir* `זועף`; *šu-rin-na* `תנור` (*im šu-rin-na* `טיט־התנור`); *eš₂-gar₃*
+  `מכסה`; *bal ak* "exchange" `לעשות חליפין`; *a-ma-ru* `מבול` (inherited); *a nam-til₃* `מֵי החיים`; *lil₂* `מַשַּׁב`;
+  *ug* `לַיִשׁ`; *ĝiškim* `אוֹת` (vocalized); *me-lem₄* `זוהר`; *igi du₈* `ראה`; *um-ma* `הזקנה`; *ki-sikil* `עלמה`;
+  *aga* / *men* `כתר`; *barag* (dais) `כס`; *en₃-du* `זמרה`; *šir₃ dug₄* `שיר דיבר`; *gig* `חיטה`; *gu₂* (pulse)
+  `קטנית`; *eme₅* `אתון`; *dur₃* `עַיִר` (vocalized); *ud₅* `עז`; *peš₃* `תאנה`; *ĝeštin* `גפן`; *{gi}ušub*
+  `קני־האוּשׁוּב`.
+- Verbs: *šu … dag* with an object `שמטה מידה`; *šu taka₄* `שלח`; *šu ti* `קיבל`; *šu ra* (on clay) `יד היכה`; *gub*
+  (words on clay) `הציב`; *dub₂* `נפץ`; *tar* `כרת`; *ur₃* (the flood) `גרף`; *sud* (water) `הזה`; *gu₂ ĝar*
+  "gather" `יחד שָׂם`; *ĝiš ĝal₂* `(צוואר) בעץ נתן`.
+- Fixed strings: `לפנים – הצבת דבר על טיט – לא היתה;` (504); `השליח – פיו כבד; אינו יכול להשיבו.` (501);
+  `אחרי שהמבול גרף,` (572).
+
+### Parallels index (EA4)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 478 | en₃-tukum-še₃ | עד מתי | `עַד-אָנָה יְהוָה תִּשְׁכָּחֵנִי נֶצַח` (תהלים יג:ב) | equivalent | "How long" of a state that does not end. |
+| 480 | e-ne sipad-bi-gin₇ eĝer-bi ḫe₂-em-us₂-e | כרועה שלהם – אחריהם ילך | `מֵאַחַר עָלוֹת הֱבִיאוֹ` (תהלים עח:עא) | equivalent | The king as shepherd behind the flock. |
+| 480 | eĝer-bi … us₂ | אחריהם ילך | `אֲשֶׁר יֵצֵא לִפְנֵיהֶם וַאֲשֶׁר יָבֹא לִפְנֵיהֶם` (במדבר כז:יז) | divergence | The biblical leader goes before. |
+| 488 | na-an-dub₂-be₂-en | אנפצנה | `אַשְׁרֵי שֶׁיֹּאחֵז וְנִפֵּץ אֶת-עֹלָלַיִךְ    אֶל-הַסָּלַע` (תהלים קלז:ט) | cognate | *dub₂* = *napāṣu* = `נפץ`. |
+| 494 | ĝissu-bi kalam-ma … la₂-la₂-e | את צלו – על הארץ – לי יפרוש | `וּבְצִלּוֹ יֵשְׁבוּ כֹּל גּוֹיִם רַבִּים` (יחזקאל לא:ו) | equivalent | The protecting shade over the land. |
+| 496 | ĝiškim-a-ni | אוֹתוֹ | `וְהָיָה אִם לֹא יַאֲמִינוּ לָךְ וְלֹא יִשְׁמְעוּ לְקֹל הָאֹת הָרִאשׁוֹן` (שמות ד:ח) | cognate | *ĝiškim* = *ittu* = `אוֹת`; Exod 4 cluster (our proposal). |
+| 500 | šag₄-bi su-su-a-am₃ | תוכה – רחוק־רחוק הוא | `רָחוֹק מַה שֶּׁהָיָה; וְעָמֹק עָמֹק מִי יִמְצָאֶנּוּ` (קהלת ז:כד) | equivalent | The doubled "far/deep" of what cannot be grasped. |
+| 501 | kiĝ₂-gi₄-a ka-ni dugud | השליח – פיו כבד | `כִּי כְבַד פֶּה וּכְבַד לָשׁוֹן אָנֹכִי` (שמות ד:י) | equivalent | *dugud* = *kabtu* = `כבד`; the messenger cannot deliver. |
+| 501 | (Mittermayer: inim i₃-dugud) | (הדבר כבד) | `כִּי כָבֵד מִמְּךָ הַדָּבָר לֹא תוּכַל עֲשֹׂהוּ לְבַדֶּךָ` (שמות יח:יח) | divergence | Mittermayer's reading; the solution there is division of labour. |
+| 503 | im-e šu bi₂-in-ra inim dub-gin₇ bi₂-in-gub | בטיט יד היכה; את הדבר – כלוח – הציב | `קַח לְךָ לְבֵנָה וְנָתַתָּה אוֹתָהּ לְפָנֶיךָ; וְחַקּוֹתָ עָלֶיהָ עִיר` (יחזקאל ד:א) | equivalent | Engraving on clay. |
+| 503 | inim dub-gin₇ | את הדבר – כלוח | `כְּתֹב חָזוֹן וּבָאֵר עַל הַלֻּחוֹת לְמַעַן יָרוּץ קוֹרֵא בוֹ` (חבקוק ב:ב) | equivalent | The tablet and the runner. |
+| 504 | ud-bi-ta … nu-ub-ta-ĝal₂-la | לפנים – … – לא היתה | `כִּי לַנָּבִיא הַיּוֹם יִקָּרֵא לְפָנִים הָרֹאֶה` (שמואל א ט:ט); `וְזֹאת לְפָנִים בְּיִשְׂרָאֵל עַל הַגְּאֻלָּה וְעַל הַתְּמוּרָה` (רות ד:ז) | equivalent | The narrator's aside "formerly … today". |
+| 505 | ur₅ ḫe₂-en-na-nam-ma-am₃ | כך אכן היה | `וַיְהִי כֵן` (בראשית א:ז) | equivalent | The formula of realization. |
+| 508 | ur-bar-ra maš₂-e us₂-sa-gin₇ | כזאב הרודף גדי | `בִּנְיָמִין זְאֵב יִטְרָף בַּבֹּקֶר יֹאכַל עַד` (בראשית מט:כז) | equivalent | The wolf simile. |
+| 520 | ĝiš-bi an ki-da mu₂-a | העץ ההוא – עם שמים וארץ – צמח | `רְבָה אִילָנָא וּתְקִף; וְרוּמֵהּ יִמְטֵא לִשְׁמַיָּא` (דניאל ד:ח) | equivalent | The king as cosmic tree. |
+| 522 | ur₂-bi ki-a gub-ba-bi | שורשו – בארץ – בעמדו | `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה` (בראשית כח:יב) | equivalent | Set on earth, reaching heaven. |
+| 524 | im ma-an-šum₂ | טיט לי נתן | `וַיִּכְתֹּב דָּוִד סֵפֶר אֶל יוֹאָב; וַיִּשְׁלַח בְּיַד אוּרִיָּה` (שמואל ב יא:יד) | equivalent | A messenger carrying a written message. |
+| 543 | {d}iškur an ki-a gu₃ nun-bi di-dam | אישכור, המשמיע … קול גדול | `קוֹל יְהוָה עַל-הַמָּיִם: אֵל-הַכָּבוֹד הִרְעִים` (תהלים כט:ג) | equivalent | The storm god's thunder. |
+| 546 | ḫur-saĝ … peš₁₁-peš₁₁-e | ההררים – רוטטים עמו | `אֶרֶץ רָעָשָׁה גַּם שָׁמַיִם נָטָפוּ; גַּם עָבִים נָטְפוּ מָיִם` (שופטים ה:ד) | equivalent | Earthquake and rain at the god's coming. |
+| 548 | ḫur-saĝ giri₁₇-zal-la gu₃ mi-ni-in-il₂ | בהררי־השמחה – קול נשא | `נְהָרוֹת יִמְחֲאוּ-כָף; יַחַד הָרִים יְרַנֵּנוּ` (תהלים צח:ח) | equivalent | The mountains' joy. |
+| 550 | gig ni₂-bi mu₂-a | חיטה – מעצמה צמחה | `אֵת סְפִיחַ קְצִירְךָ לֹא תִקְצוֹר` (ויקרא כה:ה) | equivalent | Grain that grows without sowing. |
+| 561 | ĝiš-nu₂ gi-rin-na | מיטת־הפרחים | `אַף עַרְשֵׂנוּ רַעֲנָנָה` (שיר השירים א:טז) | equivalent | The lovers' bed. |
+| 565 | a maḫ e₃-a-gin₇ mu-un-na-niĝin₂-niĝin₂ | כמים גדולים הפורצים – לו מקיפה | `וַיהוָה סָבִיב לְעַמּוֹ` (תהלים קכה:ב) | equivalent | The deity surrounding her city. |
+| 566 | lu₂-be₂-ne lu₂-lu₂-ta dar-a | אנשיה – מכל האנשים הובדלו | `וָאַבְדִּל אֶתְכֶם מִן הָעַמִּים לִהְיוֹת לִי` (ויקרא כ:כו) | equivalent | A people separated for a god. |
+| 567 | lu₂ {d}dumu-zid-de₃ lu₂-ta e₃-a | שדומוזי מן האנשים הוציא | `לָבוֹא לָקַחַת לוֹ גוֹי מִקֶּרֶב גּוֹי` (דברים ד:לד) | equivalent | Election by Dumuzi. |
+| 571 | igi a-ma-ru-ka gub-ba | בפני המבול – העומדים | `וַיִּשָּׁאֶר אַךְ נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה` (בראשית ז:כג) | equivalent | The survivors of the flood. |
+| 572 | eĝer a-ma-ru ba-ur₃-ra-ta | אחרי שהמבול גרף | `וּמֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם בָּאָרֶץ אַחַר הַמַּבּוּל` (בראשית י:לב) | equivalent | "After the flood" (Sumerian King List). |
+| 575 | a nam-til₃-la-ka mu-un-ne-sud-sud | מי החיים – עליהם הזתה | `וְנָתַן עָלָיו מַיִם חַיִּים אֶל כֶּלִי` (במדבר יט:יז) | equivalent | Living water sprinkled. |
+| 576 | gu₂ kalam-ma-ka ĝiš mu-un-ne-en-ĝal₂ | את צוואר הארץ – בעץ – להם נתנה | `וְאֵת אֲשֶׁר לֹא יִתֵּן אֶת צַוָּארוֹ בְּעֹל מֶלֶךְ בָּבֶל` (ירמיהו כז:ח) | equivalent | The neck in the yoke. |
+| 585 | en₃-du-ni … ba-dug₃ | זמרתה – … – ערבה | `יֶעֱרַב עָלָיו שִׂיחִי` (תהלים קד:לד) | equivalent | A song "sweet" to its hearer. |
+| 587 | šir₃ mu-ni-in-dug₄ | שיר דיברה | `עוּרִי עוּרִי דַּבְּרִי שִׁיר` (שופטים ה:יב) | equivalent | "Speak a song". |
+| 589 | ki-sikil ud-da-na til-la-gin₇ | כעלמה שימיה מלאו | `וְהִנֵּה עִתֵּךְ עֵת דֹּדִים` (יחזקאל טז:ח) | equivalent | The maiden ready for love. |
+| 590 | šembi₂-zid-da igi-na mu-un-gun₃ | בפוך – את עיניה נימרה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל) | equivalent | Painting the eyes. |
+| 592 | iti₆-gin₇ mu-un-e₃ | כאור הירח – יצאה | `יָפָה כַלְּבָנָה בָּרָה כַּחַמָּה` (שיר השירים ו:י) | equivalent | The beloved like the moon. |
+| 594 | en-me-er-kar₂ barag-ge₄ mu-un-da-ab-si | אנמרכר – את הכס עמה מילא | `נִצְּבָה שֵׁגַל לִימִינְךָ בְּכֶתֶם אוֹפִיר` (תהלים מה:י) | equivalent | The goddess/queen beside the king on the throne. |
+| 596 | im-da-lu-lu aratta{ki}-aš u₈-da sila₄-bi | רבו לארטה – רחלים עם טלאיהן | `שְׁגַר אֲלָפֶיךָ וְעַשְׁתְּרוֹת צֹאנֶךָ` (דברים כח:ד) | equivalent | Fertility of the flocks. |
+| 617 | eš₂-gar₃ … du₃ | את המכסה – הקים | `וְאֶת מַתְכֹּנֶת הַלְּבֵנִים אֲשֶׁר הֵם עֹשִׂים תְּמוֹל שִׁלְשֹׁם` (שמות ה:ח) | equivalent | The work quota (*iškaru*). |
+| 619 | bal ak-de₃ | לעשות חליפין | `וְזֹאת לְפָנִים בְּיִשְׂרָאֵל עַל הַגְּאֻלָּה וְעַל הַתְּמוּרָה` (רות ד:ז) | equivalent | Exchange. |
+| 621 | {ĝiš}peš₃ ĝeštin-ba | את התאנים עם גפניהן | `אִישׁ תַּחַת גַּפְנוֹ וְתַחַת תְּאֵנָתוֹ` (מלכים א ה:ה) | equivalent | Vine and fig: plenty. |
+| 628 | uĝ₃-e u₃-un-pad₃ | כשהעם ימצא | `שׂוֹם תָּשִׂים עָלֶיךָ מֶלֶךְ אֲשֶׁר יִבְחַר יְהוָה אֱלֹהֶיךָ בּוֹ` (דברים יז:טו) | divergence | The people, not the god, find the man (if that is the line's sense). |
+| 632 | nin mul-mul-e | הגבירה הזוהרת | `אֵיךְ נָפַלְתָּ מִשָּׁמַיִם הֵילֵל בֶּן שָׁחַר` (ישעיהו יד:יב) | equivalent | The morning star (Inana = Venus). |
