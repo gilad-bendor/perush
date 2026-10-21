@@ -46,6 +46,13 @@ Comparative-studies/*/*
 !Comparative-studies/*/README.md
 LXX-Rahlfs-1935--el-wikisource/*
 !LXX-Rahlfs-1935--el-wikisource/README.md
+# legends of kings (round 2, run 6; each folder also has its own .gitignore)
+Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/*
+!Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/README.md
+!Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/.gitignore
+eBL-fragmentarium--Sargon-Birth-Legend/*
+!eBL-fragmentarium--Sargon-Birth-Legend/README.md
+!eBL-fragmentarium--Sargon-Birth-Legend/.gitignore
 
 # 3. Bulk corpora – large, re-downloadable (see the folder README)
 ETCSL/_bulk/*
@@ -55,3 +62,26 @@ ETCSL/_bulk/*
 ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.json
 ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/*.html
 ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/*.html
+ORACC/epsd2-literary--Q000334--Enki-and-the-World-Order/*.json
+ORACC/epsd2-literary--Q000369--Enmerkar-and-the-Lord-of-Aratta/*.json
+# AkkLove (round 2, run 7; the folder has its own .gitignore too): the raw zip and HTML views
+ORACC/akklove--Akkadian-Love-Literature/*.html
+ORACC/akklove--Akkadian-Love-Literature/*.json
+# the form index built by tools/sumerian_workbench.py (12 MB, regenerated on demand)
+ORACC/_bulk/*.json
+
+# 5. Wisdom corpus sources (2026-10-19): open access without a stated licence, or copyrighted pages – README only
+Lenzi-2023--Suffering-in-Babylon--OBO-300/*
+!Lenzi-2023--Suffering-in-Babylon--OBO-300/README.md
+CCP/*/
+
+# 6. City-lament corpus sources (2026-10-19): raw ORACC JSON (> 1 MB); Kramer 1940 (free from ISAC, licence not stated) – README only
+ORACC/epsd2-literary--Q000379--Lament-for-Ur/*.json
+ORACC/epsd2-literary--Q000375--Curse-of-Agade/*.json
+Kramer-1940--AS-12--Lamentation-over-Ur/*
+!Kramer-1940--AS-12--Lamentation-over-Ur/README.md
+
+# 7. Temple-building corpus sources (2026-10-20): raw ORACC JSON and HTML (> 1 MB) – re-obtainable (see the READMEs)
+ORACC/epsd2-royal--Q000377--Gudea-Cylinders/*.json
+ORACC/epsd2-royal--Q000377--Gudea-Cylinders/*.html
+ORACC/etcsri--Q000377--Gudea-Cylinders/*.html

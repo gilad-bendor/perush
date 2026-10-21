@@ -7,6 +7,7 @@ reference, and rewrites everything after the line "## The table" in ../parallels
 kept). Atra-ḫasīs I rows citing Gen 1–5 (flood corpus) are appended as a cross-reference.
 Since 2026-10-17 it also reads project 2 (../2-טקסטי-בריאה-ועדן/project.md, "### Parallels index (<Text>)" tables,
 same columns) and labels every row with a short text siglum (EE = Enūma eliš; see SIGLA).
+Since 2026-10-19 it also reads projects 3 (B&F = Bird and Fish) and 4 (EWO = Enki and the World Order), same format.
 """
 import os,re,sys
 A=os.path.dirname(os.path.abspath(__file__))
@@ -46,6 +47,11 @@ def sig(name):
     return name
 if os.path.exists(P2):
     rows+=[(sig(t),c) for t,c in tables(P2, r'^### Parallels index \((.+)\)\s*$')]
+# projects 3-4 (2026-10-19): Bird and Fish (B&F), Enki and the World Order (EWO); same table format
+for sub,sg in (("3-הציפור-והדג","B&F"),("4-אנקי-וסדר-העולם","EWO")):
+    p3=os.path.join(A,"..",sub,"project.md")
+    if os.path.exists(p3):
+        rows+=[(sg,c) for t,c in tables(p3, r'^### Parallels index \((.+)\)\s*$')]
 def strip_quotes(c):  # refs only outside backticks
     return re.sub(r'`[^`]*`','',c)
 groups={}
@@ -65,7 +71,7 @@ def sect(k):
     return 'The rest of the Bible',3
 out=[]
 cur=None
-ORD=['EE I','EE II','EE III','EE IV','EE V','EE VI','EE VII','Adapa','E&Nḫ','E&Nm','Hoe','G&S','Eridu','KAR 4']
+ORD=['EE I','EE II','EE III','EE IV','EE V','EE VI','EE VII','Adapa','E&Nḫ','E&Nm','Hoe','G&S','Eridu','KAR 4','B&F','EWO']
 order={k:i for i,k in enumerate(ORD)}
 n=0
 for k in sorted(groups):

@@ -218,7 +218,82 @@ Merged by the corpus coordinator from the seven texts' proposals (`2-טקסטי-
 - *ṭeḫû*: Enūma eliš `קָרַב`; project 2 `נִגַּשׁ` (Adapa has both *qerēbu* and *ṭeḫû*). Proposal: `נִגַּשׁ` corpus-wide, Enūma eliš's *âru* then needs another verb. Left for the user.
 - *šipru*: still `פֹּעַל` (project 1 open decision 4); project 2 has no occurrence.
 
+## 6. Fixed before projects 3–4 (Bird and Fish; Enki and the World Order), 2026-10-19
+Set by the corpus coordinator before drafting. Binding for both projects; the translators add rows to their project's `renderings.md` and propose changes in `project.md`. Everything in §0–§5 (and project 2's `renderings.md` §1–§2 and its Text 2–5 rows for Sumerian) applies; this section adds and narrows. Checked by `sumerian_tools.py verify` (reserved strings and name traps).
+
+### 6.1 The creatures of the fifth day (↔ בראשית א:כ–כג)
+| Sumerian | Hebrew | Tag | Notes |
+|---|---|---|---|
+| *mušen* (bird; also the determinative of flying creatures) | צִפּוֹר, pl. צִפֳּרִים; personified Bird: צִפּוֹר (no article, feminine) | [equivalent] ↔ `וְעוֹף יְעוֹפֵף` (א:כ); `כֹּל צִפּוֹר כָּל כָּנָף` (ז:יד) | **Not `עוֹף`.** In the commentary's dictionary `עוֹף` names a creature by its *motion* ("what flies"), and `צִפּוֹר` is the kind (בראשית ז:יד). Sumerian *mušen* is the kind-word; it is the verb *dal* "to fly" that names the motion. Keeping them apart lets the reader see which the Sumerian uses where. (Project 2 had `עוֹף` for *mušen* in E&Nḫ 18 and Hoe 83; **settled 2026-10-21** (cross-corpus harmonization): `צִפּוֹר` in all corpora, and those two lines and KAR 4 rev. 13 (MUŠEN = *iṣṣūru*, [cognate]) now have `צִפּוֹר`; G&S 173 has `צִפּוֹר` for *buru₅*.) |
+| *dal* "to fly" (Akk. *naprušu*) | עָף; iterative/reduplicated: עוֹפֵף | [equivalent] ↔ `יְעוֹפֵף` (א:כ) | The only licensed `עוף` string (checked by script). |
+| *pa* / *pa-pa* "wing(s)"; *a₂* (of a bird) "wing, arm" | כָּנָף; *a₂*: כָּנָף with a note "lit. arm" | [equivalent] ↔ `כָּל עוֹף כָּנָף` (א:כא) | |
+| *ku₆* (fish) | דָּג, pl. דָּגִים; personified Fish: דָּג (no article, masculine) | [equivalent] ↔ `שֶׁרֶץ נֶפֶשׁ חַיָּה` (א:כ); `בִדְגַת הַיָּם` (א:כו) | Fish species (*suḫur*, *eštub*, *suḫurmaš* …) are transliterated with a note (`דַּג־הַסּוּחוּר`). |
+| *nunuz* "egg; offspring"; *gud₃* "nest"; *amar* (young) | בֵּיצָה (pl. בֵּיצִים); קֵן; גּוֹזָל (of a bird) / עֵגֶל (of a cow) by context | [equivalent] ↔ `כְּנֶשֶׁר יָעִיר קִנּוֹ` (דברים לב:יא); `קַן צִפּוֹר … אֶפְרֹחִים אוֹ בֵיצִים` (דברים כב:ו) | |
+| *lu* "to be numerous; to make numerous" (Akk. *duššû*); *šar₂*; *diri(g)* "exceed, surpass" | רָבָה / הִרְבָּה; רַב; עָלָה עַל, יָתַר | [equivalent] ↔ `פְּרוּ וּרְבוּ` (א:כב), `וְהָעוֹף יִרֶב` | Tag every `רבה`. `פְּרוּ וּרְבוּ` as a pair never (reserved). *diri(g)* of the verdict (5.3.5, 189) = `עָלָה עַל`. |
+| *si* "to fill" | מִלֵּא | [equivalent] ↔ `וּמִלְאוּ אֶת הַמַּיִם בַּיַּמִּים` (א:כב) | Tag every occurrence. |
+| *til₃* (sg.) / *sig₁₀*, *lu-ug* (pl. "live, dwell") | חַי / שָׁכַן by context (Š-like "make live, settle": הוֹשִׁיב / הִשְׁכִּין) | [equivalent] ↔ `נֶפֶשׁ חַיָּה` | Never `נֶפֶשׁ חַיָּה` (reserved); *niĝ₂-zi-ĝal₂* "living creatures" = `בַּעֲלֵי נֶפֶשׁ` (§5.2). |
+| *ambar* "marsh"; *ĝiš-gi* "reedbed, canebrake"; *gi* "reed"; *gi sumun*, *gi ḫenbur₂* | בִּצָּה (pl. בִּצּוֹת); סְבַךְ קָנִים; קָנֶה; קָנֶה יָשָׁן, נֵצֶר קָנֶה | | `בִּצָּה` with `גֹּמֶא` (איוב ח:יא). *a-ĝi₆* "flood-wave", *a-ab-ba* = `יָם` (§0), *engur* = `הָאֶנְגּוּר`, *abzu* = `הָאַפְּסוּ`. |
+| *id₂*; *pa₅*; *e* (dyke); *pu₂* "pool, water-hole" | נָהָר; תְּעָלָה; סוֹלְלָה; בְּרֵכָה | | |
+| *sa* "net"; *sa-par₄* "throw-net"; *ĝiš-bur₂* "trap"; *mušen-du₃* "fowler"; *šu-ku₆* "fisherman" | רֶשֶׁת; מִכְמֹרֶת; פַּח; צַיַּד־צִפֳּרִים; דַּיָּג | [equivalent] ↔ `אֶפְרוֹשׂ עֲלֵיהֶם רִשְׁתִּי כְּעוֹף הַשָּׁמַיִם` (הושע ז:יב) | |
+| *gu₃* "voice, cry"; *za-pa-aĝ₂* "noise, din"; *gu₃ dug₃* | קוֹל; שָׁאוֹן; קוֹל טוֹב (*dug₃* = `טוֹב` only) | | |
+
+### 6.2 Order, allotment and the *me*
+| Sumerian | Hebrew | Tag | Notes |
+|---|---|---|---|
+| *me* | הַ־מֶה (always vocalized: unvocalized `המה` = "they", `מה` = "what"); plural agreement: `הַ־מֶה הַגְּדוֹלִים`, `הַ־מֶה הַטְּהוֹרִים` | | As project 2 (G&S 56). The note explains the *me* (the god-given powers, offices and arts that make a civilization run) at the first occurrence of each text; the reader's introduction explains it too. The flood corpus rendered *me maḫ* `הַכֹּחוֹת הַנִּשְׂגָּבִים` (project 3 there): a cross-corpus split, **settled 2026-10-21** for `הַ־מֶה` in all corpora (*me maḫ* = `הַ־מֶה הַנִּשְׂגָּבִים`; project 4 open decision 1). |
+| *ĝiš-ḫur* "design, plan, drawing" (Akk. *uṣurtu*) | צוּרָה, pl. צוּרוֹת | [equivalent] (Akk. *uṣurtu* is the cognate of `יצר`) | The Sumerian takes the Hebrew of its Akkadian equivalent (§0, *eṣēru*, *uṣurtu*). |
+| *nam tar* / *nam … tar*; *nam dug₃* | גָּזַר גּוֹרָל; גּוֹרָל טוֹב | [divergence] ↔ `וַיְבָרֶךְ אֹתָם אֱלֹהִים` (א:כב) | Enki "decrees the fate" of a land or a creature where Genesis "blesses": never `בֵּרַךְ` for *nam tar*. `בֵּרַךְ` only for a verb "to bless/pray" (*šud₃*; the noun *šudu₃* = `בְּרָכָה`, 2026-10-21; *ka-aš bar* is a decision: `הִכְרִיעַ`). |
+| *ugula* "overseer"; the EWO appointment formula is in fact ***{d}en-ki-ke₄ zag-ba nam-mi-in-gub*** "Enki set (him) standing at its side" = `אֶנְקִי לְצִדּוֹ הֶעֱמִיד` (corrected after the first EWO run: there is no *ugula … ĝar*); *gu₂-gal* "canal inspector"; *šu … si* / *šu-ni-še₃ ĝar* "entrust" | פָּקִיד; מְפַקֵּחַ (with the object: מְפַקֵּחַ הַתְּעָלוֹת); שָׂם בְּיָדוֹ | [equivalent] ↔ `וְיַפְקֵד פְּקִדִים עַל הָאָרֶץ` (מא:לד); `בְּהַנְחֵל עֶלְיוֹן גּוֹיִם` (דברים לב:ח) | *ĝar* = `שָׂם` (§5.2, reserved). |
+| *ki-sur-ra* "border"; *ki-sur-ra ĝar*; *ki-tuš* "dwelling"; *ki-gub* "standing place" | גְּבוּל; שָׂם גְּבוּלוֹת (*gub* "set up" = `הֶעֱמִיד`); מוֹשָׁב; מְקוֹם עֲמִידָה | [equivalent] ↔ `יַצֵּב גְּבֻלֹת עַמִּים` (דברים לב:ח) | *ki-gub* = *manzāzu* (§3). |
+| *ud*; *iti*; *mu* (year); *šid* "count"; *iti … e₂-ba ku₄* "make the months enter their houses" | יוֹם; יֶרַח; שָׁנָה; מָנָה; `הַיְּרָחִים אֶל בָּתֵּיהֶם הֵבִיא` (literal) | [equivalent] ↔ `וְהָיוּ לְאֹתֹת וּלְמוֹעֲדִים וּלְיָמִים וְשָׁנִים` (א:יד) | *iti* = Akk. *warḫu* = `יֶרַח` (§0). *mu* "year" / *mu* "name": the apparatus says which. |
+| *šeĝ₃* (verb) / *im-šeĝ₃* (noun) | הִמְטִיר / מָטָר | [equivalent] ↔ `כִּי לֹא הִמְטִיר יְהוָה אֱלֹהִים עַל הָאָרֶץ` (ב:ה) | |
+| *numun* "seed"; *zid* "true, good, right" | זֶרַע; אֱמֶת (`זֶרַע אֱמֶת`, ירמיהו ב:כא; `טְלֵה אֱמֶת`) | [equivalent] | *zid* is never `טוֹב` (reserved for *dug₃*) and never `כֵּן` (reserved for *kânu*). |
+| *a₂ aĝ₂* "instruct, command"; *inim* "word"; *inim dug₄* | צִוָּה; דָּבָר; אָמַר דָּבָר | [equivalent] ↔ `וַיְצַו יְהוָה אֱלֹהִים` (ב:טז) | |
+| *ĝeštug₂ daĝal*; *en*; *nun*; *lugal*; *a-a* | רְחַב הַבִּינָה; אָדוֹן; נָסִיךְ; מֶלֶךְ; אָב | | §5 / project 2. |
+| *tud* "bear, beget"; *dim₂* "fashion"; *du₃* "build"; *mu₂* "grow" | יָלַד; עִצֵּב (plene `עיצב`); בָּנָה; צָמַח / הִצְמִיחַ | | §5 / project 2: never `בָּרָא`, `יָצַר`. |
+| *ḫe₂-ĝal₂*; *niĝ₂-zi-ĝal₂*; *saĝ gig₂* | שֶׁפַע; בַּעֲלֵי נֶפֶשׁ; שְׁחוֹרֵי הָרֹאשׁ | | §5. |
+
+### 6.3 The debate genre (both texts follow Grain and Sheep)
+| Sumerian | Hebrew | Notes |
+|---|---|---|
+| *X Y-ra gu₃ mu-na-de₂-e* | X אֶל Y פּוֹנֶה: | G&S. |
+| *(2-kam-ma-še₃) X Y-ra mu-na-ni-ib-gi₄-gi₄* | (שֵׁנִית –) X לְY מֵשִׁיב/מְשִׁיבָה: | G&S (gender by the speaker: Bird feminine, Fish masculine). |
+| *X Y-bi-da a-da-min₃ dug₄-ga* | וִיכּוּחַ שֶׁנֶּאֱמַר בֵּין X וּY: | G&S 192 = B&F 188. |
+| *a-a {d}en-ki za₃-mi₂* | הָאָב אֶנְקִי – תְּהִלָּה! | G&S 193 (`תהילה` plene). |
+| *in … dub₂* "to heap insults" (*in* "abuse") | חֵרֵף (noun `חֶרְפָּה`, pl. `חֲרָפוֹת`) | Fixed here for both debates: `גִּדֵּף` stays for Akk. *nazāru* (§6.7 of the guidelines). |
+| *di* "case"; *di kud* "decide a case"; *di-ku₅* "judge"; *ka-aš bar* "decide" | דִּין; דָּן דִּין; דַּיָּן; הִכְרִיעַ (noun `הַכְרָעָה`) | Law corpus (*dīnum*, *dayyānum*). |
+| *ud-bi-a*; *ud-ba*; *ud ul re-a* / *ud re-a* | בַּיּוֹם הַהוּא; בָּעֵת הַהִיא; בַּיָּמִים הָהֵם (with *ul*: הָרְחוֹקִים) | §5 / G&S. |
+
+### 6.4 Names (vocalized at the first occurrence of each text; **Utu, Uttu, Inana and Magan at every occurrence**, checked by script for the first three)
+Enki `אֶנְקִי`; Nudimmud `נוּדִימּוּד`; An `אַן`; Enlil `אֶנְלִיל`; the Anuna `הָאֲנוּנָּה`; Ninḫursaĝa `נִין־חֻרְסַגָּה`; Nintur `נִינְתּוּר`; Aruru `אֲרוּרוּ` (not `אָרוּר`); Inana `אִינַנָּה` (always vocalized: `איננה` = "is not"); Utu `אוּתוּ`; Uttu `אוּטּוּ`; Šakkan `שַׁכַּן`; Dumuzid `דּוּמוּזִי`; Ezina (Grain) `דָּגָן`; Nanše `נַנְשֶׁה`; Iškur `אִישְׁכּוּר`; Nisaba `נִיסַבָּה`; Šulgi `שׁוּלְגִּי`; Eridug `אֶרִידוּ`; Nibru `נִיפּוּר`; Ekur `אֵכּוּר`; Urim `אוּר` (the biblical form, note `אוּר כַּשְׂדִּים`, בראשית יא:כח); Sumer `שׁוּמֶר`; Dilmun `דִּלְמוּן`; Magan `מָגָן`; Meluḫḫa `מֶלוּחָה`; Elam `עֵילָם`; Marḫaši `מַרְחַשִׁי`; Martu `מַרְטוּ` (the Amorites; note `הָאֱמֹרִי`, בראשית י:טז, without assimilating); Tigris / Euphrates `חִדֶּקֶל` / `פְּרָת`. New EWO names (Enbilulu, Enkimdu, Kulla, Mušdama, Ninsikila, Ninisina, Ninmug, Sirsir, Niĝir-sig, Kulaba, E-engura …) are set by the first EWO translator.
+
+### 6.5 Reserved strings (never in a `>` line unless the Sumerian has the counterpart; checked by script)
+`שֶׁרֶץ`, `רֶמֶשׂ`, `תַּנִּין`, `נֶפֶשׁ חַיָּה`, `לְמִינֵהוּ`, `פְּרוּ וּרְבוּ`, `בָּרָא` (also inside `בראותו`, `בראשונה`), `יָצַר`, `עֵדֶן`, `רָקִיעַ`, `תְּהוֹם`, `הִבְדִּיל`, `טֶרֶם`, `עוֹלָם`, `אֲדָמָה`, `מְלָאכָה`, `צֶלֶם`, `דְּמוּת`; `עוף` only for *dal*; `כָּנָף` only for *pa* / *a₂*; `טוֹב` only for *dug₃*; `בֵּרַךְ` / `בְּרָכָה` only for *šud₃* / *šudu₃* (or `בֶּרֶךְ` "knee", *dub₃*); `עבד` only for *kiĝ₂*.
+
+## 7. Merged from project 3 (Bird and Fish), 2026-10-19
+From `3-הציפור-והדג/project.md` ("Proposals") and its `renderings.md` (full rows with lines). Binding for project 4 and later Sumerian texts of the corpus.
+- **Marsh and water:** *umaḫ* = `גֶּבֶא` (ישעיהו ל:יד); *sug* = `אֲגַם` (apart from *ambar* = `בִּצָּה`); *sur₃* = `חָרִיץ` (apart from *pa₅* = `תְּעָלָה`); *agargara* = `דְּגִיגִים`; *pu₂-kiri₆* = `פַּרְדֵּס`, *nu-kiri₆* = `גַּנָּן`.
+- **Herding:** *unud* = `בּוֹקֵר` (cf. `בוֹקֵר אָנֹכִי`, עמוס ז:יד); *tur₃* = `רֶפֶת`; *amaš* = `דִּיר` (§5.2).
+- **Sound:** *za-pa-aĝ₂* = `שָׁאוֹן`; *mu₇* = `הָמָה` / `הֶמְיָה`; *akkil* = `רִנָּה`; *mur ša₄* = `נָהַם`.
+- **Verbs:** *sig₁₀* = `שָׁת` (always vocalized; `עֵצָה שָׁת` for *sa₂ sig₁₀*); *gir₅* = `חָמַק`; *DU.DU* / *du-du* = `הִתְהַלֵּךְ`; *ad gi₄* = `נִמְלַךְ` (= Akk. *malāku*); *en₃ tar* = `דָּרַשׁ`; *kiĝ₂* (verb) = `בִּקֵּשׁ` (the noun stays `עֲבוֹדָה`); *gul* = `הָרַס`; *bal* = `הָפַךְ`; *la₂* = `מָתַח`, of the neck `הִטָּה`; *keše₂* = `קָשַׁר`; *us₂* = `דָּבַק`; *saĝ-e-eš rig₇* = `הֶעֱנִיק בְּמַתָּנָה`; *šu ĝar gi₄* = `הֵשִׁיב גְּמוּל`. (*sig₉* is `הֵטִיל` in Enki and Ninmaḫ, `דְּמָמָה` "quiet" in B&F 103, 105: different words.)
+- **Beings and things:** *gal₅-la₂* = `שֵׁד־גַּלָּה`; *piriĝ* = `לָבִיא` (*ur-maḫ* = `אַרְיֵה`); *ḫu-ri₂-in* = `נֶשֶׁר`; *za-gin₃* = `סַפִּיר`; *nidba* = `קָרְבָּן` (apart from *sa₂-dug₄* = `מִנְחָה קְבוּעָה`); *ĝišbun* = `מִשְׁתֶּה`; *banšur* = `שֻׁלְחָן`; *e₂-gal* = `הֵיכָל` [cognate: Sum. *e₂-gal* > Akk. *ekallu* > `הֵיכָל`].
+- **Qualities:** *me-te* = `עֲדִי`; *ḫe₂-du₇* = `תִּפְאֶרֶת`; *nam-maḫ* = `רוֹמְמוּת`, *maḫ* = `נִשְׂגָּב`; *gal-zu* = `בָּקִי`; *gur₄* = `עָבֶה` (pride); *sag₉* = `נָאֶה`, noun `נוֹי`; *ku₇* = `מָתוֹק`; *zil₂* = `נָעִים`; *gun₃* = `סַסְגּוֹנִי`; *galam* = `נוֹכֵל` (`עָרוּם` reserved for בראשית ג:א); *a₂-ur₂* "limbs" = `אֵבֶר`.
+- **Debate formulas** (§6.3 confirmed): *šag₄-še₃ nu-gid₂* = `אֶל לִבּוֹ לֹא מָשַׁךְ`; *gu₂ ki-še₃ la₂* = `הַטֵּה צַוָּארְךָ אַרְצָה`; *ni₂-zu ad li-bi₂-gi₄* = `עִם עַצְמְךָ לֹא נִמְלַכְתָּ`.
+
+## 8. Merged from project 4 (Enki and the World Order), 2026-10-19
+The full rows (with lines) are in `4-אנקי-וסדר-העולם/renderings.md` and its `project.md` ("Proposals"); the most reusable:
+- **The EWO formulas** (replace the *ugula* guess of §6.2): *{d}en-ki-ke₄ zag-ba nam-mi-in-gub* = `אֶנְקִי לְצִדּוֹ הֶעֱמִיד.` (13×); *e₂-kur-re e₂ {d}en-lil₂-la₂-ke₄ niĝ₂ ĝal₂-la nam-si* = `אֶת הָאֵכּוּר, בֵּית אֶנְלִיל, נְכָסִים מִלֵּא;`; *{d}en-ki-da {d}en-lil₂ mu-un-da-ḫul₂ nibru{ki} giri₁₇-zal-am₃* = `עִם אֶנְקִי שָׂמַח אֶנְלִיל, נִיפּוּר – שְׂמֵחָה הִיא.`; *X gu₃ ba-an-de₂* = `אֶל X פָּנָה` (never `קָרָא`); *a-na a-ra-an-la₂ a-na a-ra-ab-taḫ-e-de₃-en* = `מָה הִמְעַטְתִּי לָךְ? מָה אוֹסִיף לָךְ?`; *nam im-mi-ib-tar-re* = `אֶת גּוֹרָלָהּ גּוֹזֵר:`; *ud e₃ … ud šu₂* = `מִצֵּאת הַיּוֹם עַד בּוֹא הַיּוֹם` (G&S's formula with *ud* for *{d}utu*).
+- **Verbs:** *si … sa₂* = `יִשֵּׁר` (= Akk. *šūšuru*); *dub* "heap" = `עָרַם`; *du₇* = `הִשְׁלִים` / "gore" `נָגַח`; *ri* = `נָשָׂא` (`לָקַח` kept for *leqû*); *šu ti* = `קִבֵּל`; *taḫ* / *lal* = `הוֹסִיף` / `הִמְעִיט`; *ĝiš₃ dug₄* = `בָּעַל`; *a ri* = `הִזְרִיעַ`; *pad₃* by sense (`בָּחַר`, `מָצָא`, `נָקַב`); *tum₂* = `הוֹבִיל` (*de₆* = `הֵבִיא`); *dib* = `עָבַר`; *mar* = `הִנִּיחַ` (not *ĝar*).
+- **Nouns:** *ĝarza₂* / *mar-za* = `פֻּלְחָן` (= *parṣu*, §3); *in* "zone" = `תְּחוּם`; *bulug* = `יָתֵד`; *guru₇* = `כְּרִי` [cognate loan]; *šeg₁₂* = `לְבֵנָה` (= *libittu*); *ki-šar₂* = `תֵּבֵל` (never `עוֹלָם`); *ma₂-laḫ₅* = `מַלָּח` and *gu-za* = `כִּסֵּא` [cognate loans]; *ušumgal* = `דְּרָקוֹן־עֲנָק` (confirmed; tagged ↔ א:כא, never `תַּנִּין`); *la-ḫa-ma* = `הַלַּחַמָּה`; *buru₅* = `צִפּוֹר`; *ensi₂* = `מוֹשֵׁל`; *nu-banda₃* = `מְמֻנֶּה`; *tibira* = `צוֹרֵף`; *šag₄-zu* = `מְיַלֶּדֶת`; *dub-sar* = `סוֹפֵר`.
+- **Names:** Enbilulu, Enkimdu, Kulla, Mušdama, Ninsikila, Ninisina, Ninmug, Nisaba, Sirsir, Niĝir-sig: project 4 renderings (Nisaba must be harmonized with the Song of the Hoe: project 4 open decision 17). **Urim `אוּר` and Sumer `שׁוּמֶר` are always vocalized** (`אור` "light", `שומר` "guard").
+- **String traps (§5.3):** `דברך` (ברך), `בראש` (ברא), `סוחורמש` (רמש: write `סוּחוּר־מַשׁ`).
+- **2026-10-21 harmonization** (the lead's cross-corpus decisions on STATUS.md §6: one Hebrew per source word in all corpora). Applied here: *za-gin₃* / *uqnû* = `סַפִּיר` (already so; an [equivalent] note at the first occurrence of each text – Exod 24:10, Ezek 1:26, Job 28:6 – added to the Song of the Hoe 12 and EWO 246; first occurrence per file vocalized); *šembizid* = `פּוּךְ` (already so); *nam-šub* / *tu₆* = *šiptu* = `קֶסֶם`, Akk. *tû* = `לַחַשׁ` (EWO 106 `לחש` → `קסם`); *šudu₃* = `בְּרָכָה` (= Akk. *ikribu*), *sizkur₂* = `תְּפִלָּה`, *a-ra-zu* = `תַּחֲנוּן` (EWO 83, 293 `בתפילה` → `בברכה`); *mušen* = `צִפּוֹר`, never `עוֹף` (E&Nḫ 18 `עוף השמים` → `ציפור השמים`, Hoe 83 `עוף האל` → `ציפור האל`; KAR 4 rev. 13 MUŠEN = *iṣṣūru* `ועופות` → `וציפורים`, [cognate]); *me* = `הַ־מֶה` (already so; the flood corpus aligns to it); Inana = `אִינַנָּה`, always vocalized (the apparatus's `אינאנה` replaced; `sumerian_tools.py` rejects the alef spelling even when vocalized); *ur₄* "gather" = `אָסַף` (B&F 5 `קיבץ וקיבץ` → `אסף ואסף`; EWO 65 already `אסף ואסף`), *ur₄* of hair "pluck" = `קָטַף` (no such line here); *guru₇* = *karû* = `כְּרִי` (EE VII 78 *karê* `ערמות` → `כְּרִים`); *kabattu* = `כָּבֵד` and *sukkal(lu)* = `וְזִיר` (already so). Not in this corpus: *šu-ur₂-men* / *šurmēnu*, *ra-gaba*, *en₃-du*. Unchanged by decision: *šiptu* = `קֶסֶם`; *uĝ₃* by sense; *kur* by sense.
+
 ## Changelog
+- 2026-10-21: cross-corpus harmonization (end of §8); §6.1 *mušen*, §6.2 *me* and *nam tar* / *šudu₃*, §6.5 `ברך` rows updated.
+- 2026-10-19: §8 merged from project 4 (Enki and the World Order); §6.2's appointment row corrected.
+- 2026-10-19: §7 merged from project 3 (Bird and Fish).
+- 2026-10-19: §6 added before projects 3–4 (Bird and Fish; Enki and the World Order): the fifth-day creatures (*mušen* = `צִפּוֹר`, *dal* = `עָף`, *ku₆* = `דָּג`), *me* = `הַ־מֶה`, *ĝiš-ḫur* = `צוּרָה`, the allotment terms, the debate formulas, names, reserved strings.
 - 2026-10-16 (after Tablet I): *ṣalālu* narrowed to `יָשֵׁן`; *sakāpu* = `שָׁכַב`, *šasû* = `צָעַק` added.
 - 2026-10-16: written before drafting Enūma eliš, from the flood corpus's shared renderings plus the creation-specific names and terms.
 - 2026-10-17: §5 added, merged from project 2's seven texts (names, the food-of-life and eternity terms, *ĝar* = `שָׂם` reserved, the work nouns without עבד, herding and farming, naming, *ki* never `אֲדָמָה`, no `טֶרֶם` without a "not yet" construction, the cohortative `נַעֲשֶׂה`, the string traps).

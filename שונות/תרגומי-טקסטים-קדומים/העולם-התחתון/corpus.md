@@ -1,0 +1,42 @@
+# Corpus: the netherworld → Hebrew
+
+Read `../translation-guidelines.md` first, then this file, then the shared `renderings.md` (binding), then `translator-brief--netherworld.md`, then the project's `project.md`.
+
+## Goal (round 2, run 5 of `../curated-translation-candidates.md`, 2026-10-21)
+Translate, complete, the two versions of one story in two languages: the goddess of love and war goes down to the realm of her sister, the queen of the dead, is stripped at seven gates, dies (Sumerian) or is struck with sixty diseases (Akkadian), and is brought back by the god of wisdom through sexless creatures he makes for the purpose; the price of her return is a substitute, her young husband Dumuzi.
+
+| # | Project folder | Text | Base text | Lines |
+|---|---|---|---|---|
+| 1 | `1-ירידת-אישתר/` | **The Descent of Ištar** (Akkadian; eBL `L/1/8`) | eBL, Standard Babylonian chapter (ed. A. Setälä, rev. Földi, Hätinen, Jiménez, Rozzi; Foster's translation): NA Nineveh NinNA1 (K 162), NinNA2 (K 7600), Aššur AššNA1a (VAT 9729, KAR 1), AššNA1b (VAT 11269) – early NA or late MA (Frahm 2003); plus eBL's Neo-Assyrian chapter (AššNA1 = VAT 13833, the *nargallu*'s tablet from Assur, a hymnic variant of the opening) | 148 (SB 1–138 with 11a, 12a, 18a, 23a, 97a, 103a, 118a–c, 137a) + 11 (NA) = **159** |
+| 2 | `2-ירידת-אינאנה/` | **Inana's Descent to the Netherworld** (Sumerian; ETCSL 1.4.1) | ETCSL composite (`../sources/ETCSL/1.4.1--Inanas-Descent/`), with ORACC epsd2/literary Q000343 lemma + morph (`../sources/ORACC/epsd2-literary--Q000343--Inanas-Descent/`) | 412 + 28 single-manuscript pluses = **440** |
+
+Rank 3: Foster in eBL (Akkadian); ETCSL's English (Sumerian). Not available here: Lapinkivi 2010 (SAACT 6, the Akkadian edition eBL builds on), Sladek 1974, Katz 2003, Jacobsen 1987, Bottéro–Kramer 1989, Dalley 1989, Foster's *Before the Muses*.
+
+### Two purposes (guidelines §1)
+- **Bible comparison.** The land of no return and its descriptions (Job 7:9–10, 10:21–22, 16:22; 2 Sam 12:23; Ps 88; Isa 14:9–11; Ezek 31–32; Jonah 2:7); dust as food and clay as bread (Gen 3:14, 3:19); the dead who rise (1 Sam 28:13; Isa 26:19) and the dead who outnumber the living; Dumuzi / Tammuz and the women weeping for him (Ezek 8:14); "love as strong as death" (Song 8:6); the ransom from death (Ps 49:8–9; Hos 13:14) and the substitute (Isa 43:3–4); the mourning rites, the laceration and the dust (Lev 19:28; Deut 14:1; Jer 16:6; Lam 2:10); the offerings to the dead and the necromancy (Deut 18:11, 26:14); the corpse hung up (Deut 21:22–23; 1 Sam 31:10); the stripping (Gen 37:23; Exod 33:5; Hos 2:5) – the original describes it, the biblical `עֵירֹם` stays in the apparatus; the cessation of love and fertility (Jer 7:34); the striking of the thigh (Jer 31:18; Ezek 21:17); the birth-pangs (Jer 4:19); "a hard thing to ask" (2 Kgs 2:10); the water and the plant of life (Gen 2:9; Ezek 47); the cult of Cuthah (2 Kgs 17:30).
+- **The soul of the ancients**, equal in standing. The notes explain the text on its own terms: the geography of the Mesopotamian netherworld (the *kur*, the "mountain-land", Kurnugi, the seven gates and the palace Ganzer); the two sisters of heaven and earth, and the rules (*me*, *ĝarza*, *parṣū*) that bind even a goddess; the jewellery and garments as the goddess's powers; the gatekeeper, the vizier and the messenger as figures of a royal court; death as a judgment and a "look"; mourning practices and the drum; the gods' family politics (Enlil, Nanna, Enki); Enki's cunning and the sexless cult performers (*kurĝara*, *galatur*, *assinnu*) who live between the sexes; Ereškigal's grief and birth-pangs, and empathy as the key that opens death; the *galla* demons "who know no food, no drink, no wife, no child"; Inana's servants who mourned her and her husband who did not; Dumuzi's flight and the half-year decree; the Assyrian cult of Tammuz at the end of the Akkadian text (the washing, the red garment, the flute, the wailers, the dead who come up to smell the incense).
+
+**Reading order for the commentary:** Ištar 1–11 (the land of no return ↔ Job 10, Gen 3) → Ištar 12–41 (the threat to raise the dead; Ereškigal's lament) → Ištar 42–62 with Inana 128–164 (the seven gates) → Inana 1–67 (the departure, the instructions to Ninšubur) → Inana 165–172 (judgment and death) → Ištar 76–90 (the cessation of sex) → Inana 173–281 and Ištar 91–118 (the rescue) → Inana 282–410 and Ištar 118a–138 (the substitute, Dumuzi, the rites).
+
+## Shared conventions
+- **`renderings.md` binds both projects**: it fixes ONE Hebrew for the shared episodes, formulas and names (guidelines §5.2 "A formula takes the same Hebrew across languages"), inherits the Gilgameš corpus for the Akkadian netherworld vocabulary (`../אפוס-גילגמש/renderings.md`; Gilg. VII 184–192 = Ištar 4–11 and VI 97–100 ≈ Ištar 17–20 are copied from there) and the lament, temple and creation corpora for the Sumerian.
+- **Repeated lines get identical Hebrew**; `netherworld_tools.py verify` lists identical sources with different Hebrew (inside each text) and checks the fixed formulas, also across the two texts.
+- **The annotated files are the only source of the Hebrew**: `netherworld_tools.py build IS|IN` generates `translation.rtl.md` from `translation--intro.rtl.md` + the annotated `## ` headings, `>` lines and `הערת שוליים` bullets.
+- **Parallels index:** generated, not hand-written: `build_parallels_index.py` reads the annotated files' **הקבלה** bullets (one row per tag) and writes the table of each `project.md` (`### Parallels index (<KEY>)`, KEY = IS, IN; columns exactly `| Line | Source | Hebrew rendering | Bible | Tag | Comment |`) and the merged `parallels-index.md` (by Bible verse; the key findings above `## The table` are kept). Rerun it after any change to a **הקבלה** bullet.
+
+## Tools (in this folder)
+| Script | What |
+|---|---|
+| `netherworld_tools.py verify IS\|IN [--strict]` | Entries against the base text's line list (eBL labels, `NA1`… for the NA chapter; ETCSL labels), the backticked source line = the base text (eBL normalization; ETCSL transliteration), one `>` per entry, reserved and gated strings (renderings §6) licensed by the eBL lemma / normalization or the Sumerian word, name traps, fixed formulas (§4), translation = `>` lines, identical sources with different Hebrew. |
+| `netherworld_tools.py build IS\|IN` | The clean translation, verified. |
+| `netherworld_tools.py lines IS\|IN FROM TO` | The base text's lines with eBL lemmas / ORACC lemma + morph (translator data). |
+| `netherworld_tools.py grep all '<regex>'` | The `>` lines of every corpus in the folder (niqqud stripped) matching a regex – grep before fixing a Hebrew word. |
+| `build_parallels_index.py` | The projects' parallels tables (from the annotated **הקבלה** bullets) and `parallels-index.md` (by biblical book order, with the key findings at the top). |
+
+## Status
+| # | Project | Status |
+|---|---|---|
+| 1 | The Descent of Ištar | **Done (first draft), 2026-10-21**: all 159 entries (SB 1–138 with the pluses, NA1–NA11); three review passes; `verify IS --strict` OK; translation (19 footnotes); print stub. |
+| 2 | Inana's Descent | **Done (first draft), 2026-10-21**: all 440 entries (1–412 with the pluses) in two files; three review passes; `verify IN --strict` OK; translation (24 footnotes); print stub. |
+
+The parallels index (`parallels-index.md`, 175 rows since the 2026-10-21 harmonization, key findings at the top) covers both. Translated by the corpus coordinator (no sub-agent tool in this cloud session), the Akkadian first, then the Sumerian.

@@ -232,3 +232,5 @@ Each Sumerian legal formula takes the Hebrew of its standard Akkadian equivalent
 | *a-ša₃*; *ĝeškiri₆*; *e₂* | `שדה`; `גן`; `בית` | | LH. |
 
 **Merged from MAL T2 (2026-10-18):** *niāku* = `בא על` (`הבא עליה`, `לביאה`); *emittu* = `הטלה`; *ṣāltu* = `מָדוֹן` (kept apart from LE's `קטטה` for *risbatum*); *puzru* = `בסתר`; *tappû* = `עמית` (open: `שותף`); *annaku* = `בדיל` (open: `עופרת`); *biltu* = `כיכר`; *aštammu* = `פונדק`; *mummirtu* = `סרסורית`; *zakû* = `זכאי`; *mā* (quotation particle) = quotation marks only; the slander formula `"על אשתך באים"` (iterative; there is no *kalūmā*). `laws_verify.py`: `בי?רר`, `כונ[ןנ]`.
+
+2026-10-21 harmonization (cross-corpus decisions, applied in this corpus): Inana = `אִינַנָּה`, always vocalized (LI 51; was `אִינַאנָּה`; `laws_verify.py` checks it for LI / UN); *sukkallu* = `וזיר` (MAL B o iii 30 `מן הוזירים`; was `שר`); *ṣabātu* stays `תָּפַס` in this corpus. No lapis (*uqnû*, *za-gin₃*) or other listed source word occurs here.

@@ -302,7 +302,7 @@ Rows added by the tablet translators (lemma | Hebrew | first line | note).
 | *gugallu*; *miṭirtu*; *palgu*; *īku*; *absinnu*; *apkīsu*; *šerʾu* | מְמֻנֶּה (על המים/התעלות); תְּעָלָה; פֶּלֶג [cognate]; סוֹלְלָה; תֶּלֶם; *חָרִיץ*; מַעֲנָה | VII 62a, 64; 63; 62a; 63; 73 | `פָּקַד` stays for *paqādu*. |
 | *rîtu*; *nawû*; *edû*; *qerbetu*; *berātu*; *ṣēru* (steppe) | מַרְעִית; נָאוֹת [cognate]; אֵד [cognate]; כַּר; *אֲגַמִּים*; עֲרָבָה | VII 59; 61; 61; 84; 60; 62b | *merītu* stays `מִרְעֶה` (VI 124); `נָוֶה` = *simakku*; *edû* ↔ `וְאֵד יַעֲלֶה` (בראשית ב:ו); not `מִקְוֶה`; *ṣēru* = Sum. *edin*, never `עֵדֶן`. |
 | *rukūbu*; *malāḫu*; *titurru* | רְכוּב [cognate]; מַלָּח [cognate]; גֶּשֶׁר | VII 77; 77; 75 | ↔ `הַשָּׂם-עָבִים רְכוּבוֹ` (תהלים קד:ג). |
-| *tīlu*; *karû*; *bitrû*; *šalgu* | תֵּל [cognate]; עֲרֵמָה; נִשְׂגָּב; שֶׁלֶג [cognate] | VII 78; 78; 78; 82 | |
+| *tīlu*; *karû*; *bitrû*; *šalgu* | תֵּל [cognate]; כְּרִי (pl. כְּרִים) [cognate]; נִשְׂגָּב; שֶׁלֶג [cognate] | VII 78; 78; 78; 82 | *karû* was `עֲרֵמָה`; `כְּרִי` since the 2026-10-21 harmonization (*guru₇* = *karû* = `כְּרִי` in all corpora; KAR 4 rev. 2). |
 | *etēqu* (pass by); *ebēru* Gtn; *nēbertu* | חָלַף; עָבַר (שוב ושוב); מַעֲבָר [cognate] | VII 75; 74, 128; 124 | `הִסִּיג` stays for *etēqu* of a boundary (IV 10). |
 | *dalālu*; *šarāḫu* D; *šamāru* Gt; *zamāru* | פֵּאֵר (*dalīlu* תִּפְאֶרֶת); הִדֵּר; סִלְסֵל; זִמְרָה [cognate] | VII 24; 25, 139; 55; 161 | Praise family with *nâdu* `שִׁבַּח`, *alālu* `הִלֵּל`, *nagû* `רִנֵּן`. |
 | *zāwiānu*; *raggu*; *munnabtu* | מְשַׂנֵּא; רָשָׁע; נִמְלָט | VII 52; 45; 53 | Enemy word 8 (*zayyāru*/*zāʾeru* stay `שׂוֹנֵא`). |
@@ -335,4 +335,5 @@ Rows added by the tablet translators (lemma | Hebrew | first line | note).
 | The names 10–50 of Tablet VII (Asarre … Nēberu) | see the table in project.md, Tablet VII | VII 1–124 | Hyphenation policy: project.md, Tablet VII, decision 1. *Tutu* = `טוּטוּ`; *Addu* = `אַדּוּ`; "Lord of the Lands" and "Ea" translated. |
 
 ## Changelog
+- 2026-10-21 harmonization (cross-corpus decisions): *karû* = `כְּרִי` (VII 78 `שופך ערמות` → `שופך כְּרִים`); *šiptu* = `קֶסֶם` / *tû* = `לַחַשׁ` confirmed (II open decision 6 settled); *sukkallu* = `וְזִיר`, *kabattu* = `כָּבֵד` unchanged.
 - 2026-10-16 (after Tablet I): I 156 = II 42 = III 46 = III 104 changed from `…על כולם, האנונכי!` to `…על כולם, על האנונכי!` (the Akkadian is an apposition, not a vocative; the Tablet I translator's proposal). Bible quotations in §1–§2 corrected to the repo's text.

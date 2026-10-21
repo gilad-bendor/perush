@@ -145,7 +145,7 @@ Because Atra-ḫasīs III and the other Akkadian versions will copy this Hebrew 
 | *kânu* D | כּוֹנֵן | | [cognate] כון. | 159 |
 | *qanû / erēnu / asu* | קָנֶה / אֶרֶז / הֲדַס | | [cognate] all three. | 160 |
 | *ṣiāḫu* (*kī ṣūḫīšu*) | בְּצַחֲקוֹ | "כשחיזר" | [cognate] צחק, with its erotic sense (Gen 26:8). | 165 |
-| *uqnû* | לָזוּרִית | `סַפִּיר` | | 166 |
+| *uqnû* | סַפִּיר | `לָזוּרִית` (until 2026-10-21) | [equivalent]: biblical `סַפִּיר` is lapis lazuli, not the modern sapphire (Exod 24:10; Ezek 1:26; Job 28:6). The cross-corpus decision of 2026-10-21 (*za-gin₃* = *uqnû* = `סַפִּיר`). | 166 |
 | *ḫasāsu* | הִקְשִׁיב (22); זָכַר (167) | | By context. | 22, 167 |
 | *mašû* | שָׁכַח | | Cognate נשה is too rare. | 167 |
 | *malāku* Gt | נִמְלַךְ | | [cognate]: Hebrew `נִמְלַךְ` = "took counsel" (Neh 5:7). | 170, 184 |
@@ -161,3 +161,5 @@ Because Atra-ḫasīs III and the other Akkadian versions will copy this Hebrew 
 | *karābu* | בֵּרֵךְ | | [equivalent] ↔ `וַיְבָרֶךְ` (ט:א). | 202 |
 | *leqû* | לָקַח | | [cognate] ↔ `כִּי לָקַח אֹתוֹ אֱלֹהִים` (ה:כד). | 206 |
 | *paḫāru* G / D | הִתְקַבֵּץ / קִבֵּץ | | One root throughout. | 49, 163, 207 |
+
+2026-10-21 harmonization (the lead's cross-corpus decisions): *uqnû* = `סַפִּיר` [equivalent], replacing `לָזוּרִית` (166 and the heading of 157–171; the parallel Atr. III vi 3 likewise).

@@ -1,0 +1,26 @@
+# The web hosts that ancient-translation sessions need - one per line (lines starting with "#" are comments).
+# Read by the session operator ("claude/operator/operator.sh"), through the NEEDED_DOMAINS_FILE line in
+# "scripts/claude-into-rtl-file--ancient-translations.sh": when this option is loaded in a cloud session,
+# the operator probes each host, and tells the user which ones to add to the cloud environment's network
+# allowlist (which is set only in the claude.ai UI). Local sessions are not limited by it.
+# When a session starts to use a new host (a new source, API or repository) - add it here.
+oracc.museum.upenn.edu
+www.ebl.lmu.de
+cdli.earth
+ccp.yale.edu
+seal.huji.ac.il
+www.sefaria.org
+www.zora.uzh.ch
+llds.ling-phil.ox.ac.uk
+www.dfhg-project.org
+archive.org
+web.archive.org
+isac-assets.s3.amazonaws.com
+library.oapen.org
+www.fadedpage.com
+# The archive tier of tools/sources_sync.py (old page scans, photos, articles: "fetch --all") also needs the hosts in
+# sources/fetch-recipes.tsv - and archive.org redirects downloads to changing hosts (dn….archive.org), so it works
+# only with "Full" network access. The translation work does not need it.
+el.wikisource.org
+# Added 2026-10-21 (run 6): a mirror of public-domain Assyriological books (King 1907), when archive.org is blocked.
+uodiyala.edu.iq

@@ -13,6 +13,8 @@
 | `epsd2-literary--Q000357--Flood-Story/` | Flood Story composite (Q000357) and the Ur manuscript (P346146): raw CDL JSON, ORACC HTML view, Markdown conversions. |
 | `epsd2-royal--Q000947--Laws-of-Ur-Namma/`, `epsd2-royal--Q000613--Laws-of-Lipit-Ishtar/` | ePSD2 royal (CC0): lemmatised Ur-Namma (prologue, §1–§11 with § labels) and Lipit-Ištar prologue fragments, with morph; lexical help for projects 5–6 (added 2026-10-18; `_bulk/epsd2-royal.zip`). |
 | `tcma-laws--P281779--Middle-Assyrian-Laws-A/` | MAL A (TCMA, de Ridder 2021; CC BY-SA 3.0 / CC0 data): lemmatised + normalized text and the English; base text of `חוקים-ובריתות/4-החוקים-האשוריים-התיכונים-A/` (added 2026-10-18; own README). |
+| `epsd2-literary--Q000379--Lament-for-Ur/`, `epsd2-literary--Q000375--Curse-of-Agade/` | ePSD2 lemma + morph of the Lament for Urim and the Cursing of Agade (CC0; added 2026-10-19 for `קינות-על-ערים/`; own READMEs). epsd2-literary also has the other city laments: Q000380 (Sumer and Urim), Q000381 (Nibru), Q000382 (Unug), Q000383 (Eridug). |
+| `epsd2-literary--Q000343--Inanas-Descent/` | ePSD2 lemma + morph for every line of Inana's Descent (`cdl2md.py --morph`; added 2026-10-21); 13Š = ETCSL 13C, 305Š = 305C, 248/277/278 unlabelled. Committed (CC0). |
 
 ## Bulk/API mechanism (for future Sumerian work)
 - **Project zips:** `https://oracc.museum.upenn.edu/json/<project>.zip` with `/` → `-` (e.g. `epsd2-literary.zip`, `epsd2-royal.zip`, `etcsri.zip`, `dcclt.zip`, `obmc.zip`, `epsd2-earlylit.zip`). Index page: https://oracc.museum.upenn.edu/json/ . The build server `https://build-oracc.museum.upenn.edu/json/<project>.zip` also works (slightly newer/larger build; its index page returned HTTP 500).

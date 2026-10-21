@@ -18,6 +18,8 @@
 | `1.8.1.3--Death-of-Bilgames/` | Death of Gilgameš: Gilgameš reached Ziusudra; Ziusudra alone survived the Flood (Me-Turan version, Segment F). |
 | `2.1.2--Rulers-of-Lagash/` | Opens "After the flood had swept over and brought about the destruction of the countries…". |
 | `5.2.5--Poem-of-Early-Rulers/` | "Where is … he who, like Ziusudra, sought life?" (l. 10). |
+| `2.2.2--Lament-for-Ur/`, `2.1.5--Curse-of-Agade/` | **The Lament for Urim and the Cursing of Agade** (added 2026-10-19): base texts of the city-lament corpus `קינות-על-ערים/` (own READMEs). Also from `_bulk/` without a README of this table: 1.1.1, 1.1.2, 1.1.3, 5.3.2, 5.3.5, 5.5.4 (creation corpus; own READMEs). |
+| `1.4.1--Inanas-Descent/` | **Inana's descent to the nether world** (c.1.4.1 + t.1.4.1, 440 entries; added 2026-10-21): base of `העולם-התחתון/2-ירידת-אינאנה/`. Committed (CC BY-NC-SA). |
 
 Each composition folder contains:
 - `c.N.xml`, `t.N.xml` – ETCSL TEI source (2006 revised edition; ASCII conventions c=š, j=ĝ, h=ḫ, entities for determinatives).

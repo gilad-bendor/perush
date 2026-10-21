@@ -864,7 +864,7 @@ For the corpus `renderings.md` (and for texts 4–7, which `renderings.md` §4 a
 4. **obv. 22 `בַּעֲלֵי נֶפֶשׁ`** (followed) or `יְצוּרֵי חַיִּים` / `חַיִּים` – the latter avoid the Gen 1:24/1:30 `נֶפֶשׁ` but lose the cognate.
 5. **obv. 11 `רַהַט`** (cognate, Gen 30:38; followed) or the neutral `צִנּוֹר`.
 6. **The `{שומרית: …}` segment tag** (Decision 1) – confirm, or prefer a footnote for partly Sumerian lines.
-7. **`קֶסֶם` for *en₂*/*šiptu*** follows project 1's open decision 4 (alternative `לַחַשׁ` for both, or `חֶבֶר`).
+7. **`קֶסֶם` for *en₂*/*šiptu*** follows project 1's open decision 4 (alternative `לַחַשׁ` for both, or `חֶבֶר`). **Settled 2026-10-21** (cross-corpus harmonization): *šiptu* = `קֶסֶם`, Akk. *tû* = `לַחַשׁ` (rev. 19′ keeps `בלחש`: its Akkadian is *tû*).
 8. Print stub and the combined `translation.rtl.md` are the coordinator's (not created here).
 
 ### Progress log
@@ -1016,7 +1016,7 @@ For the corpus `renderings.md` (and for texts 4–7, which `renderings.md` §4 a
 | obv. 17, 20 | *mīnâ i nibni* | מה נבנה? | `נַעֲשֶׂה אָדָם` (בראשית א:כו) | [equivalent] | The pair "make … build" (16–17) ↔ `נַעֲשֶׂה` (א:כו) … `וַיִּבְרָא` (א:כז). B's 20 *nibbi* "what shall we name?" joins creating and naming. Rests on SEAL and B against eBL's reading of A (open decision 1). |
 | obv. 23 | *kilallūšunu Ellil ippalū* | שניהם ענו לאנליל | `וַיֹּאמֶר אֱלֹהִים נַעֲשֶׂה אָדָם` (בראשית א:כו) | [divergence] | A dialogue in a council: Enlil asks, the two groups of gods answer; in Gen 1:26 one speaker, no answer. |
 | obv. 26 | *ina damēšunu i nibnâ amēlūta* | בדמם נבנה את האנושות | `נַעֲשֶׂה אָדָם` (בראשית א:כו) | [equivalent] / [divergence] | The plural resolution to build man – from the blood of slain gods. Same Hebrew as EE VI 33 (`בדמו בנה את האנושות`). |
-| rev. 13 | *alpī immerī būla nūnī u iṣṣūrī* | שור, צאן, חיה, דגים ועופות | `וְיִרְדּוּ בִדְגַת הַיָּם וּבְעוֹף הַשָּׁמַיִם וּבַבְּהֵמָה` (בראשית א:כו) | [divergence] | The same list (cattle, fish, birds) tied to man's creation – man breeds them for the gods; he does not rule them. |
+| rev. 13 | *alpī immerī būla nūnī u iṣṣūrī* | שור, צאן, חיה, דגים וציפורים | `וְיִרְדּוּ בִדְגַת הַיָּם וּבְעוֹף הַשָּׁמַיִם וּבַבְּהֵמָה` (בראשית א:כו) | [divergence] | The same list (cattle, fish, birds) tied to man's creation – man breeds them for the gods; he does not rule them. *iṣṣūru* (MUŠEN, Sum. *mušen*) = `צִפּוֹר` [cognate], where Genesis has `עוֹף` (harmonization 2026-10-21; was `ועופות`). |
 | rev. 11 | *Ullegarra Annegarra* | אולגרה ואנגרה | `זָכָר וּנְקֵבָה בָּרָא אֹתָם` (בראשית א:כז) | [divergence] | Two first humans with two names; whether a pair of male and female is not said. |
 | rev. 15 | *Enul Ninul* | אן־אול ונין־אול | `זָכָר וּנְקֵבָה בָּרָא אֹתָם` (בראשית א:כז) | [equivalent] | A lord/lady pair – of primeval gods, not of humans. Weak. |
 | rev. 7 | *ḫegalla ina māti ana r[ubb]î* | שפע בארץ [להרבות] | `פְּרוּ וּרְבוּ וּמִלְאוּ אֶת הָאָרֶץ` (בראשית א:כח) | [cognate] / [divergence] | *rabû* D ~ רבה (restored): man multiplies the land's abundance, not himself. |
@@ -1104,6 +1104,7 @@ All seven texts are drafted, each with three review passes by its translator, an
 - Checked across all seven texts: no `אדמה`, `טרם`, `עולם` or root עבד in any Hebrew line (the cross-text rules of `../renderings.md` §5).
 - Known small inconsistency left for the user: Sum. *numun₂* is `אַסְפֶּסֶת?` in text 3 (43) and `חַלְפָה` in text 4.
 - `tools/check_bible_quotes.py` fixed: the book key dropped the matres, so `יהושע` resolved as `הושע` (found by the text 6–7 translator).
+- **2026-10-21, cross-corpus harmonization** (the lead's decisions on STATUS.md §6; corpus `renderings.md` §8): *mušen* = `צִפּוֹר` – Enki and Ninḫursaĝa 18 `עוף השמים … אינו אוכל` → `ציפור השמים … אינה אוכלת` (note: Ps 8:9 `צִפּוֹר שָׁמַיִם`), the Song of the Hoe 83 `עוף האל הוא` → `ציפור האל היא`, KAR 4 rev. 13 `ועופות` → `וציפורים` (*iṣṣūru* = MUŠEN, [cognate]); the Hoe 12 got the first-occurrence [equivalent] note on `סַפִּיר` (Exod 24:10, Ezek 1:26, Job 28:6); Inana `אִינַנָּה` also in the apparatus and the Hoe heading 49–51 (was `אינאנה`); Eridu rev. 19′ note on *tu₆* / *tû*; Eridu open decision 7 settled. Already in line: `סַפִּיר`, `פּוּךְ` (E&Nḫ 230), `וְזִיר`, `הַ־מֶה`, `כְּרִי`.
 
 ### Open decisions for the user (the most important; details in each text's section)
 1. **Sources to buy or borrow:** Izre'el 2001 (Adapa), Attinger 1984 (Enki and Ninḫursaĝa), Ceccarelli 2016 / Klein 1997 (Enki and Ninmaḫ, incl. the bilingual), Farber 1997 (Hoe), Alster & Vanstiphout 1987 (Grain and Sheep), Lambert 2013 (Founding of Eridu and KAR 4; also Enūma eliš), Ambos 2004, Pettinato 1971. Lambert 2013 alone would cover texts 6–7 and check project 1.

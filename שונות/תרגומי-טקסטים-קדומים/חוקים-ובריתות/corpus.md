@@ -44,6 +44,7 @@ The user delegated the open decisions of projects 1–7 to the coordinator ("use
 - Hammurabi = `חַמּוּרַבִּי` (the form Hebrew readers know; `חַמּוּרָפִּי` is given in the introduction).
 - LH §66–§99 (the erased stele columns) are **deferred**: they need Roth 1997 or Driver & Miles, which are not in hand (`sources/_records-only--Hammurabi-gap-laws-and-Hebrew/`).
 - The smaller choices of each project (e.g. `עדות שקרים`, LH §21 `יתלוהו?`, `נִקֵּב`, `בא על`, `בדיל`, `רעולה`, `פילגש`, `חֵלֶף`, `תחום`, `בן חורין`, `ארד`) stand as drafted.
+- **2026-10-21 (cross-corpus harmonization, decided by the lead):** Inana = `אִינַנָּה`, always vocalized (LI 51; was `אִינַאנָּה`); *sukkallu* = `וזיר` (MAL B o iii 30; was `שר`); *ṣabātu* stays `תָּפַס` in this corpus (`renderings.md`, end of §6).
 
 ## Status
 

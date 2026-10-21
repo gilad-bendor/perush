@@ -1,0 +1,6 @@
+# Records only — Mittermayer 2019, the Sumerian debate poems
+
+- **Catherine Mittermayer, *"Was sprach der eine zum anderen?" Argumentationsformen in den sumerischen Rangstreitgesprächen*** (Untersuchungen zur Assyriologie und vorderasiatischen Archäologie 15), Berlin/Boston: De Gruyter 2019. DOI 10.1515/9783110634327.
+- **Open access**, CC BY-NC-ND 4.0: https://library.oapen.org/handle/20.500.12657/23524 (PDF bitstream `…/23524/1/1006622.pdf`); also DOAB and degruyterbrill.com.
+- **Checked 2026-10-19:** OAPEN answers scripted requests with an "Anubis" proof-of-work bot check (the site explicitly asks automated clients not to scrape), and degruyterbrill.com returned an empty body. **Not downloaded; download it in a browser.** If saved, keep the PDF here (gitignored as a binary; the licence allows non-commercial sharing without changes).
+- **Why it matters:** the standard modern study of the debate genre (structure, the opening formulas, the insult and boast speeches, the verdict); it quotes and translates the key passages of Bird and Fish (5.3.5), Grain and Sheep (5.3.2), Hoe and Plough, Summer and Winter, etc. It would be the rank-3/4 check for `סיפורי-הבריאה-המסופוטמיים/3-הציפור-והדג/` and for G&S in project 2.

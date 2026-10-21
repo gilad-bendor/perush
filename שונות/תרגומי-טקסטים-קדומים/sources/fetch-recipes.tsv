@@ -1,0 +1,130 @@
+# How to re-obtain the git-ignored files that tools/sources_sync.py has no built-in rule for (it covers eBL chapters and
+# fragments, SEAL pages, CDLI photos, ORACC zips and their members). One row per file, or per folder (path ending in /).
+# kinds: url | archive-org (source = item id) | unzip (source = the zip) | pdftotext / pdftotext-pages (source = the PDF,
+# same folder) | manual (a person must do it; the note says how) | adhoc (made by hand; not re-made by the tool).
+# tiers: work (needed for translating) | archive (not needed). After editing: python3 -I tools/sources_sync.py snapshot
+
+# path	kind	tier	source	note
+ETCSL/_bulk/etcsl.zip	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/2518/etcsl.zip?sequence=12&isAllowed=y	ETCSL bulk (CC BY-NC-SA)
+ETCSL/_bulk/etcsl-unzipped/	unzip	work	ETCSL/_bulk/etcsl.zip	extracted without the .exe/.dll
+ETCSL/_bulk/OTA-2518-landing-page.html	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/2518	
+ETCSL/_bulk/contents.txt	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/2518/contents.txt?sequence=4&isAllowed=y	
+ETCSL/_bulk/corphdr.xml	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/2518/corphdr.xml?sequence=5&isAllowed=y	
+ETCSL/_bulk/etcsl-extensions.dtd	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/2518/etcsl-extensions.dtd?sequence=6&isAllowed=y	
+ETCSL/_bulk/etcsl-extensions.ent	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/2518/etcsl-extensions.ent?sequence=7&isAllowed=y	
+ETCSL/_bulk/etcslfullcat.html	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/2518/etcslfullcat.html?sequence=8&isAllowed=y	
+ETCSL/_bulk/etcslmanual.html	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/2518/etcslmanual.html?sequence=9&isAllowed=y	
+ETCSL/_bulk/etcsl-sux.ent	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/2518/etcsl-sux.ent?sequence=10&isAllowed=y	
+ETCSL/_bulk/etcsl.xml	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/2518/etcsl.xml?sequence=11&isAllowed=y	
+ETCSL/_bulk/readme.txt	url	work	https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/2518/readme.txt?sequence=13&isAllowed=y	
+Berossus/Cory-1876/corysancientfrag00coryuoft.pdf	archive-org	archive	corysancientfrag00coryuoft	public-domain scan
+Berossus/Mueller-FHG-II/fragmentahistor02unkngoog.pdf	archive-org	archive	fragmentahistor02unkngoog	public-domain scan
+Campbell-Thompson-1930--Text-Transliteration-Notes/epicgilgamish0000rcam.pdf	archive-org	archive	epicgilgamish0000rcam	public-domain scan
+Clay-1922--A-Hebrew-Deluge-Story/Clay-1922-A-Hebrew-Deluge-Story-in-Cuneiform--archive.org-hebrewdelugestor00clayuoft.pdf	archive-org	archive	hebrewdelugestor00clayuoft	public-domain scan
+Haupt-1881-1891--Nimrodepos/dasbabylonischen00unse--1891.pdf	archive-org	archive	dasbabylonischen00unse	public-domain scan
+Haupt-1881-1891--Nimrodepos/dasbabylonischen01haupuoft--1884-part1.pdf	archive-org	archive	dasbabylonischen01haupuoft	public-domain scan
+Haupt-1881-1891--Nimrodepos/derkeilinschrif00haupgoog--1881-Sintfluthbericht.pdf	archive-org	archive	derkeilinschrif00haupgoog	public-domain scan
+Hilprecht-1910--Earliest-Version-Babylonian-Deluge-Story/Hilprecht-1910--archive.org-babylonianexped01archgoog.pdf	archive-org	archive	babylonianexped01archgoog	public-domain scan
+Hilprecht-1910--Earliest-Version-Babylonian-Deluge-Story/Hilprecht-1910--archive.org-ldpd_11899184_000.pdf	archive-org	archive	ldpd_11899184_000	public-domain scan
+Jensen-1900--KB-VI-1/assyrischbabylo00jensgoog.pdf	archive-org	archive	assyrischbabylo00jensgoog	public-domain scan
+King-1899/cu31924029165906.pdf	archive-org	archive	cu31924029165906	public-domain scan
+Muss-Arnolt-1901/cu31924083983944.pdf	archive-org	archive	cu31924083983944	public-domain scan
+Poebel-1914--PBS-4-1/historicaltexts00poeb.pdf	archive-org	archive	historicaltexts00poeb	public-domain scan
+Poebel-1914--PBS-5/historicalgramma00poeb.pdf	archive-org	archive	historicalgramma00poeb	public-domain scan
+Smith-1873-1876/chaldeanaccounto00smit--1876.pdf	archive-org	archive	chaldeanaccounto00smit	public-domain scan
+Smith-1873-1876/transactionssoc00englgoog--TSBA-vol2-1873.pdf	archive-org	archive	transactionssoc00englgoog	public-domain scan
+Ungnad-Gressmann-1911/dasgilgameschepo00ungn.pdf	archive-org	archive	dasgilgameschepo00ungn	public-domain scan
+Comparative-studies/Azzopardi-1981--Flood-in-Genesis-and-Gilgamesh/Azzopardi-1981-MelitaTheologica32-Flood-in-Genesis-and-Gilgamesh.pdf	url	archive	https://www.um.edu.mt/library/oar/bitstream/123456789/32694/1/The_flood_in_genesis_and_the_epic_of_Gilgamesh.pdf	open-access article
+Comparative-studies/Battenfield-1971--Atra-hasis-A-Survey/Battenfield-1971-GTJ12-Atra-hasis-A-Survey.pdf	url	archive	https://biblicalelearning.org/wp-content/uploads/2022/01/Battenfield-Atra-Hasis-GTJ.pdf	open-access article
+Comparative-studies/Clines-1973--Noahs-Flood-Theology-of-the-Flood-Narrative/Clines-1972-3-FaithAndThought100-Noahs-Flood-I.pdf	url	archive	https://biblicalstudies.org.uk/pdf/ft/100-2_128.pdf	open-access article
+Comparative-studies/Hammerly-Dupuy-1968--Assyro-Babylonian-and-Sumerian-Flood-Stories/Hammerly-Dupuy-1968-AUSS6-Flood-Stories.pdf	url	archive	https://www.andrews.edu/library/car/cardigital/Periodicals/AUSS/1968-1/1968-1-01.pdf	open-access article
+Comparative-studies/Jacobsen-1939--Sumerian-King-List-AS11/Jacobsen-1939-AS11-Sumerian-King-List.pdf	url	archive	https://isac-assets.s3.amazonaws.com/isac-publications/as11.pdf	open-access article
+Comparative-studies/Jimenez-Zamudio-2002--Diluvio-Ovidio-precedentes-orientales/Jimenez-Zamudio-2002-CFCL22-El-tema-del-diluvio-en-Ovidio.pdf	url	archive	https://revistas.ucm.es/index.php/CFCL/article/download/CFCL0202220399A/16860	open-access article
+Comparative-studies/Millard-1967--A-New-Babylonian-Genesis-Story/Millard-1967-TynBul18-A-New-Babylonian-Genesis-Story.pdf	url	archive	https://tyndalebulletin.org/article/30683-a-new-babylonian-genesis-story.pdf	open-access article
+Comparative-studies/Mitchell-1974--OT-Archaeology-Recent-Work-Atrahasis/Mitchell-1974-FaithAndThought101-OT-Archaeology.pdf	url	archive	https://gospelstudies.org.uk/biblicalstudies/pdf/ft/101-2_142.pdf	open-access article
+Marquez-Rowe-2016--AuOr-34--MB-Atrahasis-Babylon/Marquez-Rowe-2016-AuOr34-Two-MB-Atrahasis-Tablets-from-Babylon.pdf	url	archive	https://ub.edu/ipoa/wp-content/uploads/2021/08/20161AuOrMarquez.pdf	open-access article
+CCP/1.3--P394923--Ludlul-commentary/P394923.html	url	work	https://ccp.yale.edu/P394923	
+CCP/1.4--P404917--Theodicy-commentary/P404917.html	url	work	https://ccp.yale.edu/P404917	
+CCP/1.3--P394923--Ludlul-commentary/P394923.md	adhoc	work		text extraction of the saved page (see CCP/README.md): re-extract from the .html if needed
+CCP/1.4--P404917--Theodicy-commentary/P404917.md	adhoc	work		text extraction of the saved page (see CCP/README.md): re-extract from the .html if needed
+George-2007--SOAS-score-XI/SB_XI_Score.pdf	url	work	https://web.archive.org/web/20240514045202id_/https://eprints.soas.ac.uk/3349/1/SB_XI_Score.pdf	
+George-2007--SOAS-score-XI/SB_XI_Score.layout.txt	pdftotext	work	SB_XI_Score.pdf	
+George-2007--SOAS-score-XI/eprints-soas-3349.raw.html	manual	archive		the SOAS repository blocks scripts: open https://eprints.soas.ac.uk/3349/ in a browser
+George-2007--SOAS-score-XI/soas-gilgamesh-standard-page-2016.raw.html	manual	archive		a Wayback copy of https://www.soas.ac.uk/gilgamesh/standard/ (see the README)
+Heidel-1946/fadedpage-showbook-20220136.raw.html	url	work	https://www.fadedpage.com/showbook.php?pid=20220136	
+Heidel-1946/fadedpage-20220136.raw.html	url	work	https://www.fadedpage.com/link.php?file=20220136.html	
+Heidel-1946/fadedpage-20220136-a5.pdf	url	archive	https://www.fadedpage.com/link.php?file=20220136-a5.pdf	
+Heidel-1946/full-book.md	adhoc	work		clean extraction of fadedpage-20220136.raw.html (see the README): re-extract if needed
+Heidel-1946/chapter-II--other-flood-versions.md	adhoc	work		a chapter cut from full-book.md
+Heidel-1946/chapter-IV--OT-parallels-flood.md	adhoc	work		a chapter cut from full-book.md
+Heidel-1946/tablet-XI.md	adhoc	work		Tablet XI cut from full-book.md
+Kovacs-1989/ancienttexts_tab11.raw.html	url	archive	https://web.archive.org/web/2022id_/http://www.ancienttexts.org/library/mesopotamian/gilgamesh/tab11.htm	
+Kovacs-1989/tablet-XI.md	adhoc	archive		text extraction of the .html
+Kramer-1940--AS-12--Lamentation-over-Ur/as12.pdf	url	work	https://isac-assets.s3.amazonaws.com/isac-publications/as12.pdf	
+Kramer-1940--AS-12--Lamentation-over-Ur/as12.txt	pdftotext	work	as12.pdf	
+LXX-Rahlfs-1935--el-wikisource/	adhoc	work		raw wikitext from el.wikisource.org (?action=raw) and an extraction by a throw-away script: see the README
+Lenzi-2023--Suffering-in-Babylon--OBO-300/OBO_300_Lenzi_Suffering_in_Babylon.pdf	url	work	https://www.zora.uzh.ch/server/api/core/bitstreams/002395f5-ba14-4701-b700-db6e81b52b46/content	ZORA re-stamps the PDF trailer (last ~38 KB) on each download, so it shows as CHANGED; its text (full-text.txt) is identical
+Lenzi-2023--Suffering-in-Babylon--OBO-300/full-text.txt	pdftotext	work	OBO_300_Lenzi_Suffering_in_Babylon.pdf	
+Livius/livius--flood3_t-gilgamesh.raw.html	url	archive	https://www.livius.org/articles/misc/great-flood/flood3_t-gilgamesh/	
+Livius/tablet-XI.md	adhoc	archive		text extraction of the .html
+Met-Museum--MMA-86.11.378a-Atrahasis-LB/	manual	archive		photos linked from the Met API record https://collectionapi.metmuseum.org/public/collection/v1/objects/321999
+ORACC/epsd2-royal--Q000377--Gudea-Cylinders/Q000377--epsd2-royal.html	url	work	https://oracc.museum.upenn.edu/epsd2/royal/Q000377/html	
+ORACC/etcsri--Q000377--Gudea-Cylinders/Q000377--etcsri.html	url	work	https://oracc.museum.upenn.edu/etcsri/Q000377/html	
+ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/P500551--oracc-view.html	url	work	https://oracc.museum.upenn.edu/saao/saa02/P500551/html	
+ORACC/saao-saa02--Q009186--Esarhaddon-Succession-Treaty/Q009186--oracc-view.html	url	work	https://oracc.museum.upenn.edu/saao/saa02/Q009186/html	
+ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/P281779--oracc-view.html	url	work	https://oracc.museum.upenn.edu/tcma/P281779/html	
+ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/P281780--oracc-view.html	url	work	https://oracc.museum.upenn.edu/tcma/P281780/html	
+ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/tcma-laws.zip	url	work	https://oracc.museum.upenn.edu/json/tcma-laws.zip	
+Reference-tools/Schramm-2010--Akkadische-Logogramme/GBAO5_schramm.pdf	manual	archive		OAPEN serves a bot check: download https://library.oapen.org/handle/20.500.12657/37268 in a browser
+Reference-tools/eBL-API/raw/	adhoc	archive		API probes saved while exploring eBL (2026-10-16); not needed
+SEAL/Atrahasis-MB/images/	adhoc	archive		photos shown on the SEAL pages (see SEAL/README.md)
+Schoyen-Collection/	manual	archive		catalogue pages and photos: https://www.schoyencollection.com/ (see the README)
+TheTorah--Day-2021--flood-article-he/thetorah.co.il--mesopotamian-origin-of-biblical-flood.raw.html	url	archive	https://thetorah.co.il/article/the-mesopotamian-origin-of-the-biblical-flood-story	
+TheTorah--Day-2021--flood-article-he/article.rtl.md	adhoc	archive		text extraction of the .html
+Wasserman-2020--The-Flood-Akkadian-Sources/Wasserman-2020-The-Flood-Akkadian-Sources-OBO290.pdf	url	work	https://web.archive.org/web/2025id_/https://library.oapen.org/bitstream/id/b4d45cb6-a73a-4855-863a-34ce523db693/9789042941748.pdf	the Wayback copy (byte-identical): OAPEN itself serves a bot check to scripts
+Wasserman-2020--The-Flood-Akkadian-Sources/Wasserman-2020-The-Flood-Akkadian-Sources-OBO290.text.md	pdftotext-pages	work	Wasserman-2020-The-Flood-Akkadian-Sources-OBO290.pdf	
+Wasserman-Cohen-2026--Carmel-he/carmelph.co.il--product-gilgamesh.raw.html	url	archive	https://www.carmelph.co.il/product/gilgamesh/	
+Wasserman-Cohen-2026--Carmel-he/ynet--Tesler-2026--interview.raw.html	url	archive	https://www.ynet.co.il/judaism/discourse/article/rjoxzonc11l	
+Wasserman-Cohen-2026--Carmel-he/carmel-page--blurb-sample-toc.rtl.md	adhoc	archive		text extraction of the .html
+Wasserman-Cohen-2026--Carmel-he/ynet-article.rtl.md	adhoc	archive		text extraction of the .html
+LXX-Rahlfs-1935--el-wikisource/genesis-rahlfs.wikitext	url	work	https://el.wikisource.org/w/index.php?action=raw&title=%CE%93%CE%AD%CE%BD%CE%B5%CF%83%CE%B9%CF%82_%28Rahlfs%29	the current revision (ours: see the README)
+LXX-Rahlfs-1935--el-wikisource/exodus-rahlfs.wikitext	url	work	https://el.wikisource.org/w/index.php?action=raw&title=%CE%88%CE%BE%CE%BF%CE%B4%CE%BF%CF%82_%28Rahlfs%29	the current revision (ours: see the README)
+LXX-Rahlfs-1935--el-wikisource/isaiah-rahlfs.wikitext	url	work	https://el.wikisource.org/w/index.php?action=raw&title=%CE%97%CF%83%CE%B1%CE%90%CE%B1%CF%82_%28Rahlfs%29	the current revision (ours: see the README)
+LXX-Rahlfs-1935--el-wikisource/4kgdms-rahlfs.wikitext	url	work	https://el.wikisource.org/w/index.php?action=raw&title=%CE%92%CE%B1%CF%83%CE%B9%CE%BB%CE%B5%CE%B9%CF%8E%CE%BD_%CE%94%27_%28Rahlfs%29	the current revision (ours: see the README)
+King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/King-1907--Chronicles-II.pdf	url	work	https://uodiyala.edu.iq/uploads/PDF%20ELIBRARY%20UODIYALA/EL45/CHRONICLES%20CONCERNING%20EARLY%20Babylonian%20Kings%20v.2.pdf	public domain (1907); pages 87–96 = PDF pages 103–112
+King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/page-images/	adhoc	work	King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/King-1907--Chronicles-II.pdf	pdftoppm -f 103 -l 112 -r 220 -png (p087 at -r 150); renamed p087…p096
+Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/Mittermayer_2009_Enmerkara_und_der_Herr_von_Arata.pdf	url	work	https://www.zora.uzh.ch/server/api/core/bitstreams/73c3fd8b-32cc-48c0-9f25-7f7a912c966c/content	ZORA green OA, no CC licence
+Mittermayer-2009--Enmerkara-und-der-Herr-von-Arata--OBO-239/mittermayer-2009.txt	pdftotext	work	Mittermayer_2009_Enmerkara_und_der_Herr_von_Arata.pdf	pdftotext -layout
+ORACC/epsd2-literary--Q000369--Enmerkar-and-the-Lord-of-Aratta/Q000369.cdl.json	unzip	work	ORACC/_bulk/epsd2-literary.zip	member epsd2/literary/corpusjson/Q000369.json
+ORACC/akklove--Akkadian-Love-Literature/akklove.zip	url	work	https://oracc.museum.upenn.edu/json/akklove.zip	AkkLove JSON export (CC0); TLS: tools/certs/
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-01--P392087.html	url	work	https://oracc.museum.upenn.edu/akklove/P392087/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-02--P251898.html	url	work	https://oracc.museum.upenn.edu/akklove/P251898/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-03--P254179.html	url	work	https://oracc.museum.upenn.edu/akklove/P254179/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-04--P252226.html	url	work	https://oracc.museum.upenn.edu/akklove/P252226/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-05--P251711.html	url	work	https://oracc.museum.upenn.edu/akklove/P251711/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-06--P424004.html	url	work	https://oracc.museum.upenn.edu/akklove/P424004/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-07--X001001.html	url	work	https://oracc.museum.upenn.edu/akklove/X001001/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-10--X001003.html	url	work	https://oracc.museum.upenn.edu/akklove/X001003/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-13--X001006.html	url	work	https://oracc.museum.upenn.edu/akklove/X001006/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-14a--X001007.html	url	work	https://oracc.museum.upenn.edu/akklove/X001007/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-14b--X001008.html	url	work	https://oracc.museum.upenn.edu/akklove/X001008/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-14c--X001009.html	url	work	https://oracc.museum.upenn.edu/akklove/X001009/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-14d--X001010.html	url	work	https://oracc.museum.upenn.edu/akklove/X001010/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-14e--X001011.html	url	work	https://oracc.museum.upenn.edu/akklove/X001011/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-14f--X001012.html	url	work	https://oracc.museum.upenn.edu/akklove/X001012/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-15--P305850.html	url	work	https://oracc.museum.upenn.edu/akklove/P305850/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-16--X001013.html	url	work	https://oracc.museum.upenn.edu/akklove/X001013/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-17--P429343.html	url	work	https://oracc.museum.upenn.edu/akklove/P429343/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-18--P252332.html	url	work	https://oracc.museum.upenn.edu/akklove/P252332/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-20--P252006.html	url	work	https://oracc.museum.upenn.edu/akklove/P252006/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-22--P285640.html	url	work	https://oracc.museum.upenn.edu/akklove/P285640/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-23--P252071.html	url	work	https://oracc.museum.upenn.edu/akklove/P252071/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-24--P274691.html	url	work	https://oracc.museum.upenn.edu/akklove/P274691/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-25--P305832.html	url	work	https://oracc.museum.upenn.edu/akklove/P305832/html	per-text view (Wasserman's translation; CC0)
+ORACC/akklove--Akkadian-Love-Literature/LAOS4-26--P296059.html	url	work	https://oracc.museum.upenn.edu/akklove/P296059/html	per-text view (Wasserman's translation; CC0)
+eBL-fragmentarium--Sargon-Birth-Legend/BM.47449.json	url	work	https://www.ebl.lmu.de/api/fragments/BM.47449	eBL fragmentarium record (no transliteration of the legend)
+eBL-fragmentarium--Sargon-Birth-Legend/K.3401.json	url	work	https://www.ebl.lmu.de/api/fragments/K.3401	eBL fragmentarium record (no transliteration of the legend)
+eBL-fragmentarium--Sargon-Birth-Legend/K.4470.json	url	work	https://www.ebl.lmu.de/api/fragments/K.4470	eBL fragmentarium record (no transliteration of the legend)
+eBL-fragmentarium--Sargon-Birth-Legend/K.7249.json	url	work	https://www.ebl.lmu.de/api/fragments/K.7249	eBL fragmentarium record (no transliteration of the legend)
+eBL-fragmentarium--Sargon-Birth-Legend/Sm.2118.json	url	work	https://www.ebl.lmu.de/api/fragments/Sm.2118	eBL fragmentarium record (no transliteration of the legend)
+eBL-fragmentarium--Sargon-Birth-Legend/BM.47449.atf	adhoc	work	eBL-fragmentarium--Sargon-Birth-Legend/BM.47449.json	the json's atf field (col. 4', a fable extract)

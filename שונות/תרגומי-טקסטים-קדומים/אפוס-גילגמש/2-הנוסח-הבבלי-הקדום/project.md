@@ -24,7 +24,10 @@ Collected by the coordinator (2026-10-18); each tablet section below has its own
 3. The Harmal spelling *Ḫubibi* = `חוּבִּיבִי` or the usual `חוּוָוה`.
 4. OB III 148 `העמדתי` (*šuma šuzuzzu*) vs 160/188 `אָשִׂים לי` (*šuma šakānu*): both kept distinct.
 
+**Settled on 2026-10-21 (cross-corpus harmonization, decided by the lead; `../renderings.md` §22):** *kabattu* = `כָּבֵד` (was `רוּחַ`): OB II 103 `נִפְשַׁר כְּבֵדוֹ`, OB Nippur 4 `אשר כְּבֵדְךָ חרד`. *šurmēnu* stays `שׁוּרְבִּין` (Harmal₂ 46).
+
 ## Status / progress log
+- **2026-10-21: cross-corpus harmonization** (`../renderings.md` §22): *kabattu* `רוּחַ` → `כָּבֵד` (OB II 103, OB Nippur 4); no *uqnû* or *sukkallu* in the OB tablets. `translation.rtl.md` rebuilt.
 - **2026-10-18: complete (first draft).** OB VA+BM 87, OB II 145, OB III 219, and the lower-priority Schøyen₂ 94, Nippur 26, Harmal₁ 21, Ishchali 47, Harmal₂ 59, IM 45 = 743 labels, by three sequential translators, three review passes each; `../verify.py --strict` 0 problems; `translation.rtl.md` built (narrative order); print stub `../../הדפסה/אפוס-גילגמש/2-הנוסח-הבבלי-הקדום.rtl.md`. Not translated: OB UM, Schøyen₁, Schøyen₃, CUNES, SM (small and broken; not fetched) and the MB/NA chapters.
 - 2026-10-17: eBL chapters fetched (VA+BM, II, III, Schøyen₂, Nippur, Harmal₁, Ishchali, Harmal₂, IM); SEAL pages saved; project brief written by the coordinator.
 
@@ -215,7 +218,7 @@ OB II (the Pennsylvania tablet; eBL BabaOB1, CBS 7771), all 145 eBL labels (Geor
 2. **Šamkatum**: `שַׁמְחַת` everywhere (chosen; one character, one name) or the OB form `שַׁמְכַּתוּם` where the tablet writes it (135, 140, 175), as the corpus does for Ḫuwawa / Sursunabu / Ūta-naʾištim?
 3. ***mutu***: `גֶּבֶר` (110–111, 238) and `בַּעַל` (160–161) by sense, or `בַּעַל` everywhere (`כבעל היה` – "became like a husband", a reading some scholars defend)?
 4. **6 `זזו`** (George, the form) against eBL's lemma *bašû* (`נהיו לי`, = SB I 245)?
-5. **103 `נִפְשְׁרָה רוחו`**: keeping the corpus's `פשר` for *pašāru* in the sense "be released, relax" (chosen, to show the one verb) or `הותרה רוחו` by sense?
+5. **103 `נִפְשְׁרָה רוחו`**: keeping the corpus's `פשר` for *pašāru* in the sense "be released, relax" (chosen, to show the one verb) or `הותרה רוחו` by sense? – `פשר` kept; since 2026-10-21 *kabattu* = `כָּבֵד` (`../renderings.md` §22), so the line is `נִפְשַׁר כְּבֵדוֹ`.
 6. **106–107 *lapātu*** in a derived stem "groom, treat" = `טיפל` (chosen) or the corpus's `נגע` (`נגע הגלב בגוויתו`, literal but obscure)?
 7. **1–2**: OB II 2 keeps SB I 243's participle `מדבר` (the line is the second half of I 243), while every other *issaqqaram ana* Y of the OB tablets is `דיבר`. Keep the SB form, or make OB II 2 `דיבר אל אמו:`?
 
@@ -279,7 +282,7 @@ OB II (the Pennsylvania tablet; eBL BabaOB1, CBS 7771), all 145 eBL labels (Geor
 | 99–100 | īkul aklam … adi šebêšu | אכל … את הלחם עד שָׂבְעוֹ | `וְאָכַלְתָּ וְשָׂבָעְתָּ` (דברים ח:י) | [cognate] | *akālu* / אכל, *šebû* / שׂבע. Also `וַיֹּאכַל וַיֵּשְׁתְּ וַיָּקָם וַיֵּלַךְ` (בראשית כה:לד). |
 | 101–102 | šikaram ištiam sebet assammim | שתה את השכר – שבעה גביעים | `וַיִּשְׁתּוּ וַיִּשְׁכְּרוּ עִמּוֹ` (בראשית מג:לד) | [cognate] | Drinking to drunkenness at a feast; *assammu* = `גָּבִיעַ` [equivalent] (`גְּבִיעִי גְּבִיעַ הַכֶּסֶף`, בראשית מד:ב). |
 | 101–105 | šikaram … īliṣ libbašu | שתה את השכר … עלץ לבו | `וַיֵּשְׁתְּ מִן הַיַּיִן וַיִּשְׁכָּר; וַיִּתְגַּל בְּתוֹךְ אָהֳלֹה` (בראשית ט:כא) | [divergence] | Noah's drink leads to nakedness and curse, Enkidu's to joy, anointing and clothing. |
-| 103 | ittapšar kabtatum | נִפְשְׁרָה רוחו | `וַיֹּאכַל בֹּעַז וַיֵּשְׁתְּ וַיִּיטַב לִבּוֹ` (רות ג:ז) | [equivalent] | The mood released by drink; *pašāru* = פשר (the dream verb of 1, 44). |
+| 103 | ittapšar kabtatum | נִפְשַׁר כְּבֵדוֹ | `וַיֹּאכַל בֹּעַז וַיֵּשְׁתְּ וַיִּיטַב לִבּוֹ` (רות ג:ז) | [equivalent] | The mood released by drink; *pašāru* = פשר (the dream verb of 1, 44); *kabattu* = `כָּבֵד` (2026-10-21; ↔ Lam 2:11). |
 | 104–105 | īliṣ libbašu | עלץ לבו | `עָלַץ לִבִּי בַּיהוָה` (שמואל א ב:א) | [cognate] | **The same phrase**: *elēṣu* + *libbu* = `עָלַץ לֵב`. |
 | 104–109 | īliṣ libbašū-ma pānūšu ittamrū … šamnam | עלץ לבו, ופניו האירו … שמן | `וְיַיִן יְשַׂמַּח לְבַב-אֱנוֹשׁ לְהַצְהִיל פָּנִים מִשָּׁמֶן; וְלֶחֶם לְבַב-אֱנוֹשׁ יִסְעָד` (תהלים קד:טו) | [equivalent] | **Key.** The same sequence: bread, drink, glad heart, shining face, oil – the gifts that make human life (Ps 104 as a creation psalm). |
 | 104–105 | pānūšu ittamrū | ופניו האירו | `חָכְמַת אָדָם תָּאִיר פָּנָיו` (קהלת ח:א) | [equivalent] | A shining face. |
