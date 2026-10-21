@@ -6,6 +6,10 @@ _scratch*
 /_claude-output.script.rtl.md
 /claude-code-semitic-linguist
 
+# docs/ - the site GitHub Pages serves - is a symlink to a worktree of the branch "auto-docs"
+# (see scripts/ensure-docs-worktree.sh); that branch has its own .gitignore for docs/.
+/docs
+
 **/.idea/*
 !**/.idea/modules.xml
 !**/.idea/compiler.xml
@@ -24,14 +28,8 @@ _scratch*
 /_DELIBERATION-ROOM/.meetings/
 /_DELIBERATION-ROOM/public/compiled-style.css
 
-# /docs/_HTML-FROM-MD/   and   /docs/_PDF-FROM-MD/
-/docs/_*-FROM-MD/_BIBLE-VIEWER/
-/docs/_*-FROM-MD/_DELIBERATION-ROOM/
-/docs/_*-FROM-MD/_RTL-EDITOR/
 
 
 # Temporary local variants of Perush files (NNNN-book-from-to-title.<number>.rtl.md) - kept on disk only
 /פירוש/**/*.[0-9].rtl.md
 /פירוש/**/*.[0-9][0-9].rtl.md
-/docs/_*-FROM-MD/פירוש/**/*.[0-9].rtl.*
-/docs/_*-FROM-MD/פירוש/**/*.[0-9][0-9].rtl.*

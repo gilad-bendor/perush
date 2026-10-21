@@ -102,6 +102,8 @@ A Node.js script that generates a self-contained HTML file (this happened once -
 3. **Output:**
    - `../docs/bible-viewer.html` - Self-contained, deployable HTML file
      This is served as "git-page" via https://gilad-bendor.github.io/perush/bible-viewer.html
+     (`../docs` is a symlink to a worktree of the branch `auto-docs`: the build runs `../scripts/ensure-docs-worktree.sh`
+     first; `../scripts/commit-auto-docs.sh` commits and pushes the result)
 
 ### File Structure
 ```

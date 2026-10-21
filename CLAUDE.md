@@ -7,9 +7,3 @@ the SessionStart hook in `.claude/settings.json` runs `claude/operator/operator.
 
 **If that output is not in your context** (the hook did not run, or failed): run
 `claude/operator/operator.sh hook <<< '{}'` yourself before anything else, and follow its output.
-
-## Git: never commit `docs/`
-
-`docs/` at the repo root holds the HTML/PDF mirrors, which the RTL editor regenerates by itself - the user commits them
-separately. **Exclude it from every commit** (e.g. `git commit -- <paths>`, or `git restore --staged <repo root>/docs/`
-before committing - a session may be working in a subfolder), unless the user explicitly asks to commit it.

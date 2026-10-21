@@ -23,6 +23,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// docs/ - where bible-viewer.html is written - is a symlink to a worktree of the branch "auto-docs".
+// Make sure it is in place before writing there (the script is idempotent, and locked; it throws on failure).
+require('child_process').execFileSync(path.join(__dirname, '..', 'scripts', 'ensure-docs-worktree.sh'), { stdio: 'inherit' });
+
 const BSB_INPUT_FILE = path.join(__dirname, '..', '..', 'hebrew', 'data', 'bsb', 'bsb-words.basic.csv');
 const BIBLEHUB_INPUT_FILE = path.join(__dirname, '..', '..', 'hebrew', 'data', 'biblehub', 'biblehub-entries-index.md');
 const BIBLE_VIEWER_OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'bible-viewer.html');

@@ -15,6 +15,15 @@ import { writeFileSafe } from "./write-file-safe";
 
 const PORT = 4000;
 
+// docs/ - where the HTML/PDF mirrors are written - is a symlink to a worktree of the branch "auto-docs".
+// Make sure it is in place before anything is written there (the script is idempotent, and locked).
+const ensureDocs = Bun.spawnSync([join(import.meta.dir, "..", "..", "scripts", "ensure-docs-worktree.sh")],
+    { stdout: "inherit", stderr: "inherit" });
+if (ensureDocs.exitCode !== 0) {
+    console.error("scripts/ensure-docs-worktree.sh failed - not starting (the mirrors would be written to the wrong place).");
+    process.exit(1);
+}
+
 async function ensureMarkdownDir() {
     try {
         await stat(MARKDOWN_DIR);
