@@ -85,7 +85,7 @@ Vocalized at the first occurrence in each annotated file; afterwards plain spell
 
 ## 9. Merged from the runs
 **Project 1 (all 25 texts, 2026-10-21):**
-- *aḫāzu* = `אָחַז` [cognate] (gated by script); *ṣabātu* = `תָּפַס` – a deviation from the Gilgameš corpus (*ṣabātu* = `אחז`), because this corpus has both and the Song's `אֲחַזְתִּיו` (ג:ד) must stay visible. A Sumerian *dab₅* (= *ṣabātu*) takes `תָּפַס`.
+- *aḫāzu* = `אָחַז` [cognate] (gated by script); *ṣabātu* = `תָּפַס` – a deviation from the Gilgameš corpus (*ṣabātu* = `אחז`), because this corpus has both and the Song's `אֲחַזְתִּיו` (שיר השירים ג:ד) must stay visible. A Sumerian *dab₅* (= *ṣabātu*) takes `תָּפַס`.
 - *mēlulu* = `שִׂחֵק` (deviation from Gilgameš `חוּל`: here it takes an object); `צחק` stays reserved for *ṣiāḫu*.
 - *ṣawāru* "neck" = `צַוָּאר` [cognate]; *šīnātu* = `שֶׁתֶן`; *sāqu* = `שׁוֹק` [cognate]; *warādu* = `יָרַד` [cognate]; *tamû* D = `הִשְׁבִּיעַ`.
 - *qadištu* = `קְדֵשָׁה`, *nadītu* = `נָדִיתוּ`, *kezertu* = `כְּזֵרָה`, *batultu* = `בְּתוּלָה` (the law and Gilgameš corpora); *šasû* = `צָעַק` (Gilgameš); *palāsu* N = `הִסְתַּכֵּל`; *ḫasāsu* = `הָגָה`.

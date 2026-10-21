@@ -5,11 +5,11 @@ The three projects' parallels, merged by Bible verse (Round 2, run 7, 2026-10-21
 ## Key findings
 
 **The Song of Songs (project 1, OB Akkadian love lyrics and incantations)**
-1. **"To the garden you came down"** – LAOS 4 22 o.8–9 (Old Akkadian, Kiš, late 3rd millennium): *kirîšum tūrdā … tūrdāma ana kirîm* `לגן ירדתן … ירדתן אל הגן` ↔ `דּוֹדִי יָרַד לְגַנּוֹ` (שיר השירים ו:ב), `אֶל גִּנַּת אֱגוֹז יָרַדְתִּי` (ו:יא). Verb [cognate] and noun [equivalent], twice, in chiasm.
-2. **The adjuration** – LAOS 4 22 r.33–38: `משביע אני אותך … עד שצווארו וצווארך לא נצמדו – לא תרגעי!` ↔ `הִשְׁבַּעְתִּי אֶתְכֶם … אִם תָּעִירוּ … עַד שֶׁתֶּחְפָּץ` (ב:ז; ה:ח) [divergence]: the same frame (I adjure + by whom + "until"), sworn by Ištar and Išḫara where the Song has "the gazelles and the hinds of the field".
-3. **"Your love-making is good"** – *dādūka ṭābū* `דּוֹדֶיךָ טובים` (LAOS 4 13 o.i.6'; 10 o.9) ↔ `כִּי טוֹבִים דֹּדֶיךָ מִיָּיִן` (א:ב) [cognate]; with the Kiš wasf's *sissinnu* `סַנְסִנֵּי` (13 o.i.11') ↔ the Song's hapax `סַנְסִנָּיו` (ז:ט), and the left hand under the head (13 o.i.13' ↔ ב:ו; ח:ג).
-4. **`לְכָה דוֹדִי`** – *alkam … i nīpuš* (LAOS 4 15 o.i.20) ↔ ז:יב; *rēʾû* and *tarbaṣu* (07) ↔ `אֵיכָה תִרְעֶה אֵיכָה תַּרְבִּיץ` (א:ז); "I called her and she did not turn to me" (26 o.5) ↔ `קְרָאתִיו וְלֹא עָנָנִי` (ה:ו); *aḫāzu* = `אָחַז` (22) ↔ `אֲחַזְתִּיו וְלֹא אַרְפֶּנּוּ` (ג:ד); the oil and the honey ↔ א:ג; ד:יא.
-5. **A wasf of a mother** – the Message of Lu-diĝira (ETCSL 5.5.1, project 3): the morning star (ו:י), the garden (ד:יג), the palm and the clusters (ז:ח), the sedan chair of precious wood (ג:ט), ivory (ה:יד; ז:ה), sung of a mother, not a lover – and the "woman of valour" (משלי לא:י, יא, טז, כז), whose charm Proverbs calls "a lie" (לא:ל) and Lu-diĝira praises (*ḫi-li* `חֵן`).
+1. **"To the garden you came down"** – LAOS 4 22 o.8–9 (Old Akkadian, Kiš, late 3rd millennium): *kirîšum tūrdā … tūrdāma ana kirîm* `לגן ירדתן … ירדתן אל הגן` ↔ `דּוֹדִי יָרַד לְגַנּוֹ` (שיר השירים ו:ב), `אֶל גִּנַּת אֱגוֹז יָרַדְתִּי` (שיר השירים ו:יא). Verb [cognate] and noun [equivalent], twice, in chiasm.
+2. **The adjuration** – LAOS 4 22 r.33–38: `משביע אני אותך … עד שצווארו וצווארך לא נצמדו – לא תרגעי!` ↔ `הִשְׁבַּעְתִּי אֶתְכֶם בְּנוֹת יְרוּשָׁלִַם` (שיר השירים ב:ז; ה:ח) [divergence]: the same frame (I adjure + by whom + "until"), sworn by Ištar and Išḫara where the Song has "the gazelles and the hinds of the field".
+3. **"Your love-making is good"** – *dādūka ṭābū* `דּוֹדֶיךָ טובים` (LAOS 4 13 o.i.6'; 10 o.9) ↔ `כִּי טוֹבִים דֹּדֶיךָ מִיָּיִן` (שיר השירים א:ב) [cognate]; with the Kiš wasf's *sissinnu* `סַנְסִנֵּי` (13 o.i.11') ↔ the Song's hapax `אֹחֲזָה בְּסַנְסִנָּיו` (שיר השירים ז:ט), and the left hand under the head (13 o.i.13' ↔ שיר השירים ב:ו; ח:ג).
+4. **`לְכָה דוֹדִי`** – *alkam … i nīpuš* (LAOS 4 15 o.i.20) ↔ שיר השירים ז:יב; *rēʾû* and *tarbaṣu* (07) ↔ `אֵיכָה תִרְעֶה אֵיכָה תַּרְבִּיץ` (שיר השירים א:ז); "I called her and she did not turn to me" (26 o.5) ↔ `קְרָאתִיו וְלֹא עָנָנִי` (שיר השירים ה:ו); *aḫāzu* = `אָחַז` (22) ↔ `אֲחַזְתִּיו וְלֹא אַרְפֶּנּוּ` (שיר השירים ג:ד); the oil and the honey ↔ שיר השירים א:ג; ד:יא.
+5. **A wasf of a mother** – the Message of Lu-diĝira (ETCSL 5.5.1, project 3): the morning star (Song 6:10), the garden (4:13), the palm and the clusters (7:8), the sedan chair of precious wood (3:9), ivory (5:14; 7:5), sung of a mother, not a lover – and the "woman of valour" (משלי לא:י, יא, טז, כז), whose charm Proverbs calls "a lie" (לא:ל) and Lu-diĝira praises (*ḫi-li* `חֵן`).
 
 **Proverbs and Qohelet (project 2, Sumerian proverbs)**
 6. **"Make your foot rare in your friend's house"** – proverb 1.8 `בבית ידידו – האם יוקר אדם?` ↔ `הֹקַר רַגְלְךָ מִבֵּית רֵעֶךָ` (משלי כה:יז): the same verb (*kal* "rare, precious").
@@ -26,7 +26,7 @@ The three projects' parallels, merged by Bible verse (Round 2, run 7, 2026-10-21
 15. **The sick woman's letter-prayer** (ETCSL 3.3.10): the friends who stand far off (תהלים לח:יב; פח:יט), "on the ground of life I will set my feet" (קטז:ט), the vow to sweep the temple court (פד:יא), "I will call your name" (קטז:יג).
 
 **Genesis and the family**
-16. **"Your son is well"** – Lu-diĝira's message (5.5.1 54) ↔ `כֹּה אָמַר בִּנְךָ יוֹסֵף`, `עוֹד יוֹסֵף חַי` (בראשית מה:ט, כו).
+16. **"Your son is well"** – Lu-diĝira's message (5.5.1 54) ↔ `כֹּה אָמַר בִּנְךָ יוֹסֵף` (בראשית מה:ט), `עוֹד יוֹסֵף חַי` (בראשית מה:כו).
 17. **The girl chooses** – proverb 1.148 `עלמה! אחיך לא יוקיר לך ראש – את מי את מוקירה?` ↔ `נִקְרָא לַנַּעֲרָ וְנִשְׁאֲלָה אֶת פִּיהָ` (בראשית כד:נז).
 18. **"Having children is divine"** – 1.160 ↔ `הֲתַחַת אֱלֹהִים אָנֹכִי` (בראשית ל:ב); the mother of eight sons "lies like a weak thing" (2.141 ↔ `וְרַבַּת בָּנִים אֻמְלָלָה`, שמואל א ב:ה).
 19. **Laughter** – *ṣīḫtu* "(erotic) laughter" = `צְחוֹק` throughout project 1 ↔ `יִצְחָק מְצַחֵק אֵת רִבְקָה` (בראשית כו:ח) [cognate].
