@@ -99,7 +99,6 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, source regex)
     'ארשכיגל': ('Ereškigal (אֶרֶשְׁכִּיגַל)', r'ereš|aš-\(š\)rigingal'),
     'נמתר': ('Namtar (נַמְתָּר)', r'namtar'),
     'דומוזי': ('Dumuzi (דּוּמוּזִי)', r'dum[uū]zi|dumu-zid'),
-    'כורנוגי': ('Kurnugi (כּוּרְנוּגִי)', r'kurnugi'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')
@@ -123,7 +122,7 @@ FORMULAS = [
     ('IS', r'mê \(\|\) balāṭi', r'מי החיים', '*mê balāṭi* = מי החיים'),
     ('IN', r'nam-tag', r'עוון', '*nam-tag* = עוון'),
     ('IN', r'tug₂-mu-dur₇-ra', r'בגד־אבל', '*tug₂-mu-dur₇-ra* = בגד־אבל'),
-    ('IS', r'\[?k\]?arra \| labiš', r'בגד־אבל', '*karru* = בגד־אבל'),
+    ('IS', r'\[?k\]?arra \| labiš', r'מעטה אבל', '*karru* = מעטה אבל (Adapa)'),
 ]
 
 
@@ -328,7 +327,7 @@ def verify(key, strict=False):
         tr = e['tr'][0] if e['tr'] else ''
         if not tr:
             problems.append(f'entry {k}: no backticked source line')
-        elif k in srcd and cmp(tr) != cmp(srcd[k][0]):
+        elif k in srcd and srcd[k][0] and cmp(tr) != cmp(srcd[k][0]):
             problems.append(f'entry {k}: source line differs:\n    A: {tr}\n    S: {cmp(srcd[k][0])}')
         heb = e['heb'][0]
         if 'טרם תורגם' in heb:
