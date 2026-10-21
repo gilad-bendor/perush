@@ -1,6 +1,8 @@
-"""Verify and build the Sumerian projects 3 and 4 of the creation corpus (Bird and Fish; Enki and the World Order).
+"""Verify and build the Sumerian projects 3-7 of the creation corpus (Bird and Fish; Enki and the World Order;
+the Farmer's Instructions; Hoe and Plough; Summer and Winter).
 
-Written 2026-10-19 for `3-הציפור-והדג/` and `4-אנקי-וסדר-העולם/`; add a project as a PROJECTS entry.
+Written 2026-10-19 for `3-הציפור-והדג/` and `4-אנקי-וסדר-העולם/`; projects 5-7 added 2026-10-21 (Round 3, run 1) with
+their own gates (`RESERVED_5_7`, `TOKEN_GATES_5_7`: renderings.md §9). Add a project as a PROJECTS entry.
 
 Usage (from any directory):
   python3 -I sumerian_tools.py verify KEY [--strict]   checks (exit 1 on an error):
@@ -9,7 +11,8 @@ Usage (from any directory):
       2. coverage: the labels equal the ETCSL composite's line list, in order (with --strict: also no `[טרם תורגם]`);
       3. RESERVED strings (vocalization stripped) appear in a `>` line only when the entry's transliteration contains
          an allowed Sumerian word (listed per string); otherwise an error;
-      4. TRAPS: names that read as Hebrew words when unvocalized (Utu, Uttu, Inana, *me*) must be vocalized;
+      3a. (projects 5-7) RESERVED_5_7 strings and TOKEN_GATES_5_7 (whole words, Hebrew prefixes stripped) likewise;
+      4. TRAPS: names that read as Hebrew words when unvocalized (Utu, Uttu, Inana, *me*; Sumer, Urim) must be vocalized;
          Inana must be `אִינַנָּה`: the alef spelling (`אִינַאנָּה`, `אינאנה`) is an error even when vocalized
          (cross-corpus harmonization, 2026-10-21);
       5. translation.rtl.md (if present): its numbered lines equal the annotated `>` lines one to one;
@@ -31,6 +34,12 @@ PROJECTS = {
               etcsl='ETCSL/5.3.5--Debate-Bird-and-Fish/transliteration.md'),
     '4': dict(dir='4-אנקי-וסדר-העולם', annotated=['annotated-1.rtl.md', 'annotated-2.rtl.md'],
               etcsl='ETCSL/1.1.3--Enki-and-the-World-Order/transliteration.md'),
+    '5': dict(dir='5-הוראות-האיכר', annotated=['annotated.rtl.md'],
+              etcsl='ETCSL/5.6.3--Farmers-Instructions/transliteration.md', gates57=True),
+    '6': dict(dir='6-המעדר-והמחרשה', annotated=['annotated.rtl.md'],
+              etcsl='ETCSL/5.3.1--Debate-Hoe-and-Plough/transliteration.md', gates57=True),
+    '7': dict(dir='7-הקיץ-והחורף', annotated=['annotated.rtl.md'],
+              etcsl='ETCSL/5.3.3--Debate-Summer-and-Winter/transliteration.md', gates57=True),
 }
 EXTRA_GREP = ['2-טקסטי-בריאה-ועדן/annotated-2-Enki-Ninhursag.rtl.md', '2-טקסטי-בריאה-ועדן/annotated-3-Enki-Ninmah.rtl.md',
               '2-טקסטי-בריאה-ועדן/annotated-4-Hoe.rtl.md', '2-טקסטי-בריאה-ועדן/annotated-5-Grain-Sheep.rtl.md']
@@ -58,13 +67,54 @@ RESERVED = {
     r'כנף|כנפ': [r'\bpa\b|\bpa-|a₂'],
     r'טוב|טובה|טובים|טובות': [r'dug₃|du₁₀'],
     r'ברך|ברכ|יבורך|מבורך': [r'šud₃|šud|dub₃|ka-aš'],
-    r'(^|\s)ו?ה?עבד|עבוד': [r'kiĝ₂|kin\b'],
+    r'(^|\s)ו?ה?עבד|עבוד': [r'kiĝ₂|kin\b|arad|ARAD'],      # arad "slave" = עבד (projects 5-7; law corpus *wardum*)
     r'צלם|דמות': [],
     r'פרו ורבו': [],
 }
+# projects 5-7 (renderings.md §9.6): substring gates on the stripped line, as RESERVED
+RESERVED_5_7 = {
+    r'חרש|חורש|חריש': [r'ur₁₁|uru₄|apin'],          # plough: only for uru₄ / apin
+    r'עצבון|עיצבון': [],                              # Gen 3:17 (the verb dim₂ is plene עיצב)
+    r'דרדר': [],
+    r'קיץ|קייץ': [r'e₂-me-eš|e-me-eš|emeš'],          # Summer (also the hiphil "awake": avoid)
+}
+# projects 5-7: whole-word gates. Each token is tested with every Hebrew prefix split (ו, ה, ב, ל, מ, כ, ש and their
+# pairs); a token whose base matches the regex needs the transliteration regex ([] = never). EXEMPT tokens pass.
+TOKEN_GATES_5_7 = [
+    (r'^(חורף|חורפ\S*)$', [r'en-te-en|en-te-na|enten'], 'Winter `חֹרֶף` only for *en-te-en*'),
+    (r'^חרף$', [], 'defective `חרף`: write plene `חורף` (Winter) or `חירף` (taunt)'),
+    (r'^(זרע|זרעו|זרעה|זרעך|זרעם|זרעים|זרעי|זורע|זורעים|זורעת|יזרע|יזרעו|תזרע|תזרעו|לזרוע|זרוע|הזריע|הזריעה|מזריע|זריעה)$',
+     [r'numun|a ri|a-ri|\ba₂|zag'], '`זרע` only for *numun* / *a ri* (`זְרוֹעַ` "arm": *a₂*)'),
+    (r'^(קציר|קצירה|קצירו|קצירך|קצירם|קצר|קצרו|קוצר|קוצרים|קוצרת|יקצר|יקצרו|תקצר|תקצרו|לקצור|קצור|קצורה|קצרה|קצרים)$',
+     [r'buru₁₄|gur₁₀'], '`קציר` / `קצר` only for *buru₁₄* / *gur₁₀*'),
+    (r'^(קר|קור|קרה|קרים|קרות|קרירות)$', [r'sed₄|šed₇|ḫalba|sed\b'], '`קר` / `קור` only for *sed₄* (a cold word)'),
+    (r'^(חום|חם)$', [r'šeĝ₆|kum₂|izi|bil₂|ud'], '`חום` / `חם` only for a heat word'),
+    (r'^(לקט|ליקט|ליקטה|ליקטו|לוקט|לוקטים|לוקטות|מלקט|מלקטים|מלקטות|ילקט|ילקטו|תלקט|תלקטו|ללקט|לקטו|לקיטה)$',
+     [r'de₅'], '`לקט` only for *de₅* (= Akk. *laqātu*)'),
+    (r'^(גן|גנים|גני|גנה|גנו|גנות|גנן|גננים|גנני)$', [r'kiri₆'], '`גן` / `גנן` only for *kiri₆*'),
+    (r'^(מנחה|מנחת|מנחות|מנחתו|מנחתי|מנחתך|מנחותיו)$', [r'sa₂-dug₄'], '`מנחה` only for *sa₂-dug₄*'),
+    (r'^(עפר|עפרה|עפרו)$', [r'saḫar'], '`עפר` only for *saḫar*'),
+    (r'^(נח|נחו|ינוח|ינוחו|תנוח|הניח|הניחו|הנח|הניחי|מנוחה|לנוח|נוחו)$', [r'ne-ḫa|ne-ḫe|ne-eḫ'],
+     '`נח` / `הניח` / `מנוחה` only for *ne-ḫa* (Akk. *nēḫu*)'),
+    (r'^(נטע|נוטע|ניטע|נטעו|יטע|ייטע|לנטוע|נטיעה|נטעה)$', [], '`נטע` never (Gen 2:8, 9:20: literal `הֶעֱמִיד` / `בָּנָה`)'),
+    (r'^(קוץ|קוצים|קוצי|קוצים)$', [], '`קוץ` never (Gen 3:18)'),
+    (r'^(זעה|זיעה|זעת|זיעת)$', [], '`זיעה` never (Gen 3:19)'),
+    (r'^(עצב|עצבו|עצבה|עצבי|עצבך|עצבם)$', [], 'unvocalized `עצב` (the noun of Gen 3:16–17): the verb *dim₂* is plene `עיצב`'),
+    (r'^(ארור|ארורה|ארורים|אררה|אורר|אוררה)$', [], '`ארור` never (Gen 3:17)'),
+    (r'^(שבת|שבתו|ישבתו|ישבות|תשבות|שובת|שבתה|שבות)$', [], '`שבת` never (Gen 8:22; `לשבת` "to sit": write `לֵישֵׁב`)'),
+    (r'^(קין|קיין|הבל)$', [], '`קין` / `הבל` never'),
+    (r'^(תבה|תיבה|התבה|התיבה)$', [], '`תבה` never'),
+]
+# ordinary words that a prefix split would turn into a gated word (checked after stripping a leading ו / ה / וה)
+TOKEN_EXEMPT_5_7 = {'מגן', 'במגן', 'נוחה', 'בקר', 'בקרים', 'בקרו', 'בקרה', 'מקור', 'מקורו', 'מקורה', 'שקר', 'שקרים',
+                    'מקרה', 'לחם', 'לחמו', 'לחמה', 'לחמם', 'לחמי', 'לחמך', 'מעצב', 'מעצבת', 'מעצבים', 'מעצבות',
+                    'מנחה', 'מנחת', 'מנחות', 'מנחתו', 'הנחה', 'הגנה', 'כתבה', 'כתיבה', 'מכתבה', 'שגנו'}
+HEB_PREFIXES = ['', 'ו', 'ה', 'ב', 'ל', 'מ', 'כ', 'ש', 'וה', 'וב', 'ול', 'ומ', 'וכ', 'וש', 'שב', 'של', 'שה', 'כש',
+                'מה', 'לה', 'בה', 'כה', 'שמ', 'ושה', 'ושב', 'ושל', 'ומה', 'ובה', 'ולה', 'וכש']
 TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex): must carry niqqud when the name is there
     'אותו': ('Utu (אוּתוּ)', r'\butu\b'), 'אוטו': ('Uttu (אוּטּוּ)', r'uttu'),
     'איננה': ('Inana (אִינַנָּה)', r'inana|inanna'),
+    'שומר': ('Sumer (שׁוּמֶר)', r'ki-en-gi'), 'אור': ('Urim (אוּר)', r'urim'),
 }
 WRONG_FORMS = {  # stripped token (prefixes allowed) -> (correct form, transliteration regex): an error even when vocalized
     'אינאנה': ('Inana as `אִינַנָּה` (not `אִינַאנָּה`; harmonization 2026-10-21)', r'inana|inanna'),
@@ -147,6 +197,26 @@ def check_reserved(label, heb, tr, problems):
             problems.append(f'{label}: reserved string /{pat}/ in "{heb}"' + (f' (allowed only with {allow})' if allow else ''))
 
 
+def check_tokens_5_7(label, heb, tr, problems):
+    h = strip(FN.sub('', heb))
+    for pat, allow in RESERVED_5_7.items():
+        if re.search(pat, h) and not (allow and any(re.search(a, tr) for a in allow)):
+            problems.append(f'{label}: reserved string /{pat}/ in "{heb}"' + (f' (allowed only with {allow})' if allow else ''))
+    for tok in re.split(r'[\s,.;:!?"\'()\[\]–—…*⟨⟩{}]+', h):
+        for part in tok.split('־'):
+            if not part:
+                continue
+            # an exempt ordinary word is tested only as itself (with ו / ה), not by splitting off its first letters
+            exempt = part in TOKEN_EXEMPT_5_7 or re.sub(r'^(וה|ו|ה)', '', part) in TOKEN_EXEMPT_5_7
+            pres = ['', 'ו', 'ה', 'וה'] if exempt else HEB_PREFIXES
+            for pat, allow, what in TOKEN_GATES_5_7:
+                hit = any(part.startswith(pre) and re.search(pat, part[len(pre):]) for pre in pres
+                          if len(part) > len(pre))
+                if hit and not (allow and any(re.search(a, tr) for a in allow)):
+                    problems.append(f'{label}: "{part}" – {what}')
+                    break
+
+
 def check_traps(label, heb, problems, tr=''):
     for tok in re.split(r'[\s,.;:!?"\'()\[\]–—]+', FN.sub('', heb)):
         if not tok:
@@ -203,6 +273,8 @@ def verify(key, strict=False):
             pending += 1
             continue
         check_reserved(k, heb, e['tr'][0] if e['tr'] else '', problems)
+        if P.get('gates57'):
+            check_tokens_5_7(k, heb, e['tr'][0] if e['tr'] else '', problems)
         check_traps(k, heb, problems, e['tr'][0] if e['tr'] else '')
     if pending:
         (problems if strict else notes).append(f'{pending} entries not yet drafted')

@@ -325,7 +325,7 @@ Lemmas: ePSD2 citation forms (ORACC Q000778) or ETCSL forms. "Lines" lists the c
 | Duranki (*dur-an-ki*) | דּוּר־אַנְקִי | | "Bond of heaven and earth" (Akk. *riksi šamê u erṣeti*, KAR 4 24). | 7 |
 | Anuna; An; Enki / Nudimmud | הָאֲנוּנָּה; אַן; אֶנְקִי / נוּדִימּוּד | | §1, text 3. | 22, 70; 76; 32 / 44 |
 | Ninmena; Ninlil; Ninisina; Ninḫursaĝa; Šulpae | נִין־מֶנָּה; נִינְלִיל; נִין־אִיסִינָה; נִין־חֻרְסַגָּה; שׁוּלְפָּאֵה | | Ninmena "lady of the crown" (birth goddess). Šulpae's name contains *pa e₃* (1). | 27; 38; 42; 46; 48 |
-| Nisaba | נִיסָבָּה | | Flood corpus. | 33, 56, 109 |
+| Nisaba | נִיסַבָּה | | Flood corpus. | 33, 56, 109 |
 | Inana; Utu; Dumuzid; Ĝeštinana; Gibil | אִינַנָּה; אוּתוּ; דּוּמוּזִי; גֶּשְׁתִּין־אַנָּה; גִּיבִּיל | | Utu always vocalized (§1). Dumuzid as Adapa's Dumuzi. | 52; 54–55; 67; 71–72; 68 |
 | Šara | שַׁרָא | | **Always vocalized**: unvocalized `שרה` would read as Sarah; the final א keeps it apart. | 64 |
 | Nergal | נֵרְגַל | [cognate] (name) ↔ `וְאַנְשֵׁי כוּת עָשׂוּ אֶת נֵרְגַל` (מלכים ב יז:ל) | The biblical form is the same transcription. | 76 |
@@ -547,7 +547,7 @@ Akkadian lemmas: SEAL (checked with the eBL dictionary); Sumerian in the notes. 
 | Ullegarra, Annegarra | אוּלֶּגַרָּה, אַנֶּגַרָּה | [equivalent] ↔ ה:ב | "Placed for distant time", "whom An placed" (Sum. *ĝar*). | rev. 11 |
 | En-ul, Nin-ul | אֵן־אוּל, נִין־אוּל | | Primeval pair (*ul* "distant time"). | rev. 15 |
 | Bēlet-ilī (Sum. Aruru) | בֵּלֶת־אִילִי | | Flood corpus; Aruru in the apparatus. | rev. 17 |
-| Nisaba | נִיסָבָּה | | Text 4. | rev. 30; colophon B 1–2 |
+| Nisaba | נִיסַבָּה | | Text 4. | rev. 30; colophon B 1–2 |
 | Kidin-Sîn; Sutê; Aššur-bāni-apli | קִידִין־סִין; סוּטֵי; אַשּׁוּר־בָּנִי־אַפְלִי | | Colophons. | rev. 32; colophon B 9 |
 
 **Terms**

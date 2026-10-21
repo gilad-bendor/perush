@@ -7,7 +7,8 @@ reference, and rewrites everything after the line "## The table" in ../parallels
 kept). Atra-ḫasīs I rows citing Gen 1–5 (flood corpus) are appended as a cross-reference.
 Since 2026-10-17 it also reads project 2 (../2-טקסטי-בריאה-ועדן/project.md, "### Parallels index (<Text>)" tables,
 same columns) and labels every row with a short text siglum (EE = Enūma eliš; see SIGLA).
-Since 2026-10-19 it also reads projects 3 (B&F = Bird and Fish) and 4 (EWO = Enki and the World Order), same format.
+Since 2026-10-19 it also reads projects 3 (B&F = Bird and Fish) and 4 (EWO = Enki and the World Order), same format;
+since 2026-10-21 projects 5 (FI = the Farmer's Instructions), 6 (H&P = Hoe and Plough), 7 (S&W = Summer and Winter).
 """
 import os,re,sys
 A=os.path.dirname(os.path.abspath(__file__))
@@ -48,7 +49,8 @@ def sig(name):
 if os.path.exists(P2):
     rows+=[(sig(t),c) for t,c in tables(P2, r'^### Parallels index \((.+)\)\s*$')]
 # projects 3-4 (2026-10-19): Bird and Fish (B&F), Enki and the World Order (EWO); same table format
-for sub,sg in (("3-הציפור-והדג","B&F"),("4-אנקי-וסדר-העולם","EWO")):
+# projects 5-7 (2026-10-21): the Farmer's Instructions (FI), Hoe and Plough (H&P), Summer and Winter (S&W)
+for sub,sg in (("3-הציפור-והדג","B&F"),("4-אנקי-וסדר-העולם","EWO"),("5-הוראות-האיכר","FI"),("6-המעדר-והמחרשה","H&P"),("7-הקיץ-והחורף","S&W")):
     p3=os.path.join(A,"..",sub,"project.md")
     if os.path.exists(p3):
         rows+=[(sg,c) for t,c in tables(p3, r'^### Parallels index \((.+)\)\s*$')]
