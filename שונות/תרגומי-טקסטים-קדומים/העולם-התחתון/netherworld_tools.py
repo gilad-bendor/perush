@@ -99,6 +99,11 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, source regex)
     'ארשכיגל': ('Ereškigal (אֶרֶשְׁכִּיגַל)', r'ereš|aš-\(š\)rigingal'),
     'נמתר': ('Namtar (נַמְתָּר)', r'namtar'),
     'דומוזי': ('Dumuzi (דּוּמוּזִי)', r'dum[uū]zi|dumu-zid'),
+    # 2026-10-21 harmonization: words that read as other words unvocalized
+    'ציר': ('*ra-gaba* (צִיר; unvocalized also "hinge", "pang")', r'ra-gaba'),
+    'צירי': ('*ra-gaba* (צִירִי; unvocalized "my birth pangs")', r'ra-gaba'),
+    'צירה': ('*ra-gaba* (צִירָהּ)', r'ra-gaba'),
+    'פוך': ('*šembizid* (הַפּוּךְ; unvocalized `הפוך` "reversed")', r'šembizid'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')
@@ -123,6 +128,13 @@ FORMULAS = [
     ('IN', r'nam-tag', r'עוון', '*nam-tag* = עוון'),
     ('IN', r'tug₂-mu-dur₇-ra', r'בגד־אבל', '*tug₂-mu-dur₇-ra* = בגד־אבל'),
     ('IS', r'\[?k\]?arra \| labiš', r'מעטה אבל', '*karru* = מעטה אבל (Adapa)'),
+    # 2026-10-21 cross-corpus harmonization (renderings §10)
+    ('IN', r'za-gin₃', r'ספיר', '*za-gin₃* = ספיר'),
+    ('IS', r'uqn[iîû]', r'ספיר', '*uqnû* = ספיר'),
+    ('IN', r'šembizid', r'(^|\s)ה?פוך(\s|$)', '*šembizid* = פוך'),
+    ('IN', r'ra-gaba', r'(^|\s)ציר(י|ה)?(\s|$)', '*ra-gaba* = ציר'),
+    ('IN', r'^me mu-\[?un-ur₄', r'^את ה־מה אספה, אל ידה תלתה;$', '*me mu-un-ur₄-ur₄* = את הַ־מֶה אספה (EWO 65)'),
+    ('IN', r'^\[?siki\]?-ni ga-raš', r'היא קוטפת\.?$', '*ur₄* of hair = קוטפת'),
 ]
 
 
