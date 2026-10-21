@@ -17,3 +17,8 @@ archive.org
 web.archive.org
 isac-assets.s3.amazonaws.com
 library.oapen.org
+www.fadedpage.com
+# The archive tier of tools/sources_sync.py (old page scans, photos, articles: "fetch --all") also needs the hosts in
+# sources/fetch-recipes.tsv - and archive.org redirects downloads to changing hosts (dn….archive.org), so it works
+# only with "Full" network access. The translation work does not need it.
+el.wikisource.org

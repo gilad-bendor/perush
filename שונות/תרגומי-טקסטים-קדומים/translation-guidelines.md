@@ -4,6 +4,8 @@
 > It is the starting point for every Claude session that translates an ancient text in this folder, and it should get better with each one.
 > Every session that learns something reusable – a new source, a better tool, a translation decision that should apply everywhere, a mistake to avoid – **must update this file** (and add a line to the [Changelog](#changelog)).
 > Text-specific decisions belong in that text's project folder, not here. Only what generalizes belongs here.
+>
+> **Where the work stands** (what is done, what is next, the open decisions) is in [`STATUS.md`](STATUS.md): read it right after this file. If the git-ignored sources are missing (a fresh clone, a cloud session), restore them first: `python3 -I tools/sources_sync.py fetch` (§8).
 
 ---
 
@@ -40,11 +42,13 @@ Paths in this file that start with `tools/`, `sources/` or a corpus folder are r
 ```
 שונות/תרגומי-טקסטים-קדומים/
 ├── translation-guidelines.md        ← this file (living)
+├── STATUS.md                        ← where the work stands, what is next, the open decisions (read it second; keep it current)
 ├── domains.txt                      ← the web hosts these sessions need (for a cloud session's network allowlist; §4.6)
 ├── tools/                           ← reusable scripts (fetchers, converters)
 ├── הדפסה/                           ← one print stub per translation, mirroring the corpus folders (§7.4)
 ├── sources/                         ← raw material downloaded from the internet, one folder per SOURCE
 │   ├── .gitignore                   ← what is NOT committed to the public repo (see §8)
+│   ├── fetch-recipes.tsv            ← how to re-obtain the ignored files (§8); MANIFEST.json ← their checksums (generated)
 │   ├── <Source-name>/README.md      ← every source folder has one (format: §2.2)
 │   ├── Reference-tools/RESOURCES.md ← catalogue of dictionaries, grammars, APIs
 │   └── Comparative-studies/INDEX.md ← catalogue of comparative literature (flood ↔ Genesis)
@@ -264,14 +268,15 @@ Added 2026-10-20. Base texts:
 - **ETCSL**: the live site timed out (2026-10). Use the Oxford Text Archive bulk zip (`llds.ling-phil.ox.ac.uk`, item 2518) or the Wayback Machine.
 - **DFHG** (Greek fragments): `http://www.dfhg-project.org/DFHG/api.php?author=<NAME>`.
 - **Sefaria** `/api/words/<Hebrew>` returns Klein, BDB, Jastrow and Ben-Yehuda entries. Klein gives Akkadian cognates.
-- **Blocked to scripts**: Penn Museum object pages (403), the SOAS repository (download in a browser), some publisher pages (403). OAPEN serves a bot-check page first.
+- **Blocked to scripts**: Penn Museum object pages (403), the SOAS repository (download in a browser), some publisher pages (403). OAPEN serves a bot-check page first; for Wasserman 2020 the Wayback copy (`web.archive.org/web/2025id_/<url>`) is byte-identical.
+- **Seen while testing `tools/sources_sync.py` (2026-10-21):** Python's bundled CA store fails on ORACC's certificate chain (`CERTIFICATE_VERIFY_FAILED`); `curl` works, and the tool falls back to it. CDLI answered 503 to every request that day. archive.org downloads redirect to changing hosts (`dn….archive.org`), so a cloud session with a "Limited" allowlist cannot get them.
 - **ZORA** (University of Zurich repository; OBO volumes are open access there): the DSpace 7 API works from a script: `GET https://www.zora.uzh.ch/server/api/core/items/<uuid>?embed=bundles` → the ORIGINAL bundle's `bitstreams` → `_links.content.href` (the PDF). Check the item's rights fields: open access is not a licence.
 - **CCP** (Cuneiform Commentaries Project, Yale): per-text pages `https://ccp.yale.edu/P<number>` (introduction, transliteration, translation, notes) download with a browser User-Agent; © CCP. eBL quotes the same commentaries as `…Com…` / `…Quo…` manuscripts: check the museum number against CCP before calling one new.
 
 ## 5. Workflow for a new text project
 
 1. **Scope.** Define the text, version and line range. Create `<project-folder>/project.md`: scope, base edition, line numbering, the parallels that matter for the commentary, open decisions.
-2. **Secure the base text.** Search the corpora first: eBL (`python3 -I tools/ebl_fetch.py --list`), ORACC zips, ETCSL, SEAL. Only then look for printed editions. Save everything under `sources/` per §2.2 and **add it to §4 of this file**.
+2. **Secure the base text.** Search the corpora first: eBL (`python3 -I tools/ebl_fetch.py --list`), ORACC zips, ETCSL, SEAL. Only then look for printed editions. Save everything under `sources/` per §2.2 and **add it to §4 of this file**. If it is git-ignored, add its recipe to `sources/fetch-recipes.tsv` (unless a built-in rule of `tools/sources_sync.py` covers it) and run `python3 -I tools/sources_sync.py snapshot` (§8).
 3. **Gather 2–4 modern translations** (rank 3) and the philological commentary (rank 4) for the same lines.
 4. **Build the rendering glossary** (`renderings.md`) for recurring words, names and formulas *before* drafting (§6.6). Extend it as you go.
 5. **Draft line by line** into `annotated.rtl.md` (§7.2). For each line:
@@ -397,7 +402,8 @@ For long texts, work in sections (e.g. 20–40 lines per session) and record pro
 - **Claude Cloud sessions** (Claude Code on the web, started through the session operator) currently run on a special allowance: **expect no quotas, delays or limits.** There:
   - work at full speed, and don't throttle "to save quota";
   - **parallel sub-agents are allowed** where the work splits cleanly: different texts, or different corpora. Inside one corpus, keep the safeguards that made parallel work consistent (§5 "Several texts of one corpus in parallel sessions"): fix the shared renderings *before* the parallel drafting, never let two agents edit the same file (only the coordinator edits `renderings.md` and the indexes), and harmonize by script at the end;
-  - sequential chains remain right *within* one long text, where each translator must see the Hebrew of the earlier repeated lines (§11). Speed comes from running independent texts side by side, not from cutting the review passes.
+  - sequential chains remain right *within* one long text, where each translator must see the Hebrew of the earlier repeated lines (§11). Speed comes from running independent texts side by side, not from cutting the review passes;
+  - **commit and push to branch `main` after every milestone** (the user's instruction, 2026-10-21; cloud sessions only). A milestone is a source secured, the renderings fixed, a translator's section merged, a review pass done, a project or run finished, `STATUS.md` updated. Work on `main` itself, not on the session branch the cloud creates (`git push origin main`). A cloud VM can be reclaimed at any time, so whatever is not pushed can be lost. Parallel agents commit only their own files (`git commit -- <paths>`, never `-A`, never `docs/`), and `git pull --rebase origin main` before pushing when another agent has pushed first.
 - **If a cloud session does hit a quota, a rate limit or a forced delay** (an HTTP 429, "session limit", a usage cap, throttled agents), record it here at once: what happened, when, and after how much work. Then fall back to one agent at a time. This section must describe what is actually true.
 
 ## 6. Translation principles
@@ -647,6 +653,7 @@ The repository is **public** on GitHub. Therefore:
 - Their `README.md` files **are** committed, so anyone can re-obtain the material.
 - Committed: public-domain material, ETCSL composites (CC BY-NC-SA), ORACC data (CC0), DFHG (CC BY-SA), documentation, and our own work.
 - When adding a source: decide its status and **update `.gitignore` in the same step**.
+- **Ignored files must stay re-obtainable** (a fresh clone, a Claude Cloud session): `tools/sources_sync.py` restores them from `sources/fetch-recipes.tsv` (plus built-in rules for eBL, ORACC, SEAL and CDLI) and checks them against `sources/MANIFEST.json`. After adding an ignored source, add its recipe and run `snapshot`; commit the two files with the source's README. Never push the ignored content itself to any branch: a branch of a public repo is public, and a pushed blob is practically impossible to retract.
 - **Our translations are original work** and are committed. They may quote modern translations only briefly, in the apparatus, with attribution.
 - **CAD (ISAC)** terms forbid using its publications to compile datasets or train AI without permission. Consult it per word while translating; never bulk-extract it.
 - **eBL dictionary** (= CDA): "reproduction … not possible without the permission of the publisher". Query it per word. The generated `glossary.md` files stay local (they are under the gitignored `eBL/*/`).
@@ -706,6 +713,8 @@ More tools (2026-10-17, law and treaty corpus):
 - **`cdl2md.py --norm`**: adds a `norm:` line (the project's normalization of each word; SAAo, RINAP etc.) and prints the contextual sense after the guide word (`[(treaty-)oath=treaty]`).
 - **`oracc_html2tr.py`**: a saved ORACC per-text HTML view → Markdown translation (units labelled with the transliteration lines they span, section headings as `##`). `python3 -I tools/oracc_html2tr.py <in.html> <out.md> <title> <url>`. Use it for any ORACC project: the zips have no translations.
 - **Project tools in `חוקים-ובריתות/1-אמנת-הירושה-של-אסרחדון/`**: `build_data.py` + `make_parts.py` (align a composite with a later copy by the SAAo labels and cut per-part data files for the translators), `verify.py` (entries, one `>` per entry, **reserved words**, fixed formulas and key-lemma roots, identical normalizations), `build_translation.py` (clean translation with § headings and footnotes from a `הערת שוליים` field), `build_parallels_index.py` (corpus index, Deuteronomy grouped by chapter).
+
+- **`sources_sync.py`** (2026-10-21): re-obtains the git-ignored sources. `status` / `fetch` / `verify` (work tier by default; `--all` adds the archive tier of old scans and photos; `--only REGEX`, `--dest DIR`, `--jobs N`); `snapshot` rewrites `sources/MANIFEST.json` where the files are. The recipes are in `sources/fetch-recipes.tsv`. It reports `CHANGED` when an online edition changed since our copy, and names the hosts blocked by a cloud allowlist. Text files are compared with their "generated/retrieved" dates blanked. Never extracts `.exe`/`.dll` from a zip.
 
 When you write a tool that another session could reuse, put it here with a usage docstring and add a row to this table.
 
@@ -767,3 +776,4 @@ More tools (2026-10-20, the temple-building corpus, in `בניין-המקדש/`)
 - **2026-10-20** – New corpus **`קינות-על-ערים/`** (round 2, run 3): **the Lament for Ur** (ETCSL 2.2.2 / ORACC Q000379, all 442 lines, eleven *kirugu*, three files) and **the Curse of Agade** (ETCSL 2.1.5 / ORACC Q000375, the 284 OB lines and the 37 lines of the Ur III version, two files), five sequential sub-agents, three review passes each, verified by `lament_tools.py verify --strict`, translations generated, 475 parallels rows merged into `parallels-index.md` (Lamentations first) with key findings, print stubs. Corpus renderings fixed before drafting (refrains, Emesal, reserved genre-words) and merged after every run (§9). New sources (§4.4i): ETCSL 2.2.2, 2.1.5; ORACC Q000379, Q000375; Kramer 1940 (ISAC, open); records-only folder (Samet 2014, Cooper 1983 lending-only). New tools `lament_tools.py`, `build_parallels_index.py`, `translator-brief--laments.md` (§10). Lessons added to §5, §6.7, §11.
 - **2026-10-20** – New corpus **`בניין-המקדש/`** (round 2, run 4): **the Gudea Cylinders A and B** (ETCSL 2.1.7 / ORACC epsd2-royal Q000377, all 1,300 lines in seven files, RIME labels `A.i.1`–`B.xxiv.17`, concordance verified by script), seven sequential sub-agents, three review passes each, verified by `temple_tools.py verify GU --strict`, translation generated (120 footnotes), 561 parallels rows (Exodus first) with key findings, print stub. Corpus renderings fixed before drafting (the reserved Tabernacle words, the gated building words, the Ur-Namma justice formula) and merged after every run (§9). New sources (§4.4j): ETCSL 2.1.7, ORACC Q000377 (epsd2-royal; ETCSRI translation, CC BY-SA), Thureau-Dangin 1905/1907 (public domain), records-only folder (Edzard 1997, Hurowitz 1992 …). New tools `temple_tools.py` (incl. `conc`, `data`), `build_parallels_index.py`, `translator-brief--temple.md` (§10). Lessons added to §5, §6.7, §11.
 - **2026-10-21** – §5.1 added: the pace of local sessions (quota-limited, one agent at a time) vs. Claude Cloud sessions (a special allowance, so no quotas expected: full speed, parallel sub-agents across independent texts, with the corpus safeguards kept). Any limit met in the cloud is to be recorded in §5.1.
+- **2026-10-21** – Preparing for Claude Cloud: `STATUS.md` (the handoff file: what is done, what is next, the run brief, the cross-corpus open decisions), `tools/sources_sync.py` with `sources/fetch-recipes.tsv` and the generated `sources/MANIFEST.json` (238 items; re-obtains the git-ignored sources and checks them; §8, §10), access notes in §4.6.
