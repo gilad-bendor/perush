@@ -98,7 +98,12 @@ Vocalized at the first occurrence in each annotated file; afterwards plain spell
 - *gu₂* = `צַוָּאר` (runs 5–6); *kal* = `יָקָר`; *lu₂-kur₂* = `אִישׁ נָכְרִי`; *dim₂* = `עִצֵּב`; *uru₃* = `נָצַר`, *en-nu-uĝ₃* = `נְצִירָה`; *zid* (of persons) = `אִישׁ אֱמֶת`; *si sa₂* = `יֹשֶׁר`; *zeb* = `עָרֵב`, *ku₇* = `מָתוֹק`, *zil₂* = `נָעִים`; *mu-ud-na* = `בֶּן־זוּג` / `בַּת־זוּג`; *gi₄-in* = `שִׁפְחָה`; *ḫu-ru-um* = `נִבְעָר`; *lu₂-ki-inim-ma* = `עֵד`; *ḫi-li* = `חֵן` (= Akk. *kuzbu*, which project 1 renders `עֲגָבִים`: the Sumerian word is broader); *e₂-dub-ba-a* = `בֵּית הַלּוּחוֹת`.
 - The words `עוֹלָם`, `צֶדֶק` / `צַדִּיק`, `כְּסִיל` (without *lil₂*), `מָשָׁל` do not occur in the 500 lines. The project's own words: `2-משלים-שומריים/renderings.md`.
 
+**Project 3 (all 178 letter lines, 2026-10-21):**
+- The letter formulas confirmed and enforced: `אֶל X אֱמֹר:` (also when *u₃-na-dug₄* stands alone on its line), `זֶה אֲשֶׁר Y אוֹמֵר:` / `אוֹמֶרֶת:`, the second address *u₃-na-de₃-taḫ* = `הוֹסֵף:`, *a-ma-ru-kam* = `מַבּוּל הוּא!`; 5.5.1's *ĝiškim … ga-mu-ra-ab-šum₂* = `אוֹת … אֶתֵּן לְךָ:`.
+- *gi₄* "send" = `שָׁלַח`, "return" = `שׁוּב` (by sense); *ḫi-li* = `חֵן` (also in the proverbs: changed from `עֲגָבִים`); *zeb* = `עָרֵב`, *ku₇* = `מָתוֹק`; *tukum-bi X an-na-kam* = `אִם רְצוֹן X הוּא`; *mu sa₄* = `קָרָא שֵׁם` (*sa₄* = *nabû*); *giĝ₄* / *ma-na* / *gun₂* / *sila₃* = `שֶׁקֶל` / `מָנֶה` / `כִּכָּר` / `קַב`. The project's own words: `3-מכתבים/renderings.md`.
+
 ## Changelog
 - 2026-10-21: created by the run-7 coordinator before drafting.
 - 2026-10-21: §9 project 1 merged (the coordinator).
 - 2026-10-21: §9 project 2 merged; §3.2 formula and *mu-ud-na* corrected.
+- 2026-10-21: §9 project 3 merged.
