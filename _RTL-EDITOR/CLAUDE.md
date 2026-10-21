@@ -35,7 +35,7 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - The file tree keeps up with the disk: a file or folder created or deleted by anything else - git,
    ClaudeCode, the Finder - shows up within a second, and a tab whose file was deleted turns into
    the same "file not found" tab a reload would give it
-- Every Markdown file of the tree is kept as a readable HTML page under `../docs/_HTML-FROM-MD/` (committed, so GitHub Pages serves it),
+- Every Markdown file of the tree is kept as a readable HTML page under `../docs/_HTML-FROM-MD/` (published by GitHub Pages: `../docs` is a symlink to a worktree of the branch `auto-docs` - see `../scripts/ensure-docs-worktree.sh`, which `src/server.ts` runs at startup; `../scripts/commit-auto-docs.sh` commits and pushes it),
    re-rendered within a second of any change, with an `index.html` in every folder - see "The HTML mirror" below
 - `<כלול-בהדפסה מקור="..." מ="..." עד="..." כותרות="+1">` embeds another Markdown file into this one -
    on the page only, never on disk. See "Embedding one file in another" below
