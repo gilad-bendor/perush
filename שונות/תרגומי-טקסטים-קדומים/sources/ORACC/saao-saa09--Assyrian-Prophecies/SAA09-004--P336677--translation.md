@@ -1,0 +1,21 @@
+# SAA 9 004 (P336677), Parpola 1997, translation
+
+Web: https://oracc.museum.upenn.edu/saao/saa09/P336677/html
+
+Project translation extracted from the ORACC HTML view (rank 3 in our hierarchy; consult only after our own reading).
+Each paragraph: [first label – last label of the transliteration lines it translates] text. "## " = section heading.
+
+*((Beginning destroyed))*  
+**[2']** [Esarhaddo]n, king of Assyria, [......]  
+**[3']** I will [catch ... and wease]ls, (and)  
+**[4']** I will [cast them before] your feet.  
+**[5']** [As for yo]u, fe[ar] not! [......]  
+**[6']** I will v[anquish] the later [......]  
+**[7']** You shall ... yo[ur ......]  
+**[8']** [...] I will p[ut ......]  
+**[9']** [...] massive in [...]  
+*((Rest destroyed))*  
+
+---
+
+Adapted from Simo Parpola, Assyrian Prophecies (State Archives of Assyria, 9), 1997. Lemmatised by Mikko Luukko, 2012, as part of the AHRC-funded research project “Mechanisms of Communication in an Ancient Empire: The Correspondence between the King of Assyria and his Magnates in the 8th Century BC” (AH/F016581/1; University College London) directed by Karen Radner. The annotated edition is released under the Creative Commons Attribution Share-Alike license 3.0. Please cite this page as http://oracc.org/saao/P336677/.
