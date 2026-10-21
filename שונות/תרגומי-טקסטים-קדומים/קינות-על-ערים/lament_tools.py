@@ -76,6 +76,7 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     'אור': ('Urim / Ki-ur (אוּר)', r'urim|ki-ur₃'), 'אומה': ('Umma (אוּמָּה)', r'umma\{ki\}'),
     'באו': ('Bau (בָּאוּ)', r'ba-u₂'), 'אן': ('An (אַן)', r'(^|\s)an-(ne₂|ra|na)|\{d\}an\b'),
     'שומר': ('Sumer (שׁוּמֶר)', r'ki-en-gi'), 'כש': ('Keš (כֵּשׁ)', r'keš₃'), 'שרא': ('Šara (שַׁרָא)', r'šara'),
+    'ציר': ('*ra-gaba* (צִיר, always vocalized; 2026-10-21)', r'ra-gaba'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')
@@ -90,6 +91,15 @@ FORMULAS = [
     (r'en₃-še₃', r'עד מתי', '*en₃-še₃* = עד מתי'),
     (r'me-li-e-a', r'אוי לי', '*me-li-e-a* = אוי לי'),
     (r'nam\b.*ku₅|nam-ku₅|nam ku₅|na-aĝ₂\b.*kud', r'אר(ר|ור|רה|רו)', '*nam … ku₅* = ארר'),
+    # the cross-corpus harmonization (2026-10-21): one Hebrew per source word in all corpora
+    (r'za-gin₃', r'ספיר', '*za-gin₃* = סַפִּיר (decision 1)'),
+    (r'šu-ur₂-men', r'שורבין', '*šu-ur₂-men* = שׁוּרְבִּין (decision 3)'),
+    (r'ra-gaba', r'(^|[\s־])[והבלמכש]{0,2}ציר', '*ra-gaba* = צִיר (decision 4)'),
+    (r'sizkur₂', r'תפיל', '*sizkur₂* = תְּפִלָּה (decision 6)'),
+    (r'a-ra-zu', r'תחנון', '*a-ra-zu* = תַּחֲנוּן (decision 6)'),
+    (r'(^|[\s-])mušen($|[\s-])', r'צי?פו?ר', '*mušen* = צִפּוֹר (decision 7)'),
+    (r'guru₇', r'כרי', '*guru₇* = כְּרִי (decision 11)'),
+    (r'en₃-du(?![₀-₉])', r'זמר', '*en₃-du* = זִמְרָה (decision 12)'),
 ]
 
 

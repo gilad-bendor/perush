@@ -135,7 +135,7 @@ Words used only in this text (the shared terms are in `../renderings.md`). Table
 | *dub-la₂* | `מגדל־השער` | | ETCSL "pilaster" | 131 |
 | *an-zil gu₇* | `אוכלי תועבה` | [equivalent] Deut 14:3 | *ikkibu* | 132 |
 | *šag₄ izi … sag₃* | `בלב האש הִכָּה` | [equivalent] Ps 74:7 | | 133 |
-| *erin*; *šu-ur₂-men₅*; *za-ba-lum*; *taškarin* | `ארז`; `ברוש`; `עַרְעָר`; `תְּאַשּׁוּר` | [equivalent] Isa 60:13 | | 134 |
+| *erin*; *šu-ur₂-men₅*; *za-ba-lum*; *taškarin* | `ארז`; `שׁוּרְבִּין`; `עַרְעָר`; `תְּאַשּׁוּר` | [equivalent] Isa 60:13 | *šu-ur₂-men₅* = *šurmēnu* = `שׁוּרְבִּין` (2026-10-21; was `ברוש`, which stays *li*) | 134 |
 | *KUM … sur-sur* | `… *סחט וסחט*` | | | 135 |
 | *mi-si-IŠ*; *{kuš}lu-ub₂-šir* | `קופות`; `שקי־עור` | | | 136–137 |
 | *kug-dim₂*; *za-dim₂*; *simug*; *tu₁₁* | `מעצבי־הכסף`; `מעצבי־האבנים`; `הנפח`; `הלם` | [equivalent] Isa 41:7 | figura etymologica kept | 139–141 |
@@ -156,7 +156,7 @@ Words used only in this text (the shared terms are in `../renderings.md`). Table
 | *ŠID-ŠID*; *buru₅{mušen}*; *ki … us₂* | `*בלהקות*`; `דרור`; `אל הארץ הגיע` | [divergence] Deut 28:49 | *buru₅* = `דרור` (also 220) | 158 |
 | *a₂-bi gu maš₂-anše-gin₇ … la₂* | `זרועם – כחבל לבהמות – מתחו` | [equivalent] Hos 7:12; Hab 1:15 | *gu* "cord" = `חבל`; *la₂* = `מתח` | 159 |
 | *a₂-bi la-ba-ra-e₃*; *la-ba-an-da₁₃-da₁₃* | `מזרועם לא יצא`; `זרועם לא הרפתה` | [equivalent] Amos 9:1 | *da₁₃* = *taka₄*: `הרפתה` (script; open decision 3) | 160–161 |
-| *lu₂-kiĝ₂-gi₄-a*; *ra-gaba* | `שליח`; `רץ` (`ספינת הרץ`) | [equivalent] Isa 33:8, 21; Jer 51:31 | | 162–163 |
+| *lu₂-kiĝ₂-gi₄-a*; *ra-gaba* | `שליח`; `צִיר` (`ספינת הַצִּיר`) | [equivalent] Isa 33:8, 21; Jer 51:31; Prov 13:17; Isa 18:2 | *ra-gaba* = `צִיר`, always vocalized (2026-10-21; was `רץ`) | 162–163 |
 | *ud₅ gen₆ {d}en-lil₂-la₂* | `העזים הנכונות של אנליל` | [equivalent] Jer 13:17 | *gen₆* = `נכון` (run 4) | 164 |
 | *ra* (of animals, with *-ta-*) | `הִכּוּ (החוצה)` | | deviation from *ra* = `מחץ` (open decision 10) | 164–165 |
 | *us₂* (causative, of herdsmen) | `הדביק (אחריהן)` | | creation §7 *us₂* = `דבק` | 164–165 |
@@ -249,3 +249,7 @@ Words used only in this text (the shared terms are in `../renderings.md`). Table
 | *kur erin* (C10) | `הר הארזים` | | ≈ 112 *kur-{ĝiš}erin-kud* | C10 |
 | *ugur₂*; *dugud* (C12) | `שדה־שלחין`; `כבדים` | | ≈ 127 | C12 |
 | *al-e … šub* (D2); *ba-gul* (D3) | `במעדר הפיל`; `נהרס` | | ≈ 125 *ra*, 126 *kur₂* | D2–D3 |
+| **2026-10-21 harmonization** (the lead's cross-corpus decisions) | | | | |
+| *za-gin₃* | `סַפִּיר` (unchanged) | [equivalent] Exod 24:10; Ezek 1:26; Job 28:6; Lam 4:7 | first-occurrence note added (lapis lazuli, not the modern sapphire) | 27, 110 |
+| *šu-ur₂-men₅* | `שׁוּרְבִּין` (was `ברוש`) | | = *šurmēnu*; cognate of `שׁוּרְבִּינָא`; `בְּרוֹשׁ` = *li* | 134 |
+| *ra-gaba* | `צִיר` (was `רץ`), always vocalized | [equivalent] Prov 13:17; Isa 18:2 | `שליח` stays *lu₂-kiĝ₂-gi₄-a* | 163 |

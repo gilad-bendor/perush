@@ -241,7 +241,7 @@ Words used only in this text (the shared terms are in `../renderings.md`). Table
 | *mu-un-gur₁₁* | `רכוש` | | Emesal *niĝ₂-gur₁₁* | 275–279 |
 | *buru₄{mušen}-dugud* | `להקת עורבים כבדה` | [cognate via *āribu*]; [equivalent] Prov 23:5 | | 275 |
 | *zig₃* | `קם` (275, 320); `מעלות` (301) | [equivalent] Amos 5:2 (320) | by sense | 275, 301, 320 |
-| *kug za za-gin₃ … bir-bir* | `כספי, אבניי וספיריי – … מתפזרים` | [equivalent] Lam 4:1 | | 278 |
+| *kug za za-gin₃ … bir-bir* | `כספי, אבניי וְסַפִּירַיי – … מתפזרים` | [equivalent] Lam 4:1 | | 278 |
 | *gi₁₆-sa … sug … gu₇* | `אוצרי – האגם … אכלו ממני` | [divergence] Lam 1:10 | ≈ 132 | 279 |
 | *lu₂ X nu-zu-u₃-ne … si* | `אנשים שאינם יודעים X … מילאו` | [equivalent] Deut 28:33; [divergence] Exod 28:41 | *si* = `מילא` tagged | 280, 281 |
 | *buru₅ mušen* | `דְּרוֹרַי, ציפוריי` | [divergence] Ps 84:4 | open decision 11 | 282 |
@@ -372,3 +372,6 @@ Words used only in this text (the shared terms are in `../renderings.md`). Table
 | *ud ḫul du₃* | `הסערה הרעה הוקמה` | | *du₃* = `הקים` (run 2) | 435 |
 | *šag₄ kalam-ma ĝal₂-la-zu* | `לב הארץ, אשר לך` | | | 436 |
 | *me-teš₂ … i* | `שבח יעלה` | [equivalent] Ps 147:12; 102:22 | ≠ *za₃-mi₂* `תהילה` | 437 |
+| **2026-10-21 harmonization** (the lead's cross-corpus decisions) | | | | |
+| *za-gin₃* | `סַפִּיר` (unchanged) | [equivalent] Exod 24:10; Ezek 1:26; Job 28:6; Lam 4:7 | first-occurrence note added (lapis lazuli, not the modern sapphire) | 278 |
+| *ur₄-ur₄* (of the storm's hand) | `הקוטפת` (unchanged) | | the harvest sense of *ur₄* (`קָטַף`); *ur₄* "gather" = `אָסַף` elsewhere | 197 |
