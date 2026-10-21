@@ -439,3 +439,40 @@ describe("the page index", () => {
         expect(out.slice(out.indexOf("@media print"))).toContain(".page-index { display: none; }");
     });
 });
+
+describe("HTML comments on lines of their own", () => {
+    const page = (content: string, path = "a.rtl.md") => renderMarkdownPage(content, path);
+    const body = (content: string, path?: string) => page(content, path).split("<main>")[1] ?? page(content, path);
+
+    test("are dropped from a right-to-left page, with what is between them", () => {
+        const html = body("<!--\nGENERATED FILE. Do not edit.\n  -->\n\n# כותרת\n\nשורה");
+        expect(html).not.toContain("GENERATED");
+        expect(html).not.toContain("&lt;!--");
+        expect(html).toContain("שורה");
+    });
+
+    test("whitespace around the markers is allowed, and a paragraph is interrupted", () => {
+        const html = body("שורה א\n  <!--  \nהערה\n\t-->\nשורה ב");
+        expect(html).not.toContain("הערה");
+        expect(html).toContain("שורה א");
+        expect(html).toContain("שורה ב");
+    });
+
+    test("a comment sharing a line with anything else stays", () => {
+        expect(body("<!-- הערה\n-->\n\nשורה")).toContain("הערה");
+        expect(body("<!--\nהערה -->\n\nשורה")).toContain("הערה");
+        expect(body("<!-- הערה -->\n\nשורה")).toContain("הערה");
+    });
+
+    test("an unclosed comment stays", () => {
+        expect(body("<!--\nהערה\n\nשורה")).toContain("הערה");
+    });
+
+    test("a comment inside a code fence stays", () => {
+        expect(body("```\n<!--\nהערה\n-->\n```\n\nשורה")).toContain("הערה");
+    });
+
+    test("a left-to-right page keeps it", () => {
+        expect(body("Line\n\n<!--\nnote\n-->\n", "a.md")).toContain("note");
+    });
+});
