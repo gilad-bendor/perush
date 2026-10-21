@@ -176,8 +176,9 @@ PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|
 FN = re.compile(r'\[\^[^\]]+\]')
 # fixed formulas: (regex on the transliteration, required regex on the stripped `>` line, description)
 FORMULAS = [
-    (r'-ra u₃-na(-a)?-dug₄', r'אמור:?', 'letter opening *X-ra u₃-na-dug₄* = `אל X אֱמֹר:` (renderings §3.3)'),
-    (r'na-ab-be₂-a$', r'^זה אשר .* אומר:$', 'letter opening *Y na-ab-be₂-a* = `זֶה אֲשֶׁר Y אוֹמֵר:`'),
+    (r'(-ra u₃-na(-a)?-dug₄|^u₃-na(-a)?-dug₄$|^\S+ u₃-na(-a)?-dug₄$)', r'אמור:?', 'letter opening *X-ra u₃-na-dug₄* = `אל X אֱמֹר:` (renderings §3.3)'),
+    (r'na-ab-be₂-a$', r'^זה אשר .* אומר(ת)?:$', 'letter opening *Y na-ab-be₂-a* = `זֶה אֲשֶׁר Y אוֹמֵר:`'),
+    (r'u₃-na-de₃-taḫ', r'הוסף:', 'letter opening (second address) *u₃-na-de₃-taḫ* = `הוֹסֵף:`'),
     (r'a-ma-ru-kam', r'מבול הוא!', 'letter closing *a-ma-ru-kam* = `מַבּוּל הוּא!`'),
     (r'niĝ₂-gig', r'תועבת|תועבה', '*niĝ₂-gig* = `תּוֹעֵבָה`'),
     (r'ezen nu-(ub-)?tuku', r'אין לו חג', '*ezen nu-tuku* = `אֵין לוֹ חַג`'),
