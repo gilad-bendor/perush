@@ -35,8 +35,13 @@ Deut 11); the peace of the beasts (Isa 11:6–9; 65:25).
 
 ## Open decisions
 Collected per part below ("Open decisions (EA1)" … "(EA4)"). The ones that matter most for the commentary:
-EA1 – the tense of 134–155 (decided by the forms: past) and *nam-šub* `קסם`; EA4.1 – 501 "his mouth" or "the matter"
+EA1 – the tense of 134–155 (decided by the forms: past); *nam-šub* `קסם` – **settled 2026-10-21** (the lead's
+cross-corpus harmonization: *nam-šub* = *tu₆* = *šiptu* = `קֶסֶם`, Akk. *tû* = `לַחַשׁ`); EA4.1 – 501 "his mouth" or "the matter"
 was heavy; EA4.3 – 540 "a peg"; EA3.3 – *ur* "dog" or "champion".
+
+**Cross-corpus harmonization (the lead, 2026-10-21)** – applied, see `../renderings.md` §9.6: 363 *ra₂-gaba* `רַכָּב` →
+`צִיר`; 401 and D *šu-ur₂-men₂* `שׁוּרְמֵן` → `שׁוּרְבִּין`; *za-gin₃* `סַפִּיר` (the [equivalent] note at 18), *šembi₂-zid*
+`פּוּךְ` (66, 590), *nam-šub* `קֶסֶם`, *en₃-du* `זִמְרָה`, *guru₇* `כְּרִי` kept (settled).
 
 ## Progress
 All four parts drafted and reviewed (three passes each) on 2026-10-21; `translation.rtl.md` built (641 lines);
@@ -131,7 +136,8 @@ All four parts drafted and reviewed (three passes each) on 2026-10-21; `translat
 | 33 | en šag₄-ge pad₃-da {d}inana-ke₄ | האדון שבלב נמצא, של אִינַנָּה | `בִּקֵּשׁ יְהוָה לוֹ אִישׁ כִּלְבָבוֹ` (שמואל א יג:יד) | equivalent | The king chosen in the deity's heart. |
 | 43 | e₂ an-ta [ed₃-da] | בית ש[ירד] מן השמים | `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה` (בראשית כח:יב); `וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם` (בראשית יא:ד) | divergence | A house from heaven (ETCSL) or reaching heaven (Mittermayer); verb restored. |
 | 48 | gu₂ ĝiš ḫa-ma-[ĝa₂-ĝa₂] | צוואר לעץ לי [תָּשִׂים] | `וְאַדִּירֵיהֶם לֹא הֵבִיאוּ צַוָּרָם בַּעֲבֹדַת אֲדֹנֵיהֶם` (נחמיה ג:ה) | equivalent | Submission as the neck under the yoke. |
-| 66 | šembi₂-zid-da-ni | שֶׁפּוּךְ עיניה לאמא־אושומגל־אנה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל) | equivalent | Eye-paint of a woman for her lover (Dumuzi). |
+| 18 | {na₄}lagab za-gin₃-na | גושי סַפִּיר | `וְתַחַת רַגְלָיו כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר` (שמות כד:י); `כְּמַרְאֵה אֶבֶן סַפִּיר דְּמוּת כִּסֵּא` (יחזקאל א:כו); `מְקוֹם סַפִּיר אֲבָנֶיהָ וְעַפְרֹת זָהָב לוֹ` (איוב כח:ו) | equivalent | *za-gin₃* = *uqnû* = `סַפִּיר`: the biblical stone is lapis lazuli, not the modern sapphire; the stone of Aratta, of a god's beard (209) and of Inana's house E-zagin (559), as of the throne and pavement of Exod 24 / Ezek 1 (harmonization 2026-10-21). |
+| 66 | šembi₂-zid-da-ni | שֶׁפּוּךְ עיניה לאמא־אושומגל־אנה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל); `כִּי תִקְרְעִי בַפּוּךְ עֵינַיִךְ לַשָּׁוְא תִּתְיַפִּי` (ירמיהו ד:ל) | equivalent | Eye-paint of a woman for her lover (Dumuzi); *šembi(zid)* = `פּוּךְ` in all corpora (harmonization 2026-10-21). |
 | 69 | na ga-e-de₅ na de₅-ĝu₁₀ ḫe₂-e-dab₅ | עצה אתן לך – את עצתי תקבל | `עַתָּה שְׁמַע בְּקֹלִי אִיעָצְךָ` (שמות יח:יט) | equivalent | The counsellor's formula; repeated at 626. |
 | 71 | kiĝ₂-gi₄-a inim zu | שליח – יודע דבר | `וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים לְפָנָיו אֶל עֵשָׂו אָחִיו` (בראשית לב:ד) | equivalent | The messenger as envoy; `מַלְאָךְ` reserved. |
 | 75 | šušin{ki}-e kur an-ša₄-an{ki} | שׁוּשַׁן – עד ארץ אַנְשָׁן | `וַאֲנִי הָיִיתִי בְּשׁוּשַׁן הַבִּירָה` (נחמיה א:א) | equivalent | Susa in its biblical form. |
@@ -214,7 +220,7 @@ All four parts drafted and reviewed (three passes each) on 2026-10-21; `translat
   *taraḫ-maš* `תיש־היעל`; *muš-saĝ-kal* `הנחש המובחר`; *{d}lamma* `אֵלַת־הַמָּגֵן`; *ad₆* `פגר`; *guru₇* `כרי`;
   *al-kad₅* `רשתות־המשא`; *anše barag la₂-e* `חמורי־המשא`; *anše-bal* `חמורי־חילוף`; *tukum-bi* `אם`; *i₃-ge-en*
   `אם אכן` / `אכן`.
-- The answer formula 208–217 (for 526–535): `מה שתאמר לי – כשתאמר,` / `לזה שנזרע? מבעל זקן־הספיר [הקשור],` /
+- The answer formula 208–217 (for 526–535): `מה שתאמר לי – כשתאמר,` / `לזה שנזרע? מבעל זקן־הַסַּפִּיר [הקשור],` /
   `שפרתו החזקה בהר הַ־מֶה הזכים [ילדה],` / `שעל עפר ארטה [גדל],` / `שמדד הפרה הנאמנה חלב [ינק],` / `ההולם נסיכות
   בכולבה, הר הַ־מֶה הגדולים –` / `לאנמרכר בן אוּתוּ –` / `את הדבר הזה – במקדש אאנה – כדבר טוב אומר לו;` / `בגיפר
   שלו, הנושא תנובה כעץ־מס צעיר,` / `למלכי, אדון כולבה – לידו אשיבנו!"`.
@@ -295,12 +301,12 @@ All four parts drafted and reviewed (three passes each) on 2026-10-21; `translat
 - *ur* `כלב` (457–475; and 290); *ur-gir₁₅* `כלב` (138): two Sumerian words, one Hebrew – recorded.
 - The sceptre strings 340–346 (for 382–388, 409–411): `'בשרביטי – שורשו: הַ־מֶה של הנסיכות;` / `ענפיו – על כולבה –
   לצל עושה;` / `בענפיו המנצנצים – במקדש אאנה –` / `אִינַנָּה הטהורה – מתקררת בהם;` / `את השרביט – כשיקטום (ממנו) –
-  בידו יהיה!` / `כמחרוזת אודם, כמחרוזת ספיר – בידו יהיה!` / `אדון ארטה – לפניי – יוביל!' – אמור לו!"`.
+  בידו יהיה!` / `כמחרוזת אודם, כמחרוזת סַפִּיר – בידו יהיה!` / `אדון ארטה – לפניי – יוביל!' – אמור לו!"`.
 - *ĝidru* `שרביט`; *gi* `קנה`; *gi su-lim* `קנה־הזוהר`; *im* `טיט`; *dub* `לוח`; *gi-gag* `קולמוס־הקנה`; *munu₄*
-  `מַלְת`; *lidga* `מידת־הלִידְגָּה`; *šag₄-ĝar* `רעב`; *šag₄-tam* `שַׁגְתָּם`; *ra₂-gaba* `רַכָּב`; *aĝrig*
+  `מַלְת`; *lidga* `מידת־הלִידְגָּה`; *šag₄-ĝar* `רעב`; *šag₄-tam* `שַׁגְתָּם`; *ra₂-gaba* `צִיר` (was `רַכָּב`; harmonization 2026-10-21, always vocalized); *aĝrig*
   `נאמן־הבית`; *itima* `החדר הפנימי`; *ab-ba-ab-ba* `הזקנים`; *ušumgal* `דרקון`; *edin* `ערבה`; *kaskal* `דרך`;
   *ḫar-ra-an* `דרך` (both!); *gug* `אודם`; *na₄-gug-ĝiš-dili* `מחרוזת אודם`; the trees `צפצפה`, `עץ־השִׁים־גִּיג`,
-  `ארז`, `שׁוּרְמֵן`, `חַשׁוּר`, `תמר`, `הָבְנִים`, `ערער`, `צפצפת־הפרת`; *nam-me* `לא יהיה`; colours *gig₂* `שחור`,
+  `ארז`, `שׁוּרְבִּין` (was `שׁוּרְמֵן`; harmonization 2026-10-21), `חַשׁוּר`, `תמר`, `הָבְנִים`, `ערער`, `צפצפת־הפרת`; *nam-me* `לא יהיה`; colours *gig₂* `שחור`,
   *babbar* `לבן`, *su₄* `אדום`, *dara₄* `חום`, *sig₇-sig₇* `ירוק־צהוב`, *gun₃-gun₃* `מנומר`.
 - *i₃-ne-eš₂* `ועתה`; *lu₂ lu₂-ra* `איש לאיש`; *ur₅ ḫe₂-en-na-nam-ma-am₃* `כך אכן היה` (confirmed).
 
@@ -316,6 +322,7 @@ All four parts drafted and reviewed (three passes each) on 2026-10-21; `translat
 | 357 | šeĝx an-na ud ĝal₂-la-gin₇ | כמטר השמים וכאור היום | `יִפְתַּח יְהוָה לְךָ אֶת אוֹצָרוֹ הַטּוֹב אֶת הַשָּׁמַיִם לָתֵת מְטַר אַרְצְךָ בְּעִתּוֹ` (דברים כח:יב) | equivalent | Rain as the source of plenty. |
 | 360 | aratta{ki} šag₄-ĝar-ra-ni am₃-la₂-[la₂] | ארטה – רעבונה הוקל | `וַיְהִי רָעָב בְּכָל הָאֲרָצוֹת וּבְכָל אֶרֶץ מִצְרַיִם הָיָה לָחֶם` (בראשית מא:נד); `וְכָל הָאָרֶץ בָּאוּ מִצְרַיְמָה לִשְׁבֹּר אֶל יוֹסֵף` (בראשית מא:נז) | equivalent | The land of grain feeds the starving land – grain as power. |
 | 360 | … šag₄-ĝar … | רעבונה הוקל | `וַיִּשְׁבֹּר לְמִצְרַיִם` (בראשית מא:נו) | divergence | Joseph sells the grain; Enmerkar sends it as a gift-challenge. |
+| 363 | ra₂-gaba | צִיר | `מַלְאָךְ רָשָׁע יִפֹּל בְּרָע וְצִיר אֱמוּנִים מַרְפֵּא` (משלי יג:יז) | equivalent | *ra-gaba* (a loan from Akk. *rākibu* "rider") = `צִיר`, the Bible's word for a king's envoy, beside the messenger *kiĝ₂-gi₄-a* `שָׁלִיחַ` (harmonization 2026-10-21; earlier `רַכָּב`). |
 | 372 | {na₄}gug lul-[la-me-a] ga-mu-na-dur₂-ru-ne-en-de₃-en | באודם של מרמה – נשתטח | `וַיִּשְׁתַּחוּ אַרְצָה שֶׁבַע פְּעָמִים עַד גִּשְׁתּוֹ עַד אָחִיו` (בראשית לג:ג) | equivalent | Prostration before the senior; "in deceit" (Mittermayer) or "in hunger" (ETCSL). |
 | 374 | zag e₂-ĝar₈-e bi₂-ib-us₂-eš | לצד הקיר נשענו | `וַיַּסֵּב חִזְקִיָּהוּ פָּנָיו אֶל הַקִּיר` (ישעיהו לח:ב) | equivalent | Turning to the wall in distress (our proposal). |
 | 390 | itima?-a … ba-an-kur₉ šag₄-ka-tab-ba ba-an-nu₂ | אל החדר הפנימי … נכנס; בצום שכב | `וַיִּשְׁכַּב עַל מִטָּתוֹ וַיַּסֵּב אֶת פָּנָיו וְלֹא אָכַל לָחֶם` (מלכים א כא:ד); `וַיָּצָם דָּוִד צוֹם וּבָא וְלָן וְשָׁכַב אָרְצָה` (שמואל ב יב:טז) | equivalent | The king lying fasting in his inner room. |
@@ -448,7 +455,7 @@ All four parts drafted and reviewed (three passes each) on 2026-10-21; `translat
 | 585 | en₃-du-ni … ba-dug₃ | זמרתה – … – ערבה | `יֶעֱרַב עָלָיו שִׂיחִי` (תהלים קד:לד) | equivalent | A song "sweet" to its hearer. |
 | 587 | šir₃ mu-ni-in-dug₄ | שיר דיברה | `עוּרִי עוּרִי דַּבְּרִי שִׁיר` (שופטים ה:יב) | equivalent | "Speak a song". |
 | 589 | ki-sikil ud-da-na til-la-gin₇ | כעלמה שימיה מלאו | `וְהִנֵּה עִתֵּךְ עֵת דֹּדִים` (יחזקאל טז:ח) | equivalent | The maiden ready for love. |
-| 590 | šembi₂-zid-da igi-na mu-un-gun₃ | בפוך – את עיניה נימרה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל) | equivalent | Painting the eyes. |
+| 590 | šembi₂-zid-da igi-na mu-un-gun₃ | בפוך – את עיניה נימרה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל); `כִּי תִקְרְעִי בַפּוּךְ עֵינַיִךְ לַשָּׁוְא תִּתְיַפִּי` (ירמיהו ד:ל) | equivalent | Painting the eyes. |
 | 592 | iti₆-gin₇ mu-un-e₃ | כאור הירח – יצאה | `יָפָה כַלְּבָנָה בָּרָה כַּחַמָּה` (שיר השירים ו:י) | equivalent | The beloved like the moon. |
 | 594 | en-me-er-kar₂ barag-ge₄ mu-un-da-ab-si | אנמרכר – את הכס עמה מילא | `נִצְּבָה שֵׁגַל לִימִינְךָ בְּכֶתֶם אוֹפִיר` (תהלים מה:י) | equivalent | The goddess/queen beside the king on the throne. |
 | 596 | im-da-lu-lu aratta{ki}-aš u₈-da sila₄-bi | רבו לארטה – רחלים עם טלאיהן | `שְׁגַר אֲלָפֶיךָ וְעַשְׁתְּרוֹת צֹאנֶךָ` (דברים כח:ד) | equivalent | Fertility of the flocks. |

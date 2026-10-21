@@ -105,6 +105,7 @@
 | שמות ה:ח | EA 617 | eš₂-gar₃ … du₃ | את המכסה – הקים | `וְאֶת מַתְכֹּנֶת הַלְּבֵנִים אֲשֶׁר הֵם עֹשִׂים תְּמוֹל שִׁלְשֹׁם` (שמות ה:ח) | equivalent | The work quota (*iškaru*). |
 | שמות יח:יח | EA 501 | (Mittermayer: inim i₃-dugud) | (הדבר כבד) | `כִּי כָבֵד מִמְּךָ הַדָּבָר לֹא תוּכַל עֲשֹׂהוּ לְבַדֶּךָ` (שמות יח:יח) | divergence | Mittermayer's reading; the solution there is division of labour. |
 | שמות יח:יט | EA 69 | na ga-e-de₅ na de₅-ĝu₁₀ ḫe₂-e-dab₅ | עצה אתן לך – את עצתי תקבל | `עַתָּה שְׁמַע בְּקֹלִי אִיעָצְךָ` (שמות יח:יט) | equivalent | The counsellor's formula; repeated at 626. |
+| שמות כד:י | EA 18 | {na₄}lagab za-gin₃-na | גושי סַפִּיר | `וְתַחַת רַגְלָיו כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר` (שמות כד:י); `כְּמַרְאֵה אֶבֶן סַפִּיר דְּמוּת כִּסֵּא` (יחזקאל א:כו); `מְקוֹם סַפִּיר אֲבָנֶיהָ וְעַפְרֹת זָהָב לוֹ` (איוב כח:ו) | equivalent | *za-gin₃* = *uqnû* = `סַפִּיר`: the biblical stone is lapis lazuli, not the modern sapphire; the stone of Aratta, of a god's beard (209) and of Inana's house E-zagin (559), as of the throne and pavement of Exod 24 / Ezek 1 (harmonization 2026-10-21). |
 | שמות כז:כ | EA 432 | i₃ li i₃ li₂ | שמן משובח, שמן כתוש | `שֶׁמֶן זַיִת זָךְ כָּתִית לַמָּאוֹר` (שמות כז:כ) | equivalent | Beaten oil. |
 | שמות ל:ט | EA 249 | a bal-bal-am₃ | מים מנסכים | `וְנֵסֶךְ לֹא תִסְּכוּ עָלָיו` (שמות ל:ט) | equivalent | Libation. |
 | שמות לא:יח | EA 455 | inim-ma dub maḫ-gin₇ šu mu-na-an-sig₁₀ | את הדבר – כלוח נשגב – בידו נתן | `וַיִּתֵּן אֶל מֹשֶׁה ... שְׁנֵי לֻחֹת הָעֵדֻת` (שמות לא:יח) | equivalent | The word given "like a tablet" – before writing exists in the story. |
@@ -153,8 +154,8 @@
 | מלכים א ה:ט | EA 320 | {d}nisaba nin ĝeštug₂ daĝal-la-ke₄ | נִיסַבָּה, הגבירה רחבת הבינה | `וְרֹחַב לֵב כַּחוֹל אֲשֶׁר עַל שְׂפַת הַיָּם` (מלכים א ה:ט) | equivalent | "Breadth" of understanding. |
 | מלכים א ה:ט | EA 420 | en-me-er-kar₂-ra {d}en-ki-ke₄ ĝeštug₂ mu-na-an-šum₂ | לאנמרכר – אנקי – בינה נתן | `וַיִּתֵּן אֱלֹהִים חָכְמָה לִשְׁלֹמֹה וּתְבוּנָה הַרְבֵּה מְאֹד` (מלכים א ה:ט) | equivalent | A god gives a king wisdom – here to answer a riddle. |
 | מלכים א כא:ז | SB I.13 | šarru-u-ta lu-u e-pu-uš | מלכות אכן עשיתי | `אַתָּה עַתָּה תַּעֲשֶׂה מְלוּכָה עַל יִשְׂרָאֵל` (מלכים א כא:ז) | equivalent | "To do kingship". |
-| מלכים ב ט:ל | EA 66 | šembi₂-zid-da-ni | שֶׁפּוּךְ עיניה לאמא־אושומגל־אנה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל) | equivalent | Eye-paint of a woman for her lover (Dumuzi). |
-| מלכים ב ט:ל | EA 590 | šembi₂-zid-da igi-na mu-un-gun₃ | בפוך – את עיניה נימרה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל) | equivalent | Painting the eyes. |
+| מלכים ב ט:ל | EA 66 | šembi₂-zid-da-ni | שֶׁפּוּךְ עיניה לאמא־אושומגל־אנה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל); `כִּי תִקְרְעִי בַפּוּךְ עֵינַיִךְ לַשָּׁוְא תִּתְיַפִּי` (ירמיהו ד:ל) | equivalent | Eye-paint of a woman for her lover (Dumuzi); *šembi(zid)* = `פּוּךְ` in all corpora (harmonization 2026-10-21). |
+| מלכים ב ט:ל | EA 590 | šembi₂-zid-da igi-na mu-un-gun₃ | בפוך – את עיניה נימרה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל); `כִּי תִקְרְעִי בַפּוּךְ עֵינַיִךְ לַשָּׁוְא תִּתְיַפִּי` (ירמיהו ד:ל) | equivalent | Painting the eyes. |
 
 ### Isaiah, Jeremiah, Ezekiel
 
@@ -207,6 +208,7 @@
 |---|---|---|---|---|---|---|
 | משלי א:ט | EA 103 | zi-pa-aĝ₂-ĝa₂ niĝ₂-suḫ₁₀-bi | של גרגרותי – התכשיט אתה | `וַעֲנָקִים לְגַרְגְּרֹתֶךָ` (משלי א:ט) | equivalent | The necklace of the throat. |
 | משלי ו:ו | EA 335 | nam-lu₂-ulu₃ kiši₆ ki-in-dar-ra-gin₇ | את האנשים – כנמלים מסדק־הסלע | `לֵךְ-אֶל-נְמָלָה עָצֵל; רְאֵה דְרָכֶיהָ וַחֲכָם` (משלי ו:ו) | equivalent | The ant column. |
+| משלי יג:יז | EA 363 | ra₂-gaba | צִיר | `מַלְאָךְ רָשָׁע יִפֹּל בְּרָע וְצִיר אֱמוּנִים מַרְפֵּא` (משלי יג:יז) | equivalent | *ra-gaba* (a loan from Akk. *rākibu* "rider") = `צִיר`, the Bible's word for a king's envoy, beside the messenger *kiĝ₂-gi₄-a* `שָׁלִיחַ` (harmonization 2026-10-21; earlier `רַכָּב`). |
 | איוב ה:יט | EA 170 | ḫur-saĝ 5 ḫur-saĝ 6 ḫur-saĝ 7-e im-me-re-bal-bal | הררים חמישה, הררים שישה, הררים שבעה – חצה | `בְּשֵׁשׁ צָרוֹת יַצִּילֶךָּ וּבְשֶׁבַע לֹא יִגַּע בְּךָ רָע` (איוב ה:יט) | equivalent | The rising number as a literary form. *bal* = `חצה` = Akk. *nabalkutu* (SB I 17). |
 | איוב ה:כג | EA 140 | lu₂-u₁₈-lu gaba-šu-ĝar nu-tuku | האדם – יריב אין לו | `וְחַיַּת הַשָּׂדֶה הָשְׁלְמָה-לָּךְ` (איוב ה:כג) | equivalent | Man without rival. |
 | שיר השירים א:טז | EA 561 | ĝiš-nu₂ gi-rin-na | מיטת־הפרחים | `אַף עַרְשֵׂנוּ רַעֲנָנָה` (שיר השירים א:טז) | equivalent | The lovers' bed. |

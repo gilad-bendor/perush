@@ -109,7 +109,8 @@ For §5.2 (lessons, one line each):
 `אַמָא־אוּשׁוּמְגַּל־אַנָּה`, Ĝeštin-ana `גֶּשְׁתִּין־אַנָּה`, Iškur `אִישְׁכּוּר` (= run 7), Urigigala
 `אוּר־אִיגִיגַלָּה` (open), Sargon `סַרְגּוֹן`, Azupirānu `אֲזוּפִּירָנוּ`, Aqqi ★ `אַקִּי`, Dūr-ilu `דּוּר־אִילוּ`.
 **To harmonize with run 5:** *šembi₂-zid* – EA `פוּךְ` (EA1, ↔ 2 Kgs 9:30), run 5 `כָּחָל`; Dumuzi – run 5 vocalizes
-★ at every occurrence, run 6 at the first occurrence per file.
+★ at every occurrence, run 6 at the first occurrence per file. **Settled 2026-10-21** (the lead's harmonization):
+`פּוּךְ` everywhere; Dumuzi the default (first occurrence per file; extra vocalization harmless).
 
 ## 4. History
 "Learned on 2026-10-21 (Round 2, run 6: legends of kings)": the coordinator had no sub-agent tool and translated both
@@ -131,9 +132,11 @@ the Sargon Birth Legend on King 1907, 49 lines); Mittermayer 2009 and King 1907 
   parallels index (140 rows), print stubs."
 - **STATUS §3 row:** `| אגדות-מלכים | Enmerkar and the Lord of Aratta; Sargon Birth Legend | 641 + 49 lines | complete
   (first draft); SB on King 1907 only | 2026-10-21 |`
-- **STATUS §6 (open cross-corpus decisions):** (1) *nam-šub* `קֶסֶם` (temple / lament corpora: check); (2) EA 501
-  "his mouth" vs "the matter" (Mittermayer); (3) *šembi₂-zid* `פוּךְ` vs `כָּחָל` (run 5); (4) the Sargon text against
-  Westenholz 1997 and K 7249 (the user to obtain).
+- **STATUS §6 (open cross-corpus decisions):** (1) *nam-šub* `קֶסֶם` (temple / lament corpora: check) – **settled
+  2026-10-21** (`קֶסֶם`; Akk. *tû* `לַחַשׁ`); (2) EA 501 "his mouth" vs "the matter" (Mittermayer); (3) *šembi₂-zid*
+  `פוּךְ` vs `כָּחָל` (run 5) – **settled 2026-10-21** (`פּוּךְ`); (4) the Sargon text against Westenholz 1997 and
+  K 7249 (the user to obtain). The 2026-10-21 harmonization also changed EA 363 *ra₂-gaba* `רַכָּב` → `צִיר` and EA
+  401 / D *šu-ur₂-men₂* `שׁוּרְמֵן` → `שׁוּרְבִּין` (`renderings.md` §9.6).
 
 ## 6. Limits
 No quota, rate limit, HTTP 429 or session limit was met by the translation work. Access failures (not limits): CDLI

@@ -20,11 +20,12 @@ pre-set rendering of §3 with the reason in `project.md`; after that it binds ev
    *kur₂* "be different, change" = Akk. *nakāru* = `שִׁנָּה` (adj. `שׁוֹנֶה`; `נָכְרִי` only for *kur₂* "foreign,
    hostile", lament §9); Sum. *eme* = Akk. *lišānu* = `לָשׁוֹן`; Sum. *esir₂* = Akk. *iṭṭû* = `חֵמָר`; Sum. *šeg₁₂* =
    Akk. *libittu* = `לְבֵנָה`; Sum. *dugud* = Akk. *kabtu* = `כָּבֵד`.
-4. **Open cross-corpus choices, followed as the most recent corpus has them (flagged, not resolved):** Inana =
-   `אִינַנָּה` ★; *me* = `הַ־מֶה` ★; *uĝ₃* = `עָם` (laments; creation `הָאֲנָשִׁים`); *nam-šub* (= Akk. *šiptu*) =
-   `קֶסֶם` (wisdom corpus; the alternative `לַחַשׁ` / `חֶבֶר` is STATUS §6's open decision); *ĝidru* = `שַׁרְבִיט`
+4. **Cross-corpus choices, followed as the most recent corpus has them** (settled by the lead's harmonization of
+   2026-10-21, §9.6, where marked): Inana = `אִינַנָּה` ★ (settled); *me* = `הַ־מֶה` ★ (settled); *uĝ₃* = `עָם` (a
+   city's or land's people; `הָאֲנָשִׁים` for humankind: settled, by sense); *nam-šub* (= Akk. *šiptu*) = `קֶסֶם`
+   (settled: *nam-šub* = *tu₆* = *šiptu* = `קֶסֶם`, Akk. *tû* = `לַחַשׁ`; not `חֶבֶר`); *ĝidru* = `שַׁרְבִיט`
    (laments, Gudea; creation 2 has `מַטֶּה`); bitumen: *iṭṭû* (ESIR) = `חֵמָר` (flood corpus, Gudea *esir₂*), *kupru*
-   = `כֹּפֶר` (not in these texts).
+   = `כֹּפֶר` (not in these texts) (settled, as now).
 
 ## 1. Names
 Vocalized at the first occurrence in each annotated file; afterwards plain spelling, **except ★, vocalized at every
@@ -87,7 +88,7 @@ Gtn = iterative (`פַּעַם אַחַר פַּעַם`, never `שוב`).
 | *ĝidru um-ta-an-kid₇ ḫu-mu-un-da-ĝal₂* / *na₄-gug-ĝiš-dili na₄-za-gin₃-ĝiš-dili-gin₇ šu-ni-a ḫu-mu-un-ĝal₂* / *… igi-ĝu₁₀-še₃ ḫu-mu-un-tum₂* | (EA3 fixes) | 344–346, 386–388, 409–411. |
 | The grain: *anše barag la₂-e um-mi-in-la₂* / *anše-bal-e da-bi-a … sig₁₀*; *še guru₇ ka … si zu₂ buru₅{mušen}-e bi₂-in-taḫ* | (EA2 fixes in 282–283; EA3 copies 330–331, 329 = 356) | *guru₇* = `כְּרִי` [cognate loan]; *buru₅* "locust/sparrow" (EA2 decides; `אַרְבֶּה` ↔ Exod 10) . |
 | *ur₅ ḫe₂-en-na-nam-ma-am₃* (396, 505, 506); *i₃-ne-eš₂ {d}utu ud ne-a ur₅ ḫe₂-en-na-nam-ma-am₃* (505) | `כָּךְ אָכֵן הָיָה`; `וְעַתָּה – לִפְנֵי אוּתוּ, בַּיּוֹם הַזֶּה – כָּךְ אָכֵן הָיָה!` | Creation corpus; **Curse of Agade 272 verbatim** (`ועתה – לפני אוּתוּ, ביום הזה – כך אכן היה!`) [equivalent ↔ `וַיְהִי כֵן` (בראשית א:ז)]. |
-| *en₃-du*; *šir₃*; *nam-šub*; *za₃-mi₂* | `זֶמֶר`; `שִׁיר`; `קֶסֶם` (§0.4); `תְּהִלָּה` | *X za₃-mi₂* `X – תְּהִלָּה!` (104). |
+| *en₃-du*; *šir₃*; *nam-šub*; *za₃-mi₂* | `זִמְרָה` (was `זֶמֶר`; EA4 used `זמרה`, harmonized 2026-10-21, §9.6); `שִׁיר`; `קֶסֶם` (§0.4); `תְּהִלָּה` | *X za₃-mi₂* `X – תְּהִלָּה!` (104). |
 
 ## 4. Echo control for these texts (read before drafting)
 - **Gen 11:1–9.** The Hebrew of the Babel story is reserved (§5) so that its counterparts show as findings:
@@ -145,7 +146,7 @@ Fixed here first (2026-10-21) where no earlier corpus had them; the others follo
 `אִינַנָּה` ★, Utu `אוּתוּ` ★, An `אַן` ★, Enki `אֶנְקִי`, Nudimmud `נוּדִימּוּד`, Enlil `אֶנְלִיל`, Dumuzid `דּוּמוּזִי`,
 Ĝeštin-ana `גֶּשְׁתִּין־אַנָּה`, Nisaba `נִיסַבָּה`, Iškur `אִישְׁכּוּר`, Ištar `אִשְׁתַּר` ★, Uruk `אוּרוּךְ`, Kulaba
 `כּוּלַבָּה`, E-ana `אֵאַנָּה`, *ĝipar* `גִּיפָּר`, Eridu `אֶרִידוּ`, Abzu `הָאַפְּסוּ`, Aratta `אָרַטָּה`, Sumer `שׁוּמֶר` ★,
-Akkad `אַכַּד`, *me* `הַ־מֶה` ★, *kiĝ₂-gi₄-a* `שָׁלִיחַ`, *eme* `לָשׁוֹן`, *nam-šub* `קֶסֶם` (open), *nukaribbu* `גַּנָּן`,
+Akkad `אַכַּד`, *me* `הַ־מֶה` ★, *kiĝ₂-gi₄-a* `שָׁלִיחַ`, *ra-gaba* `צִיר` (§9.6), *eme* `לָשׁוֹן`, *nam-šub* `קֶסֶם` (settled 2026-10-21), *nukaribbu* `גַּנָּן`,
 *quppu* `קֻפָּה`, *iṭṭû* `חֵמָר`. New here: Ama-ušumgal-ana `אַמָא־אוּשׁוּמְגַּל־אַנָּה`, Nanibgal `נַנִּיבְּגַל`,
 Šubur `שׁוּבּוּר`, Ḫamazi `חַמָזִי`, Zubi `זוּבִּי`, Azupirānu `אֲזוּפִּירָנוּ`, Aqqi `אַקִּי`.
 
@@ -192,7 +193,7 @@ Full list: `1-אנמרכר-ואדון-ארטה/project.md` ("Proposals (EA3)"). 
 - ***ur*** in the riddle 457–476 = `כלב` (Mittermayer; ETCSL "champion" recorded); *ur-gir₁₅* is also `כלב`.
 - **Fixed strings:** the sceptre 340–346 (for 382–388, 409–411): `'בשרביטי – שורשו: הַ־מֶה של הנסיכות;` / `ענפיו –
   על כולבה – לצל עושה;` / `בענפיו המנצנצים – במקדש אאנה –` / `אִינַנָּה הטהורה – מתקררת בהם;` / `את השרביט –
-  כשיקטום (ממנו) – בידו יהיה!` / `כמחרוזת אודם, כמחרוזת ספיר – בידו יהיה!` / `אדון ארטה – לפניי – יוביל!' – אמור
+  כשיקטום (ממנו) – בידו יהיה!` / `כמחרוזת אודם, כמחרוזת סַפִּיר – בידו יהיה!` / `אדון ארטה – לפניי – יוביל!' – אמור
   לו!"`; the grain 282 = 330 `על חמורי־המשא – בתלותו,`; the dog riddle 457–461 (for 471–476): `'כלב – לא יהיה
   שחור, כלב – לא יהיה לבן,` … `כלבי – עם כלבו – תחרות יעשה,` / `החזק – ייוודע!' – אמור לו!"`; the question 394–396
   `ועתה – איש לאיש מה אמר?` … `מה שאיש לאיש אומר – כך אכן היה!`.
@@ -231,7 +232,29 @@ reserved); *nukaribbūtu* `גַּנָּנוּת`; *šarrūta epēšu* `מלכו�
 `שחורי הראש`; *akkullu* `קרדום`; *erû* (metal) `נחושת`; *lamû* `סבב`; *nabalkutu* Gtn `חצה, פעם אחר פעם`; *nakāru* D
 `שינה`; *rapādu* `שוטט`; *purīmu* `פרא`; *parû* `פרד`; *ṣabītu* `צבייה`; *nēšu* `אריה`.
 
+### 9.6 Cross-corpus harmonization (the lead's decisions), 2026-10-21
+2026-10-21 harmonization: one Hebrew per source word across all corpora (STATUS §6). Applied here:
+- *za-gin₃* (= Akk. *uqnû*) "lapis lazuli" = `סַפִּיר` [equivalent] (as before in every `>` line; first occurrence in
+  each file vocalized: EA 18, 209 = 527, 345 = 387 = 410, 481). The [equivalent] note at EA 18 (Exod 24:10, Ezek 1:26,
+  Job 28:6: the biblical stone is lapis lazuli, not the modern sapphire), with the god's beard (209) and Inana's house
+  E-zagin (559). `לזורית` is never the rendering; it stays only as the mineral's name in explanations. SB has no
+  *uqnû*.
+- *šembi(zid)* = `פּוּךְ` (as before: 66, 590; ↔ 2 Kgs 9:30, Jer 4:30 added). Akk. *guḫlu* would be `כָּחָל` (not here).
+- *šu-ur₂-men* (= Akk. *šurmēnu*) = `שׁוּרְבִּין` (Gilgameš corpus's form; Mishnaic `שׁוּרְבִּינָא`), was `שׁוּרְמֵן`:
+  EA 401 and D (the same half-line, identical Hebrew). *li* = `בְּרוֹשׁ` (*burāšu*); *ḫa-šu-ur₂* `חַשׁוּר` unchanged.
+- *ra-gaba* = `צִיר` "envoy", always vocalized (unvocalized `צירי` reads "my birth pangs"), [equivalent] Prov 13:17;
+  was `רַכָּב`: EA 363 (the only occurrence; `ra₂-gaba`). *kiĝ₂-gi₄-a* = `שָׁלִיחַ` unchanged. Checked by
+  `kings_tools.py` TRAPS (`ציר` must be vocalized when the transliteration has *ra(₂)-gaba*).
+- *nam-šub*, *tu₆*, *šiptu* = `קֶסֶם`; Akk. *tû* = `לַחַשׁ` (as before: EA 134, 135, 206, 207; no *tu₆*, *šiptu*, *tû*).
+- *en₃-du* = `זִמְרָה` (EA 585 `זמרתה`, as before; §3 row corrected from `זֶמֶר`).
+- *guru₇* = *karû* = `כְּרִי` (as before: 284, 285, 329, 356, 485, 551, 601, 621, 625).
+- *sizkur₂* = `תְּפִלָּה`, *a-ra-zu* = `תַּחֲנוּן` (as before: 250); *šudu₃* not in these texts.
+- *mušen* = `צִפּוֹר` (as before: 116, 188, 507; SB II.5 *iṣṣūru*); *me* = `הַ־מֶה` and Inana = `אִינַנָּה` (as before).
+- Not in these texts: *ur₄* "gather" (570 *ur₄-[X]* is a broken name), *kabattu*, *sukkallu* / *sukkal*.
+
 ## Changelog
 - 2026-10-21: written before the first part, from the temple, lament, creation, flood, Gilgameš, law and wisdom
   corpora and a reading of both transliterations (the formula survey of §3; the echo-control list of §4).
 - 2026-10-21: §9.1–§9.5 merged after each part (EA1–EA4, SB); one quotation corrected (Judg 11:12 `מַה`).
+- 2026-10-21: §9.6 the lead's cross-corpus harmonization applied (*ra-gaba* `צִיר`, *šu-ur₂-men* `שׁוּרְבִּין`, *en₃-du*
+  `זִמְרָה` in §3; the rest confirmed); §0.4 and §7 marked settled.

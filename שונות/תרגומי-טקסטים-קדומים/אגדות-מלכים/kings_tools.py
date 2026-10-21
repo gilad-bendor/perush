@@ -128,6 +128,8 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     'שומר': ('Sumer (שׁוּמֶר)', r'ki-en-gi'), 'אור': ('Urim (אוּר)', r'urim|uri₂'),
     'אנשן': ('Anšan (אַנְשָׁן)', r'anšan'), 'אכי': ('Aqqi (אַקִּי)', r'Ak-ki'),
     'זובי': ('Zubi (זוּבִּי)', r'zubi|zu-bi'), 'שיבוט': ('*a-eštub* (מֵי־הַשִּׁבּוּט; Modern "cloning")', r'a-eštub'), 'אשתר': ('Ištar (אִשְׁתַּר)', r'Iš-tar'),
+    # 2026-10-21 harmonization: *ra-gaba* = צִיר "envoy", always vocalized (unvocalized `צירי` reads "my birth pangs")
+    'ציר': ('*ra-gaba* (צִיר)', r'ra₂?-gaba'), 'צירי': ('*ra-gaba* (צִירִי)', r'ra₂?-gaba'), 'צירה': ('*ra-gaba* (צִירָהּ)', r'ra₂?-gaba'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')
