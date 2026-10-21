@@ -13,9 +13,9 @@
   `{morph;base}` (`../../../tools/cdl2md.py … --morph`).
 
 ## Line numbering
-ETCSL composite numbering (641 ORACC lines against ETCSL's 637 entries: ORACC counts the variant lines of single
-manuscripts separately; the concordance is in `אגדות-מלכים/1-אנמרכר-ואדון-ארטה/concordance.md`, built by
-`אגדות-מלכים/kings_tools.py conc EA`).
+ETCSL composite numbering, one to one with ETCSL's 641 entries (ORACC's export leaves the lines with manuscript
+variants unlabelled and labels ETCSL's alternative line C as "Š"; `אגדות-מלכים/kings_tools.py conc EA` aligns them by
+position and writes `אגדות-מלכים/1-אנמרכר-ואדון-ארטה/concordance.md`).
 
 ## Usefulness
 Rank 2 lexical/morphological aid for `אגדות-מלכים/1-אנמרכר-ואדון-ארטה/`: ḫamṭu/marû and the prefix chain, which decide

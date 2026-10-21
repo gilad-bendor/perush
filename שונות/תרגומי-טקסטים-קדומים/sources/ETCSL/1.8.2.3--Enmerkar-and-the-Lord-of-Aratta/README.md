@@ -10,7 +10,7 @@
 - **Licence:** CC BY-NC-SA 3.0; © ETCSL project, University of Oxford. Committed.
 
 ## Content
-637 composite entries (1–636 with single-manuscript plus-lines such as 11A): the prologue on Uruk and Aratta (1–32);
+641 composite entries (1–636 with single-manuscript plus-lines 11A, 106A, 185A, 185B, 365B and the alternative lines A–D for 400–403; no 369, 608–610): the prologue on Uruk and Aratta (1–32);
 Enmerkar's plea to Inana (33–64) and her answer (65–104); the first commission of the messenger, with the threat and
 the "spell of Nudimmud" (105–155); the journey and the first exchange (156–307); the grain (308–338) and the sceptre
 (339–455); the champions and the garments (456–499); **the invention of writing on clay** (500–506); the tablet, the
@@ -18,7 +18,7 @@ storm of Iškur and the wild wheat (507–556); Aratta's last answer (557–576)
 
 ## Files
 - `c.1.8.2.3.xml`, `t.1.8.2.3.xml` — ETCSL TEI source.
-- `transliteration.md` (637 lines), `translation.md` (paragraphs labelled by line range) — `../../../tools/etcsl2md.py`.
+- `transliteration.md` (641 lines), `translation.md` (paragraphs labelled by line range) — `../../../tools/etcsl2md.py`.
 
 ## Line numbering
 ETCSL = Cohen 1973 = (mostly) Mittermayer 2009 = ORACC Q000369 (which also numbers single-manuscript lines).
