@@ -32,6 +32,7 @@ Usage (from any directory; run with python3 -I):
       for a translator of a repeated passage.
 """
 import difflib
+import glob
 import os
 import re
 import sys
@@ -49,6 +50,21 @@ PROJECTS = {
     'SB': dict(dir='2-אגדת-הולדת-סרגון', annotated=['annotated.rtl.md'], base='king',
                king='King-1907--Chronicles-concerning-Early-Babylonian-Kings-II/legend-of-sargon--King-1907-pp87-96.md'),
 }
+# Etana (eBL L/1/9; Round 3, run 2): one annotated file per eBL chapter, labels `<chapter key>.<eBL label>` (I.12,
+# OBM.a+3); the clean translation shows the eBL label only, under the chapter's heading. Order = reading order.
+ET_CHAPTERS = [  # (key, eBL folder under sources/eBL, (stage, chapter) as eBL's parallels cite it)
+    ('OBM', 'Etana-OB-Morgan', ('OB', 'Morgan')), ('OBS', 'Etana-OB-Susa', ('OB', 'Susa')),
+    ('MA', 'Etana-MA-Assur', ('MA', 'Aššur')), ('I', 'Etana-SB-I', ('SB', 'I')),
+    ('II', 'Etana-SB-II', ('SB', 'II')), ('III', 'Etana-SB-III', ('SB', 'III')),
+]
+PROJECTS['ET'] = dict(dir='3-אגדת-אתנה', annotated=[f'annotated-{c}.rtl.md' for c, _, _ in ET_CHAPTERS], base='ebl',
+                      chapters=ET_CHAPTERS)
+EXTRA_GREP_AKK = ['אפוס-גילגמש/1-הנוסח-הבבלי-התקני/annotated-*.rtl.md', 'אפוס-גילגמש/2-הנוסח-הבבלי-הקדום/annotated-*.rtl.md',
+                  'סיפורי-המבול-המסופוטמיים/*/annotated*.rtl.md', 'סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/annotated-*.rtl.md',
+                  'סיפורי-הבריאה-המסופוטמיים/2-טקסטי-בריאה-ועדן/annotated-1-Adapa.rtl.md',
+                  'סיפורי-הבריאה-המסופוטמיים/2-טקסטי-בריאה-ועדן/annotated-7-KAR-4.rtl.md',
+                  'ספרות-החכמה-והצדיק-הסובל/*/annotated*.rtl.md', 'העולם-התחתון/1-ירידת-אישתר/annotated*.rtl.md',
+                  'קולות-היום-יום/1-שירי-אהבה/annotated*.rtl.md', 'חוקים-ובריתות/*/annotated*.rtl.md']
 EXTRA_GREP = [os.path.join(ROOT, x) for x in (
     'קינות-על-ערים/1-הקינה-על-אור/annotated-1.rtl.md', 'קינות-על-ערים/1-הקינה-על-אור/annotated-2.rtl.md',
     'קינות-על-ערים/1-הקינה-על-אור/annotated-3.rtl.md', 'קינות-על-ערים/2-קללת-אכד/annotated-1.rtl.md',
@@ -121,6 +137,50 @@ RESERVED_COMMON = {
     r'קרא|קורא|יקרא|נקרא|קראו': [r'sa₄|nabû|na-bi|zakār|šuma'],
 }
 RESERVED = {'EA': RESERVED_COMMON, 'SB': RESERVED_COMMON}
+# Etana (renderings.md §10.4): licensed by the eBL lemma (the licence text = normalization + ' || ' + lemma names).
+RESERVED_ET = dict(RESERVED_COMMON)
+for _k in [k for k in RESERVED_ET if 'כבד' in k or 'שוב' in k or 'עוף' in k or 'השליך' in k or 'נהר' in k or 'קרא' in k
+           or 'לבנה' in k or 'עבד' in k or 'טוב' in k or 'ברך' in k]:
+    del RESERVED_ET[_k]
+RESERVED_ET.update({
+    B + P + r'(כבד|כבדה|כבדי|כבדו|כבדים|כובד|כיבד|כיבדתי|כבדת|כבדתי)' + E: [r'kabattu|kabātu|kabtu|dugud'],
+    B + r'ו?(ה|י|ת|א|נ|ל)?שוב' + E + '|' + B + r'ו?(ה|י|ת|א|נ|ל|לה|וה|מ)שיב(ה|ו|ני|נו|ם|הו|ים)?' + E + '|' + B + r'ו?(ישובו|ישוב|תשוב|נשוב|אשוב)' + E: [r'târu'],
+    B + P + r'(עוף|עופות|עף|עפה|עפו|יעוף|תעוף|עפים)' + E: [r'naprušu|šâʾu|šâ\'u|ṣâdu'],
+    B + P + r'(השליך|השליכה|השליכני|ישליך|תשליך|השליכהו|השליכוהו|השלכה|השליכו|השלכתי|השליכוני|מושלך|הושלך)' + E: [r'nadû'],
+    B + P + r'(נהר|הנהר|נהרות|נהרה|נהרותיה)' + E: [r'nāru'],
+    r'קרא|קורא|יקרא|נקרא|קראו|קראתי': [r'nabû|šasû|zakāru'],
+    B + P + r'(לבנה|לבנים|לבנת|לבנתה|לבנתם)' + E: [r'libittu|libnat'],
+    B + r'ו?ה?עבד|עבוד': [r'ardu|wardu|dullu'],
+    r'טוב|טובה|טובים|טובות': [r'ṭābu|ṭiābu|damqu|damāqu'],
+    r'ברך|ברכ|יבורך|מבורך|מברך': [r'karābu|ikribu|kurību'],
+    # the eagle and the serpent; the pit; the net (Deut 32:11; Gen 37:24; Ps 7:16, 35:7)
+    B + P + r'(נחש|נחשים|נחשו|נחשה)' + E: [r'ṣerru|bašmu|ṣīru'],
+    B + P + r'(אבר|אברו|אבריו|אבריה|אברות|אברת|אברתו|אברותיו)' + E: [r'abru'],
+    B + P + r'(נוצה|נוצות|נוצתו|נוצותיו|נוצתי|נוצותיי)' + E: [r'nāṣu'],
+    B + P + r'(בור|בורות|בבור|לבור|הבור|הבורה|בורו)' + E: [r'būrtu|būru'],
+    B + P + r'(שוחה|שוחת|שוחתו|שוחות|שיחה)' + E: [r'šuttatu'],
+    B + P + r'(רשת|רשתך|רשתו|רשתות|ברשתך|מרשתך|ברשת|רשתי)' + E: [r'šētu'],
+    B + P + r'(פח|פחך|פחו|פחים)' + E: [r'gišparru'],
+    B + P + r'(גבול|גבולות|גבולו|גבולי|גבולך)' + E: [r'itû'],
+    B + P + r'(תועבה|תועבת|תועבות)' + E: [r'anzillu'],
+    B + P + r'(חרפה|חרפת|חרפתי|חרפתך|חרפתו)' + E: [r'pištu'],
+    B + P + r'(צריח|הצריח|צריחים)' + E: [r'dimtu'],
+    B + P + r'(שבועה|שבועת|השבועה|שבועות|בשבועה)' + E: [r'māmītu'],
+    B + r'ו?(נשבע|נשבעו|נשבענו|נשבעת|נשבעתי|ישבעו|נישבע|ונשבעה|נשבעה|השביע)' + E: [r'tamû'],
+    B + P + r'(גן|גנה|גנים|גנת|הגן)' + E: [r'kirû'],
+    B + P + r'(גנן|הגנן|גננים)' + E: [r'nukaribbu'],
+    B + P + r'(ראם|ראמים)' + E: [r'rīmu'],
+    B + P + r'(נשר|נשרים|הנשר|נשרי)' + E: [r'erû I'],
+    # never (the apparatus only): Gen 2:5, 3:5, 30:14, 30:1; Gen 10:10, 28:12, 37
+    B + P + r'(דודאים|דודאי)' + E: [],
+    B + P + r'(עקרה|עקר|עקרות)' + E: [],
+    B + P + r'(ממלכה|ממלכת|ממלכתו|ממלכות)' + E: [],
+    B + r'ו?(פקח|פקחו|יפקח|נפקחו|פקחה|פקוחות)' + E: [],
+    B + P + r'(סולם|סלם)' + E: [],
+    B + P + r'(גוזל|גוזלים|גוזליו|גוזלי)' + E: [],
+    r'חרם|חרמו': [],
+})
+RESERVED['ET'] = RESERVED_ET
 
 TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     'אותו': ('Utu (אוּתוּ)', r'\{d\}utu\b'), 'איננה': ('Inana (אִינַנָּה)', r'inana|inanna'),
@@ -129,6 +189,10 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     'אנשן': ('Anšan (אַנְשָׁן)', r'anšan'), 'אכי': ('Aqqi (אַקִּי)', r'Ak-ki'),
     'זובי': ('Zubi (זוּבִּי)', r'zubi|zu-bi'), 'שיבוט': ('*a-eštub* (מֵי־הַשִּׁבּוּט; Modern "cloning")', r'a-eštub'), 'אשתר': ('Ištar (אִשְׁתַּר)', r'Iš-tar'),
     # 2026-10-21 harmonization: *ra-gaba* = צִיר "envoy", always vocalized (unvocalized `צירי` reads "my birth pangs")
+    # Etana (renderings §10.1): names that read as Hebrew words unvocalized
+    'אתנה': ('Etana (אֵתָנָה; "I will give")', r'etan'), 'שמש': ('Šamaš / the sun (שַׁמַשׁ / שֶׁמֶשׁ)', r'šamaš|šamš'),
+    'אנו': ('Anu (אָנוּ; "we")', r'(^|[\s|(\[])(anu|anim|ānim|ani|anum)\b'), 'סין': ('Sîn (סִין; the desert of Sin)', r'sîn|sīn'),
+    'שכן': ('Šakkan (שַׁכַּן)', r'šakkan'), 'אט': ('*eṭemmu* (אִט; "slowly")', r'eṭemm'),
     'ציר': ('*ra-gaba* (צִיר)', r'ra₂?-gaba'), 'צירי': ('*ra-gaba* (צִירִי)', r'ra₂?-gaba'), 'צירה': ('*ra-gaba* (צִירָהּ)', r'ra₂?-gaba'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
@@ -156,6 +220,21 @@ FORMULAS = {'EA': [
 ], 'SB': [
     (r'Ak-ki \{amêlu\}nâḳ-mê', r'אקי דולה־המים', 'Aqqi the water-drawer (§4)'),
     (r'ḳup-pi|ḳu-up-pu', r'קפה|קופה|קפת|קופת', '*quppu* = קֻפָּה (§4)'),
+], 'ET': [  # renderings.md §10.3 (the transliteration side is the eBL normalization without brackets)
+    (r'p[âi]ʾ?ā?šu \| īpuš', r'פתח את פיו, (אל [^:]+ )?(דבר )?דיבר( אל [^:]+)?:$', 'the speech formula (§10.3)'),
+    (r'ikkal \| ineʾʾ[ia] \| ikkalū \| mārūšu', r'אוכל, סר – אוכלים בניו', '"eats, turns away, his children eat" (§10.3)'),
+    (r'īkul \|\| īkulū \| mārūšu', r'אכל – אכלו בניו', 'OB "ate, his children ate" (§10.3)'),
+    (r'atmu m? ?\| ṣehrum? \|\| atar \| hasīsa', r'^האפרוח הקטן, יתיר־התבונה', 'the littlest fledgling (§10.3)'),
+    (r'abīšu \|\| amāta[m]? \| izakkar', r'אביו – דבר דיבר:$', '"to the eagle his father he said a word" (§10.3)'),
+    (r'ša itâ \| ša šamaš \| ittiqu', r'אשר יחלוף את גבול שמש', '"whoever passes Šamaš\'s boundary" (§10.3)'),
+    (r'ina qāt \(\|\) māhiṣi', r'ביד המוחץ', '"into the hand of the smiter" (§10.3)'),
+    (r'alik \| urha \|\| etiq \| šadâ', r'^לך באורח, חלוף את ההר', 'the command "go the road, pass the mountain" (§10.3)'),
+    (r'ana zikir \(\|\) šamaš \| qurādi', r'^למאמר שמש הגיבור', '"at the word of Šamaš the warrior" (§10.3)'),
+    (r'šamma \| ša alādi', r'עשב הלידה', 'the plant of birth (§10.3)'),
+    (r'šuma \| šuknanni', r'שים לי שם', '"establish for me a name" (§10.3)'),
+    (r'ul išmēšunūtī-ma \| ul išmâ', r'^לא שמע להם, לא שמע', '"he did not listen to them" (§10.3)'),
+    (r'atkal(ak)?kum-ma \| šamaš', r'^בך בטחתי, שמש', '"I trusted in you, Šamaš" (§10.3)'),
+    (r'ūmišam-ma \|\|? imta(na)?h?hara', r'^יום יום', '"day after day he appealed" (§10.3)'),
 ]}
 
 
@@ -201,6 +280,8 @@ def sections(paths):
             continue
         for ln in open(p, encoding='utf-8'):
             ln = ln.rstrip('\n')
+            if ln.startswith('<!-- כותרת־נוסח: ') and ln.endswith(' -->'):
+                yield 'v', ln[len('<!-- כותרת־נוסח: '):-4].strip()   # a version heading for the clean translation
             if ln.startswith('## '):
                 yield 'h', ln[3:].strip()
             m = re.match(r'^### (\S+)\s*$', ln)
@@ -226,9 +307,72 @@ def king_lines(rel):
     return out
 
 
+ET_PAR_RE = re.compile(r'^\s*(cf\.\s*)?L I\.9 (\w+) "([^"]+)" (\S+)\s*$')
+
+
+def ebl_chapter(folder):
+    """[{label, N, T, L (lemma list), lraw, par [(cf, full label)], block (the line's whole reading-edition text)}]."""
+    path = os.path.join(SRC, 'eBL', folder, 'reading-edition.md')
+    out, cur = [], None
+    if not os.path.exists(path):
+        return out
+    bymap = {sc: c for c, _, sc in ET_CHAPTERS}
+    for ln in open(path, encoding='utf-8'):
+        ln = ln.rstrip('\n')
+        m = re.match(r'^### (\S+)\s*$', ln)
+        if m:
+            cur = dict(label=m.group(1), N='', T='', L=[], lraw='', par=[], block=[])
+            out.append(cur)
+            continue
+        if cur is None:
+            continue
+        cur['block'].append(ln)
+        if ln.startswith('- **N:**') and not cur['N']:
+            cur['N'] = ln[8:].strip()
+        elif ln.startswith('- **T:**') and not cur['T']:
+            cur['T'] = ln[8:].strip()
+        elif ln.startswith('- **L:**'):
+            cur['lraw'] += ' ' + ln[8:]
+            cur['L'] += re.findall(r'← ([^“;]+?)(?: “|;|$)', ln[8:])
+        elif ln.startswith('- **Parallels:**'):
+            for x in ln[16:].split(';'):
+                m2 = ET_PAR_RE.match(x)
+                if m2 and (m2.group(2), m2.group(3)) in bymap:
+                    cur['par'].append((bool(m2.group(1)), f'{bymap[(m2.group(2), m2.group(3))]}.{m2.group(4)}'))
+    return out
+
+
+def ebl_all(key):
+    """{full label: line dict} and the full label order, over the project's chapters."""
+    res, order = {}, []
+    for c, folder, _ in PROJECTS[key]['chapters']:
+        for d in ebl_chapter(folder):
+            k = f'{c}.{d["label"]}'
+            d['full'] = k
+            res[k] = d
+            order.append(k)
+    return order, res
+
+
+def disp(key, label):
+    """The label as the clean translation prints it (ET: without the chapter key)."""
+    return label.split('.', 1)[1] if PROJECTS[key]['base'] == 'ebl' and '.' in label else label
+
+
 def base_lines(key):
     P = PROJECTS[key]
+    if P['base'] == 'ebl':
+        order, res = ebl_all(key)
+        return [(k, res[k]['N']) for k in order]
     return etcsl_lines(P['etcsl']) if P['base'] == 'etcsl' else king_lines(P['king'])
+
+
+def licence(key):
+    """{label: text searched by the RESERVED licensing regexes}: the transliteration, plus (eBL) the lemmas."""
+    if PROJECTS[key]['base'] != 'ebl':
+        return {}
+    order, res = ebl_all(key)
+    return {k: res[k]['N'] + ' || ' + ' '.join(res[k]['L']) for k in order}
 
 
 def clean_tr(s):
@@ -306,6 +450,7 @@ def verify(key, strict=False):
         else:
             (problems if strict else notes).append(msg)
     pending = 0
+    lic = licence(key)
     for k in order:
         e = ent[k]
         if len(e['heb']) != 1:
@@ -320,7 +465,7 @@ def verify(key, strict=False):
         if 'טרם תורגם' in heb:
             pending += 1
             continue
-        check_reserved(key, k, heb, tr, problems)
+        check_reserved(key, k, heb, tr + (' || ' + lic[k] if k in lic else ''), problems)
         check_traps(k, heb, problems, tr)
         check_formulas(key, k, heb, tr, problems)
     # name traps in headings: a trap word unvocalized in a `## ` heading is an error when the section has the name
@@ -331,7 +476,7 @@ def verify(key, strict=False):
             if ln.startswith('## '):
                 for tok in re.split(r'[\s,.;:!?"\'()\[\]–—]+', ln[3:]):
                     base = PREFIX.sub('', strip(tok), count=1)
-                    if base in ('אותו', 'איננה', 'אן', 'שומר', 'אכי', 'אשתר') and not NIQQUD.search(tok):
+                    if base in ('אותו', 'איננה', 'אן', 'שומר', 'אכי', 'אשתר', 'אתנה', 'שמש', 'אנו') and not NIQQUD.search(tok):
                         problems.append(f'heading "{ln.strip()}": unvocalized "{tok}"')
     if pending:
         (problems if strict else notes).append(f'{pending} entries not yet drafted')
@@ -347,7 +492,7 @@ def verify(key, strict=False):
     tp = os.path.join(d, 'translation.rtl.md')
     if os.path.exists(tp):
         tl = translation_lines(tp)
-        al = [(k, FN.sub('', ent[k]['heb'][0]).rstrip()) for k in order if ent[k]['heb']]
+        al = [(disp(key, k), FN.sub('', ent[k]['heb'][0]).rstrip()) for k in order if ent[k]['heb']]
         if len(tl) != len(al):
             problems.append(f'translation.rtl.md has {len(tl)} numbered lines, annotated {len(al)}')
         for (k1, h1), (k2, h2) in zip(al, tl):
@@ -373,7 +518,9 @@ def build(key):
             'footnotes = the `הערת שוליים` bullets). To change the text, edit the annotated file(s) and rebuild.\n-->\n\n')
     out, notes, n = [], [], 0
     for kind, v in sections(paths):
-        if kind == 'h':
+        if kind == 'v':
+            out.append(f'\n# {v}\n')
+        elif kind == 'h':
             out.append(f'\n## {v}\n')
         else:
             e = ent[v]
@@ -382,7 +529,7 @@ def build(key):
                 n += 1
                 ref = f'[^{n}]'
                 notes.append(f'[^{n}]: {e["fn"]}')
-            out.append(f'**{v}** {e["heb"][0]}{ref}  ')
+            out.append(f'**{disp(key, v)}** {e["heb"][0]}{ref}  ')
     text = head + intro + '\n' + '\n'.join(out) + '\n' + ('\n---\n\n' + '\n\n'.join(notes) + '\n' if notes else '')
     open(os.path.join(d, 'translation.rtl.md'), 'w', encoding='utf-8').write(text)
     print(f'translation.rtl.md written: {sum(1 for k, _ in sections(paths) if k == "l")} lines, {n} footnotes')
@@ -396,6 +543,8 @@ def grep(key, pat):
         files += [os.path.join(HERE, P['dir'], a) for a in P['annotated']]
     if key == 'all':
         files += EXTRA_GREP
+        for g in EXTRA_GREP_AKK:
+            files += sorted(glob.glob(os.path.join(ROOT, g)))
     rx = re.compile(pat)
     for f in files:
         if not os.path.exists(f):
@@ -509,8 +658,60 @@ def conc(key, out=None):
         print('written', out)
 
 
+def et_hebrew(key):
+    P = PROJECTS[key]
+    order, ent = parse_annotated([os.path.join(HERE, P['dir'], x) for x in P['annotated']], [])
+    return {k: ent[k]['heb'][0] for k in order if ent[k]['heb'] and 'טרם תורגם' not in ent[k]['heb'][0]}
+
+
+def et_related(key, k, order, res):
+    """Lines related to k: eBL's parallels (both directions) and normalizations with similarity >= 0.75."""
+    def nm(x):
+        return re.sub(r'[\[\]⸢⸣?!()|<>⟨⟩.…]', '', x).replace('  ', ' ').strip()
+    rel = {}
+    for cf, k2 in res[k]['par']:
+        if k2 in res:
+            rel[k2] = 'eBL ' + ('cf.' if cf else '=')
+    for k2 in order:
+        if k2 != k and any(x == k for _, x in res[k2]['par']) and k2 not in rel:
+            rel[k2] = 'eBL (back)'
+    a = nm(res[k]['N'])
+    if len(a.split()) >= 3:
+        for k2 in order:
+            if k2 == k or k2 in rel:
+                continue
+            r = difflib.SequenceMatcher(None, a, nm(res[k2]['N'])).ratio()
+            if r >= 0.75:
+                rel[k2] = f'similar {r:.2f}'
+    return rel
+
+
+def et_data(key, a, b, out):
+    order, res = ebl_all(key)
+    heb = et_hebrew(key)
+    i, j = order.index(a), order.index(b)
+    L = [f'# Translator data {key} {a}–{b} (Etana, eBL L/1/9)', '',
+         'Per line: the eBL reading-edition block (N = normalization: copy it exactly as the backticked line of the entry;',
+         'T = Foster\'s English, rank 3 – read it only AFTER your own reading; L = lemmas with eBL glosses – check the stem;',
+         'notes; parallels; every manuscript\'s ATF). Then "Related lines": eBL\'s parallels and near-identical',
+         'normalizations in all six versions, with the Hebrew already given to them (copy it where the Akkadian is the same).', '']
+    for k in order[i:j + 1]:
+        L.append(f'## {k}')
+        L += [x for x in res[k]['block'] if x.strip()]
+        rel = et_related(key, k, order, res)
+        if rel:
+            L.append('- **Related lines:**')
+            for k2, why in rel.items():
+                L.append(f'  - {k2} ({why}): `{res[k2]["N"]}`' + (f' → > {heb[k2]}' if k2 in heb else ' → (not yet drafted)'))
+        L.append('')
+    open(out, 'w', encoding='utf-8').write('\n'.join(L) + '\n')
+    print(f'{out}: {j - i + 1} lines')
+
+
 def data(key, a, b, out):
     P = PROJECTS[key]
+    if P['base'] == 'ebl':
+        return et_data(key, a, b, out)
     orc = oracc_aligned(key)
     par = etcsl_paragraphs(P['etcsl_tr'])
     mitt = mitt_lines(P['mitt'])
@@ -538,6 +739,16 @@ def data(key, a, b, out):
 
 def pars(key, a, b):
     P = PROJECTS[key]
+    if P['base'] == 'ebl':
+        order, res = ebl_all(key)
+        heb = et_hebrew(key)
+        for k in order[order.index(a):order.index(b) + 1]:
+            rel = et_related(key, k, order, res)
+            if rel:
+                print(f'{k}: `{res[k]["N"]}`')
+                for k2, why in rel.items():
+                    print(f'    {k2} ({why}): `{res[k2]["N"]}`\n         > {heb.get(k2, "(not yet drafted)")}')
+        return
     src = base_lines(key)
     d = os.path.join(HERE, P['dir'])
     order, ent = parse_annotated([os.path.join(d, x) for x in P['annotated']], [])
