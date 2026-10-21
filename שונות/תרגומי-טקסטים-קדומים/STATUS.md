@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-21 (Round 2 finished: runs 5–7 ran in parallel in Claude Cloud).
+Last updated: 2026-10-21 (Round 2 finished; the cross-corpus splits settled; the Round 3 plan made).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -63,11 +63,22 @@ with its key findings at the top.
 
 ## 4. What is next
 
-**Round 2 is finished** (runs 5–7, 2026-10-21, in parallel in Claude Cloud). Next: the user's review of the drafts and
-the open decisions (§6, and each `project.md`); then a Round 3 plan (not yet made). Leftovers of Round 2 that a Round 3
-could take: the OB Akkadian private letters (AbB; CDLI was down), the MB/MA love texts (LAOS 4 08, 09, 11, 12, 19, 21),
-the Sargon Birth Legend against Westenholz 1997, and the candidates still open in `curated-translation-candidates.md`
-(Etana, Nergal and Ereškigal, the Great Prayer to Šamaš, Advice to a Prince, Anzû …). The Round 2 runs:
+**Round 2 is finished** (runs 5–7, 2026-10-21, in parallel in Claude Cloud), and the cross-corpus splits it left were
+settled on 2026-10-21 (§6). **Next: Round 3** (`curated-translation-candidates.md`, "Round 3 plan"): six runs in six
+different corpora, **one cloud session per run** (start each with `ancient-translations: Round 3, run N`), in parallel
+or one at a time in the table's order:
+
+| Run | Texts | Corpus |
+|---|---|---|
+| 1 | The Farmer's Instructions, Hoe and Plough, Summer and Winter (Gen 8:22, 3:17–19, 4:2–5) | the creation corpus, projects 5–7 |
+| 2 | Etana (Gen 11:4, 30:14–16, Deut 32:11) | `אגדות-מלכים/` project 3 |
+| 3 | The Assyrian prophecies (SAA 9) + Advice to a Prince (Deut 13, 17, 18; "fear not") | new `נבואה-ומלכות/` |
+| 4 | The Great Prayer to Šamaš, Counsels of Wisdom, the Dialogue of Pessimism, Šuruppag in full | the wisdom corpus, projects 3– |
+| 5 | Nergal and Ereškigal, Bilgameš, Enkidu and the Netherworld (Gen 28:12; 1 Sam 28) | `העולם-התחתון/` projects 3–4 |
+| 6 | Maqlû I–VIII + the Ritual Tablet (Ex 22:17, Deut 18:10–11) | new `כשפים-ולחשים/` |
+
+Parallel sessions edit the shared files only at the end of their run, in one commit, after `git pull --rebase` (the
+plan's last paragraph). The user's review of the Round 1–2 drafts can go on alongside. The Round 2 runs, for the record:
 
 | Run | Texts | Base text | New corpus |
 |---|---|---|---|
