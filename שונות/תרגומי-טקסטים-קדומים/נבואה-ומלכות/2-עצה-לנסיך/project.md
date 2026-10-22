@@ -10,7 +10,8 @@ eBL corpus `L/2/5`, "Standard Babylonian" (ed. T. D. N. Mitto, rev. Z. J. Földi
 The law of the king (Deut 17:14–20); Samuel's "rule of the king" (1 Sam 8:11–17: fields, vineyards, sons, herds, `וְנָתַן לְסָרִיסָיו`); justice and the bribe (Deut 1:17; 16:18–20; Exod 23:8); Rehoboam and the elders' counsel (1 Kgs 12); the forced labour (1 Kgs 5:27; 11:28; 12:4, 18; Ps 81:7); the exemption of the free cities (cf. Ezra 7:24); the gods who leave their sanctuaries (Ezek 10–11); the city heaped into a ruin (`תֵּל`, Deut 13:17).
 
 ## Open decisions
-(the translator adds them, numbered)
+T5's eleven are in `notes-AP.md`: the cross-corpus ones are *šipru* `מְלָאכָה` / `פֹּעַל` (line 6; the user's open decision in STATUS.md §6), *šubarrû* `פְּטוֹר` (Adapa has `חֵרוּת`) and the vowel of Erra; the rest are minor (line 40's crux, *ṣâdu*, *waklu*, *šatam ēkurri*, the sense of *adê* in 48), for the next session on this corpus.
 
 ## Progress
-- 2026-10-21: source fetched from eBL, renderings fixed (`../renderings.md` §4). Drafting: T5.
+- 2026-10-21: source fetched from eBL, renderings fixed (`../renderings.md` §4). T5 stopped at its start on the session limit.
+- 2026-10-22: T5 drafted all 55 lines after SAA 9 (three review passes in `notes-AP.md`; `verify AP --strict` and `check_bible_quotes.py` clean); its changes to the pre-set §4 merged (`../renderings.md` §7). `translation.rtl.md` built (55 lines, 6 footnotes). **First draft complete**, not yet reviewed by the user.
