@@ -354,7 +354,7 @@ Set by the run coordinator (Round 3, run 1) before drafting, after grepping ever
 | *(2-kam-ma-še₃) X Y-ra mu-na-ni-ib-gi₄-gi₄* | `(שֵׁנִית –) X לְY מֵשִׁיב:` | S&W 157 … |
 | *X Y-bi-da a-da-min₃ dug₄-ga* (also inside the narrative: H&P 7 = 194) | `וִיכּוּחַ שֶׁנֶּאֱמַר בֵּין X וּY:` | H&P 7, 194; S&W 316 |
 | *X Y-ra dirig-ga-(a-)ba* | `בַּאֲשֶׁר X עָלָה עַל Y –` (B&F 189) | H&P 195; S&W 317 |
-| *DN za₃-mi₂*; *kur gal a-a {d}en-lil₂ za₃-mi₂*; *za₃-mi₂-zu dug₃-ga-am₃* | `DN – תְּהִלָּה!`; `הָהָר הַגָּדוֹל, הָאָב אֶנְלִיל – תְּהִלָּה!`; `תְּהִלָּתְךָ – טוֹבָה הִיא!` | H&P 196; S&W 318; FI 111 |
+| *DN za₃-mi₂*; *kur gal a-a {d}en-lil₂ za₃-mi₂*; *za₃-mi₂-zu dug₃-ga-am₃* | `DN – תְּהִלָּה!`; `הָהָר הַגָּדוֹל, הָאָב אֶנְלִיל – תְּהִלָּה!`; `תְּהִלָּתְךָ – מְתוּקָה הִיא!` (2026-10-22: as Enki and Ninmaḫ 141 `תהילתך מתוקה!`; was `טוֹבָה`) | H&P 196; S&W 318; FI 111 |
 | *ud-bi-a* / *ud-ba* | `בַּיּוֹם הַהוּא` / `בָּעֵת הַהִיא` | §6.3 |
 | *nam tar* | `גָּזַר גּוֹרָל` (never `בֵּרַךְ`) | S&W 19, 25 |
 
