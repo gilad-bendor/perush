@@ -458,7 +458,7 @@ def build(key):
     out, notes, n = [], [], 0
     for kind, v in sections(paths):
         if kind == 'h':
-            out.append(f'\n## {re.sub(r"^[0-9A-Za-z.+]+[–-][0-9A-Za-z.+]+: ", "", v)}\n')
+            out.append(f'\n## {re.sub(r"^[0-9A-Za-z.+]+(?:[–-][0-9A-Za-z.+]+)?: ", "", v)}\n')
         else:
             e = ent[v]
             ref = ''
