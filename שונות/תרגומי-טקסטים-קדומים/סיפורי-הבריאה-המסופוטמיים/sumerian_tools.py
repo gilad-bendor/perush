@@ -121,6 +121,7 @@ WRONG_FORMS = {  # stripped token (prefixes allowed) -> (correct form, translite
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')
+BRK = re.compile(r'[\[\]⸢⸣⟨⟩«»]')
 
 
 def strip(s):
@@ -272,9 +273,12 @@ def verify(key, strict=False):
         if 'טרם תורגם' in heb:
             pending += 1
             continue
-        check_reserved(k, heb, e['tr'][0] if e['tr'] else '', problems)
+        # gates see the words whole: brackets inside a word (`ק[יץ]`, `חור⟨ף⟩`) and in the transliteration
+        # (`e₂-[me]-⸢eš⸣`) are removed first (2026-10-22, project 7)
+        gheb, gtr = BRK.sub('', heb), BRK.sub('', e['tr'][0] if e['tr'] else '')
+        check_reserved(k, gheb, gtr, problems)
         if P.get('gates57'):
-            check_tokens_5_7(k, heb, e['tr'][0] if e['tr'] else '', problems)
+            check_tokens_5_7(k, gheb, gtr, problems)
         check_traps(k, heb, problems, e['tr'][0] if e['tr'] else '')
     if pending:
         (problems if strict else notes).append(f'{pending} entries not yet drafted')
