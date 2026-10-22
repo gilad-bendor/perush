@@ -85,7 +85,7 @@ RESERVED = [
     (W + r"(?:חסד|חסדו|חסדי|חסדה|חסדיו|חסדים)" + E, ["dumqu", "damāqu", "dunqu", "damqu", "damiqtu", "sag9[", "saĝ9[", "sa₆"], "חֶסֶד only for dumqu (Gilgameš corpus)"),
     (W + r"(?:שלום|שלומי|שלומו|לשלום|השלים|שלם|שלמה|שלמים|ישלם|שילם|משלים|שלמות)" + E,
      ["šulmu", "šalāmu", "šalmu", "salāmu", "salīmu", "šullumu", "šalmiš", "šalāmu", "šūlumu", "šullumu", "gamāru",
-      "šulmān", "ka-silim", "silim[", "silim", "su[replace", "su-su"],
+      "šulmān", "ka-silim", "silim[", "silim", "sug6[", "su[replace", "su-su"],
      "שלם only for šulmu / šalāmu / salāmu [cognate]"),
     (W + r"(?:נקי|נקיה|נקיים|ניקה|נוקה|ינקה)" + E, ["ebbu", "zakû", "ullulu", "ellu", "zakāru", "kug[", "dadag[", "sikil["], "נָקִי only for zakû / ebbu (Job 4:7 `מִי הוּא נָקִי אָבָד`)"),
     (W + r"(?:צדיק|צדיקים|צדק|צדקה|צדקתי|הצדיק|צדקו|יצדק|נצטדק)" + E, None,
@@ -107,7 +107,7 @@ RESERVED = [
     (W + r"(?:כבד|כיבד|כבדו|כבדה|יכבד|יכבדו|תכבד|כבדם|כבדהו|מכבד|נכבד|נכבדים|כבדי|כבדך)" + E,
      ["kabātu", "kabtu", "kabattu", "kubbutu", "kabtūtu", "kabbaru", "dugud", "kubbuttu", "kibittu"],
      "the root כבד only for the kabātu family (Ex 20:11 `כַּבֵּד אֶת אָבִיךָ`) and kabattu 'liver'"),
-    (W + r"(?:יאריך|יאריכו|האריך|הארכת|תאריך|אורך|ארוך|ארוכים|ארוכה|ארך)" + E, ["arāku", "arku", "urruku", "arkatu", "arkiš", "urruk", "mūrak", "nūru"],
+    (W + r"(?:יאריך|יאריכו|האריך|הארכת|תאריך|אורך|ארוך|ארוכים|ארוכה|ארך)" + E, ["arāku", "arku", "urruku", "arkatu", "arkiš", "urruk", "mūrak", "nūru", "gid2["],
      "the root ארך only for its cognate arāku (Ex 20:11, Deut 5:15, 25:15 in the repository's numbering); `אורך` 'your light' is licensed by nūru"),
 ]
 
