@@ -334,6 +334,7 @@ def norm_tr(s):
 
 
 def check_reserved(label, heb, lic, problems):
+    lic = lic + ' ' + lic.replace('h', 'ḫ').replace('H', 'Ḫ')   # eBL writes ḫ as h (2026-10-22)
     h = strip(FN.sub('', heb))
     for pat, allow in RESERVED.items():
         if re.search(pat, h):
