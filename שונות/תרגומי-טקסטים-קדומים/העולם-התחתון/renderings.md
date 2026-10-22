@@ -272,7 +272,7 @@ Projects **3 Nergal and Ereškigal** (Akkadian, eBL `L/1/6`: the Middle Babyloni
 | *ṣalālu* (7-day refrain) | `יָשַׁן` (Gilg. XII) | Refrain fixed in §11.5. |
 | *ardatu*; *ṣeḫertu*; *mēlulu* (noun); *dakāku* | `עַלְמָה`; the translator; `מָחוֹל` (everyday voices: *mēlula* `המחול`); the translator | [equivalent] ↔ `אָז תִּשְׂמַח בְּתוּלָה בְּמָחוֹל` (ירמיהו לא:יב). |
 | *reḫû* (*urtaḫânni*); *bâtu* | the translator (keep apart from *niāku* `בָּא עַל` and *nâlu* `שָׁכַב`); `לָן` | [equivalent] ↔ `לִינִי הַלַּיְלָה` (רות ג:יג). |
-| *musukkatu*; *ebbu* | `טְמֵאָה`; `טָהוֹר` | [equivalent] ↔ Lev 12, 15 (the apparatus quotes after printing). `נִדָּה` never (false friend, §6.7 of the guidelines). |
+| *musukkatu*; *ebbu* | `טְמֵאָה`; `צַח` (changed 2026-10-22, §11.7: *ellu* keeps `טָהוֹר`) | [equivalent] ↔ Lev 12, 15 (the apparatus quotes after printing). `נִדָּה` never (false friend, §6.7 of the guidelines). |
 | *qubbuḫ ṣuddur pussul* | the translator (plain Hebrew for "bald, squinting, lame") | Describe the defect as the text does; the apparatus: `עִוֵּר אוֹ פִסֵּחַ` (ויקרא כא:יח), `עֲלֵה קֵרֵחַ` (מלכים ב ב:כג), `וְהוּא צֹלֵעַ עַל יְרֵכוֹ` (בראשית לב:לב). |
 | *mê kuppi* | `מֵי מַעְיָן` (or the like) | `בּוֹר` is reserved (§6). |
 | *ūmī dārûti* | `לְעַד` / `לָנֶצַח` | `עוֹלָם` is reserved (§6; creation corpus §5). |
@@ -331,8 +331,21 @@ Projects **3 Nergal and Ereškigal** (Akkadian, eBL `L/1/6`: the Middle Babyloni
 ### 11.6 Reserved for projects 3–4 (added to §6; checked by `verify`)
 **Never:** `סֻלָּם`; `מַלְאָךְ` (any form); `לִילִית`; `הִבְדִּיל` (any form of בדל); `רָקִיעַ`; `טֶרֶם` (already); `בּוֹר` (already); `עוֹלָם` (already). **Gated:** `גַּן` – *kiri₆*; `פּוּכּוּ` / `מֵכּוּ` – *ellag* / *e-ke₄-ma* / *pukku* / *mekkû*; `הֵיכָל` – *e₂-gal* / *ēkallu*.
 
+### 11.7 Merged after project 3, part 1 (SB a+1–b+50, 2026-10-22)
+The translator's table of fixed strings (`3-נרגל-וארשכיגל/project.md`, "Proposals") **binds the later copies letter for letter**: the speech formula `אָנוּ פתח את פיו ואמר, אל כַּכָּה וזירו דבר דיבר:`; the message a+4–10 (`לאמור: 'אַתְּ – לא לך לעלות;` … `שליחך יבוא,` / `יְפַנֶּה את השולחן, יקבל את מתנתך;`); `כהגיעו אל שער …`; `"שוער, פתח לי את השער!"`; the gates `בשער הראשון הֱבִיאוֹ את האל כַּכָּה,`; the kneeling `בא אל חצרה הרחבה,` / `כרע, נשק את הקרקע לפניה,` / `התיישר, עומד ומדבר אליה:` (= Enūma eliš III 70); the greeting `שלום לX?` / `שלום לX;`; `האלים (הגדולים) היושבים בקרב אירכלה`; Ea's woodcutting command → execution; **the taboos**: `X Y נושא לך – אל תיגש, ואת Yו אל תאכל!` (*âru* "approach" = `ניגש`, against Foster's "take care"), the last `אתה – אשר לזכר ונקבה אל תאחז? בלבך`; the keeping (c+55–64) changes only `אל` + future → `לא` + past and `לך` → `לו`. b+26–28 = Gilg. X 92–94 and b+37 = Gilg. III 120 (`ושׂמה טַעַם`, vocalized, the "decree" sense) are copied from Gilgameš. Words: *umma* `לאמור`; *šapāru* `שָׁלַח`; *nīnu* `אֲנַחְנוּ` (never `אנו`); *ana maḫri* `לִפְנֵי`; *šattu* `שָׁנָה`, *warḫu* `חודש`; *paššūru* `שולחן`; *paṭāru* (a table) `פִּנָּה`; *qīštu* `מַתָּנָה`; *šalimtu* `שְׁלֵמוּת` [cognate].
+**The coordinator's rulings on the open decisions** (the user's rule: minor things decided and recorded):
+1. Kakka stays `כַּכָּה` (the eBL normalization *kaka*); Enūma eliš's `גַּגָּא` follows that edition's reading of the same god: a note at the first occurrence names both.
+2. *arkāt simmilat šamāmī*: the fixed `במדרגות השמים הארוכות` stays; the note gives eBL's reading (*arkātu* "the length(s) of").
+3. *ebbu* = **`צַח`** (accepted), so that *ellu* keeps `טָהוֹר` (precedent); §11.3 row changed: d+67 `טמאה אני – ולא צחה`. *musukkatu* stays `טְמֵאָה`.
+4. *mātu* = `ארץ` (no article) stays; *erṣetu* (netherworld) = `הארץ`; where the line could mislead, the note says which.
+5. `בא` for *alāku* + ventive and for *erēbu*: accepted (Hebrew has no ventive); *erēbu* "enter (a gate)" keeps `בא אל`.
+6. The literal `אל תיגש` (*âru*) stays (fidelity, §1); all ten lines stay together.
+7. *našû* stative: `נושא` of a person, `נִשָּׂא` of a thing: accepted.
+8. eBL's lemma *agû* "crown" for the tool (b+20) is a slip: recorded in the line's note.
+
 ## Changelog
 - 2026-10-21: written by the corpus coordinator before the first line, from the Gilgameš, wisdom, lament, temple, creation and law corpora and a reading of both base texts in full.
 - 2026-10-21: §9 filled after both texts were drafted and reviewed; §2/§5 rows corrected to the drafted lines; §10 extended.
 - 2026-10-21: the lead's cross-corpus harmonization applied (§10): §0 *uqnû*, §0.4 settled, §5 *za-gin₃* / *šembizid* rows fixed and a *ra-gaba* row added, §7 traps, §9 *ur₄* revised.
 - 2026-10-21 (Round 3, run 5): §11 added – the binding renderings of projects 3 (Nergal and Ereškigal) and 4 (Bilgameš, Enkidu and the Netherworld), fixed by the coordinator before the first line; the Sumerian of project 4 takes Gilgameš XII's Hebrew where XII renders it (`netherworld_tools.py xii`).
+- 2026-10-22: §11.7 merged after project 3, part 1 (SB a+1–b+50); *ebbu* = `צַח`.
