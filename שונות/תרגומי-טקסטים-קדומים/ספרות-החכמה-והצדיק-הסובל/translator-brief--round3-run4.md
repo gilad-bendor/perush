@@ -50,7 +50,7 @@ Four texts of the wisdom corpus are translated by six translators **one after th
 | *našû īnī (ana)* | `נשא עיניים (אל)` | SH 88, CW A+37 |
 | *usātu*, *ēpiš usāti*, *bēl usāti* | `עזרה`, `עושה עזרה`, `בעל עזרה` | DP 71–78, SH 122, CW A+16 |
 | *ikkibu* + god | `תועבת` + god | CW 49–50, A+59, A+103 |
-| *suppû (u) sullû (u) labān appi* | `תחינה, תחנונים ושפשוף האף` (fix the order to the Akkadian) | SH 130–131 (with more words), CW A+82 |
+| *suppû (u) sullû (u) labān appi* | `תחינה, תחנונים וליטוף אף` (fix the order to the Akkadian) | SH 130–131 (with more words), CW A+82 |
 | *kitmusu* (*kamāsu* Gt) | `כרע` (Gt: `כורעים`) | SH 15, 51, 55, 56, 131, 163 |
 | *ina iḫzīkā-ma amur ina ṭuppi* | `בלימודך – ראה בלוח:` | CW A+63, A+85, A+98 |
 The SH-a translator fixes 100 and 106 (SH-b copies them at 119); the CW translator fixes A+11 and A+15 with the table's Hebrew. If the Akkadian of a line differs from the table, change exactly what differs and say so.

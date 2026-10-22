@@ -241,7 +241,7 @@ Fixed by the run's coordinator **before drafting**, for four parallel translator
 | *našû īnī* (*ana*) | נָשָׂא עֵינַיִם (אֶל) | literal; [equivalent] ↔ `וַתִּשָּׂא אֵשֶׁת אֲדֹנָיו אֶת עֵינֶיהָ אֶל יוֹסֵף` (בראשית לט:ז), `לֹא תַחְמֹד אֵשֶׁת רֵעֶךָ` (שמות כ:יג); `חמד` never (checked). |
 | *tappû*; *ibru*; *aššat / alti tappê* | חָבֵר; רֵעַ; אֵשֶׁת חֲבֵרוֹ | §3: *tappû* = `חבר`, so SH 88 is `אשת חברו`, against the Decalogue's `רֵעֶךָ` (a [divergence] in the word, an [equivalent] in the law). |
 | *zêru*; *zāʾiru* | שָׂנֵא; שׂוֹנֵא | law corpus; CW 45 ↔ `אִם רָעֵב שֹׂנַאֲךָ` (משלי כה:כא). |
-| *suppû*; *sullû* (n.); *teslītu*; *karābu*; *ikribu*; *labān appi* | תְּחִנָּה; תַּחֲנוּנִים; תַּחֲנוּן; בֵּרֵךְ; תְּפִלָּה; "שִׁפְשׁוּף הָאַף" (literal, §2) | §2 and the §6.7 harmonization; `lemma` before fixing. |
+| *suppû*; *sullû* (n.); *teslītu*; *karābu*; *ikribu*; *labān appi* | תְּחִנָּה; תַּחֲנוּנִים; תַּחֲנוּן; בֵּרֵךְ; תְּפִלָּה; `לִטּוּף אַף` (Ludlul V 40, Theodicy 73; settled 2026-10-22) | §2 and the §6.7 harmonization; `lemma` before fixing. |
 | *niqû*; *qutrinnu*; *šagigurrû* | זֶבַח; קְטֹרֶת; נִדְבָה | `נדבה` [equivalent] (freewill offering, ויקרא כב:כא). |
 
 ### 11.4 The Dialogue of Pessimism: the fixed refrain and its parts
@@ -290,3 +290,6 @@ All proposals of `3-התפילה-הגדולה-לשמש/project.md` § SH (1–10
 - **Justice (§11.2), replaced:** *abbūt enši ṣabātu* = `אחז באבהות החלש` (*abbūtu* "fatherhood, patronage"; ↔ `אָב אָנֹכִי לָאֶבְיוֹנִים`, איוב כט:טז); *arna šūzubulu* = `הסביל עוון` (*zabālu* ~ `סבל` [cognate]); *pāna (ul) wabālu* = `(לא) נשא פנים`, a licensed idiom against §10.3's *wabālu* = `הביא` (↔ דברים י:יז); *zakû* D `זיכה` [cognate] (`נקי` stays *ebbu*); *māḫāzu* `מחוז` [cognate]; *ṣalpu* `עיקש`.
 - **Other:** *rēʾû* `רועה`, *nāqidu* `נוקד` [cognate]; *qaqqaru* `קרקע`; *ṣīru* `נעלה`; *balu* + suffix `זולת`; *šiddu* `פאה`; *nesû* (adj.) `מרוחק`; *bâʾu* `צעד` beside *ebēru* `עבר` [cognate] (Ludlul and the Theodicy have *bâʾu* `עבר` in three lines: an old split, recorded, not changed).
 - **88:** *iššû nīš īnīšu* (figura etymologica) = `נשא משא עיניו`; Foster's "covets" manufactures `לֹא תַחְמֹד` – a finding.
+
+### 11.11 Merged after SH-b (the Šamaš Hymn 101–200, 2026-10-22; SH complete)
+All proposals of `3-התפילה-הגדולה-לשמש/project.md` § SH (101–200) are **accepted and binding**: *sūtu* `סאה`, *aban kīsi* `אבן הכיס` (↔ `אַבְנֵי-כִיס`, משלי טז:יא; דברים כה:יג), *ṣibtu* `תוספת`, *maḫāru* (of prayer) `קידם את פני`, *naptanu* `פַּת־בַּג`, *sikkūru* `נֶגֶר`, *ḫalpû* `קיפאון`, *dipāru* `אבוקה`, *kallatu* `כַּלָּה`, *aplu* `יורש`, *ṣītu* `מוצא` (↔ `מוֹצָא פִי`, דברים ח:ג), *sulû* `משעול` (the Theodicy's `שווקים` is an old split, recorded). Coordinator: *labān appi* = **`ליטוף אף`** (Ludlul V 40, Theodicy 73 bind; SH 131 changed; CW A+82 follows); the `רשע` gate is licensed by *ruggugu* too (SH 127 keeps `הָעַוָּל`). Open collisions recorded in the project (*qiāšu* / *šarāku* `העניק`; *abullu* / *bābu* `שער`; *anzillu* / *ikkibu* `תועבה`).

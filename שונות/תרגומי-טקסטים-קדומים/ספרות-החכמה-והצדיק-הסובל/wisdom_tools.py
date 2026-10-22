@@ -90,7 +90,7 @@ RESERVED = [
     (W + r"(?:נקי|נקיה|נקיים|ניקה|נוקה|ינקה)" + E, ["ebbu", "zakû", "ullulu", "ellu", "zakāru", "kug[", "dadag[", "sikil["], "נָקִי only for zakû / ebbu (Job 4:7 `מִי הוּא נָקִי אָבָד`)"),
     (W + r"(?:צדיק|צדיקים|צדק|צדקה|צדקתי|הצדיק|צדקו|יצדק|נצטדק)" + E, None,
      "Akkadian has no ṣdq here: kittu = אֱמֶת, kīnu = נֶאֱמָן, išaru = יָשָׁר; never צַדִּיק / צֶדֶק (Job's key word)"),
-    (W + r"(?:רשע|רשעים|רשעה|הרשיע)" + E, ["raggu", "ṣēnu", "lemnu", "raggiš", "ṣēnû", "rušû", "erim2[", "nig2-erim2[", "niĝ₂-erim₂"],
+    (W + r"(?:רשע|רשעים|רשעה|הרשיע)" + E, ["raggu", "ṣēnu", "lemnu", "raggiš", "ṣēnû", "rušû", "ruggugu", "erim2[", "nig2-erim2[", "niĝ₂-erim₂"],
      "רָשָׁע only for raggu / ṣēnu (Gilgameš corpus raggu = רָשָׁע)"),
     # Round 3, run 4 (2026-10-21): the Torah's laws of weights, bribes, interest, parents and long life
     (W + r"(?:נשך|נשכו|תרבית|מרבית|רבית|ריבית)" + E, None,
