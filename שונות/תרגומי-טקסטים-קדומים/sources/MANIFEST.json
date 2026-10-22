@@ -12822,6 +12822,20 @@
    }
   },
   {
+   "id": "ORACC/epsd2-literary--Q000762--Debate-Summer-and-Winter/Q000762.cdl.json",
+   "kind": "oracc-member",
+   "tier": "work",
+   "source": "epsd2-literary",
+   "note": "",
+   "files": {
+    "ORACC/epsd2-literary--Q000762--Debate-Summer-and-Winter/Q000762.cdl.json": [
+     3185072,
+     "63bdcd3cdcb460371a86a82267f0cd5f2bb3db58e526ce27fd84eb8c3afc44a4"
+    ]
+   },
+   "member": "epsd2/literary/corpusjson/Q000762.json"
+  },
+  {
    "id": "eBL/Counsels-of-Wisdom-SB/",
    "kind": "ebl-chapter",
    "tier": "work",
