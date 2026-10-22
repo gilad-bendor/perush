@@ -107,8 +107,8 @@ RESERVED = [
     (W + r"(?:כבד|כיבד|כבדו|כבדה|יכבד|יכבדו|תכבד|כבדם|כבדהו|מכבד|נכבד|נכבדים|כבדי|כבדך)" + E,
      ["kabātu", "kabtu", "kabattu", "kubbutu", "kabtūtu", "kabbaru", "dugud", "kubbuttu", "kibittu"],
      "the root כבד only for the kabātu family (Ex 20:11 `כַּבֵּד אֶת אָבִיךָ`) and kabattu 'liver'"),
-    (W + r"(?:יאריך|יאריכו|האריך|הארכת|תאריך|אורך|ארוך|ארוכים|ארוכה|ארך)" + E, ["arāku", "arku", "urruku", "arkatu", "arkiš", "urruk", "mūrak"],
-     "the root ארך only for its cognate arāku (Ex 20:11, Deut 5:15, 25:15 in the repository's numbering)"),
+    (W + r"(?:יאריך|יאריכו|האריך|הארכת|תאריך|אורך|ארוך|ארוכים|ארוכה|ארך)" + E, ["arāku", "arku", "urruku", "arkatu", "arkiš", "urruk", "mūrak", "nūru"],
+     "the root ארך only for its cognate arāku (Ex 20:11, Deut 5:15, 25:15 in the repository's numbering); `אורך` 'your light' is licensed by nūru"),
 ]
 
 # Unvocalized strings that read as another word. (regex on the RAW line, lemma prefixes that make the hit an
