@@ -381,8 +381,8 @@ The user counts these as full candidates (guidelines §1), not as a low tier. Or
 
 The standing rule is to decide minor things and bring only major choices (STATUS §6). These are the major ones:
 
-1. **Widen the folder beyond Mesopotamia, and in what order.** The recommendation is §8 below (Round 4): the Ugaritic myths first
-   (they serve the unit being written), then Egypt and Hesiod. The folder's name, `תרגומי-טקסטים-קדומים`, already fits.
+1. ~~Widen the folder beyond Mesopotamia, and in what order.~~ **Settled by the user, 2026-10-22:** yes, in the order of §8
+   (Round 4). The folder's name, `תרגומי-טקסטים-קדומים`, already fits.
 2. **Hebrew and Moabite inscriptions** (Tier 1 #6): a square-script transcription + a vocalized reading + the apparatus,
    rather than a "translation"?
 3. **A new apparatus tag for typological parallels.** The four tags of guidelines §6.4 ([cognate], [equivalent],
@@ -407,18 +407,17 @@ Decided here (minor; recorded in the guidelines and in STATUS):
 
 ---
 
-## 8. A proposed Round 4 (for the user to approve)
+## 8. Round 4: the order (approved by the user, 2026-10-22)
 
-Round 3 (six Mesopotamian runs) is already planned in `curated-translation-candidates.md`. Round 4 would be the first
-non-Mesopotamian round. Its corpora are new, so in Claude Cloud it can run alongside Round 3, one session per run
-(guidelines §5.1; start each with `ancient-translations: Round 4, run N`):
+The world texts and the Mesopotamian texts left after Round 3 are ranked together in one plan: **`curated-translation-candidates.md`, "Round 4 plan (2026-10-22)"**. It starts when Round 3 is finished, and its runs go **one at a time** (guidelines §5.1: quotas apply in every session). The order:
+1. the Ugaritic myths (the Baal Cycle + the short myths and charms), with the fifth-day dossier (§5A);
+2. the Edict of Ammiṣaduqa, only if an open base text is found;
+3. Egyptian wisdom and creation (Amenemope, Merikare, the Heavenly Cow, the Memphite Theology);
+4. Hesiod (Theogony + Works and Days);
+5. Erra and Išum;
+6. Hittite law and ritual (the Laws, the Instructions for Temple Personnel, the elimination rituals).
 
-| Run | Texts | Base text | New corpus folder (proposal) | Why first |
-|---|---|---|---|---|
-| 1 | **The Baal Cycle + the short Ugaritic myths and charms** (~1,900 lines) | CUC (Zenodo); check EUPT | `מיתוסים-אוגריתיים/` | Gen 1:21 now; Gen 7:11, 9:20–27, 10 |
-| 2 | **Amenemope + Merikare's creation + the Heavenly Cow + the Memphite Theology** | AED-TEI; El Hawary 2010; Hornung 1997 | `חכמה-ובריאה-במצרים/` | Gen 1–2, 6–9, the Torah's justice laws; open and complete |
-| 3 | **Hesiod, Theogony + Works and Days** (1,850 lines) | Perseus + treebank | `הסיודוס/` | Gen 1:21 (κήτη), 6:1–4, 8:20–21; the Near East–Greece bridge |
-| (quick win) | **The fifth-day dossier** (§5A) | the excerpts' own bases | inside run 1, or a corpus `היום-החמישי-בעולם/` | the unit being written now |
+Why the world texts come before most of the Mesopotamian ones: only the Edict of Ammiṣaduqa (MED-HIGH) and Erra (MEDIUM) among those reach the Torah value of the world's Tier 1 (HIGH), and the Baal Cycle serves the unit being written now. The Mesopotamian quick wins (Šūpê-amēlu and the fables, the Poor Man of Nippur) fit between the runs.
 
 **Each new language needs, before its first line:**
 - a **name table** and a **renderings file**, with the reserved-word gates (guidelines §5.2, ★). The flood corpus's shared

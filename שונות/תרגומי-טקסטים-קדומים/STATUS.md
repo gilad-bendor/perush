@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-21 (Round 2 finished; the cross-corpus splits settled; the Round 3 plan made; the world survey done, Round 4 proposed).
+Last updated: 2026-10-22 (Round 2 finished; the cross-corpus splits settled; the Round 3 plan made; the world survey done; the Round 4 plan made).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -76,14 +76,19 @@ table's order; inside a run, its sub-agents strictly one at a time (quotas, §2)
 | 5 | Nergal and Ereškigal, Bilgameš, Enkidu and the Netherworld (Gen 28:12; 1 Sam 28) | `העולם-התחתון/` projects 3–4 |
 | 6 | Maqlû I–VIII + the Ritual Tablet (Ex 22:17, Deut 18:10–11) | new `כשפים-ולחשים/` |
 
-**Round 4, proposed (the rest of the world, 2026-10-21; awaits the user's approval, §6).** At the user's request, ten
-regional surveys (`curation-surveys/world-survey--*`) were merged into **`curated-translation-candidates--world.md`**.
-Its §8 proposes the first non-Mesopotamian round, which can run alongside Round 3 (new corpora):
-**run 1, the Ugaritic myths** (the Baal Cycle + the short myths; base: CUC on Zenodo – for Gen 1:21, the unit being
-written); **run 2, Egyptian wisdom and creation** (Amenemope, Merikare, the Heavenly Cow, the Memphite Theology; base:
-AED-TEI); **run 3, Hesiod** (Theogony + Works and Days; base: Perseus + treebank); and the **fifth-day dossier** (its §5A).
-Each new language needs a name table, renderings with reserved-word gates, a translator brief and a converter from its
-base format before the first line.
+**Round 4 (approved by the user, 2026-10-22; starts when Round 3 is finished):** `curated-translation-candidates.md`,
+"Round 4 plan". It merges the Mesopotamian texts left after Round 3 with the first non-Mesopotamian texts from the world
+survey (`curated-translation-candidates--world.md`), ranked together. **One run at a time** (guidelines §5.1), started with
+`ancient-translations: Round 4, run N`:
+1. the Ugaritic myths (the Baal Cycle + the short myths and charms), with the fifth-day dossier – for Gen 1:21, now;
+2. the Edict of Ammiṣaduqa – only if an open base text is found (none on 2026-10-22);
+3. Egyptian wisdom and creation (Amenemope, Merikare, the Heavenly Cow, the Memphite Theology; base AED-TEI);
+4. Hesiod (Theogony + Works and Days; base Perseus + treebank);
+5. Erra and Išum (eBL);
+6. Hittite law and ritual (the Laws, the Temple Instructions, the elimination rituals; base TLHdig).
+
+Quick wins between the runs: Šūpê-amēlu and the fables; the Poor Man of Nippur. Each new language needs a converter, a
+name table, renderings with reserved-word gates and a translator brief before its first line.
 
 Parallel sessions edit the shared files only at the end of their run, in one commit, after `git pull --rebase` (the
 plan's last paragraph). The user's review of the Round 1–2 drafts can go on alongside. The Round 2 runs, for the record:
@@ -136,8 +141,7 @@ lines it changed, and the `project.md` files mark their open decisions settled. 
 passed afterwards.
 
 **For the user, from the world survey (2026-10-21; `curated-translation-candidates--world.md` §7):**
-1. Widen the work beyond Mesopotamia, and approve Round 4 (Ugaritic myths, Egyptian wisdom and creation, Hesiod, the
-   fifth-day dossier)?
+1. ~~Widen the work beyond Mesopotamia, and approve Round 4?~~ **Settled 2026-10-22:** yes – the merged Round 4 plan.
 2. Hebrew and Moabite inscriptions: a square-script transcription + a vocalized reading + the apparatus, instead of a
    "translation"?
 3. A new apparatus tag, **[typological]**, for parallels from cultures with no contact with Israel (guidelines §6.4)?
