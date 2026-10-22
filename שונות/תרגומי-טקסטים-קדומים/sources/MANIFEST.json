@@ -7337,6 +7337,246 @@
    "raw_files": 534
   },
   {
+   "id": "eBL/Etana-MA-Assur/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "9",
+    "Middle Assyrian",
+    "Aššur"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Etana-MA-Assur/_raw/chapter-display.json": [
+     1513222,
+     "3c3cce0de1cc2660d53a3508c6682bb5265b0db308a193a03e7bcf2a1f49d7dd"
+    ],
+    "eBL/Etana-MA-Assur/bibliography.md": [
+     3176,
+     "3338b9e701290acb10f5f5ad2d881f14d0b11b91d4d5e2ccfdbab1fef7551435"
+    ],
+    "eBL/Etana-MA-Assur/chapter.atf": [
+     30533,
+     "9dc8dc5bd55322a59c1403ce88a5c6cbfac281a2c42530e0619d2383938e3ea4"
+    ],
+    "eBL/Etana-MA-Assur/glossary.md": [
+     72874,
+     "19bee947b9f3186471c18600555c8d3d2d8a3bdaf95f7c1796f2082536087116"
+    ],
+    "eBL/Etana-MA-Assur/manuscripts.md": [
+     1042,
+     "0bd0a1cfcc3642a2059215e21bbfc10d14098dac5424e038d49dbf5ef3a1a3eb"
+    ],
+    "eBL/Etana-MA-Assur/reading-edition.md": [
+     61283,
+     "e96639127f86e2c013499bd3bdd1727f5f6e781a7bc10b945617d207fe07164d"
+    ]
+   },
+   "raw_files": 215
+  },
+  {
+   "id": "eBL/Etana-OB-Morgan/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "9",
+    "Old Babylonian",
+    "Morgan"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Etana-OB-Morgan/_raw/chapter-display.json": [
+     473807,
+     "b17a73edb13f8ee2899654c3f219343a55df219924825e48bb404737468344b7"
+    ],
+    "eBL/Etana-OB-Morgan/bibliography.md": [
+     2861,
+     "e60b634a8c918e54728192c768a8507771f330ea90a03c924c7c5e592dbab171"
+    ],
+    "eBL/Etana-OB-Morgan/chapter.atf": [
+     9192,
+     "7c2a586c1a7c34776b351720f0dfbfc418be4ebdc6cb3e7bbb4dd0d4c6ee0d08"
+    ],
+    "eBL/Etana-OB-Morgan/glossary.md": [
+     31880,
+     "ccaedf8d565ed92d3415835dd3caf3f66ea337e5fd4fbe8349de2f76d4769669"
+    ],
+    "eBL/Etana-OB-Morgan/manuscripts.md": [
+     736,
+     "2af9224a16a165829266d44b865115f71d7738dbc901a7c80aab0f43b92c8272"
+    ],
+    "eBL/Etana-OB-Morgan/reading-edition.md": [
+     19869,
+     "903f12b07365ce1f9c58c9449847470627ea4362909773b796f79f28a9a88dda"
+    ]
+   },
+   "raw_files": 106
+  },
+  {
+   "id": "eBL/Etana-OB-Susa/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "9",
+    "Old Babylonian",
+    "Susa"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Etana-OB-Susa/_raw/chapter-display.json": [
+     474961,
+     "53b74d3009cf140dd6d79af0db77e5d5f3f9a6e81cecf047cf4e829478a27729"
+    ],
+    "eBL/Etana-OB-Susa/bibliography.md": [
+     2860,
+     "b8f5c5bf3089d33bb5c23c05886ecdf2231b5aa79c2ba6e0cb22731987141eef"
+    ],
+    "eBL/Etana-OB-Susa/chapter.atf": [
+     9606,
+     "91a880e30966d8bbc4362b9bb2716e59cb1cef686c174756f9e16a96516b717a"
+    ],
+    "eBL/Etana-OB-Susa/glossary.md": [
+     36916,
+     "41b431fb85335a2151e6ca95db3bc685276f4ea9fd40419b655f9c86fa31c5d7"
+    ],
+    "eBL/Etana-OB-Susa/manuscripts.md": [
+     707,
+     "8af72c79c760383d0e33f760bd92fad1f6296813f05cc58dfd6da3c589562571"
+    ],
+    "eBL/Etana-OB-Susa/reading-edition.md": [
+     21204,
+     "eb3909d9360d0432f803ff7400331ca02adf2a82d228dd7635112e1c7a431893"
+    ]
+   },
+   "raw_files": 116
+  },
+  {
+   "id": "eBL/Etana-SB-I/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "9",
+    "Standard Babylonian",
+    "I"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Etana-SB-I/_raw/chapter-display.json": [
+     416536,
+     "46ebd8980aa9b2ed3f7523fcc5ddc9351ac6b05bf7a3060edd6a32eeafb4706d"
+    ],
+    "eBL/Etana-SB-I/bibliography.md": [
+     2739,
+     "3653ca78eb6a1ececd41fad5211a26a86eaa258e6973fd9ce4dff009baaf9543"
+    ],
+    "eBL/Etana-SB-I/chapter.atf": [
+     8743,
+     "6990ee378be0e4b6d069ab8ef38d7cef8ba6cbaff66670a479c40365f3529328"
+    ],
+    "eBL/Etana-SB-I/glossary.md": [
+     25637,
+     "1eab5c0cc8ca30cbefdc25af2f9588e8a6214ba1451e24b7551cde659df67595"
+    ],
+    "eBL/Etana-SB-I/manuscripts.md": [
+     883,
+     "a2e93a2a345fedc16361e66c13f11944a34e058b257cf7dd437e4b90f05dccdf"
+    ],
+    "eBL/Etana-SB-I/reading-edition.md": [
+     17973,
+     "da3b419692b43b4ab5fc06a1bcb34559b2b081d265543c0419833e89fde8af1a"
+    ]
+   },
+   "raw_files": 86
+  },
+  {
+   "id": "eBL/Etana-SB-II/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "9",
+    "Standard Babylonian",
+    "II"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Etana-SB-II/_raw/chapter-display.json": [
+     2509880,
+     "a56579440c9c3c88ae5cbc27af98fb0d3236137fa5c8bf912c98337a1b83e341"
+    ],
+    "eBL/Etana-SB-II/bibliography.md": [
+     3596,
+     "52c0199b01bee6e78498e4698e4f07740059653d6911845ae477195bf66410d9"
+    ],
+    "eBL/Etana-SB-II/chapter.atf": [
+     44000,
+     "d5029492c4942f9ddfb111c96d941be08c9372a2a879aec811a00f31f052a1ea"
+    ],
+    "eBL/Etana-SB-II/glossary.md": [
+     81010,
+     "68c98e43a54a776be930ea888c304c44979027e3ee2b84bf051771250d0b9e95"
+    ],
+    "eBL/Etana-SB-II/manuscripts.md": [
+     1078,
+     "bc571260cb19c3510e11e3ff69e5af97b7adf636ee27e5cadff12e546d7b5fb9"
+    ],
+    "eBL/Etana-SB-II/reading-edition.md": [
+     84136,
+     "52116009d95ba99fd198b11d5065d099615cbda153c1ac92368c4cf643645ddd"
+    ]
+   },
+   "raw_files": 235
+  },
+  {
+   "id": "eBL/Etana-SB-III/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "9",
+    "Standard Babylonian",
+    "III"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Etana-SB-III/_raw/chapter-display.json": [
+     1905847,
+     "c43552a0b15795a2407e14d8d151787b5848d3f58e13f8345c760f5b396aff01"
+    ],
+    "eBL/Etana-SB-III/bibliography.md": [
+     2634,
+     "4c9bbf231a0b0b747da0eab4a7b39d86d1d9c6550252593b7ff6d87ea12b47f0"
+    ],
+    "eBL/Etana-SB-III/chapter.atf": [
+     30424,
+     "2356dcba513ed686ebf8671f74198a1981f1a4648470220601d58ac3424760ec"
+    ],
+    "eBL/Etana-SB-III/glossary.md": [
+     52768,
+     "1500e72b597a4737149058346bf3707f6bdac4b1ee464aec8cf4973b565cec70"
+    ],
+    "eBL/Etana-SB-III/manuscripts.md": [
+     1628,
+     "a70ac39119a8cb3c4bb47143cad3045e689bd247ea6c0595011b4a499c93e05e"
+    ],
+    "eBL/Etana-SB-III/reading-edition.md": [
+     59719,
+     "9ff455547b5086390f3ed2af0687e93f205ca941ce6f8f25edf6e045cbffd597"
+    ]
+   },
+   "raw_files": 148
+  },
+  {
    "id": "eBL/Gilgamesh-OB-Harmal1/",
    "kind": "ebl-chapter",
    "tier": "work",
