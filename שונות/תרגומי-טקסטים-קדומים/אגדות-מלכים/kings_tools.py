@@ -192,7 +192,7 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     # Etana (renderings §10.1): names that read as Hebrew words unvocalized
     'אתנה': ('Etana (אֵתָנָה; "I will give")', r'etan'), 'שמש': ('Šamaš / the sun (שַׁמַשׁ / שֶׁמֶשׁ)', r'šamaš|šamš'),
     'אנו': ('Anu (אָנוּ; "we")', r'(^|[\s|(\[])(anu|anim|ānim|ani|anum)\b'), 'סין': ('Sîn (סִין; the desert of Sin)', r'sîn|sīn'),
-    'שכן': ('Šakkan (שַׁכַּן)', r'šakkan'), 'אט': ('*eṭemmu* (אִט; "slowly")', r'eṭemm'),
+    'שכן': ('Šakkan (שַׁכַּן)', r'šakkan'), 'ברו': ('*bēru* (בֵּרוּ)', r'bēr[au]\b|bēri\b'), 'אט': ('*eṭemmu* (אִט; "slowly")', r'eṭemm'),
     'ציר': ('*ra-gaba* (צִיר)', r'ra₂?-gaba'), 'צירי': ('*ra-gaba* (צִירִי)', r'ra₂?-gaba'), 'צירה': ('*ra-gaba* (צִירָהּ)', r'ra₂?-gaba'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')

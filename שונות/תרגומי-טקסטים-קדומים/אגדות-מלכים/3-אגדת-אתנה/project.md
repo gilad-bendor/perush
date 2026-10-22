@@ -42,7 +42,7 @@ numbering (Kinnier Wilson 1985; Foster; Dalley; Haul 2000) differs (e.g. SB II =
 | ET2 | OBS 1–a+24; MA a+1–c+31; II 1–72 | sub-agent | **done** 2026-10-22 (179 lines, three passes; merged: renderings §10.6.1) |
 | ET1 | OBM 1–a+13; I 1–a+11 | sub-agent | **done** 2026-10-22 (69 lines, three passes; merged: renderings §10.6.2) |
 | ET3 | II 73–152; OBM b+1–c+9; MA d+1–f+18 | sub-agent | **done** 2026-10-22 (153 lines, three passes; merged: renderings §10.6.3) |
-| ET4 | III 1–c+7; MA g+1–i+18 | sub-agent | after ET3 |
+| ET4 | III 1–c+7; MA g+1–i+18 | sub-agent | **done** 2026-10-22 (184 lines, three passes; merged: renderings §10.6.4) |
 
 ## Open decisions
 (per part; below)
@@ -758,3 +758,298 @@ Words (one Hebrew each; grep-checked in all corpora):
 | MA: *nâlu*; *mayyālu*; *mūšu*; *šuttu*; *ḫuršānu*; *nabalkutu*; *palāsu* N; *qerēbu* | `שָׁכַב`; `מִשְׁכָּב`; `לַיְלָה`; `חֲלוֹם`; `רָמָה`; `חָצָה`; `הִסְתַּכֵּל`; `קָרַב` | cognate (*qerēbu*) | | MA d+5–d+9 |
 | MA: *būlu*; *šarru*; *elû* Š; *biltu*; *ṣītu*; *šalām šamši*; *šamšu*; *ezēbu* | `בְּהֵמָה`; `מֶלֶךְ`; `הֶעֱלָה`; `מַשָּׂא`; `מוֹצָא`; `שְׁקִיעַת הַשֶּׁמֶשׁ`; `הַשֶּׁמֶשׁ`; `עָזַב` | cognate (*elû*, *ezēbu*) | | MA e+8–f+4 |
 | MA: *pūtu* (of a pit); *malû* D; *banû*; *artu*; *balāṭu* (noun); *ṣabābu*; *agappu*; *rebû* | `פְּאָה`; `מִלֵּא`; `בָּנָה`; `עֲנָפִים`; `חַיִּים`; `נִפְנֵף`; `אֲגַף`; `רְבִיעִי` | cognate (*malû*, *banû*) | `רִחֵף` kept for the apparatus (Deut 32:11) | MA f+7–f+15 |
+
+## Part ET4 – the flights and the dreams (SB III 1–c+7; MA g+1–i+18), 2026-10-22
+
+Round 3, run 2 (`../renderings.md` §10.5). Translator: sub-agent ET4 (the last part). Files: `annotated-III.rtl.md`
+(the whole tablet: header + all 131 entries), `annotated-MA.rtl.md` (one header paragraph, "חלק ET4", + g+1–i+18,
+53 entries). **184 entries.** Not committed.
+
+### Progress and passes
+- [x] SB III 1–56 (131 with a+, b+, c+) · [x] MA g+1–i+18 (53) · [x] the III header (all paragraphs) · [x] the MA paragraph
+- [x] pass (a) fidelity · [x] pass (b) consistency · [x] pass (c) Hebrew
+- [x] `python3 -I kings_tools.py verify ET --strict` – **585 entries, OK** (no problem, no note: the "same
+  transliteration, different Hebrew" notes of the first run were removed by unifying the punctuation of the repeated
+  commands and executions)
+- [x] `python3 -I ../tools/check_bible_quotes.py annotated-III.rtl.md annotated-MA.rtl.md project--ET4.md` – 0 problems
+- **Order of work:** SB III first (it fixes the Hebrew of the flights, the drops and the dream), section by section,
+  each saved at once (1–25, 26–56, a+, b+1–b+16, b+17–c+7); then MA g–i, copying the SB Hebrew wherever the Akkadian is
+  the same (i+3 = b+30, i+4 = III.38, i+5 = b+26, i+6/i+13 = b+27, i+7 = b+28) and varying only where it varies.
+- **Data:** `kings_tools.py data ET III.1 III.c+7` and `… MA.g+1 MA.i+18`; eBL dictionary per word (buginnu, tarbaṣu,
+  kappu, ṣâdu, atwû, tarāku, raṣānu, galātu, maḫāru, nikkas, elpetu, qurunnu, zāʾeru, kanšu, markasu, elītu, wapû,
+  sakāpu, ēdēnu, šāninu, tēqītu, bāšītu); every Akkadian precedent looked up in the transliteration lines of all
+  corpora (a scratch helper that greps the backticked lines and prints their Hebrew), every new Hebrew word with
+  `kings_tools.py grep all`. Every Bible verse printed with `check_bible_quotes.py --show` before quoting.
+- **Pass (a) fidelity:** every `>` line against N and the ATF of its manuscripts. Fixed: III.7 bracket split (`הגי[בור`
+  tripped the `בור` gate → `הגיב[ור …]`); III.b+14 `ונבהלתי` unbracketed (NinNA3 *ap-ta-ru-u[d*: only the last sign
+  broken); MA i+4 `העלה [אותו]` (only the suffix broken); the speech boundaries checked (III.2–6 the eagle to Šamaš;
+  12–17 Etana; 18–19 the eagle, without a speech formula, as Foster; 23–27, 31–33, 35–37, 39 the eagle; 40–43 Etana;
+  a+6–a+8 the wife?; b+3–b+14 Etana's dream; b+16–b+20, b+27–b+30, b+33–b+34, b+37–b+38 the eagle; MA h+6–h+12 and
+  h+22 the interpreter; h+14–h+19 Etana; i+2–i+3 and i+9–i+10 Etana; i+6–i+7, i+13 the eagle); stems and tenses
+  re-parsed (*ullû* D vs *šušqû*; *ittūr* perfect; *imtaḫaršu* perfect; *luttallak* Gtn precative; *ṣâdu* with a
+  doubled ṣ; *līmida* = *lū* + preterite or precative; *ušamḫir* Š; *ikannušū* present).
+- **Pass (b) consistency:** command ↔ execution (III.26–29; b+18–b+23), dream ↔ fulfilment (b+3–b+8 ↔ b+40–b+45),
+  the three leagues of both flights and the four drops compared word by word and in order; the plea III.12–14 = II.140–
+  142 = MA d+4; the speech formulas (✓ FORMULAS) and ET1's `X אליו, אל Y, דיבר:` (b+15, b+26, b+32, b+36; MA i+1, i+5,
+  i+8, i+12; with *iqabbi* `אומר`, h+13); the names vocalized at every occurrence (`אֵתָנָה`, `שַׁמַשׁ`, `אָנוּ`, `סִין`,
+  `אִשְׁתַּר`, `רֵעִי`, `בֵּרוּ`). Collisions found by grep and resolved: `מִשְׁחָה` (Gilgameš XI *piššatu*) → *tēqītu*
+  `סִיכָה`; `הֵבִין` (Enūma eliš *ḫasāsu*) → *maḫāru* Š `*הִקְבִּיל*`; `כְּלָלוּת` (Enūma eliš *gimru*) → *kiššatu*
+  `כֹּל`; `כַּף` (*rittu*, Gilgameš, Ludlul) → Etana's *kappu* stays `כָּנָף`; `צַד` (*idu*) → *ina lēt* `אֵצֶל`;
+  `רָעַד` (Gilgameš *râbu*) → *galātu* `הִתְפַּלֵּץ`; `הָדַף` (Ludlul *duppuru*) → *sakāpu* `דָּחַף`; `הוֹמֶה` (OBM.6
+  *apâtu*) → *ḫabābu* `פִּכָּה`; `צָבַר` (Gilgameš *tabāku*) → *qarānu* `עָרַם`. Remaining splits: open decisions 1–5.
+- **Pass (c) Hebrew:** read aloud; vocalized what would be misread: `בֵּרוּ` (every time: unvocalized "they chose"),
+  `צָד` (vs `צַד`), `שִׂים` / `שָׂם` / `שׂוּמָה`, `חָזִי` (not "see!"), `עֵינַי`, `מֻנָּח`, `לְבָאִים`, `עָרְמוּ`
+  (not "naked"), `אֶשָּׂאֲךָ`, `אָבִיאָה לְךָ`, `אֶתְהַלְּכָה`, `הִסְתַּכַּלְתִּי`, `לְרַגְלַי` / `לְרַגְלֶיךָ`, `הַיֵּשׁ`,
+  `לְאוֹת`, `סִיכָה`, `מוּפָעִים`, `כְּמוֹ מָה הִיא`, `כִּמְלֹא`, `מַרְבֵּץ`, `שֹׁקֶת`, `גַּנָּ[ן]`; the punctuation of
+  the repeated lines unified (all commands `!`, all executions `.`).
+
+### Deviations from renderings §10 and the briefs (decided at the first occurrence, with the reason)
+1. **The flight's question is not *ibrī amur māta mīnâ ibašši*** (renderings §10.3 and the brief quote the literature):
+   the tablet has *ibrī naplis-(ma) mātu kī mīni ibašši* in the first flight (31, 35, 39) and *dugul ibrī mātu kī
+   ibašši* in the second (b+27, b+33, b+37; MA i+6, i+13) – two verbs, two word orders, *mīni* only in the first. So two
+   strings: `רֵעִי, הִסְתַּכֵּל – הארץ, כְּמוֹ מָה הִיא!` (*palāsu* N = `הִסְתַּכֵּל`, ET2) and `צְפֵה, רֵעִי – הארץ, איך
+   היא!` (*dagālu* = `צָפָה`, Gilgameš IX 174, Adapa, Theodicy). §10.3's row should be corrected.
+2. ***bēru* + three verbs**: *ištēn / šanâ / šalša bēra* + *ullû* (*elû* D) in the first flight and MA = `העלה אותו`
+   (the root of *elû* kept, as Š `הֶעֱלָה`, MA e+10); *šušqû* (*šaqû* D) in the second = `הגביה אותו` (§10.3);
+   *nasāku* in the drops = `זרק אותו` (Gilgameš XI 293 *issukaššu* `זרקו`; `הִשְׁלִיךְ` is *nadû*'s).
+3. ***târu ana* "turn into" = `נֶהְפַּךְ לְ־`** (Gilgameš XI 119, IV 106; Ludlul I 18, 84), not `שָׁב` (licensed by
+   *târu*, but in Hebrew "return").
+4. ***kappu* of Etana = `כָּנָף`** (III.27, b+19), literal, against Foster's "hands": `כַּף` is *rittu* (Gilgameš VII 170,
+   Ludlul V 12); the one Akkadian word for the eagle's wings and the man's "hands" is kept and footnoted.
+5. ***ina lēt* = `אֵצֶל`** (III.25), not `צַד` (Gilgameš IX 6 *ana lēt* `אל צד`), because §10.3 gives `צַד` to *idu*
+   (III.26, b+28); *lētu* as a noun stays `לְחִי`.
+6. ***ṣīt šamši* / *ereb šamši*:** the coordinator's `מִזְרַח שֶׁמֶשׁ` / `מְבוֹא הַשֶּׁמֶשׁ` were not used – neither phrase
+   is in my lines (only *ṣītu* "outlet", III.16, a+8 = `מוֹצָא`, as ET3's MA f+2–f+3 `מוֹצָא הַשֶּׁמֶשׁ`), and `מָבוֹא` is
+   *nērebu* (ET2).
+7. ***palgu* = `תְּעָלָה`** (§10.3; = Sum. *pa₅*, Enki and the World Order 324) kept, although Enūma eliš VII 63 has the
+   cognate `פֶּלֶג` (open decision 1); the cognate is tagged in MA i+10.
+8. ***mūšaru* = `עֲרוּגָה`, *kirû* `גַּן`**: *kirû* does not occur in my lines (the "garden" of Foster's MA i+9 is
+   *mūšaru*), so `גַּן` was not used at all; *nukaribbu* = `גַּנָּן` (b+38).
+9. **III.32's restored half-line is not translated** (`מְפַכִּ[ים? …]`): eBL's *nārātu? kī? palgî?* is Foster's oral
+   suggestion with three question marks, and Haul restores something else entirely.
+
+### Parallels index (ET4)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| III.3 | at[m]ī iṣṣūrī | שִׂי[ח]ת הציפורים | `כִּי עוֹף הַשָּׁמַיִם יוֹלִיךְ אֶת הַקּוֹל` (קהלת י:כ) | equivalent | The bird that carries speech; here Šamaš lets Etana understand the birds (only SB has this). |
+| III.3 | at[m]ī iṣṣūrī | שִׂי[ח]ת הציפורים | `וַיְדַבֵּר עַל הַבְּהֵמָה וְעַל הָעוֹף וְעַל הָרֶמֶשׂ וְעַל הַדָּגִים` (מלכים א ה:יג) | divergence | A king's knowledge of birds: Solomon's own wisdom; Etana's is a god's gift at the eagle's request. |
+| III.7 | ina pī šamaš qurādi | מפי שַׁמַשׁ הגיב[ור …] | `עַל פִּי יְהוָה יִסְעוּ בְּנֵי יִשְׂרָאֵל` (במדבר ט:יח) | equivalent | "By the mouth (command) of" the god; *ina pī*, not *ana zikir* (`למאמר`). |
+| III.12 | ibrī idnam-ma šamma ša alādi | רֵעִי, תנה לי את [ע]שב הלידה! | `הָבָה לִּי בָנִים` (בראשית ל:א) | equivalent | The plea of II.140–142, now to the eagle, with "my friend". |
+| III.14 | piltī usuḫ-ma šuma šuknanni | נ[סח] את חרפתי, שִׂים לי [שֵׁ]ם! | `אָסַף אֱלֹהִים אֶת חֶרְפָּתִי` (בראשית ל:כג) | equivalent | = II.142, MA d+4; *šumu* = name and offspring. |
+| III.24 | itti ištar bēlti | עם אִשְׁתַּר הגבירה | `וַיִּזְכֹּר אֱלֹהִים אֶת רָחֵל … וַיִּפְתַּח אֶת רַחְמָהּ` (בראשית ל:כב) | divergence | The plant of birth is "with Ištar the lady": the way to birth goes through the goddess of love and kingship. |
+| III.26 | ina muhhi idīya šukun idīka | על צדיי – [שִׂים את זרועותיך]! | `יִפְרֹשׂ כְּנָפָיו יִקָּחֵהוּ יִשָּׂאֵהוּ עַל אֶבְרָתוֹ` (דברים לב:יא) | equivalent | The eagle that carries on its wings; here practical instructions to the rider (and Akkad-period seals). |
+| III.27 | nāṣ kappīya | על נוצת כנפיי | `הַנֶּשֶׁר הַגָּדוֹל גְּדוֹל הַכְּנָפַיִם אֶרֶךְ הָאֵבֶר מָלֵא הַנּוֹצָה` (יחזקאל יז:ג) | cognate | *nāṣu* / `נוֹצָה`; Ezekiel's three wing words have their Akkadian counterparts in the fable: *kappu*, *abru*, *nāṣu*. |
+| III.30 | ištēn bēra ullīšū-ma | בֵּרוּ אחד – [העלה אותו] | `דֶּרֶךְ הַנֶּשֶׁר בַּשָּׁמַיִם` (משלי ל:יט) | equivalent | The eagle's way in the sky, here measured in double-hours (*bēru*, c. 10 km). |
+| III.31 | ibrī naplis mātu kī mīni ibašši | רֵעִי, הִסְתַּכֵּל – הארץ, כְּ[מוֹ מָה הִיא]! | `הַיֹּשֵׁב עַל חוּג הָאָרֶץ וְיֹשְׁבֶיהָ כַּחֲגָבִים` (ישעיהו מ:כב) | equivalent | The earth seen from above, shrinking; perhaps the oldest such description. |
+| III.32 | iḫambubā | מְפַכִּ[ים? …] | `וְהִנֵּה מַיִם מְפַכִּים` (יחזקאל מז:ב) | equivalent | Water trickling thinly; the restored "rivers like canals" left untranslated. |
+| III.33 | tâmtu rapaštu mala tarbaṣi | והים הרחב – כִּמְלֹא מַרְבֵּץ | `וְאֶת בְּנֵי עַמּוֹן לְמִרְבַּץ צֹאן` (יחזקאל כה:ה); `אֵיךְ הָיְתָה לְשַׁמָּה מַרְבֵּץ לַחַיָּה` (צפניה ב:טו) | cognate | *tarbaṣu* / `מַרְבֵּץ` (LH's *tarbaṣum*), *mala* / `מְלֹא`: the sea, end of the world, the size of a sheepfold. |
+| III.36 | ittūr mātu ana musarî | נֶהֶפְכָה הארץ לַעֲרוּגָה | `דּוֹדִי יָרַד לְגַנּוֹ לַעֲרֻגוֹת הַבֹּשֶׂם` (שיר השירים ו:ב); `לְהַשְׁקוֹת אוֹתָהּ מֵעֲרֻגוֹת מַטָּעָהּ` (יחזקאל יז:ז) | equivalent | Our proposal: Ezekiel's eagle parable (eagle, poplar `צַפְצָפָה`, oath, net) also has "garden beds". |
+| III.41 | ul išebbâ īnāya | לא תִשְׂבַּעְנָה עֵינַי | `לֹא תִשְׂבַּע עַיִן לִרְאוֹת` (קהלת א:ח) | cognate | *šebû* / `שָׂבַע`; the meaning diverges: Qohelet's eye is never sated because there is always more; Etana's because there is nothing left to see. |
+| III.42 | ibrī ul elli ana šamê | רֵעִי, לא אֶעֱלֶה לשמים! | `הַשָּׁמַיִם אֶעֱלֶה` (ישעיהו יד:יג) | divergence | The proud eagle said `אֶעֱלֶה – ובשמים אֵשֵׁב` (II.43); the frightened king says "I will not go up", with the same verb. |
+| III.42 | ibrī ul elli ana šamê | רֵעִי, לא אֶעֱלֶה לשמים! | `וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם` (בראשית יא:ד) | divergence | Going up to heaven is no rebellion here: Šamaš directs it, Ištar is its goal, and nobody is punished. |
+| III.42 | ibrī ul elli ana šamê | רֵעִי, לא אֶעֱלֶה לשמים! | `אִם אֶסַּק שָׁמַיִם שָׁם אָתָּה` (תהלים קלט:ח) | equivalent | Heaven as the limit of a human ascent (with `אֶשָּׂא כַנְפֵי-שָׁחַר`, 139:9). |
+| III.45 | erû imqut-ma imtaḫaršu ina kappīšu | הנשר נפל – וקיבל אותו בכנפיו. | `יִפְרֹשׂ כְּנָפָיו יִקָּחֵהוּ יִשָּׂאֵהוּ עַל אֶבְרָתוֹ` (דברים לב:יא) | equivalent | The eagle catches the falling Etana on its wings – four times (45, 47, 49, 51). In Deuteronomy the eagle is God. |
+| III.45 | erû imqut-ma | הנשר נפל | `אֵיךְ נָפַלְתָּ מִשָּׁמַיִם הֵילֵל בֶּן שָׁחַר` (ישעיהו יד:יב) | divergence | The "fall" is the eagle's own dive, to catch, not a fall from heaven. |
+| III.a+4 | ikšud-ma ālšu u bīssu | הגיע אל עירו ואל ביתו. | `וַיָּשֻׁבוּ וַיָּבֹאוּ אֶל בֵּיתָם הָרָמָתָה; וַיֵּדַע אֶלְקָנָה אֶת חַנָּה אִשְׁתּוֹ` (שמואל א א:יט) | equivalent | Our proposal: after the prayer, the return home to the wife (if NinNA1 belongs here). |
+| III.a+9 | ana bašāli | לְבַשֵּׁל | `וַתֹּאמֶר אֵלַי תָּבוֹא כִּי שָׂכֹר שְׂכַרְתִּיךָ בְּדוּדָאֵי בְּנִי` (בראשית ל:טז) | divergence | The wife and the plant: Leah's mandrakes (`דּוּדָאִים` reserved) vs a plant (or a salve, a+7) cooked at home. |
+| III.a+15 | nīš ilī | חַיֵּי? האלים? | `וְאוּלָם חַי יְהוָה וְחֵי נַפְשֶׁךָ` (שמואל א כ:ג) | equivalent | The oath "by the life of" the gods (*nīšu* = `חַיִּים`, ET2). |
+| III.a+18 | ipaššar | יִפְשֹׁר | `וּמִי יוֹדֵעַ פֵּשֶׁר דָּבָר` (קהלת ח:א); `חֲלוֹם חָלַמְנוּ וּפֹתֵר אֵין אֹתוֹ` (בראשית מ:ח) | cognate | *pašāru* / `פֵּשֶׁר`; Genesis uses another root, `פָּתַר` (reserved). |
+| III.b+3 | qereb bāb āni enlil u ea nibāʾa | בְּקֶרֶב? שער אָנוּ, אֶנְלִי[ל וְ]אֵ[אָה] – עברנו; | `אֵין זֶה כִּי אִם בֵּית אֱלֹהִים וְזֶה שַׁעַר הַשָּׁמָיִם` (בראשית כח:יז) | equivalent | The gate of heaven seen in a dream; in Etana the dreamer passes through the gates in the order of the gods' rank. |
+| III.b+3 | qereb bāb āni … nibāʾa | בְּקֶרֶב? שער אָנוּ … – עברנו; | `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה` (בראשית כח:יב) | divergence | Jacob sees the way between earth and heaven used by others; Etana goes up himself (`סֻלָּם` reserved). |
+| III.b+4 | nuškēna itti aḫāmiš | השתחווינו [זה עם זה] | `וָאֶרְאֶה וָאֶפֹּל עַל פָּנַי` (יחזקאל א:כח) | equivalent | Prostration before the gods of heaven, as at a royal audience. |
+| III.b+5 | qereb bāb sîn šamaš adad u ištar | בְּקֶרֶב? שער סִין, שַׁמַשׁ, אֲדַד וְאִשְׁתַּר | `וְהִנֵּה הַשֶּׁמֶשׁ וְהַיָּרֵחַ וְאַחַד עָשָׂר כּוֹכָבִים מִשְׁתַּחֲוִים לִי` (בראשית לז:ט) | divergence | Joseph's sun, moon and stars bow to the dreamer; Etana bows to the gods of the moon, the sun and Venus. |
+| III.b+11 | kussû nadât-ma ištar | כִּסֵּא מֻנָּח – ואִשְׁתַּר … | `וָאֶרְאֶה אֶת אֲדֹנָי יֹשֵׁב עַל כִּסֵּא רָם וְנִשָּׂא` (ישעיהו ו:א); `דְּמוּת כִּסֵּא` (יחזקאל א:כו) | equivalent | The throne in a vision of heaven, and the figure on it: here a goddess, "a young woman, beautiful of face" (Ludlul III 31's formula). |
+| III.b+12 | ina šapal kussî lābū | תחת הכסא – לְבָ[אִים? …] | `וּשְׁנַיִם אֲרָיוֹת עֹמְדִים אֵצֶל הַיָּדוֹת` (מלכים א י:יט) | equivalent | A throne with lions: Ištar's animal; Solomon's throne (with 10:20). |
+| III.b+12 | lābu | לְבָ[אִים?] | `כָּרַע רָבַץ כְּאַרְיֵה וּכְלָבִיא` (בראשית מט:ט) | cognate | *lābu* / `לָבִיא` (Gilgameš II 238 `לבאים`). |
+| III.b+14 | aggaltâm-ma aptarud | הִתְפַּלַּצְתִּי – ונבהלתי | `וַיִּיקַץ יַעֲקֹב מִשְּׁנָתוֹ … וַיִּירָא וַיֹּאמַר מַה נּוֹרָא הַמָּקוֹם הַזֶּה` (בראשית כח:טז–יז); `וַתִּפָּעֶם רוּחוֹ` (בראשית מא:ח) | equivalent | Waking in terror from a dream of the gods (also Dan 2:1; Gudea A xii 13). |
+| III.b+16 | ibrī šūpâ šunātūka | רֵעִי, מוּפָעִים חלו[מותיך]! | `חֲלוֹם פַּרְעֹה אֶחָד הוּא: אֵת אֲשֶׁר הָאֱלֹהִים עֹשֶׂה הִגִּיד לְפַרְעֹה` (בראשית מא:כה) | divergence | The interpreter declares the meaning plain; but Joseph's interpretation is "God's" (Gen 40:8), the eagle's a friend's. |
+| III.b+17 | alka luššīkā-ma ana šamê | לְכָה, אֶשָּׂאֲךָ לִשְׁמֵי? [אָנוּ?]! | `וָאֶשָּׂא אֶתְכֶם עַל כַּנְפֵי נְשָׁרִים וָאָבִא אֶתְכֶם אֵלָי` (שמות יט:ד) | cognate | *našû* / `נָשָׂא`, the same cohortative-like form (*luššīka* / `וָאֶשָּׂא`): God carries his people to himself on eagles' wings; here the eagle carries a man to the gods. |
+| III.b+25 | ištēn bēra ušaqqīšū-ma | בֵּרוּ אחד – הגביה אותו | `אִם תַּגְבִּיהַּ כַּנֶּשֶׁר וְאִם בֵּין כּוֹכָבִים שִׂים קִנֶּךָ מִשָּׁם אוֹרִידְךָ` (עובדיה א:ד); `אִם-עַל-פִּיךָ יַגְבִּיהַּ נָשֶׁר` (איוב לט:כז) | equivalent | *šaqû* D = `הִגְבִּיהַּ` with the eagle (also Jer 49:16); in Obadiah the height is pride and ends in a fall – Etana's end is lost. |
+| III.b+39 | ištu elû ana šamê ša āni | אחרי שעלו לִשְׁמֵי אָ[נוּ] | `וַיַּעַל אֵלִיָּהוּ בַּסְעָרָה הַשָּׁמָיִם` (מלכים ב ב:יא) | equivalent | A man goes up to heaven in his body; Elijah does not come back, Etana does (and dies: Gilgameš VII). |
+| III.b+39 | ištu elû ana šamê ša āni | אחרי שעלו לִשְׁמֵי אָ[נוּ] | `וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם` (בראשית יא:ד) | divergence | The heaven of Anu is reached with divine help, for a son – not by building, for a name. |
+| III.b+40 | ina bāb āni enlil u ea ibāʾū | בשער אָנוּ, אֶנְלִיל וְאֵאָה – עברו; | `וַיְהִי כַּאֲשֶׁר פָּתַר לָנוּ כֵּן הָיָה` (בראשית מא:יג) | equivalent | The dream is fulfilled in its own words (b+3–b+8 ↔ b+40–b+45). |
+| III.c+7 | šāninšu | מתחרהו | `וַיִּתְהַלֵּךְ חֲנוֹךְ אֶת הָאֱלֹהִים; וְאֵינֶנּוּ כִּי לָקַח אֹתוֹ אֱלֹהִים` (בראשית ה:כד) | divergence | The end is lost; Enoch and Elijah are taken and do not return; Etana went up on a mission, came back, had (per the King List) a son, and sits among the dead (Gilgameš VII 202). |
+| MA.g+8 | bāšītu | הַיֵּשׁ | `לְהַנְחִיל אֹהֲבַי יֵשׁ` (משלי ח:כא) | equivalent | "What there is" = property, from *bašû* "to be", as `יֵשׁ`. |
+| MA.g+11 | ana itti | לְאוֹת | `וְזֶה לְּךָ הָאוֹת כִּי אָנֹכִי שְׁלַחְתִּיךָ` (שמות ג:יב) | cognate | *ittu* / `אוֹת`; a sign, beside a "gate" (broken context). |
+| MA.h+4 | [erû šutta] ušamḫir | [הנשר – את החלום] *הִקְבִּיל* | `גַּבְרִיאֵל הָבֵן לְהַלָּז אֶת הַמַּרְאֶה` (דניאל ח:טז) | equivalent | If Foster's "made understand" is right: the eagle as the dream's explainer. Literally Š of "receive, face". |
+| MA.h+6 | šuttaka damqat | [ח]לומך – טוב | `וַיַּרְא שַׂר הָאֹפִים כִּי טוֹב פָּתָר` (בראשית מ:טז) | equivalent | A "good dream" (*šuttu damiqtu*), a category of Babylonian dream lore; `טוֹב` licensed by *damqu*. |
+| MA.h+10 | taṣabbat … ina qātīka | תתפוס […] … בידך | `הֲמָלֹךְ תִּמְלֹךְ עָלֵינוּ אִם מָשׁוֹל תִּמְשֹׁל בָּנוּ` (בראשית לז:ח) | equivalent | A dream interpreted as rule over others (Haul: "their lead-rope in your hand"). |
+| MA.h+12 | … ina šēpīka | … לְרַגְלֶיךָ | `עַד-אָשִׁית אֹיְבֶיךָ הֲדֹם לְרַגְלֶיךָ` (תהלים קי:א) | equivalent | The interpretation turns the dream's "at my feet" (h+3) into "at your feet": rule. |
+| MA.h+14 | ibrī aṭṭul šanīta šutta | רֵעִי, ראיתי חלום שני: | `וַיַּחֲלֹם עוֹד חֲלוֹם אַחֵר וַיְסַפֵּר אֹתוֹ לְאֶחָיו` (בראשית לז:ט); `וְעַל הִשָּׁנוֹת הַחֲלוֹם אֶל פַּרְעֹה פַּעֲמָיִם כִּי נָכוֹן הַדָּבָר` (בראשית מא:לב) | equivalent | The second dream confirms the first (only MA has two dreams). |
+| MA.h+15 | paḫrat elpetu ina bīti | נִקְבְּצָה חַלְפָה בבית | `וְהִנֵּה אֲנַחְנוּ מְאַלְּמִים אֲלֻמִּים בְּתוֹךְ הַשָּׂדֶה` (בראשית לז:ז) | equivalent | A dream of gathered plants that means kingship – the closest parallel to Joseph's sheaves (with h+16–h+19). |
+| MA.h+16 | kī qurunni iqrunū bilāti | כַּעֲרֵמָה עָרְמוּ משאות | `וַיִּצְבֹּר יוֹסֵף בָּר כְּחוֹל הַיָּם הַרְבֵּה מְאֹד` (בראשית מא:מט) | equivalent | Heaps of produce/tribute in the whole land. |
+| MA.h+17 | zârūšunu ṣerrū lemnūtu | שונאיהם – נחשים רעים | `לְפָנָיו יִכְרְעוּ צִיִּים; וְאֹיְבָיו עָפָר יְלַחֵכוּ` (תהלים עב:ט); `יְלַחֲכוּ עָפָר כַּנָּחָשׁ` (מיכה ז:יז) | equivalent | Enemies as serpents submitting to the king; in the fable's own terms, the serpent now bows. |
+| MA.h+19 | kanša ikannušū ana šapluʾa | כְּנוּעִים – כורעים תחתיי | `וְהִנֵּה תְסֻבֶּינָה אֲלֻמֹּתֵיכֶם וַתִּשְׁתַּחֲוֶיןָ לַאֲלֻמָּתִי` (בראשית לז:ז) | equivalent | Things and enemies bow beneath the dreamer – the reverse of the SB dream, where the dreamer bows (III b+4). |
+| MA.i+10 | kī mê palgim-ma | [כ]מי תעלה | `כְּעֵץ שָׁתוּל עַל-פַּלְגֵי-מָיִם` (תהלים א:ג) | cognate | *palgu* / `פֶּלֶג`; rendered `תְּעָלָה` (renderings §10.3) – the cognate is hidden: open decision 1. |
+
+### Key findings
+**The Bible.**
+1. **Deuteronomy 32:11 and Exodus 19:4 told as a story.** What the Bible uses as an image of God – the eagle that
+   spreads its wings, takes up, carries on its pinion – is here a narrative in three movements: the eagle tells the man
+   how to hold on (III.26–29; b+18–b+23), lifts him league after league, and, when he falls, dives and catches him on
+   its wings four times (III.44–51 `הנשר נפל – וקיבל אותו בכנפיו`). The verb is the very cognate: *luššīka*
+   "let me carry you" (b+17) = `וָאֶשָּׂא אֶתְכֶם עַל כַּנְפֵי נְשָׁרִים` (Exod 19:4) – but there God carries his people to
+   himself, here an eagle carries a man to the gods.
+2. **Isaiah 14 and Obadiah reversed.** ET2 and ET3 found Isa 14:13–15 in the eagle's boast and fall (II.43, II.146);
+   now the eagle lifts (*šaqû* D = `הִגְבִּיהַּ`, b+25; cf. Obad 1:4, Jer 49:16, Job 39:27) and the man says, with the
+   same verb as the boast, "I will not go up to heaven" (III.42 ↔ II.43). The ascent in Etana is no hubris: Šamaš sends
+   it, Ištar is its goal, a son its purpose. Against Gen 11:4 (`וְרֹאשׁוֹ בַשָּׁמַיִם … וְנַעֲשֶׂה לָּנוּ שֵׁם`) this is the
+   clearest [divergence] of the corpus: a "name" (*šumu*) asked of the gods, not made against them.
+3. **Genesis 28 and 37–41 in two versions of one dream.** SB: Etana dreams that he and the eagle pass through the gates
+   of Anu, Enlil, Ea, then of Sîn, Šamaš, Adad and Ištar, bowing at each, open a sealed house and see Ištar enthroned
+   with lions; he wakes in terror (Gen 28:12–17 `שַׁעַר הַשָּׁמָיִם`, `וַיִּיקַץ … וַיִּירָא`); the friend says the dreams are
+   plain; and the dream is fulfilled in its own words (b+40–b+45; Gen 41:13). The dreamer bows to the sun, moon and
+   Venus gods – the exact reverse of Joseph's second dream (Gen 37:9). MA: two dreams instead, of kingship and plenty –
+   plants gathered, heaps of loads in all the land, enemies "evil serpents" bowing beneath the dreamer – interpreted
+   as "good" and "at your feet" (h+2–h+22): Joseph's sheaves (37:7), the doubled dream (37:9, 41:32), Joseph's heaps
+   (41:49), the royal psalms (Ps 72:9, 110:1). The two versions show the same plot carrying two dream types: an
+   ascent-vision and a kingship-dream.
+4. **Throne visions.** Ištar on a throne with lions under it (b+11–b+12) meets 1 Kgs 10:19–20 (the lion throne) and
+   Isa 6:1 / Ezek 1:26 (the throne seen in heaven); the dreamer's prostration, Ezek 1:28.
+5. **The earth from above** (III.31–41, b+27–b+38): Isa 40:22 `וְיֹשְׁבֶיהָ כַּחֲגָבִים`; the vocabulary of the view is
+   agricultural – `מַרְבֵּץ` (*tarbaṣu* [cognate], Ezek 25:5, Zeph 2:15), `עֲרוּגָה` (*mūšaru*), `שֹׁקֶת`, `תְּעָלָה`, a
+   gardener's dike. (Our proposal:) Ezekiel's eagle parable, which ET2 found in the poplar and the oath, also has the
+   garden "beds" (`עֲרֻגוֹת`, Ezek 17:7, 10) and the wing words `כָּנָף` / `אֵבֶר` / `נוֹצָה` (17:3) = *kappu* / *abru* /
+   *nāṣu*: Ezek 17 is the closest biblical counterpart of the whole Etana imagery.
+6. **Hannah and Leah.** If NinNA1 belongs to Tablet III, Etana "reached his city and his house" and a woman speaks to
+   him about the plant of birth, a salve(?), cooking (a+4–a+9): the return home after the prayer (1 Sam 1:19) and the
+   plant passed between wife and husband (Gen 30:14–16; `דּוּדָאִים` reserved).
+7. **False echoes avoided:** Foster's "sacred bond" (*ellu* "pure", MA h+2), "made understand" (*maḫāru* Š),
+   "hands" (*kappu* "wings"), "wearing a tiara" (*ruṣṣunat*, of a powerful voice), "garden" (*mūšaru* "bed"), "brook /
+   watery" (the obscure *mēmē*), "rivers … like brooks" (a restoration); `סֻלָּם`, `רָקִיעַ`, `פָּתַר`, `מִגְדָּל` kept out
+   of the Hebrew lines; *pašāru* = `פָּשַׁר`.
+
+**The ancient mind.**
+1. **The eagle as a royal vehicle.** Akkad-period cylinder seals (24th–22nd centuries BCE) show a man carried up on an
+   eagle's back while shepherds and dogs look up: the story is a millennium and a half older than the Nineveh tablets.
+2. **The world seen by an irrigation farmer.** From above, the land becomes a garden bed, the sea a sheepfold, a
+   trough, the water of a canal, a gardener's dike; the rivers trickle. The ancient imagination measured height in
+   double-hours of walking (*bēru*) and the last drop in half-reeds (III.50).
+3. **Fear and failure without blame.** At the third league the king who wanted heaven cannot see the land and asks to
+   be put down on a path and walk to his city; the eagle does not argue, but lowers him in four drops, catching him
+   each time. The first flight fails; the second, after a dream, succeeds.
+4. **Dreams as the gods' language, read by a friend.** Not a professional interpreter but the eagle says "your dreams
+   are plain" (SB) or "your dream is good" (MA); the "good dream" is a category of Babylonian dream lore; the dreamer
+   wakes trembling (as Gudea did); the dream is fulfilled to the letter.
+5. **The court of heaven.** The gates follow the gods' rank: the great triad (Anu, Enlil, Ea), then the astral gods
+   (Sîn, Šamaš, Ištar) and Adad; at each gate one bows, as at a king's audience; at the end, a sealed storehouse
+   (sealings with cylinder seals), a door pushed open, and the goddess enthroned with her lions.
+6. **Ištar, giver of birth and of kingship.** The plant is "with Ištar the lady" (III.24): the goddess who sought a
+   shepherd for Kiš (I.19–22) holds the means of an heir; the gardener of b+38 belongs to her world (Išullānu,
+   Sargon).
+7. **Understanding the birds.** SB adds what the older versions take for granted: man and eagle need Šamaš's gift to
+   understand each other (III.3–8) – the speech of birds as a divine favour.
+8. **The kingship-dream in MA**: the "pure bond above" (*markasu*, the cosmic bond of heaven and earth, cf. Dur-an-ki),
+   tribute heaped up, the enemies as "evil serpents" bowing – the fable's serpent turned into the vanquished foe of a
+   king.
+9. **The lost end.** The Sumerian King List names Etana's son Balīḫ as his successor; Gilgameš VII sees Etana among the
+   dead: tradition knew both the son and the death.
+
+### Open decisions (numbered; the minor ones decided)
+1. ***palgu* = `תְּעָלָה`** (renderings §10.3; Enki and the World Order's *pa₅*) vs **`פֶּלֶג` [cognate]** (Enūma eliš
+   VII 63; Ps 1:3 `פַּלְגֵי מָיִם`): the Hebrew cognate is hidden here (guidelines §6.4: among equally good renderings
+   prefer the cognate). Proposal for the lead: *palgu* = `פֶּלֶג` everywhere (MA i+10 would read `[כ]מי פלג`), Sum. *pa₅*
+   following it.
+2. ***buginnu* = `שֹׁקֶת`** (= Sum. *buniĝ*, Gudea B xvii 8 `שוקתות`) collides with Gilgameš I's *mašqû* `שוקת`. Proposal:
+   *mašqû* "watering place" = `מַשְׁקֶה` [cognate] in Gilgameš, `שֹׁקֶת` left to *buginnu* / *buniĝ* (lead).
+3. ***galātu* = `הִתְפַּלֵּץ`** (III b+14), *parādu* = `נִבְהַל` (Ludlul I 54); but Gudea's Sumerian *ḫuluḫ* (= *galātu*)
+   is `נבהל` (A xii 13). The Sumerian rule ("a Sumerian word takes the Hebrew of its Akkadian equivalent") would give
+   *ḫuluḫ* `התפלץ`; minor (lead).
+4. ***qarānu* / *qurunnu* = `עָרַם` / `עֲרֵמָה`** (MA h+16) beside EA's Sum. *dub* `ערם` (= Akk. *šapāku* / *tabāku*,
+   Gilgameš XI *tabāku* `צבר`): an older split; minor.
+5. ***īku* = `סוֹלְלָה`** (b+38; Enūma eliš, EWO *eg₂*): kept for consistency, although the image here is the ditch; the
+   note explains. Decided.
+6. ***kappu* of Etana = `כָּנָף`** (literal; footnote), not `כַּף` (*rittu*). Decided (deviation 4).
+7. ***maḫāru* Š (*šutta ušamḫir*) = `*הִקְבִּיל*`** (italic; G `קִבֵּל`), Foster's "made understand" in the apparatus;
+   the subject "the eagle" is eBL's restoration. Decided.
+8. ***mēmē(-ma)* = `*מים*`** (a+19, b+30, b+34, MA i+3; italic): eBL rejects NABU 2012/21's *mê palgi*. Decided.
+9. ***ṣâdu* = `צָד` [cognate]** (III.21; ET2 reserved `צָד` for it), vocalized against `צַד` (*idu*). Decided.
+10. **NinNA1 (a+1–a+23)** follows eBL's placement in Tablet III; the notes say "if it belongs here". Decided.
+11. **Speech boundaries in III.12–19** (Etana 12–17, the eagle 18–19 without a speech formula) follow Foster. Decided.
+12. ***tēqītu* = `סִיכָה`** (a+7; vocalized: EWO's `סיכה` "pin" is *kirid*); *tarāku* = `*הוֹלֵם*` (III.52; EA's
+    `הולם` "befitting" is Sum. *tum₂*, another word): homographs, minor.
+13. **III.32's restoration** left untranslated (deviation 9). Decided.
+14. ***bēru* `בֵּרוּ`** vocalized at every occurrence (unvocalized "they chose"); the lead may add it to TRAPS.
+15. **renderings §10.3, the flights row:** *ibrī amur māta mīnâ ibašši* is not on the tablet (deviation 1); and
+    §10.3's *agappu* / *gappu*, *nāṣu*, *ṣīt/ereb šamši* rows: only *nāṣu* and *agappu* occur in ET4 (coordinator).
+
+### Proposals for the corpus renderings
+Fixed strings (exactly as written; brackets, `?` and the final punctuation follow each copy):
+
+| Source | Hebrew | Tag | Notes | Lines |
+|---|---|---|---|---|
+| X *pâšu īpušam-ma ana* Y *bēlīšu amāta izakkar* | `הנשר פתח את פיו, אל שַׁמַשׁ, אדוניו – דבר דיבר:` | – | §10.3 formula with *amāta* | III.1 |
+| the plea to the eagle | `"רֵעִי, תנה לי את עשב הלידה!` · `הראני את עשב הלידה!` · `נסח את חרפתי, שִׂים לי שֵׁם!` | equivalent | = II.140–142 + *ibrī* | III.12–14 |
+| the eagle's promise | `[לב]די – … […] ההר,` · `אָבִיאָה לְךָ [את עשב ה]לידה!"` | – | *wabālu* precative = `אָבִיאָה` | III.18–19 |
+| the holding commands / executions | `על צדיי – שִׂים את זרועותיך!` · `על נוצת כנפיי – שִׂים את כנפיך!` · `על חָזִי – שִׂים את חזך!` / `על צדדיו – שָׂם את זרועותיו.` · `על נוצת כנפיו – שָׂם את כנפיו.` · `על חזהו – שָׂם את חזהו.` | equivalent (Deut 32:11) | command → execution in the same words and order | III.26–29; b+18–b+23 |
+| the leagues | `בֵּרוּ אחד / שני / שלישי – העלה אותו,` (*ullû*) · `… – הגביה אותו,` (*šušqû*) · `… – זרק אותו,` (*nasāku*) · `חֲצִי קָנֶה אל הקרקע – זרק אותו,` | equivalent (Obad 1:4) | the first number cardinal, the others ordinal, as in the Akkadian | III.30–50; b+25–b+35; MA i+4, i+11 |
+| the eagle's question | `"רֵעִי, הִסְתַּכֵּל – הארץ, כְּמוֹ מָה הִיא!` (first flight) · `"צְפֵה, רֵעִי – הארץ, איך היא!` (second flight, MA) | equivalent (Isa 40:22) | two verbs on the tablet | III.31–39; b+27–b+37; MA i+6, i+13 |
+| the shrinking world | `והים הרחב – כִּמְלֹא מַרְבֵּץ."` · `נֶהֶפְכָה הארץ לַעֲרוּגָה …` · `והים הרחב – כִּמְלֹא שֹׁקֶת."` · `התבונן בים – את צדדיו בְּחַן!` · `הים – נהפך ל*מים*!"` · `הארץ – *מים*!"` · `הים – נהפך לסוללת גַּנָּן!"` · MA `[נהפכה? הארץ? ל]ערוגה שׂוּמָה,` · `[הים – נ]הפך, [כ]מי תעלה!"` | cognate (*tarbaṣu*, *mala*) | | III.33–37; b+28–b+38; MA i+3, i+7–i+10 |
+| Etana gives up | `"הִסְתַּכַּלְתִּי – ואת הארץ איני מביט!` · `והים הרחב – לא תִשְׂבַּעְנָה עֵינַי!` · `רֵעִי, לא אֶעֱלֶה לשמים!` · `שִׂים שביל, אֶתְהַלְּכָה אל עירי!"` | divergence (Isa 14:13) | | III.40–43 |
+| the drops | `הנשר נפל – וקיבל אותו בכנפיו.` | equivalent (Deut 32:11) | four times | III.45–51 |
+| the dream ↔ its fulfilment | `"בְּקֶרֶב? שער אָנוּ, אֶנְלִיל וְאֵאָה – עברנו;` · `השתחווינו זה עם זה – אני ואתה.` · `בְּקֶרֶב? שער סִין, שַׁמַשׁ, אֲדַד וְאִשְׁתַּר – עברנו;` · `ראיתי בית – פתחתי את חותמו,` · `את דלתו – דחפתי, ובאתי בו.` / `בשער אָנוּ, אֶנְלִיל וְאֵאָה – עברו;` · `הנשר ואֵתָנָה – זה עם זה – השתחוו.` · `בשער סִין, שַׁמַשׁ, אֲדַד וְאִשְׁתַּר – עברו;` · `ראה בית – פתח את חותמו,` · `את דלתו – דחף, ובא בו.` | equivalent (Gen 28:17; 41:13) | the fulfilment in the dream's words | III.b+3–b+8, b+40–b+45 |
+| the goddess | `יושבת בתוכו – עלמה אחת,` · `… *אדירת־קול*, יפה זיוה,` · `כִּסֵּא מֻנָּח – ואִשְׁתַּר …` · `תחת הכסא – לְבָאִים …` · `קַמְתִּי – אני, ולבאים [זינקו עליי?].` · `הִתְפַּלַּצְתִּי – ונבהלתי […]."` | equivalent (1 Kgs 10:19; Isa 6:1) | `עלמה אחת – יפה זיוה` = Ludlul III 31 | III.b+9–b+14 |
+| the interpretation and offer | `"רֵעִי, מוּפָעִים חלומותיך!` · `לְכָה, אֶשָּׂאֲךָ לִשְׁמֵי אָנוּ!` · `אחרי שעלו לִשְׁמֵי אָנוּ,` | cognate (*našû*, Exod 19:4) | | III.b+16–b+17, b+39 |
+| MA dreams | `[הנשר – את החלום] *הִקְבִּיל*.` · `[…] יושב לפניו:` · `"[…] חלומך – טוב,` · `הָרֹכֶס הטהור – [ב]מרומים,` · `"רֵעִי, ראיתי חלום שני:` · `בחלומי – נִקְבְּצָה חַלְפָה בבית,` · `בכל הארץ – כַּעֲרֵמָה עָרְמוּ משאות;` · `שונאיהם – נחשים רעים –` · `[…כְּ]נוּעִים – כורעים תחתיי."` | equivalent (Gen 37:7–9) | | MA h+2–h+22 |
+| speech formula with *iqabbi* | `אֵתָנָה אליו, אל הנשר, אומר:` | – | ET1's variant | MA h+13 |
+
+Words (one Hebrew each; grep-checked in all corpora):
+
+| Source | Hebrew | Tag | Notes | Lines |
+|---|---|---|---|---|
+| *bēru*; *nikkas* | `בֵּרוּ` (always vocalized); `חֲצִי קָנֶה` | – | Gilgameš | III.30–50 |
+| *elû* G; D (*ullû*); Š; *šaqû* D; *nasāku* | `עָלָה`; `הֶעֱלָה`; `הֶעֱלָה`; `הִגְבִּיהַּ`; `זָרַק` | cognate (*elû*) | Gilgameš XI 293 for *nasāku* | III.30–50, b+25–b+39 |
+| *maqātu*; *maḫāru* G / Š | `נָפַל`; `קִבֵּל` / `*הִקְבִּיל*` | – | | III.45; MA h+4 |
+| *palāsu* N; *dagālu*; *naṭālu*; *ṣubbû*; *barû* Gt | `הִסְתַּכֵּל`; `צָפָה`; `הִבִּיט` (of a dream `רָאָה`); `הִתְבּוֹנֵן`; `בָּחַן` | – | Gilgameš, ET2–ET3 | III.31–40, b+27–b+28; MA h+14 |
+| *mātu*; *tâmtu rapaštu*; *mala*; *tarbaṣu*; *buginnu*; *mūšaru*; *īku*; *palgu*; *mēmē* | `אֶרֶץ`; `הים הרחב`; `כִּמְלֹא`; `מַרְבֵּץ`; `שֹׁקֶת`; `עֲרוּגָה`; `סוֹלְלָה`; `תְּעָלָה`; `*מים*` | cognate (*mala*, *tarbaṣu*) | open decisions 1, 2, 5, 8 | III.33–37, b+29–b+38; MA i+3, i+9–i+10 |
+| *târu ana*; *šebû*; *īnu*; *kibsu*; *alāku* Gtn | `נֶהְפַּךְ לְ־`; `שָׂבַע`; `עַיִן`; `שְׁבִיל`; `הִתְהַלֵּךְ` | cognate (*šebû*) | | III.36–43 |
+| *idu* (eagle / man); *irtu*; *kappu*; *nāṣu*; *agappu* | `צַד` / `זְרוֹעַ`; `חָזֶה`; `כָּנָף`; `נוֹצָה`; `אֲגַף` | cognate (*nāṣu*) | | III.26–29, b+18–b+23; MA g+7 |
+| *ina lēt*; *bēltu*; *ṣâdu*; *ēdēnu*; *ezēbu*; *ṣītu* | `אֵצֶל`; `גְּבִירָה`; `צָד`; `לְבַד`; `עָזַב`; `מוֹצָא` | cognate (*ṣâdu*, *ezēbu*) | | III.15–25 |
+| *atmû*; *iṣṣūru*; *ina pī*; *mimmû*; *qabû* | `שִׂיחָה`; `צִפּוֹר`; `מִפִּי`; `כֹּל אֲשֶׁר`; `אָמַר` | – | Ludlul, Theodicy (*atmû*) | III.3–8 |
+| *ḫabābu* (water); *danānu* D; *rabû*; *biltu*; *tarāku* | `פִּכָּה` (`מְפַכִּים`); `חִזֵּק`; `גָּדַל`; `מַשָּׂא`; `*הָלַם*` | – | | III.32, 52, b+24 |
+| *šukênu*; *bâʾu*; *bābu*; *qerbu*; *itti aḫāmiš* | `הִשְׁתַּחֲוָה`; `עָבַר`; `שַׁעַר`; `קֶרֶב`; `זֶה עִם זֶה` | cognate (*qerbu*) | | III.b+3–b+6, b+40–b+43 |
+| *bītu*; *kunukku*; *daltu*; *sakāpu*; *erēbu*; *petû* | `בַּיִת`; `חוֹתָם`; `דֶּלֶת`; `דָּחַף`; `בָּא`; `פָּתַח` | cognate (*petû*) | | III.b+7–b+8, b+44–b+45; a+3–a+4 |
+| *ardatu*; *ištêt*; *ruṣṣunu*; *zīmu*; *kussû*; *nadû* stat.; *šaplu*; *lābu*; *tebû*; *šaḫāṭu* | `עַלְמָה`; `אַחַת`; `*אדירת־קול*`; `זִיו`; `כִּסֵּא`; `מֻנָּח`; `תַּחַת`; `לָבִיא` (`לְבָאִים`); `קָם`; `זִנֵּק` | cognate (*lābu*) | Ludlul III 31 | III.b+9–b+13 |
+| *galātu*; *parādu*; *wapû* Š; *šuttu*; *damqu*; *pašāru* | `הִתְפַּלֵּץ`; `נִבְהַל`; `הוֹפִיעַ` (`מוּפָעִים`); `חֲלוֹם`; `טוֹב`; `פָּשַׁר` | cognate (*pašāru*) | open decision 3 | III.b+14–b+16, a+18; MA h+6 |
+| *našû*; *šamû ša Ani*; *emēdu*; *nukaribbu*; *šāninu* | `נָשָׂא`; `שְׁמֵי אָנוּ`; `*נִשְׁעַן*`; `גַּנָּן`; `מִתְחָרֶה` | cognate (*našû*) | | III.b+17–b+39, c+7 |
+| *kašādu*; *ālu*; *bašālu*; *tēqītu*; *nīšu* (oath); *pāna šakānu* | `הִגִּיעַ`; `עִיר`; `בִּשֵּׁל`; `סִיכָה`; `חַיִּים`; `שָׂם פָּנִים` | cognate (*bašālu*) | | III.a+3–a+18 |
+| MA: *markasu*; *ellu*; *elâtu*; *šēpu*; *āšibu*; *maḫru* | `רֹכֶס`; `טָהוֹר`; `מְרוֹמִים`; `רֶגֶל`; `יוֹשֵׁב`; `לִפְנֵי` | – | Enūma eliš, Gilgameš | MA h+2–h+12 |
+| MA: *biltu* stat. *bablat*; *nadānu*; *nišū*; *ṣabātu*; *qātu* | `מַשָּׂא – מוּבָא`; `נָתַן`; `הָאֲנָשִׁים`; `תָּפַס`; `יָד` | – | | MA h+7–h+10 |
+| MA: *paḫāru*; *elpetu*; *kiššatu*; *qarānu* / *qurunnu*; *zāʾeru*; *ṣerru*; *kanāšu* / *kanšu* | `נִקְבַּץ`; `חַלְפָה`; `כֹּל`; `עָרַם` / `עֲרֵמָה`; `שׂוֹנֵא`; `נָחָשׁ`; `כָּרַע` / `כָּנוּעַ` | – | Sum. *a-numun₂* `חלפה`; open decision 4 | MA h+15–h+19 |
+| MA: *bāšītu*; *ai*; *šemû*; *šina*; *ittu*; *mūšaru šaknu* | `יֵשׁ`; `אַל`; `שָׁמַע`; `שְׁתַּיִם`; `אוֹת`; `עֲרוּגָה שׂוּמָה` | cognate (*ittu*) | | MA g+8–g+11, i+9 |
+
+### Notes for the clean translation
+For the coordinator's introduction to the whole epic (`translation--intro.rtl.md`):
+1. **Six fragmentary versions, one story, no end.** OB Morgan and Susa (18th–17th c. BCE), the MA tablets from Aššur
+   (13th–11th c.), and SB I–III from Nineveh (7th c.); every version is broken, and the end of the epic is lost in all.
+   Labels like `a+1` mark the first preserved line after a gap of unknown length; `[ ]`, `…`, `?` and italics are part
+   of the text, not decoration.
+2. **The plot in four movements:** kingship comes down from heaven and Kiš has a king but no heir (OBM, SB I); the
+   fable of the eagle and the serpent – oath, betrayal, Šamaš's trap, the eagle in the pit (OBS, MA a–c, SB II); the
+   childless king's prayer and the rescue of the eagle (SB II, OBM b–c, MA d–f); the dreams and the two flights to
+   heaven (SB III, MA g–i). The fable is not a digression: the two needs – a king without a son, an eagle without
+   wings – are joined by the god.
+3. **Šamaš directs everything**: judge of the oath, maker of the trap, sender of the "man", giver of the speech of
+   birds. Ištar holds the plant of birth and sits enthroned with lions at the top of heaven.
+4. **Key words kept as the Akkadian has them:** `שֵׁם` (*šumu*) is both "name" and "offspring"; `עשב הלידה` is the "plant
+   of birth" (Foster's "plant of life" in MA f+5 is an error); `רֵעִי` (*ibrī*) is the eagle's and Etana's word for each
+   other; `בֵּרוּ` is a "double hour" of walking, c. 10 km (three of them c. 30 km); a half-reed (`חֲצִי קָנֶה`) c. 1.5 m.
+5. **Repetition is the art.** Identical Akkadian has identical Hebrew: the speech formulas, the oath and its curses,
+   the hunt refrain, Šamaš's command and its execution, the plea, the leagues of the flights, the eagle's "look, my
+   friend", the drops, and above all the dream and its fulfilment "in the same words" (III b+3–b+8 ↔ b+40–b+45).
+   Where a copy differs by a word, the Hebrew differs by that word.
+6. **The versions differ in meaningful ways**: SB alone has the speech of birds and the dream of the gods' gates and
+   of Ištar; MA alone has two kingship-dreams (Joseph-like), the eagle's identifying Etana and its vow, and gives the
+   description of the shrinking earth to Etana; the OB tablets are the shortest and the most direct.
+7. **Names are vocalized** where unvocalized Hebrew would mislead: `אֵתָנָה` (not "אֶתְּנָה", "I will give"), `שַׁמַשׁ`
+   (the god) vs `הַשֶּׁמֶשׁ` (the sun), `אָנוּ` (not "we"), `סִין`, `אִשְׁתַּר`, `שַׁכַּן`, `אִט` (a ghost).
+8. **Biblical words deliberately absent from the Hebrew text** (they belong to the notes): `סֻלָּם`, `מִגְדָּל`,
+   `רָקִיעַ`, `עֲקָרָה`, `דּוּדָאִים`, `גּוֹזָל`, `פָּקַח`, `פָּתַר`, `חֵרֶם`, `שְׁאוֹל`; `נֶשֶׁר`, `נָחָשׁ`, `שׁוּחָה`, `בּוֹר`, `רֶשֶׁת`,
+   `פַּח`, `חֶרְפָּה`, `נוֹצָה`, `אֵבֶר` appear only for their Akkadian counterparts.
+9. **The afterlife of the story**: Akkad-period seals (24th–22nd c.) show the man on the eagle; the Sumerian King List
+   calls Etana "the shepherd who went up to heaven" and names his son Balīḫ as successor; in Gilgameš VII Etana sits in
+   the house of dust (`יושב אֵתָנָה, יושב שַׁכַּן`).
+10. **The main biblical comparisons** (for the reader of the commentary): Gen 11:4 and Isa 14:12–15 (ascent and fall,
+    as [divergence]); Exod 19:4 and Deut 32:11 (the carrying eagle); Gen 28:12–17 (the dream of heaven's gate);
+    Gen 37 and 40–41 (dreams, doubled dreams, interpretation; the pit); Gen 30 and 1 Sam 1 (the plea for a child, the
+    "name"); Ezek 17 (eagle, poplar, oath, net, garden beds); 1 Kgs 10:19–20 (the lion throne).
