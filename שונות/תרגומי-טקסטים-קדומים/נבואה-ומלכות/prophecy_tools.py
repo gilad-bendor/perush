@@ -87,7 +87,7 @@ RESERVED = {
     # love
     r'אהב|אוהב|אהוב': [r'râmu|raʾāmu|raʾām|artâm|ritūmu|narāmu'],
     # the cognate of taqānu: תקן only for taqānu / taqnu
-    B + V + r'(תקן|תקנ\S*|תיקן|תיקנ\S*|מתוקן|מתוקנ\S*|תוקן)' + E: [r'taqānu|taqnu|taqnūti|utaqqan|tataqqun'],
+    B + V + r'(תקן|תקנ\S*|תיקן|תיקנ\S*|מתוקן|מתוקנ\S*|תוקן)' + E: [r'taqānu|taqnu|taqnūti|utaqqan|tataqqun|tuqnu|tuqunni|tuqun\b'],
     # wing
     B + P + r'(כנף|כנפ\S*)' + E: [r'kappu\['],
     B + P + r'(אגף|אגפ\S*)' + E: [r'agappu\[|akappi|agappīya|aqappu'],
