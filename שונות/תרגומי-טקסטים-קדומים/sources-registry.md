@@ -163,6 +163,10 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 
 ### 4.4n Etana (the legends-of-kings corpus, project 3, `אגדות-מלכים/3-אגדת-אתנה/`; Round 3 run 2, 2026-10-21)
 - **`eBL/Etana-OB-Morgan/`, `-OB-Susa/`, `-MA-Assur/`, `-SB-I/`, `-SB-II/`, `-SB-III/`** (eBL `L/1/9`; 54 + 48 + 160 + 40 + 152 + 131 = 585 labels; gitignored, built-in `sources_sync.py` rule): the base text of all six versions, with Foster's translation (rank 3) and the line-by-line parallels between the versions. Details: `sources/eBL/README.md`. Not available: Kinnier Wilson 1985 / 2007, Haul 2000, Novotny 2001 (SAACT 2), Dalley 1989, Foster's *Before the Muses* (all paid or lending-only; cited through eBL's notes).
+### 4.4o The netherworld, Round 3 run 5: Nergal and Ereškigal; Bilgameš, Enkidu and the Netherworld (`העולם-התחתון/` projects 3–4, 2026-10-21/22)
+- **`eBL/Nergal-and-Ereshkigal-MB/`, `eBL/Nergal-and-Ereshkigal-SB/`** (eBL `L/1/6`; 87 + 333 labels; gitignored, built-in `sources_sync.py` rule): the base text of both versions, with Mitto's German (MB, SB) and Foster / Mitto's English (SB) as rank 3. Not available: Ponchia and Luukko 2013 (SAACT 8), Izre'el 1997, Gurney 1960, Hutter 1985, Dalley 1989, Foster's *Before the Muses*.
+- **`ETCSL/1.8.1.4--Gilgamesh-Enkidu-and-the-Netherworld/`** (CC BY-NC-SA, committed): the Sumerian composite, five recensions (463 entries), and ETCSL's English; **`ORACC/epsd2-literary--Q000364--Gilgamesh-Enkidu-and-the-Netherworld/`** (CC0, committed): ePSD2 lemma + morph. The second rank-3 check is Gilgameš XII as already translated (`אפוס-גילגמש/`). Not available: Shaffer 1963, Gadotti 2014 (the current edition), George 1999/2003, Cavigneaux and Al-Rawi 2000 (Me-Turan).
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).

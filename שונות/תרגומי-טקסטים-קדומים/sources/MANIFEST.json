@@ -8617,6 +8617,86 @@
    "raw_files": 264
   },
   {
+   "id": "eBL/Nergal-and-Ereshkigal-MB/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "6",
+    "Middle Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Nergal-and-Ereshkigal-MB/_raw/chapter-display.json": [
+     1451905,
+     "86e035377b25d9c0e4d8dc69147127940887e1d88ecd0f9ccd6ea8a32697e92d"
+    ],
+    "eBL/Nergal-and-Ereshkigal-MB/bibliography.md": [
+     3392,
+     "4fa52a18619dc4a9d844b24bea3fc18b4a310631337af38c9e4f853c960990e9"
+    ],
+    "eBL/Nergal-and-Ereshkigal-MB/chapter.atf": [
+     35394,
+     "6e35d9c5ee3499006cadcfcc0c2d5fd959dea8859ef12dc8952df180e49cdb3e"
+    ],
+    "eBL/Nergal-and-Ereshkigal-MB/glossary.md": [
+     51811,
+     "e0404d54349eddbd9d1e12489f5f863c2ff129e9e60339f1efd515b4122d65d2"
+    ],
+    "eBL/Nergal-and-Ereshkigal-MB/manuscripts.md": [
+     766,
+     "6ae0647e615e99e83e7a1292755cfffcb06c3bdf4e8451e869f82d75f2a7d332"
+    ],
+    "eBL/Nergal-and-Ereshkigal-MB/reading-edition.md": [
+     56244,
+     "c903b9c03911f7d5ac5c51f38d668f80fd5ea1983d6042ada9c7838d0fba2ef1"
+    ]
+   },
+   "raw_files": 166
+  },
+  {
+   "id": "eBL/Nergal-and-Ereshkigal-SB/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "6",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Nergal-and-Ereshkigal-SB/_raw/chapter-display.json": [
+     4877767,
+     "dfc57ec83f8980274b01f44eabc306acc4526b60eb973add8af6bc64a1708c68"
+    ],
+    "eBL/Nergal-and-Ereshkigal-SB/bibliography.md": [
+     4317,
+     "f2b8d1c6679262506f9da19b5f1b97afe5e8ded688ebc7005a371db67d6a3b25"
+    ],
+    "eBL/Nergal-and-Ereshkigal-SB/chapter.atf": [
+     98020,
+     "ba4f7c8d411cd90701a8d61eff8e4bb1bc6c99df2c95ef48e247af54ac316129"
+    ],
+    "eBL/Nergal-and-Ereshkigal-SB/glossary.md": [
+     115159,
+     "ff9860348208b10d6c98feb3df6e91b5cb6fd64e215ce0c3d9d61f1a9c2af1f7"
+    ],
+    "eBL/Nergal-and-Ereshkigal-SB/manuscripts.md": [
+     1091,
+     "40e3e0b6d5f5ea153538f3030b7dfa8207b6f57e96afc875742d896a895a6ec1"
+    ],
+    "eBL/Nergal-and-Ereshkigal-SB/reading-edition.md": [
+     211060,
+     "be26c6f79648e8025969815cbdb915b8f1d01eb474110249eb52f1ec649f56e4"
+    ]
+   },
+   "raw_files": 344
+  },
+  {
    "id": "eBL/Theodicy-SB/",
    "kind": "ebl-chapter",
    "tier": "work",

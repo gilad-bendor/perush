@@ -15,6 +15,7 @@
 | `tcma-laws--P281779--Middle-Assyrian-Laws-A/` | MAL A (TCMA, de Ridder 2021; CC BY-SA 3.0 / CC0 data): lemmatised + normalized text and the English; base text of `חוקים-ובריתות/4-החוקים-האשוריים-התיכונים-A/` (added 2026-10-18; own README). |
 | `epsd2-literary--Q000379--Lament-for-Ur/`, `epsd2-literary--Q000375--Curse-of-Agade/` | ePSD2 lemma + morph of the Lament for Urim and the Cursing of Agade (CC0; added 2026-10-19 for `קינות-על-ערים/`; own READMEs). epsd2-literary also has the other city laments: Q000380 (Sumer and Urim), Q000381 (Nibru), Q000382 (Unug), Q000383 (Eridug). |
 | `epsd2-literary--Q000343--Inanas-Descent/` | ePSD2 lemma + morph for every line of Inana's Descent (`cdl2md.py --morph`; added 2026-10-21); 13Š = ETCSL 13C, 305Š = 305C, 248/277/278 unlabelled. Committed (CC0). |
+| `epsd2-literary--Q000364--Gilgamesh-Enkidu-and-the-Netherworld/` | ePSD2 lemma + morph for every line of the five recensions (463; `cdl2md.py --morph`; added 2026-10-21); labels `Ver.N, …`, a few unlabelled: aligned with ETCSL by position (checked). |
 
 ## Bulk/API mechanism (for future Sumerian work)
 - **Project zips:** `https://oracc.museum.upenn.edu/json/<project>.zip` with `/` → `-` (e.g. `epsd2-literary.zip`, `epsd2-royal.zip`, `etcsri.zip`, `dcclt.zip`, `obmc.zip`, `epsd2-earlylit.zip`). Index page: https://oracc.museum.upenn.edu/json/ . The build server `https://build-oracc.museum.upenn.edu/json/<project>.zip` also works (slightly newer/larger build; its index page returned HTTP 500).

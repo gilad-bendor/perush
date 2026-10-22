@@ -90,6 +90,13 @@ Fetched 2026-10-21 with `tools/ebl_fetch.py L 3 4 …`, `L 2 3 …`, `L 2 4 "Sta
 | `Descent-of-Ishtar-NA/` | the Neo-Assyrian chapter (AššNA1 = VAT 13833, the *nargallu*'s tablet from Assur: another opening of the poem) | 11 | (as above) |
 Fetched with `tools/ebl_fetch.py L 1 8 "Standard Babylonian" -` and `… "Neo-Assyrian" -`. Manuscripts: NinNA1 (K 162), NinNA2 (K 7600), AššNA1a (VAT 9729 = KAR 1), AššNA1b (VAT 11269). eBL links its lines to Gilgameš VII 184–191 (= 4–11), VII 102–119 (≈ 103–108), Nergal and Ereškigal (L I.6) and an incantation (BM 41291, 70–74), and to an "MA" chapter it does not publish. Lemma slips met: *ḫazīqatu* "headcloth" for *ḫalziqqu* "waterskin" (98–99); line 137a has an empty normalization. **Usefulness:** the base text of `העולם-התחתון/1-ירידת-אישתר/`. Gitignored (§8).
 
+### Added 2026-10-21 (the netherworld corpus, Round 3 run 5: Nergal and Ereškigal, `העולם-התחתון/3-נרגל-וארשכיגל/`)
+| Folder | Text | Lines (eBL labels) | Manuscripts |
+|---|---|---|---|
+| `Nergal-and-Ereshkigal-MB/` | *Nergal and Ereškigal* (eBL `L/1/6`), Middle Babylonian, Tell el-Amarna | 87 (1–17, a+1–a+44, b+1–b+26) | AmaMB1a = BM E29865, AmaMB1b = VAT 1611 |
+| `Nergal-and-Ereshkigal-SB/` | Standard Babylonian (Sultantepe, Uruk, Babylon) | 333 (a+1–a+51, b+1–b+50, c+1–c+65, d+1–d+115, e+1–e+51, f+1) | HuzNA1a–c (SU 1951/108, 163, 18A), UrkHel1 = IM 74391, BabLB1 = BM 39743 and others |
+Fetched with `tools/ebl_fetch.py L 1 6 "Middle Babylonian" -` and `… "Standard Babylonian" -`. Editor T. D. N. Mitto (rev. Hätinen, Jiménez, Rozzi, Földi). The MB has only **Mitto's German** translation, the SB Foster's / Mitto's English and Mitto's German: `ebl_fetch.py` prints a non-English translation as `**T (de):**` since 2026-10-21 (before, it printed only English, so the MB looked untranslated). Lemma slip met: *agû* "crown" for a tool (SB b+20). **Usefulness:** the base text of `העולם-התחתון/3-נרגל-וארשכיגל/`. Gitignored (§8; built-in `sources_sync.py` rule).
+
 ### Added 2026-10-21 (the legends-of-kings corpus, project 3: Etana, `אגדות-מלכים/3-אגדת-אתנה/`)
 | Folder | Text | Lines (eBL labels) | Manuscripts |
 |---|---|---|---|

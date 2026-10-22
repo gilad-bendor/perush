@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-22 (Round 2 finished; the cross-corpus splits settled; the Round 3 plan made; the world survey done; the Round 4 plan made; Round 3 run 2, Etana, done; Round 3 run 4, four wisdom texts, done; Round 3 run 1, the Farmer's Instructions, Hoe and Plough, Summer and Winter, done).
+Last updated: 2026-10-22 (Round 2 finished; the cross-corpus splits settled; the Round 3 plan made; the world survey done; the Round 4 plan made; Round 3 run 2, Etana, done; Round 3 run 4, four wisdom texts, done; Round 3 run 1, the Farmer's Instructions, Hoe and Plough, Summer and Winter, done; Round 3 run 5, Nergal and Ereškigal and Bilgameš, Enkidu and the Netherworld, done).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -53,7 +53,7 @@ All of it is a **first draft**: complete, verified by script, three review passe
 | `ספרות-החכמה-והצדיק-הסובל/` | 1 Ludlul I–V; 2 the Babylonian Theodicy; 3 the Great Prayer to Šamaš; 4 Counsels of Wisdom; 5 the Dialogue of Pessimism; 6 the Instructions of Šuruppag (Sumerian; 3–6 Round 3 run 4) | 1,562 | `wisdom_tools.py verify --strict` |
 | `קינות-על-ערים/` | 1 the Lament for Ur; 2 the Curse of Agade (OB + Ur III) | 763 | `lament_tools.py verify --strict` |
 | `בניין-המקדש/` | 1 the Gudea Cylinders A–B | 1,300 | `temple_tools.py verify GU --strict` |
-| `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent | 599 | `netherworld_tools.py verify IS --strict`, `… verify IN --strict` |
+| `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent; 3 Nergal and Ereškigal (MB Amarna + SB); 4 Bilgameš, Enkidu and the Netherworld (five recensions; the source of Gilg. XII) (3–4 Round 3 run 5) | 1,482 | `netherworld_tools.py verify IS\|IN\|NE\|GEN --strict` |
 | `אגדות-מלכים/` | 1 Enmerkar and the Lord of Aratta; 2 the Sargon Birth Legend (on King 1907 only: check against Westenholz 1997); 3 Etana (all six eBL versions, Round 3 run 2) | 1,275 | `kings_tools.py verify EA --strict`, `… verify SB --strict`, `… verify ET --strict` |
 | `קולות-היום-יום/` | 1 OB / Old Akkadian love lyrics and incantations (LAOS 4, 25 texts); 2 Sumerian proverbs (coll. 1 complete, selections of 2–3); 3 Lu-diĝira + eight Sumerian letters | 1,513 | `kol_tools.py verify LOVE PROV LET --strict` |
 
@@ -73,7 +73,7 @@ table's order; inside a run, its sub-agents strictly one at a time (quotas, §2)
 | 2 | Etana (Gen 11:4, 30:14–16, Deut 32:11) | `אגדות-מלכים/` project 3: **done (first draft), 2026-10-22**, 585 lines |
 | 3 | The Assyrian prophecies (SAA 9) + Advice to a Prince (Deut 13, 17, 18; "fear not") | new `נבואה-ומלכות/` |
 | 4 | The Great Prayer to Šamaš, Counsels of Wisdom, the Dialogue of Pessimism, Šuruppag in full | the wisdom corpus, projects 3–6: **done (first draft), 2026-10-22**, 740 lines |
-| 5 | Nergal and Ereškigal, Bilgameš, Enkidu and the Netherworld (Gen 28:12; 1 Sam 28) | `העולם-התחתון/` projects 3–4 |
+| 5 | Nergal and Ereškigal, Bilgameš, Enkidu and the Netherworld (Gen 28:12; 1 Sam 28) | `העולם-התחתון/` projects 3–4: **done (first draft), 2026-10-22**, 883 lines |
 | 6 | Maqlû I–VIII + the Ritual Tablet (Ex 22:17, Deut 18:10–11) | new `כשפים-ולחשים/` |
 
 **Round 4 (approved by the user, 2026-10-22; starts when Round 3 is finished):** `curated-translation-candidates.md`,
@@ -159,6 +159,7 @@ Still open:
 | The per-text open decisions | see each `project.md` | minor ones: the next session on that corpus decides them (the user's rule) |
 | Cross-corpus splits found by Round 3 run 1 (2026-10-22) | left as they are (minor; for the next harmonization pass, the lead decides): *na de₅* `הוֹרָה` (FI 1, 110) / `נָתַן עֵצָה` (Šuruppag, wisdom and flood corpora); *saĝ-tun₃* `מַזְכִּיר` (S&W, H&P) / `רושם השדות` (Gudea); *ri* `הֵטִיל` (S&W) / `נָשָׂא` (EWO); *pu₂* `בְּאֵר` (H&P) / `בְּרֵכָה` (corpus §6.1); *galam* `באומנות` (S&W) / `נוֹכֵל` (B&F); *en₃-tukum-še₃* `כל עוד` (S&W) / `עַד אָנָה` (laments); *ki-šar₂* `כולו` (S&W) / `תֵּבֵל` (EWO); *bulug* `מרצע` (FI) / `יָתֵד` (EWO). Settled in the run: *gur* = `כֹּר`; the closing praise `תְּהִלָּתְךָ – מְתוּקָה הִיא!`; Nisaba `נִיסַבָּה` everywhere; the Song of the Hoe 109 = H&P 196 | `סיפורי-הבריאה-המסופוטמיים/renderings.md` §9–§10; the open decisions of `5-…`, `6-…`, `7-…/project.md` |
 | Cross-corpus splits found by Etana (Round 3 run 2, 2026-10-22) | left as they are (the corpora involved were being edited by other Round 3 sessions) | `אגדות-מלכים/3-אגדת-אתנה/project.md`, "Open decisions": *šarāku* / *qiāšu* both `הֶעֱנִיק`; EWO's `אקו־האפסו` (*taraḫ* = `יָעֵל`); *ḫaṭṭu* `שרביט` / `שבט`; *parakku* `כֵּס` / `דוכן`; *palgu* `תעלה` / `פֶּלֶג`; *buginnu* / *mašqû* both `שוקת`; and smaller ones. For the next harmonization pass (minor: the lead decides). |
+| Cross-corpus splits found by Round 3 run 5 (2026-10-22) | left as they are (minor; the lead decides at the next harmonization): Sumerian *amar* (of a bird) `גוזל` (Gudea, Bird and Fish, GEN) / Akkadian *atmu* `אפרוח` (Gilgameš, Etana; Etana reserves `גוזל`) – split by source word; in GEN *dab₅* `אחז` and *tug₂* `שׂמלה` (= Gilg. XII) against Inana's Descent `תפס` / `בגד`; *kalam* `המולדת` in GEN only (every other corpus `הארץ`); *ebbu* `צַח` (NE) against *ellu* `טָהוֹר`; *kapāru* (tears) `מחה` (NE) and *pašāṭu* `מחה` (EST); Kakka `כַּכָּה` (NE) / `גַּגָּא` (Enūma eliš, another reading of the name) | `העולם-התחתון/renderings.md` §11.7–§11.14; the open decisions in `3-…/project.md` (29) and `4-…/project.md` (29) |
 
 The decisions settled earlier (2026-10-18) are in the Gilgameš renderings §12, `חוקים-ובריתות/corpus.md` and the
 flood corpus renderings.
