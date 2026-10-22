@@ -142,7 +142,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **ii 6** LUGAL mi-hir-šu₂ la-aš₂-šu₂  
   norm: šarru mihiršu laššu  
   <sub>lem: šarru[king]N mehru[colleague=equal]N laššu[(there) is not]V</sub>  
-**ii 7** a-ki ṣi-it—{d}ša₂-maš ṣi-it—{d}ša₂-maš na-mir  
+**ii 7** a-ki ṣi-it—{d}ša₂-maš na-mir  
   norm: akī ṣīt Šamaš namir  
   <sub>lem: akī[as]PRP ṣītu[exit]N Šamaš[1]DN nawru[bright=clear]AJ</sub>  
 **ii 8** an-ni-u šul-mu ša\d ina IGI {d}EN—TUR₃  
@@ -209,7 +209,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **ii 28** ina UGU ha-ʾu-u-ti\t ina IGI LUGAL e-rab  
   norm: ina muhhi haʾūti ina pān šarri errab  
   <sub>lem: ina[in]PRP muhhu[skull]N haʾūtu[cushion]N ina[in]PRP pānu[front]N šarru[king]N erēbu[enter]V</sub>  
-**ii 29** I₃—DUG₃.GA I₃—DUG₃.GA i-za-ar-ri-qu  
+**ii 29** I₃—DUG₃.GA i-za-ar-ri-qu  
   norm: šamnu ṭābu izarriqu  
   <sub>lem: šamnu[oil]N ṭābu[good]AJ zarāqu[sprinkle]V</sub>  
 **ii 30** {udu}SISKUR-MEŠ ep-pu-šu₂  
@@ -317,7 +317,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **iii 26** [a]-⸢ka⸣-li ša\p qa\d-ri-te  
   norm: akāli ša qarīte  
   <sub>lem: akālu[eat=eating]V ša[of=for]DET qerītu[banquet]N</sub>  
-**iii 27** ⸢la⸣-[aš₂-šu₂] ša\p ak\t la E₂—DINGIR E₂—DINGIR  
+**iii 27** ⸢la⸣-[aš₂-šu₂] ša\p ak\t la E₂—DINGIR  
   norm: laššu ša ak lā bēt ili  
   <sub>lem: laššu[(there) is not]V ša[that]REL akī[as]PRP lā[not]MOD bītu[house]N ilu[god]N</sub>  
 **iii 28** ⸢ak⸣-[ka]-⸢li⸣ a-ka-li  
@@ -423,10 +423,10 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **iv 24** [ši-ip-ṭu] na-ṣu i-za-⸢zu⸣  
   norm: šipṭu naṣu izzazzu  
   <sub>lem: šipṭu[judgement=punishment]N našû[lifted=brought]AJ izuzzu[stand]V</sub>  
-**iv 25** {[lu₂}man-za-az]—E₂.⸢GAL⸣ {[lu₂}man-za-az]—E₂.⸢GAL⸣  
+**iv 25** {[lu₂}man-za-az]—E₂.⸢GAL⸣  
   norm: manzāz ēkalli  
   <sub>lem: mazzizu[standing]N ēkallu[palace]N</sub>  
-**iv 26** {[lu₂}ARAD]—⸢E₂⸣.GAL {[lu₂}ARAD]—⸢E₂⸣.GAL šu-⸢nu⸣  
+**iv 26** {[lu₂}ARAD]—⸢E₂⸣.GAL šu-⸢nu⸣  
   norm: urdu ēkalli šunu  
   <sub>lem: ardu[slave]N ēkallu[palace]N šunu[they]IP</sub>  
 **iv 27** [ša ina UGU]-ka i-si-hu-ni  

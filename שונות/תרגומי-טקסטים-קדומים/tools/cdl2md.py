@@ -4,6 +4,7 @@
 #   base to the lem: line -- for Sumerian it decides hamtu/maru and the prefix chain (guidelines 4.6).
 #   --norm (added 2026-10-17): add a "norm:" line with each word's normalization (f.norm, e.g. Neo-Assyrian
 #   SAAo: issi, šumma) and print the contextual sense (f.sense) after the guide word when it differs.
+#   Fixed 2026-10-22: a compound logogram with two lemmas (`cof-head` / `cof-tails`) printed its form twice.
 import sys, json, zipfile
 
 zf, member, out, title, url = sys.argv[1:6]
@@ -110,7 +111,10 @@ def walk(nodes):
             w = n.get('frag') or gdl(f.get('gdl', [])) or f.get('form', '')
             if cur is None:
                 cur = {'label': '?', 'w': [], 'lem': [], 'norm': []}
-            cur['w'].append(w)
+            # a logogram that writes two words (NA AMA—MAN = ummi šarri) is one graphic word with two lemma
+            # nodes: the tail node ('cof-head' points to the first) repeats the form; print it once (2026-10-22)
+            if not n.get('cof-head'):
+                cur['w'].append(w)
             cur['norm'].append(f.get('norm') or '—')
             if f.get('cf'):
                 extra = ''

@@ -27,7 +27,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **o 5** [at]-⸢ta⸣ LUGAL\d-u-tu₂ ina UGU-hi-šu₂-nu tu-up-pa-šu₂-u-ni\d  
   norm: atta šarrūtu ina muhhišunu tuppašūni  
   <sub>lem: atta[you]IP šarrūtu[kingship]N ina[in]PRP muhhu[skull]N epēšu[do]V</sub>  
-**o 6** [a-ha]-⸢ṣi⸣-in-ka ina E₂—UŠ-u-ti E₂—UŠ-u-ti  
+**o 6** [a-ha]-⸢ṣi⸣-in-ka ina E₂—UŠ-u-ti  
   norm: ahaṣṣinka ina bēt rēdûti  
   <sub>lem: haṣānu[hug=take care of]V ina[in]PRP bītu[house]N ridûtu[appropriation]N</sub>  
 **o 7** [ma-a AD-ka x x]+⸢x⸣-a-ti {tug₂}pi-tu-tu i-rak-kas  
@@ -39,7 +39,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **o 9** [ma-a al-ka-ni ni]-il-lik ina UGU {1}aš-šur—DU₃—A LUGAL ši-i-bi ra-ši ⸢x⸣  
   norm: mā alkāni nillik ina muhhi Aššur-bani-apli šarru šībī rāši —  
   <sub>lem: mā[saying]PRP alāku[go=come]V alāku[go]V ina[in]PRP muhhu[skull]N Aššur-bani-apli[Assurbanipal]RN šarru[king]N šību[witness]N rāšû[affected=acquired]AJ u</sub>  
-**o 10** [ma-a mi-i-nu ša₂ DINGIR]-MEŠ a-na AD-MEŠ-ni AD—AD-MEŠ-ni AD—AD-MEŠ-ni i-ši-mu-u-ni  
+**o 10** [ma-a mi-i-nu ša₂ DINGIR]-MEŠ a-na AD-MEŠ-ni AD—AD-MEŠ-ni i-ši-mu-u-ni  
   norm: mā mīnu ša ilāni ana abbēni ab abbēni išīmūni  
   <sub>lem: mā[saying]PRP mīnu[what?]QP ša[of=that of]DET ilu[god]N ana[to]PRP abu[father]N abu[father]N abu[father]N šiāmu[fix=decree]V</sub>  
 **o 11** [ma-a u₂-ma-a šu]-⸢u₂⸣ ina bir-tu-⸢un⸣-ni lip-ru-us  
@@ -81,7 +81,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **r 8** ma-a {giš}HAŠHUR.KUR.RA ina bi-rit UBUR-MEŠ-ia a-šak-kan-ka  
   norm: mā armannu ina birit tulêya ašakkanka  
   <sub>lem: mā[saying]PRP armannu[apricot (tree)=pomegranate]N ina[in]PRP birti[between]PRP tulû[breast]N šakānu[put=place]V</sub>  
-**r 9** ša₂ mu-ši-ia e-rak an-ṣar-ka ša₂ kal—UD-me kal—UD-me hi-il-pa-ka ad-dan  
+**r 9** ša₂ mu-ši-ia e-rak an-ṣar-ka ša₂ kal—UD-me hi-il-pa-ka ad-dan  
   norm: ša mūšīya ērāk anaṣṣarka ša kal ūme hilpaka addan  
   <sub>lem: ša[of=by]DET mūšu[night]N ēru[awake]AJ naṣāru[guard=keep guard]V ša[of=in]DET kalû[totality]N ūmu[day]N hilpu[milk]N tadānu[give]V</sub>  
 **r 10** ša₂ kal-la-ma-ri un-na-ni-ka u₂-ṣur u₂-ṣur up-pa-aš₂-ka  

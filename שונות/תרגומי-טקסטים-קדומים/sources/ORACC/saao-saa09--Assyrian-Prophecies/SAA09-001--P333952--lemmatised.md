@@ -116,7 +116,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **o i 32'** ⸢a⸣-na ṭa-ba-ah-hi a-da-na  
   norm: ana ṭabahhi addana  
   <sub>lem: ana[to]PRP ṭabāhu[slaughter]V tadānu[give]V</sub>  
-**o i 33'** [ina] ⸢E₂⸣—re-du-te-ka ⸢E₂⸣—re-du-te-ka  
+**o i 33'** [ina] ⸢E₂⸣—re-du-te-ka  
   norm: ina bēt rēdûtēka  
   <sub>lem: ina[in]PRP bītu[house]N ridûtu[appropriation]N</sub>  
 **o i 34'** [u₂-ta]-⸢qa⸣-an-ka  
@@ -515,7 +515,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **o v 12** a-na-ku {d}be-let—arba-il₃  
   norm: anāku Belet-Arbail  
   <sub>lem: anāku[I]IP Belet-Arbail[Lady of Arbela]DN</sub>  
-**o v 13** a-na AMA—LUGAL\d AMA—LUGAL\d  
+**o v 13** a-na AMA—LUGAL\d  
   norm: ana ummi šarri  
   <sub>lem: ana[to]PRP ummu[mother]N šarru[king]N</sub>  
 **o v 14** ki\d-i ta-hu-ri-ni\d-ni\d  
@@ -533,7 +533,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **o v 18** ma-a ia-u₂  
   norm: mā iyû  
   <sub>lem: mā[saying]PRP yāʾu[my=mine]PP</sub>  
-**o v 19** ṣi-it—ŠA₃-bi-ia ṣi-it—ŠA₃-bi-ia  
+**o v 19** ṣi-it—ŠA₃-bi-ia  
   norm: ṣīt libbīya  
   <sub>lem: ṣītu[exit]N libbu[interior]N</sub>  
 **o v 20** EDIN tu-sar-pi-di  
@@ -667,7 +667,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **o vi 26** ta-taq-qu-un  
   norm: tataqqun  
   <sub>lem: taqānu[be(come) secure]V</sub>  
-**o vi 27** DUMU-ka DUMU—DUMU-ka DUMU—DUMU-ka  
+**o vi 27** DUMU-ka DUMU—DUMU-ka  
   norm: mārka mār marʾīka  
   <sub>lem: māru[son]N māru[son]N māru[son]N</sub>  
 **o vi 28** LUGAL-u-tu₂  

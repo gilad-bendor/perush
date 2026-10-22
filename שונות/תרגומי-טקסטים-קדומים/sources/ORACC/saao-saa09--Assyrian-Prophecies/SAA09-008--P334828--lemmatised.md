@@ -21,7 +21,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **o 3** ma-a at-⸢ta⸣-[lak at]-tal-ka  
   norm: mā attalak attalka  
   <sub>lem: mā[saying]PRP alāku[go]V alāku[go=come]V</sub>  
-**o 4** 05-šu₂ 06-šu₂ iq-[ṭi]-⸢bi⸣ id—da-a-te id—da-a-te  
+**o 4** 05-šu₂ 06-šu₂ iq-[ṭi]-⸢bi⸣ id—da-a-te  
   norm: — — iqṭibi ina dāte  
   <sub>lem: n n qabû[say]V ina[in]PRP dāt[behind]PRP</sub>  
 **o 5** ma-a TA@v UGU {giš}[nar₃]-an-ti\t at-tal-ka  

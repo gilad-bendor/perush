@@ -8,7 +8,8 @@ Usage (from any directory; always `python3 -I -B`):
   prophecy_tools.py data UNIT [FROM [TO]]        a translator's data: per line the label, the transliteration (SAA) or
                                                  the eBL normalization (Advice), the SAAo normalization / the eBL
                                                  variant normalizations, the lemmas, the rank-3 translation
-  prophecy_tools.py fill FILE                    replace every backticked line written as `@` with the base text's line
+  prophecy_tools.py fill FILE [--refill]         replace every backticked line written as `@` with the base text's line
+                                                 (--refill: also re-copy the lines already filled, after a base change)
   prophecy_tools.py shared                       lines whose normalization recurs (inside a unit and across units): the
                                                  repeated lines and formulas, with the Hebrew already drafted
   prophecy_tools.py verify [UNIT|PROJECT …] [--strict]   (exit 1 on an error)
@@ -534,6 +535,9 @@ def cmd_data(unit, a=None, b=None):
             print('    [' + '; '.join(marks[lab]) + ']')
 
 
+REFILL = False
+
+
 def cmd_fill(path):
     path = os.path.abspath(path)
     text = open(path, encoding='utf-8').read().split('\n')
@@ -551,7 +555,8 @@ def cmd_fill(path):
         if m:
             cur = m.group(1)
             continue
-        if ln.strip() == '`@`' and cur and unit:
+        if cur and unit and (ln.strip() == '`@`' or (REFILL and ln.startswith('`') and i > 0
+                                                       and re.match(r'^### ', text[i - 1]))):
             if unit not in base:
                 base[unit] = {x[0]: x[1] for x in base_lines(unit)[0]}
             if cur in base[unit]:
@@ -694,7 +699,9 @@ def main():
     elif c == 'data' and len(a) >= 2:
         cmd_data(a[1], a[2] if len(a) > 2 else None, a[3] if len(a) > 3 else None)
     elif c == 'fill' and len(a) >= 2:
-        for p in a[1:]:
+        global REFILL
+        REFILL = '--refill' in a
+        for p in [x for x in a[1:] if x != '--refill']:
             cmd_fill(p)
     elif c == 'shared':
         cmd_shared()

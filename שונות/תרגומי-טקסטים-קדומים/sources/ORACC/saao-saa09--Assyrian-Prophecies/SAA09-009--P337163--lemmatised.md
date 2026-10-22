@@ -119,7 +119,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **r 6'** {iti}⸢BARAG⸣ UD 18-KAM lim-mu {1}EN—KUR-u-a  
   norm: Nisannu ūm — limmu Bel-šadduʾa  
   <sub>lem: Nisannu[Nisan]MN ūmu[day]N n līmu[eponym (of year)]N Bel-šadduʾa[1]PN</sub>  
-**r 7'** {lu₂}GAR.KUR {lu₂}GAR.KUR ṣur-ri  
+**r 7'** {lu₂}GAR.KUR ṣur-ri  
   norm: šakin māt Ṣurri  
   <sub>lem: šaknu[appointee]N mātu[land]N Ṣurru[Tyre]SN</sub>  
 *(rest line other)*  

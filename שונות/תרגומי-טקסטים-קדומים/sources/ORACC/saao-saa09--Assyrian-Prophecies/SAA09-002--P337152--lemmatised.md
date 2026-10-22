@@ -50,7 +50,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **i 12'** [ina GIR₃.2-ia] u₂-kab-ba-as  
   norm: ina šēpēya ukabbas  
   <sub>lem: ina[in]PRP šēpu[foot]N kabāsu[tread=subdue]V</sub>  
-**i 13'** [la ta-pa]-⸢al⸣-li-hi AMA—MAN AMA—MAN  
+**i 13'** [la ta-pa]-⸢al⸣-li-hi AMA—MAN  
   norm: lā tapallihi ummi šarri  
   <sub>lem: lā[not]MOD palāhu[fear]V ummu[mother]N šarru[king]N</sub>  
 *(n line blank)*  
@@ -144,7 +144,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **ii 3'** KUR—aš-šur{ki} is-si-ka ⸢u₂⸣-[sal-lam]  
   norm: Mat-Aššur issīka usallam  
   <sub>lem: Mat-Aššur[Assyria]GN išti[with]PRP salāmu[be(come) at peace=reconcile]V</sub>  
-**ii 4'** ša kal—UD-me kal—UD-me kal-la-ma-⸢ri⸣ [ma-ṣar-ta-ka]  
+**ii 4'** ša kal—UD-me kal-la-ma-⸢ri⸣ [ma-ṣar-ta-ka]  
   norm: ša kal ūme kallamāri maṣṣartaka  
   <sub>lem: ša[of=for]DET kalû[totality]N ūmu[day]N kallâmāre[in the early morning]AV maṣṣartu[observation=guard]N</sub>  
 **ii 5'** a-na-ṣar a-gu-ka ⸢u₂⸣-[ka-na]  
@@ -171,7 +171,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **ii 12'** ni-kit-tu ni-ir-ri-ṭu u₂-ša₂-an-ṣa-ka  
   norm: nikittu nirriṭu ušanṣakka  
   <sub>lem: niqittu[anxiety]N nirriṭu[fear=trembling]N maṣû[correspond=make overcome]V</sub>  
-**ii 13'** DUMU.UŠ-ka DUMU.UŠ—DUMU.UŠ-ka DUMU.UŠ—DUMU.UŠ-ka  
+**ii 13'** DUMU.UŠ-ka DUMU.UŠ—DUMU.UŠ-ka  
   norm: mārka mār marʾīka  
   <sub>lem: māru[son]N māru[son]N māru[son]N</sub>  
 **ii 14'** LUGAL-u-tu ina IGI {d}MAŠ up-pa-aš₂  
@@ -261,7 +261,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **iii 1'** lu-u et-⸢ka⸣-[ka x x x x x x]  
   norm: lū etkāka — — — — — —  
   <sub>lem: lū[may]MOD etku[alert]AJ u u u u u u</sub>  
-**iii 2'** {lu₂}da-gil₂—⸢MUŠEN⸣-[MEŠ {lu₂}da-gil₂—⸢MUŠEN⸣-[MEŠ x x x x]  
+**iii 2'** {lu₂}da-gil₂—⸢MUŠEN⸣-[MEŠ x x x x]  
   norm: dāgil iṣṣūrāti — — — —  
   <sub>lem: dāgilu[one who sees]N iṣṣūru[bird]N u u u u</sub>  
 **iii 3'** a-na-⸢ku⸣-ma bi-[x x x x x]  
@@ -282,7 +282,7 @@ Converted from ORACC CDL JSON (corpusjson). Each line: label + transliteration (
 **iii 8'** ma-aʾ-du-ti\d u₂-<$sa$>-na-ʾu-[x-ni]  
   norm: maʾdūti —  
   <sub>lem: mādu[many=many men]AJ u</sub>  
-**iii 9'** ma-a im—ma-ti im—ma-ti KUR na-ku-ru ib-ba-aš₂-ši  
+**iii 9'** ma-a im—ma-ti KUR na-ku-ru ib-ba-aš₂-ši  
   norm: mā ina mati mātu nakkuru ibbašši  
   <sub>lem: mā[saying]PRP ina[in]PRP mati[when?]QP mātu[land]N nakāru[be(come) different=change]V bašû[exist=occur]V</sub>  
 **iii 10'** ma-a ina {uru}kal-hi NINA{ki} lu la nu-šab  
