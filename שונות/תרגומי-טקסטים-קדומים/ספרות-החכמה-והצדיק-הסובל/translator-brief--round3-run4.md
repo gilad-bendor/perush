@@ -3,7 +3,7 @@
 This adds to `translator-brief.md` (read it in full: it is binding). Where the two differ, this file wins.
 
 ## 1. The run
-Four texts of the wisdom corpus are translated **at the same time, by four translators, one text each** (a Claude Cloud session; guidelines §5.1). Two texts are long and are drafted by two translators one after the other (the second continues the first's file):
+Four texts of the wisdom corpus are translated by six translators **one after the other** (guidelines §5.1, since 2026-10-22: quotas apply in the cloud too; order SH-a, SH-b, CW, DP, SU-a, SU-b – `renderings.md` §11.9). Two texts are long and are drafted by two translators (the second continues the first's file):
 
 | Key | Text | Base | Translator(s) |
 |---|---|---|---|
@@ -12,7 +12,7 @@ Four texts of the wisdom corpus are translated **at the same time, by four trans
 | DP | the Dialogue of Pessimism (93 labels) | eBL `../sources/eBL/Dialogue-of-Pessimism-SB/` | one translator |
 | SU | the Instructions of Šuruppag (288 labels, Sumerian) | ETCSL `../sources/ETCSL/5.6.1--Instructions-of-Shuruppag/` | SU-a: 1–142; SU-b: 143–280 |
 
-**Parallel safeguards (binding):** edit only your own files (your `annotated-<KEY>.rtl.md`, your `translation--intro-<KEY>.rtl.md`, your section of your project's `project.md`, and the generated files through `build`). Never edit `renderings.md`, another translator's files, the tools, other corpora or `sources/`. The other translators' files may change while you work: read them only through `wisdom_tools.py grep` / `lemma`. Never commit, never start sub-agents. Run every command with a short runtime (`python3 -I`).
+**Safeguards (binding):** write each drafted section to disk at once (a quota stop must lose at most the section in progress); edit only your own files (your `annotated-<KEY>.rtl.md`, your `translation--intro-<KEY>.rtl.md`, your section of your project's `project.md`, and the generated files through `build`). Never edit `renderings.md`, another translator's files, the tools, other corpora or `sources/`. Read the earlier translators' files through `wisdom_tools.py grep` / `lemma`; copy their Hebrew for the shared lines (§5). Never commit, never start sub-agents. Run every command with a short runtime (`python3 -I`).
 
 ## 2. Read first
 1. `../translation-guidelines.md` – the whole file. The ★ rules of §5.2 bind every line (below, §4).
@@ -41,7 +41,7 @@ Four texts of the wisdom corpus are translated **at the same time, by four trans
 - Read the transliteration before believing any brief, this one included: "look for", never "translate as".
 - Before you finish, diff the renderings you fixed at your first occurrences against your drafted lines (★).
 
-## 5. Lines shared between the four texts (fixed now, identical Hebrew)
+## 5. Lines shared between the four texts (fixed now, identical Hebrew; see also `renderings.md` §11.8 – the nets, pits and other words shared with Etana)
 | Source | Hebrew | Where |
 |---|---|---|
 | *ṭāb eli šamaš balāṭa uttar* | `טוֹב עַל שַׁמַשׁ, חַיִּים יוֹסִיף.` (SH: `שַׁמַשׁ` always vocalized) | SH 100, 106, 119 |
