@@ -356,6 +356,10 @@ The translator's tables (`4-גילגמש-אנקידו-והעולם-התחתון/
 8. *amar* (of a bird) = **`גּוֹזָל`** – the Sumerian precedent (Gudea A.xxi.4, Anzud and its *amar*; Bird and Fish 104, 132). Etana's reservation of `גּוֹזָל` (Deut 32:11) covers its own Akkadian *atmu* = `אֶפְרוֹחַ`, a different word; the apparatus of GEN 43 names Deut 32:11 and says the image is not the Bible's (Anzud's chick in a goddess's tree). A cross-language split by source word, recorded for the lead.
 9. *inim-bi (nu-)gub* = **`בדבר הזה (לא) עמד לצדה / לצדו`** (Inana's Descent 221A, identical to GEN 237): §11.5's provisional row is replaced.
 
+### 11.9 Merged after project 3, part 2 (SB c+1–c+65, d+1–d+56, 2026-10-22)
+The translator's table in `3-נרגל-וארשכיגל/project.md` binds the later copies (`האל ההוא`; `נַמְתָּר הלך, ואל גבירתו דבר דיבר:`; `כורעים, כפופים, האלים כולם,` / `כורעים, כפופים, האלים של ארץ.`; `אל חצר אָנוּ – בבואי/בבואו,`; the stairway, gate and seeing lines of d+26–28; Ea's disguise `אאה אביו – מי מעיין יַזֶּה עליו; קֵרֵחַ, פּוֹזֵל, חִגֵּר, …`; `דּוּנִי את דין האלים הגדולים,` → d+67 `לא אָדוּן את דין…`; the embrace `לָפְתוּ זה את זה, שניהם,` / `אל המשכב בפראות באו.`; the 7-day refrain; `לחמנו יאכל, שכרנו ישתה!`; `לפני שיאור היום – הָרוֹ עָלָה.`). c+1–7 copy Gilg. VII 184–188 / Ištar 9–10; c+23–24 Ištar 29–30; d+52 Gilg. XI 309.
+**Rulings:** 9. *wadû* D = **`ידע`** (Gilg. XII 14 `יֵדְעוּךָ`; c+15 `יֵדָעֵהוּ`, c+19 `אֵדָעֵהוּ` changed by the coordinator; the `ידע` gate now accepts *wadû*). 10. *ṭeḫû* `התקרב` (kept apart from *âru* `ניגש`): accepted. 11. *šasû* `צעק` (Gilg. III 120): accepted. 12. `האלים של ארץ` (*ilū ša māti*): accepted; the note says "the land" = the upper world. 13. the Uruk-only `(umma)` untranslated, as the guidelines' header rule for words in parentheses. 14. *šadâšu elû* literal `הָרוֹ עלה`, with a note on the idiom ("to depart"): accepted. 15. *pussulu* `חִגֵּר` (neither Lev 21:18 `פִסֵּחַ` nor Gen 32:32 `צֹלֵעַ`): accepted. 16. the present kept at c+63, d+7: accepted. **Gate catch:** `שלחתני` contains `חתני` (the `חתן` gate): write `שלחת אותי` (c+26; also d+98).
+
 ## Changelog
 - 2026-10-21: written by the corpus coordinator before the first line, from the Gilgameš, wisdom, lament, temple, creation and law corpora and a reading of both base texts in full.
 - 2026-10-21: §9 filled after both texts were drafted and reviewed; §2/§5 rows corrected to the drafted lines; §10 extended.
@@ -363,3 +367,4 @@ The translator's tables (`4-גילגמש-אנקידו-והעולם-התחתון/
 - 2026-10-21 (Round 3, run 5): §11 added – the binding renderings of projects 3 (Nergal and Ereškigal) and 4 (Bilgameš, Enkidu and the Netherworld), fixed by the coordinator before the first line; the Sumerian of project 4 takes Gilgameš XII's Hebrew where XII renders it (`netherworld_tools.py xii`).
 - 2026-10-22: §11.7 merged after project 3, part 1 (SB a+1–b+50); *ebbu* = `צַח`.
 - 2026-10-22: §11.8 merged after project 4, part 1 (lines 1–135).
+- 2026-10-22: §11.9 merged after project 3, part 2 (SB c+1–d+56); *wadû* D = `ידע`.

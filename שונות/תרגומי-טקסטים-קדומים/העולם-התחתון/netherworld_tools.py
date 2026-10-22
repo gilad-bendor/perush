@@ -96,7 +96,7 @@ RESERVED = {
         [r'târ|tayyār|târ|tur\b|uttēr|turr|gi₄|\bgur|-gur|terr'],
     r'עזב|עוזב|נעזב': [r'ezēb|īzib|ezib|\bšub|-šub|taka₄|tag₄'],
     B + P + r'(לקח|לקחה|לקחו|קח|קחי|יקח|תיקח|נלקח|ניקח|לקחת)' + E: [r'leq|liq|ilq|(^|\s|-)ti(-|\s|$)|šu\b.*\bti\b|ba-ni-in-ti'],
-    B + P + r'(ידע|ידעה|ידעו|יודע|יודעת|יודעים|יודעות|ידעתי|תדע|נודע)' + E: [r'\bed[êûeiī]|īd[êûeiīu]|ūd|\bzu\b|-zu-|mu-un-zu|nu-zu'],
+    B + P + r'(ידע|ידעה|ידעו|יודע|יודעת|יודעים|יודעות|ידעתי|תדע|נודע)' + E: [r'\bed[êûeiī]|īd[êûeiīu]|ūd|uʾadd|\b[lu]?udd[iīa]|wadû|\bzu\b|-zu-|mu-un-zu|nu-zu'],
     B + P + r'(נחש|נחשים|נחשי)' + E: [r'muš(?![₂₃])'],
     B + P + r'(שד|שדי|שדים)' + E + r'|' + B + P + r'שדי־|' + B + P + r'שד־': [r'gal₅-la₂|gal5-la2|gala\[|galla'],
     r'שרט|שורט': [r'ḫur|hur\['],
