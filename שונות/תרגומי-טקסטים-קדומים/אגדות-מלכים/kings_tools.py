@@ -1,5 +1,7 @@
 """Verify, build and look up the legends-of-kings corpus (אגדות-מלכים/): Enmerkar and the Lord of Aratta (ETCSL 1.8.2.3,
-key EA, Sumerian) and the Sargon Birth Legend (King 1907, key SB, Akkadian).
+key EA, Sumerian), the Sargon Birth Legend (King 1907, key SB, Akkadian) and Etana (eBL L/1/9, six chapters, key ET,
+Akkadian; added 2026-10-21/22: labels `<chapter>.<eBL label>`, reserved words licensed by the eBL lemma, `data ET` /
+`pars ET` show each line's related lines in all versions with their Hebrew).
 
 Written 2026-10-21 (Round 2, run 6), adapted from ../קינות-על-ערים/lament_tools.py and ../בניין-המקדש/temple_tools.py.
 Add a project as a PROJECTS entry.

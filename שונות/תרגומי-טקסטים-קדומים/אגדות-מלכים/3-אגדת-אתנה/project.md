@@ -44,8 +44,21 @@ numbering (Kinnier Wilson 1985; Foster; Dalley; Haul 2000) differs (e.g. SB II =
 | ET3 | II 73–152; OBM b+1–c+9; MA d+1–f+18 | sub-agent | **done** 2026-10-22 (153 lines, three passes; merged: renderings §10.6.3) |
 | ET4 | III 1–c+7; MA g+1–i+18 | sub-agent | **done** 2026-10-22 (184 lines, three passes; merged: renderings §10.6.4) |
 
-## Open decisions
-(per part; below)
+## Open decisions (the coordinator's summary, 2026-10-22)
+Each part's numbered list is in its section below; the minor ones were decided there (the user's rule) and merged into
+`../renderings.md` §10.6. **Nothing major is left for the user.** Left for the next cross-corpus harmonization (they
+touch other corpora, which other Round 3 sessions were editing; listed in `../../STATUS.md` §6):
+1. *šarāku* `הֶעֱנִיק` (= Sum. *rig₇*, EA) vs Gilgameš *qiāšu* `הֶעֱנִיק` (two verbs, one Hebrew).
+2. Enki and the World Order's boat `אקו־האפסו` (*taraḫ*) vs *taraḫ* = *turāḫu* = `יָעֵל` (EA, Agade, Etana) and *armu* =
+   `אַקּוֹ` (Etana): proposal `יעל־האפסו`.
+3. *ḫaṭṭu* `שרביט` (here, EA) vs `שבט` (Enūma eliš IV 29, LH): proposal `שרביט` for *ḫaṭṭu* everywhere, `שבט` for
+   *šabbiṭu* only.
+4. *parakku* `כֵּס` (here, EA *barag*) vs `דוכן` (Enūma eliš); Sum. *aga* `עטרת` (EWO 264) vs *agû* `כתר` (Gilgameš).
+5. *palgu* `תעלה` (here) vs the cognate `פֶּלֶג` (Enūma eliš): proposal `פֶּלֶג` everywhere.
+6. *buginnu* `שוקת` (here; = Sum. *buniĝ*, Gudea) vs Gilgameš *mašqû* `שוקת`: proposal *mašqû* `מַשְׁקֶה`.
+7. Smaller splits recorded by the parts: *šērtu* `עֹנֶשׁ` (Atra-ḫasīs, here) vs `אַשְׁמָה` (Gilgameš, Ludlul); *ērišu*
+   `חתן` vs Gilgameš *ḫāmiru*; *nāʾeru* `שואג` vs `צורח`; *ṣapāru* / *raʾzu* `*משובץ*`; *ḫiāṭu* `בחן` vs *barû* `בוחן`;
+   *ina ūmīšu* `ביום ההוא` vs `בעת ההיא`; *galātu* `התפלץ` vs Sum. *ḫuluḫ* `נבהל`; *qarānu* `ערם` beside Sum. *dub*.
 
 ## Parts
 (each translator adds its section: progress and the three review passes, `### Parallels index (ET1)` … with the columns

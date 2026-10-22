@@ -38,6 +38,45 @@
    introduction (the OCR of her line-by-line text is poor; a reading quoted from it is marked as hers, not ours).
 
 
+## Key findings (2026-10-22, Round 3 run 2: Etana, `3-אגדת-אתנה/`)
+1. **Gen 11 without the tower.** The gods "form" the city (*eṣēru* = `יָצַר`), lay its foundations (*uššu* ~ Aram.
+   `אֻשַּׁיָּא`, Ezra 5:16) and its bricks (*libittu* = `לְבֵנָה`, Gen 11:3), and kingship "comes down" from heaven (OBM
+   14 `[המל]כות – מן השמים ירדה`; Gen 11:5's `וַיֵּרֶד` is the god): the city and the king are gifts, not hubris.
+   SB II 2's "tower" (*dimtu* = `צְרִיחַ`) is one uncertain sign beside a shrine of Adad. The ascent to heaven happens
+   – on an eagle – and the "name" is sought (*šuma šuknanni* "establish for me a name" = an heir), but nobody is
+   punished: a [divergence] on every point of Gen 11:4, and a reversal of its moral.
+2. **The plea for a child and the "name":** `נסח את חרפתי, שִׂים לי שֵׁם!` (II 142 = III 14) ↔ `אָסַף אֱלֹהִים אֶת
+   חֶרְפָּתִי` (Gen 30:23), the son as the name that survives (2 Sam 18:18; Deut 25:6); the plant of birth ↔ Rachel's
+   mandrakes (Gen 30:14) [divergence]; Etana's daily prayer ↔ Isaac's (Gen 25:21) and Hannah's (1 Sam 1). Etana's piety
+   – offerings to Šamaš and to "the earth", honoured ghosts (*eṭemmu* = `אִט`), incense for the female dream-inquirers
+   (*šāʾiltu* ~ `שֹׁאֵל`) – is what Deut 18:11 and 26:14 forbid and what Saul tried (1 Sam 28:6–7).
+3. **The oath of friends and Šamaš's boundary:** `לפני שַׁמַשׁ הגיבור – שבועה נשבעו שניהם` ↔ `נִשְׁבְּעוּ שְׁנֵיהֶם` (Gen
+   21:31), "come, let us … I and you" ↔ Gen 31:44; "whoever passes Šamaš's boundary" (*itû* = `גְּבוּל`) ↔ Laban's heap
+   (Gen 31:52) and the neighbour's boundary (Deut 19:14, 27:17). Breaking the oath is "eating a taboo" (*anzillu* =
+   `תּוֹעֵבָה`, ↔ Deut 14:3) – and the eagle breaks it by eating.
+4. **The eagle: Isaiah 14, Obadiah, Deut 32 and Exod 19 as one story.** "I will go up and dwell in heaven" (II 43,
+   `אֶעֱלֶה – ובשמים אֵשֵׁב`) has the two verbs of Isa 14:13 in its order, "in his heart"; the eagle is cast into the pit
+   (Isa 14:15); *šaqû* D `הִגְבִּיהַּ` (Obad 1:4); the eagle carries the man on its wings (*naššû* `נָשָׂא` ↔ `וָאֶשָּׂא
+   אֶתְכֶם עַל כַּנְפֵי נְשָׁרִים`, Exod 19:4; Deut 32:11) and catches him falling. Ezek 17 (eagle, `צַפְצָפָה`, broken oath,
+   the god's net, `עֲרֻגוֹת`) is the closest single biblical counterpart to the whole imagery (our proposal).
+5. **The pit (Gen 37):** plucked (= stripped), "cast into the pit" with the same verb (*nadû* = `הִשְׁלִיךְ`; *šuttatu* =
+   `שׁוּחָה`), no food or water, an anonymous "man" sent by the god (II 132 ↔ Ps 105:17), drawn up; the psalms of the pit
+   (Ps 6:6 – the eagle's vow to make the god's *zikru* heard; Ps 30, 88; Lam 3:55). The net of the divine judge "is
+   the wide earth, the distant heaven" (II 69–70 ↔ Ps 139:8; Amos 9:2–3; Hos 7:12; Ezek 12:13).
+6. **Dreams:** Etana's dream of the gates of the gods and of Ištar enthroned with lions (III b+1–14) is fulfilled in
+   its own words (b+40–45) ↔ Gen 28:12–17 (`שַׁעַר הַשָּׁמָיִם`) and the lion throne (1 Kgs 10:19–20); MA's two
+   kingship dreams (heaps "in all the land", enemies bowing "at your feet") are the closest parallel to Joseph's doubled
+   dreams (Gen 37:5–11; 41:32); the interpreter is a friend, not a professional.
+7. **False echoes avoided:** Foster's "not yet" (OBM 7–9 are statives; Gen 2:5's `טֶרֶם` in the notes only), "tower",
+   "Netherworld", "plant of life" (MA f+5 has "plant of birth"), "Ishtar came down from heaven" (resting on an abandoned
+   reading of OBM 14), "no doubt" (= "perhaps"); "open my eyes" is *petû* = `פָּתַח`, not Gen 3:5's `פָּקַח`.
+8. **The ancient mind:** kingship as an object kept before Anu and lowered to men; the king as shepherd and builder;
+   an animal fable written as a treaty with its curses; a child wiser than his father; a parent's grief; Šamaš who keeps
+   justice and mercy apart (he will not save the oath-breaker, yet sends help) and answers two needs with one answer;
+   a son as the "name" that keeps a man alive after death; the earth seen from above by an irrigation farmer (a
+   sheepfold, a garden bed, a trough); a king's fear of height, unblamed. **Limits:** all six versions are broken and
+   the end is lost in all; the MA order and the placement of some SB fragments follow eBL.
+
 ## The table
 
 ### Genesis
