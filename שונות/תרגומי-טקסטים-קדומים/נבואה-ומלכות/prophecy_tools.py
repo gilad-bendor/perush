@@ -89,7 +89,8 @@ RESERVED = {
     # the cognate of taqānu: תקן only for taqānu / taqnu
     B + V + r'(תקן|תקנ\S*|תיקן|תיקנ\S*|מתוקן|מתוקנ\S*|תוקן)' + E: [r'taqānu|taqnu|taqnūti|utaqqan|tataqqun'],
     # wing
-    B + P + r'(כנף|כנפ\S*)' + E: [r'agappu|kappu|akappi|agappīya|aqappu'],
+    B + P + r'(כנף|כנפ\S*)' + E: [r'kappu\['],
+    B + P + r'(אגף|אגפ\S*)' + E: [r'agappu\[|akappi|agappīya|aqappu'],
     # heir / succession
     r'יורש|ירוש|ירש': [r'aplu|rēdûtu|rēdûti|rēdûtēka|apla|apli\b'],
     # slaughter
@@ -107,7 +108,7 @@ RESERVED = {
     r'עשתרת': [],
     r'צדק|צדיק': [],
     r'שאול': [],
-    B + P + r'(נחש|נחשים)' + E: [],                 # ṣerru = פתן (נחש reserved for its cognate)
+    B + P + r'(נחש|נחשים)' + E: [r'ṣerru'],          # Gilgameš, Etana: נחש only for ṣerru
     B + P + r'(משיח|משוח)' + E: [],
     r'קדש|קודש|קדוש|מקדש': [r'kiṣṣu|kiṣṣī|ešertu'],   # Enūma eliš: kiṣṣu = קֹדֶשׁ (renderings §4)
     r'דביר': [r'atmanu|atman'],                     # Enūma eliš: atmanu = דְּבִיר
