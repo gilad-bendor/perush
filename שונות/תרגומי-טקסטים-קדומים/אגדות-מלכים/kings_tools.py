@@ -170,7 +170,7 @@ RESERVED_ET.update({
     B + P + r'(גן|גנה|גנים|גנת|הגן)' + E: [r'kirû'],
     B + P + r'(גנן|הגנן|גננים)' + E: [r'nukaribbu'],
     B + P + r'(ראם|ראמים)' + E: [r'rīmu'],
-    B + P + r'(נשר|נשרים|הנשר|נשרי)' + E: [r'erû I'],
+    B + P + r'(נשר|נשרים|הנשר|נשרי)' + E: [r'erû I|(^|[\s|(\[])er[îûê]m?\b|ere?-?ri-?im|e-ri-im'],
     # never (the apparatus only): Gen 2:5, 3:5, 30:14, 30:1; Gen 10:10, 28:12, 37
     B + P + r'(דודאים|דודאי)' + E: [],
     B + P + r'(עקרה|עקר|עקרות)' + E: [],
@@ -234,7 +234,7 @@ FORMULAS = {'EA': [
     (r'šuma \| šuknanni', r'שים לי שם', '"establish for me a name" (§10.3)'),
     (r'ul išmēšunūtī-ma \| ul išmâ', r'^לא שמע להם, לא שמע', '"he did not listen to them" (§10.3)'),
     (r'atkal(ak)?kum-ma \| šamaš', r'^בך בטחתי, שמש', '"I trusted in you, Šamaš" (§10.3)'),
-    (r'ūmišam-ma \|\|? imta(na)?h?hara', r'^יום יום', '"day after day he appealed" (§10.3)'),
+    (r'ūmišam-ma \|\|? imta(na)?h?hara', r'יום יום – אל שמש מתחנן', '"day after day he appealed" (§10.3)'),
     (r'ana (šâšū?|šuāšu)(-ma)? \|\| ana \S+ \| iz', r'אליו, אל [^,]+, דיבר(ה)?:', '"X said to him, to Y" (§10.6.2)'),
 ]}
 

@@ -41,7 +41,7 @@ numbering (Kinnier Wilson 1985; Foster; Dalley; Haul 2000) differs (e.g. SB II =
 |---|---|---|---|
 | ET2 | OBS 1–a+24; MA a+1–c+31; II 1–72 | sub-agent | **done** 2026-10-22 (179 lines, three passes; merged: renderings §10.6.1) |
 | ET1 | OBM 1–a+13; I 1–a+11 | sub-agent | **done** 2026-10-22 (69 lines, three passes; merged: renderings §10.6.2) |
-| ET3 | II 73–152; OBM b+1–c+9; MA d+1–f+18 | sub-agent | after ET2 |
+| ET3 | II 73–152; OBM b+1–c+9; MA d+1–f+18 | sub-agent | **done** 2026-10-22 (153 lines, three passes; merged: renderings §10.6.3) |
 | ET4 | III 1–c+7; MA g+1–i+18 | sub-agent | after ET3 |
 
 ## Open decisions
@@ -487,3 +487,274 @@ Words (one Hebrew each; grep-checked in all corpora):
 | *qerbetu*; *rapšu*; *rūqu*; *abarša*; *lū* + *tīde* | `נָוֶה` (Gilgameš `נְאוֹת`); `רָחָב`; `רָחוֹק`; `אָמְנָם`; `אָכֵן יָדַעְתָּ` | – | | II.68–70; OBS.a+19–21 |
 | *ukultu*; *šiāḫu*; *inbu*; *eṣēlu*; *tarbuʾu*; *ṣupru*; *līliātu*; *akāšu* | `אָכְלָה` [cognate]; `צָמַח`; `תְּנוּבָה`; `*הִתְאַבֵּן*`; `אָבָק`; `צִפֹּרֶן`; `עֶרֶב`; `צָעַד` | – | `צעד` = Gilgameš OB II 144 | |
 | MA: *šāgišu*; *gallû*; *titʾû*; *šutattupu*; *nazmātu*; *pašāru* Gt; *rašû*; *minde*; *tūrtu*; *tarāṣu*; *gappu*; *magāru*; *ittiltu* / *šanû* / *šalāšu*; *šalû*; *nurbu*; *karšu*; *qerbu*; *ēribu*; *dayyānu* / *dīnu*; *kasû* D; *naprušu* Ntn | `שׁוֹחֵט`; `שֵׁד־גַּלָּה`; `הָיָה לִתְאוֹמִים`; `נַעֲשׂוּ חֲבֵרִים`; `צָרוֹת`; `פָּשַׁר זה לזה`; `קָנָה`; `אוּלַי`; `תְּשׁוּבָה`; `נָטָה`; `אֲגַף`; `אָבָה`; `פַּעַם אַחַת` / `שָׁנָה` / `שִׁלֵּשׁ`; `צָלַל`; `רֹךְ`; `מֵעַיִם`; `קֶרֶב`; `הַבָּא`; `דַּיָּן` / `דִּין`; `כִּפֵּת`; `הִתְעוֹפֵף` | cognate (*šanû*, *šalāšu*, *qerbu*, *dayyānu*) | *naprušu* G = `עָף` for ET4 (gated) | MA.b+5–c+31 |
+
+## Part ET3 – the ambush, the pit, the prayer for a son, the rescue (SB II 73–152; OB Morgan b+1–c+9; MA d+1–f+18), 2026-10-22
+
+Round 3, run 2 (`../renderings.md` §10.5). Translator: sub-agent ET3. Files: `annotated-II.rtl.md` (one header paragraph +
+II.73–II.152), `annotated-OBM.rtl.md` (one header paragraph + b+1–c+9), `annotated-MA.rtl.md` (one header paragraph +
+d+1–f+18). **153 entries.** Not committed.
+
+### Progress and passes
+- [x] SB II 73–152 (80) · [x] OB Morgan b+1–c+9 (25) · [x] MA d+1–f+18 (48) · [x] the three header paragraphs
+- [x] pass (a) fidelity · [x] pass (b) consistency · [x] pass (c) Hebrew
+- [x] `verify ET` – 401 entries, OK (no problem in any line, FORMULAS included; only the coverage note for ET4's lines)
+- [x] `check_bible_quotes.py` on the three annotated files and this file – 0 problems
+- **Order of work:** SB II 73–152 first (it fixes the Hebrew of the scenes: Šamaš's command and its execution, the
+  capture, the plea and refusal, the eagle's and Etana's prayers, the mission), then OB Morgan b–c and MA d–f, copying the
+  SB Hebrew (and ET2's MA c Hebrew) wherever the Akkadian is the same and varying only where it varies; the apparatus of
+  each line says what the other versions keep, change or lack.
+- **Data:** `kings_tools.py data ET` for the three ranges; `pars ET II.73 II.152`; the eBL dictionary per word (nuballu,
+  abru, kappu, šubtu, kutmu, šaṭāṭu, sādu, maṣû, ērišu, nudunnû, šērtu, sanāqu, katmu, ullânu, šaqû, ṣabābu, tanattu,
+  nāʾeru, kubru, šû III, aslu, muššakku, šāʾiltu, gamāru, pūtu, būrtu, artu, mayyālu, ḫuršānu, agappu, rêmu, dārû,
+  dārītu, baqāmu, pištu, šuttatu, bubūtu, ṣūmu, eṭemmu, kabātu, šanû, rebû, nasāḫu, nēšu, katāmu, emūqu, ukultu, maḫāru,
+  kašādu, nâlu, barû, qerēbu, ezēbu, malû, banû, išû); every Akkadian precedent looked up in the transliteration lines of
+  all corpora (a scratch helper that greps the backticked lines and prints their Hebrew) and every new Hebrew word with
+  `kings_tools.py grep all`. Every Bible verse printed with `check_bible_quotes.py --show` before quoting.
+- **Pass (a) fidelity:** every `>` line against N and the ATF of its manuscripts: brackets per the ATF (`[לְ]כוּ`,
+  `[האפ]רוח`, `[ב]שוחה`, `[א]ותי`, `יָ[רְ]דוּ`, `והשלי[כהו`, `הנ[שר` for *e-r[i-im*, `[שָׁכַ]ב`, `[הִסְתַּ]כֵּל`); words in
+  N's round brackets not translated (II.119 *(u)*; the ventives of II.96, 123, 128, 143); added words in `( )` (`(אם)` for
+  the conditional *-ma*, `(הדבר)`, `(אותו)`, `(פעם)`); uncertain readings `?` (II.94, 106, 108, 112, OBM b+6, c+9, MA
+  f+9…); stems and tenses re-parsed (II.76 D perfect; II.83/110 Št; II.97 cohortatives; II.123 Gtn present / II.133 Gtn
+  preterite; II.131 stative; II.152 Št; OBM c+2 Š; MA d+9 Gt imperative). Fixed in this pass: II.82/110 *sādu* (open
+  decision 8), II.134 *šuʾu* (open decision 9).
+- **Pass (b) consistency:** command ↔ execution compared line by line (II.75/89, 77/91, 78/92, 79/93, 82–83/110,
+  84/111, 85/119, 86/120, 87/121; 144–146/149–151) – identical words and order, the tense following the Akkadian;
+  repeated lines copied (II.96 = 40, 98–99 = 45–46, 104 = 51, 113 = 7, 115 = 10, 129–130 = ET2's strings, 107 = 109,
+  88 = 148, 140–142 = MA d+4, MA f+11 = f+13 = f+15, OBM c+6 = II.9); `verify ET` lists no "same transliteration,
+  different Hebrew". Every new Hebrew word grepped in all corpora; collisions found and resolved: `מַאֲרָב` (Gilgameš
+  *ušbu*) → *šubtu* `מִשְׁכָּן` (Gilgameš); `הִגִּיעַ` (Gilgameš *kašādu*) → *maṣû* Št `חָדַר`; `קָרַע` / `בִּקַּע` (Agade
+  *zil*, Enūma eliš *ḫepû*) → *šaṭāṭu* `שִׁסַּע`; `זָנָב` (*zibbatu*), `גַּף` (cognate of *gappu*) → *nuballu*
+  `*מְנִיפוֹת*`; `אָחוּ` (Sum. *u₂-sal*, Enūma eliš *gipāru*) → *sādu* `מִגְרָשׁ`; `צֹאן` (*ṣēnu*) → *šuʾu* `שֶׂה`;
+  `קָרַב` / `נִגַּשׁ` / `בָּא` (*qerēbu*, *ṭeḫû*, *erēbu*) → *sanāqu* `בִּקֵּר`; `אַשְׁמָה` (would make II.125 blame Šamaš) →
+  *šērtu* `עֹנֶשׁ` (Atraḫasīs). Remaining cross-corpus collisions are listed under open decisions.
+- **Pass (c) Hebrew:** read aloud; vocalized what would otherwise be misread: `אֵתָנָה` (every occurrence and heading),
+  `שַׁמַשׁ` / `הַשֶּׁמֶשׁ` (MA f+2), `אֶתְּנָה` "I will give" (II.114, OBM c+7: unvocalized it is Etana's name), `מִכְסֵה
+  הַלֵּב` (not `מִכְסָה` "quota"), `בַּמִּגְרָשִׁים`, `אֵילַי` (not `אֵלַי`), `שֵׂיִי`, `האִטִּים`, `שָׁתִית`, `יָרֵאתִי`,
+  `גָּמְרוּ`, `מֻגְמָרַי`, `שָׁנָה` (not "year"), `נָסַח`, `קִנִּי`, `בָּאתָ`, `לֵךְ` / `לְךָ`, `רְאֵה`, `בְּחַן`, `פְּתַח`,
+  `קְרַב`, `שׂוּם`, `אָשִׂים`, `שִׂים`, `שֵׁם`, `מֻשְׁבָּע`, `אֲבַקֶּרְךָ`, `הַחֲיֵנִי`, `אַחֲיֶה`, `הַעֲלֵנִי`, `אַעַלְךָ`,
+  `בַּחֲצוֹתְךָ`, `וְהַשְׁלִיכֵהוּ`, `מְרֹט`, `כְּרֹת`, `הַנַּח`; simplified `לְּךָ` → `לְךָ`.
+
+### Deviations from renderings §10 (decided at the first occurrence, with the reason)
+1. ***kutum libbi* = `מִכְסֵה הַלֵּב`** (II.83, 110), not §10.3's `מכסה הקרביים`: `קֶרֶב` (`קְרָבַיִם`) is the
+   [cognate] of *qerbu* (MA c+23, II.145, 150, MA d+9, e+10), and *libbu* of the carcass is `לֵב` in every line of the
+   scene (MA c+5, c+20; II.77, 84, 91, 100, 111; of the pit II.146, 151, MA d+10). The sacrificial parallel stays
+   visible in the apparatus: `אֶת הַחֵלֶב הַמְכַסֶּה אֶת הַקֶּרֶב` (Lev 3:3).
+2. ***kubru* = `עֹבִי`** (II.134; Gilgameš VI 127, 136, 142, 161), not §10.3's `מִשְׁמַנֵּי`: one Akkadian word = one
+   Hebrew word, and `וּמִשְׁמַנֵּי הָאָרֶץ` (Gen 27:28) would be an echo without basis.
+3. ***šubtu* = `מִשְׁכָּן`** (II.78, 92; Gilgameš), *šubta nadû* = `הֵנִיחַ מִשְׁכָּן` (*nadû* "lay" = `הניח`, ET1) –
+   Foster's "ambush" is the sense (eBL: jB *šubtu* also "trap"); `מַאֲרָב` belongs to *ušbu* (Gilgameš I 168).
+4. **MA d+7 has *etiq šadâm-ma*, not *šadâ ebir*** as §10.3 says (the tablet: *e-tiq KUR-ma*): so `חלוף את ההר`, the SB
+   formula; *[mā?]* (restored quotation particle) is not translated (the FORMULAS regex anchors `^לך בדרך`; the quotation
+   mark does its work). Also: *urḫu* is written ITI ("month") there – a homophone spelling (*arḫu* / *urḫu*), noted.
+5. **II.133 word order:** `יום יום – אֵתָנָה אל שַׁמַשׁ מתחנן:` – the Akkadian has the name first (*etana ūmišam-ma
+   imtaḫḫara šamaš*), but the ✓ formula requires `^יום יום`, and the Hebrew keeps the two daily prayers (123, 133) visibly
+   parallel.
+
+### Parallels index (ET3)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| II.77 | pitē-ma libbašu karassu šuṭuṭ | פְּתַח את לבו, שַׁסַּע את מעיו | `וַיְשַׁסְּעֵהוּ כְּשַׁסַּע הַגְּדִי` (שופטים יד:ו) | equivalent | Rending an animal's carcass, inside which something will dwell (Judg 14:8). *petû* / `פָּתַח` [cognate]; *šaṭāṭu* = `שִׁסַּע`. Also II.91. |
+| II.78 | šubta idi ina karšīšu | הַנַּח משכן במעיו | `יֵשֵׁב בְּמַאְרַב חֲצֵרִים` (תהלים י:ח) | equivalent | The lurker "sits" in ambush; *šubtu* (from *wašābu*) is "dwelling" and (jB) "trap". Foster's "ambush" is the sense, not the word. Also II.92. |
+| II.79 | iṣṣurāt šamāmī urradā-ma ikkalā šīra | ציפורי השמים יורדות – ואוכלות בשר | `וַיֵּרֶד הָעַיִט עַל הַפְּגָרִים` (בראשית טו:יא) | equivalent | Birds of prey descending on a carcass. Also II.93, 105. |
+| II.81 | ina lā īdû | בלא ידע | `תְּבוֹאֵהוּ שׁוֹאָה לֹא-יֵדָע: וְרִשְׁתּוֹ אֲשֶׁר-טָמַן תִּלְכְּדוֹ` (תהלים לה:ח) | equivalent | Caught unawares, in the god's trap (ET2 linked Ps 35:8 to II.47). |
+| II.83 | kutum libbi | מִכְסֵה הַלֵּב | `אֶת הַחֵלֶב הַמְכַסֶּה אֶת הַקֶּרֶב` (ויקרא ג:ג) | equivalent | *kutum libbi* (eBL: "stomach tissue of animal") is the caul fat that Leviticus reserves for God; the eagle goes for the god's portion. Also II.110. |
+| II.85 | kappīšu abrīšu u nuballīšu | כנפיו, אֶבְרוֹתָיו ו*מְנִיפוֹתָיו* | `יַעֲלוּ אֵבֶר כַּנְּשָׁרִים` (ישעיהו מ:לא); `יִשָּׂאֵהוּ עַל אֶבְרָתוֹ` (דברים לב:יא) | cognate | *abru* / `אֵבֶר`, `אֶבְרָה` – in both verses of an eagle. Also II.119. |
+| II.85 | kappu, abru, nuballu | כנף, אבר, *מניפה* | `הַנֶּשֶׁר הַגָּדוֹל גְּדוֹל הַכְּנָפַיִם אֶרֶךְ הָאֵבֶר מָלֵא הַנּוֹצָה` (יחזקאל יז:ג) | equivalent | Three words for the eagle's wing, in Ezekiel's eagle parable too (`נוֹצָה` kept for *nāṣu*, III). |
+| II.86 | buquššū-ma idīšu ana šuttati | מְרֹט אותו – וְהַשְׁלִיכֵהוּ אל השוחה | `הַשְׁלִיכוּ אֹתוֹ אֶל הַבּוֹר הַזֶּה` (בראשית לז:כב); `וַיַּפְשִׁיטוּ אֶת יוֹסֵף אֶת כֻּתָּנְתּוֹ` (בראשית לז:כג) | equivalent | Stripped (plucked), then thrown into a pit – the Joseph sequence; *nadû* = `הִשְׁלִיךְ` (gated). Also II.120 (`וַיַּשְׁלִכוּ אֹתוֹ הַבֹּרָה`, Gen 37:24). |
+| II.87 | mūt bubūti u ṣummi limūt | מות רעבון וצמא – ימות | `וְהַבּוֹר רֵק אֵין בּוֹ מָיִם` (בראשית לז:כד) | equivalent | The dry pit: death by thirst. |
+| II.87 | mūt … limūt | מות … ימות | `מוֹת יָמֻתוּ בַּמִּדְבָּר` (במדבר כו:סה) | equivalent | Internal object of "die"; not `יוּמַת` (nobody kills him). |
+| II.88 | ana zikir šamaš qurādi | למאמר שַׁמַשׁ הגיבור | `וַיַּעַשׂ נֹחַ: כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים כֵּן עָשָׂה` (בראשית ו:כב) | equivalent | The hinge from command to execution; the execution retells the command in its words (II.89–93; 149–151). |
+| II.97 | alkānim-ma i nīrid-ma … i nīkula | לְכוּ, נֵרְדָה … נֹאכְלָה | `הָבָה נֵרְדָה` (בראשית יא:ז) | equivalent | The same cohortative "let us go down" (*warādu* / `יָרַד` [cognate]); there God goes down to punish, here the eagle goes down to his punishment. |
+| II.97 | alkānim-ma | לְכוּ | `וְעַתָּה לְכוּ וְנַהַרְגֵהוּ וְנַשְׁלִכֵהוּ בְּאַחַד הַבֹּרוֹת` (בראשית לז:כ) | divergence | "Come, let us…" – the brothers plan to throw Joseph into a pit; the eagle who says "come" ends in it. |
+| II.100 | ṣerru rabiṣ | הנחש רובץ | `לַפֶּתַח חַטָּאת רֹבֵץ` (בראשית ד:ז) | cognate | The lurker (ET2 at MA c+5). *minde* "perhaps" – Foster's "no doubt" is wrong. |
+| II.101 | itti libbīšu amāta iqabbi | עם לבו? – דבר אומר | `דִּבַּרְתִּי אֲנִי עִם לִבִּי` (קהלת א:טז) | equivalent | Speaking "with" one's heart – the same preposition. |
+| II.108 | išniʾ | שָׁנָה | `וַיֹּאמֶר שְׁנוּ וַיִּשְׁנוּ` (מלכים א יח:לד) | cognate | As ET2 at MA c+16. |
+| II.111 | ṣerru iṣṣabassu ina kappīšu | הנחש תפס אותו – בכנפיו | `מִשָּׁם אֲצַוֶּה אֶת הַנָּחָשׁ וּנְשָׁכָם` (עמוס ט:ג) | equivalent | The serpent as the god's executioner (II.76 "I have bound for you"). |
+| II.111 | (the eagle caught) | | `נַפְשֵׁנוּ כְּצִפּוֹר נִמְלְטָה מִפַּח יוֹקְשִׁים` (תהלים קכד:ז) | divergence | The psalm's bird escapes; this bird is caught, and escapes only months later, by a man's hand. |
+| II.114 | kīma ēriši nudunnâ luddinka | כְּחָתָן – מַתָּן אֶתְּנָה לְךָ | `הַרְבּוּ עָלַי מְאֹד מֹהַר וּמַתָּן וְאֶתְּנָה כַּאֲשֶׁר תֹּאמְרוּ אֵלָי` (בראשית לד:יב) | equivalent | A bridegroom, a marriage gift, and the cohortative "I will give" – the eagle bids for his life in the language of a bride-price. *ērišu* ("the requester") ~ `אָרַשׂ` noted, not used (guidelines §6.7). |
+| II.116 | umaššarkā-ma šamaš elēnu kī appal | (אם) אֲשַׁלֵּחֲךָ – את שַׁמַשׁ, מלמעלה, איך אענה | `יַעַן שִׁלַּחְתָּ אֶת אִישׁ חֶרְמִי מִיָּד וְהָיְתָה נַפְשְׁךָ תַּחַת נַפְשׁוֹ` (מלכים א כ:מב) | equivalent | Releasing the man the god condemned makes the releaser die in his place – exactly the serpent's fear (II.117); *wuššuru* = `שִׁלַּח`. |
+| II.116 | kī appal | איך אענה | `וְאֵיךְ אֶעֱשֶׂה הָרָעָה הַגְּדֹלָה הַזֹּאת וְחָטָאתִי לֵאלֹהִים` (בראשית לט:ט) | equivalent | Refusal out of fear of God. |
+| II.116 | umaššarka | אֲשַׁלֵּחֲךָ | `לֹא אֲשַׁלֵּחֲךָ כִּי אִם בֵּרַכְתָּנִי` (בראשית לב:כז) | divergence | Jacob will not "release" the man without a blessing; the serpent will not release the eagle even for a gift. |
+| II.117 | šēretka isaḫḫurā ana muḫḫīya | עונשך – יסוב עליי | `תִּסּוֹב עָלֶיךָ כּוֹס יְמִין יְהוָה` (חבקוק ב:טז); `וְעַל קָדְקֳדוֹ חֲמָסוֹ יֵרֵד` (תהלים ז:יז) | equivalent | The punishment "turns" onto someone (*saḫāru* / `סָבַב`), literally "onto my skull" (*muḫḫu*) – like Ps 7:17, in the psalm of the pit (7:16). |
+| II.124 | ina šuttati amât(am)-ma | [ב]שוחה – אמות | `נֶחְשַׁבְתִּי עִם-יוֹרְדֵי בוֹר` (תהלים פח:ה); `קָרָאתִי שִׁמְךָ יְהוָה מִבּוֹר תַּחְתִּיּוֹת` (איכה ג:נה) | equivalent | The prayer from the pit; the hunter's pitfall becomes the pit of the lament psalms. |
+| II.126 | bulliṭannī | הַחֲיֵנִי | `דָּבְקָה לֶעָפָר נַפְשִׁי; חַיֵּנִי כִּדְבָרֶךָ` (תהלים קיט:כה) | equivalent | Also Ps 30:4 (`הֶעֱלִיתָ מִן-שְׁאוֹל נַפְשִׁי; חִיִּיתַנִי`, quoted in the entry). |
+| II.127 | ana ūmī dārûti zikirka luštešmi | לִימֵי נֶצַח – את זִכְרְךָ אַשְׁמִיעָה | `כִּי אֵין בַּמָּוֶת זִכְרֶךָ; בִּשְׁאוֹל מִי יוֹדֶה-לָּךְ` (תהלים ו:ו); `וְזֶה זִכְרִי לְדֹר דֹּר` (שמות ג:טו) | cognate | *zikru* / `זֵכֶר`; the vow of praise of the lament psalms – the dead cannot remember the god, so save me. |
+| II.127 | (the vow) | | `הוֹצִיאָה מִמַּסְגֵּר נַפְשִׁי לְהוֹדוֹת אֶת-שְׁמֶךָ` (תהלים קמב:ח) | equivalent | Rescue in exchange for praise of the name. |
+| II.129 | lemnētā-ma kabtatī tušamriṣ | רַע אַתָּה – ואת כְּבֵדִי הֶחֱלֵיתָ | `אִם תַּעֲשֵׂה עִמָּנוּ רָעָה` (בראשית כו:כט) | equivalent | The peace-oath's condition (II.12) is now the indictment, in the god's mouth. II.130 = II.13 (`לֹא תֹאכַל כָּל תּוֹעֵבָה`, Deut 14:3). |
+| II.132 | amēlu ša ašapparakku | אדם אשר אשלח לְךָ | `שָׁלַח לִפְנֵיהֶם אִישׁ; לְעֶבֶד נִמְכַּר יוֹסֵף` (תהלים קה:יז); `כִּי לְמִחְיָה שְׁלָחַנִי אֱלֹהִים לִפְנֵיכֶם` (בראשית מה:ה) | equivalent | The man God sends to keep life – Joseph, who came up from the pit. |
+| II.132 | qātka liṣbat | את ידך יתפוס | `וְהַחֲזִיקִי אֶת יָדֵךְ בּוֹ` (בראשית כא:יח) | equivalent | Taking the hand of one dying of thirst; fulfilled in OBM c+1 (`את ידו תפס`). |
+| II.132 | amēlu | אדם | `וַיִּמְצָאֵהוּ אִישׁ וְהִנֵּה תֹעֶה בַּשָּׂדֶה` (בראשית לז:טו) | divergence | The anonymous "man" at the turning point: in Genesis he leads to the pit, here he will lead out of it. |
+| II.133 | etana ūmišam-ma imtaḫḫara šamaš | יום יום – אֵתָנָה אל שַׁמַשׁ מתחנן | `וַיֶּעְתַּר יִצְחָק לַיהוָה לְנֹכַח אִשְׁתּוֹ כִּי עֲקָרָה הִוא` (בראשית כה:כא); `וְכֵן יַעֲשֶׂה שָׁנָה בְשָׁנָה` (שמואל א א:ז) | equivalent | Repeated prayer for a child; no Akkadian "barren" here (`עֲקָרָה` reserved). |
+| II.134 | tākul šamaš kubur šuʾīya | אכלת, שַׁמַשׁ, את עובי שֵׂיִי | `הַאוֹכַל בְּשַׂר אַבִּירִים; וְדַם עַתּוּדִים אֶשְׁתֶּה` (תהלים נ:יג) | divergence | The psalm denies exactly what Etana's argument assumes: a god who eats the offering and drinks its blood (II.135). |
+| II.134 | šuʾu | שֶׂה (`שֵׂיִי`) | `וְאַיֵּה הַשֶּׂה לְעֹלָה` (בראשית כב:ז) | cognate | The sacrificial "sheep". |
+| II.135 | erṣetu tašti dām aslīya | הארץ – שָׁתִית את דם אֵילַי | `אֲשֶׁר פָּצְתָה אֶת פִּיהָ לָקַחַת אֶת דְּמֵי אָחִיךָ` (בראשית ד:יא) | equivalent | The earth that drinks blood; Foster's "Netherworld" is interpretation (`שְׁאוֹל` never). Also Ps 66:15 (`עִם-קְטֹרֶת אֵילִים`). |
+| II.136 | ilī ukabbit eṭemmī aplaḫ | את האלים כיבדתי, את האִטִּים יָרֵאתִי | `כִּי מְכַבְּדַי אֲכַבֵּד` (שמואל א ב:ל); `אַיֵּה כְבוֹדִי … אַיֵּה מוֹרָאִי` (מלאכי א:ו) | cognate | *kabātu* D / `כִּבֵּד`; honour and fear as a pair. |
+| II.136 | eṭemmī aplaḫ | את האִטִּים יָרֵאתִי | `וְלֹא נָתַתִּי מִמֶּנּוּ לְמֵת` (דברים כו:יד) | divergence | Israel's tithe declaration boasts of giving nothing to the dead; Etana boasts of revering them. |
+| II.137 | šāʾilātu | השואלות | `וְשֹׁאֵל אוֹב וְיִדְּעֹנִי וְדֹרֵשׁ אֶל הַמֵּתִים` (דברים יח:יא) | cognate | *šāʾilu* / `שֹׁאֵל`: the Torah forbids the two acts of piety Etana lists (the "inquirers", the cult of the dead). |
+| II.137 | šāʾilātu, maššakkū | השואלות, מֻגְמָרַי | `וַיִּשְׁאַל שָׁאוּל בַּיהוָה וְלֹא עָנָהוּ יְהוָה גַּם בַּחֲלֹמוֹת` (שמואל א כח:ו) | equivalent | A king who tried every channel, dreams included, without answer – and then a woman diviner (28:7). |
+| II.138 | aslīya ina ṭubbuḫi ilū igdamrū | את אֵילַי – בטבח – האלים גָּמְרוּ | `שָׂבַעְתִּי עֹלוֹת אֵילִים` (ישעיהו א:יא) | divergence | Isaiah's God is "sated" with rams and refuses them; Etana's gods "finished" his rams and gave nothing. *ṭabāḫu* / `טבח` [cognate]. |
+| II.139 | bēlī ina pîka liṣâm-ma | אדוני – מפיך יֵצֵא | `מִלְּפָנֶיךָ מִשְׁפָּטִי יֵצֵא` (תהלים יז:ב) | equivalent | The verdict "going out" from the god. |
+| II.140 | idnam-ma šamma ša alādi | תנה לי את עשב הלידה | `תְּנִי נָא לִי מִדּוּדָאֵי בְּנֵךְ` (בראשית ל:יד) | divergence | A fertility plant asked with "give me": mandrakes (`דּוּדָאִים` reserved) vs a plant in heaven. Also III.12. |
+| II.140 | idnam-ma | תנה לי | `הָבָה לִּי בָנִים וְאִם אַיִן מֵתָה אָנֹכִי` (בראשית ל:א) | equivalent | "Give me (sons)" – life and death. |
+| II.142 | piltī usuḫ | נסח את חרפתי | `אָסַף אֱלֹהִים אֶת חֶרְפָּתִי` (בראשית ל:כג) | equivalent | *pištu* / `חֶרְפָּה` (gated). Also MA d+4, III.14. |
+| II.142 | šuma šuknanni | שִׂים לי שֵׁם | `כִּי אָמַר אֵין לִי בֵן בַּעֲבוּר הַזְכִּיר שְׁמִי` (שמואל ב יח:יח); `וְלֹא יִמָּחֶה שְׁמוֹ מִיִּשְׂרָאֵל` (דברים כה:ו) | equivalent | *šumu* = name and offspring; Absalom, without a son, sets up a pillar so that his name be remembered. |
+| II.142 | šuma šuknanni | שִׂים לי שֵׁם | `וְנַעֲשֶׂה לָּנוּ שֵׁם` (בראשית יא:ד) | divergence | A name made by building (Gen 11) vs a name asked of the god as a son. |
+| II.146 | ina libbīša nadi erû | בלבה מושלך נשר | `אַךְ אֶל שְׁאוֹל תּוּרָד אֶל יַרְכְּתֵי בוֹר` (ישעיהו יד:טו); `וְאַתָּה הָשְׁלַכְתָּ מִקִּבְרְךָ` (ישעיהו יד:יט) | equivalent | Isaiah 14 complete: "I will go up to heaven … and sit" (II.43, ET2) – brought down to the pit, "cast out". Also II.151, MA d+10. |
+| II.152 | ullânum-ma uštaqqâššu | מיד – מגביה אותו | `מְקִימִי מֵעָפָר דָּל` (תהלים קיג:ז) | equivalent | Raising from the depth. |
+| OBM.b+10 | išpil | שָׁפַל | `גַּאֲוַת אָדָם תַּשְׁפִּילֶנּוּ` (משלי כט:כג) | equivalent | The proud eagle brought low (also Obad 1:4, quoted in the entry). |
+| OBM.b+12 | šamšum qātī ṣabat | שַׁמַשׁ, את ידי תפוס | `אָחַזְתָּ בְּיַד-יְמִינִי` (תהלים עג:כג) | equivalent | The god who holds the hand; answered by II.132 and fulfilled in OBM c+1. |
+| OBM.b+15 | lemnēti kabtāti | רעות כבדות | `וְחַטָּאתָם כִּי כָבְדָה מְאֹד` (בראשית יח:כ) | cognate | "Heavy" sins (*kabtu* / `כָּבֵד`, gated). |
+| OBM.c+1 | qāssu iṣbatam | את ידו תפס | `וְהַחֲזִיקִי אֶת יָדֵךְ בּוֹ` (בראשית כא:יח) | equivalent | The promise of II.132 fulfilled, in the OB version. |
+| OBM.c+2 | ušētiqam šuttassu | הֶעֱבִיר (אותו) את שוחתו | `וַיַּעֲלוּ אֶת יוֹסֵף מִן הַבּוֹר` (בראשית לז:כח); `וַיַּעֲלוּ אֹתוֹ מִן הַבּוֹר` (ירמיהו לח:יג) | equivalent | Drawn up from the pit by men. |
+| OBM.c+3 | kīma nēšim nāʾerim | כאריה שואג | `הַכְּפִירִים שֹׁאֲגִים לַטָּרֶף; וּלְבַקֵּשׁ מֵאֵל אָכְלָם` (תהלים קד:כא) | equivalent | The roaring lion and its "food" (*ukultu* / `אֹכֶל` [cognate]). |
+| OBM.c+4 | emūqam īšu | כוח – היה לו | `וְקוֹיֵ יְהוָה יַחֲלִיפוּ כֹחַ יַעֲלוּ אֵבֶר כַּנְּשָׁרִים` (ישעיהו מ:לא); `תִּתְחַדֵּשׁ כַּנֶּשֶׁר נְעוּרָיְכִי` (תהלים קג:ה) | equivalent | The eagle that renews its strength – the biblical image is the story's event. |
+| OBM.c+6 | ibrī lū itbārānū ana u attā | רֵעִי, נהיה ידידים – אני ואתה | `וְעַתָּה לְכָה נִכְרְתָה בְרִית אֲנִי וָאָתָּה` (בראשית לא:מד) | equivalent | The eagle offers Etana the very formula of the friendship he broke with the serpent (II.9, ET2). |
+| OBM.c+7 | qibiam-ma ša terrišanni luddikkum | אמור לי – את אשר תשאל ממני – אֶתְּנָה לְךָ | `וְאֶתְּנָה כַּאֲשֶׁר תֹּאמְרוּ אֵלָי` (בראשית לד:יב); `שְׁאַל מָה אֶתֶּן לָךְ` (מלכים א ג:ה) | equivalent | The open offer of a gift (Solomon's – in a night dream; cf. MA d+5–d+6). |
+| OBM.c+9 | īnīyā-mi pite katimtī | את עיניי? פְּתַח – את נִסְתָּרִי | `גַּל-עֵינַי וְאַבִּיטָה נִפְלָאוֹת מִתּוֹרָתֶךָ` (תהלים קיט:יח) | equivalent | Asking that the eyes be opened to the hidden. *katimtu* = `נִסְתָּר` (Gilgameš I 7, *katimta ipte*). |
+| OBM.c+9 | pite | פְּתַח | `וְנִפְקְחוּ עֵינֵיכֶם; וִהְיִיתֶם כֵּאלֹהִים` (בראשית ג:ה); `וַיִּפְקַח אֱלֹהִים אֶת עֵינֶיהָ` (בראשית כא:יט) | divergence | *petû* = `פָּתַח` [cognate]; `פָּקַח` stays reserved. A man asks an eagle (MA d+3: the sun-god) to open his eyes. |
+| MA.d+3 | [īn]īya pite katmāti | [את עי]ניי פְּתַח – (את) המכוסות | `וְאֵין נִסְתָּר מֵחַמָּתוֹ` (תהלים יט:ז) | equivalent | Our proposal: nothing is hidden from the sun – the prayer to the sun-god to open the hidden. |
+| MA.d+5–6 | ittīl-ma etana ibarri … šutta īmur | שָׁכַב אֵתָנָה, ובוחן … חלום ראה | `וַיִּשְׁכַּב בַּמָּקוֹם הַהוּא` (בראשית כח:יא); `בַּחֲלוֹם חֶזְיוֹן לַיְלָה … בִּתְנוּמוֹת עֲלֵי מִשְׁכָּב` (איוב לג:טו); `בַּחֲלוֹם הַלָּיְלָה` (מלכים א ג:ה) | equivalent | Lying down to receive a dream (incubation); MA gives Šamaš's answer in a dream, SB in direct speech. |
+| MA.e+8 | attā-ma etana šar būli | אתה הוא אֵתָנָה, מלך הבהמה | `וְגַם בַּהֲמוֹת שָׂדָי` (תהלים ח:ח) | equivalent | The ruler of the animals; Foster's "wild beasts" narrows *būlu*. |
+| MA.e+10 | ištu qereb šuttati šūlânni | מקרב השוחה – הַעֲלֵנִי | `וַיַּעֲלֵנִי מִבּוֹר שָׁאוֹן` (תהלים מ:ג); `וַתַּעַל מִשַּׁחַת חַיַּי` (יונה ב:ז) | cognate | *elû* Š / `הֶעֱלָה`. |
+| MA.e+13 | ana ūm dārâti tanattaka | [ל]יום נצחים – תהילתך | `לְדֹר וָדֹר נְסַפֵּר תְּהִלָּתֶךָ` (תהלים עט:יג) | equivalent | The vow of praise – here vowed to a man (SB II.127: to Šamaš). |
+| MA.e+16 | ušellīka | [אַעַלְךָ] | `וְאָנֹכִי אַעַלְךָ גַם עָלֹה` (בראשית מו:ד) | cognate | The same form, in God's promise to Jacob. |
+| MA.f+2 | ištu ṣīt šamši adi šalām šamši | ממוצא הַשֶּׁמֶשׁ – עד שקיעת הַשֶּׁמֶשׁ | `מִמִּזְרַח-שֶׁמֶשׁ עַד-מְבוֹאוֹ` (תהלים קיג:ג); `מוֹשִׁיבִי עֲקֶרֶת הַבַּיִת אֵם-הַבָּנִים שְׂמֵחָה` (תהלים קיג:ט) | equivalent | Our proposal: Ps 113 joins "from sunrise to sunset", raising the poor from the dust (113:7) and the barren mother – the three motifs of MA e–f. |
+| MA.f+5 | anāku anaddinakku ša alādi šamma | אני – אתן לך את עשב הלידה | `וְעֵץ הַחַיִּים בְּתוֹךְ הַגָּן` (בראשית ב:ט) | absent | Foster's "plant of life" is a slip: the tablet has *ša alādi* "of birth" – no tree or plant of life in Etana (a false echo avoided). |
+| MA.f+7 | pūt būrti umdellâ | את פְּאַת הבור – מילא | `וְהַבּוֹר רֵק אֵין בּוֹ מָיִם` (בראשית לז:כד); `וַיְשַׁלְּחֵם אֶל יִרְמְיָהוּ אֶל הַבּוֹר בַּחֲבָלִים` (ירמיהו לח:יא) | cognate | *būrtu* / `בּוֹר` (gated), MA's only "cistern" (elsewhere *šuttatu*); a practical rescue from a pit, like Ebed-melech's rags and ropes. |
+| MA.f+11 | iṣabbuba agappīšu | מנפנף באגפיו | `כְּנֶשֶׁר יָעִיר קִנּוֹ עַל גּוֹזָלָיו יְרַחֵף` (דברים לב:יא) | equivalent | *ṣabābu* "flutter, flap" (Š: "teach fledglings to spread wings"); `רִחֵף` kept for the apparatus. |
+| MA.f+14 | u rebūti | ו(פעם) רביעית | `וַיֹּאמֶר שֻׁב שֶׁבַע פְּעָמִים` (מלכים א יח:מג) | equivalent | Our proposal: an attempt repeated with a rising count until it succeeds. |
+
+### Key findings
+**The Bible.**
+1. **Genesis 37 in a fable.** The eagle's fate follows Joseph's step by step: "come, let us go down" (II.97 – `לְכוּ`,
+   Gen 37:20), stripped – plucked (II.86, 120 ↔ 37:23), "thrown into the pit" with the same verb (*nadû* = `הִשְׁלִיךְ`;
+   37:22, 24), a pit "without water" where he should die of hunger and thirst (II.87 ↔ 37:24), an anonymous "man" (II.132
+   ↔ 37:15), and drawn up out of the pit (OBM c+2, MA e+10, f+7 ↔ 37:28). And Ps 105:17 says it in the god's voice:
+   `שָׁלַח לִפְנֵיהֶם אִישׁ` (תהלים קה:יז) – exactly Šamaš's *amēlu ša ašapparakku* (II.132); Gen 45:5 `כִּי לְמִחְיָה
+   שְׁלָחַנִי אֱלֹהִים לִפְנֵיכֶם` (בראשית מה:ה).
+2. **Isaiah 14 completed.** ET2 found Isa 14:13 in the eagle's plan ("I will go up and dwell in heaven", II.43); ET3's lines
+   complete it: the one who said it is "brought down to the depths of the pit" and "cast out" (Isa 14:15, 19) – the
+   eagle "cast" in the pit (II.146, 151), "brought low" (OBM b+10 *išpil*; Prov 29:23, Obad 1:4).
+3. **The lament psalms of the pit.** The eagle's prayer (II.123–127) has their structure and vocabulary: prayer from the
+   pit (Ps 88:5, 7; Lam 3:55), "keep me alive" (Ps 30:4, 119:25), and the vow of praise: "for days of eternity I will make
+   your *zikru* heard" (II.127) – *zikru* / `זֵכֶר` [cognate], the same argument as Ps 6:6 and Ps 142:8. MA gives the vow
+   to the man instead (e+13).
+4. **The barren king's prayer and the "name".** Etana's plea (II.140–142, MA d+4) meets Gen 30 (30:1, 14, 22–23), Isaac's
+   and Hannah's repeated prayers (Gen 25:21, 1 Sam 1:7), and above all the "name" that only a son preserves (2 Sam 18:18,
+   Deut 25:6, Ruth 4:10); Gen 11:4's name made by building is a [divergence].
+5. **The piety the Torah forbids.** Etana's claim on the god lists honouring the gods, *revering the ghosts* and the
+   incense of the *šāʾilātu* (female inquirers) – Deut 18:11 forbids the `שֹׁאֵל` (*šāʾilu* [cognate]) and the inquirer of
+   the dead, and Deut 26:14 boasts of giving nothing to the dead; 1 Sam 28:6–7 shows a king who did try dreams and a woman
+   diviner. His argument "you ate, Šamaš … earth, you drank the blood" is what Ps 50:13 rejects; Isa 1:11 (rams) likewise.
+6. **The bargain in the language of marriage.** The eagle offers the serpent a bridegroom's *nudunnû* (II.114) – Gen
+   34:12 `מֹהַר וּמַתָּן וְאֶתְּנָה` – and in OB offers Etana "tell me what you ask, I will give it" (OBM c+7), the same
+   cohortative; 1 Kgs 3:5 ("ask what I shall give you", in a night dream) is the closest royal parallel.
+7. **The serpent's refusal and 1 Kings 20.** "If I release you, how shall I answer Šamaš? Your punishment would turn on me"
+   (II.116–118) is the logic of 1 Kgs 20:42: the one who "released" (`שִׁלַּחְתָּ` = *wuššuru*) the man under the god's
+   ban dies in his place.
+8. **Small words and false echoes.** *kutum libbi* is the caul fat of Lev 3:3 (the god's portion; II.83); *petû* =
+   `פָּתַח`, not Gen 3:5's `פָּקַח` (OBM c+9, MA d+3); Foster's "plant of life" (MA f+5: the tablet has "of birth"),
+   "lament" (II.73: *unnīnu* "supplication"), "Netherworld" (II.135), "no doubt" (II.100), "king of the wild beasts"
+   (*būlu*), "tail feathers" (*nuballu*), "ambush" (*šubtu* "dwelling") – each checked against the Akkadian.
+
+**The ancient mind.**
+1. **Šamaš's justice and mercy, separated.** He hears the wronged serpent, prepares the trap himself ("I have bound a wild
+   ox for you"), makes the serpent his executioner; he will not save the oath-breaker ("you are under oath – I will not
+   visit you") – yet he does not let him die: he "sends a man". He answers two prayers with one answer: a king without a
+   son and an eagle without wings need each other.
+2. **The serpent is an official, not an avenger.** He refuses mercy for fear of answering to the god "above": the
+   punishment he inflicts would fall on him if he relented – the logic of a deputy under oath.
+3. **The pious king who has done everything.** Fat sheep, the blood of rams poured on the earth, the gods honoured, the
+   ghosts feared, the incense of the dream-women used up – and no son. Piety as a contract with the god, and the son as
+   the one who will keep the father's "name" and feed his ghost: without him the king dies twice.
+4. **Dreams as a technique.** MA: Etana "lay down and examines (*barû*)" – incubation; the god answers in "the bed of the
+   night"; SB has the same answer in direct speech; and the *šāʾilātu* used incense to obtain dreams.
+5. **The hunter's world.** A carcass as bait, a pitfall (*šuttatu*), birds of prey coming down in a crowd, the eagle that
+   circles and pecks "in front and behind" before going in – exact observation of animals; and the recovery is slow:
+   seven months, the eighth (OBM), attempt after attempt (MA f).
+6. **Friendship as a renewable treaty.** The eagle repeats to Etana the words with which he once bound himself to the
+   serpent (OBM c+6 = II.9) – the second friendship rises out of the pit of the first; MA seals it "for ever" (e+17).
+7. **A Hebrew-only pun:** the cohortative "I will give" (`אֶתְּנָה`, II.114, OBM c+7) is spelt like Etana's name in
+   Hebrew; kept vocalized, noted, not exploited.
+
+### Open decisions (numbered; the minor ones decided)
+1. ***kutum libbi* = `מִכְסֵה הַלֵּב`** instead of §10.3's `מכסה הקרביים` (decided; deviation 1).
+2. ***maṣû* Št = `חָדַר`** (II.83, 110; decided): ET2 restored MA c+22 *uštamṣi?* as `הגיע?`; `הִגִּיעַ` is *kašādu*
+   (Gilgameš; II.90). **Proposal for the coordinator:** MA c+22 → `אל מעי ה[ראם – חדר?]`.
+3. ***nuballu* = `*מְנִיפוֹת*`** (II.85, 119; decided, italic): Hebrew has no fourth wing word (`כָּנָף` *kappu*, `אֵבֶר`
+   *abru*, `נוֹצָה` *nāṣu*, `אֲגַף` *gappu*/*agappu*; `גַּף` is *gappu*'s cognate; `זָנָב` *zibbatu*); eBL "(eagle's) wing;
+   also a form of snare?" – the spread wing or tail "like a fan". The coordinator may prefer a transliteration.
+4. ***šērtu* = `עֹנֶשׁ`** (II.117, 118, 125; OBM b+5; Atraḫasīs) vs `אַשְׁמָה` in Gilgameš I 238 and Ludlul III 58 – a
+   cross-corpus split (lead). Here only "punishment" fits all four lines (`אשמתך` in II.125 would blame Šamaš).
+5. ***ērišu* = `חָתָן`** (II.114) collides with Gilgameš VI 42, 46, where *ḫāmiru* "husband, lover" is `חתן` (lead).
+6. ***sanāqu* = `בִּקֵּר`** (II.131; decided): "check" (Lev 13:36) and "come to (see)"; `קָרַב` *qerēbu*, `נִגַּשׁ` *ṭeḫû*,
+   `בָּא` *erēbu* are taken.
+7. ***šubtu* = `מִשְׁכָּן`** (decided; deviation 3).
+8. ***sādu* = `מִגְרָשׁ`** (II.82, 110; decided): `אָחוּ` already carries Sum. *u₂-sal* (EA, Agade, Gudea, EWO) and Enūma
+   eliš *gipāru* – a split the lead may want to look at.
+9. ***šuʾu* = `שֶׂה`** [cognate] (`שֵׂיִי`, collective; decided): `צֹאן` is *ṣēnu* (Enūma eliš VII 131).
+10. ***kubru* = `עֹבִי`** (decided; deviation 2).
+11. **II.133 word order** forced by the FORMULAS regex `^יום יום` (deviation 5); the coordinator may relax the regex if
+    `אֵתָנָה – יום יום אל שַׁמַשׁ מתחנן:` is preferred.
+12. ***unnīnu* `תַּחֲנוּנִים`** (harmonization) and ***maḫāru* Gtn `מִתְחַנֵּן`** (§10.3) share a Hebrew root – two pre-set
+    renderings; kept (noun / verb), noted in II.73 (lead).
+13. ***etēqu* Š = `הֶעֱבִיר`** (OBM c+2; decided): `הֶחֱלִיף` means "exchange" (and is *riābu* in the law corpus); *ebēru*
+    (whose Š would be `העביר`) does not occur in Etana – a note for later corpora.
+14. **renderings §10.3, MA d+7 row:** the tablet has *etiq šadâm-ma* (`חלוף`), not *šadâ ebir* – the row should be
+    corrected (coordinator).
+15. **ET1's OBM header paragraph** quotes c+9 as "פקח את עיניי"; `פָּקַח` is reserved and the line has `פְּתַח`. I did
+    not edit ET1's paragraph; my paragraph notes it (coordinator may correct).
+16. **OBM b+9:** eBL does not lemmatize *er[îm*, so the `נשר` gate has no licence there; the Hebrew `הנ[שר` (brackets per
+    the ATF *e-r[i-im*) passes. If the tool should license by the normalization too, add *erîm*/*erû* to the ET gate.
+17. ***šaṭāṭu* = `שִׁסַּע`** (II.77, 91) beside Ur-Namma's Sum. *šu sur₅* `*שסעו*` (italic) – minor.
+18. ***nāʾeru* = `שׁוֹאֵג`** (OBM c+3, MA f+16; Gilgameš V 124, 308) vs Atraḫasīs `כנשר צורח` – an existing split (lead).
+19. **II.94** (statement or question) and **II.124** (exclamation; Foster: question) – decided; alternatives in the notes.
+20. **II.152** – subject of *uštaqqâššu* uncertain (Etana lifting the eagle, or the reverse); `מגביה אותו` keeps it open.
+21. ***mā*** = `הֵן` (OBM b+4); the restored *[mā?]* of MA d+7 is untranslated (formula anchor). Decided.
+
+### Proposals for the corpus renderings
+Fixed strings (exactly as written; later parts copy them; brackets and `?` follow each copy's manuscripts):
+
+| Source | Hebrew | Tag | Notes | Lines |
+|---|---|---|---|---|
+| Šamaš's command / execution | `"לך בדרך, חלוף [את ההר],` · `כִּפַּתִּי לך רְאֵ[ם …].` · `פְּתַח את לבו, [שַׁסַּע את מעיו],` · `הַנַּח משכן [במעיו].` · `[כל] ציפורי השמים [יורדות – ואוכלות בשר];` · `את רֹךְ הבשר – מבקש, בַּמִּגְרָשִׁים? – מתהלך,` · `אל מִכְסֵה הַלֵּב – חודר.` · `אל הלב – בבואו – אתה, תפוס אותו – בכנפיו!` · `כְּרֹת את כנפיו, את אֶבְרוֹתָיו ואת *מְנִיפוֹתָיו*,` · `מְרֹט אותו – וְהַשְׁלִיכֵהוּ אל השוחה …,` · `מות רעבון וצמא – ימות!"` / `למאמר שַׁמַשׁ הגיבור –` · `הנחש הלך, חלף את ההר.` · `הגיע הנחש אל הראם,` · `פתח את לבו, שִׁסַּע את מעיו.` · `הניח משכן במעיו.` · `כל ציפורי השמים יָ[רְ]דוּ – ואוכלות בשר.` · `אל הלב – בבואו – הנחש תפס אותו – בכנפיו!` · `כָּרַת את כנפיו, את אֶבְרוֹתָיו, את *מְנִיפוֹתָיו*,` · `מרט אותו – והשלי[כהו אל השוחה] … […]` | equivalent | command → execution in the command's words and order | II.75–93, 110–111, 119–121 |
+| the second warning, the descent | `"[אל ת]רד, אבי! אולי – בלב? הראם הזה – הנחש רובץ!"` · `[הנ]שר – עם לבו? – דבר אומר:` · `ירד ועמד על הראם.` · `מבקש את אשר לפניו ואשר אחריו.` · `שָׁנָה – נָסַח? בשר,` | cognate (*rabāṣu*, *šanû*) | ET2's MA c strings adopted | II.100–109 |
+| the plea and the refusal | `"בָּאתָ? אל קִנִּי?!` · `"רַחֲמֵנִי! כְּחָתָן – מַתָּן אֶתְּנָה לְךָ!"` · `"(אם) אֲשַׁלֵּחֲךָ – את שַׁמַשׁ, מלמעלה, איך אענה?` · `עונשך – יסוב עליי,` · `אני – אשר אָשִׂים עליך עונש!"`; OB `"הֵן – אֲשַׁלֵּ[חֲךָ? …]` · `עונשך […]` | equivalent | *wuššuru* `שִׁלַּח`; *šērtu* `עֹנֶשׁ` | II.112–118; OBM b+4–b+5 |
+| the eagle's prayer | `יום יום – אל שַׁמַשׁ מתחנן:` · `"[ב]שוחה – אמות!` · `מי יודע – איך שׂוּם עליי עונשך?` · `[א]ותי – את הנשר – הַחֲיֵנִי,` · `לִימֵי נֶצַח – את זִכְרְךָ אַשְׁמִיעָה!"` | cognate (*zikru*) | `לִימֵי נֶצַח` for *ana ūmī dārûti* (never `עוֹלָם`) | II.123–127 |
+| Šamaš's verdict and promise | `"רַע אַתָּה – ואת כְּבֵדִי הֶחֱלֵיתָ!` · `תועבת האלים – דבר אסור אכלת!` · `מֻשְׁבָּע אַתָּה – ולא אֲבַקֶּרְךָ!` · `לֵךְ! אדם אשר אשלח לְךָ – את ידך יתפוס!"`; OB `"רעות כ[בדות? …]` · `תועבת האל[ים? …]` | equivalent | ET2's II.129–130 strings | II.129–132; OBM b+15–b+16 |
+| Etana's prayer | `יום יום – אֵתָנָה אל שַׁמַשׁ מתחנן:` · `"אכלת, שַׁמַשׁ, את עובי שֵׂיִי,` · `הארץ – שָׁתִית את דם אֵילַי,` · `את האלים כיבדתי, את האִטִּים יָרֵאתִי,` · `גָּמְרוּ את מֻגְמָרַי – השואלות,` · `את אֵילַי – בטבח – האלים גָּמְרוּ.` · `אדוני – מפיך יֵצֵא (הדבר),` | cognate (*kabātu*, *šuʾu*, *šatû*, *ṭabāḫu*, *gamāru*) | | II.133–139 |
+| **the plea (for ET4: III.12–14)** | `תנה לי את עשב הלידה!` · `הראני את עשב הלידה!` · `נסח את חרפתי, שִׂים לי שֵׁם!"`; III.12 *ibrī idnam-ma šamma ša alādi* → `רֵעִי, תנה לי את עשב הלידה!`; III.19 *lūbilakkum-ma šamma ša alādi* → `אביא לך את עשב הלידה` (*wabālu* = `הֵבִיא`, ET1) | equivalent | as §10.3 ✓, unchanged | II.140–142; MA d+4 |
+| Šamaš's mission to Etana | `"לך בדרך, חלוף את ההר,` · `רְאֵה שוחה – את קרבה בְּחַן,` · `בלבה מושלך נשר.` · `יַרְאֲךָ את עשב [הלי]דה."` / `למאמר שַׁמַשׁ הגיבור –` · `אֵתָנָה הלך, [חלף את ההר].` · `ראה שוחה – את קרבה בחן.` · `בל[בה] מושלך [נשר].` · `מיד – מגביה אותו […]`; MA `"לך בדרך, חלוף את ההר,` · `[את הר]מות – בַּחֲצוֹתְךָ,` · `[הִסְתַּ]כֵּל בשוחה – אל קרבה קְרַב!` · `בלבה – נשר מושלך,` · `הוא – יתן לך את עשב הלידה."` | equivalent | III.7 *ina pī šamaš qurādi* (≠ *ana zikir*): proposal `מפי שַׁמַשׁ הגיבור` | II.143–152; MA d+7–d+11 |
+| **the dream formulas (for ET4)** | `[שָׁכַ]ב אֵתָנָה, ובוחן:` · `[ב]משכב הלילה – חלום ראה:` | equivalent (Job 33:15, Gen 28:11) | *nâlu* `שָׁכַב`, *barû* `בָּחַן`, *mayyāl mūši* `משכב הלילה`, *šutta amāru* `ראה חלום` (ET1: *šutta šubrû* `חלום הֶרְאָה`) | MA d+5–d+6 |
+| **the bargain (for ET4)** | OB: `"רֵעִי, נהיה ידידים – אני ואתה!` · `אמור לי – את אשר תשאל ממני – אֶתְּנָה לְךָ!"` · `"את עיניי? פְּתַח – את נִסְתָּרִי!"`; MA: `"[א]תה הוא אֵתָנָה, מלך הבהמה!` · `מקר[ב השו]חה – הַעֲלֵנִי!` · `[ל]יום נצחים – תהילתך … […]"` · `"(אם) אַחֲיֶה אותך […]` · `[מן] השוחה – [אַעַלְךָ],` · `[עֲדֵי] עַד – אנ[חנו …]"` · `אני – אתן לך את [עשב] הלידה!"` | equivalent | `אֶתְּנָה` always vocalized (Etana's name unvocalized) | OBM c+6–c+9; MA e+8–f+5 |
+| **names and epithets** | `אֵתָנָה` ★; `מלך הבהמה` (*šar būli*); the eagle `הנשר` (*erû*), `השואג` (*nāʾeru*); `שַׁמַשׁ הגיבור`; the sun `הַשֶּׁמֶשׁ` ★ | – | | |
+| speech formulas | `X פתח את פיו, אל Y דיבר:` (OB `הנשר פתח את פיו, אל אֵתָנָה דיבר:` / `אֵתָנָה פתח את פיו, אל הנשר דיבר:` – for III.9, 11) · `אֵתָנָה אליו, [אל הנשר, דיבר]:` (ET1's formula) · `אל אֵתָנָה – דיבר:` (*ana etanā-ma izakkaršu* without *pâšu īpuš*) · `אֵתָנָה – כש[מעו] את זאת,` (*annīta ina šemêšu*, Gilgameš) | – | | passim |
+| the eagle's recovery | `את ידו תפס – שבעה יר[חים?],` · `בירח השמיני – הֶעֱבִיר (אותו) את שוחתו.` · `הנשר – מקבל אָכְלָה – כאריה שואג;` · `כוח – היה לו.`; MA `[הו]א – מנפנף [באגפיו].` · `[…] ו(פעם) רביעית – [את הנשר – בש]וחה – חייו? […]` | cognate (*warḫu*, *samnu*) | the counting pattern for the MA flights (ET2: `פעם אחת`, `שָׁנָה`, `שִׁלֵּשׁ`) | OBM c+1–c+4; MA f+10–f+15 |
+
+Words (one Hebrew each; grep-checked in all corpora):
+
+| Source | Hebrew | Tag | Notes | Lines |
+|---|---|---|---|---|
+| *unnīnu*; *maḫāru* Gtn; *maḫāru* "receive" | `תַּחֲנוּנִים`; `מִתְחַנֵּן`; `קִבֵּל` | – | open decision 12 | II.73, 123, 133; OBM c+3 |
+| *kasû* D; *šaṭāṭu*; *šubtu*; *nadû* "lay" / "throw" / stative | `כִּפֵּת`; `שִׁסַּע`; `מִשְׁכָּן`; `הֵנִיחַ` / `הִשְׁלִיךְ` / `מֻשְׁלָךְ` | equivalent (Judg 14:6; Ps 10:8) | | II.76–78, 86, 146 |
+| *libbu* (of carcass, pit); *karšu*; *qerbu*; *kutum libbi* | `לֵב`; `מֵעַיִם`; `קֶרֶב`; `מִכְסֵה הַלֵּב` | cognate (*qerbu*) | deviation 1 | II.77–84, 110–111, 145–151 |
+| *mimmû*; *iṣṣūru*; *šīru*; *nurbu*; *sādu* | `כל`; `צִפּוֹר`; `בָּשָׂר`; `רֹךְ`; `מִגְרָשׁ` | – | | II.79, 82, 93 |
+| *maṣû* Št; *kašādu*; *ana ṣēr* | `חָדַר`; `הִגִּיעַ`; `אֶל` | – | open decision 2 | II.83, 90, 110 |
+| *kappu*; *abru*; *nuballu*; *nakāsu*; *baqāmu* | `כָּנָף`; `אֵבֶר` (`אֶבְרוֹת`); `*מְנִיפָה*`; `כָּרַת`; `מָרַט` | cognate (*kappu*, *abru*) | | II.84–86, 119–120 |
+| *šuttatu*; *būrtu*; *bubūtu*; *ṣūmu*; *mūtu* | `שׁוּחָה`; `בּוֹר`; `רְעָבוֹן`; `צָמָא`; `מָוֶת` | equivalent / cognate (*būrtu*) | | II.86–87, 120–124; MA f+7 |
+| *nasāḫu*; *šanû*; *izuzzu*; *šeʾû* Gtn | `נָסַח`; `שָׁנָה`; `עָמַד`; `מְבַקֵּשׁ` | cognate | | II.105–109 |
+| *erēbu*; *qinnu* (*qunennu*) | `בָּא`; `קֵן` | cognate (*qinnu*) | | II.84, 111–112 |
+| *rêmu*; *ērišu*; *nudunnû*; *nadānu* precative | `רִחַם` (`רַחֲמֵנִי`); `חָתָן`; `מַתָּן`; `אֶתְּנָה` | cognate (*rêmu*) | open decision 5 | II.114; OBM c+7 |
+| *wuššuru*; *šapāru*; *apālu*; *elēnu*; *šērtu*; *saḫāru*; *šakānu* | `שִׁלַּח`; `שָׁלַח`; `עָנָה`; `מִלְמַעְלָה`; `עֹנֶשׁ`; `סָבַב`; `שָׂם` | – | open decision 4 | II.116–118, 125, 132 |
+| *bulluṭu*; *zikru* (name); *dārû*; *šemû* Š; *dārītu*; *tanattu*; *ulla* / *adi* | `הֶחֱיָה`; `זֵכֶר`; `נֶצַח` (`לִימֵי נֶצַח`); `הִשְׁמִיעַ`; `נֶצַח` (`יום נצחים`); `תְּהִלָּה`; `עַד` / `עֲדֵי` | cognate (*zikru*) | `עוֹלָם` reserved | II.126–127; MA e+13–e+17 |
+| *tamû* stative; *sanāqu*; *amēlu*; *qāta ṣabātu* | `מֻשְׁבָּע`; `בִּקֵּר`; `אָדָם`; `תָּפַס יָד` | – | | II.131–132; OBM b+12, c+1 |
+| *kubru*; *šuʾu*; *aslu*; *šatû*; *dāmu*; *kabātu* D; *eṭemmu*; *palāḫu*; *gamāru*; *maššakku*; *šāʾiltu*; *ṭubbuḫu* | `עֹבִי`; `שֶׂה`; `אַיִל`; `שָׁתָה`; `דָּם`; `כִּבֵּד`; `אִט` (`אִטִּים`); `יָרֵא`; `גָּמַר`; `מֻגְמָר`; `שׁוֹאֶלֶת`; `טֶבַח` | cognate (*šuʾu*, *šatû*, *dāmu*, *kabātu*, *gamāru*, *ṭabāḫu*) | | II.134–138 |
+| *bēlu*; *ina pî*; *aṣû* | `אָדוֹן`; `מִפִּי`; `יָצָא` | cognate (*aṣû*) | | II.139 |
+| *amāru*; *barû* (G, Gt); *kullumu* | `רָאָה`; `בָּחַן`; `הֶרְאָה` | – | ET1 open decisions 6–7 | II.141, 145–150; MA d+5 |
+| *ullânum-ma*; *šaqû* Št | `מִיָּד`; `הִגְבִּיהַּ` | – | | II.152 |
+| OB: *mā*; *watû*; *ašru*; *paʾāṣiš*; *šapālu* G; *lemnētu*; *kabtu* | `הֵן`; `מָצָא`; `מָקוֹם`; `*לְרִצּוּץ*`; `שָׁפַל`; `רָעוֹת`; `כָּבֵד` | cognate (*kabtu*) | | OBM b+4–b+15 |
+| OB: *sebe*; *warḫu*; *samnu*; *etēqu* Š; *ukultu*; *nēšu*; *nāʾeru*; *emūqu*; *išû* | `שֶׁבַע`; `יֶרַח`; `שְׁמִינִי`; `הֶעֱבִיר`; `אָכְלָה`; `אַרְיֵה`; `שׁוֹאֵג`; `כֹּחַ`; `הָיָה לְ` | cognate (*sebe*, *warḫu*, *samnu*) | open decisions 13, 18 | OBM c+1–c+4; MA f+16 |
+| OB: *ibru*; *itbāru*; *qabû*; *erēšu*; *īnu*; *petû*; *katimtu*; MA *katmu* | `רֵעַ`; `יְדִיד`; `אָמַר`; `שָׁאַל`; `עַיִן`; `פָּתַח`; `נִסְתָּר`; `מְכֻסֶּה` | cognate (*petû*) | `פָּקַח` reserved | OBM c+6–c+9; MA d+3 |
+| MA: *nâlu*; *mayyālu*; *mūšu*; *šuttu*; *ḫuršānu*; *nabalkutu*; *palāsu* N; *qerēbu* | `שָׁכַב`; `מִשְׁכָּב`; `לַיְלָה`; `חֲלוֹם`; `רָמָה`; `חָצָה`; `הִסְתַּכֵּל`; `קָרַב` | cognate (*qerēbu*) | | MA d+5–d+9 |
+| MA: *būlu*; *šarru*; *elû* Š; *biltu*; *ṣītu*; *šalām šamši*; *šamšu*; *ezēbu* | `בְּהֵמָה`; `מֶלֶךְ`; `הֶעֱלָה`; `מַשָּׂא`; `מוֹצָא`; `שְׁקִיעַת הַשֶּׁמֶשׁ`; `הַשֶּׁמֶשׁ`; `עָזַב` | cognate (*elû*, *ezēbu*) | | MA e+8–f+4 |
+| MA: *pūtu* (of a pit); *malû* D; *banû*; *artu*; *balāṭu* (noun); *ṣabābu*; *agappu*; *rebû* | `פְּאָה`; `מִלֵּא`; `בָּנָה`; `עֲנָפִים`; `חַיִּים`; `נִפְנֵף`; `אֲגַף`; `רְבִיעִי` | cognate (*malû*, *banû*) | `רִחֵף` kept for the apparatus (Deut 32:11) | MA f+7–f+15 |
