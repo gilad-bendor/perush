@@ -194,6 +194,7 @@ The Akkadian poem is a shortened retelling of the Sumerian one, and the ancient 
 - *kabattu* = `כָּבֵד` (wisdom corpus; laments *ur₅*) instead of Gilgameš's `רוּחַ`: the most recent Akkadian corpus.
 - *uznu* "ear" in *uzna šakānu / petû* = `אֹזֶן` (the literal image; Gilgameš default `בִּינָה`), because the Sumerian twin *ĝeštug₂* is also the ear, and the two openings must read alike.
 - *kur* (netherworld) = `הָאָרֶץ`, a deviation from the Sumerian corpora's *kur* = `הַר` / `אֶרֶץ` "highland, foreign land": the sense is the netherworld throughout this text, and its Akkadian equivalent is *erṣetu* (§2).
+- **Project 4 (2026-10-22):** *kalam* = `הַמּוֹלֶדֶת` (every other corpus `הארץ`): here `הארץ` is the netherworld (§11.8).
 - **Project 4 (2026-10-21):** *dab₅* = `אָחַז` and *tug₂* = `שִׂמְלָה`, as Gilgameš XII (*ṣabātu*, *ṣubātu*), against Inana's Descent (`תָּפַס`, `בֶּגֶד`): the Akkadian translation of this very text decides (§11.1).
 - *gam* = `הִכְרִיעַ` (Hiphil of the temple corpus's `כרע`); the lament and creation corpora use `הִכְרִיעַ` for *ka-aš bar* "decide" – a homograph across corpora, noted.
 
@@ -281,7 +282,7 @@ Projects **3 Nergal and Ereškigal** (Akkadian, eBL `L/1/6`: the Middle Babyloni
 ### 11.4 Project 4 (Bilgameš, Enkidu and the Netherworld): key terms
 | Sumerian | Hebrew | Tag / notes |
 |---|---|---|
-| *ud re-a*, *ĝi₆ re-a*, *mu re-a*; *ud ul* | `בַּיָּמִים הָהֵם`, `בַּלֵּילוֹת הָהֵם`, `בַּשָּׁנִים הָהֵן` (creation corpus 2:1–2); *ud ul* `יְמֵי קֶדֶם`? (the translator, after the creation and Bird-and-Fish precedents) | [equivalent] ↔ `בַּיָּמִים הָהֵם` (בראשית ו:ד). |
+| *ud re-a*, *ĝi₆ re-a*, *mu re-a*; *ud ul* | `בַּיָּמִים הָהֵם`, `בַּלֵּילוֹת הָהֵם`, `בַּשָּׁנִים הָהֵן` (creation corpus 2:1–2); *ud ul* `בימים רחוקים` (§11.8; Bird and Fish 1) | [equivalent] ↔ `בַּיָּמִים הָהֵם` (בראשית ו:ד). |
 | *an ki-ta ba₉*; *ki an-ta sur* | `הִפְרִיד` (creation corpus 2:4–5 `להפריד את השמים מן הארץ`); *sur* the translator | **Never `הִבְדִּיל`** (guidelines §6.7: Mesopotamian cosmology has no `רָקִיעַ` and no `בדל`). [divergence] ↔ Gen 1:6–7. |
 | *an* / *ki* (heaven / earth); *kur* | `שָׁמַיִם` / `אֶרֶץ` (no article, §2); `הָאָרֶץ` (the netherworld) | §2; 13 `לְאֶרֶשְׁכִּיגַל – אֶת הָאָרֶץ …`. |
 | *mu nam-lu₂-u₁₈-lu … ĝar* | `שֵׁם הָאֱנוֹשׁוּת … שָׂם` | *ĝar* = `שׂם` (reserved by rule). [equivalent] ↔ `וְנַעֲשֶׂה לָּנוּ שֵׁם` (בראשית יא:ד). |
@@ -322,7 +323,7 @@ Projects **3 Nergal and Ereškigal** (Akkadian, eBL `L/1/6`: the Middle Babyloni
 |---|---|
 | the prologue 1–26 = 52–69 (Inana to Utu) = 96–113 (to Gilgameš); the tree 27–49 = 70–89 = 114–133 | fixed at 1–49; the later copies copy them (vocatives, Emesal forms and pronouns change; *nu-nus* = *munus* `אִשָּׁה`) |
 | *X gu₃ mu-na-de₂-e*; *inim mu-un-na-ni-ib-gi₄* | `X פּוֹנֶה אֶל Y:` (§4); `X מֵשִׁיב לְ… דָּבָר:` / the corpus's `מֵשִׁיב לוֹ:` |
-| *inim-bi nu-mu-de₃-gub* / *inim-bi ba-de₃-gub* (90, 135, 229, 237) | `לִדְבָרָהּ לֹא עָמַד` / `לִדְבָרָהּ עָמַד` (or as the translator fixes at 90; XII 63 `דבר לא ענה לו` for 229 is a different Akkadian: noted) |
+| *inim-bi nu-mu-de₃-gub* / *inim-bi ba-de₃-gub* (90, 135, 229, 237) | `בדבר הזה לא עמד לצדה` / `בדבר הזה עמד לצדה` (`לצדו` for a man; §11.8; XII 63 `דבר לא ענה לו` for 229 is a different Akkadian: noted) |
 | Gilgameš's instructions 184–198 → Enkidu's breach 206–220 | command / execution as XII 13–27 → 33–47 (copy XII where it renders the Sumerian; §11.1) |
 | the appeal to Enlil 222–229 → to Enki 230–237 (and the Me-Turan copy) | fixed at 222–229 (XII 55–63) |
 | the refrain *nam-tar nu-un-dab₅ a₂-sag₃ nu-un-dab₅ kur-re im-ma-an-dab₅* etc. (226–228 = 234–236) | XII 52–54 letter for letter: `נַמְתָּר לא אֲחָזוֹ, אֲסַכּוּ לא אֲחָזוֹ – הארץ אֲחָזַתְהוּ!` … |
@@ -343,9 +344,22 @@ The translator's table of fixed strings (`3-נרגל-וארשכיגל/project.md
 7. *našû* stative: `נושא` of a person, `נִשָּׂא` of a thing: accepted.
 8. eBL's lemma *agû* "crown" for the tool (b+20) is a slip: recorded in the line's note.
 
+### 11.8 Merged after project 4, part 1 (lines 1–135, 2026-10-22)
+The translator's tables (`4-גילגמש-אנקידו-והעולם-התחתון/project.md`, "Proposals") **bind the later copies and lines 136–171**: the prologue (1–3 copied from Šuruppag 1–3 `בימים ההם, בימים הרחוקים ההם,` …; `כאשר שמים מארץ הוּפְרְדוּ,`; `כאשר את שם האנושות שָׂם,`; `כאשר אַן שמים נשא,`; `כאשר לְאֶרֶשְׁכִּיגַל את הארץ למתנה העניקו,`), the tree (`בשורשיו – נחש אשר קסם אינו יודע – קן הדביק;` / `בענפיו – הציפור אַנְזוּד – גוזל שָׂמָה;` / `במותניו – עַלְמַת־הַמַּשַּׁב – בית בנתה;`; `גן־הפרחים`, `כסא־פרחים`, `מיטת־פרחים`), the dawn and the speech formula (`אחותו, אִינַנָּה הטהורה, / פונה אל הגיבור, העלם אוּתוּ:`).
+**The coordinator's rulings on the open decisions:**
+1. *kalam* = **`הַמּוֹלֶדֶת`** in project 4 only (every other corpus: `הארץ`), because `הארץ` is the netherworld here; 3 lines (7, 50 copy, 7 copy). Recorded as a deviation (§8).
+2. *du₃* of a tree = **`נָטַע`** (Gudea precedent): the Sumerian says "plant", so it is the real counterpart of Gen 2:8 `וַיִּטַּע` [equivalent]; the creation corpus's ban covers its own texts, which have no planting.
+3. *ra* = **`מָחַץ`** throughout project 4 (= XII *maḫāṣu*; the corpus §2); Šuruppag's `מכה` stays there.
+4.–5. *zal* `עבר` / `נגה` by context; the persons of Inana's speeches follow the possessives: accepted.
+6. *gi-rin* = `פְּרָחִים` (as a construct `גן־הפרחים`): accepted.
+7. *ur₂* = `שֹׁרֶשׁ` also for the keel and *an-ur₂* "the root of heaven" (the horizon): accepted, with a note at each.
+8. *amar* (of a bird) = **`גּוֹזָל`** – the Sumerian precedent (Gudea A.xxi.4, Anzud and its *amar*; Bird and Fish 104, 132). Etana's reservation of `גּוֹזָל` (Deut 32:11) covers its own Akkadian *atmu* = `אֶפְרוֹחַ`, a different word; the apparatus of GEN 43 names Deut 32:11 and says the image is not the Bible's (Anzud's chick in a goddess's tree). A cross-language split by source word, recorded for the lead.
+9. *inim-bi (nu-)gub* = **`בדבר הזה (לא) עמד לצדה / לצדו`** (Inana's Descent 221A, identical to GEN 237): §11.5's provisional row is replaced.
+
 ## Changelog
 - 2026-10-21: written by the corpus coordinator before the first line, from the Gilgameš, wisdom, lament, temple, creation and law corpora and a reading of both base texts in full.
 - 2026-10-21: §9 filled after both texts were drafted and reviewed; §2/§5 rows corrected to the drafted lines; §10 extended.
 - 2026-10-21: the lead's cross-corpus harmonization applied (§10): §0 *uqnû*, §0.4 settled, §5 *za-gin₃* / *šembizid* rows fixed and a *ra-gaba* row added, §7 traps, §9 *ur₄* revised.
 - 2026-10-21 (Round 3, run 5): §11 added – the binding renderings of projects 3 (Nergal and Ereškigal) and 4 (Bilgameš, Enkidu and the Netherworld), fixed by the coordinator before the first line; the Sumerian of project 4 takes Gilgameš XII's Hebrew where XII renders it (`netherworld_tools.py xii`).
 - 2026-10-22: §11.7 merged after project 3, part 1 (SB a+1–b+50); *ebbu* = `צַח`.
+- 2026-10-22: §11.8 merged after project 4, part 1 (lines 1–135).
