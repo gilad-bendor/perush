@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-22 (Round 2 finished; the cross-corpus splits settled; the Round 3 plan made; the world survey done; the Round 4 plan made; Round 3 run 2, Etana, done).
+Last updated: 2026-10-22 (Round 2 finished; the cross-corpus splits settled; the Round 3 plan made; the world survey done; the Round 4 plan made; Round 3 run 2, Etana, done; Round 3 run 4, four wisdom texts, done).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -50,7 +50,7 @@ All of it is a **first draft**: complete, verified by script, three review passe
 | `סיפורי-הבריאה-המסופוטמיים/` | 1 Enūma eliš I–VII; 2 the creation and Eden companions (7 texts); 3 Bird and Fish; 4 Enki and the World Order | 2,828 | `1-אנומה-אליש/verify.py`, `2-…/verify.py`, `sumerian_tools.py` |
 | `חוקים-ובריתות/` | 1 Esarhaddon's Succession Treaty; 2 Hammurabi (§66–99 missing in the base text); 3 Eshnunna; 4 MAL A; 5 Lipit-Ištar; 6 Ur-Namma; 7 MAL B | 6,731 | `laws_*.py` |
 | `אפוס-גילגמש/` | SB I–X, XI 209–328, XII; the OB tablets | 3,217 | `verify.py --strict` |
-| `ספרות-החכמה-והצדיק-הסובל/` | 1 Ludlul I–V; 2 the Babylonian Theodicy | 822 | `wisdom_tools.py verify` |
+| `ספרות-החכמה-והצדיק-הסובל/` | 1 Ludlul I–V; 2 the Babylonian Theodicy; 3 the Great Prayer to Šamaš; 4 Counsels of Wisdom; 5 the Dialogue of Pessimism; 6 the Instructions of Šuruppag (Sumerian; 3–6 Round 3 run 4) | 1,562 | `wisdom_tools.py verify --strict` |
 | `קינות-על-ערים/` | 1 the Lament for Ur; 2 the Curse of Agade (OB + Ur III) | 763 | `lament_tools.py verify --strict` |
 | `בניין-המקדש/` | 1 the Gudea Cylinders A–B | 1,300 | `temple_tools.py verify GU --strict` |
 | `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent | 599 | `netherworld_tools.py verify IS --strict`, `… verify IN --strict` |
@@ -72,7 +72,7 @@ table's order; inside a run, its sub-agents strictly one at a time (quotas, §2)
 | 1 | The Farmer's Instructions, Hoe and Plough, Summer and Winter (Gen 8:22, 3:17–19, 4:2–5) | the creation corpus, projects 5–7 |
 | 2 | Etana (Gen 11:4, 30:14–16, Deut 32:11) | `אגדות-מלכים/` project 3: **done (first draft), 2026-10-22**, 585 lines |
 | 3 | The Assyrian prophecies (SAA 9) + Advice to a Prince (Deut 13, 17, 18; "fear not") | new `נבואה-ומלכות/` |
-| 4 | The Great Prayer to Šamaš, Counsels of Wisdom, the Dialogue of Pessimism, Šuruppag in full | the wisdom corpus, projects 3– |
+| 4 | The Great Prayer to Šamaš, Counsels of Wisdom, the Dialogue of Pessimism, Šuruppag in full | the wisdom corpus, projects 3–6: **done (first draft), 2026-10-22**, 740 lines |
 | 5 | Nergal and Ereškigal, Bilgameš, Enkidu and the Netherworld (Gen 28:12; 1 Sam 28) | `העולם-התחתון/` projects 3–4 |
 | 6 | Maqlû I–VIII + the Ritual Tablet (Ex 22:17, Deut 18:10–11) | new `כשפים-ולחשים/` |
 
@@ -155,6 +155,7 @@ Still open:
 |---|---|---|
 | The Sargon Birth Legend's base text | King 1907 (our transcription from the page images) | Westenholz 1997 is not to be bought (the user's rule): check again if an open copy appears |
 | **For the user:** *šipru* "work, task" | `מְלָאכָה` (Atra-ḫasīs, the other flood texts, Gilg. XI 180: ~13 lines) / `פֹּעַל` (Enūma eliš V 63, 141, VI 37, 57, 67: chosen so as not to pre-empt `מְלַאכְתּוֹ`, Gen 2:2–3) | Left to the user because it touches Gen 2:2–3. The lead recommends `מְלָאכָה` everywhere, tagged [equivalent]: by meaning it is the better word for an assigned task, and the link is real (both words grew from "sending": *šapāru*, `לאך`), so the rule against pre-empting (§6.4, among *equally good* renderings) does not apply. Changing it means 5 Enūma eliš lines and their notes. (*šipru lemnu* "an evil deed" = `מַעֲשֶׂה רַע` stays.) |
+| Cross-corpus splits found by Round 3 run 4 (2026-10-22) | the **net words** are not one-word-per-lemma across corpora: the wisdom corpus and Etana now agree (*šētu* `רשת`, *gišparru* `פח`, *šuškallu* `שבכה`, *kamāru* `מכמורת`, *naḫbalu* `מוקש`; Ludlul II 72, 84 and Theodicy 160 changed), but EST (*gišparru* `מצודה`), Enūma eliš (*sapāru* `רשת`), Gilgameš (*šēšu* `מכמורת`) and the Sumerian *sa-par₄* `מכמורת` differ; also *igi-tum₃* `בעל משא־העין` (Šuruppag) vs `החמדה` (the proverbs), *dam tuku* (`השיג אשה` vs `לקח אשה`), *labān appi* settled as `ליטוף אף` | `ספרות-החכמה-והצדיק-הסובל/renderings.md` §11.8, §11.10–§11.15; each project's open decisions |
 | The per-text open decisions | see each `project.md` | minor ones: the next session on that corpus decides them (the user's rule) |
 | Cross-corpus splits found by Etana (Round 3 run 2, 2026-10-22) | left as they are (the corpora involved were being edited by other Round 3 sessions) | `אגדות-מלכים/3-אגדת-אתנה/project.md`, "Open decisions": *šarāku* / *qiāšu* both `הֶעֱנִיק`; EWO's `אקו־האפסו` (*taraḫ* = `יָעֵל`); *ḫaṭṭu* `שרביט` / `שבט`; *parakku* `כֵּס` / `דוכן`; *palgu* `תעלה` / `פֶּלֶג`; *buginnu* / *mašqû* both `שוקת`; and smaller ones. For the next harmonization pass (minor: the lead decides). |
 

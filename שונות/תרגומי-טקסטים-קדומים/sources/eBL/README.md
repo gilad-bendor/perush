@@ -75,6 +75,14 @@ Fetched with `tools/ebl_fetch.py L 1 4 "Standard Babylonian" <T> …` and `… "
 | `Theodicy-SB/` | *The Babylonian Theodicy* (eBL `L/2/1`, ancient title "O sagacious [brother], come, let me tell you"), 27 stanzas of 11 lines | 288 labels, 1–297 (`109-110` and `111-119` are range labels for lost lines) | A. C. Heinrich and T. D. N. Mitto (ed.), rev. E. Jiménez; translation B. R. Foster, W. Khatabe, W. Zerkly |
 Fetched 2026-10-19 with `tools/ebl_fetch.py L 2 2 "Standard Babylonian" <I…V> …` and `L 2 1 "Standard Babylonian" - …`. 8–41 manuscripts per Ludlul tablet (Nineveh, Aššur, Kalḫu, Ḫuzirīna, Sippar, Babylon, school tablets, the Nineveh commentary quoted as `NinNAQuo2`); 25 for the Theodicy, including **the ancient commentary `BabaLBCom1`** (= BM 66882+, the Borsippa commentary of CCP 1.4; each line's gloss is in its ATF). eBL numbering follows Hätinen's new edition: Tablets IV and V differ from Lambert 1960 and partly from Oshima 2014 (eBL notes such as "Previous line numbers as section e (e+1-12)" give the old numbers). **Usefulness:** the base texts of the wisdom corpus; more complete than Lambert (BWL) and Oshima 2014. Gitignored (§8).
 
+### Added 2026-10-21 (the wisdom corpus, Round 3 run 4)
+| Folder | Text | Lines (eBL labels) | Editors / translator |
+|---|---|---|---|
+| `Shamash-Hymn-SB/` | *Great Prayer to Šamaš* (eBL `L/3/4`, "Illuminator of the whole of heaven") | 200 | G. Rozzi (ed.), rev. T. D. N. Mitto, A. C. Heinrich, E. Jiménez; translation B. R. Foster |
+| `Counsels-of-Wisdom-SB/` | *Counsels of Wisdom* (eBL `L/2/3`) | 159 (1–54, A+1–A+105) | Zs. J. Földi (ed.), rev. Heinrich, Jiménez, Mitto; translation Foster |
+| `Dialogue-of-Pessimism-SB/` | *Dialogue of Pessimism* (eBL `L/2/4`, "Servant, do what I say") | 93 (1–38, a+1–a+7, 39–86) | A. A. Fadhil (ed.), rev. Mitto, Földi, Hätinen, Jiménez, Rozzi; translation Foster, E. A. Sarabia, W. Khatabe (+ Latin, Arabic) |
+Fetched 2026-10-21 with `tools/ebl_fetch.py L 3 4 …`, `L 2 3 …`, `L 2 4 "Standard Babylonian" - …`; regenerated 2026-10-22 after the `ebl_fetch.py` fix for logogram-initial lines (no normalization changed). Translated in `../../ספרות-החכמה-והצדיק-הסובל/` projects 3–5.
+
 ### Added 2026-10-21 (the netherworld corpus, `העולם-התחתון/`)
 | Folder | Text | Lines (eBL labels) | Editors / translator |
 |---|---|---|---|
