@@ -206,6 +206,131 @@ Words (first occurrence; all checked against the drafted lines at the end, ★):
 - **A Sumerian lemma is not always the Sumerian word of its Akkadian gate**: *gid₂* "be long" is the Sumerian of *arāku*, but the `ארך` gate lists only Akkadian lemmas, so a Sumerian translator cannot use the cognate's Hebrew without a gate change; record the Sumerian equivalents in the gates (or decide that the Sumerian does not inherit the Akkadian cognate).
 - **ETCSL's English hides the modal prefixes** ("you should not" for *na-*, "it will" for *ša-*): fix one Hebrew particle per prefix before drafting a Sumerian instruction text.
 
+## SU (143–280)
+Translator SU-b (the same translator as SU-a), Round 3 run 4, 2026-10-22; the only translator running. ETCSL labels 143–280 with 152A, 163A–B, 199A–B, 266A, 273A (145 entries), so the file is complete: 288 entries. The placeholder is removed. The single `### Parallels index (SU)` below holds the rows of both halves.
+
+### Scope
+- **143–152A** the third prologue; **153–276** the third collection; **277–280** the colophon and doxology to Nisaba. 16 section headings.
+- Preservation: mostly complete, but **233–240 are nearly lost** (signs only) and 222, 234, 237, 265, 270, 273 are fragmentary. Obscure lines: 157, 167–168, 182, 199, 219, 222, 244–245, 249–253, 264, 270. The 1-ms. lines 163A–B, 199A–B, 266A and 273A are drafted where ETCSL gives them; 152A is in "some mss.".
+- **No *ki-sur-ra*** (boundary) occurs anywhere in the composite (grep of the whole transliteration: 0 hits). The "do not move a boundary" of the surveys is **absent** from this text; the only possible hint is *bulug* in 16 (SU-a).
+
+### Sources consulted
+As for 1–142. The ORACC morphology covers most verbs; the forms marked "ניתוח שלנו" are 143–149, 161, 164, 182, 192, 200–201, 205–207, 209–211, 226–227, 263. New precedents: Etana / legends of kings (*ḫe₂-* affirmative = `אָכֵן`), the law corpus (*dumu-gi₇* `בן חורין`), CW (*kurunnu* `סובא`, *kadrû* `מתנה`), the temple corpus (*ḫuĝ* `נח`, the other homonym), the lament corpus (*a* `הוי`, the gesture "scratching the nose").
+
+### Decisions
+Grammar: as in 1–142 (§11.14), plus the following.
+- *ša-* = `הֲרֵי` kept in 143, 145, 148, 153, 181–182, 184, 187–188, 193–194, 215, 254–255, 261, 270.
+- *ḫe₂-* + marû in a consequence clause = `אָכֵן` (192, 207; the legends-of-kings rule); *ḫe₂-* jussive = imperative / jussive (173–174, 200–201, 205–206, 260).
+- *la-ba-* (= *nu-ba-*) = `לא` (162–164, 199).
+- *na-* before *ĝal₂* (227), like *na-nam*, is affirmative.
+- *-inga-* = `גם` (181, 194–195).
+
+Words (first occurrence in 143–280):
+| Sumerian | Hebrew | Lines | Reason / rejected |
+|---|---|---|---|
+| *engar*; *sipad* | `אִכָּר`; `רועה` | 153, 272; 271 | cognate loans (creation corpus); *sipad* = *rēʾû*. |
+| *eg₂*; *pa₅*; *ra* | `סוללה`; `תעלה`; `הכה` | 153, 262; 135 | *ra* "beat" kept for the pun ("he has 'beaten' your dykes"). |
+| *kar-ke₄* | `זונה` | 154 | §11.1 *ḫarimtu*. |
+| *ama-a-tud*; *dumu-gir₁₅* | `יליד־בית`; `בן־חורין` | 155; 156 | proverbs; law corpus (*dumu-gi₇*). |
+| *u₄-sar* | `מושחז` | 154 | ↔ Prov 5:4. |
+| *kur* (mountain land); *ḫur-saĝ* | `הר` / `ארץ־ההר`; `ההרים` | 158, 169, 178–180, 267–268; 193 | |
+| *dili* | `לבד` | 166 | 69. |
+| *nam-tar* (noun); *peš₁₀*; *dur₅* | `גורל`; `גדה`; `רטוב` | 170; 198, 263 | |
+| *ze₂-er* | `המעיד` | 171 | ↔ Ps 18:37. |
+| *šeš-gal*; *nin₉ gal*; *a-a* | `האח הגדול`; `האחות הגדולה`; `אב` | 172–174 | *ab-ba* stays `הזקן` (258–260, the formula of 13); `כבד` is not used (no *kabātu*). |
+| *kiĝ₂* (noun) | `מלאכה` | 175 | *ĝa₂-la* = `עבודה`. |
+| *niĝ₂-tuku*; *gig* (noun) | `עשיר`; `חולי` | 184, 204 | *gig* = Akk. *murṣu* `חֳלִי`; the adjective stays `מר`. |
+| *du₇* "be perfect"; *šu du₇* | `משוכלל`; `שכלל` | 183, 185; 279 | [cognate via *šuklulu*]; the homonym *du₇* "gore" = `נגף` (94). |
+| *zig₃* (raise) | `הרים` | 188 | the root of `זרוע רמה` (50, 62); `הקים` is *ĝiš₃ du₃*. |
+| *taka₄* | `עזב` | 198 | licensed (*taka4[*); = Akk. *ezēbu*. |
+| *ḫul gig* | `שנא` / `שנאה` | 203, 235, 255 | compound by sense (= Akk. *zêru*); in 255 split by *ša-*. |
+| *ki aĝ₂* | `אהב` | 202 | letters corpus. |
+| *me* | `הַ־מֶה` (always vocalized) | 204 | every corpus. |
+| *nir-ĝal₂*; *gaba-ĝal₂*; *nun* | `בעל־סמכות`; `בעל־חזה`; `נסיך` (`נסיכות`) | 204–205 | *egir₂* = `נסיכה`. |
+| *ezen* | `חג` | 208 | proverbs. |
+| *dam tuku* (marry) | `השיג אשה` | 208 | `לקח אשה` (proverbs) is reserved here; `נשא` = *il₂*. Open decision 11. |
+| *ḫuĝ* (209–211) | `שָׂכוּר` (vocalized: `שכור` reads "drunk") | 209–211 | ETCSL's lemma "to hire"; the temple corpus's *ḫuĝ* "rest" = `נח` is a homonym. |
+| *kug*; *za-gin₃*; *gada* | `כסף`; `ספיר`; `פשתן` | 210–211 | the 2026-10-21 harmonization (*za-gin₃* = `סַפִּיר`, Ex 24:10 noted). |
+| *lul* (of animals) | `שקרן` | 214, 218 | *lul* = `שקר`. |
+| *tur₃*; *buru₃* | `רפת`; `חתר` | 214 | 29. |
+| *munus zid*; *e₂ zid* | `אשת־אמת`; `בית־אמת` | 215 | *zid* = `אמת`. |
+| *gu₂-tar*; *la₂* (hang) | `רעמה`; `תלה` | 218 | as 43; *la₂* "attach" = `הצמיד` (18, 206). |
+| *bar-šu-ĝal₂* | `נכסים` | 220 | *niĝ₂-gur₁₁* `רכוש`, *niĝ₂-u₂-rum* `קניין`. |
+| *kurun* | `סובא` | 221 | CW (*kurunnu*); *kaš* = `שֵׁכָר`. |
+| *kun₅* | `סולם` | 222 | [cognate via Akk. *simmiltu*]. |
+| *nim*; *dal* | `זבוב`; `עף` | 223 | creation corpus (*dal*). |
+| *eme₃*; *šaḫ*; *ga* | `אתון`; `חזירה`; `חלב` | 224–225 | |
+| *giri₁₇ ḫur*; *šeg₁₁ gi₄* | `שרט את אפה`; `השיב זעקה` | 226 | the lament corpus's mourning gesture. |
+| *e-sir₂*; *ur₃* (roof); *bad₃-si* | `סמטה`; `גג`; `מעקה` | 229–231 | *sila* = `רחוב`. |
+| *pad₃* | `מצא` | 234 | |
+| *gum₂-gam* … *za* | `קול־בהמה … משמיע` | 236 | |
+| *ḫul₂*; *dirig* (verb) | `שמח`; `עולה על` | 241 | proverbs; *inim dirig* stays `דבר יתר` (255). |
+| *ku₇*; *kal* (verb) | `מתוק`; `הוקיר` | 242–243 | proverbs. |
+| *gun₃* | `מנומר` | 244 | |
+| *Ezina* | `אֶזִינָה` | 245 | the grain goddess, transliterated, noted. |
+| *kir₁₁*; *lag* | `כבשה`; `רגב` | 246–247 | *udu* = `שה`. |
+| *kar* (wife) | `חטף` | 248–249 | ↔ Judg 21:21. |
+| *a* (interjection); *re₇*; *gam* | `הוי`; `הלך` (pl.); `כופף` | 250–251 | lament corpus (*a*). |
+| *galam*; *ug₅*; *šu du₃* | `מחוכם`; `המית`; `כבל (יד)` | 252–253 | *galam* as flood line 4; *šu du₃* by sense (the only *du₃* compound besides 49). |
+| *emeda* | `מינקת` | 254 | ↔ Gen 24:59, Ex 2:7. |
+| *diĝir-zu* | `אֵלְךָ` (vocalized) | 256 | `אלך` reads "I shall go". |
+| *dib* | `העביר` | 256 | the same root as *bal* = `עבר` in another stem: a recorded near-collision. |
+| *dadag* | `ניקה` (`מנקה`) | 258 | = Akk. *ebēbu* D; licensed. |
+| *iri bar-ra* / *iri šag₄-ga* | `העיר החיצונה` / `הפנימית` | 261 | |
+| *šukur₂*; *ḫad₂* | `מָנָה` (vocalized); `יבש` | 263 | `מָנֶה` = *ma-na* (letters). |
+| *niĝ₂-me-ĝar* | `שתיקה` | 264 | |
+| *giĝ₄* (axe); *Dilmun* | `*גרזן?*`; `דִּלְמוּן` | 265 | |
+| *ur*; *ḫuš* | `כלב`; `נורא` | 266 | so 60's *ur* may be "dog" too (open decision 12). |
+| *diĝir kur-ra* | `אֵלֵי ההר` (vocalized) | 268 | |
+| *kadra*; *ten* | `מתנה`; `שכך` | 274–276 | CW *kadrû*; *sed* = `צינן`. |
+| *mul* | `כוכב` | 276 | |
+| *nin*; *dub*; *za₃-mi₂*; *Nisaba* | `גבירה`; `לוח`; `תהילה`; `נִיסָבָּה` | 279–280 | §11.1. |
+
+### Open decisions for the user
+11. ***dam tuku*** "take a wife" (208) is rendered `אשה אל תשיג (לך)`: `לקח` is reserved (*dab₅* / *leqû*) and `נשא` is *il₂*. The proverbs corpus has `לָקַח אִשָּׁה` for *dam tuku*, so this is a cross-corpus split.
+12. ***ur*** in 60 (ETCSL lemma "man") against *ur* "dog" in 266: if 60 is "dog", it reads `כלב אל תאכיל`.
+13. ***ab-ba* = `הזקן` in 258–259** ("the father is a god"), against ETCSL's "father". The binding formula word is kept so that 260 `עצת הזקן` = 13. The alternative `האב` would merge it with *a-a* (172).
+14. **190 *ba-ra-an-bal-e***: ORACC parses *bara-* (a strong negation: "he will not cross the river"). We follow ETCSL (*ba-* + *-ra-*): `(ו)את הנהר יעבור`.
+15. **209–211 *ḫuĝ***: "hired" (ETCSL's lemma; ETCSL's English "borrowed / illusory") or *ḫuĝ* "calm, at rest" (the temple corpus's `נח`). We chose `שָׂכוּר`.
+16. **244 *gun₃* ~ `בָּרֹד` (Gen 31:10)** through Akk. *burrumu*: our proposal, unverified.
+
+### Progress log
+- Read §11.14 and the coordinator's message (the `ארך` gate is now licensed by *gid₂*, the `שלם` gate by *sug₆*). Ran `sux SU`: 143–152A repeat 73–82A / 1–13, 160 = 165. Ran `sumerian_workbench.py line` for 143–280. Grepped the transliteration for *ki-sur*: none.
+- Drafted in four sections, each inserted on disk at once before the placeholder: 143–171, 172–203, 204–241, 242–280. Ran `fill`, `verify` and `check_bible_quotes.py` after each, then removed the placeholder.
+- Pass (a): every word is in the פירוק. Brackets: 147, 148 (`ל[זיוסודרה]`), 154 `[זונה]`, 175 `תעש[ה]`, 215 `[ישים]`, 236 `ב[ני]`, 266 `יו[דע] … [נורא הוא]`, 271 `[נגמר לו]`, 275 `בהיכ[ל]`.
+- Pass (b): repeated lines checked: 143 / 145 = 73 / 75; 144 = 7; 146 = 76 + `השלישית`; 148 = 75 minus `בנו`; 149–150 = 9–10; 151 = 11 (no *šu*, noted); 152 = 12; 152A = 13 with `יעשה` (*ak*); 160 = 165; 162 ≈ 163; 177 / 220 the same second half; 183 / 185 the same second half; 196 ≈ 197; 209–211 the refrain `– שָׂכוּר הוא`; 249 = 15's second half; 258 ≈ 259; 260 the formulas of 10 / 13; 271–272 `נגמר לו`; 138 = 155's second half (`עשב מר־קרביים הוא`); 103 = 224's verb phrase (`דברים מונה`); 130 = 232 (`חיים … נושמות`).
+- Pass (c): the generated translation read through. In 190 the tense was corrected to the marû (`יעבור`); 200 `תשקע` (one Hebrew verb for *su*).
+- Checks: `verify SU --strict` – 0 problems, 288 entries; `check_bible_quotes.py` clean on all my files; `build` run (288 lines, 14 footnotes).
+
+### The text on its own terms
+- **Buying slaves** (154–164) is the longest practical section. Do not buy a prostitute, a house-born slave, a free man or a palace slave girl; buy a stranger from the mountains, who has no house and no city to go back to (162–163). That is a cold logic of dependence. The slave girl from the hills brings "fine" in her hand and "bad" in her heart (193–199).
+- **The family hierarchy**: the elder brother "is" a father and the elder sister "is" a mother (172–174). The mother "is" Utu and the father "is" a god (257–259). The parents are not just honoured but put in the place of the gods. The mother comes first (cf. Lev 19:3).
+- **The world outside Sumer** (158, 178–180, 266–271): the mountains are where bread drives men up and where foreign slaves come from. Their gods eat men, and there are no houses or cities "as men build them". It ends in shepherds and farmers whose work "is finished".
+- **Women in the third collection**: the festival bride whose finery is all "hired" (208–211); the "true woman" placed in a true house (215); the woman with her own property who ruins the house (220); a long sketch of a restless woman who flies into every house like a fly, peers from every roof and parapet, and "breathes life" near a quarrel (222–232); the wife not to be abducted (248–249); the wet nurses of the women's quarters who decree the king's fate (254).
+- **Popular belief** (246–247): cursing a ewe brings a daughter; throwing a clod into the chest brings a son. These are omens of birth.
+- **Animals as characters**: the "lying" ox that breaks the stall and the "lying" donkey that droops its mane (214, 218); a she-donkey that "recites words" in the street and a sow that suckles in public (224–225).
+- **Economics**: do not buy a donkey at harvest (216); a field below the dyke yields a ration wet or dry (263); the suburbs build the inner city (261); the beer-drinker "sinks" the harvest (221); copper from Dilmun (265); "do not treasure things – let things treasure you" (243).
+- **The *me*** (204): authority, wealth and forcefulness are "the *me* of princeship", divine institutions. Hence the advice to bend the neck to them (205–207).
+- **The end**: the counsels are a "gift" (*kadra*) that soothes the heart and opens the palace (274–275). The whole is closed with praise to Nisaba, goddess of writing (279–280): the oldest wisdom ends with the scribe's signature.
+
+### Lines shared with other files
+- 143–152A ↔ 73–82A / 1–13 (see Pass (b)).
+- 155b = 138b; 224 shares the verb phrase of 103; 232 shares the verb phrase of 130; 249b = 15b.
+- CW: *kurunnu* `סובא` (221), *kadrû* `מתנה` (274–276). The ETCSL text has no parallel to CW's "honour father and mother" in these lines. 172–174 and 255–260 are the Sumerian counterpart, with `הטה אוזן` / `צוואר ייכנע` and no `כבד`.
+- Proverbs corpus: *dam tuku* (`לקח אשה` there, `השיג אשה` here: open decision 11).
+
+### Proposals for the shared renderings
+- *ḫe₂-* + marû in a consequence clause = `אָכֵן` (192, 207), as in the legends-of-kings corpus.
+- *du₇* "be perfect" / *šu du₇* = `שכלל` [cognate via *šuklulu*], to be kept apart from *du₇* "gore" (`נגף`).
+- *ḫul gig* = `שנא` / `שנאה` (compound); *taka₄* = `עזב` (licensed).
+- *me* = `הַ־מֶה` (confirmed); *kadra* = `מתנה`; *ten* = `שכך` (beside *sed* `צינן`).
+- *emeda* = `מינקת`; *kun₅* = `סולם`; *ḫuĝ* "hire" = `שָׂכוּר` (always vocalized); *šukur₂* = `מָנָה` (always vocalized).
+- Always vocalize: `אֵלְךָ`, `אֵלֵי`, `אֲמַת` (slave girl of …), `שָׂכוּר`, `מָנָה`, `אָכֵן`.
+
+### Lessons for the guidelines
+- **ETCSL's English twice turns *sag₉ … ḫul* into "good and evil"** (47, 193). Before tagging a "good and evil" contact, check that the Sumerian has *dug₃*. It never does in this text: there is no `טוב` in all 288 lines.
+- **ETCSL's "like"** in identity statements (*X Y-am₃*: "the elder brother *is* a father", "the mother *is* Utu") softens claims that are bolder than the Bible's. Check *-gin₇* ("like") against *-am₃* ("is") before quoting.
+
 ### Parallels index (SU)
 | Line | Sumerian | Hebrew rendering | Bible | Tag | Comment |
 |---|---|---|---|---|---|
@@ -280,3 +405,52 @@ Words (first occurrence; all checked against the drafted lines at the end, ★):
 | 138 | *u₃-bu-bu-ul* | אבעבועה | `לִשְׁחִין פֹּרֵחַ אֲבַעְבֻּעֹת` (שמות ט:ט) | [cognate?] | via Akk. *bubuʾtu*? Our proposal, unverified (open decision 10). |
 | 141 | *a-ra-zu a sed-da* | התחנון – מים קרים | `מַיִם קָרִים עַל-נֶפֶשׁ עֲיֵפָה` (משלי כה:כה) | [equivalent] | cold water as the image of what restores; ETCSL "prayer" for *a-ra-zu* (supplication). |
 | 141 | *šag₄-ge im-sed-e* | את הלב מצנן | `מַעֲנֶה-רַּךְ יָשִׁיב חֵמָה` (משלי טו:א) | [equivalent] | "cooling the heart" = appeasing anger. |
+| 143–280 | (*ki-sur-ra* absent) | — | `אָרוּר מַסִּיג גְּבוּל רֵעֵהוּ` (דברים כז:יז) | [absent] | the whole composite has no *ki-sur-ra* "boundary": no "do not move the boundary" (also Deut 19:14, Prov 22:28; see 16). |
+| 154 | *kar-ke₄ … ka u₄-sar-ra-kam* | [זונה] … פה מושחז היא | `וְאַחֲרִיתָהּ מָרָה כַלַּעֲנָה;    חַדָּה כְּחֶרֶב פִּיּוֹת` (משלי ה:ד) | [equivalent] | the harlot / strange woman as a sharp mouth; the noun restored ([kar]). |
+| 155 | *ama-a-tud* | יליד־בית | `יְלִיד בָּיִת וּמִקְנַת כֶּסֶף` (בראשית יז:יב) | [divergence] | the same two classes of slaves (house-born / bought); the Torah treats them alike, Šuruppag warns against the house-born (`וִילִיד בֵּיתוֹ`, ויקרא כב:יא). |
+| 161 | *a ḫu-mu-ra-an-de₂-e igi-zu-še₃ ḫe₂-du* | מים ישפוך לך; לפניך ילך | `אֲשֶׁר יָצַק מַיִם עַל יְדֵי אֵלִיָּהוּ` (מלכים ב ג:יא) | [equivalent] | pouring water as the servant's office. |
+| 166 | *dili-zu-ne kaskal na-an-ni-du-un* | לבדך – בדרך אל תלך | `וְאִילוֹ הָאֶחָד שֶׁיִּפּוֹל וְאֵין שֵׁנִי לַהֲקִימוֹ` (קהלת ד:י) | [equivalent] | the danger of being alone (also `טוֹבִים הַשְּׁנַיִם מִן הָאֶחָד`, קהלת ד:ט). |
+| 170–171 | *nam-tar peš₁₀ dur₅-ra-am₃ … ĝiri₃-ni im-ma-da-an-ze₂-er* | הגורל – גדה רטובה הוא; את רגל האדם הוא ממעיד | `לְעֵת תָּמוּט רַגְלָם` (דברים לב:לה) | [divergence] | the slipping foot; in the Bible God makes it slip or holds it (`וַאֲנִי כִּמְעַט נָטָויּ (נָטָיוּ) רַגְלָי`, תהלים עג:ב), here fate is slippery ground. |
+| 172 | *šeš-gal a-a na-nam nin₉ gal ama na-nam* | האח הגדול – אב הוא; האחות הגדולה – אם היא | `כַּבֵּד אֶת אָבִיךָ וְאֶת אִמֶּךָ` (שמות כ:יא) | [divergence] | the parents' status extended to the elder siblings; the verbs are "listen" and "bend the neck", not "honour" (no *kabātu*); ETCSL's "like" is not in the text. |
+| 172 | *šeš-gal* | האח הגדול | `הֱוֵה גְבִיר לְאַחֶיךָ` (בראשית כז:כט) | [divergence] | the elder rules by birth here; in Genesis by a blessing given to the younger. |
+| 173–174 | *ĝizzal ḫe₂-em-ši-ak … gu₂ ḫe₂-em-ši-ĝal₂* | הטה אליו אוזן! … צוואר ייכנע לה! | `שְׁמַע לְאָבִיךָ זֶה יְלָדֶךָ;    וְאַל-תָּבוּז כִּי-זָקְנָה אִמֶּךָ` (משלי כג:כב) | [equivalent] | the father's own formulas (10, 13) applied to the elder brother and sister. |
+| 176 | *ka-zu-ta niĝ₂-nam nu-lu-lu-un* | בפיך – דבר לא תרבה | `בְּכָל-עֶצֶב יִהְיֶה מוֹתָר;    וּדְבַר-שְׂפָתַיִם אַךְ-לְמַחְסוֹר` (משלי יד:כג) | [equivalent] | talk does not enrich; *lu* = `רבה` (tagged). |
+| 177 | *ĝa₂-la dag-ge e₂ dur₂-bi-še₃ mu-un-ĝen* | החדל מן העבודה – הבית אל תחתיתו הלך | `וּבְשִׁפְלוּת יָדַיִם יִדְלֹף הַבָּיִת` (קהלת י:יח) | [equivalent] | idleness ruins the house; also `גַּם מִתְרַפֶּה בִמְלַאכְתּוֹ` (משלי יח:ט). |
+| 184 | *lu₂ niĝ₂-tuku lu₂ niĝ₂ nu-tuku gig še₃-em-ĝar* | לעשיר – מי שאין לו דבר הֲרֵי שם חולי | `עָשִׁיר וָרָשׁ נִפְגָּשׁוּ;    עֹשֵׂה כֻלָּם יְהוָה` (משלי כב:ב) | [divergence] | rich and poor as creatures of one God in Proverbs; here the poor man harms the rich. |
+| 185 | *lu₂ dam tuku a₂ šu im-du₇-du₇* | מי שיש לו אשה – זרוע ויד משוכללות | `אֶעֱשֶׂה לּוֹ עֵזֶר כְּנֶגְדּוֹ` (בראשית ב:יח) | [equivalent] | the wife completes the man ("arm and hand perfected"). |
+| 186 | *dam nu-un-tuku … mu-un-nu₂* | מי שאין לו אשה – ב*מכלאה?* שוכב | `גַּם אִם יִשְׁכְּבוּ שְׁנַיִם וְחַם לָהֶם; וּלְאֶחָד אֵיךְ יֵחָם` (קהלת ד:יא) | [equivalent] | the man who lies down alone; cf. `לֹא טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ` (בראשית ב:יח) – Šuruppag has no "not good" (no *dug₃*). |
+| 187–188 | *e₂ gul-gul-lu-de₃ … lu₂ zi-zi-i-de₃* | הבא להרוס בית … הבא להרים אדם | `מַשְׁפִּיל אַף מְרוֹמֵם` (שמואל א ב:ז) | [divergence] | destroying and raising up: God's acts in Hannah's song, a man's will here; also `עֵת לִפְרוֹץ        וְעֵת לִבְנוֹת` (קהלת ג:ג). |
+| 193 | *sag₉ … ḫul* | נאה … רע | `וִהְיִיתֶם כֵּאלֹהִים יֹדְעֵי טוֹב וָרָע` (בראשית ג:ה) | [divergence] | **ETCSL's false echo**, again (cf. 47): "good and evil" for *sag₉* / *ḫul*, not *dug₃*; the qualities of a slave girl, not knowledge (also בראשית ב:ט). |
+| 195 | *ḫul šag₄ an-ga-am₃* | הרע – גם הלב הוא | `כִּי יֵצֶר לֵב הָאָדָם רַע מִנְּעֻרָיו` (בראשית ח:כא) | [divergence] | the bad in the heart: of all mankind (after the flood) in Genesis, of a foreign slave girl here. |
+| 198 | *šag₄-ge nu-da₁₃-da₁₃* | הלב לא יעזוב | `אֵלִי אֵלִי לָמָה עֲזַבְתָּנִי` (תהלים כב:ב) | [equivalent] | *taka₄* = Akk. *ezēbu* = `עזב` (licensed): the heart does not "abandon" the fine. |
+| 201 | *an-edin-na {kuš}ummud ḫe₂-en-da-dar* | בערבה העליונה – נאד־המים עמו ייסדק! | `וַיִּקַּח לֶחֶם וְחֵמַת מַיִם` (בראשית כא:יד) | [equivalent] | the waterskin in the desert, the traveller's life (Hagar's runs out). |
+| 202 | *šag₄ ki aĝ₂ niĝ₂ e₂ du₃-du₃-u₃-dam* | לב אוהב – דבר בונה בית הוא | `חַכְמוֹת נָשִׁים בָּנְתָה בֵיתָהּ` (משלי יד:א) | [equivalent] | "building the house"; [divergence] `אִם-יְהוָה לֹא-יִבְנֶה בַיִת` (תהלים קכז:א). |
+| 203 | *šag₄ ḫul gig niĝ₂ e₂ gul-gul-lu-dam* | לב שונא – דבר הורס בית הוא | `שִׂנְאָה תְּעֹרֵר מְדָנִים;    וְעַל כָּל-פְּשָׁעִים תְּכַסֶּה אַהֲבָה` (משלי י:יב) | [equivalent] | the love / hate pair (202–203). |
+| 208 | *ezem-ma-ka dam na-an-tuku-tuku-e* | בחג – אשה אל תשיג (לך) | `וַחֲטַפְתֶּם לָכֶם אִישׁ אִשְׁתּוֹ מִבְּנוֹת שִׁילוֹ` (שופטים כא:כא) | [divergence] | a wife taken at a festival: the elders' advice in Judges, the father's warning here; also 248 (*kar* "abduct" = `חטף`). |
+| 209 | *šag₄-ga ḫuĝ-ĝa₂-am₃ bar-ra ḫuĝ-ĝa₂-am₃* | התוך – שָׂכוּר הוא; החוץ – שָׂכוּר הוא | `שֶׁקֶר הַחֵן וְהֶבֶל הַיֹּפִי` (משלי לא:ל) | [equivalent] | finery as a disguise. |
+| 210 | *za-gin₃* | ספיר | `כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר` (שמות כד:י) | [equivalent] | lapis lazuli = biblical `סַפִּיר` (the 2026-10-21 harmonization). |
+| 211 | *tug₂ … gada* | הבגד … הפשתן | `וְהַגִּלְיֹנִים וְהַסְּדִינִים וְהַצְּנִיפוֹת וְהָרְדִידִים` (ישעיהו ג:כג) | [equivalent] | the list of borrowed / proud finery. |
+| 214 | *gud lul-la* | שור שקרן | `וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו` (שמות כא:כט) | [equivalent] | the ox whose nature is hidden from the buyer. |
+| 215 | *munus zid e₂ zid-še₃ lu₂ ši-in-[ĝar]* | אשת־אמת – לבית־אמת אדם הֲרֵי [ישים] | `וּמֵיְהוָה אִשָּׁה מַשְׂכָּלֶת` (משלי יט:יד) | [divergence] | the good wife from God in Proverbs, placed by "a man" (the families) here; also `אֵשֶׁת-חַיִל מִי יִמְצָא` (משלי לא:י); ETCSL's "good household" is *zid*, not *dug₃*. |
+| 221 | *kurun naĝ-naĝ-e buru₁₄ im-su-su-su* | שותה הסובא – את הקציר משקיע | `כִּי-סֹבֵא וְזוֹלֵל יִוָּרֵשׁ` (משלי כג:כא) | [equivalent] | the drinker impoverished (also `אַל-תְּהִי בְסֹבְאֵי-יָיִן`, משלי כג:כ). |
+| 222 | *{ĝiš}kun₅* | סולם | `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה` (בראשית כח:יב) | [cognate] | the word only, via Akk. *simmiltu*; no shared image. |
+| 224 | *eme₃ sila-a inim i₃-šid-e* | האתון – ברחוב דברים מונה | `וַיִּפְתַּח יְהוָה אֶת פִּי הָאָתוֹן` (במדבר כב:כח) | [divergence] | a "speaking" she-ass: a miracle in Numbers, mockery here. |
+| 228 | *e₂-e₂-a i-in-ku₄-ku₄-ku₄* | אל כל בית ובית היא נכנסת | `בְּבֵיתָהּ לֹא-יִשְׁכְּנוּ רַגְלֶיהָ` (משלי ז:יא) | [equivalent] | **the restless woman of the streets**, the same type (`פַּעַם בַּחוּץ פַּעַם בָּרְחֹבוֹת;    וְאֵצֶל כָּל-פִּנָּה תֶאֱרֹב`, משלי ז:יב); 222–232. |
+| 230 | *da ur₃-ra … e₃-ab* | על שפת הגג … "צא!" | `טוֹב לָשֶׁבֶת עַל-פִּנַּת-גָּג    מֵאֵשֶׁת מִדְיָנִים וּבֵית חָבֶר` (משלי כא:ט) | [equivalent] | the roof and the quarrelsome woman in one image. |
+| 231 | *bad₃-si-bad₃-si-a* | מכל מעקה ומעקה | `וְעָשִׂיתָ מַעֲקֶה לְגַגֶּךָ` (דברים כב:ח) | [equivalent] | the roof parapet. |
+| 241 | *šag₄ ḫul₂-la* | לב שמח | `לֵב שָׂמֵחַ יֵיטִב פָּנִים` (משלי טו:יג) | [equivalent] | the end of the line is lost. |
+| 242 | *niĝ₂-nam nu-kal zi ku₇-ku₇-da* | שום דבר לא יקר – (מלבד) חיים מתוקים | `וּמָתוֹק הָאוֹר; וְטוֹב לַעֵינַיִם לִרְאוֹת אֶת הַשָּׁמֶשׁ` (קהלת יא:ז) | [equivalent] | the sweetness of life against the worthlessness of things. |
+| 244 | *gun₃-gun₃* | מנומר | `עֲקֻדִּים נְקֻדִּים וּבְרֻדִּים` (בראשית לא:י) | [equivalent] | speckled; `בָּרֹד` ~ Akk. *burrumu*? Our proposal (open decision 16). |
+| 246 | *kir₁₁-e aš₂ nam-en dumu-munus in-u₃-tud-un* | על הכבשה – קללה אל תאמר; בת ילדת | `כִּי אִם כִּבְשָׂה אַחַת קְטַנָּה … וַתְּהִי לוֹ כְּבַת` (שמואל ב יב:ג) | [equivalent] | ewe-lamb and daughter, in Nathan's parable and in a Sumerian birth omen. |
+| 254 | *emeda-ga-la₂ ama₅-a-ke₄ … nam ši-im-mi-ib-tar-re* | המיניקות של בית־הנשים … גורל הֲרֵי גוזרות | `וְאֶת מֵנִקְתָּהּ` (בראשית כד:נט) | [divergence] | the nurse as a fixture of the house (also `אִשָּׁה מֵינֶקֶת מִן הָעִבְרִיֹּת`, שמות ב:ז); here she decrees the child-king's fate. |
+| 255 | *ama-zu-ur₂ inim dirig … ḫul ša-ba-ra-gig-ga-am₃* | לאמך דבר יתר אל תאמר – הֲרֵי שנאה היא לך | `עַיִן תִּלְעַג לְאָב    וְתָבֻז לִיקְּהַת-אֵם` (משלי ל:יז) | [equivalent] | contempt for the mother; [divergence] `וּמְקַלֵּל אָבִיו וְאִמּוֹ מוֹת יוּמָת` (שמות כא:יז) – death there, hatred here. |
+| 256 | *inim ama-za inim diĝir-za* | דבר אמך, דבר אֵלְךָ | `אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ וְאֶת שַׁבְּתֹתַי תִּשְׁמֹרוּ:  אֲנִי יְהוָה אֱלֹהֵיכֶם` (ויקרא יט:ג) | [equivalent] | mother first, then the god, in one sentence; also `וְאַל-תִּטֹּשׁ תּוֹרַת אִמֶּךָ` (משלי א:ח), `בְּקוֹל אָבִיו וּבְקוֹל אִמּוֹ` (דברים כא:יח). |
+| 257 | *ama {d}utu-am₃ lu₂ mu-un-u₃-tud* | האם – אוּתוּ היא; את האדם ילדה | `כַּבֵּד אֶת אָבִיךָ וְאֶת אִמֶּךָ` (שמות כ:יא) | [divergence] | **one of the strongest**: the parents are not only honoured but identified with gods (mother = Utu, father = a god, 258–259); ETCSL's "like Utu" / "like a god" soften it (*-am₃*, not *-gin₇*). Also `שְׁמַע לְאָבִיךָ זֶה יְלָדֶךָ` (משלי כג:כב). |
+| 259 | *ab-ba diĝir-am₃ inim-ma-ni zid-da* | הזקן – אל הוא; דברו – אמת | `וּדְבָרֶיךָ יִהְיוּ אֱמֶת` (שמואל ב ז:כח) | [equivalent] | "your words are truth", said of God; here of the father. |
+| 260 | *na de₅ ab-ba-še₃ ĝizzal ḫe₂-em-ši-ia-ak* | אל עצת הזקן – הטה אליה אוזן! | `הַט אָזְנְךָ וּשְׁמַע דִּבְרֵי חֲכָמִים` (משלי כב:יז) | [equivalent] | the two formulas of the prologue (10, 13) close the paternal section. |
+| 263 | *al-duru₅ šukur₂-ra-am₃ al-ḫad₂ šukur₂-ra-am₃* | רטובה – מָנָה היא; יבשה – מָנָה היא | `הַטְרִיפֵנִי    לֶחֶם חֻקִּי` (משלי ל:ח) | [equivalent] | the fixed ration. |
+| 264 | *niĝ₂ u₂-gu de₂-a niĝ₂-me-ĝar-ra* | דבר שאבד – דבר של שתיקה הוא | `עֵת לְבַקֵּשׁ וְעֵת לְאַבֵּד` (קהלת ג:ו) | [equivalent] | accepting loss. |
+| 268 | *diĝir kur-ra lu₂ gu₇-gu₇-u₃-me-eš* | אֵלֵי ההר – אוכלי אדם הם | `אֶרֶץ אֹכֶלֶת יוֹשְׁבֶיהָ הִוא` (במדבר יג:לב) | [equivalent] | the foreign land that "eats men" (also `אֹכֶלֶת אָדָם`, יחזקאל לו:יג); here the mountain gods themselves. |
+| 271 | *sipad-ra kiĝ₂-kiĝ₂ mu-na-til udu gi₄-gi₄ [mu-na-til]* | לרועה – לבקש נגמר לו; להשיב שה [נגמר לו] | `וְאֶת הַנִּדַּחַת לֹא הֲשֵׁבֹתֶם וְאֶת הָאֹבֶדֶת לֹא בִקַּשְׁתֶּם` (יחזקאל לד:ד) | [equivalent] | **the same pair of shepherd's verbs**, seek and bring back (*kiĝ₂* `בקש`, *gi₄* `השיב`); the second verb restored. |
+| 274 | *kadra inim-ma-bi niĝ₂ šag₄ ten-na* | מתנת דבריו – דבר משכך לב הוא | `מַתָּן אָדָם יַרְחִיב לוֹ;    וְלִפְנֵי גְדֹלִים יַנְחֶנּוּ` (משלי יח:טז) | [equivalent] | the gift that soothes and opens the palace (275); also `מַתָּן בַּסֵּתֶר יִכְפֶּה-אָף` (משלי כא:יד), `דָּבָר דָּבֻר עַל-אָפְנָיו` (משלי כה:יא). |
+| 280 | *ki-sikil {d}nisaba za₃-mi₂* | לעלמה נִיסָבָּה – תהילה! | `כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ:            הַלְלוּ-יָהּ` (תהלים קנ:ו) | [divergence] | a book closed in praise: of the goddess of writing (the scribe's signature), not of the god of the text. |
