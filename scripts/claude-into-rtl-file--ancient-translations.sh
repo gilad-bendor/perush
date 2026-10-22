@@ -21,7 +21,7 @@
 # NEEDED_DOMAINS              (optional) web hosts the session needs - "ANY" for the open web. A cloud
 #                             environment's network allowlist is set in the claude.ai UI only.
 # NEEDED_DOMAINS_FILE         (optional) a file (repo-relative) of more such hosts: one per line, "#" comments.
-DESCRIPTION="Translate ancient Near-Eastern texts (Sumerian, Akkadian...) into Hebrew, and map their parallels to the Bible - runs in its own folder."
+DESCRIPTION="Translate ancient texts from the whole world (Sumerian, Akkadian, Ugaritic, Egyptian, Greek...) into Hebrew - the essence of antiquity, and the parallels to the Bible - runs in its own folder."
 NEEDED_DOMAINS_FILE="שונות/תרגומי-טקסטים-קדומים/domains.txt"
 
 PROMPT_FILE="translation-guidelines.md"

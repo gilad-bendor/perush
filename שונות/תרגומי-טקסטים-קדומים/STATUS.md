@@ -142,9 +142,12 @@ passed afterwards.
 
 **For the user, from the world survey (2026-10-21; `curated-translation-candidates--world.md` §7):**
 1. ~~Widen the work beyond Mesopotamia, and approve Round 4?~~ **Settled 2026-10-22:** yes – the merged Round 4 plan.
-2. Hebrew and Moabite inscriptions: a square-script transcription + a vocalized reading + the apparatus, instead of a
-   "translation"?
-3. A new apparatus tag, **[typological]**, for parallels from cultures with no contact with Israel (guidelines §6.4)?
+2. ~~Hebrew and Moabite inscriptions~~ **Settled 2026-10-22** (left to the lead): transcription + vocalized reading +
+   apparatus (guidelines §6.7).
+3. ~~A [typological] tag~~ **Settled by the user, 2026-10-22: no special tag** (guidelines §6.4).
+
+**The project is global** (the user, 2026-10-22): "focusing on the 'essence of antiquity'" (guidelines §1). Round 4 keeps
+its approved order; from Round 5 on, candidates are ranked with that focus first.
 
 Still open:
 

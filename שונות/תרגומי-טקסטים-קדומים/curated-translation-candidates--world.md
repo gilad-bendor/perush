@@ -1,5 +1,8 @@
 # Curated translation candidates: the rest of the ancient world
 
+> **The project is now global** (the user, 2026-10-22): "This translation project should become 'globalized' – focusing on the
+> 'essence of antiquity'" (guidelines §1). From Round 5 on, candidates are ranked with that focus first.
+
 Compiled 2026-10-21, in a Claude Cloud session, at the user's request: "Up until now, we focused solely on translating
 ancient *Mesopotamian* texts. But what about the rest of the world? … I am primarily focused on really ancient texts, or
 at least texts that wrote ancient oral traditions."
@@ -52,8 +55,8 @@ interesting it is.
 Anatolia, and through Persia, Iran. There a parallel can be a *source*, as in Mesopotamia. The others (India, China, Greece
 before the Hellenistic age, the Americas, the Pacific) give **typological** parallels: the same motif, reached
 independently. A typological parallel cannot show what the Torah's authors kept or changed. It shows what is universal in
-a motif, and so what is *particular* in the Torah's version. That is a real use, but a different one. The apparatus should
-tag it differently (§7, decision 3).
+a motif, and so what is *particular* in the Torah's version. That is a real use, but a different one. The apparatus uses the
+same tags and says so in words (§7, decision 3).
 
 ---
 
@@ -383,12 +386,10 @@ The standing rule is to decide minor things and bring only major choices (STATUS
 
 1. ~~Widen the folder beyond Mesopotamia, and in what order.~~ **Settled by the user, 2026-10-22:** yes, in the order of §8
    (Round 4). The folder's name, `תרגומי-טקסטים-קדומים`, already fits.
-2. **Hebrew and Moabite inscriptions** (Tier 1 #6): a square-script transcription + a vocalized reading + the apparatus,
-   rather than a "translation"?
-3. **A new apparatus tag for typological parallels.** The four tags of guidelines §6.4 ([cognate], [equivalent],
-   [divergence], [absent]) assume possible contact. A parallel from a culture that never met Israel (the Rigveda, the
-   Kumulipo, the Popol Vuh) needs its own tag, e.g. **[typological]**. Otherwise the reader may take it for a source. Proposed;
-   it would go into §6.4.
+2. ~~Hebrew and Moabite inscriptions.~~ **Settled 2026-10-22** (the user left it to the lead): a square-script
+   transcription + a vocalized reading + the apparatus, no "translation"; Phoenician and Aramaic are translated (guidelines §6.7).
+3. ~~A new apparatus tag for typological parallels.~~ **Settled by the user, 2026-10-22: no special tag.** The four tags serve
+   every culture; the note names the culture and says in words that the parallel is a shared motif, not a source (guidelines §6.4).
 4. **Texts that need a paid or lending-only base**, recorded only under the no-purchase rule: the Huarochirí manuscript (Taylor
    1987/2008; Salomon & Urioste 1991); KTU³ (but CUC covers it); Gardiner 1935 (the dream book); Hoftijzer & van der Kooij 1976
    (Deir ʿAllā); the Ifá, Sunjata and Mwindo editions. Nothing to decide unless the rule changes.
