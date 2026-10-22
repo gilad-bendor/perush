@@ -42,8 +42,8 @@ Rank 3: Foster in eBL (Akkadian); ETCSL's English (Sumerian). Not available here
 | # | Project | Status |
 |---|---|---|
 | 1 | The Descent of Ištar | **Done (first draft), 2026-10-21**: all 159 entries (SB 1–138 with the pluses, NA1–NA11); three review passes; `verify IS --strict` OK; translation (19 footnotes); print stub. |
-| 3 | Nergal and Ereškigal | Round 3, run 5: in progress (2026-10-21). |
-| 4 | Bilgameš, Enkidu and the Netherworld | Round 3, run 5: in progress (2026-10-21). |
+| 3 | Nergal and Ereškigal | **Done (first draft), 2026-10-22** (Round 3, run 5): all 420 entries (MB 87, SB 333) in three files; four sequential parts by one translator, three review passes each, merged between parts (renderings §11.7, §11.9, §11.11, §11.13); `verify NE --strict` OK; translation (14 footnotes); print stub. |
+| 4 | Bilgameš, Enkidu and the Netherworld | **Done (first draft), 2026-10-22** (Round 3, run 5): all 463 entries (Version A 305, UET 6 58/59/60 65, Me-Turan 93) in four files; Gilgameš XII's Hebrew copied where XII renders the Sumerian (`XII_CONC`); four sequential parts by one translator, three passes each (renderings §11.8, §11.10, §11.12, §11.14); `verify GEN --strict` OK; translation (19 footnotes); print stub. |
 | 2 | Inana's Descent | **Done (first draft), 2026-10-21**: all 440 entries (1–412 with the pluses) in two files; three review passes; `verify IN --strict` OK; translation (24 footnotes); print stub. |
 
-The parallels index (`parallels-index.md`, 175 rows since the 2026-10-21 harmonization, key findings at the top) covers both. Translated by the corpus coordinator (no sub-agent tool in this cloud session), the Akkadian first, then the Sumerian.
+The parallels index (`parallels-index.md`, 551 rows since Round 3 run 5: IS 85, IN 90, NE 127, GEN 249; key findings at the top, for each pair of texts) covers all four. Translated by the corpus coordinator (no sub-agent tool in this cloud session), the Akkadian first, then the Sumerian.
