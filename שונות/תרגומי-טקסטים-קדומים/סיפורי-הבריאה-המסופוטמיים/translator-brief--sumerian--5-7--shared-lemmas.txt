@@ -1,0 +1,305 @@
+# Lemmas shared by projects 5–7 (ETCSL TEI lemma, POS, guide word; counts in FI = 5.6.3, HP = 5.3.1, SW = 5.3.3). Generated 2026-10-21 by the run coordinator; a working list for the translators (translator-brief--sumerian--5-7.md §1).
+X                      X                            FI=  2 HP=  5 SW= 76
+&X;                    &X;                          FI=  0 HP=  1 SW= 56
+jar                V   to place                     FI=  5 HP= 14 SW= 32
+ce                 N   barley                       FI= 28 HP=  4 SW= 14
+lu2                N   person                       FI= 11 HP= 15 SW= 18
+en-te-en           N   winter                       FI=  0 HP=  2 SW= 40
+dug4               V   to say                       FI= 15 HP= 10 SW= 17
+ud                 N   day(light)                   FI= 19 HP=  7 SW= 15
+e2-me-ec           N   summer                       FI=  0 HP=  1 SW= 39
+ak                 V   to do                        FI= 14 HP= 14 SW= 11
+ki                 N   place                        FI=  8 HP=  6 SW= 24
+en-lil2            N   Enlil                        FI=  2 HP=  9 SW= 27
+a2                 N   arm                          FI=  5 HP= 10 SW= 22
+al                 N   hoe                          FI=  2 HP= 33 SW=  1
+cu                 N   hand                         FI=  2 HP= 14 SW= 18
+gub                V   to stand                     FI=  7 HP=  9 SW= 15
+gud                N   bull                         FI=  8 HP=  3 SW= 19
+a-cag4             N   field                        FI= 12 HP= 12 SW=  6
+a                  N   water                        FI=  8 HP= 11 SW= 11
+gal                V   to be big                    FI=  0 HP=  5 SW= 24
+e2                 N   house(hold)                  FI=  0 HP= 13 SW= 14
+apin               N   plough                       FI=  6 HP= 18 SW=  1
+sa2                V   to equal                     FI=  9 HP=  8 SW=  7
+gu2                N   neck                         FI=  4 HP=  8 SW= 12
+e3                 V   to go out or in              FI=  0 HP= 10 SW= 12
+saj                N   head                         FI=  3 HP=  3 SW= 15
+la2                V   to hang                      FI=  6 HP= 11 SW=  4
+kij2               N   work                         FI=  6 HP=  7 SW=  7
+gana2              N   field                        FI=  1 HP=  1 SW= 18
+du3                V   to erect                     FI=  1 HP= 18 SW=  1
+absin3             N   furrow                       FI= 13 HP=  2 SW=  5
+jal2               V   to be (located)              FI=  1 HP=  7 SW=  9
+dug3               V   to be good                   FI=  2 HP=  5 SW= 10
+us2                V   to be adjacent               FI=  4 HP=  4 SW=  8
+si                 N   horn                         FI=  7 HP=  5 SW=  4
+mah                V   to be majestic               FI=  0 HP=  6 SW= 10
+je26               PD  I                            FI=  0 HP= 13 SW=  3
+igi                N   eye                          FI=  5 HP=  6 SW=  5
+il2                V   to raise                     FI=  1 HP=  3 SW= 11
+gid2               V   to be long                   FI=  2 HP=  7 SW=  6
+dumu               N   child                        FI=  3 HP=  4 SW=  8
+cag4               N   heart                        FI=  2 HP=  3 SW= 10
+zid                AJ  right                        FI=  2 HP=  3 SW=  9
+du8                V   to spread                    FI=  3 HP=  4 SW=  7
+de6                V   to carry                     FI=  0 HP=  3 SW= 11
+zu2                N   tooth                        FI=  2 HP=  9 SW=  2
+nij2               N   thing                        FI=  1 HP=  1 SW= 11
+hur-saj            N   mountain (range)             FI=  0 HP=  1 SW= 12
+lugal              N   king                         FI=  0 HP=  6 SW=  6
+kuc2               V   to be tired                  FI=  0 HP=  1 SW= 11
+in                 N   abuse                        FI=  0 HP=  3 SW=  9
+ni2                N   self                         FI=  0 HP=  1 SW= 10
+jic                N   tree                         FI=  5 HP=  1 SW=  5
+im                 N   clay                         FI=  0 HP= 10 SW=  1
+gi4                V   to return                    FI=  2 HP=  2 SW=  7
+a-gar3             N   meadow                       FI=  0 HP=  3 SW=  8
+te                 V   to approach                  FI=  0 HP=  3 SW=  7
+tag                V   to touch                     FI=  1 HP=  0 SW=  9
+gu3                N   voice                        FI=  0 HP=  6 SW=  4
+de2                V   to pour                      FI=  2 HP=  7 SW=  1
+da                 N   side                         FI=  1 HP=  1 SW=  8
+zag                N   side                         FI=  0 HP=  4 SW=  5
+kur                N   (mountain) land              FI=  0 HP=  3 SW=  6
+kalam              N   the Land                     FI=  0 HP=  0 SW=  9
+jen                V   to go                        FI=  1 HP=  2 SW=  6
+iri                N   town                         FI=  0 HP=  4 SW=  5
+he2-jal2           N   plenty                       FI=  0 HP=  1 SW=  8
+gu7                V   to eat                       FI=  1 HP=  2 SW=  6
+engar              N   farmer                       FI=  1 HP=  2 SW=  6
+e2-gal             N   palace                       FI=  0 HP=  1 SW=  8
+dub2               V   to tremble                   FI=  1 HP=  3 SW=  5
+buru14             N   harvest (time)               FI=  0 HP=  2 SW=  7
+a-na               PD  what(ever)                   FI=  0 HP=  0 SW=  9
+1                  NU  1                            FI=  9 HP=  0 SW=  0
+zi                 N   life (breath)                FI=  0 HP=  3 SW=  5
+udu                N   sheep                        FI=  0 HP=  2 SW=  6
+dirig              V   to be superior               FI=  3 HP=  1 SW=  4
+de5                V   to collect                   FI=  4 HP=  4 SW=  0
+dab5               V   to seize                     FI=  0 HP=  2 SW=  6
+cub                V   to fall                      FI=  3 HP=  2 SW=  3
+cec                N   brother                      FI=  0 HP=  0 SW=  8
+ba-al              V   to dig                       FI=  0 HP=  7 SW=  1
+an                 N   heaven                       FI=  0 HP=  3 SW=  5
+2                  NU  2                            FI=  2 HP=  2 SW=  4
+zal                V   to pass                      FI=  0 HP=  3 SW=  4
+ur11-ru            V   to plough                    FI=  7 HP=  0 SW=  0
+tur                V   to be small                  FI=  2 HP=  3 SW=  2
+sumun              V   to be old                    FI=  2 HP=  2 SW=  3
+sed4               V   to be cold                   FI=  0 HP=  1 SW=  6
+ri                 V   to direct                    FI=  1 HP=  4 SW=  2
+nijin2             V   to go around                 FI=  1 HP=  4 SW=  2
+nam-ju10           PD  what is it to me             FI=  0 HP=  7 SW=  0
+inim               N   word                         FI=  0 HP=  0 SW=  7
+gur                V   to turn                      FI=  1 HP=  1 SW=  5
+edin               N   open country                 FI=  0 HP=  5 SW=  2
+dugud              V   to be heavy                  FI=  0 HP=  2 SW=  5
+dajal              V   to be wide                   FI=  0 HP=  3 SW=  4
+bal                V   to turn over                 FI=  1 HP=  0 SW=  6
+KA                     KA                           FI=  0 HP=  0 SW=  7
+zu                 V   to know                      FI=  0 HP=  0 SW=  6
+ze2-er             V   to tear out                  FI=  1 HP=  2 SW=  3
+uj3                N   people                       FI=  0 HP=  3 SW=  3
+u3                 C   and                          FI=  3 HP=  2 SW=  1
+u2                 N   plant                        FI=  0 HP=  0 SW=  6
+tuku               V   to have                      FI=  4 HP=  1 SW=  1
+tuc                V   to sit                       FI=  2 HP=  0 SW=  4
+sig10              V   to place                     FI=  1 HP=  2 SW=  3
+numun              N   seed                         FI=  1 HP=  0 SW=  5
+me                 V   to be                        FI=  0 HP=  3 SW=  3
+kug                AJ  shining                      FI=  0 HP=  0 SW=  6
+kud                V   to cut                       FI=  1 HP=  3 SW=  2
+ka                 N   mouth                        FI=  3 HP=  0 SW=  3
+jectin             N   grape (wine)                 FI=  0 HP=  1 SW=  5
+hul2               V   to be happy                  FI=  1 HP=  1 SW=  4
+gun2               N   weight measure (load)        FI=  0 HP=  0 SW=  6
+gir4               N   oven                         FI=  0 HP=  1 SW=  5
+ed3                V   to go down or up             FI=  2 HP=  3 SW=  1
+dim2               V   to create                    FI=  1 HP=  2 SW=  3
+cum2               V   to give                      FI=  0 HP=  2 SW=  4
+bar                N   outside                      FI=  0 HP=  2 SW=  4
+a-na               PD  what                         FI=  0 HP=  3 SW=  3
+a-da-min3          N   contest                      FI=  0 HP=  4 SW=  2
+2-kam-ma           NU  2nd                          FI=  0 HP=  1 SW=  5
+za                 PD  you (sg.)                    FI=  1 HP=  2 SW=  2
+ur-saj             N   hero                         FI=  0 HP=  0 SW=  5
+tec2               N   unity                        FI=  1 HP=  1 SW=  3
+si-il              V   to split apart               FI=  1 HP=  1 SW=  3
+sal                V   to be thin                   FI=  4 HP=  1 SW=  0
+sag9               V   to be good                   FI=  1 HP=  1 SW=  3
+ra                 V   to beat                      FI=  2 HP=  0 SW=  3
+pec                V   to be thick                  FI=  0 HP=  0 SW=  5
+pa                 N   branch                       FI=  0 HP=  1 SW=  4
+nu2                V   to lie down                  FI=  2 HP=  1 SW=  2
+nam-he2            N   abundance                    FI=  0 HP=  0 SW=  5
+mac2-ance          N   animals                      FI=  0 HP=  2 SW=  3
+lu                 V   to be abundant               FI=  0 HP=  2 SW=  3
+ki-nu2             N   sleeping quarter             FI=  0 HP=  0 SW=  5
+jic-gi             N   reedbed                      FI=  0 HP=  1 SW=  4
+itid               N   moon(light)                  FI=  0 HP=  4 SW=  1
+gig                V   to be ill                    FI=  1 HP=  3 SW=  1
+gi                 N   reed                         FI=  0 HP=  0 SW=  5
+dug                N   pot                          FI=  0 HP=  1 SW=  4
+du7                V   to be perfect                FI=  2 HP=  0 SW=  3
+dijir              N   deity                        FI=  0 HP=  2 SW=  3
+buluj3             V   to flourish                  FI=  0 HP=  2 SW=  3
+DU                 V   DU                           FI=  2 HP=  0 SW=  3
+zar                N   sheaf                        FI=  3 HP=  0 SW=  1
+ur5                PD  that                         FI=  1 HP=  0 SW=  3
+ur3                N   roof                         FI=  0 HP=  2 SW=  2
+taka4              V   to leave behind              FI=  0 HP=  1 SW=  3
+sumur              V   to be angry                  FI=  1 HP=  2 SW=  1
+sizkur2            N   prayer                       FI=  4 HP=  0 SW=  0
+sig7               V   to be green                  FI=  0 HP=  3 SW=  1
+si                 V   to fill                      FI=  0 HP=  3 SW=  1
+sa                 N   sinew                        FI=  1 HP=  2 SW=  1
+pu2                N   (water) hole                 FI=  0 HP=  3 SW=  1
+nisig              N   greenery                     FI=  0 HP=  0 SW=  4
+nir                N   authority                    FI=  0 HP=  0 SW=  4
+ni2-zu             PD  yourself                     FI=  0 HP=  2 SW=  2
+ni2-bi             PD  itself, themselves           FI=  0 HP=  0 SW=  4
+na-kam-tum         N   storehouse                   FI=  0 HP=  0 SW=  4
+mu2                V   to grow                      FI=  0 HP=  0 SW=  4
+mu                 N   name                         FI=  0 HP=  2 SW=  2
+mi2                N   (loving) care                FI=  1 HP=  1 SW=  2
+me-te              N   (fitting) attribute          FI=  0 HP=  4 SW=  0
+ma-na              N   weight measure               FI=  1 HP=  2 SW=  1
+lagab              V   to make clod                 FI=  0 HP=  4 SW=  0
+kur9               V   to enter                     FI=  0 HP=  0 SW=  4
+ku6                N   fish                         FI=  0 HP=  1 SW=  3
+kij2               V   to seek                      FI=  0 HP=  0 SW=  4
+kar                V   to flee                      FI=  0 HP=  3 SW=  1
+kalag              V   to be strong                 FI=  1 HP=  1 SW=  2
+jiri3              N   foot                         FI=  1 HP=  1 SW=  2
+jicbun             N   (cult) meal                  FI=  0 HP=  0 SW=  4
+ji6                N   night                        FI=  1 HP=  1 SW=  2
+izi                N   fire                         FI=  0 HP=  1 SW=  3
+id2                N   watercourse                  FI=  0 HP=  4 SW=  0
+i3                 N   fatty substance              FI=  0 HP=  0 SW=  4
+guru7              N   (grain) heap                 FI=  0 HP=  0 SW=  4
+gur4               V   to be thick                  FI=  0 HP=  1 SW=  3
+gur10              V   to harvest                   FI=  3 HP=  1 SW=  0
+gij4               N   weight measure               FI=  2 HP=  2 SW=  0
+gi-gur             N   capacity measure (container) FI=  0 HP=  2 SW=  2
+gen6               V   to be firm                   FI=  0 HP=  1 SW=  3
+gaba               N   chest                        FI=  0 HP=  0 SW=  4
+ezina2             N   Ezina                        FI=  1 HP=  1 SW=  2
+ezen               N   festival                     FI=  0 HP=  1 SW=  3
+e2-nam-til3-la     N   E-namtila                    FI=  0 HP=  0 SW=  4
+duru5              V   to be wet                    FI=  1 HP=  1 SW=  2
+dur                N   bond                         FI=  3 HP=  0 SW=  1
+dub                V   to heap up                   FI=  0 HP=  2 SW=  2
+du14               N   discord                      FI=  0 HP=  1 SW=  3
+di                 N   (law)suit                    FI=  0 HP=  0 SW=  4
+cu-kar2            N   implement                    FI=  3 HP=  1 SW=  0
+bur2               V   to release                   FI=  1 HP=  0 SW=  3
+arad               N   slave                        FI=  0 HP=  2 SW=  2
+am                 N   wild bull                    FI=  0 HP=  0 SW=  4
+a-ectub            N   carp(-filled) water          FI=  0 HP=  0 SW=  4
+a-a                N   father                       FI=  0 HP=  1 SW=  3
+4                  NU  4                            FI=  1 HP=  3 SW=  0
+zig3               V   to rise                      FI=  1 HP=  1 SW=  1
+zag-ce             N   shoulder                     FI=  0 HP=  0 SW=  3
+za3-mi2            N   praise                       FI=  1 HP=  1 SW=  1
+usu                N   strength                     FI=  3 HP=  0 SW=  0
+usan3              N   whip                         FI=  3 HP=  0 SW=  0
+ur2                N   root                         FI=  0 HP=  2 SW=  1
+udun               N   oven                         FI=  0 HP=  0 SW=  3
+u8                 N   ewe                          FI=  0 HP=  1 SW=  2
+tur3               N   animal stall                 FI=  0 HP=  1 SW=  2
+tug2               N   garment                      FI=  0 HP=  0 SW=  3
+tud                V   to give birth                FI=  0 HP=  0 SW=  3
+tu-lu              V   to be loose                  FI=  3 HP=  0 SW=  0
+tar                V   to cut                       FI=  0 HP=  0 SW=  3
+sur3               N   ditch                        FI=  0 HP=  3 SW=  0
+sud                V   to be distant                FI=  1 HP=  1 SW=  1
+sipad              N   shepherd                     FI=  0 HP=  2 SW=  1
+sila4              N   lamb                         FI=  0 HP=  1 SW=  2
+pa5                N   canal                        FI=  1 HP=  2 SW=  0
+nunuz              N   egg                          FI=  0 HP=  1 SW=  2
+nu-kiri6           N   gardener                     FI=  0 HP=  1 SW=  2
+nisaba             N   Nisaba                       FI=  0 HP=  3 SW=  0
+nin-urta           N   Ninurta                      FI=  2 HP=  0 SW=  1
+nij2-nam           PD  anything                     FI=  0 HP=  0 SW=  3
+niga               AJ  fattened                     FI=  0 HP=  0 SW=  3
+nam-lu2-ulu3       N   humanity                     FI=  0 HP=  3 SW=  0
+nam                N   destiny                      FI=  0 HP=  0 SW=  3
+naj                V   to drink                     FI=  0 HP=  1 SW=  2
+mud                N   stump (handle)               FI=  2 HP=  1 SW=  0
+mucen              N   bird                         FI=  0 HP=  0 SW=  3
+lal3               N   syrup                        FI=  0 HP=  0 SW=  3
+kur2               V   to be different              FI=  1 HP=  0 SW=  2
+ki-en-gi           N   Sumer                        FI=  0 HP=  1 SW=  2
+ki-buru14          N   harvest area                 FI=  0 HP=  0 SW=  3
+kece2              V   to bind                      FI=  2 HP=  1 SW=  0
+juruc              N   young man                    FI=  0 HP=  3 SW=  0
+jic-hur            N   design                       FI=  0 HP=  0 SW=  3
+in-nu              N   straw                        FI=  0 HP=  1 SW=  2
+iku                N   area measure                 FI=  3 HP=  0 SW=  0
+hul                V   to be bad                    FI=  0 HP=  2 SW=  1
+henbur             N   shoot                        FI=  2 HP=  0 SW=  1
+guru5              V   to cut down                  FI=  0 HP=  1 SW=  2
+gu                 N   (flax) thread                FI=  1 HP=  0 SW=  2
+gig                N   wheat                        FI=  0 HP=  1 SW=  2
+gam                V   to bow down                  FI=  1 HP=  1 SW=  1
+eg2                N   embankment                   FI=  1 HP=  2 SW=  0
+dusu               N   earth-carrying basket        FI=  0 HP=  2 SW=  1
+du7                V   to push                      FI=  0 HP=  1 SW=  2
+dili               AJ  single                       FI=  0 HP=  3 SW=  0
+dam                N   spouse                       FI=  0 HP=  3 SW=  0
+cudul              N   yoke                         FI=  1 HP=  1 SW=  1
+cu2                V   to cover                     FI=  2 HP=  0 SW=  1
+cej6               V   to be hot                    FI=  1 HP=  2 SW=  0
+bar-dul5           N   type of garment              FI=  0 HP=  0 SW=  3
+bar                V   to set aside                 FI=  0 HP=  1 SW=  2
+bad                V   to open                      FI=  3 HP=  0 SW=  0
+ambar              N   marsh                        FI=  0 HP=  1 SW=  2
+amac               N   sheepfold                    FI=  0 HP=  1 SW=  2
+aktum              N   type of garment              FI=  0 HP=  0 SW=  3
+a2-dam             N   habitation                   FI=  0 HP=  0 SW=  3
+a2                 N   (right) time                 FI=  2 HP=  1 SW=  0
+10                 NU  10                           FI=  2 HP=  1 SW=  0
+&X;                V   &X;                          FI=  0 HP=  0 SW=  3
+ziz2               N   emmer                        FI=  0 HP=  1 SW=  1
+ur3                V   to drag                      FI=  1 HP=  0 SW=  1
+u6                 N   wonder                       FI=  0 HP=  1 SW=  1
+tum2               V   to be suitable               FI=  0 HP=  1 SW=  1
+tu11               V   to strike down               FI=  0 HP=  1 SW=  1
+ten                V   to extinguish                FI=  1 HP=  1 SW=  0
+tah                V   to add                       FI=  0 HP=  1 SW=  1
+tab                V   to be parallel               FI=  1 HP=  0 SW=  1
+sila3              N   capacity measure (container) FI=  1 HP=  0 SW=  1
+sig                V   to be low                    FI=  1 HP=  0 SW=  1
+saj-tun3           N   land registrar               FI=  0 HP=  1 SW=  1
+saj-ki             N   forehead                     FI=  0 HP=  1 SW=  1
+sah6               V   to withdraw                  FI=  0 HP=  1 SW=  1
+ma2-la2            N   freight boat                 FI=  0 HP=  1 SW=  1
+ma-nu              N   ash?                         FI=  0 HP=  1 SW=  1
+luh                V   to clean                     FI=  1 HP=  1 SW=  0
+kuc                N   skin                         FI=  1 HP=  1 SW=  0
+kislah             N   uncultivated land            FI=  1 HP=  0 SW=  1
+kac                N   beer                         FI=  0 HP=  1 SW=  1
+jectug2            N   ear                          FI=  1 HP=  0 SW=  1
+jal2               V   to open                      FI=  0 HP=  1 SW=  1
+huj                V   to hire                      FI=  0 HP=  1 SW=  1
+hi-li              N   attractiveness               FI=  0 HP=  1 SW=  1
+hac                V   to break                     FI=  0 HP=  1 SW=  1
+geme2              N   female slave                 FI=  0 HP=  1 SW=  1
+esir2              N   bitumen                      FI=  1 HP=  1 SW=  0
+en-na              C   as long as                   FI=  1 HP=  0 SW=  1
+ec2-gar3           N   work assignment              FI=  1 HP=  1 SW=  0
+e-ne               N   game                         FI=  0 HP=  1 SW=  1
+du6                N   (ruin) mound                 FI=  1 HP=  1 SW=  0
+dib                V   to pass                      FI=  1 HP=  0 SW=  1
+dar                V   to split                     FI=  1 HP=  0 SW=  1
+dag                V   to roam around               FI=  1 HP=  1 SW=  0
+bur                N   type of bowl                 FI=  0 HP=  1 SW=  1
+barag              N   dais                         FI=  0 HP=  1 SW=  1
+bar-ed3-de3        N   type of strap                FI=  1 HP=  1 SW=  0
+a2-la2             N   type of drum                 FI=  0 HP=  1 SW=  1
+a-tur3             N   hollow (of furrow)           FI=  1 HP=  0 SW=  1
+DI                     DI                           FI=  0 HP=  1 SW=  1
+8                  NU  8                            FI=  1 HP=  1 SW=  0
+5                  NU  5                            FI=  1 HP=  1 SW=  0
+1/2                NU  1/2                          FI=  1 HP=  1 SW=  0
