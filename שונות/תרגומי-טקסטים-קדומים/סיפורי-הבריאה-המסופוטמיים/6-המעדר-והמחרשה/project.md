@@ -30,3 +30,18 @@ Gen 2:5, 2:15, 3:23 (the work of the ground: the Hoe as the labourer of every se
 
 ## Progress
 (drafting; review passes (a) fidelity, (b) consistency, (c) Hebrew; verify and check_bible_quotes results)
+- 2026-10-22: header + 1–8 drafted (verify OK).
+- 2026-10-22: 9–19 drafted (the Hoe's first speech; 13–17 fixed for 122–126).
+- 2026-10-22: 20–37B drafted (the Plough's festival; 22 copied from S&W 176).
+- 2026-10-22: 38–51 drafted (harvest, storehouses, the gleaners).
+- 2026-10-22: 52–62 drafted (the Plough's insults).
+- 2026-10-22: 63–79 drafted (the Hoe's reply: precedence, water works).
+- 2026-10-22: 80–103 drafted (preparing the field; the Plough's team and repairs).
+- 2026-10-22: 104–121 drafted (four months against twelve; the Plough's mishaps; the Hoe in the city).
+- 2026-10-22: 122–141 drafted (122–126 = 13–17 in the positive; city, palace, cool houses, boatman).
+- 2026-10-22: 142–165 drafted (the king's garden, the well, the watchtower; the thirsty in the steppe).
+- 2026-10-22: 166–178A drafted (the catastrophe; "Enlil did not let us go"; winter and summer; the gleaners again).
+- 2026-10-22: 179–196 drafted (the tools' quarrel; Enlil's verdict; Nisaba). **All 201 entries drafted.**
+- 2026-10-22: `translation--intro.rtl.md` written; `sumerian_tools.py build 6` (201 lines, 7 footnotes).
+- 2026-10-22: **review pass (a), fidelity** (every line read against its transliteration): 5 (ETCSL's "even" removed; *šag₄ … kar* literal), 28 (no first person in *-ši-*), 36, 50, 156 (dimensional infixes are in the verb: no parentheses), 155 (*u₃-* clause), 174 (*me-en-de₃* "we", not "for us").
+- 2026-10-22: **review pass (b), consistency** (formulas 7 = 194, 8 = 63, 9–10 = 18–19, 62 = 159, 13–17 / 122–126, the refrain 138 = 141 = 150, 38 / 40, 60 / 90; every *ĝar* line has vocalized `שָׂם` (scripted); one Sumerian verb, one Hebrew verb, splits by sense recorded in Decisions): first-occurrence vocalization of `מַחֲרֵשָׁה` (6) and `אֶנְלִיל` (22); `פּוֹנָה` (20); `שְׁמָהּ` (185); plene `שיבולים` (48, 178A); 69 reworded (`כשמים` reads "like heaven").
