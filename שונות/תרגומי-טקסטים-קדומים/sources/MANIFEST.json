@@ -4552,6 +4552,19 @@
    }
   },
   {
+   "id": "ORACC/_bulk/saao-saa09.zip",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/json/saao-saa09.zip",
+   "note": "",
+   "files": {
+    "ORACC/_bulk/saao-saa09.zip": [
+     772800,
+     "194cf31112aadeceefc49f8988c190928d884321e403afd0cd0e29b36843b375"
+    ]
+   }
+  },
+  {
    "id": "ORACC/akklove--Akkadian-Love-Literature/LAOS4-01--P392087.html",
    "kind": "url",
    "tier": "work",
@@ -5037,6 +5050,149 @@
     ]
    },
    "member": null
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-001--P333952--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P333952/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-001--P333952--oracc-view.html": [
+     290126,
+     "78ef601d9ca27f11b907b7a71f95d841f118fe704391dff3dd2ccc075c8925bc"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-002--P337152--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P337152/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-002--P337152--oracc-view.html": [
+     278336,
+     "ec9a1b8f573ba56adfe881ce613739131d76c2fff0740a341df803fcef32cf75"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-003--P334927--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P334927/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-003--P334927--oracc-view.html": [
+     249059,
+     "6d29f60216667ee80041a9ba2f079947ffbf4c1750ccdcb4e7ef9ab58a5b7a23"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-004--P336677--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P336677/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-004--P336677--oracc-view.html": [
+     20739,
+     "685fc6d073b61f5bb2c9d85fd7794378c4b0186bb02df5f2ca0383b5b367963a"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-005--P337153--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P337153/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-005--P337153--oracc-view.html": [
+     45436,
+     "345811637cf96e58d19113174e7f09acbde89942b533082858c35f88d3af023c"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-006--P336678--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P336678/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-006--P336678--oracc-view.html": [
+     52086,
+     "bd9c98c0d6b0bb1490415339643dc246e041c0b0350dff1248305c41aa39595f"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-007--P334928--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P334928/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-007--P334928--oracc-view.html": [
+     81233,
+     "470c6bdec7fa4356df25039f2523d86af68ce81e0cb1302b9ecb3799318c491d"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-008--P334828--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P334828/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-008--P334828--oracc-view.html": [
+     24364,
+     "e15bb32c8721b1441d2753d1e63eb5f2183dd4874428462b4a07bfa478913862"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-009--P337163--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P337163/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-009--P337163--oracc-view.html": [
+     69691,
+     "79f6c4bad4ff49594e02ee87621ecd2cb67dc4829a4cd628c955b66dff31a2b2"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-010--P314355--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P314355/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-010--P314355--oracc-view.html": [
+     35458,
+     "a6c2efc9344e5dc6b6027ad9513edb352d32091dbb47aa863f72e7c44f7f7fd4"
+    ]
+   }
+  },
+  {
+   "id": "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-011--P313634--oracc-view.html",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://oracc.museum.upenn.edu/saao/saa09/P313634/html",
+   "note": "the ORACC HTML view with Parpola's translation (needs tools/certs/)",
+   "files": {
+    "ORACC/saao-saa09--Assyrian-Prophecies/SAA09-011--P313634--oracc-view.html": [
+     38627,
+     "e43fd1205dd58e0b93ae6221357f78a249930e963a90ac70620e6ac53ca11593"
+    ]
+   }
   },
   {
    "id": "ORACC/tcma-laws--P281779--Middle-Assyrian-Laws-A/P281779--oracc-view.html",
@@ -6655,6 +6811,46 @@
     ]
    },
    "raw_files": 194
+  },
+  {
+   "id": "eBL/Advice-to-a-Prince/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "5",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Advice-to-a-Prince/_raw/chapter-display.json": [
+     1395950,
+     "d8e1ac238cd53798e5947dd7f0aa16df543b272dc8906d9e4ddd56220c4e6bb1"
+    ],
+    "eBL/Advice-to-a-Prince/bibliography.md": [
+     2526,
+     "cb82c1056addbdbb299c6b1dcf2936d8e3eda50f011aa1c465bf5076158674be"
+    ],
+    "eBL/Advice-to-a-Prince/chapter.atf": [
+     20746,
+     "aad165925c7e6713279214a7f609f56688a3495b4935fcab00d34e0c3176abc8"
+    ],
+    "eBL/Advice-to-a-Prince/glossary.md": [
+     58005,
+     "136b0ae19970c1de29de4e29ad7892d6de0c7ee5d2c9fe7ca58f001e5ae30682"
+    ],
+    "eBL/Advice-to-a-Prince/manuscripts.md": [
+     986,
+     "48a5fbe4b6a8513246b8914d7e1667a5f4472d5de5fc0f5cdf472cb77704a103"
+    ],
+    "eBL/Advice-to-a-Prince/reading-edition.md": [
+     43212,
+     "afefc7f087f2625df0b43b16ca7d7ff7a9527c29d45cdf5a7bbfa07bb76d2c4c"
+    ]
+   },
+   "raw_files": 177
   },
   {
    "id": "eBL/Atrahasis-MB-Bab2/",

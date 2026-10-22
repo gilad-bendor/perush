@@ -105,3 +105,10 @@ Fetched with `tools/ebl_fetch.py L 1 6 "Middle Babylonian" -` and `… "Standard
 | `Etana-MA-Assur/` | Middle Assyrian, Aššur | 160 (a+1 … i+18) | AššMA1–4 = Ist-A 142, VAT 10291, VAT 10137, VAT 10529 (Haul 2000 MA-I–IV) |
 | `Etana-SB-I/`, `-SB-II/`, `-SB-III/` | Standard Babylonian, Tablets I–III (Nineveh) | 40 / 152 / 131 | NinNA1–7 per tablet (K 2606, K 8563, K 8572 + the "Marsh tablet", K 2527, K 1547, 1882,0323.6, K 3651, Rm 522 …; Novotny 2001's sigla in `manuscripts.md`) |
 Fetched 2026-10-21 with `tools/ebl_fetch.py L 1 9 "Old Babylonian" Morgan|Susa`, `… "Middle Assyrian" Aššur`, `… "Standard Babylonian" I|II|III` (slow: one request per dictionary word, ~15 min in all). Edition: Z. J. Földi (ed.), rev. A. Hätinen, E. Jiménez, G. Rozzi, with J. Novotny's digital edition; translation B. R. Foster. 585 lines in all; the end of the epic is lost. eBL's `Parallels:` field links the versions line by line (OB Morgan 1–14 ≈ SB I 8–16; OB Susa ≈ MA b ≈ SB II 1–72; MA d–f ≈ SB II 133–152; MA h–i ≈ SB III). Not available: Kinnier Wilson 1985/2007, Haul 2000, Novotny 2001 (SAACT 2), Dalley 1989 (cited through eBL's notes only). License: as the other eBL editions (gitignored by `eBL/*/`; restored by the built-in `sources_sync.py` rule).
+
+### Added 2026-10-21 (the prophecy-and-kingship corpus, `נבואה-ומלכות/2-עצה-לנסיך/`)
+| Folder | Text | Lines (eBL labels) | Manuscripts |
+|---|---|---|---|
+| `Advice-to-a-Prince/` | *Advice to a Prince* (eBL `L/2/5`), Standard Babylonian, chapter `-` | 55 (1–55; 45 has no normalization) | NinNA1 = DT 1, NipNB1 = IM 77087, NinNBQuo1 = K 8681, NinNAQuo1 = K 10182 |
+
+Fetched with `tools/ebl_fetch.py L 2 5 "Standard Babylonian" -`. Edition T. D. N. Mitto (rev. Z. J. Földi, A. Hätinen, A. C. Heinrich, E. Jiménez); translation B. R. Foster.
