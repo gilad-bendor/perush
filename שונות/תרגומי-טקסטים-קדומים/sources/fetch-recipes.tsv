@@ -128,3 +128,4 @@ eBL-fragmentarium--Sargon-Birth-Legend/K.4470.json	url	work	https://www.ebl.lmu.
 eBL-fragmentarium--Sargon-Birth-Legend/K.7249.json	url	work	https://www.ebl.lmu.de/api/fragments/K.7249	eBL fragmentarium record (no transliteration of the legend)
 eBL-fragmentarium--Sargon-Birth-Legend/Sm.2118.json	url	work	https://www.ebl.lmu.de/api/fragments/Sm.2118	eBL fragmentarium record (no transliteration of the legend)
 eBL-fragmentarium--Sargon-Birth-Legend/BM.47449.atf	adhoc	work	eBL-fragmentarium--Sargon-Birth-Legend/BM.47449.json	the json's atf field (col. 4', a fable extract)
+ORACC/_bulk/epsd2-literary-unzipped/	unzip	work	ORACC/_bulk/epsd2-literary.zip	extracted from the bulk zip (used by Round 3 tools)

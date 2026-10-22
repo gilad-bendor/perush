@@ -8655,6 +8655,4291 @@
     ]
    },
    "raw_files": 623
+  },
+  {
+   "id": "ORACC/_bulk/epsd2-literary-unzipped/",
+   "kind": "unzip",
+   "tier": "work",
+   "source": "ORACC/_bulk/epsd2-literary.zip",
+   "note": "extracted from the bulk zip (used by Round 3 tools)",
+   "files": {
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/catalogue.json": [
+     1058156,
+     "8928ab74cb0e0f39b295c097639a649157723583924ea287897e42e837673e1e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpus.json": [
+     43266,
+     "60bba706bc27575d590f62d3476051c6d22ea8bae83f3a4f476927541c7133fe"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P209784.json": [
+     11572,
+     "c0bd98e7ee29b5046ccc776aec16618164ea1a11f8a2013c5295f40cbcdb7fa7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P223477.json": [
+     658025,
+     "dbd8d65ffbc05f722fa1cc5b11b8b5578b535f567d08e77ea1355db49343174e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P230524.json": [
+     25948,
+     "6c6e1153bab29ced5dae3e47eb5816c853373d815981f3d84e808c951494fe15"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P251427.json": [
+     364218,
+     "41b0b177f588103af6424e2ff34fde2a3ad21a868c83668e01b0c2420bb71117"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P251713.json": [
+     549167,
+     "ef4985f512660e76bbcdf7f6909deb50b13a84e4c9ca6c6e5746b12a1a788d88"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P251728.json": [
+     129098,
+     "4ea023ea4a346ea1c3af46d5c76a8b736611740315964bf7b2f454e382a15111"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252215.json": [
+     120573,
+     "c7306d3aa34c55f015f7314f2fd89f3c45be6c45fa2e412770c3a752a4ce1bd6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252238.json": [
+     108351,
+     "272c07dcae16d18e240639775bc4adceccb3eb9b277a9b6ed89f13bdade79dc8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252242.json": [
+     270752,
+     "7c0b6e0bce87aab3a07d182abe8d5810bf6b4eb0a5d881f0c9aa1ce5a9a18938"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252255.json": [
+     143928,
+     "8467d1e6b8992259790851a09450a1c0984c0aa6f28ecd0746ed9160d0f12bd4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252270.json": [
+     430251,
+     "a06efee221c87771158ced4b5836486a226b0ac4866ba5d8c6ab45c022c1ccc9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252288.json": [
+     229060,
+     "47eb1852f8853cc68d364a695a22ded4a4e2207e26e95d744d20bb2b4580540c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252292.json": [
+     54397,
+     "7647be57c001f62e253ff9dff7e9291e516f4d98b02f4efd3b1bed76a689df35"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252296.json": [
+     279557,
+     "cc26f074284522318b7bbe6ec511e7e5f6555cf85a7f0d43fa721c7294752983"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252311.json": [
+     28132,
+     "aea7ae64fd289f7ee92b817b7bd2607e69425377bcddbb62b39ee908158d20a1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252331.json": [
+     90869,
+     "c02ad89f2f3293fa44961c38c445d581881e44bba6d39c4a3fb5fd101ca95157"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P252333.json": [
+     864967,
+     "c089f6600e390e2df79647562239d1a58911115e6b0f208174da64091cf8ac5e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254171.json": [
+     431804,
+     "e81b146e5e2d78c9c694e67245e4f31388b2f14e55f84373dda531c3a4552087"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254175.json": [
+     313968,
+     "2df9810062e2c73b9aa3502a46dff30de91a7da1cb96051c5e9dd2f00c3e01cc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254855.json": [
+     18276,
+     "93d0dcc49d874eace9ccdbfdbc42f7e21f39127cf5973bfebd236f2ee63389db"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254856.json": [
+     32321,
+     "ae61091500d30c3a6198ae88e31ddb9f8d70118aed9da4046107186deb45bac5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254857.json": [
+     16892,
+     "29b93485f6e7c066eb0a9d3ada46c672fbd833ead9bc420d8364d8df5643c844"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254858.json": [
+     20480,
+     "47e3f10379602b1ac819f7fceb1ec5d2bd0c5a0a06a2d0d85615900360f18ed5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254859.json": [
+     14242,
+     "e3633d189e98ceb92dbc9505fd23db000f08797c5e94ea5b6ea98e3daa54e32d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254860.json": [
+     13143,
+     "09c89e8ae064f76117c48299f5544732d3a3e917316a05eb6a09bf283aaee715"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254861.json": [
+     12627,
+     "e930a14ffb3ecaeb67a2ba61ff30973405b550a43ac96e30daf78228e4ecd591"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254862.json": [
+     13043,
+     "52cbc684ae3c8805f2a983a49334c7ae2f5857f6f4347d75386407c35d1e093d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254863.json": [
+     13930,
+     "b4ae7a44be905242fef0d82ab598e540a264270103adca25f288c113f81a014d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254864.json": [
+     21533,
+     "59c495e7ea1356e611ee0aad4f7c90f3f665005eb708ec4aa53d83ebd44d82c5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254865.json": [
+     13073,
+     "21c5235ea639b390956a79f193d39641cd9c70f568d6f816e0da7a474472b4ff"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254866.json": [
+     48251,
+     "f0e2de09a88d43e50cb8244759293da2170add0ad8a047a14a6ac7c5e0ffdbb0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254867.json": [
+     40822,
+     "d33f751bacd4ed51b000bb8fcbe4bfcf40ef3da34c192b3d8ff5d582f39ab2cc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254868.json": [
+     31789,
+     "f3070bcb9e174b5c2bb0b0961260978a813024b27afc5aa116ba54b6096038cd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254869.json": [
+     14341,
+     "afb5b91925efff28816d4e80a47c97e5f3be48632e00b9087896111fbd532b5b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254870.json": [
+     15031,
+     "57230eda397e998a1f05c884b3021740f9547cf13a24fafd37625cac37afcfba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254871.json": [
+     13774,
+     "3ae2259755e9f790263550cf9886da3a3616b706a0289c4e216b8d47c85038a0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254872.json": [
+     23229,
+     "804f28ca1a379ded59413c30432957d4de1c62d12e8ee985c28a3cb93979a820"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254873.json": [
+     18402,
+     "22ec760ac87ab8413995f2abfbc635519f5b907c941bb2914b39436f4e4e9846"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254874.json": [
+     10121,
+     "f60d578bdad85032a923cb21ee506a74a983f052a5fec29d40622abc8349b60c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254875.json": [
+     16509,
+     "85e9e1d219f9b62e3ba24b1696ee0f991524c5fea0adbf53fac757483169123a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254876.json": [
+     32448,
+     "45c8dfbb91d7903e1053ef2b93c2cf36c04fd619b05b297323d69a0ee11c6758"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254877.json": [
+     20174,
+     "5aa850390fb80364ffd27a46f6f0f7b2c7a4d39eccffe78269ba2453517f72db"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254878.json": [
+     18282,
+     "f30a305e4679ee0b76b895c7a55c502342342738f9996e281641df4110641925"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254879.json": [
+     16959,
+     "d1c4a3097c1ea335f5dc17612f75acbcbfecf99d9215f5c380bbee4b42326c45"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254880.json": [
+     11064,
+     "29c0a54f852436483b8233aed597f8659096e2bfce7b94b60bb07568162fec99"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254881.json": [
+     15035,
+     "754b730cafa78aedcf3a8adcda728114ae9c9090b3e04b835818b469aa6f38e0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254882.json": [
+     23886,
+     "956838079e0f796b3b0c7e43767e406c04bc89d7f4130d531b8ada210bd242b0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254883.json": [
+     18986,
+     "667a6d100e5879dcd9044039db16252177e8cfe917f7f598157cbc3cc0e81481"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254884.json": [
+     17028,
+     "a74b4fc6366c239a4aa03a37192d393f72b461ab6b81aecc4f187bb5937e2af9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254885.json": [
+     41109,
+     "1faf60dab3379108b28ee69a35deb7d3693406176211ab4d2025ccd223b56a61"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254886.json": [
+     18429,
+     "03be1d5b7dcd2566a7cc24f427ca65f2b85bdcd8cba0a5e69daca32af0ca2b43"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254887.json": [
+     18236,
+     "39cd46a557f6a662f6e4bf175860a6dc5619706ff41ca7da8909aff78e8cd663"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254888.json": [
+     17063,
+     "c5967cae5e09a54e8ebfc6ed0362c6707685847a34a224104d99949447b0d797"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254889.json": [
+     16643,
+     "e4706a5e3270d88f40600f0cc0d0efd97c789db706b510869b8763c377ad2691"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254890.json": [
+     21469,
+     "bf5693ce875ed56f605a3506056b3ae1fb6992e0b9f284888369d4f5e2235558"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254891.json": [
+     13333,
+     "8be9b71c3ece27da0ae06cd21c57eee905cbfd25f8cbb51327ceb7b42313fb60"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254892.json": [
+     22513,
+     "f0f3c9b8ced83a04491eb5a51c722a9365f5884b9c467e5eaf654e39ccef2e86"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254894.json": [
+     59740,
+     "821325907d2ecd8044a9843efec2410705f09f69b11685380d3df2b22001e433"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254895.json": [
+     14145,
+     "4b8fa5bcf1d4cab7866b2939831a4458dc6e9452218a5d204f9203e4095cab59"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P254898.json": [
+     24384,
+     "05e9456ac2e3fcb1ff922396e9fb21add26296f34d791d387d3f1f15ff41fe5f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P255173.json": [
+     47507,
+     "12196d1b5cef00ef6ca3f62722420090de9e4782ad1aedb34b9180d0cd0ab0d7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P255385.json": [
+     119786,
+     "4e26aa90ed376a75f8c7f6859517d1c0920ab9c354f47707299b6bde34da9805"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P255673.json": [
+     199234,
+     "569659e14b53a6d8794d6dbf044916b0c4cd6b9db013897f9f09f6d66f3c094c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P257202.json": [
+     222160,
+     "99f8ac75950376ea9668bd47990c3f47dbf365f474c4a34f26e2a69a30bc751d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P259276.json": [
+     243680,
+     "424bb8d29575b641557c3912e50f6fcfaff90f56fbbe5dbf9382fcdba082d14c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P259293.json": [
+     215215,
+     "1918b9cf961ac116b5b633fe436f312337ba1151732362198f852e80d26912a5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P260900.json": [
+     17831,
+     "e33bb0ff3e9f0b8aff60575f1247ec83050c326bd85b92de3f1598bdb9264469"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P262917.json": [
+     81794,
+     "cf710c4de30f0eee89dbeb9cde7de5d3f8562a9536e430d52480668543064fa3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P265675.json": [
+     18402,
+     "c0a239aee627d62ffc299aa0fd9406e96346ff4525bdf61e5be689fb732ab512"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P266340.json": [
+     240480,
+     "1c13a3a02dba1ed353ad8ef5636d6ab2a772b1ce628367bec15ae3bd5b5ae4f3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P266919.json": [
+     119679,
+     "6cbeea193e3ba22fc97ece6d6fd8f0a0a046acc68f17661442b63f9be07d9ff7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P267228.json": [
+     223838,
+     "5bbdd3753421525403ce098ce9ec696323a9696513302d92e3800326a7ecb42b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P267348.json": [
+     46098,
+     "46d415ba874ab7371b27bc01d203295db98ffe3c96bbeb45c40792ddf5415fe0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P276461.json": [
+     30570,
+     "913789069d929bd59814625d104d476e07ab43050eb918ef65a3e298eefd7c68"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P276487.json": [
+     148267,
+     "e7d526a0796d8306531564606ece8d5f505fd2b4e3278b464588b42cee752926"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P276528.json": [
+     643625,
+     "e89a8ef917d2af6446619b9c46fc20896b8aec00ddded07704593657901e4ea1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P276603.json": [
+     34572,
+     "f604b4e3cd5192f1c5626693218f06ea84d90c7f6aeb0104fdb4e0ea006c57ca"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P276620.json": [
+     105514,
+     "2c8daf475066705152483bde767b094edca5c871f58025b198158d3d10d55509"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P276872.json": [
+     123452,
+     "332fce790d83e65b763cfe4c6d78d6949545dd50013f9a705ec4127819f6a393"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P278368.json": [
+     477673,
+     "abe0d87ef359c8162b5f2dd21c6642d0279925b008b4f3042736c93a277c18a5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P278396.json": [
+     129078,
+     "9acc586b0c3ae02b05a290ba39b4ad9ebc9a14751280a12caaaa94861d5fcbcb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P278618.json": [
+     63131,
+     "101cc6a83602279bb549e3ea103f9de0556aa14026d9752d80608ab61af96240"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P279841.json": [
+     122529,
+     "127c78f0f29f642ecaada790b48b6cba7cad30a7245ed3a2574a101516ee016c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P322208.json": [
+     389135,
+     "daca0538e3c26a91794fcd5f81297aa626d57e3910737cbf35feec97de48bd5a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P322811.json": [
+     357982,
+     "b500378752a6f60a726bf8c273e9c25ae2c963cea0f7edf8ab626ae5f3e19e67"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P326117.json": [
+     46894,
+     "15a1932c8eb3af87f062326cd6303d532fe239b8a6af6fb2948a16fdd367d82d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P329366.json": [
+     16817,
+     "527801434396523860d97faf1c4ea76ee67373b02c629f83d2a51781c4726b2e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P329601.json": [
+     24430,
+     "7f7fd8acb7108446ecc04e70239de58875c417a6783ba7988633d93297beb95e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P329862.json": [
+     51228,
+     "11ea085eea846d6fa9f7ae2d7f39054aaa65861f3688a46acf7caa81360e922c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P330126.json": [
+     104102,
+     "a1821e831e7642848301f48b69efbac9acc73204377dc44069356106044ac716"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P332684.json": [
+     18316,
+     "a3dff0e2d674059769a975e81a6f4b5af64d3a036ca3101fa16fe2172b4bc0e3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P332685.json": [
+     15729,
+     "a5ba116e2e9bd45ce72ed939b02b757dd1ca4d2c1056d64318e2f2f77d6f1382"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P332688.json": [
+     31094,
+     "99d38fc1732e2093eba55d8035290a1e6a779cb638e00036070fbbccd10c47be"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P333397.json": [
+     224428,
+     "70f4d23e9e9f7c60eb0be70473a52705be900a286bd0eabbae77786943a0a3d2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P343009.json": [
+     153143,
+     "073fc76f8c6182d469481cfa7328cd2389c892275a16d90bf80ad8473bd809b0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P343054.json": [
+     59652,
+     "6fd672e4bab1934cdccb272f8f4265d4b8dd81ce1621f188b39e5d1e556a1bda"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P343176.json": [
+     40065,
+     "f1574e94464855dad47429f401e9ec870820694971b7f7496ec355167b55ca5b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P345268.json": [
+     183762,
+     "c5c7296c8f7c83694d29788d6cc155b6534da6ac26d537b0d845742678bbcfe1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P345645.json": [
+     337227,
+     "35f53e46a2d0d43927fe19781c56d467dc80778f45244071ceb403db4d0016be"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346086.json": [
+     503933,
+     "69377a09e6aa488d9ccf8876005d89420abcaeb8967baa0daafdac978332bbad"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346087.json": [
+     643997,
+     "66147a4c96483c475428adde391b62d413a9d65d01562e50afda314118497eb4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346097.json": [
+     335862,
+     "b41fe9a66abee4274440a92ae8aee67e2e6dcff8bb7aa5f14713884e14456949"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346098.json": [
+     275919,
+     "abb462f9bbb27f78e0c3020fd255e0c190c0244f6b8d06443b59491302ff0199"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346099.json": [
+     215942,
+     "09539ba84753746bd9bb60884fcfe8581ea03704bf17e7b909b6c550ecdfb397"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346100.json": [
+     231655,
+     "0205d3aea03ce446b2d0c5d20cc0555e60a3024d0eb68de5f3703c89c9d957d2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346101.json": [
+     58575,
+     "e66e81a42b382bc57b67b60f675382d716ba84c5c2173ca97e259c29e73601a8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346102.json": [
+     246368,
+     "64a839dc7a707d3da300c0c40cbe09185628c2821b99cb2a58fdcc894b5e63ef"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346103.json": [
+     151638,
+     "1824e4b9169d5dbcd595b3c5a3a477e62abb92dea5e389b60e6be734c6c28c3b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346104.json": [
+     342126,
+     "afead8a1af7a95fa0cc9f82029583fe73dde5c5c1078a82a132db39b15233c01"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346105.json": [
+     114087,
+     "cda0566eca68765330120a964b40946d5d5a79bc1f2cdd63f3884c82967cd0fa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346106.json": [
+     50806,
+     "5af68b1e5d776d685d843f9a495bd10baa838b28757a19cb444a23ba6736a232"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346107.json": [
+     333916,
+     "573ed57c55e98d386603efd2847df95a49d7ac6645f35286759d505217368c51"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346109.json": [
+     128294,
+     "657de32a4def6aba69947f9d56b4dceb86a5412e30a66786ee933550b1fdb20d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346110.json": [
+     198127,
+     "af615979fd35509158322840013b3507771b4623d67c3ff20ece90aca3ddc398"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346111.json": [
+     231028,
+     "f375d766c95fd071599dc345728e44ee1d370ac181400f94e7aecbe9029aa0ff"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346112.json": [
+     329439,
+     "cc9d64f2b1a701d4bd97d7f8c979e96f5099ccc46e702e8bc572a5a653d5ffab"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346113.json": [
+     159265,
+     "7fa8d993ee01af5e93c8d9edfbce593f97f0d48f89018256198051099d135639"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346114.json": [
+     191930,
+     "b7d5bdc43161f4853191a5e60a49b9091ddce065f48a43022799252ad7472f90"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346115.json": [
+     262585,
+     "b1600cd5e46086afadd3ea36d6e622d819f6abbb9d5877ab1a5f1c7565c25588"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346116.json": [
+     190782,
+     "6910c583697b66398bb5ac72c2fc2646e24688cf769c19f9977d726464199de5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346117.json": [
+     47247,
+     "131c2cf178792f6dbb4355c6de78ee53dd135a335ad41f6dca41f4dc85353ac5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346129.json": [
+     157592,
+     "904c10c70bcc2d0437d469c197b997a5f62c5e206eebf15abb7896b4f9922610"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346130.json": [
+     547094,
+     "6eb6896d8374d3c873c78cb5b1f8ad196ccc29f4c58b7cecc7b6d4353095f554"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346131.json": [
+     164209,
+     "3eb7ccdc61feac870eefa78ccfd4c5bfcb40689f1e2c00eadca73c88e977b85c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346132.json": [
+     474946,
+     "fc2cf85e20e988406c6cf8c4d087d680cb1a57a6a807e6f7c8b73bfc72a46bd1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346133.json": [
+     200367,
+     "d1170d94e3d4125479db48ed88edfc2e47cd1a1916974c2e4b8712179541ff35"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346134.json": [
+     255060,
+     "862722fdbd0547bb8973e8c39912e405477e143b44fdac06b998bdd30af431b9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346135.json": [
+     638397,
+     "11dbb5c4614585af5c569c6ec83606c818ad7d785d090d174cba2ad5d40073a9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346137.json": [
+     229146,
+     "f684adbae996ddc483cc6a1d36268a871ee732d80d10aef41aeff3e21d2740b2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346146.json": [
+     122132,
+     "ecbb6590f1999d66392cff685920c9323cb4a508f0b9f2415846239ee7527e9b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346147.json": [
+     92675,
+     "45951f9fb97f596c6624343c2fe800b4b1036b27486ac869d507c4af89e5bc32"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346148.json": [
+     100668,
+     "8bb0ef54778381c9aa35ecb64e0cff32f44dde1fa9b04429c9b535e8de5299c0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346150.json": [
+     191895,
+     "592fb97610889ba111fdbd294d237e29b5457aee79471b861178bdc031176c94"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346151.json": [
+     192285,
+     "bb29ce9db75328d5ea412c6756639077ede0b8c3e252e6ee40baf83b9427d546"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346152.json": [
+     778846,
+     "f8ac941dcec47e46e286d3d84698a24565d7ae7773f19ecfd60737aa1e29f00f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346153.json": [
+     333852,
+     "f0997d4e200a4f70e4d31ed0f9c0e0faebd4edd3f3afb4da7c1473f58b26b899"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346154.json": [
+     317709,
+     "8344462bd8eed1f27e2a4796c6a25111d4329f416cb5bac2a24022dbd590ff01"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346155.json": [
+     220748,
+     "7f22a16334cb6515ddd5f69a9a65973e1105fb764d274efa13b95b317e543f50"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346157.json": [
+     206646,
+     "49f60ff11ac5398a4366b6f5d0dd4325545fd95e14774a791a0a354928f84498"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346158.json": [
+     179356,
+     "c8a6ed5553682b7dc1f945210f5abab1989885ceda612ae2086aab8ca9923f59"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346159.json": [
+     382063,
+     "3ac91218700ef84228fe05a7ec8d46536645cd0557f09b76858380df5c38e6d7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346160.json": [
+     64087,
+     "c4821efed42911a0228acb183f10f8fe450be6d0df2417b629a2a9e09723e84e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346161.json": [
+     299501,
+     "d4e3cf4bd9947fbd82378208f0227aed78956176eefb625a1eab94187e8e7cca"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346162.json": [
+     212684,
+     "95bf62ce67571c1048d6f3657357fc49a09d1140a7a11d61ae682b3b8005417b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346163.json": [
+     729464,
+     "ce064953166ce6e0fb95ef1b6f145501fffb6a4c92b5284cabb44f36110cea4f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346164.json": [
+     269604,
+     "ce1e7a79114a7eeafe36d4005b3b548c10945f53c9e95762320f9f8a339abd7e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346165.json": [
+     217277,
+     "fcec29a12223c1bdf13d2908c1d3dfc00f99b9003b3a866589dd68fb1f59bc2f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346166.json": [
+     514252,
+     "61702ba108497b299be4cf090094f837ca200b7375fdd1db4afd51c7967d2c2c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346167.json": [
+     218453,
+     "79fb13bf3ce41e93a895842146f0c0ff857af628cbbac481d85e0d4b4d1503d6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346170.json": [
+     348135,
+     "678662c6c6659ddeba36de54a19286c19558eee780efd7f8fa067a203edc6544"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346171.json": [
+     241068,
+     "17e0c80a30fa346a2cad812aee2fe956e337687bf5d692a618eec6cd85d7d9d5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346172.json": [
+     245888,
+     "21480b1d785dc4b6f2959738a9175c92d6b2b062c34da55a6e304427badd376e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346173.json": [
+     249588,
+     "d996836b07b55f512ba8bcd41ce7b2c92bfdd1842e17d844121cc0e6748079a5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346178.json": [
+     330996,
+     "3e37ecb19be524f60e17243fd8a9e5fe324f2029b65758337439a96845a57725"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346179.json": [
+     180366,
+     "1a6d833a567b38137cecacabd7b872cfb1b8d4cfa6be2ee787e75d2d8a72df79"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346181.json": [
+     238455,
+     "ca0366f35c6836f1428e6ec9058580c5754dff6c69a75b01754dbe999c547463"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346182.json": [
+     182877,
+     "4a12ebba9df70462ba988655eab9725d8d3788c2677f7fbf41f94d1ea894d29b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346183.json": [
+     230746,
+     "436558b762e5dba1dd46a393c663cac6af386d4f2931916f98535cc0e2c0ac3a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346196.json": [
+     396716,
+     "1b4a874b463f0179ed0472a44d5133fc671ddc8f7d55bed63518766500c0a6f6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346197.json": [
+     262137,
+     "f8333602d99b719a7a7b3c5d1d9372400011accb736c18b7af90972dfaf44238"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346198.json": [
+     702628,
+     "a4a096ec07faf1d815fc23781aaa17f5522c963e46d3e544b22c6c83fc6279c6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346199.json": [
+     154228,
+     "cce9f1c3cc58e2ca2f65c0239652a094635b19da7f934487bba17119b067dfbc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346200.json": [
+     138798,
+     "ee84aa50ae5493861c65eceb47a7e890c13e5f31c1e89b24ba8714061f0562b9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346201.json": [
+     199481,
+     "8f3cac79b03c296ea92b7ff72d071f5485f7894b0ca3f52eeec6757428bf3240"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346202.json": [
+     75073,
+     "c06e26b21f54173e94990b1c6084b35a57c17e8058825903fb82a995cc604d29"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346203.json": [
+     452539,
+     "9530094132f63be5bdf4dc81cfbd32c43104e47883e1a79d28bfded7cbd14253"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346204.json": [
+     923091,
+     "fa4efb22a49bcce1a9bb83ec0e646866524388b98e3bf4c9d99ba44b76ebb76a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346205.json": [
+     115863,
+     "7f470123d13c946b09dc18f8d68ab4926e7153825318cbf9c2d5c203e98a87cb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346206.json": [
+     125389,
+     "9a7061462bd220e0f59727faff18825908518b1e9e8569a980c71777f27c0b2e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346207.json": [
+     96944,
+     "96de66a99df604b8968486c94c8c084d95d29f890a3639434968af4439046be3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346208.json": [
+     257357,
+     "990e7461a4ba40762311bf378b65908b6d5e49bfd68763828aab3ec8d0205bba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346209.json": [
+     744011,
+     "6941ffb70515b998dd3a1f019fa6d830562515b23c7aa1a94967cd1045671c9b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346210.json": [
+     121401,
+     "d7ca96e05a643516b4f11658384cace76564475e55cb2d5c30bef8c4cfeb67d4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346211.json": [
+     577134,
+     "afe097dc63b0a6f362e56376be3be05913922496e480584142931ffc24f741f8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346213.json": [
+     760003,
+     "065cc04ced919a555491f6063f0234a4d91edbdcabf2d3249cbe65f77c3ccbc9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346214.json": [
+     230653,
+     "685ae6f1ad58cd1800532d972c9b86c2bdfe2eb4d5840dd3f949af90f83660ab"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346215.json": [
+     330279,
+     "bf2f381a53d345486f0e6c170d4e2d92d674605b6a911d039f96e099dfbfdbae"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346216.json": [
+     685363,
+     "900b0f16fab17e8bd648792b295a3727660164362ca3ec0df6a8cfc823620de6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346217.json": [
+     710319,
+     "5b4e455b706db5d29e5e6cf2ecb095aed97f44275f19c0c61ae657516fc06a51"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346218.json": [
+     690085,
+     "5a6ae399c0cd170af2ff765edc3a3d7c82df0491322a8175928fc7ca8ac52e26"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346219.json": [
+     558805,
+     "32d2fe4f97c3d049f6bd172e688c3cc7f0828b1160f785d416bd44000ecd2573"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346226.json": [
+     216677,
+     "34015ef35ee1f7847cc0995483c17dc9f48226ddddb7479fbf8d20c30df89b0a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346227.json": [
+     262887,
+     "8a44d4fb1d9c6bb704a3292fa3eb4579846a6e6024e3ccdcacf9513d65cbdf6a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346228.json": [
+     399621,
+     "ff9bcd19eff2ec294fb89f42d2f9e4bf0ea1907c17a3c6fd6bb84309b83a3f83"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346229.json": [
+     510510,
+     "714fa4ab0559b26ea7a4fcca4c8e24a03f6c85b6ea6fb12b1ce65ef0201b153c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346230.json": [
+     447642,
+     "2df823807339a0806e76d28420ba3385e320a04c8b7f58bd9510a4a0b2fb444a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346232.json": [
+     316771,
+     "3e57fd3facd268718f5d57490b37ad5271719b295a437b6c162cee0aa227a1e8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346233.json": [
+     267372,
+     "87e221042bdfd7a17ebfa4ef789884e7ea63868d8d20803c61b4d53477bd80bb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346234.json": [
+     305570,
+     "40ec8f4daa3615939b0a826db54edd525c5137eca5a7e9752296ea2987460e58"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346242.json": [
+     246920,
+     "dd03d25264323618cbb5c41592a4504d3d2d897cc01a1bd68fce6f02f0aba4d7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346243.json": [
+     335724,
+     "bad248331e9bb88c0d8e38880d0c36d9f910d8a0a1d5e3d0d4bcb42d19aeb80e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346244.json": [
+     162487,
+     "6cd43c903e059dec612523eb19ca23c90e2d9e0d1417c451c21f2a5d2e89db0b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346245.json": [
+     281178,
+     "2f7eb0862f67dd618dd26e39e0b70223a907c57e28fc21963ee6bbb4cf38c9e0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346246.json": [
+     361595,
+     "00974e831d96fb7c36f884f14c1ee39669b8a0ea3047e3a9e500d4e6ed4b1006"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346247.json": [
+     342476,
+     "84da7f8bfff0802656b494160faa8fcbb870536b50fc1e05bed81d36acdbd18b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346248.json": [
+     287736,
+     "8424f2847d01960f0359e555446668608d35fd37a0f8b429297ecc5c6fcab57a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346252.json": [
+     368711,
+     "cd211787f2b00f1091a01bd78791a47ea93a8a213649549ef5decf5546998e37"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346257.json": [
+     826195,
+     "1a0ace02be46a351fe35ca0373ca68b24b406437c80ba9502c10aec9856626d7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346260.json": [
+     200150,
+     "08959089c2a5897f5a20e7fa2deab9d11e52d5d09819ffedf04c2ea76c298c14"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346261.json": [
+     187119,
+     "d85e1b29eafac9aad162914831895f727a8e5150cc2e7012767ad08d1337c3a4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346267.json": [
+     250912,
+     "adb3063856c49a9196d1bfdfd31eafe9b847c8f121a9fd0e2505dba145149e6a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346270.json": [
+     170818,
+     "7c413c17a55d0356dcdbb207f9a8bd7d04899272c6a2ee3658b3dc2e740e4b9d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346271.json": [
+     43831,
+     "17f7155f7f85ce5503ecd1dd475dbeb386ebd5ab9228aa7cfa58b87728b11548"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346272.json": [
+     213073,
+     "05ec7c850cd84260d7eb45c4c6d247107a5c428a10f6b337205559d2c7b01d2b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346274.json": [
+     105131,
+     "48a05518dc533ce35880ee5cb34e5716b4a0f67064964f8ce8339640b3e5ca56"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346275.json": [
+     72243,
+     "28153bd49f45594e367dfa0f9d37ce3f88b05c9ba363046a0771ce6128d135ec"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346276.json": [
+     90393,
+     "0ca00eb0fd8199e6d02ff26eca294f247ea80cabba6d1f03d6114ad2ceea7405"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346277.json": [
+     159257,
+     "67e9b9756219261317251495075f3ffb5d18b9adbf6e71824333bd635bfd63f3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346279.json": [
+     187589,
+     "b3bb4679c4f4bcfbaa4f4cd092ce533a337c51d8e80e9ffbffd8a8b7c17819f1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346280.json": [
+     203673,
+     "702e2b6dfeaf713396bc22efc395b3ae2fcb7b9571e54c350d3691f7d436f23e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346281.json": [
+     103239,
+     "f910c9791bd2ddee2f47acff768ba0afd47608f3f1fd0a59afe423028b748df9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346282.json": [
+     130015,
+     "ab7b4bf2ded1db7d644f6bf0b9fd520be587cbb9f7f5daecab15c192606da433"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346283.json": [
+     177242,
+     "82f62b6c0b76b1c88f28fee851f06dd649b9493b56103a531c9191d8890d5973"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346284.json": [
+     186839,
+     "acde3c860b5b984cd026af1636522e304b5d77fef4265f370063e3ab22e409ae"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346293.json": [
+     19697,
+     "e979b3da92b778b94072778cef1ee4d33335176870daa85186ab9b424d0176ce"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346294.json": [
+     29210,
+     "c149d5c15b6a86763434c979876f30b331dd7c4e956013fa5775701205276516"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346295.json": [
+     71732,
+     "449d55b503f4ba0e1d548278f3f0d619c38761c7731cae74c00163e69adbb365"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346296.json": [
+     13016,
+     "f0fb6013b8ef27c52b8922e76b2a44683cfdd609bb564e763f7e93bd8b3dd5ff"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346297.json": [
+     10307,
+     "4602ff14a86745df3651ae7b9b4c84a502fe1abe85b9b78899f989076a754326"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346298.json": [
+     16225,
+     "d170d69e2c7dc459872f3b06537e6e3327256e51f98ce5742b6e4b4437935ad4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346299.json": [
+     14144,
+     "8483e78ac6fe59b555056d411e26c9779a0cb75ab6d98d67f65bf0dbfd12cbba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346300.json": [
+     19947,
+     "13901047f2fbb94ed0d0418a8766408eb4826b83a9ad83f5f400eea02dc7ee81"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346301.json": [
+     32514,
+     "f17cd4e30db88adfe2b48a408560df6d66c35272808ec6aa65bb28ad1b7dc48d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346302.json": [
+     11239,
+     "8d9f288bed1499e4c49652785926ed3f826b08281c70bbd2ffe55371bef7e2be"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346303.json": [
+     8823,
+     "290b7e594fe9bab6a5405cfa53e5b655385fb01dbc95b497e539b281e58cd079"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346304.json": [
+     15585,
+     "f8de73a37679ccb4820b11e9b871bb5e4b7b0ff5e3daf5a9f89e815cc50b8766"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346305.json": [
+     13201,
+     "2894166d04c7014fc1306e728c3e90d3a834e51c24a903e6846ab980235b7ad2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346306.json": [
+     9787,
+     "1d2a79be572c21ad0027ca9bad296a52502244360c25f1cd9c741196d720d7d3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346307.json": [
+     9780,
+     "cf0c22682587a4e1e0e61e4c24bf1c3e31e71704a89e040818f5d4b2236d995f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346308.json": [
+     12533,
+     "ba7a7b78ef63d3145b8a0bf9948eaecdb712fbb4955c939f7456b724c5283228"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346309.json": [
+     8660,
+     "1f94f6d58dffa376b5e0690659a9786dd7371cdaa299f44095252c6d246ce10d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346310.json": [
+     34466,
+     "df627a3f624de2ee7a6229536d10ae95e31f90968a581e03513aee50d11298fa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346311.json": [
+     10302,
+     "d2e4171877c533b633afd837604b875f536eaa5fda0ea94107659dd67fdb1afe"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346312.json": [
+     12153,
+     "b931023aafd9fdf0fb50f4f334ad2bcc88beffe6a91f20b2499cb3e4ebc3e2c4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346313.json": [
+     13649,
+     "43292af31adba4a9276fa6a6f2df6ff49db2fc00fb4206a08c7db6d9b112ed97"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346314.json": [
+     15271,
+     "bf371d345b1cb62d1c538f8e7201a9c69a7e7dc919e3a8fb31f1bf5b7177cd0c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346315.json": [
+     16062,
+     "647b8dd625fc7d5f3584e2f87e8c36d40ba0aba29f412a01cc6d16344cf11338"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346316.json": [
+     25075,
+     "216baacc28a6c6c366a5777683d2ed7961f00fed414b69d1fd9eedbfe877c69f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346317.json": [
+     17011,
+     "394fff0777a89d8ede478104bda2ce77d9fb741509aa71bb6560acba6a440ccf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346318.json": [
+     15581,
+     "f6002784cfa1c8b399e92e3ac99ee010e3cfe7a91a86e8784f2122666550b639"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346319.json": [
+     19863,
+     "a155863a05ecc8f763f27d845d6ba60b8a11ad44de316919acf34a547495c227"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346320.json": [
+     17202,
+     "734eeb0084372f578b8d1915c321b4fecfa9be376dc79e7db0866e16d1ef0280"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346321.json": [
+     11975,
+     "ccb8999936df65e2dca9ab85004d1cde0063f2adc58568c3b36ad026ae2fe952"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346322.json": [
+     24892,
+     "08b3c58c639bd447198cdef5f733a0629c025dc688478948e629619faca162a5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346323.json": [
+     9323,
+     "a176fc7c894f4f105789a0aaaa57918a7c7b0dcfa2c99ae8e5c5d705d08ba781"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346324.json": [
+     17397,
+     "98eeaa233cc6fbe66ffe435cef396273653e93717f966635d9de6f3f9701453b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346325.json": [
+     15212,
+     "d9d4c133c4d051c91a7467135669e9e9df49108cc914781a01fc1c2d96303c0f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346326.json": [
+     12882,
+     "479683cebe95a49860d436885ae3ff063d586ff9cec046aab79bfd64a8228cdf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346327.json": [
+     61171,
+     "b4ade5a070994690a19b4e4d07194c0a0f60a090b0704af8436a8ecf9e90fe63"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346328.json": [
+     63286,
+     "fa103a109860cb4a101645a4fb4d07db1555a6a3b70be1c964e9a819b9d38f95"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346329.json": [
+     13506,
+     "a7603a269f04fe03b64c7d15edaff46deef505511ff0a615f2c6c38daed87a3c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346330.json": [
+     27212,
+     "f1a221f4c083a8ef75d1f7694a005b0e6d528204ab116db6ef727c478415cbda"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346331.json": [
+     11537,
+     "a70b3ae50dbe59b1174dc1c9796767671738bced40e51cb7e83a3a5a42793dc5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346332.json": [
+     13435,
+     "e3810dec4c9c989f0fe2522df4dc29247a254224d37304d7449d50cca46e44e4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346333.json": [
+     22971,
+     "f671ff13a9d583752566121d4144d50e7bef0b498f7169b7137ef56e83f3716b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346334.json": [
+     22257,
+     "14039bb87a1218076befb01fc05c9970cef8ad13f94c84ca6686da68385cc9be"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346335.json": [
+     9425,
+     "769f96b4dfbe92e5f98a9315dd7dcd9035d378a769cab1cbc467b83c8a4e43b5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346336.json": [
+     10417,
+     "4a545efe806ab5019771a060109cfb2e426d6ca4c2f8cfab052c9f0a55d7329b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346337.json": [
+     27342,
+     "4d5a14f36eb8ac41f4ee7c6b5f3b0cc04eab52950fe94b07bda4c22e574c18a0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346338.json": [
+     19766,
+     "352383dd24188a25f56392af9a19e117e2310407e889c15657aa242f3b82517b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346339.json": [
+     25889,
+     "aa44e6c807a56e98b4a330b52a06eb47721af3e369ac118328660a42990d4f4a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346340.json": [
+     17531,
+     "75c3ceadd17cc6fb5214f408cb476b5fa4bc486a8c83670e09c53e2511341e3f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346341.json": [
+     25312,
+     "7a0111ce532205de5bfbcc475d584a0b43415ac72ef6ca90a0bbe73e8edab565"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346342.json": [
+     26053,
+     "7671d319e7c434feed3e8359930c42551d99e5e261605005f25372ee22d46d32"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346343.json": [
+     11619,
+     "d8d002d1322696c264bf7915240cc2d3281a80967704c984097d71593915da6f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346344.json": [
+     16261,
+     "d9ded5f20f749d4bc91db40f6bae47dd7365816d4ecb59e7241dddae27aba58f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346345.json": [
+     18871,
+     "6180f70580c550921743e57674b01d3b175696346c4fa8217c7c271c868f6651"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346346.json": [
+     15831,
+     "b7c1d9c72e3a662bb0f7330ea22af84b60360b6876f7c0e1f2c4c804e3fc763c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346347.json": [
+     18806,
+     "15106c53eeb066b9ba5cf987fe74f654e305c91c8736ab65b0f0d4d2e7bc8ee3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346348.json": [
+     18851,
+     "e21f0a299ddca5ef3f5cb65da64a1e17c5096df2f165c1089219b36780af4301"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346349.json": [
+     20253,
+     "d43819c37876ebbadef979ba33761baf2f616e79604e9ceec85898bc58774f6c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346350.json": [
+     12740,
+     "0afe3d3c7ea33c0b0e739b11a0c4a442c6162df525ca8b0917073f6c7607830f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346351.json": [
+     21972,
+     "c3f44c6a6aa0723fc5c12b0ff1e5931a183a86a637dfb91b0f1e4a2fc5335b4d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346352.json": [
+     19587,
+     "2410a47c775c349aacbe8a547b194dfd326cecdc3b3a73ea0ef0b7776322f8f3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346353.json": [
+     18531,
+     "06eb15cae8618771de695be4a471494d326a1d02848d5359619ad16ea49ce384"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346354.json": [
+     59594,
+     "11b62ddcd8558c81d53467b6921696b7c1da7efce204abdc36f360cc5f8a2637"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346355.json": [
+     33957,
+     "9ee71e77be9c3eaa7698df633af71407901ae43b6cb6c08e01ff6e5759907f59"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346356.json": [
+     9407,
+     "da72f039ce14da7d37ba655abd982b0e04b2b76ca0551f329f61a3fa39e391cf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346357.json": [
+     41412,
+     "4d1f63a7091910ac0409347485e94444248f369ebe78b00520637d3b3dccf9b0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346358.json": [
+     25091,
+     "7e731d5e770b6be00c64ef89bfcb8fb7224883d4f40935303333c787fa99b585"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346359.json": [
+     17668,
+     "f3495b4ee330f7dc6e76c8e2ca573701364d0393e4ff79d4f6c9b0e907a51bd6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346360.json": [
+     15300,
+     "34e21d688ccb3c56c32d73d4ea03fbd44f91dd8e8916016cd76c8feebe520858"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346361.json": [
+     14755,
+     "0608619c76f2abdf251801ab44c3ae6a4a28980379181f4a7aa8a9bfeba3d0a1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346362.json": [
+     15517,
+     "1ef8c87c36c76a763d49b9897ee6ccfe9101762498b3d7a638d3647d1c99b367"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346363.json": [
+     27767,
+     "1b5e3f9869148f3e4dbb3ce357a2090007f714e3bc5f49a547238ea25e2a86b3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346364.json": [
+     14398,
+     "1fadabc4bb0c444caf244a3b332ce6957bb5791336d7ccce37d21a395b150c88"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346365.json": [
+     40591,
+     "d282d1b16fe3f2dbc5421f15fc56742d50a73187dd3301beed55669c5dfb9946"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346366.json": [
+     13223,
+     "fdbe1e5a241347371cafed899ce2da1e39a2e534d76b8b416a97d39d3db79f9b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346367.json": [
+     17851,
+     "85d404b7be25db01b2df2b353179bf43d2a4169a5069978aa7c3eeed9efb3c00"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346368.json": [
+     74765,
+     "8d41a841c1856b38374938901c3c338ca07064bd7bfcd8659175f08b80392581"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346369.json": [
+     17468,
+     "042eacf26612a3f264aab6a86961821440639eb71ad7bfe4df0fb8f23910e78f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346370.json": [
+     19490,
+     "31b2080ff7327514c83137c60337a37541171b8e9f72e8b51dd04eff86120e37"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346371.json": [
+     9741,
+     "e6bcbfa920fe59d675fa1d32c1cb03a70f5a85c49b1ae907f3b0e313e2fcacc6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346372.json": [
+     11149,
+     "8ef03701ec1a527fe847cd132e28fc3df2f0540241162486e3bd13b482d7b594"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346373.json": [
+     17347,
+     "7fa7fcbe2b41d2555ee05a7572618ba2657844abc954e88871b710db47836905"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346374.json": [
+     38142,
+     "34ce4b5e999c527487d4888894cbe38a278bd326058075caccdd4d807e80fdf8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346375.json": [
+     15192,
+     "fe60f6b3c837fa5e485610a007e1d805aa3610363a8ebc9801f4db306d002e9c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346376.json": [
+     14606,
+     "8b4441a6031cb0bdb560fb7e319f57a1985c7f4af797754c0e360d5e6ebad175"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346377.json": [
+     23594,
+     "76fe63ad55fd8c2b6522cac5383b82a1528468afcf87263490e2d896347329ba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346378.json": [
+     47565,
+     "493c2b31965457ccd7b92e39956274645166c5ec1dd1d40fe9ce05346ccee24c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346379.json": [
+     31869,
+     "62a39aa9e0bc12b9f3282940e5e2b72479bc5a2eb253c39787a1e034bc358db8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346380.json": [
+     1171,
+     "b140833abdb32a6e7299ebde75196bd46c609696045dca6bd29a1035a9a28fdf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346381.json": [
+     33637,
+     "6eb30a6ba4a57983714a43c1502df59f3acc3d9d7285c268ba423e6fc9959a21"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346382.json": [
+     19248,
+     "f41d1fe9f5ad4e7fdc0149edc5c6f182363d23a564f66c1191f5b5daaa347bad"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346383.json": [
+     27472,
+     "b0caeee737e05e83c5a74114c1a896f6c33ac794412a2c8c66e349852883f456"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346384.json": [
+     310966,
+     "043d8b14fe30e9e2ab0c2ce785abfa0fb66d11dbb4adfa06c43c810fce1054fd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346385.json": [
+     127563,
+     "bd96cacaf83a7e92136b9d4f0efd945b5fbe2e2798797147198cdb830d2f74d8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346386.json": [
+     13666,
+     "ef7544802ad32bda945efdccfa083a3cebb216ea9ef13a1ce4040321a0889c0f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346387.json": [
+     109548,
+     "6d2d7a6d0e53a3cd38bf74326485b6b63675748882bad7a330e94e644f7db406"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346388.json": [
+     37638,
+     "6d025271ab79be7ee2338d13cb6b79ba78d920074bfd1992983f5390be145aff"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346389.json": [
+     36351,
+     "09729b51937f34c9512b2f11dc3a24d1f7dd6ebd0c2b30d672b7fc7b8d8f7eb9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346390.json": [
+     41493,
+     "a9301dd54552a131b3a443777916d19dda57afe3956f24f463aef467d594e2d5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346391.json": [
+     28694,
+     "5558b2a1bad85104bb07c038a589bcdb774a2a0c4a88d8f11d8c0970eefad238"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346392.json": [
+     32598,
+     "36e2e545a458ea69a9d8608a4733a62f961f536d5b5feec34364409e6cafa224"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346393.json": [
+     29329,
+     "918ebfe26fdd8c5fcc61210b698648540e26a5e67659c6ebd842de2f9dcb2cf7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346394.json": [
+     22740,
+     "8fddc2fc49f4405fdddc899f314f0c12b98462eb98ead65277d33fc0544b683a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346395.json": [
+     31328,
+     "701fa80ee5413e8ed1987d0c62a2a0ee5d73068afb06aacb830db219de8de249"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346396.json": [
+     25086,
+     "da0c4756bd928cb49912359c1283e98167597fc92033d4d48875bf591f8eb87f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346397.json": [
+     113101,
+     "f68123b17bbfecec77183ae3a0a7ec597e525b5dd5dd53c3fca5baa21c9ba001"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346398.json": [
+     8147,
+     "4a8f8eb0dc24c941c9ac3e6fe27992dc0cfa5cc7c84e22fb0726f58a85de6557"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346399.json": [
+     15911,
+     "b97e85300be46a8c131604776f4938e5f2438fc8ebcd6a7e314396b6c4e3c291"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346400.json": [
+     20969,
+     "d483e0d8ccf27521adc86a17c3c6d178cedcede2ee3048bc3aae024cc7c14e6b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346403.json": [
+     55496,
+     "2e7e0ab88149f5cbfe4d4f746e92b256247add691446ec722ed4fd70e32edf81"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346406.json": [
+     20504,
+     "db649c3070026ae9e85e3540c19a4302e7c1278d46bd01380bff3cee47a56a62"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346411.json": [
+     5438,
+     "7c4377c0fa486a462799c63c73ff5197887998ef702f97da41e901aab6de7d01"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346414.json": [
+     65240,
+     "369bcc739a9fa618d651d374e86859d2d63208e124737179f6aaac009a67b235"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346418.json": [
+     10031,
+     "259243ef7f7320a6dae450bb2a51787d8e52fe27de37d85f28e5015ca25f8b7b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346421.json": [
+     12996,
+     "3505a78391bb53f7d218a781126b282faf542ca7607445ea583a8227274a454c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346422.json": [
+     9777,
+     "95c394c2dce376adfe895d0c0651563cc184c81ac8b25e9244986cde6f661d4b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346424.json": [
+     48459,
+     "292a6e24d340c77d30bbb7de189b3894a43cdf7ad41c8d6f7a15fdad5d137b6c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346425.json": [
+     48036,
+     "7ceb89cdc8ef53149432a984a1b5d4d442cd25dfc1408753263ba6699bef11d5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346426.json": [
+     24210,
+     "a3ff9eaf552f83434cdb4b01a418457c12fa0fdcdb99db873b2c460e20a6bb05"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346428.json": [
+     13633,
+     "a69d12ba5df90dac8244fb71a27682b8756ddeea3456ada13bd3c51818ced46b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346430.json": [
+     35131,
+     "466c93d13fda5413af525b82b9d30eb46232646aacc921c58a5b934fc659b2d3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346431.json": [
+     253100,
+     "21f34e144a5a21345aa86043a3d5bad943024f525fa651a06cbaebff444777ba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346432.json": [
+     81802,
+     "280563965d32779dae36aefe537eb42a70f8bac65143a95938c117cef0a7421a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346433.json": [
+     68980,
+     "fbf550b53df6a357dec8499c30fd029e05bdc93a03971e7db4b617f0e1c18401"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346452.json": [
+     118335,
+     "9f8fdd124841bda117ea14b0227802561a567dbeb078bfca8c4dec904f394352"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346454.json": [
+     97548,
+     "0188a023694a364c2c8c8d3c186fa891e8ebee9093da439fc286bed2a5adf90a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346477.json": [
+     82002,
+     "48bed8633d44f7d922a57ab2b3ec83b344f0c3ecd0d2090ef9616e5d29855036"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346496.json": [
+     33222,
+     "910446ac6eeaa1b3eff9f337987c4dba4cc453843a5b733b94ec176fb4c7e442"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346502.json": [
+     215547,
+     "1404b9b6c907febec14e77b80cd1dd335f1ce97cad6e59d8b282b858304a8d02"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346505.json": [
+     10512,
+     "1f9e272f0daad5cb44834c3d664c0d173b4bdee2e37a34f6b71ffee3492106ad"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346506.json": [
+     140230,
+     "b3ac16061258f383a32a545fd58c503b385256d86f0da25b1bea605ead64659b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346507.json": [
+     123600,
+     "61105e2e5b8c23e6b6c4f6f1448359048344fc21cd6adc212d9ae68bfd31f0ba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346508.json": [
+     106424,
+     "6417bb8a387efc5ce60ff5eaf598484acad180fcf8fed0a8f406dbdb1d966eb9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346509.json": [
+     108537,
+     "cb4f35d2663528069d076f1b6184ea8532eff595bf1fc32438b24f321cd44a0b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346511.json": [
+     150406,
+     "8e4a1e35c4a746e26084e2d5d89d8247c6904ece46997519669a6583e1c4b5e4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346513.json": [
+     53928,
+     "a94ff1f1de89438e9de408e47188c05882fdee3c59e905a866c1d951e1373a12"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346518.json": [
+     79344,
+     "ba16945ccac8743234d7b0e27c68cc57c187b57d0254a7a40e3381a83cae25dc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346530.json": [
+     37901,
+     "71e6850b9428b8ba8e7e9d73291041757ac1db1c1dbbea2093bd771634ff9ac6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346531.json": [
+     29986,
+     "fefaf50892df3cdd6df1f570c4d12a6d08670e79fc4c412d70a2ec32081aaefa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346534.json": [
+     72359,
+     "e3cf9d8336ba595d29d682ead467a7a50166fb4f519cdb2798dc01258f07e70f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346538.json": [
+     65948,
+     "3c31f9ae9190fefeb56c10470aba7d7752fea0c8a2a6332e0cf5e3689b21c5f4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346539.json": [
+     106558,
+     "d1a2c1b8d675d7fd272f63cd7d83d01522bd5b4c727e34ea32bbad241248feff"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346540.json": [
+     40072,
+     "695b84488dbbaf811a0917405d344c9ce822d1e62a72635f6aada62f97da4f60"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346544.json": [
+     54059,
+     "879b2f1fe8e937759cdc7dab9aac5562b4082cb89d89702041bc7c60dda943fb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346545.json": [
+     71027,
+     "6c642291895b8a81e59fd9717746f5598e1846ca70f311884ff11ac9b8f1c7d2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346550.json": [
+     134929,
+     "538b2f4a870bb7102178347a4354ffcd71905833c76b8f542f8f99f8c4d9ddaf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346551.json": [
+     133428,
+     "45908d01047dc0e84ea66426cfd23a0a622b669b4112c906c79b30f78d3a18a6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346552.json": [
+     104483,
+     "f6be88879b553cba6d6cb6e021b88f2f82aed74e3d08c5508cf42a7174318b98"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346554.json": [
+     85630,
+     "37f8da3d1e093b8147bc551b010f7ad5f8ee49fae5a0a40294f4c007fe6f8d9f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346555.json": [
+     59455,
+     "cd86bd2636a4ada73879296e78218a77a2c056425eb25e855fbe2cc04c0ad0aa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346558.json": [
+     39523,
+     "e37dc651d3703375d648c216e8477287c633f0815f7397fd95ca6a786879c45c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346563.json": [
+     113081,
+     "a170960a1be754912e1ff3a23c966f544beceb4424a9270c7bee168780ab661f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346568.json": [
+     37019,
+     "d518685574d7c2e93ae75471727babeb554ed3d9142e57ec56be1f25c3d43c5f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346569.json": [
+     42151,
+     "e3d81e6834effcedde5d782d977b51ab3d65ea20eda39f3d364b54a5835b8519"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346570.json": [
+     102599,
+     "c374aa2304d6135d469faa98f82fbdfb3f26089f8a59a8fe3b01cb7e337a76f2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346577.json": [
+     59980,
+     "715cf883abc8462a4e2db8a822e057de725198c067752e9bf853e452a8d7196f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346578.json": [
+     67388,
+     "ca9928b9cabb91faa1c656d03b525bd0586ea574e455a99f846bf325f3cefce4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346579.json": [
+     49169,
+     "96b02ecdea4b98b39125ac89bf15362b6001cc33483bc0a746077629220dbbc9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346581.json": [
+     28940,
+     "4f1e6e224767b59a9d92c46ee7941abad99613bbf11b3f9c685d5d83d6bb3950"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346582.json": [
+     18380,
+     "c523d49387fa969505e37037d04f7cfed8a9b62049b75a8723ad0a98e3c0feaf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346583.json": [
+     68271,
+     "77ae1b9265ce86eb3e1ef0dd2f28d3c306b034706ff9a28b82cc44709714e999"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346584.json": [
+     90343,
+     "82e31a3b54c86830b5815332038b7025b1fa0e1c6666e395dcf0a2b93c057726"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346587.json": [
+     13834,
+     "e85534b35cbebc695275c91826b614c5c219f1b0c5e05bd45d9c179f6048aa4b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346589.json": [
+     50192,
+     "301aedec4a520e772777ff77ff5353b67ae9c1f1c4ebdde13c27d5cb164d598d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346593.json": [
+     22331,
+     "5c488dc144c72a2cbdb0a235399a6e327d541e8de84989720a115c54b0c3363a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346598.json": [
+     198895,
+     "9da75316e5dbe292a6fcfc77b695560dfab7b24fc06e8d228412f5b20bafd479"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346603.json": [
+     200231,
+     "0a697938878490cc98f78b0740386ae5187667afd4784895e5f9915edd151d56"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346609.json": [
+     118572,
+     "bd7054f3e26983fd9ed688592281f93c4f08bac44b695adb0e316a2c75bca889"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346610.json": [
+     92983,
+     "008804ff9190ce871ac6693695538e0c50f70c3c334ebc0ad3c0e06cce963e2e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346612.json": [
+     34087,
+     "87dcb014cdb6c8d7054b6fcf75c455f3687b50600bf6c1c9d866e0aae72ae78b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346613.json": [
+     134553,
+     "20d5d99e871284227ac22f5cac5582075a267bf74b41d9008d6c4dd21c349043"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346614.json": [
+     67655,
+     "9af1530052930f46295ae3f42e979e35b4f7ea69e28f2b1b3c5323b0267b5f6c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346615.json": [
+     85576,
+     "98780b5782eacb59750f7131139078006c192584392fb9f378636d9f4cab9227"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346617.json": [
+     57298,
+     "e4bf2d9c35e8c9d0ff7d26f1e7859f79548aabd5c6ca7394d86195a3c1b7b91b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346618.json": [
+     124237,
+     "50b8143bb730617ebcd2eac21dea2df9970a59427d398aa4d88c2fa384b6eded"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346620.json": [
+     290076,
+     "60b4e538aaaa0937706bf3bf25e3c72101a5ee19eb2d5f2adf348bcfea1a40fe"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346621.json": [
+     75588,
+     "c81c7d1d880896f167f06d1f67213120aa2b9277b8f348caeb25a1ca0e3dd8e5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346623.json": [
+     49090,
+     "fc5a2a02c77efc18dcc5e1ecfd9de19c8db5e0c48aa378ae670975d3f4d49919"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346624.json": [
+     40441,
+     "99481734b5f733a6aee9c7612ac45e5a3d632d2f116e1e5dd710f4c62480746e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346626.json": [
+     70055,
+     "d1e0d5ba12c667e56847967dfc5ce42c1f87546b8bb5558108acd214ac8a1ebe"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346627.json": [
+     72254,
+     "c5226cf3a6bb4e43ee8a361320b5734283fe0fda3f5d90e5631b92339de6c1e3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346628.json": [
+     51691,
+     "decd1d4e9f4db6dc65cc9c30ea23382e7d9e2f642b0b4c8bff190484ebeb1978"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346629.json": [
+     53400,
+     "070699c5e301ea91a3fe50326bf3f15642cdf2b68e1085ec06ae938e841d8f61"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346630.json": [
+     21302,
+     "ffbccfe404bb0a4d3de5551e7633d3ef3e241a547207cc2f5b6db25bb2cf4bff"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346631.json": [
+     37466,
+     "5872ea77eb3b42f273803e4403388b354451cca7dadeb2ebfe9e42485680d1dd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346632.json": [
+     49674,
+     "1d64c4447f174c52e4a85c8aceb000cc06ada0457201d4f7e8226cead77cdd51"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346633.json": [
+     23903,
+     "77a72223b5370ff8c0bd06b1b9f0ca10eb9d891fa3c4a8d030bed82fac4ee6ed"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346634.json": [
+     122266,
+     "e00a12912a8eaef4ba23e6997a508ecf3b22bfd7a1393a72805c416c31794243"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346635.json": [
+     128311,
+     "51e4ce1be198fe732611b303e7c5d72b5ab180b115da43903f9576863c906a32"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346636.json": [
+     218499,
+     "b4cc94c9703b3a7d428cd8f1e5dc57a108c0519fe2b53706993cc9d72656d531"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346637.json": [
+     18824,
+     "2e15b9fdd4f1dfbffbb17d04c41ab86edfb4a577835c87da14c31d4a05c9ea76"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346638.json": [
+     40346,
+     "4ba502d743df5d4ae6172d0ac124c4d8a2de3779e01c0912e12633c14c6ffbc4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346640.json": [
+     33027,
+     "82b88225652761b7d1cd21a633573400b58ec6c96b2aa57a0f2a8ed4ac6fa5ad"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346641.json": [
+     47583,
+     "b8cae2f5b73761a8eb104ccad4a8a77d240d382592d71cc255af2f245b76510c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346642.json": [
+     87129,
+     "8782c6dc0fa125996b4652a246e2b13777d54440621a66ae6a1598d446c7a399"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346643.json": [
+     146322,
+     "bbbcdc317b2a17576477363d01fd8de3553735fd1e959dc8a70dc76a24070fde"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346645.json": [
+     230689,
+     "4989a8b5a716371206a9ebb647e4259185f71b91e05197af57e8d6e7e29a50af"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346646.json": [
+     333515,
+     "19d7058c205507fc69ce638b7ce76049f534514d26f5acdc80d2a7591f5568fe"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346647.json": [
+     310197,
+     "5866b58102702cc26782933370ba5e84dae92c9d9a2bf65f667a508796afc5a2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346649.json": [
+     138336,
+     "1c4ea57b7e49ce3f713f4a89fbb9ebf2fabe99c36510a1b1964d8a328d5782df"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346650.json": [
+     91159,
+     "df4d1ce1524e45e242df8240b51905d96eda69b3d4267d32a68917868b46f44b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346651.json": [
+     48469,
+     "2292b6fb8f4a4795d80198825badc70b14214fe275243cff5419219d41305c73"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346652.json": [
+     23541,
+     "a29641aab5431c74f2387d02b63f9d32bf55f68bf0426fbd7f11f484d61cc7e1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346653.json": [
+     50166,
+     "f8b2e888047320ecfc0005ac507a51404ca3259c13130f355b92ff9dcf871b5a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346654.json": [
+     45423,
+     "1af50cb3f9c1b2ec1e2ceaf0f85e765af89a13e07e2a2885a6470f0ee7c40279"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346655.json": [
+     154515,
+     "e08999c7560dd4b727841217b4bac0f68097863b5dd61781aaa4cb1f262c6bfe"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346658.json": [
+     280139,
+     "347ce4fe224c85ee269440341d5561f2ee1577bcc297f2d94fcab3546f02bdfa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346659.json": [
+     132805,
+     "51ed1e84bb9e40d212a5a1a4c9c344613b56f5c33cbf1adb1505e17b6188873d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346660.json": [
+     239858,
+     "f10bc197672c90f34d143a39f7667562ab727084c881bc14011ee8e525331885"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346661.json": [
+     55818,
+     "4e7276598cacab08f4efb41a776b6d1199286b3dc29e319c57608f38cd97fbeb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346673.json": [
+     62042,
+     "db96f802e728cf3b97e66aa24ba6bb126b44a7c94712840f1abfe644fe0af1e8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346674.json": [
+     45332,
+     "555156063039919252c7e94c8aefefe0892eebaf170757bf86d1e67a17083989"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346675.json": [
+     35542,
+     "ff9eaf4017bf289118114187a825169e6210269f0a9c544f6dc455c5f659379c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346676.json": [
+     76178,
+     "73c1a0141e0b23b02531ef4ffe1c13743438a79eb9baf9b0b41def3ced56db8e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346678.json": [
+     86653,
+     "ffc7eac77fe4695ae2ca10b3a4395c5aeb09cb9af8449fd27295d35672d734a8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346679.json": [
+     59969,
+     "baf53fa588753892fd2f3273e488422188c7dcce31d6e0e5355f2383b4a78d5a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346680.json": [
+     40963,
+     "344dda55fdcfc43d88c7264a8d57852058d6cc07f9173f72da5821579a34f490"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346681.json": [
+     52909,
+     "90913d9d6c164ef4878355f246b4411f9098c2ba231b767a65b9bef4611c34d8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346682.json": [
+     32429,
+     "0582cdaadd8fd49800e4db24eb64b903499a885b5d68a638378506613dda16ed"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346692.json": [
+     50687,
+     "55239bfaca751c3bdcb13e0221958ea35348f9fd4807428e1fd95734821026d2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346693.json": [
+     142856,
+     "17e5509370fb2d4f72d541fe27b5adbe878a0a937f38469e9073de1afb2c5d20"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346694.json": [
+     78908,
+     "2d9cd636915f800e45ef79c364ceef65be7a628d54da5a4f16e6203589d5b0a0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346697.json": [
+     167220,
+     "15d763bbaec15dc95579fffeb7ac05afee652549da8f6d617a7a2c617acd7ec5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346698.json": [
+     205626,
+     "20db1cbf078a6e4518822acc7f672ef057ed93870a02afb9f61d82f1ccb863f6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346700.json": [
+     81926,
+     "80e82c8efe3b4e30eba8046dceef602fd4bc4e7d3611f42634347acec04c2192"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346701.json": [
+     35637,
+     "0c3eb7df93b94734d6334cfd673b06507e17e0203f3d34c8cf19e7aad71851a0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346702.json": [
+     144431,
+     "8c10d7c2ab6abe7a943a0dade110be51ae5458765a76de82efeaf21d9cee9e4e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346703.json": [
+     38811,
+     "74b7e2b6792522f88e7485c0c75bc05b5e3047e46548346e45cebfcd48c42c5a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346705.json": [
+     51407,
+     "34cbde02340681bd14a2c5cf9b4f6d8ab543dd39bf72eb493349c147bd2b31e8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346707.json": [
+     137626,
+     "bf6beb3a25f29c420687d833737dfdaa64d8df86c4e06c96fbd804c54f5a3042"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346710.json": [
+     56287,
+     "76162de99925905a972f5b40c5b14d0d16ff32b44d8429827040b19954f1d07b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346711.json": [
+     48250,
+     "79166238072a159714286176f73f16c8d45e138ee113f3dd36e723329bfbf3a4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346721.json": [
+     34659,
+     "7444eee083e6d372e378c3b6bcaeb9cdfa7fcd5074aad6750dd614299e1aadba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346725.json": [
+     34787,
+     "ec6bc0bcf4df48c8d65a0e3ee551ccb87db9927129ae4e92a6ff05b0b82880be"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346727.json": [
+     95459,
+     "2f61fa9469b19475ab67c0f250d650bca27a9220d453105c14bb63e378813b8b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346731.json": [
+     65093,
+     "b4c1ab9d1bc9e0f4ea493e1d4ef872f39f202c177f64b1dc8bd129a5d9c3e479"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346732.json": [
+     34865,
+     "aa8c84b2e56af99c220f98ab1b46b609b8142d8bc0324fb4ac72bd35ae65ce38"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346733.json": [
+     71602,
+     "93784bc0479f5267b7be5cc13448b25af034ccf0477efd3fabd3fcb459622f15"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346734.json": [
+     92392,
+     "a1c478ca93fbe46f28aa1bce0b3dd49c3b96732aae75624779fce4e997df9b9a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346737.json": [
+     62621,
+     "9b1022cbd04f50f115730bf912f0299c81273d4ee069a6f5dba31d2e2b5da735"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346740.json": [
+     102577,
+     "0a0e5dd3b75c2fb119488d3948d6d1f4cfe08b3a5e634c6e744c5043a74bd8e8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346743.json": [
+     51260,
+     "74387e965995eba1a1c825782df4ced20cd794ca4be1d0dcbe3a9a3ea7ab2154"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346749.json": [
+     40777,
+     "b516c56420e9d9953c16b2f1deb94a407785a18e48b329cd42eb811c29e2ebdf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346750.json": [
+     40269,
+     "b52371aaefb8a7f34b712282693da2c18e6b11852b2826c50c299fbaee9656db"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346752.json": [
+     68736,
+     "78f928ace11b4ecc3dbc779db8075ee4c8ecad2d558e0ec2caa8c3facc553884"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346754.json": [
+     13917,
+     "83d2bc10f5c64f59f8db195a22449250126e1f5f73dadb394895b34ae872f061"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346755.json": [
+     49641,
+     "9975925149bb0e9d7a9e523ed48b7ee9d6d48cdab56fbeb5802556157e615546"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346757.json": [
+     75308,
+     "740615861f947a44a8b0cafc81f842fa653f23e83714c25dbc791fdf972892dc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346758.json": [
+     150412,
+     "6d4ccdc46ed2c8cc57461d44c0c6182ea42ea34529062775a2219f343fec61ff"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346762.json": [
+     44505,
+     "9408a5c529b4c64426998889a9655db4165741fa44a701b71c97ae7c6c497a95"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346766.json": [
+     38902,
+     "de12c66e05180bf44ecf85d6eeefeca85b5413351aa22da3592ad5aed48d6a2a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346776.json": [
+     71083,
+     "8f12de98e369dfc0261d03bb50d8e0078f07a93d153cc78e7ca632b92ed6b40d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346777.json": [
+     23768,
+     "8e423ff2ab95824cd05c79117206abd7d70c41c887bfdcb928ebb5c7d0dcaa6c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346778.json": [
+     112032,
+     "2f9cb5f19b3cc942ec2e6a7fd5f4690e59af5976fa813a75fcf675a28fcb5ce0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346781.json": [
+     23027,
+     "0ed2514f5a2e1147ccb21891ed9dad0db0b084dd5fe33a1438f2add220b23110"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346782.json": [
+     37318,
+     "34573cc235e3745e59980a1783d8c6d6d509ac130ea503ef720ec2332a43b93a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346794.json": [
+     22828,
+     "b29c84a6b3a16c47c4fc131a894c1d6cd6c7c278ed1615b51f97e5811bb181c0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346802.json": [
+     59251,
+     "d4f400af006323ec0d183d648b45eb173160a250102841bec0b6eed191ddc02f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346803.json": [
+     31672,
+     "6d854d25f24f8224e8c28ddf28bbf4d676bf2fe62e18aa2799ca5f75c50fc968"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346804.json": [
+     19246,
+     "e47ef167edb9690c59e6a5d1962a8b9e0d667477883e33abdce9e2ec18441f18"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346808.json": [
+     22095,
+     "c108bb8cb43e51fe897385be345d190810315ecaaaa58b133a5bd0d2b1265d84"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346809.json": [
+     19866,
+     "613113e61725a2a228fb1de6c35c5be041f5447a4061823c7736df8ca6cf4528"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346811.json": [
+     50984,
+     "1f23ac511bc196cc974374ab08186f0b4472ab071e3d74ecbd7896282696bdbf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346823.json": [
+     27805,
+     "da1937259397bdfdfe3a57e250a6970aadc8b54776e4ea43e5d42ed5bd549e9f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346825.json": [
+     24665,
+     "573465089e9e7d97d40935c6591d360abd8a1b7a3abd8535c7a751d7c4df2e4c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346826.json": [
+     8283,
+     "248cfa849da6b98aa164c1785da363c0a7142ef6d8e156bb515d941e6e946234"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346827.json": [
+     9468,
+     "397b7eab1ba75c5d0675c806a6d93efd30db9a99240786d1715201c5a1cab381"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346828.json": [
+     8032,
+     "c4e7bc1ddd21fe35ea8a0d041681dba11a18307e57103a0cccede325b819ba07"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346829.json": [
+     14818,
+     "814ff5a44a3ab9dd9ad9e12fb312f3c57c1206dcabf6241fabec533fea1121c8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346830.json": [
+     7861,
+     "82035f1292159d4e63ad06e9d89d6ee7222b1fe404dddc9bedde3e5ff097aee9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346831.json": [
+     6959,
+     "6e805d8f4d5e6ea80d6e0324f8c967a7e03b7e4e7913ed95825ff9f8f79e3446"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346832.json": [
+     7260,
+     "d4f5462a07e50d8ced95a25d941497557cf2d15e5f067ff5b6e501f1d81bf3fd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346833.json": [
+     8221,
+     "5aad7eb632705cc039a98a6da175ff9140ff62265123a4cec681481d46893bfd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346834.json": [
+     10495,
+     "238ff2a8ff000e3ede36d95fbb813570b6d0d5585dd54dcb4f7ba18f0725f375"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346835.json": [
+     7751,
+     "aa62d673b41b496019fe0ee5a69ebdc494a6a65cfac851a343978981c93ce1b0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346836.json": [
+     8183,
+     "6678f28ab7d8b8c8ad1449afd99e12ad84c5732394404424a46688d1d9373ab4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346837.json": [
+     9766,
+     "ab792fa10d99411aa393deb1ca06e0cccb6fa9ab5808d6181133088c8420507c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346838.json": [
+     7934,
+     "04891c2d6d1e587abb134cde31a6a97bf9c97302ad45009d2a8e063bedf06d99"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346839.json": [
+     9027,
+     "68522c969008e4a3868e8bdfcfea903fd9fd1d2e1d1977ce707c6c9251a0fcf4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346840.json": [
+     9758,
+     "c64721889bc2f3585560cca1c77bb3d0180eebdb3df6cf74ab7ea334f5e6d16e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346841.json": [
+     10493,
+     "465b5d1a12ed3bc6118e4b5f552e8bba166e9d4494bf2ef3b68ca35202be96a2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346842.json": [
+     18414,
+     "61550bf873fe07ca01ffa6bdd293f08db847f70003c06ca0176c1fd81189cc8e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346843.json": [
+     7658,
+     "16f915a844f1d818f9201b98f2f2b14d11af1b8f81e9325c9e0f97f6759fa63a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346844.json": [
+     7809,
+     "e2db5b8ba90436434afa194f0e3b93e24038a4ed05d1a4715d282c0c69410fb3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346845.json": [
+     17357,
+     "f70ac96c3f372b0d298d8b32682958c02be12d5289328dd7a39a409417ddba5b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346846.json": [
+     9144,
+     "308bf49da8af20a59517c435adceef4c11cd44ea0799d98dfd7f6865be446eeb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346847.json": [
+     9019,
+     "e49596cffc90b1e01ac1ff0ddb06dfa97aaf10df8f264c5d70b83586018ac398"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346848.json": [
+     13554,
+     "e54a5b5f4ceb4fb097c43df8d8781ad1b6e5a3ee0586435765a360641aa3fb4a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346850.json": [
+     9470,
+     "3d04666477635efde94d092eaa342397c1b5db1e6fbddb1bab593d8918578d84"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346851.json": [
+     9513,
+     "e3d72c4c7865a86c68a14b2136769f56023003aea41b45583540c7e2004b91aa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346852.json": [
+     7897,
+     "f1434daa6eb480f3a0688e67befb0f5d7f9a833839e41c9ada69d2fc31b2ff50"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346853.json": [
+     9837,
+     "446445dce7a9dcfdf36f9a7058cd60711a02d153dfbab4c66209b2d84b92e4f8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346855.json": [
+     15166,
+     "bcfb11bafa087104ddd563ebba74606ce8b7c45038b7e35ee13fbd03d755fac4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346856.json": [
+     16505,
+     "0c7e94c9ff0f8c01c59c3753270e5783669f3bcae29888605d6467714fd0dfeb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346858.json": [
+     15279,
+     "702858e879d47c744bada0d91abc104aba978ae62d4a9cb829dec7c8f92001c1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346861.json": [
+     17859,
+     "ff635bde249f06bb96e43b6d7e68ca89388d5cadfe1d718cf28a8fd1eff4cd7c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346873.json": [
+     37825,
+     "d73443166dc496f8047b536bbadbebc1a256bbab11467b0968141964f3f9ebf8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346876.json": [
+     14762,
+     "88449ff675cb82cb352597cef45c4843e23dadf21df4fbbd980569572eb0858a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346902.json": [
+     14902,
+     "d611e5c618bf7149f0e51c803b5a07db81fc524a6084b6f660a3525190d88da0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346904.json": [
+     17753,
+     "c18de80ca3b3e2de1c989a907863686dd07edab665d8ddf3c1fd4aa195e6cd1c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346906.json": [
+     16485,
+     "1da9225a90f865f70c0053252bb49f681665f6c050f3786a8b50185c4a4e0619"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346907.json": [
+     17075,
+     "2c260314e5c288f728027d4709075aacddd38360391844ff6a3e010a5c89da14"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346908.json": [
+     17074,
+     "41f87e89be4d0b4207ca1933b5e6782623fcfe23147d82c4ac5484487c9f9238"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346909.json": [
+     11663,
+     "e435d13bdaf2b53182453c9a9509fa6c50b95459989f9cabf2b38604517da3a2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346910.json": [
+     17912,
+     "e4c7e6ab85130ea136c9cd5ba3f972d73b34f494d46ca193cab84bd53d2d2863"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346915.json": [
+     31293,
+     "4afb15d7e2008fe83ed6f6f22f4d1987870b3c4e5f7be3fa009118711ff0d276"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346916.json": [
+     15020,
+     "64204a922ce30a066e82b030f9cde1839332399f0f5b6bc5241ce19e32cc4437"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346917.json": [
+     62419,
+     "e25485c3f10db4ed1e62702db6a112a190e3213bf715d317399d90429c2ae9c7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346918.json": [
+     21482,
+     "ac270839096450f6c067cec77c14ac4ed174766ee5b2f5b4d998b31d681c3076"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346919.json": [
+     12897,
+     "8b4ad64ce63b83dee207e62bafeecbca9d2cc15123f37bb5bd73304ec4aa501e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346920.json": [
+     15128,
+     "9a3cdee71a2fc3af24d30494fd70694830c1fdc3ba457f51f66f98a8adcc3db6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346921.json": [
+     78278,
+     "47cc596a6de11739a46bb54e2b5dfde092ff8e62b79ab1659c5db888b44cef4a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346922.json": [
+     55122,
+     "4da0d66c1c8e1bc8e27c8c3e99407f28a098948f84344713a4971ac1acf566c3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P346924.json": [
+     9866,
+     "269326258cab798dbda7f36fe00e3d6e5e59ceb96ef712fc4e5e5086986e1d7c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P347518.json": [
+     151243,
+     "58f95be5fe5d02be1e7bb8b68abfa69fa1ffd8e7cff137c70dc1efb1772881ec"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P356284.json": [
+     185558,
+     "1ad94de5bc72938a951b4a5658c6a164ff1d09508515f8d39aa04c91fc805780"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P357170.json": [
+     1232452,
+     "d17c4fec9d4c54f797fc29aac3e41b4a9346e9e8c7022cee0ab0b0cd529e40ce"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P382664.json": [
+     10900,
+     "808ab098adf539a9eb3b4f137183d94e47219f20b702f559390c9933ddf8402a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P384797.json": [
+     19416,
+     "4a5a1c44a062f537b03992dd5f22e0db1f912fb1240e5204a4b50333c56b539f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409518.json": [
+     111997,
+     "ff53e2bd3fff69846e282015f5b5b95910aa810004ee0164ce26eca526ddb8d8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409552.json": [
+     18138,
+     "69ed85f524d2a824c84e26c9c715096482929bc95cc79b0a0c86dd11d3806958"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409556.json": [
+     7892,
+     "e9e45393c5a58d8bb5799dac44ca998d04f8d86a960c401a735bd711fae5a0e0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409559.json": [
+     27896,
+     "ff959c1b9a7e7c35e63071425db9b69ca659f21ca36aa90f3be257723ef6cb4d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409560.json": [
+     48638,
+     "283387937fb7c7218941ff906f50fd728d93a99db45a9553eaf2e55c6e48039c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409572.json": [
+     29666,
+     "a0a33a532355d9cbb78f0f54c4449a211ef205d6f180619e70feed15954481f0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409734.json": [
+     12383,
+     "2d4e41817c10ff4de0abee3274bab853b7785d62728c3ec7b7e5609c100b5e02"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409735.json": [
+     30301,
+     "bc4028c6ff86dd064b7a6a3f235b167c471f83ffb085e7e912cf1e0c27f863cc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409738.json": [
+     10997,
+     "d441237e711e4025c95590ccef738ed64145f417bb67f5d28f9fcbf8607427fc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409739.json": [
+     19854,
+     "e9e1254983fa76f3bf14fcd6015af89d4f716369a6253f6548418860c27d21a0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409756.json": [
+     222482,
+     "29e52dec57d750e904e0beb3b7b16919677cddc6457fa7c1887a6e84aeb9e006"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409762.json": [
+     91950,
+     "b82d7452725b0bb0c8aad5f430b9303e4f6c8fdbe2b8c40f6db322c4e28b1d37"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409764.json": [
+     74177,
+     "b5fd7a2af18a5e4a5f90d92730fff5b21ca1339c8a231eee70cf518d97df0788"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409767.json": [
+     34821,
+     "827566bd46b38a1f44f00df9e37dcd18260f48fd0c5e28e596ac3b1d8b241f68"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409769.json": [
+     51059,
+     "4f668b6990e55ff56c5186d06b10744e59e468dc0c7b063298dc20ad2fc0f728"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409894.json": [
+     18627,
+     "ca0e019607a058c501c251f747cdcda199171919aa1f9387614af4f56a685e88"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P409908.json": [
+     10292,
+     "91b99b79ed99f1a8b36f7307512bd9b281446a754c0e1f4eb2fac60196456c32"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410000.json": [
+     232782,
+     "dea3807346868cd83427ad8bfdfd930a1fb1ce6f264b90aafc954828049884f8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410010.json": [
+     234122,
+     "7c010684584062999cab71952c8cd36418834a65de1c1405b7257f0fb94b8f04"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410313.json": [
+     10039,
+     "93c1865527df74fa05b8f490230952caf6f111bb9fe058cfdc3e405dae9cca31"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410590.json": [
+     8423,
+     "ddda511d9dccde6d3bb6400313e898c10926262209a6aabad2b6874d380a259a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410608.json": [
+     24408,
+     "85088cfa51aea8ba4f14b770280bd0931160ed01c6ae1276c8ca44a8a7a951be"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410609.json": [
+     10733,
+     "2df908f3bfd14cb83256b2e12e0d6533c7d0953a6e0e336954382f37761b123e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410647.json": [
+     13568,
+     "96bc1c7d6ef372af14dea09e0ea2d9950a9c1a637cdfc2927de95b274c876281"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410653.json": [
+     15484,
+     "d52427b85624180b8ee3168be306c430d34f22cc9c5e01fea250330e80d46fd7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410673.json": [
+     13103,
+     "c415c2a07ea4ec492732990b58f85d49367638efdcaf058367963ad58558e0a4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410676.json": [
+     9979,
+     "b5daeb65683bfb7da1fa1d96e0ab9b97f3d966c2b4b406103a84325d32de316d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410681.json": [
+     15393,
+     "957c699743cfbf55f6cdba3763dacaf86ae961980ddafdec12afdc1548730b14"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410699.json": [
+     11075,
+     "abaa4822769971d1d536aad248069e9d2692943b54c1d4b5aeb93c98c7176261"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410701.json": [
+     14080,
+     "10bf452d94a1c44683fdf6786747b40b10a02f8753df4c56f9f81c5c39e44321"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410810.json": [
+     17995,
+     "3c7b8ef580ec083b9cefbe6703d69afffa72df2f254b1c84f7697bd3f4c83701"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410826.json": [
+     186937,
+     "653a4612a167436908e4889799375c55e7776c0e8f12a9c4f7ebe95419b4ad30"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410861.json": [
+     36722,
+     "528defe4d3a24d9774c64eb09886bf5eaad620f855c887ff96e8781eecd6afd1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410880.json": [
+     23928,
+     "9c896aa1fa1fc93864c36cf7ec7fec3b1a4e260822da5a9f0d11d268041db06e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410881.json": [
+     20509,
+     "833dceda7d44619934518353f7bcc67df7b5027b02ea32fc998950d14de7e2cc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410890.json": [
+     15953,
+     "64736b1b62cadf079d7ef9cf1743edbb14dae2b7d69d684b9bcc335374645184"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410891.json": [
+     12662,
+     "ae9953799c56840b867a69670ef68f407d117f9bc37b8d72a0f0a323bd9345a4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410896.json": [
+     20176,
+     "931b2171cc1accda3a468d717ccfe346764efff588eda0b5ba00d011b1037400"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410912.json": [
+     15904,
+     "11054e4f3fd56c59614f4aede1481aa16bddb4fa82e2826040266e5f28937928"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410955.json": [
+     17766,
+     "c6e9d89725a3fd2976de929e44fc6dca8edecc66448b607ac19409643249af28"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410956.json": [
+     8841,
+     "e00770751f5052357f37369c6dccb0e09b53b20d92aca5be81ba650a6885092d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410962.json": [
+     22729,
+     "8ead6d1714f64efeda37d244ec4e3d4e75767d80593da43428fc3abe4862e468"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410966.json": [
+     26355,
+     "e392697a3bde5b10993019cc954e4438e76ce68a051132d6fc8a23e5386a8bcf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410969.json": [
+     15973,
+     "ae1a3f4bdd7901554337fb61045dc30afcb2434607b05ff085c08f9cc8e43932"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410974.json": [
+     16120,
+     "2a295f4cfd6517b7e6551e1dc8071731aa0ac1509bf14a4a40cd999c7a13d730"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410977.json": [
+     37793,
+     "ba7cc18f078ef832ffcc396011f015e78a2eea5940d553cfc32748a9b2d6628f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P410979.json": [
+     16319,
+     "03100c9ffc3403a9a93de5d54d4502e47dfc855af922ef71a50e2786aa8b41f9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411176.json": [
+     24586,
+     "0994942b1b50278024b9198af9a90a9e2800201c1fbed5fae11e5f985a00c2dc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411268.json": [
+     33131,
+     "07b788a64d1ffb55e656823d35d39110f3f36ce3d04353cfc26fbbbbbed24889"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411270.json": [
+     19780,
+     "7978c9e53b8674cae1ddbabfa8d612d06444be5bbd9696a28ed0268805dd7d90"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411271.json": [
+     9601,
+     "bb53643d81841f8cb459ef3e7daddd7a309de377ef9edbacaa8684c716f549e6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411272.json": [
+     19542,
+     "cc1a106971c3f6ed37f5a029b53a14df65378ec68fd472866ac48796535c4c17"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411381.json": [
+     33870,
+     "39a3a9666645fa65c1cda912671b173b683b5ec5810f836c5440d2bb0fb1467f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411449.json": [
+     18351,
+     "83a0acde8e5819e6c71d63e358d32c95a4b8df000a4f1dfcaf5a35e6f5e995c8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411518.json": [
+     11667,
+     "42cbc8c7d82791fd8326c9987781d3569e47fcc416371ac992f134b92f5075af"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411558.json": [
+     16716,
+     "717fde23e1205c30a155a3fccc727da91853a3495216abd9bb523c7a04fba2cf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411575.json": [
+     25501,
+     "fb197a629ddd646772b85e8d53e68dbce6a2bf3560abeb014f75c717fb7b61fd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411634.json": [
+     6532,
+     "ffca7baf686ed81efc4203ad2f196520e6acd040695a9e0e56973cb154dd7029"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411644.json": [
+     129346,
+     "a8fb06c63d1da9eb61a3d5d7fb1c0d1ae0323b8124cb3549b2f71664de8cb22c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411648.json": [
+     97010,
+     "814525fb2f1ab9d03e9a21126cabce7d31023c4d2cea1ae1a40c878fb6566616"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411649.json": [
+     51004,
+     "0e46f4d2952226b132109f1ef2d1800bee9625e8e7c21915c07be803fd33c43f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411662.json": [
+     12326,
+     "79ca6c0e9c4b4b6bbc807a62d9a9f162bcd0c5b821a8a9c3b4b51cbeacbc210e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411665.json": [
+     49310,
+     "bda9b6ab30a1b1c95defb4a56c8be55f9cd507c2a3e81261287f796c5f224399"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411688.json": [
+     15316,
+     "778d1d9a224d8c66de0d64ed3c77558fae92234d46db8ddb8c2a1a13bcd478d6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411777.json": [
+     14614,
+     "85d524c017ab64384815a6eeda370d46bfd933fa5333622ff8a8e38203d198db"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411780.json": [
+     22088,
+     "f9f5feb71ffe0d3b15c197826c190d8d6f1a0c1f494c045886783d5c5d9f5460"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411781.json": [
+     10730,
+     "60be58ae39e689ed4fa477e78aacad7ad81e5136a5b45888ce228496c805d0b5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411783.json": [
+     19299,
+     "4154736881f9f9234fe31e201d1517b1422af099823e77b33b6db3a188982f30"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411785.json": [
+     15368,
+     "ca5c1f0067bb13df74f34537e971e3b6c1e37d2a91985892c0279ee82ee5662b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411790.json": [
+     24155,
+     "ad4ff0ccc0615535dcf67ff7d4033df01dd4be309fd9beb2d6b290a29d682e3f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411793.json": [
+     23549,
+     "df150e39c2d02c7ca6a19f1c9bf55509d888c2b9c585fa86f53cf5c757e5ec08"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411794.json": [
+     33370,
+     "445de5fc2cea4edb02fcf3f8f4d9baf8637399d889d7a1d24c61af2d4ba133c4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411860.json": [
+     19417,
+     "d729cee1bb6638bfb5c1b7b8d449d3bd6d8d2b18cfd3bb2442f3d2104d24bd1f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411892.json": [
+     29884,
+     "4bb179b93bb5080e610310479ff9ae0942c76ea2515507f5d57623715d31bbaf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411899.json": [
+     7420,
+     "6ac05aa8a82a5bab3ded5f4e5b006ddf5efa62b48e5309292d3bc89244834b2c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411902.json": [
+     6940,
+     "3b6d5292bd129cd7972e619e02c91399eb909eb38dca3b0ad43e658e9a5e791b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411907.json": [
+     31221,
+     "d3337e39b2e37e22ecb970c167a5bfe01ccde64c3e023fcc16b449ac258ad972"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411909.json": [
+     15502,
+     "97072a2655e02a4449f66462e8be318ec8d71b6d90e922cc3400a10bc69e2958"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411917.json": [
+     18066,
+     "b3a055ea049acaf2e6801118f50990692c9e316926fa1a0d187187fec0e6fe96"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P411921.json": [
+     14104,
+     "6704e4442d26ca22799f1f5bc8bd306641b4d938848cae29b4ec30d0c5324ca9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P414096.json": [
+     100234,
+     "6ce6b5b1159f4d3b43e1f4d343c057789a352f44af4a93c42ed0a56f67905346"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P416942.json": [
+     196616,
+     "8310e568e0b59cf874941496770ad4a29e3e648fd23995e3f02b41bb690a472f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P423993.json": [
+     212645,
+     "d282a4282981fd4e5d10657431f72eea0cf403efdab9c8700c6748e880de1836"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P431311.json": [
+     632707,
+     "0fc0b645264a5e3731e87dbc41045dd9f71ae779261d5ec05fec3baf21ebe45f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P432823.json": [
+     252005,
+     "58fba1d2c0335fc7d4889b0e8aa02f39b6c79e32804715359596d46a144cdc7d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P449325.json": [
+     93114,
+     "a1aa0c1ab61aad634f2b8f098e9009467be28b3179818adc0baa0dea61ebe8e1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P459191.json": [
+     18466,
+     "dbf174e01258a44a5baf394d223073db851c22239d0973f9ac8688134f3798e5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P462708.json": [
+     142090,
+     "af3648aea55d26ea7a9e409b6b2845d43417622d139ad5bc8133d9cba2b9fc12"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P464127.json": [
+     910901,
+     "2f16ee1708d7712ecf66143b7b863f34945eaaa5e0f796f728915ed15c27a13b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P491884.json": [
+     24459,
+     "050cd795a19d53755ebe3cf2794fab7aae40d4553587d1e9dcf43332b4ec997b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P492896.json": [
+     230301,
+     "eeb33f431bba1f06cec6323ce3f4fc38222a3f21830527ae9b8e00f8a5de8993"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/P500713.json": [
+     119102,
+     "d084e0d09d4e404cd5d76a1191b0f69c3123acf864af210991dbb07fcd366114"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000319.json": [
+     115883,
+     "ad2853fe5bcf57b6073499193af4f0e7dd3a7d24783d64a00caf799d8d552d97"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000320.json": [
+     259524,
+     "7d96b6e798fd38e71a2ada79888283968b1b3fa5b1496bf6cae9e5aee7429961"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000321.json": [
+     302948,
+     "f6afd8425187a323caa494b851100ed3b6407c639d6bb904d4db885eb777370e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000322.json": [
+     343358,
+     "a3a9fdc2b70c70a0b2aec1c762ac499c9bbf4516e684d932ec7b800d5bad39c3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000323.json": [
+     119735,
+     "430b608e3488414c04446a0c087bf835feb584adb08e50038135bc18eeaf4275"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000324.json": [
+     267558,
+     "e79ae223c3fced49029ac7082500ba6b57ad7390c4895092a9c0259ab9d19dad"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000325.json": [
+     95339,
+     "c90288b6f2413ad6e886a19f93e52d23a07de046f328d0fbc0c198a36e2c3546"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000326.json": [
+     171488,
+     "cc44a0798be2894748d2b3fd3741965939dd42567486165ba85792bdcff6f55a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000327.json": [
+     224208,
+     "81a818ec30e3a7ff36d0cc6f8160e3bce0f25364a37418af83b31501dc1fb76d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000328.json": [
+     280659,
+     "69b344d66c3266b71e1e458a38cef5dbaa911eeefdbfc4cac92dd425e7b49261"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000329.json": [
+     231727,
+     "0f38e04725336c9b68ad20fa252a8b12d59b5cd879c4d73e95056acf2a1b66c7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000330.json": [
+     71026,
+     "1dc50f3225c6283582fe7c19624680213f3acf58c2ae6d32e0680ff26544a6d4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000331.json": [
+     164613,
+     "eb3fd6d328c85cf8a0a9137e91c9917e7be469b9bed87dff7f786f45c27aae85"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000332.json": [
+     2465138,
+     "674c75ba2ceab9fb4eaa2ffa48fa327f4f75767defc8c15f0db1d2118a51e377"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000333.json": [
+     1631718,
+     "e66f8ace9190ee6dd76feaff4f49495767e60415cb9b1c13799d18731141d969"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000334.json": [
+     4250719,
+     "6a33b7f5c11f80fe2cc25ee41fcc29851ecfe5f414bf467a1d7f440610ed7517"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000335.json": [
+     1134846,
+     "5677ab4c6267a7fb5f9bdb7e00c7512c6e56385ee80d25a55ba7aa341af4e96a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000336.json": [
+     1485192,
+     "3e56e85d62094df422593ec5f4dfb6237bf1da95fd06a3a622136980b7050a13"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000337.json": [
+     2339018,
+     "be5a695286cc0e9b627e45ef90b4dc14b58c3cc06023f4507b6465a7e556c925"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000338.json": [
+     4843916,
+     "76a8a9cbd1e24e5252d7054b542e34a8f1f0ae88e966f8656f40b7e8db425453"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000339.json": [
+     1666439,
+     "60aacf7a35e7f82590c4b78eecca188e7fe89cf82919fff101c8818cf29278fd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000340.json": [
+     2766582,
+     "196649cbeae82b13c442a90687259121e6caa8a917e18d1dc69bbcf01b0b8f71"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000341.json": [
+     375152,
+     "387c130d2172c8fbad60cc608dc0e7386d7d83a3113eadb2c61f8dc6bb762770"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000342.json": [
+     999669,
+     "99509d54cd36ed6f24d22f48da157a7fd972ed240685e6e32f16e4ed0c131219"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000343.json": [
+     3948794,
+     "86a9acbf83775a51bd7219501cc212ff31b0c87b98ce79db4d327fdeda1638bd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000344.json": [
+     788662,
+     "038b1a83c0d4aaf6de2d19786deab2586d0df81a16d77f5ef28ca242c7b1c4a1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000345.json": [
+     811803,
+     "1616477de726d7f812bdd9ed6d81aef79d5693311fab13a61a3eeab4cd1f2dad"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000347.json": [
+     2458236,
+     "050888b1f1f3e0901dd418d6d23cee7d0f6ecf94ddcae3574e480e694c6ea606"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000348.json": [
+     1213556,
+     "d1c150d57572f3723c2f4a70ab7f5a8994369a996f21cbd7101c7d1ce362be23"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000349.json": [
+     2724900,
+     "8c87bbc2225fa86b61c0a6c53530dfe24509560ac14af2918a41bea8df5f0e09"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000350.json": [
+     1892586,
+     "4253dc92cd87c3c60140fbb48009341512733a0123971f53d725529013824490"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000351.json": [
+     6810531,
+     "898ab7e331d6626556764488a4379019b21aa452aa115c468da7006e2a19525d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000352.json": [
+     661673,
+     "abec30e112e6c18bc409388ff515afb4b046bba3af3bb2debd7ae47e5bb6aec2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000354.json": [
+     1118809,
+     "1f8d245492a2368cb83b9227b4d8659731c836ee573b5b9c04b1cd4cb84a9c40"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000356.json": [
+     1069981,
+     "828812a0cfab177671b94bb0fbd387ed51022caa0f46e267003860b07ad3779f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000357.json": [
+     786635,
+     "81e6f3157d1db5d2ed7df1f5dab8f5b4170097ee13bd78cb45a3d62737d7a792"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000358.json": [
+     296883,
+     "0c66df166b52d4e4ad53c9ebbdf8f2b3ddafd69bc41277a6bcad1c4e88877983"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000359.json": [
+     497490,
+     "80eb1894e19b1ff1e1c385b0184d3fc443748b3f27dc88bb3a908ba2912ba35d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000360.json": [
+     738027,
+     "72b980171e8fedb464a666d642a43d1cbebca44a4b5b04a63f4cf88198fb9ba3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000361.json": [
+     1019883,
+     "a4cdcf697932a98b6b6a631fc91cebf702ed94df98d24303fc71a611c7c3aaae"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000362.json": [
+     2546693,
+     "5f76852678e610f369232d958c0fb7a07edd051db531a08edc616b350206fbb6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000363.json": [
+     3790246,
+     "004d1f9e9dfbe4e93b635f81b49d3cb55c61e4b2e3a6e485323c2a418f935d0e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000364.json": [
+     4562820,
+     "06ec7aa511db080061dfcfe96cfd4511d10335dac41386aa0e33d1b0ec5abbdf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000365.json": [
+     3026626,
+     "fa3a0ac7d12ff1044b32c39a4ad388f67e7e5b40a7ab93fa67fbb087ccce6dbb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000366.json": [
+     1177785,
+     "dd68925a28ab44df3c9ff19451dceae9522bf7c503d40bf031d1b458cd4e2b9e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000367.json": [
+     4522353,
+     "5db6e30e06947aaa4332a3a8ba24702a15b9c1c6679e58d95eb19a6fd3e53a40"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000368.json": [
+     3641909,
+     "6f847bf6a14d46d632c4114aa986a531a576757359105e6aca6f3bb0ef86edb5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000369.json": [
+     5422597,
+     "029eb4e161d8285afeb9b8bf4bb7a6d9beeb9f4a398574d52322b2cb206bda4d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000371.json": [
+     2653840,
+     "ee37c44961cd1a1bea1a2f0376813ff4782f8f6e33fad9b39e57c1565d9d12db"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000372.json": [
+     1004195,
+     "c4b8086d78a8400593bfbf29a3501221be370ec70e496ac1433f86f2a071e85a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000373.json": [
+     263757,
+     "2eb1eff0b2951f9e6ef228bb34140f3b5d6304705706e655dd5114cdbf71a33b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000374.json": [
+     837249,
+     "d218931259e3161cbd5052f6ddaa3c0c95cd9dacc16e5263724ac630249f1510"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000375.json": [
+     2866297,
+     "a1cb1f58f72255b8bb2c00c3636e7d101cb668e1269f53254086fbdf8c82d71d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000376.json": [
+     592671,
+     "fadaa00f6050e07939960fa692d2274c65915906f88ee5961a23840efacbba79"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000379.json": [
+     4579350,
+     "e2c05894e255facde2403b113e50b47f39d530b44a14f62946bc8a4fda09fee6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000380.json": [
+     5708289,
+     "fc891966a4cd83e805ee10ad606383fab11687ab76b81218cd5411be186e3265"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000381.json": [
+     3351115,
+     "57b3f4501734b997ef502c339630052882a832564b5da82beb2e051ca0e3bb0c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000382.json": [
+     2439653,
+     "2fb0c7c5534baf2b5eb5b9ab3dc5ef6a0e3592fa23f8f01ca85bd44d7bd468f6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000383.json": [
+     1828359,
+     "0053eb7b88952e4cf87ffcdefd0153cb2d607fcc4ef3dde895ff8e452d27d08c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000384.json": [
+     477113,
+     "770a8de0a720e9c92bc40a698eae897bb4bde223040e9756110b93e7d448bcdc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000385.json": [
+     419426,
+     "78fd65e421c5a7527d1fd5155f3713886c0637bb9ce28cc3e5472a6a48655fbb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000386.json": [
+     3925091,
+     "5a02ef148ac7f4a57d500cf6514c6b8f163f7c5fe3e47c2ccb91dfbd57f1aed6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000387.json": [
+     750509,
+     "1669332a364daf6e2bd871e7b1c4e3fe284fd7b884d57f53566d8c69d93288c4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000388.json": [
+     1137313,
+     "7f9a8178a617d6f3e0e0c72dabe6043bcbaee033209fb3ee5b08c72f5595e693"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000389.json": [
+     957621,
+     "7b9064ced0be4bd8a48e11d56f5d4a520476aea85db6a270ef76befd92d0338e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000390.json": [
+     364141,
+     "3cf5a94fa9493aef0eaace2ad4dadfff1b0a8f5cd63e772e4f86eb3ee1b3a643"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000391.json": [
+     490583,
+     "9d2437febe051a1fff6eae6774f3b316aab8d06e16941e1d5196900148c97133"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000392.json": [
+     218226,
+     "5841e5005c4c61a76d404fe4159b2dd4a3559401ce1d772c0eaf7f122776742a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000393.json": [
+     70759,
+     "ead1234221b61b1320191e7d25f59da9aff3b2665271cad8d35751fab0ec3225"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000394.json": [
+     154079,
+     "13a7180e482aae7324e9dbb8fc618439fb44ae9e78fb9b5139d72e518b63a3ce"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000395.json": [
+     1004754,
+     "0c132521f2493575d05582058afc2ffbbd15c89b2c54c1ea09d626cacbfb0e7c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000396.json": [
+     3233501,
+     "7dcba90356a8f0b291ffed8e5f228cfec258eebefb3bffb1ce7a0aa58a6d34ea"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000397.json": [
+     2186048,
+     "c6d36d2b8138a0a210ee65e17508beb026c07e69820c657fe3375485bc74e6ba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000398.json": [
+     2328949,
+     "9b6f443c9c035f0645467b97cded9f292eca6894208f875695c4b77635982fe6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000399.json": [
+     1875325,
+     "e3c6025c893952219a1ddfdeb9e97a0c890854b4606ea0da04ea383e618e0907"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000400.json": [
+     1795258,
+     "43f429f6635f66e70668fef02ddded464bf84c593d88ed30cc8202927f0bd36b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000401.json": [
+     711474,
+     "e15d2902a66f5cbedc887257c4d29bc38941a6be7b491a004ac15eb5d4d4bffb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000404.json": [
+     148392,
+     "372a605cc55820315c7010a59f22035129f0664ef432c39f5828e7918033b677"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000406.json": [
+     695645,
+     "4ede5e682d7627cc94789c3881617cbf02bb248d988753b7a740038a35e65bc8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000407.json": [
+     1379196,
+     "21d1d20895a8d299fa906a6d68c89f24ed30076e52b9160b73e0e7af1f6396d6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000408.json": [
+     738162,
+     "a1bf4c66d32ef20071d78a423bd9815af3c009ddb0fc236a2ed09b52033e9bb3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000409.json": [
+     464952,
+     "f34f9500a428eb01f5e0b1105c2646ba9bb2ca8bd5b93fb8a983c6c588544bb5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000410.json": [
+     1049818,
+     "2eef7cb313b722942124b133282d6b23f3279321eb6ce6b79ab3a98c8a90c35e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000412.json": [
+     298382,
+     "9c5e84c97543c469e7b5dbca72b477fc4609581a7d9c05f9c84e6600605f2930"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000413.json": [
+     220631,
+     "34b625ed2b724aeb62b844a218ecb5b25513a465303944472c2e968cd2290083"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000414.json": [
+     319321,
+     "10cf6e88af93dd386bd354284d28cb8e5d425cf721cf66c715dd8e717a92fca7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000415.json": [
+     120312,
+     "2e2578708052fd13380be58924ad71f5f332d25fe320a51f8aeaec83c9468651"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000416.json": [
+     1319552,
+     "c28cd87b4bd57275a742460b6b3777df71253184df8c4954af1c08a224718b7c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000417.json": [
+     270028,
+     "4b661dd1a264f70206cc85394a854d4960805b1b713353eaf8d41c9bb401d350"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000418.json": [
+     427220,
+     "d069502cb5f199be4b3fda922e09170e227efaa6ad26e7789785f9d4821a0b50"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000419.json": [
+     258026,
+     "97824097497fe81fc1809802743ad898c5cae63c737d1ee32566adfe77231744"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000420.json": [
+     267805,
+     "a8ea52b74e492019580f0d31380acb9c338a3f2b6cc84c6218b4ce30c25b601c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000421.json": [
+     486904,
+     "f16c1497678ff004115812f54666340bf2ac74f1cf8574c0174b0076d500b4f0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000422.json": [
+     263501,
+     "d70fd03e0bad6cb980273d089f2d58aa83f115d6c21be836a346a6f828c5c6b2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000423.json": [
+     250575,
+     "e709f7a11cc5de2a4c0608f6d12a6e7eee6c6a21f7f75b605db4643e5a7559fa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000424.json": [
+     138122,
+     "9a99e2ce79e93810b5b08c097979d2f33fb28729b7da9f28eb9b2c1bc7b5d5fe"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000425.json": [
+     688355,
+     "215f4f9d6a1dc9b10c00647fbd9e09fef263fa12ce19468eac07a8ef751a4a94"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000426.json": [
+     133810,
+     "83c222c256bfe20bdecb88234ee51fd63dde0fa0c3e75917bfa6ba414f119b3f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000427.json": [
+     492333,
+     "68e76a00812f9abf6125f06a53642c6e4257921af4bd67a11fad9e297c091818"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000430.json": [
+     8369,
+     "f147ae677dd1e2b5db4612e95ae07fc21257ad09c0eeb12f2e9a2db3f75dc77c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000431.json": [
+     505163,
+     "4490210396722801f1a7c360b0a9b1316ca4a6ebf5dd1573e6825ed13e39c483"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000432.json": [
+     316646,
+     "0a9a086fbfd78b46a8edc57a534ba6fdec9f0664f54361f1701fc426b44ee30d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000433.json": [
+     696576,
+     "c18fd5fa034ae81edf6f17cfab7154d51445a0bd329023e68a8079eeb8c406b5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000434.json": [
+     628179,
+     "8a06de6d4af18efd0cdb6d168a463b80497711f9001b70968791d6c2336041cc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000435.json": [
+     552249,
+     "28fb5e5c29d48ed91e9d708ad9f6886350a439369dd4db4146bd6638b00a9b99"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000436.json": [
+     197252,
+     "13d2644df18b99058b13950e0a7201654b795c0bd8c79328b65354f0b0f859df"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000438.json": [
+     519330,
+     "aff739db9785e9ce50557cd7a9d2ea564d8ea24a580a7d000b2f336f3558e769"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000439.json": [
+     451978,
+     "f80f4aa5234351c1897183f7128c4482ade8e2315b77988c63ee009d7189f526"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000440.json": [
+     147288,
+     "8504e01ab0e45060486934a9672c4b84fb20072613bb966dd3ffe21de060eeed"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000444.json": [
+     811980,
+     "f85cffa36020dc58e5b15f9b046784ec397f902291f139a0aa325501a70f19f8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000446.json": [
+     26575,
+     "3fb8f83fa086dbb3ca4434d83bff1c2102426e56190642e5b76c36e66956cd38"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000447.json": [
+     2153871,
+     "cab2ed8f5e87d755ebda057253a8d8270408e7a2d15e708f5c95095a1876c9f9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000448.json": [
+     643244,
+     "3b3484a9fbbe5eff588647c5cd6b4f79c7038c991a748ffdb0c29001ba0540f1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000449.json": [
+     694112,
+     "ab0c5eefe56a4b508b067df05eb6db03a33b2b5bfe76064a702a4fcc0358008c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000450.json": [
+     927110,
+     "ffba78393c714a0c50c6df59b5389ce9b0a24125a690114348c8f2536c2171cf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000451.json": [
+     3925929,
+     "738423548d79997163b0f603441da207967f25d9c81384818b4b92714cbcd925"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000452.json": [
+     722028,
+     "09095f055a52241d231b9506f85e30c5f020f80fe5120521a3c3ccf930ae1816"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000453.json": [
+     185821,
+     "0de04958451ededac9995dbaace18f476128f42cec35a76b63d1ee86e898adc0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000454.json": [
+     367965,
+     "7bcb772bbb79c278af99229085809938df7d34f94626403d3456161ee271bf2b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000455.json": [
+     416642,
+     "7bab984a15a7a3e6de6bbc59e2fba395bf8b8948ac73fd8846328a4290b9e7a4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000458.json": [
+     445066,
+     "7eebd712d31995a86a03b2de5b82905e48dd0974aadc2598d932eda70fa30a5d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000459.json": [
+     663686,
+     "250d558f6faf768a629000ae5360921ef55e38c25733343f0f2f56b019563a07"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000460.json": [
+     186995,
+     "1f7a008cac2c722ded426788b5b9c24d141a056acf0d3be09e6c9d37dc73ab50"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000461.json": [
+     509513,
+     "d0dea38478af0e8166039141a0bdcf164032cd8715f6ceb2e3e8bbeeb9eaa963"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000463.json": [
+     941675,
+     "66e57a56f0efac27ed4e6b6c664d90b2a39820fcc0674e4ba0c8b71c67ee1fcb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000465.json": [
+     1057531,
+     "8b1b048ca6cfa98ec24c7d94661770a64306254a759d88c559c5b3ee03562497"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000466.json": [
+     131156,
+     "9c7225c0ec65ad10f491ea2e5f816bc9a4c02d69b9f8a42103bf742069cf62b7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000467.json": [
+     501865,
+     "b32548aed05b8d9599dec6a6f593d373f84f6ec336442be5215bb23301c425f9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000469.json": [
+     365804,
+     "cae1d72b991ea2dccd0ec9a10bb5f7122da090ac66b1b35b20ed3ed2ce6cf88b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000471.json": [
+     187123,
+     "21735f3349c612a28e2d5d30413eaedcf3653772b04d25c6b59a4017529ad8f2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000472.json": [
+     786853,
+     "b9d6de1b370069bb21d617d64d3d29efbb8c7b13a8afd3627c3703f3cb66f02b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000473.json": [
+     469478,
+     "86be015d8dab2fd350938dade6c465d86042b9a6b8422acbd3bc248847643884"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000476.json": [
+     274051,
+     "e1906d4b6163b6ad019975478b224846939e6b473e06344749557da2d4bef8f7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000478.json": [
+     133048,
+     "30424d5cd7059611f181760da8343599025fa9abb8dbea3a47aee3fe13da7fdc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000479.json": [
+     355585,
+     "b78ca4dcbf72c5317f0eeed11cd8d08cda34aa6d898c5f2081f3678ee9b7b1fa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000480.json": [
+     123428,
+     "384050b0c9778b609889f8a2543f880a9dd3997f1299eafb17a774884fd1a952"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000481.json": [
+     848442,
+     "772d8656c40f48d054baef2fbae7d6ce0c66031cec1450fdbd11d1e4331355ee"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000482.json": [
+     580033,
+     "1667bfa08c34edcdec8efe3667a307d35a9ac74515fe66d6aea13c0dacabcd40"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000483.json": [
+     510106,
+     "4fcc53d06f763783ecc923fcdad99a546e2b6a851570dc20ad468584b432415a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000484.json": [
+     494543,
+     "9612bdaed26740bc5ce62fbe26669ae3a5ac83c47fb2d6328752a9047e6c4f10"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000485.json": [
+     309243,
+     "5291a53a2229d1da1fcadec61c84b7d1ec0df518633f11402448b412cd52187c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000488.json": [
+     145671,
+     "6ef419f5d386ae387a80194ec2a4de1a4f956061c24b56cacf01f0abd577901e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000490.json": [
+     988540,
+     "c95b65e4d6f86551710dfbf8d24842b1d73b9b33f8b29590fb65070c018f827d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000491.json": [
+     561456,
+     "b5ab55d04dd79531cf73c3164abce99cb80e7aac27417f0501dbcb8aaf846f66"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000492.json": [
+     590619,
+     "8d54981d0fdf08b701e37fa6fd6ebfdfc9d2bb72fce0628324078d78c8500b0b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000493.json": [
+     430745,
+     "6d3276d5c0f58f2daa1b791e1cfdc03219472b6fdea1b980e510693c302f8858"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000494.json": [
+     452650,
+     "1cdb7d415326e42a04290265d110f11182658e060f7e19e6c652642a4d1edced"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000495.json": [
+     234974,
+     "6408f56c72c0fa758b64216777d306121172d357fd6fa485197d61da109c8d0e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000496.json": [
+     454,
+     "99d5e1837e7bb71926bf6eef5b07d6ae14e22f57593476c595d28585282d6582"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000497.json": [
+     411034,
+     "55e0745ee674ef19b2a0ab1e2f91c7f2dd060ae5338e2637dd7f49e8dfe3b076"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000498.json": [
+     237296,
+     "05bc617f0d7f56e5cbeaf66c8fa43d424fca51a12a81c82eec156d4a5e895440"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000499.json": [
+     735911,
+     "8db7ec19791be12fb480fd0e0bb81b20bad03aef6d3b92e603f0bbc442dc0d2b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000500.json": [
+     305904,
+     "769d5856aed4b2fa3404b0a6cc5bddc856d0317cb0a2fa1f6cee4e48ba79313e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000501.json": [
+     189846,
+     "3bf81987519602aa6422ef50c12f07dadc943e0b30298d65d77bab0a85515e33"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000502.json": [
+     339682,
+     "e61b30f9777d97f72e656b3e971f5acae56b480c660a22cb87a272f2ff471d50"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000506.json": [
+     467376,
+     "dc1df6e4383908060edb8c5b94a887b3477a09edc028116027639f27a12d53d3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000507.json": [
+     552861,
+     "d11c5a78bfdd7118de7404346372aa1e0f0fe58f59d29f9826bd278122dc02f6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000508.json": [
+     298109,
+     "93aa8d3878bc16fd5618d3d2b04d3a9487894100122213de561292ff78861f0b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000509.json": [
+     759168,
+     "7afa6c682664e5b5eb3847d62293c7b93e4fd1d11423d06395e9312c1d17d1f0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000510.json": [
+     306234,
+     "06cb910714c47491ee2cc1170a641926df0f5e8034c3b5b99cc1492c206ee71e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000511.json": [
+     338964,
+     "397285d839cd80c7f334368a875e50fa3e869573ae21706b1d850ee43edb205c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000512.json": [
+     853644,
+     "215cf9ada76f410f736c54892d44fd63495fb99ebf5d67311da3ce2aa1643e96"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000513.json": [
+     421983,
+     "a532e3fcef0ca21557f3f3ebc839ef7b121d07fbbc503da452451b1a80603d9c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000514.json": [
+     467767,
+     "b04e5b252d5b05ad41afe64f10b348d7ac33c8f78f298149177e22429c4f5b34"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000515.json": [
+     256255,
+     "96d0084562b269a428fd9c33f5ea33144e9b6a238aa65813d0b8315f276b231a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000516.json": [
+     73935,
+     "a53c62f50fa43de676a4146ad7c7a4585d61831d4ba4812b00cbe7c8f91f6f73"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000517.json": [
+     377069,
+     "063cf0213df6e41c373e0528bd6a67f3f1645f0212921ac1d813a709ea64f388"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000518.json": [
+     581419,
+     "7cf3caaaf69c88377954906a33d098b58164b8210100999abaf92d0b86ff4ed9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000519.json": [
+     137644,
+     "0d75502e47d63ebb766608a86529b538b979145e0f8b6d5773d5f5cbc789c4be"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000520.json": [
+     161667,
+     "aa6a8fd10ecce33e2a3a7fde8f4c1f61ce56db807cfcacb4b912331fc72b8ef1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000521.json": [
+     482236,
+     "bfdb0311c4d8e3164324e50f65dc4a7d05f9a5a0756ff9ce444371b68f291aeb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000522.json": [
+     88978,
+     "5fcb8734761b332268874161e9a8ba399e65f1c0be3c765cbd615a2225ebc28a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000523.json": [
+     210497,
+     "14dfecbf9596b8951991ed9a1be0b03c81554bc32047997f4fc853efd7494c63"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000524.json": [
+     262959,
+     "6c2efb8105f22c176b806ced414c0646172d7e6b6e5433fde8eec63013cf180c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000525.json": [
+     395508,
+     "7caf9bd58aea3971a15e901dfe5e722fb68c3881e45a3d0ac13d28a7fc89cd87"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000526.json": [
+     311959,
+     "0e5ea787f96eeb61ca13d10ab8a543c75f84a2cb9aa34709f2543d5a6eef1804"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000527.json": [
+     10592,
+     "64d039775e3f643fd6b5db838c809f948fe8e19300444550ef9ef6253680bb51"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000528.json": [
+     412931,
+     "2647e788ec9614cb0a135e8c00526cfb666c9931c39f5b458c1d9051bfefe046"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000529.json": [
+     324471,
+     "936405bfcacda3c8c26d4327fdcb5b659342e6b4f4d5896f6f74c498ebe4fcba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000530.json": [
+     84103,
+     "52d701d527f38370590d3880c57546f055c66b1c47e8726bd88f4d33d81cb3ea"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000531.json": [
+     142653,
+     "7b136dd13e18b6177d5f0fd02db6c02677708eed3bbc12885441804c2cb9d739"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000532.json": [
+     242468,
+     "a7cffda715bc602d7ce9cd4b5494e3f229df7bf35f4a442d3a25d44e7307adc6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000533.json": [
+     257306,
+     "3a06b0e86f72c2a440e5e9b2423a83a4a659716b9531f7ffc78366eb372bf7c9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000534.json": [
+     225720,
+     "1fb465224fac900e0e9abf2a4436f90abe9951e31a76475f78c7641b05553ac8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000536.json": [
+     88570,
+     "42a999009092d266f872ab79b2ddc859a04b60836569feeb7f2faa0c44975726"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000537.json": [
+     64908,
+     "6d053c18941ca2ebccb90117db55bd93e39570197f79d345ac1e5475a4acfd59"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000538.json": [
+     61429,
+     "4bb509788332f36efd7a905b3badd6fee423d14730839d334eb4f575783e32b1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000539.json": [
+     343784,
+     "4160c96e5b6db5075c7617fdf9651e500d9920428d102280e75827f64908810d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000540.json": [
+     322492,
+     "5de2dcde584bc54d931864ec816dd97c32fcab44808f4e0db1e2e8afa1b75a17"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000541.json": [
+     170054,
+     "1741233721d377c01af88b6140770f9ab5bf1ffcc96f1fc299e83242c35344db"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000542.json": [
+     158059,
+     "6e9f5ea9a8d82d090c9f44d78ee7db06cbccdc4bfc2c62540616141d88c16bdf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000543.json": [
+     111342,
+     "47eba47e8d81804b74749261391eab525d3894eb776207e8e4c28c807be7c748"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000544.json": [
+     200400,
+     "d4b5b188a8b2df937f31c998f1fc9895e25a0fc0f6cf5a6e6b94777ff720dba1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000545.json": [
+     216255,
+     "26e9b6856818ad215c640b00a9992de456320095cd52feb4d5def7b8bbeaea56"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000546.json": [
+     381898,
+     "b49b180b93b9bf94da474c0cdf38a8fd5630f9adc9f78f253af33773df6cd44f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000547.json": [
+     749107,
+     "8e2a1700034befd83824fcc3ef9e92cc1f52baa7a50d41b0653392ecf5d0ed2a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000548.json": [
+     141673,
+     "2d93357384c775c70acf801b6ba1ebccb2698178534e886c40dc3fdd817ab543"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000549.json": [
+     278360,
+     "541ec3a55da60d3940b1ec694b415244cd136fc2d2fe9ce14460a4dd2b08a1cf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000550.json": [
+     123303,
+     "6665f2c3d47baece6f19fbc79c70a32a0522670a7bee3b987e961c6aa1178fb6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000553.json": [
+     35203,
+     "fc4f0a82a02512dfbbca4a46caf9fff1d567654d87db07f97c9c1c23ad539ee2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000554.json": [
+     515823,
+     "2f801075212fb736544c8fd399fe1a4f75e2b5422a2335e32b0f5771fb3f5ee2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000555.json": [
+     388471,
+     "9aa045ec1ec3fbcd39846897d8ee19d764c5ccf7d503897ba6d458eded850d15"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000556.json": [
+     303015,
+     "f103967862bca05312111fa9848d0a1a7eccfbdda1a909854cb0d0dfe14b0fc8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000557.json": [
+     580469,
+     "892afb4c3df59fba666780d06b49341cc747cb6c01254a31e55d2b1e9f640016"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000558.json": [
+     165950,
+     "1d23dd9e76cdda1f049016e843a85d1798412805cb3be06cd4a97f326d7f15a2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000559.json": [
+     471400,
+     "f764987670e44c8f864c3f304419e4cd7149c49f683b7ba6e813633ee13a1603"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000560.json": [
+     572823,
+     "d379f3a359823737a6f43922c9d3905260af75d56454fa29deae8a298d1dd529"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000561.json": [
+     299727,
+     "3d38e829c5d5acd17f10bdcb6024afe96252fc7d94d362729c7832954f2b906b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000562.json": [
+     81707,
+     "2f0455eb7f3924a13c16f7849fda14257759246631db16718ff2865e18baf5df"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000563.json": [
+     152708,
+     "f426f6d4c43775c8a2194bfc83f6456d387841c50801b97bb50caf1c9992fd0f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000564.json": [
+     140093,
+     "b2fbf605c34cc2b18f7baa7929253ec6e29e7a0b18681c28027212c0224ee3a3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000565.json": [
+     184742,
+     "f78b545de2adb763030623fcc0fea5235f28c84d729f096cf0c289c382b4fead"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000566.json": [
+     604186,
+     "411dea66aa19ecdb15ac970b8b122a76ba52473bf2b3ce0bb799c331810f1d40"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000573.json": [
+     178698,
+     "45d5b8f4f08a018449dd143d5ee18b80254bc0be5b82ad18e87afdc176d4a7b7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000574.json": [
+     364727,
+     "409f3de5a980dae95d8b181db9d80a5bc2d3786db90b8e6e151e4734bba80ec3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000575.json": [
+     341339,
+     "7cf170ef3b42c4c9bb8d352516c91fe17e1224d42a4b014ba21db56dfd6d1a5a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000576.json": [
+     102403,
+     "eb8e8b521874cab246c55c514e104d4c7d2a3f1ae8a593caf5bf6efc05b037a1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000577.json": [
+     219349,
+     "4a99f7c3f386e301f82d895cbf80cd8b05f83956ba130012ff83d58f781cf3fb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000578.json": [
+     80189,
+     "670b777946460f62e062ba1593f40aa53850930c0db281c2104b5d6abd6a21a9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000579.json": [
+     72392,
+     "d8db74387d819fc0b944181edefa8b4de86d2f0601a7551cd507753aa2be2135"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000580.json": [
+     173269,
+     "356e4479dee87f9b3df3838aba403dd54719577b7bd5f66636a653edbd690f81"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000581.json": [
+     330180,
+     "6a23d7248713e6a483883b3716b64054f617e0796c162283c73ba628d44a78dc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000582.json": [
+     234256,
+     "24029c1fddfd22842f67d3091efb55a2117f97b6e11382d1972b84418aa2b224"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000583.json": [
+     112409,
+     "83c0ee1a9f60eaa27be1a08e3d89a6fa099f916d56e05b9d043c48b24350fabc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000584.json": [
+     101825,
+     "705467511d60440b6eb9fd8274899bd5d7817f8267826568f896ae4795ad61b8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000586.json": [
+     454,
+     "4ceda92af9c8dd47817d4192efd3ffd94cf7339ef9258416dd1de59ffd9913b8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000592.json": [
+     94984,
+     "7f2f92297e3b6ebbb46c8daea78557f90af92dd239113e8dd188792ecf804d52"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000593.json": [
+     230164,
+     "8d77fd0f018d06bf81602e5b0a3cf74f0d838d4c2c683dd448edfe89d5ed1924"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000594.json": [
+     267077,
+     "ba9aa0c71ef7b73ccdb264dd1e8b7b9b14e163771ba630fe48122b110442f686"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000599.json": [
+     90506,
+     "196d30d4015f5e10e4362e897365d207d5d3ce4541ab710446a17f0292b297aa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000604.json": [
+     317626,
+     "917cf6aaca252c9db3be12d8217188e9c8e24d50fef7f0b1e9cc780d0af47f5b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000611.json": [
+     314731,
+     "f67fd5ef17164811487ee706954b35be8bb666e200e98932cb6b5dd50bacdb83"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000615.json": [
+     330319,
+     "e38b5d4a783d87ab3cd3d3c6af5b8464a43ca7d769353cc20993f95b3c9b2f1f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000616.json": [
+     1215895,
+     "172c537dbc9d01861691b2923dcf23af8131d7481de11dc5c451e0eb58f639c1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000618.json": [
+     229415,
+     "2808df98804d8a6687cefd5826428597ef1f5beebadaa906256f70d736de8687"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000619.json": [
+     1562310,
+     "aef88d6b1e96b8ec96d8ef9c71fefb88a3e6b44be0ead7fd87004caec94d67ed"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000621.json": [
+     1811994,
+     "6cad6cfb26d3e9687c0c59c7c70ae392978e9cfe14ff13c2591a8722834ec780"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000622.json": [
+     210846,
+     "0e31d73e95ebd3c49750de92c0bd2794511e21e69291042ff38f1d6ff218161d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000623.json": [
+     1342363,
+     "a5ead4b1319cf5b8bdd9b43715dd30c0a8562dcc7243fb2d921d3b20728dc8ae"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000624.json": [
+     2989470,
+     "6d7f8fb24e20093117c5b9cedd283bf9c94a55abf5ce84031d06f7eea13cb8bf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000625.json": [
+     1706990,
+     "60640c8a421ec6216ad9a002c74f76f0e3be563dd186a250652d21a68eebb823"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000626.json": [
+     593334,
+     "598ad10a20af8cd6a913f14274420ac8d79a7ea4e8f5ee9db148e05114501821"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000627.json": [
+     240197,
+     "bfbf7750fe2e49c919806780a01308c8497e3d3857ef08a66d401aad59a37f2e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000628.json": [
+     640515,
+     "f2b4d5cca4970f61a18e587450efa88120ce298952e628bfb9dc6ea272a3da92"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000629.json": [
+     402434,
+     "1051a4575665094de812008a52cb62e677611aea71b14a8ed254f77830bfd960"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000630.json": [
+     465501,
+     "d6fbe25f41a5fc859ff28796185fc95a687e2181716aa3183d4b9737c2292af3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000631.json": [
+     614884,
+     "3e972150a975c10fd1cdd0355cef6f448fa4009fe1a4cdb41583b0846f3c1491"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000632.json": [
+     432599,
+     "41bb48e5bc2afc00ba67133f28c515fb1ea7a5a012b994688ed855740f9e2ecd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000633.json": [
+     337969,
+     "fc28fb4a1e5850b77bbd4f055a20b9ed566c39f7fa21b4ef1342132770ea74b1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000634.json": [
+     365380,
+     "afbed797994b421a9000276fd6bbb3b2424987f219444a98ccf29c08fd42f9ef"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000635.json": [
+     183447,
+     "dd0b5985b2d7b5fce566d15885b502d6a2e03e24d53122b05433b275bd8ea654"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000636.json": [
+     125105,
+     "876370cc442aab7e4f417eecb7802d201b237700f42782b6b037289d96e4ced8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000637.json": [
+     365683,
+     "2559124658d298134ac6e0dc7c085cab20fe3459748c7c9d09a463d7aa5351ab"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000638.json": [
+     133861,
+     "e4b2886e0b7c6c9c5a2915b3dbff8f40853f69d0cded23f1ec49b900487bde9b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000639.json": [
+     449275,
+     "f7370076dca309db3ffdd064baa8ad5a7058443f2f33d5bdd3b45cf9be6092b6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000640.json": [
+     434381,
+     "1ea4cb18e7862ae9f42ec99ba60a599aa5b165fc425d2dcb49fa99a6f81a3951"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000641.json": [
+     324266,
+     "c4204c8546374d6cd5a3861460671267550c34cb2a5f08793eb1088e06ea3e30"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000643.json": [
+     46496,
+     "7d255615755a15ba3f702c5640ca53c942d8f6637a13ee083e239d5fb69b851b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000644.json": [
+     86464,
+     "90c38517f072d93db110bf8b0b8972d918ecc79dffd915cc5df023948c1fe84b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000646.json": [
+     270127,
+     "c027170913f6db3aefc522d086c42935e3fdec33eae497fb7036ae8195ab7f1b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000647.json": [
+     957811,
+     "6b88bf2e18c350dc4d13045e8140ff8881f5a75373eca281e8af87a8147aa5b4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000649.json": [
+     606050,
+     "1bb3f6165a43bf5241d6db5aef09c0e8bde72b7bccef227b933c79808c8b11d0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000651.json": [
+     522422,
+     "a555f2043ce3594f46d9e8de6ccd8c3d648e39430cf57bdcb773373e4d92d0e4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000652.json": [
+     106888,
+     "56deecff2eeb79af76ea422132c02cb3f0383e15139d572305df3d4b1f8c38ce"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000653.json": [
+     320971,
+     "fc3af3dc495f589e5569a8b765ad63f1e08f8c6e35df560fbb2e2228a436f6c2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000655.json": [
+     365216,
+     "b373d75210b7fdbc75fbfac7c9780242e7c3a3fb2f2eef88fe85d414268f2b2c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000656.json": [
+     247626,
+     "10d679b9ed7063c79a9fb4eb968ffe1c47b296a2a814e9e84ab78c59f6b9b9a1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000658.json": [
+     496327,
+     "e82c48c67b01c957b6eea86fc3c2c602dff8bdde7ac7c90efa1ef9a41b669fa9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000659.json": [
+     901997,
+     "4e0f168005349ebe683a3bd1ce18a2120e9322eaf613e664e59f16da8bd529e1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000660.json": [
+     642386,
+     "e5e6a8cf6a4d3a7d815a3e36b4b4891cdeb7d88b52c7bf0a5898cbe872699efa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000661.json": [
+     347737,
+     "6d56e32ff79ebfb2a05ee03fb6566556b15a8371b292b44025c571074c89ce81"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000662.json": [
+     162735,
+     "bf914e085679c821ad5b6b8a1de4bd22599f3a3cddd089da8613c967ee37984f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000664.json": [
+     261925,
+     "d1cea0c162eabb2ddd32c90b104c8200cf3fa7ce50b5b4e3f8f51dafb1cc198f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000668.json": [
+     661130,
+     "9039353b3e8b79d71657a8e3646972a72f4a069b576b3c7dce3ee88f4072299b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000669.json": [
+     315586,
+     "0c66a4c8c2e0fd0cd763f26c54a0507fb7c80b487229c77d840c2a20b60b6291"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000670.json": [
+     478943,
+     "67a028a51c7edd2690f7d2316807d06a73e3755f9a3c7d0521da99c713bfca16"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000671.json": [
+     348963,
+     "b5aa280cbff66480f346abccfa864c3d960e6cd99aa8880f3287bd2269cc4e8b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000672.json": [
+     401073,
+     "540d91a28dd9c2b16e119ca557d70a76dfb64d8bd14bd646562f1c70949919ea"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000673.json": [
+     362920,
+     "6a79db32a426c49fb3ce52d3c14804e12c65e312734b8e0430b766c6efdccf5c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000674.json": [
+     800810,
+     "b9251e02cc09a1d8d05525f53c6872ff685eccc0d8afdb1205c3c6dddd910524"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000675.json": [
+     328985,
+     "52cbfd849eb61e9a408b8e73ddbb6584231008aa612d98ca9c7d6bd98620abfb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000676.json": [
+     296934,
+     "7de6b5c87091f605928a9811ebb1db2cd894c820bf5894fe7c7e75c734048160"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000677.json": [
+     226093,
+     "5b7c88ecf9daa5de721733bb5f0fa1282f9e0410c8a880b7c501203f3c72649c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000678.json": [
+     457121,
+     "86fbe162515ae4a62759dc6680d8f0e9191a7d7d8d19273066e4e0a24cb41d0e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000679.json": [
+     265690,
+     "6ab9fabf6fbd2df3bd10abcff35a3a4364db3f7a284c96974aa73d887556a3e7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000680.json": [
+     362522,
+     "d04a73bf1f48c958df7a590bd04eb7d1c3897cf7a9a312c856556b002f8675f6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000681.json": [
+     530575,
+     "8b9c3da818791f14ea16a60219b4a6a77842e04f6ace453e0509355e76963a81"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000682.json": [
+     324875,
+     "1952048d7c4f7574a8d0bab4dfa5f5dd0bf74e0515b1b869fd533c0fcfc89e44"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000683.json": [
+     267836,
+     "08d130df25faa4b89bdfeb3446f99a4410af33306aa29c49a241fde037586fae"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000684.json": [
+     447732,
+     "be2a98668c8c3abbcf5b60964931aca2baaf8ad2f0a085873dc47d9112743971"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000686.json": [
+     249097,
+     "133f5a2121fba3f60439a6d622b28462f478865b70cf296a12d64e346b83a4c8"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000687.json": [
+     128146,
+     "6f2b1841a5e4848177829ccd25544e5dd38337f23da5d6f36a3a6afda60b6a66"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000688.json": [
+     113837,
+     "9658483b65022951688195ebe5ddce9502645b400a468bd73c3ee70f5a39248a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000689.json": [
+     108653,
+     "55dbc0791a45425984c29e0f0522f6e11119a0553a4321f5ea03fddbb3a15872"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000690.json": [
+     2303774,
+     "d04525f763ecf261eda4b856e30f81e063b922708acd7f36fc81a3cf8126e9f2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000691.json": [
+     172522,
+     "5363c3eba14d13f1c97a76fcb65ad2916d23648131d1d48c4fb93455e920a6a7"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000692.json": [
+     1091459,
+     "ac463095e21403896aa844bbe5aaa759aa88df9376ec96439b015304eb928ecc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000694.json": [
+     466822,
+     "744fa5e9ab6a5a66ee740ee735dc0e15377ae8dac50ade8dac80ad830b6b3dc4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000695.json": [
+     510825,
+     "4a2412cd3d2226329b14d9f25afa243769d416534ed1959e97aa1adc84e5b7e4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000697.json": [
+     368302,
+     "32d5e12c6a2a7e2f8a1a3a5390a61bfa38d2fe0d46908d97821267bbbca8ccdb"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000699.json": [
+     408213,
+     "c94fc5305554342b03911ce40e1ca3df1bbca6a8d81f1b2058bb1ba6091dc9a2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000700.json": [
+     295126,
+     "821a77555cba27d151c59b0933b17e9b90d24794091b61adfec9702000bb2f85"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000701.json": [
+     386367,
+     "a4a78893584fb93d5834ba746b5389c7eb5e511dddfa573c1fa80b77e01067f5"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000702.json": [
+     76600,
+     "a01486948b2e37e804dd56ff27a6b330578630e915de404bf832d2e332b88982"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000707.json": [
+     269579,
+     "edebad3c7766bd531ef3bd6613471f0addbaba939b1866849e805122b997afed"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000708.json": [
+     1184786,
+     "c0c9c412072a9674384a5cd8866b303ef1bbd596bfd6fa27f2223fc650a7a363"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000709.json": [
+     236101,
+     "50f7649db5a34e44f87562ddcb6683bd18f9bb352fa2b24cd713a3f5b0d4085b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000710.json": [
+     91079,
+     "f0c90b650806ad69c72ec81e4ac53107f96de8a48384e012d3373531f1e34c62"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000711.json": [
+     393189,
+     "73a405d6787cbbff96938f07a8b9ec2915e3b3ab7fc120309fb44a603b941032"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000712.json": [
+     322746,
+     "bfa2c3e9f25da8e89b48eb695c76d639a69b9165a86d21bfe6d1aae7342c26f9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000713.json": [
+     405279,
+     "b96b4154fb7b5341dd28a1e537b4dd9ed1889a4922d7e32494e90cf510d82f39"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000714.json": [
+     375063,
+     "0ce0643fa22154b2a5dc616055c78760cd73ff509d9c2b1637e57733887d69aa"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000715.json": [
+     320246,
+     "e0094ee8862852de66c1fd8f5f02012fa5e15c7ff7c6239dd437a5d252efab90"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000716.json": [
+     165485,
+     "811fe43113e1192dd6e0fe440ea41fb6c2ad041693e3c353d644d64705104db6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000717.json": [
+     320904,
+     "d34a4cc98671ad0ebea7955a4f5fb39bb2a849421abd9ba18bc5e536f7ae10be"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000719.json": [
+     376435,
+     "18d642f031aff972fc5f643acefb3b37dabb6a265aaa37a9152f864ce476f19a"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000720.json": [
+     344797,
+     "642276d3cd83211518a26221918c9ee5a58655dbd18abdcab4ded82c1397be68"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000721.json": [
+     826452,
+     "35ee0cffa7c007416e54bf886fce69d5a4dc768491614e5f18bef64b9f71f70e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000722.json": [
+     537402,
+     "3008afe2cc89f21d4f16e3d4a278d425d6b7af89bdd0dbf7014e5b4e29c32675"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000723.json": [
+     263204,
+     "f14e1893e0f13c3aeeefddb03aaa19a10003d6dc7160cd5f017175ea2d88ea8f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000725.json": [
+     251509,
+     "133e07cb5fe2d034e95e61809163aa7c4c0f7d1ff463db2fa1a1ed6189699b94"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000726.json": [
+     889016,
+     "b9f54b6f7853ba511df3f1aac74986caaa05c01e5a39491236b010856f7067ca"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000727.json": [
+     454,
+     "27104f590f94fc84c26e75b60987b10d0b03d8acf8b578eb7ed841159aed90ba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000732.json": [
+     16082,
+     "2a4e2488b52d11df4c190b3e542f59ae267077aa720755fb67c25f3b0f7c6e5b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000733.json": [
+     705052,
+     "e8c59e397b972e2d4f261dcf77f4b58baf6e858f2851b2bdc34ccc2dc516dd3c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000734.json": [
+     312112,
+     "47adb545bf2938b89a8b7068d6639037fa94c4024a02fcd633ae1a6f308fce35"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000736.json": [
+     1426386,
+     "af1bb98fd4e62f4e338c85892662c3cc570b715d07651360e4b6be1a403a43ae"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000737.json": [
+     762706,
+     "e66313a6c570f2a8ac21e51973bcd47034391f22044d9f2af53059112efc700d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000738.json": [
+     367804,
+     "5f02208b0063e25eb0ab837eed2317f7771487c9bd219d04a5b5c58c6670f448"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000739.json": [
+     142147,
+     "9734c80589a2abb3182052234de24014c4de21fd16519e5e0f4c0fd1cc640410"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000741.json": [
+     766105,
+     "668f426e567487aeca4f5c98046311ecbfae5d78e13f603359fd45b0833f4f29"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000743.json": [
+     281148,
+     "3a5706aa8f7265a99b8ee49385d84060192dd81b882c6ec414062c26abc0ba19"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000746.json": [
+     748314,
+     "a056409b41c438c90263b6696b2a83b155e7478ae6a483de4f1f52b5089822cf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000747.json": [
+     373535,
+     "e9e32321ceb055e0832a8a2a1cce8aad54c2bd9185a4bc01bae6cd28340b7a4f"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000748.json": [
+     197297,
+     "f27372f816ffbb0ed0c272a170f98d00fbb0f8e6f21e2f607d5d786e8dfef2cc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000749.json": [
+     314285,
+     "5645c2d90bce4504bcb442be8a40e394834179f815cc12815e2ecf75d686b621"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000750.json": [
+     5204471,
+     "f257a20a38e098ef76a8b7022d01abe39be94ac41139c1e11aacf8bc5db845f0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000751.json": [
+     1485954,
+     "e7d4a26e9c646c025284df4bd8b9c68c89c63bf49302878d9c7d4bc94f0468e4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000752.json": [
+     492521,
+     "2dbfb47cac54681987937b8ac5cd7bdb2bcb5fe0f533a897c6f599bf00a58e24"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000762.json": [
+     3185072,
+     "63bdcd3cdcb460371a86a82267f0cd5f2bb3db58e526ce27fd84eb8c3afc44a4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000766.json": [
+     130929,
+     "cd8601d783fff1bed28053296dbdefa1325a5f89770c6186dffd5571b8989c56"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000775.json": [
+     717671,
+     "bbb31d31b0174e25b5dc7a929e096d674a9d54e4762f96cc8c5a231d9aec8385"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000776.json": [
+     1075770,
+     "c42419ebb51aa53ad44576e425cf9309fcc084b1df284acf7e82c00ab3959797"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000777.json": [
+     710153,
+     "2feb5c266e6c53504919be5c7435603b56adaeda778327d28672204d787e21ba"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000778.json": [
+     963718,
+     "dda23a19d1f62821460e3bd71070a1dd44837b5b8a321374c5f48de59d52c03e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000779.json": [
+     633118,
+     "110522a8a5289bdb466f25499b10fe245618b819ab0c41a4126336bd14d545f3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000781.json": [
+     240817,
+     "12f2308969c5153df95ab7a0602ffd168d6fba767455bbb3da9a0efe73bbed0b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000782.json": [
+     2559181,
+     "e2850a32bbc8865529231d6394f8c956ce677a212522214c0c1b63aca5199f7d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000784.json": [
+     988293,
+     "8192bc5181eafded62645522bbe801870342978ef3dce9822661c4ce63a91d1e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000785.json": [
+     622727,
+     "49b99ba395d1a27daf9b57cdf1bc55af89013eaedf60bcb4d14b872eb3cc1424"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000788.json": [
+     1331295,
+     "3fe16d35a9ef23e0f11543888fd4b55fd4c351c5e36af9f1b8f024df6c64e931"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000789.json": [
+     143082,
+     "cf6d3da9fb4e8e4eabeecb8a683fd8bd0b3507c99b391a9af60f06fd5b045996"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000790.json": [
+     181465,
+     "89c3c1b22edd8b7650c54146d5ac09cc6a24751d88ebfb10b56a2d41efdf43d3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000791.json": [
+     180780,
+     "819eef4abb812f0258f052f4e8ecedb8a0a7dde373f1b3ff7d2c6fa15253a0d2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000792.json": [
+     75875,
+     "11c57eee00d0f507f99c8aebe47e8e2cc184dcceb91468b8bd0fab3bf8d4036b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000793.json": [
+     1059448,
+     "ceedf7b65333850afb1e90244b868f989ae2560aeda8225e5bb4c03d80d094b1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000794.json": [
+     1780821,
+     "b5dde748096c6b2a41fcca53984fb0185214ff245801d935601098783ea24167"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000795.json": [
+     2393787,
+     "997d67d8cde75496e588b6f117a65a0138796304646ee271c0d980fe917214c0"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000796.json": [
+     2536376,
+     "c3063bacfd596b89f84cb877c0b293de0510ffffc9cae3cec618c1cbe0a123b1"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000797.json": [
+     2539292,
+     "e40f2228904869613c8a5dd1c78ce05f9b88ee2f232c4820cafaf9b96e3fc0a6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000798.json": [
+     565917,
+     "4dde58e126df247f72cfa6c97e753af219b36075dd79be16199f94524f5e2a46"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000799.json": [
+     1929538,
+     "d5a4c33726db1ca95c7ca730459546703f245b6cdddcc00ff842608216432618"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000800.json": [
+     881609,
+     "b10c01dff3e44ea348d9145225bf34a0c2151e53592e02695e91f6cede2e3ddd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000801.json": [
+     880507,
+     "d790ee0b5af394ecab1640246063cf884d0115841038843008b7ef20cef72c5b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000802.json": [
+     631125,
+     "09c5d2cf42b7e5b87232eb9da841ca99efeafd13a0406120483bec89915b1a7e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000803.json": [
+     143705,
+     "7d83aed6fa9cbd53276c5be0aae8a57baf5b0f04fdd61dd2aa0cb6d955b5f4dd"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000804.json": [
+     721940,
+     "ba0a8606a834660a8035079fd5882be0b4534118dbdbd9dc4694f0af27e30804"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000805.json": [
+     607111,
+     "6093fab98d134c3ddc39ba6109fc965923241eb3ce21f50b8abb2da33ad2ffdc"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000806.json": [
+     971048,
+     "484d91d09c1d243620ec04bf83bf48b4952873153f436b1b7ab286c9c3ee31d2"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000807.json": [
+     462448,
+     "b44be6b822e32ea746f635589ab8decaeb787924da01313eb0e1fbefd700adcf"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000808.json": [
+     587119,
+     "3cf846bef13286267e00f31799b066f84c180c5a440abb78a88b041f188e3309"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000809.json": [
+     523726,
+     "7098cd0d3346e398ce9542d028f4ed060f6832865877ae55e411b4f8f0993e35"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000810.json": [
+     243840,
+     "e117840af9d9bfad7a01734a6bd51f3d041b4650d551c64dbf5d839d06fead36"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000811.json": [
+     172243,
+     "ab743ae86126ef3824eb8e23db1eb1d85f92c7ab2935082e4a33debadd85e094"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000812.json": [
+     594680,
+     "9cbbbaf53f233c0399167c393b2439ba5cf189bde9942dfa1f9af00b00540c9e"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000813.json": [
+     355722,
+     "dbe1f399165443e863e2c653d2af325b41335489bcf144eb2e78d567d67be64b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000814.json": [
+     1051025,
+     "15b6674767fab267779f95f1e6139354cffa0fa4fd9a83e5f59f2e4e2ac278b6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000815.json": [
+     385642,
+     "2c33ca18f507b97358fb066e6a83636f54a19ca08b7bc849c5d6fc4e0d07fcd3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000816.json": [
+     152067,
+     "59737196fd9795acbf209990018e8467c3965652202766aade09c3140476a699"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000817.json": [
+     283058,
+     "33de90e5a0704da9a42d1d282f79c1d95d1a4fe1a4d603ea84924e5a5da5f062"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000818.json": [
+     549488,
+     "9000b2d3c4c68f859698dbf3e62f41f51a0d42b0cbc4cdff336825d37e349277"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000819.json": [
+     262483,
+     "5f86df5fbb4e1ec4d7b409367f599f3efb6670c96e3b50b124387254a1094f82"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000820.json": [
+     315445,
+     "0ab28d3be2fbb72cf9fd6f31abade36931138f792e5ecbfb38781afd89942865"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000821.json": [
+     1815626,
+     "37da582749561776a0cd387a4061edbf1a4ee152d4b2a0d8f583e7097e43aa16"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000822.json": [
+     397817,
+     "2c8515dd9485134828692355beb93a5fd0f85cea175385d7adaa056d235b05b6"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000823.json": [
+     3659848,
+     "b90363cce3082734938c1ea4bdec6e58bd93264c128bb29add6f61779ff844f9"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000824.json": [
+     238645,
+     "5473c61890dc6a19732e7df6956089ff06f8e343be0f7935da093126ddd6a598"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q000825.json": [
+     1507894,
+     "0549ee1eb4cfcebb69d6429744fad84a55ac841942390e4f7e6d0e15d4494a6d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q002335.json": [
+     482817,
+     "7a4df2714fae02bfbd8e9794494a874d6e042333f3f7969f893099d030f4f605"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/Q002338.json": [
+     86618,
+     "cb846a44be0352613bb648de1a8637aed2a1dc86eebd4ccd9f5f126f4881cd39"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/X004001.json": [
+     325918,
+     "0e9058755ae869223c1505eeae57a0a90be95184184a2aa75c4b2340113a2286"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/X005003.json": [
+     11938,
+     "8f7ebc56d46fd6bbe9cadbc5e2bd604ef904cdf533294193157e3ccab46d633b"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/X005004.json": [
+     15484,
+     "4d01b78952ff5f7c6f329ce0a0f6a9de6fdab5b8991c206a731bb9de8010f487"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/X005005.json": [
+     143342,
+     "0201ae125fe45511095ddda711d9edad67a22ddf350a00a1ed6413d40b53c033"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/X010001.json": [
+     577718,
+     "6fef8ae69ebb3e60cfc07d7a2dd69b4e2c4ebe8efca31817e32df1c4f95ad842"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/X100010.json": [
+     90992,
+     "6b18a8ff4f5b46e809bd009498525c59133a884fe37ab65987853eb934c0766d"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/X100011.json": [
+     566419,
+     "0cbd7ffce23ea7c53ec7dd9d02e6673f5abf8e5f4cfa3f35ac0a5e89b694be13"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/corpusjson/X346541.json": [
+     3676,
+     "fa87b0d8d0e37e32c5509b378e9d212697fa1f93e5363ff1b3a4358c15b7bf25"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/epsd2-literary-portal.json": [
+     1776,
+     "f64adc596c775e2bae350e218bddb297ff829e1b921889589c1de06030c73f60"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/gloss-akk-x-oldbab.json": [
+     6237,
+     "951c493ed966edc3fb41d2038b901678d38688ec68d29127a80d742704e71575"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/gloss-qpn.json": [
+     10724193,
+     "abf0eec41c9c0ce487e8f144b63292e7bd939ef531457809ada95c0469260683"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/gloss-sux-x-emesal.json": [
+     2211745,
+     "ffc881719d5f4b907d2dca5300f23af2a3bacec6ccc65b5e8203cacc02165be3"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/gloss-sux.json": [
+     129806562,
+     "92e098eee837695b286e29bb1538775b53eafb522854945f1dbd9b0820ca6c87"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/index-akk-x-oldbab.json": [
+     4739,
+     "fd5cd8623aeda507dc5934fc022dbcb64527cbb99789c4fa35c70a13e13cfa1c"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/index-cat.json": [
+     3034611,
+     "3d8264a47b0ec1b9b0660de90d28bfefa1b48f32767c915ea6a5779cb343e781"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/index-lem.json": [
+     32476087,
+     "cfb300b2e688fc8eb7a792e9a25ec1b41cb3fde019d7106dd96e7dfcfc217d42"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/index-qpn.json": [
+     2512715,
+     "c94216774f1974b6261b3cca926b034f2fee28a228a1ce87eecb099d7e2db153"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/index-sux-x-emesal.json": [
+     685795,
+     "63f7a1e5c65766a75b44219c45a75195598eb5beb94eb234e7bdfbc8fdeae895"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/index-sux.json": [
+     19953412,
+     "bd06f92b038237f473770fb72f4fd8610262c9d7634c0b3e7a17ddf5bdd4f6d4"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/index-tra.json": [
+     358065,
+     "e1b10da65562d135d16b004601dbbf351c40b264992861de504ddf50b87bfd80"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/index-txt.json": [
+     33638902,
+     "4556375742c33d6ad47838210f128789cc24e35f13fa73427156d8d1308dc245"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/metadata.json": [
+     55883,
+     "1ed90d994ef7efa6b521f0df12e53ec840d0842eeb15c384b64dc75fba91a074"
+    ],
+    "ORACC/_bulk/epsd2-literary-unzipped/epsd2/literary/sortcodes.json": [
+     24626,
+     "9faae7120a90493b222c5f378f0583843ae099e872899ad4fd0691f23d7af396"
+    ]
+   }
+  },
+  {
+   "id": "eBL/Counsels-of-Wisdom-SB/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "3",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Counsels-of-Wisdom-SB/_raw/chapter-display.json": [
+     5732407,
+     "424aeadd808986efdeec472be5f89f469665071135f3cda03fe518d32bb9bf51"
+    ],
+    "eBL/Counsels-of-Wisdom-SB/bibliography.md": [
+     4911,
+     "24a201aa8d18c6b0c09b158340ea20ae75d0b6622ab22977c67d0dbfd9793093"
+    ],
+    "eBL/Counsels-of-Wisdom-SB/chapter.atf": [
+     77593,
+     "fd24183dbf55d47c183e7ca5d1e23d49a5ec4ae2b00d54a632e7ee9267ef5a78"
+    ],
+    "eBL/Counsels-of-Wisdom-SB/glossary.md": [
+     108424,
+     "527da44bae1739291599d1b8e0486d74992f1900daafc4b8c4c2fae15c9baeec"
+    ],
+    "eBL/Counsels-of-Wisdom-SB/manuscripts.md": [
+     4321,
+     "16c13ed4b03b017f3d1fd34627bdac0485831e37dd9d1ee6a6d4838c383ea4da"
+    ],
+    "eBL/Counsels-of-Wisdom-SB/reading-edition.md": [
+     119071,
+     "bda1a3b39ce8b5fa5158648080baad5c553a83b414ae88214b543e99bc59496a"
+    ]
+   },
+   "raw_files": 326
+  },
+  {
+   "id": "eBL/Dialogue-of-Pessimism-SB/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "4",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Dialogue-of-Pessimism-SB/_raw/chapter-display.json": [
+     2267731,
+     "57a30361af7a3a189715de13c36a2208de4923e16ce6a0860e1f447ad104e3ca"
+    ],
+    "eBL/Dialogue-of-Pessimism-SB/bibliography.md": [
+     3240,
+     "266428883d127b5d7d77374bba6e6c611592d1f0ac1f82315b9bb252d78da0cf"
+    ],
+    "eBL/Dialogue-of-Pessimism-SB/chapter.atf": [
+     37516,
+     "8f48ca1aedc33c792ff9a41a51fbb3f07767acfc07e6b07ba072ffdf4fd17b06"
+    ],
+    "eBL/Dialogue-of-Pessimism-SB/glossary.md": [
+     67445,
+     "72b015605b969a09248e5d1d10080b1ccaf195ceb4293e9c884c421802afb235"
+    ],
+    "eBL/Dialogue-of-Pessimism-SB/manuscripts.md": [
+     1209,
+     "bbd750db5d573a109c977d9a4ee0478259d5e95fdbf79ea131903151713b3049"
+    ],
+    "eBL/Dialogue-of-Pessimism-SB/reading-edition.md": [
+     80872,
+     "2e4d4ec2973f7f511016c9e811177712a086d605842bd7248d361a5ffbd05aba"
+    ]
+   },
+   "raw_files": 194
+  },
+  {
+   "id": "eBL/Shamash-Hymn-SB/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "3",
+    "4",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Shamash-Hymn-SB/_raw/chapter-display.json": [
+     7011267,
+     "aefaf856bac4f8bc0e5bc3bb94052cd0e989bbf7d60536688584bab97e738fc6"
+    ],
+    "eBL/Shamash-Hymn-SB/bibliography.md": [
+     8571,
+     "716fbfab5145225f990df089ab026db75075004f88024823d043d2a25377a42a"
+    ],
+    "eBL/Shamash-Hymn-SB/chapter.atf": [
+     95241,
+     "6dcea5e17ee8e7c3884ad212636dde576390cdd15a507cdefc7ebe1c5ab1ff7e"
+    ],
+    "eBL/Shamash-Hymn-SB/glossary.md": [
+     167974,
+     "bebae94a2d990dd5a20fba08cbc25678ea445a422ca1aeee05d80c759a00a631"
+    ],
+    "eBL/Shamash-Hymn-SB/manuscripts.md": [
+     4045,
+     "3030c6777761fc33594f8dd5121562ab9df02dd40aafa2d40f50401bfb24c527"
+    ],
+    "eBL/Shamash-Hymn-SB/reading-edition.md": [
+     154211,
+     "18efc79b5e2a4963d5bfd5f05d3fc52d5bdac3ce8415d51befee2afbd115f194"
+    ]
+   },
+   "raw_files": 553
   }
  ]
 }
