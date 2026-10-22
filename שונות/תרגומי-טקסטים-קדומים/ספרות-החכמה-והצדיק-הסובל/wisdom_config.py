@@ -155,7 +155,10 @@ def ebl_lines(key):
         elif l.startswith("- **L:**") and cur not in lem:
             lem[cur] = [x.strip() for x in re.findall(r"← ([^“;]+?)(?: “|;|$)", l[8:])]
         elif l.startswith("- **Parallels:**"):
-            par.setdefault(cur, []).extend(p.strip() for p in l[16:].split(";") if p.strip())
+            # eBL writes a parallel in a chapter-less text as "L II.4 10": make it "L II.4 SB "-" 10"
+            ps = [re.sub(r'^(cf\.\s*)?L (I+)\.(\d+) (\S+)$', r'\1L \2.\3 SB "-" \4', p.strip())
+                  for p in l[16:].split(";") if p.strip()]
+            par.setdefault(cur, []).extend(ps)
     return order, norm, trans, lem, par, atf
 
 

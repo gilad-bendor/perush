@@ -67,7 +67,7 @@ RESERVED = [
     (W + r"(?:עזב|עזבני|עזבתני|עזבוני|עזבה|עזבו|נעזב|נעזבתי|יעזוב|תעזוב|עזוב|עזבת|עזבתי|עזבוהו)" + E,
      ["ezēbu", "taka4[", "šu bar"], "עָזַב only for ezēbu [cognate; Ps 22:2]"),
     (W + r"(?:טוב|טובה|טובים|טובות|הטיב|היטיב|ייטב|יטב|טובו|טובי|טובתו|טובתי|מיטב)" + E,
-     ["ṭābu", "ṭiābu", "ṭūbu", "ṭābtu", "ṭūbtu", "ṭubbātu", "dug3[", "du10", "dug₃", "du₁₀"], "טוֹב only for its cognate ṭābu / ṭiābu / ṭūbu (creation corpus)"),
+     ["ṭābu", "ṭiābu", "ṭūbu", "ṭābtu", "ṭūbtu", "ṭubbātu", "ṭūbātu", "dug3[", "du10", "dug₃", "du₁₀"], "טוֹב only for its cognate ṭābu / ṭiābu / ṭūbu (creation corpus)"),
     (W + r"(?:ישר|ישרה|ישרים|מישרים|יישר|ישרו|יושר)" + E, ["išaru", "išartu", "išertu", "ešēru", "mīšaru", "išariš", "šūšuru", "mušēšir", "bussuru", "si sa2", "si-sa2", "si sa₂", "si-sa₂"],
      "ישר only for its cognate išaru / ešēru / mīšaru (Job 1:1 `תָּם וְיָשָׁר`)"),
     (W + r"(?:רחם|רחמים|רחום|רחמיו|ירחם|ירחמו|רחמה|רחמי|רחמני|תרחם|ריחם|ריחמה|ריחמו|מרחם|רחמנות)" + E,
