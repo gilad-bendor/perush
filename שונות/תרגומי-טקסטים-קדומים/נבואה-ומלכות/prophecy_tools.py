@@ -74,7 +74,7 @@ V = r'ו?[הבלמכש]?[איתנ]?'          # prefixes + an imperfect prefix
 # reserved Hebrew (regex on the niqqud-stripped `>` line) -> regexes on the licensing text; [] = never
 RESERVED = {
     # "fear not": ירא only for palāḫu (renderings §2.1)
-    B + V + r'(ירא|יראו|יראי|יראה|יראת|יראתי|יראים)' + E: [r'palāhu|palāḫu|palah|pallah|pallih|palih|pa-lah|pal-lah|puluhtu|puluḫtu'],
+    B + V + r'(ירא|יראו|יראי|יראה|יראת|יראתי|יראים)' + E: [r'palāhu|palāḫu|palah|pallah|pallih|palih|pa-lah|pal-lah|puluhtu|puluḫtu|amāru\[|lēmur|līmur'],   # יראו 'let them see' (amāru), SAA 9 3 ii 24
     # the prophet: נבא only for raggimu / raggintu / ragāmu, maḫḫû
     r'נביא|נבואה|נבואת|ניבא|ניבאה|התנבא|' + B + V + r'(נבא|נבאה|נבאו)' + E: [r'raggimu|raggintu|ragāmu|irtugum|irgum|raggim|raggint|ra-gi-mu|rag-gi'],
     # well-being: שלום / השלים only for šulmu, salāmu, salmu (and šalāmu / šullumu)
