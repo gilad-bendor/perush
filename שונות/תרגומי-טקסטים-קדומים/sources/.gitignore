@@ -70,6 +70,7 @@ ORACC/akklove--Akkadian-Love-Literature/*.html
 ORACC/akklove--Akkadian-Love-Literature/*.json
 # the form index built by tools/sumerian_workbench.py (12 MB, regenerated on demand)
 ORACC/_bulk/*.json
+ORACC/_bulk/epsd2-literary-unzipped/
 
 # 5. Wisdom corpus sources (2026-10-19): open access without a stated licence, or copyrighted pages – README only
 Lenzi-2023--Suffering-in-Babylon--OBO-300/*
