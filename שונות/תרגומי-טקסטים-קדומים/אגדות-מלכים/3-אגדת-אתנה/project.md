@@ -39,8 +39,8 @@ numbering (Kinnier Wilson 1985; Foster; Dalley; Haul 2000) differs (e.g. SB II =
 ## The parts (renderings §10.5) and progress
 | Part | Lines | Translator | Status |
 |---|---|---|---|
-| ET1 | OBM 1–a+13; I 1–a+11 | sub-agent | planned |
-| ET2 | OBS 1–a+24; MA a+1–c+31; II 1–72 | sub-agent | planned |
+| ET2 | OBS 1–a+24; MA a+1–c+31; II 1–72 | sub-agent | in progress (first) |
+| ET1 | OBM 1–a+13; I 1–a+11 | sub-agent | after ET2 (one part at a time, 2026-10-22) |
 | ET3 | II 73–152; OBM b+1–c+9; MA d+1–f+18 | sub-agent | after ET2 |
 | ET4 | III 1–c+7; MA g+1–i+18 | sub-agent | after ET3 |
 

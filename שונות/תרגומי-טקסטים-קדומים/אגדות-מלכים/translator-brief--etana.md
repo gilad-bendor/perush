@@ -5,6 +5,14 @@ A brief for the sub-agent translators of `3-אגדת-אתנה/` (Round 3, run 2)
 (§1 and §2 there bind you too, except where this file differs) and follows the Gilgameš translators' brief
 (`../אפוס-גילגמש/translator-brief.md` §3–§4, the eBL entry format).
 
+## Pace and saving (the user, 2026-10-22: quotas apply in every session)
+- **The parts run one at a time**, never two translators at once (guidelines §5.1). You have no sub-agents; do not
+  start background jobs that keep running.
+- **Save as you go:** write each section to its annotated file as soon as it is drafted (not all at the end), and keep
+  `project--<PART>.md` current as you go (progress, and the proposals so far). If a quota stop cuts your work, the next
+  attempt continues from what is on disk: so before you start, look at your files – **if some of your lines are already
+  drafted, check them and continue from the first missing label**; do not redo finished sections.
+
 ## 0. Read first (binding, in this order)
 1. `../translation-guidelines.md` – whole. Especially §1 (**two purposes**: the Bible comparison *and* "the soul of the
    ancients", equal in standing), §5.2 (the rules learned; ★ = must keep), §6 (principles; echo control §6.4; false
@@ -116,6 +124,7 @@ eBL's order, including lines that are only `[ ... ] ...`** (Hebrew `[…]`, or `
    sentences each; **open decisions** (numbered; decide minor ones yourself, the user's rule); **Proposals for the
    corpus renderings** (every new term or formula a later part needs, with the Hebrew strings exactly as you wrote
    them: `Source | Hebrew | Tag | Notes | Lines`).
-4. Do **not** edit `renderings.md`, `corpus.md`, `parallels-index.md`, the tools, the guidelines, `project.md`, any
+4. The coordinator merges your part and commits it before the next part starts (one part at a time).
+5. Do **not** edit `renderings.md`, `corpus.md`, `parallels-index.md`, the tools, the guidelines, `project.md`, any
    other project, or another part's lines. Do not commit. Leave no background job running. Your final reply: what
    you translated, the checks' results, the key findings, the open decisions, and anything skipped or uncertain.

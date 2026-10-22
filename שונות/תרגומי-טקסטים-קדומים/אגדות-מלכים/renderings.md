@@ -339,8 +339,8 @@ echo of "not yet", guidelines §5.2).
 | ET3 | SB II 73–152; OBM b+1–c+9; MA d+1–f+18 (153) | Šamaš's ambush, the eagle in the pit, Etana's prayer for a son, the rescue, the bargain |
 | ET4 | SB III 1–c+7; MA g+1–i+18 (184) | The speech of birds, the dreams, the flights to heaven (two ascents), the return, the gates of the gods |
 
-ET1 and ET2 share no lines (only the §10.3 formulas, fixed above): they are drafted in parallel. ET3 follows ET2
-(command/execution, the fledgling's warning, the oath's curse); ET4 follows ET3 (the plea, the dreams).
+The parts run strictly one at a time (quotas: the user, 2026-10-22; guidelines §5.1): ET2 → ET1 → ET3 → ET4. ET3
+follows ET2 (command/execution, the fledgling's warning, the oath's curse); ET4 follows ET3 (the plea, the dreams).
 
 ### 10.6 Merged from the parts
 (after each part)

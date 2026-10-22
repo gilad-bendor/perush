@@ -31,10 +31,9 @@ Last updated: 2026-10-21 (Round 2 finished; the cross-corpus splits settled; the
 
 ## 2. Pace (guidelines §5.1)
 
-- **Local sessions:** one sub-agent at a time (the user's quota).
-- **Claude Cloud:** a special allowance, so no quotas are expected. Work at full speed, and run **independent runs in
-  parallel** (different corpora). Inside one long text, keep the sequential translator chain. If a limit is hit, record
-  it in §5.1 of the guidelines and fall back to one at a time.
+- **Quotas apply in every session, the cloud included** (the user, 2026-10-22: the cloud's special allowance is
+  over). **One sub-agent at a time, always**, so that a quota stop cuts only one effort; translators save each section
+  to disk as they go, and the coordinator commits after every merged part. No parallel translators or runs.
 - **Sub-agents cannot start sub-agents** (guidelines §5.1): a coordinator started as a sub-agent translates its texts
   itself. For real translator chains, make the session itself the coordinator (one run per session).
 - **Commit and push to `main` often:** after every finished section, not only at the end of a run. A cloud VM can be
@@ -65,8 +64,8 @@ with its key findings at the top.
 
 **Round 2 is finished** (runs 5–7, 2026-10-21, in parallel in Claude Cloud), and the cross-corpus splits it left were
 settled on 2026-10-21 (§6). **Next: Round 3** (`curated-translation-candidates.md`, "Round 3 plan"): six runs in six
-different corpora, **one cloud session per run** (start each with `ancient-translations: Round 3, run N`), in parallel
-or one at a time in the table's order:
+different corpora, **one cloud session per run** (start each with `ancient-translations: Round 3, run N`), in the
+table's order; inside a run, its sub-agents strictly one at a time (quotas, §2):
 
 | Run | Texts | Corpus |
 |---|---|---|
@@ -95,8 +94,8 @@ plan's last paragraph). The user's review of the Round 1–2 drafts can go on al
 | 6 | **Enmerkar and the Lord of Aratta** + **the Sargon Birth Legend** | ETCSL 1.8.2.3 + ORACC; King 1907 (public domain) or a newer open edition | Gen 11 and Exod 2: **done (first draft), 2026-10-21**, `אגדות-מלכים/` |
 | 7 | **OB love lyrics** + **Sumerian proverbs** (a selection) + **OB letters** (a selection) | ORACC AkkLove / SEAL; ETCSL 6.1; ORACC/CDLI letters | everyday voices: **done (first draft), 2026-10-21**, `קולות-היום-יום/` (the OB Akkadian letters not obtained: CDLI 503) |
 
-Runs 5, 6 and 7 are independent (different corpora): in the cloud they can run in parallel, each as its own
-coordinator with its own sequential translator chain. Each run is briefed as in §5 below.
+Runs 5, 6 and 7 were independent (different corpora) and ran in parallel under the cloud's former special allowance,
+each as its own coordinator with its own sequential translator chain (since 2026-10-22: one at a time, §2). Each run is briefed as in §5 below.
 
 ## 5. The run brief (how every run so far was briefed)
 
