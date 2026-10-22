@@ -365,6 +365,26 @@ Akkadian recurs):
 - **Tool:** `tools/ebl_fetch.py` fixed (a reconstruction line opening with a logogram, `%sb`, was glued to the previous
   line: SB II 25); `Etana-SB-II` regenerated.
 
+#### 10.6.2 Part ET1 (OBM 1–a+13; SB I 1–a+11), 2026-10-22
+Full list: `3-אגדת-אתנה/project.md` ("Part ET1"). Binding for ET3–ET4:
+- **Formula:** *X ana šâšū-ma ana Y izzakaršu* (MA *ana šuāšu … izakkaršu*) = `X אליו, אל Y, דיבר:` (fem. `דיברה`;
+  I.a+2; for SB III b+15, b+26, b+32, b+36 `הנשר אליו, אל אֵתָנָה, דיבר:`; MA e+14, i+1, i+5, i+12); checked by FORMULAS.
+  MA h+13 *… iqabbi* = `X אליו, אל Y, אומר:`.
+- **Fixed strings:** the prologue OBM 1–10 = SB I 8–17 (identical Hebrew where the Akkadian is identical);
+  `[המל]כות – מן השמים ירדה.` (OBM 14); `לפני אָנוּ, בשמים – שׂוּמִים.`; `שרביט, עטרה, מצנפת ומקל־רועים`.
+- **Words:** *eṣēru* = `יָצַר` (not `צָר`, guidelines §6.7: unvocalized `את העיר צרו` reads "besieged"; `יצר` in the
+  planning sense, ישעיהו לז:כו); *uššu* = `אֻשִּׁים` [cognate, Aram. `אֻשַּׁיָּא`, עזרא ה:טז]; *libittu* `לְבֵנָה`;
+  *šibirru* = `מקל־רועים` (= Sum. *šibir*, EWO 436); *ḫaṭṭu* `שרביט`; *kubšu* `מצנפת`, *meānu* `עטרה`; *parakku* `כֵּס`
+  (pl. `הַכֵּסִים`); *ṣapāru* `*משובץ*`; *malāku* G `יעץ`, Gt `נמלך`; *mitluku* `נִמְלָךְ`; *isinnu* `חג`; *šiāmu*
+  `גזר`; *rēʾû* `רוֹעֶה`; *itinnu* `בַּנַּאי`; *ḫiāṭu* `בחן`; *ina ūmīšū-ma* `ביום ההוא` (Gilgameš); *ina šiātim*
+  `בָּהּ`; *eṭemmu* `אִט` (`אִטּוֹ`); *šutta šubrû* `חלום הֶרְאָה`; *marḫītu* `רַעְיָה`; *dadmū* `יישובים`; *ummānu*
+  `הָמוֹן`; *dapnu* `עריץ`.
+- **Left for the end-of-run harmonization:** *ḫaṭṭu* `שרביט` here and in EA vs `שבט` in Enūma eliš IV 29 and LH
+  (proposal: `שרביט` for *ḫaṭṭu* everywhere, `שבט` only for *šabbiṭu*); *parakku* `כֵּס` vs `דוכן` (Enūma eliš); Sum.
+  *aga* `עטרת` (EWO 264) vs *agû* `כתר` (Gilgameš); *ṣapāru* `*משובץ*` vs Gilgameš VIII *raʾzu*; *ḫiāṭu* `בחן` vs
+  *barû* `בוחן` (Enūma eliš); *ina ūmīšu* `ביום ההוא` vs `בעת ההיא` (Enūma eliš, Adapa); *barû* Š and *kullumu* both
+  `הראה` (one Hebrew for two verbs, as set in §10.3).
+
 (after each later part)
 
 ## Changelog

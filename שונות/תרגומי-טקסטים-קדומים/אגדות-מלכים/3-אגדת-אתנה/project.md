@@ -40,7 +40,7 @@ numbering (Kinnier Wilson 1985; Foster; Dalley; Haul 2000) differs (e.g. SB II =
 | Part | Lines | Translator | Status |
 |---|---|---|---|
 | ET2 | OBS 1–a+24; MA a+1–c+31; II 1–72 | sub-agent | **done** 2026-10-22 (179 lines, three passes; merged: renderings §10.6.1) |
-| ET1 | OBM 1–a+13; I 1–a+11 | sub-agent | after ET2 (one part at a time, 2026-10-22) |
+| ET1 | OBM 1–a+13; I 1–a+11 | sub-agent | **done** 2026-10-22 (69 lines, three passes; merged: renderings §10.6.2) |
 | ET3 | II 73–152; OBM b+1–c+9; MA d+1–f+18 | sub-agent | after ET2 |
 | ET4 | III 1–c+7; MA g+1–i+18 | sub-agent | after ET3 |
 
@@ -50,6 +50,195 @@ numbering (Kinnier Wilson 1985; Foster; Dalley; Haul 2000) differs (e.g. SB II =
 ## Parts
 (each translator adds its section: progress and the three review passes, `### Parallels index (ET1)` … with the columns
 `| Line | Source | Hebrew rendering | Bible | Tag | Comment |`, key findings, open decisions, proposals)
+
+## Part ET1 – before the king (OB Morgan 1–a+13; SB I 1–a+11), 2026-10-22
+
+Round 3, run 2 (`../renderings.md` §10.5). Translator: sub-agent ET1. Files: `annotated-OBM.rtl.md` (header for the
+whole tablet + 1–16, a+1–a+13; ET3 adds one paragraph on its lines and b+1–c+9), `annotated-I.rtl.md` (the whole
+tablet: header + 1–29, a+1–a+11). **69 entries.** Not committed.
+
+### Progress and passes
+- **Order of work:** OB Morgan first (it fixes the Hebrew of the prologue), then SB I, copying the OB Hebrew wherever
+  the Akkadian is the same (OBM 1–10 ≈ I 8–17; OBM a+2 ≈ I a+2) and varying only where it varies; both entries of each
+  pair say what the other version has.
+- **Data:** `kings_tools.py data ET` for both ranges; eBL dictionary per word (ṣapāru, saḫāru, ištēniš, dapnu, šibirru,
+  meānu, mitluku, šiāti); every transliteration precedent searched in the annotated files of all corpora (a scratch
+  helper that greps the backticked lines and prints the Hebrew) and every new Hebrew word with `kings_tools.py grep all`.
+  Every Bible verse printed with `check_bible_quotes.py --show` before quoting.
+- **Pass (a) fidelity:** every `>` line against N and the ATF. Fixed: I.4 `האל[ים?` (the ATF has *DINGIR#-[MEŠ?*: the
+  word is there, only the plural sign is broken; eBL's N brackets the whole word); I.1 note that *āla īṣirū* is broken
+  on NinNA1 but preserved in the incipit quotations (hence no brackets); I.a+3 the tablet's *šu-ut-tu* (nom.) against
+  N's *šutta*; OBM.13 `⟨ל⟩` for the scribe's omitted *<a-na>*; I.15 the scribe's superfluous *kibrāti* (dittography from
+  I.10) left untranslated, with a note.
+- **Pass (b) consistency:** the OB/SB pairs compared line by line (identical Hebrew where identical Akkadian:
+  `הָאֲנוּנָּכִּי … גוזרי`, `בוני קצות (הארץ)`, `לאנשים`, `חג`, `גזרו`, `שָׂמוּ`, `מלך`, `ושרביט – ספיר לא *משובץ*`,
+  `לא בנויים – יחדיו – הַכֵּסִים`, `נעל-`; I.1 = I.3, I.2 = I.4, I.19 ~ I.21, I.20 = I.22); renderings §10.4 checked
+  (`מצנפת`, `עטרה`, `שרביט`, `כֵּס`, `רועה`, `המלכות – מן השמים ירדה`, `לְבֵנָה`, `אִט`); every new word grepped in all
+  corpora (collisions listed under open decisions 2–8).
+- **Pass (c) Hebrew:** read aloud; vocalized what would be misread: `יָצְרוּ` (not "besieged"), `לְבֵנָתָהּ`, `הַכֵּסִים`
+  (not "pockets"), `שָׂמוּ` / `שׂוּמִים` / `שָׂמֵי`, `בָּהּ`, `נִמְלָךְ`, `רוֹעָן`, `בַּנָּאָן`, `אֵלֵי`, `אֶל?`, `מוֹתָם`, `אִטּוֹ`,
+  `קַח`, `כּוֹנְנוּ`, `הֶרְ[אַנִי`; names (`אֵתָנָה`, `אִשְׁתַּר`, `אָנוּ`) at every occurrence in the `>` lines and headings.
+- **Checks:** `python3 -I kings_tools.py verify ET` – 248 entries, OK (no problem; only the coverage note for the parts
+  not yet drafted). `python3 -I ../tools/check_bible_quotes.py annotated-OBM.rtl.md annotated-I.rtl.md` (and this file) –
+  0 problems.
+
+### Deviations from renderings §10 and the guidelines (decided at the first occurrence, with the reason)
+1. ***eṣēru* = `יָצַר`, written `יָצְרוּ` (vocalized)**, not the `צָר` of guidelines §6.7: `את העיר צרו` reads "they
+   besieged the city" (צוּר), the very opposite. Same root (the guidelines' "*eṣēru* = יצר"), and it shows the
+   cognate of Isa 37:26 / 46:11 / 22:11 (`יָצַר` "planned") and Gen 2:7.
+2. ***šibirru* = `מַקֵּל־רוֹעִים`** (§10.4 had `מַקֵּל`? for ET1 to decide): the Sumerian *šibir* already has
+   `מקל־רועים` (Enki and the World Order 436), and a Sumerian word takes the Hebrew of its Akkadian equivalent
+   (renderings §0.3); the compound also keeps eBL's "shepherd's staff". `שֵׁבֶט` stays free for *šabbiṭu* (Gilgameš XII).
+3. ***malāku*: G = `יָעַץ`, Gt = `נִמְלַךְ`**, as in Gilgameš (OB III *imallikū* `יועצים`; VII 1 *imtallikū* `נמלכו`); so
+   OBM.2 `יעצו` and I.9 `נמלכו` show the stems' difference. *mitluku* = `נִמְלָךְ` (Gilgameš II 30).
+4. ***nadû* in *uššī nadû* = `הניח`** (Gilgameš I 21), not the gated `הִשְׁלִיךְ`.
+
+### Parallels index (ET1)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| OBM.2 | ušbū imlikū milikša mātam | ישבו, יעצו את עצתה – את הארץ | `זֹאת הָעֵצָה הַיְּעוּצָה עַל כָּל הָאָרֶץ` (ישעיהו יד:כו) | equivalent | *milik māti malāku* = "the counsel counselled concerning the land": the same phrase; a sitting council of gods against the one God's counsel. |
+| OBM.2 | imlikū (malāku) | יעצו / נמלכו (I.9) | `וַיִּמָּלֵךְ לִבִּי עָלַי` (נחמיה ה:ז) | cognate | G = `יָעַץ`, Gt = `נִמְלַךְ` (Gilgameš). |
+| OBM.3 | bānû kibrātim | בוני קצות (הארץ) | `בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ` (בראשית א:א) | divergence | The gods "build" (*banû*) the world's edges and "set" its form; Foster's "creators" would invite `בָּרָא` (reserved). |
+| OBM.5 | isinnam ana nišī išīmū | חג – לאנשים – גזרו | `וְהָיוּ לְאֹתֹת וּלְמוֹעֲדִים` (בראשית א:יד); `מוֹעֲדֵי יְהוָה אֲשֶׁר תִּקְרְאוּ אֹתָם מִקְרָאֵי קֹדֶשׁ` (ויקרא כג:ב) | equivalent | Festival times decreed from above for people. **Foster's "holy day" is not in the text** (*isinnu* = festival; the root קדש reserved). |
+| OBM.6 | šarram lā iškunū | מלך לא שָׂמוּ | `שׂוֹם תָּשִׂים עָלֶיךָ מֶלֶךְ` (דברים יז:טו); `עַתָּה שִׂימָה לָּנוּ מֶלֶךְ לְשָׁפְטֵנוּ כְּכָל הַגּוֹיִם` (שמואל א ח:ה) | equivalent | The same idiom "set a king" (*šakānu* = `שָׂם`); in the Bible the people ask, here the gods have not yet given. Also I.12. |
+| OBM.7 | ina šiātim lā kaṣrat kubšum meānum | בָּהּ – לא קשורה מצנפת, עטרה | `וְכֹל שִׂיחַ הַשָּׂדֶה טֶרֶם יִהְיֶה בָאָרֶץ` (בראשית ב:ה) | divergence | **Statives, not "not yet"**: Foster's "Then no headdress had been …" / "Nor yet" (8) manufacture `טֶרֶם` (reserved). The shared structure is real: a world lacking one office, filled from above. |
+| OBM.7 | kubšum meānum | מצנפת, עטרה | `הָסִיר הַמִּצְנֶפֶת וְהָרִים הָעֲטָרָה` (יחזקאל כא:לא) | equivalent | The same pair of royal insignia, given and taken by the god. Also OBM.11. |
+| OBM.8 | u haṭṭum uqniam lā ṣaprat | ושרביט – ספיר לא *משובץ* | `לֹא יָסוּר שֵׁבֶט מִיהוּדָה וּמְחֹקֵק מִבֵּין רַגְלָיו` (בראשית מט:י) | equivalent | The sceptre as the sign of rule; *ḫaṭṭu* = `שַׁרְבִיט`, `שֵׁבֶט` kept for *šabbiṭu*. Also I.14. |
+| OBM.8 | uqniam | ספיר | `כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר` (שמות כד:י) | equivalent | Lapis lazuli = the biblical `סַפִּיר`. |
+| OBM.10 | sebetta bābū uddulū eli dapnim | שבעה שערים – נעולים על העריץ | `שְׂאוּ שְׁעָרִים רָאשֵׁיכֶם וְהִנָּשְׂאוּ פִּתְחֵי עוֹלָם וְיָבוֹא מֶלֶךְ הַכָּבוֹד` (תהלים כד:ז) | divergence | Our proposal: there the gates open to the king, here they are bolted against any would-be strongman (*dapnu* = Gilgameš's `העריץ`). |
+| OBM.11 | šibirrum | מקל־רועים | `רְעֵה עַמְּךָ בְשִׁבְטֶךָ צֹאן נַחֲלָתֶךָ` (מיכה ז:יד); `שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי` (תהלים כג:ד) | equivalent | The shepherd's staff among the royal insignia. |
+| OBM.13 | ul ibašši mitlukum ana nišīša | אין נִמְלָךְ ⟨ל⟩אנשיה | `בְּאֵין תַּחְבֻּלוֹת יִפָּל-עָם וּתְשׁוּעָה בְּרֹב יוֹעֵץ` (משלי יא:יד) | equivalent | A people without counsel; in Hebrew `נִמְלָךְ` also sounds "king" (מלך) – a Hebrew bonus, noted as such. |
+| OBM.14 | [šar]rūtum ina šamāʾī urdam | [המל]כות – מן השמים ירדה | `וַיֵּרֶד יְהוָה לִרְאֹת אֶת הָעִיר וְאֶת הַמִּגְדָּל אֲשֶׁר בָּנוּ בְּנֵי הָאָדָם` (בראשית יא:ה) | cognate | *warādu* / `יָרַד`; [divergence]: in Gen 11 God comes down to stop a human city, here kingship comes down to a city the gods planned. The Sumerian King List's idiom ("when kingship was lowered from heaven, kingship was in Kiš"). **Reading *šarrūtum* (collation, eBL), not Wilcke's *bēltum* "the Lady (Ištar) came down".** |
+| OBM.14 | (the first kingship after the flood) | – | `וְכוּשׁ יָלַד אֶת נִמְרֹד הוּא הֵחֵל לִהְיוֹת גִּבֹּר בָּאָרֶץ` (בראשית י:ח); `וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל וְאֶרֶךְ וְאַכַּד וְכַלְנֵה בְּאֶרֶץ שִׁנְעָר` (בראשית י:י) | divergence | Genesis's first post-flood kingdom is a human "mighty one" who "began" it, not a gift from heaven. Cush = Kiš is a scholarly proposal, in the apparatus only. `מַמְלָכָה` reserved. |
+| OBM.14 | urdam | ירדה | `הֵם הִמְלִיכוּ וְלֹא מִמֶּנִּי` (הושע ח:ד) | divergence | Kingship must come from above; in Hosea the people crown kings themselves. |
+| OBM.a+1 | leqē-[ma?] | קַח […] | `וְלָקַחְתָּ אִשָּׁה לִבְנִי לְיִצְחָק` (בראשית כד:ד) | cognate | *leqû* / `לָקַח`; the marriage idiom only if the object is a wife (a+2, a+6): our cautious proposal. |
+| I.1 | āla īṣirū | את העיר יָצְרוּ | `מִימֵי קֶדֶם וִיצַרְתִּיהָ עַתָּה הֲבֵאתִיהָ` (ישעיהו לז:כו); `יָצַרְתִּי אַף אֶעֱשֶׂנָּה` (ישעיהו מו:יא) | cognate | *eṣēru* "draw, plan" = `יָצַר` "plan beforehand" in the god's mouth. The incipit is also the series' name. |
+| I.1 | īṣirū | יָצְרוּ | `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה` (בראשית ב:ז) | cognate | The same root for the god's first act; here its first object is a city. |
+| I.1 | āla īṣirū | את העיר יָצְרוּ | `הָבָה נִבְנֶה לָּנוּ עִיר` (בראשית יא:ד) | divergence | In Gen 11 humans plan and build a city and God stops them; here the city is the gods' plan from the start. |
+| I.2 | [uššīšu] iddû | [את אֻשֶּׁיהָ] הניחו | `יְהַב אֻשַּׁיָּא דִּי בֵית אֱלָהָא דִּי בִירוּשְׁלֶם` (עזרא ה:טז) | cognate | *uššu* → Aramaic `אֻשַּׁיָּא`; the same idiom "lay the foundations". Also I.4 (Ezra 4:12 `וְאֻשַּׁיָּא יַחִיטוּ`). |
+| I.5 | libna[ssu] | לְבֵנָתָהּ | `וַתְּהִי לָהֶם הַלְּבֵנָה לְאָבֶן` (בראשית יא:ג) | cognate | *libittu* / `לְבֵנָה`; [divergence]: the gods (the Igigi) set the city's bricks. |
+| I.5 | ukinnū | כּוֹנְנוּ | `אֱלֹהִים יְכוֹנְנֶהָ עַד-עוֹלָם` (תהלים מח:ט) | equivalent | The god establishes his city. |
+| I.6 | [amī]lu? lū rēʾûšin[a] | [אד]ם? – יהי רוֹעָן | `יִפְקֹד יְהוָה אֱלֹהֵי הָרוּחֹת לְכָל בָּשָׂר אִישׁ עַל הָעֵדָה` (במדבר כז:טז); `וְלֹא תִהְיֶה עֲדַת יְהוָה כַּצֹּאן אֲשֶׁר אֵין לָהֶם רֹעֶה` (במדבר כז:יז); `וְהוּא יִהְיֶה לָהֶן לְרֹעֶה` (יחזקאל לד:כג) | equivalent | "A man" appointed as shepherd; Ezekiel has even the feminine plural suffix (*-šina* / `לָהֶן`). |
+| I.6 | [amī]lu? lū rēʾûšin[a] | [אד]ם? – יהי רוֹעָן | `וְאָדָם אַיִן לַעֲבֹד אֶת הָאֲדָמָה` (בראשית ב:ה); `וַיָּשֶׂם שָׁם אֶת הָאָדָם אֲשֶׁר יָצָר` (בראשית ב:ח) | divergence | Our proposal: in both beginnings "a man" is missing for an office, and the deity "forms" (`יָצַר` / *eṣēru*, I.1) and "sets" (`שָׂם` / *šakānu*, OBM.6): to work the ground there, to shepherd the people here. |
+| I.7 | e[t]ana lū itinšina | אֵ[תָ]נָה – יהי בַּנָּאָן | `וַיְהִי בֹּנֶה עִיר וַיִּקְרָא שֵׁם הָעִיר כְּשֵׁם בְּנוֹ חֲנוֹךְ` (בראשית ד:יז) | equivalent | Our proposal: city, builder, son, name – the elements of Etana's story (his quest for a son, "establish a name for me", II.142). The name explained by a role (*Etana* / *itinnu*) as `קַיִן` / `קָנִיתִי` (בראשית ד:א). |
+| I.7 | itinnu | בַּנָּאָן | `וַיִּבֶן אֶת נִינְוֵה וְאֶת רְחֹבֹת עִיר וְאֶת כָּלַח` (בראשית י:יא) | equivalent | The first kings after the flood as city builders. |
+| I.13 | ina ūmīšū-ma | ביום ההוא | `בַּיָּמִים הָהֵם אֵין מֶלֶךְ בְּיִשְׂרָאֵל אִישׁ הַיָּשָׁר בְּעֵינָיו יַעֲשֶׂה` (שופטים יז:ו) | equivalent | "In those days" + "no king". OB has *ina šiātim* `בָּהּ` (OBM.7). |
+| I.13 | ina ūmīšū-ma | ביום ההוא | `בְּיוֹם עֲשׂוֹת יְהוָה אֱלֹהִים אֶרֶץ וְשָׁמָיִם` (בראשית ב:ד) | divergence | The "on the day when" opening before the description of what is lacking (Gen 2:5) – but with no "not yet". |
+| I.19 | ištar rēʾâ … (I.20) u šarra išeʾʾi | אִשְׁתַּר – רועה … ומלך – מבקשת | `בִּקֵּשׁ יְהוָה לוֹ אִישׁ כִּלְבָבוֹ וַיְצַוֵּהוּ יְהוָה לְנָגִיד עַל עַמּוֹ` (שמואל א יג:יד); `וְהִנֵּה רֹעֶה בַּצֹּאן` (שמואל א טז:יא); `וַיִּבְחַר בְּדָוִד עַבְדּוֹ וַיִּקָּחֵהוּ מִמִּכְלְאֹת צֹאן` (תהלים עח:ע) | equivalent | The deity "seeks" a shepherd who will be king (*šeʾû* = `בִּקֵּשׁ`). **Foster's "came down from heaven to seek" (I.19, 21) is a restoration resting on the abandoned reading *bēltum* in OBM 14.** Also I.21–22. |
+| I.23 | enlil ihâṭ parakki šamê | אֶנְלִיל בוחן את כֵּס השמים | `יְהוָה בַּשָּׁמַיִם כִּסְאוֹ עֵינָיו יֶחֱזוּ עַפְעַפָּיו יִבְחֲנוּ בְּנֵי אָדָם` (תהלים יא:ד) | equivalent | A throne in heaven and a god who "examines". |
+| I.28 | ilū māt[āti?] | אֵלֵי הָאֲרָ[צוֹת?] | `מִי בְּכָל אֱלֹהֵי הָאֲרָצוֹת אֲשֶׁר הִצִּילוּ אֶת אַרְצָם מִיָּדִי` (מלכים ב יח:לה) | equivalent | The same phrase (`אֱלֹהִים` reserved: `אֵלֵי`). |
+| I.a+2 | [mar]hīssu ana šâšū-m[a] | [רעי]יתו אליו | `וַתָּבֹא הָאִשָּׁה וַתֹּאמֶר לְאִישָׁהּ` (שופטים יג:ו) | divergence | The (barren, 13:2) wife of Manoah tells her husband of a revelation that ends in a son; here the wife of a sonless king tells a dream. [absent]: no woman dreams in the Hebrew Bible. |
+| I.a+3 | [š]utta yâši ušab[rânni] | [ח]לום – לי – הֶרְ[אַנִי] | `כֹּה הִרְאַנִי אֲדֹנָי יְהוִה וְהִנֵּה` (עמוס ז:א); `אֲשֶׁר הָאֱלֹהִים עֹשֶׂה הֶרְאָה אֶת פַּרְעֹה` (בראשית מא:כח) | equivalent | The dream is "shown" (*barû* Š), as the prophet's vision and Pharaoh's dream. |
+| I.a+7 | eṭemmašu | אִטּוֹ | `אֵין לִי בֵן בַּעֲבוּר הַזְכִּיר שְׁמִי` (שמואל ב יח:יח) | equivalent | The sonless man's care for his name after death; [absent] the Torah has no cult of the ghost (`אֱלֹהִים רָאִיתִי עֹלִים מִן הָאָרֶץ`, שמואל א כח:יג, only through the forbidden `אוֹב`). |
+
+### Key findings
+**The Bible.**
+1. **The opening is not a "when not yet" opening.** OBM 7–9 are statives ("not bound", "not set", "not built");
+   Foster's "Then no headdress had been …", "Nor yet" import the `טֶרֶם` of Gen 2:5. What *is* shared is the structure:
+   a world that lacks one office ("no man to work the ground" / "no king"), filled from above by a god who "forms"
+   (*eṣēru* = `יָצַר`, I.1; Gen 2:7) and "sets" (*šakānu* = `שָׂם`, OBM.6; Gen 2:8).
+2. **Gen 11 inverted.** In Etana the gods plan the city (*eṣēru* = `יָצַר`, the "planning" of Isa 37:26, 46:11), lay
+   its foundations (*uššu*, the source of Aramaic `אֻשַּׁיָּא`, Ezra 5:16 – the same idiom) and set its bricks (*libittu*
+   = `לְבֵנָה`, Gen 11:3), and then kingship "comes down" (*warādu* = `יָרַד`). In Gen 11 humans plan and build, and God
+   "comes down" (11:5) to stop them. Gen 10:8–10 makes the first post-flood kingdom a human achievement (`הֵחֵל`,
+   `גִּבֹּר`), where the Sumerian King List and Etana have kingship lowered from heaven to Kiš (Cush = Kiš only as a
+   proposal).
+3. **The vocabulary of kingship is shared**: "set a king" (*šarram šakānu* = `שׂוּם מֶלֶךְ`, Deut 17:15, 1 Sam 8:5); the
+   kingless "in those days" (SB I.13; Judg 17:6, 21:25); the insignia pair `מִצְנֶפֶת` / `עֲטָרָה` (Ezek 21:31); the
+   shepherd's staff (Mic 7:14, Ps 23:4); "a man as their shepherd" (I.6; Num 27:16–17; Ezek 34:23 with the same
+   feminine plural suffix); the deity who "seeks" a shepherd-king (I.19–22; 1 Sam 13:14, 16:11, Ps 78:70–71); the god
+   who "examines" from his throne in heaven (I.23; Ps 11:4); "the counsel counselled concerning the land" (OBM.2; Isa
+   14:26).
+4. **A builder without a son.** I.7 calls Etana the people's "builder" (*itinnu*, a play on his name); Gen 4:17's first
+   city-builder names the city after his son. Etana's story will turn on the son he does not have (II.140–142 "establish
+   a name for me"); the wife's dream (I.a+2–a+7) mentions "his ghost", whose care needs a son (2 Sam 18:18 Absalom).
+5. **False echoes avoided** (rank-3 English): "holy day" (*isinnu* = `חַג`), "Then … had not / Nor yet" (statives),
+   "creators" (*bānû* "builders", not `בָּרָא`), "right counsel", "four world regions" (I.10: an old restoration),
+   "came down from heaven to seek" (I.19, 21: a restoration resting on the abandoned *bēltum*), "with ramparts" (I.18),
+   "instead of" (*kīma*, I.a+4–a+5). The reading *[šar]rūtum* (OBM.14, collation) removes Ištar's descent from heaven.
+
+**The ancient mind.**
+1. **The city before the king.** The gods plan the city, lay its foundations and bricks (the Igigi, the labouring gods
+   of Atra-ḫasīs) and surround it (I.18); the world already has edges, form, people and a festival. Only kingship is
+   missing – and it is not a human invention but an object kept "before Anu in heaven" (OBM.11–12): sceptre, tiara,
+   turban, shepherd's staff.
+2. **Kingship cannot be seized.** "Seven gates are bolted against the aggressive one" (OBM.10): no strongman can take
+   it; it must be lowered (OBM.14, the Sumerian King List's idiom). The SB rereads the number as the Seven gods (the
+   Sebetti) who bar the gates against "the multitude" and "the settlements" (I.16–17) – the whole of humankind shut out.
+3. **The king's two faces**: shepherd and builder (I.6–7) – the leader of the human flock and the builder of the city
+   and its temples, the two roles of every Mesopotamian royal inscription; the name Etana explained by *itinnu*.
+4. **The goddess chooses**: Ištar/Innina "seeks" a shepherd and a king, as she "loved" Sargon; Enlil inspects the dais
+   of heaven – a coronation prepared above before a king is found below. The festival (OBM.5) is "decreed" with the same
+   verb as fate: joy is part of humanity's lot.
+5. **A wife's dream**: dreams are "shown" by a god (*barû* Š), and women dream and interpret (Ninsun, the women of the
+   Mari letters); the dream concerns Etana, "their death?" and "his ghost" – the dead who need a son to pour water for
+   them (Gilgameš XII 152).
+6. **The scribes**: the incipit *āla īṣirū* is the series' title in the Nineveh colophons (Langdon 1931 read "the city
+   they hated"); the SB copyist wrote *kibrāti* by mistake in I.15, carried over from I.10 – writing from memory.
+
+### Open decisions (numbered; the minor ones decided)
+1. ***eṣēru* = `יָצְרוּ`** instead of guidelines §6.7's `צָר` (decided; reason above). The coordinator may add to §6.7:
+   "`צָר` for drawing images; the full `יָצַר` where `צר` could read צוּר 'besiege'".
+2. ***ḫaṭṭu* across corpora (lead):** `שַׁרְבִיט` here (renderings §10.4; Gilgameš VIII 128, 153; Sum. *ĝidru* in the
+   laments and Gudea), but Enūma eliš IV 29 and LH (prologue 161, epilogue 3187′, 3356′, 3392′) give *ḫaṭṭu* / GIDRU
+   `שֵׁבֶט` – while Gilgameš XII 19, 39 give `שֵׁבֶט` to its cognate *šabbiṭu*. Proposal: *ḫaṭṭu* = `שַׁרְבִיט` everywhere,
+   `שֵׁבֶט` only for *šabbiṭu*.
+3. ***parakku* (lead):** `כֵּס` (Etana II, here; EA *barag*) vs Enūma eliš `דוכן` (V 115; VI 51, 53, 58, 68, 118).
+4. ***meānu* `עֲטָרָה`** (§10.4) vs Enki and the World Order 264, Sum. *aga* `עטרת` (= Akk. *agû*, `כֶּתֶר` in Gilgameš):
+   EWO's *aga* should probably be `כֶּתֶר` (lead). *kubšu* `מִצְנֶפֶת` = Sum. *saĝšu* `מצנפת` (EA 578) – consistent; but
+   Enūma eliš VII 8 has `*מצנפתו*` for *šukūssu* (italic) – a minor split.
+5. ***ṣapāru* `*משובץ*`** collides with Gilgameš VIII 170, 185 *raʾzu* `*משובץ*` (both uncertain, both italic). Kept
+   (decided): it is the natural Hebrew for a stone set in metal, and both renderings are marked uncertain; alternatives
+   tried and rejected: `קבוע` (EA *us₂*; reads "permanent"), `מוטבע` (LH/EST *ṭebû* = `טבע`), `משוקע` (*šabāḫu*).
+6. ***barû* Š and *kullumu* both `הֶרְאָה`** (renderings §10.3 sets both; flood: XI 197 `הראיתי חלום`; Gilgameš OB
+   `הַרְאֵנִי`): a pre-set double mapping. Left (natural Hebrew for both); ET4 should note it where both occur (coordinator).
+7. ***ḫiāṭu* `בָּחַן`** (Gilgameš I 19, 41) vs Enūma eliš *barû* `בוחן` (IV 65, 135; VII 35) and the wisdom corpus
+   *bārû* `הַבּוֹחֵן`: an existing collision; I followed Gilgameš (lead).
+8. ***ina ūmīšū-ma* `ביום ההוא`** (Gilgameš III 95, VIII 41) vs `בעת ההיא` (Enūma eliš IV 63, Adapa, the Founding of
+   Eridu): I followed Gilgameš (lead may harmonize).
+9. **OBM.7 *ina šiātim* = `בָּהּ`** (decided): literal "in it/her", leaving open eBL's "at that (time)" and Streck's "in it
+   (the land) = here".
+10. **OBM.13 *mitlukum* = `נִמְלָךְ`** (decided; Gilgameš II 30): fits both the adjective "circumspect" and the
+    infinitive "deliberation"; `הִמָּלְכוּת` was rejected because unvocalized it reads `המלכות` "the kingship" (OBM.14).
+11. **I.24 `מבקשת ומבקשת`** (decided): feminine, continuing Ištar's verb (I.20, 22); the subject may be Enlil (I.23).
+12. **The formula *X ana šâšū-ma ana Y izzakaršu* = `X אליו, אל Y, דיבר:`** (I.a+2, decided): for ET4 (III b+15,
+    b+26, b+32, b+36 → `הנשר אליו, אל אֵתָנָה, דיבר:`). A FORMULAS regex could be added (coordinator).
+13. **I.4 brackets** (decided): `האל[ים?` per the ATF (*DINGIR#-[MEŠ?*), although eBL's N brackets the whole word.
+14. **OBM.a+1–a+13 and I.a+2–a+7**: whether OB Morgan col. ii tells Etana's marriage, and whether it is the same scene
+    as SB I a+2, cannot be decided from the fragments; the notes say "perhaps" only.
+
+### Proposals for the corpus renderings
+| Source | Hebrew | Tag | Notes | Lines |
+|---|---|---|---|---|
+| *eṣēru* | `יָצַר` (`יָצְרוּ`, vocalized) | cognate | Isa 37:26, 46:11; Gen 2:7; not `צָרוּ` ("besieged") | I.1, I.3 |
+| *uššu*; *uššī nadû* | `אֻשִּׁים` (`אֻשֶּׁיהָ`); `הניח אֻשִּׁים` | cognate (Aram. `אֻשַּׁיָּא`) | Gilgameš I 21 string `את אֻשֶּׁיהָ … הניחו` | I.2, I.4 |
+| *libittu* | `לְבֵנָה` (`לְבֵנָתָהּ`) | cognate | gated; Gen 11:3 | I.5 |
+| *kânu* D | `כּוֹנֵן` | equivalent | Ps 48:9 | I.5 |
+| *šīmtu*; *šiāmu*; *šāʾimu* / *mušīmu* | `גּוֹרָל`; `גָּזַר`; `גּוֹזֵר` | – | `הָאֲנוּנָּכִּי הגדולים, גוזרי הגורל,` / SB `גוזרי הגורלות` | OBM.1, 5; I.8, 11 |
+| *malāku* G; Gt; *milku*; *mitluku* | `יָעַץ`; `נִמְלַךְ`; `עֵצָה`; `נִמְלָךְ` | cognate (Gt) / equivalent (Isa 14:26) | `ישבו, יעצו את עצתה – את הארץ.` / `[יש]בו, נמלכו (על) עצתם, [של הארץ?],` / `אין נִמְלָךְ ⟨ל⟩אנשיה.` | OBM.2, 13; I.9 |
+| *bānû*; *kibrātu*; *šākinu*; *šikittu* | `בּוֹנֶה`; `קְצוֹת (הָאָרֶץ)`; `שָׂם` (`שָׂמֵי`); `מַתְכֹּנֶת` | – | `בוני קצות (הארץ), שָׂמֵי הַמַּתְכֹּנֶת,` | OBM.3; I.10 |
+| *ṣīru*; *nišū*; *nišū apâtu* | `נַעֲלֶה`; `הָאֲנָשִׁים`; `הָאֲנָשִׁים הַהוֹמִים` | – | `נעלים לאנשים – האלים, הָאִיגִיגִי –` | OBM.4, 6 |
+| *isinnu* | `חַג` | equivalent (Gen 1:14; Lev 23:2) | never `קֹדֶשׁ` (Foster's "holy day") | OBM.5; I.11 |
+| *šarram šakānu* | `שָׂם מֶלֶךְ` (`מלך לא שָׂמוּ`) | equivalent (Deut 17:15) | | OBM.6; I.12 |
+| *ina šiātim* (OB) / *ina ūmīšū-ma* (SB) | `בָּהּ` / `ביום ההוא` | equivalent (Judg 17:6) | open decision 8 | OBM.7; I.13 |
+| *kaṣāru*; *ṣapāru*; *banû* (stative); *ištēniš* | `קָשַׁר` (`לא קשורה`); `*שִׁבֵּץ*` (`לא *משובץ*`); `בָּנוּי`; `יַחְדָּיו` | – | the prologue's statives: never `טֶרֶם` | OBM.7–9; I.14–15 |
+| insignia: *kubšu*; *meānu*; *ḫaṭṭu*; *šibirru*; *parakku*; *uqnû* | `מִצְנֶפֶת`; `עֲטָרָה`; `שַׁרְבִיט`; `מַקֵּל־רוֹעִים`; `כֵּס` (`הַכֵּסִים`); `סַפִּיר` | equivalent (Ezek 21:31; Mic 7:14) | `שרביט, עטרה, מצנפת ומקל־רועים –` | OBM.7–11; I.7, 14–15, 23 |
+| *sebe* (OB) / *Sebettu* (SB); *bābu*; *edēlu* D; *dapnu*; *ummānu*; *dadmū* | `שבעה`; `הַשִּׁבְעָה`; `שַׁעַר`; `נָעַל` (`נעולים`, `נעלו`); `עָרִיץ`; `הֲמוֹן`; `יִשּׁוּבִים` | – | `שבעה שערים – נעולים על העריץ.` / `הַשִּׁבְעָה – על ההמון נעלו [את השערים],` / `על היישובים נעלו [את השערים? …]` | OBM.10; I.16–17 |
+| *qudmiš*; *šakānu* (stative) | `לִפְנֵי`; `שׂוּם` (`שׂוּמִים`) | – | `לפני אָנוּ, בשמים – שׂוּמִים.` | OBM.12 |
+| *šarrūtu … urdam* | `[המל]כות – מן השמים ירדה.` | cognate (*warādu*) | §10.4 string; brackets per OBM.14 | OBM.14 |
+| *awīlu*; *rēʾû* (+ *-šina*); *itinnu* (+ *-šina*); *lū* | `אָדָם`; `רוֹעֶה` (`רוֹעָן`); `בַּנַּאי` (`בַּנָּאָן`); `יְהִי` | equivalent (Num 27:16–17; Ezek 34:23) | `[אד]ם? – יהי רוֹעָן […]` / `אֵ[תָ]נָה – יהי בַּנָּאָן …` | I.6–7 |
+| *zikru* (command) | `מַאֲמָר` (`(ב)מאמר כולם`) | – | as §10.3 | I.11 |
+| *saḫāru* | `סָבַב` (`*סובבים*`) | – | Enūma eliš | I.18 |
+| *šeʾû* G; Gtn | `בִּקֵּשׁ` (`מבקשת`); `מבקשת ומבקשת` | equivalent (1 Sam 13:14) | `אִשְׁתַּר – רועה […]` / `ומלך – מבקשת […]` | I.19–24 |
+| *ḫiāṭu* | `בָּחַן` (`בוחן`) | equivalent (Ps 11:4) | open decision 7 | I.23 |
+| *wabālu* (ventive) | `הֵבִיא` | – | | I.27 |
+| *ilū mātāti* | `אֵלֵי הָאֲרָצוֹת` (vocalized) | equivalent (2 Kgs 18:35) | `אֱלֹהִים` reserved | I.28 |
+| *marḫītu*; *X ana šâšū-ma ana Y izzakaršu* | `רַעְיָה` (`רעייתו`); `X אליו, אל Y, דיבר:` | – | for III b+15, b+26, b+32, b+36: `הנשר אליו, אל אֵתָנָה, דיבר:` | OBM.a+2; I.a+2 |
+| *šuttu*; *barû* Š | `חֲלוֹם`; `הֶרְאָה` (`הֶרְאַנִי`) | equivalent (Amos 7:1) | open decision 6 | I.a+3 |
+| *kīma* | `כְּ` (`כְּאֵתָנָה`, `כמוך`) | – | not "instead of" | I.a+4–a+5 |
+| *eṭemmu* | `אִט` (`אִטּוֹ`, always vocalized) | – | as §10.3 | I.a+7 |
+| OB col. ii: *leqû*; *ḫalāqu*; *būšu*; *aḫāzu*; *alāku*; *(w)ašābu* | `לָקַח`; `אָבַד`; `נְכָסִים`; `אָחַז` (`אאחז`; with a wife `בָּעַל`); `הָלַךְ`; `יָשַׁב` | cognate (*leqû*, *aḫāzu*) | `נְכָסִים` as Gilgameš XI 96 (not `רְכוּשׁ`) | OBM.a+1–a+12 |
+| Names | `אֵתָנָה` ★, `כִּישׁ`, `אָנוּ` ★, `אִשְׁתַּר` ★, `אִנִּינָה`, `אֶנְלִיל`, `הָאֲנוּנָּכִּי`, `הָאִיגִיגִי`, `הַשִּׁבְעָה` | – | as §10.1 | |
 
 ## Part ET2 – the eagle and the serpent (OB Susa 1–a+24; MA a+1–c+31; SB II 1–72), 2026-10-22
 

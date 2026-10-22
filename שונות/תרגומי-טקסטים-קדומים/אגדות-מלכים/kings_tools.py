@@ -235,6 +235,7 @@ FORMULAS = {'EA': [
     (r'ul išmēšunūtī-ma \| ul išmâ', r'^לא שמע להם, לא שמע', '"he did not listen to them" (§10.3)'),
     (r'atkal(ak)?kum-ma \| šamaš', r'^בך בטחתי, שמש', '"I trusted in you, Šamaš" (§10.3)'),
     (r'ūmišam-ma \|\|? imta(na)?h?hara', r'^יום יום', '"day after day he appealed" (§10.3)'),
+    (r'ana (šâšū?|šuāšu)(-ma)? \|\| ana \S+ \| iz', r'אליו, אל [^,]+, דיבר(ה)?:', '"X said to him, to Y" (§10.6.2)'),
 ]}
 
 
