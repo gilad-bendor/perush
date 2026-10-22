@@ -228,7 +228,7 @@ FORMULAS = {'EA': [
     (r'abīšu \|\| amāta[m]? \| izakkar', r'אביו – דבר דיבר:$', '"to the eagle his father he said a word" (§10.3)'),
     (r'ša itâ \| ša šamaš \| ittiqu', r'אשר יחלוף את גבול שמש', '"whoever passes Šamaš\'s boundary" (§10.3)'),
     (r'ina qāt \(\|\) māhiṣi', r'ביד המוחץ', '"into the hand of the smiter" (§10.3)'),
-    (r'alik \| urha \|\| etiq \| šadâ', r'^לך באורח, חלוף את ההר', 'the command "go the road, pass the mountain" (§10.3)'),
+    (r'alik \| urha \|\| etiq \| šadâ', r'^לך בדרך, חלוף את ההר', 'the command "go the road, pass the mountain" (§10.3)'),
     (r'ana zikir \(\|\) šamaš \| qurādi', r'^למאמר שמש הגיבור', '"at the word of Šamaš the warrior" (§10.3)'),
     (r'šamma \| ša alādi', r'עשב הלידה', 'the plant of birth (§10.3)'),
     (r'šuma \| šuknanni', r'שים לי שם', '"establish for me a name" (§10.3)'),

@@ -284,11 +284,11 @@ echo of "not yet", guidelines §5.2).
 |---|---|---|
 | ✓ X *pâšu īpušam-ma ana* Y *izakkaršu* (OB *izzakaršu*; OB Šamaš *piʾāšu*) | `X פתח את פיו, אל Y דיבר:` | OBM b+3, b+14, c+5, c+8; II 7, 10, 74, 113, 115, 128, 143; III 9, 11. **Etana's formula has no *iqabbi***: so no `ואמר` (the flood / Gilgameš formula `פתח את פיו ואמר, אל Y דיבר:` has it). Order variant *īpuš(am)-ma izakkar(a) ana* Y (II 40, 96) = `X פתח את פיו, דיבר אל Y:`; with *amāta* (III 1) `X פתח את פיו, אל Y … דבר דיבר:`. MA / SB *ana šâšu ana* Y *iqabbi* ("said to him, to Y") – the first translator fixes (e.g. `X אומר לו, לY:`). |
 | ✓ *atmu ṣeḫru atar ḫasīsa* / *ana erî abīšu amāta izakkar* | `האפרוח הקטן, יתיר־התבונה,` / `אל הנשר, אביו – דבר דיבר:` | OBS 22–23; MA c+3–4; II 45–46, 98–99. *watmu* / *atmu* = `אֶפְרוֹחַ` (Gilgameš precedent; [equivalent] ↔ `אֶפְרֹחִים` דברים כב:ו; `גּוֹזָל` is reserved: דברים לב:יא, §10.4); *atru* = `יָתִיר` (Enūma eliš *šūtur* `יתיר`); *ḫasīsu* = `תְּבוּנָה` (creation, flood); the epithet is Atra-ḫasīs's name (note). |
-| ✓ X *ikkal ineʾʾi ikkalū mārūšu* (SB, MA); OB *erûm īkul īkulū mārūšu* | `X אוכל, סר – אוכלים בניו.`; `הנשר אכל – אכלו בניו.` | II 27–33, MA b+16–20; OBS 9, 11. *neʾû* "turn back, away" = `סָר` (no `שוב`). *bâru* "hunt (down)" = `צָד` (`… – הנחש צד,`; `רשת שמש תצודך`). |
+| ✓ X *ikkal ineʾʾi ikkalū mārūšu* (SB, MA); OB *erûm īkul īkulū mārūšu* | `X אוכל, סר – אוכלים בניו.`; `הנשר אכל – אכלו בניו.` | II 27–33, MA b+16–20; OBS 9, 11. *neʾû* "turn back, away" = `סָר` (no `שוב`). *bâru* "catch, hunt down" = `לָכַד` (Gilgameš; revised by ET2 from `צָד`, which belongs to *ṣâdu* / *ṣayyādu*): `… – הנחש לוכד,` (OB `לכד`); `רשת שַׁמַשׁ תלכדך` (↔ תהלים לה:ח). |
 | ✓ *ša itâ ša šamaš ittiqu* | `אשר יחלוף את גבול שַׁמַשׁ –` | II 17, 19, 49. *etēqu* = `חָלַף` (Gilgameš; ↔ `חָלְפוּ חֹק`, ישעיהו כד:ה); *itû* = `גְּבוּל` (gated; [equivalent] ↔ דברים יט:יד, and Laban's heap `אִם אָנִי לֹא אֶעֱבֹר אֵלֶיךָ אֶת הַגַּל הַזֶּה` בראשית לא:נב). |
 | ✓ *šamaš lemniš ina qāt māḫiṣi limalli* (II 18) / *umalli* (II 50) | `שַׁמַשׁ – ברעה – ביד המוחץ ימסרהו!` / `… ימסרהו.` (present: the fledgling's prediction) | *mullû ina qāti* "deliver into the hand": **never `מילא יד`** (Hebrew: ordination – a false echo); *māḫiṣu* = `מוֹחֵץ` (*maḫāṣu* = `מחץ`, law corpus). |
-| The curse of the oath: *kakku murtappidu elīšu līšir* | `הנשק המשוטט – עליו יישר!` | OBS 3; MA b+4; II 21. *rapādu* = `שוטט` (Gilgameš), *ešēru* = `ישר` [cognate]. *nērebu* (mountain pass) = `מַעֲבָר` (`ירחקו ממנו מעברות ההר`); *ṭūdu* = `נָתִיב` (Gilgameš), *ḫarrānu* = `דֶּרֶךְ`, *urḫu* = `אֹרַח` (one Hebrew each). |
-| ✓ *alik urḫa etiq šadâ* (Šamaš's command; MA d+7 *šadâ ebir*) / execution X *illik ītiq šadâ* | `לך באורח, חלוף את ההר,` / `X הלך, חלף את ההר.` | II 75, 89, 144, 149; MA d+7 (*šadâ ebir*: *ebēru* = `עָבַר`, so `עבור את ההר`). *urḫu* = `אֹרַח` (`אורח` plene). |
+| The curse of the oath: *kakku murtappidu elīšu līšir* | `הנשק המשוטט – עליו יישר!` | OBS 3; MA b+4; II 21. *rapādu* = `שוטט` (Gilgameš), *ešēru* = `ישר` [cognate]. *nērebu* (mountain pass) = `מָבוֹא`, *nērebtu* = `מְבוֹאָה` (ET2: `מַעֲבָר` is Gilgameš's *nēberu*): `יתרחקו ממנו מבואות ההר,`; *ṭūdu* = `נָתִיב`, **_urḫu_ = `דֶּרֶךְ`, _ḫarrānu_ = `אוֹרַח` (vocalized), as in Gilgameš and the wisdom corpus** (harmonized 2026-10-22). |
+| ✓ *alik urḫa etiq šadâ* (Šamaš's command; MA d+7 *šadâ ebir*) / execution X *illik ītiq šadâ* | `לך בדרך, חלוף את ההר,` / `X הלך, חלף את ההר.` | II 75, 89, 144, 149; MA d+7 (*šadâ ebir*: *ebēru* = `עָבַר`, so `עבור את ההר`). *urḫu* = `דֶּרֶךְ` (Gilgameš; was `אֹרַח` before ET2, 2026-10-22). |
 | ✓ *ana zikir šamaš qurādi* | `למאמר שַׁמַשׁ הגיבור –` | II 88, 148. *zikru* = `מַאֲמָר` (Gilgameš); but *zikru* "name, fame" (II 127 *zikirka luštešmi*) = `זִכְרְךָ` [cognate] (↔ `וְזֶה זִכְרִי לְדֹר דֹּר` שמות ג:טו): one lemma, two senses (creation corpus precedent). |
 | ✓ The plea: *idnam-ma šamma ša alādi* / *kullimannī-ma šamma ša alādi* / *piltī usuḫ-ma šuma šuknanni* | `תנה לי את עשב הלידה!` / `הראני את עשב הלידה!` / `נסח את חרפתי, שִׂים לי שֵׁם!` | II 140–142 = III 12–14; MA d+4 (OB Morgan c+9 is another wish). *šammu* = `עֵשֶׂב` (Gilgameš, flood: "every `עשב` stands for *šammu*"); *alādu* = `יָלַד` (`לֵדָה`); *kullumu* = `הֶרְאָה` (law corpus); *nasāḫu* = `נָסַח` [cognate]; *pištu* = `חֶרְפָּה` (Gilgameš; [equivalent] ↔ `אָסַף אֱלֹהִים אֶת חֶרְפָּתִי` בראשית ל:כג, gated); *šuma šakānu* = `שָׂם שֵׁם` (Gilgameš; [equivalent] ↔ `וְנַעֲשֶׂה לָּנוּ שֵׁם` בראשית יא:ד): **`שֵׁם` here means "offspring, heir"** – the note says so, and that the Akkadian keeps the one word for both. The plant: [divergence] ↔ `תְּנִי נָא לִי מִדּוּדָאֵי בְּנֵךְ` (בראשית ל:יד); `דּוּדָאִים` reserved. |
 | ✓ *ul išmēšunūtī-ma ul išmâ zikir mārīšu* | `לא שמע להם, לא שמע למאמר בניו.` | II 51, 104. |
@@ -318,11 +318,7 @@ echo of "not yet", guidelines §5.2).
 - *ṣarbatu* "(Euphrates) poplar" = `צַפְצָפָה` (Modern botany: `צַפְצֶפֶת הַפְּרָת`, *Populus euphratica*), not `עֲרָבָה`
   (Enūma eliš and the Sumerian corpora give `עֲרָבָה` to *ṣēru* / *edin*: a collision); ↔ `צַפְצָפָה שָׂמוֹ` (יחזקאל
   יז:ה – the eagle parable) [equivalent], `עַל עֲרָבִים בְּתוֹכָהּ` (תהלים קלז:ב) in the note. *iṣu* = `עֵץ`.
-- Animals: *rīmu* = `רְאֵם` [cognate]; *serrēmu* "onager" = `חֲמוֹר־בָּר` (Sargon *purīmu* `פֶּרֶא`, Gilgameš *akkannu*
-  `עָרוֹד`); *armu* "mountain goat" = `יָעֵל`? / *turāḫu* "ibex" = `תְּאוֹ`? – ET2 decides with the dictionary (one
-  Hebrew each); *ṣabītu* = `צְבִיָּה` (Sargon), *nimru* = `נָמֵר` [cognate], *mindinu* "cheetah?" = `בַּרְדְּלָס`?,
-  *sappāru* "wild ram?", *ditānu* "bison?" (~ `דִּישֹׁן`? a proposal, apparatus only); *būl ṣēri* = `בֶּהֱמַת הַשָּׂדֶה`
-  (flood XI 86; [equivalent] ↔ `חַיַּת הַשָּׂדֶה` בראשית ג:א); *nammaštu* / *nammaššû* = `הַנָּע` (never `רֶמֶשׂ`).
+- Animals (settled by ET2, one Hebrew each, grep-checked): *rīmu* = `רְאֵם` [cognate]; *serrēmu* = `חמור בר`; *armu* = `אַקּוֹ` (pl. `אַקּוֹאִים`); *turāḫu* = `יָעֵל` (= Sum. *taraḫ*, EA, Agade); *ditānu* = `*תְּאוֹ*` (pl. `*תְּאוֹאִים*`; = Sum. *alim*; the `דִּישֹׁן` proposal in a note only); *sappāru* = `*זֶמֶר*`; *ṣabītu* = `צְבִיָּה`; *nimru* = `נָמֵר` [cognate]; *mindinu* = `*בַּרְדְּלָס*`; *būlu* = `בְּהֵמָה` (*būl ṣēri* `בֶּהֱמַת הַשָּׂדֶה`); *nammaštû* = `הַנָּע` (`נָעֵי הקרקע`; never `רֶמֶשׂ`).
 - *ṣabātu* = `תָּפַס` (the harmonization: `תָּפַס` in a text that also has *aḫāzu*, OBM a+6); *aḫāzu* (a wife) = `בָּעַל`
   (Gilgameš). *šarrūtu* = `מַלְכוּת`, *šarru* = `מֶלֶךְ`; the insignia: *agû* `כֶּתֶר` (Gilgameš), *kubšu* = `מִצְנֶפֶת`
   (↔ `הָסִיר הַמִּצְנֶפֶת וְהָרִים הָעֲטָרָה` יחזקאל כא:לא [equivalent]), *meānu* (*mīnu*) "crown?" = `עֲטָרָה`,
@@ -343,7 +339,33 @@ The parts run strictly one at a time (quotas: the user, 2026-10-22; guidelines �
 follows ET2 (command/execution, the fledgling's warning, the oath's curse); ET4 follows ET3 (the plea, the dreams).
 
 ### 10.6 Merged from the parts
-(after each part)
+#### 10.6.1 Part ET2 (OBS 1–a+24; MA a+1–c+31; SB II 1–72), 2026-10-22
+Full list: `3-אגדת-אתנה/project.md` ("Part ET2": proposals). Binding for ET1, ET3, ET4 (copy the strings exactly where the
+Akkadian recurs):
+- **Revised in §10.3/§10.4:** *bâru* = `לָכַד`; *nērebu* / *nērebtu* = `מָבוֹא` / `מְבוֹאָה`; the animals; **the road words
+  harmonized to Gilgameš** (*urḫu* `דֶּרֶךְ`, *ḫarrānu* `אוֹרַח`: OBS.1 changed; the formula `לך בדרך, חלוף את ההר,`).
+- **Fixed strings:** the oath `לפני שַׁמַשׁ הגיבור – שבועה נשבעו שניהם.` / `אחרי ששבועה נשבעו שניהם,`; the friendship
+  `"לְכָה, נעשה עֲמִיתוּת …` / `נהיה ידידים – אני ואתה!"`; II.12–13 `(אם) רַע אַתָּה – את כְּבֵדוֹ תַּחֲלֶה,` / `תועבת
+  האלים – דבר אסור תאכל.` (for II.129–130: `רַע אַתָּה – ואת כְּבֵדִי הֶחֱלֵיתָ!` / `תועבת האלים – דבר אסור אכלת!`); the
+  curses (`הנשק המשוטט – עליו יִישַׁר!`; `הפח, שבועת שַׁמַשׁ – יתהפכו עליו, וילכדוהו!` / `… עליך, וילכדוך!`); the hunt
+  (`X אוכל, סר – אוכלים בניו.`; `… – הנשר לוכד,`); growth `בני הנשר גדלו, צמחו.`; the plot `הנשר – לבו רעה חשב,` / `חשב
+  לבו רעה.` / `לאכול את אפרוחי עמיתו – את פניו שָׂם.`; the eagle's boast `אֶעֱלֶה – ובשמים אֵשֵׁב,` (↔ ישעיהו יד:יג);
+  the fledgling `האפרוח הקטן, יתיר־התבונה,` / `אל הנשר, אביו – דבר דיבר:` / `"אל תאכל, אבי! רשת שַׁמַשׁ תלכדך,`;
+  `לא שמע להם, לא שמע למאמר בניו.`; `ירד ואכל את בני הנחש.`; the lament (`"בך בטחתי, שַׁמַשׁ הגיבור!` … `עושה רעה, אַנְזוּ –
+  מחזיק רעה לרֵעֵהוּ!"`). For ET3 (from MA c+5–c+25 ≈ II 98–117): the second warning and the ambush, in the ET2 table
+  "for ET3".
+- **Words:** *rūʾūtu* `עֲמִיתוּת`, *rūʾu* `עָמִית`, *itbāru* `יְדִיד`, *râʾu* Gt `הִתְרוֹעֵעַ`; *nīšu* (oath) `חַיִּים`;
+  *nabalkutu* of a trap `הִתְהַפֵּךְ עַל` (crossing: `חָצָה`); *ṣillu* `צֵל`, *appu* (of a tree) `צַמֶּרֶת`, *išdu* `יְסוֹד`;
+  *watmu* `אֶפְרוֹחַ`, *līdānu* `יֶלֶד`; *kapādu* `חָשַׁב`; *lemuttu* / *lumnu* / *lemnu* `רָעָה` / `רֹעַ` / `רַע`;
+  *takālu* `בָּטַח`, *adāru* `חָרַד`; *lū* + *tīde* `אָכֵן יָדַעְתָּ`; *qerbetu* `נָוֶה`; *ukultu* `אָכְלָה`; *šiāḫu* `צָמַח`;
+  *ṣupru* `צִפֹּרֶן`; *tarbuʾu* `אָבָק`; *līliātu* `עֶרֶב`; *magāru* `אָבָה`; *gallû* `שֵׁד־גַּלָּה` (netherworld corpus).
+- **Left for the end-of-run harmonization** (other corpora): *šarāku* = `הֶעֱנִיק` (= Sum. *rig₇*, EA 614) collides
+  with Gilgameš's *qiāšu* = `הֶעֱנִיק`; Enki and the World Order's boat name `אקו־האפסו` (*taraḫ*) against *taraḫ* =
+  *turāḫu* = `יָעֵל` (EA, Agade, Etana) and *armu* = `אַקּוֹ`.
+- **Tool:** `tools/ebl_fetch.py` fixed (a reconstruction line opening with a logogram, `%sb`, was glued to the previous
+  line: SB II 25); `Etana-SB-II` regenerated.
+
+(after each later part)
 
 ## Changelog
 - 2026-10-21: written before the first part, from the temple, lament, creation, flood, Gilgameš, law and wisdom

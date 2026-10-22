@@ -98,13 +98,28 @@ def list_texts():
         print(f"{t['genre']} {t['category']} {t['index']}\t{t['name']}\t[{chapters}]")
 
 
+# A reconstruction line of the chapter ATF: "<label>. %<language> …" – usually %n (normalized Akkadian), but a line can
+# open with a logogram in another language (Etana SB II 25: "25. %sb U₄.1.KAM@v.TA.AM₃ | %n inaṣṣarū | b[ūla]").
+# Fixed 2026-10-22: before, only "%n" was recognized, and such a line was glued to the previous one as a "variant".
+RECON_RE = re.compile(r"^(\S+)\. (%[a-z]+ .*)$")
+
+
+def is_recon(line):
+    return bool(RECON_RE.match(line))
+
+
+def recon_text(line):
+    """The reconstruction without its label and language-shift markers (%n, %sb …)."""
+    return re.sub(r"(^|\s)%[a-z]+\s+", r"\1", RECON_RE.match(line).group(2)).strip()
+
+
 def parse_atf_blocks(atf):
     """Split the chapter ATF into per-line blocks keyed by the line number (as written, e.g. '148', '3\\'')."""
     blocks, current, key = {}, [], None
     pending_prefix = []  # #tr lines precede the reconstruction line
     for raw in atf.splitlines():
         line = raw.rstrip()
-        m = re.match(r"^(\S+)\. %n ", line)
+        m = RECON_RE.match(line)
         if m:
             if key is not None:
                 blocks.setdefault(key, []).append(current)
@@ -253,7 +268,7 @@ def main(argv):
         seen[label] = occurrence + nvar
         block_list = blocks.get(label, [])
         block = [b for blk in block_list[occurrence:occurrence + nvar] for b in blk]
-        ms_atf = [b for b in block if not b.startswith(("#", "//", "$")) and " %n " not in b]
+        ms_atf = [b for b in block if not b.startswith(("#", "//", "$")) and not is_recon(b)]
         ms_ids = [m.get("manuscriptId") for v in ln.get("variants", []) for m in v.get("manuscripts", [])]
         if len(ms_atf) == len(ms_ids):
             for mid, b in zip(ms_ids, ms_atf):
@@ -286,7 +301,7 @@ def main(argv):
             seen[label] = occurrence + nvar
             block_list = blocks.get(label, [])
             block = [b for blk in block_list[occurrence:occurrence + nvar] for b in blk]
-            recons = [b.split(" %n ", 1)[1] for b in block if " %n " in b]
+            recons = [recon_text(b) for b in block if is_recon(b)]
             recon = recons[0] if recons else ""
             # A line can have several variant reconstructions (eBL "variants"): the ATF repeats the line number.
             variant_recons = recons[1:]
@@ -310,7 +325,7 @@ def main(argv):
                     if _norm(n) not in joined:
                         notes.append(n)
             parallels = [b[3:] for b in block if b.startswith("// ")]
-            mss_lines = [b for b in block if not b.startswith(("#", "//", "$")) and " %n " not in b]
+            mss_lines = [b for b in block if not b.startswith(("#", "//", "$")) and not is_recon(b)]
             section = "\n---\n\n" if ln.get("isBeginningOfSection") else ""
             f.write(f"{section}### {label}\n\n")
             f.write(f"- **N:** {recon}\n")

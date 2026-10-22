@@ -39,7 +39,7 @@ numbering (Kinnier Wilson 1985; Foster; Dalley; Haul 2000) differs (e.g. SB II =
 ## The parts (renderings §10.5) and progress
 | Part | Lines | Translator | Status |
 |---|---|---|---|
-| ET2 | OBS 1–a+24; MA a+1–c+31; II 1–72 | sub-agent | in progress (first) |
+| ET2 | OBS 1–a+24; MA a+1–c+31; II 1–72 | sub-agent | **done** 2026-10-22 (179 lines, three passes; merged: renderings §10.6.1) |
 | ET1 | OBM 1–a+13; I 1–a+11 | sub-agent | after ET2 (one part at a time, 2026-10-22) |
 | ET3 | II 73–152; OBM b+1–c+9; MA d+1–f+18 | sub-agent | after ET2 |
 | ET4 | III 1–c+7; MA g+1–i+18 | sub-agent | after ET3 |
@@ -50,3 +50,251 @@ numbering (Kinnier Wilson 1985; Foster; Dalley; Haul 2000) differs (e.g. SB II =
 ## Parts
 (each translator adds its section: progress and the three review passes, `### Parallels index (ET1)` … with the columns
 `| Line | Source | Hebrew rendering | Bible | Tag | Comment |`, key findings, open decisions, proposals)
+
+## Part ET2 – the eagle and the serpent (OB Susa 1–a+24; MA a+1–c+31; SB II 1–72), 2026-10-22
+
+Round 3, run 2 (`../renderings.md` §10.5). Translator: sub-agent ET2. Files: `annotated-OBS.rtl.md` (whole),
+`annotated-MA.rtl.md` (header for the whole chapter + a+1–c+31), `annotated-II.rtl.md` (header for the whole tablet +
+1–72). 179 entries. Not committed.
+
+### Progress and passes
+- **Order of work:** SB II 1–72 first (it fixes the Hebrew of the scenes), then OB Susa and MA, copying the SB Hebrew
+  wherever the Akkadian is the same and varying only where it varies (tense: OB preterite *ibāram* `לכד` vs SB/MA
+  present *ibarram* `לוכד`; OB *īkul īkulū* `אכל – אכלו` vs SB/MA *ikkal ineʾʾi ikkalū* `אוכל, סר – אוכלים`; MA
+  *ana qāt* `ליד` vs SB *ina qāt* `ביד`; MA *lemna* `את הרע` vs SB *lemniš* `ברעה`; MA present *išemmi* `לא שומע`).
+  The apparatus of each line says what the version keeps, changes or lacks.
+- **Data:** `kings_tools.py data ET …` for the three ranges; eBL dictionary per word (armu II, turāḫu, sappāru, ditānu,
+  mindinu, arwiu, nazmātu, šutattupu, tūrtu, murtappidu, nesû II, zaqāpu, eṣēlu, damāmiš, šarāku, nīšu II, qerbetu,
+  līdānu, râʾu, šāgišu, gallû, nurbu, šalû, mukillu, ēpišu, abarša). Every Bible verse printed with
+  `check_bible_quotes.py --show` (or verified by the checker) before quoting.
+- **Pass (a) fidelity:** every `>` line against N and the ATF: brackets follow the chapter's ATF (e.g. MA c+17/c+19
+  `[הסתכל …]`, II.58 `[בציפו]רניו`, OBS.a+1 `[ב]וקר?`); stems and tenses re-parsed (II.43 *ellī* present, II.50
+  restored *umalli* is formally D preterite, MA c+6 Gtn, MA c+31 Ntn, OBS.4 Dt/Rt reciprocal); fixes made.
+- **Pass (b) consistency:** formulas and repeated lines across SB/OB/MA compared by script (`verify ET` reports no
+  "same transliteration, different Hebrew"); every new Hebrew word grepped in all corpora (`grep all`). Collisions
+  found and resolved: `מַעֲבָר` (Gilgameš *nēberu*) → *nērebu* `מָבוֹא`; `צד` (cognate of *ṣâdu* / *ṣayyādu*) →
+  *bâru* `לָכַד` (Gilgameš); `התחברו` (LH *emēdu* N) → *šutattupu* `נעשו חברים`; `כבל` (LE *kannu*) → *kasû* D
+  `כִּפֵּת`; `קָרַס` (Gilgameš *qâpu*) → *eṣēlu* `*הִתְאַבֵּן*`; `הִשְׁפִּיל` (Enūma eliš *šapālu* Š) → II.57 `*רָכַן*?`;
+  `ירחקו` → *nesû* `התרחק` (Gilgameš); `רוֹצֵחַ` (Gilgameš/Theodicy *šaggāšu*) → *šāgišu* `שׁוֹחֵט`; `כַּר` → *qerbetu*
+  `נָוֶה` (Gilgameš VIII 13 *qerbētu* `הנאות`).
+- **Pass (c) Hebrew:** read aloud; vocalized the words that would otherwise be misread (`יָלַד` "bore", `קָנוּ`
+  "acquired", `עֶרֶב`, `פַּחְךָ`, `אֹכְלָה`, `נִשָּׁבַע`, `יִישַׁר`, `רֵעֵהוּ`, `רֵעִי`, `אֵלוֹ`, `שָׂם`, `זְמָרִים`,
+  `תְּאוֹאִים`, `אַקּוֹאִים`, `כְּבֵדוֹ` / `כְּבֵדֵיהֶם`, `שָׁנָה`).
+- **Checks:** `python3 -I kings_tools.py verify ET` – 179 entries, the reserved/gated strings and all FORMULAS['ET']
+  pass; **one problem, not in the translation: II.25** (see open decision 1). `python3 -I
+  ../tools/check_bible_quotes.py` on the three files (and this file) – 0 problems.
+
+### Deviations from renderings §10 (decided at the first occurrence, with the reason)
+1. ***bâru* = `לָכַד`** (not §10.3's `צָד`): one Hebrew per source word across corpora – the Gilgameš corpus has *bâru*
+   = `לָכַד` (OB Ishchali 15' `צפור לכוד`); `צָד` is the cognate of *ṣâdu* / *ṣayyādu* (Gilgameš `צייד`); and the sense
+   is "catch, trap (with a net)" (eBL). It also makes the idiom of the net exact: `רשת שַׁמַשׁ תלכדך` (II.47) ↔
+   `וְרִשְׁתּוֹ אֲשֶׁר-טָמַן תִּלְכְּדוֹ` (תהלים לה:ח). No FORMULAS regex involves it; only the prose of §10.3 changes
+   (`… – הנחש לוכד,`; `רשת שַׁמַשׁ תלכדך`). Note: Gilgameš itself also has *ḫābilu* `לוכד` (I 111, VII 94) – a
+   Gilgameš-internal near-collision (participle of `לכד` for *ḫābilu*, finite verbs for *bâru*).
+2. ***nērebu* = `מָבוֹא`** (not §10.3's `מַעֲבָר`, which is Gilgameš's *nēberu*, X 79, XI 248); *nērebtu* = `מְבוֹאָה`
+   (OBS 2, MA b+3; `מְבוֹאֹת יָם`, יחזקאל כז:ג).
+3. ***qerbetu* = `נָוֶה`** (Gilgameš VIII 13 *qerbētu* `הנאות`); OBS a+20 `רשתך – הַנָּוֶה הרחב`.
+4. **The animals** (§10.4 left them to ET2): *turāḫu* = `יָעֵל` (= Sum. *dara₂* / *taraḫ*, `יעל` in EA 182 and Agade 23),
+   so §10.4's `יָעֵל?` for *armu* moves: *armu* (eBL "mountain goat"; ≠ *arwiu* / *armû* "male gazelle", `צבי` in the
+   love songs) = `אַקּוֹ` (pl. `אַקּוֹאִים`); *ditānu* = `*תְּאוֹ*` (pl. `*תְּאוֹאִים*`; = Sum. *alim*, `תְּאוֹ` in Gudea, EWO,
+   Agade; §10.4's `תְּאוֹ?` for *turāḫu* would have collided); *sappāru* = `*זֶמֶר*` (pl. `*זְמָרִים*`, always vocalized);
+   *mindinu* = `*בַּרְדְּלָס*` (Gilgameš); *nimru* = `נָמֵר`; *rīmu* `רְאֵם`; *serrēmu* `חמור בר` (Gilgameš string,
+   without maqaf; §10.4 has `חֲמוֹר־בָּר`); *ṣabītu* `צְבִיָּה`.
+5. ***mullû ina qāti***: II.50's restored *[umalli]* is formally D preterite (present would be *umalla*); kept as §10.3's
+   present `ימסרהו.`, with a note.
+
+### Parallels index (ET2)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| II.2 | [d]imta ītepuš | [צְ]רִיחַ? עשה | `וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם` (בראשית יא:ד); `צְרִיחַ בֵּית אֵל בְּרִית` (שופטים ט:מו) | equivalent | Foster's italic "tower": one uncertain sign in a broken line, subject unknown, next to a shrine of Adad; no heaven, no name. `מִגְדָּל` reserved. Not Gen 11. |
+| II.4 | aṣât ṣa[rbatu] | יצאה צַ[פְצָפָה] | `קָח עַל מַיִם רַבִּים צַפְצָפָה שָׂמוֹ` (יחזקאל יז:ה) | equivalent | Ezekiel's eagle parable: eagle, tree, broken oath and the god's net (Ezek 17:13–20) – the closest biblical parallel in structure. Also OBS.6, MA.b+9. |
+| II.5 | [i]na appīša rabiṣ erû | [ב]צמרתה רובץ נֶשֶׁר | `וְהָאֵם רֹבֶצֶת עַל הָאֶפְרֹחִים` (דברים כב:ו) | cognate | *rabāṣu* / `רבץ`: the brooding bird of the nest law; this eagle will eat another's young. |
+| II.5 | erû … (ṣerru) | נשר … נחש | `דֶּרֶךְ הַנֶּשֶׁר בַּשָּׁמַיִם דֶּרֶךְ נָחָשׁ עֲלֵי-צוּר` (משלי ל:יט) | equivalent | Eagle and serpent as a pair, above and below. Also OBS.7. |
+| II.8 | [al]ka nīpuša rūʾū[ta] | [לְכָה], נעשה עֲמִיתוּת | `וְעַתָּה לְכָה נִכְרְתָה בְרִית אֲנִי וָאָתָּה` (בראשית לא:מד) | equivalent | *alka* = `לְכָה` [cognate] + cohortative, and "I and you" (II.9); Laban–Jacob. "Friendship", not `בְּרִית`. |
+| II.9 | lū itbārū an[āku u kâši] | נהיה ידידים – א[ני ואתה] | `וַיִּכְרֹת יְהוֹנָתָן וְדָוִד בְּרִית בְּאַהֲבָתוֹ אֹתוֹ כְּנַפְשׁוֹ` (שמואל א יח:ג) | equivalent | Friendship sealed like a treaty. |
+| II.12 | le[mnēt]ā-ma | (אם) רַ[ע] אַתָּה | `אִם תַּעֲשֵׂה עִמָּנוּ רָעָה` (בראשית כו:כט) | equivalent | The condition of a peace oath. Restoration *kabtassu tušamraṣ* is eBL's (from II.129). |
+| II.13 | anzil[la] ša ilī [asakka takkal?] | תועבת האלים – [דבר אסור תאכל?] | `לֹא תֹאכַל כָּל תּוֹעֵבָה` (דברים יד:ג) | equivalent | "To eat an abomination" = to break a taboo; *anzillu* = `תּוֹעֵבָה`. The verb is restored (from II.130). Irony: the eagle breaks the oath by eating. |
+| II.15 | nitma erṣet[a] | נִשָּׁבַע בארץ | `הַעִידֹתִי בָכֶם הַיּוֹם אֶת הַשָּׁמַיִם וְאֶת הָאָרֶץ` (דברים ד:כו) | equivalent | The earth as witness; Foster's "netherworld" is interpretation. The oath by the earth returns as "your net is the wide earth" (II.69). |
+| II.16 | māmīta it[mû kilallān] | שבועה [נשבעו שניהם] | `כִּי שָׁם נִשְׁבְּעוּ שְׁנֵיהֶם` (בראשית כא:לא) | equivalent | "Both swore": the same phrase (preserved in II.23). |
+| II.16 | ina mahar šamaš qurādi | לפני שַׁמַשׁ הגיבור | `אֲשֶׁר נִשְׁבַּעְנוּ שְׁנֵינוּ אֲנַחְנוּ בְּשֵׁם יְהוָה` (שמואל א כ:מב); `אֱלֹהֵי אַבְרָהָם וֵאלֹהֵי נָחוֹר יִשְׁפְּטוּ בֵינֵינוּ` (בראשית לא:נג) | equivalent | Two friends swear by the god, who judges between them. |
+| II.17 | ša itâ ša šamaš [ittiqu] | אשר [יחלוף] את גבול שַׁמַשׁ | `לֹא תַסִּיג גְּבוּל רֵעֲךָ` (דברים יט:יד); `אָרוּר מַסִּיג גְּבוּל רֵעֵהוּ` (דברים כז:יז) | equivalent | Moving the friend's boundary under a curse. Also II.19, II.49. |
+| II.17 | ša itâ … ittiqu | אשר יחלוף את גבול | `אִם אָנִי לֹא אֶעֱבֹר אֵלֶיךָ אֶת הַגַּל הַזֶּה` (בראשית לא:נב) | equivalent | Laban's heap: a sworn boundary not to be crossed. |
+| II.17 | etēqu | יחלוף | `חָלְפוּ חֹק הֵפֵרוּ בְּרִית עוֹלָם` (ישעיהו כד:ה) | equivalent | *etēqu* = `חָלַף` (Gilgameš): passing over a law as breaking a covenant. |
+| II.18 | ina qāt māhiṣ[i limalli] | ביד המוחץ [ימסרהו] | `בְּיַד מֶלֶךְ בָּבֶל תִּנָּתֵן` (ירמיהו כא:י) | equivalent | *mullû ina qāti* "deliver"; never `מִלֵּא יָד` (ordination, a false friend). Also II.50; MA.b+6 `ליד המוחץ`. |
+| II.21 | kakku murtappidu elīšu [līšir] | הנשק המשוטט – עליו [יִישַׁר] | `יִבְרַח מִנֵּשֶׁק בַּרְזֶל` (איוב כ:כד) | equivalent | The weapon that finds the fugitive; identical in OBS.3, MA.b+4. *ešēru* / `ישר` [cognate]. |
+| II.22 | gišparru māmīt šamaš … l[ibārūšu?] | הפח, שבועת שַׁמַשׁ – יתהפכו עליו, וי[לכדוהו?] | `וְרִשְׁתּוֹ אֲשֶׁר-טָמַן תִּלְכְּדוֹ` (תהלים לה:ח) | equivalent | The trap of the divine judge catches; *bâru* = `לָכַד`. Also II.48 (`בְּרֶשֶׁת-זוּ טָמָנוּ נִלְכְּדָה רַגְלָם`, תהלים ט:טז). |
+| II.26 | rīma | רְאֵם | `וַתָּרֶם כִּרְאֵים קַרְנִי` (תהלים צב:יא) | cognate | The wild ox. |
+| II.28 | armī ṣabâti | אַקּוֹאִים, צביות | `וְאַקּוֹ וְדִישֹׁן וּתְאוֹ וָזָמֶר` (דברים יד:ה) | equivalent | The only biblical list of wild game supplies the Hebrew names (*armu* `אַקּוֹ`, *ditānu* `תְּאוֹ`, *sappāru* `זֶמֶר`; II.30, MA.b+15, b+17, OBS.8); a lexical choice, identifications uncertain. *ditānu* ~ `וְדִישֹׁן` is a sound-proposal only. |
+| II.32 | [nammaš]ti qaqqari | [נָעֵי] הקרקע | `וְאֵת כָּל רֶמֶשׂ הָאֲדָמָה` (בראשית א:כה) | equivalent | "The moving things of the ground" = "the creeping things of the earth"; *nammaštû* is never `רֶמֶשׂ` (flood, Gilgameš). Also MA.b+19. |
+| MA.b+19 | [būl?] ṣēri … ṣerru ibarram-ma | [בהמת?] השדה … הנחש לוכד | `וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה` (בראשית ג:א) | divergence | *būl ṣēri* = `בֶּהֱמַת הַשָּׂדֶה` (flood XI 86); in Genesis the serpent is one of the beasts of the field, here it hunts them – and it is the wronged, faithful partner. |
+| II.34 | ukulta | אָכְלָה | `אֶת כָּל יֶרֶק עֵשֶׂב לְאָכְלָה` (בראשית א:ל) | cognate | *ukultu* (from *akālu*) / `אָכְלָה`. |
+| II.37 | erû libbašu lemutta ikpudū-ma | הנשר – לבו רעה חשב | `וְאִישׁ אֶת רָעַת רֵעֵהוּ אַל תַּחְשְׁבוּ בִּלְבַבְכֶם` (זכריה ח:יז); `וְאַתֶּם חֲשַׁבְתֶּם עָלַי רָעָה` (בראשית נ:כ) | equivalent | *kapādu* = `חָשַׁב`: evil plotted in the heart against the friend. Also II.38 (chiasm), OBS.14. |
+| II.39 | pā[nī]šu? iškun | את [פניו?] שָׂם | `כִּי שַׂמְתִּי פָנַי בָּעִיר הַזֹּאת לְרָעָה` (ירמיהו כא:י) | equivalent | *pānī šakānu* = `שָׂם פָּנִים` (Gilgameš; Gen 31:21). Restored. |
+| II.41 | mārī ṣerrim-mi lūkulu anāku | את בני הנחש – אֹכְלָה אני | `לֹא תִקַּח הָאֵם עַל הַבָּנִים` (דברים כב:ו) | divergence | The nest law's mercy reversed: the eagle plans to eat another's young. Also OBS.18. |
+| II.41 | (the eagle as predator) | אֹכְלָה | `וְאֶפְרֹחָו יְעַלְעוּ-דָם; וּבַאֲשֶׁר חֲלָלִים שָׁם הוּא` (איוב לט:ל) | equivalent | The eagle feeding its young on blood. |
+| II.43 | ellī-ma ina šamāmī uššab | אֶעֱלֶה – ובשמים אֵשֵׁב | `וְאַתָּה אָמַרְתָּ בִלְבָבְךָ הַשָּׁמַיִם אֶעֱלֶה מִמַּעַל לְכוֹכְבֵי אֵל אָרִים כִּסְאִי; וְאֵשֵׁב בְּהַר מוֹעֵד` (ישעיהו יד:יג) | equivalent | The same two verbs in the same order and person (*elû* / `עלה`, *ašābu* / `ישב`, both [cognate]), said "in the heart" (II.37; OBS.14, 19–20). One of the strongest contacts of the story. |
+| II.43 | ellī-ma ina šamāmī | אֶעֱלֶה – ובשמים | `אִם תַּגְבִּיהַּ כַּנֶּשֶׁר וְאִם בֵּין כּוֹכָבִים שִׂים קִנֶּךָ מִשָּׁם אוֹרִידְךָ` (עובדיה א:ד) | equivalent | The eagle's nest in heaven and the god bringing it down (Jer 49:16 likewise); the eagle will end in a pit (ET3). |
+| II.43 | ina šamāmī uššab | ובשמים אשב | `וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם` (בראשית יא:ד) | divergence | Ascent to heaven out of pride, but by a bird's wings, not a tower. |
+| II.44 | akkal inba | ואוכל תנובה | `וַתִּקַּח מִפִּרְיוֹ וַתֹּאכַל` (בראשית ג:ו) | divergence | Our proposal: a creature that wants a god's life and eats from the tree; *inbu* = `תְּנוּבָה`, never `פְּרִי` (Gilgameš). |
+| II.45 | atmu ṣehru atar hasīsa | האפרוח הקטן, יתיר־התבונה | `אֶפְרֹחִים אוֹ בֵיצִים` (דברים כב:ו) | equivalent | *watmu* = `אֶפְרוֹחַ`; `גּוֹזָל` (דברים לב:יא) reserved. The epithet is Atra-ḫasīs's name. Identical in OBS.22, MA.c+3. |
+| II.45 | (the wise child) | יתיר־התבונה | `מִפִּי עוֹלְלִים וְיֹנְקִים יִסַּדְתָּ עֹז` (תהלים ח:ג) | equivalent | Wisdom in the mouth of the smallest. |
+| II.47 | šētu ša šamaš ibâr[ka] | רשת שַׁמַשׁ תלכד[ך] | `וּפָרַשְׂתִּי אֶת רִשְׁתִּי עָלָיו וְנִתְפַּשׂ בִּמְצוּדָתִי` (יחזקאל יב:יג); `אָלָתִי אֲשֶׁר בָּזָה וּבְרִיתִי אֲשֶׁר הֵפִיר` (יחזקאל יז:יט) | equivalent | The god's net spread over the oath-breaker. |
+| II.47 | šētu ša šamaš | רשת שַׁמַשׁ | `כַּאֲשֶׁר יֵלֵכוּ אֶפְרוֹשׂ עֲלֵיהֶם רִשְׁתִּי כְּעוֹף הַשָּׁמַיִם אוֹרִידֵם` (הושע ז:יב) | equivalent | The divine net brings the bird down from the sky – the eagle's fate. Also II.70. |
+| II.48 | gišparru … ibarrūnikk[a] | הפח … וילכדוך | `הֲיַעֲלֶה פַּח מִן הָאֲדָמָה וְלָכוֹד לֹא יִלְכּוֹד` (עמוס ג:ה) | equivalent | Trap + `לכד`. |
+| II.51 | ul išmēšunūtī-ma … | לא שמע להם, לא שמע ל[מאמר בניו?] | `שְׁמַע בְּנִי מוּסַר אָבִיךָ` (משלי א:ח) | divergence | Wisdom's order reversed: the father does not listen to the son, and is punished. |
+| II.56 | qinnašu laššu | וקנו איננו | `הַיֶּלֶד אֵינֶנּוּ וַאֲנִי אָנָה אֲנִי בָא` (בראשית לז:ל) | equivalent | The cry over an empty place. |
+| OBS.a+6 | laššû [mārūšu?] | ואינם [בניו?] | `רָחֵל מְבַכָּה עַל בָּנֶיהָ; מֵאֲנָה לְהִנָּחֵם עַל בָּנֶיהָ כִּי אֵינֶנּוּ` (ירמיהו לא:יד) | equivalent | A parent weeping for children who are not; also OBS.a+17, II.60. |
+| OBS.a+17 | laššû mārūʾa | אינם בניי | `יוֹסֵף אֵינֶנּוּ וְשִׁמְעוֹן אֵינֶנּוּ` (בראשית מב:לו) | equivalent | Jacob's lament. |
+| II.61 | ana pān šamaš i[llakā dimāšu] | לפני שַׁמַשׁ – [זולגות דמעותיו] | `מְלִיצַי רֵעָי; אֶל-אֱלוֹהַּ דָּלְפָה עֵינִי` (איוב טז:כ) | equivalent | Friends betray, the tears flow to the god. `זולגות דמעותיו` = Gilgameš's string for *illakā dimāšu*. Also OBS.a+10. |
+| II.62 | atkalkum-ma šamaš [qurādu] | בך בטחתי, שַׁמַשׁ [הגיבור] | `אֱלֹהַי בְּךָ בָטַחְתִּי אַל-אֵבוֹשָׁה` (תהלים כה:ב) | equivalent | The opening of an individual lament; the whole speech (II.62–72, OBS.a+11–24) has the psalm structure: trust, innocence, complaint, "you know", the god's power, plea for punishment. |
+| OBS.a+12 | ana erîm ramānī anāku ašruk | לנשר – את עצמי – אני הֶעֱנַקְתִּי | `גַּם-אִישׁ שְׁלוֹמִי אֲשֶׁר-בָּטַחְתִּי בוֹ אוֹכֵל לַחְמִי הִגְדִּיל עָלַי עָקֵב` (תהלים מא:י) | equivalent | The trusted friend who ate of mine and betrayed. |
+| OBS.a+13 | ādur-ma nīška ukabbit | חרדתי, ואת חַיֶּיךָ כיבדתי | `וְאֶת-יִרְאֵי יְהוָה יְכַבֵּד; נִשְׁבַּע לְהָרַע וְלֹא יָמִר` (תהלים טו:ד) | equivalent | Honouring the oath by the god's life; *kabātu* D / `כִּבֵּד` [cognate]. Foster's "you" hides the oath (*nīšu*). |
+| OBS.a+14 | lemuttam ul ukīl ana ibrīya | רעה לא החזקתי לרֵעִי | `אַל-תַּחֲרֹשׁ עַל-רֵעֲךָ רָעָה; וְהוּא-יוֹשֵׁב לָבֶטַח אִתָּךְ` (משלי ג:כט) | equivalent | The serpent kept the precept, the eagle broke it (OBS.a+24, II.72 `מחזיק רעה לרֵעֵהוּ`). |
+| OBS.a+15 | šū qinnašu šalim-ma sapih qin[nī] | הוא – קנו שלם, ופזור קני | `מַדּוּעַ דֶּרֶךְ רְשָׁעִים צָלֵחָה שָׁלוּ כָּל בֹּגְדֵי בָגֶד` (ירמיהו יב:א) | equivalent | The traitor whole, the faithful ruined: the righteous sufferer's complaint inside a fable. |
+| II.66 | saphū atmūʾa | פזורים אפרוחיי | `פֶּן נָפוּץ עַל פְּנֵי כָל הָאָרֶץ` (בראשית יא:ד) | equivalent | *sapāḫu* is the Akkadian "scatter"; `פּוּץ` / `הֵפִיץ` reserved for Gen 11, so `פָּזוּר`. Foster's "while his young are safe" rests on a reading eBL's collation excludes. |
+| II.68 | lumna ša īpušanni šama[š lū tīde] | את הרוע אשר עשה לי – שַׁמַשׁ, [אָכֵן יָדַעְתָּ] | `וְאַתָּה יְהוָה יָדַעְתָּ אֶת כָּל עֲצָתָם עָלַי לַמָּוֶת` (ירמיהו יח:כג) | equivalent | "You know" + the plea for punishment. Also OBS.a+19 (OB: "the evil that came to me"). |
+| II.69 | šētka erṣ[etu rapaštu] | רשתך – הארץ [הרחבה] | `אִם אֶסַּק שָׁמַיִם שָׁם אָתָּה; וְאַצִּיעָה שְּׁאוֹל הִנֶּךָּ` (תהלים קלט:ח) | equivalent | No escape from the god, heaven or earth (II.69–70). |
+| II.69 | šētka erṣetu / gišparraka šamû | רשתך – הארץ … פַּחְךָ – השמים | `אִם יַחְתְּרוּ בִשְׁאוֹל מִשָּׁם יָדִי תִקָּחֵם; וְאִם יַעֲלוּ הַשָּׁמַיִם מִשָּׁם אוֹרִידֵם` (עמוס ט:ב); `מִשָּׁם אֲצַוֶּה אֶת הַנָּחָשׁ וּנְשָׁכָם` (עמוס ט:ג) | equivalent | Heaven and earth, and the serpent as the god's agent of punishment – exactly the sequel (ET3; MA.c+24). |
+| II.69 | šētka erṣetu | רשתך – הארץ | `הֲתִפֹּל צִפּוֹר עַל פַּח הָאָרֶץ` (עמוס ג:ה) | equivalent | "The trap of the earth". |
+| OBS.a+20 | šētka qerbetum rap[aštum] | רשתך – הַנָּוֶה הר[חב] | `יִרְעֶה מִקְנֶיךָ בַּיּוֹם הַהוּא כַּר נִרְחָב` (ישעיהו ל:כג) | equivalent | "A wide pasture": the same phrase (other Hebrew noun). OB's net is the pasture around the town; SB's (II.69) the whole earth. |
+| II.71 | ina šētīka ai uṣ[i erû] | מרשתך אל יצא [הנשר] | `נַפְשֵׁנוּ כְּצִפּוֹר נִמְלְטָה מִפַּח יוֹקְשִׁים` (תהלים קכד:ז) | divergence | There the righteous bird escapes the trap; here the wronged one prays that the wicked bird will not. Also OBS.a+22. |
+| II.72 | ēpiš lemutti anzû mukī[l lemutti ana ibrīšu] | עושה רעה, אַנְזוּ – מחזיק [רעה לרֵעֵהוּ] | `וְאִישׁ אֶת רָעַת רֵעֵהוּ אַל תַּחְשְׁבוּ בִּלְבַבְכֶם וּשְׁבֻעַת שֶׁקֶר אַל תֶּאֱהָבוּ` (זכריה ח:יז) | equivalent | Evil against the friend and a false oath, together. OB (OBS.a+23) has *anzillu* `תועבה` where SB has the mythical bird Anzû. |
+| OBS.1 | lihliqšum ṭūdum ai uta harrānam | יאבד לו הנתיב, אל ימצא אוֹרַח | `וְגָדַרְתִּי אֶת גְּדֵרָהּ וּנְתִיבוֹתֶיהָ לֹא תִמְצָא` (הושע ב:ח) | equivalent | "Her paths she shall not find": *ai uta* = `לֹא תִמְצָא`, *ṭūdu* = `נָתִיב`. Also `אָרְחִי גָדַר וְלֹא אֶעֱבוֹר` (איוב יט:ח). |
+| OBS.4 | māmītam uttamammû | שבועה – נשבעו זה לזה | `וַיִּשָּׁבְעוּ אִישׁ לְאָחִיו` (בראשית כו:לא) | equivalent | A reciprocal oath (Dt/Rt). |
+| MA.b+5 | rēssu lišši | את ראשו יִשָּׂא | `בְּעוֹד שְׁלֹשֶׁת יָמִים יִשָּׂא פַרְעֹה אֶת רֹאשְׁךָ מֵעָלֶיךָ` (בראשית מ:יט) | equivalent | *rēša našû* "single out" = `נָשָׂא רֹאשׁ`, an idiom kept literal: for grace (Gen 40:13) or death (40:19); here death. MA only. |
+| MA.b+11 | irtūʾūni | התרועעו | `אִישׁ רֵעִים לְהִתְרֹעֵעַ` (משלי יח:כד) | cognate | *râʾu* / `רעה` "befriend" (Prov 22:24 `אַל-תִּתְרַע`); *rūʾu* (`עָמִית`) is the same Semitic root as `רֵעַ`, hidden by the Gilgameš rendering. |
+| MA.b+13 | nazmat kabtātīšunu iptašrūni | את צרות כְּבֵדֵיהֶם – פָּשְׁרוּ זה לזה | `אֲשֶׁר יַחְדָּו נַמְתִּיק סוֹד` (תהלים נה:טו) | equivalent | The friend who shared one's secrets and betrayed (Ps 55:13–21). Foster's "desires" is not *nazmātu* "troubles". |
+| MA.c+5 | [ṣerru rabiṣ] | [הנחש רובץ] | `לַפֶּתַח חַטָּאת רֹבֵץ` (בראשית ד:ז) | cognate | *rabāṣu* / `רבץ`: the lurker (cf. the *rābiṣu* demon). Restored from SB II.100. |
+| MA.c+6 | erṣetu iṣṣ[a]na[bbatka?] | הארץ – [תתפסך?] | `וַתִּפְתַּח הָאָרֶץ אֶת פִּיהָ וַתִּבְלַע אֹתָם` (במדבר טז:לב) | equivalent | The earth that seizes the sinner; Foster's "netherworld" is interpretation. Restored. Also MA.c+9. |
+| MA.c+16 | išni … / ušalliš … | שָׁנָה … / שִׁלֵּשׁ … | `וַיֹּאמֶר שְׁנוּ וַיִּשְׁנוּ וַיֹּאמֶר שַׁלֵּשׁוּ וַיְשַׁלֵּשׁוּ` (מלכים א יח:לד) | cognate | *šanû* / `שָׁנָה`, *šalāšu* / `שִׁלֵּשׁ`: "a second, a third time" (c+14–18). |
+| MA.c+24 | ṣerru iṣṣabassu | הנחש תפס אותו | `מִשָּׁם אֲצַוֶּה אֶת הַנָּחָשׁ וּנְשָׁכָם` (עמוס ט:ג) | equivalent | The serpent as the god's instrument of punishment. |
+| MA.c+29 | [d]ayyān dīni | דיין הדין | `הֲשֹׁפֵט כָּל הָאָרֶץ לֹא יַעֲשֶׂה מִשְׁפָּט` (בראשית יח:כה) | equivalent | Šamaš as judge; *dayyānu* / *dīnu* = `דַּיָּן` / `דִּין` [cognate]. |
+
+### Key findings
+**The Bible.**
+1. **The oath of friendship is told as a treaty, and it meets Genesis's oath scenes word for word**: *alka nīpuša
+   rūʾūta … anāku u kâši* (II.8–9) = Laban's `לְכָה נִכְרְתָה בְרִית אֲנִי וָאָתָּה` (Gen 31:44); *māmīta itmû
+   kilallān* (II.16, 23) = `כִּי שָׁם נִשְׁבְּעוּ שְׁנֵיהֶם` (Gen 21:31); the reciprocal oath (OBS.4) = `וַיִּשָּׁבְעוּ
+   אִישׁ לְאָחִיו` (Gen 26:31); the conditional *lemnētā-ma* "if you are evil" (II.12) = `אִם תַּעֲשֵׂה עִמָּנוּ
+   רָעָה` (Gen 26:29); "Šamaš's boundary" (II.17, 19, 49) = Laban's heap that neither may cross (Gen 31:52) and the
+   cursed mover of the friend's boundary (Deut 19:14, 27:17). The oath ends in curses, like Deut 28.
+2. **Isa 14:13 is the eagle's plan**: "I will go up and dwell in heaven" (II.43; OBS.19–20) has the same two verbs, in
+   the same order and person, both cognates, and in both the thought is "in the heart" (II.37; OBS.14). Obad 1:4 / Jer
+   49:16 add the eagle's nest among the stars and the god who brings it down. Gen 11:4 is a [divergence] (pride and
+   ascent, but no tower); **the "tower" of II.2 (*dimtu*) is an uncertain sign in a broken line beside a shrine of
+   Adad, not a Gen 11 parallel** (rendered `צְרִיחַ`, `מִגְדָּל` reserved).
+3. **The net of the divine judge**: choosing *bâru* = `לָכַד` (Gilgameš) makes II.47 `רשת שַׁמַשׁ תלכדך` the exact idiom
+   of Ps 35:8 (net + `לכד`; Ps 9:16, Amos 3:5). Ezekiel 17 is the closest structural parallel to the whole fable: an
+   eagle, a `צַפְצָפָה` (17:5), a broken oath (17:13–19) and the god's net (17:20; 12:13). Hos 7:12 (the net that brings
+   the birds down from the sky), Ps 139:8 and Amos 9:2–3 (no escape in heaven or earth – and the god commands the
+   serpent to bite) match "your net is the wide earth, your trap the distant heaven" (II.69–70) and the sequel (ET3).
+4. **The eagle's crime is eating**: the serpent's condition calls breaking the friendship "eating a taboo" (II.13,
+   *asakka akālu*) – the idiom of `לֹא תֹאכַל כָּל תּוֹעֵבָה` (Deut 14:3) – and the eagle breaks it by literally
+   eating. The bird's-nest law (Deut 22:6–7) has the same verb for the brooding mother (*rabiṣ* / `רֹבֶצֶת`, II.5); the
+   eagle does what the law forbids in spirit.
+5. **The serpent is the righteous one**: against Gen 3:1 (the cunning serpent among `חַיַּת הַשָּׂדֶה`), here the serpent
+   is faithful, generous ("I gave myself to the eagle"), God-fearing ("I honoured your life" = the oath, cf. Ps 15:4),
+   and its lament has the structure of a biblical individual lament (Ps 25:2, Jer 18:23, Jer 12:1, Job 16:20, Ps
+   41:10). The eagle is the one who "harbours evil against his friend" (Prov 3:29, Zech 8:17).
+6. **False echoes avoided** (rank-3 English): Foster's "tower" (II.2), "netherworld" (II.15, MA.c+6, c+9), "curse" for
+   *māmītu* (II.22), "desires" (MA.b+13), "No doubt" for *minde* "perhaps" (MA.c+5), "king of the gods" for *šar
+   ša[mê]* (MA.c+28), "you" for *nīška* (OBS.a+13), and the restoration "while his young are safe" (II.66), which
+   eBL's collation excludes. *mullû ina qāti* is never `מִלֵּא יָד`.
+
+**The ancient mind.**
+1. **Friendship as a sworn treaty under the sun-god**: two animals swear "before Šamaš the warrior" and by the earth;
+   the curses are those of state treaties – lost paths, closed passes, a roving weapon, Šamaš's trap, and (MA only)
+   being "singled out for the slaughterer" and a *gallû* demon riding on one's back. The god who sees everything is the
+   guarantor of every oath, and the broken oath itself becomes the trap (*gišparru māmīt šamaš*).
+2. **The three versions show a growing cosmos**: OB's net is "the wide pasture" around the settlement (OBS.a+20), SB's
+   "the wide earth" and "the distant heaven" (II.69–70): the shepherds' world became the universe. SB also makes the
+   hunt reciprocal (eagle and serpent alternate, II.26–33), where OB and MA have the serpent alone hunting – the
+   betrayal of a fully mutual friendship.
+3. **Intimacy and its betrayal**: MA alone describes the friendship from inside – "they befriended each other, became
+   (as) twins, partners, unburdened the troubles of their livers to each other" (MA.b+11–13). The eagle's plan comes
+   when his young have grown and left the nest (OBS.15–17).
+4. **The wise child and the deaf father**: the littlest fledgling bears Atra-ḫasīs's name ("exceedingly wise"), quotes
+   the oath word for word (II.47–50), and is not heard (II.51) – the flood hero's role in a family drama.
+5. **A parent's grief**: the serpent comes home carrying meat for his friend (II.54), finds the nest gone, weeps before
+   the sun; his lament is a legal plea ("you know, Šamaš") and a cry ("his nest is whole, mine scattered; his
+   fledglings safe, my children are not").
+6. **SB rewrote *anzillu* "abomination" as *Anzû*** (II.72 vs OBS.a+23): the eagle becomes the monstrous bird who stole
+   the Tablet of Destinies – a creature that grasped at the gods' power, as the eagle wanted to "dwell in heaven".
+
+### Open decisions (numbered; the minor ones decided)
+1. **II.25 – a tool bug, not a translation problem.** eBL's reconstruction of SB II 25 is `U₄.1.KAM@v.TA.AM₃ | inaṣṣarū |
+   b[ūla]` (a `%sb` logogram + normalized words). `tools/ebl_fetch.py` put its normalized half under line 24 as
+   "N (variant, other manuscripts)" and left line 25's N empty, so `verify ET` reports "II.25: transliteration differs
+   from the base text". The entry carries eBL's real reconstruction. Needs: a fix in `ebl_fetch.py` (keep a
+   reconstruction that starts with a non-normalized logogram) and a regenerated `Etana-SB-II/reading-edition.md`, or an
+   allow-list entry in `kings_tools.py`. (Coordinator; I did not touch the tools.)
+2. ***ḫarrānu* / *urḫu* across corpora (coordinator / user).** Renderings §10.3 has *ḫarrānu* = `דֶּרֶךְ`, *urḫu* =
+   `אֹרַח` (and the ✓ formula `לך באורח, חלוף את ההר` for *alik urḫa*); the Gilgameš and wisdom corpora have the
+   reverse (*urḫu* = `דֶּרֶךְ`, *ḫarrānu* = `אֹרַח`). The harmonization of 2026-10-21 lists *ḫarrānu* as "kept by sense",
+   but *urḫu* is not. In my lines only OBS.1 (`אל ימצא דרך`), which follows §10.3. If harmonized to Gilgameš: OBS.1 →
+   `אל ימצא אורח`, and the formula → `לך בדרך, חלוף את ההר` (ET3, II.75 …).
+   **Coordinator, 2026-10-22: harmonized to Gilgameš** (*urḫu* = `דֶּרֶךְ`, *ḫarrānu* = `אוֹרַח`, vocalized): OBS.1 changed, the formula is `לך בדרך, חלוף את ההר,`.
+3. ***bâru* = `לָכַד`** instead of §10.3's `צָד` (decided; reason above). §10.3's prose strings need updating.
+4. ***nērebu* = `מָבוֹא`**, *nērebtu* = `מְבוֹאָה`, instead of §10.3's `מַעֲבָר` (decided).
+5. **Animals** (decided): *armu* `אַקּוֹ`, *turāḫu* `יָעֵל`, *ditānu* `*תְּאוֹ*`, *sappāru* `*זֶמֶר*`. Side collision found in
+   another corpus: Enki and the World Order renders *taraḫ* (in the boat name *taraḫ abzu*) `אקו־האפסו`, while EA 182
+   and the Curse of Agade render *taraḫ* `יעל` – with this decision `אקו` belongs to *armu*; the EWO boat name could
+   become `יעל־האפסו` (creation corpus; coordinator/lead).
+6. ***šarāku* = `הֶעֱנִיק`** (OBS.a+12) = Sum. *rig₇* (EA 614 `העניק`); the Gilgameš corpus also has *qiāšu* = `הֶעֱנִיק`
+   – an existing cross-corpus collision (two Akkadian verbs), for the lead.
+7. ***nabalkutu*** "cross; turn over" = `חָצָה` for crossing a mountain (renderings §0.3) but `הִתְהַפֵּךְ עַל` for a trap
+   that springs over its prey (II.22, 48; MA.b+1) – one lemma, two senses (decided).
+8. ***rūʾu* `עָמִית` vs *râʾu* `הִתְרוֹעֵעַ`** (MA.b+11): the Hebrew verb keeps the Semitic root (= `רֵעַ`), the noun (Gilgameš)
+   does not; changing *rūʾu* to `רֵעַ` would collide with *ibru* `רֵעַ`. Kept; noted in the apparatus.
+9. **II.50 *[umalli]*** – restored, formally D preterite; rendered as §10.3's present `ימסרהו.` (decided; noted).
+10. ***lū* + *tīde*** = `אָכֵן יָדַעְתָּ` (II.68, OBS.a+19; renderings §2 "*lū* + preterite = `אָכֵן`"; Jer 18:23
+    `יָדַעְתָּ`). ET3/ET4 should keep it if the phrase recurs.
+11. **II.1 `[קורא?]`** – the gated `קרא` licensed by *nabû*; the [equivalent] to Gen 2:19–20 is marked as a cautious
+    proposal (the line is broken); the coordinator may drop it.
+
+### Proposals for the corpus renderings
+Fixed strings (exactly as written; later parts copy them). Brackets and `?` follow each copy's manuscripts.
+
+| Source | Hebrew | Tag | Notes | Lines |
+|---|---|---|---|---|
+| *ina maḫar šamaš qurādi māmīta itmû kilallān* | `לפני שַׁמַשׁ הגיבור – שבועה נשבעו שניהם.` | equivalent | Gen 21:31 `נִשְׁבְּעוּ שְׁנֵיהֶם`. *ištu …* `אחרי ששבועה נשבעו שניהם,` | II.16, II.23 |
+| *alka nīpuša rūʾūta* / *lū itbārū anāku u kâši* | `"לְכָה, נעשה עֲמִיתוּת […],` / `נהיה ידידים – אני ואתה!"` | equivalent | *alka* = `לְכָה` (also II.14 `לְכָה, נזדקף – את ההר נעלה,`) | II.8–9 |
+| *lemnētā-ma kabtassu tušamraṣ* / (II.129) *lemnētā-ma kabtatī tušamriṣ* | `(אם) רַע אַתָּה – את כְּבֵדוֹ תַּחֲלֶה,` / proposal for II.129: `רַע אַתָּה – ואת כְּבֵדִי הֶחֱלֵיתָ!` | – | §10.3 `את כבדי החלית` kept | II.12; ET3 II.129 |
+| *anzilla ša ilī asakka takkal* / (II.130) *… tākul* | `תועבת האלים – דבר אסור תאכל.` / proposal for II.130: `תועבת האלים – דבר אסור אכלת!` | equivalent | Deut 14:3 | II.13; ET3 II.130 |
+| *ša itâ ša šamaš ittiqu* | `אשר יחלוף את גבול שַׁמַשׁ –` | equivalent | as §10.3 ✓ | II.17, 19, 49 |
+| *šamaš lemniš ina qāt māḫiṣi limalli* / *umalli*; MA *šamaš lemna ana qāt māḫiṣi limalli* | `שַׁמַשׁ – ברעה – ביד המוחץ ימסרהו!` / `… ימסרהו.`; MA `שַׁמַשׁ – את הרע – ליד המוחץ ימסור!` | – | as §10.3 ✓ | II.18, 50; MA.b+6 |
+| *kakku murtappidu elīšu līšir* | `הנשק המשוטט – עליו יִישַׁר!` | cognate (*ešēru*) | `יִישַׁר` vocalized (Qal) | OBS.3, MA.b+4, II.21 |
+| *gišparru (u) māmīt šamaš libbalkitūšū-ma libārūšu* / *ibbalkitūkā-ma ibarrūnikka*; MA *māmīt šamaš libbalkissū-ma* | `הפח, שבועת שַׁמַשׁ – יתהפכו עליו, וילכדוהו!` / `הפח, שבועת שַׁמַשׁ – יתהפכו עליך, וילכדוך!`; MA `שבועת שַׁמַשׁ – תתהפך עליו,` | equivalent | *nabalkutu* `הִתְהַפֵּךְ עַל`, *bâru* `לָכַד` | II.22, II.48, MA.b+1 |
+| the other curses | OB `"יאבד לו הנתיב, אל ימצא דרך!` · `יכלא ממנו את מְבוֹאָתוֹ – ההר!`; SB `יתרחקו ממנו מבואות ההר,`; MA `ההר – את מְבוֹאָתוֹ – יסיר ממנו!` · `שַׁמַשׁ – לַשּׁוֹחֵט – את ראשו יִשָּׂא!` · `יעמיד שֵׁד־גַּלָּה רע – על גבו!"` | – | *nesû* `התרחק`; *nêʾu* D `הֵסִיר`; *rēša našû* `נָשָׂא רֹאשׁ` | OBS.1–2; II.20; MA.b+3, b+5, b+7 |
+| the hunt (SB, MA) | `רְאֵם, חמור בר – הנשר לוכד,` · `אַקּוֹאִים, צביות – הנחש לוכד,` · `*זְמָרִים*, *תְּאוֹאִים* – הנשר לוכד,` · `[בהמ]ת שַׁ[כַּן?], [נָעֵי] הקרקע – הנחש לוכד,` · `X אוכל, סר – אוכלים בניו.`; MA adds `של השדה` | – | *bâru* present `לוכד` | II.26–33; MA.b+14–20 |
+| the hunt (OB) | `רְאֵם, *זֶמֶר* – הנחש לכד,` · `נָמֵר, *בַּרְדְּלָס* – הנחש לכד,` · `הנשר אכל – אכלו בניו.` | – | preterite | OBS.8–11 |
+| growth | `בני הנשר גדלו, צמחו.` / `אחרי שבני הנשר גדלו, צמחו,` (OB `אחרי שבניו גדלו, צמחו,`) | – | *šiāḫu* `צָמַח` | II.35–36; MA.b+21; OBS.12 |
+| the plot | `הנשר – לבו רעה חשב,` / `חשב לבו רעה.` / `לאכול את אפרוחי עמיתו – את פניו שָׂם.` | equivalent | *kapādu* `חָשַׁב`, *pānī šakānu* `שָׂם פָּנִים` | II.37–39; MA.b+23 |
+| the eagle's speech | `"את בני הנחש – אֹכְלָה אני;` · `אֶעֱלֶה – ובשמים אֵשֵׁב,` · `ארד אל צמרת העץ – ואוכל תנובה."` | equivalent | Isa 14:13; OB `ואת בני הנחש – אֹכְלָה […],` · `אֶעֱלֶה – וב[…],` · `אֵשֵׁב, ו[…]` | II.41–44; OBS.18–20 |
+| the fledgling | `האפרוח הקטן, יתיר־התבונה,` / `אל הנשר, אביו – דבר דיבר:` / `"אל תאכל, אבי! רשת שַׁמַשׁ תלכדך,` | equivalent | as §10.3 ✓ (+ the warning's first line) | II.45–47, 98–99; OBS.22–23; MA.c+3–4 |
+| refusal | `לא שמע להם, לא שמע למאמר בניו.`; MA `לא אבה הנשר …` / `לא שומע למאמר בניו.` | – | §10.3 ✓; *magāru* `אָבָה` | II.51 (= 104); MA.c+10–11 |
+| the descent | `ירד ואכל את בני הנחש.` / lament `ירד ואכל את בניי!` (OB `ירד ואכל את ילדיי!`) | – | *līdānu* `יֶלֶד` | II.52, 67; OBS.a+18 |
+| the return | `בָּעֶרֶב, בתוך היום,` · `הנחש בא – בשר? נושא, את משאו.` · `בפתח קנו – את הבשר? השליך?` · `הסתכל – וקנו איננו!` · `בציפורניו – את הקרקע […]` · `מלמעלה – אבקו – השמים […].` · `הנחש *הִתְאַבֵּן*? – ובוכה.` · `לפני שַׁמַשׁ – זולגות דמעותיו.` | – | `זולגות דמעותיו` = Gilgameš's string for *illakā dimāšu* | II.53–61; OBS.a+2–a+10 |
+| the lament | `"בך בטחתי, שַׁמַשׁ הגיבור!` · `את הרוע אשר עשה לי – שַׁמַשׁ, אָכֵן יָדַעְתָּ!` · `אָמְנָם, שַׁמַשׁ – רשתך – הארץ הרחבה,` · `פַּחְךָ – השמים הרחוקים!` · `מרשתך אל יצא הנשר!` · `עושה רעה, אַנְזוּ – מחזיק רעה לרֵעֵהוּ!"` | equivalent | OB: `לנשר – את עצמי – אני הֶעֱנַקְתִּי!` · `חרדתי, ואת חַיֶּיךָ כיבדתי!` · `רעה לא החזקתי לרֵעִי!` · `הוא – קנו שלם, ופזור קני!` · `קן הנחש – לְאֵבֶל היה!` · `שלמים אפרוחיו – אינם בניי!` · `את הרוע (אשר) הלך אליי – שַׁמַשׁ, אָכֵן יָדַעְתָּ!` · `רשתך – הַנָּוֶה הרחב,` · `עושה רעה ותועבה,` · `מחזיק רעה לרֵעֵהוּ!"` | II.62–72; OBS.a+11–a+24 |
+| **for ET3** (from MA c): the second warning and the ambush | `"אל תרד! אולי – בלב הראם – הנחש רובץ!` (proposal for II.100: `"אל תרד, אבי! אולי – בלב הראם הזה – הנחש רובץ!`) · `הארץ – תתפסך!` · `ירד ועמד על הראם.` (II.105) · `מבקש את אשר לפניו ואשר אחריו` (II.107, 109; MA `פעם אחת / שָׁנָה / שִׁלֵּשׁ – מבקש …`) · `צלל אל לב הראם,` · `את רֹךְ הבשר – מבקש,` (II.82) · `אל מעי הראם –` · `אל קרבו – בבואו,` · `הנחש תפס אותו – באגפיו!` (proposal for II.111: `…, הנחש תפס אותו – בכנפיו!`) · `הוציא אותו,` | – | *libbu* `לֵב` / *qerbu* `קֶרֶב` / *karšu* `מֵעַיִם` kept apart; *ina muḫḫi* `עַל`; *ṣabātu* `תָּפַס` | MA.c+5–c+25 → SB II.100–117 |
+
+Words (one Hebrew each; grep-checked in all corpora):
+
+| Source | Hebrew | Tag | Notes | Lines |
+|---|---|---|---|---|
+| *bâru* | `לָכַד` (present `לוכד`) | – | Gilgameš; replaces §10.3 `צָד` | II.22–48; MA.b+14–19; OBS.8, 10 |
+| *rūʾūtu*; *rūʾu*; *itbāru*; *ibru*; *râʾu* Gt | `עֲמִיתוּת`; `עָמִית`; `יְדִיד`; `רֵעַ` (vocalized); `הִתְרוֹעֵעַ` | cognate (*râʾu*) | §10.3; MA.b+11 | II.8–9, 39, 72; OBS.a+14, a+24; MA.b+11 |
+| *māmītu*; *tamû*; *nīšu* (oath) | `שְׁבוּעָה`; `נִשְׁבַּע`; `חַיִּים` | equivalent | `נִשָּׁבַע` (cohortative) vocalized | II.15–23; OBS.4, a+13 |
+| *itû*; *etēqu*; *nērebu*; *nērebtu*; *ṭūdu*; *ḫarrānu*; *nesû* | `גְּבוּל`; `חָלַף`; `מָבוֹא`; `מְבוֹאָה`; `נָתִיב`; `אֹרַח` (open decision 2: harmonized to Gilgameš by the coordinator); `הִתְרַחֵק` | equivalent | | II.17–20; OBS.1–2; MA.b+3 |
+| *kakku*; *murtappidu*; *ešēru* | `נֶשֶׁק`; `מְשׁוֹטֵט`; `יִישַׁר` | cognate (*ešēru*) | | II.21 |
+| *gišparru*; *šētu*; *nabalkutu* (of a trap) | `פַּח` (`פַּחְךָ` vocalized); `רֶשֶׁת`; `הִתְהַפֵּךְ עַל` | equivalent | | II.22, 47–48, 69–71 |
+| *ṣarbatu*; *appu* (of a tree); *išdu*; *ṣillu*; *parakku*; *dimtu* I / II | `צַפְצָפָה`; `צַמֶּרֶת`; `יְסוֹד`; `צֵל`; `כֵּס`; `צְרִיחַ` / `דִּמְעָה` | equivalent / cognate (*ṣillu*) | *išdu* = Sum. *suḫuš* `יסוד` (Agade) | II.2–5, 44, 61; MA.b+8–10 |
+| animals | *rīmu* `רְאֵם`, *serrēmu* `חמור בר`, *armu* `אַקּוֹ`, *ṣabītu* `צְבִיָּה`, *sappāru* `*זֶמֶר*`, *ditānu* `*תְּאוֹ*`, *turāḫu* `יָעֵל`, *nimru* `נָמֵר`, *mindinu* `*בַּרְדְּלָס*`, *būlu* `בְּהֵמָה`, *nammaštû* `הַנָּע` (`נָעֵי`) | cognate (*rīmu*, *nimru*) | plurals `אַקּוֹאִים`, `*זְמָרִים*`, `*תְּאוֹאִים*`, `יְעֵלִים` vocalized | II.26–32; OBS.8, 10; MA.b+15–19 |
+| *watmu*; *līdānu*; *māru* | `אֶפְרוֹחַ`; `יֶלֶד`; `בֵּן` | equivalent | `גּוֹזָל` reserved | |
+| *kapādu*; *lemuttu* / *lumnu* / *lemnu*; *ēpišu*; *mukillu*; *kullu* D | `חָשַׁב`; `רָעָה` / `רֹעַ` / `רַע`; `עוֹשֶׂה`; `מַחֲזִיק`; `הֶחֱזִיק` | – | | II.37–38, 68, 72; OBS.a+14, a+23–24 |
+| *anzillu*; *asakku*; *Anzû* | `תּוֹעֵבָה`; `דבר אסור`; `אַנְזוּ` | equivalent | | II.13, 72; OBS.a+23 |
+| *takālu*; *adāru*; *kabātu* D; *šarāku*; *ramānu* | `בָּטַח`; `חָרַד`; `כִּבֵּד`; `הֶעֱנִיק` (open decision 6); `עַצְמִי` | cognate (*kabātu*) | | II.62; OBS.a+11–13 |
+| *šalāmu*; *sapāḫu*; *damāmiš*; *ewû*; *laššu* | `שָׁלֵם`; `פָּזוּר`; `לְאֵבֶל`; `הָיָה לְ`; `אֵינֶנּוּ` / `אֵינָם` | – | `פּוּץ`, `קִינָה` reserved | II.56, 66; OBS.a+6, a+15–17 |
+| *qerbetu*; *rapšu*; *rūqu*; *abarša*; *lū* + *tīde* | `נָוֶה` (Gilgameš `נְאוֹת`); `רָחָב`; `רָחוֹק`; `אָמְנָם`; `אָכֵן יָדַעְתָּ` | – | | II.68–70; OBS.a+19–21 |
+| *ukultu*; *šiāḫu*; *inbu*; *eṣēlu*; *tarbuʾu*; *ṣupru*; *līliātu*; *akāšu* | `אָכְלָה` [cognate]; `צָמַח`; `תְּנוּבָה`; `*הִתְאַבֵּן*`; `אָבָק`; `צִפֹּרֶן`; `עֶרֶב`; `צָעַד` | – | `צעד` = Gilgameš OB II 144 | |
+| MA: *šāgišu*; *gallû*; *titʾû*; *šutattupu*; *nazmātu*; *pašāru* Gt; *rašû*; *minde*; *tūrtu*; *tarāṣu*; *gappu*; *magāru*; *ittiltu* / *šanû* / *šalāšu*; *šalû*; *nurbu*; *karšu*; *qerbu*; *ēribu*; *dayyānu* / *dīnu*; *kasû* D; *naprušu* Ntn | `שׁוֹחֵט`; `שֵׁד־גַּלָּה`; `הָיָה לִתְאוֹמִים`; `נַעֲשׂוּ חֲבֵרִים`; `צָרוֹת`; `פָּשַׁר זה לזה`; `קָנָה`; `אוּלַי`; `תְּשׁוּבָה`; `נָטָה`; `אֲגַף`; `אָבָה`; `פַּעַם אַחַת` / `שָׁנָה` / `שִׁלֵּשׁ`; `צָלַל`; `רֹךְ`; `מֵעַיִם`; `קֶרֶב`; `הַבָּא`; `דַּיָּן` / `דִּין`; `כִּפֵּת`; `הִתְעוֹפֵף` | cognate (*šanû*, *šalāšu*, *qerbu*, *dayyānu*) | *naprušu* G = `עָף` for ET4 (gated) | MA.b+5–c+31 |
