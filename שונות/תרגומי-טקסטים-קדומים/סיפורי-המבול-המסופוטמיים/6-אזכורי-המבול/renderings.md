@@ -20,6 +20,7 @@ Words used in this project and not (yet) in the shared `../renderings.md`. The s
 | su₃ / ba₉ "distant" | רָחוֹק / מְרֻחָק | | Two verbs, two words. | Šuruppag 1–3 |
 | ĝeštug₂ tuku ★ | נָבוֹן | `בַּעַל אֹזֶן` | ĝeštug₂ = *uznu/ḫasīsu*; root of Atra-ḫasīs. | Šuruppag 4–5 |
 | na … de₅ / na de₅ | נָתַן עֵצָה / עֵצָה | `הוֹרָה`, `מוּסָר` | | Šuruppag 6–13 |
+| na ga-de₅ na de₅-ĝu₁₀ ḫe₂-dab₅ | אֶתֵּן עֵצָה – עֲצָתִי תֵּאָחֵז! (2026-10-23 harmonization, was `תילקח`) | `תילקח` | | Šuruppag 9 (= the wisdom corpus, Šuruppag 9, 79, 149) |
 | numun nam-lu₂-ulu₃ ★ | זֶרַע הָאֱנוֹשׁוּת | | [equivalent] ז:ג | Death F 31, 124; Lagaš 4 |
 | nam-lu₂-ulu₃ | הָאֱנוֹשׁוּת | | = *awīlūtu* (shared) | passim |
 | uĝ₃ saĝ gig₂-ga / *ṣalmat qaqqadi* | הָעָם שְׁחוֹר הָרֹאשׁ / שְׁחוֹרֵי הָרֹאשׁ | | | Lagaš 5; Dyn. Chr. BM 35572 10′–11′ |
@@ -70,3 +71,5 @@ Words used in this project and not (yet) in the shared `../renderings.md`. The s
 | *ḫubūru* (Akk. of Sum. mu₇-mu₇) | הֲמֻלָּה | | shared | Dyn. Chr. K 11261 18′ |
 
 2026-10-21 harmonization (the lead's cross-corpus decisions): *uqnû* / ZA.GIN₃ = `סַפִּיר` (was `לָזוּרִיט`); *me* = `הַ־מֶה` (was `מֶה`).
+
+2026-10-23 harmonization (`harmonization--2026-10-23.md` row 13): *dab₅* in the advice formula = `אָחַז`; line 9 (the Šuruppag copy) `עצתי תילקח` → `עצתי תיאחז`, identical to the wisdom corpus's Šuruppag 9, 79, 149.

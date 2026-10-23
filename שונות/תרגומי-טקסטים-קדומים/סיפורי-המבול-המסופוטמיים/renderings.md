@@ -197,6 +197,8 @@ Formulas:
 - Inana = `אִינַנָּה`, always vocalized (already so); *sukkallu* / *šukkallu* = `וְזִיר` (already so in Atra-ḫasīs).
 - No occurrences in this corpus: *šembi*, *šu-ur₂-men* / *šurmēnu*, *ra-gaba*, *šudu₃* / *sizkur₂* / *a-ra-zu*, *mušen* (Berossus's Greek ὄρνεα keeps `עוֹפוֹת`), *ur₄*, *guru₇* / *karû* "grain heap", *en₃-du* (Atr. III viii 15 *zamāru* keeps its cognate `זֶמֶר`), *kabattu*.
 
+2026-10-23 harmonization (`harmonization--2026-10-23.md`): the advice formula *na ga-de₅ na de₅-ĝu₁₀ ḫe₂-dab₅* = `אתן עצה – עצתי תיאחז!` (row 13: one formula, one Hebrew; *dab₅* = `אחז`); changed lines: the flood references (project 6), Šuruppag 9 `עצתי תילקח` → `עצתי תיאחז` (kept identical to the wisdom corpus's Šuruppag 9). No other row of the table touches this corpus's files in this pass (Atra-ḫasīs's *naḫbalu*, row 3, comes later).
+
 
 ## 4. Register reminders specific to the corpus
 - Sumerian and Greek texts use the same Hebrew for the same concept: the Sumerian *a-ma-ru* = `מַבּוּל`, the boat = `סְפִינָה`, and so on. Berossus's Greek πλοῖον = `סְפִינָה`, while σκάφος and λάρναξ get their own rendering with a note.
