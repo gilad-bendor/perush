@@ -158,7 +158,7 @@ the Sumerian recurs):
 - ***kur***: before a country name `ארץ` (`ארץ אַנְשָׁן`, `ארץ דִּלְמוּן`, `ארץ מַרְטוּ`, `אֶרֶץ אַכַּד` for *ki-uri*);
   otherwise `הר`; *kur-kur* `הארצות`; *ḫur-saĝ* `הררים`, *ḫur-saĝ zubi* `הַרְרֵי זוּבִּי` (★ Zubi).
 - **People:** *nam-lu₂-ulu₃* `האנושות`, + a city `אנשי X`; *lu₂-u₁₈-lu* `האדם`; *uĝ₃* `העם`; *erin₂* `החיל`.
-- **Verbs:** *pa e₃ ak* `הזהיר`; *galam* `בכשרון … עיבד`; *si sa₂* `יישר`; *sikil* `זיכה`; *mu₂* `הצמיח`; *de₆*
+- **Verbs:** *pa e₃ ak* `הזהיר`; *galam* `בתחכום … עיבד` (2026-10-23 harmonization, was `בכשרון`); *si sa₂* `יישר`; *sikil* `זיכה`; *mu₂* `הצמיח`; *de₆*
   `נשא`; *tum₂* `הוביל`; *tum₃* `הביא`; *ed₃* `עלה`/`ירד`; *pad₃* `מצא`; *zig₃* `קם`; *gul* `הרס`; *dal* (caus.)
   `העיף`; *saĝ keše₂* `ראש קשר`; *u₆ e* `התפעל`; *igi bar* `הביט`; *ĝizzal ak* `קשב עשה`; *na de₅* `עצה נתן`;
   *dub₃ ĝar* `ברך שׂם`; *gu₂ ĝiš ĝar* `צוואר לעץ שׂם`.
@@ -215,7 +215,7 @@ Ensuḫkešdana) and for the other corpora:
   Hebrew (*sar* only).
 - **Nouns:** *tug₂* `בגד`; *saĝ-ki* `מצח`; *eš₂-gar₃* `מכסה`; *ĝiškim* `אוֹת` (vocalized); *a-ma-ru* `מבול`; *a
   nam-til₃* `מֵי החיים`; *lil₂* `מַשַּׁב`; *ug* `לַיִשׁ`; *me-lem₄* `זוהר`; *um-ma* `הזקנה`; *ki-sikil* `עלמה`; *barag*
-  (dais) `כס`; *aga*, *men* `כתר`; *en₃-du* `זמרה`; *gig* `חיטה`; *gu₂* (pulse) `קטנית`; *eme₅* `אתון`; *dur₃* `עַיִר`
+  (dais) `דוכן` (2026-10-23 harmonization, was `כס`); *aga*, *men* `כתר`; *en₃-du* `זמרה`; *gig* `חיטה`; *gu₂* (pulse) `קטנית`; *eme₅* `אתון`; *dur₃* `עַיִר`
   (vocalized); *ud₅* `עז`; *peš₃* `תאנה`; *ĝeštin* `גפן`; *ur igi-ĝal₂-la* `אוּר־אִיגִיגַלָּה` (name, open).
 - **Verbs:** *šu … dag* + object `שמטה מידה`; *šu taka₄* `שלח`; *šu ti* `קיבל`; *igi du₈* `ראה` (≠ *igi bar*
   `הביט`); *dub₂* `נפץ`; *tar* `כרת`; *ur₃* `גרף`; *sud* (water) `הזה`; *gu₂ ĝar* "gather" `יחד שָׂם`; *ĝiš ĝal₂*
@@ -251,6 +251,8 @@ reserved); *nukaribbūtu* `גַּנָּנוּת`; *šarrūta epēšu* `מלכו�
 - *sizkur₂* = `תְּפִלָּה`, *a-ra-zu* = `תַּחֲנוּן` (as before: 250); *šudu₃* not in these texts.
 - *mušen* = `צִפּוֹר` (as before: 116, 188, 507; SB II.5 *iṣṣūru*); *me* = `הַ־מֶה` and Inana = `אִינַנָּה` (as before).
 - Not in these texts: *ur₄* "gather" (570 *ur₄-[X]* is a broken name), *kabattu*, *sukkallu* / *sukkal*.
+
+2026-10-23 harmonization (`harmonization--2026-10-23.md`; Enmerkar only – Etana's rows are applied later): *barag* "dais" → `דוכן` (row 5), the formula *na ga-e-de₅ na de₅-ĝu₁₀ ḫe₂-e-dab₅* → `עצה אתן לך – עצתי תיאחז!` (row 13), *galam* → `בתחכום` (row 15); changed lines: EA 498 `על הכס` → `על הדוכן`, 594 `את הכס` → `את הדוכן` (not in the table: the same *barag*); 69, 626 `את עצתי תקבל` → `עצתי תיאחז`; 39, 46 `בכשרון לי תעבד` → `בתחכום לי תעבד`, 263 `בכשרון לך אעבד` → `בתחכום לך אעבד`.
 
 ## 10. Etana (project 3, `3-אגדת-אתנה/`; Round 3, run 2, 2026-10-21) – fixed before the first part
 Fixed by the coordinator from a reading of all six eBL chapters (585 lines: OB Morgan, OB Susa, MA Aššur, SB I–III)
@@ -420,6 +422,7 @@ Full list: `3-אגדת-אתנה/project.md` ("Part ET4"). For a later Akkadian t
 
 
 ## Changelog
+- 2026-10-23: the 2026-10-23 harmonization applied to Enmerkar (end of §9.6).
 - 2026-10-21: written before the first part, from the temple, lament, creation, flood, Gilgameš, law and wisdom
   corpora and a reading of both transliterations (the formula survey of §3; the echo-control list of §4).
 - 2026-10-21: §9.1–§9.5 merged after each part (EA1–EA4, SB); one quotation corrected (Judg 11:12 `מַה`).
