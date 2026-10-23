@@ -492,3 +492,11 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
   *annaku* `אֲנָךְ` (open: Amos 7:7's meaning is disputed); *nīš ili* `נֶפֶשׁ אֵל`.
 - **For the lead's next harmonization:** *nissatu* `דַּאֲבוֹן` here (V gave `יָגוֹן` to *ašuštu*) against *nissatu* `יגון`
   in the wisdom corpus and Gilgameš; *gamāru* `כִּלָּה` (prophecy) / `גָּמַר` (Gilgameš, here).
+
+### 10.8 Tablet VIII (2026-10-23)
+- **Accepted:** the A+ / B+ fragments explained in the header and intro (eBL numbers each sequence from its own start);
+  *qiddatu* / *māḫirtu* `מוֹרַד הַזֶּרֶם` / `מַעֲלֵה הַזֶּרֶם`; *tebû* "depart" `קָם`; *rakāsu riksa* `קָשַׁר קֶשֶׁר`; *šalû*
+  "dive" `צָלַל`; *nikiltu* `מְחֻכָּמוֹת` (the cognate `נֵכֶל` in the note); *puluḫtu* `פַּחַד`; *ḫurbāšu* `צְמַרְמֹרֶת`; the
+  witch's participles of A+38–A+45 each its own verb (*sekēru* `סָכַר` [cognate], *ḫabālu* `חִבֵּל` [cognate]); *pagru*
+  (a corpse) `פֶּגֶר` [cognate], *erû* `נֶשֶׁר`, *zību* `עַיִט` (Gilgameš), *baṣāru* `קָרַע`; *ṣillu* `צֵל` also for the
+  reflection in the bowl (RT 175'–177'); *upīšū* `מַעֲבָדִים`; *kušāpu* `כּוּשָׁפּוּ`; KIMIN written out in full.

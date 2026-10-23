@@ -1150,6 +1150,127 @@ Files: `annotated-VII.rtl.md`, `translation--intro-VII.rtl.md`, generated `trans
 - Parentheses in eBL's N (words in only some copies) need one convention per corpus: here they are mirrored as `( )`
   in the Hebrew and named in the apparatus.
 
+## Tablet VIII
+
+### Scope
+All 133 eBL labels of Tablet VIII: 1–63 with 45a, then eBL's two sequences of fragments, A+1–A+46 and B+1–B+22 with
+B+16a (placed after 63; their exact position and the gaps between them are unknown – said in the file header and the
+intro). Eleven sections: five incantations in 1–63 (1–16, 17–27, 28–45a, 46–53, 54–63), fragment A (A+1–A+25), two
+incantations (A+26–A+37, A+38–A+46), fragment B (B+1–B+8), the last incantation (B+9–B+21) and the colophon (B+22).
+Mostly Nineveh copies (NinNA1–4, NinNB1), with Aššur (AššNASch1), Kalḫu (KalNAPar1, a parallel text counted as a
+copy), Assyria (AssaNA1) and Babylon (BabLB1–2). 57–63 and A+7–A+19 are very fragmentary.
+Files: `annotated-VIII.rtl.md`, `translation--intro-VIII.rtl.md`, generated `translation-VIII.rtl.md`.
+
+### Sources consulted
+- eBL `Mag/1/1` VIII (`../../sources/eBL/Maqlu-VIII/`): N, T, notes (Schwemer 2022 on 1–11), the ATF of every
+  bracketed line; `manuscripts.md`. `pars VIII`, `lem`, `norm`, `kol_tools.py lookup`.
+- renderings §0–§10.7; the shared lines of I 4, I 9, I 14, I 35, I 134a, II 58, II 168, II 179, III 55–60, III 67–68,
+  III 174, V 10, V 52–53, V 69, VI 22, VI 45–46b, VI 52–53, VI 98, VII 21, VII 79, VII 147, VII 162, VII 178.
+- Earlier corpora: *zību* `עיט`, *erû* `נשר` (Gilgameš, Etana); *ḫurbāšu* `צמרמורת` (netherworld); *unūtu* `כלים`,
+  *nešmû* `שמיעה`, *iḫzu* `לימוד`, *naparšudu* Ntn `נד`, *dalāḫu* `דלח` (wisdom, Gilgameš); *nikiltu* `מחוכמות`
+  (creation); *tabāku* `יצק` (prophecy); *edēšu* `התחדש` (Gilgameš).
+- The Bible: every verse printed before quoting (about 30).
+
+### Decisions
+- **Shared lines copied, changing only what the Akkadian changes:** 1 = VII 178 (brackets by VIII's copies); 46–49 =
+  VI 45–46b with `אחרי` for *ultu* and Uru `אוּרוּ` for Ningirsu; 45a = I 134a; A+20–A+25 recast III 55–60 in the
+  stative (`לכודה את, מוחלפת את, [מהופכת את], הֵמִירוּ אותך … [את קשרך ישבור] … יַפְגִּיעַ בָּךְ [עַצְמֵךְ]`); A+37 after
+  II 168 / 179 (`[כמי] רחיצה – את הביב [ימלאו]`); B+8 and B+20–21 the formula of V 10 without *u* before Marduk
+  (`שַׁמַשׁ, מרדוך`); 28 `ביום ש` as VI 52; 43–45 after I 35, VI 68 (`תיטול`) and VII 21 (`תוביל הרוח`); 52–53 the
+  wind, storm and chaff of 13–14 and V 52–53.
+- **1–16:** *tebû* `קם` for the departing beer and herbs (5–6); *arqu* `ירקות`; *abattu* `אבן`; *aḫullâ* `הגדה
+  שמנגד`; *qiddatu* / *māḫirtu* `מורד הזרם` / `מעלה הזרם` (the homonym of *māḫirtu* "receiver", VII 79, noted).
+- **17–27:** *pāširtu* `מַתִּירָה`; *iqbû tuqunta* `אמר מלחמה`; *rakāsu riksa* `קשר קשר` (2 Kgs 15:30's conspiracy
+  idiom as [divergence], not a cognate).
+- **28–45:** *šalû* "dive" `צלל`; *iḫzu* `לימוד`, *nēmequ* `חכמה`, *nikiltu* `מחוכמות` (cognate of `נֵכֶל`, noted);
+  *lapānu* `*אבדן*` (italic, after Abusch; lit. "poverty"); *eṭû* D `החשיך`; *saḫāpu* Š `חִפָּה`; *tēšû* `מבוכה`,
+  *raʾību* `חלחלה`, *ḫurbāšu* `צמרמורת`, *puluḫtu* `פחד` (`אימה` is *ḫayyattu*), *atāru* `יתר`.
+- **54–56:** *nakāru* `התנכר` [cognate] (Gen 42:7).
+- **A+:** *tākaltu* `קֵבָה` (Num 25:8), *ušultu* `וריד`, *ḫašû* "lungs" `ריאה`, *tarāku* `חבט`, *unūtu* `כלים`,
+  *dalāḫu* `דלח` [cognate]; *šalû* "fling" `הטיח`; *kušāpu* `כּוּשָׁפּוּ` (transliterated: the root stays visible, `כשפים`
+  stays *kišpū*'s); the participles of A+38–A+45 each with its own verb: *muribbatu* `מְגַדֶּלֶת`, *tābikat* `יוצקת`,
+  *ḫāmišat* `קוטמת`, *ṣābitat* `אוחזת`, *muterrat* `משיבה`, *sēkirat* `סוכרת` [cognate], *sākikat* `אוטמת`, *ḫābilat*
+  `מְחַבֶּלֶת` [cognate], *šāgilat* `חומסת` (a possible cognate `שגל` noted, not used).
+- **B+1–B+8:** *pagru* (corpse) `פֶּגֶר` [cognate], *erû* `נֶשֶׁר`, *zību* `עַיִט` (as Gilgameš), *nadāru* `השתולל`,
+  *baṣāru* D `קרע`.
+- **B+9–B+21:** §2.3's self-words (*ṣillu* `צֵל`, *bāštu* `גאווה`, *lamassu* `אֵלַת־המגן`, *gattu* `קומה`, *padattu*
+  `גֵּו`, *dūtu* `און`); *eddeššû* `המתחדש` [cognate `חדש`]; *ē tamḫur* `אל תקבל` (×10, the KIMIN of NinNA1 written
+  out); *upīšū* `מַעֲבָדִים` (Job 34:25; §2.2 left it to the translator: `מעשה` is *ipšu*, `פעולה` *epištu*, `כשף`
+  gated); *šaggaštu* `שחיטה` (`רצח` is *nērtu*); *lamādu* `יִלְמַד` ("know", I 14).
+- **B+22:** `הלוח השמיני של מַקְלוּ – שָׁלֵם.` (§6).
+
+### Open decisions for the user
+- *upīšū* `מַעֲבָדִים` (B+13, B+17) – a rare word; alternatives `תחבולות` (but the root חבל is *ḫabālu*) or a
+  transliteration.
+- *šāgilat* (A+45): `חומסת` by sense, or the possible cognate `שוגלת`.
+- *lapānu* (34) `*אבדן*` after Abusch, or the dictionary's "poverty" (`דלות`).
+- *nikiltu* (34) `מחוכמות` (creation corpus) against the cognate `נֵכֶל`, which is pejorative in Hebrew.
+- B+9 *ṣillu* `צֵל`: RT 175'–177' shows it is the patient's reflection in a bowl of water; Hebrew `צֵל` keeps only
+  "shadow" (the note explains) – `בבואה` would be clearer but breaks the lemma's one rendering.
+
+### Progress log
+- 2026-10-23: renderings §10.7 read; `pars VIII`, `lem VIII`, `incipits` checked. Drafted and saved in two parts (1–63;
+  A+1–B+22), `fill` + `verify VIII` + `check_bible_quotes.py` after each. The checker caught a quote missing its
+  conjunction (2 Kgs 9:22 `וּכְשָׁפֶיהָ`) and Ps 1:4's maqaf; fixed.
+- Pass (a) fidelity: brackets against the ATF (1, 2, 5, 7, 11, 12, 27, 28, 32–35, 44–48, A+2, A+20–A+25, A+37–A+40,
+  B+3–B+4, B+12–B+14 checked one by one; KalNAPar1 and AššNASch1 counted as copies); 8 `(את) אשר` for a first `(מ)אשר`.
+- Pass (b) consistency: the shared lines above copied character for character where the Akkadian is the same;
+  first-occurrence vocalization (Ea at 34, Marduk at A+22); the fragment notes name their manuscripts.
+- Pass (c) Hebrew: `translation-VIII.rtl.md` read through; two footnotes (B+4 Gen 15:11, B+7 the Jezebel contact).
+- Final: `verify VIII --strict` – no problems, no repeated-line differences; `check_bible_quotes.py` on the annotated
+  file, the intro, `translation-VIII.rtl.md`, `translation.rtl.md` and `project.md` – 0 problems; `build` exits 0.
+  `build_parallels_index.py` not run.
+
+### The text on its own terms
+- **Waiting for the sun** (1–3): the night's vigil ends with the head "raised" at sunrise.
+- **The witch's kitchen undone** (4–6): beer, herbs and pebble of her potions "rise and depart" at dawn.
+- **The river decides** (10–16): her witchcraft drifts downstream, he goes upstream – the river as judge and carrier.
+- **Heart and hand** (22–25): the two sources of sorcery, the intention ("the heart that spoke war") and the act ("the
+  hand that tied the knot").
+- **Words that do** (34): the sages "speak" her destruction by Ea's art – the decree is the deed.
+- **Her own fear on her** (37–38): the River casts on her the fear she cast.
+- **Before and after work** (46): the *alāla* incantation of VI returns with "after" for "before".
+- **The witch's body as target** (A+1–A+4): stomach, veins, lungs, innards – struck one by one.
+- **The witch's portrait in participles** (A+38–A+45): she seizes the forehead, turns the eyes, blocks the hearing,
+  wrongs young men, assaults young women – witchcraft as an attack on the senses and on the young.
+- **No burial** (B+3–B+7): the worst curse – Ereškigal refuses her, birds and dogs take her body.
+- **A man and his reflection** (B+9–B+21): the last incantation of the series is spoken to the patient's own face in a
+  bowl of water (RT 175'–177'): "you are mine and I am yours" – what belongs to him alone, no witch can take.
+- **Complete** (B+22): the series ends with "complete", after a night of burning and a morning of washing.
+
+### Key parallels
+- 2 Kgs 9:36 `יֹאכְלוּ הַכְּלָבִים אֶת בְּשַׂר אִיזָבֶל`, 9:22 `וּכְשָׁפֶיהָ הָרַבִּים`, 9:35, 1 Kgs 21:23 – dog and bitch
+  tear the witch's flesh (B+6–B+7) [equivalent]: the strongest Jezebel contact of Maqlû.
+- Gen 15:11 `וַיֵּרֶד הָעַיִט עַל הַפְּגָרִים` – eagle and vulture on the corpse (B+4) [cognate *pagru*, equivalent
+  *zību*]; Deut 28:26; Isa 14:19–20 (the unburied king, B+3).
+- Song 2:16 `דּוֹדִי לִי וַאֲנִי לוֹ` – "you are mine and I am yours" (B+18) [divergence: lovers there, a man and his
+  shadow here]; Num 14:9 `סָר צִלָּם` (B+9) [cognate].
+- Ps 58:5 `כְּמוֹ-פֶתֶן חֵרֵשׁ יַאְטֵם אָזְנוֹ` and Isa 33:15 – shutting the ear (A+44).
+- Ps 130:5–6 – waiting for the morning (1) [cognate *qu''û*].
+- Gen 42:7 `וַיִּתְנַכֵּר` – *nakāru* (55) [cognate]; Ezek 32:2 `וַתִּדְלַח` – *dalāḫu* (A+3) [cognate].
+- Isa 66:4 `וּמְגוּרֹתָם אָבִיא לָהֶם` – her own fear on her (38); Num 25:8 `אֶל קֳבָתָהּ` (A+1); Ps 1:4 – chaff (53).
+
+### Lines shared with other tablets
+- Copied: 1 = VII 178; 45a = I 134a; 46–49 ≈ VI 45–46b; A+23–A+25 ≈ III 59–60; A+37 ≈ II 168 / 179; B+8, B+20–21 ≈
+  V 10 / VII 169. Echoes: 12 ≈ III 174 = VI 93 (`ב־` for `כ־`); 28 ≈ VI 52; 39 ≈ VII 162; 42 ≈ III 67–68; 43 ≈ I 35;
+  44 ≈ VI 68; 45 ≈ VII 21; 52–53 ≈ V 52–53.
+- **For the Ritual Tablet:** RT 160' (= 17 with *mīs qātī*), 161' (= 28), 162' (= 46), 165' (= 54), 169' (= A+26), 170'
+  (= A+38) and 175' (= B+9) quote these incipits; their Hebrew is set here.
+
+### Proposals for the shared renderings
+- §2.2 / §2.4: *upīšū* `מַעֲבָדִים`; *kušāpu* `כּוּשָׁפּוּ`; *muribbatu* `מְגַדֶּלֶת`; *šalû* "fling" `הטיח`, "dive" `צלל`;
+  *tarāku* `חבט`; *dalāḫu* `דלח` [cognate]; *baṣāru* D `קרע`; *nadāru* `השתולל`; *ḫamāšu* `קטם`; *sakāku* `אטם`;
+  *šagālu* `חמס`; *nakāru* `התנכר` [cognate]; *ṣarāḫu* "shine" `הבהיק`; *atāru* `יתר`.
+- §4: *pagru* (corpse) `פֶּגֶר`; *zību* `עַיִט`; *tākaltu* `קֵבָה`; *ušultu* `וריד`; *ḫašû* "lungs" `ריאה` (against the
+  plant `חַשּׁוּ`); *unūtu* `כלים`; *qablu* `מותניים`; *aḫullâ* `הגדה שמנגד`; *qiddatu* / *māḫirtu* `מורד` / `מעלה הזרם`.
+- §3 / the evils: *puluḫtu* `פחד`; *ḫurbāšu* `צמרמורת`; *tēšû* `מבוכה`; *raʾību* `חלחלה`; *šaggaštu* `שחיטה`.
+
+### Lessons for the guidelines
+- A fragment sequence (A+, B+) needs its own statement in the header and the intro: what the numbers mean and that
+  the order is eBL's conjecture.
+- Lines shared with an earlier tablet in another tense or stem (III 55–60 → VIII A+20–A+25) are best copied word by
+  word and changed only in the grammar, so that the reader sees the same "reversal" said twice.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
@@ -1690,3 +1811,31 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | 173 | [m]û gummirāni rašubbatkunu | מים, גִּמְרוּ לי את נוֹרָאוּתְכֶם! | `יְהוָה יִגְמֹר בַּעֲדִי` (תהלים קלח:ח) | cognate | "להשלים (פעולה) למען מישהו". |
 | 178 | EN₂ adi tappuha uqâka bēlī šamaš | קסם. עד אשר זרחת – קיוויתי לך, אדוני שַׁמַשׁ. | `קִוִּיתִי יְהוָה קִוְּתָה נַפְשִׁי` (תהלים קל:ה) | cognate | *qu''û* = `קִוָּה` |
 | 178 | EN₂ adi tappuha uqâka bēlī šamaš | קסם. עד אשר זרחת – קיוויתי לך, אדוני שַׁמַשׁ. | `נַפְשִׁי לַאדֹנָי מִשֹּׁמְרִים לַבֹּקֶר` (תהלים קל:ו) | cognate | **המחכה לבוקר**: גם כאן הנפגע חיכה כל הלילה לזריחה. |
+
+### Parallels index (VIII)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 1 | [E]N₂ adi tappuha [uq]âka bēlī šamaš | קסם. עד אשר זרחת – [קיוויתי] לך, אדוני שַׁמַשׁ. | `קִוִּיתִי יְהוָה קִוְּתָה נַפְשִׁי` (תהלים קל:ה) | cognate | *qu''û* = `קִוָּה` |
+| 1 | [E]N₂ adi tappuha [uq]âka bēlī šamaš | קסם. עד אשר זרחת – [קיוויתי] לך, אדוני שַׁמַשׁ. | `נַפְשִׁי לַאדֹנָי מִשֹּׁמְרִים לַבֹּקֶר` (תהלים קל:ו) | cognate | המחכה לבוקר כל הלילה. |
+| 23 | ana ritti ša irkusu riksa | אל הכף אשר קשרה קשר. | `וַיִּקְשָׁר קֶשֶׁר` (מלכים ב טו:ל) | divergence | **"קשר קשר"**: בעברית הצירוף הוא "קשירת קשר" של מורדים; כאן הוא קשר של ממש – הקשר המאגי של המכשפה, שגם הוא מזימה סודית נגד אדם. השורשים אינם קרובים (*rks* / `קשר`). |
+| 38 | [i]d puluhtaša iddâ elīša | הנהר השליך את פחדה עליה. | `וּמְגוּרֹתָם אָבִיא לָהֶם` (ישעיהו סו:ד) | equivalent | **הפחד חוזר על בעליו**: מה שהמכשפה הטילה על הנפגע – מוטל עליה. |
+| 53 | kišpūša lū pû [l]ittap(a)raššadū elīš[a] | כשפיה – מוץ יהיו, ינודו וינודו עליה! | `כַּמֹּץ אֲשֶׁר-תִּדְּפֶנּוּ רוּחַ` (תהלים א:ד) | equivalent | **המוץ ברוח**, כמו V 53. |
+| 55 | kaššāptu nakratanni | המכשפה מתנכרת לי, | `וַיִּתְנַכֵּר אֲלֵיהֶם` (בראשית מב:ז) | cognate | *nakāru* "להיות עוין, זר" = `התנכר` |
+| 55 | kaššāptu nakratanni | המכשפה מתנכרת לי, | `וַיִּתְנַכֵּר אֲלֵיהֶם` (בראשית מב:ז) | cognate | (קורפוס הקינות: *kur₂* / *nakru* = `נָכְרִי`). |
+| A+1 | [ ... ] tākaltaki amha[ṣ] | […] את קֵבָתֵךְ מחצתי, | `וְאֶת הָאִשָּׁה אֶל קֳבָתָהּ` (במדבר כה:ח) | equivalent | **המכה בבטן האשה**: פנחס דוקר את המדיינית "אל קבתה"; כאן הנפגע מוחץ את קיבת המכשפה. |
+| A+3 | unâti ša libbīki kalîšina adlu[h] | את כלי לבך כולם דָּלַחְתִּי, | `וַתִּדְלַח מַיִם בְּרַגְלֶיךָ` (יחזקאל לב:ב) | cognate | *dalāḫu* "לעכור" = `דלח` |
+| A+3 | unâti ša libbīki kalîšina adlu[h] | את כלי לבך כולם דָּלַחְתִּי, | `וַתִּדְלַח מַיִם בְּרַגְלֶיךָ` (יחזקאל לב:ב) | cognate |  |
+| A+26 | EN₂ pû idbub lemnāti | קסם. הפה דיבר רעות, | `פִּיךָ שָׁלַחְתָּ בְרָעָה` (תהלים נ:יט) | equivalent | **הפה הדובר רעה**. |
+| A+44 | sēkirat nešmê sākikat uzni | הסוכרת שמיעה, האוטמת אוזן, | `כְּמוֹ-פֶתֶן חֵרֵשׁ יַאְטֵם אָזְנוֹ` (תהלים נח:ה) | equivalent | **אטימת האוזן** בפרק של המלחשים (תהלים נח:ו `לְקוֹל מְלַחֲשִׁים`) |
+| A+44 | sēkirat nešmê sākikat uzni | הסוכרת שמיעה, האוטמת אוזן, | `אֹטֵם אָזְנוֹ מִשְּׁמֹעַ דָּמִים` (ישעיהו לג:טו) | divergence | שם האטימה היא מידה טובה, כאן מעשה הכשף. |
+| A+44 | sēkirat nešmê sākikat uzni | הסוכרת שמיעה, האוטמת אוזן, | `אֹטֵם אָזְנוֹ מִשְּׁמֹעַ דָּמִים` (ישעיהו לג:טו) | cognate | *sekēru* = `סָכַר` (ההנחיות §6.7). |
+| B+3 | [ere]škigal ana erṣeti ay ušēr[idki] | [אֶרֶ]שְׁכִּיגַל אל הארץ אל תורידֵ[ךְ], | `וְאַתָּה הָשְׁלַכְתָּ מִקִּבְרְךָ כְּנֵצֶר נִתְעָב … כְּפֶגֶר מוּבָס` (ישעיהו יד:יט); `לֹא תֵחַד אִתָּם בִּקְבוּרָה` (ישעיהו יד:כ) | equivalent | **המת שאינו נקבר**: מלך בבל "מושלך מקברו" כפגר נרמס, . |
+| B+4 | [eli p]agrīki erû u zību linnadrū | [על] פגרך – נשר ועיט ישתוללו, | `וַיֵּרֶד הָעַיִט עַל הַפְּגָרִים` (בראשית טו:יא) | cognate | *pagru* = `פֶּגֶר` |
+| B+4 | [eli p]agrīki erû u zību linnadrū | [על] פגרך – נשר ועיט ישתוללו, | `וַיֵּרֶד הָעַיִט עַל הַפְּגָרִים` (בראשית טו:יא) | cognate | (`../renderings.md` §4), *zību* = `עַיִט` |
+| B+4 | [eli p]agrīki erû u zību linnadrū | [על] פגרך – נשר ועיט ישתוללו, | `וַיֵּרֶד הָעַיִט עַל הַפְּגָרִים` (בראשית טו:יא) | equivalent | **העוף הדורס על הפגרים** – אותה תמונה, באותן שתי מלים. |
+| B+4 | [eli p]agrīki erû u zību linnadrū | [על] פגרך – נשר ועיט ישתוללו, | `וְהָיְתָה נִבְלָתְךָ לְמַאֲכָל לְכָל עוֹף הַשָּׁמַיִם` (דברים כח:כו) | equivalent | הקללה של הגוף שאינו נקבר. |
+| B+6 | kalbu u kalbatu libaṣṣirūki | כלב וכלבה יקרעו אותך, | `הַכְּלָבִים יֹאכְלוּ אֶת אִיזֶבֶל בְּחֵל יִזְרְעֶאל` (מלכים א כא:כג); `וּכְשָׁפֶיהָ הָרַבִּים` (מלכים ב ט:כב) | equivalent | **הכלבים ואיזבל**: גם המלכה שהמקרא קורא לה בעלת  נשארת בלי קבורה והכלבים אוכלים את בשרה (B+7) – הקשר החזק ביותר במקלו לסיפור איזבל. |
+| B+7 | kalbu u kalbatu libaṣṣirū šīrīki | כלב וכלבה יקרעו את בשרך – | `בְּחֵלֶק יִזְרְעֶאל יֹאכְלוּ הַכְּלָבִים אֶת בְּשַׂר אִיזָבֶל` (מלכים ב ט:לו); `וְלֹא מָצְאוּ בָהּ כִּי אִם הַגֻּלְגֹּלֶת` (מלכים ב ט:לה) | equivalent | אותם כלבים, אותו "בשר"; . |
+| B+9 | EN₂ attā ṣillī attā bāštī | קסם. אתה – צלי, אתה – גאוותי, | `סָר צִלָּם מֵעֲלֵיהֶם` (במדבר יד:ט) | cognate | *ṣillu* = `צֵל` |
+| B+9 | EN₂ attā ṣillī attā bāštī | קסם. אתה – צלי, אתה – גאוותי, | `סָר צִלָּם מֵעֲלֵיהֶם` (במדבר יד:ט) | cognate | (`../renderings.md` §2.3): **הצל כמגן**, ומי שצלו סר ממנו – אבד. |
+| B+18 | attā yāʾu anāku kû | אתה – שלי, ואני – שלך. | `דּוֹדִי לִי וַאֲנִי לוֹ` (שיר השירים ב:טז) | divergence | **"אתה שלי ואני שלך"**: אותה נוסחה של השתייכות הדדית; בשיר השירים בין אוהבים, כאן בין אדם לצלו – לדמות של עצמו: היא שייכת רק לו, ולכן אין למכשפה חלק בה. |
