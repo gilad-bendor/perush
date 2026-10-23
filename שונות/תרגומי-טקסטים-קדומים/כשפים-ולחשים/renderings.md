@@ -455,7 +455,7 @@ harmonization; settled 2026-10-23: `פֵּאֵר` / `תִּפְאֶרֶת` every
   68–72, "make odious") `הִבְאִישׁ` by sense (Exod 5:21; not a form of `שׂם`); IV 115 feminine `עושות לי, עושות ועושות
   לי` (*ippušā*: the RT translator follows IV 115 at RT 68'); *piṭru* `פֶּטֶר` (Ludlul); *anāku pāširāk* `אני – מתיר
   אני`; *rūʾu* `עָמִית` (Etana's *rūʾūtu* `עֲמִיתוּת`), so *itbāru* `שֻׁתָּף`; *šizbu* `חָלָב` (always vocalized, against
-  `חֵלֶב` "tallow"); *burû* `מַפָּץ`; *sirqu* `זְרִיקָה`; *šūbultu* `מִשְׁלוֹחַ`; *arāḫu* `חִסֵּל`; *bâʾu* `שָׁטַף` (2026-10-23 harmonization: `עָבַר`);
+  `חֵלֶב` "tallow"); *burû* `מַפָּץ`; *sirqu* `זְרִיקָה`; *šūbultu* `מִשְׁלוֹחַ`; *arāḫu* `חִסֵּל`; *bâʾu* `שָׁטַף` (of the flood water, IV 151, by sense; elsewhere `צָעַד`, VII 13: 2026-10-23 harmonization, batch C);
   *napāṣu* `נִפֵּץ` [cognate].
 - **Settled by the coordinator:** *ḫepû* and *šebēru* both `שָׁבַר` (as in the Gilgameš corpus): *ḫepû* is Maqlû's
   frequent "break" (and *hīp libbi* is a "broken heart"), *šebēru* (IV 94, once) the cognate; the apparatus names the
@@ -517,3 +517,5 @@ harmonization; settled 2026-10-23: `פֵּאֵר` / `תִּפְאֶרֶת` every
 
 ## 11. The 2026-10-23 harmonization (`../harmonization--2026-10-23.md`)
 2026-10-23 harmonization (rows 10, 18, 19): *dalālu* → `פֵּאֵר`, *dalīlu* → `תִּפְאֶרֶת`; *nissatu* → `יָגוֹן`, *ašuštu* → `דַּאֲבוֹן`; *bâʾu* → `עָבַר`. Changed lines: II 17, 75, 225 `את הלוליך אהלל` → `את תפארתך אפאר` (the three lines stay identical; II 225 is not in the table: the same formula); V 71, 72 `יגון` (*ašuštu*) → `דאבון`; VII 38 `(ו)הדאבון` → `(ו)היגון`, VII 125 `דאבון` → `יגון` (not in the table: the same *nissatu*); VII 13 `אל יחצו אליי את הפתח` → `אל יעברו אליי את הפתח`; IV 151 `כמי גאות אשטוף אותן` → `כמי גאות אעבור עליהן`; the introductions of V and VII. (The table's "Maqlû I 13, 17, 38, 71, 72, 75" are VII 13, II 17, VII 38, V 71, V 72, II 75.) New overlap inside Maqlû: `עבר` now renders both *bâʾu* (IV 151, VII 13) and *ebēru* (II 35 `העוברות`). `maqlu_tools.py` FORMULAS: the formula *dalīlīka ludlul* = `את תפארתך אפאר` added (§6 ★).
+
+2026-10-23 harmonization, batch C (row 19, revised): *bâʾu* "pass along, go" → `צָעַד` in every corpus; of water "sweep over" `שָׁטַף` (by sense). Changed lines: VII 13 `אל יעברו אליי את הפתח` (batch B; before it `אל יחצו אליי את הפתח`) → `אל יצעדו אליי בפתח` (*bāba* as an accusative of place, `ב־` as Etana's `בשער … – צעדו`); IV 151 `כמי גאות אעבור עליהן` (batch B) → back to `כמי גאות אשטוף אותן`. `עבר` is again *ebēru*'s alone (II 35 `העוברות`): the batch B overlap is gone. No `צעד` for another source word in Maqlû.
