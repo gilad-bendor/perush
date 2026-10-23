@@ -290,13 +290,13 @@ The verb `יָצַר` only for qmꜣ (and qd? no: qd = `בָּנָה`).
    הַבַּיִת הָרִאשׁוֹן`. One line each, nothing added. 27.7 `tꜣj 30 n ḥw.t` `שְׁלֹשִׁים הַבָּתִּים הָאֵלֶּה`.
 2. **The prohibitive** `m-jri̯ X` = `אַל` + future; `mtw=k Y` after it = `וְאַל` + future (or `וְ` + future when it states
    the consequence: the translator says which in the parse).
-3. **"Better X than Y"** `ꜣḫ X r Y` = `מוּטָב X מִ־Y` (9.5–8, 16.11–14: the two copies identical, §7).
+3. **"Better X than Y"** `ꜣḫ X r Y` = `מוּטָב X מִ־Y` (9.5–8, 16.11–14: 9.6–8 = 16.12–14 identical, §7; 9.5 "poverty in the god's hand" ≠ 16.11 "praise and the love of men": only the frame `מוטב … ` is shared).
 4. **The two men:** `pꜣ šmm` = `הַחַם`; `gr mꜣꜥ` = `הַשּׁוֹתֵק הָאֲמִתִּי`; `pꜣ gr` = `הַשּׁוֹתֵק`.
 5. **The Pyramid Texts:** `ḏd-mdw` "words to be spoken" = `דְּבָרִים לֵאמֹר:`; `n ḫpr.t X` "before X came into being"
    = `טֶרֶם נִהְיָה X` / `טֶרֶם נִהְיוּ X` [equivalent Gen 2:5 `טֶרֶם יִהְיֶה בָאָרֶץ`].
 6. `tꜣ bw.t n pꜣ nṯr` = `תּוֹעֲבַת הָאֵל` (13.16, 15.21; with `ꜥꜣ.t` "great" 14.3: `תּוֹעֲבָתוֹ הַגְּדוֹלָה`).
 7. **The refrains of Amenemope** (§7): 3.17 = 5.18 = 17.15 (`jr jri̯.y=k hꜣw=k jw nn m jb=k`); 4.2 = 7.10 (`wḏꜣ ḥꜥ.t=k
-   ḥr-tp tꜣ`); 9.5–8 = 16.11–14; 22.5–8 = 23.8–11; 5.8 = 5.13? (only the shared half); 6.4 = 6.12 except the last word.
+   ḥr-tp tꜣ`); 9.6–8 = 16.12–14 (9.5 / 16.11 differ); 22.5–8 = 23.8–11; 5.8 = 5.13? (only the shared half); 6.4 = 6.12 except the last word.
 8. The king's blessing `ꜥnḫ-(w)ḏꜣ-s(nb)` = `חַיִּים, שָׁלוֹם, בְּרִיאוּת`.
 
 ## 7. Fixed lines (enforced character by character, niqqud and marks ignored)
@@ -309,6 +309,10 @@ writes them here after the first part, so that the verifier enforces them.
 | AM 3.17; AM 5.18; AM 17.15 | `jr jri̯.y=k hꜣw=k jw nn m jb=k` | `אם תבלה את עתך ואֵלֶּה בלבך,` |
 | AM 4.2; AM 7.10 | `wḏꜣ ḥꜥ.t=k ḥr-tp tꜣ` | `יהיה גופך שלם על פני הארץ.` |
 | AM 5.19; AM 17.16 | `r nꜣyw=k ms.w (r) ptr=w` | `ילדיך יִרְאוּ אותן.` |
+| AM 9.6; AM 16.12 | `r wsr m wḏꜣ` | `מעושר באוצר;` |
+| AM 9.7; AM 16.13 | `ꜣḫ pꜣw.t.pl jw ḥꜣ.tj nḏm` | `מוטב עוגות כשהלבב נעים` |
+| AM 9.8; AM 16.14 | `r wsr ẖr šnn` | `מעושר עמוס צער.` |
+| AM 8.10; AM 13.9 | `tm ḥry.t jni̯=k` | `פן תביא אותך האימה.` |
 
 ## 8. Amenemope ↔ Proverbs 22:17–24:22 and the Torah: the shared sayings (fixed before drafting)
 The literature's pairings, **to be checked against the transliteration** (guidelines §5.2: a brief says "look for",
@@ -327,7 +331,7 @@ parallels table.
 | 7.12–15 (ch. 6) | do not move the boundary stone … do not encroach on the boundaries of a widow | Prov 22:28, 23:10 `אַל-תַּסֵּג גְּבוּל עוֹלָם`; Deut 19:14 `לֹא תַסִּיג גְּבוּל רֵעֲךָ`; Deut 27:17 | `גְּבוּל`; `הֵזִיז` (not `הִסִּיג`); ḫꜣr.t `אַלְמָנָה` – Prov 23:10's `עוֹלָם` / `אַלְמָנָה` emendation |
 | 8.9–10 | beware of trespassing on the boundaries of the fields | Prov 23:10–11 | |
 | 9.10–10.5 (ch. 7) | do not set your heart on riches … they made themselves wings like geese, flew to the sky | Prov 23:4–5 `כִּי עָשֹׂה יַעֲשֶׂה-לּוֹ כְנָפַיִם כְּנֶשֶׁר` | jri̯ `עָשָׂה` [equivalent]; dnḥ "wings" `כְּנָפַיִם`; r "geese" `אֲוָזִים` against `נֶשֶׁר` [divergence] |
-| 9.5–8 = 16.11–14 | better poverty in the god's hand than riches in the storehouse; better bread with a happy heart than riches with sorrow | Prov 15:16–17, 16:8, 17:1 (`טוֹב … מִ־`) | the form `מוּטָב … מִ־` (§6.3); `אוֹצָר` |
+| 9.5–8; 16.11–14 (9.6–8 = 16.12–14) | better poverty in the god's hand than riches in the storehouse; better bread with a happy heart than riches with sorrow | Prov 15:16–17, 16:8, 17:1 (`טוֹב … מִ־`) | the form `מוּטָב … מִ־` (§6.3); `אוֹצָר` |
 | 14.5–10, 14.17–18 (ch. 11) | do not covet the poor man's goods … a big mouthful you swallow and vomit | Prov 23:6–8 `פִּתְּךָ-אָכַלְתָּ תְקִיאֶנָּה` | |
 | 22.11–14 (ch. 21) | do not empty your belly to everyone | Prov 23:9 | |
 | 23.13–18 (ch. 23) | do not eat bread before a noble … look at the bowl before you | Prov 23:1–3 `כִּי-תֵשֵׁב לִלְחוֹם אֶת-מוֹשֵׁל` | |
@@ -396,3 +400,12 @@ parallels table.
 7. **Names:** Jꜥḥ (the moon god) `יָעַח` ★; Mnw-kꜣ-mw.t=f `מִין־כָּמוּתֶף`; the §3 forms of Wn-nfr, Tnj, Ṯꜣ-wr, ꜣbḏw, Snw.t confirmed.
 8. **Ruling (the coordinator):** the Akkadian corpora's cognate reservations (`עָבַר` only for *ebēru*, `עָזַב` for *ezēbu*, `חָלַף` for *etēqu* …) bind **Akkadian** source words; an Egyptian word with no Semitic cognate takes the Hebrew word of its meaning (one Hebrew per Egyptian lemma), so ḫꜣꜥ = `עָזַב` stands. A Semitic loanword in Egyptian takes its cognate (item 5).
 9. **Gate fix (egypt_tools.py):** the `חם` gate no longer reads `לחם` "bread" (with prefixes: `בלחם`, `ולחם` …) as the hot man (5.5 had been passed by `[היתר שער]`). The hot man after `ל` is licensed by šmm anyway, and the unvocalized trap still checks it.
+
+### 10.2 Round 4 run 3, sub 1 – Amenemope part 2 (7.11–13.9), merged 2026-10-23
+1. **Fixed lines (§7):** 9.6–9.8 = 16.12–16.14 and 8.10 = 13.9. **Correction of §6.3/§6.7 and §8:** the "better" saying is not a four-line refrain: 9.5 `ꜣḫ pꜣ nmḥ m-ḏr.t pꜣ nṯr` (`מוטב הדלות ביד האל`) and 16.11 `ꜣḫ ḥs.wt m mr.wt n rmṯ` differ; only 9.6–8 = 16.12–14.
+2. **House 6:** rmni̯ = `הֵזִיז`, wḏ = `אֶבֶן־גְּבוּל`, hꜣd = `פָּלַשׁ`, ḫꜣr.t = `אַלְמָנָה` (as §4.3); 7.12 copies 1.19's Hebrew.
+3. **Words:** jmꜣḫ "revered (dead)" = `נִכְבָּד` (3.5 bw-wꜣy moved to `רָם־מַעֲלָה` to keep it free); ḏbꜣ.t = `תֵּבָה` (11.4), jp.t = `אֵיפָה` (8.19) [cognate: loanwords]; ꜥḥꜥw "lifetime" = `מֶשֶׁךְ הַיָּמִים`; snk "be greedy" = `הִתְאַוָּה` (never `חָמַד`); sḫt "trap" = `צָד`; spḥ "lasso" = `לָכַד בְּלוּלָאָה`; nḥp "potter" = `קַדָּר` (`יוֹצֵר` stays qmꜣ's); ḥry.t "terror" = `אֵימָה`; ḫr.t "needs" = `מִחְיָה`.
+4. **8.1** `j:jri̯=k sjꜣ r` with an object = `תַּכִּיר אֶת` (recognize); §3a's `הִזָּהֵר` stays for sjꜣ without an object.
+5. **Ruling (ḫꜣꜥ):** `עָזַב` "leave, abandon" stays the rendering; ḫꜣꜥ "throw" (11.17, words thrown like a lasso) = `הִשְׁלִיךְ` – a split by sense of one Egyptian lemma whose two senses Hebrew must separate; noted at the line.
+6. **Formula fix (egypt_tools.py):** the "better" formula no longer fires on the `r` inside `ḥr-r-rʾ` (8.16 had a `[סטייה מן הנוסחה]`).
+

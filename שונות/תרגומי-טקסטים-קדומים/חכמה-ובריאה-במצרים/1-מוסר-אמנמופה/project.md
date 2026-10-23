@@ -200,5 +200,146 @@ the dossier's `annotated-MK.rtl.md`.
 - A gate on a two-letter root with up to three prefix letters will hit common words formed with a preposition (`בלחם`):
   test every short gate on `ל`/`ב` + the root's homographs.
 
+## AM 7.11–13.9
+
+### Scope
+Part 2 of 5: houses 6–9 (7.11–13.9), 118 lines, all drafted; the base has no lost lines here (only editorial `( )`,
+`⟨ ⟩`, `{ }` and two `?`s: 12.6 `jṯi̯(.t)?`). House 6 (7.11–9.8): the boundary stone, the widow's boundary, the false
+oath, the land-grabber's ruin, and the two "better" sayings; house 7 (9.9–10.15): riches gained by robbery sink into
+the Duat and fly off "like geese"; the greedy man's ship stuck in the mud, the silent man's boat sailing; prayer to the
+rising sun; house 8 (10.16–11.11): a guarded tongue, a good report, the burial of the "revered one"; house 9
+(11.12–13.9): the full portrait of the hot man. Witness: pStockholm MM 18416 (10.18–13.10).
+
+### Sources consulted
+As in part 1: the base and its witness through `data … --wit`; the TLA German after drafting each house; Lange 1925
+(chapters 6–7, for the cruxes 7.13–8.8, 9.10–10.15).
+
+### Decisions
+- **House 6 against the Torah's vocabulary:** rmnj = `הֵזִיז`, wḏ = `אֶבֶן־גְּבוּל`, tšj = `גְּבוּל` (the 7.12 Hebrew repeats
+  1.19's `על גבולות השדות`), hꜣd = `פָּלַשׁ` (7.15 = the renderings' test line), ḫꜣr.t = `אַלְמָנָה`; `הִסִּיג` and `עוֹלָם`
+  only in the apparatus (Deut 19:14, 27:17; Prov 22:28, 23:10 with the `עוֹלָם` / `אַלְמָנָה` emendation).
+- **The "better" sayings** (`ꜣḫ X r Y` = `מוּטָב X מִ־Y`, §6.3): 8.19–20 `מוטב איפה שנותן לך האל / מחמשת אלפים שלא כדין.`;
+  **9.5–9.8 (to be fixed for 16.11–14):**
+  - 9.5 `מוטב הדלות ביד האל`
+  - 9.6 `מעושר באוצר;`
+  - 9.7 `מוטב עוגות כשהלבב נעים`
+  - 9.8 `מעושר עמוס צער.`
+  (16.13 has another spelling of "cakes", `pꜣwtjw.pl pꜣw,t.pl`: the same Hebrew.)
+- **8.16 `ꜣḫ n=k wḏꜣ ḥr-r-rʾ=sn`** triggers the "better" formula only because of the *r* inside the preposition
+  `ḥr-r-rʾ`; there is no comparison: `מועיל לך להיות שלם כלפיהם.` with `[סטייה מן הנוסחה]`. (The formula regex could
+  exclude `ḥr-r-rʾ`.)
+- **8.1 `j:jri̯=k sjꜣꜣ r`** = `תכיר את…` ("recognize", with TLA and Lange), not §3a's suggested `הִזָּהֵר`: here sjꜣ has
+  an object and introduces the signs of 8.2–8.8.
+- **ḫꜣꜥ**: `עָזַב` kept (9.12, 10.10 `עזובה`), but 11.17 "to throw (a lasso of) words" = `הִשְׁלִיךְ` – a split by sense
+  (`עזב את דבריו` is not Hebrew). Proposal below.
+- **Field words:** ꜣḥ.t (TLA 191 "Acker" and 228 "Fruchtland") and sḫ.t (141480) all = `שָׂדֶה` (Hebrew has no good third
+  word; distinguished in the parse). **Store words:** šꜥꜥ `מַמְּגוּרָה` (8.6, 9.1), mḥr `מַחְסָן` (9.1), šnw.t `אָסָם` (9.3),
+  wḏꜣ `אוֹצָר` (9.6).
+- **Time words:** ꜥḥꜥw "lifetime, duration" = `מֶשֶׁךְ הַיָּמִים` (7.16, 9.3), apart from hꜣw `עֵת` (but hꜣw in 7.13 means
+  "position" = `מָקוֹם`: split by sense, TLA "Umgebung").
+- **Repeated structures given the same Hebrew:** km ꜣ.t pꜣy=f X (6.3, 9.3) `בתום רגע – …`; ḥḏ tꜣ (9.4, 9.18) `האירה
+  הארץ – …`; mtw=k zꜣw=k r (11.16, 11.20) `והישמר לך מל־…`; swḏꜣ ns=k r (10.21, 11.15) `החזק את לשונך שלמה מ־…`;
+  tm ḥry.t jni̯.ṱ=k (8.10, 13.9) `פן תביא אותך האימה.`; jri̯.y=w n=w X (10.2, 10.4) `עשו להם …`.
+- **Other new words:** jmꜣḫ "revered (dead)" = `נִכְבָּד` (11.4; 3.5 bw-wꜣy changed to `רָם־מַעֲלָה` to keep `נכבד` for
+  jmꜣḫ); ḏbꜣ.t "coffin" = `תֵּבָה` [cognate loanword] (11.4); jp.t = `אֵיפָה` [cognate] (8.19); sḫt "trap, hunt" =
+  `צָד` (7.18, 12.9); spḥ "lasso" = `לָכַד בְּלוּלָאָה` (7.19, 11.17); nwḥ = `חֶבֶל־הַמִּדָּה` (7.13; Zech 2:5); dnm =
+  `תֶּלֶם`; snk = `הִתְאַוָּה` (7.14; as the dossier's snk `תאווה`, not `חָמַד`); wpj "divide, decide" = `פָּסַק`; sḥtp =
+  `הֵנִיחַ אֶת הַדַּעַת` (keeps ḥtp's root); ḫr.t "needs, livelihood" = `מִחְיָה`; ḏꜣr "measure, need" = `שִׁעוּר`; whn =
+  `הָרַס`, qd = `בָּנָה` (12.3); wꜥꜣ = `חֵרֵף`, gꜣj = `גִּדּוּף`; wšb (verb) = `עָנָה` (wšb.t `תְּשׁוּבָה`); ḥrj "superior"
+  = `מִי שֶׁמֵּעָלֶיךָ`; ḥḏj = `הִזִּיק` / ḥḏ = `הֶזֵּק` (wgꜣ keeps `נֵזֶק`); ḥry.t = `אֵימָה`; bꜣ.w = `עָצְמָה` (as §4.1);
+  sḫr = `עֵצָה`; ꜥwn(-jb) = `בַּצְעָן` (Prov 1:19); nḥp "potter" = `קַדָּר` (`יוֹצֵר` stays qmꜣ's); pjpj = `לָשׁ`; jtn =
+  `אָטוֹן` ★; jꜥr.t = `אוּרֵאוּס`; ꜥꜣpp = `אַפּוֹפִּיס`; Ḫnmw = `חְנוּם`; dwꜣ.t = `הַדּוּאַת`; Šꜣy / Rnn.t = `שַׁאי` ★ /
+  `רֶנֶנֶת`; jwdn "ground" = `קַרְקַע` (shares the word with sꜣtꜣ `קַרְקָעוֹת`); šnꜥ (10.3) = `מַעֲמַקִּים`, šnꜥ "storm cloud"
+  (13.2) = `עָבִים`; dmj "join, touch" = `נִצְמָד` (4.15, 13.5); bsj "enter" (12.15) = `בָּא` (2.17 "install" `הוֹשִׁיב`:
+  split by sense).
+
+### Open decisions for the user
+- 12.2 *ḥꜣ.t* (TLA "a body of water, river mouth?") – rendered `*השפך*?`.
+- 9.20 *ꜥqꜣ* "made them level" (TLA) – rendered `יישרה?`; Lange left it untranslated.
+- 10.9 *ḏr.t* "his hand" (Lange) or "his troop" (TLA) – kept as `ידו` with both in the note.
+
+### Progress log
+- Drafted house by house (6; 7; 8–9), `fill` + `verify AM` after each (0 problems apart from the stale translation
+  until `build`).
+- Pass (a): every negation (the m-jri̯ / mtw=k chains; bw jri̯=f sḏm 9.1–9.2, 11.9; nn 9.11, 9.17; bn 9.18; tm 8.10,
+  13.9), tense (statives 9.4, 10.3, 10.5, 10.10, 12.8; prospective 10.14, 12.15) and the TLA's two analyses (9.7, 12.7)
+  checked. After the TLA: 7.17 ("it belongs to the field"), 8.1 ("recognize"), 8.12 (`הפוסק`), 9.8 (`עמוס`), 9.11 (the
+  gods as subject), 10.9 (`משאירה`), 12.2, 12.15 ("again").
+- Pass (b): the repeated structures above byte-identical; the house-heading formula; `הַחַם` (11.13) and `השותק` (10.11);
+  §10.1 renderings followed (ꜥn not in this part; zꜣw tw r `הישמר לך מ־` 8.9, 8.14; jnj `הביא`; swḏꜣ `החזיק שלם`).
+- Pass (c): read `translation-AM.rtl.md`, houses 6–9, aloud; no change needed beyond the drafts.
+- `build AM`: 242 lines, 17 footnotes; `check_bible_quotes.py` (annotated, intro, both translations): 0 problems;
+  `verify AM`: 0 problems.
+
+### The text on its own terms
+- **The surveyor's sin and its punishment** (7.12–8.8): moving a stone, uprooting the measuring cord, ploughing one
+  extra furrow "shortens the lifetime"; the land-grabber "hunts" the field with false oaths and is himself lassoed by the
+  Moon – the punishment mirrors the crime, down to his granaries and his children's inheritance.
+- **The boundaries belong to a god** (8.11–8.14): the "Lord of All" (*nb-r-ḏr*, "lord to the limit") decided them.
+- **Wealth as a living thing** (9.16–10.5): ill-gotten riches do not "sleep" at your house; the ground opens its mouth
+  and swallows them into the Duat, or they make themselves wings like geese.
+- **Fate and Fortune** (9.11–9.13): Shai and Renenet know every man; every man belongs to his hour.
+- **Two boats** (10.10–11): the greedy man's big ship stuck in the mud, the silent man's small boat sailing – with a pun
+  on *mꜣꜥ* "sail" / "true".
+- **Daily prayer to the rising sun** (10.12–15): "give me well-being and health" – the king's blessing in a commoner's
+  mouth.
+- **The good name and the good burial** (10.17–11.5): goodness "in people's bellies", a share of the temple's loaves,
+  the coffin (`תֵּבָה`) that hides the revered dead from the god's wrath.
+- **Protect the fugitive** (11.7).
+- **The hot man as anti-creator** (12.3, 12.15–17): he tears down and builds with his tongue as the god does (24.15),
+  and Khnum the potter is asked to come again and re-knead him.
+- **The hypocrite's anatomy** (12.11–13.7): eats inside, answers outside; sweet lips, bitter tongue, fire in the belly.
+
+### Key parallels
+- **7.12–7.15 ↔ Deut 19:14, 27:17; Prov 22:28, 23:10–11** [equivalent]: the boundary stone; "the widow's boundaries"
+  is the basis of the emendation `גְּבוּל אַלְמָנָה` for `גְּבוּל עוֹלָם` in Prov 23:10; the Moon's lasso against the
+  `גֹאֲלָם חָזָק` of 23:11.
+- **9.5–9.8, 8.19–20 ↔ Prov 15:16–17, 16:8, 17:1** [equivalent]: the "better" sayings, the same form.
+- **9.10–10.5 ↔ Prov 23:4–5** [equivalent / divergence]: `אַל-תִּיגַע לְהַעֲשִׁיר`; `עָשֹׂה יַעֲשֶׂה-לּוֹ כְנָפַיִם` = *jrj n=w
+  dnḥ* (the same verb and noun); geese against `כְּנֶשֶׁר`; `וְאֵינֶנּוּ` ↔ 9.19 "and they are not".
+- **9.19 ↔ Ps 37:10** [equivalent]: `וְהִתְבּוֹנַנְתָּ עַל-מְקוֹמוֹ וְאֵינֶנּוּ`.
+- **9.20 ↔ Num 16:32** [equivalent]: the ground opened its mouth and swallowed them (and Korah's goods).
+- **11.13–14, 13.8–9 ↔ Prov 22:24–25** [equivalent / divergence]: the hot man, the same two prohibitions in the same
+  order, and the closing "lest".
+- **11.4 ↔ Gen 6:14, Ex 2:3** [cognate]: *ḏbꜣ.t* "coffin" is the source of `תֵּבָה`; **8.19 ↔ Deut 25:15** [cognate]:
+  *jp.t* = `אֵיפָה`.
+- **11.7 ↔ Deut 23:16** [equivalent]: do not betray the fugitive.
+- **12.15–16 ↔ Jer 18:6; Isa 64:7** [equivalent]: the god as potter of the human vessel.
+
+### Lines shared with other texts
+- Within AM: 7.12 repeats 1.19's Hebrew (`אבן־הגבול … על גבולות השדות`); 9.5–9.8 → 16.11–16.14 (to be fixed); 8.10 =
+  13.9; 6.3 ~ 9.3; 9.4 ~ 9.18; 12.13 ~ 4.19; 12.3 ~ 24.15 (later: `הוא הורס והוא בונה`); 13.8 ~ 22.22 (later: `אל תעוף
+  …`); 7.14 ~ 14.5, 18.8 (later: `אל תתאווה ל…`); 7.13 ~ 10.7 (only the structure).
+
+### Proposals for the shared renderings
+| Egyptian | Hebrew | Reason / lines |
+|---|---|---|
+| **Fixed lines (§7)** 9.5–9.8 = 16.11–16.14 | `מוטב הדלות ביד האל` / `מעושר באוצר;` / `מוטב עוגות כשהלבב נעים` / `מעושר עמוס צער.` | the "better" saying |
+| 8.10 = 13.9 | `פן תביא אותך האימה.` | |
+| ḫꜣꜥ "throw (words, a lasso)" | `הִשְׁלִיךְ` (beside `עָזַב` "leave") | 11.17 |
+| jmꜣḫ / bw-wꜣy | `נִכְבָּד` / `רָם־מַעֲלָה` | 11.4 / 3.5 |
+| ꜥḥꜥw "lifetime, duration" | `מֶשֶׁךְ הַיָּמִים` | 7.16, 9.3 |
+| snk "be greedy" | `הִתְאַוָּה` (`חָמַד` never) | 7.14 (14.5, 18.8 later) |
+| sḫt / spḥ | `צָד` / `לָכַד בְּלוּלָאָה` | 7.18, 12.9 / 7.19, 11.17 |
+| nwḥ / dnm | `חֶבֶל־הַמִּדָּה` / `תֶּלֶם` | 7.13 / 7.16, 8.15 |
+| ḫr.t / ḏꜣr | `מִחְיָה` / `שִׁעוּר` | 8.17, 9.15, 10.14 / 10.2, 11.19 |
+| šꜥꜥ / mḥr / šnw.t | `מַמְּגוּרָה` / `מַחְסָן` / `אָסָם` | 8.6, 9.1, 9.3 |
+| ꜣḥ.t, sḫ.t | `שָׂדֶה` (both) | |
+| whn / qd | `הָרַס` / `בָּנָה` | 8.3, 12.3 (24.15) |
+| wšb (verb) | `עָנָה` | 11.15 |
+| wꜥꜣ / gꜣj | `חֵרֵף` / `גִּדּוּף` | 11.16 / 12.4 |
+| ḥḏj / ḥḏ | `הִזִּיק` / `הֶזֵּק` | 10.21, 12.1, 13.3 / 12.6 |
+| ḥry.t | `אֵימָה` | 8.10, 10.15, 13.9 |
+| sḫr | `עֵצָה` | 11.7 (19.x later) |
+| nḥp | `קַדָּר` | 12.16 |
+| ꜥwn(-jb) | `בַּצְעָן` | 10.10 |
+| ḥrj "superior" | `מִי שֶׁמֵּעָל־` | 11.15 |
+| jꜥr.t / ꜥꜣpp / jtn / Ḫnmw | `אוּרֵאוּס` / `אַפּוֹפִּיס` / `אָטוֹן` ★ / `חְנוּם` | 10.19, 10.20, 10.12, 12.15 |
+| j:jri̯=k sjꜣꜣ r X | `תַּכִּיר אֶת X` (when sjꜣ has an object) | 8.1 (§3a's `הִזָּהֵר` for the absolute use) |
+| **Formula regex** | exclude `ḥr-r-rʾ` from the "better" trigger | 8.16 |
+
+### Lessons for the guidelines
+- A formula keyed on a one-letter word (`r`) needs word boundaries that exclude compound prepositions (`ḥr-r-rʾ`).
+
 ## Parallels index
 (generated from the הקבלה bullets by `../build_parallels_index.py`)
