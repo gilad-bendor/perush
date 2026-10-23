@@ -9,5 +9,286 @@ The older copy on Tutankhamun's first gilded shrine (c. 1325 BCE) and the Ramess
 AED-TEI `WHEOIX5P5ZAVVFU4BGO6OWASV4` (TLA 2018), CC BY-SA 4.0. Rank 3: the TLA's German (`tr HC`); Hornung 1997 (OBO 46,
 open access: the synoptic edition and translation).
 
+## HC 1–48
+
+(Translator 2, Round 4 run 3; part 1 of 2. Columns 49–95 follow in part 2.)
+
+### Scope
+Columns 1–48 of the Seti I version (KV 17): the whole narrative of the "destruction of mankind" and the withdrawal of
+Re, up to the instructions for drawing the cow (to the middle of Hornung's verse 182). Nine scenes: the rebellion
+against the old king (1–3); the secret council before Nun (4–12); the Eye descends as Hathor, Sekhmet (13–15); the
+ochre from Elephantine and the 7,000 jars (16–22); the drunken goddess and Hathor's festivals (23–26); the weary Re and
+Nut as the cow (27–31); the first war, "so came slaughter among men" (32–36); sky, fields of the hereafter, stars, Shu
+and the Heh gods (37–43); the drawing instructions (44–48). Preservation: 1–3 and 30–41 have restored stretches
+(the beginning, Nut's answer, the people's return, the first war); 13, 17–18 and 33–34 small gaps. A long column per
+line, broken mid-sentence: every break is kept and noted.
+
+**The witnesses.** The coordinator's brief assumed the Tutankhamun shrine copy covers these columns. It does not:
+Hornung (p. 33) — T contains only verses 202–234 and 306–312 plus the cow image with its captions; "der Anfang unseres
+Buches [fehlt] bei Tutanchamun" (p. 92); AED holds only T's rear wall (the end of the book). So for 1–48 T is absent,
+said once in the file header and at column 1. T's real contacts here are with the **drawing** prescribed in 44–48
+(see the list below). Ramesses II and III exist only in Hornung's synopsis (not in AED): their variants are cited from
+his notes. Ramesses VI (KV 9) begins at verse 272 (part 2).
+
+### Sources consulted
+- Base: AED-TEI `Heavenly-Cow--KV17-Seti-I` (`egypt_tools.py data HC 1 48`, `--wit`).
+- Rank 3: the TLA's German (`tr HC`), read after drafting for 1–26 (for 27–48 the printout of 26–48 was read after the
+  drafting of 27–31 and before the final wording of 32–48 — the readings below were formed from the data first, but
+  this deviates from guidelines §3 and is recorded); Hornung 1997 (OBO 46: translation pp. 37–43, commentary notes
+  1–120, excursus B pp. 90–95, the versions pp. 33–36), read from the text layer.
+- Lichtheim (AEL II) and others only from memory, never quoted.
+
+### Decisions
+- **Lemma → Hebrew (new or confirmed).** nṯr `אֵל`/`אֵלִים` ★; nṯr.t `אֵלָה` ★ (`הָאֵלָה הַזֹּאת` for nṯr.t tn); rmṯ `בְּנֵי הָאָדָם`;
+  ḥm=f `הוֹד מַלְכוּתוֹ`, ḥm n X `הוֹד מַלְכוּת X`; ḏd.jn `אָז אָמַר`; ḫft ḥm=f `נֹכַח הוֹד מַלְכוּתוֹ` (m-bꜣḥ keeps `לִפְנֵי`);
+  md.t (tla78030, the "plot") `דָּבָר` – the same lemma as Amenemope's mdw.t `דָּבָר`, so "devised a word against" (the
+  sense "plot" in the notes); md.t "matter" (tla78150) `דָּבָר`; kꜣj `חָשַׁב`; sbj `מָרַד`; smꜣ/smꜣm `הָרַג`; šꜥ.t "slaughter"
+  `טֶבַח`, šꜥ.tjw `אַנְשֵׁי־הַטֶּבַח`; ḫftj `אוֹיֵב` (the euphemism "against the enemies of Re" kept literally); wꜣj "plot evil"
+  `חָרַשׁ (רָעָה)` (Prov 3:29; the parenthesis because Hebrew `חרש` alone is ambiguous); jr.t `עַיִן`; ḫpr `נִהְיָה`;
+  **the aetiological formula ḫpr X pw = `כָּךְ נִהְיָה X`** (pw rendered `כך`; 15, 24, 25, 26, 36, 38–43); jri̯ `עָשָׂה`
+  (jrw "the Maker" `הָעוֹשֶׂה`; jri̯-sw `עוֹשֵׂהוּ`); qmꜣ `יָצַר` (10, `יוֹצְרָיו`); ḥtp `נָח` (39 "the field rests") and
+  **m-ḥtp in the greeting `בְּנַחַת`** (`בּוֹאִי בְּנַחַת`: the ḥtp family stays in נוח (MT 60 `נַחַת`); `שָׁלוֹם` stays wḏꜣ's,
+  which occurs in the same text in the king's blessing); sḫm "gain power" `שָׁלַט` (as AM 20.15), stative `שַׁלִּיט`;
+  jꜣwj `זָקֵן`; qs `עֲצָמוֹת`; ḥꜥ.w `גּוּף` (2, 29); ḫsbḏ `סַפִּיר`; mꜣꜥ "true" `אֲמִתִּי`; snḏ (n.) `יִרְאָה`, snḏ (vb.) `חָשַׁשׁ`;
+  wꜥr `בָּרַח`; ḫꜣs.t `מִדְבָּר`; mꜣꜣ `חָזָה`; ḥmsj `יָשַׁב`; s.t `מָקוֹם` (as AM 6.5); sms(w) `בְּכִיר`; tp.w-ꜥ `קַדְמוֹנִים`;
+  rḫy.t `הָעָם` (as AM 1.12); šnyt `חֲצֵר`; ktkt `בַּחֲשַׁאי`; ḥw.t-ꜥꜣ.t `הַבַּיִת הַגָּדוֹל`; ꜥḥ "palace" `אַרְמוֹן`; sḫr.w `עֵצוֹת`;
+  ḏrj `תַּקִּיף`; dhn tꜣ `נָגַע (בְּמִצְחוֹ) בָּאָרֶץ`; hꜣj `יָרַד`; njs "call" `קָרָא` (renderings §9's HC 3 line; AM 11.6's njs
+  "cry out" `הִכְרִיז` – a split by construction); wpwtj `שָׁלִיחַ`; jnj `הֵבִיא`; jwj `בָּא` (also "return", 6);
+  ddj `אֹדֶם`; ḥnq.t `שֵׁכָר` ★; jt `שְׂעוֹרָה`; ḥm.t "maidservant" `שִׁפְחָה`; šbb.t "mash" `בְּלִיל` (15 "Sekhmet, the mash
+  of the night" and 18 "this mash" – one lemma, one Hebrew, so the prolepsis stays visible); hbn.t `כַּד`; sḏr.t
+  `מַשְׁקֵה־שֵׁנָה` (from sḏr `יָשַׁן`); nḏ "grind" `טָחַן`; tš `כָּתַשׁ`; rḏj "give/let" `נָתַן` (17 "he let X grind"),
+  "put" `שָׂם` (18, 30, 36), jmm `תֵּן`; mkj "protect" **`נָצַר`** (20; `הֵגֵן` is ḫwj's (AM 3.3, PT600), `מְגוֹנֵן` stꜣ's,
+  `שָׁמַר` nḏ's); nfr `טוֹב` / `יָפֶה` by sense; nḏm `נָעִים`; jmꜣ.yt `הַחֲבִיבָה`; ꜣḥ.t `שָׂדֶה`; mḥ "be full" `מָלֵא`;
+  mḥj "be flooded" `מוּצָף` (AM 6.5 mḥw `צָף`); mw `מַיִם`; bꜣ.w `עָצְמָה`; šzp `טֶפַח`, mḥ "cubit" `אַמָּה` (AM 7.14);
+  dwꜣw `בֹּקֶר`; nhp `הִשְׁכִּים`; nfrw-grḥ `תֹּם הַלַּיְלָה`; tḫj `שִׁכּוֹר`; sjꜣ `הִכִּיר` (AM 8.1); swrj `שָׁתָה`;
+  tr "season" `מוֹעֵד` (MT 63); sw "time" `זְמַן`; mḥr `כְּאֵב`/`הִכְאִיב`; hh `לַהַט`; wrd `עָיֵף`/`עֲיֵפוּת`;
+  ꜥnd `מְעַט`, sꜥnd `הִמְעִיט` (15, 28 – one root); ꜥ `זְרוֹעַ`; ꜣhd `תָּשׁוּשׁ`; pḥ "reach, attack" `הִשִּׂיג` (29 `שֶׁיַּשִּׂיג
+  אוֹתִי`, matching MK E138 `תשיג אותי`); bhꜣ `נִרְתַּע`; mrj `אָהַב`; j "say" `נָאַם` (to keep ḏd's `אָמַר` distinct);
+  psḏ "back" `גַּב`; **sꜣ "back" also `גַּב` (36)** – see Open decisions; ḥr sꜣ (44) `עַל גַּבָּהּ`; jḥ.t "cow" `פָּרָה`,
+  jd.t "cow" `עֶגְלָה` (two Egyptian words; Jer 46:20 in the apparatus); kkw `חֹשֶׁךְ`, jḫḫw `דִּמְדּוּמִים`; ḥḏ `הֵאִיר`;
+  pḏ.t `קֶשֶׁת`; ḫt "stick" `מַקֵּל`; fꜣj "lift, carry" `נָשָׂא` (21, 35; see Proposals); stj `שָׁפַךְ` (pour) / `יָרָה` (shoot)
+  – one Egyptian verb, two Hebrew senses, noted at 22 and 35; ḫw "evil deeds" `זִמָּה`; ḥꜣ "around" `סָבִיב` (35) /
+  "behind" `מֵאַחֲרֵי` (48) – split by sense; ḥrj `רָחַק`/`הִתְרַחֵק`; ꜥr `קָרַב`; ḥr.t "sky" `מָרוֹם`; p.tj.w `יוֹשְׁבֵי־הַשָּׁמַיִם`;
+  ẖnw `תּוֹךְ`; grg "equip" `צִיֵּד` (MT 60's grg "found" `יִסֵּד` – a split by sense); ꜥšꜣ `רֹב`; sḫ.t `שָׂדֶה`; sḫ.t-ḥtp
+  `שְׂדֵה־הַקָּרְבָּנוֹת` (§10.8.1); sḫ.t-jꜣrw `שְׂדֵה־הָאַגְמוֹנִים` (`סוּף` is ṯwfj's); rd "make grow" `הִצְמִיחַ`; sm.w `עֵשֶׂב`;
+  jḫjḫ `הָאַחְאַח` (transliterated); sbꜣ `כּוֹכָב`; sdꜣdꜣ `רָעַד`; qꜣj `גָּבַהּ`/`גֹּבַהּ`; ḥwj `הַלְוַאי`; ḥḥ "million"
+  `אַלְפֵי אֲלָפִים`; twꜣ `תָּמַךְ`; zꜣw (active) `שָׁמַר` (AM's zꜣw "beware" `הִשָּׁמֵר` is the same lemma); mnꜥ `אָמַן`
+  (Esth 2:7), mnꜥ.t `אוֹמֶנֶת`; ḥr-tp / ḏꜣḏꜣ both `רֹאשׁ` (tp is "head" itself); rʾ "spell" `לַחַשׁ` (rʾ stays `פֶּה`:
+  a split by sense, like AM's `פִּיּוֹת`); qꜣb.t `חָזֶה`; rꜥy.t `צֶבַע`; psḏ.t (numeral) `תְּשִׁיעִיָּה` (kin to `התשיעייה`);
+  ẖ.t `בֶּטֶן` (also 16 "like the shadow of a body", kept `כְּצֵל הַבֶּטֶן`); pḥ.wj "hindquarters" `אֲחוֹרַיִם` (AM's pḥ.wj
+  "end" `קֵץ` – split by sense); mn.t `יָרֵךְ`; qnj.t `זַרְנִיךְ`; gꜣb "arm" `אַצִּיל` (ꜥ keeps `זְרוֹעַ`); rn `שֵׁם`;
+  wjꜣ "the god's bark" **`צִי` ★** (Isa 33:21; the other ship words are taken, §10.5.2); ḥmy.t "steering oar" `הֶגֶה` ★
+  (ḥmw keeps `מָשׁוֹט`); kꜣrj `מִקְדָּשׁ`; jtn `הָאָטוֹן`; ḏr.t `יָד`; ky-ḏd `נֻסָּח אַחֵר`; mnḏ `עֲטִין`; jꜣbtj `שְׂמָאלִי`;
+  zẖꜣ "drawing" `צִיּוּר`; swt `אֵפוֹא` (§9 sample); jstw `וַהֲרֵי`; m=tn `הִנֵּה`.
+- **Names.** Re `רַא` ★; Nun `נוּן` ★; Shu `שׁוּ` ★; Tefnut `תֶּפְנוּת`; Geb `גֶּבּ` ★; Nut `נוּת` ★; Hathor `חַתְחוֹר`; Sekhmet
+  `סֶחְמֶת`; Heliopolis `אוֹן` ★; **Ꜣbw (Elephantine) `יֵב` ★** – the Semitic form of the same Egyptian name (Aramaic
+  papyri `יב`), not a biblical name, so no false echo; the alternative transliteration `אַבּוּ` rejected as unfamiliar;
+  **Nn-nsw `חָנֵס`** (Isa 30:4, [equivalent]); Jmꜣw `אִימָאוּ`; ḥnsktj `בַּעַל־הַצַּמָּה` ("the one with the side-lock",
+  a Heliopolitan priest; `מַחְלָפוֹת` rejected – Samson's locks); **the Heh gods `אֵלֵי־חֶח` ★** (as the brief proposed);
+  nsw-bjtj `מֶלֶךְ־הַדָּרוֹם־וְהַצָּפוֹן` (§10.9.4); ꜥnḫ-wḏꜣ-snb `חַיִּים, שָׁלוֹם, בְּרִיאוּת` between dashes.
+- **Readings.** 1: m-ḫt "after" (Hornung) and "mankind and gods as one thing" a new clause (Hornung, TLA). 6: jwi̯=j m
+  Nwn `וְאָבוֹא בְּנוּן` (jwj keeps `בָּא`). 9: n smꜣ.n=j "I cannot slay". **15: m sꜥnd.w st = the negative imperative
+  "Do not diminish them!" (TLA)**, against Hornung's "as the one who diminished them". **27: smꜣm=j st sp-n-jwtj =
+  `*לא אהרוג אותם אף פעם*?` (TLA: "nicht einmal (mehr) töten (?)")**, against Hornung's "I will kill them without
+  exception" – italic and `?`; the draft had followed Hornung and was corrected after the TLA, since the TLA's analysis
+  of sp-n-jwtj ("an occasion of nothing" = "never") is the base. 29: the TLA's emendation ⟨zꜣy⟩ "wait" (Hornung reads
+  the written jꜣy "return"). 36: ḥrj šꜥ.t as a statement ("far was slaughter [from the beginning]", TLA), not a wish.
+  45: st? = the ninefold of stars (TLA), not Hornung's emended sd "tail". 44–48: the passive sḏm=f of the instructions
+  as jussive `יֵעָשֶׂה`.
+- **Echo control.** No line has `נחם`, `עצב`, `מחה`, `שחת`, `יֵצֶר`, `מַבּוּל`, `תֵּבָה`, `אֲדָמָה` (verified). Re's "relenting" is
+  rendered by the Egyptian words themselves: "Do not diminish them!" (15), "How good they are! I will protect (`אֶנְצֹר`)
+  mankind from her" (20), "I will never kill them?" (27), and the weariness `לִבִּי עָיֵף מְאֹד מִלִּהְיוֹת עִמָּם` (27).
+  The beer "fills" the fields (`מְלֵאִים מַיִם`, 22); the comparison with the flood is in the notes and the apparatus only.
+- **The §9 sample lines.** HC 1 used as given. HC 3: the sample's `קִרְאוּ לִי אֶת עֵינִי` became `קראו נא לי את עיני`
+  (the particle m-ꜥ "pray" is written, and is `נא` in 16 and 21 too), and the king's blessing after ḥm=f is kept.
+
+### Open decisions for the user
+1. **Column 27** – Re's oath: "I will never kill them (again)?" (TLA's analysis, adopted) or "I will kill them without
+   exception" (Hornung). The first makes 27 the closest Egyptian match of Gen 8:21 ("never again"); the second makes
+   Re's renunciation rest on weariness alone. The translation marks the reading as uncertain.
+2. **Column 15** – "Do not diminish them!" (TLA, adopted) or "(I will rule them) as the one who diminished them"
+   (Hornung). On the first reading Re stops the slaughter before the beer is brewed.
+3. **sꜣ "back" = `גַּב` (36)**, sharing psḏ's word: Hebrew has one natural word for an animal's back (`שֶׁכֶם` is the
+   shoulder, `אֲחוֹרַיִם` undignified, `גֵּו` is AM's ꜣ.t). Alternative: `גֵּו` here and a split with AM.
+4. `צִי` for wjꜣ (the sun's bark) – poetic and unusual; alternative `סְפִינַת־אֵלִים` (two words).
+
+### Progress log
+- 2026-10-23: drafted 1–48 in nine sections, each saved, filled and verified on save (`verify HC` clean throughout;
+  only the missing 49–95 under `--strict`). Placeholder `<!-- טרם תורגם: 49–95 -->` after 48.
+- Pass (a) fidelity: every content word parsed; brackets checked against the base (partial restorations marked inside
+  the word, e.g. `תֶּפְ[נוּת]`, `עינ[ך]`); negations and tenses re-checked – changes: 27 (sp-n-jwtj, see above), 28 `מעט`
+  (tense-neutral after nn-wn), 36 statement not wish, 46/48 instructions as jussive.
+- Pass (b) consistency: the formulas (`אָז אָמַר הוֹד מַלְכוּת X`, `כָּךְ נִהְיָה X`, `הָאֵלָה הַזֹּאת`, `חוֹרְשִׁים (רָעָה)`) checked
+  line by line; every new word grepped (`lex`, `grep --all`) – collisions avoided: mkj (`הגן`/`מגונן`/`שמר` taken → `נצר`),
+  wjꜣ (all ship words taken → `צי`), ḥmy.t (`משוט` is ḥmw's → `הגה`), jꜣrw (`סוף` reserved → `אגמונים`), gꜣb (`זרוע` is ꜥ's →
+  `אציל`), sw "time" (`עת` hꜣw, `יום` hrw, `מועד` tr → `זמן`), nfrw-grḥ (`קץ` pḥ.wj → `תם`).
+- Pass (c) Hebrew: the built `translation-HC.rtl.md` read through; vocalization of ambiguous words added (`אַמָּה` 45,
+  `חֶצְיָם` 48, `בַּעַל־הַצַּמָּה` 18, `הָאֵלֶּה` wherever nṯr stands in the line).
+- `egypt_tools.py build HC`; `verify HC` 0 problems; `verify HC --strict` only the 47 untranslated columns;
+  `check_bible_quotes.py` on the annotated file, the intro and the built translation: 0 problems.
+- `../build_parallels_index.py` was run (at first by accident, with `--help`, which it ignores): it regenerated this
+  file's HC table and added 82 HC rows to `../parallels-index.md` (no other rows changed). Three הקבלה bullets were then
+  rewritten so that each contact has its own verse (13, 15, 29), and the index was rebuilt.
+
+### The text on its own terms
+- **The old god** (2, 27–29): the creator ages – bones of silver, flesh of gold, hair of lapis – and "for the first
+  time" his body is weak; time wears even the gods, and a world whose maker ages is an ageing world (Hornung exc. B).
+- **Kingship as the first order** (1, 7, 19): Re rules as an Egyptian king (cartouche, double crown title, blessing
+  formula, a royal inspection of the brewing); mankind's sin is lèse-majesté, not general wickedness.
+- **Government by council** (4–12): the king will not kill "until I have heard what you will say"; the gods advise,
+  in secret, lest the people panic.
+- **The Eye and the goddess with two faces** (3, 12–15, 23–24): the same goddess is the slaughtering Sekhmet and the
+  "lovely one" of Imau; she is pacified by pleasure, not force – and her pacification becomes a yearly rite (25).
+- **Mercy by ruse** (16–23): no righteous survivor; the remnant is saved by a trick of colour – red ochre in beer –
+  and by the goddess's own drunkenness.
+- **The weariness of God** (27): "my heart is very weary of being with them": the withdrawal of the gods is explained
+  by fatigue, not by anger or regret.
+- **An aetiology of the imperfect world** (31–43): night (34), war and slaughter among men (35–36: "far was
+  slaughter from the beginning"), the separated sky, the fields of the dead, the stars, the props of heaven – all
+  "came into being" in the aftermath of the rebellion.
+- **War in God's name is not God's wish** (35): the loyal men shoot at his enemies, and Re calls them "men of
+  slaughter".
+- **Words make things** (15, 24, 37–41): puns are causes – sḫm → Sekhmet, jmꜣ.yt → Imau, ḥrj → ḥr.t (sky), ḥtp →
+  sḫ.t-ḥtp, jꜣ rd → sḫ.t-jꜣrw, jḫ.t → jḫjḫ, ḥḥ → the Heh gods.
+- **Family gestures hold up the cosmos** (42–43): Shu lifts his daughter Nut like a father lifting his son onto his
+  head; nurses for children are an imitation of the gods.
+- **Myth becomes rite and drawing** (44–48): the story is a "spell" to be spoken over a drawing, with measures,
+  colours and a scribe's "other version" – ancient textual criticism.
+
+### Key parallels
+- [divergence] Gen 6:5–7 (2, 3, 9): mankind's "thought" as the cause, and the god's decision – but Re consults the
+  gods and cannot kill before hearing them; the offence is a plot against the king, not general violence (Gen 6:13).
+- [equivalent] Gen 8:21 (20, 27; 15 [divergence]): the god's renunciation of further killing, here phrased as "I will
+  protect mankind from her" and (TLA) "I will never kill them?" – sworn "as I live"; no regret (`נִחַם`) in the Egyptian.
+- [equivalent] 2 Sam 24:16 (20): God halts the destroying agent he himself sent ("it is enough; stay your hand").
+- [divergence] Gen 7:20 (22): fifteen cubits of killing water over the mountains / three palms of saving beer over the
+  fields; [divergence] Gen 9:21 (23): drunkenness after the catastrophe brings a curse there, salvation here;
+  [equivalent] 1 Sam 25:36 (23): `וְלֵב נָבָל טוֹב עָלָיו וְהוּא שִׁכֹּר` – the same idiom, "good on the heart" and drunk.
+- [equivalent] Gen 11:1 (1): "one thing" / "one language" – a primal unity broken; [equivalent] Gen 11:5, 7 (5, 12–13):
+  the divine council and the descent against mankind.
+- [divergence] Gen 6:6, 6:3; Isa 40:28 (27): the god's heart "weary" (Egypt) / "grieved" (Gen); Isaiah denies that
+  God tires.
+- [divergence] Gen 9:13 (35): after the catastrophe the god hangs up his bow / men go out with bows against men;
+  [equivalent] Gen 9:6 (35): bloodshed among men right after the disaster; [divergence] Gen 4:8 (36): the origin of
+  killing.
+- [divergence] Gen 1:7 (31, 38, 42): the separation of sky from earth – a creation act there, a late consequence of
+  rebellion here; [equivalent] Gen 2:5 (39): field, herbs, "make grow".
+- [divergence] Exod 20:3 (44): an image of what is in the heaven above is here a ritual duty.
+
+### Lines shared with other texts
+None repeats a line of the corpus. Shared vocabulary follows MK (smꜣ `הרג`, sbj `מרד`, kꜣj/kꜣ.t, pḥ `השיג`, ꜥ `זרוע`,
+psḏ `גב`, sm.w `עשב`, kꜣrj `מקדש`) and AM (md.t `דבר`, s.t `מקום`, rḫy.t `העם`, ḥꜥ.w `גוף`, mḥ "cubit" `אמה`, ḥnq.t
+`שֵׁכָר`, dwꜣw `בוקר`, sjꜣ `הכיר`, sḫm `שלט`, jmm `תן`, jtn `האָטוֹן`, zꜣw `שמר`), MT/PT (ḥtp `נח`/`נחת`, tr `מועד`, qꜣj
+`גבה`, sḫ.t-ḥtp `שדה־הקרבנות`). Merikare E132–133 tell the same myth in brief: "he slew his enemies … because of their
+thought of making [rebellion]" – the Cow's `מרד`, `הרג`, `מחשבה`/`חשב` match MK's Hebrew.
+
+### Proposals for the shared renderings
+1. **The Cow's formulas** (for §6): `ḫpr X pw` = `כָּךְ נִהְיָה X` (and gender/number); `ḏd.jn ḥm n X` = `אָז אָמַר הוֹד מַלְכוּת X`;
+   `nṯr.t tn` = `הָאֵלָה הַזֹּאת`; `ḏd.jn=sn ḫft ḥm=f` = `אָז אָמְרוּ נֹכַח הוֹד מַלְכוּתוֹ`; `jy.wj m-ḥtp` = `בּוֹאִי בְּנַחַת`.
+2. **Always vocalized (§5.3):** `צִי` (wjꜣ; unvocalized "fleet"), `הֶגֶה` (ḥmy.t; unvocalized `הגה` "uttered"),
+   `יֵב` (Ꜣbw), `אֵלֵי־חֶח`, `שֵׁכָר` (already), `אַמָּה` where "her mother" is possible.
+3. **Names (§3):** Ꜣbw `יֵב`; Nn-nsw `חָנֵס` [equivalent Isa 30:4]; Jmꜣw `אִימָאוּ`; Ḥḥ.w `אֵלֵי־חֶח`; ḥnsktj `בַּעַל־הַצַּמָּה`;
+   Tefnut `תֶּפְנוּת` (already), Sekhmet, Hathor as §3.1.
+4. **Key terms (§4.4):** md.t "plot" = `דָּבָר` (one lemma); šbb.t `בְּלִיל`; sḏr.t `מַשְׁקֵה־שֵׁנָה`; mkj `נָצַר`; šꜥ.t `טֶבַח`;
+   wꜣj `חָרַשׁ (רָעָה)`; wrd `עָיֵף`; jḥ.t `פָּרָה` / jd.t `עֶגְלָה`; ḥr.t `מָרוֹם`; mnꜥ `אָמַן` / mnꜥ.t `אוֹמֶנֶת`; ḥḥ `אַלְפֵי אֲלָפִים`.
+5. **A collision to settle:** fꜣj "lift, carry" = `נָשָׂא` (21, 35; 4× in the Cow, later "lift the face" = `נשא פנים`, the
+   Hebrew idiom), but PT486 60 renders rmni̯ "carry" `נשא` (`יישאו שתי התשיעיות`), while AM renders rmni̯ `הֵזִיז` in
+   practice. Proposal: fꜣj keeps `נָשָׂא` (the idiom is decisive); PT486's rmni̯ moves to `סָבַל`/`הֵרִים`? or the split is
+   recorded. (`הֵרִים` is wṯs's in PT486.)
+6. **The cow's "back"**: psḏ and sꜣ share `גַּב` (see Open decisions 3).
+
+### Lessons for the guidelines
+- **Check the coverage of every witness before promising variants**: the brief expected Tutankhamun's copy in every
+  column, but it covers only Hornung's verses 202–234 and 306–312 (and AED only its rear wall); a `--wit` printout that
+  shows only a few lines is the first warning.
+- A printout of the rank-3 translation for a whole part tempts reading it before drafting; print `tr` for the
+  section just drafted, not beyond it.
+
 ## Parallels index
-(generated from the הקבלה bullets by `../build_parallels_index.py`)
+Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
+
+### Parallels index (HC)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 1 | [ḫpr] [swt] [wbn] [Rꜥ] nṯr ḫpr-ḏ{d}⟨s⟩≡f m-ḫt wnn =f m nsw,yt r(m)ṯ.pl nṯr.pl m (j)ḫ,t ⟨wꜥ.t⟩ wn.jn ⸢r(m)ṯ⸣[.pl] [ḥr] | [נִהְיָה, אֵפוֹא, שֶׁזָּרַח רַא], הָאֵל שֶׁנִּהְיָה מֵעַצְמוֹ, אחרי שהיה במלוכה – בני האדם וְהָאֵלִים כדבר אחד. ואז היו בני האדם | `וַיְהִי כָל הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים` (בראשית יא:א) | equivalent | "כדבר אחד": אחדות קדמונה שתתפרק במרד (בבראשית יא – אחדות בני האדם בינם לבין עצמם; כאן – בני האדם והאלים יחד) |
+| 1 | [ḫpr] [swt] [wbn] [Rꜥ] nṯr ḫpr-ḏ{d}⟨s⟩≡f m-ḫt wnn =f m nsw,yt r(m)ṯ.pl nṯr.pl m (j)ḫ,t ⟨wꜥ.t⟩ wn.jn ⸢r(m)ṯ⸣[.pl] [ḥr] | [נִהְיָה, אֵפוֹא, שֶׁזָּרַח רַא], הָאֵל שֶׁנִּהְיָה מֵעַצְמוֹ, אחרי שהיה במלוכה – בני האדם וְהָאֵלִים כדבר אחד. ואז היו בני האדם | `וְגַם אַחֲרֵי כֵן אֲשֶׁר יָבֹאוּ בְּנֵי הָאֱלֹהִים אֶל בְּנוֹת הָאָדָם` (בראשית ו:ד) | divergence | גם בבראשית, ממש לפני ההחלטה להשמיד את האדם, אלים ובני אדם מעורבים זה בזה; שם זו תקלה, כאן זה מצב הבראשית התקין. |
+| 2 | [kꜣi̯.t] [md,t] […] md,t r ḫft,j.pl Rꜥ [jstw] r =f ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jꜣwi̯.w qs.pl =f m ḥḏ ḥꜥ,pl =f m nbw šnj =f m ḫsbd ⟨mꜣꜥ⟩ wn⸢.jn⸣ [ḥm] =[f] | [חושבים דבר] […] דבר נגד אויבי רַא, [וַהֲרֵי] הוד מלכותו – חיים, שלום, בריאות – זקן: עצמותיו כסף, גופו זהב, שערו סַפִּיר אמיתי. ואז היה [הוד מלכותו] | `וְכָל יֵצֶר מַחְשְׁבֹת לִבּוֹ רַק רַע כָּל הַיּוֹם` (בראשית ו:ה) | equivalent | מחשבת בני האדם כסיבת העונש; אבל בבראשית הרוע כללי ("כל יצר מחשבות לבו"), וכאן זו מזימה מסוימת נגד המלך |
+| 2 | [kꜣi̯.t] [md,t] […] md,t r ḫft,j.pl Rꜥ [jstw] r =f ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jꜣwi̯.w qs.pl =f m ḥḏ ḥꜥ,pl =f m nbw šnj =f m ḫsbd ⟨mꜣꜥ⟩ wn⸢.jn⸣ [ḥm] =[f] | [חושבים דבר] […] דבר נגד אויבי רַא, [וַהֲרֵי] הוד מלכותו – חיים, שלום, בריאות – זקן: עצמותיו כסף, גופו זהב, שערו סַפִּיר אמיתי. ואז היה [הוד מלכותו] | `וְעַתִּיק יוֹמִין יְתִב לְבוּשֵׁהּ כִּתְלַג חִוָּר וּשְׂעַר רֵאשֵׁהּ כַּעֲמַר נְקֵא` (דניאל ז:ט) | divergence | האל הזקן; בדניאל הזקנה היא הדר ושלטון, כאן היא חולשה שמזמינה מרד |
+| 2 | [kꜣi̯.t] [md,t] […] md,t r ḫft,j.pl Rꜥ [jstw] r =f ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jꜣwi̯.w qs.pl =f m ḥḏ ḥꜥ,pl =f m nbw šnj =f m ḫsbd ⟨mꜣꜥ⟩ wn⸢.jn⸣ [ḥm] =[f] | [חושבים דבר] […] דבר נגד אויבי רַא, [וַהֲרֵי] הוד מלכותו – חיים, שלום, בריאות – זקן: עצמותיו כסף, גופו זהב, שערו סַפִּיר אמיתי. ואז היה [הוד מלכותו] | `רֹאשׁוֹ כֶּתֶם פָּז` (שיר השירים ה:יא); `מֵעָיו עֶשֶׁת שֵׁן מְעֻלֶּפֶת סַפִּירִים` (שיר השירים ה:יד) | equivalent | גוף עשוי זהב ואבני ספיר |
+| 2 | [kꜣi̯.t] [md,t] […] md,t r ḫft,j.pl Rꜥ [jstw] r =f ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jꜣwi̯.w qs.pl =f m ḥḏ ḥꜥ,pl =f m nbw šnj =f m ḫsbd ⟨mꜣꜥ⟩ wn⸢.jn⸣ [ḥm] =[f] | [חושבים דבר] […] דבר נגד אויבי רַא, [וַהֲרֵי] הוד מלכותו – חיים, שלום, בריאות – זקן: עצמותיו כסף, גופו זהב, שערו סַפִּיר אמיתי. ואז היה [הוד מלכותו] | `וְתַחַת רַגְלָיו כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר` (שמות כד:י) | equivalent | הספיר כחומר של האלוהות ושל השמים |
+| 2 | [kꜣi̯.t] [md,t] […] md,t r ḫft,j.pl Rꜥ [jstw] r =f ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jꜣwi̯.w qs.pl =f m ḥḏ ḥꜥ,pl =f m nbw šnj =f m ḫsbd ⟨mꜣꜥ⟩ wn⸢.jn⸣ [ḥm] =[f] | [חושבים דבר] […] דבר נגד אויבי רַא, [וַהֲרֵי] הוד מלכותו – חיים, שלום, בריאות – זקן: עצמותיו כסף, גופו זהב, שערו סַפִּיר אמיתי. ואז היה [הוד מלכותו] | `הוּא צַלְמָא רֵאשֵׁהּ דִּי דְהַב טָב חֲדוֹהִי וּדְרָעוֹהִי דִּי כְסַף` (דניאל ב:לב) | divergence | פסל ממתכות; שם הסדר יורד מזהב לכסף ומסמל שקיעה של ממלכות. |
+| 3 | [ḥr] [sjꜣ] [md,t] [n,t(t])? [kꜣi̯.t(j]) ⸢r⸣ =⸢f⸣ jn r(m)ṯ.pl ḏd.jn ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) n n,tj.w.pl m ḫt,jw.pl =f njs m~ꜥ n =j r jr,t =j r Šw | [מכיר את הדבר אשר נחשב] נגדו בידי בני האדם. אז אמר הוד מלכותו – חיים, שלום, בריאות – אל אשר בעקבותיו: קראו נא לי את עיני, ואת שׁוּ, | `וַיַּרְא יְהוָה כִּי רַבָּה רָעַת הָאָדָם בָּאָרֶץ` (בראשית ו:ה) | divergence | שני האלים "רואים" את רוע האדם; אבל רא מגלה מזימה נגדו עצמו, ומיד מכנס את האלים, ויהוה רואה את הרוע לבדו ומחליט לבדו (ו:ו–ז). |
+| 4 | T⸢f⸣[n,t] ⸢Gb⸣ [Nw],t ḥnꜥ jt.w.pl mw,t.pl wnn.yw.pl ḥnꜥ =j jst(w) wj m Nwn ḥnꜥ gr nṯr ={j} Nwn jnn =f šn,ty =f | וְאֶת תֶּפְ[נוּת], את גֶּבּ ואת [נוּת], עם האבות והאמהות אשר היו עמי כשהייתי בְּנוּן, וגם את האל נוּן; יביא הוא את חצרו | `הָבָה נֵרְדָה וְנָבְלָה שָׁם שְׂפָתָם` (בראשית יא:ז) | divergence | גם בבראשית האל מתייעץ עם פמליה אלוהית לפני שהוא פועל נגד בני האדם; שם הפמליה עלומה ("הבה"), כאן היא נקראת בשמותיה. |
+| 5 | ḥnꜥ =f jnn =k st m ktkt jmi̯ mꜣꜣ r(m)ṯ.pl jmi̯ wꜥr jb =sn jy =⸢k⸣ ⸢ḥnꜥ⸣ =⸢s⸣n r ḥw,t-ꜥꜣ(.t) ḏd =sn sḫr.w.pl =sn ḏr(j).w{t}.pl | עמו. תביא אותם בחשאי, לבל יחזו בני האדם, לבל יברח לבם. תבוא עמם אל הבית הגדול, ויאמרו את עצותיהם התקיפות, | `וַיֵּרֶד יְהוָה לִרְאֹת אֶת הָעִיר וְאֶת הַמִּגְדָּל` (בראשית יא:ה) | divergence | האל של בראשית יורד לראות את בני האדם; כאן האלים מתכנסים בסתר כדי שבני האדם לא יראו אותם. |
+| 6 | jwi̯ =j m Nwn r bw ḫpr.n =j jm jni̯{≡j}.jn =tw nn-n nṯr.pl [ḥr-ꜥ,wj] [ꜥḥꜥ].⸢j⸣[n]? nn-n nṯr.pl jpn ḥr gs(.wj) =fj ḥr dhn tꜣ m-bꜣḥ | ואבוא בְּנוּן, אל המקום שנהייתי שם. אז הובאו הָאֵלִים הָאֵלֶּה [מיד]; [אז עמדו]? הָאֵלִים הָאֵלֶּה משני צדדיו, נוגעים (במצחם) בארץ לפני | `וְכָל צְבָא הַשָּׁמַיִם עֹמֵד עָלָיו מִימִינוֹ וּמִשְּׂמֹאלוֹ` (מלכים א כב:יט) | equivalent | מועצת האלים העומדת משני צדי המלך היושב (במלכים – בחזון; כאן – בסיפור) |
+| 6 | jwi̯ =j m Nwn r bw ḫpr.n =j jm jni̯{≡j}.jn =tw nn-n nṯr.pl [ḥr-ꜥ,wj] [ꜥḥꜥ].⸢j⸣[n]? nn-n nṯr.pl jpn ḥr gs(.wj) =fj ḥr dhn tꜣ m-bꜣḥ | ואבוא בְּנוּן, אל המקום שנהייתי שם. אז הובאו הָאֵלִים הָאֵלֶּה [מיד]; [אז עמדו]? הָאֵלִים הָאֵלֶּה משני צדדיו, נוגעים (במצחם) בארץ לפני | `וַיָּבֹאוּ אֲחֵי יוֹסֵף וַיִּשְׁתַּחֲווּ לוֹ אַפַּיִם אָרְצָה` (בראשית מב:ו) | equivalent | ההשתחוויה של נוגעים בארץ, ובמצרים דווקא. |
+| 7 | ḥm =f ḏd =f md,t =f m-bꜣḥ jt ={j} sms,w.pl jri̯ r(m)ṯ.pl nsw ⸢r⸣[ḫ],yt.pl ḏd.jn =sn ḫft ḥm =f mdwi̯{.pl} | הוד מלכותו, כדי שיאמר את דברו לפני אבי הבכירים, אשר עשה את בני האדם, מלך העם. אז אמרו נוכח הוד מלכותו: דַּבֵּר | — | — | — |
+| 8 | n =n r sḏm.t =n st ḏd.jn Rꜥ n Nwn nṯr sms ḫpr.n =j jm =f nṯr.pl dp-ꜥ.pl m =tn r(m)ṯ.pl ḫpr.w.pl | אלינו, עד שנשמע אותו! אז אמר רַא אל נוּן: האל הבכיר, אשר נהייתי ממנו, הָאֵלִים הקדמונים! הנה, בני האדם, אשר נהיו | `דַּבֵּר אַתָּה עִמָּנוּ וְנִשְׁמָעָה` (שמות כ:טו) | equivalent | "דבר אלינו – ונשמע"; שם העם מבקש מתווך כדי לא לשמוע את האל, כאן האלים מבקשים לשמוע את רא עצמו. |
+| 9 | m jr,t =j kꜣi̯.n =sn md,t r =j ḏd.pl n =j jr,t.pl =tn r =s m =tn wj ḥḥj =j n smꜣ.n =j st r sḏm.ṱ =j ḏ[d].tj =tn | מעיני – חשבו דבר נגדי! אמרו לי מה תעשו לו; הנה אני מבקש (עצה): לא אוכל להרוג אותם עד שאשמע את אשר תאמרו | `וַיֹּאמֶר יְהוָה אֶמְחֶה אֶת הָאָדָם אֲשֶׁר בָּרָאתִי` (בראשית ו:ז) | divergence | ההחלטה להשמיד את בני האדם שהאל עשה; בבראשית יהוה מחליט לבדו ובבת אחת, ורא "אינו יכול להרוג" לפני שישמע את עצת האלים |
+| 9 | m jr,t =j kꜣi̯.n =sn md,t r =j ḏd.pl n =j jr,t.pl =tn r =s m =tn wj ḥḥj =j n smꜣ.n =j st r sḏm.ṱ =j ḏ[d].tj =tn | מעיני – חשבו דבר נגדי! אמרו לי מה תעשו לו; הנה אני מבקש (עצה): לא אוכל להרוג אותם עד שאשמע את אשר תאמרו | `קֵץ כָּל בָּשָׂר בָּא לְפָנַי כִּי מָלְאָה הָאָרֶץ חָמָס מִפְּנֵיהֶם` (בראשית ו:יג) | divergence | בבראשית הסיבה היא "חמס" בין בני האדם, כאן – מזימה נגד האל המלך. |
+| 10 | r =s ḏd.jn ḥm n Nwn zꜣ =j Rꜥ nṯr ꜥꜣ r jri̯-sw wr r qmꜣ.yw.pl-sw ḥmsi̯ s,t =[k] | עליו. אז אמר הוד מלכות נוּן: בני רַא, האל הגדול מעושהו, הגדול מיוצריו – שב במקומ[ך]! | `יוֹשֵׁב בַּשָּׁמַיִם יִשְׂחָק` (תהלים ב:ד) | divergence | האל היושב על כסאו מול קושרים נגדו; במזמור הוא צוחק, כאן הוא מתייעץ. |
+| 11 | wr snḏ =k jw jr,t =k r wꜣi̯.yw.pl jm =k ḏd.jn ḥm n Rꜥ m =tn st wꜥr r ḫꜣs,t jb.pl =sn snd.w ḥr ⸢ḏ⸣[d] =[j] | גדולה יראתך, כשעינך (פונה) אל החורשים (רעה) עליך! אז אמר הוד מלכות רַא: הנה, הם ברחו אל המדבר, לבותיהם חוששים מפני מה ש[אמרתי] | `אַל-תַּחֲרֹשׁ עַל-רֵעֲךָ רָעָה` (משלי ג:כט) | equivalent | *wꜣj* "לחרוש רעה": העברית מן המקרא, `חרש (רעה) על`, משום שזו המלה הטבעית |
+| 11 | wr snḏ =k jw jr,t =k r wꜣi̯.yw.pl jm =k ḏd.jn ḥm n Rꜥ m =tn st wꜥr r ḫꜣs,t jb.pl =sn snd.w ḥr ⸢ḏ⸣[d] =[j] | גדולה יראתך, כשעינך (פונה) אל החורשים (רעה) עליך! אז אמר הוד מלכות רַא: הנה, הם ברחו אל המדבר, לבותיהם חוששים מפני מה ש[אמרתי] | `כִּי עָלָיו שָׁאוּל מַחֲרִישׁ הָרָעָה` (שמואל א כג:ט) | equivalent | מזימה נגד מלך (דוד), כמו כאן. |
+| 12 | [n] =sn ḏd.jn =sn ḫft ḥm =f ḏi̯? šmi̯ jr,t =k ḥ{ꜣ}⟨m⟩w? =s n =k stj wꜣi̯.pl m ḏw.pl nn jr,t ḫnt,j(.t) jm =[s] [r] [ḥwi̯.t] [n] =[k] [st] | [ל]הם. אז אמרו נוכח הוד מלכותו: תן? שתלך עינך ותכתוש? לך אותם, החורשים (רעה) כרעים; אין עין עדיפה ממנה [להכות אותם לך]. | `הָבָה נֵרְדָה וְנָבְלָה שָׁם שְׂפָתָם` (בראשית יא:ז) | equivalent | המועצה האלוהית ממליצה על ירידה ועל פעולה נגד בני האדם (ההמשך, "ותרד כחתחור", בעמודה הבאה). |
+| 13 | hꜣi̯ =s m Ḥw,t-Ḥr,w jwi̯.jn r =f ntr,t tn smꜣm.n =s r(m)ṯ.pl ḥr ḫꜣs,t ḏd.jn ḥm n nṯr pn jyj.wj m-ḥtp Ḥw,t-Ḥr,w jri̯.t n jr[,w] [jy.n] =[j] [r] =[s] | ותרד כְּחַתְחוֹר! אז באה הָאֵלָה הזאת, אחרי שהרגה את בני האדם במדבר. אז אמר הוד מלכות האל הזה: בואי בנחת, חתחור, העושה לעושה [כאשר באתי אליה]! | `הָבָה נֵרְדָה` (בראשית יא:ז) | equivalent | ירידת האלוהות כדי להעניש את בני האדם |
+| 13 | hꜣi̯ =s m Ḥw,t-Ḥr,w jwi̯.jn r =f ntr,t tn smꜣm.n =s r(m)ṯ.pl ḥr ḫꜣs,t ḏd.jn ḥm n nṯr pn jyj.wj m-ḥtp Ḥw,t-Ḥr,w jri̯.t n jr[,w] [jy.n] =[j] [r] =[s] | ותרד כְּחַתְחוֹר! אז באה הָאֵלָה הזאת, אחרי שהרגה את בני האדם במדבר. אז אמר הוד מלכות האל הזה: בואי בנחת, חתחור, העושה לעושה [כאשר באתי אליה]! | `וַיִּמַח אֶת כָּל הַיְקוּם אֲשֶׁר עַל פְּנֵי הָאֲדָמָה` (בראשית ז:כג) | divergence | ההשמדה; במבול היא כוללת ומסופרת בפירוט, כאן היא חלקית (רק "במדבר") ומסופרת בחצי משפט |
+| 13 | hꜣi̯ =s m Ḥw,t-Ḥr,w jwi̯.jn r =f ntr,t tn smꜣm.n =s r(m)ṯ.pl ḥr ḫꜣs,t ḏd.jn ḥm n nṯr pn jyj.wj m-ḥtp Ḥw,t-Ḥr,w jri̯.t n jr[,w] [jy.n] =[j] [r] =[s] | ותרד כְּחַתְחוֹר! אז באה הָאֵלָה הזאת, אחרי שהרגה את בני האדם במדבר. אז אמר הוד מלכות האל הזה: בואי בנחת, חתחור, העושה לעושה [כאשר באתי אליה]! | `וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהוָה` (בראשית ו:ח) | absent | אין כאן "נח" צדיק, ואין סיבה מוסרית לבחירת השורדים (ההצלה תבוא בתחבולה, עמודות 16–22). |
+| 14 | ḏd{≡j}.jn nṯr,t tn ꜥnḫ =k n =j jw sḫm.n =j m r(m)ṯ.pl jw nḏm ḥr jb =j ḏd.jn ḥm n Rꜥ jw =j r sḫm jm =sn [m] [nsw] | אז אמרה הָאֵלָה הזאת: חי אתה לי! שלטתי בבני האדם, ונעים (היה) על לבי. אז אמר הוד מלכות רַא: אשלוט בהם [כמלך]. | `חֵי נַפְשְׁךָ אֲדֹנִי` (שמואל א א:כו) | equivalent | שבועה בחיי השומע |
+| 14 | ḏd{≡j}.jn nṯr,t tn ꜥnḫ =k n =j jw sḫm.n =j m r(m)ṯ.pl jw nḏm ḥr jb =j ḏd.jn ḥm n Rꜥ jw =j r sḫm jm =sn [m] [nsw] | אז אמרה הָאֵלָה הזאת: חי אתה לי! שלטתי בבני האדם, ונעים (היה) על לבי. אז אמר הוד מלכות רַא: אשלוט בהם [כמלך]. | `וְלֹא אֹסִף עוֹד לְהַכּוֹת אֶת כָּל חַי כַּאֲשֶׁר עָשִׂיתִי` (בראשית ח:כא) | divergence | גם רא חוזר בו מן ההרג (בעמודה הבאה: "אל תמעיטי אותם!"), אבל כאן התשובה היא מלכות ("אשלוט בהם"), לא הבטחה לעולם. |
+| 15 | m sꜥnd.w st ḫpr Sḫm,t pw šbb,t n.t grḥ r rh⟨n⟩i̯.t ḥr snf =sn šꜣꜥ{≡j}-m Nn-nsw ḏd.jn [Rꜥ] | אל תמעיטי אותם! כך נהייתה סֶחְמֶת, בְּלִיל הלילה, לדשדש בדמם, החל מֵחָנֵס. אז אמר [רַא]: | `וְיֵז נִצְחָם עַל בְּגָדַי` (ישעיהו סג:ג) | equivalent | האל הנוקם המדשדש בדם העמים, כבגת |
+| 15 | m sꜥnd.w st ḫpr Sḫm,t pw šbb,t n.t grḥ r rh⟨n⟩i̯.t ḥr snf =sn šꜣꜥ{≡j}-m Nn-nsw ḏd.jn [Rꜥ] | אל תמעיטי אותם! כך נהייתה סֶחְמֶת, בְּלִיל הלילה, לדשדש בדמם, החל מֵחָנֵס. אז אמר [רַא]: | `וּמַלְאָכָיו חָנֵס יַגִּיעוּ` (ישעיהו ל:ד) | equivalent | חָנֵס, אותה עיר (*Nn-nsw*, הרקלאופוליס) |
+| 15 | m sꜥnd.w st ḫpr Sḫm,t pw šbb,t n.t grḥ r rh⟨n⟩i̯.t ḥr snf =sn šꜣꜥ{≡j}-m Nn-nsw ḏd.jn [Rꜥ] | אל תמעיטי אותם! כך נהייתה סֶחְמֶת, בְּלִיל הלילה, לדשדש בדמם, החל מֵחָנֵס. אז אמר [רַא]: | `וְלֹא אֹסִף עוֹד לְהַכּוֹת אֶת כָּל חַי` (בראשית ח:כא) | divergence | "אל תמעיטי אותם" (לפי ה־TLA) הוא הרגע שבו רא עוצר את ההרג – לא חרטה (העברית אינה אומרת `נִחַם`: המצרית אינה אומרת אותו), אלא פקודה לאלה לא להוסיף. |
+| 16 | njs.pl m~ꜥ n =j wpw,tj.w.pl ḫꜣḫ,w.pl sjn.w.pl sḫs{≡j} =sn ⟨mj⟩ šw,t n ẖ,t jni̯.jn =tw nn-n wpw,tj[.w.pl] [jpn] | קראו נא לי שליחים, זריזים, רצים, וימהרו כצל הבטן! אז הובאו השליחים [האלה] | — | — | — |
+| 17 | ḥr-ꜥ,wj ḏd.jn ḥm n nṯr pn šꜣs n r Jꜣbw jni̯.pl n =j ddj,t r-wr jni̯.jn =tw n =f nn-n ddj,tj rḏi̯{.t}.jn [ḥm] [n] [nṯr] [pn] [ꜥꜣ] | מיד. אז אמר הוד מלכות האל הזה: רוצו אל יֵב, הביאו לי אֹדֶם לרוב! אז הובא לו האודם הזה. אז נתן [הוד מלכות האל הגדול הזה] | `מִמִּגְדֹּל סְוֵנֵה וְעַד גְּבוּל כּוּשׁ` (יחזקאל כט:י) | equivalent | סְוֵנֵה (אסואן), שכנתה של יֵב: הקצה הדרומי של מצרים, גבולה מול כוש. |
+| 18 | [ḥn]sk,tt(j) n,tj m Jwn,w ḥr nḏ ddj,tj jpn jstw gr ḥm,t.pl ḥr tš jt r ḥ(n)q,t rḏi̯.jn =tw ddj,tj jpn ḥr šbb,t tn [wn.jn] [mj] [sn]f | את בַּעַל־הַצַּמָּה אשר בְּאוֹן לטחון את האודם הזה; והרי גם השפחות כותשות שעורה לַשֵּׁכָר. אז שמו את האודם הזה בַּבְּלִיל הזה, [ואז היה כדם] | `וּבְדַם עֲנָבִים סוּתֹה` (בראשית מט:יא) | equivalent | משקה אדום כ"דם" |
+| 18 | [ḥn]sk,tt(j) n,tj m Jwn,w ḥr nḏ ddj,tj jpn jstw gr ḥm,t.pl ḥr tš jt r ḥ(n)q,t rḏi̯.jn =tw ddj,tj jpn ḥr šbb,t tn [wn.jn] [mj] [sn]f | את בַּעַל־הַצַּמָּה אשר בְּאוֹן לטחון את האודם הזה; והרי גם השפחות כותשות שעורה לַשֵּׁכָר. אז שמו את האודם הזה בַּבְּלִיל הזה, [ואז היה כדם] | `אַשְׁכִּיר חִצַּי מִדָּם` (דברים לב:מב) | equivalent | האל המשכר את נשקו בדם; כאן ההפך: הדם האמיתי מוחלף במשקה משכר שנראה כדם. |
+| 19 | n r(m)ṯ.pl jri̯{.t}.jn =tw ḥ(n)q,t hbn,t 7000 jwi̯.jn r =f ḥm n nsw-byt Rꜥ ḥnꜥ nṯr.pl jpn r mꜣꜣ nn-n ḥ(n)q,t jstw ⸢ḥḏ⸣ ⸢tꜣ⸣ | בני האדם. אז עשו שֵׁכָר: שבעת אלפים כדים. אז בא הוד מלכות מֶלֶךְ־הַדָּרוֹם־וְהַצָּפוֹן רַא, עם הָאֵלִים הָאֵלֶּה, לחזות בַּשֵּׁכָר הזה. והרי האירה הארץ | `חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם` (בראשית ז:כ) | divergence | מספרים גדולים ומדויקים בתיאור הנוזל שיכסה את הארץ (ראו עמודה 22). |
+| 20 | n smꜣmꜣ r(m)ṯ.pl jn nṯr,t m sw.pl =sn n.w ḫnty.t ḏd-mdw jn ḥm n Rꜥ nf{j}r.wj stj jw =j r mki̯.t | להריגת בני האדם בידי הָאֵלָה, בזמניהם של ההפלגה דרומה. דברים לאמר מֵאֵת הוד מלכות רַא: מה טובים הם! אנצור | `וְלֹא אֹסִף עוֹד לְהַכּוֹת אֶת כָּל חַי כַּאֲשֶׁר עָשִׂיתִי` (בראשית ח:כא) | equivalent | ההחלטה להציל את שארית בני האדם; כאן היא נאמרת לפני הפעולה ובלשון של מגן ("אנצור"), לא בלשון חרטה |
+| 20 | n smꜣmꜣ r(m)ṯ.pl jn nṯr,t m sw.pl =sn n.w ḫnty.t ḏd-mdw jn ḥm n Rꜥ nf{j}r.wj stj jw =j r mki̯.t | להריגת בני האדם בידי הָאֵלָה, בזמניהם של ההפלגה דרומה. דברים לאמר מֵאֵת הוד מלכות רַא: מה טובים הם! אנצור | `וַיֹּאמֶר לַמַּלְאָךְ הַמַּשְׁחִית בָּעָם רַב עַתָּה הֶרֶף יָדֶךָ` (שמואל ב כד:טז) | equivalent | האל עוצר את השליח־המשחית שהוא עצמו שלח, באמצע ההרג |
+| 20 | n smꜣmꜣ r(m)ṯ.pl jn nṯr,t m sw.pl =sn n.w ḫnty.t ḏd-mdw jn ḥm n Rꜥ nf{j}r.wj stj jw =j r mki̯.t | להריגת בני האדם בידי הָאֵלָה, בזמניהם של ההפלגה דרומה. דברים לאמר מֵאֵת הוד מלכות רַא: מה טובים הם! אנצור | `וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהוָה` (בראשית ו:ח) | absent | אין כאן שורד נבחר: רא מציל את "בני האדם" שנותרו, כולם. |
+| 21 | r(m)ṯ.pl ḥr =s ḏd.jn Rꜥ fꜣ⸢y⸣.pl m~ꜥ stj r bw {ꜣ}⟨ḏd⟩.n =s smꜣ =j r(m)ṯ.pl jm ⟨n⟩hp.jn ḥm n nsw-byt Rꜥ | את בני האדם מפניה! אז אמר רַא: שאו נא אותם אל המקום שאמרה: אהרוג שם את בני האדם! אז השכים הוד מלכות מלך־הדרום־והצפון רַא | `וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר` (בראשית כב:ג) | equivalent | השכמה לקראת מעשה מכריע, בשני המקומות גם מעשה של הצלה מהרג. |
+| 22 | m nfr,w-grḥ r rḏi̯.t stt.tw nn-n sḏr,t wn.jn ꜣḥ,t.pl n,tj šzp 3 mḥ(.tj) m mw m bꜣ,w n ḥm n nṯr pn šmi̯{.t}.jn | בְּתֹם הלילה, לתת שיישפכו משקאות־השינה הָאֵלֶּה. ואז היו השדות – שלושה טפחים – מלאים מים, בעצמת הוד מלכות האל הזה. אז הלכה | `חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם` (בראשית ז:כ) | divergence | כאן הנוזל מגיע לשלושה טפחים בלבד מעל השדות, והוא מציל ולא ממית; הסצנה מושווית לעתים קרובות למבול, אבל השכר אינו מבול: השדות "מלאים", והמצרית אינה אומרת שהשכר "גבר" או "כיסה" דבר |
+| 22 | m nfr,w-grḥ r rḏi̯.t stt.tw nn-n sḏr,t wn.jn ꜣḥ,t.pl n,tj šzp 3 mḥ(.tj) m mw m bꜣ,w n ḥm n nṯr pn šmi̯{.t}.jn | בְּתֹם הלילה, לתת שיישפכו משקאות־השינה הָאֵלֶּה. ואז היו השדות – שלושה טפחים – מלאים מים, בעצמת הוד מלכות האל הזה. אז הלכה | `וְיַיִן יְשַׂמַּח לְבַב-אֱנוֹשׁ` (תהלים קד:טו) | divergence | המשקה המשמח והמרדים. |
+| 23 | ntr,t tn m dwꜣ,wj gmi̯.n =s nn-n ḥr mḥi̯.t nfr.jn ḥr =st jm wn.jn =st ḥr swrj nfr ḥr jb =st jy.n =s tḫj.tj nn | הָאֵלָה הזאת בבוקר, ומצאה את אֵלֶּה מוצפים. אז יפו פניה בכך, ואז שתתה, וטוב (היה) על לבה; באה שיכורה, ולא | `וְלֵב נָבָל טוֹב עָלָיו וְהוּא שִׁכֹּר עַד מְאֹד` (שמואל א כה:לו) | equivalent | אותו ביטוי עצמו: "טוב על לבו" ושכרות |
+| 23 | ntr,t tn m dwꜣ,wj gmi̯.n =s nn-n ḥr mḥi̯.t nfr.jn ḥr =st jm wn.jn =st ḥr swrj nfr ḥr jb =st jy.n =s tḫj.tj nn | הָאֵלָה הזאת בבוקר, ומצאה את אֵלֶּה מוצפים. אז יפו פניה בכך, ואז שתתה, וטוב (היה) על לבה; באה שיכורה, ולא | `וַיֹּאכַל בֹּעַז וַיֵּשְׁתְּ וַיִּיטַב לִבּוֹ` (רות ג:ז) | equivalent |  |
+| 23 | ntr,t tn m dwꜣ,wj gmi̯.n =s nn-n ḥr mḥi̯.t nfr.jn ḥr =st jm wn.jn =st ḥr swrj nfr ḥr jb =st jy.n =s tḫj.tj nn | הָאֵלָה הזאת בבוקר, ומצאה את אֵלֶּה מוצפים. אז יפו פניה בכך, ואז שתתה, וטוב (היה) על לבה; באה שיכורה, ולא | `וַיֵּשְׁתְּ מִן הַיַּיִן וַיִּשְׁכָּר` (בראשית ט:כא) | divergence | גם אחרי המבול באה שכרות: אצל נח היא מביאה קללה, כאן – הצלה. |
+| 24 | sjꜣ.n =s r(m)ṯ.pl ḏd.jn ḥm n Rꜥ n nṯr,t tn jy.t.wj m-ḥtp jmꜣ,yt ḫpr nfr,t{.pl} m Jmꜣ,pl ⟨pw⟩ ḏd.jn ḥm n Rꜥ | יכלה להכיר את בני האדם. אז אמר הוד מלכות רַא אל הָאֵלָה הזאת: בואי בנחת, החביבה! כך נהייתה היפה באִימָאוּ. אז אמר הוד מלכות רַא | — | — | — |
+| 25 | n ntr,t tn jri̯(.w) n =st sḏr,t m tr.w.pl (n) rnp,t jp{n}(.w) =st r ḥm,t.pl ={j} ḫpr jri̯.t sḏr,t pw m ⟨jp-ḥm,t(≡s)⟩? ḥb n Ḥw,t-Ḥr,w | אל הָאֵלָה הזאת: ייעשה לה משקה־שינה במועדי השנה, ויוקצה לשפחות. כך נהייתה עשיית משקה־השינה *כהקצאת־השפחות*?, חג חַתְחוֹר, | — | — | — |
+| 26 | jn r(m)ṯ.pl nb(.w) ḏr hrw dp,j ḏd.jn ḥm n Rꜥ n ntr,t tn jn jw mḥr.n hh n mḥr ḫpr ḫr⟨,t⟩? trj {j}⟨p⟩w | בידי כל בני האדם, מן היום הראשון. אז אמר הוד מלכות רַא אל הָאֵלָה הזאת: האם הכאיב (לך) להט הכאב? כך נהיה, אָכֵן?, *הצורך*? | — | — | — |
+| 27 | jn mḥr ḏd.jn ḥm n Rꜥ ꜥnḫ =j n =j jw jb =j wrd.w wr r wnn ḥnꜥ =sn smꜣm =j st sp-n-jwtj ={j} nn-wn | בידי הכאב. אז אמר הוד מלכות רַא: חי אני לי! לבי עייף מאוד מלהיות עמם. *לא אהרוג אותם אף פעם*?; לא | `וְלֹא אֹסִף עוֹד לְהַכּוֹת אֶת כָּל חַי כַּאֲשֶׁר עָשִׂיתִי` (בראשית ח:כא) | equivalent | לפי קריאת ה־TLA, "לא אהרוג אותם אף פעם" הוא הוויתור המפורש של האל על הרג נוסף, כמו בבראשית אחרי המבול (ובשני המקומות הוויתור נאמר בלבו או בשבועה: "ויאמר יהוה אל לבו" / "חי אני לי"); לפי הורנונג – ההפך |
+| 27 | jn mḥr ḏd.jn ḥm n Rꜥ ꜥnḫ =j n =j jw jb =j wrd.w wr r wnn ḥnꜥ =sn smꜣm =j st sp-n-jwtj ={j} nn-wn | בידי הכאב. אז אמר הוד מלכות רַא: חי אני לי! לבי עייף מאוד מלהיות עמם. *לא אהרוג אותם אף פעם*?; לא | `וַיִּתְעַצֵּב אֶל לִבּוֹ` (בראשית ו:ו) | divergence | ההחלטה נובעת ממצב הלב של האל: בבראשית הלב "מתעצב", כאן הוא "עייף מאוד מלהיות עמם" |
+| 27 | jn mḥr ḏd.jn ḥm n Rꜥ ꜥnḫ =j n =j jw jb =j wrd.w wr r wnn ḥnꜥ =sn smꜣm =j st sp-n-jwtj ={j} nn-wn | בידי הכאב. אז אמר הוד מלכות רַא: חי אני לי! לבי עייף מאוד מלהיות עמם. *לא אהרוג אותם אף פעם*?; לא | `לֹא יָדוֹן רוּחִי בָאָדָם לְעֹלָם` (בראשית ו:ג) | divergence | האל שאינו רוצה עוד להיות עם בני האדם; בבראשית הפתרון הוא קיצור ימיהם, כאן – הסתלקות האל עצמו (עמודות 29–34) |
+| 27 | jn mḥr ḏd.jn ḥm n Rꜥ ꜥnḫ =j n =j jw jb =j wrd.w wr r wnn ḥnꜥ =sn smꜣm =j st sp-n-jwtj ={j} nn-wn | בידי הכאב. אז אמר הוד מלכות רַא: חי אני לי! לבי עייף מאוד מלהיות עמם. *לא אהרוג אותם אף פעם*?; לא | `לֹא יִיעַף וְלֹא יִיגָע` (ישעיהו מ:כח) | divergence | ישעיהו מכחיש במפורש את העייפות של האל, שהיא כאן מניע הסיפור |
+| 27 | jn mḥr ḏd.jn ḥm n Rꜥ ꜥnḫ =j n =j jw jb =j wrd.w wr r wnn ḥnꜥ =sn smꜣm =j st sp-n-jwtj ={j} nn-wn | בידי הכאב. אז אמר הוד מלכות רַא: חי אני לי! לבי עייף מאוד מלהיות עמם. *לא אהרוג אותם אף פעם*?; לא | `וְעַד זִקְנָה אֲנִי הוּא וְעַד שֵׂיבָה אֲנִי אֶסְבֹּל` (ישעיהו מו:ד) | divergence | האל של ישעיהו נושא את עמו עד זקנתו; רא הזקן מבקש להינשא. |
+| 28 | ꜥnd ꜣw,t ꜥ =j ḏd.t.n nṯr.pl n,tj.w m-ḫt =f m bh(ꜣ)? m wrd,pl =k jw =k sḫm.tj m mrr,t.pl =k ḏd.jn ḥm [n] | מעט מרחב זרועי. ומה שאמרו הָאֵלִים אשר אחריו: אל תירתע בעייפותך, ושליט אתה בכל אשר תאהב! אז אמר הוד מלכות | — | — | — |
+| 29 | nṯr pn n ḥm n Nwn ḥꜥ,pl =j ꜣhd(.w) m sp dp,j nn {jꜣy}? ⟨zꜣy⟩? =j r pḥ.t wj ky ḏd.jn ḥm n Nwn zꜣ Šw jr,t =[k] | האל הזה אל הוד מלכות נוּן: גופי תשוש – בפעם הראשונה; לא אמתין? עד שישיג אותי אחר. אז אמר הוד מלכות נוּן: בני שׁוּ, עינ[ך] | `וְעַתָּה פֶּן יִשְׁלַח יָדוֹ וְלָקַח גַּם מֵעֵץ הַחַיִּים` (בראשית ג:כב) | divergence | גם בבראשית חשש אלוהי מפני בני אדם שישיגו את מקום האלים; שם האדם מגורש, כאן האל מסתלק. |
+| 30 | n jt =[k] ⸢m⸣ nḏ,pl =f zꜣ,t Nw,t ḏi̯ =t sw [ḥr] [psḏ] =[ṯ] ḏd.jn Nw,t mj m jr =f jt =j Nwn j.jn Nw,t | לאבי[ך] למשמר לו! ובתי נוּת – תשימי אותו [על גבך]! אז אמרה נוּת: איך זה, אבי נוּן? נאמה נוּת: | `וְהֵבִיאוּ בָנַיִךְ בְּחֹצֶן וּבְנֹתַיִךְ עַל כָּתֵף תִּנָּשֶׂאנָה` (ישעיהו מט:כב) | equivalent | נשיאה על הגב או על הכתף כדימוי של טיפול |
+| 30 | n jt =[k] ⸢m⸣ nḏ,pl =f zꜣ,t Nw,t ḏi̯ =t sw [ḥr] [psḏ] =[ṯ] ḏd.jn Nw,t mj m jr =f jt =j Nwn j.jn Nw,t | לאבי[ך] למשמר לו! ובתי נוּת – תשימי אותו [על גבך]! אז אמרה נוּת: איך זה, אבי נוּן? נאמה נוּת: | `אֲשֶׁר נְשָׂאֲךָ יְהוָה אֱלֹהֶיךָ כַּאֲשֶׁר יִשָּׂא אִישׁ אֶת בְּנוֹ` (דברים א:לא) | equivalent | אצלנו בנה של האל נושא את אביה של האלה: התפקידים הפוכים. |
+| 31 | ⸢m⸣ _ ⸢Nwn⸣ ḫpr ⸢Nw,t⸣ [m] [jḥ,t] [__].jn swt ḥm n Rꜥ ḥr psḏ =s [jwi̯.t] pw jri̯.n nn-n r(m)ṯ.pl | אל […], נוּן! ונהייתה נוּת [לפרה]; אז […] אפוא הוד מלכות רַא על גבה. אז [באו] בני האדם הָאֵלֶּה | `עֶגְלָה יְפֵה פִיָּה מִצְרָיִם` (ירמיהו מו:כ) | equivalent | מצרים כפרה בעיני נביא ישראל (ובעמודה 34 המלה המצרית האחרת לפרה, `עֶגְלָה`) |
+| 31 | ⸢m⸣ _ ⸢Nwn⸣ ḫpr ⸢Nw,t⸣ [m] [jḥ,t] [__].jn swt ḥm n Rꜥ ḥr psḏ =s [jwi̯.t] pw jri̯.n nn-n r(m)ṯ.pl | אל […], נוּן! ונהייתה נוּת [לפרה]; אז […] אפוא הוד מלכות רַא על גבה. אז [באו] בני האדם הָאֵלֶּה | `וַיַּבְדֵּל בֵּין הַמַּיִם אֲשֶׁר מִתַּחַת לָרָקִיעַ וּבֵין הַמַּיִם אֲשֶׁר מֵעַל לָרָקִיעַ` (בראשית א:ז) | divergence | הפרדת השמים; בבראשית היא מעשה בריאה ביום השני, כאן – מאוחרת, תוצאה של המרד ושל עייפות האל. |
+| 32 | [m]? [bw]? [wꜥr.n]? =[sn]? [r]? =[f]? ꜥḥꜥ⟨.n⟩ mꜣꜣ.n =sn ⸢sw⸣ ḥr psd n [j]ḥ,t [ꜥḥꜥ⟨.n]⟩ ḏd.n n =f nn-n | [מן המקום שברחו אליו]?, ואז חזו בו על גב הפרה. [ואז] אמרו לו אותם | — | — | — |
+| 33 | r(m)ṯ.pl [s]b[i̯.n]? =[tw]? [r]? =[k]? [mj]? n =n [s]ḫr =n ḫft,j.w.pl =k wꜣ.w.pl md,t ⸢r⸣ ⸢jri̯⸣.w{.pl} st wḏꜣ | בני האדם: [מרדו בך]?; [בוא]? אלינו, ונכריע את אויביך, החורשים דבר נגד עושם! נסע | `יִתְיַצְּבוּ מַלְכֵי-אֶרֶץ וְרוֹזְנִים נוֹסְדוּ-יָחַד עַל-יְהוָה וְעַל-מְשִׁיחוֹ` (תהלים ב:ב) | equivalent | מזימה של בני אדם נגד האל ונגד מלכו. |
+| 34 | ḥm =f r ꜥḥ =[f] […] n ⸢jd⸣,t tn [nn]? [zb]⸢j⸣? =f ḥnꜥ =sn ꜥḥꜥ.jn r =f tꜣ m kk(,w) ḥḏ r =f tꜣ dwꜣ,wj? jw nn-n r(m)ṯ.pl | הוד מלכותו אל ארמונ[ו] […] של העגלה הזאת; [לא]? [צעד]? עמם. ואז היתה הארץ בחושך. האירה הארץ בבוקר?, ובני האדם הָאֵלֶּה | `וְיוֹם וָלַיְלָה לֹא יִשְׁבֹּתוּ` (בראשית ח:כב) | equivalent | אחרי האסון נקבע סדר היום והלילה; כאן החושך הראשון והבוקר הראשון באים מן ההסתלקות של האל |
+| 34 | ḥm =f r ꜥḥ =[f] […] n ⸢jd⸣,t tn [nn]? [zb]⸢j⸣? =f ḥnꜥ =sn ꜥḥꜥ.jn r =f tꜣ m kk(,w) ḥḏ r =f tꜣ dwꜣ,wj? jw nn-n r(m)ṯ.pl | הוד מלכותו אל ארמונ[ו] […] של העגלה הזאת; [לא]? [צעד]? עמם. ואז היתה הארץ בחושך. האירה הארץ בבוקר?, ובני האדם הָאֵלֶּה | `וַיְגָרֶשׁ אֶת הָאָדָם` (בראשית ג:כד) | divergence | הפרידה בין האל לבני האדם: בבראשית האדם מגורש מקרבת האל, כאן האל עוזב את בני האדם. |
+| 35 | (ḥr) pri̯ ẖr pḏ,t.pl ḫt⸢.pl⸣ […] [fꜣi̯]? =sn ꜥ n sti̯.t r ḫftj.w.pl ḏd.jn ḥm n nṯr pn ḫw,pl =tn ḥꜣ{.pl} =tn šꜥ,t{ꜣ}⟨j.w⟩.pl | יוצאים עם קשתות ומקלות […]; [נשאו]? זרוע לירות באויבים. אז אמר הוד מלכות האל הזה: זימותיכם סביבכם, אנשי־הטבח! | `אֶת קַשְׁתִּי נָתַתִּי בֶּעָנָן` (בראשית ט:יג) | divergence | הקשת אחרי האסון: בבראשית האל תולה את קשתו בענן כאות לשלום, כאן בני האדם יוצאים בקשתות זה נגד זה |
+| 35 | (ḥr) pri̯ ẖr pḏ,t.pl ḫt⸢.pl⸣ […] [fꜣi̯]? =sn ꜥ n sti̯.t r ḫftj.w.pl ḏd.jn ḥm n nṯr pn ḫw,pl =tn ḥꜣ{.pl} =tn šꜥ,t{ꜣ}⟨j.w⟩.pl | יוצאים עם קשתות ומקלות […]; [נשאו]? זרוע לירות באויבים. אז אמר הוד מלכות האל הזה: זימותיכם סביבכם, אנשי־הטבח! | `אֲשֶׁר נָשְׂאוּ אֶת יָדָם בַּאדֹנִי הַמֶּלֶךְ` (שמואל ב יח:כח) | equivalent | "נשיאת יד" כיציאה לקרב (שם נגד המלך, כאן בשם המלך) |
+| 35 | (ḥr) pri̯ ẖr pḏ,t.pl ḫt⸢.pl⸣ […] [fꜣi̯]? =sn ꜥ n sti̯.t r ḫftj.w.pl ḏd.jn ḥm n nṯr pn ḫw,pl =tn ḥꜣ{.pl} =tn šꜥ,t{ꜣ}⟨j.w⟩.pl | יוצאים עם קשתות ומקלות […]; [נשאו]? זרוע לירות באויבים. אז אמר הוד מלכות האל הזה: זימותיכם סביבכם, אנשי־הטבח! | `שֹׁפֵךְ דַּם הָאָדָם בָּאָדָם דָּמוֹ יִשָּׁפֵךְ` (בראשית ט:ו) | equivalent | שפיכות הדמים בין בני האדם, ודין האל עליה מיד אחרי האסון. |
+| 36 | ḥri̯ šꜥ,t [r]? [šꜣꜥ]? [ḫp]⸢r⸣ ⸢š⸣ꜥ,t pw ⸢m⸣ [r(m]ṯ.pl) ḏd.jn nṯr pn n Nw,t ḏi̯.n =⟨j⟩ wj ḥr sꜣ ={j}⟨t⟩ r ꜥḫi̯.t wj | רחוק (היה) הטבח [מן ההתחלה]?. [כך נהיה] הטבח [בבני האדם]. אז אמר האל הזה אל נוּת: שמתי את עצמי על גבך כדי לרומם אותי. | `וַיָּקָם קַיִן אֶל הֶבֶל אָחִיו וַיַּהַרְגֵהוּ` (בראשית ד:ח) | divergence | ראשית ההרג בין בני האדם: בבראשית – רצח אח מקנאה, בתחילת ההיסטוריה; כאן – מלחמה בשם האל, אחרי הסתלקותו. |
+| 37 | pw-trj sj ḫru̯{.pl≡f} st Nw,t ḫpr.t(j) jm m? p,t[,du]⸢.t.j.w⸣? {tjw}⟨ḏd⟩ ḥm n nṯr pn ḥri̯ tj r =sn ꜥr wj mꜣꜣ | מה זאת? – אמרה נוּת; ונהייתה בכך ליושבי־השמים?. אמר הוד מלכות האל הזה: התרחקי מהם, קרבי אֵלַי, חזי | — | — | — |
+| 38 | wj ḫpr =s [p]w [m] [ḥr,t] ⸢wn.jn⸣ ḥm n ⸢nṯr⸣ [pn] (ḥr) ⸢mꜣꜣ⸣ m ẖnw =st ḏd =s ḥwj.w grg =k n =j m | בי! כך נהייתה היא [למרום]. ואז היה הוד מלכות האל [הזה] חוזה בתוכה. אמרה היא: הלוואי ותצייד אותי ב | `וַיַּבְדֵּל בֵּין הַמַּיִם אֲשֶׁר מִתַּחַת לָרָקִיעַ וּבֵין הַמַּיִם אֲשֶׁר מֵעַל לָרָקִיעַ` (בראשית א:ז) | divergence | הפרדת השמים מן הארץ; בבראשית בדבר האל, ביום השני; כאן – כשהאל אומר לאלת השמים "התרחקי מהם". |
+| 39 | ꜥšꜣ ḫpr _ [pw] [ḏd.jn] [ḥm] =f ⸢ꜥnḫ-(w)ḏꜣ-s(nb)⸣ ḥtp sḫ,t ꜥꜣ ḫpr sḫ,t-ḥtp pw jꜣ rjd =j sm,w.pl | רוב! כך נהיה […]. [אז אמר הוד מלכות]ו – חיים, שלום, בריאות: נח השדה כאן! כך נהיה שְׂדֵה־הַקָּרְבָּנוֹת. אכן, אצמיח עשב | `וְכָל עֵשֶׂב הַשָּׂדֶה טֶרֶם יִצְמָח` (בראשית ב:ה) | equivalent | השדה, העשב וההצמחה באותו משפט: בבראשית לפני בריאת האדם, כאן בשמים, לאחר המרד |
+| 39 | ꜥšꜣ ḫpr _ [pw] [ḏd.jn] [ḥm] =f ⸢ꜥnḫ-(w)ḏꜣ-s(nb)⸣ ḥtp sḫ,t ꜥꜣ ḫpr sḫ,t-ḥtp pw jꜣ rjd =j sm,w.pl | רוב! כך נהיה […]. [אז אמר הוד מלכות]ו – חיים, שלום, בריאות: נח השדה כאן! כך נהיה שְׂדֵה־הַקָּרְבָּנוֹת. אכן, אצמיח עשב | `וַיִּטַּע יְהוָה אֱלֹהִים גַּן בְּעֵדֶן מִקֶּדֶם` (בראשית ב:ח) | equivalent | האל המכין מקום טוב, צומח, לבני האדם (כאן – למתים). |
+| 40 | jm =s ḫpr sḫ,t[-jꜣr,pl] [p]w grg =[j] st m (j)ḫ,t.pl nb.(w)t ⟨ḫpr⟩ jḫjḫ.pl pw sbꜣ.pl wn.jn Nw,t ḥr sdꜣdꜣ | בו! כך נהיה שְׂדֵה־[הָאַגְמוֹנִים]. אצייד אותו בכל דבר! כך נהיו הָאַחְאַח – הכוכבים. ואז היתה נוּת רועדת | `וְאֵת הַכּוֹכָבִים` (בראשית א:טז) | divergence | הכוכבים נבראים בבראשית ביום הרביעי, כתוספת למאורות; כאן הם "נהיים" מן הצליל של "כל דבר" שבו רא מצייד את השמים. |
+| 41 | ⸢n⸣ [qꜣi̯.t] [ḏd.jn] ḥm [n] Rꜥ ḥwj ꜣ n =j ḥḥ.pl ḥr twꜣ =s ḫpr Ḥḥ.pl pw ḏd.jn ḥm n Rꜥ | מפני [הגובה]. [אז אמר] הוד מלכות רַא: הלוואי (ויהיו) לי אלפי אלפים תומכים בה! כך נהיו אֵלֵי־חֶח. אז אמר הוד מלכות רַא: | `עַמּוּדֵי שָׁמַיִם יְרוֹפָפוּ` (איוב כו:יא) | equivalent | השמים שיש להם תומכים, והם רועדים |
+| 41 | ⸢n⸣ [qꜣi̯.t] [ḏd.jn] ḥm [n] Rꜥ ḥwj ꜣ n =j ḥḥ.pl ḥr twꜣ =s ḫpr Ḥḥ.pl pw ḏd.jn ḥm n Rꜥ | מפני [הגובה]. [אז אמר] הוד מלכות רַא: הלוואי (ויהיו) לי אלפי אלפים תומכים בה! כך נהיו אֵלֵי־חֶח. אז אמר הוד מלכות רַא: | `אָנֹכִי תִכַּנְתִּי עַמּוּדֶיהָ` (תהלים עה:ד) | equivalent | האל המעמיד את תומכי העולם. |
+| 42 | zꜣ =j Šw jmm tw ẖr zꜣ,t =(j) Nw,t zꜣu̯ n =j Ḥḥ.pl Ḥḥ.pl jm ꜥnḫ =sn m (j)ḫḫ,w jmm | בני שׁוּ, תן את עצמך תחת בתי נוּת! שמור לי את אֵלֵי־חֶח, אֵלֵי־חֶח אשר שם, ויחיו בדמדומים! תן | `וַיַּבְדֵּל בֵּין הַמַּיִם אֲשֶׁר מִתַּחַת לָרָקִיעַ` (בראשית א:ז) | divergence | מה שמחזיק את השמים מעל הארץ: בבראשית רקיע שהאל עשה, כאן אל, שׁוּ, העומד תחת אלת השמים. |
+| 43 | sj ḥr-dp =k mnꜥ =k st ḫpr rḏi̯.t mnꜥ,t pw n zꜣ n zꜣ,t ḫpr rḏi̯.t zꜣ pw jn jt =f ḥr ḏꜣḏꜣ =f | אותה על ראשך, ותאמון אותה! כך נהייתה נתינת אומנת לבן ולבת; כך נהייתה נתינת הבן בידי אביו על ראשו. | `כַּאֲשֶׁר יִשָּׂא הָאֹמֵן אֶת הַיֹּנֵק` (במדבר יא:יב) | equivalent | האומן הנושא את הילד |
+| 43 | sj ḥr-dp =k mnꜥ =k st ḫpr rḏi̯.t mnꜥ,t pw n zꜣ n zꜣ,t ḫpr rḏi̯.t zꜣ pw jn jt =f ḥr ḏꜣḏꜣ =f | אותה על ראשך, ותאמון אותה! כך נהייתה נתינת אומנת לבן ולבת; כך נהייתה נתינת הבן בידי אביו על ראשו. | `וַיְהִי אֹמֵן אֶת הֲדַסָּה` (אסתר ב:ז) | equivalent | אמונה של בת שאינה בתו |
+| 43 | sj ḥr-dp =k mnꜥ =k st ḫpr rḏi̯.t mnꜥ,t pw n zꜣ n zꜣ,t ḫpr rḏi̯.t zꜣ pw jn jt =f ḥr ḏꜣḏꜣ =f | אותה על ראשך, ותאמון אותה! כך נהייתה נתינת אומנת לבן ולבת; כך נהייתה נתינת הבן בידי אביו על ראשו. | `וְהָיוּ מְלָכִים אֹמְנַיִךְ וְשָׂרוֹתֵיהֶם מֵינִיקֹתַיִךְ` (ישעיהו מט:כג) | equivalent | האומנים והמיניקות |
+| 43 | sj ḥr-dp =k mnꜥ =k st ḫpr rḏi̯.t mnꜥ,t pw n zꜣ n zꜣ,t ḫpr rḏi̯.t zꜣ pw jn jt =f ḥr ḏꜣḏꜣ =f | אותה על ראשך, ותאמון אותה! כך נהייתה נתינת אומנת לבן ולבת; כך נהייתה נתינת הבן בידי אביו על ראשו. | `כַּאֲשֶׁר יִשָּׂא אִישׁ אֶת בְּנוֹ` (דברים א:לא) | equivalent | האב הנושא את בנו. |
+| 44 | ḏd.tw rʾ pn ḥr jd,t Ḥḥ.pl n,tj.w.pl ḥr qꜣb,t =st Ḥḥ.pl n,{ꜣ}⟨tj.w⟩.pl ḥr sꜣ =st | ייאמר הלחש הזה על עגלה – אֵלֵי־חֶח אשר על חזה, ואֵלֵי־חֶח אשר על גבה. | `לֹא תַעֲשֶׂה לְךָ פֶסֶל וְכָל תְּמוּנָה אֲשֶׁר בַּשָּׁמַיִם מִמַּעַל` (שמות כ:ג) | divergence | כאן ההוראה היא בדיוק לעשות תמונה של השמים, והיא חלק מן הטקס |
+| 44 | ḏd.tw rʾ pn ḥr jd,t Ḥḥ.pl n,tj.w.pl ḥr qꜣb,t =st Ḥḥ.pl n,{ꜣ}⟨tj.w⟩.pl ḥr sꜣ =st | ייאמר הלחש הזה על עגלה – אֵלֵי־חֶח אשר על חזה, ואֵלֵי־חֶח אשר על גבה. | `וּרְאֵה וַעֲשֵׂה בְּתַבְנִיתָם אֲשֶׁר אַתָּה מָרְאֶה בָּהָר` (שמות כה:מ) | equivalent | הוראה כתובה לעשיית צורה פולחנית. |
+| 45 | mḥ šzp =s 4 m rꜥ~y(,t) psḏ,t sbꜣ ḥr ẖ,t =st st? pr(i̯.tj)? m pḥ,wj jr,j ẖr-ḥꜣ,t mn,t.j-du =sj ={st} Šw | אַמָּה – טפחיה ארבעה – בצבע; תשיעיית כוכבים על בטנה; היא? יוצאת? מאחוריה, לפני ירכיה. שׁוּ | — | — | — |
+| 46 | ẖr ẖ,t =st jri̯.w m qnj,t gꜣb.du =fj ẖr nꜣ-n sbꜣ.pl ⸢jri̯.w⸣ m rn =f r-jm,wt{.n≡j} =sn m-ḏd Šw | תחת בטנה, ייעשה בזרניך; אציליו תחת הכוכבים הָאֵלֶּה, וייעשה שמו ביניהם, לאמור: שׁוּ | — | — | — |
+| 47 | ḏs =f wjꜣ ḥm,y(t) kꜣ~rjj jm =f jtn ḥr-r =f Rꜥ jm =f ẖr-ḥꜣ,t Šw r-gs ḏr,t =f ky-ḏd | עצמו. צִי – הֶגֶה ומקדש בו, האָטוֹן מעליו ורַא בתוכו – לפני שׁוּ, לצד ידו. נוסח אחר: | — | — | — |
+| 48 | ḥꜣ =f r-gs ḏr,t =f jri̯.w mnd.du =s m-ḥr,j-jb mn(,t).du =st jꜣb.(t)j jri̯.w gs =sn m zẖꜣ,pl m-ḥr,j-jb tꜣ mn,t | מאחוריו, לצד ידו. ייעשו עטיניה בתוך זוג ירכיה השמאלי?; ייעשה חֶצְיָם כציור בתוך הירך. | — | — | — |
