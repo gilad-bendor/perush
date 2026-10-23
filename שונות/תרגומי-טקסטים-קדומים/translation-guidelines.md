@@ -177,6 +177,13 @@ itself (all checked in the smoke test of 2026-10-23, `history.md`).
      only the user can answer into `reports/round-<N>/questions-for-user.md`, archive the child, and start the next run;
   5. after the last run: the lead's finalization (the cross-corpus harmonization, §5.2 "A harmonization pass"; every
      verifier; STATUS, history), then **one** message to the user: the results and `questions-for-user.md`.
+- **Titles show the place in the hierarchy** (the user, 2026-10-23): every session's title starts with a short path –
+  the round's orchestrator `Round4: <what>`, a run `Round4/Run2: <texts>`, a sub-session of that run
+  `Round4/Run2/Sub1: <task>` – and gets the suffix ` done` when it finishes (`set_session_title`).
+- **Any session may launch a sub-session instead of a sub-agent** when the task is heavy enough (a whole text, a
+  whole corpus pass, a long sequential chain): the same rules hold one level down – one at a time, the prompt from the
+  template with the next title prefix and a report path (`reports/round-<N>/run-<M>--sub-<K>.md`), the child reports to
+  and messages its **immediate** parent, and the parent waits by ending its turn. A light task stays a sub-agent.
 - **The child** follows the template: it never interacts with the user (questions go into its report; only a complete
   block is sent to the parent as `BLOCKED:`); it checks its quota status before each heavy sub-agent; it pushes to
   `main` as it goes; at the end it pushes the report, re-titles itself with the suffix ` done`, messages the parent,
