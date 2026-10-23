@@ -1,7 +1,7 @@
 # Memphite Theology (Shabaka Stone, BM EA 498) – transliteration, lines 1a–64
 # Source: El Hawary, Amr: Wortschöpfung. Die Memphitische Theologie und die Siegesstele des Pije – zwei Zeugen kultureller Repräsentation in der 25. Dynastie (OBO 243), Fribourg/Göttingen 2010, section 2.3.1.2.3 "Übersetzung", printed pp. 115–138 = PDF pp. 128–151 (file Hawary,El_2010_Wortschopfung.pdf), left column.
 # Format: label<TAB>transliteration<TAB>pdf-page. One row per edition line; " | " separates the printed sentence rows (blocks) of a line; the wrapped print lines inside one block are joined with a space (or without one after a line-final hyphen, which is part of the transliteration).
-# Conventions: ꜣ (U+A723) aleph, ꜥ (U+A725) ayin, j, ḥ ḫ ẖ ḏ ṯ š q k as printed; "=" for El Hawary's suffix-pronoun sign (⸗); [ ] destroyed; ( ) not present in the original; ⟨ ⟩ omitted by mistake (printed < >); { } superfluous; / column split marker; […] for erased (hatched) text; the cartouche signs are written 𓍹 … 𓍺 (U+13379/U+1337A); footnote numbers are dropped (see memphite-notes.tsv); multiple spaces are reduced to one.
+# Conventions: ꜣ (U+A723) aleph, ꜥ (U+A725) ayin, j, ḥ ḫ ẖ ḏ ṯ š q k as printed; "=" for El Hawary's suffix-pronoun sign (⸗); [ ] destroyed; ( ) not present in the original; ⟨ ⟩ omitted by mistake (printed < >); { } superfluous; / column split marker; […] for erased (hatched) text; the cartouche signs are written 𓍹 … 𓍺 (U+13379/U+1337A); the vertical bars of the scenic notes (lines 10b–18b, 12b, 20b, 21b) are written │ (U+2502) so as not to clash with the " | " row separator; [Stš] in 30b and šnw.t in 61 are printed with a glyph-fallback sign resembling ʕ, read as š; footnote numbers are dropped (see memphite-notes.tsv); multiple spaces are reduced to one.
 # Date: 2026-10-23. Transcribed from the page images by an AI agent; checked against the text layer.
 1a	ꜥnḫ Ḥrw sb[ꜣ]q-tꜣ.wj Nb.tj sb[ꜣ]q-tꜣ.wj Ḥrw-nbw sb[ꜣ]q-tꜣ.wj njsw.t-bj.t 𓍹Nfr-kꜣ-Rꜥw𓍺 sꜣ-Rꜥw [Šꜣbꜣkꜣ] mrjj Ptḥ rsj-jnbw=f ꜥnḫ(.w) mj Rꜥw ḏ.t	128
 1b	ꜥnḫ Ḥrw sb[ꜣ]q-tꜣ.wj Nb.tj sb[ꜣ]q-tꜣ.wj Ḥrw-nbw sb[ꜣ]q-tꜣ.wj njsw.t-bj.t 𓍹Nfr-kꜣ-Rꜥw𓍺 sꜣ-Rꜥw [Šꜣbꜣkꜣ] mrjj Zkr rsj-jnbw=f ꜥnḫ(.w) mj Rꜥw ḏ.t	128
@@ -46,10 +46,10 @@
 22	ḥwt-sr m [gs-mḥ.tj n tꜣ pn] […]	139
 20a	ḏd-mdw Ḥrw (ḫft) Js.t Nb.t-Ḥw.t | jsj nḏrj jm=f	139
 20b	│ [Wsjr] │ […] │	139
-21a	ḏd-mdw Js.t/Nb.t-Ḥw.t (ḫft) Wsjr | jjj.n=n jṯj=n kw [sn=n]	139
+21a	ḏd-mdw Js.t/Nb.t-Ḥw.t(ḫft) Wsjr | jjj.n=n jṯj=n kw [sn=n]	139
 21b	│ [Wsjr] │ […] │	139
 23	[ḫpr].n qd(.w) ḥw.t[-sr] […]	139
-24a,b	ḏd[-mdw] Gb (ḫft) Ḏḥwtj […]	140
+24a,b	ḏd[-mdw]Gb (ḫft) Ḏḥwtj […]	140
 24c	[…]	140
 25a	( ) […]	140
 26a	( ) […]	140
