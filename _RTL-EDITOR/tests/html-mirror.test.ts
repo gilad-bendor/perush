@@ -5,6 +5,7 @@ import { tmpdir } from "os";
 import { dirname, join } from "path";
 import { HtmlMirror, NO_JEKYLL_PATH, SITE_INDEX_PATH, htmlPathFor, isMirroredFile, mirroredHref, pageBreadcrumbs } from "../src/html/html-mirror";
 import { folderIndexPages, mirrorSummary, siteIndexPage } from "../src/html/folder-index";
+import { md5Of } from "../src/html/layout-module";
 
 describe("isMirroredFile", () => {
     test("every Markdown file gets a page", () => {
@@ -261,6 +262,55 @@ describe("HtmlMirror", () => {
         expect(await readFile(page("a.rtl.md"), "utf-8")).toContain("הנה הוא");
     });
 
+    test("a file is laid out by its layout module, which is a dependency of its page and of a book holding it", async () => {
+        const lines = "**1** א,\n**2** ב,\n**3** ג,\n**4** ד.";
+        await write("t/translation.rtl.md", lines);
+        await write("book.rtl.md", '<כלול-בהדפסה מקור="t/translation.rtl.md">');
+        const m = mirror();
+        await m.syncTree(["t/", "t/translation.rtl.md", "book.rtl.md"]);
+        const rows = async (mdPath: string) =>
+            ((await readFile(page(mdPath), "utf-8")).match(/class="line-row"/g) ?? []).length;
+        expect(await rows("t/translation.rtl.md")).toBe(0);            // the editor groups nothing by itself
+
+        // The layout file appears, importing logic of its own - and the watcher's event for it reaches both pages.
+        await write("t/logic.ts", "export const groups = [{ from: 0, to: 3, rowStarts: [2], margins: [5, 5, 5, 5] }];");
+        await write("t/translation.rtl.layout.ts", `import { groups } from "./logic";\nexport default () => ({ sourceMd5: "${md5Of(lines)}", groups });`);
+        m.scheduleSync("t/translation.rtl.layout.ts");
+        await Bun.sleep(600);
+        expect(await rows("t/translation.rtl.md")).toBe(2);
+        expect(await rows("book.rtl.md")).toBe(2);
+        expect(await readFile(page("t/translation.rtl.md"), "utf-8")).not.toMatch(/[\uE001-\uE006]/);
+
+        // An edit to what it imports reaches them too.
+        await write("t/logic.ts", "export const groups = [{ from: 0, to: 3, rowStarts: [1, 2, 3], margins: [5, 5, 5, 5] }];");
+        m.scheduleSync("t/logic.ts");
+        await Bun.sleep(600);
+        expect(await rows("book.rtl.md")).toBe(4);
+    });
+
+    test("a layout that goes wrong is ignored, and said so at the top of the page", async () => {
+        await write("t/translation.rtl.md", "**1** א,\n**2** ב,");
+        await write("t/.layout.ts", 'import { x } from "fontkit";\nexport default () => null;');
+        expect(await mirror().syncFile("t/translation.rtl.md")).toBe("rendered");
+        const html = await readFile(page("t/translation.rtl.md"), "utf-8");
+        expect(html).toContain("א,<br>");
+        expect(html).toContain("העימוד לא הוחל");
+        expect(html).toContain("only files of the repository");
+    });
+
+    test("a page loads the font from docs/_fonts/, which the sweep fills, and takes its print settings from its layout", async () => {
+        await write("t/u/translation.rtl.md", "# א\n\nטקסט\n\n# ב");
+        await write("t/.layout.ts", "export default () => ({ page: { fontSize: 10 }, pageBreakBefore: () => false });");
+        const m = mirror();
+        await m.syncTree(["t/", "t/u/", "t/u/translation.rtl.md"]);
+        const html = await readFile(page("t/u/translation.rtl.md"), "utf-8");
+        expect(html).toContain('url("../../../_fonts/DavidCLM-Medium.otf")');
+        expect(html).toContain("font-size: 10pt");
+        expect(html).toContain('class="no-page-break-before"');
+        expect(html).not.toMatch(/[\uE001-\uE006]/);
+        expect((await stat(join(root, "docs/_fonts/DavidCLM-Bold.otf"))).size).toBeGreaterThan(10000);
+    });
+
     test("two files that embed each other settle rather than rebuild one another for ever", async () => {
         await write("a.rtl.md", 'א\n<כלול-בהדפסה מקור="b.rtl.md">');
         await write("b.rtl.md", 'ב\n<כלול-בהדפסה מקור="a.rtl.md">');
@@ -302,22 +352,25 @@ describe("HtmlMirror", () => {
         expect(existsSync(page("ignored/c.md"))).toBe(true);      // the page itself is still made
     });
 
-    test("a .printignore marks files as technical, the way a .gitignore would ignore them", async () => {
+    test("a file its layout gives no output gets no page - nor, through the PDF mirror, a PDF - and is not listed", async () => {
         await write("a.md", "a");
         await write("tech/b.md", "b");
         await write("x/c.md", "c");
-        await write("x/d.md", "d");
-        git("init", "-q");
-        await writeFile(join(root, ".printignore"), "tech/\n");
-        await writeFile(join(root, "x/.printignore"), "c.md\n");
-        await mirror().syncTree(["a.md", "tech/", "tech/b.md", "x/", "x/c.md", "x/d.md"]);
+        await writeFile(join(root, ".layout.ts"), 'export default (file: { path: string }) => file.path.startsWith("tech/") ? { output: "none" } : null;');
+        const m = mirror();
+        await m.syncTree(["a.md", "tech/", "tech/b.md", "x/", "x/c.md"]);
+        expect(existsSync(page("tech/b.md"))).toBe(false);
+        expect(existsSync(page("a.md"))).toBe(true);
         const index = await readFile(join(root, "docs/_HTML-FROM-MD/index.html"), "utf-8");
-        expect(index).toContain('<li class="folder technical"><a dir="auto" href="tech/index.html">');
-        const x = await readFile(join(root, "docs/_HTML-FROM-MD/x/index.html"), "utf-8");
-        expect(x).toContain('<li class="file technical"><a dir="auto" href="c.html">');
-        expect(x).toContain('<li class="file"><a dir="auto" href="d.html">');
+        expect(index).not.toContain("tech");
         expect(index).toContain('<li class="file"><a dir="auto" href="a.html">');
-        expect(index).not.toContain('class="count"');
+
+        // The layout changes its mind - and the page comes back, and goes again, with no sweep.
+        await writeFile(join(root, ".layout.ts"), "export default () => null;");
+        await utimes(join(root, ".layout.ts"), new Date(), new Date(Date.now() + 5000));
+        m.scheduleSync(".layout.ts");
+        await Bun.sleep(600);
+        expect(existsSync(page("tech/b.md"))).toBe(true);
     });
 
     test("docs/index.html lists what is directly in docs/ - the two mirrors, and any other page there", async () => {
@@ -410,7 +463,7 @@ describe("folderIndexPages", () => {
 
 describe("siteIndexPage", () => {
     test("a mirror that lists nothing is left out", () => {
-        const html = siteIndexPage("פירוש", [mirrorSummary(["a.html", "x/b.html"], "_HTML-FROM-MD", new Set(["x/b.html"])),
+        const html = siteIndexPage("פירוש", [mirrorSummary(["a.html", "x/b.html"], "_HTML-FROM-MD"),
                                               mirrorSummary([], "_PDF-FROM-MD")], ["viewer.html"]);
         expect(html).toContain('href="_HTML-FROM-MD/index.html">_HTML-FROM-MD</a></li>');
         expect(html).not.toContain("_PDF-FROM-MD");
@@ -418,25 +471,11 @@ describe("siteIndexPage", () => {
     });
 });
 
-describe("the technical toggle", () => {
-    const index = folderIndexPages(["a.html", "t.html"], "_HTML-FROM-MD", new Set(["t.html"])).get("index.html")!;
-
-    test("every index has it, off by default - the technical pages hidden by CSS alone", () => {
-        expect(index).toContain('<input type="checkbox" id="show-technical"> הצג קבצים טכניים');
-        expect(index).toContain("body:not(.show-technical) .technical");
-        expect(index).toContain('<li class="file technical"><a dir="auto" href="t.html">');
-    });
-
-    test("an index with no technical page has no toggle - and no index shows counts", () => {
+describe("an index", () => {
+    test("shows no counts, and has no toggle", () => {
         const plain = folderIndexPages(["a.html"], "_HTML-FROM-MD").get("index.html")!;
         expect(plain).not.toContain('class="count"');
-        expect(plain).not.toContain('id="show-technical"');
-    });
-
-    test("the toggle is per folder: only where something under it is technical", () => {
-        const indexes = folderIndexPages(["x/a.html", "y/t.html"], "_HTML-FROM-MD", new Set(["y/t.html"]));
-        expect(indexes.get("index.html")).toContain('id="show-technical"');
-        expect(indexes.get("y/index.html")).toContain('id="show-technical"');
-        expect(indexes.get("x/index.html")).not.toContain('id="show-technical"');
+        expect(plain).not.toContain("technical");
     });
 });
+

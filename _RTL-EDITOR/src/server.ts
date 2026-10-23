@@ -9,6 +9,7 @@ import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "
 import type { FileSystemChange } from "./fs-changes";
 import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
 import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR } from "./html/html-mirror";
+import { outputOf } from "./html/layout-module";
 import { PDF_MIRROR_DIR, PdfMirror, pdfPathFor } from "./html/pdf-mirror";
 import { lineEndingOf, toLf, withLineEnding } from "./line-endings";
 import { writeFileSafe } from "./write-file-safe";
@@ -239,7 +240,10 @@ serve({
                 console.error(`Cannot bring the ${asPdf ? "PDF" : "page"} of ${filePath} up to date:`, error);
             }
             if (!(await file(join(MARKDOWN_DIR, target)).exists())) {
-                return printErrorPage(`הקובץ "${filePath}" לא נמצא.`);
+                // A file its layout gives no page (layout-schema.ts's `output: "none"`) is there, and says why.
+                const none = await file(join(MARKDOWN_DIR, filePath)).exists() && await outputOf(MARKDOWN_DIR, filePath) === "none";
+                return printErrorPage(none ? `לקובץ "${filePath}" אין דף ואין PDF: העימוד שלו קובע כך (output: "none").`
+                    : `הקובץ "${filePath}" לא נמצא.`);
             }
             return new Response(null, {
                 status: 302,

@@ -4,11 +4,6 @@
 // And one for the folder the mirrors stand in, docs/ - the page GitHub Pages opens with - listing
 // what is directly in it: the mirrors, and whatever else was put there (siteIndexPage()).
 //
-// Some pages are "technical" (a .printignore says so - see html-mirror.ts). They are listed like any
-// other but hidden, and a toggle at the top of every index - "הצג קבצים טכניים" - shows them. The
-// toggle is the URL's hash, #show-technical, so a link can be shared as it is seen and Back/Forward
-// step through it; every link of the index carries the hash on to where it leads.
-//
 // Pure: the list of pages in, a page per folder out. html-mirror.ts decides when to write them.
 
 import { posix } from "path";
@@ -17,9 +12,6 @@ import { PAGE_STYLE, readablePath, renderBreadcrumbs } from "./md-to-html";
 
 /** The file name every folder's index takes. */
 export const FOLDER_INDEX_NAME = "index.html";
-
-/** The URL hash that shows the technical pages. */
-export const SHOW_TECHNICAL_HASH = "#show-technical";
 
 const escape = new MarkdownIt().utils.escapeHtml;
 
@@ -32,39 +24,34 @@ type Folder = {
     files: string[];
     /** Pages anywhere under the folder. */
     pageCount: number;
-    /** Of those, the ones that are not technical - what is shown while the toggle is off. */
-    plainCount: number;
 };
 
 /** A mirror, as the site's index lists it. */
-export type MirrorSummary = { name: string; pageCount: number; plainCount: number };
+export type MirrorSummary = { name: string; pageCount: number };
 
 /**
  * Every folder's index page.
  *
  * @param pages      every page to list, relative to the mirror's root - "פירוש/1-בראשית/a.rtl.html"
  * @param rootName   what the root folder is called on its own index and in every breadcrumb trail
- * @param technical  the pages among them that are hidden until asked for
  * @param siteTitle  the folder above the mirror's root, whose own index is its "..": every trail starts
  *                   there. Left out, the mirror's root is the top of the trail, with no "..".
  * @returns          index path (relative to the mirror's root, "פירוש/index.html") → its HTML
  */
-export function folderIndexPages(pages: Iterable<string>, rootName: string,
-                                 technical: ReadonlySet<string> = new Set(), siteTitle?: string): Map<string, string> {
-    const root = folderTree(pages, rootName, technical);
+export function folderIndexPages(pages: Iterable<string>, rootName: string, siteTitle?: string): Map<string, string> {
+    const root = folderTree(pages, rootName);
     const indexes = new Map<string, string>();
     const visit = (folder: Folder) => {
-        indexes.set(posix.join(folder.path, FOLDER_INDEX_NAME), renderFolderIndex(folder, rootName, technical, siteTitle));
+        indexes.set(posix.join(folder.path, FOLDER_INDEX_NAME), renderFolderIndex(folder, rootName, siteTitle));
         for (const child of folder.folders.values()) visit(child);
     };
     if (root.pageCount) visit(root);
     return indexes;
 }
 
-/** How many pages a mirror lists, and how many of them are not technical - for the site's index. */
-export function mirrorSummary(pages: Iterable<string>, name: string, technical: ReadonlySet<string> = new Set()): MirrorSummary {
-    const { pageCount, plainCount } = folderTree(pages, name, technical);
-    return { name, pageCount, plainCount };
+/** How many pages a mirror lists - for the site's index. */
+export function mirrorSummary(pages: Iterable<string>, name: string): MirrorSummary {
+    return { name, pageCount: folderTree(pages, name).pageCount };
 }
 
 /**
@@ -78,18 +65,16 @@ export function siteIndexPage(siteTitle: string, mirrors: MirrorSummary[], files
     }
     root.files.push(...files);
     root.pageCount = files.length + mirrors.reduce((sum, mirror) => sum + mirror.pageCount, 0);
-    root.plainCount = files.length + mirrors.reduce((sum, mirror) => sum + mirror.plainCount, 0);
-    return renderFolderIndex(root, siteTitle, new Set());
+    return renderFolderIndex(root, siteTitle);
 }
 
-function folderTree(pages: Iterable<string>, rootName: string, technical: ReadonlySet<string>): Folder {
+function folderTree(pages: Iterable<string>, rootName: string): Folder {
     const root = newFolder("", rootName);
     for (const page of pages) {
-        const isTechnical = technical.has(page);
         const segments = page.split("/");
         const fileName = segments.pop()!;
         let folder = root;
-        count(folder, isTechnical);
+        folder.pageCount++;
         for (const segment of segments) {
             let child = folder.folders.get(segment);
             if (!child) {
@@ -97,7 +82,7 @@ function folderTree(pages: Iterable<string>, rootName: string, technical: Readon
                 folder.folders.set(segment, child);
             }
             folder = child;
-            count(folder, isTechnical);
+            folder.pageCount++;
         }
         folder.files.push(fileName);
     }
@@ -105,12 +90,7 @@ function folderTree(pages: Iterable<string>, rootName: string, technical: Readon
 }
 
 function newFolder(path: string, name: string): Folder {
-    return { path, name, folders: new Map(), files: [], pageCount: 0, plainCount: 0 };
-}
-
-function count(folder: Folder, isTechnical: boolean): void {
-    folder.pageCount++;
-    if (!isTechnical) folder.plainCount++;
+    return { path, name, folders: new Map(), files: [], pageCount: 0 };
 }
 
 /** The order the editor's file tree uses: folders first, then files, each by name. */
@@ -140,22 +120,16 @@ function href(relativePath: string): string {
 
 /** A subfolder, linking to its own index. */
 function folderItem(folder: Folder): string {
-    const technical = folder.plainCount ? "" : " technical";
-    return `<li class="folder${technical}"><a dir="auto" href="${href(`${folder.name}/${FOLDER_INDEX_NAME}`)}">${escape(folder.name)}</a></li>`;
+    return `<li class="folder"><a dir="auto" href="${href(`${folder.name}/${FOLDER_INDEX_NAME}`)}">${escape(folder.name)}</a></li>`;
 }
 
-/** @param folderPath  the files' folder, relative to the mirror's root - to tell the technical ones */
-function fileItems(folderPath: string, fileNames: string[], technicalFiles: ReadonlySet<string>): string[] {
+function fileItems(fileNames: string[]): string[] {
     const names = displayNames(fileNames);
-    return fileNames.map(fileName => {
-        const technical = technicalFiles.has(posix.join(folderPath, fileName)) ? " technical" : "";
-        return `<li class="file${technical}"><a dir="auto" href="${href(fileName)}">${escape(names.get(fileName)!)}</a></li>`;
-    });
+    return fileNames.map(fileName => `<li class="file"><a dir="auto" href="${href(fileName)}">${escape(names.get(fileName)!)}</a></li>`);
 }
 
 /** @param siteTitle  the folder above `rootName`, if the trail goes up to it - see folderIndexPages() */
-function renderFolderIndex(folder: Folder, rootName: string, technicalFiles: ReadonlySet<string>,
-                           siteTitle?: string): string {
+function renderFolderIndex(folder: Folder, rootName: string, siteTitle?: string): string {
     const segments = folder.path ? folder.path.split("/") : [];
 
     // Up the tree: the site, the root, then every folder down to this one - which is not a link to itself.
@@ -164,11 +138,6 @@ function renderFolderIndex(folder: Folder, rootName: string, technicalFiles: Rea
         ? { name }
         : { name, href: "../".repeat(names.length - 1 - depth) + FOLDER_INDEX_NAME }))}\n`;
 
-    // Only where there is something for it to show or hide.
-    const toggle = folder.plainCount < folder.pageCount
-        ? `<label class="technical-toggle"><input type="checkbox" id="show-technical"> הצג קבצים טכניים</label>\n`
-        : "";
-
     // "..", heading the list - in every folder but the top one, which has nowhere to go up to.
     const up = names.length > 1 ? [`<li class="folder up"><a href="../${FOLDER_INDEX_NAME}">..</a></li>`] : [];
 
@@ -176,7 +145,7 @@ function renderFolderIndex(folder: Folder, rootName: string, technicalFiles: Rea
     const direct = `<ul class="files">\n${[
         ...up,
         ...sortedFolders(folder).map(folderItem),
-        ...fileItems(folder.path, sortedFiles(folder), technicalFiles),
+        ...fileItems(sortedFiles(folder)),
     ].join("\n")}\n</ul>`;
 
     return `<!doctype html>
@@ -190,53 +159,21 @@ function renderFolderIndex(folder: Folder, rootName: string, technicalFiles: Rea
 </head>
 <body class="rtl folder-index">
 <main>
-${toggle}${trail}
+${trail}
 <h1><bdi>${escape(folder.name)}</bdi></h1>
 <h2>קבצים בתיקייה</h2>
 ${direct}
 </main>
-<script>${INDEX_SCRIPT}</script>
 </body>
 </html>
 `;
 }
 
-// The file tree's own marks, from public/style.css - and the technical pages, hidden until asked for.
+// The file tree's own marks, from public/style.css.
 const INDEX_STYLE = `
 .folder-index h1 { margin-top: 0.3em; }
 .folder-index ul { list-style: none; padding-inline-start: 0; margin: 0 0 0.2em; }
 .folder-index li.folder::before { content: "📁 "; }
 .folder-index li.file::before { content: "📄 "; }
 .folder-index li.folder > a { font-weight: bold; }
-.technical-toggle {
-    position: sticky; top: 0; z-index: 1; display: block; width: fit-content; margin-inline-start: auto;
-    padding: 4px 8px; background: white; border: 1px solid #ddd; border-radius: 0 0 6px 6px;
-    font-size: 0.9em; color: #444; cursor: pointer; user-select: none;
-}
-body:not(.show-technical) .technical { display: none; }
-@media print { .technical-toggle { display: none; } }
-`;
-
-// The toggle is the hash: it sets it, and follows it - on load, and on Back/Forward. Every link
-// carries the hash on, so the next index opens the way this one was left - an index with no toggle
-// of its own (nothing technical under it) included, so the hash is not lost on the way through.
-const INDEX_SCRIPT = `
-(() => {
-    const HASH = ${JSON.stringify(SHOW_TECHNICAL_HASH)};
-    const toggle = document.getElementById("show-technical");
-    const links = [...document.querySelectorAll("main a[href]")].map(a => [a, a.getAttribute("href")]);
-    const apply = () => {
-        const on = location.hash === HASH;
-        if (toggle) toggle.checked = on;
-        document.body.classList.toggle("show-technical", on);
-        for (const [a, href] of links) a.setAttribute("href", on ? href + HASH : href);
-    };
-    toggle?.addEventListener("change", () => {
-        history.pushState(null, "", location.pathname + location.search + (toggle.checked ? HASH : ""));
-        apply();
-    });
-    addEventListener("popstate", apply);
-    addEventListener("hashchange", apply);
-    apply();
-})();
 `;

@@ -141,5 +141,7 @@ export function isIgnoredWatchPath(relativePath: string | null | undefined, excl
     // A file of another kind is of no interest. A name with no extension may well be a directory,
     // and a directory very much is.
     const extension = extname(segments[segments.length - 1]);
-    return extension !== "" && extension !== ".md";
+    // TypeScript is the one exception: a layout module (*.layout.ts) and whatever it imports are what the
+    // HTML mirror renders pages with (layout-module.ts), and a change to one has to reach them.
+    return extension !== "" && extension !== ".md" && extension !== ".ts";
 }

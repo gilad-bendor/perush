@@ -16,6 +16,7 @@
 //   escaping that everything else in a file gets.
 // - A `שגיאה-N` marker left by includes.ts becomes a dark-red block where the faulty directive was,
 //   and the page opens with the list of them.
+// - Lines a file's layout gathers into groups share printed rows (line-rows.ts).
 // - `<תוכן-העניינים>`, alone on its line, becomes an index of the headings below it - titled
 //   "תוכן העניינים" in an RTL page, "Contents" in an LTR one. A file without that line gets none.
 //
@@ -28,6 +29,12 @@ import { INDEX_TAG_NAME, isVoidPseudoTag } from "../../public/src/pseudo-tags.js
 import { headingSlug } from "../../public/src/links.js";
 import { errorLineIndex } from "./includes";
 import type { EmbedError } from "./includes";
+import { LINE_ROWS_SCRIPT, LINE_ROWS_STYLE, lineRowsRule, PRINT_FONT_SIZE, PRINT_MARGIN_BLOCK_MM, PRINT_MARGIN_INLINE_MM } from "./line-rows";
+import { NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, stripLayoutMarks } from "./layout-marks";
+import { FONT_FACES, FONT_FAMILIES, FONTS_DIR, LAST_RESORT, type FontFace, type FontRole } from "./text-measure";
+import type { PageSettings } from "./layout-schema";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export type RenderOptions = {
     /** Rewrites a link's href - the page does not live next to the file it was made from. */
@@ -47,6 +54,20 @@ export type RenderOptions = {
      * on screen only, like the trail. Given whatever the file asks for with `<תוכן-העניינים>`.
      */
     pageIndex?: boolean;
+    /**
+     * Writes every grouped line's source line on it, as `data-source-line` - for the layout tools, which
+     * have to know which line is which. Never for the mirror.
+     */
+    sourceLines?: boolean;
+    /**
+     * Where a right-to-left page loads its font from (fonts/, see text-measure.ts): a folder's URL,
+     * relative to the page - or "embed", every face written into the page itself, for a page with no
+     * folder around it (the layout tool's). Left out, the page names the font but does not load it, and
+     * a browser without it falls back to David.
+     */
+    fonts?: string;
+    /** The printed page as the file's layout has it (layout-schema.ts) - anything left out as PAGE_STYLE has it. */
+    page?: PageSettings;
 };
 
 /** One step of a breadcrumb trail - a folder's index to go up to, or, with no href, the page itself. */
@@ -60,6 +81,9 @@ type Env = {
     indexesByToken?: Map<number, string>;
     /** A right-to-left page drops its line-delimited HTML comments - see commentBlockRule(). */
     isRtl?: boolean;
+    /** Set by lineRowsRule() when the page has lines that share rows - and so needs its script. */
+    hasLineRows?: boolean;
+    sourceLines?: boolean;
 };
 
 const markdown = new MarkdownIt({
@@ -195,6 +219,26 @@ markdown.core.ruler.push("list_runs_on", (state: StateCore) => {
         const open = tokens.findLast((token, j) => j < i && token.level === close.level && token.type === close.type.replace("_close", "_open"));
         open?.attrJoin("class", "runs-on");
     }
+});
+
+// Lines a file's layout gathers into groups share printed rows: see line-rows.ts.
+markdown.core.ruler.push("line_rows", lineRowsRule);
+
+/**
+ * A heading a layout starts a sheet with - or keeps from starting one - carries the mark right after its
+ * `#`s (layout-marks.ts), which becomes a class here. Any other layout mark left in the text is dropped.
+ */
+markdown.core.ruler.push("page_breaks", (state: StateCore) => {
+    state.tokens.forEach((token, i) => {
+        if (token.type !== "inline") return;
+        const opening = state.tokens[i - 1];
+        if (opening?.type === "heading_open") {
+            const breaks = token.content.startsWith(PAGE_BREAK_MARK), keeps = token.content.startsWith(NO_PAGE_BREAK_MARK);
+            if (breaks || keeps) opening.attrJoin("class", breaks ? "page-break-before" : "no-page-break-before");
+        }
+        token.content = stripLayoutMarks(token.content);
+        for (const child of token.children ?? []) if (child.type === "text") child.content = stripLayoutMarks(child.content);
+    });
 });
 
 // ------------------------------------------------------------------------------------------------
@@ -474,11 +518,20 @@ function safeDecodeUri(href: string): string {
  */
 function prepareDocument(content: string, isRtl: boolean, options: RenderOptions):
         { tokens: Token[], env: Env, headings: HeadingEntry[] } {
-    const env: Env = { hrefFor: options.hrefFor, errors: options.errors, isRtl };
+    const env: Env = { hrefFor: options.hrefFor, errors: options.errors, isRtl, sourceLines: options.sourceLines };
     const tokens = markdown.parse(content, env);
     const headings = documentHeadings(tokens, env);
     env.indexesByToken = renderIndexes(tokens, headings, isRtl);
     return { tokens, env, headings };
+}
+
+/**
+ * Every paragraph of the document, as the source lines it spans (0-based, both ends included) - what a
+ * layout may gather lines of into groups (line-rows.ts), as the renderer sees them.
+ */
+export function paragraphRanges(content: string): { from: number, to: number }[] {
+    return markdown.parse(content, {}).filter(token => token.type === "paragraph_open" && token.map)
+        .map(token => ({ from: token.map![0], to: token.map![1] - 1 }));
 }
 
 /** The body of the page - exported for the tests. */
@@ -511,11 +564,11 @@ export function renderMarkdownPage(content: string, filePath: string, options: R
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escape(title)}</title>
 <style>${PAGE_STYLE}</style>
-</head>
+${isRtl && options.fonts ? `<style>${fontsStyle(options.fonts)}</style>\n` : ""}${options.page ? `<style>${pageSettingsStyle(options.page)}</style>\n` : ""}</head>
 <body class="${isRtl ? "rtl" : "ltr"}">
 <main>
 ${trail}${pageIndex}${errors}${body}</main>
-</body>
+${env.hasLineRows ? `<script>${LINE_ROWS_SCRIPT}</script>\n` : ""}</body>
 </html>
 `;
 }
@@ -683,6 +736,44 @@ export function renderBreadcrumbs(steps: Breadcrumb[]): string {
 
 // The editor's look, from public/style.css and the HighlightStyle in markdown-editor.js - keep the
 // two in step when either changes. The folder indexes (folder-index.ts) build on it too.
+const FACE_CSS: Record<FontFace, string> = {
+    regular: "font-weight: normal; font-style: normal",
+    bold: "font-weight: bold; font-style: normal",
+    italic: "font-weight: normal; font-style: italic",
+    boldItalic: "font-weight: bold; font-style: italic",
+};
+const embeddedFonts = new Map<string, string>();
+
+/** The page's two fonts, loaded from `fonts` - a folder's URL, or "embed" (RenderOptions.fonts). */
+function fontsStyle(fonts: string): string {
+    const url = (file: string) => {
+        if (fonts !== "embed") return `${fonts.replace(/\/?$/, "/")}${file}`;
+        if (!embeddedFonts.has(file)) embeddedFonts.set(file, `data:font/otf;base64,${readFileSync(join(FONTS_DIR, file)).toString("base64")}`);
+        return embeddedFonts.get(file)!;
+    };
+    return [
+        ...(Object.keys(FONT_FACES) as FontFace[]).flatMap(face => (["main", "fallback"] as FontRole[]).map(role =>
+            `@font-face { font-family: '${FONT_FAMILIES[role]}'; src: url("${url(FONT_FACES[face][role])}") format("opentype"); ${FACE_CSS[face]}; }`,
+        )),
+        `@font-face { font-family: '${LAST_RESORT.family}'; src: url("${url(LAST_RESORT.file)}") format("opentype"); }`,
+    ].join("\n");
+}
+
+/** The printed page as a file's layout sets it - for paper, and for the moment of measuring before it. */
+function pageSettingsStyle(page: PageSettings): string {
+    const fontSize = page.fontSize === undefined ? null : `${page.fontSize}pt`;
+    const inline = page.marginInline ?? PRINT_MARGIN_INLINE_MM, block = page.marginBlock ?? PRINT_MARGIN_BLOCK_MM;
+    const margins = page.marginInline !== undefined || page.marginBlock !== undefined;
+    return [
+        "@media print {",
+        margins ? `    @page { margin: ${block}mm ${inline}mm; }` : "",
+        fontSize ? `    body { font-size: ${fontSize}; }` : "",
+        "}",
+        fontSize ? `html.measuring-print body { font-size: ${fontSize}; }` : "",
+        margins ? `html.measuring-print main { width: calc(210mm - ${2 * inline}mm); }` : "",
+    ].filter(Boolean).join("\n");
+}
+
 export const PAGE_STYLE = `
 * { box-sizing: border-box; }
 body {
@@ -693,7 +784,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
 }
-body.rtl { font-family: 'David', 'Narkisim', 'Times New Roman', serif; }
+body.rtl { font-family: '${FONT_FAMILIES.main}', '${FONT_FAMILIES.fallback}', '${LAST_RESORT.family}', 'David', 'Narkisim', 'Times New Roman', serif; }
 body.ltr { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif; }
 main { max-width: 60rem; margin: 0 auto; }
 
@@ -779,13 +870,13 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
 .page-index { margin-top: 0.6em; }
 .page-index a { color: #0066cc; }
-
+${LINE_ROWS_STYLE}
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
 @media print {
     /* The reading column is the sheet, so the margins move from the body to the page box. */
-    @page { margin: 18mm 16mm; }
-    body { padding: 0; font-size: 11.5pt; }
+    @page { margin: ${PRINT_MARGIN_BLOCK_MM}mm ${PRINT_MARGIN_INLINE_MM}mm; }
+    body { padding: 0; font-size: ${PRINT_FONT_SIZE}; }
     main { max-width: none; }
 
     /* The backgrounds are not decoration - the colour is what says whether a block is an עיון or a
@@ -803,6 +894,10 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
        otherwise be a sheet of its own, nearly blank. */
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
+
+    /* A heading a file's layout starts a sheet with, or keeps from starting one (layout-schema.ts). */
+    .page-break-before { break-before: page !important; }
+    .no-page-break-before { break-before: auto !important; }
 
     /* The way around the site, which paper - and so every PDF - has no use for. */
     .breadcrumbs, .page-index { display: none; }
