@@ -83,7 +83,7 @@ so ([cognate]) and what the Bible makes of the god. **Places named in the Bible 
 | *ḥmry* (Mot's city), *ḫḫ* (his land) | `חַמְרַי`, `חַח` | *ḥmry* "Muck" (cf. `חֹמֶר`): a note |
 | *šḥlmmt* | `שַׁחְלְמַמַּת` | "the Shore of Death"? (a note) |
 | *mṣrm* | `מִצְרַיִם` | |
-| *ilmlk* (the scribe), *nqmd* (the king), *aṯn prln*, *ṯʿy*, *yrgb bʿl*, *ṯrmn* | `אִלִימִלְכּוּ`, `נִקְמַדּוּ`, `אַתְנוּ־פּוּרְלִנִּי`, `תַּעִי`, `יַרְגִּבְבַּעַל`, `תַּרְמָן` | the colophon (1.6 VI 54–58) |
+| *ilmlk* (the scribe), *nqmd* (the king), *aṯn prln*, *ṯʿy*, *yrgb bʿl*, *ṯrmn* | `אִלִימִלְכּוּ`, `נִקְמַדּוּ`, `אַתְנוּ־פּוּרְלִנִּי`, `שׁוֹעַ` (a title, [cognate] Isa 32:5; as drafted in 1.4 VIII:49 and 1.6 VI:57), `יַרְגִּבְבַּעַל`, `תַּרְמָן` | the colophon (1.6 VI 54–58) |
 | *tnn* | `תַּנִּין` | §4.1; reserved |
 | *ltn* (Lītānu / Lôtan) | `לִיתָן` | a name; `לִוְיָתָן` (Isa 27:1, Ps 74:14, Job 40:25) only in the apparatus [cognate] |
 | *arš*, *ʿtk*, *išt*, *ḏbb* (Yam's allies, 1.3 III 43–46) | `אַרְשׁ`, `עַתְק`, `אֵשׁ`, `זְבוּב`? | by sense where they are common nouns (*išt* "fire", *ḏbb* "fly"); the translator of 1.3 decides and records |
@@ -471,6 +471,13 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 - **`תֹּהוּ`** is licensed by *thw* (1.5 I:15, [cognate], Gen 1:2); `בֹּהוּ` stays never. The gate is in `ugarit_tools.py`.
 - **New one-lemma renderings of 1.5:** *un* `אוֹנִים` (instead of §4.4's `אֵבֶל`; the lemma is "grief, strength"), *mhmrt* `מַהֲמוֹרַת`, *bly* `בִּלָּה`, *ydt* `יָדוֹת`, *rks* `מֵזַח`, *hdy* `פָּצַע`, *ydy* `גָּרַד`, *ṯlṯ* (D) `שִׁלֵּשׁ`, *apnk* `אַחֲרֵי כֵן`, *ḫlq* `נִסְפָּה`.
 - **Open for the user:** *ḫnzr* and *psltm* (see the report).
+
+**Round 4 run 1, translator 3 (KTU 1.6), merged by the coordinator 2026-10-23** (details: `1-מחזור-בעל/project.md`, "KTU 1.6" → Proposals):
+- **Anat kills Mot (II:31–35):** one verb per lemma – *bqʿ* `בָּקַע`, *ḏry* `זָרָה`, *šrp* `שָׂרַף`, *ṭḥn* `טָחַן`, *drʿ* `זָרַע`; the sieves *ḫṯr* `נָפָה`, *kbrt* `כְּבָרָה` (Exod 32:20 has `שרף`, `טחן`, `זרה`: [equivalent], a note and a footnote).
+- **Collisions settled:** *qbʿt* (1.6 IV:18) takes its cognate `קֻבַּעַת`; *ridn* (1.3 I:12) is now `*אֲגַרְטָל*`. *ht* = `עַתָּה` in every tablet (1.4 V:54 changed from `*פה*`). *ṯʿy* = the title `שׁוֹעַ` (§1.2 changed from `תַּעִי`). *hm* = `אִם` "if" / `אוֹ` "or" by context, and *an* "strength" / *un* both `אוֹנִים`: accepted splits, noted at their lines. *aṯn prln*, *yrgb bʿl ṯrmn* keep §1.2's names (the title readings in the notes).
+- **The throne formula's *l*:** "from" when the god is driven off (1.3 IV:3 `מִנַּחַת, מִכֵּס`), "on" when he sits (1.6 V:6 `על נחת, על כס`) – a deliberate repeated-line difference.
+- **Kept, left for the user:** VI:48 *mtm* `מְתִים` "men" (not `מֵתִים`); I:48 *ylḥn* `*יַרְוֶה*`; V:9 *kr* `*חָם*`.
+- **New one-lemma renderings of 1.6:** *ʿn* "furrow" `מַעֲנָה` (Ps 129:3; CUC's parse "Anat" rejected), *iy* `אַיֵּה`, *trmt* `תְּרוּמָה`, *ḏʿt* `מוֹדַעַת`, *tġzyt* `רִצּוּי`, *nsʿ* `נָסַח`, *ngḥ* `הִתְנַגַּח` (full list in the project section).
 
 ## 11. The fifth-day dossier (`3-תיק-היום-החמישי/`, coordinator, 2026-10-23)
 

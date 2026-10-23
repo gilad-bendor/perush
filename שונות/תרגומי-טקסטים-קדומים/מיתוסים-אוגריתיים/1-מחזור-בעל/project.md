@@ -97,7 +97,7 @@ Anat's speech (V); the gift for Athirat and Qudšu-Amrur sent to Kothar in Kapht
   *tmtḫṣ* (n.) `קְרָב`, *ḫṣb* Gt `חָצַב` [cognate, Isa 51:9], *tḫtṣb* (n.) `חֲצִיבָה`, *ṣmt* `הִצְמִית`, *kly* `כִּלָּה`;
   haste *ḥš* `חוּשׁ`, *ʿṣ* `אוּץ`, *ʿbṣ* `חָפַז`, *lsm* `רוּץ`, *wḥy* Gt `דָּהַר`; particles *hln* `הֵן`, *hlm* `אֲזַי`, *dm*
   `הֲרֵי`, *al* (II) + prefix form `נָא`, *l* (IV) and *y* (vocative) `הוֹ`, *km* `כְּמוֹ`; *ank* `אָנֹכִי` / *an* `אֲנִי`;
-  cups *ks* `כּוֹס`, *krpn* `גָּבִיעַ`, *bk* `סֵפֶל`, *ridn* `*קֻבַּעַת*`, *qš* `קַשְׂוָה` [cognate, Ex 25:29], *ṣʿ* `קְעָרָה`;
+  cups *ks* `כּוֹס`, *krpn* `גָּבִיעַ`, *bk* `סֵפֶל`, *ridn* `*אֲגַרְטָל*` (changed by the coordinator after 1.6: `קֻבַּעַת` went to its cognate *qbʿt*), *qš* `קַשְׂוָה` [cognate, Ex 25:29], *ṣʿ* `קְעָרָה`;
   *ḫmr* `חֶמֶר` [cognate]; *msk* `מָסַךְ` / `מִמְסָךְ` [cognate]; *ṯʿr* `עָרַךְ`; *ʿšr* D `הִזְמִין`; *sʾd* `מְכַלְכֵּל`
   (the cognate of `סָעַד`, which §6.11 gives to *lḥm*; flagged in the note); *lḥm* Š `הִסְעִיד`; *št* "put" `שִׁית`
   [cognate]; *qry* G "meet" `קָרָה` (Deut 25:18), "present, place" `הִקְרָה` (Gen 27:20); *gly* `נִגְלָה`; *bġy* "reveal"
@@ -745,6 +745,180 @@ rites (VI).
 - In notes, references must be written `` (ספר פרק:פסוק) `` even inside a comparison ("כמו …"): a bare `יט:כז` is checked
   against Genesis.
 
+## KTU 1.6
+
+Translator 3 of the corpus (Round 4 run 1), 2026-10-23. Files: `annotated-1.6.rtl.md`, `translation--intro-1.6.rtl.md`,
+generated `translation-1.6.rtl.md` (and `translation.rtl.md`).
+
+### Scope
+
+All 245 CUC lines of KTU 1.6 (I:1–67, II:1–37, III:1–24, IV:1–29, V:1–30, VI:1–58), every line translated, broken
+ones as `[…]`. Preservation: I–III and most of VI good; II:1–5, IV:25–29, V:23–30, VI:1–8 and VI:36–42 scraps. Content:
+Anat mourns Baal with El's rites and cry (I:1–8); with Šapšu she weeps, carries him to Ṣapon, buries him and slaughters
+seventy of six kinds of animal (I:9–31); she tells El that Athirat's sons may now rejoice; Athirat proposes ʿAṯtar the
+Terrible, who is too small for Baal's throne and "rules in the earth, god of all of it" (I:32–67); months pass, Anat
+seizes Mot, who boasts of having eaten Baal (II:1–23); she splits, winnows, burns, grinds and sows him, and the birds eat
+him (II:24–37); El dreams that "the heavens rain oil, the wadis run with honey" and knows Baal lives (III); "the furrows of
+the fields are cracked": Anat sends Šapšu to look for Baal (IV); Baal returns, smites Athirat's sons and sits on his
+throne; in the seventh year Mot comes back, lists his own sufferings and demands one of Baal's brothers (V); Baal and
+Mot fight "like wild oxen, like serpents, like runners" until both fall; Šapšu warns Mot that El will overturn his throne;
+Mot yields; a hymn to Šapšu, lord of the Rephaim; the colophon of Ilimilku (VI).
+
+### Sources consulted
+
+- CUC v0.2.8 through `../ugarit_tools.py data`, `pars`, `lex`, `dulat`. 1.6 has machine parses only: every form re-parsed,
+  every *l*, *k*, *hm*, *d* decided in the פירוק (one machine error worth noting: IV:1–2, 12–13 *ʿn* "furrow" parsed as
+  the name *ʿnt*).
+- `annotated-1.3/1.4/1.5.rtl.md` for format, vocabulary and every repeated line (below).
+- Cassuto 1951 (I AB in his sigla), quoted briefly in 5 entries (I:9, II:22, VI:19, VI:20, VI:30), after my own drafting.
+- The modern translations (Smith in UNP, Pardee in COS I, Wyatt, del Olmo Lete, Gibson) from memory only, never quoted.
+- Every Bible verse printed with `../../tools/check_bible_quotes.py --show` before quoting (≈60 references in 47
+  **הקבלה** bullets and the notes).
+
+### Decisions
+
+- **Anat kills Mot** II:31–35, one Hebrew verb per lemma, checked against Exod 32:20 (`וַיִּשְׂרֹף בָּאֵשׁ וַיִּטְחַן עַד
+  אֲשֶׁר דָּק וַיִּזֶר עַל פְּנֵי הַמַּיִם`, printed): *bqʿ* `בָּקַע`, *ḏry* `זָרָה`, *šrp* `שָׂרַף`, *ṭḥn* `טָחַן`, *drʿ*
+  `זָרַע`; *ḫṯr* `נָפָה` (Isa 30:28) and *kbrt* `כְּבָרָה` (V:16) kept apart; *rḥm* "millstones" `רֵחַיִם`; the split
+  object suffix *tdry|nn* rendered `זֵרְתָה –` / `אותו`. Mot's own list (V:12–19) uses the nouns of the same verbs
+  (`זרייה`, `שְׂרֵפָה`, `טחינה`, `זריעה`), plus *qlt* `קָלוֹן` and *ġly* `*קְמִילָה*`.
+- **VI:45–48 (the §9 selftest lines) confirmed against CUC**: *rpim* = `הָרְפָאִים` (Isa 26:14, 19; Ps 88:11; Isa 14:9);
+  *tḥtk* = prep. *tḥt* + 2 f. sg. `תַּחְתַּיִךְ` (the parallel VI:47 decides; CUC's *ḥtk* "rule" noted); *ilnym*
+  `הָאֵלִיִּים`; *tġzyt* = `רִצּוּי` from *ġzy* (1.4 `רִצָּה`; "חנופה" rejected as not root-based); *mtm* `מְתִים` "men"
+  (DULAT *mt* III, renderings §5.4) with `מֵתִים` "the dead" as the noted alternative. No change to the selftest needed.
+- **VI:51** the fixed line `בַּיָּם – אַרְשׁ וְהַתַּנִּין;` character for character; VI:49–53 *kṯr w ḫss* split
+  `כּוֹתַר … וְחַסִּיס` in VI:49–50 and joined `כּוֹתַר־וְחַסִּיס` in VI:52–53 as the text does.
+- **Colophon** VI:54–58 per renderings §1.2: `אִלִימִלְכּוּ הַשּׁוּבָּנִי`, `אַתְנוּ־פּוּרְלִנִּי`, `נִקְמַדּוּ`, `אוּגָרִית`,
+  `יַרְגִּבְבַּעַל`, `תַּרְמָן`; *lmd* `תלמיד`, *rb khnm* / *rb nqdm* `רב הכוהנים, רב הנוקדים`; *ṯʿy* `שׁוֹעַ` as in 1.4
+  VIII:49 (see Proposals).
+- **Mourning** I:1–8 copied from 1.5 VI:17–25 in the feminine (*km* `כמו` where 1.5 has *k*); *ʿd šbʿ bk* `עד שָׂבְעָה בֶּכִי`;
+  *bky* + object `בכתה אותו` (Gen 37:35); *qbr* `קָבַר`; *ḫrt ilm arṣ* `חוֹר אֵלֵי הארץ` (1.5's *ḫrt*); *gmn* `*קָרְבַּן*`
+  (italic, by sense); the six animals *rumm* `ראמים`, *alpm* `בקר` (coordinator's decision), *ṣin* `צאן`, *aylm* `אַיָּלִים`,
+  *yʿlm* `יְעֵלִים`, *yḥmrm* `יַחְמוּרִים` (Deut 14:5).
+- **ʿAṯtar** I:43–65: *ʿṯtr ʿrẓ* `עַתְּתַר העריץ` (§1.1); *dq anm* `דַּק אוֹנִים` (the accepted *an*/*un* split, noted);
+  *yrq* `*יָרִיק*`?; *ylḥn* `*יַרְוֶה*`; *pʿn* … *hdm*, *riš* … *aps* `אָפְסוֹ` (Deut 33:17); *rḥbt* `קַנְקַן` (1.4); *kknt*
+  `צִנְצֶנֶת`.
+- **The seizing** II:9–23: *ṣq* Š `הֵצִיק` [cognate]; *sin lpš* `בשולי לבוש`, *qṣ all* `בקצה האדרת`; *ḫsr* `חָסַר`; II:22–23
+  copy 1.4 VIII:17–20 (`תִּקַּנְתִּיו … ככבש בפי, / כטלה בשִׁבְרוֹן …`); *šir* `שְׁאֵר` (vocalized), *ʿṣr* `צִפּוֹר`,
+  *npr* `*פּוֹרְחִים*` (`עוֹף` reserved for *ʿp*).
+- **El's dream** III: *ḏrt* `מַרְאֶה` (by sense; `חָזָה` is *ḥdy*'s), *ḥlm* `חֲלוֹם`, *mṭr* D `הִמְטִיר` (Exod 16:4), *nbt*
+  `*נוֹפֶת*` (1.4 I:31); III:15–16 copy 1.4 IV:28–29 (without `וְכִירְכֵּר`, absent here).
+- **The furrows** IV: *ʿn* (II) `מַעֲנָה` [cognate, Ps 129:3 Q]; *mḥrṯt* `חָרִישׁ`; *iy* `אַיֵּה` (Ps 42:4); *an l an*
+  `אָן לְאָן`; *nġr* `נָצַר`; *šlm* `שָׁלוֹם`; *qbʿt* `קֻבַּעַת` (collision, Proposals); *šdy* `שָׁפַךְ` by sense.
+- **Baal's return and Mot's** V: *ṣmd* (n.) `*קַרְדֹּם*`; *dkym* `*דכים*`? (meaning
+  unclear: "the crushed"?); *ṣġr* `צעירים`; *šbʿ šnt* `בְּשֶׁבַע שנים` (2 Kgs 8:1); *kr* `*חָם*`?; *ṯb ap* `ישוב האף` (Hos 14:5); *ʾnš*
+  `אָנַשׁ`; *kly* D `כִּלָּה`.
+- **V:6** `על [נַחַת], על כֵּס שררתו.` differs from 1.3 IV:3 `מִנַּחַת, מִכֵּס שררתו.` on purpose: the same *l* means
+  "from" when Yam is driven off the throne and "on" when Baal sits on it (the verifier's one listed difference; justified
+  in the entry). VI:34 repeats V:6.
+- **The fight** VI:16–22: *tʿ* N `הִתְגּוֹשֵׁשׁ`, *gmrm* `*אבירים*` (VI:6 too; `גִּבּוֹר` is *ġzr*'s), *ʿz* `עַז`, *ngḥ*
+  `הִתְנַגַּח`, *nṯk* N `הִתְנַשֵּׁךְ`, *bṯnm* `פתנים` (§4.1), *mṣḫ* `נִגְרַר`, *lsmm* `רצים`, *ql* `נָפַל` (§6.3).
+- **Šapšu's warning** VI:22–29: *ik* `אֵיךְ`; *nsʿ* `נָסַח` (`הִסִּיעַ` taken by *mšr* Š), *alt* `עַמּוּדִים`, *hpk* `הָפַךְ`,
+  *ṯbr* `שָׁבַר`, *ḫṭ mṯpṭ* `שרביט משפט`; VI:30–31 echo 1.5 II:6–7 with Mot as subject; *ʿr* N `נֵעוֹר`; *yṯb* Š
+  `יוֹשִׁיבוּהוּ`.
+- **The hymn** VI:42–53: *lḥm* `סָעַד`, *trmt* `תְּרוּמָה` [cognate], *ḥbr* `חָבֵר`, *ḏʿt* `מוֹדַעַת` (Ruth 3:2), *ydy*
+  (I) `*יַדֶּה*` "cast" (Lam 3:53), *tr* `*יָתוּר*`.
+
+### Open decisions for the user
+
+- VI:48 *mtm*: `מְתִים` "men" (renderings §5.4, DULAT) or `מֵתִים` "the dead" (the parallel with the Rephaim; many
+  translators) – one vowel.
+- I:48 *ydʿ ylḥn*: `יוֹדֵעַ, *יַרְוֶה*` ("who knows and moistens", DULAT) – the common alternative "one who knows and
+  understands" (*lḥn* "be clever") is noted.
+- V:9 *kr*: `*חָם*` "grew hot" against "returned" / "was sorrowful".
+- VI:57 *ṯʿy*: title `שׁוֹעַ` (as in 1.4 VIII:49) against renderings §1.2's name-like `תַּעִי` (Proposals).
+
+### Progress log
+
+- Drafted in CUC order I → VI, each section written to the file and checked at once (`fill`, `verify 1.6`,
+  `check_bible_quotes.py`); the checker caught 9 slips in the notes (a missing `אֶת` in Ezek 5:2, a hyphen in Ps 18:47,
+  bare or Genesis-read references for Judg 14:17, Isa 14:13, Ps 104:18, Deut 25:5, Deut 14:5, Ruth 1:2, and three
+  references I had not printed – Lam 3:53, Isa 50:4, 1 Sam 28:13 – printed and requoted or rewritten).
+- Pass (a) fidelity: entries re-read against CUC; vocalized the gates (`אֵל`, `מוֹת`, `מֵת`, `צָפוֹן`, `דָּגָן`, `שָׁלוֹם`,
+  first `עֲנָת`, `יְרָחִים`) and the ambiguous forms (`שְׁאֵר`, `בֶּכִי`, `כִּלּוּ`, `אָנַשְׁתִּי`, `רִצּוּי`, `מְתִים`).
+- Pass (b) consistency: repeated passages inside the tablet (I:18–29; II:6–9 = 28–30; III:2–9 = 10–13, 20–21; IV:1–5 =
+  12–16; V:11–19; VI:17–20) and with 1.3–1.5 compared; III:7 lost a stray `ו` so that it equals III:13; new Hebrew words
+  grepped in every corpus (`grep --all`): `כברה` matches the Sumerian Hoe-and-Plough's sieve, `התגוששות` Enūma eliš's
+  *tiṣbutu*, `חבר` Gilgameš's *tappû* – all compatible.
+- Pass (c) Hebrew: the generated `translation-1.6.rtl.md` read through; one fix (I:39 lacked the opening `"` of the speech
+  closed at I:43); no vav-consecutive.
+- Final: `build`; `check_bible_quotes.py` on the three files 0 problems; `verify 1.6 --strict`: 245/245 entries, 0
+  problems, 1 repeated-line difference (V:6 / 1.3 IV:3, justified).
+
+### The text on its own terms
+
+- **Grief as a fixed liturgy** (I:1–8): Anat repeats El's rites and cry word for word – mourning is a text one performs.
+- **The mourners' feast reversed** (I:9–10): "she was sated with weeping, drank tears like wine" – grief described as a meal.
+- **A god needs burial and offerings** (I:15–29): the dead Baal is buried in the earth's "hole" and given seventy of every
+  beast, as a king's funeral.
+- **The throne fits only its owner** (I:56–65): ʿAṯtar's feet do not reach the footstool – kingship as a matter of size; the
+  failed god rules "in the earth", perhaps the god of irrigation (I:66–67).
+- **Love as animal instinct** (II:6–9, 28–30): "like the heart of a cow for her calf, like the heart of a ewe for her lamb"
+  – a goddess's longing pictured from the farmyard.
+- **Death killed like grain** (II:31–37): split, winnowed, burnt, ground, sown – Mot is treated like the harvest, and the
+  birds eat him; the agricultural year as a myth.
+- **Knowledge by dream** (III:1–21): El learns from a dream of oil-rain and honey-wadis that Baal is alive – fertility is
+  the sign of the god's life.
+- **The sun sees everything** (IV; VI:22–53): Šapšu, who passes through the underworld each night, is the one sent to find
+  Baal and the one who rules the Rephaim.
+- **Cycles, not final victories** (V:7–9): "from days to months, from months to years – in the seventh year" Mot returns;
+  death is defeated, not abolished.
+- **Equal strength** (VI:16–22): "Mot is strong, Baal is strong" three times; the fight is decided not by force but by El's
+  authority, voiced by Šapšu.
+- **Fear changes sides** (VI:30–31): the words that described Baal's fear of Mot (1.5 II:6–7) now describe Mot's.
+- **The scribe signs** (VI:54–58): the colophon names scribe, teacher, priestly office and king – the myth as a royal,
+  temple-owned text.
+
+### Key parallels
+
+- II:32–35 ↔ Exod 32:20 `וַיִּשְׂרֹף בָּאֵשׁ וַיִּטְחַן עַד אֲשֶׁר דָּק וַיִּזֶר עַל פְּנֵי הַמַּיִם` – three of Anat's verbs
+  (burn, grind, winnow/scatter) are Moses' against the golden calf; destroying a god is a fixed sequence.
+- VI:17 ↔ Song 8:6 `כִּי עַזָּה כַמָּוֶת אַהֲבָה` – "Mot is strong" is the strength of death the Song still knows.
+- VI:51 ↔ Isa 27:1 `וְהָרַג אֶת הַתַּנִּין אֲשֶׁר בַּיָּם` – the same phrase, *b ym … tnn*.
+- VI:46 ↔ Isa 26:19, 14; Ps 88:11; Isa 14:9 – the `רְפָאִים`, the shades, even on thrones as dead kings.
+- I:16 ↔ Gen 37:35 `וַיֵּבְךְּ אֹתוֹ אָבִיו` – "she wept him", the same verb with direct object, for the dead son/brother.
+- IV:1 ↔ Ps 129:3 (`מַעֲנִיתָם`) – *ʿn* "furrow" is the Bible's `מַעֲנָה`.
+- III:6–7 ↔ Joel 4:18; Job 20:17 – the land flowing with sweetness as the sign of restored blessing.
+- V:20–21 ↔ Hos 14:5 `כִּי שָׁב אַפִּי מִמֶּנּוּ` – the same idiom, *ṯb ap*.
+- V:8–9 ↔ 2 Kgs 8:1 (seven years of famine) – the seven-year cycle.
+- I:54–62 ↔ Isa 14:12–13 – a star-god who would sit on the mount in the far north and falls to the earth.
+
+### Lines shared with other tablets
+
+- Copied: I:1–8 (= 1.5 VI:17–25 in the feminine); I:13 etc. (Šapšu's epithet, §6.6); I:32–38 (= 1.4 IV:20–26, §6.7, the
+  journey to El and the obeisance §6.3); I:39, II:11, III:17 (§6.1); I:47, 49, 53 (the answer formulas §6.5); I:64
+  (`מִכֵּס`, 1.3 IV:2–3 sense); I:65 (= 1.3 VI:25); II:19–20 (= 1.5 VI:6–7, 28–29); II:22–23 (= 1.4 VIII:17–20); II:24–25
+  (= 1.4 VIII:21–24); III:4–5 (§6.6 El's epithets, 1.4 III:32); III:15–16 (= 1.4 IV:28–29); III:22–24, IV:6–11 (message
+  formulas §6.4); IV:23 (*nġr*, 1.4 VIII:14); VI:30–31 (1.5 II:6–7 pattern, §6.6 *ydd il ġzr*); VI:51 (fixed line).
+- Differences justified in the entries: V:6 / VI:34 `על` where 1.3 IV:3 has `מִ` (the meaning of *l*); I:4 `כמו` for *km*
+  (1.5 *k* `כ`); III:16 initial `ו` (*w* in the text); III:15 without `וְכִירְכֵּר`.
+
+### Proposals for the shared renderings
+
+1. ***hm*** "if / or": 1.6 uses *hm* as "if" (III:2–3) where 1.5 rendered *hm* `אוֹ` (I:15, 18); both are DULAT senses – the
+   renderings should list `אִם` / `אוֹ` as an accepted split by context.
+2. ***qbʿt*** (IV:18) is the cognate of `קֻבַּעַת`, which 1.3 gave (italic) to *ridn*: give `קֻבַּעַת` to *qbʿt* and another
+   word (`*גָּבִיעַ*`?) to *ridn*.
+3. ***an*/*un***: `אוֹנִים` for both "strength" (I:50) and "mourning" (1.5 VI:15) – the accepted split, noted at I:50; record
+   it in §10.
+4. ***ṯʿy*** (VI:57): `שׁוֹעַ` (title, "noble"; 1.4 VIII:49) against §1.2's `תַּעִי`; one form for both tablets.
+5. ***atn prln*** / ***yrgb bʿl ṯrmn***: §1.2's double names against CUC/DULAT's parse (*prln* "diviner"; "lord of Yrgb, lord
+   of Ṯrmn"); kept §1.2, both parses in the notes.
+6. ***ht*** "now" `עַתָּה` (I:39) against 1.4's `*פה*`? – one rendering.
+7. ***ḫṯr*** `נָפָה` / ***kbrt*** `כְּבָרָה` (both "sieve"; kept apart, one word per lemma).
+8. **New corpus rows**: *bqʿ* `בָּקַע`; *ḏry* `זָרָה`; *ṭḥn* `טָחַן`; *rḥm* `רֵחַיִם`; *ʿn* (II) `מַעֲנָה`; *mḥrṯt* `חָרִישׁ`;
+   *iy* `אַיֵּה`; *an* "where" `אָן`; *gmn* `*קָרְבַּן*`; *yḥmr* `יַחְמוּר`; *yʿl* `יָעֵל`; *ṣṣ* `צִנְצֶנֶת`; *ṣq* Š `הֵצִיק`;
+   *npr* `*פּוֹרֵחַ*`; *ḏrt* `מַרְאֶה`; *nbt* `נוֹפֶת`; *ṯb ap* `שָׁב אַף`; *ṣmd* (n.) `*קַרְדֹּם*`; *ngḥ* `הִתְנַגַּח`; *mṣḫ*
+   `נִגְרַר`; *nsʿ* `נָסַח`; *trmt* `תְּרוּמָה`; *ḏʿt* `מוֹדַעַת`; *tġzyt* `רִצּוּי`; *ilny* `אֵלִי`; *lmd* `תַּלְמִיד`.
+9. **VI:45–46 selftest**: no change (checked against CUC above).
+
+### Lessons for the guidelines
+
+- On machine-parsed tablets the parse can confuse a common noun with a divine name (*ʿn* "furrow" → *ʿnt*): check every
+  name the parse proposes against DULAT before translating.
+- A repeated formula with *l* is not one Hebrew line: *l* "from" / "on" changes with the verb (1.3 IV:3 / 1.6 V:6), so
+  the verifier's repeated-line list needs a justification, not a copy.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
@@ -757,7 +931,7 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | I:8 | qṣ . mri . ndd | נתח מְרִיא. נודד, | `וַיִּזְבַּח שׁוֹר וּמְרִיא` (שמואל ב ו:יג) | cognate | הבהמה המפוטמת של הסעודה החגיגית. |
 | I:9 | yʿšr . w yšqynh | הזמין והשקהו; | `וַיַּגֶּשׁ לוֹ וַיֹּאכַל וַיָּבֵא לוֹ יַיִן וַיֵּשְׁתְּ` (בראשית כז:כה) | equivalent | אותו סדר: הגשת הבשר ואחריה היין. |
 | I:10 | ytn . ks . bdh | נתן כוס בידו, | `כִּי כוֹס בְּיַד-יְהוָה וְיַיִן חָמַר מָלֵא מֶסֶךְ` (תהלים עה:ט) | cognate | כוס ביד, יין `חָמַר` (*ḫmr*, I:16) ו`מֶסֶךְ` (*msk*, I:17) באותו פסוק; במזמור זו כוס הזעם, כאן כוס הכבוד. |
-| I:12 | bk rb . ʿẓm . ridn | ספל רב, עצום, *קובעת* | `בְּסֵפֶל אַדִּירִים הִקְרִיבָה חֶמְאָה` (שופטים ה:כה) | equivalent | הספל של אורחים נכבדים. |
+| I:12 | bk rb . ʿẓm . ridn | ספל רב, עצום, *אגרטל* | `בְּסֵפֶל אַדִּירִים הִקְרִיבָה חֶמְאָה` (שופטים ה:כה) | equivalent | הספל של אורחים נכבדים. |
 | I:13 | mt . šmm . ks . qdš | מְתֵי שמים; כוס קודש | `וִיהִי מְתָיו מִסְפָּר` (דברים לג:ו); `מְתֵי יִשְׂרָאֵל` (ישעיהו מא:יד) | cognate | `מְתֵי` – *mt* "איש" הוא המלה העברית הנדירה `מְתִים` "אנשים" (; ). |
 | I:15 | l tʿn . aṯrt . alp | לא תביט אֲתִירַת. אלף | `אֲשֵׁרָה` (דברים טז:כא; מלכים א טו:יג) | cognate | `אֲתִירַת` – שמה הוא שם האלה המקראית , אבל האלה אינה מותאמת לצורה המקראית (`../renderings.md` §1). |
 | I:16 | kd . yqḥ . b ḫmr | כדים לקח מן החֶמֶר, | `וְדַם עֵנָב תִּשְׁתֶּה חָמֶר` (דברים לב:יד) | cognate | *ḫmr* הוא המלה העברית השירית ליין. |
@@ -1130,3 +1304,66 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | VI:23 | bʿl . mt . my . lim . bn | "בעל מֵת! מִי לאום בן | `מִי פֶשַׁע יַעֲקֹב הֲלוֹא שֹׁמְרוֹן` (מיכה א:ה) | cognate | `מִי` במובן "מה", כמו *my* כאן. |
 | VI:25 | bʿl . ard . b arṣ . ap | בעל אֵרֵד בארץ!" אַף | `כִּי אֵרֵד אֶל בְּנִי אָבֵל שְׁאֹלָה` (בראשית לז:לה) | equivalent | יעקב על יוסף: אותה מלה, `אֵרֵד`, ואותה תמונה – האב שמבקש לרדת אחרי בנו אל המתים (קאסוטו כבר העיר) |
 | VI:25 | bʿl . ard . b arṣ . ap | בעל אֵרֵד בארץ!" אַף | `כִּי אֵרֵד אֶל בְּנִי אָבֵל שְׁאֹלָה` (בראשית לז:לה) | absent | בבראשית `שְׁאֹלָה`, וכאן *arṣ* "הארץ": המלה `שְׁאוֹל` אינה ידועה באוגריתית (§5.1). |
+
+### Parallels index (KTU 1.6)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| I:3 | thdy . lḥm . w dqn . ⸢t⸣[ṯ]⸢l⸣[ṯ] | פצעה לְחָיַיִם וְזָקָן, [שִׁלְּשָׁה] | `לֹא תִתְגֹּדְדוּ וְלֹא תָשִׂימוּ קָרְחָה בֵּין עֵינֵיכֶם לָמֵת` (דברים יד:א) | equivalent | ראו 1.5 VI:19. |
+| I:5 | ap lb . k ʿmq . tṯlṯ . bmt | את אַף הלב, כעמק שִׁלְּשָׁה את הגב. | `לְמַעֲנִותָם` (תהלים קכט:ג) | equivalent | `עַל-גַּבִּי חָרְשׁוּ חֹרְשִׁים הֶאֱרִיכוּ` – לשון הכתיב בספר:  – "על גבי חרשו חורשים": אותה תמונה, הגב כשדה חרוש; שם – הייסורים שבאו על ישראל. |
+| I:9 | ilm . špš . ʿd . tšbʿ . bk | האֵלִים, שַׁפְּשׁ. עד שָׂבְעָה בֶּכִי, | `הֶאֱכַלְתָּם לֶחֶם דִּמְעָה וַתַּשְׁקֵמוֹ בִּדְמָעוֹת שָׁלִישׁ` (תהלים פ:ו); `הָיְתָה-לִּי דִמְעָתִי לֶחֶם יוֹמָם וָלָיְלָה` (תהלים מב:ד) | equivalent | הבכי כמאכל והדמעות כמשקה (קאסוטו). |
+| I:16 | b ṣrrt . ṣp{ʿ}n . tbkynh | בפסגות צָפוֹן; בכתה אותו | `וַיֵּבְךְּ אֹתוֹ אָבִיו` (בראשית לז:לה) | cognate | "בכה אותו", אותו פועל עם מושא ישיר, על הבן המת שהאב רוצה לרדת אחריו שאולה (השווה 1.5 VI:25). |
+| I:26 | [tṭbḫ . š]⸢b⸣ʿm . yʿlm | [טבחה ש]בעים יְעֵלִים | `הָרִים הַגְּבֹהִים לַיְּעֵלִים` (תהלים קד:יח) | cognate | `יָעֵל`, עז ההרים. |
+| I:28 | [tṭbḫ . šbʿm . y]⸢ḥ⸣mrm | [טבחה שבעים] יַחְמוּרִים | `אַיָּל וּצְבִי וְיַחְמוּר` (דברים יד:ה) | cognate | שלושה מן המינים כאן (אייל, יעל?, יחמור) הם מן החיות הטהורות של התורה. |
+| I:31 | [kd .] ⸢ġ⸣zrh . ⸢y⸣bm . l ilm . | [כַּד?] גבורו, יָבָם לאֵלִים. | `יְבָמָהּ יָבֹא עָלֶיהָ` (דברים כה:ה) | cognate | *ybm* הוא `יָבָם`. |
+| I:48 | b⸢l⸣ . nmlk . ydʿ . yl⸢ḥn⸣ | בַּל נַמְלִיךְ יוֹדֵעַ, *יַרְוֶה*? | `כִּי אִם הִרְוָה אֶת הָאָרֶץ וְהוֹלִידָהּ וְהִצְמִיחָהּ` (ישעיהו נה:י) | equivalent | הגשם "מרווה" את הארץ; אתירת מבקשת מלך שיידע להשקות את הארץ, כבעל. |
+| I:50 | d . dq . anm . l yr⸢q⸣ | דַּק אוֹנִים לא *יָרִיק* | `וּלְאֵין אוֹנִים עָצְמָה יַרְבֶּה` (ישעיהו מ:כט) | cognate | `אוֹנִים` "כוח", אותו שם |
+| I:50 | d . dq . anm . l yr⸢q⸣ | דַּק אוֹנִים לא *יָרִיק* | `וְהָרֵק חֲנִית וּסְגֹר לִקְרַאת רֹדְפָי` (תהלים לה:ג) | equivalent | "להריק חנית" בקרב. |
+| I:51 | ʿm . bʿl . l yʿdb . mrḥ | עם בעל, לא יְתַקֵּן רוֹמַח | `וַיִּתְגֹּדְדוּ כְּמִשְׁפָּטָם בַּחֲרָבוֹת וּבָרְמָחִים` (מלכים א יח:כח) | cognate | `רֹמַח`, וכאן הרומח של בעל. |
+| I:54 | blt . nmlk . ʿṯtr . ʿrẓ | בַּל נַמְלִיךְ את עַתְּתַר העריץ? | `אֵיךְ נָפַלְתָּ מִשָּׁמַיִם הֵילֵל בֶּן שָׁחַר` (ישעיהו יד:יב) | equivalent | אל אסטרלי שמבקש לשבת על כס הר הצפון ואינו מגיע אליו: |
+| I:54 | blt . nmlk . ʿṯtr . ʿrẓ | בַּל נַמְלִיךְ את עַתְּתַר העריץ? | `וְאֵשֵׁב בְּהַר מוֹעֵד בְּיַרְכְּתֵי צָפוֹן` (ישעיהו יד:יג) | divergence | בישעיהו "הילל בן שחר" מבקש לשבת על הר הצפון ומופל; כאן עתתר יורד מן הכס מרצונו. |
+| I:61 | apsh . w yʿn . ⸢ʿ⸣ṯtr . ʿrẓ | (אל) אָפְסוֹ. וענה עַתְּתַר העריץ: | `יַחְדָּו אַפְסֵי אָרֶץ` (דברים לג:יז) | cognate | `אֶפֶס` "קצה". |
+| II:10 | b sin . lpš . tšṣq⸢n⸣[h] | בשולי לבוש הֱצִיקַ[תְהוּ], | `כִּי הֱצִיקַתְהוּ` (שופטים יד:יז) | cognate | דלילה "הציקה" לשמשון; *ṣq* Š הוא `הֵצִיק`, כאן במובן הגופני "לחץ, אחז בחוזקה". |
+| II:22 | ʿdbnn ank . imr . b py | תִּקַּנְתִּיו אנוכי (כ)כבש בפי, | `בִּלַּע הַמָּוֶת לָנֶצַח` (ישעיהו כה:ח) | divergence | המוות הבולע; ראו 1.4 VIII:18. |
+| II:26 | ym . ymm . yʿtqn . l ymm | יום, ימים חלפו; לימים | `יְחַיֵּנוּ מִיֹּמָיִם בַּיּוֹם הַשְּׁלִישִׁי יְקִמֵנוּ` (הושע ו:ב) | equivalent | מניין הימים עד שהמת קם; כאן ימים וחודשים עוברים עד שענת פוגעת במוֹת. |
+| II:27 | l yr⸢ḫ⸣m . rḥm . ʿnt . tngṯh | לִירָחִים. רַחַם ענת חיפשה אותו; | `רַחַם רַחֲמָתַיִם לְרֹאשׁ גֶּבֶר` (שופטים ה:ל) | cognate | `רַחַם` במובן "נערה", כמו התואר של ענת כאן. |
+| II:32 | ⸢t⸣bqʿnn . b ḫṯr . tdry | בקעה אותו; בנפה זֵרְתָה – | `וַיִּשְׂרֹף בָּאֵשׁ וַיִּטְחַן עַד אֲשֶׁר דָּק וַיִּזֶר עַל פְּנֵי הַמַּיִם` (שמות לב:כ) | cognate | משה עושה בעגל הזהב שלושה מחמשת הפעלים של ענת, באותם שורשים (שרף, טחן, זרה) |
+| II:32 | ⸢t⸣bqʿnn . b ḫṯr . tdry | בקעה אותו; בנפה זֵרְתָה – | `וַיִּשְׂרֹף בָּאֵשׁ וַיִּטְחַן עַד אֲשֶׁר דָּק וַיִּזֶר עַל פְּנֵי הַמַּיִם` (שמות לב:כ) | divergence | ענת גם בוקעת וזורעת, ונותנת לציפורים; משה משקה את העפר לבני ישראל. |
+| II:32 | ⸢t⸣bqʿnn . b ḫṯr . tdry | בקעה אותו; בנפה זֵרְתָה – | `שְׁלִשִׁית בָּאוּר תַּבְעִיר … אֶת הַשְּׁלִשִׁית תַּכֶּה בַחֶרֶב … וְהַשְּׁלִשִׁית תִּזְרֶה לָרוּחַ` (יחזקאל ה:ב) | equivalent | אש, חרב וזרייה, באותו סדר כמעט. |
+| II:34 | b rḥm . tṭḥnn . b šd | ברֵחַיִם טחנה אותו; בשדה | `וַיִּטְחַן עַד אֲשֶׁר דָּק` (שמות לב:כ) | cognate |  |
+| II:35 | tdrʿnn . širh . l tikl | זרעה אותו. שְׁאֵרוֹ אכן אכלו | `כָּלָה שְׁאֵרִי וּלְבָבִי` (תהלים עג:כו) | cognate | `שְׁאֵר` "בשר". |
+| III:4 | b ḥlm . lṭpn . il . d pid | בחלום האדיב, אֵל רחב־הלב, | `וַיֹּאמֶר אֱלֹהִים לְיִשְׂרָאֵל בְּמַרְאֹת הַלַּיְלָה` (בראשית מו:ב) | equivalent | "חלום" ו"מראה" לילה כצמד. |
+| III:6 | šmm . š⸢m⸣n . tmṭrn | השמים שמן ימטירו, | `הִנְנִי מַמְטִיר לָכֶם לֶחֶם מִן הַשָּׁמָיִם` (שמות טז:ד) | cognate | `הִמְטִיר` משמים דבר שאינו מים: שם לחם, כאן שמן. |
+| III:7 | nḫlm . tlk . nbtm | הנחלים ילכו *נוֹפֶת*. | `וְכָל אֲפִיקֵי יְהוּדָה יֵלְכוּ מָיִם` (יואל ד:יח) | equivalent | אותו פועל, `הָלַךְ`, לנחלים זורמים, ובחזון השפע של אחרית הימים |
+| III:7 | nḫlm . tlk . nbtm | הנחלים ילכו *נוֹפֶת*. | `אַל-יֵרֶא בִפְלַגּוֹת נַהֲרֵי נַחֲלֵי דְּבַשׁ וְחֶמְאָה` (איוב כ:יז) | equivalent | נחלי דבש. |
+| III:19 | w tnḫ . b irty . npš | ותנוח בחיקי נפש, | `שׁוּבִי נַפְשִׁי לִמְנוּחָיְכִי` (תהלים קטז:ז) | equivalent | מנוחת הנפש. |
+| III:20 | k ḥ⸢y⸣ . al⸢iy⸣n . bʿl | כי חי בעל האדיר, | `חַי-יְהוָה וּבָרוּךְ צוּרִי` (תהלים יח:מז) | cognate | "חי ה'": אותה קריאה על האל החי, `חַי`. |
+| IV:1 | pl . ʿnt . šdm . y špš | נסדקו מענות השדות, הוֹ שַׁפְּשׁ! | `לְמַעֲנִיתָם` (תהלים קכט:ג) | cognate | `עַל-גַּבִּי חָרְשׁוּ חֹרְשִׁים הֶאֱרִיכוּ` – וכן הקרי  – `מַעֲנָה`, התלם, מאותו שורש |
+| IV:1 | pl . ʿnt . šdm . y špš | נסדקו מענות השדות, הוֹ שַׁפְּשׁ! | `כִּי זֶה שְׁנָתַיִם הָרָעָב בְּקֶרֶב הָאָרֶץ וְעוֹד חָמֵשׁ שָׁנִים אֲשֶׁר אֵין חָרִישׁ וְקָצִיר` (בראשית מה:ו) | equivalent | ארץ בלי חריש בשנות הבצורת. |
+| IV:4 | ⸢i⸣y . aliyn . bʿl | אַיֵּה בעל האדיר? | `בֶּאֱמֹר אֵלַי כָּל-הַיּוֹם אַיֵּה אֱלֹהֶיךָ` (תהלים מב:ד) | cognate | "איה אלוהיך?" – השאלה על האל הנעדר. |
+| IV:11 | hwt . lṭpn . ḥtk⸢k⸣ | אמרת האדיב, מְחוֹלְלֵךְ: | `צוּר יְלָדְךָ תֶּשִׁי וַתִּשְׁכַּח אֵל מְחֹלְלֶךָ` (דברים לב:יח) | equivalent | "אל מחוללך", האל המוליד. |
+| IV:18 | šd yn . ʿn . b . q⸢bʿt⸣ . ⸢t⸣ | שִׁפְכִי יין … בקֻבַּעַת … | `אֶת קֻבַּעַת כּוֹס הַתַּרְעֵלָה שָׁתִית מָצִית` (ישעיהו נא:יז) | cognate | *qbʿt* הוא `קֻבַּעַת`. |
+| V:5 | ⸢p y⸣[ṯb….] ⸢b⸣ʿl . l ksi . mlkh | ו[ישב …] בעל על כיסא מלכותו, | `וְכֹנַנְתִּי אֶת כִּסֵּא מַמְלַכְתּוֹ עַד עוֹלָם` (שמואל ב ז:יג) | cognate | "כסא ממלכתו". |
+| V:9 | šnt . ⸢w kr⸣ . ⸢b⸣n . ⸢il⸣m . mt | שנים – *חָם* בן אֵלִים, מוֹת, | `כִּי קָרָא יְהוָה לָרָעָב וְגַם בָּא אֶל הָאָרֶץ שֶׁבַע שָׁנִים` (מלכים ב ח:א) | equivalent | שבע שנות בצורת |
+| V:9 | šnt . ⸢w kr⸣ . ⸢b⸣n . ⸢il⸣m . mt | שנים – *חָם* בן אֵלִים, מוֹת, | `וְקָמוּ שֶׁבַע שְׁנֵי רָעָב` (בראשית מא:ל) | equivalent |  |
+| V:16 | m . ʿ[lk] . ⸢pht⸣ [. dr]⸢y⸣ . ⸢b k⸣brt | ע[ליך] ראיתי [זרי]יה בכברה; | `כַּאֲשֶׁר יִנּוֹעַ בַּכְּבָרָה` (עמוס ט:ט) | cognate | *kbrt* היא `כְּבָרָה`. |
+| V:20 | ⸢b⸣ . ⸢a⸣ḫ⸢k⸣ . ⸢ispa⸣ . w yṯ⸢b⸣ | מאחיך, ואטרוף, ויָשׁוּב | `כִּי שָׁב אַפִּי מִמֶּנּוּ` (הושע יד:ה) | cognate | "שב אפי": אותו צירוף, *ṯb* + *ap* (V:21), הכעס ששב ונרגע. |
+| VI:17 | ⸢m⸣t . ʿz . bʿl . ʿz . yngḥn | מוֹת עז, בעל עז; התנגחו | `כִּי עַזָּה כַמָּוֶת אַהֲבָה קָשָׁה כִשְׁאוֹל קִנְאָה` (שיר השירים ח:ו) | cognate | "עזה כמוות": המוות הוא מידת העוז, כמו "מוֹת עז" כאן |
+| VI:17 | ⸢m⸣t . ʿz . bʿl . ʿz . yngḥn | מוֹת עז, בעל עז; התנגחו | `וּבְעֵת קֵץ יִתְנַגַּח עִמּוֹ מֶלֶךְ הַנֶּגֶב` (דניאל יא:מ) | cognate | `הִתְנַגַּח`, אותו שורש בבניין ההדדי |
+| VI:17 | ⸢m⸣t . ʿz . bʿl . ʿz . yngḥn | מוֹת עז, בעל עז; התנגחו | `וְכִי יִגַּח שׁוֹר` (שמות כא:כח) | cognate |  |
+| VI:18 | k rumm . mt . ʿz . bʿl | כראמים. מוֹת עז, בעל | `וְקַרְנֵי רְאֵם קַרְנָיו בָּהֶם עַמִּים יְנַגַּח` (דברים לג:יז) | cognate | הראם הנוגח, אותה תמונה ואותו פועל. |
+| VI:19 | ʿz . ynṯkn . k bṯnm | עז; התנשכו כפתנים. | `יְהִי דָן נָחָשׁ עֲלֵי דֶרֶךְ שְׁפִיפֹן עֲלֵי אֹרַח הַנֹּשֵׁךְ עִקְּבֵי סוּס` (בראשית מט:יז) | cognate | הנחש הנושך (קאסוטו: "מסורת ספרותית", נשיכה ונחש בצמד) |
+| VI:19 | ʿz . ynṯkn . k bṯnm | עז; התנשכו כפתנים. | `יְהִי דָן נָחָשׁ עֲלֵי דֶרֶךְ שְׁפִיפֹן עֲלֵי אֹרַח הַנֹּשֵׁךְ עִקְּבֵי סוּס` (בראשית מט:יז) | divergence | קאסוטו מתרגם "כנחשים" – אבל *bṯn* הוא `פֶּתֶן` (§4.1). |
+| VI:28 | ṯbtk . l yhpk . k⸢sa⸣ . mlkk | שִׁבְתְּךָ, אכן יהפוך כיסא מלכותך, | `וְכֹנַנְתִּי אֶת כִּסֵּא מַמְלַכְתּוֹ עַד עוֹלָם` (שמואל ב ז:יג) | equivalent | כיסא ממלכה שנכון לעולם; כאן איום להפוך אותו. |
+| VI:37 | ⸢dr⸣[d]⸢r⸣ . h⸢n⸣ | דור [ד]ור. הנה | `וּבָנִיתִי לְדֹר-וָדוֹר כִּסְאֲךָ סֶלָה` (תהלים פט:ה) | equivalent | כיסא "לדור ודור". |
+| VI:43 | [ši]⸢r⸣ . ṭry . ap . l tlḥm | [שְׁאֵ]ר טָרִי – אף אכן תסעדי; | `וַיִּמְצָא לְחִי חֲמוֹר טְרִיָּה` (שופטים טו:טו) | cognate | `טָרִי`. |
+| VI:44 | ⸢lḥ⸣m . trmmt . l tšt | לחם תרומה, אכן תשתי | `וְיִקְחוּ לִי תְּרוּמָה` (שמות כה:ב) | cognate | *trmt* היא `תְּרוּמָה`, מן השורש "רום": מה שמורם לאל. |
+| VI:46 | rpim . tḥtk | הָרְפָאִים תַּחְתַּיִךְ; | `יִחְיוּ מֵתֶיךָ … וָאָרֶץ רְפָאִים תַּפִּיל` (ישעיהו כו:יט); `מֵתִים בַּל יִחְיוּ רְפָאִים בַּל יָקֻמוּ` (ישעיהו כו:יד); `אִם-רְפָאִים יָקוּמוּ יוֹדוּךָ סֶּלָה` (תהלים פח:יא); `עוֹרֵר לְךָ רְפָאִים … הֵקִים מִכִּסְאוֹתָם כֹּל מַלְכֵי גוֹיִם` (ישעיהו יד:ט) | cognate | ה`רְפָאִים`, צללי המתים, ובישעיהו יד:ט אף בכסאות, כמלכים מתים. |
+| VI:48 | ʿdk . ilm . hn . mtm | עָדַיִךְ אֵלִים, הִנֵּה מְתִים; | `יְחִי רְאוּבֵן וְאַל יָמֹת וִיהִי מְתָיו מִסְפָּר` (דברים לג:ו) | cognate | `מְתִים` "אנשים". |
+| VI:50 | w ḫss . dʿtk | וְחַסִּיס – מוֹדַעְתֵּךְ. | `הֲלֹא בֹעַז מֹדַעְתָּנוּ` (רות ג:ב) | cognate | `מוֹדַעַת` "קרוב, מכר". |
+| VI:51 | b . ym . arš . w tnn | בַּיָּם – אַרְשׁ וְהַתַּנִּין; | `וְהָרַג אֶת הַתַּנִּין אֲשֶׁר בַּיָּם` (ישעיהו כז:א) | cognate | "התנין אשר בים": אותו צירוף בדיוק, *b ym … tnn* |
+| VI:51 | b . ym . arš . w tnn | בַּיָּם – אַרְשׁ וְהַתַּנִּין; | `וַיִּבְרָא אֱלֹהִים אֶת הַתַּנִּינִם הַגְּדֹלִים` (בראשית א:כא) | cognate |  |
+| VI:51 | b . ym . arš . w tnn | בַּיָּם – אַרְשׁ וְהַתַּנִּין; | `וַיִּבְרָא אֱלֹהִים אֶת הַתַּנִּינִם הַגְּדֹלִים` (בראשית א:כא) | divergence | בבראשית התנינים נבראים ביום החמישי, כאן התנין חי בים כיריב שכּוֹתַר מגרש. |
+| VI:52 | kṯr . w ḫss . yd | כּוֹתַר־וְחַסִּיס *יַדֶּה*, | `וַיַּדּוּ אֶבֶן בִּי` (איכה ג:נג) | cognate | אותו פועל, "השליכו". |
+| VI:55 | lmd . atn . prln . rb . | תלמיד אַתְנוּ־פּוּרְלִנִּי, רב | `לְשׁוֹן לִמּוּדִים` (ישעיהו נ:ד) | cognate | *lmd* "תלמיד" = `לִמּוּד`, "מי שלומד". |
+| VI:56 | khnm rb . ⸢n⸣q⸢d⸣m | הכוהנים, רב הנוקדים; | `דִּבְרֵי עָמוֹס אֲשֶׁר הָיָה בַנֹּקְדִים מִתְּקוֹעַ` (עמוס א:א); `וּמֵישַׁע מֶלֶךְ מוֹאָב הָיָה נֹקֵד` (מלכים ב ג:ד) | cognate | `נֹקֵד`, בעל צאן גדול (ולא רועה פשוט). |
+| VI:57 | ṯʿy . nqmd . mlk ug⸢rt⸣ | שׁוֹעַ נִקְמַדּוּ, מלך אוּגָרִית, | `וּלְכִילַי לֹא יֵאָמֵר שׁוֹעַ` (ישעיהו לב:ה) | cognate | *ṯʿy* = `שׁוֹעַ`. |
