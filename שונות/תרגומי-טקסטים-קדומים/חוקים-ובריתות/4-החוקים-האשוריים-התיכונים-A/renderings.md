@@ -20,7 +20,7 @@ Columns: Akkadian (ORACC `norm`; CDA lemma) | Hebrew | rejected | echo | lines (
 | *dâku*: *idukkū*, *idukkūšunu*, *idūak*, *idūakšunu*, *idūkū* | `יהרגו`, `יהרגום`, `יהרוג`, `יהרגם`, `הרגו` (F4; corpus) | `יומת`, `מות יומת` | [equivalent] `מוֹת יוּמָת` | o i 31, 99, 102; o ii 23, 29, 45, 51–52; o iii 36, 40 |
 | *nadānu*: *iddan*, *taddan*, *iddunū*, *tattidin*, *iddinūni* | `יתן`, `תתן`, `יתנו`, `נתנה`, `נתן` (F5) | | | passim |
 | *leqû*: *ilaqqe*, *talteqe*, *taltiqiūšini* | `יקח` (`יקחנה`), `לקחה`, `לקחה אותה` (F9) | | | o i 68, 104; o iii 15, 29, 55, 60, 80 |
-| *maḫāṣu*; *ina ḫaṭṭāte n imaḫḫuṣūš(i)* | `מחץ`; `<n> בשבטים ימחצוהו` / `ימחצוה` (corpus §6.2) | `הכה`, `מכות` | [equivalent] `אַרְבָּעִים יַכֶּנּוּ לֹא יֹסִיף` (דברים כה:ג) | o i 77; o ii 78, 90, 98, 103 |
+| *maḫāṣu*; *ina ḫaṭṭāte n imaḫḫuṣūš(i)* | `מחץ`; `<n> במקלות ימחצוהו` / `ימחצוה` (corpus §6.2; 2026-10-23 harmonization, was `בשבטים`) | `הכה`, `מכות` | [equivalent] `אַרְבָּעִים יַכֶּנּוּ לֹא יֹסִיף` (דברים כה:ג) | o i 77; o ii 78, 90, 98, 103 |
 | *nakāsu* G; D | `קצץ`: G `יקצוץ`, `יקצצו`; D `יְקַצֵּץ`, `יקצצו`, `קיצץ`, `יקצצנה` | | [equivalent] `וְקַצֹּתָה אֶת כַּפָּהּ` (דברים כה:יב) – **via LH's rendering, not a cognate** | o i 50–55, 65, 69, 80, 92, 96; o ii 53; o iii 55, 57, 79 |
 | *arnu*; *aranša tanašši*; *aranšu laššu* | `עון`; `את עונה תשא` (F37; corpus §6.2); `עון אין לו` | | [equivalent] `וְהָאִשָּׁה הַהִוא תִּשָּׂא אֶת עֲוֹנָהּ` (במדבר ה:לא) | o i 20; o ii 46 |
 | *Id* (the River, the ordeal); *ana Id illak/illukū*; *ina Id târu* | `הנהר`; `אל הנהר ילך/ילכו` (F33; corpus §6.2); `מן הנהר שב` | | [divergence] במדבר ה:יא–לא | o ii 71; o iii 8, 10, 67, 70, 74–75 |

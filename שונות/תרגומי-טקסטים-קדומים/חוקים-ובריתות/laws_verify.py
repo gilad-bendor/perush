@@ -120,7 +120,7 @@ AKK = [
     (r'\bqadilt|\bqadišt', r'קדש', 'qadištu = קדשה'),
     (r'\bId\b', r'נהר', 'F33 the River (ordeal)'),
     (r'\b(mussa|mutiša)\b', r'בעל', 'LH mutum = בעל'),
-    (r'\b[hḫ]aṭṭāte\b', r'שבט', 'LH ḫaṭṭu = שבט'),
+    (r'\b[hḫ]aṭṭāte\b', r'מקלות', 'ḫaṭṭu (beating rod) = מקל (2026-10-23 harmonization; was שבט)'),
     (r'\bkišpē\b', r'כשפ', 'F34'),
 ]
 SUM = [
