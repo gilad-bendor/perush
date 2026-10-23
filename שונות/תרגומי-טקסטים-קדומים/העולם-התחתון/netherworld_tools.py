@@ -132,7 +132,8 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, source regex)
     'פוך': ('*šembizid* (הַפּוּךְ; unvocalized `הפוך` "reversed")', r'šembizid'),
     # Round 3, run 5 (renderings §11.2)
     'אנו': ('Anu (אָנוּ; unvocalized "we")', r'(^|[\s\[])ān[uiu]|\banu\b'),
-    'ככה': ('Kakka (כַּכָּה; unvocalized "thus")', r'\bkak+a\b'),
+    'ככה': ('Kakka (כַּכָּא; the old כַּכָּה reads "thus" unvocalized)', r'\bkak+a\b'),
+    'ככא': ('Kakka (כַּכָּא, always vocalized; 2026-10-23 harmonization)', r'\bkak+a\b'),
     'ארה': ('Erra (אֶרָּה)', r'\berra\b'),
     'פוכו': ('*ellag* (הַפּוּכּוּ; unvocalized "his opposite")', r'ellag|pukk'),
     'מכו': ('*e-ke₄-ma* (הַמֵּכּוּ)', r'e-ke₄-ma|e-AG|mekk|mikk'),
@@ -180,7 +181,7 @@ FORMULAS = [
     ('NE', r'mār šipr', r'שליח', '*mār šipri* = שליח'),
     ('NE', r'ana bāb āni ellil u ea', r'אל שער אנו, אנליל ואאה', 'the gate of Anu, Enlil and Ea'),
     ('NE', r'ānu ellil u ea īmurūšū', r'^אנו, אנליל ואאה ראוהו', 'Anu, Enlil and Ea saw him'),
-    ('NE', r'bāba ušēriba ila kaka', r'^בשער ה(ראשון|שני|שלישי|רביעי|חמישי|שישי|שביעי) הביאו את האל ככה', 'Kakka through the gates'),
+    ('NE', r'bāba ušēriba ila kaka', r'^בשער ה(ראשון|שני|שלישי|רביעי|חמישי|שישי|שביעי) הביאו את האל ככא', 'Kakka through the gates (כַּכָּא, 2026-10-23)'),
     ('NE', r'ūma ṣallū(-ma)? šarratu ereškigal u erra', r'ישנו המלכה ארשכיגל וארה', 'the 7-day refrain'),
     ('NE', r'ušellī-ma!? mītūti ikkalū balṭūti', r'^אעלה את המתים, ויאכלו את החיים,$', 'raise the dead (Ištar 19)'),
     ('NE', r'el balṭūti ušamʾad mītūti', r'^על החיים ארבה את המתים', 'the dead outnumber (Gilg. VI 100)'),

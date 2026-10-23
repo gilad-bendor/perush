@@ -234,7 +234,7 @@ Projects **3 Nergal and Ereškigal** (Akkadian, eBL `L/1/6`: the Middle Babyloni
 |---|---|---|
 | Nergal; Erra (SB: Nergal's other name, used side by side) | נֵרְגַל; ★ אֶרָּה | Gilgameš (`נֵרְגַל`; Errakal `אֶרָּכַּל`). `ארה` unvocalized reads "I pluck" (שיר השירים ה:א). The note at the first Erra: the two names of one god; Cuthah (`כּוּת` ★) and 2 Kgs 17:30. |
 | Anu (Akk.); An (Sum.) | ★ אָנוּ; ★ אַן | `אנו` unvocalized = "we" (and *nīnu* "we" occurs in these lines: MB 3, SB a+6). |
-| Kakka (Anu's vizier) | ★ כַּכָּה | `ככה` unvocalized = "thus". |
+| Kakka (Anu's vizier) | ★ כַּכָּא (2026-10-23 harmonization, was כַּכָּה) | eBL's *Kakka*, with a final aleph: neither `ככה` ("thus") nor `קקה`; the same in Enūma eliš. |
 | Enlil / Ellil; Ea; Ea-Ninšiku | אֶנְלִיל; אֵאָה; אֵאָה־נִינְשִׁיכּוּ | |
 | Nammu; Nanše; Ninurta | נַמּוּ; נַנְשֶׁה; נִינוּרְתָּה | |
 | Lamaštu; Enmešar(ra) | לַמַשְׁתּוּ; אֶנְמֵשַׁר | Wisdom corpus (*lamaštu* `לַמַשְׁתּוּ`). |
@@ -308,7 +308,7 @@ Projects **3 Nergal and Ereškigal** (Akkadian, eBL `L/1/6`: the Middle Babyloni
 | X *annīta ina šemîšu / šemêša* | `X – כְּשָׁמְעוֹ אֶת זֹאת,` / `– כְּשָׁמְעָהּ אֶת זֹאת,` |
 | *urid / īlâ* X *arkāt simmilat šamāmī* | `יָרַד X בְּמַדְרֵגוֹת הַשָּׁמַיִם הָאֲרֻכּוֹת.` / `עָלָה X …` |
 | *ana bāb ānu ellil u ea ina kašādīšu* / *ānu ellil u ea īmurūšū-ma* | `כְּהַגִּיעוֹ אֶל שַׁעַר אָנוּ, אֶנְלִיל וְאֵאָה,` / `אָנוּ, אֶנְלִיל וְאֵאָה רָאוּהוּ,` |
-| *N bāba ušēriba ila kakka* (a+15–21) | `בַּשַּׁעַר הָרִאשׁוֹן הֱבִיאוֹ אֶת הָאֵל כַּכָּה,` (ordinals of §4) |
+| *N bāba ušēriba ila kakka* (a+15–21) | `בַּשַּׁעַר הָרִאשׁוֹן הֱבִיאוֹ אֶת הָאֵל כַּכָּא,` (ordinals of §4) |
 | *N bāba ša* G *ina erēbīšu* (c+41–47) | `כְּשֶׁבָּא אֶל הַשַּׁעַר הָרִאשׁוֹן, (שַׁעַר) שֶׁל G,` – the translator fixes the exact form at c+41 |
 | *īrub-ma ana palkî kisallīša / ikmis iššiq qaqqara maḫrīša / īšir izzaz izakkarši* | fixed at a+22–24, copied at c+48–50 and e+29 |
 | the message *umma attī-ma ul ša elî …* (a+4–10 = a+26–32) and Ereškigal's message (d+62–72 = d+78–88) | fixed at the first copy; the later copies are copied letter for letter (brackets follow each copy) |
@@ -333,9 +333,9 @@ Projects **3 Nergal and Ereškigal** (Akkadian, eBL `L/1/6`: the Middle Babyloni
 **Never:** `סֻלָּם`; `מַלְאָךְ` (any form); `לִילִית`; `הִבְדִּיל` (any form of בדל); `רָקִיעַ`; `טֶרֶם` (already); `בּוֹר` (already); `עוֹלָם` (already). **Gated:** `גַּן` – *kiri₆*; `פּוּכּוּ` / `מֵכּוּ` – *ellag* / *e-ke₄-ma* / *pukku* / *mekkû*; `הֵיכָל` – *e₂-gal* / *ēkallu*.
 
 ### 11.7 Merged after project 3, part 1 (SB a+1–b+50, 2026-10-22)
-The translator's table of fixed strings (`3-נרגל-וארשכיגל/project.md`, "Proposals") **binds the later copies letter for letter**: the speech formula `אָנוּ פתח את פיו ואמר, אל כַּכָּה וזירו דבר דיבר:`; the message a+4–10 (`לאמור: 'אַתְּ – לא לך לעלות;` … `שליחך יבוא,` / `יְפַנֶּה את השולחן, יקבל את מתנתך;`); `כהגיעו אל שער …`; `"שוער, פתח לי את השער!"`; the gates `בשער הראשון הֱבִיאוֹ את האל כַּכָּה,`; the kneeling `בא אל חצרה הרחבה,` / `כרע, נשק את הקרקע לפניה,` / `התיישר, עומד ומדבר אליה:` (= Enūma eliš III 70); the greeting `שלום לX?` / `שלום לX;`; `האלים (הגדולים) היושבים בקרב אירכלה`; Ea's woodcutting command → execution; **the taboos**: `X Y נושא לך – אל תיגש, ואת Yו אל תאכל!` (*âru* "approach" = `ניגש`, against Foster's "take care"), the last `אתה – אשר לזכר ונקבה אל תאחז? בלבך`; the keeping (c+55–64) changes only `אל` + future → `לא` + past and `לך` → `לו`. b+26–28 = Gilg. X 92–94 and b+37 = Gilg. III 120 (`ושׂמה טַעַם`, vocalized, the "decree" sense) are copied from Gilgameš. Words: *umma* `לאמור`; *šapāru* `שָׁלַח`; *nīnu* `אֲנַחְנוּ` (never `אנו`); *ana maḫri* `לִפְנֵי`; *šattu* `שָׁנָה`, *warḫu* `חודש`; *paššūru* `שולחן`; *paṭāru* (a table) `פִּנָּה`; *qīštu* `מַתָּנָה`; *šalimtu* `שְׁלֵמוּת` [cognate].
+The translator's table of fixed strings (`3-נרגל-וארשכיגל/project.md`, "Proposals") **binds the later copies letter for letter**: the speech formula `אָנוּ פתח את פיו ואמר, אל כַּכָּא וזירו דבר דיבר:`; the message a+4–10 (`לאמור: 'אַתְּ – לא לך לעלות;` … `שליחך יבוא,` / `יְפַנֶּה את השולחן, יקבל את מתנתך;`); `כהגיעו אל שער …`; `"שוער, פתח לי את השער!"`; the gates `בשער הראשון הֱבִיאוֹ את האל כַּכָּא,`; the kneeling `בא אל חצרה הרחבה,` / `כרע, נשק את הקרקע לפניה,` / `התיישר, עומד ומדבר אליה:` (= Enūma eliš III 70); the greeting `שלום לX?` / `שלום לX;`; `האלים (הגדולים) היושבים בקרב אירכלה`; Ea's woodcutting command → execution; **the taboos**: `X Y נושא לך – אל תיגש, ואת Yו אל תאכל!` (*âru* "approach" = `ניגש`, against Foster's "take care"), the last `אתה – אשר לזכר ונקבה אל תאחז? בלבך`; the keeping (c+55–64) changes only `אל` + future → `לא` + past and `לך` → `לו`. b+26–28 = Gilg. X 92–94 and b+37 = Gilg. III 120 (`ושׂמה טַעַם`, vocalized, the "decree" sense) are copied from Gilgameš. Words: *umma* `לאמור`; *šapāru* `שָׁלַח`; *nīnu* `אֲנַחְנוּ` (never `אנו`); *ana maḫri* `לִפְנֵי`; *šattu* `שָׁנָה`, *warḫu* `חודש`; *paššūru* `שולחן`; *paṭāru* (a table) `פִּנָּה`; *qīštu* `מַתָּנָה`; *šalimtu* `שְׁלֵמוּת` [cognate].
 **The coordinator's rulings on the open decisions** (the user's rule: minor things decided and recorded):
-1. Kakka stays `כַּכָּה` (the eBL normalization *kaka*); Enūma eliš's `גַּגָּא` follows that edition's reading of the same god: a note at the first occurrence names both.
+1. Kakka stays `כַּכָּה` (the eBL normalization *kaka*); Enūma eliš's `גַּגָּא` follows that edition's reading of the same god: a note at the first occurrence names both. [Settled 2026-10-23, §11.15: `כַּכָּא` in both corpora.]
 2. *arkāt simmilat šamāmī*: the fixed `במדרגות השמים הארוכות` stays; the note gives eBL's reading (*arkātu* "the length(s) of").
 3. *ebbu* = **`צַח`** (accepted), so that *ellu* keeps `טָהוֹר` (precedent); §11.3 row changed: d+67 `טמאה אני – ולא צחה`. *musukkatu* stays `טְמֵאָה`.
 4. *mātu* = `ארץ` (no article) stays; *erṣetu* (netherworld) = `הארץ`; where the line could mislead, the note says which.
@@ -383,7 +383,10 @@ The fourteen demons, fixed at MB a+26–29 and copied at b+3–9: `מִתְבָ�
 ### 11.15 The 2026-10-23 harmonization (`harmonization--2026-10-23.md`)
 2026-10-23 harmonization: the advice formula *na ga-de₅ na de₅-ĝu₁₀ ḫe₂-dab₅* = `עצה אתן – עצתי תיאחז!` (row 13: one formula, one Hebrew; *na de₅* = `נתן עצה`, *dab₅* = `אחז`); changed lines: GEN 182 `הוראה אוֹרֶה – הוראתי תֵּאָחֵז!` → `עצה אתן – עצתי תיאחז!` (XII 12 keeps `הוראה` for *aširtu*: the [divergence] note says so). Inana 30A `[עצה] איעצך – עצתי תא[חז]!` is outside this pass.
 
+2026-10-23 harmonization, batch B (rows 5, 20, 23): *parakku* → `דּוּכָן` (`כִּסֵּא` stays *kussû*'s); Kakka → `כַּכָּא` (eBL's *Kakka*, a final aleph: neither `ככה` "thus" nor `קקה`; always vocalized; Enūma eliš now has the same form); the advice formula's plene `תיאחז`. Changed lines: NE SB c+35 `כֵּס המלכות` → `דוכן המלכות`; every `כַּכָּה` of Nergal and Ereškigal → `כַּכָּא` – the `>` lines SB a+1, a+2, a+11, a+14, a+16, a+18, a+19, a+21, a+39, e+43, e+44, the headings, the notes (also the misspelt `כככה` of ten notes) and the introduction; Inana 30A `עצתי תֵּאָ[חז]!` → `עצתי תיא[חז]!`. `netherworld_tools.py`: the Kakka trap now also catches an unvocalized `ככא`, and the gate formula requires `הביאו את האל ככא`.
+
 ## Changelog
+- 2026-10-23: end of §11.15, the 2026-10-23 harmonization batch B (NE c+35, Kakka, Inana 30A); the tool's Kakka trap and gate formula.
 - 2026-10-23: §11.15, the 2026-10-23 harmonization (GEN 182).
 - 2026-10-21: written by the corpus coordinator before the first line, from the Gilgameš, wisdom, lament, temple, creation and law corpora and a reading of both base texts in full.
 - 2026-10-21: §9 filled after both texts were drafted and reviewed; §2/§5 rows corrected to the drafted lines; §10 extended.
