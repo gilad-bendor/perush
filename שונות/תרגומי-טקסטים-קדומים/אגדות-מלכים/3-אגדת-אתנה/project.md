@@ -53,8 +53,8 @@ touch other corpora, which other Round 3 sessions were editing; listed in `../..
    `אַקּוֹ` (Etana): proposal `יעל־האפסו`.
 3. *ḫaṭṭu* `שרביט` (here, EA) vs `שבט` (Enūma eliš IV 29, LH): proposal `שרביט` for *ḫaṭṭu* everywhere, `שבט` for
    *šabbiṭu* only.
-4. *parakku* `כֵּס` (here, EA *barag*) vs `דוכן` (Enūma eliš); Sum. *aga* `עטרת` (EWO 264) vs *agû* `כתר` (Gilgameš).
-5. *palgu* `תעלה` (here) vs the cognate `פֶּלֶג` (Enūma eliš): proposal `פֶּלֶג` everywhere.
+4. *parakku* `כֵּס` (here, EA *barag*) vs `דוכן` (Enūma eliš); Sum. *aga* `עטרת` (EWO 264) vs *agû* `כתר` (Gilgameš). **Settled 2026-10-23** (`../../harmonization--2026-10-23.md` row 5): *parakku* = `דּוּכָן` (I.15, I.23, II.3, II.4, OBM.9).
+5. *palgu* `תעלה` (here) vs the cognate `פֶּלֶג` (Enūma eliš): proposal `פֶּלֶג` everywhere. **Settled 2026-10-23** (`../../harmonization--2026-10-23.md` row 7): `פֶּלֶג` (MA.i+10 `[כ]מי פלג`).
 6. *buginnu* `שוקת` (here; = Sum. *buniĝ*, Gudea) vs Gilgameš *mašqû* `שוקת`: proposal *mašqû* `מַשְׁקֶה`.
 7. Smaller splits recorded by the parts: *šērtu* `עֹנֶשׁ` (Atra-ḫasīs, here) vs `אַשְׁמָה` (Gilgameš, Ludlul); *ērišu*
    `חתן` vs Gilgameš *ḫāmiru*; *nāʾeru* `שואג` vs `צורח`; *ṣapāru* / *raʾzu* `*משובץ*`; *ḫiāṭu* `בחן` vs *barû* `בוחן`;
@@ -138,7 +138,7 @@ tablet: header + 1–29, a+1–a+11). **69 entries.** Not committed.
 | I.13 | ina ūmīšū-ma | ביום ההוא | `בַּיָּמִים הָהֵם אֵין מֶלֶךְ בְּיִשְׂרָאֵל אִישׁ הַיָּשָׁר בְּעֵינָיו יַעֲשֶׂה` (שופטים יז:ו) | equivalent | "In those days" + "no king". OB has *ina šiātim* `בָּהּ` (OBM.7). |
 | I.13 | ina ūmīšū-ma | ביום ההוא | `בְּיוֹם עֲשׂוֹת יְהוָה אֱלֹהִים אֶרֶץ וְשָׁמָיִם` (בראשית ב:ד) | divergence | The "on the day when" opening before the description of what is lacking (Gen 2:5) – but with no "not yet". |
 | I.19 | ištar rēʾâ … (I.20) u šarra išeʾʾi | אִשְׁתַּר – רועה … ומלך – מבקשת | `בִּקֵּשׁ יְהוָה לוֹ אִישׁ כִּלְבָבוֹ וַיְצַוֵּהוּ יְהוָה לְנָגִיד עַל עַמּוֹ` (שמואל א יג:יד); `וְהִנֵּה רֹעֶה בַּצֹּאן` (שמואל א טז:יא); `וַיִּבְחַר בְּדָוִד עַבְדּוֹ וַיִּקָּחֵהוּ מִמִּכְלְאֹת צֹאן` (תהלים עח:ע) | equivalent | The deity "seeks" a shepherd who will be king (*šeʾû* = `בִּקֵּשׁ`). **Foster's "came down from heaven to seek" (I.19, 21) is a restoration resting on the abandoned reading *bēltum* in OBM 14.** Also I.21–22. |
-| I.23 | enlil ihâṭ parakki šamê | אֶנְלִיל בוחן את כֵּס השמים | `יְהוָה בַּשָּׁמַיִם כִּסְאוֹ עֵינָיו יֶחֱזוּ עַפְעַפָּיו יִבְחֲנוּ בְּנֵי אָדָם` (תהלים יא:ד) | equivalent | A throne in heaven and a god who "examines". |
+| I.23 | enlil ihâṭ parakki šamê | אֶנְלִיל בוחן את דוכן השמים | `יְהוָה בַּשָּׁמַיִם כִּסְאוֹ עֵינָיו יֶחֱזוּ עַפְעַפָּיו יִבְחֲנוּ בְּנֵי אָדָם` (תהלים יא:ד) | equivalent | A throne in heaven and a god who "examines". |
 | I.28 | ilū māt[āti?] | אֵלֵי הָאֲרָ[צוֹת?] | `מִי בְּכָל אֱלֹהֵי הָאֲרָצוֹת אֲשֶׁר הִצִּילוּ אֶת אַרְצָם מִיָּדִי` (מלכים ב יח:לה) | equivalent | The same phrase (`אֱלֹהִים` reserved: `אֵלֵי`). |
 | I.a+2 | [mar]hīssu ana šâšū-m[a] | [רעי]יתו אליו | `וַתָּבֹא הָאִשָּׁה וַתֹּאמֶר לְאִישָׁהּ` (שופטים יג:ו) | divergence | The (barren, 13:2) wife of Manoah tells her husband of a revelation that ends in a son; here the wife of a sonless king tells a dream. [absent]: no woman dreams in the Hebrew Bible. |
 | I.a+3 | [š]utta yâši ušab[rânni] | [ח]לום – לי – הֶרְ[אַנִי] | `כֹּה הִרְאַנִי אֲדֹנָי יְהוִה וְהִנֵּה` (עמוס ז:א); `אֲשֶׁר הָאֱלֹהִים עֹשֶׂה הֶרְאָה אֶת פַּרְעֹה` (בראשית מא:כח) | equivalent | The dream is "shown" (*barû* Š), as the prophet's vision and Pharaoh's dream. |
@@ -196,7 +196,7 @@ tablet: header + 1–29, a+1–a+11). **69 entries.** Not committed.
    laments and Gudea), but Enūma eliš IV 29 and LH (prologue 161, epilogue 3187′, 3356′, 3392′) give *ḫaṭṭu* / GIDRU
    `שֵׁבֶט` – while Gilgameš XII 19, 39 give `שֵׁבֶט` to its cognate *šabbiṭu*. Proposal: *ḫaṭṭu* = `שַׁרְבִיט` everywhere,
    `שֵׁבֶט` only for *šabbiṭu*.
-3. ***parakku* (lead):** `כֵּס` (Etana II, here; EA *barag*) vs Enūma eliš `דוכן` (V 115; VI 51, 53, 58, 68, 118).
+3. ***parakku* (lead):** `כֵּס` (Etana II, here; EA *barag*) vs Enūma eliš `דוכן` (V 115; VI 51, 53, 58, 68, 118). **Settled 2026-10-23** (`../../harmonization--2026-10-23.md` row 5): `דּוּכָן`.
 4. ***meānu* `עֲטָרָה`** (§10.4) vs Enki and the World Order 264, Sum. *aga* `עטרת` (= Akk. *agû*, `כֶּתֶר` in Gilgameš):
    EWO's *aga* should probably be `כֶּתֶר` (lead). *kubšu* `מִצְנֶפֶת` = Sum. *saĝšu* `מצנפת` (EA 578) – consistent; but
    Enūma eliš VII 8 has `*מצנפתו*` for *šukūssu* (italic) – a minor split.
@@ -235,7 +235,7 @@ tablet: header + 1–29, a+1–a+11). **69 entries.** Not committed.
 | *šarram šakānu* | `שָׂם מֶלֶךְ` (`מלך לא שָׂמוּ`) | equivalent (Deut 17:15) | | OBM.6; I.12 |
 | *ina šiātim* (OB) / *ina ūmīšū-ma* (SB) | `בָּהּ` / `ביום ההוא` | equivalent (Judg 17:6) | open decision 8 | OBM.7; I.13 |
 | *kaṣāru*; *ṣapāru*; *banû* (stative); *ištēniš* | `קָשַׁר` (`לא קשורה`); `*שִׁבֵּץ*` (`לא *משובץ*`); `בָּנוּי`; `יַחְדָּיו` | – | the prologue's statives: never `טֶרֶם` | OBM.7–9; I.14–15 |
-| insignia: *kubšu*; *meānu*; *ḫaṭṭu*; *šibirru*; *parakku*; *uqnû* | `מִצְנֶפֶת`; `עֲטָרָה`; `שַׁרְבִיט`; `מַקֵּל־רוֹעִים`; `כֵּס` (`הַכֵּסִים`); `סַפִּיר` | equivalent (Ezek 21:31; Mic 7:14) | `שרביט, עטרה, מצנפת ומקל־רועים –` | OBM.7–11; I.7, 14–15, 23 |
+| insignia: *kubšu*; *meānu*; *ḫaṭṭu*; *šibirru*; *parakku*; *uqnû* | `מִצְנֶפֶת`; `עֲטָרָה`; `שַׁרְבִיט`; `מַקֵּל־רוֹעִים`; `כֵּס` (`הַכֵּסִים`; since 2026-10-23 `דּוּכָן`, `הדוכנים`); `סַפִּיר` | equivalent (Ezek 21:31; Mic 7:14) | `שרביט, עטרה, מצנפת ומקל־רועים –` | OBM.7–11; I.7, 14–15, 23 |
 | *sebe* (OB) / *Sebettu* (SB); *bābu*; *edēlu* D; *dapnu*; *ummānu*; *dadmū* | `שבעה`; `הַשִּׁבְעָה`; `שַׁעַר`; `נָעַל` (`נעולים`, `נעלו`); `עָרִיץ`; `הֲמוֹן`; `יִשּׁוּבִים` | – | `שבעה שערים – נעולים על העריץ.` / `הַשִּׁבְעָה – על ההמון נעלו [את השערים],` / `על היישובים נעלו [את השערים? …]` | OBM.10; I.16–17 |
 | *qudmiš*; *šakānu* (stative) | `לִפְנֵי`; `שׂוּם` (`שׂוּמִים`) | – | `לפני אָנוּ, בשמים – שׂוּמִים.` | OBM.12 |
 | *šarrūtu … urdam* | `[המל]כות – מן השמים ירדה.` | cognate (*warādu*) | §10.4 string; brackets per OBM.14 | OBM.14 |
@@ -490,7 +490,7 @@ Words (one Hebrew each; grep-checked in all corpora):
 | *itû*; *etēqu*; *nērebu*; *nērebtu*; *ṭūdu*; *ḫarrānu*; *nesû* | `גְּבוּל`; `חָלַף`; `מָבוֹא`; `מְבוֹאָה`; `נָתִיב`; `אֹרַח` (open decision 2: harmonized to Gilgameš by the coordinator); `הִתְרַחֵק` | equivalent | | II.17–20; OBS.1–2; MA.b+3 |
 | *kakku*; *murtappidu*; *ešēru* | `נֶשֶׁק`; `מְשׁוֹטֵט`; `יִישַׁר` | cognate (*ešēru*) | | II.21 |
 | *gišparru*; *šētu*; *nabalkutu* (of a trap) | `פַּח` (`פַּחְךָ` vocalized); `רֶשֶׁת`; `הִתְהַפֵּךְ עַל` | equivalent | | II.22, 47–48, 69–71 |
-| *ṣarbatu*; *appu* (of a tree); *išdu*; *ṣillu*; *parakku*; *dimtu* I / II | `צַפְצָפָה`; `צַמֶּרֶת`; `יְסוֹד`; `צֵל`; `כֵּס`; `צְרִיחַ` / `דִּמְעָה` | equivalent / cognate (*ṣillu*) | *išdu* = Sum. *suḫuš* `יסוד` (Agade) | II.2–5, 44, 61; MA.b+8–10 |
+| *ṣarbatu*; *appu* (of a tree); *išdu*; *ṣillu*; *parakku*; *dimtu* I / II | `צַפְצָפָה`; `צַמֶּרֶת`; `יְסוֹד`; `צֵל`; `כֵּס` (since 2026-10-23 `דּוּכָן`); `צְרִיחַ` / `דִּמְעָה` | equivalent / cognate (*ṣillu*) | *išdu* = Sum. *suḫuš* `יסוד` (Agade) | II.2–5, 44, 61; MA.b+8–10 |
 | animals | *rīmu* `רְאֵם`, *serrēmu* `חמור בר`, *armu* `אַקּוֹ`, *ṣabītu* `צְבִיָּה`, *sappāru* `*זֶמֶר*`, *ditānu* `*תְּאוֹ*`, *turāḫu* `יָעֵל`, *nimru* `נָמֵר`, *mindinu* `*בַּרְדְּלָס*`, *būlu* `בְּהֵמָה`, *nammaštû* `הַנָּע` (`נָעֵי`) | cognate (*rīmu*, *nimru*) | plurals `אַקּוֹאִים`, `*זְמָרִים*`, `*תְּאוֹאִים*`, `יְעֵלִים` vocalized | II.26–32; OBS.8, 10; MA.b+15–19 |
 | *watmu*; *līdānu*; *māru* | `אֶפְרוֹחַ`; `יֶלֶד`; `בֵּן` | equivalent | `גּוֹזָל` reserved | |
 | *kapādu*; *lemuttu* / *lumnu* / *lemnu*; *ēpišu*; *mukillu*; *kullu* D | `חָשַׁב`; `רָעָה` / `רֹעַ` / `רַע`; `עוֹשֶׂה`; `מַחֲזִיק`; `הֶחֱזִיק` | – | | II.37–38, 68, 72; OBS.a+14, a+23–24 |
@@ -893,7 +893,7 @@ Round 3, run 2 (`../renderings.md` §10.5). Translator: sub-agent ET4 (the last 
 | MA.h+16 | kī qurunni iqrunū bilāti | כַּעֲרֵמָה עָרְמוּ משאות | `וַיִּצְבֹּר יוֹסֵף בָּר כְּחוֹל הַיָּם הַרְבֵּה מְאֹד` (בראשית מא:מט) | equivalent | Heaps of produce/tribute in the whole land. |
 | MA.h+17 | zârūšunu ṣerrū lemnūtu | שונאיהם – נחשים רעים | `לְפָנָיו יִכְרְעוּ צִיִּים; וְאֹיְבָיו עָפָר יְלַחֵכוּ` (תהלים עב:ט); `יְלַחֲכוּ עָפָר כַּנָּחָשׁ` (מיכה ז:יז) | equivalent | Enemies as serpents submitting to the king; in the fable's own terms, the serpent now bows. |
 | MA.h+19 | kanša ikannušū ana šapluʾa | כְּנוּעִים – כורעים תחתיי | `וְהִנֵּה תְסֻבֶּינָה אֲלֻמֹּתֵיכֶם וַתִּשְׁתַּחֲוֶיןָ לַאֲלֻמָּתִי` (בראשית לז:ז) | equivalent | Things and enemies bow beneath the dreamer – the reverse of the SB dream, where the dreamer bows (III b+4). |
-| MA.i+10 | kī mê palgim-ma | [כ]מי תעלה | `כְּעֵץ שָׁתוּל עַל-פַּלְגֵי-מָיִם` (תהלים א:ג) | cognate | *palgu* / `פֶּלֶג`; rendered `תְּעָלָה` (renderings §10.3) – the cognate is hidden: open decision 1. |
+| MA.i+10 | kī mê palgim-ma | [כ]מי פלג | `כְּעֵץ שָׁתוּל עַל-פַּלְגֵי-מָיִם` (תהלים א:ג) | cognate | *palgu* / `פֶּלֶג`; rendered `פֶּלֶג` since the 2026-10-23 harmonization (was `תְּעָלָה`, which hid the cognate). |
 
 ### Key findings
 **The Bible.**
@@ -962,7 +962,7 @@ Round 3, run 2 (`../renderings.md` §10.5). Translator: sub-agent ET4 (the last 
 1. ***palgu* = `תְּעָלָה`** (renderings §10.3; Enki and the World Order's *pa₅*) vs **`פֶּלֶג` [cognate]** (Enūma eliš
    VII 63; Ps 1:3 `פַּלְגֵי מָיִם`): the Hebrew cognate is hidden here (guidelines §6.4: among equally good renderings
    prefer the cognate). Proposal for the lead: *palgu* = `פֶּלֶג` everywhere (MA i+10 would read `[כ]מי פלג`), Sum. *pa₅*
-   following it.
+   following it. **Settled 2026-10-23** (`../../harmonization--2026-10-23.md` row 7): *palgu* = `פֶּלֶג`; Sum. *pa₅* keeps `תְּעָלָה`.
 2. ***buginnu* = `שֹׁקֶת`** (= Sum. *buniĝ*, Gudea B xvii 8 `שוקתות`) collides with Gilgameš I's *mašqû* `שוקת`. Proposal:
    *mašqû* "watering place" = `מַשְׁקֶה` [cognate] in Gilgameš, `שֹׁקֶת` left to *buginnu* / *buniĝ* (lead).
 3. ***galātu* = `הִתְפַּלֵּץ`** (III b+14), *parādu* = `נִבְהַל` (Ludlul I 54); but Gudea's Sumerian *ḫuluḫ* (= *galātu*)
@@ -1014,7 +1014,7 @@ Words (one Hebrew each; grep-checked in all corpora):
 | *elû* G; D (*ullû*); Š; *šaqû* D; *nasāku* | `עָלָה`; `הֶעֱלָה`; `הֶעֱלָה`; `הִגְבִּיהַּ`; `זָרַק` | cognate (*elû*) | Gilgameš XI 293 for *nasāku* | III.30–50, b+25–b+39 |
 | *maqātu*; *maḫāru* G / Š | `נָפַל`; `קִבֵּל` / `*הִקְבִּיל*` | – | | III.45; MA h+4 |
 | *palāsu* N; *dagālu*; *naṭālu*; *ṣubbû*; *barû* Gt | `הִסְתַּכֵּל`; `צָפָה`; `הִבִּיט` (of a dream `רָאָה`); `הִתְבּוֹנֵן`; `בָּחַן` | – | Gilgameš, ET2–ET3 | III.31–40, b+27–b+28; MA h+14 |
-| *mātu*; *tâmtu rapaštu*; *mala*; *tarbaṣu*; *buginnu*; *mūšaru*; *īku*; *palgu*; *mēmē* | `אֶרֶץ`; `הים הרחב`; `כִּמְלֹא`; `מַרְבֵּץ`; `שֹׁקֶת`; `עֲרוּגָה`; `סוֹלְלָה`; `תְּעָלָה`; `*מים*` | cognate (*mala*, *tarbaṣu*) | open decisions 1, 2, 5, 8 | III.33–37, b+29–b+38; MA i+3, i+9–i+10 |
+| *mātu*; *tâmtu rapaštu*; *mala*; *tarbaṣu*; *buginnu*; *mūšaru*; *īku*; *palgu*; *mēmē* | `אֶרֶץ`; `הים הרחב`; `כִּמְלֹא`; `מַרְבֵּץ`; `שֹׁקֶת`; `עֲרוּגָה`; `סוֹלְלָה`; `תְּעָלָה` (since 2026-10-23 `פֶּלֶג`); `*מים*` | cognate (*mala*, *tarbaṣu*) | open decisions 1, 2, 5, 8 | III.33–37, b+29–b+38; MA i+3, i+9–i+10 |
 | *târu ana*; *šebû*; *īnu*; *kibsu*; *alāku* Gtn | `נֶהְפַּךְ לְ־`; `שָׂבַע`; `עַיִן`; `שְׁבִיל`; `הִתְהַלֵּךְ` | cognate (*šebû*) | | III.36–43 |
 | *idu* (eagle / man); *irtu*; *kappu*; *nāṣu*; *agappu* | `צַד` / `זְרוֹעַ`; `חָזֶה`; `כָּנָף`; `נוֹצָה`; `אֲגַף` | cognate (*nāṣu*) | | III.26–29, b+18–b+23; MA g+7 |
 | *ina lēt*; *bēltu*; *ṣâdu*; *ēdēnu*; *ezēbu*; *ṣītu* | `אֵצֶל`; `גְּבִירָה`; `צָד`; `לְבַד`; `עָזַב`; `מוֹצָא` | cognate (*ṣâdu*, *ezēbu*) | | III.15–25 |

@@ -398,11 +398,11 @@
 
 | Verse | Text, line | Source | Hebrew rendering | Bible | Tag | Comment |
 |---|---|---|---|---|---|---|
-| תהלים א:ג | ET MA.i+10 | kī mê palgim-ma | [כ]מי תעלה | `כְּעֵץ שָׁתוּל עַל-פַּלְגֵי-מָיִם` (תהלים א:ג) | cognate | *palgu* / `פֶּלֶג`; rendered `תְּעָלָה` (renderings §10.3) – the cognate is hidden: open decision 1. |
+| תהלים א:ג | ET MA.i+10 | kī mê palgim-ma | [כ]מי פלג | `כְּעֵץ שָׁתוּל עַל-פַּלְגֵי-מָיִם` (תהלים א:ג) | cognate | *palgu* / `פֶּלֶג`; rendered `פֶּלֶג` since the 2026-10-23 harmonization (was `תְּעָלָה`, which hid the cognate). |
 | תהלים ח:ג | ET II.45 | (the wise child) | יתיר־התבונה | `מִפִּי עוֹלְלִים וְיֹנְקִים יִסַּדְתָּ עֹז` (תהלים ח:ג) | equivalent | Wisdom in the mouth of the smallest. |
 | תהלים ח:ח | ET MA.e+8 | attā-ma etana šar būli | אתה הוא אֵתָנָה, מלך הבהמה | `וְגַם בַּהֲמוֹת שָׂדָי` (תהלים ח:ח) | equivalent | The ruler of the animals; Foster's "wild beasts" narrows *būlu*. |
 | תהלים י:ח | ET II.78 | šubta idi ina karšīšu | הַנַּח משכן במעיו | `יֵשֵׁב בְּמַאְרַב חֲצֵרִים` (תהלים י:ח) | equivalent | The lurker "sits" in ambush; *šubtu* (from *wašābu*) is "dwelling" and (jB) "trap". Foster's "ambush" is the sense, not the word. Also II.92. |
-| תהלים יא:ד | ET I.23 | enlil ihâṭ parakki šamê | אֶנְלִיל בוחן את כֵּס השמים | `יְהוָה בַּשָּׁמַיִם כִּסְאוֹ עֵינָיו יֶחֱזוּ עַפְעַפָּיו יִבְחֲנוּ בְּנֵי אָדָם` (תהלים יא:ד) | equivalent | A throne in heaven and a god who "examines". |
+| תהלים יא:ד | ET I.23 | enlil ihâṭ parakki šamê | אֶנְלִיל בוחן את דוכן השמים | `יְהוָה בַּשָּׁמַיִם כִּסְאוֹ עֵינָיו יֶחֱזוּ עַפְעַפָּיו יִבְחֲנוּ בְּנֵי אָדָם` (תהלים יא:ד) | equivalent | A throne in heaven and a god who "examines". |
 | תהלים יג:ב | EA 478 | en₃-tukum-še₃ | עד מתי | `עַד-אָנָה יְהוָה תִּשְׁכָּחֵנִי נֶצַח` (תהלים יג:ב) | equivalent | "How long" of a state that does not end. |
 | תהלים טו:ד | ET OBS.a+13 | ādur-ma nīška ukabbit | חרדתי, ואת חַיֶּיךָ כיבדתי | `וְאֶת-יִרְאֵי יְהוָה יְכַבֵּד; נִשְׁבַּע לְהָרַע וְלֹא יָמִר` (תהלים טו:ד) | equivalent | Honouring the oath by the god's life; *kabātu* D / `כִּבֵּד` [cognate]. Foster's "you" hides the oath (*nīšu*). |
 | תהלים יז:ב | ET II.139 | bēlī ina pîka liṣâm-ma | אדוני – מפיך יֵצֵא | `מִלְּפָנֶיךָ מִשְׁפָּטִי יֵצֵא` (תהלים יז:ב) | equivalent | The verdict "going out" from the god. |
