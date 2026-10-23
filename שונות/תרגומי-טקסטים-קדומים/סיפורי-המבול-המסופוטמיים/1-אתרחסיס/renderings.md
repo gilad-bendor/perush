@@ -119,7 +119,7 @@ Tablet II follows every formula in I.1 above (noise passage, elders/heralds pass
 | *šammu ai ūṣâ šû ai iʾʾir* | עֵשֶׂב אַל יֵצֵא, דָּגָן אַל יַצְמִיחַ | *šû* "grain(?)" uncertain; *eʾēru* uncertain. | B 4, B 16, E 148 |
 | *rēmu lū kuṣur-ma ai ušeššer šerra* | הָרֶחֶם תִּהְיֶה קְשׁוּרָה, וְאַל תַּמְלִיט עוֹלָל | *šūšuru* (of birth) = הִמְלִיט (`וְהִמְלִיטָה זָכָר`, ישעיהו סו:ז). | B 6, B 18 |
 | *qibâ-ma liṣṣurū Anum u Adad elêni* … | צַוּוּ, וְיִנְצְרוּ אָנוּ וַאֲדַד לְמַעְלָה … | *naṣāru* = נָצַר [cognate]; *maṣṣaru* = נוֹצֵר. *erṣetu qablītu* = הָאָרֶץ הַתִּיכוֹנָה; *erṣetu šaplītu* = הָאָרֶץ הַתַּחְתּוֹנָה. | E 71–78, G 16–17, 30–41, 49e–h, 76–77, 84–85 |
-| *šigaru naḫbal tâmtim* | הַבְּרִיחַ, מַלְכֹּדֶת הַיָּם | As Tablet I 15. | E 73, 77, G 31a, 35e, 40, 49g |
+| *šigaru naḫbal tâmtim* | הַבְּרִיחַ, מוֹקֵשׁ הַיָּם (2026-10-23 harmonization, was מַלְכֹּדֶת הַיָּם) | As Tablet I 15. *naḫbalu* = `מוֹקֵשׁ` [equivalent: Ex 23:33, 34:12], as Ludlul II 84 and Etana; `מַלְכֹּדֶת` is *kippu*'s. | E 73, 77, G 31a, 35e, 40, 49g |
 | *qadu laḫmīšu* | עִם שְׂעִירָיו | *laḫmu* "the long-haired (heroes)", Ea's attendants in the Apsû: הַשְּׂעִירִים, with a first-occurrence note. | E 74, 78, 109, 131, 161p, 161r, G 31b, 35f, 41, 49h |
 | *ina X šattim / X šattu ina kašādi* | בַּשָּׁנָה הָ־X / בְּהַגִּיעַ הַשָּׁנָה הָ־X | The famine years. | E 152–161f |
 | *ubla pīni ištēniš māmītam* | נָשָׂאנוּ יַחַד שְׁבוּעָה עַל פִּינוּ | Lit. "our mouth carried an oath together". *māmītu* = שְׁבוּעָה (shared). 3 pl.: נָשְׂאוּ הָאֵלִים שְׁבוּעָה עַל פִּיהֶם. | E 12, 30, G 15, 29, 75 |

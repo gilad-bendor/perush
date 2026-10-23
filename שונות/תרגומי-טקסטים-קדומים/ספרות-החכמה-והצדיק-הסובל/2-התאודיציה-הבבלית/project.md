@@ -83,7 +83,7 @@ eBL `reading-edition.md` (N, T, L, notes, every ATF line, incl. all `BabaLBCom1`
 |---|---|---|---|---|---|
 | I–XIII | acrostic *a-na-ku sa-ag-gi-il-ki-[i-na-am-u]b-bi-* | (headings) | `אַשְׁרֵי תְמִימֵי-דָרֶךְ` (תהלים קיט:א); `אֵיכָה יָשְׁבָה בָדָד` (איכה א:א); `אֵשֶׁת-חַיִל מִי יִמְצָא` (משלי לא:י) | [divergence] | The Bible's acrostics are alphabetic; this one spells the author's name and a sentence. Closest in form: Lam 3 (all lines of a stanza begin with the same letter, as all 11 lines here). Ps 37, on the prosperity of the wicked, is itself an alphabetic acrostic. |
 | 1 | *[aḫī?] itpēšu gana luqbīka* | [אחי?] הנבון, בוא, אומרה לך | `וְאוּלָם שְׁמַע-נָא אִיּוֹב מִלָּי` (איוב לג:א) | [equivalent] | Opening of a disputation speech; here the sufferer opens politely; the line is the poem's ancient title (commentary colophon). |
-| 4 | *kâša ludlulka* | אותך אהללך | `אֲרוֹמִמְךָ יְהוָה כִּי דִלִּיתָנִי` (תהלים ל:ב) | [divergence] | The praised one is the friend; *ludlul* is Ludlul's first word. |
+| 4 | *kâša ludlulka* | אותך אפארך | `אֲרוֹמִמְךָ יְהוָה כִּי דִלִּיתָנִי` (תהלים ל:ב) | [divergence] | The praised one is the friend; *ludlul* is Ludlul's first word. |
 | 6 | *ayyiš mūdû* | מאין יודע | `וְהַחָכְמָה מֵאַיִן תִּמָּצֵא` (איוב כח:יב) | [equivalent] | The commentary: *ayyiš* = "whence"; *mūdû* = "scribe". |
 | 7 | *nissata lūtamīšu* | ואשיח לו את יגוני | `אֶשְׁפֹּךְ לְפָנָיו שִׂיחִי` (תהלים קמב:ג) | [divergence] | The Psalm pours the complaint before God; the sufferer seeks a human counsellor. |
 | 8 | *īšira lumun libbi* | וישר אליי רוע לב | `אֵין זֶה כִּי אִם רֹעַ לֵב` (נחמיה ב:ב) | [equivalent] | Same phrase, "sorrow"; *ešēru* ~ `וַיִּשַּׁרְנָה` (שמואל א ו:יב) [cognate]. |
@@ -280,7 +280,7 @@ eBL `reading-edition.md` (N, T, L, notes, every ATF line of 144–297 with all `
 | 150 | *[ibtat]aq-ma šassūrāti* | [ביתקו?] המיילדות | `לֹא כָרַּת שָׁרֵּךְ` (יחזקאל טז:ד) | [equivalent] | "Cut [the umbilical cord]" rests on eBL's restoration only; the midwives: `לַמְיַלְּדֹת הָעִבְרִיֹּת` (שמות א:טו). |
 | 151 | *iblul* | בלל | `סֹלֶת בְּלוּלָה בַשֶּׁמֶן` (ויקרא ב:ה) | [cognate] | *balālu* = `בלל`; in Atra-ḫasīs clay is mixed with a slain god's flesh and blood; Gen 2:7 has dust and breath [divergence]. |
 | 159 | *mārtu ana bānti iqabbi* | הבת – אל בונתה אומרת | `בַּת קָמָה בְאִמָּהּ` (מיכה ז:ו) | [equivalent] | Children against parents; the "[lie]" is Lambert's restoration. |
-| 160 | *maqit lāmi iṣṣūrī ša iddû [šēta]* | נפול מקיף הציפורים – אשר השליך [מכמר] | `יִפְּלוּ בְמַכְמֹרָיו רְשָׁעִים` (תהלים קמא:י) | [equivalent] | The fowler fallen in his own net; "net" is restored, the motif ("fallen … which he cast") is preserved. |
+| 160 | *maqit lāmi iṣṣūrī ša iddû [šēta]* | נפול מקיף הציפורים – אשר השליך [רשת] | `יִפְּלוּ בְמַכְמֹרָיו רְשָׁעִים` (תהלים קמא:י) | [equivalent] | The fowler fallen in his own net; "net" is restored, the motif ("fallen … which he cast") is preserved. |
 | 160 | (same) | | `בְּרֶשֶׁת-זוּ טָמָנוּ נִלְכְּדָה רַגְלָם` (תהלים ט:טז) | [equivalent] | Also `וְרִשְׁתּוֹ אֲשֶׁר-טָמַן תִּלְכְּדוֹ` (תהלים לה:ח); `וַיִּפֹּל בְּשַׁחַת יִפְעָל` (תהלים ז:טז). |
 | 160 | (same) | | `כֹּרֶה-שַּׁחַת בָּהּ יִפּוֹל` (משלי כו:כז) | [equivalent] | Also `חֹפֵר גּוּמָּץ בּוֹ יִפּוֹל` (קהלת י:ח). |
 | 161 | *ayyu kušīr* | איזה (מהם) כשרון | `מַה יִּתְרוֹן לָאָדָם` (קהלת א:ג) | [equivalent] | *kušīru* = Qohelet's `כשרון` [cognate] (Th1 28). |
@@ -407,7 +407,7 @@ eBL `reading-edition.md` (N, T, L, notes, every ATF line of 144–297 with all `
 | 287 | *rēmēnû* | רחום | `אֵל רַחוּם וְחַנּוּן` (שמות לד:ו) | [cognate] | A divine epithet given to the friend. |
 | 288 | *namrāṣa amur* | את המעקשים ראה | `רְאֵה יְהוָה כִּי צַר לִי` (איכה א:כ) | [equivalent] | *namrāṣu* also opens the poem (Th1 2). |
 | 290 | *rēṣa u tuklata zamar ul āmur* | עוזר ומבטח – כהרף עין לא ראיתי | `כִּי-אֵין עוֹזֵר` (תהלים כב:יב) | [equivalent] | Also `וְאֵין-לִי מַכִּיר` (תהלים קמב:ה); the answer to the friend's "your trust, who was it?" (172). |
-| 291 | *rebīt ālīya abâʾ nēḫiš* | את כיכר עירי – עברתי בנחת | `בָּרְחוֹב אָכִין מוֹשָׁבִי` (איוב כט:ז) | [divergence] | Job enthroned in the square; the sufferer passed through it unseen. |
+| 291 | *rebīt ālīya abâʾ nēḫiš* | את כיכר עירי – צעדתי בנחת | `בָּרְחוֹב אָכִין מוֹשָׁבִי` (איוב כט:ז) | [divergence] | Job enthroned in the square; the sufferer passed through it unseen. |
 | 291 | *nēḫiš* | בנחת | `דִּבְרֵי חֲכָמִים בְּנַחַת נִשְׁמָעִים` (קהלת ט:יז) | [equivalent] | |
 | 292 | *rigmu ul iššapu iššapil atmûʾa* | קול לא התעבה, נשפלה שיחתי | `וְשָׁפַלְתְּ מֵאֶרֶץ תְּדַבֵּרִי` (ישעיהו כט:ד) | [cognate] | *šapālu* = `שפל`, of low speech. |
 | 292 | (same) | | `לֹא יִצְעַק וְלֹא יִשָּׂא; וְלֹא יַשְׁמִיעַ בַּחוּץ קוֹלוֹ` (ישעיהו מב:ב) | [equivalent] | The quiet servant. |
@@ -448,7 +448,7 @@ eBL `reading-edition.md` (N, T, L, notes, every ATF line of 144–297 with all `
 2. **§3 body and society:** *ṣurru* `טוּחוֹת` (always vocalized); *rēšu* "slave" `משרת` / "head" `ראש`; *katû* `רָשׁ` (vocalized) beside *katûtu* `רֵישׁ`; *mērênû* `עֵירוֹם` (vocalized; the only "naked" word so far); *dunnamû* `אביון` (used); *ulālu* `דַּךְ`; *etnušu* `חלוש`; *pisnuqu* `אומלל`; *ašpaltu* `השפל ממני`; *šalṭu* `שַׁלִּיט`, *šitluṭu* `משתלט`; *ḫābilu* / *ḫibiltu* `חובל` / `חבלה` [cognate]; *šaggāšu* / *šagāšu* `רוצח` / `רצח` (open 6); *nērtu* `קטל`; *isḫappu* `בליעל`; *itbāru* `ידיד`; *tardennu* `המשנה`, *duppussû* `זוטר`, *aplu* `יורש`, *bukru* `בכור`.
 3. **§4 wisdom:** *eršu* `משכיל`; *šalbābu* `מְחוּכָּם`; *aššaru* `*בקיאה*`; *šuwāʾu* `רִבּוֹן`; *tašīmtu* `תושייה` (Ludlul); *naklu* `שנונה`; *usandû* `יוקש`; *šukāmu* `*חרט*`; *ṭuppu* `לוח`; *riddu* `הגינות`; *šummu* `התנאי`; *ūsu* `מנהג`; *lēʾûtu* `מסוגלות`; *maṣû* "equal" `נערך` (open 3).
 4. **§2 personal religion:** *nīru* `מוֹטָה` (with *abšānu* `עול`); *damāṣu* `השתטח`; *mutnennû* `מתפלל`; *tabīnu* `סִתְרָה`; *anzillu* `תועבה`; *šiāmu* D stative `גזור`.
-5. **§5 images:** *dīšu* `דשא` [cognate]; *ebūru* `קציר`; *ḫiṣbu* `לשד`; *lāmu* `גחלת`; *šētu* `מכמר`; *ḫubūru* `קנקן`; *tupšikku* `דּוּד` (vocalized); *miṭirtu* `פלג`; *lītu* `פרה`, *būru* `עגל`; *ḫarḫarru* `שלשלת`.
+5. **§5 images:** *dīšu* `דשא` [cognate]; *ebūru* `קציר`; *ḫiṣbu* `לשד`; *lāmu* `גחלת`; *šētu* `רשת` (2026-10-22; was `מכמר`); *ḫubūru* `קנקן`; *tupšikku* `דּוּד` (vocalized); *miṭirtu* `פלג` (2026-10-23 harmonization: `תעלה`); *lītu* `פרה`, *būru* `עגל`; *ḫarḫarru* `שלשלת`.
 6. **§6 formula:** 256 confirmed; *alāku idi* "go at one's side" `הלך לצד` (Ludlul) also of wealth (282).
 7. **§8 always vocalize, add:** `טוּחוֹת` (all forms), `רָשׁ`, `עֵירוֹם`, `נָגַשׂ`, `עָנָו`, `סְגוֹר`, `סִתְרָה`, `הַדּוּד`, `מוּסָר`, `הַגְּבִירָה`, `מוּצֶרֶת`, `כְּהֵלֶךְ`, `הַדָּךְ`, `רָעוֹת`, `שְׁפַל` (imperative), `הִשָּׂם`, `אָכְלוֹ`, `בּוֹנָתָהּ`.
 8. **`wisdom_tools.py` (optional):** allow *pašallu* for the `תם` check if `כֶּתֶם` is preferred (open 5).

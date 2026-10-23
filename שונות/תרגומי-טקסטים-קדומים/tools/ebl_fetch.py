@@ -98,17 +98,36 @@ def list_texts():
         print(f"{t['genre']} {t['category']} {t['index']}\t{t['name']}\t[{chapters}]")
 
 
+# A reconstruction line of the chapter ATF: "<label>. %<language> …" – usually %n (normalized Akkadian), but a line can
+# open with a logogram in another language (Etana SB II 25: "25. %sb U₄.1.KAM@v.TA.AM₃ | %n inaṣṣarū | b[ūla]").
+# Fixed 2026-10-22: before, only "%n" was recognized, and such a line was glued to the previous one as a "variant".
+# Fixed again 2026-10-23 (Maqlû): a line can also carry no language marker at all ("160b. KA.INIM.MA ina muhhi …",
+# "121a. [...] ..."); it is recognized by its bare line label ("12", "14'", "160b", "a+1", "B+16a", "109-110").
+# A manuscript line starts with its siglum ("NinNA1 i 2. "), so it never matches.
+RECON_RE = re.compile(r"^(\S+)\. (%[a-z]+ .*)$|^((?:[A-Za-z]\+)?\d+'?[a-z]?(?:-\d+'?[a-z]?)?)\. (.*)$")
+
+
+def is_recon(line):
+    return bool(RECON_RE.match(line))
+
+
+def recon_text(line):
+    """The reconstruction without its label and language-shift markers (%n, %sb …)."""
+    m = RECON_RE.match(line)
+    return re.sub(r"(^|\s)%[a-z]+\s+", r"\1", m.group(2) if m.group(2) is not None else m.group(4)).strip()
+
+
 def parse_atf_blocks(atf):
     """Split the chapter ATF into per-line blocks keyed by the line number (as written, e.g. '148', '3\\'')."""
     blocks, current, key = {}, [], None
     pending_prefix = []  # #tr lines precede the reconstruction line
     for raw in atf.splitlines():
         line = raw.rstrip()
-        m = re.match(r"^(\S+)\. %n ", line)
+        m = RECON_RE.match(line)
         if m:
             if key is not None:
                 blocks.setdefault(key, []).append(current)
-            key, current = m.group(1), pending_prefix + [line]
+            key, current = m.group(1) or m.group(3), pending_prefix + [line]
             pending_prefix = []
         elif line.startswith("#tr."):
             pending_prefix.append(line)
@@ -253,7 +272,7 @@ def main(argv):
         seen[label] = occurrence + nvar
         block_list = blocks.get(label, [])
         block = [b for blk in block_list[occurrence:occurrence + nvar] for b in blk]
-        ms_atf = [b for b in block if not b.startswith(("#", "//", "$")) and " %n " not in b]
+        ms_atf = [b for b in block if not b.startswith(("#", "//", "$")) and not is_recon(b)]
         ms_ids = [m.get("manuscriptId") for v in ln.get("variants", []) for m in v.get("manuscripts", [])]
         if len(ms_atf) == len(ms_ids):
             for mid, b in zip(ms_ids, ms_atf):
@@ -286,11 +305,14 @@ def main(argv):
             seen[label] = occurrence + nvar
             block_list = blocks.get(label, [])
             block = [b for blk in block_list[occurrence:occurrence + nvar] for b in blk]
-            recons = [b.split(" %n ", 1)[1] for b in block if " %n " in b]
+            recons = [recon_text(b) for b in block if is_recon(b)]
             recon = recons[0] if recons else ""
             # A line can have several variant reconstructions (eBL "variants"): the ATF repeats the line number.
             variant_recons = recons[1:]
             tr = " ".join(parts_text(t.get("parts")) for t in ln.get("translation", []) if t.get("language") == "en")
+            # Other languages (e.g. Mitto's German for Nergal and Ereškigal MB, 2026-10-21): printed as **T (xx):**.
+            tr_other = [(t.get("language"), parts_text(t.get("parts"))) for t in ln.get("translation", [])
+                        if t.get("language") not in (None, "en")]
             # Notes: the chapter ATF omits many of them, so take them from the JSON variants (fall back to the ATF).
             notes = []
             for v in ln.get("variants", []):
@@ -307,7 +329,7 @@ def main(argv):
                     if _norm(n) not in joined:
                         notes.append(n)
             parallels = [b[3:] for b in block if b.startswith("// ")]
-            mss_lines = [b for b in block if not b.startswith(("#", "//", "$")) and " %n " not in b]
+            mss_lines = [b for b in block if not b.startswith(("#", "//", "$")) and not is_recon(b)]
             section = "\n---\n\n" if ln.get("isBeginningOfSection") else ""
             f.write(f"{section}### {label}\n\n")
             f.write(f"- **N:** {recon}\n")
@@ -315,6 +337,9 @@ def main(argv):
                 f.write(f"- **N (variant, other manuscripts):** {vr}\n")
             if tr:
                 f.write(f"- **T:** {tr}\n")
+            for lang, text in tr_other:
+                if text:
+                    f.write(f"- **T ({lang}):** {text}\n")
             if forms:
                 gl = "; ".join(f"*{form}* ← {', '.join(lem)}{(' “' + short_gloss(lem[0]) + '”') if gloss(lem[0]) else ''}" for form, lem in forms)
                 f.write(f"- **L:** {gl}\n")

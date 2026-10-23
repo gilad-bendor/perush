@@ -215,7 +215,7 @@ For the translators of Atra-ḫasīs III and of the other Akkadian versions (pro
 | 108 | OB III iii 9–10, 15; U r 13', 17'; I1 B 5'–6' | Different wording (*karpatu* "pot"; *kīma lî išappu*) | [שטף] את הארץ כשור […], … ניפץ [אותה]. |
 | 109 | OB III iii 5 | OB *[ūma išt]ēn meḫû* → `[יום א]חד – הסופה` | יום אחד – הסופה, המבול … […]. |
 | 110 | OB III iii 11; U r 6', 18' | OB *[… ittaṣâ] abūbu* → `[… יצא] המבול` | חיש נשב, ו[…] … את ההר? [המבול]. |
-| 111 | OB III iii 12; U r 19' | Same words; OB preterite *ibâʾ* → `כקרב עברה על האנשים ההשמדה` | כקרב עוברת על האנשים [ההשמדה]. |
+| 111 | OB III iii 12; U r 19' | Same words; OB preterite *ibâʾ* → `כקרב צעדה על האנשים ההשמדה` | כקרב צועדת על האנשים [ההשמדה]. |
 | 112 | OB III iii 13 | OB preterite *īmur* → `לא ראה איש את אחיו` | אין איש רואה את אחיו, |
 | 113 | OB III iii 14 | OB without *nišū*, preterite → `לא נִכרו בכליון` | אין האנשים נִכָּרים בכליון. |
 | 114 | OB III iii 20, 23; U r 20' | OB *rigim abūbi* → `האלים יראו את שאון המבול` | האלים יראו את המבול! |

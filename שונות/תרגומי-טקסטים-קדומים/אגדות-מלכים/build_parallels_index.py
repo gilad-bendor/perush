@@ -3,11 +3,12 @@
 Usage (from any directory):  python3 -I build_parallels_index.py
 
 Reads every table under a heading `### Parallels index (<KEY>)` (KEY = EA1 … EA4 in 1-אנמרכר-ואדון-ארטה/project.md,
-SB in 2-אגדת-הולדת-סרגון/project.md; columns: Line | Source | Hebrew rendering | Bible | Tag | Comment), files each
+SB in 2-אגדת-הולדת-סרגון/project.md, ET1 … ET4 in 3-אגדת-אתנה/project.md; columns: Line | Source | Hebrew rendering | Bible | Tag | Comment), files each
 row under its highest-priority Bible reference (outside backticks): Genesis first (Gen 10–11), then Exodus (Exod 2,
 4), the rest of the Torah, the Prophets, Psalms, Wisdom, the rest of the Bible, rows without a verse; and rewrites
 everything after the line `## The table` in parallels-index.md (the key findings above it are kept). Rows are
-labelled "EA <line>" (Enmerkar, ETCSL line) and "SB <line>" (Sargon, King's column.line).
+labelled "EA <line>" (Enmerkar, ETCSL line), "SB <line>" (Sargon, King's column.line) and "ET <chapter>.<line>"
+(Etana, eBL chapter key and label; added 2026-10-21, Round 3 run 2).
 Adapted (2026-10-21) from ../בניין-המקדש/build_parallels_index.py.
 """
 import os
@@ -15,7 +16,8 @@ import re
 import sys
 
 A = os.path.dirname(os.path.abspath(__file__))
-SOURCES = [("EA", os.path.join(A, "1-אנמרכר-ואדון-ארטה", "project.md")), ("SB", os.path.join(A, "2-אגדת-הולדת-סרגון", "project.md"))]
+SOURCES = [("EA", os.path.join(A, "1-אנמרכר-ואדון-ארטה", "project.md")), ("SB", os.path.join(A, "2-אגדת-הולדת-סרגון", "project.md")),
+           ("ET", os.path.join(A, "3-אגדת-אתנה", "project.md"))]
 OUT = os.path.join(A, "parallels-index.md")
 G = {'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9, 'י': 10, 'כ': 20, 'ל': 30, 'מ': 40, 'נ': 50,
      'ס': 60, 'ע': 70, 'פ': 80, 'צ': 90, 'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400}
@@ -29,17 +31,21 @@ SECTIONS = [("Genesis", ['בראשית']), ("Exodus", ['שמות']), ("Leviticus
             ("Isaiah, Jeremiah, Ezekiel", ['ישעיהו', 'ירמיהו', 'יחזקאל']),
             ("The Twelve", ['הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה', 'נחום', 'חבקוק', 'צפניה', 'חגי', 'זכריה', 'מלאכי']),
             ("Psalms", ['תהלים']), ("Wisdom and the Writings", ['משלי', 'איוב', 'קהלת', 'שיר השירים', 'רות', 'איכה', 'אסתר', 'דניאל', 'עזרא', 'נחמיה', 'דברי הימים א', 'דברי הימים ב'])]
-ORDER = ['EA1', 'EA2', 'EA3', 'EA4', 'SB']
+ORDER = ['EA1', 'EA2', 'EA3', 'EA4', 'SB', 'ET1', 'ET2', 'ET3', 'ET4']
+ET_CH = ['OBM', 'OBS', 'MA', 'I', 'II', 'III']  # Etana: eBL chapter keys in reading order
 refre = re.compile(r'(%s)[\s\-]+([א-ת]{1,3}):([א-ת]{1,3})' % '|'.join(
     b.replace(' ', '[ \\-]') for b in sorted(BOOKS, key=len, reverse=True)))
 
 
 def nat(line):
+    m = re.match(r'(OBM|OBS|MA|III|II|I)\.(?:([a-z])\+)?(\d+)', line)
+    if m and m.group(1) in ET_CH:  # Etana labels: chapter, gap letter, number
+        return (3, ET_CH.index(m.group(1)), (ord(m.group(2)) - 96) if m.group(2) else 0, int(m.group(3)), line)
     m = re.match(r'(I{1,2})\.(\d+)', line)
     if m:
-        return (1, len(m.group(1)), int(m.group(2)), line)
+        return (1, len(m.group(1)), 0, int(m.group(2)), line)
     m = re.match(r'(\d+)', line)
-    return (0, 0, int(m.group(1)), line) if m else (2, 0, 0, line)
+    return (0, 0, 0, int(m.group(1)), line) if m else (2, 0, 0, 0, line)
 
 
 def gem(s):

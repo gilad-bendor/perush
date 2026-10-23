@@ -642,10 +642,10 @@
 
 ### 263
 `[…] de₂-a ša-ra-ab-galam-e-en DU-a ḫe₂-mu-e-ši-dib`
-> […] – בכשרון לך אעבד; בלכתך – אליך יעבור!
-- **פירוק:** `ša-ra-ab-galam-e-en` – *ša-* (אישור), *galam* מַרוּ, ‎-*en*; `DU-a` "בלכתך"; `ḫe₂-mu-e-ši-dib` *dib* "לעבור", ‎-*e-ši-* "אליך".
+> […] – בתחכום לך אעבד; בלכתך – אליך יעבור!
+- **פירוק:** `ša-ra-ab-galam-e-en` – *ša-* (אישור), *galam* מַרוּ, ‎-*en* ("בתחכום … אעבד"); `DU-a` "בלכתך"; `ḫe₂-mu-e-ši-dib` *dib* "לעבור", ‎-*e-ši-* "אליך".
 - **תרגומים:** ETCSL: "I have an artful proposal to make to you ......, may it get across to you"; Mittermayer: "und ich werde das ... für dich geistreich formulieren, (damit) du dir alles merken kannst".
-- **הערות:** כאן מתחיל תוכן השליחות החדשה – בניסוח "בכשרון" (*galam*, כמו מלאכת המתכת של 39): הדיבור עצמו כאמנות. Mittermayer: כדי שהשליח יוכל לזכור.
+- **הערות:** כאן מתחיל תוכן השליחות החדשה – בניסוח "בתחכום" (*galam*, כמו מלאכת המתכת של 39; הרמוניזציה 2026-10-23, קודם "בכשרון"): הדיבור עצמו כאמנות. Mittermayer: כדי שהשליח יוכל לזכור.
 
 ### 264
 `[e₂]-an-na piriĝ šu-ba nu₂-a`

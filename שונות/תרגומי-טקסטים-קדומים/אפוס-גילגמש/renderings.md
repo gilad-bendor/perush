@@ -192,7 +192,7 @@ Each occurrence is tagged in the apparatus and listed in the tablet's parallels 
 | *ibru*; *râmu*; *ḫabābu* | רֵעַ; אָהַב [equivalent]; חִבֵּק | | Law corpus (*râmu* = `אָהַב`). *ḫabābu* "caress, embrace" (I 185, 254). |
 | *mašālu* (be like) | מָשׁוּל, הִמְשִׁיל [cognate] | | Creation corpus. *mitḫāru* = `שָׁוֶה`; *maḫāru* "match, be equal" = `שָׁוֶה` (flood XI) ↔ `עֵזֶר כְּנֶגְדּוֹ` (ב:יח, כ) [equivalent]: I 95, VII 95–96, never `כְּנֶגְדּוֹ`. *šāninu* "rival" = `מִתְחָרֶה`. |
 | *ṣayyādu*; *ḫābilu* | צַיָּד [cognate]; לוֹכֵד | ↔ `גִבֹּר צַיִד` (י:ט); `אִישׁ יֹדֵעַ צַיִד אִישׁ שָׂדֶה` (כה:כז) | |
-| *mašqû* | שֹׁקֶת | [cognate root שקה] | `בְּשִׁקְתוֹת הַמָּיִם` (ל:לח). Not `מַשְׁקֶה`, which reads "drink". |
+| *mašqû* | מַשְׁקֶה (always vocalized; 2026-10-23 harmonization, was שֹׁקֶת) | [cognate] ↔ `כִּי כֻלָּהּ מַשְׁקֶה` (יג:י); [cognate root] `בְּשִׁקְתוֹת הַמָּיִם` (ל:לח) | `שֹׁקֶת` stays for *buginnu* / Sum. *buniĝ* (Etana, Gudea). Vocalized, since a plain `משקה` reads "drink". |
 | *rēʾû*; *nāqidu*; *ṣēnu*; *tarbaṣu*; *supūru* | רוֹעֶה [cognate]; נוֹקֵד [loan]; צֹאן; רֶבֶץ / דִּיר; דִּיר | ↔ `רֹעֵה צֹאן` (ד:ב) | Creation corpus (*nāqidu*). |
 | *ikkaru*; *errēšu* | אִכָּר [loan]; אָרִיס | ↔ `עֹבֵד אֲדָמָה` (ד:ב) | |
 | *gišimmaru*; *suluppu* | תָּמָר; תְּמָרִים | | VI (Išullānu). |
@@ -430,6 +430,8 @@ The proposals of OB Schøyen₂, Nippur, Harmal₁, Ishchali, Harmal₂ and IM a
 - 2026-10-18: §20 merged from Tablet IV.
 - 2026-10-18: §21 (small OB tablets).
 - 2026-10-21: §22, the cross-corpus harmonization (*uqnû*, *kabattu*, *sukkallu*).
+- 2026-10-23: end of §22, the 2026-10-23 harmonization (*mašqû* = `מַשְׁקֶה`).
+- 2026-10-23: end of §22, batch C (*bâʾu* = `צָעַד`).
 
 ## 12. The open decisions, settled (2026-10-18)
 The user delegated these to the coordinator ("use your judgment"). Binding from now on:
@@ -454,3 +456,7 @@ The user delegated these to the coordinator ("use your judgment"). Binding from 
 4. **Decided without edits:** *šurmēnu* stays `שׁוּרְבִּין` (the model for Sum. *šu-ur₂-men* in the other corpora); *ṣabātu* stays `אָחַז` (the default; `תָּפַס` only where *aḫāzu* also occurs).
 5. **Not applied, reported:** *ikribu* (VII 80 `תפילותיי?`) stays `תְּפִלָּה` with the wisdom corpus (decision 6 sets *šudu₃* = `בְּרָכָה` for the Sumerian; the Akkadian *ikribu* was not listed); *karû* in X 183 is "mast" (`תורן`), not the grain heap of decision 11.
 6. **verify.py**: no reserved string, formula or name trap involves these words; nothing changed.
+
+2026-10-23 harmonization (`../harmonization--2026-10-23.md` row 8): *mašqû* → `מַשְׁקֶה` [cognate, Gen 13:10], always vocalized (`שֹׁקֶת` stays for *buginnu*); changed lines: SB I 109, 174 `בשוקת` → `בַּמַּשְׁקֶה`; 112, 113, 126, 153, 169 `מול השוקת` → `מול הַמַּשְׁקֶה`; 140, 161 `אל השוקת` → `אל הַמַּשְׁקֶה`; 170 `(מן) השוקת` → `(מן) הַמַּשְׁקֶה` (the table listed 109, 112, 170; the other seven lines carry the same *mašqû*), and the headings of 111–119 and 165–175 and the Tablet I introduction. No other *mašqû* in the corpus. verify.py: nothing gated.
+
+2026-10-23 harmonization, batch C (`../harmonization--2026-10-23.md` row 19, revised): *bâʾu* "pass along, go" → `צָעַד` (`עָבַר` is reserved for its cognate *ebēru* "cross", `חָלַף` is *etēqu*'s); changed line: SB VI 19 `עִירְךָ – במשא יעבור את הפִּרְדָּה!` → `עִירְךָ – במשא יצעד לפני הפִּרְדָּה!` (*bâʾu* with an accusative, "pass by, outpace": `צעד לפני`). XI 106 and 111 (the flood corpus's file, read here) changed with that corpus: `צועדת`. No other *bâʾu* in this corpus. Collision: OB II 144, 200–201 render *akāšu* `צעד` (`צעדה אליו`, `צעד ובא`), recorded, not changed.

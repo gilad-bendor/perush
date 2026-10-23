@@ -75,9 +75,47 @@ Fetched with `tools/ebl_fetch.py L 1 4 "Standard Babylonian" <T> …` and `… "
 | `Theodicy-SB/` | *The Babylonian Theodicy* (eBL `L/2/1`, ancient title "O sagacious [brother], come, let me tell you"), 27 stanzas of 11 lines | 288 labels, 1–297 (`109-110` and `111-119` are range labels for lost lines) | A. C. Heinrich and T. D. N. Mitto (ed.), rev. E. Jiménez; translation B. R. Foster, W. Khatabe, W. Zerkly |
 Fetched 2026-10-19 with `tools/ebl_fetch.py L 2 2 "Standard Babylonian" <I…V> …` and `L 2 1 "Standard Babylonian" - …`. 8–41 manuscripts per Ludlul tablet (Nineveh, Aššur, Kalḫu, Ḫuzirīna, Sippar, Babylon, school tablets, the Nineveh commentary quoted as `NinNAQuo2`); 25 for the Theodicy, including **the ancient commentary `BabaLBCom1`** (= BM 66882+, the Borsippa commentary of CCP 1.4; each line's gloss is in its ATF). eBL numbering follows Hätinen's new edition: Tablets IV and V differ from Lambert 1960 and partly from Oshima 2014 (eBL notes such as "Previous line numbers as section e (e+1-12)" give the old numbers). **Usefulness:** the base texts of the wisdom corpus; more complete than Lambert (BWL) and Oshima 2014. Gitignored (§8).
 
+### Added 2026-10-21 (the wisdom corpus, Round 3 run 4)
+| Folder | Text | Lines (eBL labels) | Editors / translator |
+|---|---|---|---|
+| `Shamash-Hymn-SB/` | *Great Prayer to Šamaš* (eBL `L/3/4`, "Illuminator of the whole of heaven") | 200 | G. Rozzi (ed.), rev. T. D. N. Mitto, A. C. Heinrich, E. Jiménez; translation B. R. Foster |
+| `Counsels-of-Wisdom-SB/` | *Counsels of Wisdom* (eBL `L/2/3`) | 159 (1–54, A+1–A+105) | Zs. J. Földi (ed.), rev. Heinrich, Jiménez, Mitto; translation Foster |
+| `Dialogue-of-Pessimism-SB/` | *Dialogue of Pessimism* (eBL `L/2/4`, "Servant, do what I say") | 93 (1–38, a+1–a+7, 39–86) | A. A. Fadhil (ed.), rev. Mitto, Földi, Hätinen, Jiménez, Rozzi; translation Foster, E. A. Sarabia, W. Khatabe (+ Latin, Arabic) |
+Fetched 2026-10-21 with `tools/ebl_fetch.py L 3 4 …`, `L 2 3 …`, `L 2 4 "Standard Babylonian" - …`; regenerated 2026-10-22 after the `ebl_fetch.py` fix for logogram-initial lines (no normalization changed). Translated in `../../ספרות-החכמה-והצדיק-הסובל/` projects 3–5.
+
 ### Added 2026-10-21 (the netherworld corpus, `העולם-התחתון/`)
 | Folder | Text | Lines (eBL labels) | Editors / translator |
 |---|---|---|---|
 | `Descent-of-Ishtar-SB/` | *Ištar's Descent* (eBL `L/1/8`), Standard Babylonian | 148 (1–138, 11a, 12a, 18a, 23a, 97a, 103a, 118a–c, 137a) | A. Setälä (ed.), rev. Z. J. Földi, A. Hätinen, E. Jiménez, G. Rozzi; translation B. R. Foster |
 | `Descent-of-Ishtar-NA/` | the Neo-Assyrian chapter (AššNA1 = VAT 13833, the *nargallu*'s tablet from Assur: another opening of the poem) | 11 | (as above) |
 Fetched with `tools/ebl_fetch.py L 1 8 "Standard Babylonian" -` and `… "Neo-Assyrian" -`. Manuscripts: NinNA1 (K 162), NinNA2 (K 7600), AššNA1a (VAT 9729 = KAR 1), AššNA1b (VAT 11269). eBL links its lines to Gilgameš VII 184–191 (= 4–11), VII 102–119 (≈ 103–108), Nergal and Ereškigal (L I.6) and an incantation (BM 41291, 70–74), and to an "MA" chapter it does not publish. Lemma slips met: *ḫazīqatu* "headcloth" for *ḫalziqqu* "waterskin" (98–99); line 137a has an empty normalization. **Usefulness:** the base text of `העולם-התחתון/1-ירידת-אישתר/`. Gitignored (§8).
+
+### Added 2026-10-21 (the netherworld corpus, Round 3 run 5: Nergal and Ereškigal, `העולם-התחתון/3-נרגל-וארשכיגל/`)
+| Folder | Text | Lines (eBL labels) | Manuscripts |
+|---|---|---|---|
+| `Nergal-and-Ereshkigal-MB/` | *Nergal and Ereškigal* (eBL `L/1/6`), Middle Babylonian, Tell el-Amarna | 87 (1–17, a+1–a+44, b+1–b+26) | AmaMB1a = BM E29865, AmaMB1b = VAT 1611 |
+| `Nergal-and-Ereshkigal-SB/` | Standard Babylonian (Sultantepe, Uruk, Babylon) | 333 (a+1–a+51, b+1–b+50, c+1–c+65, d+1–d+115, e+1–e+51, f+1) | HuzNA1a–c (SU 1951/108, 163, 18A), UrkHel1 = IM 74391, BabLB1 = BM 39743 and others |
+Fetched with `tools/ebl_fetch.py L 1 6 "Middle Babylonian" -` and `… "Standard Babylonian" -`. Editor T. D. N. Mitto (rev. Hätinen, Jiménez, Rozzi, Földi). The MB has only **Mitto's German** translation, the SB Foster's / Mitto's English and Mitto's German: `ebl_fetch.py` prints a non-English translation as `**T (de):**` since 2026-10-21 (before, it printed only English, so the MB looked untranslated). Lemma slip met: *agû* "crown" for a tool (SB b+20). **Usefulness:** the base text of `העולם-התחתון/3-נרגל-וארשכיגל/`. Gitignored (§8; built-in `sources_sync.py` rule).
+
+### Added 2026-10-21 (the legends-of-kings corpus, project 3: Etana, `אגדות-מלכים/3-אגדת-אתנה/`)
+| Folder | Text | Lines (eBL labels) | Manuscripts |
+|---|---|---|---|
+| `Etana-OB-Morgan/` | *Etana* (eBL `L/1/9`), Old Babylonian, the "Morgan" tablet | 54 (1–16, a+1–a+13, b+1–b+16, c+1–c+9) | BabaOB1 = MLC 1363 |
+| `Etana-OB-Susa/` | Old Babylonian, the Susa tablet | 48 (1–24, a+1–a+24) | SusOB1 = Sb 9469 |
+| `Etana-MA-Assur/` | Middle Assyrian, Aššur | 160 (a+1 … i+18) | AššMA1–4 = Ist-A 142, VAT 10291, VAT 10137, VAT 10529 (Haul 2000 MA-I–IV) |
+| `Etana-SB-I/`, `-SB-II/`, `-SB-III/` | Standard Babylonian, Tablets I–III (Nineveh) | 40 / 152 / 131 | NinNA1–7 per tablet (K 2606, K 8563, K 8572 + the "Marsh tablet", K 2527, K 1547, 1882,0323.6, K 3651, Rm 522 …; Novotny 2001's sigla in `manuscripts.md`) |
+Fetched 2026-10-21 with `tools/ebl_fetch.py L 1 9 "Old Babylonian" Morgan|Susa`, `… "Middle Assyrian" Aššur`, `… "Standard Babylonian" I|II|III` (slow: one request per dictionary word, ~15 min in all). Edition: Z. J. Földi (ed.), rev. A. Hätinen, E. Jiménez, G. Rozzi, with J. Novotny's digital edition; translation B. R. Foster. 585 lines in all; the end of the epic is lost. eBL's `Parallels:` field links the versions line by line (OB Morgan 1–14 ≈ SB I 8–16; OB Susa ≈ MA b ≈ SB II 1–72; MA d–f ≈ SB II 133–152; MA h–i ≈ SB III). Not available: Kinnier Wilson 1985/2007, Haul 2000, Novotny 2001 (SAACT 2), Dalley 1989 (cited through eBL's notes only). License: as the other eBL editions (gitignored by `eBL/*/`; restored by the built-in `sources_sync.py` rule).
+
+### Added 2026-10-21 (the prophecy-and-kingship corpus, `נבואה-ומלכות/2-עצה-לנסיך/`)
+| Folder | Text | Lines (eBL labels) | Manuscripts |
+|---|---|---|---|
+| `Advice-to-a-Prince/` | *Advice to a Prince* (eBL `L/2/5`), Standard Babylonian, chapter `-` | 55 (1–55; 45 has no normalization) | NinNA1 = DT 1, NipNB1 = IM 77087, NinNBQuo1 = K 8681, NinNAQuo1 = K 10182 |
+
+Fetched with `tools/ebl_fetch.py L 2 5 "Standard Babylonian" -`. Edition T. D. N. Mitto (rev. Z. J. Földi, A. Hätinen, A. C. Heinrich, E. Jiménez); translation B. R. Foster.
+
+### Added 2026-10-21 (the witchcraft-and-incantations corpus, `כשפים-ולחשים/1-מקלו/`)
+| Folder | Text | Lines (eBL labels) | Manuscripts |
+|---|---|---|---|
+| `Maqlu-I/` … `Maqlu-VIII/`, `Maqlu-RT/` | *Maqlû* (eBL `Mag/1/1`), Standard Babylonian, Tablets I–VIII and the Ritual Tablet | I 152, II 231, III 202, IV 155, V 181, VI 161, VII 198, VIII 133 (63 numbered lines, then the fragments `A+1`–`A+46`, `B+1`–`B+22`), RT 182 (`1`, then `2'`–`180'`) = 1,595 | Nineveh (NinNA…), Aššur, Ḫuzirīna, Sippar, Nippur, Babylon, Uruk, school tablets and the Aššur commentary (`AššNACom…`); `manuscripts.md` per tablet |
+
+Fetched 2026-10-21 (re-generated 2026-10-23) with `tools/ebl_fetch.py Mag 1 1 "Standard Babylonian" <I…VIII|RT> …`. Edition T. Abusch (ed.), D. Schwemer (revision); translation Abusch. **eBL lemmatized only Tablet I** (152 lines, 335 dictionary words): for II–RT, `glossary.md` is empty and the reading edition has no **L:** lines – use `כשפים-ולחשים/maqlu_tools.py lem` (ORACC cmawro's glossary, same editors). **Converter fix:** Maqlû's incantation-opening lines (`1. %sb EN₂ %n …`), its rubrics (`36a. %sb KA.INIM.MA …`) and lines with no language marker (`160b. KA.INIM.MA ina muhhi …`, `121a. [...] ...`) were missed by `ebl_fetch.py`, and their manuscripts glued to the line before; fixed 2026-10-21/23 (`tools.md`). The reading edition prints N without the `%sb` / `%n` markers (`EN₂ nuska šurbû …`, `… TU₆ EN₂`). **Usefulness:** the base text of Maqlû; the only complete open edition (Abusch 2016, *The Magical Ceremony Maqlû*, AMD 10, Brill, is paid; Abusch 2015, SBL WAW 37, is not ours, guidelines §2.3). Gitignored (§8; built-in `sources_sync.py` rule).

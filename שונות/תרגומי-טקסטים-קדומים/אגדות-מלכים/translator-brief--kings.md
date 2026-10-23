@@ -5,6 +5,10 @@ A common brief for the sequential translators of `1-אנמרכר-ואדון-אר
 Lugalbanda I–II) and any Akkadian *narû*-style royal legend. Adapted from `../בניין-המקדש/translator-brief--temple.md`.
 The coordinator's per-part prompt says which lines are yours.
 
+## Pace (the user, 2026-10-22)
+Quotas apply in every session, the cloud included: translators run **one at a time** (never in parallel), each saves
+every drafted section to disk at once, and on a restart continues from the first missing line (guidelines §5.1).
+
 ## 0. Read first (binding, in this order)
 1. `../translation-guidelines.md` — whole. Especially §1 (**two purposes**: the Bible comparison *and* "the soul of the
    ancients"), §5 (workflow and lessons), §6 (principles; echo control §6.4; false friends §6.7), §6.8 (brackets), §7.2

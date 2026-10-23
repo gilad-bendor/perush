@@ -132,7 +132,7 @@ Echo tags: guidelines §6.4. Section 1–3 were fixed by the coordinator **befor
 | *kullumu* | הֶרְאָה | | | MB 31', 65'; SB a+3 |
 | *nuḫatimmu*; *nuḫatimmūtu*; *paššuru*; *rakāsu* / *paṭāru* (table) | אוֹפֶה; אֲפִיָּה; שֻׁלְחָן; עָרַךְ / פֵּרֵק | | Not `מְלָאכָה`. | SB a+10–a+14 |
 | *elippu*; *šaḫḫītu*; *maḫāru* D (boat); *neqelpû* | סְפִינָה; מִפְרָשִׂית; הִשִּׁיט; שָׁט | | | SB a+15, a+19–a+21 |
-| *maṣṣartu*; *šubarrû*; *bēlūtu* | מִשְׁמֶרֶת; חֵרוּת; אֲדָנוּת | | | SB e+9–e+11 |
+| *maṣṣartu*; *šubarrû*; *bēlūtu* | מִשְׁמֶרֶת; פְּטוֹר (2026-10-23 harmonization, was חֵרוּת); אֲדָנוּת | | *šubarrû* as Enūma eliš and Advice to a Prince. | SB e+9–e+11 |
 | *arkât ūmī* | לְאֹרֶךְ יָמִים | [cognate] (*ark-*) | Not `לְעוֹלָם`, not `בְּאַחֲרִית הַיָּמִים`. | SB e+11 |
 | *zēr amīlūti* | זֶרַע הָאֱנוֹשׁוּת | [cognate] (*zēru*) | | SB e+12 |
 | *simmu*; *murṣu*; *ṣimdu*; *ḫurbāšu* | פֶּצַע; חֳלִי; תַּחְבֹּשֶׁת; צְמַרְמֹרֶת | | | SB e+16–e+19 |
@@ -325,7 +325,7 @@ Lemmas: ePSD2 citation forms (ORACC Q000778) or ETCSL forms. "Lines" lists the c
 | Duranki (*dur-an-ki*) | דּוּר־אַנְקִי | | "Bond of heaven and earth" (Akk. *riksi šamê u erṣeti*, KAR 4 24). | 7 |
 | Anuna; An; Enki / Nudimmud | הָאֲנוּנָּה; אַן; אֶנְקִי / נוּדִימּוּד | | §1, text 3. | 22, 70; 76; 32 / 44 |
 | Ninmena; Ninlil; Ninisina; Ninḫursaĝa; Šulpae | נִין־מֶנָּה; נִינְלִיל; נִין־אִיסִינָה; נִין־חֻרְסַגָּה; שׁוּלְפָּאֵה | | Ninmena "lady of the crown" (birth goddess). Šulpae's name contains *pa e₃* (1). | 27; 38; 42; 46; 48 |
-| Nisaba | נִיסָבָּה | | Flood corpus. | 33, 56, 109 |
+| Nisaba | נִיסַבָּה | | Flood corpus. | 33, 56, 109 |
 | Inana; Utu; Dumuzid; Ĝeštinana; Gibil | אִינַנָּה; אוּתוּ; דּוּמוּזִי; גֶּשְׁתִּין־אַנָּה; גִּיבִּיל | | Utu always vocalized (§1). Dumuzid as Adapa's Dumuzi. | 52; 54–55; 67; 71–72; 68 |
 | Šara | שַׁרָא | | **Always vocalized**: unvocalized `שרה` would read as Sarah; the final א keeps it apart. | 64 |
 | Nergal | נֵרְגַל | [cognate] (name) ↔ `וְאַנְשֵׁי כוּת עָשׂוּ אֶת נֵרְגַל` (מלכים ב יז:ל) | The biblical form is the same transcription. | 76 |
@@ -547,7 +547,7 @@ Akkadian lemmas: SEAL (checked with the eBL dictionary); Sumerian in the notes. 
 | Ullegarra, Annegarra | אוּלֶּגַרָּה, אַנֶּגַרָּה | [equivalent] ↔ ה:ב | "Placed for distant time", "whom An placed" (Sum. *ĝar*). | rev. 11 |
 | En-ul, Nin-ul | אֵן־אוּל, נִין־אוּל | | Primeval pair (*ul* "distant time"). | rev. 15 |
 | Bēlet-ilī (Sum. Aruru) | בֵּלֶת־אִילִי | | Flood corpus; Aruru in the apparatus. | rev. 17 |
-| Nisaba | נִיסָבָּה | | Text 4. | rev. 30; colophon B 1–2 |
+| Nisaba | נִיסַבָּה | | Text 4. | rev. 30; colophon B 1–2 |
 | Kidin-Sîn; Sutê; Aššur-bāni-apli | קִידִין־סִין; סוּטֵי; אַשּׁוּר־בָּנִי־אַפְלִי | | Colophons. | rev. 32; colophon B 9 |
 
 **Terms**
@@ -559,7 +559,7 @@ Akkadian lemmas: SEAL (checked with the eBL dictionary); Sumerian in the notes. 
 | Sum. SIG₇ (*se₁₂*, marû) | שׁוֹכְנִים? | | As text 5's `שָׁכְנוּ?`; cf. rev. 20 (SIG₇ = *banû*). | obv. 2 |
 | *uṣurtu* (Sum. *ĝiš-ḫur*); *eṣēru* D | צוּרָה (צוּרוֹת); צָר (צָרוּ, לָצוּר) | [cognate] ↔ ב:ז; יחזקאל מג:יא | Corpus §0. | obv. 4, 12, 34; rev. 18, 24–25 |
 | *kânu* D (pret., inf., stat.) | כּוֹנֵן (כּוֹנְנוּ, לְכוֹנֵן, מְכוֹנֶנֶת) | [cognate] ↔ `וַיְהִי כֵן` | Corpus §3. Deviation: rev. 16 `הוֹקִירוּ?` ("honour"). | obv. 4, 15, 29, 36, 38; rev. 1, 16, 30 |
-| *īku*; *palgu*; *ešēru* Št | סוֹלְלָה; תְּעָלָה; יִשֵּׁר | [cognate] (*ešēru* ~ ישר) | = Sum. *e*/*eg₂*, *pa₅* (text 2). | obv. 5, 13, 37 |
+| *īku*; *palgu*; *ešēru* Št | סוֹלְלָה; פֶּלֶג (2026-10-23 harmonization, was תְּעָלָה); יִשֵּׁר | [cognate] (*palgu* ~ פלג; *ešēru* ~ ישר) | = Sum. *e*/*eg₂*, *pa₅* (text 2; Sum. *pa₅* stays `תְּעָלָה`, so obv. 5, rendered from the Sumerian, keeps `סוללה ותעלה`). | obv. 5, 13, 37 |
 | *mīnâ i nīpuš*; *mīnâ i nibni* | מָה נַעֲשֶׂה?; מָה נִבְנֶה? | [equivalent] ↔ `נַעֲשֶׂה אָדָם` (א:כו); [cognate] ↔ `נִבְנֶה` (יא:ד) | Vocalized; B 19 *nušbalkit*, 20 *nibbi* in the apparatus. | obv. 16–17, 19–20 |
 | *wašābu*; *ina ramāni-*; *izuzzu*; *apālu*; *kilallān* | יָשַׁב; בְּעַצְמָם / מֵעַצְמוֹ; עָמַד; עָנָה; שְׁנֵיהֶם | | | obv. 11, 21, 23; rev. 18, 20, 24 |
 | *šīmāti šâmu* (*mušīm šīmāti*) | גּוֹזְרֵי הַגּוֹרָלוֹת | | Corpus §1. | obv. 22 |
@@ -588,6 +588,7 @@ Akkadian lemmas: SEAL (checked with the eBL dictionary); Sumerian in the notes. 
 | *pirištu*; *mūdû*; *kullumu*; *niṣirtu*; *gabarû labīru* | סוֹד; הַיּוֹדֵעַ; הֶרְאָה; נְצוּרָה; הֶעְתֵּק יָשָׁן | [cognate] (*niṣirtu* ~ נצר) | Colophons. | rev. 31; colophon B 5–6 |
 
 ## Changelog
+- 2026-10-23 harmonization (`../../harmonization--2026-10-23.md` rows 7, 12): *palgu* = `פֶּלֶג` (KAR 4 obv. 13 `סוללה ותעלה […]` → `סוללה ופלג […]`; obv. 5 kept, its Hebrew is the Sumerian *pa₅*); *šubarrû* = `פְּטוֹר` (Adapa SB e+10 `את חירותו שָׂם` → `את פטורו שָׂם`).
 - 2026-10-21 harmonization (cross-corpus decisions, see the corpus `renderings.md` §8): *mušen* = `צִפּוֹר` (E&Nḫ 18, Hoe 83; KAR 4 rev. 13 *iṣṣūru*); Inana `אִינַנָּה` in the apparatus too (`אינאנה` replaced, incl. the Hoe heading 49–51); the [equivalent] note on `סַפִּיר` added at Hoe 12; *šiptu* = `קֶסֶם` / *tû* = `לַחַשׁ` settled; *šembizid* = `פּוּךְ`, *sukkal* = `וְזִיר`, *karû* = `כְּרִי` unchanged.
 - 2026-10-16: §1–3 written by the coordinator before drafting text 1, from the corpus renderings, the flood corpus's shared renderings and Sumerian project 3.
 - 2026-10-16: §4 "Text 1: Adapa" added by the text-1 translator. §1–3 unchanged and followed (*akalu*, *mû*, *mūtu*, *balāṭu*, *napištu dārītu*, *nēmequ*/*uznu*/*ḫasīsu*, *labāšu*, *lubāru*, *šamnu*/*pašāšu*, *ṣiāḫu*, *apkallu*, *nišū*, *awīlūtu*, *banû*, *zēru*, *šasû* as fixed). One usage differs from project 1's glossary (not from these sections): *ṭeḫû* = `נִגַּשׁ`, because its cognate-bearing synonym *qerēbu* = `קָרַב` occurs in the same text (project.md, Text 1, Decision 8).

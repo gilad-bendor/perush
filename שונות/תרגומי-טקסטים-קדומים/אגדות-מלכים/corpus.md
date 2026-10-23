@@ -46,15 +46,19 @@ Translate, complete, two legends that the ancient Near East told about its kings
 |---|---|---|---|---|---|
 | 1 | `1-אנמרכר-ואדון-ארטה/` | Enmerkar and the Lord of Aratta | ETCSL 1.8.2.3 (`../sources/ETCSL/1.8.2.3--…/`); ORACC Q000369 lemma + morph; Mittermayer 2009 (open access) | 641 (1–636 with 11A, 106A, 185A, 185B, 365B and the alternative lines A–D of one manuscript for 400–403; ETCSL has no 369, 608–610) | `annotated-1.rtl.md` (1–155), `annotated-2.rtl.md` (156–307), `annotated-3.rtl.md` (308–469), `annotated-4.rtl.md` (470–636) |
 | 2 | `2-אגדת-הולדת-סרגון/` | The Sargon Birth Legend | King 1907 vol. II pp. 87–96, transcribed from the page images (`../sources/King-1907--…/`); eBL catalogue | 49 (King's col. I 1–32, col. II 1–17) | `annotated.rtl.md` |
+| 3 | `3-אגדת-אתנה/` | Etana (Round 3, run 2, 2026-10-22) | eBL L/1/9 (`../sources/eBL/Etana-*/`): six chapters – OB Morgan, OB Susa, MA Aššur, SB I–III; ed. Földi et al., tr. Foster | 585 (eBL labels with the chapter key: `OBM.7`, `MA.c+3`, `II.142`) | `annotated-OBM.rtl.md`, `-OBS`, `-MA`, `-I`, `-II`, `-III` (one per eBL chapter) |
 
 Rank 3: ETCSL's English and Mittermayer 2009's German (EA); King 1907's English and the few lines of Westenholz 1997
-quoted on the web (SB). Not available: Cohen 1973, Vanstiphout 2003, Westenholz 1997, Lewis 1980 (records:
+quoted on the web (SB); Foster's English in eBL (ET). Not available: Cohen 1973, Vanstiphout 2003, Westenholz 1997, Lewis 1980 (records:
 `../sources/_records-only--Legends-of-kings/`).
 
 **Reading order for the commentary:** EA 1–64 (Uruk and Aratta; the plea) → 65–155 (Inana's answer; the command; the
 spell of Nudimmud) → 156–307 (the first exchange) → 308–455 (the grain and the sceptre) → 456–556 (the champion, the
 heavy mouth and the first letter; the storm) → 557–636 (the end) → SB I 1–12 (the birth, the basket, the river, Aqqi,
-Ištar) → SB I 13–32, II (the deeds, the challenge, the beasts).
+Ištar) → SB I 13–32, II (the deeds, the challenge, the beasts) → **Etana** (each version on its own, in the
+order of time; for the story: OBM 1–14 / SB I – kingship from heaven → SB II 1–72 / OBS / MA a–c – the eagle and the
+serpent → SB II 73–152 / OBM b–c / MA d–f – the pit, the prayer for a son, the rescue → SB III / MA g–i – the dreams and
+the flights).
 
 ## Shared conventions
 - **`renderings.md` binds both projects**; it inherits the temple, lament and creation corpora's Sumerian renderings
@@ -73,6 +77,13 @@ Ištar) → SB I 13–32, II (the deeds, the challenge, the beasts).
   with the earlier parts' Hebrew in front of it, the proposals merged into `renderings.md` §9 after each part, and the
   three review passes done per part.
 
+**Etana (project 3, added 2026-10-22, Round 3 run 2):** the childless king of Kiš, the eagle and the serpent, and the
+ascent to heaven for the "plant of birth"; for Gen 11:4 (ascent and "name", without a tower), Gen 30:1, 14–23 (the
+plea and the "disgrace"), Gen 37 (the pit), Gen 28:12–17 and 37–41 (dreams), Isa 14:12–15, Obad 1:4, Exod 19:4,
+Deut 32:11, Ezek 17 (the eagle). Its renderings: `renderings.md` §10 (fixed before drafting; §10.6 what each part
+fixed). It was translated by four sub-agent translators in sequence (ET2 → ET1 → ET3 → ET4; the coordinator merged
+and pushed after each), one part at a time (quotas: guidelines §5.1).
+
 ## Tools (in this folder)
 | Script | What |
 |---|---|
@@ -80,12 +91,14 @@ Ištar) → SB I 13–32, II (the deeds, the challenge, the beasts).
 | `kings_tools.py build KEY` | The clean translation, verified. |
 | `kings_tools.py grep KEY\|all '<regex>'`; `lines KEY FROM-TO`; `pars KEY FROM TO` | How a Hebrew string was used so far (all = + the lament, temple and creation corpora's Sumerian texts); the base lines; the earlier copies of a repeated line with their Hebrew. |
 | `kings_tools.py conc EA [out]`; `data EA FROM TO out` | ETCSL ↔ ORACC concordance; a translator's line data (ETCSL, ORACC lemma + morph, ETCSL and Mittermayer at the line). |
+| `kings_tools.py data ET FROM TO out`; `pars ET FROM TO` | Etana: a translator's line data (the eBL block of each line + its related lines in all six versions with the Hebrew already given); the related lines of a range. `verify ET` licenses the reserved words by the eBL lemma (RESERVED_ET); `build ET` prints the eBL label under each version's heading. |
 | `build_parallels_index.py` | `parallels-index.md` from the per-file tables. |
 
 ## Status
 | # | Project | Status |
 |---|---|---|
 | 1 | Enmerkar and the Lord of Aratta | **complete** (2026-10-21): 641 entries in four parts, three review passes each; `translation.rtl.md` built; open decisions in `project.md` (EA1–EA4) |
+| 3 | Etana | **complete** (2026-10-22): 585 entries in four parts (ET1–ET4), three review passes each; `translation.rtl.md` built; open decisions in `project.md` |
 | 2 | The Sargon Birth Legend | **complete on King 1907** (2026-10-21): 49 entries, three review passes; `translation.rtl.md` built; **to be checked against Westenholz 1997 and K 7249** (not reachable) |
 
-Print stubs: `../הדפסה/אגדות-מלכים/1-אנמרכר-ואדון-ארטה.rtl.md`, `../הדפסה/אגדות-מלכים/2-אגדת-הולדת-סרגון.rtl.md`. Hand-off: `handoff--round2-run6.md`.
+Print stubs: `../הדפסה/אגדות-מלכים/1-אנמרכר-ואדון-ארטה.rtl.md`, `../הדפסה/אגדות-מלכים/2-אגדת-הולדת-סרגון.rtl.md`, `../הדפסה/אגדות-מלכים/3-אגדת-אתנה.rtl.md`. Hand-off: `handoff--round2-run6.md`.

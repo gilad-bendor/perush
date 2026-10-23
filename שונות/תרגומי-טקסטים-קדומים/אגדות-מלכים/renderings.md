@@ -158,7 +158,7 @@ the Sumerian recurs):
 - ***kur***: before a country name `ארץ` (`ארץ אַנְשָׁן`, `ארץ דִּלְמוּן`, `ארץ מַרְטוּ`, `אֶרֶץ אַכַּד` for *ki-uri*);
   otherwise `הר`; *kur-kur* `הארצות`; *ḫur-saĝ* `הררים`, *ḫur-saĝ zubi* `הַרְרֵי זוּבִּי` (★ Zubi).
 - **People:** *nam-lu₂-ulu₃* `האנושות`, + a city `אנשי X`; *lu₂-u₁₈-lu* `האדם`; *uĝ₃* `העם`; *erin₂* `החיל`.
-- **Verbs:** *pa e₃ ak* `הזהיר`; *galam* `בכשרון … עיבד`; *si sa₂* `יישר`; *sikil* `זיכה`; *mu₂* `הצמיח`; *de₆*
+- **Verbs:** *pa e₃ ak* `הזהיר`; *galam* `בתחכום … עיבד` (2026-10-23 harmonization, was `בכשרון`); *si sa₂* `יישר`; *sikil* `זיכה`; *mu₂* `הצמיח`; *de₆*
   `נשא`; *tum₂* `הוביל`; *tum₃* `הביא`; *ed₃* `עלה`/`ירד`; *pad₃* `מצא`; *zig₃* `קם`; *gul* `הרס`; *dal* (caus.)
   `העיף`; *saĝ keše₂* `ראש קשר`; *u₆ e* `התפעל`; *igi bar* `הביט`; *ĝizzal ak* `קשב עשה`; *na de₅* `עצה נתן`;
   *dub₃ ĝar* `ברך שׂם`; *gu₂ ĝiš ĝar* `צוואר לעץ שׂם`.
@@ -215,7 +215,7 @@ Ensuḫkešdana) and for the other corpora:
   Hebrew (*sar* only).
 - **Nouns:** *tug₂* `בגד`; *saĝ-ki* `מצח`; *eš₂-gar₃* `מכסה`; *ĝiškim* `אוֹת` (vocalized); *a-ma-ru* `מבול`; *a
   nam-til₃* `מֵי החיים`; *lil₂* `מַשַּׁב`; *ug* `לַיִשׁ`; *me-lem₄* `זוהר`; *um-ma* `הזקנה`; *ki-sikil* `עלמה`; *barag*
-  (dais) `כס`; *aga*, *men* `כתר`; *en₃-du* `זמרה`; *gig* `חיטה`; *gu₂* (pulse) `קטנית`; *eme₅* `אתון`; *dur₃* `עַיִר`
+  (dais) `דוכן` (2026-10-23 harmonization, was `כס`); *aga*, *men* `כתר`; *en₃-du* `זמרה`; *gig* `חיטה`; *gu₂* (pulse) `קטנית`; *eme₅* `אתון`; *dur₃* `עַיִר`
   (vocalized); *ud₅* `עז`; *peš₃* `תאנה`; *ĝeštin* `גפן`; *ur igi-ĝal₂-la* `אוּר־אִיגִיגַלָּה` (name, open).
 - **Verbs:** *šu … dag* + object `שמטה מידה`; *šu taka₄* `שלח`; *šu ti* `קיבל`; *igi du₈* `ראה` (≠ *igi bar*
   `הביט`); *dub₂* `נפץ`; *tar* `כרת`; *ur₃* `גרף`; *sud* (water) `הזה`; *gu₂ ĝar* "gather" `יחד שָׂם`; *ĝiš ĝal₂*
@@ -252,9 +252,186 @@ reserved); *nukaribbūtu* `גַּנָּנוּת`; *šarrūta epēšu* `מלכו�
 - *mušen* = `צִפּוֹר` (as before: 116, 188, 507; SB II.5 *iṣṣūru*); *me* = `הַ־מֶה` and Inana = `אִינַנָּה` (as before).
 - Not in these texts: *ur₄* "gather" (570 *ur₄-[X]* is a broken name), *kabattu*, *sukkallu* / *sukkal*.
 
+2026-10-23 harmonization (`harmonization--2026-10-23.md`; Enmerkar only – Etana's rows are applied later): *barag* "dais" → `דוכן` (row 5), the formula *na ga-e-de₅ na de₅-ĝu₁₀ ḫe₂-e-dab₅* → `עצה אתן לך – עצתי תיאחז!` (row 13), *galam* → `בתחכום` (row 15); changed lines: EA 498 `על הכס` → `על הדוכן`, 594 `את הכס` → `את הדוכן` (not in the table: the same *barag*); 69, 626 `את עצתי תקבל` → `עצתי תיאחז`; 39, 46 `בכשרון לי תעבד` → `בתחכום לי תעבד`, 263 `בכשרון לך אעבד` → `בתחכום לך אעבד`.
+
+## 10. Etana (project 3, `3-אגדת-אתנה/`; Round 3, run 2, 2026-10-21) – fixed before the first part
+Fixed by the coordinator from a reading of all six eBL chapters (585 lines: OB Morgan, OB Susa, MA Aššur, SB I–III)
+and the earlier Akkadian corpora (Gilgameš, flood, creation, wisdom, law). **§0.2 (the Akkadian inheritance) binds**;
+this section adds what Etana needs and settles its collisions. A translator may revise a §10.3 row at its first
+occurrence, with the reason in `project.md`; after that it binds (and FORMULAS in `kings_tools.py` is updated).
+
+### 10.1 Names (★ = vocalized at every occurrence; checked by TRAPS)
+| Source | Hebrew | Notes |
+|---|---|---|
+| Etana | אֵתָנָה ★ | Gilgameš corpus form. Unvocalized `אתנה` reads "I will give" (Gudea `אתנה לך`): always vocalized, also in headings. King of Kiš, "the shepherd who went up to heaven" (Sumerian King List). |
+| Kiš | כִּישׁ | First occurrence per file vocalized; note: the first city of kingship after the flood (Sumerian King List). The identification of `כּוּשׁ`, Nimrod's father (בראשית י:ח), with Kiš is a scholarly proposal: the apparatus only, marked so. |
+| Šamaš (also OB *šamšum*); the sun *šamšu* | שַׁמַשׁ ★; שֶׁמֶשׁ ★ | Guidelines §6.7: both always vocalized where both occur (Etana has both: MA f+2). Never `שֶׁמֶשׁ` for the god. *qurādu* (his epithet) = `הַגִּבּוֹר`. |
+| Anu (OB *ānum*) | אָנוּ ★ | Unvocalized `אנו` reads "we". |
+| Enlil / Ellil; Ea; Sîn; Adad; Ištar; Innina | אֶנְלִיל; אֵאָה; סִין ★; אֲדַד; אִשְׁתַּר ★; אִנִּינָה | Sîn: unvocalized reads `סין` (the desert of Sin, Exod 16:1; China). Innina (SB I 21) = Inana by another name: note. |
+| Igigū; Anunnakkū; the Sebetti; Šakkan; Anzû | אִיגִיגִי; אֲנוּנָּכִּי; הַשִּׁבְעָה; שַׁכַּן ★; אַנְזוּ | Flood and Gilgameš forms. Šakkan (Gilgameš ★). Anzû (II 72: the eagle cursed as "malignant Anzû"): the lion-headed thunderbird (EA `אַנְזוּד` is the Sumerian form): note. |
+| *erû* (the eagle) | נֶשֶׁר | = Gilgameš *arû* (VII 170) and Sum. *ḫurin* (EA 245–247, Gudea): one word for the eagle in every corpus. [equivalent]; note that Akk. *našru* is the cognate of `נֶשֶׁר` and is not used here. Gated (verify). Homonym: *erû* "conceive" (OBS 5 *īrû*) = `הָרָה` (Sargon). |
+| *ṣerru* | נָחָשׁ | Gilgameš: `נחש` only for the snake word (gated). |
+
+### 10.2 Grammar (Akkadian; §2 of this file)
+Preterite = past; perfect = past (often "then …"); present in narrative = participle or present (`אוכל`, `צד`), in
+speech = future; stative = adjective / nominal clause; precative *li-* / *lū* = jussive (`יְהִי`, `תֵּלֵךְ`); *ai* +
+preterite = `אַל` + future (`אל יֵצא`); Gtn (*išteneʾʾi*, *ittanallak*, *imtanaḫḫara*) = iterative: a participle or
+`פעם אחר פעם` / `יום יום` (never `שוב`); *-ma* not "and then" each time; ventive shown where it means "to me / here".
+**OB *ina šiātim lā kaṣrat* (OBM 7) is a stative "was not bound", not "not yet"**: `טֶרֶם` stays reserved (§5) and Gen
+2:5's `טֶרֶם יִהְיֶה` goes to the apparatus as [divergence] (Foster's "had not yet been" is rank 3: the classic false
+echo of "not yet", guidelines §5.2).
+
+### 10.3 Formulas and repeated passages (checked by FORMULAS where marked ✓)
+| Source | Hebrew (plene, unvocalized except names) | Lines |
+|---|---|---|
+| ✓ X *pâšu īpušam-ma ana* Y *izakkaršu* (OB *izzakaršu*; OB Šamaš *piʾāšu*) | `X פתח את פיו, אל Y דיבר:` | OBM b+3, b+14, c+5, c+8; II 7, 10, 74, 113, 115, 128, 143; III 9, 11. **Etana's formula has no *iqabbi***: so no `ואמר` (the flood / Gilgameš formula `פתח את פיו ואמר, אל Y דיבר:` has it). Order variant *īpuš(am)-ma izakkar(a) ana* Y (II 40, 96) = `X פתח את פיו, דיבר אל Y:`; with *amāta* (III 1) `X פתח את פיו, אל Y … דבר דיבר:`. MA / SB *ana šâšu ana* Y *iqabbi* ("said to him, to Y") – the first translator fixes (e.g. `X אומר לו, לY:`). |
+| ✓ *atmu ṣeḫru atar ḫasīsa* / *ana erî abīšu amāta izakkar* | `האפרוח הקטן, יתיר־התבונה,` / `אל הנשר, אביו – דבר דיבר:` | OBS 22–23; MA c+3–4; II 45–46, 98–99. *watmu* / *atmu* = `אֶפְרוֹחַ` (Gilgameš precedent; [equivalent] ↔ `אֶפְרֹחִים` דברים כב:ו; `גּוֹזָל` is reserved: דברים לב:יא, §10.4); *atru* = `יָתִיר` (Enūma eliš *šūtur* `יתיר`); *ḫasīsu* = `תְּבוּנָה` (creation, flood); the epithet is Atra-ḫasīs's name (note). |
+| ✓ X *ikkal ineʾʾi ikkalū mārūšu* (SB, MA); OB *erûm īkul īkulū mārūšu* | `X אוכל, סר – אוכלים בניו.`; `הנשר אכל – אכלו בניו.` | II 27–33, MA b+16–20; OBS 9, 11. *neʾû* "turn back, away" = `סָר` (no `שוב`). *bâru* "catch, hunt down" = `לָכַד` (Gilgameš; revised by ET2 from `צָד`, which belongs to *ṣâdu* / *ṣayyādu*): `… – הנחש לוכד,` (OB `לכד`); `רשת שַׁמַשׁ תלכדך` (↔ תהלים לה:ח). |
+| ✓ *ša itâ ša šamaš ittiqu* | `אשר יחלוף את גבול שַׁמַשׁ –` | II 17, 19, 49. *etēqu* = `חָלַף` (Gilgameš; ↔ `חָלְפוּ חֹק`, ישעיהו כד:ה); *itû* = `גְּבוּל` (gated; [equivalent] ↔ דברים יט:יד, and Laban's heap `אִם אָנִי לֹא אֶעֱבֹר אֵלֶיךָ אֶת הַגַּל הַזֶּה` בראשית לא:נב). |
+| ✓ *šamaš lemniš ina qāt māḫiṣi limalli* (II 18) / *umalli* (II 50) | `שַׁמַשׁ – ברעה – ביד המוחץ ימסרהו!` / `… ימסרהו.` (present: the fledgling's prediction) | *mullû ina qāti* "deliver into the hand": **never `מילא יד`** (Hebrew: ordination – a false echo); *māḫiṣu* = `מוֹחֵץ` (*maḫāṣu* = `מחץ`, law corpus). |
+| The curse of the oath: *kakku murtappidu elīšu līšir* | `הנשק המשוטט – עליו יישר!` | OBS 3; MA b+4; II 21. *rapādu* = `שוטט` (Gilgameš), *ešēru* = `ישר` [cognate]. *nērebu* (mountain pass) = `מָבוֹא`, *nērebtu* = `מְבוֹאָה` (ET2: `מַעֲבָר` is Gilgameš's *nēberu*): `יתרחקו ממנו מבואות ההר,`; *ṭūdu* = `נָתִיב`, **_urḫu_ = `דֶּרֶךְ`, _ḫarrānu_ = `אוֹרַח` (vocalized), as in Gilgameš and the wisdom corpus** (harmonized 2026-10-22). |
+| ✓ *alik urḫa etiq šadâ* (Šamaš's command; MA d+7 *šadâ ebir*) / execution X *illik ītiq šadâ* | `לך בדרך, חלוף את ההר,` / `X הלך, חלף את ההר.` | II 75, 89, 144, 149; MA d+7 (the tablet has *etiq*, as SB: corrected by ET3). *urḫu* = `דֶּרֶךְ` (Gilgameš; was `אֹרַח` before ET2, 2026-10-22). |
+| ✓ *ana zikir šamaš qurādi* | `למאמר שַׁמַשׁ הגיבור –` | II 88, 148. *zikru* = `מַאֲמָר` (Gilgameš); but *zikru* "name, fame" (II 127 *zikirka luštešmi*) = `זִכְרְךָ` [cognate] (↔ `וְזֶה זִכְרִי לְדֹר דֹּר` שמות ג:טו): one lemma, two senses (creation corpus precedent). |
+| ✓ The plea: *idnam-ma šamma ša alādi* / *kullimannī-ma šamma ša alādi* / *piltī usuḫ-ma šuma šuknanni* | `תנה לי את עשב הלידה!` / `הראני את עשב הלידה!` / `נסח את חרפתי, שִׂים לי שֵׁם!` | II 140–142 = III 12–14; MA d+4 (OB Morgan c+9 is another wish). *šammu* = `עֵשֶׂב` (Gilgameš, flood: "every `עשב` stands for *šammu*"); *alādu* = `יָלַד` (`לֵדָה`); *kullumu* = `הֶרְאָה` (law corpus); *nasāḫu* = `נָסַח` [cognate]; *pištu* = `חֶרְפָּה` (Gilgameš; [equivalent] ↔ `אָסַף אֱלֹהִים אֶת חֶרְפָּתִי` בראשית ל:כג, gated); *šuma šakānu* = `שָׂם שֵׁם` (Gilgameš; [equivalent] ↔ `וְנַעֲשֶׂה לָּנוּ שֵׁם` בראשית יא:ד): **`שֵׁם` here means "offspring, heir"** – the note says so, and that the Akkadian keeps the one word for both. The plant: [divergence] ↔ `תְּנִי נָא לִי מִדּוּדָאֵי בְּנֵךְ` (בראשית ל:יד); `דּוּדָאִים` reserved. |
+| ✓ *ul išmēšunūtī-ma ul išmâ zikir mārīšu* | `לא שמע להם, לא שמע למאמר בניו.` | II 51, 104. |
+| ✓ *atkalkum-ma šamaš qurādu* (OB *atkalakkum-ma … qurādum*) | `בך בטחתי, שַׁמַשׁ הגיבור!` | OBS a+11; II 62. *takālu* = `בָּטַח`. |
+| ✓ *ūmišam-ma imtanaḫḫara šamaš* (II 123, 133; Gtn) | `יום יום – אל שַׁמַשׁ מתחנן:` | *maḫāru* Gtn "keep appealing to" = `התחנן` (iterative participle). *ūmišam* = `יום יום` (also II 6, OBM b+11). |
+| The serpent's lament / the net: *šētka erṣetu rapaštu* / *gišparraka šamû rūqūtu* / *ina šētīka ai ūṣi erû* / *ēpiš lemutti u anzilli* / *mukīl lemutti ana ibrīšu* | ET2 fixes (OBS a+20–24 and II 69–72 in one part) | *šētu* = `רֶשֶׁת` (gated; [equivalent] ↔ `וּפָרַשְׂתִּי אֶת רִשְׁתִּי עָלָיו` (יחזקאל יב:יג)); *gišparru* = `פַּח` (= Sum. *ĝiš-bur₂*, EA `פח`; gated); *erṣetu* = `אֶרֶץ` (also the netherworld: Gilgameš; never `שאול`); *rapšu* = `רָחָב`; *rūqu* = `רָחוֹק`; *lemuttu* / *lumnu* / *lemnu* = `רָעָה` / `רֹעַ` / `רַע` (by form); *anzillu* = `תּוֹעֵבָה` (laments *an-zil*; gated); *mukīl lemutti* "harbourer of evil" = `מחזיק רעה` (*mukillu* = `מַחֲזִיק`, flood). |
+| The oath of friendship (II 8–24; OBS 1–4; MA b+1–7) | ET2 fixes | *rūʾūtu* = `עֲמִיתוּת`, *rūʾu* = `עָמִית` (Gilgameš *rūʾu*); *itbāru* = `יְדִיד`; *ibru* = `רֵעַ` (vocalized; Gilgameš); *māmītu* = `שְׁבוּעָה` (wisdom and creation corpora; gated), *tamû* = `נִשְׁבַּע` (gated); *erṣetu* (II 15, "swear by the earth") = `הארץ`; *asakku* = `דבר אסור` (*asakka akālu* `אכל דבר אסור`; Ludlul *asakkiš* = `כדבר אסור`; `חֵרֶם` only in the apparatus, ↔ יהושע ז:א), *anzillu* = `תועבה`, so II 13 = 130 is `תועבת האלים … דבר אסור`; *lemnēti* = `רעות`; *kabtatī tušamriṣ* "you sickened my liver" = `את כבדי החלית` (*kabattu* = `כָּבֵד`, harmonization; gated; *marāṣu* Š = `החלה`). |
+| Command / execution: Šamaš's plan II 75–87 ↔ the serpent II 89–92; the eagle's capture II 84–86 ↔ 111, 119–121; the fledgling's warning 47–50 ↔ 100; "searching in front and behind" 107 = 109 (MA c+14–19) | ET3 copies ET2's strings and its own; **the execution in the command's words and order** (guidelines §5.2) | *karšu* = `מֵעַיִם` (Gilgameš; the cognate `כָּרֵשׂ` in a note), *libbu* = `לֵב` / `קֶרֶב` by sense; *kutum libbi* `מכסה הקרביים`; *nakāsu* = `כָּרַת`; *kappu* = `כָּנָף`, *abru* = `אֵבֶר` [cognate; gated; ↔ `עַל אֶבְרָתוֹ` דברים לב:יא, `יַעֲלוּ אֵבֶר כַּנְּשָׁרִים` ישעיהו מ:לא]; *nuballu* (wing, tail?) = ET3 decides (not `כנף`, `אבר`, `נוצה`); *baqāmu* = `מָרַט`; *nadû* = `הִשְׁלִיךְ` (gated) – *ana šuttati nadû* = `השליך אל השוחה` [equivalent ↔ `וַיַּשְׁלִכוּ אֹתוֹ הַבֹּרָה` בראשית לז:כד]; *šuttatu* = `שׁוּחָה` (Gilgameš precedent; gated; ↔ `שׁוּחָה עֲמֻקָּה` משלי כב:יד; `כִּי כָרוּ שׁוּחָה לְנַפְשִׁי` ירמיהו יח:כ); *būrtu* = `בּוֹר` [cognate] (gated); *bubūtu* (hunger) = `רעבון`, *ṣūmu* = `צמא`; *rēmu* D (*rēmannī*) = `רחם` [cognate]; *ērišu* "bridegroom" = `חתן`? – ET3 decides with *nudunnû* (`מַתָּן`, law corpus). |
+| Etana's prayer II 134–138 | ET3 fixes | *kubru* "the fattest" = `מִשְׁמַנֵּי` (Gen 27:28's `מִשְׁמַנֵּי` is "from the fat of": ET3 checks the echo, else `חֵלֶב`); *dāmu* = `דָּם`; *kabātu* D = `כִּבֵּד` [cognate] (gated); *eṭemmu* = `אִט`, pl. `אִטִּים` (flood; always vocalized: `אט` reads "slowly"); *palāḫu* = `יָרֵא` (wisdom corpus, of gods); *šāʾiltu* = `שׁוֹאֶלֶת` (Gudea, wisdom; pl. `השואלות`); *maššakku* = `מֻגְמָר` (Ludlul); *ṭubbuḫu* = `טבח` [cognate]. |
+| The flights (SB III 30–51, b+25–45; MA i+1–14) | ET4 fixed (§10.6.4): the first flight *ullû* `בֵּרוּ אחד – העלה אותו,` + `"רֵעִי, הִסְתַּכֵּל – הארץ, כְּמוֹ מָה הִיא!` (*naplis … kī mīni*); the second *šušqû* `… – הגביה אותו,` + `"צְפֵה, רֵעִי – הארץ, איך היא!` (*dugul … kī*); the tablet has no *ibrī amur māta mīnâ ibašši* (corrected) | *bēru* = `בֵּרוּ` (Gilgameš; note "double hour, c. 10 km"); *šaqû* D = `הִגְבִּיהַּ` (↔ `אִם תַּגְבִּיהַּ כַּנֶּשֶׁר` עובדיה א:ד [equivalent]); *elû* = `עָלָה`, Š = `העלה`; *šamû* = `שָׁמַיִם` (*šamāmū* poetic: same, noted); *tâmtu* / *tiāmtu* = `יָם` (*tâmtu rapaštu* `הים הרחב`); *mūšaru* "(garden) bed" = `עֲרוּגָה`; *kirû* = `גַּן` (gated: "no garden word without *kirû*"), *nukaribbu* = `גַּנָּן` (gated); *palgu* = `פֶּלֶג` [cognate] (2026-10-23 harmonization, was `תְּעָלָה`); *agappu* / *gappu* "wing, wing feathers" = `אֲגַף` (vocalized; note), *nāṣu* "plumage" = `נוֹצָה` [cognate; ↔ `מָלֵא הַנּוֹצָה` (יחזקאל יז:ג)] (gated); *irtu* "chest" = `חָזֶה`; *idu* "arm, side" = `צַד` / `זְרוֹעַ` by sense; *biltu* = `מַשָּׂא`; *maqātu* "plunge, fall" = `נָפַל`; *šukênu* = `הִשְׁתַּחֲוָה` (Gilgameš); *bābu* = `שַׁעַר` (of the gods) / `פֶּתַח` (of a house); *kunukku* = `חוֹתָם`; *kussû* = `כִּסֵּא`; *nēšu* = `אַרְיֵה` (Sargon), *lābu* = `לָבִיא` [cognate]; *ardatu* = `עלמה` (EA *ki-sikil*). |
+| Dreams (MA d+5–6, h+; SB III b+1–16): *šutta amāru* / *naṭālu*; *pašāru* | ET3 / ET4 | *šuttu* = `חֲלוֹם` (flood); *pašāru* = `פָּשַׁר` (never `פָּתַר`; ↔ בראשית מ–מא in the apparatus); *barû* Š (*ušabrânni*) = `הֶרְאָה`; *damqu* (of a dream) = `טוֹב` (gated; *damqu* licenses it). |
+
+### 10.4 Reserved and gated (checked by `kings_tools.py verify ET`; RESERVED_ET, licensed by the eBL lemma)
+- **Never** (apparatus only): everything in §5's "never" list (incl. `מִגְדָּל`, `נַעֲשֶׂה לָּנוּ`, `בָּבֶל`, `שִׁנְעָר`,
+  `עוֹלָם`, `טֶרֶם`, `אֱלֹהִים`, `מַלְאָךְ`, the root קדש); and for Etana `דּוּדָאִים` (↔ `וַיִּמְצָא דוּדָאִים בַּשָּׂדֶה` (בראשית ל:יד)), `עֲקָרָה`
+  (no Akkadian "barren" in these texts; ↔ בראשית יא:ל, כט:לא), `מַמְלָכָה` (↔ `וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ` (בראשית י:י)), `פָּקַח` (*petû* = `פָּתַח`
+  [cognate]; ↔ בראשית ג:ה, כא:יט), `סֻלָּם` (בראשית כח:יב), `גּוֹזָל` (דברים לב:יא), `חֵרֶם` (יהושע ז).
+- **Gated** (only with the lemma): `נָחָשׁ` (*ṣerru*), `נֶשֶׁר` (*erû* I), `אֵבֶר` (*abru*), `נוֹצָה` (*nāṣu*), `בּוֹר`
+  (*būrtu*), `שׁוּחָה` (*šuttatu*), `רֶשֶׁת` (*šētu*), `פַּח` (*gišparru*), `גְּבוּל` (*itû*), `תּוֹעֵבָה` (*anzillu*),
+  `חֶרְפָּה` (*pištu*), `צְרִיחַ` (*dimtu*), `שְׁבוּעָה` (*māmītu*), `נִשְׁבַּע` (*tamû*), `גַּן` (*kirû*), `גַּנָּן`
+  (*nukaribbu*), `רְאֵם` (*rīmu*), `כָּבֵד` / `כִּבֵּד` (*kabattu*, *kabātu*), `שׁוּב` (*târu*), `עָף` (*naprušu*, *šâʾu*),
+  `הִשְׁלִיךְ` (*nadû*), `נָהָר` (*nāru*), `קָרָא` (*nabû*, *šasû*), `לְבֵנָה` (*libittu*), `טוֹב` (*ṭābu*, *damqu*),
+  `ברך` (*karābu*, *ikribu*); `חֵמָר` / `כֹּפֶר` / `טִיט` as §5.
+- **SB II 2 *dimta ītepuš*** "he had built a tower": *dimtu* = `צְרִיחַ` (Judg 9:46, 49; a tower-stronghold) –
+  [equivalent] ↔ `וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם` (בראשית יא:ד); `מִגְדָּל` reserved. Foster italicizes "tower": the
+  line is broken and its subject unknown; the note says so. *dimtu* "tear" (II 61 *dimāšu*) = `דִּמְעָה` (a homonym).
+- *ṣarbatu* "(Euphrates) poplar" = `צַפְצָפָה` (Modern botany: `צַפְצֶפֶת הַפְּרָת`, *Populus euphratica*), not `עֲרָבָה`
+  (Enūma eliš and the Sumerian corpora give `עֲרָבָה` to *ṣēru* / *edin*: a collision); ↔ `צַפְצָפָה שָׂמוֹ` (יחזקאל
+  יז:ה – the eagle parable) [equivalent], `עַל עֲרָבִים בְּתוֹכָהּ` (תהלים קלז:ב) in the note. *iṣu* = `עֵץ`.
+- Animals (settled by ET2, one Hebrew each, grep-checked): *rīmu* = `רְאֵם` [cognate]; *serrēmu* = `חמור בר`; *armu* = `אַקּוֹ` (pl. `אַקּוֹאִים`); *turāḫu* = `יָעֵל` (= Sum. *taraḫ*, EA, Agade); *ditānu* = `*תְּאוֹ*` (pl. `*תְּאוֹאִים*`; = Sum. *alim*; the `דִּישֹׁן` proposal in a note only); *sappāru* = `*זֶמֶר*`; *ṣabītu* = `צְבִיָּה`; *nimru* = `נָמֵר` [cognate]; *mindinu* = `*בַּרְדְּלָס*`; *būlu* = `בְּהֵמָה` (*būl ṣēri* `בֶּהֱמַת הַשָּׂדֶה`); *nammaštû* = `הַנָּע` (`נָעֵי הקרקע`; never `רֶמֶשׂ`).
+- *ṣabātu* = `תָּפַס` (the harmonization: `תָּפַס` in a text that also has *aḫāzu*, OBM a+6); *aḫāzu* (a wife) = `בָּעַל`
+  (Gilgameš). *šarrūtu* = `מַלְכוּת`, *šarru* = `מֶלֶךְ`; the insignia: *agû* `כֶּתֶר` (Gilgameš), *kubšu* = `מִצְנֶפֶת`
+  (↔ `הָסִיר הַמִּצְנֶפֶת וְהָרִים הָעֲטָרָה` יחזקאל כא:לא [equivalent]), *meānu* (*mīnu*) "crown?" = `עֲטָרָה`,
+  *ḫaṭṭu* = `שַׁרְבִיט`, *šibirru* "staff" = `מַקֵּל`? (ET1 decides; not `מַטֶּה`, creation 2's *ĝidru*), *parakku* = `דּוּכָן`
+  (2026-10-23 harmonization, was `כֵּס`; EA *barag*; "dais", also a god's sanctuary: II 3 *parakka ša adad* `[דו]כן אֲדַד`). *rēʾû* = `רוֹעֶה` (Gilgameš) [↔
+  `אַתָּה תִרְעֶה אֶת עַמִּי` שמואל ב ה:ב]. *urdam šarrūtum ina šamāʾī* = `המלכות – מן השמים ירדה` [equivalent ↔
+  Sumerian King List; Gen 10:8–10 in the note]. *libittu* = `לְבֵנָה` [cognate; ↔ בראשית יא:ג] (SB I 5).
+
+### 10.5 The plan of the parts (translator chain; the coordinator merges proposals into §10.6 after each part)
+| Part | Lines (eBL labels) | Content |
+|---|---|---|
+| ET1 | OBM 1–a+13; SB I 1–a+11 (69) | The gods plan the city; no king; kingship comes down from heaven; Ištar seeks a shepherd; Etana and his wife (dream) |
+| ET2 | OBS 1–a+24; MA a+1–c+31; SB II 1–72 (179) | The poplar, the oath of friendship, the shared hunt, the eagle's plot, the fledgling's warning, the serpent's lament |
+| ET3 | SB II 73–152; OBM b+1–c+9; MA d+1–f+18 (153) | Šamaš's ambush, the eagle in the pit, Etana's prayer for a son, the rescue, the bargain |
+| ET4 | SB III 1–c+7; MA g+1–i+18 (184) | The speech of birds, the dreams, the flights to heaven (two ascents), the return, the gates of the gods |
+
+The parts run strictly one at a time (quotas: the user, 2026-10-22; guidelines §5.1): ET2 → ET1 → ET3 → ET4. ET3
+follows ET2 (command/execution, the fledgling's warning, the oath's curse); ET4 follows ET3 (the plea, the dreams).
+
+### 10.6 Merged from the parts
+#### 10.6.1 Part ET2 (OBS 1–a+24; MA a+1–c+31; SB II 1–72), 2026-10-22
+Full list: `3-אגדת-אתנה/project.md` ("Part ET2": proposals). Binding for ET1, ET3, ET4 (copy the strings exactly where the
+Akkadian recurs):
+- **Revised in §10.3/§10.4:** *bâru* = `לָכַד`; *nērebu* / *nērebtu* = `מָבוֹא` / `מְבוֹאָה`; the animals; **the road words
+  harmonized to Gilgameš** (*urḫu* `דֶּרֶךְ`, *ḫarrānu* `אוֹרַח`: OBS.1 changed; the formula `לך בדרך, חלוף את ההר,`).
+- **Fixed strings:** the oath `לפני שַׁמַשׁ הגיבור – שבועה נשבעו שניהם.` / `אחרי ששבועה נשבעו שניהם,`; the friendship
+  `"לְכָה, נעשה עֲמִיתוּת …` / `נהיה ידידים – אני ואתה!"`; II.12–13 `(אם) רַע אַתָּה – את כְּבֵדוֹ תַּחֲלֶה,` / `תועבת
+  האלים – דבר אסור תאכל.` (for II.129–130: `רַע אַתָּה – ואת כְּבֵדִי הֶחֱלֵיתָ!` / `תועבת האלים – דבר אסור אכלת!`); the
+  curses (`הנשק המשוטט – עליו יִישַׁר!`; `הפח, שבועת שַׁמַשׁ – יתהפכו עליו, וילכדוהו!` / `… עליך, וילכדוך!`); the hunt
+  (`X אוכל, סר – אוכלים בניו.`; `… – הנשר לוכד,`); growth `בני הנשר גדלו, צמחו.`; the plot `הנשר – לבו רעה חשב,` / `חשב
+  לבו רעה.` / `לאכול את אפרוחי עמיתו – את פניו שָׂם.`; the eagle's boast `אֶעֱלֶה – ובשמים אֵשֵׁב,` (↔ ישעיהו יד:יג);
+  the fledgling `האפרוח הקטן, יתיר־התבונה,` / `אל הנשר, אביו – דבר דיבר:` / `"אל תאכל, אבי! רשת שַׁמַשׁ תלכדך,`;
+  `לא שמע להם, לא שמע למאמר בניו.`; `ירד ואכל את בני הנחש.`; the lament (`"בך בטחתי, שַׁמַשׁ הגיבור!` … `עושה רעה, אַנְזוּ –
+  מחזיק רעה לרֵעֵהוּ!"`). For ET3 (from MA c+5–c+25 ≈ II 98–117): the second warning and the ambush, in the ET2 table
+  "for ET3".
+- **Words:** *rūʾūtu* `עֲמִיתוּת`, *rūʾu* `עָמִית`, *itbāru* `יְדִיד`, *râʾu* Gt `הִתְרוֹעֵעַ`; *nīšu* (oath) `חַיִּים`;
+  *nabalkutu* of a trap `הִתְהַפֵּךְ עַל` (crossing: `חָצָה`); *ṣillu* `צֵל`, *appu* (of a tree) `צַמֶּרֶת`, *išdu* `יְסוֹד`;
+  *watmu* `אֶפְרוֹחַ`, *līdānu* `יֶלֶד`; *kapādu* `חָשַׁב`; *lemuttu* / *lumnu* / *lemnu* `רָעָה` / `רֹעַ` / `רַע`;
+  *takālu* `בָּטַח`, *adāru* `חָרַד`; *lū* + *tīde* `אָכֵן יָדַעְתָּ`; *qerbetu* `נָוֶה`; *ukultu* `אָכְלָה`; *šiāḫu* `צָמַח`;
+  *ṣupru* `צִפֹּרֶן`; *tarbuʾu* `אָבָק`; *līliātu* `עֶרֶב`; *magāru* `אָבָה`; *gallû* `שֵׁד־גַּלָּה` (netherworld corpus).
+- **Left for the end-of-run harmonization** (other corpora): *šarāku* = `הֶעֱנִיק` (= Sum. *rig₇*, EA 614) collides
+  with Gilgameš's *qiāšu* = `הֶעֱנִיק`; Enki and the World Order's boat name `אקו־האפסו` (*taraḫ*) against *taraḫ* =
+  *turāḫu* = `יָעֵל` (EA, Agade, Etana) and *armu* = `אַקּוֹ`.
+- **Tool:** `tools/ebl_fetch.py` fixed (a reconstruction line opening with a logogram, `%sb`, was glued to the previous
+  line: SB II 25); `Etana-SB-II` regenerated.
+
+#### 10.6.2 Part ET1 (OBM 1–a+13; SB I 1–a+11), 2026-10-22
+Full list: `3-אגדת-אתנה/project.md` ("Part ET1"). Binding for ET3–ET4:
+- **Formula:** *X ana šâšū-ma ana Y izzakaršu* (MA *ana šuāšu … izakkaršu*) = `X אליו, אל Y, דיבר:` (fem. `דיברה`;
+  I.a+2; for SB III b+15, b+26, b+32, b+36 `הנשר אליו, אל אֵתָנָה, דיבר:`; MA e+14, i+1, i+5, i+12); checked by FORMULAS.
+  MA h+13 *… iqabbi* = `X אליו, אל Y, אומר:`.
+- **Fixed strings:** the prologue OBM 1–10 = SB I 8–17 (identical Hebrew where the Akkadian is identical);
+  `[המל]כות – מן השמים ירדה.` (OBM 14); `לפני אָנוּ, בשמים – שׂוּמִים.`; `שרביט, עטרה, מצנפת ומקל־רועים`.
+- **Words:** *eṣēru* = `יָצַר` (not `צָר`, guidelines §6.7: unvocalized `את העיר צרו` reads "besieged"; `יצר` in the
+  planning sense, ישעיהו לז:כו); *uššu* = `אֻשִּׁים` [cognate, Aram. `אֻשַּׁיָּא`, עזרא ה:טז]; *libittu* `לְבֵנָה`;
+  *šibirru* = `מקל־רועים` (= Sum. *šibir*, EWO 436); *ḫaṭṭu* `שרביט`; *kubšu* `מצנפת`, *meānu* `עטרה`; *parakku* `דוכן`
+  (pl. `הדוכנים`; 2026-10-23 harmonization, was `כֵּס`, `הַכֵּסִים`); *ṣapāru* `*משובץ*`; *malāku* G `יעץ`, Gt `נמלך`; *mitluku* `נִמְלָךְ`; *isinnu* `חג`; *šiāmu*
+  `גזר`; *rēʾû* `רוֹעֶה`; *itinnu* `בַּנַּאי`; *ḫiāṭu* `בחן`; *ina ūmīšū-ma* `ביום ההוא` (Gilgameš); *ina šiātim*
+  `בָּהּ`; *eṭemmu* `אִט` (`אִטּוֹ`); *šutta šubrû* `חלום הֶרְאָה`; *marḫītu* `רַעְיָה`; *dadmū* `יישובים`; *ummānu*
+  `הָמוֹן`; *dapnu* `עריץ`.
+- **Left for the end-of-run harmonization:** *ḫaṭṭu* `שרביט` here and in EA vs `שבט` in Enūma eliš IV 29 and LH
+  (proposal: `שרביט` for *ḫaṭṭu* everywhere, `שבט` only for *šabbiṭu*); *parakku* `כֵּס` vs `דוכן` (Enūma eliš) [both settled 2026-10-23: `שרביט`, `דוכן`]; Sum.
+  *aga* `עטרת` (EWO 264) vs *agû* `כתר` (Gilgameš); *ṣapāru* `*משובץ*` vs Gilgameš VIII *raʾzu*; *ḫiāṭu* `בחן` vs
+  *barû* `בוחן` (Enūma eliš); *ina ūmīšu* `ביום ההוא` vs `בעת ההיא` (Enūma eliš, Adapa); *barû* Š and *kullumu* both
+  `הראה` (one Hebrew for two verbs, as set in §10.3).
+
+#### 10.6.3 Part ET3 (SB II 73–152; OBM b+1–c+9; MA d+1–f+18), 2026-10-22
+Full list: `3-אגדת-אתנה/project.md` ("Part ET3"). Binding for ET4:
+- **Revised:** *kutum libbi* = `מִכְסֵה הַלֵּב` (not `מכסה הקרביים`: `קֶרֶב` is *qerbu*'s cognate; ↔ the caul fat of
+  ויקרא ג:ג); *kubru* = `עֹבִי` (Gilgameš); *šubtu* = `מִשְׁכָּן` (`מַאֲרָב` is Gilgameš's *ušbu*); *maṣû* Št = `חָדַר`
+  (II 83, 110; MA c+22 changed from `הגיע?` by the coordinator: `הגיע` is *kašādu*'s). II.133 keeps the Akkadian word
+  order (`אֵתָנָה – יום יום – אל שַׁמַשׁ מתחנן:`; the formula check now finds the formula anywhere in the line).
+- **Fixed strings and words:** see the ET3 proposals (the plea unchanged; the dream formulas; Etana's epithet `מלך
+  הבהמה`; the bargain; the counting pattern of the eagle's attempts). *nuballu* = `*מְנִיפוֹת*`; *šērtu* = `עֹנֶשׁ`
+  (Atra-ḫasīs); *ērišu* = `חָתָן`, *nudunnû* = `מַתָּן` (↔ בראשית לד:יב); *sanāqu* = `בִּקֵּר`; *šuʾu* = `שֶׂה`;
+  *etēqu* Š = `הֶעֱבִיר`; *mā* = `הֵן`; *šaṭāṭu* = `שִׁסַּע`; *sādu* = `מִגְרָשׁ`; *nāʾeru* = `שׁוֹאֵג` (Gilgameš);
+  *unnīnu* `תחנונים`; *zikru* "fame" `זֵכֶר`; *petû* (eyes) `פָּתַח` (`פָּקַח` reserved); `אֶתְּנָה` "I will give"
+  vocalized (the pun on `אֵתָנָה` noted).
+- **Tool:** the eagle gate (`נשר`) is licensed by the transliteration too (OBM b+9 *er[îm* has no eBL lemma).
+- **Left for the end-of-run harmonization:** *šērtu* `עֹנֶשׁ` (Atra-ḫasīs) vs `אַשְׁמָה` (Gilgameš, Ludlul); *ērišu*
+  `חתן` vs Gilgameš *ḫāmiru* `חתן`; *nāʾeru* `שואג` (Gilgameš) vs `צורח` (Atra-ḫasīs); `אחו` used for two source words
+  elsewhere.
+
+#### 10.6.4 Part ET4 (SB III 1–c+7; MA g+1–i+18), 2026-10-22
+Full list: `3-אגדת-אתנה/project.md` ("Part ET4"). For a later Akkadian text of this corpus:
+- **Fixed strings:** the flights (above, §10.3); the drops *nasāku* `… – זרק אותו,` / `הנשר נפל – וקיבל אותו בכנפיו.`;
+  command → execution `על צדיי – שִׂים את זרועותיך!` / `על צדדיו – שָׂם את זרועותיו.` (and the chest, the wings); the
+  plea `"רֵעִי, תנה לי את עשב הלידה!` (III 12); the dream ↔ its fulfilment in the same words (`בְּקֶרֶב? שער אָנוּ,
+  אֶנְלִיל וְאֵאָה – צעדנו;` ↔ `… – צעדו;`; `השתחווינו זה עם זה – אני ואתה.` ↔ `הנשר ואֵתָנָה – זה עם זה – השתחוו.`).
+  Repeated lines: commands end with `!`, executions with `.`.
+- **Words:** *târu ana* `נֶהְפַּךְ לְ־` (Gilgameš); *kappu* of a man `כנפיים` (`כַּף` is *rittu*'s; footnote);
+  *ina lēt* `אֵצֶל` (`צַד` is *idu*'s); *tēqītu* `סִיכָה` (`משחה` is *piššatu*'s); *maḫāru* Š `*הִקְבִּיל*`; *kiššatu*
+  `כֹּל`; *buginnu* `שֹׁקֶת`; *galātu* `הִתְפַּלֵּץ`; *qarānu* `עָרַם`; *palgu* `פֶּלֶג` (2026-10-23 harmonization, was `תְּעָלָה`); *šamû ša anim* `שְׁמֵי אָנוּ`;
+  *naš(š)û* "carry" `נָשָׂא` [cognate] (↔ שמות יט:ד).
+- **Left for the end-of-run harmonization:** *palgu* `תעלה` vs Enūma eliš's cognate `פֶּלֶג` (proposal: `פֶּלֶג`
+  everywhere) [settled 2026-10-23: `פֶּלֶג`]; *buginnu* `שוקת` vs Gilgameš *mašqû* `שוקת` (proposal: *mašqû* `מַשְׁקֶה`) [settled 2026-10-23: *mašqû* `מַשְׁקֶה`]; *galātu* `התפלץ` vs Gudea's
+  Sum. *ḫuluḫ* `נבהל`; *qarānu* `ערם` beside EA's Sum. *dub* `ערם`.
+- **Tool:** `בֵּרוּ` added to the name traps (unvocalized `ברו` reads "they chose / purify").
+
+
+2026-10-23 harmonization, Etana (`harmonization--2026-10-23.md` rows 5, 7): *parakku* → `דּוּכָן` (as Enūma eliš, Gilgameš, Maqlû, Ludlul, the Šamaš Hymn, Gudea and Enmerkar; `כִּסֵּא` stays *kussû*'s), *palgu* → `פֶּלֶג` [cognate]; changed lines: I.15 `[הַכֵּסִים?]` → `[הדוכנים?]`, OBM.9 `הַכֵּסִים` → `הדוכנים` (the two lines stay identical), I.23 `את כֵּס השמים` → `את דוכן השמים`, II.3 `[כֵּ]ס אֲדַד` → `[דו]כן אֲדַד`, II.4 `[ב]צל הכס ההוא` → `[ב]צל הדוכן ההוא` (and the II 1–6 heading `הַדּוּכָן שֶׁל אֲדַד`); MA.i+10 `[כ]מי תעלה!` → `[כ]מי פלג!`. No other *parakku* in Etana. Four Bible quotations of §10.3–§10.4 corrected to the repo's text (Ezek 12:13, 17:3; Gen 30:14, 10:10).
+
+2026-10-23 harmonization, Etana, batch C (`harmonization--2026-10-23.md` row 19, revised): *bâʾu* "pass along, go" → `צָעַד` (`עָבַר` is reserved for its cognate *ebēru*; `חָלַף` is *etēqu*'s, II `חלף את ההר`); changed lines: III.b+3 and b+5 `– עברנו;` → `– צעדנו;`, b+40 `– עברו;` → `– צעדו;`, b+42 `– עברו];` → `– צעדו];` (b+5 and b+42 are not in the table: the same verb; the dream and its fulfilment stay in the same words), with the b+3 footnote, the Tablet III introduction, the ET4 fixed strings (§10.6.4) and the project tables. Collision: *akāšu* is also `צעד` (OBS a+3 `הנחש צעד הֵנָּה`), recorded, not changed.
+
 ## Changelog
+- 2026-10-23: the 2026-10-23 harmonization applied to Etana (end of §10); §10.3–§10.4 quotations corrected.
+- 2026-10-23: the 2026-10-23 harmonization applied to Enmerkar (end of §9.6).
 - 2026-10-21: written before the first part, from the temple, lament, creation, flood, Gilgameš, law and wisdom
   corpora and a reading of both transliterations (the formula survey of §3; the echo-control list of §4).
 - 2026-10-21: §9.1–§9.5 merged after each part (EA1–EA4, SB); one quotation corrected (Judg 11:12 `מַה`).
 - 2026-10-21: §9.6 the lead's cross-corpus harmonization applied (*ra-gaba* `צִיר`, *šu-ur₂-men* `שׁוּרְבִּין`, *en₃-du*
   `זִמְרָה` in §3; the rest confirmed); §0.4 and §7 marked settled.
+- 2026-10-21: §10 Etana (project 3) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed
+  by the Round 3 run 2 coordinator before the first part.

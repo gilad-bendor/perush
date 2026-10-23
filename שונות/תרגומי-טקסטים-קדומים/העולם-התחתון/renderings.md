@@ -194,6 +194,8 @@ The Akkadian poem is a shortened retelling of the Sumerian one, and the ancient 
 - *kabattu* = `כָּבֵד` (wisdom corpus; laments *ur₅*) instead of Gilgameš's `רוּחַ`: the most recent Akkadian corpus.
 - *uznu* "ear" in *uzna šakānu / petû* = `אֹזֶן` (the literal image; Gilgameš default `בִּינָה`), because the Sumerian twin *ĝeštug₂* is also the ear, and the two openings must read alike.
 - *kur* (netherworld) = `הָאָרֶץ`, a deviation from the Sumerian corpora's *kur* = `הַר` / `אֶרֶץ` "highland, foreign land": the sense is the netherworld throughout this text, and its Akkadian equivalent is *erṣetu* (§2).
+- **Project 4 (2026-10-22):** *kalam* = `הַמּוֹלֶדֶת` (every other corpus `הארץ`): here `הארץ` is the netherworld (§11.8).
+- **Project 4 (2026-10-21):** *dab₅* = `אָחַז` and *tug₂* = `שִׂמְלָה`, as Gilgameš XII (*ṣabātu*, *ṣubātu*), against Inana's Descent (`תָּפַס`, `בֶּגֶד`): the Akkadian translation of this very text decides (§11.1).
 - *gam* = `הִכְרִיעַ` (Hiphil of the temple corpus's `כרע`); the lament and creation corpora use `הִכְרִיעַ` for *ka-aš bar* "decide" – a homograph across corpora, noted.
 
 ## 9. Revisions made during the drafting
@@ -219,7 +221,182 @@ Fixed here first, or adopted from the earlier corpora; the lead harmonizes lefto
 
 2026-10-21 harmonization (the lead's cross-corpus decisions, applied in this corpus): (1) *za-gin₃* = *uqnû* = `סַפִּיר` – Ištar 129 `בחליל סַפִּיר`, 136 `חליל הספיר` (were `לָזוּרִית`); Inana's `ספיר` unchanged, vocalized at the first occurrence per file (19 `הַסַּפִּיר`, 187 `סַפִּירְךָ`); [equivalent] notes (Exod 24:10, Ezek 1:26, Job 28:6) at Ištar 129 and Inana 19. (2) *šembizid* = `פּוּךְ` – Inana 22, 110 `את הַפּוּךְ` (were `הכחל`); the Akkadian Descent has no eye paint. (4) *ra-gaba* = `צִיר` – Inana 31 = 313 `צִירִי נכונת־הדברים`, 174B `צִירָהּ נכונת־הדברים`, 292 `צִיר אינו` (were `שליחתי`, `שליחתה`, `שליח`); [equivalent] Prov 13:17 at 31. (10) *ur₄* of the *me* = `אָסַף` – Inana 15 `את הַ־מֶה אספה`, 103 `א[ספה` (were `קטפה`); 235, 262 (the hair) keep `קוטפת`. `netherworld_tools.py verify` now checks these as formulas (§5) and the vocalization of `צִיר` / `הַפּוּךְ` as traps (§7). Already in line, no edit: Inana `אִינַנָּה` (9), *me* `הַ־מֶה` (8), *sukkal* / *šukkallu* `וְזִיר` (14), *en₃-du* `זִמְרָה` (12, Inana 335), *kabattu* `כָּבֵד` (13, Ištar 31, 96, 130); kept by the decisions "without edits": *kur* = *erṣetu* `הָאָרֶץ` (by sense), *ḫar-ra-an* `אֹרַח` (by sense), Dumuzi's vocalization. Not in these texts: *šu-ur₂-men*, *nam-šub* / *tu₆* / *šiptu*, *šudu₃*, *mušen*, *guru₇*.
 
+## 11. Round 3 (run 5, 2026-10-21): what binds projects 3–4 (fixed by the coordinator before the first line)
+Projects **3 Nergal and Ereškigal** (Akkadian, eBL `L/1/6`: the Middle Babylonian Amarna version `MB.…`, the Standard Babylonian Sultantepe/Uruk version `a+1`…`f+1`) and **4 Bilgameš, Enkidu and the Netherworld** (Sumerian, ETCSL 1.8.1.4 + ORACC Q000364: Version A, three Urim versions `U58.` `U59.` `U60.`, the Me-Turan version `MT.`). §0–§10 bind them like projects 1–2. Read both base texts in full first (`netherworld_tools.py lines NE|GEN …`).
+
+### 11.1 Inheritance specific to the two texts
+- **Project 4 and Gilgameš XII.** Gilg. XII (`../אפוס-גילגמש/1-הנוסח-הבבלי-התקני/annotated-XII.rtl.md`) is the ancient Akkadian translation of GEN 171–303. **Where the Akkadian renders the Sumerian word for word, the Sumerian takes XII's Hebrew letter for letter** (guidelines §5.2, "a formula takes the same Hebrew across languages"; the ancient translator's equations are evidence). Where XII changes, adds or drops something, the Hebrew differs exactly there, and the apparatus says so ([divergence] between the two versions: these are findings). The concordance is in `netherworld_tools.py` (`XII_CONC`); `python3 -I netherworld_tools.py xii FROM TO` prints each Sumerian line with its XII counterparts and their Hebrew. **Check every pairing** (the coordinator aligned by content; correct it in your proposals). The "BN N" references inside annotated-XII follow George 2003's numbering, about one line ahead of ETCSL there.
+- Consequences inside project 4 (deviations from Inana's Descent, recorded in §8 below): *dab₅* = `אָחַז` (= XII *ṣabātu*; the refrain *kur-re im-ma-an-dab₅* = `הארץ אֲחָזַתְהוּ`, *nu-un-dab₅* = `לא אֲחָזוֹ`, vocalized as XII; Inana's Descent keeps `תָּפַס`, where it had to stay apart from *du₈* `אָחַז`); *tug₂* = `שִׂמְלָה` (= XII *ṣubātu*: *tug₂ dan₂-dan₂-na* = `שׂמלה זכה`; Inana's Descent keeps `בֶּגֶד`). One Hebrew per Sumerian word **inside** project 4.
+- **Project 3 and the Descent of Ištar / Gilgameš.** The description of the netherworld (SB c+1–c+7) copies Gilg. VII 184–190 / Ištar 4–10 (§3; *bīt ekleti* = Gilg. VII 184 `אל בית החשכה, משכן אִירְכַּלָּה,`); the threat to raise the dead (d+71–72 = d+87–88) copies Ištar 19 `אעלה את המתים, ויאכלו את החיים,` and Gilg. VI 100 (Š, as here) `על החיים ארבה את המתים!`. The speech formula and *ina šemêšu* follow §4 and Gilgameš (`– כשמעו את זאת,`).
+
+### 11.2 Names (★ = vocalized at every occurrence; checked by `verify`)
+| Source | Hebrew | Notes |
+|---|---|---|
+| Nergal; Erra (SB: Nergal's other name, used side by side) | נֵרְגַל; ★ אֶרָּה | Gilgameš (`נֵרְגַל`; Errakal `אֶרָּכַּל`). `ארה` unvocalized reads "I pluck" (שיר השירים ה:א). The note at the first Erra: the two names of one god; Cuthah (`כּוּת` ★) and 2 Kgs 17:30. |
+| Anu (Akk.); An (Sum.) | ★ אָנוּ; ★ אַן | `אנו` unvocalized = "we" (and *nīnu* "we" occurs in these lines: MB 3, SB a+6). |
+| Kakka (Anu's vizier) | ★ כַּכָּא (2026-10-23 harmonization, was כַּכָּה) | eBL's *Kakka*, with a final aleph: neither `ככה` ("thus") nor `קקה`; the same in Enūma eliš. |
+| Enlil / Ellil; Ea; Ea-Ninšiku | אֶנְלִיל; אֵאָה; אֵאָה־נִינְשִׁיכּוּ | |
+| Nammu; Nanše; Ninurta | נַמּוּ; נַנְשֶׁה; נִינוּרְתָּה | |
+| Lamaštu; Enmešar(ra) | לַמַשְׁתּוּ; אֶנְמֵשַׁר | Wisdom corpus (*lamaštu* `לַמַשְׁתּוּ`). |
+| Bidu (the gatekeeper; SB c+41) | בִּידוּ | = Neti / Biti of Inana's Descent (`נֵטִי`): the note says so. |
+| The gate names (SB c+41–47) | transliterated, vocalized | e.g. `אֶנְכִּישַׁר`, `אֶנְדַּשׁוּרִמָּה`, `אֶנוּרוּאוּלָּה`, `אֶנוּרוּבַּנְדָּה`, `אֶנְדּוּכּוּגָּה`, `אֶנּוּגִיגִי`; the note gives their meanings where known. |
+| The fourteen demons (MB a+26–a+29, b+3–b+9) | fixed by the MB translator **once** for both lists (command / execution) | Transparent names translated as names (*rābiṣu* `רוֹבֵץ` [cognate] – Gilgameš XII, wisdom corpus; *bēl ūri* `בַּעַל־הַגַּג`; *miqit* `מַפָּל`…), opaque ones transliterated (*šarabdû*, *bennu*, *lību*); a note on each at its first occurrence. |
+| Gilgameš (Sum. {d}gilgameš₂, read Bilgames); Enkidu; Ninsun | גִּלְגָּמֶשׁ (plain `גילגמש` afterwards); אֶנְקִידוּ; נִינְסוּן | One name in both languages (Gilgameš corpus); the first note gives the Sumerian reading *Bilgames*. |
+| Inana; Utu; Enki (Emesal Amanki); Enlil (Emesal Mullil); Ereškigala (Emesal Gašan-kigala) | ★ אִינַנָּה; ★ אוּתוּ; אֶנְקִי; אֶנְלִיל; ★ אֶרֶשְׁכִּיגַל | §1. Utu stays `אוּתוּ` in the Sumerian, `שַׁמַשׁ` in XII (each language keeps its god's name; noted). Ningal `נִינְגַּל`, Ninazu `נִינַאזוּ`. |
+| *nam-tar*; *a₂-sag₃*; *{d}udug {d}nergal* | ★ נַמְתָּר; אֲסַכּוּ; רוֹבֵץ נֵרְגַל | XII (`נַמְתָּר לא אֲחָזוֹ, אֲסַכּוּ לא אֲחָזוֹ`; *rābiṣ Nergal* `רוֹבֵץ נֵרְגַל`: the Akkadian translator rendered *udug* by *rābiṣu*; noted). |
+| *anzud* (bird); *ki-sikil-lil₂-la₂* | אַנְזוּד; ★ עַלְמַת־הַמַּשַּׁב | *ki-sikil* `עַלְמָה`, *lil₂* `מַשַּׁב` (laments). [equivalent] ↔ `לִּילִית` (ישעיהו לד:יד) – **`לִילִית` reserved** (§12). |
+| *{ĝiš}ḫa-lu-ub₂* | עֵץ־הַחַלּוּבּ | Temple corpus. |
+| Unug, Kulaba, Eridug, Ekur; *buranun*; *ganzer*; Ĝirsu; *mar-tu*; *ki-en-gi ki-uri* | אוּרוּךְ; כֻּלַּבָּה; אֶרִידוּ; אֵכּוּר; פְּרָת; גַּנְזֵר; גִּירְסוּ; ★ מַרְטוּ; ★ שׁוּמֶר וְאַכַּד | Corpora. *mar-tu* = the Amorites: transliterated as in Enmerkar / Agade / EWO (`מַרְטוּ`), the note gives `הָאֱמֹרִי`. `שׁוּמֶר` unvocalized = "guard". |
+
+### 11.3 Project 3 (Nergal and Ereškigal): key terms
+| Akkadian | Hebrew | Tag / notes |
+|---|---|---|
+| *simmiltu*; *arkāt simmilat šamāmī* | `מַדְרֵגוֹת` (Gilg. I 15, III 43); `מַדְרֵגוֹת הַשָּׁמַיִם הָאֲרֻכּוֹת` | **`סֻלָּם` reserved** (apparatus only): [equivalent] ↔ `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה וְהִנֵּה מַלְאֲכֵי אֱלֹהִים עֹלִים וְיֹרְדִים בּוֹ` (בראשית כח:יב); a [cognate] *simmiltu* ~ `סֻלָּם` is proposed in the literature and disputed – say so, do not decide it by the Hebrew. |
+| *elû*; *warādu* | `עָלָה`; `יָרַד` | §2. The messengers go up and down the stairway: the verbs of Gen 28:12 appear by themselves. |
+| *mār šipri* | `שָׁלִיחַ` | Gilgameš, EST, LH. **`מַלְאָךְ` reserved** (wisdom corpus): [equivalent] ↔ Gen 28:12. |
+| *bābu*; *atû*; *kisallu*; *tarbaṣu* | `שַׁעַר`; `שׁוֹעֵר`; `חָצֵר`; the MB translator fixes a different word | *bāb Anu Enlil u Ea* = `שַׁעַר אָנוּ, אֶנְלִיל וְאֵאָה` [equivalent] ↔ `וְזֶה שַׁעַר הַשָּׁמָיִם` (בראשית כח:יז). |
+| *šukkallu*; *bēlu*, *bēltu*; *šarratu*; *mār(t)u*; *aḫātu*, *aḫu* | `וְזִיר`; `אָדוֹן`, `גְּבִירָה`; `מַלְכָּה`; `בֵּן` / `בַּת`; `אָחוֹת`, `אָח` | §2, §5. |
+| *qerītu*; *kurummatu*; *paššūru*; *qīštu*; *zittu* | `סְעוּדָה` (Enūma eliš); the first translator fixes the rest after grepping (`netherworld_tools.py grep all`) | Keep *qīštu* "gift" and *zittu* "share" apart. |
+| *šulmu*; *lū šulmu ana* … | `שָׁלוֹם` [cognate]; `"שָׁלוֹם לְ…?"` (question) / `"שָׁלוֹם לְ…"` (answer) | [equivalent] ↔ `הֲשָׁלוֹם לָךְ הֲשָׁלוֹם לְאִישֵׁךְ הֲשָׁלוֹם לַיָּלֶד וַתֹּאמֶר שָׁלוֹם` (מלכים ב ד:כו); `הֲשָׁלוֹם לוֹ וַיֹּאמְרוּ שָׁלוֹם` (בראשית כט:ו). The note: *lū* is the epistolary wish ("may it be well"), read here as a question. |
+| *tebû* (*ina pān* X *lā itbû*); *kamāsu*; *(ašru)*; *qaqqara našāqu* | `קָם` (`אֲשֶׁר לֹא קָם לְפָנַי`); `כָּרַע` (Gilgameš OB, temple); the translator; `נָשַׁק אֶת הַקַּרְקַע` | [equivalent] ↔ `וּמָרְדֳּכַי לֹא יִכְרַע וְלֹא יִשְׁתַּחֲוֶה` (אסתר ג:ב); `וְלֹא קָם וְלֹא זָע מִמֶּנּוּ` (אסתר ה:ט) – the one who does not rise before the vizier. |
+| *dâku*; *nakāsu* | `הָרַג`; `כָּרַת` (`לִכְרֹת אֶת רֹאשָׁהּ`) | |
+| *ṣabātu*; *wuššuru* (*muššurīnni*) | `אָחַז` (harmonization); `שִׁלַּח` (flood corpus) | d+17 `שַׁלְּחִינִי` with d+25 "before daybreak": [equivalent] ↔ `שַׁלְּחֵנִי כִּי עָלָה הַשָּׁחַר` (בראשית לב:כז). |
+| *lām urru inammeru* | `לִפְנֵי שֶׁיֵּאוֹר הַיּוֹם` (or the like; **`טֶרֶם` is reserved**, §6) | |
+| *mutu*; *aššatu*; *ḫāʾiru* / *ḫāwiru*; *lalû* | `בַּעַל` (law corpus); `אִשָּׁה`; `חָתָן` (gated, §6); the translator (grep) | b+20 `"אַתָּה הֱיֵה בַעְלִי, וַאֲנִי אֶהְיֶה אִשְׁתְּךָ!"` [equivalent] ↔ the marriage formula `כִּי הִיא לֹא אִשְׁתִּי וְאָנֹכִי לֹא אִישָׁהּ` (הושע ב:ד). |
+| *šarrūtu*; *erṣetu rapaštu*; *qaqqaru rapšu*; *erṣetu rabītu*; *ṭuppu ša nēmeqi* | `מַלְכוּת`; `הָאָרֶץ הָרְחָבָה` (Gilgameš); `הַקַּרְקַע הָרְחָבָה`; `הָאָרֶץ הַגְּדוֹלָה`; `לוּחַ הַחָכְמָה` | |
+| *dīna diānu* / *dīna epēšu*; *parṣū* | `דָּן דִּין` / `עָשָׂה דִּין`; `פֻּלְחָן` (§2) | Law corpus (*dīnum* `דִּין`). |
+| *našāqu*; *dimtu*; *kapāru* D (tears) | `נָשַׁק` [cognate]; `דִּמְעָה`; `מָחָה` | *kapāru* "wipe" ~ `כִּפֵּר` [cognate] ↔ `אֲכַפְּרָה פָנָיו בַּמִּנְחָה` (בראשית לב:כא); [equivalent] ↔ `וּמָחָה אֲדֹנָי יְהוִה דִּמְעָה מֵעַל כָּל פָּנִים` (ישעיהו כה:ח). `כפר` stays gated (*kupru*), so `כִּפֵּר` is not written. (Cross-corpus note: the treaty corpus has *pašāṭu* = `מָחָה`: a different text, recorded.) |
+| *nuḫatimmu*; *ṭābiḫu*; *sīrāšû*; *šāqû*; *mēsû*, *mesû* (*šēpī*) | `אוֹפֶה`; `טַבָּח` [cognate]; the translator; `מַשְׁקֶה` [cognate]; `רָחַץ` (`רָחַץ רַגְלַיִם`) | [cognate] ↔ `מַשְׁקֵה מֶלֶךְ מִצְרַיִם וְהָאֹפֶה` (בראשית מ:א); [equivalent] ↔ `וְרַחֲצוּ רַגְלֵיכֶם` (בראשית יח:ד). |
+| *akalu*; *šīru*; *šikaru*; *kussû*; *mesīt šēpī* | `לֶחֶם`; `בָּשָׂר`; `שֵׁכָר` [cognate]; `כִּסֵּא` [cognate]; the translator | §5. |
+| *zikar u sinniš* (*ša zikar u sinniš*) | `זָכָר וּנְקֵבָה` (`אֲשֶׁר לְזָכָר וּנְקֵבָה`) | *zikaru* ~ `זָכָר` [cognate], *sinništu* `נְקֵבָה` [equivalent] ↔ `זָכָר וּנְקֵבָה בָּרָא אֹתָם` (בראשית א:כז). `בָּרָא` stays reserved. |
+| *narmaku*; *mayyālu*; *naʾduru* (*innadrū*) | `חֲדַר הָרַחְצָה`; `מִשְׁכָּב` (Gilg. XII 147); `לָפַת` (Gilg. XII 88 `לָפְתוּ`) | |
+| *ṣalālu* (7-day refrain) | `יָשַׁן` (Gilg. XII) | Refrain fixed in §11.5. |
+| *ardatu*; *ṣeḫertu*; *mēlulu* (noun); *dakāku* | `עַלְמָה`; the translator; `מָחוֹל` (everyday voices: *mēlula* `המחול`); the translator | [equivalent] ↔ `אָז תִּשְׂמַח בְּתוּלָה בְּמָחוֹל` (ירמיהו לא:יב). |
+| *reḫû* (*urtaḫânni*); *bâtu* | the translator (keep apart from *niāku* `בָּא עַל` and *nâlu* `שָׁכַב`); `לָן` | [equivalent] ↔ `לִינִי הַלַּיְלָה` (רות ג:יג). |
+| *musukkatu*; *ebbu* | `טְמֵאָה`; `צַח` (changed 2026-10-22, §11.7: *ellu* keeps `טָהוֹר`) | [equivalent] ↔ Lev 12, 15 (the apparatus quotes after printing). `נִדָּה` never (false friend, §6.7 of the guidelines). |
+| *qubbuḫ ṣuddur pussul* | the translator (plain Hebrew for "bald, squinting, lame") | Describe the defect as the text does; the apparatus: `עִוֵּר אוֹ פִסֵּחַ` (ויקרא כא:יח), `עֲלֵה קֵרֵחַ` (מלכים ב ב:כג), `וְהוּא צֹלֵעַ עַל יְרֵכוֹ` (בראשית לב:לב). |
+| *mê kuppi* | `מֵי מַעְיָן` (or the like) | `בּוֹר` is reserved (§6). |
+| *ūmī dārûti* | `לְעַד` / `לָנֶצַח` | `עוֹלָם` is reserved (§6; creation corpus §5). |
+| *ellilūtu*; *qarrādūtu* | `אֶנְלִילוּת`; `גְּבוּרָה` | |
+
+### 11.4 Project 4 (Bilgameš, Enkidu and the Netherworld): key terms
+| Sumerian | Hebrew | Tag / notes |
+|---|---|---|
+| *ud re-a*, *ĝi₆ re-a*, *mu re-a*; *ud ul* | `בַּיָּמִים הָהֵם`, `בַּלֵּילוֹת הָהֵם`, `בַּשָּׁנִים הָהֵן` (creation corpus 2:1–2); *ud ul* `בימים רחוקים` (§11.8; Bird and Fish 1) | [equivalent] ↔ `בַּיָּמִים הָהֵם` (בראשית ו:ד). |
+| *an ki-ta ba₉*; *ki an-ta sur* | `הִפְרִיד` (creation corpus 2:4–5 `להפריד את השמים מן הארץ`); *sur* the translator | **Never `הִבְדִּיל`** (guidelines §6.7: Mesopotamian cosmology has no `רָקִיעַ` and no `בדל`). [divergence] ↔ Gen 1:6–7. |
+| *an* / *ki* (heaven / earth); *kur* | `שָׁמַיִם` / `אֶרֶץ` (no article, §2); `הָאָרֶץ` (the netherworld) | §2; 13 `לְאֶרֶשְׁכִּיגַל – אֶת הָאָרֶץ …`. |
+| *mu nam-lu₂-u₁₈-lu … ĝar* | `שֵׁם הָאֱנוֹשׁוּת … שָׂם` | *ĝar* = `שׂם` (reserved by rule). [equivalent] ↔ `וְנַעֲשֶׂה לָּנוּ שֵׁם` (בראשית יא:ד). |
+| *{im}šu-rin-na*; *ninda* | `תַּנּוּר` [cognate through Akk. *tinūru*]; `לֶחֶם` | Guidelines §6.7. |
+| *{ĝiš}ma₂*; *ur-bar-ra*; *ur-maḫ* | `סְפִינָה`; `זְאֵב`; `אַרְיֵה` | |
+| *{ĝiš}kiri₆* (Inana's garden); *gi-rin* | `גַּן` (gated in every corpus: only *kiri₆* / *kirû*); the translator (`נָאֶה`? `רַעֲנָן`?) | [equivalent] ↔ `וַיִּטַּע יְהוָה אֱלֹהִים גַּן בְּעֵדֶן` (בראשית ב:ח) – the tree, the snake at its root, the bird in its crown, the phantom maiden in its trunk (Gen 2–3, Isa 34:14). Look; do not force. |
+| *muš tu₆ nu-zu* | `נָחָשׁ אֲשֶׁר קֶסֶם אֵינוֹ יוֹדֵעַ` | *tu₆* = `קֶסֶם` (2026-10-21 harmonization); `נחש` gated by *muš*, `ידע` by *zu*. [equivalent] ↔ `נְחָשִׁים צִפְעֹנִים אֲשֶׁר אֵין לָהֶם לָחַשׁ` (ירמיהו ח:יז); `כְּמוֹ פֶתֶן חֵרֵשׁ יַאְטֵם אָזְנוֹ` (תהלים נח:ה). |
+| *mušen*; *amar* | `צִפּוֹר`; `גּוֹזָל` | Harmonization (*mušen* never `עוֹף`). |
+| *{ĝiš}ellag*; *{ĝiš}e-ke₄-ma* | ★ `פּוּכּוּ`; ★ `מֵכּוּ` (`הַפּוּכּוּ`, `הַמֵּכּוּ`) | XII (*pukku*, *mekkû*); always vocalized (`הפוכו` reads "his opposite"). |
+| *gidim* | ★ `אִט`, pl. `אִטִּים` | XII (*eṭemmu*). |
+| *er₂ še₈*; *a-nir*; *i-lu* | `בָּכָה` (gated); `אֲנָחָה`; the translator | §5, laments. |
+| *arad*; *lugal*; *gu₅-li*; *ama*; *a-a*; *nin₉*; *šeš* | `עֶבֶד`; `מֶלֶךְ`; `רֵעַ` (XII `רֵעִי`, vocalized); `אֵם`; `אָב`; `אָחוֹת`; `אָח` | XII has `אדוני` (*bēlī*) for *lugal-ĝu₁₀*: the Sumerian keeps `מַלְכִּי` – a [divergence] for the apparatus. |
+| the interrogation formula *lu₂ X igi bi₂-du₈-am₃ igi bi₂-du₈-am₃ a-na-gin₇ an-ak* (Version A, U58) | `"אֶת אֲשֶׁר X – רָאִיתָ?" "רָאִיתִי." "אֵיךְ נַעֲשָׂה לוֹ?"` (plene `ראית`, `ראיתי`, `איך נעשה לו`: §11.5) | XII `"את אשר … – ראית?" "ראיתי:` (XII has no "how is he treated?": noted once). *igi … du₈* = *amāru* = `רָאָה`. |
+| U59, Me-Turan: *igi bi₂-du₈-a a-na-gin₇ i₃-ĝal₂* | `"אֶת אֲשֶׁר X – רָאִיתָ? אֵיךְ הוּא?"` | |
+| *ki-sig₁₀* / *ninda ki-sig₁₀*; *a si-ig-ga* / *a sig₉-ga*; *a ki-lul-la* | `סְעוּדַת הַמֵּתִים` (§5); the translator (`מַיִם זַכִּים` = XII 147 *mê zakûti*); the translator | [equivalent] ↔ `וְלֹא נָתַתִּי מִמֶּנּוּ לְמֵת` (דברים כו:יד). |
+| *dub-sar*; *e₂-gal*; *apin*; *anše* | `סוֹפֵר`; `הֵיכָל` [cognate] (gated: *e₂-gal* / *ēkallu*); `מַחֲרֵשָׁה`; `חֲמוֹר` | XII 111–114. |
+
+### 11.5 Formulas fixed before drafting (checked by `verify` where a regex can do it)
+**Project 3 (Akkadian)**
+| Akkadian | Hebrew |
+|---|---|
+| X *pâšu īpuš-ma iqabbi ana* Y *amāta izakkar* (one line) | `X פָּתַח אֶת פִּיו וְאָמַר, אֶל Y דָּבָר דִּבֵּר:` (fem. `פָּתְחָה אֶת פִּיהָ וְאָמְרָה, אֶל Y דָּבָר דִּבְּרָה:`; plene `דיבר`, `דיברה`) – the Ištar formula (§4) on one line, as Gilgameš has it |
+| X *annīta ina šemîšu / šemêša* | `X – כְּשָׁמְעוֹ אֶת זֹאת,` / `– כְּשָׁמְעָהּ אֶת זֹאת,` |
+| *urid / īlâ* X *arkāt simmilat šamāmī* | `יָרַד X בְּמַדְרֵגוֹת הַשָּׁמַיִם הָאֲרֻכּוֹת.` / `עָלָה X …` |
+| *ana bāb ānu ellil u ea ina kašādīšu* / *ānu ellil u ea īmurūšū-ma* | `כְּהַגִּיעוֹ אֶל שַׁעַר אָנוּ, אֶנְלִיל וְאֵאָה,` / `אָנוּ, אֶנְלִיל וְאֵאָה רָאוּהוּ,` |
+| *N bāba ušēriba ila kakka* (a+15–21) | `בַּשַּׁעַר הָרִאשׁוֹן הֱבִיאוֹ אֶת הָאֵל כַּכָּא,` (ordinals of §4) |
+| *N bāba ša* G *ina erēbīšu* (c+41–47) | `כְּשֶׁבָּא אֶל הַשַּׁעַר הָרִאשׁוֹן, (שַׁעַר) שֶׁל G,` – the translator fixes the exact form at c+41 |
+| *īrub-ma ana palkî kisallīša / ikmis iššiq qaqqara maḫrīša / īšir izzaz izakkarši* | fixed at a+22–24, copied at c+48–50 and e+29 |
+| the message *umma attī-ma ul ša elî …* (a+4–10 = a+26–32) and Ereškigal's message (d+62–72 = d+78–88) | fixed at the first copy; the later copies are copied letter for letter (brackets follow each copy) |
+| the taboos *ē taʾīr-ma ē* … (b+40–49) → their keeping *ul iʾīram-ma ul* … (c+55–64) → their breach (d+5–8) | command / execution: the same nouns and verbs, prohibitive → past (`אַל …` → `לֹא …`) |
+| the 7-day refrain *ištēn ūma šanâ ūma ṣallū-ma šarratu ereškigal u erra* (d+11–14, e+37–41) | `יוֹם אֶחָד, יוֹם שֵׁנִי – יָשְׁנוּ הַמַּלְכָּה אֶרֶשְׁכִּיגַל וְאֶרָּה;` (`שְׁלִישִׁי`, `רְבִיעִי`, `חֲמִישִׁי`, `שִׁשִּׁי`, `שְׁבִיעִי`) – [equivalent] ↔ the seven days (Gen 1–2; 29:27 `מַלֵּא שְׁבֻעַ זֹאת`, the wedding week; Judg 14:12) |
+| *innadrū-ma aḫḫū kilallān / ana mayyāli šitmuriš īterbū* (d+9–10 = e+35–36) | fixed at d+9–10 |
+| *mīnâ tallak* X / *māratkunu išpuranni* (d+76–77 = d+105–106) | fixed at d+76–77 |
+| *ušellī-ma mītūti ikkalū balṭūti / el balṭūti ušamʾad mītūti* | `אעלה את המתים, ויאכלו את החיים,` / `על החיים ארבה את המתים!` (§11.1) |
+
+**Project 4 (Sumerian)**
+| Sumerian | Hebrew |
+|---|---|
+| the prologue 1–26 = 52–69 (Inana to Utu) = 96–113 (to Gilgameš); the tree 27–49 = 70–89 = 114–133 | fixed at 1–49; the later copies copy them (vocatives, Emesal forms and pronouns change; *nu-nus* = *munus* `אִשָּׁה`) |
+| *X gu₃ mu-na-de₂-e*; *inim mu-un-na-ni-ib-gi₄* | `X פּוֹנֶה אֶל Y:` (§4); `X מֵשִׁיב לְ… דָּבָר:` / the corpus's `מֵשִׁיב לוֹ:` |
+| *inim-bi nu-mu-de₃-gub* / *inim-bi ba-de₃-gub* (90, 135, 229, 237) | `בדבר הזה לא עמד לצדה` / `בדבר הזה עמד לצדה` (`לצדו` for a man; §11.8; XII 63 `דבר לא ענה לו` for 229 is a different Akkadian: noted) |
+| Gilgameš's instructions 184–198 → Enkidu's breach 206–220 | command / execution as XII 13–27 → 33–47 (copy XII where it renders the Sumerian; §11.1) |
+| the appeal to Enlil 222–229 → to Enki 230–237 (and the Me-Turan copy) | fixed at 222–229 (XII 55–63) |
+| the refrain *nam-tar nu-un-dab₅ a₂-sag₃ nu-un-dab₅ kur-re im-ma-an-dab₅* etc. (226–228 = 234–236) | XII 52–54 letter for letter: `נַמְתָּר לא אֲחָזוֹ, אֲסַכּוּ לא אֲחָזוֹ – הארץ אֲחָזַתְהוּ!` … |
+| the interrogation formula | §11.4 |
+
+### 11.6 Reserved for projects 3–4 (added to §6; checked by `verify`)
+**Never:** `סֻלָּם`; `מַלְאָךְ` (any form); `לִילִית`; `הִבְדִּיל` (any form of בדל); `רָקִיעַ`; `טֶרֶם` (already); `בּוֹר` (already); `עוֹלָם` (already). **Gated:** `גַּן` – *kiri₆*; `פּוּכּוּ` / `מֵכּוּ` – *ellag* / *e-ke₄-ma* / *pukku* / *mekkû*; `הֵיכָל` – *e₂-gal* / *ēkallu*.
+
+### 11.7 Merged after project 3, part 1 (SB a+1–b+50, 2026-10-22)
+The translator's table of fixed strings (`3-נרגל-וארשכיגל/project.md`, "Proposals") **binds the later copies letter for letter**: the speech formula `אָנוּ פתח את פיו ואמר, אל כַּכָּא וזירו דבר דיבר:`; the message a+4–10 (`לאמור: 'אַתְּ – לא לך לעלות;` … `שליחך יבוא,` / `יְפַנֶּה את השולחן, יקבל את מתנתך;`); `כהגיעו אל שער …`; `"שוער, פתח לי את השער!"`; the gates `בשער הראשון הֱבִיאוֹ את האל כַּכָּא,`; the kneeling `בא אל חצרה הרחבה,` / `כרע, נשק את הקרקע לפניה,` / `התיישר, עומד ומדבר אליה:` (= Enūma eliš III 70); the greeting `שלום לX?` / `שלום לX;`; `האלים (הגדולים) היושבים בקרב אירכלה`; Ea's woodcutting command → execution; **the taboos**: `X Y נושא לך – אל תיגש, ואת Yו אל תאכל!` (*âru* "approach" = `ניגש`, against Foster's "take care"), the last `אתה – אשר לזכר ונקבה אל תאחז? בלבך`; the keeping (c+55–64) changes only `אל` + future → `לא` + past and `לך` → `לו`. b+26–28 = Gilg. X 92–94 and b+37 = Gilg. III 120 (`ושׂמה טַעַם`, vocalized, the "decree" sense) are copied from Gilgameš. Words: *umma* `לאמור`; *šapāru* `שָׁלַח`; *nīnu* `אֲנַחְנוּ` (never `אנו`); *ana maḫri* `לִפְנֵי`; *šattu* `שָׁנָה`, *warḫu* `חודש`; *paššūru* `שולחן`; *paṭāru* (a table) `פִּנָּה`; *qīštu* `מַתָּנָה`; *šalimtu* `שְׁלֵמוּת` [cognate].
+**The coordinator's rulings on the open decisions** (the user's rule: minor things decided and recorded):
+1. Kakka stays `כַּכָּה` (the eBL normalization *kaka*); Enūma eliš's `גַּגָּא` follows that edition's reading of the same god: a note at the first occurrence names both. [Settled 2026-10-23, §11.15: `כַּכָּא` in both corpora.]
+2. *arkāt simmilat šamāmī*: the fixed `במדרגות השמים הארוכות` stays; the note gives eBL's reading (*arkātu* "the length(s) of").
+3. *ebbu* = **`צַח`** (accepted), so that *ellu* keeps `טָהוֹר` (precedent); §11.3 row changed: d+67 `טמאה אני – ולא צחה`. *musukkatu* stays `טְמֵאָה`.
+4. *mātu* = `ארץ` (no article) stays; *erṣetu* (netherworld) = `הארץ`; where the line could mislead, the note says which.
+5. `בא` for *alāku* + ventive and for *erēbu*: accepted (Hebrew has no ventive); *erēbu* "enter (a gate)" keeps `בא אל`.
+6. The literal `אל תיגש` (*âru*) stays (fidelity, §1); all ten lines stay together.
+7. *našû* stative: `נושא` of a person, `נִשָּׂא` of a thing: accepted.
+8. eBL's lemma *agû* "crown" for the tool (b+20) is a slip: recorded in the line's note.
+
+### 11.8 Merged after project 4, part 1 (lines 1–135, 2026-10-22)
+The translator's tables (`4-גילגמש-אנקידו-והעולם-התחתון/project.md`, "Proposals") **bind the later copies and lines 136–171**: the prologue (1–3 copied from Šuruppag 1–3 `בימים ההם, בימים הרחוקים ההם,` …; `כאשר שמים מארץ הוּפְרְדוּ,`; `כאשר את שם האנושות שָׂם,`; `כאשר אַן שמים נשא,`; `כאשר לְאֶרֶשְׁכִּיגַל את הארץ למתנה העניקו,`), the tree (`בשורשיו – נחש אשר קסם אינו יודע – קן הדביק;` / `בענפיו – הציפור אַנְזוּד – גוזל שָׂמָה;` / `במותניו – עַלְמַת־הַמַּשַּׁב – בית בנתה;`; `גן־הפרחים`, `כיסא־פרחים`, `מיטת־פרחים`), the dawn and the speech formula (`אחותו, אִינַנָּה הטהורה, / פונה אל הגיבור, העלם אוּתוּ:`).
+**The coordinator's rulings on the open decisions:**
+1. *kalam* = **`הַמּוֹלֶדֶת`** in project 4 only (every other corpus: `הארץ`), because `הארץ` is the netherworld here; 3 lines (7, 50 copy, 7 copy). Recorded as a deviation (§8).
+2. *du₃* of a tree = **`נָטַע`** (Gudea precedent): the Sumerian says "plant", so it is the real counterpart of Gen 2:8 `וַיִּטַּע` [equivalent]; the creation corpus's ban covers its own texts, which have no planting.
+3. *ra* = **`מָחַץ`** throughout project 4 (= XII *maḫāṣu*; the corpus §2); Šuruppag's `מכה` stays there.
+4.–5. *zal* `עבר` / `נגה` by context; the persons of Inana's speeches follow the possessives: accepted.
+6. *gi-rin* = `פְּרָחִים` (as a construct `גן־הפרחים`): accepted.
+7. *ur₂* = `שֹׁרֶשׁ` also for the keel and *an-ur₂* "the root of heaven" (the horizon): accepted, with a note at each.
+8. *amar* (of a bird) = **`גּוֹזָל`** – the Sumerian precedent (Gudea A.xxi.4, Anzud and its *amar*; Bird and Fish 104, 132). Etana's reservation of `גּוֹזָל` (Deut 32:11) covers its own Akkadian *atmu* = `אֶפְרוֹחַ`, a different word; the apparatus of GEN 43 names Deut 32:11 and says the image is not the Bible's (Anzud's chick in a goddess's tree). A cross-language split by source word, recorded for the lead.
+9. *inim-bi (nu-)gub* = **`בדבר הזה (לא) עמד לצדה / לצדו`** (Inana's Descent 221A, identical to GEN 237): §11.5's provisional row is replaced.
+
+### 11.9 Merged after project 3, part 2 (SB c+1–c+65, d+1–d+56, 2026-10-22)
+The translator's table in `3-נרגל-וארשכיגל/project.md` binds the later copies (`האל ההוא`; `נַמְתָּר הלך, ואל גבירתו דבר דיבר:`; `כורעים, כפופים, האלים כולם,` / `כורעים, כפופים, האלים של ארץ.`; `אל חצר אָנוּ – בבואי/בבואו,`; the stairway, gate and seeing lines of d+26–28; Ea's disguise `אאה אביו – מי מעיין יַזֶּה עליו; קֵרֵחַ, פּוֹזֵל, חִגֵּר, …`; `דּוּנִי את דין האלים הגדולים,` → d+67 `לא אָדוּן את דין…`; the embrace `לָפְתוּ זה את זה, שניהם,` / `אל המשכב בפראות באו.`; the 7-day refrain; `לחמנו יאכל, שכרנו ישתה!`; `לפני שיאור היום – הָרוֹ עָלָה.`). c+1–7 copy Gilg. VII 184–188 / Ištar 9–10; c+23–24 Ištar 29–30; d+52 Gilg. XI 309.
+**Rulings:** 9. *wadû* D = **`ידע`** (Gilg. XII 14 `יֵדְעוּךָ`; c+15 `יֵדָעֵהוּ`, c+19 `אֵדָעֵהוּ` changed by the coordinator; the `ידע` gate now accepts *wadû*). 10. *ṭeḫû* `התקרב` (kept apart from *âru* `ניגש`): accepted. 11. *šasû* `צעק` (Gilg. III 120): accepted. 12. `האלים של ארץ` (*ilū ša māti*): accepted; the note says "the land" = the upper world. 13. the Uruk-only `(umma)` untranslated, as the guidelines' header rule for words in parentheses. 14. *šadâšu elû* literal `הָרוֹ עלה`, with a note on the idiom ("to depart"): accepted. 15. *pussulu* `חִגֵּר` (neither Lev 21:18 `פִסֵּחַ` nor Gen 32:32 `צֹלֵעַ`): accepted. 16. the present kept at c+63, d+7: accepted. **Gate catch:** `שלחתני` contains `חתני` (the `חתן` gate): write `שלחת אותי` (c+26; also d+98).
+
+### 11.10 Merged after project 4, part 2 (lines 136–253, 2026-10-22)
+XII's Hebrew copied wherever the Akkadian renders the Sumerian word for word (186, 189, 191–198, 201, 214, 216–220; the refrain 226–228 = 234–236), tagged [cognate] with the XII line; elsewhere the Hebrew differs exactly where XII differs ([divergence] / [absent]) – findings: XII 92's refusal "I will not tell you" is a double reading of one Sumerian wish (246 *nu-uš-*); the Sumerian "servant … with his breeze" (240, 242) becomes XII's "ghost of Enkidu like a breath"; "an old garment" (251; Job 13:28) becomes XII's "an old beam". **`XII_CONC` corrected** in `netherworld_tools.py` from the translator's list (183, 231 none; 205 → 32; 210 → 37; 225–228 → 59–62 only; XII 31, 37a, 51–54, 64–71, 84–85 have no Version A counterpart; 246 → 90 + 92; 248 → 94 + 95; 250 → 98?; 251 → 97; 252 → 99). Binding for the next parts: the interrogation formula `"את אשר X – ראית?" "ראיתי." "איך נעשה לו?"` (245 `"את צו הארץ – ראית?`), `רֵעִי`, `האִטִּים`, `הארץ אֲחָזַתְהוּ`, `תלונת הארץ`, `אוי`; *a si-ig-ga* = `מים זכים` (XII 147 *mê zakûti*).
+**Rulings:** 10. the `verify` false positive at 176 fixed in the tool (variant parentheses are now removed before the italic notes). 11. the sense splits *du₃* `חגר` (136) / `זקוף` (161), *il₂* `הרים`, *u₅* `רכב`, *al dug₄* `שיחק`: accepted, each noted. 12. *dur₂* `מושב` (`תחתית` reserved): accepted. 13. prohibitions `לא` + future as XII: accepted. 14. *niĝin₂* = `סובב` throughout (XII uses two verbs: noted as a divergence): accepted. 15. 225/233 `להעלותם *שב*`: accepted. 16. the uncertain words as listed.
+
+### 11.11 Merged after project 3, part 3 (SB d+57–f+1, 2026-10-22): the SB complete
+All repeated passages checked by script against their first copy (brackets stripped): d+62–72 = d+78–88, d+73–77 = d+102–106, d+9–14 = e+35–41, a+1–3 = e+43–45, a+12–13 = e+20–21, a+22 = e+29, c+25 = d+97, c+28–29 = d+93–94; the differences are the Akkadian's own. Fixed strings: Ereškigal's message (`לאמור: 'מאז קטנה הייתי, ובת הייתי,` / `לא ידעתי את מחול העלמות,` / `לא ידעתי את דילוג הקטנות.` … `טמאה אני – ולא צחה? לא אָדוּן את דין האלים הגדולים,` …); `"מה באת, נַמְתָּר?"` / `"בתכם שלחה אותי,`; `אחד סקר – ולא ראה את האל ההוא;`; *ana ūmī dārûti* `לִימֵי נֶצַח` (Etana precedent).
+**Rulings:** 17. *reḫû* = `נִזְקַק` (rabbinic "had intercourse"; kept apart from *niāku* `בא על`, *nâlu* `שכב`), *itūlu* = `שָׁכַב`: accepted. 18. *ašāru* `סָקַר` (Enūma eliš VII 122): accepted. 19. *qāta mullû* `אמסור` (not the false friend `מִלֵּא יָד`; Exod 28:41 in the apparatus): accepted; added to the false friends for the guidelines §6.7. 20. *nêʾu irta* `הַטֵּה חזך`: accepted. 21. *ḫamāṣu* `תָּלַשׁ`, *uprû* `צָנִיף`, *ṣerretu* `מֵיתָר`, *talālu* `דָּרַךְ`: accepted (new). 22. e+22–28: the gatekeeper is the object, the verb `…` as the edition: accepted.
+
+### 11.12 Merged after project 4, part 3 (254–303, U58, U59, U60, 2026-10-22)
+The interrogation copies XII wherever the Akkadian renders it; **XII departs from the Sumerian three times, each a finding**: XII 149 drops the negation of 291 (the fallen soldier's parents do *not* hold his head; certain in U59.B3); XII 153 `גרידות סיר` translates the Urim wording (*utul₂*, U58.15), not Version A – the Akkadian translator used a manuscript like UET 6 58; XII 147 adds "and drinks clean water" to the man who died his god's death – the closing motif of U60. `XII_CONC` corrected (290 → 148, 291 → 149, 292 → 152, 293 → 153, 294 → 144, 295–296 → 145, 297 none, 300 → 146, 301 → 147; XII 150–151 have no Version A line; XII 151 ~ U58.19). Binding for the Me-Turan part: the two-line formula `"את אשר X – ראית?` / `איך הוא?"`; the sons' answers 255–267; `ילודי־הנֵּפֶל`; the leper `… מחוץ לעיר יושב`; `"את אשר באש נשרף`; the refrain 226–228 and the Ekur lines 222–224.
+**Rulings:** 17. plene `כיסא` everywhere in project 4 (XII 116): accepted (annotated-1 38, 81, 125; annotated-2 147 changed by the translator; §11.8 updated). 18. the formula only as far as the Sumerian has it: accepted. 19. new words: *tiru* `איש־החצר`; *nu-u₃-tud* / the stillborn `ילודי־הנֵּפֶל` (never `נְפָלִים`, Gen 6:4); *tug₂* "a cloth spread over" = `בגד` (a sense split from the worn *tug₂* `שׂמלה`, recorded); *alan* `פסל`; *ki ḫul* `המקום הרע`: accepted. 20. the strings `בראש` and `עירם` avoided in `>` lines (Gen 1:1, "naked"): accepted; no new gate. 21. the uncertain words as listed.
+
+### 11.13 Merged after project 3, part 4 (MB, 2026-10-22): project 3 complete (420/420)
+The fourteen demons, fixed at MB a+26–29 and copied at b+3–9: `מִתְבָּרֵק`, `שַׁרַבְּדּוּ`, `רוֹבֵץ` [cognate ↔ Gen 4:7], `מְגָרֵשׁ`, `נְשִׁיבָה`, `בֶּנּוּ`, `סְחַרְחֹרֶת`, `מַפָּל`, `בַּעַל־הַגַּג`, `חֹם`, `לִיבּוּ`, `צְמַרְמֹרֶת` (`רֶשֶׁף`, `דֶּבֶר`, `קֶטֶב` in the apparatus only); *tarbaṣu* `מַרְבֵּץ`; *lā itbû* `לא קם` (SB *kamāsu* `כרע`); the MB copies the SB Hebrew where the Akkadian is the same.
+**Rulings:** 23. the demons' names as above: accepted. 24. *dabābu* `סיפר`: accepted. 25. *tarbaṣu* `מרבץ` (same root as `רובץ`; the note says so): accepted. 26. *qadādu* `הרכין`: accepted. 27. `מנה` for the noun *kurummatu* (`מָנָה`, "portion") and the verb *manû* (`מָנָה`, "counted") – a homograph of two parts of speech, vocalized where ambiguous: accepted. 28. `בוכה, מתענה` unvocalized for both genders where the subject is broken: accepted. 29. *āmeru* `רואים`: accepted.
+
+### 11.14 Merged after project 4, part 4 (Me-Turan, 2026-10-22): project 4 complete (463/463)
+**The recensions, and where Gilgameš XII came from:** XII was translated from a Me-Turan / Urim-type text, not from Version A – it agrees with Me-Turan where Version A differs (XII 39 *il₂* "lifted"; XII 51–55, the narrated refrain and "the king weeps for his servant"; XII 111–112, the scribe line split in two; XII 144 the mooring pole *dimgul*, XII 145 the pegs *gag*), and with Urim at XII 153 (*utul₂*) and XII 147 (the clean water of U60). Its own changes: a dropped negation (149), a wish read as a refusal (92), Enkidu made a ghost (83, 87), no stillborn, no burnt man, no ending. Each version ends differently: Version A on the burnt man whose smoke went up; Urim on the rite (the statue, the clean water for the parents); Me-Turan on the quest (the king's heart struck, he seeks life; the last line opens "Gilgameš and Ḫuwawa"). `XII_CONC` now covers the Me-Turan lines (the translator's list). *ma₂-du₃* = `*קרש הספינה*` (ORACC madu[~boat]; 294, 296, U59.A1 changed by the translator), the mooring pole *dimgul* = `עמוד־הקשירה` (MT.B38 = XII 144).
+**Rulings:** 22. MT.A9 `תלונת הארץ אוחזת אוֹתוֹ` (the Sumerian *marû*, narrative present – guidelines §5.2 "Sumerian"): accepted. 23. MT.A11 dative `על משרתו, אֶנְקִידוּ, (אשר) מן הארץ אינו יוצא –` (= XII 55): accepted. 24.–25. new words: *tab-ba* `חבר`, *ad gi₄* `נמלך` (*malāku*, the guidelines' cognate), *i-lu* `נְהִי`, *ur* `כלב`, *mu … sa₄* `נקראו בשם`, *ur₅* `כָּבֵד` (laments), *kur lu₂ til₃-la* `ארץ האיש החי`: accepted. 26. MT.B12, B19 `לבו טוב` (*dug₃*, licensed) against Version A's `לבו שמח` (*ḫul₂*): a real difference, accepted. 27. MT.B57 as ETCSL divides it, `⟨…⟩` for the missing subject: accepted. 28. as listed. 29. `verify` now strips ⸢ ⸣ before the formula checks and allows a quotation mark before `אט`.
+
+### 11.15 The 2026-10-23 harmonization (`harmonization--2026-10-23.md`)
+2026-10-23 harmonization: the advice formula *na ga-de₅ na de₅-ĝu₁₀ ḫe₂-dab₅* = `עצה אתן – עצתי תיאחז!` (row 13: one formula, one Hebrew; *na de₅* = `נתן עצה`, *dab₅* = `אחז`); changed lines: GEN 182 `הוראה אוֹרֶה – הוראתי תֵּאָחֵז!` → `עצה אתן – עצתי תיאחז!` (XII 12 keeps `הוראה` for *aširtu*: the [divergence] note says so). Inana 30A `[עצה] איעצך – עצתי תא[חז]!` is outside this pass.
+
+2026-10-23 harmonization, batch B (rows 5, 20, 23): *parakku* → `דּוּכָן` (`כִּסֵּא` stays *kussû*'s); Kakka → `כַּכָּא` (eBL's *Kakka*, a final aleph: neither `ככה` "thus" nor `קקה`; always vocalized; Enūma eliš now has the same form); the advice formula's plene `תיאחז`. Changed lines: NE SB c+35 `כֵּס המלכות` → `דוכן המלכות`; every `כַּכָּה` of Nergal and Ereškigal → `כַּכָּא` – the `>` lines SB a+1, a+2, a+11, a+14, a+15, a+16, a+17, a+18, a+19, a+21, a+33, a+39, a+44, e+43, e+44 (bracket-split forms included), the headings, the notes (also the misspelt `כככה` of ten notes) and the introduction; Inana 30A `עצתי תֵּאָ[חז]!` → `עצתי תיא[חז]!`. `netherworld_tools.py`: the Kakka trap now also catches an unvocalized `ככא`, and the gate formula requires `הביאו את האל ככא`.
+
 ## Changelog
+- 2026-10-23: end of §11.15, the 2026-10-23 harmonization batch B (NE c+35, Kakka, Inana 30A); the tool's Kakka trap and gate formula.
+- 2026-10-23: §11.15, the 2026-10-23 harmonization (GEN 182).
 - 2026-10-21: written by the corpus coordinator before the first line, from the Gilgameš, wisdom, lament, temple, creation and law corpora and a reading of both base texts in full.
 - 2026-10-21: §9 filled after both texts were drafted and reviewed; §2/§5 rows corrected to the drafted lines; §10 extended.
 - 2026-10-21: the lead's cross-corpus harmonization applied (§10): §0 *uqnû*, §0.4 settled, §5 *za-gin₃* / *šembizid* rows fixed and a *ra-gaba* row added, §7 traps, §9 *ur₄* revised.
+- 2026-10-21 (Round 3, run 5): §11 added – the binding renderings of projects 3 (Nergal and Ereškigal) and 4 (Bilgameš, Enkidu and the Netherworld), fixed by the coordinator before the first line; the Sumerian of project 4 takes Gilgameš XII's Hebrew where XII renders it (`netherworld_tools.py xii`).
+- 2026-10-22: §11.7 merged after project 3, part 1 (SB a+1–b+50); *ebbu* = `צַח`.
+- 2026-10-22: §11.8 merged after project 4, part 1 (lines 1–135).
+- 2026-10-22: §11.9 merged after project 3, part 2 (SB c+1–d+56); *wadû* D = `ידע`.
+- 2026-10-22: §11.10 merged after project 4, part 2 (136–253); XII_CONC corrected; verify variant-parenthesis fix.
+- 2026-10-22: §11.11 merged after project 3, part 3 (SB d+57–f+1).
+- 2026-10-22: §11.12 merged after project 4, part 3 (254–303 and the Urim versions).
+- 2026-10-22: §11.13 merged after project 3, part 4 (MB): project 3 complete.
+- 2026-10-22: §11.14 merged after project 4, part 4 (Me-Turan): project 4 complete; XII_CONC extended to Me-Turan.

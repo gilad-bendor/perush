@@ -2,12 +2,12 @@
 
 Usage (from any directory):  python3 -I build_parallels_index.py
 
-Reads every table under a heading `### Parallels index (<KEY>)` in 1-לודלול/project.md and
-2-התאודיציה-הבבלית/project.md (columns: Line | Akkadian | Hebrew rendering | Bible | Tag | Comment), files each row
+Reads every table under a heading `### Parallels index (<KEY>)` in the projects' project.md files (SOURCES: Ludlul,
+the Theodicy, and since 2026-10-21 the Šamaš Hymn, Counsels of Wisdom, the Dialogue of Pessimism, Šuruppag; columns: Line | Akkadian | Hebrew rendering | Bible | Tag | Comment), files each row
 under its highest-priority Bible reference (outside backticks): Job first, then Psalms, Qohelet, Proverbs,
 Lamentations, Isaiah, Jeremiah, the Torah (Genesis–Deuteronomy), the rest of the Bible, rows without a verse; and
 rewrites everything after the line `## The table` in parallels-index.md (the key findings above it are kept).
-Rows are labelled "Ludlul <tablet> <line>" or "Theodicy <line>".
+Rows are labelled "Ludlul <tablet> <line>" or "<text> <line>" (Theodicy, Šamaš Hymn, Counsels, Dialogue, Šuruppag).
 Adapted from ../אפוס-גילגמש/build_parallels_index.py.
 """
 import os
@@ -16,7 +16,11 @@ import sys
 
 A = os.path.dirname(os.path.abspath(__file__))
 SOURCES = [("Ludlul", os.path.join(A, "1-לודלול", "project.md")),
-           ("Theodicy", os.path.join(A, "2-התאודיציה-הבבלית", "project.md"))]
+           ("Theodicy", os.path.join(A, "2-התאודיציה-הבבלית", "project.md")),
+           ("Šamaš Hymn", os.path.join(A, "3-התפילה-הגדולה-לשמש", "project.md")),
+           ("Counsels", os.path.join(A, "4-עצות-חכמה", "project.md")),
+           ("Dialogue", os.path.join(A, "5-דו-שיח-הפסימיות", "project.md")),
+           ("Šuruppag", os.path.join(A, "6-הוראות-שורופך", "project.md"))]
 OUT = os.path.join(A, "parallels-index.md")
 G = {'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9, 'י': 10, 'כ': 20, 'ל': 30, 'מ': 40, 'נ': 50,
      'ס': 60, 'ע': 70, 'פ': 80, 'צ': 90, 'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400}
@@ -28,7 +32,7 @@ BOOKS = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים', '
 SECTIONS = [("Job", ['איוב']), ("Psalms", ['תהלים']), ("Qohelet", ['קהלת']), ("Proverbs", ['משלי']),
             ("Lamentations", ['איכה']), ("Isaiah", ['ישעיהו']), ("Jeremiah", ['ירמיהו']),
             ("The Torah", ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'])]
-ORDER = ['I', 'II', 'III', 'IV', 'V', 'Th1', 'Th2']
+ORDER = ['I', 'II', 'III', 'IV', 'V', 'Th1', 'Th2', 'SH', 'CW', 'DP', 'SU']
 refre = re.compile(r'(%s)[\s\-]+([א-ת]{1,3}):([א-ת]{1,3})' % '|'.join(
     b.replace(' ', '[ \\-]') for b in sorted(BOOKS, key=len, reverse=True)))
 
@@ -82,7 +86,7 @@ def main():
             if sec is None:
                 sec, ref = len(SECTIONS) + 1, ('—', 0, 0, '', '')
             ln = line[len(key) + 1:] if line.startswith(key + ' ') else line
-            label = f'Ludlul {key} {ln}' if proj == 'Ludlul' else f'Theodicy {ln}'
+            label = f'Ludlul {key} {ln}' if proj == 'Ludlul' else f'{proj} {ln}'
             sk = (sec, BOOKS.index(ref[0]) if ref[0] in BOOKS else 99, ref[1], ref[2])
             groups.setdefault(sk, []).append((ref, key, label, line, akk, heb, bible, tag, com))
     titles = [t for t, _ in SECTIONS] + ['The rest of the Bible', 'No specific verse']

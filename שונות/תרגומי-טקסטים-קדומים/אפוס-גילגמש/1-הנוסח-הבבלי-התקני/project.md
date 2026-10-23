@@ -178,11 +178,11 @@ Renderings fixed in this tablet (beyond `../renderings.md`), with the rejected a
 | 107 | lubušta labiš kīma Šakkan | לָבוּשׁ לבוש כְּשַׁכַּן | `וַיַּעַשׂ יְהוָה אֱלֹהִים לְאָדָם וּלְאִשְׁתּוֹ כָּתְנוֹת עוֹר וַיַּלְבִּשֵׁם` (בראשית ג:כא) | [divergence] | *labāšu* = לבש [cognate]; Šakkan (god of wild animals) is shown naked or in skins: skins ↔ "garments of skin", or irony. |
 | 108 | itti ṣabâtim-ma ikkala šammī | עם הצביות אוכל עשב | `וְאָכַלְתָּ אֶת עֵשֶׂב הַשָּׂדֶה` (בראשית ג:יח) | [equivalent] | **Key.** *šammu* = עֵשֶׂב (reserved; also the plant of XI 283ff.). Adam's punishment is Enkidu's food. = 173. |
 | 108 | ikkala šammī | אוכל עשב | `וּלְכָל חַיַּת הָאָרֶץ … אֶת כָּל יֶרֶק עֵשֶׂב לְאָכְלָה` (בראשית א:ל) | [equivalent] | Grass as the beasts' food (cf. 1:29). |
-| 109 | itti būli mašqâ | עם הבהמה … בשוקת | `בְּשִׁקְתוֹת הַמָּיִם אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת` (בראשית ל:לח) | [cognate] | *mašqû* = שֹׁקֶת (root שקה). Enkidu lives among the animals, he does not name them (`לְכָל הַבְּהֵמָה … וּלְכֹל חַיַּת הַשָּׂדֶה`, ב:כ). = 174. |
+| 109 | itti būli mašqâ | עם הבהמה … בַּמַּשְׁקֶה | `בְּשִׁקְתוֹת הַמָּיִם אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת` (בראשית ל:לח) | [cognate] | *mašqû* = שֹׁקֶת (root שקה). Enkidu lives among the animals, he does not name them (`לְכָל הַבְּהֵמָה … וּלְכֹל חַיַּת הַשָּׂדֶה`, ב:כ). = 174. |
 | 110 | mê iṭīb libbašu | במים טוב לבו | `וַיֹּאכַל בֹּעַז וַיֵּשְׁתְּ וַיִּיטַב לִבּוֹ` (רות ג:ז) | [cognate] | *ṭiābu libbu* = `ייטב לבו`. = 175; cf. 171. |
 | 111 | ṣayyādu ḫābilu amēlu | צייד, אדם לוכד | `הוּא הָיָה גִבֹּר צַיִד לִפְנֵי יְהוָה` (בראשית י:ט) | [cognate] | *ṣayyādu* ~ צַיִד; Nimrod, king of Erech (10:10). eBL gloss "vagrant" is a slip. |
 | 111 | ṣayyādu | צייד | `וַיְהִי עֵשָׂו אִישׁ יֹדֵעַ צַיִד אִישׁ שָׂדֶה` (בראשית כה:כז) | [divergence] | In Genesis hunter and "man of the field" are one (Esau); here two: the hunter and Enkidu. |
-| 112 | ina pūt mašqî … uštamḫiršu | מול השוקת … פגש פנים אל פנים | `וְהִנֵּה בְאֵר בַּשָּׂדֶה` (בראשית כט:ב) | [divergence] | The meeting at the water (betrothal type-scene, 24:11ff., 29:1–12) begins here; Šamḫat meets Enkidu at the same water-hole (169–188). |
+| 112 | ina pūt mašqî … uštamḫiršu | מול הַמַּשְׁקֶה … פגש פנים אל פנים | `וְהִנֵּה בְאֵר בַּשָּׂדֶה` (בראשית כט:ב) | [divergence] | The meeting at the water (betrothal type-scene, 24:11ff., 29:1–12) begins here; Šamḫat meets Enkidu at the same water-hole (169–188). |
 | 113 | ištēn ūma šanâ u šalša | יום אחד, שני ושלישי | `בַּיּוֹם הַשְּׁלִישִׁי וַיִּשָּׂא אַבְרָהָם אֶת עֵינָיו` (בראשית כב:ד) | [equivalent] | Counting to the third day; cf. 167. |
 | 129 | uttassiḫ nuballīya | נסח את מלכודותיי | `וְנִסַּחְתֶּם מֵעַל הָאֲדָמָה` (דברים כח:סג) | [cognate] | *nasāḫu* = נסח. = 156. |
 | 130 | būla nammaššâ ša ṣēri | את הבהמה, את נעי השדה | `כָּל חַיַּת הַשָּׂדֶה` (בראשית ב:יט) | [equivalent] | *nammaššû* never `רֶמֶשׂ`. = 157. |
@@ -198,7 +198,7 @@ Renderings fixed in this tablet (beyond `../renderings.md`), with the rejected a
 | 143 | inakkiršu būlšu | תתנכר לו בהמתו | `וּמוֹרַאֲכֶם וְחִתְּכֶם יִהְיֶה עַל כָּל חַיַּת הָאָרֶץ` (בראשית ט:ב) | [equivalent] | Announced here, fulfilled in 195–196. |
 | 167 | ina šalši ūmi ina eqel adanni iktaldūni | ביום השלישי הגיעו אל חלקת המועד | `בַּיּוֹם הַשְּׁלִישִׁי וַיִּשָּׂא אַבְרָהָם אֶת עֵינָיו וַיַּרְא אֶת הַמָּקוֹם מֵרָחֹק` (בראשית כב:ד) | [equivalent] | Arrival on the third day at the appointed place. |
 | 168 | ana ušbīšunu ittašbūni | ישבו במארבם | `וַיֵּלְכוּ אֶל הַמַּאְרָב וַיֵּשְׁבוּ` (יהושע ח:ט) | [equivalent] | *ušbu* (from *ašābu*) = מַאֲרָב. |
-| 170 | ikšuda būlu mašqâ išatti | הגיעה הבהמה, שותה (מן) השוקת | `בְּשִׁקְתוֹת הַמָּיִם אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת` (בראשית ל:לח) | [equivalent] | The flock coming to drink at the troughs. |
+| 170 | ikšuda būlu mašqâ išatti | הגיעה הבהמה, שותה (מן) הַמַּשְׁקֶה | `בְּשִׁקְתוֹת הַמָּיִם אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת` (בראשית ל:לח) | [equivalent] | The flock coming to drink at the troughs. |
 | 172 | ilittašu šadûm-ma | מולדתו ההר | `לֶךְ לְךָ מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ` (בראשית יב:א) | [equivalent] | *ilittu* = מוֹלֶדֶת. |
 | 176 | lullâ amēla | קדמון, אדם | `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם` (בראשית ב:ז) | [equivalent] | *lullû* is the mythic term for the first man as created (Atr. I; Ee VI 6–7): Enkidu as a new first man. George "man-savage". |
 | 177 | eṭla šaggāšâ ša qabalti ṣēri | עלם רוצח מאמצע השדה | `וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה` (בראשית ג:א) | [divergence] | "Of the field" but violent, not cunning; cf. `אִישׁ שָׂדֶה` (כה:כז). |

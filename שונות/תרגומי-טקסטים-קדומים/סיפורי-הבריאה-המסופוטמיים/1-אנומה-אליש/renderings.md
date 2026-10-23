@@ -195,7 +195,7 @@ Rows added by the tablet translators (lemma | Hebrew | first line | note).
 | *umma*; *qudmu* | לֵאמֹר; לִפְנֵי | III 15; III 11 | *qudmu* ~ קדם noted. |
 | *garāšu* N; *nâqu*; *marṣiš*; *napḫaru* + suff. | נָהַר; הֵילִיל; בִּמְרִירוּת; כֻּלָּם | III 129; III 126 | |
 | *ṣibit ṭēmi*; *ḫidûtu*; *našāqu* N; *aḫu u aḫu* | אֲחִיזַת עֵצָה; שִׂמְחָה; הִתְנַשֵּׁק; אָח וָאָח | III 127; III 131; III 132 | |
-| *Kakka* | גַּגָּא | III 2 | Corpus §1 (open decision). |
+| *Kakka* | כַּכָּא (always vocalized; 2026-10-23 harmonization, was גַּגָּא) | III 2, 3, 11, 67 | Corpus §1: eBL's *Kakka*, with a final aleph so that it reads neither `קקה` nor `ככה`; the same god as Anu's vizier in Nergal and Ereškigal. |
 | *rubûtu*; *sāgu*; *zanānūtu* | נְסִיכוּת; אוּלָם; כַּלְכָּלָה | IV 1; IV 12; IV 11 | *rubû* stays `שַׂר`; `מִקְדָּשׁ`/`קֹדֶשׁ`/`דְּבִיר`/`הֵיכָל`/`חֶדֶר` are taken. |
 | *ramû* G / Š | הִתְיַשֵּׁב / יִשֵּׁב | IV 2 / IV 146 | Same root as *ašābu* `יָשַׁב` (open decision IV 8). |
 | *qibītu*; *lā šanān*; *sarāru*, *sartu* | אֲמִירָה; אֵין מִתְחָרֶה; כָּזָב | IV 7; IV 4; IV 9, 72 | |
@@ -203,7 +203,7 @@ Rows added by the tablet translators (lemma | Hebrew | first line | note).
 | *napalṭû* N; *râsu* D; *gamālu*; *tabāku* | הֶחֱטִיא; נִפֵּץ; חָמַל (cognate גמל noted); יָצַק | IV 16; IV 16; IV 17; IV 18 | |
 | *lumāšu*; *abātu*; *kânu* Gt (*liktūnā*) | מַזָּל; הָרַס; יִכּוֹן | IV 19; IV 22; IV 22 | ↔ `וַיְהִי כֵן` [cognate]. |
 | *karābu* | בֵּרֵךְ | IV 28 | [equivalent] ↔ `וַיְבָרֶךְ` (בראשית א:כב); not cognate (source of `כְּרוּב`). |
-| *ḫaṭṭu*; *palû* | שֵׁבֶט; תְּקוּפַת מְלוּכָה | IV 29 | *palû* "staff"? (open decision IV 6). |
+| *ḫaṭṭu*; *palû* | שַׁרְבִיט (2026-10-23 harmonization, was שֵׁבֶט); תְּקוּפַת מְלוּכָה | IV 29 | `שֵׁבֶט` is reserved for its cognate *šabbiṭu* (Gilgameš); [equivalent] Gen 49:10 `שֵׁבֶט`. *palû* "staff"? (open decision IV 6). |
 | *da'āpu*; *zayyāru*; *ayyābu* | הָדַף; שׂוֹנֵא; קָם | IV 30; IV 30; IV 124 | *zayyāru* < *zêru* `שָׂנֵא`; *ayyābu* is the cognate of `אוֹיֵב` (= *lemnu*, fixed): noted. |
 | *parā'u* G / D | גָּדַע / גִּדַּע | IV 31 / IV 131 | |
 | *wabālu* (G, Š, Št); *bussurtu* | הוֹבִיל [cognate יבל]; בְּשׂוֹרָה [cognate] | IV 32, 132, 134 | `נָשָׂא` for *našû* only. |
@@ -251,13 +251,13 @@ Rows added by the tablet translators (lemma | Hebrew | first line | note).
 | *šapāku*; *šebû*; *peḫû*; *ezēbu* | שָׁפַךְ [cognate]; שָׂבַע [cognate]; סִתֵּם; עָזַב [cognate] | V 53; V 54; V 56; V 56 | *šapāku* `שָׁפַךְ` also for earth/mountains, since `צָבַר` = *kamāru*. |
 | *ṣertu*; *bēru*; *nambaʾu*; *palāšu* D; *kuppu* | דַּד; רָחוֹק; מַבּוּעַ [cognate?]; נִקֵּב; בּוֹר | V 57–58 | Not `שַׁד` (Hebrew-only pun on `שַׁדַּי`); not `מַעְיָן` (Gen 7:11). |
 | *zibbatu*; *durmāḫu*; *ḫallu*; *retû* | זָנָב; דּוּרְמָחוּ; יָרֵךְ; תָּקַע (*retât* `*יְתֵדוֹת*`) | V 59; V 59; V 61; V 61 | |
-| *šipru*; *mānaḫtu* | פֹּעַל; יְגִיעָה | V 63, 141; V 142 | Not `מְלָאכָה` (semantic twin, [equivalent], noted). *dullu* stays `עָמָל`. |
+| *šipru*; *mānaḫtu* | מְלָאכָה; יְגִיעָה | V 63, 141; V 142 (and VI 37, 57, 67) | `מְלָאכָה` since 2026-10-23 (the user's decision: one word in every corpus, as in the flood texts; [equivalent] Gen 2:2–3, both words grew from "sending": *šapāru* / `לאך`); drafted as `פֹּעַל`. *dullu* stays `עָמָל`. |
 | *pelludû*; *ṣabātu* Št ("make take hold") | חֻקּוֹת; הִתְפִּיס | V 67; V 68 | *parṣu* stays `פֻּלְחָן`; Š/Št "post" stays `הִצִּיב`. |
 | *tāmartu*; *tabālu*; *qiāšu*; *qīštu* | שַׁי; הוֹלִיךְ; הֶעֱנִיק; מַתָּנָה | V 70; V 70; V 70, 80; V 80 | `תְּשׁוּרָה` = *igisû* (IV 134); *tabālu* `נָטַל` in I 68, but `נָטַל` = *ekēmu* (IV 121): open decision. |
 | *redû* G; *edēru*; *alālu* III Š (+ obj.) | נָהַג; חִבֵּק; הִלֵּל | V 72; V 79 (I 53); V 81 | |
 | Usmû; *šukkallūtu*; *kanāšu*; *lalû* | אוּסְמוּ; וְזִירוּת; כָּרַע; נֹעַם | V 83; V 84; V 88; V 89, 122 | |
 | *ebēḫu*; *tarbuʾu*; *ḫašūru*; *labāku* Š | אָזַר (D stat. מְאֻזָּר); אָבָק; בְּרוֹשׁ; הִשְׁרָה | V 90; V 90; V 92; V 92 | `חָגַר` is *rakāsu* (IV 85). |
-| *edēqu* Dt; *tēdīqu*; *rašubbatu*; *ušparu* | הִתְעַטֵּף (I 68); מַעֲטֶה; בְּעָתָה; מַטֶּה | V 93; V 93; V 94; V 99 | *miṭṭu* stays `אַלָּה`, *ḫaṭṭu* `שֵׁבֶט`. |
+| *edēqu* Dt; *tēdīqu*; *rašubbatu*; *ušparu* | הִתְעַטֵּף (I 68); מַעֲטֶה; בְּעָתָה; מַטֶּה | V 93; V 93; V 94; V 99 | *miṭṭu* stays `אַלָּה`, *ḫaṭṭu* `שַׁרְבִיט` (was `שֵׁבֶט` until 2026-10-23). |
 | *azamillu*; *emāšu*; *aštû*; *simakku* | שַׂק; אֶמָשׁוּ; כֵּס; נָוֶה | V 102; V 104; V 104; V 105 | Shrine words: `חֶדֶר`, `דְּבִיר`, `קֹדֶשׁ`, `מִקְדָּשׁ`, `הֵיכָל`, `אוּלָם` are taken. |
 | *narāmu*; *kaʾinimmaku*; *dumqu*; *zanānu* II | אָהוּב; *נֹסַח*; טוֹב; כִּלְכֵּל | V 109; V 114; V 114; V 115 | |
 | *ḫašmānu*; *qaqqaru* (noun) | *כָּחֹל*; קַרְקַע | V 119; V 121, 135 | Not `תְּכֵלֶת` (cognate of *takiltu*). `קַרְקַע` also *ammatu* (I 2): open decision. |
@@ -335,5 +335,6 @@ Rows added by the tablet translators (lemma | Hebrew | first line | note).
 | The names 10–50 of Tablet VII (Asarre … Nēberu) | see the table in project.md, Tablet VII | VII 1–124 | Hyphenation policy: project.md, Tablet VII, decision 1. *Tutu* = `טוּטוּ`; *Addu* = `אַדּוּ`; "Lord of the Lands" and "Ea" translated. |
 
 ## Changelog
+- 2026-10-23 harmonization (`../../harmonization--2026-10-23.md` rows 4, 20): *ḫaṭṭu* = `שַׁרְבִיט` (IV 29 `שבט` → `שרביט`); Kakka = `כַּכָּא` (every `גַּגָּא` / `גגא` of Tablet III – 2, 3, 11, 67, the headings, the notes and the introductions; the note at III 2 rewritten).
 - 2026-10-21 harmonization (cross-corpus decisions): *karû* = `כְּרִי` (VII 78 `שופך ערמות` → `שופך כְּרִים`); *šiptu* = `קֶסֶם` / *tû* = `לַחַשׁ` confirmed (II open decision 6 settled); *sukkallu* = `וְזִיר`, *kabattu* = `כָּבֵד` unchanged.
 - 2026-10-16 (after Tablet I): I 156 = II 42 = III 46 = III 104 changed from `…על כולם, האנונכי!` to `…על כולם, על האנונכי!` (the Akkadian is an apposition, not a vocative; the Tablet I translator's proposal). Bible quotations in §1–§2 corrected to the repo's text.

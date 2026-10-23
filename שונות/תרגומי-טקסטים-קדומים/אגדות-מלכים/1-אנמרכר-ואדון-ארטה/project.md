@@ -113,10 +113,10 @@ All four parts drafted and reviewed (three passes each) on 2026-10-21; `translat
 - `אז` for every *ud-ba* / *ud-bi-a*; `בימים ההם` for *ud re-a*.
 - *kur* before a country name = `ארץ` (`ארץ דִּלְמוּן`, `ארץ אַנְשָׁן`, `ארץ מַרְטוּ`); otherwise `הר`.
 - *nam-lu₂-ulu₃* absolute = `האנושות`; + a city name = `אנשי X`. *lu₂-u₁₈-lu* = `האדם`.
-- *pa e₃ ak* = `הזהיר` (`מזהירה`, `יזהירו`); *galam* = `בכשרון … עיבד`; *si sa₂* = `יישר`; *sikil* = `זך` / `זיכה`;
+- *pa e₃ ak* = `הזהיר` (`מזהירה`, `יזהירו`); *galam* = `בכשרון … עיבד` (2026-10-23 harmonization: `בתחכום … עיבד`); *si sa₂* = `יישר`; *sikil* = `זך` / `זיכה`;
   *mu₂* = `הצמיח`; *de₆* = `נשא`; *tum₂* = `הוביל`; *tum₃* = `הביא`.
 - *kug ki-in-dar-ra-gin₇* = `ככסף בסדק־הסלע`; *šeg₁₂ kul-aba₄* = `לְבֵנַת כולבה`; *saĝ-men … ĝal₂* = `כתר־הראש … חבש`.
-- *saĝ keše₂* = `ראש קשר`; *na de₅* / *ĝizzal ak*: the 69–70 strings (`"אנמרכר, בוא! עצה אתן לך – את עצתי תקבל!` /
+- *saĝ keše₂* = `ראש קשר`; *na de₅* / *ĝizzal ak*: the 69–70 strings (`"אנמרכר, בוא! עצה אתן לך – את עצתי תקבל!`, since the 2026-10-23 harmonization `… – עצתי תיאחז!` /
   `דבר אומר לך – קשב לו תעשה!`) for 626–627.
 - *kiĝ₂-gi₄-a inim zu zag-še tuku* = `שליח – יודע דבר, בעל כוח־עמידה –`.
 - The threat strings (115–123) and the demand strings (124–135) are the template for 187–207 and 487–496; the Zubi
@@ -138,7 +138,7 @@ All four parts drafted and reviewed (three passes each) on 2026-10-21; `translat
 | 48 | gu₂ ĝiš ḫa-ma-[ĝa₂-ĝa₂] | צוואר לעץ לי [תָּשִׂים] | `וְאַדִּירֵיהֶם לֹא הֵבִיאוּ צַוָּרָם בַּעֲבֹדַת אֲדֹנֵיהֶם` (נחמיה ג:ה) | equivalent | Submission as the neck under the yoke. |
 | 18 | {na₄}lagab za-gin₃-na | גושי סַפִּיר | `וְתַחַת רַגְלָיו כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר` (שמות כד:י); `כְּמַרְאֵה אֶבֶן סַפִּיר דְּמוּת כִּסֵּא` (יחזקאל א:כו); `מְקוֹם סַפִּיר אֲבָנֶיהָ וְעַפְרֹת זָהָב לוֹ` (איוב כח:ו) | equivalent | *za-gin₃* = *uqnû* = `סַפִּיר`: the biblical stone is lapis lazuli, not the modern sapphire; the stone of Aratta, of a god's beard (209) and of Inana's house E-zagin (559), as of the throne and pavement of Exod 24 / Ezek 1 (harmonization 2026-10-21). |
 | 66 | šembi₂-zid-da-ni | שֶׁפּוּךְ עיניה לאמא־אושומגל־אנה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל); `כִּי תִקְרְעִי בַפּוּךְ עֵינַיִךְ לַשָּׁוְא תִּתְיַפִּי` (ירמיהו ד:ל) | equivalent | Eye-paint of a woman for her lover (Dumuzi); *šembi(zid)* = `פּוּךְ` in all corpora (harmonization 2026-10-21). |
-| 69 | na ga-e-de₅ na de₅-ĝu₁₀ ḫe₂-e-dab₅ | עצה אתן לך – את עצתי תקבל | `עַתָּה שְׁמַע בְּקֹלִי אִיעָצְךָ` (שמות יח:יט) | equivalent | The counsellor's formula; repeated at 626. |
+| 69 | na ga-e-de₅ na de₅-ĝu₁₀ ḫe₂-e-dab₅ | עצה אתן לך – עצתי תיאחז | `עַתָּה שְׁמַע בְּקֹלִי אִיעָצְךָ` (שמות יח:יט) | equivalent | The counsellor's formula; repeated at 626. |
 | 71 | kiĝ₂-gi₄-a inim zu | שליח – יודע דבר | `וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים לְפָנָיו אֶל עֵשָׂו אָחִיו` (בראשית לב:ד) | equivalent | The messenger as envoy; `מַלְאָךְ` reserved. |
 | 75 | šušin{ki}-e kur an-ša₄-an{ki} | שׁוּשַׁן – עד ארץ אַנְשָׁן | `וַאֲנִי הָיִיתִי בְּשׁוּשַׁן הַבִּירָה` (נחמיה א:א) | equivalent | Susa in its biblical form. |
 | 78 | saḫar-ra … gur₄-gur₄-e | בעפר – לפניה יתרפסו | `וְאֹיְבָיו עָפָר יְלַחֵכוּ` (תהלים עב:ט) | equivalent | Submission in the dust; *saḫar* = Akk. *eperu* ~ `עָפָר`. |
@@ -411,7 +411,7 @@ All four parts drafted and reviewed (three passes each) on 2026-10-21; `translat
 - *tug₂* `בגד`; *gag* `יתד`; *saĝ-ki* `מצח`; *mir* `זועף`; *šu-rin-na* `תנור` (*im šu-rin-na* `טיט־התנור`); *eš₂-gar₃*
   `מכסה`; *bal ak* "exchange" `לעשות חליפין`; *a-ma-ru* `מבול` (inherited); *a nam-til₃* `מֵי החיים`; *lil₂* `מַשַּׁב`;
   *ug* `לַיִשׁ`; *ĝiškim* `אוֹת` (vocalized); *me-lem₄* `זוהר`; *igi du₈* `ראה`; *um-ma* `הזקנה`; *ki-sikil* `עלמה`;
-  *aga* / *men* `כתר`; *barag* (dais) `כס`; *en₃-du* `זמרה`; *šir₃ dug₄* `שיר דיבר`; *gig* `חיטה`; *gu₂* (pulse)
+  *aga* / *men* `כתר`; *barag* (dais) `כס` (2026-10-23 harmonization: `דוכן`); *en₃-du* `זמרה`; *šir₃ dug₄* `שיר דיבר`; *gig* `חיטה`; *gu₂* (pulse)
   `קטנית`; *eme₅* `אתון`; *dur₃* `עַיִר` (vocalized); *ud₅* `עז`; *peš₃* `תאנה`; *ĝeštin* `גפן`; *{gi}ušub*
   `קני־האוּשׁוּב`.
 - Verbs: *šu … dag* with an object `שמטה מידה`; *šu taka₄* `שלח`; *šu ti* `קיבל`; *šu ra* (on clay) `יד היכה`; *gub*
@@ -457,7 +457,7 @@ All four parts drafted and reviewed (three passes each) on 2026-10-21; `translat
 | 589 | ki-sikil ud-da-na til-la-gin₇ | כעלמה שימיה מלאו | `וְהִנֵּה עִתֵּךְ עֵת דֹּדִים` (יחזקאל טז:ח) | equivalent | The maiden ready for love. |
 | 590 | šembi₂-zid-da igi-na mu-un-gun₃ | בפוך – את עיניה נימרה | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ וַתֵּיטֶב אֶת רֹאשָׁהּ` (מלכים ב ט:ל); `כִּי תִקְרְעִי בַפּוּךְ עֵינַיִךְ לַשָּׁוְא תִּתְיַפִּי` (ירמיהו ד:ל) | equivalent | Painting the eyes. |
 | 592 | iti₆-gin₇ mu-un-e₃ | כאור הירח – יצאה | `יָפָה כַלְּבָנָה בָּרָה כַּחַמָּה` (שיר השירים ו:י) | equivalent | The beloved like the moon. |
-| 594 | en-me-er-kar₂ barag-ge₄ mu-un-da-ab-si | אנמרכר – את הכס עמה מילא | `נִצְּבָה שֵׁגַל לִימִינְךָ בְּכֶתֶם אוֹפִיר` (תהלים מה:י) | equivalent | The goddess/queen beside the king on the throne. |
+| 594 | en-me-er-kar₂ barag-ge₄ mu-un-da-ab-si | אנמרכר – את הדוכן עמה מילא | `נִצְּבָה שֵׁגַל לִימִינְךָ בְּכֶתֶם אוֹפִיר` (תהלים מה:י) | equivalent | The goddess/queen beside the king on the throne. |
 | 596 | im-da-lu-lu aratta{ki}-aš u₈-da sila₄-bi | רבו לארטה – רחלים עם טלאיהן | `שְׁגַר אֲלָפֶיךָ וְעַשְׁתְּרוֹת צֹאנֶךָ` (דברים כח:ד) | equivalent | Fertility of the flocks. |
 | 617 | eš₂-gar₃ … du₃ | את המכסה – הקים | `וְאֶת מַתְכֹּנֶת הַלְּבֵנִים אֲשֶׁר הֵם עֹשִׂים תְּמוֹל שִׁלְשֹׁם` (שמות ה:ח) | equivalent | The work quota (*iškaru*). |
 | 619 | bal ak-de₃ | לעשות חליפין | `וְזֹאת לְפָנִים בְּיִשְׂרָאֵל עַל הַגְּאֻלָּה וְעַל הַתְּמוּרָה` (רות ד:ז) | equivalent | Exchange. |

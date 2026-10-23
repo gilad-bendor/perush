@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-21 (Round 2 finished; the cross-corpus splits settled; the Round 3 plan made).
+Last updated: 2026-10-23 (Round 3 complete; its cross-corpus splits settled; Round 4 is next).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -31,10 +31,9 @@ Last updated: 2026-10-21 (Round 2 finished; the cross-corpus splits settled; the
 
 ## 2. Pace (guidelines §5.1)
 
-- **Local sessions:** one sub-agent at a time (the user's quota).
-- **Claude Cloud:** a special allowance, so no quotas are expected. Work at full speed, and run **independent runs in
-  parallel** (different corpora). Inside one long text, keep the sequential translator chain. If a limit is hit, record
-  it in §5.1 of the guidelines and fall back to one at a time.
+- **Quotas apply in every session, the cloud included** (the user, 2026-10-22: the cloud's special allowance is
+  over). **One sub-agent at a time, always**, so that a quota stop cuts only one effort; translators save each section
+  to disk as they go, and the coordinator commits after every merged part. No parallel translators or runs.
 - **Sub-agents cannot start sub-agents** (guidelines §5.1): a coordinator started as a sub-agent translates its texts
   itself. For real translator chains, make the session itself the coordinator (one run per session).
 - **Commit and push to `main` often:** after every finished section, not only at the end of a run. A cloud VM can be
@@ -48,15 +47,17 @@ All of it is a **first draft**: complete, verified by script, three review passe
 | Corpus | Projects | Lines | Verify with |
 |---|---|---|---|
 | `סיפורי-המבול-המסופוטמיים/` | Atra-ḫasīs I–III, Gilg. XI 1–208, the Sumerian Flood Story, the other Akkadian versions, Berossus + Abydenus, flood references | (see `corpus.md`) | per project (see `corpus.md`) |
-| `סיפורי-הבריאה-המסופוטמיים/` | 1 Enūma eliš I–VII; 2 the creation and Eden companions (7 texts); 3 Bird and Fish; 4 Enki and the World Order | 2,828 | `1-אנומה-אליש/verify.py`, `2-…/verify.py`, `sumerian_tools.py` |
+| `סיפורי-הבריאה-המסופוטמיים/` | 1 Enūma eliš I–VII; 2 the creation and Eden companions (7 texts); 3 Bird and Fish; 4 Enki and the World Order; 5 the Farmer's Instructions; 6 Hoe and Plough; 7 Summer and Winter (5–7 Round 3 run 1) | 3,435 | `1-אנומה-אליש/verify.py`, `2-…/verify.py`, `sumerian_tools.py verify 3…7 --strict` |
 | `חוקים-ובריתות/` | 1 Esarhaddon's Succession Treaty; 2 Hammurabi (§66–99 missing in the base text); 3 Eshnunna; 4 MAL A; 5 Lipit-Ištar; 6 Ur-Namma; 7 MAL B | 6,731 | `laws_*.py` |
 | `אפוס-גילגמש/` | SB I–X, XI 209–328, XII; the OB tablets | 3,217 | `verify.py --strict` |
-| `ספרות-החכמה-והצדיק-הסובל/` | 1 Ludlul I–V; 2 the Babylonian Theodicy | 822 | `wisdom_tools.py verify` |
+| `ספרות-החכמה-והצדיק-הסובל/` | 1 Ludlul I–V; 2 the Babylonian Theodicy; 3 the Great Prayer to Šamaš; 4 Counsels of Wisdom; 5 the Dialogue of Pessimism; 6 the Instructions of Šuruppag (Sumerian; 3–6 Round 3 run 4) | 1,562 | `wisdom_tools.py verify --strict` |
 | `קינות-על-ערים/` | 1 the Lament for Ur; 2 the Curse of Agade (OB + Ur III) | 763 | `lament_tools.py verify --strict` |
 | `בניין-המקדש/` | 1 the Gudea Cylinders A–B | 1,300 | `temple_tools.py verify GU --strict` |
-| `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent | 599 | `netherworld_tools.py verify IS --strict`, `… verify IN --strict` |
-| `אגדות-מלכים/` | 1 Enmerkar and the Lord of Aratta; 2 the Sargon Birth Legend (on King 1907 only: check against Westenholz 1997) | 690 | `kings_tools.py verify EA --strict`, `… verify SB --strict` |
+| `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent; 3 Nergal and Ereškigal (MB Amarna + SB); 4 Bilgameš, Enkidu and the Netherworld (five recensions; the source of Gilg. XII) (3–4 Round 3 run 5) | 1,482 | `netherworld_tools.py verify IS\|IN\|NE\|GEN --strict` |
+| `אגדות-מלכים/` | 1 Enmerkar and the Lord of Aratta; 2 the Sargon Birth Legend (on King 1907 only: check against Westenholz 1997); 3 Etana (all six eBL versions, Round 3 run 2) | 1,275 | `kings_tools.py verify EA --strict`, `… verify SB --strict`, `… verify ET --strict` |
 | `קולות-היום-יום/` | 1 OB / Old Akkadian love lyrics and incantations (LAOS 4, 25 texts); 2 Sumerian proverbs (coll. 1 complete, selections of 2–3); 3 Lu-diĝira + eight Sumerian letters | 1,513 | `kol_tools.py verify LOVE PROV LET --strict` |
+| `נבואה-ומלכות/` | 1 the Assyrian prophecies (SAA 9 1–11, all eleven texts); 2 Advice to a Prince (eBL `L/2/5`) | 707 | `prophecy_tools.py verify --strict` |
+| `כשפים-ולחשים/` | 1 Maqlû, Tablets I–VIII and the Ritual Tablet (eBL `Mag/1/1`; Round 3 run 6) | 1,595 | `maqlu_tools.py verify --strict` |
 
 Every finished translation has a print stub in `הדפסה/` (guidelines §7.4). Each corpus has a `parallels-index.md`
 with its key findings at the top.
@@ -65,17 +66,33 @@ with its key findings at the top.
 
 **Round 2 is finished** (runs 5–7, 2026-10-21, in parallel in Claude Cloud), and the cross-corpus splits it left were
 settled on 2026-10-21 (§6). **Next: Round 3** (`curated-translation-candidates.md`, "Round 3 plan"): six runs in six
-different corpora, **one cloud session per run** (start each with `ancient-translations: Round 3, run N`), in parallel
-or one at a time in the table's order:
+different corpora, **one cloud session per run** (start each with `ancient-translations: Round 3, run N`), in the
+table's order; inside a run, its sub-agents strictly one at a time (quotas, §2):
 
 | Run | Texts | Corpus |
 |---|---|---|
-| 1 | The Farmer's Instructions, Hoe and Plough, Summer and Winter (Gen 8:22, 3:17–19, 4:2–5) | the creation corpus, projects 5–7 |
-| 2 | Etana (Gen 11:4, 30:14–16, Deut 32:11) | `אגדות-מלכים/` project 3 |
-| 3 | The Assyrian prophecies (SAA 9) + Advice to a Prince (Deut 13, 17, 18; "fear not") | new `נבואה-ומלכות/` |
-| 4 | The Great Prayer to Šamaš, Counsels of Wisdom, the Dialogue of Pessimism, Šuruppag in full | the wisdom corpus, projects 3– |
-| 5 | Nergal and Ereškigal, Bilgameš, Enkidu and the Netherworld (Gen 28:12; 1 Sam 28) | `העולם-התחתון/` projects 3–4 |
-| 6 | Maqlû I–VIII + the Ritual Tablet (Ex 22:17, Deut 18:10–11) | new `כשפים-ולחשים/` |
+| 1 | The Farmer's Instructions, Hoe and Plough, Summer and Winter (Gen 8:22, 3:17–19, 4:2–5) | the creation corpus, projects 5–7: **done (first draft), 2026-10-22**, 607 lines |
+| 2 | Etana (Gen 11:4, 30:14–16, Deut 32:11) | `אגדות-מלכים/` project 3: **done (first draft), 2026-10-22**, 585 lines |
+| 3 | The Assyrian prophecies (SAA 9) + Advice to a Prince (Deut 13, 17, 18; "fear not") | new `נבואה-ומלכות/`: **done (first draft), 2026-10-22**, 707 lines |
+| 4 | The Great Prayer to Šamaš, Counsels of Wisdom, the Dialogue of Pessimism, Šuruppag in full | the wisdom corpus, projects 3–6: **done (first draft), 2026-10-22**, 740 lines |
+| 5 | Nergal and Ereškigal, Bilgameš, Enkidu and the Netherworld (Gen 28:12; 1 Sam 28) | `העולם-התחתון/` projects 3–4: **done (first draft), 2026-10-22**, 883 lines |
+| 6 | Maqlû I–VIII + the Ritual Tablet (Ex 22:17, Deut 18:10–11) | new `כשפים-ולחשים/`: **done (first draft), 2026-10-23**, 1,595 lines |
+
+**Round 3 is complete** (2026-10-23). **Next: Round 4, run 1** (below).
+
+**Round 4 (approved by the user, 2026-10-22; starts when Round 3 is finished):** `curated-translation-candidates.md`,
+"Round 4 plan". It merges the Mesopotamian texts left after Round 3 with the first non-Mesopotamian texts from the world
+survey (`curated-translation-candidates--world.md`), ranked together. **One run at a time** (guidelines §5.1), started with
+`ancient-translations: Round 4, run N`:
+1. the Ugaritic myths (the Baal Cycle + the short myths and charms), with the fifth-day dossier – for Gen 1:21, now;
+2. the Edict of Ammiṣaduqa – only if an open base text is found (none on 2026-10-22);
+3. Egyptian wisdom and creation (Amenemope, Merikare, the Heavenly Cow, the Memphite Theology; base AED-TEI);
+4. Hesiod (Theogony + Works and Days; base Perseus + treebank);
+5. Erra and Išum (eBL);
+6. Hittite law and ritual (the Laws, the Temple Instructions, the elimination rituals; base TLHdig).
+
+Quick wins between the runs: Šūpê-amēlu and the fables; the Poor Man of Nippur. Each new language needs a converter, a
+name table, renderings with reserved-word gates and a translator brief before its first line.
 
 Parallel sessions edit the shared files only at the end of their run, in one commit, after `git pull --rebase` (the
 plan's last paragraph). The user's review of the Round 1–2 drafts can go on alongside. The Round 2 runs, for the record:
@@ -86,8 +103,8 @@ plan's last paragraph). The user's review of the Round 1–2 drafts can go on al
 | 6 | **Enmerkar and the Lord of Aratta** + **the Sargon Birth Legend** | ETCSL 1.8.2.3 + ORACC; King 1907 (public domain) or a newer open edition | Gen 11 and Exod 2: **done (first draft), 2026-10-21**, `אגדות-מלכים/` |
 | 7 | **OB love lyrics** + **Sumerian proverbs** (a selection) + **OB letters** (a selection) | ORACC AkkLove / SEAL; ETCSL 6.1; ORACC/CDLI letters | everyday voices: **done (first draft), 2026-10-21**, `קולות-היום-יום/` (the OB Akkadian letters not obtained: CDLI 503) |
 
-Runs 5, 6 and 7 are independent (different corpora): in the cloud they can run in parallel, each as its own
-coordinator with its own sequential translator chain. Each run is briefed as in §5 below.
+Runs 5, 6 and 7 were independent (different corpora) and ran in parallel under the cloud's former special allowance,
+each as its own coordinator with its own sequential translator chain (since 2026-10-22: one at a time, §2). Each run is briefed as in §5 below.
 
 ## 5. The run brief (how every run so far was briefed)
 
@@ -125,12 +142,29 @@ yourself** (renderings, harmonizing splits between corpora, scope details) and r
 **The cross-corpus splits were settled on 2026-10-21** (by the lead, under the rule above): the decisions, and the words kept
 by sense, are in `translation-guidelines.md` §6.7 ("Cross-corpus harmonization"); each corpus's `renderings.md` lists the
 lines it changed, and the `project.md` files mark their open decisions settled. All verifiers and `check_bible_quotes.py`
-passed afterwards. Still open:
+passed afterwards.
+
+**The cross-corpus splits of Round 3 were settled on 2026-10-23** (by the lead, under the user's rule): the table, with
+every change, the lines it touched and the splits kept with their reasons, is **`harmonization--2026-10-23.md`**;
+guidelines §6.7 sums it up; each corpus's `renderings.md` has a "2026-10-23 harmonization" line. Applied in three batches,
+one agent at a time; all verifiers and `check_bible_quotes.py` passed afterwards. The last decision left for the user,
+*šipru* "work", was settled by the user the same day: `מְלָאכָה` in every corpus (guidelines §6.7).
+
+**For the user, from the world survey (2026-10-21; `curated-translation-candidates--world.md` §7):**
+1. ~~Widen the work beyond Mesopotamia, and approve Round 4?~~ **Settled 2026-10-22:** yes – the merged Round 4 plan.
+2. ~~Hebrew and Moabite inscriptions~~ **Settled 2026-10-22** (left to the lead): transcription + vocalized reading +
+   apparatus (guidelines §6.7).
+3. ~~A [typological] tag~~ **Settled by the user, 2026-10-22: no special tag** (guidelines §6.4).
+
+**The project is global** (the user, 2026-10-22): "focusing on the 'essence of antiquity'" (guidelines §1). Round 4 keeps
+its approved order; from Round 5 on, candidates are ranked with that focus first.
+
+Still open:
 
 | Decision | Now | Where |
 |---|---|---|
 | The Sargon Birth Legend's base text | King 1907 (our transcription from the page images) | Westenholz 1997 is not to be bought (the user's rule): check again if an open copy appears |
-| **For the user:** *šipru* "work, task" | `מְלָאכָה` (Atra-ḫasīs, the other flood texts, Gilg. XI 180: ~13 lines) / `פֹּעַל` (Enūma eliš V 63, 141, VI 37, 57, 67: chosen so as not to pre-empt `מְלַאכְתּוֹ`, Gen 2:2–3) | Left to the user because it touches Gen 2:2–3. The lead recommends `מְלָאכָה` everywhere, tagged [equivalent]: by meaning it is the better word for an assigned task, and the link is real (both words grew from "sending": *šapāru*, `לאך`), so the rule against pre-empting (§6.4, among *equally good* renderings) does not apply. Changing it means 5 Enūma eliš lines and their notes. (*šipru lemnu* "an evil deed" = `מַעֲשֶׂה רַע` stays.) |
+| EST's transliterations (found by Round 3 run 3) | `tools/cdl2md.py` doubled compound logograms until 2026-10-22: 118 + 41 lines in the EST source files and their copies in `חוקים-ובריתות/1-…/` (the Hebrew is unaffected) | regenerate the EST source files with the fixed converter when ORACC is reachable (`tools.md`) |
 | The per-text open decisions | see each `project.md` | minor ones: the next session on that corpus decides them (the user's rule) |
 
 The decisions settled earlier (2026-10-18) are in the Gilgameš renderings §12, `חוקים-ובריתות/corpus.md` and the
