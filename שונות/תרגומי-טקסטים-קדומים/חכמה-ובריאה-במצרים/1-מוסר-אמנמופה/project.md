@@ -659,5 +659,127 @@ drafting each house and quoted only from the open text.
 - A repeated passage that a coordinator will fix by its first copy should be drafted with both copies' contexts open
   (here 22.5–8 closes a house about patrons, 23.8–11 one about opponents): the Hebrew must fit both before it is fixed.
 
+## AM 24.21–28.1
+
+### Scope
+Part 5 of 5, the last (the second translator): houses 26–30 (24.21–27.17), the closing formula 27.18 and the colophon
+28.1 – 62 lines, all drafted; **the file is complete (551 / 551 lines, the end marker removed).** Lacunae: 25.15,
+27.8 (twice), 27.17, 27.18, 28.1. House 26: the beer-house and the great man in the street; respect the old drunk;
+"a pilot who looks far ahead does not capsize". 27: do not curse one older than you – he saw Re before you; let him
+beat you, hand in your bosom. 28: the widow in the field, the stranger with the jar; "the god loves him who honours
+the poor more than him who respects the noble". 29: the ferry – take the fare from the rich, let the have-not cross
+free. 30 (the epilogue): "look at these thirty houses"; the skilled scribe will be worthy of being a courtier. 28.1:
+"in the writing of Senu, son of the god's father Pamiu". Witness: tTurin CGT 58005 (to 25.9).
+
+### Sources consulted
+The base and tTurin (`data … --wit`); the TLA German and Lange 1925 (chapters 26–27, OCR), read after drafting.
+
+### Decisions
+- **twr (settled, as you asked):** one Egyptian verb, "be pure; keep (reverently) apart from; respect", rendered by
+  its construction – `twr r` "keep apart from" = `הִנָּזֵר מִן` (15.7; Lev 22:2); `twr` + object "respect" =
+  `הוֹקִיר` (25.7, 25.9, 26.14); `twr` absolute "become pure" = `נִטְהַר` (27.12, TLA "rein werden"). No single Hebrew
+  verb covers the three (`כִּבֵּד` would add a third Egyptian lemma to the root כבד: dns `כְּבַד־מִשְׁקָל`, jmꜣḫ
+  `נִכְבָּד`, and here wꜣš). Noted at 25.7 and 27.12.
+- **wꜣš "honour" = `כִּבֵּד`** (26.13): Prov 14:31 `וּמְכַבְּדוֹ חֹנֵן אֶבְיוֹן` has the same verb with the same object;
+  the couplet 26.13–14 then keeps the two Egyptian verbs apart (`מְכַבֵּד` / `מוֹקִיר`).
+- **27.7 = renderings §6.1:** `ראה לך את שלושים הבתים האלה:` (ptr n=k `רְאֵה לְךָ`; tꜣj 30 n ḥw.t `שְׁלֹשִׁים הַבָּתִּים
+  הָאֵלֶּה`).
+- **27.16–17:** `הנה סופר שהוא בקי במשרתו –` / `ימצא את עצמו ראוי להיות רֵעַ (המלך) […].` (sšꜣ `בָּקִי`, jꜣw.t `מִשְׂרָה`,
+  smḥr `רֵעַ (הַמֶּלֶךְ)`, m-šꜣ.wj `רָאוּי` as 12.5; `מָהִיר` and `מְלָאכָה` in the apparatus only).
+- **Headings** `הבית העשרים ושישה.` … `הבית העשרים ותשעה.`, `הבית השלושים.` (the style of houses 21–25).
+- **Ships and oars, one Hebrew each:** sk.tj `סְפִינָה` (10.10), kꜣr `סִירָה` (10.11), jmw `כְּלִי־שַׁיִט` – **20.5–20.6
+  changed** (they had `ספינה` / `שלה`, a collision with 10.10 that I found only now: `הנה לשון האדם – משוט כלי־השיט,` /
+  `ואדון הכול – הוא החובל שלו.`), dp.t `אֳנִיָּה` (25.15); ḥmw `מָשׁוֹט`, ḥp.t `מְשׁוֹט־חֲתִירָה` (26.18); mḫn.t `מַעְבֹּרֶת`.
+- **Other words:** ḥnq.t `שֵׁכָר` vocalized (24.22, 25.8: unvocalized it reads fqꜣ's `שָׂכָר`); ꜥ.t "room" `חֶדֶר`; ṯꜣs
+  "join" `הִתְקַשֵּׁר`; kd `קָטָן`, šrj "the junior" `זוּטָר` (nḏs keeps `צָעִיר`); ḫnms `הִתְרוֹעֵעַ` (Prov 18:24); šmsw.t
+  `פָּמַלְיָה`; ẖrd `נַעַר` (ms.w keeps `יְלָדִים`); ḫpš `כָּתֵף` (ꜥ keeps `זְרוֹעַ`); ꜣ.t "back" `גֵּו` (unvocalized `גב`
+  reads as Geb); ḫꜣb `הִרְכִּין`; nmḥ (verb) `דַּל`; dḥr `מָרוֹר` (jkn keeps `מַר`); sḥwr (verb) `קִלֵּל` (noun
+  `קְלָלָה`, 14.15); smj "report" `הִלְשִׁין`; mḥr `מַכְאִיב`; qnj `חֵיק`; ṯsm `כֶּלֶב־צַיִד`; wḥwḥ `נָבַח`; ḥꜣm "fish
+  out" `דָּלָה`; ḏrḏr `נָכְרִי` (`גֵּר` never); mꜥḏqꜣt `כַּד`; qꜣb `כָּפַל` (6.9); jsq `עִכֵּב`; ḏꜣj "cross" `חָצָה`
+  (5.1 `נַעֲבִיר`; `עָבַר` is snj's); wsdn `הִתְרַוַּח`; jnq `כָּרַךְ` (13.4); hꜣwtj `נוֹסֵעַ?`; hꜣm.t `דְּמֵי־מַעֲבָר`;
+  sḏꜣj-ḥr `עִנֵּג` / `עֹנֶג` (23.16); ḥꜣ.wtj `מִבְחָר`; šfd `סֵפֶר` (ꜥr.t keeps `מְגִלָּה`); ḫm (noun) `בַּעַר` (Prov
+  12:1); ꜥš "read aloud" `נִקְרָא`; wḥꜥ `פֵּרֵשׁ` (3.10); zẖꜣ.w "writing" `כְּתַב יָד`; Pꜣ-mjw `פָּמִיוּ` ("the cat").
+- **Splits by sense, noted at the lines:** wꜣḥ `חָדַל` (26.10; 10.9 `השאיר`, 23.14 `שָׁת`); bꜥꜣ "overlook (the
+  fare)" `פָּטַר` (27.5; elsewhere `מָאַס`); šdj "extract" `חִלֵּץ` (27.4, the same verb as 21.8 "rescue").
+- **Two-version line:** 25.15 has the sentence twice; both kept (as 22.2, 22.4).
+- **25.13:** the scribe wrote dḥꜣ "straw" (Lange: "whose speech is straw"); the base's ⟨dḥr⟩ "bitter" (TLA) is followed.
+
+### Gates
+- **26.16 `הַיְאוֹר` (jtrw) is blocked:** the `יאור` licence lists `jtrw|jtr|jwtr|jtwr|…` but not the group-writing
+  `jwtwr` of this line (the same TLA lemma, tla33370, as 27.2, which passes). I did not change the Hebrew or the tool;
+  the entry carries the tool's own `[היתר שער: היאור – …]` marker with the reason. **Proposed tool fix:** add `jwtwr`
+  to the licence regex of the `יאור` gate.
+
+### Open decisions for the user
+- twr's three-way split (`הִנָּזֵר מִן` / `הוֹקִיר` / `נִטְהַר`) against a single verb (none exists that keeps all
+  three senses).
+- 27.1 hꜣwtj "passenger (?)" and 26.9's gmj "find (guilty) (?)" remain uncertain (marked).
+
+### Progress log
+- Drafted house by house (26; 27; 28–30 with the colophon), each saved and followed by `fill` + `verify AM`.
+- Pass (a): negations (bn 25.10–11; bw jri̯=w 25.12; tm 26.10; mꜥn 26.20; bn 27.1), the conditionals and topicalized
+  `jr` lines, the stative 26.17, the editor's supplements (`⟨ḏi̯.t⟩`, `⟨wsr⟩`, `⟨dḥr⟩`) read whole and unbracketed.
+- Pass (b): headings; 26.4 = 20.16 identical; 27.3 ~ 16.17; 27.2 ~ 18.4, 21.9; 26.20 ~ 19.22; 27.13 ~ 7.9; 27.14 ~
+  3.10; 27.16 ~ 1.13; 27.17 ~ 1.4, 12.5; new strings grepped. Changes: 20.5–20.6 (`כלי־השיט`, above), 25.15 (`אונייה`).
+- Pass (c): read houses 26–30 aloud in `translation-AM.rtl.md`.
+- `verify AM --strict`: **0 problems** (551 / 551); `build AM`: 551 lines; `selftest`: 0 failures;
+  `check_bible_quotes.py` on the annotated file, the intro, `translation-AM.rtl.md`, `translation.rtl.md` and
+  project.md: 0 problems. The intro now describes the complete translation.
+
+### The text on its own terms
+- **Rank and age as cosmic order** (25.1–25.5, 25.17–26.1): befriend your equal and "Re is sound from afar"; the elder
+  "saw Re before you"; a junior's curse is reported to the rising Aten – the sun is the court of appeal.
+- **Courtesy costs nothing** (25.10–25.13): the bared shoulder is not weakened, the bowed back not broken, the
+  pleasant speaker not impoverished.
+- **The client as hound** (26.6–7): the dog does not bark at the one who feeds it.
+- **The god's preference** (26.13–14): he loves the one who honours the poor more than the one who respects the
+  great – a theological ranking, not only an ethic.
+- **The ferry** (26.15–27.5): the Nile crossing as a moral place – no private ferries for profit, the fare from the
+  rich, free passage for the poor.
+- **The book about itself** (27.7–27.15): pleasure and teaching, "the foremost of every book"; read aloud to the
+  ignorant it "purifies" him; the pupil becomes an interpreter and a teacher; the skilled scribe becomes a courtier –
+  the opening titles (1.4, 1.13) come back as a promise.
+- **One hand** (28.1): Senu son of Pamiu ("the cat") copied the only complete text, c. 650 BCE.
+
+### Key parallels
+- **27.7 ↔ Prov 22:20** [equivalent]: "these thirty houses" behind ketiv `שלשום` / qere `שָׁלִשִׁים`, and the address
+  `לְךָ` = *n=k*.
+- **27.16–17 ↔ Prov 22:29** [equivalent / divergence]: the skilled man stands before kings – Egyptian `בָּקִי` /
+  `מִשְׂרָה` / `רֵעַ (הַמֶּלֶךְ)` against `מָהִיר` / `מְלַאכְתּוֹ` / `לִפְנֵי-מְלָכִים`; Ezra 7:6 `סֹפֵר מָהִיר`.
+- **26.9–26.12 ↔ Deut 24:17–21; Ruth 2:15; Ex 22:20** [equivalent / divergence]: the widow in the field, the stranger
+  (`נָכְרִי`, not `גֵּר`).
+- **26.13–14 ↔ Prov 14:31, 19:17; 1 Sam 2:30; Lev 19:15** [equivalent / divergence]: `וּמְכַבְּדוֹ חֹנֵן אֶבְיוֹן`.
+- **25.17–25.19 ↔ Eccl 10:20; Ex 22:27** [equivalent]: do not curse the great – the bird of the sky / the rising sun
+  carries the report.
+- **26.2 ↔ Lam 3:30; Isa 50:6** [equivalent]: giving the cheek to the smiter.
+- **27.8–27.10 ↔ Prov 1:2–4; Ps 19:8; Eccl 12:9, 12** [equivalent / divergence]: teaching to the simple; Qohelet's
+  epilogue warns against many books, Amenemope calls his "the foremost of every book".
+- **26.16, 27.2 ↔ Gen 41:1–2** [cognate]: jtrw = `יְאֹר`.
+
+### Lines shared with other texts
+- 26.4 = 20.16 (identical Hebrew). Repeated structures: listed under pass (b). The closing returns to the opening
+  (27.13–17 ↔ 1.4, 1.13, 3.10–11).
+
+### Proposals for the shared renderings
+| Egyptian | Hebrew | Reason / lines |
+|---|---|---|
+| twr | `הִנָּזֵר מִן` (with r) / `הוֹקִיר` (with object) / `נִטְהַר` (absolute) | 15.7 / 25.7, 25.9, 26.14 / 27.12 |
+| wꜣš | `כִּבֵּד` | 26.13 (Prov 14:31) |
+| sk.tj / kꜣr / jmw / dp.t | `סְפִינָה` / `סִירָה` / `כְּלִי־שַׁיִט` / `אֳנִיָּה` | 10.10 / 10.11 / 20.5 / 25.15 |
+| ḥmw / ḥp.t / mḫn.t | `מָשׁוֹט` / `מְשׁוֹט־חֲתִירָה` / `מַעְבֹּרֶת` | 1.10, 20.4 / 26.18 / 26.17, 27.2 |
+| ḥnq.t | `שֵׁכָר` ★ (vocalized against fqꜣ `שָׂכָר`) | 24.22, 25.8 |
+| ḏrḏr | `נָכְרִי` | 26.11 |
+| šrj / kd / nḏs | `זוּטָר` / `קָטָן` / `צָעִיר` | 25.20, 26.1 / 25.2 / 2.14 |
+| ẖrd / ms.w | `נַעַר` / `יְלָדִים` | 25.9 |
+| ꜣ.t "back" | `גֵּו` | 25.11 |
+| ḫm (noun) | `בַּעַר` | 27.10–11 |
+| šfd / ꜥr.t | `סֵפֶר` / `מְגִלָּה` | 27.9 |
+| **Tool fix** | add `jwtwr` to the `יאור` gate licence | 26.16 |
+
+### Lessons for the guidelines
+- A lemma check by Hebrew string catches collisions late: the ship words collided across two translators (10.10, 20.5)
+  and were found only when a fourth ship word appeared. A "one Egyptian lemma per Hebrew noun" report (Hebrew → lemma
+  ids, from the parses) would show them at once.
+
 ## Parallels index
 (generated from the הקבלה bullets by `../build_parallels_index.py`)

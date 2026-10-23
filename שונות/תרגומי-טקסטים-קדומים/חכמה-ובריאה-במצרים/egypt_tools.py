@@ -298,7 +298,7 @@ RESERVED = [
     (W + alt("כסיל", "הכסיל", "כסילים", "אויל", "האויל", "אוילים", "נבל", "הנבל") + E, r"wḫꜣ|\bḫm\b|ḫm,w", "the fool words of Proverbs only for the Egyptian fool words: wḫꜣ = כְּסִיל, ḫm 'the ignorant' = הַבּוּר? (renderings §4.3)"),
     # --- Egyptian loanwords in Hebrew (renderings §4.2): only for their Egyptian source ---
     (W + alt("תבה", "תיבה", "התבה", "התיבה", "תבת", "תיבת", "תבתו", "תיבתו", "תבתך", "תיבתך") + E, r"ḏbꜣ|ḏb\(ꜣ\)|ḏbꜣ,t|ṯbt|db\.t", "תֵּבָה only for ḏbꜣ.t 'chest, coffin' [cognate: Egyptian loanword, Gen 6:14, Ex 2:3]"),
-    (W + alt("יאור", "היאור", "יאורים", "היאורים", "יאורי", "יאוריהם", "יאר") + E, r"jtrw|jtr\b|jwtr|jtwr|jtr,w|jꜣtr|\bjtrw", "יְאֹר only for jtrw 'river' [cognate: Egyptian loanword, Gen 41:1, Ex 2:3]"),
+    (W + alt("יאור", "היאור", "יאורים", "היאורים", "יאורי", "יאוריהם", "יאר") + E, r"jtrw|jtr\b|jwtr|jtwr|jwtwr|jtr,w|jꜣtr|\bjtrw", "יְאֹר only for jtrw 'river' [cognate: Egyptian loanword, Gen 41:1, Ex 2:3]"),
     (W + alt("סוף", "הסוף", "בסוף", "כסוף") + E, r"ṯwf|ṯwfj|twfj", "סוּף only for ṯwfj 'papyrus thicket' [cognate: loanword, Ex 2:3]; 'end' = קֵץ / אַחֲרִית"),
     (W + alt("אחו", "האחו", "באחו") + E, r"ꜣḫ\b|ꜣḫ,w|ꜣḫ-w|ꜣḫw", "אָחוּ only for ꜣḫ(w) 'reed meadow' [cognate: loanword, Gen 41:2]"),
     (W + alt("פרעה", "פרעו", "לפרעה", "הפרעה") + E, r"pr-ꜥꜣ|pr-ꜥꜣ", "פַּרְעֹה only for pr-ꜥꜣ 'the Great House' [cognate]; nsw = מֶלֶךְ, ḥm=f = הוֹד מַלְכוּתוֹ"),
