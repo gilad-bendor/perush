@@ -471,3 +471,12 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
   *ḫalāqu* `אָבַד`, *duppuru* `הִסְתַּלֵּק`, *atluku* `לֵךְ`; the boundary verbs *ebēru* `עָבַר`, *etēqu* `חָלַף` (Etana),
   *nabalkutu* `דִּלֵּג`, *erēbu* `נִכְנַס`; a parallel text (KalNAPar1) counts as a copy for the brackets, its pluses go to
   the apparatus only.
+
+### 10.6 Tablet VI (2026-10-23)
+- **Accepted:** *takālu* `בָּטַח` (*attakil takālu* `ובטחתי בָּטוֹחַ`, vocalized; the prophecy corpus's *takālu* = `בָּטַח`);
+  *zaqāpu* `זָקַף` [cognate]; *ūru* `גַּג`; *bābu* `פֶּתַח`; *kidinnu* `אוֹת־הֲגָנָה`; *bēru* `בֵּרוּ` (always vocalized,
+  Etana); *mār šipri* `שָׁלִיחַ` (singular where the writing is); *ulinnu* `חוּט צִבְעוֹנִי`; *sarāqu* `זָרַק` [cognate];
+  *naḫāru* D `צִמֵּק` (the *nuḫurtu* pun explained); *šaʾerru* `שַׁאֵרּוּ`; *riḫītu* / *riḫûtu* `וָלָד`; *kaṣāṣu* D `קִצֵּץ`
+  (= I 119); *nāsiḫ libbi* `נוֹסֵחַ לֵב` (vocalized: `נוסח` is the rubric's word); *tarbaṣu* `מִרְבָּץ`; *šapāku* (heap)
+  `שָׁפַךְ` (2 Sam 20:15); *ṭābtu* `מֶלַח` and *kibrītu* `גָּפְרִית` as the speakers of their own incantations; the
+  repeated lines of VI 126–157 identical, punctuation included. VIII 46–49 copy VI 45–46b.
