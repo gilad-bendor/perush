@@ -216,7 +216,7 @@ Merged by the corpus coordinator from the seven texts' proposals (`2-טקסטי-
 
 ### 5.4 Open between projects 1 and 2
 - *ṭeḫû*: Enūma eliš `קָרַב`; project 2 `נִגַּשׁ` (Adapa has both *qerēbu* and *ṭeḫû*). Proposal: `נִגַּשׁ` corpus-wide, Enūma eliš's *âru* then needs another verb. Left for the user.
-- *šipru*: still `פֹּעַל` (project 1 open decision 4); project 2 has no occurrence.
+- *šipru*: `מְלָאכָה` in every corpus (the user's decision, 2026-10-23; Enūma eliš V 63, 141, VI 37, 57, 67 changed from `פֹּעַל`); project 2 has no occurrence.
 
 ## 6. Fixed before projects 3–4 (Bird and Fish; Enki and the World Order), 2026-10-19
 Set by the corpus coordinator before drafting. Binding for both projects; the translators add rows to their project's `renderings.md` and propose changes in `project.md`. Everything in §0–§5 (and project 2's `renderings.md` §1–§2 and its Text 2–5 rows for Sumerian) applies; this section adds and narrows. Checked by `sumerian_tools.py verify` (reserved strings and name traps).

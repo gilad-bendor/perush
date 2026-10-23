@@ -147,7 +147,8 @@ passed afterwards.
 **The cross-corpus splits of Round 3 were settled on 2026-10-23** (by the lead, under the user's rule): the table, with
 every change, the lines it touched and the splits kept with their reasons, is **`harmonization--2026-10-23.md`**;
 guidelines §6.7 sums it up; each corpus's `renderings.md` has a "2026-10-23 harmonization" line. Applied in three batches,
-one agent at a time; all verifiers and `check_bible_quotes.py` passed afterwards.
+one agent at a time; all verifiers and `check_bible_quotes.py` passed afterwards. The last decision left for the user,
+*šipru* "work", was settled by the user the same day: `מְלָאכָה` in every corpus (guidelines §6.7).
 
 **For the user, from the world survey (2026-10-21; `curated-translation-candidates--world.md` §7):**
 1. ~~Widen the work beyond Mesopotamia, and approve Round 4?~~ **Settled 2026-10-22:** yes – the merged Round 4 plan.
@@ -163,7 +164,6 @@ Still open:
 | Decision | Now | Where |
 |---|---|---|
 | The Sargon Birth Legend's base text | King 1907 (our transcription from the page images) | Westenholz 1997 is not to be bought (the user's rule): check again if an open copy appears |
-| **For the user:** *šipru* "work, task" | `מְלָאכָה` (Atra-ḫasīs, the other flood texts, Gilg. XI 180: ~13 lines) / `פֹּעַל` (Enūma eliš V 63, 141, VI 37, 57, 67: chosen so as not to pre-empt `מְלַאכְתּוֹ`, Gen 2:2–3) | Left to the user because it touches Gen 2:2–3. The lead recommends `מְלָאכָה` everywhere, tagged [equivalent]: by meaning it is the better word for an assigned task, and the link is real (both words grew from "sending": *šapāru*, `לאך`), so the rule against pre-empting (§6.4, among *equally good* renderings) does not apply. Changing it means 5 Enūma eliš lines and their notes. (*šipru lemnu* "an evil deed" = `מַעֲשֶׂה רַע` stays.) |
 | EST's transliterations (found by Round 3 run 3) | `tools/cdl2md.py` doubled compound logograms until 2026-10-22: 118 + 41 lines in the EST source files and their copies in `חוקים-ובריתות/1-…/` (the Hebrew is unaffected) | regenerate the EST source files with the fixed converter when ORACC is reachable (`tools.md`) |
 | The per-text open decisions | see each `project.md` | minor ones: the next session on that corpus decides them (the user's rule) |
 

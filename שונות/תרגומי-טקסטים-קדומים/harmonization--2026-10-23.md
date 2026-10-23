@@ -72,7 +72,7 @@ it, and report.
   *dam tuku* – by sense.
 - *šērtu* `עֹנֶשׁ` / `אַשְׁמָה` – the word means both "sin" and "punishment": by sense.
 - Erra = `אֶרָּה` (Gilg. XI 195, the flood, Advice to a Prince agree; add to the §6.5 name table).
-- *šipru* `מְלָאכָה` / `פֹּעַל`: **left to the user** (Gen 2:2–3).
+- *šipru*: **settled by the user, 2026-10-23: `מְלָאכָה` everywhere** – Enūma eliš V 63, 141, VI 37, 57, 67 (`פֹּעַל` → `מְלָאכָה`) and the flood references 131, 149 (`מעשה` → `מלאכה`) changed; [equivalent] Gen 2:2–3.
 
 Batch B (2026-10-23): applied in the creation corpus (EE, creation 2, EWO), Etana, Gilgameš, the wisdom corpus,
 Maqlû, the netherworld, Atra-ḫasīs, the prophecies and EST; it also changed the lines that carry the same word beyond

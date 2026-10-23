@@ -251,7 +251,7 @@ Rows added by the tablet translators (lemma | Hebrew | first line | note).
 | *šapāku*; *šebû*; *peḫû*; *ezēbu* | שָׁפַךְ [cognate]; שָׂבַע [cognate]; סִתֵּם; עָזַב [cognate] | V 53; V 54; V 56; V 56 | *šapāku* `שָׁפַךְ` also for earth/mountains, since `צָבַר` = *kamāru*. |
 | *ṣertu*; *bēru*; *nambaʾu*; *palāšu* D; *kuppu* | דַּד; רָחוֹק; מַבּוּעַ [cognate?]; נִקֵּב; בּוֹר | V 57–58 | Not `שַׁד` (Hebrew-only pun on `שַׁדַּי`); not `מַעְיָן` (Gen 7:11). |
 | *zibbatu*; *durmāḫu*; *ḫallu*; *retû* | זָנָב; דּוּרְמָחוּ; יָרֵךְ; תָּקַע (*retât* `*יְתֵדוֹת*`) | V 59; V 59; V 61; V 61 | |
-| *šipru*; *mānaḫtu* | פֹּעַל; יְגִיעָה | V 63, 141; V 142 | Not `מְלָאכָה` (semantic twin, [equivalent], noted). *dullu* stays `עָמָל`. |
+| *šipru*; *mānaḫtu* | מְלָאכָה; יְגִיעָה | V 63, 141; V 142 (and VI 37, 57, 67) | `מְלָאכָה` since 2026-10-23 (the user's decision: one word in every corpus, as in the flood texts; [equivalent] Gen 2:2–3, both words grew from "sending": *šapāru* / `לאך`); drafted as `פֹּעַל`. *dullu* stays `עָמָל`. |
 | *pelludû*; *ṣabātu* Št ("make take hold") | חֻקּוֹת; הִתְפִּיס | V 67; V 68 | *parṣu* stays `פֻּלְחָן`; Š/Št "post" stays `הִצִּיב`. |
 | *tāmartu*; *tabālu*; *qiāšu*; *qīštu* | שַׁי; הוֹלִיךְ; הֶעֱנִיק; מַתָּנָה | V 70; V 70; V 70, 80; V 80 | `תְּשׁוּרָה` = *igisû* (IV 134); *tabālu* `נָטַל` in I 68, but `נָטַל` = *ekēmu* (IV 121): open decision. |
 | *redû* G; *edēru*; *alālu* III Š (+ obj.) | נָהַג; חִבֵּק; הִלֵּל | V 72; V 79 (I 53); V 81 | |
