@@ -87,3 +87,7 @@ Kramer-1940--AS-12--Lamentation-over-Ur/*
 ORACC/epsd2-royal--Q000377--Gudea-Cylinders/*.json
 ORACC/epsd2-royal--Q000377--Gudea-Cylinders/*.html
 ORACC/etcsri--Q000377--Gudea-Cylinders/*.html
+# Ugaritic (Round 4 run 1, 2026-10-23): the Copenhagen Ugaritic Corpus is CC BY-NC 4.0 – kept out of git like eBL
+# (guidelines §8); re-obtain with tools/sources_sync.py (fetch-recipes.tsv) and tools/cuc2md.py md
+CUC/*
+!CUC/README.md

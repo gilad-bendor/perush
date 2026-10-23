@@ -177,6 +177,15 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 - **`Tallqvist-1895--Maqlu/`**: Tallqvist 1895, the first edition (public domain; archive.org OCR, committed): rank 5 only.
 - Not open (records only): Abusch 2016 (AMD 10, Brill), Abusch 2015 (SBL WAW 37: not ours, §2.3), Meier 1937 (AfO Beiheft 2), Schwemer 2007 (*Abwehrzauber und Behexung*).
 
+### 4.4r Ugaritic: the Baal Cycle and the short myths and charms (`מיתוסים-אוגריתיים/`; Round 4 run 1, 2026-10-23)
+| Folder | What |
+|---|---|
+| `CUC/` | **BASE TEXT.** The Copenhagen Ugaritic Corpus v0.2.8 (Zenodo 21380577, concept DOI 10.5281/zenodo.10695308; **CC BY-NC 4.0**, git-ignored with fetch recipes): KTU³'s readings of 278 tablets as Text-Fabric, with DULAT-based machine parses per word (reviewed by hand for KTU 1.3 and 1.5 I–II). `tools/cuc2md.py` converts it (`text/KTU-1.x.md`; line data for `ugarit_tools.py`). See its README for the format notes (`cert` True = certain). |
+| `Ben-Yehuda--Cassuto-1951--HaEla-Anat/` | Cassuto, *האלה ענת* (1951), public domain: Hebrew transcription + vocalized Hebrew translation of KTU 1.3 (and parts of others), with commentary and the biblical parallels. Rank 5–6: register check only; its Hebrew-letter transcription convention is adopted. |
+
+- **EUPT** (Göttingen, `eupt.uni-goettingen.de`, checked 2026-10-23): the new critical edition of the Ugaritic poetic texts is published through a TIDO viewer; its phase 1 (Kirta, Aqhat, the Rephaim; Louvre collation March 2026) is not yet out as data, and the Baal Cycle is phase 2. Nothing to use yet for KTU 1.1–1.6; re-check before Aqhat / Kirta ("Ugarit II").
+- **Not used:** KTU³ (paid); KTU² scan on archive.org (rights unclear); DULAT³ (Brill, paid: CUC's glosses are DULAT's, per word); SBL WAW PDFs (Pardee, *Ritual and Cult*: not ours, guidelines §2.3); the modern translations (Smith & Pitard, Pardee in *COS*, Wyatt, Smith in *UNP*) are © and not online: the translators check against what they know of them, marked as recalled, and against Cassuto.
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).
