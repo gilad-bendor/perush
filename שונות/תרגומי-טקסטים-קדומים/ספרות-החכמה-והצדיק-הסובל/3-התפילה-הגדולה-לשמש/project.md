@@ -105,7 +105,7 @@ Translator SH-a, Round 3 run 4 (drafted 2026-10-21/22; the run paused for the qu
 - The light words and the net words of the Decisions above (for §11.x), including *helû* Š `הבהיר`, *uklu* `אֹפֶל`, *namurratu* `יפעה`, *šalummatu* `הוד`, *birbirrū* `שביבים`, *barīru* `נצנוץ`, *ṣētu* `שָׁרָב`; *rappu* `סד`, *kamāru* `מִכְמֹרֶת`, *kippu* `מלכודת`, *ḫuḫāru* `מצודה` (and open decision 2).
 - §11.2: replace the *abbūt enši ṣabātu* row by `אחז באבהות החלש`; *arna šūzubulu* → `הסביל עוון` (open decision 3); *pāna wabālu* `נשא פנים` as a licensed idiom (open decision 1).
 - *zakû* D `זיכה` [cognate] beside *ebbu* `נקי`; *māḫāzu* `מחוז` [cognate] (Ps 107:30; also Gilgameš I 43); *nāqidu* `נוקד`, *rēʾû* `רועה`.
-- *bâʾu* `צעד` and *ebēru* `עבר` [cognate]: Ludlul I 80, IV c+16 and Theodicy 291 give *bâʾu* `עבר`, Theodicy 17 gives *ebēru* `עבר` – one Hebrew for two verbs; harmonize at the end of the run.
+- *bâʾu* `צעד` and *ebēru* `עבר` [cognate]: Ludlul I 80, IV c+16 and Theodicy 291 give *bâʾu* `עבר`, Theodicy 17 gives *ebēru* `עבר` – one Hebrew for two verbs; harmonize at the end of the run. **Settled 2026-10-23** (`../../harmonization--2026-10-23.md` row 19): *bâʾu* = `צעד` everywhere.
 - *qaqqaru* `קרקע` (Gilgameš III 42, IV 101, V 154; SH 96) against Ludlul I 73 `ארצה`, Theodicy 293 `אל הארץ`.
 - *ṣīru* `נעלה` (creation, flood, SH 82); *balu* + suffix `זולת`; *šiddu* `פאה`; *nesû* (adj.) `מרוחק`.
 - Tool: license the `ארך` gate by *nūru* (the homograph `אורך` "your light"; also `לאורך`) – SH-b will meet *nūrka* at 150.

@@ -407,7 +407,7 @@ eBL `reading-edition.md` (N, T, L, notes, every ATF line of 144–297 with all `
 | 287 | *rēmēnû* | רחום | `אֵל רַחוּם וְחַנּוּן` (שמות לד:ו) | [cognate] | A divine epithet given to the friend. |
 | 288 | *namrāṣa amur* | את המעקשים ראה | `רְאֵה יְהוָה כִּי צַר לִי` (איכה א:כ) | [equivalent] | *namrāṣu* also opens the poem (Th1 2). |
 | 290 | *rēṣa u tuklata zamar ul āmur* | עוזר ומבטח – כהרף עין לא ראיתי | `כִּי-אֵין עוֹזֵר` (תהלים כב:יב) | [equivalent] | Also `וְאֵין-לִי מַכִּיר` (תהלים קמב:ה); the answer to the friend's "your trust, who was it?" (172). |
-| 291 | *rebīt ālīya abâʾ nēḫiš* | את כיכר עירי – עברתי בנחת | `בָּרְחוֹב אָכִין מוֹשָׁבִי` (איוב כט:ז) | [divergence] | Job enthroned in the square; the sufferer passed through it unseen. |
+| 291 | *rebīt ālīya abâʾ nēḫiš* | את כיכר עירי – צעדתי בנחת | `בָּרְחוֹב אָכִין מוֹשָׁבִי` (איוב כט:ז) | [divergence] | Job enthroned in the square; the sufferer passed through it unseen. |
 | 291 | *nēḫiš* | בנחת | `דִּבְרֵי חֲכָמִים בְּנַחַת נִשְׁמָעִים` (קהלת ט:יז) | [equivalent] | |
 | 292 | *rigmu ul iššapu iššapil atmûʾa* | קול לא התעבה, נשפלה שיחתי | `וְשָׁפַלְתְּ מֵאֶרֶץ תְּדַבֵּרִי` (ישעיהו כט:ד) | [cognate] | *šapālu* = `שפל`, of low speech. |
 | 292 | (same) | | `לֹא יִצְעַק וְלֹא יִשָּׂא; וְלֹא יַשְׁמִיעַ בַּחוּץ קוֹלוֹ` (ישעיהו מב:ב) | [equivalent] | The quiet servant. |
@@ -448,7 +448,7 @@ eBL `reading-edition.md` (N, T, L, notes, every ATF line of 144–297 with all `
 2. **§3 body and society:** *ṣurru* `טוּחוֹת` (always vocalized); *rēšu* "slave" `משרת` / "head" `ראש`; *katû* `רָשׁ` (vocalized) beside *katûtu* `רֵישׁ`; *mērênû* `עֵירוֹם` (vocalized; the only "naked" word so far); *dunnamû* `אביון` (used); *ulālu* `דַּךְ`; *etnušu* `חלוש`; *pisnuqu* `אומלל`; *ašpaltu* `השפל ממני`; *šalṭu* `שַׁלִּיט`, *šitluṭu* `משתלט`; *ḫābilu* / *ḫibiltu* `חובל` / `חבלה` [cognate]; *šaggāšu* / *šagāšu* `רוצח` / `רצח` (open 6); *nērtu* `קטל`; *isḫappu* `בליעל`; *itbāru* `ידיד`; *tardennu* `המשנה`, *duppussû* `זוטר`, *aplu* `יורש`, *bukru* `בכור`.
 3. **§4 wisdom:** *eršu* `משכיל`; *šalbābu* `מְחוּכָּם`; *aššaru* `*בקיאה*`; *šuwāʾu* `רִבּוֹן`; *tašīmtu* `תושייה` (Ludlul); *naklu* `שנונה`; *usandû* `יוקש`; *šukāmu* `*חרט*`; *ṭuppu* `לוח`; *riddu* `הגינות`; *šummu* `התנאי`; *ūsu* `מנהג`; *lēʾûtu* `מסוגלות`; *maṣû* "equal" `נערך` (open 3).
 4. **§2 personal religion:** *nīru* `מוֹטָה` (with *abšānu* `עול`); *damāṣu* `השתטח`; *mutnennû* `מתפלל`; *tabīnu* `סִתְרָה`; *anzillu* `תועבה`; *šiāmu* D stative `גזור`.
-5. **§5 images:** *dīšu* `דשא` [cognate]; *ebūru* `קציר`; *ḫiṣbu* `לשד`; *lāmu* `גחלת`; *šētu* `רשת` (2026-10-22; was `מכמר`); *ḫubūru* `קנקן`; *tupšikku* `דּוּד` (vocalized); *miṭirtu* `פלג`; *lītu* `פרה`, *būru* `עגל`; *ḫarḫarru* `שלשלת`.
+5. **§5 images:** *dīšu* `דשא` [cognate]; *ebūru* `קציר`; *ḫiṣbu* `לשד`; *lāmu* `גחלת`; *šētu* `רשת` (2026-10-22; was `מכמר`); *ḫubūru* `קנקן`; *tupšikku* `דּוּד` (vocalized); *miṭirtu* `פלג` (2026-10-23 harmonization: `תעלה`); *lītu* `פרה`, *būru* `עגל`; *ḫarḫarru* `שלשלת`.
 6. **§6 formula:** 256 confirmed; *alāku idi* "go at one's side" `הלך לצד` (Ludlul) also of wealth (282).
 7. **§8 always vocalize, add:** `טוּחוֹת` (all forms), `רָשׁ`, `עֵירוֹם`, `נָגַשׂ`, `עָנָו`, `סְגוֹר`, `סִתְרָה`, `הַדּוּד`, `מוּסָר`, `הַגְּבִירָה`, `מוּצֶרֶת`, `כְּהֵלֶךְ`, `הַדָּךְ`, `רָעוֹת`, `שְׁפַל` (imperative), `הִשָּׂם`, `אָכְלוֹ`, `בּוֹנָתָהּ`.
 8. **`wisdom_tools.py` (optional):** allow *pašallu* for the `תם` check if `כֶּתֶם` is preferred (open 5).
