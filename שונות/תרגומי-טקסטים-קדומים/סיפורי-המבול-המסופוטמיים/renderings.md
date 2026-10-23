@@ -199,6 +199,8 @@ Formulas:
 
 2026-10-23 harmonization (`harmonization--2026-10-23.md`): the advice formula *na ga-de₅ na de₅-ĝu₁₀ ḫe₂-dab₅* = `אתן עצה – עצתי תיאחז!` (row 13: one formula, one Hebrew; *dab₅* = `אחז`); changed lines: the flood references (project 6), Šuruppag 9 `עצתי תילקח` → `עצתי תיאחז` (kept identical to the wisdom corpus's Šuruppag 9). No other row of the table touches this corpus's files in this pass (Atra-ḫasīs's *naḫbalu*, row 3, comes later).
 
+2026-10-23 harmonization, batch B (row 3): *naḫbalu* = `מוֹקֵשׁ` [equivalent: Ex 23:33, 34:12] (`מַלְכֹּדֶת` is *kippu*'s; Ludlul II 84 and Etana already `מוקש`); changed lines: Atra-ḫasīs I 15 `[את הבריח], מלכודת הים,` → `[את הבריח], מוקש הים,`; II E 73, E 77 `את הבריח, מלכודת הים,` → `את הבריח, מוקש הים,`; and, not in the table, the four MB copies of the same line, II G 31a `[את הבריח, מלכ]ודת הים,` → `[את הבריח, מו]קש הים,` and G 35e, G 40, G 49g `[את הבריח, מ]לכודת הים,` → `[את הבריח, מ]וקש הים,` (the brackets follow each copy's break). No other *naḫbalu* in the flood projects. The tablet files were changed by hand with the annotated lines and checked against them by script; `translation.rtl.md` rebuilt.
+
 
 ## 4. Register reminders specific to the corpus
 - Sumerian and Greek texts use the same Hebrew for the same concept: the Sumerian *a-ma-ru* = `מַבּוּל`, the boat = `סְפִינָה`, and so on. Berossus's Greek πλοῖον = `סְפִינָה`, while σκάφος and λάρναξ get their own rendering with a note.
