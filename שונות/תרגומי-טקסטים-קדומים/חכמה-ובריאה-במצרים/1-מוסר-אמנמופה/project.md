@@ -876,5 +876,68 @@ translators wrote them; this section corrects them.
 `build AM`, `verify AM --strict` (0 problems), `selftest` (0 failures) and `check_bible_quotes.py` on the annotated
 file, `translation-AM.rtl.md` and `translation.rtl.md` (0) after the pass. No fixed line (§7) or gate problem.
 
+## Review pass (b), consistency
+
+A lemma → Hebrew map built by script from every פירוק bullet (each `("…")` matched to its word in `egypt_tools.rows`,
+2,338 words; scratchpad, not in the repo): (i) lemmas with ≥2 occurrences and more than one Hebrew word, (ii) Hebrew
+words (prefixes stripped) that render more than one lemma. Each case judged on the lines.
+
+### Changes (8 `>` lines; parse and notes updated)
+- **ḫꜣꜥ / qmꜣm "throw":** `הִשְׁלִיךְ` rendered both (9.10 qmꜣm, 11.17 ḫꜣꜥ). qmꜣm keeps it (9.10); ḫꜣꜥ "throw" moves:
+  **11.17** `להשליך את דבריו` → `להטיל את דבריו`. ḫꜣꜥ is otherwise `עָזַב` in all ten lines, the "throw" readings of the
+  TLA included (6.3, 9.12, 17.21: "abandon" fits, and 9.10 / 9.12 now differ exactly where the Egyptian verbs do).
+  **Renderings §10.2.5 should read `הֵטִיל` for ḫꜣꜥ "throw"** (`הִשְׁלִיךְ` stays qmꜣm's; 22.18 qmꜣm "rush" `הִסְתָּעֵר`, a
+  split by sense, noted there).
+- **wꜣḥ (four words) and `חָדַל`:** wꜣḥ "set, place" = `שָׁת` – **2.3** `הסופר המניח` → `הסופר הַשָּׁת` (as 23.14;
+  `הִנִּיחַ` is rḏj's "let", 4.8, 14.11, 18.18, 22.21); "leave behind" `הִשְׁאִיר` (10.9) and "leave off" – **26.10**
+  `ואל תחדל מלענות` → `ואל תרפה מלענות` – are splits by sense, now noted at 10.9, 23.14, 26.10. `חָדַל` is jꜣb's alone
+  (17.1).
+- **`חָלַשׁ`** rendered four lemmas (qbb 8.2, ṯnj 14.11 / 25.10, the compound zꜣw-ꜥ, bgꜣ 4.10): **4.10** `*תיחלש*?` →
+  `*תתרשל*?` (bgꜣ "be weary, slack", TLA "nachlässig"). qbb / ṯnj keep the shared word (both "be weak", both uncertain).
+- **ḫꜣb "bow":** 5.12 `שְׁחֵה` against 25.11 `הרכנה` (part 5's `הִרְכִּין`) – **5.12** → `הרכן (ראש) לפני הפוגע`
+  (`הִתְכּוֹפֵף` would collide with ksj `כָּפַף`, 16.20).
+- **Near-repeat** `z m ḏꜣrʾ=k`: **11.19** `אדם כשיעורך` → `איש כשיעורך` (= 25.4).
+- **Vocalization:** **9.2** `כד השכר` → `כד הַשֵּׁכָר` (renderings §10.5.3: `שֵׁכָר` ★, else `שָׂכָר` fqꜣ); **18.2** `איזה אל`
+  → `איזה אֵל` (as 6.16).
+- **Loanword tags** added: 4.16 `תִּמְסָח` [cognate] (first occurrence), 18.23 `אֵיפָה` [cognate].
+
+### Kept, with the reason
+- **Recorded splits by sense** (§10 or a note at the line): nb `אָדוֹן` / `בַּעַל`; hꜣw `עֵת` / `מָקוֹם` (7.13); dwꜣ.w
+  `מָחָר` / `בֹּקֶר`; ꜥꜣ `גָּדוֹל` / `רַב`; twr ×3; bꜥꜣ `מָאַס` / `פָּטַר`; šdj; wbn; bsj; mḥ `מִלֵּא` / `הֵאָחֵז`; stꜣ;
+  thꜣ `פָּגַע` / `הִרְחִיק`; ṯnj (15.17 / 20.19); rʾ `פֶּה` / `פִּיּוֹת`; nfr `טוֹב` / `יָפֶה` (18.9); mnḫ / bw-wꜣy / stairs
+  in `מַעֲלָה` (§10.4.4); ḫpr `נִהְיָה` / `יִהְיֶה`; ꜣḫ `מוֹעִיל` / `מוּטָב` (the formula).
+- **Natural, harmless:** jri̯, rḏj, ḏd, gmj, ptr (function-like verbs whose senses Hebrew must separate); ṯsj "levy" /
+  "lift up" (1.16 / 5.3); pẖr `טִפֵּל` / `סוֹבֵב`; s.t `כִּסֵּא` / `מָקוֹם`; mtr.w `הַדְרָכָה` / mtr.t `עֵדוּת`; pḥ
+  `הִגִּיעַ` / `הִשִּׂיג` (17.5); ḏꜣj `הֶעֱבִיר` (5.1, transitive) / `חָצָה` (26.16), beside snj `עָבַר`; rmṯ `אָדָם`
+  (a person) / `בְּנֵי הָאָדָם` (people), with z `אִישׁ` / generic `הָאָדָם` (19.13, 19.15) as §4.1 allows; ꜥꜣ / ꜥšꜣ
+  sharing `רַב`; the two "truly" words mꜣꜥ / mꜣꜥ.tj `אֲמִתִּי` (one root); the field words in `שָׂדֶה` (part 2).
+- **The reflexive `n=k`:** rendered `לך` everywhere (9.12, 10.6, 18.4, 21.15, 22.7 …) except where the Hebrew verb
+  is itself reflexive or intransitive: 11.13, 15.14, 22.14 `תתחבר`, 25.4 `התרועע`, 26.10 `תרפה מ־` – one rule, kept.
+- **Checked and uniform:** the 30 house headings (renderings §6.1; teens hyphenated, twenties with `ו`); every
+  `m-jri̯` line opens `אל`, every conjunctive after it `ואל` (or `ו` + imperative after an imperative); `מוטב … מ־`
+  (8.16 the recorded exception); `תועבת האל` 13.16 = 15.21, `תועבתו` 14.3; `הַחַם` ★ ×6, `השותק (האמיתי)`; jb `לב` /
+  ḥꜣ.tj `לבב` in every line; the names (renderings §3) vocalized at their first occurrence, one form each, and the
+  §5.3 ★ words vocalized everywhere. The 33 "similar" pairs of `data` (similarity ≥ 0.75) differ exactly where the
+  Egyptian does.
+- **Echo control:** no `בני`, `הט אזנך`, `איש חמות`, `בעל אף`, `תסג`, `עולם`, `כנשר` in any `>` line; 12.1 `מהיר`
+  renders šꜣrš "quick" (not sšꜣ, Prov 22:29). Loanwords of §4.2 used only for their words and tagged (תבה, יאור, איפה,
+  כתם, חותם / חתם, תמסח; the Semitic loans עשק, מכמורת).
+
+### The other corpora (`grep --all`, renderings of every corpus)
+Checked: `הטיל` (LH *nadû*, Gudea *ri*: sense renderings), `השליך` (*nadû*), `הרפה` (*ramû*), `התרשל` (LH
+*naparkû*), `חדל`, `שת`, `ברך` (*karābu*, *šud₃*), `גזל`, `עשק`, `פלש`, `הזיז`, `עוות` (*dâṣu*), `זייף`, `מאס`,
+`שנא` (*zêru*), `חן`, `אימה`, `צד`, `לכד` (*bâru*), `חזה`, `הביט`, `מאזנים`, `תועבה` (*anzillu*), `שקר`, `עוור`,
+`דל`, `עני`. None is another corpus's **cognate** of its source word, so nothing moved (§10.1.8). **For the
+coordinator:** five §4.3 / §10 words are the Hebrew cognates of Akkadian words that other corpora render with them –
+`אַלְמָנָה` (*almattu*), `שֵׁכָר` (*šikaru*, tagged [cognate] there), `מִדָּה` (*maddattu* "tribute" [cognate]),
+`טִיט` (*ṭiṭṭu*; gated for Sum. *im*), `תֶּבֶן` (*tibnu*; Sum. *in-nu*), and `כָּבֵד` (*kabtu*). By §10.3.2 they should
+move or be recorded as shared; they are binding §4 choices tied to the Bible comparisons, so I left them, and propose a
+§10 line recording them as shared words (an Egyptian word with the same meaning shares the Hebrew; the [cognate] tag
+stays with the Akkadian).
+
+`build AM`, `verify AM --strict` (0 problems, 0 repeated-line differences), `selftest` (0 failures),
+`check_bible_quotes.py` on the annotated file, `translation-AM.rtl.md` and `translation.rtl.md` (0) after the pass.
+No §7 fixed line was touched or found wrong.
+
 ## Parallels index
 (generated from the הקבלה bullets by `../build_parallels_index.py`)

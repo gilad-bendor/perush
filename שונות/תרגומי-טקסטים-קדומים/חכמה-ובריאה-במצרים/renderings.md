@@ -442,3 +442,9 @@ parallels table.
 2. Fidelity fixes: 8.4 `נלקחו` (passive sḏm=f, past), 8.19 `שנתן` (jw + sḏm=f, past circumstantial), 10.6 `אל תשמח לך` (n=k restored), 13.5 `שהוא נצמד אליו` (the relative form's subject), 16.16 `(את עצמך)` (not written). No negation or tense misread in the whole text.
 3. The §9 gate sample of 18.21 aligned with the drafted line (`הנוטלת שתיים`).
 
+### 10.7 Review pass (b), consistency (2026-10-23)
+1. **Throw / leave:** ḫꜣꜥ = `עָזַב` in all its lines; ḫꜣꜥ "throw (words)" 11.17 = `הֵטִיל` (not `הִשְׁלִיךְ`, which is qmꜣm's, 9.10; qmꜣm "rush" 22.18 `הִסְתָּעֵר` by sense). Supersedes §10.2.5.
+2. **wꜣḥ, split by sense:** `שָׁת` "set" (2.3, 23.14), `הִשְׁאִיר` "leave behind" (10.9), `הִרְפָּה מִן` "leave off" (26.10); `חָדַל` is jꜣb's alone (17.1). Supersedes §10.4.3 / §10.5.3 on wꜣḥ. rḏj "let" = `הִנִּיחַ` (`אַל תַּנִּיחַ`).
+3. ḫꜣb "bow" = `הִרְכִּין` (5.12, 25.11); bgꜣ "be slack?" = `הִתְרַשֵּׁל` (4.10; qbb and ṯnj keep `חָלַשׁ`); 11.19 = 25.4 `איש כשיעורך`; `הַשֵּׁכָר` (9.2) and `אֵל` (18.2) vocalized.
+4. **The cognate rule of §10.3.2, narrowed (the coordinator):** it applies to **loanwords and rare technical words** whose very presence would suggest a lexical contact with another language (`אָרִיס` < *errēšu*), not to the **common Semitic vocabulary** that every corpus uses for its own word: `אַלְמָנָה` (Akk. *almattu*), `שֵׁכָר` (*šikaru*), `מִדָּה` (*maddattu*), `טִיט` (*ṭiṭṭu*), `תֶּבֶן` (*tibnu*), `כָּבֵד` (*kabtu*) are shared words: in an Akkadian line they carry [cognate], in an Egyptian line [equivalent] (Egyptian has no cognate), and the comparisons with Prov 23:10, Lev 19:35, Job 33:6, Ex 5:7 stand.
+
