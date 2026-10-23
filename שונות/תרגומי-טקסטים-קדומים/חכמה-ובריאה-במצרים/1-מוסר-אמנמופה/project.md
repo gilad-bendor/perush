@@ -512,5 +512,152 @@ before the next house; see Lessons). No modern translation quoted; Lichtheim etc
 - **`check_bible_quotes.py` reads a bare "ch:v" after a backticked Hebrew word as Genesis** (a backticked word followed by
   the Hebrew words "in Proverbs 8:21" was checked against Gen 8:21): put the reference in parentheses right after the quotation, `` `…` (Book ch:v) ``, or none at all.
 
+## AM 19.10–24.20
+
+### Scope
+Part 4 of 5 (the second translator): houses 18–25 (19.10–24.20), 121 lines, all drafted. Lacunae: 22.2, 22.4, 23.16
+(`[…]`); scribal omissions supplied by the editor (`⟨r⟩` 19.11, `⟨n⟩ ⟨ky⟩` 24.1 from tTurin, the missing verb of 22.15,
+`⟨ḏi̯⟩` 22.21). House 18: "one thing are the words men say, another what the god does"; no one is without sin, sin
+is sealed by the god's finger; the tongue is the boat's oar, the Lord of All its pilot. 19: truth in court before the
+official. 20: the judge – do not cheat a man in court, take no reward from the strong; truth is the god's gift; false
+journals and oracles. 21: do not seek a strong patron – sit in the god's arms (refrain 22.5–8); do not empty your
+belly to all. 22: the opponent in argument – stay calm, let him empty his own belly (refrain 23.8–11). 23: eating
+before an official; look at the bowl before you. 24: the official's secrets; "the heart of man is the nose of the
+god". 25: the blind, the dwarf, the lame; man is clay and straw, the god his builder. Witness: tTurin CGT 58005
+(23.22–24.20 and on).
+
+### Sources consulted
+As in part 3: base and witness through `data … --wit`; the TLA German and Lange 1925 (OCR, chapters 18–25), read after
+drafting each house and quoted only from the open text.
+
+### Decisions
+- **The refrain fixed by its first copy** (22.5–22.8 → 23.8–23.11, byte-identical; 23.11's `p⟨ꜣy⟩=k` for `pꜣyw=k` is
+  spelling only): `ובכן, אינך יודע את עצות האל,` / `פן תיכלם מחר.` / `שב לך בזרועות האל,` / `שתיקתך תפיל אותם.`
+  (ḫr-rʾ-ꜥ `וּבְכֵן` §3a; bw rḫ=k `אינך יודע`; tm `פֶּן`; ṯm `נִכְלַם`; ꜥ.wj `זְרוֹעוֹת` as 5.4; gr "silence" `שְׁתִיקָה`;
+  ḥdb `הִפִּיל`). Proposed for renderings §7.
+- **New lemmas:** mnḫ (noun) = `מַעֲלָה` (19.14, 19.22, 20.1, 22.17; mnḫ participle 14.11 `מְעֻלֶּה`); whꜣ (noun) =
+  `כִּשָּׁלוֹן`; rwj … rwj = `לְחוּד … לְחוּד` (19.16–17); ḫm = `לא הִכִּיר` (as 9.11); ḫtm = `חָתַם` (19.21, the loan,
+  licensed); stꜣ "protector" = `מְגוֹנֵן` (22.3; TLA "Erlöser" – `גֹּאֵל` never; `מָגֵן` avoided as a trap); ḥrj
+  (noun, "superior") = `מִי שֶׁמֵּעַל` (22.1, as 11.15); ḥrj "fear" = `פָּחַד` (19.11); snḏ = `חָשַׁשׁ` (23.7; `יָרֵא`
+  avoided, the Akkadian corpora reserve it for *palāḫu*); mkḥꜣ = `הִתְעַלֵּם` (23.7, 24.5; `הִזְנִיחַ` is wnj's); šww
+  (caus. of šwj) = `הֵרִיק` (22.11, 23.4) and therefore ẖꜥꜣ = `רוֹקֵן` (7.6 `מרוקנות`, 22.9) – **18.20 changed** from
+  `מריקה` to `מרוקנת`; qnb.t "court" = `מוֹעֶצֶת־הַשּׁוֹפְטִים` (20.8, 20.21; not `בֵּית דִּין`: `דִּין` is the cognate of
+  Akkadian *dīnu* – the §10.3.2 rule – and not `שַׁעַר`, which would manufacture Prov 22:22); s.t-smtr / smtr =
+  `בֵּית־הַחֲקִירָה` / `חֲקִירָה`; mtr "witness" = `עֵד`; mꜥbꜣ.yt = `הַשְּׁלֹשִׁים` (20.18, the court of Thirty – the
+  gate passed); spr = `הִתְיַצֵּב`; hꜣn = `הִסְכִּים`; sḫm = `שָׁלַט`; mꜣꜥ.tj = `הָאֲמִתִּי` (20.22; `צַדִּיק` never); sḏw
+  "kilt" = `חֲגוֹר`; ḥtꜣ = `בָּלוּי`; fꜣ.t "gift (borne)" = `מַשְׂאֵת` (21.5; Gen 43:34; apart from jnw `מַתָּנָה`, fqꜣ
+  `שָׂכָר`); pḥ.tj = `כֹּחַ`; šdj = `חִלֵּץ` (`הִצִּיל` is nḥm's); hrw "journal" = `יוֹמָן`; štm = `הִתְגָּרָה` /
+  `הִתְגָּרוּת`; sḏfꜣ-tr = `(שבועת) הַנֶּאֱמָנוּת`; wḥm.w "herald" = `מַזְכִּיר` (21.12, [equivalent] 2 Sam 8:16); bjꜣ.t
+  "oracle" = `מוֹפֵת?`; swḏ = `מָסַר`; qs = `עֲצָמוֹת` (plural, so as not to read `עַצְמְךָ` = ḏs); ꜥq "enter" =
+  `נִכְנַס`; ṯsj hꜣj = `עָלָה וְיָרַד`; mꜣꜣ "see" = `חָזָה` (23.1; ptr keeps `רָאָה`, nw `הִבִּיט`); srf = `הִשְׁקִיט`;
+  qdd "sleep" = `נָם` (sḏr keeps `יָשַׁן`); rd = `רֶגֶל`; jrj "fellow" = `עָמִית`; ḫnw = `אִמְרָה` (as 12.4); šfj.t =
+  `יְקָר` (22.10, vocalized; `כָּבוֹד` reserved elsewhere); nrw = `מוֹרָא` (22.12; `הָדָר` avoided: `נֶהְדָּר` is šps's,
+  2.18); njs (noun) = `צְעָקָה`; prj-jb = `יוֹצֵא־הַלֵּב` (literal, hyphenated against the Hebrew idiom of fear); qmꜣm
+  "rush" = `הִסְתָּעֵר` (not qmꜣ: `יָצַר` untouched); ꜥqw "ration-bread" = `פַּת` (tʾ keeps `לֶחֶם`); wꜣḥ = `שָׁת`
+  (23.14; Ps 73:9; 10.9 had `משאירה` by sense); wgꜣ = `לָעַס`; sḏꜣj-ḥr = `הִתְעַנֵּג` / `עֹנֶג`; pwgꜣs = `רֹק`; qꜣj =
+  `קְעָרָה`; ẖnm.t = `בְּאֵר`; jdḥ = `שְׁאִיבָה`; fnd = `אַף` (24.4); sbj "laugh at" = `לָעַג` (24.9; `צָחַק` avoided –
+  the cognate of Akkadian *ṣiāḫu*, reserved in the everyday-voices corpus; Prov 17:5 `לֹעֵג`); pjṯꜣ = `הִתֵּל`; ḥsꜣ ḥr =
+  `הִזְעִים פָּנִים`; qd (noun) = `בּוֹנֶה` (24.14, as renderings §4.3); m-mn.t = `בְּכָל יוֹם`; ḫꜣ = `אֶלֶף`; jmn.tt =
+  `הַמַּעֲרָב`; ršj = `שָׂמַח` (as 10.6).
+- **dwꜣ.w** "morning; tomorrow" = `מָחָר` (19.11–13, 20.16, 22.6, as 6.18) and `בֹּקֶר` (16.9) by sense.
+- **sp** "occasion" = `פַּעַם` (20.19), as 17.3.
+- **ṯnj** (TLA one lemma, meaning uncertain in both places): 15.17 `נִכַּר?`, 20.19 `תִּבָּחֵן?` – a split by context,
+  both marked.
+- **stꜣ** "drag" = `מָשַׁךְ` (20.1; 2.6 `המביא` by sense).
+
+### Open decisions for the user
+- 22.1 ḥrj nḫt "a strong superior" ↔ Prov 23:11 `גֹאֲלָם חָזָק`: rendered `מי שמעליי, חזק` (the Egyptian sense);
+  the TLA's "Erlöser" for stꜣ (22.3) is the reason the pair is famous. Left as is.
+- mnḫ `מַעֲלָה` shares the Hebrew word with 3.2 `מעלות` (stairs) and 3.5 `רם־מעלה` (rank): different senses of
+  one Hebrew noun. Alternative `הִצְטַיְּנוּת` (modern) if a clean split is wanted.
+- 21.13 bjꜣ.t "oracle" = `מוֹפֵת?` – no Hebrew word means "oracle" without a reserved root (`נְבוּאָה`, `אוֹת`).
+
+### Progress log
+- Drafted house by house (18; 19; 20; 21; 22; 23; 24; 25), each saved at once and followed by `fill` + `verify AM`.
+- Pass (a) fidelity: negations (m-jri̯ / mtw=k; bw jri̯=tw 22.17–18; bn 21.16, 23.1; mꜥn 19.18, 19.22–23; tm 20.15,
+  22.6, 24.3), the conditionals and the topicalized `jr` lines, the positive imperative 20.13 (against Lange), the
+  two-version lines 22.2 and 22.4 (both versions kept), the TLA's double analyses (19.11, 22.10, 23.16).
+- Pass (b) consistency: the refrain byte-identical (verify: 0 repeated-line differences); repeated structures
+  (19.19 ~ 16.17; 20.2 ~ 6.3; 22.14 ~ 15.14; 22.22 ~ 13.8; 23.3 ~ 17.1; 23.4 ~ 5.16; 24.12 ~ 19.5; 24.15 ~ 12.3;
+  24.20 ~ 14.1; 21.14 ~ 24.10); new strings grepped in the corpus. Changes: 18.20 (ẖꜥꜣ `מרוקנת`), 22.1 (`מי שמעליי`
+  without an added verb), 22.10 / 22.12 (šfj.t `יְקָר`, nrw `מוֹרָא`, after the `הדר` collision with 2.18), the house-22
+  title.
+- Pass (c) Hebrew: read the generated houses 18–25 aloud.
+- `build AM`: 489 lines; `check_bible_quotes.py` on the annotated file, the intro, both translations and project.md:
+  0 problems; `verify AM`: 0 problems (62 lines placeholder); `selftest`: 0 failures.
+
+### The text on its own terms
+- **The god acts, man talks** (19.16–17): one of the most quoted lines of Egyptian wisdom; with 19.14–15 and 19.22–20.2
+  it says that perfection belongs to the god alone, and that even the striving for it spoils it.
+- **No one is sinless** (19.18–21) – said by a culture whose funerary ritual has the dead declare "I have not sinned"
+  forty-two times; the sin is the god's, sealed with his finger.
+- **Life as a boat on the Nile** (20.4–6): the tongue is the steering oar, the Lord of All the bow pilot who sees the
+  river.
+- **The courts of Egypt** (20.8–21.12): the local *qnb.t* with an official presiding, the court of the Thirty at the
+  Residence, oaths "by the Lord", journals and oracles written on papyrus, the royal herald's interrogation.
+- **Truth as a gift, not a reward** (21.3–21.6): "reward" from the strong against the "gift" the god bears to whom he
+  loves.
+- **Silence as power** (22.5–8 = 23.8–11; 22.9–10; 23.3–5): the silent man sits in the god's arms and his silence
+  overthrows his enemies; the real crocodile does not roar; whoever "knows how to sleep" wins.
+- **The belly as a vessel of secrets** (22.11, 22.15, 23.4): do not empty yours; let the opponent empty his.
+- **Table manners as ethics** (23.13–23.20): chew for show when sated, look at your own bowl.
+- **The heart, the god's nose** (24.4): the organ of thought is the god's breath in man (tTurin: "the god's reward").
+- **Man as a mud brick** (24.13–17): clay and straw, the stuff of houses; the god a builder who tears down and builds
+  daily, makes the poor and the overseers "as he loves" – the same verbs that the hot man usurps "with his tongue"
+  (12.3).
+- **A schoolboy's tablet** (tTurin): the copy marks days ("day 4", "day 8") in the margin – the text learnt by heart
+  at school, a section per day.
+
+### Key parallels
+- **22.1–8 ↔ Prov 20:22; 23:11** [equivalent / divergence]: "do not say …", the god instead of human help; Proverbs'
+  `גֹאֲלָם חָזָק` against the "strong superior" one must not seek.
+- **22.8 ↔ Ex 14:14; Lam 3:26; Ps 37:7** [equivalent]: silence while the god fights.
+- **19.16–17 ↔ Prov 19:21; 16:9; 16:1** [equivalent / divergence]: men "say", the god "does"; Proverbs: men "plan",
+  the Lord "establishes".
+- **19.18 ↔ Prov 20:9; Eccl 7:20; 1 Kgs 8:46** [equivalent]: no one can say he is free of sin.
+- **19.21 ↔ Job 14:17** [equivalent; cognate ḫtm = `חָתַם`]: sin sealed (`חָתֻם בִּצְרוֹר פִּשְׁעִי`).
+- **20.21–21.4 ↔ Ex 23:3, 6–8; Lev 19:15; Deut 16:19; Lam 3:36** [equivalent]: do not pervert a man in court
+  (`לְעַוֵּת אָדָם בְּרִיבוֹ`), respect neither fine linen nor rags, take no "reward" (`שֹׁחַד`) from the strong.
+- **21.12 ↔ 2 Sam 8:16** [equivalent]: the royal herald `מַזְכִּיר`.
+- **23.13–18 ↔ Prov 23:1–3** [equivalent / divergence]: bread before an official; `אֶת-אֲשֶׁר לְפָנֶיךָ` (משלי כג:א) = "the bowl
+  that is before you".
+- **22.11 ↔ Prov 23:9** [divergence]: do not empty your belly to all / do not speak in a fool's ears.
+- **24.9–12 ↔ Lev 19:14; 21:18; Deut 27:18; Prov 17:5** [equivalent]: the blind, the lame, mocking the poor reviles his
+  maker – as here, man is the god's building (24.13–14).
+- **24.13–17 ↔ Job 33:6, 10:9; Gen 2:7, 2:22; Isa 64:7; 1 Sam 2:6–7; Eccl 3:3** [equivalent / divergence]: clay and
+  straw (the brick of Ex 5:7), the god a builder (`וַיִּבֶן`, not `יֹצֵר`), who impoverishes and exalts.
+- **24.4 ↔ Gen 2:7; Prov 20:27** [divergence]: in Genesis God breathes into man's nose; here man's heart is the god's
+  nose.
+
+### Lines shared with other texts
+- The refrain 22.5–22.8 = 23.8–23.11 (byte-identical). Repeated with earlier Hebrew: 19.12 / 18.13 / 9.4 `האירה הארץ –`;
+  19.19 ~ 16.17, 9.14; 20.2 ~ 6.3, 9.3; 20.4 ~ 1.10, 15.6; 21.9 ~ 18.4; 22.14 ~ 15.14; 22.22 ~ 13.8; 23.3 ~ 17.1; 23.4 ~
+  5.16; 24.10 ~ 21.14; 24.12 ~ 19.5; 24.15 ~ 12.3; 24.20 ~ 14.1. Later: 19.22 ~ 26.20, 20.16 = 26.4.
+
+### Proposals for the shared renderings
+| Egyptian | Hebrew | Reason / lines |
+|---|---|---|
+| **Fixed lines (§7)** 22.5–22.8 = 23.8–23.11 | `ובכן, אינך יודע את עצות האל,` / `פן תיכלם מחר.` / `שב לך בזרועות האל,` / `שתיקתך תפיל אותם.` | the refrain |
+| mnḫ (noun) / whꜣ (noun) | `מַעֲלָה` / `כִּשָּׁלוֹן` | 19.14–15, 19.22–23, 20.1, 22.17 |
+| rwj … rwj | `לְחוּד … לְחוּד` | 19.16–17 |
+| ḫtm | `חָתַם` (licensed loan) | 19.21 |
+| stꜣ "protector" | `מְגוֹנֵן` (`גֹּאֵל`, `מָגֵן` never) | 22.3 |
+| ḥrj "fear" / snḏ / mkḥꜣ | `פָּחַד` / `חָשַׁשׁ` / `הִתְעַלֵּם` | 19.11 / 23.7 / 23.7, 24.5 |
+| šww / ẖꜥꜣ | `הֵרִיק` / `רוֹקֵן` | 22.11, 23.4 / 7.6, 18.20, 22.9 |
+| qnb.t / smtr / mtr / mꜥbꜣ.yt | `מוֹעֶצֶת־הַשּׁוֹפְטִים` / `חֲקִירָה` / `עֵד` / `הַשְּׁלֹשִׁים` | 20.8–20.21 |
+| fꜣ.t / jnw / fqꜣ | `מַשְׂאֵת` / `מַתָּנָה` / `שָׂכָר` | 21.5 / 16.18 / 21.3 |
+| wḥm.w (herald) | `מַזְכִּיר` [equivalent] | 21.12 |
+| mꜣꜣ / ptr / nw | `חָזָה` / `רָאָה` / `הִבִּיט` | 23.1 / 15.7 / 17.11 |
+| sḏr / qdd | `יָשַׁן` / `נָם` | 19.11 / 23.5 |
+| šfj.t / nrw | `יְקָר` ★ (vocalized) / `מוֹרָא` | 22.10 / 22.12 |
+| ꜥqw / tʾ | `פַּת` / `לֶחֶם` | 23.13 |
+| wꜣḥ | `שָׁת` | 23.14 |
+| sbj / pjṯꜣ | `לָעַג` / `הִתֵּל` (`צָחַק` is *ṣiāḫu*'s cognate) | 24.9, 24.11 |
+| qs | `עֲצָמוֹת` | 21.20 |
+
+### Lessons for the guidelines
+- A repeated passage that a coordinator will fix by its first copy should be drafted with both copies' contexts open
+  (here 22.5–8 closes a house about patrons, 23.8–11 one about opponents): the Hebrew must fit both before it is fixed.
+
 ## Parallels index
 (generated from the הקבלה bullets by `../build_parallels_index.py`)

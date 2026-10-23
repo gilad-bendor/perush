@@ -297,7 +297,7 @@ The verb `יָצַר` only for qmꜣ (and qd? no: qd = `בָּנָה`).
    = `טֶרֶם נִהְיָה X` / `טֶרֶם נִהְיוּ X` [equivalent Gen 2:5 `טֶרֶם יִהְיֶה בָאָרֶץ`].
 6. `tꜣ bw.t n pꜣ nṯr` = `תּוֹעֲבַת הָאֵל` (13.16, 15.21; with `ꜥꜣ.t` "great" 14.3: `תּוֹעֲבָתוֹ הַגְּדוֹלָה`).
 7. **The refrains of Amenemope** (§7): 3.17 = 5.18 = 17.15 (`jr jri̯.y=k hꜣw=k jw nn m jb=k`); 4.2 = 7.10 (`wḏꜣ ḥꜥ.t=k
-   ḥr-tp tꜣ`); 9.6–8 = 16.12–14 (9.5 / 16.11 differ); 22.5–8 = 23.8–11; 5.8 = 5.13? (only the shared half); 6.4 = 6.12 except the last word.
+   ḥr-tp tꜣ`); 9.6–8 = 16.12–14 (9.5 / 16.11 differ); 22.5–8 = 23.8–11 (22.1–4 does not repeat); 5.8 = 5.13? (only the shared half); 6.4 = 6.12 except the last word.
 8. The king's blessing `ꜥnḫ-(w)ḏꜣ-s(nb)` = `חַיִּים, שָׁלוֹם, בְּרִיאוּת`.
 
 ## 7. Fixed lines (enforced character by character, niqqud and marks ignored)
@@ -314,6 +314,10 @@ writes them here after the first part, so that the verifier enforces them.
 | AM 9.7; AM 16.13 | `ꜣḫ pꜣw.t.pl jw ḥꜣ.tj nḏm` | `מוטב עוגות כשהלבב נעים` |
 | AM 9.8; AM 16.14 | `r wsr ẖr šnn` | `מעושר עמוס צער.` |
 | AM 8.10; AM 13.9 | `tm ḥry.t jni̯=k` | `פן תביא אותך האימה.` |
+| AM 22.5; AM 23.8 | `ḫr-rʾ-ꜥ bw rḫ=k sḫr.w n nṯr` | `ובכן, אינך יודע את עצות האל,` |
+| AM 22.6; AM 23.9 | `tm=k ṯm ⟨m⟩ dwꜣw` | `פן תיכלם מחר.` |
+| AM 22.7; AM 23.10 | `ḥmsi̯ n=k r ꜥ.wj pꜣ nṯr` | `שב לך בזרועות האל,` |
+| AM 22.8; AM 23.11 | `r pꜣy=k gr (r) ḥdb=w` | `שתיקתך תפיל אותם.` |
 
 ## 8. Amenemope ↔ Proverbs 22:17–24:22 and the Torah: the shared sayings (fixed before drafting)
 The literature's pairings, **to be checked against the transliteration** (guidelines §5.2: a brief says "look for",
@@ -417,4 +421,10 @@ parallels table.
 4. **ḫpr in the future** = `יִהְיֶה` (§4.4 amended: `נִהְיָה` has no living future).
 5. **Open for part 5:** twr – 15.7 `הִנָּזֵר מִן` (with r); the sense "respect" (25.7, 25.9, 26.14, 27.12) is settled by the part-5 translator, one Hebrew if the Egyptian sense allows.
 6. Fixed lines 16.12–14, 17.15–16 copied byte for byte; 13.16 = 15.21 `תועבת האל.`; 14.3 `תועבתו הגדולה`.
+
+### 10.4 Round 4 run 3, sub 1 – Amenemope part 4 (19.10–24.20), merged 2026-10-23 (the second translator)
+1. **Fixed lines (§7):** 22.5–22.8 = 23.8–23.11 (the refrain is these four lines; 22.1–4 does not repeat, §8 corrected in spirit).
+2. **The court:** qnb.t = `מוֹעֶצֶת־הַשּׁוֹפְטִים` (not `בֵּית דִּין`: `דִּין` is the Hebrew cognate of Akkadian *dīnu*, §10.3.2; not `שַׁעַר`, which would manufacture Prov 22:22); smtr `חֲקִירָה`, mtr `עֵד`; mꜥbꜣ.yt "the (court of) Thirty" = `הַשְּׁלֹשִׁים` (gated by the number); wḥm.w "herald" = `מַזְכִּיר` [equivalent 2 Sam 8:16].
+3. **Words:** fqꜣ `שָׂכָר` (§4.3), fꜣ.t "gift" `מַשְׂאֵת`, jnw `מַתָּנָה`; ḫtm `חָתַם` (§4.2); stꜣ "protector" = `מְגוֹנֵן` (TLA "Erlöser"; `גֹּאֵל` never, `מָגֵן` avoided); mnḫ (noun) `מַעֲלָה`, whꜣ `כִּשָּׁלוֹן`; rwj … rwj `לְחוּד … לְחוּד`; ḥrj "fear" `פָּחַד`, snḏ `חָשַׁשׁ`, mkḥꜣ `הִתְעַלֵּם`; šww `הֵרִיק`, ẖꜥꜣ `רוֹקֵן` (18.20 changed to `מרוקנת`); mꜣꜣ `חָזָה`, ptr `רָאָה`, nw `הִבִּיט`; sḏr `יָשַׁן`, qdd `נָם`; šfj.t `יְקָר` ★, nrw `מוֹרָא`; ꜥqw `פַּת`, tʾ `לֶחֶם`; wꜣḥ `שָׁת`; sbj "laugh at" `לָעַג` (Prov 17:5 `לֹעֵג`; `צָחַק` is *ṣiāḫu*'s cognate), pjṯꜣ `הִתֵּל`; qs `עֲצָמוֹת`; kꜣmn / nmw / qbqb, ꜥmꜥ.t / dḥꜣ, qd as §4.3.
+4. **Settled by the coordinator (the translator's open points):** mnḫ `מַעֲלָה` beside 3.2 `מעלות` (stairs) and 3.5 `רם־מעלה` (rank) – three senses of one Hebrew noun, kept: each is the natural word and no line confuses them (noted, not a collision of one sense); 21.13 bjꜣ.t "oracle, wonder" = `מוֹפֵת?` stays (`נְבוּאָה` and `אוֹת` would import a reserved theme; the TLA's "Orakel" in the apparatus); 22.1 by its own sense, Prov 23:11 in the apparatus.
 
