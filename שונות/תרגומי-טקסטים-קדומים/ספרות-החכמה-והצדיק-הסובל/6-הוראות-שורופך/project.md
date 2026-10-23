@@ -58,7 +58,7 @@ Words (first occurrence; all checked against the drafted lines at the end, ★):
 | *al dug₄* | `שאל` ("ask for") | 29 | netherworld corpus; `חמד` reserved. |
 | *piriĝ* | `לביא` | 30 | temple / creation corpora (*ur-maḫ* = `אריה`). |
 | *saĝ* (a slave as a "head") | `ראש (עבד)` | 30 | the counting word kept, the sense in parentheses. |
-| *dab₅* | `תפס` | 19, 30, 118 | `לקח` only 9 (and its identical copy 79). |
+| *dab₅* | `תפס` | 19, 30, 118 | `לקח` only 9 (and its identical copies 79, 149) until the 2026-10-23 harmonization; since then the formula has `אחז` (`עצתי תיאחז`). |
 | *šu du₈* | `אחיזת־יד` | 19, 20 | not `ערבות`: the gesture-idiom is the finding (↔ `תָּקַעְתָּ … כַּפֶּיךָ`). |
 | *sug₆* | `החליף` | 21, 41, 59, 92 | law corpus (Sum. *ib₂-su-su* = `יחליף`; = Akk. *riābu*); `שלם` (Ex 21:37 `יְשַׁלֵּם`) reserved for *silim*. |
 | *igi du₈* | `פקח עין` | 21 | literal "open the eye". |
@@ -144,7 +144,7 @@ Words (first occurrence; all checked against the drafted lines at the end, ★):
 | *pa-an-pa* | `נשם` | 130 | |
 | *ud*; *buru₁₄* | `יום`; `קציר` | 131 | |
 | *de₅* / *ri* (gather) | `לקט` | 132–133 | the same *de₅* as *na de₅* (`נתן עצה`, a fixed formula). |
-| *igi-tum₃ la₂* | `בעל משא־העין` | 135 | = Akk. *nīš īni* (SH 88 `משא עיניו`); `חמד` reserved (the proverbs corpus has `החמדה`: open decision 1). |
+| *igi-tum₃ la₂* | `בעל משא־העין` (2026-10-23 harmonization: `החמדה`) | 135 | = Akk. *nīš īni* (SH 88 `משא עיניו`); `חמד` reserved (the proverbs corpus has `החמדה`: open decision 1). |
 | *ĝiš*; *ra* | `עץ`; `הכה` | 135 | |
 | *gu₃ mur*; *tug₂*; *bir₇* | `נהמת קול`; `בגד`; `קרע` | 136 | |
 | *niĝ₂-erim₂* | `רשע` | 137 | proverbs; licensed. |
@@ -157,7 +157,7 @@ Words (first occurrence; all checked against the drafted lines at the end, ★):
 | Names | `נִינְכָּסִי` (86); ★`אוּתוּ` always vocalized (70, 72) | | §11.1. |
 
 ### Open decisions for the user
-1. **`חמד` and *igi-tum₃*** (135): the proverbs corpus (A31, the same saying) renders *igi-tum₃* `החמדה`; this corpus reserves `חמד` (§11.6), so here `בעל משא־העין`, aligned with SH 88's `משא עיניו` (*nīš īni*). A cross-corpus split: either the proverbs line changes to `משא־העין`, or `חמד` is licensed for *igi-tum₃* in both.
+1. **`חמד` and *igi-tum₃*** (135): the proverbs corpus (A31, the same saying) renders *igi-tum₃* `החמדה`; this corpus reserves `חמד` (§11.6), so here `בעל משא־העין`, aligned with SH 88's `משא עיניו` (*nīš īni*). A cross-corpus split: either the proverbs line changes to `משא־העין`, or `חמד` is licensed for *igi-tum₃* in both. **Settled 2026-10-23 (`harmonization--2026-10-23.md` row 16): `החמדה – ראש בעץ מכה.`, `חמדה` licensed by *igi-tum₃* in `wisdom_tools.py`.**
 2. ***ša-* = `הֲרֵי`** (14 and 30 more places): alternative a plain future (lighter Hebrew, prefix hidden) or `אָכֵן`. SU-b should keep `הֲרֵי` (143, 145, 152A ff.).
 3. **95 `"די!" לא ייאמר`** for *niĝ₂ sa₂ nu-di-dam* (lit. "'an equal thing' is not said"): by sense, to show the idiom of Prov 30:15–16 (`לֹא-אָמְרוּ הוֹן`); a literal `"שווה" לא ייאמר` is opaque.
 4. ***sig*** has two Hebrew words by sense: `שפל` (*inim sig-ga*, 33, 65, 93) and `רפה` (*a₂ sig*, 51).
@@ -191,14 +191,14 @@ Words (first occurrence; all checked against the drafted lines at the end, ★):
 
 ### Lines shared with other files
 - **1–13** = the flood corpus's `>` lines, copied verbatim (checked by `verify`, COPIES).
-- **74, 77** = 7; **79** = 9 (`תילקח`: *dab₅* = `לקח` kept with the identical line); **80** = 10; **81** = 11 and **82** = 12 with the prohibitive restored in brackets (`[אל]`); **82A** = 13 with the brackets of the composite; **73, 75** = 6, 8 + `הֲרֵי` (*še₃-* for *na-*, ḫamṭu for marû); **76** = 6 + `בפעם השנייה`; **78** = 8 with the verb in brackets. SU-b: 143–152A repeat the same lines (143, 145 *še₃-mu-ni-in-de₅* = 73, 75; 146 `בפעם השלישית`; 151 lacks *šu*; 152A has *ak* for *ĝal₂*).
+- **74, 77** = 7; **79** = 9 (`תילקח`: *dab₅* = `לקח` kept with the identical line; all three `תיאחז` since the 2026-10-23 harmonization); **80** = 10; **81** = 11 and **82** = 12 with the prohibitive restored in brackets (`[אל]`); **82A** = 13 with the brackets of the composite; **73, 75** = 6, 8 + `הֲרֵי` (*še₃-* for *na-*, ḫamṭu for marû); **76** = 6 + `בפעם השנייה`; **78** = 8 with the verb in brackets. SU-b: 143–152A repeat the same lines (143, 145 *še₃-mu-ni-in-de₅* = 73, 75; 146 `בפעם השלישית`; 151 lacks *šu*; 152A has *ak* for *ĝal₂*).
 - **Counsels of Wisdom 31–38 ↔ Šuruppag 22–27** (the quarrel and the witness): one Hebrew for *ṣāltu* / *du₁₄* = `ריב`; CW 33 `במקום ריב – אל תִּדָּחֵק` ↔ SU 22 `במקום ריב – אל תלך …` (the verbs differ in the source).
-- **SH 88** *nīš īni* `משא עיניו` ↔ SU 135 *igi-tum₃* `משא־העין`.
-- **Proverbs A31** (`igi-tum₃ la₂ saĝ ĝiš ra-ra` `החמדה – ראש בעץ מכה`) ↔ SU 135 `בעל משא־העין – ראש בעץ מכה`: the verb identical, the noun differs (open decision 1).
+- **SH 88** *nīš īni* `משא עיניו` ↔ SU 135 *igi-tum₃* `משא־העין` (2026-10-23: `החמדה`).
+- **Proverbs A31** (`igi-tum₃ la₂ saĝ ĝiš ra-ra` `החמדה – ראש בעץ מכה`) ↔ SU 135 `בעל משא־העין – ראש בעץ מכה`: the verb identical, the noun differs (open decision 1; identical since the 2026-10-23 harmonization).
 
 ### Proposals for the shared renderings
 - §11.5: ***ša-*** (and *ši-*, *šu-*, *še₃-*) = `הֲרֵי`, always vocalized, before the verb; *bara-* = `בַּל` (vocalized); *na-nam* (affirmative) = nominal sentence.
-- *sug₆* = `החליף` (law corpus) in this corpus too; *du₇* = `נגף` (= *nakāpu*); *du₁₄* = `ריב` (= *ṣāltu*); *šu du₈* = `אחיזת־יד`; *igi-tum₃* = `משא־העין` (= *nīš īni*); *inim dirig* = `דבר יתר`; *inim sig-ga* = `הדבר השפל`; *geme₂* `אָמָה` / *gi₄-in* `שפחה` / *egir₂* `נסיכה`; *pu₂* = `בור`; *dur₃* = `עַיִר` (always vocalized); *e₂ kaš* = `בית השֵּׁכָר` (vocalized); *ka tar* = `התהלל`; *a₂ zig₃* = `בזרוע רמה`; *giri₁₇ šu ĝal₂* = `יד על אף הניח` (literal, against another corpus's `השתחווה`).
+- *sug₆* = `החליף` (law corpus) in this corpus too; *du₇* = `נגף` (= *nakāpu*); *du₁₄* = `ריב` (= *ṣāltu*); *šu du₈* = `אחיזת־יד`; *igi-tum₃* = `משא־העין` (= *nīš īni*; 2026-10-23 harmonization: `חמדה`); *inim dirig* = `דבר יתר`; *inim sig-ga* = `הדבר השפל`; *geme₂* `אָמָה` / *gi₄-in* `שפחה` / *egir₂* `נסיכה`; *pu₂* = `בור`; *dur₃* = `עַיִר` (always vocalized); *e₂ kaš* = `בית השֵּׁכָר` (vocalized); *ka tar* = `התהלל`; *a₂ zig₃* = `בזרוע רמה`; *giri₁₇ šu ĝal₂* = `יד על אף הניח` (literal, against another corpus's `השתחווה`).
 - Always vocalize (add to §8): `הֲרֵי`, `עַיִר`, `השֵּׁכָר`, `שֵׁנָה` (sleep), `אֶחְיֶה`, `אוֹכְלָה`.
 - `wisdom_tools.py`: the `שלם` allow-list entries `su[replace`, `su-su` never match ETCSL's lemma `sug6[to replace]` nor its forms (`ša-ba-ri-ib-su-su`); if `שלם` is ever wanted for *sug₆*, the entry should be `sug6[`. Not needed while *sug₆* = `החליף`.
 
@@ -399,7 +399,7 @@ Words (first occurrence in 143–280):
 | 131 | *ud buru₁₄-še₃* | ביום הקציר | `אָגְרָה בַקָּצִיר מַאֲכָלָהּ` (משלי ו:ח) | [equivalent] | harvest as the time of gathering (also `אֹגֵר בַּקַּיִץ בֵּן מַשְׂכִּיל`, משלי י:ה). |
 | 132 | *geme₂-gin₇ de₅-ga-ab* | כאָמָה לקוט | `וַתְּלַקֵּט בַּשָּׂדֶה אַחֲרֵי הַקֹּצְרִים` (רות ב:ג) | [equivalent] | the gleaner; the humble work of harvest. |
 | 132 | *geme₂ … egir₂* | כאָמָה … כנסיכה | `וְשִׁפְחָה כִּי תִירַשׁ גְּבִרְתָּהּ` (משלי ל:כג) | [divergence] | the slave woman / mistress pair: a catastrophe in Proverbs, a rule of life here. |
-| 135 | *igi-tum₃ la₂* | בעל משא־העין | `נִבְהָל לַהוֹן אִישׁ רַע עָיִן` (משלי כח:כב) | [equivalent] | greed as an act of the eye; = Akk. *nīš īni* (SH 88); `לֹא תַחְמֹד` (שמות כ:יג) in the apparatus only (open decision 1). |
+| 135 | *igi-tum₃ la₂* | החמדה | `נִבְהָל לַהוֹן אִישׁ רַע עָיִן` (משלי כח:כב) | [equivalent] | greed as an act of the eye; = Akk. *nīš īni* (SH 88); `לֹא תַחְמֹד` (שמות כ:יג) in the apparatus only (open decision 1). |
 | 136 | *lu₂-lul-e tug₂ ši-bir₇-bir₇-e* | השקרן בגד הֲרֵי קורע | `וְקִרְעוּ לְבַבְכֶם וְאַל בִּגְדֵיכֶם` (יואל ב:יג) | [divergence] | the torn garment as an empty display. |
 | 138 | *inim dirig* | דבר יתר | `לֹא-נָאוָה לְנָבָל שְׂפַת-יֶתֶר` (משלי יז:ז) | [equivalent] | the same concept ("excess speech"); *dirig* = Akk. *(w)atāru* ~ `יתר` (a cognate through the Akkadian, our proposal). |
 | 138 | *u₃-bu-bu-ul* | אבעבועה | `לִשְׁחִין פֹּרֵחַ אֲבַעְבֻּעֹת` (שמות ט:ט) | [cognate?] | via Akk. *bubuʾtu*? Our proposal, unverified (open decision 10). |
