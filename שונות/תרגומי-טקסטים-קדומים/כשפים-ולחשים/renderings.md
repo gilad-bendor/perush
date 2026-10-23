@@ -500,3 +500,17 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
   witch's participles of A+38–A+45 each its own verb (*sekēru* `סָכַר` [cognate], *ḫabālu* `חִבֵּל` [cognate]); *pagru*
   (a corpse) `פֶּגֶר` [cognate], *erû* `נֶשֶׁר`, *zību* `עַיִט` (Gilgameš), *baṣāru* `קָרַע`; *ṣillu* `צֵל` also for the
   reflection in the bowl (RT 175'–177'); *upīšū* `מַעֲבָדִים`; *kušāpu* `כּוּשָׁפּוּ`; KIMIN written out in full.
+
+### 10.9 The Ritual Tablet (2026-10-23)
+- **Accepted:** the incipit format `הקסם "…":` (no governing verb) / `את הקסם "…"` (with `ימנה`, `תמנה`, `תכלה`), the
+  quotation being the Hebrew of the incantation's first line, cut where the RT cuts it and changed only where the RT's
+  wording differs (17', 49', 65', 66', 68' fem., 73', 99', 104', 150', 156', 170'); incantations not in I–VIII translated
+  in quotation marks (92' Sumerian, 95', 134'–135', 137', 178'); the materials copied from the rubrics of II–IV; *nēpešu*
+  `טֶקֶס`, *marṣu* `חוֹלֶה`, *nappaṭu* `מַחְתָּה`, *kirru* `כַּד`, *namsû* `כִּיּוֹר` (Exod 30:18), *qēmu* `קֶמַח`, *laḫannu*
+  `צְלוֹחִית`, *billatu* `בְּלִילָה`, *tābīlu* `תַּבְלִין`, *qilûtu* `הַקָּלוּי`; *qatāru* D `הִקְטִיר`, *karātu* `כָּרַת`,
+  *parāku* `שִׂכֵּל`, *buḫḫušu* `בָּחַשׁ`, *barû* `בָּחַן` (wisdom), *sadāru* `סִדֵּר`; *nabāsu* `שָׁנִי`, *tabarru* `צֶמֶר
+  אָדֹם`, *pallurtu* `שְׁתִי־וָעֵרֶב`, *gisallû* `מַעֲקֶה`, *qanû ṭābu* `קְנֵה הַטּוֹב` (Jer 6:20), *āsu* `הֲדַס`, *šurmēnu*
+  `שׁוּרְבִּין` (§6.7); *burzigallu*, *šukbusu*, *maṣḫatu*, *šaḫarru*, *akalu*, *šubû* transliterated; *riksu* "ritual
+  arrangement" `מַעֲרָכָה` (a sense split from `קֶשֶׁר`); *sippu* `מְזוּזָה`. The refrain check exempts RT (it quotes only
+  the incipit).
+- **Changed by the coordinator:** *paṭīru* (RT 14') = `מַעֲמָד` (was `שֻׁלְחָן`, which is *paššūru* in Gilgameš).

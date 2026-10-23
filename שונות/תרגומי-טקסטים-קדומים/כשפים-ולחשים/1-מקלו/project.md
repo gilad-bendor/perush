@@ -1271,6 +1271,156 @@ Files: `annotated-VIII.rtl.md`, `translation--intro-VIII.rtl.md`, generated `tra
 - Lines shared with an earlier tablet in another tense or stem (III 55–60 → VIII A+20–A+25) are best copied word by
   word and changed only in the grammar, so that the reader sees the same "reversal" said twice.
 
+## Ritual Tablet
+
+### Scope
+All 182 eBL labels of the Ritual Tablet (RT): 1 (known only from the quotation AššNAQuo1), then 2'–180' with 78'-79',
+133'a, 137'a and 137'b (primed numbering: an unknown number of lines is lost after 1 – said in the header and the
+intro). Ten sections, following the tablets the RT works through: the opening (1–18'), Tablet I (19'–31'), II (32'–41'),
+III (42'–59'), IV (60'–70'), V with the extinguishing and the carrying out (71'–95'), VI with the bed (96'–126'), VII
+with the doors and the anointing (127'–137'b), the morning (138'–169'), and the dogs, the bowl and the colophon
+(170'–180'). Copies from Nineveh (NinNA1–2, NinNB1), Ḫuzirina (HuzNA1), Babylonia, Babylon and Sippar (BabaLB1,
+BabLB1, SipLB1); 2'–7' and 137'a–b are only traces.
+Files: `annotated-RT.rtl.md`, `translation--intro-RT.rtl.md`, generated `translation-RT.rtl.md`.
+
+### Sources consulted
+- eBL `Mag/1/1` RT (`../../sources/eBL/Maqlu-RT/`): N, T, notes (Schwemer 2022 on 12'–18'), the ATF of every line
+  (brackets checked line by line); `manuscripts.md`. `pars RT`, `lem RT`, `incipits`, `norm`, `kol_tools.py lookup`.
+- renderings §0–§10.8; the first line of every incantation quoted (I 1 … VIII B+9) and the rubric lines of II–IV
+  (II 18–226, III 30a–187a, IV 94a), whose materials the RT repeats word for word.
+- Earlier corpora: *šukênu* `השתחווה` (creation, Etana); *namsû* `כיור`, *šurmēnu* `שׁוּרְבִּין`, *ballukku*
+  `בַּלּוּכּוּ` (Gilgameš); *sippu* `מזוזה`, *sikkūru* `בריח` (wisdom, netherworld); *tarāṣu* (finger) `שלח`, *aplu*
+  `יורש`, *têrtu* `הוראה`, *karābu* `ברך`, *puḫru* `אספה` (wisdom); *eṣēru qēma* `צָרָה בקמח` (flood).
+- The Bible: every verse printed before quoting (about 45).
+
+### Decisions
+- **The incipits:** `הקסם "…"` where no verb governs, `את הקסם "…"` where one does (*imannu*, *tamannu*, *tuqattī*);
+  the quote is the Hebrew of the incantation's first line, cut where the RT cuts it. Where the RT's wording differs the
+  Hebrew changes only that: 17' `יליד דּוּרַנְקִי` (Schwemer: a different Nuska prayer, against I 122's *ilitti ani*,
+  which 27' keeps); 21' *aktala nēbera* = I 50's Hebrew; 49' *pâša* `פיה` (III 101a *pâšu* `פיו`); 53' *ultēpišanni*,
+  56' *haṣabti*, 70' *pāširāku*, 81' *uptaṭṭir*, 148' *epšētēki*, 165' *ininnā-ma* – spelling only, Hebrew unchanged;
+  65' the optional ventive `(לי)`; 66' the added *u* `והכּוּשָׁפָתוּ`; 68' feminine `עושות לי` (IV 115) against 39'
+  masculine `עושים לי` (II 161); 73' *dunnānī* `*חסוני, חסוני*`; 99' VI 34 marked by VI 38's `בואו` after `…`; 104'
+  `הוֹי` without VI 65's parentheses; 111' `(נמשחתי)`; 119' VI 142 + 143; 150' *ubbab* `מנקה אני` (VII 114
+  `ניקיתי`); 156' `רחצתי את ידיי` twice (VII 170 `פי`); 170' `והַמְעַשָּׂה` without VIII A+38's parentheses.
+- **Incantations not in I–VIII**, translated in quotation marks: 92' the Sumerian *udug ḫul edin-na-zu-še₃* `"אוּטוּכּוּ
+  רע – אל שָׂדְךָ!"` (udug = *utukku* `אוּטוּכּוּ`, II 52; *edin* = *ṣēru* `שדה`, vocalized); 95' `"משליך אני קסם אל
+  אספת האלים כולם"`; 134'–135' the Nuska prayer; 137' `"שבועה, שבועה"` (SAG.BA = *māmītu*) and `"הבית מושבע"`; 178'
+  `"נושא אני את מקלותיי"`.
+- **Voice:** the exorcist 2nd person, the patient 3rd; present-future = Hebrew future; *manû* `מָנָה` (§3).
+- **The materials follow the rubrics of II–IV** where those exist (33' `צלם נחושת, גפרית` = II 76; 39' = II 182; 50'
+  `אֵלָה *בכובע ובשוק*` = III 115a; 57' / 64'–66' `תמשח … תכרוך` = III 153a, IV 94a).
+- **New words:** *nēpešu* `טקס` (§6's colophon); *marṣu* `חולה`; *appu* `קצה`; *burzigallu* `בּוּרְזִיגַלּוּ`,
+  *šukbusu* `שׁוּכְּבּוּסוּ`, *maṣḫatu* `מַצְחַתוּ`, *šaḫarru* `שַׁחַרּוּ`, *akalu* `אַכַּל`, *šubû* `שׁוּבּוּ`
+  (transliterated); *paṭīru* `שולחן` (with *rakāsu* `ערך`, §2.2; Isa 65:11); *nappaṭu* `מחתה`; *kirru* `כד`; *kartu*
+  `כרות`, *karātu* `כרת` [cognate] (16', 147', 168'); *sadāru* `סדר` [cognate]; *āsu* `הדס`; *qanû ṭābu* `קנה טוב`
+  [cognate] (Jer 6:20); *nabāsu* `שָׁנִי` (red wool; *tabarru* stays `צמר אדום`); *pallurtu* `שתי־וערב` (not `צלב`);
+  *gisallû* `מעקה` (Deut 22:8); *parāku* `שִׂכֵּל` (Gen 48:14); *nīru* `חוט`; *qablu* "middle" `אמצע`; *tābīlu*
+  `תבלין` [cognate]; *qamû* (adj.) `בְּעוּרָה`; *buḫḫušu* `בחש`; *qilûtu* `הַקָּלוּי` [cognate] (Lev 2:14); *riksu* "ritual
+  arrangement" `מערכה` (a sense split from `קשר`, matching the split *paṭīra rakāsu* `ערך`); *qatāru* D `הקטיר`
+  [cognate]; *billatu* `בְּלִילָה` [cognate] (vocalized); *laḫannu* `צלוחית`; *qēmu* `קמח` [cognate]; *aban suluppi* `גרעין
+  תמר`; *unqu* `טבעת`; *barû* `בחן`; *eṣēru* `צָר` (`תָּצוּר` vocalized at first; the flood corpus's `צָרָה בקמח`).
+- **Kept:** *ḫuṣābu* `שְׁיָר` / `שְׁיָרִים` also for the cornel "sticks" (§4, IV 94a); *bābu* `פתח` (§10.6) also for the
+  gate; *nasāku* and *sarāqu* both `זרק` (§10.2, §10.6); *šurpu* `שְׂרֵפָה` (138'–139', licensed).
+- **Brackets** by the ATF across all copies (e.g. 13' unbracketed: HuzNA1 keeps the bowl, NinNB1 most of "to the gate";
+  67' `של הַשֶּׁמֶשׁ` unbracketed from SipLB1; 142' unbracketed: NinNA1 keeps KU₄, HuzNA1 E₂); KIMIN written out
+  (20', 80', 84', 85' …); N's optional words in `( )`.
+- **A tool fix (reported):** `maqlu_tools.py` FORMULAS: the refrain check *hūlā zūbā* → `המסו זובו והנתכו` now exempts
+  RT (as the opening-formula checks already do): RT 87' quotes only the incipit `"המסו, זובו"`, and adding `והנתכו` would
+  add what the RT does not say. One line changed.
+
+### Open decisions for the user
+- *paṭīru* `שולחן`: the Gilgameš and netherworld corpora use `שולחן` for *paššūru* (not in Maqlû); an alternative is
+  `מעמד` (GI.DU₈, a reed stand).
+- *pallurtu* `שתי־וערב` (Lev 13:48) or `צלב` (clearer, but Christian associations).
+- *riksu* (125') `מערכה` by sense, against the lemma's `קשר` (which would read "as written for the knots").
+- *nabāsu* `שָׁנִי` beside *tabarru* `צמר אדום`: two red wools, two words; the Lev 14:4 / Num 19:6 `שְׁנִי תוֹלַעַת`
+  contact rests on *nabāsu* only.
+- 73' *dunnānī*: `*חסוני*` (the *-ī* as "my") or V 19's `*חסון*` (a case ending); Abusch does not translate it.
+- *ḫuṣābu* `שְׁיָר` for a stick (eBL "stick of cornel"): kept for the lemma; `קיסם` would be clearer.
+- *qablu* "middle" `אמצע` (62') against VIII's *qablu* `מותניים` (waist).
+
+### Progress log
+- 2026-10-23: renderings §10.8 read; `pars RT`, `lem RT`, `incipits` and every quoted first line checked; the ATF of all
+  182 labels read. Drafted and saved in six parts (1–18', 19'–41', 42'–70', 71'–95', 96'–126', 127'–180'), `fill` +
+  `verify RT` + `check_bible_quotes.py` after each. The checker caught Lev 13:48's wording (`בִשְׁתִי אוֹ בְעֵרֶב`);
+  verify caught 87' (the refrain, see the tool fix).
+- Pass (a) fidelity: brackets against the ATF line by line; `(ו)` and `(את …)` only for sense; 18' a stray `ו` removed;
+  176' the optional *-ma* left untranslated (§7); 135' `ברך` unbracketed (`[k]u-rab`); 21' `[ב?]גיר`.
+- Pass (b) consistency: every incipit compared with its tablet's first line (`heb` per label); the 10 repeated-line
+  differences `verify RT` lists are all RT incipits (the RT form `הקסם "…":` against `קסם.`), by design; the materials
+  matched to the rubrics of II–IV; *ḫuṣābu*, *tabarru*, *karāku*, *pašāšu*, *sippu* aligned with IV 94a, III 153a and
+  the wisdom corpus; notes corrected where a cross-reference was wrong (4' I 21, 22' III 38, 26' the copies).
+- Pass (c) Hebrew: `translation-RT.rtl.md` read through; `את הקסם` reduced to `הקסם` where no verb governs; 18
+  footnotes.
+- Final: `verify RT --strict` and `verify --strict` (all nine files, 1,595 lines) – no problems; `check_bible_quotes.py`
+  on the annotated file, the intro, `translation-RT.rtl.md`, `translation.rtl.md` and `project.md` – 0 problems; `build`
+  exits 0. `build_parallels_index.py` not run.
+
+### The text on its own terms
+- **Word and act at once** (8'–11'): when the patient reaches "the mouth that spoke evil – may it drip like tallow"
+  (I 32), a tallow figurine with salt in its mouth melts on the torch.
+- **The incantation reports, the ritual performs** (43', 116', 121', 123'): what the "I" says he has done ("I put
+  tallow in your belly", "at the head of my bed I strewed asafoetida") the RT orders now – the incantation is a running
+  report of the act.
+- **The image becomes matter** (98', 103', 110', 77'): the chaff, soot and plaster of VI 30–32's similes, the tallow and
+  rags of VI 60, the plants of VI 100–102, the sulphur and Amorite salt of V 73 are what is burned.
+- **The deictic finger** (26'): "Nuska, these are the figurines" – the patient points at them; the incantation needs
+  the gesture.
+- **Two voices** (30', 90', 116'): in one line the exorcist lights or strews and the patient recites.
+- **Circles and thresholds** (22', 93', 117', 129', 136'–137'): a flour circle round the fire, flour round the doors, a
+  thread round the bed, smeared door, bolt and posts, a flour circle round the bed, and "the house is adjured".
+- **Everything burned goes out of the door** (13', 91', 139'): the bowl of tallow, the remains of the burning, the
+  morning *šurpu* (one copy: to the river).
+- **Substitutes** (121', 151', 88' / 123'): two cornel sticks stand for the two guardian gods; the patient washes his
+  hands over his own substitute; one stone is the mountain.
+- **Seven against six** (69'): seven knots tied and cut, against the witches' six (IV 118).
+- **Washing over** (142'–169'): hands washed over drawn and clay figurines in a copper basin – the water carries the
+  evil into them; a cornel stick "cuts" them three times.
+- **The pair to the pair** (171'–174'): warlock and witch in two loaves, to a dog and a bitch.
+- **The last look** (175'–177'): the patient sees his face in water – "you are my reflection" (VIII B+9) – and the
+  water goes east, to the rising sun.
+- **The name** (94'): *ašar maqlâ taqlû* – "Maqlû" is "the roasting" the exorcist roasted.
+
+### Key parallels
+- Deut 21:6 `יִרְחֲצוּ אֶת יְדֵיהֶם עַל הָעֶגְלָה הָעֲרוּפָה בַנָּחַל` – washing the hands *over* a body that takes the
+  evil (142', 147', 151', 167') [equivalent]; Exod 30:18–19 `כִּיּוֹר נְחֹשֶׁת וְכַנּוֹ נְחֹשֶׁת לְרָחְצָה` – the copper washbasin (141').
+- Exod 12:22 `וְהִגַּעְתֶּם אֶל הַמַּשְׁקוֹף וְאֶל שְׁתֵּי הַמְּזוּזֹת`, 12:23 – touching the door posts so the destroyer
+  will not enter (129') [equivalent: *lapātu* `נגע`, *sippu* `מזוזה`].
+- Num 19:6 `וְהִשְׁלִיךְ אֶל תּוֹךְ שְׂרֵפַת הַפָּרָה` with `שְׁנִי תוֹלָעַת`, Lev 14:4 – red wool cast into the burning
+  (57', 69'; 138' *šurpu* `שְׂרֵפָה` [cognate]).
+- Lev 4:12 / 16:27 `אֶל מִחוּץ לַמַּחֲנֶה` – the remains of the burning carried out (91') [equivalent].
+- Exod 22:30 `לַכֶּלֶב תַּשְׁלִכוּן אֹתוֹ`; 2 Kgs 9:10 – the figurines given to the dogs (174').
+- Jer 6:20 `וְקָנֶה הַטּוֹב` – *qanû ṭābu* (29') [cognate, both words]; Exod 30:7 `וְהִקְטִיר` – *qatāru* D (126').
+- Ezek 21:26 – the king of Babylon divining at the crossroads (56') [divergence]; Ezek 4:1–3 – drawing and besieging
+  (22') [divergence].
+- Isa 65:11 `הַעֹרְכִים לַגַּד שֻׁלְחָן` – a table set for a god (14'); Isa 58:9 `שְׁלַח אֶצְבַּע` – the pointing finger (26').
+- Lev 16:21 – hands on the substitute (151') [divergence]; Ps 1:4 – chaff blown (164').
+
+### Lines shared with other tablets
+- Every ÉN line quotes the first line of an incantation of I–VIII (pars / incipits), changed only as listed under
+  Decisions. 8' quotes I 32 mid-incantation; 43' enacts III 19–20; 51'–52' = III 114 / 115b; 116'–117' = VI 131–132;
+  121' = VI 147–148; 123' = VI 156; the materials of 32'–59' and 64'–65' = the rubrics II 18–226, III 30a–187a, IV 94a.
+- The RT's 10 repeated-line differences in `verify RT` are the incipit form (`הקסם "…":` against `קסם. …,`), not
+  differences of wording.
+
+### Proposals for the shared renderings
+- §3 / §4 (the rite): *nēpešu* `טקס`; *marṣu* `חולה`; *nappaṭu* `מחתה`; *kirru* `כד`; *paṭīru* `שולחן`; *riksu* (ritual
+  arrangement) `מערכה`; *qatāru* D `הקטיר`; *namsû* `כיור`; *laḫannu* `צלוחית`; *burzigallu*, *šukbusu*, *maṣḫatu*,
+  *šaḫarru*, *akalu*, *šubû* transliterated; *qēmu* `קמח`; *billatu* `בְּלִילָה`; *tābīlu* `תבלין`; *qilûtu* `הַקָּלוּי`.
+- §4 (materials, plants): *āsu* `הדס`; *šurmēnu* `שׁוּרְבִּין`; *qanû ṭābu* `קנה טוב`; *nabāsu* `שָׁנִי`; *aban suluppi*
+  `גרעין תמר`; *unqu* `טבעת`; *pallurtu* `שתי־וערב`; *gisallû* `מעקה`; *nīru* `חוט`.
+- §2.4 / verbs: *eṣēru* `צָר`; *sadāru* `סדר`; *parāku* `שִׂכֵּל`; *karātu* `כרת`; *buḫḫušu* `בחש`; *barû* `בחן`;
+  *tarāṣu* `שלח`; *šukênu* `השתחווה`.
+- §6: the RT incipit form, `הקסם "…"` / `את הקסם "…"` by syntax; the refrain check exempting RT (tool, done).
+
+### Lessons for the guidelines
+- An instruction text that quotes other texts needs a quotation rule: the quoted Hebrew is the source line's,
+  character for character, cut where the quoting text cuts it, and the checks that enforce whole formulas must exempt
+  it.
+- The ritual tablet is the commentary the incantations lack: whenever an incantation says "I did X", the annotation of
+  that line should cite the RT line that orders X (and the RT annotation the incantation) – both directions.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
@@ -1839,3 +1989,40 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | B+9 | EN₂ attā ṣillī attā bāštī | קסם. אתה – צלי, אתה – גאוותי, | `סָר צִלָּם מֵעֲלֵיהֶם` (במדבר יד:ט) | cognate | *ṣillu* = `צֵל` |
 | B+9 | EN₂ attā ṣillī attā bāštī | קסם. אתה – צלי, אתה – גאוותי, | `סָר צִלָּם מֵעֲלֵיהֶם` (במדבר יד:ט) | cognate | (`../renderings.md` §2.3): **הצל כמגן**, ומי שצלו סר ממנו – אבד. |
 | B+18 | attā yāʾu anāku kû | אתה – שלי, ואני – שלך. | `דּוֹדִי לִי וַאֲנִי לוֹ` (שיר השירים ב:טז) | divergence | **"אתה שלי ואני שלך"**: אותה נוסחה של השתייכות הדדית; בשיר השירים בין אוהבים, כאן בין אדם לצלו – לדמות של עצמו: היא שייכת רק לו, ולכן אין למכשפה חלק בה. |
+
+### Parallels index (RT)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 3' | [ma]rṣa mīs pî [teppuš ... ] | [ל]חולה רחיצת פה [תעשה …] | `יִרְחֲצוּ אֶת יְדֵיהֶם` (דברים כא:ו) | equivalent | הרחיצה כטקס טיהור (§3); כאן הפה. |
+| 6' | EN₂ alsīkun[ūš]i šalāšīšu imannu | את הקסם "צעקתי אליכם" שלוש פעמים ימנה. | `קֹסֵם קְסָמִים` (דברים יח:י) | equivalent | *šiptu* = `קסם` (`../renderings.md` §3; בהערה, בהיקרות הראשונה בקובץ). |
+| 9' | [gizillâ ina išā]t kibrīti t[aq]âdam-ma ṣalam lipî | [את האבוקה באש] גפרית תקדח, וצלם חֵלֶב – | `כִּי אֵשׁ קָדְחָה בְאַפִּי` (דברים לב:כב) | cognate | *qâdu* = `קדח` (`../renderings.md` §5). |
+| 14' | ana bīti ana? ūri? tellī-ma? ištēn paṭīra ana mahar nuska tarakkas | אל הבית, אל הגג? תעלה?, ומעמד אחד לפני נוסכו תערוך. | `הַעֹרְכִים לַגַּד שֻׁלְחָן` (ישעיהו סה:יא); `תַּעֲרֹךְ לְפָנַי שֻׁלְחָן` (תהלים כג:ה) | equivalent | *paṭīra rakāsu* "לערוך שולחן (קרבן)" לאל; . |
+| 15' | [ ... tazz]az-ma ina muhhi nappaṭi kirra tašakkan | […] תעמוד, ועל המחתה כד תשים. | `מְלֹא הַמַּחְתָּה גַּחֲלֵי אֵשׁ` (ויקרא טז:יב); `אִישׁ מַחְתָּתוֹ` (ויקרא י:א) | equivalent | כלי הגחלים של הקטורת; . |
+| 22' | zisurrâ huluppaqqa teṣṣir | זיסורא (סביב) החוּלוּפַּקּוּ תָּצוּר. | `וְחַקּוֹתָ עָלֶיהָ עִיר אֶת יְרוּשָׁלִָם` (יחזקאל ד:א); `וְצַרְתָּ עָלֶיהָ` (יחזקאל ד:ג) | divergence | גם הנביא מצייר, ואחר כך : הציור והמצור כמעשה סמלי; כאן הקו הוא הגנה, שם מצור. |
+| 26' | EN₂ nuska annûtu <ṣalmī> ēp[išīy]a ubānšu ana muhhi itarraṣ-ma imannu | הקסם "נוסכו, אלה ⟨צלמי⟩ עושי": את אצבעו עליהם ישלח, וימנה. | `שְׁלַח אֶצְבַּע וְדַבֶּר אָוֶן` (ישעיהו נח:ט) | divergence | שליחת האצבע כמחווה של האשמה; שם היא חטא, כאן היא העדות לפני השופט. |
+| 29' | qanâ ṭāba ina libbi tusanna[š ... ] tasallah | וקנה טוב בתוכה תתקע, […] תזה. | `וְקָנֶה הַטּוֹב מֵאֶרֶץ מֶרְחָק` (ירמיהו ו:כ); `וּקְנֵה בֹשֶׂם` (שמות ל:כג) | cognate | אותן שתי מלים לאותו צמח ריחני, ושם עם `לְבוֹנָה` כמנחה;  בשמן המשחה. |
+| 40' | EN₂ attimannu kaššāptu ša ina nāri imluʾu ṭīdâya ṣalam ṭīdi ša lipâ ballu | הקסם "מי אַתְּ, מכשפה, אשר בנהר מילאה את טיטי": צלם טיט הבלול בחֵלֶב. | `מְכַשֵּׁפָה לֹא תְחַיֶּה` (שמות כב:יז) | cognate | *kaššāptu* = `מְכַשֵּׁפָה` (`../renderings.md` §2.1; ההיקרות הראשונה בקובץ). |
+| 56' | EN₂ haṣabti sūqāti ammēni tugda(n)narrênni haṣabti sūq erbetti | הקסם "חרס השווקים, מדוע מתגרה את ומתגרה בי?": חרס מפרשת הדרכים – | `עָמַד מֶלֶךְ בָּבֶל אֶל אֵם הַדֶּרֶךְ בְּרֹאשׁ שְׁנֵי הַדְּרָכִים לִקְסָם קָסֶם` (יחזקאל כא:כו) | divergence | פרשת הדרכים כמקום של כישוף; שם מלך בבל קוסם בה, כאן לוקחים ממנה חרס. |
+| 57' | l[ipâ ta]paššaš <na>bāš[i t]aka[r]r[ik] | [בחֵלֶב] תמשח, בשָׁנִי תכרוך. | `וְעֵץ אֶרֶז וּשְׁנִי תוֹלַעַת וְאֵזֹב` (ויקרא יד:ד); `וְהִשְׁלִיךְ אֶל תּוֹךְ שְׂרֵפַת הַפָּרָה` (במדבר יט:ו) | equivalent | צמר צבוע אדום בטקס טיהור; : השני ועץ הארז מושלכים אל השרפה – כמו החפצים הכרוכים בצמר אדום כאן ('64–'69), הנזרקים אל כלי השריפה. |
+| 60' | EN₂ bišlī bišlī pallurti qanê ša gisal[lê (teppuš)] | הקסם "בַּשְּׁלִי, בשלי": שתי־וערב של קני מעקה [(תעשה)]. | `וְעָשִׂיתָ מַעֲקֶה לְגַגֶּךָ` (דברים כב:ח) | equivalent | *gisallû* הוא המעקה שעל הגג. |
+| 61' | šina qanê ša malû ina muhhi ahāmiš taparrik | שני קנים מלאים – זה על זה תשכל. | `שִׂכֵּל אֶת יָדָיו` (בראשית מח:יד) | equivalent | הנחה מוצלבת; *parāku* "להניח לרוחב". |
+| 69' | ṭurri šīpāti peṣâti sebet kiṣrī takaṣṣar-m[a tabattaq? ana libbi huluppaqqi tanaddi?] | חבל של צמר לבן – שבעה צרורות תצרור, [תנתק?, אל תוך החולופקו תשליך?]. | `וְהִשְׁלִיךְ אֶל תּוֹךְ שְׂרֵפַת הַפָּרָה` (במדבר יט:ו) | equivalent | החוט האדום מושלך אל תוך השרפה; כאן (בשחזור) החבל הקשור אל תוך כלי השריפה. |
+| 86' | EN₂ akbus gallâya ṣalam līši ina šēpīšu ikabbas | הקסם "דרכתי על הגַּלּוּ שלי": על צלם בצק ברגליו ידרוך. | `וְעַסּוֹתֶם רְשָׁעִים כִּי יִהְיוּ אֵפֶר תַּחַת כַּפּוֹת רַגְלֵיכֶם` (מלאכי ג:כא) | equivalent | הדריכה על הרשעים ברגליים. |
+| 91' | qil[ûta adi hulupp]aqqi ana bābi tušeṣṣē-ma tana[ssuk] | הקלוי [עם החולו]פקו – אל הפתח תוציא, ות[זרוק]. | `וְהוֹצִיא אֶת כָּל הַפָּר אֶל מִחוּץ לַמַּחֲנֶה` (ויקרא ד:יב); `יוֹצִיא אֶל מִחוּץ לַמַּחֲנֶה` (ויקרא טז:כז) | equivalent | שארית הקרבן מוצאת אל מחוץ למחנה ונשרפת שם; : ביום הכיפורים. |
+| 117' | ulinna erša talammi | בחוט צבעוני את הערש תקיף. | `תִּקְוַת חוּט הַשָּׁנִי` (יהושע ב:יח) | divergence | חוט צבעוני המגן על בית (כמו בהערה ל־VI 131). |
+| 126' | ištēniš taballal-ma tuqattaršu EN₂ enlil qaqqadī imannu | יחד תבלול, ותקטיר אותו; את הקסם "אֶנְלִיל – ראשי" ימנה. | `וְהִקְטִיר עָלָיו אַהֲרֹן קְטֹרֶת סַמִּים` (שמות ל:ז) | cognate | *qatāru* D = `הִקְטִיר`; שם הקטורת לאל, כאן על החולה. |
+| 128' | [ina] lahanni šaharrati marṣu iballal-ma | [ב]צלוחית של שַׁחַרּוּ החולה יבלול, | `קְחוּ לִי צְלֹחִית חֲדָשָׁה וְשִׂימוּ שָׁם מֶלַח` (מלכים ב ב:כ) | divergence | צלוחית לטקס ריפוי (אלישע והמים); כאן תערובת למשיחה. |
+| 129' | dalta (u) sikkūra sippē bābāni iltanappat | את הדלת, (ו)את הבריח, את מזוזות הפתחים יגע ויגע. | `וְהִגַּעְתֶּם אֶל הַמַּשְׁקוֹף וְאֶל שְׁתֵּי הַמְּזוּזֹת` (שמות יב:כב); `וְלֹא יִתֵּן הַמַּשְׁחִית לָבֹא אֶל בָּתֵּיכֶם` (שמות יב:כג) | equivalent | נגיעה (מריחה) במזוזות הבית בלילה של הסכנה, ובאותו הפסוק `וְאַתֶּם לֹא תֵצְאוּ אִישׁ מִפֶּתַח בֵּיתוֹ עַד בֹּקֶר`; : המשיחה סוגרת את הבית בפני המזיק. שם בדם, כאן בקמח ובבלילה. |
+| 133' | šamna kala šīrīšu [tapaššaš] | בשמן את כל בשרו [תמשח]. | `דִּשַּׁנְתָּ בַשֶּׁמֶן רֹאשִׁי` (תהלים כג:ה) | equivalent | משיחה בשמן אחרי הסכנה, "נגד צוררי". |
+| 135' | nūru [k]urab <ana enlil?> šutēšer harrānka a[na] ē[kur tamannū-ma] | אור – ברך ⟨את אנליל?⟩, ישר את אורחך אל אֵ[כּוּר]" [תמנה], | `וְהוּא יְיַשֵּׁר אֹרְחֹתֶיךָ` (משלי ג:ו) | cognate | *ešēru* + *ḫarrānu* = `יִשֵּׁר` + `אֹרַח`. |
+| 138' | ina šēr[i] adi šurpa tašarrapu | בבוקר, כאשר את השְּׂרֵפָה תשרוף, | `וְהִשְׁלִיךְ אֶל תּוֹךְ שְׂרֵפַת הַפָּרָה` (במדבר יט:ו) | cognate | *šurpu* = `שְׂרֵפָה`, מעשה השריפה בטקס טיהור. |
+| 141' | ṣalam kaššāpti ša qēmi ina libbi namsê teṣṣir | צלם מכשפה של קמח בתוך הכיור תצור, | `וְעָשִׂיתָ כִּיּוֹר נְחֹשֶׁת וְכַנּוֹ נְחֹשֶׁת לְרָחְצָה` (שמות ל:יח); `וְרָחֲצוּ אַהֲרֹן וּבָנָיו מִמֶּנּוּ אֶת יְדֵיהֶם` (שמות ל:יט) | equivalent | כיור נחושת לרחיצה (`{urudu}namsû`, "כיור נחושת"); . |
+| 142' | ṣalam ṭīdi ša kaššāpti ina muhhi tašakkan qātīšu ana muhhi imessi ana bī[ti terrub] | צלם טיט של המכשפה עליו תשים; את ידיו עליהם ירחץ; אל הבית תיכנס. | `יִרְחֲצוּ אֶת יְדֵיהֶם עַל הָעֶגְלָה הָעֲרוּפָה בַנָּחַל` (דברים כא:ו); `יָדֵינוּ לֹא שָׁפְכֻה` (דברים כא:ז) | equivalent | **רחיצת הידיים מעל**: זקני העיר רוחצים את ידיהם *על* העגלה, וכאן החולה רוחץ את ידיו *על* צלמי המכשפה; בשני המקרים המים מעבירים את הרע אל הגוף שמתחת, והרוחץ יוצא נקי: . |
+| 143' | EN₂ bāʾirtu ša bāʾirāti | הקסם "צַיֶּדֶת הצַּיָּדוֹת": | `לְצוֹדֵד נְפָשׁוֹת` (יחזקאל יג:יח) | equivalent | הנשים הצדות נפשות (§2.1). |
+| 151' | [ana muh]hi ṣalam nigsagilê qātīšu imessi | [על] צלם התמורה את ידיו ירחץ. | `וְסָמַךְ אַהֲרֹן אֶת שְׁתֵּי יָדָו עַל רֹאשׁ הַשָּׂעִיר הַחַי` (ויקרא טז:כא); `וְהָיָה הוּא וּתְמוּרָתוֹ יִהְיֶה קֹּדֶשׁ` (ויקרא כז:י) | divergence | הידיים על התחליף, שנושא את העוון; כאן הידיים נרחצות על התחליף. ↔  – המלה `תְּמוּרָה`. |
+| 155' | EN₂ ina šēri mesâ qātāya mīs qātī | הקסם "בבוקר רחוצות ידיי": רחיצת ידיים. | `אֶרְחַץ בְּנִקָּיוֹן כַּפָּי` (תהלים כו:ו) | equivalent | ידיים רחוצות כהצהרת חפות (§3). |
+| 164' | ina pîšu ana libbi namsê inappah | ובפיו אל תוך הכיור ינפח. | `כִּי אִם-כַּמֹּץ אֲשֶׁר-תִּדְּפֶנּוּ רוּחַ` (תהלים א:ד) | equivalent | המוץ הנישא ברוח כדימוי לרשעים; כאן הדימוי נעשה מעשה (VI 30 `[יינ]שפו כשפיה כמוץ`). |
+| 174' | ana kalbi u kalbati tanaddin | לכלב ולכלבה תיתן. | `לַכֶּלֶב תַּשְׁלִכוּן אֹתוֹ` (שמות כב:ל) | equivalent | מה שאסור ונטמא ניתן לכלב |
+| 174' | ana kalbi u kalbati tanaddin | לכלב ולכלבה תיתן. | `וְאֶת אִיזֶבֶל יֹאכְלוּ הַכְּלָבִים` (מלכים ב ט:י) | divergence | גורל האישה ש"כשפיה הרבים" (ט:כב): הכלבים אוכלים אותה. |
+| 177' | ib[arri? ana] ṣīt šamši tasallah | יִבְ[חַן?]; [אל] מוצא הַשֶּׁמֶשׁ תזה. | `וְהִזָּה בְאֶצְבָּעוֹ עַל פְּנֵי הַכַּפֹּרֶת קֵדְמָה` (ויקרא טז:יד) | divergence | הזאה כלפי מזרח; שם דם על הכפורת, כאן מים אל השמש. |
+| 179' | mê tasallaʾ | מים תזה. | `וְהִזָּה עַל הַמִּטַּהֵר מִן הַצָּרַעַת שֶׁבַע פְּעָמִים` (ויקרא יד:ז) | equivalent | ההזאה החותמת את הטיהור. |

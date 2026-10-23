@@ -291,7 +291,7 @@ FORMULAS = [
     (r"kibrīt", r"גפרית", "kibrītu = `גָּפְרִית` [cognate] ★", ()),
     (r"\bqum[iuīū]|\bqumī|aqmū", r"בער|מבער", "qamû = `בִּעֵר`", ()),
     (r"\bqul[iī]\b|qulīš|aqallu|aqallī|\bqālî|\bqālû|qāl[iī]\b", r"קל[הו]|קולה|קלי|קלית", "qalû = `קָלָה` [cognate]", ()),
-    (r"hūlā zūbā", r"המסו זובו והנתכו", "the refrain `הִמַּסּוּ, זוּבוּ וְהִנָּתְכוּ`", ()),
+    (r"hūlā zūbā", r"המסו זובו והנתכו", "the refrain `הִמַּסּוּ, זוּבוּ וְהִנָּתְכוּ`", ("RT",)),  # RT quotes only the incipit
     (r"quturkunu lītelli šamê", r"קיטורכם יעלה השמימה", "the refrain `קִיטוֹרְכֶם יַעֲלֶה הַשָּׁמַיְמָה`", ()),
     (r"limūt-ma anāku lubluṭ|limūtū-ma anāku lubluṭ|lidūkū-ma anāku lubluṭ", r"ואני אחיה", "`… וַאֲנִי אֶחְיֶה` (↔ Ex 22:17)", ()),
 ]
