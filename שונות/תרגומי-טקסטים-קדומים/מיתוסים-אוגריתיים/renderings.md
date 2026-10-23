@@ -259,7 +259,7 @@ reconstruction** – say so in the פירוק when it decides the rendering.
 *qdš* · `נַחֲלָה` *nḥlt* · `נֶפֶשׁ` *npš* · `רְפָאִים` / `רָפִא` *rpu* · `עָפָר` *ʿpr* · `צֶלֶם` / `דְּמוּת` *ṣlm* / *dmt* · `טוֹב` *ṭb* ·
 `גָּדוֹל` *gdl* · the root יצר *yṣr* · the root עשה *ʿšy* · the root קנה *qny* / *qn* · the root ברך *brk* · `קָרָא` *qrʾ* /
 *qry* · the root ערב *ʿrb* · `עוֹף` *ʿp* · `צִפּוֹר` *ʿṣr* · `דָּג` *dg* · `עַשְׁתָּרוֹת` *ʿṯtrt* (the town) · `אָדָם` *adm* · `רוּחַ` *rḥ* ·
-the root רחף *rḥp* · `הִשְׁתַּחֲוָה` *ḥwy* · `הֲדוֹם` *hdm* · `כִּסֵּא` *ksu* · `בַּעַל` *bʿl* · the root שלט *šlyṭ* · the root משל
+the root רחף *rḫp* (DULAT /r-ḫ-p/; corrected 2026-10-23: 1.108:8 has it) · `הִשְׁתַּחֲוָה` *ḥwy* · `הֲדוֹם` *hdm* · `כִּסֵּא` *ksu* · `בַּעַל` *bʿl* · the root שלט *šlyṭ* · the root משל
 *mšl* · `שֶׂרֶט`, `קָרְחָה`, `הִתְגּוֹדֵד` *šrṭ* / *qrḥ* / *gdd* · `יְדִיד` *ydd* · `גַּד` *gd* · `אוֹר` *ar* (and `מָאוֹר` never) ·
 `חוֹשֶׁךְ` *ḥšk* / *ẓlm*.
 
@@ -492,6 +492,13 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 - **Kinship and marriage:** *ad* `אַבָּא` (apart from *ab* `אָב`); *mt* "husband" `*מְתִי*` (vocalized; one Hebrew with *mtm*); *mhr* (II) `מֹהַר` [cognate] (CUC's "warrior" rejected), *mhr* (I) `מָהִיר`; *ḫtn* `הִתְחַתֵּן`; *ṯlḫ* `שִׁלּוּחִים` [cognate] (1 Kgs 9:16); *trḫ* `אֵרַשׂ`, *mtrḫt* `מְאֹרָשָׂה` (by sense).
 - **Other one-lemma renderings:** *inr* `*גּוּר*` (apart from *klb* `כֶּלֶב`); *nyr* `נִיר` (`מָאוֹר` never); *ṯġr* `שׁוֹעֵר`; *zd* / *ḏd* "breast" `שַׁד` (always vocalized).
 - **Tool quirk (harmless):** 1.114:9 *ʿn{y}t* is not read as Anat's first occurrence, so `עֲנָת` is vocalized at 11 too.
+
+**Round 4 run 1, translator 3 (KTU 1.100, 1.107, 1.108, 1.82, 1.83), merged by the coordinator 2026-10-23** (details: `2-מיתוסים-ולחשים/project.md`) – the Proposals accepted:
+- **1.100:** one refrain string in all eleven stanzas (`קראה לשַׁפְּשׁ, אמה` …, and the gods' non-answer); towns `לַרְגַּת`, `בִּבִּת`, `חֻרְיַת`, `מְצַדָּה` (Horon's), `מָרִיָה`; *ʿqšr* / *aqšr* `*עקשן*`; *ʿrʿr* `עַרְעָר`, *ʿṣ mt* `עֵץ הַמָּוֶת`; *itnn* `אֶתְנַן`; *pḥlt* `חֲמוֹרָה` (`אָתוֹן` is *atn*'s).
+- **1.107:** `אספי, שַׁפְּשׁ, מן ההרים ערפל, מעל הארץ *תוקף*`; `X יאסוף חֵמָה`; `חֵמָה מפי הנושך, אבדון מפי האוכל`; *abd* `אֲבַדּוֹן`, *abdy* `אָבְדָן`.
+- **1.108:** *ʿz* `עוֹז` // *ḏmr* `זִמְרָה` (Exod 15:2); *iršt* `אֲרֶשֶׁת`; *rḫp* `רחף` [cognate] – the gate's licence corrected from *rḥp* to *rḫp*; *diy* `דַּאָה`; *kpṯ* `*כִּפָּה*` (`רָקִיעַ` never).
+- **1.82 / 1.83:** *ʾṭm* `אָטַם`, *alt* `אָלָה`, *ḥtt* `חתת`, *ʿnt* (II) "now" `כָּעֵת`; *šbm* (n.) `מַחְסוֹם`; *lšnm tlhk* `ולשונם תהלך` (Ps 73:9). **1.83:8 reads *tan*, 1.83:10 *lbnt*** (CUC = KTU³): the Hebrew follows the base text (`*תַּאן*?`, `לבנים`), the emendations *tnn* / *lbnn* are in the notes, and every parallel built on them is marked "only if emended".
+- **Collisions left for the next session on this corpus** (minor; the user's rule): *gṯr* `הַגִּבּוֹר` (§9) / *ġzr* `גיבור`; *rnn* `רנן` / *bd* `רינן` (1.3 I:18); *abd* a verb in 1.100 / the noun in 1.107 (DULAT: the noun in both); *pslt* `*מַחְלְפוֹת*` (1.5–1.6) / the cognate *mḫlpt* `מַחְלְפוֹת` (1.107:20); *gp* / *ḫp* both `חוֹף`; *hr* / *ġr* both `הַר`; *ʿdt* `עֵדָה` (§4.2) / `עֵת` (1.4); *mnt* `מִנְיָן` ("incantation") against DULAT's "portion".
 
 ## 11. The fifth-day dossier (`3-תיק-היום-החמישי/`, coordinator, 2026-10-23)
 
