@@ -113,3 +113,4 @@ Vocalized at the first occurrence in each annotated file; afterwards plain spell
 - 2026-10-21: §9 project 2 merged; §3.2 formula and *mu-ud-na* corrected.
 - 2026-10-21: §9 project 3 merged.
 - 2026-10-21: the lead's cross-corpus harmonization applied (§9, last paragraph; §0.1–§0.2, §3.1–§3.3, §6 updated).
+- 2026-10-23 harmonization, batch C (`../harmonization--2026-10-23.md` row 19): *bâʾu* "go along" = `צָעַד` (LAOS 4 16 r.iii.22 `עבר` → `צעד`); of lightning "flash by" by sense `חָלַף` (01 o.i.10 `ועוברים` → `וחולפים`, o.i.12 `עבר הברק` → `חלף הברק`): `עָבַר` is reserved for its cognate *ebēru*.

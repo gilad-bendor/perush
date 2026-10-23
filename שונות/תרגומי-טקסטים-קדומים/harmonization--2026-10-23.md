@@ -79,3 +79,11 @@ Maqlû, the netherworld, Atra-ḫasīs, the prophecies and EST; it also changed 
 the table (Gilgameš I 113, 126, 140, 153, 161, 169, 174; Maqlû II 225, VII 125; the MB Atra-ḫasīs copies G 31a, G 35e,
 G 40, G 49g). Kept overlaps: Ludlul's *mašqû* `מַשְׁקֶה` beside *mašqītu* `משקה` (one root); `מְצוֹדָה` for *ḫuḫāru* (Maqlû,
 the Šamaš Hymn 94) and EST's *tubāqu*. Row 19 was revised after batch B (batch C).
+
+Batch C (2026-10-23): row 19 (*bâʾu* = `צעד`) in the flood corpus (project 4 U r. 11′, 19′; also Atra-ḫasīs III iii 12 and
+Gilg. XI 106, 111, whose parses write the lemma without italics), Etana (III.b+3, b+5, b+40, b+42), Gilgameš SB VI 19
+(`יצעד לפני`, "outpace"), Ludlul I 80, IV c+16, the Theodicy 291, Maqlû VII 13 (`אל יצעדו אליי בפתח`; IV 151 back to
+`אשטוף`), the love lyrics LAOS 4 16 r.iii.22 (the lead); lightning "flashing by" (LAOS 4 01 o.i.10, 12) by sense `חלף`.
+Row 24 in the Theodicy 245. Kept overlaps: `צעד` also for *akāšu* "walk" (Etana, OB Gilgameš, the Theodicy, the love
+lyrics) and `תעלה` also for *atappu* (the Theodicy 138, Maqlû) – synonyms, by sense.
+

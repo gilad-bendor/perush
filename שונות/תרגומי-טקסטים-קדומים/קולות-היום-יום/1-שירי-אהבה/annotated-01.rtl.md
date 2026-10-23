@@ -78,7 +78,7 @@
 
 ### o.i.10
 `i-ni-ib-šu i-ba-a-u₂-⸢ma⸣`
-> את תנובתו – ועוברים
+> את תנובתו – וחולפים
 - **פירוק:** `inibšu` – inbu + `-šu`; `ibāʾūma` – bâʾu "לעבור" עבר 3 רבים + `-ma`.
 - **תרגומים:** וסרמן: "its fruit, and the lightnings of Adad passed over it," – כמונו (o.i.10–11).
 
@@ -92,7 +92,7 @@
 
 ### o.i.12
 `ma ib-ta bi-ir-qum`
-> הנה, עבר הברק
+> הנה, חלף הברק
 - **פירוק:** `mā` – "הנה"; `ibtāʾ` – bâʾu פרפקט 3 יחיד; `birqum` – "הברק".
 - **תרגומים:** וסרמן: "so, indeed, the lightning of love-making passed upon me –" – כמונו (o.i.12–13).
 
