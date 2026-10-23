@@ -64,11 +64,11 @@ P3 = "3-ספר-הפרה-השמימית"
 UNITS = {
     "AM": (P1, "מוּסַר אֲמֶנֶמוֹפֶּה", "aed", "Amenemope--pBM-EA-10474/5JO44VJZERAB3HQUHMFSMNXH6I.xml", None),
     "MK": (P2, "מֶרִיכָּרֶע: האל ובני האדם (E 130–138)", "aed-E", "Merikare--pPetersburg-1116A/YZSISQLOINELTMJDPXQ45O5IUU.xml", (130, 138)),
-    "MT": (P2, "התאולוגיה של מֹף (אבן שַׁבַּכָּה)", "tsv", None, None),
     "PT571": (P2, "טקסט הפירמידות 571 (פֶּפִּי הראשון)", "aed", "PT-571--West-wall/RKYIL56JTJFP3JAJI2FTEWARKA.xml", None),
     "PT486": (P2, "טקסט הפירמידות 486 (פֶּפִּי הראשון)", "aed", "PT-486--West-wall/ZAV2GQBVWBDSBOQIX4JNXP3DYI.xml", None),
     "PT527": (P2, "טקסט הפירמידות 527 (מֶרֶנְרַא)", "aed", "PT-527--West-wall/UY2LJNHE4JEFLMATP2CN3YLXH4.xml", None),
     "PT600": (P2, "טקסט הפירמידות 600 (פֶּפִּי השני)", "aed", "PT-600--East-wall/NHY7Q7ERPNEWTK5BWG7KELURNU.xml", None),
+    "MT": (P2, "התאולוגיה של מֹף (אבן שַׁבַּכָּה)", "tsv", None, None),
     "HC": (P3, "ספר הפרה השמימית (קבר סֵתִי הראשון)", "aed", "Heavenly-Cow--KV17-Seti-I/WHEOIX5P5ZAVVFU4BGO6OWASV4.xml", None),
 }
 PROJECT_TITLES = {P1: "מוסר אמנמופה", P2: "בריאת העולם במצרים: מריכרע, התאולוגיה של מֹף, טקסטי הפירמידות",
