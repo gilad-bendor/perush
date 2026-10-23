@@ -458,3 +458,48 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 ## 10. Changes and proposals merged (by run and translator)
 
 (none yet)
+
+## 11. The fifth-day dossier (`3-תיק-היום-החמישי/`, coordinator, 2026-10-23)
+
+Short excerpts from six other cultures, each translated from its own language (the base texts: the dossier's
+`project.md`). The rules of this file apply where they can (one Hebrew per source word; names transcribed; echo
+control); the Ugaritic gates of §5 do not (the dossier has its own tool, `dossier_tools.py`). **The comparison word of
+the dossier is `נָחָשׁ`:** every language's generic word for "snake" is rendered `נָחָשׁ` (Gk. ὄφις, Skt. *áhi-*, Hitt.
+MUŠ / *illuyanka-* as a common noun, ON *ormr*, Kanbun 虵), so that the reader sees one creature across the cultures
+([equivalent], typological unless the note says otherwise); the Bible's own monster words `תַּנִּין` and `לִוְיָתָן`, the
+verb `בָּרָא`, `אֱלֹהִים` and `שְׁאוֹל` are **never** used in a dossier line (the verifier blocks them): the apparatus
+compares them.
+
+| Language | Source word | Hebrew | Note |
+|---|---|---|---|
+| Egyptian | *nṯr* | `אֵל` | as Ug. *il* |
+| | *rmṯ* | `בְּנֵי הָאָדָם` | [equivalent] Gen 1:26 `אָדָם` |
+| | *ꜥw.t* | `צֹאן` | "small cattle, flock": both "the flock of god" (E130) and the animals given as food (E132) |
+| | *jrj* | `עָשָׂה` | [equivalent] Gen 1:7, 16, 25–26 |
+| | *pt*, *tꜣ* | `שָׁמַיִם`, `אֶרֶץ` | |
+| | *snk n mw* | `תַּאֲוַת הַמַּיִם` | *snk* "greed, voracity" (TLA: "Gier (des Wassers)") |
+| | *ṯꜣw* | `רוּחַ` | "breath, air" |
+| | *fnḏ* | `אַף` | Gen 2:7 `בְּאַפָּיו` [equivalent] |
+| | *snn* | `צֶלֶם` | "image, likeness, statue"; [equivalent] Gen 1:26–27 |
+| | *ꜣpd*, *rm* | `עוֹף`, `דָּג` | [equivalent] Gen 1:20–22, 26 |
+| | *sm* | `עֵשֶׂב` | |
+| Greek | ὄφις; δράκων; πέλωρ / πέλωρον | `נָחָשׁ`; `דְּרָקוֹן`; `מִפְלֶצֶת` | LXX layer (guidelines §6.4.5): ὄφις = `נָחָשׁ` (Gen 3:1); δράκων = `תַּנִּין` (Ex 7:9–12; Ps 74:13) and `לִוְיָתָן` (Isa 27:1; Job 40:25); κῆτος (the root of Κητώ) = `תַּנִּין` in Gen 1:21 (τὰ κήτη τὰ μεγάλα) and `דָּג` in Jonah 2:1 |
+| | μέγας | `גָּדוֹל` | LXX Gen 1:21 μεγάλα = `הַגְּדֹלִים` |
+| | Κητώ, Φόρκυς, Θαύμας, Εὐρυβίη, Γαῖα, Ἔχιδνα, Τυφωεύς, Τάρταρος, Ἀφροδίτη, Γραῖαι, Ἄριμοι | `קֵטוֹ`, `פוֹרְקִיס`, `תָאוּמָס`, `אֶוּרִיבִיָּה`, `גַּאיָה`, `אֶכִידְנָה`, `טִיפוֹאֶוּס`, `טַרְטָרוֹס`, `אַפְרוֹדִיטֵה`, `הַגְּרַאִיּוֹת`, `הָאֲרִימִים` | |
+| Hittite | MUŠ*illuyanka-* | `הַנָּחָשׁ` (`אִילוּיַנְקָה` as the name) | *illuyanka-* is "serpent"; the text uses it as the monster's name |
+| | {D}IŠKUR (Tarḫunna) | `אֵל הַסְּעָרָה` | by meaning (the logogram's Hittite reading is debated): a note |
+| | DINGIR{MEŠ} | `הָאֵלִים` | |
+| | Inara, Ḫupašiya, Kiškilušša, Ziggaratta | `אִינָרָה`, `חוּפַּשִׁיָּה`, `כִּישְׁכִּילוּשָּׁה`, `זִיגָּרָתָּה` | |
+| Vedic | *áhi-* | `נָחָשׁ` | |
+| | *vr̥trá-* | `וְרִטְרָה` | "the Obstacle, the Encloser" (a note) |
+| | *vájra-* | `וַגְ'רָה` | the thunder-club (a note) |
+| | *áp-* (pl.) "the waters"; *samudrá-* | `הַמַּיִם`; `הַיָּם` | |
+| | *párvata-* | `הַר` | |
+| | Índra, Tváṣṭr̥, Dāsá, Paṇí | `אִינְדְּרָה`, `תְּוַשְׁטָר`, `דָּאסָה`, `פַּנִּי` | |
+| Old Norse | *ormr* | `נָחָשׁ` | |
+| | *fiskr* | `דָּג` | the serpent called a fish (24.6) |
+| | Þórr, Hymir; *umgjǫrð allra landa* | `תּוֹר`, `הִימִיר`; `חֲגוֹרַת כָּל הָאֲרָצוֹת` | |
+| Kanbun | 虵 (= 蛇) | `נָחָשׁ` | |
+| | 遠吕智 / 八俣遠吕智 (Woroti, Yamata-no-Woroti) | `אוֹרוֹצִ'י`, `אוֹרוֹצִ'י שְׁמוֹנֶה־הַמִּסְעָפִים` | |
+| | 速須佐之男命, 高志, 肥河 | `הַיָּה־סוּסָנוֹאוֹ`, `קוֹשִׁי`, `נְהַר הִי` | |
+| | 八 | `שְׁמוֹנֶה` | the sacred number, kept every time |
