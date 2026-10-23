@@ -877,7 +877,7 @@ Outside Genesis 1–11: the lament for Enkidu (VIII 3–56) ↔ 2 Sam 1:19–27,
 
 | Verse | Tablet, line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
 |---|---|---|---|---|---|---|
-| בראשית כט:ב | SB I 112 | ina pūt mašqî … uštamḫiršu | מול השוקת … פגש פנים אל פנים | `וְהִנֵּה בְאֵר בַּשָּׂדֶה` (בראשית כט:ב) | [divergence] | The meeting at the water (betrothal type-scene, 24:11ff., 29:1–12) begins here; Šamḫat meets Enkidu at the same water-hole (169–188). |
+| בראשית כט:ב | SB I 112 | ina pūt mašqî … uštamḫiršu | מול הַמַּשְׁקֶה … פגש פנים אל פנים | `וְהִנֵּה בְאֵר בַּשָּׂדֶה` (בראשית כט:ב) | [divergence] | The meeting at the water (betrothal type-scene, 24:11ff., 29:1–12) begins here; Šamḫat meets Enkidu at the same water-hole (169–188). |
 | בראשית כט:יא | SB I 253 | unaššaqū šēpīšu | מנשקים את רגליו | `וַיִּשַּׁק יַעֲקֹב לְרָחֵל` (בראשית כט:יא) | [cognate] | *našāqu* = נשק. |
 | בראשית כט:יג | SB I 185 | iḫabbubū | יחבקו | `וַיְחַבֶּק לוֹ וַיְנַשֶּׁק לוֹ` (בראשית כט:יג) | [equivalent] | *ḫabābu* = חִבֵּק. |
 | בראשית כט:כב | SB II 109 | ana išḫara mayyāl | לאִשְׁחַרָה – משכב | `וַיַּעַשׂ מִשְׁתֶּה` (בראשית כט:כב) | [equivalent] | The bed of the goddess of marriage. |
@@ -892,8 +892,8 @@ Outside Genesis 1–11: the lament for Enkidu (VIII 3–56) ↔ 2 Sam 1:19–27,
 
 | Verse | Tablet, line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
 |---|---|---|---|---|---|---|
-| בראשית ל:לח | SB I 109 | itti būli mašqâ | עם הבהמה … בשוקת | `בְּשִׁקְתוֹת הַמָּיִם אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת` (בראשית ל:לח) | [cognate] | *mašqû* = שֹׁקֶת (root שקה). Enkidu lives among the animals, he does not name them (`לְכָל הַבְּהֵמָה … וּלְכֹל חַיַּת הַשָּׂדֶה`, ב:כ). = 174. |
-| בראשית ל:לח | SB I 170 | ikšuda būlu mašqâ išatti | הגיעה הבהמה, שותה (מן) השוקת | `בְּשִׁקְתוֹת הַמָּיִם אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת` (בראשית ל:לח) | [equivalent] | The flock coming to drink at the troughs. |
+| בראשית ל:לח | SB I 109 | itti būli mašqâ | עם הבהמה … בַּמַּשְׁקֶה | `בְּשִׁקְתוֹת הַמָּיִם אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת` (בראשית ל:לח) | [cognate] | *mašqû* = שֹׁקֶת (root שקה). Enkidu lives among the animals, he does not name them (`לְכָל הַבְּהֵמָה … וּלְכֹל חַיַּת הַשָּׂדֶה`, ב:כ). = 174. |
+| בראשית ל:לח | SB I 170 | ikšuda būlu mašqâ išatti | הגיעה הבהמה, שותה (מן) הַמַּשְׁקֶה | `בְּשִׁקְתוֹת הַמָּיִם אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת` (בראשית ל:לח) | [equivalent] | The flock coming to drink at the troughs. |
 | בראשית ל:לח | SB V 133 | ina rāṭ nappāḫi | ברהט הנפח | `בָּרְהָטִים בְּשִׁקְתוֹת הַמָּיִם` (בראשית ל:לח) | [cognate] | *rāṭu* / רהט (§10). |
 | בראשית ל:לח | SB XI 288 | ipti r[āṭa] | פתח [רהט] | `בָּרְהָטִים בְּשִׁקְתוֹת הַמָּיִם` (בראשית ל:לח) | [cognate] | *rāṭu* ~ רהט; mostly restored. Cf. 316. |
 | בראשית ל:מג | SB VI 18 | līlidā | ילדו | `וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד וַיְהִי לוֹ צֹאן רַבּוֹת` (בראשית ל:מג) | [equivalent] | Jacob's flocks. |
