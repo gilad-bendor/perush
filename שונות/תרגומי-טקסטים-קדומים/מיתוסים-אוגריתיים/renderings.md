@@ -351,7 +351,7 @@ formula `אֶל X אֱמֹר:` is another formula, kept apart.)
 **6.9 The window (KTU 1.4 V 61–VII 28).** *ḥln b bhtm* = `חַלּוֹן בַּבַּיִת`; *urbt b qrb hklm* = `אֲרוּבָּה בְּקֶרֶב
 הַהֵיכָל`; *bdqt ʿrpt* = `בֶּדֶק בָּעֲנָנִים`.
 
-**6.10 The seven days (KTU 1.4 VI 24–33 and elsewhere).** *hn ym w ṯn* = `הִנֵּה יוֹם וְיוֹם שֵׁנִי`; *ṯlṯ rbʿ ym* =
+**6.10 The seven days (KTU 1.4 VI 24–33 and elsewhere).** *hn ym w ṯn* = `הִנֵּה יוֹם וְשֵׁנִי` (fixed by the translator of 1.4: the tablet has no second "day"); *ṯlṯ rbʿ ym* =
 `שְׁלִישִׁי, רְבִיעִי יוֹם`; *ḫmš ṯdṯ ym(m)* = `חֲמִישִׁי, שִׁשִּׁי יוֹם`; *mk b šbʿ ymm* = `הִנֵּה בַּיּוֹם הַשְּׁבִיעִי` (the
 translator of 1.4 checks every copy against CUC and fixes the exact Hebrew; ↔ Gen 1:5–2:3 [divergence]: six days of work
 and the seventh as completion, in a building story).
@@ -423,7 +423,7 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 | 1.3 III:39 | ok | `אֵל, יָם; אָכֵן כִּלִּיתִי אֶת נָהָר, הָאֵל הָרַב;` |
 | 1.3 III:39 | err | `אל, ים, הלא כליתי את נהר, האל הרב?` |
 | 1.3 III:39 | err | `אֵל, יָם, הֲלֹא כִּלִּיתִי אֶת נָהָר, הָאֵל הַגָּדוֹל?` |
-| 1.4 VII:17 | ok | `שֶׁיִּפְתַּח חַלּוֹן בַּבַּיִת,` |
+| 1.4 VII:17 | ok | `יִפְתַּח חַלּוֹן בַּבַּיִת,` |
 | 1.4 VII:18 | ok | `אֲרוּבָּה בְּקֶרֶב הַהֵיכָל,` |
 | 1.4 VII:18 | err | `אֶשְׁנָב בְּקֶרֶב הַהֵיכָל,` |
 | 1.4 VII:19 | ok | `וְיִפְתַּח בֶּדֶק בָּעֲנָנִים` |
@@ -518,4 +518,13 @@ lbnt* `לָבַן לְבֵנִים` (Gen 11:3), *ulṯ* `מַלְבֵּן`; *pgl
 interrogative *hm* `אוֹ` (Ug. *u* "or", if it appears, takes `אוֹ` too only after a check: a split to avoid). The
 coordinator's decisions on the translator's open points: *nʿl* and *mdl* stay as drafted (with the alternatives in the
 apparatus); interrogative *hm* stays `אוֹ`.
+
+**Round 4 run 1, translator 2 (KTU 1.4 V–VIII), merged 2026-10-23:** §6.10 fixed: `הִנֵּה יוֹם וְשֵׁנִי` / `שְׁלִישִׁי, רְבִיעִי יוֹם` /
+`חֲמִישִׁי, שִׁשִּׁי יוֹם` / `הִנֵּה בַּיּוֹם הַשְּׁבִיעִי` (*mk* and *hn* both `הִנֵּה` here, as the formula needs); §6.9 kept (where
+Kothar's proposal swaps *urbt* and *ḥln*, the Hebrew follows the tablet; jussive `יִפְתַּח` in the command, `פָּתַח` in the
+execution). New: *ʿdn* `עִדָּן`, *ʿdt* `עֵת`; *šry* `*יַשְׁרֶה*`; *kll* `כָּלַל`; *ʿḏbt* `עִזְבוֹנוֹת`; *ṭhr* `טֹהַר`; *ḫpṯt* `בֵּית הַחָפְשִׁית`;
+*trr* `הֵחִיל`, *ḫš* `חָרַד` (`רעד` = *nṭṭ*, `חוש` = *ḥš*); *u* `אוֹ` (shared with interrogative *hm*: accepted – both "or" in
+alternative questions); *pq* Š `סִיפֵּק`; *krm* "rams" `כָּרִים`; *lʾk* `שִׁגֵּר`; *mspr* `מִסְפָּר`; *bmt arṣ* `גַּבֵּי אֶרֶץ` (the cognate
+`בָּמֳתֵי אָרֶץ`, Amos 4:13, in the note). Tool: a word split across two lines is licensed in both (`license_text`); the §6.1
+regex accepts plene `וצווח`.
 

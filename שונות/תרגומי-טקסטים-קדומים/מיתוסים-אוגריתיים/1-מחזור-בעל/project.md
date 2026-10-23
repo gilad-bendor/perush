@@ -261,8 +261,8 @@ Anat's speech (V); the gift for Athirat and Qudšu-Amrur sent to Kothar in Kapht
 ## KTU 1.4
 
 Translator 2 of the corpus (Round 4 run 1), 2026-10-23. Files: `annotated-1.4.rtl.md`, `translation--intro-1.4.rtl.md`,
-generated `translation-1.4.rtl.md` (and `translation.rtl.md`). **Part 1: columns I–IV (208 lines, I:1–IV:62)**; V:1–VIII:49
-follow in part 2 (placeholder `<!-- טרם תורגם: V:1–VIII:49 -->` at the end of the annotated file).
+generated `translation-1.4.rtl.md` (and `translation.rtl.md`). The whole tablet, 447 lines: part 1 = columns I–IV
+(208 lines), part 2 = columns V–VIII (239 lines), drafted after part 1 was merged; each heading below covers both parts.
 
 ### Scope
 
@@ -278,6 +278,12 @@ fisherman sent with a net "into El's beloved, Yam" (II); Baal's account of the i
 saddled, the night procession to El, the homage, El's laughter and welcome ("are you hungry … thirsty? … or does the
 love of the Bull arouse you?"), Athirat's praise of El's wisdom and Baal's kingship, the house list, and El's mocking
 consent: "Am I a slave … is Athirat a maid, that she should mould bricks? Let a house be built for Baal" (IV).
+- Part 2, columns V–VIII (V 65, VI 65, VII 60, VIII 49 lines; VI:60–65, VII:1–6, VII:58–60, VIII:38–48 scraps): Athirat
+  praises El's decision – Baal will now give his voice in the clouds; Anat brings the news; caravans of silver, gold and
+  lapis; Kothar comes, proposes a window, Baal refuses twice (V:41–VI:15); cedars of Lebanon and Sirion, fire in the house
+  six days and done on the seventh, the house-warming banquet for the seventy sons of Athirat (VI:16–59); Baal's conquest
+  of the towns, his consent to the window, his thunder that shakes the earth, "king or no king" (VII:1–44); the message
+  to Mot, the descent to his city, the warning, and the colophon (VII:45–VIII:49).
 
 ### Sources consulted
 
@@ -291,6 +297,9 @@ consent: "Am I a slave … is Athirat a maid, that she should mould bricks? Let 
 - The modern translations only from memory, never quoted; where I was not sure of a scholar's reading I wrote "רבים",
   "אחרים".
 - Every Bible verse printed with `../../tools/check_bible_quotes.py --show` before quoting (≈110 verses).
+- Part 2: the same tools; Cassuto 1951 quoted from his notes in 3 entries (VI:38 the furnishing of the house, VI:47 the
+  gender pairs of the banquet, VIII:7 "בית חפשית") and cited on the window (Jer 9:20, V:64); ≈90 more verses printed
+  before quoting.
 
 ### Decisions
 
@@ -342,6 +351,41 @@ consent: "Am I a slave … is Athirat a maid, that she should mould bricks? Let 
   avoiding `שתו` "drank"); III:20 *dnt* "strife" (Cassuto, Prov 17:1) against DULAT's "lechery" / "plight"; III:21 *k*
   (III) "for"; III:34 *km* left `כמו?`; IV:27 *k* (III) "when" (CUC: emphatic); IV:41 *ḥkmt* noun (DULAT) vs "you are
   wise"; IV:62 *ybn* G-passive jussive `יִבָּנֶה` (El's consent).
+- **Part 2 (V–VIII):**
+  - **§6.10, the seven-day formula, fixed against every copy (VI:24–33):** *hn ym w ṯn* = `הִנֵּה יוֹם וְשֵׁנִי` (not the
+    pre-set `וְיוֹם שֵׁנִי`: the tablet has no second *ym*), *ṯlṯ rbʿ ym* = `שְׁלִישִׁי, רְבִיעִי יוֹם` (VI:26 has the scribal
+    *kbʿ* for *rbʿ*, noted), *ḫmš ṯdṯ ym* = `חֲמִישִׁי, שִׁשִּׁי יוֹם`, *mk b šbʿ ymm* = `הִנֵּה בַּיּוֹם הַשְּׁבִיעִי`; *tikl išt*
+    = `אכלה אש`, *nblat* = `להבות`, *td išt* (*ndy*) = `נוּדְּתָה אש`.
+  - **§6.9, the window:** kept as fixed (VII:17–19 `יִפְתַּח חַלּוֹן בַּבַּיִת, / אֲרוּבָּה בְּקֶרֶב הַהֵיכָל, / וְיִפְתַּח בֶּדֶק
+    בָּעֲנָנִים`); in Kothar's proposal and Baal's refusal (V:61–VI:9) the tablet has the pair the other way round (*urbt b
+    bhtm*, *ḥln b qrb hklm*) and the Hebrew follows it. *yptḥ*: jussive `יִפְתַּח` in Baal's words (VII:17, 19), narrative
+    `פָּתַח` in the execution (VII:25, 27) – the same Ugaritic form, our vocalization.
+  - **Other formulas:** §6.1, §6.2 (V:22; VIII:1, 10 as commands with *al* (II) `נא`), §6.3 command forms (VIII:27–29, marked
+    `[סטייה מן הנוסחה]` at VIII:28 because the regex knows only `השתחו`), §6.4 (VIII:29–34), §6.5, §6.6 (*mdd il ym*, *bn
+    ilm mt*, *ydd il ġzr*, *nrt ilm špš*, *aliy qrdm*, *kṯr w ḫss*), §6.11 (V:48, VI:55–59).
+  - **New one-lemma renderings:** *rb* (vb) `רַבּוֹתָ`; *ḥkm* (vb) `חָכַם`; *wsr* D `יִסֵּר` [cognate]; *rḫnt* `*עֲרֵבוּת*`;
+    *ʿdn* (n.) `עִדָּן`, (vb) `יְעַדֵּן`; *ʿdt* `עֵת` [cognate]; *ṯkt* `*סְפִינָה*`; *šry* `*יַשְׁרֶה*` [cognate, Job 37:3];
+    *kll* `כָּלַל` [cognate, Ezek 27:4] (`כִּלָּה` stays *kly*'s); *ʿms* `עָמַס` [cognate]; *ḫrn* `אוֹרְחָה`; *ʿḏbt*
+    `עִזָּבוֹן` [cognate, Ezek 27]; *mid* `מְאוֹד` (as a noun, Deut 6:5); *mḥmd* `מַחְמָד`; *udr* `אֶדֶר` [cognate];
+    *ilqṣm* `*אֶקְדָּחִים*`; *ṭhr* `טֹהַר` [cognate, Exod 24:10]; *bšr* `הִתְבַּשֵּׂר`, *bšrt* `בְּשׂוֹרָה` [cognates]; *lʾk*
+    `שִׁגֵּר` (no living Hebrew verb of `מַלְאָךְ`); *mspr* `מִסְפָּר` [cognate, Judg 7:15]; *byn* `הָבֵן`; *rm* L `רוֹמֵם`;
+    *yṯb* Gt/pass `הוּשַׁב`, G `יָשַׁב`; *ʿdb* pass `תּוּקַּן`, *ʿdbt* `תִּקּוּנִים`; *ndy* `נִדָּה`; *sbb* `סָב` / N `נָסַב`;
+    *rq* `רִקּוּעַ`; *ql* Š `הִפִּיל`; *ṣin* `צֹאן`; *ʿgl* `עֵגֶל`; *qmṣ* `לִקְמָצִים` [cognate, Gen 41:47]; *llu* `טָלֶה`; *pq*
+    Š `סִפֵּק`; *kr* `כַּר` [cognate] (CUC's "vineyard" rejected); *ḫprt* `רָחֵל`; *arḫ* `פָּרָה`; *rḥbt* `קַנְקַן`; *dkrt*
+    `צַפַּחַת`; *pdr* `כְּרַךְ`; *ʿr* "city" `עִיר` (vocalized; *ʿr* "donkey" `עַיִר`); *trr* `הֵחִיל` (Ps 29:8; `רָעַד` is
+    *nṭṭ*'s); *ḫš* `חָרַד` (`חוּשׁ` is *ḥš*'s); *rtq* `רֻתַּק`; *qdmy* `קַדְמוֹן`; *bmt arṣ* `גַּבֵּי אֶרֶץ` (§5.4; `בָּמֳתֵי
+    אָרֶץ` in the note); *yʿr* `יַעַר`; *šnu* `שׂוֹנֵא`; *gp* `גַּף`; *nṯq* `נֶשֶׁק` [cognate]; *dmrn* `דִּמְרָן`; *qdm* `קִדֵּם`;
+    *ġḏy* `*זִנֵּק*`; *bkm* `בְּכֵן`; *u* `אוֹ` [cognate]; *škn* Št `יִשְׁתַּכֵּן`; *dll* `רָץ`; *ʿdd* `כָּרוֹז`; *gngn* `*בֶּטֶן*`;
+    *aḥd* `לְבַד`; *mrʾ* `*הִמְרִיא*`; *šbʿ* Š `הִשְׂבִּיעַ`; *tl* `תֵּל`; *ġṣr* `סְפָר`; *ḫlb* `*חֹרֶשׁ*`; *rḥt* `חֹפֶן`; *ḫpṯt*
+    `חָפְשִׁית` [cognate, 2 Kgs 15:5, Ps 88:6]; *spr* N `נִסְפַּר`; *qrt* `קִרְיָה`; *mk* (I) `בִּצָּה`; *nġr* `נָצַר`
+    [cognate]; *qrb* `קָרַב`; *ṯbrn* `שִׁבָּרוֹן` [cognate]; *qn* `קָנֶה`; *ḫtʾ* `נִכְתַּת`; *ṯʿy* `שׁוֹעַ` [cognate].
+  - **Readings chosen:** V:3 *rbt* "you are great" (not CUC's "Lady"); V:9 *šrh* "its release" (Job 37:3) against CUC's
+    "navel"; V:13 *bhmk* = *bhtk*; V:14 *ʿḏbt* "goods" (Ezek 27) against DULAT's "squad"; V:39 *lḥmd* = *mḥmd*; V:42 the
+    scribe's instruction "return to the recitation"; V:47 *yṯṯb* = *yṯb* passive "was seated" (CUC: *ṯb*); VI:3 *ṯn* =
+    *ṯny* "repeated" (CUC: "crimson"); VI:22 *tšt* passive; VI:33 *b* = "from"; VI:36 *bnt* "I built" (CUC: noun); VI:47
+    *krm* "rams" (Cassuto) against CUC's "vineyard"; VII:7 *ʿdr* left uncertain; VII:12 *mrr* untranslated; VII:43 *u … u*
+    "whether … or"; VII:53 *[l]mh* = end of *ġlmh*; VIII:23–24 *md|d* = *mdd* (CUC: "skilled"); VIII:49 the colophon
+    restored by KTU³ from 1.6 VI.
 
 ### Open decisions for the user
 
@@ -354,6 +398,12 @@ consent: "Am I a slave … is Athirat a maid, that she should mould bricks? Let 
   need `אוֹ` too – the coordinator should fix one of them.
 - *ṯb* G "reply" `הֵשִׁיב` (with 1.3) – a homograph of *yṯb* "sit" at III:10; a later translator meeting *yṯb* should keep
   `יָשַׁב`.
+- *u* "or" (VII:43) = `אוֹ`, its cognate – now in the same Hebrew word as interrogative *hm* (II) `אוֹ` (kept by the
+  coordinator's decision). Either accept the shared `אוֹ`, or move *hm* (II) to `אִם` (Gen 37:8's double question).
+- *mk* (II) "behold" (VI:31) = `הִנֵּה` by the fixed §6.10, the same word as *hn* (VI:20, 24): two deictic synonyms in one
+  Hebrew word; an alternative for *mk* would be `וְהִנֵּה` / `הֲרֵי` (but `הֲרֵי` is *dm*'s).
+- VII:34 *bmt arṣ*: `גַּבֵּי אֶרֶץ` by the §5.4 rule, or the cognate idiom `בָּמֳתֵי אָרֶץ` (Amos 4:13, Mic 1:3 – the same
+  theophany image), which §5.4 now excludes.
 
 ### Progress log
 
@@ -373,6 +423,21 @@ consent: "Am I a slave … is Athirat a maid, that she should mould bricks? Let 
   hyphens restored.
 - `check_bible_quotes.py` on the three files: 0 problems. `verify 1.4`: 208 entries, 0 problems, 0 repeated-line
   differences (`--strict` reports only the placeholder V:1–VIII:49).
+- **Part 2 (V–VIII):** drafted column by column, each saved and checked (`fill`, `verify 1.4`, `check_bible_quotes.py`):
+  V – one misquote fixed (Isa 40:4); VI – references normalized (4 in comma form); VII–VIII – three verifier problems:
+  (1) VII:22 `וצווח` (the §6.1 regex expects the defective `וצוח`; marked `[סטייה מן הנוסחה]`, see the tool note), (2)
+  VII:26 `חלון` blocked because the word is split *ḥ | ln* across VII:25–26 (tool fix, below), (3) VIII:28 the command
+  form `תשתחוו` (marked, as 1.3 did); one misquote (2 Kgs 12:6 `הַבַּיִת`).
+- Part 2 pass (a): brackets and plene vocalization (`שִׁיגֵּר`, `סִיפֵּק` ×8, `לְרִיקּוּעִים`, `קִידְּמָה`), `קְנֵהוּ` and
+  `וְהִנָּצְרוּ` vocalized. Pass (b): every repeated passage compared (V:13–17 / V:29–34 / V:36–40; V:58 = VI:1; V:61–65 =
+  VI:5–9; VI:22–33's refrain; VII:17–19 = VII:25–28; the feast VI:55–59 = III:40–44; 1.3's lines for VII:52–57, VIII:1,
+  10–11, 21–34); the one cross-tablet difference, VIII:10 `אז תתנו נא` against 1.3 VI:23 `אז תתן נא`, is justified (dual
+  addressees, the same Ugaritic form). Pass (c): the generated translation read through.
+- **Tool fix** (minimal, because it blocked a clean verify): `ugarit_tools.py` `license_text` now also joins the edge
+  tokens of neighbouring lines, so a word split across two lines (*ḥ | ln*) licenses its reserved Hebrew; `selftest` 45/0
+  and `verify --strict` clean afterwards. **Tool bug reported, not fixed:** the §6.1 regex `נשא (?:את )?קולו וצוח` rejects
+  the plene masculine `וצווח` (it passes only `וצוח` / feminine `וצוחה`).
+- Final: `build`; `check_bible_quotes.py` on the three files 0 problems; `verify 1.4 --strict` 447/447, 0 problems.
 
 ### The text on its own terms
 
@@ -397,6 +462,24 @@ consent: "Am I a slave … is Athirat a maid, that she should mould bricks? Let 
   about slaves and brick-moulds, and consents.
 - **Brick-making is slaves' work** (IV:60–62): El's "is Athirat a maid, that she should mould bricks?" – the same view of
   brick-making as Exod 1:14 and 5:7.
+- **A palace means rain** (V:6–9): Athirat's first words after El's consent: now Baal will set the season of his rain and
+  give his voice in the clouds – the temple is the condition of the weather.
+- **Trade builds the god's house** (V:13–19, 36–40): caravans, goods (the Tyre-trade word of Ezek 27), silver from the
+  mountains, gold from the hills, lapis – a Late Bronze Age merchant city imagining its god's wealth.
+- **A scribe's stage direction** (V:42): "return to the recitation: when the lads were sent" – the tablet as a script for
+  oral performance.
+- **The window dispute** (V:61–VI:15, VII:14–28): the young king fears an opening in his house (for his daughters, Light and
+  Dew; against Yam); only after conquering the towns does he dare; then the window becomes the rift in the clouds through
+  which his thunder sounds.
+- **Six days and the seventh** (VI:22–35): fire burns in the house for six days, paired 1+2, 3+4, 5+6, and on the seventh
+  it is done – a Canaanite pattern of completion, here for a palace.
+- **Hospitality by gender** (VI:47–54): rams for the gods, ewes for the goddesses, chairs and thrones, jars and jugs –
+  the banquet orders the divine family as an Ugaritic host would order his guests.
+- **The king alone** (VII:42–44): "king or no king, who will rule in the land?" – and at once the one rival left, Death.
+- **Death's appetite** (VII:47–52, VIII:12–20): Mot boasts in his throat that he alone will rule and feed the world; his
+  city is Mire, his throne a swamp; he puts gods in his mouth like a lamb.
+- **The way down** (VIII:1–9): to the two mountains at the edge of the world, lift the mountain, go down to "the house of
+  freedom", be counted among those who go down – the geography of the dead.
 
 ### Key parallels
 
@@ -413,6 +496,15 @@ consent: "Am I a slave … is Athirat a maid, that she should mould bricks? Let 
 - I:34, IV:29 the footstool *hdm* ↔ Ps 110:1, Isa 66:1; I:40 *msdt arṣ* ↔ 2 Sam 22:16 (with `אֲפִקֵי יָם`), Ps 82:5.
 - II:26–27 *ẓl ksp* ↔ Eccl 7:12 `בְּצֵל הַכָּסֶף`; II:3 *plk* ↔ Prov 31:19; IV:33 the infinitive-absolute question ↔ Gen 37:8.
 - IV:21–22 El at the source of the two rivers ↔ Gen 2:10 [divergence] (as 1.3 V:6–7).
+- V:10 *bt arzm* ↔ 2 Sam 7:2, 7 `בֵּית אֲרָזִים` – the house of cedar that David's God refuses and Baal's God-in-council grants.
+- V:61–VII:28 *ḥln*, *urbt*, *ptḥ*, *bdqt ʿrpt* ↔ Gen 7:11 `וַאֲרֻבֹּת הַשָּׁמַיִם נִפְתָּחוּ`, 8:2, 8:6 `וַיִּפְתַּח … חַלּוֹן`; Mal
+  3:10; 2 Kgs 7:2.
+- VI:24–33, the six days and "on the seventh day" ↔ Gen 1:8 … 2:2 `וַיְכַל … בַּיּוֹם הַשְּׁבִיעִי` [divergence].
+- VI:46 *šbʿm bn aṯrt* ↔ Deut 32:8 (4QDeut "sons of El"), Exod 1:5, Gen 10.
+- V:8, VII:29–31 *ytn ql*, *trr arṣ*, VI:18–21 *lbnn // šryn*, *arz* ↔ Ps 18:14, Ps 46:7, Ps 29:5–8.
+- V:19 *bht ṭhrm iqnim* (with V:11, VI:35 *lbnt*) ↔ Exod 24:10 `לִבְנַת הַסַּפִּיר … לָטֹהַר`.
+- VIII:7–9 *bt ḫpṯt*, *yrdm arṣ* ↔ Ps 88:5–6 `יוֹרְדֵי בוֹר … בַּמֵּתִים חָפְשִׁי`, 2 Kgs 15:5 `בֵּית הַחָפְשִׁית`.
+- VII:48 *npš* of Mot ↔ Isa 5:14, Hab 2:5; VIII:18 ↔ Isa 25:8 [divergence]; V:47 ↔ Ps 110:1; VII:30 *ṣat špt* ↔ Num 30:13.
 
 ### Lines shared with other tablets
 
@@ -424,6 +516,11 @@ consent: "Am I a slave … is Athirat a maid, that she should mould bricks? Let 
 - Fixed here for later tablets: the homage IV:25–26 (= 1.6 I:36–38, 1.1 III:24–25); El's welcome IV:28–29 (= 1.6
   III:15–16); *w yʿn lṭpn il d pid* (= 1.6 I:49, 1.1 IV:13); the feast III:40–44 (= 1.4 VI:55–59, 1.5 IV:12–17); *w tʿn
   rbt aṯrt ym* (= 1.4 V:2, 1.6 I:47, 53); *idk l ttn pnm* (= 1.4 V:22, 1.6 IV:7); the house complaint IV:50–51 (= IV:62–V:1).
+- Part 2 copied from 1.3: V:20–24 (= 1.3 V:4–5, IV:37–38), V:45–46 (= 1.3 IV:41–42), VII:52–57 (= 1.3 VI:5–11),
+  VIII:1, 10–11 (= 1.3 VI:23–24, adapted to dual addressees), VIII:12–14 (the seat formula of 1.3 VI:25–27), VIII:21–23 (=
+  1.3 V:17–18, with *mdd* for *bn*), VIII:24–34 (= 1.3 VI:28–36). Fixed here for later tablets: the feast VI:55–59 (= 1.5
+  IV:12–17), the gods' banquet list VI:40–54, the house formula VI:36–37 (= VIII:35–37), *nrt ilm špš ṣḥrrt la šmm* (= 1.6
+  II:24), *ḫlb l ẓr rḥtm* (= 1.5 V:14).
 
 ### Proposals for the shared renderings
 
@@ -436,6 +533,13 @@ consent: "Am I a slave … is Athirat a maid, that she should mould bricks? Let 
    regex accept `[לב]?ה?גבירה` or record the deviation each time (I did, at I:21).
 3. **§6.7, second half**: 1.3 V:8 dropped `אל` before `לשכת`; I kept §6.7's `אל לשכת`. The coordinator may align 1.3 V:8.
 4. **Gate note**: *ʿr* "donkey" / *ʿr* "city" – a trap for §5.3 (`עיר` unvocalized reads "city").
+5. **§6.10** → `הִנֵּה יוֹם וְשֵׁנִי` / `שְׁלִישִׁי, רְבִיעִי יוֹם` / `חֲמִישִׁי, שִׁשִּׁי יוֹם` / `הִנֵּה בַּיּוֹם הַשְּׁבִיעִי` (the
+   Ugaritic has no second *ym* in *ym w ṯn*). Also the §9 selftest lines for 1.4 VII:17, 19 use `שֶׁיִּפְתַּח` / `וְיִפְתַּח`;
+   my VII:17 is `יִפְתַּח` (no relative in the Ugaritic).
+6. **§6.1 regex** → accept the plene masculine `וצווח` (e.g. `וצוו?ח`).
+7. **New rows:** *ʿdt* `עֵת` / *ʿdn* `עִדָּן`; *ḫpṯt* `חָפְשִׁית`; *ṭhr* `טֹהַר`; *ʿḏbt* `עִזָּבוֹן`; *kll* `כָּלַל`; *u* `אוֹ`
+   (see the open decision on *hm* (II)); *trr* `הֵחִיל`; *ḫš* `חָרַד`; *nṯq* `נֶשֶׁק`; *pq* Š `סִפֵּק`; *lʾk* `שִׁגֵּר`; *ʿr*
+   "city" `עִיר` vs "donkey" `עַיִר` (always vocalized).
 
 ### Lessons for the guidelines
 
@@ -443,6 +547,8 @@ consent: "Am I a slave … is Athirat a maid, that she should mould bricks? Let 
   a quotation in a footnote written with plain double quotes: write `` `…` (ספר פרק:פסוק) `` from the first draft.
 - In a cognate-rich language, a verb whose noun is already fixed (*mgn* `מתנה`) may have a living Hebrew cognate in the
   same stem and construction (`מִגֵּן` + personal object, Prov 4:9): look for it before choosing a periphrasis.
+- A gate licensed by the line's own words fails on a word split across two lines (*ḥ | ln*): licence texts should include
+  the joined edge tokens of the neighbouring lines (now done in `ugarit_tools.py`).
 
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
@@ -668,3 +774,68 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | IV:61 | hm . amt . aṯ⸢r⸣t . tlb⸢n⸣ | אוֹ אמה אתירת, תלבן | `הָבָה נִלְבְּנָה לְבֵנִים וְנִשְׂרְפָה לִשְׂרֵפָה` (בראשית יא:ג) | cognate | *lbn lbnt* הוא `לָבַן לְבֵנִים` |
 | IV:61 | hm . amt . aṯ⸢r⸣t . tlb⸢n⸣ | אוֹ אמה אתירת, תלבן | `וַיְמָרְרוּ אֶת חַיֵּיהֶם בַּעֲבֹדָה קָשָׁה בְּחֹמֶר וּבִלְבֵנִים` (שמות א:יד); `לֹא תֹאסִפוּן לָתֵת תֶּבֶן לָעָם לִלְבֹּן הַלְּבֵנִים` (שמות ה:ז) | equivalent | עשיית לבנים כעבודת עבדים; . |
 | IV:62 | lbnt . ybn . bt . l bʿl | לבנים? יִבָּנֶה בית לבעל | `לֵךְ וְאָמַרְתָּ אֶל עַבְדִּי אֶל דָּוִד כֹּה אָמַר יְהוָה: הַאַתָּה תִּבְנֶה לִּי בַיִת לְשִׁבְתִּי` (שמואל ב ז:ה) | divergence | השאלה מי יבנה בית לאל; באוגרית אֵל מסכים שיבנה בית לבעל (בידי כּוֹתַר), בשמואל ב ז ה' דוחה בית שיבנה לו המלך. |
+| V:3 | rbt . ilm . l ḥkmt | רַבּוֹתָ, אֵל, אכן חָכַמְתָּ; | `וַיֶּחְכַּם מִכָּל הָאָדָם` (מלכים א ה:יא) | equivalent | חכמת המלך. |
+| V:4 | šbt . dqnk . l tsrk | שיבת זקנך אכן תְּיַסְּרֶךָּ, | `אַף-לֵילוֹת יִסְּרוּנִי כִלְיוֹתָי` (תהלים טז:ז) | cognate | *wsr* הוא `יִסֵּר` במובן "ללמד, להדריך". |
+| V:6 | wn ap . ⸢ʿdn⸣ . mṭrh | ואף עִדַּן מטרו | `וְנָתַתִּי מְטַר אַרְצְכֶם בְּעִתּוֹ יוֹרֶה וּמַלְקוֹשׁ` (דברים יא:יד); `הַנֹּתֵן גֶּשֶׁם ויֹרֶה (יוֹרֶה) וּמַלְקוֹשׁ בְּעִתּוֹ` (ירמיהו ה:כד) | equivalent | הגשם בעתו. |
+| V:8 | w tn . qlh . b ʿrpt | וְיִתֵּן קולו בעננים, | `וַיַּרְעֵם בַּשָּׁמַיִם יְהוָה וְעֶלְיוֹן יִתֵּן קֹלוֹ` (תהלים יח:יד); `נָתַן בְּקוֹלוֹ תָּמוּג אָרֶץ` (תהלים מו:ז) | cognate | "נתן קולו" הוא הרעם, באותן מלים בדיוק (*ytn ql* = `נָתַן קוֹל`); . |
+| V:9 | šrh . l arṣ . brqm | *יַשְׁרֶה* לארץ ברקים. | `תַּחַת-כָּל-הַשָּׁמַיִם יִשְׁרֵהוּ; וְאוֹרוֹ עַל-כַּנְפוֹת הָאָרֶץ` (איוב לז:ג) | cognate | *šry* הוא `יִשְׁרֵהוּ` של איוב, שילוח הברק אל הארץ, באותו תיאור של סערה. |
+| V:10 | {d}bt . arzm . ⸢ykll⸣nh | בית ארזים יִכְלְלֶנּוּ, | `רְאֵה נָא אָנֹכִי יוֹשֵׁב בְּבֵית אֲרָזִים; וַאֲרוֹן הָאֱלֹהִים יֹשֵׁב בְּתוֹךְ הַיְרִיעָה` (שמואל ב ז:ב); `לָמָּה לֹא בְנִיתֶם לִי בֵּית אֲרָזִים` (שמואל ב ז:ז) | cognate | "בית ארזים" (*bt arzm*) לאל, אותו צירוף |
+| V:10 | {d}bt . arzm . ⸢ykll⸣nh | בית ארזים יִכְלְלֶנּוּ, | `בֹּנַיִךְ כָּלְלוּ יָפְיֵךְ` (יחזקאל כז:ד) | cognate | *kll* הוא `כָּלַל` של הבנאים. |
+| V:11 | hm . bt . lbn⸢t⸣ . ⸢yʿ⸣msnh | או בית לבנים יַעְמְסֶנּוּ. | `וַיַּעֲמֹס אִישׁ עַל חֲמֹרוֹ` (בראשית מד:יג) | cognate | *ʿms* הוא `עָמַס`. |
+| V:13 | ṣḥ . ḫrn . b bhmk | צְוַח אורחה לביתך, | `וְהִנֵּה אֹרְחַת יִשְׁמְעֵאלִים בָּאָה מִגִּלְעָד; וּגְמַלֵּיהֶם נֹשְׂאִים נְכֹאת וּצְרִי וָלֹט` (בראשית לז:כה) | equivalent | שיירת סוחרים טעונה סחורה. |
+| V:14 | ʿḏbt . b qrb . hklk | עִזְבוֹנוֹת בקרב היכלך; | `בְּכֶסֶף בַּרְזֶל בְּדִיל וְעוֹפֶרֶת נָתְנוּ עִזְבוֹנָיִךְ` (יחזקאל כז:יב) | cognate | *ʿḏbt* הוא `עִזָּבוֹן`, הסחורה של צור במסחר הימי (ḏ = ז). |
+| V:15 | tblk . ġrm . mid . ksp . | יובילו לך ההרים מְאוֹד כסף, | `וּבְכָל נַפְשְׁךָ וּבְכָל מְאֹדֶךָ` (דברים ו:ה) | cognate | `מְאֹד` כשם עצם, "שפע, כוח": *mid ksp* "מאוד של כסף". |
+| V:16 | gbʿm . mḥmd . ḫrṣ | הגבעות – מחמד זהב; | `וְהָיָה כָּל מַחְמַד עֵינֶיךָ יָשִׂימוּ בְיָדָם` (מלכים א כ:ו) | cognate | *mḥmd* הוא `מַחְמָד`, הדבר היקר. |
+| V:17 | yblk . udr . ilqṣm | יובילו לך אדר *אקדחים*. | `אֶדֶר הַיְקָר אֲשֶׁר יָקַרְתִּי מֵעֲלֵיהֶם` (זכריה יא:יג) | cognate | *udr* הוא `אֶדֶר` "פאר, שווי" |
+| V:17 | yblk . udr . ilqṣm | יובילו לך אדר *אקדחים*. | `וּשְׁעָרַיִךְ לְאַבְנֵי אֶקְדָּח` (ישעיהו נד:יב) | equivalent | אבני חן בבניין עיר האל. |
+| V:19 | bht . ṭhrm . iqnim | בית טוהר – ספירים. | `וְתַחַת רַגְלָיו כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר וּכְעֶצֶם הַשָּׁמַיִם לָטֹהַר` (שמות כד:י) | cognate | "לבנת הספיר … לטוהר": אותו צירוף של לבנים (V:11, VI:35), לפיס לזולי (*iqnu*) וטוהר (*ṭhr*) במקום מושבו של האל. |
+| V:26 | gh . w tṣḥ . tbšr bʿl | את קולה וצוחה: תִּתְבַּשֵּׂר, בעל! | `מַה נָּאווּ עַל הֶהָרִים רַגְלֵי מְבַשֵּׂר מַשְׁמִיעַ שָׁלוֹם … אֹמֵר לְצִיּוֹן מָלַךְ אֱלֹהָיִךְ` (ישעיהו נב:ז) | cognate | בשורה על מלכות האל, ההולכת על ההרים. |
+| V:42 | w ṯb l mspr . . k tlakn | ושוב אל המִסְפָּר: כאשר שוּגְּרוּ | `וַיְהִי כִשְׁמֹעַ גִּדְעוֹן אֶת מִסְפַּר הַחֲלוֹם וְאֶת שִׁבְרוֹ` (שופטים ז:טו) | cognate | `מִסְפָּר` במובן "סיפור", כמו *mspr*. |
+| V:47 | w yṯṯb . l ymn . aliyn | והוּשַׁב לימין האדיר | `נְאֻם יְהוָה לַאדֹנִי שֵׁב לִימִינִי; עַד-אָשִׁית אֹיְבֶיךָ הֲדֹם לְרַגְלֶיךָ` (תהלים קי:א) | equivalent | הישיבה לימין המלך כמקום הכבוד. |
+| V:55 | b tk . ṣrrt . ṣpn | בתוך פסגות צָפוֹן! | `הַר-צִיּוֹן יַרְכְּתֵי צָפוֹן` (תהלים מח:ג) | cognate | צָפוֹן כהר המלך האלוהי. |
+| V:60 | bn . l ⸢r⸣kb . ʿrpt | הָבֵן, הוֹ רוכב העננים: | `וּבִין בַּדָּבָר וְהָבֵן בַּמַּרְאֶה` (דניאל ט:כג) | cognate | "הבן", אותו פועל בציווי. |
+| V:61 | bl . ašt . urbt . b b⸢h⸣[tm] | בַּל אָשִׁית אֲרוּבָּה בב[ית], | `וַאֲרֻבֹּת הַשָּׁמַיִם נִפְתָּחוּ` (בראשית ז:יא); `וַיִּסָּכְרוּ מַעְיְנֹת תְּהוֹם וַאֲרֻבֹּת הַשָּׁמָיִם` (בראשית ח:ב) | cognate | *urbt* הוא `אֲרֻבָּה`, ובבראשית "ארובות השמים" שדרכן יורד הגשם. |
+| V:62 | ḥln . b qrb . hklm | חלון בקרב ההיכל? | `וַיִּפְתַּח נֹחַ אֶת חַלּוֹן הַתֵּבָה אֲשֶׁר עָשָׂה` (בראשית ח:ו) | cognate | `חַלּוֹן` בבניין שנבנה בצו האל. |
+| VI:18 | ⸢y⸣[tl]⸢k⸣ . l lbnn . w ʿṣh | הִתְ[הַלְּכוּ] אל לְבָנוֹן ועציו, | `וַיִּבֶן אֶת הַבַּיִת וַיְכַלֵּהוּ; וַיִּסְפֹּן אֶת הַבַּיִת גֵּבִים וּשְׂדֵרֹת בָּאֲרָזִים` (מלכים א ו:ט) | equivalent | בית אל הבנוי ארזי לבנון |
+| VI:18 | ⸢y⸣[tl]⸢k⸣ . l lbnn . w ʿṣh | הִתְ[הַלְּכוּ] אל לְבָנוֹן ועציו, | `קוֹל יְהוָה שֹׁבֵר אֲרָזִים; וַיְשַׁבֵּר יְהוָה אֶת-אַרְזֵי הַלְּבָנוֹן` (תהלים כט:ה) | cognate |  |
+| VI:19 | l [š]⸢r⸣yn . mḥmd . arzh | אל [שִׂ]רְיוֹן, מחמד ארזיו. | `וַיַּרְקִידֵם כְּמוֹ-עֵגֶל; לְבָנוֹן וְשִׂרְיֹן כְּמוֹ בֶן-רְאֵמִים` (תהלים כט:ו) | cognate | הצמד "לבנון // שריון" ואחריו הארזים (כט:ה): אותו צמד הרים של מזמור הרעם. |
+| VI:23 | nb[l]at . b hklm | להבות בהיכל. | `קוֹל-יְהוָה חֹצֵב; לַהֲבוֹת אֵשׁ` (תהלים כט:ז) | equivalent | "להבות אש" במזמור הרעם. |
+| VI:24 | hn . ⸢y⸣m . w ṯn . tikl | הִנֵּה יוֹם וְשֵׁנִי – אכלה | `וַיְהִי עֶרֶב וַיְהִי בֹקֶר יוֹם שֵׁנִי` (בראשית א:ח) | divergence | ספירת הימים בסיפור של בנייה ובריאה; כאן שישה ימים של אש בבית האל, ובבראשית שישה ימים של מעשה עולם (ראו VI:31–32). |
+| VI:32 | ⸢b šbʿ⸣ [.] ⸢y⸣[mm] . td . išt | בַּ[יּוֹם] הַשְּׁבִיעִי נוּדְּתָה אש | `וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה; וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל מְלַאכְתּוֹ אֲשֶׁר עָשָׂה` (בראשית ב:ב) | divergence | "ביום השביעי" נגמרת המלאכה: באוגרית האש כבתה והבית נגמר, בבראשית האל כלה את מלאכתו ושבת. |
+| VI:34 | sb . ksp . l r⸢q⸣m . ḫrṣ | סָב הכסף לְרִיקּוּעִים, הזהב | `וְעָשׂוּ אֹתָם רִקֻּעֵי פַחִים צִפּוּי לַמִּזְבֵּחַ` (במדבר יז:ג); `וַיְרַקְּעוּ אֶת פַּחֵי הַזָּהָב` (שמות לט:ג) | equivalent | רקיעת מתכת לציפוי בבית האל. |
+| VI:35 | nsb . l lbnt . šmḫ | נָסַב ללבנים. שמח | `כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר וּכְעֶצֶם הַשָּׁמַיִם לָטֹהַר` (שמות כד:י) | cognate | לבנים של חומר יקר במקום האל. |
+| VI:36 | aliyn . bʿl . ⟨b⟩hty bnt | בעל האדיר: ⟨ב⟩יתי בניתי | `בָּנֹה בָנִיתִי בֵּית זְבֻל לָךְ מָכוֹן לְשִׁבְתְּךָ עוֹלָמִים` (מלכים א ח:יג) | cognate | "בניתי בית", דברי שלמה בחנוכת המקדש; כאן דברי האל עצמו בחנוכת ארמונו. |
+| VI:42 | ria . il . ʿglm . d[t] | אֵל, עגלים בני | `וְעֵגֶל וָכֶבֶשׂ בְּנֵי שָׁנָה תְּמִימִם לְעֹלָה` (ויקרא ט:ג) | equivalent | "בני שנה". |
+| VI:43 | šnt . imr . qmṣ . ⸢l⸣[l]im | שנה, כבשים לִקְמָצִים, ט[לא]ים. | `וַתַּעַשׂ הָאָרֶץ בְּשֶׁבַע שְׁנֵי הַשָּׂבָע לִקְמָצִים` (בראשית מא:מז) | cognate | *qmṣ* הוא `קֹמֶץ`, ו"לקמצים" פירושו בשפע. |
+| VI:46 | šbʿm . bn . aṯr⸢t⸣ | (אל) שִׁבְעִים בְּנֵי אֲתִירַת. | `וַיְהִי כָּל נֶפֶשׁ יֹצְאֵי יֶרֶךְ יַעֲקֹב שִׁבְעִים נָפֶשׁ` (שמות א:ה); `יַצֵּב גְּבֻלֹת עַמִּים לְמִסְפַּר בְּנֵי יִשְׂרָאֵל` (דברים לב:ח) | equivalent | שבעים כמספר הבנים של האב ושל העמים; בראשית י מונה שבעים עמים. |
+| VI:47 | špq ilm . krm . y⸢n⸣ | סִיפֵּק לאֵלִים כָּרִים – יין, | `עִם חֵלֶב כָּרִים וְאֵילִים בְּנֵי בָשָׁן` (דברים לב:יד) | cognate | *kr* הוא `כַּר`. |
+| VI:54 | špq . ilht . dkr⸢t⸣ | סִיפֵּק לאֵלוֹת צַפָּחוֹת. | `וְאֶת צַפַּחַת הַמַּיִם` (שמואל א כו:יא) | equivalent | כלי הנוזלים. |
+| VII:4 | y⸢m⸣ [xxxx .] ⸢l⸣ ẓr . qdqd⸢h⸣ | ים, […] על גו קדקדו; | `יָשׁוּב עֲמָלוֹ בְרֹאשׁוֹ; וְעַל קָדְקֳדוֹ חֲמָסוֹ יֵרֵד` (תהלים ז:יז) | cognate | "על קדקדו", המכה בראש האויב. |
+| VII:17 | y⸢ptḥ⸣ . ḥln . b bht⸢m⸣ | יִפְתַּח חַלּוֹן בַּבַּיִת, | `וַאֲרֻבֹּת הַשָּׁמַיִם נִפְתָּחוּ` (בראשית ז:יא); `וַיִּפְתַּח נֹחַ אֶת חַלּוֹן הַתֵּבָה` (בראשית ח:ו) | cognate | "פתח … חלון … ארובה": שלוש המלים של סיפור המבול, אצל נח ובשמים. |
+| VII:18 | ⸢urb⸣t . b qrb . ⸢h⸣kl | אֲרוּבָּה בְּקֶרֶב הַהֵיכָל, | `אִם לֹא אֶפְתַּח לָכֶם אֵת אֲרֻבּוֹת הַשָּׁמַיִם וַהֲרִיקֹתִי לָכֶם בְּרָכָה עַד בְּלִי דָי` (מלאכי ג:י) | cognate | פתיחת הארובות כדי להוריד גשם וברכה. |
+| VII:19 | m . w [y]⸢ptḥ⸣ . bdqt . ʿrpt | וְיִפְתַּח בֶּדֶק בָּעֲנָנִים | `וְהֵם יְחַזְּקוּ אֶת בֶּדֶק הַבַּיִת` (מלכים ב יב:ו) | cognate | `בֶּדֶק` "בקע, סדק" |
+| VII:19 | m . w [y]⸢ptḥ⸣ . bdqt . ʿrpt | וְיִפְתַּח בֶּדֶק בָּעֲנָנִים | `הִנֵּה יְהוָה עֹשֶׂה אֲרֻבּוֹת בַּשָּׁמַיִם` (מלכים ב ז:ב) | equivalent | פתח בשמים לברכת שפע. |
+| VII:29 | qlh . q⸢dš⸣ [.] b⸢ʿl⸣ [.] ⸢y⸣tn | קולו הקדוש בעל נתן, | `וַיַּרְעֵם בַּשָּׁמַיִם יְהוָה וְעֶלְיוֹן יִתֵּן קֹלוֹ` (תהלים יח:יד); `נָתַן בְּקוֹלוֹ תָּמוּג אָרֶץ` (תהלים מו:ז) | cognate | "נתן קולו" והארץ נמוגה: אותה תמונה ואותן מלים. |
+| VII:30 | yṯny . bʿ⸢l⸣ . ṣ[at .] ⸢šp⸣th | שָׁנָה בעל מוֹ[צָא] שפתיו; | `בְּיוֹם שָׁמְעוֹ כָּל מוֹצָא שְׂפָתֶיהָ` (במדבר ל:יג) | cognate | "מוצא שפתיו", אותו צירוף בדיוק (*ṣat špt*). |
+| VII:31 | qlh . ⸢q⸣[dš .] ⸢trr⸣ . ⸢ar⸣ṣ | קולו הק[דוש] הֵחִיל ארץ, | `קוֹל יְהוָה יָחִיל מִדְבָּר; יָחִיל יְהוָה מִדְבַּר קָדֵשׁ` (תהלים כט:ח) | equivalent | קול האל מחיל את הארץ. |
+| VII:32 | ⸢ṣat⸣ . [šp]⸢th⸣ . ⸢ġrm⸣ [.] ⸢aḫšn⸣ | מוצא [שפ]תיו – הרים חָרְדוּ; | `וַיַּעַל עֲשָׁנוֹ כְּעֶשֶׁן הַכִּבְשָׁן וַיֶּחֱרַד כָּל הָהָר מְאֹד` (שמות יט:יח) | equivalent | ההר חרד בירידת האל. |
+| VII:33 | rtq . [xxxxxxxx] | רֻתְּקוּ? […] | `וְכָל גְּדוֹלֶיהָ רֻתְּקוּ בַזִּקִּים` (נחום ג:י) | cognate | *rtq* הוא `רָתַק` "כבל". |
+| VII:34 | qdmym . bmt . ⸢ar⸣[ṣ] | קַדְמוֹנִים; גַּבֵּי אר[ץ] | `וְדֹרֵךְ עַל בָּמֳתֵי אָרֶץ יְהוָה אֱלֹהֵי צְבָאוֹת שְׁמוֹ` (עמוס ד:יג); `וְיָרַד וְדָרַךְ עַל בָּמֳותֵי (בָּמֳתֵי) אָרֶץ` (מיכה א:ג) | cognate | *bmt arṣ* הוא `בָּמֳתֵי אָרֶץ`, הגבהים שהאל דורך עליהם בהופעתו. |
+| VII:36 | yʿrm . šnu . hd . gpt | יערים, שונאי הדד – גַּפֵּי | `שָׁלְחָה נַעֲרֹתֶיהָ תִקְרָא עַל-גַּפֵּי מְרֹמֵי קָרֶת` (משלי ט:ג) | cognate | *gp* הוא `גַּף` "מרום, קצה". |
+| VII:40 | ʿn . bʿl . qdm . ydh | עין בעל קִידְּמָה ידו, | `וּבַבֹּקֶר תְּפִלָּתִי תְקַדְּמֶךָּ` (תהלים פח:יד) | cognate | *qdm* הוא `קִדֵּם`. |
+| VII:42 | bkm . yṯb . bʿl . l bhth | בְּכֵן ישב בעל בביתו: | `וּבְכֵן אָבוֹא אֶל הַמֶּלֶךְ` (אסתר ד:טז) | cognate | `בְּכֵן` "ואז". |
+| VII:45 | dll . al . ilak . l bn | רָץ נא אשגר אל בן | `וְנִשְׁלוֹחַ סְפָרִים בְּיַד הָרָצִים` (אסתר ג:יג) | equivalent | הרצים, שליחי המלך. |
+| VII:48 | b npšh . ystrn ydd | בנפשו, *יתגאה* הידיד | `אֲשֶׁר הִרְחִיב כִּשְׁאוֹל נַפְשׁוֹ וְהוּא כַמָּוֶת וְלֹא יִשְׂבָּע` (חבקוק ב:ה); `לָכֵן הִרְחִיבָה שְּׁאוֹל נַפְשָׁהּ וּפָעֲרָה פִיהָ לִבְלִי חֹק` (ישעיהו ה:יד) | cognate | הנפש (הגרון) של המוות שאינו שבע. |
+| VII:50 | lk . ʿl . ilm . l ymru | על האֵלִים, אכן *יַמְרִיאוּ* | `וְעֵגֶל וּכְפִיר וּמְרִיא יַחְדָּו` (ישעיהו יא:ו) | cognate | *mrʾ* הוא שורש `מְרִיא`. |
+| VII:55 | [ʿmm .] ⸢y⸣m . bn . ẓlmt . r | [*עמומי*] יום, בני צַלְמָוֶת, | `גַּם כִּי-אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא-אִירָא רָע` (תהלים כג:ד) | cognate | *ẓlmt* הוא `צַלְמָוֶת`. |
+| VIII:4 | ʿm . tlm . ġṣr . arṣ | אל שני התלים, סְפַר הארץ; | `וַיְהִי מוֹשָׁבָם מִמֵּשָׁא בֹּאֲכָה סְפָרָה הַר הַקֶּדֶם` (בראשית י:ל) | equivalent | `סְפָר` "קצה, גבול" עם "הר". |
+| VIII:7 | w rd . bt ḫpṯt | ורדו (אל) בית הַחָפְשִׁית – | `וַיֵּשֶׁב בְּבֵית הַחָפְשִׁית` (מלכים ב טו:ה) | cognate | "בית החפשית", הבית המבודד של המלך המצורע |
+| VIII:7 | w rd . bt ḫpṯt | ורדו (אל) בית הַחָפְשִׁית – | `בַּמֵּתִים חָפְשִׁי` (תהלים פח:ו) | cognate | "חפשי" בין המתים. |
+| VIII:9 | ⸢r⸣dm . arṣ | ביורדי הארץ. | `נֶחְשַׁבְתִּי עִם-יוֹרְדֵי בוֹר` (תהלים פח:ה) | equivalent | "נמנה עם יורדי בור" |
+| VIII:9 | ⸢r⸣dm . arṣ | ביורדי הארץ. | `וּתְמִימִים כְּיוֹרְדֵי בוֹר` (משלי א:יב) | equivalent |  |
+| VIII:14 | nḥ⸢l⸣th . w nġr | נחלתו. וְהִנָּצְרוּ, | `בְּהַר נַחֲלָתְךָ מָכוֹן לְשִׁבְתְּךָ פָּעַלְתָּ יְהוָה` (שמות טו:יז) | cognate | "שבת … נחלה": אותו צמד של מושב האל. |
+| VIII:16 | tqrb . l bn . ilm | תקרבו אל בן אֵלִים, | `אַל תִּקְרַב הֲלֹם; שַׁל נְעָלֶיךָ מֵעַל רַגְלֶיךָ` (שמות ג:ה) | cognate | "אל תקרב" אל מקום האל. |
+| VIII:18 | k imr . b ph | ככבש בפיו, | `בִּלַּע הַמָּוֶת לָנֶצַח` (ישעיהו כה:ח) | divergence | באוגרית המוות בולע את הכל; בישעיהו ה' בולע את המוות. |
+| VIII:19 | k lli . b ṯbr⸢n⸣ | כטלה בשִׁבְרוֹן | `בְּשִׁבְרוֹן מָתְנַיִם וּבִמְרִירוּת תֵּאָנַח` (יחזקאל כא:יא) | cognate | *ṯbrn* הוא `שִׁבְרוֹן`. |
+| VIII:32 | i⸢l⸣ . ⸢ġzr⸣ . tḥm | אֵל, הגיבור: דבר | `יְדִיד יְהוָה יִשְׁכֹּן לָבֶטַח עָלָיו` (דברים לג:יב) | cognate | "ידיד ה'", אותו תואר. |
+| VIII:49 | [spr . ilmlk . ṯ]⸢ʿy⸣ . nqmd . mlk . ugrt | [סופר: אִלִימִלְכּוּ, שׁוֹעַ] נִקְמַדּוּ, מלך אוּגָרִית. | `וּלְכִילַי לֹא יֵאָמֵר שׁוֹעַ` (ישעיהו לב:ה) | cognate | *ṯʿy* הוא `שׁוֹעַ` "נכבד, אציל" (ṯ = ש). |

@@ -147,6 +147,13 @@ def license_text(key, lab):
     if not r:
         return ""
     words = plain_src(r["text"]).replace("ˤ", "ʿ")
+    # a word split across two lines (1.4 VII:25–26 ḥ | ln): license it in both lines by joining the edge tokens
+    rs = rows(key)
+    i = rs.index(r)
+    if i > 0 and plain_src(rs[i - 1]["text"]).split() and words.split():
+        words += " " + plain_src(rs[i - 1]["text"]).split()[-1].replace("ˤ", "ʿ") + words.split()[0]
+    if i + 1 < len(rs) and plain_src(rs[i + 1]["text"]).split() and words.split():
+        words += " " + plain_src(r["text"]).split()[-1].replace("ˤ", "ʿ") + plain_src(rs[i + 1]["text"]).split()[0].replace("ˤ", "ʿ")
     lems = []
     for p in (r.get("parse") or []) + (r.get("reviewed") or []):
         for part in (p[2] or "").split(";"):
@@ -336,7 +343,7 @@ TRAPS = [
 
 # (regex on the bracket-free source line, regex the bracket-free unvocalized Hebrew must match, what)
 FORMULAS = [
-    (r"\byšu gh w yṣḥ\b", r"נשא (?:את )?קולו וצוח", "yšu gh w yṣḥ = `נָשָׂא אֶת קוֹלוֹ וְצָוַח:` (§6.1)"),
+    (r"\byšu gh w yṣḥ\b", r"נשא (?:את )?קולו וצוו?ח", "yšu gh w yṣḥ = `נָשָׂא אֶת קוֹלוֹ וְצָוַח:` (§6.1)"),
     (r"\btšu gh w tṣḥ\b", r"נשאה (?:את )?קולה וצוחה", "tšu gh w tṣḥ = `נָשְׂאָה אֶת קוֹלָהּ וְצָוְחָה:` (§6.1)"),
     (r"\btšu ghm w tṣḥ\b", r"נשאו (?:את )?קולם וצוחו", "tšu ghm w tṣḥ(n) = `נָשְׂאוּ אֶת קוֹלָם וְצָוְחוּ:` (§6.1)"),
     (r"\bidk l [ty]tn pnm\b", r"(?:^|\s)אז (?:ל[אה] )?נתנ?[ווה]? ?(?:את )?פני", "idk l ytn/ttn pnm = `אָז נָתַן / נָתְנָה / נָתְנוּ אֶת פְּנֵיהֶם` (§6.2)"),
