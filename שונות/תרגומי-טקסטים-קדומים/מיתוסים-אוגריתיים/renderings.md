@@ -311,7 +311,7 @@ not `בְּ־` (`אֶתֵּן אֶת פָּנַי בָּאִישׁ`, Lev 20:3, i
 `קָדָה וְנָפְלָה, הִשְׁתַּחַוְתָה וְכִבְּדַתְהוּ`; pl. `קָדוּ וְנָפְלוּ, הִשְׁתַּחֲווּ וְכִבְּדוּהוּ`). [cognate] `וַיִּקֹּד הָאִישׁ וַיִּשְׁתַּחוּ`
 (Gen 24:26), Gen 33:3; *kbd* D `כִּבֵּד` (Ex 20:11 in the repository's numbering: `כַּבֵּד אֶת אָבִיךָ`).
 
-**6.4 The message.** *rgm l X, ṯny l Y* = `אִמְרוּ לְ־X, שַׁנּוּ לְ־Y:`; *tḥm X, hwt Y* = `דְּבַר X, אִמְרַת Y:` (e.g. *tḥm aliyn
+**6.4 The message.** *rgm l X, ṯny l Y* = `אִמְרוּ אֶל X, שְׁנוּ אֶל Y:` (revised by the translator of 1.3: `שְׁנוּ` is the qal "repeat", 1 Kgs 18:34); *tḥm X, hwt Y* = `דְּבַר X, אִמְרַת Y:` (e.g. *tḥm aliyn
 bʿl, hwt aliy qrdm* `דְּבַר בַּעַל הָאַדִּיר, אִמְרַת אַדִּיר הַלּוֹחֲמִים:`). (The everyday-voices corpus's Akkadian letter
 formula `אֶל X אֱמֹר:` is another formula, kept apart.)
 
@@ -356,8 +356,8 @@ formula `אֶל X אֱמֹר:` is another formula, kept apart.)
 translator of 1.4 checks every copy against CUC and fixes the exact Hebrew; ↔ Gen 1:5–2:3 [divergence]: six days of work
 and the seventh as completion, in a building story).
 
-**6.11 Feasting.** *ʿd lḥm šty ilm* = `עוֹד הָאֵלִים סוֹעֲדִים וְשׁוֹתִים`; *b ḥrb mlḥt qṣ mri* = `בְּסַכִּין מְלוּחָה – נֵתַח
-מְרִיא`; *b ks ḫrṣ dm ʿṣm* = `בְּכוֹס זָהָב – דַּם עֵצִים` (wine; [cognate] Gen 49:11 `וּבְדַם עֲנָבִים`).
+**6.11 Feasting.** *ʿd lḥm šty ilm* = `עוֹד הָאֵלִים סוֹעֲדִים וְשׁוֹתִים`; *b ḥrb mlḥt qṣ mri* = `בְּחֶרֶב מְלוּחָה – נֵתַח
+מְרִיא` (*ḥrb* = `חֶרֶב` [cognate], also "knife", Josh 5:2: revised by the translator of 1.3); *b ks ḫrṣ dm ʿṣm* = `בְּכוֹס זָהָב – דַּם עֵצִים` (wine; [cognate] Gen 49:11 `וּבְדַם עֲנָבִים`).
 
 **6.12 The house of Baal like the gods'** (1.3 IV 47ff; V 38ff; 1.4 I 9ff; IV 50ff): *w ʾin bt l bʿl km ilm, w ḥẓr k bn
 aṯrt* = `וְאֵין בַּיִת לְבַעַל כָּאֵלִים, וְחָצֵר כִּבְנֵי אֲתִירַת` (the translator of 1.3 fixes the rest of the list: *mṯb
@@ -367,7 +367,7 @@ il* `מוֹשַׁב אֵל`, *mẓll* `מַחֲסֶה`, …).
 
 | Lines | Source | Hebrew |
 |---|---|---|
-| 1.3 III:40 | `l ištbm . tnn . ištmdh` | `הֲלֹא חָסַמְתִּי אֶת הַתַּנִּין, *שָׁבַרְתִּיו*?` |
+| 1.3 III:40 | `l ištbm . tnn . ištmdh` | `אָכֵן חָסַמְתִּי אֶת הַתַּנִּין, *צְמַדְתִּיו*;` |
 | 1.3 III:41 | `mḫšt . bṯn . ʿqltn` | `מָחַצְתִּי אֶת הַפֶּתֶן הָעֲקַלָּתוֹן,` |
 | 1.3 III:42 | `šlyṭ . d . šbʿt . rašm` | `הַשַּׁלִּיט אֲשֶׁר לוֹ שִׁבְעָה רָאשִׁים.` |
 | 1.5 I:1 | `k tmḫṣ . ltn . bṯn . brḥ` | `כַּאֲשֶׁר מָחַצְתָּ אֶת לִיתָן, הַפֶּתֶן הַבָּרִחַ,` |
@@ -376,11 +376,10 @@ il* `מוֹשַׁב אֵל`, *mẓll* `מַחֲסֶה`, …).
 | 1.6 VI:51 | `b . ym . arš . w tnn` | `בַּיָּם – אַרְשׁ וְהַתַּנִּין;` |
 
 Notes on the fixed lines (the translators keep them in their apparatus):
-- **1.3 III 40:** *l* is asseverative / interrogative ("did I not…?", CUC's reviewed parse: *l* III "certainly"); *ištbm*
-  Gt of *šbm* "muzzle"; *ištmdh* is unclear (DULAT none; Hutton: *ṣmd* "bind"; others "destroyed him"): `*שָׁבַרְתִּיו*`
-  stands in italics as an uncertain rendering, and the apparatus gives the alternatives. The question form of the whole
-  boast (III 38–46: "did I not smite…?") follows the asseverative *l*; the translator of 1.3 may make the boast
-  affirmative (`הֵן חָסַמְתִּי`) for all of III 38–46 with a reason, and must then change III 40 here (a proposal).
+- **1.3 III 40:** *l* is the asseverative *l* (III; CUC's reviewed parse, DULAT), so the whole boast III 38–46 is
+  affirmative (`אָכֵן …`); *ištbm* Gt of *šbm* "muzzle"; *ištmdh* = *ṣmd* "harness, yoke"? (Hutton; DULAT none for the
+  form): `*צְמַדְתִּיו*` stands in italics, and the apparatus gives the alternatives ("destroyed him", "bound him").
+  (Revised from `הֲלֹא …, *שָׁבַרְתִּיו*?` by the translator of 1.3: §10.)
 - **1.3 III 41 vs 1.5 I 2:** the same pair (*bṯn ʿqltn*) with Anat's *mḫšt* "I smote" against Mot's *tkly* "you
   finished": the shared noun phrase is identical Hebrew (`הַפֶּתֶן הָעֲקַלָּתוֹן`), the verbs differ as the Ugaritic
   differs.
@@ -409,7 +408,7 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 
 | Line | expect | Hebrew |
 |---|---|---|
-| 1.3 III:40 | ok | `הֲלֹא חָסַמְתִּי אֶת הַתַּנִּין, *שָׁבַרְתִּיו*?` |
+| 1.3 III:40 | ok | `אָכֵן חָסַמְתִּי אֶת הַתַּנִּין, *צְמַדְתִּיו*;` |
 | 1.3 III:41 | ok | `מָחַצְתִּי אֶת הַפֶּתֶן הָעֲקַלָּתוֹן,` |
 | 1.3 III:41 | err | `מָחַצְתִּי אֶת הַנָּחָשׁ הָעֲקַלָּתוֹן,` |
 | 1.3 III:42 | ok | `הַשַּׁלִּיט אֲשֶׁר לוֹ שִׁבְעָה רָאשִׁים.` |
@@ -419,9 +418,9 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 | 1.5 I:2 | ok | `כִּלִּיתָ אֶת הַפֶּתֶן הָעֲקַלָּתוֹן,` |
 | 1.5 I:3 | ok | `הַשַּׁלִּיט אֲשֶׁר לוֹ שִׁבְעָה רָאשִׁים –` |
 | 1.6 VI:51 | ok | `בַּיָּם – אַרְשׁ וְהַתַּנִּין;` |
-| 1.3 III:38 | err | `לְרוֹכֵב הָעֲרָפֶל? הֲלֹא מָחַצְתִּי אֶת חֲבִיב` |
-| 1.3 III:38 | ok | `לְרוֹכֵב הָעֲנָנִים? הֲלֹא מָחַצְתִּי אֶת חֲבִיב` |
-| 1.3 III:39 | ok | `אֵל, יָם, הֲלֹא כִּלִּיתִי אֶת נָהָר, הָאֵל הָרַב?` |
+| 1.3 III:38 | err | `לְרוֹכֵב הָעֲרָפֶל? אָכֵן מָחַצְתִּי אֶת חֲבִיב` |
+| 1.3 III:38 | ok | `לְרוֹכֵב הָעֲנָנִים? אָכֵן מָחַצְתִּי אֶת חֲבִיב` |
+| 1.3 III:39 | ok | `אֵל, יָם; אָכֵן כִּלִּיתִי אֶת נָהָר, הָאֵל הָרַב;` |
 | 1.3 III:39 | err | `אל, ים, הלא כליתי את נהר, האל הרב?` |
 | 1.3 III:39 | err | `אֵל, יָם, הֲלֹא כִּלִּיתִי אֶת נָהָר, הָאֵל הַגָּדוֹל?` |
 | 1.4 VII:17 | ok | `שֶׁיִּפְתַּח חַלּוֹן בַּבַּיִת,` |
@@ -457,7 +456,15 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 
 ## 10. Changes and proposals merged (by run and translator)
 
-(none yet)
+**Round 4 run 1, translator 1 (KTU 1.3), merged by the coordinator 2026-10-23** (details and reasons: `1-מחזור-בעל/project.md`, "KTU 1.3" → Proposals):
+- **§7 1.3 III:40** = `אָכֵן חָסַמְתִּי אֶת הַתַּנִּין, *צְמַדְתִּיו*;` – the whole boast III 38–46 is affirmative: *l* is the asseverative *l* (III; CUC's reviewed parse, DULAT); `הֲלֹא …?` would add a negation the tablet does not have (Isa 51:9's question form is a [divergence] note); `אָכֵן`, since `הֵן` is *hl*'s (§3). *ištmdh* = *ṣmd* "harness, yoke" (Hutton; DULAT's *ṣmd*): `*צְמַדְתִּיו*` (italic, uncertain); `שָׁבַר` is the cognate of *ṯbr*.
+- **§6.4** `אִמְרוּ אֶל X, שְׁנוּ אֶל Y:`; **§6.11** `בְּחֶרֶב מְלוּחָה`.
+- **§6.3, the command forms:** pl. `קוֹדוּ וְנִפְלוּ, תִּשְׁתַּחֲווּ, כַּבְּדוּ אוֹתָהּ`; sg. `קוֹד וּנְפוֹל, תִּשְׁתַּחֲוֶה וְכַבֵּד אוֹתוֹ`.
+- **§6.7, second half:** *ygly ḏd il w ybu qrš mlk ab šnm* = `וְנִגְלָה אֶל מְעָרַת אֵל, וּבָא אֶל לִשְׁכַּת הַמֶּלֶךְ, אֲבִי הַשָּׁנִים` (DULAT *ḏd* "grotto", *qrš* "private room"; `אֹהֶל` is *ahl*'s, `חֶדֶר` *ḥdr*'s).
+- **§6.12, the list:** `מוֹשַׁב אֵל, מַחֲסֵה בָּנָיו; מוֹשַׁב הַגְּבִירָה אֲתִירַת־יָם; מוֹשַׁב פִּדְרַי בַּת אוֹר, מַחֲסֵה טַלַּי בַּת רְבִיבִים; מוֹשַׁב אַרְצַי בַּת יַעְבְּדַר; מוֹשַׁב הַכַּלּוֹת הָאֲצִילוֹת`.
+- **Kept:** *lḥm* (vb) = `סָעַד` (§4.3, §6.11); *sʾd*, the true cognate of `סָעַד`, = `מְכַלְכֵּל` (a note in 1.3 I:3) – moving `סָעַד` now would split the feasting formula.
+- **New one-lemma renderings of 1.3** (binding for the later tablets; full list in its project section): *phy* `רָאָה`, *ʿn* `הִבִּיט`, *ḥdy* `חָזָה`; *mḫṣ* `מָחַץ`, Gt `נִלְחַם`, *ḫṣb* `חָצַב`; the cups `כּוֹס` (*ks*), `גָּבִיעַ` (*krpn*), `סֵפֶל`, `*קֻבַּעַת*`, `קַשְׂוָה`; *ẓlmt* `צַלְמָוֶת`, *ṯbt* `שֶׁבֶת`, *kpr* `כֹּפֶר` (henna), *ḥṯb* `חָשַׂף`.
+- **Tool fixes** (the translator's report): the `עוֹלָם` gate is licensed by *ġlm* too (`עֲלָמִים`, plural of `עֶלֶם`); the formula regexes accept the maqaf; §6.2 also mid-line; §6.3 command forms; §6.5 not where *ʿn* is "look".
 
 ## 11. The fifth-day dossier (`3-תיק-היום-החמישי/`, coordinator, 2026-10-23)
 
