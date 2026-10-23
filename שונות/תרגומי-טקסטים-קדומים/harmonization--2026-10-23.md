@@ -29,6 +29,14 @@ Survey tool: `tools/harmonize_survey.py` (src / heb / parse / words).
 | 18 | *nissatu* "grief"; *ašuštu* "distress" | *nissatu* = `יָגוֹן`; *ašuštu* = `דַּאֲבוֹן` | Maqlû I 38 `(ו)הדאבון` → `(ו)היגון`; Maqlû I 71, 72 `יגון` (*ašuštu*) → `דאבון`; the love lyrics LAOS 4 16 r.iv.9 `ומעצב – אינה יתרה עליי` → `ודאבון – אינו יתר עליי` | *nissatu* = `יגון` in Gilgameš (5), Atra-ḫasīs, Gilg. XI, the Theodicy (3; 30 has the same pair *kūru* + *nissatu*); `מַעֲצֵב` would share the root `עצב` of the reserved creation verb (*patāqu*) |
 | 19 | *bâʾu* "pass along" | `עָבַר` | Maqlû I 13 `אל יחצו אליי את הפתח` → `אל יעברו אליי את הפתח`; Maqlû (the line with `כמי גאות אשטוף אותן`) → `כמי גאות אעבור עליהן` | the flood, Etana, Gilgameš, Ludlul, the Theodicy `עבר`; Enūma eliš and the Šamaš Hymn `צעד` stay (by sense: walking a course) |
 | 20 | the vizier Kakka (eBL *Kakka*, {d}*ka₃-ka₃*) | `כַּכָּא` (always vocalized) | Enūma eliš (every `גַּגָּא` / `גגא`) and Nergal and Ereškigal (every `כַּכָּה` / `ככה` that is the name) → `כַּכָּא` | the current edition's reading (§6.5), with a final aleph: `קַקָּה` sounds childish, `ככה` reads "thus" |
+| 21 | *tubāqu* (EST's bird trap) | `מְצוֹדָה` | EST 582 `בפח` → `במצודה` | frees `פח` for *gišparru* (row 1) inside EST, which keeps its trap words apart; [equivalent] Eccl 9:12, which has both `בִּמְצוֹדָה` and `בַּפָּח`; shared with Maqlû's *ḫuḫāru* (a bird trap too, another corpus) |
+| 22 | Sum. *šeg₉* "wild sheep / goat" | `אַיִל־בָּר` | EWO 13 `[יעל] נולד` → `[איל־בר] נולד`, 353 `יעלים ועזי־בר?` → `אילי־בר ועזי־בר?` | Gudea, creation 2, Summer and Winter `איל־(ה)בר`; `יָעֵל` is *taraḫ*'s (row 9) |
+| 23 | the formula of row 13, in Inana's Descent 30A | `עצתי תיא[חז]!` | spelling only (`תא[חז]` → `תיא[חז]`) | the formula's plene form (§5.2: a fixed passage's plene form is fixed once) |
+
+Applied 2026-10-23 in batch A (laws, creation 4–7, Enmerkar, GEN, Šuruppag, the flood references, the love lyrics): see
+`history.md`. Notes from batch A: row 4 also changed the MA laws' formula *ina ḫaṭṭāte* (`במקלות`) in 13 more lines;
+row 5 also Enmerkar 594 (*barag*); row 18 in the love lyric kept its comparative (`ומדאבון – אינה יתרה עליי`); row 6
+leaves Sum. *aga* and *men* both `כתר` (kept: the other corpora already have both crowns as `כתר`).
 
 For every change: the `>` line; the parse bullet's ("…") for that word; any note or parallels-index row that quotes our
 rendering (never a backticked Bible quotation); the corpus `renderings.md` row, plus one line "2026-10-23
