@@ -180,6 +180,12 @@ itself (all checked in the smoke test of 2026-10-23, `history.md`).
 - **Titles show the place in the hierarchy** (the user, 2026-10-23): every session's title starts with a short path –
   the round's orchestrator `Round4: <what>`, a run `Round4/Run2: <texts>`, a sub-session of that run
   `Round4/Run2/Sub1: <task>` – and gets the suffix ` done` when it finishes (`set_session_title`).
+- **Model and effort** (the user, 2026-10-23): sessions run **Opus 5.5 at "high" effort** – pass `model: claude-opus-5-5`
+  to `create_session` (the effort is not a parameter there: a created session inherits the environment's, which is
+  "high"). A parent may choose a cheaper configuration when it judges it good enough for the task – e.g. Sonnet 5.5
+  for mechanical work (applying a decided table, downloading and converting sources, a survey) – and says so in the
+  child's prompt and in its own report. The same judgment applies to the `model` of a sub-agent; translation itself
+  (drafting, review passes) stays on Opus.
 - **Any session may launch a sub-session instead of a sub-agent** when the task is heavy enough (a whole text, a
   whole corpus pass, a long sequential chain): the same rules hold one level down – one at a time, the prompt from the
   template with the next title prefix and a report path (`reports/round-<N>/run-<M>--sub-<K>.md`), the child reports to

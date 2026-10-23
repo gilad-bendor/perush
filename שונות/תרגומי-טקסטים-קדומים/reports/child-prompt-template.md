@@ -1,8 +1,9 @@
 # The prompt a parent gives a child session (guidelines §5.1a)
 
 The parent fills in the `<…>` fields and passes the text below as the `prompt` of `create_session`, with
-`source_url: https://github.com/gilad-bendor/perush` and `source_revision: main` (without them the child has no
-checkout – seen in the 2026-10-23 smoke test), and a `title` that starts with the child's place in the hierarchy:
+`source_url: https://github.com/gilad-bendor/perush`, `source_revision: main` (without them the child has no
+checkout – seen in the 2026-10-23 smoke test), `model: claude-opus-5-5` (or a cheaper model when the parent judges
+it good enough for a mechanical task, §5.1a; the effort is inherited: "high"), and a `title` that starts with the child's place in the hierarchy:
 `Round<N>/Run<M>: <short name>` for a run, `Round<N>/Run<M>/Sub<K>: <task>` for a sub-session of a run. For a
 sub-session, adapt the first lines (its task instead of the plan row) and give it the report path
 `reports/round-<N>/run-<M>--sub-<K>.md`; it reports to its immediate parent.
