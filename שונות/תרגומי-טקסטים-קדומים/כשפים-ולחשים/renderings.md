@@ -480,3 +480,15 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
   (= I 119); *nāsiḫ libbi* `נוֹסֵחַ לֵב` (vocalized: `נוסח` is the rubric's word); *tarbaṣu* `מִרְבָּץ`; *šapāku* (heap)
   `שָׁפַךְ` (2 Sam 20:15); *ṭābtu* `מֶלַח` and *kibrītu* `גָּפְרִית` as the speakers of their own incantations; the
   repeated lines of VI 126–157 identical, punctuation included. VIII 46–49 copy VI 45–46b.
+
+### 10.7 Tablet VII (2026-10-23)
+- **Accepted:** words N puts in parentheses (optional, some copies) are `( )` in the Hebrew with a note naming the copies;
+  *reḫû* `עִבֵּר` of the speaker's own spell (VII 22–28); *atānu* `אָתוֹן` [cognate], *mūru* `עַיִר`, *armû* `עוֹפְרָה`
+  (plene); *ṭuḫḫudu* `דִּשֵּׁן` (Ps 23:5); *riksu* stays `קֶשֶׁר` also for Gula's bandage (VII 42: the witch's knot and the
+  healer's bandage are one word); *ṭarādu* `הִבְרִיחַ`; *samāku* `גֵּרֵשׁ`; *ṣubbû* `סָקַר`, *šurruḫu* `פֵּאֵר`, *kanānu* D
+  `כָּרַךְ`, *manānu* `מֵיתָר`, *wuʾʾuru* `צִוָּה`; *gimilla gamālu* `גָּמַל … גְּמוּל` [cognate]; *šaḫāṭu* N `נִתְלַשׁ` (=
+  V 54); *bāʾirtu* `צַיֶּדֶת`; *šalāpu* `שָׁלַף`; *ruqbūtu* `רִקָּבוֹן`; *muppišūtu* `עוֹשׂוּת`; *idātu* / *ittātu* both
+  `אוֹתוֹת` (both are plurals of *ittu*); *ṭūb libbi* / *ṭūb šīri* `טוּב לֵב` / `טוּב בָּשָׂר`; *gummuru* `גָּמַר` (Gilgameš);
+  *annaku* `אֲנָךְ` (open: Amos 7:7's meaning is disputed); *nīš ili* `נֶפֶשׁ אֵל`.
+- **For the lead's next harmonization:** *nissatu* `דַּאֲבוֹן` here (V gave `יָגוֹן` to *ašuštu*) against *nissatu* `יגון`
+  in the wisdom corpus and Gilgameš; *gamāru* `כִּלָּה` (prophecy) / `גָּמַר` (Gilgameš, here).
