@@ -309,6 +309,7 @@ RESERVED = [
     (W + alt("חותם", "החותם", "חתם", "חתום", "חתומה", "נחתם", "חותמו") + E, r"ḫtm|ḫtm,w|ḫtm\.t", "the root חתם only for ḫtm 'seal' [cognate: loanword, Gen 38:18]"),
     (W + alt("שיטה", "שיטים", "עצי שיטים") + E, r"šnḏ|šnḏ,t", "שִׁטָּה only for šnḏ.t 'acacia' [cognate: loanword, Ex 25:5]"),
     (W + alt("קוף", "קופים", "הקוף", "הקופים") + E, r"\bgf\b|gjf|gfn|ꜥnꜥn", "קוֹף only for gf [cognate: loanword, 1 Kgs 10:22]; the baboon jꜥnꜥ = בַּבּוּן"),
+    (W + alt("כתם", "הכתם", "כתמים") + E, r"ktm|kꜣ~tj~mt", "כֶּתֶם 'fine gold' only for ktm.t [cognate: loanword, Job 28:16, Lam 4:1] (AM 18.12)"),
     (W + alt("זרת", "הזרת", "בזרת") + E, None, "זֶרֶת never: ḏr.t 'hand' = יָד"),
     # --- other corpora's reservations, carried over for safety ---
     (W + alt("צדק", "צדיק", "צדקה", "הצדיק", "הצדק", "צדקתו", "צדיקים") + E, None, "צֶדֶק / צַדִּיק never: mꜣꜥ.t = אֱמֶת, mꜣꜥ-ḫrw = אֲמִתִּי־קוֹל (renderings §4.1)"),

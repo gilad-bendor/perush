@@ -341,5 +341,176 @@ As in part 1: the base and its witness through `data … --wit`; the TLA German 
 ### Lessons for the guidelines
 - A formula keyed on a one-letter word (`r`) needs word boundaries that exclude compound prepositions (`ḥr-r-rʾ`).
 
+## AM 13.10–19.9
+
+### Scope
+Part 3 of 5 (the second translator, continuing the first translator's file): houses 10–17 (13.10–19.9), 126 lines, all
+drafted. The base has four small lacunae (14.7, 14.10, 16.8, 18.12 `[…]`) and editorial supplements only (`⟨wḏꜣ,t⟩`
+18.15, `⟨ꜥqꜣ⟩` 18.19, `⟨mt(r,t)⟩` 16.1). House 10 (13.10–14.3): do not greet the hot man falsely, do not split heart
+from tongue – "the abomination of the god"; 11 (14.4–15.7): do not covet the poor man's goods – the mouthful swallowed
+and vomited; the beaten overseer of the poor; 12 (15.8–15.18): the steward of an official's estate; 13 (15.19–16.14):
+the pen, the false testimony, the tax account, the debt cut by two thirds, and the second "better" saying; 14
+(16.15–17.3): do not fawn on the great; 15 (17.4–17.16): the Ibis's beak is the scribe's finger, the baboon's roaming
+eye; 16 (17.17–18.13): the hand-balance, the kite-weights, the measure, the baboon beside the balance, gold turned to
+lead; 17 (18.14–19.9): the Udjat measure, the oipe that holds two, "the oipe is the Eye of Re", the corn-measurer.
+Witness: pStockholm MM 18416 (to 14.3, its last line is the heading of house 11).
+
+### Sources consulted
+The base and its witness through `data … --wit`; the TLA German (`tr`) and Lange 1925 (OCR, chapters 10–17), both read
+after drafting each house (my first save of house 10 quoted Lange from memory – caught and replaced with the OCR text
+before the next house; see Lessons). No modern translation quoted; Lichtheim etc. not cited.
+
+### Decisions
+- **Plene, unvocalized `>` lines from the first save** (checked: house 10 was plene).
+- **Lemmas fixed in this part (one Hebrew each):** shꜣ "pervert, cheat" = `עִוֵּת` (14.10, 15.20, 17.11, 17.13, 18.6,
+  18.11, 19.2; Lam 3:36 `לְעַוֵּת אָדָם בְּרִיבוֹ`, Amos 8:5 `וּלְעַוֵּת מֹאזְנֵי מִרְמָה`; also 20.21 later); sꜥḏꜣ
+  "falsify" = `זִיֵּף` (14.2, 16.4, 17.18, 18.16; later 20.9, 21.13); msḏj "hate" = `שָׂנֵא` (14.2, 15.12, 15.16, 18.9);
+  ḫbd "blame" = `מְגֻנֶּה` (15.5); bꜥꜣ "spurn" = `מָאַס` (16.19); wšd "greet" = `בֵּרַךְ` (13.11, 16.22, as 10.18);
+  jꜣw.tw=k = `"הלל לך!"` (13.13, 16.22); gꜣnjsꜣ "compulsion" = `כְּפִיָּה` (13.11, 18.17; 8.20's `m-gꜣnjsꜣ` is another
+  TLA lemma); dns "weighty" = `כְּבַד־מִשְׁקָל` (13.19; 20.3 later); pšn = `הִפְרִיד` (13.17; `הִבְדִּיל` avoided);
+  sḫpr = `קִדֵּם` (14.9); whꜣ = `הִכְשִׁיל` / `כּוֹשֵׁל` (14.12–13); ntf = `פָּרוּעַ` (15.4, keeping 11.18's root);
+  wjꜣwjꜣ = `נָבוֹךְ`; sḏd (noun) = `שִׂיחָה`; swnwn = `חֲנֻפָּה`; sḥwr = `קְלָלָה`; sn-tꜣ = `נְשִׁיקַת־הָאָרֶץ`
+  (literal); ꜥmꜣm / bšj = `בָּלַע` / `הֵקִיא` (14.17; Job 20:15 has both); šwj = `רֵיק`; ḥjy = `פָּקִיד` (14.19; 24.17
+  later); šbd = `מַקֵּל`; pḫꜣ.t = `כֶּבֶל`; nmj.t = `סַפְסַל־הַטֶּבַח`; smd.t = `פְּקוּדִים`; rq / rqj = `צוֹרֵר` (as 5.12);
+  rwḏ.w = `סוֹכֵן` (15.11; Isa 22:15); wḥm = `שָׁנָה` (15.18; 24.1 later); ḥsb = `חֶשְׁבּוֹן`; wḏꜣ.t "arrears" = `חוֹב`
+  (16.5); ꜥr / ꜥr.t = `עֵט` / `מְגִלָּה` (Jer 8:8); mtr.t = `עֵדוּת` (`הֵעִיד עֵדוּת`); jnw = `מַתָּנָה`; ꜣ.tj
+  "have-not" = `חֲסַר־כֹּל` (a fifth poverty word, kept apart from nmḥ/twꜣ/jꜣd/zꜣw-ꜥ); nw "look; glance" = `הִבִּיט` /
+  `מַבָּט`; Hbj = `הָאִיבִּיס`; jꜥnꜥ = `בַּבּוּן` (never `קוֹף`); Pr-Ḫmnw = `בֵּית־חֶמְנוּ`; drp = `מָנָה` (as 11.3); mꜥdn =
+  `נִרְשַׁם`; jws = `פֶּלֶס`, mḫꜣ.t = `מֹאזְנַיִם`, qd.t = `קֶדֶט` (pl. `קְדָטִים`), dbḥ = `מִדָּה` (all as renderings
+  §4.3); rʾ "part, fraction (of a measure)" = `פִּיּוֹת` (17.19, 18.16: keeps rʾ = `פֶּה`, and Hebrew `פִּי שְׁנַיִם` is
+  "a portion"; `חֵלֶק` stays dnj.t's); pr-ḥḏ = `בֵּית־הַכֶּסֶף` (literal, apart from wḏꜣ `אוֹצָר`); dḫj = `מִשְׁקֹלֶת`
+  (Isa 28:17); ꜥꜣ (noun) "greatness, size" = `גְּדֻלָּה` / `גֹּדֶל`; swꜣ "pass by" = `חָלַף` (`עָבַר` is snj's, 7.1);
+  tjḥs.t = `נְחֹשֶׁת`; šmꜥ = `בַּד דַּק` (`שֵׁשׁ` stays šs's); ktm.t = `כֶּתֶם` [cognate: loanword] (18.12); dḥtj =
+  `עוֹפֶרֶת`; ḫꜣj / ḫꜣ.y = `מָדַד` / `הַמּוֹדֵד`; ẖꜥꜣ = `הֵרִיק` (as 7.6); mtj = `דִּיּוּק`; ꜥqꜣ = `יָשָׁר` (with sꜥqꜣ 1.7);
+  jṯj "thief" = `גַּנָּב`; ḏbꜥ (verb) "seal" = `טָבַע` (19.3; the root of the loan `טַבַּעַת`; `חָתַם` stays ḫtm's);
+  šmw "harvest (tax)" = `קָצִיר` (as 6.9; a homograph of šmm "the hot man", noted); ꜥḥwtj = `אָרִיס` (see open
+  decisions); mꜣwr = `כָּתַב`; ḥbꜥ = `שִׂחֵק`; ṯꜣs = `מַס`; ẖnw "Residence" = `הַבִּירָה`; ḏnw = `מְדוּשָׁה` (`גֹּרֶן` is
+  ḫtjw's, 8.18 – so Ruth 3:2 `גֹּרֶן הַשְּׂעֹרִים` stays in the apparatus); s.t-wr.t = `הַכִּסֵּא הַגָּדוֹל`.
+- **Two "ways":** mj.t = `דֶּרֶךְ` (fixed by 1.7 `דרך החיים`, so 16.8 `כדרך החיים` repeats it), wꜣ.t = `אֹרַח` (15.6,
+  16.8). **15.6 was changed** from `שבדרך` to `שבאורח` when 16.8 showed the collision.
+- **Splits by sense (noted at the lines):** ꜥꜣ "much" `רַב` (14.17, 15.10) beside `גָּדוֹל`; sp "occasion" `פַּעַם` (17.3)
+  beside `עִנְיָן`; jwṯꜣ "someone" `מִישֶׁהוּ` (15.3) / "which?" `אֵיזֶה` (18.2); wbn of grain `גְּלִישָׁה` (18.17) beside the
+  sun's `זוֹרֵחַ` (10.12); twr r "keep apart from" `הִנָּזֵר מִן` (15.7; Lev 22:2) – twr "respect" recurs in 25.7, 25.9,
+  26.14, 27.12 (to be settled in part 5: `הִנָּזֵר` will not fit "respect him"; I propose `נָהַג כָּבוֹד` there or a single
+  verb chosen then); the TLA's one lemma thꜣ / twhꜣ kept apart as part 1 did: `פָּגַע` (17.6, 19.5) vs `הִרְחִיק` (17.2,
+  like 5.16 `הִתְרַחֵק`).
+- **ḫpr in the future** (13.18–19) = `יִהְיֶה`: Hebrew `נִהְיָה` (renderings §4.4) has no usable future.
+- **Readings chosen where the TLA and Lange differ:** 13.12 a prohibition (`ואל תזיק`, both; I had first drafted a
+  consequence); 13.14 `אימה?` (Lange, renderings §10.2) against the TLA's "Berechnung"; 15.12 imperative (TLA) against
+  Lange's "his welfare hates yours"; 16.18–19 one quoted speech (Lange) against the TLA's narrator in 16.19; 17.5
+  `יֵשׁ?` (TLA "Wohlstand") against Lange's "what I am"; 19.7 "tax" (TLA) against Lange's "proverb".
+- **Gates:** no gate blocked a right word. `קוֹף`, `שֹׁחַד`, `שָׁמַט`, `חָתַם`, `קָרַץ` (Akkadian *karāṣu*'s), `גֹּרֶן`
+  (ḫtjw's) were avoided by the rules, not by the tool.
+
+### Open decisions for the user
+- ~~19.4 ꜥḥwtj "tenant" = `אָרִיס`~~ **Settled by the coordinator (renderings §10.3.2):** `חוֹכֵר` – `אָרִיס` is the
+  Hebrew loan of Akkadian *errēšu* (the law corpus), so the cognate keeps it (guidelines §5.2).
+- ~~15.11 rwḏ.w = `סוֹכֵן`~~ **Settled (§10.3.2):** `סוֹכֵן` stays – in Gudea (*aĝrig*) and the Advice (*šatammu*, not
+  *šākin*) it is a sense rendering too, so no cognate claims it.
+- 17.1 and 18.5 remain obscure (`שיחדל, ויבוא קצך?.`, `רבים הם הגדודים? שבעצמת האל.`); 14.11–14.12 likewise.
+
+### Progress log
+- Drafted house by house (10; 11; 12–13; 14–15; 16; 17), each saved at once and followed by `fill` + `verify AM` (0
+  problems apart from the stale translation before `build`).
+- Pass (a) fidelity: every negation (the m-jri̯ / mtw=k chains; `nn` 16.19, 17.14; `tm` 15.18), the conditionals
+  `wnn=k … jw=k` (14.13–14, 15.4–5), the second tenses (14.9, 14.19, 15.6, 18.7, 18.22), the statives and the TLA's two
+  analyses (13.14, 16.11, 16.13) checked; brackets: four `[…]` kept, `⟨ ⟩` not carried. Changes: 13.12 (prohibition),
+  18.19 (`הנח לה למדוד`, matching the negative `m-ḏr.tj` = `אל תניח` of 18.18).
+- Pass (b) consistency: the renderings §4/§10 words and every recurring lemma checked by `lex`; the fixed lines 16.12–14,
+  17.15–16 and the formula 13.16 = 15.21 byte-identical (`verify`: 0 repeated-line differences); the heading formula;
+  new strings grepped (`grep`, `grep --all`). Changes: 15.5 ḫbd `מאוס` → `מגונה` (to free `מָאַס` for bꜥꜣ), 15.6
+  `שבדרך` → `שבאורח`, 16.9 `תשכב` → `תישן` (sḏr = `יָשַׁן` as 5.13, 9.17).
+- Pass (c) Hebrew: read the generated `translation-AM.rtl.md` (houses 10–17) aloud; no further change.
+- Quotes: every verse printed before quoting; `check_bible_quotes.py` on the annotated file, the intro, both
+  translations and project.md: 0 problems (three bare "Book ch:v" mentions after a backticked word were read as Genesis
+  and rewritten). `build AM`: 368 lines; `verify AM`: 0 problems (non-strict; 183 lines placeholder); `selftest`: 0
+  failures.
+
+### The text on its own terms
+- **The heart and the tongue as one** (13.17, 14.3): duplicity is a split body, "the sorrow (Lange: the strife) of the
+  belly" – the same pair heart/tongue with which Ptah creates in the Memphite Theology.
+- **Taboo turned ethics** (13.16, 15.21, 19.1): *bw.t*, the cult taboo of a god or a nome, becomes the god's horror of
+  lies, forged documents and the thief of the measure; pStockholm writes "great crime" for it at 14.3.
+- **The stolen bite** (14.7–14.18): the poor man's goods block the throat and wound the gullet; the big mouthful is
+  swallowed and vomited – the body rejects what was taken.
+- **The office as a moral world** (15.8–16.7, 17.20–19.9): stewards, tax assessors, scribes, corn-measurers; the sins
+  are professional (a private measure against the treasury's, a double oipe, a false entry), and so is the punishment
+  (the son not enrolled, 17.14; no further commission, 15.18).
+- **Mercy as policy** (16.5–16.10): cut a poor man's arrears to a third – and sleep until morning; the reward is a quiet
+  night and the love of people, "better than riches in the storehouse".
+- **The gods who watch the scribe** (17.7–17.12, 17.22–18.3): Thoth as ibis (his beak is the scribe's finger) and as
+  baboon (sitting in Hermopolis, his eye roaming the Two Lands; sitting on the balance, his heart the plummet) – the
+  weighing of the heart in the judgement of the dead is present at every market scale.
+- **Measures are divine eyes** (18.15, 18.23): the Udjat measure is the healed eye of Horus, the oipe the Eye of Re;
+  fraud in measuring wounds a god's eye, and the eye "seals" the cheat's sentence (19.3).
+- **Morning reveals** (18.13, as 9.4, 9.18): at dawn the falsely gained gold is lead.
+- **A sober realism** (19.8–19.9): the power of the threshing floor (the temptation of grain lying before you) is
+  greater than an oath by the Great Throne.
+- **Words between the languages** (18.12): one line holds a Semitic loan in Egyptian (ꜥšq `עָשַׁק`) and an Egyptian
+  word that Hebrew borrowed (ktm.t `כֶּתֶם`).
+
+### Key parallels
+- **18.21–19.1 ↔ Deut 25:13–16; Prov 20:10; Mic 6:10** [cognate / divergence]: `אֵיפָה` is the Egyptian *jp.t*; "an oipe
+  that takes two" against "אֵיפָה וְאֵיפָה"; "its abomination is the thief" stands exactly where Deuteronomy and
+  Proverbs say `תּוֹעֲבַת יְהוָה`.
+- **17.18–18.3 ↔ Prov 16:11; Lev 19:35–36; Prov 11:1, 20:23** [equivalent]: two balance words (*jws* `פֶּלֶס`, *mḫꜣ.t*
+  `מֹאזְנַיִם`) as in `פֶּלֶס וּמֹאזְנֵי מִשְׁפָּט`; the weights are the invention of Thoth as they are `מַעֲשֵׂהוּ` of the Lord.
+- **18.23 ↔ Zech 5:6–8** [equivalent]: "this is the ephah … this is their eye in all the land" and the lead stone on its
+  mouth – the oipe is the Eye of Re, and the false gold becomes lead (18.13).
+- **14.5–14.18 ↔ Prov 23:6–8; Job 20:15** [equivalent / divergence]: the same verb (snk = `הִתְאַוָּה` = `תִּתְאָו`), the
+  bread, the mouthful swallowed and vomited (`פִּתְּךָ-אָכַלְתָּ תְקִיאֶנָּה`; Job `חַיִל בָּלַע וַיְקִאֶנּוּ`) and the lost
+  "pleasant words"; but Proverbs' host is `רַע עָיִן`, Amenemope's victim is the poor.
+- **13.15–16, 15.20–21 ↔ Prov 12:22; 6:16–17** [equivalent]: `תּוֹעֲבַת הָאֵל` = `תּוֹעֲבַת יְהוָה`; "the god hates … his
+  great abomination" = `שָׂנֵא יְהוָה … תּוֹעֲבַת נַפְשׁוֹ`.
+- **15.20, 16.4, 17.6 ↔ Jer 8:8; Isa 10:1–2** [equivalent]: the scribe's lying pen.
+- **16.5–16.7 ↔ Deut 15:1–2; Neh 5:10** [divergence / equivalent]: partial remission at the official's discretion against
+  the Torah's septennial `שְׁמִטָּה`; ḫꜣꜥ "release" = `עָזַב` as in `נַעַזְבָה נָּא אֶת הַמַּשָּׁא הַזֶּה`.
+- **16.11 ↔ Prov 22:1** [equivalent]: favour (`חֵן`) and love better than riches – the verse that opens the chapter of
+  "the words of the wise".
+- **18.2 ↔ Ps 77:14; Ex 15:11** [equivalent]: "which god is as great as Thoth" / `מִי-אֵל גָּדוֹל כֵּאלֹהִים`.
+- **17.10 ↔ Zech 4:10; Prov 15:3** [equivalent]: the god's roaming eye.
+- **18.12 ↔ Job 28:16; Song 5:11; Prov 25:12** [cognate: loanword]: ktm.t = `כֶּתֶם`.
+
+### Lines shared with other texts
+- Within AM, copied byte for byte: 16.12–16.14 = 9.6–9.8 and 17.15–17.16 = 3.17 / 5.19 (renderings §7); 15.21 = 13.16
+  (`תועבת האל.`). 16.11 keeps only the frame `מוטב …` of 9.5 (the Egyptian differs).
+- Repeated structures given the same Hebrew: 14.5 / 18.8 ~ 7.14 `אל תתאווה ל…`; 14.13 ~ 15.4 `אם … אתה לפני מי
+  שמעליך,`; 14.17 ~ 15.10 `מילוי (ה)פה בלחם רב`; 16.10 ~ 3.18 `תמצא …`; 16.17 ~ 9.14 `תתאמץ לבקש`; 17.9 ~ 17.22
+  `יושב הבבון …`; 17.11 ~ 17.13 `המעוות באצבעו`; 17.19 ~ 18.16 `פיות`; 18.13 ~ 9.4, 9.18 `האירה הארץ – …`; 15.6 ~ 1.10
+  `להטות את משוטו מן`; 16.2, 17.8, 17.18 ~ 7.12 `הזיז`; 16.8 ~ 1.7 `דרך החיים`; 18.4 ~ 21.9 later (`אל תעשה לך …`); 19.5 ~
+  24.12 later (`…, שייפגע`); 14.1 ~ 24.20 later (`… שלם ביד האל`); 15.14 ~ 22.14 later (`ואל תתחבר אל …`); 16.17 ~ 19.19,
+  27.3 later.
+
+### Proposals for the shared renderings
+| Egyptian | Hebrew | Reason / lines |
+|---|---|---|
+| shꜣ "pervert, cheat" | `עִוֵּת` | 14.10, 15.20, 17.11–13, 18.6, 18.11, 19.2; 20.21 later (Lam 3:36, Amos 8:5) |
+| sꜥḏꜣ | `זִיֵּף` | 14.2, 16.4, 17.18, 18.16; 20.9, 21.13 later |
+| msḏj / ḫbd / bꜥꜣ | `שָׂנֵא` / `מְגֻנֶּה` / `מָאַס` | 14.2, 15.12, 15.16, 18.9 / 15.5 / 16.19 |
+| wšd; jꜣw.tw=k | `בֵּרַךְ`; `"הלל לך!"` | 10.18, 13.11, 16.22; 13.13, 16.22 |
+| gꜣnjsꜣ | `כְּפִיָּה` | 13.11, 18.17 |
+| dns | `כָּבֵד` (`כְּבַד־מִשְׁקָל`) | 13.19; 20.3 later |
+| wḥm | `שָׁנָה` | 15.18; 24.1 later |
+| mj.t / wꜣ.t | `דֶּרֶךְ` / `אֹרַח` | 1.7, 16.8 / 15.6, 16.8 |
+| rʾ "part (of a measure)" | `פִּיּוֹת` (`פֶּה`) | 17.19, 18.16 |
+| ḏbꜥ "finger" / ḏbꜥ "to seal" | `אֶצְבַּע` / `טָבַע` | 17.7–13 / 19.3 (`חָתַם` stays ḫtm's, 19.21) |
+| ktm.t | `כֶּתֶם` ★ (vocalized) [cognate: loanword] | 18.12 (add to renderings §4.2) |
+| jꜥnꜥ / Hbj / Pr-Ḫmnw | `בַּבּוּן` / `הָאִיבִּיס` / `בֵּית־חֶמְנוּ` | 17.7, 17.9, 17.22 |
+| ḥjy | `פָּקִיד` | 14.19; 24.17 later |
+| ꜣ.tj "have-not" | `חֲסַר־כֹּל` | 16.19 (the poverty words: nmḥ `דַּל`, twꜣ `עָנִי`, jꜣd `אֻמְלָל`, zꜣw-ꜥ `חֲלַשׁ־זְרוֹעַ`) |
+| swꜣ "pass by" | `חָלַף` | 18.7 (`עָבַר` is snj's) |
+| ḫꜣj / ḫꜣ.y | `מָדַד` / `הַמּוֹדֵד` | 18.19, 19.2, 19.6 |
+| pr-ḥḏ / dḫj | `בֵּית־הַכֶּסֶף` / `מִשְׁקֹלֶת` | 17.21 / 18.1 |
+| ḏnw | `מְדוּשָׁה` (ḫtjw keeps `גֹּרֶן`) | 19.8 |
+| twr | `הִנָּזֵר מִן` (with r); "respect" to be settled in part 5 | 15.7; 25.7, 25.9, 26.14, 27.12 |
+| ḫpr (future) | `יִהְיֶה` (amend renderings §4.4: `נִהְיָה` has no future) | 13.18–19 |
+
+### Lessons for the guidelines
+- **"Read the rank-3/5 translation after drafting" also means: never write its wording before reading it.** I wrote
+  Lange's German for house 10 from memory into the תרגומים bullets and found every quote wrong when I opened the OCR;
+  write the תרגומים bullet only with the source open.
+- **`check_bible_quotes.py` reads a bare "ch:v" after a backticked Hebrew word as Genesis** (a backticked word followed by
+  the Hebrew words "in Proverbs 8:21" was checked against Gen 8:21): put the reference in parentheses right after the quotation, `` `…` (Book ch:v) ``, or none at all.
+
 ## Parallels index
 (generated from the הקבלה bullets by `../build_parallels_index.py`)

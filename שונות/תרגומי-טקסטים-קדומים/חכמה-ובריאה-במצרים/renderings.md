@@ -188,6 +188,7 @@ Draft from the form, not from the German. The TLA's morphology (`data`) names th
 | šnḏ.t "acacia" | `שִׁטָּה` | Ex 25:5 |
 | gf "monkey" | `קוֹף` | 1 Kgs 10:22 – the baboon `jꜥnꜥ` (Thoth's animal, Amen. 17.9, 17.22) = `בַּבּוּן`, **not** `קוֹף` |
 | gstj "palette" | `קֶסֶת` | Ezek 9:2 |
+| ktm.t "fine gold" (Amen. 18.12) | `כֶּתֶם` ★ | Job 28:16, Lam 4:1 (always vocalized: "stain") |
 | ḫsbḏ "lapis lazuli" | `סַפִּיר` | not a loanword: the cross-corpus rule (*uqnû* = `סַפִּיר` [equivalent], guidelines §6.7) |
 | msḥ "crocodile" | `תִּמְסָח` | Arabic *timsāḥ* < Coptic < Egyptian msḥ; Modern Hebrew `תִּמְסָח`. `תַּנִּין` never (the dossier rule; Ex 7:9–12 in the apparatus) |
 
@@ -234,7 +235,7 @@ Draft from the form, not from the German. The TLA's morphology (`data`) names th
 |---|---|---|---|
 | jri̯ "make, do" | `עָשָׂה` | | the dossier; Gen 1:7, 16, 25–26 `וַיַּעַשׂ` [equivalent] |
 | qmꜣ "create, form" | `יָצַר` | `בָּרָא` | Gen 2:7 `וַיִּיצֶר` [equivalent]; `בָּרָא` never |
-| ḫpr "come into being, become" | `נִהְיָה` | `הָיָה`, `נִבְרָא` | Gen 1:3 `וַיְהִי` [equivalent]; Khepri `חֶפְּרִי` |
+| ḫpr "come into being, become" | `נִהְיָה` (future: `יִהְיֶה`, §10.3) | `הָיָה`, `נִבְרָא` | Gen 1:3 `וַיְהִי` [equivalent]; Khepri `חֶפְּרִי` |
 | ms "give birth" / ms.w "children" | `יָלַד` / `יְלָדִים` | | |
 | ḥtp "rest, be content" (Memphite 59 "Ptah rested") | `נָח` | `שָׁבַת` | Ex 20:11 `וַיָּנַח בַּיּוֹם הַשְּׁבִיעִי` [equivalent]; Gen 2:2 `וַיִּשְׁבֹּת` [divergence]. ḥtp.w (offerings) `קָרְבָּנוֹת` |
 | md.t "word, matter" | `דָּבָר` | | "every divine word" (md.t nṯr) `כָּל דְּבַר אֵל` |
@@ -408,4 +409,12 @@ parallels table.
 4. **8.1** `j:jri̯=k sjꜣ r` with an object = `תַּכִּיר אֶת` (recognize); §3a's `הִזָּהֵר` stays for sjꜣ without an object.
 5. **Ruling (ḫꜣꜥ):** `עָזַב` "leave, abandon" stays the rendering; ḫꜣꜥ "throw" (11.17, words thrown like a lasso) = `הִשְׁלִיךְ` – a split by sense of one Egyptian lemma whose two senses Hebrew must separate; noted at the line.
 6. **Formula fix (egypt_tools.py):** the "better" formula no longer fires on the `r` inside `ḥr-r-rʾ` (8.16 had a `[סטייה מן הנוסחה]`).
+
+### 10.3 Round 4 run 3, sub 1 – Amenemope part 3 (13.10–19.9), merged 2026-10-23 (the second translator)
+1. **Verbs and nouns** (one Hebrew per lemma): shꜣ "pervert, cheat" = `עִוֵּת` (Lam 3:36, Amos 8:5 `וּלְעַוֵּת מֹאזְנֵי מִרְמָה` [equivalent]); sꜥḏꜣ = `זִיֵּף`; msḏj = `שָׂנֵא`, ḫbd = `מְגֻנֶּה`, bꜥꜣ = `מָאַס`; wšd = `בֵּרַךְ`, the greeting jꜣw.tw=k = `"הלל לך!"`; gꜣnjsꜣ = `כְּפִיָּה`; dns = `כָּבֵד` (`כְּבַד־מִשְׁקָל`); wḥm = `שָׁנָה`; mj.t = `דֶּרֶךְ`, wꜣ.t = `אֹרַח`; rʾ "part (of a measure)" = `פִּיּוֹת` (rʾ stays `פֶּה`); ḏbꜥ "to seal" = `טָבַע` (`חָתַם` stays ḫtm's); ḥjy = `פָּקִיד`; ꜣ.tj "have-not" = `חֲסַר־כֹּל` (the poverty words now: nmḥ `דַּל`, twꜣ `עָנִי`, jꜣd `אֻמְלָל`, zꜣw-ꜥ `חֲלַשׁ־זְרוֹעַ`, ꜣ.tj `חֲסַר־כֹּל`); swꜣ "pass by" = `חָלַף` (snj has `עָבַר`); ḫꜣj = `מָדַד`, ḫꜣ.y = `הַמּוֹדֵד`; pr-ḥḏ = `בֵּית־הַכֶּסֶף`; dḫj = `מִשְׁקֹלֶת`; ḏnw "threshing floor" = `מְדוּשָׁה` (ḫtjw keeps `גֹּרֶן`, 8.18); jꜥnꜥ = `בַּבּוּן`, Hbj = `הָאִיבִּיס`, Pr-Ḫmnw = `בֵּית־חֶמְנוּ`; rwḏ.w = `סוֹכֵן`; ꜥḥwtj "tenant" = `חוֹכֵר` (item 2).
+2. **Collisions settled (the coordinator):** ꜥḥwtj `אָרִיס` → `חוֹכֵר` (19.4): `אָרִיס` is the Hebrew loan of Akkadian *errēšu* (the law corpus), and a cognate keeps its word (guidelines §5.2; this refines §10.1.8: an Egyptian word takes the Hebrew of its meaning, **but not a Hebrew word that is the cognate or loan of another corpus's source word**). rwḏ.w `סוֹכֵן` stays: in Gudea (*aĝrig*) and the Advice (*šatammu*) it is a sense rendering too.
+3. **Loanword:** ktm.t "fine gold" = `כֶּתֶם` ★ [cognate: loanword] (§4.2, gated and always vocalized).
+4. **ḫpr in the future** = `יִהְיֶה` (§4.4 amended: `נִהְיָה` has no living future).
+5. **Open for part 5:** twr – 15.7 `הִנָּזֵר מִן` (with r); the sense "respect" (25.7, 25.9, 26.14, 27.12) is settled by the part-5 translator, one Hebrew if the Egyptian sense allows.
+6. Fixed lines 16.12–14, 17.15–16 copied byte for byte; 13.16 = 15.21 `תועבת האל.`; 14.3 `תועבתו הגדולה`.
 
