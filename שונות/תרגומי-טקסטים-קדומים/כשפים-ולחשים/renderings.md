@@ -193,6 +193,7 @@ Vocalize at the first occurrence in each file; **always** where marked ★ (they
 | *ikkibu* (V 74 *ikkib šamê*) | תּוֹעֵבָה | wisdom (gated). |
 | *bullû* (extinguish); *nâḫu* D (quench, calm); *pašāḫu* | כִּבָּה; הֵנִיחַ [cognate נוח]; הִרְגִּיעַ | |
 | *ḫâlu*; *zâbu*; *natāku* | נָמַס; זָב [cognate]; נִתַּךְ [cognate] | ★ refrain `הִמַּסּוּ, זוּבוּ וְהִנָּתְכוּ` ↔ יחזקאל כב:כ–כב (melting in the furnace), תהלים סח:ג. |
+| Girra's four titles (IV 8 = 75, 105–106 = 121–122): *qāmû qālû kāsû kāšidu ša kaššāpāti* | `מְבַעֵר, קוֹלֶה, אוֹסֵר, מַשִּׂיג הַמְּכַשְּׁפוֹת` | one fixed string (Tablet IV). |
 | Girra's epithets: *āriru*; *ezzu*; *qardu* / *qurādu*; *šarḫu*; *gašru*; *rašubbu*; *allallû*; *gitmālu* | הַיּוֹקֵד; הַזּוֹעֵם; הַגִּבּוֹר; הַנֶּהְדָּר; הָעַז; הַנּוֹרָא; הָאַדִּיר; הַשָּׁלֵם? → `הַמֻּשְׁלָם` | `שלם` is gated (§8): *gitmālu* = `הַמֻּשְׁלָם`. *bukru* = `בְּכוֹר` (wisdom; the note: "offspring", §6.7 false friend); *ilittu* = `יְלִיד` [cognate]; *mār* = `בֶּן`. |
 
 ## 6. Formulas and refrains (★ = checked by regex)
@@ -446,3 +447,16 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
   follow it.
 - **Rule for the closing formula when only some copies have it** (III 101, 115): the Hebrew follows N; the copies with
   TU₆ ÉN go to a footnote.
+
+### 10.4 Tablet IV (2026-10-23)
+- **Accepted:** the refrain IV 13–67 written in full, unbracketed, with a note where the copies abbreviate it; Girra's
+  four titles as one string (§5); *pāqidu* `פּוֹקֵד` beside *paqādu* `הִפְקִיד` (the play kept, IV 18); *šikkû*
+  `חֻלְדָּה`, *arrabu* `עַכְבָּר` (Lev 11:29), *perurūtu* transliterated; *lulīmu* `יַחְמוּר` (Gilgameš); *šuškunu* (IV
+  68–72, "make odious") `הִבְאִישׁ` by sense (Exod 5:21; not a form of `שׂם`); IV 115 feminine `עושות לי, עושות ועושות
+  לי` (*ippušā*: the RT translator follows IV 115 at RT 68'); *piṭru* `פֶּטֶר` (Ludlul); *anāku pāširāk* `אני – מתיר
+  אני`; *rūʾu* `עָמִית` (Etana's *rūʾūtu* `עֲמִיתוּת`), so *itbāru* `שֻׁתָּף`; *šizbu* `חָלָב` (always vocalized, against
+  `חֵלֶב` "tallow"); *burû* `מַפָּץ`; *sirqu* `זְרִיקָה`; *šūbultu* `מִשְׁלוֹחַ`; *arāḫu* `חִסֵּל`; *bâʾu* `שָׁטַף`;
+  *napāṣu* `נִפֵּץ` [cognate].
+- **Settled by the coordinator:** *ḫepû* and *šebēru* both `שָׁבַר` (as in the Gilgameš corpus): *ḫepû* is Maqlû's
+  frequent "break" (and *hīp libbi* is a "broken heart"), *šebēru* (IV 94, once) the cognate; the apparatus names the
+  Akkadian verb where both stand near each other.
