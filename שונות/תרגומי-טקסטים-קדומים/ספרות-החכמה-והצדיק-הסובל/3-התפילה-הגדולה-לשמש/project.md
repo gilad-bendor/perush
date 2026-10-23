@@ -310,8 +310,8 @@ As for 1–100 (above), plus: the lemma-precedent list extended to 101–200; th
 | 86 | dābib ṣalpāti | מספר עקשות | `הָסֵר מִמְּךָ עִקְּשׁוּת פֶּה` (משלי ד:כד) | [equivalent] | |
 | 87 | tarṣat šētka | שלוחה רשתך | `כִּי-שֻׁלַּח בְּרֶשֶׁת בְּרַגְלָיו` (איוב יח:ח) | [equivalent] | Bildad's trap list (Job 18:8–10): "sent" net, trap, snare hidden in the earth; strongest Job contact of the passage. |
 | 87 | rappu ina erṣeti | סד בארץ | `טָמוּן בָּאָרֶץ חַבְלוֹ; וּמַלְכֻּדְתּוֹ עֲלֵי נָתִיב` (איוב יח:י) | [equivalent] | A trap in the ground. |
-| 87 | kamārū | מִכְמֹרֶת | `וּפֹרְשֵׂי מִכְמֹרֶת עַל פְּנֵי מַיִם` (ישעיהו יט:ח) | [cognate] | *kamāru* / `מִכְמֹרֶת` (also `כְּתוֹא מִכְמָר`, Isa 51:20). |
-| 87 | kamārū | מִכְמֹרֶת | `וְיַאַסְפֵהוּ בְּמִכְמַרְתּוֹ` (חבקוק א:טו) | [cognate] | |
+| 87 | kamārū | מִכְמוֹרֶת | `וּפֹרְשֵׂי מִכְמֹרֶת עַל פְּנֵי מַיִם` (ישעיהו יט:ח) | [cognate] | *kamāru* / `מִכְמֹרֶת` (also `כְּתוֹא מִכְמָר`, Isa 51:20). |
+| 87 | kamārū | מִכְמוֹרֶת | `וְיַאַסְפֵהוּ בְּמִכְמַרְתּוֹ` (חבקוק א:טו) | [cognate] | |
 | 83 | šuškallu | שְׂבָכָה | `וְעַל-שְׂבָכָה יִתְהַלָּךְ` (איוב יח:ח) | [equivalent] | The Hebrew word chosen for *šuškallu* is Bildad's; with `רֶשֶׁת` (*šētu*) and `פַּח` (*gišparru*) three of Job 18:8–9's words stand for three Akkadian net words. |
 | 87 | rappu | סד | `וְתָשֵׂם בַּסַּד רַגְלַי` (איוב יג:כז) | [equivalent] | The clamp for the feet. |
 | 88 | ana alti tappêšu iššû nīš ī[nīšu] | אל אשת חברו נשא משא עי[ניו?] | `וַתִּשָּׂא אֵשֶׁת אֲדֹנָיו אֶת עֵינֶיהָ אֶל יוֹסֵף` (בראשית לט:ז) | [equivalent] | The same idiom (*našû īnī ana* / `נשא עיניים אל`) for forbidden desire; "eyes" restored. |
@@ -422,7 +422,7 @@ As for 1–100 (above), plus: the lemma-precedent list extended to 101–200; th
 | 163 | ellessina tapaṭṭar | את חובן תפטור | — (דברים טו:א–ב) | [equivalent] | The idea of release from debt only; *paṭāru* / `פטר` [cognate]. |
 | 165 | ištammarā zikirka | משבחות את זכרך | `יְהוָה שִׁמְךָ לְעוֹלָם; יְהוָה זִכְרְךָ לְדֹר-וָדֹר` (תהלים קלה:יג) | [cognate] | *zikru* … *ana dāriš* (165–166) / `זִכְרְךָ לְדֹר-וָדֹר`. |
 | 165 | zikirka | זכרך | `זֶה שְּׁמִי לְעֹלָם וְזֶה זִכְרִי לְדֹר דֹּר` (שמות ג:טו) | [cognate] | Also Ps 145:7. |
-| 166 | tarbâtīka idallalā | את גודלך מהללות | `גַּדְּלוּ לַיהוָה אִתִּי` (תהלים לד:ד) | [equivalent] | |
+| 166 | tarbâtīka idallalā | את גודלך מפארות | `גַּדְּלוּ לַיהוָה אִתִּי` (תהלים לד:ד) | [equivalent] | |
 | 167 | saklātu ša lišāna | הַסְּכָלוֹת בלשון | `עַם עִמְקֵי שָׂפָה מִשְּׁמוֹעַ נִלְעַג לָשׁוֹן אֵין בִּינָה` (ישעיהו לג:יט) | [equivalent] | The people of a strange tongue; also Deut 28:49. |
 | 167 | saklātu | הַסְּכָלוֹת | `בָּנִים סְכָלִים הֵמָּה` (ירמיהו ד:כב) | [cognate] | *saklu* / `סָכָל`. |
 | 170 | šūt ukabbisū šadî elûti | אשר דרכו את הרי המרום | `וְדֹרֵךְ עַל בָּמֳתֵי אָרֶץ` (עמוס ד:יג) | [equivalent] | Loose: there the god treads the heights. |

@@ -83,7 +83,7 @@ eBL `reading-edition.md` (N, T, L, notes, every ATF line, incl. all `BabaLBCom1`
 |---|---|---|---|---|---|
 | I–XIII | acrostic *a-na-ku sa-ag-gi-il-ki-[i-na-am-u]b-bi-* | (headings) | `אַשְׁרֵי תְמִימֵי-דָרֶךְ` (תהלים קיט:א); `אֵיכָה יָשְׁבָה בָדָד` (איכה א:א); `אֵשֶׁת-חַיִל מִי יִמְצָא` (משלי לא:י) | [divergence] | The Bible's acrostics are alphabetic; this one spells the author's name and a sentence. Closest in form: Lam 3 (all lines of a stanza begin with the same letter, as all 11 lines here). Ps 37, on the prosperity of the wicked, is itself an alphabetic acrostic. |
 | 1 | *[aḫī?] itpēšu gana luqbīka* | [אחי?] הנבון, בוא, אומרה לך | `וְאוּלָם שְׁמַע-נָא אִיּוֹב מִלָּי` (איוב לג:א) | [equivalent] | Opening of a disputation speech; here the sufferer opens politely; the line is the poem's ancient title (commentary colophon). |
-| 4 | *kâša ludlulka* | אותך אהללך | `אֲרוֹמִמְךָ יְהוָה כִּי דִלִּיתָנִי` (תהלים ל:ב) | [divergence] | The praised one is the friend; *ludlul* is Ludlul's first word. |
+| 4 | *kâša ludlulka* | אותך אפארך | `אֲרוֹמִמְךָ יְהוָה כִּי דִלִּיתָנִי` (תהלים ל:ב) | [divergence] | The praised one is the friend; *ludlul* is Ludlul's first word. |
 | 6 | *ayyiš mūdû* | מאין יודע | `וְהַחָכְמָה מֵאַיִן תִּמָּצֵא` (איוב כח:יב) | [equivalent] | The commentary: *ayyiš* = "whence"; *mūdû* = "scribe". |
 | 7 | *nissata lūtamīšu* | ואשיח לו את יגוני | `אֶשְׁפֹּךְ לְפָנָיו שִׂיחִי` (תהלים קמב:ג) | [divergence] | The Psalm pours the complaint before God; the sufferer seeks a human counsellor. |
 | 8 | *īšira lumun libbi* | וישר אליי רוע לב | `אֵין זֶה כִּי אִם רֹעַ לֵב` (נחמיה ב:ב) | [equivalent] | Same phrase, "sorrow"; *ešēru* ~ `וַיִּשַּׁרְנָה` (שמואל א ו:יב) [cognate]. |

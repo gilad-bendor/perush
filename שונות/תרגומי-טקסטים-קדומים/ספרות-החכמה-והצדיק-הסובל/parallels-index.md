@@ -390,9 +390,9 @@ Written by the corpus coordinator (2026-10-19) from the seven per-file indexes a
 | תהלים כז:י | Šamaš Hymn 92 | ina dinīšu ul izzazza abūšu | בדינו לא יעמוד אבי[ו] | `כִּי-אָבִי וְאִמִּי עֲזָבוּנִי; וַיהוָה יַאַסְפֵנִי` (תהלים כז:י) | [divergence] | Here the god himself brought him to trial; no one gathers him in. |
 | תהלים כח:א | Ludlul II 22 | *nīš ilīšu kabta qalliš izkuru anāku amšal* | אשר את חיי אֵלוֹ הכבדים בקלות הזכיר – אני נמשלתי (לו)! | `וְנִמְשַׁלְתִּי עִם-יוֹרְדֵי בוֹר` (תהלים כח:א; קמג:ז) | cognate | *mašālu* / משל: 'I became like' (eBL *amšal*; Lenzi *amrāk* 'I was treated (so)'), in the lament of one already counted with the dead. |
 | תהלים כט:י | Ludlul I 7 | *abūbu rūbšu* | מבול – חרונו | `יְהוָה לַמַּבּוּל יָשָׁב` (תהלים כט:י) | equivalent | The flood as the image of divine anger. |
-| תהלים ל:ב | Ludlul I 1 | *ludlul bēl nēmeqi* | אהלל את אדון החכמה | `אֲרוֹמִמְךָ יְהוָה כִּי דִלִּיתָנִי` (תהלים ל:ב) | equivalent | The thanksgiving opens with the praise verb; *ludlul* is the vow that closes Akkadian incantation prayers (Lenzi ch. 8). |
+| תהלים ל:ב | Ludlul I 1 | *ludlul bēl nēmeqi* | אפאר את אדון החכמה | `אֲרוֹמִמְךָ יְהוָה כִּי דִלִּיתָנִי` (תהלים ל:ב) | equivalent | The thanksgiving opens with the praise verb; *ludlul* is the vow that closes Akkadian incantation prayers (Lenzi ch. 8). |
 | תהלים ל:ב | Ludlul V 21 | *pī ḫādîya ūʾa umalli* | את פי השמח לאידי – "אוי!" מילא | `וְלֹא-שִׂמַּחְתָּ אֹיְבַי לִי` (תהלים ל:ב) | equivalent | Reversal of II 117 (`שמע השמח לאידי – האירו פניו`); *ḫādû* = `השמח לאידי` (renderings §3). |
-| תהלים ל:ב | Theodicy 4 | *kâša ludlulka* | אותך אהללך | `אֲרוֹמִמְךָ יְהוָה כִּי דִלִּיתָנִי` (תהלים ל:ב) | [divergence] | The praised one is the friend; *ludlul* is Ludlul's first word. |
+| תהלים ל:ב | Theodicy 4 | *kâša ludlulka* | אותך אפארך | `אֲרוֹמִמְךָ יְהוָה כִּי דִלִּיתָנִי` (תהלים ל:ב) | [divergence] | The praised one is the friend; *ludlul* is Ludlul's first word. |
 | תהלים ל:ג | Ludlul III 50 | *murṣī arḫiš iggamir* | חוליי מהרה נגמר | `שִׁוַּעְתִּי אֵלֶיךָ וַתִּרְפָּאֵנִי` (תהלים ל:ג) | equivalent | The healing told by the one who gives thanks; Isa 38:9. |
 | תהלים ל:ד | Ludlul V 1 | *bēlī upaššiḫanni* | [אדו]ני הרגיעני | `יְהוָה הֶעֱלִיתָ מִן-שְׁאוֹל נַפְשִׁי` (תהלים ל:ד) | equivalent | The thanksgiving of one brought up from death; four two-word lines "my lord – me" (Lenzi). |
 | תהלים ל:ד | Ludlul V 4 | *uballiṭanni* | החייני | `חִיִּיתַנִי` (תהלים ל:ד) | equivalent | *bulluṭu* = `החיה`; Marduk *muballiṭ mīti* "who revives the dead". |
@@ -418,8 +418,8 @@ Written by the corpus coordinator (2026-10-19) from the seven per-file indexes a
 | תהלים לב:ו | Šamaš Hymn 69 | ina edê tušēzib | מן הזרם הצלת | `רַק לְשֵׁטֶף מַיִם רַבִּים אֵלָיו לֹא יַגִּיעוּ` (תהלים לב:ו) | [equivalent] |  |
 | תהלים לב:ט | Ludlul I 70 | *appatiš ītešʾū* | כבמתג בלמו | `בְּמֶתֶג-וָרֶסֶן עֶדְיוֹ לִבְלוֹם` (תהלים לב:ט) | equivalent | Ps 39:2 `אֶשְׁמְרָה לְפִי מַחְסוֹם`. |
 | תהלים לב:ט | Ludlul V 15 | *iddi napsama* | השליך רסן | `בְּמֶתֶג-וָרֶסֶן עֶדְיוֹ לִבְלוֹם` (תהלים לב:ט) | equivalent | The commentary: *napsamu* = "bit for a horse's mouth"; Ps 32:9's pair `מֶתֶג` / `רֶסֶן` = Ludlul I 70 (*appatu* `מתג`, the sufferer's mouth bridled) and V 15 (the lion's mouth muzzled). |
-| תהלים לד:ד | Ludlul III 57 | *narbîšu ana dulluli* | [את גדולתו] להלל | `גַּדְּלוּ לַיהוָה אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו` (תהלים לד:ד) | equivalent | Praise of the god's greatness after deliverance; *dalālu* is the poem's first verb (I 1 *ludlul*). |
-| תהלים לד:ד | Šamaš Hymn 166 | tarbâtīka idallalā | את גודלך מהללות | `גַּדְּלוּ לַיהוָה אִתִּי` (תהלים לד:ד) | [equivalent] |  |
+| תהלים לד:ד | Ludlul III 57 | *narbîšu ana dulluli* | [את גדולתו] לפאר | `גַּדְּלוּ לַיהוָה אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו` (תהלים לד:ד) | equivalent | Praise of the god's greatness after deliverance; *dalālu* is the poem's first verb (I 1 *ludlul*). |
+| תהלים לד:ד | Šamaš Hymn 166 | tarbâtīka idallalā | את גודלך מפארות | `גַּדְּלוּ לַיהוָה אִתִּי` (תהלים לד:ד) | [equivalent] |  |
 | תהלים לד:ד | Šamaš Hymn 190 | lišarbû zikirka | יגדילו את זכרך | `גַּדְּלוּ לַיהוָה אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו` (תהלים לד:ד) | [divergence] | In the psalm men call others to magnify the name; here greater gods magnify Šamaš. |
 | תהלים לד:ו | Ludlul IV a+17 | *ušpardi* | הנהיר | `הִבִּיטוּ אֵלָיו וְנָהָרוּ` (תהלים לד:ו) | equivalent | *napardû* = `נהר` "beam" (II 118, IV a+30, V 60). |
 | תהלים לד:ו | Ludlul IV a+30 | *ittapardi* | נָהַר | `הִבִּיטוּ אֵלָיו וְנָהָרוּ` (תהלים לד:ו) | equivalent |  |
@@ -461,7 +461,7 @@ Written by the corpus coordinator (2026-10-19) from the seven per-file indexes a
 | תהלים לט:ה | Ludlul II 111 | *u adanni () silʾitīya bārû ul iddin* | ואת מועד מחלתי – הבוחן לא נתן. | `הוֹדִיעֵנִי יְהוָה קִצִּי וּמִדַּת יָמַי מַה-הִיא` (תהלים לט:ה) | equivalent | Asking to know one's end, the 'measure of days' ↔ the diviner gave no *adannu* (time limit). |
 | תהלים מ:ג | Ludlul IV a+6 | *dunnī …* | [ע]וצמתי … | `וַיָּקֶם עַל-סֶלַע רַגְלַי; כּוֹנֵן אֲשֻׁרָי` (תהלים מ:ג) | equivalent | Only if Lenzi's conjecture *dun⟨ni⟩ qaqqaru* "firm ground" is right; rests on an emendation. |
 | תהלים מ:ג | Ludlul V 5 | *ina ḫašti* | מן השחת | `וַיַּעֲלֵנִי מִבּוֹר שָׁאוֹן` (תהלים מ:ג) | equivalent |  |
-| תהלים מ:ד | Ludlul V 119 | *ina zamāri ša Šubši-mešrê-Šakkan idlulā dalīlīšu* | [ב]זמ[ר ש]ל שׁוּבְּשִׁי־מֶשְׁרֵא־שַׁכַּן – הִלְּלוּ את הִילּוּלָ[יו?] | `וַיִּתֵּן בְּפִי שִׁיר חָדָשׁ תְּהִלָּה לֵאלֹהֵינוּ: יִרְאוּ רַבִּים וְיִירָאוּ` (תהלים מ:ד) | equivalent | The poem names itself as the song through which the people praise. |
+| תהלים מ:ד | Ludlul V 119 | *ina zamāri ša Šubši-mešrê-Šakkan idlulā dalīlīšu* | [ב]זמ[ר ש]ל שׁוּבְּשִׁי־מֶשְׁרֵא־שַׁכַּן – פארו את תפארת[ו?] | `וַיִּתֵּן בְּפִי שִׁיר חָדָשׁ תְּהִלָּה לֵאלֹהֵינוּ: יִרְאוּ רַבִּים וְיִירָאוּ` (תהלים מ:ד) | equivalent | The poem names itself as the song through which the people praise. |
 | תהלים מ:ד | Ludlul V 69 | *īmurū-ma mārū Bābili kī uballaṭu bēlu* | ראו ⟨בני⟩ בבל איך מחיה [האד]ון | `וַיִּתֵּן בְּפִי שִׁיר חָדָשׁ תְּהִלָּה לֵאלֹהֵינוּ: יִרְאוּ רַבִּים וְיִירָאוּ` (תהלים מ:ד) | equivalent | The many see and are moved: the individual rescue becomes public testimony (and the "new song", V 119). |
 | תהלים מ:ו | Theodicy 178 | *imṣi ittīka* | [נערך] עמך | `אֵין עֲרֹךְ אֵלֶיךָ` (תהלים מ:ו) | [equivalent] | The verb is mostly broken. |
 | תהלים מ:ז | Ludlul III 85 | *iptete nešmâya* | פתח את שמיעתי | `אָזְנַיִם כָּרִיתָ לִּי` (תהלים מ:ז) | equivalent | The god opens the ears. |
@@ -471,7 +471,7 @@ Written by the corpus coordinator (2026-10-19) from the seven per-file indexes a
 | תהלים מא:ו | Ludlul II 117 | *išmē-ma hādûʾa immerū pānūšu* | שמע השמח לאידי – האירו פניו; | `אוֹיְבַי יֹאמְרוּ רַע לִי; מָתַי יָמוּת וְאָבַד שְׁמוֹ` (תהלים מא:ו) | equivalent | Enemies waiting for the sick man's death. |
 | תהלים מא:י | Ludlul I 88 | same | same | `גַּם-אִישׁ שְׁלוֹמִי אֲשֶׁר-בָּטַחְתִּי בוֹ אוֹכֵל לַחְמִי הִגְדִּיל עָלַי עָקֵב` (תהלים מא:י) | equivalent | The trusted friend who betrays (psalm of the sickbed). |
 | תהלים מא:יב | Ludlul V 21 | *ḫādîya* | השמח לאידי | `כִּי לֹא-יָרִיעַ אֹיְבִי עָלָי` (תהלים מא:יב) | equivalent | The sickbed psalm. |
-| תהלים מב:ד | Ludlul I 105 | *ūmu šutānuḫu mūšu gerrānu* | היום – היאנחות, הלילה – מספד | `הָיְתָה-לִּי דִמְעָתִי לֶחֶם יוֹמָם וָלָיְלָה` (תהלים מב:ד) | equivalent | Ps 6:7; Ps 31:11 `וּשְׁנוֹתַי בַּאֲנָחָה` [*anāḫu* = אנח cognate]; Job 3:24. |
+| תהלים מב:ד | Ludlul I 105 | *ūmu šutānuḫu mūšu gerrānu* | היום – היאנחות, הלילה – תַּאֲנִיָּה | `הָיְתָה-לִּי דִמְעָתִי לֶחֶם יוֹמָם וָלָיְלָה` (תהלים מב:ד) | equivalent | Ps 6:7; Ps 31:11 `וּשְׁנוֹתַי בַּאֲנָחָה` [*anāḫu* = אנח cognate]; Job 3:24. |
 | תהלים מב:ה | Ludlul II 26 | *ūm rēdûti () ištari nēmelu tattūru* | יום ההליכה אחר הָאֵלָה – רווח ויתרון. | `כִּי אֶעֱבֹר בַּסָּךְ אֶדַּדֵּם עַד-בֵּית אֱלֹהִים: בְּקוֹל-רִנָּה וְתוֹדָה; הָמוֹן חוֹגֵג` (תהלים מב:ה) | equivalent | The festal procession to the god's house (*rēdûtu* 'following' the goddess) with joyful song (*nigûtu*, 28). |
 | תהלים מב:ה | Ludlul II 28 | *u nigûtašu ana damiqti šumma* | ורינתו – לחסד היא, אכן. | `בְּקוֹל-רִנָּה וְתוֹדָה; הָמוֹן חוֹגֵג` (תהלים מב:ה) | equivalent | Festal joy (*nigûtu* `רינה`). |
 | תהלים מב:ח | Ludlul II 56 | *itti mê mīli šuruppû inūš* | עם מי הגאות – נעה הצינה, | `כָּל-מִשְׁבָּרֶיךָ וְגַלֶּיךָ עָלַי עָבָרוּ` (תהלים מב:ח) | equivalent | The god's waters passing over the supplicant ↔ the chill that came 'with the waters of the flood' (56). |
@@ -650,7 +650,7 @@ Written by the corpus coordinator (2026-10-19) from the seven per-file indexes a
 | תהלים קטז:טז | Ludlul V 3 | *upaṭṭiranni* | פטרני | `פִּתַּחְתָּ לְמוֹסֵרָי` (תהלים קטז:טז) | equivalent | *paṭāru* "release" of bond, sin, illness (renderings §2). |
 | תהלים קטז:יז | Ludlul V 57 | *upalliq … uṭṭabbiḫ* | שחטתי … טבחתי | `לְךָ-אֶזְבַּח זֶבַח תּוֹדָה` (תהלים קטז:יז) | equivalent | The thanksgiving sacrifice of one saved from death; also Ps 107:22, Jonah 2:10. |
 | תהלים קטז:יח | Ludlul V 69 | *īmurū-ma mārū Bābili* | ראו בני בבל | `נְדָרַי לַיהוָה אֲשַׁלֵּם; נֶגְדָה-נָּא לְכָל-עַמּוֹ` (תהלים קטז:יח) | equivalent | Thanksgiving before the whole people. |
-| תהלים קיז:א | Ludlul V 82 | *apâtu … dullā* | הרבים … הללו | `הַלְלוּ אֶת-יְהוָה כָּל-גּוֹיִם; שַׁבְּחוּהוּ כָּל-הָאֻמִּים` (תהלים קיז:א) | equivalent |  |
+| תהלים קיז:א | Ludlul V 82 | *apâtu … dullā* | הרבים … פארו | `הַלְלוּ אֶת-יְהוָה כָּל-גּוֹיִם; שַׁבְּחוּהוּ כָּל-הָאֻמִּים` (תהלים קיז:א) | equivalent |  |
 | תהלים קיח:ה | Ludlul IV c+16 | *Kunuš-kadru* (commentary: "narrow street") | כּוּנוּשׁ־כַּדְרוּ | `מִן-הַמֵּצַר קָרָאתִי יָּהּ; עָנָנִי בַמֶּרְחָב יָהּ` (תהלים קיח:ה) | divergence | The psalms lead the freed "into the broad place"; Ludlul's freed man walks a "narrow street" (the commentary) – in freedom. |
 | תהלים קיח:יז | Ludlul V 45 | *balāṭa* | חיים | `לֹא-אָמוּת כִּי-אֶחְיֶה` (תהלים קיח:יז) | equivalent |  |
 | תהלים קיח:יז | Ludlul V 75 | *ina qabri bulluṭa* | מן הקבר להחיות | `לֹא-אָמוּת כִּי-אֶחְיֶה; וַאֲסַפֵּר מַעֲשֵׂי יָהּ` (תהלים קיח:יז) | equivalent | Living in order to tell (cf. V 69–70). |
@@ -709,7 +709,7 @@ Written by the corpus coordinator (2026-10-19) from the seven per-file indexes a
 | תהלים קמז:טז | Šamaš Hymn 181 | mušalbiš kūṣi ḫalpî šurīpi šalgi | מלביש קור, קיפאון, קרח ושלג | `הַנֹּתֵן שֶׁלֶג כַּצָּמֶר; כְּפוֹר כָּאֵפֶר יְפַזֵּר. מַשְׁלִיךְ קַרְחוֹ כְפִתִּים; לִפְנֵי קָרָתוֹ מִי יַעֲמֹד` (תהלים קמז:טז) | [cognate] | The same list (snow, frost, ice, cold) and the god who brings it; *šalgu* / `שֶׁלֶג`. |
 | תהלים קמח:א | Ludlul V 77 | *ēma šaknat erṣetu ritpāšū šamāmū* | באשר שׂוּמָה הארץ – רחבים השמים | `הַלְלוּ אֶת-יְהוָה מִן-הַשָּׁמַיִם; הַלְלוּהוּ בַּמְּרוֹמִים` (תהלים קמח:א) | equivalent | Cosmic praise: two tercets, the world (77–79) and its inhabitants (80–82). |
 | תהלים קמח:ח | Ludlul V 79 | *mû illakū iziqqu šāru* | המים הולכים, נושבת הרוח | `אֵשׁ וּבָרָד שֶׁלֶג וְקִיטוֹר; רוּחַ סְעָרָה עֹשָׂה דְבָרוֹ` (תהלים קמח:ח) | equivalent | Fire (78 *Girra*), wind and water among the elements of praise. |
-| תהלים קנ:ו | Ludlul V 82 | *apâtu mala bašâ Marduk dullā* | [הרב]ים, כל אשר ישנם – את מרדוך הַלְּלוּ! | `כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ: הַלְלוּ-יָהּ` (תהלים קנ:ו) | equivalent | Universal call to praise; *dalālu* = `הלל` (I 1 `אֲהַלֵּל`: the private vow becomes the call to humankind); not cognate. |
+| תהלים קנ:ו | Ludlul V 82 | *apâtu mala bašâ Marduk dullā* | [הרב]ים, כל אשר ישנם – את מרדוך פארו! | `כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ: הַלְלוּ-יָהּ` (תהלים קנ:ו) | equivalent | Universal call to praise; *dalālu* = `הלל` (I 1 `אֲהַלֵּל`: the private vow becomes the call to humankind); not cognate. |
 | תהלים קנ:ו | Šuruppag 280 | *ki-sikil {d}nisaba za₃-mi₂* | לעלמה נִיסָבָּה – תהילה! | `כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ:            הַלְלוּ-יָהּ` (תהלים קנ:ו) | [divergence] | a book closed in praise: of the goddess of writing (the scribe's signature), not of the god of the text. |
 
 ### Qohelet
@@ -1008,7 +1008,7 @@ Written by the corpus coordinator (2026-10-19) from the seven per-file indexes a
 | ישעיהו יד:ל | Theodicy 19 | *bukur enši* | בכור החלש | `וְרָעוּ בְּכוֹרֵי דַלִּים` (ישעיהו יד:ל) | [cognate] | **The same phrase**, "the firstborn (= sons) of the poor", and in both thriving. |
 | ישעיהו טז:י | Ludlul I 101 | *ušassû alāla* | הרחיקו את ההידד | `הֵידָד הִשְׁבַּתִּי` (ישעיהו טז:י) | equivalent | The work cry silenced in the fields; Jer 48:33. |
 | ישעיהו יט:ח | Šamaš Hymn 140 | bāʾiru | הדייג | `וְאָנוּ הַדַּיָּגִים … וּפֹרְשֵׂי מִכְמֹרֶת עַל פְּנֵי מַיִם אֻמְלָלוּ` (ישעיהו יט:ח) | [equivalent] |  |
-| ישעיהו יט:ח | Šamaš Hymn 87 | kamārū | מִכְמֹרֶת | `וּפֹרְשֵׂי מִכְמֹרֶת עַל פְּנֵי מַיִם` (ישעיהו יט:ח) | [cognate] | *kamāru* / `מִכְמֹרֶת` (also `כְּתוֹא מִכְמָר`, Isa 51:20). |
+| ישעיהו יט:ח | Šamaš Hymn 87 | kamārū | מִכְמוֹרֶת | `וּפֹרְשֵׂי מִכְמֹרֶת עַל פְּנֵי מַיִם` (ישעיהו יט:ח) | [cognate] | *kamāru* / `מִכְמֹרֶת` (also `כְּתוֹא מִכְמָר`, Isa 51:20). |
 | ישעיהו כב:יג | Theodicy 136 | *bēra lunakkis … akla* | עגל אכרות … לחם | `הָרֹג בָּקָר וְשָׁחֹט צֹאן אָכֹל בָּשָׂר` (ישעיהו כב:יג) | [equivalent] | Slaughter for one's own eating, not for the god. |
 | ישעיהו כד:ה | Theodicy 81 | *tētiq* | חלפת | `כִּי עָבְרוּ תוֹרֹת חָלְפוּ חֹק` (ישעיהו כד:ה) | [equivalent] | *etēqu* = `חלף` with statutes. |
 | ישעיהו כה:ח | Ludlul V 20 | *qubê ušaklu* | מקינה כלא | `וּמָחָה אֲדֹנָי יְהוִה דִּמְעָה מֵעַל כָּל פָּנִים` (ישעיהו כה:ח) | equivalent |  |
@@ -1040,7 +1040,7 @@ Written by the corpus coordinator (2026-10-19) from the seven per-file indexes a
 | ישעיהו לח:יז | Ludlul III 58 | *imēš arnī* | בזה את עווני | `כִּי הִשְׁלַכְתָּ אַחֲרֵי גֵוְךָ כָּל חֲטָאָי` (ישעיהו לח:יז) | equivalent | Hezekiah, healed of his sickness. |
 | ישעיהו לח:יז | Ludlul V 48 | *eʾiltī ippaṭir* | חובי נפטר | `כִּי הִשְׁלַכְתָּ אַחֲרֵי גֵוְךָ כָּל חֲטָאָי` (ישעיהו לח:יז) | equivalent | Hezekiah's thanksgiving after illness. |
 | ישעיהו לח:יז | Ludlul V 5 | *ina ḫašti* | מן השחת | `וְאַתָּה חָשַׁקְתָּ נַפְשִׁי מִשַּׁחַת בְּלִי` (ישעיהו לח:יז) | equivalent | Hezekiah, the sick king healed; also Ps 30:4 `מִיָּרְדִי-בוֹר`. |
-| ישעיהו לח:כ | Ludlul V 119 | *zamāri … idlulā* | זמר … הללו | `וּנְגִנוֹתַי נְנַגֵּן כָּל יְמֵי חַיֵּינוּ עַל בֵּית יְהוָה` (ישעיהו לח:כ) | equivalent | Hezekiah's song after healing ends in the temple; also `חַי חַי הוּא יוֹדֶךָ כָּמוֹנִי הַיּוֹם` (ישעיהו לח:יט). |
+| ישעיהו לח:כ | Ludlul V 119 | *zamāri … idlulā* | זמר … פארו | `וּנְגִנוֹתַי נְנַגֵּן כָּל יְמֵי חַיֵּינוּ עַל בֵּית יְהוָה` (ישעיהו לח:כ) | equivalent | Hezekiah's song after healing ends in the temple; also `חַי חַי הוּא יוֹדֶךָ כָּמוֹנִי הַיּוֹם` (ישעיהו לח:יט). |
 | ישעיהו לח:כא | Ludlul III 44 | *ubilla ṣimda* | הבאתי [תחבושת] | `יִשְׂאוּ דְּבֶלֶת תְּאֵנִים וְיִמְרְחוּ עַל הַשְּׁחִין וְיֶחִי` (ישעיהו לח:כא) | equivalent | A healer sends a dressing to the sick man; in Hezekiah's thanksgiving (Isa 38), which has the same sequence: sickness, prayer, sign (38:7), sins cast away (38:17), healing. |
 | ישעיהו מ:ז | Ludlul II 39 | *ša ina amšat ibluṭu imūt ūdiš* | אשר אתמול חי – מת היום; | `יָבֵשׁ חָצִיר נָבֵל צִיץ` (ישעיהו מ:ז) | equivalent | Transience. |
 | ישעיהו מ:יב | Šamaš Hymn 22 | šaqlāta | שוקל אתה | `וְשָׁקַל בַּפֶּלֶס הָרִים` (ישעיהו מ:יב) | [cognate] | The god weighing the world; prepares the merchants' scales (107–110). |
@@ -1575,7 +1575,7 @@ Written by the corpus coordinator (2026-10-19) from the seven per-file indexes a
 | מיכה ז:יט | Ludlul III 59 | *ukkiš ennettī* | הצעיד את עונשי | `יִכְבֹּשׁ עֲוֹנֹתֵינוּ וְתַשְׁלִיךְ בִּמְצֻלוֹת יָם כָּל חַטֹּאותָם` (מיכה ז:יט) | equivalent | Sins removed to a far place (the sea; in Ludlul the wind, III 61). |
 | נחום א:ו | Ludlul I 68 | *nanḫuzū išātiš* | ניצתו כאש | `חֲמָתוֹ נִתְּכָה כָאֵשׁ` (נחום א:ו) | equivalent |  |
 | נחום א:ו | Ludlul I 7 | *uzzuššu lā maḫār … rūbšu* | בזעמו – אין עומד מולו … חרונו | `לִפְנֵי זַעְמוֹ מִי יַעֲמוֹד וּמִי יָקוּם בַּחֲרוֹן אַפּוֹ` (נחום א:ו) | equivalent | *uzzu* = `זעם`, *rūbu* = `חרון`, *lā maḫār* = "who can stand": the same three elements in one verse. |
-| חבקוק א:טו | Šamaš Hymn 87 | kamārū | מִכְמֹרֶת | `וְיַאַסְפֵהוּ בְּמִכְמַרְתּוֹ` (חבקוק א:טו) | [cognate] |  |
+| חבקוק א:טו | Šamaš Hymn 87 | kamārū | מִכְמוֹרֶת | `וְיַאַסְפֵהוּ בְּמִכְמַרְתּוֹ` (חבקוק א:טו) | [cognate] |  |
 | חבקוק ג:א | Ludlul IV c+14 | *šigû* | שִׁיגּ[וּ] | `תְּפִלָּה לַחֲבַקּוּק הַנָּבִיא עַל שִׁגְיֹנוֹת` (חבקוק ג:א) | cognate? | As above; Hab 3 is a "prayer". |
 | חבקוק ג:ג | Šamaš Hymn 19 | īrima šalummatka | עטה הודך | `כִּסָּה שָׁמַיִם הוֹדוֹ` (חבקוק ג:ג) | [equivalent] | The god's splendour covers. |
 | חבקוק ג:ג | Šamaš Hymn 20 | namrirrūka imlû | נגוהותיך מילאו | `וּתְהִלָּתוֹ מָלְאָה הָאָרֶץ` (חבקוק ג:ג) | [equivalent] | Hab 3 is the closest biblical sun-theophany (19, 20, 28). |
@@ -1600,7 +1600,7 @@ Written by the corpus coordinator (2026-10-19) from the seven per-file indexes a
 | מלאכי ג:טז | Theodicy 78 | *ša tuštaddinu* | אשר נדברת | `אָז נִדְבְּרוּ יִרְאֵי יְהוָה אִישׁ אֶל רֵעֵהוּ` (מלאכי ג:טז) | [equivalent] | The friends "speak together", in Malachi right after the complaint of 3:14–15. |
 | מלאכי ג:כ | Šamaš Hymn 70 | kappa | כנף | `שֶׁמֶשׁ צְדָקָה וּמַרְפֵּא בִּכְנָפֶיהָ` (מלאכי ג:כ) | [equivalent] | The winged sun disk. |
 | שיר השירים ג:ד | Theodicy 10 | *agarinnu* | ההורה | `וְאֶל חֶדֶר הוֹרָתִי` (שיר השירים ג:ד) | [equivalent] | A rare poetic word for "mother" for a rare one. |
-| שיר השירים ד:יב | Ludlul II 86 | *libbī edil pehi mašqûʾa* | לבי – נעול, שוקתי – חסומה, | `גַּן נָעוּל אֲחֹתִי כַלָּה; גַּל נָעוּל מַעְיָן חָתוּם` (שיר השירים ד:יב) | divergence | Locked and sealed (*edil … peḫi*) – in the Song the beloved's praise, here the body's affliction (*libbī* or Lenzi's *bābī* 'my gate'). |
+| שיר השירים ד:יב | Ludlul II 86 | *libbī edil pehi mašqûʾa* | לבי – נעול, מַשְׁקִי – חסום, | `גַּן נָעוּל אֲחֹתִי כַלָּה; גַּל נָעוּל מַעְיָן חָתוּם` (שיר השירים ד:יב) | divergence | Locked and sealed (*edil … peḫi*) – in the Song the beloved's praise, here the body's affliction (*libbī* or Lenzi's *bābī* 'my gate'). |
 | שיר השירים ח:ב | Counsels A+29 | *warû* | נהג | `אֶנְהָגְךָ אֲבִיאֲךָ אֶל בֵּית אִמִּי` (שיר השירים ח:ב) | [equivalent] | Leading a woman into the house. |
 | שיר השירים ח:ח | Counsels A+24 | *ana ili zakrat* | לאל מדוברת | `מַה נַּעֲשֶׂה לַאֲחֹתֵנוּ בַּיּוֹם שֶׁיְּדֻבַּר בָּהּ` (שיר השירים ח:ח) | [equivalent] | "Spoken for" = betrothed (*zakāru* stative). |
 | רות ב:ג | Šuruppag 132 | *geme₂-gin₇ de₅-ga-ab* | כאָמָה לקוט | `וַתְּלַקֵּט בַּשָּׂדֶה אַחֲרֵי הַקֹּצְרִים` (רות ב:ג) | [equivalent] | the gleaner; the humble work of harvest. |
