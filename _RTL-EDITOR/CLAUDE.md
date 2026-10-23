@@ -35,7 +35,7 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - The file tree keeps up with the disk: a file or folder created or deleted by anything else - git,
    ClaudeCode, the Finder - shows up within a second, and a tab whose file was deleted turns into
    the same "file not found" tab a reload would give it
-- Every Markdown file of the tree is kept as a readable HTML page under `../docs/_HTML-FROM-MD/` (published by GitHub Pages: `../docs` is a symlink to a worktree of the branch `auto-docs` - see `../scripts/ensure-docs-worktree.sh`, which `src/server.ts` runs at startup; `../scripts/commit-auto-docs.sh` commits and pushes it),
+- Every Markdown file of the tree (but those its layout says `output: "none"` of) is kept as a readable HTML page under `../docs/_HTML-FROM-MD/` (published by GitHub Pages: `../docs` is a symlink to a worktree of the branch `auto-docs` - see `../scripts/ensure-docs-worktree.sh`, which `src/server.ts` runs at startup; `../scripts/commit-auto-docs.sh` commits and pushes it),
    re-rendered within a second of any change, with an `index.html` in every folder - see "The HTML mirror" below
 - `<כלול-בהדפסה מקור="..." מ="..." עד="..." כותרות="+1">` embeds another Markdown file into this one -
    on the page only, never on disk. See "Embedding one file in another" below
@@ -64,6 +64,9 @@ bun run build
 
 # Bring ../docs/_HTML-FROM-MD up to date once, without the server
 bun run rebuild-whole-html-folder
+
+# Lay out a translation's printed rows (see "Numbered lines" below)
+bun run verse-layout status
 ```
 
 ## Project Structure
@@ -75,9 +78,20 @@ bun run rebuild-whole-html-folder
 - `src/html/md-to-html.ts` - A Markdown file as a readable, self-contained HTML page
 - `src/html/html-mirror.ts` - Which file's page goes where, and keeping `../docs/_HTML-FROM-MD` up to date
 - `src/html/includes.ts` - `<כלול-בהדפסה>`: one Markdown file embedded into another, and the errors of it
+- `src/html/verse-runs.ts` - Numbered lines (`**1** ...`, `**2** ...`) run together on the page
+- `src/html/verse-layout.ts` - The printed rows of numbered lines: the lines' names, their marks, the proposal
+- `src/html/layout-schema.ts` - The contract of a layout module (`.layout.ts`, `<name>.layout.ts`): what it is given, and what it returns
+- `src/html/layout-module.ts` - A file's chain of layout modules loaded, checked, run, merged, and put into its text
+- `src/html/layout-marks.ts` - The marks a layout puts into a file's text for the renderer
+- `src/html/text-measure.ts` - Widths of text on the printed page, from the font files (fontkit)
+- `fonts/` - The pages' fonts: David CLM (Culmus) and GNU FreeSerif, with their licences
 - `src/html/folder-index.ts` - The `index.html` of every folder of `../docs/_HTML-FROM-MD`
 - `src/html/pdf-mirror.ts` - Every page of the HTML mirror printed to `../docs/_PDF-FROM-MD`, by Playwright's Chromium
 - `src/rebuild-whole-html-folder.ts` - `bun run rebuild-whole-html-folder`
+- `layout-guidelines/` - What a layout session (a Claude session deciding how pages are laid out) works with:
+   its prompt, `claude-layout-guidelines.md`, and its tools. The code that *applies* a layout is in `src/html/`
+- `layout-guidelines/verse-layout-tool.ts` - `bun run verse-layout`: measures, proposes and checks a translation's rows
+- `layout-guidelines/layout-status.ts` - `bun run layout-status`: the files whose layout is missing, obsolete, unread or broken
 - `src/write-file-safe.ts` - Atomic file writes, shared by the POST handler and the mirror
 - `src/line-endings.ts` - A CRLF file stays CRLF over a save
 - `public/` - Static frontend assets
@@ -99,6 +113,8 @@ bun run rebuild-whole-html-folder
 - `tests/line-endings.test.ts` - Unit tests for `line-endings.ts` (`bun test`)
 - `tests/md-to-html.test.ts` / `tests/html-mirror.test.ts` / `tests/includes.test.ts` - Unit tests for
    the HTML mirror (`bun test`)
+- `tests/verse-runs.test.ts` / `tests/verse-layout.test.ts` / `tests/layout-module.test.ts` - Unit tests for `verse-runs.ts` /
+   `verse-layout.ts` / the layout module, its measuring and its marks (`bun test`)
 - `tests/pdf-mirror.test.ts` - Unit tests for the PDF mirror - these print real PDFs, in Chromium
 
 ## API Endpoin
@@ -595,6 +611,7 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
   `GENERATED FILE` header the translation tools write. Any other comment is shown as text, as is one
   inside a code fence. An LTR page keeps them all.
 - `*` / `**` inside inline code are bold, stars removed.
+- **Numbered lines run together.** See "Numbered lines" below.
 - `` `a`\`b` `` is two code spans with a backslash between them - see "A backslash between code spans".
 - **An index** goes where the file's `<תוכן-העניינים>` line stands, and nowhere else (`renderIndexes()`):
   a collapsible `<nav class="index">` of the headings of `#`..`###` **below** it, titled
@@ -673,20 +690,10 @@ new and not yet added (`git ls-files --cached --others --exclude-standard`) - an
 one; a folder with none gets no index. The pages of ignored files are still made, just not listed. When
 git cannot be asked (not a work tree) everything is listed.
 
-**Technical files.** A `.printignore`, in any folder, is read exactly like a `.gitignore` - git itself
-reads it (`--exclude-per-directory=.printignore`) - and the files it matches are *technical*: listed
-like any other, but as `li.technical`, hidden until the toggle at the top of every index,
-**הצג קבצים טכניים**, is ticked - a box stuck to the top of the viewport, however far the list is scrolled. A folder whose pages are all technical is technical itself.
-No index shows how many pages a folder holds.
-- **The toggle is the URL's hash**, `#show-technical` - off by default, so a link can be shared as it is
-  seen. Ticking it `pushState`s the hash, and `popstate`/`hashchange` put the page back in step, which
-  is what makes Back/Forward walk through the toggles.
-- **Every link of the index carries the hash on**, rewritten in place whenever the toggle moves - so
-  the next folder opens as this one was left, and so does a link copied or opened in a new tab.
-- With JavaScript off the technical files stay hidden: the hiding is CSS on `body:not(.show-technical)`.
-
-Neither a `.gitignore` nor a `.printignore` is a Markdown file, so an edit to one reaches the indexes
-through the 15 s sweep.
+**A file its layout gives no output** (`output: "none"` - see "A file's layout") gets no page and no PDF, and so
+is in no index: the editor's own folders (`_RTL-EDITOR/` and the like), by the root's `.layout.ts`. That replaced a
+`.printignore`, whose *technical* files were listed hidden behind a toggle. No index shows how many pages a folder
+holds. A `.gitignore` is no Markdown file, so an edit to one reaches the indexes through the 15 s sweep.
 
 **`docs/index.html`** - the page GitHub Pages opens with - is the index of `docs/` itself (`SITE_INDEX_PATH`,
 `siteIndexPage()`): the two mirrors, each linking to its own index, and any other page
@@ -709,6 +716,136 @@ holds a page is removed, deepest first - which is also what lets the folder itse
 A page is written after its file is read, so it ends up the newer of the two - which would hide an
 edit made *during* the render. `syncFile()` therefore re-stats the file afterwards and renders again
 if it moved.
+
+### Numbered lines
+
+A translation is written a tablet line per file line, `**1** כאשר אָנוּ הנעלה,`, and a tablet line is
+often two words - a page of them is a narrow column. So on the page (`verse-runs.ts`) consecutive
+numbered lines flow together as far as the width allows, each line kept whole, a thin grey bar between two
+lines sharing a row, and only a row's first number shown, in a margin of its own.
+
+- **The structure.** A paragraph's run is a `.verse-run` (the margin - one width for the whole paragraph,
+  made for its widest label, so its runs line up) of `.verse-row`s (blocks) of `.verse-line`s. Without a
+  layout a run is one row, and the browser decides where it wraps.
+- **Which lines.** A line opening with a bold label - a digit, no Hebrew or Arabic letter but for one right
+  after its last digit, at most 24 characters, then a space - within one paragraph. Two lines join when
+  the next label is the line right after (`labelPieces()`, `continuesLabel()`): the same but for **one**
+  number one higher (`o iii 12` → `o iii 13`); a manuscript's extra line, a Hebrew or lowercase Latin
+  letter after the number (`363` → `363א` → `363ב` → `364`, `E 78` → `E 78a` → `E 79`); a range, standing
+  for its first and last line (`65` → `66–67` → `68`). A new column (`A.i.30` → `A.ii.1`) or a gap breaks.
+  A run of one is left as it was.
+- **Where the rows break is the browser's to know.** A run is `.verse-run` of `.verse-line`s, and the page
+  carries `VERSE_RUNS_SCRIPT` (only a page with a run): it makes the lines `inline-block`s (`.flowing`),
+  and marks `.row-start` / `.row-end` by where each landed. That changes only visibility - the number is
+  absolutely positioned in the margin, the separator keeps its width - so one pass is enough. It runs again
+  on resize. Without JavaScript every line has a row of its own, its number in the margin.
+- **On paper** the rows are different, so on `beforeprint` the script lays the page out at the sheet's
+  width (`html.measuring-print`, from the same constants as `@page`), measures, and lets go. Printing to
+  PDF sends no `beforeprint`, so `pdf-mirror.ts` dispatches one, once the fonts are in.
+
+**A file's own rows.** Wrapping where the width runs out breaks mid-phrase, so a file's layout may say where
+its rows start: the `rowStart` of its layout (see "A file's layout" below) - a list of the lines
+that start a row, by label, `"1#2"` being the second line labelled `1` (`labeledLines()`), or a function asked
+about each line. Every other line continues the row before it, unless the numbering breaks there. It is decided
+by a layout session (`../scripts/claude-into-rtl-file--layout-guidelines.sh`, whose prompt is
+`layout-guidelines/claude-layout-guidelines.md`) with `layout-guidelines/verse-layout-tool.ts`.
+
+- **It reaches the page through the text.** `layoutFor()` puts `ROW_MARK` (U+E001) before every line that starts a
+  row, wherever a file is read - its own page, and a `הדפסה/` book embedding it - and `verseRunsRule()` turns each
+  mark into a new `.verse-row`, and drops it. A mark with no run to act on is dropped as well; one already in a
+  file is stripped before the layout is applied. A name that matches no line is ignored: a stale layout lays out
+  less, never wrongly.
+- **A row still wraps on a screen narrower than the sheet**, the way any run does - between lines, number
+  at the row's start. The layout is fitted to the PDF only.
+- **The tool measures what the PDF gets.** It renders the file with `RenderOptions.verseSourceLines` (every
+  line carries `data-source-line`, so it can be named) and the fonts embedded, loads it in Playwright's Chromium,
+  sends `beforeprint` and measures under `measuring-print` - the same path as `pdf-mirror.ts`. A row's fit is then
+  arithmetic on the lines' widths and the gap between them; whether a row wraps is read off the page. Checked
+  against a real PDF's text positions (`pdftotext -bbox`) for Hammurabi: no row the tool passed wraps on paper.
+- **The tool never writes a module.** Its commands - `status`, `report` (`--text`, `--widths`, `--run=`,
+  `--review`), `try --run=N` (`--starts=`, `--move=a>b`, `--add=`, `--drop=`), `propose` (`--fix`: keep every
+  break, split only the rows that overflow), `check` (which also type-checks the module with `tsc`), `resolve`,
+  `template`, `preview`, and `--layout=` to try another module - are listed at the top of
+  `layout-guidelines/verse-layout-tool.ts`. What `try` and `propose` decide they print as constants, `ROW_STARTS`
+  and `REVIEW` (or write to `--out=`), for the session to put into the module. The rows `--fix` makes are listed in
+  `review`, which the page ignores: `check` fails until a `try` of their run says a session has read them.
+- `proposeRows()` is a dynamic program over where the rows start: a row's empty space squared, plus a cost
+  for the break by how the row's last line ends (`breakPenalty()`: a sentence, a clause, nothing). The
+  session then reads the rows and moves breaks for meaning.
+
+### A file's layout
+
+**Every file is laid out by a chain of TypeScript modules**: every folder's `.layout.ts` from the root of the tree down
+to the file's folder, then the file's own, `<name>.layout.ts` (`a/b/c.md` → `a/b/c.layout.ts`, `translation.rtl.md` →
+`translation.rtl.layout.ts`). Any of them may be missing. Each is a function (its default export), called with the
+file and with what the folders' modules before it answered (`above`, the root's first); `layoutChainFor()` lists
+them. The answers are merged, the nearer module the stronger - an entry one leaves out is taken from those before
+it, `page` field by field. **The contract is `src/html/layout-schema.ts`**, types only:
+
+- **`LayoutOfFolder`** - a folder's: `(file, above) => FolderLayout | null`. It decides for many files at once,
+  above all what becomes of them (`output`).
+- **`LayoutOfFile`** - a file's own: `(file, above) => FileLayout`, which must say `sourceMd5`, the MD5 of the
+  Markdown file it was made for. A layout session's work.
+- **`LayoutFile`** - what a module is told: the path and name, and - read and parsed only once asked for, so that a
+  folder's module deciding by the path alone is cheap to ask about every file - the text, numbered lines, runs,
+  headings; and helpers (`resolve()`, to build on what came from `above` whichever form it has).
+
+Every entry of an answer is a `SchemaValue<Context, T>`: the value itself (`T extends Static` - plain data, never a
+function), or a function of the entry's own context returning it. One context object, not a parameter list, so
+that adding to a context breaks no module.
+
+| Entry | Static | Dynamic, asked with | Applies to |
+|---|---|---|---|
+| `output` | `"laid-out"` (a page, and a layout of its own made by a session), `"plain"` (a page; the default), `"none"` (no page, no PDF) | - | the mirrors, the tools |
+| `rowStart` | the row starts, by key - or `true` / `false` | `RowContext`, per line: the row so far, `row.fits()`, `measure` | its page, and books embedding it |
+| `pageBreakBefore` | `true` / `false` | `HeadingContext`, per heading: `true`, `false`, or `null` for the mirror's rule | its own page |
+| `page` | `fontSize` (pt), `marginInline`, `marginBlock` (mm) | - | its own page |
+| `sourceMd5`, `review` | a file's own only: its file's MD5, and the rows a tool made unread - the page ignores both | - | the tools |
+
+**`output` decides only what is made, never whether a layout is used**: a file with a layout of its own is laid
+out by it, whether or not the chain asks for one. `"laid-out"` is for the tools - `layout-status` lists every such
+file whose own layout is missing, and every own layout whose `sourceMd5` is not its file's (obsolete: still used, but
+the file changed since). So far only the translations' reading files are `"laid-out"`
+(`../שונות/תרגומי-טקסטים-קדומים/.layout.ts`).
+
+`layout-module.ts` does the rest, the same for the mirror (`HtmlMirror.syncPage()`) and the layout tools:
+
+- **A module may import types only.** `Bun.Transpiler.scanImports()` lists every import that runs, and one is
+  enough to refuse the module. That keeps a page's dependencies to its chain: everything a layout needs comes
+  in its arguments (`file.helpers`). It must also be **pure** - nothing on disk, no clock - or the mirror's
+  freshness test would be wrong. That one cannot be checked.
+- **It is imported afresh when its file changes** - `import(path + "?v=" + mtime)`, as Bun keeps every module it
+  loaded. The old copies stay in memory; a few kilobytes per edit. The path is made absolute first: `import()` takes
+  a relative one to be relative to `layout-module.ts`, and the server's root is `..`.
+- **`resolveLayout()` calls every function** and checks every answer's shape (types are gone at run time), giving
+  a `ResolvedLayout` with no function in it. `rowStart` is asked about each line of a run but its first, in order,
+  with the row as the answers so far have made it. `measure` is `text-measure.ts`: widths as a percentage of the
+  run's row, from the font files and the page's geometry (the column less the numbers' margin) - a few hundredths
+  of a percent from Chromium's, which `check` reports.
+- **It reaches the page through the text**, as the rows always did: `applyLayout()` puts the marks of
+  `layout-marks.ts` into it - `ROW_MARK` before a line's label, `PAGE_BREAK_MARK` / `NO_PAGE_BREAK_MARK` right after a
+  heading's `#`s, which the `page_breaks` core rule turns into `.page-break-before` / `.no-page-break-before`. Page
+  breaks and `page` go to the file's own page only (`ownPage`): a book embedding the file has its own.
+- **What goes wrong is shown, never thrown**: a refused import, a syntax error, a function that throws, an answer
+  of the wrong shape. The page is made without what that module would have said - the rest of the chain still
+  counts - and opens with a `שגיאה-N` saying why: the same list a faulty `<כלול-בהדפסה>` gets (`errorMarkerLine()`).
+- **Every module of the chain is a dependency of the page** - present or not, as with a missing embedded file - so
+  `scheduleSync()` of one re-renders every page under it: a change to the root's re-renders the whole tree, and
+  reprints every PDF. A file that gets no page depends on its chain all the same, so that a change giving it one
+  makes it. `isIgnoredWatchPath()` lets every `*.layout.ts` through, for the watcher to report it.
+
+### The page's font
+
+A right-to-left page is set in **David CLM** (Culmus, GPL with a font exception), with **GNU FreeSerif** after it
+for whatever David lacks - accented Latin (`š`, `ā`, `ḫ`), Greek, `§`, `⟨⟩`, subscript digits - whose Latin is the
+same URW design - and last FreeSerif's regular face for every weight and style (`LAST_RESORT`), since its bold and
+italic faces lack a few of its characters (`⟨⟩`). All are in `fonts/`, and the page loads them (`RenderOptions.fonts`, `fontsStyle()`): the mirror
+from `docs/_fonts/` (`SITE_FONTS_DIR`, filled by the sweep along with `.nojekyll`), the layout tool embedded in the
+page. Before them the PDFs took whatever fonts the machine had - Times New Roman and macOS's SF Hebrew here - so a
+PDF printed elsewhere came out different, and a layout fitted here could overflow there. The same files are what
+`text-measure.ts` measures with, through `fontkit`, in the same order, which is what lets a layout compute widths at
+all. Code and quotes keep `system-ui`, as in the editor - the one part of a page still set in the machine's fonts. The font
+files are renderer inputs (`RENDERER_FILES`): a new font re-renders every page.
 
 ### Embedding one file in another
 

@@ -6,6 +6,7 @@
 
 import { extname } from "path";
 import type { FileData } from "./markdown-tree";
+import { isLayoutFile } from "./html/layout-module";
 
 export type FileSystemChange = {
     /** As the file tree and /api/file name it. A folder ends with "/". */
@@ -141,5 +142,6 @@ export function isIgnoredWatchPath(relativePath: string | null | undefined, excl
     // A file of another kind is of no interest. A name with no extension may well be a directory,
     // and a directory very much is.
     const extension = extname(segments[segments.length - 1]);
-    return extension !== "" && extension !== ".md";
+    // The layout modules (*.layout.ts) are the one exception: the HTML mirror renders pages from them.
+    return extension !== "" && extension !== ".md" && !isLayoutFile(relativePath);
 }

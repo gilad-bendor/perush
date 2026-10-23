@@ -185,6 +185,12 @@ export class PdfMirror implements PageCompanion {
         try {
             await tab.goto(pathToFileURL(resolve(pagePath)).href, { waitUntil: "load" });
             await tab.evaluate(pointLinksAt, this.linkTargets());
+            // A page that lays itself out for paper (verse-runs.ts) does it on beforeprint, which
+            // printing to PDF does not send - and only once its fonts are in, or it measures the wrong ones.
+            await tab.evaluate(async () => {
+                await document.fonts.ready;
+                window.dispatchEvent(new Event("beforeprint"));
+            });
             printed = await tab.pdf({ printBackground: true, preferCSSPageSize: true, format: "A4" });
         } finally {
             await tab.close();
