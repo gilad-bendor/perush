@@ -22,7 +22,7 @@ The project's own terms (guidelines §6.6); the corpus `../renderings.md` (§0�
 | *sizkur₂ X dug₄-ga-ab* / *ḫa-ra-ab-dug₄* | את תפילת X – אמור! / … יאמרו לך! | [divergence] ↔ שמואל א ו:ד–ה | §9.4 *sizkur₂ … dug₄* = `אָמַר תְּפִלָּה`. Check: `תפיל` | 65, 88, 103, 108 |
 | *a dug₄-ga-ab*; *a na-ab-be₂-en* | השקה!; אל תשקה! | [equivalent] ↔ בראשית ב:ו | §5.2 *a dug₄* = `הִשְׁקָה`. Check: `השקה` / `תשקה` | 68–70, 72 / 71 |
 | *tukum-bi* | אם | | Law corpus (*tukum-bi* = *šumma* = `אִם`). Check: `אם ` | 52, 54 |
-| *na … de₅* | הוֹרָה; הוֹרָאָה | [equivalent] ↔ ישעיהו כח:כו; משלי ד:ד | §9.3. The Šuruppag instructions (wisdom corpus) have `נתן עצה` for the same phrase: open decision 2. Check: `הורה` | 1, 110 |
+| *na … de₅* | נתן עצה; העצה … שנתן (2026-10-23 harmonization, was הוֹרָה; הוֹרָאָה) | [equivalent] ↔ ישעיהו כח:כו, כח:כט (`הִפְלִא עֵצָה`); משלי ד:ד | As the Šuruppag instructions, the flood references, Gudea, Inana, Enmerkar, creation 2: open decision 2 settled. Check: `נתן עצה` | 1, 110 |
 | *{d}nin-urta engar zid {d}en-lil₂-la₂ za₃-mi₂-zu dug₃-ga-am₃* | נינורתה, אִכָּרוֹ הַנֶּאֱמָן שֶׁל אֶנְלִיל, תהילתך – מתוקה היא! | [cognate] *engar* | The formula copied from S&W 317 (byte-identical); `תהילתך – מתוקה היא!` (coordinator 2026-10-22: as Enki and Ninmaḫ 141 `תהילתך מתוקה!`; §9.5 updated). Check: `אכרו הנאמן של אנליל`, `תהלתך – טובה היא!` | 111 |
 
 ## Terms

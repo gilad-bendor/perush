@@ -111,7 +111,7 @@ The project's own terms (guidelines §6.6); the corpus `../renderings.md` (§0�
 | *{u₂}numun₂* (rush) | אגמון | [equivalent] ↔ ישעיהו נח:ה | not *numun* "seed". | 162 |
 | *ki-nu₂* | משכב | | | 162, 184, 242, 258 |
 | *la-la* | עתרת | | | 171 |
-| *saĝ-tun₃* | מזכיר | [equivalent] ↔ שמואל ב ח:טז | our proposal. | 176 |
+| *saĝ-tun₃* | רושם (2026-10-23 harmonization, was מזכיר) | [equivalent] ↔ שמואל ב ח:טז (the biblical office: not our word) | as Gudea, Agade, the proverbs. | 176 |
 | *ur₃* (drag; roof) | גרר; גג | [equivalent] ↔ ישעיהו כח:כד (*ur₃* "harrow") | | 177; 214, 258 |
 | *ĝiškim* | אוֹת | | always vocalized. | 179 |
 | *šu-nim*; *dub-ba-an*; *a-tur₃* | אביב; גדר; תלם־המים | | | 180, 181 |
@@ -157,7 +157,7 @@ The project's own terms (guidelines §6.6); the corpus `../renderings.md` (§0�
 | *ni₂ te* | ביראה | | | 298 |
 | *kal*; *inim kug*; *inim maḫ* | יקר; הדבר הטהור; הדבר הנשגב | | §9.4. | 299, 308 |
 | *en₃-tukum-še₃*; *u₆ e* | כל עוד; "פלא!" אומר | | laments: `עַד אָנָה` (open decision 6). | 302 |
-| *galam*; *kad₄* | באומנות; קשור | | B&F `נוכל` (pejorative): open decision 5. | 308 |
+| *galam*; *kad₄* | בתחכום (2026-10-23 harmonization, was באומנות); קשור | | B&F `נוכל` (pejorative, kept): open decision 5, settled. | 308 |
 | *gam*; *u₃-gul ĝar* | כרע; שָׂם בקשה | [equivalent] ↔ בראשית לג:ג | §9.4; Enmerkar. | 310 |
 | *bal* (of a liquid) | נסך | [equivalent] ↔ במדבר כח:ז | elsewhere *bal* = `הָפַךְ`. | 314 |
 | *teš₂-bi*; *dug₃* (verb) | יחדיו; טוב (להם) / היטיב | [equivalent] ↔ תהלים קלג:א | | 286, 303, 315; 246, 251, 315 |

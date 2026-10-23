@@ -43,13 +43,13 @@ ETCSL composite labels, used as entry labels (`### <label>`); checked by `python
 2. *gu₃ de₂* "call out" in 140: `השמעת קולה` (the corpus never uses `קָרָא` for it). Fine as is unless a common rendering is wanted.
 3. *ri*: `הִטִּיל` here (13, 214: "cast into the womb", "impose"); EWO has *ri* = `נָשָׂא`. A split by sense; harmonize?
 4. *ki-šar₂*: by sense here (`כולו`, `בכל מקומו`: 32, 279); EWO `תֵּבֵל` (cosmic).
-5. *galam*: `באומנות` (308, praise of Enlil's word); B&F `נוֹכֵל` (pejorative). The Sumerian word is neutral ("skilful, artful"): one Hebrew for both?
+5. *galam*: `באומנות` (308, praise of Enlil's word); B&F `נוֹכֵל` (pejorative). The Sumerian word is neutral ("skilful, artful"): one Hebrew for both? **Settled 2026-10-23 (row 15): `בתחכום` (as EWO, Šuruppag, the flood references); B&F's `נוכל` stays (by sense).**
 6. *en₃-tukum-še₃*: `כל עוד` here (302, ORACC "as long as"); the laments `עַד אָנָה` (a question).
 7. *e₂ dal-la* (225): `בית הקורות?`; ORACC lemmatizes *dal* "fly", which would license `עָף` – we did not use it. ETCSL "barn".
 8. *ḫaš₄ dug₄* (15): `ירך *פתח*` with ETCSL; ePSD2 "to have sex". A more literal `ירך עשה` is possible.
 9. *ninim* (112): `קנאה` with ORACC ("envy"); ETCSL "anger" (which would match Gen 4:5 `וַיִּחַר` more closely). The parallel row says both.
 10. *ni₂-ba* (31, 236): `מעצמם` ("by themselves"); ETCSL "together". In 31 the choice matters for Gen 1:20 (the waters bring forth by themselves vs. fish and birds together).
-11. *saĝ-tun₃* (176) = `מזכיר` (our proposal, ↔ 2 Sam 8:16); ORACC "recorder", ETCSL "comptroller".
+11. *saĝ-tun₃* (176) = `מזכיר` (our proposal, ↔ 2 Sam 8:16; **2026-10-23 harmonization: `רושם`**); ORACC "recorder", ETCSL "comptroller".
 12. 303 is not understood (`*תכלים*`, `*אשבחה*`); ETCSL's reading differs completely.
 13. The shared formula 317 is written vocalized (`אִכָּרוֹ הַנֶּאֱמָן שֶׁל אֶנְלִיל`, as §9.3 prints it) while 318 is unvocalized plene (as B&F 190). The Farmer's Instructions 111 should copy 317 exactly.
 
@@ -176,7 +176,7 @@ New terms that a later text of any corpus may need: *nam-ḫe₂* = `שגשוג`
 | 158 | *da gir₄-da ḫu-mu-tuš-en* | לצד הכּוּר שֵׁב לְךָ | `וְהַמֶּלֶךְ יוֹשֵׁב בֵּית הַחֹרֶף בַּחֹדֶשׁ הַתְּשִׁיעִי; וְאֶת הָאָח לְפָנָיו מְבֹעָרֶת` (ירמיהו לו:כב) | [equivalent] | Winter is the season of sitting by the fire (also 268–275). Our proposal. |
 | 158 | *en-te-en* | חורף | `וְהִכֵּיתִי בֵית הַחֹרֶף עַל בֵּית הַקָּיִץ` (עמוס ג:טו) | [equivalent] | The two seasons as two ways of living. |
 | 166 | *bal gub-ba-ĝu₁₀ mu-a itid 7-am₃* | תורי העומד – בשנה שבעה ירחים | `וְלִשְׁלֹמֹה שְׁנֵים עָשָׂר נִצָּבִים עַל כָּל יִשְׂרָאֵל וְכִלְכְּלוּ אֶת הַמֶּלֶךְ וְאֶת בֵּיתוֹ` (מלכים א ד:ז) | [equivalent] | Service to the king by monthly turns (the Ur III *bala*). Our proposal. |
-| 176 | *saĝ-tun₃ maḫ* | המזכיר הנשגב | `וִיהוֹשָׁפָט בֶּן אֲחִילוּד מַזְכִּיר` (שמואל ב ח:טז) | [equivalent] | The court recorder (our rendering). |
+| 176 | *saĝ-tun₃ maḫ* | הרושם הנשגב | `וִיהוֹשָׁפָט בֶּן אֲחִילוּד מַזְכִּיר` (שמואל ב ח:טז) | [equivalent] | The court recorder (our rendering). |
 | 177 | *eš₂ … ur₃-ur₃* | חבל … גורר | `יְפַתַּח וִישַׂדֵּד אַדְמָתוֹ` (ישעיהו כח:כד) | [equivalent] | Harrowing (ETCSL). |
 | 186 | *igi-ĝal₂-tuku* | הפיקח | `אוֹ פִקֵּחַ אוֹ עִוֵּר` (שמות ד:יא) | [equivalent] | "Having an (open) eye" = wise. |
 | 190 | *dusu₂* | עַיִר | `אֹסְרִי לַגֶּפֶן עִירֹה` (בראשית מט:יא) | [equivalent] | The braying donkey of the harvest field. |

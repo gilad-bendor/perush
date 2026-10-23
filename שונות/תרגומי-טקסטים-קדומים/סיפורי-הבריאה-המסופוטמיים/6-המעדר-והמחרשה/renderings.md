@@ -50,7 +50,7 @@ The project's own terms (guidelines §6.6); the corpus `../renderings.md` (§0�
 | *ur₃*; *lu₂ zid* | גג; איש נאמן | | S&W; §9.3. Check: `גג של איש נאמן` | 16, 125 |
 | *sila daĝal*; *si … sa₂* | רחוב רחב; יישר | | §8. Check: `רחוב רחב`, `מיישר` / `יישר` | 17, 126, 30, 146, 151 |
 | *a₂ gal*, *šu gal*; *dim₂*; *keše₂* | בזרוע גדולה, ביד גדולה; עיצב (מעוצבת); קשר | [divergence] ↔ דברים ד:לד | Check: `בזרוע גדולה מעוצבת, ביד גדולה קשורה` | 21 |
-| *saĝ-tun₃ maḫ* | המזכיר הנשגב | [equivalent] ↔ שמואל ב ח:טז | = S&W 176 (open decision 1). Check: `המזכיר הנשגב` | 22 |
+| *saĝ-tun₃ maḫ* | הרושם הנשגב (2026-10-23 harmonization, was המזכיר הנשגב) | [equivalent] ↔ שמואל ב ח:טז | = S&W 176 (open decision 1, settled). Check: `הרושם הנשגב` | 22 |
 | *engar zid nam-lu₂-ulu₃*; *engar* | אִכָּר נֶאֱמָן שֶׁל הָאֱנוֹשׁוּת; איכר | [cognate] | §9.3. Check: `אִכָּר נֶאֱמָן שֶׁל הָאֱנוֹשׁוּת`, `איכרך` | 23, 97 |
 | *ezen*; *itid šu-numun* | חג; ירח שׁוּ־נוּמוּן | [divergence] ↔ שמות כג:טז | Check: `חגי`, `שׁוּ־נוּמוּן` | 24 |
 | *gaz*; *šar₂* (slaughter) | הרג; שחט | [equivalent] ↔ ישעיהו כב:יג | Check: `שוורים הורג, צאן שוחט` | 25 |

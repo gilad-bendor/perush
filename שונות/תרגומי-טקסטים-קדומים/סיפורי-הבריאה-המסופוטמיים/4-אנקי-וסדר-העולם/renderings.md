@@ -71,7 +71,7 @@ Lemmas: ETCSL's TEI lemmas and ORACC Q000334 (citation form, morph). "Lines" = E
 | *niĝ₂ ĝal₂-la* | נכסים | | | 261, 299, 368 |
 | *giri₁₇-zal*; *ḫul₂* | שׂמחה; שׂמח | | | 262, 269, 300, 351, 360, 369 |
 | *nam-en*; *nam-lugal* | אדנות; מלכות | | | 263, 264, 397, 458–461 |
-| *suḫ* / *suḫ₁₀*; *aga*; *men*; *suḫ-gir₁₁*; *saĝ-men* | נזר; עטרה; כתר; ציץ; כתר־ראש | | Five crowns kept apart. | 263, 264, 322, 349, 350, 354, 410, 411, 458 |
+| *suḫ* / *suḫ₁₀*; *aga*; *men*; *suḫ-gir₁₁*; *saĝ-men* | נזר; כתר (2026-10-23 harmonization, was עטרה); כתר; ציץ; כתר־ראש | | Five crowns, kept apart until 2026-10-23; *aga* now = `כתר` (= *agû*, all corpora) and shares it with *men*. | 263, 264, 322, 349, 350, 354, 410, 411, 458 |
 | *us₂* | הדביק / דבק | | | 265, 310, 319, 343, 346 |
 | *ḫe₂-ĝal₂*; *ḫe-nun* | שפע; שובע | | | 266, 270, 316, 330, 361 |
 | *ĝidru* | שרביט | | | 267 |
@@ -176,7 +176,7 @@ The ★ rows above were followed (the appointment formula in 239; *ĝar*, *gub*,
 | the Laḫama (*la-ḫa-ma*) | הַלַּחַמָּה | [divergence] ↔ א:כא | Akk. *laḫmu* (EE `שָׂעִיר`). Decision 31. | 186 |
 | Sumer; Urim; Meluḫḫa; Magan; Dilmun; Elam; Marḫaši; Martu | שׁוּמֶר; אוּר (always vocalized); מֶלוּחָה; מָגָן (always vocalized); דִּלְמוּן; עֵילָם; מַרְחַשִׁי; מַרְטוּ | [equivalent] ↔ י:י, יא:כח, י:ו, י:כב, י:טז | Corpus §6.4; Sumer vocalized where it can read "guard". | 124–249 |
 | Ninsikila | נִין־סִיקִּילָה | | "The pure lady" (pun on *sikil*, 238). | 239 |
-| *taraḫ abzu* (the barge); *men* | "אַקּוֹ־הָאַפְּסוּ"; "כתר" | | Ship names. Decision 25. | 107, 115, 152, 170 |
+| *taraḫ abzu* (the barge); *men* | "יָעֵל־הָאַפְּסוּ" (2026-10-23 harmonization, was "אַקּוֹ־הָאַפְּסוּ"); "כתר" | | Ship names. Decision 25. | 107, 115, 152, 170 |
 
 ### Formulas
 | Sumerian | Hebrew | Tag | Notes | Lines |
@@ -210,7 +210,7 @@ The ★ rows above were followed (the appointment formula in 239; *ĝar*, *gub*,
 | *peš₁₀-ĝal₂*; *gaba-ĝal₂* | *האדיר*; בעל העוז | | | 9 |
 | *dim*; *dimgul*; *us₂-saĝ*; *urin* | עמוד; עמוד־הקשירה; קורה?; נס | | | 10, 166, 168 |
 | *igi il₂*; *igi ĝal₂*; *igi du₈* | נשיאת עין; העין נתונה; ראה | | | 11, 16, 75, 125 |
-| *alim*; *lu-lim*; *šeg₉*; *šeg₉-bar*; *taraḫ* | תאו; אייל; יעל; עז־בר?; אקו | [equivalent] ↔ דברים יד:ה | Decision 25. | 12, 13, 107 |
+| *alim*; *lu-lim*; *šeg₉*; *šeg₉-bar*; *taraḫ* | תאו; אייל; יעל; עז־בר?; יעל (2026-10-23 harmonization, was אקו: *taraḫ* now shares `יעל` with *šeg₉*) | [equivalent] ↔ דברים יד:ה | Decision 25. | 12, 13, 107 |
 | *šag₄-tum₂*; *si-dug₄*; *ḫur-saĝ*; *sig₇* | כרי המרעה; נקיקים; הר; רענן | | | 14, 15, 92, 123 |
 | *šid* (verb / noun); *itid*; *ud*; *mu* (year) | מנה / מניין; ירח; יום; שנה | [equivalent] ↔ א:יד | Corpus §6.2. | 17, 18, 44, 45 |
 | *šu du₇* | השלים (`המושלם`) | | | 17, 18, 48, 71, 111, 215, 227 |
