@@ -285,7 +285,8 @@ RESERVED = [
     (W + alt("תורה", "תורת", "תורתי", "תורתו", "התורה", "תורות") + E, None, "תּוֹרָה never: sbꜣ.yt = מוּסָר (Prov 1:8, 23:12) [equivalent]"),
     # --- Amenemope and the Torah / Proverbs (renderings §4.3) ---
     (W + alt("גבול", "גבולות", "גבולי", "גבולו", "הגבול", "הגבולות", "גבולה", "גבולם") + E, r"tšj|tꜣš|ṯꜣš|tš,jw|tšjw|tšj", "גְּבוּל only for tꜣš / tšj 'boundary' [equivalent Deut 19:14, Prov 22:28]"),
-    (W + alt("הסיג", "תסיג", "מסיג", "תסג", "יסיג", "הסגת", "נסוג", "נסג", "השיג") + E, None, "the root סוג / נסג never (Deut 19:14, 27:17, Prov 22:28): rmni̯ = הֵזִיז / נָשָׂא, hꜣd = פָּלַשׁ"),
+    (W + alt("הסיג", "תסיג", "מסיג", "תסג", "יסיג", "הסגת", "נסוג", "נסג") + E, None, "the root סוג / נסג never (Deut 19:14, 27:17, Prov 22:28): rmni̯ = הֵזִיז / נָשָׂא, hꜣd = פָּלַשׁ"),
+    (W + alt("השיג", "תשיג", "ישיג", "אשיג", "השיגו", "משיג") + E, r"pḥ", "השיג (נשג 'reach') only for pḥ 'reach' (MK E138, HC 29); it shares the letters of the reserved הִסִּיג"),
     (W + alt("אלמנה", "אלמנות", "אלמנת", "האלמנה", "אלמנתו") + E, r"ḫꜣr|ḫꜣrj|ḫꜣ\(rj\)|ḫꜣrt", "אַלְמָנָה only for ḫꜣr.t [equivalent Prov 23:10 (the emendation `גבול אלמנה`), Deut 24:19–21]"),
     (W + alt("יתום", "יתומים", "היתום", "יתומה", "יתומי") + E, None, "יָתוֹם never: nmḥ = דַּל (Late Egyptian 'poor man'; Prov 23:10 `יְתוֹמִים` in the apparatus)"),
     (W + alt("איפה", "האיפה", "איפות", "איפת", "ואיפה") + E, r"jp,t|jp\.t|\bjpt|jp\b", "אֵיפָה only for jp.t (the oipe) [cognate: an Egyptian loanword, Deut 25:14–15, Lev 19:36, Prov 20:10]"),
