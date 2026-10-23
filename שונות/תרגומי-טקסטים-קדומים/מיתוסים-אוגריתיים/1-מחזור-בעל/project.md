@@ -919,8 +919,336 @@ Mot yields; a hymn to Šapšu, lord of the Rephaim; the colophon of Ilimilku (VI
 - A repeated formula with *l* is not one Hebrew line: *l* "from" / "on" changes with the verb (1.3 IV:3 / 1.6 V:6), so
   the verifier's repeated-line list needs a justification, not a copy.
 
+## KTU 1.1
+
+Translator 3 of the corpus (Round 4 run 1), 2026-10-23. Files: `annotated-1.1.rtl.md`, `translation--intro-1.1.rtl.md`,
+generated `translation-1.1.rtl.md` (and `translation.rtl.md`). Drafted after 1.2.
+
+### Scope
+
+All 118 CUC lines of KTU 1.1 (II:1–27, III:1–30, IV:1–32, V:1–29), every line translated. Only a central fragment
+survives: of each line its beginning (III, IV) or end (II, V); most words of II–III are KTU³'s restorations from 1.3–1.4,
+given in brackets, with nothing added. Story order probably V → IV → III → II (Cassuto). Content: El, at his marzeaḥ,
+proclaims the name of his son before the Goddess – "Yaw" (?), "Beloved of El" – orders him to drive Baal from his throne,
+warns "or he will smite you", and holds a feast (IV); El's messengers summon Kothar from Kaptor with the secret-word
+message, and Kothar comes and bows (III); El's message to Anat, "put away war from the earth" (II); fragments (V).
+
+### Sources consulted
+
+- CUC v0.2.8 (`data`, `pars`, `lex`, `dulat`; machine parses only).
+- `annotated-1.2` – `1.6`; every restored line compared with its source passage.
+- Cassuto 1951 (VI AB): he translates the fragment (his columns א = V, ב = IV, ה = III, ו = II, Virolleaud's numbers),
+  reading IV:14 *yr* and taking the named son for Mot; quoted briefly in 19 entries.
+- The modern translations from memory only, never quoted. Every Bible verse printed before quoting (≈15).
+
+### Decisions
+
+- **Restorations:** KTU³'s only, in brackets; the Hebrew of a restored line is the Hebrew of its source passage: II:1–2,
+  22–23 (= 1.3 IV:11–12, III:18–20), II:17–21 (= 1.3 III:13–17, 1.6 IV:10–11), III:1–2 (= 1.3 VI:25–29), III:3–4 (= 1.3
+  III:9–12), III:12–16 (= 1.3 III:20–29), III:17–20 (= 1.3 IV:32–36), III:21–25 (= 1.4 IV:20–26), IV:30–32 (= 1.4
+  VI:40–43). Gender changed where the addressee changes (II: Anat, fem.; III: Kothar, masc.: `חוש! אוץ! חפוז!`, `ואוֹמַר
+  לְךָ`, `מְחוֹלֶלְךָ`, `בוא`).
+- **The naming** IV:14–20: *yw* transcribed `יַוּ` (the reading is uncertain; Cassuto *yr*); the old link with `יָהּ` /
+  `יהו` is mentioned and said to be rejected by most; *mdd il* = `חֲבִיב אֵל` (§6.6, Yam's title; not *ydd il ġzr*, Mot's
+  `יְדִיד אֵל, הַגִּבּוֹר` – the coordinator's prompt named that formula; the tablet has *mdd*); *pʿr* `הִכְרִיז` (1.2);
+  *ilt* `אֵלָה`.
+- **The order to expel Baal** IV:24–25: `גָּרְשֵׁהוּ מִכִּ[סֵּא מלכותו, מִנַּחַת, מִכֵּס] / שררתו` – the "from" of 1.3 IV:2–3;
+  *nṣṣ* Š `הִפְרִיחַ` (1.3 IV:1).
+- **New words** (grepped first): *ḥrš* `חָרָשׁ`; *šp* `שְׁפִי` (Isa 41:18); *šb* `שָׂב`; *skt* `סֻכָּה` (Job 38:40); *ġrt*
+  `צוּר` (the cognate; `הַר` is *ġr*'s); *ṭt* `טִיט`; *ḥṣ* `חָצָץ`; *ʾsp* `אָסַף`; *gry* tD `הִתְגָּרָה`; *ʾsr* `אָסַר`; *rks*
+  (vb) `רָכַס` (the noun is 1.5's `מֵזַח`); *zd* `זִיד` (Gen 25:29); *gb* (I) `גֵּב`; *gb* (II) `שִׁדְרָה` (`גַּב` is *bmt*'s);
+  *mtn* `מַתָּנָה`; *ġr ks* `הר כַּס`; *yh* read as vocative *y* `הוֹ`.
+
+### Open decisions for the user
+
+- IV:14 *yw* (`יַוּ`) and the note on the Yahweh comparison.
+- V:8, V:21 *l ydʿt*: "indeed you know" (`אכן`) or "you did not know".
+
+### Progress log
+
+- Drafted in one pass, column by column, then `fill`, `verify 1.1`, `check_bible_quotes.py`: one unprinted quotation
+  (Jer 16:5) printed and requoted, one stray parallel bullet removed; V:16 `יֶרַח` vocalized (the verifier's trap).
+- Pass (a): every bracket checked against CUC; nothing restored beyond KTU³. Pass (b): every restored passage compared
+  with its source (`pars`); masculine/feminine changes noted. Pass (c): `translation-1.1.rtl.md` read through.
+- Final: `build`; `check_bible_quotes.py` 0 problems; `verify 1.1 --strict`: 118/118, 0 problems, 0 repeated-line
+  differences (III:3 and III:21 carry `[סטייה מן הנוסחה]` notes for the verifier's regexes).
+
+### The text on its own terms
+
+- **A name is an office** (IV:14–20): El proclaims his son's name before the Goddess, and the name ("Beloved of El")
+  makes him heir – naming as investiture.
+- **The father takes sides** (IV:22–27): El orders Yam to drive Baal from his throne and warns that Baal will otherwise
+  smite him – the conflict of the cycle begins in the father's choice.
+- **The feast seals the decision** (IV:28–32): oxen, sheep, bulls, calves, lambs – the same sacrificial list as at the
+  dedication of Baal's palace (1.4 VI:40–43).
+- **Secrets travel by messenger** (III:12–15): "the word of wood and whisper of stone, the talk of heaven with earth" –
+  El uses Baal's secret message; the formula belongs to whoever summons.
+- **Peace is ordered from above** (II:19–21): El asks Anat to "put away war from the earth, set love in the dust" – peace
+  as the condition of his plan.
+- **The craftsman far away** (III:1–2, 18–20): Kothar lives in Kaptor and Memphis, a thousand fields away – the art of
+  building comes from abroad (Crete and Egypt).
+
+### Key parallels
+
+- IV:12 ↔ Deut 2:9 `וְאַל תִּתְגָּר בָּם מִלְחָמָה` (*gry* tD).
+- IV:20 ↔ Num 11:26 `מֵידָד` (Cassuto: a personal name from the same root as *mdd*).
+- IV:4 ↔ Jer 16:5 `בֵּית מַרְזֵחַ`.
+- III:8 ↔ Job 38:40 `יֵשְׁבוּ בַסֻּכָּה` (the den).
+- IV:8 ↔ Ps 40:3 `מִטִּיט הַיָּוֵן`; IV:11 ↔ Lam 3:16 `בֶּחָצָץ`.
+
+### Lines shared with other tablets
+
+- See Decisions (restorations). Differences: gender (II fem., III masc.); III:10 `ḥš{q}k` and III:11 `t{k}wtḥ` (scribal
+  letters not translated); III:13 `{ṯ}aṯnyk`; III:18 KTU³'s restored *b kptr* rendered `כַּפְתּוֹר –` before III:19
+  (as 1.2 III:2).
+
+### Proposals for the shared renderings
+
+1. ***mdd il*** in 1.1 IV:20 confirms §6.6 `חֲבִיב אֵל` for Yam; Cassuto's attribution to Mot should be recorded as
+   superseded in the corpus notes.
+2. ***gb*** (II) "back, spine" (1.1 V:28) is the cognate of `גַּב`, which 1.4–1.6 gave to *bmt* by sense. Drafted: *bmt*
+   keeps `גַּב` and *gb* (II) takes `שִׁדְרָה` (no other free word: `גֵּו` is *ẓr*'s). The alternative – *gb* `גַּב` and *bmt*
+   another word – would change 1.4 IV:14–15 and the mourning lines of 1.5–1.6; the coordinator decides.
+3. **New corpus rows**: see Decisions.
+
+### Lessons for the guidelines
+
+- On a fragment that is mostly restoration, the Hebrew of the restored words should be the Hebrew of the source passage,
+  so that `verify` can compare them; gender and person are the only changes.
+
+## KTU 1.2
+
+Translator 3 of the corpus (Round 4 run 1), 2026-10-23. Files: `annotated-1.2.rtl.md`, `translation--intro-1.2.rtl.md`,
+generated `translation-1.2.rtl.md` (and `translation.rtl.md`). Drafted before 1.1, as the coordinator asked.
+
+### Scope
+
+All 132 CUC lines of KTU 1.2 (I:1–48, II:1–18, III:1–25, IV:1–41), every line translated, broken ones as `[…]`.
+Preservation: I and IV largely readable (I:1–10 and I:41–48, IV:1–6 and IV:33–41 damaged); III restored by KTU³ from the
+parallels in its first half; II only the first letters of 18 lines. The story order is probably III → I → IV. Content:
+El summons Kothar from Kaptor and orders a house and palace for Yam (III:1–11); ʿAṯtar claims kingship, and Šapšu warns
+him with the threat she later uses against Mot and tells him he has no wife like the gods (III:12–24); the end of a curse
+by Athtart-name-of-Baal (I:1–10); Yam's messengers before the assembly at Mount Lal ("give up Baal and his attendant"),
+the gods lowering their heads, Baal's rebuke, El's surrender ("Baal is your slave, O Yam"), Baal's rage and Anat and
+Athtart holding his arms (I:11–47); Baal's despair, Kothar's promise of eternal kingship, the two clubs Yagrušu and
+Ayyamarru, Yam's fall, Athtart's rebuke, "Yam is dead! Baal shall reign!" (IV).
+
+### Sources consulted
+
+- CUC v0.2.8 through `../ugarit_tools.py data`, `pars`, `lex`, `dulat` (machine parses only; every *l*, *k*, *hm*, *d*,
+  *al* decided in the פירוק).
+- `annotated-1.3` – `1.6` for the vocabulary and every repeated line.
+- Cassuto 1951 (III AB) does not translate 1.2: his introduction quotes IV:5 and IV:10 and discusses *gʿr* (I:24, IV:28);
+  quoted in those entries.
+- The modern translations (Smith & Pitard I, Pardee COS I, Wyatt, del Olmo Lete) from memory only, never quoted.
+- Every Bible verse printed with `../../tools/check_bible_quotes.py --show` before quoting (≈60 verses).
+
+### Decisions
+
+- **The two naming speeches** (IV:11–15, IV:18–22) have one formula, used for both: `כּוֹתַר הִנְחִית קרדומים, והכריז את
+  שמותיהם: "שמך, אתה – X! X, Y ים, Y ים מִכִּסְאוֹ, נהר מִכֵּס שררתו! תקפוץ מיד בעל, כנשר מאצבעותיו! הלוֹם את Z הנסיך ים,
+  בין W שופט נהר!"`; and the execution `קפץ הקרדום מיד בעל, כנשר מאצבעותיו; הלם את Z הנסיך ים, בין W שופט נהר.`
+  The names are transcribed, `יַגְרֻשׁ` and `אַיַּמַּר`, and their verbs translated: *grš* `גָּרֵשׁ` (1.3 IV:2), *mr(r)*
+  `הֲדוֹף` (Deut 6:19; `גֵּרֵשׁ` is *grš*'s). *ṣmd* (n.) `קַרְדֹּם` (1.6 V:3); *nḥt* D `הִנְחִית` [cognate]; *pʿr*
+  `הִכְרִיז` (`פָּעַר` is "gape"; `קָרָא` is reserved for *qrʾ*); *rqṣ* Gt `קָפַץ` (`זִנֵּק` is 1.4's *tġḏ*; the cognate `רָקַד`,
+  Ps 29:6, is in a note only); *nšr* `נֶשֶׁר` (§8); *hlm* `הָלַם` (brief §4); *uṣbʿ* `אֶצְבַּע`; *bn ydm* `בין ידי`, *bn ʿnm*
+  `בין עיני`; *ʿzz* `עַז`; *mk* `מָךְ` and *dlp* `דָּלַף` [cognates, Qoh 10:18 has both]; *nġṣ* `הִתְכַּוֵּץ` and *pnt* `חוּלְיָה`
+  (1.3 III:34, 1.4 II:19); *tmn* `תְּמוּנָה` [cognate]; *prsḥ* `קָרַס`; *ql* `נָפַל`; *qṯ* `סָחַב` (`גָּרַר` is *mṣḫ*'s); *kly*
+  `כִּלָּה`.
+- **The throne's *l*** kept as fixed after 1.6: "from" in the expulsion (IV:12–13, 19–20: `מִכִּסְאוֹ … מִכֵּס שררתו`,
+  as 1.3 IV:3), "on" where the heads are lowered onto the throne (I:23 `ועל כס`), "from" where they are lifted (I:27, 29).
+- **Šapšu's threat** III:17–18 copies 1.6 VI:26–29 word for word (`איך? נא ישמעך השור אֵל, אביך! אכן יִנְסַח את עמודי
+  שִׁבְתְּךָ, אכן יהפוך כיסא מלכותך, אכן ישבור שרביט משפטך!`); Šapšu's address `שמע אֵפוֹא` (III:15) = 1.6 VI:23; ʿAṯtar
+  `עַתְּתַר` (§1.1) as in 1.6 I:54–65; his complaint III:19 follows §6.12 (`אין בית לי כאלים, וחצר כבני [קודש]`).
+- **Yam's titles** from §6.6: `הַנָּסִיךְ יָם`, `שׁוֹפֵט נָהָר`; *mlak ym tʿdt ṯpṭ nhr* = `מלאכי ים, משלחת שופט נהר` (the §9
+  gate line, I:22). Baal is `הַנָּסִיךְ בַּעַל` (I:38, IV:8), the title he shares with Yam.
+- **The assembly** (I:11–37): *pḫr mʿd* `אספת המועד` (§4.2), *ġr ll* `הר לַל` (§1.2; CUC's "night" rejected), *bn qdš*
+  `בני קודש`; the messengers' orders and their execution identical (I:13–19 = I:19–20, 30–35); *al tpl al tštḥwy*
+  `אַל תיפלו, אַל תשתחוו` and its execution `לא נפלו, לא השתחוו` (CUC's asseverative *l* at I:31 rejected);
+  *idk pnm / al ttn* `אז את פניכם / תתנו נא` (1.4 VIII:10–11); *amr* (I:15, 31) the noun `אֹמֶר` (Ps 19:3), kept apart
+  from *rgm* `אָמַר`; *ʾmr* Gt "be seen" (I:32) `נִרְאָה`; *išt*, *ištm* `אש, שתי אשות`; *lṭš* `לָטַשׁ` [cognate].
+- **The gods' heads** I:23–29: *ġly* `הִשְׁפִּיל` (by sense; see Proposals), *riš* `ראש`, *ẓr* `גֵּו` (1.3 III:35), *brk*
+  `ברך` (licensed by *brkt*), *kḥṯ zbl* `כס נסיכות` (*zbl* (II) "princeship" = `נְסִיכוּת`, derived from `נָסִיךְ`); *gʿr*
+  `גָּעַר` [cognate] (I:24, IV:28).
+- **The surrender** I:36–38: *ʿbdk bʿl* `עבדך בעל`; *y* vocative `הוֹ`; *asr* `אָסִיר`; *argmn* "tribute" `מַס` (the
+  cognate `אַרְגָּמָן` means "purple" in Hebrew: a note); *mnḥy* `מִנְחָה` [cognate, 2 Sam 8:2, 1 Kgs 5:1]; *ybl* `הוֹבִיל`;
+  *ap anš* `אַף נֶאֱנַשׁ` (Hebrew `אַף` keeps both senses of the Ugaritic, "also" and "anger").
+- **Baal's attack** I:39–42: *mšḫṭ* `גַּרְזֶן` (by sense), *mḫṣ* (n.) `*מַחַץ*`, *šmal* `שמאל`, *ʾḫd* `אָחַז`; *mlak bn ktpm rgm
+  bʿlh* `מלאך: בין כתפיים – מילת בעלו`.
+- **Kothar's promise** IV:8–10: *ht* `עַתָּה` (§10); *ib* `אוֹיֵב`; *ṣrt* `צָרָה` (1.3 III:37); *mlk ʿlm* `מלכות עולם`; *drdr*
+  `דור דורים`.
+- **Athtart's rebuke** IV:28–31: *bṯ* = `בּוֹשׁ` (DULAT "be ashamed"; [cognate]) – the "scatter (him)" reading (Arabic
+  *baṯṯa*) is given in the note and left open (below); *šby* `שָׁבוּי` [cognate, Ps 68:19].
+- **"Yam is dead! Baal shall reign!"** IV:32: *l* asseverative `אכן`; *mt* the verb `מֵת`; CUC's split *b ʿlm* read as
+  *bʿlm* "Baal" (the tablet has no divider; "forever shall he reign" in the note).
+- **Smaller one-lemma choices** (each grepped in every corpus first): *ypʿ* `הוֹפִיעַ` (1.3); *lʾk* `שִׁגֵּר` (1.4); *ʿlṣ*
+  `עָלַץ`; *aphm* `מִיָּד`; *dʿt* `דַּעַת`; *pḏ* `פָּז`; *yrṯ* `יָרַשׁ`; *ṯrm* "dine" `פָּרַס` (Isa 58:7); *qm* `קָם`; *aḥd* (adv.)
+  `כְּאֶחָד` (Ezra 2:64); *lḥt* `לוּחוֹת`; *šdmt* `שְׁדֵמָה` (Isa 16:8); *lwn* `*נִלְוֶה*`; *gmr* `*אַבִּיר*` (1.6); *yqy*
+  `*גּוֹנֵן*`; *ṯʾr* `*הִתְיַצֵּב*` (the Hebrew cognate root ערב is reserved for *ʿrb*); *mnḫ* `מָנוֹחַ`; *ʾbd* `אָבַד`; *irt*
+  `*חֲזוֹת*`; *ul* `אוּל` (Ps 73:4, as 1.5); *ʿẓm* `עֹצֶם`; *ḥtt* `נִחַת`; *šrr* "enemy" `שׁוֹרֵר` [cognate, Ps 5:9]; *ḥm*
+  `חוֹם`; *ġb* (II:6) `*בּוֹר*` (`גֵּב` is the cognate of *gb*, 1.1 V:13).
+
+### Open decisions for the user
+
+- IV:28–31 *bṯ*: "be ashamed" (DULAT; `בּוֹשׁ`, Athtart rebukes Baal for beating a captive) or "scatter (him)!" (Athtart
+  urges him on; the cognate would be lost; cf. Ps 89:11 `פִּזַּרְתָּ אוֹיְבֶיךָ`).
+- IV:32 *b ʿlm*: "Baal shall reign" (the usual reading) or "he shall reign forever".
+- III:22 *mlkt*: "you reigned" (`מָלַכְתָּ`) or CUC's "queen".
+- I:26 *tʿny*: "you shall answer" (parallel to I:28 *ank ʿny*) or DULAT's *ʿnw* D "humiliate" (the gods are cowed).
+
+### Progress log
+
+- Drafted column by column (I, II–III, IV), each written to the file and checked at once (`fill`, `verify 1.2`,
+  `check_bible_quotes.py`). The checker caught one misquote (Deut 28:22 `וּבַדַּלֶּקֶת וּבַחַרְחֻר`, quoted from memory),
+  one reference read as Genesis, and five quotations written without a reference (Ps 19:3, Isa 58:7, 14:1, 30:26, 2 Kgs
+  3:16): all printed and fixed.
+- Pass (a) fidelity: brackets re-checked against CUC (I:14 `(אל) תו[ך`, not an invented `אל`); IV:6 `(עוד)` marked as
+  an addition; I:13–14 corrected from narrative to Yam's command (`צאו לדרך … אז את פניכם / תתנו נא`), so that the
+  execution (I:19–20) copies it.
+- Pass (b) consistency: the parallels with 1.3–1.6 (`pars`) copied; new Hebrew words grepped (`grep --all`): `זינק` was
+  1.4's (so *rqṣ* `קפץ`), `גב` is *bmt*'s (so *gb* (II) in 1.1 `שִׁדְרָה`), `התכווצו חוליות` taken from 1.3/1.4;
+  cross-corpus matches compatible (Gilgameš's `גרזן` *ḫaṣṣinnu*; Maqlû's `שדרה` *eṣenṣēru*).
+- Pass (c) Hebrew: `translation-1.2.rtl.md` read through; quotation marks balanced; no vav-consecutive.
+- Final: `build`; `check_bible_quotes.py` on the three files 0 problems; `verify 1.2 --strict`: 132/132, **2 problems**,
+  both verifier false positives (Proposals 1–2), left unbent as the brief requires; 0 repeated-line differences.
+
+### The text on its own terms
+
+- **Kingship needs a house** (III:7–11, 19): El orders a palace for Yam with the words later used for Baal's; ʿAṯtar's
+  complaint is that he has none – every candidate for the throne needs a house and a wife (III:22).
+- **The sun as the voice of order** (III:15–18): Šapšu, who sees everything, warns the pretender in the name of El – the
+  same speech she will make to Mot (1.6 VI:22–29).
+- **Diplomacy among gods** (I:11–38): the sea sends an embassy with written tablets, forbids it to bow, and demands the
+  surrender of a god "and his attendant"; the assembly is cowed, El yields "your slave is Baal".
+- **Messengers are inviolable** (I:38–42): Baal's rage is held back by Anat and Athtart: "between his shoulders is the
+  word of his lord" – the ancient law of envoys.
+- **The young god alone against the assembly** (I:24–28): "lift your heads, gods … and I will answer the messengers".
+- **Weapons that obey their names** (IV:11–25): the craftsman names the clubs with commands, and the second, "Expeller",
+  does what its name says; the first blow fails, the second succeeds – the pattern of trial and triumph.
+- **The sea defeated by a storm god** (IV:22–27): Yam collapses, his joints shrink, his frame sags; the victor drags and
+  "finishes" him – the battle the Bible remembers as God's rebuke of the sea.
+- **Restraint after victory** (IV:28–31): Athtart rebukes Baal: "shame! he is our captive" – a captive king is not killed
+  at will.
+- **Kingship by acclamation** (IV:32): "Yam is dead! Baal shall reign!" – the cry that makes a king.
+- **Eternal kingship** (IV:10): "you will take your eternal kingship, your rule of all generations" – the formula of the
+  divine king.
+
+### Key parallels
+
+- IV:10 ↔ Ps 145:13 `מַלְכוּתְךָ מַלְכוּת כָּל-עֹלָמִים וּמֶמְשַׁלְתְּךָ בְּכָל-דּוֹר וָדֹר` (Cassuto) and Exod 15:18 `יְהוָה
+  יִמְלֹךְ לְעֹלָם וָעֶד` – the same pair, after a victory over the sea.
+- IV:9 ↔ Ps 92:10 `כִּי הִנֵּה אֹיְבֶיךָ יְהוָה כִּי-הִנֵּה אֹיְבֶיךָ יֹאבֵדוּ` – the same stair-like line ("now your enemy …
+  now …").
+- IV:28 (and I:24) ↔ Nah 1:4 `גּוֹעֵר בַּיָּם וַיַּבְּשֵׁהוּ`, Ps 104:7, 18:16, 106:9 – *gʿr* is `גָּעַר`; in the Bible God rebukes
+  the sea, here a goddess rebukes the victor.
+- IV:32 ↔ Ps 93:1–4 (`יְהוָה מָלָךְ` after `נָשְׂאוּ נְהָרוֹת … קוֹלָם`), Ps 29:10 `וַיֵּשֶׁב יְהוָה מֶלֶךְ לְעוֹלָם` – kingship
+  after the victory over the waters.
+- IV:27 ↔ Hab 3:8 `הֲבִנְהָרִים חָרָה יְהוָה … אִם בַּיָּם עֶבְרָתֶךָ` – the pair river // sea as God's enemy, as Yam //
+  Judge Nahar.
+- IV:17 ↔ Qoh 10:18 `יִמַּךְ … יִדְלֹף` – both verbs of the line.
+- IV:14 ↔ Zech 13:6 `בֵּין יָדֶיךָ`; IV:22 ↔ Deut 6:8 `בֵּין עֵינֶיךָ`.
+- I:32 ↔ Ps 104:4 `מְשָׁרְתָיו אֵשׁ לֹהֵט`, Ps 57:5 `וּלְשׁוֹנָם חֶרֶב חַדָּה` – fiery messengers, tongues like swords.
+- I:14 ↔ Isa 14:13 `הַר מוֹעֵד`, Ps 82:1 `בַּעֲדַת-אֵל`; I:23 ↔ Job 1:6 (the assembly and a foreign envoy).
+- I:37–38 ↔ 2 Sam 8:2 `נֹשְׂאֵי מִנְחָה`, 1 Kgs 5:1 – the vassal's tribute, `מִנְחָה`.
+- IV:29 ↔ Ps 68:19 `שָׁבִיתָ שֶּׁבִי` (with `לָרֹכֵב בָּעֲרָבוֹת`, Ps 68:5).
+
+### Lines shared with other tablets
+
+- Copied: III:2–3 (= 1.3 IV:34–36, 1.1 III:19–21); III:4–6 (= 1.4 IV:20–26, §6.2, §6.7, §6.3; masculine); III:10–11 (=
+  1.4 V:51–57); III:17–18 (= 1.6 VI:26–29); III:15 (`שמע אֵפוֹא`, = 1.6 VI:23); III:19 (§6.12, ~ 1.3 IV:47–48); IV:13, 20
+  (`מִכֵּס שררתו` = 1.3 IV:3); I:4, IV:28, 31 (§6.6).
+- Differences justified in the entries: III:5 *ḏl* (the tablet's form) rendered as *ḏd* `מערת`; III:4 masculine `נתן את
+  פניו` (the verifier's regex rejects the final nun: Proposal 3); I:15, I:31 the prohibitive `תשתחוו` (as 1.3 III:10, 1.4
+  VIII:28); III:17 divides the lines differently from 1.6 VI:26–28, the Hebrew is the same.
+
+### Proposals for the shared renderings
+
+1. **Verifier, RESERVED `דְּמוּת`:** the gate catches `שְׁדֵמוֹת` (I:43, *šdmt*) as ש־ + `דמות` – a homograph; the gate
+   should exclude `שדמות` (or not take ש as a prefix before `דמות`).
+2. **Verifier, the `בַּעַל` licence:** CUC splits *bʿlm* as *b ʿlm* at IV:32, so `בעל` is reported unlicensed; the licence
+   check could join a lone *b* with the next word.
+3. **Verifier, FORMULAS:** §6.2's regex `נתנ?` rejects the masculine singular `נתן` (final nun; 1.2 III:4, 1.1 III:21),
+   and §4.2's `מלאכ` rejects the singular `מלאך` (final kaf; I:41–42): `נת[נן]`, `מלא[כך]`. Both marked
+   `[סטייה מן הנוסחה]` meanwhile.
+4. ***ġly*** has three renderings: 1.3 I:1 `*תִּבּוֹל*`, 1.6 V:17 `*קְמִילָה*`, here `הִשְׁפִּיל` (the heads "droop"). One
+   word for all: `הִשְׁפִּיל` fits 1.2; for 1.3 / 1.6 a neutral `*נָבַל*`? – the coordinator decides.
+5. **New corpus rows**: *ygrš* `יַגְרֻשׁ`, *aymr* `אַיַּמַּר` (names); *grš* `גֵּרֵשׁ`; *mr(r)* `הָדַף`; *ṣmd* (n.) `קַרְדֹּם`
+   (unitalicized); *nḥt* D `הִנְחִית`; *pʿr* `הִכְרִיז`; *rqṣ* `קָפַץ`; *hlm* `הָלַם`; *mk* `מָךְ`; *dlp* `דָּלַף`; *tmn*
+   `תְּמוּנָה`; *prsḥ* `קָרַס`; *qṯ* `סָחַב`; *bṯ* `בּוֹשׁ`; *šby* `שָׁבוּי`; *gʿr* `גָּעַר`; *ġly* (see 4); *zbl* (II)
+   `נְסִיכוּת`; *amr* (n.) `אֹמֶר`; *argmn* `מַס`; *mnḥy* `מִנְחָה`; *asr* `אָסִיר`; *mšḫṭ* `גַּרְזֶן`; *šdmt* `שְׁדֵמָה`; *lṭš*
+   `לָטַשׁ`; *šrr* `שׁוֹרֵר`; *ṯʾr* `*הִתְיַצֵּב*`; *ul* `אוּל`.
+
+### Lessons for the guidelines
+
+- Columns of a tablet are not always in story order (1.2: III → I → IV): read the whole tablet and the parallels before
+  fixing who speaks to whom; a command misread as narrative (I:13–14) is caught only by comparing it with its execution.
+- A verifier licence or gate should read the tablet's word, not CUC's tokenization (*b ʿlm*), and a homograph test must
+  include the prefixed forms (`שדמות`).
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
+
+### Parallels index (KTU 1.1)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| II:11 | […]⸢x⸣ . špm . ʿdb | […]… שְׁפָיִים, מתקן | `אֶפְתַּח עַל שְׁפָיִים נְהָרוֹת` (ישעיהו מא:יח) | cognate | *šp* הוא `שְׁפִי`, הגבעה החשופה. |
+| III:8 | št . l skt . ⸢n⸣ | שִׂית לַסֻּכָּה … | `יֵשְׁבוּ בַסֻּכָּה לְמוֹ-אָרֶב` (איוב לח:מ) | cognate | `סֻכָּה` כמאורת החיה, כמו ב־DULAT. |
+| IV:4 | ṣḥ . il . yṯb . b ⸢m⸣[rzḥ] | צְוַח אל אֵל, היושב במ[רזח] | `אַל תָּבוֹא בֵּית מַרְזֵחַ` (ירמיהו טז:ה) | cognate | `מַרְזֵחַ`, אותה מלה (שם – בית האבל). |
+| IV:8 | b ʿpr . ḫbl ṭtm . ⸢x⸣ | בעפר, *חורבות* טיט … | `וַיַּעֲלֵנִי מִבּוֹר שָׁאוֹן מִטִּיט הַיָּוֵן` (תהלים מ:ג) | cognate | *ṭt* הוא `טִיט`. |
+| IV:11 | k mll . k ḥṣ . tus⸢p⸣ | כְּ*פסולת*, כחצץ יֵאָסֵף | `וַיַּגְרֵס בֶּחָצָץ שִׁנָּי` (איכה ג:טז) | cognate | *ḥṣ* הוא `חָצָץ`. |
+| IV:12 | tgr . il . bnh . ṯr . | הִתְגָּרָה אֵל (ב)בנו, השור; | `וְאַל תִּתְגָּר בָּם מִלְחָמָה` (דברים ב:ט) | cognate | *gry* tD הוא `הִתְגָּרָה`. |
+| IV:20 | šmk . mdd . i[l] | את שמך: חביב אֵ[ל]! | `וְשֵׁם הַשֵּׁנִי מֵידָד` (במדבר יא:כו) | equivalent | שם אישי מאותו שורש (קאסוטו). |
+| V:10 | [ṯr il] ⸢k⸣ trks | [השור, אֵ]לך, תרכוס | `וְיִרְכְּסוּ אֶת הַחֹשֶׁן מִטַּבְּעֹתָו` (שמות כח:כח) | cognate | *rks* הוא `רָכַס`, "לקשור". |
+| V:13 | [at zd] rq . gb | [אתה …]… גֵּב | `עָשֹׂה הַנַּחַל הַזֶּה גֵּבִים גֵּבִים` (מלכים ב ג:טז) | cognate | *gb* "בור" הוא `גֵּב`. |
+| V:27 | […]⸢t⸣ . l tzd . l tptq | […]… לא תָזִיד, לא *תשיג* | `וַיָּזֶד יַעֲקֹב נָזִיד` (בראשית כה:כט) | cognate | *zd* "לרתוח" הוא `זִיד`. |
+
+### Parallels index (KTU 1.2)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| I:3 | ⸢a⸣t . ⸢y⸣pʿt . ⸢b a/r⸣ | אתה הוֹפַעְתָּ ב… | `הוֹפִיעַ מֵהַר פָּארָן` (דברים לג:ב) | cognate | *ypʿ* הוא `הוֹפִיעַ`, הופעת האל. |
+| I:11 | ⸢m⸣lakm . ylak . ym . […] | מלאכים שִׁיגֵּר יָם […] | `וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים לְפָנָיו` (בראשית לב:ד) | cognate | ראו `../renderings.md` §4.2: `מַלְאָךְ` במובנו הראשון, "שליח". |
+| I:12 | [b] ʿlṣ ʿlṣm . npr . š⸢m⸣[m] | [ב]עליצת עליצים, *פּוֹרֵחַ* השמי[ם] | `עָלַץ לִבִּי בַּיהוָה` (שמואל א ב:א) | cognate | *ʿlṣ* הוא `עָלַץ`. |
+| I:14 | ⸢a⸣l . ttn . ʿm . pḫr . mʿd . t[k . ġr . ll . l pʿn . il] | תתנו נא אל אספת המועד, (אל) תו[ך הר לַל; לרגלי אֵל] | `וְאֵשֵׁב בְּהַר מוֹעֵד בְּיַרְכְּתֵי צָפוֹן` (ישעיהו יד:יג) | cognate | `מוֹעֵד` כאספת האלים על ההר |
+| I:14 | ⸢a⸣l . ttn . ʿm . pḫr . mʿd . t[k . ġr . ll . l pʿn . il] | תתנו נא אל אספת המועד, (אל) תו[ך הר לַל; לרגלי אֵל] | `אֱלֹהִים נִצָּב בַּעֲדַת-אֵל` (תהלים פב:א) | cognate | מועצת האלים. |
+| I:19 | ⸢b⸣n . dgn . arṯm . pḏh . tbʿ . ġlmm . l yṯb . ⸢i⸣[dk . pnm] | [בֶּ]ן דָּגָן, ואירש את פָּזוֹ!" יצאו לדרך העלמים, לא ישבו; א[ז את פניהם] | `הַנֶּחֱמָדִים מִזָּהָב וּמִפַּז רָב` (תהלים יט:יא) | cognate | *pḏ* הוא `פָּז`. |
+| I:21 | yṯb . bn . qdš . l ṯr {. bʿl . ʿl . i}m . bʿl . qm . ʿl . il . hlm | ישבו בני קודש לִפְרוֹס (לחם); בעל קָם על אֵל. אֲזַי | `וְהוּא עֹמֵד עֲלֵיהֶם תַּחַת הָעֵץ וַיֹּאכֵלוּ` (בראשית יח:ח) | equivalent | העומד "על" הסועדים, משרת אותם; כאן בעל עומד "על" אֵל בסעודה. |
+| I:23 | tġly . ilm . rišthm . l ẓr . brkthm . w l kḥṯ | הִשְׁפִּילוּ האֵלִים את ראשיהם על גו ברכיהם, ועל כס | `וַיָּבֹאוּ בְּנֵי הָאֱלֹהִים לְהִתְיַצֵּב עַל יְהוָה` (איוב א:ו) | equivalent | אספת האלים לפני האל העליון, ושליח זר בתוכה; כאן האלים אינם מתייצבים אלא משפילים ראש. |
+| I:24 | zblhm . b hm . ygʿr bʿl . lm . ġltm . ilm . rišt | נסיכותם. בם גער בעל: "למה הִשְׁפַּלְתֶּם, אֵלִים, את ראשיכם | `וַיִּגְעַר בְּיַם-סוּף וַיֶּחֱרָב` (תהלים קו:ט) | cognate | `גָּעַר ב־`, אותו פועל ואותה מלת יחס; אבל כאן בעל גוער באלים, ובמקרא האל גוער בים (ראו IV:28). |
+| I:25 | km . l ẓr . brktkm . w ln . kḥṯ . zblkm . aḥd | על גו ברכיכם, ועל כס נסיכותכם? כְּאֶחָד | `כָּל הַקָּהָל כְּאֶחָד` (עזרא ב:סד) | cognate | *aḥd* כתואר פועל, "כולם יחד". |
+| I:27 | šu . ilm . raštkm . l ẓr . brktkm . ln kḥṯ | שאו, אֵלִים, את ראשיכם מעל גו ברכיכם, מעל כס | `שְׂאוּ שְׁעָרִים רָאשֵׁיכֶם` (תהלים כד:ז) | equivalent | "שאו … ראשיכם": אותה פנייה בציווי, אל שערים. |
+| I:32 | [ṯn]y . dʿthm . išt . ištm . yi⸢t⸣mr . ḥrb . lṭšt | [שנ]ו את דעתם. אש, שתי אשות נִרְאוּ, חרב לטושה – | `עֹשֶׂה מַלְאָכָיו רוּחוֹת מְשָׁרְתָיו אֵשׁ לֹהֵט` (תהלים קד:ד) | cognate | השליחים האלוהיים כאש |
+| I:32 | [ṯn]y . dʿthm . išt . ištm . yi⸢t⸣mr . ḥrb . lṭšt | [שנ]ו את דעתם. אש, שתי אשות נִרְאוּ, חרב לטושה – | `וּלְשׁוֹנָם חֶרֶב חַדָּה` (תהלים נז:ה) | cognate | הלשון כחרב |
+| I:32 | [ṯn]y . dʿthm . išt . ištm . yi⸢t⸣mr . ḥrb . lṭšt | [שנ]ו את דעתם. אש, שתי אשות נִרְאוּ, חרב לטושה – | `חַרְבּוֹ יִלְטוֹשׁ` (תהלים ז:יג) | cognate | *lṭš* הוא `לָטַשׁ`. |
+| I:36 | [w yʿ]⸢n⸣ . ṯr . abh . il . ʿbdk . bʿl . y ymm . ʿbdk . bʿl | [וענה] השור, אביו אֵל: "עבדך בעל, הוֹ ים, עבדך בעל, | `וְהָיָה לְךָ עֶבֶד עוֹלָם` (דברים טו:יז) | cognate | העבד הנמסר לאדון; כאן אבי האלים מוסר את בנו לעבדות. |
+| I:37 | [nhr]⸢m⸣ . bn . dgn . a⸢s⸣rkm . hw . ybl . argmnk . k ilm | [נהר]; בן דָּגָן אֲסִירְכֶם! הוא יוביל את מִסְּךָ כאֵלִים, | `וַתְּהִי מוֹאָב לְדָוִד לַעֲבָדִים נֹשְׂאֵי מִנְחָה` (שמואל ב ח:ב) | equivalent | העבד הנושא מס לאדונו; אותו צמד, עבד // מנחה (I:36–38). |
+| I:38 | [xxxx] ⸢y⸣bl . k bn . qdš . mnḥyk . ap . anš . zbl . bʿ⸢l⸣ | […] יוביל, כבני קודש – מנחותיך!" אַף נֶאֱנַשׁ הנסיך בעל; | `מַגִּשִׁים מִנְחָה וְעֹבְדִים אֶת שְׁלֹמֹה` (מלכים א ה:א) | cognate | *mnḥy* הוא `מִנְחָה` במובן המס של הנתין. |
+| I:43 | [xxxxx]⸢x⸣ . ap . anš . zbl . bʿl . šdmt . b ⸢gp⸣[nm . xxxxx] | […]… אַף נֶאֱנַשׁ הנסיך בעל; שְׁדֵמוֹת בג[פנים …] | `כִּי שַׁדְמוֹת חֶשְׁבּוֹן אֻמְלָל גֶּפֶן שִׂבְמָה` (ישעיהו טז:ח) | cognate | `שַׁדְמוֹת` עם גפן, כמו כאן. |
+| III:13 | […]ḥrḥrt⸢m⸣ . ⸢w dš⸣[x]n [xxx] iš⸢t aš⸣[t] ⸢h⸣[xxx] išt | […] *חַרְחֻרוֹת*, ו…[…] אש, אָשִׁ[ית] …[…] אש | `וּבַדַּלֶּקֶת וּבַחַרְחֻר` (דברים כח:כב) | cognate | `חַרְחֻר`, "להט", מאותו שורש מוכפל. |
+| III:18 | [ksa .] ⸢m⸣lkk . l yṯbr . ḫ⸢ṭ⸣ [.] ⸢mṯpṭk⸣ . w yʿ⸢n⸣ . ⸢ʿṯ⸣[t]⸢r⸣ . ⸢d⸣[m] . ⸢kx⸣ | [כיסא] מלכותך, אכן ישבור שרביט משפטך!" וענה עַתְּתַר … … | `וְכֹנַנְתִּי אֶת כִּסֵּא מַמְלַכְתּוֹ עַד עוֹלָם` (שמואל ב ז:יג) | equivalent | כיסא הממלכה; כאן האיום להפוך אותו (ראו 1.6 VI:28). |
+| IV:5 | [p]⸢i⸣tm . l arṣ . ypl . ulny . w l . ʿpr . ʿẓm⸢n⸣y | [פא]תיים; לארץ יפול אוּלִי, ולעפר עָצְמִי. | `וְיִרְמֹס לָאָרֶץ חַיָּי וּכְבוֹדִי לֶעָפָר יַשְׁכֵּן` (תהלים ז:ו) | cognate | הצמד ארץ // עפר, ובו הכבוד שנופל (קאסוטו). |
+| IV:8 | lk . l zbl . bʿl . ṯnt . l rkb . ʿrpt . ht . ibk | לך, הוֹ הנסיך בעל, שָׁנִיתִי, הוֹ רוכב העננים: עַתָּה אויבך, | `לָרֹכֵב בָּעֲרָבוֹת` (תהלים סח:ה) | equivalent | תואר האל הרוכב (`../renderings.md` §6.6). |
+| IV:9 | bʿlm . ht . ibk . tmḫṣ . ht . tṣmt . ṣrtk {x x x x} | בעל, עתה אויבך תמחץ, עתה תצמית צרתך! | `כִּי הִנֵּה אֹיְבֶיךָ יְהוָה כִּי-הִנֵּה אֹיְבֶיךָ יֹאבֵדוּ` (תהלים צב:י) | cognate | אותו מבנה, "הנה אויביך … הנה אויביך", בתפילה לאל. |
+| IV:10 | tqḥ . mlk . ʿlmk . drkt . dt . drdrk {ṯr} | תיקח מלכות עולמך, שררת דור דוריך!" | `מַלְכוּתְךָ מַלְכוּת כָּל-עֹלָמִים וּמֶמְשַׁלְתְּךָ בְּכָל-דּוֹר וָדֹר` (תהלים קמה:יג) | cognate | אותו צמד, מלכות עולם // שלטון דור ודור (קאסוטו) |
+| IV:10 | tqḥ . mlk . ʿlmk . drkt . dt . drdrk {ṯr} | תיקח מלכות עולמך, שררת דור דוריך!" | `יְהוָה יִמְלֹךְ לְעֹלָם וָעֶד` (שמות טו:יח) | cognate | סוף שירת הים: המלך שניצח את הים מולך לעולם. |
+| IV:11 | kṯr ṣmdm . ynḥt . w ⟨ḫss⟩ ypʿr . šmthm . šmk at | כּוֹתַר הִנְחִית קרדומים, ו⟨חַסִּיס⟩ הכריז את שמותיהם: "שמך, אתה – | `וַיִּקְרָא הָאָדָם שֵׁמוֹת לְכָל הַבְּהֵמָה` (בראשית ב:כ) | divergence | נתינת שמות כמעשה של שליטה; כאן האומן נותן שם לנשק, והשם קובע את מעשהו. |
+| IV:14 | ⸢r⸣ . b uṣbʿth . hlm . ktp . zbl . ym . bn ydm | מאצבעותיו! הלוֹם את כתף הנסיך ים, בין ידי | `מָה הַמַּכּוֹת הָאֵלֶּה בֵּין יָדֶיךָ` (זכריה יג:ו) | cognate | "בין הידיים" הוא החזה: מקום המכה |
+| IV:14 | ⸢r⸣ . b uṣbʿth . hlm . ktp . zbl . ym . bn ydm | מאצבעותיו! הלוֹם את כתף הנסיך ים, בין ידי | `וַיַּךְ אֶת יְהוֹרָם בֵּין זְרֹעָיו` (מלכים ב ט:כד) | equivalent |  |
+| IV:17 | ⸢n⸣hr . ʿz . ym . l ymk . l tnġṣn [.] pnth . l ydlp | נהר. עז ים, לא מָךְ; לא התכווצו חוליותיו, לא דָּלְפָה | `בַּעֲצַלְתַּיִם יִמַּךְ הַמְּקָרֶה וּבְשִׁפְלוּת יָדַיִם יִדְלֹף הַבָּיִת` (קהלת י:יח) | cognate | שני הפעלים של השורה, *mk* `מָךְ` ו־*dlp* `דָּלַף`, באותו פסוק: התמוטטות של מבנה |
+| IV:17 | ⸢n⸣hr . ʿz . ym . l ymk . l tnġṣn [.] pnth . l ydlp | נהר. עז ים, לא מָךְ; לא התכווצו חוליותיו, לא דָּלְפָה | `דָּלְפָה נַפְשִׁי מִתּוּגָה` (תהלים קיט:כח) | cognate |  |
+| IV:18 | ⸢tm⸣nh . kṯr . ṣmdm . ynḥt . w ypʿr . šmthm | תמונתו. כּוֹתַר הִנְחִית קרדומים, והכריז את שמותיהם: | `וּתְמוּנָה אֵינְכֶם רֹאִים זוּלָתִי קוֹל` (דברים ד:יב) | cognate | *tmn* הוא `תְּמוּנָה`, "צורה". |
+| IV:22 | d . zbl ym . bn . ʿnm . ṯpṭ . nhr . yprsḥ ym | הנסיך ים, בין עיני שופט נהר! יקרוס ים | `וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ` (דברים ו:ח) | equivalent | "בין העיניים", המצח (קאסוטו) |
+| IV:22 | d . zbl ym . bn . ʿnm . ṯpṭ . nhr . yprsḥ ym | הנסיך ים, בין עיני שופט נהר! יקרוס ים | `כָּרַע בֵּל קֹרֵס נְבוֹ` (ישעיהו מו:א) | cognate | אל שקורס. |
+| IV:25 | ⸢ym⸣ . bn . ʿnm . ṯpṭ . nhr . yprsḥ . ym . yql | ים, בין עיני שופט נהר. קרס ים, נפל | `אַתָּה פוֹרַרְתָּ בְעָזְּךָ יָם שִׁבַּרְתָּ רָאשֵׁי תַנִּינִים עַל-הַמָּיִם` (תהלים עד:יג) | divergence | האל מנצח את הים ושובר את ראשיו; כאן בעל הולם בקדקד ים. |
+| IV:27 | yqṯ bʿl . w yšt . ym . ykly . ṯpṭ . nhr | סחב בעל ושׁת את ים; כִּלָּה את שופט נהר. | `גּוֹעֵר בַּיָּם וַיַּבְּשֵׁהוּ וְכָל הַנְּהָרוֹת הֶחֱרִיב` (נחום א:ד) | equivalent | האל מנצח את הים ואת הנהרות |
+| IV:27 | yqṯ bʿl . w yšt . ym . ykly . ṯpṭ . nhr | סחב בעל ושׁת את ים; כִּלָּה את שופט נהר. | `הֲבִנְהָרִים חָרָה יְהוָה אִם בַּנְּהָרִים אַפֶּךָ אִם בַּיָּם עֶבְרָתֶךָ` (חבקוק ג:ח) | equivalent | הצמד נהר // ים כיריבו של האל, כמו "ים // שופט נהר". |
+| IV:28 | b . šm . tgʿrm . ʿṯtrt . bṯ . l aliyn . ⸢b⸣[ʿl] | בַּשֵּׁם גערה עַתְּתַרְת: "בּוֹשׁ, הוֹ בעל האדיר! | `גּוֹעֵר בַּיָּם וַיַּבְּשֵׁהוּ` (נחום א:ד) | cognate |  |
+| IV:28 | b . šm . tgʿrm . ʿṯtrt . bṯ . l aliyn . ⸢b⸣[ʿl] | בַּשֵּׁם גערה עַתְּתַרְת: "בּוֹשׁ, הוֹ בעל האדיר! | `מִן-גַּעֲרָתְךָ יְנוּסוּן` (תהלים קד:ז) | cognate |  |
+| IV:28 | b . šm . tgʿrm . ʿṯtrt . bṯ . l aliyn . ⸢b⸣[ʿl] | בַּשֵּׁם גערה עַתְּתַרְת: "בּוֹשׁ, הוֹ בעל האדיר! | `מִגַּעֲרָתְךָ יְהוָה מִנִּשְׁמַת רוּחַ אַפֶּךָ` (תהלים יח:טז) | cognate | *gʿr* הוא `גָּעַר`, ובמקרא האל גוער בים; כאן האלה גוערת במנצח – |
+| IV:28 | b . šm . tgʿrm . ʿṯtrt . bṯ . l aliyn . ⸢b⸣[ʿl] | בַּשֵּׁם גערה עַתְּתַרְת: "בּוֹשׁ, הוֹ בעל האדיר! | `מִגַּעֲרָתְךָ יְהוָה מִנִּשְׁמַת רוּחַ אַפֶּךָ` (תהלים יח:טז) | divergence |  |
+| IV:29 | bṯ . l rkb . ʿrpt . k šbyn . z⸢b⸣[l . ym . k] | בּוֹשׁ, הוֹ רוכב העננים! כי שבוינו הנס[יך ים, כי] | `עָלִיתָ לַמָּרוֹם שָׁבִיתָ שֶּׁבִי` (תהלים סח:יט); `לָרֹכֵב בָּעֲרָבוֹת` (תהלים סח:ה) | cognate | האל המנצח והשבי שלו, באותו מזמור שבו . |
+| IV:32 | ym . l mt . b ʿlm . yml[k] | ים אכן מֵת! בעל ימלו[ך]! | `וַיֵּשֶׁב יְהוָה מֶלֶךְ לְעוֹלָם` (תהלים כט:י) | cognate | המלך היושב על המים, אחרי שקולו גבר על המים הרבים |
+| IV:32 | ym . l mt . b ʿlm . yml[k] | ים אכן מֵת! בעל ימלו[ך]! | `יְהוָה מָלָךְ גֵּאוּת לָבֵשׁ` (תהלים צג:א); `נָשְׂאוּ נְהָרוֹת יְהוָה נָשְׂאוּ נְהָרוֹת קוֹלָם` (תהלים צג:ג); `אַדִּיר בַּמָּרוֹם יְהוָה` (תהלים צג:ד) | cognate | ושם ,  – מלכות האל אחרי ניצחונו על הנהרות והים. |
+| IV:33 | ḥm . l šrr . w ⸢y⸣[ʿn] | חום לשורר! ו[ענה] | `לְמַעַן שׁוֹרְרָי` (תהלים ה:ט) | cognate | *šrr* הוא `שׁוֹרֵר`, "אויב, אורב". |
 
 ### Parallels index (KTU 1.3)
 | Line | Source | Hebrew rendering | Bible | Tag | Comment |

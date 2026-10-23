@@ -479,6 +479,13 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 - **Kept, left for the user:** VI:48 *mtm* `מְתִים` "men" (not `מֵתִים`); I:48 *ylḥn* `*יַרְוֶה*`; V:9 *kr* `*חָם*`.
 - **New one-lemma renderings of 1.6:** *ʿn* "furrow" `מַעֲנָה` (Ps 129:3; CUC's parse "Anat" rejected), *iy* `אַיֵּה`, *trmt* `תְּרוּמָה`, *ḏʿt* `מוֹדַעַת`, *tġzyt* `רִצּוּי`, *nsʿ* `נָסַח`, *ngḥ* `הִתְנַגַּח` (full list in the project section).
 
+**Round 4 run 1, translator 3 (KTU 1.2, 1.1), merged by the coordinator 2026-10-23** (details: `1-מחזור-בעל/project.md`, "KTU 1.1" / "KTU 1.2" → Proposals):
+- **The clubs (1.2 IV):** the names transcribed `יַגְרֻשׁ`, `אַיַּמַּר`, their verbs *grš* `גָּרֵשׁ`, *mr(r)* `הֲדוֹף`; one formula for both naming speeches and one for both executions; *ṣmd* `קַרְדֹּם`, *nḥt* `הִנְחִית`, *pʿr* `הִכְרִיז`, *hlm* `הָלַם`. Šapšu's threat (1.2 III:17–18) copies 1.6 VI:26–29; Athtar copies 1.6 I:54–65; the throne's *l* "from" / "on" as in 1.3 / 1.6. *ym l mt* = `ים אכן מֵת!`; *bʿlm ymlk* = `בעל ימלוך!`; *ʿbdk bʿl* = `עבדך בעל`.
+- **Collisions settled:** *gb* (II) "back" takes its cognate `גַּב` (1.1 V:28; the translator's `שִׁדְרָה` changed), and *bmt* keeps `גַּב` by sense (§5.4): an accepted split, two lemmas, one back. *ġly*: the wilting sense = root קמל (1.3 I:1 changed `*תִּבּוֹל*` → `*תִּקְמֹל*`; 1.6 V:17 `*קְמִילָה*`), the heads lowered (1.2 I:23) `הִשְׁפִּיל` – split by sense. *rqṣ* `קָפַץ` (`זִנֵּק` is *tġḏ*'s).
+- **Tool fixes:** formula §6.2 accepts the final nun (`נת[נן]`), §4.2 the final kaf (`מלא[כך]`), §6.3 the 2nd-person `תשתחוו`; the `דְּמוּת` gate is licensed by *šdmt* ("terraces", `שְׁדֵמוֹת`), the `בַּעַל` gate by CUC's split *b ʿlm*.
+- **Left for the user:** 1.2 IV:28–31 *bṯ* (`בּוֹשׁ` or "scatter"); IV:32 (`בעל ימלוך` or "he will reign forever"); III:22 *mlkt*; I:26 *tʿny*; 1.1 IV:14 *yw*; 1.1 V:8/21 *l ydʿt*.
+- **New one-lemma renderings of 1.1–1.2:** *mk* `מָךְ`, *dlp* `דָּלַף` (Eccl 10:18), *tmn* `תְּמוּנָה`, *qṯ* `סָחַב`, *gʿr* `גָּעַר`, *zbl* (II) `נְסִיכוּת`, *amr* (n.) `אֹמֶר`, *argmn* `מַס`, *mnḥy* `מִנְחָה`, *šrr* `שׁוֹרֵר`, *mdd il* `חֲבִיב אֵל`, *ʾsr* `אָסַר`, *rks* (vb) `רָכַס`, *gb* (I) "pit" `גֵּב`, *ġb* `*בּוֹר*` (full list in the project sections).
+
 ## 11. The fifth-day dossier (`3-תיק-היום-החמישי/`, coordinator, 2026-10-23)
 
 Short excerpts from six other cultures, each translated from its own language (the base texts: the dossier's
