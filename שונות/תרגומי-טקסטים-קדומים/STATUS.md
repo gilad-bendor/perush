@@ -8,6 +8,8 @@ Last updated: 2026-10-23 (Round 3 complete; its cross-corpus splits settled; Rou
 
 ## 1. Starting a session (local or Claude Cloud)
 
+**To run a whole round from one prompt** (Claude Cloud): start a session with `ancient-translations: orchestrate Round <N>`. It becomes the parent (title `Round<N>: …`) and runs each run as its own child session (`Round<N>/Run<M>: …`), one at a time, as guidelines §5.1a describes (reports in `reports/round-<N>/`); you hear from it at the end. To run a single run yourself instead: `ancient-translations: Round <N>, run <M>`.
+
 1. **Sync with `main`** (a resumed cloud session wakes up on an old checkout: the session operator's report says so).
 2. **Restore the git-ignored sources:** most raw sources are not in git, since the repo is public (guidelines §8).
    ```
