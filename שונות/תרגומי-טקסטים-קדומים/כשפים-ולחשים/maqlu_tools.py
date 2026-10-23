@@ -239,6 +239,9 @@ RESERVED = [
     (W + r"(?:פח|כפח|הפח|בפח)" + E, r"gišparr", "פַּח only for gišparru (Etana, wisdom)"),
     (W + r"(?:רשת|כרשת|הרשת|ברשת|רשתה|רשתו)" + E, r"šēt|šētu|šēti|šēta|šēssa|šētam", "רֶשֶׁת only for šētu (Etana, wisdom)"),
     (W + r"(?:תועבה|תועבת)" + E, r"ikkib|anzill", "תּוֹעֵבָה only for ikkibu"),
+    (W + r"(?:קרא|קראו|קראתי|קראה|יקרא|תקרא|אקרא|נקרא|קורא|קוראת|קוראים|לקרוא|קרוא|קראת)" + E, r"\bnab[ûiâê]|\bnabi\b|\bnabû\b|ibbi|ibbû|imbû|tabbi",
+     "קָרָא only for nabû 'name' (Gilgameš; ★); šasû = צָעַק"),
+    (W + r"(?:לילית|הלילית)" + E, None, "לִילִית never (Isa 34:14 in the apparatus): lilītu = לִילִיתוּ"),
     (W + r"(?:פשר|פושר|פשרה|פתר|פותר)" + E, None, "pašāru = הִתִּיר (by sense; renderings §2.4): no פשר / פתר"),
     (W + r"(?:משפט|משפטי|משפטה|משפטו|משפטך|משפטם)" + E, r"šipṭ", "מִשְׁפָּט only for šipṭu (law corpus); dīnu = דִּין"),
 ]
@@ -266,6 +269,7 @@ TRAPS = [
     (RW + r"(?:מעשה|מעשת|מעשתי|מעשי|מעשתה|מעשים|מעשות)" + RE_, r"muštēpiš|muštepiš|muštēpišt|uštēpiš", "muštēpištu must be vocalized מְעַשָּׂה (unvocalized: 'deed'); ipšu's `מַעֲשֶׂה` too, in such a line"),
     (RW + r"(?:עשית|עשיתם|עשיתן|עשה|עשתה|עשו)" + RE_, r"tušēpiš|uštēpiš|ušēpiš|tuštēpiš|šēpiš", "the Š 'had (it) done' must be vocalized עִשִּׂית / עִשָּׂה in a line that also has the G"),
     (RW + r"(?:שרה|השרה)" + RE_, r"rubāt", "the princess must be vocalized הַשָּׂרָה ('Sarah')"),
+    (RW + r"(?:אירש|אירשו|אירשה|אירשת|אירשתם|אורשה|אורשו)" + RE_, r"\bh[iī]r|\bt?ah[iī]r|ihīr|tahīr|ḫâru|ihīrū", "ḫâru 'betroth' must be vocalized אֵרַשׂ ('inherited')"),
     (RW + r"(?:רע|רעי|רעה)" + RE_, r"\bibr|tappû|tappê|rūʾ", "'friend' must be vocalized רֵעַ / רֵעִי / רֵעָה"),
     (RW + r"שכן" + RE_, r"šakkan", "Šakkan must be vocalized שַׁכַּן"),
     (RW + r"נבו" + RE_, r"nabû|nabium", "Nabû must be vocalized נָבוּ"),

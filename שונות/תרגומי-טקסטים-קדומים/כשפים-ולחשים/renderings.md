@@ -108,7 +108,7 @@ Vocalize at the first occurrence in each file; **always** where marked ★ (they
 
 ### 2.3 The witch's acts on the victim (I 96–109, IV 13–73, VII 55–61)
 
-*bunnannû* = `תֹּאַר` (↔ שמואל א כח:יד `מַה תָּאֳרוֹ`, the necromancy at En-dor) · *mašālu* D (*umaššilū*) = `הִמְשִׁיל` [cognate] (ישעיהו יד:י `אֵלֵינוּ נִמְשָׁלְתָּ`) · *lānu* = `גִּזְרָה` · *bāltu* = `גַּאֲוָה` · *nabnītu* = `מִבְנֶה` · *gattu* = `קוֹמָה` · *lamassu* (of a person: his protective spirit, his "image") = `אֵלַת־מָגֵן` (wisdom; the note explains) · *ṣillu* = `צֵל` [cognate] (VI 55 the shadow taken from the wall; ↔ במדבר יד:ט `סָר צִלָּם`) · *paqādu* (hand over) = `הִפְקִיד` [cognate] · *aḫāzu* "marry, betroth" (*ana mīti iḫīrū*: *ḫâru* "choose a bride") — *ḫâru* = `אֵרַשׂ` (by sense; `אָרַשׂ` is *erēšu*'s false friend in the law corpus, so note it) · *nīl libbi* / *nīš libbi* "sexual drive" = `תְּשׁוּקַת הַלֵּב`? → translator's choice, noted.
+*bunnannû* = `תֹּאַר` (↔ שמואל א כח:יד `מַה תָּאֳרוֹ`, the necromancy at En-dor) · *mašālu* D (*umaššilū*) = `הִמְשִׁיל` [cognate] (ישעיהו יד:י `אֵלֵינוּ נִמְשָׁלְתָּ`) · *lānu* = `גִּזְרָה` · *bāltu* = `גַּאֲוָה` · *nabnītu* = `יְצִיר` (changed 2026-10-23: *binûtu* = `מִבְנֶה` as in Gilgameš and Enūma eliš) · *gattu* = `קוֹמָה` · *lamassu* (of a person: his protective spirit, his "image") = `אֵלַת־מָגֵן` (wisdom; the note explains) · *ṣillu* = `צֵל` [cognate] (VI 55 the shadow taken from the wall; ↔ במדבר יד:ט `סָר צִלָּם`) · *paqādu* (hand over) = `הִפְקִיד` [cognate] · *aḫāzu* "marry, betroth" (*ana mīti iḫīrū*: *ḫâru* "choose a bride") — *ḫâru* = `אֵרַשׂ` (by sense; `אָרַשׂ` is *erēšu*'s false friend in the law corpus, so note it) · *nīš libbi* "sexual drive" = `נְשִׂיאַת לֵב` (Tablet I).
 
 ### 2.4 Verbs of the ceremony against her
 
@@ -199,7 +199,7 @@ Vocalize at the first occurrence in each file; **always** where marked ★ (they
 
 | Akkadian | Hebrew |
 |---|---|
-| ÉN at the head of an incantation ★ | `קֶסֶם.` as the first word of the line (`קֶסֶם. קוֹרֵא אֲנִי לָכֶם, אֵלֵי הַלַּיְלָה,`). In the Ritual Tablet, ÉN + incipit = `(אֶת) הַקֶּסֶם "…"` (the incipit quoted in the Hebrew of its incantation). |
+| ÉN at the head of an incantation ★ | `קֶסֶם.` as the first word of the line (`קֶסֶם. צָעַקְתִּי אֲלֵיכֶם, אֵלֵי הַלַּיְלָה,`: *šasû* = `צָעַק`, Tablet I). In the Ritual Tablet, ÉN + incipit = `(אֶת) הַקֶּסֶם "…"` (the incipit quoted in the Hebrew of its incantation). |
 | TU₆ ÉN at the end ★ | ` – לַחַשׁ, קֶסֶם.` (the last words of the line). A bare closing ÉN ★ = ` – קֶסֶם.`; `(te) ÉN` = ` – קֶסֶם.` with the *te* in the apparatus. É.NU.RU (VII 177) in the apparatus. |
 | KA.INIM.MA UŠ₁₁.BUR₂.RU.DA(.KAM) ★ + material | `נֻסַּח לְהַתָּרַת רִיר: צֶלֶם …` (UŠ₁₁ is the logogram of *ruḫû* = `רִיר`; the note: "the wording for undoing witchcraft"). `ṣalam X ša Y ballu` = `צֶלֶם X הַבָּלוּל בְּ־Y` (*balālu* = `בָּלַל` [cognate]). |
 | *ina qibīt (iqbû) DN* | `בְּאִמְרַת DN` / `בָּאִמְרָה אֲשֶׁר אָמַר DN` (*qibītu* = `אִמְרָה`, wisdom). *ina amāt DN* = `בִּדְבַר DN`. |
@@ -404,3 +404,19 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
 ## 10. Merged proposals (by run)
 
 (Added by the coordinator after each translator.)
+
+### 10.1 Tablet I (2026-10-23; the coordinator's merge of `1-מקלו/project.md` § Tablet I)
+- **Accepted:** *šasû* = `צָעַק` (the performative preterite *alsīkunūši* = past `צעקתי`; `קָרָא` is reserved for *nabû* "name",
+  II 19 – now checked by script); *dabābu* noun `רִיב`, verb `דִּבֵּר`; *qû* `פִּשְׁתָּן`; *upuntu* `סֹלֶת`; *elēlu*
+  `הֵידָד`; *nubû* `נְהִי`; *sipdu* `מִסְפֵּד` [cognate]; *nēberu* `מַעֲבָר`, *kāru* `נָמֵל`, *kalû* "hold back" `כָּלָא`
+  [cognate]; *ereb šamši* `מְבוֹא הַשֶּׁמֶשׁ`; *ḫarrānu* `אוֹרַח` (Gilgameš, Etana); *nīš libbi* `נְשִׂיאַת לֵב`; *zenû* D
+  `הֶאֱנִיף`; *rimku* `טְבִילָה`, *ramāku* D `הִטְבִּיל`; *luʾʾû* `מְזֹהָם`; *mangu* `נוּקְשׁוּת`; *aklu* `לֶחֶם`;
+  *napištu* "life" `חַיִּים`; *annu* `הֵן`; *kīnu* `נֶאֱמָן`; *ṣīru* `נַעֲלֶה`; *tarbītu* `תַּרְבּוּת` [cognate]; *ḫaṭṭu*
+  `מַקֵּל` (a staff) / `שַׁרְבִיט` (a sceptre); *mimma lemnu* `כָּל רַע`; *labāṣu* `לַבָּצוּ`; *aḫḫāzu* `אַחָּזוּ`; *lilû* /
+  *lilītu* / *ardat-lilî* `לִילוּ` / `לִילִיתוּ` / `עַלְמַת־לִילוּ` (`לִילִית` never: Isa 34:14 in the apparatus, as the
+  netherworld corpus reserves it); *ḫâru* `אֵרַשׂ` always vocalized (`אירשו` reads "inherited").
+- **Accepted as a sense split:** *šēdu* in a list of hostile demons = `שֵׁדוּ` (transliterated; its cognate `שֵׁד`,
+  Deut 32:17, in the apparatus), against the protective *šēdu* = `רוּחַ־מָגֵן` of the wisdom corpus and §6.7.
+- **Changed by the coordinator:** *binûtu* = `מִבְנֶה` (Gilgameš, Enūma eliš; I 124 was `בִּנְיַן`), and *nabnītu*
+  (VII 58, 65) = `יְצִיר` instead.
+- **For the lead's next harmonization:** Ludlul I 105 renders *gerrānu* `מספד`, which is the cognate of *sipdu*.
