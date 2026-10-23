@@ -486,6 +486,13 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 - **Left for the user:** 1.2 IV:28–31 *bṯ* (`בּוֹשׁ` or "scatter"); IV:32 (`בעל ימלוך` or "he will reign forever"); III:22 *mlkt*; I:26 *tʿny*; 1.1 IV:14 *yw*; 1.1 V:8/21 *l ydʿt*.
 - **New one-lemma renderings of 1.1–1.2:** *mk* `מָךְ`, *dlp* `דָּלַף` (Eccl 10:18), *tmn* `תְּמוּנָה`, *qṯ* `סָחַב`, *gʿr* `גָּעַר`, *zbl* (II) `נְסִיכוּת`, *amr* (n.) `אֹמֶר`, *argmn* `מַס`, *mnḥy* `מִנְחָה`, *šrr* `שׁוֹרֵר`, *mdd il* `חֲבִיב אֵל`, *ʾsr* `אָסַר`, *rks* (vb) `רָכַס`, *gb* (I) "pit" `גֵּב`, *ġb* `*בּוֹר*` (full list in the project sections).
 
+**Round 4 run 1, translator 3 (KTU 1.23, 1.24, 1.114), merged by the coordinator 2026-10-23** (details: `2-מיתוסים-ולחשים/project.md`, the tablets' Proposals) – all accepted:
+- **Names (§1 additions):** `שַׁחַר וְשָׁלֵם`, `מוֹת־וָשַׂר`, `רַחְמַי`, `הִלָּל` (the New Moon; [cognate] of `הֵילֵל`, Isa 14:12), `יַבְּרְדְמַי`, `תּוּתּוּל`; the Kotharat `תַּתְקַת`, `בַּקַּעַת`, `תַּקַּעַת`, `*פְּרַבְּחַת*`, `דַּמְקַת`.
+- **1.23:14** = `טוב גַּד בחלב, *נענע* בחמאה` (*ṭb gd*, coriander; no kid, no mother: Exod 23:19 etc. [absent], the history in the apparatus). Rubrics as instructions (`שבע פעמים ייאמר …`, `(הוראה:)`).
+- **Kinship and marriage:** *ad* `אַבָּא` (apart from *ab* `אָב`); *mt* "husband" `*מְתִי*` (vocalized; one Hebrew with *mtm*); *mhr* (II) `מֹהַר` [cognate] (CUC's "warrior" rejected), *mhr* (I) `מָהִיר`; *ḫtn* `הִתְחַתֵּן`; *ṯlḫ* `שִׁלּוּחִים` [cognate] (1 Kgs 9:16); *trḫ* `אֵרַשׂ`, *mtrḫt* `מְאֹרָשָׂה` (by sense).
+- **Other one-lemma renderings:** *inr* `*גּוּר*` (apart from *klb* `כֶּלֶב`); *nyr* `נִיר` (`מָאוֹר` never); *ṯġr* `שׁוֹעֵר`; *zd* / *ḏd* "breast" `שַׁד` (always vocalized).
+- **Tool quirk (harmless):** 1.114:9 *ʿn{y}t* is not read as Anat's first occurrence, so `עֲנָת` is vocalized at 11 too.
+
 ## 11. The fifth-day dossier (`3-תיק-היום-החמישי/`, coordinator, 2026-10-23)
 
 Short excerpts from six other cultures, each translated from its own language (the base texts: the dossier's
