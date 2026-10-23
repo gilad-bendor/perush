@@ -25,9 +25,9 @@ it, after checking Göttingen's EUPT edition.
 
 | Project | Text | Base text | Lines | Status |
 |---|---|---|---|---|
-| `1-מחזור-בעל/` | **The Baal Cycle**, KTU 1.1–1.6 (Ilimilku's six tablets; the order of 1.1–1.2 is debated) | CUC v0.2.8 (KTU³), `../sources/CUC/` | 1,372 (1.1 118, 1.2 132, 1.3 258, 1.4 447, 1.5 172, 1.6 245) | in progress (Round 4 run 1) |
-| `2-מיתוסים-ולחשים/` | **The short myths and charms**: KTU 1.23 (Šaḥar and Šalim), 1.24 (Nikkal and Yarikh), 1.114 (El's banquet), 1.100 and 1.107 (the serpent charms), 1.108 (Rapiʾu, king of eternity), 1.82 and 1.83 (charms against the serpent and the *tnn*) | CUC v0.2.8 | 377 (1.23 76, 1.24 50, 1.114 31, 1.100 79, 1.107 54, 1.108 27, 1.82 43, 1.83 17) | in progress (Round 4 run 1) |
-| `3-תיק-היום-החמישי/` | **The fifth-day dossier** (Gen 1:20–23): short excerpts from the other cultures (world list §5A), each from its own language | per excerpt (see its `project.md`) | – | in progress (Round 4 run 1) |
+| `1-מחזור-בעל/` | **The Baal Cycle**, KTU 1.1–1.6 (Ilimilku's six tablets; the order of 1.1–1.2 is debated) | CUC v0.2.8 (KTU³), `../sources/CUC/` | 1,372 (1.1 118, 1.2 132, 1.3 258, 1.4 447, 1.5 172, 1.6 245) | **first draft, 2026-10-23** (Round 4 run 1; three passes, `ugarit_tools.py verify --strict`) |
+| `2-מיתוסים-ולחשים/` | **The short myths and charms**: KTU 1.23 (Šaḥar and Šalim), 1.24 (Nikkal and Yarikh), 1.114 (El's banquet), 1.100 and 1.107 (the serpent charms), 1.108 (Rapiʾu, king of eternity), 1.82 and 1.83 (charms against the serpent and the *tnn*) | CUC v0.2.8 | 377 (1.23 76, 1.24 50, 1.114 31, 1.100 79, 1.107 54, 1.108 27, 1.82 43, 1.83 17) | **first draft, 2026-10-23** (Round 4 run 1) |
+| `3-תיק-היום-החמישי/` | **The fifth-day dossier** (Gen 1:20–23): short excerpts from the other cultures (world list §5A), each from its own language | per excerpt (see its `project.md`) | 100 (six excerpts: Egyptian, Greek, Hittite, Vedic, Old Norse, Old Japanese) | **first draft, 2026-10-23** (`dossier_tools.py verify --strict`) |
 
 ## How the parts relate
 
