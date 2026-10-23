@@ -218,7 +218,7 @@ Vocalize at the first occurrence in each file; **always** where marked ★ (they
 | *attimannu kaššāptu ša …* | `מִי אַתְּ, מְכַשֵּׁפָה, אֲשֶׁר …`; *attamannu … attimannu* = `מִי אַתָּה … מִי אַתְּ` |
 | *ē kaššāptīya elēnītīya* | `הוֹי מְכַשֵּׁפָתִי, מַלְשִׁינָתִי` |
 | *tēpušāni tušēpišāni girra lipšur* (IV 13–67, abbreviated `tē(…)` in the edition) | `עֲשִׂיתֶם לִי, עִשִּׂיתֶם ★ לִי – גִּירָה יַתִּיר!` – where the edition writes the refrain in parentheses (abbreviated on the tablet) the Hebrew writes it in full **without** brackets and the apparatus says it is abbreviated. |
-| *narbîka lušāpi dalīlīka ludlul* | `אֶת גְּדֻלָּתְךָ אֲגַלֶּה, אֶת הִלּוּלֶיךָ אֲהַלֵּל` (wisdom) |
+| *narbîka lušāpi dalīlīka ludlul* ★ | `אֶת גְּדֻלָּתְךָ אֲגַלֶּה, אֶת תִּפְאַרְתְּךָ אֲפָאֵר` (2026-10-23 harmonization, was `אֶת הִלּוּלֶיךָ אֲהַלֵּל`: *dalālu* = `פֵּאֵר`, *dalīlu* = `תִּפְאֶרֶת`, as Enūma eliš, Ludlul, the prophecies) |
 | Colophon *DUB n.KAM maqlû* | `הַלּוּחַ הָרִאשׁוֹן / הַשֵּׁנִי … שֶׁל מַקְלוּ.` (+ the variant incipit-title in the apparatus); VIII *ZAG.TIL.LA.BI.ŠE₃* = `– שָׁלֵם.`; RT *ṭuppi nēpešī ša maqlû* = `לוּחַ הַטֶּקֶס שֶׁל מַקְלוּ` |
 | catch-line (the next tablet's first line, at the end of a tablet) | the Hebrew of that first line exactly (the next translator's line: §9 fixes the shared ones). |
 
@@ -399,7 +399,7 @@ the wisdom corpus and Etana; *ṣerru* "snake" = `נָחָשׁ` (Etana; II 156, 
 ṣerri*) keeps `מַשְׂטֵמָה`; *ikkibu* = `תּוֹעֵבָה`; *ebbu* = `צַח`; *aḫu* "arm" = `זְרוֹעַ` (the prophecy corpus too);
 *ṣīt šamši* = `מוֹצָא הַשֶּׁמֶשׁ` (Etana); *tamû* G = `נִשְׁבַּע`, D = `הִשְׁבִּיעַ`; *dalālu* = `הִלֵּל` (wisdom: Maqlû's
 *dalīlīka ludlul* is Ludlul's own phrase; Enūma eliš and the prophecies have `פֵּאֵר` – a split left for the lead's next
-harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִּיר` (Gilgameš's dream-*pašāru* = `פָּשַׁר`);
+harmonization; settled 2026-10-23: `פֵּאֵר` / `תִּפְאֶרֶת` everywhere). Recorded splits of this corpus: *pašāru* "release" = `הִתִּיר` (Gilgameš's dream-*pašāru* = `פָּשַׁר`);
 *redû* "persecute" = `רָדַף` (the Advice's "lead" = `נָהַג`); *pagru* by sense (`גְּוִיָּה` / `פֶּגֶר`).
 
 ## 10. Merged proposals (by run)
@@ -455,7 +455,7 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
   68–72, "make odious") `הִבְאִישׁ` by sense (Exod 5:21; not a form of `שׂם`); IV 115 feminine `עושות לי, עושות ועושות
   לי` (*ippušā*: the RT translator follows IV 115 at RT 68'); *piṭru* `פֶּטֶר` (Ludlul); *anāku pāširāk* `אני – מתיר
   אני`; *rūʾu* `עָמִית` (Etana's *rūʾūtu* `עֲמִיתוּת`), so *itbāru* `שֻׁתָּף`; *šizbu* `חָלָב` (always vocalized, against
-  `חֵלֶב` "tallow"); *burû* `מַפָּץ`; *sirqu* `זְרִיקָה`; *šūbultu* `מִשְׁלוֹחַ`; *arāḫu* `חִסֵּל`; *bâʾu* `שָׁטַף`;
+  `חֵלֶב` "tallow"); *burû* `מַפָּץ`; *sirqu* `זְרִיקָה`; *šūbultu* `מִשְׁלוֹחַ`; *arāḫu* `חִסֵּל`; *bâʾu* `שָׁטַף` (2026-10-23 harmonization: `עָבַר`);
   *napāṣu* `נִפֵּץ` [cognate].
 - **Settled by the coordinator:** *ḫepû* and *šebēru* both `שָׁבַר` (as in the Gilgameš corpus): *ḫepû* is Maqlû's
   frequent "break" (and *hīp libbi* is a "broken heart"), *šebēru* (IV 94, once) the cognate; the apparatus names the
@@ -490,7 +490,7 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
   V 54); *bāʾirtu* `צַיֶּדֶת`; *šalāpu* `שָׁלַף`; *ruqbūtu* `רִקָּבוֹן`; *muppišūtu* `עוֹשׂוּת`; *idātu* / *ittātu* both
   `אוֹתוֹת` (both are plurals of *ittu*); *ṭūb libbi* / *ṭūb šīri* `טוּב לֵב` / `טוּב בָּשָׂר`; *gummuru* `גָּמַר` (Gilgameš);
   *annaku* `אֲנָךְ` (open: Amos 7:7's meaning is disputed); *nīš ili* `נֶפֶשׁ אֵל`.
-- **For the lead's next harmonization:** *nissatu* `דַּאֲבוֹן` here (V gave `יָגוֹן` to *ašuštu*) against *nissatu* `יגון`
+- **For the lead's next harmonization** [settled 2026-10-23: *nissatu* `יָגוֹן`, *ašuštu* `דַּאֲבוֹן`]: *nissatu* `דַּאֲבוֹן` here (V gave `יָגוֹן` to *ašuštu*) against *nissatu* `יגון`
   in the wisdom corpus and Gilgameš; *gamāru* `כִּלָּה` (prophecy) / `גָּמַר` (Gilgameš, here).
 
 ### 10.8 Tablet VIII (2026-10-23)
@@ -514,3 +514,6 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
   arrangement" `מַעֲרָכָה` (a sense split from `קֶשֶׁר`); *sippu* `מְזוּזָה`. The refrain check exempts RT (it quotes only
   the incipit).
 - **Changed by the coordinator:** *paṭīru* (RT 14') = `מַעֲמָד` (was `שֻׁלְחָן`, which is *paššūru* in Gilgameš).
+
+## 11. The 2026-10-23 harmonization (`../harmonization--2026-10-23.md`)
+2026-10-23 harmonization (rows 10, 18, 19): *dalālu* → `פֵּאֵר`, *dalīlu* → `תִּפְאֶרֶת`; *nissatu* → `יָגוֹן`, *ašuštu* → `דַּאֲבוֹן`; *bâʾu* → `עָבַר`. Changed lines: II 17, 75, 225 `את הלוליך אהלל` → `את תפארתך אפאר` (the three lines stay identical; II 225 is not in the table: the same formula); V 71, 72 `יגון` (*ašuštu*) → `דאבון`; VII 38 `(ו)הדאבון` → `(ו)היגון`, VII 125 `דאבון` → `יגון` (not in the table: the same *nissatu*); VII 13 `אל יחצו אליי את הפתח` → `אל יעברו אליי את הפתח`; IV 151 `כמי גאות אשטוף אותן` → `כמי גאות אעבור עליהן`; the introductions of V and VII. (The table's "Maqlû I 13, 17, 38, 71, 72, 75" are VII 13, II 17, VII 38, V 71, V 72, II 75.) New overlap inside Maqlû: `עבר` now renders both *bâʾu* (IV 151, VII 13) and *ebēru* (II 35 `העוברות`). `maqlu_tools.py` FORMULAS: the formula *dalīlīka ludlul* = `את תפארתך אפאר` added (§6 ★).

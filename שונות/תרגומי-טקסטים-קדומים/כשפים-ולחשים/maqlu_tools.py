@@ -294,6 +294,7 @@ FORMULAS = [
     (r"hūlā zūbā", r"המסו זובו והנתכו", "the refrain `הִמַּסּוּ, זוּבוּ וְהִנָּתְכוּ`", ("RT",)),  # RT quotes only the incipit
     (r"quturkunu lītelli šamê", r"קיטורכם יעלה השמימה", "the refrain `קִיטוֹרְכֶם יַעֲלֶה הַשָּׁמַיְמָה`", ()),
     (r"limūt-ma anāku lubluṭ|limūtū-ma anāku lubluṭ|lidūkū-ma anāku lubluṭ", r"ואני אחיה", "`… וַאֲנִי אֶחְיֶה` (↔ Ex 22:17)", ()),
+    (r"dalīlīka ludlul", r"את תפארתך אפאר", "dalīlīka ludlul = `אֶת תִּפְאַרְתְּךָ אֲפָאֵר` (2026-10-23 harmonization: dalālu = פֵּאֵר)", ()),
 ]
 
 
