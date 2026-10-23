@@ -381,6 +381,183 @@ Files: `annotated-II.rtl.md`, `translation--intro-II.rtl.md`, generated `transla
 - In command/execution passages, draft both halves together, after fixing one verb per noun: the mirror then holds
   automatically (161–182).
 
+## Tablet III
+
+### Scope
+All 202 eBL labels of Tablet III (1–189 with 30a, 38a, 60a, 87a, 101a, 115a, 115b, 121a, 124a, 135a, 153a, 172a,
+187a), in thirteen sections: twelve incantations (1–30a the witch of the streets, clay; 31–38a the Daughters of Anu,
+tallow and sweepings; 39–60a the list of female practitioners, wax; 61–76 "pure River, holy Bright One am I"; 77–87a
+the Sutean and the Elamite, bitumen with sulphur; 88–101a the seized mouth and the yellow seal, clay; 102–115b the ten
+accusations, slag and soot; 116–124a the capsizing boat, clay; 125–135a the moon-boat sent to sea, dough; 136–153a the
+sherd of the streets and "I am heaven", tallow and red wool; 154–179 and 180–187a "hand, hand", wax) and the
+catch-line (188 = IV 1) with the colophon (189). Well preserved; 121a is lost but for one word. Most rubrics survive
+in one copy only (HuzNA1, often with KIMIN "ditto" for the rubric; AššNA1a/b), and eBL's N three times conflates the
+main text with a variant (60 *ana šāri*, 74 *dīnšu lissaḫir*, 75 the imperatives, 127 *kaššāptī*): the Hebrew follows
+the majority copies and gives the variant in the apparatus (a footnote in 74).
+Files: `annotated-III.rtl.md`, `translation--intro-III.rtl.md`, generated `translation-III.rtl.md`.
+
+### Sources consulted
+- eBL `Mag/1/1` III (`../../sources/eBL/Maqlu-III/`): N, T, the ATF of every bracketed line and of every line where N
+  and T disagree (60, 74, 75, 101, 113, 115, 127, 131, 140, 141, 189); `manuscripts.md`. No eBL lemmas: every form
+  parsed by hand; `maqlu_tools.py lem/norm/pars` and `kol_tools.py lookup` for every content word.
+- renderings §0–§10.2 (§9 for the 24 fixed lines); `annotated-I/II.rtl.md` for II 33–36, II 39, II 105, II 148,
+  II 161, II 227, I 13, I 25–26, I 143.
+- Earlier corpora for the Hebrew of recurring lemmas: Gilgameš (*rābiṣu* `רובץ`, *nēšu* `אריה`, *ašarēdu* `ראשון
+  במעלה`, *edû* `אֵד`, *diqāru* `סיר`, *tabāku* `יצק`, *gerû* `התגרה`, *dalāḫu* `דלח`, *qatû* D `כילה`, *arāqu* `הוריק`,
+  *lā pādû* `אשר אינו חומל`), the wisdom corpus (*lamû* `הקיף`, *agû* `גל`, *kibsu* `שביל`, *kunukku* `חותם`,
+  *kinattu* `בן־גיל`, *uṣurtu* `צורה`, *ṣabāru* `מצמץ`, *mīlu* `גאות`, *zâqu* `נשב`), the netherworld corpus (*šaḫāṭu*
+  `זינק`, *ṣalāmu* `השחיר`, *miqtu* `מַפָּל`), the flood corpus (*tarkullu* `עמוד הקשירה`, *nasāḫu* `נסח`).
+- The Bible: every verse printed before quoting (about 120).
+
+### Decisions
+- **Fixed lines** (§9) copied exactly: 1, 30, 38a, 60a, 62, 63, 70, 87a, 93–96, 146, 153, 171–175, 179, 186, 188.
+  30 keeps `גּוּפֵךְ` vocalized (fem.; strips to §9's `גופך`, as II 218). III 1 differs from II 227 only in punctuation and brackets (justified in the apparatus; the one repeated-line
+  difference `verify` lists). Refrains identical: 76 = 87, 154 = 180, 155 = 181.
+- **The practitioners (39–53)** per §2.1, the titles transliterated with the article (`הנַרְשִׁנְדָּתוּ`, `האֶשֶּׁבּוּתוּ`,
+  `המוּשְׁלַחָּתוּ`, `האַגּוּגִלְתּוּ`, `הנָדִיתוּ`, `הכּוּלְמַשִׁיתוּ`), `קְדֵשָׁה`, `אִשְׁתַּרִית`, `אַשָּׁפִית`, `צַיֶּדֶת`,
+  `מְרַגֶּלֶת`, `מַלְשִׁינָה`, `רוֹצַחַת`. The "of" pairs: *mulaʾʾītu* `מזהמת` (*luʾʾû* `מְזֹהָם`, §10.1), *mulappittu*
+  `מנגעת` (D of *lapātu* `נגע`: Piel "strike with a plague"; Enūma eliš has `לָפְתוּ` for the D), *kāmītu* `לוכדת`
+  (*kamû* `לכד`, §2.2), *kāsītu* `אוסרת`, *dayyiktu* `הורגת`, *lā pādītu* `שאינה חומלת` (Gilgameš), *šaḫḫuṭītu*
+  `המזנקת` (*šaḫāṭu* `זינק`, Ištar's Descent), *ṣabburītu* `הממצמצת` (*ṣabāru* `מצמץ`, Ludlul), *ušarru* `יחדור`.
+- **The reversal (55–57)**, three verbs kept apart: *enû* Št `החליף` (§3), *nabalkutu* Š `הפך` (§2.4), *šupêlu* Št
+  `המיר` (Hammurapi has *enû* `המיר`: a recorded split). 60 *šumḫuru* `הִפְגִּיעַ` (Š of *maḫāru*, whose noun *miḫru* is
+  `פֶּגַע`, §3) – the cognate pair with Isa 53:6.
+- **The ten accusations (102–111)**: each D verb distinct and from its own lemma: `עָשִׂית`, `עִשִּׂית`, `כישפת`,
+  `שיברת` (*ḫepû* D), `אחזת` (*ṣabātu* D), `חתמת` (*kanāku*), `הרסת` (*abātu*), `כפתת` (*ebēru* D), `אסרת` (*kasû*),
+  `זיהמת` (*luʾʾû*). *attīʾē* = `הוי את` (after §6 `הוֹי מְכַשֵּׁפָתִי`).
+- **The boat (116–135a)**: *makurru* = `אֳנִיָּה` – not `מקור` (no relation between the words; the Hebrew would only
+  mislead) and not transliterated (its sense is clear); `ספינה` stays for *eleppu* (Gilgameš). The ropes: *ṭurru*
+  `חבל` (33, with Josh 2:15), *ašlu* `עבות`, *markasu* `מוסרה` (the flood corpus has `חבל` for *markasu*: a split,
+  forced by 33), *batāqu* `נִתַּק` (the pair `עבות` / `מוסרות` / `נתק` is Ps 2:3's); *tarkullu* `עמוד הקשירה`;
+  *nasāḫu* `נסח`; *edû* `אֵד` (78, 132; Gilgameš; ↔ Gen 2:6); *agû* `גל`; *šamru* `סוער`.
+- **Other lemmas fixed**: *sanāšu* `תקע` (20 – changed from `החדיר` so that `חדר` stays for *ušarru*, 54); *gerû*
+  `התגרה` [cognate]; *ḫaṣabtu* `חֶרֶשׂ`; *maḫāṣu* `מחץ` [cognate] + *muḫḫu* `קדקד` (144, Ps 68:22); *dalāḫu* `דלח`;
+  *rābiṣu* `רוֹבֵץ` (translated, as Gilgameš and the netherworld corpus, ↔ Gen 4:7; not in the transliterated demon
+  list); *eṭem ridâti* `אִט רודף`; *siḫlu* `קוץ` and *ziqtu* `עוקץ` (Gilgameš has `עוקצו` for *siḫlu*: a split); *baltu*
+  `בַּלְתּוּ`; *zaqru* `נישא`; *bâru* `צד` (159, as *bayyārtu*; Etana's `לכד` is *kamû*'s in Maqlû); *luḫummû* `טִין`
+  (`בוץ` is *rušumtu*, §9, and Ludlul has `רפש` for *rušumtu*; `טיט` is *ṭīdu*'s); *illatu* `עֵדָה` (`חבורה` would trip
+  the `חבר` gate); *arāmu* `עטה`; *ḫīṭu* `סדק`; *uṣurtu* `צורה`, *eṣēru* D stative `מצויר`; *dabbibu* `המדבר`
+  (*dabābu* `דיבר`, §10.1); *kunukku* `חותם`, *kanāku* `חתם`, *barāmu* `הטביע`; *arāqu* `הוריק` [cognate]; *ṣâdu* (B,
+  "glow, melt") `נצרב` (kept apart from *ṣâdu* A of *ṣūd pānī* `סחרחורת`); *ḫaḫû* `סיג`, *diḫmennu* `פיח`;
+  *maḫāḫu* `הרטיב`; *tabāku* `יצק` (`שפך` is *šapāku*, I 101); *mīlu* / *mīṭu* `גאות` / `שפל`; *qanû* `קנה`.
+- **Neighbour and kin (113)**: *šēʾu* `שָׁכֵן` (vocalized against the god `שַׁכַּן`), *ibru* `רֵעַ`, *tappû* `חבר`
+  (the gate's word), *kinattu* `בן־גיל` (Ludlul).
+- **Closing formulas only where N has them**: 101 and 115 end in `(TU₆) EN₂` in some copies but not in N (nor 115 in
+  T); the verifier gates `לחש`/`קסם` on N, so the Hebrew follows N and a footnote reports the copies. 60 `T[U₆]` =
+  `[לחש]`.
+- **Colophon (189)**: `הלוח השלישי של מַקְלוּ – סדרת האַשָּׁפוּת.` – *iškāru* `סדרה`, *āšipūtu* `אַשָּׁפוּת` (§3); the
+  phrase is in UrkLB1 only (footnote). `הלוח` unbracketed: UrkLB1 has `IM 3.KAM.MU`.
+- **Rubric spellings**: `UŠ₁₁.BUR₂.DA` / `UŠ₁₁.BUR₂` (124a, 135a, 153a, 187a) = `להתרת ריר` as the full form; KIMIN
+  ("ditto") in HuzNA1 for the rubric is noted, the Hebrew follows N; 101a's omitted rubric and *ina* in `⟨ ⟩`.
+
+### Open decisions for the user
+- *makurru* `אֳנִיָּה` (decided; `מקור` rejected) – or a transliteration `מַכּוּרּוּ` if a technical term is preferred.
+- *iškār āšipūti* `סדרת האַשָּׁפוּת` (189) – alternatives `סדרת האשפים`, `מלאכת האַשָּׁפוּת` (*iškāru* is also "work
+  quota").
+- 61 *id ellu namru quddušu*: renderings §3 punctuates three epithets (`נָהָר טָהוֹר, זוֹהֵר, מְקֻדָּשׁ`); I wrote
+  `נהר טהור, זוֹהֵר מקודש – אני`, because 69 and 71 make *namru* a second god ("the Bright One", Šamaš), beside the
+  River.
+- 115 *qaqqad raggati šīmtīki* and 138 *qaqdâ* remain uncertain (italics); 115a *ištar kubši kinṣi* (`אֵלָה *בכובע
+  ובשוק*`) is a guess.
+- 136 *ḫaṣabtu* `חרס` against the transliterated alternative; 142 *rābiṣu* translated (`רוֹבֵץ`), against renderings'
+  general "demons transliterated" – the precedent of the two earlier corpora decided it.
+
+### Progress log
+- 2026-10-23: renderings §10.2 read (*māmītu* = `שבועה`, *utūnu* `אַתּוּן` checked by script); `pars III` run. Drafted
+  and saved in seven steps (1–38a; 39–60a; 61–87a; 88–115b; 116–135a; 136–153a; 154–189), `fill` + `verify III` +
+  `check_bible_quotes.py` after each.
+- Problems met and fixed: three bare references (`(א:יט)`, `(יח:טו)`, and a Hebrew word in backticks before a
+  reference, read as a quotation of Ps 2:3) caught by the checker; `לחש, קסם` at 101 and 115, where N has no TU₆ EN₂,
+  flagged by the verifier as reserved words – moved to footnotes.
+- Pass (a) fidelity: brackets checked against the ATF (unbracketed where a copy preserves the word: 74 *kīma*, 140
+  *akattam*, 189 *DUB*; bracketed: 60 `[לחש]`, 101a, 115a `[אַתּוּן]`, 115b, 124a, 131, 135a, 141 `שבילי[ך]`, 153a,
+  187a); the variants N conflates (60, 74, 75, 127, 161) moved to the apparatus; 64 checked against II 161.
+- Pass (b) consistency: refrains and fixed lines identical; 64–65 aligned with II 161's `עושים לי`; new Hebrew words
+  grepped across the corpora – `רפש` (Ludlul's *rušumtu*) replaced by `טִין` for *luḫummû*; `החדיר` (20) changed to
+  `תקע`; `חבורה` avoided (the `חבר` gate).
+- Pass (c) Hebrew: `translation-III.rtl.md` read through: 6 `רגלי ההולך` (a typo `רגליי`), 100 `וכמו` (for `כדי
+  שכמו`), 187 punctuation; footnotes given their books.
+- Final: `verify III --strict` – no problems (one listed repeated-line difference, II 227 / III 1, justified);
+  `check_bible_quotes.py` on the annotated file, the intro, `translation-III.rtl.md` and `translation.rtl.md` – 0
+  problems; `build` exits 0. `build_parallels_index.py` not run (the coordinator's instruction).
+
+### The text on its own terms
+- **The witch is a woman of the city** (1–12): she walks the markets, enters houses, spies in the squares; her look
+  takes a young man's virility and a girl's charm – the evil eye as a social fear of the woman who moves freely.
+- **Every woman with access to power is suspect** (39–44): the list puts the exorcist's female colleague (*āšiptu*),
+  the ecstatic, the snake charmer and four kinds of women dedicated to gods (*qadištu*, *nadītu*, *ištarītu*,
+  *kulmašītu*) beside the murderess and the informer.
+- **The witch binds the gods too** (47–50): she defiles heaven, plagues the earth, seizes the gods' mouth and binds the
+  goddesses' knees – so the gods themselves must act (55–58).
+- **The ordeal behind purity** (61–76): "pure River and holy Bright One am I" – the speaker identifies with the river
+  of the water ordeal and the sun of the court, and "I became pure, I became clean" (68–69) is an acquittal.
+- **Talion, word for word** (93–96 = II 33–36): what the witch did to his eyes, feet, knees and arms, he does to hers;
+  the ten accusations (102–111) and the "hand" (154–187) follow the same law.
+- **Isolation as the work of sorcery** (16, 112–113): god and goddess, neighbours, siblings, friends "cut off" from the
+  victim – the suffering of Ludlul and Job, explained by a witch.
+- **Evil sent away in a vessel** (116–135a): the witches sit in a clay boat that is cut loose and swept out to sea;
+  the crescent moon is the boat, its horns carry the "release".
+- **Demons in the exorcist's service** (142–143): he sets a lurker and a ghost on her paths – the same powers the
+  witches use.
+- **The body as cosmos** (147–153): "I am heaven, I am earth, a thorn, a scorpion's sting, a high mountain" – what she
+  defiled (47–48) he now is, and she cannot touch it.
+- **The hand** (154–187): the witch's strength is human (*rittu dannatu ša amēlūti*), a predator's paw and a hunter's
+  net; it is burned as a wax hand (187a), and she is invited to bring it to the fire herself.
+- **Life drawn in advance** (176–177): "I am drawn with the designs of life" – a destiny already engraved by Ištar,
+  which sorcery cannot erase.
+- **Rubrics name the matter of each figurine**: clay, tallow and sweepings, wax, bitumen with sulphur, a yellow seal,
+  a goddess of clay doused with slag and soot, boats of clay and dough, a street sherd rubbed with tallow and wrapped in
+  red wool, a wax hand.
+
+### Key parallels
+- Song 3:2 `בַּשְּׁוָקִים וּבָרְחֹבוֹת` and Prov 7:12 – the woman in the markets and squares (1–7) [cognate *sūqu*].
+- Deut 23:18 `לֹא תִהְיֶה קְדֵשָׁה` – *qadištu* in the list (43) [cognate]; Deut 18:10 – the list form itself (39);
+  Ezek 13:18, 20 `לְצוֹדֵד נְפָשׁוֹת` – the women who hunt souls (45) [equivalent].
+- Ps 129:2 `רַבַּת צְרָרוּנִי … גַּם לֹא-יָכְלוּ לִי` – "they do and do to me, but cannot" (64–66) [equivalent].
+- Num 5:19, 28 `הִנָּקִי … וְנִקְּתָה` – the water ordeal's acquittal (61, 69) [equivalent].
+- Ps 88:9, 19 and Job 19:13–14 – friends and kin removed (112–113) [equivalent].
+- Exod 9:8 `קְחוּ לָכֶם … פִּיחַ כִּבְשָׁן` – taking kiln soot for a harmful act (114) [equivalent].
+- Zech 5:7–8 `אִשָּׁה אַחַת יוֹשֶׁבֶת בְּתוֹךְ הָאֵיפָה … זֹאת הָרִשְׁעָה` – evil as a woman sitting in a vessel and carried
+  away (125–127) [divergence]; Ps 2:3 – the cut ropes (130); Jonah 1:15, Ps 107:25 – the sea and the guilty
+  (132–133) [divergence].
+- Isa 53:6 `הִפְגִּיעַ בּוֹ` – the evil made to "meet" its bearer (60) [equivalent]; Jer 30:6 `לְיֵרָקוֹן` (101)
+  [cognate].
+- Ps 68:22 `יִמְחַץ רֹאשׁ … קָדְקֹד`, 1 Sam 21:14 `וַיְשַׁנּוֹ אֶת טַעְמוֹ` – smiting the skull, changing the mind (144)
+  [cognate]; Gen 4:7 `רֹבֵץ` (142) [cognate]; Jer 1:18–19 – the invulnerable speaker (147); Ezek 2:6 – thorns and
+  scorpions (149–150).
+- Ps 10:9 (lion and net), Job 18:8–9 (net, mesh, trap), Eccl 9:12 (snare and trap) – the hand that hunts (156–160)
+  [equivalent]; Ps 21:10 and Mal 3:19 – the oven (164–167) [cognate *tinūru*].
+
+### Lines shared with other tablets
+- Copied from §9 (above). From Tablet II: 70 = II 39; 75 = II 148; 93–96 mirror II 33–36 (only the suffix changes);
+  179 = II 105 without `קסם`; 64 ≈ II 161 – **II 161 renders *ēteneppušūni* `עָשׂוּ וְעָשׂוּ לי` (parsed there as
+  perfect); the doubled *pp* makes it a Gtn present, so III 64 has `עושים ועושים לי`.** I propose that the coordinator
+  align II 161 (and IV 115, RT 68') to `עושים לי, עושים ועושים לי`.
+- For the next translators: IV 1 = III 188 (§9); VI 86–87 = III 62–63; VI 90–94 = III 171–175 (III 172a has no VI
+  counterpart); VI 59 / IV 152 = III 146; VI 64 = III 153 (with TU₆); IV 149 = III 186; IV 79 = III 179 + `– לחש,
+  קסם`; RT 42', 46', 47' are the incipits of III 1, 61, 77.
+
+### Proposals for the shared renderings
+- §2.1/§2.2: *mulaʾʾītu* `מזהמת` (*luʾʾû* D `זיהם`), *mulappittu* `מנגעת` (*lapātu* D `ניגע`), *kāmītu* `לוכדת`,
+  *kāsītu* `אוסרת`, *šaḫḫuṭītu* `מזנקת`, *ṣabburītu* `ממצמצת`, *lā pādītu* `שאינה חומלת`.
+- §2.4: *enû* Št `החליף`, *šupêlu* `המיר`, *šumḫuru* `הִפְגִּיעַ`; *kanāku* `חתם`, *barāmu* `הטביע`; *gerû* `התגרה`;
+  *maḫāṣu* `מחץ`; *dalāḫu* `דלח`; *bâru* `צד` (with *bayyārtu*); *batāqu* `ניתק`; *nasāḫu* `נסח`; *tabāku* `יצק`;
+  *maḫāḫu* `הרטיב`; *sanāšu* `תקע`.
+- §4/§5: *makurru* `אֳנִיָּה`; *ašlu* `עבות`, *markasu* `מוסרה`, *tarkullu* `עמוד הקשירה`; *ḫaḫû* `סיג`, *diḫmennu*
+  `פיח`; *ḫaṣabtu* `חרס`; *tabarru* `צמר אדום`; *kunukku* `חותם`; *luḫummû* `טִין`; *edû* `אֵד`; *agû* `גל`.
+- §1: *rābiṣu* `רוֹבֵץ` (translated, with Gilgameš and the netherworld corpus); *eṭem ridâti* `אִט רודף`.
+- §6: *attīʾē ša …* `הוי את, אשר …`; colophon *iškār āšipūti* `סדרת האַשָּׁפוּת`.
+- §8: `טין` beside `טיט` (a visual near-miss; no gate needed, but worth a note).
+
+### Lessons for the guidelines
+- eBL's N sometimes merges a variant copy into the line (III 60, 74, 75, 127): when N and T disagree, read the ATF and
+  translate the majority text; the variant goes to the apparatus. The verifier gates `לחש`/`קסם` on N, so a formula
+  present only in T or in some copies goes to a footnote.
+- A Hebrew word in backticks followed by a reference in parentheses is read as a quotation: write such notes without
+  the parentheses (`כמו "מוסרותימו" של תהלים ב:ג`).
+- Check a recurring Gtn parse against the earlier tablets: II 161 and III 64 are the same line, and doubled *pp* means
+  present.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
@@ -635,3 +812,96 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | 222 | [ina?] na[pāhīš]a? šamāmī ikšudū nabl[ūša] | [בנפחה?] – את השמים השיגו שלהבותיה, | `וְהָהָר בֹּעֵר בָּאֵשׁ עַד לֵב הַשָּׁמַיִם` (דברים ד:יא) | equivalent | אש שמגיעה עד השמים. |
 | 224 | arhiš hanṭiš ša kaššāpīya u ka[ššāptīya] napištašunu li[blē-ma] | מהרה, חיש – של מכשפי [ומכשפתי] יכבו חייהם, | `כִּי־גָז חִישׁ וַנָּעֻפָה` (תהלים צ:י) | equivalent |  |
 | 225 | yâši bulliṭanni-ma narbîka lušāpi [d]alīlīka ludlul [T]U₆ EN₂ | ואותי עצמי חַיֵּנִי, ואת גדולתך אגלה, את הלוליך אהלל! – לחש, קסם. | `תְּחִי־נַפְשִׁי וּתְהַלְלֶךָּ` (תהלים קיט:קעה) | equivalent | ראו 17. |
+
+### Parallels index (III)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 1 | EN₂ kaššāptu muttalliktu ša sūqāti | קסם. המכשפה, המתהלכת בשווקים, | `אָקוּמָה נָּא וַאֲסוֹבְבָה בָעִיר בַּשְּׁוָקִים וּבָרְחֹבוֹת` (שיר השירים ג:ב) | cognate | *sūqu* = `שׁוּק`, והזוג *sūqu* / *rebītu* (4, 7) הוא הזוג `שְׁוָקִים` / `רְחֹבוֹת` של שיר השירים; אפילו הפועל, "אסובבה", הוא *sahāru* של שורה 5. |
+| 2 | mūterribtu ša bītāti | הנכנסת ונכנסת לבתים, | `כִּי עָלָה מָוֶת בְּחַלּוֹנֵינוּ בָּא בְּאַרְמְנוֹתֵינוּ לְהַכְרִית עוֹלָל מִחוּץ בַּחוּרִים מֵרְחֹבוֹת` (ירמיהו ט:כ) | equivalent | כוח רע הנכנס לבתים ופוגע ברחובות, בצעירים (השוו 8–12). |
+| 4 | hayyāṭītu ša rebâti | המרגלת ברחובות, | `פַּעַם בַּחוּץ פַּעַם בָּרְחֹבוֹת וְאֵצֶל כָּל־פִּנָּה תֶאֱרֹב` (משלי ז:יב) | equivalent | **האשה הזרה האורבת ברחובות**: אותה דמות של אשה מסוכנת המסתובבת בעיר. |
+| 5 | ana pānīša u arkīša issanahhur | לפניה ולאחוריה סובבת וסובבת, | `וַאֲסוֹבְבָה בָעִיר` (שיר השירים ג:ב) | cognate | *sahāru* = `סובב`. |
+| 8 | ša eṭli damqi dūssu īkim | של העלם הנאה – את אונו חטפה, | `כֹּחִי וְרֵאשִׁית אוֹנִי` (בראשית מט:ג) | equivalent | `און`, כוח הגבר. |
+| 10 | ina nekelmêša kuzubša ilqe | בזעיפת פניה – את עגביה לקחה. | `אַל־תִּלְחַם אֶת־לֶחֶם רַע עָיִן` (משלי כג:ו) | equivalent | **העין הרעה**: מבט שמזיק (במשלי – הצרות והקמצנות של "רע עין"). |
+| 14 | ina imtīša iptaras alaktu | בארסה גזרה את ההליכה, | `חֲמַת־לָמוֹ כִּדְמוּת חֲמַת־נָחָשׁ` (תהלים נח:ה) | cognate | *imtu* (מן *ḥimtu*) הוא הקרוב של `חֵמָה` "ארס" – ובאותו מזמור "קוֹל מְלַחֲשִׁים" (נח:ו). |
+| 16 | ušassi ilī u ištarī ina zumrīya | הרחיקה את אֵלִי ואֵלָתִי מגופי. | `אַחַי מֵעָלַי הִרְחִיק` (איוב יט:יג) | equivalent | ראו I 6. |
+| 17 | ša kaššāptī<ya> ina kullati agdariṣ ṭīdaša | של מכשפתי – במחצבת קרצתי את טיטה, | `מֵחֹמֶר קֹרַצְתִּי גַם־אָנִי` (איוב לג:ו) | cognate | *karāṣu* = `קרץ` (`../renderings.md` §4) |
+| 17 | ša kaššāptī<ya> ina kullati agdariṣ ṭīdaša | של מכשפתי – במחצבת קרצתי את טיטה, | `מֵחֹמֶר קֹרַצְתִּי גַם־אָנִי` (איוב לג:ו) | divergence | אצל איוב האל קורץ את האדם מחומר; כאן האדם קורץ צלם של המכשפה. |
+| 18 | ša ēpištīya abtani ṣalamša | של עושתי – בניתי את צלמה. | `וַיִּבֶן יְהוָה אֱלֹהִים אֶת הַצֵּלָע` (בראשית ב:כב) | cognate | *banû* = `בנה` (I 96). |
+| 22 | eli āli attapah išātu | מעל העיר נפחתי אש, | `וְנָפַחְתִּי עֲלֵיכֶם בְּאֵשׁ עֶבְרָתִי` (יחזקאל כב:כא) | cognate | *napāhu* = `נפח` (`../renderings.md` §5) באש, והאש כעונש. |
+| 25 | tēpušīm-ma girra līkulki | עָשִׂית לי – וגִירָה יאכל אותך, | `כִּי יְהוָה אֱלֹהֶיךָ אֵשׁ אֹכְלָה הוּא` (דברים ד:כד) | equivalent | האש האוכלת (I 116). |
+| 27 | takpudīm-ma girra lidūkki | חשבת עליי – וגִירָה יהרוג אותך, | `וְאַתֶּם חֲשַׁבְתֶּם עָלַי רָעָה` (בראשית נ:כ) | equivalent | *kapādu* = `חשב` (`../renderings.md` §2.2). |
+| 29 | harrān lā târi lišaṣbitki girra hābilki | את אורח אין־שוב יאחיז בך גִּירָה, מְחַבְּלֵךְ, | `וְאֹרַח לֹא־אָשׁוּב אֶהֱלֹךְ` (איוב טז:כב) | cognate | **"אורח לא־אשוב"**: שתי המלים קרובות (*harrānu* = `אורח`, *târu* = `שוב`), ובשני הטקסטים זו דרך המוות. |
+| 31 | EN₂ šitta šina mārāt ani ša šamê | קסם. שתיים הן, בנות אָנוּ שבשמים, | `לַעֲלוּקָה שְׁתֵּי בָנוֹת הַב הַב שָׁלוֹשׁ הֵנָּה לֹא תִשְׂבַּעְנָה` (משלי ל:טו) | equivalent | **המספר העולה** ("שתיים … שלוש") ואפילו "בנות" ו"הנה". |
+| 33 | ṭurra ṣabtānim-ma ultu šamê urradāni | בחבל הן אוחזות, ומן השמים יורדות אליי. | `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה; וְהִנֵּה מַלְאֲכֵי אֱלֹהִים עֹלִים וְיֹרְדִים בּוֹ` (בראשית כח:יב) | divergence | **ירידה מן השמים לארץ באמצעי מחבר**: שם סולם ומלאכים בחלום, כאן חבל ובנות אנו בטקס – המוטיב (שליחי מעלה היורדים לאדם) משותף, הפרטים שונים |
+| 33 | ṭurra ṣabtānim-ma ultu šamê urradāni | בחבל הן אוחזות, ומן השמים יורדות אליי. | `וַתּוֹרִדֵם בַּחֶבֶל בְּעַד הַחַלּוֹן` (יהושע ב:טו) | equivalent | ירידה בחבל. |
+| 38 | ša līlâti huluppaqqa ana šarāpi nillika | בנשף – את החוּלוּפַּקּוּ לשרוף באנו." | `בְּנֶשֶׁף־בְּעֶרֶב יוֹם בְּאִישׁוֹן לַיְלָה וַאֲפֵלָה` (משלי ז:ט) | equivalent | `נשף`, שעת ערב. |
+| 39 | EN₂ kaššāptu nērtānītu | קסם. המכשפה, הרוצחת, | `לֹא יִמָּצֵא בְךָ מַעֲבִיר בְּנוֹ וּבִתּוֹ בָּאֵשׁ קֹסֵם קְסָמִים מְעוֹנֵן וּמְנַחֵשׁ וּמְכַשֵּׁף` (דברים יח:י) | equivalent | **רשימה של בעלי מלאכת הנסתר**, כמו הרשימה שמכאן ועד 53; אבל ההבדל הוא העיקר: דברים אוסר את כולם, ומקלו מונה אותם כדי לקלל אותם – ובתוך הרשימה עומדת גם ה*āšiptu*, "האשפית" (41), אחותו של המלחש עצמו. |
+| 41 | āšiptu eššebūti | האַשָּׁפִית, האֶשֶּׁבּוּתוּ, | `וַיִּמְצָאֵם עֶשֶׂר יָדוֹת עַל כָּל הַחַרְטֻמִּים הָאַשָּׁפִים` (דניאל א:כ) | cognate | *āšipu* = `אַשָּׁף`. |
+| 42 | mušlahhatu agugiltu | המוּשְׁלַחָּתוּ, האַגּוּגִלְתּוּ, | `אֲשֶׁר לֹא-יִשְׁמַע לְקוֹל מְלַחֲשִׁים; חוֹבֵר חֲבָרִים מְחֻכָּם` (תהלים נח:ו) | equivalent | **מלחש הנחשים**: מקצוע מוכר בשני העולמות; בתהלים הנחש החרש אינו שומע ל"מלחשים", וכאן המלחשת לנחשים היא עצמה מכשפה. |
+| 43 | qadištu nadītu | הקְדֵשָׁה, הנָדִיתוּ, | `לֹא תִהְיֶה קְדֵשָׁה מִבְּנוֹת יִשְׂרָאֵל; וְלֹא יִהְיֶה קָדֵשׁ מִבְּנֵי יִשְׂרָאֵל` (דברים כג:יח) | cognate | אותה מלה, אותו שורש, אותו מעמד: אשה המוקדשת למקדש. |
+| 43 | qadištu nadītu | הקְדֵשָׁה, הנָדִיתוּ, | `כִּי הֵם עִם הַזֹּנוֹת יְפָרֵדוּ וְעִם הַקְּדֵשׁוֹת יְזַבֵּחוּ` (הושע ד:יד) | cognate | הקדשה כחלק מן הפולחן. |
+| 45 | bayyārtu ša mūši | ציידת הלילה, | `לְצוֹדֵד נְפָשׁוֹת` (יחזקאל יג:יח) | equivalent | **הנשים שצדות נפשות**: הנביאות של יחזקאל יג, בעלות הכסתות והמספחות, הן הנשים הנוכריות היחידות במקרא שמתוארות במלאכה כזאת; גם שם הן "צדות" (`צודד`), גם שם הן נשים, וגם שם הדיבור עליהן הוא מן הצד שכנגד. |
+| 45 | bayyārtu ša mūši | ציידת הלילה, | `אֲשֶׁר אַתֵּנָה מְצֹדְדוֹת שָׁם אֶת הַנְּפָשׁוֹת` (יחזקאל יג:כ) | equivalent |  |
+| 57 | uštapēlū amāt ipšīki | המירו את דבר מעשייך – | `יָשׁוּב עֲמָלוֹ בְרֹאשׁוֹ; וְעַל קָדְקֳדוֹ חֲמָסוֹ יֵרֵד` (תהלים ז:יז) | equivalent | המעשה הרע ההפוך, החוזר אל עושהו (ראו 60). |
+| 60 | u mimma mala tēpušī lišamherki kâši ana šāri T[U₆] EN₂ | וכל אשר עָשִׂית – יַפְגִּיעַ בָּךְ עַצְמֵךְ – [לחש], קסם. | `וַיהוָה הִפְגִּיעַ בּוֹ אֵת עֲוֹן כֻּלָּנוּ` (ישעיהו נג:ו) | equivalent | אותו פועל, `הִפְגִּיעַ`, במובן "גרם לפגוע ב־": הרע שנעשה מועבר ונוחת על אחר. בישעיהו העוון מועבר אל העבד הנושא אותו; כאן הרע שעשתה המכשפה מוחזר אליה עצמה. |
+| 60 | u mimma mala tēpušī lišamherki kâši ana šāri T[U₆] EN₂ | וכל אשר עָשִׂית – יַפְגִּיעַ בָּךְ עַצְמֵךְ – [לחש], קסם. | `יָשׁוּב עֲמָלוֹ בְרֹאשׁוֹ` (תהלים ז:יז) | equivalent | מעשה הרשע חוזר אל עושהו. |
+| 60a | [KA.INIM.M]A UŠ₁₁.BUR₂.RU.DA ṣalam iškūri | [נוס]ח להתרת ריר: צלם דונג. | `כְּהִמֵּס דּוֹנַג מִפְּנֵי-אֵשׁ` (תהלים סח:ג) | equivalent | הדונג הנמס באש. |
+| 61 | EN₂ id ellu namru quddušu anāku | קסם. נהר טהור, זוֹהֵר מקודש – אני. | `הִנָּקִי מִמֵּי הַמָּרִים הַמְאָרְרִים הָאֵלֶּה` (במדבר ה:יט) | equivalent | **המים השופטים**: הנהר של מסופוטמיה הוא אל של מבחן־המים (ה־*ḫuršān*): הנאשם יורד אל הנהר, והנהר מנקה אותו או מטביע אותו. בתורה – מי המרים, שהנאשמת שותה, ו"ונקתה" (ה:כח) היא זיכויה; כאן *ebēbu* "להיות נקי" (69) הוא אותו זיכוי. |
+| 64 | eppušūni īteneppušūni | עושים לי, עושים ועושים לי, | `רַבַּת צְרָרוּנִי מִנְּעוּרָי; גַּם לֹא-יָכְלוּ לִי` (תהלים קכט:ב) | equivalent | **אותו מבנה**: פעולת האויב חוזרת ונשנית ("רבת צררוני … רבת צררוני", קכט:א–ב), ובסוף – "לא יכלו לי". 64–66 אומר את אותו הדבר בשלוש שורות: עושים, עושים ועושים – ואינם יכולים. |
+| 65 | eppušūnim-ma ul ileʾʾû zumrī | עושים לי – ואינם יכולים לגופי, | `גַּם לֹא-יָכְלוּ לִי` (תהלים קכט:ב) | equivalent | *leʾû* + מושא = `יָכֹל ל־`: לגבור על. |
+| 68 | ētelil kīma id ina šadîya | טהרתי כנהר בהרי, | `וַיָּשָׁב בְּשָׂרוֹ כִּבְשַׂר נַעַר קָטֹן וַיִּטְהָר` (מלכים ב ה:יד) | equivalent | נעמן, שטבל בירדן: הנהר מטהר; אבל כאן ה"טהרה" היא גם זיכוי במשפט. |
+| 69 | ētebib kīma namri ina bīt purussêya | נִקֵּיתִי כַּזּוֹהֵר בבית גזרתי. | `וְאִם לֹא נִטְמְאָה הָאִשָּׁה וּטְהֹרָה הִוא וְנִקְּתָה` (במדבר ה:כח) | equivalent | אותו צמד, `טהורה … ונקתה`, כמו *ētelil* / *ētebib* כאן: היציאה הזכאית ממבחן המים. |
+| 73 | ana muhhīšunu u lānīšunu lillikū | ילכו על קדקדם ועל גזרתם. | `יָשׁוּב עֲמָלוֹ בְרֹאשׁוֹ; וְעַל קָדְקֳדוֹ חֲמָסוֹ יֵרֵד` (תהלים ז:יז) | equivalent | הכשפים חוזרים אל ראש העושה. |
+| 75 | lihūlū lizūbū u littattukū <li>zūbū u <l>it[tattukū] | יִמַּסּוּ, יזובו ויִנָּתְכוּ! | `כְּהִמֵּס דּוֹנַג מִפְּנֵי-אֵשׁ` (תהלים סח:ג) | equivalent | האויבים נמסים כמו הצלמים באש. |
+| 76 | u anāku kīma id ina šadîya lū ellēku EN₂ | ואני, כנהר בהרי, אטהר – קסם. | `תְּחַטְּאֵנִי בְאֵזוֹב וְאֶטְהָר` (תהלים נא:ט) | equivalent | "ואטהר": המשאלה להיטהר. |
+| 77 | EN₂ lamânni sutû elamû redânni | קסם. מקיף אותי הסוּתִי, העֵילָמִי רודף אותי, | `סַבּוּנִי כַמַּיִם כָּל-הַיּוֹם; הִקִּיפוּ עָלַי יָחַד` (תהלים פח:יח) | equivalent | האויבים "מקיפים" כמים; כאן, בשורה הבאה, הם נעשים גל. |
+| 77 | EN₂ lamânni sutû elamû redânni | קסם. מקיף אותי הסוּתִי, העֵילָמִי רודף אותי, | `הוֹשִׁיעֵנִי מִכָּל-רֹדְפַי וְהַצִּילֵנִי` (תהלים ז:ב) | equivalent |  |
+| 78 | katmanni agû edû sahpanni | מכסה אותי הגל, האֵד מחפה אותי. | `כָּל מִשְׁבָּרֶיךָ וְגַלֶּיךָ עָלַי עָבָרוּ` (יונה ב:ד) | equivalent | הגלים העוברים על המתפלל. |
+| 78 | katmanni agû edû sahpanni | מכסה אותי הגל, האֵד מחפה אותי. | `בָּאתִי בְמַעֲמַקֵּי-מַיִם וְשִׁבֹּלֶת שְׁטָפָתְנִי` (תהלים סט:ג) | equivalent |  |
+| 78 | katmanni agû edû sahpanni | מכסה אותי הגל, האֵד מחפה אותי. | `וְאֵד יַעֲלֶה מִן הָאָרֶץ` (בראשית ב:ו) | cognate | *edû* "שטף המים העולה" ו`אֵד` של בראשית (ושל איוב לו:כז) הם כנראה אותה מלה. |
+| 82 | kīma šadî ina kibrīti inuhhu | כמו שההר נח בגפרית – | `וַיהוָה הִמְטִיר עַל סְדֹם וְעַל עֲמֹרָה גָּפְרִית וָאֵשׁ` (בראשית יט:כד) | cognate | *kibrītu* = `גָּפְרִית`, וגם שם הגפרית והאש יחד (81–84: גירה והגפרית). |
+| 88 | EN₂ attimannu kaššāptu ša iqbû amāt lemuttīya ina libbīša | קסם. מי אַתְּ, מכשפה, אשר אמרה דבר רעה עליי בלבה, | `דֹּבְרֵי שָׁלוֹם עִם-רֵעֵיהֶם; וְרָעָה בִּלְבָבָם` (תהלים כח:ג) | equivalent | הרעה הנאמרת בלב: מה שלא נשמע בחוץ הוא הכשף עצמו. |
+| 88 | EN₂ attimannu kaššāptu ša iqbû amāt lemuttīya ina libbīša | קסם. מי אַתְּ, מכשפה, אשר אמרה דבר רעה עליי בלבה, | `אָמַר נָבָל בְּלִבּוֹ` (תהלים יד:א) | equivalent | אותו ניב, "אמר בלבו". |
+| 90 | ina šaptīša ibbanû rusûʾa | על שפתיה נבנה הכבל עליי, | `שָׁנְנוּ לְשׁוֹנָם כְּמוֹ-נָחָשׁ: חֲמַת עַכְשׁוּב תַּחַת שְׂפָתֵימוֹ` (תהלים קמ:ד) | equivalent | הרעל שמתחת לשפתיים: גם ה"ריר" (UŠ₁₁) הוא באכדית גם "ארס". |
+| 92 | kaššāptu aṣbat pâki aṣbat lišānki | מכשפה, אחזתי את פיך, אחזתי את לשונך, | `תֵּאָלַמְנָה שִׂפְתֵי-שָׁקֶר: הַדֹּבְרוֹת עַל-צַדִּיק עָתָק` (תהלים לא:יט) | equivalent | המשאלה שהפה הדובר רעה ייאלם; כאן המדבר עושה זאת בעצמו. |
+| 101 | liṣūdū (u) līriqū pānūki | יִצָּרְבוּ (ו)יוריקו פנייך! | `וְנֶהֶפְכוּ כָל פָּנִים לְיֵרָקוֹן` (ירמיהו ל:ו) | cognate | *arāqu* "להוריק, להחוויר" = `ירק`: הפנים המוריקות מפחד או ממחלה. |
+| 101 | liṣūdū (u) līriqū pānūki | יִצָּרְבוּ (ו)יוריקו פנייך! | `וְנִצְרְבוּ בָהּ כָּל פָּנִים מִנֶּגֶב צָפוֹנָה` (יחזקאל כא:ג) | equivalent | פנים הנצרבות באש. |
+| 112 | taprusī ittīya ilī u ištarī | גזרת מעמי את אֵלִי ואֵלָתִי, | `הִרְחַקְתָּ מְיֻדָּעַי מִמֶּנִּי` (תהלים פח:ט) | equivalent | **הבדידות של המקולל**: גם שם אדם שבני ביתו ומכריו הורחקו ממנו. |
+| 113 | taprusī ittīya šēʾu šeʾītu ahu u ahātu ibru tappû u kinattu | גזרת מעמי שָׁכֵן ושכנה, אח ואחות, רֵעַ, חבר ובן־גיל. | `אַחַי מֵעָלַי הִרְחִיק; וְיֹדְעַי אַךְ-זָרוּ מִמֶּנִּי` (איוב יט:יג) | equivalent | האחים והמכרים שהתרחקו. |
+| 113 | taprusī ittīya šēʾu šeʾītu ahu u ahātu ibru tappû u kinattu | גזרת מעמי שָׁכֵן ושכנה, אח ואחות, רֵעַ, חבר ובן־גיל. | `חָדְלוּ קְרוֹבָי; וּמְיֻדָּעַי שְׁכֵחוּנִי` (איוב יט:יד) | equivalent |  |
+| 113 | taprusī ittīya šēʾu šeʾītu ahu u ahātu ibru tappû u kinattu | גזרת מעמי שָׁכֵן ושכנה, אח ואחות, רֵעַ, חבר ובן־גיל. | `הִרְחַקְתָּ מִמֶּנִּי אֹהֵב וָרֵעַ; מְיֻדָּעַי מַחְשָׁךְ` (תהלים פח:יט) | equivalent | "אוהב ורע", כמו *ibru tappû* כאן. |
+| 114 | aleqqâkkim-ma hahâ ša utūni dihmennu ša diqāri | לוקח אני לך סיג של אַתּוּן, פיח של סיר, | `קְחוּ לָכֶם מְלֹא חָפְנֵיכֶם פִּיחַ כִּבְשָׁן; וּזְרָקוֹ מֹשֶׁה הַשָּׁמַיְמָה לְעֵינֵי פַרְעֹה` (שמות ט:ח) | equivalent | **פיח הכבשן כחומר של מעשה פלאי**: בשמות משה "לוקח" פיח מן הכבשן וזורק אותו, והוא נעשה לשחין על המצרים; כאן המלחש "לוקח" (*leqû* = `לקח` [cognate]) סיג מן הכבשן ופיח מן הסיר, ויוצק אותם על ראש המכשפה. אותו חומר ואותו פועל – ופעולה של העברת נזק אל האויב. |
+| 114 | aleqqâkkim-ma hahâ ša utūni dihmennu ša diqāri | לוקח אני לך סיג של אַתּוּן, פיח של סיר, | `כֻּלָּם נְחֹשֶׁת וּבְדִיל וּבַרְזֶל וְעוֹפֶרֶת בְּתוֹךְ כּוּר סִגִים כֶּסֶף הָיוּ` (יחזקאל כב:יח) | equivalent | הסיג שבכור: הפסולת שנשארת אחרי האש. |
+| 115 | amahhah atabbak ana qaqqad raggati šīmtīki | מרטיב אני, יוצק אני על ראש *הרשעה – גורלך*. | `יָשׁוּב עֲמָלוֹ בְרֹאשׁוֹ` (תהלים ז:יז) | equivalent | הרע "על הראש". |
+| 125 | EN₂ makurraya sîn ušēpiš | קסם. את אנייתי (בידי) סִין עִשֵּׂיתִי, | `וְזֹאת אִשָּׁה אַחַת יוֹשֶׁבֶת בְּתוֹךְ הָאֵיפָה` (זכריה ה:ז) | divergence | **הרשעה היושבת בתוך כלי, ונישאת אל מחוץ לארץ**: בחזון זכריה ה:ה–יא, אשה היושבת באיפה ("זאת הרשעה", ה:ח) נסגרת בה ונישאת אל ארץ שנער. כאן המכשף והמכשפה "יושבים בתוכה" של האנייה (127–129), והיא נשלחת אל הים. אותה פעולה של סילוק – הרע בדמות אשה, יושב בכלי, ומורחק; בזכריה הוא מועבר ומושב במקום אחר, כאן הוא מוטבע. |
+| 127 | ašbū ina libbīša kaššāpu u kaššāptu u kaššāptī | יושבים בתוכה מכשף ומכשפה, | `זֹאת הָרִשְׁעָה וַיַּשְׁלֵךְ אֹתָהּ אֶל תּוֹךְ הָאֵיפָה` (זכריה ה:ח) | divergence | ראו 125. |
+| 130 | ša makurrīšunu libbatiq ašalša | של אנייתם – ינותק עבותה, | `נְנַתְּקָה אֶת-מוֹסְרוֹתֵימוֹ; וְנַשְׁלִיכָה מִמֶּנּוּ עֲבֹתֵימוֹ` (תהלים ב:ג) | equivalent | **אותו צמד**: הניתוק של ה"מוסרות" וה"עבותות"; כאן *ašlu* ו*markasu* (130–131), והפועל *batāqu* "לנתק". |
+| 132 | edû ana tâmti lišēṣīšunūti | האֵד יוציא אותם אל הים, | `וַיִּשְׂאוּ אֶת יוֹנָה וַיְטִלֻהוּ אֶל הַיָּם; וַיַּעֲמֹד הַיָּם מִזַּעְפּוֹ` (יונה א:טו) | divergence | **האשם והים**: ביונה האשם מוסר מן האנייה אל הים, והים נרגע; כאן האשמים נשלחים בתוך האנייה אל הים, והים מתגעש עליהם (133). הקשר הוא במבנה (הים כמקום שבו נעלם האשם), לא בלשון. |
+| 133 | šamrūti agû elīšunu lītellû | גלים סוערים יעלו עליהם, | `וַיֹּאמֶר וַיַּעֲמֵד רוּחַ סְעָרָה; וַתְּרוֹמֵם גַּלָּיו` (תהלים קז:כה) | divergence | הסערה והגלים של יורדי הים; אבל בתהלים קז הם צועקים ונושעים (קז:כח–ל), וכאן הגלים הם העונש. |
+| 133 | šamrūti agû elīšunu lītellû | גלים סוערים יעלו עליהם, | `כָּל מִשְׁבָּרֶיךָ וְגַלֶּיךָ עָלַי עָבָרוּ` (יונה ב:ד) | equivalent | הגלים העוברים על הטובע; כאן – על המכשפים, ולא על המדבר (78). |
+| 136 | EN₂ haṣabtu sūqāti ammēni tugdanarrênni | קסם. חרס השווקים, מדוע מתגרה את ומתגרה בי? | `אַל תִּתְגָּרוּ בָם` (דברים ב:ה) | cognate | *gerû* "להתגרות, להיות עוין" = `התגרה` (בעברית: התפעל של `גרה`). |
+| 142 | ina kibsīki rābiṣu ušeššeb | בשביליך – רוֹבֵץ מושיב אני, | `לַפֶּתַח חַטָּאת רֹבֵץ; וְאֵלֶיךָ תְּשׁוּקָתוֹ` (בראשית ד:ז) | cognate | *rābiṣu* "הרובץ", השד האורב בפתח ובדרכים; החטאת "רובץ" בפתח של בראשית ד הוא אותו יצור, כמו שכבר הציעו פרשנים. |
+| 144 | amahhaṣ muhhaki ušanna ṭēnki | מוחץ אני את קדקדך, משנה אני את טעמך, | `אַךְ-אֱלֹהִים יִמְחַץ רֹאשׁ אֹיְבָיו: קָדְקֹד שֵׂעָר` (תהלים סח:כב) | cognate | *maḫāṣu* = `מחץ` ו*muḫḫu* = `קָדְקֹד`: אותו מעשה, באותן מלים. |
+| 144 | amahhaṣ muhhaki ušanna ṭēnki | מוחץ אני את קדקדך, משנה אני את טעמך, | `וַיְשַׁנּוֹ אֶת טַעְמוֹ בְּעֵינֵיהֶם וַיִּתְהֹלֵל בְּיָדָם … וַיּוֹרֶד רִירוֹ אֶל זְקָנוֹ` (שמואל א כא:יד) | cognate | *ṭēma šunnû* = `שִׁנָּה אֶת טַעְמוֹ`, השיגעון; ושם גם ה"ריר". |
+| 145 | adallah libbaki tamaššî šīrīki | דולח אני את לבך – תשכחי את בשרך. | `וַתִּדְלַח מַיִם בְּרַגְלֶיךָ` (יחזקאל לב:ב) | cognate | *dalāḫu* = `דלח`: לעכור מים; כאן – את הלב. |
+| 147 | šamû anāku-ma ul tulappatīnni | שמים אני – לא תנגעי אותי, | `וַאֲנִי הִנֵּה נְתַתִּיךָ הַיּוֹם לְעִיר מִבְצָר וּלְעַמּוּד בַּרְזֶל וּלְחֹמוֹת נְחֹשֶׁת` (ירמיהו א:יח); `וְנִלְחֲמוּ אֵלֶיךָ וְלֹא יוּכְלוּ לָךְ` (ירמיהו א:יט) | equivalent | **האדם המזוהה עם דבר שאין לו שליטה עליו**: ירמיהו נעשה עיר מבצר ועמוד ברזל, וממילא ; כאן המדבר הוא שמים, ארץ, קוץ, עקרב והר – ולכן אין בה כוח לגעת בו. ההבדל: אצל ירמיהו אלוהים הוא ש"נתן" אותו כך; כאן המדבר מכריז זאת על עצמו, והדיבור הוא המעשה. |
+| 149 | sihil balti anāku-ma ul takabbasīnni | קוץ של בַּלְתּוּ אני – לא תדרכי עליי, | `כִּי סָרָבִים וְסַלּוֹנִים אוֹתָךְ וְאֶל עַקְרַבִּים אַתָּה יוֹשֵׁב` (יחזקאל ב:ו) | equivalent | **קוצים ועקרבים** כצמד של דברים שאין לגעת בהם; ביחזקאל אלה האויבים המקיפים את הנביא, כאן המדבר עצמו הוא הקוץ והעקרב. |
+| 150 | ziqit zuqaqīpi anāku-ma ul talappatīnni | עוקץ העקרב אני – לא תיגעי בי, | `וְאֶל עַקְרַבִּים אַתָּה יוֹשֵׁב` (יחזקאל ב:ו) | equivalent | ראו 149. |
+| 151 | šadû zaqru anāku-ma kišpūki ruhûki | הר נישא אני – כשפייך, רירך, | `וְעַל כָּל הֶהָרִים הָרָמִים; וְעַל כָּל הַגְּבָעוֹת הַנִּשָּׂאוֹת` (ישעיהו ב:יד) | equivalent |  |
+| 153a | KA.INIM.MA UŠ₁₁.BUR₂ haṣabti sūq-erbetti lipâ tapaššaš ta[bar]ra takarrik | נוסח להתרת ריר: חרס מפרשת הדרכים – בחֵלֶב תמשח, בצמר א[דו]ם תכרוך. | `וְעֵץ אֶרֶז וּשְׁנִי תוֹלַעַת וְאֵזֹב` (ויקרא יד:ד) | equivalent | **הצמר האדום בטקסי טהרה**: "שני תולעת" של טהרת המצורע (ושל פרה אדומה, במדבר יט:ו) הוא הצמר הצבוע אדום של הטקס המסופוטמי. |
+| 153a | KA.INIM.MA UŠ₁₁.BUR₂ haṣabti sūq-erbetti lipâ tapaššaš ta[bar]ra takarrik | נוסח להתרת ריר: חרס מפרשת הדרכים – בחֵלֶב תמשח, בצמר א[דו]ם תכרוך. | `כִּי עָמַד מֶלֶךְ בָּבֶל אֶל אֵם הַדֶּרֶךְ בְּרֹאשׁ שְׁנֵי הַדְּרָכִים לִקְסָם קָסֶם` (יחזקאל כא:כו) | equivalent | **פרשת הדרכים כמקום של מעשי קסמים**: מלך בבל קוסם שם; כאן החרס נלקח משם. |
+| 155 | rittu dannatu ša amēlūti | כף חזקה של האנושות, | `כִּי בְיָד חֲזָקָה יְשַׁלְּחֵם וּבְיָד חֲזָקָה יְגָרְשֵׁם מֵאַרְצוֹ` (שמות ו:א) | divergence | "יד חזקה" היא במקרא ידו של אלוהים, הגואלת; כאן "הכף החזקה" היא כף של בני אדם, הלוכדת – והמלחש מבקש לשרוף אותה. |
+| 156 | ša kīma nēši iṣbatu amēlu | אשר כאריה – אחזה אדם, | `יֶאֱרֹב בַּמִּסְתָּר כְּאַרְיֵה בְסֻכֹּה יֶאֱרֹב לַחֲטוֹף עָנִי; יַחְטֹף עָנִי בְּמָשְׁכוֹ בְרִשְׁתּוֹ` (תהלים י:ט) | equivalent | **האריה והרשת יחד**: הרשע של תהלים י הוא אריה האורב וצייד המושך ברשת – בדיוק שתי התמונות של 156–160. |
+| 157 | kīma huhāri ishupu eṭlu | כמצודה – חיפתה עלם, | `כַּדָּגִים שֶׁנֶּאֱחָזִים בִּמְצוֹדָה רָעָה וְכַצִּפֳּרִים הָאֲחֻזוֹת בַּפָּח` (קהלת ט:יב) | equivalent | המצודה והפח, ו"אחוזים" בהם – אותם כלים ואותו פועל (156 *iṣbatu*). |
+| 158 | kīma šēti ukattimu qarrādu | כרשת – כיסתה גיבור, | `כִּי-שֻׁלַּח בְּרֶשֶׁת בְּרַגְלָיו; וְעַל-שְׂבָכָה יִתְהַלָּךְ` (איוב יח:ח) | equivalent | **רשת, שבכה ופח** (איוב יח:ח–י): שלושה מן הכלים של 157–160, בפרק שמתאר את גורל הרשע, ובו גם הגפרית, באיוב יח:טו. |
+| 159 | kīma šuškalli ašārēdu ibāru! | כשְׂבָכָה – צדה ראשון במעלה, | `וְעַל-שְׂבָכָה יִתְהַלָּךְ` (איוב יח:ח) | equivalent | ראו 158. |
+| 160 | kīma gišparri iktumu dannu | כפח – כיסתה חזק. | `יֹאחֵז בְּעָקֵב פָּח; יַחֲזֵק עָלָיו צַמִּים` (איוב יח:ט) | equivalent | הפח האוחז; ושם גם `יַחֲזֵק` – הפח "חזק" על הנלכד, כאן הנלכד הוא "החזק". |
+| 162 | girra līkul girra lišti girra lištābil | גִּירָה יאכל, גִּירָה ישתה, גִּירָה יניע! | `וְתֹאכְלֵם אֵשׁ` (תהלים כא:י) | equivalent | האש "אוכלת" את האויבים. |
+| 164 | ša rittakunu ēpušu zumurkunu lihmuṭ | על אשר כפכם עשתה – ילהט את גופכם! | `וְהָיוּ כָל זֵדִים וְכָל עֹשֵׂה רִשְׁעָה קַשׁ וְלִהַט אֹתָם הַיּוֹם הַבָּא` (מלאכי ג:יט) | equivalent | `לִהַט` את עושי הרשעה, ביום ה"בוער כתנור" (167) – מלאכי שהזכיר את ה"מכשפים" ב־ג:ה. |
+| 165 | lispuh illatkunu mār ea mašmaššu | יפיץ את עדתכם בן אֵאָה, המלחש! | `עֲדַת מְרֵעִים הִקִּיפוּנִי` (תהלים כב:יז) | equivalent | "עדה" של רשעים. |
+| 166 | qutri girra līrimā pānīkunu | קיטור גִּירָה יעטה את פניכם! | `וְהִנֵּה עָלָה קִיטֹר הָאָרֶץ כְּקִיטֹר הַכִּבְשָׁן` (בראשית יט:כח) | cognate | *qutru* = `קִיטוֹר` (`../renderings.md` §5). |
+| 167 | kīma tinūri ina hiṭâtīkunu | כתנור – בסדקיכם, | `תְּשִׁיתֵמוֹ כְּתַנּוּר אֵשׁ לְעֵת פָּנֶיךָ` (תהלים כא:י) | cognate | *tinūru* = `תַּנּוּר`: האויבים נעשים כתנור אש. |
+| 167 | kīma tinūri ina hiṭâtīkunu | כתנור – בסדקיכם, | `כִּי הִנֵּה הַיּוֹם בָּא בֹּעֵר כַּתַּנּוּר` (מלאכי ג:יט) | cognate |  |
+| 177 | uṣurāt balāṭi uṣṣurāku anāku | בצורות החיים מצויר אני, | `גָּלְמִי רָאוּ עֵינֶיךָ וְעַל-סִפְרְךָ כֻּלָּם יִכָּתֵבוּ: יָמִים יֻצָּרוּ` (תהלים קלט:טז) | equivalent | **החיים המשורטטים מראש**: ימי האדם "יוצרו" ונכתבו בספר האל; כאן המדבר "מצויר" בתבנית החיים שקבעה אישתר. |
+| 177 | uṣurāt balāṭi uṣṣurāku anāku | בצורות החיים מצויר אני, | `וְהָיְתָה נֶפֶשׁ אֲדֹנִי צְרוּרָה בִּצְרוֹר הַחַיִּים אֵת יְהוָה אֱלֹהֶיךָ וְאֵת נֶפֶשׁ אֹיְבֶיךָ יְקַלְּעֶנָּה בְּתוֹךְ כַּף הַקָּלַע` (שמואל א כה:כט) | equivalent | נפש המוגן "צרורה בצרור החיים", ונפש האויב נזרקת "בתוך כף הקלע": אותו ניגוד בין המוגן בחיים לבין האויב המושלך (מלים אחרות). |
+| 188 | EN₂ bišlī bišlī qidê qidê | קסם. בַּשְּׁלִי, בשלי, קִדְחִי, קדחי! | `כִּי אֵשׁ קָדְחָה בְאַפִּי וַתִּיקַד עַד שְׁאוֹל תַּחְתִּית` (דברים לב:כב) | cognate | *qâdu* = `קדח` (`../renderings.md` §5). |

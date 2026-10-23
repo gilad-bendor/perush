@@ -143,7 +143,7 @@ Vocalize at the first occurrence in each file; **always** where marked ★ (they
 | *elēlu*, *ellu*; *ullulu*; *mullilu* | טָהַר, טָהוֹר; טִהֵר; מְטַהֵר | wisdom. |
 | *ebēbu*; *ubbubu*; *ebbu* | נָקָה; נִקָּה; צַח | The verb as the wisdom corpus; the adjective *ebbu* = `צַח` as the netherworld corpus decided last (2026-10-22, Nergal and Ereškigal), so that *šamnu ellu šamnu ebbu šamnu namru* (VII 29) keeps three words: `שֶׁמֶן טָהוֹר, שֶׁמֶן צַח, שֶׁמֶן זוֹהֵר`. |
 | *zakû* | זָכָה [cognate] | *ētelil ētebib azzaku* = `טָהַרְתִּי, נִקֵּיתִי, זַכּוֹתִי` ↔ ישעיהו א:טז `רַחֲצוּ הִזַּכּוּ`. |
-| *qadāšu* D (*quddušu*); *qadištu* | מְקֻדָּשׁ, קִדֵּשׁ [cognate]; קְדֵשָׁה | *id ellu namru quddušu* = `נָהָר טָהוֹר, זוֹהֵר, מְקֻדָּשׁ`. (The temple corpus's "no קדש" rule is for Sumerian *kug*.) |
+| *qadāšu* D (*quddušu*); *qadištu* | מְקֻדָּשׁ, קִדֵּשׁ [cognate]; קְדֵשָׁה | *id ellu namru quddušu anāku* (III 61) = `נָהָר טָהוֹר, זוֹהֵר מְקֻדָּשׁ – אֲנִי` (Tablet III: *namru* is a second god, "the Bright One" = Šamaš, as III 69, 71 show). (The temple corpus's "no קדש" rule is for Sumerian *kug*.) |
 | *mesû* (wash); *mīs pî*; *mīs qātī* | רָחַץ; רְחִיצַת פֶּה; רְחִיצַת יָדַיִם | ↔ `יִרְחֲצוּ אֶת יְדֵיהֶם` (דברים כא:ו), `אֶרְחַץ בְּנִקָּיוֹן כַּפָּי` (תהלים כו:ו) [equivalent]. |
 | *salāḫu* (sprinkle) | הִזָּה | ↔ ויקרא יד:ז, טז:יד [equivalent]. |
 | *pašāšu* (anoint) | מָשַׁח | (by sense; not cognate). *šamnu* = `שֶׁמֶן` [cognate]. |
@@ -433,3 +433,16 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
   transliterated; the abracadabra of II 150–153 transliterated.
 - **Changed by the coordinator:** *šunamerimmakku* (II 61) = `יַד־שְׁבוּעָה` (was `יַד־אָלָה`): *māmītu* = `שְׁבוּעָה` in every
   corpus, and `אלה` collides with `אֵלָה` "goddess"; the `שבועה` gate is now licensed by Sumerian *namerim* too.
+
+### 10.3 Tablet III (2026-10-23)
+- **Accepted:** the practitioners' "of …" epithets (III 47–53: *luʾʾû* D `זִהֵם`, *lapātu* D `נִגַּע`, *kamû* `לָכַד`,
+  *kasû* `אָסַר` …); the reversal verbs kept apart (III 55–57): *enû* Št `הֶחֱלִיף`, *nabalkutu* Š `הָפַךְ`, *šupêlu*
+  `הֵמִיר`; *šumḫuru* `הִפְגִּיעַ` (Isa 53:6); the ten D-stem verbs of III 102–111, each its own Hebrew verb; *makurru*
+  `אֳנִיָּה` (`סְפִינָה` stays for *eleppu*); *ṭurru* `חֶבֶל`, *ašlu* `עֲבוֹת`, *markasu* `מוֹסֵרָה` (a split from the flood
+  corpus's *markasu* `חֶבֶל`, because Maqlû has both words), *batāqu* `נִתֵּק` (↔ Ps 2:3); *luḫummû* `טִין`; *rābiṣu*
+  `רוֹבֵץ` [cognate] (the wisdom corpus's rule, not a transliteration); the colophon's *iškār āšipūti* = `סִדְרַת
+  הָאַשָּׁפוּת`. Inside the tablet: 76 = 87, 154 = 180, 155 = 181.
+- **A line of II corrected:** II 161 *ēteneppušūni* is a Gtn present (`עושים ועושים לי`), as III 64; IV 115 and RT 68'
+  follow it.
+- **Rule for the closing formula when only some copies have it** (III 101, 115): the Hebrew follows N; the copies with
+  TU₆ ÉN go to a footnote.
