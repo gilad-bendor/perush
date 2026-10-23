@@ -152,6 +152,36 @@ For long texts, work in sections (e.g. 20–40 lines per session) and record pro
 - **The same stop in Round 3 run 3** (2026-10-21, ~22:00 UTC, the new corpus `נבואה-ומלכות/`): all five parallel translators (SAA 9 1, 2, 3, 4–11; Advice to a Prince) failed on the same 429 at their start, before any line was written; sources, tool, renderings and brief had been pushed first. Resumed 2026-10-22 with one translator at a time, after aligning the pre-set renderings with the corpora finished meanwhile (Etana's *agappu* `אֲגַף` and *ṣerru* `נָחָשׁ`).
 - **If a cloud session does hit a quota, a rate limit or a forced delay** (an HTTP 429, "session limit", a usage cap, throttled agents), record it here at once: what happened, when, and after how much work. Then fall back to one agent at a time. This section must describe what is actually true.
 
+### 5.1a Orchestrating a round from one prompt: a parent session and child sessions (the user, 2026-10-23)
+The user's intent: **a whole round runs from one user prompt** (e.g. `ancient-translations: orchestrate Round 4`), with
+the user needed only at the end. A cloud session can create first-class cloud sessions (`create_session`, claude-code-remote
+MCP); a child has the full tool set, its own sub-agents (nesting up to 8 levels), and can message its parent and re-title
+itself (all checked in the smoke test of 2026-10-23, `history.md`).
+- **The parent** (the session the user started) runs the round's runs **one child at a time** (the quota is shared by
+  all the user's sessions, §5.1):
+  1. before each child: commit and push; check its own `get_session` → `external_metadata.rate_limit_info.status`
+     (`allowed` / `allowed_warning` / `rejected`; the API documents no percentage, and `utilization` appears only near the
+     warning threshold): if not `allowed`, schedule a wake-up with `send_later` for 5 minutes after `resetsAt`, end the
+     turn, and launch on wake-up;
+  2. `create_session` with `source_url: https://github.com/gilad-bendor/perush`, `source_revision: main` (**without
+     them the child has no checkout**), a title `Ancient translations <N>.<M> – <name>`, and the prompt built from
+     [`reports/child-prompt-template.md`](reports/child-prompt-template.md), which names the report path
+     `reports/round-<N>/run-<M>.md`;
+  3. schedule a safety-net `send_later` (about 60 minutes; again at each check-in) and **end the turn**: do not wait in a
+     script (a foreground command stops at 10 minutes, a background one at 2 hours, and a VM reboot kills both; the
+     message and the scheduled wake-ups survive);
+  4. on each wake-up (the child's `RUN DONE` / `RUN STOPPED` / `BLOCKED:` message, a check-in, or an automatic
+     notice that a child's turn failed): `python3 -I tools/child_report.py reports/round-<N>/run-<M>.md`; if MISSING,
+     `get_session` / `list_events` on the child to see where it is; answer a `BLOCKED:` child with `send_message`;
+     when the report is there, read it, settle its minor questions (the user's rule, STATUS §6), copy the questions
+     only the user can answer into `reports/round-<N>/questions-for-user.md`, archive the child, and start the next run;
+  5. after the last run: the lead's finalization (the cross-corpus harmonization, §5.2 "A harmonization pass"; every
+     verifier; STATUS, history), then **one** message to the user: the results and `questions-for-user.md`.
+- **The child** follows the template: it never interacts with the user (questions go into its report; only a complete
+  block is sent to the parent as `BLOCKED:`); it checks its quota status before each heavy sub-agent; it pushes to
+  `main` as it goes; at the end it pushes the report, re-titles itself with the suffix ` done`, messages the parent,
+  and stops.
+
 ### 5.2 Rules learned (distilled; the full accounts, with examples, are in `history.md`)
 Each rule was learned the hard way on a real run; the run is named in brackets, and `history.md` tells the story (H1: the first corpus; H2: the per-run "Learned on …" blocks; H3: the former §11). **Every translator's brief must carry the rules marked ★.**
 
