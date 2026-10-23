@@ -420,3 +420,16 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
 - **Changed by the coordinator:** *binûtu* = `מִבְנֶה` (Gilgameš, Enūma eliš; I 124 was `בִּנְיַן`), and *nabnītu*
   (VII 58, 65) = `יְצִיר` instead.
 - **For the lead's next harmonization:** Ludlul I 105 renders *gerrānu* `מספד`, which is the cognate of *sipdu*.
+
+### 10.2 Tablet II (2026-10-23)
+- **Accepted:** the capture words of II 162–180: *kapālu* `גָּלַל`, *saḫāpu* `חִפָּה`, *abātu* G `הָרַס`, *nasāku* `זָרַק`,
+  *asurrû* `בִּיב`, *šūšurātu* `טִאטוּא`, *mê musâti* `מֵי רְחִיצָה`; *nabalkutu* "climb over" `דִּלֵּג` (Ps 18:30) beside
+  "turn back" `הִתְהַפֵּךְ` (a sense split); *buʾʾû* `חִפֵּשׂ`, *šeʾû* `בִּקֵּשׁ`, *saḫāru* `סוֹבֵב` (the three seeking verbs);
+  *nâru* `קָטַל`; *pašāṭu* `מָחָה` (EST); *lapātu* `נָגַע`; *temēru* `טָמַן`; *laqātu* `לִקֵּט`; *egēru* `שִׁלֵּב` /
+  `שָׁלוּב`; *šutābulu* `הֵנִיעַ` (not `בִּלְבֵּל`: Gen 11); *ilūtu* `אֵלוּת`; *nindabû* `תְּרוּמַת־לֶחֶם`; *askuppatu*
+  `מִפְתָּן`; *ašlāku* `כּוֹבֵס`; *tubkinnu* `עֲרֵמַת זֶבֶל`; *ḫirītu* `חֲפִירָה`; *utūnu* `אַתּוּן` **always vocalized**
+  (`אתון` = she-ass; checked by script); *šubtu* `מִשְׁכָּן`; *kayyānu* `תְּמִידִי`; *apu* `אֲגַם`; *nannāru* `נַנָּרוּ`
+  (§6.7); the "Hand of X" diseases translated (`יַד־אֵל`, `יַד־אֵלָה`, `יַד־אִט`, `יַד־אֱנוֹשׁוּת`), the opaque ones
+  transliterated; the abracadabra of II 150–153 transliterated.
+- **Changed by the coordinator:** *šunamerimmakku* (II 61) = `יַד־שְׁבוּעָה` (was `יַד־אָלָה`): *māmītu* = `שְׁבוּעָה` in every
+  corpus, and `אלה` collides with `אֵלָה` "goddess"; the `שבועה` gate is now licensed by Sumerian *namerim* too.
