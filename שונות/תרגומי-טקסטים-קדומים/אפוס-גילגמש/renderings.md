@@ -431,6 +431,7 @@ The proposals of OB Schøyen₂, Nippur, Harmal₁, Ishchali, Harmal₂ and IM a
 - 2026-10-18: §21 (small OB tablets).
 - 2026-10-21: §22, the cross-corpus harmonization (*uqnû*, *kabattu*, *sukkallu*).
 - 2026-10-23: end of §22, the 2026-10-23 harmonization (*mašqû* = `מַשְׁקֶה`).
+- 2026-10-23: end of §22, batch C (*bâʾu* = `צָעַד`).
 
 ## 12. The open decisions, settled (2026-10-18)
 The user delegated these to the coordinator ("use your judgment"). Binding from now on:
@@ -457,3 +458,5 @@ The user delegated these to the coordinator ("use your judgment"). Binding from 
 6. **verify.py**: no reserved string, formula or name trap involves these words; nothing changed.
 
 2026-10-23 harmonization (`../harmonization--2026-10-23.md` row 8): *mašqû* → `מַשְׁקֶה` [cognate, Gen 13:10], always vocalized (`שֹׁקֶת` stays for *buginnu*); changed lines: SB I 109, 174 `בשוקת` → `בַּמַּשְׁקֶה`; 112, 113, 126, 153, 169 `מול השוקת` → `מול הַמַּשְׁקֶה`; 140, 161 `אל השוקת` → `אל הַמַּשְׁקֶה`; 170 `(מן) השוקת` → `(מן) הַמַּשְׁקֶה` (the table listed 109, 112, 170; the other seven lines carry the same *mašqû*), and the headings of 111–119 and 165–175 and the Tablet I introduction. No other *mašqû* in the corpus. verify.py: nothing gated.
+
+2026-10-23 harmonization, batch C (`../harmonization--2026-10-23.md` row 19, revised): *bâʾu* "pass along, go" → `צָעַד` (`עָבַר` is reserved for its cognate *ebēru* "cross", `חָלַף` is *etēqu*'s); changed line: SB VI 19 `עִירְךָ – במשא יעבור את הפִּרְדָּה!` → `עִירְךָ – במשא יצעד לפני הפִּרְדָּה!` (*bâʾu* with an accusative, "pass by, outpace": `צעד לפני`). XI 106 and 111 (the flood corpus's file, read here) changed with that corpus: `צועדת`. No other *bâʾu* in this corpus. Collision: OB II 144, 200–201 render *akāšu* `צעד` (`צעדה אליו`, `צעד ובא`), recorded, not changed.
