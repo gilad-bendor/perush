@@ -817,5 +817,64 @@ fixed lines / formulas checked: no error found in them.
 - `build AM`, `verify AM --strict` (0 problems) and `check_bible_quotes.py` on the annotated file, `translation-AM.rtl.md`
   and `translation.rtl.md` (0) after the pass. No fixed line (§7) or gate problem found in 1.1–13.9.
 
+## Review pass (a), fidelity, 13.10–28.1
+
+Every line of houses 10–30, the epilogue and the colophon read against `egypt_tools.py data` and §3a, a house at a
+time (`verify AM --strict` 0 after each), then cross-checked with `tr`. The negations (`m-jri̯` + conjunctive, `m-ḏr.tj`,
+`bn`, `nn`, `mꜥ-n`, `bw jri̯=f`, `bw sḏm=f`, `tm`), the Third Futures, the `sḏm.n=f` of 26.13 and the fixed lines /
+formulas are all right. No negation or tense error was found in this half.
+
+### The main finding: eight false lacunae (the TLA's double analyses)
+AED writes a `<gap reason="lost"/>` between the TLA's two analyses of one written stretch. `egypt_tools.py` turns it
+into ` / ` only when the words on both sides of the gap are similar single words (`_alt_gaps`). When the analysis covers
+several words, the gap is printed as `[…]`. In eight lines the drafts took that `[…]` for a real lacuna. They put
+`[…]` in the Hebrew and translated **both** analyses one after the other; at 22.2, 22.4 and 25.15 the notes even say
+the scribe "wrote it twice". The writing shows it is one text: 22.2 `thꜣ =j` / `thꜣ ⟨w⟩j` and 22.4 `msdi̯ =j` /
+`msdi̯ ⟨w⟩j` differ only in a supplied `w`; 14.7 `(ḥr) šnꜥ` / `(m) šnꜥ` and 27.8 `(ḥr)` / `(m)` only in unwritten
+prepositions. The TLA's German renders each line once ("oder: …" for the other analysis), and it marks no lacuna.
+Each line is now translated once, and the other analysis is given in the parse:
+- **14.7** `הנה קניין העני – הוא עוצר […], סתימה לגרון;` → `הנה קניין העני – הוא סתימה לגרון;` (the noun reading,
+  as in the TLA).
+- **16.8** `תמצא זאת כאורח […] – כדרך החיים;` → `תמצא זאת כדרך החיים;` (mj.t, as in 1.7).
+- **18.12** `אם נעשק *…*? […] – נעשק זהב לכֶּתֶם,` → `אם נעשק זהב לכֶּתֶם,` (`ꜥšgꜣj.tj nbw`, the TLA's first).
+- **22.2** `כי פגעתי […] – פגע בי איש בעירך."` → `כי פגע בי איש בעירך."`. I chose "he injured me" (the TLA puts
+  "I injured" first): the one who asks for a patron is the victim, and 22.8 "your silence will cast *them* down"
+  refers to those who did the harm.
+- **22.4** `כי פגעתי בשנואי […] – פגע בי שונאי."` → `כי פגע בי שונאי."` (as 22.2).
+- **23.16** `התענג […] – עונג הוא ברוקך.` → `התענג ברוקך.` (the imperative, as in the TLA).
+- **25.15** `אינו מניח לאונייתו להתהפך […] אין אונייתו מתהפכת.` → `אינו מניח לאונייתו להתהפך.` (the TLA's first).
+- **27.8** `הם מענגים […] – לעונג, הם מלמדים […] – למוסר;` → `הם מענגים, הם מלמדים;` (the verbs, as in the TLA;
+  the noun reading sbꜣ.yt `מוסר` is kept in the note).
+Earlier sections of this file that count these lines as lacunae (the part 2–5 scope lines and logs) are left as their
+translators wrote them; this section corrects them.
+
+### Other change
+- **16.16** `אל תזכיר את עצמך לאדם,` → `אל תזכיר (את עצמך) לאדם,` – the object is not written (the TLA has "(dich)").
+
+### Points left, with the reason
+- **Real gaps or not?** 14.10 `jb =f […] shꜣ`, 27.17 `smḥr […]`, 27.18 `jwi̯ =s pw […] […] […]`, 28.1 `Pꜣ-m⸢y⸣ […]` have
+  a gap with no second analysis next to it. The TLA's German shows no loss at any of them, and Lange has none at
+  27.17. I could not decide from the base, so the `[…]` stays. Someone should check these against the photographs or
+  the TLA site.
+- **24.7** `kꜣy` (a particle, "so then") is untranslated. The natural `הרי` / `והרי` is already taken by `ḫr` / `jst`
+  (§3a).
+- **25.4** `ḫnms n=k`, **26.10** `wꜣḥ n=k`: the reflexive `n=k` is absorbed by the verb, as in 11.13 / 15.14 / 22.14.
+- **24.10** `sḫr.w n qbqb` `עצות הפיסח`: the TLA has "Zustand" here, but one lemma = one Hebrew (`עצה`, 11.7, 21.14).
+- **20.16 = 26.4** `jr m-dwꜣw …` is rendered `אם`, though the TLA tags `jr` as a topicalizer (§3a `הנה`). The TLA's
+  own German reads it conditionally ("wenn"), so I left it.
+- **25.21** `zp-⟨2⟩?`: the `?` belongs to the editor's supplement and is not carried (as at `⟨r⟩?` in 1.10).
+
+### For pass (b) (consistency)
+- `תחדל` renders two lemmas: jꜣb "cease" (17.1 `שיחדל`) and wꜣḥ (26.10 `תחדל`).
+- ḫꜣꜥ "throw away" at 17.21 (TLA "wegwerfen") is `תעזוב`. This goes with the 9.10 / 9.12 / 11.17 throw-question
+  from the first half.
+- The renderings §9 gate sample for 18.21 (`אַל תַּעֲשֶׂה לְךָ אֵיפָה שֶׁמַּחֲזִיקָה שְׁתַּיִם`) differs from the drafted
+  line (`הנוטלת שתיים`, ṯꜣi̯ = `נטל` as in 4.7). The selftest still passes, but the sample no longer shows the real line.
+- **Tool:** `egypt_tools.py _alt_gaps` should also print ` / ` for a gap between multi-word analyses (the eight lines
+  above), or `data` should flag such a gap. I did not change the tool.
+
+`build AM`, `verify AM --strict` (0 problems), `selftest` (0 failures) and `check_bible_quotes.py` on the annotated
+file, `translation-AM.rtl.md` and `translation.rtl.md` (0) after the pass. No fixed line (§7) or gate problem.
+
 ## Parallels index
 (generated from the הקבלה bullets by `../build_parallels_index.py`)

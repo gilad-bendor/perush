@@ -30,8 +30,10 @@ The other witnesses (`egypt_tools.py data KEY --wit`): five fragmentary Amenemop
 dynasty – **older** than the papyrus: their variants go in the apparatus); Merikare pMoscow 4658 and pCarlsberg VI;
 the Heavenly Cow on Tutankhamun's first shrine (the oldest copy, c. 1325 BCE) and in Ramesses VI's tomb (KV 9).
 
-**Amenemope's `/`:** where the TLA analysed one written word in two ways, AED puts a `<gap/>` between the two
-analyses; the corpus tool prints it as ` / ` (no text is lost there). Translate the word once.
+**Amenemope's `/`:** where the TLA analysed one written word **or a stretch of several words** in two ways, AED puts a
+`<gap/>` between the two analyses; the corpus tool prints it as ` / ` (no text is lost there). Translate the stretch once
+(the other analysis in the פירוק). Until 2026-10-23 the tool caught only a gap between two similar single words, and printed
+the multi-word ones as `[…]` (§10.6). The real losses are only the line-end gaps of 27.17, 27.18 and 28.1.
 
 ## 2. The transliteration convention (the Hebrew apparatus)
 
@@ -372,7 +374,7 @@ parallels table.
 | AM 11.13 | err | `אַל תִּתְחַבֵּר אֶל אִישׁ הַחֵמָה,` |
 | AM 1.1 | ok | `רֵאשִׁית הַמּוּסָר לַחַיִּים,` |
 | AM 1.1 | err | `רֵאשִׁית הַתּוֹרָה לַחַיִּים,` |
-| AM 18.21 | ok | `אַל תַּעֲשֶׂה לְךָ אֵיפָה שֶׁמַּחֲזִיקָה שְׁתַּיִם,` |
+| AM 18.21 | ok | `אל תעשה לך איפה הנוטלת שתיים,` |
 | AM 18.22 | err | `אֵיפָה תַּעֲשֶׂה לְךָ,` |
 | AM 17.18 | ok | `אַל תָּזִיז אֶת הַפֶּלֶס, וְאַל תְּזַיֵּף אֶת הַקְּדָטִים,` |
 | AM 9.5 | ok | `מוּטָב הַדַּלּוּת בְּיַד הָאֵל` |
@@ -434,4 +436,9 @@ parallels table.
 3. **Words:** ḏrḏr "stranger" = `נָכְרִי` (`גֵּר` never); ḥnq.t = `שֵׁכָר` ★ always vocalized (unvocalized it reads fqꜣ's `שָׂכָר`); šrj `זוּטָר`, kd `קָטָן`, nḏs "young, lesser" `צָעִיר` (in the age sense; §4.1's `אִישׁ פָּשׁוּט` for the commoner), ẖrd `נַעַר`; ꜣ.t "back" `גֵּו`; ḫm (noun) `בַּעַר`; šfd "book, scroll" `סֵפֶר`; splits by sense noted at their lines: wꜣḥ `חָדַל` (26.10, beside `שָׁת` 23.14), bꜥꜣ "waive (a fare)" `פָּטַר` (27.5), šdj "extract" `חִלֵּץ` (27.4).
 4. **27.7** `ראה לך את שלושים הבתים האלה:` (ptr n=k = `רְאֵה לְךָ`; §6.1's `שְׁלֹשִׁים הַבָּתִּים הָאֵלֶּה` kept inside it); **27.16–17** `הנה סופר שהוא בקי במשרתו –` / `ימצא את עצמו ראוי להיות רֵעַ (המלך) […].` (`מָהִיר`, `מְלָאכָה` only in the apparatus).
 5. **Gate fix:** the `יאור` licence now includes the spelling `jwtwr` (26.16; the same TLA lemma tla33370 as 27.2).
+
+### 10.6 Review pass (a), fidelity, the whole text (2026-10-23)
+1. **A converter bug found by the reviewer:** `egypt_tools.py` `_alt_gaps` printed AED's `<gap/>` between two **multi-word** analyses as `[…]`, so the drafts showed eight false lacunae and translated both analyses side by side (14.7, 16.8, 18.12, 22.2, 22.4, 23.16, 25.15, 27.8; the notes at 22.2, 22.4, 25.15 called it a scribal doubling). Fixed: every single gap inside an AM line is now ` / ` (14.10 too: the TLA's German marks no loss); each line is translated once, with the other analysis in the פירוק. 22.2 / 22.4 read "he injured me" (`פגע בי`), not the TLA's first "I injured": the man seeking a patron is the victim, and 22.8's "them" are those who harmed him.
+2. Fidelity fixes: 8.4 `נלקחו` (passive sḏm=f, past), 8.19 `שנתן` (jw + sḏm=f, past circumstantial), 10.6 `אל תשמח לך` (n=k restored), 13.5 `שהוא נצמד אליו` (the relative form's subject), 16.16 `(את עצמך)` (not written). No negation or tense misread in the whole text.
+3. The §9 gate sample of 18.21 aligned with the drafted line (`הנוטלת שתיים`).
 

@@ -92,15 +92,19 @@ def _pt_label(lab):
 
 
 def _alt_gaps(words):
-    """Amenemope: AED's <gap/> between two analyses of ONE written word (no text is lost there) -> ' / '."""
+    """Amenemope: AED's <gap/> between two analyses of one written stretch (no text is lost there) -> ' / '.
+
+    The TLA gives two analyses of a written word or of several words, and AED separates them with a <gap/>.
+    Every single gap inside a line (a word before it and a word after it, neither a gap) is such a separator
+    (checked against the TLA's German, which marks no loss at any of them; review pass (a), 2026-10-23); until
+    then only a gap between two similar single words was caught, and 8 multi-word ones were printed as `[…]`.
+    Gaps at a line end or in a run of gaps (27.17, 27.18, 28.1) stay `[…]`."""
     out = []
     for i, w in enumerate(words):
-        if w["feats"] == "gap" and out and i + 1 < len(words) and words[i + 1]["feats"] != "gap":
-            a = re.sub(r"[^a-zꜣꜥḥḫẖšḏṯ]", "", out[-1]["surf"].lower())
-            b = re.sub(r"[^a-zꜣꜥḥḫẖšḏṯ]", "", words[i + 1]["surf"].lower())
-            if a and b and difflib.SequenceMatcher(None, a, b).ratio() >= 0.5:
-                out.append({"id": "", "surf": "/", "lemma": "", "feats": "alt", "gloss": ""})
-                continue
+        if (w["feats"] == "gap" and out and out[-1]["feats"] not in ("gap", "alt")
+                and i + 1 < len(words) and words[i + 1]["feats"] != "gap"):
+            out.append({"id": "", "surf": "/", "lemma": "", "feats": "alt", "gloss": ""})
+            continue
         out.append(w)
     return out
 
