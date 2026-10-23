@@ -409,7 +409,7 @@ Full list: `3-אגדת-אתנה/project.md` ("Part ET4"). For a later Akkadian t
 - **Fixed strings:** the flights (above, §10.3); the drops *nasāku* `… – זרק אותו,` / `הנשר נפל – וקיבל אותו בכנפיו.`;
   command → execution `על צדיי – שִׂים את זרועותיך!` / `על צדדיו – שָׂם את זרועותיו.` (and the chest, the wings); the
   plea `"רֵעִי, תנה לי את עשב הלידה!` (III 12); the dream ↔ its fulfilment in the same words (`בְּקֶרֶב? שער אָנוּ,
-  אֶנְלִיל וְאֵאָה – עברנו;` ↔ `… – עברו;`; `השתחווינו זה עם זה – אני ואתה.` ↔ `הנשר ואֵתָנָה – זה עם זה – השתחוו.`).
+  אֶנְלִיל וְאֵאָה – צעדנו;` ↔ `… – צעדו;`; `השתחווינו זה עם זה – אני ואתה.` ↔ `הנשר ואֵתָנָה – זה עם זה – השתחוו.`).
   Repeated lines: commands end with `!`, executions with `.`.
 - **Words:** *târu ana* `נֶהְפַּךְ לְ־` (Gilgameš); *kappu* of a man `כנפיים` (`כַּף` is *rittu*'s; footnote);
   *ina lēt* `אֵצֶל` (`צַד` is *idu*'s); *tēqītu* `סִיכָה` (`משחה` is *piššatu*'s); *maḫāru* Š `*הִקְבִּיל*`; *kiššatu*
@@ -422,6 +422,8 @@ Full list: `3-אגדת-אתנה/project.md` ("Part ET4"). For a later Akkadian t
 
 
 2026-10-23 harmonization, Etana (`harmonization--2026-10-23.md` rows 5, 7): *parakku* → `דּוּכָן` (as Enūma eliš, Gilgameš, Maqlû, Ludlul, the Šamaš Hymn, Gudea and Enmerkar; `כִּסֵּא` stays *kussû*'s), *palgu* → `פֶּלֶג` [cognate]; changed lines: I.15 `[הַכֵּסִים?]` → `[הדוכנים?]`, OBM.9 `הַכֵּסִים` → `הדוכנים` (the two lines stay identical), I.23 `את כֵּס השמים` → `את דוכן השמים`, II.3 `[כֵּ]ס אֲדַד` → `[דו]כן אֲדַד`, II.4 `[ב]צל הכס ההוא` → `[ב]צל הדוכן ההוא` (and the II 1–6 heading `הַדּוּכָן שֶׁל אֲדַד`); MA.i+10 `[כ]מי תעלה!` → `[כ]מי פלג!`. No other *parakku* in Etana. Four Bible quotations of §10.3–§10.4 corrected to the repo's text (Ezek 12:13, 17:3; Gen 30:14, 10:10).
+
+2026-10-23 harmonization, Etana, batch C (`harmonization--2026-10-23.md` row 19, revised): *bâʾu* "pass along, go" → `צָעַד` (`עָבַר` is reserved for its cognate *ebēru*; `חָלַף` is *etēqu*'s, II `חלף את ההר`); changed lines: III.b+3 and b+5 `– עברנו;` → `– צעדנו;`, b+40 `– עברו;` → `– צעדו;`, b+42 `– עברו];` → `– צעדו];` (b+5 and b+42 are not in the table: the same verb; the dream and its fulfilment stay in the same words), with the b+3 footnote, the Tablet III introduction, the ET4 fixed strings (§10.6.4) and the project tables. Collision: *akāšu* is also `צעד` (OBS a+3 `הנחש צעד הֵנָּה`), recorded, not changed.
 
 ## Changelog
 - 2026-10-23: the 2026-10-23 harmonization applied to Etana (end of §10); §10.3–§10.4 quotations corrected.
