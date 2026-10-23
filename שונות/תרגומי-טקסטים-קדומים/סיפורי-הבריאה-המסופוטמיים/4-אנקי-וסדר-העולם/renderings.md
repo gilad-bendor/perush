@@ -122,7 +122,7 @@ Lemmas: ETCSL's TEI lemmas and ORACC Q000334 (citation form, morph). "Lines" = E
 | *nir-gam-ma*; *šidim* | קמרון; בנאי | | | 346, 347 |
 | *guru₃*; *sun₄*; *za-gin₃*; *la₂*; *keše₂* | הרים; זקן; ספיר; תלה / מתח; קשר | | | 349, 350, 378, 414, 450 |
 | *u₂-šim*; *u₂-numun* | מספוא; עשב האחו | | | 255, 351, 353, 361 |
-| *maš₂-anše*; *šeg₉*, *šeg₉-bar*; *me-te* | חיות; יעלים, עזי־בר?; עדי | | | 352, 353, 384 |
+| *maš₂-anše*; *šeg₉*, *šeg₉-bar*; *me-te* | חיות; אילי־בר, עזי־בר? (2026-10-23 harmonization, was יעלים); עדי | | | 352, 353, 384 |
 | *ur-saĝ*; *piriĝ*; *a₂-tuku*; *ḫur-saĝ* | גיבור; לביא; בעל הכוח; הר | | | 354–356, 374, 430 |
 | *tur₃*; *amaš*; *i₃*; *gara₂*; *saĝ … šum₂* | רפת; דיר; שמן; שמנת; נתן מן המובחר | [equivalent] ↔ ד:ד | | 358, 359 |
 | *ki ninda gu₇ diĝir-re-e-ne* | מקום אכילת הלחם של האלים | | As G&S 28. | 360 |
@@ -210,7 +210,7 @@ The ★ rows above were followed (the appointment formula in 239; *ĝar*, *gub*,
 | *peš₁₀-ĝal₂*; *gaba-ĝal₂* | *האדיר*; בעל העוז | | | 9 |
 | *dim*; *dimgul*; *us₂-saĝ*; *urin* | עמוד; עמוד־הקשירה; קורה?; נס | | | 10, 166, 168 |
 | *igi il₂*; *igi ĝal₂*; *igi du₈* | נשיאת עין; העין נתונה; ראה | | | 11, 16, 75, 125 |
-| *alim*; *lu-lim*; *šeg₉*; *šeg₉-bar*; *taraḫ* | תאו; אייל; יעל; עז־בר?; יעל (2026-10-23 harmonization, was אקו: *taraḫ* now shares `יעל` with *šeg₉*) | [equivalent] ↔ דברים יד:ה | Decision 25. | 12, 13, 107 |
+| *alim*; *lu-lim*; *šeg₉*; *šeg₉-bar*; *taraḫ* | תאו; אייל; איל־בר (2026-10-23 harmonization row 22, was יעל); עז־בר?; יעל (2026-10-23 harmonization row 9, was אקו) | [equivalent] ↔ דברים יד:ה | Decision 25. *šeg₉* = `אַיִל־בָּר` as Gudea, creation 2, Summer and Winter; `יָעֵל` is *taraḫ*'s alone. | 12, 13, 107, 353 |
 | *šag₄-tum₂*; *si-dug₄*; *ḫur-saĝ*; *sig₇* | כרי המרעה; נקיקים; הר; רענן | | | 14, 15, 92, 123 |
 | *šid* (verb / noun); *itid*; *ud*; *mu* (year) | מנה / מניין; ירח; יום; שנה | [equivalent] ↔ א:יד | Corpus §6.2. | 17, 18, 44, 45 |
 | *šu du₇* | השלים (`המושלם`) | | | 17, 18, 48, 71, 111, 215, 227 |
@@ -296,6 +296,7 @@ The ★ rows above were followed (the appointment formula in 239; *ĝar*, *gub*,
 | *a₂ šum₂*; *ḫulu*; *bad₃*; *niĝ₂-gur₁₁* | כוח נתן; השחית; חומה; רכוש | [equivalent] ↔ שמואל א ב:י; יחזקאל כו:ד | | 244–246 |
 
 ## Changelog
+- 2026-10-23 harmonization (`../../harmonization--2026-10-23.md` row 22): *šeg₉* = `אַיִל־בָּר` (13 `[יָעֵל]` → `[איל־בר]`, 353 `יעלים` → `אילי־בר`); `יעל` is now *taraḫ*'s alone.
 - 2026-10-21 harmonization (cross-corpus decisions): *šudu₃* = `בְּרָכָה` (83, 293); *nam-šub* = `קֶסֶם` (106); `סַפִּיר` vocalized at 246 and 350 and the [equivalent] note added at 246; *me* = `הַ־מֶה`, *ur₄* = `אָסַף`, *guru₇* = `כְּרִי` confirmed.
 - 2026-10-19: created by the coordinator (empty).
 - 2026-10-19: translator, run 2 (lines 250–472): names, formulas (★ = binding for 1–249) and terms above.

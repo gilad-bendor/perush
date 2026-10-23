@@ -132,7 +132,7 @@ Echo tags: guidelines §6.4. Section 1–3 were fixed by the coordinator **befor
 | *kullumu* | הֶרְאָה | | | MB 31', 65'; SB a+3 |
 | *nuḫatimmu*; *nuḫatimmūtu*; *paššuru*; *rakāsu* / *paṭāru* (table) | אוֹפֶה; אֲפִיָּה; שֻׁלְחָן; עָרַךְ / פֵּרֵק | | Not `מְלָאכָה`. | SB a+10–a+14 |
 | *elippu*; *šaḫḫītu*; *maḫāru* D (boat); *neqelpû* | סְפִינָה; מִפְרָשִׂית; הִשִּׁיט; שָׁט | | | SB a+15, a+19–a+21 |
-| *maṣṣartu*; *šubarrû*; *bēlūtu* | מִשְׁמֶרֶת; חֵרוּת; אֲדָנוּת | | | SB e+9–e+11 |
+| *maṣṣartu*; *šubarrû*; *bēlūtu* | מִשְׁמֶרֶת; פְּטוֹר (2026-10-23 harmonization, was חֵרוּת); אֲדָנוּת | | *šubarrû* as Enūma eliš and Advice to a Prince. | SB e+9–e+11 |
 | *arkât ūmī* | לְאֹרֶךְ יָמִים | [cognate] (*ark-*) | Not `לְעוֹלָם`, not `בְּאַחֲרִית הַיָּמִים`. | SB e+11 |
 | *zēr amīlūti* | זֶרַע הָאֱנוֹשׁוּת | [cognate] (*zēru*) | | SB e+12 |
 | *simmu*; *murṣu*; *ṣimdu*; *ḫurbāšu* | פֶּצַע; חֳלִי; תַּחְבֹּשֶׁת; צְמַרְמֹרֶת | | | SB e+16–e+19 |
@@ -559,7 +559,7 @@ Akkadian lemmas: SEAL (checked with the eBL dictionary); Sumerian in the notes. 
 | Sum. SIG₇ (*se₁₂*, marû) | שׁוֹכְנִים? | | As text 5's `שָׁכְנוּ?`; cf. rev. 20 (SIG₇ = *banû*). | obv. 2 |
 | *uṣurtu* (Sum. *ĝiš-ḫur*); *eṣēru* D | צוּרָה (צוּרוֹת); צָר (צָרוּ, לָצוּר) | [cognate] ↔ ב:ז; יחזקאל מג:יא | Corpus §0. | obv. 4, 12, 34; rev. 18, 24–25 |
 | *kânu* D (pret., inf., stat.) | כּוֹנֵן (כּוֹנְנוּ, לְכוֹנֵן, מְכוֹנֶנֶת) | [cognate] ↔ `וַיְהִי כֵן` | Corpus §3. Deviation: rev. 16 `הוֹקִירוּ?` ("honour"). | obv. 4, 15, 29, 36, 38; rev. 1, 16, 30 |
-| *īku*; *palgu*; *ešēru* Št | סוֹלְלָה; תְּעָלָה; יִשֵּׁר | [cognate] (*ešēru* ~ ישר) | = Sum. *e*/*eg₂*, *pa₅* (text 2). | obv. 5, 13, 37 |
+| *īku*; *palgu*; *ešēru* Št | סוֹלְלָה; פֶּלֶג (2026-10-23 harmonization, was תְּעָלָה); יִשֵּׁר | [cognate] (*palgu* ~ פלג; *ešēru* ~ ישר) | = Sum. *e*/*eg₂*, *pa₅* (text 2; Sum. *pa₅* stays `תְּעָלָה`, so obv. 5, rendered from the Sumerian, keeps `סוללה ותעלה`). | obv. 5, 13, 37 |
 | *mīnâ i nīpuš*; *mīnâ i nibni* | מָה נַעֲשֶׂה?; מָה נִבְנֶה? | [equivalent] ↔ `נַעֲשֶׂה אָדָם` (א:כו); [cognate] ↔ `נִבְנֶה` (יא:ד) | Vocalized; B 19 *nušbalkit*, 20 *nibbi* in the apparatus. | obv. 16–17, 19–20 |
 | *wašābu*; *ina ramāni-*; *izuzzu*; *apālu*; *kilallān* | יָשַׁב; בְּעַצְמָם / מֵעַצְמוֹ; עָמַד; עָנָה; שְׁנֵיהֶם | | | obv. 11, 21, 23; rev. 18, 20, 24 |
 | *šīmāti šâmu* (*mušīm šīmāti*) | גּוֹזְרֵי הַגּוֹרָלוֹת | | Corpus §1. | obv. 22 |
@@ -588,6 +588,7 @@ Akkadian lemmas: SEAL (checked with the eBL dictionary); Sumerian in the notes. 
 | *pirištu*; *mūdû*; *kullumu*; *niṣirtu*; *gabarû labīru* | סוֹד; הַיּוֹדֵעַ; הֶרְאָה; נְצוּרָה; הֶעְתֵּק יָשָׁן | [cognate] (*niṣirtu* ~ נצר) | Colophons. | rev. 31; colophon B 5–6 |
 
 ## Changelog
+- 2026-10-23 harmonization (`../../harmonization--2026-10-23.md` rows 7, 12): *palgu* = `פֶּלֶג` (KAR 4 obv. 13 `סוללה ותעלה […]` → `סוללה ופלג […]`; obv. 5 kept, its Hebrew is the Sumerian *pa₅*); *šubarrû* = `פְּטוֹר` (Adapa SB e+10 `את חירותו שָׂם` → `את פטורו שָׂם`).
 - 2026-10-21 harmonization (cross-corpus decisions, see the corpus `renderings.md` §8): *mušen* = `צִפּוֹר` (E&Nḫ 18, Hoe 83; KAR 4 rev. 13 *iṣṣūru*); Inana `אִינַנָּה` in the apparatus too (`אינאנה` replaced, incl. the Hoe heading 49–51); the [equivalent] note on `סַפִּיר` added at Hoe 12; *šiptu* = `קֶסֶם` / *tû* = `לַחַשׁ` settled; *šembizid* = `פּוּךְ`, *sukkal* = `וְזִיר`, *karû* = `כְּרִי` unchanged.
 - 2026-10-16: §1–3 written by the coordinator before drafting text 1, from the corpus renderings, the flood corpus's shared renderings and Sumerian project 3.
 - 2026-10-16: §4 "Text 1: Adapa" added by the text-1 translator. §1–3 unchanged and followed (*akalu*, *mû*, *mūtu*, *balāṭu*, *napištu dārītu*, *nēmequ*/*uznu*/*ḫasīsu*, *labāšu*, *lubāru*, *šamnu*/*pašāšu*, *ṣiāḫu*, *apkallu*, *nišū*, *awīlūtu*, *banû*, *zēru*, *šasû* as fixed). One usage differs from project 1's glossary (not from these sections): *ṭeḫû* = `נִגַּשׁ`, because its cognate-bearing synonym *qerēbu* = `קָרַב` occurs in the same text (project.md, Text 1, Decision 8).
