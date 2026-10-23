@@ -1069,8 +1069,8 @@ Parpola & Watanabe's composite line numbers (= Wiseman's VTE lines), cited witho
 | 579–581 | *lā tasahharūni … ana bītātikunu lā tasahhurā* | אינו חוזר … אל בתיכם לא תחזרו | `לֹא יָשׁוּב עוֹד לְבֵיתוֹ וְלֹא יַכִּירֶנּוּ עוֹד מְקֹמוֹ` (איוב ז:י) | [equivalent] | No return home. |
 | 581 | same | same | `בַּיִת תִּבְנֶה וְלֹא תֵשֵׁב בּוֹ` (דברים כח:ל) | [equivalent] | |
 | 581 | *issātikunu mārīkunu mārātikunu* | נשותיכם, בניכם, בנותיכם | `בָּנֶיךָ וּבְנֹתֶיךָ נְתֻנִים לְעַם אַחֵר` (דברים כח:לב) | [equivalent] | Separation from the family. |
-| 582 | *kî ša iṣṣūru ina tubāqi iṣabbatūni* | כאשר ציפור בפח תופשים | `הֲתִפֹּל צִפּוֹר עַל פַּח הָאָרֶץ וּמוֹקֵשׁ אֵין לָהּ` (עמוס ג:ה) | [cognate] / [equivalent] | *iṣṣūru* = `צִפּוֹר`; *tubāqu* ↔ `פַּח`. |
-| 582 | same | same | `וְכַצִּפֳּרִים הָאֲחֻזוֹת בַּפָּח` (קהלת ט:יב) | [equivalent] | |
+| 582 | *kî ša iṣṣūru ina tubāqi iṣabbatūni* | כאשר ציפור במצודה תופשים | `הֲתִפֹּל צִפּוֹר עַל פַּח הָאָרֶץ וּמוֹקֵשׁ אֵין לָהּ` (עמוס ג:ה) | [cognate] / [equivalent] | *iṣṣūru* = `צִפּוֹר`; *tubāqu* ↔ `פַּח` (our `מְצוֹדָה` since the 2026-10-23 harmonization). |
+| 582 | same | same | `כַּדָּגִים שֶׁנֶּאֱחָזִים בִּמְצוֹדָה רָעָה וְכַצִּפֳּרִים הָאֲחֻזוֹת בַּפָּח` (קהלת ט:יב) | [equivalent] | Both trap words, `מְצוֹדָה` (*tubāqu*, 582) and `פַּח` (*gišparru*, 650). |
 | 582 | same | same | `נַפְשֵׁנוּ כְּצִפּוֹר נִמְלְטָה מִפַּח יוֹקְשִׁים` (תהלים קכד:ז) | [divergence] | The escape. |
 | 582, 590 | *ṣabātu* (trap) | תופשים / תיתפשו | `וּפָרַשְׂתִּי עָלָיו רִשְׁתִּי וְנִתְפַּשׂ בִּמְצוּדָתִי` (יחזקאל יז:כ) | [equivalent] | The vassal king who broke his oath to Babylon (17:13–19) "caught" in the god's net. Our proposal. |
 | 583–584 | *ina qāt bēl dāmēkunu liškanūkunu* | ביד בעלי דמיכם ישימו אתכם | `וְנָתַן מַלְכֵיהֶם בְּיָדֶךָ` (דברים ז:כד) | [equivalent] | "Put into the hand"; *šakānu* = `שׂם`. Tayinat: "your enemy". |
