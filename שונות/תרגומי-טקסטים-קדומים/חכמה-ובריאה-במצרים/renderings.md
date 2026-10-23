@@ -338,8 +338,10 @@ parallels table.
 | 16.5–7 (ch. 13) | a large debt of a poor man: make it three parts, release two | Deut 15:1–2 (the release) | `שָׁמַט` never (no cognate): `וִתֵּר`? |
 | 20.21–21.4 (ch. 20) | do not confound a man in the court … do not accept the reward of the powerful | Ex 23:6–8; Deut 16:19 | fqꜣ `שָׂכָר` (`שֹׁחַד` in the apparatus) |
 | 24.9–12 (ch. 25) | do not laugh at a blind man, nor tease a dwarf, nor injure a lame | Lev 19:14; Deut 27:18; Prov 17:5 | `עִוֵּר`, `גַּמָּד`, `פִּסֵּחַ` |
-| 24.13–17 | man is clay and straw, the god is his builder | Gen 2:7; Job 33:6; Isa 64:7 | `טִיט`, `תֶּבֶן`, `בּוֹנֶה` |
-| 26.9–14 (ch. 28) | do not pounce on a widow you find in the field | Deut 24:19–21 | `אַלְמָנָה` |
+| 24.12–17 | man is clay and straw, the god is his builder; he tears down and builds up daily | Gen 2:7; Job 33:6; Isa 64:7; 1 Sam 2:7–8; Eccl 3:3 | `טִיט`, `תֶּבֶן`, `בּוֹנֶה` |
+| 26.9–13 (ch. 28) | do not pounce on a widow you find (gleaning) in the field; do not pass a stranger by with your oil jar; the god loves him who honours the poor | Deut 24:19–21 (the stranger, the orphan, the widow at the harvest); Prov 14:31, 19:17 | `אַלְמָנָה`; the stranger: `נָכְרִי` (`גֵּר` never) |
+| 6.1–12 (ch. 4) | the hot man in the temple is like a tree grown indoors … the truly silent is like a tree grown in a garden: it flourishes, its fruit is sweet, its shade pleasant | Ps 1:3; Jer 17:5–8 | [equivalent] the two trees; `נָטַע`? (not in the Egyptian: rd "grow" `צָמַח`) |
+| 22.1–8 | do not say "find me a strong patron … a protector": sit in the god's arms | Prov 20:22; Prov 23:11 `כִּי-גֹאֲלָם חָזָק` | `גֹּאֵל` never (the wisdom corpus's reservation): the Egyptian "protector" by its own sense |
 | 13.15–16, 15.20–21 | do not speak falsely; the abomination of the god | Prov 12:22 `תּוֹעֲבַת יְהוָה שִׂפְתֵי-שָׁקֶר` | `תּוֹעֲבַת הָאֵל` |
 
 ## 9. Gate tests (`egypt_tools.py selftest`; every gate tested before the first line, guidelines §5.2)
