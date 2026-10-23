@@ -293,7 +293,8 @@ RESERVED = [
     (W + alt("גואל", "גאל", "גואלו", "גואלם", "הגואל", "גואלי", "גאלם") + E, None, "גֹּאֵל never (the wisdom corpus's reservation; Prov 23:11 in the apparatus)"),
     (W + alt("מוסר", "המוסר", "מוסרי", "מוסרו") + E, r"sbꜣ|sbꜣ,yt|sbꜣyt|sbꜣ,y\(t\)|sbꜣ\.yt|sbꜣ,tj", "מוּסָר only for sbꜣ.yt [equivalent Prov 1:8, 23:12]"),
     (W + alt("שלושים", "שלשים", "שלישים", "השלושים", "השלשים") + E, r"\b30\b|mꜥbꜣ|mꜥbꜣ,yt", "שְׁלֹשִׁים only for the number 30 / the Thirty (Prov 22:20)"),
-    (W + alt("חם", "החם", "חמים", "החמים", "חמם") + E, r"šmm|šmw|\bšm\b|šmmt|srf", "the hot man: pꜣ šmm = הַחַם (always vocalized: Ham, Gen 9:18)"),
+    (W + r"(?<!ל)" + alt("חם", "החם", "חמים", "החמים", "חמם") + E,  # (?<!ל): `לחם` "bread" (+ prefixes) is not the hot man (AM 5.5)
+     r"šmm|šmw|\bšm\b|šmmt|srf", "the hot man: pꜣ šmm = הַחַם (always vocalized: Ham, Gen 9:18)"),
     (W + alt("כסיל", "הכסיל", "כסילים", "אויל", "האויל", "אוילים", "נבל", "הנבל") + E, r"wḫꜣ|\bḫm\b|ḫm,w", "the fool words of Proverbs only for the Egyptian fool words: wḫꜣ = כְּסִיל, ḫm 'the ignorant' = הַבּוּר? (renderings §4.3)"),
     # --- Egyptian loanwords in Hebrew (renderings §4.2): only for their Egyptian source ---
     (W + alt("תבה", "תיבה", "התבה", "התיבה", "תבת", "תיבת", "תבתו", "תיבתו", "תבתך", "תיבתך") + E, r"ḏbꜣ|ḏb\(ꜣ\)|ḏbꜣ,t|ṯbt|db\.t", "תֵּבָה only for ḏbꜣ.t 'chest, coffin' [cognate: Egyptian loanword, Gen 6:14, Ex 2:3]"),

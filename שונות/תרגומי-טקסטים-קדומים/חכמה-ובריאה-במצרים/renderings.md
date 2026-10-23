@@ -136,7 +136,7 @@ Draft from the form, not from the German. The TLA's morphology (`data`) names th
   `עוֹלָם` (§5): `אֵין הוּא שׁוֹמֵעַ` / `לֹא יִשְׁמַע לְעֵת מִן הָעִתִּים`; habitual `ḫr sḏm=f` → `וְאָז` / `וַהֲרֵי` + present.
 - the "second tense" `j:jri̯=k sḏm` (emphasizing an adverb) → render the emphasis on the adverb (`בְּזְהִירוּת עֲשֵׂה`) or
   a plain imperative where Amenemope uses it as an exhortation (`j:jri̯=k sjꜣꜣ` "beware" `הִזָּהֵר`).
-- `jr X` (topicalization "as for X") → `אֲשֶׁר לְ־X` / `הִנֵּה X`; the circumstantial `jw` → `כְּשֶׁ…` / `וְ…` / a participle.
+- `jr X` (topicalization "as for X") → `הִנֵּה X` (§10.1.6; `אֲשֶׁר לְ־X` only where it reads well); the circumstantial `jw` → `כְּשֶׁ…` / `וְ…` / a participle.
 - the definite article `pꜣ`, `tꜣ`, `nꜣ` → `הַ־`; the possessive article `pꜣy=f` → the suffix (`בֵּיתוֹ`).
 - the Late Egyptian `ḥr` before a verb (written or not, `(ḥr)`) is the First Present: participle.
 
@@ -306,6 +306,9 @@ writes them here after the first part, so that the verifier enforces them.
 
 | Lines | Source | Hebrew |
 |---|---|---|
+| AM 3.17; AM 5.18; AM 17.15 | `jr jri̯.y=k hꜣw=k jw nn m jb=k` | `אם תבלה את עתך ואֵלֶּה בלבך,` |
+| AM 4.2; AM 7.10 | `wḏꜣ ḥꜥ.t=k ḥr-tp tꜣ` | `יהיה גופך שלם על פני הארץ.` |
+| AM 5.19; AM 17.16 | `r nꜣyw=k ms.w (r) ptr=w` | `ילדיך יִרְאוּ אותן.` |
 
 ## 8. Amenemope ↔ Proverbs 22:17–24:22 and the Torah: the shared sayings (fixed before drafting)
 The literature's pairings, **to be checked against the transliteration** (guidelines §5.2: a brief says "look for",
@@ -382,4 +385,14 @@ parallels table.
 
 
 ## 10. Changes and proposals merged (by run and translator)
-(none yet)
+
+### 10.1 Round 4 run 3, sub 1 – Amenemope part 1 (1.1–7.10), merged 2026-10-23
+1. **Fixed lines (§7)** from the first drafted copies: 3.17 = 5.18 = 17.15; 4.2 = 7.10; 5.19 = 17.16. The two trees 6.4 `קצו מובא אל מגרש־העצים;` / 6.12 `קצו מובא במטע.` and 6.2 / 6.8 `הוא כעץ הצומח בפנים:` / `…בפרדס:` stay parallel (the Egyptian differs in the place word and the preposition).
+2. **Verbs:** ꜥn "return (a report, an answer)" = `הֵשִׁיב` (1.6, 4.11, 5.17; Prov 22:21 `לְהָשִׁיב` [equivalent]); ḫsf (+ wšb.t) "reply" = `הֶחֱזִיר (תְּשׁוּבָה)`, ḫsf "ward off" = `הָדַף` (MK E135); wšb(.t) = `תְּשׁוּבָה`; ḫꜣꜥ = `עָזַב`; jmm "give!" = `תֵּן`, rḏj "put" = `שָׂם`; jnj = `הֵבִיא` (passive `מוּבָא`); gmj = `מָצָא`; sꜣj = `שָׂבַע`; ṯm "be ashamed" = `נִכְלַם`; wsfꜣ = `הִתְאַפֵּק`; mdwj = `דִּבֵּר` (`הַדִּבּוּר`); thꜣ = `פָּגַע` / `פּוֹגֵעַ`; ḥtp = `נָח` (§4.4); zꜣw tw r "beware of" = `הִשָּׁמֵר לְךָ מִ־`.
+3. **Nouns:** wḏꜣ (verb / noun) = `שָׁלֵם` / `שָׁלוֹם`, swḏꜣ = `הֶחֱזִיק שָׁלֵם`; wḏꜣ "storehouse" = `אוֹצָר` (the pun noted, 4.1); hꜣw "time, lifetime" = `עֵת`; kꜣrj "shrine" = `מִקְדָּשׁ` (the dossier), ḥw.t-nṯr = `בֵּית הָאֵל`; the storm words ḏꜥ `סְעָרָה`, pḫpḫ `סוּפָה`, qrjw `רַעַם`; fire ḫ.t `אֵשׁ`, stꜣ `לֶהָבָה`; tꜣ-rʾ "hot-mouthed" = `לוֹהֵט־הַפֶּה` (not `חַם־הַפֶּה`: the hot man's `הַחַם` is šmm's alone); jꜣw `זָקֵן`, ꜥꜣ and wr `גָּדוֹל`; nb "lord" `אָדוֹן` / "owner of" `בַּעַל`; smḥr "courtier" = `רֵעַ (הַמֶּלֶךְ)` (1.4; also 27.17: 1 Kgs 4:5 `רֵעֶה הַמֶּלֶךְ` [equivalent]); sšꜣ "skilled" `בָּקִי`, jꜣw.t "office" `מִשְׂרָה`; jmj-rʾ X `הַמְּמֻנֶּה עַל X`; nfr.y "grain" = `בָּר` ★ (always vocalized); ḥzw.t "favour" = `חֵן`; mḥy.t "north wind" = `הַצָּפוֹן` (Song 4:16; `רוּחַ` is ṯꜣw's).
+4. **Animals:** msḥ `תִּמְסָח` (§4.2); dby "hippopotamus" = `סוּס־הַנָּהָר` (`יְאוֹר` is jtrw's); wnš "jackal" = `תַּן` (vocalized `תַּנִּים`: unvocalized it is close to the reserved `תנין`).
+5. **Semitic loanwords in Late Egyptian** take their Hebrew cognate, tagged [cognate]: ꜥšq = `עָשַׁק` (6.14), mkmr.t = `מִכְמוֹרֶת` (7.6; = the cross-corpus `מִכְמוֹרֶת` of *kamāru*: the same Semitic word).
+6. **The topicalizer** jr X = `הִנֵּה X` (§3a's `אֲשֶׁר לְ־` becomes `לַחַם` "bread" before `הַחַם`): §3a amended accordingly.
+7. **Names:** Jꜥḥ (the moon god) `יָעַח` ★; Mnw-kꜣ-mw.t=f `מִין־כָּמוּתֶף`; the §3 forms of Wn-nfr, Tnj, Ṯꜣ-wr, ꜣbḏw, Snw.t confirmed.
+8. **Ruling (the coordinator):** the Akkadian corpora's cognate reservations (`עָבַר` only for *ebēru*, `עָזַב` for *ezēbu*, `חָלַף` for *etēqu* …) bind **Akkadian** source words; an Egyptian word with no Semitic cognate takes the Hebrew word of its meaning (one Hebrew per Egyptian lemma), so ḫꜣꜥ = `עָזַב` stands. A Semitic loanword in Egyptian takes its cognate (item 5).
+9. **Gate fix (egypt_tools.py):** the `חם` gate no longer reads `לחם` "bread" (with prefixes: `בלחם`, `ולחם` …) as the hot man (5.5 had been passed by `[היתר שער]`). The hot man after `ל` is licensed by šmm anyway, and the unvocalized trap still checks it.
