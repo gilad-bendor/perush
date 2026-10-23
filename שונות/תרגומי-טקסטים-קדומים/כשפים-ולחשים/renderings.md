@@ -460,3 +460,14 @@ harmonization). Recorded splits of this corpus: *pašāru* "release" = `הִתִ
 - **Settled by the coordinator:** *ḫepû* and *šebēru* both `שָׁבַר` (as in the Gilgameš corpus): *ḫepû* is Maqlû's
   frequent "break" (and *hīp libbi* is a "broken heart"), *šebēru* (IV 94, once) the cognate; the apparatus names the
   Akkadian verb where both stand near each other.
+
+### 10.5 Tablet V (2026-10-23)
+- **Accepted:** the method for the plant puns (V 27–35): the plant transliterated (identification in the note), the verb
+  in its fixed Hebrew, the sound echo explained per line, no Hebrew pun invented; *errû* `אֶרּוּ` / *ēru* `אֵרוּ` (always
+  vocalized: checked by script); Kanisurra *bēlet kaššāpāti* `בַּעֲלַת הַמְּכַשְּׁפוֹת` (Nah 3:4 `בַּעֲלַת כְּשָׁפִים` [cognate],
+  with the difference spelled out); KIMIN ("ditto") abbreviations written out in full, unbracketed (as Tablet IV);
+  *ina nīši u māmīti* `בנפש ובשבועה`; *ḫīp libbi* `שֵׁבֶר־לֵב`; *nagbu* `מַעֲמַקִּים` (the flood corpus; *mê nagbi*
+  `מֵי מַעֲמַקִּים`), so *bēl nagbi* `אֲדוֹן הַמַּעֲמַקִּים`; the six "go away" verbs *isû* `סָר`, *rêqu* `רָחַק`, *bêšu* `זָז`,
+  *ḫalāqu* `אָבַד`, *duppuru* `הִסְתַּלֵּק`, *atluku* `לֵךְ`; the boundary verbs *ebēru* `עָבַר`, *etēqu* `חָלַף` (Etana),
+  *nabalkutu* `דִּלֵּג`, *erēbu* `נִכְנַס`; a parallel text (KalNAPar1) counts as a copy for the brackets, its pluses go to
+  the apparatus only.

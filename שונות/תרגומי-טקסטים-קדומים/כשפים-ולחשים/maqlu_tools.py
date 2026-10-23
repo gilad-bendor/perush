@@ -270,6 +270,7 @@ TRAPS = [
     (RW + r"(?:עשית|עשיתם|עשיתן|עשה|עשתה|עשו)" + RE_, r"tušēpiš|uštēpiš|ušēpiš|tuštēpiš|šēpiš", "the Š 'had (it) done' must be vocalized עִשִּׂית / עִשָּׂה in a line that also has the G"),
     (RW + r"(?:שרה|השרה)" + RE_, r"rubāt", "the princess must be vocalized הַשָּׂרָה ('Sarah')"),
     (RW + r"(?:אירש|אירשו|אירשה|אירשת|אירשתם|אורשה|אורשו)" + RE_, r"\bh[iī]r|\bt?ah[iī]r|ihīr|tahīr|ḫâru|ihīrū", "ḫâru 'betroth' must be vocalized אֵרַשׂ ('inherited')"),
+    (RW + r"(?:ארו|הארו|כארו|בארו)" + RE_, r"\berr[ûêâ]|\bēr[aiu]\b|\bēra\b", "errû (colocynth) and ēru (cornel) are told apart only by vowels: vocalize אֶרּוּ / אֵרוּ"),
     (RW + r"(?:אתון|האתון|כאתון|באתון|לאתון|אתונה)" + RE_, r"utūn|utun", "utūnu must be vocalized אַתּוּן ('she-ass')"),
     (RW + r"(?:רע|רעי|רעה)" + RE_, r"\bibr|tappû|tappê|rūʾ", "'friend' must be vocalized רֵעַ / רֵעִי / רֵעָה"),
     (RW + r"שכן" + RE_, r"šakkan", "Šakkan must be vocalized שַׁכַּן"),
