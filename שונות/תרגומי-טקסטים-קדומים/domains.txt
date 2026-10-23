@@ -42,3 +42,6 @@ anastrophe.uchicago.edu
 # Added 2026-10-23 (Round 4 run 1, the Ugaritic corpus): EUPT, Göttingen's new edition of the Ugaritic poetic texts (checked
 # before each Ugaritic project; nothing for the Baal Cycle yet). CUC is on zenodo.org, Cassuto on benyehuda.org (both above).
 eupt.uni-goettingen.de
+# Added 2026-10-23 (Round 4 run 1, the fifth-day dossier): Bugge's Edda, Chinese Wikisource (the Kojiki).
+etext.old.no
+zh.wikisource.org

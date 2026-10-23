@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-23 (Round 3 complete; its cross-corpus splits settled; Round 4 is next).
+Last updated: 2026-10-23 (Round 4 run 1 done: the Ugaritic corpus).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -60,6 +60,7 @@ All of it is a **first draft**: complete, verified by script, three review passe
 | `קולות-היום-יום/` | 1 OB / Old Akkadian love lyrics and incantations (LAOS 4, 25 texts); 2 Sumerian proverbs (coll. 1 complete, selections of 2–3); 3 Lu-diĝira + eight Sumerian letters | 1,513 | `kol_tools.py verify LOVE PROV LET --strict` |
 | `נבואה-ומלכות/` | 1 the Assyrian prophecies (SAA 9 1–11, all eleven texts); 2 Advice to a Prince (eBL `L/2/5`) | 707 | `prophecy_tools.py verify --strict` |
 | `כשפים-ולחשים/` | 1 Maqlû, Tablets I–VIII and the Ritual Tablet (eBL `Mag/1/1`; Round 3 run 6) | 1,595 | `maqlu_tools.py verify --strict` |
+| `מיתוסים-אוגריתיים/` | 1 the Baal Cycle, KTU 1.1–1.6; 2 the short myths and charms (KTU 1.23, 1.24, 1.114, 1.100, 1.107, 1.108, 1.82, 1.83); 3 the fifth-day dossier (six excerpts: Egyptian, Greek, Hittite, Vedic, Old Norse, Old Japanese) (Round 4 run 1) | 1,749 + 100 | `ugarit_tools.py verify --strict`, `3-…/dossier_tools.py verify --strict` |
 
 Every finished translation has a print stub in `הדפסה/` (guidelines §7.4). Each corpus has a `parallels-index.md`
 with its key findings at the top.
@@ -86,7 +87,7 @@ table's order; inside a run, its sub-agents strictly one at a time (quotas, §2)
 "Round 4 plan". It merges the Mesopotamian texts left after Round 3 with the first non-Mesopotamian texts from the world
 survey (`curated-translation-candidates--world.md`), ranked together. **One run at a time** (guidelines §5.1), started with
 `ancient-translations: Round 4, run N`:
-1. the Ugaritic myths (the Baal Cycle + the short myths and charms), with the fifth-day dossier – for Gen 1:21, now;
+1. the Ugaritic myths (the Baal Cycle + the short myths and charms), with the fifth-day dossier – for Gen 1:21, now: **done (first draft), 2026-10-23**, `מיתוסים-אוגריתיים/` (report `reports/round-4/run-1.md`);
 2. the Edict of Ammiṣaduqa – only if an open base text is found (none on 2026-10-22);
 3. Egyptian wisdom and creation (Amenemope, Merikare, the Heavenly Cow, the Memphite Theology; base AED-TEI);
 4. Hesiod (Theogony + Works and Days; base Perseus + treebank);

@@ -186,6 +186,17 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 - **EUPT** (Göttingen, `eupt.uni-goettingen.de`, checked 2026-10-23): the new critical edition of the Ugaritic poetic texts is published through a TIDO viewer; its phase 1 (Kirta, Aqhat, the Rephaim; Louvre collation March 2026) is not yet out as data, and the Baal Cycle is phase 2. Nothing to use yet for KTU 1.1–1.6; re-check before Aqhat / Kirta ("Ugarit II").
 - **Not used:** KTU³ (paid); KTU² scan on archive.org (rights unclear); DULAT³ (Brill, paid: CUC's glosses are DULAT's, per word); SBL WAW PDFs (Pardee, *Ritual and Cult*: not ours, guidelines §2.3); the modern translations (Smith & Pitard, Pardee in *COS*, Wyatt, Smith in *UNP*) are © and not online: the translators check against what they know of them, marked as recalled, and against Cassuto.
 
+### 4.4s The fifth-day dossier's sources (`מיתוסים-אוגריתיים/3-תיק-היום-החמישי/`; Round 4 run 1, 2026-10-23)
+| Folder | What |
+|---|---|
+| `AED-TEI/Merikare--pPetersburg-1116A/` | Merikare E 130–136 from AED-TEI (the TLA 2018 corpus as TEI; GitHub `simondschweitzer/aed-tei`): transliteration, lemmas, German translation. **CC BY-SA 4.0**, committed. The Egyptian run (Round 4 run 3) should secure AED-TEI in full. |
+| `Perseus--Hesiod/` | Hesiod, *Theogony* (Evelyn-White 1914, PD text; Perseus markup CC BY-SA), committed. |
+| `TLHdig/CTH-321/` | The Illuyanka myth, KBo 3.7 etc., from TLHdig 0.3 (Zenodo 10.5281/zenodo.20328284, **CC BY 4.0**); the 74 MB zip is git-ignored (recipe in `fetch-recipes.tsv`), the CTH 321 files committed. The Hittite run (run 6) uses the same zip. |
+| `VedaWeb/rv_1.032--zurich.tsv` | Rigveda 1.32, the Zurich text and morphology layer (**CC BY 4.0**), extracted by `dossier_tools.py rvtsv` from VedaWeb's `rv_book_01.tei` (ignored: `VedaWeb/*.tei`). |
+| `Bugge-1867--Saemundar-Edda/hymis.html` | *Hýmiskviða* from Bugge 1867 (PD), `etext.old.no`. |
+| `Wikisource-zh--Kojiki/kojiki-jokan.html` | *Kojiki* Book 1 from zh.wikisource (PD text; page CC BY-SA). The Wikimedia API answered 429 to scripts once; the saved page serves. |
+- **Not reached:** ru.wikisource (the Dove Book) answered 429; Ulukau and NZETC (the Kumulipo, Ika-tere) block scripts; ctext.org forbids scraping; DEAPS has no Deir ʿAllā record. The dossier's `project.md` lists every excerpt not done and why.
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).
