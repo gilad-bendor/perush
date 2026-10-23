@@ -42,13 +42,34 @@ Abusch's older numbering (AMD 10) is the same for most lines; eBL notes give dif
 
 ## Open decisions for the user
 
-(Collected from the translators' sections at the end of the run.)
+Collected from the tablet sections below (each has its full list). Under the user's rule ("decide minor things
+yourself", STATUS §6) the coordinator **kept the drafted renderings** for all of them; they are listed so that the
+user can overrule any in review:
+- **Reserved biblical words kept out of the Hebrew** (`לִילִית`, `קָרָא` for *šasû* – `צעק` used; `שֵׁד` – `שֵׁדוּ`
+  transliterated in hostile-demon lists): a deliberate [cognate] in the text would be the alternative.
+- **Plant and practitioner names transliterated** (V 27–35, III 39–53): Hebrew identifications (`חרדל`, `שחלים`,
+  `חלתית`) are possible but uncertain.
+- **One-word-per-lemma choices that read stiffly**: *ṣillu* `צֵל` also for the reflection in the bowl (VIII B+9,
+  RT 175'); *ḫuṣābu* `שְׁיָר` for a stick (RT); *riksu* `קֶשֶׁר` for Gula's bandage (VII 42) but `מַעֲרָכָה` for the ritual
+  arrangement (RT 125').
+- **Uncertain readings kept in italics or with `?`**: I 5, I 69, II 78, III 115, III 138, IV 135, V 155, VII 140a–h, RT
+  73'.
+- **Settled by the coordinator at the merges** (no longer open): II 61 `יַד־שבועה`; I 124 *binûtu* `מבנה`; II 161 Gtn
+  present; RT 14' *paṭīru* `מַעֲמָד`; *ḫepû* and *šebēru* both `שבר`.
+- **For the lead's next cross-corpus harmonization** (renderings §10): Ludlul's *gerrānu* `מספד` (here the cognate of
+  *sipdu*); *nissatu* `דאבון` here / `יגון` elsewhere; *gamāru* `כלה` (prophecy) / `גמר` (here, Gilgameš); *markasu*
+  `מוסרה` here / `חבל` (flood); *bâʾu* `שטף` here / `עבר` (flood).
 
 ## Progress log
 
 - 2026-10-21: base text fetched (eBL, all nine chapters); `tools/ebl_fetch.py` fixed for Maqlû's line types.
 - 2026-10-23: synced with `main` after the VM reboot; renderings aligned with the corpora finished meanwhile; tools,
   renderings §9 and brief ready; translation starts with Tablet I.
+- 2026-10-23: **all 1,595 labels translated** by one translator, resumed tablet by tablet (I → VIII, RT), one agent at a
+  time; each tablet merged by the coordinator (renderings §10.1–§10.9), verified (`maqlu_tools.py verify --strict`: no
+  problems; 14 listed repeated-line differences, all brackets, punctuation or the RT's quotation form, each explained in
+  the apparatus), quote-checked (`check_bible_quotes.py`: 0) and pushed. No quota stop. Clean translation built
+  (`translation.rtl.md`), print stub `../../הדפסה/כשפים-ולחשים/1-מקלו.rtl.md`, parallels index 567 rows with key findings.
 
 ## Tablet I
 

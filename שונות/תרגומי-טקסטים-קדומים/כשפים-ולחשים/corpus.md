@@ -21,7 +21,7 @@ rituals) would join it.
 
 | Project | Text | Base text | Lines | Status |
 |---|---|---|---|---|
-| `1-מקלו/` | **Maqlû** ("Burning"), Tablets I–VIII and the Ritual Tablet (Standard Babylonian, 1st millennium BCE; manuscripts from Nineveh, Assur, Huzirina, Sippar, Nippur, Babylon, Uruk) | eBL `Mag/1/1` (ed. T. Abusch, rev. D. Schwemer; translation Abusch): `../sources/eBL/Maqlu-I/` … `Maqlu-RT/` | 1,595 eBL labels (I 152, II 231, III 202, IV 155, V 181, VI 161, VII 198, VIII 133, RT 182) | in progress |
+| `1-מקלו/` | **Maqlû** ("Burning"), Tablets I–VIII and the Ritual Tablet (Standard Babylonian, 1st millennium BCE; manuscripts from Nineveh, Assur, Huzirina, Sippar, Nippur, Babylon, Uruk) | eBL `Mag/1/1` (ed. T. Abusch, rev. D. Schwemer; translation Abusch): `../sources/eBL/Maqlu-I/` … `Maqlu-RT/` | 1,595 eBL labels (I 152, II 231, III 202, IV 155, V 181, VI 161, VII 198, VIII 133, RT 182) | **done (first draft), 2026-10-23**: all lines, three passes per tablet, verified (`maqlu_tools.py verify --strict`), 567 parallels rows; print stub `../הדפסה/כשפים-ולחשים/1-מקלו.rtl.md` |
 
 ## How the parts relate
 
