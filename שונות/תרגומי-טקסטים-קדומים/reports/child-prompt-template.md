@@ -36,8 +36,9 @@ Rules for a child session (guidelines §5.1a):
       results); *Key findings* (for the Bible, and for the ancient mind); *Decisions taken* (minor, by you); *Questions
       for the user*; *Problems and skipped items*; *Cross-corpus splits left for the lead*;
    2. commit and push it to `origin/main` (the last commit of the run);
-   3. re-title yourself: `set_session_title` with your own session id (from `get_session`) and your current title plus
-      the suffix ` done` (e.g. `Round4/Run1: the Ugaritic myths done`);
+   3. re-title yourself: `set_session_title` with your own session id (from `get_session`) and your title with `Done`
+      added as the last segment of its path (e.g. `Round4/Run1: the Ugaritic myths` → `Round4/Run1/Done: the Ugaritic
+      myths`);
    4. message the parent: `send_message` to `<parent session id>` with
       `RUN DONE – Round <N> run <M> – report: <report path>, commit <hash>`.
       If the run failed or stopped, still write and push the report (what was done, what was not), and send

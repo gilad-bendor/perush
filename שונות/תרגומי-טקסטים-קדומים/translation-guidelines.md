@@ -179,7 +179,8 @@ itself (all checked in the smoke test of 2026-10-23, `history.md`).
      verifier; STATUS, history), then **one** message to the user: the results and `questions-for-user.md`.
 - **Titles show the place in the hierarchy** (the user, 2026-10-23): every session's title starts with a short path –
   the round's orchestrator `Round4: <what>`, a run `Round4/Run2: <texts>`, a sub-session of that run
-  `Round4/Run2/Sub1: <task>` – and gets the suffix ` done` when it finishes (`set_session_title`).
+  `Round4/Run2/Sub1: <task>` – and, when it finishes, re-titles itself with `Done` as the last path segment
+  (`set_session_title`): `Round4/Run3/Done: <texts>`, `Round4/Done: <what>`, `Round4/Run2/Sub1/Done: <task>`.
 - **Model and effort** (the user, 2026-10-23): sessions run **Opus 5.5 at "high" effort** – pass `model: claude-opus-5-5`
   to `create_session` (the effort is not a parameter there: a created session inherits the environment's, which is
   "high"). A parent may choose a cheaper configuration when it judges it good enough for the task – e.g. Sonnet 5.5
@@ -192,7 +193,7 @@ itself (all checked in the smoke test of 2026-10-23, `history.md`).
   and messages its **immediate** parent, and the parent waits by ending its turn. A light task stays a sub-agent.
 - **The child** follows the template: it never interacts with the user (questions go into its report; only a complete
   block is sent to the parent as `BLOCKED:`); it checks its quota status before each heavy sub-agent; it pushes to
-  `main` as it goes; at the end it pushes the report, re-titles itself with the suffix ` done`, messages the parent,
+  `main` as it goes; at the end it pushes the report, re-titles itself (`…/Done: …`), messages the parent,
   and stops.
 
 ### 5.2 Rules learned (distilled; the full accounts, with examples, are in `history.md`)
