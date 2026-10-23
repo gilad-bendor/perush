@@ -466,6 +466,12 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 - **New one-lemma renderings of 1.3** (binding for the later tablets; full list in its project section): *phy* `רָאָה`, *ʿn* `הִבִּיט`, *ḥdy* `חָזָה`; *mḫṣ* `מָחַץ`, Gt `נִלְחַם`, *ḫṣb* `חָצַב`; the cups `כּוֹס` (*ks*), `גָּבִיעַ` (*krpn*), `סֵפֶל`, `*קֻבַּעַת*`, `קַשְׂוָה`; *ẓlmt* `צַלְמָוֶת`, *ṯbt* `שֶׁבֶת`, *kpr* `כֹּפֶר` (henna), *ḥṯb* `חָשַׂף`.
 - **Tool fixes** (the translator's report): the `עוֹלָם` gate is licensed by *ġlm* too (`עֲלָמִים`, plural of `עֶלֶם`); the formula regexes accept the maqaf; §6.2 also mid-line; §6.3 command forms; §6.5 not where *ʿn* is "look".
 
+**Round 4 run 1, translator 3 (KTU 1.5), merged by the coordinator 2026-10-23** (details: `1-מחזור-בעל/project.md`, "KTU 1.5" → Proposals):
+- **Cross-lemma collisions settled:** *alp* (cattle) = `בָּקָר` (was `פַּר` in 1.3 IV:41, 1.4 V:45, VI:40, VI:49 – changed, apparatus glosses too), so that *pr* keeps `פַּר`; *arḫt* stays `פָּרוֹת`. *npl* and *ql* both `נָפַל`, and *prt* and *arḫ* both `פָּרָה`: accepted as splits, each with an apparatus note at its first occurrence (no natural second Hebrew word).
+- **`תֹּהוּ`** is licensed by *thw* (1.5 I:15, [cognate], Gen 1:2); `בֹּהוּ` stays never. The gate is in `ugarit_tools.py`.
+- **New one-lemma renderings of 1.5:** *un* `אוֹנִים` (instead of §4.4's `אֵבֶל`; the lemma is "grief, strength"), *mhmrt* `מַהֲמוֹרַת`, *bly* `בִּלָּה`, *ydt* `יָדוֹת`, *rks* `מֵזַח`, *hdy* `פָּצַע`, *ydy* `גָּרַד`, *ṯlṯ* (D) `שִׁלֵּשׁ`, *apnk* `אַחֲרֵי כֵן`, *ḫlq* `נִסְפָּה`.
+- **Open for the user:** *ḫnzr* and *psltm* (see the report).
+
 ## 11. The fifth-day dossier (`3-תיק-היום-החמישי/`, coordinator, 2026-10-23)
 
 Short excerpts from six other cultures, each translated from its own language (the base texts: the dossier's
