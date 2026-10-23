@@ -781,5 +781,41 @@ The base and tTurin (`data … --wit`); the TLA German and Lange 1925 (chapters 
   and were found only when a fourth ship word appeared. A "one Egyptian lemma per Hebrew noun" report (Hebrew → lemma
   ids, from the parses) would show them at once.
 
+## Review pass (a), fidelity, 1.1–13.9
+
+Every line of the prologue and houses 1–9 read against `egypt_tools.py data` (lemma, morphology) and §3a, then
+cross-checked with `tr`. Brackets: the only restored / damaged / uncertain words in the range (1.19 `[s]⸢mn⸣`,
+`wḏ,⸢y⸣`; 2.19 `jt-nṯr?`, `ꜣḫ,t?`; 12.6 `jṯi̯(.t)?`; the `⟨r⟩?` of 1.10, 1.12, 4.5) are handled per the brief. All
+negations (`m-jri̯` + conjunctive, `bn`, `nn`, `bw jri̯=f`, `bw sḏm=f`, `tm`), the Third Futures (5.17, 5.19) and the
+fixed lines / formulas checked: no error found in them.
+
+### Changes (4 lines)
+- **8.4** `והחיים נלקחים מעינו;` → `והחיים נלקחו מעינו;` – `nḥm` is a passive `sḏm=f`, a past (TLA "geraubt worden
+  ist"); the parse and the note updated.
+- **8.19** `מוטב איפה שנותן לך האל` → `מוטב איפה שנתן לך האל` – `jw ḏi̯ s(j) n=k pꜣ nṯr`: `jw` + `sḏm=f` is a past
+  circumstantial (TLA "gegeben hat"); parse updated.
+- **10.6** `אל תשמח בעושר שבגזל,` → `אל תשמח לך בעושר שבגזל,` – the reflexive dative `n=k` had been dropped (the
+  parse said "omitted"); restored as in 9.12 `אל תעזוב לך`.
+- **13.5** `עושה הוא את מי שנצמד אליו לנכה;` → `עושה הוא את מי שהוא נצמד אליו לנכה;` – the relative form `dmj=f` has
+  the hot man as its subject ("the one whom he touches", TLA "den er berührt hat"); "מי שנצמד אליו" reversed it.
+
+### Points left, with the reason
+- **6.3** `ḫꜣꜥ sjrdmꜣ` `עזיבת ענפיו`: the TLA glosses "werfen" and §10.2.5 gives ḫꜣꜥ "throw" `הִשְׁלִיךְ`, but the
+  translator ties the line to 4.12 (`עוזבת`) in the note on purpose; both readings are open (TLA gives two). Left.
+- **9.10 / 11.17 – a collision for pass (b):** `הִשְׁלִיךְ` renders two lemmas: qmꜣ "throw" (9.10 `תשליך`) and ḫꜣꜥ
+  "throw" (11.17 `להשליך`, §10.2.5). And 9.12 ḫꜣꜥ (TLA "werfen", parallel to 9.10) is `תעזוב`. One of them should move;
+  not decided here (a consistency matter).
+- **wꜣḥ (pass b):** four Hebrew words – 2.3 `המניח` (inside the title), 10.9 `משאירה`, 23.14 `תשית`, 26.10 `תחדל`;
+  §10.4–10.5 list only `שָׁת` / `חָדַל`. 10.9 "leave behind" is a new sense split, unnoted.
+- **11.13** `snsn.tj n=k` – the `n=k` is absorbed by the reflexive `תתחבר` (as in 15.14, 22.14, same construction);
+  left, so the three lines stay identical.
+- **9.19** `ptr=w` `רואים` (the TLA has a past "hat man … gesehen"): a vivid present beside `והם אינם` is defensible
+  for the active `sḏm=f` here; left.
+- **9.11** `אין איש ש…`: `איש` renders the headless relative form `ḫm`, not an addition; left.
+- **12.15** bsi̯ "enter" `יבוא` beside 2.17 bsi̯ "introduce" `המושיב`: one lemma, two senses (intransitive /
+  transitive); left.
+- `build AM`, `verify AM --strict` (0 problems) and `check_bible_quotes.py` on the annotated file, `translation-AM.rtl.md`
+  and `translation.rtl.md` (0) after the pass. No fixed line (§7) or gate problem found in 1.1–13.9.
+
 ## Parallels index
 (generated from the הקבלה bullets by `../build_parallels_index.py`)
