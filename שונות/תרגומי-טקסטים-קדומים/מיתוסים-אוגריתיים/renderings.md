@@ -510,3 +510,12 @@ compares them.
 | | 遠吕智 / 八俣遠吕智 (Woroti, Yamata-no-Woroti) | `אוֹרוֹצִ'י`, `אוֹרוֹצִ'י שְׁמוֹנֶה־הַמִּסְעָפִים` | |
 | | 速須佐之男命, 高志, 肥河 | `הַיָּה־סוּסָנוֹאוֹ`, `קוֹשִׁי`, `נְהַר הִי` | |
 | | 八 | `שְׁמוֹנֶה` | the sacred number, kept every time |
+
+**Round 4 run 1, translator 2 (KTU 1.4 I–IV), merged 2026-10-23:** *mgn* (vb) `מִגֵּן` (Prov 4:9), n. `מַתָּנָה`; *ġẓy* `רִצָּה`;
+*mdl* `חָבַשׁ` [equivalent] (Gen 22:3), *ṣmd* `צָמַד`; *ʿr* `עַיִר` (always vocalized: "city"), *pḥl* `חֲמוֹר`, *atn* `אָתוֹן`; *lbn
+lbnt* `לָבַן לְבֵנִים` (Gen 11:3), *ulṯ* `מַלְבֵּן`; *pglt* `פִּגּוּל`, *qlt* `קָלוֹן`, *dnt* `מָדוֹן`; *msdt* `מוֹסָדוֹת`, *rủm* `רְאֵמִים`;
+*nʿl* `*נְעָלִים*` (italic; DULAT "palanquin" in the note); *dbb* `*זוֹחֲלִים*`; emphatic *k* `אָמְנָם`; *hm* "they" `הֵם`,
+interrogative *hm* `אוֹ` (Ug. *u* "or", if it appears, takes `אוֹ` too only after a check: a split to avoid). The
+coordinator's decisions on the translator's open points: *nʿl* and *mdl* stay as drafted (with the alternatives in the
+apparatus); interrogative *hm* stays `אוֹ`.
+
