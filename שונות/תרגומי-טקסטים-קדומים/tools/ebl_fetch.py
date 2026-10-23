@@ -101,7 +101,10 @@ def list_texts():
 # A reconstruction line of the chapter ATF: "<label>. %<language> …" – usually %n (normalized Akkadian), but a line can
 # open with a logogram in another language (Etana SB II 25: "25. %sb U₄.1.KAM@v.TA.AM₃ | %n inaṣṣarū | b[ūla]").
 # Fixed 2026-10-22: before, only "%n" was recognized, and such a line was glued to the previous one as a "variant".
-RECON_RE = re.compile(r"^(\S+)\. (%[a-z]+ .*)$")
+# Fixed again 2026-10-23 (Maqlû): a line can also carry no language marker at all ("160b. KA.INIM.MA ina muhhi …",
+# "121a. [...] ..."); it is recognized by its bare line label ("12", "14'", "160b", "a+1", "B+16a", "109-110").
+# A manuscript line starts with its siglum ("NinNA1 i 2. "), so it never matches.
+RECON_RE = re.compile(r"^(\S+)\. (%[a-z]+ .*)$|^((?:[A-Za-z]\+)?\d+'?[a-z]?(?:-\d+'?[a-z]?)?)\. (.*)$")
 
 
 def is_recon(line):
@@ -110,7 +113,8 @@ def is_recon(line):
 
 def recon_text(line):
     """The reconstruction without its label and language-shift markers (%n, %sb …)."""
-    return re.sub(r"(^|\s)%[a-z]+\s+", r"\1", RECON_RE.match(line).group(2)).strip()
+    m = RECON_RE.match(line)
+    return re.sub(r"(^|\s)%[a-z]+\s+", r"\1", m.group(2) if m.group(2) is not None else m.group(4)).strip()
 
 
 def parse_atf_blocks(atf):
@@ -123,7 +127,7 @@ def parse_atf_blocks(atf):
         if m:
             if key is not None:
                 blocks.setdefault(key, []).append(current)
-            key, current = m.group(1), pending_prefix + [line]
+            key, current = m.group(1) or m.group(3), pending_prefix + [line]
             pending_prefix = []
         elif line.startswith("#tr."):
             pending_prefix.append(line)

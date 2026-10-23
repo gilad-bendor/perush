@@ -112,3 +112,10 @@ Fetched 2026-10-21 with `tools/ebl_fetch.py L 1 9 "Old Babylonian" Morgan|Susa`,
 | `Advice-to-a-Prince/` | *Advice to a Prince* (eBL `L/2/5`), Standard Babylonian, chapter `-` | 55 (1–55; 45 has no normalization) | NinNA1 = DT 1, NipNB1 = IM 77087, NinNBQuo1 = K 8681, NinNAQuo1 = K 10182 |
 
 Fetched with `tools/ebl_fetch.py L 2 5 "Standard Babylonian" -`. Edition T. D. N. Mitto (rev. Z. J. Földi, A. Hätinen, A. C. Heinrich, E. Jiménez); translation B. R. Foster.
+
+### Added 2026-10-21 (the witchcraft-and-incantations corpus, `כשפים-ולחשים/1-מקלו/`)
+| Folder | Text | Lines (eBL labels) | Manuscripts |
+|---|---|---|---|
+| `Maqlu-I/` … `Maqlu-VIII/`, `Maqlu-RT/` | *Maqlû* (eBL `Mag/1/1`), Standard Babylonian, Tablets I–VIII and the Ritual Tablet | I 152, II 231, III 202, IV 155, V 181, VI 161, VII 198, VIII 133 (63 numbered lines, then the fragments `A+1`–`A+46`, `B+1`–`B+22`), RT 182 (`1`, then `2'`–`180'`) = 1,595 | Nineveh (NinNA…), Aššur, Ḫuzirīna, Sippar, Nippur, Babylon, Uruk, school tablets and the Aššur commentary (`AššNACom…`); `manuscripts.md` per tablet |
+
+Fetched 2026-10-21 (re-generated 2026-10-23) with `tools/ebl_fetch.py Mag 1 1 "Standard Babylonian" <I…VIII|RT> …`. Edition T. Abusch (ed.), D. Schwemer (revision); translation Abusch. **eBL lemmatized only Tablet I** (152 lines, 335 dictionary words): for II–RT, `glossary.md` is empty and the reading edition has no **L:** lines – use `כשפים-ולחשים/maqlu_tools.py lem` (ORACC cmawro's glossary, same editors). **Converter fix:** Maqlû's incantation-opening lines (`1. %sb EN₂ %n …`), its rubrics (`36a. %sb KA.INIM.MA …`) and lines with no language marker (`160b. KA.INIM.MA ina muhhi …`, `121a. [...] ...`) were missed by `ebl_fetch.py`, and their manuscripts glued to the line before; fixed 2026-10-21/23 (`tools.md`). The reading edition prints N without the `%sb` / `%n` markers (`EN₂ nuska šurbû …`, `… TU₆ EN₂`). **Usefulness:** the base text of Maqlû; the only complete open edition (Abusch 2016, *The Magical Ceremony Maqlû*, AMD 10, Brill, is paid; Abusch 2015, SBL WAW 37, is not ours, guidelines §2.3). Gitignored (§8; built-in `sources_sync.py` rule).
