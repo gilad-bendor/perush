@@ -39,3 +39,10 @@ is the closest Hebrew to the Greek form and it reads as elevated, not as an erro
 εὐδαίμων `בַּר־מַזָּל` stay, each with its note; the folder's spelling stays as it is (`אשה`; qamaṣ qaṭan per the existing
 corpora); lines the base does not bracket stay without `{חשודה}`, with the modern athetesis in the note.
 
+## Run 5 – Erra and Išum (report: `run-5.md`)
+
+No question for the user. Tablet I (191 lines) is done; Tablets II–V wait for eBL's edition (none open; recorded in
+`sources/_records-only--Erra-and-Ishum-II-V/`). **Decided by the orchestrator:** the freed slot is not filled with a quick
+win (the Poor Man of Nippur stays a quick win for a later session): with the seven-day quota near its warning line, the
+remaining planned run (Hittite) goes first.
+
