@@ -14,6 +14,13 @@ Run with python3 -I -B.
 KEYs and base texts (all under ../../sources/):
   MK  Egyptian (Middle Egyptian): the Instruction for Merikare E 130–136, pPetersburg 1116A verso
       (AED-TEI = TLA 2018, CC BY-SA 4.0: AED-TEI/Merikare--pPetersburg-1116A/)
+  WC  Egyptian (Middle Egyptian): pWestcar (pBerlin P 3033), the wax crocodile of Webaoner (the tale of Nebka's time):
+      2,21–2,23, 3,1–3,5, 3,11–3,16, 3,21–4,7 (AED-TEI: Westcar--pBerlin-P-3033/)
+  AP  Egyptian (Middle Egyptian, Ptolemaic copy): pBremner-Rhind (pBM EA 10188), the Book of Overthrowing Apophis
+      26,8–26,20 (Bremner-Rhind--4-Overthrowing-Apophis/) and the Names of Apophis 32,43–32,45, 32,50
+      (Bremner-Rhind--5-Names-of-Apophis/)
+      WC and AP are read through ../../tools/aed2md.py; labels = AED's <lb> labels without spaces ("3, 13" -> "3,13";
+      AED's "26.11" -> "26,11")
   TH  Greek: Hesiod, Theogony 237–239, 270, 295–300, 333–336, 820–828 (Perseus, Evelyn-White 1914, PD text,
       CC BY-SA markup: Perseus--Hesiod/)
   IL  Hittite: the Illuyanka myth (CTH 321), version 1, KBo 3.7 i 9–20 (TLHdig 0.3, CC BY 4.0: TLHdig/CTH-321/)
@@ -37,6 +44,8 @@ SRC = os.path.join(ROOT, "sources")
 
 UNITS = {
     "MK": ("מֶרִיכָּרֶע: האל ובני האדם, עדרו (מצרית)", "Middle Egyptian"),
+    "WC": ("פפירוס וֶסְטְקָר: תמסח השעווה (מצרית)", "Middle Egyptian"),
+    "AP": ("פפירוס ברמנר־רינד: ספר הכרעת אַפּוֹפִּיס (מצרית)", "Middle Egyptian (Ptolemaic copy)"),
     "TH": ("הֶסִיּוֹדוֹס, תולדות האלים: קֵטוֹ וצאצאיה, טִיפוֹאֶוּס (יוונית)", "Greek"),
     "IL": ("אִילוּיַנְקָה: הנחש ואל הסערה (חתית)", "Hittite"),
     "RV": ("רִיגְוֵדָה א 32: אִינְדְּרָה והנחש (סנסקריט ודית)", "Vedic Sanskrit"),
@@ -101,6 +110,61 @@ def tr_MK():
             ids.append(m.group(1))
     trs = dict(re.findall(r'<s xml:lang="de" corresp="src:([^"]+)">(.*?)</s>', st, re.S))
     return [re.sub(r"\s+", " ", trs.get(i, "")) for i in ids]
+
+
+# ---- WC, AP: AED-TEI read through ../../tools/aed2md.py, selected by line ranges (inclusive, AED labels)
+WC_PARTS = [("Westcar--pBerlin-P-3033/J4EXGHLCL5DR7JHSPDWTVEKMDY.xml", "pWestcar",
+             [("2,21", "2,23"), ("3,1", "3,5"), ("3,11", "3,16"), ("3,21", "4,7")])]
+AP_PARTS = [("Bremner-Rhind--4-Overthrowing-Apophis/A2PTGDCYB5E4XK6OORW6V4QHOE.xml", "pBremner-Rhind (Overthrowing Apophis)",
+             [("26,8", "26,20")]),
+            ("Bremner-Rhind--5-Names-of-Apophis/2Z3OHH5EKZEUTAFMAIWR2PXTGE.xml", "pBremner-Rhind (Names of Apophis)",
+             [("32,43", "32,45"), ("32,50", "32,50")])]
+AED_PARTS = {"WC": WC_PARTS, "AP": AP_PARTS}
+
+
+def _aed2md():
+    sys.path.insert(0, os.path.join(ROOT, "tools"))
+    import aed2md
+    return aed2md
+
+
+def _aed_label(lab):
+    return lab.replace(" ", "").replace(".", ",")
+
+
+def _aed_select(key):
+    """[(label, line dict, path)] of the ranges of AED_PARTS[key]."""
+    a = _aed2md()
+    out = []
+    for rel, _, ranges in AED_PARTS[key]:
+        path = os.path.join(SRC, "AED-TEI", rel)
+        lines = a.parse(path)
+        labs = [_aed_label(l["label"]) for l in lines]
+        for x, y in ranges:
+            i, j = labs.index(x), labs.index(y)
+            out += [(labs[k], lines[k], path) for k in range(i, j + 1)]
+    return out
+
+
+def base_aed(key):
+    a = _aed2md()
+    names = {os.path.join(SRC, "AED-TEI", rel): nm for rel, nm, _ in AED_PARTS[key]}
+    return [(lab, ln["text"], [f"{names[p]} {ln['label']}"] + [a.fmt_word(w) for w in ln["words"]])
+            for lab, ln, p in _aed_select(key)]
+
+
+def tr_aed(key):
+    """AED's German sentence translations of the sentences that touch the selected lines (read only after drafting)."""
+    a = _aed2md()
+    out, seen, trs = [], set(), {}
+    for lab, ln, p in _aed_select(key):
+        if p not in trs:
+            trs[p] = a.translations(p)
+        for s in ln["sents"]:
+            if s not in seen:
+                seen.add(s)
+                out.append(f"[{lab}] {trs[p].get(s, '(no translation)')}")
+    return out
 
 
 TH_LINES = [237, 238, 239, 270, 295, 296, 297, 298, 299, 300, 333, 334, 335, 336, 820, 821, 822, 823, 824, 825, 826, 827, 828]
@@ -237,7 +301,7 @@ def make_rv_tsv(tei, out):
     print(out, len(rows))
 
 
-BASE = {"MK": base_MK, "TH": base_TH, "IL": base_IL, "RV": base_RV, "HY": base_HY, "KJ": base_KJ}
+BASE = {"MK": base_MK, "WC": lambda: base_aed("WC"), "AP": lambda: base_aed("AP"), "TH": base_TH, "IL": base_IL, "RV": base_RV, "HY": base_HY, "KJ": base_KJ}
 _CACHE = {}
 
 
@@ -291,6 +355,23 @@ RESERVED = [
     (W + r"(?:ברא|בורא|בראו|בראה|נברא|ויברא|בריאה)" + E, "the root ברא never (Gen 1:21's verb: the apparatus compares)"),
     (W + r"(?:שאול)" + E, "never שְׁאוֹל"),
 ]
+# The Egyptian excerpts (WC, AP; ../../חכמה-ובריאה-במצרים/renderings.md §3.1, §4.2, §5): a loanword / key word only where
+# the base line licenses it (the transliteration, brackets and editorial marks removed); Re only as the vocalized רַא.
+LICENSED = {
+    "WC": [(W + r"(?:תמסח|תמסחים)" + E, r"msḥ", "תִּמְסָח only for msḥ"),
+           (W + r"(?:חרטום|חרטם|חרטומים)" + E, r"ḥr,?j-tp", "חַרְטֹם only for ḥry-tp"),
+           (W + r"(?:הבנים)" + E, r"hbnj", "הָבְנִים only for hbnj (vocalized: unvocalized it reads 'the sons')"),
+           (W + r"(?:שעווה)" + E, r"mnḥ", "שַׁעֲוָה only for mnḥ")],
+    "AP": [(W + r"(?:תמסח|תמסחים)" + E, r"msḥ", "תִּמְסָח only for msḥ"),
+           (W + r"(?:נחש|נחשים)" + E, r"ḥf|ḥfꜣ", "נָחָשׁ only for the generic serpent word (ḥf, ḥfꜣw)"),
+           (W + r"(?:פרעה)" + E, r"pr-ꜥꜣ", "פַּרְעֹה only for pr-ꜥꜣ"),
+           (W + r"(?:שעווה)" + E, r"mnḥ", "שַׁעֲוָה only for mnḥ")],
+}
+RE_UNVOC = re.compile(r"(?<![א-ת֑-ׇ])[ובלמהכש]?רא(?![א-ת֑-ׇ])")
+
+
+def _plain_src(s):
+    return re.sub(r"[\[\]⸢⸣()⟨⟩{}?]", "", s).lower()
 
 
 def verify(keys=None, strict=False):
@@ -329,6 +410,13 @@ def verify(keys=None, strict=False):
                 if re.search(rx, strip_marks(heb.get(k, ""))):
                     print(f"RESERVED {key} {k}: {why}\n    {heb[k]}")
                     bad += 1
+            for rx, lic, why in LICENSED.get(key, []):
+                if re.search(rx, strip_marks(heb.get(k, ""))) and not re.search(lic, _plain_src(bl.get(k, ""))):
+                    print(f"UNLICENSED {key} {k}: {why}\n    {heb[k]}")
+                    bad += 1
+            if key in LICENSED and RE_UNVOC.search(heb.get(k, "")):
+                print(f"TRAP {key} {k}: Re is always the vocalized רַא (renderings §3.1)\n    {heb[k]}")
+                bad += 1
         print(f"{key}: {len(seq)} entries (base {len(order)})")
     tp = os.path.join(HERE, "translation.rtl.md")
     if os.path.exists(tp):
@@ -364,9 +452,9 @@ def cmd_data(key, tr=False):
         for x in info:
             print(f"- {x}")
         print()
-    if tr and key == "MK":
+    if tr and key in ("MK", "WC", "AP"):
         print("## AED's German sentence translations (after drafting only)")
-        for x in tr_MK():
+        for x in (tr_MK() if key == "MK" else tr_aed(key)):
             print("-", x)
 
 
