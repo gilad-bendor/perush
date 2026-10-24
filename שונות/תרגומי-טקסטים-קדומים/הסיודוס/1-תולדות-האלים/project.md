@@ -394,5 +394,301 @@ from general knowledge, not quoted (not in the folder).
   self-test fixed it – or one rule for both).
 - Even a well-known verse must be printed first: Gen 10:2 was mis-remembered (`וּבְנֵי`).
 
+## TH 337–616
+
+### Scope
+Part 3 (translator 2, Round 4 run 4, 2026-10-24): the children of Tethys and Ocean – the Rivers and the Oceanids
+(337–370); the children of Theia and Hyperion (Sun, Moon, Dawn), of Krios and Eurybia, Dawn's winds and stars
+(371–382); Styx and her children Rivalry, Victory, Power and Force (383–403); Phoibe and Koios, Leto, Asterie and the
+"Hymn to Hekate" (404–452); Kronos swallowing his children, the stone, Zeus' birth in Crete (453–506); the Iapetids
+(507–534); Mekone and the theft of fire (535–569); the first woman (570–616). 280 entries in eight sections, in the
+base's order (425, 427, 426; 429, 434, 430–433); `{חשודה}` at 496, 576, 577, 591 (576–577 have no treebank words: the
+פירוק there is ours). The placeholder now reads `<!-- טרם תורגם: 617–1022 -->`. The clean translation was not built
+in this part.
+
+### Sources consulted
+The line data (`data TH 337 616`; the AGDT parse checked: 342 Σιμοῦντα tagged adj.; 351 lemma Καλλιπόη for Καλλιρόη;
+346 ἱερόν tagged noun (it is the adjective of γένος); 527 ἔκτεινε tagged imperfect (aorist); 530 εἴη lemmatized ἐάω (it
+is εἰμί opt.); 559 lemma garbled (Ἀαπετιον́ιδης); 571/579 Ἀμφιγυήεις lemmatized ἀμφιγύεις, so the name check does not
+fire; 576–577 have no words); LSJ for κρίνω (535) through `hesiod_tools.py lsj`; the LXX printed before quoting:
+Gen 1:14, 1:16, 1:27, 2:5, 2:7, 2:10, 2:13, 2:18, 2:22, 3:6, 3:22, 4:3–5, 4:22, 4:25, 6:4, 8:20–21, 9:27, 10:2, 15:2,
+22:2, 22:13, 24:65, 25:23, 28:18, 28:20, 28:22, 30:3, 31:20, 31:26, 35:14, 41:1, 43:34, 50:23; Exod 1:22, 2:2, 7:12,
+15:12, 19:4, 29:13, 29:22; Isa 14:12–13, 25:8, 61:10. Every Hebrew verse printed with `check_bible_quotes.py --show`
+before quoting. The LXX of Judges (11:34 μονογενής), Ezekiel (16:4 σπαργανόω), Zephaniah (2:5) and Job is not in the
+tool: described, not quoted. Kumarbi ("Kingship in Heaven"), Pausanias 10.24.6 (the stone at Delphi), Hesychius s.v.
+βαίτυλος, Iliad 12.20–22 (the Troad rivers), 21.195–197 (Ocean the source of all waters), 23.141–142 (hair vowed to a
+river) are named from general knowledge, not quoted. Evelyn-White quoted only at 337; West / Most described.
+
+### Decisions
+- **The rivers and the Oceanids** (337–361): names transcribed by §2.3 and vocalized at their first occurrence, the
+  meaning of each in the note; ποταμός `נָהָר`, the Rivers as a name `נהרות` (337, 348; lower case 367: the noun);
+  Νεῖλος `נִילוּס` (never `יְאֹר`, noted at 338 with Gen 41:1 and its LXX ποταμός); Πειθώ translated `שִׁכְנוּעַ`
+  (table); Μῆτις, Τύχη, Εὐρώπη, Ἀσίη kept as names (Oceanids). Ὠκεανίνη pl. `בְּנוֹת־אוֹקֵאָנוֹס` (364, with a
+  `[היתר שם]`: the tool wants the singular string). New epithets: δινήεις `רַב־הַמְּעַרְבֹּלוֹת`, καλλιρέεθρος
+  `יְפֵה־הַזֶּרֶם`, ἀργυροδίνης `כְּסוּף־הַמְּעַרְבֹּלוֹת`, ἐυρρείτης `מְלֵא־הַזֶּרֶם` (the `טוב` gate is for ἐύς
+  alone), θεοειδής `דְּמוּיַת־הָאֵלָה`, βοῶπις `בַּעֲלַת־עֵינֵי־הַפָּרָה`, τανύσφυρος `דַּקַּת־הַקַּרְסֻלַּיִם`,
+  πολυσπερής `פְּזוּרוֹת לְמֵרָחוֹק`; κουρίζω `טִפֵּחַ` (… `לִנְעוּרִים`); ἐφέπω here "haunt" `פָּקַד` (a sense split
+  from 220 `רודפות`); ἀγλαός `מַזְהִיר`; ἀργαλέος `קָשֶׁה`; ἐνέπω `סִפֵּר` (as part 1).
+- **Sun, Moon, Dawn** as translated names (`שֶׁמֶשׁ`, `יָרֵחַ` with feminine agreement, `שַׁחַר`), Ἑωσφόρος
+  `מֵבִיא־הַשַּׁחַר` (T), Ἠριγένεια `בַּת־הַבֹּקֶר`; ἀστήρ and ἄστρον both `כּוֹכָב` (a recorded synonym pair);
+  ἐστεφάνωται `עֲטוּרִים`; ἀργεστής `הַמַּבְהִיר`; αἰψηροκέλευθος `מְהִיר־הַדֶּרֶךְ`; the imperfect τίκτεν (381) `הייתה
+  יולדת` (Dawn bears the morning star every morning).
+- **Styx** (383–403): Ζῆλος / Νίκη / Κράτος / Βίη `קִנְאָה` / `נִצָּחוֹן` / `עֹז` / `כֹּחַ` (the table's translated names;
+  the Greek gender of the epithet kept: `נִצָּחוֹן נְאוַת־הַקַּרְסֻלַּיִם`); Κράτος written plene `עוז` in the line (a
+  `[היתר שם]`: the table's string is the defective `עז`). **γέρας `מַשְׂאֵת`** (pl. `מַשְׂאוֹת`, always vocalized: unvocalized
+  it reads `מַשָּׂאוֹת` "loads", used in other corpora) – the "portion of honour" (Gen 43:34), kept apart from τιμή
+  `כָּבוֹד`; ἄτιμος / ἀγέραστος `חֲסַר־כָּבוֹד` / `חֲסַר־מַשְׂאֵת`; ὅρκος `שְׁבוּעָה` (REQUIRED); ἄφθιτος `נִצְחִי` (F19's
+  `נצח`); βουλεύω `יָעַץ`; ἀστεροπητής `שׁוֹלֵחַ־הַבְּרָקִים`; ἡγεμονεύω `הוֹלִיךְ`; κρατέω `מָשַׁל` (ἀνάσσω `מָלַךְ`);
+  ὑφίστημι `הִתְחַיֵּב`; ἐκτελέω `הִשְׁלִים`; μέγαρον `אוּלָם` (vocalized: Modern "hall"); δόμος `מָעוֹן`;
+  καλλίσφυρος `נְאוַת־הַקַּרְסֻלַּיִם` (εὔσφυρος has `יְפַת־הַקַּרְסֻלַּיִם` from part 2: three ankle-epithets, three
+  Hebrew phrases).
+- **Hekate** (404–452): εὐνή `יָצוּעַ` (λέχος stays `מִשְׁכָּב`); πολυήρατος `עָרֵב מְאֹד`; κυανόπεπλος
+  `כְּחֻלַּת־הַגְּלִימָה`; ἀγανός `מָתוּן`; εὐώνυμος `נְאוַת־הַשֵּׁם`; πόρω `הֶעֱנִיק` (and πέπρωται "it is fated" `נִגְזַר`:
+  a recorded sense split – the fate as "what was granted"); μείρομαι `נָחַל`; τίω `כִּבֵּד` (with τιμάω); ἔρδειν ἱερά
+  `לְהַקְרִיב קָרְבָּנוֹת`, κατὰ νόμον `כַּחֹק`; ἱλάσκομαι `רִצָּה` (as part 1); κικλήσκω `קָרָא אֶל`; εὐχή / εὔχομαι
+  `תְּפִלָּה` / `הִתְפַּלֵּל` (the LXX's εὐχή is mostly `נֶדֶר`: noted at 419); πρόφρων `בְּחֵפֶץ לֵב`; ὄλβος `שֶׁפַע`;
+  **ὀπάζω `זִכָּה בְּ־`** (420, 433, 438, 442); δύναμις `יְכֹלֶת`; αἶσα `מָנָה`; βιάομαι `עָשָׂה בְּכֹחַ` (the root of βία);
+  ἀπαυράω `גָּזַל`; δασμός `חֲלֻקָּה`; μονογενής `יְחִידָה`; παραγίγνομαι `עָמַד לְצַד`; ὀνίνημι `הוֹעִיל`; ἀγορή
+  `אֲסֵפָה`, λαός `עָם`, ἀγών `קָהָל` (as part 1); φθισήνωρ `מַשְׁמִידַת־הָאֲנָשִׁים`; θωρήσσομαι `הִתְחַמֵּשׁ`; ἆθλον
+  `פְּרָס`; ἱππεύς `פָּרָשׁ`; γλαυκός `בָּהִיר`; δυσπέμφελος `קְשֵׁה־הַסְּעָרוֹת`; ἐρίκτυπος `רַב־הָרַעַם`; ἄγρη `צַיִד`;
+  ἀφαιρέομαι `נָטַל`; ληίς `מִקְנֶה`; ἀέξω (trans.) `הִרְבָּה`; the herd words ἀγέλη `עֵדֶר`, αἰπόλιον `צֹאן`, ποίμνη
+  `מַרְעִית`; εἰροπόκος `עֲטוּי־הַצֶּמֶר`; βριάω `הִגְבִּיר`; **κουροτρόφος `מְגַדֶּלֶת־הַנְּעָרִים`** (τρέφω `גִּדֵּל`);
+  πολυδερκής `הָרוֹאֶה־לְמֵרָחוֹק`.
+- **Kronos and the stone** (453–506): **καταπίνω `בָּלַע`** (the LXX's κατέπιεν for `וַיִּבְלַע`, Exod 7:12, 15:12; Isa
+  25:8), ἐξεμέω `הֵקִיא`; **νηδύς `מֵעַיִם`** for both the mother's womb (460) and Kronos' belly (487) – the Hebrew word
+  that is both (Gen 25:23, Jonah 2:1); γόνυ `בֶּרֶךְ`; φαίδιμος `הָדוּר`; χρυσοπέδιλος
+  `נְעוּלַת־סַנְדְּלֵי־הַזָּהָב`; ἴφθιμος `אַדִּיר`; πελεμίζομαι `רָעַד`; φρονέω `חָשַׁב`; ἀγαυός `אָצִיל`;
+  βασιληίς τιμή `כְּבוֹד הַמַּלְכוּת`; πεύθομαι `לָמַד` (κλύω `הִקְשִׁיב`, πείθομαι `שָׁמַע בְּקוֹל`); σκοπιά `מִצְפֶּה`;
+  ἀλαός `עִוֵּר`; δοκεύω `אָרַב` (the root שמר avoided: φυλάσσω's); ἄλαστος `שֶׁאֵין לְשָׁכְחוֹ`; λιτανεύω `הִפְצִיר`;
+  συμφράζομαι `הָגָה עִם` + μῆτις `תְּבוּנָה`; λανθάνω "unnoticed" `בַּסֵּתֶר` (a sense split from `שָׁכַח`, 547);
+  **Κρήτη `כְּרֵתִים`** (table), Λύκτος `לִיקְטוֹס`, Αἰγαῖον ὄρος `הַר אַיְגַאיוֹן`, Πυθώ `פִּיתוֹ`, Παρνασός `פַּרְנָסוֹס`;
+  δῆμος `מָחוֹז`; πίων `שָׁמֵן`; ἀτιτάλλω `אָמַן` (Esth 2:7); θοός `חוֹלֵף` (ὠκύς keeps `מָהִיר`); ἄντρον `מְעָרָה` (as
+  σπέος: a recorded pair); ἠλίβατος `נִשְׂגָּב`; πυκάζω `מְכֻסֶּה סְבַךְ`, ὑλήεις `מְיֹעָר`; **σπαργανόω `חִתֵּל`**
+  (Ezek 16:4); λίθος `אֶבֶן`; ἐγγυαλίζω `מָסַר לְיָדָיו`; σχέτλιος `אֻמְלָל`; νοέω `הֵבִין`; **ἀντί `תַּחַת`** (489, 570,
+  585, 602: the LXX's ἀντί for `תַּחַת`, Gen 22:13, 4:25); ἀνίκητος `בִּלְתִּי מְנֻצָּח`; ἐξελαύνω `גֵּרֵשׁ`; μένος (of a
+  body) `עָצְמָה` (324 `זַעַף` of fire, and 563: a recorded sense split); γυῖον `אֵבֶר` (as μέλος: a recorded pair);
+  δολόω `הֶעֱרִים` / `מוּעֲרָם` (a `[היתר שער]`, see Problems); ἐννεσίη `הַדְרָכָה`; πολυφραδής
+  `רַב־הַמַּחְשָׁבָה`; γόνος `וָלָד`; στηρίζω `קָבַע` (not `הִצִּיב`: `מַצֵּבָה` would be manufactured); ἠγάθεος `קָדוֹשׁ`
+  (a `[היתר שער]`); γύαλον `בִּקְעָה`; **σῆμα `אוֹת`** (the LXX's σημεῖον = `אוֹת`); θαῦμα `פֶּלֶא` / `פְּלִיאָה`;
+  πατροκασίγνητος `אֲחִי אָבִיו`; **δεσμός `כֶּבֶל`, δέω `אָסַר`, λύω `הִתִּיר`**; ἀεσιφροσύνη `סִכְלוּת`;
+  ἀπομιμνήσκομαι `זָכַר`; χάρις "gratitude" `חֵן` (the LXX's χάρις for `חֵן`, Gen 6:8); εὐεργεσία `חֶסֶד`; κεύθω
+  `הֶחְבִּיא` (κευθμών `מַחֲבוֹא`); πίσυνος `בּוֹטֵחַ`.
+- **The Iapetids** (507–534): Ἰαπετός `יָאפֶּטוֹס`, never `יֶפֶת` (Gen 10:2 in the note); ὁμὸν λέχος `מִשְׁכָּב מְשֻׁתָּף`;
+  ὑπερκύδας `רַב־הַתִּפְאֶרֶת`; ποικίλος `רַב־הַגְּוָנִים`; αἰολόμητις `מְנֻמַּר־הַתְּבוּנָה`; ἁμαρτίνοος
+  `חוֹטֵא־הַשֵּׂכֶל` (the root of ἁμαρτάνω `חָטָא`); ἀλφηστής `אוֹכֵל־הַקֶּמַח` (`לֶחֶם` is ἄρτος's); **πλαστός
+  `יְצוּרָה`** (licensed by the `יצר` gate); παρθένος `בְּתוּלָה`; εὐρύοπα `רְחַב־הַמַּבָּט`; ψολόεις `מְעַשֵּׁן`;
+  ἠνορέη `גַּבְרוּת`, ὑπέροπλος `יָהִיר`; ἀνάγκη `הֶכְרֵחַ`; ἵστημι perf. `עוֹמֵד`; ἀλυκτοπέδαι `כְּבָלִים שֶׁאֵין מֵהֶם
+  מָנוֹס`; ποικιλόβουλος `מְגֻוַּן־הָעֵצוֹת`; κίων `עַמּוּד`; ἐλαύνω "drive in" `תָּקַע` (a sense split from 291 `נהג`);
+  **ἀετός `נֶשֶׁר`** (the LXX's ἀετός = `נֶשֶׁר`, Exod 19:4); τανύπτερος / τανυσίπτερος `פְּרוּשׂ־כְּנָפַיִם`; ἧπαρ `כָּבֵד`;
+  ἐσθίω / ἔδω `אָכַל`; ὄρνις `עוֹף` (as οἰωνός: a recorded pair); ὄρνυμι (trans.) `הֵעִיר`; ἄλκιμος `בַּעַל־הַחַיִל`
+  (`גִּבּוֹר` is gated); νόσος `מַחֲלָה`; ἀπαλέξω `הָדַף`; ἀέκητι `בְּעַל כָּרְחוֹ`; ὑψιμέδων `הַשַּׁלִּיט מִמָּרוֹם`;
+  Θηβαγενής `יְלִיד תֵּבַּאי`; ἅζομαι `יָרֵא`; χώομαι `חָרָה` (κοτέω keeps `כָּעַס`); παύομαι `חָדַל`; ἐρίζω `הִתְגָּרָה`;
+  ὑπερμενής `עֲצוּם־הַכֹּחַ` (ἐρισθενής keeps `רַב־הָעָצְמָה`).
+- **Mekone** (535–569): κρίνομαι `נִפְרְדוּ` (the alternative "came to a settlement" in the note); Μηκώνη `מֵקוֹנָה`;
+  **βοῦς sg. `שׁוֹר`** (pl. stays `בָּקָר`: a number split); **δημός `חֵלֶב`** (REQUIRED by the renderings), **ἄλειφαρ
+  `שֻׁמָּן`**, **ὀστέα `עֲצָמוֹת`**, σάρξ `בָּשָׂר`, ἔγκατα `קְרָבַיִם`, ῥινόν `עוֹר` (as χρώς: a recorded pair), γαστήρ
+  `בֶּטֶן`, βόειος `שֶׁל שׁוֹר`; καλύπτω `כִּסָּה` (the LXX's κατακαλύπτω for `הַמְכַסֶּה`, Exod 29:22); εὐθετίζω `עָרַךְ`
+  (Lev 1:8); ἀργής `צַח`; προτίθημι `הִצִּיב לִפְנֵי`; ἐξαπαφίσκω / ἐξαπατάω `רִמָּה` (the root of Ἀπάτη `מִרְמָה`);
+  πέπων `יַקִּירִי`; ἑτεροζήλως `בְּמַשּׂוֹא פָּנִים`; κερτομέω `לָעַג`; ἐπιμειδάω `חִיֵּךְ`, ἦκα `קַלּוֹת`; κύδιστος
+  `הַמְפֹאָר`; ἀειγενέτης `הַקַּיָּמִים לָעַד`; αἱρέομαι "choose" `בָּחַר` (a voice split from `תָּפַס`); ἄνωγα `צִוָּה`;
+  δολοφρονέων `לְבָבוֹ מָלֵא עָרְמָה`; γιγνώσκω `הִכִּיר`; ἀγνοέω `טָעָה`; ὄσσομαι `צָפָה`; ἀναιρέομαι `הֵרִים`; καίω
+  `שָׂרַף`; **βωμός `מִזְבֵּחַ`** (REQUIRED), θυήεις `רֵיחָנִי` (`נִיחוֹחַ` never); ὀχθέω `בְּכַעַס`; πρόσφημι / προσεῖπον
+  `אָמַר אֶל`; μιμνήσκω `זָכַר`; **πῦρ `אֵשׁ`**; Μελίαι (563) `עֲצֵי הַמֵּילָה`; ἀκάματος `בְּלִי לֵאוּת` / `שֶׁאֵין לָהּ
+  לֵאוּת`; **κλέπτω `גָּנַב`**; τηλέσκοπος `הַנִּרְאֶה לְמֵרָחוֹק`; αὐγή `נֹגַהּ`; **νάρθηξ `גִּבְעוֹל כַּלְכָּל`** (Ferula;
+  not `שׁוּמָר`); κοῖλος `נָבוּב`; δάκνω `נָשַׁךְ`; ὑψιβρεμέτης `הָרוֹעֵם מִמָּרוֹם`; χολόω `הִזְעִים`.
+- **The first woman** (570–616): κακόν `רָעָה` (n.); τεύχω `הִתְקִין`; **συμπλάσσω `יָצַר` + γαῖα (material)
+  `אֲדָמָה`** (REQUIRED; the table's sense split); περικλυτός `מְהֻלָּל מְאֹד`; Ἀμφιγυήεις `צוֹלֵעַ־הָרַגְלַיִם`
+  (table); ἴκελος `דְּמוּי` (neuter: "a likeness of a maiden"); αἰδοῖος `נַעֲרָץ`; ζώννυμι `חָגַר`, κοσμέω `קִשֵּׁט`,
+  κόσμος `קִשּׁוּט` (the LXX's word for the bride's adornment, Isa 61:10); ἀργύφεος `לְבַן־כֶּסֶף`; ἐσθής `בֶּגֶד`;
+  καλύπτρα `צָעִיף` (Gen 24:65); **δαιδάλεος / δαίδαλα `מַעֲשֵׂה־אָמָּן`** (Song 7:2; not the Tabernacle's `מַעֲשֵׂה
+  חֹשֵׁב`); κατέχω `הוֹרִיד`; στέφανος `זֵר`, **στεφάνη `עֲטָרָה`**; νεοθηλής `מְלַבְלֵב`; ἱμερτός `מְעוֹרֵר־כִּסּוּף` (as
+  ἱμερόεις: a recorded pair); ἀσκέω `לִטֵּשׁ`; παλάμη `כַּף יָד`; χαρίζομαι `נָשָׂא חֵן`; κνώδαλον `חַיָּה`; ἤπειρος
+  `יַבָּשָׁה`; ἀπολάμπω `קָרַן`; θαυμάσιος `מֻפְלָא`; ζῷον `בַּעַל חַיִּים`; φωνήεις `בַּעַל קוֹל`; **καλὸν κακόν `הָרָעָה
+  הַיָּפָה`**; ἐξάγω `הוֹצִיא`; ὀβριμοπάτρη `בַּת־הָאָב־הַכַּבִּיר`; αἰπύς `תָּלוּל`; **θῆλυς `נְקֵבָה`** (the LXX's θῆλυ for
+  `נְקֵבָה`, Gen 1:27); φῦλα γυναικῶν `שִׁבְטֵי הַנָּשִׁים`; πενίη `עֹנִי`; κόρος `שֹׂבַע`; σύμφορος `חָבֵר`; μέλισσα
+  `דְּבוֹרָה`; **κηφήν `רַחְפָן`**; σμῆνος / σίμβλος `כַּוֶּרֶת` (a recorded pair); κατηρεφής `מְקֹרֶה`, ἐπηρεφής `מְסֻכָּךְ`;
+  βόσκω `הֶאֱכִיל`; ξυνήων `שֻׁתָּף`; καταδύω `שָׁקַע`; ἠμάτιος `בַּיּוֹם`; σπεύδω `מִהֵר`; κηρίον `חַלַּת־דְּבַשׁ`;
+  ἀλλότριος `שֶׁל זָרִים`; **κάματος `יְגִיעַ`** (πόνος keeps `עָמָל`); ἀμάω mid. `קָצַר` (licensed, Gen 8:22's word);
+  **γάμος `נִשּׂוּאִים`, γαμέω `נָשָׂא אִשָּׁה`**; φεύγω `בָּרַח`; μέρμερος `מַדְאִיג`; γῆρας `זִקְנָה`; χῆτος `חֹסֶר`;
+  **γηροκόμος `מְכַלְכֵּל שֵׂיבָה`** (Ruth 4:15); ἐπιδευής `חָסֵר`; ζώω `חַי`; ἀποφθίνω `דָּעַךְ`; κτῆσις `קִנְיָן`;
+  **χηρωσταί `יוֹרְשִׁים רְחוֹקִים`**; πραπίδες `בִּינָה`; ἀραρίσκω perf. `הוֹלֵם`; ἀπʼ αἰῶνος `כָּל יְמֵי חַיָּיו`
+  (`עוֹלָם` not used: renderings §6); ἀντιφερίζω `הִתְמוֹדֵד`; ἐμμενές `בְּלִי הֶרֶף`; τέτμον `נִקְרָה`; ἀταρτηρός
+  `מַזִּיק`; **γενέθλη `תּוֹלָדָה`**; ἀλίαστος `שֶׁאֵין לוֹ הֲפוּגָה`; ἀνία `דַּאֲבוֹן`; κραδίη `קֶרֶב`; ἀνήκεστος `שֶׁאֵין לוֹ
+  מַרְפֵּא`; παρέρχομαι `עָקַף`; ἀκάκητα `הַנָּדִיב`; ὑπεξαλύσκω `נִמְלַט`; βαρύς `כָּבֵד`; πολύιδρις `רַב־הַדַּעַת`,
+  ἰδμοσύνη `יְדִיעָה` (377; the οἶδα root); ἐρύκω `רִסֵּן`.
+- **Rejected**: `יְאֹר`, `יֶפֶת`, `נִיחוֹחַ`, `מִין`, `לֶחֶם` (ἀλφηστής), `גִּבּוֹר` (ἄλκιμος), `הִצִּיב` / `מַצֵּבָה`
+  (στηρίζω), `מְלֶאכֶת מַחְשֶׁבֶת` (δαιδάλεος), `שׁוּמָר` (νάρθηξ), `עוֹלָם` (609), `טוֹב` for καλός (585), `בּוּשָׁה` for
+  αἰδοῖος (572: the line keeps the precedent `נַעֲרָץ`), `עֶצֶב` (gated).
+
+### Open decisions for the user
+- **καλὸν κακόν (585) = `הָרָעָה הַיָּפָה`**: the oxymoron with καλόν as attribute of the noun κακόν. The renderings
+  forbid `טוֹב` for καλός; the LXX's καλόν for `טוֹב` (Gen 2:18, 3:6) is in the note.
+- **535 ἐκρίνοντο = `נִפְרְדוּ`** (separation) rather than "came to a settlement" (West): both readings in the note.
+- **Μελίῃσι (563) = `לַעֲצֵי הַמֵּילָה`** (the ash trees) rather than "to the ash-born men" (WD 145).
+- **The misogyny of 590–612** is translated as it stands; the notes place it in the oikos economy (the house as a
+  field, the wife as an extra mouth, the heir and the old-age care) and say plainly where it goes beyond every biblical
+  text (Gen 3:16, Prov 21:9, Qoh 7:26 complain about women or a bad wife; none makes women a separate "race" of evil).
+
+### Progress log
+- 2026-10-24: drafted 337–616 in eight sections, each saved, filled and verified at once; unvocalized and plene from
+  the first line (checked on the first saved section: names at their first occurrence; `אֵל`, `אֵלִים`, `אֵלָה`,
+  `אֵלוֹת`, `אֶל` vocalized wherever θεός stands in the line; `אֵלֶּה` (362, 422, 532, 538, 549), `הָעֲרֵבָה`, `אֵבֶל`,
+  `מַשְׂאֵת` / `מַשְׂאוֹת`, `בָּאוּלָמוֹת`, `בְּיִרְאָתוֹ`, `מוּעֲרָם` vocalized as ambiguous).
+- Verify findings fixed while drafting: the first occurrences of `בַּת־אוֹקֵאָנוֹס` (389), `מַרְעִישׁ־הָאֲדָמָה` (441),
+  `בְּנֵי־שָׁמַיִם` (461), `בֶּן־שָׁמַיִם` (486), `בֶּן־יָאפֶּטוֹס` (528) vocalized; `האלים` at 586 vocalized (the trap
+  allows a prefix); three `[היתר שם]` (364 the plural Oceanids, 385 plene `עוז`, 502 the plural `בני־שמים`) and two
+  `[היתר שער]` (494 `מוערם`, 499 `הקדושה`).
+- Review (fidelity and consistency, one pass over the 280 `>` lines): 489–490 (a doubled verb removed: λείπεθʼ stays in
+  490), 526–527 (a doubled `הרג` removed), 534 (ὑπερμενής moved off ἐρισθενής's `רַב־הָעָצְמָה`), 567 (the unexpressed
+  subject marked `(הדבר)`), 604 (the general relative: `ולא ירצה`); formula groups in the פירוק split into words, so
+  that `lexmap` reads each lemma; `lexmap` checked for the range (the collisions left are inflection, the recorded pairs
+  above, and the homographs δῆμος / δημός and Πειθώ / πείθω, which the map merges).
+- 21 Bible references written `` `…` – Book ch:v `` (unchecked by the tool) rewritten as `` `…` (Book ch:v) ``; ketiv /
+  qere avoided by quoting around them (Prov 31:27, Ps 105:18, Jer 51:34). `check_bible_quotes.py`: 0 problems (one
+  quotation, Prov 31:27, first quoted across its ketiv, caught and fixed). `verify TH`: 0 problems (426 later lines noted
+  as not yet drafted). `selftest`: 0 failures.
+
+### The text on its own terms
+- **A world full of gods of water** (337–370): every river a son of Ocean, every spring a daughter – 3,000 of each; the
+  local rivers rear the boys (347: hair vowed to the river), and only the people who live by a river know its name
+  (369–370): religion is local.
+- **The catalogue prepares the story** (358): Metis and Eurynome stand among the springs, to become Zeus' wives
+  (886, 907); Styx (361) and Klymene (351) open the next episodes.
+- **Dawn bears the morning star every morning** (381, imperfect): a genealogy that is also a daily event.
+- **Zeus' kingdom as a charter** (389–403): privileges kept from the old regime, new ones for the ally, the first ally
+  made the gods' oath, and her children – Rivalry, Victory, Power, Force – seated by the throne for ever.
+- **Hekate, a goddess in every sacrifice** (411–452): honoured "above all", a share in earth, sea and sky, invoked in
+  every offering; she helps kings judging, the assembly, warriors, athletes, horsemen, fishermen, herdsmen –
+  "whomever she wills", giving and taking back (443, 447): the free favour of a Greek god, not a covenant. The nurse of
+  every child born after her (450–452). Nothing yet of the later witch-goddess.
+- **The father who swallows** (453–506): the womb and the belly are one word (νηδύς); the youngest is hidden in a Cretan
+  cave; a swaddled stone; the stone vomited first and set up at Delphi, where Pausanias saw it anointed – a myth that
+  explains a cult object.
+- **Power rests on gratitude** (501–506): the freed Cyclopes give the thunderbolt; Zeus' rule is gift and return.
+- **The Iapetids, the human condition in four brothers** (507–534): a sky-bearer, a hubristic brother struck down,
+  "Forethought" bound with his liver eaten daily, "Afterthought" who receives the woman; and Zeus who lets Heracles end
+  the punishment for his son's glory.
+- **Mekone, the founding of sacrifice** (535–557): the meat to men and the smoke to the gods – which means that men eat
+  and die and the gods do not; the myth explains why the gods' portion is the bones, by a trick that Zeus sees and
+  chooses to suffer.
+- **Fire and the woman** (562–589): fire withheld, stolen in a fennel stalk, and paid for by "a beautiful evil" made of
+  earth, dressed as a bride – a δόλος answering Prometheus' δόλος.
+- **The oikos economy** (590–612): the drones and the bees (with the sexes reversed), the man without a wife whose
+  property goes to distant kin, the man with a good wife whose life is still half evil, the man with a bad wife whose
+  pain has no cure: the peasant's calculation of food, heirs and old-age care, told without apology.
+
+### Key parallels
+- **Th. 381 ↔ Isa 14:12**: `הֵילֵל בֶּן שָׁחַר` is the LXX's ὁ ἑωσφόρος – Hesiod's Eosphoros, son of Dawn: the same
+  genealogy.
+- **Th. 459, 497 ↔ Exod 7:12, Isa 25:8 (LXX καταπίνω = `בָּלַע`); Jer 51:34, 44; Job 20:15**: swallowing and vomiting up
+  as a figure of judgement; the Hurrian-Hittite Kumarbi as the real antecedent.
+- **Th. 460 ↔ Gen 30:3** (LXX ἐπὶ τῶν γονάτων): the newborn "upon the knees".
+- **Th. 489 ↔ Gen 22:13** (LXX ἀντὶ Ισαακ): a substitute in place of the son; **Th. 570, 602 ↔ Gen 4:25** (LXX ἕτερον …
+  ἀντί).
+- **Th. 498–500 ↔ Gen 28:18, 22; 35:14; Josh 4:6–7**: a stone set up as a sign for later generations, anointed with oil
+  at Delphi as Jacob's pillar; βαίτυλος probably from `בֵּית אֵל`.
+- **Th. 538–557 ↔ Gen 4:4 (LXX στεάτων), Lev 3:3, 3:16, 7:23, Exod 29:22 (LXX κατακαλύπτον), 1 Sam 2:15, Ps 50:13**: the
+  same division of the animal (fat to the god, meat to men) with the opposite valuation; βωμός, the LXX's deliberate
+  avoidance (Gen 8:20).
+- **Th. 571 ↔ Gen 2:7 (LXX ἔπλασεν … ἀπὸ τῆς γῆς) and 2:22**: the first woman moulded from earth – where Genesis moulds
+  the man and builds the woman from him.
+- **Th. 585 ↔ Gen 3:6, 2:18** (the LXX's καλόν for `טוֹב`): the woman is the καλὸν κακόν; Prov 11:22.
+- **Th. 590 ↔ Gen 1:27** (LXX θῆλυ = `נְקֵבָה`): the "race of women" against male and female created together.
+- **Th. 599, 605–607 ↔ Ps 128:2–3, Prov 5:10, Ruth 4:15, Gen 15:2–3, Qoh 4:8**: the household wisdom of eating one's own
+  toil, the old-age carer, the heirless estate.
+
+### Lines shared with other texts
+- First copies fixed here: **519 (= 747)**; **559 (= WD 54)**, **572 (= WD 71)**, **573 (= WD 72)** – drafted to stand
+  alone in the Works and Days.
+- Copied: **421 = 154** (with F7). Near-repeats: 371 ≈ 19; 361 ≈ 79; 362 ≈ 263; 540 ≈ 555; 545 ≈ 561; 558 ≈ WD 53; 566
+  ≈ 569; 571 ≈ WD 70; 402 ≈ 600 (`וכך, כמו כן`); 407 ≈ 204, 296.
+- Formulas used: F1 (542), F2 (457, 468), F6 (558), F7 (421, 463), F8 (463, 470), F14 (375), F19 (545, 550, 561), F20
+  (559), F22 (473, 495; also 546 for Prometheus), F23 (531, in the accusative), F26 (412, 423, 450, 534, 572), F27 (528,
+  543, 559, 614), F28 (573). None revised. Note: the coordinator's list gives 413 an F7, but 413 is γαίης τε καὶ
+  ἀτρυγέτοιο θαλάσσης (earth and sea), so the F7 regex does not fire there; it has `בארץ ובים העקר`.
+
+### Proposals for the shared renderings
+- **Names (new, by §2.3)**: rivers – Ἀλφειός `אַלְפֵיאוֹס`, Ἠριδανός `אֵרִידָנוֹס`, Στρυμών `סְטְרִימוֹן`, Μαίανδρος
+  `מַיאַנְדְּרוֹס`, Ἴστρος `אִיסְטְרוֹס`, Φᾶσις `פָסִיס`, Ῥῆσος `רֵסוֹס`, Ἀχελῷος `אַכֶלוֹאוֹס`, Νέσσος `נֶסוֹס`, Ῥοδίος
+  `רוֹדִיּוֹס`, Ἁλιάκμων `הַלִיאַקְמוֹן`, Ἑπτάπορος `הֶפְּטָפּוֹרוֹס`, Γρήνικος `גְּרֵנִיקוֹס`, Αἴσηπος `אַיְסֵפּוֹס`,
+  Σιμόεις `סִימוֹאֵיס`, Πηνειός `פֵּנֵיאוֹס`, Ἕρμος `הֶרְמוֹס`, Κάικος `קַאִיקוֹס`, Σαγγάριος `סַנְגָּרִיּוֹס`, Παρθένιος
+  `פַּרְתֶּנִיּוֹס`, Εὔηνος `אֶוּאֵנוֹס`, Ἄρδησκος `אַרְדֵּסְקוֹס`, Σκάμανδρος `סְקָמַנְדְּרוֹס` (Λάδων, Νεῖλος: table);
+  Oceanids – Ἀδμήτη `אַדְמֵטָה`, Ἰάνθη `יָאנְתָה`, Πρυμνώ `פְּרִימְנוֹ`, Ἱππώ `הִיפּוֹ`, Ῥόδεια `רוֹדֵיאָה`, Ζευξώ `זֶאוּקְסוֹ`,
+  Κλυτίη `קְלִיטִיָּה`, Ἰδυῖα `אִידִיָּה`, Πασιθόη `פָּסִיתוֹאָה`, Πληξαύρη `פְּלֵקְסַאוּרָה`, Γαλαξαύρη `גָּלַקְסַאוּרָה`,
+  Μηλόβοσις `מֵלוֹבּוֹסִיס`, Φόη `פוֹאָה`, Πολυδώρη `פּוֹלִידוֹרָה`, Κερκηίς `קֶרְקֵאִיס`, Πλουτώ `פְּלוּטוֹ`, Ἰάνειρα
+  `יָאנֵירָה`, Ἀκάστη `אַקַסְטָה`, Ξάνθη `קְסַנְתָה`, Πετραίη `פֶּטְרַאיָה`, Μενεσθώ `מֶנֶסְתוֹ`, Εὐρώπη `אֶוּרוֹפָּה`, Τελεστώ
+  `טֶלֶסְטוֹ`, Χρυσηίς `כְרִיסֵאִיס`, Ἀσίη `אַסִיָּה`, Καλυψώ `קַלִּיפְּסוֹ`, Τύχη `טִיכָה`, Ἀμφιρώ `אַמְפִירוֹ`, Ὠκυρόη
+  `אוֹקִירוֹאָה` (Πειθώ `שִׁכְנוּעַ` T, Ἠλέκτρη, Δωρίς, Οὐρανίη, Κλυμένη, Καλλιρόη, Διώνη, Περσηίς, Μῆτις, Εὐρυνόμη,
+  Εὐδώρη, Στύξ: table or earlier); Ἀστραῖος `אַסְטְרַאיוֹס`, Πάλλας (Titan) `פַּלַּס` (table, = Athena's Παλλάς), Ἀστερίη
+  `אַסְטֶרִיָּה`, Λύκτος `לִיקְטוֹס`, Αἰγαῖον (ὄρος) `אַיְגַאיוֹן`, Πυθώ `פִּיתוֹ`, Παρνασός `פַּרְנָסוֹס`, Μηκώνη `מֵקוֹנָה`,
+  Θηβαγενής `יְלִיד תֵּבַּאי`.
+- **Translated name**: Ἠριγένεια `בַּת־הַבֹּקֶר` (Dawn's epithet, 381). **Table forms to fix in the tool**: Κράτος's
+  string `עֹז` (defective) should accept the plene `עוז`; Ὠκεανίνη pl. `בְּנוֹת־אוֹקֵאָנוֹס` and Οὐρανίδης pl.
+  `בְּנֵי־שָׁמַיִם` should pass (the check wants the singular string); Ἀμφιγυήεις is lemmatized ἀμφιγύεις in the treebank,
+  so its row never fires (add the variant).
+- **Formulas**: none revised. F22's Hebrew also serves Prometheus' ἀγκυλομήτης (546: `פרומתאוס עקום־התחבולות`) – suggest
+  a general F `αγκυλομητ` → `עקום־התחבולות`. F23 occurs in the accusative at 531 (ἐπὶ χθόνα πουλυβότειραν): its regex
+  could cover it. F6 (`מקבץ־העננים`) first appears in the Theogony at 558 (the table lists WD only).
+- **Gates**: the `ערם` string is gated for γυμνός only, but the verb `הֶעֱרִים` / `מוּעֲרָם` belongs to δόλος (494
+  δολόω): add `δολ` to the licence of `ערם` (now a `[היתר שער]`). The `קדש` gate licenses ἱερός, ζάθεος, ἁγνός, but not
+  ἠγάθεος (499, "most holy", the same formation as ζάθεος): add `ηγαθε` (now a `[היתר שער]`).
+- **Recurring words** (first line in brackets; all in Decisions above): γέρας `מַשְׂאֵת` (393), ὀπάζω `זִכָּה` (420),
+  πόρω `הֶעֱנִיק` / πέπρωται `נִגְזַר` (412, 464), μείρομαι `נָחַל` (414), εὐχή / εὔχομαι `תְּפִלָּה` / `הִתְפַּלֵּל` (419,
+  441), καταπίνω `בָּלַע` (459), νηδύς `מֵעַיִם` (460), ἀντί `תַּחַת` (489), σῆμα `אוֹת` (500), δεσμός `כֶּבֶל` (501), δέω
+  `אָסַר` (502), λύω `הִתִּיר` (501), ἀετός `נֶשֶׁר` (523), ἄλκιμος `בַּעַל־הַחַיִל` (526), χώομαι `חָרָה` (533), ἐρίζω
+  `הִתְגָּרָה` (534), βοῦς sg. `שׁוֹר` (536), ὀστέα `עֲצָמוֹת` (540), ἄλειφαρ `שֻׁמָּן` (553), καίω `שָׂרַף` (557), πῦρ
+  `אֵשׁ` (563), κλέπτω `גָּנַב` (566), τεύχω `הִתְקִין` (570), στεφάνη `עֲטָרָה` (578), θαῦμα `פֶּלֶא` (500), δαιδάλεος
+  `מַעֲשֵׂה־אָמָּן` (575), θῆλυς `נְקֵבָה` (590), κάματος `יְגִיעַ` (599), γάμος `נִשּׂוּאִים` (603), γῆρας `זִקְנָה` (604),
+  ἀνάγκη `הֶכְרֵחַ` (517), ἀργαλέος `קָשֶׁה` (369), ἀγλαός `מַזְהִיר` (366), φαίδιμος `הָדוּר` (453), καλλίσφυρος
+  `נְאוַת־הַקַּרְסֻלַּיִם` (384), κουροτρόφος `מְגַדֶּלֶת־הַנְּעָרִים` (450), ὑψιβρεμέτης `הָרוֹעֵם מִמָּרוֹם` (568), ἐρίκτυπος
+  `רַב־הָרַעַם` (441).
+- **Recorded splits and pairs** (for `lexmap`): ἐφέπω `רָדַף` / `פָּקַד` (220 / 366); μένος `זַעַף` / `עָצְמָה` (324, 563 /
+  492); ἐλαύνω `נָהַג` / `תָּקַע` (291 / 522); αἱρέω `תָּפַס` / mid. `בָּחַר` (167 / 549); λανθάνω `שָׁכַח` / `בַּסֵּתֶר`
+  (547 / 471); φαίνω `הֵאִיר` / mid. `נִרְאָה` (372 / 443); πόρω `הֶעֱנִיק` / `נִגְזַר`; βοῦς `בָּקָר` / `שׁוֹר` (number);
+  pairs sharing a Hebrew word (never in one line): ἀστήρ / ἄστρον `כּוֹכָב`, ἄντρον / σπέος `מְעָרָה`, γυῖον / μέλος
+  `אֵבֶר`, ὄρνις / οἰωνός `עוֹף`, ῥινόν / χρώς `עוֹר`, σμῆνος / σίμβλος `כַּוֶּרֶת`, ἱμερτός / ἱμερόεις `מְעוֹרֵר־כִּסּוּף`,
+  ῥεῖα / ῥᾳδίως `בְּקַלּוּת`, ἐσθίω / ἔδω `אָכַל`.
+
+### For the Works and Days (WD 42–105: the Prometheus and Pandora vocabulary fixed here)
+- **The three shared lines** (copy character for character): WD 54 = TH 559 `בן־יאפטוס, היודע תחבולות יותר מכולם,`;
+  WD 71 = TH 572 `דמוי בתולה נערצת, בעצות בן־קרונוס.`; WD 72 = TH 573 `וחגרה אותה וקישטה הָאֵלָה, אַתֵנָה
+  בהירת־העיניים,`. Near: WD 53 ≈ TH 558 (`אמר אליו זאוס מקבץ־העננים`; WD's χολωσάμενος `בזעמו` – χολόω `הִזְעִים`, TH
+  568); WD 70 ≈ TH 571 (`מן האדמה יצר צולע־הרגליים המהולל` – WD has κλυτός `המהולל`, TH περικλυτός `המהולל מאוד`).
+- **Prometheus and fire**: Προμηθεύς `פְּרוֹמֵתֵאוּס`, ἀγκυλομήτης `עֲקוֹם־הַתַּחְבּוּלוֹת` (TH 546, WD 48); Ἰαπετιονίδης
+  `בֶּן־יָאפֶּטוֹס` (F27); ἐὺς πάις Ἰαπετοῖο `בנו הטוב של יאפטוס` (TH 565 = WD 50); ἐξαπατάω `רִמָּה` (WD 48); κλέπτω
+  `גָּנַב` (WD 51, 55); πῦρ `אֵשׁ`; **ἐν κοΐλῳ νάρθηκι `בגבעול כַּלְכָּל נבוב`** (TH 567 = WD 52); κρύπτω `הִסְתִּיר` (WD
+  47, 50); χόλος `זַעַם`, χολόω `הִזְעִים`, χώομαι `חָרָה`; μῆδος `תַּחְבּוּלָה` (F19, F20); δόλος `עָרְמָה`, δόλιος `עַרְמוּמִי`,
+  τέχνη `אֻמָּנוּת`; ἀντὶ πυρός `תַּחַת הָאֵשׁ` (TH 570; WD 57); κακόν `רָעָה`; πῆμα `פֶּגַע` (WD 56, 82); ἀκάματος `בְּלִי
+  לֵאוּת`.
+- **The sacrifice** (for WD 136, 336–338): βωμός `מִזְבֵּחַ`; ἔρδειν ἱερά `לְהַקְרִיב קָרְבָּנוֹת`; κατὰ νόμον `כַּחֹק`; καίω
+  `שָׂרַף`; ὀστέα `עֲצָמוֹת`; δημός `חֵלֶב`; ἄλειφαρ `שֻׁמָּן`; βοῦς sg. `שׁוֹר`, pl. `בָּקָר`; ἱλάσκομαι `רִצָּה`; θυήεις
+  `רֵיחָנִי`; (κνίση `רֵיחַ־חֵלֶב`, renderings §5: not in my range).
+- **The woman**: γυνή `אִשָּׁה`; παρθένος `בְּתוּלָה`; αἰδοῖος `נַעֲרָץ`; ἴκελος `דְּמוּי`; πλάσσω / συμπλάσσω `יָצַר`, πλαστός
+  `יְצוּרָה`; γαῖα (material) `אֲדָמָה` (ἐκ γαίης `מִן הָאֲדָמָה`); Ἀμφιγυήεις `צוֹלֵעַ־הָרַגְלַיִם`; κλυτός `מְהֻלָּל`;
+  ζώννυμι `חָגַר`; κοσμέω `קִשֵּׁט`, κόσμος `קִשּׁוּט` (WD 72, 76); γλαυκῶπις Ἀθήνη F28; Παλλὰς Ἀθήνη `פַּלַּס אַתֵנָה` (WD
+  76); ἐσθής `בֶּגֶד`; καλύπτρα `צָעִיף`; στέφανος `זֵר`, στεφάνη `עֲטָרָה`, στέφω (WD 75: suggest `עִטֵּר`); ἄνθος `פֶּרַח`;
+  χρύσεος `זָהוֹב`; χάρις `חֵן`, χαρίζομαι `נָשָׂא חֵן`; δαιδάλεος / δαίδαλα `מַעֲשֵׂה־אָמָּן` (WD 64 πολυδαίδαλος: suggest
+  `רַב־מַעֲשֵׂי־אָמָּן`); θαῦμα `פֶּלֶא`; **καλὸν κακόν `הָרָעָה הַיָּפָה`**; καλός `יָפֶה`, ἀγαθόν `הַטּוֹב`; φωνή `קוֹל`,
+  αὐδή `נִיב`; δῶρον `מַתָּנָה` (Pandora's name, WD 81–82: the note); **the race of women**: γένος γυναικῶν θηλυτεράων `גזע
+  הנשים הנקבות` (θῆλυς `נְקֵבָה`), φῦλα γυναικῶν `שבטי הנשים`; δόλος αἰπὺς ἀμήχανος `ערמה תלולה, שאין כנגדה תושייה`
+  (WD 83).
+- **The drones and the household** (for WD 302–306, 373–375, 405–406, 695–705): μέλισσα `דְּבוֹרָה`; κηφήν `רַחְפָן`; σμῆνος
+  / σίμβλος `כַּוֶּרֶת`; κηρίον `חַלַּת־דְּבַשׁ`; κάματος `יְגִיעַ` (πόνος `עָמָל`); ἀμάω `קָצַר`; γαστήρ `בֶּטֶן`; ἀεργός
+  `בַּטְלָן` (renderings); ξυνήων `שֻׁתָּף`; πενίη `עֹנִי`; κόρος `שֹׂבַע`; βίοτος `מִחְיָה`; κτῆσις `קִנְיָן`; γάμος `נִשּׂוּאִים`,
+  γαμέω `נָשָׂא אִשָּׁה`; ἄκοιτις `רַעְיָה`; κεδνός `הָגוּן`; γῆρας `זִקְנָה`; γηροκόμος `מְכַלְכֵּל שֵׂיבָה`; χηρωσταί
+  `יוֹרְשִׁים רְחוֹקִים`; πραπίδες `בִּינָה`; ἀνία `דַּאֲבוֹן`; ἀνήκεστος `שֶׁאֵין לוֹ מַרְפֵּא`.
+
+### Lessons for the guidelines
+- **A `– Book ch:v` reference after a quotation is invisible to `check_bible_quotes.py`**: I wrote 21 of them in notes
+  before noticing; a regex pass turned them into `(Book ch:v)` and the checker then caught one ketiv. Write the
+  parenthesis from the first note.
+- **Ambiguous unvocalized words multiply in a sacrifice and household vocabulary**: `משאות` (portions / loads), `אלה`
+  (these / goddess) in lines without θεός, `מוערם`, `ביראתו`: vocalize at the draft.
+- **The `lexmap` reads the first token after the dash as the lemma**: a formula group written `` `μέγας Κρόνος
+  ἀγκυλομήτης` – הנוסחה F22 `` makes "הנוסחה" a lemma; split formulas into words in the פירוק. The map also merges
+  homographs that differ only in accents (δῆμος / δημός; Πειθώ / πείθω).
+- **A gate on a root catches its homograph roots too** (`ערם` "naked" and `ערם` "be crafty"; `קדש` for a third
+  ζα-/ἀγα-θεος compound): license by the whole Greek family, not by one word.
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)
