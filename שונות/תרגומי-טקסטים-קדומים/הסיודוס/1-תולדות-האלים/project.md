@@ -1149,5 +1149,133 @@ the Homeric Hymns to Demeter and Aphrodite (218–238); Apollodorus 1.6.1 – na
 - **renderings §3.1, the Τυφωεύς row**: "Τυφῶν (Th. 306, 869) `טִיפוֹן` where the line has that form" – 306 has
   Τυφάονα and 869 Τυφωέος, so no TH line has Τυφῶν; the lines rightly use `טיפואוס`. The row's note should be corrected.
 
+## Review pass (b): consistency
+
+**Date:** 2026-10-24. **Reviewer:** consistency reviewer (pass b), one sub-session, the whole poem (1–1022 + 929a–t).
+
+### What was checked
+- **One lemma = one Hebrew word:** `hesiod_tools.py lexmap` over the whole file (567 lemmas with more than one Hebrew
+  string, most of them inflection and prefixes): filtered by a script that compares the Hebrew skeletons, leaving 144
+  lemmas, each read against renderings §5, §11.1–§11.5 and the project.md "Decisions" / "Recorded splits" lists; the
+  reverse list (one Hebrew word for several lemmas), and a second reverse scan on prefix- and suffix-stripped Hebrew
+  (275 groups, mostly homographs and one-root families). The bindings of §5 and §11 were compared by script with the
+  words actually used (no deviation besides those below).
+- **Formulas and epithets:** `verify` (F1–F34) and, by hand, the phrases the regexes do not cover: "the immortal gods"
+  (`הָאֵלִים בני־האלמוות`, 17 lines), "the blessed gods" (`הָאֵלִים המאושרים`), the counsels and mind of Zeus, the speech
+  introductions (`כך אמר`, `אז אמר אליו`), "father of gods and men" (F1/F2), Kronos' son (`בן־קרונוס` / `בן קרונוס` 660,
+  recorded), the night and dawn epithets (`לילה המשחיתה` 224 = 757, `השחורה`, `האפלה`, `שחר`, `בת־הבוקר`), the
+  daughters of Zeus, the broad sky (`שמים הרחב` only where the base capitalizes Οὐρανός: 45, 702), and every compound
+  epithet with and without the article inside (`X־Y` / `X־הY`).
+- **Repeated and near-repeated lines:** §9 (verify: 0 differences); every pair of lines sharing a 4-word Greek sequence
+  (54 groups) and every pair with difflib ≥ 0.6 (47 pairs), across the two translators' halves.
+- **Names:** every capitalized word's Hebrew in the פירוק, grouped by lemma: one form each; the §7.3 traps and Γύης
+  vocalized everywhere (verify).
+- **963 χαίρετʼ** (the open point of pass a) – decided below.
+- **Apparatus:** the Gen 6:4, Gen 1:21 / κήτη, δράκων / ὄφις notes (50, 148, 185, 238, 299, 322, 336, 609, 825, 968);
+  section references to `renderings.md`; `[מקבילה: TH n]` at every §9 repeated line.
+- After each batch `verify TH --strict`: 0 problems; at the end `check_bible_quotes.py` on the annotated file: 0
+  problems.
+
+### Result: 28 lines changed (each with its פירוק and notes)
+**One lemma, two Hebrew words (slips to the binding or first-fixed word)**
+- **μάχη = `מַאֲבָק`** (§11.5): **228** `ואת מלחמות` → `ואת מאבקים` (the translated name follows the noun, §3.2);
+  **666** `ומלחמה שאין לקנא בה` → `ומאבק שאין לקנא בו`; **711** `ונטתה המלחמה` → `ונטה המאבק`; **713** `מלחמה חריפה`
+  → `מאבק חריף`. Before, μάχη shared `מִלְחָמָה` with πόλεμος (431, 638, 665, 714, 926, 936) everywhere but 926; the 926
+  note updated.
+- **χρύσεος = `זָהוֹב`** (§11.1; 12, 216, 822 …): **283** `חרב זהב` → `חרב זהובה`; **578** `עטרת זהב` → `עטרה זהובה`;
+  **785** `בקיתון של זהב` → `בקיתון זהוב`; **933** `בארמונות זהב` → `בארמונות זהובים`.
+- **δεινός = `אָיֹם`** (§5): **678**, **743** δεινόν `ונורא` → `ואיום` (`נוֹרָאָה` is ἐπαινή's, 768 = 774, §11.4).
+- **ἱκνέομαι = `הִגִּיעַ`** (193, 285, 554 …): **481** ἷκτο `באה` → `הגיעה`; **754** ἵκηται `תבוא` → `תגיע` (`בא` is
+  ἔρχομαι's).
+- **διὰ βουλάς = `בעצות`** (572, the first copy of WD 71, binding; = βουλῇσι 730, 960, 993): **465** `בשל עצות` →
+  `בעצות`; **653** `בזכות עצותינו` → `בעצותינו`.
+- **ἀέξω:** **444** `להרבות` → `להגדיל` (the root of `גדל`, 195, 524, 641; the causative is the hiphil).
+- **963 χαίρετʼ** `שִׂמְחוּ` → `שלום לכם` – **decided: aligned with 104** (`שלום לכן`, §11.1). Both are the hymnic
+  χαίρετε, greeting (104) and farewell (963), the formula that closes the Homeric Hymns; the LXX renders `שָׁלוֹם` by
+  χαίρειν (Isa 48:22, the 104 note). The gender changes as the Greek does (ἔχοντες: the gods). χαίρω "rejoice" keeps
+  `שָׂמַח` (438): a recorded sense split. The phrase `שָׁלוֹם לְ־` beside the name Εἰρήνη `שָׁלוֹם` (902) is a greeting
+  and a name, as in Hebrew itself (the 963 note's reason for `שִׂמְחוּ` withdrawn). Cross-references 104 ↔ 963 added.
+
+**One Hebrew word, two lemmas (collisions resolved; the earlier / binding word kept)**
+- **φθείρω / ὀλοός:** **876** `ומשחיתות מלחים` → `ומאבדות מלחים`, **879** `משחיתות את המעשים` → `מאבדות את המעשים`:
+  the participle was ὀλοός's `מַשְׁחִית` (224, 326, 501, 591, 604, 757, translator 1, first). φθείρω = `אִבֵּד` (grepped
+  `--all`: unused); `כִּלָּה` was tried first and is rightly blocked by the `כלה` gate (`כַּלָּה`).
+- **"full year" and `תָּמִים`** (REQUIRED for ἄμωμος, 259): **636** πλείους `שנים תמימות` → `שנים מלאות` (πλέως "full");
+  **740** τελεσφόρον, **795** τετελεσμένον `שנה תמימה` → `שנה שלמה` (the τελ- family: τελέω `הִשְׁלִים`, τελήεις
+  `שָׁלֵם` 242); **803** ἐννέα πάντα ἔτεα `תשע שנים תמימות` → `כל תשע השנים` (πᾶς `כל`).
+- **εὐρύς / πλατύς:** **445** πλατέʼ `הרחב` → `המשתרע`.
+- **ὠκύς / καρπάλιμος:** **492** `ובמהירות` → `וחיש` (`מָהִיר` is ὠκύς's, 266, 269, 998).
+- **ἔρχομαι / γίγνομαι:** **741** γένοιτο `בא` → `נמצא` (`בפנים השערים`), a recorded sense of γίγνομαι ("come to be in a
+  place"; not `נהיה`, not ἔρχομαι's `בא`).
+- **652** `ושבתם` → `והגעתם שוב`: ἀφίκεσθε `הגיע` (997, as pass a fixed it) + ἄψ `שוב` (169); `ושבתם` also carried the
+  reserved string `שבת`, which the gate's word list does not catch (open point).
+
+**Near-repeats**
+- **483** `תחת מחבואי` → `במחבואי` (= 300, ζαθέης ὑπὸ κεύθεσι γαίης); **681** `והרעש הכבד הגיע` → `ורעש כבד הגיע` (the
+  same half-line as 849 `ורעש שאין לו כיבוי קם`, which has no article). Cross-references added.
+
+**Apparatus only (no `>` line changed)**
+- `renderings §1` cited for the gates (no such section) → `§7` in 822, 825, 850, 869, 880, 991; 825 now refers to 322
+  (δράκων with ὄφις first); 185 `השבעים:` → `ובשבעים:` as 50 (Gen 6:4); 968 refers to 148 (ὀνομαστοί) and 609 (ἀπʼ αἰῶνος);
+  forward `[מקבילה: TH n]` added at the first copies 46, 118, 150, 152, 154, 519, 737, 738, 739 (every later copy already
+  pointed back).
+
+### Splits and pairs recorded (checked and left; for `lexmap`)
+- **Sense splits:** παῖς – a child / children `יֶלֶד` (138, 155, 162 …), a son named with his parent `בֵּן` (178, 464, 472,
+  509, 565, 746, 821, 897, 981: both translators, consistently), a boy `נַעַר` (989), a daughter `בַּת` (952); γείνομαι
+  mid.-pass. "be born" `נוֹלַד` (82, 202, 219); αἱρέομαι "choose" `בָּחַר` (549); λανθάνω "escape notice" `נִסְתַּר` (471,
+  929n) / λανθάνομαι "forget" `שָׁכַח` (547, the λαθ- family §11.1); φράζομαι "devise" `הָגָה` (160); ὄρνυμι of a sound
+  `עָלָה` (70), transitive `הֵעִיר` (523); χαίρω `שָׂמַח` / χαίρετε `שָׁלוֹם לְ־`; and the splits translator 2 recorded
+  (μένος, κορυφή, ἄγω, νόσφι, δαίς, καίω, κέλομαι 686, ῥύομαι, μείρομαι / πόρω `נִגְזַר`).
+- **Pairs sharing a Hebrew word (Hebrew has one natural word):** πόντος / θάλασσα `יָם`; ἔτος / ἐνιαυτός `שָׁנָה`;
+  κραδίη / ἦτορ `קֶרֶב`; ἄντρον / σπέος `מְעָרָה`; καίω / αἴθω `בָּעַר`; ἀνάσσω / ἐμβασιλεύω `מָלַךְ`; ἰωχμός /
+  κολοσυρτός `מְהוּמָה`; βάλλω (515, "hit with a missile") / πλήσσω (855) `הִכָּה`; ἄγω / λαμβάνω `לָקַח`; the families
+  ἱκνέομαι / ἱκάνω / ἀφικνέομαι `הִגִּיעַ`, δέχομαι and compounds `קִבֵּל`, ὅμοιος / ἔοικα / ἴκελος / ἐναλίγκιος `דּוֹמֶה`.
+- **Root-sharing pairs (different words):** μάχη `מַאֲבָק` / μάρναμαι `נֶאֱבַק`; ταχέως `מַהֵר` (103) / ὠκύς `מָהִיר`;
+  μῦθος `דָּבָר` / λέγω `דִּבֵּר`; φθισήνωρ `מַשְׁמִידַת־` (431).
+- **Homographs (no conflict):** `קְרָב` ὑσμίνη / `קֶרֶב` ἦτορ; `קֶצֶף` ἀφρός / `קָצַף` ὀδύσσομαι; `עֵז` χίμαιρα / `עַז`
+  κρατερός (322 vocalized); δαΐ / δαίς (650, 674 / 802); `מְקוֹרוֹת` κατηρεφής / πηγή; `שָׁם` / `שֵׁם` / `שָׂם`.
+- **Compound epithets:** the article inside follows the noun's definiteness (`חיצים מעוררי־אנחה` 684 / `המבחנים
+  מעוררי־האנחה` 951; `צאצאים קשי־לב` 308 / `אַטְלָס, בן קשה־הלב` 509): consistent in both halves, Hebrew grammar, left
+  (a first normalization of 308, 456, 719, 765, 770 was reverted). ἀκάματος `בלי לאות` / `האש שאין לה לאות` (563, 566:
+  the same noun in a relative clause, the fixed phrase of fire) left.
+- **648** `ואנו, כל אשר נולדנו` against 630 = 668: the pronoun of the Greek 1st person, recorded in its note; left.
+
+### Recurring patterns
+- The two halves agree remarkably: the formulas, the fixed epithets, the names and the §9 lines are identical across the
+  translators. The slips are of two kinds: **a word fixed late and not carried back** (μάχη `מַאֲבָק` decided at 926, after
+  228, 666, 711, 713; φθείρω `הִשְׁחִית` chosen in part 4 without checking ὀλοός's `מַשְׁחִית` of part 1), and **an
+  idiomatic Hebrew phrase that silently reuses a fixed word** (`שנה תמימה` taking ἄμωμος's `תָּמִים`; `חרב זהב`
+  beside the epithet `זָהוֹב`; `בא` for three verbs of arrival). `lexmap` shows both only after its inflection noise is
+  filtered: a skeleton filter (prefixes, suffixes, matres) cuts 567 entries to 144 and would be worth building into the
+  tool.
+
+### Open points for the coordinator / the user
+- **The `שבת` gate** lists `שבת|השבת|שבתו|שביתה|שבתה|שבתון|וישבות|שבות` + prefixes: `ושבתם` (652) passed it. Either the
+  list grows (`שבתם`, `שבתי` …: then `שַׁבְתֶּם` "you returned" needs vocalization or another word, as here), or the reviewer
+  greps it by hand. Not edited (reported).
+- **renderings §6** asks for a note at TH 238 on the range of κῆτος in the LXX (`לִוְיָתָן` Job 3:8, `רַהַב` Job 9:13,
+  26:12, `דָּג גָּדוֹל` Jonah 2:1); 238 has only Gen 1:21. Not added: `lxx_verses.py show job …` / `jonah …` fails in this
+  checkout (the Rahlfs files for those books seem missing), so the Greek could not be quoted.
+- **For pass (c):** 485 `משחיתלה` (= מִשֶּׁחִתְּלָה) reads unvocalized as `משחית לה`; part 5 vocalizes some non-trap names
+  again after their first occurrence (קִיתֵרֵיאָה 196, 934, 1008), harmless. 966 must keep `הָאוֹלִימְפִּיּוֹת` vocalized:
+  the treebank lemmatizes Ὀλυμπιάδες differently at 25 and 52, so `verify` counts 966 as the first occurrence.
+- **For the Works and Days:** φθείρω is now `אִבֵּד` (the WD proposal `הִשְׁחִית` in "TH 617–885" is withdrawn); WD's
+  ὄλλυμι (8 lines) then needs its own word (`הִשְׁמִיד` is the stem of φθισήνωρ `מַשְׁמִידַת־הָאֲנָשִׁים`, 431: check).
+
+### Proposed renderings updates
+- **§5 / §11.5:** μάχη `מַאֲבָק` everywhere (not only beside πόλεμος); **§11.2:** the translated name Μάχαι `מַאֲבָקִים`
+  (228), replacing `מִלְחָמוֹת`. πόλεμος `מִלְחָמָה`; μάρναμαι `נֶאֱבַק` (root shared with μάχη: recorded).
+- **§11.1:** χαίρετε (greeting and farewell) `שָׁלוֹם לָכֶן` / `שָׁלוֹם לָכֶם` (104, 963); χαίρω "rejoice" `שָׂמַח` (438).
+- **§11.1:** χρύσεος `זָהוֹב` of objects too (`חרב זהובה`, `עטרה זהובה`, `ארמונות זהובים`), never the construct `זהב`.
+- **§11.4 / §13 (WD):** φθείρω `אִבֵּד` (876, 879), replacing `הִשְׁחִית`; ὀλοός `מַשְׁחִית` (224).
+- **§5:** `תָּמִים` only for ἄμωμος (REQUIRED); "a full year": τελεσφόρος / τετελεσμένος ἐνιαυτός `שָׁנָה שְׁלֵמָה`,
+  πλέως `מָלֵא` (636).
+- **New words:** πλατύς `מִשְׂתָּרֵעַ` (445); καρπάλιμος `חִישׁ` (492); ἀέξω transitive `הִגְדִּיל` (444, intransitive
+  `גָּדַל`); γίγνομαι of a place `נִמְצָא` (741, a sense split); διὰ βουλάς `בַּעֲצוֹת` (465, 572, 653).
+- **§5:** δεινός `אָיֹם` also as the adverb δεινόν (678, 743); ἱκνέομαι `הִגִּיעַ` in every form (481, 754); **παῖς**: the
+  row should record the split `יֶלֶד` (child) / `בֵּן` (a son named with his parent) / `נַעַר` (989) / `בַּת` (952).
+- **§3.1, the Τυφωεύς row:** already corrected after pass (a).
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)

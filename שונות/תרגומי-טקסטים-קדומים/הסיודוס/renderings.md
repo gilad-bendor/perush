@@ -342,7 +342,7 @@ Kept as names (West keeps them): Ἔρος `אֶרוֹס` ★ (the noun ἔρο�
 | γένος | `גֶּזַע` | "race, stock, kin": the gold race `גֶּזַע הַזָּהָב`; the LXX's γένος = `מִין` (Gen 1:21, 24–25): a note (the dossier's 336 `דור` revised, §12) |
 | γενεή | `דּוֹר` | WD 160 `הַדּוֹר הַקּוֹדֵם`; the LXX's γενεά = `דּוֹר` (Gen 6:9) |
 | φῦλον | `שֵׁבֶט` | "tribe" (φῦλα γυναικῶν "the tribes of women", Th. 591) |
-| παῖς / υἱός / τέκνον | `יֶלֶד` / `בֵּן` / `צֶאֱצָא` | τέκνα "offspring" |
+| παῖς / υἱός / τέκνον | `יֶלֶד` / `בֵּן` / `צֶאֱצָא` | τέκνα "offspring"; παῖς split by sense (§11.6) |
 | θυγάτηρ / κούρη / παρθένος / νύμφη | `בַּת` / `עַלְמָה` / `בְּתוּלָה` / `נִימְפָה` | the LXX's παρθένος = `בְּתוּלָה` (Gen 24:16) and `עַלְמָה` (Isa 7:14): a note; νύμφη = `נִימְפָה` (the dossier's); `כַּלָּה` never (the everyday-voices reservation) |
 | ἄκοιτις / παράκοιτις | `רַעְיָה` | "bedfellow, wife"; θαλερὴν ποιήσατʼ ἄκοιτιν `עָשָׂה לוֹ רַעְיָה פּוֹרִיָּה` (§8) |
 | φιλότης | `אַהֲבָה` | φιλότητι μιγῆναι `הִתְיַחֵד בְּאַהֲבָה` (§8) |
@@ -707,6 +707,20 @@ Full lists: `1-תולדות-האלים/project.md`, "TH 886–1022". Binding fro
 3. **Words:** ἄλοχος `בַּת־זוּג`, παρακοίτης `בֶּן־זוּג`; ἥρως `הֵרוֹאִי`; πόλεμος `מִלְחָמָה`, μάχη `מַאֲבָק` (ὑσμίνη
    keeps `קְרָב`); καλλίκομος `נְאַת־הַשֵּׂעָר`; καίνυμαι `עָלָה עַל`; φαίδιμος `הָדוּר` (the `דור` gate now licenses it:
    929b, 940, 986).
+
+### 11.6 Review pass (b), consistency (merged 2026-10-24)
+Full list: `1-תולדות-האלים/project.md`, "Review pass (b)". Binding from here on:
+1. μάχη `מַאֲבָק` everywhere, the translated name Μάχαι `מַאֲבָקִים` (228; replaces §11.2's `מִלְחָמוֹת`); πόλεμος `מִלְחָמָה`;
+   μάρναμαι `נֶאֱבַק`.
+2. χαίρετε (the hymnic greeting and farewell, 104, 963) `שָׁלוֹם לָכֶן` / `שָׁלוֹם לָכֶם` (the LXX's χαίρειν for `שָׁלוֹם`);
+   χαίρω "rejoice" `שָׂמַח` (438).
+3. χρύσεος `זָהוֹב` of objects too (never the construct `זהב`).
+4. φθείρω `אִבֵּד` (876, 879; ὀλοός keeps `מַשְׁחִית`, 224); the WD's ὄλλυμι needs its own word (§13).
+5. `תָּמִים` only for ἄμωμος; "a full year" `שָׁנָה שְׁלֵמָה` (τελεσφόρος / τετελεσμένος ἐνιαυτός), πλέως `מָלֵא`.
+6. πλατύς `מִשְׂתָּרֵעַ`; καρπάλιμος `חִישׁ`; ἀέξω tr. `הִגְדִּיל` / intr. `גָּדַל`; γίγνομαι of a place `נִמְצָא` (a sense split);
+   διὰ βουλάς `בַּעֲצוֹת`; δεινός (adj. and adv.) `אָיֹם`; ἱκνέομαι `הִגִּיעַ` in every form; παῖς split by sense: `יֶלֶד`
+   (child) / `בֵּן` (a son named with a parent) / `נַעַר` (989) / `בַּת` (952).
+7. The tool's `שבת` gate now also lists `שבתם` (652's `ושבתם` had slipped through before the line was changed).
 
 ## 12. Decisions and revisions (coordinator, 2026-10-24)
 
