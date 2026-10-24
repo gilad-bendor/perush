@@ -8,1444 +8,375 @@ The Works and Days (Ἔργα καὶ Ἡμέραι), lines 1–828 and 169a–d
 ## Coordinator's notes (2026-10-24)
 - Renderings fixed before the first line: `../renderings.md` (names §3, the speaking names translated §3.2, grammar §4,
   key terms §5, the LXX layer §6, the gates §7, formulas §8, repeated lines §9).
-- The translators' sections follow, each above the line `## Parallels index`.
-
-## WD 1–105
-
-### Scope
-WD 1–105 (translator 1, part 1, 2026-10-24): the proem to Zeus (1–10), the two Strifes (11–26), Perses, the lawsuit and
-the gift-devouring kings (27–41), the hidden livelihood and the theft of fire (42–58), the making of Pandora (59–82),
-Epimetheus and the gift (83–89), the jar (90–105). 105 entries, six `## ` sections; suspected lines 76, 79, 93, 99 open
-with `{חשודה}`. The rest of the poem is a placeholder (`<!-- טרם תורגם: 106–828 -->`).
-
-### Sources consulted
-- The base (Evelyn-White 1914 through Perseus) and the AGDT treebank, through `hesiod_tools.py data WD 1 105`; every parse
-  that carries a tense, a gate or a parallel checked by hand. Treebank slips found: 31 κατάκειται lemmatized κατακείω
-  (κατάκειμαι); 46 βοῶν lemmatized βοή "shout" (βοῦς); 22 ἀρώμεναι, 54 Ἰαπετιονίδη, 69 Κρονίωνι, 105 ἐξαλέασθαι with an
-  empty lemma; 56 and 92 τ̓ lemmatized σύ (τε); 58 ἀμφαγαπῶντες parsed future (present); 66 lemma γυιοβόρος where the base
-  reads γυιοκόρους (a variant: noted); 30 ὤρη lemmatized ὤρα without distinguishing ὤρα "care" from ὥρα "season".
-- The Septuagint through `../tools/lxx_verses.py` (15 books; Psalms only 73, 88, 103, 148 LXX): every Greek verse quoted
-  was printed first. 1 Samuel, Psalms 2/12/45/91/113/139, Qohelet, Jeremiah are not in the tool: their LXX is not quoted.
-- The Hebrew Bible through `check_bible_quotes.py --show` for every verse quoted (0 problems at the end).
-- Rank 3: Evelyn-White's English (quoted only where I am sure of its wording: lines 10, 11, 21, 82), West 1978/1988 and Most
-  as readings described in a few words; the other corpora's lines (Atra-ḫasīs I 207–230, Gilgameš I 100) through
-  `grep --all`. The Hebrew translations were not consulted.
-
-### Decisions
-- **The shared lines:** WD 54 = TH 559 and WD 71 = TH 572 copied character for character. **WD 72 = TH 573** in every
-  word; the only difference is the Greek punctuation (TH 573 ends with a comma, the sentence running on to 574; WD 72 with
-  a raised point, the sentence ending), so the Hebrew ends `;` instead of `,` – recorded in the entry.
-- **Near-repeats:** 53 ≈ TH 558 (only χολωσάμενος `ובזעמו` for μέγʼ ὀχθήσας `ובכעס גדול`); 70 ≈ TH 571 (`ומיד` for γάρ
-  `כי`; κλυτός `המהולל` for περικλυτός `המהולל מאוד`; πλάσσεν = `יצר` as σύμπλασσε); 50 ≈ TH 565 (`בנו הטוב של
-  יאפטוס`); 52 ≈ TH 567 (`בגבעול כַּלְכָּל נבוב`); 57 ≈ TH 570 (`תחת האש` … `רעה`); 83 ≈ TH 589 (`הערמה התלולה, שאין כנגדה
-  תושייה`); 105 ≈ TH 613 (`כך אין … שכל זאוס`); 18 ≈ TH 929j (`בן־קרונוס, רם־הכס, הגר באֶתֶר`); 99 ≈ TH 730; 49 ≈ 95
-  (the first copy fixes the Hebrew: `זמם` / `זממה … צערים מרים`).
-- **Formulas:** F1 (59), F5 + F6 (99), F6 (53), F16 (81, masculine `שוכני`), F20 + F27 (54), F26 (18, 69, 71), F28 (72),
-  F30 (48). F25 is not in my range; 32 has Δημήτερος ἀκτήν without ἱερόν: `גרעיני דֶּמֶטֶר` (F25's first half).
-- **Grammar (first occurrences, renderings §4, §13.5):** the gnomic forms – the timeless present of the maxims (23, 25–26)
-  and the augmentless imperfect ἔγειρεν (20) read as gnomic – are rendered by the **Hebrew present (participle)**:
-  `מעוררת`, `מקנא`, `כועס`, `צרה עינו`; the פירוק says "גנומי". No true gnomic aorist and no infinitive-for-imperative occur
-  in 1–105: both stay as fixed in renderings §4 (present; infinitive absolute) for part 2. The potential optative with
-  κε / ἄν → `הָיָה` + participle (10 `הייתי משמיע`, 12 `היה מוקיר`, 33 `הייתָ מרבה`, 43 `היית עובד`, 45 `היית מניח`, 46
-  `הייתה נספית`); the optative of wish with μή → `אַל` + future (28); the hortative subjunctive → `הָבָה` + future (35);
-  the iterative -σκ- → `היו` + participle (90 `היו חיים`).
-- **Ἔρις = `מָדוֹן`** for both Strifes (feminine, no article: `מָדוֹן הכבדה`, `טובה מדון זו`); the plural Ἐρίδων (11) =
-  `מְדָנִים`, the plural of `מָדוֹן` in Proverbs (6:14, 6:19), with `[היתר שם]`.
-- **The envy words, one Hebrew each:** ζηλόω `קִנֵּא` (from ζῆλος `קִנְאָה`, TH 384; LXX Gen 30:1, 26:14, 37:11 ἐζήλωσεν =
-  `קִנֵּא`, Prov 27:4 ζῆλος = `קִנְאָה`); κοτέω `כָּעַס` (TH 315); φθονέω `צָרָה עֵינוֹ בְּ־` (the grudging "narrow eye";
-  Prov 23:6, 28:22 `רַע עָיִן`). Rejected for φθονέω: `חָמַד` (Exod 20:17, Gen 2:9 `נֶחְמָד`: a false echo), `קִנֵּא`
-  (taken).
-- **νεῖκος `רִיב`** (TH 87), **δῆρις `קְטָטָה`** (not `מְרִיבָה`, to keep the root ריב for νεῖκος; not `מַצָּה`, which reads
-  "matzah"), **πόλεμος `מִלְחָמָה`**, ὀφέλλω `הִרְבָּה`.
-- **δωροφάγος `אוֹכְלֵי־מַתָּנוֹת`** (39, with the article as an attribute of "the kings"); `שֹׁחַד` never in the line; the
-  LXX's δῶρα = `שֹׁחַד` (Deut 16:19, Exod 23:8, Mic 3:11, Isa 1:23, 5:23) in the note. δίκην δικάσσαι = `לשפוט את
-  המשפט` (the figura etymologica kept; δικάζω `שָׁפַט`, new).
-- **βίος / βίοτος `מִחְיָה`** (31, 42; the self-test line 42 copied in substance: `כי הָאֵלִים הסתירו ומחזיקים את המחיה מבני
-  אדם:`); `לֶחֶם` never for it.
-- **The jar:** πίθος `כַּד` (a storage jar, not Erasmus' pyxis – the note at 94); πῶμα `מִכְסֶה`; ἐλπίς / Ἐλπίς `תִּקְוָה`
-  (capitalized in the base at 96: a translated name, no article, vocalized so that it strips to the table string); νοῦσος
-  `מַחֲלָה` (LXX Exod 15:26 νόσον = `מַחֲלָה`, Deut 7:15).
-- **πλάσσω `יָצַר`** (70, REQUIRED); so the potter κεραμεύς is `קַדָּר`, not `יוֹצֵר` (the root יצר is gated to πλάσσω),
-  though κεραμεύς is the LXX's word for `יוֹצֵר` (Isa 29:16, which joins it to πλάσσω) – the note at 25. τέκτων `חָרָשׁ`
-  (LXX Isa 41:7 τέκτων = `חָרָשׁ`), vocalized against the homograph `חָרַשׁ` "plough" (ἀρόω, 22).
-- **ἀπόλλυμι / ὄλλυμι `נִסְפָּה` / `סָפָה`** (46; renderings §13.5 asked for a word of its own): LXX Gen 18:23
-  συναπολέσῃς = `תִּסְפֶּה`. Rejected: `אָבַד` / `אִבֵּד` (φθείρω), `כָּלָה` (gated, and `מְכַלֶּה` would trip the `כלה` gate),
-  `נִשְׁמַד` (the stem of φθισήνωρ, TH 431).
-- **Words chosen to keep the lemmas apart (grep / lexmap first):** ἐπαινέω `הוֹקִיר` (κλείω keeps `שִׁבַּח`; `הִלֵּל` is
-  *alālu*'s); κλῆρος `אֲחֻזָּה` (`נַחֲלָה` would share μείρομαι's root נחל, TH 414; `גּוֹרָל` is Μόρος); κακόχαρτος
-  `שְׂמֵחַת־הָרָעָה` (`אֵיד` is Ἄτη); μελεδώνη `טְרָדָה` (`דְּאָגָה` is μέρμηρα, TH 55); γυιοκόρος `מְיַגְּעוֹת־אֵבָרִים` (`מכלות`
-  trips the `כלה` gate); σθένος `חוֹסֶן` (`אוֹן` is ἴς, TH 332, `כֹּחַ` βίη); ἠπεροπεύω `הוֹלִיךְ שׁוֹלָל` (`פִּתָּה` shares the
-  root of νήπιος `פֶּתִי`); μυθέομαι `הִשְׁמִיעַ` (`הִגִּיד` is πιφαύσκω, TH 655); ἐπιλαμβάνω `בָּלַם` (`עָצַר` is ἴσχω, TH
-  687); ἐξαιρέω `שָׁלַל` (`נָטַל` is ἀφαιρέω, TH 443); ἐξαλέομαι `חָמַק` (`נִמְלַט` is ὑπεξαλύσκω, TH 615); ἐκπέτομαι `פָּרַח`
-  (`עָף` is ποτάομαι, TH 691); χατίζω `הִתְאַוָּה` (`כָּמַהּ` is λιλαίομαι, TH 665); ἄγγελος `שָׁלִיחַ` (`מַלְאָךְ` reserved;
-  διάκτορος therefore `הַמּוֹבִיל`); φύρω `גִּבֵּל` (not `בָּלַל`, which would bring Babel, Gen 11:9); ἀλφηστής
-  `אוֹכְלֵי־הַשְּׂעוֹרִים` (`לֶחֶם` is ἄρτος's); κακότης `רֹעַ` (`רָעָה` is κακόν's); πτωχός `קַבְּצָן` (`עֹנִי` is πενίη's).
-- **Splits recorded (one lemma, two Hebrew words, by sense):** σχέτλιος `אַכְזָרִי` (15, of Strife) / `אֻמְלָל` (TH 488, of
-  Kronos); φράζω mid. `שָׂם לֵב` (86) / act. `הוֹדִיעַ` (TH); ἀφαιρέω `הֵסִיר` (94, a lid) / `נָטַל` (TH 443); μίμνω `נִשְׁאַר`
-  (97) / `חִכָּה` (TH 754; the pun "Hope waits" in the note); ἐπαινέω `הוֹקִיר` (12, praise) / `הִסְכִּים` (TH 664, approve);
-  ταχύς adverb `מַהֵר` (60, as TH 103) / adjective `זָרִיז` (85). **Pairs sharing a Hebrew word:** κελεύω / ἄνωγα `צִוָּה`;
-  κάρφω / ἄζω `יִבֵּשׁ`; πλούσιος / ἀφνειός `עָשִׁיר`; πέμπω / ἀποπέμπω `שָׁלַח` / `שִׁלַּח` (one root, a compound).
-- **Hebrew-only assonance noted, not exploited:** 16 `מכבדים … הכבדה` (τιμῶσι / βαρεῖαν).
-
-### Open decisions for the user
-- **WD 1–10, the proem athetized in antiquity** (Pausanias 9.31.4: the Boeotians' lead tablet began at 11): translated in
-  full without `{חשודה}` (Evelyn-White does not bracket it); the note says it.
-- **Πέρση (10)** read as a vocative with the base; many editors read Πέρσῃ "to Perses" (the note).
-- **The good Strife "elder" (17, προτέρην `קודם`)**: kept as an adverb-like predicate ("bore her earlier"), which leaves the
-  Hebrew as open as the Greek; `הבכירה` would be more explicit.
-- **Pandora's name (81–82)** left open between "All-Gift" (given gifts) and "gift of all" (herself the gift): `נתנו מתנה`.
-
-### Progress log
-- 2026-10-24: drafted 1–105 in six sections, each saved to disk, then `fill` and `verify WD` (0 problems after each;
-  the placeholder note for 106–828). One verify catch fixed on the way: 81 the first `אוֹלִימְפִּי` unvocalized.
-- A consistency check by `lexmap` over the whole draft: six new words moved off another lemma's Hebrew (μυθέομαι, σθένος,
-  ἐπιλαμβάνω, πρόσθεν `לפני כן` with TH 899, ταχύς adverb `מהר` with TH 103, αἶψα `מיד` with TH 87, 102); the rest recorded
-  above.
-- `check_bible_quotes.py` on the annotated file: 0 problems. `verify WD`: 0 problems, 0 repeated-line differences.
-- Not done in this part (as briefed): the intro file, `build`, the three review passes, `build_parallels_index.py` (it
-  rewrites `../parallels-index.md`, the coordinator's file).
-
-### The text on its own terms
-- **The first Greek "I" speaking to a brother** (10, 27): after a ten-line hymn, the poet turns to Perses; the poem is a
-  brother's admonition after a quarrel over the inheritance (37–39), set in a Boeotian village with its assembly (29–30).
-- **The poet corrects his own Theogony** (11 ἄρα "so, after all"): there is not one Strife (TH 225) but two, and the good one
-  is the elder (17) – competition, set "in the roots of the earth" (19).
-- **The village economy of envy** (20–26): a man looks at his rich neighbour and wants to work; potter against potter,
-  carpenter against carpenter, beggar against beggar, singer against singer – Hesiod, a competing singer himself (654–657).
-- **Courts and kings** (27–41): the agora as a spectacle for the idle; justice as a matter of the full granary (31–33); the
-  "kings" are local nobles who judge for gifts; "the half is more than the whole", and the poor man's mallow and asphodel.
-- **Why men must work** (42–46): the gods hid livelihood, as seed is hidden in the earth; one day's work would have fed a
-  year, the steering oar would hang over the hearth smoke, the oxen and mules would be idle.
-- **The sequel to the Theogony's Prometheus** (48): Mekone is presupposed, not retold; new here are the hiding of βίος,
-  Zeus's speech (54–58), the four gods and three groups of goddesses who make the woman, her name, Epimetheus, and the jar;
-  missing are the woman as "the beautiful evil" itself, the drones, and Prometheus' chains.
-- **Gift against gift**: the kings "eat gifts" (39), Zeus "gives" an evil in exchange for fire (57), all the gods "gave a
-  gift" – Pandora "All-Gift" (81–82), Prometheus warned his brother never to accept a gift (86).
-- **The woman as artefact**: earth and water, a human voice, a goddess's face, a maiden's form (61–63); weaving from Athena,
-  grace and wearying desire from Aphrodite, a "dog's mind" and a thief's ways from Hermes (64–68); the execution differs
-  from the orders (70–80).
-- **Fore-thought and After-thought** (84–89): the two brothers of the myth mirror the two of the poem; Epimetheus understands
-  only when he holds the evil – "the fool learns by suffering" (218).
-- **The jar** (94–98): a farmhouse storage jar; Hope alone stays under its lip – the crux, good or evil, kept for us or
-  from us; elsewhere in the poem ἐλπίς is "empty hope" (498).
-- **Diseases as roaming, silent beings** (100–104): by day and night, of their own accord, voiceless because Zeus took
-  their voice – while the woman was given one (79); the mind of Zeus cannot be escaped (105 ≈ TH 613).
-
-### Key parallels
-- **WD 20–41 ↔ Qoh 4:4–6**: all toil and skill is "a man's envy of his neighbour" (4:4 – the good Strife), the fool folds his
-  hands (4:5 – the ἀπάλαμος, the ἀεργός), "better a handful with quiet than two handfuls with toil" (4:6 – "the half is
-  more than the whole"): the same sequence of ideas; Qohelet calls it vanity, Hesiod good.
-- **WD 23 ↔ Gen 26:14, 30:1 (LXX ζηλόω = `קִנֵּא`)**: the neighbours' envy of a rich farmer (Isaac) – in Genesis it breeds a
-  quarrel over wells, in Hesiod effort.
-- **WD 39 ↔ Deut 16:19, Exod 23:8, Mic 3:11 (LXX δῶρα = `שֹׁחַד`)**: the "gift-eaters" are, in the LXX's Greek, bribe-takers;
-  Micah's rulers "judge for a bribe" (μετὰ δώρων ἔκρινον) in the same century.
-- **WD 42 ↔ Gen 3:17–19**: livelihood withheld and toil imposed because of one act at the beginning; the LXX of Gen 3:17
-  reads "cursed is the earth in your *works*" (ἔργοις) – the title word of this poem.
-- **WD 61, 70 ↔ Gen 2:7 (LXX ἔπλασεν = `וַיִּיצֶר`, ἀπὸ τῆς γῆς)**: πλάσσω ἐκ γαίης; the inversion: in Genesis the man is moulded
-  from earth and the woman built from him, in Hesiod the woman is moulded from earth and the men's origin is untold.
-- **WD 62 ↔ Gen 1:26**: the woman "like the goddesses in face" (ἐίσκω, the root of the LXX's εἰκών) – a beauty that deceives,
-  against an image that confers rank.
-- **WD 80–82 ↔ Gen 2:23, 3:20**: the first woman named with an explanation (ὅτι = the LXX's ὅτι of 3:20): "All-Gift" and a
-  bane, against "mother of all living".
-- **WD 90–92 ↔ Gen 2:25–3:19; Exod 15:26 (LXX νόσος = `מַחֲלָה`)**: a first state without evils, toil and disease, lost through
-  an act involving the woman – but in Hesiod men did not sin; they are victims of a quarrel between gods.
-- **WD 94 ↔ Prov 23:27 LXX**: the only πίθος in the folder's LXX is the Greek translator's image of the strange woman, "a
-  pierced jar" – a Greek image entering the LXX, not a Hebrew one.
-- **WD 101 ↔ Gen 6:13, Isa 11:9**: "the earth is full" – of violence (and the flood follows), of knowledge "as the waters cover
-  the sea"; here earth and sea are full of evils that came upon men. **WD 102–104 ↔ Ps 91:5–6**: plague and pestilence that
-  "walk" by night and noon.
-
-### Lines shared with other texts
-- Identical: **WD 54 = TH 559**, **WD 71 = TH 572**, **WD 72 = TH 573** (punctuation only: `;` for `,`).
-- Near: 18 ≈ TH 929j; 50 ≈ TH 565; 52 ≈ TH 567; 53 ≈ TH 558; 57 ≈ TH 570; 70 ≈ TH 571; 78 ≈ TH 890 (αἱμυλίοισι λόγοισι);
-  83 ≈ TH 589; 99 ≈ TH 730; 105 ≈ TH 613; inside the WD: 49 ≈ 95; 67 = 78 in ἐπίκλοπον ἦθος.
-- 93 is almost Odyssey 19.360 (the note).
-
-### Proposals for the shared renderings
-Every recurring word fixed here, with its first line (names first):
-- **Names:** Ἐρίδων pl. `מְדָנִים` (11, the plural of the translated name `מָדוֹן`; the tool needs a `[היתר שם]` or a plural in
-  the table); Ἐλπίς `תִּקְוָה` capitalized in the base at 96 (the table's string is defective: vocalize at every occurrence,
-  or a plene table string `תִּקְוָה`→`תקווה`); Πιερίηθεν `מִפִּיֶּרִיָּה` (1); the vocative Μοῦσαι `מוּזוֹת` (1, as TH 114);
-  διάκτορος (Hermes) `הַמּוֹבִיל` (68, 77); Παλλὰς Ἀθήνη `פַּלַּס אַתֵנָה` (76).
-- **Grammar (§4):** gnomic present / augmentless gnomic imperfect → Hebrew participle (20, 23, 25–26); potential optative →
-  `הָיָה` + participle (10, 12, 33, 43, 45, 46); wish optative with μή → `אַל` + future (28); hortative → `הָבָה` (35). The
-  gnomic aorist proper and the infinitive-for-imperative did not occur in 1–105.
-- **Strife and envy:** Ἔρις `מָדוֹן` (both, 11–28); ζηλόω `קִנֵּא` (23); κοτέω `כָּעַס` (25); φθονέω `צָרָה עֵינוֹ בְּ־` (26);
-  νεῖκος `רִיב` (29); δῆρις `קְטָטָה` (14); ὀφέλλω `הִרְבָּה` (14); πόλεμος `מִלְחָמָה` (14); σχέτλιος `אַכְזָרִי` (15, a sense
-  split from TH 488 `אֻמְלָל`); ἐπιμωμητός `רְאוּיָה לִגְנַאי` (13); κακόχαρτος `שְׂמֵחַת־הָרָעָה` (28).
-- **Work and the household:** βίος `מִחְיָה` (31); ἐπηετανός `לְכָל הַשָּׁנָה` (31); ἐργάζομαι `עָבַד` (43); ἀεργός `בַּטְלָן`
-  (44; LXX Prov 13:4 ἀεργός = `עָצֵל`); ἔργον `מְלָאכָה` (20, 21, 28, 46, 64); ἀπάλαμος `רְפֵה־הַיָּדַיִם` (20); χατίζω
-  `הִתְאַוָּה` (21); πλούσιος `עָשִׁיר` (22, with ἀφνειός TH 974: a pair); ἄφενος `עֹשֶׁר` (24, TH 112); ἀρόω `חָרַשׁ` (22);
-  φυτεύω `נָטַע` (22; LXX Gen 2:8 ἐφύτευσεν = `וַיִּטַּע`); οἶκος `בַּיִת` (23); γείτων `שָׁכֵן` (23); κεραμεύς `קַדָּר` (25);
-  τέκτων `חָרָשׁ` ★ vocalized (25); πτωχός `קַבְּצָן` (26); ἀοιδός `מְשׁוֹרֵר` (26); πηδάλιον `מָשׁוֹט־הַהֶגֶה` (45; again 629);
-  καπνός `עָשָׁן` (45); ἡμίονος `פֶּרֶד` (46); ταλαεργός `סַבְלָנִי־הַמְּלָאכָה` (46); βοῦς pl. `בָּקָר` (46); ἀλφηστής
-  `אוֹכְלֵי־הַשְּׂעוֹרִים` (82); ὄνειαρ `תּוֹעֶלֶת` (41); μαλάχη `חַלְמִית`, ἀσφόδελος `עִירִית` (41).
-- **The lawsuit:** κλῆρος `אֲחֻזָּה` (37); κτῆμα `נֶכֶס` (34); ἀλλότριος `שֶׁל זָרִים` (34); ἀγορά `אֲסֵפָה` (29); ὤρα "care"
-  `עֵסֶק` (30; ≠ ὥρα `עוֹנָה`); δίκη `מִשְׁפָּט` (9, 36, 39); θέμιστες `דִּינִים` (9); ἰθύς `יָשָׁר`, ἰθύνω `יִשֵּׁר` (7, 9, 36 –
-  for the "straight" and "crooked" judgements of 219–264); σκολιός `עָקֹם` (7; LXX Isa 40:4 σκολιά = `הֶעָקֹב`); δικάζω
-  `שָׁפַט` (39); δωροφάγος `אוֹכְלֵי־מַתָּנוֹת` (39); κυδαίνω `פֵּאֵר` (38); ἁρπάζω `חָטַף` (38); νήπιος `פֶּתִי`, pl.
-  `פְּתָאִים` (40); ἥμισυς `חֲצִי` (40); διακρίνω `הִכְרִיעַ` (35); ἔρδω `פָּעַל` (35).
-- **Prometheus and Pandora (beyond renderings §13.3):** κρύπτω `הִסְתִּיר` (42, 47, 50); χολόω mid. `בְּזַעְמוֹ` (47, 53);
-  μήδομαι `זָמַם` (49); κῆδος `צַעַר`, pl. `צְעָרִים` (49, 95); τερπικέραυνος `הַמִּתְעַנֵּג־בַּחֲזִיז` (52); ἠπεροπεύω
-  `הוֹלִיךְ שׁוֹלָל` (55); ἐσσόμενοι `הָעֲתִידִים לָבוֹא` (56); ἀμφαγαπάζω `חִבֵּק בְּאַהֲבָה` (58); ἐκγελάω `פָּרַץ בִּצְחוֹק`
-  (59); ταχύς adv. `מַהֵר` / adj. `זָרִיז` (60, 85); φύρω `גִּבֵּל` (61); σθένος `חוֹסֶן` (62); ἐίσκω `דִּמָּה` (62); ὤψ "face"
-  `פָּנִים` (62; ≠ ὄψ `נְעִימָה`); παρθενική `בְּתוּלָה` (63); ἱστός `מַסֶּכֶת` ★ vocalized (64); ὑφαίνω `אָרַג` (64);
-  πολυδαίδαλος `רַב־מַעֲשֵׂי־אָמָּן` (64); ἀμφιχέω `יָצַק סָבִיב` (65); μελεδώνη `טְרָדָה` (66); γυιοκόρος
-  `מְיַגֵּעַ־אֵבָרִים` (66); κύνεος `כַּלְבִּי`, ἐπίκλοπος `גַּנְבָנִי` (67, 78); ὅρμος `עֲנָק` (74); στέφω `עִטֵּר` (75); ἐαρινός
-  `שֶׁל אָבִיב` (75); ἐφαρμόζω `הִתְאִים` (76); ὀνομαίνω `קָרָא (לְ־)` (80); κῆρυξ `כָּרוֹז` (80); δωρέω `נָתַן מַתָּנָה` (82);
-  ἄγγελος `שָׁלִיחַ` (85); φράζω mid. `שָׂם לֵב` (86); ἀποπέμπω `שִׁלַּח` (87); ἐκτελέω `הִשְׁלִים` (83).
-- **The jar and the evils:** πίθος `כַּד` (94); πῶμα `מִכְסֶה` (94); ἀφαιρέω (a lid) `הֵסִיר` (94); σκεδάννυμι `פִּזֵּר` (95);
-  ἐλπίς `תִּקְוָה` (96); ἄρρηκτος `שֶׁאֵין לְשָׁבְרוֹ` (96); μίμνω `נִשְׁאַר` (97); χεῖλος (of a vessel) `שָׂפָה` (97); ἐκπέτομαι
-  `פָּרַח` (98); ἐπιλαμβάνω `בָּלַם` (98); πρόσθεν `לִפְנֵי כֵן` / πρίν `קֹדֶם לָכֵן` (98, 90); νοῦσος `מַחֲלָה` (92); κακότης
-  `רֹעַ` (93); καταγηράσκω `הִזְדַּקֵּן` (93); μυρίος `רְבָבוֹת` (100); λυγρά (n. pl.) `מְרוֹרִים` (100); ἀλάλημαι `נָדַד`
-  (100); πλέως `מָלֵא` (101); αὐτόματος `מֵעַצְמוֹ` (103; again 118); φοιτάω `הִתְהַלֵּךְ` (103); σιγή `דְּמָמָה` (104); ἐξαιρέω
-  `שָׁלַל` (104); ἐξαλέομαι `חָמַק` (105).
-- **ἀπόλλυμι / ὄλλυμι `נִסְפָּה` / `סָפָה`** (46) – for the whole poem (LXX Gen 18:23).
-- **Proem:** ἐννέπω `סִפֵּר`, ὑμνέω `רִנֵּן`, κλείω `שִׁבַּח`, ἀοιδή `שִׁירָה` (pl. `שִׁירוֹת` vocalized) as §11.1; βριάω
-  `הִגְבִּיר` / `הַגּוֹבֵר` (5); χαλέπτω `הִקְשָׁה עַל` (5); μινύθω `הִמְעִיט`, ἀρίζηλος `הַנִּרְאֶה לַכֹּל`, ἄδηλος `עָלוּם`
-  (6); κάρφω `יִבֵּשׁ` (7); ὑπέρτατος `עֶלְיוֹן` (8); κλύω `הִקְשִׁיב`, ἀΐω `שָׁמַע` (9); ἐτήτυμος `נָכוֹן` (10); μυθέομαι
-  `הִשְׁמִיעַ` (10); φατός / ἄφατος `נִזְכָּר` / `בִּלְתִּי־נִזְכָּר`, ῥητός / ἄρρητος `מְפֻרְסָם` / `אַלְמוֹנִי` (3–4); ἕκητι
-  `בִּרְצוֹן` (4); ἐπαινέω `הוֹקִיר` (12).
-
-### For the next part (WD 106–285)
-- The good and the bad Strife return at 195 (ζῆλος … κακόχαρτος: `קנאה`, `שמחת־הרעה`) and the "straight" / "crooked"
-  judgements at 219–264 (`ישר`, `עקום`, `יישר`); the gift-eating kings at 221, 264 (`אוכלי־המתנות`, the δῶρα note).
-- αὐτόματος `מֵעַצְמָהּ` at 118 (the earth's fruit "of itself" against the diseases' 103); ὄλλυμι `סָפָה` / `נִסְפָּה` in the
-  races; νήπιος `פֶּתִי` (218, 286, 397); ἐλπίς at 498 ("empty hope", with μίμνω `נשאר / חיכה`).
-- ποιέω `עָשָׂה` for the races (110, 128, 144, 158); F16 at 110, 128 (`שוכני הארמונות האולימפיים`).
-
-### Lessons for the guidelines
-- **Write the section in a scratch file and insert it before the placeholder by script** (one `<!-- טרם תורגם -->` line
-  moved forward each time): `fill` and `verify` then run on a file that is always whole.
-- **A `lexmap` pass at the end of a part catches "new" words that another poem already uses** for another lemma (six here:
-  `מגיד`, `און`, `עצר`, `עשיר` …) – the Hebrew side of the map, not only the Greek side, must be grepped before a word is fixed.
-- **The LXX tool's books decide which parallels can carry Greek**: Qohelet, 1 Samuel and most Psalms are not in it, so the
-  strongest parallel of this part (Qoh 4:4–6) stands on the Hebrew alone; worth adding Qohelet, 1–2 Kingdoms and the Psalms
-  to the restored LXX before part 2.
-
-## WD 106–285
-
-### Scope
-WD 106–285 (translator 1, part 2, 2026-10-24): the myth of the five races (106–201) – golden (106–126), silver (127–142),
-bronze (143–155), the heroes and the Islands of the Blessed (156–169d), iron (174–201); the fable of the hawk and the
-nightingale (202–212); Justice and Hubris (213–224); the just and the unjust city (225–247); the address to the kings,
-Zeus' thirty thousand watchers and Dike beside her father (248–273); Zeus' law for beasts and for men (274–285). 184
-entries (180 lines and 169a–d) in ten `## ` sections. Suspected lines 124–125 open with `{חשודה}` (the base brackets them;
-they are kept unbracketed at 254–255). 169a–d open with `{פפירוס}`, with `[ ]` round the restorations, in the base's order
-168, 170–173, 169, 169a–d, 174. The rest of the poem is the placeholder `<!-- טרם תורגם: 286–828 -->`.
-
-### Sources consulted
-- The base (Evelyn-White 1914 through Perseus) and the AGDT treebank, through `hesiod_tools.py data WD 106 285`; every parse
-  that carries a tense, a gate or a parallel was checked by hand. Treebank slips found (and noted in the פירוק): empty lemmas
-  at 119 πολέεσσιν, 153 Ἀΐδαο, 219 ἅμα, 259 καθεζομένη; 149 ἐπέφυκον parsed aorist (an augmentless pluperfect); 174
-  ὤφελλον lemmatized ὀφέλλω "increase" (ὀφείλω, the unfulfilled wish); 207 and 268 enclitic νυ lemmatized νῦν.
-- The Septuagint through `../tools/lxx_verses.py`: every Greek verse quoted was printed first. 1 Samuel (8:3, the sons of
-  Samuel "taking bribes"), Daniel, Qohelet, Jeremiah, Numbers, Joshua, Habakkuk and most Psalms are not in the tool: their
-  LXX is described in words or left out, never quoted.
-- The Hebrew Bible through `check_bible_quotes.py --show` for every verse quoted (0 problems at the end).
-- Rank 3: West 1978 and Most as readings described in a few words (169a–d, 124–125, 263 †); the other corpora's
-  lines through `grep`. The Hebrew translations were not consulted.
-
-### Decisions
-- **The races' verb:** ποιέω `עָשָׂה` at every making (110, 128, 144, 158; τίθημι at 169c `שם`); never `בָּרָא`. The
-  LXX's ἐποίησεν of Gen 1:27 (`וַיִּבְרָא`) is quoted in the note at 110 only: Hesiod's gods "make" like a craftsman, and
-  the Hebrew keeps the craftsman.
-- **γένος `גֶּזַע`** for every race; **γενεή `דּוֹר`** (160 `הַדּוֹר הַקּוֹדֵם`; 284–285 `דורו`). The metals as adjectives:
-  χρύσεος **`גזע זהוב`** (109), ἀργύρεος `של כסף` (128), χάλκειος / χάλκεος `של נחושת` (144), σιδήρεος `של ברזל` (176).
-  **A departure:** `גזע זהוב`, not `גֶּזַע הַזָּהָב` as in renderings §5 and the coordinator's list – following §11.6.3
-  ("never the construct זהב" for χρύσεος); the other metals have no adjective in Hebrew, so `של`. For the user to confirm.
-- **ἥρως `הֵרוֹאִי`** (159 `אנשים הֵרוֹאִים`), **ἡμίθεος `חֲצִי־אֵלִים`** (160); Gen 6:4 in the note only; `נְפִלִים` and
-  `גִּבֹּרִים` nowhere. **θεῖος `אֱלוֹהִי`** (159).
-- **δαίμων `דַּיְמוֹן`** (122, pl. `דיימונים`), ἐπιχθόνιος `שעל פני האדמה`, ὑποχθόνιος `שמתחת לאדמה`; **ὕβρις `זָדוֹן`** (134,
-  146 pl. `זדונות` with `[סטייה מן הנוסחה]`, 213, 217, 238); **δίκη / Δίκη `מִשְׁפָּט`** (the goddess feminine: `ומִשְׁפָּט
-  גוברת`, 256 `והבתולה היא מִשְׁפָּט`); δίκαιος `צַדִּיק` (158, 190, 225, 270); **Αἰδώς / Νέμεσις `בּוּשָׁה` / `חֵמָה`** (200,
-  vocalized as names); **Ὅρκος `שְׁבוּעָה`** (219, masculine, `רץ`); εὔορκος `נאמן־השבועה` (190, 285), ἐπίορκος `לשקר`
-  (194, 282).
-- **Fixed items done:** F16 at 110 and 128; F23 `על פני האדמה רבת־המזון` at 157, 169d, 252; F1 at 169a (`א[בי האנשים
-  והָאֵלִים]`). **WD 124–125 = 254–255:** the first copy fixed the Hebrew, the second copies it (without `{חשודה}`; 255 ends
-  `.` for the Greek point). **WD 149 = TH 152** `צמחו מן הכתפיים על איברים איתנים;`.
-- **Grammar (first true occurrences, renderings §4):** the **gnomic aorist** → Hebrew present participle, first at **218**
-  ἔγνω `מכיר` ("the fool learns by suffering"), then 224 ἔνειμαν `אינם פוסקים`, 242 ἐπήγαγε `מביא`, 246 ἀπώλεσεν
-  `סוֹפֶה`; the gnomic imperfect 240 ἀπηύρα `לוקה`. **No infinitive-for-imperative occurs in 106–285** (278 ἐσθέμεν
-  depends on νόμον): it stays open for part 3. The iterative -σκ- → `היו` + participle (as 90); the wish ὤφελλον (174) and
-  the wish optative → `מי יתן`; the future of the iron race's prophecy (180–201) as Hebrew future.
-- **Sense splits (recorded in the entries):** νέμω mid. `נהנה` / act. `פסק` (119, 224); ἦθος `מנהג` / `נָוֶה` (167, 222);
-  μίγνυμι `נמזג` (179; TH `התייחד`); ἴσχω `גבר` (TH `עצר`); παρέρχομαι `עבר` / `עקף`; λείπω act. `עזב` / mid. `נשאר`;
-  γίγνομαι of a person `להיוולד` (175); ἄγω `הוליך` / `הביא`; νοέω `חשב` (261) / `הבין`; γιγνώσκω `ביודעין` / `הכיר`; εἶδον
-  `רואה` (267) / `הביט`; ξένος `אורח` (183) / `זר` (225).
-- **Pairs on one Hebrew word (deliberate):** ὀπαδέω / ὁμαρτέω `ליווה`; βαρύθω / καταβρίθω `כבד`; ὅμοιος / ἐναλίγκιος
-  `דומה`; ἄφθονος `בעין יפה` against φθονέω `צרה עינו` (part 1) – the same image, inverted.
-- **Gates:** 259 καθεζομένη `בשבתה` with `[היתר שער]` (`שבתה` is gated for "Sabbath"; here the infinitive of ישב). ἀρείων
-  `מעולה` (`טוב` is not licensed for it); κρείσσων `עדיף`; θεραπεύω `שירת` (not `עבד`); φύλαξ `שומר` (the φυλα- family).
-  λοιμός `דֶּבֶר` vocalized (the TH's `דבר` "something").
-- **Consistency (`lexmap`, Hebrew side):** θάλλω at 173 moved from `פורח` to `משגשג` (227 `משגשגת`), to leave `פורח` to
-  ἀνθέω; 183 ἑταῖρος `הרֵעַ` vocalized against κακός `הרע`. Recorded, not changed (the TH's words): θεῖος `אלוהי` / TH
-  θεσπέσιος; ἐμβασιλεύω `מולך` / TH 403 ἀνάσσω; ἔκπαγλος `מבהילים` / TH 935 κλονέω; φύλοπις `מהומה` / TH 880 κολόσυρτος;
-  ἔτος `שנים` / TH 636 ἐνιαυτός; τρέφω mid. `גדל` / TH 641 ἀέξω; ποιέω `עשו` / TH 209 ῥέζω (fixed by the coordinator);
-  γενεή `הַדּוֹר` / TH φαίδιμος `הדור` (homographs).
-
-### Open decisions for the user
-- **`גזע זהוב` or `גֶּזַע הַזָּהָב`** (109; above).
-- **169a–d** kept in the base's place and order (after 173 and 169), as the brief asks; West and Most move or bracket them.
-  The restorations are translated as the base prints them, in `[ ]`.
-- **124–125** kept with `{חשודה}` at their first place and translated in full: they are needed at 254–255.
-- **263 †δίκας** (the base's crux; μύθους is a variant): translated `†המשפטים` with the dagger.
-- **270–273** (the poet's wish not to be just, 270–272, taken back at 273): translated in full, as the base prints them.
-- **μέροψ `*בעלי־הדיבור*`** (109, 180): uncertain in meaning; marked with `*…*` as uncertain.
-
-### Progress log
-- 2026-10-24: drafted 106–285 in ten sections, each saved to disk and inserted before the placeholder, then `fill` and
-  `verify WD` (0 problems after each, the placeholder moved forward each time; now 286–828).
-- Verify catches fixed on the way: 139 `בָּאוֹלִימְפּוֹס` unvocalized; 146 REQUIRED ὕβρις (plural `זדונות`) –
-  `[סטייה מן הנוסחה]`. A quote-checker false positive (a backticked `הִקְלָה` beside a reference) rephrased. Unprinted
-  half-quotes in a few הקבלה bullets removed before the insert.
-- `lexmap` pass over the whole draft (above). `verify WD`: 0 problems, 289 entries, 0 repeated-line differences.
-  `check_bible_quotes.py`: 0 problems.
-- Not done (as briefed): the intro, `build`, the review passes, `build_parallels_index.py`.
-
-### The text on its own terms
-- **A second story told for the same lesson** (106 `אֹמֶר אחר`): after Prometheus and Pandora, the races explain again why
-  life is toil – by decline, not by a single fall. The decline is not straight: the heroes (156–173), "more just and better"
-  than bronze, break the metal line; Hesiod has inherited a metal scheme and inserted his own epic past into it.
-- **The iron race is Hesiod's present** (174–176 `מי יתן ולא הייתי אני …`): the only first person in the myth, a wish to
-  have died earlier or been born later – "later" implying a sixth race, a cycle. The prophecy (180–201) is of the family's
-  collapse: children born grey-templed, sons who dishonour aged parents, no thanks for the rearing (θρεπτήρια), the
-  oath-keeper unrewarded, Aidos and Nemesis leaving the earth (197–200).
-- **The dead become guardians:** the golden race become δαίμονες "upon the earth" (122–126), the silver "under the earth"
-  (141), the bronze go nameless to Hades (154); the heroes alone are removed alive to the Islands of the Blessed, where the
-  earth bears three times a year (167–173) – and Kronos, released (169a), rules them.
-- **The fable addressed to kings who "understand"** (202): the hawk's law is the strong man's; the poet does not draw the
-  moral in the fable, but at 276–280: beasts eat one another "since there is no Dike among them", to men Zeus gave Dike.
-- **Dike as a goddess with a body:** dragged where bribe-eating men take her (220–221), weeping and wrapped in mist through
-  the cities (222–223), a virgin daughter of Zeus who sits by her father and denounces men's unjust mind (256–262) – the
-  divine side of a human lawsuit. Horkos runs beside crooked judgments (219).
-- **The city's fate tied to its judges:** the just city's peace, harvest, oaks with acorns and bees, sheep heavy with fleece,
-  women bearing children like their fathers (225–237); for the unjust, famine and plague, barren women, a destroyed army,
-  wall and ships – "often a whole city pays for one bad man" (240).
-- **Zeus' eye and watchers** (252–255, 267–269): thirty thousand immortal guardians wrapped in mist; the eye that "sees all
-  and understands all" – and the poet's bitter doubt (270–273) whether being just is worth it while the unjust have the
-  greater right.
-
-### Key parallels
-- **The metals:** Dan 2:31–45 (gold, silver, bronze, iron and clay – the decline of kingdoms; Daniel not in the LXX tool,
-  described); Lev 26:19 LXX (the heavens as iron, the earth as bronze, for ὕβρις).
-- **The long childhood and the grey-templed newborn:** Isa 65:20 LXX ("the youth a hundred years old", the inverse); Gen 5:3
-  ("in his likeness, after his image") against 182 (father not like children).
-- **The heroes:** Gen 6:4 (the "men of name" born of gods) and Gen 6:9 LXX (Noah δίκαιος in his γενεά) against 158–160.
-- **The iron race's family:** Mic 7:5–6 LXX (υἱὸς ἀτιμάζει πατέρα, a man's enemies those of his house) – the closest to
-  182–188; Exod 20:12 and Deut 27:16 LXX (τιμάω / ἀτιμάζω the parents); Lev 19:12 LXX (false oath, 194, 282).
-- **The fable:** Judg 9:8–15 (Jotham), 2 Kgs 14:9 (Kgdms LXX: the thistle and the cedar), Ezek 17:2 (the eagle as a riddle and
-  a parable, מָשָׁל) – fables addressed to kings; ἱέραξ `נץ` from LXX Job 39:26.
-- **Hubris:** Prov 11:2 and 13:10 LXX (ὕβρις brings shame and strife).
-- **The just and the unjust city:** Lev 26:3–26 LXX (peace in the land, no sword, the earth's yield; ἐπάξω … δίκην, pestilence)
-  and Deut 28:4, 18 (the fruit of the womb, the cattle and the flock blessed or cursed); Ezek 14:21 (famine, beast, sword,
-  pestilence); Num 16:22, Josh 22:20 (one man sins and the whole congregation suffers) against Gen 18:26 (the city spared for
-  the righteous) – 240 is the first half without the second.
-- **The watchers and the eye:** Zech 1:10–11 (the riders sent "to walk through the earth"), 4:10 (the eyes of the LORD running
-  through all the earth), Job 1:7, 2 Chr 16:9, Prov 15:3 LXX (in every place the eyes of the Lord watch the evil and the good).
-- **Dike beside Zeus:** Prov 8:30 (Wisdom beside the Creator), Ps 89:15 / LXX 88:15 (justice and judgment the foundation of
-  the throne); bribes and the bent judgment: Deut 16:19 LXX (ἐκκλίνω κρίσιν, 262), Exod 23:6, Isa 1:23, the sons of Samuel
-  (1 Sam 8:3, described).
-- **265–266:** Prov 26:27 LXX (he who digs a pit falls into it), Ps 7:16–17 (his mischief returns on his own head).
-- **Zeus' law (276–280):** Gen 9:2 and 1:26 LXX (fish, beast, bird – πετεινός – given to man), Hab 1:14 (men made like fish
-  that eat one another, described), Gen 9:6.
-- **The oath-keeper's descendants (284–285):** Exod 20:5–6 LXX (γενεά: to the third and fourth generation), Prov 20:7 LXX (the
-  righteous man's children blessed after him), Ps 109:13.
-
-### Lines shared with other texts
-- Identical: **WD 124–125 = 254–255** (inside the WD; 255 `.` for the Greek point); **WD 149 = TH 152**.
-- Near: 121 ≈ 140 ≈ 156 (`… כיסתה הארץ … גם את הגזע הזה`); 117 ≈ 237 (`… נושא השדה נותן־הדגן`, and 173); 113 ≈ 91
-  (`הרחק מ…`); 139 ≈ 257 ≈ TH 101; 123 ≈ 253; 125 ≈ 223 (`עטויי ערפל`); 274 ≈ 107 (`ואתה – השלך … אל לבבך`); 252 = F23.
-
-### Proposals for the shared renderings
-Every recurring word fixed here, with its first line:
-- **Names:** Οἰδιπόδης `אֶדִיפּוּס` (163) and Ἑλένη `הֶלֶנָה` (165) in the familiar forms (proposed for the table); Ὕβρις as
-  a translated name `זָדוֹן` (proposed for the table, as Ἔρις `מָדוֹן`); Δίκη `מִשְׁפָּט` (f.); Ὅρκος `שְׁבוּעָה` (m.);
-  Αἰδώς / Νέμεσις `בּוּשָׁה` / `חֵמָה` (200, vocalized); Καδμηίς `קַדְמוֹס` (162, "the land of Kadmos").
-- **Grammar (§4):** gnomic aorist → participle, first 218 ἔγνω `מכיר` (224, 242, 246; the gnomic imperfect 240); the
-  unfulfilled wish ὤφελλον → `מי יתן ו־` (174); the infinitive-for-imperative still not met (part 3).
-- **The races:** ποιέω `עָשָׂה`; γένος `גֶּזַע`; γενεή `דּוֹר`; χρύσεος `זָהֹב` (`גזע זהוב`); ἀργύρεος `שֶׁל כֶּסֶף`;
-  χάλκειος / χάλκεος `שֶׁל נְחֹשֶׁת`; σιδήρεος `שֶׁל בַּרְזֶל`; μέροψ `*בַּעֲלֵי־הַדִּבּוּר*` (uncertain); ἥρως `הֵרוֹאִי`;
-  ἡμίθεος `חֲצִי־אֵלִים`; θεῖος `אֱלוֹהִי`; δαίμων `דַּיְמוֹן`; ἐπιχθόνιος `שֶׁעַל פְּנֵי הָאֲדָמָה`; ὑποχθόνιος `שֶׁמִּתַּחַת
-  לָאֲדָמָה`; ἀλεξίκακος `מַרְחִיק־הָרָעָה`; φύλαξ `שׁוֹמֵר`; πλουτοδότης `נוֹתֵן־עֹשֶׁר`; βασίλειος `מַלְכוּתִי`; ἀήρ `עֲרָפֶל`;
-  ἕννυμι `עָטָה`; ἄπλαστος (or ἄπλατος) `בִּלְתִּי־יְצוּרִים`; ἄαπτος `שֶׁאֵין לָגַעַת בּוֹ`; φυή `קוֹמָה`; νόημα `הֲבָנָה`;
-  ἀτάλλω `הִשְׁתַּעֲשֵׁעַ`; ἥβη `נְעוּרִים`; μέτρον `מִדָּה`; ἀφραδία `חֹסֶר דַּעַת`; ἄφρων `חֲסַר דַּעַת`; ἀτάσθαλος `פָּרוּעַ`
-  (TH); ἀτασθαλία `פְּרִיעוּת`; θεραπεύω `שֵׁרֵת`; χερείων `גָּרוּעַ`; ἀρείων `מְעֻלֶּה`; κρείσσων `עָדִיף`.
-- **War and death:** φύλοπις `מְהוּמָה`; λαῖτμα `מְצוּלָה`; ἑπτάπυλος `שִׁבְעַת־הַשְּׁעָרִים`; εὐρώεις `טָחוּב`; κρυερός `קַר`;
-  νώνυμνος `בְּלִי שֵׁם`; ἔκπαγλος `מַבְהִיל`; φᾶρος `גְּלִימָה`; καταναίω `הוֹשִׁיב`; ἐξαλαπάζω `הֶחֱרִיב`; στρατός `צָבָא`;
-  ἀπαίνυμαι `לָקַח`; ἀκηδής `בְּלִי צַעַר`; μελιηδής `מָתוֹק־כִּדְבַשׁ`; θάλλω `שִׂגְשֵׂג`; ἀνθέω `פָּרַח` (≠ ἐκπέτομαι
-  `פָּרַח` 98: a homograph).
-- **The iron race:** πολιοκρόταφος `שְׂבֵי־רְקּוֹת`; ξένος `אוֹרֵחַ` / `זָר`; ξεινοδόκος `מְאָרֵחַ`; ἑταῖρος `רֵעַ`; γονεύς
-  `הוֹרֶה`; θρεπτήρια `גְּמוּל עַל גִּדּוּלָם`; ἀτιμάω `בִּזָּה`; μέμφομαι `גִּנָּה`; βάζω `הֵטִיחַ`; στέρομαι `מְקֻפָּח`; αἶσχος
-  `חֶרְפָּה`; ὀπαδέω / ὁμαρτέω `לִוָּה`; δειλός `עָלוּב`; ὀιζυρός `נָתוּן בִּמְצוּקָה`; αἰνέω `רוֹמֵם`; χειροδίκης `שֶׁמִּשְׁפָּטָם
-  בְּיָדָם`; εὔορκος `נֶאֱמַן־הַשְּׁבוּעָה`; ἐπίορκος `לַשֶּׁקֶר`; ὅμοιος / ἐναλίγκιος `דּוֹמֶה`.
-- **The fable and justice:** αἶνος `מָשָׁל`; ἱέραξ `נֵץ`; ἀηδών `זָמִיר` (m.); μάρπτω `לָפַת`; γναμπτός `כָּפוּף`; μύρομαι
-  `קוֹנֵן`; δαιμόνιος (voc.) `הוֹ מְשֻׁנֶּה`; μεθίημι `שִׁחְרֵר`; φρονέω `הִשְׂכִּיל`; λόγος sg. `אֹמֶר`; ἐκκορυφόω `סִכֵּם`;
-  ἀλιταίνω `פָּשַׁע`; μηχανάομαι `תִּכְנֵן`; ἐξελαύνω `גֵּרֵשׁ`; ῥόθος `הֲמֻלָּה`; ἀπαυράω `לָקָה בִּגְלַל`; ἀκούω `שָׁמַע`;
-  ἐπακούω `הֶאֱזִין`; ἰθυδίκης `יִשְׁרֵי־הַמִּשְׁפָּט`; ἄδικος `עַוָּל`; παρακλίνω `הִטָּה`; ἀποτίνω `שִׁלֵּם`; ὄπις `הַשְׁגָּחָה`;
-  ἀλέγω `חָשַׁשׁ`; τρίβω `שָׁחַק`; ὀνοτάζω `גִּדֵּף`; ἐπιδέρκομαι `הִשְׁקִיף`; ἔργω `סָגַר`; βουλεύω `יָעַץ`; ἀγορεύω `אָמַר
-  בְּפֻמְבֵּי`; ψεύδω `שִׁקֵּר`; μαρτυρία `עֵדוּת`; ἀάω `יֻכֶּה בְּאֵיד`; ἄτη pl. `אֵידִים`; ἀμαυρός `עָמוּם`; γηρύω `הִכְרִיז`
-  (TH); βάλλω `הִשְׁלִיךְ`; μέριμνα `דְּאָגָה` (with μέρμηρα).
-- **The just city:** εἰρήνη `שָׁלוֹם` (m., `מגדל־הנערים` κουροτρόφος); ἄρουρα `שָׂדֶה`; ζείδωρος ἄρουρα `הַשָּׂדֶה
-  נוֹתֵן־הַדָּגָן`; τεκμαίρομαι `יִעֵד`; βάλανος `בַּלּוּט`; ὄις `כִּבְשָׂה`; μαλλός `גִּיזָה`; βαρύθω / καταβρίθω `כָּבֵד`;
-  διαμπερές `תָּמִיד`; ἄφθονος `בְּעַיִן יָפָה`; ἐθελημός `בִּרְצוֹנָם`; ἥσυχος `שָׁקֵט`; ἔνδημος `בֶּן הַמָּקוֹם`; ἐπάγω
-  `הֵבִיא עַל`; λοιμός `דֶּבֶר`; ἀποφθινύθω `דּוֹעֵךְ`; φραδμοσύνη `מַחְשָׁבוֹת`; σύμπας `שְׁלֵמָה`.
-- **Zeus' law:** ἰχθύς `דָּג`; θήρ `חַיָּה`; πετεινός `מְעוֹפֵף`; νόμος `חֹק` (276); ἐσθίω `אָכַל` (278, the infinitive after νόμον).
-
-### For the next part (WD 286–828)
-- **The infinitive-for-imperative** has not yet occurred: its first true occurrence (likely in the precepts from 298 on)
-  fixes it (renderings §4: infinitive absolute) and is to be recorded.
-- νήπιος `פֶּתִי` again (286, 397); κακότης `רֹעַ` (287) and ἀρετή at 289 (the two roads – not `טוב` unless licensed);
-  ἐργάζομαι `עָבַד` (299 ff.); ἐλπίς at 498; αἰδώς as a common noun `בּוּשָׁה` (317–319, unvocalized as a name); ὄλβος / ὄλβιος
-  (licensed for `טוב`); the gift-eating kings closed at 264.
-
-### Lessons for the guidelines
-- **Never write a "not quoted" half-quote in a הקבלה bullet**: a backticked Hebrew phrase beside a book name is read as a
-  quotation by the checker (and as one by the reader). Either print the verse and quote it with its reference, or describe it
-  in words without backticks.
-- **Chain the steps of a scripted insert with `&&`**: a replace that asserts must stop the insert, or the unfixed text lands.
-- **A `lexmap` pass over the Hebrew side within the same part** catches collisions between two new words of one's own (θάλλω /
-  ἀνθέω `פורח` here), not only with the TH.
-- **The plural of a fixed term** (ὕβρις pl. `זדונות`) fails REQUIRED: the tool could accept the plural of the fixed noun.
-
-## WD 286–413
-
-### Scope
-WD 286–413 (translator 2, part 3, 2026-10-24): the road to ἀρετή and the sweat before it (286–297); "work, Perses",
-hunger, the drones, work no disgrace (298–319); wealth not seized, the five crimes Zeus requites, sacrifice "according
-to your means" (320–341); the neighbour, measure for measure, giving and not giving, "a little on a little", the jar
-(342–369); the wage and the witness, the wheedling woman, the only son (370–382); the Pleiades – the opening of the
-farmer's calendar – "strip to sow", Perses begging again, debts (383–404); house, woman and ox, borrowing, "do not put
-off till tomorrow" (405–413). 127 entries in seven `## ` sections, in the base's order (… 360, 363, 361, 362, 364 …);
-**310 is not in the base** (noted at 309 and 311). The placeholder is now `<!-- טרם תורגם: 414–828 -->`.
-
-### Sources consulted
-- The base and the AGDT treebank through `hesiod_tools.py data WD 286 413`; every parse carrying a tense, a mood, a gate
-  or a parallel checked by hand. Treebank slips found (noted in the פירוק): 306 σοί lemmatized σός (σύ); 364 κατακείμενον
-  lemmatized κατακείω (κατάκειμαι, as at 31); 383 πληιάδων lemmatized "πλψιάς" (a typo: so the names check for Πληιάδες
-  never fires – `כִּימָה` was written by hand); 402 ἀγορεύσεις parsed "futpf" (future); 348 βοῦς lemmatized "βου~σ" and
-  392, 407 πάντα "πα~ς" (beta-code residue).
-- The Septuagint through `../tools/lxx_verses.py` (15 books): every Greek verse quoted was printed first (Gen 2:5, 2:15,
-  2:25, 3:16–17, 3:19, 7:2, 7:4, 8:22, 26:14, 30:23, 31:44, 32:25, 49:4; Exod 3:22, 20:17, 22:13, 22:20–23; Lev 5:7, 12:8,
-  18:16, 25:23, 25:44; Deut 6:7, 15:2, 15:10, 16:17, 24:15, 25:14; Judg 11:34; 4 Kgdms 6:5; Isa 40:4, 42:8; Ezek 36:30;
-  Amos 5:8; Job 9:9, 24:10, 38:31, 38:33; Prov 3:10, 3:28, 5:3, 6:8–9, 8:17, 10:4, 12:11, 13:11, 15:19, 19:14, 19:15,
-  20:4, 22:9, 27:1, 27:10, 28:27). Jeremiah, Ruth, Psalms 37/49/109/127, Qohelet, Nehemiah, 1 Kings and Sirach are not
-  in the tool: Hebrew only, or (Sirach 4:21, not in the Hebrew Bible) in words only.
-- The Hebrew Bible through `check_bible_quotes.py --show` for every verse quoted (0 problems at the end).
-- Rank 3: Evelyn-White's English quoted only where I am sure of its wording (287, 289, 311, 383, 391, 405 and a phrase at
-  336, 378, 404); West 1978 and Most as readings in a few words. Ancient quotations named from memory only where well
-  known (Aristotle EN 1.4 for 293–297, Politics 1.2 for 405; Livy 22.29; Seneca Ep. 1.5 for 369; Virgil G. 1.299 for 391;
-  Iliad 20.249 for 403). The Hebrew translations were not consulted.
-
-### Decisions
-- **The infinitive used as an imperative – first fixed here, at 336** (renderings §4; §11.8–§11.9 had left it open):
-  the Hebrew **infinitive absolute, vocalized**, and "שם הפועל כציווי" in the פירוק. 336 ἔρδειν ἱερά `הַקְרֵב קָרְבָּנוֹת`
-  (the fixed phrase `לְהַקְרִיב קָרְבָּנוֹת` in the infinitive absolute), 337 καίειν `שָׂרוֹף`, 338 ἱλάσκεσθαι `רַצֵּה`, 342
-  καλεῖν `קָרוֹא` / ἐᾶσαι `הַנֵּחַ`, 343 `קָרוֹא`, 349 μετρεῖσθαι `מָדוֹד לְךָ` / ἀποδοῦναι `שַׁלֵּם`, 353 φιλεῖν `אָהוֹב` /
-  προσεῖναι `בּוֹא`, 354 δόμεν `נָתוֹן` (= Deut 15:10 `נָתוֹן תִּתֵּן`), 368 κορέσασθαι `שָׂבֹעַ`, 369 φείδεσθαι `חָסוֹךְ`,
-  371 θέσθαι `שׂוֹם`, 382 ἔρδειν `פָּעוֹל` / ἐργάζεσθαι `עָבוֹד`, 384 ἄρχεσθαι `הַתְחֵל`, 391–392 `עָרֹם זָרוֹעַ`, `נַהֵג
-  בַּבָּקָר`, `קָצוֹר`, 407 ποιήσασθαι `עָשׂוֹ לְךָ` (Jer 7:5 `עָשׂוֹ`). **With μή** (352, 410): `אַל` + infinitive absolute
-  (`אַל בָּצוֹעַ`, `וְאַל דָּחֹה`). Not imperatival (and so a plain infinitive): 306 κοσμεῖν (subject of ἔστω), 365 εἶναι,
-  366–367 ἑλέσθαι / χρηίζειν (subjects), 377 φερβέμεν (purpose), 393 κομίζεσθαι (object of ἐθέλῃσθα), 404 φράζεσθαι
-  (after ἄνωγα).
-- **The gnomic aorist → participle** (§11.9), applied: 334 ἐπέθηκεν `שָׂם`, 345 ζώσαντο `חוֹגְרִים` (with the imperfect
-  ἔκιον `בָּאִים`), 355 ἔδωκεν ×2 `נוֹתֵן`, 360 ἐπάχνωσεν `מַקְפִּיא`, 372 ὤλεσαν `סוֹפִים`. Optatives: the potential
-  with κε / ἄν → `הָיָה` + participle (348 `לא היה נספה`, 362 `היה … נהיה`, 379 `היה … מעניק`); the wish → jussive
-  (376 `וִיהִי`, 378 `וְזָקֵן תָּמוּת`); the optative in a condition → future (357, 361–362).
-- **Required and self-test lines:** 289 = the self-test's words (`אך לפני הַמַּעֲלָה שמו הָאֵלִים זֵעָה`) without its
-  final `;`, because the Greek clause ends with ἀθάνατοι in 290 (`בני־האלמוות;`); 397 = the self-test line exactly
-  (`ולא אוסיף לך מידה; עֲבֹד, פרסס הפתי,`); 299 `עֲבֹד, פרסס, גזע נהדר` in the same form; ἐργάζομαι `עָבַד` at 299,
-  309, 312, 314, 382, 397; ἱδρώς `זֵעָה` (289); γυμνός `עָרֹם` (391–392, vocalized: `ערם` = "heap", `ערום` = "cunning");
-  ἱερός `קָדוֹשׁ` (339, the "holy light" of dawn); F13 `לילות וימים` (385).
-- **ἀρετή `מַעֲלָה`** (289, 313), vocalized; κακότης `רֹעַ` (287, as 93). Both keep Hesiod's double sense
-  (excellence / prosperity; badness / misery). The LXX's ἀρεταί = `תְּהִלָּה` (Isa 42:8) noted.
-- **The drones (304–305):** κηφήν `רַחְפָן`, μέλισσα `דְּבוֹרָה`, κάματος `יְגִיעַ` as TH 594–599 (no Greek line is the
-  same, so only the words are copied); ἀεργός `בַּטְלָן`, ἀεργία `בַּטָּלָה`; τρύχω `כִּרְסֵם` (`כִּלָּה` reserved, §11.7).
-- **ὄνειδος `חֶרְפָּה`** (311, LXX Gen 30:23 τὸ ὄνειδος = `חֶרְפָּתִי`), and therefore **WD 211 αἶσχος moved from `חֶרְפָּה`
-  to `כְּלִמָּה`** (`ועל הכלימות`; the entry's note says why) – one lemma, one word. `קָלוֹן` rejected: it is the Ugaritic
-  corpus's cognate of *qlt* (Baal cycle 1.4 III 15, 1.6 V 12).
-- **αἰδώς** as a common noun `בּוּשָׁה` (317–319, 324), its opposite ἀναίδεια `חֻצְפָּה` (324, 359); 317 is fixed for its
-  near-repeat 500 (ἐλπὶς … κεχρημένον ἄνδρα κομίζει): `ובושה לא טובה סועדת איש נצרך,`.
-- **The sacrifice (336–341):** βωμός does not occur, so no `מִזְבֵּחַ` in a line (337 `עָלָיו` for ἐπι-καίω; a first
-  draft `(המזבח)` was stopped by the gate); κατὰ δύναμιν `לְפִי יְכָלְתְּךָ` (= LXX Deut 16:17 κατὰ δύναμιν); ἁγνός
-  `טָהוֹר` / καθαρός `נָקִי` (LXX καθαρός = `טָהוֹר`, Gen 7:2: kind b, noted); μηρία `יְרֵכַיִם`; σπονδή `נֶסֶךְ`; θύος
-  `קְטֹרֶת`; ἵλαος `נוֹחַ` (not `רָצוּי`); ἱλάσκομαι `רִצָּה` (not `כִּפֵּר`, though the LXX's ἐξιλάσκομαι is `כִּפֵּר`: noted).
-- **WD 328 ἀνὰ … βαίνῃ `יעלה`** (= LXX Gen 49:4 ἀνέβης … ἐπὶ τὴν κοίτην, `כִּי עָלִיתָ מִשְׁכְּבֵי אָבִיךָ`): ἀναβαίνω `עָלָה`;
-  δέμνιον `מִטָּה` (λέχος keeps `מִשְׁכָּב`, εὐνή `יָצוּעַ`).
-- **WD 413 παλαίω `נֶאֱבַק`** (= LXX Gen 32:25 ἐπάλαιεν, `וַיֵּאָבֵק`) – a collision with μάρναμαι `נֶאֱבַק` (TH 629, 647,
-  663; WD 163): see Proposals.
-- **WD 401 λυπέω `הֶעֱצִיב`**: the root עצב is gated to the λυπ- family (renderings §7.1), and λύπη is the LXX's word for
-  `עִצָּבוֹן` (Gen 3:16–17); so the licensed word was used, not a neutral `הִטְרִיד` that would hide the bridge.
-- **The κτα- family = the root קנה:** κτητός `קְנוּיָה` (406; LXX Lev 25:44 κτήσεσθε = `תִּקְנוּ`), κτέανον `קִנְיָן` (315,
-  with κτῆσις TH 606: a pair); so ὠνέομαι "buy" `רָכַשׁ` (341). κτῆμα keeps `נֶכֶס`.
-- **Wealth and debt:** χρῆμα split by sense – pl. "wealth" `הוֹן` (320), sg. "a thing, a matter" `דָּבָר` (344, 402), pl.
-  "gear" `כֵּלִים` (407); κέρδος `בֶּצַע`, κερδαίνω `בָּצַע` (323, 352: Proverbs' word); χρέος (χρειῶν) `חוֹב` (404; LXX
-  Deut 15:2 χρέος = `מַשֶּׁה`); λύσις `הַתָּרָה`; μέτρον `מִדָּה` (350; LXX Deut 25:14, Lev 19:35), μετρέω `מָדַד`, ἐπιμετρέω
-  `הוֹסִיף מִדָּה` (397, the self-test); μισθός `שָׂכָר` (370; LXX Deut 24:15); μάρτυς `עֵד` (371, vocalized; LXX Gen
-  31:44); αἰτέω `שָׁאַל` (408; LXX Exod 3:22, 22:13) / ζητεύω `בִּקֵּשׁ` (400).
-- **The neighbour:** γείτων `שָׁכֵן` throughout; πηός `מְחֻתָּן`; ἄζωστος `בְּלִי חֲגוֹרָה`; ἐγγύθι `קָרוֹב` (288, 343, 389;
-  homograph of τάχα `בְּקָרוֹב` "soon", TH 490 – noted, not changed); 343 is fixed for its near-repeat 700 (`מי שגר קרוב
-  אליך`).
-- **Splits recorded (one lemma, two Hebrew words, by sense):** χαλεπός `קָשֶׁה` (292, 332, 334: road, words, requital) /
-  `אָנוּשׁ` (91, 178, 186: diseases, pains); κοσμέω `עָרַךְ` (306, "order") / `קִשֵּׁט` (72, 76, "adorn"); κομίζω act.
-  `סָעַד` (317) / mid. `אָסַף לוֹ` (393); πείθω mid. `שָׁמַע בְּקוֹל` (295, 359) / perf. `בָּטַח` (375); φίλος adj. `אָהוּב`
-  (306) / possessive `־וֹ` (360) / noun "friend" `יָדִיד` (370); νοέω `חָשַׁב` (286, as 261) / `הֵבִין` (293, 296);
-  ἐπιτέλλω `זָרַח` (383, a star) / `הֵטִיל עַל` (TH 995); ἀνύω `הִשִּׂיג` (395) / `בִּצֵּעַ` (TH 954; `בצע` here would meet
-  κέρδος); τυγχάνω `קִבֵּל` (401) / `פָּגַשׁ` (TH 973); ῥέζω `פָּעַל` (329, as ἔρδω, the same verb) / `עָשָׂה` (TH 209); ἔρδω
-  `פָּעַל` / in ἔρδειν ἱερά `הִקְרִיב` (renderings §5).
-- **Pairs on one Hebrew word (synonyms, deliberate):** ἀμείνων / λωίων / βέλτερος `טוֹב יוֹתֵר` (the `טוב` gate licenses
-  all three); χράω (perf.) / χρῄζω `נִצְרָךְ`; γέρων / γηραιός `זָקֵן`; ὡραῖος / ὥριος `בְּעוֹנָתוֹ`; δώς / δόσις `מַתַּת`;
-  κτέανον / κτῆσις `קִנְיָן`; πείθω (perf.) / πίσυνος `בּוֹטֵחַ`; ἀργαλέος / χαλεπός `קָשֶׁה`.
-- **Words chosen to keep lemmas apart (grep / lexmap first):** ὄρθιος `זָקוּף` (`תָּלוּל` is αἰπύς, 83); οἶμος `שְׁבִיל`
-  (ὁδός `דֶּרֶךְ`); ἄκρον `שִׂיא` (κορυφή `פִּסְגָּה`, κάρα `רֹאשׁ`); τραχύς `מְחֻסְפָּס`; λεῖος `חָלָק` (vocalized); ἐφετμή
-  `פְּקֻדָּה` (`מִצְוָה` would be the Torah's ἐντολή); νεμεσάω `מִתְמַלֵּא חֵמָה` (the root of Νέμεσις `חֵמָה`); ὀργή `מֶזֶג`;
-  κόθουρος `חֲסַר־עֹקֶץ`; πλήθω `גָּדוּשׁ` (πλέως `מָלֵא`, πίμπλημι `מִלֵּא`); καλιά `אָסָם` (LXX Prov 3:10 ταμίεια ←
-  `אֲסָמֶיךָ` with πίμπλημι); πολύμηλος `עֲתִיר־צֹאן`; πλουτέω `הִתְעַשֵּׁר`; ἀεσίφρων `קַל־דַּעַת`; μελετάω / μελέτη `שָׁקַד` /
-  `שְׁקִידָה`; σίνομαι `חָבַל בְּ־` (βλάπτω `הִזִּיק`); θάρσος `תְּעוּזָה` (κράτος `עֹז`); ἁρπακτός `חָטוּף`, ἅρπαξ `חֲטִיפָה`
-  (ἁρπάζω `חָטַף`); θεόσδοτος `נְתוּן־אֵלִים`; ληίζομαι `בָּזַז` (ἐξαιρέω `שָׁלַל`); κατοπάζω `דָּחַק`; μαυρόω `עִמְעֵם` (from
-  ἀμαυρός `עָמוּם`); ἱκέτης `מְבַקֵּשׁ־מִקְלָט`; κρυπτάδιος `חֲשָׁאִי`; παρακαίριος `שֶׁלֹּא בְּעִתָּם`; ὀρφανός `יָתוֹם`;
-  καθάπτω `תָּקַף`; ἀγαίομαι `קָצַף` (χώομαι `חָרָה`, χόλος `זַעַם`, κοτέω `כָּעַס`); ἀμοιβή `תַּגְמוּל` (ὄπις `גְּמוּל`, TH
-  222); ἐχθρός `שָׂנוּא`; δαίς `סְעוּדָה`; μάλιστα `בְּיִחוּד`; ἐγχώριος `בַּמָּקוֹם`; ἄρκιος `מַסְפִּיק`; δώτης `נוֹתֵן`,
-  δότειρα `נוֹתֶנֶת`; παχνόω `הִקְפִּיא`; σμικρός `קָטָן`; αἶθοψ `בּוֹעֵר` (αἰθαλόεις `לוֹהֵט`); ἀλέξω `הָדַף`; θαμά
-  `תְּכוּפוֹת`; κήδω `צִעֵר` (κῆδος `צַעַר`); βλαβερός `מַזִּיק`; φείδομαι / φειδώ `חָסַךְ` / `חִסָּכוֹן`; πυθμήν `קַרְקָעִית`;
-  πίστις / ἀπιστία `אֵמוּן` / `אִי־אֵמוּן`; πυγοστόλος `מְהֻדֶּרֶת־עַכּוּז`; κωτίλλω `פִּטְפֵּט`; διφάω `חִפֵּשׂ`; φηλητής
-  `גַּנָּב`; φέρβω `פִּרְנֵס` (γηροκόμος `מְכַלְכֵּל`); ἐγκαταλείπω `הִשְׁאִיר`; ἐπιθήκη `תּוֹסֶפֶת`; ἔλδομαι `עָרַג`
-  (χατίζω `הִתְאַוָּה`, λιλαίομαι `כָּמַהּ`); δύω `שָׁקַע`; χαράσσω `הִשְׁחִיז`; πεδίον `מִישׁוֹר`; ἄγκος `עֵמֶק` (`גַּיְא` is
-  the LXX's χάος); κυμαίνω `מַעֲלֶה גַּלִּים` (vocalized against ἀρετή `מַעֲלָה`); βοωτέω `נַהֵג בַּבָּקָר` (ἀρόω keeps
-  `חָרַשׁ`; ἐλαύνω `נָהַג` TH 291 – a compound phrase, noted); πτώσσω `חִזֵּר עַל` (the Mishnaic "go round the doors");
-  ἐπιδίδωμι `נָתַן עוֹד`; ἀμελέω `הֶעְלִים עַיִן` (Prov 28:27); λυπέω `הֶעֱצִיב`; πράσσω `הֵפִיק` (Prov 3:13); νομός `מִרְעֶה`
-  (≠ νόμος `חֹק`); ἀλεωρή `מִפְלָט`; ἀροτήρ `חוֹרֵשׁ`; γαμετή `נְשׂוּאָה`; ἀρνέομαι `סֵרֵב`; τητάομαι `חָסַר` (στέρομαι
-  `מְקֻפָּח`); παραμείβω `חָלַף`; ἀναβάλλω `דָּחָה`; αὔριον `מָחָר`, ἔνηφι `מָחֳרָתַיִם`; ἐτωσιοεργός `שֶׁמְּלַאכְתּוֹ לַשָּׁוְא`;
-  ἀμβολιεργός `מַשְׁהֶה־מְלָאכָה` (both through ἔργον `מְלָאכָה`, which the gate licenses).
-- **Names:** Πληιάδες `כִּימָה` (vocalized; a singular Hebrew name for the Greek plural, so 383 uses the infinitive
-  `בִּזְרֹחַ`); Ἀτλαγενής `יְלִידוֹת אַטְלָס`; δαίμων `דַּיְמוֹן` (314, "lot"); Demeter `דמטר` (300, 393).
-
-### Open decisions for the user
-- **211 αἶσχος `כְּלִמָּה`** (changed from `חֶרְפָּה` in translator 1's part, so that ὄνειδος can have the LXX's
-  `חֶרְפָּה`): a cross-part change; revert if the coordinator prefers αἶσχος `חֶרְפָּה` and ὄνειδος another word.
-- **314 δαίμονι δ' οἷος ἔησθα** (a crux): `ויהי מה שתהיה לפי הדיימון` keeps both readings open.
-- **378** (the wish "may you die old, leaving a second son"): translated as a wish, with Evelyn-White's conditional
-  reading in the apparatus.
-- **406** (athetized by some; Aristotle quotes only 405): translated in full without `{חשודה}`, as the base does not
-  bracket it.
-- **310** (in Rzach and West, not in the base): described in words at 309, not translated.
-- **The infinitive absolute** for every imperatival infinitive (above) – some (`עָשׂוֹ`, `שַׁלֵּם`, `הַנֵּחַ`) are rare in
-  Modern Hebrew; the alternative, the imperative, would hide the Greek form. Fixed by renderings §4; for the user to know.
-
-### Progress log
-- 2026-10-24: drafted 286–413 in seven sections, each saved to a scratch file and inserted before the placeholder by
-  script, then `fill`, `verify WD` and `check_bible_quotes.py` (0 problems after each). Verify catches fixed on the way:
-  337 `(המזבח)` (the `מזבח` gate: βωμός is absent; now `עָלָיו`). Quote-checker catches fixed: four backticked words beside
-  a reference that were not quotations (289 `הוֹד`, 337 `טָהוֹר`, 382 `עָבַד`, 402 `הֵפִיק`), and verses with the
-  Psalms/Proverbs four-space caesura split into half-verse quotations.
-- Fidelity read-through of the whole range against the Greek (every negation, tense and mood): 286 `אֹמַר` vocalized (ἐρέω
-  is future); 390 `הַמַּעֲלֶה` vocalized (homograph of `מַעֲלָה`).
-- `lexmap` pass on both sides (Hebrew → lemmas and lemma → Hebrew): the splits and pairs above recorded; the lexmap
-  parser cut a gloss containing `; ` (320 χρῆμα) – fixed. Cited precedents checked against the map (κτῆσις TH 606, ὄπις
-  TH 222, μάρναμαι TH 629 / WD 163 corrected in the notes).
-- End: `verify WD` 0 problems, 0 repeated-line differences (416 entries); `check_bible_quotes.py` on the annotated file and
-  project.md: 0 problems; `selftest` 0 failures. Not done (as briefed): intro, `build`, the review passes,
-  `build_parallels_index.py`.
-
-### The text on its own terms
-- **ἀρετή is prosperity as much as virtue** (287–292, 313): the "road" is the farmer's way from poverty to a full barn;
-  κακότης is misery as much as vice. The steep road that becomes easy (291–292) is Hesiod's image, later Prodicus' "Heracles
-  at the crossroads".
-- **Three kinds of men** (293–297): who understands by himself, who listens to good advice, who does neither – Perses is
-  the third; Aristotle quotes the lines in the Ethics.
-- **Hunger as a person** (299–302): it "hates" the idle and is his "companion"; Demeter "loves" the worker and fills his
-  barn – the gods of the field as patrons of a working household.
-- **Work no disgrace** (311): against the later aristocratic contempt for manual labour; the disgrace is idleness, and
-  envy of the rich worker is the good Strife again (312, cf. 23).
-- **Shame good and bad** (317–319): the poor man's shame keeps him from work and from asking; boldness belongs to wealth –
-  a village's social order in three lines (and 500 repeats 317 of empty hope).
-- **Wealth seized and wealth god-given** (320–326): by force or by the tongue in court (the lawsuit with Perses); the gods
-  "dim" the seizer and shrink his house.
-- **The crimes no court tries** (327–334): against the suppliant and the guest (Zeus Hikesios and Xenios), the brother's
-  wife, orphans, the old father: Zeus himself requites – the gods' anger as the bond of the family and the village.
-- **Sacrifice as household routine** (336–341): "according to your means", morning and evening, pure in body; its purpose
-  frankly economic – that you buy the neighbour's plot, not he yours.
-- **The neighbour before kin** (342–348): neighbours come ungirt, in-laws stop to dress; a bad neighbour loses you an ox –
-  the village as the real safety net.
-- **Measure for measure and the gift economy** (349–360): borrow by measure, return the same and more; give to the giver;
-  Giving (Δώς) and Snatching (Ἅρπαξ) as two half-personified women; the robbed man's heart "freezes".
-- **Thrift** (361–369): "a little on a little"; what is in the house does not worry you; drink deep at the jar's top and
-  bottom, spare in the middle (Seneca's "sera parsimonia in fundo").
-- **Trust and distrust** (370–375): a witness even with your brother (smiling); the wheedling woman "searching your barn"
-  – Pandora's daughters again; trusting a woman is trusting thieves.
-- **The only son** (376–380): a peasant's family planning, so that the plot is not divided (as Hesiod's was with Perses);
-  more sons only if the father lives long and Zeus gives more.
-- **The calendar begins with the Pleiades** (383–392): heliacal rising (May) for the harvest, morning setting (November)
-  for ploughing; forty days invisible; the same law for plains, coast and glens; "strip to sow, strip to plough, strip to
-  reap".
-- **The brother at the door** (396–404): Perses has come begging; the poet refuses and sends him to work, before he must
-  beg from neighbours with wife and children; debts and hunger as the farmer's two fears.
-- **The household's foundations** (405–413): house, (bought) woman, plough-ox – Aristotle's definition of the οἶκος; own
-  your tools, never borrow at the season; never put off till tomorrow – "the delayer wrestles with ruin".
-
-### Key parallels
-- **WD 289 ↔ Gen 3:19 (LXX ἐν ἱδρῶτι = `בְּזֵעַת`)**: sweat set by the gods before excellence, against sweat as the curse
-  that leads to bread and to dust – the same Greek word, opposite valuations.
-- **WD 288–292 ↔ Prov 15:19 (LXX ὁδοὶ ἀεργῶν)**: the two roads, inverted – in Proverbs the idle man's way is thorny, in
-  Hesiod badness is smooth and excellence steep; Prov 19:15 LXX (ψυχὴ ἀεργοῦ πεινάσει) ↔ WD 302 (hunger the idle man's
-  companion), with Hesiod's own ἀεργός.
-- **WD 304–305 ↔ Prov 6:6–8 + the LXX's plus 6:8a**: the sluggard sent to the ant – and in the Greek Proverbs also to the
-  bee (μέλισσα, ἐργάτις): a Greek addition in which Hesiod's bees and drones may echo.
-- **WD 299, 301, 411 ↔ Prov 12:11 (LXX ὁ ἐργαζόμενος … ἐμπλησθήσεται), 3:10 (πίμπληται τὰ ταμίεια = `וְיִמָּלְאוּ
-  אֲסָמֶיךָ`)**: the worker fills his barn, in the same Greek verbs.
-- **WD 328 ↔ Gen 49:4 (LXX ἀνέβης … ἐπὶ τὴν κοίτην)**: "going up on the brother's bed" – Reuben's idiom and verb; Lev
-  18:16, 20:21 the prohibition.
-- **WD 330–334 ↔ Exod 22:20–23 (LXX ὀρφανός)**: stranger, widow and orphan protected by the god who "is angry" and requites.
-- **WD 336 ↔ Deut 16:17 (LXX κατὰ δύναμιν)**, Lev 5:7, 12:8: sacrifice according to one's means – the identical Greek
-  phrase.
-- **WD 345 ↔ Prov 27:10 (LXX κρείσσων φίλος ἐγγὺς ἢ ἀδελφὸς μακρὰν οἰκῶν)**: the near neighbour better than the distant
-  kinsman – the same proverb, with ἐγγύς and "dwelling"; the verse's other words (πατρῷος, ἐγκαταλείπω) recur at 376–378.
-- **WD 350 ↔ Deut 25:14 (LXX μέτρον καὶ μέτρον), Lev 19:35**; **WD 354 ↔ Deut 15:10 (LXX διδοὺς δώσεις … οὐ λυπηθήσῃ)**:
-  measure and giving – in the Torah one just measure and giving to the poor, in Hesiod "the same and more" and giving to
-  the giver.
-- **WD 404 ↔ Deut 15:2 (LXX ἀφήσεις πᾶν χρέος)**: the release of debts – a divine law in Israel, the farmer's own task in
-  Hesiod; **WD 405 ↔ Exod 20:13 (house, wife … ox)**: the same order of the household as the Hebrew Decalogue, which the
-  LXX (Exod 20:17) reorders; **WD 410 ↔ Prov 3:28, 27:1 (LXX αὔριον)**; **WD 413 ↔ Gen 32:25 (LXX ἐπάλαιεν)**.
-- **WD 383 ↔ Job 9:9, 38:31, Amos 5:8**: `כִּימָה` = Πλειάς only in Job 38:31; Job 9:9 LXX lists other stars in another
-  order, and Amos 5:8 LXX drops the stars altogether.
-
-### Lines shared with other texts
-- No line of 286–413 repeats another drafted line. Near-repeats fixed here for later copies: **317 ≈ 500** (`ובושה לא טובה
-  סועדת איש נצרך,` – 500 has ἐλπίς for αἰδώς) and **343 ≈ 700** (`מי שגר קרוב אליך`). Inside the range: 299 ≈ 397
-  (`עֲבֹד, פרסס`). Words only: 304–305 ≈ TH 594–599 (the drones).
-
-### Proposals for the shared renderings
-- **Grammar (§4):** the infinitive-for-imperative → the vocalized infinitive absolute, first at **336** `הַקְרֵב`; with μή
-  → `אַל` + infinitive absolute (**352** `אַל בָּצוֹעַ`); "שם הפועל כציווי" in the פירוק. The gnomic aorist → participle
-  confirmed (334, 345, 355, 360, 372).
-- **παλαίω `נֶאֱבַק`** (413; LXX Gen 32:25 ἐπάλαιεν = `וַיֵּאָבֵק`, a kind-(a) bridge): proposed to keep it, and to move
-  **μάρναμαι** (TH 629, 647, 663; WD 163) off `נֶאֱבַק` – e.g. to `נִלְחַם` (if πόλεμος `מִלְחָמָה` may share its root, as
-  μάχη / μάρναμαι shared one) – or else to record the pair.
-- **ὄνειδος `חֶרְפָּה`** (311; LXX Gen 30:23) and **αἶσχος `כְּלִמָּה`** (211, changed): for §11.
-- **ἀρετή `מַעֲלָה`** (289, vocalized) and κακότης `רֹעַ` – for §5.
-- **κτα- = קנה:** κτητός `קְנוּיָה` (406), κτέανον `קִנְיָן` (315); ὠνέομαι `רָכַשׁ` (341).
-- **λυπέω `הֶעֱצִיב`** (401) – the licensed member of the עצב gate.
-- Recurring words fixed here (first line): ἀεργία `בַּטָּלָה` (311); καλιά `אָסָם` (301); χρῆμα `הוֹן` / `דָּבָר` / `כֵּלִים`
-  (320, 344, 407); κέρδος `בֶּצַע`, κερδαίνω `בָּצַע` (323, 352); μέτρον `מִדָּה` (350), μετρέω `מָדַד` (349); μισθός `שָׂכָר`
-  (370); μάρτυς `עֵד` (371); αἰτέω `שָׁאַל` (408); χρέος `חוֹב` (404); αὔριον `מָחָר` (410); μελέτη `שְׁקִידָה` (380);
-  ἄρκιος `מַסְפִּיק` (351); χρῄζω / χράω `נִצְרָךְ` (317, 351); ἀναίδεια `חֻצְפָּה` (324); θάρσος `תְּעוּזָה` (319); πίστις
-  `אֵמוּן` (372); ἀναβάλλω `דָּחָה` (410); δαίς `סְעוּדָה` (342); σπονδή `נֶסֶךְ`, θύος `קְטֹרֶת`, μηρία `יְרֵכַיִם` (337–338);
-  ἵλαος `נוֹחַ` (340); πεδίον `מִישׁוֹר` (388); ἄγκος `עֵמֶק` (389); ἐπιτέλλω (of a star) `זָרַח`, δύω `שָׁקַע` (383–384);
-  ὥριος `בְּעוֹנָתוֹ` (392); βοωτέω `נַהֵג בַּבָּקָר` (391); ἀροτήρ `חוֹרֵשׁ` (405); γαμετή `נְשׂוּאָה` (406).
-- **Names:** Ἀτλαγενής `יְלִידוֹת אַטְלָס` (383). The treebank lemma of 383 is "πλψιάς": the names check for Πληιάδες
-  will not fire there; the tool could add that spelling (a coordinator's decision).
-
-### For the next part (WD 414–617, the farmer's year)
-- The infinitive absolute for every imperatival infinitive (the precepts of the calendar are full of them); `אַל` +
-  infinitive absolute with μή; the gnomic aorist → participle.
-- Fixed and waiting: 500 ≈ 317 (`… לא טובה סועדת איש נצרך,`); 700 ≈ 343 (`מי שגר קרוב אליך`); F25 `גרעיני דמטר הקדושים`
-  (466, 597, 805 – check the Greek first); Πληιάδες `כִּימָה` (572, 615, 619), Ὠρίων `כְּסִיל` ★; ἄμητος `קָצִיר`, ἄροτος
-  `חָרִישׁ`, ἀρόω `חָרַשׁ`, σπείρω `זָרַע`, θέρος `קַיִץ`, χειμών `חֹרֶף`; βοῦς `שׁוֹר` / `בָּקָר`; καλιά `אָסָם`; αὔριον `מָחָר`;
-  ἀμβολιεργός `מַשְׁהֶה־מְלָאכָה`; δαίς `סְעוּדָה`; μισθός `שָׂכָר`; ἐλπίς at 498 (`תִּקְוָה`) with κομίζω `סָעַד`.
-- Gate homographs met in this part: `מזבח` (no βωμός), `ערם` (γυμνός, vocalize `עָרֹם`), `זרוע` (σπείρω, vocalize
-  `זָרוֹעַ`), `אלה` / `מאלה` (vocalize `אֵלֶּה`), `ספים` (vocalize `סוֹפִים`), `עד` (vocalize `עֵד`).
-
-### Lessons for the guidelines
-- **A gloss in the פירוק must not contain `; `** – it is the segment separator, and `lexmap` cut 320's χρῆμα gloss there
-  (the Hebrew of the line vanished from the map). Use a comma.
-- **A self-test line may not fit the line division**: the WD 289 self-test ends `;`, but the Greek sentence ends one word
-  into 290 (ἀθάνατοι): keep the self-test's words and follow the base's punctuation; the self-test still passes.
-- **A garbled treebank lemma silently disables the names check** (383 "πλψιάς"): look at the lemma of every name in the
-  `data` output, not only at the NAMES lines it prints.
-- **The LXX's pluses are bridges too**: the bee of Prov 6:8a, the ὄνειδος / αἰσχύνομαι of Prov 20:4 and the giver of
-  Prov 22:9a exist only in the Greek Proverbs – worth grepping the LXX for Hesiod's words, not only the verses the
-  literature names.
-
-## WD 414–617
-
-### Scope
-WD 414–617 (translator 2, part 4, 2026-10-24): the farmer's year. Autumn – cutting timber, mortar, pestle and wagon
-(414–426); the plough, the two oxen and the forty-year-old ploughman (427–447); the crane's cry, the season of
-ploughing, the wagon without wood, the prayer to Zeus Chthonios and Demeter (448–468); sowing and good management, the
-late ploughman and the cuckoo (469–492); winter – the smith's warm λέσχη and empty hope (493–503); Lenaion and Boreas –
-the forest, the beasts, the girl indoors, the "boneless one" (504–535); winter clothes, the morning mist, the hard month
-and the rations (536–563); spring – Arcturus and the swallow, pruning the vines, the "house-carrier" and the harvest, the
-dawn (564–581); summer – the thistle and the cicada, Sirius, shade and wine (582–596); threshing and storing, the hired
-man and the dog, the vintage under Orion and Sirius, the setting of the Pleiades – back to ploughing (597–617). 204
-entries in ten `## ` sections, in the base's order. The placeholder is now `<!-- טרם תורגם: 618–828 -->`.
-
-### Sources consulted
-- The base and the AGDT treebank through `hesiod_tools.py data WD 414 617`; every parse carrying a tense, a mood, a gate
-  or a parallel checked by hand. Treebank slips noted in the פירוק: 568 ὀρθογόη (treebank ὀρθρογόη); 617 πλειών "year"
-  shares its diacritic-free lemma with πλείων "more" (so `lexmap` merges them: a tool collision, not a rendering one);
-  609 Ὠαρίων and 598, 615 Ὠρίων are two lemma spellings of one name (both carry the names check).
-- The Septuagint through `../tools/lxx_verses.py` – every Greek verse quoted was printed first: Gen 1:2, 1:14, 2:5, 2:6,
-  2:15, 3:19, 3:20, 3:21, 4:2, 8:22, 9:21, 15:2, 24:25, 26:12, 41:5, 45:19; Exod 23:12; Lev 13:48, 20:20, 25:3; Deut 8:4,
-  11:14, 22:9, 25:4; Judg 9:13; Isa 5:6, 38:14; Ezek 4:12; Amos 5:8; Job 8:14, 9:9, 24:16, 37:6, 37:8, 37:9, 38:31; Prov
-  6:11a, 13:4, 23:29; Ps 148:8. Jeremiah (8:7, 4:3), Ruth (3:2, 3:3), the Song of Songs (2:11–12), Qohelet, Psalms
-  29/121/128/129/147, Numbers and 1 Kings are not in the tool: Hebrew only.
-- The Hebrew Bible through `check_bible_quotes.py --show` for every verse quoted (0 problems at the end).
-- The creation corpus: the Farmer's Instructions (`../סיפורי-הבריאה-המסופוטמיים/5-הוראות-האיכר/`: lines 14, 23, 25, 49,
-  50, 58, 65, 90, 94, 96, 98, 105–109) and Summer and Winter (`7-הקיץ-והחורף/` 215), quoted from their Hebrew `>` lines;
-  every one stated as "a shared motif, not a source".
-- Rank 3: West 1978 and Evelyn-White as readings in a few words (602 ἄοικον, 617 πλειών, 571 φερέοικος); ancient
-  testimonia named from memory only where well known (Alcaeus fr. 347 copies 582–588; the scholia's πλειών = ἐνιαυτός;
-  Odyssey 11.489 for the θής). The Gezer calendar in words only. The Hebrew translations were not consulted.
-
-### Decisions
-- **Fixed renderings applied:** F25 `גרעיני דמטר הקדושים` (466, 597: both Δημήτερος ἱερὸν ἀκτήν); F13 `לילות וימים`
-  (562; 612 "δέκα ἤματα καὶ δέκα νύκτας" is another phrase: `עשרה ימים ועשרה לילות`); the Gen 8:22 set (σπείρω `זָרַע`,
-  ἀμάω / ἄμητος `קָצַר` / `קָצִיר`, θέρος `קַיִץ`, χειμών `חֹרֶף`, ἔαρ `אָבִיב`, ἀρόω `חָרַשׁ`, ἄροτος `חָרִישׁ`, ἄροτρον
-  `מַחֲרֵשָׁה`); ἄρτος `לֶחֶם` (442); σῖτος `דָּגָן` (604); the names Πληιάδες `כִּימָה` (572, 615), Ὠρίων `כְּסִיל` ★
-  (598, 609, 615, always vocalized), Σείριος `סִירִיּוּס`, Ἀρκτοῦρος `אַרְקְטוּרוֹס` (566, 610), Βορέας `בּוֹרֵאָס` (506,
-  vocalized), the Hyades `הַהִיאָדוֹת` (615, vocalized), Ζέφυρος `זֶפִירוֹס` (594, vocalized), Διόνυσος `דִּיּוֹנִיסוֹס`
-  (614, vocalized), Ἠώς `שַׁחַר`; ὦ Πέρση `הוֹ פֶּרְסֵס` (611).
-- **The infinitive for the imperative** (renderings §4): the vocalized infinitive absolute throughout the calendar
-  (e.g. 597 `דָּחֹק`, 600 `אָסֹף`, 604 `כַּלְכֵּל`, 606 `הָבֵא`, 608 `הָשֵׁב`, `הַתֵּר`, 611 `בָּצֹר`, 612 `הַרְאֵה`, 613
-  `כַּסֵּה`, `שָׁאֹב`, 616 `הָיֹה זוכר`). Exceptions recorded in the notes: an infinitive governed by κέλομαι / ἄνωγα is a
-  plain infinitive (602 `לַעֲשׂוֹת`, 603 `לָתוּר`, 598 `לָדוּשׁ` after `דָּחֹק`); 574 the imperative `וּבְרַח` (the
-  infinitive absolute `בָּרוֹחַ` is caught by the `רוח` gate). A real imperative (604 μὴ φείδεο) → `אַל תַּחְסֹךְ`.
-- **Time clauses:** ἦμος / τῆμος `בְּשָׁעָה שֶׁ־` / `בְּאוֹתָהּ שָׁעָה`; εὖτε (with ἄν) `בְּשָׁעָה שֶׁ־` (598, 609); ἐπήν with
-  the aorist subjunctive `אַחֲרֵי שֶׁ־` (600, 614).
-- **The farm's vocabulary (new words, first line):** τέμνω `כָּרַת` (420) but περιτέμνω of vines `זָמַר` (570; LXX Lev
-  25:3 τεμεῖς = `תִּזְמֹר`); σκάφος `עִדּוּר` (572; LXX Isa 5:6 τμηθῇ … σκαφῇ = `יִזָּמֵר … יֵעָדֵר`); the plough's parts in
-  Mishnaic terms – ἔλυμα `סַדָּן`, γύης `בֹּרֶךְ`, ἱστοβοεύς `יָצוּל`, ἐχέτλη `יְדִית` (427–436); ἄμαξα `עֲגָלָה` (426, 453;
-  LXX Gen 45:19); στάχυς `שִׁבֹּלֶת` (473; LXX Gen 41:5); στήμων / κρόκη `שְׁתִי` / `עֵרֶב` (538; LXX Lev 13:48); χιτών
-  `כֻּתֹּנֶת`, δέρμα `עוֹר` (536, 513; LXX Gen 3:21); ῥινός `גֶּלֶד` (515); πρόβατον `צֹאן` (558; LXX Gen 4:2); οἶνος `יַיִן`
-  (585; LXX Gen 9:21); λέσχη `בֵּית־הַשִּׂיחָה` (493; LXX Prov 23:29 λέσχαι = `שִׂיחַ`); ἄοκνος `לֹא־עָצֵל` (495; LXX Prov
-  6:11a); ὑετός `מָטָר` (LXX Job 37:6), ὄμβρος `גֶּשֶׁם`, ὀμβρέω `הִמְטִיר`, ὕω `גָּשַׁם`; σκοτόεις `חָשׁוּךְ` (555, through the
-  `חשך` gate; LXX Gen 1:2 σκότος); χελιδών `סִיס` (568; LXX Isa 38:14); κόκκυξ / κοκκύζω `קוּקִיָּה` / `מְקוּקָה` (486);
-  εὐθημοσύνη / κακοθημοσύνη `הַנְהָגָה טוֹבָה` / `רָעָה` (471–472); σκόλυμος `קִנְרָס`, τέττιξ `צִיקָדָה` (582); βίβλινος
-  `בִּיבְּלִינִי` (589); πρῖνος `אַלּוֹן מָצוּי` (436); ἀλωή `גֹּרֶן` (599); δίνω `דּוּשׁ` (598); θής `שָׂכִיר`, ἔριθος
-  `פּוֹעֶלֶת`, ἄτεκνος `עֲרִירִי` (602; LXX Gen 15:2, Lev 20:20); κομέω `כִּלְכֵּל` (604; as γηροκόμος `מְכַלְכֵּל`, TH 605);
-  ἡμερόκοιτος `יְשַׁן־הַיּוֹם` (605); χόρτος `מִסְפּוֹא` (606; LXX Gen 24:25 χορτάσματα), συρφετός `תֶּבֶן`; ἀναψύχω `הֵשִׁיב
-  נֶפֶשׁ` (608; LXX Exod 23:12 ἀναψύξῃ = `וְיִנָּפֵשׁ`); ἀποδρέπω `בָּצַר`, βότρυς `אֶשְׁכּוֹל` (611); συσκιάζω `כִּסָּה בַּצֵּל`,
-  ἀφύσσω `שָׁאַב` (613); ῥοδοδάκτυλος `וְרֻדַּת־הָאֶצְבָּעוֹת` (610); πλειών `שָׁנָה` (617).
-- **Names and transcriptions:** Ληναιών `לֵנַיאוֹן` (504), Θρῄκη `תְּרַקְיָה` (507), Πανέλληνες `כָּל־הַהֶלֶנִים` (528),
-  Πανδιονίς `בַּת־פַּנְדִּיּוֹן` (568).
-- **Riddle-names kept as riddles:** ἀνόστεος `חֲסַר־הָעֲצָמוֹת` (524, the octopus), φερέοικος `נוֹשֵׂא־הַבַּיִת` (571, the
-  snail), ἡμερόκοιτος `יְשַׁן־הַיּוֹם` (605, the thief): the hearer solves them; the note gives the answer.
-- **Splits recorded** (one Greek word, two Hebrew words by sense): πήγνυμι `נָעַץ` / `הִרְכִּיב`; ἐλαύνω `נָהַג` / `גֵּרֵשׁ`;
-  ἄκρον `קָצֶה` / `שִׂיא`; ἀραρίσκω `הוֹלֵם` / `עָרוּךְ` (601) / `מְחֻבָּר`; βοῦς `שׁוֹר` / `בָּקָר` / fem. `פָּרָה` (591); δέω
-  `קָשַׁר` (TH `אָסַר`); ἐμπνέω `נָשַׁף` (TH `הִשְׁרָה`); αἱρέω `תָּפַס`, but ἀπό … ἕληται in tmesis `לָקַח מִ־` (605).
-- **Pairs recorded** (two Greek words, one Hebrew word): δειπνέω / δεῖπνον `אָכַל לַאֲרוּחָה`; καταλέγω / εὐνάζω `שָׁכַב`;
-  ἀνίστημι / ὄρνυμι `קָם`; ἀργαλέος / χαλεπός `קָשֶׁה`; δέρμα / χρώς `עוֹר`; ἀρύω / ἀφύσσω `שָׁאַב` (550, 613); ἐνιαυτός /
-  πλειών `שָׁנָה`; κέλομαι / κελεύω / ἄνωγα `צִוָּה`; ὕλη `יַעַר` and ὑλοφάγος `אוֹכֶלֶת־חֹרֶשׁ` (591, vocalized: `חורש` =
-  ἀροτήρ, 405).
-
-### Open decisions for the user
-- **602 θῆτά τ' ἄοικον ποιεῖσθαι**: "hire a thes without a household" (most) or "turn the thes out of the house" (after
-  the harvest): the Hebrew `שכיר חסר־בית לַעֲשׂוֹת לך` keeps both open.
-- **617 πλειών**: "the year" (the scholia), translated literally (`והשנה תלך … אל מתחת לאדמה`); the sense – the seed of
-  the whole year is now under the ground – is in the note, with the possible pun on Πλειάδες.
-- **603 ὑπόπορτις**: the image ("with a calf under her") kept – `שעגל יונק תחתיה` – rather than a plain `מֵינִיקָה`.
-- **608 ἀναψύχω `הֵשִׁיב נֶפֶשׁ`**: transitive, as the Greek (refresh the knees); the LXX's Niphal `וְיִנָּפֵשׁ` is
-  intransitive. The alternative is `נָפַשׁ` with a change of construction.
-- **The plough's Mishnaic terms** (427–436): exact, but obscure to a modern reader; the notes explain each one.
-- **ἔλυμα `סַדָּן`** collides with ἄκμων `סַדָּן` "anvil" (TH 722, 724): a true Hebrew homograph; the alternative is the
-  Mishnaic `בֵּית הַסַּדָּן` or a description.
-
-### Progress log
-- 2026-10-24: drafted 414–617 in ten sections, each saved to a scratch file and inserted before the placeholder by
-  script, then `fill`, `verify WD` and `check_bible_quotes.py` (0 problems after each). Verify catches fixed on the way:
-  477 `אֶל` vocalized (εὐοχθέων contains "θε"); 506 `בּוֹרֵאָס` and 594 `זֶפִירוֹס` vocalized (first occurrence); 517
-  `השיער שלהם` and 527 `על המחוז ועל העיר` (the `ערם` gate); 574 `וּבְרַח` (the `רוח` gate). Quote-checker catches fixed:
-  604 a backticked `כִּלְכֵּל` beside a reference; a 1 Kgs 7:33 note made a full quotation; Gen 24:16 needs the ketiv
-  `וְהַנַּעֲרָ`. Removed on the way: a wrong Prov 8:17 parallel (578), unverifiable half-quotations (491), and at 595 a
-  "verse" that does not exist (replaced by Gen 26:19, printed). Stray Hebrew letters inside Greek words fixed (εὐοχθέων,
-  κακοθημοσύνη, φεύγω).
-- `lexmap` pass on both sides (Hebrew → lemmas and lemma → Hebrew) over the whole range: the splits and pairs above
-  recorded; 591 `חֹרֶשׁ` vocalized after the reverse map showed it beside ἀροτήρ `חורש`.
-- End: `verify WD` 0 problems, 0 repeated-line differences (620 entries); `check_bible_quotes.py` on the annotated file
-  and project.md: 0 problems; `selftest` 0 failures. Not done (as briefed): intro, `build`, the review passes,
-  `build_parallels_index.py`.
-
-### The text on its own terms
-- **The sky is the farmer's clock.** No dates and no month-names but one (Lenaion, 504): the year is read off the
-  heliacal risings and settings – the Pleiades (383, 572, 615), Arcturus at dusk (566) and at dawn (610), Orion (598,
-  609, 615), Sirius (417, 587, 609) – and off the birds and beasts: the crane (448), the cuckoo (486), the swallow (568),
-  the snail climbing the plants (571), the cicada (582). The calendar closes on itself: 615–617 returns to 383–384.
-- **The Boeotian winter** (504–563): Boreas from Thrace, the sea roaring, the forest shrieking, the beasts with their
-  tails between their legs; the old man made "bent", τροχαλός, running like a wheel (518), the girl who stays indoors by her mother (519–523),
-  the octopus gnawing his own foot (524) – the cold as a force that sorts every creature into its place.
-- **The household's labour roles:** the master gives orders, the slaves (δμῶες) do the work (459, 470, 502, 573, 597,
-  608); the forty-year-old ploughman who keeps his furrow straight (441–447); the hired man and the hired woman
-  (602–603), the dog fed on bread (604); the girl and her mother (519–523); the wife appears only as the "wanton" women of high summer (586).
-- **Measure and timing as morality:** "the poor man's" misjudgement (the late ploughman, 485–490), "empty hope" (498 ≈
-  317), the λέσχη as the idle man's trap (493–501), "do not sleep in the harvest" (573–577): failure in the calendar is a
-  moral failure, and the gods' will is "hard to know" (483–484).
-- **Every crop is a god's gift:** Demeter's holy grain (466, 597), the gifts of Dionysus (614); the prayer at the first
-  furrow to Zeus Chthonios and Demeter (465–468).
-- **The oral poet's lore:** folk medicine (summer dries the men and inflames the women, 586–588, copied by Alcaeus),
-  kennings and riddles (524, 571, 605), proverbial numbers (the forty-year-old, the ten-and-five days of the grapes,
-  three parts water to one of wine, 596).
-
-### Key parallels
-- **WD 414–617 ↔ Gen 8:22 (LXX)**: the whole calendar is one long commentary on "seed-time and harvest, cold and heat,
-  summer and winter, day and night shall not cease" – and the LXX's θέρος καὶ ἔαρ, ἡμέραν καὶ νύκτα are Hesiod's words
-  (414, 462, 494, 562, 617). Same order; in Genesis a divine promise, in Hesiod a farmer's knowledge.
-- **WD 448–451 ↔ Jer 8:7**: the crane (and the stork) "keeps the time of its coming" – Jeremiah's birds know their
-  seasons, the people do not know God's law; Hesiod's crane tells the farmer when to plough. (Jeremiah not in the tool.)
-- **WD 615, 609 ↔ Job 38:31, 9:9 (LXX)**: Job 38:31 LXX renders `כִּימָה` Πλειάς and `כְּסִיל` Ὠρίων – the very pair of
-  615, and the source of the Hebrew names here; Job 9:9 LXX lists Πλειάς, Ἕσπερος and Ἀρκτοῦρος. Amos 5:8 LXX drops the
-  stars. In the Bible the stars are God's works; in Hesiod, the farmer's clock.
-- **WD 504–535 ↔ Job 37:6–10, Ps 147:16–17, Ps 148:8 (LXX)**: snow, frost and the cold "from the north" (Job 37:9 LXX
-  ἀπὸ δὲ ἀκρωτηρίων ψῦχος); **Job 37:8 LXX θηρία ὑπὸ σκέπην** ↔ 512, 532 (the beasts take shelter) – the strongest single
-  image; Ps 148:8 LXX χιών, κρύσταλλος.
-- **WD 608 ↔ Exod 23:12 (LXX ἀναψύξῃ = `וְיִנָּפֵשׁ`)**: the slave's rest and the ox's rest, in Hesiod's own verb: a
-  seasonal rest after the harvest in Hesiod, the weekly Sabbath as a commandment in the Torah.
-- **WD 570, 572 ↔ Lev 25:3, Isa 5:6 (LXX τέμνω, σκάπτω)**: the two works of the vineyard, pruning and hoeing, are the LXX's
-  `זָמַר` and `עָדַר` – the Greek gives the Hebrew words.
-- **WD 536 ↔ Gen 3:21 (LXX χιτῶνας δερματίνους)**: the coat of skins as man's protection; **WD 563 ↔ Gen 3:20 (LXX μήτηρ
-  πάντων)**: the earth "mother of all" and Eve "mother of all living".
-- **WD 493 ↔ Prov 23:29 (LXX λέσχαι)**; **WD 495 ↔ Prov 6:11a (LXX ἄοκνος)**; **WD 498 ↔ Prov 13:4 (LXX ἀεργός)**: the
-  Greek Proverbs speak Hesiod's vocabulary of idleness.
-- **WD 605 ↔ Job 24:16 (LXX)**: the thief who digs through houses in the dark and shuts himself in by day – Hesiod's
-  "day-sleeper".
-- **WD 602 ↔ Gen 15:2 (LXX ἄτεκνος = `עֲרִירִי`)**; **WD 606 ↔ Gen 24:25 (LXX χορτάσματα = `מִסְפּוֹא`)**; **WD 614 ↔ Judg
-  9:13** (wine that gladdens gods and men); **WD 568 ↔ Song 2:11–12** (the bird's voice announces spring); **WD 599 ↔ Ruth
-  3:2** (winnowing on the threshing floor).
-- **The Farmer's Instructions** (a shared motif of agricultural instruction, not a source): spare ox and spare plough (FI
-  23, 25 ↔ 432–434), seeding depth (FI 49–50 ↔ 446, 471), the straight furrow (FI 58 ↔ 443), the prayer as the seed
-  sprouts (FI 65 ↔ 465), fodder for the wagon oxen (FI 94 ↔ 452), threshing and winnowing (FI 98, 105–109 ↔ 597–599),
-  counted days (FI 96 ↔ 612–613). **Summer and Winter 215** (the man walking in the cold in old shoes) ↔ 541. **The Gezer
-  calendar** (in words): the months of the agricultural year in order, without stars and without morals.
-- Looked for and not found: the snail (571) has no counterpart in Prov 30:24–28 (ant, rock-badger, locust, lizard); the
-  Song of Songs has no harvest-and-Sirius image for 582–596 (only the spring of 2:11–12, used at 568); Gen 2:25 belongs
-  to 391 (part 3) – 460 has no γυμνός.
-
-### Lines shared with other texts
-- **500 ≈ 317** (`ובושה לא טובה` → `ותקווה לא טובה סועדת איש נצרך,`): copied word for word, with ἐλπίς for αἰδώς.
-- **614 ≈ TH 941**: Διώνυσον πολυγηθέα – `רַב־הַשִּׂמְחָה` kept.
-- **598, 615**: σθένος Ὠαρίωνος twice – `חוסן כְּסִיל` both times. 466 = 597 in F25.
-- No other line of 414–617 repeats a drafted line; `verify` shows 0 repeated-line differences.
-
-### Proposals for the shared renderings
-- **Names (§3):** Ζέφυρος `זֶפִירוֹס` (594), Ληναιών `לֵנַיאוֹן` (504), Θρῄκη `תְּרַקְיָה` (507), Πανδίων `פַּנְדִּיּוֹן`
-  (568), Πανέλληνες `כָּל־הַהֶלֶנִים` (528); the treebank's two spellings Ὠρίων / Ὠαρίων both map to `כְּסִיל`.
-- **For §5 or §11 (kind-(a) LXX bridges):** σκάφος / σκάπτω `עָדַר` (572; Isa 5:6), περιτέμνω (vines) `זָמַר` (570; Lev
-  25:3), λέσχη `שִׂיחָה` (493; Prov 23:29), ἄοκνος `לֹא־עָצֵל` (495; Prov 6:11a), χελιδών `סִיס` (568; Isa 38:14), ὑετός
-  `מָטָר` (Job 37:6), ἄτεκνος `עֲרִירִי` (602; Gen 15:2), ἀναψύχω `הֵשִׁיב נֶפֶשׁ` (608; Exod 23:12), χόρτος `מִסְפּוֹא`
-  (606; Gen 24:25), στάχυς `שִׁבֹּלֶת` (473; Gen 41:5), στήμων / κρόκη `שְׁתִי` / `עֵרֶב` (538; Lev 13:48), χιτών `כֻּתֹּנֶת`,
-  δέρμα `עוֹר` (536; Gen 3:21), πρόβατον `צֹאן` (558; Gen 4:2), οἶνος `יַיִן` (585; Gen 9:21), ἄμαξα `עֲגָלָה` (426; Gen
-  45:19).
-- **Time clauses:** ἦμος / τῆμος / εὖτε `בְּשָׁעָה שֶׁ־` / `בְּאוֹתָהּ שָׁעָה` – for the rest of the Days.
-- **Grammar (§4):** an infinitive governed by κέλομαι / ἄνωγα / κελεύω stays a plain infinitive (602–603); a gated
-  infinitive absolute may yield to the imperative with a note (574 `וּבְרַח`).
-- **ψυχή `נֶפֶשׁ`** for 686 (χρήματα γὰρ ψυχὴ πέλεται), so that ἀναψύχω (608) and ψυχή share the root, as in the LXX.
-- **ἔλυμα `סַדָּן`**: keep or move – it collides with ἄκμων `סַדָּן` (TH 722, 724); a coordinator's decision.
-
-### For the next part (WD 618–828: sailing, marriage, the precepts, the Days)
-- Fixed and waiting: Πληιάδες `כִּימָה` (619), Ὠρίων `כְּסִיל` ★ (619); F25 at 805 (check the Greek); the
-  infinitive absolute for the precepts; ψυχή `נֶפֶשׁ` (686); 700 ≈ 343 (`מי שגר קרוב אליך`); ὦ Πέρση `הוֹ פֶּרְסֵס`;
-  Βορέας `בּוֹרֵאָס` (already vocalized at 506), Ζέφυρος `זֶפִירוֹס` (594); οἶνος `יַיִן`; ὥριος `בְּעוֹנָתוֹ`, ὡραῖος
-  `שֶׁבְּעוֹנָתוֹ`; the time clauses above.
-- Gate homographs met in this part: `רוח` (infinitive absolute of ברח), `ערם` (`שערם`, `ועירם`), `שבת` (`בשבתך` → the
-  participle `יושב`), `אל` / `אלה` beside a Greek "θε" (vocalize), `חורש` (ἀροτήρ vs. thicket: vocalize `חֹרֶשׁ`), `כלה`,
-  `מזבח`, `חשך`.
-
-### Lessons for the guidelines
-- **Never quote a verse from memory, even a half-line**: two "verses" in this part (at 491 and 595) did not exist; the
-  rule "print every verse before quoting it" caught them only because it was applied to every quotation, including those
-  written in a note's flow.
-- **A Greek word containing "θε" makes an unvocalized `אל` beside it a gate error** (477 εὐοχθέων): the gate reads the
-  letters, not the word – vocalize `אֶל` whenever the line's Greek has "θε" anywhere.
-- **The reverse lexmap finds Hebrew homographs, not only collisions** (591 `חורש` beside 405 `חורש`): run it over every
-  part, filtering out function words.
-- **The LXX of Hesiod's own vocabulary is a lexicon of Hebrew agriculture**: σκάπτω / τέμνω = עדר / זמר, χόρτος = מספוא,
-  λέσχη = שיח – grepping the LXX for the Greek word often gives the right Hebrew word, not only a parallel.
-- **The Farmer's Instructions and the Days share a genre** (a father's or a brother's instruction, in order through the
-  year): citing it line by line is safe only as "a shared motif"; its Hebrew lines are quoted as they stand in its
-  annotated file, with its own line number.
-
-## WD 618–828
-
-### Scope
-WD 618–828 (translator 2, part 5, 2026-10-24): the sea – when not to sail, hauling the ship up, the poet's father who
-came from Kyme to Ascra (618–645); the "measures of the sea", the poet's one crossing to Chalkis and the tripod for the
-Muses (646–662); summer sailing fifty days after the solstice, the snatched spring sailing, "keep measure" (663–694);
-marriage – the age, the virgin from nearby, the good and the bad wife (695–705); conduct toward the gods, the friend
-and the brother, the tongue, the shared feast (706–723); the purity taboos – hands, sun and night, the hearth, the
-funeral, the rivers (724–741); household beliefs – nails, the jug, the unfinished house, the crow, the pots, the
-child, the bath, Rumour (742–764); the Days of the month (765–828) and the blessing on the man who knows them
-(826–828). 211 entries in ten `## ` sections, in the base's order (… 767, 769, 768, 770 …; the labels kept).
-**The placeholder is removed**: the annotated file now has all 831 entries of the base.
-
-### Sources consulted
-- The base and the AGDT treebank through `hesiod_tools.py data WD 618 828`; every parse carrying a tense, a mood, a gate
-  or a parallel checked by hand. Treebank slips noted in the פירוק: 733 γονῇ lemmatized γονεύς "parent" (it is γονή
-  "seed"); 726 ἀράς (ἀρά "prayer") merges in `lexmap` with the particle ἄρα; 705 ὠμός "raw" with ὦμος "shoulder"; 617
-  πλειών (part 4) with πλείων.
-- The Septuagint through `../tools/lxx_verses.py` – every Greek verse quoted was printed first: Gen 2:3, 3:23; Exod
-  24:6, 30:19–20; Lev 12:2, 15:16, 15:18, 19:18, 19:26, 21:13–14, 22:24; Deut 11:14, 18:10, 18:13, 20:5,
-  21:6, 21:12, 23:13–15, 26:5, 29:28; Judg 3:24, 9:13; Amos 2:13; Jonah 1:4–5, 2:4; Ezek 8:16, 27:25–26; Job 1:1; Prov
-  6:6, 10:19, 12:4, 13:8, 13:20, 17:5, 18:22, 22:1, and 29:19 (= MT 31:19 in the LXX order). Psalms 107, 90, 81, Ruth,
-  Qohelet, Esther, Jeremiah, Numbers, 1 Samuel and the Song of Songs are not in the tool: Hebrew only. Prov 30:19,
-  31:10 and 18:24 did not print in the LXX tool (the LXX order of Prov 24–31 differs): Hebrew only.
-- The Hebrew Bible through `check_bible_quotes.py --show` for every verse quoted (0 problems at the end).
-- The corpus itself: TH 22–34 (the proem: the Muses on Helicon) quoted at 639, 658, 662; TH 231–232 (Eris bears Oath)
-  at 804; the creation corpus has no hemerology translated – the Babylonian hemerologies are described in words (825).
-- Rank 3, in a few words: West 1978 for the cruxes (602 in part 4; 768, 756, 826 here), Evelyn-White's division of the
-  month. Ancient testimonia named from memory only where well known: Virgil G. 2.412 (643), Plutarch on Amphidamas and
-  the Lelantine war (654), Pausanias 9.31.3 on the tripod on Helicon (658) and 1.17.1 on the altar of Pheme (764), the
-  scholion on Apollonius of Rhodes rejecting the Ornithomanteia (828). The Hebrew translations were not consulted.
-
-### Decisions
-- **Fixed renderings applied:** Πληιάδες `כִּימָה` (619), Ὠρίων `כְּסִיל` ★ (619, vocalized); Ἄσκρη `אַסְקְרָה` (640,
-  vocalized); the Muses `הַמּוּזוֹת` and Ἑλικωνιάδες `הַהֶלִיקוֹנִיּוֹת` (658, vocalized), Helicon `הַהֶלִיקוֹן` (639,
-  vocalized), with TH 22–34 linked; Ποσειδῶν `פּוֹסֵידוֹן` (667), Νότος `נוֹטוֹס` (675), Ἀπόλλων `אַפּוֹלוֹן` and Λητώ
-  `לֵטוֹ` (771), Ἐρινύες `הָאֶרִינִיּוֹת` (803) – first occurrences in the poem, vocalized; Ἔρις `מָדוֹן`, Ὅρκος `שְׁבוּעָה`
-  (804, masculine as in TH 232); γυνή `אִשָּׁה`, γαμέω `נָשָׂא אִשָּׁה` (699–701; middle `נִשְּׂאָה`, 698), γάμος
-  `נִשּׂוּאִים`, παρθενική / παρθένος `בְּתוּלָה`, ἄκοιτις `רַעְיָה` (800); **700 ≈ 343** (`ובייחוד נָשׂוֹא את מי שגרה קרוב
-  אליך,`); ἱερός `קָדוֹשׁ` (653, 770, 805, 819); **770 = the self-test line** (`רִאשׁוֹן – רֹאשׁ הַחֹדֶשׁ, הָרְבִיעִי
-  וְהַשְּׁבִיעִי – יוֹם קָדוֹשׁ:`, checked against the Greek: ἔνη = the old-and-new day, the new moon; the colon follows the
-  base's raised dot before 771's γάρ); ἑβδόμη / ἑβδόματος `שְׁבִיעִי` (770, 805; never the root שבת); **F25** at 805 (Δημήτερος
-  ἱερὸν ἀκτήν, as 466, 597); ἦμαρ / ἡμέρη `יוֹם`, μείς `חֹדֶשׁ`; εὐδαίμων τε καὶ ὄλβιος `בַּר־מַזָּל` / `שְׂבַע־טוֹבָה` (826,
-  kept as §5: in a calendar of days, "מזל" – the old star-luck – fits εὐδαίμων "of good daimon"); ψυχή `נֶפֶשׁ` (686);
-  φυλάσσω `שָׁמַר` (694, 706, 765, 797); ἐργάζομαι `עָבַד` (623, 827); F5 (661), F18 (718).
-- **The month** (765–828): ἱστάμενος `הָעוֹלֶה`, φθίνων `הַיּוֹרֵד`, μέσος `אֶמְצָעִי`; the ordinals as Hebrew ordinals
-  (τετράς `רְבִיעִי`, εἰνάς / ἔνατος `תְּשִׁיעִי`, εἰκάς `הָעֶשְׂרִים`, τριακάς `הַשְּׁלוֹשִׁים`, τρισεινάς `הַתְּשִׁיעִי
-  הַמְשֻׁלָּשׁ`); the order 767, 769, 768 kept.
-- **Names (§2.3), first occurrence vocalized:** Κύμη `קִימָה` (636 – note: not `כִּימָה`, the Pleiades), Αἰολίς `אַיּוֹלִית`,
-  Εὔβοια `אֶאוּבוֹיָה`, Αὐλίς `אַאוּלִיס` (651), Ἀχαιοί `הָאַכָאִים` (651, the familiar Hebrew form), Ἑλλάς `הֶלָס` (653),
-  Ἀμφιδάμας `אַמְפִידָמָס` (654), Χαλκίς `כַלְקִיס` (655).
-- **Grammar:** the infinitive for the imperative → the vocalized infinitive absolute throughout (`אָחֹז`, `עָבוֹד`,
-  `מָשׁוֹךְ`, `תָּלֹה`, `חַכֵּה`, `גָּרֹר`, `לָקֹחַ`, `נָשׂוֹא`, `עָשׂוֹ`, `שַׁקֵּר`, `פָּרֹעַ`, `קַבֵּל`, `הִקָּרֵא`, `נַסֵּךְ`,
-  `הַשְׁתֵּן`, `גַּלֵּה`, `הַזְרֵעַ`, `עָבוֹר`, `כָּרוֹת`, `שׂוֹם`, `הַשְׁאֵר`, `הוֹשֵׁב`, `לַגְלֵג`, `הָסֵךְ`, `פָּעוֹל`,
-  `הוֹדֵעַ`, `אַלֵּף`, `הַשְׁלֵךְ`, `הַתְחֵל`); with μή / μηδέ → `אַל` + infinitive absolute (622, 674, 689, 707, 709, 715,
-  724–759); `הָיֹה` + participle for εἶναι + perfect participle (641, 706, 722). Plain infinitives where the infinitive
-  depends on a verb (688 after ἄνωγα, 798 after πεφύλαξο, 767 and 815 of purpose, 753 with its own subject ἀνέρα, 749
-  after a whole line). Real imperatives stay imperatives (627 `שִׂים`, 760 `חֲמֹק`, 797 `הִשָּׁמֵר`, 819 `פְּתַח`). The
-  iterative 634 → `הָיָה מַפְלִיג`; the gnomic aorist → participle (676, 677, 705, 741); the potential optative → `הָיָה`
-  + participle (666, 684); the optative of instruction → jussive (698, 779).
-- **One exception to the infinitive absolute: 793 `תוֹלִיד`** (future as command) – `הוֹלֵד` is not among the REQUIRED
-  forms for γείνομαι in the tool, so the check fails on it (for the coordinator: add `הולד` to the list, or keep).
-- **New words resting on LXX identities:** κρατήρ `אַגָּן` (744; Exod 24:6), ἄτεκνος (part 4); νίζω `רָחַץ` (739; Exod
-  30:19 νίψεται) and λούω `רָחַץ` (749; Lev 15:16 λούσεται) – a pair, as in Hebrew; σπερμαίνω `הִזְרִיעַ` (736; Lev 12:2
-  σπερματισθῇ); τέμνω "castrate" `כָּרַת` (786, 791; Lev 22:24 ἐκτομίας = `כָּרוּת`); ψυχή `נֶפֶשׁ` (686; Prov 13:8);
-  κῦμα `גַּל` (Jonah 2:4); φειδωλός `חַסְכָנִי` (720; Prov 10:19 φειδόμενος χειλέων = `חוֹשֵׂךְ שְׂפָתָיו`).
-- **Other new words (first line):** ναυτιλία `יַמָּאוּת` / πλόος `הַפְלָגָה` (618, 630); ἀήτης / ἀήτη `מַשָּׁב`, αὔρα `נֶשֶׁב`
-  (621, 645, 670); φόρτος / φορτίον `מִטְעָן`, φορτίζω `טָעַן`; οἶνοψ `כֵּהֶה־כַּיַּיִן`; χείμαρος `פְּקָק`; πτερά (sails)
-  `כַּנְפֵי`; ἐμπορία `מִסְחָר`; σοφίζω `מְחֻכָּם`; ὕμνος `רִנָּה` (657, 662, as ὑμνέω `רִנֵּן`, TH 33); τρίπους (the vessel)
-  `חֲצוּבָה` (657; split from 533 `בַּעַל שָׁלֹשׁ הָרַגְלַיִם`); ἀνατίθημι `הֶעֱלָה מִנְחָה` (658; not `הִקְדִּישׁ` – קדש is
-  ἱερός's); καιρός `הָעֵת הַנְּכוֹנָה` (694); δειπνολόχος `אוֹרֶבֶת לַסְּעוּדוֹת`, δαλός `אוּד`, ὠμὸν γῆρας `זִקְנַת בֹּסֶר`
-  (704–705); φίλος (noun) `אוֹהֵב` (713; adjective `אָהוּב`); τίνυμαι `פָּרַע`; ὀνειδίζω `חֵרֵף` (718, vocalized `לְחָרֵף`
-  with `[היתר שער]`: the `חרף` gate is χειμών's); θησαυρός `אוֹצָר`; ἑστία (the hearth) `הָאָח` (vocalized); αἰδοῖα
-  `מְבוּשִׁים`; γονή `שִׁכְבַת זֶרַע` (733, `[היתר שער]`: the `זרע` gate is σπέρμα's, and this is its sense); ἐναποψύχω
-  `הֵסֵךְ אֶת רַגְלָיו` (759; the biblical euphemism of 1 Sam 24:3, Judg 3:24 for the Greek euphemism); φήμη `שְׁמוּעָה`
-  (760–764; a translated name if Φήμη recurs); κορώνη `עוֹרְבָנִית`; ἴδρις (the ant) `הַיּוֹדַעַת`; σωρός `כְּרִי` (not
-  `ערמה`: the `ערם` gate); μητρυιά `אֵם חוֹרֶגֶת`; ὄνειαρ `תּוֹעֶלֶת`; ὑπερβασία `עֲבֵרָה` (828; ὑπερ־βαίνω = עבר, a calque in
-  both languages); ἀναίτιος `נָקִי`.
-- **Riddle-names kept as riddles:** πέντοζος "the five-branched" (742, the hand), ἴδρις "the knowing one" (778, the ant),
-  ὑλοτόμος (807) plain.
-- **Splits recorded:** ὅπλον `צִיּוּד` (ship's gear, 627) / `כְּלִי־נֶשֶׁק` (TH 853); θοός `מָהִיר` (ship) / `חוֹלֵף` (night,
-  TH 481); ὀλίγος `קָטָן` (size, 643) / `מְעַט`; ἀνύω `הִשְׁלִים` (635) / `הִשִּׂיג`; ἀποφθίνω `הִשְׁמִיד` (666, as φθισήνωρ) /
-  `דָּעַךְ` (TH 606); ὀρίνω `הִסְעִיר` (the sea, 676) / `הִרְגִּיז`; μένω `חִכָּה` (674) / `נִשְׁאַר`; ἐπιβαίνω `דָּרַךְ` (679) /
-  `עָלָה`; ὑπέρβιος `עָצוּם מִדַּי` (a load, 692) / `פְּרָאִי` (TH); ἐπιτίθημι `הוֹסִיף` (697) / `שָׂם עַל`; ἄγω `לָקַח`
-  (695, 800) / `נָהַג בְּ־` (768); δόμος `בַּיִת` (746) / `מָעוֹן` (the gods'); τρίπους (above); χρυσάωρ (epithet,
-  `בַּעַל־חֶרֶב־הַזָּהָב`) / Χρυσάωρ `כְרִיסָאוֹר` (TH 281); ἄφενος `מָמוֹן` at 637 only (beside πλοῦτος `עֹשֶׁר`; `רְוָחָה` is
-  εὐοχθέω, 477); ῥεῖα `בְּנָקֵל` (762, stylistic, beside κοῦφος `קַל` in 761); ἀραιός `דַּק` (809).
-- **Pairs recorded:** ὀμιχέω / οὐρέω `הִשְׁתִּין`; ἀήτης / ἀήτη `מַשָּׁב`; φόρτος / φορτίον `מִטְעָן`; ἐνοσίχθων / ἐννοσίγαιος
-  `מַרְעִישׁ־הָאֲדָמָה`; νίζω / λούω `רָחַץ`; λείπω / καταλείπω `הִשְׁאִיר`; ἔνατος / εἰνάς `תְּשִׁיעִי`; δείελος / ἕσπερος
-  `עֶרֶב`; ἡμέρα / ἦμαρ `יוֹם`; ὄρνις / οἰωνός `עוֹף`; ἡμίονος / ὀρεύς `פֶּרֶד`; βούλομαι / ἐθέλω `רָצָה`; πρόβατον / μῆλον
-  `צֹאן` (ὄις `כֶּבֶשׂ`, 775); ξύλον / δένδρεον `עֵץ`; μίμνω / μένω `חִכָּה`.
-
-### Open decisions for the user
-- **637 ἄφενος `מָמוֹן`** – a one-line split, because ἄφενος and πλοῦτος (which share `עֹשֶׁר` elsewhere) stand in the same
-  line; the alternative is `עֹשֶׁר … עֹשֶׁר` (the Greek's redundancy kept).
-- **651 the "voyage"** – the note calls Aulis–Chalkis (about 65 metres of sea) the poet's joke at his own expense: a
-  reading (West), not the text.
-- **714 κατελεγχέτω εἶδος** (crux): `אל יכזיב מראך את שכלך` – "let your face not belie your mind"; the other reading
-  ("let not his looks put your mind to shame") is in the note.
-- **756 ἀίδηλα** – `נִסְתָּרוֹת` ("unseen things") chosen over "destructive things"; both in the note.
-- **768** (a hard line): `בשעה שהעם, בהבחינם, נוהגים בהם לפי האמת` – the days are "kept" when the people reckon the
-  month truly.
-- **793 `תוֹלִיד`** instead of the infinitive absolute `הוֹלֵד` (the tool's REQUIRED list; see Decisions).
-- **826 `בַּר־מַזָּל`** kept as §5, with the reason above; the alternative `מְאֻשָּׁר` collides with μάκαρ.
-
-### Progress log
-- 2026-10-24: drafted 618–828 in ten sections (seven scratch files), each inserted before the placeholder by script,
-  then `fill`, `verify WD` and `check_bible_quotes.py` (0 problems after each); the placeholder removed after 828.
-  Verify catches fixed on the way: 629 `המעובד` (the `עבד` gate: εὐεργής, now `העשוי`); first occurrences vocalized –
-  639 `הַהֶלִיקוֹן`, 658 `הַמּוּזוֹת הַהֶלִיקוֹנִיּוֹת`; 718 `לחרף` (the `חרף` gate: vocalized `לְחָרֵף` + `[היתר שער]`);
-  733 `זרע` (`[היתר שער]`); 741, 742, 756 `אֵל` / `הָאֵלִים` / `אֵלֶּה` vocalized; 793, 804 the REQUIRED forms of γείνομαι
-  (`תוֹלִיד`, `הנולד`). Quote-checker catches fixed: 655 Judg 11:40 (a quotation from memory, wrong – replaced by the
-  printed verse); several backticked words beside a reference that were not quotations (678, 694, 719, 733, 736, 812).
-- `lexmap` pass on both sides over 618–828: the splits and pairs above; fixed after it – 637 `רְוָחָה` → `מָמוֹן`
-  (εὐοχθέω's word), 792 φώς `אִישׁ` → `גֶּבֶר` (as 193), 809 ἀραιός `קַל` → `דַּק` (κοῦφος's word).
-- Fidelity read-through of all 211 Hebrew lines against the Greek (negations, tenses, moods, clause boundaries).
-- End: `verify WD --strict` – **0 problems**, 0 repeated-line differences, 831 entries (base 831); `check_bible_quotes.py`
-  on the annotated file and project.md: 0 problems; `selftest` 0 failures (29 lines). Not done (as briefed): intro,
-  `build`, the review passes, `build_parallels_index.py`.
-
-### The text on its own terms
-- **The poet's own life** – the only autobiography in early Greek poetry: a father who sailed from Aeolian Kyme "fleeing
-  not wealth but poverty" (633–638), settled in "Ascra, bad in winter, hard in summer, good never" (640); the poet's one
-  crossing, from Aulis to Chalkis, and his victory with a song at the funeral games of Amphidamas – the tripod dedicated
-  to the Muses on Helicon "where they first set me on the road of song" (650–659). The authority is not experience but
-  inspiration (660–662).
-- **The dangers of the sea** – sailing is a second, risky way to wealth: fifty days after the solstice, and only with
-  part of one's livelihood; "wealth is life (ψυχή) to wretched mortals" (686) – and to die among the waves is terrible
-  (687). Poseidon and Zeus hold "the end of good and evil" (669).
-- **The household and the wife** – marriage at the right "season" of a man's life (≈ 30) and a girl's (≈ 18–19), a
-  virgin from nearby, examined so as not to be "a joy to the neighbours"; the good wife the best prize, the bad one
-  "roasts her man without a firebrand" (702–705). The wife returns at the loom (779).
-- **The purity rules** – an archaic religious world without a temple law: every man, at home, keeps the boundaries of
-  pure and impure – hands washed before libation, never urinating facing the sun or uncovered, "for the nights belong
-  to the blessed ones" (730), no exposure by the hearth after intercourse, no begetting after a funeral, rivers and
-  springs as gods. Many are taboos of the house (the jug on the bowl, the unfinished house, the crow, the unsacrificed
-  pot).
-- **The lunar calendar of lucky days** – the month in three decades, each day good or bad for an act (shearing,
-  reaping, begetting boys or girls, castrating, taming, opening the jar, building ships); the days "from Zeus", known to
-  few; "one day is a stepmother, another a mother" (825). The poem ends with the man who knows them, works, is blameless
-  before the gods, "discerning the birds" – the passage to the lost Ornithomanteia.
-
-### Key parallels
-- **WD 730 ↔ Deut 23:13–15 (LXX)**: the camp latrine and covering, "for the Lord walks in your camp … let him not see
-  an indecent thing in you" (ἀσχημοσύνη πράγματος) – Hesiod: do not expose yourself, "for the nights belong to the
-  blessed ones". The same reason (the god is present and sees), the same domain. The strongest single parallel of the
-  part.
-- **WD 724–725, 739–740 ↔ Exod 30:19–20 (LXX νίψονται), Deut 21:6 (LXX νίψονται τὰς χεῖρας)**: washing the hands before
-  approaching the gods – for the priests at the altar on pain of death in the Torah, for every man at his libation in
-  Hesiod; hands washed in a stream as a declaration of innocence (Deut 21:6) ↔ "unwashed of his wickedness and his hands"
-  (740).
-- **WD 733 ↔ Lev 15:16–18 (LXX κοίτη σπέρματος), Exod 19:15**; **WD 735–736 ↔ Num 19:11, Lev 12:2 (LXX σπερματισθῇ)**:
-  seed and the corpse as impurity that keeps one from the holy.
-- **WD 770 ↔ Gen 2:3 (LXX ἡγίασεν)**: "the seventh, a holy day" – a monthly seventh (Apollo's birthday), not a week and
-  not a rest day; and the LXX never calls the seventh ἱερόν: it "sanctifies" it (ἁγιάζω). Kind (c).
-- **WD 801, 828 ↔ Lev 19:26, Deut 18:10 (LXX οἰωνίζομαι, ὀρνιθοσκοπέω)**: the bird-omens that close the poem as wisdom
-  are, in the Greek Torah and in Hesiod's own words, forbidden; Deut 18:13 (LXX τέλειος) ↔ 826–827 the blameless man.
-  Kind (c).
-- **WD 827–828 ↔ Job 1:1 (LXX ἄμεμπτος … ἀπεχόμενος ἀπὸ παντὸς πονηροῦ)**: the portrait of the blessed man.
-- **WD 718 ↔ Prov 17:5 (LXX ὁ καταγελῶν πτωχοῦ παροξύνει τὸν ποιήσαντα)**: to mock the poor is to reproach his maker –
-  in Hesiod, poverty is "the gift of the gods".
-- **WD 720 ↔ Prov 10:19 (LXX φειδόμενος χειλέων)**: the sparing tongue – Hesiod's φειδωλή in the LXX's verb.
-- **WD 686 ↔ Prov 13:8 (LXX λύτρον ἀνδρὸς ψυχῆς ὁ ἴδιος πλοῦτος)**: wealth and ψυχή in one verse, inverted.
-- **WD 704–705 ↔ Prov 12:4 (LXX ἄνδρα ἀπόλλυσιν γυνὴ κακοποιός)**: the bad wife destroys her man slowly, "like a worm in
-  wood" / "roasting without a firebrand"; **702 ↔ Prov 18:22 (LXX γυναῖκα ἀγαθήν)**, 31:10, 703 ↔ Qoh 7:26; 779 ↔ Prov
-  31:19 (LXX 29:19).
-- **WD 711 ↔ Lev 19:18 (LXX οὐκ ἐκδικᾶται)**: "repay him double" against "you shall not take vengeance". Kind (c).
-- **WD 744 ↔ Exod 24:6 (LXX κρατῆρας = `אַגָּנֹת`)**; **746 ↔ Deut 20:5 (LXX ἐνεκαίνισεν)**, the house not finished /
-  not dedicated; **743 ↔ Deut 21:12 (LXX περιονυχιεῖς)**, the nails; **786 ↔ Lev 22:24 (LXX ἐκτομίας)**; **759 ↔ 1 Sam 24:3,
-  Judg 3:24 (LXX)**, the euphemism; **727 ↔ Ezek 8:16 (LXX προσκυνοῦσιν τῷ ἡλίῳ)**, the sun – revered in Hesiod,
-  worshipped as an abomination in Ezekiel; **756 ↔ Deut 29:28 (LXX τὰ κρυπτά)**.
-- **The sea:** 634, 649 ↔ Ps 107:23–27 ("their wisdom swallowed"); 668–669, 689 ↔ Jonah 1:4–5, 14 (LXX); 687 ↔ Jonah 2:4
-  (LXX κύματα); 644–645 ↔ Ezek 27:25–26 (LXX, the laden ship broken by the wind); 648 ↔ Prov 30:19 ("the way of a ship
-  in the heart of the sea"); 692 ↔ Amos 2:13 (LXX ἅμαξα, the overloaded cart).
-- **The emigrant father, 636–638 ↔ Deut 26:5 (LXX "Συρίαν ἀπέβαλεν ὁ πατήρ μου … καὶ παρῴκησεν"), Ruth 1:1**: the father
-  who left his land because of hunger or poverty and settled as a stranger.
-- **The days:** 825 ↔ Job 3:8 ("those who curse the day"), Esther 3:7 (the lot cast "from day to day and month to month");
-  781, 793, 812 ↔ Qoh 3:2; 770 ↔ the new moon (Ps 81:4, Num 28:11, 1 Sam 20:5); 694 ↔ Qoh 3:1; the Babylonian hemerologies
-  (in words; none translated in this folder): a shared motif of the lucky and unlucky days of the month.
-- **The proem, 639, 658–662 ↔ TH 22–34**: the same Muses, the same verb ἐδίδαξαν (662 = TH 22), Helicon; and 804 ↔ TH
-  231–232 (Eris bears Oath, the bane of perjurers) – internal links of the corpus.
-- **Ancient-mind themes**: the poet's life as authority-by-inspiration; the sea as gamble; the bride as "booty"; purity
-  as presence of the gods at night, in the sun, the hearth and the rivers; Rumour as a goddess; the month as a map of
-  fate (the day "stepmother or mother").
-
-### Lines shared with other texts
-- **700 ≈ 343** (`ובייחוד … את מי שגר/שגרה קרוב אליך`): only καλεῖν → γαμεῖν changes (`קָרוֹא` → `נָשׂוֹא`).
-- **789 ≈ 78** (`שקרים ואמרים חלקלקים`), **629 ≈ 45** (`את משוט־ההגה … מעל העשן`), **806 ≈ 599** (`בגורן מעוגלת היטב`),
-  **796 ≈ 604** (`כלב משונן־שיניים`), **800 ≈ 695** (`לָקֹחַ … אל הבית`), **691 ≈ 687** (`ואיום הוא … בין הגלים`), **805 = 466 =
-  597 in F25**, **615 ≈ 619** (σθένος Ὠαρίωνος `חוסן כְּסִיל`).
-- No line of 618–828 repeats another drafted line exactly; `verify --strict` shows 0 repeated-line differences.
-
-### Proposals for the shared renderings
-- **Names (§3):** Κύμη `קִימָה` (636, with a warning against `כִּימָה`), Αἰολίς `אַיּוֹלִית`, Εὔβοια `אֶאוּבוֹיָה`, Αὐλίς
-  `אַאוּלִיס`, Ἀχαιοί `הָאַכָאִים`, Ἑλλάς `הֶלָס`, Ἀμφιδάμας `אַמְפִידָמָס`, Χαλκίς `כַלְקִיס`; Φήμη `שְׁמוּעָה` (if it is
-  personified again).
-- **The tool:** add `הולד` (the infinitive absolute) to the REQUIRED forms of γείνομαι (and check the other REQUIRED
-  lists for the infinitive absolute: `ילוד`, `ללדת` are there for τίκτω, but not `יָלֹד`).
-- **For §5 / §11 (kind-(a) LXX bridges):** κρατήρ `אַגָּן` (Exod 24:6), νίζω `רָחַץ` (Exod 30:19), σπερμαίνω `הִזְרִיעַ` (Lev
-  12:2), κῦμα `גַּל` (Jonah 2:4), φειδωλός `חַסְכָנִי` (Prov 10:19), τέμνω "castrate" `כָּרַת` (Lev 22:24); the kind-(c)
-  identities οἰωνός / ὄρνις ↔ οἰωνίζομαι / ὀρνιθοσκοπέω (Lev 19:26) and ἑβδόμη ἱερόν ↔ ἡγίασεν (Gen 2:3), for the notes.
-- **The month (§5):** ἱστάμενος `הָעוֹלֶה`, φθίνων `הַיּוֹרֵד`, μέσος `אֶמְצָעִי`; ἔνη `רֹאשׁ הַחֹדֶשׁ` (with the self-test).
-- **The gate escapes used** (for the coordinator to confirm): 718 `לְחָרֵף` (ὀνειδίζω, against the `חרף` gate), 733
-  `שכבת זרע` (γονή, against the `זרע` gate).
-
-### For the next part
-- The Works and Days is fully drafted (831 / 831). Left for the coordinator: the intro, `build`, the review passes
-  (consistency, Hebrew), `build_parallels_index.py`, and the open points above (637, 714, 756, 768, 793, 826).
-
-### Lessons for the guidelines
-- **A REQUIRED list must include the infinitive absolute** once the infinitive-for-imperative rule is in force: 793
-  `הוֹלֵד` failed the γείνομαι check, and the translator had to change the form.
-- **The quote-checker also catches quotations from memory that are close but wrong** (655: a Judges 11:40 "quotation"
-  that was not the verse): print first, every time – the checker is the safety net, not the method.
-- **A backticked word followed by a parenthesized reference is read as a quotation** – including a Greek word's Hebrew
-  equivalent and a book named without a chapter (a Qoh 3:2 phrase in backticks, followed by "ch. 3 v. 2" in Hebrew letters without the book, was read as Gen 3:2): write such references in plain
-  words.
-- **Homographs of names across languages** (Κύμη `קִימָה` / Πληιάδες `כִּימָה`) are not caught by any gate: vocalize both,
-  and say so in the note.
-- **The LXX of the Torah's purity laws speaks Hesiod's vocabulary** (νίπτω, λούω, σπέρμα, οἰωνίζομαι): for the ritual
-  passages, grep the LXX for the Greek word before looking for the Hebrew theme.
-
-## Review pass (a): fidelity (WD)
-
-**Date:** 2026-10-24. **Reviewer:** fidelity reviewer (pass a), one sub-session, the whole poem (831 entries: 1–828 +
-169a–d; 310 is not in the base).
-
-### What was checked
-- **Every line against its Greek**, in sections of ~100 lines (label | Greek | `>` line | every verb with its treebank
-  parse | the פירוק), the doubtful forms against the lexicon: every content word accounted for; nothing added outside
-  `( )`; person, number and case relations; the clause boundaries across lines (enjambment) and the order of images;
-  the פירוק's `("…")` against the `>` line. The base's marks are in place: `{חשודה}` at 76, 79, 93, 99, 124–125
-  (254–255 without it, as the base); `{פפירוס}` at 169a–d with the base's restorations in `[ ]`.
-- **Scripted cross-checks:** every negation (Greek οὐ/μή/οὐδέ/μηδέ/οὔτε/μήτε/οὐκέτι/μηκέτι/νόσφι/ἄτερ … ↔ Hebrew, both
-  ways): no negation lost, none reversed; every Hebrew negation without a Greek negative is an alpha-privative
-  (`בלתי־`, `שאין`, `חסר־`, `נטולי־`), or a negation carried over from the line before (214–215), or 584 `בלי הרף`
-  (πυκνόν); every imperfect and every -σκ- iterative (90, 133, 151, 634: all `היה/היו` + participle); every optative
-  (potential → `היה` + participle or future by sense; wish → jussive / `מי יתן` / `אַל`; in conditions → future);
-  the gnomic aorists and imperfects (all participles, each marked in the פירוק); the infinitive-for-imperative
-  (vocalized infinitive absolute throughout; dependent infinitives plain); the perfects (present state); the grammar
-  claims of the notes (163 statements: all consistent with the Greek).
-- After each batch `hesiod_tools.py verify WD --strict`: 0 problems, 0 repeated-line differences.
-  `check_bible_quotes.py` on the annotated file and this file: 0 problems (no quotation was added or changed).
-
-### Result: 11 lines changed (each with its פירוק, and the notes where they quoted the old Hebrew)
-The translation is faithful: no omitted content word, no reversed negation, no lost line or clause. The changes:
-
-| Line | Before → after | Reason |
-|---|---|---|
-| 92 | `אשר נתנו לאנשים את הקרות` → `אשר נותנות …` | ἔδωκαν in a general relative with epic τε (αἵ τʼ): a gnomic aorist (diseases bring death), not a past event; renderings §4 → participle. The two notes that quoted `נתנו` updated |
-| 116 | `ומתו כנכנעים לשֵׁנָה` → `והיו מתים …` | θνῇσκον: imperfect of habit (each of the golden race died so), in the series 112 `היו חיים`, 115 `היו מתענגים`, 117 `היה נושא`; §4 → `היה` + participle |
-| 119 | `נהנו ממלאכותיהם` → `היו נהנים …` | ἐνέμοντο: imperfect of habit in the same series (as TH 910) |
-| 126 | `המשאת המלכותית שהייתה להם` → `… שקיבלו` | ἔσχον is an aorist ("got, received"), not a state; the פירוק itself glossed "קיבלו" |
-| 224 | `אל אלה שגירשו אותה` → `… שיגרשו אותה` | ἐξελάσωσι: aorist subjunctive in a general relative clause → future (§4; as 221 `יכריעו`), not a past |
-| 230 | `ואף פעם לא ילווה רעב` → `… לא מלווה רעב` | ὀπηδεῖ is a present (a general truth, beside 229 `מייעד`, 231 `נהנים`): §4 → participle |
-| 453 | `"שני שוורים תן לי ועגלה"` → `"… תן (לי) …"` | an addition outside `( )`: δὸς has no pronoun |
-| 517 | `לא ינשוב בעדם` → `אינו נושב בעדם` | οὐ διάησιν is a present, as 514 and 519 (`נושב`, `אינו נושב`); the future made it a prediction |
-| 542 | `קָשֹׁר לך, ובלבד ריפדת אותם מבפנים` → `קָשֹׁר לך, משריפדת אותם בלבד מבפנים` | a participle made a main verb (πυκάσσας, aorist participle: "having lined them"); the draft had a finite 2nd-person past beside the infinitive-command |
-| 580 | `מעלה רבים מבני האדם על הנתיב,` → `מעלה רבים על הנתיב,` | an added word that also broke the enjambment: ἀνθρώπους stands at the head of 581, which already has `בני האדם` – the draft said "men" twice |
-| 728 | `אך גם אחרי שתשקע` → `אך (גם) …` | `גם` has no Greek word (αὐτάρ "but"): an interpretation, now marked as added |
-
-### Recurring patterns
-- **The tense of a single verb in a run of general statements** (6 of 11): a general relative turned past (92, 224), a
-  present turned future (230, 517), an imperfect of habit turned simple past where its neighbours have `היה` (116,
-  119). The translators applied §4 correctly almost everywhere; the slips are single forms inside long maxims or
-  descriptions – exactly the kind the Theogony's pass (a) found (TH 835, 910).
-- **A participle made a main verb** (542), as TH 1006.
-- **Additions** (453, 580, 728): a pronoun of the spoken Greek, a word anticipated from the next line, an
-  interpretive `גם` – all small, none of substance.
-- A scripted report per grammatical class (imperfects without `היה`, presents rendered as yiqtol, general-relative
-  subjunctives rendered as past) would find most of these in minutes (as the TH reviewer proposed).
-
-### Choices left as they are (defensible; noted for the user)
-- **Imperfects of state rendered as a simple past** where Hebrew past already carries duration: 97 ἔμιμνε `נשארה`, 111
-  ἐμβασίλευεν `מלך` (as TH 71's present `מולך`), 134 ἐδύναντο `לא יכלו`, 136 ἤθελον `רצו` (beside 139 `לא היו נותנים`),
-  206 μύρετο `קונן`. `היה` + participle would be possible in each (`היה מולך`, `היו רוצים`), but heavier; pass (c) may
-  decide.
-- **Perfects rendered as a resultative past**: 347 ἔμμορε `נחל` (twice), as TH 728 `צמחו`.
-- 43 `יום אחד` (ἐπʼ ἤματι "in a day": the number is the sense), 182 `ולא יהיה` (the copula of 184's ἔσσεται, needed
-  in Hebrew), 759 `הָסֵךְ (בהם) את רגליך` (the biblical idiom for one Greek verb, ἐναποψύχω), 268 `הוא משקיף`
-  (ὀφθαλμός is masculine, the Hebrew `עין` feminine: the line passes to Zeus himself), 799 (the פירוק quotes the
-  treebank's θυμβορεῖ for the base's θυμοβορῆ, as the tool prints it).
-- A spelling for pass (c): 88 `תיהיה` (read `תהיה`).
-
-### Open cruxes for the user (translated by the most defensible option; the notes give the alternatives; no `?` in the line)
-- **148** ἄπλαστοι `בלתי־יצורים` ("unformed", as TH 151, with DGE); the lexica record ἄπλατος "unapproachable" as a
-  variant or a sense of the word (LSJ II, Bailly, Pape) – the note could name it.
-- **314** δαίμονι δʼ οἷος ἔησθα `ויהי מה שתהיה לפי הדיימון` – the note calls it hard; the Hebrew keeps it open.
-- **562** ἰσοῦσθαι νύκτας τε καὶ ἤματα – "share out by night and day" or "keep to it until the equinox" (the note).
-- **590** μᾶζα ἀμολγαίη `עוגת חלב` – meaning disputed (the note).
-- **518** τροχαλός `*כפוף*` (already italic); **68 / 77** διάκτορος `המוביל` (an epithet of disputed meaning, as in TH).
-- If the user wants §6.8 applied strictly, 314, 562 and 590 could take a `?` (and 148 the variant in its note).
-
-
-## Review pass (b): consistency (WD)
-
-**Date:** 2026-10-24. **Reviewer:** consistency reviewer (pass b), one sub-session, the whole poem (831 entries), with the
-Theogony as the precedent. No Theogony line was changed (so no TH note, no TH build).
-
-### What was checked
-- **Lemma → Hebrew:** `hesiod_tools.py lexmap` over both poems, then a skeleton filter (prefixes ו ה ב ל כ מ ש, the
-  common suffixes and the matres stripped; similar skeletons merged): 431 lemmas with a WD occurrence and more than one
-  Hebrew group, each read against renderings §5, §11.1–§11.12 and the five translators' "Decisions" / "Splits" lists; a
-  separate pass for the seam (lemmas whose Hebrew in 1–285 and in 286–828 never meet: 80, nearly all inflection).
-- **Hebrew → lemma:** the tool's exact reverse list (397 strings) and a reverse map on prefix-stripped Hebrew (390 groups
-  with a WD line), read for collisions, recorded pairs and homographs.
-- **Formulas and repeated lines:** `verify WD --strict` (F1–F34; the §9 lines); by hand WD 124–125 = 254–255, 149 = TH 152,
-  54 / 71 / 72 = TH 559 / 572 / 573, 50, 52, 53, 57, 70 ≈ TH 565, 567, 558, 570, 571, 700 ≈ 343, 500 ≈ 317 (all exact, the
-  differences only where the Greek differs); the Pleiades and Orion lines (383, 384, 572, 598, 609, 615, 619: `כִּימָה` /
-  `כְּסִיל` vocalized everywhere, the plural agreement of the Greek kept throughout, σθένος Ὠαρίωνος `חוסן כְּסִיל` ×3);
-  every epithet of Zeus across the two poems (one slip: μητιόεις at 769); every infinitive-for-imperative grouped by
-  lemma (the same Greek verb has the same infinitive absolute everywhere; the apparent differences are real imperatives
-  or dependent infinitives); every gnomic form marked in the פירוק (all participles).
-- **Names:** every capitalized word's Hebrew grouped by lemma (one form each); the ★ names and the §7.3 traps (verify, and
-  a grep of the bare strings).
-- **Grammar:** the imperfects left by pass (a) (97, 111, 134, 136, 206).
-- After each of five batches `verify WD --strict`: 0 problems, 0 repeated-line differences; at the end
-  `check_bible_quotes.py` on the annotated file and this file: 0 problems.
-
-### Result: 47 lines changed (each with its פירוק `("…")` and every note that quoted the old Hebrew)
-**One lemma, two Hebrew words → the precedent (the Theogony, or the first WD occurrence)**
-
-| Line | Before → after | Reason |
-|---|---|---|
-| 245 | `במחשבות זאוס` → `בהגיגי זאוס` | φραδμοσύνη: TH 626, 884, 891 `בהגיגי ארץ` – the same phrase (and `מחשבות` is δῆνος's, TH 236) |
-| 282 | `ברצונו` → `במזיד` | ἑκὼν ἐπίορκον ὀμόσσας = TH 232 `במזיד נשבע לשקר` |
-| 268 | `גם את אלה … הוא משקיף` → `גם באלה … הוא צופה` | ἐπιδέρκομαι: TH 760 `צופה`; the Hebrew-only contact with Prov 15:3 `צֹפוֹת` noted (kind b) |
-| 795 | `מתנהל־הרגליים` → `עקום־ההילוך` | εἰλίπους: TH 290, 983 |
-| 801 | `למעשה הזה` → `לַפּוֹעַל הזה` | ἔργμα: TH 823 `ופעלים`; `מַעֲשֶׂה` is ἔργον's (and ἔργμα / ἔρδω `פָּעַל` share a root, as in Greek) |
-| 787 | `יום נעים` → `יום נוח` | ἤπιος: TH 235, 236, 407 (`נָעִים` is ἡδύς, TH 40) |
-| 769 | `זאוס רב־התבונה` → `זאוס מלא־התבונה` | μητιόεις: 51 (the same phrase Διὸς πάρα μητιόεντος), 273, TH 286, 457; `רב־התבונה` is μητίετα's |
-| 342, 722, 736, 742 | `סעודה` → `משתה` (`רב־האורחים`, `השופע`: agreement) | δαίς / δαίτη: TH 802 `למשתאות` |
-| 704 | `האורבת לסעודות` → `האורבת לארוחות` | δειπνολόχος from δεῖπνον `אֲרוּחָה` (209, 442); `סעודה` freed |
-| 712 | `לתת לך משפט` → `לספק לך משפט` | παρέχω: TH 639 `סיפק`; `נָתַן` is δίδωμι's |
-| 515 | `גלד השור` → `עור השור` | ῥινός: TH 539 `בעור` (the ox-hide); the הקבלה bullet on Job 16:15 `גִלְדִּי`, which rested only on the old word, removed |
-| 788 | `לדבר דברי לעג` → `להטיח דברי לעג` | βάζω: 186 `בהטיחם` (seam: `דִּבֵּר` is λέγω's) |
-| 821 | `רע יותר` → `גרוע יותר` | χερείων: 127 `גרוע` (seam: `רַע` is κακός's) |
-| 767 | `את המנות` → `את המזון` | ἁρμαλιή: 560 `מן המזון`; `מָנָה` is αἶσα's (§5) |
-| 740 | `מרעתו` → `מן הרוע` | κακότης `רֹעַ` (93, 287); `רָעָה` is κακόν's |
-| 549 | `מעשי המאושרים` → `מלאכות המאושרים` | ἔργα "tilled fields": `מְלָאכָה` (field-work, §5), as 119, 231 |
-| 598, 609, 619, 646, 768 | `בשעה ש־` → `כאשר` | εὖτε (ἄν): 181, 323, 430, 448, 458, 564 (both translators) and TH 28 `כש־`; ἦμος / τῆμος keep `בשעה ש־` / `באותה שעה` (§11.11.2 is to be read so) |
-
-**One Hebrew word, two lemmas (collisions; the precedent keeps the word)**
-
-| Line | Before → after | Reason |
-|---|---|---|
-| 340 | `נוחים אליך` → `מְרֻצִּים לך` | ἵλαος had ἤπιος's `נוֹחַ`; the passive of ἱλάσκομαι `רִצָּה` (338; TH 91 `מְרַצִּים`) renders the same Greek family |
-| 225 | `לזרים` → `לאורחים` | ξένος had ἀλλότριος's `זרים` (34, 395, TH 599); ξένος `אוֹרֵחַ` as 183, 327 (the split ξένος `אורח` / `זר` withdrawn) |
-| 654 | `עז־הלב` → `נבון־המערכה` | δαΐφρων had ὀβριμόθυμος's epithet (TH 140); δαΐ `מערכה` (TH 650, 674) + φρήν |
-| 773 | `המצוינים` → `יוצאי־הדופן` | ἔξοχος had ἀριδείκετος's `מצוין` (TH 385, 532, 543); `בולט` is πρέπω's (TH 92) |
-| 648 | `רב־ההמיה` → `רב־הנהמה` | πολύφλοισβος had ἐρισμάραγος's epithet (TH 815); `שאון` is ὄτοβος's (TH 709); the sea's `כְּנַהֲמַת יָם` (Isa 5:30) |
-| 456, 807 | `קורות` → `לוחות` | δόρυ shared `קוֹרָה` with ἔλυμα (430, 436: the coordinator's ruling, §11.11.4) in the same passage |
-| 584 | `בלי הרף` → `תָּדִיר` | adverbial πυκνόν had ἐμμενής's `בלי הרף` (TH 610, 712); `בלי הפוגה` is TH 611, 690's |
-
-**The imperfect of state or habit → `הָיָה` + participle (renderings §4)**
-- **111** `כאשר מלך` → `כאשר היה מולך` (ἐμβασίλευεν, beside 112 `היו חיים`); **134** `לא יכלו` → `לא היו יכולים`;
-  **136** `רצו` → `היו רוצים` (ἐδύναντο, ἤθελον: the silver race's habit, beside 139 `היו נותנים`); **206** `קונן` →
-  `היה מקונן` (μύρετο, the nightingale's lament as the background of ἔειπεν).
-- **97** ἔμιμνε `נשארה` **kept**: `נשאר` is a stative verb whose past already states the lasting result (Hope stayed
-  inside, once); `הייתה נשארת` would read as a habit ("used to stay"), which the Greek does not say.
-
-**Homographs vocalized (the line's words unchanged)**
-- **186** `אֲנוּשׁוֹת` (χαλεπός, as 91, 178) against **416** `אֱנוֹשׁ`, **533** `לֶאֱנוֹשׁ` (βροτός / βρότεος, §5); **590**
-  `חָלָב` (γάλα; δημός is `חֵלֶב`, TH 538); **177** `מִיְּגִיעַ`, **305** `יְגִיעַ` (κάματος) against 291 `יגיע` (ἱκνέομαι);
-  **716** `רֵעָם` (ἑταῖρος; `רעם` is βροντή); **516** `הָעֵז` (αἴξ; `עז` is κρατερός); **466** `שֶׁיִּכְבְּדוּ` (βρίθω; τιμάω
-  `יכבדו`, TH 81); **538** `עֵרֶב` (κρόκη; ἕσπερος / δείελος `עֶרֶב`).
-
-**Apparatus only:** the 513 note (ῥινός now `עוֹר`), the 723 note and the section heading 706–723 (`המשתה המשותף`).
-
-### Splits confirmed (one lemma, two Hebrew words, by sense; for renderings §11.13)
-- ἀγορεύω: TH 86 `נָאַם` (orating in the assembly) / WD `אָמַר בְּפֻמְבֵּי` (280, 402, 688; both WD translators).
-- δαιμόνιος (vocative): TH 655 `הוֹ נִפְלָא` (respectful) / WD 207 `הוֹ מְשֻׁנֶּה` (the hawk's contempt).
-- κρυερός: TH 657 `מַקְפִּיא` (figurative "chilling") / WD 153 `קַר` (the cold house of Hades; `הִקְפִּיא` is παχνόω, 360).
-- προρέω: TH 792 `נָבַע` (from a rock) / WD 757 `זָרַם` (rivers flowing to the sea; ῥέω `זָרַם`).
-- ἔρχομαι: `בָּא` / `הָלַךְ` of a star or a wind passing over or through (419, 515).
-- κρίνω: `הִכְרִיעַ` (judge: 221, TH 882) / `הִבְחִין` (discern days and omens: 768, 801, 828).
-- ὄπις: TH 222 `גְּמוּל` (retribution) / WD `הַשְׁגָּחָה` (the gods' regard: 187, 251, 706).
-- βλάπτω: TH 89 passive `נִפְגָּע` ("the wronged") / WD active `הִזִּיק` (193, 258, 283; βλαβερός `מַזִּיק` 365).
-- λάσκω: TH 694 `הִתְפַּצֵּחַ` (wood crackling) / WD 207 `צָוַח` (a bird). πραΰνω: TH 254 `הִרְגִּיעַ` / WD 797 `אִלֵּף` (a bull).
-  φρονέω: TH `חָשַׁב` / WD 202 `הִשְׂכִּיל`. πυκνός: adj. `צָפוּף` / adv. `תָּדִיר` (584).
-- ἀλλά: `אֲבָל`; `אֶלָּא` after a negation (11, 444, 527 … – Hebrew grammar); `אַךְ` (513, 571).
-- πάμπαν `לְגַמְרֵי` (302, 335) / `כָּלִיל` (763, with ἀπόλλυται: the idiom) – stylistic, left.
-- The translators' recorded splits were checked against their lines and stand (σχέτλιος, φράζω, ἀφαιρέω, μίμνω /
-  μένω, ἐπαινέω, ταχύς, νέμω, ἦθος, μίγνυμι, ἴσχω, λείπω, γίγνομαι of a person, ἄγω, νοέω, γιγνώσκω, εἶδον, χαλεπός,
-  κοσμέω, κομίζω, πείθω, φίλος, ἐπιτέλλω, ἀνύω, τυγχάνω, ῥέζω / ἔρδω, χρῆμα, πήγνυμι, ἐλαύνω, ἄκρον, ἀραρίσκω, βοῦς,
-  δέω, ἐμπνέω, αἱρέω, ὅπλον, θοός, ὀλίγος, ἀποφθίνω, ὀρίνω, ἐπιβαίνω, ὑπέρβιος, ἐπιτίθημι, δόμος, τρίπους, χρυσάωρ,
-  ἄφενος 637, ῥεῖα 762), except **ξένος**, whose `זר` (225) is withdrawn (above).
-
-### Pairs and homographs recorded (one Hebrew word; checked and left)
-- **Pairs of synonyms** (Hebrew has one natural word), new: σχέτλιος (WD) / δυσηλεγής (TH 652, WD 506) `אַכְזָרִי`;
-  ἀγέλη (TH 445) / πῶυ (WD 516, 786) `עֵדֶר`; σταθμός (TH 294, 444) / σηκός (WD 787) `דִּיר`; θήρ (WD 277, 512) /
-  κνώδαλον (TH 582) `חַיָּה`; παῦρος / ὀλίγος `מְעַט`; ἀλέομαι / ἐξαλέομαι / ὑπαλεύομαι `חָמַק` (one family);
-  ῥᾴδιος / κοῦφος `קַל` (761 beside 762 `בנקל`); νεφέλη (TH) / νέφος (WD) `עָנָן`; βλάπτω (WD) / πημαίνω (TH 232)
-  `הִזִּיק`; χρώς / δέρμα / ῥινός / ῥινόν `עוֹר`; κεφαλή / κάρα `רֹאשׁ`. The translators' pairs (§11.9.6, §11.11.4,
-  the part 3 and part 5 lists) stand.
-- **Homographs** (vocalized where they could meet): `פּוֹעֵל` ῥεκτήρ (191) / `פּוֹעַל` ἔργμα (801) – one root, as ῥέζω /
-  ἔρδω; `מְרֻצֶּה` ἵλαος / `מְרַצֶּה` ἱλάσκομαι (TH 91) – one family, as in Greek; `יַבָּשָׁה` ἤπειρος / `יְבֵשָׁה` αὖος
-  (460); `רֵעַ` ἑταῖρος / `רַע` κακός; `קָרוֹב` ἐγγύθι / `בְּקָרוֹב` τάχα; and those vocalized above.
-
-### Open points for the coordinator and the user
-- **renderings §11.11.2** should read: ἦμος / τῆμος `בְּשָׁעָה שֶׁ־` / `בְּאוֹתָהּ שָׁעָה`; **εὖτε `כַּאֲשֶׁר`** (as ὅτε; TH 28).
-- **renderings §11.11.4:** δόρυ `לוּחַ` (456, 807), since ἔλυμα has `קוֹרָה`.
-- **New rows for §5 / §11.13** (each with its first line): δαίς `מִשְׁתֶּה` (TH 802); δεῖπνον `אֲרוּחָה` (δειπνολόχος 704);
-  ἤπιος `נוֹחַ`, ἵλαος `מְרֻצֶּה` (340); ἔργμα `פֹּעַל`; φραδμοσύνη `הֲגִיגִים`; ἑκών `בְּמֵזִיד`; ἐπιδέρκομαι `צָפָה`;
-  εἰλίπους `עֲקֹם־הַהִלּוּךְ`; βάζω `הֵטִיחַ`; ῥινός `עוֹר`; ξένος `אוֹרֵחַ`; δαΐφρων `נְבוֹן־הַמַּעֲרָכָה`; ἔξοχος
-  `יוֹצֵא־דֹּפֶן`; πολύφλοισβος `רַב־הַנְּהָמָה`; μητιόεις `מְלֵא־הַתְּבוּנָה`; χερείων `גָּרוּעַ`; ἁρμαλιή `מָזוֹן`; παρέχω
-  `סִפֵּק`; κακότης `רֹעַ` (never `רָעָה`).
-- **For pass (c):** 538 `עֵרֶב רַב` is the phrase of Exod 12:38 (an unintended calque: the order `הרבה ערב` would avoid
-  it); 340 `מְרֻצִּים` reads "satisfied" in Modern Hebrew (vocalized); 773 `יוצאי־הדופן` is a Mishnaic idiom now common;
-  the pronoun `אלה` is unvocalized at 162, 164, 166, 224, 225, 238, 250, 274, 513, 684, 688, 697 (verify passes: no θε- in those lines), vocalized `אֵלֶּה` elsewhere – one practice would be better.
-- **The Theogony** (not changed; for the record): TH 558 ὀχθέω `בכעס` beside κοτέω `כעס` (TH 315; WD 25) is a TH-internal
-  pair (WD 53 differs by its own Greek, χολωσάμενος `ובזעמו`).
-- **The parallels index** has to be regenerated (`build_parallels_index.py`): the 515 bullet (Job 16:15) was removed.
-
-### Proposals for the tool (for the coordinator)
-- **`lexmap --skeleton`** (as the TH reviewer proposed): strip prefixes, common suffixes and matres, merge similar
-  strings, and print only the lemmas whose groups differ – and a reverse map on prefix-stripped Hebrew; both found the
-  slips here in minutes (the raw output is 3,100 lines of inflection).
-- **Traps for homographs between licensed key words**, firing only when the line's lemmas hold both readings' sources
-  or the wrong one: `אנוש` (βροτός `אֱנוֹשׁ` / χαλεπός `אָנוּשׁ`), `חלב` (δημός / γάλα), `יגיע` (κάματος / ἱκνέομαι),
-  `רעם` (βροντή / ἑταῖρος + suffix), `עז` (κρατερός / αἴξ), `ערב` (ἐρατός / κρόκη / evening).
-- **A seam report**: the lemmas whose Hebrew in one translator's range never meets the other's (`--split 285`).
-
-## Review pass (c): Hebrew (WD)
-
-**Date:** 2026-10-24. **Reviewer:** Hebrew reviewer (pass c), one sub-session, the whole poem (831 entries), the
-section headings and the intro.
-
-### What was read
-- The generated `translation-WD.rtl.md` from start to end, section by section, as a Hebrew reader, with the annotated
-  entry (Greek, פירוק, notes) opened for every line in doubt; the intro `translation--intro-WD.rtl.md`.
-- Looked for: unvocalized homographs (above all where a Modern word shadows the literary one), agreement (gender and
-  number; the translated names keep the Greek gender, §11.7), the infinitive-as-imperative forms (§11.10), the
-  government of verbs, register slips and Modern idioms, unintended biblical calques; the spelling.
-- The list of all 2,575 distinct unvocalized words of the `>` lines, read once for defective spellings and for one
-  practice per recurring word; a scripted list of every vocalized word with a ḥolam not on a vav or a qubbuṣ (a
-  vocalized form must strip to the plene string, §5.2 ★); every "שם הפועל כציווי" in the פירוק, grouped by form.
-- New words checked with `lexmap` and `grep --all` (one collision found and avoided: `מֻבְחָר` is προφερής's, TH 79, 361).
-- After each of five batches (1–105, 106–285, 286–413, 414–617, 618–828) and the headings: `build WD`, `verify WD
-  --strict` (0 problems, 0 repeated-line differences); at the end `selftest` (29 lines, 0 failures) and
-  `check_bible_quotes.py` on the annotated file, the translation, the intro and this file (0 problems).
-
-### Result: 102 lines changed (the `>` line, its פירוק `("…")`, and every note that quoted the old Hebrew), 8 headings, the intro
-No meaning changed; no fixed rendering, formula or repeated line touched except where this brief asked for it (340, 773:
-see "Fixed words replaced"). WD 124–125 = 254–255, 149 = TH 152, 54 / 71 / 72 = TH 559 / 572 / 573 are unchanged.
-
-**Unvocalized homographs: the one ambiguous word vocalized (44 lines)**
-
-| Line | Before → after | The wrong reading avoided |
-|---|---|---|
-| 13 | `ולבן` → `וְלִבָּן` | `לָבָן` "white", Laban |
-| 55 | `והולכת שולל` → `וְהוֹלַכְתָּ` | the feminine participle "and you (f.) go" |
-| 167 | `בזכותו` → `בְּזַכּוֹתוֹ` (ὀπάσσας) | `בִּזְכוּתוֹ` "thanks to him" |
-| 191 | `פועל` → `פּוֹעֵל` (ῥεκτήρ) | `פֹּעַל` "deed" (pass b recorded the pair, the line had stayed unvocalized) |
-| 194, 262 | `בספרו`, `בספרם` → `בְּסַפְּרוֹ`, `בְּסַפְּרָם` | "in his / their book" |
-| 198 | `מכסות` → `מְכַסּוֹת` | `מִכְסוֹת` "quotas" |
-| 222 | `נאות העם` → `נְאוֹת` (ἤθεα) | `נָאוֹת` "pretty" (as TH 129) |
-| 322 | `יבוז` → `יָבוֹז` (ληίσσεται "plunder") | `יָבוּז` "despise" |
-| 340, 360, 451, 593 | `קרבם`, `קרבו`, `כשקרבך` → `קִרְבָּם`, `קִרְבּוֹ`, `כְּשֶׁקִּרְבְּךָ` (κραδίη / νηδύς) | `קְרָב` "battle", `קֵרְבוֹ` "brought him near" (as TH 764, 898) |
-| 362 | `נהיה` → `נִהְיֶה` | the past `נִהְיָה` (the potential optative: `היה … נִהְיֶה`) |
-| 374 | `בחפשה` → `בְּחַפְּשָׂהּ` | `בְּחָפְשָׁהּ` "in her freedom" |
-| 403, 526 | `מרעה` → `מִרְעֵה` / `מִרְעֶה` | `מֵרָעָה` "from evil" |
-| 418 | `מגודלי־הכליה` → `הַכְּלָיָה` (κηριτρεφής) | `כִּלְיָה` "kidney" |
-| 421 | `ועליו` → `וְעָלָיו` | "and upon it" |
-| 423 | `ועלי` → `וְעֱלִי` "pestle" | "and upon me" |
-| 427 | `בורך` → `בּוּרֶךְ` (γύης, its first occurrence) | `בֵּרַךְ`, `בֶּרֶךְ` |
-| 428 | `בתורך` → `בְּתוּרְךָ` | "in your Torah / turn" |
-| 430 | `עבד אתנה` → `עֶבֶד` (δμῷος) | the verb "worked" |
-| 431 | `ובקרבו` → `וּבְקָרְבוֹ` | `בְּקִרְבּוֹ` "inside it" |
-| 433 | `שבורכה` → `שֶׁבּוּרְכָּהּ` (αὐτόγυον) | `שֶׁבֹּרְכָה` "that was blessed" |
-| 476 | `שתשוש` → `שֶׁתָּשׂוּשׂ` | `תָּשׁוּשׁ` "weak" |
-| 506, 508 | `בנשוף`, `בנשפו` → `בִּנְשׁוֹף`, `בְּנָשְׁפוֹ` (πνέω) | `בַּנֶּשֶׁף` "at dusk" |
-| 518 | `און`, `הזקן`, `שמה` → `אוֹן`, `הַזָּקֵן` (γέροντα), `שָׂמָה` | `אָוֶן`; `הַזָּקָן` "the beard"; `שָׁמָּה`, `שְׁמָהּ` |
-| 525 | `ובנאות` → `וּבִנְאוֹת` | as 222 |
-| 531 | `יקרה` → `יְקָרָה` (μέλει) | `יִקְרֶה` "will happen" |
-| 538 | `ובשתי` → `וּבִשְׁתִי` "and in the warp" | `וּבִשְׁתִּי` "in my drinking", `וּבִשְׁתֵּי` "in two" |
-| 542, 546 | `בלבד`, `לבד` → `בְּלֶבֶד`, `לֶבֶד` "felt" | `בִּלְבַד` "only", `לְבַד` "alone" |
-| 554, 570 | `הקדם` → `הַקְדֵּם` (inf. abs.) | `הַקֶּדֶם` "the east" |
-| 648 | `אראה` → `אַרְאֶה` (δείξω) | `אֶרְאֶה` "I will see" |
-| 652 | `עם (רב)` → `עָם` (λαόν) | the preposition "with" |
-| 670 | `הנשבים` → `הַנְּשָׁבִים` (αὖραι) | `הַנִּשְׁבִּים` "the captives" |
-| 677 | `שם` → `שָׂם` | `שָׁם`, `שֵׁם` |
-| 765 | `נשמר` → `נִשְׁמָר` (participle) | the past |
-| 825 | `אם חורגת … אם` → `אֵם` ×2 | "if" |
-| 828 | `מעברות` → `מֵעֲבֵרוֹת` | `מַעְבָּרוֹת` "crossings" |
-| 376, 314 | `ויהי` → `וִיהִי` (jussive) | the narrative `וַיְהִי` – a vav-consecutive the register excludes (§6.2) |
-
-**The pronoun `אלה` → `אֵלֶּה` wherever it stands (17 lines; one practice, against the trap `אֵלָה`, §7.3):** 162, 164,
-166, 167 (`וּלְאֵלֶּה`), 224, 225 and 238 (`וְאֵלֶּה`), 250, 263 (`מֵאֵלֶּה`), 268 (`בְּאֵלֶּה`), 274, 322 (`כָּאֵלֶּה`), 513 (×2),
-684, 688, 697. ὦ → `הוֹ` at 207, 213, 248, 274 (as 27, 611, 641); the prohibitive `ואַל` before an infinitive absolute at
-410 (as everywhere else).
-
-**Plene spelling (a vocalized form strips to the plene string, §5.2 ★; one practice for recurring words)**
-- **88** `תיהיה` → `תֵּהָיֶה` (γένηται: the Nifal the REQUIRED γίγνομαι rendering needs; its plene spelling is `תהיה`, the
-  ṣere unwritten, as TH 475 `יהיה`; vocalized against the Qal `תִּהְיֶה`). Note corrected.
-- **The infinitive absolute with ḥolam** written with vav, as the majority (`זָרוֹעַ`, `כָּרוֹת`, `קָצוֹר`, `עָבוֹד`, `שָׂרוֹף`,
-  `מָדוֹד`, `חָמוֹק` …, renderings §11.10): **368** `שָׂבֹעַ` → `שָׂבוֹעַ`, **542** `קָשֹׁר` → `קָשׁוֹר`, **596** `יָצֹק` →
-  `יָצוֹק`, **597** `דָּחֹק` → `דָּחוֹק`, **600** `אָסֹף` → `אָסוֹף`, **611** `בָּצֹר` → `בָּצוֹר`, **613** `שָׁאֹב` → `שָׁאוֹב`,
-  **622** `אָחֹז` → `אָחוֹז`, **631**, **672** `גָּרֹר` → `גָּרוֹר`, **690** `טָעֹן` → `טָעוֹן`, **694** `שָׁמֹר` → `שָׁמוֹר`,
-  **695**, **800** `לָקֹחַ` → `לָקוֹחַ`, **711** `פָּרֹעַ` → `פָּרוֹעַ`.
-- **Imperatives and other vocalized words:** **299**, **397** and two headings `עֲבֹד` → `עֲבוֹד`; **760** `חֲמֹק` → `חֲמוֹק`;
-  **2** `בֹּאנָה` → `בּוֹאנָה`; **93** `בְּרֹעַ` → `בְּרוֹעַ`; **106** `אֹמֶר` → `אוֹמֶר`; **286**, **661** `אֹמַר` → `אוֹמַר`;
-  **383** `בִּזְרֹחַ` → `בִּזְרוֹחַ`; **591** `חֹרֶשׁ` → `חוֹרֶשׁ` (still vocalized against `חוֹרֵשׁ`); **705** `בֹּסֶר` → `בּוֹסֶר`.
-- **`הכל` → `הכול`** (40, 267 ×2), as 293, 491, 563, 701 (`מכול` standalone, `מכל` + noun, as both poems).
-- The heading of 320–341 `וקורבנות` → `וקרבנות` (the corpus's `קרבנות`, §13.3, TH 417, WD 336, 755); the note of 603
-  `האישה` → `האשה` (the folder's spelling).
-
-**Agreement and government**
-- **300** `ויאהב אותך דמטר` → `ותאהב` (Demeter; 301 `ותמלא` already feminine).
-- **723** `(הבאה) מן המשותף` → `(הבא)`: the feast is now `משתה` (masculine; pass b changed `סעודה` and the epithet but not
-  the added word).
-- **675** `ואת החורף הבא, ואת משביו` → `ולחורף הבא, ולמשביו`: `חִכָּה` governs `ל־` (674 `ליין … ולגשם`); the three
-  objects are one accusative series in Greek.
-- **623**, **687** `מצווה עליך` → `מצווה אותך`: ὥς σε κελεύω / ἀλλά σʼ ἄνωγα have `אותך` at 316, 367, 403, 536 – the same
-  Greek, one Hebrew.
-
-**Words that read wrong in Hebrew (the Greek sense kept, the word changed)**
-- **205** ἐλεόν `ברחמים` → `מעורר רחמים`: `בְּרַחֲמִים` is "mercifully"; the note itself glossed "in a voice that evokes pity".
-- **215** βαρύθει `וכובד עליו תחתיו` → `וכורע תחתיו`: `כובד` is the noun `כֹּבֶד` (the note meant `כָּבֵד`, which would need a
-  subject); βαρύθω "be weighed down, sink under" (the פירוק's own gloss `לכרוע תחת`). New word, no collision.
-- **823** μετάδουποι `נופלים בין לבין` → `נופלים ביניהם`: `בין לבין` is colloquial Modern Hebrew ("so-so; meanwhile").
-
-**Unintended biblical calque**
-- **538** κρόκη `עֵרֶב רַב` → `הרבה עֵרֶב`: `עֵרֶב רַב` is the "mixed multitude" of Exod 12:38; the order `הרבה ערב` keeps
-  the words (πολλὴν κρόκα) without the echo (pass b's proposal). The Lev 13:48 `שְׁתִי` / `עֵרֶב` parallel stands.
-
-**Fixed words replaced (the two the brief named; for renderings §11.13.2)**
-- **340** ἵλαος `מְרֻצִּים לך` → `מִתְרַצִּים אליך`: the passive `מְרֻצֶּה` reads in Modern Hebrew "satisfied, content". The
-  Hitpael `מִתְרַצֶּה` ("relent, be reconciled", 1 Sam 29:4) keeps the root of ἱλάσκομαι `רִצָּה` (338; TH 91), so the
-  Greek family stays visible; vocalized (unvocalized `מתרצים` is `מְתָרְצִים` "making excuses"). `מְפֻיָּס` was rejected:
-  פייס is μείλιχος's (TH 84, 92, 406). ἵλαος occurs only here.
-- **773** ἔξοχος `יוצאי־הדופן` → `נבחרים`: `יוֹצֵא דֹּפֶן` is a Mishnaic idiom now everyday Modern Hebrew ("unusual,
-  exceptional"). `מֻבְחָר` was the first choice but is προφερής's (TH 79, 361 `המובחרת`); `מְצֻיָּן` is ἀριδείκετος's,
-  `בּוֹלֵט` πρέπω's, `מְעֻלֶּה` ἀρείων's. `נבחר` is free in the corpus (it shares the root בחר with `מובחר`: a recorded
-  near-pair). ἔξοχος occurs only here.
-
-**The cruxes of pass (a) marked `?` (§6.8):** **314** `לפי הדיימון?` (δαίμονι δʼ οἷος ἔησθα); **562** `הַשְׁוֵה?` (ἰσοῦσθαι:
-"share out by night and day" or "until the equinox"); **590** `ועוגת חָלָב?` (μᾶζα ἀμολγαίη). Each note now says the
-line carries the sign. **148** (no `?`: ἄπλαστος is the base's word and the Hebrew follows it): the note now names
-ἄπλατος "unapproachable" (LSJ II, Bailly, Pape) as a variant or a sense.
-
-**Headings:** 143–155 `מן המילה` → `מן המֵּילָה` (not "the word"); 298–319 and 383–404 `עֲבוֹד`; 320–341 `וקרבנות`;
-405–413 `אל דחה` → `אַל דָּחֹה` ("God pushed"); 597–617 `כְּסִיל`, `כִּימָה` vocalized (the trap and the name are vocalized
-everywhere else); 618–645 `מקימה` → `מִקִּימָה` (Κύμη, always vocalized against `כִּימָה`); 800–828 `"אֵם וחורגת"`.
-
-**The intro** (content kept): "קדר מקנא בקדר" → "הקדר כועס על הקדר" (the line's own words, 25: κοτέει); "ברעב ובמגפה"
-→ "ברעב וּבְדֶבֶר" (243, λοιμός `דֶּבֶר`); the sweat set "before plenty" → "before the excellence" (`לפני המעלה`, 289:
-ἀρετή – the intro misquoted the line); the quotation of 159–160 made the line's own ("אנשים הרואים, אשר נקראים
-חצי־אלים, הדור הקודם", not "חצאי־אלים").
-
-### Recurring patterns
-- The Hebrew reads well and evenly; the faults were local, as in the Theogony. The commonest was again the unvocalized
-  homograph (44 lines), most of them a Modern word shadowing the literary one (`מכסות`, `בספרו`, `בתורך`, `הנשבים`,
-  `מעברות`, `בלבד`, `קרבו`), and the farm and weaving vocabulary of 414–546, where rare literary words (`בּוּרֶךְ`,
-  `עֱלִי`, `שְׁתִי`, `לֶבֶד`) meet common homographs.
-- **Plene spelling inside vocalized words** (29 lines): the two WD translators wrote the infinitive absolute and the
-  imperative with and without vav; the plene form is now the one practice.
-- Agreement slips where a later pass changed a noun but not its satellites (723), or the subject is a goddess after a
-  masculine verb form (300).
-- One verb's government lost across an enjambment (674–675); one formula-like phrase in two prepositions (623, 687).
-
-### Left as they are (defensible; noted)
-- **73–74** `שמו ענקים זהובים על עורה` (ὅρμους): `עֲנָקִים` "necklaces" and "giants" are spelled and vocalized alike; the
-  context (`על עורה`) decides. **25** the second `החרש` (the parallelism decides). **407** `הולמים` (ἄρμενα; "beating"
-  is possible out of context).
-- **60**, **673** `מהר ככל האפשר` (ὅττι τάχιστα): Modern but natural; **210** `להתמודד עם` (ἀντιφερίζειν "to match
-  oneself against": the literary sense of the word); **317**, **500** `סועדת` (κομίζει "attends"); **527**
-  `הכחולים־הכהים` (κυανέων, literal); **693** `יוּעַמּוּ` (ἀμαυρωθείη).
-- **407**, **707** `עָשׂוֹ`: the infinitive absolute in -ו is biblical (the note quotes Jer 7:5 `אִם עָשׂוֹ תַעֲשׂוּ`), kept.
-- The ל"ה infinitives absolute `דָּחֹה`, `הָיֹה`, `עָטֹה`, `קָנֹה`, `שָׁתֹה`, `תָּלֹה` (the plene `*היוה` would mislead) and
-  the gated `עָרֹם` (§7.2) keep their spelling.
-- The inflected infinitive construct with qamaṣ qaṭan (`בְּנָשְׁפוֹ` 508, `וּבְקָרְבוֹ` 431, `בְּרָחְצְךָ` 739, `בשָׁלְפְךָ` 626)
-  is written without vav, as the folder writes it; the strict plene (`בנושפו`) was not imposed.
-- **770** (the self-test line, fully vocalized): `הַחֹדֶשׁ` strips to the defective `החדש` (elsewhere `החודש`); not
-  changed (renderings §10).
-- **96** `תִּקְוָה` (the name; §11.8.7: the table's string is defective, so it stays vocalized).
-- **256** `הנולדה` (the article with a past verb, biblical); **141** `בני־התמותה המאושרים שמתחת לאדמה` (the Greek's
-  order; the reader takes it right after 140).
-
-### Proposals for the coordinator (renderings, not edited)
-- **§11.13.2:** ἵλαος `מִתְרַצֶּה` (340; replaces `מְרֻצֶּה`); ἔξοχος `נִבְחָר` (773; replaces `יוֹצֵא־דֹּפֶן`).
-- **§11.10:** write the strong infinitives absolute plene (`אָסוֹף`, `שָׁמוֹר`, `לָקוֹחַ` …) and the imperative `עֲבוֹד`;
-  the self-test line WD 397 in §10 (`עֲבֹד`) could follow (it tests the gate, not the file).
-- **§7.3 / the tool:** `קרב` (κραδίη `קֶרֶב` / ὑσμίνη `קְרָב`), `מרעה` (νομός / "from evil"), `אם` (`אֵם`) and `נאות`
-  (`נְאוֹת` / `נָאוֹת`) as homograph traps where the line's lemma has the noun.
-- **The names table:** `כִּימָה` / `כְּסִיל` / `קִימָה` should be checked in headings too (597–617 and 618–645 had them
-  unvocalized and `verify` passed).
-
-### Open points for the user
-- **`אשה` vs `אישה`** (folder-wide, as §11.7.5): the WD writes `אשה` throughout (13 lines and the notes).
-- **The qamaṣ qaṭan in plene spelling** (`בנשפו` / `בנושפו`, `קרבנות` / `קורבנות`): the folder writes the short forms; a
-  folder-wide rule would settle it.
-- **`ענקים`** (73–74): if the reader stumbles, the construct `ענקי זהב` would remove the giants; not changed (meaning and word are right).
+- The translators' sections follow, each above the line `## Status (2026-10-24)
+First draft complete: all 831 lines of the base (1–828 + 169a–d; 310 is not in the base), by two translators in five
+parts (translator 1: 1–105, 106–285; translator 2: 286–413, 414–617, 618–828), merged into `../renderings.md` §11.8–§11.12;
+three review passes: (a) fidelity 11 lines, (b) consistency 47 lines (§11.13), (c) Hebrew 102 lines (§11.14). Intro
+written; `build WD`; `verify WD --strict` and `verify TH --strict` 0 problems; `check_bible_quotes.py` 0; parallels index
+rebuilt (359 WD rows); print stub `../../הדפסה/הסיודוס/2-מעשים-וימים.rtl.md`. Not yet reviewed by the user.
 
 ## Parallels index
-(generated by `../build_parallels_index.py` from the הקבלה bullets)
+Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
+
+### Parallels index (WD)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 2 | δεῦτε, Δίʼ ἐννέπετε, σφέτερον πατέρʼ ὑμνείουσαι· | בּוֹאנָה, ספרנה את זֵאוּס, ברננכן את אביכן; | `מְקִימִי מֵעָפָר דָּל` (תהלים קיג:ז) | equivalent | מזמור קיג בנוי כמו הפתיחה הזאת: קריאה לשבח (קיג:א–ג), שבח האל הנעלה מעל הכול (קיג:ד–ו), והאל המרים את השפל (קיג:ז–ח). אותה תבנית של המנון, בלי קשר בין השניים: תבנית שגורה של שירת הלל בעולם הקדום. השבעים לספר תהלים אינם בתיקייה, ולכן אין כאן השוואה ליוונית. |
+| 5 | ῥέα μὲν γὰρ βριάει, ῥέα δὲ βριάοντα χαλέπτει, | כי בקלות הוא מגביר, ובקלות הוא מקשה על הגובר, | `יְהוָה מוֹרִישׁ וּמַעֲשִׁיר; מַשְׁפִּיל אַף מְרוֹמֵם` (שמואל א ב:ז); `מֵקִים מֵעָפָר דָּל מֵאַשְׁפֹּת יָרִים אֶבְיוֹן` (שמואל א ב:ח); `לָשׂוּם שְׁפָלִים לְמָרוֹם` (איוב ה:יא) | equivalent | שירת חנה: האל המרים והמשפיל, בצמדי ניגודים, כמו כאן (5–7). וכן . ספר שמואל אינו בכלי השבעים שבתיקייה: אין השוואה ליוונית. הקשר הוא מוטיב, ולא לשון: גם במזמורים הבבליים לשמש ולמרדוך האל "מקים את השפל". הסיודוס, מן הצד היווני, מכיר את האל הזה כ"זאוס, ברצונו". |
+| 6 | ῥεῖα δʼ ἀρίζηλον μινύθει καὶ ἄδηλον ἀέξει, | ובקלות הוא ממעיט את הנראה לכל ומגדיל את העלום, | `הִשְׁפַּלְתִּי עֵץ גָּבֹהַּ הִגְבַּהְתִּי עֵץ שָׁפָל` (יחזקאל יז:כד); `הַשָּׁפָלָה הַגְבֵּהַּ וְהַגָּבֹהַּ הַשְׁפִּיל` (יחזקאל כא:לא) | equivalent | ובשבעים: `ὁ ταπεινῶν ξύλον ὑψηλὸν καὶ ὑψῶν ξύλον ταπεινὸν` (השבעים, יחזקאל יז:כד): אותו ריתמוס של הפיכה, במלים אחרות. ו־. אין קשר לשוני. |
+| 7 | ῥεῖα δέ τʼ ἰθύνει σκολιὸν καὶ ἀγήνορα κάρφει | ובקלות הוא מיישר את העקום ומייבש את האמיץ – | `וְהָיָה הֶעָקֹב לְמִישׁוֹר` (ישעיהו מ:ד) | equivalent | ובשבעים: `καὶ ἔσται πάντα τὰ σκολιὰ εἰς εὐθεῖαν` (השבעים, ישעיהו מ:ד): σκολιός – מלת הסיודוס כאן – היא מלת השבעים ל"עקוב", וההפך – "ישר" (εὐθύς, כמו ἰθύς של הסיודוס: שתי צורות של אותה מלה). זהות לשונית (הסוג א). |
+| 7 | ῥεῖα δέ τʼ ἰθύνει σκολιὸν καὶ ἀγήνορα κάρφει | ובקלות הוא מיישר את העקום ומייבש את האמיץ – | `מְעֻוָּת לֹא יוּכַל לִתְקֹן` (קהלת א:טו); `כִּי מִי יוּכַל לְתַקֵּן אֵת אֲשֶׁר עִוְּתוֹ` (קהלת ז:יג) | divergence | קהלת מתייאש מן העקום; כאן זאוס מיישר אותו "בקלות". |
+| 7 | ῥεῖα δέ τʼ ἰθύνει σκολιὸν καὶ ἀγήνορα κάρφει | ובקלות הוא מיישר את העקום ומייבש את האמיץ – | `הוֹבַשְׁתִּי עֵץ לָח` (יחזקאל יז:כד) | equivalent | ובשבעים `ξηραίνων ξύλον χλωρὸν` (השבעים, יחזקאל יז:כד): האל מייבש את הרענן – כמו κάρφω כאן; המלה היוונית אחרת. |
+| 8 | Ζεὺς ὑψιβρεμέτης, ὃς ὑπέρτατα δώματα ναίει. | זאוס הרועם ממרום, אשר גר בארמונות העליונים. | `הַמַּגְבִּיהִי לָשָׁבֶת` (תהלים קיג:ה) | equivalent | האל היושב במרום (קיג:ה), שמשם הוא רואה ומרים את הדל (קיג:ז): גם כאן, הגר "בארמונות העליונים" הוא שמשפיל את היהיר. תבנית של שירת הלל, ולא קשר. |
+| 9 | κλῦθι ἰδὼν ἀίων τε, δίκῃ δʼ ἴθυνε θέμιστας | הקשב – בהביטך ובשומעך – ובמשפט יישר את הדינים, | `הֲשֹׁפֵט כָּל הָאָרֶץ לֹא יַעֲשֶׂה מִשְׁפָּט` (בראשית יח:כה) | equivalent | ובשבעים: `ὁ κρίνων πᾶσαν τὴν γῆν οὐ ποιήσεις κρίσιν` (השבעים, בראשית יח:כה): אל עליון כשופט כל הארץ, שאליו פונה האדם. המלים היווניות אחרות (κρίνω, κρίσις; כאן δίκη, θέμιστες): מוטיב, לא לשון. |
+| 11 | οὐκ ἄρα μοῦνον ἔην Ἐρίδων γένος, ἀλλʼ ἐπὶ γαῖαν | לא יחיד, אם כן, היה גזע מְדָנִים, אלא על פני הארץ | `וּמְשַׁלֵּחַ מְדָנִים בֵּין אַחִים` (משלי ו:יט) | equivalent | "מדנים" (ברבים של `מָדוֹן`) המשולחים "בין אחים": בדיוק עניינו של השיר, ריב בין שני אחים על נחלה (37). ובשבעים: `καὶ ἐπιπέμπει κρίσεις ἀνὰ μέσον ἀδελφῶν` (השבעים, משלי ו:יט) – השבעים תרגמו `מְדָנִים` "משפטים" (κρίσεις): הריב בין האחים נעשה אצלם דין, כמו אצל הסיודוס (35–39). המגע הוא דרך העברית בלבד (הסוג ב): המלה של הסיודוס היא ἔρις. |
+| 15 | σχετλίη· οὔτις τήν γε φιλεῖ βροτός, ἀλλʼ ὑπʼ ἀνάγκης | האכזרית: אף בן אנוש אינו אוהב אותה, אלא תחת הכרח, | `אַכְזְרִיּוּת חֵמָה וְשֶׁטֶף אָף; וּמִי יַעֲמֹד לִפְנֵי קִנְאָה` (משלי כז:ד) | equivalent | "אכזריות" לצד "קנאה", כמו כאן: מדון האכזרית (15) לצד הקנאה הטובה (23). ובשבעים: `ἀλλ’ οὐδένα ὑφίσταται ζῆλος` (השבעים, משלי כז:ד) – `קִנְאָה` היא ζῆλος, המלה של הסיודוס ל־ζηλοῖ (23): זהות לשונית (הסוג א). אבל במשלי הקנאה קשה מן האכזריות; אצל הסיודוס היא דווקא המדון הטובה. |
+| 20 | ἥτε καὶ ἀπάλαμόν περ ὁμῶς ἐπὶ ἔργον ἔγειρεν. | והיא מעוררת למלאכה גם את רפה־הידיים. | `וְהוּא יָגֵעַ וּרְפֵה יָדַיִם` (שמואל ב יז:ב) | equivalent | "רפה ידיים" – הניב העברי לחסר הכוח והמעשה, כמו ἀπάλαμος. |
+| 20 | ἥτε καὶ ἀπάλαμόν περ ὁμῶς ἐπὶ ἔργον ἔγειρεν. | והיא מעוררת למלאכה גם את רפה־הידיים. | `הַכְּסִיל חֹבֵק אֶת יָדָיו וְאֹכֵל אֶת בְּשָׂרוֹ` (קהלת ד:ה) | equivalent | הבטלן שידיו שלובות; בקהלת הוא בא מיד אחרי "קנאת איש מרעהו" (ד:ד, ראו 23), כמו כאן. אין קשר. |
+| 21 | εἰς ἕτερον γάρ τίς τε ἰδὼν ἔργοιο χατίζει | כי אדם, משהביט אל האחר, מתאווה למלאכה – | `מִתְאַוָּה וָאַיִן נַפְשׁוֹ עָצֵל; וְנֶפֶשׁ חָרֻצִים תְּדֻשָּׁן` (משלי יג:ד) | equivalent | העצל מתאווה ואין לו, והחרוצים שבעים: אותה כלכלה של עבודה. ובשבעים: `ἐν ἐπιθυμίαις ἐστὶν πᾶς ἀεργός` (השבעים, משלי יג:ד) – השבעים תרגמו `עָצֵל` ב־ἀεργός, מלת הסיודוס לבטלן (44, 303–311): זהות לשונית (הסוג א). אצל הסיודוס התאווה עצמה מעירה למלאכה; במשלי היא נשארת ריקה. |
+| 22 | πλούσιον, ὃς σπεύδει μὲν ἀρώμεναι ἠδὲ φυτεύειν | אל העשיר, הממהר לחרוש ולטעת | `וַיִּטַּע יְהוָה אֱלֹהִים גַּן בְּעֵדֶן מִקֶּדֶם` (בראשית ב:ח) | equivalent | ובשבעים: `Καὶ ἐφύτευσεν κύριος ὁ θεὸς παράδεισον` (השבעים, בראשית ב:ח): φυτεύω הוא מלת השבעים ל`וַיִּטַּע`, ולכן `נָטַע` (זהות לשונית, הסוג א). המגע הוא במלה בלבד: שם האל נוטע גן, כאן האיכר העשיר נוטע כרם ועצים. |
+| 23 | οἶκόν τʼ εὖ θέσθαι· ζηλοῖ δέ τε γείτονα γείτων | ולשים היטב את ביתו; והשכן מקנא בשכן | `וְרָאִיתִי אֲנִי אֶת כָּל עָמָל וְאֵת כָּל כִּשְׁרוֹן הַמַּעֲשֶׂה כִּי הִיא קִנְאַת אִישׁ מֵרֵעֵהוּ` (קהלת ד:ד); `גַּם זֶה הֶבֶל וּרְעוּת רוּחַ` (קהלת ד:ד) | equivalent | ההקבלה החזקה ביותר של הקטע: כל עמל וכל כשרון מעשה באים מקנאת אדם ברעהו – זו מדון הטובה של הסיודוס, כמעט במלים אלה. ההבדל הוא בהערכה: קהלת מוסיף , והסיודוס: "טובה מדון זו לבני אנוש" (24). ובקהלת באים מיד אחר כך הבטלן (ד:ה, ראו 20) ו"החצי הרב מן השלם" (ד:ו, ראו 40) – אותו רצף רעיונות. ספר קהלת אינו בכלי השבעים שבתיקייה. מסורת חכמה משותפת על עבודה וקנאה, בלי קשר. |
+| 23 | οἶκόν τʼ εὖ θέσθαι· ζηλοῖ δέ τε γείτονα γείτων | ולשים היטב את ביתו; והשכן מקנא בשכן | `וַתְּקַנֵּא רָחֵל בַּאֲחֹתָהּ` (בראשית ל:א); `וַיְקַנְאוּ אֹתוֹ פְּלִשְׁתִּים` (בראשית כו:יד) | equivalent | ובשבעים: `καὶ ἐζήλωσεν Ραχηλ τὴν ἀδελφὴν αὐτῆς` (השבעים, בראשית ל:א); וגם  – ובשבעים `ἐζήλωσαν δὲ αὐτὸν οἱ Φυλιστιιμ` (השבעים, בראשית כו:יד): ζηλόω הוא מלת השבעים ל`קִנֵּא` (הסוג א), ובבראשית כו:יד – קנאת השכנים ברכושו של איכר עשיר, שזרע וקצר מאה שערים (כו:יב). במקרא הקנאה הזאת מולידה ריב (סתימת הבארות, כו:טו); אצל הסיודוס – מאמץ. |
+| 24 | εἰς ἄφενος σπεύδοντʼ· ἀγαθὴ δʼ Ἔρις ἥδε βροτοῖσιν. | הממהר אל העושר; טובה מדון זו לבני אנוש. | `נִבְהָל לַהוֹן אִישׁ רַע עָיִן` (משלי כח:כב) | equivalent | ובשבעים: `σπεύδει πλουτεῖν ἀνὴρ βάσκανος` (השבעים, משלי כח:כב): "ממהר להתעשר" – σπεύδω ו־πλουτέω, המלים של הסיודוס (22, 24: σπεύδει, πλούσιον, εἰς ἄφενος σπεύδοντα) – והשבעים קוראים לו "בעל עין רעה" (βάσκανος). במשלי הממהר אל העושר הוא רע עין; אצל הסיודוס הוא דוגמה טובה לשכנו. זהות לשונית (הסוג א) והערכה הפוכה. |
+| 25 | καὶ κεραμεὺς κεραμεῖ κοτέει καὶ τέκτονι τέκτων, | וגם הקדר כועס על הקדר, והֶחָרָשׁ על החרש, | `אִישׁ אֶת רֵעֵהוּ יַעְזֹרוּ; וּלְאָחִיו יֹאמַר חֲזָק` (ישעיהו מא:ו); `וַיְחַזֵּק חָרָשׁ אֶת צֹרֵף` (ישעיהו מא:ז) | equivalent | ובשבעים: `Ἴσχυσεν ἀνὴρ τέκτων καὶ χαλκεὺς` (השבעים, ישעיהו מא:ז): τέκτων היא מלת השבעים ל`חָרָשׁ`, ולכן `חָרָשׁ` (הסוג א). ובישעיהו האומנים עוזרים זה לזה (ובלעג: בעשיית פסל); אצל הסיודוס אומן נוטר לאומן – וזה טוב. |
+| 25 | καὶ κεραμεὺς κεραμεῖ κοτέει καὶ τέκτονι τέκτων, | וגם הקדר כועס על הקדר, והֶחָרָשׁ על החרש, | `הַפְכְּכֶם אִם כְּחֹמֶר הַיֹּצֵר יֵחָשֵׁב` (ישעיהו כט:טז) | divergence | ובשבעים: `οὐχ ὡς ὁ πηλὸς τοῦ κεραμέως λογισθήσεσθε; μὴ ἐρεῖ τὸ πλάσμα τῷ πλάσαντι` (השבעים, ישעיהו כט:טז): κεραμεύς – המלה של הסיודוס – היא מלת השבעים ל`יֹצֵר`, הקדר, והם מחברים אותה ל־πλάσσω ("ליצור"), הפועל של יצירת האשה (70). כאן העברית אינה אומרת `יוֹצֵר`: השורש יצר שמור ל־πλάσσω (`../renderings.md` §7.2), כדי שהאשה, ורק היא, "תיוצר" מן האדמה. הקשר נרשם (הסוג א בצורה), ולא נכפה על השורה. |
+| 26 | καὶ πτωχὸς πτωχῷ φθονέει καὶ ἀοιδὸς ἀοιδῷ. | והקבצן – צרה עינו בקבצן, והמשורר במשורר. | `אַל-תִּלְחַם אֶת-לֶחֶם רַע עָיִן` (משלי כג:ו) | equivalent | "רע עין" הוא הניב העברי למי שמקנא ואינו נותן, כמו φθονέω; ובחכמה המאוחרת "צר עין". |
+| 26 | καὶ πτωχὸς πτωχῷ φθονέει καὶ ἀοιδὸς ἀοιδῷ. | והקבצן – צרה עינו בקבצן, והמשורר במשורר. | `נִבְהָל לַהוֹן אִישׁ רַע עָיִן` (משלי כח:כב) | equivalent | ראו 24. אין קשר; הניב העברי בא כדי להבדיל את φθονέω מ־ζηλόω (23) ומ־κοτέω (25). |
+| 27 | ὦ Πέρση, σὺ δὲ ταῦτα τεῷ ἐνικάτθεο θυμῷ, | הוֹ פֶּרְסֵס, ואתה – שים את אֵלֶּה בלבך, | `וְשַׂמְתֶּם אֶת דְּבָרַי אֵלֶּה עַל לְבַבְכֶם` (דברים יא:יח) | equivalent | אותה תנועה של המורה: "שים את הדברים בלבך". מטפורה שגורה של תורת חכמה, ולא קשר. |
+| 32 | ὡραῖος, τὸν γαῖα φέρει, Δημήτερος ἀκτήν. | שבעונתה, אשר נושאת הארץ – גרעיני דֶּמֶטֶר. | `כָּל עֵץ נֶחְמָד לְמַרְאֶה וְטוֹב לְמַאֲכָל` (בראשית ב:ט) | equivalent | ובשבעים: `πᾶν ξύλον ὡραῖον εἰς ὅρασιν καὶ καλὸν εἰς βρῶσιν` (השבעים, בראשית ב:ט): ὡραῖος הוא מלת השבעים ל`נֶחְמָד`; אצל הסיודוס הוא "שבעונתו" – זהות בצורה, לא במובן (הסוג א בצורה). לכן `נֶחְמָד` אינו בשורה (`../renderings.md` §7.1), והתרגום הולך אחרי המובן: `שֶׁבְּעוֹנָתָהּ`. |
+| 37 | ἤδη μὲν γὰρ κλῆρον ἐδασσάμεθʼ, ἀλλὰ τὰ πολλὰ | כי כבר חילקנו את האחוזה, אך את רובה | `אַל נָא תְהִי מְרִיבָה בֵּינִי וּבֵינֶךָ` (בראשית יג:ח) | equivalent | אברם ולוט, שני קרובים ששדותיהם צרים להם (יג:ו), מחלקים את הארץ בלי ריב; ובשבעים: `Μὴ ἔστω μάχη ἀνὰ μέσον ἐμοῦ καὶ σοῦ` (השבעים, בראשית יג:ח) – μάχη, לא ἔρις או νεῖκος. |
+| 37 | ἤδη μὲν γὰρ κλῆρον ἐδασσάμεθʼ, ἀλλὰ τὰ πολλὰ | כי כבר חילקנו את האחוזה, אך את רובה | `וּבְתוֹךְ אַחִים יַחֲלֹק נַחֲלָה` (משלי יז:ב) | equivalent | חלוקת נחלה בין אחים כעניין שגור בחכמת המשפחה; ובשבעים `ἐν δὲ ἀδελφοῖς διελεῖται μέρη` (השבעים, משלי יז:ב). |
+| 37 | ἤδη μὲν γὰρ κλῆρον ἐδασσάμεθʼ, ἀλλὰ τὰ πολλὰ | כי כבר חילקנו את האחוזה, אך את רובה | `לָתֶת לוֹ פִּי שְׁנַיִם בְּכֹל אֲשֶׁר יִמָּצֵא לוֹ` (דברים כא:יז) | equivalent | בתורה הבכור מקבל חלק כפול; ביוון הארכאית מחלקים בשווה, ואולי משום כך יש כאן ריב על "הרוב". מוטיב משותף של חברה חקלאית שבה הקרקע עוברת בירושה, בלי קשר. |
+| 39 | δωροφάγους, οἳ τήνδε δίκην ἐθέλουσι δίκασσαι. | אוכלי־המתנות, אשר רוצים לשפוט את המשפט הזה. | `וְלֹא תִקַּח שֹׁחַד כִּי הַשֹּׁחַד יְעַוֵּר עֵינֵי חֲכָמִים וִיסַלֵּף דִּבְרֵי צַדִּיקִם` (דברים טז:יט); `וְשֹׁחַד לֹא תִקָּח` (שמות כג:ח) | equivalent | ובשבעים: `οὐδὲ λήμψονται δῶρον· τὰ γὰρ δῶρα ἐκτυφλοῖ ὀφθαλμοὺς σοφῶν` (השבעים, דברים טז:יט); וכך  – `καὶ δῶρα οὐ λήμψῃ` (השבעים, שמות כג:ח): **δῶρα – "מתנות" – היא מלת השבעים ל`שֹׁחַד`**, והיא החצי הראשון של δωρο־φάγος. זהות לשונית (הסוג א): בעיני השבעים, מלכי הסיודוס הם "אוכלי שוחד". |
+| 39 | δωροφάγους, οἳ τήνδε δίκην ἐθέλουσι δίκασσαι. | אוכלי־המתנות, אשר רוצים לשפוט את המשפט הזה. | `רָאשֶׁיהָ בְּשֹׁחַד יִשְׁפֹּטוּ` (מיכה ג:יא); `כֻּלּוֹ אֹהֵב שֹׁחַד` (ישעיהו א:כג); `מַצְדִּיקֵי רָשָׁע עֵקֶב שֹׁחַד` (ישעיהו ה:כג); `וַיִּקְחוּ שֹׁחַד וַיַּטּוּ מִשְׁפָּט` (שמואל א ח:ג) | equivalent | ובשבעים `οἱ ἡγούμενοι αὐτῆς μετὰ δώρων ἔκρινον` (השבעים, מיכה ג:יא): השופטים בשוחד – הקרובים ביותר לשורה הזאת: שופטים, מתנות, משפט. וכן  – `ἀγαπῶντες δῶρα` (השבעים, ישעיהו א:כג);  – `ἕνεκεν δώρων` (השבעים, ישעיהו ה:כג);  – בני שמואל, השופטים. הנביאים והסיודוס – שני קולות מן אותו מאה (המאה השמינית–השביעית), כל אחד בארצו, נגד שופטים שלוקחים שוחד; בלי קשר ביניהם. |
+| 40 | νήπιοι, οὐδὲ ἴσασιν ὅσῳ πλέον ἥμισυ παντὸς | פתאים! אינם יודעים כמה רב החצי מן הכול, | `טוֹב מְלֹא כַף נָחַת מִמְּלֹא חָפְנַיִם עָמָל וּרְעוּת רוּחַ` (קהלת ד:ו) | equivalent | אותה פרדוקס: המעט עם שלווה טוב מן הכפול עם עמל וריב; ובקהלת היא באה מיד אחרי הקנאה (ד:ד) והבטלן (ד:ה) – ראו 20, 23. |
+| 40 | νήπιοι, οὐδὲ ἴσασιν ὅσῳ πλέον ἥμισυ παντὸς | פתאים! אינם יודעים כמה רב החצי מן הכול, | `טוֹב פַּת חֲרֵבָה וְשַׁלְוָה-בָהּ מִבַּיִת מָלֵא זִבְחֵי-רִיב` (משלי יז:א) | equivalent | ובשבעים: `ἢ οἶκος πλήρης … μετὰ μάχης` (השבעים, משלי יז:א): "פת חרבה" בשלום, מול בית מלא – וב"ריב" (`רִיב`): כמו פרסס, שזכה ב"רוב" בדרך של ריב. |
+| 40 | νήπιοι, οὐδὲ ἴσασιν ὅσῳ πλέον ἥμισυ παντὸς | פתאים! אינם יודעים כמה רב החצי מן הכול, | `טוֹב אֲרֻחַת יָרָק וְאַהֲבָה-שָׁם מִשּׁוֹר אָבוּס וְשִׂנְאָה-בוֹ` (משלי טו:יז) | equivalent | ראו 41. משלי "טוב … מ־" של חכמת המזרח, ובפתגם היווני; בלי קשר. |
+| 41 | οὐδʼ ὅσον ἐν μαλάχῃ τε καὶ ἀσφοδέλῳ μέγʼ ὄνειαρ. | ואף לא כמה גדולה התועלת שבחלמית ובעירית. | `הַקֹּטְפִים מַלּוּחַ עֲלֵי-שִׂיחַ` (איוב ל:ד) | equivalent | העניים המנודים אוכלים צמחי בר; ובשבעים `οἵτινες ἅλιμα ἦν αὐτῶν τὰ σῖτα` (השבעים, איוב ל:ד): המלוח (ἅλιμα) – מאכל העני. |
+| 41 | οὐδʼ ὅσον ἐν μαλάχῃ τε καὶ ἀσφοδέλῳ μέγʼ ὄνειαρ. | ואף לא כמה גדולה התועלת שבחלמית ובעירית. | `אִם-יֶשׁ-טַעַם בְּרִיר חַלָּמוּת` (איוב ו:ו) | equivalent | `חַלָּמוּת`, צמח שמזהים לעתים עם החלמית (והזיהוי שנוי במחלוקת); ושם דווקא חוסר הטעם של המאכל הדל. |
+| 41 | οὐδʼ ὅσον ἐν μαλάχῃ τε καὶ ἀσφοδέλῳ μέγʼ ὄνειαρ. | ואף לא כמה גדולה התועלת שבחלמית ובעירית. | `טוֹב אֲרֻחַת יָרָק וְאַהֲבָה-שָׁם מִשּׁוֹר אָבוּס וְשִׂנְאָה-בוֹ` (משלי טו:יז) | equivalent | ובשבעים `κρείσσων ξενισμὸς λαχάνων πρὸς φιλίαν καὶ χάριν ἢ παράθεσις μόσχων μετὰ ἔχθρας` (השבעים, משלי טו:יז): ארוחת ירק בשלום מול שור מפוטם בשנאה – כמו החלמית והעירית מול "הכל" שבריב. מוטיב משותף. |
+| 42 | κρύψαντες γὰρ ἔχουσι θεοὶ βίον ἀνθρώποισιν· | כי הָאֵלִים הסתירו ומחזיקים את המחיה מבני אדם: | `אֲרוּרָה הָאֲדָמָה בַּעֲבוּרֶךָ בְּעִצָּבוֹן תֹּאכְלֶנָּה כֹּל יְמֵי חַיֶּיךָ` (בראשית ג:יז); `בְּזֵעַת אַפֶּיךָ תֹּאכַל לֶחֶם` (בראשית ג:יט) | divergence | ההקבלה הגדולה של החלק: בשני הספרים האדם חי מעמל, כי פעם לא היה צריך – ובשניהם בגלל מעשה אחד בראשית (אצל הסיודוס – מרמת פרומתאוס, 48; בבראשית – אכילת העץ). ההבדלים: בבראשית האדמה מקוללת ונותנת קוץ ודרדר; אצל הסיודוס האלים "מסתירים" את המחיה, כמו הזרע הטמון באדמה, ורק העבודה חושפת אותה. ובשבעים: `ἐπικατάρατος ἡ γῆ ἐν τοῖς ἔργοις σου· ἐν λύπαις φάγῃ αὐτὴν` (השבעים, בראשית ג:יז) – השבעים קראו `בַּעֲבוּרֶךָ` כ"בעבודתך" (ἐν τοῖς ἔργοις σου): ἔργα, מלת השיר הזה (שמו "מעשים", Ἔργα) – הקללה "בעבודה". |
+| 42 | κρύψαντες γὰρ ἔχουσι θεοὶ βίον ἀνθρώποισιν· | כי הָאֵלִים הסתירו ומחזיקים את המחיה מבני אדם: | `כְּבֹד אֱלֹהִים הַסְתֵּר דָּבָר` (משלי כה:ב) | equivalent | ובשבעים: `Δόξα θεοῦ κρύπτει λόγον` (השבעים, משלי כה:ב): κρύπτω, מלת הסיודוס, לאל המסתיר (הסוג א). |
+| 42 | κρύψαντες γὰρ ἔχουσι θεοὶ βίον ἀνθρώποισιν· | כי הָאֵלִים הסתירו ומחזיקים את המחיה מבני אדם: | `וַיִּתְחַבֵּא הָאָדָם וְאִשְׁתּוֹ מִפְּנֵי יְהוָה אֱלֹהִים` (בראשית ג:ח) | divergence | ובשבעים: `καὶ ἐκρύβησαν ὅ τε Αδαμ καὶ ἡ γυνὴ αὐτοῦ ἀπὸ προσώπου κυρίου τοῦ θεοῦ` (השבעים, בראשית ג:ח): בבראשית האדם מסתתר מן האל (κρύπτω), כאן האל מסתיר מן האדם. מוטיב משותף של "בראשית החיים היו קלים", בלי קשר בין יוון לישראל; בשניהם מהדהדת מסורת מזרחית ישנה (באטרחסיס, האלים הצעירים עובדים עד שנברא האדם לעבוד במקומם). |
+| 43 | ῥηιδίως γάρ κεν καὶ ἐπʼ ἤματι ἐργάσσαιο, | כי בקלות היית עובד אף יום אחד, | `וְאָדָם אַיִן לַעֲבֹד אֶת הָאֲדָמָה` (בראשית ב:ה); `וְקַיִן הָיָה עֹבֵד אֲדָמָה` (בראשית ד:ב) | equivalent | ובשבעים: `καὶ ἄνθρωπος οὐκ ἦν ἐργάζεσθαι τὴν γῆν` (השבעים, בראשית ב:ה); וכן  – `Καιν δὲ ἦν ἐργαζόμενος τὴν γῆν` (השבעים, בראשית ד:ב): ἐργάζομαι הוא מלת השבעים ל`עָבַד`, ולכן `עָבַד` (חובה, `../renderings.md` §5–§6; הסוג א). השורה כאן מדמיינת עולם שבו "יום אחד" של עבודה מספיק לשנה; בבראשית העבודה היא מעיקר האדם עוד לפני החטא (ב:ה, ב:טו). |
+| 44 | ὥστε σε κεἰς ἐνιαυτὸν ἔχειν καὶ ἀεργὸν ἐόντα· | כך שיהיה לך אף לשנה, גם בהיותך בטלן; | `מִתְאַוָּה וָאַיִן נַפְשׁוֹ עָצֵל` (משלי יג:ד) | equivalent | ובשבעים `ἐν ἐπιθυμίαις ἐστὶν πᾶς ἀεργός` (השבעים, משלי יג:ד): ἀεργός, מלת הסיודוס, היא מלת השבעים ל`עָצֵל` (ראו 21; הסוג א). |
+| 46 | ἔργα βοῶν δʼ ἀπόλοιτο καὶ ἡμιόνων ταλαεργῶν. | ומלאכת הבקר הייתה נספית, ושל הפרדות סבלניות־המלאכה. | `הַאַף תִּסְפֶּה צַדִּיק עִם רָשָׁע` (בראשית יח:כג) | equivalent | ובשבעים: `Μὴ συναπολέσῃς δίκαιον μετὰ ἀσεβοῦς` (השבעים, בראשית יח:כג): ἀπόλλυμι (כאן בהרכב συν־) הוא מלת השבעים ל`סָפָה`; ולכן `נִסְפָּה` לבינוני ("לאבוד") ו`סָפָה` לפעיל – מלה אחת לאורך השיר (הסוג א בצורה; המובן כאן פשוט: העבודה "תאבד", לא תהיה עוד). |
+| 48 | ὅττι μιν ἐξαπάτησε Προμηθεὺς ἀγκυλομήτης· | על כי רימה אותו פְּרוֹמֵתֵאוּס עקום־התחבולות; | `הַנָּחָשׁ הִשִּׁיאַנִי וָאֹכֵל` (בראשית ג:יג) | divergence | ובשבעים: `Ὁ ὄφις ἠπάτησέν με, καὶ ἔφαγον` (השבעים, בראשית ג:יג): ἀπατάω – הפועל הפשוט של ἐξαπατάω שכאן – הוא מלת השבעים ל`הִשִּׁיא`. בשני הסיפורים מרמה אחת בראשית מביאה את העמל על בני האדם; אבל בבראשית המרמה היא של הנחש כלפי האשה, וכאן – של מיטיב בני האדם כלפי האל. אין קשר; המגע הוא מלה יוונית אחת. |
+| 50 | κρύψε δὲ πῦρ· τὸ μὲν αὖτις ἐὺς πάις Ἰαπετοῖο | והסתיר את האש; אותה, שוב, בנו הטוב של יָאפֶּטוֹס | `בְּנֵי יֶפֶת גֹּמֶר וּמָגוֹג וּמָדַי וְיָוָן` (בראשית י:ב) | absent | ובשבעים `Υἱοὶ Ιαφεθ· Γαμερ καὶ Μαγωγ καὶ Μαδαι καὶ Ιωυαν` (השבעים, בראשית י:ב): ההשוואה הנודעת בין Ἰαπετός ובין `יֶפֶת`, אבי יוון (`יָוָן`) – השבעים כותבים את שמו Ιαφεθ, לא Ιαπετος, והקשר בין השמות שנוי במחלוקת. השם הנכון בשורה הוא `יָאפֶּטוֹס`, לעולם לא `יֶפֶת` (`../renderings.md` §2.3). |
+| 58 | τέρπωνται κατὰ θυμὸν ἑὸν κακὸν ἀμφαγαπῶντες. | יתענגו בלבם, בחבקם באהבה את רעתם. | `כִּי נֹפֶת תִּטֹּפְנָה שִׂפְתֵי זָרָה; וְחָלָק מִשֶּׁמֶן חִכָּהּ` (משלי ה:ג); `וְאַחֲרִיתָהּ מָרָה כַלַּעֲנָה` (משלי ה:ד) | equivalent | האשה הזרה: מתוקה בתחילה ומרה בסוף, והגבר "מחבק" את רעתו. ובשבעים `ὕστερον μέντοι πικρότερον χολῆς εὑρήσεις` (השבעים, משלי ה:ד). אותה תבנית של אזהרה מן התענוג המזיק; אבל במשלי זו אשה אחת, וכאן – האשה כמין. |
+| 59 | ὣς ἔφατʼ· ἐκ δʼ ἐγέλασσε πατὴρ ἀνδρῶν τε θεῶν τε. | כך אמר; ופרץ בצחוק אבי האנשים והָאֵלִים. | `יוֹשֵׁב בַּשָּׁמַיִם יִשְׂחָק` (תהלים ב:ד) | equivalent | האל צוחק לבני האדם ממרומיו, בלעג למי שמתקומם נגדו. גם כאן צחוק של אל על מי שחשב להערים עליו. אותו דימוי של אל עליון, בלי קשר; ספר תהלים בשבעים, למזמור זה, אינו בתיקייה. |
+| 61 | γαῖαν ὕδει φύρειν, ἐν δʼ ἀνθρώπου θέμεν αὐδὴν | לגבל אדמה במים, ולשים בה נִיב אדם | `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה וַיִּפַּח בְּאַפָּיו נִשְׁמַת חַיִּים` (בראשית ב:ז) | equivalent | אותו רצף: חומר מן האדמה, ואחר כך נשימה או קול שהופכים אותו לחי. ובשבעים: `χοῦν ἀπὸ τῆς γῆς` (השבעים, בראשית ב:ז): γῆ / γαῖα כחומר, ולכן `אֲדָמָה` (`../renderings.md` §5–§6). ההבדלים: בבראשית `עָפָר` (χοῦς; כאן אין κόνις, ולכן `עָפָר` אינו בשורה), בלי מים, ובלי "קול" אלא `נִשְׁמַת חַיִּים`; כאן יש מים, וה"ניב" ניתן מבחוץ, כמו לפסל. |
+| 61 | γαῖαν ὕδει φύρειν, ἐν δʼ ἀνθρώπου θέμεν αὐδὴν | לגבל אדמה במים, ולשים בה נִיב אדם | `זְכָר-נָא כִּי-כַחֹמֶר עֲשִׂיתָנִי` (איוב י:ט); `מֵחֹמֶר קֹרַצְתִּי גַם-אָנִי` (איוב לג:ו) | equivalent | האדם עשוי חומר, כמו כלי של קדר. ובמסורת המסופוטמית: בְּאַתְרַחֲסִיס בוללת אֵלַת הלידה טיט עם דם של אל ורוק האלים (`סיפורי-המבול-המסופוטמיים/1-אתרחסיס`, I 207–230: `בללה נינתו טיט`, `רוק הטילו על הטיט`), ובאפוס גילגמש ארורו "קורצת טיט" ליצור את אנקידו (`אפוס-גילגמש`, I 100: `טיט קרצה, השליכה בשדה`) – מוטיב מזרחי עתיק של יצירת אדם מטיט לח, שהגיע ליוון, ולא דרך ישראל. |
+| 62 | καὶ σθένος, ἀθανάτῃς δὲ θεῇς εἰς ὦπα ἐίσκειν | וְחוֹסֶן, ולדמות אותה בפניה לָאֵלוֹת בנות־האלמוות – | `נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ כִּדְמוּתֵנוּ` (בראשית א:כו) | divergence | ובשבעים: `Ποιήσωμεν ἄνθρωπον κατ’ εἰκόνα ἡμετέραν καὶ καθ’ ὁμοίωσιν` (השבעים, בראשית א:כו): εἰκών, "צלם" של השבעים, היא מן אותו שורש יווני של ἐίσκω שכאן (ἔοικα "להיות דומה"; ומאותו שורש ἴκελος, `דְּמוּי`, 71). שתי יצירות "בדמות" אלוהית: בבראשית האדם – זכר ונקבה – נברא בצלם האל כדי לשלוט בארץ; כאן האשה מעוצבת "בפנים" כמו אלות כדי לפתות. ההבדל העמוק: אצל הסיודוס הדמיון לאלות הוא יופי מטעה, תחפושת; בבראשית – מעמד. מגע של שורש יווני, לא של מלה; וגם `לְדַמּוֹת` העברית מעלה `כִּדְמוּתֵנוּ` – הקשר הזה דרך העברית בלבד (הסוג ב), כי ἐίσκω אינו ὁμοίωσις. |
+| 64 | ἔργα διδασκῆσαι, πολυδαίδαλον ἱστὸν ὑφαίνειν· | ללמדה מלאכות, לארוג מַסֶּכֶת רבת־מעשי־אמן; | `וְכָל אִשָּׁה חַכְמַת לֵב בְּיָדֶיהָ טָווּ` (שמות לה:כה); `מִלֵּא אֹתָם חָכְמַת לֵב לַעֲשׂוֹת כָּל מְלֶאכֶת חָרָשׁ וְחֹשֵׁב וְרֹקֵם … וְאֹרֵג` (שמות לה:לה) | equivalent | ובשבעים: `ἐνέπλησεν αὐτοὺς σοφίας … ποιῆσαι τὰ ἔργα τοῦ ἁγίου καὶ τὰ ὑφαντὰ … ὑφᾶναι` (השבעים, שמות לה:לה): ἔργα ו־ὑφαίνω – המלים של הסיודוס כאן – למלאכת הארג שהאל נותן בחכמה (הסוג א). בשני המקומות האריגה היא מתנה אלוהית של חכמה; אצל הסיודוס היא מתנת אתנה לאשה הראשונה – כישרון אמיתי, באמצע רשימה של מתנות מסוכנות. |
+| 64 | ἔργα διδασκῆσαι, πολυδαίδαλον ἱστὸν ὑφαίνειν· | ללמדה מלאכות, לארוג מַסֶּכֶת רבת־מעשי־אמן; | `יָדֶיהָ שִׁלְּחָה בַכִּישׁוֹר; וְכַפֶּיהָ תָּמְכוּ פָלֶךְ` (משלי לא:יט) | equivalent | אשת החיל; השוו TH 593 והערתו. |
+| 64 | ἔργα διδασκῆσαι, πολυδαίδαλον ἱστὸν ὑφαίνειν· | ללמדה מלאכות, לארוג מַסֶּכֶת רבת־מעשי־אמן; | `אִם תַּאַרְגִי אֶת שֶׁבַע מַחְלְפוֹת רֹאשִׁי עִם הַמַּסָּכֶת` (שופטים טז:יג) | equivalent | `מַסֶּכֶת` היא האריג שעל הנול. |
+| 65 | καὶ χάριν ἀμφιχέαι κεφαλῇ χρυσέην Ἀφροδίτην | ולצקת חן סביב ראשה – את אַפְרוֹדִיטָה הזהובה – | `הוּצַק חֵן בְּשִׂפְתוֹתֶיךָ` (תהלים מה:ג) | equivalent | "חן" שנוצק על אדם, ביום כלולותיו: אותו דימוי בדיוק (χέω `יָצַק`, χάρις `חֵן`). מזמור מה הוא שיר חתונה של מלך – וגם כאן האשה מוכנה כמו כלה. השבעים למזמור זה אינם בתיקייה. מוטיב משותף, בלי קשר. |
+| 70 | αὐτίκα δʼ ἐκ γαίης πλάσσεν κλυτὸς Ἀμφιγυήεις | ומיד מן האדמה יצר צוֹלֵעַ־הָרַגְלַיִים המהולל | `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה` (בראשית ב:ז) | equivalent | ובשבעים: `καὶ ἔπλασεν ὁ θεὸς τὸν ἄνθρωπον χοῦν ἀπὸ τῆς γῆς` (השבעים, בראשית ב:ז): **πλάσσω – הפועל כאן – הוא מלת השבעים ל`וַיִּיצֶר`**, ו־ἐκ γαίης – "מן האדמה" – הוא כמעט `ἀπὸ τῆς γῆς` של השבעים. זהות לשונית (הסוג א; `../renderings.md` §6, חובה): `יָצַר`. ובישעיהו כט:טז השבעים מחברים את היוצר (κεραμεύς, ראו 25) לפועל הזה: `μὴ ἐρεῖ τὸ πλάσμα τῷ πλάσαντι` (השבעים, ישעיהו כט:טז). |
+| 70 | αὐτίκα δʼ ἐκ γαίης πλάσσεν κλυτὸς Ἀμφιγυήεις | ומיד מן האדמה יצר צוֹלֵעַ־הָרַגְלַיִים המהולל | `וַיִּבֶן יְהוָה אֱלֹהִים אֶת הַצֵּלָע אֲשֶׁר לָקַח מִן הָאָדָם לְאִשָּׁה` (בראשית ב:כב) | divergence | בבראשית האדם (הזכר) נוצר מן האדמה, והאשה נבנית מגופו; אצל הסיודוס – האשה נוצרת מן האדמה, והגברים כבר קיימים (90), ומוצאם אינו מסופר. אותו פועל, ובו ההיפוך הגדול של שני הסיפורים (ראו TH 571). |
+| 72 | ζῶσε δὲ καὶ κόσμησε θεὰ γλαυκῶπις Ἀθήνη· | וחגרה אותה וקישטה הָאֵלָה, אַתֵנָה בהירת־העיניים; | `וָאֶעְדֵּךְ עֶדִי; וָאֶתְּנָה צְמִידִים עַל יָדַיִךְ וְרָבִיד עַל גְּרוֹנֵךְ` (יחזקאל טז:יא) | equivalent | ובשבעים: `καὶ ἐκόσμησά σε κόσμῳ καὶ περιέθηκα ψέλια περὶ τὰς χεῖράς σου καὶ κάθεμα περὶ τὸν τράχηλόν σου` (השבעים, יחזקאל טז:יא): κοσμέω ו־κόσμος – המלים כאן וב־76 – לקישוט הנערה בידי האל, וגם שם רביד על הצוואר (כאן: ענקים, 74). זהות לשונית (הסוג א). ובשני הסיפורים הקישוט האלוהי מוביל לבגידה – ביחזקאל של הנערה, כאן של המתנה עצמה. אין קשר. |
+| 74 | ὅρμους χρυσείους ἔθεσαν χροΐ· ἀμφὶ δὲ τήν γε | שמו ענקים זהובים על עורה; ואותה, מסביב, | `וַעֲנָקִים לְגַרְגְּרֹתֶךָ` (משלי א:ט); `בְּאַחַד עֲנָק מִצַּוְּרֹנָיִךְ` (שיר השירים ד:ט) | equivalent | הענק על צוואר הנערה, ובשיר השירים – על צוואר הכלה. מוטיב משותף של תכשיטי הכלה. |
+| 78 | ψεύδεά θʼ αἱμυλίους τε λόγους καὶ ἐπίκλοπον ἦθος | שקרים ואמרים חלקלקים ומנהג גנבני | `שְׂפַת חֲלָקוֹת בְּלֵב וָלֵב יְדַבֵּרוּ` (תהלים יב:ג); `בְּחֵלֶק שְׂפָתֶיהָ תַּדִּיחֶנּוּ` (משלי ז:כא) | equivalent | "חלקות", "חלק שפתיה": הדיבור החלקלק המפתה, ובמשלי ז – דיבורה של האשה הזרה (ובשבעים `βρόχοις τε τοῖς ἀπὸ χειλέων` (השבעים, משלי ז:כא) – "במלכודות שפתיה", מלים אחרות). מוטיב משותף; `חֲלַקְלַק` הוא המלה העברית הטבעית ל־αἱμύλος (TH 890: `באמרים חלקלקים`), לא בחירה של הד. |
+| 80 | θῆκε θεῶν κῆρυξ, ὀνόμηνε δὲ τήνδε γυναῖκα | שם כרוז הָאֵלִים, וקרא לאשה הזאת | `לְזֹאת יִקָּרֵא אִשָּׁה כִּי מֵאִישׁ לֻקֳחָה זֹּאת` (בראשית ב:כג); `וַיִּקְרָא הָאָדָם שֵׁם אִשְׁתּוֹ חַוָּה כִּי הִוא הָיְתָה אֵם כָּל חָי` (בראשית ג:כ) | divergence | ובשבעים: `καὶ ἐκάλεσεν Αδαμ τὸ ὄνομα τῆς γυναικὸς αὐτοῦ Ζωή, ὅτι αὕτη μήτηρ πάντων τῶν ζώντων` (השבעים, בראשית ג:כ): שתי הנשים הראשונות מקבלות שם עם הסבר ("כי"; כאן ὅτι, 81 – אותה מלה של השבעים). בבראשית האיש קורא לה שם, ופירושו חיים ("אם כל חי"); כאן האל השליח קורא לה שם, ופירושו מתנה – ומתנה שהיא פגע (82). השמות היווניים אחרים (ὀνομαίνω, καλέω): מוטיב, וזהות של מלת הסיבה בלבד. |
+| 85 | δῶρον ἄγοντα, θεῶν ταχὺν ἄγγελον· οὐδʼ Ἐπιμηθεὺς | מביא את המתנה, שליח הָאֵלִים הזריז; ואפימתאוס לא | `וַיִּמְצָאָהּ מַלְאַךְ יְהוָה עַל עֵין הַמַּיִם` (בראשית טז:ז) | absent | ובשבעים: `Εὗρεν δὲ αὐτὴν ἄγγελος κυρίου` (השבעים, בראשית טז:ז): ἄγγελος, מלת הסיודוס להרמס, היא מלת השבעים ל`מַלְאָךְ`. התרגום אומר `שָׁלִיחַ` (כמו בכל התיקייה, שבה `מַלְאָךְ` שמור), כי הרמס הוא אל, לא "מלאך" במובן המקראי המאוחר; הזהות הלשונית נרשמת כאן (הסוג א בצורה). |
+| 86 | ἐφράσαθʼ, ὥς οἱ ἔειπε Προμηθεὺς μή ποτε δῶρον | שם לב לכך שאמר לו פרומתאוס, שלא יקבל אף פעם מתנה | `וְשֹׁחַד לֹא תִקָּח` (שמות כג:ח) | equivalent | ובשבעים `καὶ δῶρα οὐ λήμψῃ` (השבעים, שמות כג:ח): "אל תקבל מתנות" – אזהרת פרומתאוס לאחיו בלשון של השבעים לשוחד. השוו 39: האחד עונה לשני בתוך השיר – המלכים "אוכלים מתנות" ואפימתאוס "מקבל מתנה", ושניהם לרעתם. מגע של מלה יוונית אחת (δῶρον); הרעיון – "אל תקבל מתנה מן החזק" – משותף לחכמה העממית. |
+| 89 | αὐτὰρ ὃ δεξάμενος, ὅτε δὴ κακὸν εἶχʼ, ἐνόησεν. | אך הוא, משקיבל (אותה) – כשכבר הייתה הרעה בידו – הבין. | `עָרוּם רָאָה רָעָה` (משלי כב:ג); `וּפְתָיִים עָבְרוּ וְנֶעֱנָשׁוּ` (משלי כב:ג) | equivalent | הנבון רואה את הרעה מראש ונסתר, והפתאים עוברים ונענשים: זוג האחים פרומתאוס ואפימתאוס, ברוח משלי, ממש. ובשבעים: `οἱ δὲ ἄφρονες παρελθόντες ἐζημιώθησαν` (השבעים, משלי כב:ג). מוטיב משותף של חכמה, בלי קשר. |
+| 90 | Πρὶν μὲν γὰρ ζώεσκον ἐπὶ χθονὶ φῦλʼ ἀνθρώπων | כי קודם לכן היו חיים על פני האדמה שבטי בני האדם | `וַיִּהְיוּ שְׁנֵיהֶם עֲרוּמִּים הָאָדָם וְאִשְׁתּוֹ; וְלֹא יִתְבֹּשָׁשׁוּ` (בראשית ב:כה) | divergence | בבראשית, "קודם" הוא זמן של איש ואשה יחד בגן; כאן "קודם" הוא זמן של **גברים בלבד** – "שבטי בני האדם" חיים בלי רעות, והאשה היא שבאה ומשנה. ההקבלה הגדולה של הקטע (90–92 ↔ בראשית ג:טז–יט): שני סיפורים על מצב ראשון בלי עמל ומחלה, שאבד בגלל מעשה הכרוך באשה. ההבדלים עמוקים: בבראשית המעשה הוא חטא של שניהם, והעונש הוא דבר האל; כאן אין חטא של בני האדם כלל – הם קורבנות של מאבק בין פרומתאוס לזאוס, והאשה היא כלי של האל. מוטיב משותף (גם בתור הזהב של הסיודוס עצמו, 109–120), בלי קשר. |
+| 91 | νόσφιν ἄτερ τε κακῶν καὶ ἄτερ χαλεποῖο πόνοιο | הרחק מרעות ובלעדיהן, ובלי עמל אָנוּשׁ | `בְּזֵעַת אַפֶּיךָ תֹּאכַל לֶחֶם` (בראשית ג:יט); `כִּי-אָדָם לְעָמָל יוּלָּד` (איוב ה:ז) | divergence | העמל כעונש; וכן  – ובשבעים `ἀλλὰ ἄνθρωπος γεννᾶται κόπῳ` (השבעים, איוב ה:ז): באיוב האדם נולד לעמל מראשיתו; אצל הסיודוס היה זמן בלי עמל. השבעים לבראשית ג:יט אומרים ἱδρώς, ולא πόνος: המגע הוא במוטיב בלבד (`זֵעָה` שמורה ל־ἱδρώς, WD 289). |
+| 92 | νούσων τʼ ἀργαλέων, αἵ τʼ ἀνδράσι Κῆρας ἔδωκαν. | ומחלות קשות, אשר נותנות לאנשים את הַקֵּרוֹת. | `כָּל הַמַּחֲלָה אֲשֶׁר שַׂמְתִּי בְמִצְרַיִם לֹא אָשִׂים עָלֶיךָ` (שמות טו:כו); `וְכָל מַדְוֵי מִצְרַיִם הָרָעִים` (דברים ז:טו) | equivalent | ובשבעים: `πᾶσαν νόσον, ἣν ἐπήγαγον τοῖς Αἰγυπτίοις, οὐκ ἐπάξω ἐπὶ σέ` (השבעים, שמות טו:כו): νόσος – המלה של הסיודוס (בצורה האיונית νοῦσος) – היא מלת השבעים ל`מַחֲלָה`, ולכן `מַחֲלָה` (`../renderings.md` §5; הסוג א). שם האל "שם" מחלות ומסיר אותן; כאן הן "נותנות" מעצמן. וכן  – `καὶ πάσας νόσους Αἰγύπτου τὰς πονηράς` (השבעים, דברים ז:טו): "המחלות הרעות" – νόσοι ו־πονηραί, כמו "מחלות קשות" כאן. |
+| 93 | αἶψα γὰρ ἐν κακότητι βροτοὶ καταγηράσκουσιν. | {חשודה} כי מיד מזדקנים בני אנוש בְּרוֹעַ. | `אָדָם יְלוּד אִשָּׁה קְצַר יָמִים וּשְׂבַע-רֹגֶז` (איוב יד:א) | equivalent | ובשבעים: `βροτὸς γὰρ γεννητὸς γυναικὸς ὀλιγόβιος καὶ πλήρης ὀργῆς` (השבעים, איוב יד:א): βροτός, מלת השורה הזאת, למי שחי מעט ובצער – ו"ילוד אשה". מוטיב משותף של החיים הקצרים והקשים, בלי קשר. |
+| 94 | ἀλλὰ γυνὴ χείρεσσι πίθου μέγα πῶμʼ ἀφελοῦσα | אך האשה, בהסירה בידיה את המכסה הגדול של הכד, | `כִּי-שׁוּחָה עֲמֻקָּה זוֹנָה; וּבְאֵר צָרָה נָכְרִיָּה` (משלי כג:כז) | equivalent | ובשבעים: `πίθος γὰρ τετρημένος ἐστὶν ἀλλότριος οἶκος` (השבעים, משלי כג:כז): המקום היחיד בכלי השבעים שבתיקייה שבו מופיע πίθος – והוא בא בדימוי של **האשה הזרה**: "כד מנוקב". המתרגם היווני של משלי הכניס את הכד (ואולי את כדי הדנאידות המנוקבים) לדימוי האשה – דימוי יווני, לא עברי. מגע דרך יוון של המתרגמים (הסוג א בצורה), לא דרך ישראל. |
+| 94 | ἀλλὰ γυνὴ χείρεσσι πίθου μέγα πῶμʼ ἀφελοῦσα | אך האשה, בהסירה בידיה את המכסה הגדול של הכד, | `הַטִּי נָא כַדֵּךְ וְאֶשְׁתֶּה` (בראשית כד:יד) | absent | `כַּד` העברי מעלה את כדה של רבקה, אבל בשבעים שם ὑδρία, כד מים, ולא πίθος: הקשר דרך העברית בלבד, ואינו מכוון. |
+| 96 | μούνη δʼ αὐτόθι Ἐλπὶς ἐν ἀρρήκτοισι δόμοισιν | ולבדה, שם, תִּקְוָה, במעון שאין לשברו, | `שׁוּבוּ לְבִצָּרוֹן אֲסִירֵי הַתִּקְוָה` (זכריה ט:יב) | equivalent | "אסירי התקווה": התקווה וכליאה, באותו צירוף; שם האסירים הם שבויי ישראל, שהתקווה מחזיקה אותם, וכאן התקווה עצמה כלואה בכד. ובשבעים `δέσμιοι τῆς συναγωγῆς` (השבעים, זכריה ט:יב): השבעים קראו `תִּקְוָה` במובן אחר ("אסירי הכינוס"), ולכן הקשר הוא דרך העברית בלבד (הסוג ב). |
+| 96 | μούνη δʼ αὐτόθι Ἐλπὶς ἐν ἀρρήκτοισι δόμοισιν | ולבדה, שם, תִּקְוָה, במעון שאין לשברו, | `יָמַי קַלּוּ מִנִּי-אָרֶג; וַיִּכְלוּ בְּאֶפֶס תִּקְוָה` (איוב ז:ו) | equivalent | ובשבעים: `ὁ δὲ βίος μού ἐστιν ἐλαφρότερος λαλιᾶς, ἀπόλωλεν δὲ ἐν κενῇ ἐλπίδι` (השבעים, איוב ז:ו): בפסוק אחד בשבעים – βίος (`מִחְיָה`, 31, 42), ἀπόλλυμι (`נִסְפָּה`, 46) ו־ἐλπίς – שלוש מלות הקטע הזה; ו"תקווה ריקה" (κενὴ ἐλπίς) היא כמעט לשון הסיודוס (498: κενεὴν ἐπὶ ἐλπίδα). זהות לשונית (הסוג א). |
+| 96 | μούνη δʼ αὐτόθι Ἐλπὶς ἐν ἀρρήκτοισι δόμοισιν | ולבדה, שם, תִּקְוָה, במעון שאין לשברו, | `תּוֹחֶלֶת מְמֻשָּׁכָה מַחֲלָה-לֵב` (משלי יג:יב) | equivalent | תקווה ומחלה בפסוק אחד: תקווה שמתמשכת היא עצמה מחלה – שאלת הכד: האם התקווה שנשארה היא טובה או רעה? |
+| 101 | πλείη μὲν γὰρ γαῖα κακῶν, πλείη δὲ θάλασσα· | כי מלאה הארץ רעות, ומלא הים; | `כִּי מָלְאָה הָאָרֶץ חָמָס מִפְּנֵיהֶם` (בראשית ו:יג) | equivalent | ובשבעים: `ὅτι ἐπλήσθη ἡ γῆ ἀδικίας ἀπ’ αὐτῶν` (השבעים, בראשית ו:יג): "מלאה הארץ" – אותו צירוף, ובשבעים γῆ ו־πίμπλημι, פועל מאותו שורש של πλέως (הסוג א בשורש). בבראשית הארץ מלאה בחמס, ברשע של בני האדם, והאל מביא מבול; כאן היא מלאה ברעות שבאו על בני האדם, והם הסובלים. |
+| 101 | πλείη μὲν γὰρ γαῖα κακῶν, πλείη δὲ θάλασσα· | כי מלאה הארץ רעות, ומלא הים; | `כִּי מָלְאָה הָאָרֶץ דֵּעָה אֶת יְהוָה כַּמַּיִם לַיָּם מְכַסִּים` (ישעיהו יא:ט) | divergence | ובשבעים: `ὅτι ἐνεπλήσθη ἡ σύμπασα τοῦ γνῶναι τὸν κύριον ὡς ὕδωρ πολὺ κατακαλύψαι θαλάσσας` (השבעים, ישעיהו יא:ט): "מלאה הארץ" – ו"הים": הנביא חוזה ארץ מלאה דעת כמו ים, הסיודוס רואה ארץ וים מלאים רעות. אותה תבנית של ארץ וים, תוכן הפוך. אין קשר. |
+| 102 | νοῦσοι δʼ ἀνθρώποισιν ἐφʼ ἡμέρῃ, αἳ δʼ ἐπὶ νυκτὶ | ומחלות – לבני האדם ביום, ואחרות בלילה, | `לֹא-תִירָא מִפַּחַד לָיְלָה; מֵחֵץ יָעוּף יוֹמָם` (תהלים צא:ה); `מִדֶּבֶר בָּאֹפֶל יַהֲלֹךְ; מִקֶּטֶב יָשׁוּד צָהֳרָיִם` (תהלים צא:ו) | equivalent | המחלות והמגפות כשדים המהלכים ביום ובלילה: "דבר" ו"קטב" – שדי מגפה של המזרח (דבר ורשף באוגרית) – "מהלכים" כמו המחלות כאן, ש"מתהלכות" (103) בלי קול (104). ההקבלה החזקה של השורות 102–104. ספר תהלים בשבעים, למזמור זה, אינו בתיקייה. מוטיב מזרחי משותף של מחלות כישויות נודדות, בלי קשר. |
+| 105 | οὕτως οὔτι πη ἔστι Διὸς νόον ἐξαλέασθαι. | כך אין, בשום דרך, לחמוק משכל זאוס. | `אָנָה אֵלֵךְ מֵרוּחֶךָ; וְאָנָה מִפָּנֶיךָ אֶבְרָח` (תהלים קלט:ז) | equivalent | אין מקום לברוח מן האל. |
+| 105 | οὕτως οὔτι πη ἔστι Διὸς νόον ἐξαλέασθαι. | כך אין, בשום דרך, לחמוק משכל זאוס. | `וְלֹא-יִבָּצֵר מִמְּךָ מְזִמָּה` (איוב מב:ב) | equivalent | ובשבעים `ἀδυνατεῖ δέ σοι οὐθέν` (השבעים, איוב מב:ב): אין תכנית שהאל אינו יכול לה. אותו מוסר, בלי קשר. |
+| 108 | ὡς ὁμόθεν γεγάασι θεοὶ θνητοί τʼ ἄνθρωποι. | כיצד ממקור אחד נהיו הָאֵלִים ובני האדם בני־התמותה. | `וַיִּבְרָא אֱלֹהִים אֶת הָאָדָם בְּצַלְמוֹ` (בראשית א:כז) | divergence | במקרא האדם נברא בידי אל אחד, ואינו "ממקור אחד" עם האל; אצל הסיודוס האלים ובני האדם הם קרובים, צאצאי אותה ארץ (TH 45–50). מוטיב משותף של מוצא האדם, בתוכן הפוך. |
+| 109 | χρύσεον μὲν πρώτιστα γένος μερόπων ἀνθρώπων | גזע זהוב, ראשון שבראשונים, של בני האדם *בעלי־הדיבור* | `רֵאשֵׁהּ דִּי דְהַב טָב חֲדוֹהִי וּדְרָעוֹהִי דִּי כְסַף; מְעוֹהִי וְיַרְכָתֵהּ דִּי נְחָשׁ` (דניאל ב:לב); `שָׁקוֹהִי דִּי פַרְזֶל` (דניאל ב:לג) | equivalent | הצלם בחלום נבוכדנצר: זהב, כסף, נחושת, ברזל – אותן ארבע מתכות, באותו סדר יורד, כארבע מלכויות (ב:לט–מ). ספר דניאל אינו בכלי השבעים שבתיקייה. ההקבלה הנודעת בין הסיודוס לדניאל נשענת כנראה על מסורת מזרחית משותפת (פרסית? מסופוטמית?) של תקופות עולם הקרויות על שם מתכות; דניאל מאוחר בהרבה (המאה השנייה לפנה"ס בצורתו הסופית), ואין ביניהם קשר ישיר. ההבדל: אצל הסיודוס יש חמישה גזעים, והרביעי – ההרואים – אינו מתכת ושובר את הירידה. |
+| 110 | ἀθάνατοι ποίησαν Ὀλύμπια δώματʼ ἔχοντες. | עשו בני־האלמוות שוכני הארמונות האולימפיים. | `וַיִּבְרָא אֱלֹהִים אֶת הָאָדָם בְּצַלְמוֹ` (בראשית א:כז) | equivalent | ובשבעים: `καὶ ἐποίησεν ὁ θεὸς τὸν ἄνθρωπον` (השבעים, בראשית א:כז): השבעים תרגמו `בָּרָא` ב־ποιέω – המלה שכאן ("עשו"). זהות לשונית (הסוג א; `../renderings.md` §6): `עָשָׂה`, ו`בָּרָא` אינו בשורה. האלים (ברבים) "עשו" גזע, כמו אומנים; בבראשית אל אחד בורא את האדם. |
+| 117 | τοῖσιν ἔην· καρπὸν δʼ ἔφερε ζείδωρος ἄρουρα | היו להם; ופרי היה נושא השדה נותן־הדגן | `הִנֵּה נָתַתִּי לָכֶם אֶת כָּל עֵשֶׂב זֹרֵעַ זֶרַע … וְאֶת כָּל הָעֵץ אֲשֶׁר בּוֹ פְרִי` (בראשית א:כט); `מִכֹּל עֵץ הַגָּן אָכֹל תֹּאכֵל` (בראשית ב:טז) | equivalent | ובשבעים: `καὶ πᾶν ξύλον, ὃ ἔχει ἐν ἑαυτῷ καρπὸν σπέρματος` (השבעים, בראשית א:כט): καρπός, המלה כאן, היא מלת השבעים ל`פְּרִי` (הסוג א; `../renderings.md` §5). בשני הספרים המזון הראשון ניתן בלי עבודה; אבל בבראשית הוא ניתן במאמר האל, ואצל הסיודוס השדה "נושא" אותו מעצמו (118). ו: הגן נותן בלי עמל, כמו כאן. מוטיב משותף (גם "ארץ חמדה" של תור הזהב בכל העולם הקדום), בלי קשר. |
+| 119 | ἥσυχοι ἔργʼ ἐνέμοντο σὺν ἐσθλοῖσιν πολέεσσιν. | שקטים, היו נהנים ממלאכותיהם עם טובות רבות. | `וְהִנֵּה כָל הָאָרֶץ יֹשֶׁבֶת וְשֹׁקָטֶת` (זכריה א:יא) | equivalent | ובשבעים: `καὶ ἰδοὺ πᾶσα ἡ γῆ κατοικεῖται καὶ ἡσυχάζει` (השבעים, זכריה א:יא): ἡσυχάζω, מאותו שורש של ἥσυχος – ארץ שקטה, כמו בני גזע הזהב. מגע של שורש יווני; אין קשר. |
+| 125 | ἠέρα ἑσσάμενοι πάντη φοιτῶντες ἐπʼ αἶαν, | {חשודה} עטויי ערפל, מתהלכים בכל מקום על פני הארץ, | `אֵלֶּה אֲשֶׁר שָׁלַח יְהוָה לְהִתְהַלֵּךְ בָּאָרֶץ` (זכריה א:י) | equivalent | ראו 255, שם ההקבלה מלאה. |
+| 130 | ἀλλʼ ἑκατὸν μὲν παῖς ἔτεα παρὰ μητέρι κεδνῇ | אלא מאה שנים היה הילד, ליד אמו ההגונה, | `כִּי הַנַּעַר בֶּן מֵאָה שָׁנָה יָמוּת` (ישעיהו סה:כ) | equivalent | ובשבעים: `ἔσται γὰρ ὁ νέος ἑκατὸν ἐτῶν` (השבעים, ישעיהו סה:כ): "נער בן מאה שנה" – בישעיהו, בשמים החדשים, חיים ארוכים כל כך שמת בן מאה הוא "נער"; אצל הסיודוס – "ילד" במשך מאה שנה, ילדות שאינה נגמרת, ואחריה חיים קצרים. שני דימויים של שנות חיים מופלגות; ἑκατὸν ἔτεα – אותן מלים של השבעים (הסוג א בצורה). |
+| 130 | ἀλλʼ ἑκατὸν μὲν παῖς ἔτεα παρὰ μητέρι κεδνῇ | אלא מאה שנים היה הילד, ליד אמו ההגונה, | `וַיְחִי אָדָם שְׁלֹשִׁים וּמְאַת שָׁנָה` (בראשית ה:ג) | divergence | שנות החיים הארוכות של הדורות הראשונים בבראשית ה (ומקבילתם בשנות המלכים שלפני המבול ברשימת המלכים השומרית); אצל הסיודוס דווקא הגזע השני, ולא הראשון, הוא בעל השנים הרבות – ורובן ילדות. |
+| 134 | ἀφραδίῃς· ὕβριν γὰρ ἀτάσθαλον οὐκ ἐδύναντο | מחוסר דעתם; כי זדון פרוע לא היו יכולים | `בָּא-זָדוֹן וַיָּבֹא קָלוֹן` (משלי יא:ב) | equivalent | ובשבעים: `οὗ ἐὰν εἰσέλθῃ ὕβρις, ἐκεῖ καὶ ἀτιμία` (השבעים, משלי יא:ב): ὕβρις – מלת הסיודוס – היא מלת השבעים ל`זָדוֹן` (הסוג א; `../renderings.md` §5–§6, חובה). במשלי הזדון מביא קלון; כאן הוא מביא קיצור ימים. |
+| 151 | χαλκῷ δʼ εἰργάζοντο· μέλας δʼ οὐκ ἔσκε σίδηρος. | ובנחושת היו עובדים; וברזל שחור לא היה. | `וְצִלָּה גַם הִוא יָלְדָה אֶת תּוּבַל קַיִן לֹטֵשׁ כָּל חֹרֵשׁ נְחֹשֶׁת וּבַרְזֶל` (בראשית ד:כב) | equivalent | תולדות המתכות בבראשית: נחושת וברזל יחד, בדור אחד, מעשה תובל קין; אצל הסיודוס הנחושת קודמת לברזל בגזע שלם. ובשבעים שם `σφυροκόπος χαλκεὺς χαλκοῦ καὶ σιδήρου` (השבעים, בראשית ד:כב): χαλκός ו־σίδηρος – אותן מלים של הסיודוס (הסוג א). מוטיב של "המצאת המתכות" בראשית התרבות. |
+| 153 | βῆσαν ἐς εὐρώεντα δόμον κρυεροῦ Ἀίδαο | ירדו אל המעון הטחוב של הָאדֵס הקר, | — | absent | `שְׁאוֹל` – אינו בשורה (`../renderings.md` §7.1): בית האדס, עם הטחב והקור, קרוב לשאול המקראית בדימוי (מקום אפל, לא עונש), אבל שם האל אינו מתורגם לשם המקום המקראי. |
+| 158 | Ζεὺς Κρονίδης ποίησε, δικαιότερον καὶ ἄρειον, | עשה זאוס בן־קרונוס, צדיק יותר ומעולה יותר – | `נֹחַ אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו` (בראשית ו:ט) | equivalent | ובשבעים: `Νωε ἄνθρωπος δίκαιος, τέλειος ὢν ἐν τῇ γενεᾷ αὐτοῦ` (השבעים, בראשית ו:ט): δίκαιος ו־γενεά – שתי מלות השבעים לנח הצדיק ו"דורותיו" – הן בדיוק המלים של השורות האלה (158 δικαιότερον, 160 γενεή): `צַדִּיק`, `דּוֹר` (חובה; הסוג א). ובשני המקומות – גזע או דור "צדיק יותר" לפני חורבן, אף שאצל הסיודוס הם הולכים למלחמה, ובבראשית נח לבדו צדיק ודורו נשחת. |
+| 159 | ἀνδρῶν ἡρώων θεῖον γένος, οἳ καλέονται | גזע אֱלוֹהִי של אנשים הֵרוֹאִים, אשר נקראים | `הֵמָּה הַגִּבֹּרִים אֲשֶׁר מֵעוֹלָם אַנְשֵׁי הַשֵּׁם` (בראשית ו:ד) | equivalent | ובשבעים: `ἐκεῖνοι ἦσαν οἱ γίγαντες οἱ ἀπ’ αἰῶνος, οἱ ἄνθρωποι οἱ ὀνομαστοί` (השבעים, בראשית ו:ד): ההקבלה הנודעת (Hendel 1987): בשני הספרים – גזע של אנשי תהילה קדומים, צאצאי אלים ובני אדם (חצי־אלים, 160; בני האלוהים ובנות האדם, ו:ב–ד), שבא לפני הדור הנוכחי ונשמד במלחמה או במבול. השבעים אומרים γίγαντες, ולא ἥρωες או ἡμίθεοι: אין מלה יוונית משותפת (`../renderings.md` §6), ולכן `גִּבֹּרִים` אינו בשורה (`../renderings.md` §7.1), והעברית `הֵרוֹאִים` / `חֲצִי־אֵלִים`. מוטיב משותף – אולי מסורת מזרחית קדומה של "גיבורי קדם" – בלי קשר. |
+| 160 | ἡμίθεοι, προτέρη γενεὴ κατʼ ἀπείρονα γαῖαν. | חֲצִי־אֵלִים, הדור הקודם על פני הארץ שאין לה גבול. | `הַנְּפִלִים הָיוּ בָאָרֶץ בַּיָּמִים הָהֵם וְגַם אַחֲרֵי כֵן` (בראשית ו:ד) | equivalent | "היו בארץ בימים ההם": הדור הקודם "על פני הארץ". |
+| 160 | ἡμίθεοι, προτέρη γενεὴ κατʼ ἀπείρονα γαῖαν. | חֲצִי־אֵלִים, הדור הקודם על פני הארץ שאין לה גבול. | `נֹחַ אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו` (בראשית ו:ט) | equivalent | γενεά, מלת השבעים ל`דֹּרֹתָיו` (ראו 158), היא γενεή כאן: `הַדּוֹר הַקּוֹדֵם` (`../renderings.md` §5, חובה). |
+| 173 | τρὶς ἔτεος θάλλοντα φέρει ζείδωρος ἄρουρα. | שלוש פעמים בשנה, משגשג, נושא השדה נותן־הדגן. | `וְהִשִּׂיג לָכֶם דַּיִשׁ אֶת בָּצִיר וּבָצִיר יַשִּׂיג אֶת זָרַע` (ויקרא כו:ה) | equivalent | ובשבעים: `καὶ καταλήμψεται ὑμῖν ὁ ἀλοητὸς τὸν τρύγητον` (השבעים, ויקרא כו:ה): ברכת שפע של יבול שאינו נפסק, כמו "שלוש פעמים בשנה". מוטיב של ארץ הברכה; המלים שונות. |
+| 176 | νῦν γὰρ δὴ γένος ἐστὶ σιδήρεον· οὐδέ ποτʼ ἦμαρ | כי עתה, אכן, הגזע הוא של ברזל; ואף פעם לא ביום | `וְנָתַתִּי אֶת שְׁמֵיכֶם כַּבַּרְזֶל וְאֶת אַרְצְכֶם כַּנְּחֻשָׁה` (ויקרא כו:יט) | equivalent | ובשבעים: `καὶ συντρίψω τὴν ὕβριν τῆς ὑπερηφανίας ὑμῶν καὶ θήσω τὸν οὐρανὸν ὑμῖν σιδηροῦν καὶ τὴν γῆν ὑμῶν ὡσεὶ χαλκῆν` (השבעים, ויקרא כו:יט): בקללות ויקרא כו, "ברזל" ו"נחושת" הם סימני עונש – ובשבעים באותו פסוק גם ὕβρις (ל`גְאוֹן עֻזְּכֶם`): שלוש מלות הסיודוס, σίδηρος, χαλκός ו־ὕβρις, בפסוק אחד של השבעים (הסוג א). ראו גם 109 (דניאל ב). |
+| 177 | παύονται καμάτου καὶ ὀιζύος, οὐδέ τι νύκτωρ | חדלים מִיְּגִיעַ וממצוקה, ואף לא בלילה | `כִּי-אָדָם לְעָמָל יוּלָּד` (איוב ה:ז) | equivalent | ובשבעים `ἀλλὰ ἄνθρωπος γεννᾶται κόπῳ` (השבעים, איוב ה:ז): העמל מולד; אצל הסיודוס – עמל של גזע אחד, ההווה. |
+| 180 | Ζεὺς δʼ ὀλέσει καὶ τοῦτο γένος μερόπων ἀνθρώπων, | וזאוס יספה גם את הגזע הזה של בני האדם *בעלי־הדיבור*, | `כִּי מָלְאָה הָאָרֶץ חָמָס מִפְּנֵיהֶם; וְהִנְנִי מַשְׁחִיתָם אֶת הָאָרֶץ` (בראשית ו:יג) | equivalent | ובשבעים `καὶ ἰδοὺ ἐγὼ καταφθείρω αὐτοὺς καὶ τὴν γῆν` (השבעים, בראשית ו:יג): האל המחליט להשמיד את בני האדם בגלל רשעם (כאן – 182–201); בבראשית – במבול, אצל הסיודוס – "כאשר ייוולדו שבי־רקות" (181). והשבעים אומרים καταφθείρω – פועל מן φθείρω (178), לא ὄλλυμι: אין זהות לשונית ישירה. |
+| 182 | οὐδὲ πατὴρ παίδεσσιν ὁμοίιος οὐδέ τι παῖδες, | ולא יהיה אב דומה לילדיו, ולא הילדים (לו), | `וַיּוֹלֶד בִּדְמוּתוֹ כְּצַלְמוֹ` (בראשית ה:ג) | divergence | ובשבעים: `καὶ ἐγέννησεν κατὰ τὴν ἰδέαν αὐτοῦ καὶ κατὰ τὴν εἰκόνα αὐτοῦ` (השבעים, בראשית ה:ג): בבראשית הבן דומה לאביו – ההמשכיות של הדורות; כאן, בסוף הזמן, הבן לא ידמה לאב. ὅμοιος אינו המלה של השבעים (ἰδέα, εἰκών): מוטיב, לא לשון. וב־235 – בעיר הצדיקה – "נשים יולדות צאצאים הדומים להוריהם": הדמיון הוא סימן של סדר צודק. |
+| 182 | οὐδὲ πατὴρ παίδεσσιν ὁμοίιος οὐδέ τι παῖδες, | ולא יהיה אב דומה לילדיו, ולא הילדים (לו), | `כִּי בֵן מְנַבֵּל אָב בַּת קָמָה בְאִמָּהּ` (מיכה ז:ו); `אַל תַּאֲמִינוּ בְרֵעַ` (מיכה ז:ה) | equivalent | ובשבעים: `διότι υἱὸς ἀτιμάζει πατέρα, θυγάτηρ ἐπαναστήσεται ἐπὶ τὴν μητέρα αὐτῆς` (השבעים, מיכה ז:ו): ההקבלה החזקה של 182–188 – בן נגד אב,  כמו "רע לרעהו" (183), ובשבעים – ἀτιμάζω, אחות של ἀτιμάω של הסיודוס (185). תיאור משותף של עולם שהתקלקל, מן המאה השמינית–השביעית בשתי הארצות; בלי קשר. |
+| 183 | οὐδὲ ξεῖνος ξεινοδόκῳ καὶ ἑταῖρος ἑταίρῳ, | ולא האורח למארחו, ולא הרֵעַ לרעהו, | `אַל תַּאֲמִינוּ בְרֵעַ אַל תִּבְטְחוּ בְּאַלּוּף` (מיכה ז:ה) | equivalent | ראו 182. |
+| 184 | οὐδὲ κασίγνητος φίλος ἔσσεται, ὡς τὸ πάρος περ. | ולא יהיה האח אהוב, כמו לפנים. | `אֹיְבֵי אִישׁ אַנְשֵׁי בֵיתוֹ` (מיכה ז:ו) | equivalent | ראו 182. |
+| 185 | αἶψα δὲ γηράσκοντας ἀτιμήσουσι τοκῆας· | ומיד יבזו את מולידיהם המזדקנים; | `כַּבֵּד אֶת אָבִיךָ וְאֶת אִמֶּךָ` (שמות כ:יא); `אָרוּר מַקְלֶה אָבִיו וְאִמּוֹ` (דברים כז:טז) | divergence | ובשבעים: `τίμα τὸν πατέρα σου καὶ τὴν μητέρα` (השבעים, שמות כ:יב): τιμάω – המלה של השבעים ל`כַּבֵּד` – היא שורש ἀτιμάω כאן ("לא לכבד"); וכן  – `Ἐπικατάρατος ὁ ἀτιμάζων πατέρα αὐτοῦ ἢ μητέρα αὐτοῦ` (השבעים, דברים כז:טז): השבעים מתרגמים `מַקְלֶה` ב־ἀτιμάζω, צורה קרובה ל־ἀτιμάω של הסיודוס (הסוג א בשורש). אותו עיקרון – כבוד ההורים – בשני העולמות, ובשניהם הפרתו היא סימן לעולם שהתקלקל (מיכה ז:ו, 182). |
+| 188 | γηράντεσσι τοκεῦσιν ἀπὸ θρεπτήρια δοῖεν | נותנים למולידיהם הזקנים גמול על גידולם – | `וְהָיָה לָךְ לְמֵשִׁיב נֶפֶשׁ וּלְכַלְכֵּל אֶת שֵׂיבָתֵךְ` (רות ד:טו) | equivalent | הבן המכלכל את שיבת הוריו: החוב של הדור הצעיר; ראו TH 605 (γηροκόμος `מְכַלְכֵּל שֵׂיבָה`). |
+| 190 | οὐδέ τις εὐόρκου χάρις ἔσσεται οὔτε δικαίου | ולא יהיה חן לנאמן־השבועה, ולא לצדיק, | `מִתְהַלֵּךְ בְּתֻמּוֹ צַדִּיק; אַשְׁרֵי בָנָיו אַחֲרָיו` (משלי כ:ז) | equivalent | ראו 285. |
+| 194 | μύθοισιν σκολιοῖς ἐνέπων, ἐπὶ δʼ ὅρκον ὀμεῖται. | בְּסַפְּרוֹ דברים עקומים, ועליהם יישבע שבועה. | `וְלֹא תִשָּׁבְעוּ בִשְׁמִי לַשָּׁקֶר` (ויקרא יט:יב) | equivalent | ובשבעים: `καὶ οὐκ ὀμεῖσθε τῷ ὀνόματί μου ἐπ’ ἀδίκῳ` (השבעים, ויקרא יט:יב): ὀμεῖσθε – אותו פועל, באותה צורת עתיד (ὀμεῖται כאן): הסוג א. השבועה לשקר כחטא כלפי האל, בשני העולמות. |
+| 200 | Αἰδὼς καὶ Νέμεσις· τὰ δὲ λείψεται ἄλγεα λυγρὰ | בּוּשָׁה וְחֵמָה; ויישארו המכאובים המרים | `צֶדֶק וּמִשְׁפָּט מְכוֹן כִּסְאֶךָ` (תהלים פט:טו) | divergence | ראו 259. כאן: כוחות מוסריים המואנשים כנשים העוזבות את הארץ – אין לכך מקבילה במקרא, שבו האל עצמו הוא ש"מסתיר פנים". |
+| 202 | νῦν δʼ αἶνον βασιλεῦσιν ἐρέω φρονέουσι καὶ αὐτοῖς· | ועתה משל אומר למלכים, אף שהם עצמם משכילים: | `הָלוֹךְ הָלְכוּ הָעֵצִים לִמְשֹׁחַ עֲלֵיהֶם מֶלֶךְ` (שופטים ט:ח); `הַחוֹחַ אֲשֶׁר בַּלְּבָנוֹן שָׁלַח אֶל הָאֶרֶז אֲשֶׁר בַּלְּבָנוֹן` (מלכים ב יד:ט); `חוּד חִידָה וּמְשֹׁל מָשָׁל` (יחזקאל יז:ב) | equivalent | ובשבעים: `πορευόμενα ἐπορεύθησαν τὰ ξύλα τοῦ χρῖσαι ἑαυτοῖς βασιλέα` (השבעים, שופטים ט:ח): משל יותם – משל החיות והצמחים הראשון במקרא, וגם הוא משל על מלכים ונגדם; וכן  – ובשבעים `Ὁ ακαν ὁ ἐν τῷ Λιβάνῳ ἀπέστειλεν πρὸς τὴν κέδρον` (השבעים, מלכים ד יד:ט): משל של מלך אל מלך, בדיוק כמו כאן – משל שהחזק אומר לחלש (או להפך). ו, משל הנשר הגדול (יז:ג) – ובשבעים `διήγησαι διήγημα καὶ εἰπὸν παραβολήν` (השבעים, יחזקאל יז:ב): משל ציפורים על מלכים. השבעים אינם משתמשים ב־αἶνος. סוגה משותפת למזרח וליוון, ולמשל הנץ והזמיר מקבילות גם במשלים המסופוטמיים; בלי קשר ישיר. |
+| 203 | ὧδʼ ἴρηξ προσέειπεν ἀηδόνα ποικιλόδειρον | כך אמר הנץ אל הזָּמִיר מנומר־הצוואר, | `הֲמִבִּינָתְךָ יַאֲבֶר-נֵץ; יִפְרֹשׂ כְּנָפָו לְתֵימָן` (איוב לט:כו) | equivalent | ובשבעים: `ἐκ δὲ τῆς σῆς ἐπιστήμης ἕστηκεν ἱέραξ ἀναπετάσας τὰς πτέρυγας` (השבעים, איוב לט:כו): ἱέραξ – המלה של הסיודוס – היא מלת השבעים ל`נֵץ`, ולכן `נֵץ` (הסוג א). באיוב הנץ הוא פלא של הבריאה; כאן הוא החזק במשל. |
+| 212 | ὣς ἔφατʼ ὠκυπέτης ἴρηξ, τανυσίπτερος ὄρνις. | כך אמר הנץ מהיר־המעוף, העוף פרוש־הכנפיים. | `יִפְרֹשׂ כְּנָפָו לְתֵימָן` (איוב לט:כו) | equivalent | ראו 203: "פרוש־הכנפיים", כנץ של איוב. |
+| 213 | ὦ Πέρση, σὺ δʼ ἄκουε δίκης, μηδʼ ὕβριν ὄφελλε· | הוֹ פרסס, ואתה – שמע למשפט, ואל תרבה זדון; | `רַק-בְּזָדוֹן יִתֵּן מַצָּה` (משלי יג:י) | equivalent | ובשבעים: `κακὸς μεθ’ ὕβρεως πράσσει κακά` (השבעים, משלי יג:י): ὕβρις = `זָדוֹן` (הסוג א); ובעברית – הזדון מביא `מַצָּה`, מריבה: הזדון הוא אבי המריבה, כמו כאן ריב האחים. |
+| 218 | ἐς τέλος ἐξελθοῦσα· παθὼν δέ τε νήπιος ἔγνω. | בצאתה אל התכלית; ומשסבל, הפתי מכיר. | `עָרוּם רָאָה רָעָה` (משלי כב:ג); `וּפְתָיִים עָבְרוּ וְנֶעֱנָשׁוּ` (משלי כב:ג) | equivalent | ראו 89: הפתי לומד אחרי שנענש. אותה חכמה, בלי קשר. |
+| 221 | δωροφάγοι, σκολιῇς δὲ δίκῃς κρίνωσι θέμιστας. | אוכלי־מתנות, ובמשפטים עקומים יכריעו את הדינים. | `לֹא תַטֶּה מִשְׁפָּט לֹא תַכִּיר פָּנִים; וְלֹא תִקַּח שֹׁחַד` (דברים טז:יט) | equivalent | ובשבעים: `οὐδὲ λήμψονται δῶρον· τὰ γὰρ δῶρα ἐκτυφλοῖ ὀφθαλμοὺς σοφῶν` (השבעים, דברים טז:יט): δῶρα = `שֹׁחַד` (ראו 39; הסוג א בצורה). השופטים "אוכלי המתנות" מכריעים במשפט עקום – בדיוק החשש של התורה. |
+| 225 | Οἳ δὲ δίκας ξείνοισι καὶ ἐνδήμοισι διδοῦσιν | וְאֵלֶּה אשר נותנים משפטים לאורחים ולבני המקום | `מִשְׁפַּט אֶחָד יִהְיֶה לָכֶם כַּגֵּר כָּאֶזְרָח יִהְיֶה` (ויקרא כד:כב); `וּשְׁפַטְתֶּם צֶדֶק בֵּין אִישׁ וּבֵין אָחִיו וּבֵין גֵּרוֹ` (דברים א:טז) | equivalent | ובשבעים: `δικαίωσις μία ἔσται τῷ προσηλύτῳ καὶ τῷ ἐγχωρίῳ` (השבעים, ויקרא כד:כב);  – ובשבעים `καὶ κρίνατε δικαίως … καὶ ἀνὰ μέσον προσηλύτου αὐτοῦ` (השבעים, דברים א:טז): משפט אחד לזר ולתושב – אותו עיקרון בשני העולמות. השבעים אומרים προσήλυτος / ἐγχώριος, לא ξένος / ἔνδημος: המלים אחרות (הקשר דרך המושג בלבד). |
+| 228 | εἰρήνη δʼ ἀνὰ γῆν κουροτρόφος, οὐδέ ποτʼ αὐτοῖς | ושלום – מגדל־הנערים – בארץ, ואף פעם לא להם | `וְנָתַתִּי שָׁלוֹם בָּאָרֶץ וּשְׁכַבְתֶּם וְאֵין מַחֲרִיד` (ויקרא כו:ו) | equivalent | ובשבעים: `καὶ πόλεμος οὐ διελεύσεται διὰ τῆς γῆς ὑμῶν, καὶ δώσω εἰρήνην ἐν τῇ γῇ ὑμῶν` (השבעים, ויקרא כו:ו): εἰρήνη, γῆ ו־πόλεμος – שלוש מלות השורות 228–229 – בפסוק אחד של השבעים, באותו סדר מחשבה: שלום בארץ, ומלחמה לא תבוא (הסוג א). ההקבלה החזקה של החלק. ההבדל: בויקרא השלום הוא שכר על שמירת החוקים של האל (כו:ג); אצל הסיודוס – שכר על משפט ישר של השופטים. |
+| 229 | ἀργαλέον πόλεμον τεκμαίρεται εὐρύοπα Ζεύς· | מלחמה קשה מייעד זאוס רחב־המבט; | `וְחֶרֶב לֹא תַעֲבֹר בְּאַרְצְכֶם` (ויקרא כו:ו) | equivalent | ראו 228: πόλεμος οὐ διελεύσεται. |
+| 230 | οὐδέ ποτʼ ἰθυδίκῃσι μετʼ ἀνδράσι λιμὸς ὀπηδεῖ | ואף פעם לא מלווה רעב את האנשים ישרי־המשפט, | `כִּי קָרָא יְהוָה לָרָעָב` (מלכים ב ח:א) | equivalent | ובשבעים `ὅτι κέκληκεν κύριος λιμὸν ἐπὶ τὴν γῆν` (השבעים, מלכים ד ח:א): λιμός = `רָעָב` (הסוג א). והרעב כעונש של האל – כמו כאן ב־243. |
+| 232 | τοῖσι φέρει μὲν γαῖα πολὺν βίον, οὔρεσι δὲ δρῦς | להם נושאת הארץ מחיה רבה, ובהרים – האלון | `וְנָתְנָה הָאָרֶץ יְבוּלָהּ וְעֵץ הַשָּׂדֶה יִתֵּן פִּרְיוֹ` (ויקרא כו:ד); `וְלֹא תִתֵּן אַרְצְכֶם אֶת יְבוּלָהּ` (ויקרא כו:כ) | equivalent | ובשבעים: `καὶ ἡ γῆ δώσει τὰ γενήματα αὐτῆς, καὶ τὰ ξύλα τῶν πεδίων ἀποδώσει τὸν καρπὸν αὐτῶν` (השבעים, ויקרא כו:ד): הארץ והעץ נותנים – הארץ נותנת מחיה והאלון בלוטים ודבש (233). ובהיפוכו: . ובשבעים ἡ γῆ – γαῖα של הסיודוס; καρπός – 237: הסוג א בחלק מן המלים. |
+| 234 | εἰροπόκοι δʼ ὄιες μαλλοῖς καταβεβρίθασιν· | והכבשים עבות־הצמר כבדות מגיזות; | `וְעַשְׁתְּרוֹת צֹאנֶךָ` (דברים כח:ד) | equivalent | ובשבעים `καὶ τὰ ποίμνια τῶν προβάτων σου` (השבעים, דברים כח:ד): ברכת הצאן. ראו 235. |
+| 235 | τίκτουσιν δὲ γυναῖκες ἐοικότα τέκνα γονεῦσιν· | ונשים יולדות צאצאים הדומים להוריהם; | `בָּרוּךְ פְּרִי בִטְנְךָ וּפְרִי אַדְמָתְךָ` (דברים כח:ד); `וְהִפְרֵיתִי אֶתְכֶם וְהִרְבֵּיתִי אֶתְכֶם` (ויקרא כו:ט); `אָרוּר פְּרִי בִטְנְךָ` (דברים כח:יח) | equivalent | ובשבעים: `εὐλογημένα τὰ ἔκγονα τῆς κοιλίας σου καὶ τὰ γενήματα τῆς γῆς σου` (השבעים, דברים כח:ד);  – ברכת הפריון, כמו כאן; ובהיפוכו – , כמו 244. |
+| 235 | τίκτουσιν δὲ γυναῖκες ἐοικότα τέκνα γονεῦσιν· | ונשים יולדות צאצאים הדומים להוריהם; | `וַיּוֹלֶד בִּדְמוּתוֹ כְּצַלְמוֹ` (בראשית ה:ג) | divergence | הבן "בדמות" אביו: בבראשית – המשכיות הבריאה; כאן – אות לנאמנות הנשים ולבית תקין (והיפוכו בגזע הברזל, 182). |
+| 237 | νίσσονται, καρπὸν δὲ φέρει ζείδωρος ἄρουρα. | הם יוצאים, ופרי נושא השדה נותן־הדגן. | `וְעֵץ הַשָּׂדֶה יִתֵּן פִּרְיוֹ` (ויקרא כו:ד) | equivalent | ובשבעים `ἀποδώσει τὸν καρπὸν αὐτῶν` (השבעים, ויקרא כו:ד): καρπός = `פְּרִי` (הסוג א). ראו 232. |
+| 239 | τοῖς δὲ δίκην Κρονίδης τεκμαίρεται εὐρύοπα Ζεύς. | להם מייעד בן־קרונוס, זאוס רחב־המבט, משפט. | `וְהֵבֵאתִי עֲלֵיכֶם חֶרֶב נֹקֶמֶת נְקַם בְּרִית` (ויקרא כו:כה) | equivalent | ובשבעים: `καὶ ἐπάξω ἐφ’ ὑμᾶς μάχαιραν ἐκδικοῦσαν δίκην διαθήκης` (השבעים, ויקרא כו:כה): δίκη, "עונש", באותו מובן של השורה הזאת – ובאותו פסוק ἐπάγω, הפועל של 242 (הסוג א). ראו 242. |
+| 240 | πολλάκι καὶ ξύμπασα πόλις κακοῦ ἀνδρὸς ἀπηύρα, | פעמים רבות אף עיר שלמה לוקה בגלל איש רע, | `הָאִישׁ אֶחָד יֶחֱטָא וְעַל כָּל הָעֵדָה תִּקְצֹף` (במדבר טז:כב); `וְהוּא אִישׁ אֶחָד לֹא גָוַע בַּעֲוֹנוֹ` (יהושע כב:כ) | equivalent | משה ואהרן מוחים נגד העיקרון הזה ממש; ו – עכן, שבגללו נענשה כל העדה. ספרי במדבר ויהושע אינם בכלי השבעים שבתיקייה. |
+| 240 | πολλάκι καὶ ξύμπασα πόλις κακοῦ ἀνδρὸς ἀπηύρα, | פעמים רבות אף עיר שלמה לוקה בגלל איש רע, | `אִם אֶמְצָא בִסְדֹם חֲמִשִּׁים צַדִּיקִם בְּתוֹךְ הָעִיר וְנָשָׂאתִי לְכָל הַמָּקוֹם בַּעֲבוּרָם` (בראשית יח:כו) | divergence | ובשבעים: `Ἐὰν εὕρω ἐν Σοδομοις πεντήκοντα δικαίους ἐν τῇ πόλει` (השבעים, בראשית יח:כו): בסדום – העיר תינצל בזכות צדיקים; אצל הסיודוס – העיר נענשת בגלל רשע אחד. δίκαιος ו־πόλις – מלות הסיודוס (הסוג א), והעיקרון הפוך. האחריות הקיבוצית – רעיון משותף לעולם הקדום, ושני המקורות מתווכחים איתו באופן שונה. |
+| 242 | τοῖσιν δʼ οὐρανόθεν μέγʼ ἐπήγαγε πῆμα Κρονίων | ועליהם מביא בן־קרונוס מן השמים פגע גדול, | `וְהֵבֵאתִי עֲלֵיכֶם חֶרֶב` (ויקרא כו:כה); `כָּל הַמַּחֲלָה אֲשֶׁר שַׂמְתִּי בְמִצְרַיִם` (שמות טו:כו) | equivalent | ובשבעים: `καὶ ἐπάξω ἐφ’ ὑμᾶς μάχαιραν` (השבעים, ויקרא כו:כה): **ἐπάγω – הפועל של הסיודוס – הוא מלת השבעים ל`הֵבֵאתִי עֲלֵיכֶם`** בקללות ויקרא (הסוג א); וכן ב־ – `πᾶσαν νόσον, ἣν ἐπήγαγον τοῖς Αἰγυπτίοις` (השבעים, שמות טו:כו). האל "מביא על" העיר את הפגע – באותו פועל בשני הטקסטים. |
+| 243 | λιμὸν ὁμοῦ καὶ λοιμόν· ἀποφθινύθουσι δὲ λαοί. | רעב וגם דֶּבֶר; והעם דועך; | `אַרְבַּעַת שְׁפָטַי הָרָעִים חֶרֶב וְרָעָב וְחַיָּה רָעָה וָדֶבֶר` (יחזקאל יד:כא); `וְשִׁלַּחְתִּי דֶבֶר בְּתוֹכְכֶם` (ויקרא כו:כה) | equivalent | ובשבעים: `ῥομφαίαν καὶ λιμὸν καὶ θηρία πονηρὰ καὶ θάνατον` (השבעים, יחזקאל יד:כא): רעב ודבר כעונשי האל – λιμός = `רָעָב` (הסוג א), אבל השבעים אומרים θάνατος ל`דֶבֶר` ולא λοιμός (בשבעים λοιμός הוא כמעט תמיד "אדם מזיק", יחזקאל יח:י). וכן . הזוג רעב–דבר – משותף לעולם הקדום. |
+| 244 | οὐδὲ γυναῖκες τίκτουσιν, μινύθουσι δὲ οἶκοι | ונשים אינן יולדות, והבתים מתמעטים | `וְהִמְעִיטָה אֶתְכֶם; וְנָשַׁמּוּ דַּרְכֵיכֶם` (ויקרא כו:כב); `אָרוּר פְּרִי בִטְנְךָ` (דברים כח:יח) | equivalent | ובשבעים `καὶ ὀλιγοστοὺς ποιήσει ὑμᾶς` (השבעים, ויקרא כו:כב): ההתמעטות כקללה; ו – `ἐπικατάρατα τὰ ἔκγονα τῆς κοιλίας σου` (השבעים, דברים כח:יח): העקרות, היפוך של 235. |
+| 252 | τρὶς γὰρ μύριοί εἰσιν ἐπὶ χθονὶ πουλυβοτείρῃ | כי שלוש רבבות הם על פני האדמה רבת־המזון, | `אֵלֶּה אֲשֶׁר שָׁלַח יְהוָה לְהִתְהַלֵּךְ בָּאָרֶץ` (זכריה א:י) | equivalent | ראו 255. |
+| 253 | ἀθάνατοι Ζηνὸς φύλακες θνητῶν ἀνθρώπων· | בני־אלמוות של זאוס, שומרי בני האדם בני־התמותה; | `עֵינֵי יְהוָה הֵמָּה מְשׁוֹטְטִים בְּכָל הָאָרֶץ` (זכריה ד:י); `כִּי יְהוָה עֵינָיו מְשֹׁטְטוֹת בְּכָל הָאָרֶץ` (דברי הימים ב טז:ט) | equivalent | ובשבעים: `ἑπτὰ οὗτοι ὀφθαλμοὶ κυρίου εἰσὶν οἱ ἐπιβλέποντες ἐπὶ πᾶσαν τὴν γῆν` (השבעים, זכריה ד:י);  – עיני האל המשוטטות בכל הארץ, כמו שומרי זאוס ו"עין זאוס" (267). |
+| 255 | ἠέρα ἑσσάμενοι, πάντη φοιτῶντες ἐπʼ αἶαν. | עטויי ערפל, מתהלכים בכל מקום על פני הארץ. | `אֵלֶּה אֲשֶׁר שָׁלַח יְהוָה לְהִתְהַלֵּךְ בָּאָרֶץ` (זכריה א:י); `הִתְהַלַּכְנוּ בָאָרֶץ` (זכריה א:יא); `מִשּׁוּט בָּאָרֶץ וּמֵהִתְהַלֵּךְ בָּהּ` (איוב א:ז) | equivalent | ובשבעים: `Οὗτοί εἰσιν οὓς ἐξαπέσταλκεν κύριος τοῦ περιοδεῦσαι τὴν γῆν` (השבעים, זכריה א:י): שליחי האל המתהלכים בארץ ומדווחים לו – ההקבלה החזקה של השורות 252–255. וכן  – ובשבעים `Περιελθὼν τὴν γῆν καὶ ἐμπεριπατήσας τὴν ὑπ’ οὐρανὸν πάρειμι` (השבעים, איוב א:ז): השטן כמשגיח הנודד בארץ. בשני העולמות – האל העליון יודע מה נעשה בארץ דרך משגיחים נודדים (ובממלכה הפרסית – "עיני המלך" ו"אוזני המלך", מרגלי המלך הגדול). השבעים אומרים περιοδεύω, ולא φοιτάω: מוטיב, לא מלה. `הִתְהַלֵּךְ` העברי לא נבחר בגלל זכריה: הוא נקבע ל־φοιτάω ב־103. |
+| 256 | ἡ δέ τε παρθένος ἐστὶ Δίκη, Διὸς ἐκγεγαυῖα, | והבתולה היא מִשְׁפָּט, הנולדה מזאוס, | `וָאֶהְיֶה אֶצְלוֹ אָמוֹן: וָאֶהְיֶה שַׁעֲשׁוּעִים יוֹם יוֹם` (משלי ח:ל); `צֶדֶק וּמִשְׁפָּט מְכוֹן כִּסְאֶךָ` (תהלים פט:טו) | equivalent | ובשבעים: `ἤμην παρ’ αὐτῷ ἁρμόζουσα` (השבעים, משלי ח:ל): החכמה המואנשת, כאשה היושבת "אצל" האל – כמו משפט בת זאוס, היושבת "ליד זאוס האב" (259). ובתהלים  – ובשבעים `δικαιοσύνη καὶ κρίμα ἑτοιμασία τοῦ θρόνου σου` (השבעים, תהלים פח:טו): הצדק והמשפט ליד כיסא האל. אצל הסיודוס – אלה, בת; במקרא – תכונות או החכמה המואנשת. מוטיב משותף של הצדק בחצר האל. |
+| 259 | αὐτίκα πὰρ Διὶ πατρὶ καθεζομένη Κρονίωνι | מיד, בשבתה ליד זאוס האב בן־קרונוס, | `צֶדֶק וּמִשְׁפָּט מְכוֹן כִּסְאֶךָ` (תהלים פט:טו) | equivalent | ראו 256. |
+| 261 | δῆμος ἀτασθαλίας βασιλέων, οἳ λυγρὰ νοεῦντες | המחוז על פריעות המלכים, אשר בחושבם מרורים | `אָבוֹת יֹאכְלוּ בֹסֶר וְשִׁנֵּי הַבָּנִים תִקְהֶינָה` (יחזקאל יח:ב) | equivalent | ובשבעים `Οἱ πατέρες ἔφαγον ὄμφακα, καὶ οἱ ὀδόντες τῶν τέκνων ἐγομφίασαν` (השבעים, יחזקאל יח:ב): העונש של אחרים בגלל חטאי האחראים – יחזקאל דוחה את העיקרון; כאן העם משלם על המלכים. |
+| 261 | δῆμος ἀτασθαλίας βασιλέων, οἳ λυγρὰ νοεῦντες | המחוז על פריעות המלכים, אשר בחושבם מרורים | `הָאִישׁ אֶחָד יֶחֱטָא וְעַל כָּל הָעֵדָה תִּקְצֹף` (במדבר טז:כב) | equivalent | ראו 240. |
+| 262 | ἄλλῃ παρκλίνωσι δίκας σκολιῶς ἐνέποντες. | מטים את המשפטים הצידה, בְּסַפְּרָם בעקמימות. | `לֹא תַטֶּה מִשְׁפָּט` (דברים טז:יט); `וַיִּקְחוּ שֹׁחַד וַיַּטּוּ מִשְׁפָּט` (שמואל א ח:ג); `לֹא תַטֶּה מִשְׁפַּט אֶבְיֹנְךָ בְּרִיבוֹ` (שמות כג:ו) | equivalent | ובשבעים: `οὐκ ἐκκλινοῦσιν κρίσιν` (השבעים, דברים טז:יט): **"להטות משפט"** – ἐκκλίνω בשבעים, παρακλίνω אצל הסיודוס: אותו פועל־יסוד (κλίνω, "להטות") באותו צירוף (הסוג א בשורש). ו, . הצירוף העברי `הִטָּה מִשְׁפָּט` הוא התרגום הטבעי של παρακλίνειν δίκας, והוא גם ההקבלה. |
+| 264 | δωροφάγοι, σκολιέων δὲ δικέων ἐπὶ πάγχυ λάθεσθε. | אוכלי־המתנות, ואת המשפטים העקומים שכחו לגמרי. | `כֻּלּוֹ אֹהֵב שֹׁחַד וְרֹדֵף שַׁלְמֹנִים` (ישעיהו א:כג) | equivalent | ובשבעים `ἀγαπῶντες δῶρα` (השבעים, ישעיהו א:כג): ראו 39 – δῶρα = `שֹׁחַד`. |
+| 265 | οἷ γʼ αὐτῷ κακὰ τεύχει ἀνὴρ ἄλλῳ κακὰ τεύχων, | לעצמו מתקין רעות איש המתקין רעות לאחר, | `כֹּרֶה-שַּׁחַת בָּהּ יִפּוֹל; וְגוֹלֵל אֶבֶן אֵלָיו תָּשׁוּב` (משלי כו:כז); `בּוֹר כָּרָה וַיַּחְפְּרֵהוּ; וַיִּפֹּל בְּשַׁחַת יִפְעָל` (תהלים ז:טז); `יָשׁוּב עֲמָלוֹ בְרֹאשׁוֹ` (תהלים ז:יז) | equivalent | ובשבעים: `ὁ ὀρύσσων βόθρον τῷ πλησίον ἐμπεσεῖται εἰς αὐτόν` (השבעים, משלי כו:כז): "הכורה לרעהו" – השבעים מוסיפים `τῷ πλησίον`, "לרעהו", וכך הם מתקרבים לתבנית של הסיודוס (אחר / עצמו). ו, . פתגם חכמה משותף; המלים אחרות. |
+| 267 | πάντα ἰδὼν Διὸς ὀφθαλμὸς καὶ πάντα νοήσας | עין זאוס, הרואה הכול ומבינה הכול, | `בְּכָל-מָקוֹם עֵינֵי יְהוָה; צֹפוֹת רָעִים וְטוֹבִים` (משלי טו:ג) | equivalent | ובשבעים: `ἐν παντὶ τόπῳ ὀφθαλμοὶ κυρίου, σκοπεύουσιν κακούς τε καὶ ἀγαθούς` (השבעים, משלי טו:ג): ὀφθαλμός – "עין" האל – הרואה הכל, הרעים והטובים; המלה של השבעים ושל הסיודוס אחת (הסוג א). |
+| 267 | πάντα ἰδὼν Διὸς ὀφθαλμὸς καὶ πάντα νοήσας | עין זאוס, הרואה הכול ומבינה הכול, | `בְּכָל-מָקוֹם עֵינֵי יְהוָה; צֹפוֹת רָעִים וְטוֹבִים` (משלי טו:ג) | equivalent | `יְהוָה מִשָּׁמַיִם הִשְׁקִיף עַל-בְּנֵי-אָדָם` – ראו 268. |
+| 268 | καί νυ τάδʼ, αἴ κʼ ἐθέλῃσʼ, ἐπιδέρκεται, οὐδέ ἑ λήθει, | גם בְּאֵלֶּה, אם ירצה, הוא צופה, ואין זה נסתר ממנו – | `יְהוָה מִשָּׁמַיִם הִשְׁקִיף עַל-בְּנֵי-אָדָם` (תהלים יד:ב) | equivalent | האל המשקיף על בני האדם מן השמים, כדי לראות את מעשיהם. מוטיב משותף. ספר תהלים בשבעים, למזמור זה, אינו בתיקייה. |
+| 271 | εἴην μήτʼ ἐμὸς υἱός· ἐπεὶ κακὸν ἄνδρα δίκαιον | ולא בני; כי רע הוא לאיש להיות צדיק | `אִם אֶמְצָא בִסְדֹם חֲמִשִּׁים צַדִּיקִם` (בראשית יח:כו) | divergence | ראו 240; ובמקרא שאלת הצדיק הסובל ושלוות הרשעים (איוב, ירמיהו יב) – אותה תלונה, וגם שם בלי ויתור על הצדק. |
+| 277 | ἰχθύσι μὲν καὶ θηρσὶ καὶ οἰωνοῖς πετεηνοῖς | לדגים ולחיות ולעופות המעופפים – | `וּמוֹרַאֲכֶם וְחִתְּכֶם יִהְיֶה עַל כָּל חַיַּת הָאָרֶץ וְעַל כָּל עוֹף הַשָּׁמָיִם … וּבְכָל דְּגֵי הַיָּם` (בראשית ט:ב); `וְיִרְדּוּ בִדְגַת הַיָּם וּבְעוֹף הַשָּׁמַיִם` (בראשית א:כו); `שֹׁפֵךְ דַּם הָאָדָם בָּאָדָם דָּמוֹ יִשָּׁפֵךְ` (בראשית ט:ו) | equivalent | ובשבעים: `ἐπὶ πᾶσιν τοῖς θηρίοις τῆς γῆς καὶ ἐπὶ πάντα τὰ ὄρνεα τοῦ οὐρανοῦ … καὶ ἐπὶ πάντας τοὺς ἰχθύας τῆς θαλάσσης` (השבעים, בראשית ט:ב): אותה שלישייה – חיות, עופות, דגים – ובשבעים ἰχθύς, כמו כאן (הסוג א); וב־ – `τῶν ἰχθύων τῆς θαλάσσης καὶ τῶν πετεινῶν τοῦ οὐρανοῦ` (השבעים, בראשית א:כו): **πετεινός** – המלה של הסיודוס כאן – היא מלת השבעים ל`עוֹף` בבראשית א. ובשני הספרים ההבדל בין האדם לחיה הוא ההבדל המוסרי: בבראשית ט – האדם אוכל את החיות, אבל ; אצל הסיודוס – החיות אוכלות זו את זו, ולאדם ניתן משפט (279). |
+| 278 | ἐσθέμεν ἀλλήλους, ἐπεὶ οὐ δίκη ἐστὶ μετʼ αὐτοῖς· | לאכול זה את זה, כי אין משפט ביניהם; | `וַתַּעֲשֶׂה אָדָם כִּדְגֵי הַיָּם כְּרֶמֶשׂ לֹא מֹשֵׁל בּוֹ` (חבקוק א:יד) | equivalent | בעולם בלי משפט בני האדם נעשים כדגים, שהגדול בולע את הקטן: אותו דימוי, מצד המתלונן. חבקוק בשבעים אינו בתיקייה. מוטיב משותף. |
+| 281 | γιγνώσκων, τῷ μέν τʼ ὄλβον διδοῖ εὐρύοπα Ζεύς· | ביודעין, לו נותן שפע זאוס רחב־המבט; | `מִתְהַלֵּךְ בְּתֻמּוֹ צַדִּיק; אַשְׁרֵי בָנָיו אַחֲרָיו` (משלי כ:ז) | equivalent | ראו 285. |
+| 282 | ὃς δέ κε μαρτυρίῃσι ἑκὼν ἐπίορκον ὀμόσσας | ומי שבעדויות, במזיד, יישבע לשקר | `לֹא תַעֲנֶה בְרֵעֲךָ עֵד שָׁקֶר` (שמות כ:יב); `וְלֹא תִשָּׁבְעוּ בִשְׁמִי לַשָּׁקֶר` (ויקרא יט:יב) | equivalent | העדות לשקר; ו – ובשבעים `καὶ οὐκ ὀμεῖσθε τῷ ὀνόματί μου ἐπ’ ἀδίκῳ` (השבעים, ויקרא יט:יב): ὄμνυμι (הסוג א). בשני העולמות – שבועת השקר בבית הדין היא חטא כלפי האל. ראו 194. |
+| 284 | τοῦ δέ τʼ ἀμαυροτέρη γενεὴ μετόπισθε λέλειπται· | ודורו של זה נשאר אחריו עמום יותר; | `פֹּקֵד עֲוֹן אָבֹת עַל בָּנִים עַל שִׁלֵּשִׁים וְעַל רִבֵּעִים לְשֹׂנְאָי` (שמות כ:ד); `יְהִי-אַחֲרִיתוֹ לְהַכְרִית; בְּדוֹר אַחֵר יִמַּח שְׁמָם` (תהלים קט:יג) | equivalent | ובשבעים: `ἀποδιδοὺς ἁμαρτίας πατέρων ἐπὶ τέκνα ἕως τρίτης καὶ τετάρτης γενεᾶς` (השבעים, שמות כ:ה): **γενεά** – המלה של הסיודוס כאן ובשורה הבאה – היא המלה שבה השבעים מוסיפים "דור" לפסוק העברי (`שִׁלֵּשִׁים` – "τρίτης γενεᾶς"): העונש עובר לדורות, בשני הספרים (הסוג א). ו. |
+| 285 | ἀνδρὸς δʼ εὐόρκου γενεὴ μετόπισθεν ἀμείνων. | ודורו של איש נאמן־השבועה אחריו טוב יותר. | `מִתְהַלֵּךְ בְּתֻמּוֹ צַדִּיק; אַשְׁרֵי בָנָיו אַחֲרָיו` (משלי כ:ז) | equivalent | ובשבעים: `ὃς ἀναστρέφεται ἄμωμος ἐν δικαιοσύνῃ, μακαρίους τοὺς παῖδας αὐτοῦ καταλείψει` (השבעים, משלי כ:ז): הצדיק "משאיר אחריו" (καταλείψει – כמו λέλειπται ב־284) בנים מאושרים: אותה מחשבה ואותו פועל־שורש (λείπω; הסוג א בשורש). |
+| 285 | ἀνδρὸς δʼ εὐόρκου γενεὴ μετόπισθεν ἀμείνων. | ודורו של איש נאמן־השבועה אחריו טוב יותר. | `וְעֹשֶׂה חֶסֶד לַאֲלָפִים לְאֹהֲבַי וּלְשֹׁמְרֵי מִצְוֹתָי` (שמות כ:ה) | equivalent | הצד השני של 284. |
+| 288 | ῥηιδίως· λείη μὲν ὁδός, μάλα δʼ ἐγγύθι ναίει· | בקלות: חֲלָקָה הדרך, ומאוד קרוב הוא גר; | `דֶּרֶךְ עָצֵל כִּמְשֻׂכַת חָדֶק` (משלי טו:יט) | divergence | ובשבעים: `ὁδοὶ ἀεργῶν ἐστρωμέναι ἀκάνθαις, αἱ δὲ τῶν ἀνδρείων τετριμμέναι` (השבעים, משלי טו:יט): במשלי דרכו של העצל – בשבעים: של **ἀεργός**, מלתו של הסיודוס (302–305) – זרועה קוצים, ודרך החרוצים "דרוכה, סלולה"; אצל הסיודוס להפך: דרך הרוע חלקה וקרובה, ודרך המעלה ארוכה ומחוספסת. אותו דימוי של שתי דרכים, בהיפוך: במשלי העצלות היא הקשה בסוף, אצל הסיודוס – העבודה קשה בהתחלה ונעשית קלה (292). מוטיב משותף של ספרות החכמה, בלי מגע. |
+| 289 | τῆς δʼ ἀρετῆς ἱδρῶτα θεοὶ προπάροιθεν ἔθηκαν | אך לפני הַמַּעֲלָה שמו הָאֵלִים זֵעָה | `בְּזֵעַת אַפֶּיךָ תֹּאכַל לֶחֶם` (בראשית ג:יט) | equivalent | ובשבעים: `ἐν ἱδρῶτι τοῦ προσώπου σου φάγῃ τὸν ἄρτον σου` (השבעים, בראשית ג:יט): **ἱδρώς** – המלה של הסיודוס – היא מלת השבעים ל`זֵעָה` (הסוג א; `זֵעָה` חובה כאן, `../renderings.md` §5–§6). ההבדל: בבראשית הזיעה היא עונש על חטא, והיא מובילה ללחם ובסוף אל העפר; אצל הסיודוס האלים "שמו" את הזיעה לפני המעלה כתנאי – הדרך אל השגשוג עוברת בה. בשני הסיפורים העבודה הקשה היא גזרת האל על האדם, מראשית (WD 42–46: האלים הסתירו את המחיה). אין מגע בין יוון הארכאית לישראל: מוטיב משותף ומלה שהשבעים בחרו. |
+| 291 | καὶ τρηχὺς τὸ πρῶτον· ἐπὴν δʼ εἰς ἄκρον ἵκηται, | ומחוספס בראשונה; אך כאשר יגיע (אדם) אל השיא, | `וְהָיָה הֶעָקֹב לְמִישׁוֹר וְהָרְכָסִים לְבִקְעָה` (ישעיהו מ:ד) | equivalent | ובשבעים: `καὶ ἔσται πάντα τὰ σκολιὰ εἰς εὐθεῖαν καὶ ἡ τραχεῖα εἰς πεδία` (השבעים, ישעיהו מ:ד): **τραχύς** – מלתו של הסיודוס – היא מלת השבעים ל`רְכָסִים`, והמחוספס נעשה מישור, כמו כאן הדרך הקשה נעשית קלה (292). בישעיהו זו דרך האל השב, אצל הסיודוס – דרכו של העובד. מלה משותפת לשבעים (הסוג א), לא מגע. |
+| 293 | οὗτος μὲν πανάριστος, ὃς αὐτὸς πάντα νοήσῃ | זה – הטוב מכול, אשר בעצמו יבין הכול, | `יִשְׁמַע חָכָם וְיוֹסֶף לֶקַח` (משלי א:ה) | equivalent | שלוש מדרגות דומות בספרות החכמה: החכם, השומע לחכם, והכסיל שאינו שומע. מוטיב משותף. |
+| 299 | ἐργάζευ, Πέρση, δῖον γένος, ὄφρα σε λιμὸς | עֲבוֹד, פרסס, גזע נהדר, כדי שהרעב | `עֹבֵד אַדְמָתוֹ יִשְׂבַּע-לָחֶם` (משלי יב:יא); `לַעֲבֹד אֶת הָאֲדָמָה` (בראשית ב:ה) | equivalent | ובשבעים: `ὁ ἐργαζόμενος τὴν ἑαυτοῦ γῆν ἐμπλησθήσεται ἄρτων` (השבעים, משלי יב:יא): **ἐργάζομαι** – מלתו של הסיודוס – היא מלת השבעים ל`עָבַד` (הסוג א; `עָבַד` חובה, `../renderings.md` §5), ובמשלי העובד "יִמָּלֵא" לחם, כמו שכאן העובד ימלא את אסמו (301). ובבראשית  – `ἐργάζεσθαι τὴν γῆν` (השבעים, בראשית ב:ה). מלה משותפת לשבעים ומוטיב משותף של ספרות החכמה, בלי מגע. |
+| 301 | αἰδοίη, βιότου δὲ τεὴν πιμπλῇσι καλιήν· | הנערצת, ותמלא את אסמך במחיה; | `וְיִמָּלְאוּ אֲסָמֶיךָ שָׂבָע` (משלי ג:י) | equivalent | ובשבעים: `ἵνα πίμπληται τὰ ταμίειά σου πλησμονῆς σίτου` (השבעים, משלי ג:י): **πίμπλημι** – מלתו של הסיודוס – היא מלת השבעים ל`יִמָּלְאוּ`, והאסמים מתמלאים בזכות כבוד האל (משלי ג:ט: מן ההון ומראשית התבואה; כאן: אהבת דמטר). הסוג א בפועל; מוטיב משותף. |
+| 302 | λιμὸς γάρ τοι πάμπαν ἀεργῷ σύμφορος ἀνδρί. | כי הרעב – לגמרי חבר הוא לאיש הבטלן. | `וְנֶפֶשׁ רְמִיָּה תִרְעָב` (משלי יט:טו) | equivalent | ובשבעים: `ψυχὴ δὲ ἀεργοῦ πεινάσει` (השבעים, משלי יט:טו): **ἀεργός** – מלתו של הסיודוס – היא מלת השבעים ל`רְמִיָּה` (וב־משלי יג:ד: ל`עָצֵל`), והבטלן ירעב (הסוג א). מוטיב משותף. |
+| 304 | ζώῃ, κηφήνεσσι κοθούροις εἴκελος ὀργήν, | יחיה, דמוי במזגו לרחפנים חסרי־העוקץ, | `לֵךְ-אֶל-נְמָלָה עָצֵל` (משלי ו:ו) | divergence | ובשבעים נוסף אחרי הנמלה גם הדבורה: `ἢ πορεύθητι πρὸς τὴν μέλισσαν καὶ μάθε ὡς ἐργάτις ἐστὶν` (השבעים, משלי ו:ח): במשלי – העצל לומד מן החרוצה (הנמלה, ובשבעים – גם הדבורה, μέλισσα, מלתו של הסיודוס ב־305); אצל הסיודוס הבטלן *דומה* לטפיל שבכוורת, הרחפן. הדבורה של השבעים היא תוספת יוונית למשלי (לא בנוסח המסורה) – אולי השפעה של המסורת היוונית שהסיודוס הוא עדה הקדום לה. מוטיב משותף, ובתוספת השבעים – גשר יווני. |
+| 308 | ἐξ ἔργων δʼ ἄνδρες πολύμηλοί τʼ ἀφνειοί τε· | ומן המלאכות – אנשים עתירי־צאן ועשירים; | `וְאַבְרָם כָּבֵד מְאֹד בַּמִּקְנֶה בַּכֶּסֶף וּבַזָּהָב` (בראשית יג:ב) | equivalent | העושר נמדד בצאן ובבקר גם באבות. מוטיב משותף של חברה חקלאית־רועית. |
+| 311 | ἔργον δʼ οὐδὲν ὄνειδος, ἀεργίη δέ τʼ ὄνειδος. | המלאכה – אינה חרפה כלל, והבטלה – היא חרפה. | `אָסַף אֱלֹהִים אֶת חֶרְפָּתִי` (בראשית ל:כג); `לְמַעַן אֲשֶׁר לֹא תִקְחוּ עוֹד חֶרְפַּת רָעָב בַּגּוֹיִם` (יחזקאל לו:ל); `מֵחֹרֶף עָצֵל לֹא-יַחֲרֹשׁ` (משלי כ:ד) | equivalent | ובשבעים: `Ἀφεῖλεν ὁ θεός μου τὸ ὄνειδος` (השבעים, בראשית ל:כג): **ὄνειδος** היא מלת השבעים ל`חֶרְפָּה` (הסוג א), ולכן `חֶרְפָּה` כאן. ו – הרעב כחרפה, כמו כאן (302): בשבעים `ὀνειδισμὸν λιμοῦ` – מאותו שורש. ו – ובשבעים `ὀνειδιζόμενος ὀκνηρὸς οὐκ αἰσχύνεται` (השבעים, משלי כ:ד): העצל "שמחרפים אותו אינו מתבייש" – חרפה ובושה, שתי המלים של 311 ו־317 (ὄνειδος, αἰδώς) יחד, בתוספת יוונית. |
+| 312 | εἰ δέ κε ἐργάζῃ, τάχα σε ζηλώσει ἀεργὸς | ואם תעבוד, בקרוב יקנא בך הבטלן | `וַיְקַנְאוּ אֹתוֹ פְּלִשְׁתִּים` (בראשית כו:יד) | equivalent | ובשבעים: `ἐζήλωσαν δὲ αὐτὸν οἱ Φυλιστιιμ` (השבעים, בראשית כו:יד): ζηλόω `קִנֵּא` – קנאת השכנים בעשיר (ראו 23). |
+| 313 | πλουτεῦντα· πλούτῳ δʼ ἀρετὴ καὶ κῦδος ὀπηδεῖ. | בהתעשרך; ואת העושר מלווים מעלה ותפארת. | `עֹשֶׁר-וְכָבוֹד אִתִּי` (משלי ח:יח) | equivalent | עושר וכבוד הולכים יחד בספרות החכמה. מוטיב משותף. |
+| 317 | αἰδὼς δʼ οὐκ ἀγαθὴ κεχρημένον ἄνδρα κομίζει, | ובושה לא טובה סועדת איש נצרך, | — | equivalent | בן סירא ד:כא (לא בתנ"ך העברי) אומר, במלים: יש בושה המביאה חטא ויש בושה שהיא כבוד וחן – אותן שתי פנים של הבושה כמו ב־317–318; בן סירא הכיר אולי את הפתגם היווני (שגם הומרוס מביא, אודיסיאה יז 347). מוטיב משותף. |
+| 319 | αἰδώς τοι πρὸς ἀνολβίῃ, θάρσος δὲ πρὸς ὄλβῳ. | בושה – אצל חוסר־השפע, ותעוזה – אצל השפע. | `וְעָשִׁיר יַעֲנֶה עַזּוֹת` (משלי יח:כג) | equivalent | `תַּחֲנוּנִים יְדַבֶּר-רָשׁ` –  – העני מתחנן בבושה, והעשיר עונה בעזות: אותה חלוקה חברתית. מוטיב משותף. |
+| 320 | χρήματα δʼ οὐχ ἁρπακτά, θεόσδοτα πολλὸν ἀμείνω. | והון – לא חטוף; נְתוּן־אֵלִים – טוב הרבה יותר. | `הוֹן מֵהֶבֶל יִמְעָט;    וְקֹבֵץ עַל-יָד יַרְבֶּה` (משלי יג:יא) | equivalent | ובשבעים: `ὕπαρξις ἐπισπουδαζομένη μετὰ ἀνομίας ἐλάσσων γίνεται` (השבעים, משלי יג:יא): הון שנחטף בעוול מתמעט, ומי שאוסף מעט־מעט מרבה – כל הרצף של 320–326 ו־361–362 בפסוק אחד. השבעים במלים אחרות (ὕπαρξις, לא χρήματα). מוטיב משותף. |
+| 323 | γίγνεται, εὖτʼ ἂν δὴ κέρδος νόον ἐξαπατήσῃ | נהיים, כאשר אכן הבצע ירמה את שכל | `כֵּן אָרְחוֹת כָּל-בֹּצֵעַ בָּצַע` (משלי א:יט) | equivalent | הבצע הלוקח את נפש בעליו: אותה מחשבה, בלשון משלי. מוטיב משותף. |
+| 325 | ῥεῖα δέ μιν μαυροῦσι θεοί, μινύθουσι δὲ οἶκον | בקלות מעממים אותו הָאֵלִים, וממעיטים את הבית | `בֵּית גֵּאִים יִסַּח יְהוָה` (משלי טו:כה) | equivalent | האל ממעיט את בית הגאה – ראו גם 6 (`ῥεῖα`: זאוס ממעיט את הנראה לכול). מוטיב משותף. |
+| 327 | ἶσον δʼ ὅς θʼ ἱκέτην ὅς τε ξεῖνον κακὸν ἔρξῃ, | ושווה (לו) – מי שלמבקש־מקלט ומי שלאורח יפעל רעה, | `וְגֵר לֹא תוֹנֶה וְלֹא תִלְחָצֶנּוּ` (שמות כב:כ) | equivalent | ובשבעים: `Καὶ προσήλυτον οὐ κακώσετε` (השבעים, שמות כב:כ): רשימת החלשים שהאל מגן עליהם – גר, אלמנה ויתום (שמות כב:כא) – ובשבעים `κακόω`, מאותו שורש של `κακὸν ἔρξῃ` כאן; אבל ביוון האורח (ξένος) והמתחנן (ἱκέτης) מוגנים על ידי זאוס ξένιος ו־ἱκέσιος, ובשבעים הגר הוא προσήλυτος – מלה אחרת. מוטיב משותף. |
+| 328 | ὅς τε κασιγνήτοιο ἑοῦ ἀνὰ δέμνια βαίνῃ | ומי שעל מיטות אחיו יעלה | `כִּי עָלִיתָ מִשְׁכְּבֵי אָבִיךָ; אָז חִלַּלְתָּ יְצוּעִי עָלָה` (בראשית מט:ד); `עֶרְוַת אֵשֶׁת אָחִיךָ לֹא תְגַלֵּה` (ויקרא יח:טז); `וְאִישׁ אֲשֶׁר יִקַּח אֶת אֵשֶׁת אָחִיו נִדָּה הִוא` (ויקרא כ:כא) | equivalent | ובשבעים: `ἀνέβης γὰρ ἐπὶ τὴν κοίτην τοῦ πατρός σου` (השבעים, בראשית מט:ד): **ἀναβαίνω** – הפועל של הסיודוס כאן – הוא מלת השבעים ל`עָלִיתָ`: ראובן "עלה" על משכבי אביו (בלהה), כמו כאן "העולה על מיטות אחיו"; ובשני המקומות – משכב ברבים (`מִשְׁכְּבֵי`, δέμνια) ויצוע (εὐνή, 329). ו;  – ובשבעים `ἀσχημοσύνην γυναικὸς ἀδελφοῦ σου οὐκ ἀποκαλύψεις` (השבעים, ויקרא יח:טז). אותו לשון־נקייה ("לעלות על משכב") ואותו איסור; אין מגע – מוטיב משותף ומלה משותפת לשבעים (הסוג א בפועל). |
+| 330 | ὅς τέ τευ ἀφραδίῃς ἀλιταίνεται ὀρφανὰ τέκνα, | ומי שבחוסר דעתו פושע בצאצאים יתומים של מישהו, | `כָּל אַלְמָנָה וְיָתוֹם לֹא תְעַנּוּן` (שמות כב:כא); `וְחָרָה אַפִּי וְהָרַגְתִּי אֶתְכֶם בֶּחָרֶב` (שמות כב:כג); `אָרוּר מַטֶּה מִשְׁפַּט גֵּר יָתוֹם וְאַלְמָנָה` (דברים כז:יט) | equivalent | ובשבעים: `πᾶσαν χήραν καὶ ὀρφανὸν οὐ κακώσετε` (השבעים, שמות כב:כא): **ὀρφανός** – מלתו של הסיודוס – היא מלת השבעים ל`יָתוֹם` (הסוג א); ובשמות האל עצמו נוקם:  – `καὶ ὀργισθήσομαι θυμῷ` (השבעים, שמות כב:כג), כמו כאן זאוס "קוצף" (333) וגומל "בסוף" (334). ו. בשני העולמות היתום הוא מי שאין לו מגן מלבד האל; אין מגע – מוטיב משותף של המזרח הקדום (גם בפרולוג חוקי חמורבי). |
+| 332 | νεικείῃ χαλεποῖσι καθαπτόμενος ἐπέεσσιν· | יריב, בתקפו אותו במילים קשות: | `אָרוּר מַקְלֶה אָבִיו וְאִמּוֹ` (דברים כז:טז) | equivalent | ובשבעים: `Ἐπικατάρατος ὁ ἀτιμάζων πατέρα αὐτοῦ ἢ μητέρα αὐτοῦ` (השבעים, דברים כז:טז): המקלה את הוריו – אצל הסיודוס, המחרף את אביו הזקן; וראו גזע הברזל (185–188). מוטיב משותף. |
+| 334 | ἔργων ἀντʼ ἀδίκων χαλεπὴν ἐπέθηκεν ἀμοιβήν. | תחת מעשי עוול שָׂם עליו תגמול קשה. | `כִּי גְמוּל יָדָיו יֵעָשֶׂה לּוֹ` (ישעיהו ג:יא) | equivalent | הגמול על מעשי האדם. מוטיב משותף. |
+| 336 | κὰδ δύναμιν δʼ ἔρδειν ἱέρʼ ἀθανάτοισι θεοῖσιν | ולפי יכולתך הַקְרֵב קָרְבָּנוֹת לָאֵלִים בני־האלמוות, | `אִישׁ כְּמַתְּנַת יָדוֹ` (דברים טז:יז); `וְאִם לֹא תַגִּיעַ יָדוֹ דֵּי שֶׂה` (ויקרא ה:ז) | equivalent | ובשבעים: `ἕκαστος κατὰ δύναμιν τῶν χειρῶν ὑμῶν` (השבעים, דברים טז:יז): **κατὰ δύναμιν** – אותו צירוף ממש כמו כאן (κὰδ δύναμιν, הצורה האפית; הסוג א) – לפי יכולת היד מביאים מתנה לאל בשלושת הרגלים. וכך דיני הקורבן של העני:  – `Ἐὰν δὲ μὴ ἰσχύσῃ ἡ χεὶρ αὐτοῦ τὸ ἱκανὸν εἰς τὸ πρόβατον` (השבעים, ויקרא ה:ז) – שתי תורים או שני בני יונה; וכן ויקרא יב:ח, יד:כא. ההבדל: בתורה – הלכה מפורטת לעני, אצל הסיודוס – כלל מוסרי אחד. מוטיב משותף וצירוף משותף לשבעים, בלי מגע. |
+| 337 | ἁγνῶς καὶ καθαρῶς, ἐπὶ δʼ ἀγλαὰ μηρία καίειν· | בטהרה ובנקיות, ושָׂרוֹף עליו ירכיים מזהירות; | `שְׁתֵּי הַכְּלָיֹת וְאֶת הַחֵלֶב אֲשֶׁר עֲלֵהֶן אֲשֶׁר עַל הַכְּסָלִים` (ויקרא ג:ד); `הַטְּהוֹרָה` (בראשית ז:ב) | equivalent | גם בתורה החלקים הנשרפים לאל הם החלב והפנימיים, והשאר נאכל; אצל הסיודוס הירכיים העטופות בחלב (המוסבר במקונה, TH 538–557). ובשבעים καθαρός היא מלת  – `ἀπὸ δὲ τῶν κτηνῶν τῶν καθαρῶν` (השבעים, בראשית ז:ב) – וכאן `נָקִי`, כי `טָהוֹר` שמורה ל־ἁγνός (`../renderings.md` §5): הסוג ב, נרשם. מוטיב משותף. |
+| 338 | ἄλλοτε δὲ σπονδῇσι θύεσσί τε ἱλάσκεσθαι, | ופעם – בנסכים ובקטורת רַצֵּה (אותם), | `וַיָּרַח יְהוָה אֶת רֵיחַ הַנִּיחֹחַ` (בראשית ח:כא) | equivalent | הקורבן "מרצה" את האל. ἱλάσκομαι הוא בשבעים הפועל של הכפרה (`ἐξιλάσεται`, ויקרא יב:ח: `וְכִפֶּר עָלֶיהָ הַכֹּהֵן` – בשבעים בצורה המורכבת `ἐξιλάσεται περὶ αὐτῆς ὁ ἱερεύς`, השבעים, ויקרא יב:ח): גשר יווני (הסוג א בשורש), אבל `כִּפֶּר` אינו כאן – `רִצָּה` (`../renderings.md` §11.1). |
+| 339 | ἠμὲν ὅτʼ εὐνάζῃ καὶ ὅτʼ ἂν φάος ἱερὸν ἔλθῃ, | גם כאשר תשכב לישון וגם כאשר יבוא האור הקדוש, | `וּבְשָׁכְבְּךָ וּבְקוּמֶךָ` (דברים ו:ז); `אֶת הַכֶּבֶשׂ הָאֶחָד תַּעֲשֶׂה בַבֹּקֶר` (שמות כט:לט) | equivalent | ובשבעים: `καὶ κοιταζόμενος καὶ διανιστάμενος` (השבעים, דברים ו:ז): ערב ובוקר כזמני העבודה הדתית של היחיד. ו – תמיד של ערב ובוקר. מוטיב משותף. |
+| 341 | ὄφρʼ ἄλλων ὠνῇ κλῆρον, μὴ τὸν τεὸν ἄλλος. | כדי שתרכוש אחוזת אחרים, ולא אחר – את שלך. | `חָלִילָה לִּי מֵיְהוָה מִתִּתִּי אֶת נַחֲלַת אֲבֹתַי לָךְ` (מלכים א כא:ג); `וְהָאָרֶץ לֹא תִמָּכֵר לִצְמִתֻת` (ויקרא כה:כג) | divergence | ובתורה:  – ובשבעים `καὶ ἡ γῆ οὐ πραθήσεται εἰς βεβαίωσιν` (השבעים, ויקרא כה:כג): בישראל אדמת הנחלה אינה נמכרת לצמיתות, ונבות מסרב למכור; אצל הסיודוס – קניית אחוזת השכן היא תכלית העבודה והקורבן, ומכירת האחוזה שלך היא האסון. ו`ἐν κλήρῳ` (השבעים, דברים כה:טו) – κλῆρος, מלתו של הסיודוס, היא בשבעים הנחלה שהאל נותן. מוטיב משותף בהיפוך. |
+| 342 | τὸν φιλέοντʼ ἐπὶ δαῖτα καλεῖν, τὸν δʼ ἐχθρὸν ἐᾶσαι· | את האוהב קָרוֹא למשתה, ואת השנוא הַנֵּחַ; | `וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ` (ויקרא יט:יח) | divergence | התורה מצווה לאהוב את הרע, ואף לעזור לאויב (שמות כג:ד–ה, במלים); המוסר של הסיודוס הוא מוסר ההדדיות: לאוהב – אהבה, לשנוא – מרחק. מוטיב משותף בהבדל. |
+| 345 | γείτονες ἄζωστοι ἔκιον, ζώσαντο δὲ πηοί. | השכנים באים בלי חגורה, והמחותנים חוגרים. | `מֵאָח רָחוֹק` (משלי כז:י) | equivalent | `טוֹב שָׁכֵן קָרוֹב` –  – ובשבעים: `κρείσσων φίλος ἐγγὺς ἢ ἀδελφὸς μακρὰν οἰκῶν` (השבעים, משלי כז:י): **ἐγγύς** – כמו ἐγγύθι של הסיודוס (343) – והשבעים אומרים "ידיד קרוב" ו"אח *הגר* רחוק" (οἰκῶν), כמו כאן "הגר קרוב" (ναίει). השכן הקרוב טוב מן הקרוב שרחוק: אותו פתגם ממש, בשני עולמות חקלאיים של כפרים. ובאותו פסוק – `רֵעֲךָ` … `אַל-תַּעֲזֹב` – `φίλον σὸν ἢ φίλον πατρῷον μὴ ἐγκαταλίπῃς` (השבעים, משלי כז:י): πατρῷος ו־ἐγκαταλείπω הן גם מלות הסיודוס ב־376–378. הסוג א במלים אחדות; מוטיב משותף, בלי מגע. |
+| 349 | εὖ μὲν μετρεῖσθαι παρὰ γείτονος, εὖ δʼ ἀποδοῦναι, | היטב מָדוֹד לך מאת השכן, והיטב שַׁלֵּם, | `וְשָׁאֲלָה אִשָּׁה מִשְּׁכֶנְתָּהּ` (שמות ג:כב); `שַׁאֲלִי לָךְ כֵּלִים מִן הַחוּץ` (מלכים ב ד:ג); `אִם כֶּסֶף תַּלְוֶה אֶת עַמִּי אֶת הֶעָנִי עִמָּךְ לֹא תִהְיֶה לוֹ כְּנֹשֶׁה` (שמות כב:כד) | equivalent | ובשבעים: `αἰτήσει γυνὴ παρὰ γείτονος` (השבעים, שמות ג:כב): השאלה מן השכן (γείτων, מלתו של הסיודוס; הסוג א); וכך  – האלמנה שואלת כלים מכל שכניה. ומול ההלוואה בכפר:  – בתורה הלוואה לעני בלי נשך, אצל הסיודוס ההלוואה בין שכנים נמדדת והחזרה "טובה יותר" (350) – כמעט ריבית של כבוד. מוטיב משותף. |
+| 350 | αὐτῷ τῷ μέτρῳ, καὶ λώιον, αἴ κε δύνηαι, | באותה מידה עצמה, וטוב יותר, אם תוכל, | `לֹא יִהְיֶה לְךָ בְּבֵיתְךָ אֵיפָה וְאֵיפָה` (דברים כה:יד); `לֹא תַעֲשׂוּ עָוֶל בַּמִּשְׁפָּט בַּמִּדָּה` (ויקרא יט:לה) | equivalent | ובשבעים: `οὐκ ἔσται ἐν τῇ οἰκίᾳ σου μέτρον καὶ μέτρον` (השבעים, דברים כה:יד): **μέτρον** – מלתו של הסיודוס – היא מלת השבעים ל`אֵיפָה`; ו – בשבעים `ἐν μέτροις` (השבעים, ויקרא יט:לה) = `בַּמִּדָּה` (הסוג א). בתורה – מידה אחת וצודקת, בציווי האל; אצל הסיודוס – "אותה מידה, ויותר", כדי שתזכה להלוואה הבאה (351). מלה משותפת ומוטיב משותף; אין מגע. |
+| 352 | μὴ κακὰ κερδαίνειν· κακὰ κέρδεα ἶσʼ ἀάτῃσιν. | אַל בָּצוֹעַ רעות: בְּצָעִים רעים שווים לאֵידִים. | `עֹכֵר בֵּיתוֹ בּוֹצֵעַ בָּצַע` (משלי טו:כז) | equivalent | הבוצע בצע מביא חורבן על ביתו: אותה מחשבה, באותו שורש עברי. מוטיב משותף. |
+| 353 | τὸν φιλέοντα φιλεῖν, καὶ τῷ προσιόντι προσεῖναι. | את האוהב אָהוֹב, ואל הבא אליך – בּוֹא. | — | equivalent | בדברי החכמה במשלי ח:יז, במלים: "אני את אוהבי אוהב" – ובשבעים: `ἐγὼ τοὺς ἐμὲ φιλοῦντας ἀγαπῶ` (השבעים, משלי ח:יז): **φιλέω** בבינוני – "האוהבים" – כמו τὸν φιλέοντα כאן (הסוג א בבינוני; הפועל השני בשבעים אחר); בשבעים – אהבת החכמה, כאן – אהבת שכנים. מוטיב משותף. |
+| 354 | καὶ δόμεν, ὅς κεν δῷ, καὶ μὴ δόμεν, ὅς κεν μὴ δῷ. | ונָתוֹן – למי שייתן, ולא נָתוֹן – למי שלא ייתן: | `נָתוֹן תִּתֵּן לוֹ וְלֹא יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ` (דברים טו:י) | divergence | ובשבעים: `διδοὺς δώσεις αὐτῷ … καὶ οὐ λυπηθήσῃ τῇ καρδίᾳ σου διδόντος σου αὐτῷ` (השבעים, דברים טו:י): אותו מקור מוחלט עברי (`נָתוֹן`) ואותו δίδωμι, אבל הפוך: בתורה – תן לאביון, שאינו יכול להחזיר; אצל הסיודוס – תן למי שנותן. וב־357–358 הנותן "שמח בלבו", כמו בתורה "לא ירע לבבך". הסוג א בפועל; מוטיב משותף בהיפוך. |
+| 355 | δώτῃ μέν τις ἔδωκεν, ἀδώτῃ δʼ οὔτις ἔδωκεν. | לנותן – נותן מישהו, ולשאינו־נותן – אין איש נותן. | `יֵשׁ מְפַזֵּר וְנוֹסָף עוֹד` (משלי יא:כד) | equivalent | הנותן מקבל. ובשבעים, בתוספת למשלי כב:ט: `νίκην καὶ τιμὴν περιποιεῖται ὁ δῶρα δούς` (השבעים, משלי כב:ט) – "ניצחון וכבוד קונה לו הנותן מתנות": δίδωμι ו־δῶρον, כמו כאן ובשורות 354–358 (הסוג א). מוטיב משותף. |
+| 361 | εἰ γάρ κεν καὶ σμικρὸν ἐπὶ σμικρῷ καταθεῖο | כי גם אם תניח קטן על קטן | `וְקֹבֵץ עַל-יָד יַרְבֶּה` (משלי יג:יא) | equivalent | ובשבעים: `ὁ δὲ συνάγων ἑαυτῷ μετ’ εὐσεβείας πληθυνθήσεται` (השבעים, משלי יג:יא): האוסף מעט־מעט (`עַל-יָד`) – ובשבעים "לעצמו" (ἑαυτῷ), כמו הבינוני καταθεῖο כאן – מרבה. אותו פתגם של חיסכון. מוטיב משותף. |
+| 364 | οὐδὲ τό γʼ ἐν οἴκῳ κατακείμενον ἀνέρα κήδει. | ואף מה שמונח בבית אינו מצער את האיש: | `כָּל-הוֹן יָקָר וְנָעִים` (משלי כד:ד); `עַד-מָתַי עָצֵל תִּשְׁכָּב` (משלי ו:ט) | equivalent | `וּבְדַעַת חֲדָרִים יִמָּלְאוּ` –  – הבית המלא אוצר. ו – בשבעים `ἕως τίνος, ὀκνηρέ, κατάκεισαι;` (השבעים, משלי ו:ט): אותו פועל κατάκειμαι (הסוג א בפועל), אבל שם העצל "שוכב", כאן התבואה "מונחת" בבית. מוטיב משותף. |
+| 370 | μισθὸς δʼ ἀνδρὶ φίλῳ εἰρημένος ἄρκιος ἔστω. | והשכר שנאמר לאיש ידיד – יהי מספיק; | `בְּיוֹמוֹ תִתֵּן שְׂכָרוֹ` (דברים כד:טו) | equivalent | ובשבעים: `αὐθημερὸν ἀποδώσεις τὸν μισθὸν αὐτοῦ` (השבעים, דברים כד:טו): **μισθός** – מלתו של הסיודוס – היא מלת השבעים ל`שָׂכָר` (הסוג א); בתורה – שכר השכיר העני, בזמנו; כאן – שכר שהוסכם גם עם ידיד, ובמלואו. מוטיב משותף. |
+| 371 | καί τε κασιγνήτῳ γελάσας ἐπὶ μάρτυρα θέσθαι. | ואף עם אחיך – בצחקך – שׂוֹם עֵד; | `וְהָיָה לְעֵד בֵּינִי וּבֵינֶךָ` (בראשית לא:מד); `וָאֶכְתֹּב בַּסֵּפֶר וָאֶחְתֹּם וָאָעֵד עֵדִים` (ירמיהו לב:י) | equivalent | ובשבעים: `ἰδὲ ὁ θεὸς μάρτυς ἀνὰ μέσον ἐμοῦ καὶ σοῦ` (השבעים, בראשית לא:מד): **μάρτυς** – מלתו של הסיודוס – היא מלת השבעים ל`עֵד`, בברית בין קרובים שאינם בוטחים זה בזה (יעקב ולבן; הסוג א). ו – עדים בקניית שדה מקרוב (חנמאל, בן דודו של ירמיהו). מוטיב משותף. |
+| 373 | μὴ δὲ γυνή σε νόον πυγοστόλος ἐξαπατάτω | ואל תרמה את שכלך אשה מהודרת־עכוז, | `וְחָלָק מִשֶּׁמֶן חִכָּהּ` (משלי ה:ג); `בְּחֵלֶק שְׂפָתֶיהָ תַּדִּיחֶנּוּ` (משלי ז:כא) | equivalent | `כִּי נֹפֶת תִּטֹּפְנָה שִׂפְתֵי זָרָה` –  – ובשבעים: `μέλι γὰρ ἀποστάζει ἀπὸ χειλέων γυναικὸς πόρνης` (השבעים, משלי ה:ג); ו: האשה הזרה המפתה בחלקלקות לשונה (374). ההבדל: במשלי – הזרה, אשת איש או זונה; אצל הסיודוס – כל אשה המחפשת את האסם, ובכללה (בין השורות) זו שתבוא לבית (405, 695–705). מוטיב משותף. |
+| 375 | ὃς δὲ γυναικὶ πέποιθε, πέποιθʼ ὅ γε φηλήτῃσιν. | ומי שבוטח באשה – בוטח הוא בגנבים. | `וְשָׁלָל לֹא יֶחְסָר` (משלי לא:יא); `וּמֵיְהוָה אִשָּׁה מַשְׂכָּלֶת` (משלי יט:יד) | divergence | `בָּטַח בָּהּ לֵב בַּעְלָהּ` –  – אשת החיל: בעלה בוטח בה, והיא מוסיפה לרכושו – ההפך הגמור מן השורה כאן. וכן  – האשה הנבונה מתת האל; אצל הסיודוס – גם האשה הראשונה הייתה מתנת האלים (82), אבל לרעה. מוטיב משותף בהיפוך. |
+| 376 | μουνογενὴς δὲ πάις εἴη πατρώιον οἶκον | וִיהִי בן יחיד, את בית אביו | `וְרַק הִיא יְחִידָה אֵין לוֹ מִמֶּנּוּ בֵּן אוֹ בַת` (שופטים יא:לד); `אֶת בִּנְךָ אֶת יְחִידְךָ` (בראשית כב:ב) | equivalent | ובשבעים: `καὶ αὕτη μονογενὴς αὐτῷ ἀγαπητή` (השבעים, שופטים יא:לד): **μονογενής** – מלתו של הסיודוס – היא מלת השבעים ל`יְחִידָה` (הסוג א); ואילו ב השבעים בוחרים `ἀγαπητόν`. |
+| 376 | μουνογενὴς δὲ πάις εἴη πατρώιον οἶκον | וִיהִי בן יחיד, את בית אביו | `בַּיִת וָהוֹן נַחֲלַת אָבוֹת` (משלי יט:יד) | divergence | `אֲשֶׁר מִלֵּא אֶת-אַשְׁפָּתוֹ מֵהֶם` (תהילים קכז:ה) – בתהלים ובאבות הברכה היא בנים רבים; אצל הסיודוס – בן יחיד, כדי שהאחוזה לא תתחלק. ו – ובשבעים: `οἶκον καὶ ὕπαρξιν μερίζουσιν πατέρες παισίν` (השבעים, משלי יט:יד): השבעים אומרים "האבות *מחלקים* לבנים" – בדיוק החלוקה שהסיודוס רוצה למנוע. מוטיב משותף. |
+| 378 | γηραιὸς δὲ θάνοις ἕτερον παῖδʼ ἐγκαταλείπων. | וזקן תמות, בהשאירך בן אחר. | — | equivalent | `וְעָזְבוּ לַאֲחֵרִים` – `חֵילָם` (תהילים מט:יא) – העוזב את רכושו לאחרים במותו; ובמשלי כז:י השבעים בוחרים ב־`ἐγκαταλίπῃς` ל`אַל-תַּעֲזֹב` (ראו 345) – ἐγκαταλείπω, מלתו של הסיודוס, במובן אחר ("לנטוש"); כאן "להשאיר אחריו": `הִשְׁאִיר` (לפי המובן קודם, ההנחיות §6.4.1). הסוג א בצורה, לא במובן. |
+| 379 | ῥεῖα δέ κεν πλεόνεσσι πόροι Ζεὺς ἄσπετον ὄλβον. | ובקלות היה זאוס מעניק לרבים יותר שפע לאין שיעור. | `בְּרָב-עָם הַדְרַת-מֶלֶךְ` (משלי יד:כח) | equivalent | הכוח ברבים. מוטיב משותף. |
+| 382 | ὧδʼ ἔρδειν, καὶ ἔργον ἐπʼ ἔργῳ ἐργάζεσθαι. | כך פָּעוֹל, ועָבוֹד מלאכה על מלאכה. | `לַעֲבֹד אֶת הָאֲדָמָה` (בראשית ב:ה); `צַו לָצָו צַו לָצָו קַו לָקָו קַו לָקָו` (ישעיהו כח:י) | equivalent | ובשבעים `ἐργάζεσθαι τὴν γῆν` (השבעים, בראשית ב:ה) – אותו שם פועל עצמו (ἐργάζεσθαι; הסוג א). ו – אותה צורה, "דבר על דבר", במקום אחר לגמרי; מוטיב צורני בלבד. |
+| 383 | πληιάδων Ἀτλαγενέων ἐπιτελλομενάων | בִּזְרוֹחַ כִּימָה, ילידות אַטְלָס, | `עֹשֶׂה-עָשׁ כְּסִיל וְכִימָה` (איוב ט:ט); `הַתְקַשֵּׁר מַעֲדַנּוֹת כִּימָה` (איוב לח:לא); `עֹשֵׂה כִימָה וּכְסִיל` (עמוס ה:ח) | equivalent | ובשבעים: `ὁ ποιῶν Πλειάδα καὶ Ἕσπερον καὶ Ἀρκτοῦρον` (השבעים, איוב ט:ט); ו – `συνῆκας δὲ δεσμὸν Πλειάδος καὶ φραγμὸν Ὠρίωνος ἤνοιξας;` (השבעים, איוב לח:לא): **Πλειάς** היא מלת השבעים ל`כִּימָה` (הסוג א), ולכן `כִּימָה` כאן (`../renderings.md` §3.1). **אבל איוב ט:ט בשבעים אינו מקביל אחד לאחד** – בעברית `עָשׁ כְּסִיל וְכִימָה`, בשבעים "הפליאדה, הספרוס (כוכב הערב) וארקטורוס": הסדר אחר והשמות אחרים, ורק באיוב לח:לא `כִּימָה` = Πλειάς ו`כְּסִיל` = Ὠρίων. ו – ובשבעים עמוס ה:ח אין כוכבים כלל: `ποιῶν πάντα καὶ μετασκευάζων` (השבעים, עמוס ה:ח). במקרא כימה היא סימן לכוחו של הבורא, אצל הסיודוס – שעון של השנה החקלאית. שמות הכוכבים משותפים לכל המזרח הקדום (באכדית MUL.MUL, *zappu*; ובחיבור האסטרונומי MUL.APIN זריחת הכוכבים מסמנת את עונות השנה); אין מגע – מוטיב משותף ומלה שהשבעים בחרו. |
+| 384 | ἄρχεσθʼ ἀμήτου, ἀρότοιο δὲ δυσομενάων. | הַתְחֵל בקציר, ובחריש – בשקיעתן. | `זֶרַע וְקָצִיר` (בראשית ח:כב); `אָגְרָה בַקָּצִיר מַאֲכָלָהּ` (משלי ו:ח); `מֵחֹרֶף עָצֵל לֹא-יַחֲרֹשׁ` (משלי כ:ד); `בַּקָּצִיר וָאָיִן` (משלי כ:ד) | equivalent | ובשבעים `σπέρμα καὶ θερισμός` (השבעים, בראשית ח:כב): שני הקטבים של שנת האיכר. ו – ובשבעים `ἐν τῷ ἀμήτῳ ποιεῖται τὴν παράθεσιν` (השבעים, משלי ו:ח): **ἄμητος** – מלתו של הסיודוס – היא מלת השבעים ל`קָצִיר` (הסוג א). ו – העצל שאינו חורש בעונה, ושואל : אותה שנה של חריש וקציר, ואותו עונש לעצל (ראו 395–404). מוטיב משותף. |
+| 385 | αἳ δή τοι νύκτας τε καὶ ἤματα τεσσαράκοντα | אשר אכן ארבעים לילות וימים | `אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה` (בראשית ז:ד) | equivalent | ובשבעים: `τεσσαράκοντα ἡμέρας καὶ τεσσαράκοντα νύκτας` (השבעים, בראשית ז:ד): ארבעים ימים ולילות – זמן המבול (וכן משה בהר, אליהו בדרך); כאן – זמן אסטרונומי ממשי: כימה נעלמת כארבעים יום (סוף מרץ עד אמצע מאי), כשהיא קרובה מדי לשמש. הסדר כאן – לילות לפני ימים (F13), כמו ביוונית; המספר העגול משותף לשתי התרבויות. מוטיב משותף. |
+| 388 | οὗτός τοι πεδίων πέλεται νόμος, οἵ τε θαλάσσης | זה, אכן, החוק של המישורים, וגם של אֵלֶּה אשר קרוב לים | `הֲיָדַעְתָּ חֻקּוֹת שָׁמָיִם` (איוב לח:לג); `חֻקֹּת יָרֵחַ וְכוֹכָבִים לְאוֹר לָיְלָה` (ירמיהו לא:לד) | equivalent | ו: חוקי השמים והכוכבים – בישראל, חוקים שהאל קבע ושאדם אינו יודע; אצל הסיודוס – "חוק" שהאיכר יודע ומכוון אליו את עבודתו. השבעים באיוב לח:לג: `ἐπίστασαι δὲ τροπὰς οὐρανοῦ` (השבעים, איוב לח:לג) – "מהפכות השמים", לא νόμος. מוטיב משותף. |
+| 390 | πόντου κυμαίνοντος ἀπόπροθι, πίονα χῶρον | הרחק מן הים הַמַּעֲלֶה גלים, מקום שמן | `וּמָה הָאָרֶץ הַשְּׁמֵנָה הִוא אִם רָזָה` (במדבר יג:כ) | equivalent | "ארץ שמנה" כאדמה פורייה. מוטיב משותף. |
+| 391 | ναίουσιν· γυμνὸν σπείρειν, γυμνὸν δὲ βοωτεῖν, | גרים: עָרֹם זָרוֹעַ, ועָרֹם נַהֵג בבקר, | `וַיִּהְיוּ שְׁנֵיהֶם עֲרוּמִּים הָאָדָם וְאִשְׁתּוֹ` (בראשית ב:כה) | equivalent | ובשבעים `καὶ ἦσαν οἱ δύο γυμνοί` (השבעים, בראשית ב:כה): **γυμνός** היא מלת השבעים ל`עָרֹם` (הסוג א; `עָרֹם` חובה, `../renderings.md` §5). |
+| 391 | ναίουσιν· γυμνὸν σπείρειν, γυμνὸν δὲ βοωτεῖν, | גרים: עָרֹם זָרוֹעַ, ועָרֹם נַהֵג בבקר, | `וּרְעֵבִים נָשְׂאוּ עֹמֶר` (איוב כד:י) | divergence | `עָרוֹם הִלְּכוּ בְּלִי לְבוּשׁ` –  – ובשבעים `γυμνοὺς δὲ ἐκοίμισαν ἀδίκως` (השבעים, איוב כד:י): באיוב – העניים העובדים בשדות הרשעים "ערומים" ורעבים נושאים את העומר: הערום הוא סימן הדיכוי; אצל הסיודוס – הערום הוא עצה מעשית (לעבוד בעונה החמה, בלי בגד מיותר, או: לזרוע בזמן שעוד חם). אותה מלה, אותה תמונה של איכר ערום בשדה, ומשמעות הפוכה. מוטיב משותף, בלי מגע. |
+| 395 | πτώσσῃς ἀλλοτρίους οἴκους καὶ μηδὲν ἀνύσσῃς. | תחזר על בתי זרים ולא תשיג מאומה; | — | equivalent | `וְלֹא-רָאִיתִי צַדִּיק נֶעֱזָב` – `וְזַרְעוֹ מְבַקֶּשׁ-לָחֶם` (תהילים לז:כה); ו`וְנוֹעַ יָנוּעוּ בָנָיו וְשִׁאֵלוּ` (תהילים קט:י) – הקבצנות כחרפה וכעונש. מוטיב משותף. |
+| 398 | ἔργα, τά τʼ ἀνθρώποισι θεοὶ διετεκμήραντο, | את המלאכות אשר ייעדו הָאֵלִים לבני האדם, | `וַיַּנִּחֵהוּ בְגַן עֵדֶן לְעָבְדָהּ וּלְשָׁמְרָהּ` (בראשית ב:טו) | equivalent | העבודה כייעוד שהאל קבע לאדם; ובשבעים `ἐργάζεσθαι αὐτὸν καὶ φυλάσσειν` (השבעים, בראשית ב:טו). מוטיב משותף. |
+| 400 | ζητεύῃς βίοτον κατὰ γείτονας, οἳ δʼ ἀμελῶσιν. | תבקש מחיה אצל השכנים, והם יעלימו עין. | `וּמַעְלִים עֵינָיו רַב-מְאֵרוֹת` (משלי כח:כז) | divergence | `נוֹתֵן לָרָשׁ אֵין מַחְסוֹר` –  – ובשבעים: `ὃς δὲ ἀποστρέφει τὸν ὀφθαλμὸν αὐτοῦ, ἐν πολλῇ ἀπορίᾳ ἔσται` (השבעים, משלי כח:כז): במשלי – המעלים עין מן העני נענש; אצל הסיודוס – השכנים שמעלימים עין צודקים, והאשם הוא הבטלן. מוטיב משותף, בהיפוך מוסרי. |
+| 401 | δὶς μὲν γὰρ καὶ τρὶς τάχα τεύξεαι· ἢν δʼ ἔτι λυπῇς, | כי פעמיים ושלוש בקרוב תקבל; ואם עוד תעציב (אותם), | `בְּעִצָּבוֹן תֹּאכְלֶנָּה` (בראשית ג:יז) | equivalent | ובשבעים: `ἐν λύπαις φάγῃ αὐτὴν` (השבעים, בראשית ג:יז): **λύπη** – שמו של הפועל λυπέω כאן – היא מלת השבעים ל`עִצָּבוֹן` (הסוג א), ולכן השורש עצב שמור לו בקורפוס (`../renderings.md` §7.1), וכאן הוא מותר: `תַּעֲצִיב`. ההבדל במובן: בבראשית – עמל העבודה בעצב, כאן – לצער את השכנים בבקשות; ובכל זאת אותו עולם: מי שאינו עובד בעצב, מעציב אחרים. ובדברים טו:י השבעים מתרגמים ב־λυπέω את `וְלֹא יֵרַע לְבָבְךָ` (ראו 354). מלה שהשבעים בחרו, לא מגע. |
+| 404 | φράζεσθαι χρειῶν τε λύσιν λιμοῦ τʼ ἀλεωρήν. | לשים לב להתרת החובות ולמפלט מן הרעב. | `שָׁמוֹט כָּל בַּעַל מַשֵּׁה יָדוֹ` (דברים טו:ב); `שְׂדֹתֵינוּ וּכְרָמֵינוּ וּבָתֵּינוּ אֲנַחְנוּ עֹרְבִים; וְנִקְחָה דָגָן בָּרָעָב` (נחמיה ה:ג) | equivalent | ובשבעים: `ἀφήσεις πᾶν χρέος ἴδιον, ὃ ὀφείλει σοι ὁ πλησίον` (השבעים, דברים טו:ב): **χρέος** – מלתו של הסיודוס – היא מלת השבעים ל`מַשֶּׁה`, החוב שבין רע לרעהו (הסוג א). ו – חובות ורעב בכפר, ומשכון השדות. ההבדל: בתורה – שמיטת החובות היא חוק האל; אצל הסיודוס – כל איכר צריך "להתיר" את חובו בעצמו, בעבודה. מוטיב משותף, בלי מגע. |
+| 405 | οἶκον μὲν πρώτιστα γυναῖκά τε βοῦν τʼ ἀροτῆρα, | בית – ראשונה, ואשה, ושור חורש – | `לֹא תַחְמֹד אֵשֶׁת רֵעֶךָ וְעַבְדּוֹ וַאֲמָתוֹ וְשׁוֹרוֹ וַחֲמֹרוֹ` (שמות כ:יג); `מִי הָאִישׁ אֲשֶׁר בָּנָה בַיִת חָדָשׁ` (דברים כ:ה); `נָטַע כֶּרֶם` (דברים כ:ו); `אֵרַשׂ אִשָּׁה` (דברים כ:ז); `אַחַר וּבָנִיתָ בֵיתֶךָ` (משלי כד:כז) | equivalent | `לֹא תַחְמֹד בֵּית רֵעֶךָ` – : **אותו סדר של משק הבית** – בית, אשה, (עבד ואמה,) שור – כמו כאן: בית, אשה (קנויה, 406), שור. ובשבעים הסדר שונה: `οὐκ ἐπιθυμήσεις τὴν γυναῖκα τοῦ πλησίον σου. οὐκ ἐπιθυμήσεις τὴν οἰκίαν τοῦ πλησίον σου` (השבעים, שמות כ:יז) – האשה לפני הבית (כמו בדברים ה:יח): דווקא הנוסח העברי של שמות קרוב לרשימת הסיודוס. ו, ,  – בית, כרם, אשה: שלוש היסודות של החיים, שבגללם חוזרים מן המלחמה. ו`הָכֵן בַּחוּץ מְלַאכְתֶּךָ` –  – במשלי הסדר הפוך: קודם המלאכה בשדה, ואחר כך הבית. מוטיב משותף של חברה חקלאית; אין מגע. |
+| 406 | κτητήν, οὐ γαμετήν, ἥτις καὶ βουσὶν ἕποιτο, | קנויה, לא נשואה, אשר גם אחרי הבקר תלך; | `מֵהֶם תִּקְנוּ עֶבֶד וְאָמָה` (ויקרא כה:מד); `וְגַם אֶת רוּת הַמֹּאֲבִיָּה אֵשֶׁת מַחְלוֹן קָנִיתִי לִי לְאִשָּׁה` (רות ד:י) | equivalent | ובשבעים: `ἀπ’ αὐτῶν κτήσεσθε δοῦλον καὶ δούλην` (השבעים, ויקרא כה:מד): **κτάομαι** – שורשו של κτητός כאן – הוא מלת השבעים ל`קָנָה` בעבד ובאמה (הסוג א בשורש), ולכן `קְנוּיָה`. ו – בעברית "קנה" גם אשה לנישואין; אצל הסיודוס דווקא ההבחנה: קנויה – לא נשואה. מוטיב משותף. |
+| 408 | μὴ σὺ μὲν αἰτῇς ἄλλον, ὃ δʼ ἀρνῆται, σὺ δὲ τητᾷ, | פן תשאל אתה מאחר, והוא יסרב, ואתה תחסר, | `וְכִי יִשְׁאַל אִישׁ מֵעִם רֵעֵהוּ` (שמות כב:יג); `אֲהָהּ אֲדֹנִי וְהוּא שָׁאוּל` (מלכים ב ו:ה) | equivalent | ובשבעים: `ἐὰν δὲ αἰτήσῃ τις παρὰ τοῦ πλησίον` (השבעים, שמות כב:יג): **αἰτέω** – מלתו של הסיודוס – היא מלת השבעים ל`שָׁאַל` בהשאלה מן השכן (הסוג א; וכן שמות ג:כב, ראו 349). ו – הגרזן השאול – ובשבעים `καὶ αὐτὸ κεχρημένον` (השבעים, מלכים ב ו:ה): χράω בעבר הנשלם – אותה צורה של 317 (`κεχρημένον`), שם במובן "נצרך", כאן "שאול". בתורה – דיני השואל; אצל הסיודוס – עצה שלא להגיע לשאילה. מוטיב משותף. |
+| 409 | ἡ δʼ ὥρη παραμείβηται, μινύθῃ δὲ τὸ ἔργον. | והעונה תחלוף, והמלאכה תתמעט. | `לַכֹּל זְמָן; וְעֵת לְכָל חֵפֶץ תַּחַת הַשָּׁמָיִם` (קהלת ג:א); `אֹגֵר בַּקַּיִץ בֵּן מַשְׂכִּיל;    נִרְדָּם בַּקָּצִיר בֵּן מֵבִישׁ` (משלי י:ה) | equivalent | ו – העונה החולפת והבן הנרדם בקציר. מוטיב משותף. |
+| 410 | μηδʼ ἀναβάλλεσθαι ἔς τʼ αὔριον ἔς τε ἔνηφιν· | ואַל דָּחֹה למחר ולמחרתיים: | `לֵךְ וָשׁוּב וּמָחָר אֶתֵּן` (משלי ג:כח); `כִּי לֹא-תֵדַע מַה-יֵּלֶד יוֹם` (משלי כז:א) | equivalent | ובשבעים: `καὶ αὔριον δώσω … οὐ γὰρ οἶδας τί τέξεται ἡ ἐπιοῦσα` (השבעים, משלי ג:כח); ו`אַל-תִּתְהַלֵּל בְּיוֹם מָחָר` –  – `μὴ καυχῶ τὰ εἰς αὔριον` (השבעים, משלי כז:א): **αὔριον** היא מלת השבעים ל`מָחָר` (הסוג א). במשלי – אל תדחה את הנתינה לרעך, ואל תבטח במחר; אצל הסיודוס – אל תדחה את העבודה. ובשבעים של משלי ג:כח נוספה תוספת – "כי לא תדע מה יֵלֵד היום הבא" – מתוך משלי כז:א. מוטיב משותף. |
+| 411 | οὐ γὰρ ἐτωσιοεργὸς ἀνὴρ πίμπλησι καλιὴν | כי איש שמלאכתו לשווא אינו ממלא אסם, | `עַל-שְׂדֵה אִישׁ-עָצֵל עָבַרְתִּי` (משלי כד:ל); `וּבָא-מִתְהַלֵּךְ רֵישֶׁךָ` (משלי כד:לד); `עֹבֵד אַדְמָתוֹ יִשְׂבַּע-לָחֶם` (משלי יב:יא; ראו 299) | equivalent | ו: השדה של העצל ועוניו. ו. מוטיב משותף. |
+| 412 | οὐδʼ ἀναβαλλόμενος· μελέτη δὲ τὸ ἔργον ὀφέλλει· | ולא הדוחה; והשקידה מרבה את המלאכה, | `וְיַד חָרוּצִים תַּעֲשִׁיר` (משלי י:ד) | equivalent | ובשבעים `χεῖρες δὲ ἀνδρείων πλουτίζουσιν` (השבעים, משלי י:ד): החריצות מעשירה. מוטיב משותף. |
+| 413 | αἰεὶ δʼ ἀμβολιεργὸς ἀνὴρ ἄτῃσι παλαίει. | ותמיד איש משהה־מלאכה מתגושש עם אֵידִים. | `וַיֵּאָבֵק אִישׁ עִמּוֹ עַד עֲלוֹת הַשָּׁחַר` (בראשית לב:כה) | equivalent | ובשבעים: `καὶ ἐπάλαιεν ἄνθρωπος μετ’ αὐτοῦ ἕως πρωί` (השבעים, בראשית לב:כה): **παλαίω** – מלתו של הסיודוס – היא מלת השבעים ל`וַיֵּאָבֵק` (הסוג א), אבל `נֶאֱבַק` כבר שמור ל־μάρναμαι (TH 629, 647, 663; WD 163), ולכן παλαίω – מלת ההיאבקות בזירה – `הִתְגּוֹשֵׁשׁ` (הכרעת המתאם, `../renderings.md` §11.10); הזהות עם השבעים נרשמת כאן בלבד. ההבדל: יעקב נאבק עם איש (או אל) ויוצא מבורך; הדוחה את מלאכתו מתגושש "עם אֵידים" – באסונות – ולעולם אינו מנצח. מלה משותפת לשבעים, לא מגע. |
+| 414 | ἦμος δὴ λήγει μένος ὀξέος ἠελίοιο | בשעה שאכן פוסקת עוצמת השמש החדה | `עֹד כָּל יְמֵי הָאָרֶץ:  זֶרַע וְקָצִיר וְקֹר וָחֹם וְקַיִץ וָחֹרֶף וְיוֹם וָלַיְלָה לֹא יִשְׁבֹּתוּ` (בראשית ח:כב) | equivalent | ובשבעים: `σπέρμα καὶ θερισμός, ψῦχος καὶ καῦμα, θέρος καὶ ἔαρ ἡμέραν καὶ νύκτα οὐ καταπαύσουσιν` (השבעים, בראשית ח:כב): **καῦμα** – מלתו של הסיודוס בשורה הבאה – היא מלת השבעים ל`חֹם`, ו־θέρος ל`קַיִץ` (הסוג א). לוח השנה של הסיודוס (414–617) הוא פריסה מלאה של מחזור "זרע וקציר, קור וחום, קיץ וחורף" – מה שבבראשית הוא הבטחת האל אחרי המבול, הוא כאן ידע מעשי של איכר. ולוח השנה החקלאי העברי הקדום, לוח גזר (המאה העשירית לפני הספירה, במלים): חודשי אסיף, זרע, לקש, עצד פשתה, קציר שעורים, קציר וכל, זמר וקיץ – אותו מבנה של שנה לפי המלאכות. מוטיב משותף, בלי מגע. |
+| 415 | καύματος ἰδαλίμου, μετοπωρινὸν ὀμβρήσαντος | והחום המזיע, כשממטיר בסתיו | `כִּי לֹא הִמְטִיר יְהוָה אֱלֹהִים עַל הָאָרֶץ וְאָדָם אַיִן לַעֲבֹד אֶת הָאֲדָמָה` (בראשית ב:ה) | equivalent | גשם האל ועבודת האדמה יחד; אצל הסיודוס זאוס הוא אל הגשם, ועם גשמי הסתיו מתחילה שנת העבודה. בשבעים שם `ἔβρεξεν` (השבעים, בראשית ב:ה) – פועל אחר. מוטיב משותף. |
+| 421 | ὕλη, φύλλα δʼ ἔραζε χέει, πτόρθοιό τε λήγει· | היער, וְעָלָיו ארצה הוא יוצק, ומן הנצרים הוא פוסק; | `כִּי תִהְיוּ כְּאֵלָה נֹבֶלֶת עָלֶהָ` (ישעיהו א:ל) | equivalent | העץ המשיל את עליו. מוטיב משותף. |
+| 423 | ὄλμον μὲν τριπόδην τάμνειν, ὕπερον δὲ τρίπηχυν, | מכתש – באורך שלוש רגל כָּרוֹת, וְעֱלִי – באורך שלוש אמות, | `בַּעֱלִי` (משלי כז:כב) | equivalent | `אִם תִּכְתּוֹשׁ-אֶת-הָאֱוִיל בַּמַּכְתֵּשׁ בְּתוֹךְ הָרִיפוֹת` –  – המכתש והעלי, כלי הבית לכתישת הגרעינים. (השבעים במשלי כז:כב מתרגמים אחרת.) מוטיב משותף. |
+| 425 | εἰ δέ κεν ὀκταπόδην, ἀπὸ καὶ σφῦράν κε τάμοιο. | ואם באורך שמונה רגל – היית כורת ממנו גם מקבת. | `וַתָּשֶׂם אֶת הַמַּקֶּבֶת בְּיָדָהּ` (שופטים ד:כא) | equivalent | המקבת, כלי העץ הכבד של משק הבית. מוטיב משותף. |
+| 426 | τρισπίθαμον δʼ ἄψιν τάμνειν δεκαδώρῳ ἀμάξῃ. | ושל שלוש זרתות – חישוק כָּרוֹת לעגלה בת עשרה טפחים. | `קְחוּ לָכֶם מֵאֶרֶץ מִצְרַיִם עֲגָלוֹת` (בראשית מה:יט) | equivalent | ובשבעים: `λαβεῖν αὐτοῖς ἁμάξας ἐκ γῆς Αἰγύπτου` (השבעים, בראשית מה:יט): **ἄμαξα** – מלתו של הסיודוס – היא מלת השבעים ל`עֲגָלָה` (הסוג א). מוטיב משותף. |
+| 432 | δοιὰ δὲ θέσθαι ἄροτρα, πονησάμενος κατὰ οἶκον, | ושתי מחרשות שׂוֹם לך, בעמלך בבית, | — | equivalent | בהוראות האיכר השומריות: `שור־המחרשה – שור עודף יהיה לו;` (הוראות האיכר 23) ו`מחרשתו – מחרשה עודפת לה;` (הוראות האיכר 25) – מחרשה נוספת ושור נוסף, למקרה שאחד יישבר: אותה עצה בדיוק, באוצר החכמה החקלאית של שומר (סביב 1800 לפני הספירה). ראו `../../סיפורי-הבריאה-המסופוטמיים/5-הוראות-האיכר/annotated.rtl.md`. מוטיב משותף של ספרות ההוראה החקלאית, לא מקור. |
+| 435 | δάφνης δʼ ἢ πτελέης ἀκιώτατοι ἱστοβοῆες, | מדפנה או מבוקיצה – היצולים החסינים ביותר מתולעת, | `וְלֹא הִבְאִישׁ וְרִמָּה לֹא הָיְתָה בּוֹ` (שמות טז:כד) | equivalent | התולעת כסימן הריקבון; כאן העץ שאינו מתליע. מוטיב משותף. |
+| 436 | δρυὸς ἔλυμα, γύης πρίνου· βόε δʼ ἐνναετήρω | מאלון – הקורה, הבורך – מאלון מצוי; ושני שוורים בני תשע | `לֹא תַחֲרֹשׁ בְּשׁוֹר וּבַחֲמֹר יַחְדָּו` (דברים כב:י); `וְהוּא חֹרֵשׁ שְׁנֵים עָשָׂר צְמָדִים לְפָנָיו` (מלכים א יט:יט) | equivalent | החריש בזוג בהמות דומות; ו – צמד השוורים כיחידת החריש. מוטיב משותף. |
+| 439 | οὐκ ἂν τώ γʼ ἐρίσαντε ἐν αὔλακι κὰμ μὲν ἄροτρον | הם לא היו, בהתגרותם זה בזה בתלם, שוברים את המחרשה | `עַל-גַּבִּי חָרְשׁוּ חֹרְשִׁים` (תהלים קכט:ג) | equivalent | התלם הארוך של החורשים. מוטיב משותף. |
+| 442 | ἄρτον δειπνήσας τετράτρυφον, ὀκτάβλωμον, | אחרי שאכל לארוחתו לחם בן ארבעה רבעים, בן שמונה פתיתים, | `בְּזֵעַת אַפֶּיךָ תֹּאכַל לֶחֶם` (בראשית ג:יט) | equivalent | ובשבעים: `φάγῃ τὸν ἄρτον σου` (השבעים, בראשית ג:יט): **ἄρτος** היא מלת השבעים ל`לֶחֶם` (הסוג א; `לֶחֶם` חובה, `../renderings.md` §5) – כאן לחמו של החורש, שבשבילו הוא עובד ומזיע. מוטיב משותף. |
+| 443 | ὃς ἔργου μελετῶν ἰθεῖάν κʼ αὔλακʼ ἐλαύνοι, | אשר, בשקדו על המלאכה, ינהג תלם ישר, | — | equivalent | `את התלם שעיקמת – יְיֻשַּׁר לך.` (הוראות האיכר 58) – גם בשומר: תלם ישר הוא סימן החורש הטוב. מוטיב משותף של ספרות ההוראה החקלאית. |
+| 446 | σπέρματα δάσσασθαι καὶ ἐπισπορίην ἀλέασθαι. | לחלק זרעים ולחמוק מזריעה כפולה; | `וְיִסְּרוֹ לַמִּשְׁפָּט אֱלֹהָיו יוֹרֶנּוּ` (ישעיהו כח:כה–כו); `לֹא תִזְרַע כַּרְמְךָ כִּלְאָיִם` (דברים כב:ט) | equivalent | `וְשָׂם חִטָּה שׂוֹרָה וּשְׂעֹרָה נִסְמָן` – : הזריעה הנכונה, כל זרע במקומו, היא ידע שהאל מלמד את החורש; ו – ובשבעים `τὸ σπέρμα, ὃ ἐὰν σπείρῃς` (השבעים, דברים כב:ט): **σπέρμα / σπείρω** – מלות הסיודוס – הן מלות השבעים ל`זֶרַע` / `זָרַע` (הסוג א). ו`על האיש השָׂם את זרע־השעורה שלך – את עינך שִׂים!` (הוראות האיכר 49) – הזורע צריך עין מפקחת, כמו כאן. מוטיב משותף. |
+| 448 | φράζεσθαι δʼ, εὖτʼ ἂν γεράνου φωνὴν ἐπακούσῃς | ושׂוֹם לב, כאשר תאזין לקול העגור | `וְעָגוּר שָׁמְרוּ אֶת עֵת בֹּאָנָה` (ירמיהו ח:ז) | equivalent | `גַּם חֲסִידָה בַשָּׁמַיִם יָדְעָה מוֹעֲדֶיהָ` – : העגור והחסידה יודעים את זמנם – בירמיהו כתוכחה ("ועמי לא ידעו את משפט ה'"), אצל הסיודוס כשעון של האיכר: נדידת העגורים דרומה (סוף אוקטובר – נובמבר) היא האות לחריש ולזריעה. ירמיהו בשבעים אינו בכלי; השם `עָגוּר` משמש כאן לפי המובן ( [equivalent]). מוטיב משותף של חברות חקלאיות שמתבוננות בציפורים. |
+| 450 | ἥτʼ ἀρότοιό τε σῆμα φέρει καὶ χείματος ὥρην | אשר אות לחריש הוא מביא, ואת עונת החורף | `וְהָיוּ לְאֹתֹת וּלְמוֹעֲדִים וּלְיָמִים וְשָׁנִים` (בראשית א:יד) | equivalent | ובשבעים: `καὶ ἔστωσαν εἰς σημεῖα καὶ εἰς καιροὺς καὶ εἰς ἡμέρας καὶ εἰς ἐνιαυτοὺς` (השבעים, בראשית א:יד): המאורות הם "אותות" (σημεῖα – מן שורשה של σῆμα, מלתו של הסיודוס) לזמנים ולשנים. בבראשית – המאורות שהאל שם ברקיע; אצל הסיודוס – גם ציפור היא "אות". הסוג א בשורש; מוטיב משותף. |
+| 452 | δὴ τότε χορτάζειν ἕλικας βόας ἔνδον ἐόντας· | אז אכן הַאֲכֵל מספוא את הבקר מפותל־הקרניים, בעודם בפנים; | — | equivalent | `את שוורי עגלתך – מספוא האכל!` (הוראות האיכר 94) – אותה עצה בהוראות האיכר השומריות. מוטיב משותף של ספרות ההוראה החקלאית, לא מקור. |
+| 453 | ῥηίδιον γὰρ ἔπος εἰπεῖν· βόε δὸς καὶ ἄμαξαν· | כי קל לומר מילה: "שני שוורים תן (לי) ועגלה"; | `וְכִי יִשְׁאַל אִישׁ מֵעִם רֵעֵהוּ וְנִשְׁבַּר אוֹ מֵת` (שמות כב:יג) | equivalent | השאלת בהמה מן השכן ודין השואל; אצל הסיודוס – השאלה שמסרבים לה (454). מוטיב משותף. |
+| 461 | πρωὶ μάλα σπεύδων, ἵνα τοι πλήθωσιν ἄρουραι. | ממהר מאוד בבוקר השכם, כדי שיהיו שדותיך גדושים. | `בַּבֹּקֶר זְרַע אֶת זַרְעֶךָ וְלָעֶרֶב אַל תַּנַּח יָדֶךָ` (קהלת יא:ו) | equivalent | הזריעה בבוקר והשקידה כל היום. מוטיב משותף. |
+| 462 | ἦρι πολεῖν· θέρεος δὲ νεωμένη οὔ σʼ ἀπατήσει. | באביב – הָפוֹךְ; והמחודשת בקיץ לא תרמה אותך. | `וְקַיִץ וָחֹרֶף` (בראשית ח:כב) | equivalent | ובשבעים `θέρος καὶ ἔαρ` (השבעים, בראשית ח:כב): **θέρος ו־ἔαρ** – שתי מלות העונות כאן – הן בשבעים התרגום של `וְקַיִץ וָחֹרֶף` (הסוג א; וראו 414). מוטיב משותף. |
+| 463 | νειὸν δὲ σπείρειν ἔτι κουφίζουσαν ἄρουραν· | ואת הניר זָרוֹעַ, בעוד השדה תחוח; | `נִירוּ לָכֶם נִיר; וְאַל תִּזְרְעוּ אֶל קֹצִים` (ירמיהו ד:ג) | equivalent | הניר שנחרש מחדש לפני הזריעה; בירמיהו כמשל לחזרה בתשובה, אצל הסיודוס – עצה מעשית. מוטיב משותף. |
+| 465 | εὔχεσθαι δὲ Διὶ χθονίῳ Δημήτερί θʼ ἁγνῇ, | והִתְפַּלֵּל לזאוס שבתוך האדמה ולדמטר הטהורה, | `וַיִּזְרַע יִצְחָק בָּאָרֶץ הַהִוא וַיִּמְצָא בַּשָּׁנָה הַהִוא מֵאָה שְׁעָרִים; וַיְבָרְכֵהוּ יְהוָה` (בראשית כו:יב) | equivalent | `את תפילת נִין־כִּילִים – אמור!` (הוראות האיכר 65) – גם האיכר השומרי אומר תפילה לאלת השדה כשהזרע נובט. ו`הַזֹּרְעִים בְּדִמְעָה` – `בְּרִנָּה יִקְצֹרוּ` (תהילים קכו:ה); ו – ובשבעים `Ἔσπειρεν δὲ Ισαακ … εὐλόγησεν δὲ αὐτὸν κύριος` (השבעים, בראשית כו:יב): בישראל – ברכת האל על הזורע; אצל הסיודוס – תפילה לשני אלים של האדמה. מוטיב משותף. |
+| 470 | δμῷος ἔχων μακέλην πόνον ὀρνίθεσσι τιθείη | עבד, אוחז מעדר, ישׂים עמל לעופות, | `וְכֹל הֶהָרִים אֲשֶׁר בַּמַּעְדֵּר יֵעָדֵרוּן` (ישעיהו ז:כה); `וַיֵּרֶד הָעַיִט עַל הַפְּגָרִים וַיַּשֵּׁב אֹתָם אַבְרָם` (בראשית טו:יא) | equivalent | המעדר, כלי העבודה ביד; ו – האדם המגרש את העופות. מוטיב משותף. |
+| 471 | σπέρμα κατακρύπτων· ἐυθημοσύνη γὰρ ἀρίστη | בהסתירו את הזרע: כי ההנהגה הטובה – היא הטובה מכול | — | equivalent | `על האיש השָׂם את זרע־השעורה שלך – את עינך שִׂים!` (הוראות האיכר 49) – והזורע השומרי, כמו כאן, צריך לכסות את הזרע: `(בעומק) שתי אצבעות – דָּגָן תיפול!` (הוראות האיכר 50). מוטיב משותף של ספרות ההוראה החקלאית. |
+| 473 | ὧδέ κεν ἀδροσύνῃ στάχυες νεύοιεν ἔραζε, | כך היו השיבולים, במלאותן, נוטות ארצה, | `וְהִנֵּה שֶׁבַע שִׁבֳּלִים עֹלוֹת בְּקָנֶה אֶחָד בְּרִיאוֹת וְטֹבוֹת` (בראשית מא:ה) | equivalent | ובשבעים: `καὶ ἰδοὺ ἑπτὰ στάχυες ἀνέβαινον ἐν πυθμένι ἑνὶ` (השבעים, בראשית מא:ה): **στάχυς** – מלתו של הסיודוס – היא מלת השבעים ל`שִׁבֹּלֶת` (הסוג א). השיבולים המלאות כסימן של שנת שובע. מוטיב משותף. |
+| 475 | ἐκ δʼ ἀγγέων ἐλάσειας ἀράχνια· καί σε ἔολπα | והיית מגרש מן המכלים את קורי העכביש; ואני מקווה | `וּבֵית עַכָּבִישׁ מִבְטַחוֹ` (איוב ח:יד) | equivalent | ובשבעים: `ἀράχνη δὲ αὐτοῦ ἀποβήσεται ἡ σκηνή` (השבעים, איוב ח:יד): קורי העכביש כסימן של בית ריק ושל תקווה כוזבת – כאן להפך: מגרשים אותם מן המכלים שהתמלאו שוב. מוטיב משותף. |
+| 478 | αὐγάσεαι· σέο δʼ ἄλλος ἀνὴρ κεχρημένος ἔσται. | תשא עיניך; ואיש אחר – לך יהיה נצרך. | — | equivalent | `אֶשָּׂא עֵינַי אֶל-הֶהָרִים` – `מֵאַיִן יָבֹא עֶזְרִי` (תהילים קכא:א) – נשיאת העיניים אל מי שיעזור; אצל הסיודוס – העשיר אינו נושא עיניו אל אחרים, אלא אחרים אליו. מוטיב משותף. |
+| 479 | εἰ δέ κεν ἠελίοιο τροπῇς ἀρόῳς χθόνα δῖαν, | ואם בתקופות השמש תחרוש את האדמה הנהדרת, | `וְחַג הָאָסִיף תְּקוּפַת הַשָּׁנָה` (שמות לד:כב) | equivalent | `תְּקוּפָה`, מפנה השנה, כנקודת זמן בלוח החקלאי (וכך בלשון חכמים "תקופת טבת" – היפוך החורף). מוטיב משותף. |
+| 481 | ἀντία δεσμεύων κεκονιμένος, οὐ μάλα χαίρων, | קושר (אלומות) זו מול זו, מעופר, לא שמח מאוד, | `וְהִנֵּה אֲנַחְנוּ מְאַלְּמִים אֲלֻמִּים בְּתוֹךְ הַשָּׂדֶה` (בראשית לז:ז) | equivalent | קשירת האלומות בשדה. מוטיב משותף. |
+| 483 | ἄλλοτε δʼ ἀλλοῖος Ζηνὸς νόος αἰγιόχοιο, | ובכל פעם שונה שכל זאוס נושא־האגיס, | `כִּי לֹא מַחְשְׁבוֹתַי מַחְשְׁבוֹתֵיכֶם` (ישעיהו נה:ח) | equivalent | מחשבת האל שאינה מובנת לאדם. מוטיב משותף. |
+| 488 | τῆμος Ζεὺς ὕοι τρίτῳ ἤματι μηδʼ ἀπολήγοι, | באותה שעה – יגשום זאוס ביום השלישי, ולא יפסוק, | `וְנָתַתִּי מְטַר אַרְצְכֶם בְּעִתּוֹ יוֹרֶה וּמַלְקוֹשׁ` (דברים יא:יד) | equivalent | ובשבעים: `καὶ δώσει τὸν ὑετὸν τῇ γῇ σου καθ’ ὥραν πρόιμον καὶ ὄψιμον` (השבעים, דברים יא:יד): הגשם "בעתו" (καθ' ὥραν – ὥρα, מלתו של הסיודוס ב־492: ὥριος ὄμβρος), והגשם "האפיל", ὄψιμος – כמו כאן גשם האביב לחורש המאוחר (ὀψαρότης, 490; ὀψέ, 485). בישראל – הבטחת האל בשכר שמירת המצוות, אצל הסיודוס – משאלה לזאוס. מוטיב משותף וצירוף משותף לשבעים. |
+| 491 | ἐν θυμῷ δʼ εὖ πάντα φυλάσσεο· μηδέ σε λήθοι | ובלבך שמור היטב הכול; ואל ייסתר ממך | `לְעָבְדָהּ וּלְשָׁמְרָהּ` (בראשית ב:טו) | equivalent | ובשבעים `ἐργάζεσθαι αὐτὸν καὶ φυλάσσειν` (השבעים, בראשית ב:טו): **φυλάσσω** היא מלת השבעים ל`שָׁמַר` (הסוג א; `שָׁמַר` חובה, `../renderings.md` §5); וגם כאן – עבודה ושמירה יחד, אבל השמירה היא בלב: לזכור את הסימנים. מוטיב משותף. |
+| 493 | πὰρ δʼ ἴθι χάλκειον θῶκον καὶ ἐπαλέα λέσχην | ולֵךְ על פני מושב הנחושת ועל פני בית־השיחה החמים | `לְמִי שִׂיחַ` (משלי כג:כט) | equivalent | ובשבעים: `τίνι ἀηδίαι καὶ λέσχαι;` (השבעים, משלי כג:כט): **λέσχη** – מלתו של הסיודוס – היא מלת השבעים ל`שִׂיחַ` (הסוג א), ולכן `בֵּית־הַשִּׂיחָה`: המקום שבו בטלים מתכנסים לשיחה. במשלי השיח נלווה לשתייה; כאן לחום של הנפחייה בחורף. מוטיב משותף. |
+| 494 | ὥρῃ χειμερίῃ, ὁπότε κρύος ἀνέρα ἔργων | בעונת החורף, כאשר הקור את האיש מן המלאכות | `וְקֹר וָחֹם` (בראשית ח:כב) | equivalent | הקור כאחד מקטבי השנה; בשבעים שם ψῦχος, לא κρύος – מלה אחרת (הסוג ב). מוטיב משותף. |
+| 495 | ἰσχάνει, ἔνθα κʼ ἄοκνος ἀνὴρ μέγα οἶκον ὀφέλλοι, | עוצר; שם היה איש לא־עצל מרבה מאוד את ביתו, | `עַד-מָתַי עָצֵל תִּשְׁכָּב` (משלי ו:ט) | equivalent | ובשבעים העצל הוא ὀκνηρός, ובתוספת היוונית למשלי ו:יא: `ἐὰν δὲ ἄοκνος ᾖς, ἥξει ὥσπερ πηγὴ ὁ ἀμητός σου` (השבעים, משלי ו:יא): **ἄοκνος** – מלתו של הסיודוס – היא בשבעים ההפך של `עָצֵל` (ὀκνηρός), ובאותו פסוק – הקציר (ἀμητός) שיבוא כמעיין: אותו עולם של עבודה וקציר, בתוספת יוונית שאין לה מקור בנוסח המסורה. ולכן `לֹא־עָצֵל`. גשר יווני (הסוג א), לא מגע. |
+| 497 | σὺν πενίῃ, λεπτῇ δὲ παχὺν πόδα χειρὶ πιέζῃς. | עם העוני, ובידך הרזה תלחץ רגל נפוחה. | `וְרַגְלְךָ לֹא בָצֵקָה זֶה אַרְבָּעִים שָׁנָה` (דברים ח:ד) | equivalent | הרגל הנפוחה מרעב ומהליכה, שבמדבר נחסכה מישראל. בשבעים שם `οἱ πόδες σου οὐκ ἐτυλώθησαν` (השבעים, דברים ח:ד) – מלה אחרת. מוטיב משותף. |
+| 498 | πολλὰ δʼ ἀεργὸς ἀνήρ, κενεὴν ἐπὶ ἐλπίδα μίμνων, | והרבה (רעות) – האיש הבטלן, המחכה לתקווה ריקה, | `מִתְאַוָּה וָאַיִן נַפְשׁוֹ עָצֵל` (משלי יג:ד) | equivalent | ובשבעים: `ἐν ἐπιθυμίαις ἐστὶν πᾶς ἀεργός` (השבעים, משלי יג:ד): **ἀεργός** – מלתו של הסיודוס – בשבעים שקוע "בתאוות", כמו כאן הבטלן "המחכה לתקווה ריקה" (הסוג א). מוטיב משותף. |
+| 499 | χρηίζων βιότοιο, κακὰ προσελέξατο θυμῷ. | בהיותו נצרך למחיה, מדבר רעות אל לבו. | `וַיֹּאמֶר יְהוָה אֶל לִבּוֹ` (בראשית ח:כא) | equivalent | לשון הדיבור אל הלב, שיחת האדם (או האל) עם עצמו. מוטיב משותף. |
+| 502 | δείκνυε δὲ δμώεσσι θέρευς ἔτι μέσσου ἐόντος· | והַרְאֵה לעבדים, בעוד הקיץ באמצעו: | `אָגְרָה בַקָּצִיר מַאֲכָלָהּ` (משלי ו:ח); `אֹגֵר בַּקַּיִץ בֵּן מַשְׂכִּיל` (משלי י:ה) | equivalent | `תָּכִין בַּקַּיִץ לַחְמָהּ` – ; ו – ההכנה בקיץ לקראת החורף. מוטיב משותף. |
+| 504 | μῆνα δὲ Ληναιῶνα, κάκʼ ἤματα, βουδόρα πάντα, | ואת חודש לֵנַיאוֹן – ימים רעים, פושטי־עור־הבקר כולם – | `כִּי לַשֶּׁלֶג יֹאמַר הֱוֵא-אָרֶץ` (איוב לז:ו) | equivalent | ובשבעים: `συντάσσων χιόνι Γίνου ἐπὶ τῆς γῆς· καὶ χειμὼν ὑετός` (השבעים, איוב לז:ו): תיאור החורף באיוב לז:ו–י – שלג, גשם, החיות נכנסות למחסה (לז:ח), הקור מן הצפון (לז:ט), הקרח מנשמת האל (לז:י) – הוא הקטע המקראי הקרוב ביותר ל־504–535, ובשבעים אותן מלים: χειμών (כאן 496, 524), θηρία (512), σκέπη (532). באיוב – החורף הוא סימן לכוח האל, אצל הסיודוס – סכנה ממשית לבית. מוטיב משותף. |
+| 505 | τοῦτον ἀλεύασθαι, καὶ πηγάδας, αἵτʼ ἐπὶ γαῖαν | ממנו חָמוֹק, ומן הכפורים, אשר על הארץ | — | equivalent | `הַנֹּתֵן שֶׁלֶג כַּצָּמֶר` – `כְּפוֹר כָּאֵפֶר יְפַזֵּר` (תהילים קמז:טז) – הכפור והשלג של החורף, וב`לִפְנֵי קָרָתוֹ מִי יַעֲמֹד` (תהילים קמז:יז) – הקור שאי אפשר לעמוד בפניו. מוטיב משותף. |
+| 506 | πνεύσαντος Βορέαο δυσηλεγέες τελέθουσιν, | בִּנְשׁוֹף בּוֹרֵאָס – אכזריים הם; | `וּמִמְּזָרִים קָרָה` (איוב לז:ט) | equivalent | הקור הבא מן הצפון (מְּזָרִים – רוחות הצפון לפי המפרשים); ובשבעים `ἀπὸ δὲ ἀκρωτηρίων ψῦχος` (השבעים, איוב לז:ט). אצל הסיודוס – בוראס, רוח הצפון כאל. מוטיב משותף. |
+| 509 | πολλὰς δὲ δρῦς ὑψικόμους ἐλάτας τε παχείας | ואלונים רבים רמי־צמרת ואשוחים עבים | `קוֹל יְהוָה שֹׁבֵר אֲרָזִים` (תהלים כט:ה) | equivalent | הסערה שוברת את עצי ההר. מוטיב משותף. |
+| 512 | θῆρες δὲ φρίσσουσʼ, οὐρὰς δʼ ὑπὸ μέζεʼ ἔθεντο, | והחיות מצטמררות, ואת זנבותיהן תחת המבושים הן שמות, | `וּבִמְעוֹנֹתֶיהָ תִשְׁכֹּן` (איוב לז:ח) | equivalent | `וַתָּבוֹא חַיָּה בְמוֹ-אָרֶב` –  – ובשבעים: `εἰσῆλθεν δὲ θηρία ὑπὸ σκέπην, ἡσύχασαν δὲ ἐπὶ κοίτης` (השבעים, איוב לז:ח): **θηρίον** ו־**σκέπη** – מלים מאותם שורשים של θήρ (כאן) ו־σκέπας (532) – החיות נכנסות למחסה מפני החורף (הסוג א); באיוב בדבר האל, אצל הסיודוס מפני בוראס. מוטיב משותף. |
+| 517 | οὕνεκʼ ἐπηεταναὶ τρίχες αὐτῶν, οὐ διάησιν | כי השיער שלהם לכל השנה – אינו נושב בעדם | — | equivalent | `הַנֹּתֵן שֶׁלֶג כַּצָּמֶר` (תהילים קמז:טז) – בתהלים השלג הוא "כצמר", אצל הסיודוס הצמר הוא המגן מפני הקור. מוטיב משותף (ראו 505). |
+| 521 | οὔ πω ἔργα ἰδυῖα πολυχρύσου Ἀφροδίτης· | שעוד אינה יודעת את מעשי אפרודיטה רבת־הזהב; | `וְהַנַּעֲרָ טֹבַת מַרְאֶה מְאֹד בְּתוּלָה וְאִישׁ לֹא יְדָעָהּ` (בראשית כד:טז) | equivalent | הבתולה שעוד לא ידעה איש; כאן – שעוד אינה "יודעת" את מעשי אפרודיטה (οἶδα, "לדעת"): לשון הידיעה של המיניות, בשתי השפות (ובשבעים שם: `παρθένος ἦν, ἀνὴρ οὐκ ἔγνω αὐτήν`, השבעים, בראשית כד:טז – פועל אחר, γιγνώσκω). מוטיב משותף. |
+| 522 | εὖ τε λοεσσαμένη τέρενα χρόα καὶ λίπʼ ἐλαίῳ | ובהתרחצה היטב את עורה הרענן, ובשמן למכביר | `וְרָחַצְתְּ וָסַכְתְּ וְשַׂמְתְּ` (רות ג:ג) | equivalent | רחיצה וסיכה בשמן של אשה בבית, כהכנה (ברות – ללכת אל הגורן); כאן – הנערה מתרחצת ונמשחת בבית בחורף. מוטיב משותף. |
+| 523 | χρισαμένη μυχίη καταλέξεται ἔνδοθι οἴκου | בהימשחה, בירכתי הבית תשכב לה בפנים | — | equivalent | `אֶשְׁתְּךָ כְּגֶפֶן פֹּרִיָּה` – `בְּיַרְכְּתֵי בֵיתֶךָ` (תהילים קכח:ג) – מקום האשה ב"ירכתי הבית", החלק הפנימי והמוגן. מוטיב משותף. |
+| 530 | λυγρὸν μυλιόωντες ἀνὰ δρία βησσήεντα | בחריקת שיניים מרה, דרך הסבכים רבי־הערוצים | `וְהִנֵּה אַיִל אַחַר נֶאֱחַז בַּסְּבַךְ בְּקַרְנָיו` (בראשית כב:יג) | equivalent | בעל הקרניים בסבך. מוטיב לשוני בלבד. |
+| 532 | ὡς σκέπα μαιόμενοι πυκινοὺς κευθμῶνας ἔχωσι | כיצד, בשחרם מחסה, יהיו להם מחבואים צפופים | `וּלְמַחְסֶה וּלְמִסְתּוֹר מִזֶּרֶם וּמִמָּטָר` (ישעיהו ד:ו) | equivalent | המחסה מפני הסערה והגשם; ובשבעים של איוב לז:ח `ὑπὸ σκέπην` (ראו 512): σκέπη – מאותו שורש של σκέπας כאן. מוטיב משותף. |
+| 533 | καὶ γλάφυ πετρῆεν· τότε δὴ τρίποδι βροτῷ ἶσοι, | ונקרה סלעית; אז אכן, שווים לֶאֱנוֹשׁ בעל שלוש הרגליים, | `לָבוֹא בְּנִקְרוֹת הַצֻּרִים וּבִסְעִפֵי הַסְּלָעִים` (ישעיהו ב:כא) | equivalent | נקרות הסלע כמקום מחסה ומחבוא. מוטיב משותף. |
+| 535 | τῷ ἴκελοι φοιτῶσιν, ἀλευόμενοι νίφα λευκήν. | דמויים לו הם מתהלכים, בחמקם מן השלג הלבן. | — | equivalent | `אֵשׁ וּבָרָד שֶׁלֶג וְקִיטוֹר` (תהילים קמח:ח) – ובשבעים: `πῦρ, χάλαζα, χιών, κρύσταλλος` (השבעים, תהילים קמח:ח): השלג מכוחות הטבע שעושים את דבר האל; בשבעים χιών – מלה אחרת מ־νίφα של הסיודוס (הסוג ב). מוטיב משותף. |
+| 536 | καὶ τότε ἕσσασθαι ἔρυμα χροός, ὥς σε κελεύω, | ואז עָטֹה מגן לעורך, כפי שאני מצווה אותך: | `וַיַּעַשׂ יְהוָה אֱלֹהִים לְאָדָם וּלְאִשְׁתּוֹ כָּתְנוֹת עוֹר וַיַּלְבִּשֵׁם` (בראשית ג:כא) | equivalent | ובשבעים: `χιτῶνας δερματίνους` (השבעים, בראשית ג:כא): **χιτών** (537) ו־**δέρμα** (544) – מלותיו של הסיודוס – הן מלות השבעים ל"כותנות עור" (הסוג א). בבראשית האל מלביש את האדם כשהוא יוצא אל עולם העבודה; אצל הסיודוס האיכר מלביש את עצמו – כותונת, ועורות גדיים שנתפרו בגיד שור (543–545). מוטיב משותף. |
+| 537 | χλαῖνάν τε μαλακὴν καὶ τερμιόεντα χιτῶνα· | אדרת רכה וכותונת ארוכה עד הרגליים; | `כֻּלּוֹ כְּאַדֶּרֶת שֵׂעָר` (בראשית כה:כה); `כָּתְנוֹת עוֹר` (בראשית ג:כא; ראו 536) | equivalent | האדרת, הגלימה הכבדה; ו. מוטיב משותף. |
+| 538 | στήμονι δʼ ἐν παύρῳ πολλὴν κρόκα μηρύσασθαι· | וּבִשְׁתִי מעט – הרבה עֵרֶב טָווֹה; | `אוֹ בִשְׁתִי אוֹ בְעֵרֶב` (ויקרא יג:מח); `יָדֶיהָ שִׁלְּחָה בַכִּישׁוֹר` (משלי לא:יט) | equivalent | ובשבעים: `ἢ ἐν στήμονι ἢ ἐν κρόκῃ` (השבעים, ויקרא יג:מח): **στήμων ו־κρόκη** – שתי המלים של הסיודוס – הן מלות השבעים ל`שְׁתִי` ול`עֵרֶב` (הסוג א). ו – הטוויה והאריגה של אשת הבית לבגדי החורף (לא:כא: `לֹא-תִירָא לְבֵיתָהּ מִשָּׁלֶג`). מוטיב משותף. |
+| 541 | ἀμφὶ δὲ ποσσὶ πέδιλα βοὸς ἶφι κταμένοιο | ועל רגליך – סנדלים משור שנהרג בכוח, | — | equivalent | `האיש – במגפיים, בנעליים ישנות – בקור הולך.` (הקיץ והחורף 215) – גם בוויכוח השומרי, עונת החורף מצטיירת באדם ההולך בקור בנעלי עור. מוטיב משותף, לא מקור. |
+| 544 | δέρματα συρράπτειν νεύρῳ βοός, ὄφρʼ ἐπὶ νώτῳ | עורות תָּפוֹר בגיד שור, כדי שעל גבך | `שַׂק תָּפַרְתִּי עֲלֵי גִלְדִּי` (איוב טז:טו) | equivalent | התפירה על העור; ובבראשית ג:כא "כותנות עור" (ראו 536; בשבעים `δερματίνους` – שם התואר של δέρμα). מוטיב משותף. |
+| 545 | ὑετοῦ ἀμφιβάλῃ ἀλέην· κεφαλῆφι δʼ ὕπερθεν | תתעטף בהגנה מפני המטר; ועל הראש, מלמעלה, | `וְגֶשֶׁם מָטָר` (איוב לז:ו) | equivalent | ובשבעים: `καὶ χειμὼν ὑετός` (השבעים, איוב לז:ו): **ὑετός** – מלתו של הסיודוס – היא מלת השבעים ל`מָטָר` (הסוג א), ולכן `מָטָר` (`גֶּשֶׁם` הוא ὄμβρος, 492). מוטיב משותף. |
+| 549 | ἀὴρ πυροφόρος τέταται μακάρων ἐπὶ ἔργοις· | ערפל נושא־חיטה מתוח על מלאכות המאושרים; | `וְאֵד יַעֲלֶה מִן הָאָרֶץ וְהִשְׁקָה אֶת כָּל פְּנֵי הָאֲדָמָה` (בראשית ב:ו); `יָזֹקּוּ מָטָר לְאֵדוֹ` (איוב לו:כז) | equivalent | האד שמשקה את האדמה; ובשבעים שם `πηγή` (השבעים, בראשית ב:ו) – מעיין, לא ἀήρ (הסוג ב). ו`כִּי יְגָרַע נִטְפֵי-מָיִם` – : מחזור המים – האד העולה והגשם היורד, כמו כאן (550–552). מוטיב משותף. |
+| 550 | ὅστε ἀρυσάμενος ποταμῶν ἄπο αἰεναόντων, | אשר, כששאב מן הנהרות התמידיים, | `הַקּוֹרֵא לְמֵי הַיָּם וַיִּשְׁפְּכֵם עַל פְּנֵי הָאָרֶץ` (עמוס ה:ח) | equivalent | ובשבעים: `ὁ προσκαλούμενος τὸ ὕδωρ τῆς θαλάσσης καὶ ἐκχέων αὐτὸ ἐπὶ προσώπου τῆς γῆς` (השבעים, עמוס ה:ח): המים "נקראים" מן הים ונשפכים על הארץ – בעמוס בידי האל, אצל הסיודוס – הערפל ששואב מן הנהרות ומומטר ברוח. מוטיב משותף. |
+| 555 | μή ποτέ σʼ οὐρανόθεν σκοτόεν νέφος ἀμφικαλύψῃ, | פן יכסה אותך פעם מן השמים ענן חשוך, | `וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם` (בראשית א:ב) | equivalent | ובשבעים: `καὶ σκότος ἐπάνω τῆς ἀβύσσου` (השבעים, בראשית א:ב): **σκοτόεις** – שם התואר של σκότος, מלת השבעים ל`חֹשֶׁךְ` – מופיע כאן לראשונה אצל הסיודוס, ולכן השער `חשך` נפתח לו: `חָשׁוּךְ` (הסוג א בשורש; `../renderings.md` §6: `חֹשֶׁךְ` רק ל־σκότος). בבראשית החושך של לפני הבריאה, כאן – ענן של סערת חורף. מלה שהשבעים בחרו, לא מגע. |
+| 558 | χειμέριος, χαλεπὸς προβάτοις, χαλεπὸς δʼ ἀνθρώποις. | של חורף, קשה לצאן, וקשה לבני האדם. | `וַיְהִי הֶבֶל רֹעֵה צֹאן` (בראשית ד:ב) | equivalent | ובשבעים: `καὶ ἐγένετο Αβελ ποιμὴν προβάτων` (השבעים, בראשית ד:ב): **πρόβατον** – מלתו של הסיודוס – היא מלת השבעים ל`צֹאן` (הסוג א). מוטיב משותף. |
+| 562 | ἰσοῦσθαι νύκτας τε καὶ ἤματα, εἰσόκεν αὖτις | הַשְׁוֵה? לילות וימים, עד אשר שוב | `וְיוֹם וָלַיְלָה לֹא יִשְׁבֹּתוּ` (בראשית ח:כב) | equivalent | ובשבעים `ἡμέραν καὶ νύκτα οὐ καταπαύσουσιν` (השבעים, בראשית ח:כב): יום ולילה כמחזור הקבוע של השנה, כמו כאן – "השווה לילות וימים", כלומר: חלק את המזון לפי אורך היום והלילה, עד האביב. מוטיב משותף. |
+| 563 | γῆ πάντων μήτηρ καρπὸν σύμμικτον ἐνείκῃ. | תביא הארץ, אם הכול, פרי מעורב. | `כִּי הִוא הָיְתָה אֵם כָּל חָי` (בראשית ג:כ) | equivalent | ובשבעים: `ὅτι αὕτη μήτηρ πάντων τῶν ζώντων` (השבעים, בראשית ג:כ): **μήτηρ πάντων** – "אם הכול" – אותו צירוף ממש כמו כאן (γῆ πάντων μήτηρ; הסוג א בצירוף). בבראשית – חוה, האשה הראשונה, "אם כל חי"; אצל הסיודוס – הארץ, אם הכול, שבאביב מביאה פרי מכל המינים. ההבדל הוא העיקר: בישראל האם הקדמונית היא אשה ולא האדמה (אף ש`הָאָדָם` נלקח `מִן הָאֲדָמָה`); ביוון הארץ היא אם האלים והאנשים (TH 117–126). מוטיב משותף וצירוף משותף לשבעים, לא מגע. |
+| 566 | Ἀρκτοῦρος προλιπὼν ἱερὸν ῥόον Ὠκεανοῖο | אַרְקְטוּרוֹס, בעזבו את זרם אוקאנוס הקדוש, | `עֹשֶׂה-עָשׁ כְּסִיל וְכִימָה` (איוב ט:ט) | equivalent | ובשבעים: `ὁ ποιῶν Πλειάδα καὶ Ἕσπερον καὶ Ἀρκτοῦρον` (השבעים, איוב ט:ט): **Ἀρκτοῦρος** – הכוכב של הסיודוס – מופיע בשבעים כתרגום של `עָשׁ` (כנראה), אבל רשימת הכוכבים של השבעים אינה מקבילה אחד לאחד לעברית (ראו 383), ולכן `אַרְקְטוּרוֹס` נשאר שם מתועתק (`../renderings.md` §3.1: "משוואה מפוקפקת, בהערה בלבד"). מוטיב משותף. |
+| 568 | τὸν δὲ μέτʼ ὀρθογόη Πανδιονὶς ὦρτο χελιδὼν | ואחריו בת־פַּנְדִּיּוֹן, הַסִּיס הנוהה עם שחר, קָמָה | `כְּסוּס עָגוּר כֵּן אֲצַפְצֵף` (ישעיהו לח:יד) | equivalent | ובשבעים: `ὡς χελιδών, οὕτως φωνήσω` (השבעים, ישעיהו לח:יד): **χελιδών** – הציפור של הסיודוס – היא מלת השבעים ל`סוּס` / `סִיס` (הסוג א), ולכן `סִיס` כאן (ובמובן המודרני: סנונית). בישעיהו – צפצוף הסיס כקול קינה של החולה; אצל הסיודוס הסנונית "נוהה עם שחר" (במיתוס, פרוקנה בת פנדיון, שהפכה לציפור אחרי מות בנה). והסיס של ירמיהו "שומר את עת בואו" (ירמיהו ח:ז, ראו 448). מלה שהשבעים בחרו ומוטיב משותף. |
+| 568 | τὸν δὲ μέτʼ ὀρθογόη Πανδιονὶς ὦρτο χελιδὼν | ואחריו בת־פַּנְדִּיּוֹן, הַסִּיס הנוהה עם שחר, קָמָה | `עֵת הַזָּמִיר הִגִּיעַ; וְקוֹל הַתּוֹר נִשְׁמַע בְּאַרְצֵנוּ` (שיר השירים ב:יב); `כִּי הִנֵּה הַסְּתָו עָבָר` (שיר השירים ב:יא) | equivalent | אחרי : קול הציפור מבשר את האביב, כמו הסיס כאן. בשיר השירים – אות לאהבה; אצל הסיודוס – אות לזמירת הגפנים (570). מוטיב משותף, לא מגע. |
+| 570 | τὴν φθάμενος οἴνας περιταμνέμεν· ὣς γὰρ ἄμεινον. | לפניה הַקְדֵּם: זָמוֹר את הגפנים; כי כך טוב יותר. | `וְשֵׁשׁ שָׁנִים תִּזְמֹר כַּרְמֶךָ` (ויקרא כה:ג) | equivalent | ובשבעים: `καὶ ἓξ ἔτη τεμεῖς τὴν ἄμπελόν σου` (השבעים, ויקרא כה:ג): **τέμνω** – שורש περιτέμνω כאן – הוא מלת השבעים ל`זָמַר` בגפן (הסוג א), ולכן `זָמוֹר`. ולוח גזר העברי (במלים) מונה "ירחו זמר" אחרי חודשי הקציר. מוטיב משותף. |
+| 572 | Πληιάδας φεύγων, τότε δὴ σκάφος οὐκέτι οἰνέων· | בורח מפני כִּימָה – אז אכן לא עוד עידור לגפנים; | `לֹא יִזָּמֵר וְלֹא יֵעָדֵר` (ישעיהו ה:ו) | equivalent | ובשבעים: `καὶ οὐ μὴ τμηθῇ οὐδὲ μὴ σκαφῇ` (השבעים, ישעיהו ה:ו): **שתי מלאכות הכרם של הסיודוס – τέμνω (570) ו־σκάπτω (σκάφος כאן) – הן בשבעים שתי המלים של "לא יזמר ולא יעדר"** (הסוג א), ולכן `זָמַר` ו`עִדּוּר`. בישעיהו – הכרם שהאל מפסיק לטפל בו, כעונש; אצל הסיודוס – סדר העבודה בכרם לפי העונות. אותו זוג מלאכות, ומלים שהשבעים בחרו; אין מגע. |
+| 574 | φεύγειν δὲ σκιεροὺς θώκους καὶ ἐπʼ ἠόα κοῖτον | וּבְרַח מן המושבים המוצלים ומן השכיבה עד השחר | `אַל-תֶּאֱהַב שֵׁנָה פֶּן-תִּוָּרֵשׁ` (משלי כ:יג); `נִרְדָּם בַּקָּצִיר בֵּן מֵבִישׁ` (משלי י:ה); `עַד-מָתַי עָצֵל תִּשְׁכָּב` (משלי ו:ט) | equivalent | ו – השינה בעונת הקציר כבושה; ו. מוטיב משותף. |
+| 575 | ὥρῃ ἐν ἀμήτου, ὅτε τʼ ἠέλιος χρόα κάρφει. | בעונת הקציר, כאשר השמש מייבשת את העור. | `כְּעָב טַל בְּחֹם קָצִיר` (ישעיהו יח:ד); `כְּצִנַּת שֶׁלֶג בְּיוֹם קָצִיר` (משלי כה:יג) | equivalent | חום הקציר; ו – הקור המבוקש בחום. מוטיב משותף. |
+| 577 | ὄρθρου ἀνιστάμενος, ἵνα τοι βίος ἄρκιος εἴη. | בקומך לפני השחר, כדי שתהיה לך מחיה מספקת. | `וַתָּקָם בְּעוֹד לַיְלָה וַתִּתֵּן טֶרֶף לְבֵיתָהּ` (משלי לא:טו) | equivalent | אשת החיל הקמה לפני השחר לפרנס את ביתה. מוטיב משותף. |
+| 581 | ἀνθρώπους πολλοῖσί τʼ ἐπὶ ζυγὰ βουσὶ τίθησιν. | בני האדם, ועל בקר רבים שם עולים. | `אֲשֶׁר לֹא-עָלָה עָלֶיהָ עֹל` (במדבר יט:ב) | equivalent | העול על הבהמה כסימן לעבודה. מוטיב משותף. |
+| 585 | τῆμος πιόταταί τʼ αἶγες καὶ οἶνος ἄριστος, | באותה שעה – העזים שמנות ביותר, והיין הטוב מכול, | `וַיֵּשְׁתְּ מִן הַיַּיִן וַיִּשְׁכָּר` (בראשית ט:כא) | equivalent | ובשבעים: `καὶ ἔπιεν ἐκ τοῦ οἴνου` (השבעים, בראשית ט:כא): **οἶνος** היא מלת השבעים ל`יַיִן` (הסוג א) – אצל נח האיכר הראשון שנטע כרם. מוטיב משותף. |
+| 589 | εἴη πετραίη τε σκιὴ καὶ βίβλινος οἶνος, | יהי צל סלע, ויין ביבליני, | `כְּצֵל סֶלַע כָּבֵד בְּאֶרֶץ עֲיֵפָה` (ישעיהו לב:ב) | equivalent | צל הסלע כמנוחה בחום; בשבעים הפסוק שונה לגמרי (`ὡς ποταμὸς φερόμενος ἔνδοξος ἐν γῇ διψώσῃ`, השבעים, ישעיהו לב:ב). מוטיב משותף של ארצות הים התיכון בקיץ. |
+| 590 | μάζα τʼ ἀμολγαίη γάλα τʼ αἰγῶν σβεννυμενάων, | ועוגת חָלָב?, וחָלָב של עזים שחלבן אוזל, | `וְעֻגַת שְׂעֹרִים תֹּאכְלֶנָּה` (יחזקאל ד:יב) | equivalent | עוגת השעורים, לחם העני; בשבעים שם `ἐγκρυφίαν κρίθινον` (השבעים, יחזקאל ד:יב) – מלה אחרת (הסוג ב). מוטיב משותף. |
+| 593 | ἐν σκιῇ ἑζόμενον, κεκορημένον ἦτορ ἐδωδῆς, | יושב בצל, כְּשֶׁקִּרְבְּךָ שבע ממאכל, | — | equivalent | `וְיַיִן יְשַׂמַּח לְבַב-אֱנוֹשׁ` (תהילים קד:טו) – היין והשובע כמנוחת האדם העובד. מוטיב משותף. |
+| 595 | κρήνης τʼ αἰενάου καὶ ἀπορρύτου, ἥτʼ ἀθόλωτος, | ומן המעיין התמידי והזורם החוצה, אשר אינו עכור, | `בְּאֵר מַיִם חַיִּים` (בראשית כו:יט) | equivalent | מי מעיין זורמים, שאינם נעכרים: המים החיים שהעובד מבקש. מוטיב משותף, לא מגע. |
+| 597 | δμωσὶ δʼ ἐποτρύνειν Δημήτερος ἱερὸν ἀκτὴν | ואת העבדים דָּחוֹק, את גרעיני דמטר הקדושים | — | equivalent | הוראות האיכר 98 ("ביום שאתה דש את השעורה") – גם שם הדיש בא אחרי הקציר, בהוראה לבן. מוטיב משותף, לא מקור. |
+| 599 | χώρῳ ἐν εὐαέι καὶ ἐυτροχάλῳ ἐν ἀλωῇ. | במקום אוורירי ובגורן מעוגלת היטב. | `הִנֵּה הוּא זֹרֶה אֶת גֹּרֶן הַשְּׂעֹרִים הַלָּיְלָה` (רות ג:ב) | equivalent | הזרייה בגורן, בשעה שהרוח נושבת; וגם הוראות האיכר 105–109 (הזרייה, "כבחצי היום"). מוטיב משותף, לא מגע. |
+| 600 | μέτρῳ δʼ εὖ κομίσασθαι ἐν ἄγγεσιν· αὐτὰρ ἐπὴν δὴ | ובמידה, היטב, אָסוֹף (אותם) במכלים; ואחרי ש־ | — | equivalent | הוראות האיכר 90 (שקילת השעורה) – המדידה כחלק מן העבודה. מוטיב משותף, לא מקור. |
+| 602 | θῆτά τʼ ἄοικον ποιεῖσθαι καὶ ἄτεκνον ἔριθον | שכיר חסר־בית לַעֲשׂוֹת לך, ופועלת ערירית | `וְאָנֹכִי הוֹלֵךְ עֲרִירִי` (בראשית טו:ב) | equivalent | ובשבעים: `ἐγὼ δὲ ἀπολύομαι ἄτεκνος` (השבעים, בראשית טו:ב); וגם `ἄτεκνοι ἀποθανοῦνται` (השבעים, ויקרא כ:כ) = "ערירים ימותו". זהות מילונית: ἄτεκνος = `עֲרִירִי`. |
+| 604 | καὶ κύνα καρχαρόδοντα κομεῖν, μὴ φείδεο σίτου, | וכלב משונן־שיניים כַּלְכֵּל – אל תחסוך בדגן, | `לָשִׁית עִם-כַּלְבֵי צֹאנִי` (איוב ל:א) | equivalent | כלב השמירה של משק הצאן, חלק מבני הבית. מוטיב משותף. |
+| 605 | μή ποτέ σʼ ἡμερόκοιτος ἀνὴρ ἀπὸ χρήμαθʼ ἕληται. | פן ייקח ממך איש ישן־היום את ההון. | `חָתַר בַּחֹשֶׁךְ בָּתִּים` (איוב כד:טז) | equivalent | ובהמשך הפסוק: ביום הגנבים נועלים את עצמם, "לא ידעו אור"; ובשבעים: `διώρυξεν ἐν σκότει οἰκίας` (השבעים, איוב כד:טז). אותה דמות: הגנב חי בלילה וישן ביום. מוטיב משותף, לא מגע. |
+| 606 | χόρτον δʼ ἐσκομίσαι καὶ συρφετόν, ὄφρα τοι εἴη | ומספוא ותבן הָבֵא פנימה, כדי שיהיה לך | `גַּם תֶּבֶן גַּם מִסְפּוֹא רַב עִמָּנוּ` (בראשית כד:כה) | equivalent | ובשבעים: `Καὶ ἄχυρα καὶ χορτάσματα πολλὰ` (השבעים, בראשית כד:כה): χορτάσματα = מספוא, מאותו שורש של χόρτος. בית שמוכן לאורחים ולבהמות. מוטיב משותף, לא מגע. |
+| 608 | δμῶας ἀναψῦξαι φίλα γούνατα καὶ βόε λῦσαι. | לעבדים הָשֵׁב נפש לברכיהם האהובות, ואת שני השוורים הַתֵּר. | `לְמַעַן יָנוּחַ שׁוֹרְךָ וַחֲמֹרֶךָ וְיִנָּפֵשׁ בֶּן אֲמָתְךָ וְהַגֵּר` (שמות כג:יב) | equivalent | ובשבעים: `ἵνα ἀναψύξῃ ὁ υἱὸς τῆς παιδίσκης σου` (השבעים, שמות כג:יב): ἀναψύχω = `וְיִנָּפֵשׁ`. אותו פועל, ואותו צירוף: מנוחת העבד ומנוחת השור. אצל הסיודוס – מנוחה עונתית אחרי הקציר והאגירה; בתורה – מנוחה בכל שבוע, כמצווה. מוטיב משותף, לא מגע; ההבדל (עונה / שבוע, עצה / מצווה) הוא העיקר. |
+| 609 | εὖτʼ ἂν δʼ Ὠαρίων καὶ Σείριος ἐς μέσον ἔλθῃ | וכאשר כְּסִיל וסיריוס יבואו אל אמצע | `עֹשֶׂה-עָשׁ כְּסִיל וְכִימָה` (איוב ט:ט) | equivalent | ובשבעים: `ὁ ποιῶν Πλειάδα καὶ Ἕσπερον καὶ Ἀρκτοῦρον` (השבעים, איוב ט:ט). אותם כוכבים – כסיל, כימה, ארקטורוס – הם לוח השנה של האיכר אצל הסיודוס, ובאיוב הם מעשי האל. ראו 615. |
+| 613 | πέντε δὲ συσκιάσαι, ἕκτῳ δʼ εἰς ἄγγεʼ ἀφύσσαι | וחמישה – כַּסֵּה בצל, וביום השישי שָׁאוֹב אל המכלים | — | equivalent | הוראות האיכר 96 ("הגורן שפרשת – חמישה ימים תנוח") – גם שם מספר ימים קבוע של המתנה בין שלב לשלב. מוטיב משותף של ימים ספורים, לא מקור. |
+| 614 | δῶρα Διωνύσου πολυγηθέος. αὐτὰρ ἐπὴν δὴ | את מתנות דִּיּוֹנִיסוֹס רב־השמחה. ואחרי ש־ | `הֶחֳדַלְתִּי אֶת תִּירוֹשִׁי הַמְשַׂמֵּחַ אֱלֹהִים וַאֲנָשִׁים` (שופטים ט:יג) | equivalent | ובשבעים: `τὸν οἶνόν μου, τὴν εὐφροσύνην τὴν παρὰ τοῦ θεοῦ τῶν ἀνθρώπων` (השבעים, שופטים ט:יג). היין משמח – אצל הסיודוס האל הוא "רב־השמחה", ובמשל יותם התירוש משמח "אלוהים ואנשים". מוטיב משותף, לא מגע. |
+| 615 | Πληιάδες θʼ Ὑάδες τε τό τε σθένος Ὠαρίωνος | כִּימָה, וְהַהִיאָדוֹת, וחוסן כְּסִיל | `הַתְקַשֵּׁר מַעֲדַנּוֹת כִּימָה` (איוב לח:לא); `אוֹ-מֹשְׁכוֹת כְּסִיל תְּפַתֵּחַ` (איוב לח:לא); `עֹשֵׂה כִימָה וּכְסִיל` (עמוס ה:ח) | equivalent | ובחציו השני: ; ובשבעים: `συνῆκας δὲ δεσμὸν Πλειάδος καὶ φραγμὸν Ὠρίωνος ἤνοιξας` (השבעים, איוב לח:לא) – **השבעים מזהים כימה = Πλειάς וכסיל = Ὠρίων**: אותו זוג כוכבים שבשורה זו. ועוד:  – בשבעים אין שם כוכבים (`ποιῶν πάντα καὶ μετασκευάζων`, השבעים, עמוס ה:ח). בתנ"ך הזוג כימה–כסיל הוא עדות לכוח האל ולסדר השמים; אצל הסיודוס – לוח החריש. מוטיב משותף, לא מגע; והוא המקור לשמות העבריים שבתרגום. |
+| 617 | ὡραίου· πλειὼν δὲ κατὰ χθονὸς ἄρμενος εἶσιν. | שבעונתו; והשנה תלך, הולמת, אל מתחת לאדמה. | `זֶרַע וְקָצִיר וְקֹר וָחֹם וְקַיִץ וָחֹרֶף` (בראשית ח:כב) | equivalent | השנה החקלאית כמעגל קבוע, שאינו "שובת". השורה הזאת סוגרת אצל הסיודוס את המעגל כולו. מוטיב משותף, לא מגע. |
+| 619 | εὖτʼ ἂν Πληιάδες σθένος ὄβριμον Ὠαρίωνος | כאשר כִּימָה, מפני חוסנו הכביר של כְּסִיל | `הַתְקַשֵּׁר מַעֲדַנּוֹת כִּימָה` (איוב לח:לא) | equivalent | ובשבעים Πλειάδος … Ὠρίωνος (ראו 615): אותו זוג כוכבים, ובאיוב – האל לבדו "קושר" ו"פותח" אותם. מוטיב משותף, לא מגע. |
+| 621 | δὴ τότε παντοίων ἀνέμων θυίουσιν ἀῆται· | אָכֵן אז גועשים משבי רוחות מכל סוג; | — | equivalent | `וַיֹּאמֶר וַיַּעֲמֵד רוּחַ סְעָרָה` (תהילים קז:כה) – הסערה הקמה על יורדי הים. מוטיב משותף, לא מגע. |
+| 623 | γῆν ἐργάζεσθαι μεμνημένος, ὥς σε κελεύω. | את האדמה עָבוֹד, זוכר, כפי שאני מצווה אותך. | `לַעֲבֹד אֶת הָאֲדָמָה אֲשֶׁר לֻקַּח מִשָּׁם` (בראשית ג:כג) | equivalent | ובשבעים: `ἐργάζεσθαι τὴν γῆν, ἐξ ἧς ἐλήμφθη` (השבעים, בראשית ג:כג): **γῆν ἐργάζεσθαι** – אותו צירוף, מלה במלה (ובבראשית ב:ה). אצל הסיודוס – עצה מול הים המסוכן; בבראשית – גורל האדם מחוץ לגן. מוטיב משותף, וזהות לשונית בשבעים. |
+| 634 | πλωίζεσκʼ ἐν νηυσί, βίου κεχρημένος ἐσθλοῦ· | היה מפליג באוניות, נצרך למחיה טובה; | — | equivalent | `יוֹרְדֵי הַיָּם בָּאֳנִיּוֹת` – `עֹשֵׂי מְלָאכָה בְּמַיִם רַבִּים` (תהילים קז:כג) – אנשי הים, שהים הוא פרנסתם. מוטיב משותף, לא מגע. |
+| 636 | Κύμην Αἰολίδα προλιπών, ἐν νηὶ μελαίνῃ· | בעזבו את קִימָה האַיּוֹלִית, באונייה שחורה; | `אֲרַמִּי אֹבֵד אָבִי וַיֵּרֶד מִצְרַיְמָה וַיָּגָר שָׁם` (דברים כו:ה); `וַיֵּלֶךְ אִישׁ מִבֵּית לֶחֶם יְהוּדָה לָגוּר בִּשְׂדֵי מוֹאָב` (רות א:א) | equivalent | ובשבעים: `Συρίαν ἀπέβαλεν ὁ πατήρ μου καὶ κατέβη εἰς Αἴγυπτον καὶ παρῴκησεν ἐκεῖ` (השבעים, דברים כו:ה) – האב המהגר, שבא כגר לארץ אחרת בגלל הרעב; וכן , מפני הרעב. אצל הסיודוס – מפני העוני (638). מוטיב משותף, לא מגע. |
+| 639 | νάσσατο δʼ ἄγχʼ Ἑλικῶνος ὀιζυρῇ ἐνὶ κώμῃ, | ובא לגור ליד הַהֶלִיקוֹן, בכפר של מצוקה, | — | equivalent | `כשהוא רועה טלאים למרגלות ההליקון המקודש.` (תולדות האלים 23) – אותו מקום: שם המוזות לימדו את הסיודוס שירה (ראו 658–659). |
+| 644 | μείζων μὲν φόρτος, μεῖζον δʼ ἐπὶ κέρδεϊ κέρδος | גדול יותר המטען, וגדול יותר – בצע על בצע – | `וַתִּמָּלְאִי וַתִּכְבְּדִי מְאֹד בְּלֵב יַמִּים` (יחזקאל כז:כה); `רוּחַ הַקָּדִים שְׁבָרֵךְ בְּלֵב יַמִּים` (יחזקאל כז:כו) | equivalent | ובשבעים: `καὶ ἐνεπλήσθης καὶ ἐβαρύνθης σφόδρα ἐν καρδίᾳ θαλάσσης` (השבעים, יחזקאל כז:כה) – צור, האונייה הטעונה, ואחריה . המטען הגדול והרוח ששוברת – אותו סיכון שהסיודוס שוקל כאן. מוטיב משותף, לא מגע. |
+| 648 | δείξω δή τοι μέτρα πολυφλοίσβοιο θαλάσσης, | אַרְאֶה לך אָכֵן את מידות הים רב־הנהמה, | `דֶּרֶךְ-אֳנִיָּה בְלֶב-יָם` (משלי ל:יט) | equivalent | אחד מארבעת הדברים ש"לא ידעתים": דרך האונייה בים נשגבת מבינתו של החכם; הסיודוס, שאינו יודע ים (649), מבטיח ללמד את "מידותיו" – בזכות המוזות (662). מוטיב משותף, לא מגע. |
+| 649 | οὔτε τι ναυτιλίης σεσοφισμένος οὔτε τι νηῶν. | אף שאינני מחוכם כלל, לא ביַמָּאוּת ולא באוניות. | — | equivalent | `וְכָל-חָכְמָתָם תִּתְבַּלָּע` (תהילים קז:כז) – חכמת יורדי הים "נבלעת" בסערה. אצל הסיודוס – המשורר בלי חכמת ים כלל. מוטיב משותף, לא מגע. |
+| 654 | ἔνθα δʼ ἐγὼν ἐπʼ ἄεθλα δαΐφρονος Ἀμφιδάμαντος | שם אני – אל (תחרות) הפרסים של אַמְפִידָמָס נבון־המערכה, | `תֵּלַכְנָה בְּנוֹת יִשְׂרָאֵל לְתַנּוֹת לְבַת יִפְתָּח הַגִּלְעָדִי` (שופטים יא:מ) | divergence | טקס זיכרון שנתי למתה; ביוון – תחרויות קבורה (ἆθλα ἐπὶ τῷ τεθνηκότι, כמו בספר כג של האיליאדה לפטרוקלוס). לתנ"ך אין תחרויות לכבוד מת. השוואה בלבד. |
+| 658 | τὸν μὲν ἐγὼ Μούσῃς Ἑλικωνιάδεσσʼ ἀνέθηκα, | אותה אני העליתי מנחה לַמּוּזוֹת הַהֶלִיקוֹנִיּוֹת, | — | equivalent | `כשהוא רועה טלאים למרגלות ההליקון המקודש.` (תולדות האלים 23) – ובתולדות האלים 22–34 כל ההקדשה: המוזות לימדו את הסיודוס שירה, נתנו לו שרביט של דפנה, "השרו בו ניב". כאן הוא מחזיר להן את הפרס. **זיקה פנימית בקורפוס**. |
+| 662 | Μοῦσαι γάρ μʼ ἐδίδαξαν ἀθέσφατον ὕμνον ἀείδειν. | כי המוזות לימדוני לשיר רינה שאין לתארה. | — | equivalent | `הן אשר פעם לימדו את הֶסִיּוֹדוֹס שירה יפה,` (תולדות האלים 22) – אותו פועל (ἐδίδαξαν) ואותן מוזות. **זיקה פנימית בקורפוס**. |
+| 668 | ἢ Ζεὺς ἀθανάτων βασιλεὺς ἐθέλῃσιν ὀλέσσαι· | או זאוס, מלך בני־האלמוות, ירצה לספות (אותם); | `וַיהוָה הֵטִיל רוּחַ גְּדוֹלָה אֶל הַיָּם` (יונה א:ד) | equivalent | ובשבעים: `καὶ κύριος ἐξήγειρεν πνεῦμα εἰς τὴν θάλασσαν` (השבעים, יונה א:ד) – האל שולח את הסערה ומחליט על גורל האונייה. מוטיב משותף, לא מגע. |
+| 669 | ἐν τοῖς γὰρ τέλος ἐστὶν ὁμῶς ἀγαθῶν τε κακῶν τε. | כי בהם התכלית, כאחד, של הטובות ושל הרעות. | `כִּי אַתָּה יְהוָה כַּאֲשֶׁר חָפַצְתָּ עָשִׂיתָ` (יונה א:יד) | equivalent | הספנים מכירים שגורל האונייה ביד האל. מוטיב משותף. |
+| 674 | μηδὲ μένειν οἶνόν τε νέον καὶ ὀπωρινὸν ὄμβρον | ואַל חַכֵּה ליין החדש ולגשם הסתיו | `וְאָסַפְתָּ דְגָנֶךָ וְתִירֹשְׁךָ` (דברים יא:יד) | equivalent | `וְנָתַתִּי מְטַר אַרְצְכֶם בְּעִתּוֹ יוֹרֶה וּמַלְקוֹשׁ` –  – היורה, גשם הסתיו, בא עם אסיף התירוש; ובשבעים: `καθ’ ὥραν πρόιμον καὶ ὄψιμον` (השבעים, דברים יא:יד). אותה עונה: היין החדש וגשם הסתיו. אצל הסיודוס – סימן לסוף השיט; בתורה – ברכה. מוטיב משותף, לא מגע. |
+| 676 | ὅστʼ ὤρινε θάλασσαν ὁμαρτήσας Διὸς ὄμβρῳ | המסעיר את הים, בהתלוותו לגשם זאוס | — | equivalent | `וַיֹּאמֶר וַיַּעֲמֵד רוּחַ סְעָרָה` – `וַתְּרוֹמֵם גַּלָּיו` (תהילים קז:כה) – הרוח מעוררת את הים. מוטיב משותף. |
+| 681 | ἐν κράδῃ ἀκροτάτῃ, τότε δʼ ἄμβατός ἐστι θάλασσα· | בקצה ענף־התאנה העליון – אז אפשר לעלות על הים; | `הַתְּאֵנָה חָנְטָה פַגֶּיהָ` (שיר השירים ב:יג) | equivalent | התאנה כסימן האביב, אחרי "כי הנה הסתו עבר" (ב:יא). מוטיב משותף, לא מגע. |
+| 686 | χρήματα γὰρ ψυχὴ πέλεται δειλοῖσι βροτοῖσιν. | כי ההון – נפש הוא לבני אנוש עלובים. | `כֹּפֶר נֶפֶשׁ-אִישׁ עָשְׁרוֹ` (משלי יג:ח) | equivalent | ובשבעים: `λύτρον ἀνδρὸς ψυχῆς ὁ ἴδιος πλοῦτος` (השבעים, משלי יג:ח): **ψυχή ועושר** באותו פסוק – במשלי העושר הוא "כופר" הנפש, אצל הסיודוס העושר הוא הנפש עצמה. מוטיב משותף, לא מגע; ההיפוך הוא העיקר. |
+| 687 | δεινὸν δʼ ἐστὶ θανεῖν μετὰ κύμασιν. ἀλλά σʼ ἄνωγα | ואיום הוא למות בין הגלים. אבל אני מצווה אותך | `כָּל מִשְׁבָּרֶיךָ וְגַלֶּיךָ עָלַי עָבָרוּ` (יונה ב:ד) | equivalent | ובשבעים: `καὶ τὰ κύματά σου ἐπ’ ἐμὲ διῆλθον` (השבעים, יונה ב:ד): **κύματα** – המלה של הסיודוס. יונה המטובע בין הגלים, והנמלט. מוטיב משותף, לא מגע. |
+| 689 | μηδʼ ἐν νηυσὶν ἅπαντα βίον κοΐλῃσι τίθεσθαι· | ואַל באוניות נבובות שׂוֹם את כל מחייתך; | `וַיָּטִלוּ אֶת הַכֵּלִים אֲשֶׁר בָּאֳנִיָּה אֶל הַיָּם לְהָקֵל מֵעֲלֵיהֶם` (יונה א:ה) | equivalent | המטען הראשון שאובד בסערה. מוטיב משותף. |
+| 692 | δεινὸν δʼ, εἴ κʼ ἐπʼ ἄμαξαν ὑπέρβιον ἄχθος ἀείρας | ואיום, אם – בהרימך על העגלה משא עצום מדי – | `כַּאֲשֶׁר תָּעִיק הָעֲגָלָה הַמְלֵאָה לָהּ עָמִיר` (עמוס ב:יג) | equivalent | ובשבעים: `ὃν τρόπον κυλίεται ἡ ἅμαξα ἡ γέμουσα καλάμης` (השבעים, עמוס ב:יג): **ἅμαξα** העמוסה – העגלה הכורעת תחת המשא. מוטיב משותף, לא מגע. |
+| 694 | μέτρα φυλάσσεσθαι· καιρὸς δʼ ἐπὶ πᾶσιν ἄριστος. | את המידות שָׁמוֹר; העת הנכונה – בכל דבר היא הטובה מכול. | `לַכֹּל זְמָן; וְעֵת לְכָל חֵפֶץ תַּחַת הַשָּׁמָיִם` (קהלת ג:א) | equivalent | העת הנכונה לכל מעשה. קהלת – חכמה של השלמה עם העתים, הסיודוס – חכמה מעשית של בחירת העת. מוטיב משותף, לא מגע. |
+| 695 | ὡραῖος δὲ γυναῖκα τεὸν ποτὶ οἶκον ἄγεσθαι, | וכשאתה בעונתך – לָקוֹחַ אשה אל ביתך, | `וְהוּא אִשָּׁה בִבְתוּלֶיהָ יִקָּח` (ויקרא כא:יג) | equivalent | הלקיחה של אשה, ובשבעים `γυναῖκα παρθένον … λήμψεται` (השבעים, ויקרא כא:יג); ראו 699. מוטיב משותף. |
+| 699 | παρθενικὴν δὲ γαμεῖν, ὥς κʼ ἤθεα κεδνὰ διδάξῃς. | ובתולה נָשׂוֹא לאשה, כדי שתלמד (אותה) מנהגים הגונים. | `כִּי אִם בְּתוּלָה מֵעַמָּיו יִקַּח אִשָּׁה` (ויקרא כא:יד) | divergence | ובשבעים: `ἀλλ’ ἢ παρθένον ἐκ τοῦ γένους αὐτοῦ λήμψεται γυναῖκα` (השבעים, ויקרא כא:יד). בתורה – דין קדושה לכוהן הגדול; אצל הסיודוס – עצה מעשית לכל איכר: את הבתולה אפשר לחנך. אותה בחירה, נימוק אחר. מוטיב משותף, לא מגע. |
+| 702 | οὐ μὲν γάρ τι γυναικὸς ἀνὴρ ληίζετʼ ἄμεινον | כי אין שלל שאיש בוזז טוב יותר מאשה | `מָצָא אִשָּׁה מָצָא טוֹב` (משלי יח:כב); `אֵשֶׁת-חַיִל מִי יִמְצָא` (משלי לא:י) | equivalent | ובשבעים: `ὃς εὗρεν γυναῖκα ἀγαθήν, εὗρεν χάριτας` (השבעים, משלי יח:כב) – השבעים מוסיפים "טובה", כמו הסיודוס (703). ו. מוטיב משותף, לא מגע. |
+| 703 | τῆς ἀγαθῆς, τῆς δʼ αὖτε κακῆς οὐ ῥίγιον ἄλλο, | הטובה, ושוב – אין דבר מצמרר יותר מן הרעה, | `וּמוֹצֶא אֲנִי מַר מִמָּוֶת אֶת הָאִשָּׁה` (קהלת ז:כו) | equivalent | האשה הרעה כדבר הקשה מכל. מוטיב משותף, לא מגע. |
+| 705 | εὕει ἄτερ δαλοῖο καὶ ὠμῷ γήραϊ δῶκεν. | חורכת בלי אוּד, ולזקנת בּוֹסֶר נותנת (אותו). | `וּכְרָקָב בְּעַצְמוֹתָיו מְבִישָׁה` (משלי יב:ד) | equivalent | ובשבעים: `ὥσπερ δὲ ἐν ξύλῳ σκώληξ, οὕτως ἄνδρα ἀπόλλυσιν γυνὴ κακοποιός` (השבעים, משלי יב:ד) – האשה הרעה מכלה את בעלה מבפנים, כמו תולעת בעץ; אצל הסיודוס – כמו אש בלי אוד. אותה תמונה של כילוי איטי. מוטיב משותף, לא מגע. |
+| 707 | μηδὲ κασιγνήτῳ ἶσον ποιεῖσθαι ἑταῖρον· | ואַל עָשׂוֹ רֵעַ שווה לאח; | `וְיֵשׁ אֹהֵב דָּבֵק מֵאָח` (משלי יח:כד) | divergence | במשלי האוהב עשוי להיות קרוב מן האח; אצל הסיודוס – אל תשווה את הרע לאח. ההפך. מוטיב משותף, לא מגע. |
+| 711 | δὶς τόσα τίνυσθαι μεμνημένος· εἰ δὲ σέ γʼ αὖτις | פי שניים פָּרוֹעַ לו, זוכר; ואם שוב | `לֹא תִקֹּם וְלֹא תִטֹּר אֶת בְּנֵי עַמֶּךָ וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ` (ויקרא יט:יח); `שְׁנַיִם יְשַׁלֵּם` (שמות כב:ג) | divergence | ובשבעים: `καὶ οὐκ ἐκδικᾶταί σου ἡ χείρ, καὶ οὐ μηνιεῖς` (השבעים, ויקרא יט:יח). התורה אוסרת נקמה ונטירה כלפי הרע; הסיודוס מצווה לגמול כפליים – ולסלוח למי שמבקש פיוס (712–713). הבדל מהותי (הסוג ג). ו – תשלום כפל של הגנב: אותה מידה של "פי שניים", אבל בדין, לא בנקמה אישית. |
+| 716 | μηδὲ κακῶν ἕταρον μηδʼ ἐσθλῶν νεικεστῆρα. | ולא רֵעָם של הרעים, ולא בעל ריב לטובים. | `וְרֹעֶה כְסִילִים יֵרוֹעַ` (משלי יג:כ) | equivalent | ובשבעים: `ὁ δὲ συμπορευόμενος ἄφροσι γνωσθήσεται` (השבעים, משלי יג:כ) – הרעוּת עם הרעים מזיקה. מוטיב משותף, לא מגע. |
+| 718 | τέτλαθʼ ὀνειδίζειν, μακάρων δόσιν αἰὲν ἐόντων. | לְחָרֵף לאיש – מתת המאושרים הקיימים תמיד. | `לֹעֵג לָרָשׁ חֵרֵף עֹשֵׂהוּ` (משלי יז:ה) | equivalent | ובשבעים: `ὁ καταγελῶν πτωχοῦ παροξύνει τὸν ποιήσαντα αὐτόν` (השבעים, משלי יז:ה). המחרף את העני – מחרף את האל: במשלי, כי האל עשה אותו; אצל הסיודוס, כי העוני הוא "מתת האלים". **ההקבלה הקרובה ביותר בקטע**. מוטיב משותף, לא מגע. |
+| 720 | φειδωλῆς, πλείστη δὲ χάρις κατὰ μέτρον ἰούσης. | (לשון) חסכנית, והחן הרב מכול – (ללשון) ההולכת לפי המידה. | `וְחוֹשֵׂךְ שְׂפָתָיו מַשְׂכִּיל` (משלי י:יט) | equivalent | `בְּרֹב דְּבָרִים לֹא יֶחְדַּל-פָּשַׁע` –  – ובשבעים: `φειδόμενος δὲ χειλέων νοήμων ἔσῃ` (השבעים, משלי י:יט): **φείδομαι** – הפועל של φειδωλός של הסיודוס: "החוסך בשפתיו". אותה עצה ואותה מלה. מוטיב משותף, וזהות לשונית בשבעים. |
+| 725 | χερσὶν ἀνίπτοισιν μηδʼ ἄλλοις ἀθανάτοισιν· | בידיים בלתי רחוצות, ואף לא לשאר בני־האלמוות; | `בְּבֹאָם אֶל אֹהֶל מוֹעֵד יִרְחֲצוּ מַיִם וְלֹא יָמֻתוּ` (שמות ל:כ); `וְרָחֲצוּ אַהֲרֹן וּבָנָיו מִמֶּנּוּ אֶת יְדֵיהֶם וְאֶת רַגְלֵיהֶם` (שמות ל:יט) | equivalent | ובשבעים: `νίψονται ὕδατι καὶ οὐ μὴ ἀποθάνωσιν` (השבעים, שמות ל:כ); ו. **νίπτω** – אותו שורש של ἄνιπτος. בתורה – חובת הכוהנים לפני העבודה במקדש, בעונש מוות; אצל הסיודוס – חובת כל איש לפני הנסך בביתו. אותו טקס, ציבור אחר. מוטיב משותף, לא מגע. |
+| 727 | μηδʼ ἄντʼ ἠελίου τετραμμένος ὀρθὸς ὀμιχεῖν· | ואַל מול השמש, כשפניך אליה, זקוף הַשְׁתֵּן; | `וּפְנֵיהֶם קֵדְמָה וְהֵמָּה מִשְׁתַּחֲוִיתֶם קֵדְמָה לַשָּׁמֶשׁ` (יחזקאל ח:טז) | divergence | ובשבעים: `καὶ οὗτοι προσκυνοῦσιν τῷ ἡλίῳ` (השבעים, יחזקאל ח:טז). ביחזקאל – הפנייה אל השמש היא עבודה זרה; אצל הסיודוס – השמש אל, ולכן אסור לבזות אותו. הכבוד לשמש – תועבה בזה, חובה בזה (הסוג ג). |
+| 729 | μήτʼ ἐν ὁδῷ μήτʼ ἐκτὸς ὁδοῦ προβάδην οὐρήσῃς | לא בדרך ולא מחוץ לדרך, בלכתך, תשתין, | `וְיָד תִּהְיֶה לְךָ מִחוּץ לַמַּחֲנֶה` (דברים כג:יג) | equivalent | ובשבעים: `καὶ τόπος ἔσται σοι ἔξω τῆς παρεμβολῆς` (השבעים, דברים כג:יג): מקום קבוע לצרכים, ולא בכל מקום. ראו 730. מוטיב משותף, לא מגע. |
+| 730 | μηδʼ ἀπογυμνωθείς· μακάρων τοι νύκτες ἔασιν· | ולא כשאתה עָרֹם; כי של המאושרים הם הלילות. | `וְלֹא יִרְאֶה בְךָ עֶרְוַת דָּבָר` (דברים כג:טו) | equivalent | `כִּי יְהוָה אֱלֹהֶיךָ מִתְהַלֵּךְ בְּקֶרֶב מַחֲנֶךָ` –  – ובשבעים: `καὶ οὐκ ὀφθήσεται ἐν σοὶ ἀσχημοσύνη πράγματος` (השבעים, דברים כג:טו). **האל המתהלך במחנה** – ולכן כיסוי הצואה והמבושים; אצל הסיודוס – **האלים המתהלכים בלילה** – ולכן אין לחשוף את הגוף. **ההקבלה החזקה בקטע**: אותו נימוק (האל נוכח ורואה), אותו תחום (צרכי הגוף, הערווה). מוטיב משותף, לא מגע. |
+| 731 | ἑζόμενος δʼ ὅ γε θεῖος ἀνήρ, πεπνυμένα εἰδώς, | יושב (הוא), האיש האֱלוֹהִי, היודע דברי בינה, | `אַךְ מֵסִיךְ הוּא אֶת רַגְלָיו בַּחֲדַר הַמְּקֵרָה` (שופטים ג:כד); `וַיָּבֹא שָׁאוּל לְהָסֵךְ אֶת רַגְלָיו` (שמואל א כד:ג) | equivalent | ובשבעים: `πρὸς δίφρους κάθηται` (השבעים, שופטים ג:כד): **κάθηται** – "יושב" לצרכיו, כמו ἑζόμενος כאן; ו. לשון נקייה משותפת. מוטיב משותף, לא מגע. |
+| 733 | μηδʼ αἰδοῖα γονῇ πεπαλαγμένος ἔνδοθι οἴκου | ואַל, כשמבושיך מגואלים בשכבת זרע, בתוך הבית | `וְאִישׁ כִּי תֵצֵא מִמֶּנּוּ שִׁכְבַת זָרַע וְרָחַץ בַּמַּיִם אֶת כָּל בְּשָׂרוֹ וְטָמֵא עַד הָעָרֶב` (ויקרא טו:טז); `אַל תִּגְּשׁוּ אֶל אִשָּׁה` (שמות יט:טו) | equivalent | ובשבעים: `κοίτη σπέρματος, καὶ λούσεται ὕδατι πᾶν τὸ σῶμα αὐτοῦ` (השבעים, ויקרא טו:טז); ו לפני מעמד הר סיני. הזרע מטמא ומרחיק מן הקודש – בתורה עד הערב ובטבילה, אצל הסיודוס מן האח, מקום האלה הֶסְטִיָּה. מוטיב משותף, לא מגע. |
+| 735 | μηδʼ ἀπὸ δυσφήμοιο τάφου ἀπονοστήσαντα | ואַל, בשובך מקבורה רעת־קינות, | `הַנֹּגֵעַ בְּמֵת לְכָל נֶפֶשׁ אָדָם וְטָמֵא שִׁבְעַת יָמִים` (במדבר יט:יא) | equivalent | טומאת המת. אצל הסיודוס – החוזר מן הקבורה לא יוליד ילד; בתורה – טומאה של שבעה ימים. מוטיב משותף, לא מגע. |
+| 736 | σπερμαίνειν γενεήν, ἀλλʼ ἀθανάτων ἀπὸ δαιτός. | הַזְרֵעַ דור, אלא (בשובך) ממשתה בני־האלמוות. | `אִשָּׁה כִּי תַזְרִיעַ וְיָלְדָה זָכָר` (ויקרא יב:ב) | equivalent | ובשבעים: `Γυνή, ἥτις ἐὰν σπερματισθῇ καὶ τέκῃ ἄρσεν` (השבעים, ויקרא יב:ב): **σπερματίζω** – משפחת σπερμαίνω של הסיודוס, = `תַזְרִיעַ`. זהות לשונית. |
+| 740 | ὃς ποταμὸν διαβῇ κακότητʼ ἰδὲ χεῖρας ἄνιπτος, | מי שיעבור נהר – בלתי רחוץ מן הרוע ומידיו – | `יִרְחֲצוּ אֶת יְדֵיהֶם עַל הָעֶגְלָה הָעֲרוּפָה בַנָּחַל` (דברים כא:ו) | equivalent | ובשבעים: `νίψονται τὰς χεῖρας` (השבעים, דברים כא:ו) – רחיצת הידיים בנחל איתן כהצהרת ניקיון מן הדם. **רחיצה מן הרוע ומן הידיים** – אצל הסיודוס, כמו בתורה, רחיצת הידיים במים חיים היא גם טהרה מן החטא. מוטיב משותף, לא מגע. |
+| 743 | αὖον ἀπὸ χλωροῦ τάμνειν αἴθωνι σιδήρῳ. | את היבש מן הירוק כָּרוֹת בברזל המבהיק. | `וְגִלְּחָה אֶת רֹאשָׁהּ וְעָשְׂתָה אֶת צִפָּרְנֶיהָ` (דברים כא:יב) | divergence | ובשבעים: `καὶ περιονυχιεῖς αὐτήν` (השבעים, דברים כא:יב) – גזיזת הציפורניים בטקס מעבר של השבויה; אצל הסיודוס – איסור לגזוז ביום קרבן. אותו מעשה בעל משמעות טקסית, בכיוון הפוך. השוואה בלבד. |
+| 744 | μηδέ ποτʼ οἰνοχόην τιθέμεν κρητῆρος ὕπερθε | ואַל אף פעם שׂוֹם את קנקן היין מעל האגן | `וַיָּשֶׂם בָּאַגָּנֹת` (שמות כד:ו) | equivalent | ובשבעים: `ἐνέχεεν εἰς κρατῆρας` (השבעים, שמות כד:ו): **κρατήρ = `אַגָּן`** – זהות מילונית בשבעים. מוטיב משותף (כלי המזיגה של הטקס), זהות לשונית. |
+| 746 | μηδὲ δόμον ποιῶν ἀνεπίξεστον καταλείπειν, | ואַל, בבנותך בית, הַשְׁאֵר אותו בלתי משופה, | `מִי הָאִישׁ אֲשֶׁר בָּנָה בַיִת חָדָשׁ וְלֹא חֲנָכוֹ` (דברים כ:ה) | equivalent | ובשבעים: `καὶ οὐκ ἐνεκαίνισεν αὐτήν` (השבעים, דברים כ:ה) – הבית החדש שלא נחנך: מצב מסוכן, "פן ימות … ואיש אחר יחנכנו". אצל הסיודוס – הבית הלא־גמור מזמין את העורבנית המבשרת רעה (747). מוטיב משותף, לא מגע. |
+| 756 | μωμεύειν ἀίδηλα· θεός νύ τι καὶ τὰ νεμεσσᾷ. | לַגְלֵג על הנסתרות; אֵל, אכן, מתמלא חמה גם על אֵלֶּה. | `הַנִּסְתָּרֹת לַיהוָה אֱלֹהֵינוּ` (דברים כט:כח) | equivalent | ובשבעים: `τὰ κρυπτὰ κυρίῳ τῷ θεῷ ἡμῶν` (השבעים, דברים כט:כח): הנסתרות שייכות לאל, ואין לאדם לחקור או ללעוג להן. מוטיב משותף, לא מגע. |
+| 760 | ὧδʼ ἔρδειν· δεινὴν δὲ βροτῶν ὑπαλεύεο φήμην. | כך פָּעוֹל; ומשמועה איומה של בני אנוש – חֲמוֹק. | `נִבְחָר שֵׁם מֵעֹשֶׁר רָב` (משלי כב:א) | equivalent | ובשבעים: `αἱρετώτερον ὄνομα καλὸν ἢ πλοῦτος πολύς` (השבעים, משלי כב:א) – השם הטוב (מה שהבריות אומרים) יקר מעושר. מוטיב משותף, לא מגע. |
+| 763 | φήμη δʼ οὔτις πάμπαν ἀπόλλυται, ἥν τινα πολλοὶ | ושום שמועה אינה נספית כליל, אשר עם רב | `וּמוֹצִא דִבָּה הוּא כְסִיל` (משלי י:יח) | equivalent | הדיבה שמוציאים בעם. מוטיב משותף. |
+| 770 | Πρῶτον ἔνη τετράς τε καὶ ἑβδόμη ἱερὸν ἦμαρ· | רִאשׁוֹן – רֹאשׁ הַחֹדֶשׁ, הָרְבִיעִי וְהַשְּׁבִיעִי – יוֹם קָדוֹשׁ: | `וַיְבָרֶךְ אֱלֹהִים אֶת יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ` (בראשית ב:ג) | divergence | ובשבעים: `καὶ ηὐλόγησεν ὁ θεὸς τὴν ἡμέραν τὴν ἑβδόμην καὶ ἡγίασεν αὐτήν` (השבעים, בראשית ב:ג). **"היום השביעי הקדוש"** – בשתי המסורות; אבל אצל הסיודוס השביעי הוא **יום בחודש הירחי** (יום הולדת אפולון, 771), ולא שבוע של שבעה ימים, ולא יום שביתה. ובשבעים הקדושה של השביעי היא **ἁγιάζω** (פועל, מעשה של האל), לא **ἱερός** (תכונה של הדבר): השבעים לא תרגמו "יום קדוש" במלת הסיודוס. הבדל מהותי (הסוג ג): אותו מספר ואותה קדושה – בלי שבת. |
+| 778 | ἤματος ἐκ πλείου, ὅτε ἴδρις σωρὸν ἀμᾶται· | ביום המלא, כשהיודעת קוצרת לה כרי; | `לֵךְ-אֶל-נְמָלָה עָצֵל` (משלי ו:ו); `אָגְרָה בַקָּצִיר מַאֲכָלָהּ` (משלי ו:ח) | equivalent | ובשבעים: `Ἴθι πρὸς τὸν μύρμηκα, ὦ ὀκνηρέ` (השבעים, משלי ו:ו); ו. **הנמלה "היודעת"** – הנמלה החכמה של משלי ("רְאֵה דְרָכֶיהָ וַחֲכָם"). אצל הסיודוס – שם־חידה: "היודעת". מוטיב משותף, לא מגע. |
+| 779 | τῇ δʼ ἱστὸν στήσαιτο γυνὴ προβάλοιτό τε ἔργον. | בו תקים האשה את הנול ותערוך את המלאכה. | `וְכַפֶּיהָ תָּמְכוּ פָלֶךְ` (משלי לא:יט) | equivalent | `יָדֶיהָ שִׁלְּחָה בַכִּישׁוֹר` –  – ובשבעים: `τὰς δὲ χεῖρας αὐτῆς ἐρείδει εἰς ἄτρακτον` (השבעים, משלי כט:יט) – בסדר השבעים "אשת חיל" באה אחרי משלי כט, ולכן המספור שונה. אשת החיל הטווה. מוטיב משותף. |
+| 786 | ἄρμενος, ἀλλʼ ἐρίφους τάμνειν καὶ πώεα μήλων | הולם, אבל לכרות גדיים ועדרי צאן, | `וּמָעוּךְ וְכָתוּת וְנָתוּק וְכָרוּת לֹא תַקְרִיבוּ לַיהוָה` (ויקרא כב:כד) | equivalent | ובשבעים: `καὶ ἐκτομίαν` (השבעים, ויקרא כב:כד) – **ἐκτομίας**, מאותו שורש של τέμνω: `כָּרוּת` = המסורס. אותו פועל לסירוס הבהמה; בתורה – פסול לקרבן, ולפי חז"ל אסור לסרס. השוואה, וזהות לשונית. |
+| 793 | γείνασθαι· μάλα γάρ τε νόον πεπυκασμένος ἐστίν. | הוֹלֵד; כי מאוד מרופד הוא בשכלו. | `עֵת לָלֶדֶת וְעֵת לָמוּת` (קהלת ג:ב) | equivalent | לכל לידה עת. אצל הסיודוס – יום הלידה קובע את אופי הנולד; בקהלת – העת נתונה בידי האל. מוטיב משותף, לא מגע. |
+| 801 | οἰωνοὺς κρίνας, οἳ ἐπʼ ἔργματι τούτῳ ἄριστοι. | בהבחינך בעופות, הטובים מכול לַפּוֹעַל הזה. | `לֹא תְנַחֲשׁוּ וְלֹא תְעוֹנֵנוּ` (ויקרא יט:כו) | divergence | ובשבעים: `καὶ οὐκ οἰωνιεῖσθε οὐδὲ ὀρνιθοσκοπήσεσθε` (השבעים, ויקרא יט:כו): **οἰωνίζομαι ו־ὀρνιθοσκοπέω** – בדיוק המלים של הסיודוס (οἰωνός, ὄρνις, 828). מה שהסיודוס מצווה – התורה, בתרגום היווני, אוסרת. הבדל מהותי (הסוג ג). |
+| 804 | Ὅρκον γεινόμενον, τὸν Ἔρις τέκε πῆμʼ ἐπιόρκοις. | בשבועה הנולד, אשר מדון ילדה – פגע לנשבעים לשקר. | — | equivalent | `ואת שבועה, אשר יותר מכול את בני האדם שעל פני האדמה` (תולדות האלים 231) – ובשורה הבאה: `מזיק, כאשר מישהו במזיד נשבע לשקר.` (תולדות האלים 232) – מדון ילדה את שבועה: אותו מיתוס, ואותה תכלית (העונש לנשבע לשקר). **זיקה פנימית בקורפוס**. |
+| 812 | ἐσθλὴ μὲν γάρ θʼ ἥ γε φυτευέμεν ἠδὲ γενέσθαι | כי טוב הוא לנטוע ולהיוולד, | `עֵת לָטַעַת וְעֵת לַעֲקוֹר נָטוּעַ` (קהלת ג:ב) | equivalent | נטיעה ולידה באותו פסוק בקהלת (וגם "עת ללדת" שם), ובאותה שורה אצל הסיודוס. מוטיב משותף, לא מגע. |
+| 825 | ἄλλοτε μητρυιὴ πέλει ἡμέρη, ἄλλοτε μήτηρ. | פעם הוא היום אֵם חורגת, ופעם – אֵם. | `יִקְּבֻהוּ אֹרְרֵי-יוֹם` (איוב ג:ח); `הִפִּיל פּוּר הוּא הַגּוֹרָל לִפְנֵי הָמָן מִיּוֹם לְיוֹם וּמֵחֹדֶשׁ לְחֹדֶשׁ` (אסתר ג:ז) | equivalent | "אוררי היום", היודעים לקלל ימים; ואיוב מקלל את יום הולדתו. ימים מבורכים וארורים – גם בתנ"ך; ו – בחירת היום המוצלח בגורל, בחצר פרס. **ההמרולוגיות הבבליות** – לוחות של ימים טובים ורעים לכל חודש (מה לעשות ומה לא לעשות בכל יום: לא לאכול, לא לבנות, לא לשאת אשה), רווחים במסופוטמיה מן האלף השני; בתיקייה זו טרם תורגמו – מתוארים במלים. מוטיב משותף, לא מקור. |
+| 826 | τάων εὐδαίμων τε καὶ ὄλβιος, ὃς τάδε πάντα | בהם – בַּר־מַזָּל ושבע־טובה מי שאת כל אֵלֶּה | `תָּמִים תִּהְיֶה עִם יְהוָה אֱלֹהֶיךָ` (דברים יח:יג) | equivalent | בא מיד אחרי איסור המעוננים והמנחשים (`מְעוֹנֵן וּמְנַחֵשׁ`, דברים יח:י); ובשבעים: `τέλειος ἔσῃ ἐναντίον κυρίου τοῦ θεοῦ σου` (השבעים, דברים יח:יג). השלמות כלפי האל – בתורה בלי ניחוש הימים והעופות, אצל הסיודוס דרכם. הבדל מהותי (הסוג ג). |
+| 827 | εἰδὼς ἐργάζηται ἀναίτιος ἀθανάτοισιν, | יודע, עובד, נקי (מאשמה) כלפי בני־האלמוות, | `וְהָיָה הָאִישׁ הַהוּא תָּם וְיָשָׁר וִירֵא אֱלֹהִים וְסָר מֵרָע` (איוב א:א) | equivalent | ובשבעים: `ἀληθινός, ἄμεμπτος, δίκαιος, θεοσεβής, ἀπεχόμενος ἀπὸ παντὸς πονηροῦ πράγματος` (השבעים, איוב א:א). **דיוקן האיש המאושר** – בלי פגם כלפי האל, ונמנע מרע: אותו משפט סיום של חיים טובים (ראו 828: "נמנע מעברות"). מוטיב משותף, לא מגע. |
+| 828 | ὄρνιθας κρίνων καὶ ὑπερβασίας ἀλεείνων. | מבחין בעופות, וחומק מֵעֲבֵרוֹת. | `מְעוֹנֵן וּמְנַחֵשׁ וּמְכַשֵּׁף` (דברים יח:י) | divergence | ובשבעים: `κληδονιζόμενος καὶ οἰωνιζόμενος` (השבעים, דברים יח:י): **οἰωνίζομαι** – ניחוש בעופות, שהתורה מונה בין התועבות; אצל הסיודוס – סימן לחכמת המאושר. ראו 801. |
