@@ -197,5 +197,202 @@ without the article). The title `תּוֹלְדוֹת הָאֵלִים` echoes G
 - The brief's "λήθη at 55, 102" was not the Greek (λησμοσύνη, ἐπιλήθεται): read the line data before believing any
   brief.
 
+## TH 116–336
+
+### Scope
+Part 2 (translator 1, resumed; 2026-10-24): the cosmogony (116–125), Earth's children and the Titans (126–138), the
+Cyclopes and the Hundred-Handers (139–153), Sky's crime and Kronos' sickle (154–187), the birth of Aphrodite and the
+name of the Titans (188–210), the children of Night and of Strife (211–232), Nereus and the Nereids (233–264),
+Thaumas, Phorkys and Keto's monsters (265–336). 221 entries in eight sections, in the base's order (212, 214, 213);
+`{חשודה}` at 118, 196, 323, 324. The placeholder now reads `<!-- טרם תורגם: 337–1022 -->`.
+
+### Sources consulted
+The line data (`data TH 116 336`; the AGDT parse checked: 116 γένετʼ is γίγνομαι, not γενέτης; 114/290 lemma slips
+(Ἐπυθεία for Ἐρύθεια); 266 ἥ unparsed; 192 πρῶτον lemmatized πρότερος); LSJ / DGE for ἄπλαστος (151) through
+`hesiod_tools.py lsj`; the LXX (printed): Gen 1:2, 1:3, 1:5, 1:10, 1:11, 1:21, 2:7, 2:9, 3:1, 3:24, 4:7, 6:4, 6:9, 9:13,
+25:27; Exod 29:1; Isa 2:12, 27:1, 40:22; the Hebrew verses printed before quoting; the fifth-day dossier's apparatus
+(237–239, 270, 295–300, 333–336) as material; Enūma eliš I 37–40, 69 and VI 39, 46 and Gudea A.xxv.28 from this
+folder's corpora (grep `--all`). Kumarbi (the Hittite–Hurrian "Song of Going Forth / Kingship in Heaven") is named
+from general knowledge, not quoted (not in the folder).
+
+### Decisions
+- **The first lines** (116–125): Χάος `פַּעַר`, γίγνομαι `נִהְיָה` (self-test line kept), Tartaros `טַרְטָרוֹס`
+  with ἠερόεις `עַרְפִלִּי`, Eros `אֶרוֹס`, λυσιμελής `מְרַפֵּה־הָאֵבָרִים`, δάμνημι `הִכְנִיעַ`, Erebos `אֶרֶבוֹס`,
+  Αἰθήρ `אֶתֶר`, Ἡμέρη `יוֹם`; κύω / ὑποκύομαι `הָרְתָה` ("משהרתה", 125, 308).
+- **Sky and Earth** (126–138): ἶσον ἑαυτῇ `השווה לה עצמה`; ἕδος ἀσφαλὲς αἰεί `מושב יציב תמיד` (117 = 128); Οὔρεα
+  (name) `הָרִים`; ἔναυλος `נְאוֹת` (`מִשְׁכָּן` gated); ναίω `גָּר` (130, 274, 285, 303, 329: `דָּר` was blocked as
+  `לדור` by the `דור` gate); πέλαγος `מֶרְחָב`; ἐφίμερος `נִכְסָף`; εὐνάω `שָׁכַב`; βαθυδίνης `עֲמֹק־הַמְּעַרְבֹּלוֹת`;
+  ἐρατεινός `עָרֵב` (as ἐρατός; vocalized); θαλερός `פּוֹרֶה` (as in F15); τοκεύς `מוֹלִיד`; ἐχθαίρω `שָׂנֵא`.
+- **οἶδμα `נַחְשׁוֹל`** (109, 131 changed from `גל`), so that κῦμα is `גַּל` (252).
+- **The monsters' bodies** (139–153): ὑπέρβιος `פְּרָאִי`; ὀβριμόθυμος `עַז־הַלֵּב`; ὄβριμος `כַּבִּיר`; ὑπερήφανος
+  `גֵּאֶה`; ἐναλίγκιος `דּוֹמֶה` (as ὅμοιος, ἔοικα: synonyms, never in one line); μηχανή `תּוּשִׁיָּה` (and ἀμήχανος
+  `שֶׁאֵין כְּנֶגְדּוֹ תּוּשִׁיָּה`, 295, 310); ἰσχύς `חֹזֶק`; ἐπώνυμος `שֵׁם הוֹלֵם`; ἀίσσω `זִנֵּק`; ἄπλαστος
+  `בִּלְתִּי־יְצוּרוֹת` (from πλάσσω: the `יצר` gate licenses it; LXX Gen 25:27 ἄπλαστος = `תָּם`); φύω `צָמַח`;
+  στιβαρός `אֵיתָן`; μέλος `אֵבֶר`; ἄπλητος `עָצוּם`; εἶδος `מַרְאֶה`.
+- **The castration** (154–210): κευθμών / κεῦθος `מַחֲבוֹא`; στεναχίζομαι `נֶאֱנַק`; πέλωρος `מִפְלַצְתִּי`; τέχνη
+  `אֻמָּנוּת`; φράζομαι (mid.) `הָגָה`; ἀδάμας `שָׁמִיר`; γένος ἀδάμαντος `גזע השמיר` (γένος kept as `גֶּזַע` – the
+  earth "breeds" the metal); δρέπανον `מַגָּל`, ἅρπη `חֶרְמֵשׁ`; ἀτάσθαλος `פָּרוּעַ`, ἀτασθαλία `פְּרִיעוּת`; τίνω /
+  τίσις `נָקַם` / `נְקָמָה` (the Titans' pun, 209–210, in the notes); λώβη `עֶלְבּוֹן`; μήδομαι `זָמַם`; ἀεικής
+  `מַחְפִּיר`; μῆδος "genitals" `מְבוּשִׁים` (Deut 25:11; the homonym "counsels" stays `תַּחְבּוּלוֹת`); ἀμάω `קָצַר`
+  (Gen 8:22 gate, licensed); ῥίπτω `הִשְׁלִיךְ`, καταβάλλω `הֵטִיל`; ἀφρός `קֶצֶף`; πολύκλυστος `רַב־הַמִּשְׁבָּרִים`;
+  περίρρυτος `מֻקַּף־מַיִם`; ποίη `עֵשֶׂב` (noted against Gen 1:11); ἀφρογενής `יְלִידַת־הַקֶּצֶף`; εὐστέφανος
+  `יְפַת־הָעֲטָרָה`; φιλομμηδής `אוֹהֶבֶת־הַמְּבוּשִׁים`, φιλομμειδής `אוֹהֶבֶת־הַצְּחוֹק` (256); ὁμαρτέω `הִתְלַוָּה`
+  (ὀπαδέω is `לִוָּה`); λαγχάνω `עָלָה בְּגוֹרָלוֹ`; ἐξαπάτη `תַּרְמִית`; τέρψις `עֹנֶג`; μειλιχία `פִּיּוּס`; νεικέω
+  `רָב`; ῥέζω (= ἔρδω) `עָשָׂה` by sense (the פירוק names ῥέζω).
+- **Night's and Strife's children, translated as names** (renderings §3.2; new ones marked *): *Μόρος `גּוֹרָל`,
+  Κήρ `קֵר` (sg. of `הַקֵּרוֹת`; a `[היתר שם]` at 211), Θάνατος `מָוֶת`, Ὕπνος `שֵׁנָה` (both vocalized: the tool's
+  strings are `מות` / `שנה`, and `שנה` is also "year"), Ὄνειροι `חֲלוֹמוֹת`, *Μῶμος `גְּנַאי`, *Ὀιζύς `מְצוּקָה`,
+  Νέμεσις `חֵמָה`, Ἀπάτη `מִרְמָה`, Φιλότης `אַהֲבָה`, Γῆρας `זִקְנָה`, Ἔρις `מָדוֹן`, Πόνος `עָמָל`, Λήθη `שִׁכְחָה`,
+  Λιμός `רָעָב`, Ἄλγεα `מַכְאוֹבִים`, *Ὑσμῖναι `קְרָבוֹת`, *Μάχαι `מִלְחָמוֹת`, *Φόνοι `רְצִיחוֹת`, *Ἀνδροκτασίαι
+  `הֲרִיגוֹת`, *Νείκεα `רִיבִים`, *Ψευδεῖς Λόγοι `אֲמָרִים כּוֹזְבִים`, *Ἀμφιλλογίαι `מַחְלוֹקוֹת`, *Δυσνομίη
+  `סֵדֶר־רַע` (the opposite of Εὐνομίη `סֵדֶר־טוֹב`), *Ἄτη `אֵיד` (vocalized; Deut 32:35), Ὅρκος `שְׁבוּעָה`.
+  Epithets: στυγερός `מְתֹעָב`; ἐρεβεννός `אָפֵל`; ἀλγινόεις `מַכְאִיב`; ὀλοός `מַשְׁחִית`; οὐλόμενος `מְבַלֶּה`
+  (the root ארר is gated); καρτερόθυμος `חֲזַק־הַלֵּב`; δακρυόεις `רַב־דְּמָעוֹת`; νηλεόποινος `נוֹקֵם בְּלִי רַחֲמִים`;
+  κοιμάω `נָם עִם`; παράβασις `עֲבֵרָה`; ἐφέπω `רָדַף`; χόλος `זַעַם`; ὄπις `גְּמוּל`; λήγω `פָּסַק`; ἁμαρτάνω
+  `חָטָא` (the LXX's word, Gen 4:7); πημαίνω `הִזִּיק`; ἑκών `בְּמֵזִיד`; ἐπίορκον ὀμνύναι `נִשְׁבַּע לַשֶּׁקֶר`
+  (Lev 19:12, Zech 5:4).
+- **Nereus and the Nereids**: ἀψευδής `שֶׁאֵינוֹ מְשַׁקֵּר`; νημερτής `אֵינוֹ טוֹעֶה`; ἤπιος `נוֹחַ`; δῆνος
+  `מַחֲשָׁבָה`; δίκαιος `צֶדֶק` (REQUIRED; "מחשבות צדק"); πρέσβυς `בְּכוֹר`; γέρων `זָקֵן`; μεγήρατος `אָהוּב מְאֹד`;
+  ἠΰκομος `יְפַת־הַשֵּׂעָר`; τελήεις `שָׁלֵם`; ἐρόεις `מְעוֹרֵר־הַחֵשֶׁק`; ῥοδόπηχυς `וְרֻדַּת־הַזְּרוֹעוֹת`; χαρίεις
+  `רַב־חֵן`; εὐειδής `יְפַת־מַרְאֶה`; ἠεροειδής `עַרְפִלִּי־הַמַּרְאֶה`; ζαής `סוֹעֵר`; πραΰνω `הִרְגִּיעַ`; εὔσφυρος
+  `יְפַת־הַקַּרְסֻלַּיִם`; φυή `קוֹמָה`; **ἄμωμος `תָּמִים`** (LXX Exod 29:1 ἀμώμους = `תְּמִימִם`), ἀμύμων `מֻשְׁלָם`;
+  δέμας `גּוּף`; δῖος `נֶהְדָּר` (a "divine" adjective without the gated `אֱלֹהִי`). The fifty names transcribed by
+  §2.3 (vocalized at their first occurrence), each meaning in the notes.
+- **Keto's brood**: ἄγομαι (a wife) `לָקַח לוֹ`; ὠκύς `מָהִיר`; οἰωνός `עוֹף`; μεταχρόνιος `בְּרוּם`; ἐκ γενετῆς
+  `מִלֵּדָה`; χαμαί `עַל הַקַּרְקַע`; εὔπεπλος `יְפַת־הַגְּלִימָה`; κροκόπεπλος `עֲטוּיַת־הַכַּרְכֹּם`; λιγύφωνος
+  `צְלוּלַת־הַקּוֹל`; ἐσχατιή `קָצֶה`; λυγρός `מַר` (λυγρά `מְרוֹרִים`); ἀγήραος `שֶׁאֵינוֹ מַזְקִין`; παραλέγομαι
+  `שָׁכַב לְצַד`; κυανοχαίτης `כְּחוֹל־הָרַעְמָה`; λειμών `כַּר` (`אָחוּ` is the Egyptian loanword's); πηγή `מָקוֹר`
+  (κρήνη `מַעְיָן`); ἄορ `חֶרֶב`; φίλος in its Homeric possessive sense `שֶׁלּוֹ` (283; elsewhere `אָהוּב`: a sense
+  split); μητιόεις `מְלֵא־הַתְּבוּנָה` (μητίετα `רַב־הַתְּבוּנָה`); τρικέφαλος `תְּלַת־הָרָאשִׁים`; ἐξεναρίζω
+  `הִפְשִׁיט`, κτείνω `הָרַג`, ἐναίρω `הֵמִית`; εὐρυμέτωπος `רְחַב־הַמֵּצַח`; πόρος `מַעֲבָר`; σταθμός `דִּיר`;
+  θεῖος (fem.) `אֱלוֹהִית` (the self-test's 297; see Problems); κρατερόφρων `קְשֵׁה־הַלֵּב`; ἑλικῶπις
+  `מְעֻגֶּלֶת־הָעֵינַיִם`; αἰόλος `מְנֻמָּר`; ὠμηστής `אוֹכֵל־נָא`; γλαφυρός `חָלוּל`, κοῖλος `נָבוּב`; ῥύομαι
+  `נֶעֱצַר` (304, uncertain; the root שמר stays φυλάσσω's); ὑβριστής `זֵד`; ἄνομος `פּוֹרֵעַ־חֹק`; κύων `כֶּלֶב`;
+  χαλκεόφωνος `נְחוּשׁ־הַקּוֹל`; ἀναιδής `חֲסַר־בּוּשָׁה`; λευκώλενος `צְחוֹרַת־הַזְּרוֹעוֹת`; κοτέω `כָּעַס`; νηλής
+  `חֲסַר־רַחֲמִים`; χαλκός `נְחֹשֶׁת`; ἀρηΐφιλος `אֲהוּב־אָרֵס`; ἀγελείη `נוֹהֶגֶת־הַשָּׁלָל`; ἀμαιμάκετος `בִּלְתִּי
+  נִכְבָּשׁ`; ποδώκης `קַל־רַגְלַיִם`; χαροπός `עַז־הַמַּבָּט`; χίμαιρα (noun) `עֵז`, κρατερός `עַז` (vocalized at 322–323);
+  μένος `זַעַף`; ὄλεθρος `הֶרֶס`; ὑποδάμνημι `נִכְנַע`; κυδρός `מְפֹאָר`; καταναίω `הוֹשִׁיב לָגוּר`; οἰκέω `חָנָה`
+  (`בשבתו` tripped the `שבת` gate); ἐλεφαίρομαι `הִתְעַלֵּל`; κοιρανέω `שָׁלַט`; ἴς `אוֹן`; δαμάζω `הִכְנִיעַ`; ἐρεμνός
+  `כֵּהֶה`; πεῖραρ `גְּבוּל`; παγχρύσεος `כֻּלּוֹ־זָהָב`; φυλάσσω `שָׁמַר` (335, REQUIRED).
+- **The dossier's lines re-rendered** to the corpus Hebrew (for the coordinator's alignment): 237 ἀγήνωρ `האמיץ` (the
+  dossier's `עז־הרוח` would trip the `רוח` gate); 238 the self-test line; 239 `בלבבה` (φρένες), `שלב של שמיר`; 270
+  `יפות־הלחיים`; 295 `שאין כנגדה תושייה` (ἀμήχανος tied to μηχανή); 296 `לבני האדם בני־התמותה ולא לאלים
+  בני־האלמוות`; 297 the self-test line without its `?`; 298 `מעוגלת־העיניים`; 299 the self-test line; 300 `במחבואי
+  הארץ המקודשת` (ζάθεος); 333 F14 `בהתייחדה באהבה`; 334 `הולידה`, `הארץ הכהה` (ἐρεμνός); 335 `שומר`; 336 `זה הוא
+  הגזע`.
+
+### Open decisions for the user
+- **The Meliai** (187): renderings §3 has `נִימְפוֹת הָאֵלָה`, but `אֵלָה` is the terebinth (Pistacia), and vocalized it
+  also reads "the goddess"; μελία is the ash (Fraxinus), Modern Hebrew `מֵילָה`. I wrote `נִימְפוֹת הַמֵּילָה` (the
+  name check does not fire: the treebank's lemma is μελία, the table's μελιαι). Proposed for the table.
+- **κλέος `שֵׁם` and ὄνομα** (144, 148, 171, 282): ὄνομα "name" is unavoidably `שֵׁם`, so the two Greek words share it
+  (`lexmap` shows the collision). Either accept the split (`lemma` lists every κλέος) or revise κλέος
+  to `תְּהִלָּה` before the Works and Days.
+
+### Progress log
+- Drafted 116–336 in eight sections, each saved, filled and verified at once; unvocalized and plene (names at their
+  first occurrence; `אֵל`/`אֵלִים`/`אֵלָה`/`אֵלוֹת` and `אֶל` vocalized wherever θεός or a θε- word stands in the line or
+  its neighbour's edge; `שֶׁאֵבֶל`, `מָוֶת`, `שֵׁנָה`, `אֵיד`, `עֵז`/`עַז`, `הָעֲרֵבָה` vocalized as ambiguous).
+- Gate hits fixed without bending the sense: 157 `משלחם` (read as לחם) → `משלח אותם`; 303, 329 `לדור` (the `דור`
+  gate) → ναίω `גָּר` everywhere; 330 `בשבתו` (the `שבת` gate) → οἰκέω `חָנָה`; 129, 192, 193, 202 the preposition
+  `אל` vocalized `אֶל`.
+- Review pass over the 221 `>` lines (fidelity, consistency): the repeated-line first copies 118 (= 794), 150 (= 671),
+  152 (= 673 = WD 149), 154 (= 421) drafted with their later contexts in mind; near-repeats 166 / 172, 117 / 128, 109 /
+  131, 263 / 264; `lexmap` collisions resolved (ζαής `סוער`, not `עז`) or recorded (synonym pairs: εἶπον / φημί;
+  καλέω / κικλήσκω; μακρός / δολιχός `ארוך`; ἐναλίγκιος / ὅμοιος / ἔοικα `דומה`; κλέος / ὄνομα `שם`).
+- A note at 149 corrected in review: the LXX of Isa 2:12 renders the pair `גֵּאֶה וָרָם` with ὑβριστήν καὶ
+  ὑπερήφανον (not ὑπερήφανος alone = `גאה`).
+- `verify TH`: 0 problems (706 later lines noted). `check_bible_quotes.py`: 0 problems (one quotation, Gen 10:2, was
+  first written from memory with a wrong `וּ`, caught by the checker and corrected – the ★ rule held). `selftest`: 0
+  failures.
+
+### The text on its own terms
+- **The beginning without a maker** (116–125): the Gap "came to be", then Earth, Tartaros, Eros; from the Gap the
+  darkness, from the darkness the light – a world that grows by birth, not by command.
+- **Earth as mother and planner** (126–187): she bears her own cover, the sky, then plots against him with a sickle she
+  "breeds" from adamant; the mother conceives the plan, the youngest son executes it – the pattern repeats with Rhea and
+  Zeus (468–491).
+- **Etymologies in the verse** (144 Cyclopes, 195–200 Aphrodite's four names, 207–210 the Titans, 271 the Graiai, 282
+  Pegasus): the poet explains names as the Bible does (`כִּי מִן הַמַּיִם מְשִׁיתִהוּ`); the Hebrew keeps the names and
+  the notes show the puns.
+- **The obscene pun** (200): φιλομμηδής "genital-loving" for Homer's φιλομμειδής "laughter-loving" (256).
+- **Night's children as a moral map** (211–232): death, sleep, blame, misery, retribution, deceit, love, old age,
+  strife – and from strife every social evil, ending with the oath that destroys the perjurer: the world of the Works
+  and Days in genealogical form.
+- **Nereus the truthful** (233–236) against Strife's "lying words": the sea's old man as the just elder; his fifty
+  daughters' names map the sea and a good rule (257: "gatherer", "good speaker", "people's ruler").
+- **Monsters as one family** (270–336), all from Keto and Phorkys, sister and brother; most are killed by Heracles,
+  son of Zeus: the new order clears the old world.
+- **Edges of the world** (215, 274–275, 290–294, 334–335): the West beyond Ocean, Night's home, the Hesperides'
+  garden, Erytheia – a mythical geography of margins.
+
+### Key parallels
+- **Th. 116 ↔ Gen 1:2–3**: χάος is not the LXX's word for `תֹּהוּ` (ἀόρατος καὶ ἀκατασκεύαστος); γίγνομαι is its
+  word for `וַיְהִי`.
+- **Th. 124 ↔ Gen 1:5**: Night bears Day; the LXX names night and day with Hesiod's νύξ and ἡμέρα – darkness before
+  light in both, by birth here and by naming there.
+- **Th. 148 ↔ Gen 6:4**: the Hundred-Handers are οὐκ ὀνομαστοί, the LXX's ὀνομαστοί is `אַנְשֵׁי הַשֵּׁם` – the same
+  word, negated; **Th. 185 ↔ Gen 6:4**: Γίγαντες = the LXX's `נְפִלִים`.
+- **Th. 154–210 ↔ the Kumarbi cycle, Enūma eliš I**: the succession myth (a father who suppresses his children, a son
+  who mutilates or kills him) – an inherited Near Eastern tradition, with no Israelite branch.
+- **Th. 219 ↔ Job 2:10** (good and evil given by the divine at birth) and Gen 2:9 (through the Hebrew only: the LXX's
+  καλοῦ καὶ πονηροῦ).
+- **Th. 222 ↔ Gen 4:7**: ἁμαρτάνω, the LXX's verb for `חָטָא`.
+- **Th. 232 ↔ Lev 19:12, Zech 5:4**: the false oath that destroys the swearer.
+- **Th. 238 ↔ Gen 1:21** (Keto / κήτη), **Th. 299, 334 ↔ Gen 3:1** (ὄφις), **Th. 322 ↔ Isa 27:1** (δράκων with ὄφις,
+  as in the LXX of Leviathan), **Th. 313 ↔ Ps 74:14** (the many-headed serpent; Gudea's seven-headed serpent).
+- **Th. 335 ↔ Gen 3:24**: φυλάσσω, the LXX's verb for the cherubim who guard the tree – here a serpent guards the golden
+  apples.
+- **Th. 259 ↔ Exod 29:1**: ἄμωμος = `תָּמִים`; **Th. 236 ↔ Gen 6:9**: δίκαιος = `צַדִּיק`.
+
+### Lines shared with other texts
+- First copies fixed here: 118 (= 794), 150 (= 671), 152 (= 673 = WD 149), 154 (= 421); near-repeats: 147 ≈ 154; 151 ≈
+  672; 166 ≈ 172; 218 ≈ 905; 242 ≈ 959; 204 ≈ 407; 72 ≈ 504 (from part 1). Formulas used: F7 (147, 154), F8 (127), F12
+  (140 names, 286), F14 (125, 333; also 306), F17 (220), F21 (219), F22 (137, 168).
+
+### Proposals for the shared renderings
+- **F12** (`../renderings.md` §8): its Hebrew cell reads `(רעם וברק|ברונטס.*סטרופס)` followed by the text "` (the
+  names at Th. 140)`", which becomes part of the regex; and `nopunct()` turns the `.` of `.*` into a space. Both 140 and
+  286 carry a `[סטייה מן הנוסחה: …]` marker explaining that the line has the formula. Suggest `(רעם וברק|ברונטס)` (the
+  names line: ברונטס is enough) and the note moved to the Lines column.
+- **Names (new, §2.3)**: Περμησσός … (part 1); here: Ἐλευθήρ (part 1); Κοῖος `קוֹיוֹס`, Κρῖος `קְרִיּוֹס`, Ὑπερίων
+  `הִיפֶּרִיּוֹן`, Θεία `תֵּאָה`, Φοίβη `פוֹיבָּה`, Τηθύς `טֵתִיס` (table forms, confirmed); Πλωτώ `פְּלוֹטוֹ`, Εὐκράντη
+  `אֶוּקְרַנְטָה`, Σαώ `סָאוֹ`, Εὐδώρη `אֶוּדוֹרָה`, Γαλήνη `גָּלֵנָה`, Γλαύκη `גְּלַאוּקָה`, Κυμοθόη `קִימוֹתוֹאָה`, Σπειώ
+  `סְפֵּיאוֹ`, Θόη `תוֹאָה`, Ἁλίη `הַלִיָּה`, Πασιθέη `פָּסִיתֵאָה`, Ἐρατώ `אֶרָטוֹ`, Εὐνίκη `אֶוּנִיקָה`, Μελίτη
+  `מֶלִיטָה`, Εὐλιμένη `אֶוּלִימֵנָה`, Ἀγαυή `אַגַאוּאָה`, Δωτώ `דּוֹטוֹ`, Πρωτώ `פְּרוֹטוֹ`, Φέρουσα `פֶרוּסָה`,
+  Δυναμένη `דִּינָמֵנָה`, Νησαίη `נֵסַאיָה`, Ἀκταίη `אַקְטַאיָה`, Πρωτομέδεια `פְּרוֹטוֹמֶדֵיאָה`, Πανόπεια
+  `פָּנוֹפֵּיאָה`, Γαλάτεια `גָּלַטֵיאָה`, Ἱπποθόη `הִיפּוֹתוֹאָה`, Ἱππονόη `הִיפּוֹנוֹאָה`, Κυμοδόκη `קִימוֹדוֹקָה`,
+  Κυματολήγη `קִימָטוֹלֵגָה`, Κυμώ `קִימוֹ`, Ἠιόνη `אֵיּוֹנָה`, Ἁλιμήδη `הַלִימֵדָה`, Γλαυκονόμη `גְּלַאוּקוֹנוֹמָה`,
+  Ποντοπόρεια `פּוֹנְטוֹפּוֹרֵיאָה`, Ληαγόρη `לֵאַגוֹרָה`, Εὐαγόρη `אֶוּאַגוֹרָה`, Λαομέδεια `לָאוֹמֶדֵיאָה`, Πουλυνόη
+  `פּוּלִינוֹאָה`, Αὐτονόη `אַאוּטוֹנוֹאָה`, Λυσιάνασσα `לִיסִיָאנָסָה`, Εὐάρνη `אֶוּאַרְנָה`, Ψαμάθη `פְּסָמָתָה`,
+  Μενίππη `מֶנִיפָּה`, Νησώ `נֵסוֹ`, Εὐπόμπη `אֶוּפּוֹמְפָּה`, Θεμιστώ `תֶּמִיסְטוֹ`, Προνόη `פְּרוֹנוֹאָה`, Νημερτής
+  `נֵמֶרְטֵס`; Ἀελλώ `אַאֶלוֹ`, Ὠκυπέτης `אוֹקִיפֶּטֵס`, Πεμφρηδώ `פֶּמְפְרֵדוֹ`, Ἐνυώ `אֶנִיוֹ`, Σθεννώ `סְתֶנוֹ`,
+  Εὐρυάλη `אֶוּרִיאַלָה`, Περσεύς `פֶּרְסֵאוּס`, Ἐρύθεια `אֶרִיתֵיאָה`, Τίρυνς `טִירִינְס`, Εὐρυτίων `אֶוּרִיטִיּוֹן`,
+  Ἀμφιτρυωνιάδης `בֶּן־אַמְפִיטְרִיּוֹן`, Ἰόλαος `יוֹלָאוֹס`, Βελλεροφόντης `בֶּלֶרוֹפוֹנְטֵס`, Νεμέα `נֶמֵאָה`
+  (Νέμειος `נְמֵאִי`), Λερναῖος `לֶרְנָאִי`, Τρητός `טְרֵטוֹס`, Ἀπέσας `אַפֶּסָס`.
+- **Translated names (§3.2), new**: Μόρος `גּוֹרָל`, Μῶμος `גְּנַאי`, Ὀιζύς `מְצוּקָה`, Ὑσμῖναι `קְרָבוֹת`, Μάχαι
+  `מִלְחָמוֹת`, Φόνοι `רְצִיחוֹת`, Ἀνδροκτασίαι `הֲרִיגוֹת`, Νείκεα `רִיבִים`, Ψευδεῖς Λόγοι `אֲמָרִים כּוֹזְבִים`,
+  Ἀμφιλλογίαι `מַחְלוֹקוֹת`, Δυσνομίη `סֵדֶר־רַע`, Ἄτη `אֵיד` (★ vocalized); Κήρ sg. `קֵר` (add to the table as the
+  singular form, or let the tool accept it); Ὄρος `הָרִים` used at 129.
+- **The Meliai**: `נִימְפוֹת הַמֵּילָה` for `נִימְפוֹת הָאֵלָה` (see Open decisions).
+- **Required rows**: ἄμωμος `תָּמִים` (LXX Exod 29:1) and ἁμαρτάνω `חָטָא` (LXX Gen 4:7) are LXX identities worth a
+  REQUIRED row; δίκαιος already has one.
+- **Every recurring word above** (Decisions) is proposed as binding; the most likely to recur: πέλωρος / πέλωρον,
+  ἀμήχανος `שֶׁאֵין כְּנֶגְדּוֹ תּוּשִׁיָּה`, μηχανή `תּוּשִׁיָּה`, ἀδάμας `שָׁמִיר`, ἅρπη `חֶרְמֵשׁ`, δρέπανον `מַגָּל`,
+  κευθμών / κεῦθος `מַחֲבוֹא`, ναίω `גָּר`, ὁπλότατος `הַצָּעִיר`, τοκεύς `מוֹלִיד`, ὑπερήφανος `גֵּאֶה`, ὑβριστής
+  `זֵד`, λυγρός `מַר`, ἀγήραος `שֶׁאֵינוֹ מַזְקִין`, κλυτός `מְהֻלָּל`, χρώς `עוֹר`, οἶδμα `נַחְשׁוֹל`, κῦμα `גַּל`,
+  πνοιαὶ ἀνέμων `מַשְׁבֵי הָרוּחוֹת`, κρατερόφρων `קְשֵׁה־הַלֵּב`, ἑλικῶπις `מְעֻגֶּלֶת־הָעֵינַיִם`, λευκώλενος
+  `צְחוֹרַת־הַזְּרוֹעוֹת` (Hera's epithet), βίη Ἡρακληείη `כֹּחַ הֵרַקְלֵס`, δῖος `נֶהְדָּר`.
+
+### Lessons for the guidelines
+- A table cell that holds a regex must hold only the regex: F12's explanatory text became part of its pattern, and the
+  tool's `nopunct()` destroys a `.` in any Hebrew regex – formulas must be written without `.`.
+- The gates catch hidden roots in ordinary inflection (`משלחם` = מ + לחם, `לדור`, `בשבתו`): a translator should run
+  `verify` after every section, as the brief says, and choose another word rather than bend the gate.
+- The `אלוהים` gate blocks the masculine adjective `אֱלוֹהִי` but not the feminine `אֱלוֹהִית`: θεῖος needs one decided
+  word for both genders (I suggest `שֶׁל אֵלִים` for the masculine, as θέσπις at 32, and keeping `אֱלוֹהִית` only where the
+  self-test fixed it – or one rule for both).
+- Even a well-known verse must be printed first: Gen 10:2 was mis-remembered (`וּבְנֵי`).
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)
