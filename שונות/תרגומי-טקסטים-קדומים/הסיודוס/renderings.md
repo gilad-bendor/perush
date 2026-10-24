@@ -200,7 +200,7 @@ the Greek word is capitalized in the base.
 | Χίμαιρα | כִימַיְרָה |  | the noun χίμαιρα "she-goat" = `עֵז` (Th. 321 plays on both) |
 | Φίξ | פִיקְס |  | the Sphinx (Boeotian Φίξ; a note) |
 | Λάδων | לָדוֹן |  | also a river (Th. 344): one Hebrew |
-| Τυφωεύς / Τυφῶν / Τυφάων | טִיפוֹאֶוּס |  | the dossier's form; Τυφῶν (Th. 306, 869) `טִיפוֹן` where the line has that form |
+| Τυφωεύς / Τυφῶν / Τυφάων | טִיפוֹאֶוּס |  | the dossier's form; every TH form (Τυφάονα 306, Τυφωέος 869 …) is `טִיפוֹאֶוּס` (no TH line has Τυφῶν; corrected after review a) |
 | Ἄριμοι / Ἀρίμος | הָאֲרִימִים |  | the dossier's form |
 | Στύξ | סְטִיקְס |  | the river of the oath |
 | Ἑκάτη | הֶקָטָה |  |  |
