@@ -1277,5 +1277,109 @@ the Homeric Hymns to Demeter and Aphrodite (218–238); Apollodorus 1.6.1 – na
   row should record the split `יֶלֶד` (child) / `בֵּן` (a son named with his parent) / `נַעַר` (989) / `בַּת` (952).
 - **§3.1, the Τυφωεύς row:** already corrected after pass (a).
 
+## Review pass (c): Hebrew
+
+**Date:** 2026-10-24. **Reviewer:** Hebrew reviewer (pass c), one sub-session, the whole poem (1–1022 + 929a–t) and the
+intro.
+
+### What was read
+- The generated `translation-TH.rtl.md` from start to end, section by section, as a Hebrew reader (aloud in the head),
+  with the Greek and the פירוק opened for every line in doubt; the intro `translation--intro-TH.rtl.md`.
+- Looked for: syntax broken across enjambed lines, agreement (Sky masculine, the moon feminine, the translated names),
+  missing or doubled `את`, dangling clauses, unvocalized homographs, Modern senses that mislead, register slips,
+  unintended biblical calques; the spelling (plene, unvocalized; partial vocalizations checked).
+- The list of all 2,368 distinct unvocalized words of the translation, read once for defective spellings.
+- After the batch: `build TH`, `verify TH --strict` (0 problems); at the end `check_bible_quotes.py` on the annotated
+  file, the intro and the translation (0 problems).
+
+### Result: 52 lines changed (the `>` line and its פירוק parentheses), one heading, the intro
+The binding words, the formulas (F9 at 762, F34 at 376 kept) and the repeated lines (526 = 950 changed together) are
+untouched; no meaning changed.
+
+**Unvocalized homographs: the one ambiguous word vocalized (28 lines)**
+- **91** `מרצים` → `מְרַצִּים` (Modern "lecturers"); **126** `הרי` → `הֲרֵי` (`הָרֵי` "mountains of": the next lines are
+  the mountains); **129** `נאות־החן` → `נְאוֹת־החן` ("graceful haunts", not `נָאוֹת` "pretty"); **209** `שבמתחם` →
+  `שבְּמָתְחָם` (Modern `מִתְחָם` "compound"); **279** `בכר` → `בְּכַר` (not `בֶּכֶר` "young camel"); **300** `אוכל־נא` →
+  `אוכל־נָא`, **311** `אוכל־הנא` → `אוכל־הַנָּא` (`נא` "please"); **330** `בחנותו` → `בַּחֲנוֹתוֹ` (not "in his shop");
+  **480** `ולאמנו` → `וּלְאָמְנוֹ` (not "to our mother"); **485** `משחיתלה` → `מִשֶּׁחִתְּלָה` (read `משחית לה`: the point of
+  pass b); **523** `והעיר` → `וְהֵעִיר` (not "and the city"); **551** `ורעות` → `וְרָעוֹת` (not `רְעוּת` "friendship");
+  **594** `מקורות` → `מְקֹרוֹת` ("roofed", not "sources"); **597** `ושמות` → `וְשָׂמוֹת` (not "names"); **637**
+  `האנוש`, **800** `אנוש` → `אָנוּשׁ` (not `אֱנוֹשׁ`, the binding word for βροτός); **679**, **693** `המתה` → `הָמְתָה`
+  (`והארץ המתה` read "and the dead earth"); **748** `בקרבן` → `בְּקָרְבָן` (not `קָרְבָּן` "sacrifice"); **764** (×2),
+  **898** κραδίη / ἦτορ `קרב` → `קֶרֶב` (`קרב של ברזל`, `בעל קרב פראי` read "battle"); **839** `ורעם רעם` → `וְרָעַם
+  רעם`; **951** `און` → `אוֹן` (as 332 already had it; not `אָוֶן` "iniquity").
+- **The epithets with `נאות`:** **384**, **507**, **526**, **950** καλλίσφυρος, **409** εὐώνυμος `נאות־` → `נְאוַת־`
+  (the construct of `נָאוָה`; unvocalized it reads the plural `נָאוֹת`). The binding `נְאוַת־הַקַּרְסֻלַּיִם` strips to
+  `נאות`, so the plene `נאוות` is not open; vocalizing passes the gate and reads right.
+
+**Vocalization corrected:** **708** `שְׁלָחֵי` → `שִׁלְחֵי` (the construct plural of the segolate `שֶׁלַח`).
+
+**Spelling (plene):** **100** `תהלות` → `תהילות`; **475** `ייהיה` → `יהיה`; **894** `שייהיו` → `שיהיו`; **433**,
+**628**, **647** νίκη `נצחון` → `ניצחון`, and the heading of 383–403. The name Νίκη (384, its only capitalized
+occurrence and so its first) is written vocalized `נִצָּחוֹן`: the names table's string strips to the defective `נצחון`
+(see the open points).
+
+**Grammar and syntax**
+- **216** `שתפוחים … / הזהובים והיפים` → `זהובים ויפים` (the noun is indefinite).
+- **278** `ועם האחת שכב לצדה` → `ולצד האחת שכב` (παρελέξατο: the preposition was doubled).
+- **524** `והוא את הכבד … היה אוכל, והוא היה גדל` → `וזה היה גדל` (τὸ δέ: the second `והוא` read as the eagle).
+- **568** `והזעימה אותו` → `והזעים` (the subject is 567's `(הדבר)`).
+- **700** `ונראה היה, מול` → `ונראה היה, (לעומד) מולו,` (ἄντα: the preposition dangled at the line end).
+- **720** `כה עמוק … כמה שהשמים רחוקים` → `כמו שהשמים` (`כמה ש־` is colloquial here).
+- **741** `בפנים השערים` → `בתוך השערים` (ἔντοσθε + genitive; `בפנים` takes no complement).
+- **762** `האחד את הארץ ואת גבי הים הרחבים / מתהלך` → `האחד על פני הארץ ועל גבי הים הרחבים` (`התהלך` is not
+  transitive; F9 kept).
+- **830** `וקולות … / משלחות נעימה` → `משלחים` (the Hebrew noun is masculine; φωναί is not a name).
+- **855–856** `ומסביב את כל / הצית את הראשים האלוהיים של המפלצת האיומה` → 856 `ראשיה האלוהיים של המפלצת האיומה הצית`
+  (two `את` for one object; the verb moves to the end, for the grammar only).
+- **883–884** `דחקו בו להיות למלך … / … את זאוס` → `דחקו להיות למלך … / … בזאוס` (two objects for one verb).
+
+**Clarity**
+- **156** `מיד כשנהיה,` → `מיד כשנהיה –` (the anacoluthon of 156–157 marked).
+- **213** κοιμηθεῖσα `בלי לנום עם איש` → `בלי לשכב עם איש` (`נם` is "doze"; κοιμάω's only line).
+- **376** `ואת פלס, הנהדרת באלות` → `ואת פלס, (היא) הנהדרת באלות` (δῖα θεάων is Eurybia's, the subject of 375; it read as
+  Pallas's epithet).
+- **767** πρόσθεν `לפנים` → `מלפנים` (Modern `לְפָנִים` "formerly"; as 323).
+
+**An unintended biblical calque:** **836** `והיה ביום ההוא מעשה` → `וביום ההוא היה נעשה מעשה` (`וְהָיָה בַּיּוֹם
+הַהוּא` is the prophetic formula, Isa 7:18 and often, and read as a future; the Greek is a past unreal condition, ἔπλετο
+κεν, answered by 837–838 `היה מולך … לולא`).
+
+**The intro** (content kept): plene `מילה` (×4, and the sign `*מילה*`); `שזורים רשימות` → `שזורות`; Kronos "castrates"
+Sky (`נעקר` read "uprooted"); "Prometheus at Mekone" (not "the story of Prometheus and Mekone"); "the succession myth"
+explained in words; `את אֶתֶר ואת יום` (the names without the article, as in 124); the two reasons numbered; the
+Greek of Hesiod "an early stage" of the LXX's language; one sentence added: the translated names keep the gender of the
+Greek name (`לילה השחורה`, `מדון המתועבת`), which a Hebrew reader would otherwise take for a slip.
+
+### Recurring patterns
+- The Hebrew reads well; the faults were local. The commonest was the unvocalized homograph (28 lines), above all
+  where a Modern word shadows the literary one (`מרצים`, `מתחם`, `בחנותו`, `לפנים`, `קרב`).
+- Agreement slips came from the Greek gender carried into a Hebrew common noun (830) or from an anaphor whose subject
+  was in a parenthesis (568).
+- Doubled objects or prepositions where the Greek has a pronoun and a noun (278, 855–856, 883–884).
+
+### Left as they are (defensible; noted)
+- **89** `משלימים הם מעשי השבה`, **466** `לא החזיק במצפה כעיוור`, **728** `שורשי הארץ ושל הים העקר`, **147 = 154 = 421**
+  `מן ארץ ושמים`: stiff but literal and grammatical.
+- **503** `זכרו לו חן` (the idiom is `זכרו לו טובה`; χάρις `חן` kept); **580** `לשאת חן בעיני זאוס` (Esth 2:15, but a
+  common Modern idiom); **667** `נקבות וזכרים` (θῆλυς `נְקֵבָה` binding).
+- **794 = 118** `מי … / בני־האלמוות` lacks the partitive `מבין` at 794; it is the copy of a repeated line.
+- **129** `את הרים הארוכים`: the name without the article, by §3.2.
+- Unvocalized `אל` before a name (198, 477, 482, 515) reads as the preposition in context.
+
+### Open points for the coordinator / the user
+- **οὐλόμενος `המבלה`** (225 `זקנה המבלה`, 593 `לעוני המבלה`): the Modern reader hears `מְבַלֶּה` "having a good
+  time"; vocalization does not help. The natural word, "accursed" (`הָאֲרוּרָה`), is closed by the root ארר gate
+  (§7.1). Not changed; a word for the user (e.g. `הַמְּכַלָּה`, "consuming").
+- **Αἰθίοπες `כּוּשִׁים`** (985; names table §3.1): in Modern Hebrew `כושים` is a slur for Black people. Not changed (the
+  table is binding); possible: `מלך כּוּשׁ` (the land, as the 985 note already says) or `אֶתְיוֹפִּים`.
+- **The names gate and plene spelling:** the table's `נִצָּחוֹן` strips to the defective `נצחון`, so the name needs
+  niqqud wherever it occurs, and `lexmap` now shows νίκη as `נצחון` (384) / `ניצחון` (433, 628, 647) – a spelling
+  difference only. A plene table string (as was done for `צוֹלֵעַ־הָרַגְלַיִים`) would remove it.
+- **`אשה` vs `אישה`:** the Academy's plene spelling is `אישה`, but the corpora of this folder write `אשה` (161 lines
+  against 24); kept for consistency (513, 604, 610, 819, 960, 977, the heading of 570–616). A folder-wide decision.
+- **The gender of the translated names** follows the Greek (`לילה השחורה`, `מדון המתועבת`, 231–232 `שבועה … מזיק`, 748–749
+  `לילה ויום … פונות`); now stated in the intro. If the user prefers Hebrew gender, it is a mechanical change.
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)

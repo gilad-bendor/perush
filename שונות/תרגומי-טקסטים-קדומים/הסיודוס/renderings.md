@@ -84,7 +84,7 @@ never a source. Every note says which (guidelines §6.4: no special tag; the not
   Double consonants are written once (except γγ). A group (the Cyclopes, the Nereids) takes the Hebrew plural: `־ִים`
   masculine, `־וֹת` feminine. **Vocalize every name at its first occurrence in the file**, and always the names of §7.3.
 - A biblical people or place takes its biblical name, with the Greek in the note (guidelines §6.4 rule 6): Αἰθίοπες =
-  `כּוּשִׁים`; Κρήτη = `כְּרֵתִים` (LXX Zeph 2:5 Κρητῶν = `כְּרֵתִים`; Crete is probably Caphtor, a note). The Nile is
+  `כּוּשׁ`; Κρήτη = `כְּרֵתִים` (LXX Zeph 2:5 Κρητῶν = `כְּרֵתִים`; Crete is probably Caphtor, a note). The Nile is
   `נִילוּס` (Νεῖλος), never `יְאֹר` (an Egyptian loanword, reserved for jtrw). **Gods and Titans are never assimilated to
   biblical names**: Ἰαπετός is `יָאפֶּטוֹס`, never `יֶפֶת` (the Iapetos–Japheth equation, Gen 10:1–5, is a note).
 
@@ -204,7 +204,7 @@ the Greek word is capitalized in the base.
 | Ἄριμοι / Ἀρίμος | הָאֲרִימִים |  | the dossier's form |
 | Στύξ | סְטִיקְס |  | the river of the oath |
 | Ἑκάτη | הֶקָטָה |  |  |
-| Νίκη / Κράτος / Βίη / Ζῆλος | (T) `נִצָּחוֹן` / `עוֹז` / `כֹּחַ` / `קִנְאָה` |  | the children of Styx (Th. 383–385): translated names (§3.2) |
+| Νίκη / Κράτος / Βίη / Ζῆλος | (T) `נִיצָּחוֹן` / `עוֹז` / `כֹּחַ` / `קִנְאָה` |  | the children of Styx (Th. 383–385): translated names (§3.2) |
 | Μῆτις | מֵטִיס |  | the goddess; the noun μῆτις = `תְּבוּנָה` (§5) |
 | Εὐρυνόμη | אֶוּרִינוֹמָה |  |  |
 | Διώνη | דִּיּוֹנָה |  |  |
@@ -231,7 +231,7 @@ the Greek word is capitalized in the base.
 | Κύθηρα | קִיתֵרָה |  |  |
 | Τροία | טְרוֹיָה |  |  |
 | Θήβη | תֵּבַּאי |  | Boeotian Thebes |
-| Αἰθίοψ | כּוּשִׁים |  | biblical name (§2.3); sg. `כּוּשִׁי` |
+| Αἰθίοψ | כּוּשׁ |  | biblical name (§2.3): the land / people `כּוּשׁ` (`מֶלֶךְ כּוּשׁ`, `בְּנֵי כּוּשׁ`); not the plural `כּוּשִׁים`, a slur in Modern Hebrew (§11.7) |
 | Νεῖλος | נִילוּס |  | never `יְאֹר` |
 | Ἄσκρη | אַסְקְרָה |  | Hesiod's village (WD 640) |
 | Πληιάδες / Πλειάδες | כִּימָה |  | the Pleiades: `כִּימָה` [equivalent], the LXX's Πλειάς for `כִּימָה` (Job 9:9, 38:31) |
@@ -274,7 +274,7 @@ and the nymphs keep their names (West too), with their meanings in the notes.
 | Αἰδώς / Νέμεσις | `בּוּשָׁה` / `חֵמָה` | the same | WD 200 (Nemesis: "righteous indignation" – the translator may refine, recorded) |
 | Ἐλπίς | `תִּקְוָה` | ἐλπίς `תִּקְוָה` | Hope in the jar (WD 96) – lower case in the base: the noun, `תִּקְוָה` |
 | Φιλότης / Ἀπάτη / Γῆρας | `אַהֲבָה` / `מִרְמָה` / `זִקְנָה` | the same | Th. 224–225 |
-| Νίκη / Κράτος / Βίη / Ζῆλος | `נִצָּחוֹן` / `עוֹז` / `כֹּחַ` / `קִנְאָה` | the same | Th. 383–385 |
+| Νίκη / Κράτος / Βίη / Ζῆλος | `נִיצָּחוֹן` / `עוֹז` / `כֹּחַ` / `קִנְאָה` | the same | Th. 383–385 |
 | Εὐνομίη / Εἰρήνη | `סֵדֶר־טוֹב` / `שָׁלוֹם` | the same | the Horai (Th. 902) |
 
 Kept as names (West keeps them): Ἔρος `אֶרוֹס` ★ (the noun ἔρος "desire" = `חֵשֶׁק`), Ἔρεβος `אֶרֶבוֹס`, Τάρταρος
@@ -721,6 +721,18 @@ Full list: `1-תולדות-האלים/project.md`, "Review pass (b)". Binding fr
    διὰ βουλάς `בַּעֲצוֹת`; δεινός (adj. and adv.) `אָיֹם`; ἱκνέομαι `הִגִּיעַ` in every form; παῖς split by sense: `יֶלֶד`
    (child) / `בֵּן` (a son named with a parent) / `נַעַר` (989) / `בַּת` (952).
 7. The tool's `שבת` gate now also lists `שבתם` (652's `ושבתם` had slipped through before the line was changed).
+
+### 11.7 Review pass (c), Hebrew, and the coordinator's rulings on its open points (2026-10-24)
+Full list: `1-תולדות-האלים/project.md`, "Review pass (c)". 52 lines changed (vocalized ambiguous words, plene spelling,
+agreement, one unintended prophetic formula at 836). Rulings (the user's standing rule for minor decisions):
+1. οὐλόμενος = `מַמְאִיר` (fem. `מַמְאֶרֶת`; Lev 13:51, Ezek 28:24), vocalized: the draft's `מְבַלֶּה` reads "having a good time"
+   in Modern Hebrew; `אָרוּר` is gated (§7.1), `כִּלָּה` reserved (TH 225, 593).
+2. Αἰθίοψ = `כּוּשׁ` (`מֶלֶךְ כּוּשׁ`, TH 985): the biblical name kept (§2.3), but not the plural `כּוּשִׁים`, a slur in Modern
+   Hebrew.
+3. Νίκη: the table's string is plene (`נִיצָּחוֹן`), so that the plene draft passes.
+4. Translated names keep the gender of the Greek name (`לַיְלָה הַשְּׁחוֹרָה`, `מָדוֹן הַמְּתֹעֶבֶת`, `שְׁבוּעָה … מַזִּיק`):
+   stated in the intro.
+5. `אשה` (not `אישה`) as in every corpus of the folder (161 lines against 24): a folder-wide spelling question for the user.
 
 ## 12. Decisions and revisions (coordinator, 2026-10-24)
 
