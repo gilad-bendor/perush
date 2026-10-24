@@ -1075,5 +1075,76 @@ child, the bath, Rumour (742–764); the Days of the month (765–828) and the b
 - **The LXX of the Torah's purity laws speaks Hesiod's vocabulary** (νίπτω, λούω, σπέρμα, οἰωνίζομαι): for the ritual
   passages, grep the LXX for the Greek word before looking for the Hebrew theme.
 
+## Review pass (a): fidelity (WD)
+
+**Date:** 2026-10-24. **Reviewer:** fidelity reviewer (pass a), one sub-session, the whole poem (831 entries: 1–828 +
+169a–d; 310 is not in the base).
+
+### What was checked
+- **Every line against its Greek**, in sections of ~100 lines (label | Greek | `>` line | every verb with its treebank
+  parse | the פירוק), the doubtful forms against the lexicon: every content word accounted for; nothing added outside
+  `( )`; person, number and case relations; the clause boundaries across lines (enjambment) and the order of images;
+  the פירוק's `("…")` against the `>` line. The base's marks are in place: `{חשודה}` at 76, 79, 93, 99, 124–125
+  (254–255 without it, as the base); `{פפירוס}` at 169a–d with the base's restorations in `[ ]`.
+- **Scripted cross-checks:** every negation (Greek οὐ/μή/οὐδέ/μηδέ/οὔτε/μήτε/οὐκέτι/μηκέτι/νόσφι/ἄτερ … ↔ Hebrew, both
+  ways): no negation lost, none reversed; every Hebrew negation without a Greek negative is an alpha-privative
+  (`בלתי־`, `שאין`, `חסר־`, `נטולי־`), or a negation carried over from the line before (214–215), or 584 `בלי הרף`
+  (πυκνόν); every imperfect and every -σκ- iterative (90, 133, 151, 634: all `היה/היו` + participle); every optative
+  (potential → `היה` + participle or future by sense; wish → jussive / `מי יתן` / `אַל`; in conditions → future);
+  the gnomic aorists and imperfects (all participles, each marked in the פירוק); the infinitive-for-imperative
+  (vocalized infinitive absolute throughout; dependent infinitives plain); the perfects (present state); the grammar
+  claims of the notes (163 statements: all consistent with the Greek).
+- After each batch `hesiod_tools.py verify WD --strict`: 0 problems, 0 repeated-line differences.
+  `check_bible_quotes.py` on the annotated file and this file: 0 problems (no quotation was added or changed).
+
+### Result: 11 lines changed (each with its פירוק, and the notes where they quoted the old Hebrew)
+The translation is faithful: no omitted content word, no reversed negation, no lost line or clause. The changes:
+
+| Line | Before → after | Reason |
+|---|---|---|
+| 92 | `אשר נתנו לאנשים את הקרות` → `אשר נותנות …` | ἔδωκαν in a general relative with epic τε (αἵ τʼ): a gnomic aorist (diseases bring death), not a past event; renderings §4 → participle. The two notes that quoted `נתנו` updated |
+| 116 | `ומתו כנכנעים לשֵׁנָה` → `והיו מתים …` | θνῇσκον: imperfect of habit (each of the golden race died so), in the series 112 `היו חיים`, 115 `היו מתענגים`, 117 `היה נושא`; §4 → `היה` + participle |
+| 119 | `נהנו ממלאכותיהם` → `היו נהנים …` | ἐνέμοντο: imperfect of habit in the same series (as TH 910) |
+| 126 | `המשאת המלכותית שהייתה להם` → `… שקיבלו` | ἔσχον is an aorist ("got, received"), not a state; the פירוק itself glossed "קיבלו" |
+| 224 | `אל אלה שגירשו אותה` → `… שיגרשו אותה` | ἐξελάσωσι: aorist subjunctive in a general relative clause → future (§4; as 221 `יכריעו`), not a past |
+| 230 | `ואף פעם לא ילווה רעב` → `… לא מלווה רעב` | ὀπηδεῖ is a present (a general truth, beside 229 `מייעד`, 231 `נהנים`): §4 → participle |
+| 453 | `"שני שוורים תן לי ועגלה"` → `"… תן (לי) …"` | an addition outside `( )`: δὸς has no pronoun |
+| 517 | `לא ינשוב בעדם` → `אינו נושב בעדם` | οὐ διάησιν is a present, as 514 and 519 (`נושב`, `אינו נושב`); the future made it a prediction |
+| 542 | `קָשֹׁר לך, ובלבד ריפדת אותם מבפנים` → `קָשֹׁר לך, משריפדת אותם בלבד מבפנים` | a participle made a main verb (πυκάσσας, aorist participle: "having lined them"); the draft had a finite 2nd-person past beside the infinitive-command |
+| 580 | `מעלה רבים מבני האדם על הנתיב,` → `מעלה רבים על הנתיב,` | an added word that also broke the enjambment: ἀνθρώπους stands at the head of 581, which already has `בני האדם` – the draft said "men" twice |
+| 728 | `אך גם אחרי שתשקע` → `אך (גם) …` | `גם` has no Greek word (αὐτάρ "but"): an interpretation, now marked as added |
+
+### Recurring patterns
+- **The tense of a single verb in a run of general statements** (6 of 11): a general relative turned past (92, 224), a
+  present turned future (230, 517), an imperfect of habit turned simple past where its neighbours have `היה` (116,
+  119). The translators applied §4 correctly almost everywhere; the slips are single forms inside long maxims or
+  descriptions – exactly the kind the Theogony's pass (a) found (TH 835, 910).
+- **A participle made a main verb** (542), as TH 1006.
+- **Additions** (453, 580, 728): a pronoun of the spoken Greek, a word anticipated from the next line, an
+  interpretive `גם` – all small, none of substance.
+- A scripted report per grammatical class (imperfects without `היה`, presents rendered as yiqtol, general-relative
+  subjunctives rendered as past) would find most of these in minutes (as the TH reviewer proposed).
+
+### Choices left as they are (defensible; noted for the user)
+- **Imperfects of state rendered as a simple past** where Hebrew past already carries duration: 97 ἔμιμνε `נשארה`, 111
+  ἐμβασίλευεν `מלך` (as TH 71's present `מולך`), 134 ἐδύναντο `לא יכלו`, 136 ἤθελον `רצו` (beside 139 `לא היו נותנים`),
+  206 μύρετο `קונן`. `היה` + participle would be possible in each (`היה מולך`, `היו רוצים`), but heavier; pass (c) may
+  decide.
+- **Perfects rendered as a resultative past**: 347 ἔμμορε `נחל` (twice), as TH 728 `צמחו`.
+- 43 `יום אחד` (ἐπʼ ἤματι "in a day": the number is the sense), 182 `ולא יהיה` (the copula of 184's ἔσσεται, needed
+  in Hebrew), 759 `הָסֵךְ (בהם) את רגליך` (the biblical idiom for one Greek verb, ἐναποψύχω), 268 `הוא משקיף`
+  (ὀφθαλμός is masculine, the Hebrew `עין` feminine: the line passes to Zeus himself), 799 (the פירוק quotes the
+  treebank's θυμβορεῖ for the base's θυμοβορῆ, as the tool prints it).
+- A spelling for pass (c): 88 `תיהיה` (read `תהיה`).
+
+### Open cruxes for the user (translated by the most defensible option; the notes give the alternatives; no `?` in the line)
+- **148** ἄπλαστοι `בלתי־יצורים` ("unformed", as TH 151, with DGE); the lexica record ἄπλατος "unapproachable" as a
+  variant or a sense of the word (LSJ II, Bailly, Pape) – the note could name it.
+- **314** δαίμονι δʼ οἷος ἔησθα `ויהי מה שתהיה לפי הדיימון` – the note calls it hard; the Hebrew keeps it open.
+- **562** ἰσοῦσθαι νύκτας τε καὶ ἤματα – "share out by night and day" or "keep to it until the equinox" (the note).
+- **590** μᾶζα ἀμολγαίη `עוגת חלב` – meaning disputed (the note).
+- **518** τροχαλός `*כפוף*` (already italic); **68 / 77** διάκτορος `המוביל` (an epithet of disputed meaning, as in TH).
+- If the user wants §6.8 applied strictly, 314, 562 and 590 could take a `?` (and 148 the variant in its note).
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)
