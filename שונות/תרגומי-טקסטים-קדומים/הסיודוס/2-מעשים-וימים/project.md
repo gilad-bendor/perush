@@ -1146,5 +1146,135 @@ The translation is faithful: no omitted content word, no reversed negation, no l
 - **518** τροχαλός `*כפוף*` (already italic); **68 / 77** διάκτορος `המוביל` (an epithet of disputed meaning, as in TH).
 - If the user wants §6.8 applied strictly, 314, 562 and 590 could take a `?` (and 148 the variant in its note).
 
+
+## Review pass (b): consistency (WD)
+
+**Date:** 2026-10-24. **Reviewer:** consistency reviewer (pass b), one sub-session, the whole poem (831 entries), with the
+Theogony as the precedent. No Theogony line was changed (so no TH note, no TH build).
+
+### What was checked
+- **Lemma → Hebrew:** `hesiod_tools.py lexmap` over both poems, then a skeleton filter (prefixes ו ה ב ל כ מ ש, the
+  common suffixes and the matres stripped; similar skeletons merged): 431 lemmas with a WD occurrence and more than one
+  Hebrew group, each read against renderings §5, §11.1–§11.12 and the five translators' "Decisions" / "Splits" lists; a
+  separate pass for the seam (lemmas whose Hebrew in 1–285 and in 286–828 never meet: 80, nearly all inflection).
+- **Hebrew → lemma:** the tool's exact reverse list (397 strings) and a reverse map on prefix-stripped Hebrew (390 groups
+  with a WD line), read for collisions, recorded pairs and homographs.
+- **Formulas and repeated lines:** `verify WD --strict` (F1–F34; the §9 lines); by hand WD 124–125 = 254–255, 149 = TH 152,
+  54 / 71 / 72 = TH 559 / 572 / 573, 50, 52, 53, 57, 70 ≈ TH 565, 567, 558, 570, 571, 700 ≈ 343, 500 ≈ 317 (all exact, the
+  differences only where the Greek differs); the Pleiades and Orion lines (383, 384, 572, 598, 609, 615, 619: `כִּימָה` /
+  `כְּסִיל` vocalized everywhere, the plural agreement of the Greek kept throughout, σθένος Ὠαρίωνος `חוסן כְּסִיל` ×3);
+  every epithet of Zeus across the two poems (one slip: μητιόεις at 769); every infinitive-for-imperative grouped by
+  lemma (the same Greek verb has the same infinitive absolute everywhere; the apparent differences are real imperatives
+  or dependent infinitives); every gnomic form marked in the פירוק (all participles).
+- **Names:** every capitalized word's Hebrew grouped by lemma (one form each); the ★ names and the §7.3 traps (verify, and
+  a grep of the bare strings).
+- **Grammar:** the imperfects left by pass (a) (97, 111, 134, 136, 206).
+- After each of five batches `verify WD --strict`: 0 problems, 0 repeated-line differences; at the end
+  `check_bible_quotes.py` on the annotated file and this file: 0 problems.
+
+### Result: 47 lines changed (each with its פירוק `("…")` and every note that quoted the old Hebrew)
+**One lemma, two Hebrew words → the precedent (the Theogony, or the first WD occurrence)**
+
+| Line | Before → after | Reason |
+|---|---|---|
+| 245 | `במחשבות זאוס` → `בהגיגי זאוס` | φραδμοσύνη: TH 626, 884, 891 `בהגיגי ארץ` – the same phrase (and `מחשבות` is δῆνος's, TH 236) |
+| 282 | `ברצונו` → `במזיד` | ἑκὼν ἐπίορκον ὀμόσσας = TH 232 `במזיד נשבע לשקר` |
+| 268 | `גם את אלה … הוא משקיף` → `גם באלה … הוא צופה` | ἐπιδέρκομαι: TH 760 `צופה`; the Hebrew-only contact with Prov 15:3 `צֹפוֹת` noted (kind b) |
+| 795 | `מתנהל־הרגליים` → `עקום־ההילוך` | εἰλίπους: TH 290, 983 |
+| 801 | `למעשה הזה` → `לַפּוֹעַל הזה` | ἔργμα: TH 823 `ופעלים`; `מַעֲשֶׂה` is ἔργον's (and ἔργμα / ἔρδω `פָּעַל` share a root, as in Greek) |
+| 787 | `יום נעים` → `יום נוח` | ἤπιος: TH 235, 236, 407 (`נָעִים` is ἡδύς, TH 40) |
+| 769 | `זאוס רב־התבונה` → `זאוס מלא־התבונה` | μητιόεις: 51 (the same phrase Διὸς πάρα μητιόεντος), 273, TH 286, 457; `רב־התבונה` is μητίετα's |
+| 342, 722, 736, 742 | `סעודה` → `משתה` (`רב־האורחים`, `השופע`: agreement) | δαίς / δαίτη: TH 802 `למשתאות` |
+| 704 | `האורבת לסעודות` → `האורבת לארוחות` | δειπνολόχος from δεῖπνον `אֲרוּחָה` (209, 442); `סעודה` freed |
+| 712 | `לתת לך משפט` → `לספק לך משפט` | παρέχω: TH 639 `סיפק`; `נָתַן` is δίδωμι's |
+| 515 | `גלד השור` → `עור השור` | ῥινός: TH 539 `בעור` (the ox-hide); the הקבלה bullet on Job 16:15 `גִלְדִּי`, which rested only on the old word, removed |
+| 788 | `לדבר דברי לעג` → `להטיח דברי לעג` | βάζω: 186 `בהטיחם` (seam: `דִּבֵּר` is λέγω's) |
+| 821 | `רע יותר` → `גרוע יותר` | χερείων: 127 `גרוע` (seam: `רַע` is κακός's) |
+| 767 | `את המנות` → `את המזון` | ἁρμαλιή: 560 `מן המזון`; `מָנָה` is αἶσα's (§5) |
+| 740 | `מרעתו` → `מן הרוע` | κακότης `רֹעַ` (93, 287); `רָעָה` is κακόν's |
+| 549 | `מעשי המאושרים` → `מלאכות המאושרים` | ἔργα "tilled fields": `מְלָאכָה` (field-work, §5), as 119, 231 |
+| 598, 609, 619, 646, 768 | `בשעה ש־` → `כאשר` | εὖτε (ἄν): 181, 323, 430, 448, 458, 564 (both translators) and TH 28 `כש־`; ἦμος / τῆμος keep `בשעה ש־` / `באותה שעה` (§11.11.2 is to be read so) |
+
+**One Hebrew word, two lemmas (collisions; the precedent keeps the word)**
+
+| Line | Before → after | Reason |
+|---|---|---|
+| 340 | `נוחים אליך` → `מְרֻצִּים לך` | ἵλαος had ἤπιος's `נוֹחַ`; the passive of ἱλάσκομαι `רִצָּה` (338; TH 91 `מְרַצִּים`) renders the same Greek family |
+| 225 | `לזרים` → `לאורחים` | ξένος had ἀλλότριος's `זרים` (34, 395, TH 599); ξένος `אוֹרֵחַ` as 183, 327 (the split ξένος `אורח` / `זר` withdrawn) |
+| 654 | `עז־הלב` → `נבון־המערכה` | δαΐφρων had ὀβριμόθυμος's epithet (TH 140); δαΐ `מערכה` (TH 650, 674) + φρήν |
+| 773 | `המצוינים` → `יוצאי־הדופן` | ἔξοχος had ἀριδείκετος's `מצוין` (TH 385, 532, 543); `בולט` is πρέπω's (TH 92) |
+| 648 | `רב־ההמיה` → `רב־הנהמה` | πολύφλοισβος had ἐρισμάραγος's epithet (TH 815); `שאון` is ὄτοβος's (TH 709); the sea's `כְּנַהֲמַת יָם` (Isa 5:30) |
+| 456, 807 | `קורות` → `לוחות` | δόρυ shared `קוֹרָה` with ἔλυμα (430, 436: the coordinator's ruling, §11.11.4) in the same passage |
+| 584 | `בלי הרף` → `תָּדִיר` | adverbial πυκνόν had ἐμμενής's `בלי הרף` (TH 610, 712); `בלי הפוגה` is TH 611, 690's |
+
+**The imperfect of state or habit → `הָיָה` + participle (renderings §4)**
+- **111** `כאשר מלך` → `כאשר היה מולך` (ἐμβασίλευεν, beside 112 `היו חיים`); **134** `לא יכלו` → `לא היו יכולים`;
+  **136** `רצו` → `היו רוצים` (ἐδύναντο, ἤθελον: the silver race's habit, beside 139 `היו נותנים`); **206** `קונן` →
+  `היה מקונן` (μύρετο, the nightingale's lament as the background of ἔειπεν).
+- **97** ἔμιμνε `נשארה` **kept**: `נשאר` is a stative verb whose past already states the lasting result (Hope stayed
+  inside, once); `הייתה נשארת` would read as a habit ("used to stay"), which the Greek does not say.
+
+**Homographs vocalized (the line's words unchanged)**
+- **186** `אֲנוּשׁוֹת` (χαλεπός, as 91, 178) against **416** `אֱנוֹשׁ`, **533** `לֶאֱנוֹשׁ` (βροτός / βρότεος, §5); **590**
+  `חָלָב` (γάλα; δημός is `חֵלֶב`, TH 538); **177** `מִיְּגִיעַ`, **305** `יְגִיעַ` (κάματος) against 291 `יגיע` (ἱκνέομαι);
+  **716** `רֵעָם` (ἑταῖρος; `רעם` is βροντή); **516** `הָעֵז` (αἴξ; `עז` is κρατερός); **466** `שֶׁיִּכְבְּדוּ` (βρίθω; τιμάω
+  `יכבדו`, TH 81); **538** `עֵרֶב` (κρόκη; ἕσπερος / δείελος `עֶרֶב`).
+
+**Apparatus only:** the 513 note (ῥινός now `עוֹר`), the 723 note and the section heading 706–723 (`המשתה המשותף`).
+
+### Splits confirmed (one lemma, two Hebrew words, by sense; for renderings §11.13)
+- ἀγορεύω: TH 86 `נָאַם` (orating in the assembly) / WD `אָמַר בְּפֻמְבֵּי` (280, 402, 688; both WD translators).
+- δαιμόνιος (vocative): TH 655 `הוֹ נִפְלָא` (respectful) / WD 207 `הוֹ מְשֻׁנֶּה` (the hawk's contempt).
+- κρυερός: TH 657 `מַקְפִּיא` (figurative "chilling") / WD 153 `קַר` (the cold house of Hades; `הִקְפִּיא` is παχνόω, 360).
+- προρέω: TH 792 `נָבַע` (from a rock) / WD 757 `זָרַם` (rivers flowing to the sea; ῥέω `זָרַם`).
+- ἔρχομαι: `בָּא` / `הָלַךְ` of a star or a wind passing over or through (419, 515).
+- κρίνω: `הִכְרִיעַ` (judge: 221, TH 882) / `הִבְחִין` (discern days and omens: 768, 801, 828).
+- ὄπις: TH 222 `גְּמוּל` (retribution) / WD `הַשְׁגָּחָה` (the gods' regard: 187, 251, 706).
+- βλάπτω: TH 89 passive `נִפְגָּע` ("the wronged") / WD active `הִזִּיק` (193, 258, 283; βλαβερός `מַזִּיק` 365).
+- λάσκω: TH 694 `הִתְפַּצֵּחַ` (wood crackling) / WD 207 `צָוַח` (a bird). πραΰνω: TH 254 `הִרְגִּיעַ` / WD 797 `אִלֵּף` (a bull).
+  φρονέω: TH `חָשַׁב` / WD 202 `הִשְׂכִּיל`. πυκνός: adj. `צָפוּף` / adv. `תָּדִיר` (584).
+- ἀλλά: `אֲבָל`; `אֶלָּא` after a negation (11, 444, 527 … – Hebrew grammar); `אַךְ` (513, 571).
+- πάμπαν `לְגַמְרֵי` (302, 335) / `כָּלִיל` (763, with ἀπόλλυται: the idiom) – stylistic, left.
+- The translators' recorded splits were checked against their lines and stand (σχέτλιος, φράζω, ἀφαιρέω, μίμνω /
+  μένω, ἐπαινέω, ταχύς, νέμω, ἦθος, μίγνυμι, ἴσχω, λείπω, γίγνομαι of a person, ἄγω, νοέω, γιγνώσκω, εἶδον, χαλεπός,
+  κοσμέω, κομίζω, πείθω, φίλος, ἐπιτέλλω, ἀνύω, τυγχάνω, ῥέζω / ἔρδω, χρῆμα, πήγνυμι, ἐλαύνω, ἄκρον, ἀραρίσκω, βοῦς,
+  δέω, ἐμπνέω, αἱρέω, ὅπλον, θοός, ὀλίγος, ἀποφθίνω, ὀρίνω, ἐπιβαίνω, ὑπέρβιος, ἐπιτίθημι, δόμος, τρίπους, χρυσάωρ,
+  ἄφενος 637, ῥεῖα 762), except **ξένος**, whose `זר` (225) is withdrawn (above).
+
+### Pairs and homographs recorded (one Hebrew word; checked and left)
+- **Pairs of synonyms** (Hebrew has one natural word), new: σχέτλιος (WD) / δυσηλεγής (TH 652, WD 506) `אַכְזָרִי`;
+  ἀγέλη (TH 445) / πῶυ (WD 516, 786) `עֵדֶר`; σταθμός (TH 294, 444) / σηκός (WD 787) `דִּיר`; θήρ (WD 277, 512) /
+  κνώδαλον (TH 582) `חַיָּה`; παῦρος / ὀλίγος `מְעַט`; ἀλέομαι / ἐξαλέομαι / ὑπαλεύομαι `חָמַק` (one family);
+  ῥᾴδιος / κοῦφος `קַל` (761 beside 762 `בנקל`); νεφέλη (TH) / νέφος (WD) `עָנָן`; βλάπτω (WD) / πημαίνω (TH 232)
+  `הִזִּיק`; χρώς / δέρμα / ῥινός / ῥινόν `עוֹר`; κεφαλή / κάρα `רֹאשׁ`. The translators' pairs (§11.9.6, §11.11.4,
+  the part 3 and part 5 lists) stand.
+- **Homographs** (vocalized where they could meet): `פּוֹעֵל` ῥεκτήρ (191) / `פּוֹעַל` ἔργμα (801) – one root, as ῥέζω /
+  ἔρδω; `מְרֻצֶּה` ἵλαος / `מְרַצֶּה` ἱλάσκομαι (TH 91) – one family, as in Greek; `יַבָּשָׁה` ἤπειρος / `יְבֵשָׁה` αὖος
+  (460); `רֵעַ` ἑταῖρος / `רַע` κακός; `קָרוֹב` ἐγγύθι / `בְּקָרוֹב` τάχα; and those vocalized above.
+
+### Open points for the coordinator and the user
+- **renderings §11.11.2** should read: ἦμος / τῆμος `בְּשָׁעָה שֶׁ־` / `בְּאוֹתָהּ שָׁעָה`; **εὖτε `כַּאֲשֶׁר`** (as ὅτε; TH 28).
+- **renderings §11.11.4:** δόρυ `לוּחַ` (456, 807), since ἔλυμα has `קוֹרָה`.
+- **New rows for §5 / §11.13** (each with its first line): δαίς `מִשְׁתֶּה` (TH 802); δεῖπνον `אֲרוּחָה` (δειπνολόχος 704);
+  ἤπιος `נוֹחַ`, ἵλαος `מְרֻצֶּה` (340); ἔργμα `פֹּעַל`; φραδμοσύνη `הֲגִיגִים`; ἑκών `בְּמֵזִיד`; ἐπιδέρκομαι `צָפָה`;
+  εἰλίπους `עֲקֹם־הַהִלּוּךְ`; βάζω `הֵטִיחַ`; ῥινός `עוֹר`; ξένος `אוֹרֵחַ`; δαΐφρων `נְבוֹן־הַמַּעֲרָכָה`; ἔξοχος
+  `יוֹצֵא־דֹּפֶן`; πολύφλοισβος `רַב־הַנְּהָמָה`; μητιόεις `מְלֵא־הַתְּבוּנָה`; χερείων `גָּרוּעַ`; ἁρμαλιή `מָזוֹן`; παρέχω
+  `סִפֵּק`; κακότης `רֹעַ` (never `רָעָה`).
+- **For pass (c):** 538 `עֵרֶב רַב` is the phrase of Exod 12:38 (an unintended calque: the order `הרבה ערב` would avoid
+  it); 340 `מְרֻצִּים` reads "satisfied" in Modern Hebrew (vocalized); 773 `יוצאי־הדופן` is a Mishnaic idiom now common;
+  the pronoun `אלה` is unvocalized at 162, 164, 166, 224, 225, 238, 250, 274, 513, 684, 688, 697 (verify passes: no θε- in those lines), vocalized `אֵלֶּה` elsewhere – one practice would be better.
+- **The Theogony** (not changed; for the record): TH 558 ὀχθέω `בכעס` beside κοτέω `כעס` (TH 315; WD 25) is a TH-internal
+  pair (WD 53 differs by its own Greek, χολωσάμενος `ובזעמו`).
+- **The parallels index** has to be regenerated (`build_parallels_index.py`): the 515 bullet (Job 16:15) was removed.
+
+### Proposals for the tool (for the coordinator)
+- **`lexmap --skeleton`** (as the TH reviewer proposed): strip prefixes, common suffixes and matres, merge similar
+  strings, and print only the lemmas whose groups differ – and a reverse map on prefix-stripped Hebrew; both found the
+  slips here in minutes (the raw output is 3,100 lines of inflection).
+- **Traps for homographs between licensed key words**, firing only when the line's lemmas hold both readings' sources
+  or the wrong one: `אנוש` (βροτός `אֱנוֹשׁ` / χαλεπός `אָנוּשׁ`), `חלב` (δημός / γάλα), `יגיע` (κάματος / ἱκνέομαι),
+  `רעם` (βροντή / ἑταῖρος + suffix), `עז` (κρατερός / αἴξ), `ערב` (ἐρατός / κρόκη / evening).
+- **A seam report**: the lemmas whose Hebrew in one translator's range never meets the other's (`--split 285`).
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)
