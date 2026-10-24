@@ -1,0 +1,2266 @@
+{
+"kind": "CHIL",
+"citation": "Giulia Torri, Livio Warbinek, Antonio Carnevale (ed.), hethiter.net/: CTH 291.4 (TX 2026-08-30; TRen 2025-10-06)",
+"sections": [
+{
+"id": "26",
+"title": "Section 1: Contaminazione di un vaso o di uno stagno (HL 25)",
+"hl": "25"
+},
+{
+"id": "28",
+"title": "Section 2: Separazione dei coniugi (HL 26b e 26c)",
+"hl": "26b e 26c"
+},
+{
+"id": "29",
+"title": "Section 3: Morte della moglie (HL 27)",
+"hl": "27"
+},
+{
+"id": "41",
+"title": "Section 4: Conseguenze dell'inadempimento del (servizio) sahhan (HL 39)",
+"hl": "39"
+},
+{
+"id": "42",
+"title": "Section 5: Scomparsa di un uomo del (servizio) TUKUL ed assolvimento delle sue funzioni (HL 40)",
+"hl": "40"
+},
+{
+"id": "43",
+"title": "Section 6: Scomparsa di un uomo del (servizio) ILKU ed assolvimento del (servizio) sahhan (HL 41)",
+"hl": "41"
+},
+{
+"id": "53",
+"title": "Section 7: Furto da parte di un uomo hippara (HL 49)",
+"hl": "49"
+},
+{
+"id": "54",
+"title": "Section 8: Esenzioni nelle città sante (HL 50)",
+"hl": "50"
+},
+{
+"id": "100",
+"title": "Section 9: Rapina di una casa da parte di un servo (HL 95)",
+"hl": "95"
+},
+{
+"id": "101",
+"title": "Section 10: Furto di grano da parte di un uomo libero (HL 96)",
+"hl": "96"
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "26",
+"hl": "25",
+"master": "[… n]ašma l[uliya?]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"n]ašma",
+"oder:CNJ",
+"našma"
+],
+[
+"l[uliya?]",
+"Teich:ALL",
+"luli=a-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 1′",
+"n]a-aš-ma l[u-li-ia?]"
+]
+],
+"tr": "[… op]pure in uno st[agno?]",
+"trlang": "IT"
+},
+{
+"n": "2",
+"sec": "26",
+"hl": "25",
+"master": "[… kar]ū 6 GÍN.GÍN KÙ.BA[BBAR …]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"kar]ū",
+"früher:ADV",
+"karu"
+],
+[
+"6",
+"sechs:QUANcar",
+"6"
+],
+[
+"GÍN.GÍN",
+"Schekel:ACC.PL(UNM)",
+"GÍN.GÍN"
+],
+[
+"KÙ.BA[BBAR",
+"Silber:ACC.PL(UNM)",
+"KÙ.BABBAR"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 2′",
+"ka-ru]-⸢ú⸣ 6 GÍN.GÍN KÙ.BA[BBAR"
+]
+],
+"tr": "[… un t]empo 6 sicli di arge[nto …]",
+"trlang": "IT"
+},
+{
+"n": "3",
+"sec": "26",
+"hl": "25",
+"master": "[… -z]i",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"-z]i",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 3′",
+"-z]i"
+]
+],
+"tr": "[…]",
+"trlang": "IT"
+},
+{
+"n": "4",
+"sec": "26",
+"hl": "25",
+"master": "3 GÍN.GÍN KÙ.BABBAR p[āi]",
+"words": [
+[
+"3",
+"drei:QUANcar",
+"3"
+],
+[
+"GÍN.GÍN",
+"Schekel:ACC.PL(UNM)",
+"GÍN"
+],
+[
+"KÙ.BABBAR",
+"Silber:ACC.PL(UNM)",
+"KÙ.BABBAR"
+],
+[
+"p[āi]",
+"geben:3SG.PRS",
+"pai-/pe-/piya-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 3′",
+"3 ⸢GÍN.GÍN KÙ⸣.BABBAR p[a-a-i]"
+]
+],
+"tr": "da[rà] 3 sicli di argento",
+"trlang": "IT"
+},
+{
+"n": "5",
+"sec": "26",
+"hl": "25",
+"master": "[… GÍN.GÍ]N KÙ.BABBAR daške[r …]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"GÍN.GÍ]N",
+"Schekel:ACC.PL(UNM)",
+"GÍN.GÍN"
+],
+[
+"KÙ.BABBAR",
+"Silber:ACC.PL(UNM)",
+"KÙ.BABBAR"
+],
+[
+"daške[r",
+"nehmen:3PL.PST.IMPF",
+"daš=k-"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 4′",
+"GÍN.GÍ]N KÙ.BABBAR da-aš-ke-e[r"
+]
+],
+"tr": "[… si usav]ano prendere [ n si]cli di argento […]",
+"trlang": "IT"
+},
+{
+"n": "6",
+"sec": "26",
+"hl": "25",
+"master": "[…]",
+"words": [
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 5′",
+"]"
+]
+],
+"tr": "[…]",
+"trlang": "IT"
+},
+{
+"n": "7",
+"sec": "26",
+"hl": "25",
+"master": "kuiš parkuēšz[i …]",
+"words": [
+[
+"kuiš",
+"welcher:REL.NOM.SG.C",
+"kui-"
+],
+[
+"parkuēšz[i",
+"rein werden:3SG.PRS",
+"parku=eš-"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 5′",
+"ku-iš pár-ku-e-eš-z[i"
+]
+],
+"tr": "colui che diviene pu[ro …]",
+"trlang": "IT"
+},
+{
+"n": "8",
+"sec": "26",
+"hl": "25",
+"master": "[…]",
+"words": [
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 6′",
+"[ ]"
+]
+],
+"tr": "[…]",
+"trlang": "IT"
+},
+{
+"n": "9",
+"sec": "26",
+"hl": "25",
+"master": "[parna=šš]ē=a šuwā[ezzi]",
+"words": [
+[
+"[parna=šš]ē=a",
+"Haus:ALL=PPRO.3SG.D/L.SG=CNJadd",
+"parn=a-"
+],
+[
+"šuwā[ezzi]",
+"(an)schauen:3SG.PRS",
+"šuw=aye/a-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 6′",
+"pár-na-aš-š]e-e-a šu-wa-a-[ez-zi]"
+]
+],
+"tr": "e [(la vittima) cerch[erà il risarcimento] nella su[a (del colpevole) casa].",
+"trlang": "IT"
+},
+{
+"n": "10",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "[… …]-yazi",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"…]-yazi",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 7′",
+"]-ia-zi"
+]
+],
+"tr": "[…]",
+"trlang": "IT"
+},
+{
+"n": "11",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "n=uš A-N[A …] …",
+"words": [
+[
+"n=uš",
+"CONNn=PPRO.3PL.C.ACC",
+"nu=uš"
+],
+[
+"A-N[A",
+"zu:D/L.SG",
+"ANA"
+],
+[
+"…]",
+"",
+""
+],
+[
+"…",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 7′",
+"n[u-u]š A-N[A"
+]
+],
+"tr": "e loro a[…]",
+"trlang": "IT"
+},
+{
+"n": "12",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "[nu]=šši [{L]}Úandaiy[andan …]",
+"words": [
+[
+"[nu]=šši",
+"CONNn=PPRO.3SG.D/L",
+"nu=šši"
+],
+[
+"[{L]}Úandaiy[andan",
+"Schwiegersohn:ACC.SG.C",
+"antiy=ant-"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 8′",
+"nu-u]š-ši {[}L]Úan-da-i-i[a-an-da-an"
+]
+],
+"tr": "[e] a lui il [g]ener[o…]",
+"trlang": "IT"
+},
+{
+"n": "13",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "[… …]… MUNUS-an […]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"…]…",
+"",
+""
+],
+[
+"MUNUS-an",
+"Frau:ACC.SG.C",
+"MUNUS"
+],
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 9′",
+"]x-x MU[NUS]-an [ ]"
+]
+],
+"tr": "[…] la donna […]",
+"trlang": "IT"
+},
+{
+"n": "14",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "n=an=z=an ḫa[praezzi …]",
+"words": [
+[
+"n=an=z=an",
+"CONNn=PPRO.3SG.C.ACC=REFL=PPRO.3SG.C.ACC",
+"n=an=z=an"
+],
+[
+"ḫa[praezzi",
+"Handel treiben:3SG.PRS",
+"ḫapr=ā(e)-"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 10′",
+"na-an-za-an ḫa-[ap-ra-ez-zi"
+]
+],
+"tr": "e la ven[de …]",
+"trlang": "IT"
+},
+{
+"n": "15",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "[… ]-an šuwā[ezzi …]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"]-an",
+"",
+""
+],
+[
+"šuwā[ezzi",
+"(an)schauen:3SG.PRS",
+"šuw=aye/a-"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 11′",
+"]-an šu-wa-a-[ez-zi"
+]
+],
+"tr": "[… res]pinge […]",
+"trlang": "IT"
+},
+{
+"n": "16",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "[… k]uššan […] …",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"k]uššan",
+"Sold:NOM.SG.N",
+"kušš=an-"
+],
+[
+"[…]",
+"",
+""
+],
+[
+"…",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 12′",
+"k]u-uš-ša-an ["
+]
+],
+"tr": "il compens[o …]",
+"trlang": "IT"
+},
+{
+"n": "17",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "[DUMU]{MEŠ}=ya=z(a) LÚ-aš d[āi …]",
+"words": [
+[
+"[DUMU]{MEŠ}=ya=z(a)",
+"Kind:ACC.PL(UNM)=CNJadd=REFL",
+"Ⓐ DUMU"
+],
+[
+"LÚ-aš",
+"Mann:NOM.SG.C",
+"LÚ"
+],
+[
+"d[āi",
+"nehmen:3SG.PRS",
+"dā-/d-"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 13′",
+"DUMU]{MEŠ}-ia-za LÚ-aš d[a-a-i"
+]
+],
+"tr": "e l'uomo pr[ende i figli] per sé.",
+"trlang": "IT"
+},
+{
+"n": "18",
+"sec": "29",
+"hl": "27",
+"master": "[…]",
+"words": [
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 14′",
+"[ ]"
+]
+],
+"tr": "[…]",
+"trlang": "IT"
+},
+{
+"n": "19",
+"sec": "29",
+"hl": "27",
+"master": "[n=a]n parna=šš[a] …",
+"words": [
+[
+"[n=a]n",
+"CONNn=PPRO.3SG.C.ACC",
+"n=an"
+],
+[
+"parna=šš[a]",
+"Haus:GEN.SG=CNJadd",
+"⓶ⓑⒸ parn=a-"
+],
+[
+"…",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 14′",
+"na-a]n pár-na-aš-š[a …]"
+]
+],
+"tr": "[e l]a […] alla sua cas[a …]",
+"trlang": "IT"
+},
+{
+"n": "20",
+"sec": "29",
+"hl": "27",
+"master": "[iwāru=šet=a]z anda […]",
+"words": [
+[
+"[iwāru=šet=a]z",
+"Erbschaft:ACC.SG.N;Erbschaft:POSS.3SG.ACC.SG.N;Erbschaft:REFL",
+"iwar=u-"
+],
+[
+"anda",
+"hinein-:PREV",
+"anda"
+],
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 15′",
+"i-wa-a-ru-še-ta-a]z an-da ["
+]
+],
+"tr": "[…] dentro (la casa) [la sua dot]e.",
+"trlang": "IT"
+},
+{
+"n": "21",
+"sec": "29",
+"hl": "27",
+"master": "[… āšša]uwa […]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"āšša]uwa",
+"gut:ACC.PL.N",
+"ašš=u-"
+],
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Vs. II 16′",
+"a-aš-ša]-u-wa [ Vs. II bricht ab"
+]
+],
+"tr": "[…] i suoi b[eni …]",
+"trlang": "IT"
+},
+{
+"n": "22",
+"sec": "41",
+"hl": "39",
+"master": "takku LÚ.U₁₉.L[U …]",
+"words": [
+[
+"takku",
+"wenn:CNJ",
+"takku"
+],
+[
+"LÚ.U₁₉.L[U",
+"Mensch:GEN.SG(UNM)",
+"LÚ.U₁₉.LU"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. III",
+"ták-ku LÚ.U₁₉.L[U ]"
+]
+],
+"tr": "Se una perso[na …]",
+"trlang": "IT"
+},
+{
+"n": "23",
+"sec": "41",
+"hl": "39",
+"master": "nu šaḫḫan=[šet …]",
+"words": [
+[
+"nu",
+"CONNn",
+"nu"
+],
+[
+"šaḫḫan=[šet",
+"Lehen:STF=POSS.3SG.NOM.SG.N",
+"⓷Ⓐ šaḫḫ=an"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. III 2′",
+"nu ša-aḫ-ḫa-a[n-še-et"
+]
+],
+"tr": "allora il [suo] (servizio) šaḫḫan […]",
+"trlang": "IT"
+},
+{
+"n": "24",
+"sec": "41",
+"hl": "39",
+"master": "[…] tarnai",
+"words": [
+[
+"[…]",
+"",
+""
+],
+[
+"tarnai",
+"lassen:3SG.PRS",
+"tarn=a-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. III 2′",
+"] tar-na-i"
+]
+],
+"tr": "egli trascura […]",
+"trlang": "IT"
+},
+{
+"n": "25",
+"sec": "41",
+"hl": "39",
+"master": "A.ŠÀ{[}ḪI.A=na …]",
+"words": [
+[
+"A.ŠÀ{[}ḪI.A=na",
+"Feld:ACC.SG=CNJadd",
+"A.ŠÀ=na"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. III 3′",
+"A.ŠÀ{[}ḪI.A-na"
+]
+],
+"tr": "[e i] camp[i…]",
+"trlang": "IT"
+},
+{
+"n": "26",
+"sec": "42",
+"hl": "40",
+"master": "takku LÚ˽{GIŠ}T[UKUL …]",
+"words": [
+[
+"takku",
+"wenn:CNJ",
+"takku"
+],
+[
+"LÚ˽{GIŠ}T[UKUL …]",
+"Waffenmann:NOM.SG(UNM)",
+"LÚ˽°GIŠ°TUKUL"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 4′/1′",
+"ták-ku LÚ˽{GIŠ}T[UKUL"
+]
+],
+"tr": "Se un uomo del (servizio) [TUKUL …]",
+"trlang": "IT"
+},
+{
+"n": "27",
+"sec": "42",
+"hl": "40",
+"master": "[… tittia]nza",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"tittia]nza",
+"einsetzen:PTCP.NOM.SG.C",
+"titt=iye/a-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 4′/1′",
+"ti-it-ti-a]n?-⸢za?⸣"
+]
+],
+"tr": "[…] è asse[gnato (al suo posto)],",
+"trlang": "IT"
+},
+{
+"n": "28",
+"sec": "42",
+"hl": "40",
+"master": "LÚ IL!-KI […]",
+"words": [
+[
+"LÚ",
+"Mann:NOM.SG(UNM)",
+"LÚ"
+],
+[
+"IL!-KI",
+"Pflichtleistung für Landzuteilung:GEN.SG(UNM)",
+"ILKU"
+],
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 5′/2′",
+"LÚ IL-K[I IL-K[I"
+]
+],
+"tr": "l'uomo del (servizio) ILKU […]",
+"trlang": "IT"
+},
+{
+"n": "29",
+"sec": "42",
+"hl": "40",
+"master": "kī=ma š[aḫḫa=mit]",
+"words": [
+[
+"kī=ma",
+"dieser:DEM1.NOM.SG.N=CNJctr",
+"Ⓐ ka-"
+],
+[
+"š[aḫḫa=mit]",
+"Lehen:NOM.SG.N=POSS.1SG.D/L.SG",
+"šaḫḫ=an"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 6′/3′",
+"ki-i-ma š[a-aḫ-ḫa-mi-it"
+]
+],
+"tr": "ma questo è il m[io (servizio) šaḫḫan”]",
+"trlang": "IT"
+},
+{
+"n": "30",
+"sec": "42",
+"hl": "40",
+"master": "[… A.ŠÀ{ḪI]}.A anda ši[yattariyazi]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"A.ŠÀ{ḪI]}.A",
+"Feld:ACC.PL(UNM)",
+"A.ŠÀ"
+],
+[
+"anda",
+"hinein-:PREV",
+"anda"
+],
+[
+"ši[yattariyazi]",
+"sich etwas verbriefen lassen:3SG.PRS",
+"šiyattar=iye/a-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 6′/3′",
+"A.ŠÀ{ḪI]}.⸢A⸣ an-da ši-[ia-at-ta-ri-ia-zi"
+]
+],
+"tr": "[… i cam]pi assicura in [un documento sigillato]",
+"trlang": "IT"
+},
+{
+"n": "31",
+"sec": "42",
+"hl": "40",
+"master": "[… {GIŠ}TUKUL]-ia ḫarzi",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"{GIŠ}TUKUL]-ia",
+"Werkzeug:ACC.SG(UNM)=CNJadd",
+"TUKUL"
+],
+[
+"ḫarzi",
+"haben:3SG.PRS",
+"ḫar(k)-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 7′/4′",
+"{GIŠ}TUKUL-]i⸢a⸣ ḫar-zi"
+]
+],
+"tr": "[… (così ch)]e tiene il [(servizio) TUKUL …]",
+"trlang": "IT"
+},
+{
+"n": "32",
+"sec": "42",
+"hl": "40",
+"master": "šaḫḫa[n=a …]",
+"words": [
+[
+"šaḫḫa[n=a",
+"Lehen:ACC.SG.N=CNJctr",
+"Ⓑ šaḫḫ=an"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 8′/5′",
+"ša-aḫ-ḫ[a-na"
+]
+],
+"tr": "[e … il] (servizio) šaḫḫan.",
+"trlang": "IT"
+},
+{
+"n": "33",
+"sec": "42",
+"hl": "40",
+"master": "[…] šaḫḫan mim[mai]",
+"words": [
+[
+"[…]",
+"",
+""
+],
+[
+"šaḫḫan",
+"Lehen:ACC.SG.N",
+"šaḫḫ=an"
+],
+[
+"mim[mai]",
+"weigern:3SG.PRS",
+"mimm=a-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 8′/5′",
+"] ša-aḫ-ḫa-an mi-im-[ma-i"
+]
+],
+"tr": "[…] rifiu[ta] il (servizio) šaḫḫan,",
+"trlang": "IT"
+},
+{
+"n": "34",
+"sec": "42",
+"hl": "40",
+"master": "[… A.ŠÀ{ḪI]}.A ḫargantaš daran[zi]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"A.ŠÀ{ḪI]}.A",
+"Feld:ACC.PL(UNM)",
+"A.ŠÀ"
+],
+[
+"ḫargantaš",
+"umkommen:PTCP.GEN.PL",
+"ḫark="
+],
+[
+"daran[zi]",
+"sprechen:3PL.PRS",
+"te-/tar-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 9′/6′",
+"A.ŠÀ{ḪI]}.A ḫar-ga-an-ta-aš da-ra-an-[zi"
+]
+],
+"tr": "[(allora) si st]abilische che i c[ampi …] sono abbandonati.",
+"trlang": "IT"
+},
+{
+"n": "35",
+"sec": "42",
+"hl": "40",
+"master": "[… UR]U-LIM anneškanzi",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"UR]U-LIM",
+"Stadt:GEN.SG(UNM)",
+"URU-LIM"
+],
+[
+"anneškanzi",
+"wirken:3PL.PRS.IMPF",
+"ann=išk-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 10′/7′",
+"UR]U-LIM an-né-eš-kán-zi"
+]
+],
+"tr": "[…] lavorano […] della città.",
+"trlang": "IT"
+},
+{
+"n": "36",
+"sec": "42",
+"hl": "40",
+"master": "takku [… p]āi",
+"words": [
+[
+"takku",
+"wenn:CNJ",
+"takku"
+],
+[
+"[…",
+"",
+""
+],
+[
+"p]āi",
+"geben:3SG.PRS",
+"pai-/pe-/piya-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 11′/8′",
+"ták-ku [ p]a-a-i"
+]
+],
+"tr": "Se [… asseg]na […]",
+"trlang": "IT"
+},
+{
+"n": "37",
+"sec": "42",
+"hl": "40",
+"master": "nu=šši A.ŠÀ{ḪI.A} pia[nzi]",
+"words": [
+[
+"nu=šši",
+"CONNn=PPRO.3SG.D/L",
+"nu=šši"
+],
+[
+"A.ŠÀ{ḪI.A}",
+"Feld:ACC.PL(UNM)",
+"A.ŠÀ"
+],
+[
+"pia[nzi]",
+"geben:3PL.PRS",
+"pai-/pe-/piya-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 11′/8′",
+"nu-uš-ši A.ŠÀ{ḪI.A} pí-a[n-zi"
+]
+],
+"tr": "allora da[nno] i campi a uno (di loro)",
+"trlang": "IT"
+},
+{
+"n": "38",
+"sec": "42",
+"hl": "40",
+"master": "[… {GIŠ}TUKUL-l]iš kīša",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"{GIŠ}TUKUL-l]iš",
+"Werkzeug:NOM.SG(UNM)",
+"TUKUL"
+],
+[
+"kīša",
+"werden:3SG.PRS.MP",
+"kiš="
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 12′/9′",
+"{GIŠ}TUKUL-l]i-iš ki-i-ša"
+]
+],
+"tr": "[… egli] diviene [un uomo del (servizio) TUKUL].",
+"trlang": "IT"
+},
+{
+"n": "39",
+"sec": "43",
+"hl": "41",
+"master": "tak[ku … ḫarakz]i",
+"words": [
+[
+"tak[ku",
+"wenn:CNJ",
+"takku"
+],
+[
+"…",
+"",
+""
+],
+[
+"ḫarakz]i",
+"umkommen:3SG.PRS",
+"ḫark="
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 13′/10′",
+"ták-[ku ḫar-ak-z]i"
+]
+],
+"tr": "S[e … scompa]re",
+"trlang": "IT"
+},
+{
+"n": "40",
+"sec": "43",
+"hl": "41",
+"master": "Ù LÚ˽{GIŠ}TUKUL (Rasur)",
+"words": [
+[
+"Ù",
+"und:CNJadd",
+"U"
+],
+[
+"LÚ˽{GIŠ}TUKUL",
+"Waffenmann:NOM.SG(UNM)",
+"LÚ˽°GIŠ°TUKUL"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1+2) Rs. III 13′/10′",
+"Ù LÚ˽{GIŠ}TUKUL (Rasur)"
+]
+],
+"tr": "e un uomo del (servizio) TUKUL …",
+"trlang": "IT"
+},
+{
+"n": "41",
+"sec": "43",
+"hl": "41",
+"master": "[… t]ezzi",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"t]ezzi",
+"sprechen:3SG.PRS",
+"te-/tar-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Rs. III 11′",
+"t]e-ez-zi"
+]
+],
+"tr": "[…di]ce:",
+"trlang": "IT"
+},
+{
+"n": "42",
+"sec": "43",
+"hl": "41",
+"master": "kī {GIŠ}[TUKUL-li=met]",
+"words": [
+[
+"kī",
+"dieser:DEM1.NOM.SG.N",
+"ka-"
+],
+[
+"{GIŠ}[TUKUL-li=met]",
+"Werkzeug:NOM.SG(UNM)=POSS.1SG.NOM.SG.N",
+"TUKUL"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Rs. III 11′",
+"ki-i {GIŠ}[TUKUL-li-me-et]"
+]
+],
+"tr": "“Questo (è) [il mio (servizio) TUKUL]",
+"trlang": "IT"
+},
+{
+"n": "43",
+"sec": "43",
+"hl": "41",
+"master": "[… šaḫḫa=me]t",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"šaḫḫa=me]t",
+"Lehen:NOM.SG.N=POSS.1SG.NOM.SG.N",
+"šaḫḫ=an"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Rs. III 12′",
+"ša-aḫ-ḫa-me-e]t"
+]
+],
+"tr": "[…] il [mio (servizio) šaḫḫan]”",
+"trlang": "IT"
+},
+{
+"n": "44",
+"sec": "43",
+"hl": "41",
+"master": "Ù A.ŠÀ{ḪI.A} Š[A … šiyattariēzz]i",
+"words": [
+[
+"Ù",
+"und:CNJadd",
+"U"
+],
+[
+"A.ŠÀ{ḪI.A}",
+"Feld:ACC.PL(UNM)",
+"A.ŠÀ"
+],
+[
+"Š[A",
+"des/der:GEN.SG",
+"ŠA"
+],
+[
+"…",
+"",
+""
+],
+[
+"šiyattariēzz]i",
+"sich etwas verbriefen lassen:3SG.PRS",
+"šiyattar=iye/a-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Rs. III 12′",
+"Ù A.ŠÀ{ḪI.A} Š[A ši-ia-at-ta-ri-e-ez-z]i"
+]
+],
+"tr": "e i campi d[i … assicur]a in un documento sigillato",
+"trlang": "IT"
+},
+{
+"n": "45",
+"sec": "43",
+"hl": "41",
+"master": "{GIŠ}TUKUL-li ḫarz[i]",
+"words": [
+[
+"{GIŠ}TUKUL-li",
+"Werkzeug:ACC.SG(UNM)",
+"TUKUL"
+],
+[
+"ḫarz[i]",
+"haben:3SG.PRS",
+"ḫar(k)-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Rs. III 13′",
+"{GIŠ}TUKUL-li ḫar-z[i]"
+]
+],
+"tr": "(così ch)e tien[e] il (servizio) TUKUL ,",
+"trlang": "IT"
+},
+{
+"n": "46",
+"sec": "43",
+"hl": "41",
+"master": "[…]",
+"words": [
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Rs. III 14′",
+"[ ]"
+]
+],
+"tr": "[…]",
+"trlang": "IT"
+},
+{
+"n": "47",
+"sec": "43",
+"hl": "41",
+"master": "takku šaḫḫ[an …]",
+"words": [
+[
+"takku",
+"wenn:CNJ",
+"takku"
+],
+[
+"šaḫḫ[an",
+"Lehen:ACC.SG.N",
+"šaḫḫ=an"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Rs. III 14′",
+"ták-ku ša-aḫ-ḫ[a-an"
+]
+],
+"tr": "Se il (servizio) [šaḫḫan …]",
+"trlang": "IT"
+},
+{
+"n": "48",
+"sec": "43",
+"hl": "41",
+"master": "[… I-N]A É.[GAL-LIM …]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"I-N]A É.[GAL-LIM",
+"Palast:D/L.SG",
+"É.GAL-LIM"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 2) Rs. III 15′",
+"I-N]A É.[GAL-LIM Rs. III bricht ab"
+]
+],
+"tr": "[… pe]r il pal[azzo …]",
+"trlang": "IT"
+},
+{
+"n": "49",
+"sec": "53",
+"hl": "49",
+"master": "[… N]U.G[ÁL]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"N]U.G[ÁL]",
+"(ist) nicht (vorhanden):NEG",
+"NU.GÁL"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 1′",
+"N]U.G[ÁL]"
+]
+],
+"tr": "[… n]on c'[è …]",
+"trlang": "IT"
+},
+{
+"n": "50",
+"sec": "53",
+"hl": "49",
+"master": "[… tuekkanza]=šiš",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"tuekkanza]=šiš",
+"Person:NOM.SG.C;Person:PPRO.3SG.C.NOM",
+"tuekk=ant-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 2′",
+"tu-ek-kán-za]-ši-iš"
+]
+],
+"tr": "[…], il suo [corpo …]",
+"trlang": "IT"
+},
+{
+"n": "51",
+"sec": "53",
+"hl": "49",
+"master": "[… tayazzi]l pešker",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"tayazzi]l",
+"Diebstahl:ACC.SG.N",
+"tayazz=il-"
+],
+[
+"pešker",
+"geben:3PL.PST.IMPF",
+"p=išk-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 3′",
+"ta-ia-az-zi-i]l pé-eš-ke-er"
+]
+],
+"tr": "[…] dessero (risarcimento per) il f[urto]",
+"trlang": "IT"
+},
+{
+"n": "52",
+"sec": "53",
+"hl": "49",
+"master": "[…]",
+"words": [
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 4′",
+"[ ]"
+]
+],
+"tr": "[…]",
+"trlang": "IT"
+},
+{
+"n": "53",
+"sec": "53",
+"hl": "49",
+"master": "[ma]n=e {LÚ.MEŠ}NÍ.ZU",
+"words": [
+[
+"[ma]n=e",
+"wie:CNJ=PPRO.3PL.C.NOM",
+"Ⓐ man"
+],
+[
+"{LÚ.MEŠ}NÍ.ZU",
+"Dieb:ACC.PL(UNM)",
+"NÍ.ZU"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 4′",
+"ma?]-ne {LÚ.MEŠ}NÍ.ZU"
+]
+],
+"tr": "[…]e in [questo caso …] ladri […]",
+"trlang": "IT"
+},
+{
+"n": "54",
+"sec": "53",
+"hl": "49",
+"master": "[…] ēpzi",
+"words": [
+[
+"[…]",
+"",
+""
+],
+[
+"ēpzi",
+"fassen:3SG.PRS",
+"ēp(p)-/ap(p)-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 5′",
+"] e-ep-zi"
+]
+],
+"tr": "[…] prendesse […]",
+"trlang": "IT"
+},
+{
+"n": "55",
+"sec": "53",
+"hl": "49",
+"master": "[… m]an LUGAL-waš […] (unbeschrieben)",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"m]an",
+"wie:CNJ",
+"man"
+],
+[
+"LUGAL-waš",
+"König:GEN.SG",
+"LUGAL"
+],
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 6′",
+"m]a-an LUGAL-wa-aš ] (unbeschrieben)"
+]
+],
+"tr": "[…co]me [se…] del re.",
+"trlang": "IT"
+},
+{
+"n": "56",
+"sec": "54",
+"hl": "50",
+"master": "[… taruḫz]i",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"taruḫz]i",
+"mächtig sein:3SG.PRS",
+"tarḫu="
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 8′",
+"ta-ru-uḫ-z]i"
+]
+],
+"tr": "[… gove]rna […]",
+"trlang": "IT"
+},
+{
+"n": "57",
+"sec": "54",
+"hl": "50",
+"master": "[… {URU}zippa]lanta",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"{URU}zippa]lanta",
+"Zip(p)(a)l(an)ta:GN.STF",
+"zippalant=a-"
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 9′",
+"{URU}zi-ip-pa]-la-an-ta"
+]
+],
+"tr": "[… la città di Zipa]lanta […]",
+"trlang": "IT"
+},
+{
+"n": "58",
+"sec": "54",
+"hl": "50",
+"master": "[… …]…",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"…]…",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 10′",
+"]x"
+]
+],
+"tr": "[…] …",
+"trlang": "IT"
+},
+{
+"n": "59",
+"sec": "54",
+"hl": "50",
+"master": "[… …-z]i",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"…-z]i",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"(Frg. 1) Rs. IV 11′",
+"-z]i Rs. IV bricht ab"
+]
+],
+"tr": "[…]x",
+"trlang": "IT"
+},
+{
+"n": "60",
+"sec": "100",
+"hl": "95",
+"master": "[… …]… … …[… …]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"…]…",
+"",
+""
+],
+[
+"…",
+"",
+""
+],
+[
+"…[…",
+"",
+""
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"B",
+"1′",
+"]x x x["
+]
+],
+"tr": "[…] … […]",
+"trlang": "IT"
+},
+{
+"n": "61",
+"sec": "100",
+"hl": "95",
+"master": "[… kuggu]raškanzi",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"kuggu]raškanzi",
+"schneiden:3PL.PRS.IMPF",
+"kuraš=k-"
+]
+],
+"mss": [
+[
+"B",
+"2′",
+"ku-ug-gu]r-aš-kán-zi"
+]
+],
+"tr": "[… tagl]ieranno via […]",
+"trlang": "IT"
+},
+{
+"n": "62",
+"sec": "100",
+"hl": "95",
+"master": "n=an […]",
+"words": [
+[
+"n=an",
+"CONNn=PPRO.3SG.C.ACC",
+"n=an"
+],
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"B",
+"2′",
+"⸢na-an⸣ ["
+]
+],
+"tr": "e lo […]",
+"trlang": "IT"
+},
+{
+"n": "63",
+"sec": "100",
+"hl": "95",
+"master": "[…] mekki tāyē[zzi]",
+"words": [
+[
+"[…]",
+"",
+""
+],
+[
+"mekki",
+"viel:ACC.SG.N",
+"mekk=i-"
+],
+[
+"tāyē[zzi]",
+"stehlen:3SG.PRS",
+"t=aye/a-"
+]
+],
+"mss": [
+[
+"B",
+"3′",
+"] me-ek-ki ta-⸢a⸣-i-e-e[z-zi]"
+]
+],
+"tr": "[… egli] ru[ba] molto […]",
+"trlang": "IT"
+},
+{
+"n": "64",
+"sec": "100",
+"hl": "95",
+"master": "[… išḫiya]nzi",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"išḫiya]nzi",
+"binden:3PL.PRS",
+"išḫ=ai-"
+]
+],
+"mss": [
+[
+"B",
+"4′",
+"iš-ḫi-ia-a]n-zi"
+]
+],
+"tr": "[… impor]ranno […];",
+"trlang": "IT"
+},
+{
+"n": "65",
+"sec": "100",
+"hl": "95",
+"master": "takku tepu […] …",
+"words": [
+[
+"takku",
+"falls:CNJ",
+"takku"
+],
+[
+"tepu",
+"wenig:ACC.SG.N",
+"tep=u-"
+],
+[
+"[…]",
+"",
+""
+],
+[
+"…",
+"",
+""
+]
+],
+"mss": [
+[
+"B",
+"4′",
+"ták-ku te-pu ["
+]
+],
+"tr": "se […] poco […]",
+"trlang": "IT"
+},
+{
+"n": "66",
+"sec": "100",
+"hl": "95",
+"master": "[tepu=šš]i išḫiyanzi",
+"words": [
+[
+"[tepu=šš]i",
+"wenig:NOM.SG.N=PPRO.3SG.D/L",
+"Ⓐ tep=u-"
+],
+[
+"išḫiyanzi",
+"binden:3PL.PRS",
+"išḫ=ai-"
+]
+],
+"mss": [
+[
+"B",
+"5′",
+"te-pu-uš-š]i iš-ḫi-ia-an-zi"
+]
+],
+"tr": "g[li] imporranno [poco].",
+"trlang": "IT"
+},
+{
+"n": "67",
+"sec": "100",
+"hl": "95",
+"master": "[…] …",
+"words": [
+[
+"[…]",
+"",
+""
+],
+[
+"…",
+"",
+""
+]
+],
+"mss": [
+[
+"B",
+"5′",
+"["
+]
+],
+"tr": "[…]",
+"trlang": "IT"
+},
+{
+"n": "68",
+"sec": "100",
+"hl": "95",
+"master": "[š]er=šet=wa šarnikmi",
+"words": [
+[
+"[š]er=šet=wa",
+"auf:ADV=POSS.3SG.UNIV:=QUOT:=QUOT",
+"⓷Ⓐ šer=šet"
+],
+[
+"šarnikmi",
+"kompensieren:1SG.PRS",
+"šar=nink-"
+]
+],
+"mss": [
+[
+"B",
+"6′",
+"še]-er-še-〈et〉-wa šar-ni-ik-mi"
+]
+],
+"tr": "“Io risarcisco [p]er la sua (parte)”",
+"trlang": "IT"
+},
+{
+"n": "69",
+"sec": "100",
+"hl": "95",
+"master": "[… mimma]i",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"mimma]i",
+"weigern:3SG.PRS",
+"mimm=a-"
+]
+],
+"mss": [
+[
+"B",
+"6′",
+"[ mi-im-ma]-i"
+]
+],
+"tr": "[…rifiut]a (di farlo),",
+"trlang": "IT"
+},
+{
+"n": "70",
+"sec": "100",
+"hl": "95",
+"master": "nu ARAD-an=pat šuwāezzi",
+"words": [
+[
+"nu",
+"CONNn",
+"nu"
+],
+[
+"ARAD-an=pat",
+"Diener:ACC.SG.C=FOC",
+"Ⓐ ARAD"
+],
+[
+"šuwāezzi",
+"(an)schauen:3SG.PRS",
+"šuw=aye/a-"
+]
+],
+"mss": [
+[
+"B",
+"7′",
+"nu ARAD-an-pát šu-wa-a-ez-⸢zi⸣"
+]
+],
+"tr": "allora egli perderà il suo stesso servo.",
+"trlang": "IT"
+},
+{
+"n": "71",
+"sec": "101",
+"hl": "96",
+"master": "[… ÉSA]G-an tayē[zzi]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"ÉSA]G-an",
+"Speicher:ACC.SG.C",
+"ÉSAG"
+],
+[
+"tayē[zzi]",
+"stehlen:3SG.PRS",
+"t=aye/a-"
+]
+],
+"mss": [
+[
+"B",
+"8′",
+"ÉSA]G-an ta-i-e[-ez-zi]"
+]
+],
+"tr": "[…] ru[ba] un si[lo …]",
+"trlang": "IT"
+},
+{
+"n": "72",
+"sec": "101",
+"hl": "96",
+"master": "[… ÉSA]G-an […]",
+"words": [
+[
+"[…",
+"",
+""
+],
+[
+"ÉSA]G-an",
+"Speicher:ACC.SG.C",
+"ÉSAG"
+],
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"B",
+"9′",
+"ÉSA]G-an [ Text bricht ab"
+]
+],
+"tr": "[…] il si[lo …]",
+"trlang": "IT"
+}
+],
+"notes": {
+"T1": "Per luli(ya)- vedi CHD L/N, 80; HED 5, 111-112; HEG L/M, 72-73; Kloekhorst A. 2008b, 533-534. Alternativamente a “stagno” si veda Friedrich J. 1959b, 23 “Wasserstelle”; Imparati F. 1964b, 47 “bacino d'acqua”; Schuler E. von 1982b, 101 “Wasserbecken”; Hoffner H.A. 1997a, 286 “basin, pond”. Questa forma non ha confronti con le versioni parallele. Hoffner H.A. 1997a, 34 la integra anche alla predente r. 3 [parkues-z]i, interpretando il passo Cfr. Waal W. 2023b, 199. Vedi Hoffner H.A. 1997a, 61 n. 203."
+},
+"cth": "CTH 291.4"
+}

@@ -1,0 +1,4738 @@
+{
+"kind": "BESRIT",
+"cth": "CTH 391.1",
+"citation": "B. Christiansen (ed.), hethiter.net/: CTH 391.1 (TX 27.03.2017, TRde 02.03.2017)",
+"sections": [
+{
+"id": "§ 1",
+"title": "§ 1",
+"hl": ""
+},
+{
+"id": "§ 2",
+"title": "§ 2",
+"hl": ""
+},
+{
+"id": "§ 3",
+"title": "§ 3",
+"hl": ""
+},
+{
+"id": "§ 4",
+"title": "§ 4",
+"hl": ""
+},
+{
+"id": "§ 5",
+"title": "§ 5",
+"hl": ""
+},
+{
+"id": "§ 6",
+"title": "§ 6",
+"hl": ""
+},
+{
+"id": "§ 7",
+"title": "§ 7",
+"hl": ""
+},
+{
+"id": "§ 8",
+"title": "§ 8",
+"hl": ""
+},
+{
+"id": "§ 9",
+"title": "§ 9",
+"hl": ""
+},
+{
+"id": "§ 10",
+"title": "§ 10",
+"hl": ""
+},
+{
+"id": "§ 11",
+"title": "§ 11",
+"hl": ""
+},
+{
+"id": "§ 12",
+"title": "§ 12",
+"hl": ""
+},
+{
+"id": "§ 13'",
+"title": "§ 13'",
+"hl": ""
+},
+{
+"id": "§ 14'",
+"title": "§ 14'",
+"hl": ""
+},
+{
+"id": "§ 15'",
+"title": "§ 15'",
+"hl": ""
+},
+{
+"id": "§ 16'",
+"title": "§ 16'",
+"hl": ""
+},
+{
+"id": "§ 17'",
+"title": "§ 17'",
+"hl": ""
+},
+{
+"id": "§ 18'",
+"title": "§ 18'",
+"hl": ""
+},
+{
+"id": "§ 19'",
+"title": "§ 19'",
+"hl": ""
+},
+{
+"id": "§ 20'",
+"title": "§ 20'",
+"hl": ""
+},
+{
+"id": "§ 21'",
+"title": "§ 21'",
+"hl": ""
+},
+{
+"id": "§ 22'",
+"title": "§ 22'",
+"hl": ""
+},
+{
+"id": "§ 23'",
+"title": "§ 23'",
+"hl": ""
+},
+{
+"id": "§ 24'",
+"title": "§ 24'",
+"hl": ""
+},
+{
+"id": "§ 25'",
+"title": "§ 25'",
+"hl": ""
+},
+{
+"id": "§ 26'",
+"title": "§ 26'",
+"hl": ""
+},
+{
+"id": "§ 27'",
+"title": "§ 27'",
+"hl": ""
+},
+{
+"id": "§ 28'",
+"title": "§ 28'",
+"hl": ""
+},
+{
+"id": "§ 29'",
+"title": "§ 29'",
+"hl": ""
+},
+{
+"id": "§ 30'",
+"title": "§ 30'",
+"hl": ""
+},
+{
+"id": "§ 31'",
+"title": "§ 31'",
+"hl": ""
+},
+{
+"id": "§ 32'",
+"title": "§ 32'",
+"hl": ""
+},
+{
+"id": "§ 33'",
+"title": "§ 33'",
+"hl": ""
+},
+{
+"id": "§ 34'",
+"title": "§ 34'",
+"hl": ""
+},
+{
+"id": "§ 35'",
+"title": "§ 35'",
+"hl": ""
+},
+{
+"id": "§ 36'",
+"title": "§ 36'",
+"hl": ""
+},
+{
+"id": "§ 37'",
+"title": "§ 37'",
+"hl": ""
+},
+{
+"id": "§ 38'",
+"title": "§ 38'",
+"hl": ""
+},
+{
+"id": "§ 39'",
+"title": "§ 39'",
+"hl": ""
+},
+{
+"id": "§ 40'",
+"title": "§ 40'",
+"hl": ""
+},
+{
+"id": "§ 41'",
+"title": "§ 41'",
+"hl": ""
+},
+{
+"id": "§ 42'",
+"title": "§ 42'",
+"hl": ""
+},
+{
+"id": "§ 43'",
+"title": "§ 43'",
+"hl": ""
+},
+{
+"id": "§ 44'",
+"title": "§ 44'",
+"hl": ""
+},
+{
+"id": "§ 45''",
+"title": "§ 45''",
+"hl": ""
+},
+{
+"id": "§ 46''",
+"title": "§ 46''",
+"hl": ""
+},
+{
+"id": "§ 47''",
+"title": "§ 47''",
+"hl": ""
+},
+{
+"id": "§ 48''",
+"title": "§ 48''",
+"hl": ""
+},
+{
+"id": "§ 49''",
+"title": "§ 49''",
+"hl": ""
+},
+{
+"id": "§ 50''",
+"title": "§ 50''",
+"hl": ""
+},
+{
+"id": "§ 51''",
+"title": "§ 51''",
+"hl": ""
+},
+{
+"id": "§ 52''",
+"title": "§ 52''",
+"hl": ""
+},
+{
+"id": "§ 53''",
+"title": "§ 53''",
+"hl": ""
+},
+{
+"id": "§ 54''",
+"title": "§ 54''",
+"hl": ""
+},
+{
+"id": "§ 55''",
+"title": "§ 55''",
+"hl": ""
+},
+{
+"id": "§ 56''",
+"title": "§ 56''",
+"hl": ""
+},
+{
+"id": "Kol.",
+"title": "Kol.",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1",
+"hl": "",
+"master": "UMMA {f}Ambazzi",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Vs. I 1",
+"UM-MA {f}Am-ba-az-zi"
+]
+],
+"tr": "Folgendermaßen (spricht) Ambazzi:",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1",
+"hl": "",
+"master": "mān {D}Za[rnizan {D}Tarpat]tašši[n] iyami",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Vs. I 1",
+"ma-a-an {D}Za-a[r-ni-za-an {D}Tar-pa-at]-ta-aš-ši-i[n] i-ia-mi"
+]
+],
+"tr": "Wenn ich Za[rniza und Tarpa]tassa behandle,",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1",
+"hl": "",
+"master": "nu=ššan ANA {DUG}DÍLIM.GAL S[A5 {GIŠ}ḫ]uw[alliš išḫuwaḫḫi",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Vs. I 2",
+"nu-uš-ša-an A-NA {DUG}DÍLIM.GAL S[A5 {GIŠ}ḫ]u-w[a]-⸢al⸣-li-iš iš-ḫu-wa-aḫ-ḫi"
+]
+],
+"tr": "dann schütte ich auf eine ro[te] Schale [Wa]cholder[holz](?),",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1",
+"hl": "",
+"master": "šer=a=ššan ḫalkin kar(a)š išḫuwaḫḫi",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Vs. I 3",
+"še-ra-aš-ša-an ḫal-ki-in kar-aš iš-ḫu-wa-aḫ-ḫi"
+]
+],
+"tr": "oben darauf aber schütte ich Gerste und karš-Getreide.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1",
+"hl": "",
+"master": "n=at=kan šanḫuwanzi",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Vs. I 4",
+"na-at-kán ša-an-ḫu-wa-an-zi"
+]
+],
+"tr": "Und man röstet es.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1",
+"hl": "",
+"master": "namma [{G]}IŠḫuwalliš witenit kištanumi",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Vs. I 4",
+"nam-ma [{G]}IŠḫu-wa-al-li-iš ú-i-te-ni-it ki-iš-ta-nu-mi"
+]
+],
+"tr": "Dann lösche ich das Wacholderhol[z](?) mit Wasser",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1",
+"hl": "",
+"master": "nu m[em]aḫḫi",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Vs. I 5",
+"nu m[e-m]a-aḫ-ḫi ¬¬¬"
+]
+],
+"tr": "und s[pr]eche:",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2",
+"hl": "",
+"master": "maḫḫan=kan kē kišta[nunu]n",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Vs. I 6",
+"ma-aḫ-ḫa-an-kán ke-e ki-iš-ta-[nu-nu-u]n"
+]
+],
+"tr": "„Wie [ic]h dieses ausgelö[sch]t habe,",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2",
+"hl": "",
+"master": "idālu=ya=kan ANA {LÚ.MEŠ}BĒLŪTIM šer QĀTAM[MA ki]štaru",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Vs. I 6",
+"i-da-a-lu-ia-kán A-NA {LÚ.MEŠ}BE-LU-TIM še-er ⸢QA-TAM⸣[-MA ki-i]š-ta-ru ¬¬¬"
+]
+],
+"tr": "so soll auch eben[so] das Böse über den Herren [erlö]schen!“",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3",
+"hl": "",
+"master": "nu=ššan ḫalkin kar(a)š ḫ[urt]a[l]linzi pūr[p]ūriēšš=a iš[n]aš 2 {G[}IŠPAN]",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Vs. I 8",
+"nu-uš-ša-an ḫal-ki-in kar-aš ḫ[u-u-ur-ta]-a[l]-⸢li-in-zi⸣ ⸢pu-u⸣-[u]r-[p]u-⸢u-ri-e⸣-eš-⸢ša⸣ ⸢iš⸣-[n]a-⸢aš⸣ 2 {G[}IŠPAN]"
+]
+],
+"tr": "Und darauf Gerste und karš-Getreide, Ge[meng]sel und Kugeln aus T[e]ig, 2 B[ogen]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3",
+"hl": "",
+"master": "[n=at=š]an [IŠTU {SÍG}ištaggai ḫuitt]iyan",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 9",
+"[na-at-š]a-⸢an⸣ [IŠ-TU {SÍG}iš-tág-ga-i ḫu-it-t]i-ia-an1"
+]
+],
+"tr": "– sie sind [mit einer Bogensehne besp]annt –",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3",
+"hl": "",
+"master": "[6? GI{ḪI.]}A[peran=ma=ššan išnaš p]ūrpūr[īēš {GIŠ}ḫattalu {GIŠ}tarzuwān]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 10",
+"[6? GI{ḪI.]}A2 [pé-ra-an-ma-aš-ša-an iš-na-aš pu]-⸢u⸣-ur-pu-u-r[i-i-e-eš]3 [{GIŠ}ḫa-at-ta-lu {GIŠ}tar-zu-wa-a-an]4"
+]
+],
+"tr": "[6? Pfeil]e, [davor aber K]uge[ln aus Teig, ein Querbalkenriegel und ein Sicherungsriegel];",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 3",
+"hl": "",
+"master": "{KUŠ}šālaš=[a pera]n [ḫaminkanza]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 12",
+"{KUŠ}ša-a-la-š[a pé-ra-a]n [ḫa-me-in-kán-za]5"
+]
+],
+"tr": "ein šāla-Lederriemen [aber ist dav]or [festgebunden.]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 3",
+"hl": "",
+"master": "[nu=ššan kī ḫū]man {GI}padd[anī d]āi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 13",
+"[nu-uš-ša-an ki-i ḫu]-⸢u⸣-ma-an {GI}pád-d[a-ni-i d]a-a-i6 ¬¬¬"
+]
+],
+"tr": "[Und] dies alles [l]egt sie1[in einen] Ko[rb].",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 4",
+"hl": "",
+"master": "[nu=za SÍG ašaran dāi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 14",
+"[nu-za SÍG a-ša-ra-an da-a-i]7"
+]
+],
+"tr": "[Und sie nimmt sich weiße Wolle]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 4",
+"hl": "",
+"master": "n=an=šan ANA B[ĒLŪTI IŠTU GÌR{MEŠ}=ŠUNU kē]z kēzziya [ANA SAG.DU=ŠU šarā ḫ]uittiyai",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 14",
+"na-an-ša-an A-⸢NA⸣ B[E-LU-TI]8 [IŠ-TU GÌR{MEŠ}-ŠU-NU ke-e-e]z ke-e-ez-zi-ia [A-NA SAG.DU-ŠU ša-ra-a ḫ]u-it-ti-ia-i9"
+]
+],
+"tr": "und [z]ieht sie den He[rren von ihren Füßen von dieser Sei]te und jener Seite [zu ihren Köpfen hinauf]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 4",
+"hl": "",
+"master": "EGIR-an ka[ttayaš=ma=šan=k]an [iškišaz ḫuittiy]ai",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 16",
+"EGIR-an ka[t-ta-ia-aš-ma-ša-an-k]án [iš-ki-ša-az ḫu-it-ti-i]a-i"
+]
+],
+"tr": "[und zie]ht [sie ihnen] hinten [ vom Rücken her] hin[ab].",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 4",
+"hl": "",
+"master": "namma=at=šmaš=[at=kan arḫa dāi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 17",
+"nam-ma-at-ša-ma-š[a-at-kán] [ar-ḫa da-a-i]"
+]
+],
+"tr": "Dann [nimmt sie] sie ihnen [weg.]",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 4",
+"hl": "",
+"master": "[n=an=]šan {GI}paddanī dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 18",
+"[na-an]-⸢ša-an⸣ {GI}pád-da-ni-i da-a-i ¬¬¬"
+]
+],
+"tr": "[Und sie legt [sie] in den Korb.",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 5",
+"hl": "",
+"master": "[nu memai]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 19",
+"[nu me-ma-i]10"
+]
+],
+"tr": "[Und sie/er spricht]:",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 5",
+"hl": "",
+"master": "arḫa=šši=kan idālu ḫuitteššar [ḫu]ittiyai! SAG.DU-it ŠU{MEŠ}-it GÌR{MEŠ}-it [ḫ]ūmantet {UZU}ÚR-it",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 19",
+"⸢ar⸣-ḫa-aš-ši-kán i-da-a-lu ḫu-it-te-eš-šar [ḫu]-⸢it-ti-ia«-i»⸣ SAG.DU-it ⸢ŠU{MEŠ}-⸢it GÌR{MEŠ}⸣-it [ḫu-]u-ma-an-⸢te-et⸣ {UZU}ÚR-it"
+]
+],
+"tr": "„Aus ihm heraus [zi]ehe das böse Ziehen, aus dem Kopf, aus den Händen, aus den Füßen, aus [je]dem Glied,",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 5",
+"hl": "",
+"master": "n=[a]t [id]ālauwaš [UN]{MEŠ} ḫarpanalliyaš [peški]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 21",
+"n[a-a]t [i-d]a-⸢a-la-u-wa-aš⸣ [UN]{MEŠ} ⸢ḫar-pa-na-al⸣-li-ia-aš [pé-eš-ki]11 ¬¬¬"
+]
+],
+"tr": "und [gib e]s den [bös]en [Mensch]en, den Feinden!“",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 6",
+"hl": "",
+"master": "[AN]A {LÚ.MEŠ}EN=ma TI-tar inn[arawatar MU{ḪI.A} GÍD.DA piški]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 23",
+"[A-N]A {LÚ.⸢}MEŠEN⸣-ma TI-tar in-n[a-ra-wa-tar MU{ḪI.A} GÍD.DA pí-iš-ki]12"
+]
+],
+"tr": "[„De]n Herren aber [gib] Leben, Kra[ft, lange Jahre!“",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 6",
+"hl": "",
+"master": "[{S]}ÍGištaggann=a QĀTAMMA i[yazi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 24",
+"[{S]}ÍGiš-tág-⸢ga⸣-an-na QA-TAM-MA ⸢i⸣-[ia-zi]13"
+]
+],
+"tr": "Und mit der Bogensehne ver[fährt sie] ebenso",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 6",
+"hl": "",
+"master": "[memai=a QĀTAMMA=pat]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 24",
+"[me-ma-ia QA-TAM-MA-pát]14 ¬¬¬"
+]
+],
+"tr": "[und spricht in eben derselben Weise.]",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 7",
+"hl": "",
+"master": "[nu]=šmaš=kan GADA anda QĀTAMM[A ḫamakzi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 25",
+"[nu-u]š-ma-aš-kán GADA an-da QA-TAM-M[A ḫa-ma-ak-zi]15"
+]
+],
+"tr": "[Und] ebenso [bindet sie] ihnen ein Leinentuch um:",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 7",
+"hl": "",
+"master": "[k]ī=kan maḫḫan {LÚ.ME}[ {Š}ÁZLAG tannaran anniyanzi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 26",
+"[ki]-⸢i⸣-kán ma-aḫ-ḫa-an {LÚ.ME[}ŠÁZLAG ta-an-na-ra-an an-ni-ia-an-zi]16"
+]
+],
+"tr": "„Wie die Wä[scher dies]es [säubern]",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 7",
+"hl": "",
+"master": "[nu=]šši=kan {SÍG}mar[iḫšin parkunuwanzi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 27",
+"[nu-u]š-ši-kán {SÍG}ma-r[i-iḫ-ši-in pár-ku-nu-wa-an-zi]"
+]
+],
+"tr": "[und] von ihm die Fuss[eln(?) entfernen]",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 7",
+"hl": "",
+"master": "[n=a]t ḫarkišzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 28",
+"[na-a]t ⸢ḫar-ki⸣-iš-⸢zi⸣"
+]
+],
+"tr": "[und e]s weiß wird,",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 7",
+"hl": "",
+"master": "[kēl=ma a]ntuḫš[aš idālu inan DINGIR{MEŠ} NÍ.TE-az arḫa] QĀTAMMA parku[nuwandu]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 28",
+"[ke-e-el-ma a]n-tu-uḫ-š[a-aš] [i-da-a-lu i-na-an DINGIR{MEŠ} NÍ.TE-az ar-ḫa] QA-TAM-MA pár-ku[-nu-wa-an-du] ¬¬¬"
+],
+[
+"B",
+"Vs. I 1'",
+"x x x [ … ] ¬¬¬"
+]
+],
+"tr": "[so sollen die Götter die böse inan-Krankheit dieses M]ensch[en aus dem Körper] ebenso [ent]fern[en]!",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 8",
+"hl": "",
+"master": "{D}Zarnizaš {D}Tarpattaššiš lē=war=[uš] namma zaḫḫiškiši17",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 30",
+"[{D}Za-ar-ni-za-aš {D}Tar-pa-at-ta-aš]-ši-iš le-e-wa-r[u-uš] [ … ]"
+],
+[
+"B",
+"Vs. I 2'",
+"{D}Za-ar-ni-z[a-aš {D}Ta]r-pa-at-t[a- … ] nam-ma za-aḫ-ḫi-iš-ki-ši"
+]
+],
+"tr": "Zarniza, Tarpatassa: Bekämpfe [sie] nicht länger!",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 8",
+"hl": "",
+"master": "it=wa=za kūn {GIŠ}ta[rzun] namma zaḫḫiški",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 31",
+"[i]t-wa-za ku-u-un {GIŠ}ta[r-zu-un] [nam-ma za-aḫ-ḫi-iš-ki]"
+],
+[
+"B",
+"Vs. I 3'",
+"i-⸢it⸣-w[a … ] ⸢nam-ma⸣ za-aḫ-ḫi-iš-ki"
+]
+],
+"tr": "Geh, bekämpfe fortan diesen Sicher[ungsriegel]!",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 8",
+"hl": "",
+"master": "nu=wa=šmaš idālu katt[an arḫa] nanni",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 32",
+"[nu-wa-aš-]ma-aš i-da-a-lu kat-t[a-an ar-ḫa] [n]a-an-ni ¬¬¬"
+],
+[
+"B",
+"Vs. I 4'",
+"nu-wa-aš-ma-aš ḪU[L-… ] na-an-ni ¬¬¬"
+]
+],
+"tr": "[Und] das Böse [t]reibe von [i]hnen da[mit fort]!“",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 9",
+"hl": "",
+"master": "[nu]=ššan NAGGA tepu {SÍG}ištaggai anda ḫūlāliēzzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 34",
+"[nu-u]š-⸢ša⸣-[an … te-p]u {SÍG}iš-tág-ga-i an-da ḫu-u-⸢la-a-li-e⸣-ez-zi"
+],
+[
+"B",
+"Vs. I 6'",
+"[nu-uš-š]a-an NAGGA te-pu {SÍG}iš-tág-ga-⸢i⸣ [ … ]"
+]
+],
+"tr": "[Und] sie wickelt in eine Bogensehne ein wenig Zinn ein",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§ 9",
+"hl": "",
+"master": "[n]=at=šan ANA {LÚ.MEŠ}EN-TIM kunni ANA QĀTĪ=ŠU [GÌ]R=ŠU nāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 35",
+"[n]a-at!-š[a-an … {LÚ.MEŠ}]⸢EN⸣-TIM ku-un-ni A-NA QA-TI-ŠU [GÌ]R-ŠU na-a-i ¬¬¬"
+],
+[
+"B",
+"Vs. I 7'",
+"[na-a]t-ša-an A-NA BE-LU-TIM ku-u-un-[ni … ] ¬¬¬"
+]
+],
+"tr": "[u]nd windet es den Herren rechts um ihre Hände und ihre [Fü]ße.2",
+"trlang": "DE"
+},
+{
+"n": "36",
+"sec": "§ 10",
+"hl": "",
+"master": "[n]amma=at=šmaš=at=kan arḫa dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 37",
+"[n]am-ma-at-⸢ša⸣-[ma-ša-at-kán d]a-a-i"
+],
+[
+"B",
+"Vs. I 8'",
+"[nam-ma]-at-ša-ma-ša-at-kán ar-ḫa da-[a-i]"
+]
+],
+"tr": "[D]ann nimmt sie es von ih[nen weg]",
+"trlang": "DE"
+},
+{
+"n": "37",
+"sec": "§ 10",
+"hl": "",
+"master": "n=at=kan [A]NA PÉŠ.TUR nāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 37",
+"na-at-kán [A]-NA PÉŠ.TUR n[a-a-i]"
+],
+[
+"B",
+"Vs. I 9'",
+"[A-NA P]ÉŠ.TUR da-a-i"
+]
+],
+"tr": "und win[det] (Text B: legt) es um eine Maus.",
+"trlang": "DE"
+},
+{
+"n": "38",
+"sec": "§ 10",
+"hl": "",
+"master": "arḫa=wa=šmaš=kan daḫḫun [i]dālu",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 38",
+"[ …-ká]n da-aḫ-ḫu-un [i]-da-a-lu"
+],
+[
+"B",
+"Vs. I 9'",
+"ar-ḫa-wa-aš-ma-aš-kán [ … ]"
+]
+],
+"tr": "„Ich habe das Böse von euch/ihnen weggenommen",
+"trlang": "DE"
+},
+{
+"n": "39",
+"sec": "§ 10",
+"hl": "",
+"master": "nu=war=at=kan ANA PÉŠ.TUR neḫḫun",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 39",
+"nu-wa-ra-[at-kán n]e-eḫ-ḫu-un"
+],
+[
+"B",
+"Vs. I 10'",
+"[nu-wa]-⸢ra⸣-at-kán A-NA PÉŠ.TUR ne-eḫ-ḫu-u[n]"
+]
+],
+"tr": "und habe es um eine Maus gewunden!",
+"trlang": "DE"
+},
+{
+"n": "40",
+"sec": "§ 10",
+"hl": "",
+"master": "[nu]=war=at kā[š PÉŠ.]TUR-aš pargauwaš ḪUR.SAG{ḪI.A}-aš ḫallūwaš ḫār[iyaš dalu]gauwaš KASKAL{ḪI.A}-aš pēdāu",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 40",
+"[nu]-wa-ra-at ka[-a-aš PÉŠ.TUR … Ḫ]UR.SAG{ḪI.A}-aš [ḫal-l]u-u-wa-aš ḫa-a-r[i-ia-aš … KASKAL]⸢{ḪI.A}⸣-aš pé-e-da-a-ú ¬¬¬"
+],
+[
+"B",
+"Vs. I 10'",
+"[ … ] [PÉŠ.]⸢TUR⸣-aš pár-ga-u-wa-aš ḪUR.SAG{MEŠ} ḫal-lu-wa-aš [ … ] [da-lu]-ga-u-wa-aš KASKAL-aš pé-e-da-[ú] ¬¬¬"
+]
+],
+"tr": "[Nun] soll dies[e Ma]us es über hohe Berge, durch [tie]fe Täl[er], auf [wei]ten Wegen forttragen!“",
+"trlang": "DE"
+},
+{
+"n": "41",
+"sec": "§ 11",
+"hl": "",
+"master": "[nu PÉ]Š.TUR arḫa tarnanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 42",
+"[nu PÉ]Š.TUR ⸢ar-ḫa⸣ t[ar-na-an-zi]"
+],
+[
+"B",
+"Vs. I 13'",
+"[nu PÉ]Š.TUR ar-ḫa tar-na-an-zi"
+]
+],
+"tr": "[Und] man lässt die [Ma]us los:",
+"trlang": "DE"
+},
+{
+"n": "42",
+"sec": "§ 11",
+"hl": "",
+"master": "{D}Zarn[izaš {D}]Tarpattaššiš [kū]n=za zik dā",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 42",
+"[{D}Za-ar-ni-za-aš {D}]⸢Tar-pa⸣-at-ta-aš-ši-iš [ku-u]-⸢un-za⸣ ⸢zi⸣-i[k … ]"
+],
+[
+"B",
+"Vs. I 13'",
+"{D}Za-ar-n[i-za-aš … ] [ … ] zi-ik da-a"
+]
+],
+"tr": "„Zarn[iza], Tarpatassa, [die]se nimm d[u] dir!",
+"trlang": "DE"
+},
+{
+"n": "43",
+"sec": "§ 11",
+"hl": "",
+"master": "adanna=ma=[tta dama]īn [pī]weni",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 43",
+"[ … da-ma-]⸢i-in⸣ [pí-i-]ú-e-ni"
+],
+[
+"B",
+"Vs. I 14'",
+"a-da-an-na-ma-a[t-ta … ] [pí-i-ú]-⸢e⸣-ni"
+]
+],
+"tr": "Zu essen aber[ geb]en wir [dir eine and]ere!“",
+"trlang": "DE"
+},
+{
+"n": "44",
+"sec": "§ 11",
+"hl": "",
+"master": "nu kuptar arḫa š[uḫḫāi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 44",
+"[ … šu-uḫ-ḫa-a-i] ¬¬¬"
+],
+[
+"B",
+"Vs. I 15'",
+"nu ku-up-tar ar-ḫa š[u-uḫ-ḫa-a-i] ¬¬¬"
+]
+],
+"tr": "Und den Abfall sch[üttet sie] fort.",
+"trlang": "DE"
+},
+{
+"n": "45",
+"sec": "§ 12",
+"hl": "",
+"master": "[nu na]mma damedani pēdi {GIŠ}la[ḫurnuzzi dāi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 45",
+"[nu na]m-ma da-m[e-da-ni pé-e-di {GIŠ}la-ḫur-nu-uz-zi da-a-i]"
+],
+[
+"B",
+"Vs. I 16'",
+"[nam-ma t]a-me-ta-ni pé-e-di {GIŠ}la-[ḫur-nu-uz-zi] [da-a-i]"
+]
+],
+"tr": "Außerdem [legt sie] an einem anderen Ort La[ub hin].",
+"trlang": "DE"
+},
+{
+"n": "46",
+"sec": "§ 12",
+"hl": "",
+"master": "[1] NINDA.GUR4.RA paršiya 1 NINDA.GUR4.RA [ … ]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 46",
+"[1 NIND]A.GUR4.RA [pár-ši-ia 1 NINDA.GUR4.RA … ]"
+],
+[
+"B",
+"Vs. I 17'",
+"[1] ⸢NINDA ⸣.GUR4.RA pár-ši-ia 1 NINDA.GUR4.R[A … ]"
+]
+],
+"tr": "[1] Dickbrot bricht sie, 1 Dickbro[t … ]?",
+"trlang": "DE"
+},
+{
+"n": "47",
+"sec": "§ 12",
+"hl": "",
+"master": "[ … ]an[ … ] … [ … ]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. I 47",
+"[ … ]⸢an⸣ [ … ] x x x [ … ] ¬¬¬"
+],
+[
+"B",
+"Vs. I 18'",
+"[ … ] x x x[ … ] ¬¬¬"
+]
+],
+"tr": "[ … ]",
+"trlang": "DE"
+},
+{
+"n": "48",
+"sec": "§ 13'",
+"hl": "",
+"master": "kuiēš peran [weḫ]anda",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 1",
+"ku-⸢i-e-eš⸣ pé-ra-an [ú-e-ḫ]a-an-da"
+]
+],
+"tr": "Die sich vorn [befind]en,",
+"trlang": "DE"
+},
+{
+"n": "49",
+"sec": "§ 13'",
+"hl": "",
+"master": "n=ašta apūš wereškiz[zi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 1",
+"na-aš-ta a-pu-u-⸢uš⸣ ú-e-re-eš-ki-iz-[zi]"
+]
+],
+"tr": "jene ruf[t] sie jeweils herbei.",
+"trlang": "DE"
+},
+{
+"n": "50",
+"sec": "§ 13'",
+"hl": "",
+"master": "[EGI]R-anda=ma {D}Alauwaimin [š]ipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 2",
+"[EGI]R-an-da-ma {D}A-la-u-wa-i-mi-in [š]i-pa-an-ti"
+]
+],
+"tr": "[Dan]ach aber opfert sie dem/r Alauwaima.",
+"trlang": "DE"
+},
+{
+"n": "51",
+"sec": "§ 13'",
+"hl": "",
+"master": "nu=šš[an] ḫulliš ANA {DUG}DÍLIM.GAL SA5 [d]āi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 3",
+"nu-uš-š[a-an] ⸢ḫu-ul⸣-li-iš A-NA {DUG}DÍLIM.GAL SA5 [da]-⸢a⸣-i"
+]
+],
+"tr": "Und sie [le]gt Wacholderholz(?) auf eine rote Schale.",
+"trlang": "DE"
+},
+{
+"n": "52",
+"sec": "§ 13'",
+"hl": "",
+"master": "šer=a=ššan ḫalkin kar(a)š išḫūwāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 4",
+"še-ra-aš-ša-an ⸢ḫal⸣-ki-in kar-aš iš-ḫu-u-wa-a-i"
+]
+],
+"tr": "Oben darauf aber schüttet sie Gerste und karš-Getreide",
+"trlang": "DE"
+},
+{
+"n": "53",
+"sec": "§ 13'",
+"hl": "",
+"master": "n=at=kan šanḫuwanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 5",
+"⸢na⸣-at-kán ša-an-ḫu-wa-an-zi"
+]
+],
+"tr": "Und man röstet es.",
+"trlang": "DE"
+},
+{
+"n": "54",
+"sec": "§ 13'",
+"hl": "",
+"master": "n=ašta ḫulliš witenit kištanuzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 5",
+"na-aš-ta ḫu-ul-li-iš ú-i-te-ni-it ki-iš-ta-nu-zi"
+]
+],
+"tr": "Und sie löscht das Wacholderholz(?) mit Wasser aus",
+"trlang": "DE"
+},
+{
+"n": "55",
+"sec": "§ 13'",
+"hl": "",
+"master": "nu memai",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 6",
+"nu me-ma-i"
+]
+],
+"tr": "und spricht:",
+"trlang": "DE"
+},
+{
+"n": "56",
+"sec": "§ 13'",
+"hl": "",
+"master": "maḫḫan=kan kī kištanunun",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 7",
+"ma-aḫ-ḫa-an-kán ki-i ki-iš-ta-nu-nu-un"
+]
+],
+"tr": "„Wie ich dieses ausgelöscht habe,",
+"trlang": "DE"
+},
+{
+"n": "57",
+"sec": "§ 13'",
+"hl": "",
+"master": "idālu=ya=kan ANA EN{MEŠ}-TIM šer QĀTAMMA kištaru",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 7",
+"i-da-a-lu-ia-kán A-NA EN{MEŠ}-TIM še-er QA-TAM-MA ki-iš-ta-ru ¬¬¬"
+]
+],
+"tr": "so soll auch ebenso das Böse über den Herren erlöschen!“",
+"trlang": "DE"
+},
+{
+"n": "58",
+"sec": "§ 14'",
+"hl": "",
+"master": "nu išnāš pūrpūriēš ḫūrtallenzi 1 {GIŠ}PAN ēzzaš nu=ššan {SÍG}ištaggaš ḫuittiyanza",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 9",
+"nu iš-na-a-aš pu-u-ur-pu-u-ri-e-eš ḫu-u-ur-ta-al-li-en-zi 1 {GIŠ}PAN e-ez-za-aš nu-uš-ša-an {SÍG}iš-tág-ga-aš ḫu-it-ti-ia-an-za"
+]
+],
+"tr": "Und Kugeln und Gemengsel aus Teig, 1 Bogen aus Rohr und davor/darüber ist eine Bogensehne gespannt.",
+"trlang": "DE"
+},
+{
+"n": "59",
+"sec": "§ 14'",
+"hl": "",
+"master": "3 GI{ḪI.A} ēzzaš perann=a=ššan išnaš pūrpūrīēš {GIŠ}ḫattalu {GIŠ}tarzuwān peran=ma=ššan {KUŠ}šālaš ḫaminkanza",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 11",
+"3 GI{ḪI.A} e-ez-za-aš pé-ra-an-na-aš-ša-an iš-na-aš pu-u-ur-pu-u-ri-i-e-eš {GIŠ}ḫa-at-ta-lu {GIŠ}!tar-zu-wa-a-an pé-ra-an-ma-aš-ša-an {KUŠ}ša-a-la-aš ḫa-mi-in-kán-za"
+]
+],
+"tr": "3 Pfeile aus Rohr und davor die Kugeln aus Teig, ein Querbalkenriegel, ein Sicherungsriegel, davor aber ist ein šāla-Lederriemen befestigt.",
+"trlang": "DE"
+},
+{
+"n": "60",
+"sec": "§ 14'",
+"hl": "",
+"master": "nu=ššan kī ḫūman {GI}paddanī dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 13",
+"nu-uš-ša-an ki-i ḫu-u-ma-an {GI}pád-da-ni-i da-a-i ¬¬¬"
+]
+],
+"tr": "Und dies alles legt sie in den Korb.",
+"trlang": "DE"
+},
+{
+"n": "61",
+"sec": "§ 15'",
+"hl": "",
+"master": "nu=za SÍG ašaran dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 15",
+"nu-za SÍG a-ša-ra-an da-a-i"
+]
+],
+"tr": "Und sie nimmt sich weiße Wolle",
+"trlang": "DE"
+},
+{
+"n": "62",
+"sec": "§ 15'",
+"hl": "",
+"master": "n=an=šan ANA BĒLŪTI IŠTU GÌR{MEŠ}=ŠUNU ANA SAG.DU=ŠU kēz kēzziya [ḫ]uittiyai",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 15",
+"na-an-ša-an A-NA BE-LU-TI IŠ-TU GÌR{MEŠ}-ŠU-NU A-NA SAG.⸢DU⸣-ŠU ke-e-ez ke-e-ez-zi-ia [ḫ]u-⸢it⸣-ti-ia-i"
+]
+],
+"tr": "und sie [z]ieht sie den Herren von ihren Füßen zu ihren Köpfen3 von dieser Seite und jener Seite hinauf,",
+"trlang": "DE"
+},
+{
+"n": "63",
+"sec": "§ 15'",
+"hl": "",
+"master": "EGIR-an katta=ya=šmaš=kan iškišaz [ḫ]uittiyai",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 17",
+"EGIR-an kat-ta-i[a-]⸢aš-ma⸣-aš-kán iš-ki-ša-az [ḫ]u-it-ti-ia-i"
+]
+],
+"tr": "Und hinten [z]ieht sie sie ihnen vom Rücken her hinab.",
+"trlang": "DE"
+},
+{
+"n": "64",
+"sec": "§ 15'",
+"hl": "",
+"master": "nu=šmaš=a[t=ka]n arḫa dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 18",
+"nu-uš-ma-ša-a[t-ká]n ar-ḫa da-a-i"
+]
+],
+"tr": "Und sie/er nimmt si[e] von ihnen weg",
+"trlang": "DE"
+},
+{
+"n": "65",
+"sec": "§ 15'",
+"hl": "",
+"master": "[n]a=at=šan ANA {GI}paddan[ī] dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 19",
+"[n]a-at-⸢ša⸣-an A-NA {GI}pád-da-n[i-i] da-a-i ¬¬¬"
+]
+],
+"tr": "und legt sie in den Korb.",
+"trlang": "DE"
+},
+{
+"n": "66",
+"sec": "§ 16'",
+"hl": "",
+"master": "[a]rḫa=ši=ka[n] idālu ḫuitt[iy]aššar ḫuittiya [I]ŠTU SAG.[DU=ŠU? Š]U?{MEŠ}=[Š]U [GÌR?{MEŠ}?]=ŠU",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 20",
+"[a]r-ḫa-ši-ká[n] ⸢i-da-a-lu⸣ ḫu-it-t[i-ia-]⸢aš⸣-šar ḫu-it-ti-ia [I]Š-TU SAG.[DU-ŠU? Š]U?⸢{MEŠ}⸣-[Š]U [GÌR?{MEŠ}?]-ŠU"
+]
+],
+"tr": "„Aus ihm [he]raus zieh[e] das böse Zie[he]n, [a]us [seinem?] Ko[pf?, sei]nen [Hä]nden, seinen [Füßen?],",
+"trlang": "DE"
+},
+{
+"n": "67",
+"sec": "§ 16'",
+"hl": "",
+"master": "n=at idāl[auwaš UN]{MEŠ} ḫarpanall[iyaš] peški",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 21",
+"na-at i-da-a-l[a-u-wa-aš18] [UN]⸢{MEŠ}⸣ ⸢ḫar-pa-na-al⸣-l[i-ia-aš] ⸢pé-eš-ki⸣"
+]
+],
+"tr": "und gib es den bös[en Mensch]en, den Fein[den]!",
+"trlang": "DE"
+},
+{
+"n": "68",
+"sec": "§ 16'",
+"hl": "",
+"master": "ANA EN{MEŠ}[ ... T]I-tar innarawatar MU{ḪI.A} GÍD.DA piški",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 22",
+"⸢A-NA EN{MEŠ}⸣-[ _ _ ]19 [T]I-⸢tar in⸣-na-ra-⸢wa-tar MU⸣{ḪI.A} GÍD.DA pí-⸢iš-ki⸣"
+]
+],
+"tr": "Den Herr[en aber] gib [L]eben, Kraft, lange Jahre!“",
+"trlang": "DE"
+},
+{
+"n": "69",
+"sec": "§ 16'",
+"hl": "",
+"master": "[{SÍG}i]štaggann=a QĀTAMMA iyazi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 24",
+"[{SÍG}i]š-tág-ga-an-na QA-⸢TAM-MA⸣ i-ia-zi"
+]
+],
+"tr": "Und mit der Bogensehne verfährt sie ebenso",
+"trlang": "DE"
+},
+{
+"n": "70",
+"sec": "§ 16'",
+"hl": "",
+"master": "memai=a QĀTAMMA=pat",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 24",
+"me-ma-ia QA-TAM-MA-pát ¬¬¬"
+]
+],
+"tr": "und spricht in eben derselben Weise.",
+"trlang": "DE"
+},
+{
+"n": "71",
+"sec": "§ 17'",
+"hl": "",
+"master": "[nu nam]ma GADA-an QĀTAMMA iyazi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 25",
+"[nu nam-]ma GADA-an QA-TAM-MA i-ia-zi"
+]
+],
+"tr": "[Und da]nn verfährt sie mit dem Leinentuch ebenso",
+"trlang": "DE"
+},
+{
+"n": "72",
+"sec": "§ 17'",
+"hl": "",
+"master": "nu memai",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 25",
+"nu me-ma-i"
+]
+],
+"tr": "und spricht:",
+"trlang": "DE"
+},
+{
+"n": "73",
+"sec": "§ 17'",
+"hl": "",
+"master": "[kī=ka]n GADA-an maḫḫan {LÚMEŠ}ÁZLAG tannaran [anniy]anzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 26",
+"[ki-i-ká]n GADA-an ma-aḫ-ḫa-an {LÚ.MEŠ}ÁZLAG ta-an-na-ra-an [an-ni-ia]-an-zi"
+]
+],
+"tr": "„Wie die Wäscher [dieses] Leinentuch [säuber]n",
+"trlang": "DE"
+},
+{
+"n": "74",
+"sec": "§ 17'",
+"hl": "",
+"master": "nu=šši=kan {SÍG}mariḫšin [arḫa?] parkunuwanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 27",
+"nu-uš-ši-kán {SÍG}ma-ri-iḫ-ši-in [ar-ḫa?] pár-ku-nu-wa-an-zi"
+]
+],
+"tr": "und die Fusseln(?) von ihm [ent]fernen",
+"trlang": "DE"
+},
+{
+"n": "75",
+"sec": "§ 17'",
+"hl": "",
+"master": "n=at ḫarkišzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 28",
+"na-at ḫar-ki-iš-zi"
+]
+],
+"tr": "und es weiß wird,",
+"trlang": "DE"
+},
+{
+"n": "76",
+"sec": "§ 17'",
+"hl": "",
+"master": "[kē]l=ma antuḫšaš idālu inan DINGIR{MEŠ} [NÍ.T]E-az arḫa QĀTAMMA parkunuwandu",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 29",
+"[ke-e-e]l-ma an-tu-uḫ-ša-aš i-da-a-lu i-na-an DINGIR{MEŠ} [NÍ.T]E-az ar-ḫa QA-TAM-MA pár-ku-nu-wa-an-du ¬¬¬"
+]
+],
+"tr": "so sollen ebenso die Götter die böse inan-Krankheit [diese]s Menschen aus dem [Körp]er entfernen!“",
+"trlang": "DE"
+},
+{
+"n": "77",
+"sec": "§ 18'",
+"hl": "",
+"master": "[{D}Al]auwaimi lē=aš namma zaḫḫiškiši",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 31",
+"[{D}A-l]a-u-wa-i-mi le-e-aš nam-ma za-aḫ-ḫi-iš-ki-ši"
+]
+],
+"tr": "[„Al]auwaima, bekämpfe sie nicht länger!",
+"trlang": "DE"
+},
+{
+"n": "78",
+"sec": "§ 18'",
+"hl": "",
+"master": "[it=z]a kūn {GIŠ}tarzun namma zaḫḫiški",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 32",
+"[i-it-z]a ku-u-un {GIŠ}tar-zu-un nam-ma za-aḫ-ḫi-iš-ki"
+]
+],
+"tr": "[Geh,] bekämpfe fortan diesen Sicherungsriegel!",
+"trlang": "DE"
+},
+{
+"n": "79",
+"sec": "§ 18'",
+"hl": "",
+"master": "nu=wa=šmaš idālu kattan arḫa nanni",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 33",
+"⸢nu-wa-aš⸣-ma-aš i-da-a-lu kat-ta-an ar-ḫa na-an-ni ¬¬¬"
+]
+],
+"tr": "Und treibe das Böse damit von ihnen fort!“",
+"trlang": "DE"
+},
+{
+"n": "80",
+"sec": "§ 19'",
+"hl": "",
+"master": "nu=ššan NAGGA tepu {SÍG}ištaggai anda ḫūlalīēzzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 34",
+"⸢nu-uš-ša⸣-an NAGGA te-pu {SÍG}iš-tág-ga-i an-da ḫu-u-la-li-i-e-ez-zi"
+]
+],
+"tr": "Und sie wickelt ein wenig Zinn in eine Bogensehne ein",
+"trlang": "DE"
+},
+{
+"n": "81",
+"sec": "§ 19'",
+"hl": "",
+"master": "n=at=šan ANA BĒLŪTIM kunni ANA QĀTĪ=ŠU GÌR=ŠU nāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 35",
+"na-at-ša-an A-NA BE-LU-TIM ku-un-ni A-NA QA-TI-ŠU GÌR-ŠU na-a-i ¬¬¬"
+]
+],
+"tr": "und windet es den Herren rechts um ihre Hände und ihre Füße.",
+"trlang": "DE"
+},
+{
+"n": "82",
+"sec": "§ 20'",
+"hl": "",
+"master": "namma=at=šmaš=at=kan arḫa dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 36",
+"nam-ma-at-ša-ma-ša-at-kán ar-ḫa da-a-i"
+]
+],
+"tr": "Dann nimmt sie es von ihnen weg",
+"trlang": "DE"
+},
+{
+"n": "83",
+"sec": "§ 20'",
+"hl": "",
+"master": "n=at=kan ANA PÉŠ.TUR nāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 37",
+"na-at-kán A-NA PÉŠ.TUR na-a-i"
+]
+],
+"tr": "und windet es um eine Maus:",
+"trlang": "DE"
+},
+{
+"n": "84",
+"sec": "§ 20'",
+"hl": "",
+"master": "arḫa=wa=šmaš=kan daḫḫun idālu",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 37",
+"ar-ḫa-wa-aš-ma-aš-kán da-aḫ-ḫu-un i-da-a-lu"
+]
+],
+"tr": "„Von euch/ihnen habe ich das Böse weggenommen",
+"trlang": "DE"
+},
+{
+"n": "85",
+"sec": "§ 20'",
+"hl": "",
+"master": "nu=war=at=kan ANA PÉŠ.TUR neḫḫun",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 38",
+"nu-wa-ra-at-kán A-NA PÉŠ.TUR ne-eḫ-ḫu-un"
+]
+],
+"tr": "und habe es um eine Maus gewunden.",
+"trlang": "DE"
+},
+{
+"n": "86",
+"sec": "§ 20'",
+"hl": "",
+"master": "nu=war=at kāš PÉŠ.TUR pargauwaš ḪUR.SAG{MEŠ}-aš ḫallūwāš ḫāriyaš (Ras.) dālugauwaš KASKAL{ḪI.A}-aš pēdāu",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 39",
+"nu-wa-ra-at ka-a-aš PÉŠ.TUR pár-ga-u-wa-aš ḪUR.SAG{MEŠ}-aš ḫal-lu-u-wa-a-aš ḫa-a-ri-ia-aš (Ras.) da-a-lu-ga-u-wa-aš KASKAL{ḪI.A}-aš pé-e-da-a-ú ¬¬¬"
+]
+],
+"tr": "Nun soll diese Maus es über hohe Berge, durch tiefe Täler, auf weiten Wegen forttragen!“",
+"trlang": "DE"
+},
+{
+"n": "87",
+"sec": "§ 21'",
+"hl": "",
+"master": "nu PÉŠ.TUR arḫa tarnāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 41",
+"nu PÉŠ.TUR ar-ḫa tar-na-a-i"
+]
+],
+"tr": "Und sie lässt die Maus los.",
+"trlang": "DE"
+},
+{
+"n": "88",
+"sec": "§ 21'",
+"hl": "",
+"master": "{D}Alauwaimi kūn=za zik penni",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 41",
+"{D}A-la-u-wa-i-mi ku-u-un-za ⸢zi⸣-ik pé-en-ni"
+]
+],
+"tr": "„Alauwaima, diese lasse du hinwegziehen!",
+"trlang": "DE"
+},
+{
+"n": "89",
+"sec": "§ 21'",
+"hl": "",
+"master": "adanna=ma=tta UZ6-an peḫḫi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 42",
+"a-da-an-na-ma-at-ta UZ6-an pé-eḫ-ḫi ¬¬¬"
+]
+],
+"tr": "Zu essen aber gebe ich dir eine Ziege!“",
+"trlang": "DE"
+},
+{
+"n": "90",
+"sec": "§ 22'",
+"hl": "",
+"master": "nu GIŠ-ruwaš {GIŠ}laḫurnuzi dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 43",
+"nu GIŠ-ru-wa-aš {GIŠ}la-ḫur-nu-zi da-a-i"
+]
+],
+"tr": "Und sie legt Laub von Bäumen hin",
+"trlang": "DE"
+},
+{
+"n": "91",
+"sec": "§ 22'",
+"hl": "",
+"master": "nu 1 NINDA.GUR4.RA GÍD.DA {D}Alauwaimaš DINGIR.LÚ{MEŠ}-aš paršiya",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 43",
+"nu 1 NINDA.GUR4.RA GÍD.DA {D}A-la-u-wa-i-ma-aš DINGIR.LÚ{MEŠ}-aš pár-ši-ia"
+]
+],
+"tr": "und bricht 1 langes Dickbrot den männlichen Göttern des/r Alauwaima.",
+"trlang": "DE"
+},
+{
+"n": "92",
+"sec": "§ 22'",
+"hl": "",
+"master": "1 NINDA.GUR4.RA {D}Alauwaimi paršiya",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 44",
+"1 NINDA.GUR4.RA {D}A-la-u-wa-i-mi pár-ši-ia"
+]
+],
+"tr": "1 Dickbrot bricht sie für Alauwaima,",
+"trlang": "DE"
+},
+{
+"n": "93",
+"sec": "§ 22'",
+"hl": "",
+"master": "1 NINDA.GUR4.RA {D}Mammai paršiya",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 45",
+"1 NINDA.GUR4.RA {D}Ma-am-ma-i pár-ši-ia"
+]
+],
+"tr": "1 Dickbrot bricht sie für Mamma.",
+"trlang": "DE"
+},
+{
+"n": "94",
+"sec": "§ 22'",
+"hl": "",
+"master": "n=an=šan {GIŠ}laḫurnuzziyaš dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 46",
+"na-an-ša-an {GIŠ}la-ḫur-nu-uz-zi-ia-aš da-⸢a-i⸣ ¬¬¬"
+],
+[
+"C",
+"r.Kol. 2'",
+"⸢PA-NI⸣ {UZ[}U … ] ¬¬¬"
+]
+],
+"tr": "Und sie legt es auf das Laub.",
+"trlang": "DE"
+},
+{
+"n": "95",
+"sec": "§ 23'",
+"hl": "",
+"master": "n=ašta UZ6 {D}Alauwaimi šipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 47",
+"na-aš-ta UZ6 {D}A-la-u-wa-i-mi ši-pa-an-ti"
+],
+[
+"C",
+"r.Kol. 3'",
+"na-aš-ta [ … ]"
+]
+],
+"tr": "Und dann opfert sie die Ziege für Alauwaima.",
+"trlang": "DE"
+},
+{
+"n": "96",
+"sec": "§ 23'",
+"hl": "",
+"master": "zik ēt",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 47",
+"zi-ik e-et"
+],
+[
+"C",
+"r.Kol. 3'",
+"[ … ]"
+]
+],
+"tr": "„Du, iss!“",
+"trlang": "DE"
+},
+{
+"n": "97",
+"sec": "§ 23'",
+"hl": "",
+"master": "n=an PĀNI NINDA.GUR4.RA{ḪI.A} ḫattai",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 48",
+"⸢na-an PA-NI⸣ NINDA.GUR4.RA{ḪI.A} ḫa-at-ta-i"
+],
+[
+"C",
+"r.Kol. 4'",
+"na-an PA-N[I … ]"
+]
+],
+"tr": "Und vor den Dickbroten sticht sie sie ab.",
+"trlang": "DE"
+},
+{
+"n": "98",
+"sec": "§ 23'",
+"hl": "",
+"master": "n=ašta ZAG-an {UZU}GEŠTU-an arḫa kuērzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 48",
+"na-aš-ta ZAG-an [{U]}Z[UGEŠT]U-⸢an⸣ ar-ḫa ku-e-er-zi"
+],
+[
+"C",
+"r.Kol. 4'",
+"[ … ] {UZU}GEŠTU a[r-… ]"
+]
+],
+"tr": "Und sie schneidet das rechte Ohr ab",
+"trlang": "DE"
+},
+{
+"n": "99",
+"sec": "§ 23'",
+"hl": "",
+"master": "n=at zanuzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 49",
+"na-at za-nu-zi"
+],
+[
+"C",
+"r.Kol. 5'",
+"[ … ]"
+]
+],
+"tr": "und kocht es.",
+"trlang": "DE"
+},
+{
+"n": "100",
+"sec": "§ 23'",
+"hl": "",
+"master": "n=at ANA NINDA.GUR4.RA{ḪI.A} AŠAR 2-ŠU dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 50",
+"[na-at A-N]A NINDA.GUR4.RA{ḪI.A} A-ŠAR 2-ŠU da-a-i"
+],
+[
+"C",
+"r.Kol. 6'",
+"na-at A-NA [ … ]"
+]
+],
+"tr": "Und an einem anderen Ort legt sie es auf Dickbrote.",
+"trlang": "DE"
+},
+{
+"n": "101",
+"sec": "§ 23'",
+"hl": "",
+"master": "{UZU}NÍG.GIG QĀTAMMA šipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 50",
+"{UZU}NÍG.GIG QA-TAM-MA ši-pa-an-ti ¬¬¬"
+],
+[
+"C",
+"r.Kol. 6'",
+"[ … ] ⸢QA-TAM-MA⸣ š[i- … ] ¬¬¬"
+]
+],
+"tr": "Die Leber opfert sie ebenso.",
+"trlang": "DE"
+},
+{
+"n": "102",
+"sec": "§ 24'",
+"hl": "",
+"master": "ZAG-an{UZU}ZAG.UDU zanuwanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 51",
+"[ … Z]AG.UDU za-nu-wa-an-zi"
+],
+[
+"C",
+"r.Kol. 8'",
+"⸢ZAG-an⸣⸢ {UZU}⸣ZAG.[UDU … ]"
+]
+],
+"tr": "Die rechte Schulter kocht man.",
+"trlang": "DE"
+},
+{
+"n": "103",
+"sec": "§ 24'",
+"hl": "",
+"master": "nu {UZU}QĀTAM DINGIR.LÚ{MEŠ}-aš dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 51",
+"nu {UZU}QA-TAM DINGIR.LÚ{MEŠ}-aš da-a-i"
+],
+[
+"C",
+"r.Kol. 8'",
+"[ … ]20"
+]
+],
+"tr": "Und den Huf legt sie den männlichen Göttern hin.",
+"trlang": "DE"
+},
+{
+"n": "104",
+"sec": "§ 24'",
+"hl": "",
+"master": "{UZU}muḫrain=ma {D}Alauwaimi dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 52",
+"[{UZU} mu-uḫ-ra-i]n-ma {D}A-la-u-⸢wa⸣-i-mi da-a-i"
+],
+[
+"C",
+"r.Kol. 9'",
+"{UZU}⸢mu-uḫ⸣-ra-in [ … ]"
+]
+],
+"tr": "den muḫrai-Körperteil aber legt sie Alauwaima hin.",
+"trlang": "DE"
+},
+{
+"n": "105",
+"sec": "§ 24'",
+"hl": "",
+"master": "{UZU}MAŠ.SÌL {D}Mammai dāi21",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 53",
+"[ ̣… {D}M]a-am-ma-i da-a-i"
+],
+[
+"C",
+"r.Kol. 9'",
+"[ … ] {D}Ma-am-ma-i d[a- … ]"
+]
+],
+"tr": "Die Hüfte legt sie Mamma hin.",
+"trlang": "DE"
+},
+{
+"n": "106",
+"sec": "§ 24'",
+"hl": "",
+"master": "namma šipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 53",
+"nam-ma ši-pa-an-ti ¬¬¬"
+],
+[
+"C",
+"r.Kol. 10'",
+"[ … ] ¬¬¬"
+]
+],
+"tr": "Außerdem libiert sie.",
+"trlang": "DE"
+},
+{
+"n": "107",
+"sec": "§ 25'",
+"hl": "",
+"master": "GÙB-lan {UZU}ZAG.[U]DU QĀTAMMA šipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 54",
+"[… {UZU}ZAG.U]DU QA-TAM-MA ši-pa-an-ti"
+],
+[
+"C",
+"r.Kol. 11'",
+"GÙB-la-an {UZU}ZAG.[UDU … ]"
+]
+],
+"tr": "Die linke Schulter opfert sie ebenso.",
+"trlang": "DE"
+},
+{
+"n": "108",
+"sec": "§ 25'",
+"hl": "",
+"master": "1 {UZU}KURŠINNU ZAG-an ḫantezzin DINGIR.LÚ{MEŠ}-aš dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 54",
+"1 {UZU}KUR-ŠI-IN-NU [ … ḫa-an-te-ez]-zi-in DINGIR.LÚ{MEŠ}-aš da-a-i"
+],
+[
+"C",
+"r.Kol. 11'",
+"[ … ] ZAG-an ḫa-an-te-e[z-… ]"
+]
+],
+"tr": "1 Fußknöchel, (nämlich) den rechten vorderen, legt sie den männlichen Göttern hin",
+"trlang": "DE"
+},
+{
+"n": "109",
+"sec": "§ 25'",
+"hl": "",
+"master": "½ SAG.DU {UZU}GABA ⸢{UZU}⸣šarḫūwantan [ … ] dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 55",
+"½ SAG.DU [ … ] ⸢{UZU}⸣šar-ḫu-u-wa-an-ta-an [ … ] da-a-i"
+],
+[
+"C",
+"r.Kol. 12'",
+"[ … ] {UZU}GABA {UZU}š[ar-… ] xxx[ … ]"
+]
+],
+"tr": "Eine Hälfte des Kopfes, die Brust, das Leibesinnere, [ … ] legt sie hin",
+"trlang": "DE"
+},
+{
+"n": "110",
+"sec": "§ 25'",
+"hl": "",
+"master": "nu šipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 57",
+"nu ši-pa-an-ti ¬¬¬"
+]
+],
+"tr": "und sie opfert.",
+"trlang": "DE"
+},
+{
+"n": "111",
+"sec": "§ 26'",
+"hl": "",
+"master": "[ … -a]n IŠTU URUDU.NAG zanuwanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 58",
+"[ _ _ _-a]n IŠ-TU URUDU.NAG za-nu-wa-an-zi"
+]
+],
+"tr": "[ … ] kocht man in einem Kupfergefäß.",
+"trlang": "DE"
+},
+{
+"n": "112",
+"sec": "§ 26'",
+"hl": "",
+"master": "[nu adanz]i akuwanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 59",
+"[nu a-da-an-z]i a-ku-wa-an-zi"
+]
+],
+"tr": "[Und man iss]t und trinkt.",
+"trlang": "DE"
+},
+{
+"n": "113",
+"sec": "§ 26'",
+"hl": "",
+"master": "namma KÙ.BABBAR GUŠKIN [{NA4}ZA.GÌN {NA4}]GUG {NA4}KÁ.DINGIR.RA {NA4}lullūri {NA4}TI [{NA4}barašḫ]aš AN.BAR NAGGA URUDU ZABAR [kuitta] tepu šuḫḫāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 59",
+"nam-ma KÙ.BABBAR GUŠKIN [{NA4}ZA.GÌN {NA4}]GUG {NA4}KÁ.DINGIR.⸢RA {NA4}⸣lu-ul-lu-u-ri {NA4}TI [{NA4}ba-ra-aš-ḫ]a-aš AN.BAR NAGGA URUDU ZABAR [ku-it-ta] te-pu šu-uḫ-ḫa-a-i ¬¬¬"
+]
+],
+"tr": "Dann schüttet sie Silber, Gold, [Blaustein], Karneol, Babylonstein, lulluri-Stein, Lebensstein, [barašḫ]a-[Stein], Eisen, Zinn, Kupfer, Bronze – [von allem] ein wenig – hin.",
+"trlang": "DE"
+},
+{
+"n": "114",
+"sec": "§ 27'",
+"hl": "",
+"master": "[{D}Alauwai]mi kāša=tta KÙ.BABBAR GUŠKIN {NA4}ZA.GÌN [peḫḫun]",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 63",
+"[{D}A-la-u-wa-i]-mi ka!-a-ša-at-ta KÙ.BABBAR GUŠKIN {NA4}ZA.GÌN [pé-eḫ-ḫu-un]"
+]
+],
+"tr": "„[Alauwai]ma! Soeben [habe ich] dir Silber, Gold, Blaustein [gegeben]!",
+"trlang": "DE"
+},
+{
+"n": "115",
+"sec": "§ 27'",
+"hl": "",
+"master": "zik=mu īt",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 64",
+"zi-ik-mu i-it"
+]
+],
+"tr": "Geh du nun",
+"trlang": "DE"
+},
+{
+"n": "116",
+"sec": "§ 27'",
+"hl": "",
+"master": "PĀNI DINGIR{MEŠ} aššu memiški",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 64",
+"PA-NI DINGIR{MEŠ} a-aš-šu me-mi-iš-ki ¬¬¬"
+]
+],
+"tr": "und sprich fortan vor den Göttern Gutes für mich!“",
+"trlang": "DE"
+},
+{
+"n": "117",
+"sec": "§ 28'",
+"hl": "",
+"master": "[ … ]-iauwar pāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 65",
+"[ _ _-i]a-u-wa-ar pa-a-i"
+]
+],
+"tr": "„Und [ … ] gib,",
+"trlang": "DE"
+},
+{
+"n": "118",
+"sec": "§ 28'",
+"hl": "",
+"master": "IGI{ḪI.A}-aš=mu uwātar pāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 65",
+"IGI{ḪI.A}-aš-mu ú-wa-a-tar pa-a-i"
+]
+],
+"tr": "meinen Augen gib Sehkraft!",
+"trlang": "DE"
+},
+{
+"n": "119",
+"sec": "§ 28'",
+"hl": "",
+"master": "[m]ān peran idālu damaiš [mem]ai",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 66",
+"[ma]-⸢a⸣-an pé-ra-an i-da-a-lu da-ma-iš [me-m]a-i"
+]
+],
+"tr": "[W]enn auch zuvor ein anderer Böses [gespr]ochen hat/[gesprochen haben soll]te –",
+"trlang": "DE"
+},
+{
+"n": "120",
+"sec": "§ 28'",
+"hl": "",
+"master": "zig=az daššuš kuit",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 67",
+"zi-ga-az da-⸢aš⸣-šu-uš? ku-it"
+]
+],
+"tr": "weil du mächtig bist,",
+"trlang": "DE"
+},
+{
+"n": "121",
+"sec": "§ 28'",
+"hl": "",
+"master": "[nu=mu=]kan ḫūmandaš DINGIR{MEŠ}-aš [peran] āššu memiški",
+"words": [],
+"mss": [
+[
+"A2",
+"Vs. II 68",
+"[nu-mu]-kán ḫu-u-ma-an-da-aš DINGIR{MEŠ}-aš [pé-ra-an] ⸢a⸣-aš-šu me-mi-iš-ki ==="
+]
+],
+"tr": "sprich Gutes [für mich vor] allen Göttern!“",
+"trlang": "DE"
+},
+{
+"n": "122",
+"sec": "§ 29'",
+"hl": "",
+"master": "[{D}Tarpattaš]šiš kuiš peran w[eḫatta]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 1",
+"[{D}Tar-pa-at-ta-aš]-⸢ši⸣-iš ku-iš pé-⸢ra-an ú⸣[-e-ḫa-at-ta]"
+]
+],
+"tr": "[Taparta]ssa, der sich/du dich vorn befi[ndet]/befi[ndest]",
+"trlang": "DE"
+},
+{
+"n": "123",
+"sec": "§ 29'",
+"hl": "",
+"master": "[ … pa]rkunumar QĀTAMMA=p[at … ]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 2",
+"[ … pá]r-ku-nu-mar QA-TAM-MA-p[át … ]"
+]
+],
+"tr": "[ … Rei]nigung in eb[en] derselben Weise [ … ]",
+"trlang": "DE"
+},
+{
+"n": "124",
+"sec": "§ 29'",
+"hl": "",
+"master": "[ … ad]anna?=ya QĀTAMMA=pat dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 3",
+"[ … a?-d]a?-an-na-ia QA-TAM-MA-pát da-a-i"
+]
+],
+"tr": "[ … ] und zu [es]sen? stellt sie in eben derselben Weise",
+"trlang": "DE"
+},
+{
+"n": "125",
+"sec": "§ 29'",
+"hl": "",
+"master": "[ … ] UL pēdai",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 4",
+"[ … ] Ú-UL pé-e-da-i ¬¬¬"
+]
+],
+"tr": "[ … ] schafft sie nicht hin.",
+"trlang": "DE"
+},
+{
+"n": "126",
+"sec": "§ 30'",
+"hl": "",
+"master": "[ … 22 ku]iš peran weḫatta",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 5",
+"[ … ku]-iš pé-ra-an ú-e-ḫa-at-ta"
+]
+],
+"tr": "[ …(dem?) Tarpatassa, de]r sich/du dich vorn befinde(s)t,",
+"trlang": "DE"
+},
+{
+"n": "127",
+"sec": "§ 30'",
+"hl": "",
+"master": "[ … ] šipantaḫḫi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 6",
+"[ … ] ši-pa-an-taḫ-ḫi ¬¬¬"
+]
+],
+"tr": "[ … ] opfere ich.",
+"trlang": "DE"
+},
+{
+"n": "128",
+"sec": "§ 31'",
+"hl": "",
+"master": "[nu=ššan ANA {DUG}DÍLIM.GAL SA5 ḫ]ulliš šuḫḫāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 7",
+"[nu-uš-ša-an A-NA {DUG}DÍLIM.GAL SA5ḫ]u-ul-li-iš šu-uḫ-ḫa-a-i"
+]
+],
+"tr": "[Und auf eine rote Schale] schüttet sie Wacholderholz(?).",
+"trlang": "DE"
+},
+{
+"n": "129",
+"sec": "§ 31'",
+"hl": "",
+"master": "[šer=a=ššan ḫalk]in kar(a)š išḫuwāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 8",
+"[še-ra-aš-ša-an ḫal-ki]-⸢in kar-aš iš⸣-ḫu-wa-a-i"
+]
+],
+"tr": "[Oben darauf aber] schüttet sie [Gers]te und karš-Getreide.",
+"trlang": "DE"
+},
+{
+"n": "130",
+"sec": "§ 31'",
+"hl": "",
+"master": "[n=at=kan šanḫ]uwanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 9",
+"[na-at-kán ša-an-ḫ]u-⸢wa⸣-an-zi"
+]
+],
+"tr": "[Und] man [rös]tet [es].",
+"trlang": "DE"
+},
+{
+"n": "131",
+"sec": "§ 31'",
+"hl": "",
+"master": "namma=kan ḫulliš [witeni]t kištanuzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 9",
+"nam-ma-kán ḫu-ul-li-iš [ú-i-te-ni-i]t ki-iš-ta-nu-zi"
+]
+],
+"tr": "dann löscht sie das Wacholderholz(?) mit [Wasser] aus",
+"trlang": "DE"
+},
+{
+"n": "132",
+"sec": "§ 31'",
+"hl": "",
+"master": "nu memai",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 10",
+"nu me-ma-i ¬¬¬"
+]
+],
+"tr": "und spricht:",
+"trlang": "DE"
+},
+{
+"n": "133",
+"sec": "§ 32'",
+"hl": "",
+"master": "[maḫḫ]an=kan kī kištanun",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 11",
+"[ma-aḫ-ḫ]a-an-kán ki-i ki-iš-ta-nu-un"
+]
+],
+"tr": "„[Wi]e ich dieses ausgelöscht habe,",
+"trlang": "DE"
+},
+{
+"n": "134",
+"sec": "§ 32'",
+"hl": "",
+"master": "idalu=ya=ššan [in]an ANA BĒLŪTIM šer QĀTAMMA kištaru",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 11",
+"i-da-lu-ia-aš-ša-an [i-na]-an A-NA BE-LU-TIM še-er QA-TAM-MA ki-iš-ta-ru ¬¬¬"
+]
+],
+"tr": "so soll ebenso die böse [ina]n-Krankheit über den Herren erlöschen!“",
+"trlang": "DE"
+},
+{
+"n": "135",
+"sec": "§ 33'",
+"hl": "",
+"master": "[nu]=ššan ḫalkin kar(a)š {GI}paddanī šuḫḫāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 13",
+"[nu-u]š-ša-an ḫal-ki-in kar-aš {GI}pád-da-ni-i šu-uḫ-ḫa-a-i"
+]
+],
+"tr": "[Und] sie schüttet Gerste und karš-Getreide in den Korb.",
+"trlang": "DE"
+},
+{
+"n": "136",
+"sec": "§ 33'",
+"hl": "",
+"master": "[p]ūrpūriyaš ḫūrtallišš=a išnaš [1? {G]}IŠPAN n=at=kan IŠTU {SÍG}ištaggai ḫuittiyan",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 14",
+"[pu]-u-ur-pu-u-ri-ia-aš ḫu-u-ur-tal-li-iš-ša iš-na-⸢aš⸣ [1? {G]}IŠPAN na-at-kán IŠ-TU {SÍG}iš-tág-ga-i ḫu-⸢it⸣-ti-ia-an"
+]
+],
+"tr": "[Ku]geln und Gemengsel aus Teig, [1?] Bogen – er ist mit einer Bogensehne bespannt –",
+"trlang": "DE"
+},
+{
+"n": "137",
+"sec": "§ 33'",
+"hl": "",
+"master": "[3? G]I{ḪI.A} peran=ma=ššan išnaš pūrpūrīēš [{GIŠ}ḫ]attalu {GIŠ}!tarzuwān peran=ma=ššan [{KUŠ}š]ālaš ḫaminkanza",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 16",
+"[3? G]I{ḪI.A} pé-ra-an-ma-aš-ša-an iš-na-aš pu-u-ur-pu-u-ri-i-e-eš [{GIŠ}ḫ]a-at-ta-lu {GIŠ}!tar-zu-wa-a-an pé-ra-an-ma-aš-ša-an [{KUŠ}š]a-a-la-aš ḫa-me-in-kán-za"
+]
+],
+"tr": "[3? Pf]eile, davor aber Kugeln aus Teig, ein Querbalkenriegel und ein Sicherungsriegel, davor ist ein [š]ala-[Leder]riemen befestigt.",
+"trlang": "DE"
+},
+{
+"n": "138",
+"sec": "§ 33'",
+"hl": "",
+"master": "nu=ššan kī ḫūman {GI}paddani dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 18",
+"nu-uš-ša-an ki-i ḫu-u-ma-an {GI}pád-da-ni da-a-i ¬¬¬"
+]
+],
+"tr": "Und dies alles legt sie in den Korb.",
+"trlang": "DE"
+},
+{
+"n": "139",
+"sec": "§ 34'",
+"hl": "",
+"master": "nu SÍG ašaran! dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 19",
+"nu SÍG ⸢a-ra⸣-ša-an23 da-a-i"
+]
+],
+"tr": "Und sie nimmt sich weiße Wolle",
+"trlang": "DE"
+},
+{
+"n": "140",
+"sec": "§ 34'",
+"hl": "",
+"master": "n=an=šan ANA BĒL[Ū]TIM IŠTU GÌR{MEŠ}=ŠUNU kēz kēzziy[a] ANA SAG.DU=ŠU šarā ḫuittiyai",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 19",
+"na-an-ša-an A-NA BE-L[U]-TIM IŠ-TU GÌR{MEŠ}-ŠU-NU ke-e-ez ke-e-ez-zi-i[a] A-NA SAG.DU-ŠU ša-ra-a ḫu-it-ti-ia-i"
+]
+],
+"tr": "und zieht sie den Herren von ihren Füßen von dieser Seite und jener Seite zu ihren! Köpfen!4 hinauf",
+"trlang": "DE"
+},
+{
+"n": "141",
+"sec": "§ 34'",
+"hl": "",
+"master": "EGIR-an katta=ya=šmaš=an=kan iškišaz ḫ[ui]ttiyai",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 22",
+"EGIR-an kat-ta-ia-aš-ma-ša-an-kán iš-ki-ša-az ḫ[u-i]t-ti-ia-i"
+]
+],
+"tr": "und hinten zi[e]ht sie sie ihnen vom Rücken her hinab.",
+"trlang": "DE"
+},
+{
+"n": "142",
+"sec": "§ 34'",
+"hl": "",
+"master": "namma=at=šmaš=at=kan arḫa dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 23",
+"nam-ma-at-ša-ma-ša-at-kán ar-ḫa da-a-i"
+]
+],
+"tr": "Dann nimmt sie sie von ihnen weg",
+"trlang": "DE"
+},
+{
+"n": "143",
+"sec": "§ 34'",
+"hl": "",
+"master": "n=an=šan {GI}paddanī dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 24",
+"na-an-ša-an {GI}pád-da-ni-i da-a-i"
+]
+],
+"tr": "und legt sie in den Korb",
+"trlang": "DE"
+},
+{
+"n": "144",
+"sec": "§ 34'",
+"hl": "",
+"master": "nu memai",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 24",
+"nu me-ma-i ¬¬¬"
+]
+],
+"tr": "und spricht:",
+"trlang": "DE"
+},
+{
+"n": "145",
+"sec": "§ 35'",
+"hl": "",
+"master": "arḫa=šmaš=kan idālu ḫuitteš ḫuitti[ya] SAG.DU{MEŠ}-it ŠU{MEŠ}-it GÌR{MEŠ}-it ḫūmanti[t] {UZU}ÚR-it",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 25",
+"ar-ḫa-aš-ma-aš-kán i-da-a-lu ḫu-it-te-eš ḫu-it-t[i-ia] SAG.DU{MEŠ}-it ŠU{MEŠ}-it GÌR{MEŠ}-it ḫu-u-ma-an-ti-[it] {UZU}ÚR-it"
+]
+],
+"tr": "„Aus ihnen heraus zieh[e] das böse Ziehen, aus den Köpfen, aus den Händen, aus den Füßen, [aus] jede[m] Glied,",
+"trlang": "DE"
+},
+{
+"n": "146",
+"sec": "§ 35'",
+"hl": "",
+"master": "n=at idālauwaš ḫarpan[alliyaš p]eški",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 27",
+"na-at i-da-a-la-u-wa-aš ḫar-pa-n[a-al-li-ia-aš p]é-eš-ki ¬¬¬"
+]
+],
+"tr": "und gib es den bösen Fein[den]!“",
+"trlang": "DE"
+},
+{
+"n": "147",
+"sec": "§ 36'",
+"hl": "",
+"master": "ANA [B]ĒLŪTI=ma TI-tar innarauwatar MU[{ḪI.A} GÍD.DA] peški",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 28",
+"A-NA [B]E-LU-TI-ma TI-tar in-na-ra-u-wa-tar MU[{ḪI.A} GÍD.DA] pé-eš-⸢ki⸣"
+]
+],
+"tr": "„Den Herren aber gib Leben, Kraft, [lange] Jahr[e]!“",
+"trlang": "DE"
+},
+{
+"n": "148",
+"sec": "§ 36'",
+"hl": "",
+"master": "{SÍG}ištaggainn=a QĀTAMMA iyazi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 29",
+"{SÍG}iš-tág-ga-in-na QA-TAM-MA i-ia-zi"
+]
+],
+"tr": "Und mit der Bogensehne verfährt sie ebenso",
+"trlang": "DE"
+},
+{
+"n": "149",
+"sec": "§ 36'",
+"hl": "",
+"master": "[memai=a QĀ]TAMMA",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 29",
+"[me-ma-ia QA]-⸢TAM-MA⸣ ¬¬¬"
+]
+],
+"tr": "[und spricht eb]enso",
+"trlang": "DE"
+},
+{
+"n": "150",
+"sec": "§ 37'",
+"hl": "",
+"master": "nu namma GADA-an QĀTAMMA iyazi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 30",
+"nu nam-ma GADA-an QA-TAM-MA i-ia-zi"
+]
+],
+"tr": "Und dann verfährt sie mit dem Leinentuch ebenso",
+"trlang": "DE"
+},
+{
+"n": "151",
+"sec": "§ 37'",
+"hl": "",
+"master": "nu memai",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 30",
+"nu me-ma-i"
+]
+],
+"tr": "und spricht:",
+"trlang": "DE"
+},
+{
+"n": "152",
+"sec": "§ 37'",
+"hl": "",
+"master": "[kī=kan GADA-an] maḫḫan {LÚ.MEŠ}ÁZLAG dannaran aniya[n]z[i]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 30",
+"[ki-i-kán GADA-an] ma-aḫ-ḫa-an {LÚ.MEŠ}ÁZLAG da-an-na-ra-an a-ni-ia-a[n]-z[i]"
+]
+],
+"tr": "„Wie die Wäscher [dieses Leinentuch] säubern",
+"trlang": "DE"
+},
+{
+"n": "153",
+"sec": "§ 37'",
+"hl": "",
+"master": "nu=šši=kan {SÍG}mariḫšin parkunuwanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 32",
+"nu-uš-ši-kán {SÍG}ma-ri-iḫ-ši-in pár-ku-nu-wa-an-⸢zi⸣"
+]
+],
+"tr": "und die Fusseln(?) von ihm entfernen",
+"trlang": "DE"
+},
+{
+"n": "154",
+"sec": "§ 37'",
+"hl": "",
+"master": "n=a[t ḫarkišz]i",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 32",
+"na-a[t ḫar-ki-iš-z]i"
+]
+],
+"tr": "und e[s weiß wi]rd,",
+"trlang": "DE"
+},
+{
+"n": "155",
+"sec": "§ 37'",
+"hl": "",
+"master": "kēdašš=a=kan idālu inan NÍ.TE-az QĀTAMMA parkunuwandu",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 33",
+"ke-e-da-aš-ša-kán i-da-a-lu i-na-an NÍ.TE-az QA-TAM-<MA> pár-⸢ku-nu-wa⸣-an-du ¬¬¬"
+]
+],
+"tr": "so sollen sie (die Götter) ebenso die böse inan-Krankheit diesen (Herren) aus dem Körper entfernen!“",
+"trlang": "DE"
+},
+{
+"n": "156",
+"sec": "§ 38'",
+"hl": "",
+"master": "{D}Tarpattaššan kuiš peran weḫanda",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 34",
+"{D}Tar-pa-at-ta-aš-ša-an ku-iš pé-ra-an ú-e-ḫa-an-da"
+]
+],
+"tr": "„Tarpatassa, der du dich vorn befindest,5",
+"trlang": "DE"
+},
+{
+"n": "157",
+"sec": "§ 38'",
+"hl": "",
+"master": "n=aš=šan lē namma kattan zaḫḫiškiši",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 35",
+"⸢na-aš-ša-an⸣ le-e nam-ma kat-ta-an za-aḫ-⸢ḫi⸣-iš-ki-ši"
+]
+],
+"tr": "bekämpfe sie nicht länger damit!",
+"trlang": "DE"
+},
+{
+"n": "158",
+"sec": "§ 38'",
+"hl": "",
+"master": "[ī]t? kūn {GIŠ}tarzun namma zaḫḫiški",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 36",
+"[i-i]t? k[u-u]-un {GIŠ}tar-zu-un nam-ma za-aḫ-ḫi-[i]š-ki"
+]
+],
+"tr": "[Ge]h, bekä[mpfe] fortan d[ies]en Sicherungsriegel.",
+"trlang": "DE"
+},
+{
+"n": "159",
+"sec": "§ 38'",
+"hl": "",
+"master": "[nu=wa=šmaš] idālu katti=šši arḫa nanni",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 37",
+"[nu-wa-aš-ma-aš] ⸢i⸣-da-a-lu kat-ti-iš-ši ar-⸢ḫa⸣ na-an-ni ¬¬¬"
+]
+],
+"tr": "[Und] treibe [von ihnen] das Böse mit ihm fort!“",
+"trlang": "DE"
+},
+{
+"n": "160",
+"sec": "§ 39'",
+"hl": "",
+"master": "[n]u=ššan NAGG[A] tepu {SÍG}i[štagg]ai ḫūlāliyazi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 38",
+"[n]u-uš-⸢ša⸣-an NAGG[A] ⸢te-pu {SÍG}⸣i[š-tág-g]a-i ḫu-u-la-a-li-ia-zi"
+]
+],
+"tr": "Und sie wickelt in eine B[ogense]hne ein wenig Zin[n]",
+"trlang": "DE"
+},
+{
+"n": "161",
+"sec": "§ 39'",
+"hl": "",
+"master": "n=at=kan ANA BĒLU ZAG-ni ANA QĀTĪ=ŠU GÌR=ŠU nāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 39",
+"na-at-⸢kán A⸣-NA BE-⸢LU⸣ ZAG-ni A-NA ⸢QA-TI-ŠU GÌR-ŠU na-a-i⸣"
+]
+],
+"tr": "und windet es dem Herrn rechts um seine Hand und seinen Fuß.",
+"trlang": "DE"
+},
+{
+"n": "162",
+"sec": "§ 39'",
+"hl": "",
+"master": "namma=a[t=š]maš=at=kan arḫa dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 40",
+"nam-ma-a[t-š]a-ma-ša-at-kán ar-ḫa da-a-i"
+]
+],
+"tr": "Dann nimmt sie es von [i]hnen weg",
+"trlang": "DE"
+},
+{
+"n": "163",
+"sec": "§ 39'",
+"hl": "",
+"master": "n=at=kan ANA PÉŠ.TUR nāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 40",
+"na-at-kán A-NA ⸢PÉŠ⸣.TUR ⸢na-a⸣-i"
+]
+],
+"tr": "und wickelt es um eine Maus.",
+"trlang": "DE"
+},
+{
+"n": "164",
+"sec": "§ 39'",
+"hl": "",
+"master": "nu memaḫḫi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 41",
+"nu me-ma-aḫ-ḫi"
+]
+],
+"tr": "Und ich spreche:",
+"trlang": "DE"
+},
+{
+"n": "165",
+"sec": "§ 39'",
+"hl": "",
+"master": "arḫa=šmaš=kan daḫḫun idalu",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 41",
+"ar-ḫa-<aš->ma-aš-kán da-aḫ-ḫu-un i-da-lu"
+]
+],
+"tr": "„Weggenommen habe ich von euch/ihnen das Böse",
+"trlang": "DE"
+},
+{
+"n": "166",
+"sec": "§ 39'",
+"hl": "",
+"master": "n=at=kan ANA PÉŠ.TUR neḫḫun",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 42",
+"na-⸢at-kán⸣ A-NA ⸢PÉŠ⸣.TUR ne-eḫ-ḫu-un"
+]
+],
+"tr": "und habe es um eine Maus gewunden.",
+"trlang": "DE"
+},
+{
+"n": "167",
+"sec": "§ 39'",
+"hl": "",
+"master": "n=at kāš PÉŠ.TUR pargāuwaš ḪUR.SAG{MEŠ}-aš ḫallūwāš ḫāriyaš dālugauwaš KASKAL-aš pēdau",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 42",
+"na-at ka-a-aš PÉŠ.TUR pár-ga-a-u-wa-aš ḪUR.SAG{MEŠ}-aš ⸢ḫal-lu⸣-u-wa-a-aš ḫa-a-ri-aš da-a-⸢lu⸣-ga-u-wa-aš KASKAL-aš pé-e-⸢da⸣-ú"
+]
+],
+"tr": "So soll nun diese Maus es über hohe Berge, durch tiefe Täler, auf weiten Wegen forttragen!“",
+"trlang": "DE"
+},
+{
+"n": "168",
+"sec": "§ 39'",
+"hl": "",
+"master": "nu PÉŠ.TUR ar-ḫa tarnai",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 44",
+"nu PÉŠ.TUR ar-ḫa tar-na-a-i ¬¬¬"
+]
+],
+"tr": "Und sie lässt die Maus los.",
+"trlang": "DE"
+},
+{
+"n": "169",
+"sec": "§ 40'",
+"hl": "",
+"master": "{D}Tarpattaššaš kuiš peran w[eḫ]atta",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 45",
+"{D}Tar-pa-at-ta-aš-ša-aš ku-iš pé-ra-an ⸢ú⸣[-e-ḫ]a-at-ta"
+]
+],
+"tr": "„Tarpatassa, der du dich vorn be[find]est,",
+"trlang": "DE"
+},
+{
+"n": "170",
+"sec": "§ 40'",
+"hl": "",
+"master": "kūn=za dā",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 46",
+"ku-u-un-za da-a"
+]
+],
+"tr": "diese (Maus) nimm dir!",
+"trlang": "DE"
+},
+{
+"n": "171",
+"sec": "§ 40'",
+"hl": "",
+"master": "adanna=ma=tta dam[aī]n pīweni",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 46",
+"a-da-an-na-ma-at-ta da-m[a-i-i]n pí-i-ú-e-ni"
+]
+],
+"tr": "Zu essen aber geben wir dir eine an[de]re!“",
+"trlang": "DE"
+},
+{
+"n": "172",
+"sec": "§ 40'",
+"hl": "",
+"master": "nu kuptar arḫa šuḫḫ[ā]i",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 47",
+"nu ku-up-tar ar-ḫa šu-uḫ-ḫ[a-a-]i ¬¬¬"
+]
+],
+"tr": "Und den Abfall schü[tte]t sie fort.",
+"trlang": "DE"
+},
+{
+"n": "173",
+"sec": "§ 41'",
+"hl": "",
+"master": "nu namma damēdani pedi {GIŠ}!laḫur[nuzzi d]āi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 48",
+"nu nam-ma da-me-e-da-ni pé-di {GIŠ}!la-ḫur-[nu-uz-zi d]a-a-i"
+]
+],
+"tr": "Und dann [le]gt sie an einem anderen Ort Lau[b] hin.",
+"trlang": "DE"
+},
+{
+"n": "174",
+"sec": "§ 41'",
+"hl": "",
+"master": "3 NINDA.GUR4.RA{ḪI.A} ŠÀ.BA 1 NINDA.GUR4.RA GÍD.DA DINGIR?[.LÚ{MEŠ}-aš? paršiy]a",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 49",
+"3 NINDA.GUR4.RA{ḪI.A} ŠÀ.BA 1 NINDA.GUR4.RA GÍD.DA DINGIR?[.LÚ{MEŠ}-aš? pár-ši-i]a"
+]
+],
+"tr": "3 Dickbrote, davon [bric]ht sie 1 langes Dickbrot für [die männlichen?] Gött[er].",
+"trlang": "DE"
+},
+{
+"n": "175",
+"sec": "§ 41'",
+"hl": "",
+"master": "1 NINDA.GUR4.RA {D}Tarpattaššan kuiš [peran w]eḫatta",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 50",
+"1 NINDA.GUR4.RA {D}Tar-pa-at-ta-aš-ša-an ku-⸢iš⸣ [pé-ra-an ú]-⸢e-ḫa-at-ta⸣"
+]
+],
+"tr": "1 Dickbrot für Tarpatassa, der sich [vorn] befindet,",
+"trlang": "DE"
+},
+{
+"n": "176",
+"sec": "§ 41'",
+"hl": "",
+"master": "[1 NINDA.G]UR4.RA {D}Mamma=ia paršiya",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 51",
+"[1 NINDA.G]UR4.RA {D}Ma-am-ma-ia pár-ši-ia"
+]
+],
+"tr": "und [1] Dick[brot] bricht sie auch für Mamma",
+"trlang": "DE"
+},
+{
+"n": "177",
+"sec": "§ 41'",
+"hl": "",
+"master": "n=an=šan {GIŠ}laḫ[urnuzziyaš dāi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 51",
+"na-an-⸢ša-an⸣ ⸢{GIŠ}la⸣-ḫ[ur-nu-uz-zi-ia-aš da-a-i] ¬¬¬"
+]
+],
+"tr": "und [legt] es auf das La[ub].",
+"trlang": "DE"
+},
+{
+"n": "178",
+"sec": "§ 42'",
+"hl": "",
+"master": "nu damaīn PÉŠ.TUR parkuin udanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 52",
+"nu ⸢da-ma⸣-i-in PÉŠ.TUR pár-ku-in ú-da-an-zi"
+]
+],
+"tr": "Und man bringt eine zweite reine Maus.",
+"trlang": "DE"
+},
+{
+"n": "179",
+"sec": "§ 42'",
+"hl": "",
+"master": "nu {D}Tar[pattaššan] kuiš peran weḫatta",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 52",
+"nu {D}⸢Tar⸣[-pa-at-ta-aš-ša-an] ku-iš p[é-r]a-an ú-e-ḫa-at-ta"
+]
+],
+"tr": "Und [dem] Tar[patassa], der sich vorn befindet,",
+"trlang": "DE"
+},
+{
+"n": "180",
+"sec": "§ 42'",
+"hl": "",
+"master": "n=an=kan apēdan[i] šipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 53",
+"na-an-kán a-pé-e-da-n[i] ši-pa-an-ti"
+]
+],
+"tr": "jenem opfert sie sie:",
+"trlang": "DE"
+},
+{
+"n": "181",
+"sec": "§ 42'",
+"hl": "",
+"master": "[z]ik azzikki",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 54",
+"[z]i-ik az-zi-⸢ik⸣-ki"
+]
+],
+"tr": "„Du, iss!“",
+"trlang": "DE"
+},
+{
+"n": "182",
+"sec": "§ 42'",
+"hl": "",
+"master": "nu=ššan ē[šḫar?] ANA NINDA.GUR4.RA{ḪI.A} [d]āi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 54",
+"nu-uš-ša-an e-e[š-ḫar?] A-NA NINDA.GUR4.RA⸢{ḪI.A}⸣ [d]a-⸢a⸣-i"
+]
+],
+"tr": "Und das Bl[ut? g]ibt sie auf die Dickbrote.",
+"trlang": "DE"
+},
+{
+"n": "183",
+"sec": "§ 42'",
+"hl": "",
+"master": "nu {UZU}ZAG.UDU IZI-it zanuwanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 55",
+"nu {UZU}⸢ZAG⸣.UDU IZI-it za-nu-wa-an-zi"
+]
+],
+"tr": "Und die Schulter brät man im Feuer.",
+"trlang": "DE"
+},
+{
+"n": "184",
+"sec": "§ 42'",
+"hl": "",
+"master": "nu {UZU}QĀTAM DINGIR.LÚ{MEŠ}-aš dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 56",
+"nu ⸢{UZU}QA⸣-TAM DINGIR.LÚ⸢{MEŠ}⸣-aš da-a-i!"
+]
+],
+"tr": "Die Pfote legt sie den männlichen Göttern hin.",
+"trlang": "DE"
+},
+{
+"n": "185",
+"sec": "§ 42'",
+"hl": "",
+"master": "{UZU}muḫrain=ma {D}Tarpa[tt]aššan kuiš peran weḫatta",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 57",
+"{UZU}mu-uḫ-ra-in-ma {D}Tar-pa-a[t-t]a-aš-ša-an ⸢ku⸣-iš pé-ra-an ú-e-ḫa-at-ta"
+]
+],
+"tr": "Den muḫrai-Körperteil aber dem Tarpa[t]assa, der sich vorn befindet,",
+"trlang": "DE"
+},
+{
+"n": "186",
+"sec": "§ 42'",
+"hl": "",
+"master": "n=an a[p]ēdani dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 58",
+"na-an ⸢a⸣-[p]é-⸢e-da-ni⸣ ⸢da⸣-a-i?!24"
+]
+],
+"tr": "jenem legt sie ihn hin.",
+"trlang": "DE"
+},
+{
+"n": "187",
+"sec": "§ 42'",
+"hl": "",
+"master": "{UZU}MAŠ.SÌL {D}Mammai dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 59",
+"{UZU}MAŠ.SÌL {D}Ma-am-ma-i da-a-i"
+]
+],
+"tr": "Die Hüfte legt sie der Mamma hin,",
+"trlang": "DE"
+},
+{
+"n": "188",
+"sec": "§ 42'",
+"hl": "",
+"master": "GÙ[B-lan ZAG.U]DU QĀTAMMA zanuwanzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 59",
+"GÙ[B-la-an ZAG.U]DU x25 QA-TAM-MA za-nu-wa-an-zi"
+]
+],
+"tr": "die lin[ke Schult]er brät man ebenso",
+"trlang": "DE"
+},
+{
+"n": "189",
+"sec": "§ 42'",
+"hl": "",
+"master": "{UZU}NÍG.GI[G … QĀTAMM]A šipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 60",
+"{UZU}NÍG.GI[G … QA-TAM-M]A ši-pa-an-ti ¬¬¬"
+]
+],
+"tr": "Die Leber [ … ] opfert sie [ebens]o.",
+"trlang": "DE"
+},
+{
+"n": "190",
+"sec": "§ 43'",
+"hl": "",
+"master": "nu KÙ.BABBAR GUŠKIN {NA4}ZA.GÌN {NA4}GUG {N[}A4TI {N]}A4KÁ.DINGIR.RA {NA4}lulluri {NA4}barašḫi AN.BAR NAGGA URUDU ZABAR ANA DINGIR-LIM kuitta tepu šuḫḫāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 61",
+"nu KÙ.BABBAR GUŠKIN {NA4}ZA.GÌN {NA4}GUG {N[}A4TI {N]}A4KÁ.DINGIR.RA {NA4}lu-ul-lu-ri {NA4}ba-ra-aš-ḫi ⸢AN⸣.BAR ⸢NAGGA⸣ URUDU26 ZABAR A-NA DINGIR-LIM ku-it-ta te-pu šu-uḫ-ḫa-a-i"
+]
+],
+"tr": "Und Silber, Gold, Blaustein, Karneol, [Lebens]stein, Babylonstein, lulluri-Stein, barašḫi-Stein, Eisen, Zinn, Kupfer, Bronze – von allem ein wenig schüttet sie der Gottheit hin:",
+"trlang": "DE"
+},
+{
+"n": "191",
+"sec": "§ 43'",
+"hl": "",
+"master": "īt laḫḫiya ḪUR.SAG{ḪI.A} {GIŠ}laḫḫurnuzzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 64",
+"i-it la-aḫ-ḫi-ia-«ia» ḪUR.SAG{ḪI.A} {GIŠ}la-ah-hur-nu-uz-zi"
+]
+],
+"tr": "„Geh, durchstreife die Berge und das Grün!",
+"trlang": "DE"
+},
+{
+"n": "192",
+"sec": "§ 43'",
+"hl": "",
+"master": "nu IŠTU MAḪAR EN{MEŠ}-TIM awan arḫa namma tiya",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 65",
+"nu IŠ-TU MA-ḪAR EN{MEŠ}-TIM a-wa-an ar-ḫa nam-ma ti-ia"
+]
+],
+"tr": "Und tritt von nun an aus dem Angesicht der Herren weg!",
+"trlang": "DE"
+},
+{
+"n": "193",
+"sec": "§ 43'",
+"hl": "",
+"master": "nu īt ḫūmandaš DINGIR{MEŠ}-aš āššu memiški",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 66",
+"nu i-it ḫu-u-ma-an-da-aš DINGIR{MEŠ}-aš a-aš-šu me-mi-iš-ki ¬¬¬"
+]
+],
+"tr": "Geh, sprich fortan Gutes bei allen Göttern!“",
+"trlang": "DE"
+},
+{
+"n": "194",
+"sec": "§ 44'",
+"hl": "",
+"master": "mān=aš parna=ma āppa uizzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 67",
+"ma-a-na-aš pár-na-ma a-ap-pa ú-iz-zi"
+]
+],
+"tr": "Wenn sie aber nach Hause zurückkehrt,",
+"trlang": "DE"
+},
+{
+"n": "195",
+"sec": "§ 44'",
+"hl": "",
+"master": "nu {GIŠ}eyan dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 67",
+"nu {GIŠ}e-a-an da-a-i"
+]
+],
+"tr": "nimmt sie einen eyan-Baum.",
+"trlang": "DE"
+},
+{
+"n": "196",
+"sec": "§ 44'",
+"hl": "",
+"master": "šer=at warḫūi kattann=a=at alpu",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 68",
+"še-ra-at wa-ar-ḫu-u-i [ka]t-[t]a-an-na-at al-pu"
+]
+],
+"tr": "Oben ist er dicht belaubt/unbearbeitet und unten ist er spitz.",
+"trlang": "DE"
+},
+{
+"n": "197",
+"sec": "§ 44'",
+"hl": "",
+"master": "n=at ḫantezz[iy]aš KÁ-aš ZAG-az GUL-aḫzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 69",
+"na-at ḫa-an-te-ez-z[i-i]a-aš KÁ-aš ZAG-az GUL-aḫ-zi"
+]
+],
+"tr": "Und sie schlägt ihn auf der rechten Seite des vorderen Tores/Haupttores ein.",
+"trlang": "DE"
+},
+{
+"n": "198",
+"sec": "§ 44'",
+"hl": "",
+"master": "{GIŠ}eyani=ma kattan [{DU]}GÚTUL dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. III 70",
+"{GIŠ}e-a-ni-ma kat-ta-an [{DU]}GÚTUL da-a-i ==="
+]
+],
+"tr": "Unter den eyan-Baum aber stellt sie einen Topf/ein Topfgericht.",
+"trlang": "DE"
+},
+{
+"n": "199",
+"sec": "§ 45''",
+"hl": "",
+"master": "[ … ] … [ … ]",
+"words": [],
+"mss": [
+[
+"A4",
+"1'",
+"[ … ] x [ … ] ¬¬¬"
+]
+],
+"tr": "[…] … […]",
+"trlang": "DE"
+},
+{
+"n": "200",
+"sec": "§ 46''",
+"hl": "",
+"master": "[ … ] kar(a)š [ … ]",
+"words": [],
+"mss": [
+[
+"A4",
+"2'",
+"[ … ] kar-aš [ … ]"
+]
+],
+"tr": "[ … ] karš-Getreide [ … ]",
+"trlang": "DE"
+},
+{
+"n": "201",
+"sec": "§ 46''",
+"hl": "",
+"master": "[ … ] išnaš iš- … [ … ]",
+"words": [],
+"mss": [
+[
+"A4",
+"3'",
+"[ … ] iš-na-aš iš-x-x [ … ]"
+]
+],
+"tr": "[ … ] aus Teig … [ … ]",
+"trlang": "DE"
+},
+{
+"n": "202",
+"sec": "§ 46''",
+"hl": "",
+"master": "[ … i]štaggai [ … ]",
+"words": [],
+"mss": [
+[
+"A4",
+"4'",
+"[ … i]š-tág-ga-i [ … ]"
+]
+],
+"tr": "[ … ] mit/in einer Bogensehne (Dat.-Lok. Sg.) [ … ]",
+"trlang": "DE"
+},
+{
+"n": "203",
+"sec": "§ 46''",
+"hl": "",
+"master": "[ … -a]n išnaš [ … ]",
+"words": [],
+"mss": [
+[
+"A4",
+"5'",
+"[ … -a]n iš-na-aš [ … ]"
+]
+],
+"tr": "[ … ] aus Teig [ … ]",
+"trlang": "DE"
+},
+{
+"n": "204",
+"sec": "§ 46''",
+"hl": "",
+"master": "[ … ] … [ … tarzuw]ān",
+"words": [],
+"mss": [
+[
+"A3+4",
+"1'/6'",
+"[ … -]⸢e⸣?[- … tar-zu-w]a-a-an"
+]
+],
+"tr": "[ … einen Sicherheits]riegel(?).",
+"trlang": "DE"
+},
+{
+"n": "205",
+"sec": "§ 46''",
+"hl": "",
+"master": "[ … ] … =šan {KUŠ}šā[laš ḫamenkanza]",
+"words": [],
+"mss": [
+[
+"A3+4",
+"2'/7'",
+"[x -]x-ša-an {KUŠ}ša-⸢a⸣[- … ]"
+]
+],
+"tr": "Ein šā[la-Lederriemen (ist) … festgebunden]",
+"trlang": "DE"
+},
+{
+"n": "206",
+"sec": "§ 46''",
+"hl": "",
+"master": "[nu=]ššan kī ḫūma[n {GI}paddani d]āi",
+"words": [],
+"mss": [
+[
+"A3+4",
+"3'/8'",
+"[nu-u]š-ša-an ki-i ḫu-u-ma[-an {GI}pád-da-ni da-]⸢a⸣-i"
+]
+],
+"tr": "[Und] dies alle[s l]egt sie [in einen Korb].",
+"trlang": "DE"
+},
+{
+"n": "207",
+"sec": "§ 46''",
+"hl": "",
+"master": "[n]=ašta ḫulliš w[itenit kišt]anumi",
+"words": [],
+"mss": [
+[
+"A3+4",
+"4'/9'",
+"[na]-aš-ta ḫu-ul-li-iš ⸢ú⸣[-i-te-ni-it ki-iš-t]a-nu-mi"
+]
+],
+"tr": "Ich lösche Wacholderholz(?) [mit] Wa[sser]",
+"trlang": "DE"
+},
+{
+"n": "208",
+"sec": "§ 46''",
+"hl": "",
+"master": "nu memaḫḫi",
+"words": [],
+"mss": [
+[
+"A3",
+"5'",
+"⸢nu⸣ me-ma-aḫ-ḫi"
+]
+],
+"tr": "(und) spreche:",
+"trlang": "DE"
+},
+{
+"n": "209",
+"sec": "§ 46''",
+"hl": "",
+"master": "",
+"words": [],
+"mss": [
+[
+"-",
+"",
+"kī=kan ma[ḫḫan kištanu]nun"
+],
+[
+"A3+4",
+"5'/10'",
+"ki-i-kán ⸢ma⸣[-aḫ-ḫa-an ki-iš-ta-]nu-un"
+]
+],
+"tr": "„Wi[e] ich dieses [gelöscht] habe,",
+"trlang": "DE"
+},
+{
+"n": "210",
+"sec": "§ 46''",
+"hl": "",
+"master": "idalu=ya=ššan in[an ANA BĒLŪT]IM šer QĀTAMMA [kišt]aru",
+"words": [],
+"mss": [
+[
+"A3+4",
+"6'/11'",
+"i-da-a-lu-ia-aš-ša-an i-n[a-an A-NA BE-LU-T]IM še-er QA-TAM-MA [ki-iš-t]a-ru ¬¬¬"
+]
+],
+"tr": "so [soll] auch ebenso die böse in[an-Krankheit] über [den Herr]en [erlö]schen.“",
+"trlang": "DE"
+},
+{
+"n": "211",
+"sec": "§ 47''",
+"hl": "",
+"master": "nu SÍG ašarān {SÍG}iš[taggann=a] QĀTAMMA iyazi",
+"words": [],
+"mss": [
+[
+"A3+4",
+"8'/13'",
+"nu SÍG a-ša-ra-a-an {SÍG}iš[- … ] {Ras.} QA-TAM-MA i-ia-zi"
+]
+],
+"tr": "Mit der weißen Wolle [und] der iš[tagga-Bogensehne] verfährt sie ebenso.",
+"trlang": "DE"
+},
+{
+"n": "212",
+"sec": "§ 47''",
+"hl": "",
+"master": "nu namm[a … kup]tar(?) araḫza pēdai",
+"words": [],
+"mss": [
+[
+"A3+4+2",
+"9' /14'",
+"nu nam-m[a ca. 4-5 Zeichen ku?-up?-]tar a-ra-aḫ-za pé-e-da-⸢i⸣27"
+]
+],
+"tr": "Und dann schafft sie [ … den Ab]fall nach draußen fort.",
+"trlang": "DE"
+},
+{
+"n": "213",
+"sec": "§ 47''",
+"hl": "",
+"master": "… [ … -]⸢i⸣",
+"words": [],
+"mss": [
+[
+"A3+4+2",
+"10'/Rs. IV 1'/15'",
+"28x[ …-]⸢i⸣"
+]
+],
+"tr": "[ … ] ...",
+"trlang": "DE"
+},
+{
+"n": "214",
+"sec": "§ 47''",
+"hl": "",
+"master": "[ … tarn]ai",
+"words": [],
+"mss": [
+[
+"A4+2",
+"11'/Rs. IV 2'/16'",
+"[ _ _ tar-n]a?-⸢i⸣?"
+]
+],
+"tr": "[ … ] läßt [ … ] los:",
+"trlang": "DE"
+},
+{
+"n": "215",
+"sec": "§ 47''",
+"hl": "",
+"master": "{D}Ta[rpattašši … p]enni",
+"words": [],
+"mss": [
+[
+"A4+2",
+"11'/Rs. IV 2'/16'",
+"{D}Ta[r?-… p]é-en-ni29 ¬¬¬"
+]
+],
+"tr": "„Ta[rpatassa?… hin]treiben!“",
+"trlang": "DE"
+},
+{
+"n": "216",
+"sec": "§ 48''",
+"hl": "",
+"master": "[ … ] āppa uizz[i]",
+"words": [],
+"mss": [
+[
+"A2+4",
+"Rs. IV 3'/17'",
+"[ _ (_ )] a-ap-pa ú-iz-z[i]"
+]
+],
+"tr": "[ … ] kehrt zurück.",
+"trlang": "DE"
+},
+{
+"n": "217",
+"sec": "§ 48''",
+"hl": "",
+"master": "[ … k]išari",
+"words": [],
+"mss": [
+[
+"A2+4",
+"Rs. IV 3'/17'",
+"[ … k]i-[š]a-ri"
+]
+],
+"tr": "Er/sie/es wird [ … ].",
+"trlang": "DE"
+},
+{
+"n": "218",
+"sec": "§ 48''",
+"hl": "",
+"master": "weḫzi UL [ … ]",
+"words": [],
+"mss": [],
+"tr": "Wenden soll er/sie sich nicht […]",
+"trlang": "DE"
+},
+{
+"n": "219",
+"sec": "§ 48''",
+"hl": "",
+"master": "[ … ] UL memai",
+"words": [],
+"mss": [
+[
+"A2+4",
+"Rs. IV 4'/18'",
+"[ … ] ⸢Ú⸣-UL me-ma-i"
+]
+],
+"tr": "Sprechen soll er/sie nicht",
+"trlang": "DE"
+},
+{
+"n": "220",
+"sec": "§ 48''",
+"hl": "",
+"master": "[ḫ]ūwarti UL[(-) … ]",
+"words": [],
+"mss": [
+[
+"A2+4",
+"Rs. IV 5'/18'",
+"[ḫ]u-u-wa-ar-ti Ú-UL[(-) … ]"
+]
+],
+"tr": "Verfluchen soll er/sie nicht.",
+"trlang": "DE"
+},
+{
+"n": "221",
+"sec": "§ 48''",
+"hl": "",
+"master": "[nu GIŠ-ruwaš30 {GIŠ}l]aḫurnuzzi dāi",
+"words": [],
+"mss": [
+[
+"A2+4",
+"Rs. IV 5'/18'",
+"[ … {GIŠ}l]a-ḫur-nu-uz-zi da-a-i"
+]
+],
+"tr": "[La]ub [von Bäumen] legt sie hin.",
+"trlang": "DE"
+},
+{
+"n": "222",
+"sec": "§ 48''",
+"hl": "",
+"master": "3 NINDA.GUR4.RA ŠÀ.B[A 1 NINDA.GUR4.RA {D}Tarpatt]aš DINGIR.LÚ{MEŠ}-aš paršiya",
+"words": [],
+"mss": [
+[
+"A2+4",
+"Rs. IV 6'",
+"3 NINDA.GUR4.RA ŠÀ.B[A 1 NINDA.GUR4.RA {D}Tar-pa-at-t]a-⸢aš⸣ 31⸢DINGIR.LÚ⸣{MEŠ}-aš pár-ši-ia"
+]
+],
+"tr": "3 Dickbrote, da[von 1 langes Dickbrot für] die männlichen] Götter des Tarpat]a? bricht sie.",
+"trlang": "DE"
+},
+{
+"n": "223",
+"sec": "§ 48''",
+"hl": "",
+"master": "1 NINDA.GUR4.RA {D}[Tarpattašš]an paršiya",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 7'",
+"1 NINDA.GUR4.RA {D}[Tar-pa-at-ta-aš-š]a-⸢an⸣ pár-ši-ia"
+]
+],
+"tr": "1 Dickbrot für [Tarpatas]sa bricht sie,",
+"trlang": "DE"
+},
+{
+"n": "224",
+"sec": "§ 48''",
+"hl": "",
+"master": "1 NINDA.GUR4.RA ANA {D}Ma[mmai] paršiya",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 8'",
+"1 NINDA.GUR4.RA A-NA {D}⸢Ma⸣-[am-ma-i] pár-ši-ia ¬¬¬"
+]
+],
+"tr": "1 Dickbrot für Ma[mma] bricht sie.",
+"trlang": "DE"
+},
+{
+"n": "225",
+"sec": "§ 49''",
+"hl": "",
+"master": "{D}Tarpattašši[š zik]=mu=kan {GIŠ}eyān dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 9'",
+"{D}Tar-pa-at-ta-aš-ši-i[š zi-ik-]mu-kán {GIŠ}e-a-an da-a-i"
+]
+],
+"tr": "Tarpatassa! Stelle [du] mir den eyan-Baum hin",
+"trlang": "DE"
+},
+{
+"n": "226",
+"sec": "§ 49''",
+"hl": "",
+"master": "nu=mu=kan arauwa[ḫ]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 10'",
+"nu-mu-kán a-ra-u-wa-a[ḫ]"
+]
+],
+"tr": "und lass mich frei!",
+"trlang": "DE"
+},
+{
+"n": "227",
+"sec": "§ 49''",
+"hl": "",
+"master": "[nu idāl]u inan anda lē tarnatt[i]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 10'",
+"[nu i-da-a-l]u i-na-an an-da le-⸢e tar⸣-na-at-t[i]"
+]
+],
+"tr": "Die [bös]e inan-Krankheit lass nicht hinein!",
+"trlang": "DE"
+},
+{
+"n": "228",
+"sec": "§ 49''",
+"hl": "",
+"master": "[nu DA]M?=IA DUMU{MEŠ}=IA DUMU.DUMU{MEŠ}=IA TI-an ḫa[r(a)k]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 11'",
+"[nu DA]M?-IA DUMU{MEŠ}-IA DUMU.DUMU{MEŠ}-IA TI-an ḫ[ar-ak]"
+]
+],
+"tr": "[Und] mein[e Fra]u, meine Kinder, meine Enkel erh[alte] am Leben!",
+"trlang": "DE"
+},
+{
+"n": "229",
+"sec": "§ 49''",
+"hl": "",
+"master": "[ …-]iš DINGIR-LUM zik",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 12'",
+"[ …-]iš DINGIR-LUM zi-⸢ik⸣"
+],
+[
+"B",
+"Rs. IV 1'",
+"x[ … ]"
+]
+],
+"tr": "[ … ]... Gott bist du!",
+"trlang": "DE"
+},
+{
+"n": "230",
+"sec": "§ 49''",
+"hl": "",
+"master": "{D}Tarpattaššiš [kuiš per]an weḫatta",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 13'",
+"{D}Tar-pa-at-ta-aš-ši-iš [ku-iš pé-ra-]an ú-e-ḫa-at-⸢ta"
+],
+[
+"B",
+"Rs. IV 1'",
+"[ … ] ú-[ … ]"
+]
+],
+"tr": "Tarpatassa, [der du dich v]orn befindest,",
+"trlang": "DE"
+},
+{
+"n": "231",
+"sec": "§ 49''",
+"hl": "",
+"master": "nu ḫūmandaš DINGIR{MEŠ} [-aš SI]G5-in memiški",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 14'",
+"nu ḫu-u-ma-an-da-aš DINGIR{MEŠ}[-aš SI]G5-in me-mi-iš-ki ¬¬¬"
+],
+[
+"B",
+"Rs. IV 2'",
+"[ … ] a-aš-š[u … ] ¬¬¬"
+]
+],
+"tr": "sprich fortan günstig bei allen Göttern!",
+"trlang": "DE"
+},
+{
+"n": "232",
+"sec": "§ 50''",
+"hl": "",
+"master": "n=ašta MÁŠ.ŠIR {D}Tar[pattašša]n šipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 15'",
+"na-aš-ta MÁŠ.ŠIR {D}Tar-[pa-at-ta-aš-ša-a]n ši-pa-an-ti"
+],
+[
+"B",
+"Rs. IV 4'",
+"na-aš-ta x[ … ]"
+]
+],
+"tr": "Und dann opfert sie dem Tar[patass]a einen Ziegenbock.",
+"trlang": "DE"
+},
+{
+"n": "233",
+"sec": "§ 50''",
+"hl": "",
+"master": "n=an ANA DINGIR-LIM per[an ḫa-at-ta-i]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 16'",
+"na-an A-NA DINGIR-LIM pé-r[a-an ḫa-at-ta-i]"
+],
+[
+"B",
+"Rs. IV 5'",
+"na-an A-NA [ … ]"
+]
+],
+"tr": "Und sie [sticht] ihn vor der Gottheit [ab]",
+"trlang": "DE"
+},
+{
+"n": "234",
+"sec": "§ 50''",
+"hl": "",
+"master": "nu=ššan ēsḫar ANA GAL.ZABAR tarn[āi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 16'",
+"[n]u-uš-ša-an e-eš-ḫar ⸢A-NA⸣ GAL.ZABAR tar-n[a-a-i]"
+],
+[
+"B",
+"Rs. IV 5'",
+"[ … ] A-NA NINDA.GUR4.RA x [ … ]"
+]
+],
+"tr": "und läss[t] das Blut in eine Bronzeschale fließen.",
+"trlang": "DE"
+},
+{
+"n": "235",
+"sec": "§ 50''",
+"hl": "",
+"master": "[n]u kēz kēzziya [ ̣̣… K]Á-aš ANA {DUG}ÚT[UL{ḪI.A} šuḫḫāi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 17'",
+"[nu ke]-⸢e-ez⸣ ke-e-ez-zi-ia [ ̣̣… K]Á-aš A-NA ⸢{DUG}⸣ÚT[UL{ḪI.A} šu-uḫ-ḫa-a-i] ¬¬¬"
+],
+[
+"B",
+"Rs. IV 6'",
+"[ … ] ke-e-ez-zi-ia x[ … ] ¬¬¬"
+]
+],
+"tr": "Und auf dieser und jener Seite des [To]res [schüttet sie (es)] in Töp[fe].",
+"trlang": "DE"
+},
+{
+"n": "236",
+"sec": "§ 51''",
+"hl": "",
+"master": "n=ašta {UZU}GEŠTU ZAG-ni … [ … z]anuzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 19'",
+"[ … z]a-nu-zi"
+],
+[
+"B",
+"Rs. IV 8'",
+"na-aš-ta ⸢{UZU}⸣GEŠTU ZAG-ni x[ … ] za-nu-an-zi"
+]
+],
+"tr": "Und dann dem rechten Ohr … k]ocht sie.",
+"trlang": "DE"
+},
+{
+"n": "237",
+"sec": "§ 51''",
+"hl": "",
+"master": "n=at ANA NINDA.GUR4.RA [ … ]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 20'",
+"[ … ]"
+],
+[
+"B",
+"Rs. IV 9'",
+"na-at A-NA NINDA.GU[R4.RA … ]"
+]
+],
+"tr": "Und auf das Dickbrot [ … ]",
+"trlang": "DE"
+},
+{
+"n": "238",
+"sec": "§ 51''",
+"hl": "",
+"master": "[nu ZAG-an {U]}ZUZAG.UDU-an [za-nu-(wa-an)]-zi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 20'",
+"[ … {U]}ZU⸢ZAG.UDU-an⸣ [ …-]⸢zi⸣"
+],
+[
+"B",
+"Rs. IV 9'",
+"[nu] ⸢ZAG⸣-an {UZU}ZAG.UDU IZI-it"
+]
+],
+"tr": "[und die rechte] Schulter [brät] man/sie.",
+"trlang": "DE"
+},
+{
+"n": "239",
+"sec": "§ 51''",
+"hl": "",
+"master": "[nu {UZU}QĀTAM DINGIR.LÚ{MEŠ}-aš dāi]20",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 21'",
+"[ … ]"
+],
+[
+"B",
+"Rs. IV 10'",
+"[ … ]"
+]
+],
+"tr": "[Und den Huf legt sie den männlichen Göttern hin.]",
+"trlang": "DE"
+},
+{
+"n": "240",
+"sec": "§ 51''",
+"hl": "",
+"master": "[{UZU}muḫr]ain=m[a] {D}Tarpa[ttaššan] dāi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 22'",
+"[ …-r]a-in-m[a … ] ⸢da-a-i⸣"
+],
+[
+"B",
+"Rs. IV 11'",
+"[ … {UZU}mu-uḫ-r]a-in {D}Tar-pa-a[t-… ]"
+]
+],
+"tr": "[Den muḫr]ai-Körperteil abe[r] legt sie dem Tarpa[tassa] hin.",
+"trlang": "DE"
+},
+{
+"n": "241",
+"sec": "§ 51''",
+"hl": "",
+"master": "[{UZU}MAŠ.SÌL] {D}Mam[mai dāi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 23'",
+"[ … ] {D}Ma-am-[ … ]"
+],
+[
+"B",
+"Rs. IV 12'",
+"[ … d]a-a-i"
+]
+],
+"tr": "[Die Hüfte legt sie] der Mamm[a hin],",
+"trlang": "DE"
+},
+{
+"n": "242",
+"sec": "§ 51''",
+"hl": "",
+"master": "[nam]ma šipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 23'",
+"[nam-m]a ši-pa-an-ti ¬¬¬"
+],
+[
+"B",
+"Rs. IV 12'",
+"[ … ]"
+]
+],
+"tr": "außerdem opfert sie.",
+"trlang": "DE"
+},
+{
+"n": "243",
+"sec": "§ 52''",
+"hl": "",
+"master": "[ … ] … -an {UZU}NÍG.GI[G QĀTAMMA š]ipanti",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 24'",
+"[ … ]x-an {UZU}NÍG.GI[G … š]i-pa-an-ti"
+]
+],
+"tr": "[ … ] … die Leb[er o]pfert sie [ebenso]",
+"trlang": "DE"
+},
+{
+"n": "244",
+"sec": "§ 52''",
+"hl": "",
+"master": "[ … ḫantez]zin [DINGIR.LÚ{MEŠ}-aš dāi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 25'",
+"[ … ]-zi-in [ … ]"
+]
+],
+"tr": "[…vord]eren [legt sie den männlichen Göttern hin,",
+"trlang": "DE"
+},
+{
+"n": "245",
+"sec": "§ 52''",
+"hl": "",
+"master": "[ … ] SAG.DU {UZU}GABA [{D}Tarpat]tašša[n … ]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 25'",
+"[ … ] SAG.DU {UZU}GABA [ … ]-ta-aš-ša-a[n … ]"
+]
+],
+"tr": "[einen halben] Kopf, die Brust dem [Tarpa]tassa.",
+"trlang": "DE"
+},
+{
+"n": "246",
+"sec": "§ 52''",
+"hl": "",
+"master": "[ … -a]n IŠTU URUDU.NAG [zanu(wan)zi]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 26'",
+"[ … -a]n IŠ-TU URUDU.NAG [ … ]"
+]
+],
+"tr": "[ … ] in einem Kupfergefäß [kocht man/sie].",
+"trlang": "DE"
+},
+{
+"n": "247",
+"sec": "§ 52''",
+"hl": "",
+"master": "nu a[danzi akuwa]nzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 27'",
+"nu a-d[a-an-zi a-ku-wa-a]n-zi ¬¬¬"
+]
+],
+"tr": "Und [man] iß[t und trink]t.",
+"trlang": "DE"
+},
+{
+"n": "248",
+"sec": "§ 53''",
+"hl": "",
+"master": "[mā]n šuppa- … [ … K]Á-az iniššan",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 28'",
+"[ … ]⸢a⸣-an šu-up-⸢pa⸣-x[ … K]Á-az i-ni-iš-ša-an"
+]
+],
+"tr": "[Wen]n rei[n?/sie reinigt?…] ebenso [ … ] vom [T]or",
+"trlang": "DE"
+},
+{
+"n": "249",
+"sec": "§ 53''",
+"hl": "",
+"master": "[ … -] … kēz kē[zziy]a 7 {GIŠ}GAG.URUDU [ … ] … (-)uwaš … [ … ] {D}Tarpattaššiš [ … ] … -kan",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 29'",
+"[ … -]x ke-e-ez ⸢ke⸣-[ … -i]a 7 {GIŠ}GAG.URUDU [ … ]x (-)ú-wa-aš x[ … ] {D}Tar-pa-at-ta-aš-ši-iš [ … ]x-kán"
+]
+],
+"tr": "[ … ] … auf dieser und je[ner] Seite sieben Pflöcke aus Kupfer [ … ] … [ … ], Tarpatassa [ … ] …",
+"trlang": "DE"
+},
+{
+"n": "250",
+"sec": "§ 53''",
+"hl": "",
+"master": "namma … [ … -]kan idālu [ … ] … inan an[da … ] … uizzi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 31'",
+"nam-ma x[ … -]kán i-da-a-lu [ … ]x i-na-an ⸢an⸣-[da … ]x ú-iz-zi"
+]
+],
+"tr": "Außerdem […] das Böse [ … ] die inan-Krankheit kommt hin[ein … ].",
+"trlang": "DE"
+},
+{
+"n": "251",
+"sec": "§ 53''",
+"hl": "",
+"master": "[ … ] INA KUR LÚ.K[ÚR … ] … gulliya nanni",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 33'",
+"[ … ] I-NA KUR LÚ.K[ÚR … ]x gul-li-ia na-an-ni ¬¬¬"
+]
+],
+"tr": "[ … ] in das Fei[ndes]land [ … ] in ein Loch treibe!",
+"trlang": "DE"
+},
+{
+"n": "252",
+"sec": "§ 54''",
+"hl": "",
+"master": "[nu KÙ.BAB]BAR GUŠKIN {NA4}ZA.GÌN [{NA4}]GUG {NA4}KÁ.DINGIR.RA",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 34'",
+"[ … BAB]BAR GUŠKIN {NA4}ZA.GÌN [ … ]GUG {NA4}KÁ.DINGIR.RA [ … b]a-ra-aš-ḫi {NA4}lu-u[l-l]u-ri AN.BAR NAGGA URUDU ZABAR [šu-u]ḫ-⸢ḫa⸣-a-i"
+]
+],
+"tr": "[Und Silb]er, Gold, Blaustein, Karneol, Babylonstein, [b]arašḫi-Stein, lu[ll]uri-Stein, Eisen, Zinn, Kupfer , Bronze, [sch]üttet sie hin.",
+"trlang": "DE"
+},
+{
+"n": "253",
+"sec": "§ 54''",
+"hl": "",
+"master": "kē=ma duwān duwanna [ … ]zi",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 36'",
+"ke-⸢e⸣-ma du-wa-a-an21 du-wa-an-na [ … ]-zi ¬¬¬"
+]
+],
+"tr": "Diese aber hierhin und dorthin [ … -s]t sie.",
+"trlang": "DE"
+},
+{
+"n": "254",
+"sec": "§ 55''",
+"hl": "",
+"master": "[nu KÙ.BABBAR GUŠ]KIN {NA4}ZA.GÌN {NA4}GUG {NA4}TI [ … ]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 38'",
+"[nu KÙ.BABBAR GUŠ]KIN ⸢{NA4}ZA.GÌN⸣ ⸢{NA4}⸣GUG {NA4}TI [ … ]"
+]
+],
+"tr": "[Und Silber, Go]ld, Blaustein, Karneol, Lebensstein [ … ]",
+"trlang": "DE"
+},
+{
+"n": "255",
+"sec": "§ 55''",
+"hl": "",
+"master": "[ … {D}Tarpa]ttašši DINGIR{MEŠ}-aš ḫūmandaš [āššu memiški]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 39'",
+"[ … -a]t-ta-aš-ši ⸢DINGIR{MEŠ}⸣-aš ḫu-u-ma-an-⸢da-aš⸣ [ … ]"
+]
+],
+"tr": "[ …, Tarpa]tassa bei allen Göttern [sprich fortan Gutes]",
+"trlang": "DE"
+},
+{
+"n": "256",
+"sec": "§ 55''",
+"hl": "",
+"master": "[n]u=wa=šši TI-tar innara[w]atar [MU{ḪI.A} GÍD.DA piški]",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 40'",
+"[n]u-wa-aš-ši TI-tar in-na-ra-[w]a-⸢tar⸣ [ … ]"
+]
+],
+"tr": "[un]d [gib] ihm Leben , Kr[a]ft, [lange Jahre!]",
+"trlang": "DE"
+},
+{
+"n": "257",
+"sec": "§ 55''",
+"hl": "",
+"master": "[ … ]- … -ta ANA É=IA [ … ]arḫut",
+"words": [],
+"mss": [
+[
+"A2",
+"Rs. IV 41'",
+"[ … ]-x-ta A-NA É-IA [ … ]ar-ḫu-ut ¬¬¬"
+]
+],
+"tr": "[ … ] … meinem Haus [ … ] stehe bei!",
+"trlang": "DE"
+},
+{
+"n": "258",
+"sec": "§ 56''",
+"hl": "",
+"master": "… [ … ]",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Rs. 1'/Rs. IV 43'",
+"x x x x x x[ … ]"
+]
+],
+"tr": "[…]",
+"trlang": "DE"
+},
+{
+"n": "259",
+"sec": "§ 56''",
+"hl": "",
+"master": "n=at arḫa adanzi",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Rs. 1'/Rs. IV 43'",
+"⸢na-at⸣ ar-ḫa a-da-an-zi ==="
+]
+],
+"tr": "und sie essen es auf.",
+"trlang": "DE"
+},
+{
+"n": "260",
+"sec": "Kol.",
+"hl": "",
+"master": "QATĪ",
+"words": [],
+"mss": [
+[
+"A1+2",
+"Rs. 2'/Rs. IV 44'",
+"QA-TI"
+]
+],
+"tr": "Beendet.",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 3:1": "Vgl. zur Ergänzung Rs. III 15 ; Vs. II 10.",
+"§ 3:2": "Vgl. Vs. II 11 (3 GIḪI.A) und Rs. III 16 [3? G]IḪI.A. Da in Vs. I 9 2 statt 1 Bogen wie in Vs. II 10 genannt sind, waren vermutlich in Vs. I 10 auch doppelt so viele Pfeile wie in Vs. II 11 (und somit 6 statt 3) genannt.",
+"§ 3:3": "Erg. nach Rs. III 16. Vgl. Vs. II 11.",
+"§ 3:4": "Erg. nach Vs. II 12; Rs. III 17.",
+"§ 3:5": "Vgl. zur Ergänzung Vs. II 12f. und Rs. III 17f.",
+"§ 3:6": "Erg. nach Vs. II 13f. Vgl. Rs. III 18.",
+"§ 3:T1": "In der vorliegenden Übersetzung wird die genusneutrale 3. Person Sg. stets mit der femininen Form wiedergegeben „sie x-st/hat ge-x-st“. Dies hat zum einen den Grund, dass es sich um eine Ritualanweisung einer Frau handelt, die das Ritual vermutlich auch selbst ausgeführt hat, und zum anderen, dass der Text somit besser lesbar ist als bei einer Wiedergabe durch „er/sie x-st“ etc. Zu beachten ist jedoch, dass es sich um eine Ritualanweisung handelt, die vermutlich nicht nur für Personen weiblichen Geschlechts konzipiert ist.",
+"§ 4:7": "Erg. nach Vs. II 15. Vgl. Rs. III 19.",
+"§ 4:8": "Erg. nach Vs. II 15. Vgl. Rs. III 19.",
+"§ 4:9": "Erg. nach Rs. III 20f. Vgl. Vs. II 16f. mit anderer Satzstellung.",
+"§ 5:10": "Erg. nach Rs. III 24.",
+"§ 5:11": "Erg. nach Vs. II 21f. und CTH 391.2 A KBo 13.109 Vs. II 4'. Rs. III 27 UN{MEŠ} om.",
+"§ 6:12": "Erg. nach Vs. II 22f.",
+"§ 6:13": "Erg. nach Vs. II 24. Vgl. Rs. III 28f.",
+"§ 6:14": "Erg. nach Vs. II 24. Vgl. Rs. III 29.",
+"§ 7:15": "Erg. nach CTH 391.2 A KBo 13.109 Vs. II 5'. Vgl. CTH 391.1 A Rs. III 30 (nu nam-ma GADA-an QA-TAM-MA i-ia-zi) sowie teilweise erg. Vs. II 25.",
+"§ 7:16": "Erg. nach Vs. II 26f. Vgl. Rs. III 31 (da-an-na-ra-an).",
+"§ 8:17": "Vgl. zu diesem Paragraphen auch § 17.",
+"§ 9:T2": "Wörtlich: „um seine Hand und seinen Fuß“.",
+"§ 15':T3": "Wörtlich: „zu seinem Kopf“.",
+"§ 16':18": "Ergänzung nach Kolon 22.",
+"§ 16':19": "Wahrscheinlich ist -TIM-ma oder -ma zu ergänzen.",
+"§ 24':20": "Aus Platzgründen fehlt dieser Satz eventuell.",
+"§ 24':21": "Vgl. zur Ergänzung Rs. III 59 (Kolon 188).",
+"§ 30':22": "Vielleicht {D}tarpattaššiš?/šan? zu ergänzen.",
+"§ 34':23": "Sic! (Metathese). Vgl. Vs. II 15 a-ša-ra-an.",
+"§ 34':T4": "Wörtlich: „zu seinem/ihrem Kopf“.",
+"§ 38':T5": "Der Göttername steht statt im Nom. im Dat.-Lok. Außerdem besteht eine Inkongruenz zwischen dem Relativpronomen kuiš (3.Sg.) und der Verbalform ( 3. Pl.).",
+"§ 42':24": "Das letzte Wort dāi ist über eine Rasur geschrieben. Reste eines älteren Zeichens sind erkennbar.",
+"§ 42':25": "Getilgtes Zeichen.",
+"§ 43':26": "Über älterem Zeichen; ältere Zeichenspuren noch zu erkennen.",
+"§ 47'':27": "Hier setzt sich Bo 647 Rs. IV ein.",
+"§ 47'':28": "Hier bricht 239/g ab.",
+"§ 47'':29": "Für kola 214-215 vgl. evtl. Vs. II 41-42.",
+"§ 48'':30": "Vgl. Vs. II 43.",
+"§ 48'':31": "Hier bricht Bo 7918 ab.",
+"§ 51'':20": "Ergänzung nach A2 Vs. II 51; Rs. III 56.",
+"§ 54'':21": "Vorletztes Zeichen -a- nicht in Autographie.",
+"T1": "In der vorliegenden Übersetzung wird die genusneutrale 3. Person Sg. stets mit der femininen Form wiedergegeben „sie x-st/hat ge-x-st“. Dies hat zum einen den Grund, dass es sich um eine Ritualanweisung einer Frau handelt, die das Ritual vermutlich auch selbst ausgeführt hat, und zum anderen, dass der Text somit besser lesbar ist als bei einer Wiedergabe durch „er/sie x-st“ etc. Zu beachten ist jedoch, dass es sich um eine Ritualanweisung handelt, die vermutlich nicht nur für Personen weiblichen Geschlechts konzipiert ist.",
+"T2": "Wörtlich: „um seine Hand und seinen Fuß“.",
+"T3": "Wörtlich: „zu seinem Kopf“.",
+"T4": "Wörtlich: „zu seinem/ihrem Kopf“.",
+"T5": "Der Göttername steht statt im Nom. im Dat.-Lok. Außerdem besteht eine Inkongruenz zwischen dem Relativpronomen kuiš (3.Sg.) und der Verbalform ( 3. Pl.)."
+}
+}
