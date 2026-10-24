@@ -24,3 +24,18 @@ with pMoscow's "in the egg" in the note.
 
 No question from run 3 needs the user.
 
+## Run 4 – Hesiod (report: `run-4.md`)
+
+**For the user (optional; nothing waits on it – the current choice is in place and reversible by one table edit and a
+script pass):**
+1. **Hesiod's speaking names** – the cosmic names and abstractions are translated as names, without the article
+   (Χάος `פַּעַר`, Γαῖα `אֶרֶץ`, Οὐρανός `שָׁמַיִם`, Νύξ `לַיְלָה`, Ἔρις `מָדוֹן`, Δίκη `מִשְׁפָּט` …), as West and Most do in
+   English, so the reader hears what a Greek hearer heard. The alternative is to transcribe every name (`כָאוֹס`, `גַּאיָה`,
+   `אוּרָנוֹס` …), as the existing Hebrew translations do. Which should the Hebrew reader meet? (`הסיודוס/renderings.md`
+   §3.2, §12.1)
+
+**Settled by the orchestrator (minor):** the command infinitive as the infinitive absolute (`עֲבוֹד`, `קָצוֹר`) stays – it
+is the closest Hebrew to the Greek form and it reads as elevated, not as an error; αἰδώς `בּוּשָׁה`, τιμαί `זְכֻיּוֹת`,
+εὐδαίμων `בַּר־מַזָּל` stay, each with its note; the folder's spelling stays as it is (`אשה`; qamaṣ qaṭan per the existing
+corpora); lines the base does not bracket stay without `{חשודה}`, with the modern athetesis in the note.
+
