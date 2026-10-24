@@ -1,11 +1,13 @@
 """Verify and build the netherworld corpus (the Descent of Ištar, eBL L/1/8; Inana's Descent, ETCSL 1.4.1;
-Nergal and Ereškigal, eBL L/1/6 MB + SB; Bilgameš, Enkidu and the Netherworld, ETCSL 1.8.1.4 + ORACC Q000364).
+Nergal and Ereškigal, eBL L/1/6 MB + SB; Bilgameš, Enkidu and the Netherworld, ETCSL 1.8.1.4 + ORACC Q000364;
+Erra and Išum I, eBL L/1/5, Round 4 run 5: RESERVED_KEY / TRAPS_KEY are its own gates and traps, and verify ER checks
+its fixed lines 126–162 against renderings §12.6 and the flood references).
 
 Written 2026-10-21 (round 2, run 5), adapted from ../קינות-על-ערים/lament_tools.py (Sumerian) and the wisdom corpus's
 wisdom_tools.py (Akkadian eBL texts). Add a project as a PROJECTS entry.
 
 Usage (from any directory):
-  python3 -I netherworld_tools.py verify KEY [--strict]   KEY = IS | IN | NE | GEN. Checks (exit 1 on an error):
+  python3 -I netherworld_tools.py verify KEY [--strict]   KEY = IS | IN | NE | GEN | ER. Checks (exit 1 on an error):
       1. every entry `### <label>` has exactly one `> ` Hebrew line and one backticked source line, which equals the
          base text's line (IS: the eBL normalization, metrical bars ignored; IN: ETCSL's transliteration, notes in
          *…* and variant parentheses ignored); no label is duplicated;
@@ -54,6 +56,10 @@ PROJECTS = {
                 oracc='ORACC/epsd2-literary--Q000364--Gilgamesh-Enkidu-and-the-Netherworld/Q000364--lemmatised-morph.md',
                 versions=[('Version A', ''), ('UET 6 58', 'U58.'), ('UET 6 59', 'U59.'), ('UET 6 60', 'U60.'),
                           ('Me-Turan', 'MT.')]),
+    # Round 4, run 5 (2026-10-24). ER: Erra and Išum, eBL L/1/5, Standard Babylonian Tablet I (II–V not edited on eBL
+    # yet). Lines 126–162 are fixed (renderings §12.6) and shared with the flood references (FLOOD_REF).
+    'ER': dict(dir='5-ארה-ואישום', annotated=['annotated.rtl.md'], kind='ebl',
+               ebl=[('', 'eBL/Erra-SB-I/reading-edition.md')]),
 }
 
 NIQQUD = re.compile('[֑-ֽֿ-ׇ]')  # keeps the maqaf U+05BE
@@ -98,7 +104,7 @@ RESERVED = {
     B + P + r'(לקח|לקחה|לקחו|קח|קחי|יקח|תיקח|נלקח|ניקח|לקחת)' + E: [r'leq|liq|ilq|(^|\s|-)ti(-|\s|$)|šu\b.*\bti\b|ba-ni-in-ti'],
     B + P + r'(ידע|ידעה|ידעו|יודע|יודעת|יודעים|יודעות|ידעתי|תדע|נודע)' + E: [r'\bed[êûeiī]|īd[êûeiīu]|ūd|uʾadd|\b[lu]?udd[iīa]|wadû|\bzu\b|-zu-|mu-un-zu|nu-zu'],
     B + P + r'(נחש|נחשים|נחשי)' + E: [r'muš(?![₂₃])'],
-    B + P + r'(שד|שדי|שדים)' + E + r'|' + B + P + r'שדי־|' + B + P + r'שד־': [r'gal₅-la₂|gal5-la2|gala\[|galla'],
+    B + P + r'(שד|שדי|שדים)' + E + r'|' + B + P + r'שדי־|' + B + P + r'שד־': [r'gal₅-la₂|gal5-la2|gala\[|galla|gall[ûêîu]'],
     r'שרט|שורט': [r'ḫur|hur\['],
     r'עוון|עוונ': [r'nam-tag'],
     r'פדיון|פדה|פדיונ': [r'napṭir|ipṭir'],
@@ -143,6 +149,37 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, source regex)
     'שומר': ('Sumer (שׁוּמֶר; unvocalized "guard")', r'ki-en-gi'),
     'עלמת': ('*ki-sikil-lil₂-la₂* (עַלְמַת־הַמַּשַּׁב)', r'lil₂-la₂'),
 }
+# Round 4, run 5 (renderings §12.5): project-specific reserved strings and traps (only for that key)
+RESERVED_KEY = {'ER': {
+    B + P + r'(משחית|משחיתים|השחית|השחיתו|ישחית|תשחית|אשחית|נשחת|נשחתה|שחת|שחתו|השחתה)' + E: [],
+    B + P + r'(נגף|נגפו|נגפה|ינגף|מגפה|מגפת|מגפות)' + E: [],
+    B + P + r'(רשף|רשפי)' + E: [],
+    B + P + r'(קטב|קוטב)' + E: [],
+    B + P + r'(הסתיר|הסתרתי|אסתיר|הסתר|הסתרת|מסתיר|הסתירו|יסתיר|תסתיר|נסתר|נסתרו)' + E: [],
+    r'נפלים|נפילים|אנשי השם': [],
+    r'מזוז': [],
+    B + P + r'(חמה|חמת|חמתו|חמתם)' + E: [r'\bimtu|\bimat|imass|imassu|imtī'],
+    B + P + r'(פתן|פתנים|פתני)' + E: [r'bašm'],
+    B + P + r'(חץ|חצים|חיצים|חצי|חצינו|חציו|חצו)' + E + r'|' + B + P + r'חצי־': [r'uṣṣ'],
+    B + P + r'(חרב|חרבו|חרבי|חרבות|חרבך)' + E: [r'namṣar'],
+    B + P + r'(מבול|המבול)' + E: [r'abūb'],
+    B + P + r'(גבור|גיבור|גיבורים|גבורים|גבורה|גבורתך|גבורתו|גיבורי)' + E: [r'qurād|qarrād|qard|qurd'],
+    B + P + r'(דלת|דלתות|דלתו)' + E: [r'dalt'],
+    B + P + r'(אות|אותות)' + E: [r'\bittu|\bittāt|\bitti\b'],
+    B + P + r'(קרא|קראו|יקרא|ויקרא|קורא|קראתי|קראה)' + E: [r'nabû|ittabi|ibbi|nibīt|\bnabi'],
+}}
+TRAPS_KEY = {'ER': {
+    'אישום': ('Išum (אִישׁוּם; unvocalized "indictment")', r'īšum|išum'),
+    'השבעה': ('the Sebetti (הַשִּׁבְעָה; unvocalized "the oath")', r'sebett|sebet\b'),
+    'ממי': ('Mami (מָמִי; unvocalized "from me")', r'māmi|mami'),
+    'שכן': ('Šakkan (שַׁכַּן; unvocalized "neighbour")', r'šakkan'),
+    'גירה': ('Girra (גִּירָּה; unvocalized "cud")', r'gīr|girr'),
+    'שח': ('*awû* Gt (שָׂח; unvocalized "bowed")', r'ītamm|itamm'),
+    'ושח': ('*awû* Gt (וְשָׂח)', r'ītamm|itamm'),
+    'אמנים': ('*ummânu* (אָמָּנִים)', r'ummân'),
+    'נס': ('*urinnu* (נֵס; unvocalized "miracle")', r'urinn'),
+    'שמש': ('the sun / Šamaš (שֶׁמֶשׁ / שַׁמַשׁ)', r'šamš|šamaš'),
+}}
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')
 # fixed formulas: (KEY or '*', source regex, required Hebrew regex on the stripped `>` line, description)
@@ -197,7 +234,76 @@ FORMULAS = [
     ('GEN', r'ki-sikil lil₂-la₂', r'עלמת־המשב', '*ki-sikil-lil₂-la₂* = עלמת־המשב'),
     ('GEN', r'gu₃ mu-(un-)?na-de₂-e', r'(פונה|פנתה|פנה) אל', '*gu₃ de₂* = פנה אל'),
     ('GEN', r'muš tu₆ nu-zu', r'נחש אשר קסם אינו יודע', 'the snake immune to spells'),
+    # Round 4, run 5: Erra and Išum I (renderings §12.4); source regexes on the bar- and bracket-free normalization
+    ('ER', r'pâšu īpuš-ma iqabbi$', r'פתח את פיו ואמר,?$', 'the speech formula, first half (104)'),
+    ('ER', r'amāta izakkar$', r'דבר דיבר:$', '*amāta izakkar* = דבר דיבר'),
+    ('ER', r'^īpuš-ma pâšu izakkar ana ', r'^פתח את פיו, אל .+ דיבר:$', '*īpuš-ma pâšu izakkar ana Y* = פתח את פיו, אל Y דיבר:'),
+    ('ER', r'ītamm', r'(^|\s)ו?שחו?($|[\s,:;.])', '*awû* Gt = שָׂח'),
+    ('ER', r'qarrād lā šanān', r'גיבורים שאין להם מתחרה', '*qarrād lā šanān* = גיבורים שאין להם מתחרה'),
+    ('ER', r'lillikū idāka', r'ילכו לצדך', '*lillikū idāka* = ילכו לצדך'),
+    ('ER', r'qurādu erra|qurādi erra', r'ארה הגיבור', '*qurādu erra* = ארה הגיבור'),
+    ('ER', r'qarrād ilī', r'גיבור האלים', '*qarrād ilī* = גיבור האלים'),
+    ('ER', r'ālik ṣēri', r'הולך אל השדה', '*ālik ṣēri* = (ה)הולך אל השדה'),
+    ('ER', r'āšib āli', r'יושב העיר', '*āšib āli* = יושב העיר'),
+    ('ER', r'ul ubbala', r'לא ישווה', '*ul ubbala* = לא ישווה'),
+    ('ER', r'lišm[ûâē]-ma', r'ישמע', '*lišmû-ma* = ישמעו'),
+    ('ER', r'hubūr', r'המול', '*ḫubūru* = המולה (Atra-ḫasīs)'),
+    ('ER', r'šipīt šamê', r'תפר השמים והארץ', '*šipīt šamê u erṣeti* = תפר השמים והארץ'),
+    ('ER', r'ina šubtīya at[ebū]', r'ממושבי', '*ina šubtīya atbē* = קמתי ממושבי'),
+    ('ER', r'šipri šâšu ša taqbû', r'אשר למלאכה ההיא שאמרת', 'the "matter you spoke of" formula'),
+    ('ER', r'^ali ', r'^"?איה ', '*ali* = איה'),
+    ('ER', r'annīta ina šemêšu', r'כשמע(ו|ה) את זאת', '*annīta ina šemêšu* = כשמעו את זאת'),
+    ('ER', r'illûnim-ma', r'יעלו', '*illûnim-ma* = יעלו'),
+    ('ER', r'kakkīya ezzūti', r'כלי־נשקי הזועמים', '*kakkīya ezzūti* = כלי־נשקי הזועמים'),
+    ('ER', r'rub[ûêâ] marūtuk', r'הנשיא מרדוך', '*rubû marūtuk* = הנשיא מרדוך'),
+    ('ER', r'šiknāt napišti', r'בעלי הנפש', '*šiknāt napišti* = בעלי הנפש'),
+    ('ER', r'ṣalmāt qaqqadi', r'שחורי הראש', '*ṣalmāt qaqqadi* = שחורי הראש'),
+    ('ER', r'sebett', r'השבעה', 'the Sebetti = הַשִּׁבְעָה'),
+    ('ER', r'būl šakkan', r'בהמת שכן', '*būl šakkan* = בהמת שַׁכַּן'),
+    ('ER', r'\bimat\b', r'חמת', '*imat* = חֲמַת'),
+    ('ER', r'abūb', r'מבול', '*abūbu* = מבול'),
 ]
+
+# Round 4, run 5: Erra I 126–162 are fixed (renderings §12.6) and shared with the flood references (§7 there).
+FLOOD_REF = os.path.join(ROOT, 'סיפורי-המבול-המסופוטמיים', '6-אזכורי-המבול', 'annotated.rtl.md')
+
+
+def fixed_lines():
+    """{label: Hebrew} from the table of renderings.md §12.6."""
+    out, on = {}, False
+    for ln in open(os.path.join(HERE, 'renderings.md'), encoding='utf-8'):
+        if ln.startswith('### 12.6'):
+            on = True
+            continue
+        if on and ln.startswith('#'):
+            break
+        m = re.match(r'^\| (\d+) \| `(.+?)` \|', ln) if on else None
+        if m:
+            out[m.group(1)] = m.group(2)
+    return out
+
+
+def flood_ref_lines():
+    """{label: `>` line} of the flood references' section 7 (Erra I 126–162)."""
+    out, on, cur = {}, False, None
+    if not os.path.exists(FLOOD_REF):
+        return out
+    for ln in open(FLOOD_REF, encoding='utf-8'):
+        ln = ln.rstrip('\n')
+        if ln.startswith('## '):
+            on, cur = ln.startswith('## 7.'), None
+            continue
+        m = re.match(r'^### (\S+)\s*$', ln)
+        if on and m:
+            cur = m.group(1)
+        elif on and cur and ln.startswith('> '):
+            out[cur] = ln[2:].rstrip()
+    return out
+
+
+def same_heb(a, b):
+    f = lambda x: re.sub(r'\s+', ' ', strip(FN.sub('', x))).strip()
+    return f(a) == f(b)
 
 
 def strip(s):
@@ -334,24 +440,24 @@ def norm_tr(s):
     return re.sub(r'[\[\]⸢⸣?!«»⟨⟩()<>-]', '', s).strip()
 
 
-def check_reserved(label, heb, lic, problems):
+def check_reserved(label, heb, lic, problems, key=None):
     lic = lic + ' ' + lic.replace('h', 'ḫ').replace('H', 'Ḫ')   # eBL writes ḫ as h (2026-10-22)
     h = strip(FN.sub('', heb))
-    for pat, allow in RESERVED.items():
+    for pat, allow in list(RESERVED.items()) + list(RESERVED_KEY.get(key, {}).items()):
         if re.search(pat, h):
             if allow and any(re.search(a, lic, re.I) for a in allow):
                 continue
             problems.append(f'{label}: reserved string /{pat[:40]}/ in "{heb}"' + (f' (allowed only with {allow})' if allow else ''))
 
 
-def check_traps(label, heb, lic, problems):
+def check_traps(label, heb, lic, problems, key=None):
     for tok in re.split(r'[\s,.;:!?"\'()\[\]–—]+', FN.sub('', heb)):
         if not tok:
             continue
         st = strip(tok)
         for part, raw in zip(st.split('־'), tok.split('־')):
             base = PREFIX.sub('', part, count=1)
-            for trap, (what, rx) in TRAPS.items():
+            for trap, (what, rx) in list(TRAPS.items()) + list(TRAPS_KEY.get(key, {}).items()):
                 if (part == trap or base == trap) and re.search(rx, lic, re.I) and not NIQQUD.search(raw):
                     problems.append(f'{label}: unvocalized "{tok}" – write {what}')
         if re.search(r'־מה$', st) and re.search(r'(^|\s)me(-|\s|$)|me\[', lic) and not NIQQUD.search(tok.split('־')[-1]):
@@ -361,6 +467,8 @@ def check_traps(label, heb, lic, problems):
 def check_formulas(key, label, heb, tr, problems):
     h = re.sub(r'[\[\]⟨⟩]', '', strip(FN.sub('', heb))).strip()
     t = re.sub(r'[⸢⸣]', '', clean_tr(tr))   # half-brackets hid formulas (2026-10-22, GEN MT.B68)
+    if key == 'ER':   # 2026-10-24: ER's source regexes are written for the bar-free normalization
+        t = re.sub(r'[\[\]?]', '', clean_norm(t))
     for k, trx, hrx, what in FORMULAS:
         if k not in (key, '*'):
             continue
@@ -416,11 +524,19 @@ def verify(key, strict=False):
             pending += 1
             continue
         lic = srcd.get(k, ('', tr))[1]
-        check_reserved(k, heb, lic, problems)
-        check_traps(k, heb, lic, problems)
+        check_reserved(k, heb, lic, problems, key)
+        check_traps(k, heb, lic, problems, key)
         check_formulas(key, k, heb, tr, problems)
     if pending:
         (problems if strict else notes).append(f'{pending} entries not yet drafted')
+    if key == 'ER':   # the fixed lines 126–162 (renderings §12.6) and their copy in the flood references
+        fx, fl = fixed_lines(), flood_ref_lines()
+        for lab, h in fx.items():
+            e = ent.get(lab)
+            if e and e['heb'] and 'טרם תורגם' not in e['heb'][0] and not same_heb(e['heb'][0], h):
+                problems.append(f'{lab}: fixed line (renderings §12.6) differs:\n    A: {e["heb"][0]}\n    F: {h}')
+            if lab in fl and not same_heb(fl[lab], h):
+                (problems if strict else notes).append(f'{lab}: the flood references (§7) still differ from renderings §12.6')
     by = {}
     for k in order:
         e = ent[k]
