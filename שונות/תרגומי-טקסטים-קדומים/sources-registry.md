@@ -207,6 +207,16 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 
 - **Not used:** the live TLA (JS wall, decoy page); Nederhof's St Andrews PDFs and Ramses Online (no licence: consult only); Shupak 2016 (Hebrew Amenemope, ©, not consulted); Lichtheim, Simpson, Allen (©, recalled only, never quoted verbatim). Sethe 1928 (PD) for the Memphite Theology was not downloaded (archive.org redirects): a later check of El Hawary's readings against it is possible.
 
+### 4.4u Greek: Hesiod (`הסיודוס/`; Round 4 run 4, 2026-10-24)
+| Folder | What |
+|---|---|
+| `Perseus--Hesiod/` | **BASE TEXT.** Evelyn-White 1914 (Loeb; public domain), Perseus `canonical-greekLit` TEI (markup CC BY-SA 4.0, **committed**): the Theogony (1,042 lines with Galen's 929a–t) and the Works and Days (831 lines; WD 310 is not in the file). `<del>` = Evelyn-White's brackets, `<add>` = 929a–t. Through `raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0020/…`. |
+| `Perseus-Treebank--Hesiod/` | The Perseus AGDT 2.1 treebank of both poems (lemma, morphology, syntax per word; CC BY-SA 3.0, **committed**), aligned to the lines by `tools/perseus2md.py` (0 unaligned words). Known slips in its README. |
+| `LXX-Rahlfs-1935--el-wikisource/` | The Septuagint (Rahlfs 1935, from Greek Wikisource raw wikitext; licence unclear: **git-ignored**, recipes and manifest items): Genesis, Exodus, Leviticus, Deuteronomy, Judges (the A text), 4 Kingdoms, Isaiah, Ezekiel, Jonah, Amos, Micah, Zechariah, Job, Proverbs, Psalms 73, 88, 103, 148 (LXX numbering). Read by `tools/lxx_verses.py`. Wikimedia sometimes answers 429 (a re-fetch works). |
+
+- **LSJ** per word through the Logeion API (`anastrophe.uchicago.edu/logeion-api/detail?w=<lemma>&type=normal`; `hesiod_tools.py lsj`); never bulk-extracted.
+- **Not used:** West's editions and commentaries (1966, 1978), Most's Loeb (2006/2018), Clay & Vergados 2025 (all ©: recalled only, never quoted); the Hebrew translations (Spann 1956, Shabtai 2004, Bouzaglo 2017; ©, not consulted).
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).
