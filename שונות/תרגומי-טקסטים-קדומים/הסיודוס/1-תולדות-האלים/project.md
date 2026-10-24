@@ -9,6 +9,12 @@ The Theogony (Θεογονία), lines 1–1022 and 929a–t (1,042 lines in the
 - Renderings fixed before the first line: `../renderings.md` (names §3, the speaking names translated §3.2, grammar §4,
   key terms §5, the LXX layer §6, the gates §7, formulas §8, repeated lines §9).
 - The translators' sections follow, each above the line `## Parallels index`.
+- **Status (2026-10-24, Round 4 run 4 sub 1): first draft complete** – all 1,042 lines (1–1022, 929a–t). Translator 1:
+  1–115, 116–336; translator 2 (fresh): 337–616, 617–885, 886–1022 – each part merged into `../renderings.md` §11.1–§11.5
+  and pushed. Review passes, each a fresh agent over the whole poem: (a) fidelity – 5 lines; (b) consistency – 28 lines
+  (§11.6); (c) Hebrew – 52 lines (§11.7). `verify TH --strict` 0 problems, 0 repeated-line differences; `selftest` 0;
+  `check_bible_quotes.py` 0 on every file; `build` done; print stub `../../הדפסה/הסיודוס/1-תולדות-האלים.rtl.md`; the
+  fifth-day dossier's 23 Hesiod lines aligned (its `project.md`). For the Works and Days: `../renderings.md` §13.
 
 ## TH 1–115
 

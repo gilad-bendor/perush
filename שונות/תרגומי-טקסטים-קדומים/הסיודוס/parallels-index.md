@@ -1,7 +1,33 @@
 # Parallels index: the Hesiod corpus (`הסיודוס/`)
 
 ## Key findings
-(written by the coordinator at the end of the run)
+### The Theogony (the Theogony coordinator, 2026-10-24; the Works and Days is to follow)
+Archaic Greece had no contact with Israel: every row is a shared motif, an inherited Near Eastern tradition, or a Greek
+word the Septuagint chose for a Hebrew one (the "LXX layer").
+- **Gen 1 through the Septuagint's Greek:** ἐξ ἀρχῆς (TH 45, 115) is the ἐν ἀρχῇ of Gen 1:1; Χάος γένετʼ (116) has the
+  LXX's ἐγένετο of `וַיְהִי`, but χάος is *not* its word for `תֹּהוּ` (the LXX's χάος renders `גַּיְא`); Night bears Day
+  (124) in the very words νύξ / ἡμέρα that the LXX uses for the naming of Gen 1:5 – darkness before light, by birth in
+  Hesiod and by naming in Genesis. Keto (238) is named from κῆτος, the LXX's word for `הַתַּנִּינִם הַגְּדֹלִים` (Gen 1:21).
+- **Gen 2–3:** the first woman is moulded (συμπλάσσω, the LXX's πλάσσω of `וַיִּיצֶר`) from earth (571) – where Genesis
+  moulds the man and builds the woman from him; καλὸν κακόν (585) against the LXX's καλόν for `טוֹב`; "the race of women"
+  (590) against `זָכָר וּנְקֵבָה בָּרָא אֹתָם` (Gen 1:27) – a misogyny far beyond Gen 3:16; the serpent guards the golden
+  apples with φυλάσσω (335), the LXX's verb for the cherubim of Gen 3:24; Metis advises Zeus "good and evil" (900, F21).
+- **Gen 6:1–4:** the Hundred-Handers are οὐκ ὀνομαστοί (148) – the LXX's word for `אַנְשֵׁי הַשֵּׁם`, negated; the closing
+  catalogue (963–1022) reverses Gen 6:2 (goddesses with mortal men, "children like gods"); γίγαντες (185) is the LXX's word
+  for `הַנְּפִלִים` / `הַגִּבֹּרִים` – kept as a name in the line, the link in the note.
+- **Sacrifice (Mekone, 535–557):** the fat-and-bones portion against the `חֵלֶב` given to God (Gen 4:4, Lev 3, 7:23–25) –
+  the same division valued the other way; βωμός, the word the LXX avoids for Israel's altar.
+- **The succession myth** (154–210, 453–506, 886–900): Sky castrated, Kronos swallowing, the stone – the Hurrian-Hittite
+  Kumarbi cycle and Enūma eliš, an inherited Near Eastern tradition; kingship after victory (881–885) as at Ugarit
+  (KTU 1.2 IV 32) and Exod 15:18.
+- **The dragon:** ὄφις and δράκων together (322, 825) as in the LXX's Isa 27:1 (Leviathan); the land melting like tin in
+  the furnace (862–866 ↔ Ezek 22:20–22); Typhoeus' later home Mount Kasios = Ugarit's Ṣapānu (a note: not in Hesiod).
+- **Other:** Hesiod called while shepherding at the god's mountain (23 ↔ Exod 3:1, the LXX's ἦν ποιμαίνων); Eosphoros,
+  Dawn's son (381 ↔ Isa 14:12, the LXX's ὁ ἑωσφόρος); the stone set up "as a sign" (498–500 ↔ Gen 28:18); the king with
+  the gift on his lips (80–93 ↔ Prov 16:10, 1 Kgs 3:28).
+- **The ancient mind:** a world begun by birth, with no maker; Earth both mother and planner; the gods' honours (τιμαί) as
+  a charter of privileges guaranteed by the oath of Styx; Hekate's free favour; sacrifice as the founding of mortality;
+  the poet who names himself and whose Muses "know how to tell lies like the truth" (27–28).
 
 ## The table
 

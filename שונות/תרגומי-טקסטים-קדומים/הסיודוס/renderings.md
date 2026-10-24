@@ -746,3 +746,75 @@ agreement, one unintended prophetic formula at 836). Rulings (the user's standin
 3. `θάλασσα` and `πόντος` share `יָם` (a recorded split: Hebrew has one natural word; the god Πόντος is `יָם`).
 4. The Septuagint quoted from Rahlfs 1935 through Greek Wikisource (`../sources/LXX-Rahlfs-1935--el-wikisource/`, git-ignored: licence
    unclear); `../tools/lxx_verses.py` reads it.
+
+## 13. For the Works and Days (the Theogony coordinator, 2026-10-24; binding for the WD translators)
+
+The Theogony is drafted, reviewed in three passes and verified (`verify TH --strict`: 0 problems). Everything in §3–§11
+binds the Works and Days exactly as it bound the Theogony; this section gathers what the WD will meet first. The
+translators' own lists, with first lines and reasons, are in `1-תולדות-האלים/project.md` under "For the Works and Days"
+(in "TH 337–616", "TH 617–885", "TH 886–1022") and the review sections; `lemma` / `lexmap` / `grep` show every Theogony
+rendering.
+
+### 13.1 The shared lines (copy character for character; renderings §9)
+| WD | = TH | Hebrew |
+|---|---|---|
+| 149 | 152 | `צמחו מן הכתפיים על איברים איתנים;` |
+| 54 | 559 | `בן־יאפטוס, היודע תחבולות יותר מכולם,` |
+| 71 | 572 | `דמוי בתולה נערצת, בעצות בן־קרונוס.` |
+| 72 | 573 | `וחגרה אותה וקישטה הָאֵלָה, אַתֵנָה בהירת־העיניים,` |
+
+Near-repeats (change exactly what the Greek changes): WD 53 ≈ TH 558 `ובכעס גדול אמר אליו זאוס מקבץ־העננים:` (WD's
+χολωσάμενος: χολόω `הִזְעִים`, χόλος `זַעַם`); WD 70 ≈ TH 571 `כי מן האדמה יצר צוֹלֵעַ־הָרַגְלַיִים המהולל מאוד`
+(WD κλυτός `מְהֻלָּל`, TH περικλυτός `המהולל מאוד`); WD 50 ≈ TH 565 `בנו הטוב של יאפטוס`; WD 52 ≈ TH 567 `בגבעול
+כַּלְכָּל נבוב`; WD 57 ≈ TH 570 `תחת האש`; the Muses' line F3 (WD 1–2 if it occurs); WD 124–125 = 254–255 (fix the
+first copy in WD).
+
+### 13.2 Formulas (§8, as now fixed)
+F1 `אבי האנשים והאלים` (WD 59, 169a); F5 `נושא־האגיס`; F6 `מקבץ־העננים` (WD 53, 99); F8 `שמים זרועי־הכוכבים`;
+F10 `ים עקר`; F13 `לילות וימים` (WD 385, 562); F16 `שוכני / שוכנות הארמונות האולימפיים` (WD 81, 110, 128); F18
+`הקיימים תמיד`; F20 `היודע תחבולות יותר מכולם` (WD 54); F23 `על פני האדמה רבת־המזון` (WD 157, 169d, 252); F25
+`גרעיני דמטר הקדושים` (WD 466, 597, 805: not yet tested – check against the Greek at its first occurrence); F26
+`בן־קרונוס`; F27 `בן־יאפטוס`; F28 `אתנה בהירת־העיניים` (WD 72); F30 `עקום־התחבולות` (WD 48); F33 `דמויי־אלים`.
+
+### 13.3 The Prometheus and Pandora vocabulary (TH 507–616, binding for WD 42–105)
+Προμηθεύς `פְּרוֹמֵתֵאוּס`; ἐξαπατάω `רִמָּה`; κλέπτω `גָּנַב`; πῦρ `אֵשׁ`; νάρθηξ `גִּבְעוֹל כַּלְכָּל`; κρύπτω `הִסְתִּיר`;
+χόλος / χολόω / χώομαι `זַעַם` / `הִזְעִים` / `חָרָה`; δόλος `עָרְמָה`, δόλιος `עַרְמוּמִי`; τέχνη `אֻמָּנוּת`; ἀντί `תַּחַת`;
+κακόν `רָעָה`; πῆμα `פֶּגַע`; τεύχω `הִתְקִין`; πλάσσω `יָצַר` (REQUIRED), γαῖα as material `אֲדָמָה`; παρθένος `בְּתוּלָה`;
+αἰδοῖος `נַעֲרָץ`; ἴκελος `דְּמוּי`; ζώννυμι `חָגַר`; κοσμέω / κόσμος `קִשֵּׁט` / `קִשּׁוּט`; ἐσθής `בֶּגֶד`; καλύπτρα `צָעִיף`;
+στέφανος `זֵר`, στεφάνη `עֲטָרָה`; ἄνθος `פֶּרַח`; χρύσεος `זָהוֹב`; χάρις `חֵן`; δαιδάλεος `מַעֲשֵׂה־אָמָּן`; θαῦμα `פֶּלֶא`;
+καλὸν κακόν `הָרָעָה הַיָּפָה`; καλός `יָפֶה` (never `טוֹב`); φωνή `קוֹל`, αὐδή `נִיב` ★; δῶρον `מַתָּנָה` (Pandora "All-Gift":
+the note); γένος γυναικῶν `גֶּזַע הַנָּשִׁים`, θῆλυς `נְקֵבָה`, φῦλα γυναικῶν `שִׁבְטֵי הַנָּשִׁים`; ἀμήχανος `שֶׁאֵין כְּנֶגְדּוֹ
+תּוּשִׁיָּה`. Pandora's dressers: the Charites `הֶחָרִיטוֹת`, Πειθώ `שִׁכְנוּעַ`, the Horai `הַהוֹרוֹת` ★, καλλίκομος
+`נְאַת־הַשֵּׂעָר`. The drones and the household: μέλισσα `דְּבוֹרָה`, κηφήν `רַחְפָן`, σμῆνος / σίμβλος `כַּוֶּרֶת`, κάματος
+`יְגִיעַ`, πόνος `עָמָל`, ἀεργός `בַּטְלָן`, γάμος `נִשּׂוּאִים`, γαμέω `נָשָׂא אִשָּׁה`, ἄκοιτις `רַעְיָה`, ἄλοχος `בַּת־זוּג`,
+γῆρας `זִקְנָה`, γηροκόμος `מְכַלְכֵּל שֵׂיבָה`, χηρωσταί `יוֹרְשִׁים רְחוֹקִים`, βίοτος `מִחְיָה`. The sacrifice: βωμός
+`מִזְבֵּחַ`, ἔρδειν ἱερά `לְהַקְרִיב קָרְבָּנוֹת`, κνίση `רֵיחַ־חֵלֶב`, δημός `חֵלֶב`, ὀστέα `עֲצָמוֹת`, καίω `שָׂרַף`,
+βοῦς `שׁוֹר` / `בָּקָר`, ἱλάσκομαι `רִצָּה`.
+
+### 13.4 Names and translated names the WD meets
+Ἔρις `מָדוֹן` (both Erides, WD 11–26: one Hebrew for both, as the poem's play requires); Νύξ `לַיְלָה`; Ὅρκος `שְׁבוּעָה`;
+Δίκη `מִשְׁפָּט` (the name and the noun), δίκαιος `צַדִּיק`; Εἰρήνη `שָׁלוֹם`, Εὐνομίη `סֵדֶר־טוֹב`; Αἰδώς / Νέμεσις
+`בּוּשָׁה` / `חֵמָה` (open for the user: `בּוּשָׁה` reads "shame"); Θάνατος / Ὕπνος `מָוֶת` / `שֵׁנָה` (vocalized); Λιμός
+`רָעָב`; Πλοῦτος `עֹשֶׁר`; translated names keep the gender of the Greek name (§11.7). δαίμων `דַּיְמוֹן` (TH 991;
+recommended for the WD's δαίμονες, WD 122–126, 141); ἥρως `הֵרוֹאִי` / ἡμίθεος `חֲצִי־אֵלִים` (Gen 6:4 in the note only);
+θεοῖς ἐπιείκελος `דְּמוּי־אֵלִים`. Zeus: ὑψίζυγος `רַם־הַכֵּס`, ὑψιβρεμέτης `הָרוֹעֵם מִמָּרוֹם`, εὐρύοπα `רְחַב־הַמַּבָּט`,
+μητίετα `רַב־הַתְּבוּנָה`, ἐρίγδουπος `הַמַּרְעִים`; βασιλεύς `מֶלֶךְ`, ἀνάσσω `מָלַךְ`, βασιλεύω `הָיָה לְמֶלֶךְ`.
+Hephaistos `הֵפַיְסְטוֹס`; Αἰθήρ `אֶתֶר` ★; the winds Βορέας / Νότος / Ζέφυρος `בּוֹרֵאָס` / `נוֹטוֹס` / `זֶפִירוֹס`.
+
+### 13.5 Rulings to keep in mind
+- **"Never"** = `אַף פַּעַם` (`לְעוֹלָם` is gated to αἰών); "kind" `סוּג` (`מִין` never).
+- κλέος `תְּהִלָּה` (κλέος ἐσθλόν `תְּהִלָּה טוֹבָה`), ὄνομα `שֵׁם` (§11.2); κῦδος `תִּפְאֶרֶת`.
+- φθείρω `אִבֵּד`, ὀλοός / ὀλώιος `מַשְׁחִית`, οὐλόμενος `מַמְאִיר` ★: the WD's ὄλλυμι needs its own word (grep first).
+- χαίρω `שָׂמַח`, χαίρετε (greeting) `שָׁלוֹם לָכֶם / לָכֶן`; μάχη `מַאֲבָק`, πόλεμος `מִלְחָמָה`, ὑσμίνη `קְרָב`.
+- θεῖος / θεσπέσιος `אֱלוֹהִי` ★; θέσπις `שֶׁל אֵלִים`; δῖος `נֶהְדָּר`; ἱερός `קָדוֹשׁ`, ζάθεος / ἠγάθεος `מְקֻדָּשׁ`.
+- ναίω `גָּר` (the `דור` gate), οἰκέω `חָנָה` (the `שבת` gate); ἀγήνωρ `אַמִּיץ` (the `רוח` gate is the winds');
+  φαίδιμος `הָדוּר` (licensed in the `דור` gate). Gate homographs to know before drafting: `הדור`, `מקדש`, `לחם`
+  (in `משלחם`), `ערם` (`הערים`), `שבתם`, `כלה`.
+- The names table strips the niqqud of its own string: where a plene draft differs (`גיס` / `גייס`), vocalize the name
+  at every occurrence, or ask the coordinator for a plene table string (`נִיצָּחוֹן`, `צוֹלֵעַ־הָרַגְלַיִים`, `עוֹז`).
+- Αἰθίοψ `כּוּשׁ` (`מֶלֶךְ כּוּשׁ`), never the plural `כּוּשִׁים` (§11.7).
+- `אשה` (not `אישה`), as in every corpus of the folder (open for the user).
+- Gnomic aorists and the infinitive-for-imperative (§4) did not occur in the Theogony's narrative: the WD's first
+  translator fixes their Hebrew at the first occurrence and records it.
+- The LXX tool (`../tools/lxx_verses.py`) has only Genesis, Exodus, Isaiah and 4 Kingdoms: describe the LXX of other
+  books (Job, Proverbs, Psalms, Judges) in words, never quote it from memory.
