@@ -656,5 +656,202 @@ off till tomorrow" (405–413). 127 entries in seven `## ` sections, in the base
   Prov 22:9a exist only in the Greek Proverbs – worth grepping the LXX for Hesiod's words, not only the verses the
   literature names.
 
+## WD 414–617
+
+### Scope
+WD 414–617 (translator 2, part 4, 2026-10-24): the farmer's year. Autumn – cutting timber, mortar, pestle and wagon
+(414–426); the plough, the two oxen and the forty-year-old ploughman (427–447); the crane's cry, the season of
+ploughing, the wagon without wood, the prayer to Zeus Chthonios and Demeter (448–468); sowing and good management, the
+late ploughman and the cuckoo (469–492); winter – the smith's warm λέσχη and empty hope (493–503); Lenaion and Boreas –
+the forest, the beasts, the girl indoors, the "boneless one" (504–535); winter clothes, the morning mist, the hard month
+and the rations (536–563); spring – Arcturus and the swallow, pruning the vines, the "house-carrier" and the harvest, the
+dawn (564–581); summer – the thistle and the cicada, Sirius, shade and wine (582–596); threshing and storing, the hired
+man and the dog, the vintage under Orion and Sirius, the setting of the Pleiades – back to ploughing (597–617). 204
+entries in ten `## ` sections, in the base's order. The placeholder is now `<!-- טרם תורגם: 618–828 -->`.
+
+### Sources consulted
+- The base and the AGDT treebank through `hesiod_tools.py data WD 414 617`; every parse carrying a tense, a mood, a gate
+  or a parallel checked by hand. Treebank slips noted in the פירוק: 568 ὀρθογόη (treebank ὀρθρογόη); 617 πλειών "year"
+  shares its diacritic-free lemma with πλείων "more" (so `lexmap` merges them: a tool collision, not a rendering one);
+  609 Ὠαρίων and 598, 615 Ὠρίων are two lemma spellings of one name (both carry the names check).
+- The Septuagint through `../tools/lxx_verses.py` – every Greek verse quoted was printed first: Gen 1:2, 1:14, 2:5, 2:6,
+  2:15, 3:19, 3:20, 3:21, 4:2, 8:22, 9:21, 15:2, 24:25, 26:12, 41:5, 45:19; Exod 23:12; Lev 13:48, 20:20, 25:3; Deut 8:4,
+  11:14, 22:9, 25:4; Judg 9:13; Isa 5:6, 38:14; Ezek 4:12; Amos 5:8; Job 8:14, 9:9, 24:16, 37:6, 37:8, 37:9, 38:31; Prov
+  6:11a, 13:4, 23:29; Ps 148:8. Jeremiah (8:7, 4:3), Ruth (3:2, 3:3), the Song of Songs (2:11–12), Qohelet, Psalms
+  29/121/128/129/147, Numbers and 1 Kings are not in the tool: Hebrew only.
+- The Hebrew Bible through `check_bible_quotes.py --show` for every verse quoted (0 problems at the end).
+- The creation corpus: the Farmer's Instructions (`../סיפורי-הבריאה-המסופוטמיים/5-הוראות-האיכר/`: lines 14, 23, 25, 49,
+  50, 58, 65, 90, 94, 96, 98, 105–109) and Summer and Winter (`7-הקיץ-והחורף/` 215), quoted from their Hebrew `>` lines;
+  every one stated as "a shared motif, not a source".
+- Rank 3: West 1978 and Evelyn-White as readings in a few words (602 ἄοικον, 617 πλειών, 571 φερέοικος); ancient
+  testimonia named from memory only where well known (Alcaeus fr. 347 copies 582–588; the scholia's πλειών = ἐνιαυτός;
+  Odyssey 11.489 for the θής). The Gezer calendar in words only. The Hebrew translations were not consulted.
+
+### Decisions
+- **Fixed renderings applied:** F25 `גרעיני דמטר הקדושים` (466, 597: both Δημήτερος ἱερὸν ἀκτήν); F13 `לילות וימים`
+  (562; 612 "δέκα ἤματα καὶ δέκα νύκτας" is another phrase: `עשרה ימים ועשרה לילות`); the Gen 8:22 set (σπείρω `זָרַע`,
+  ἀμάω / ἄμητος `קָצַר` / `קָצִיר`, θέρος `קַיִץ`, χειμών `חֹרֶף`, ἔαρ `אָבִיב`, ἀρόω `חָרַשׁ`, ἄροτος `חָרִישׁ`, ἄροτρον
+  `מַחֲרֵשָׁה`); ἄρτος `לֶחֶם` (442); σῖτος `דָּגָן` (604); the names Πληιάδες `כִּימָה` (572, 615), Ὠρίων `כְּסִיל` ★
+  (598, 609, 615, always vocalized), Σείριος `סִירִיּוּס`, Ἀρκτοῦρος `אַרְקְטוּרוֹס` (566, 610), Βορέας `בּוֹרֵאָס` (506,
+  vocalized), the Hyades `הַהִיאָדוֹת` (615, vocalized), Ζέφυρος `זֶפִירוֹס` (594, vocalized), Διόνυσος `דִּיּוֹנִיסוֹס`
+  (614, vocalized), Ἠώς `שַׁחַר`; ὦ Πέρση `הוֹ פֶּרְסֵס` (611).
+- **The infinitive for the imperative** (renderings §4): the vocalized infinitive absolute throughout the calendar
+  (e.g. 597 `דָּחֹק`, 600 `אָסֹף`, 604 `כַּלְכֵּל`, 606 `הָבֵא`, 608 `הָשֵׁב`, `הַתֵּר`, 611 `בָּצֹר`, 612 `הַרְאֵה`, 613
+  `כַּסֵּה`, `שָׁאֹב`, 616 `הָיֹה זוכר`). Exceptions recorded in the notes: an infinitive governed by κέλομαι / ἄνωγα is a
+  plain infinitive (602 `לַעֲשׂוֹת`, 603 `לָתוּר`, 598 `לָדוּשׁ` after `דָּחֹק`); 574 the imperative `וּבְרַח` (the
+  infinitive absolute `בָּרוֹחַ` is caught by the `רוח` gate). A real imperative (604 μὴ φείδεο) → `אַל תַּחְסֹךְ`.
+- **Time clauses:** ἦμος / τῆμος `בְּשָׁעָה שֶׁ־` / `בְּאוֹתָהּ שָׁעָה`; εὖτε (with ἄν) `בְּשָׁעָה שֶׁ־` (598, 609); ἐπήν with
+  the aorist subjunctive `אַחֲרֵי שֶׁ־` (600, 614).
+- **The farm's vocabulary (new words, first line):** τέμνω `כָּרַת` (420) but περιτέμνω of vines `זָמַר` (570; LXX Lev
+  25:3 τεμεῖς = `תִּזְמֹר`); σκάφος `עִדּוּר` (572; LXX Isa 5:6 τμηθῇ … σκαφῇ = `יִזָּמֵר … יֵעָדֵר`); the plough's parts in
+  Mishnaic terms – ἔλυμα `סַדָּן`, γύης `בֹּרֶךְ`, ἱστοβοεύς `יָצוּל`, ἐχέτλη `יְדִית` (427–436); ἄμαξα `עֲגָלָה` (426, 453;
+  LXX Gen 45:19); στάχυς `שִׁבֹּלֶת` (473; LXX Gen 41:5); στήμων / κρόκη `שְׁתִי` / `עֵרֶב` (538; LXX Lev 13:48); χιτών
+  `כֻּתֹּנֶת`, δέρμα `עוֹר` (536, 513; LXX Gen 3:21); ῥινός `גֶּלֶד` (515); πρόβατον `צֹאן` (558; LXX Gen 4:2); οἶνος `יַיִן`
+  (585; LXX Gen 9:21); λέσχη `בֵּית־הַשִּׂיחָה` (493; LXX Prov 23:29 λέσχαι = `שִׂיחַ`); ἄοκνος `לֹא־עָצֵל` (495; LXX Prov
+  6:11a); ὑετός `מָטָר` (LXX Job 37:6), ὄμβρος `גֶּשֶׁם`, ὀμβρέω `הִמְטִיר`, ὕω `גָּשַׁם`; σκοτόεις `חָשׁוּךְ` (555, through the
+  `חשך` gate; LXX Gen 1:2 σκότος); χελιδών `סִיס` (568; LXX Isa 38:14); κόκκυξ / κοκκύζω `קוּקִיָּה` / `מְקוּקָה` (486);
+  εὐθημοσύνη / κακοθημοσύνη `הַנְהָגָה טוֹבָה` / `רָעָה` (471–472); σκόλυμος `קִנְרָס`, τέττιξ `צִיקָדָה` (582); βίβλινος
+  `בִּיבְּלִינִי` (589); πρῖνος `אַלּוֹן מָצוּי` (436); ἀλωή `גֹּרֶן` (599); δίνω `דּוּשׁ` (598); θής `שָׂכִיר`, ἔριθος
+  `פּוֹעֶלֶת`, ἄτεκνος `עֲרִירִי` (602; LXX Gen 15:2, Lev 20:20); κομέω `כִּלְכֵּל` (604; as γηροκόμος `מְכַלְכֵּל`, TH 605);
+  ἡμερόκοιτος `יְשַׁן־הַיּוֹם` (605); χόρτος `מִסְפּוֹא` (606; LXX Gen 24:25 χορτάσματα), συρφετός `תֶּבֶן`; ἀναψύχω `הֵשִׁיב
+  נֶפֶשׁ` (608; LXX Exod 23:12 ἀναψύξῃ = `וְיִנָּפֵשׁ`); ἀποδρέπω `בָּצַר`, βότρυς `אֶשְׁכּוֹל` (611); συσκιάζω `כִּסָּה בַּצֵּל`,
+  ἀφύσσω `שָׁאַב` (613); ῥοδοδάκτυλος `וְרֻדַּת־הָאֶצְבָּעוֹת` (610); πλειών `שָׁנָה` (617).
+- **Names and transcriptions:** Ληναιών `לֵנַיאוֹן` (504), Θρῄκη `תְּרַקְיָה` (507), Πανέλληνες `כָּל־הַהֶלֶנִים` (528),
+  Πανδιονίς `בַּת־פַּנְדִּיּוֹן` (568).
+- **Riddle-names kept as riddles:** ἀνόστεος `חֲסַר־הָעֲצָמוֹת` (524, the octopus), φερέοικος `נוֹשֵׂא־הַבַּיִת` (571, the
+  snail), ἡμερόκοιτος `יְשַׁן־הַיּוֹם` (605, the thief): the hearer solves them; the note gives the answer.
+- **Splits recorded** (one Greek word, two Hebrew words by sense): πήγνυμι `נָעַץ` / `הִרְכִּיב`; ἐλαύνω `נָהַג` / `גֵּרֵשׁ`;
+  ἄκρον `קָצֶה` / `שִׂיא`; ἀραρίσκω `הוֹלֵם` / `עָרוּךְ` (601) / `מְחֻבָּר`; βοῦς `שׁוֹר` / `בָּקָר` / fem. `פָּרָה` (591); δέω
+  `קָשַׁר` (TH `אָסַר`); ἐμπνέω `נָשַׁף` (TH `הִשְׁרָה`); αἱρέω `תָּפַס`, but ἀπό … ἕληται in tmesis `לָקַח מִ־` (605).
+- **Pairs recorded** (two Greek words, one Hebrew word): δειπνέω / δεῖπνον `אָכַל לַאֲרוּחָה`; καταλέγω / εὐνάζω `שָׁכַב`;
+  ἀνίστημι / ὄρνυμι `קָם`; ἀργαλέος / χαλεπός `קָשֶׁה`; δέρμα / χρώς `עוֹר`; ἀρύω / ἀφύσσω `שָׁאַב` (550, 613); ἐνιαυτός /
+  πλειών `שָׁנָה`; κέλομαι / κελεύω / ἄνωγα `צִוָּה`; ὕλη `יַעַר` and ὑλοφάγος `אוֹכֶלֶת־חֹרֶשׁ` (591, vocalized: `חורש` =
+  ἀροτήρ, 405).
+
+### Open decisions for the user
+- **602 θῆτά τ' ἄοικον ποιεῖσθαι**: "hire a thes without a household" (most) or "turn the thes out of the house" (after
+  the harvest): the Hebrew `שכיר חסר־בית לַעֲשׂוֹת לך` keeps both open.
+- **617 πλειών**: "the year" (the scholia), translated literally (`והשנה תלך … אל מתחת לאדמה`); the sense – the seed of
+  the whole year is now under the ground – is in the note, with the possible pun on Πλειάδες.
+- **603 ὑπόπορτις**: the image ("with a calf under her") kept – `שעגל יונק תחתיה` – rather than a plain `מֵינִיקָה`.
+- **608 ἀναψύχω `הֵשִׁיב נֶפֶשׁ`**: transitive, as the Greek (refresh the knees); the LXX's Niphal `וְיִנָּפֵשׁ` is
+  intransitive. The alternative is `נָפַשׁ` with a change of construction.
+- **The plough's Mishnaic terms** (427–436): exact, but obscure to a modern reader; the notes explain each one.
+- **ἔλυμα `סַדָּן`** collides with ἄκμων `סַדָּן` "anvil" (TH 722, 724): a true Hebrew homograph; the alternative is the
+  Mishnaic `בֵּית הַסַּדָּן` or a description.
+
+### Progress log
+- 2026-10-24: drafted 414–617 in ten sections, each saved to a scratch file and inserted before the placeholder by
+  script, then `fill`, `verify WD` and `check_bible_quotes.py` (0 problems after each). Verify catches fixed on the way:
+  477 `אֶל` vocalized (εὐοχθέων contains "θε"); 506 `בּוֹרֵאָס` and 594 `זֶפִירוֹס` vocalized (first occurrence); 517
+  `השיער שלהם` and 527 `על המחוז ועל העיר` (the `ערם` gate); 574 `וּבְרַח` (the `רוח` gate). Quote-checker catches fixed:
+  604 a backticked `כִּלְכֵּל` beside a reference; a 1 Kgs 7:33 note made a full quotation; Gen 24:16 needs the ketiv
+  `וְהַנַּעֲרָ`. Removed on the way: a wrong Prov 8:17 parallel (578), unverifiable half-quotations (491), and at 595 a
+  "verse" that does not exist (replaced by Gen 26:19, printed). Stray Hebrew letters inside Greek words fixed (εὐοχθέων,
+  κακοθημοσύνη, φεύγω).
+- `lexmap` pass on both sides (Hebrew → lemmas and lemma → Hebrew) over the whole range: the splits and pairs above
+  recorded; 591 `חֹרֶשׁ` vocalized after the reverse map showed it beside ἀροτήρ `חורש`.
+- End: `verify WD` 0 problems, 0 repeated-line differences (620 entries); `check_bible_quotes.py` on the annotated file
+  and project.md: 0 problems; `selftest` 0 failures. Not done (as briefed): intro, `build`, the review passes,
+  `build_parallels_index.py`.
+
+### The text on its own terms
+- **The sky is the farmer's clock.** No dates and no month-names but one (Lenaion, 504): the year is read off the
+  heliacal risings and settings – the Pleiades (383, 572, 615), Arcturus at dusk (566) and at dawn (610), Orion (598,
+  609, 615), Sirius (417, 587, 609) – and off the birds and beasts: the crane (448), the cuckoo (486), the swallow (568),
+  the snail climbing the plants (571), the cicada (582). The calendar closes on itself: 615–617 returns to 383–384.
+- **The Boeotian winter** (504–563): Boreas from Thrace, the sea roaring, the forest shrieking, the beasts with their
+  tails between their legs; the old man made "bent", τροχαλός, running like a wheel (518), the girl who stays indoors by her mother (519–523),
+  the octopus gnawing his own foot (524) – the cold as a force that sorts every creature into its place.
+- **The household's labour roles:** the master gives orders, the slaves (δμῶες) do the work (459, 470, 502, 573, 597,
+  608); the forty-year-old ploughman who keeps his furrow straight (441–447); the hired man and the hired woman
+  (602–603), the dog fed on bread (604); the girl and her mother (519–523); the wife appears only as the "wanton" women of high summer (586).
+- **Measure and timing as morality:** "the poor man's" misjudgement (the late ploughman, 485–490), "empty hope" (498 ≈
+  317), the λέσχη as the idle man's trap (493–501), "do not sleep in the harvest" (573–577): failure in the calendar is a
+  moral failure, and the gods' will is "hard to know" (483–484).
+- **Every crop is a god's gift:** Demeter's holy grain (466, 597), the gifts of Dionysus (614); the prayer at the first
+  furrow to Zeus Chthonios and Demeter (465–468).
+- **The oral poet's lore:** folk medicine (summer dries the men and inflames the women, 586–588, copied by Alcaeus),
+  kennings and riddles (524, 571, 605), proverbial numbers (the forty-year-old, the ten-and-five days of the grapes,
+  three parts water to one of wine, 596).
+
+### Key parallels
+- **WD 414–617 ↔ Gen 8:22 (LXX)**: the whole calendar is one long commentary on "seed-time and harvest, cold and heat,
+  summer and winter, day and night shall not cease" – and the LXX's θέρος καὶ ἔαρ, ἡμέραν καὶ νύκτα are Hesiod's words
+  (414, 462, 494, 562, 617). Same order; in Genesis a divine promise, in Hesiod a farmer's knowledge.
+- **WD 448–451 ↔ Jer 8:7**: the crane (and the stork) "keeps the time of its coming" – Jeremiah's birds know their
+  seasons, the people do not know God's law; Hesiod's crane tells the farmer when to plough. (Jeremiah not in the tool.)
+- **WD 615, 609 ↔ Job 38:31, 9:9 (LXX)**: Job 38:31 LXX renders `כִּימָה` Πλειάς and `כְּסִיל` Ὠρίων – the very pair of
+  615, and the source of the Hebrew names here; Job 9:9 LXX lists Πλειάς, Ἕσπερος and Ἀρκτοῦρος. Amos 5:8 LXX drops the
+  stars. In the Bible the stars are God's works; in Hesiod, the farmer's clock.
+- **WD 504–535 ↔ Job 37:6–10, Ps 147:16–17, Ps 148:8 (LXX)**: snow, frost and the cold "from the north" (Job 37:9 LXX
+  ἀπὸ δὲ ἀκρωτηρίων ψῦχος); **Job 37:8 LXX θηρία ὑπὸ σκέπην** ↔ 512, 532 (the beasts take shelter) – the strongest single
+  image; Ps 148:8 LXX χιών, κρύσταλλος.
+- **WD 608 ↔ Exod 23:12 (LXX ἀναψύξῃ = `וְיִנָּפֵשׁ`)**: the slave's rest and the ox's rest, in Hesiod's own verb: a
+  seasonal rest after the harvest in Hesiod, the weekly Sabbath as a commandment in the Torah.
+- **WD 570, 572 ↔ Lev 25:3, Isa 5:6 (LXX τέμνω, σκάπτω)**: the two works of the vineyard, pruning and hoeing, are the LXX's
+  `זָמַר` and `עָדַר` – the Greek gives the Hebrew words.
+- **WD 536 ↔ Gen 3:21 (LXX χιτῶνας δερματίνους)**: the coat of skins as man's protection; **WD 563 ↔ Gen 3:20 (LXX μήτηρ
+  πάντων)**: the earth "mother of all" and Eve "mother of all living".
+- **WD 493 ↔ Prov 23:29 (LXX λέσχαι)**; **WD 495 ↔ Prov 6:11a (LXX ἄοκνος)**; **WD 498 ↔ Prov 13:4 (LXX ἀεργός)**: the
+  Greek Proverbs speak Hesiod's vocabulary of idleness.
+- **WD 605 ↔ Job 24:16 (LXX)**: the thief who digs through houses in the dark and shuts himself in by day – Hesiod's
+  "day-sleeper".
+- **WD 602 ↔ Gen 15:2 (LXX ἄτεκνος = `עֲרִירִי`)**; **WD 606 ↔ Gen 24:25 (LXX χορτάσματα = `מִסְפּוֹא`)**; **WD 614 ↔ Judg
+  9:13** (wine that gladdens gods and men); **WD 568 ↔ Song 2:11–12** (the bird's voice announces spring); **WD 599 ↔ Ruth
+  3:2** (winnowing on the threshing floor).
+- **The Farmer's Instructions** (a shared motif of agricultural instruction, not a source): spare ox and spare plough (FI
+  23, 25 ↔ 432–434), seeding depth (FI 49–50 ↔ 446, 471), the straight furrow (FI 58 ↔ 443), the prayer as the seed
+  sprouts (FI 65 ↔ 465), fodder for the wagon oxen (FI 94 ↔ 452), threshing and winnowing (FI 98, 105–109 ↔ 597–599),
+  counted days (FI 96 ↔ 612–613). **Summer and Winter 215** (the man walking in the cold in old shoes) ↔ 541. **The Gezer
+  calendar** (in words): the months of the agricultural year in order, without stars and without morals.
+- Looked for and not found: the snail (571) has no counterpart in Prov 30:24–28 (ant, rock-badger, locust, lizard); the
+  Song of Songs has no harvest-and-Sirius image for 582–596 (only the spring of 2:11–12, used at 568); Gen 2:25 belongs
+  to 391 (part 3) – 460 has no γυμνός.
+
+### Lines shared with other texts
+- **500 ≈ 317** (`ובושה לא טובה` → `ותקווה לא טובה סועדת איש נצרך,`): copied word for word, with ἐλπίς for αἰδώς.
+- **614 ≈ TH 941**: Διώνυσον πολυγηθέα – `רַב־הַשִּׂמְחָה` kept.
+- **598, 615**: σθένος Ὠαρίωνος twice – `חוסן כְּסִיל` both times. 466 = 597 in F25.
+- No other line of 414–617 repeats a drafted line; `verify` shows 0 repeated-line differences.
+
+### Proposals for the shared renderings
+- **Names (§3):** Ζέφυρος `זֶפִירוֹס` (594), Ληναιών `לֵנַיאוֹן` (504), Θρῄκη `תְּרַקְיָה` (507), Πανδίων `פַּנְדִּיּוֹן`
+  (568), Πανέλληνες `כָּל־הַהֶלֶנִים` (528); the treebank's two spellings Ὠρίων / Ὠαρίων both map to `כְּסִיל`.
+- **For §5 or §11 (kind-(a) LXX bridges):** σκάφος / σκάπτω `עָדַר` (572; Isa 5:6), περιτέμνω (vines) `זָמַר` (570; Lev
+  25:3), λέσχη `שִׂיחָה` (493; Prov 23:29), ἄοκνος `לֹא־עָצֵל` (495; Prov 6:11a), χελιδών `סִיס` (568; Isa 38:14), ὑετός
+  `מָטָר` (Job 37:6), ἄτεκνος `עֲרִירִי` (602; Gen 15:2), ἀναψύχω `הֵשִׁיב נֶפֶשׁ` (608; Exod 23:12), χόρτος `מִסְפּוֹא`
+  (606; Gen 24:25), στάχυς `שִׁבֹּלֶת` (473; Gen 41:5), στήμων / κρόκη `שְׁתִי` / `עֵרֶב` (538; Lev 13:48), χιτών `כֻּתֹּנֶת`,
+  δέρμα `עוֹר` (536; Gen 3:21), πρόβατον `צֹאן` (558; Gen 4:2), οἶνος `יַיִן` (585; Gen 9:21), ἄμαξα `עֲגָלָה` (426; Gen
+  45:19).
+- **Time clauses:** ἦμος / τῆμος / εὖτε `בְּשָׁעָה שֶׁ־` / `בְּאוֹתָהּ שָׁעָה` – for the rest of the Days.
+- **Grammar (§4):** an infinitive governed by κέλομαι / ἄνωγα / κελεύω stays a plain infinitive (602–603); a gated
+  infinitive absolute may yield to the imperative with a note (574 `וּבְרַח`).
+- **ψυχή `נֶפֶשׁ`** for 686 (χρήματα γὰρ ψυχὴ πέλεται), so that ἀναψύχω (608) and ψυχή share the root, as in the LXX.
+- **ἔλυμα `סַדָּן`**: keep or move – it collides with ἄκμων `סַדָּן` (TH 722, 724); a coordinator's decision.
+
+### For the next part (WD 618–828: sailing, marriage, the precepts, the Days)
+- Fixed and waiting: Πληιάδες `כִּימָה` (619), Ὠρίων `כְּסִיל` ★ (619); F25 at 805 (check the Greek); the
+  infinitive absolute for the precepts; ψυχή `נֶפֶשׁ` (686); 700 ≈ 343 (`מי שגר קרוב אליך`); ὦ Πέρση `הוֹ פֶּרְסֵס`;
+  Βορέας `בּוֹרֵאָס` (already vocalized at 506), Ζέφυρος `זֶפִירוֹס` (594); οἶνος `יַיִן`; ὥριος `בְּעוֹנָתוֹ`, ὡραῖος
+  `שֶׁבְּעוֹנָתוֹ`; the time clauses above.
+- Gate homographs met in this part: `רוח` (infinitive absolute of ברח), `ערם` (`שערם`, `ועירם`), `שבת` (`בשבתך` → the
+  participle `יושב`), `אל` / `אלה` beside a Greek "θε" (vocalize), `חורש` (ἀροτήρ vs. thicket: vocalize `חֹרֶשׁ`), `כלה`,
+  `מזבח`, `חשך`.
+
+### Lessons for the guidelines
+- **Never quote a verse from memory, even a half-line**: two "verses" in this part (at 491 and 595) did not exist; the
+  rule "print every verse before quoting it" caught them only because it was applied to every quotation, including those
+  written in a note's flow.
+- **A Greek word containing "θε" makes an unvocalized `אל` beside it a gate error** (477 εὐοχθέων): the gate reads the
+  letters, not the word – vocalize `אֶל` whenever the line's Greek has "θε" anywhere.
+- **The reverse lexmap finds Hebrew homographs, not only collisions** (591 `חורש` beside 405 `חורש`): run it over every
+  part, filtering out function words.
+- **The LXX of Hesiod's own vocabulary is a lexicon of Hebrew agriculture**: σκάπτω / τέμνω = עדר / זמר, χόρτος = מספוא,
+  λέσχη = שיח – grepping the LXX for the Greek word often gives the right Hebrew word, not only a parallel.
+- **The Farmer's Instructions and the Days share a genre** (a father's or a brother's instruction, in order through the
+  year): citing it line by line is safe only as "a shared motif"; its Hebrew lines are quoted as they stand in its
+  annotated file, with its own line number.
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)

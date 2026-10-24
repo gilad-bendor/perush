@@ -795,6 +795,21 @@ Full list with first lines and reasons: `2-מעשים-וימים/project.md`, "W
 4. **Names:** the treebank's lemma at WD 383 is the slip πλψιάς: added to the Πληιάδες row so that the check fires.
 5. Line 310 is not in the base (309 → 311): described in words at 309 and 311, never supplied.
 
+### 11.11 WD 414–617 (WD translator 2, part 4; merged 2026-10-24)
+Full list with first lines and reasons: `2-מעשים-וימים/project.md`, "WD 414–617", Proposals. Binding:
+1. **Formulas:** F25 `גרעיני דמטר הקדושים` (466, 597; confirmed on the Greek); F13 (562); the Gen 8:22 set as §5.
+2. **Grammar:** the infinitive-for-imperative as §11.10; an infinitive that depends on a verb of commanding (κέλομαι)
+   stays a plain infinitive (602 `לַעֲשׂוֹת`, 603 `לָתוּר`); at 574 the imperative `וּבְרַח` (the infinitive `בָּרוֹחַ` trips
+   the `רוח` gate). Time clauses: ἦμος / τῆμος / εὖτε `בְּשָׁעָה שֶׁ־` / `בְּאוֹתָהּ שָׁעָה`; ἐπήν + aorist `אַחֲרֵי שֶׁ־`.
+3. **Farm words on LXX identities:** περιτέμνω (vines) `זָמַר` (Lev 25:3), σκάφος `עִדּוּר` (Isa 5:6), λέσχη `בֵּית־הַשִּׂיחָה`,
+   χελιδών `סִיס`, ὑετός `מָטָר`, ἄτεκνος `עֲרִירִי`, χόρτος `מִסְפּוֹא`, ἀναψύχω `הֵשִׁיב נֶפֶשׁ` (Exod 23:12); the plough's
+   parts in Mishnaic terms (γύης `בּוּרֶךְ`, ἱστοβοεύς `יָצוּל`).
+4. **Collision settled (the coordinator):** ἔλυμα "the plough-stock" `קוֹרָה` (430, 436), not `סַדָּן`, which is ἄκμων
+   "anvil" (TH 722, 724). ὑλοφάγος (591) vocalized `חֹרֶשׁ` against ἀροτήρ `חוֹרֵשׁ`. Pairs recorded: κέλομαι / κελεύω /
+   ἄνωγα `צִוָּה`; ἀρύω / ἀφύσσω `שָׁאַב`; ἐνιαυτός / πλειών `שָׁנָה`.
+5. **Names (§2.3):** Ζέφυρος `זֶפִירוֹס` (594), Ληναιών `לֵנַיאוֹן` (504), Θρῄκη `תְּרַקְיָה`, Πανδίων `פַּנְדִּיּוֹן`, Πανέλληνες `כָּל־הַהֶלֶנִים` – as in
+   project.md; Ὠρίων `כְּסִיל` vocalized at every occurrence.
+
 ## 12. Decisions and revisions (coordinator, 2026-10-24)
 
 1. **Speaking cosmic names and personified abstractions translated** (§3.2), as West 1988 and Most 2006 do: the
