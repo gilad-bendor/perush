@@ -408,5 +408,253 @@ Every recurring word fixed here, with its first line:
   ἀνθέω `פורח` here), not only with the TH.
 - **The plural of a fixed term** (ὕβρις pl. `זדונות`) fails REQUIRED: the tool could accept the plural of the fixed noun.
 
+## WD 286–413
+
+### Scope
+WD 286–413 (translator 2, part 3, 2026-10-24): the road to ἀρετή and the sweat before it (286–297); "work, Perses",
+hunger, the drones, work no disgrace (298–319); wealth not seized, the five crimes Zeus requites, sacrifice "according
+to your means" (320–341); the neighbour, measure for measure, giving and not giving, "a little on a little", the jar
+(342–369); the wage and the witness, the wheedling woman, the only son (370–382); the Pleiades – the opening of the
+farmer's calendar – "strip to sow", Perses begging again, debts (383–404); house, woman and ox, borrowing, "do not put
+off till tomorrow" (405–413). 127 entries in seven `## ` sections, in the base's order (… 360, 363, 361, 362, 364 …);
+**310 is not in the base** (noted at 309 and 311). The placeholder is now `<!-- טרם תורגם: 414–828 -->`.
+
+### Sources consulted
+- The base and the AGDT treebank through `hesiod_tools.py data WD 286 413`; every parse carrying a tense, a mood, a gate
+  or a parallel checked by hand. Treebank slips found (noted in the פירוק): 306 σοί lemmatized σός (σύ); 364 κατακείμενον
+  lemmatized κατακείω (κατάκειμαι, as at 31); 383 πληιάδων lemmatized "πλψιάς" (a typo: so the names check for Πληιάδες
+  never fires – `כִּימָה` was written by hand); 402 ἀγορεύσεις parsed "futpf" (future); 348 βοῦς lemmatized "βου~σ" and
+  392, 407 πάντα "πα~ς" (beta-code residue).
+- The Septuagint through `../tools/lxx_verses.py` (15 books): every Greek verse quoted was printed first (Gen 2:5, 2:15,
+  2:25, 3:16–17, 3:19, 7:2, 7:4, 8:22, 26:14, 30:23, 31:44, 32:25, 49:4; Exod 3:22, 20:17, 22:13, 22:20–23; Lev 5:7, 12:8,
+  18:16, 25:23, 25:44; Deut 6:7, 15:2, 15:10, 16:17, 24:15, 25:14; Judg 11:34; 4 Kgdms 6:5; Isa 40:4, 42:8; Ezek 36:30;
+  Amos 5:8; Job 9:9, 24:10, 38:31, 38:33; Prov 3:10, 3:28, 5:3, 6:8–9, 8:17, 10:4, 12:11, 13:11, 15:19, 19:14, 19:15,
+  20:4, 22:9, 27:1, 27:10, 28:27). Jeremiah, Ruth, Psalms 37/49/109/127, Qohelet, Nehemiah, 1 Kings and Sirach are not
+  in the tool: Hebrew only, or (Sirach 4:21, not in the Hebrew Bible) in words only.
+- The Hebrew Bible through `check_bible_quotes.py --show` for every verse quoted (0 problems at the end).
+- Rank 3: Evelyn-White's English quoted only where I am sure of its wording (287, 289, 311, 383, 391, 405 and a phrase at
+  336, 378, 404); West 1978 and Most as readings in a few words. Ancient quotations named from memory only where well
+  known (Aristotle EN 1.4 for 293–297, Politics 1.2 for 405; Livy 22.29; Seneca Ep. 1.5 for 369; Virgil G. 1.299 for 391;
+  Iliad 20.249 for 403). The Hebrew translations were not consulted.
+
+### Decisions
+- **The infinitive used as an imperative – first fixed here, at 336** (renderings §4; §11.8–§11.9 had left it open):
+  the Hebrew **infinitive absolute, vocalized**, and "שם הפועל כציווי" in the פירוק. 336 ἔρδειν ἱερά `הַקְרֵב קָרְבָּנוֹת`
+  (the fixed phrase `לְהַקְרִיב קָרְבָּנוֹת` in the infinitive absolute), 337 καίειν `שָׂרוֹף`, 338 ἱλάσκεσθαι `רַצֵּה`, 342
+  καλεῖν `קָרוֹא` / ἐᾶσαι `הַנֵּחַ`, 343 `קָרוֹא`, 349 μετρεῖσθαι `מָדוֹד לְךָ` / ἀποδοῦναι `שַׁלֵּם`, 353 φιλεῖν `אָהוֹב` /
+  προσεῖναι `בּוֹא`, 354 δόμεν `נָתוֹן` (= Deut 15:10 `נָתוֹן תִּתֵּן`), 368 κορέσασθαι `שָׂבֹעַ`, 369 φείδεσθαι `חָסוֹךְ`,
+  371 θέσθαι `שׂוֹם`, 382 ἔρδειν `פָּעוֹל` / ἐργάζεσθαι `עָבוֹד`, 384 ἄρχεσθαι `הַתְחֵל`, 391–392 `עָרֹם זָרוֹעַ`, `נַהֵג
+  בַּבָּקָר`, `קָצוֹר`, 407 ποιήσασθαι `עָשׂוֹ לְךָ` (Jer 7:5 `עָשׂוֹ`). **With μή** (352, 410): `אַל` + infinitive absolute
+  (`אַל בָּצוֹעַ`, `וְאַל דָּחֹה`). Not imperatival (and so a plain infinitive): 306 κοσμεῖν (subject of ἔστω), 365 εἶναι,
+  366–367 ἑλέσθαι / χρηίζειν (subjects), 377 φερβέμεν (purpose), 393 κομίζεσθαι (object of ἐθέλῃσθα), 404 φράζεσθαι
+  (after ἄνωγα).
+- **The gnomic aorist → participle** (§11.9), applied: 334 ἐπέθηκεν `שָׂם`, 345 ζώσαντο `חוֹגְרִים` (with the imperfect
+  ἔκιον `בָּאִים`), 355 ἔδωκεν ×2 `נוֹתֵן`, 360 ἐπάχνωσεν `מַקְפִּיא`, 372 ὤλεσαν `סוֹפִים`. Optatives: the potential
+  with κε / ἄν → `הָיָה` + participle (348 `לא היה נספה`, 362 `היה … נהיה`, 379 `היה … מעניק`); the wish → jussive
+  (376 `וִיהִי`, 378 `וְזָקֵן תָּמוּת`); the optative in a condition → future (357, 361–362).
+- **Required and self-test lines:** 289 = the self-test's words (`אך לפני הַמַּעֲלָה שמו הָאֵלִים זֵעָה`) without its
+  final `;`, because the Greek clause ends with ἀθάνατοι in 290 (`בני־האלמוות;`); 397 = the self-test line exactly
+  (`ולא אוסיף לך מידה; עֲבֹד, פרסס הפתי,`); 299 `עֲבֹד, פרסס, גזע נהדר` in the same form; ἐργάζομαι `עָבַד` at 299,
+  309, 312, 314, 382, 397; ἱδρώς `זֵעָה` (289); γυμνός `עָרֹם` (391–392, vocalized: `ערם` = "heap", `ערום` = "cunning");
+  ἱερός `קָדוֹשׁ` (339, the "holy light" of dawn); F13 `לילות וימים` (385).
+- **ἀρετή `מַעֲלָה`** (289, 313), vocalized; κακότης `רֹעַ` (287, as 93). Both keep Hesiod's double sense
+  (excellence / prosperity; badness / misery). The LXX's ἀρεταί = `תְּהִלָּה` (Isa 42:8) noted.
+- **The drones (304–305):** κηφήν `רַחְפָן`, μέλισσα `דְּבוֹרָה`, κάματος `יְגִיעַ` as TH 594–599 (no Greek line is the
+  same, so only the words are copied); ἀεργός `בַּטְלָן`, ἀεργία `בַּטָּלָה`; τρύχω `כִּרְסֵם` (`כִּלָּה` reserved, §11.7).
+- **ὄνειδος `חֶרְפָּה`** (311, LXX Gen 30:23 τὸ ὄνειδος = `חֶרְפָּתִי`), and therefore **WD 211 αἶσχος moved from `חֶרְפָּה`
+  to `כְּלִמָּה`** (`ועל הכלימות`; the entry's note says why) – one lemma, one word. `קָלוֹן` rejected: it is the Ugaritic
+  corpus's cognate of *qlt* (Baal cycle 1.4 III 15, 1.6 V 12).
+- **αἰδώς** as a common noun `בּוּשָׁה` (317–319, 324), its opposite ἀναίδεια `חֻצְפָּה` (324, 359); 317 is fixed for its
+  near-repeat 500 (ἐλπὶς … κεχρημένον ἄνδρα κομίζει): `ובושה לא טובה סועדת איש נצרך,`.
+- **The sacrifice (336–341):** βωμός does not occur, so no `מִזְבֵּחַ` in a line (337 `עָלָיו` for ἐπι-καίω; a first
+  draft `(המזבח)` was stopped by the gate); κατὰ δύναμιν `לְפִי יְכָלְתְּךָ` (= LXX Deut 16:17 κατὰ δύναμιν); ἁγνός
+  `טָהוֹר` / καθαρός `נָקִי` (LXX καθαρός = `טָהוֹר`, Gen 7:2: kind b, noted); μηρία `יְרֵכַיִם`; σπονδή `נֶסֶךְ`; θύος
+  `קְטֹרֶת`; ἵλαος `נוֹחַ` (not `רָצוּי`); ἱλάσκομαι `רִצָּה` (not `כִּפֵּר`, though the LXX's ἐξιλάσκομαι is `כִּפֵּר`: noted).
+- **WD 328 ἀνὰ … βαίνῃ `יעלה`** (= LXX Gen 49:4 ἀνέβης … ἐπὶ τὴν κοίτην, `כִּי עָלִיתָ מִשְׁכְּבֵי אָבִיךָ`): ἀναβαίνω `עָלָה`;
+  δέμνιον `מִטָּה` (λέχος keeps `מִשְׁכָּב`, εὐνή `יָצוּעַ`).
+- **WD 413 παλαίω `נֶאֱבַק`** (= LXX Gen 32:25 ἐπάλαιεν, `וַיֵּאָבֵק`) – a collision with μάρναμαι `נֶאֱבַק` (TH 629, 647,
+  663; WD 163): see Proposals.
+- **WD 401 λυπέω `הֶעֱצִיב`**: the root עצב is gated to the λυπ- family (renderings §7.1), and λύπη is the LXX's word for
+  `עִצָּבוֹן` (Gen 3:16–17); so the licensed word was used, not a neutral `הִטְרִיד` that would hide the bridge.
+- **The κτα- family = the root קנה:** κτητός `קְנוּיָה` (406; LXX Lev 25:44 κτήσεσθε = `תִּקְנוּ`), κτέανον `קִנְיָן` (315,
+  with κτῆσις TH 606: a pair); so ὠνέομαι "buy" `רָכַשׁ` (341). κτῆμα keeps `נֶכֶס`.
+- **Wealth and debt:** χρῆμα split by sense – pl. "wealth" `הוֹן` (320), sg. "a thing, a matter" `דָּבָר` (344, 402), pl.
+  "gear" `כֵּלִים` (407); κέρδος `בֶּצַע`, κερδαίνω `בָּצַע` (323, 352: Proverbs' word); χρέος (χρειῶν) `חוֹב` (404; LXX
+  Deut 15:2 χρέος = `מַשֶּׁה`); λύσις `הַתָּרָה`; μέτρον `מִדָּה` (350; LXX Deut 25:14, Lev 19:35), μετρέω `מָדַד`, ἐπιμετρέω
+  `הוֹסִיף מִדָּה` (397, the self-test); μισθός `שָׂכָר` (370; LXX Deut 24:15); μάρτυς `עֵד` (371, vocalized; LXX Gen
+  31:44); αἰτέω `שָׁאַל` (408; LXX Exod 3:22, 22:13) / ζητεύω `בִּקֵּשׁ` (400).
+- **The neighbour:** γείτων `שָׁכֵן` throughout; πηός `מְחֻתָּן`; ἄζωστος `בְּלִי חֲגוֹרָה`; ἐγγύθι `קָרוֹב` (288, 343, 389;
+  homograph of τάχα `בְּקָרוֹב` "soon", TH 490 – noted, not changed); 343 is fixed for its near-repeat 700 (`מי שגר קרוב
+  אליך`).
+- **Splits recorded (one lemma, two Hebrew words, by sense):** χαλεπός `קָשֶׁה` (292, 332, 334: road, words, requital) /
+  `אָנוּשׁ` (91, 178, 186: diseases, pains); κοσμέω `עָרַךְ` (306, "order") / `קִשֵּׁט` (72, 76, "adorn"); κομίζω act.
+  `סָעַד` (317) / mid. `אָסַף לוֹ` (393); πείθω mid. `שָׁמַע בְּקוֹל` (295, 359) / perf. `בָּטַח` (375); φίλος adj. `אָהוּב`
+  (306) / possessive `־וֹ` (360) / noun "friend" `יָדִיד` (370); νοέω `חָשַׁב` (286, as 261) / `הֵבִין` (293, 296);
+  ἐπιτέλλω `זָרַח` (383, a star) / `הֵטִיל עַל` (TH 995); ἀνύω `הִשִּׂיג` (395) / `בִּצֵּעַ` (TH 954; `בצע` here would meet
+  κέρδος); τυγχάνω `קִבֵּל` (401) / `פָּגַשׁ` (TH 973); ῥέζω `פָּעַל` (329, as ἔρδω, the same verb) / `עָשָׂה` (TH 209); ἔρδω
+  `פָּעַל` / in ἔρδειν ἱερά `הִקְרִיב` (renderings §5).
+- **Pairs on one Hebrew word (synonyms, deliberate):** ἀμείνων / λωίων / βέλτερος `טוֹב יוֹתֵר` (the `טוב` gate licenses
+  all three); χράω (perf.) / χρῄζω `נִצְרָךְ`; γέρων / γηραιός `זָקֵן`; ὡραῖος / ὥριος `בְּעוֹנָתוֹ`; δώς / δόσις `מַתַּת`;
+  κτέανον / κτῆσις `קִנְיָן`; πείθω (perf.) / πίσυνος `בּוֹטֵחַ`; ἀργαλέος / χαλεπός `קָשֶׁה`.
+- **Words chosen to keep lemmas apart (grep / lexmap first):** ὄρθιος `זָקוּף` (`תָּלוּל` is αἰπύς, 83); οἶμος `שְׁבִיל`
+  (ὁδός `דֶּרֶךְ`); ἄκρον `שִׂיא` (κορυφή `פִּסְגָּה`, κάρα `רֹאשׁ`); τραχύς `מְחֻסְפָּס`; λεῖος `חָלָק` (vocalized); ἐφετμή
+  `פְּקֻדָּה` (`מִצְוָה` would be the Torah's ἐντολή); νεμεσάω `מִתְמַלֵּא חֵמָה` (the root of Νέμεσις `חֵמָה`); ὀργή `מֶזֶג`;
+  κόθουρος `חֲסַר־עֹקֶץ`; πλήθω `גָּדוּשׁ` (πλέως `מָלֵא`, πίμπλημι `מִלֵּא`); καλιά `אָסָם` (LXX Prov 3:10 ταμίεια ←
+  `אֲסָמֶיךָ` with πίμπλημι); πολύμηλος `עֲתִיר־צֹאן`; πλουτέω `הִתְעַשֵּׁר`; ἀεσίφρων `קַל־דַּעַת`; μελετάω / μελέτη `שָׁקַד` /
+  `שְׁקִידָה`; σίνομαι `חָבַל בְּ־` (βλάπτω `הִזִּיק`); θάρσος `תְּעוּזָה` (κράτος `עֹז`); ἁρπακτός `חָטוּף`, ἅρπαξ `חֲטִיפָה`
+  (ἁρπάζω `חָטַף`); θεόσδοτος `נְתוּן־אֵלִים`; ληίζομαι `בָּזַז` (ἐξαιρέω `שָׁלַל`); κατοπάζω `דָּחַק`; μαυρόω `עִמְעֵם` (from
+  ἀμαυρός `עָמוּם`); ἱκέτης `מְבַקֵּשׁ־מִקְלָט`; κρυπτάδιος `חֲשָׁאִי`; παρακαίριος `שֶׁלֹּא בְּעִתָּם`; ὀρφανός `יָתוֹם`;
+  καθάπτω `תָּקַף`; ἀγαίομαι `קָצַף` (χώομαι `חָרָה`, χόλος `זַעַם`, κοτέω `כָּעַס`); ἀμοιβή `תַּגְמוּל` (ὄπις `גְּמוּל`, TH
+  222); ἐχθρός `שָׂנוּא`; δαίς `סְעוּדָה`; μάλιστα `בְּיִחוּד`; ἐγχώριος `בַּמָּקוֹם`; ἄρκιος `מַסְפִּיק`; δώτης `נוֹתֵן`,
+  δότειρα `נוֹתֶנֶת`; παχνόω `הִקְפִּיא`; σμικρός `קָטָן`; αἶθοψ `בּוֹעֵר` (αἰθαλόεις `לוֹהֵט`); ἀλέξω `הָדַף`; θαμά
+  `תְּכוּפוֹת`; κήδω `צִעֵר` (κῆδος `צַעַר`); βλαβερός `מַזִּיק`; φείδομαι / φειδώ `חָסַךְ` / `חִסָּכוֹן`; πυθμήν `קַרְקָעִית`;
+  πίστις / ἀπιστία `אֵמוּן` / `אִי־אֵמוּן`; πυγοστόλος `מְהֻדֶּרֶת־עַכּוּז`; κωτίλλω `פִּטְפֵּט`; διφάω `חִפֵּשׂ`; φηλητής
+  `גַּנָּב`; φέρβω `פִּרְנֵס` (γηροκόμος `מְכַלְכֵּל`); ἐγκαταλείπω `הִשְׁאִיר`; ἐπιθήκη `תּוֹסֶפֶת`; ἔλδομαι `עָרַג`
+  (χατίζω `הִתְאַוָּה`, λιλαίομαι `כָּמַהּ`); δύω `שָׁקַע`; χαράσσω `הִשְׁחִיז`; πεδίον `מִישׁוֹר`; ἄγκος `עֵמֶק` (`גַּיְא` is
+  the LXX's χάος); κυμαίνω `מַעֲלֶה גַּלִּים` (vocalized against ἀρετή `מַעֲלָה`); βοωτέω `נַהֵג בַּבָּקָר` (ἀρόω keeps
+  `חָרַשׁ`; ἐλαύνω `נָהַג` TH 291 – a compound phrase, noted); πτώσσω `חִזֵּר עַל` (the Mishnaic "go round the doors");
+  ἐπιδίδωμι `נָתַן עוֹד`; ἀμελέω `הֶעְלִים עַיִן` (Prov 28:27); λυπέω `הֶעֱצִיב`; πράσσω `הֵפִיק` (Prov 3:13); νομός `מִרְעֶה`
+  (≠ νόμος `חֹק`); ἀλεωρή `מִפְלָט`; ἀροτήρ `חוֹרֵשׁ`; γαμετή `נְשׂוּאָה`; ἀρνέομαι `סֵרֵב`; τητάομαι `חָסַר` (στέρομαι
+  `מְקֻפָּח`); παραμείβω `חָלַף`; ἀναβάλλω `דָּחָה`; αὔριον `מָחָר`, ἔνηφι `מָחֳרָתַיִם`; ἐτωσιοεργός `שֶׁמְּלַאכְתּוֹ לַשָּׁוְא`;
+  ἀμβολιεργός `מַשְׁהֶה־מְלָאכָה` (both through ἔργον `מְלָאכָה`, which the gate licenses).
+- **Names:** Πληιάδες `כִּימָה` (vocalized; a singular Hebrew name for the Greek plural, so 383 uses the infinitive
+  `בִּזְרֹחַ`); Ἀτλαγενής `יְלִידוֹת אַטְלָס`; δαίμων `דַּיְמוֹן` (314, "lot"); Demeter `דמטר` (300, 393).
+
+### Open decisions for the user
+- **211 αἶσχος `כְּלִמָּה`** (changed from `חֶרְפָּה` in translator 1's part, so that ὄνειδος can have the LXX's
+  `חֶרְפָּה`): a cross-part change; revert if the coordinator prefers αἶσχος `חֶרְפָּה` and ὄνειδος another word.
+- **314 δαίμονι δ' οἷος ἔησθα** (a crux): `ויהי מה שתהיה לפי הדיימון` keeps both readings open.
+- **378** (the wish "may you die old, leaving a second son"): translated as a wish, with Evelyn-White's conditional
+  reading in the apparatus.
+- **406** (athetized by some; Aristotle quotes only 405): translated in full without `{חשודה}`, as the base does not
+  bracket it.
+- **310** (in Rzach and West, not in the base): described in words at 309, not translated.
+- **The infinitive absolute** for every imperatival infinitive (above) – some (`עָשׂוֹ`, `שַׁלֵּם`, `הַנֵּחַ`) are rare in
+  Modern Hebrew; the alternative, the imperative, would hide the Greek form. Fixed by renderings §4; for the user to know.
+
+### Progress log
+- 2026-10-24: drafted 286–413 in seven sections, each saved to a scratch file and inserted before the placeholder by
+  script, then `fill`, `verify WD` and `check_bible_quotes.py` (0 problems after each). Verify catches fixed on the way:
+  337 `(המזבח)` (the `מזבח` gate: βωμός is absent; now `עָלָיו`). Quote-checker catches fixed: four backticked words beside
+  a reference that were not quotations (289 `הוֹד`, 337 `טָהוֹר`, 382 `עָבַד`, 402 `הֵפִיק`), and verses with the
+  Psalms/Proverbs four-space caesura split into half-verse quotations.
+- Fidelity read-through of the whole range against the Greek (every negation, tense and mood): 286 `אֹמַר` vocalized (ἐρέω
+  is future); 390 `הַמַּעֲלֶה` vocalized (homograph of `מַעֲלָה`).
+- `lexmap` pass on both sides (Hebrew → lemmas and lemma → Hebrew): the splits and pairs above recorded; the lexmap
+  parser cut a gloss containing `; ` (320 χρῆμα) – fixed. Cited precedents checked against the map (κτῆσις TH 606, ὄπις
+  TH 222, μάρναμαι TH 629 / WD 163 corrected in the notes).
+- End: `verify WD` 0 problems, 0 repeated-line differences (416 entries); `check_bible_quotes.py` on the annotated file and
+  project.md: 0 problems; `selftest` 0 failures. Not done (as briefed): intro, `build`, the review passes,
+  `build_parallels_index.py`.
+
+### The text on its own terms
+- **ἀρετή is prosperity as much as virtue** (287–292, 313): the "road" is the farmer's way from poverty to a full barn;
+  κακότης is misery as much as vice. The steep road that becomes easy (291–292) is Hesiod's image, later Prodicus' "Heracles
+  at the crossroads".
+- **Three kinds of men** (293–297): who understands by himself, who listens to good advice, who does neither – Perses is
+  the third; Aristotle quotes the lines in the Ethics.
+- **Hunger as a person** (299–302): it "hates" the idle and is his "companion"; Demeter "loves" the worker and fills his
+  barn – the gods of the field as patrons of a working household.
+- **Work no disgrace** (311): against the later aristocratic contempt for manual labour; the disgrace is idleness, and
+  envy of the rich worker is the good Strife again (312, cf. 23).
+- **Shame good and bad** (317–319): the poor man's shame keeps him from work and from asking; boldness belongs to wealth –
+  a village's social order in three lines (and 500 repeats 317 of empty hope).
+- **Wealth seized and wealth god-given** (320–326): by force or by the tongue in court (the lawsuit with Perses); the gods
+  "dim" the seizer and shrink his house.
+- **The crimes no court tries** (327–334): against the suppliant and the guest (Zeus Hikesios and Xenios), the brother's
+  wife, orphans, the old father: Zeus himself requites – the gods' anger as the bond of the family and the village.
+- **Sacrifice as household routine** (336–341): "according to your means", morning and evening, pure in body; its purpose
+  frankly economic – that you buy the neighbour's plot, not he yours.
+- **The neighbour before kin** (342–348): neighbours come ungirt, in-laws stop to dress; a bad neighbour loses you an ox –
+  the village as the real safety net.
+- **Measure for measure and the gift economy** (349–360): borrow by measure, return the same and more; give to the giver;
+  Giving (Δώς) and Snatching (Ἅρπαξ) as two half-personified women; the robbed man's heart "freezes".
+- **Thrift** (361–369): "a little on a little"; what is in the house does not worry you; drink deep at the jar's top and
+  bottom, spare in the middle (Seneca's "sera parsimonia in fundo").
+- **Trust and distrust** (370–375): a witness even with your brother (smiling); the wheedling woman "searching your barn"
+  – Pandora's daughters again; trusting a woman is trusting thieves.
+- **The only son** (376–380): a peasant's family planning, so that the plot is not divided (as Hesiod's was with Perses);
+  more sons only if the father lives long and Zeus gives more.
+- **The calendar begins with the Pleiades** (383–392): heliacal rising (May) for the harvest, morning setting (November)
+  for ploughing; forty days invisible; the same law for plains, coast and glens; "strip to sow, strip to plough, strip to
+  reap".
+- **The brother at the door** (396–404): Perses has come begging; the poet refuses and sends him to work, before he must
+  beg from neighbours with wife and children; debts and hunger as the farmer's two fears.
+- **The household's foundations** (405–413): house, (bought) woman, plough-ox – Aristotle's definition of the οἶκος; own
+  your tools, never borrow at the season; never put off till tomorrow – "the delayer wrestles with ruin".
+
+### Key parallels
+- **WD 289 ↔ Gen 3:19 (LXX ἐν ἱδρῶτι = `בְּזֵעַת`)**: sweat set by the gods before excellence, against sweat as the curse
+  that leads to bread and to dust – the same Greek word, opposite valuations.
+- **WD 288–292 ↔ Prov 15:19 (LXX ὁδοὶ ἀεργῶν)**: the two roads, inverted – in Proverbs the idle man's way is thorny, in
+  Hesiod badness is smooth and excellence steep; Prov 19:15 LXX (ψυχὴ ἀεργοῦ πεινάσει) ↔ WD 302 (hunger the idle man's
+  companion), with Hesiod's own ἀεργός.
+- **WD 304–305 ↔ Prov 6:6–8 + the LXX's plus 6:8a**: the sluggard sent to the ant – and in the Greek Proverbs also to the
+  bee (μέλισσα, ἐργάτις): a Greek addition in which Hesiod's bees and drones may echo.
+- **WD 299, 301, 411 ↔ Prov 12:11 (LXX ὁ ἐργαζόμενος … ἐμπλησθήσεται), 3:10 (πίμπληται τὰ ταμίεια = `וְיִמָּלְאוּ
+  אֲסָמֶיךָ`)**: the worker fills his barn, in the same Greek verbs.
+- **WD 328 ↔ Gen 49:4 (LXX ἀνέβης … ἐπὶ τὴν κοίτην)**: "going up on the brother's bed" – Reuben's idiom and verb; Lev
+  18:16, 20:21 the prohibition.
+- **WD 330–334 ↔ Exod 22:20–23 (LXX ὀρφανός)**: stranger, widow and orphan protected by the god who "is angry" and requites.
+- **WD 336 ↔ Deut 16:17 (LXX κατὰ δύναμιν)**, Lev 5:7, 12:8: sacrifice according to one's means – the identical Greek
+  phrase.
+- **WD 345 ↔ Prov 27:10 (LXX κρείσσων φίλος ἐγγὺς ἢ ἀδελφὸς μακρὰν οἰκῶν)**: the near neighbour better than the distant
+  kinsman – the same proverb, with ἐγγύς and "dwelling"; the verse's other words (πατρῷος, ἐγκαταλείπω) recur at 376–378.
+- **WD 350 ↔ Deut 25:14 (LXX μέτρον καὶ μέτρον), Lev 19:35**; **WD 354 ↔ Deut 15:10 (LXX διδοὺς δώσεις … οὐ λυπηθήσῃ)**:
+  measure and giving – in the Torah one just measure and giving to the poor, in Hesiod "the same and more" and giving to
+  the giver.
+- **WD 404 ↔ Deut 15:2 (LXX ἀφήσεις πᾶν χρέος)**: the release of debts – a divine law in Israel, the farmer's own task in
+  Hesiod; **WD 405 ↔ Exod 20:13 (house, wife … ox)**: the same order of the household as the Hebrew Decalogue, which the
+  LXX (Exod 20:17) reorders; **WD 410 ↔ Prov 3:28, 27:1 (LXX αὔριον)**; **WD 413 ↔ Gen 32:25 (LXX ἐπάλαιεν)**.
+- **WD 383 ↔ Job 9:9, 38:31, Amos 5:8**: `כִּימָה` = Πλειάς only in Job 38:31; Job 9:9 LXX lists other stars in another
+  order, and Amos 5:8 LXX drops the stars altogether.
+
+### Lines shared with other texts
+- No line of 286–413 repeats another drafted line. Near-repeats fixed here for later copies: **317 ≈ 500** (`ובושה לא טובה
+  סועדת איש נצרך,` – 500 has ἐλπίς for αἰδώς) and **343 ≈ 700** (`מי שגר קרוב אליך`). Inside the range: 299 ≈ 397
+  (`עֲבֹד, פרסס`). Words only: 304–305 ≈ TH 594–599 (the drones).
+
+### Proposals for the shared renderings
+- **Grammar (§4):** the infinitive-for-imperative → the vocalized infinitive absolute, first at **336** `הַקְרֵב`; with μή
+  → `אַל` + infinitive absolute (**352** `אַל בָּצוֹעַ`); "שם הפועל כציווי" in the פירוק. The gnomic aorist → participle
+  confirmed (334, 345, 355, 360, 372).
+- **παλαίω `נֶאֱבַק`** (413; LXX Gen 32:25 ἐπάλαιεν = `וַיֵּאָבֵק`, a kind-(a) bridge): proposed to keep it, and to move
+  **μάρναμαι** (TH 629, 647, 663; WD 163) off `נֶאֱבַק` – e.g. to `נִלְחַם` (if πόλεμος `מִלְחָמָה` may share its root, as
+  μάχη / μάρναμαι shared one) – or else to record the pair.
+- **ὄνειδος `חֶרְפָּה`** (311; LXX Gen 30:23) and **αἶσχος `כְּלִמָּה`** (211, changed): for §11.
+- **ἀρετή `מַעֲלָה`** (289, vocalized) and κακότης `רֹעַ` – for §5.
+- **κτα- = קנה:** κτητός `קְנוּיָה` (406), κτέανον `קִנְיָן` (315); ὠνέομαι `רָכַשׁ` (341).
+- **λυπέω `הֶעֱצִיב`** (401) – the licensed member of the עצב gate.
+- Recurring words fixed here (first line): ἀεργία `בַּטָּלָה` (311); καλιά `אָסָם` (301); χρῆμα `הוֹן` / `דָּבָר` / `כֵּלִים`
+  (320, 344, 407); κέρδος `בֶּצַע`, κερδαίνω `בָּצַע` (323, 352); μέτρον `מִדָּה` (350), μετρέω `מָדַד` (349); μισθός `שָׂכָר`
+  (370); μάρτυς `עֵד` (371); αἰτέω `שָׁאַל` (408); χρέος `חוֹב` (404); αὔριον `מָחָר` (410); μελέτη `שְׁקִידָה` (380);
+  ἄρκιος `מַסְפִּיק` (351); χρῄζω / χράω `נִצְרָךְ` (317, 351); ἀναίδεια `חֻצְפָּה` (324); θάρσος `תְּעוּזָה` (319); πίστις
+  `אֵמוּן` (372); ἀναβάλλω `דָּחָה` (410); δαίς `סְעוּדָה` (342); σπονδή `נֶסֶךְ`, θύος `קְטֹרֶת`, μηρία `יְרֵכַיִם` (337–338);
+  ἵλαος `נוֹחַ` (340); πεδίον `מִישׁוֹר` (388); ἄγκος `עֵמֶק` (389); ἐπιτέλλω (of a star) `זָרַח`, δύω `שָׁקַע` (383–384);
+  ὥριος `בְּעוֹנָתוֹ` (392); βοωτέω `נַהֵג בַּבָּקָר` (391); ἀροτήρ `חוֹרֵשׁ` (405); γαμετή `נְשׂוּאָה` (406).
+- **Names:** Ἀτλαγενής `יְלִידוֹת אַטְלָס` (383). The treebank lemma of 383 is "πλψιάς": the names check for Πληιάδες
+  will not fire there; the tool could add that spelling (a coordinator's decision).
+
+### For the next part (WD 414–617, the farmer's year)
+- The infinitive absolute for every imperatival infinitive (the precepts of the calendar are full of them); `אַל` +
+  infinitive absolute with μή; the gnomic aorist → participle.
+- Fixed and waiting: 500 ≈ 317 (`… לא טובה סועדת איש נצרך,`); 700 ≈ 343 (`מי שגר קרוב אליך`); F25 `גרעיני דמטר הקדושים`
+  (466, 597, 805 – check the Greek first); Πληιάδες `כִּימָה` (572, 615, 619), Ὠρίων `כְּסִיל` ★; ἄμητος `קָצִיר`, ἄροτος
+  `חָרִישׁ`, ἀρόω `חָרַשׁ`, σπείρω `זָרַע`, θέρος `קַיִץ`, χειμών `חֹרֶף`; βοῦς `שׁוֹר` / `בָּקָר`; καλιά `אָסָם`; αὔριον `מָחָר`;
+  ἀμβολιεργός `מַשְׁהֶה־מְלָאכָה`; δαίς `סְעוּדָה`; μισθός `שָׂכָר`; ἐλπίς at 498 (`תִּקְוָה`) with κομίζω `סָעַד`.
+- Gate homographs met in this part: `מזבח` (no βωμός), `ערם` (γυμνός, vocalize `עָרֹם`), `זרוע` (σπείρω, vocalize
+  `זָרוֹעַ`), `אלה` / `מאלה` (vocalize `אֵלֶּה`), `ספים` (vocalize `סוֹפִים`), `עד` (vocalize `עֵד`).
+
+### Lessons for the guidelines
+- **A gloss in the פירוק must not contain `; `** – it is the segment separator, and `lexmap` cut 320's χρῆμα gloss there
+  (the Hebrew of the line vanished from the map). Use a comma.
+- **A self-test line may not fit the line division**: the WD 289 self-test ends `;`, but the Greek sentence ends one word
+  into 290 (ἀθάνατοι): keep the self-test's words and follow the base's punctuation; the self-test still passes.
+- **A garbled treebank lemma silently disables the names check** (383 "πλψιάς"): look at the lemma of every name in the
+  `data` output, not only at the NAMES lines it prints.
+- **The LXX's pluses are bridges too**: the bee of Prov 6:8a, the ὄνειδος / αἰσχύνομαι of Prov 20:4 and the giver of
+  Prov 22:9a exist only in the Greek Proverbs – worth grepping the LXX for Hesiod's words, not only the verses the
+  literature names.
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)

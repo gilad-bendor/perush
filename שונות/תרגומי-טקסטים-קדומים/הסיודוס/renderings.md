@@ -236,7 +236,7 @@ the Greek word is capitalized in the base.
 | Αἰθίοψ | כּוּשׁ |  | biblical name (§2.3): the land / people `כּוּשׁ` (`מֶלֶךְ כּוּשׁ`, `בְּנֵי כּוּשׁ`); not the plural `כּוּשִׁים`, a slur in Modern Hebrew (§11.7) |
 | Νεῖλος | נִילוּס |  | never `יְאֹר` |
 | Ἄσκρη | אַסְקְרָה |  | Hesiod's village (WD 640) |
-| Πληιάδες / Πλειάδες | כִּימָה |  | the Pleiades: `כִּימָה` [equivalent], the LXX's Πλειάς for `כִּימָה` (Job 9:9, 38:31) |
+| Πληιάδες / Πλειάδες / πλψιάς | כִּימָה |  | (πλψιάς: the treebank's slip at WD 383) the Pleiades: `כִּימָה` [equivalent], the LXX's Πλειάς for `כִּימָה` (Job 9:9, 38:31) |
 | Ὠρίων / Ὠαρίων | כְּסִיל | ★ | Orion: `כְּסִיל` [equivalent], the LXX's Ὠρίων for `כְּסִיל` (Job 38:31); unvocalized "fool" |
 | Ὑάδες | הַהִיאָדוֹת |  | the Hyades (no biblical name) |
 | Ἀρκτοῦρος | אַרְקְטוּרוֹס |  | the LXX's Ἀρκτοῦρος renders `עָשׁ` (Job 9:9) – a doubtful equation, a note only |
@@ -778,6 +778,22 @@ Full list (about 150 words, with first lines and reasons): `2-מעשים-וימ�
    pairs recorded in project.md (θεῖος / θεσπέσιος `אֱלוֹהִי`, ἐμβασιλεύω / ἀνάσσω `מָלַךְ`, ἔτος / ἐνιαυτός `שָׁנָה`,
    τρέφω / ἀέξω `גִּדֵּל` …) are synonyms in one Hebrew word, kept. Gate homographs met: `בשבתה` (ישב: `[היתר שער]`, 259),
    `הדור` (γενεή / φαίδιμος).
+
+### 11.10 WD 286–413 (WD translator 2, part 3; merged 2026-10-24)
+Full list with first lines and reasons: `2-מעשים-וימים/project.md`, "WD 286–413", Proposals. Binding:
+1. **The infinitive used as an imperative** (first at 336): the vocalized Hebrew infinitive absolute, "שם הפועל כציווי"
+   in the פירוק (`הַקְרֵב קָרְבָּנוֹת`, `שָׂרוֹף`, `מָדוֹד לְךָ`, `שַׁלֵּם`, `עָבוֹד`, `עָרֹם זָרוֹעַ`, `קָצוֹר` …); with μή
+   `אַל` + infinitive absolute (352 `אַל בָּצוֹעַ`, 410 `וְאַל דָּחֹה`). The gnomic aorist → participle (334, 345, 355 …).
+2. **Words:** ἀρετή `מַעֲלָה` (vocalized); ὄνειδος `חֶרְפָּה` (LXX Gen 30:23) and therefore αἶσχος `כְּלִמָּה` (WD 211
+   changed; `קָלוֹן` is the Ugaritic corpus's cognate of *qlt*); the κτα- family the root קנה (κτητός `קְנוּיָה`, LXX
+   Lev 25:44; κτέανον `קִנְיָן`; κτῆμα `נֶכֶס` stays), ὠνέομαι `רָכַשׁ`; λυπέω `הֶעֱצִיב` (the עצב gate is λυπ-'s: λύπη is the
+   LXX's `עִצָּבוֹן`, Gen 3:16–17 – a real lexical identity, noted).
+3. **Collision settled (the coordinator):** παλαίω (413) is the LXX's verb for `וַיֵּאָבֵק` (Gen 32:25), but `נֶאֱבַק` is
+   μάρναμαι's (TH 629, 647, 663; WD 163; μάχομαι is `נִלְחַם`, TH 392): μάρναμαι keeps it, παλαίω = `הִתְגּוֹשֵׁשׁ`
+   ("wrestle", its literal sense), with the LXX identity in the note. ἐγγύθι `קָרוֹב` / τάχα `בְּקָרוֹב` and βοωτέω / ἐλαύνω
+   (the root נהג) recorded.
+4. **Names:** the treebank's lemma at WD 383 is the slip πλψιάς: added to the Πληιάδες row so that the check fires.
+5. Line 310 is not in the base (309 → 311): described in words at 309 and 311, never supplied.
 
 ## 12. Decisions and revisions (coordinator, 2026-10-24)
 
