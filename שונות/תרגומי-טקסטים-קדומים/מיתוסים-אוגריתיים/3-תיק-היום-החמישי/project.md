@@ -82,6 +82,19 @@ becomings of Re": Khepri, "when I came into being, being came into being") is **
   AED-TEI through `../../tools/aed2md.py` (`dossier_tools.py`: `WC_PARTS`, `AP_PARTS`, `base_aed`, `tr_aed`; selection by
   AED line ranges); annotated files, intros, the head paragraph; the TLA's German read after drafting (corrections
   recorded at WC 2,22, 3,5, 3,14, 3,16, 3,21; AP 26,9, 26,14, 26,17); `verify --strict` 0, `check_bible_quotes` 0.
+- 2026-10-24 (Round 4 run 4 sub 1, the Hesiod corpus): **the TH excerpt aligned with the full Theogony**
+  (`../../הסיודוס/1-תולדות-האלים/annotated-TH.rtl.md`, drafted and reviewed in three passes): all 23 `>` lines now carry
+  the corpus's Hebrew for the same lines, so that the dossier and the corpus never give one Greek line two Hebrews.
+  Reasons (`../../הסיודוס/renderings.md` §3.2, §5, §11, §12.2): Gaia is a speaking name translated `אֶרֶץ` (238, 821;
+  West's and Most's "Earth"); γείνομαι `הוֹלִיד` (334); γένος `גֶּזַע` (336, not `דור`: γενεή has `דּוֹר`, the LXX's word of
+  Gen 6:9); ζάθεος `מְקֻדָּשׁ` (300; ἱερός keeps `קָדוֹשׁ`); φρένες `לֵבָב` (239); `אַפְרוֹדִיטָה` (822); ἀμήχανος `שֶׁאֵין
+  כְּנֶגְדּוֹ תּוּשִׁיָּה` (295); ἀγήνωρ `אַמִּיץ` (237: `עַז־הָרוּחַ` hits the corpus's `רוּחַ` gate, reserved for the winds);
+  θεῖος / θεσπέσιος `אֱלוֹהִי` (297, 827); ὠμηστής `אוֹכֵל־נָא` (300); ἐρεμνός `כֵּהֶה` (334), δνοφερός `קוֹדֵר` (826); the
+  corpus's epithets (`מְעֻגֶּלֶת־הָעֵינַיִם` 298) and 823 (a corrupt line, rendered closer to the Greek). Kept as the
+  dossier's own: the vocalization of names at their first occurrence in this file, and the full stop of the excerpt's last
+  line (828; the corpus line ends `;`). The glosses of the פירוק and the notes that named the old Hebrew were updated
+  (238, 239, 295, 300, 334, 336, the head). `dossier_tools.py verify --strict` 0 problems (no dossier gate blocked a
+  corpus rendering), `build` done, `check_bible_quotes` 0.
 
 ## Parallels index
 
