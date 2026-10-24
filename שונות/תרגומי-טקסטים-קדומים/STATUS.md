@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-24 (Round 4 run 4 done: the Hesiod corpus).
+Last updated: 2026-10-24 (Round 4 run 5 done: Erra and Išum I, in the netherworld corpus).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -55,7 +55,7 @@ All of it is a **first draft**: complete, verified by script, three review passe
 | `ספרות-החכמה-והצדיק-הסובל/` | 1 Ludlul I–V; 2 the Babylonian Theodicy; 3 the Great Prayer to Šamaš; 4 Counsels of Wisdom; 5 the Dialogue of Pessimism; 6 the Instructions of Šuruppag (Sumerian; 3–6 Round 3 run 4) | 1,562 | `wisdom_tools.py verify --strict` |
 | `קינות-על-ערים/` | 1 the Lament for Ur; 2 the Curse of Agade (OB + Ur III) | 763 | `lament_tools.py verify --strict` |
 | `בניין-המקדש/` | 1 the Gudea Cylinders A–B | 1,300 | `temple_tools.py verify GU --strict` |
-| `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent; 3 Nergal and Ereškigal (MB Amarna + SB); 4 Bilgameš, Enkidu and the Netherworld (five recensions; the source of Gilg. XII) (3–4 Round 3 run 5) | 1,482 | `netherworld_tools.py verify IS\|IN\|NE\|GEN --strict` |
+| `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent; 3 Nergal and Ereškigal (MB Amarna + SB); 4 Bilgameš, Enkidu and the Netherworld (five recensions; the source of Gilg. XII) (3–4 Round 3 run 5); 5 Erra and Išum, Tablet I (eBL; II–V not edited on eBL yet; Round 4 run 5) | 1,673 | `netherworld_tools.py verify IS\|IN\|NE\|GEN\|ER --strict` |
 | `אגדות-מלכים/` | 1 Enmerkar and the Lord of Aratta; 2 the Sargon Birth Legend (on King 1907 only: check against Westenholz 1997); 3 Etana (all six eBL versions, Round 3 run 2) | 1,275 | `kings_tools.py verify EA --strict`, `… verify SB --strict`, `… verify ET --strict` |
 | `קולות-היום-יום/` | 1 OB / Old Akkadian love lyrics and incantations (LAOS 4, 25 texts); 2 Sumerian proverbs (coll. 1 complete, selections of 2–3); 3 Lu-diĝira + eight Sumerian letters | 1,513 | `kol_tools.py verify LOVE PROV LET --strict` |
 | `נבואה-ומלכות/` | 1 the Assyrian prophecies (SAA 9 1–11, all eleven texts); 2 Advice to a Prince (eBL `L/2/5`) | 707 | `prophecy_tools.py verify --strict` |
@@ -93,7 +93,7 @@ survey (`curated-translation-candidates--world.md`), ranked together. **One run 
 2. the Edict of Ammiṣaduqa – only if an open base text is found (none on 2026-10-22);
 3. Egyptian wisdom and creation (Amenemope, Merikare, the Heavenly Cow, the Memphite Theology; base AED-TEI): **done (first draft), 2026-10-24**, `חכמה-ובריאה-במצרים/` (report `reports/round-4/run-3.md`);
 4. Hesiod (Theogony + Works and Days; base Perseus + treebank): **done (first draft), 2026-10-24**, `הסיודוס/` (report `reports/round-4/run-4.md`);
-5. Erra and Išum (eBL);
+5. Erra and Išum (eBL): **done (first draft) for Tablet I, 2026-10-24**, project 5 of `העולם-התחתון/` (191 lines; Tablets II–V are not edited on eBL yet and wait for it: `sources/_records-only--Erra-and-Ishum-II-V/`; report `reports/round-4/run-5.md`);
 6. Hittite law and ritual (the Laws, the Temple Instructions, the elimination rituals; base TLHdig).
 
 Quick wins between the runs: Šūpê-amēlu and the fables; the Poor Man of Nippur. Each new language needs a converter, a
