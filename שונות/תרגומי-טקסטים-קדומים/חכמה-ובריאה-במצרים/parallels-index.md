@@ -1,6 +1,40 @@
 # Parallels index: the Egyptian corpus (`חכמה-ובריאה-במצרים/`)
 
-Key findings: (written when the run ends).
+## Key findings (Round 4 run 3, 2026-10-24)
+
+The full table (805 rows) follows, by Bible verse. The strongest contacts:
+
+1. **Amenemope ↔ Prov 22:17–24:22, saying by saying, checked on the transliteration** (renderings §8): "give your ears"
+   (AM 3.9) against `הַט אָזְנְךָ` – a [divergence] the English hides; "the casket of your belly" against `בְּבִטְנֶךָ` (the
+   oldest witness, oCairo SR 1840, has only "inside your belly"); the hot man (11.13–14, 13.8–9) and Prov 22:24–25 in
+   the same order; wealth that "made itself wings like geese and flew to the sky" (9.10–10.5) against `כִּי עָשֹׂה יַעֲשֶׂה-לּוֹ
+   כְנָפַיִם כְּנֶשֶׁר` – same verb and noun, another bird; the thirty houses (27.7) behind the qere `שָׁלִשִׁים` of Prov 22:20.
+2. **The Torah's laws of the boundary, the measure and the weak in an Egyptian surveyor's mouth:** the boundary stone
+   and the widow's boundary (7.12–15 ↔ Deut 19:14, 27:17, Prov 23:10 – the emendation `גְּבוּל אַלְמָנָה`); two words for the
+   balance, as in Prov 16:11 `פֶּלֶס וּמֹאזְנֵי` (17.18–18.3); the oipe "that takes two" (18.21–19.1) ↔ `אֵיפָה וְאֵיפָה`
+   (Deut 25:14) – `אֵיפָה` is the Egyptian word itself, and the text calls the false measure the god's "abomination"
+   (`תּוֹעֵבָה`); the blind, the dwarf and the lame (24.9–12 ↔ Lev 19:14); the widow in the field and the stranger
+   (26.9–13 ↔ Deut 24:19–21); "man is clay and straw, the god his builder" (24.12–17 ↔ Gen 2:7, Job 33:6).
+3. **"Not yet" (Gen 2:4b–5):** the Pyramid Texts' `n ḫpr.t X` (PT571, PT486) is the exact frame of `טֶרֶם יִהְיֶה` – and in
+   Egypt death too "came into being" (Gen 2:17 [divergence]).
+4. **The Memphite Theology:** creation by heart and tongue, the mouth "that devised the name of every thing" (Gen 2:20,
+   Ps 33:6, 9); "Ptah rested (ḥtp) after he had made everything" (59) – `נָח` as Ex 20:11 `וַיָּנַח`, with no day and no
+   number (Gen 2:2 [divergence]); "his work" (kꜣ.t `מְלָאכָה`, Gen 2:2); a worm-eaten ancestral book recopied by Shabaka
+   (Prov 25:1: Hezekiah was his contemporary).
+5. **Merikare (E130–138):** mankind as "the god's flock" and "his images" for whom he made heaven, earth, breath, plants,
+   birds and fish (Gen 1:26–30, 2:7) – and who punished only the plotters among them (Gen 6:5–7 [divergence]).
+6. **The Heavenly Cow ↔ Gen 6–9, 11** (every reserved root of the flood story kept out of the lines): the god's change
+   of heart is weariness, not regret (Gen 6:6 [divergence]); mercy by a trick of red beer, not by a chosen survivor;
+   "never again" (Gen 8:21) and the separation of heaven and earth (Gen 11); `jw=j jm=j` "I (am) I" (49) against Ex 3:14
+   (Hornung's "Ich bin, der ich bin" adds a verb and a relative the Egyptian lacks); Thoth installed "in my place" (Gen
+   41:40).
+7. **Loanwords seen in their own contexts:** `תֵּבָה` (AM 11.4, the coffin), `אֵיפָה`, `חָתַם` (sin "sealed with his finger",
+   19.21 ↔ Job 14:17), `יְאֹר`, `כֶּתֶם`; Semitic loans in Late Egyptian (ꜥšq `עָשַׁק`, mkmr.t `מִכְמֹרֶת`).
+
+**The ancient mind:** a land surveyor's conscience (sins and punishments of his trade); the "hot" and the "silent" man as
+two trees; measures as divine eyes (the Udjat, the Eye of Re) and Thoth's baboon at every market balance; a creator who
+withdraws out of old age; creation as thought, word and pun; magic as a gift of god; the uncreated serpent destroyed
+every day (the fifth-day dossier's Westcar and Bremner-Rhind excerpts, `../מיתוסים-אוגריתיים/3-תיק-היום-החמישי/`).
 
 ## The table
 

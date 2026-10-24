@@ -197,6 +197,16 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 | `Wikisource-zh--Kojiki/kojiki-jokan.html` | *Kojiki* Book 1 from zh.wikisource (PD text; page CC BY-SA). The Wikimedia API answered 429 to scripts once; the saved page serves. |
 - **Not reached:** ru.wikisource (the Dove Book) answered 429; Ulukau and NZETC (the Kumulipo, Ika-tere) block scripts; ctext.org forbids scraping; DEAPS has no Deir ʿAllā record. The dossier's `project.md` lists every excerpt not done and why.
 
+### 4.4t Egyptian: wisdom and creation (`חכמה-ובריאה-במצרים/`; Round 4 run 3, 2026-10-23)
+| Folder | What |
+|---|---|
+| `AED-TEI/` | **BASE TEXT.** AED-TEI (Schweitzer 2019: the TLA's January 2018 snapshot as TEI; **CC BY-SA 4.0, committed**), fetched per text from `raw.githubusercontent.com/simondschweitzer/aed-tei/master/files/<ID>.xml` (+ `_st`, `_wt`): Amenemope (pBM EA 10474 + five older witnesses), Merikare (three witnesses), the Heavenly Cow (Seti I, Tutankhamun, Ramesses VI), PT 571, 486, 527, 600, pWestcar, the Bremner-Rhind Apophis books. The table of folders and TLA IDs is in its README. `zenodo.org` was unreachable on 2026-10-23 (raw GitHub sufficed); `dictionary.xml` is not on GitHub (use the TLA lemma ids and the `_wt` glosses). **Never scrape the live TLA** (decoy page for crawlers). |
+| `El-Hawary-2010--Wortschoepfung--OBO-243/` | **BASE TEXT** of the Memphite Theology (not in AED): El Hawary 2010 (OBO 243, ZORA open access, ©). The PDF, its text layer, his German and notes are git-ignored (recipes); **`memphite-transliteration.tsv` (committed) is our transcription of his transliteration from the page images** (the text layer garbles ḥ ḫ ẖ ḏ ṯ ꜣ ꜥ), 88 rows, by an agent, checked against the text layer. |
+| `Hornung-1997--Himmelskuh--OBO-46/` | Hornung 1997 (OBO 46, ZORA open access, ©; PDF git-ignored, recipe): the Heavenly Cow's synoptic edition and German – rank 3–4. Book page ≈ PDF page − 17. |
+| `Lange-1925--Weisheitsbuch-des-Amenemope/` | Lange 1925 (public domain; archive.org OCR, committed): rank 5 for Amenemope, same page.line numbering. |
+
+- **Not used:** the live TLA (JS wall, decoy page); Nederhof's St Andrews PDFs and Ramses Online (no licence: consult only); Shupak 2016 (Hebrew Amenemope, ©, not consulted); Lichtheim, Simpson, Allen (©, recalled only, never quoted verbatim). Sethe 1928 (PD) for the Memphite Theology was not downloaded (archive.org redirects): a later check of El Hawary's readings against it is possible.
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).
