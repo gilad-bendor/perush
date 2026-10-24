@@ -4388,6 +4388,188 @@
    }
   },
   {
+   "id": "LXX-Rahlfs-1935--el-wikisource/amos-rahlfs.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%91%CE%BC%CF%8E%CF%82%20%28Rahlfs%29",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/amos-rahlfs.wikitext": [
+     40822,
+     "70674f7f42c8065550128b5b97ed42f63f6236d66de590d52d7455568442433e"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/deuteronomy-rahlfs.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%94%CE%B5%CF%85%CF%84%CE%B5%CF%81%CE%BF%CE%BD%CF%8C%CE%BC%CE%B9%CE%BF%CE%BD%20%28Rahlfs%29",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/deuteronomy-rahlfs.wikitext": [
+     275228,
+     "19ecadfe2c74d39515b781dba15a544e8f5f22fd1ea0967f7f04bfa0015e4024"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/ezekiel-rahlfs.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%99%CE%B5%CE%B6%CE%B5%CE%BA%CE%B9%CE%AE%CE%BB%20%28Rahlfs%29",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/ezekiel-rahlfs.wikitext": [
+     359778,
+     "4c6f506fb4f91954477cd6d1df60332d166270ca5d5ab16ea78b43ad7d304028"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/job-rahlfs.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%99%CF%8E%CE%B2%20%28Rahlfs%29",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/job-rahlfs.wikitext": [
+     174228,
+     "e54232a1fd9f8906bbb4766f0ee77682f5481f64e3792eb834fcdf5b8c8e1c8d"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/jonah-rahlfs.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%99%CF%89%CE%BD%CE%AC%CF%82%20%28Rahlfs%29",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/jonah-rahlfs.wikitext": [
+     13239,
+     "c4663d0f3109e3d24449075361eb6339b25c29c5a28727845e2d20b2cd0b4a2a"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/judges-rahlfs.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%9A%CF%81%CE%B9%CF%84%CE%B1%CE%AF%20%28%CE%91%CE%BB%CE%B5%CE%BE%CE%B1%CE%BD%CE%B4%CF%81%CE%B9%CE%BD%CF%8C%CF%82%20%CE%9A%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%CF%82%29%20%28Rahlfs%29",
+   "note": "the current revision; Judges in Rahlfs' A text (Codex Alexandrinus; the B text is a separate page) – Round 4 run 4",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/judges-rahlfs.wikitext": [
+     193812,
+     "963cc111d3f79b6e65d494dd21518df6836e6bb0a785d608f9900b506e5178df"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/leviticus-rahlfs.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%9B%CE%B5%CF%85%CE%B9%CF%84%CE%B9%CE%BA%CF%8C%CE%BD%20%28Rahlfs%29",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/leviticus-rahlfs.wikitext": [
+     232881,
+     "1951cffce6cd0f6e1693de3d02edcf6d3b3ad2ba657850875fb2e9154f092077"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/micah-rahlfs.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%9C%CE%B9%CF%87%CE%B1%CE%AF%CE%B1%CF%82%20%28Rahlfs%29",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/micah-rahlfs.wikitext": [
+     29961,
+     "62b3161fb4476e17671d32f6e36ddc61fc002d7db89b268c72f4468ff787b253"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/proverbs-rahlfs.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%A0%CE%B1%CF%81%CE%BF%CE%B9%CE%BC%CE%AF%CE%B1%CE%B9%20%28Rahlfs%29",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/proverbs-rahlfs.wikitext": [
+     153430,
+     "61a0cd37f098be7f3759758c2b4dd83c7a910dfab75a80e71ec950d547d9e192"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/psalms/ps-lxx-103.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%A8%CE%B1%CE%BB%CE%BC%CE%BF%CE%AF%20%CF%84%CE%BF%CF%85%20%CE%94%CE%B1%CE%B2%CE%AF%CE%B4%20%28Rahlfs%29%2F103",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/psalms/ps-lxx-103.wikitext": [
+     6303,
+     "b47052a7b6c307725cf422452ef1ba9778347655bd0166cc2f9887008e0d9f22"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/psalms/ps-lxx-148.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%A8%CE%B1%CE%BB%CE%BC%CE%BF%CE%AF%20%CF%84%CE%BF%CF%85%20%CE%94%CE%B1%CE%B2%CE%AF%CE%B4%20%28Rahlfs%29%2F148",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/psalms/ps-lxx-148.wikitext": [
+     2696,
+     "38b48fdeffe25acec2dbc1efb487718bc0386b0df8a64fdc1493f2d74c53a6d6"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/psalms/ps-lxx-73.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%A8%CE%B1%CE%BB%CE%BC%CE%BF%CE%AF%20%CF%84%CE%BF%CF%85%20%CE%94%CE%B1%CE%B2%CE%AF%CE%B4%20%28Rahlfs%29%2F73",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/psalms/ps-lxx-73.wikitext": [
+     4585,
+     "180fc45018cef243db02c0f785dfe9f729a5fe9081eff146c9c2630076c6222d"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/psalms/ps-lxx-88.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%A8%CE%B1%CE%BB%CE%BC%CE%BF%CE%AF%20%CF%84%CE%BF%CF%85%20%CE%94%CE%B1%CE%B2%CE%AF%CE%B4%20%28Rahlfs%29%2F88",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/psalms/ps-lxx-88.wikitext": [
+     9307,
+     "db732eb354fa2b27b46654470cfd65495f9561532cf3da38fd39a2a89aeb089c"
+    ]
+   }
+  },
+  {
+   "id": "LXX-Rahlfs-1935--el-wikisource/zechariah-rahlfs.wikitext",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://el.wikisource.org/w/index.php?action=raw&title=%CE%96%CE%B1%CF%87%CE%B1%CF%81%CE%AF%CE%B1%CF%82%20%28Rahlfs%29",
+   "note": "the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)",
+   "files": {
+    "LXX-Rahlfs-1935--el-wikisource/zechariah-rahlfs.wikitext": [
+     62320,
+     "e65b264d0919ba3c427d74350ae560a95907316d7cda1c0cbf3d2d5b7484ca79"
+    ]
+   }
+  },
+  {
    "id": "Lenzi-2023--Suffering-in-Babylon--OBO-300/OBO_300_Lenzi_Suffering_in_Babylon.pdf",
    "kind": "url",
    "tier": "work",
