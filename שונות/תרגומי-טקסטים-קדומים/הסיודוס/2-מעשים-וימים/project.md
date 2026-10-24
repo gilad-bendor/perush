@@ -1276,5 +1276,176 @@ Theogony as the precedent. No Theogony line was changed (so no TH note, no TH bu
   `רעם` (βροντή / ἑταῖρος + suffix), `עז` (κρατερός / αἴξ), `ערב` (ἐρατός / κρόκη / evening).
 - **A seam report**: the lemmas whose Hebrew in one translator's range never meets the other's (`--split 285`).
 
+## Review pass (c): Hebrew (WD)
+
+**Date:** 2026-10-24. **Reviewer:** Hebrew reviewer (pass c), one sub-session, the whole poem (831 entries), the
+section headings and the intro.
+
+### What was read
+- The generated `translation-WD.rtl.md` from start to end, section by section, as a Hebrew reader, with the annotated
+  entry (Greek, פירוק, notes) opened for every line in doubt; the intro `translation--intro-WD.rtl.md`.
+- Looked for: unvocalized homographs (above all where a Modern word shadows the literary one), agreement (gender and
+  number; the translated names keep the Greek gender, §11.7), the infinitive-as-imperative forms (§11.10), the
+  government of verbs, register slips and Modern idioms, unintended biblical calques; the spelling.
+- The list of all 2,575 distinct unvocalized words of the `>` lines, read once for defective spellings and for one
+  practice per recurring word; a scripted list of every vocalized word with a ḥolam not on a vav or a qubbuṣ (a
+  vocalized form must strip to the plene string, §5.2 ★); every "שם הפועל כציווי" in the פירוק, grouped by form.
+- New words checked with `lexmap` and `grep --all` (one collision found and avoided: `מֻבְחָר` is προφερής's, TH 79, 361).
+- After each of five batches (1–105, 106–285, 286–413, 414–617, 618–828) and the headings: `build WD`, `verify WD
+  --strict` (0 problems, 0 repeated-line differences); at the end `selftest` (29 lines, 0 failures) and
+  `check_bible_quotes.py` on the annotated file, the translation, the intro and this file (0 problems).
+
+### Result: 102 lines changed (the `>` line, its פירוק `("…")`, and every note that quoted the old Hebrew), 8 headings, the intro
+No meaning changed; no fixed rendering, formula or repeated line touched except where this brief asked for it (340, 773:
+see "Fixed words replaced"). WD 124–125 = 254–255, 149 = TH 152, 54 / 71 / 72 = TH 559 / 572 / 573 are unchanged.
+
+**Unvocalized homographs: the one ambiguous word vocalized (44 lines)**
+
+| Line | Before → after | The wrong reading avoided |
+|---|---|---|
+| 13 | `ולבן` → `וְלִבָּן` | `לָבָן` "white", Laban |
+| 55 | `והולכת שולל` → `וְהוֹלַכְתָּ` | the feminine participle "and you (f.) go" |
+| 167 | `בזכותו` → `בְּזַכּוֹתוֹ` (ὀπάσσας) | `בִּזְכוּתוֹ` "thanks to him" |
+| 191 | `פועל` → `פּוֹעֵל` (ῥεκτήρ) | `פֹּעַל` "deed" (pass b recorded the pair, the line had stayed unvocalized) |
+| 194, 262 | `בספרו`, `בספרם` → `בְּסַפְּרוֹ`, `בְּסַפְּרָם` | "in his / their book" |
+| 198 | `מכסות` → `מְכַסּוֹת` | `מִכְסוֹת` "quotas" |
+| 222 | `נאות העם` → `נְאוֹת` (ἤθεα) | `נָאוֹת` "pretty" (as TH 129) |
+| 322 | `יבוז` → `יָבוֹז` (ληίσσεται "plunder") | `יָבוּז` "despise" |
+| 340, 360, 451, 593 | `קרבם`, `קרבו`, `כשקרבך` → `קִרְבָּם`, `קִרְבּוֹ`, `כְּשֶׁקִּרְבְּךָ` (κραδίη / νηδύς) | `קְרָב` "battle", `קֵרְבוֹ` "brought him near" (as TH 764, 898) |
+| 362 | `נהיה` → `נִהְיֶה` | the past `נִהְיָה` (the potential optative: `היה … נִהְיֶה`) |
+| 374 | `בחפשה` → `בְּחַפְּשָׂהּ` | `בְּחָפְשָׁהּ` "in her freedom" |
+| 403, 526 | `מרעה` → `מִרְעֵה` / `מִרְעֶה` | `מֵרָעָה` "from evil" |
+| 418 | `מגודלי־הכליה` → `הַכְּלָיָה` (κηριτρεφής) | `כִּלְיָה` "kidney" |
+| 421 | `ועליו` → `וְעָלָיו` | "and upon it" |
+| 423 | `ועלי` → `וְעֱלִי` "pestle" | "and upon me" |
+| 427 | `בורך` → `בּוּרֶךְ` (γύης, its first occurrence) | `בֵּרַךְ`, `בֶּרֶךְ` |
+| 428 | `בתורך` → `בְּתוּרְךָ` | "in your Torah / turn" |
+| 430 | `עבד אתנה` → `עֶבֶד` (δμῷος) | the verb "worked" |
+| 431 | `ובקרבו` → `וּבְקָרְבוֹ` | `בְּקִרְבּוֹ` "inside it" |
+| 433 | `שבורכה` → `שֶׁבּוּרְכָּהּ` (αὐτόγυον) | `שֶׁבֹּרְכָה` "that was blessed" |
+| 476 | `שתשוש` → `שֶׁתָּשׂוּשׂ` | `תָּשׁוּשׁ` "weak" |
+| 506, 508 | `בנשוף`, `בנשפו` → `בִּנְשׁוֹף`, `בְּנָשְׁפוֹ` (πνέω) | `בַּנֶּשֶׁף` "at dusk" |
+| 518 | `און`, `הזקן`, `שמה` → `אוֹן`, `הַזָּקֵן` (γέροντα), `שָׂמָה` | `אָוֶן`; `הַזָּקָן` "the beard"; `שָׁמָּה`, `שְׁמָהּ` |
+| 525 | `ובנאות` → `וּבִנְאוֹת` | as 222 |
+| 531 | `יקרה` → `יְקָרָה` (μέλει) | `יִקְרֶה` "will happen" |
+| 538 | `ובשתי` → `וּבִשְׁתִי` "and in the warp" | `וּבִשְׁתִּי` "in my drinking", `וּבִשְׁתֵּי` "in two" |
+| 542, 546 | `בלבד`, `לבד` → `בְּלֶבֶד`, `לֶבֶד` "felt" | `בִּלְבַד` "only", `לְבַד` "alone" |
+| 554, 570 | `הקדם` → `הַקְדֵּם` (inf. abs.) | `הַקֶּדֶם` "the east" |
+| 648 | `אראה` → `אַרְאֶה` (δείξω) | `אֶרְאֶה` "I will see" |
+| 652 | `עם (רב)` → `עָם` (λαόν) | the preposition "with" |
+| 670 | `הנשבים` → `הַנְּשָׁבִים` (αὖραι) | `הַנִּשְׁבִּים` "the captives" |
+| 677 | `שם` → `שָׂם` | `שָׁם`, `שֵׁם` |
+| 765 | `נשמר` → `נִשְׁמָר` (participle) | the past |
+| 825 | `אם חורגת … אם` → `אֵם` ×2 | "if" |
+| 828 | `מעברות` → `מֵעֲבֵרוֹת` | `מַעְבָּרוֹת` "crossings" |
+| 376, 314 | `ויהי` → `וִיהִי` (jussive) | the narrative `וַיְהִי` – a vav-consecutive the register excludes (§6.2) |
+
+**The pronoun `אלה` → `אֵלֶּה` wherever it stands (17 lines; one practice, against the trap `אֵלָה`, §7.3):** 162, 164,
+166, 167 (`וּלְאֵלֶּה`), 224, 225 and 238 (`וְאֵלֶּה`), 250, 263 (`מֵאֵלֶּה`), 268 (`בְּאֵלֶּה`), 274, 322 (`כָּאֵלֶּה`), 513 (×2),
+684, 688, 697. ὦ → `הוֹ` at 207, 213, 248, 274 (as 27, 611, 641); the prohibitive `ואַל` before an infinitive absolute at
+410 (as everywhere else).
+
+**Plene spelling (a vocalized form strips to the plene string, §5.2 ★; one practice for recurring words)**
+- **88** `תיהיה` → `תֵּהָיֶה` (γένηται: the Nifal the REQUIRED γίγνομαι rendering needs; its plene spelling is `תהיה`, the
+  ṣere unwritten, as TH 475 `יהיה`; vocalized against the Qal `תִּהְיֶה`). Note corrected.
+- **The infinitive absolute with ḥolam** written with vav, as the majority (`זָרוֹעַ`, `כָּרוֹת`, `קָצוֹר`, `עָבוֹד`, `שָׂרוֹף`,
+  `מָדוֹד`, `חָמוֹק` …, renderings §11.10): **368** `שָׂבֹעַ` → `שָׂבוֹעַ`, **542** `קָשֹׁר` → `קָשׁוֹר`, **596** `יָצֹק` →
+  `יָצוֹק`, **597** `דָּחֹק` → `דָּחוֹק`, **600** `אָסֹף` → `אָסוֹף`, **611** `בָּצֹר` → `בָּצוֹר`, **613** `שָׁאֹב` → `שָׁאוֹב`,
+  **622** `אָחֹז` → `אָחוֹז`, **631**, **672** `גָּרֹר` → `גָּרוֹר`, **690** `טָעֹן` → `טָעוֹן`, **694** `שָׁמֹר` → `שָׁמוֹר`,
+  **695**, **800** `לָקֹחַ` → `לָקוֹחַ`, **711** `פָּרֹעַ` → `פָּרוֹעַ`.
+- **Imperatives and other vocalized words:** **299**, **397** and two headings `עֲבֹד` → `עֲבוֹד`; **760** `חֲמֹק` → `חֲמוֹק`;
+  **2** `בֹּאנָה` → `בּוֹאנָה`; **93** `בְּרֹעַ` → `בְּרוֹעַ`; **106** `אֹמֶר` → `אוֹמֶר`; **286**, **661** `אֹמַר` → `אוֹמַר`;
+  **383** `בִּזְרֹחַ` → `בִּזְרוֹחַ`; **591** `חֹרֶשׁ` → `חוֹרֶשׁ` (still vocalized against `חוֹרֵשׁ`); **705** `בֹּסֶר` → `בּוֹסֶר`.
+- **`הכל` → `הכול`** (40, 267 ×2), as 293, 491, 563, 701 (`מכול` standalone, `מכל` + noun, as both poems).
+- The heading of 320–341 `וקורבנות` → `וקרבנות` (the corpus's `קרבנות`, §13.3, TH 417, WD 336, 755); the note of 603
+  `האישה` → `האשה` (the folder's spelling).
+
+**Agreement and government**
+- **300** `ויאהב אותך דמטר` → `ותאהב` (Demeter; 301 `ותמלא` already feminine).
+- **723** `(הבאה) מן המשותף` → `(הבא)`: the feast is now `משתה` (masculine; pass b changed `סעודה` and the epithet but not
+  the added word).
+- **675** `ואת החורף הבא, ואת משביו` → `ולחורף הבא, ולמשביו`: `חִכָּה` governs `ל־` (674 `ליין … ולגשם`); the three
+  objects are one accusative series in Greek.
+- **623**, **687** `מצווה עליך` → `מצווה אותך`: ὥς σε κελεύω / ἀλλά σʼ ἄνωγα have `אותך` at 316, 367, 403, 536 – the same
+  Greek, one Hebrew.
+
+**Words that read wrong in Hebrew (the Greek sense kept, the word changed)**
+- **205** ἐλεόν `ברחמים` → `מעורר רחמים`: `בְּרַחֲמִים` is "mercifully"; the note itself glossed "in a voice that evokes pity".
+- **215** βαρύθει `וכובד עליו תחתיו` → `וכורע תחתיו`: `כובד` is the noun `כֹּבֶד` (the note meant `כָּבֵד`, which would need a
+  subject); βαρύθω "be weighed down, sink under" (the פירוק's own gloss `לכרוע תחת`). New word, no collision.
+- **823** μετάδουποι `נופלים בין לבין` → `נופלים ביניהם`: `בין לבין` is colloquial Modern Hebrew ("so-so; meanwhile").
+
+**Unintended biblical calque**
+- **538** κρόκη `עֵרֶב רַב` → `הרבה עֵרֶב`: `עֵרֶב רַב` is the "mixed multitude" of Exod 12:38; the order `הרבה ערב` keeps
+  the words (πολλὴν κρόκα) without the echo (pass b's proposal). The Lev 13:48 `שְׁתִי` / `עֵרֶב` parallel stands.
+
+**Fixed words replaced (the two the brief named; for renderings §11.13.2)**
+- **340** ἵλαος `מְרֻצִּים לך` → `מִתְרַצִּים אליך`: the passive `מְרֻצֶּה` reads in Modern Hebrew "satisfied, content". The
+  Hitpael `מִתְרַצֶּה` ("relent, be reconciled", 1 Sam 29:4) keeps the root of ἱλάσκομαι `רִצָּה` (338; TH 91), so the
+  Greek family stays visible; vocalized (unvocalized `מתרצים` is `מְתָרְצִים` "making excuses"). `מְפֻיָּס` was rejected:
+  פייס is μείλιχος's (TH 84, 92, 406). ἵλαος occurs only here.
+- **773** ἔξοχος `יוצאי־הדופן` → `נבחרים`: `יוֹצֵא דֹּפֶן` is a Mishnaic idiom now everyday Modern Hebrew ("unusual,
+  exceptional"). `מֻבְחָר` was the first choice but is προφερής's (TH 79, 361 `המובחרת`); `מְצֻיָּן` is ἀριδείκετος's,
+  `בּוֹלֵט` πρέπω's, `מְעֻלֶּה` ἀρείων's. `נבחר` is free in the corpus (it shares the root בחר with `מובחר`: a recorded
+  near-pair). ἔξοχος occurs only here.
+
+**The cruxes of pass (a) marked `?` (§6.8):** **314** `לפי הדיימון?` (δαίμονι δʼ οἷος ἔησθα); **562** `הַשְׁוֵה?` (ἰσοῦσθαι:
+"share out by night and day" or "until the equinox"); **590** `ועוגת חָלָב?` (μᾶζα ἀμολγαίη). Each note now says the
+line carries the sign. **148** (no `?`: ἄπλαστος is the base's word and the Hebrew follows it): the note now names
+ἄπλατος "unapproachable" (LSJ II, Bailly, Pape) as a variant or a sense.
+
+**Headings:** 143–155 `מן המילה` → `מן המֵּילָה` (not "the word"); 298–319 and 383–404 `עֲבוֹד`; 320–341 `וקרבנות`;
+405–413 `אל דחה` → `אַל דָּחֹה` ("God pushed"); 597–617 `כְּסִיל`, `כִּימָה` vocalized (the trap and the name are vocalized
+everywhere else); 618–645 `מקימה` → `מִקִּימָה` (Κύμη, always vocalized against `כִּימָה`); 800–828 `"אֵם וחורגת"`.
+
+**The intro** (content kept): "קדר מקנא בקדר" → "הקדר כועס על הקדר" (the line's own words, 25: κοτέει); "ברעב ובמגפה"
+→ "ברעב וּבְדֶבֶר" (243, λοιμός `דֶּבֶר`); the sweat set "before plenty" → "before the excellence" (`לפני המעלה`, 289:
+ἀρετή – the intro misquoted the line); the quotation of 159–160 made the line's own ("אנשים הרואים, אשר נקראים
+חצי־אלים, הדור הקודם", not "חצאי־אלים").
+
+### Recurring patterns
+- The Hebrew reads well and evenly; the faults were local, as in the Theogony. The commonest was again the unvocalized
+  homograph (44 lines), most of them a Modern word shadowing the literary one (`מכסות`, `בספרו`, `בתורך`, `הנשבים`,
+  `מעברות`, `בלבד`, `קרבו`), and the farm and weaving vocabulary of 414–546, where rare literary words (`בּוּרֶךְ`,
+  `עֱלִי`, `שְׁתִי`, `לֶבֶד`) meet common homographs.
+- **Plene spelling inside vocalized words** (29 lines): the two WD translators wrote the infinitive absolute and the
+  imperative with and without vav; the plene form is now the one practice.
+- Agreement slips where a later pass changed a noun but not its satellites (723), or the subject is a goddess after a
+  masculine verb form (300).
+- One verb's government lost across an enjambment (674–675); one formula-like phrase in two prepositions (623, 687).
+
+### Left as they are (defensible; noted)
+- **73–74** `שמו ענקים זהובים על עורה` (ὅρμους): `עֲנָקִים` "necklaces" and "giants" are spelled and vocalized alike; the
+  context (`על עורה`) decides. **25** the second `החרש` (the parallelism decides). **407** `הולמים` (ἄρμενα; "beating"
+  is possible out of context).
+- **60**, **673** `מהר ככל האפשר` (ὅττι τάχιστα): Modern but natural; **210** `להתמודד עם` (ἀντιφερίζειν "to match
+  oneself against": the literary sense of the word); **317**, **500** `סועדת` (κομίζει "attends"); **527**
+  `הכחולים־הכהים` (κυανέων, literal); **693** `יוּעַמּוּ` (ἀμαυρωθείη).
+- **407**, **707** `עָשׂוֹ`: the infinitive absolute in -ו is biblical (the note quotes Jer 7:5 `אִם עָשׂוֹ תַעֲשׂוּ`), kept.
+- The ל"ה infinitives absolute `דָּחֹה`, `הָיֹה`, `עָטֹה`, `קָנֹה`, `שָׁתֹה`, `תָּלֹה` (the plene `*היוה` would mislead) and
+  the gated `עָרֹם` (§7.2) keep their spelling.
+- The inflected infinitive construct with qamaṣ qaṭan (`בְּנָשְׁפוֹ` 508, `וּבְקָרְבוֹ` 431, `בְּרָחְצְךָ` 739, `בשָׁלְפְךָ` 626)
+  is written without vav, as the folder writes it; the strict plene (`בנושפו`) was not imposed.
+- **770** (the self-test line, fully vocalized): `הַחֹדֶשׁ` strips to the defective `החדש` (elsewhere `החודש`); not
+  changed (renderings §10).
+- **96** `תִּקְוָה` (the name; §11.8.7: the table's string is defective, so it stays vocalized).
+- **256** `הנולדה` (the article with a past verb, biblical); **141** `בני־התמותה המאושרים שמתחת לאדמה` (the Greek's
+  order; the reader takes it right after 140).
+
+### Proposals for the coordinator (renderings, not edited)
+- **§11.13.2:** ἵλαος `מִתְרַצֶּה` (340; replaces `מְרֻצֶּה`); ἔξοχος `נִבְחָר` (773; replaces `יוֹצֵא־דֹּפֶן`).
+- **§11.10:** write the strong infinitives absolute plene (`אָסוֹף`, `שָׁמוֹר`, `לָקוֹחַ` …) and the imperative `עֲבוֹד`;
+  the self-test line WD 397 in §10 (`עֲבֹד`) could follow (it tests the gate, not the file).
+- **§7.3 / the tool:** `קרב` (κραδίη `קֶרֶב` / ὑσμίνη `קְרָב`), `מרעה` (νομός / "from evil"), `אם` (`אֵם`) and `נאות`
+  (`נְאוֹת` / `נָאוֹת`) as homograph traps where the line's lemma has the noun.
+- **The names table:** `כִּימָה` / `כְּסִיל` / `קִימָה` should be checked in headings too (597–617 and 618–645 had them
+  unvocalized and `verify` passed).
+
+### Open points for the user
+- **`אשה` vs `אישה`** (folder-wide, as §11.7.5): the WD writes `אשה` throughout (13 lines and the notes).
+- **The qamaṣ qaṭan in plene spelling** (`בנשפו` / `בנושפו`, `קרבנות` / `קורבנות`): the folder writes the short forms; a
+  folder-wide rule would settle it.
+- **`ענקים`** (73–74): if the reader stumbles, the construct `ענקי זהב` would remove the giants; not changed (meaning and word are right).
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)

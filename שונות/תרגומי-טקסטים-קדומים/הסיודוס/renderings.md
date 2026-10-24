@@ -834,8 +834,8 @@ Full list (47 WD lines; no TH line changed): `2-מעשים-וימים/project.md
 1. **Revised:** εὖτε `כַּאֲשֶׁר` (as ὅτε; only ἦμος / τῆμος keep `בְּשָׁעָה שֶׁ־` / `בְּאוֹתָהּ שָׁעָה`: §11.11.2 revised);
    δόρυ `לוּחַ` (456, 807; `קוֹרָה` is ἔλυμα's, §11.11.4); ξένος `אוֹרֵחַ` (225; `זָר` is ἀλλότριος's).
 2. **New key terms (first lines in project.md):** δαίς `מִשְׁתֶּה` (as TH 802), δεῖπνον `אֲרוּחָה`, ἤπιος `נוֹחַ`, ἵλαος
-   `מְרֻצֶּה`, ἔργμα `פֹּעַל`, φραδμοσύνη `הֲגִיגִים`, ἑκών `בְּמֵזִיד`, ἐπιδέρκομαι `צָפָה`, εἰλίπους `עֲקֹם־הַהִלּוּךְ`, βάζω
-   `הֵטִיחַ`, ῥινός `עוֹר`, δαΐφρων `נְבוֹן־הַמַּעֲרָכָה`, ἔξοχος (see pass c), πολύφλοισβος `רַב־הַנְּהָמָה`, μητιόεις
+   `מִתְרַצֶּה` (revised by pass c: `מרוצה` reads "satisfied"), ἔργμα `פֹּעַל`, φραδμοσύνη `הֲגִיגִים`, ἑκών `בְּמֵזִיד`, ἐπιδέρκομαι `צָפָה`, εἰλίπους `עֲקֹם־הַהִלּוּךְ`, βάζω
+   `הֵטִיחַ`, ῥινός `עוֹר`, δαΐφρων `נְבוֹן־הַמַּעֲרָכָה`, ἔξοχος `נִבְחָר` (pass c; `מֻבְחָר` is προφερής's), πολύφλοισβος `רַב־הַנְּהָמָה`, μητιόεις
    `מְלֵא־הַתְּבוּנָה`, χερείων `גָּרוּעַ`, ἁρμαλιή `מָזוֹן`, παρέχω `סִפֵּק`, κακότης `רֹעַ` (never `רָעָה`).
 3. **Imperfects of state or habit** `הָיָה` + participle (111, 134, 136, 206); 97 `נִשְׁאֲרָה` kept (stative).
 4. **Sense splits confirmed:** ἀγορεύω (TH `נָאַם` / WD `אָמַר בְּפֻמְבֵּי`); δαιμόνιε (TH `הוֹ נִפְלָא` / WD `הוֹ מְשֻׁנֶּה`);
@@ -846,6 +846,17 @@ Full list (47 WD lines; no TH line changed): `2-מעשים-וימים/project.md
    `הִזִּיק`; χρώς / δέρμα / ῥινός `עוֹר`; κεφαλή / κάρα `רֹאשׁ`; ἀλέομαι and compounds `חָמַק`.
 6. **Homographs vocalized** (later a tool trap, for the lead): `אֲנוּשׁוֹת` / `אֱנוֹשׁ`, `חָלָב` / `חֵלֶב`, `יְגִיעַ` / `יַגִּיעַ`,
    `רֵעָם` / `רַעַם`, `עֵז` / `עַז`, `עֵרֶב` / `עָרֵב` / `עֶרֶב`.
+
+### 11.14 Review pass (c), Hebrew (WD; merged 2026-10-24)
+Full list (102 lines, 8 headings, the intro): `2-מעשים-וימים/project.md`, "Review pass (c): Hebrew (WD)". Binding:
+1. The pronoun `אֵלֶּה` always vocalized (`אֵלָה` "goddess" is a trap word); ὦ `הוֹ`; `וִיהִי` (a jussive) vocalized,
+   never read as a vav-consecutive; `הכול` plene.
+2. The infinitives absolute and imperatives of strong verbs written plene with vav (`אָסוֹף`, `שָׁמוֹר`, `עֲבוֹד`, `חֲמוֹק`);
+   the ל"ה forms `הָיֹה`, `דָּחֹה` and the biblical `עָשׂוֹ` kept vocalized.
+3. ἵλαος `מִתְרַצֶּה` and ἔξοχος `נִבְחָר` (§11.13 corrected); 538 `הרבה עֵרֶב` (not the Exod 12:38 `עֵרֶב רַב`).
+4. The cruxes carry `?`: 314, 562, 590 (§6.8).
+5. For the tool (the lead): homograph traps `קרב`, `מרעה`, `אם`, `נאות`; the names check should cover `## ` headings
+   (unvocalized `כימה` / `כסיל` / `קימה` in headings passed).
 
 ## 12. Decisions and revisions (coordinator, 2026-10-24)
 
