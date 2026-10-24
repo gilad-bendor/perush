@@ -905,5 +905,189 @@ Pindar Pyth. 1.15–28 and [Aesch.] PV 351–372 (Typhon under Etna) are named f
 - **A reverse `lexmap` check** (Hebrew → several lemmas) catches collisions a forward check misses (ταῦρος `שׁוֹר` against
   βοῦς `שׁוֹר`): run it on each part's range before handing back.
 
+## TH 886–1022
+
+### Scope
+Part 5 (translator 2, Round 4 run 4, 2026-10-24): Zeus swallows Metis, Themis and the Horai and Moirai (886–906); the
+other wives – Eurynome and the Charites, Demeter and Persephone, Mnemosyne and the Muses, Leto, Hera last – and Athena from
+his head, Hephaistos from Hera alone (907–929); Galen's twenty lines 929a–929t (Hephaistos first, then Metis swallowed and
+Athena born "by the crown" on the Triton), translated in full as their own witness; the other children – Triton, Phobos
+and Deimos, Harmonia, Hermes, Dionysos, Ariadne, Heracles and Hebe, Helios' children, Medea (930–962); the farewell to the
+gods and the catalogue of goddesses who lay with mortal men (963–1002); Nereus' daughters, Aphrodite, Circe, Calypso, and
+the transition to the Catalogue of Women (1003–1022). 157 entries in six sections, in the base's order (929, 929a–t, 930);
+`{גלנוס}` at 929a–929t, `{גלנוס} {חשודה}` at 929s, `{חשודה}` at 1014. The placeholder is removed: the Theogony is
+drafted in full (1042 entries). The clean translation was not built in this part.
+
+### Sources consulted
+The line data (`data TH 886 1022`; the AGDT parse checked: 902 lemma Εὐνουμίη (the base's epic spelling), 929i τέξῃ
+without lemma, 929s/1014 bracketed, 975 Ἀφροδ́ιτη garbled, 976 Ἀγαυή tagged ἀγαυός, 987 Φαέθων tagged φαέθω, 993
+Αἰονίδης, 909 the Charites' names as common nouns). Every Hebrew verse printed with `check_bible_quotes.py --show` before
+quoting: Gen 2:9, 3:5, 3:22, 5:24, 6:1–4, 21:13; Judg 21:21; 1 Sam 3:3, 16:12, 18:25; 2 Sam 5:2; 1 Kgs 3:9, 3:12, 20:11;
+2 Kgs 2:11; Isa 11:2, 32:17, 41:7, 42:10, 45:7; Jer 4:3, 10:12, 11:20; Hos 10:12; Ps 55:22, 82:6–7, 85:11, 89:15, 96:11,
+98:7–8; Prov 3:19, 6:25, 7:21, 8:12, 8:14–15, 8:22–25, 8:30, 10:22; Job 1:6, 2:10, 38:7; Song 4:9; Lam 3:38; Dan 3:4;
+Deut 32:17. The LXX printed before quoting: Gen 2:9, 2:17, 3:5, 3:22, 5:24, 6:2, 6:4; Isa 41:7 (τέκτων). The LXX of Kings,
+Psalms, Proverbs and Deuteronomy is not in the tool (described, not quoted). Galen (On the Doctrines of Hippocrates and
+Plato, book 3) quoting Chrysippus; Pindar Isthm. 8 and Ol. 7.35–38; Iliad 18.432–434; Odyssey 5.125–128, 8, 11.601–604;
+the Homeric Hymns to Demeter and Aphrodite (218–238); Apollodorus 1.6.1 – named from general knowledge, not quoted.
+
+### Decisions
+- **Metis** (886–900): Μῆτις the goddess `מֵטִיס`, μῆτις the noun `תְּבוּנָה` (the pun in the note); ἄλοχος `בַּת־זוּג`,
+  παρακοίτης `בֶּן־זוּג` (ἄκοιτις keeps `רַעְיָה`, γυνή `אִשָּׁה`); εἰσκατατίθημι / ἐγκατατίθεμαι `הִנִּיחַ בְּתוֹךְ` +
+  νηδύς `מֵעַיִם` (as 487); αἱμύλος `חֲלַקְלַק`; δόλος / ἐξαπατάω `עָרְמָה` / `רִמָּה`; φράζω `הוֹדִיעַ`; βασιληὶς τιμή
+  `כְּבוֹד הַמַּלְכוּת` (as 462); εἵμαρτο `נִגְזַר` (μείρομαι: a sense split from `נָחַל`); περίφρων `פִּקֵּחַ`, ἐπίφρων
+  `נָבוֹן`; μένος (of a body) `עָצְמָה`; ὑπέρβιον ἦτορ `קֶרֶב פִּרְאִי` (139); F21 `טוב ורע` at 900 and 906.
+- **Themis' daughters** (901–906): Ὧραι `הַהוֹרוֹת` (always vocalized); Εὐνομίη / Δίκη / Εἰρήνη `סֵדֶר־טוֹב` / `מִשְׁפָּט` /
+  `שָׁלוֹם` (§3.2, no article); θάλλω `שִׂגְשֵׂג` (ἀνθεμόεις keeps `פּוֹרֵחַ`); ὠρεύω `הִשְׁגִּיחַ` (`שָׁמַר` is φυλάσσω's);
+  Μοῖραι `הַמּוֹירוֹת`, their three names as 218; πόρω `הֶעֱנִיק`; μητίετα `רַב־הַתְּבוּנָה`.
+- **The wives** (907–929): Charites `הֶחָרִיטוֹת`, their names kept as names (`אַגְלָאִיָּה`, `אֶוּפְרוֹסִינָה`, `תָּלִיָּה`;
+  meanings in the note; Θαλίη ≠ the Muse Θάλεια `תָּלֵיאָה`); ἔρος (noun) `חֵשֶׁק`, ἔραμαι `חָשַׁק`; βλέφαρον `עַפְעַף`;
+  εἴβω `נָטַף`; πολύφορβος `מְזִינַת־רַבִּים` (πουλυβότειρα keeps `רַבַּת־הַמָּזוֹן`); ἁρπάζω `חָטַף`; καλλίκομος
+  `נְאַת־הַשֵּׂעָר` (ἠΰκομος keeps `יְפַת־הַשֵּׂעָר`); χρυσάμπυξ `בַּעֲלַת־נֵזֶר־הַזָּהָב`; ἁνδάνω `נָעַם`; λοῖσθος
+  `אַחֲרוֹן`; ἐγρεκύδοιμος `מְעוֹרֶרֶת־הַקְּרָב`, ἀγέστρατος `מוֹלִיכַת־הַצָּבָא`; πόλεμος / μάχη in one line (926):
+  `מִלְחָמָה` / `מַאֲבָק` (`קְרָבוֹת` is ὑσμίνη's); ζαμενέω `הִשְׁתּוֹלֵל בְּזַעַף`; καίνυμαι `עָלָה עַל` (μεταπρέπω keeps
+  `הִצְטַיֵּן`).
+- **Galen's lines** (929a–t): the same vocabulary as 886–929, so the two versions compare line by line; συμμάρπτω `לָפַת`;
+  δείδω `פָּחַד`; ὑψίζυγος `רַם־הַכֵּס`; αἰθήρ `אֶתֶר` (vocalized); καταπίνω `בָּלַע`; κορυφή (of a head) `קָדְקֹד` (a
+  sense split from `פִּסְגָּה`); σπλάγχνα `כְּלָיוֹת` (ἔγκατα keeps `קְרָבַיִם`); τέκταινα `אָמָּנִית` (the LXX's τέκτων =
+  `חָרָשׁ`, Isa 41:7, in the note: the feminine `חָרֶשֶׁת` reads "deaf"); δίκαιος `צֶדֶק` (REQUIRED); πολυδήνης
+  `רַבַּת־הַמְּזִמּוֹת`; αἰγίς `אֶגִיס`; ἔντεα `חֲגוֹר` (ὅπλον keeps `כְּלִי־נֶשֶׁק`, τεῦχος `שִׁרְיוֹן`).
+- **The other children** (930–962): Φόβος / Δεῖμος translated names `בֶּהָלָה` / `אֵימָה` (δέος keeps `פַּחַד`, 167);
+  Ἁρμονίη kept as a name `הַרְמוֹנִיָּה` (a heroine, Kadmos' wife); Τρίτων `טְרִיטוֹן`; εὐρυβίας `רְחַב־הַכֹּחַ`; πυθμήν
+  `קַרְקָעִית`; ῥινοτόρος `פּוֹלֵחַ־הַמָּגִנִּים`; κρυόεις `מְצַמְרֵר` (κρυερός keeps `מַקְפִּיא`); πτολίπορθος
+  `מַחְרִיב־הֶעָרִים`; κῆρυξ `כָּרוֹז` (not `מַלְאָךְ`); κύδιμος `מְפֹאָר`; πολυγηθής `רַב־הַשִּׂמְחָה`; ἀγακλυτός /
+  ἀγακλειτός `נוֹדַע לִתְהִלָּה`; ξανθός `אַדְמוֹנִי` (1 Sam 16:12); τίθημι "make into" `שָׂם לְ־` (Gen 21:13); ἴς `אוֹן`;
+  ἀνύω `בִּצַּע` (τελέω keeps `הִשְׁלִים`); ἀπήμαντος `בְּלִי פֶּגַע`; ἀκάμας `שֶׁאֵין לוֹ לֵאוּת`; φαεσίμβροτος
+  `הַמֵּאִיר לִבְנֵי־הַתְּמוּתָה`; Ἠέλιος `שֶׁמֶשׁ` as a name; ὑποδαμνάω `נִכְנַע`.
+- **The goddesses and mortal men** (963–1022): χαίρετε `שִׂמְחוּ` (`שָׁלוֹם` stays Εἰρήνη's); νῆσος `אִי`; ἡδυεπής
+  `מְתוּקַת־הַלָּשׁוֹן`; φῦλον `שֵׁבֶט`; εὐνάω `שָׁכַב` (παραλέχομαι 929f also `שָׁכַב`: a recorded pair);
+  **ἀνὴρ θνητός `אִישׁ בֶּן־תְּמוּתָה`**, **ἥρως `הֵרוֹאִי`** (never `גִּבּוֹר`, `נְפִלִים`, `בְּנֵי הָאֱלֹהִים` in a line);
+  **ἐπιείκελος `דְּמוּי־`** (θεοῖς ἐπιείκελα τέκνα `צאצאים דְּמוּיֵי־אֵלִים`, the ἴκελος family); Πλοῦτος translated
+  `עֹשֶׁר` (ἄφενος 112 `הָעֹשֶׁר`: a recorded pair), ἀφνειός `עָשִׁיר`; νειός `נִיר`, τρίπολος `חָרוּשׁ שָׁלוֹשׁ
+  פְּעָמִים`; τυγχάνω `פָּגַשׁ`; gnomic aorist (974) in the present; φιτύω `הִצְמִיחַ`; ἀνερείπομαι `נָשָׂא` (ἁρπάζω
+  `חָטַף`); ναός `מִקְדָּשׁ` (only with ζάθεος in the line); νηοπόλος `מְשָׁרֵת` (991: `קדש` not licensed there);
+  **δαίμων `דַּיְמוֹן`** (vocalized; `שֵׁד` is the LXX's δαιμόνιον, Deut 32:17, a note); ἀταλὰ φρονέων `תַּם־הַמַּחְשָׁבוֹת`;
+  ὑπερήνωρ `שַׁחֲצָן` (ὑπέροπλος keeps `יָהִיר`); ὀβριμοεργός `כַּבִּיר־הַמַּעֲשִׂים`; μογέω `סָבַל`; ποιμὴν λαῶν `רוֹעֵה
+  הָעָם`; ῥηξήνωρ `שׁוֹבֵר־הָאֲנָשִׁים`, θυμολέων `לֵב־הָאֲרִי`; ταλασίφρων `סְבַל־הַלֵּב`; Αἰθίοπες `כּוּשִׁים`.
+- **Rejected**: `גִּבּוֹר`, `נְפִלִים`, `בְּנֵי הָאֱלֹהִים`, `בְּנֵי הָאָדָם` (967, 1019: ἀνδράσι θνητοῖσι is `אנשים בני־תמותה`),
+  `מַלְאָךְ` (939), `הֵיכָל`, `מִקְדָּשׁ` without a licence (991), `רוּחַ` (995 `גס־הרוח`, caught by `verify`), `שָׁלוֹם` for
+  χαίρετε, `לְעוֹלָם`, `מִין`.
+
+### Open decisions for the user
+- **The Charites' names** (909, 945) kept as names (`אַגְלָאִיָּה` "Splendour", `אֶוּפְרוֹסִינָה` "Good Cheer", `תָּלִיָּה`
+  "Festivity"), as the Muses' and the nymphs'; Εὐνομίη / Δίκη / Εἰρήνη and Φόβος / Δεῖμος / Πλοῦτος translated (§3.2). The
+  line is drawn between "nymph-like goddesses" (names) and "personified abstractions" (translated): Charites could go
+  either way.
+- **δαίμων `דַּיְמוֹן`** (991): a transcription, because every Hebrew word is taken or misleading (`שֵׁד`, `רוּחַ`, `אֱלוֹהַּ`).
+  The Works and Days needs a rendering for its δαίμονες (WD 122–126, 141): the same is proposed.
+- **904 ᾗ** read as plural ("to them"), with the editors' αἷς.
+- **929q–929t**: the subjects shift (Athena or Metis; Zeus or Metis); translated close, without filling in.
+
+### Progress log
+- 2026-10-24: drafted 886–1022 in six sections, each saved, filled and verified at once.
+- Verify findings fixed while drafting: `הדור` (φαίδιμος, 929b, 940, 986) vocalized `הָדוּר` with `[היתר שער]` (the `דור`
+  gate); 966 `הָאוֹלִימְפִּיּוֹת` and 999 `בֶּן־אַיְסוֹן` vocalized (the first-occurrence check counted these copies as
+  first: 993's lemma is the treebank's Αἰονίδης); 991 `משרת־מקדש` → `שם משרת` (the `קדש` gate); 995 `גס־הרוח` → `השחצן`
+  (the `רוח` gate).
+- `lexmap` reverse check over 886–1022: καλλίκομος / ἠΰκομος, μάχη / ὑσμίνη, Φόβος / δέος, καίνυμαι / μεταπρέπω resolved
+  by new words (above); left as recorded pairs: νέος / ὁπλότατος `צָעִיר`, εὐνάω / παραλέχομαι `שָׁכַב`, πλοῦτος / ἄφενος
+  `עֹשֶׁר`, παῖς / θυγάτηρ `בַּת` (952), φρονέω / δῆνος `מַחְשָׁבוֹת`.
+- `verify TH --strict`: 0 problems, 0 repeated-line differences (1042 entries). `selftest`: 0 failures.
+  `check_bible_quotes.py`: 0 problems on the annotated file and on project.md.
+
+### The text on its own terms
+- **The end of succession** (886–900): Zeus does what Kronos did – swallows – but before the birth and the mother, not the
+  children; the "counsel" that would have borne a stronger son now sits inside the king and advises him "good and evil".
+  Kumarbi's and Kronos' swallowing turned into wisdom made part of the ruler.
+- **A kingdom of marriages** (901–929): each wife brings an order into the world – Order, Justice and Peace; the Fates;
+  Grace; the grain and its daughter; Memory and the Muses; and last the queen, whose children are youth, war and
+  childbirth. Kingship as a family tree.
+- **Two births without a partner** (924–929): Athena from Zeus' head, Hephaistos from Hera "in anger": the rivalry of the
+  royal couple produces the two craft gods.
+- **Galen's witness** (929a–t): the same story in another order, quoted by Chrysippus to prove that thought lives in the
+  chest: the Theogony as philosophical evidence a thousand years later.
+- **Heroes and their gods** (940–1018): mortal mothers of gods (Semele, Alkmene), mortals made immortal (Ariadne,
+  Heracles), goddesses who bore mortal sons (Demeter, Eos, Aphrodite, Thetis, Circe, Calypso): the border between gods and
+  men crossed in both directions, always by the gods' will.
+- **The closing transition** (1019–1022): "now sing the tribe of women" – the hearer was led from the gods to the heroes'
+  mothers, the next song; the Muses close the ring opened at line 1.
+
+### Key parallels
+- **Th. 886–900 ↔ Prov 8:14–15, 8:22–31, 3:19; 1 Kgs 3:9, 12**: wisdom beside or inside the divine king, "by me kings
+  reign"; Solomon asks "to discern between good and evil" – a motif, no contact. **Gen 3:5, 3:22** (LXX καλὸν καὶ
+  πονηρόν): the knowledge of good and evil kept by God / acquired by Zeus.
+- **Th. 902 ↔ Ps 85:11, 89:15, Isa 32:17**: justice and peace as a pair beside the throne.
+- **Th. 904–906 ↔ Job 2:10, Lam 3:38, Isa 45:7**: good and evil as the portion given to men.
+- **Th. 910 ↔ Prov 6:25, Song 4:9**: desire from the eyelids.
+- **Th. 914 ↔ Judg 21:21**: the seized bride.
+- **Th. 942, 949–955, 990 ↔ Ps 82:6–7, Gen 3:22, Gen 5:24 (LXX μετέθηκεν), 2 Kgs 2:11**: mortals taken up and made
+  immortal.
+- **Th. 965–968, 1019–1021 ↔ Gen 6:1–4** (LXX οἱ υἱοὶ τοῦ θεοῦ, γίγαντες, ὀνομαστοί): unions of divine and human, the
+  reverse direction (goddesses with men); the Catalogue of Women is the Greek counterpart of Gen 6:2.
+- **Th. 971 ↔ Jer 4:3, Hos 10:12**: the ploughed fallow.
+- **Th. 991 ↔ 1 Sam 3:3**: the boy who sleeps in the temple.
+- **Th. 994–995 ↔ 1 Sam 18:25**: the king who sets the hero deadly tasks for a bride.
+- **Th. 1000 ↔ 2 Sam 5:2**: the king as shepherd of the people.
+
+### Lines shared with other texts
+- Copied: **966 = 1022 = 25 = 52** (F3; 966 vocalized as 25). First copy fixed here: **968 (= 1020)**. Near-repeats:
+  887 ≈ 929p, 890 ≈ 899 ≈ 929h, 905–906 ≈ 218–219, 918 ≈ 14, 928 ≈ 929a, 929 ≈ 929d, 950 ≈ 526, 951 ≈ 994 (second half),
+  959 ≈ 242, 965 ≈ 1021, 967 ≈ 1019, 970 ≈ 1009, 983 ≈ 290, 1005 ≈ 822.
+- Formulas used: F1 (929l), F3 (966, 1022), F5 (920, 929c, 966, 1022), F6 (944), F8 (891), F9 (972), F11 (962, 1005,
+  1014), F14 (920, 923, 927 negated, 941, 944, 970, 980, 1009, 1018), F15 (921 = the self-test line, 946, 948, 999), F16
+  (929r, 963), F21 (900, 906), F26 (929j, 949), F28 (888). None revised. 921 follows the self-test line exactly.
+
+### Proposals for the shared renderings
+- **Names (new, by §2.3)**: Τρίτων `טְרִיטוֹן`; Ἁρμονίη `הַרְמוֹנִיָּה`; Ἀγλαΐη / Εὐφροσύνη / Θαλίη `אַגְלָאִיָּה` /
+  `אֶוּפְרוֹסִינָה` / `תָּלִיָּה`; Ἀριάδνη `אֲרִיאַדְנָה`, Μίνως `מִינוֹס`; Ἰασίων `יָאסִיּוֹן`; Ἰνώ `אִינוֹ`, Ἀγαυή
+  `אַגָאוּאָה`, Ἀρισταῖος `אַרִיסְטַאיוֹס`, Πολύδωρος `פּוֹלִידוֹרוֹס`; Τιθωνός `טִיתוֹנוֹס`, Μέμνων `מֶמְנוֹן`, Ἠμαθίων
+  `אֵמָתִיּוֹן`, Κέφαλος `קֶפָלוֹס`, Φαέθων `פַאֵתוֹן`; Πελίης `פֶּלִיאָס`, Ἰαωλκός `יָאוֹלְקוֹס`, Μήδειος `מֵדֵיאוֹס`, Χείρων
+  `כֵירוֹן`, Φιλυρίδης `בֶּן פִילִירָה`; Φῶκος `פוֹקוֹס`, Αἰακός `אַיָאקוֹס`, Πηλεύς `פֵּלֵאוּס`, Αἰνείας `אַיְנֵיאָס`, Ἀγχίσης
+  `אַנְכִיסֵס`, Ἴδη `אִידָה`, Ὑπεριονίδης `בֶּן־הִיפֶּרִיּוֹן`, Ἄγριος `אַגְרִיּוֹס`, Λατῖνος `לָטִינוֹס`, Τηλέγονος
+  `טֵלֵגוֹנוֹס`, Τυρσηνοί `הַטִּירְסֵנִים`, Ναυσίθοος `נַאוּסִיתוֹאוֹס`, Ναυσίνοος `נַאוּסִינוֹאוֹס`, Μαῖα Ἀτλαντίς `מָאיָה בת
+  אטלס`. **Translated names (§3.2)**: Φόβος `בֶּהָלָה`, Δεῖμος `אֵימָה`, Πλοῦτος `עֹשֶׁר`.
+- **Table forms to fix in the tool**: Αἰσονίδης (993: the treebank's lemma Αἰονίδης) misses the name check, so the
+  first-occurrence rule fired at 999; Εὐνομίη is lemmatized Εὐνουμίη (902), so its name row never fires.
+- **Gates**: the `דור` gate catches `הָדוּר` (φαίδιμος, "splendid", sg. with the article): three `[היתר שער]` (929b, 940,
+  986) – add `φαιδιμ` to the licence, or match the vocalized `הַדּוֹר` only. The `קדש` gate is right to refuse `מקדש` for
+  ναός/νηοπόλος without ζάθεος/ἱερός (991); if the WD needs `מִקְדָּשׁ` for ναός, add `ναο|νηο` to the licence.
+- **Formulas**: none revised. Suggest **F33 `θεοισ επιεικελ`** → `דמוי(י)?־אלים` (968, 987, 1020) and **F34 `δια θεαων`** →
+  `הנהדרת באלות` (969, 1004, 1017); F14's variant μιγεῖσʼ ἐρατῇ φιλότητι has `בהתייחדה באהבה ערבה` (970, 1009, 1018).
+- **Recurring words** (first line in brackets): ἄλοχος `בַּת־זוּג` (886), παρακοίτης `בֶּן־זוּג` (928), αἱμύλος `חֲלַקְלַק`
+  (890), περίφρων `פִּקֵּחַ` (894), ὠρεύω `הִשְׁגִּיחַ` (903), θάλλω `שִׂגְשֵׂג` (902), ἔρος (noun) `חֵשֶׁק` (910), ἔραμαι
+  `חָשַׁק` (915), ἁρπάζω `חָטַף` (914), ἁνδάνω `נָעַם` (917), καλλίκομος `נְאַת־הַשֵּׂעָר` (915), καίνυμαι `עָלָה עַל`
+  (929), κῆρυξ `כָּרוֹז` (939), ἥρως `הֵרוֹאִי` (970), ἐπιείκελος `דְּמוּי־` (968), νειός `נִיר` (971), ἀφνειός `עָשִׁיר`
+  (974), δαίμων `דַּיְמוֹן` (991), ναός `מִקְדָּשׁ` (990), μογέω `סָבַל` (997), ἆθλος `מִבְחָן` (951), ὑπερήνωρ `שַׁחֲצָן`
+  (995), μάχη (with πόλεμος) `מַאֲבָק` (926).
+- **Recorded splits and pairs** (for `lexmap`): μείρομαι `נָחַל` / εἵμαρτο `נִגְזַר`; μένος `זַעַף` / `עָצְמָה`; κορυφή
+  `פִּסְגָּה` / `קָדְקֹד`; ἄγω `לָקַח לוֹ` (mid.) / `הוֹלִיךְ`; νόσφι `הַרְחֵק מִן` / `מִלְבַד`; pairs: νέος / ὁπλότατος
+  `צָעִיר`, εὐνάω / παραλέχομαι `שָׁכַב`, πλοῦτος / ἄφενος `עֹשֶׁר`, παῖς (f.) / θυγάτηρ `בַּת`.
+
+### For the Works and Days
+- **Pandora's dressers** (WD 73–76): Χάριτες `הֶחָרִיטוֹת`, Πειθώ `שִׁכְנוּעַ`, Ὧραι `הַהוֹרוֹת` (vocalized), καλλίκομος
+  `נְאַת־הַשֵּׂעָר` (WD 75 Ὧραι καλλίκομοι), ἠΰκομος `יְפַת־הַשֵּׂעָר`; αἱμύλος `חֲלַקְלַק` (WD 78 αἱμυλίους λόγους, 374).
+- **Justice and peace** (WD 213–285): Δίκη `מִשְׁפָּט` (name), δίκη `מִשְׁפָּט`, δίκαιος `צַדִּיק` / `צֶדֶק`; Εἰρήνη / εἰρήνη
+  κουροτρόφος (WD 228) `שָׁלוֹם` (with `מְגַדֶּלֶת־הַנְּעָרִים`, TH 450); Εὐνομίη `סֵדֶר־טוֹב`; the Moirai as here.
+- **Wealth and work** (WD 22–24, 313, 637): πλοῦτος `עֹשֶׁר`, ἀφνειός `עָשִׁיר`, ὄλβος `שֶׁפַע`, ὀπάζω `זִכָּה`; νειός `נִיר`
+  (WD 463–464: the fallow ploughed again), τρίπολος; ἐσθλός `טוֹב`.
+- **Spirits and heroes** (WD 121–126, 141, 156–173): δαίμων `דַּיְמוֹן` (proposed); ἥρως `הֵרוֹאִי` / ἡμίθεος
+  `חֲצִי־אֵלִים` (renderings §5: Gen 6:4 in the note only); θεοῖς ἐπιείκελος `דְּמוּי־אֵלִים`; ἀνὴρ θνητός `אִישׁ
+  בֶּן־תְּמוּתָה`; ἀπήμαντος `בְּלִי פֶּגַע`, ἀγήραος `שֶׁאֵינוֹ מַזְקִין`; the Isles of the Blessed (WD 171) – νῆσος `אִי`.
+- **Craft and ships** (WD 25, 618–694): τέκτων – I used `אָמָּנִית` for the feminine (929o); for WD 25 (τέκτονι τέκτων)
+  suggest `חָרָשׁ` (the LXX's τέκτων, Isa 41:7); ναῦς `אֳנִיָּה`, ὠκύς `מָהִיר`; ἁλμυρός `מָלוּחַ`; ἤπειρος `יַבָּשָׁה`.
+- **Marriage** (WD 405–406, 695–705): ἄλοχος `בַּת־זוּג`, ἄκοιτις `רַעְיָה`, γαμέω `נָשָׂא אִשָּׁה`, ἄγομαι `לָקַח לוֹ`;
+  φῦλον γυναικῶν `שֵׁבֶט הַנָּשִׁים`.
+- **Zeus' epithets**: ὑψίζυγος `רַם־הַכֵּס` (WD 18), ὑψιβρεμέτης `הָרוֹעֵם מִמָּרוֹם`, μητίετα `רַב־הַתְּבוּנָה` (WD 104,
+  273, 769), αἰθήρ `אֶתֶר` (vocalized; WD 18 αἰθέρι ναίων `הגר באֶתֶר`).
+
+### Lessons for the guidelines
+- **A gate on a short root catches vocalization-only homographs** (`הדור` "the generation" / `הָדוּר` "splendid"): the gate
+  reads unvocalized letters; a translator should know the list of such homographs before drafting (`הדור`, `מקדש`).
+- **The first-occurrence vocalization rule depends on the treebank's lemma**: a garbled lemma (993 Αἰονίδης) makes a later
+  copy the "first". Vocalize every name in a new section's first appearance anyway.
+- **Two near-synonyms in one line** (πόλεμοι … μάχαι, 926) break a recorded pair: plan the second word with `lexmap`'s
+  reverse view, since the obvious one (`קְרָב`) is usually taken (ὑσμίνη).
+- **Galen's lines as a parallel version**: translating them with the main text's exact vocabulary makes the comparison
+  visible in Hebrew; worth stating as a rule for any second witness (papyri, quotations).
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)

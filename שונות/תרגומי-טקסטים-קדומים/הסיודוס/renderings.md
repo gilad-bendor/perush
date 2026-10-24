@@ -216,7 +216,7 @@ the Greek word is capitalized in the base.
 | Κίρκη | קִירְקָה |  |  |
 | Μήδεια | מֵדֵיאָה |  |  |
 | Ἰήσων | יָאסוֹן |  |  |
-| Αἰσονίδης | בֶּן־אַיְסוֹן |  | "son of Aison" (Jason) |
+| Αἰσονίδης / Αἰονίδης | בֶּן־אַיְסוֹן |  | "son of Aison" (Jason) |
 | Κάδμος / Καδμεῖος / Καδμηίς | קַדְמוֹס |  | Καδμεῖος "Kadmean" = `שֶׁל קַדְמוֹס` |
 | Ὀδυσσεύς | אוֹדִיסֵאוּס |  |  |
 | Ἀχιλλεύς | אָכִילֵאוּס |  |  |
@@ -546,6 +546,8 @@ deliberate departure: `[סטייה מן הנוסחה: <reason>]` in the entry.
 | F29 | `τιτηνεσ τε θεοι` | `הטיטנים, האלים,` | TH 630, 648, 668 (the line is fixed by its first copy) |
 | F31 | `αινη δηιοτητ` | `קטל המחריד` | TH 662, 852 (§11.4) |
 | F32 | `ουρεοσ εν βησσησ` | `בערוצי ההר` | TH 860, 865 (§11.4) |
+| F33 | `θεοισ επιεικελ` | `דמויי?־אלים` | TH 968, 987, 1020 (§11.5) |
+| F34 | `δια θεαων` | `הנהדרת באלות` | TH 376, 976, 992, 1017 … (§11.5) |
 | F30 | `αγκυλομητ` | `עקום־התחבולות` | every ἀγκυλομήτης (Kronos: F22; Prometheus TH 546, WD 48; §11.3) |
 
 (The Hebrew of every formula is the coordinator's first fixing: the Theogony translator may revise one, with its reason,
@@ -693,6 +695,18 @@ Full lists: `1-תולדות-האלים/project.md`, "TH 617–885". Binding from
 4. **Collisions resolved by new words:** ὀξύς `חַד` / ταχύς (another word); ταῦρος `פַּר` / βοῦς `שׁוֹר`; παιπαλόεις
    `מְסֻלָּע` / καταστυφελός `טְרָשִׁי`; ἄελλα `סוּפָה` / θύελλα `סְעָרָה`; σέλας `זִיו` / φαέθω `בּוֹהֵק`.
 5. **Names:** Γύης `גִּיֵּס` is written vocalized at every occurrence (the table's string strips to the defective `גיס`).
+
+### 11.5 TH 886–1022, 929a–t (translator 2, part 5; merged 2026-10-24)
+Full lists: `1-תולדות-האלים/project.md`, "TH 886–1022". Binding from here on:
+1. **Formulas:** F33 `θεοισ επιεικελ` → `דמויי־אלים` (θεοῖς ἐπιείκελα τέκνα `צאצאים דְּמוּיֵי־אֵלִים`); F34 `δια θεαων`
+   → `הנהדרת באלות`. First copy fixed: 968 (= 1020). F21 at 900 and 906.
+2. **Names:** Metis `מֵטִיס` / μῆτις `תְּבוּנָה` (the pun in the note); translated: Φόβος `בֶּהָלָה`, Δεῖμος `אֵימָה`,
+   Πλοῦτος `עֹשֶׁר`; kept: the Charites `אַגְלָאִיָּה`, `אֶוּפְרוֹסִינָה`, `תָּלִיָּה`, Harmonia; δαίμων `דַּיְמוֹן`
+   (transcribed: recommended for the WD's δαίμονες, §13). The treebank's lemmas Αἰονίδης (993) and Εὐνουμίη (902) are
+   slips (Αἰονίδης added to the table; Εὐνομίη checked by hand).
+3. **Words:** ἄλοχος `בַּת־זוּג`, παρακοίτης `בֶּן־זוּג`; ἥρως `הֵרוֹאִי`; πόλεμος `מִלְחָמָה`, μάχη `מַאֲבָק` (ὑσμίνη
+   keeps `קְרָב`); καλλίκομος `נְאַת־הַשֵּׂעָר`; καίνυμαι `עָלָה עַל`; φαίδιμος `הָדוּר` (the `דור` gate now licenses it:
+   929b, 940, 986).
 
 ## 12. Decisions and revisions (coordinator, 2026-10-24)
 
