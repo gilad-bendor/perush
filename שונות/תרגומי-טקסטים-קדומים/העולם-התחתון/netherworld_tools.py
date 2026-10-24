@@ -176,7 +176,7 @@ TRAPS_KEY = {'ER': {
     'גירה': ('Girra (גִּירָּה; unvocalized "cud")', r'gīr|girr'),
     'שח': ('*awû* Gt (שָׂח; unvocalized "bowed")', r'ītamm|itamm'),
     'ושח': ('*awû* Gt (וְשָׂח)', r'ītamm|itamm'),
-    'אמנים': ('*ummânu* (אָמָּנִים)', r'ummân'),
+    'אמנים': ('*ummânu* (אֻמָּנִים)', r'ummân'),
     'נס': ('*urinnu* (נֵס; unvocalized "miracle")', r'urinn'),
     'שמש': ('the sun / Šamaš (שֶׁמֶשׁ / שַׁמַשׁ)', r'šamš|šamaš'),
 }}

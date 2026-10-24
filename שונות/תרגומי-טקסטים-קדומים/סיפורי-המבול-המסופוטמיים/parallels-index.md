@@ -310,7 +310,7 @@ The commentary asks of each word in Genesis: *why exactly this word?* These are 
 | 6:19; 7:23 | Atr. III vi 18–19 (restored) | *[lū ē]puš …*; *[ušt]aṣṣira napištam* | [אכן] עשיתי…; [נצרתי] נפש | [equivalent] | Enki's defence. |
 | 7:3 `לְחַיּוֹת זֶרַע` (ז:ג) | Gilg. XI 27, 84 | *zēr napšāti kalāma* | זרע כל הנפשות | [cognate] | |
 | 7:3 | Sum. E 10 (260) | `numun nam-lu₂-ulu₃ uru₃ ak` | מפני ששמר על היצורים הקטנים ועל זרע האנושות | [equivalent] | The reason for the reward is Noah's task. |
-| 7:3 | Death F 31; Lagaš 4; Erra I 138 | `numun nam-lu₂-ulu₃`; *zērīšin aṣbat* | זרע האנושות; את זרען … לקחתי בידי | [equivalent] | "Seed" as what is destroyed (Death), what survives (Lagaš), and what the god himself saves (Erra). |
+| 7:3 | Death F 31; Lagaš 4; Erra I 138 | `numun nam-lu₂-ulu₃`; *zērīšin aṣbat* | זרע האנושות; את זרען … אחזתי בידי | [equivalent] | "Seed" as what is destroyed (Death), what survives (Lagaš), and what the god himself saves (Erra). |
 | 6:20; 7:14 | Gilg. XI 86 | *būl ṣēri umām ṣēri* | בהמת השדה, חיית השדה | [equivalent] / [absent] | No pairs, no male and female, no birds. |
 | 6:20; 7:14 | Atr. III ii 36–37 (restored: *nammaššû*) | *būl …*; *nammaššê ṣēri* | בהמ[ת …]; [הַנָּע] השדה | [equivalent] | `הַנָּע`, not `רֶמֶשׂ`: the words are not related. |
 | 6:20; 7:14 | Ark 51 | *nammaštum [ina ṣē]rim* | והנע ב[ש]דה | [equivalent] | Not cognate. |
@@ -403,7 +403,7 @@ The commentary asks of each word in Genesis: *why exactly this word?* These are 
 | 7:23; 8:1 | Atr. III viii 9–10 (restored) | *kīma niškunu abūba / awīlum ibluṭ* | כאשר חוללנו [את המבול] / אדם חיה [בכליון] | [divergence] | |
 | 6:8; 7:23; 8:1 | Atr. III vi 5–10 (partly restored) | Enlil's anger at the survivor | את האנייה ראה ה[גיבור אנליל] …; איך חיה אדם בכליון? | [absent] | No god in Genesis is angry that someone survived. |
 | 6:19–20; 7:23 | Gilg. XI 175–176 | *ayyānum-ma uṣi napištu / ay ibluṭ mamman* | מאין יצאה נפש? אל יחיה איש בכליון! | [divergence] | |
-| 7:22; 9:15 | Erra I 137 | *šiknāt napišti* | יצורי הנפש | [cognate] (*napištu*) / [equivalent] | ↔ `נֶפֶשׁ חַיָּה`. |
+| 7:22; 9:15 | Erra I 137 | *šiknāt napišti* | בעלי הנפש | [cognate] (*napištu*) / [equivalent] | ↔ `נֶפֶשׁ חַיָּה`. |
 
 ### Gen 8:1–5 the waters subside; the landing
 

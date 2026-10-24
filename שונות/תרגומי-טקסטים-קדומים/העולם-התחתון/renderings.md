@@ -423,7 +423,7 @@ Project **5 Erra and Išum** (Akkadian, eBL `L/1/5`, Standard Babylonian Tablet 
 | *nabû* (29 *ittabi zikiršun* "named them") | `קָרָא` (`קרא את שמם`) | The naming verb (§6.7); gated by `verify`. ↔ `וַיִּקְרָא אֶת שְׁמָם` (בראשית ה:ב) (print it). |
 | *šasû* "call, summon" (31) | the root צעק (Hiphil `הִצְעִיק` "summoned", שמואל א י:יז) | Maqlû (*šasû* `צָעַק`); `קרא` is *nabû*'s, and both are in 29–31. |
 | *ṭēma šakānu* (31) | `שָׂם טַעַם` | [cognate idiom] ↔ Aramaic `שָׂם טְעֵם` (עזרא ה:יג, ו:ג; print them); a note says it means "gave orders", not "taste" (§6.7). |
-| *šakānu* | `שָׂם` (every form; *pānī šakānu* 124 = `שָׂם פָּנָיו`) | §6; the creation corpus. ↔ `שׂוֹם תְּשִׂמוּן פְּנֵיכֶם` (ירמיהו מב:טו) (print it). 132 `ושמתי מבול` (§12.6). |
+| *šakānu* | `שָׂם` (every form; *pānī šakānu* 124 = `שָׂם פָּנָיו`) | §6; the creation corpus. ↔ `שׂוֹם תְּשִׂמוּן פְּנֵיכֶם` (ירמיהו מב:טו) (print it). 132 keeps the flood formula *abūba šakānu* = `חוללתי מבול` (§12.6). |
 | *imtu* "venom" | `חֵמָה` (*imat mūti* = `חֲמַת מָוֶת`; *imat bašmi* = `חֲמַת פֶּתֶן`) | [cognate] (Akk. *imtu* < *ḥimtu*; Heb. `חֵמָה` "venom", דברים לב:כד, לג; תהלים נח:ה). A note says Hebrew `חֵמָה` is also "wrath", the Akkadian only "venom". **A split with Enūma eliš and Maqlû (*imtu* `אֶרֶס`)**, recorded for the lead (the cognate rule). Gated by `verify`. |
 | *bašmu* | `פֶּתֶן` | [cognate] (Ugaritic *bṯn* `פֶּתֶן`, the Ugaritic corpus; Enūma eliš's *bašmu* `פֶּתֶן`) ↔ `וְרֹאשׁ פְּתָנִים אַכְזָר` (דברים לב:לג). Gated. |
 | *mūtu* | `מָוֶת` | Corpora. |
@@ -472,7 +472,7 @@ Project **5 Erra and Išum** (Akkadian, eBL `L/1/5`, Standard Babylonian Tablet 
 | *mâtu* Š (*šumuttu*, 43) | `הֵמִית` | LH (reserved for it). |
 | *maqātu*; Š | `נָפַל`; `הִפִּיל` | Corpora. |
 | *sapānu*; *ḫalāqu* D | `שִׁטֵּחַ`; `אִבֵּד` | Not `מָחָה`, `הִשְׁחִית`, `הִשְׁמִיד` (Gen 6–7: the apparatus discusses them). |
-| *ummânu*; *apkallu* | ★ `אָמָּן`; `חָכָם` (162 `שבעת החכמים`) | [cognate] (Gudea *um-mi-a* = `אָמָּן`); every corpus *apkallu* `חכם`. ↔ בראשית ו:ד (`הַנְּפִלִים … אַנְשֵׁי הַשֵּׁם`), ד:כ–כב [divergence] in the notes only (§12.5). |
+| *ummânu*; *apkallu* | ★ `אֻמָּן` (the flood corpus's Akkadian precedent; Gudea's Sumerian *um-mi-a* has `אָמָּן`: a split for the lead); `חָכָם` (162 `שבעת החכמים`) | [cognate]; every corpus *apkallu* `חכם`. ↔ בראשית ו:ד (`הַנְּפִלִים … אַנְשֵׁי הַשֵּׁם`), ד:כ–כב [divergence] in the notes only (§12.5). |
 | *mēsu*; *elmēšu* | `(עֵץ) הַמֵּסוּ`; `עִנְבָּר` | The flood references (`מֵסוּ`); Gilgameš (*elmēšu* `עִנְבָּר`, not `חַשְׁמַל`: יחזקאל א:ד in the note). |
 | *šukuttu*; *šiknu*; *simtu*; *agû*; *melammu* | `עֲדִי`; `תֹּאַר`; `הוֹלֵם` (*simat* X = `הַהוֹלֵם אֶת X`); `כֶּתֶר`; `זֹהַר` | The flood references; Ex 33:4–6 (`וְלֹא שָׁתוּ אִישׁ עֶדְיוֹ עָלָיו`, the people strip their ornaments when God will not go among them) in the note at 127 [divergence]. |
 | *šiknāt napišti* | `בַּעֲלֵי הַנֶּפֶשׁ` | (137, 174, 177) Revised from the flood references' `יצורי הנפש` (the root יצר is reserved in this corpus, §6). *napištu* = `נֶפֶשׁ` [cognate]. |
@@ -542,7 +542,7 @@ Revised words in **bold** in the reason column; every other word is the 2026-10-
 | 129 | `פתח את פיו מלך האלים ושָׂח,` | `ודיבר` → **`ושָׂח`** (126) |
 | 130 | `אל אֶרָּה, גיבור האלים, דבר דיבר:` | `אמר דבר` → **`דבר דיבר`** (*amāta izakkar*, the NE formula) |
 | 131 | `"אֶרָּה הגיבור, אשר למלאכה ההיא שאמרת לעשות:` | unchanged |
-| 132 | `כאשר פעם קצפתי, וקמתי ממושבי, ושמתי מבול,` | `זעמתי` → **`קצפתי`** (*agāgu*, §12.3); `וחוללתי` → **`ושמתי`** (*šakānu* `שׂם`, §6) |
+| 132 | `כאשר פעם קצפתי, וקמתי ממושבי, וחוללתי מבול,` | `זעמתי` → **`קצפתי`** (*agāgu*, §12.3); `וחוללתי מבול` kept: the flood corpus's formula *abūba šakānu* = `חולל מבול` (its renderings §3a; Gilg. XI 14, Atra-ḫasīs), which wins over the plain *šakānu* `שׂם` (a formula takes one Hebrew) |
 | 133 | `קמתי ממושבי, ותפר השמים והארץ נפרם.` | unchanged |
 | 134 | `השמים, שהרעדתי: מקום עמידתם של כוכבי השמים השתנה, ולא השבתי (אותם) למקומם.` | `אותם` → **`(אותם)`** (not in the Akkadian; = 137) |
 | 135 | `אִירְכַּלָּה, שזע: יבול התלם פחת, ולעד קשה לגבותו.` | `העולם התחתון` → **`אִירְכַּלָּה`** (*erkallu*, the corpus's name; `עולם` is reserved, §6); `ועד עולם` → **`ולעד`** (the same) |
@@ -557,7 +557,7 @@ Revised words in **bold** in the reason column; every other word is the 2026-10-
 | 144 | `זיוי הוטב, ומבטי מבעית.` | `קלסתרי נאה` → **`זיוי הוטב`** (*zīmūʾa ṭubbû*: *zīmu*; *ṭiābu* D) |
 | 145 | `האנשים שנותרו מן המבול ראו את עשיית המלאכה.` | unchanged |
 | 146 | `אילו הנפתי את כלי־נשקי, הייתי מאבד את השארית.` | `נשקי` → **`כלי־נשקי`** (*kakkīya*, pl.) |
-| 147 | `את האָמָּנִים ההם הורדתי אל האַפְּסוּ, ולא אמרתי שיעלו.` | `האֻמָּנִים` → **`האָמָּנִים`** (Gudea); `ציוויתי` → **`אמרתי`** (*qabû*; `ציווה` is *wâru*'s) |
+| 147 | `את האֻמָּנִים ההם הורדתי אל האַפְּסוּ, ולא אמרתי שיעלו.` | `ציוויתי` → **`אמרתי`** (*qabû*; `ציווה` is *wâru*'s); `האֻמָּנִים` kept (the flood corpus's *ummânu* = `אֻמָּן`, its renderings §3a; Gudea's Sumerian *um-mi-a* has `אָמָּן`: a split for the lead) |
 | 148 | `את מקומם של (עץ) המֵסוּ (ו)העִנְבָּר שיניתי, ולא הראיתי לאיש.` | `ואבן האֶלְמֵשׁוּ` → **`(ו)העִנְבָּר`** (Gilgameš); `עץ` → **`(עץ)`** (not in the Akkadian); `את מקום` → **`את מקומם של`** (*ašaršun*) |
 | 149 | `ועתה, אשר למלאכה ההיא שאמרת, אֶרָּה הגיבור:` | unchanged |
 | 150 | `איה (עץ) המֵסוּ, בשר האלים, ההולם את מלך הכל,` | `עץ` → **`(עץ)`** |
