@@ -734,6 +734,29 @@ agreement, one unintended prophetic formula at 836). Rulings (the user's standin
    stated in the intro.
 5. `אשה` (not `אישה`) as in every corpus of the folder (161 lines against 24): a folder-wide spelling question for the user.
 
+### 11.8 WD 1–105 (WD translator 1, part 1; merged 2026-10-24 by the WD coordinator)
+Full list with first lines and reasons: `2-מעשים-וימים/project.md`, "WD 1–105", Proposals. Binding from here on:
+1. **Shared lines:** WD 54, 71 copied from TH 559, 572; WD 72 = TH 573 except the final `;` (the Greek ends the sentence
+   with a raised point). Near-repeats aligned: 50, 52, 53, 57, 70; also 83 ≈ TH 589, 105 ≈ TH 613, 18 ≈ TH 929j, 99 ≈ TH 730;
+   inside WD 49 = 95 in Hebrew.
+2. **Grammar (§4), first fixings:** the gnomic present and the augmentless gnomic imperfect → participle (20, 23, 25–26);
+   the potential optative → `הָיָה` + participle; the wish optative with μή → `אַל` + future; hortative `הָבָה`. The gnomic
+   aorist proper and the infinitive-for-imperative are still untested (first occurrence: the next part fixes them).
+3. **Strife and envy:** Ἔρις `מָדוֹן` (both Strifes, feminine), pl. Ἐρίδων `מְדָנִים` (`[היתר שם]`; Prov 6:14, 19);
+   ζηλόω `קִנֵּא`, κοτέω `כָּעַס`, φθονέω `צָרָה עֵינוֹ בְּ־`; νεῖκος `רִיב`; δῆρις `קְטָטָה`; σχέτλιος `אַכְזָרִי` (a sense
+   split from TH 488 `אֻמְלָל`); κακόχαρτος `שְׂמֵחַת־הָרָעָה`.
+4. **The lawsuit and justice:** δωροφάγος `אוֹכְלֵי־מַתָּנוֹת` (`שֹׁחַד` only in the note); δικάζω `שָׁפַט` (δίκην δικάσσαι
+   `לשפוט את המשפט`); κλῆρος `אֲחֻזָּה` (`נַחֲלָה` would share μείρομαι's root, TH 414); κτῆμα `נֶכֶס`; ἀγορά `אֲסֵפָה`;
+   ἰθύς `יָשָׁר`, ἰθύνω `יִשֵּׁר`, σκολιός `עָקֹם` (for the straight and crooked judgements of 219–264); νήπιος `פֶּתִי`.
+5. **Work:** κεραμεύς `קַדָּר` (the root יצר stays πλάσσω's; κεραμεύς = the LXX's `יוֹצֵר`, a note); τέκτων `חָרָשׁ`
+   (vocalized: `חָרַשׁ` is ἀρόω); πτωχός `קַבְּצָן`; φυτεύω `נָטַע`; πλούσιος and ἀφνειός both `עָשִׁיר` (a pair).
+6. **ὄλλυμι / ἀπόλλυμι = `נִסְפָּה` / `סָפָה`** for the whole poem (LXX Gen 18:23) – the §13.5 open point settled.
+7. **The jar:** πίθος `כַּד`, πῶμα `מִכְסֶה`, ἐλπίς `תִּקְוָה` (Ἐλπίς capitalized at 96: the names string strips to the
+   defective `תקוה`, so the name is vocalized at every occurrence); νοῦσος `מַחֲלָה`; αὐτόματος `מֵעַצְמוֹ`.
+8. **Collisions with the Theogony settled by new words:** μυθέομαι `הִשְׁמִיעַ` (πιφαύσκω keeps `הִגִּיד`), σθένος `חוֹסֶן`
+   (ἴς keeps `אוֹן`), ἐπιλαμβάνω `בָּלַם` (ἴσχω keeps `עָצַר`); ταχύς adv. `מַהֵר`, πρόσθεν `לִפְנֵי כֵן`, αἶψα `מִיָּד` as in TH.
+   Sense splits recorded: ἐπαινέω `הוֹקִיר` (TH 664 `הִסְכִּים`), μίμνω `נִשְׁאַר` (TH 754 `חִכָּה`).
+
 ## 12. Decisions and revisions (coordinator, 2026-10-24)
 
 1. **Speaking cosmic names and personified abstractions translated** (§3.2), as West 1988 and Most 2006 do: the
