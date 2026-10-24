@@ -223,5 +223,190 @@ Every recurring word fixed here, with its first line (names first):
   strongest parallel of this part (Qoh 4:4–6) stands on the Hebrew alone; worth adding Qohelet, 1–2 Kingdoms and the Psalms
   to the restored LXX before part 2.
 
+## WD 106–285
+
+### Scope
+WD 106–285 (translator 1, part 2, 2026-10-24): the myth of the five races (106–201) – golden (106–126), silver (127–142),
+bronze (143–155), the heroes and the Islands of the Blessed (156–169d), iron (174–201); the fable of the hawk and the
+nightingale (202–212); Justice and Hubris (213–224); the just and the unjust city (225–247); the address to the kings,
+Zeus' thirty thousand watchers and Dike beside her father (248–273); Zeus' law for beasts and for men (274–285). 184
+entries (180 lines and 169a–d) in ten `## ` sections. Suspected lines 124–125 open with `{חשודה}` (the base brackets them;
+they are kept unbracketed at 254–255). 169a–d open with `{פפירוס}`, with `[ ]` round the restorations, in the base's order
+168, 170–173, 169, 169a–d, 174. The rest of the poem is the placeholder `<!-- טרם תורגם: 286–828 -->`.
+
+### Sources consulted
+- The base (Evelyn-White 1914 through Perseus) and the AGDT treebank, through `hesiod_tools.py data WD 106 285`; every parse
+  that carries a tense, a gate or a parallel was checked by hand. Treebank slips found (and noted in the פירוק): empty lemmas
+  at 119 πολέεσσιν, 153 Ἀΐδαο, 219 ἅμα, 259 καθεζομένη; 149 ἐπέφυκον parsed aorist (an augmentless pluperfect); 174
+  ὤφελλον lemmatized ὀφέλλω "increase" (ὀφείλω, the unfulfilled wish); 207 and 268 enclitic νυ lemmatized νῦν.
+- The Septuagint through `../tools/lxx_verses.py`: every Greek verse quoted was printed first. 1 Samuel (8:3, the sons of
+  Samuel "taking bribes"), Daniel, Qohelet, Jeremiah, Numbers, Joshua, Habakkuk and most Psalms are not in the tool: their
+  LXX is described in words or left out, never quoted.
+- The Hebrew Bible through `check_bible_quotes.py --show` for every verse quoted (0 problems at the end).
+- Rank 3: West 1978 and Most as readings described in a few words (169a–d, 124–125, 263 †); the other corpora's
+  lines through `grep`. The Hebrew translations were not consulted.
+
+### Decisions
+- **The races' verb:** ποιέω `עָשָׂה` at every making (110, 128, 144, 158; τίθημι at 169c `שם`); never `בָּרָא`. The
+  LXX's ἐποίησεν of Gen 1:27 (`וַיִּבְרָא`) is quoted in the note at 110 only: Hesiod's gods "make" like a craftsman, and
+  the Hebrew keeps the craftsman.
+- **γένος `גֶּזַע`** for every race; **γενεή `דּוֹר`** (160 `הַדּוֹר הַקּוֹדֵם`; 284–285 `דורו`). The metals as adjectives:
+  χρύσεος **`גזע זהוב`** (109), ἀργύρεος `של כסף` (128), χάλκειος / χάλκεος `של נחושת` (144), σιδήρεος `של ברזל` (176).
+  **A departure:** `גזע זהוב`, not `גֶּזַע הַזָּהָב` as in renderings §5 and the coordinator's list – following §11.6.3
+  ("never the construct זהב" for χρύσεος); the other metals have no adjective in Hebrew, so `של`. For the user to confirm.
+- **ἥρως `הֵרוֹאִי`** (159 `אנשים הֵרוֹאִים`), **ἡμίθεος `חֲצִי־אֵלִים`** (160); Gen 6:4 in the note only; `נְפִלִים` and
+  `גִּבֹּרִים` nowhere. **θεῖος `אֱלוֹהִי`** (159).
+- **δαίμων `דַּיְמוֹן`** (122, pl. `דיימונים`), ἐπιχθόνιος `שעל פני האדמה`, ὑποχθόνιος `שמתחת לאדמה`; **ὕβρις `זָדוֹן`** (134,
+  146 pl. `זדונות` with `[סטייה מן הנוסחה]`, 213, 217, 238); **δίκη / Δίκη `מִשְׁפָּט`** (the goddess feminine: `ומִשְׁפָּט
+  גוברת`, 256 `והבתולה היא מִשְׁפָּט`); δίκαιος `צַדִּיק` (158, 190, 225, 270); **Αἰδώς / Νέμεσις `בּוּשָׁה` / `חֵמָה`** (200,
+  vocalized as names); **Ὅρκος `שְׁבוּעָה`** (219, masculine, `רץ`); εὔορκος `נאמן־השבועה` (190, 285), ἐπίορκος `לשקר`
+  (194, 282).
+- **Fixed items done:** F16 at 110 and 128; F23 `על פני האדמה רבת־המזון` at 157, 169d, 252; F1 at 169a (`א[בי האנשים
+  והָאֵלִים]`). **WD 124–125 = 254–255:** the first copy fixed the Hebrew, the second copies it (without `{חשודה}`; 255 ends
+  `.` for the Greek point). **WD 149 = TH 152** `צמחו מן הכתפיים על איברים איתנים;`.
+- **Grammar (first true occurrences, renderings §4):** the **gnomic aorist** → Hebrew present participle, first at **218**
+  ἔγνω `מכיר` ("the fool learns by suffering"), then 224 ἔνειμαν `אינם פוסקים`, 242 ἐπήγαγε `מביא`, 246 ἀπώλεσεν
+  `סוֹפֶה`; the gnomic imperfect 240 ἀπηύρα `לוקה`. **No infinitive-for-imperative occurs in 106–285** (278 ἐσθέμεν
+  depends on νόμον): it stays open for part 3. The iterative -σκ- → `היו` + participle (as 90); the wish ὤφελλον (174) and
+  the wish optative → `מי יתן`; the future of the iron race's prophecy (180–201) as Hebrew future.
+- **Sense splits (recorded in the entries):** νέμω mid. `נהנה` / act. `פסק` (119, 224); ἦθος `מנהג` / `נָוֶה` (167, 222);
+  μίγνυμι `נמזג` (179; TH `התייחד`); ἴσχω `גבר` (TH `עצר`); παρέρχομαι `עבר` / `עקף`; λείπω act. `עזב` / mid. `נשאר`;
+  γίγνομαι of a person `להיוולד` (175); ἄγω `הוליך` / `הביא`; νοέω `חשב` (261) / `הבין`; γιγνώσκω `ביודעין` / `הכיר`; εἶδον
+  `רואה` (267) / `הביט`; ξένος `אורח` (183) / `זר` (225).
+- **Pairs on one Hebrew word (deliberate):** ὀπαδέω / ὁμαρτέω `ליווה`; βαρύθω / καταβρίθω `כבד`; ὅμοιος / ἐναλίγκιος
+  `דומה`; ἄφθονος `בעין יפה` against φθονέω `צרה עינו` (part 1) – the same image, inverted.
+- **Gates:** 259 καθεζομένη `בשבתה` with `[היתר שער]` (`שבתה` is gated for "Sabbath"; here the infinitive of ישב). ἀρείων
+  `מעולה` (`טוב` is not licensed for it); κρείσσων `עדיף`; θεραπεύω `שירת` (not `עבד`); φύλαξ `שומר` (the φυλα- family).
+  λοιμός `דֶּבֶר` vocalized (the TH's `דבר` "something").
+- **Consistency (`lexmap`, Hebrew side):** θάλλω at 173 moved from `פורח` to `משגשג` (227 `משגשגת`), to leave `פורח` to
+  ἀνθέω; 183 ἑταῖρος `הרֵעַ` vocalized against κακός `הרע`. Recorded, not changed (the TH's words): θεῖος `אלוהי` / TH
+  θεσπέσιος; ἐμβασιλεύω `מולך` / TH 403 ἀνάσσω; ἔκπαγλος `מבהילים` / TH 935 κλονέω; φύλοπις `מהומה` / TH 880 κολόσυρτος;
+  ἔτος `שנים` / TH 636 ἐνιαυτός; τρέφω mid. `גדל` / TH 641 ἀέξω; ποιέω `עשו` / TH 209 ῥέζω (fixed by the coordinator);
+  γενεή `הַדּוֹר` / TH φαίδιμος `הדור` (homographs).
+
+### Open decisions for the user
+- **`גזע זהוב` or `גֶּזַע הַזָּהָב`** (109; above).
+- **169a–d** kept in the base's place and order (after 173 and 169), as the brief asks; West and Most move or bracket them.
+  The restorations are translated as the base prints them, in `[ ]`.
+- **124–125** kept with `{חשודה}` at their first place and translated in full: they are needed at 254–255.
+- **263 †δίκας** (the base's crux; μύθους is a variant): translated `†המשפטים` with the dagger.
+- **270–273** (the poet's wish not to be just, 270–272, taken back at 273): translated in full, as the base prints them.
+- **μέροψ `*בעלי־הדיבור*`** (109, 180): uncertain in meaning; marked with `*…*` as uncertain.
+
+### Progress log
+- 2026-10-24: drafted 106–285 in ten sections, each saved to disk and inserted before the placeholder, then `fill` and
+  `verify WD` (0 problems after each, the placeholder moved forward each time; now 286–828).
+- Verify catches fixed on the way: 139 `בָּאוֹלִימְפּוֹס` unvocalized; 146 REQUIRED ὕβρις (plural `זדונות`) –
+  `[סטייה מן הנוסחה]`. A quote-checker false positive (a backticked `הִקְלָה` beside a reference) rephrased. Unprinted
+  half-quotes in a few הקבלה bullets removed before the insert.
+- `lexmap` pass over the whole draft (above). `verify WD`: 0 problems, 289 entries, 0 repeated-line differences.
+  `check_bible_quotes.py`: 0 problems.
+- Not done (as briefed): the intro, `build`, the review passes, `build_parallels_index.py`.
+
+### The text on its own terms
+- **A second story told for the same lesson** (106 `אֹמֶר אחר`): after Prometheus and Pandora, the races explain again why
+  life is toil – by decline, not by a single fall. The decline is not straight: the heroes (156–173), "more just and better"
+  than bronze, break the metal line; Hesiod has inherited a metal scheme and inserted his own epic past into it.
+- **The iron race is Hesiod's present** (174–176 `מי יתן ולא הייתי אני …`): the only first person in the myth, a wish to
+  have died earlier or been born later – "later" implying a sixth race, a cycle. The prophecy (180–201) is of the family's
+  collapse: children born grey-templed, sons who dishonour aged parents, no thanks for the rearing (θρεπτήρια), the
+  oath-keeper unrewarded, Aidos and Nemesis leaving the earth (197–200).
+- **The dead become guardians:** the golden race become δαίμονες "upon the earth" (122–126), the silver "under the earth"
+  (141), the bronze go nameless to Hades (154); the heroes alone are removed alive to the Islands of the Blessed, where the
+  earth bears three times a year (167–173) – and Kronos, released (169a), rules them.
+- **The fable addressed to kings who "understand"** (202): the hawk's law is the strong man's; the poet does not draw the
+  moral in the fable, but at 276–280: beasts eat one another "since there is no Dike among them", to men Zeus gave Dike.
+- **Dike as a goddess with a body:** dragged where bribe-eating men take her (220–221), weeping and wrapped in mist through
+  the cities (222–223), a virgin daughter of Zeus who sits by her father and denounces men's unjust mind (256–262) – the
+  divine side of a human lawsuit. Horkos runs beside crooked judgments (219).
+- **The city's fate tied to its judges:** the just city's peace, harvest, oaks with acorns and bees, sheep heavy with fleece,
+  women bearing children like their fathers (225–237); for the unjust, famine and plague, barren women, a destroyed army,
+  wall and ships – "often a whole city pays for one bad man" (240).
+- **Zeus' eye and watchers** (252–255, 267–269): thirty thousand immortal guardians wrapped in mist; the eye that "sees all
+  and understands all" – and the poet's bitter doubt (270–273) whether being just is worth it while the unjust have the
+  greater right.
+
+### Key parallels
+- **The metals:** Dan 2:31–45 (gold, silver, bronze, iron and clay – the decline of kingdoms; Daniel not in the LXX tool,
+  described); Lev 26:19 LXX (the heavens as iron, the earth as bronze, for ὕβρις).
+- **The long childhood and the grey-templed newborn:** Isa 65:20 LXX ("the youth a hundred years old", the inverse); Gen 5:3
+  ("in his likeness, after his image") against 182 (father not like children).
+- **The heroes:** Gen 6:4 (the "men of name" born of gods) and Gen 6:9 LXX (Noah δίκαιος in his γενεά) against 158–160.
+- **The iron race's family:** Mic 7:5–6 LXX (υἱὸς ἀτιμάζει πατέρα, a man's enemies those of his house) – the closest to
+  182–188; Exod 20:12 and Deut 27:16 LXX (τιμάω / ἀτιμάζω the parents); Lev 19:12 LXX (false oath, 194, 282).
+- **The fable:** Judg 9:8–15 (Jotham), 2 Kgs 14:9 (Kgdms LXX: the thistle and the cedar), Ezek 17:2 (the eagle as a riddle and
+  a parable, מָשָׁל) – fables addressed to kings; ἱέραξ `נץ` from LXX Job 39:26.
+- **Hubris:** Prov 11:2 and 13:10 LXX (ὕβρις brings shame and strife).
+- **The just and the unjust city:** Lev 26:3–26 LXX (peace in the land, no sword, the earth's yield; ἐπάξω … δίκην, pestilence)
+  and Deut 28:4, 18 (the fruit of the womb, the cattle and the flock blessed or cursed); Ezek 14:21 (famine, beast, sword,
+  pestilence); Num 16:22, Josh 22:20 (one man sins and the whole congregation suffers) against Gen 18:26 (the city spared for
+  the righteous) – 240 is the first half without the second.
+- **The watchers and the eye:** Zech 1:10–11 (the riders sent "to walk through the earth"), 4:10 (the eyes of the LORD running
+  through all the earth), Job 1:7, 2 Chr 16:9, Prov 15:3 LXX (in every place the eyes of the Lord watch the evil and the good).
+- **Dike beside Zeus:** Prov 8:30 (Wisdom beside the Creator), Ps 89:15 / LXX 88:15 (justice and judgment the foundation of
+  the throne); bribes and the bent judgment: Deut 16:19 LXX (ἐκκλίνω κρίσιν, 262), Exod 23:6, Isa 1:23, the sons of Samuel
+  (1 Sam 8:3, described).
+- **265–266:** Prov 26:27 LXX (he who digs a pit falls into it), Ps 7:16–17 (his mischief returns on his own head).
+- **Zeus' law (276–280):** Gen 9:2 and 1:26 LXX (fish, beast, bird – πετεινός – given to man), Hab 1:14 (men made like fish
+  that eat one another, described), Gen 9:6.
+- **The oath-keeper's descendants (284–285):** Exod 20:5–6 LXX (γενεά: to the third and fourth generation), Prov 20:7 LXX (the
+  righteous man's children blessed after him), Ps 109:13.
+
+### Lines shared with other texts
+- Identical: **WD 124–125 = 254–255** (inside the WD; 255 `.` for the Greek point); **WD 149 = TH 152**.
+- Near: 121 ≈ 140 ≈ 156 (`… כיסתה הארץ … גם את הגזע הזה`); 117 ≈ 237 (`… נושא השדה נותן־הדגן`, and 173); 113 ≈ 91
+  (`הרחק מ…`); 139 ≈ 257 ≈ TH 101; 123 ≈ 253; 125 ≈ 223 (`עטויי ערפל`); 274 ≈ 107 (`ואתה – השלך … אל לבבך`); 252 = F23.
+
+### Proposals for the shared renderings
+Every recurring word fixed here, with its first line:
+- **Names:** Οἰδιπόδης `אֶדִיפּוּס` (163) and Ἑλένη `הֶלֶנָה` (165) in the familiar forms (proposed for the table); Ὕβρις as
+  a translated name `זָדוֹן` (proposed for the table, as Ἔρις `מָדוֹן`); Δίκη `מִשְׁפָּט` (f.); Ὅρκος `שְׁבוּעָה` (m.);
+  Αἰδώς / Νέμεσις `בּוּשָׁה` / `חֵמָה` (200, vocalized); Καδμηίς `קַדְמוֹס` (162, "the land of Kadmos").
+- **Grammar (§4):** gnomic aorist → participle, first 218 ἔγνω `מכיר` (224, 242, 246; the gnomic imperfect 240); the
+  unfulfilled wish ὤφελλον → `מי יתן ו־` (174); the infinitive-for-imperative still not met (part 3).
+- **The races:** ποιέω `עָשָׂה`; γένος `גֶּזַע`; γενεή `דּוֹר`; χρύσεος `זָהֹב` (`גזע זהוב`); ἀργύρεος `שֶׁל כֶּסֶף`;
+  χάλκειος / χάλκεος `שֶׁל נְחֹשֶׁת`; σιδήρεος `שֶׁל בַּרְזֶל`; μέροψ `*בַּעֲלֵי־הַדִּבּוּר*` (uncertain); ἥρως `הֵרוֹאִי`;
+  ἡμίθεος `חֲצִי־אֵלִים`; θεῖος `אֱלוֹהִי`; δαίμων `דַּיְמוֹן`; ἐπιχθόνιος `שֶׁעַל פְּנֵי הָאֲדָמָה`; ὑποχθόνιος `שֶׁמִּתַּחַת
+  לָאֲדָמָה`; ἀλεξίκακος `מַרְחִיק־הָרָעָה`; φύλαξ `שׁוֹמֵר`; πλουτοδότης `נוֹתֵן־עֹשֶׁר`; βασίλειος `מַלְכוּתִי`; ἀήρ `עֲרָפֶל`;
+  ἕννυμι `עָטָה`; ἄπλαστος (or ἄπλατος) `בִּלְתִּי־יְצוּרִים`; ἄαπτος `שֶׁאֵין לָגַעַת בּוֹ`; φυή `קוֹמָה`; νόημα `הֲבָנָה`;
+  ἀτάλλω `הִשְׁתַּעֲשֵׁעַ`; ἥβη `נְעוּרִים`; μέτρον `מִדָּה`; ἀφραδία `חֹסֶר דַּעַת`; ἄφρων `חֲסַר דַּעַת`; ἀτάσθαλος `פָּרוּעַ`
+  (TH); ἀτασθαλία `פְּרִיעוּת`; θεραπεύω `שֵׁרֵת`; χερείων `גָּרוּעַ`; ἀρείων `מְעֻלֶּה`; κρείσσων `עָדִיף`.
+- **War and death:** φύλοπις `מְהוּמָה`; λαῖτμα `מְצוּלָה`; ἑπτάπυλος `שִׁבְעַת־הַשְּׁעָרִים`; εὐρώεις `טָחוּב`; κρυερός `קַר`;
+  νώνυμνος `בְּלִי שֵׁם`; ἔκπαγλος `מַבְהִיל`; φᾶρος `גְּלִימָה`; καταναίω `הוֹשִׁיב`; ἐξαλαπάζω `הֶחֱרִיב`; στρατός `צָבָא`;
+  ἀπαίνυμαι `לָקַח`; ἀκηδής `בְּלִי צַעַר`; μελιηδής `מָתוֹק־כִּדְבַשׁ`; θάλλω `שִׂגְשֵׂג`; ἀνθέω `פָּרַח` (≠ ἐκπέτομαι
+  `פָּרַח` 98: a homograph).
+- **The iron race:** πολιοκρόταφος `שְׂבֵי־רְקּוֹת`; ξένος `אוֹרֵחַ` / `זָר`; ξεινοδόκος `מְאָרֵחַ`; ἑταῖρος `רֵעַ`; γονεύς
+  `הוֹרֶה`; θρεπτήρια `גְּמוּל עַל גִּדּוּלָם`; ἀτιμάω `בִּזָּה`; μέμφομαι `גִּנָּה`; βάζω `הֵטִיחַ`; στέρομαι `מְקֻפָּח`; αἶσχος
+  `חֶרְפָּה`; ὀπαδέω / ὁμαρτέω `לִוָּה`; δειλός `עָלוּב`; ὀιζυρός `נָתוּן בִּמְצוּקָה`; αἰνέω `רוֹמֵם`; χειροδίκης `שֶׁמִּשְׁפָּטָם
+  בְּיָדָם`; εὔορκος `נֶאֱמַן־הַשְּׁבוּעָה`; ἐπίορκος `לַשֶּׁקֶר`; ὅμοιος / ἐναλίγκιος `דּוֹמֶה`.
+- **The fable and justice:** αἶνος `מָשָׁל`; ἱέραξ `נֵץ`; ἀηδών `זָמִיר` (m.); μάρπτω `לָפַת`; γναμπτός `כָּפוּף`; μύρομαι
+  `קוֹנֵן`; δαιμόνιος (voc.) `הוֹ מְשֻׁנֶּה`; μεθίημι `שִׁחְרֵר`; φρονέω `הִשְׂכִּיל`; λόγος sg. `אֹמֶר`; ἐκκορυφόω `סִכֵּם`;
+  ἀλιταίνω `פָּשַׁע`; μηχανάομαι `תִּכְנֵן`; ἐξελαύνω `גֵּרֵשׁ`; ῥόθος `הֲמֻלָּה`; ἀπαυράω `לָקָה בִּגְלַל`; ἀκούω `שָׁמַע`;
+  ἐπακούω `הֶאֱזִין`; ἰθυδίκης `יִשְׁרֵי־הַמִּשְׁפָּט`; ἄδικος `עַוָּל`; παρακλίνω `הִטָּה`; ἀποτίνω `שִׁלֵּם`; ὄπις `הַשְׁגָּחָה`;
+  ἀλέγω `חָשַׁשׁ`; τρίβω `שָׁחַק`; ὀνοτάζω `גִּדֵּף`; ἐπιδέρκομαι `הִשְׁקִיף`; ἔργω `סָגַר`; βουλεύω `יָעַץ`; ἀγορεύω `אָמַר
+  בְּפֻמְבֵּי`; ψεύδω `שִׁקֵּר`; μαρτυρία `עֵדוּת`; ἀάω `יֻכֶּה בְּאֵיד`; ἄτη pl. `אֵידִים`; ἀμαυρός `עָמוּם`; γηρύω `הִכְרִיז`
+  (TH); βάλλω `הִשְׁלִיךְ`; μέριμνα `דְּאָגָה` (with μέρμηρα).
+- **The just city:** εἰρήνη `שָׁלוֹם` (m., `מגדל־הנערים` κουροτρόφος); ἄρουρα `שָׂדֶה`; ζείδωρος ἄρουρα `הַשָּׂדֶה
+  נוֹתֵן־הַדָּגָן`; τεκμαίρομαι `יִעֵד`; βάλανος `בַּלּוּט`; ὄις `כִּבְשָׂה`; μαλλός `גִּיזָה`; βαρύθω / καταβρίθω `כָּבֵד`;
+  διαμπερές `תָּמִיד`; ἄφθονος `בְּעַיִן יָפָה`; ἐθελημός `בִּרְצוֹנָם`; ἥσυχος `שָׁקֵט`; ἔνδημος `בֶּן הַמָּקוֹם`; ἐπάγω
+  `הֵבִיא עַל`; λοιμός `דֶּבֶר`; ἀποφθινύθω `דּוֹעֵךְ`; φραδμοσύνη `מַחְשָׁבוֹת`; σύμπας `שְׁלֵמָה`.
+- **Zeus' law:** ἰχθύς `דָּג`; θήρ `חַיָּה`; πετεινός `מְעוֹפֵף`; νόμος `חֹק` (276); ἐσθίω `אָכַל` (278, the infinitive after νόμον).
+
+### For the next part (WD 286–828)
+- **The infinitive-for-imperative** has not yet occurred: its first true occurrence (likely in the precepts from 298 on)
+  fixes it (renderings §4: infinitive absolute) and is to be recorded.
+- νήπιος `פֶּתִי` again (286, 397); κακότης `רֹעַ` (287) and ἀρετή at 289 (the two roads – not `טוב` unless licensed);
+  ἐργάζομαι `עָבַד` (299 ff.); ἐλπίς at 498; αἰδώς as a common noun `בּוּשָׁה` (317–319, unvocalized as a name); ὄλβος / ὄλβιος
+  (licensed for `טוב`); the gift-eating kings closed at 264.
+
+### Lessons for the guidelines
+- **Never write a "not quoted" half-quote in a הקבלה bullet**: a backticked Hebrew phrase beside a book name is read as a
+  quotation by the checker (and as one by the reader). Either print the verse and quote it with its reference, or describe it
+  in words without backticks.
+- **Chain the steps of a scripted insert with `&&`**: a replace that asserts must stop the insert, or the unfixed text lands.
+- **A `lexmap` pass over the Hebrew side within the same part** catches collisions between two new words of one's own (θάλλω /
+  ἀνθέω `פורח` here), not only with the TH.
+- **The plural of a fixed term** (ὕβρις pl. `זדונות`) fails REQUIRED: the tool could accept the plural of the fixed noun.
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)

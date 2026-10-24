@@ -223,6 +223,8 @@ the Greek word is capitalized in the base.
 | Πέρσης | פֶּרְסֵס |  | Hesiod's brother (WD) |
 | Ἡσίοδος | הֶסִיּוֹדוֹס |  | the dossier's form (Th. 22) |
 | Πανδώρη | פַּנְדּוֹרָה |  | "All-Gift" (WD 81: the name explained in the line itself – a note) |
+| Οἰδιπόδης | אֶדִיפּוּס |  | the familiar form (WD 163) |
+| Ἑλένη | הֶלֶנָה |  | (WD 165) |
 | Ὄλυμπος | הָאוֹלִימְפּוֹס |  |  |
 | Ὀλύμπιος | אוֹלִימְפִּי |  | the adjective (the Muses "Olympian": `הָאוֹלִימְפִּיּוֹת`; the gods "Olympians": `הָאוֹלִימְפִּיִּים`); the tool accepts the inflected forms |
 | Ἑλικών | הַהֶלִיקוֹן |  |  |
@@ -273,6 +275,7 @@ and the nymphs keep their names (West too), with their meanings in the notes.
 | Δίκη | `מִשְׁפָּט` | δίκη `מִשְׁפָּט` | Justice, the maiden daughter of Zeus (WD 256) |
 | Αἰδώς / Νέμεσις | `בּוּשָׁה` / `חֵמָה` | the same | WD 200 (Nemesis: "righteous indignation" – the translator may refine, recorded) |
 | Ἐλπίς | `תִּקְוָה` | ἐλπίς `תִּקְוָה` | Hope in the jar (WD 96) – lower case in the base: the noun, `תִּקְוָה` |
+| Ὕβρις | `זָדוֹן` | ὕβρις `זָדוֹן` | Hubris against Dike (WD 213–218; §11.9) |
 | Φιλότης / Ἀπάτη / Γῆρας | `אַהֲבָה` / `מִרְמָה` / `זִקְנָה` | the same | Th. 224–225 |
 | Νίκη / Κράτος / Βίη / Ζῆλος | `נִיצָּחוֹן` / `עוֹז` / `כֹּחַ` / `קִנְאָה` | the same | Th. 383–385 |
 | Εὐνομίη / Εἰρήνη | `סֵדֶר־טוֹב` / `שָׁלוֹם` | the same | the Horai (Th. 902) |
@@ -339,7 +342,7 @@ Kept as names (West keeps them): Ἔρος `אֶרוֹס` ★ (the noun ἔρο�
 | ἐκγίγνομαι | `נוֹלַד מִן` |  |
 | τίκτω | `יָלַד` (m. and f.) | `יָלַד` of a father too (Gen 4:18); the LXX's τίκτω = `יָלַד` |
 | γείνομαι (aor. mid. "beget, bear") | `הוֹלִיד` (m.) / `הוֹלִידָה` (f.) | the dossier's 334 `ילדה` revised (§12) |
-| γένος | `גֶּזַע` | "race, stock, kin": the gold race `גֶּזַע הַזָּהָב`; the LXX's γένος = `מִין` (Gen 1:21, 24–25): a note (the dossier's 336 `דור` revised, §12) |
+| γένος | `גֶּזַע` | "race, stock, kin": the gold race `גֶּזַע זָהוֹב` (χρύσεος `זָהוֹב`, §11.6.3); the LXX's γένος = `מִין` (Gen 1:21, 24–25): a note (the dossier's 336 `דור` revised, §12) |
 | γενεή | `דּוֹר` | WD 160 `הַדּוֹר הַקּוֹדֵם`; the LXX's γενεά = `דּוֹר` (Gen 6:9) |
 | φῦλον | `שֵׁבֶט` | "tribe" (φῦλα γυναικῶν "the tribes of women", Th. 591) |
 | παῖς / υἱός / τέκνον | `יֶלֶד` / `בֵּן` / `צֶאֱצָא` | τέκνα "offspring"; παῖς split by sense (§11.6) |
@@ -756,6 +759,25 @@ Full list with first lines and reasons: `2-מעשים-וימים/project.md`, "W
 8. **Collisions with the Theogony settled by new words:** μυθέομαι `הִשְׁמִיעַ` (πιφαύσκω keeps `הִגִּיד`), σθένος `חוֹסֶן`
    (ἴς keeps `אוֹן`), ἐπιλαμβάνω `בָּלַם` (ἴσχω keeps `עָצַר`); ταχύς adv. `מַהֵר`, πρόσθεν `לִפְנֵי כֵן`, αἶψα `מִיָּד` as in TH.
    Sense splits recorded: ἐπαινέω `הוֹקִיר` (TH 664 `הִסְכִּים`), μίμνω `נִשְׁאַר` (TH 754 `חִכָּה`).
+
+### 11.9 WD 106–285 (WD translator 1, part 2; merged 2026-10-24)
+Full list (about 150 words, with first lines and reasons): `2-מעשים-וימים/project.md`, "WD 106–285", Proposals. Binding:
+1. **Shared lines and formulas:** WD 124–125 fixed and copied at 254–255; WD 149 = TH 152; F16 (110, 128), F23 (157,
+   169d, 252), F1 (169a). 169a–d `{פפירוס}` with the restorations in `[ ]`, in the base's order.
+2. **The races:** ποιέω `עָשָׂה`; γένος `גֶּזַע`, χρύσεος γένος `גֶּזַע זָהוֹב` (χρύσεος `זָהוֹב`, never the construct
+   `זהב`: §11.6.3 – §5's example corrected); γενεή `דּוֹר`; ἥρως `הֵרוֹאִי`, ἡμίθεος `חֲצִי־אֵלִים`; δαίμων `דַּיְמוֹן`; μέροψ
+   `*בַּעֲלֵי־הַדִּבּוּר*` (uncertain; recurring).
+3. **Justice:** ὕβρις / Ὕβρις `זָדוֹן` (a translated name, §3.2), Δίκη `מִשְׁפָּט` (feminine), Ὅρκος `שְׁבוּעָה`
+   (masculine), εὔορκος `נֶאֱמַן־הַשְּׁבוּעָה`, ἐπίορκος (by sense, see project.md); εἰρήνη `שָׁלוֹם`; λοιμός `דֶּבֶר`
+   (vocalized); αἶνος `מָשָׁל`; ἱέραξ `נֵץ` (LXX Job 39:26), ἀηδών `זָמִיר`; ἀρείων `מְעֻלֶּה` (`טוֹב` is ἀγαθός's).
+4. **Grammar:** the gnomic aorist → participle (first true occurrence 218 ἔγνω `מַכִּיר`; 224, 242, 246); the gnomic
+   imperfect likewise (240); the unfulfilled wish ὤφελλον `מִי יִתֵּן וְ־` (174). The infinitive-for-imperative is still
+   untested (part 3 fixes it at its first occurrence).
+5. **Names table:** Οἰδιπόδης `אֶדִיפּוּס`, Ἑλένη `הֶלֶנָה` added.
+6. **Collisions:** θάλλω `מְשַׂגְשֵׂג` (ἀνθέω keeps `פּוֹרֵחַ`); ἑταῖρος `רֵעַ` vocalized (`הרע` = κακός); the other
+   pairs recorded in project.md (θεῖος / θεσπέσιος `אֱלוֹהִי`, ἐμβασιλεύω / ἀνάσσω `מָלַךְ`, ἔτος / ἐνιαυτός `שָׁנָה`,
+   τρέφω / ἀέξω `גִּדֵּל` …) are synonyms in one Hebrew word, kept. Gate homographs met: `בשבתה` (ישב: `[היתר שער]`, 259),
+   `הדור` (γενεή / φαίδιμος).
 
 ## 12. Decisions and revisions (coordinator, 2026-10-24)
 
