@@ -690,5 +690,220 @@ river) are named from general knowledge, not quoted. Evelyn-White quoted only at
 - **A gate on a root catches its homograph roots too** (`ערם` "naked" and `ערם` "be crafty"; `קדש` for a third
   ζα-/ἀγα-θεος compound): license by the whole Greek family, not by one word.
 
+## TH 617–885
+
+### Scope
+Part 4 (translator 2, Round 4 run 4, 2026-10-24): the Hundred-Handers freed, Zeus' speech and Kottos' answer
+(617–663); the Titanomachy, Zeus' aristeia, the Titans bound in Tartarus (664–735); the sources and limits of the world,
+the house of Night and Day, Sleep and Death (736–766); the house of Hades and his dog, Styx and the gods' oath, the
+gates of Tartarus (767–819); Typhoeus, his birth, his hundred heads and voices (820–835); his battle with Zeus, the earth
+melting like tin, his fall into Tartarus (836–868); the bad winds born of him, Zeus made king and the τιμαί distributed
+(869–885). 269 entries in seven sections, in the base's order; `{חשודה}` only at 774 (= 768). The placeholder now reads
+`<!-- טרם תורגם: 886–1022 -->`. The clean translation was not built in this part. Also changed in the earlier lines:
+662 `בקטל המחריד` (αἰνός, kept apart from ἐπαινή `נוֹרָאָה`, 768), and three formula groups in the פירוק (630 / 668, 724,
+790) split into words, so that `lexmap` reads each lemma (they had made "F29", "F13", "F9" into lemmas).
+
+### Sources consulted
+The line data (`data TH 617 885`); the fifth-day dossier's 820–828 (`../../מיתוסים-אוגריתיים/3-תיק-היום-החמישי/annotated-TH.rtl.md`),
+its apparatus used as material (Isa 27:1 and its LXX δράκων / ὄφις, Ps 74:13, Job 41:11–12, the seven heads of
+Litan), the Hebrew written afresh for the corpus; `grep --all` for the Ugaritic lines quoted (KTU 1.2 IV 32; 1.3 III
+29–30, 38–42; 1.5 I 1–3, in `../../מיתוסים-אוגריתיים/1-מחזור-בעל/`), Enuma Elish IV 14, VI 99
+(`../../סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/`), Gudea Cyl. A xxv 28 (the seven-headed serpent). Every Hebrew verse printed
+with `check_bible_quotes.py --show` before quoting (Gen 1:5, 1:27, 2:6–7, 3:6, 3:22, 3:24, 35:14; Exod 7:3, 14:2, 15:18;
+Lev 19:12; Num 5:19, 5:22, 30:3; Judg 5:4; 1 Sam 10:24; 1 Kgs 19:11; Isa 14:9, 14:13, 14:15, 27:1, 38:10, 45:23, 51:9,
+55:9; Ezek 22:20–22; Joel 2:8, 2:10; Amos 1:1, 9:5; Jonah 1:4, 2:7; Mic 1:4; Nah 1:3, 1:5; Hab 2:5, 3:11; Ps 18:8, 14–15;
+19:3, 7; 29:3, 10; 46:4; 48:3; 74:13–14; 78:25; 93:1; 97:5; 103:11; 104:4, 20, 22, 32; 107:25; 144:6; Job 11:8, 26:11–13,
+37:18, 38:6, 17, 19–20, 41:11–13, 23; Prov 17:3, 27:20; Qoh 1:7). The LXX printed before quoting: Gen 1:5, 1:27, 3:6,
+3:24; Exod 7:3; Isa 14:15, 27:1, 38:10, 45:23, 55:9. The LXX of Job, Psalms, Ezekiel and Micah is not in the tool
+(`lxx` knows no Job: τάρταρος at Job 40:20, 41:24 and 2 Pet 2:4 are described in the note to 721, not quoted).
+Apollodorus 1.6.3 (Mount Kasios), Iliad 2.781–783 (Zeus lashing the earth round Typhoeus), 20.61–65 (Aidoneus afraid),
+Pindar Pyth. 1.15–28 and [Aesch.] PV 351–372 (Typhon under Etna) are named from general knowledge, not quoted.
+
+### Decisions
+- **Tartarus**: `טַרְטָרוֹס` everywhere (682, 721, 725, 736, 807, 822 the father, 841 Τάρταρα, 851 ὑποταρτάριοι, 868),
+  never `שְׁאוֹל` or `תְּהוֹם` (the gates); the LXX's τάρταρος and 2 Pet 2:4 in the note to 721; Hab 2:5, Isa 14:15 and
+  Jonah 2:7 as [divergence] / [equivalent] for the underworld's gates and bars. The bronze anvil (722–725) with Job 37:18
+  (`כִּרְאִי מוּצָק`) in a note only; `רָקִיעַ` not used.
+- **The Hundred-Handers' war** (617–735): ὀδύσσομαι `קָצַף`; ἄγαμαι `הִשְׁתָּאָה`; μέγεθος `גֹּדֶל`; ἄχνυμαι `דָּאַב`;
+  μάρναμαι `נֶאֱבַק`; μάχη / πόλεμος `מִלְחָמָה` (a recorded pair); ἔτος / ἐνιαυτός `שָׁנָה` (a recorded pair); νέκταρ /
+  ἀμβροσίη `נֶקְטָר` / `אַמְבְּרוֹסְיָה`; ῥύομαι "defend" `הֵגֵן` (a sense split from 304; `שָׁמַר` kept for φυλάσσω);
+  **αἰνός `מַחְרִיד`**, **ἐπαινή `נוֹרָאָה`**, δεινός `אָיֹם`; δηιοτής `קֶטֶל`; ἀλαλητός `קְרִיאַת קְרָב`, ἰαχή `תְּרוּעָה`,
+  ἰωή `הֲמֻלָּה`, ὄτοβος `שָׁאוֹן`, ἐνοπή `צְעָקָה`, ἔνοσις `רַעַשׁ`, κέλαδος `הָמוֹן`, κολοσυρτός `מְהוּמָה`, ἰωχμός `מְהוּמָה`
+  (683; the same noun, the two never together); σμαραγέω `הָמָה`, ἐρισμάραγος `רַב־הַהֶמְיָה`; βέλος `חֵץ`, **κῆλα
+  `שְׁלָחִים`** (708; Joel 2:8); ῥιπή `תְּנוּפָה`; στεροπή `בָּרָק`, κεραυνός `חָזִיז`, βροντή `רַעַם` (F12); αἰθαλόεις
+  `לוֹהֵט`, φλόξ `לֶהָבָה`, φλεγέθω `הִתְלַקֵּחַ`; **καῦμα θεσπέσιον `חוֹם אֱלוֹהִי`** (700; θεσπέσιος `אֱלוֹהִי`
+  vocalized); ζέω `רָתַח`; αὐγή `נֹגַהּ`, μαρμαίρω `מַבְזִיק`; ἀμέρδω `סִנְוֵר`; κονίη `אָבָק` (`עָפָר` kept for κόνις,
+  880); κλίνω (of battle) `נָטָה`; ἕρκος `גָּדֵר`, χάλκεος / χάλκειος `שֶׁל נְחֹשֶׁת`, ἄκμων `סַדָּן`, τεῖχος `חוֹמָה`, θύρα
+  `דֶּלֶת`; εὐρώεις `טָחוּב`; ζόφος `אֹפֶל`, **ζοφερός `רַב־הָאֹפֶל`** (ἐρεβεννός keeps `אָפֵל`); φύλαξ `שׁוֹמֵר` (the gate's
+  word, 735); πιστός `נֶאֱמָן`.
+- **The map of the world** (736–819): πηγαί καὶ πείρατα `הַמְּקוֹרוֹת וְהַגְּבוּלוֹת`; χάσμα `בֶּקַע`; θύελλα `סְעָרָה`
+  (ἄελλα `סוּפָה`, 874); τέρας `מוֹפֵת` (744; Exod 7:3's LXX τέρατα); οὐδός `סַף`, πύλη `שַׁעַר`; ἀμείβω `עָבַר`; ἀκτίς
+  `זֹהַר` (κέρας keeps `קֶרֶן`), φαέθω `בּוֹהֵק`, σέλας `זִיו` (867); Ὕπνος / Θάνατος `שֵׁנָה` / `מָוֶת` (translated
+  names); κραδίη / ἦτορ `קֶרֶב` (a recorded pair, both in 764: "קרב … קרב"); σιδήρεος `שֶׁל בַּרְזֶל`; ἐχθρός `שָׂנוּא`;
+  δόμος `מָעוֹן`, δῶμα `אַרְמוֹן` (767, 816); ἠχήεις `מְהַדְהֵד`; ναίω / ναιετάω `גָּר` (renderings §11.3); Περσεφόνεια
+  `פֶּרְסֶפוֹנָה`; σαίνω `קִבֵּל בְּכִשְׁכּוּשׁ`; ἀψόρροος `הַזּוֹרֵם אֶל עַצְמוֹ`; **πρόχοος `קִיתוֹן`** (πίθος keeps `כַּד`);
+  ὅρκος `שְׁבוּעָה` (REQUIRED), ἐπόμνυμι `נִשְׁבַּע`; ἀπολείβω `נָסַךְ`; νήυτμος / ἀνάπνευστος `בְּלִי נְשִׁימָה` / `אֵינוֹ
+  נוֹשֵׁם` (`נְשָׁמָה` is gated); ἄναυδος `בְּלִי נִיב` (αὐδή `נִיב`); **κῶμα `עִלָּפוֹן`** (not `תַּרְדֵּמָה`: Gen 2:21);
+  ἆθλος `מִבְחָן`; βουλή "council" `מוֹעָצָה` (a sense split); ἀπαμείρω `נִתַּק`; δαίς `מִשְׁתֶּה` (802; "the battle feast"
+  `מַעֲרָכָה` at 650: a sense split); αὐτοφυής `צוֹמֵחַ מֵעַצְמוֹ`; ὀπυίω `לָקַח לְאִשָּׁה` (γαμέω keeps `נָשָׂא אִשָּׁה`);
+  Κυμοπόλεια `קִימוֹפּוֹלֵיאָה`.
+- **Typhoeus** (820–880): Τυφωεύς `טִיפוֹאֶוּס` (the dossier's form, table); **ὄφις `נָחָשׁ`, δράκων `דְּרָקוֹן`** (825;
+  `תַּנִּין`, `לִוְיָתָן` only in the הקבלה); θεσπέσιος `אֱלוֹהִי` of the monster's heads (827, 856: "uncanny", not
+  "holy"); ὄψ `נְעִימָה` kept for the monster's voice (830: the binding word, and the contrast with the Muses is the
+  point); φωνή `קוֹל`, ὄσσα `צְלִיל`; ἐργμα `פֹּעַל` (ἔργον `מַעֲשֶׂה`); λιχμάζω `לִחֵךְ`; ἀμαρύσσω `הִבְהֵב`; ταῦρος `פַּר`
+  (βοῦς `שׁוֹר`); σκύλαξ `גּוּר כְּלָבִים`; ῥοιζέω `שָׁרַק`; σκληρός `קָשׁוּחַ` (ἀργαλέος `קָשֶׁה`); κοναβέω `צִלְצֵל`
+  (ἠχέω `הִדְהֵד`); ῥοή `פֶּלֶג` (ῥέεθρον `זֶרֶם`); ἐπιστοναχίζω / στεναχίζω `נֶאֱנַק`; πρηστήρ `מְעַרְבֹּלֶת־אֵשׁ`; τρέω
+  `חָרַד` (πελεμίζω `רָעַד`); ἔνεροι `שׁוֹכְנֵי־מַטָּה`; πίμπρημι `הִצִּית` (καίω `בָּעַר` here: in 557 `שָׂרַף`, a sense
+  split; αἴθω `בּוֹעֵר` – a recorded pair); κήλεος `יוֹקֵד`; ἱμάσσω `הִצְלִיף`; γυιόω `נְכֵה־אֵבָרִים`; παιπαλόεις `מְסֻלָּע`
+  (καταστυφελός `טְרָשִׁי`, 806); ἀιδνός `נִסְתָּר`; **ἀτμή `אֵד`** (vocalized), **τήκω `נָמֵס`**, **κασσίτερος `בְּדִיל`**,
+  σίδηρος `בַּרְזֶל`, **χόανος `מַצְרֵף`** (Prov 17:3), αἰζηός `בָּחוּר`, θάλπω `הִתְחַמֵּם`; Ἥφαιστος `הֵפַיְסְטוֹס` (866, his
+  first naming); ὀξύς `חַד` (ταχύς `מַהֵר`); μαψαῦραι `רוּחוֹת־הֶבֶל`; ὄνειαρ `תּוֹעֶלֶת`; γενεή `דּוֹר` (REQUIRED, 871);
+  πῆμα μέγα θνητοῖσι `פֶּגַע גָּדוֹל לִבְנֵי־הַתְּמוּתָה`; φθείρω `הִשְׁחִית`; ἀλκή `הֲגַנָּה`; χαμαιγενής `יְלוּדֵי־הָאֲדָמָה`;
+  νόσφι "except" `מִלְבַד` (a sense split from `הַרְחֵק מִן`).
+- **Zeus made king** (881–885): τιμαί `זְכֻיּוֹת` (882, 885 `זְכֻיּוֹתֵיהֶם`; the ring with 74 and 112, which have the same
+  word); κρίνομαι `הִכְרִיעַ`; ὀτρύνω `דָּחַק בְּ־`; **βασιλεύω `הָיָה לְמֶלֶךְ`, ἀνάσσω `מָלַךְ`** (both in 883); Γαίης
+  φραδμοσύνῃσιν `בהגיגי ארץ` as 626; διαδατέομαι `חִלֵּק` (544).
+- **Rejected**: `שְׁאוֹל`, `תְּהוֹם`, `רָקִיעַ` (722–725, 736–819), `תַּרְדֵּמָה` (798), `נְשָׁמָה` (797), `תַּנִּין`,
+  `לִוְיָתָן`, `רַהַב` (825–868: only in quotations), `עוֹלָם` (751, 759, 796, 802: οὐδέ ποτε is `וְאַף פַּעַם`), `מִין`
+  (830: `מכל סוג`), `רְפָאִים` for ἔνεροι (850).
+
+### Open decisions for the user
+- **823 (a corrupt line)**: `אשר ידיו – בחוזק הן, ופעלים להן` keeps the transmitted structure (ἐπʼ ἰσχύι, ἔργματʼ
+  ἔχουσαι) without smoothing; the editors' emendations are in the note.
+- **830 ὄψ `נְעִימָה` for a monster's voice**: the binding word (§11.1) sounds sweet in Hebrew; I kept it on purpose (the
+  Muses' word turned upside down), but a context split (`קוֹל`, which φωνή holds) is possible.
+- **860 ἀιδνός** (`נִסְתָּר`) against the conjecture Αἴτνης ("of Etna"): the base's reading kept, Etna in the note.
+- **The Typhonomachy (820–880)** is not marked `{חשודה}` in the base; many editors suspect it. Translated in full; the
+  note to 820 gives both sides.
+
+### Progress log
+- 2026-10-24: drafted 617–885 in seven sections, each saved, filled and verified at once (unvocalized and plene; `אֵל`,
+  `אֵלִים`, `אֱלוֹהִי` forms vocalized wherever θεός / θεσπέσιος stands; `גִּיֵּס` vocalized at 618, 714, 734, 817 – the
+  name string strips to `גיס`; `אֵד` vocalized).
+- Verify findings fixed while drafting: `ולעולם` (οὐδέ ποτε) at 751, 759, 796, 802 → `ואף פעם` (the `עולם` gate); `אלים`
+  at 759 vocalized; `מין` at 830 → `סוג`. 662 changed to `המחריד`.
+- `lexmap` reverse check over 820–885 (Hebrew → several lemmas): ὀξύς / ταχύς, ταῦρος / βοῦς, παιπαλόεις / καταστυφελός,
+  ἄελλα / θύελλα, σέλας / φαέθω resolved by new words (above); left as recorded pairs: πόντος / θάλασσα `יָם`, μάχη /
+  πόλεμος, ἔτος / ἐνιαυτός, κραδίη / ἦτορ, καίω / αἴθω `בָּעַר`, ἔοικα / ἐναλίγκιος / ὅμοιος `דּוֹמֶה`, ἀνάσσω / ἐμβασιλεύω
+  `מוֹלֵךְ` (71, translator 1), ἰωχμός / κολοσυρτός `מְהוּמָה`.
+- Bible references written `` `…` – Book ch:v `` turned into `(Book ch:v)` by a regex pass (4 in 617–885, one of them in
+  the 776 note). `check_bible_quotes.py`: 0 problems (annotated file). `verify TH`: 0 problems (137 later lines noted as
+  not yet drafted). `selftest`: 0 failures.
+
+### The text on its own terms
+- **The war is won by the freed** (617–663): Zeus frees the Hundred-Handers on Earth's advice, feeds them nectar and
+  ambrosia, and asks for their help in return – the same economy of gratitude as the Cyclopes' thunderbolt (501–506).
+  Kottos answers as a vassal: "by your forethought we came back from the gloom" (658).
+- **A cosmic battle** (664–735): sea, earth and sky shake, the heat reaches the Chasm (700), and the poet compares it to
+  earth and sky crashing together (702–704) – the battle undoes the creation of 116–133 for a moment. Zeus' entry (687)
+  is the climax: thunder, lightning, the "holy flame".
+- **A geography of the underworld** (720–819): as far below the earth as the sky is above it (720–725); a bronze wall,
+  Poseidon's gates, the Hundred-Handers as wardens; then the "sources and limits of all" (736–739, twice), the house of
+  Night where Night and Day greet each other on the threshold and are never inside together (748–757), Sleep the gentle
+  and Death with the iron heart (758–766), Hades' hall and the dog who fawns on those who enter and eats those who try to
+  leave (767–774), Styx's silver-pillared house and the water of the gods' oath (775–806). A god who perjures lies a year
+  breathless, then is cut off from the council and feasts for nine years (793–804): an oath with a sanction, but no
+  judge – the water itself is the witness.
+- **Typhoeus** (820–880): the last son of Earth, by Tartarus: a hundred snake heads, fire from the eyes, voices of gods,
+  bulls, lions and puppies (829–835). He would have ruled gods and men (837) "had not the father noticed sharply". The
+  battle repeats the Titanomachy in miniature; the earth melts like tin in a crucible – a workshop simile in the middle of
+  the battle (861–867). The monster's legacy is the bad winds, which wreck ships and fields (869–880), while the good
+  winds are "from the gods".
+- **The kingship** (881–885): the gods ask Zeus to be king on Earth's advice, and he distributes their τιμαί – the end
+  the proem promised (74, 112). Earth advises every generation, also against her own children.
+
+### Key parallels
+- **Th. 678–712 ↔ Ps 18:8–16, Judg 5:4, Hab 3:11, Joel 2:10, Nah 1:3, 1 Kgs 19:11, Ps 144:6**: the storm god's battle as a
+  theophany – earth and mountains shaking, arrows and lightning, sun and moon standing still.
+- **Th. 720 ↔ Isa 55:9 (LXX ἀπέχει ὁ οὐρανὸς ἀπὸ τῆς γῆς), Ps 103:11, Job 11:8**: the measure of the distance of sky from
+  earth.
+- **Th. 726–733, 811 ↔ Jonah 2:7, Isa 38:10 (LXX πύλαι ᾅδου), Job 38:17**: the gates and bars of the underworld.
+- **Th. 748–757 ↔ Gen 1:5 (LXX), Ps 19:3, 7, Ps 104:20–22, Job 38:19–20**: Night and Day as two persons who meet on the
+  threshold; in Genesis, two names given by God to light and darkness.
+- **Th. 775–806 ↔ Num 5:19–22 (the water of the oath), Lev 19:12, Num 30:3, Isa 45:23 (LXX ὀμνύω)**: the oath and its
+  sanction; the gods' oath by Styx, the water drawn in a ewer.
+- **Th. 825 ↔ Isa 27:1 (LXX δράκοντα ὄφιν), Ps 74:13–14, KTU 1.5 I 1–3, 1.3 III 40–42**: the many-headed sea serpent; the
+  LXX's δράκων / ὄφις is Hesiod's pair, and the Ugaritic "fleeing serpent, twisting serpent, the ruler with seven heads"
+  is Isaiah word for word.
+- **Th. 821 ↔ Exod 14:2, Ps 48:3, Isa 14:13**: Mount Ṣapānu / Kasios – where Apollodorus (1.6.3), not Hesiod, sets Zeus'
+  fight; the Baal-Yam battle and Baal's "mountain of my inheritance" (KTU 1.3 III 29–30).
+- **Th. 827–828, 847 ↔ Job 41:11–13, 23**: the fire-breathing monster that makes the deep boil.
+- **Th. 839–843 ↔ Ps 18:8, 14; Ps 29:3, 10; Ps 104:32; Nah 1:5**: the thunderer, the earth that trembles.
+- **Th. 850 ↔ Isa 14:9**: the underworld astir.
+- **Th. 857 ↔ Job 26:12–13, Isa 51:9**: the god who smites the monster by strength and understanding.
+- **Th. 862–867 ↔ Ps 97:5, Mic 1:4, Amos 9:5, Ezek 22:20–22**: the earth melting before the god; Ezekiel's furnace with tin
+  and iron is the same workshop.
+- **Th. 874–876 ↔ Jonah 1:4, Ps 107:25**: the storm at sea.
+- **Th. 881–885 ↔ Exod 15:18, Ps 29:10, Ps 93:1, 1 Sam 10:24, Enuma Elish IV 14 and VI 99, KTU 1.2 IV 32**: kingship after
+  victory over the waters / the monster; in Enuma Elish the kingship is given before the battle, in Hesiod and at Ugarit
+  after it.
+
+### Lines shared with other texts
+- First copies fixed here: **630 (= 668)**, **707 (= 854)**, **736–739 (= 807–810)**, **768 (= 774, `{חשודה}`)**.
+  Copied: **671 = 150**, **673 = 152**, **794 = 118** (translator 1), **747 = 519** (mine). Near-repeats: 847 ≈ 695
+  (`ורתחה כל האדמה`), 844 ≈ 700 (`וחום … מילא`), 865 ≈ 860 (`בערוצי ההר`), 884 ≈ 626 (`בהגיגי ארץ`).
+- **The fifth-day dossier's 820–828** (my Hebrew, for the dossier to adopt or compare):
+  - 820 `ואחרי אשר גירש זאוס את הטיטנים מן השמים,`
+  - 821 `ילדה ארץ המפלצתית את בנה הצעיר מכולם, טִיפוֹאֶוּס,`
+  - 822 `באהבת טַרְטָרוֹס, בזכות אפרודיטה הזהובה;`
+  - 823 `אשר ידיו – בחוזק הן, ופעלים להן,`
+  - 824 `ורגליו בלי לאות – של הָאֵל העז; ומכתפיו`
+  - 825 `היו מאה ראשים של נחש, של דְּרָקוֹן איום,`
+  - 826 `מלחכים בלשונות קודרות; ומעיניו`
+  - 827 `בראשים הָאֱלוֹהִיִּים, תחת הגבות, הבהבה אש;`
+  - 828 `ומכל ראשיו בערה אש בהביטו;`
+  Differences from the dossier: `ארץ` for its `גַּאיָה` (the corpus translates the name), `הָאֱלוֹהִיִּים` for `הנפלאים`
+  (θεσπέσιος), `בחוזק` (ἰσχύς `חֹזֶק`), `פעלים` (ἔργμα, kept apart from ἔργον), `קודרות` (δνοφερός `קוֹדֵר`).
+- Formulas used: F1 (643, 838), F4 (633, 664), F7 (644), F8 (685, 737, 808), F9 (762, 781, 790), F10 (696, 728, 737, 808),
+  F11 (822), F12 (707, 854), F13 (722, 724), F16 (783), F24 (620, 717, 787), F26 (throughout), F29 (630, 668). None
+  revised.
+
+### Proposals for the shared renderings
+- **Names**: Τυφωεύς `טִיפוֹאֶוּס` (table); Ἥφαιστος `הֵפַיְסְטוֹס` (table; first named at 866); Κυμοπόλεια
+  `קִימוֹפּוֹלֵיאָה` (new, 819); Ὄθρυς `הָאוֹתְרִיס` (632, with the article); Περσεφόνεια `פֶּרְסֶפוֹנָה`. **Table forms to fix in the tool**:
+  Γύης's string `גיס` rejects the plene `גייס` (I vocalized `גִּיֵּס` at 618, 714, 734, 817).
+- **Formulas**: none revised. Suggest **F31 `αινη δηιοτητ` → `הקטל המחריד`** (662, 852; also Iliad diction), and **F32
+  `ουρεοσ εν βησσησ` → `בערוצי ההר`** (860, 865). A note for F12: the genitive βροντῆς τε στεροπῆς τε (845) is not matched
+  (I wrote `מן הרעם ומן הברק`).
+- **Gates**: no `[היתר שער]` and no `[היתר שם]` in 617–885. The `עולם` gate caught οὐδέ ποτε `ולעולם` four times: worth a
+  line in §6 ("never" is `אַף פַּעַם`, not `לְעוֹלָם`).
+- **Recurring words** (first line in brackets): αἰνός `מַחְרִיד` (662), ἐπαινή `נוֹרָאָה` (768), κῆλα `שְׁלָחִים` (708),
+  ἰωή `הֲמֻלָּה` (682), ὄτοβος `שָׁאוֹן` (709), ἀλαλητός `קְרִיאַת קְרָב` (686), ἰαχή `תְּרוּעָה` (708), κέλαδος `הָמוֹן`
+  (852), ἔνοσις `רַעַשׁ` (681), κονίη `אָבָק` (706), ζοφερός `רַב־הָאֹפֶל` (814), δόμος `מָעוֹן` / δῶμα `אַרְמוֹן` (767),
+  πρόχοος `קִיתוֹן` (785), ὅρκος `שְׁבוּעָה` (784), κῶμα `עִלָּפוֹן` (798), ὀπυίω `לָקַח לְאִשָּׁה` (819), ἀκτίς `זֹהַר`
+  (760), σέλας `זִיו` (867), δράκων `דְּרָקוֹן` (825), τήκω `נָמֵס` (862), σίδηρος `בַּרְזֶל` (864), ἄελλα `סוּפָה` (874),
+  θύελλα `סְעָרָה` (742), φθείρω `הִשְׁחִית` (876), τιμαί `זְכֻיּוֹת` (882), βασιλεύω `הָיָה לְמֶלֶךְ` (883).
+- **Recorded splits and pairs** (for `lexmap`): ῥύομαι `נעצר` / `הֵגֵן` (304 / 662); κέλομαι, ὥρα, βουλή (council),
+  ἀραρίσκω, ἐλαύνω, φαίνω, δαίς (`מַעֲרָכָה` 650 / `מִשְׁתֶּה` 802), νόσφι (`הַרְחֵק מִן` / `מִלְבַד` 870), καίω (`שָׂרַף`
+  557 / `בָּעַר` 828, 861) – sense splits; pairs sharing a Hebrew word: μάχη / πόλεμος `מִלְחָמָה`, ἔτος / ἐνιαυτός `שָׁנָה`,
+  κραδίη / ἦτορ `קֶרֶב` (both in 764), καίω / αἴθω `בָּעַר`, ἰωχμός / κολοσυρτός `מְהוּמָה`, πόντος / θάλασσα `יָם`.
+
+### For the Works and Days
+- **The winds and the sea** (WD 504–563 Lenaion and Boreas, 618–694 sailing): ἄνεμος `רוּחַ` (the gate), Βορέας / Νότος /
+  Ζέφυρος `בּוֹרֵאָס` / `נוֹטוֹס` / `זֶפִירוֹס`, ἀργεστής `הַמַּבְהִיר`; ἄελλα `סוּפָה`, θύελλα `סְעָרָה`; ἄημι `נָשַׁב`,
+  ἐπιπνέω `נָשַׁב עַל`; θυίω `גָּעַשׁ`; κῦμα `גַּל`; ναῦς `אֳנִיָּה`, ναύτης `מַלָּח`; φθείρω `הִשְׁחִית`; πῆμα `פֶּגַע`;
+  πόντος `יָם` (F10 `ים עקר`), ἠεροειδής `עֲרַפִלִּי־הַמַּרְאֶה`, ἰοειδής `סָגֹל־הַמַּרְאֶה`.
+- **The works of men** (WD passim): ἔργα of the fields `מַעֲשִׂים` (879: "the lovely works of earth-born men");
+  χαμαιγενής `יְלוּדֵי־הָאֲדָמָה`; ἐρατός `עָרֵב`; κόνις `עָפָר`.
+- **Oath and perjury** (WD 190–194, 219, 282–285, 803–804: Horkos, the perjurer's race, the fifth day when the Erinyes
+  attend Horkos' birth): ὅρκος `שְׁבוּעָה`, ἐπίορκος `לַשֶּׁקֶר` (TH 232, 793: `נשבע עליה לשקר`), ἐπόμνυμι `נִשְׁבַּע`; Ἔρις, Ὅρκος as in the table.
+- **Iron and work** (WD 151, 176, 387 iron, 423 the sickle): σίδηρος `בַּרְזֶל`, σιδήρεος `שֶׁל בַּרְזֶל`; χάλκεος `שֶׁל
+  נְחֹשֶׁת`; τήκω `נָמֵס`; Ἥφαιστος `הֵפַיְסְטוֹס` (WD 60).
+- **Night, Day, Sleep, Death** (WD 102–104, 116 "they died as if overcome by sleep", 176–178): Ὕπνος `שֵׁנָה`, Θάνατος
+  `מָוֶת`, ὕπνος (common noun) `שֵׁנָה`; δαμάζω `הִכְנִיעַ`; ἦμαρ / νύξ `יוֹם` / `לַיְלָה`, F13 `לילות וימים`.
+- **Zeus' epithets met in the WD proem**: ὑψιβρεμέτης `הָרוֹעֵם מִמָּרוֹם`, εὐρύοπα `רְחַב־הַמַּבָּט`, F1 `אבי האנשים
+  והאלים` (WD 59), F26 `בן־קרונוס`; βασιλεύς `מֶלֶךְ` (WD's "gift-devouring kings" `מְלָכִים`), ἀνάσσω `מָלַךְ`, βασιλεύω
+  `הָיָה לְמֶלֶךְ`.
+
+### Lessons for the guidelines
+- **"Never" is not `לְעוֹלָם`**: four οὐδέ ποτε came out as `ולעולם` in one section before `verify` stopped them; write
+  `אף פעם` (or `מעולם לא`, if a gate allows) from the start.
+- **A name whose table string is defective** (`גיס`) fails against a plene draft (`גייס`): vocalize it at every
+  occurrence, not only the first, or ask for the plene string in the table.
+- **Formula tags in the פירוק** (`` `νύκτας τε καὶ ἤματα` – F13 ``) poison `lexmap` (lemma "F13" → "f"): write the lemma
+  first, the formula after it, or split the words.
+- **A reverse `lexmap` check** (Hebrew → several lemmas) catches collisions a forward check misses (ταῦρος `שׁוֹר` against
+  βοῦς `שׁוֹר`): run it on each part's range before handing back.
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)
