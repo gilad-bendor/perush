@@ -392,7 +392,7 @@ Project **5 Erra and Išum** (Akkadian, eBL `L/1/5`, Standard Babylonian Tablet 
 - **Erra I 126–162 is already translated** (2026-10-16), as §7 of the flood corpus's flood references (`../סיפורי-המבול-המסופוטמיים/6-אזכורי-המבול/annotated.rtl.md`, "## 7."). **These 37 lines are copied letter for letter** (the Gilgameš-copy rule of §3, guidelines §5.2 "an earlier corpus's text"), in the revised form of §12.6, and `verify ER` checks that the two files agree. The revisions bring the 2026-10-16 lines in line with rules fixed later (the coordinator applies each one to the flood corpus too, with its notes and parallels rows): a translator who wants to change a fixed line proposes it with a reason, and the coordinator changes both files.
 - **Atra-ḫasīs** (`../סיפורי-המבול-המסופוטמיים/1-אתרחסיס/`): the noise of mankind that keeps the gods awake is the same motif in the same words: *ḫubūru* = `הֲמֻלָּה`, *rigmu* = `שָׁאוֹן`, *šittu* = `שֵׁנָה`, *nišū* = `הָאֲנָשִׁים` (Atra-ḫasīs II 41, 82, 793: `מהמולתם נטרד האל`, `מהמולתם נמנעה ממני שינה`, `מהמולתם לא תאחזני שינה`). Erra I 41, 73, 82 follow them.
 - **Gilg. XI 135** `וכל בני האנוש נהפכו לטיט` (*itūrā ana ṭiṭṭi*): *târu ana* "turn into" = `נֶהְפַּךְ לְ־` (I 74; and the D in 172, `הָפַךְ לְ־`); *târu* "return" keeps `שָׁב` / `הֵשִׁיב` (gated, §6).
-- **Nergal and Ereškigal** (project 3): the speech formula (*pâšu īpuš-ma iqabbi … amāta izakkar* = `פתח את פיו ואמר, אל X דבר דיבר:`), *annīta ina šemêšu* = `כשמעו את זאת`, *tebû* = `קם`, *ebbu* = `צַח` / *ellu* = `טָהוֹר`, Erra `אֶרָּה` ★, Anu `אָנוּ` ★, *gallû* = `שֵׁד־גַּלָּה` (pl. `שֵׁדֵי־גַּלָּה`), *erkallu* = `אֵירְכַּלָּה` (Ištar, NE), *kurnugû* = `כּוּרְנוּגִי`, *arallû* = `אֲרַלּוּ`.
+- **Nergal and Ereškigal** (project 3): the speech formula (*pâšu īpuš-ma iqabbi … amāta izakkar* = `פתח את פיו ואמר, אל X דבר דיבר:`), *annīta ina šemêšu* = `כשמעו את זאת`, *tebû* = `קם`, *ebbu* = `צַח` / *ellu* = `טָהוֹר`, Erra `אֶרָּה` ★, Anu `אָנוּ` ★, *gallû* = `שֵׁד־גַּלָּה` (pl. `שֵׁדֵי־גַּלָּה`), *erkallu* = `אִירְכַּלָּה` (Ištar, NE), *kurnugû* = `כּוּרְנוּגִי`, *arallû* = `אֲרַלּוּ`.
 
 ### 12.2 Names (★ = vocalized at every occurrence; checked by `verify`)
 | Source | Hebrew | Notes |
@@ -407,7 +407,7 @@ Project **5 Erra and Išum** (Akkadian, eBL `L/1/5`, Standard Babylonian Tablet 
 | the Igigi; the Anunnaki; the Apsû | הָאִיגִיגִי; הָאֲנוּנָּכִּי; הָאַפְּסוּ | Corpora. |
 | Šuanna (Babylon, 124); Esagil; Etemenanki; Eḫalanki | שׁוּאַנָּה; אֵסַגִּיל; אֵטֵמֵנַנְכִּי; אֵחַלַנְכִּי | The flood references (128). The note at Šuanna: a name of Babylon (`בָּבֶל`). |
 | Ninildu; Kusibanda; Ninagal (155–159) | נִינִילְדּוּ; כּוּסִיבַּנְדָּה; נִינַגַל | The flood references. |
-| *erkallu*; *kurnugû*; *arallû* | אֵירְכַּלָּה; כּוּרְנוּגִי; אֲרַלּוּ | §12.1. |
+| *erkallu*; *kurnugû*; *arallû* | אִירְכַּלָּה; כּוּרְנוּגִי; אֲרַלּוּ | §12.1. |
 
 ### 12.3 Key terms
 | Source | Hebrew | Tag / reason |
@@ -545,9 +545,9 @@ Revised words in **bold** in the reason column; every other word is the 2026-10-
 | 132 | `כאשר פעם קצפתי, וקמתי ממושבי, ושמתי מבול,` | `זעמתי` → **`קצפתי`** (*agāgu*, §12.3); `וחוללתי` → **`ושמתי`** (*šakānu* `שׂם`, §6) |
 | 133 | `קמתי ממושבי, ותפר השמים והארץ נפרם.` | unchanged |
 | 134 | `השמים, שהרעדתי: מקום עמידתם של כוכבי השמים השתנה, ולא השבתי (אותם) למקומם.` | `אותם` → **`(אותם)`** (not in the Akkadian; = 137) |
-| 135 | `אֵירְכַּלָּה, שזע: יבול התלם פחת, ולעד קשה לגבותו.` | `העולם התחתון` → **`אֵירְכַּלָּה`** (*erkallu*, the corpus's name; `עולם` is reserved, §6); `ועד עולם` → **`ולעד`** (the same) |
+| 135 | `אִירְכַּלָּה, שזע: יבול התלם פחת, ולעד קשה לגבותו.` | `העולם התחתון` → **`אִירְכַּלָּה`** (*erkallu*, the corpus's name; `עולם` is reserved, §6); `ועד עולם` → **`ולעד`** (the same) |
 | 136 | `תפר השמים והארץ, שנפרם: המעמקים פחתו, הגאות נסוגה; שבתי וראיתי – קשה היה לשבוע.` | `חזרתי והבטתי` → **`שבתי וראיתי`** (*atūr āmur*: *târu* `שוב`, *amāru* `ראה`) |
-| 137 | `ואשר לבעלי הנפש – תולדתם התמעטה, ולא השבתי (אותם) למקומם.` | `ויצורי` → **`ואשר לבעלי`** (*ša šiknāt napišti*, §12.3); `(דבר) למקומו` → **`(אותם) למקומם`** (*ašruššun*, = 134) |
+| 137 | `ושל בעלי הנפש – תולדתם התמעטה, ולא השבתי (אותם) למקומם.` | `ויצורי` → **`ושל בעלי`** (*ša* opening a topic = `של X –`, as 23, 41, 55, 71, 90) (*ša šiknāt napišti*, §12.3); `(דבר) למקומו` → **`(אותם) למקומם`** (*ašruššun*, = 134) |
 | 138 | `עד אשר, כאיכר, את זרען אחזתי בידי.` | `לקחתי` → **`אחזתי`** (*ṣabātu*); `עד ש` → `עד אשר` (word order kept) |
 | 139 | `בית עשיתי וישבתי בתוכו.` | `בניתי` → **`עשיתי`** (*epēšu*) |
 | 140 | `עֶדְיִי, שנהדף(?) במבול, ותוארו החשיך:` | vocalization only |
@@ -573,6 +573,9 @@ Revised words in **bold** in the reason column; every other word is the 2026-10-
 | 160 | `הלש(?) את הנחושת הקשה כעור, מעצב הכ[לים]?` | unchanged |
 | 161 | `איה האבנים המובחרות, צאצאי הים הרחב, ההולמות את הכתר?` | `יציר` → **`צאצאי`** (*binûtu*; the root יצר) |
 | 162 | `איה שבעת החכמים של האפסו, הקַרְפִּיּוֹנִים הצחים, שכמו אֵאָה אדונם שוכללו בתבונה נעלה, מטהרי גופי?"` | `הבהירים` → **`הצחים`** (*ebbu*) |
+
+### 12.7 Merged after part 1 (lines 1–99, 2026-10-24)
+Accepted from the translator's proposals (`5-ארה-ואישום/project.md`, with reasons): *šaḫātu* = `נִרְתַּע` (Gilgameš I 180, 188, Ludlul II 108; `נבהל` is *parādu*'s), not `נִבְהַל`; *ṭūdu* = `נָתִיב` (`שביל` is *kibsu*'s); *ulmu* = `מַגְזֵרָה`; 27 `לפני[הם] נעול` (the stative *edil* is masculine: Išum is the one shut); 29 `ו"הַשִּׁבְעָה" קרא את זכרם` (*zikru* `זֵכֶר`); *lā* + present = `לא` + future (37 `ולא תחמול`), *ē* + preterite = `אל`; 93 = 191 `דבר X אשר אמר – יָטַב עליו.`; *ša* opening a topic = `של X – …` (23, 41, 55, 71, 90; fixed line 137 aligned to `ושל בעלי הנפש`); Irkalla = `אִירְכַּלָּה` (the corpus form of IS and NE; §12.1–§12.2 and fixed line 135 aligned). Words fixed for part 2: `שָׂח אל X:`; `שמע אותו/אותם אֶרָּה הגיבור,` (163); `ההולך לפני־` + suffix (105, 108); *leqû šēṭūta* `לקח … בוז`; *nišī dadmē* `אנשי היישובים`; *zikru* `זכר`; *gīru* (noun) `אש`, *qīšu* `יער`, *apu* `אגם`; *kippatu* `חוג`; *māḫiru* `יריב`; *idu* "arm" `זרועות`; *rašû* `היה ל־`; *nadû* `השליך`; *malku* `מלך` (shared with *šarru*: a split, recorded). Tool: the `חמה` gate no longer reads `מלחמה`.
 
 ## Changelog
 - 2026-10-24 (Round 4, run 5): §12 added – the binding renderings of project 5 (Erra and Išum I), fixed by the coordinator before the first line; Erra I 126–162 copied from the flood references in a revised form (§12.6), checked by `verify ER`.
