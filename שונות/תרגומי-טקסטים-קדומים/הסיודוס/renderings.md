@@ -236,6 +236,7 @@ the Greek word is capitalized in the base.
 | Αἰθίοψ | כּוּשׁ |  | biblical name (§2.3): the land / people `כּוּשׁ` (`מֶלֶךְ כּוּשׁ`, `בְּנֵי כּוּשׁ`); not the plural `כּוּשִׁים`, a slur in Modern Hebrew (§11.7) |
 | Νεῖλος | נִילוּס |  | never `יְאֹר` |
 | Ἄσκρη | אַסְקְרָה |  | Hesiod's village (WD 640) |
+| Κύμη | קִימָה | ★ | the Aeolian city of Hesiod's father (WD 636); unvocalized it is `כימה`, the Pleiades |
 | Πληιάδες / Πλειάδες / πλψιάς | כִּימָה |  | (πλψιάς: the treebank's slip at WD 383) the Pleiades: `כִּימָה` [equivalent], the LXX's Πλειάς for `כִּימָה` (Job 9:9, 38:31) |
 | Ὠρίων / Ὠαρίων | כְּסִיל | ★ | Orion: `כְּסִיל` [equivalent], the LXX's Ὠρίων for `כְּסִיל` (Job 38:31); unvocalized "fool" |
 | Ὑάδες | הַהִיאָדוֹת |  | the Hyades (no biblical name) |
@@ -809,6 +810,24 @@ Full list with first lines and reasons: `2-מעשים-וימים/project.md`, "W
    ἄνωγα `צִוָּה`; ἀρύω / ἀφύσσω `שָׁאַב`; ἐνιαυτός / πλειών `שָׁנָה`.
 5. **Names (§2.3):** Ζέφυρος `זֶפִירוֹס` (594), Ληναιών `לֵנַיאוֹן` (504), Θρῄκη `תְּרַקְיָה`, Πανδίων `פַּנְדִּיּוֹן`, Πανέλληνες `כָּל־הַהֶלֶנִים` – as in
    project.md; Ὠρίων `כְּסִיל` vocalized at every occurrence.
+
+### 11.12 WD 618–828 (WD translator 2, part 5; merged 2026-10-24) – the poem drafted
+Full list with first lines and reasons: `2-מעשים-וימים/project.md`, "WD 618–828", Proposals. Binding:
+1. **The Days:** 770 is the self-test line (ἔνη = the old-and-new day, the new moon `רֹאשׁ הַחֹדֶשׁ`); ἑβδόμη `שְׁבִיעִי`
+   (the root שבת never); F25 at 805; εὐδαίμων / ὄλβιος `בַּר־מַזָּל` / `שְׂבַע־טוֹבָה` (826, kept as §5: "מזל" suits a
+   calendar of lucky days). 767, 769, 768 in the base's order.
+2. **Grammar:** the infinitive-for-imperative throughout (μή → `אַל` + infinitive absolute); dependent infinitives
+   stay plain (688, 749, 753, 767, 798, 815). 793 γείνασθαι `הוֹלֵד` (the coordinator: the tool's REQUIRED row for
+   γείνομαι now accepts the infinitive absolute `הולד`; the draft's future `תוֹלִיד` changed).
+3. **Purity and the household, on LXX identities:** νίζω and λούω both `רָחַץ` (Exod 30:19, Lev 15:16 – a pair);
+   σπερμαίνω `הִזְרִיעַ` (Lev 12:2); γονή `שִׁכְבַת זֶרַע` (733, `[היתר שער]`: Lev 15:16); τέμνω "castrate" `כָּרַת`
+   (Lev 22:24); κρατήρ `אַגָּן` (Exod 24:6 κρατῆρας = `בָּאַגָּנֹת`); φειδωλός `חַסְכָנִי`; ὑπερβασία `עֲבֵרָה`; ὀνειδίζω
+   `חֵרֵף` (718, `[היתר שער]`).
+4. **Names (§2.3):** Κύμη `קִימָה` (always vocalized: ≠ `כִּימָה`, the Pleiades), Αἰολίς `אַיּוֹלִית`, Εὔβοια
+   `אֶאוּבוֹיָה`, Αὐλίς `אַאוּלִיס`, Ἀχαιοί `הָאַכָאִים`, Ἑλλάς `הֶלָס`, Ἀμφιδάμας `אַמְפִידָמָס`, Χαλκίς `כַלְקִיס`;
+   Ἄσκρη `אַסְקְרָה` (640).
+5. **Collisions fixed by the translator:** ἄφενος `מָמוֹן` at 637 only (beside πλοῦτος `עֹשֶׁר`; εὐοχθέω keeps `רְוָחָה`);
+   φώς `גֶּבֶר` (792, as 193); ἀραιός `דַּק` (κοῦφος keeps `קַל`); 629 `העשוי` (the עבד gate).
 
 ## 12. Decisions and revisions (coordinator, 2026-10-24)
 

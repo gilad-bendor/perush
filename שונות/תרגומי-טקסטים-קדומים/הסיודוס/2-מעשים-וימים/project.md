@@ -853,5 +853,227 @@ entries in ten `## ` sections, in the base's order. The placeholder is now `<!--
   year): citing it line by line is safe only as "a shared motif"; its Hebrew lines are quoted as they stand in its
   annotated file, with its own line number.
 
+## WD 618–828
+
+### Scope
+WD 618–828 (translator 2, part 5, 2026-10-24): the sea – when not to sail, hauling the ship up, the poet's father who
+came from Kyme to Ascra (618–645); the "measures of the sea", the poet's one crossing to Chalkis and the tripod for the
+Muses (646–662); summer sailing fifty days after the solstice, the snatched spring sailing, "keep measure" (663–694);
+marriage – the age, the virgin from nearby, the good and the bad wife (695–705); conduct toward the gods, the friend
+and the brother, the tongue, the shared feast (706–723); the purity taboos – hands, sun and night, the hearth, the
+funeral, the rivers (724–741); household beliefs – nails, the jug, the unfinished house, the crow, the pots, the
+child, the bath, Rumour (742–764); the Days of the month (765–828) and the blessing on the man who knows them
+(826–828). 211 entries in ten `## ` sections, in the base's order (… 767, 769, 768, 770 …; the labels kept).
+**The placeholder is removed**: the annotated file now has all 831 entries of the base.
+
+### Sources consulted
+- The base and the AGDT treebank through `hesiod_tools.py data WD 618 828`; every parse carrying a tense, a mood, a gate
+  or a parallel checked by hand. Treebank slips noted in the פירוק: 733 γονῇ lemmatized γονεύς "parent" (it is γονή
+  "seed"); 726 ἀράς (ἀρά "prayer") merges in `lexmap` with the particle ἄρα; 705 ὠμός "raw" with ὦμος "shoulder"; 617
+  πλειών (part 4) with πλείων.
+- The Septuagint through `../tools/lxx_verses.py` – every Greek verse quoted was printed first: Gen 2:3, 3:23; Exod
+  24:6, 30:19–20; Lev 12:2, 15:16, 15:18, 19:18, 19:26, 21:13–14, 22:24; Deut 11:14, 18:10, 18:13, 20:5,
+  21:6, 21:12, 23:13–15, 26:5, 29:28; Judg 3:24, 9:13; Amos 2:13; Jonah 1:4–5, 2:4; Ezek 8:16, 27:25–26; Job 1:1; Prov
+  6:6, 10:19, 12:4, 13:8, 13:20, 17:5, 18:22, 22:1, and 29:19 (= MT 31:19 in the LXX order). Psalms 107, 90, 81, Ruth,
+  Qohelet, Esther, Jeremiah, Numbers, 1 Samuel and the Song of Songs are not in the tool: Hebrew only. Prov 30:19,
+  31:10 and 18:24 did not print in the LXX tool (the LXX order of Prov 24–31 differs): Hebrew only.
+- The Hebrew Bible through `check_bible_quotes.py --show` for every verse quoted (0 problems at the end).
+- The corpus itself: TH 22–34 (the proem: the Muses on Helicon) quoted at 639, 658, 662; TH 231–232 (Eris bears Oath)
+  at 804; the creation corpus has no hemerology translated – the Babylonian hemerologies are described in words (825).
+- Rank 3, in a few words: West 1978 for the cruxes (602 in part 4; 768, 756, 826 here), Evelyn-White's division of the
+  month. Ancient testimonia named from memory only where well known: Virgil G. 2.412 (643), Plutarch on Amphidamas and
+  the Lelantine war (654), Pausanias 9.31.3 on the tripod on Helicon (658) and 1.17.1 on the altar of Pheme (764), the
+  scholion on Apollonius of Rhodes rejecting the Ornithomanteia (828). The Hebrew translations were not consulted.
+
+### Decisions
+- **Fixed renderings applied:** Πληιάδες `כִּימָה` (619), Ὠρίων `כְּסִיל` ★ (619, vocalized); Ἄσκρη `אַסְקְרָה` (640,
+  vocalized); the Muses `הַמּוּזוֹת` and Ἑλικωνιάδες `הַהֶלִיקוֹנִיּוֹת` (658, vocalized), Helicon `הַהֶלִיקוֹן` (639,
+  vocalized), with TH 22–34 linked; Ποσειδῶν `פּוֹסֵידוֹן` (667), Νότος `נוֹטוֹס` (675), Ἀπόλλων `אַפּוֹלוֹן` and Λητώ
+  `לֵטוֹ` (771), Ἐρινύες `הָאֶרִינִיּוֹת` (803) – first occurrences in the poem, vocalized; Ἔρις `מָדוֹן`, Ὅρκος `שְׁבוּעָה`
+  (804, masculine as in TH 232); γυνή `אִשָּׁה`, γαμέω `נָשָׂא אִשָּׁה` (699–701; middle `נִשְּׂאָה`, 698), γάμος
+  `נִשּׂוּאִים`, παρθενική / παρθένος `בְּתוּלָה`, ἄκοιτις `רַעְיָה` (800); **700 ≈ 343** (`ובייחוד נָשׂוֹא את מי שגרה קרוב
+  אליך,`); ἱερός `קָדוֹשׁ` (653, 770, 805, 819); **770 = the self-test line** (`רִאשׁוֹן – רֹאשׁ הַחֹדֶשׁ, הָרְבִיעִי
+  וְהַשְּׁבִיעִי – יוֹם קָדוֹשׁ:`, checked against the Greek: ἔνη = the old-and-new day, the new moon; the colon follows the
+  base's raised dot before 771's γάρ); ἑβδόμη / ἑβδόματος `שְׁבִיעִי` (770, 805; never the root שבת); **F25** at 805 (Δημήτερος
+  ἱερὸν ἀκτήν, as 466, 597); ἦμαρ / ἡμέρη `יוֹם`, μείς `חֹדֶשׁ`; εὐδαίμων τε καὶ ὄλβιος `בַּר־מַזָּל` / `שְׂבַע־טוֹבָה` (826,
+  kept as §5: in a calendar of days, "מזל" – the old star-luck – fits εὐδαίμων "of good daimon"); ψυχή `נֶפֶשׁ` (686);
+  φυλάσσω `שָׁמַר` (694, 706, 765, 797); ἐργάζομαι `עָבַד` (623, 827); F5 (661), F18 (718).
+- **The month** (765–828): ἱστάμενος `הָעוֹלֶה`, φθίνων `הַיּוֹרֵד`, μέσος `אֶמְצָעִי`; the ordinals as Hebrew ordinals
+  (τετράς `רְבִיעִי`, εἰνάς / ἔνατος `תְּשִׁיעִי`, εἰκάς `הָעֶשְׂרִים`, τριακάς `הַשְּׁלוֹשִׁים`, τρισεινάς `הַתְּשִׁיעִי
+  הַמְשֻׁלָּשׁ`); the order 767, 769, 768 kept.
+- **Names (§2.3), first occurrence vocalized:** Κύμη `קִימָה` (636 – note: not `כִּימָה`, the Pleiades), Αἰολίς `אַיּוֹלִית`,
+  Εὔβοια `אֶאוּבוֹיָה`, Αὐλίς `אַאוּלִיס` (651), Ἀχαιοί `הָאַכָאִים` (651, the familiar Hebrew form), Ἑλλάς `הֶלָס` (653),
+  Ἀμφιδάμας `אַמְפִידָמָס` (654), Χαλκίς `כַלְקִיס` (655).
+- **Grammar:** the infinitive for the imperative → the vocalized infinitive absolute throughout (`אָחֹז`, `עָבוֹד`,
+  `מָשׁוֹךְ`, `תָּלֹה`, `חַכֵּה`, `גָּרֹר`, `לָקֹחַ`, `נָשׂוֹא`, `עָשׂוֹ`, `שַׁקֵּר`, `פָּרֹעַ`, `קַבֵּל`, `הִקָּרֵא`, `נַסֵּךְ`,
+  `הַשְׁתֵּן`, `גַּלֵּה`, `הַזְרֵעַ`, `עָבוֹר`, `כָּרוֹת`, `שׂוֹם`, `הַשְׁאֵר`, `הוֹשֵׁב`, `לַגְלֵג`, `הָסֵךְ`, `פָּעוֹל`,
+  `הוֹדֵעַ`, `אַלֵּף`, `הַשְׁלֵךְ`, `הַתְחֵל`); with μή / μηδέ → `אַל` + infinitive absolute (622, 674, 689, 707, 709, 715,
+  724–759); `הָיֹה` + participle for εἶναι + perfect participle (641, 706, 722). Plain infinitives where the infinitive
+  depends on a verb (688 after ἄνωγα, 798 after πεφύλαξο, 767 and 815 of purpose, 753 with its own subject ἀνέρα, 749
+  after a whole line). Real imperatives stay imperatives (627 `שִׂים`, 760 `חֲמֹק`, 797 `הִשָּׁמֵר`, 819 `פְּתַח`). The
+  iterative 634 → `הָיָה מַפְלִיג`; the gnomic aorist → participle (676, 677, 705, 741); the potential optative → `הָיָה`
+  + participle (666, 684); the optative of instruction → jussive (698, 779).
+- **One exception to the infinitive absolute: 793 `תוֹלִיד`** (future as command) – `הוֹלֵד` is not among the REQUIRED
+  forms for γείνομαι in the tool, so the check fails on it (for the coordinator: add `הולד` to the list, or keep).
+- **New words resting on LXX identities:** κρατήρ `אַגָּן` (744; Exod 24:6), ἄτεκνος (part 4); νίζω `רָחַץ` (739; Exod
+  30:19 νίψεται) and λούω `רָחַץ` (749; Lev 15:16 λούσεται) – a pair, as in Hebrew; σπερμαίνω `הִזְרִיעַ` (736; Lev 12:2
+  σπερματισθῇ); τέμνω "castrate" `כָּרַת` (786, 791; Lev 22:24 ἐκτομίας = `כָּרוּת`); ψυχή `נֶפֶשׁ` (686; Prov 13:8);
+  κῦμα `גַּל` (Jonah 2:4); φειδωλός `חַסְכָנִי` (720; Prov 10:19 φειδόμενος χειλέων = `חוֹשֵׂךְ שְׂפָתָיו`).
+- **Other new words (first line):** ναυτιλία `יַמָּאוּת` / πλόος `הַפְלָגָה` (618, 630); ἀήτης / ἀήτη `מַשָּׁב`, αὔρα `נֶשֶׁב`
+  (621, 645, 670); φόρτος / φορτίον `מִטְעָן`, φορτίζω `טָעַן`; οἶνοψ `כֵּהֶה־כַּיַּיִן`; χείμαρος `פְּקָק`; πτερά (sails)
+  `כַּנְפֵי`; ἐμπορία `מִסְחָר`; σοφίζω `מְחֻכָּם`; ὕμνος `רִנָּה` (657, 662, as ὑμνέω `רִנֵּן`, TH 33); τρίπους (the vessel)
+  `חֲצוּבָה` (657; split from 533 `בַּעַל שָׁלֹשׁ הָרַגְלַיִם`); ἀνατίθημι `הֶעֱלָה מִנְחָה` (658; not `הִקְדִּישׁ` – קדש is
+  ἱερός's); καιρός `הָעֵת הַנְּכוֹנָה` (694); δειπνολόχος `אוֹרֶבֶת לַסְּעוּדוֹת`, δαλός `אוּד`, ὠμὸν γῆρας `זִקְנַת בֹּסֶר`
+  (704–705); φίλος (noun) `אוֹהֵב` (713; adjective `אָהוּב`); τίνυμαι `פָּרַע`; ὀνειδίζω `חֵרֵף` (718, vocalized `לְחָרֵף`
+  with `[היתר שער]`: the `חרף` gate is χειμών's); θησαυρός `אוֹצָר`; ἑστία (the hearth) `הָאָח` (vocalized); αἰδοῖα
+  `מְבוּשִׁים`; γονή `שִׁכְבַת זֶרַע` (733, `[היתר שער]`: the `זרע` gate is σπέρμα's, and this is its sense); ἐναποψύχω
+  `הֵסֵךְ אֶת רַגְלָיו` (759; the biblical euphemism of 1 Sam 24:3, Judg 3:24 for the Greek euphemism); φήμη `שְׁמוּעָה`
+  (760–764; a translated name if Φήμη recurs); κορώνη `עוֹרְבָנִית`; ἴδρις (the ant) `הַיּוֹדַעַת`; σωρός `כְּרִי` (not
+  `ערמה`: the `ערם` gate); μητρυιά `אֵם חוֹרֶגֶת`; ὄνειαρ `תּוֹעֶלֶת`; ὑπερβασία `עֲבֵרָה` (828; ὑπερ־βαίνω = עבר, a calque in
+  both languages); ἀναίτιος `נָקִי`.
+- **Riddle-names kept as riddles:** πέντοζος "the five-branched" (742, the hand), ἴδρις "the knowing one" (778, the ant),
+  ὑλοτόμος (807) plain.
+- **Splits recorded:** ὅπλον `צִיּוּד` (ship's gear, 627) / `כְּלִי־נֶשֶׁק` (TH 853); θοός `מָהִיר` (ship) / `חוֹלֵף` (night,
+  TH 481); ὀλίγος `קָטָן` (size, 643) / `מְעַט`; ἀνύω `הִשְׁלִים` (635) / `הִשִּׂיג`; ἀποφθίνω `הִשְׁמִיד` (666, as φθισήνωρ) /
+  `דָּעַךְ` (TH 606); ὀρίνω `הִסְעִיר` (the sea, 676) / `הִרְגִּיז`; μένω `חִכָּה` (674) / `נִשְׁאַר`; ἐπιβαίνω `דָּרַךְ` (679) /
+  `עָלָה`; ὑπέρβιος `עָצוּם מִדַּי` (a load, 692) / `פְּרָאִי` (TH); ἐπιτίθημι `הוֹסִיף` (697) / `שָׂם עַל`; ἄγω `לָקַח`
+  (695, 800) / `נָהַג בְּ־` (768); δόμος `בַּיִת` (746) / `מָעוֹן` (the gods'); τρίπους (above); χρυσάωρ (epithet,
+  `בַּעַל־חֶרֶב־הַזָּהָב`) / Χρυσάωρ `כְרִיסָאוֹר` (TH 281); ἄφενος `מָמוֹן` at 637 only (beside πλοῦτος `עֹשֶׁר`; `רְוָחָה` is
+  εὐοχθέω, 477); ῥεῖα `בְּנָקֵל` (762, stylistic, beside κοῦφος `קַל` in 761); ἀραιός `דַּק` (809).
+- **Pairs recorded:** ὀμιχέω / οὐρέω `הִשְׁתִּין`; ἀήτης / ἀήτη `מַשָּׁב`; φόρτος / φορτίον `מִטְעָן`; ἐνοσίχθων / ἐννοσίγαιος
+  `מַרְעִישׁ־הָאֲדָמָה`; νίζω / λούω `רָחַץ`; λείπω / καταλείπω `הִשְׁאִיר`; ἔνατος / εἰνάς `תְּשִׁיעִי`; δείελος / ἕσπερος
+  `עֶרֶב`; ἡμέρα / ἦμαρ `יוֹם`; ὄρνις / οἰωνός `עוֹף`; ἡμίονος / ὀρεύς `פֶּרֶד`; βούλομαι / ἐθέλω `רָצָה`; πρόβατον / μῆλον
+  `צֹאן` (ὄις `כֶּבֶשׂ`, 775); ξύλον / δένδρεον `עֵץ`; μίμνω / μένω `חִכָּה`.
+
+### Open decisions for the user
+- **637 ἄφενος `מָמוֹן`** – a one-line split, because ἄφενος and πλοῦτος (which share `עֹשֶׁר` elsewhere) stand in the same
+  line; the alternative is `עֹשֶׁר … עֹשֶׁר` (the Greek's redundancy kept).
+- **651 the "voyage"** – the note calls Aulis–Chalkis (about 65 metres of sea) the poet's joke at his own expense: a
+  reading (West), not the text.
+- **714 κατελεγχέτω εἶδος** (crux): `אל יכזיב מראך את שכלך` – "let your face not belie your mind"; the other reading
+  ("let not his looks put your mind to shame") is in the note.
+- **756 ἀίδηλα** – `נִסְתָּרוֹת` ("unseen things") chosen over "destructive things"; both in the note.
+- **768** (a hard line): `בשעה שהעם, בהבחינם, נוהגים בהם לפי האמת` – the days are "kept" when the people reckon the
+  month truly.
+- **793 `תוֹלִיד`** instead of the infinitive absolute `הוֹלֵד` (the tool's REQUIRED list; see Decisions).
+- **826 `בַּר־מַזָּל`** kept as §5, with the reason above; the alternative `מְאֻשָּׁר` collides with μάκαρ.
+
+### Progress log
+- 2026-10-24: drafted 618–828 in ten sections (seven scratch files), each inserted before the placeholder by script,
+  then `fill`, `verify WD` and `check_bible_quotes.py` (0 problems after each); the placeholder removed after 828.
+  Verify catches fixed on the way: 629 `המעובד` (the `עבד` gate: εὐεργής, now `העשוי`); first occurrences vocalized –
+  639 `הַהֶלִיקוֹן`, 658 `הַמּוּזוֹת הַהֶלִיקוֹנִיּוֹת`; 718 `לחרף` (the `חרף` gate: vocalized `לְחָרֵף` + `[היתר שער]`);
+  733 `זרע` (`[היתר שער]`); 741, 742, 756 `אֵל` / `הָאֵלִים` / `אֵלֶּה` vocalized; 793, 804 the REQUIRED forms of γείνομαι
+  (`תוֹלִיד`, `הנולד`). Quote-checker catches fixed: 655 Judg 11:40 (a quotation from memory, wrong – replaced by the
+  printed verse); several backticked words beside a reference that were not quotations (678, 694, 719, 733, 736, 812).
+- `lexmap` pass on both sides over 618–828: the splits and pairs above; fixed after it – 637 `רְוָחָה` → `מָמוֹן`
+  (εὐοχθέω's word), 792 φώς `אִישׁ` → `גֶּבֶר` (as 193), 809 ἀραιός `קַל` → `דַּק` (κοῦφος's word).
+- Fidelity read-through of all 211 Hebrew lines against the Greek (negations, tenses, moods, clause boundaries).
+- End: `verify WD --strict` – **0 problems**, 0 repeated-line differences, 831 entries (base 831); `check_bible_quotes.py`
+  on the annotated file and project.md: 0 problems; `selftest` 0 failures (29 lines). Not done (as briefed): intro,
+  `build`, the review passes, `build_parallels_index.py`.
+
+### The text on its own terms
+- **The poet's own life** – the only autobiography in early Greek poetry: a father who sailed from Aeolian Kyme "fleeing
+  not wealth but poverty" (633–638), settled in "Ascra, bad in winter, hard in summer, good never" (640); the poet's one
+  crossing, from Aulis to Chalkis, and his victory with a song at the funeral games of Amphidamas – the tripod dedicated
+  to the Muses on Helicon "where they first set me on the road of song" (650–659). The authority is not experience but
+  inspiration (660–662).
+- **The dangers of the sea** – sailing is a second, risky way to wealth: fifty days after the solstice, and only with
+  part of one's livelihood; "wealth is life (ψυχή) to wretched mortals" (686) – and to die among the waves is terrible
+  (687). Poseidon and Zeus hold "the end of good and evil" (669).
+- **The household and the wife** – marriage at the right "season" of a man's life (≈ 30) and a girl's (≈ 18–19), a
+  virgin from nearby, examined so as not to be "a joy to the neighbours"; the good wife the best prize, the bad one
+  "roasts her man without a firebrand" (702–705). The wife returns at the loom (779).
+- **The purity rules** – an archaic religious world without a temple law: every man, at home, keeps the boundaries of
+  pure and impure – hands washed before libation, never urinating facing the sun or uncovered, "for the nights belong
+  to the blessed ones" (730), no exposure by the hearth after intercourse, no begetting after a funeral, rivers and
+  springs as gods. Many are taboos of the house (the jug on the bowl, the unfinished house, the crow, the unsacrificed
+  pot).
+- **The lunar calendar of lucky days** – the month in three decades, each day good or bad for an act (shearing,
+  reaping, begetting boys or girls, castrating, taming, opening the jar, building ships); the days "from Zeus", known to
+  few; "one day is a stepmother, another a mother" (825). The poem ends with the man who knows them, works, is blameless
+  before the gods, "discerning the birds" – the passage to the lost Ornithomanteia.
+
+### Key parallels
+- **WD 730 ↔ Deut 23:13–15 (LXX)**: the camp latrine and covering, "for the Lord walks in your camp … let him not see
+  an indecent thing in you" (ἀσχημοσύνη πράγματος) – Hesiod: do not expose yourself, "for the nights belong to the
+  blessed ones". The same reason (the god is present and sees), the same domain. The strongest single parallel of the
+  part.
+- **WD 724–725, 739–740 ↔ Exod 30:19–20 (LXX νίψονται), Deut 21:6 (LXX νίψονται τὰς χεῖρας)**: washing the hands before
+  approaching the gods – for the priests at the altar on pain of death in the Torah, for every man at his libation in
+  Hesiod; hands washed in a stream as a declaration of innocence (Deut 21:6) ↔ "unwashed of his wickedness and his hands"
+  (740).
+- **WD 733 ↔ Lev 15:16–18 (LXX κοίτη σπέρματος), Exod 19:15**; **WD 735–736 ↔ Num 19:11, Lev 12:2 (LXX σπερματισθῇ)**:
+  seed and the corpse as impurity that keeps one from the holy.
+- **WD 770 ↔ Gen 2:3 (LXX ἡγίασεν)**: "the seventh, a holy day" – a monthly seventh (Apollo's birthday), not a week and
+  not a rest day; and the LXX never calls the seventh ἱερόν: it "sanctifies" it (ἁγιάζω). Kind (c).
+- **WD 801, 828 ↔ Lev 19:26, Deut 18:10 (LXX οἰωνίζομαι, ὀρνιθοσκοπέω)**: the bird-omens that close the poem as wisdom
+  are, in the Greek Torah and in Hesiod's own words, forbidden; Deut 18:13 (LXX τέλειος) ↔ 826–827 the blameless man.
+  Kind (c).
+- **WD 827–828 ↔ Job 1:1 (LXX ἄμεμπτος … ἀπεχόμενος ἀπὸ παντὸς πονηροῦ)**: the portrait of the blessed man.
+- **WD 718 ↔ Prov 17:5 (LXX ὁ καταγελῶν πτωχοῦ παροξύνει τὸν ποιήσαντα)**: to mock the poor is to reproach his maker –
+  in Hesiod, poverty is "the gift of the gods".
+- **WD 720 ↔ Prov 10:19 (LXX φειδόμενος χειλέων)**: the sparing tongue – Hesiod's φειδωλή in the LXX's verb.
+- **WD 686 ↔ Prov 13:8 (LXX λύτρον ἀνδρὸς ψυχῆς ὁ ἴδιος πλοῦτος)**: wealth and ψυχή in one verse, inverted.
+- **WD 704–705 ↔ Prov 12:4 (LXX ἄνδρα ἀπόλλυσιν γυνὴ κακοποιός)**: the bad wife destroys her man slowly, "like a worm in
+  wood" / "roasting without a firebrand"; **702 ↔ Prov 18:22 (LXX γυναῖκα ἀγαθήν)**, 31:10, 703 ↔ Qoh 7:26; 779 ↔ Prov
+  31:19 (LXX 29:19).
+- **WD 711 ↔ Lev 19:18 (LXX οὐκ ἐκδικᾶται)**: "repay him double" against "you shall not take vengeance". Kind (c).
+- **WD 744 ↔ Exod 24:6 (LXX κρατῆρας = `אַגָּנֹת`)**; **746 ↔ Deut 20:5 (LXX ἐνεκαίνισεν)**, the house not finished /
+  not dedicated; **743 ↔ Deut 21:12 (LXX περιονυχιεῖς)**, the nails; **786 ↔ Lev 22:24 (LXX ἐκτομίας)**; **759 ↔ 1 Sam 24:3,
+  Judg 3:24 (LXX)**, the euphemism; **727 ↔ Ezek 8:16 (LXX προσκυνοῦσιν τῷ ἡλίῳ)**, the sun – revered in Hesiod,
+  worshipped as an abomination in Ezekiel; **756 ↔ Deut 29:28 (LXX τὰ κρυπτά)**.
+- **The sea:** 634, 649 ↔ Ps 107:23–27 ("their wisdom swallowed"); 668–669, 689 ↔ Jonah 1:4–5, 14 (LXX); 687 ↔ Jonah 2:4
+  (LXX κύματα); 644–645 ↔ Ezek 27:25–26 (LXX, the laden ship broken by the wind); 648 ↔ Prov 30:19 ("the way of a ship
+  in the heart of the sea"); 692 ↔ Amos 2:13 (LXX ἅμαξα, the overloaded cart).
+- **The emigrant father, 636–638 ↔ Deut 26:5 (LXX "Συρίαν ἀπέβαλεν ὁ πατήρ μου … καὶ παρῴκησεν"), Ruth 1:1**: the father
+  who left his land because of hunger or poverty and settled as a stranger.
+- **The days:** 825 ↔ Job 3:8 ("those who curse the day"), Esther 3:7 (the lot cast "from day to day and month to month");
+  781, 793, 812 ↔ Qoh 3:2; 770 ↔ the new moon (Ps 81:4, Num 28:11, 1 Sam 20:5); 694 ↔ Qoh 3:1; the Babylonian hemerologies
+  (in words; none translated in this folder): a shared motif of the lucky and unlucky days of the month.
+- **The proem, 639, 658–662 ↔ TH 22–34**: the same Muses, the same verb ἐδίδαξαν (662 = TH 22), Helicon; and 804 ↔ TH
+  231–232 (Eris bears Oath, the bane of perjurers) – internal links of the corpus.
+- **Ancient-mind themes**: the poet's life as authority-by-inspiration; the sea as gamble; the bride as "booty"; purity
+  as presence of the gods at night, in the sun, the hearth and the rivers; Rumour as a goddess; the month as a map of
+  fate (the day "stepmother or mother").
+
+### Lines shared with other texts
+- **700 ≈ 343** (`ובייחוד … את מי שגר/שגרה קרוב אליך`): only καλεῖν → γαμεῖν changes (`קָרוֹא` → `נָשׂוֹא`).
+- **789 ≈ 78** (`שקרים ואמרים חלקלקים`), **629 ≈ 45** (`את משוט־ההגה … מעל העשן`), **806 ≈ 599** (`בגורן מעוגלת היטב`),
+  **796 ≈ 604** (`כלב משונן־שיניים`), **800 ≈ 695** (`לָקֹחַ … אל הבית`), **691 ≈ 687** (`ואיום הוא … בין הגלים`), **805 = 466 =
+  597 in F25**, **615 ≈ 619** (σθένος Ὠαρίωνος `חוסן כְּסִיל`).
+- No line of 618–828 repeats another drafted line exactly; `verify --strict` shows 0 repeated-line differences.
+
+### Proposals for the shared renderings
+- **Names (§3):** Κύμη `קִימָה` (636, with a warning against `כִּימָה`), Αἰολίς `אַיּוֹלִית`, Εὔβοια `אֶאוּבוֹיָה`, Αὐλίς
+  `אַאוּלִיס`, Ἀχαιοί `הָאַכָאִים`, Ἑλλάς `הֶלָס`, Ἀμφιδάμας `אַמְפִידָמָס`, Χαλκίς `כַלְקִיס`; Φήμη `שְׁמוּעָה` (if it is
+  personified again).
+- **The tool:** add `הולד` (the infinitive absolute) to the REQUIRED forms of γείνομαι (and check the other REQUIRED
+  lists for the infinitive absolute: `ילוד`, `ללדת` are there for τίκτω, but not `יָלֹד`).
+- **For §5 / §11 (kind-(a) LXX bridges):** κρατήρ `אַגָּן` (Exod 24:6), νίζω `רָחַץ` (Exod 30:19), σπερμαίνω `הִזְרִיעַ` (Lev
+  12:2), κῦμα `גַּל` (Jonah 2:4), φειδωλός `חַסְכָנִי` (Prov 10:19), τέμνω "castrate" `כָּרַת` (Lev 22:24); the kind-(c)
+  identities οἰωνός / ὄρνις ↔ οἰωνίζομαι / ὀρνιθοσκοπέω (Lev 19:26) and ἑβδόμη ἱερόν ↔ ἡγίασεν (Gen 2:3), for the notes.
+- **The month (§5):** ἱστάμενος `הָעוֹלֶה`, φθίνων `הַיּוֹרֵד`, μέσος `אֶמְצָעִי`; ἔνη `רֹאשׁ הַחֹדֶשׁ` (with the self-test).
+- **The gate escapes used** (for the coordinator to confirm): 718 `לְחָרֵף` (ὀνειδίζω, against the `חרף` gate), 733
+  `שכבת זרע` (γονή, against the `זרע` gate).
+
+### For the next part
+- The Works and Days is fully drafted (831 / 831). Left for the coordinator: the intro, `build`, the review passes
+  (consistency, Hebrew), `build_parallels_index.py`, and the open points above (637, 714, 756, 768, 793, 826).
+
+### Lessons for the guidelines
+- **A REQUIRED list must include the infinitive absolute** once the infinitive-for-imperative rule is in force: 793
+  `הוֹלֵד` failed the γείνομαι check, and the translator had to change the form.
+- **The quote-checker also catches quotations from memory that are close but wrong** (655: a Judges 11:40 "quotation"
+  that was not the verse): print first, every time – the checker is the safety net, not the method.
+- **A backticked word followed by a parenthesized reference is read as a quotation** – including a Greek word's Hebrew
+  equivalent and a book named without a chapter (a Qoh 3:2 phrase in backticks, followed by "ch. 3 v. 2" in Hebrew letters without the book, was read as Gen 3:2): write such references in plain
+  words.
+- **Homographs of names across languages** (Κύμη `קִימָה` / Πληιάδες `כִּימָה`) are not caught by any gate: vocalize both,
+  and say so in the note.
+- **The LXX of the Torah's purity laws speaks Hesiod's vocabulary** (νίπτω, λούω, σπέρμα, οἰωνίζομαι): for the ritual
+  passages, grep the LXX for the Greek word before looking for the Hebrew theme.
+
 ## Parallels index
 (generated by `../build_parallels_index.py` from the הקבלה bullets)
