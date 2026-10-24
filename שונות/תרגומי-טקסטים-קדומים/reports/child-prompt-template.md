@@ -27,7 +27,9 @@ Rules for a child session (guidelines §5.1a):
    (§5.1a: title `Round<N>/Run<M>/Sub<K>: …`, one at a time, the same template, it reports to you; wait for it by
    ending your turn, with a `send_later` safety net). Before each heavy sub-agent, call `get_session` (no id) and read
    `external_metadata.rate_limit_info.status`: if it is not `allowed`, commit and push, schedule a wake-up with
-   `send_later` for 5 minutes after `resetsAt`, and end your turn; continue when it fires.
+   `send_later` for 5 minutes after `resetsAt`, and end your turn; continue when it fires. Exception (the user,
+   2026-10-24): on Saturday, Sunday and Monday (UTC date) a `seven_day` `allowed_warning` is ignored (go on as if
+   `allowed`); a `five_hour` warning or `rejected` is never ignored.
 3. **Git:** work on `main`; commit and push after every milestone (§5.1); only your own files; at the end of the run,
    the shared files once, after `git pull --rebase` (the plan's last paragraph).
 4. **When the run is done:**

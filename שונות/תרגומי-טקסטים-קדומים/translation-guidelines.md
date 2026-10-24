@@ -162,7 +162,9 @@ itself (all checked in the smoke test of 2026-10-23, `history.md`).
   1. before each child: commit and push; check its own `get_session` → `external_metadata.rate_limit_info.status`
      (`allowed` / `allowed_warning` / `rejected`; the API documents no percentage, and `utilization` appears only near the
      warning threshold): if not `allowed`, schedule a wake-up with `send_later` for 5 minutes after `resetsAt`, end the
-     turn, and launch on wake-up;
+     turn, and launch on wake-up. **Exception (the user, 2026-10-24): on Saturday, Sunday and Monday (UTC date) an
+     `allowed_warning` whose `rateLimitType` is `seven_day` is ignored – go on as if `allowed`; the five-hour warning
+     (`five_hour`) is never ignored, nor is `rejected`.** The same rule holds for every child and sub-agent check;
   2. `create_session` with `source_url: https://github.com/gilad-bendor/perush`, `source_revision: main` (**without
      them the child has no checkout**), a title `Ancient translations <N>.<M> – <name>`, and the prompt built from
      [`reports/child-prompt-template.md`](reports/child-prompt-template.md), which names the report path
