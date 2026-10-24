@@ -1,6 +1,6 @@
 # Round 4, run 4, sub 1 – Hesiod's Theogony (report)
 
-Session `session_01HrjtT1k7UC3kPSm8NJJkYa` (child of `session_01WwyCYbZBq6CfPR8CtRishj`), 2026-10-24, about 01:45–06:30 UTC.
+Session `session_01HrjtT1k7UC3kPSm8NJJkYa` (child of `session_01WwyCYbZBq6CfPR8CtRishj`), 2026-10-24, about 01:45–05:45 UTC.
 
 ## Done
 - **The whole Theogony (KEY `TH`): all 1,042 lines of the base** (1–1022 and Galen's 929a–t), in the base's order
