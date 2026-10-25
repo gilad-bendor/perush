@@ -940,6 +940,80 @@ spear, a fine for the wooden object); Deut 20:19 ↔ §104; Deut 23:25 ↔ §101
 (`וַיַּצִּתוּ`) ↔ §105–106; Gen 11:3 ↔ §110, §128; 1 Sam 9:9 ↔ §121.3; the tariff that halves for the slave and the
 code that cites its old law (101, 119, 121, 122).
 
+### HL2 part 2 (129.1–162b.4)
+Drafted 2026-10-25: 69 entries 129.1–162b.4 in `annotated-HL2.rtl.md` (§§129–133, `## §§134–141 – לא נשתמרו`, §§142–152,
+`## §§153–156 – (אין טקסט)`, §§157–162, 162b), placeholder now `<!-- טרם תורגם: 163.1–col1 -->`. The coordinator's rulings
+on part 1 applied (PA₅ / *amiyara-* `פֶּלֶג` in 162; UMBIN `גלגל` in 142; ZABAR `אָרָד` / URUDU `נחושת`). Hrozný 1922 and
+Zimmern–Friedrich 1922 read after drafting, quoted at the main row of most §§. `verify HL2`: 0 problems (171 rows
+placeholder); `selftest`: 0 failures; `check_bible_quotes.py`: 0 problems.
+
+**New renderings (Hittite → Hebrew, first row).** All grepped first.
+| Hittite | Hebrew | First | Note |
+|---|---|---|---|
+| *annanuzzi-*, *gazzimuel-*, *katral-*, *[…]iattalu-*, *ḫapputri-*, *zinalli-*, *šankuwalli-* | transliterated: `אַנַּנוּצִּי`, `גַּזִּימוּאֶל`, `קַטְרַל`, `[…]יַטַּלוּ`, `חַפּוּטְרִי`, `זִינַלִּי`, `שַׁנְקוּוַלִּי` | 129.1 … 143.2 | harness parts, a barber's copper tools |
+| *šakuwalli-* "blinker" | `כיסוי־עיניים?` | 129.2 | from *šakui-* "eye" (restored with doubt) |
+| *penna-* | `הסיע` (HL1) | 142.1 | |
+| ŠU.I (Akk. *gallābu*) "barber" | `גַּלָּב` | 144.1 | LH *gallābu* `גַּלָּב`; [cognate via the Akkadian reading] (Ezek 5:1); `ספר` is HL1's *kappuwai-* |
+| *ara-* "colleague" | `חבר` (HL1) | 144.1 | |
+| *šakuwaššar-* | `בשלמותם` (HL1 `בשלמותו`) | 144.2 | |
+| TÚG.SIG | `בגד דק` | 144.3 | |
+| *tuḫš-* mp. of cloth | `ינתק` (HL1 *tuḫš-* `ניתק`) | 144.3 | |
+| É GU₄ | `בית שוורים` | 145.1 | |
+| *weši-* "pasture" | `מרעה` | 146a.1 | |
+| KIRI₆ "garden" | `גן` | 146a.1 | as LH *kirûm* |
+| *ušnešk-* (iterative of *ušnai-*) "offer for sale" | `יציע (למכירה)` | 146a.1 | Hrozný "louer", Z&F (a well) – old readings |
+| *peran walḫ-* "strike in front" = outbid(?) | `לפניו ימחץ` (literal; `מחץ` licensed) | 146a.2 | the meaning in the notes; the old readings take it as bodily harm |
+| *ḫappar* (n.) "trade, deal"; *ḫappari-* (c.) "price" | `מסחר` (HL1); `מחיר` | 146a.3, 146a.4 | **`מחיר` is then taken**: part 3's ŠĪMU (§§178–186) should share it only if ŠĪMU writes *ḫappari-*; otherwise the coordinator decides |
+| *uštul* (OS) = *waštul* | `חטא` (HL1 *waštul*) | 146a.3 | **gate licence fails** on the OS form: see below |
+| *ḫantezzi-* =pat | `הראשונים עצמם` | 146a.4 | HL1 `הראשון`; *-pat* `עצמו` (brief) |
+| *dampupi-* "untrained" | `בלתי מיומן` | 147.1 | |
+| *urkiya-* "track down" | `התחקה (אחריו)` | 149.3 | |
+| *tiya-* (alone; *kuššani tiya-*) | `נכנס` (`ייכנס לשְׂכַר`) | 150.1 | as HL1's *anda tiya-* `נכנס`; for part 4's "(not) step up to the king" this gives `לא ייכנס אל המלך` (the brief's suggestion was `ייגש`) – please confirm |
+| *kuššaniya-*; *kuššan* (also "rent" of a tool) | `שכר` (HL1); `שְׂכַר`, `שְׂכָרוֹ` / `שְׂכָרָהּ` (always vocalized) | 151.1, 157.1 | |
+| *ateš-* "axe"; *tapulli-* "hatchet" | `גרזן`; `קרדום` | 157.1, 157.3 | Gilg. *ḫaṣṣinnu* `גרזן`, *pāšu* / Sum. *tun₃* `קרדום`: common words shared across languages |
+| KI.LÁ "weight" | `משקל` | 157.1 | |
+| BURU₁₄ "harvest" | `קציר` | 158a.1 | |
+| *šeba-* "sheaf"; *išḫai-* "bind (sheaves)" | `אלומות`; `אלם` (`יאלם`) | 158a.1 | **split proposed**: HL1 has *išḫiya-* "impose (an obligation)" `חייב`; the physical binding of sheaves is `אלם` (↔ Gen 37:7 `מְאַלְּמִים אֲלֻמִּים`) |
+| *ištap-* "shut"; É IN.NU.DA; KISLAḪ | `סגר`; `בית התבן`; `גורן` | 158a.2 | |
+| *warš(iya)-* "clean, wipe" (TLHdig's second lemma) | `ניקה` (`ינקו`) | 158a.3 | split from *warš(iya)-* "reap" `קצר` (106.4) – two lemmas in TLHdig |
+| ṢIMDU "team" | `צמד` | 159.1 | [cognate via the Akkadogram] *ṣimdu* ↔ `צֶמֶד` (1 Sam 11:7) |
+| *turiya-* | `רתם` (HL1) | 159.1 | |
+| SIMUG (Akk. *nappāḫu*) "smith" | `נַפָּח` | 160a.1 | as Gilgameš; [cognate via the Akkadian reading]; `חרש־הנחושת` stays TIBIRA's |
+| *aniya-* of metal work | `עיבד` (`יעבד`, piel of HL1's `עבד`) | 160a.1 | |
+| ZÍZ "emmer" | `כוסמת` | 160b.1 | as Gudea's *ziz₂* (Exod 9:32) |
+| *nai-* "turn, divert" | `הטה` | 162.1 | |
+| *appezzi-* "rear, lower" | `אחורי` | 162.2 | |
+| *larpu-* "be blocked(?)" | `ייסתם(?)` | 162.3 | |
+| *ḫandae-* "arrange" | `סידר` | 162b.2 | |
+| KUŠ; UZU | `עור`; `בשר` (HL1) | 162b.4 | |
+
+**Deviations from HL1: none** (HL1's *ḫappar* `מסחר`, *ḫapparai-* `מכר`, *waš-* `קנה`, *šamen-* `הפסיד`, *dala-* `הניח`,
+*wete-* `בנה`, *annanuḫḫa-* `מאולף`, SAG.DU `ראש`, GU₄.APIN.LÁ `שור חרישה`, PARĪSU `פָּרִיס`, IN.NU.DA `תבן` followed).
+
+**Tables – proposals.**
+1. **The `חטא` gate's licence** (`wašt|wašt=|freveln|sünde`) misses the Old Script form *uštul* (146a.3, 146b.2, 147.2,
+   148.2; TLHdig gloss "Frevel"). I wrote `[היתר שער: החטא – …]` in the four entries; proposal: add `ušt[uú]l|frevel` to
+   the licence, then the escapes can go.
+2. **`מחיר`** for *ḫappari-*: see the table (part 3's ŠĪMU).
+3. **tiya-** `נכנס`: see the table (part 4).
+4. **išḫai-** "bind" `אלם` against HL1's *išḫiya-* `חייב`: a split by sense, to accept or refuse.
+
+**Cruxes.** 129.2 *šakuwalli-*; 130.1 the lost object; 132.1 / 133.1 ELLAM as subject (Hrozný: object); 144.1–2 the barber
+lending tools; 144.3 KBo 6.10+'s added *ḫanzani-* (a weaver's comb?); 145.2 what is "left"; **146–148 *peran walḫ-***
+(outbidding vs bodily harm; Hrozný, Z&F) and *ušnešk-* (offer for sale vs hire); 146b the OS-only paragraph and its lost
+object; 149.1 UN (restored) and the trick ("he died"); 151.2 the OS's missing object (the NS has "cow"); 158a.1 *=pat*
+on "man"; 158a.3 *warš-* (clean / water / reap); **157 the axe weights (OS 3 minas / 1 mina 20 / 1 mina against KBo 6.26
+1 mina / ½ mina (copper) / 1 mina)**; **158b the woman's months (OS 3, KBo 6.26 2; KUB 29.31 3)**; 159 KBo 6.26 drops
+"one day"; 160b–161 bronze (OS) vs copper (NS) axes; 162.3 *larpu-*; 162b.4 *dāi* (KBo 6.15) vs *pāi* (KBo 6.10+).
+
+**Key parallels.** Exod 22:13 ↔ §144 (a lent object ruined: replace it whole); Lev 19:13, Jer 22:13 ↔ §145 (the builder's
+wage – the Hittite law protects the employer); Lev 25:14, Gen 23:16 ↔ §§146–148 (fair dealing in a sale; the price fixed
+by the first deal); Exod 21:16, Deut 24:7 ↔ §149 (selling a person and the lie "he died": restitution and two heads, not
+death); Deut 24:14–15, Exod 22:14 ↔ §§150–152, 158 (the hired worker and the hired animal; a fixed royal tariff the Torah
+lacks); 1 Sam 13:21, Deut 19:5 ↔ §157, §§160–161 (a price list for metal tools; the axe); Gen 37:7 ↔ §158a (binding
+sheaves, `יאלם`); 1 Sam 11:7 ↔ §159 (*ṢIMDU* = `צֶמֶד`, a cognate through the Akkadogram); Exod 9:32 ↔ §160b; Gen 26:20
+↔ §162 (water rights); Exod 21:34–35 ↔ §162b (the dead animal's meat and hide in the reckoning).
+
 ## Part HL1: parallels index (the first tablet, 571 clauses)
 
 ### Parallels index
@@ -1177,3 +1251,22 @@ code that cites its old law (101, 119, 121, 122).
 | HL2 §128, 128.2 | *ta-i-e-ez-zi an-da-aš-še〈〈aš-še〉〉 a-pé-e-ni-šu-u-wa-an ⸢pa-a-i⸣* | שיגנוב – בנוסף לו כזה ייתן. | `שְׁנַיִם יְשַׁלֵּם` (שמות כב:ג) | [equivalent] | כפל, כמו ב־110 |
 | HL2 §128, 128.3 | *ták-ku ša-ma-na-az NA₄[{ḪI.A}-u]š? ku-iš-ki ⸢ta⸣-i-e-[e]z-zi* | אם מישהו יגנוב אבנים מן היסוד, | `לְבֵנִים נָפָלוּ וְגָזִית נִבְנֶה` (ישעיהו ט:ט) | [divergence] | לבנים ואבנים כשתי דרגות בנייה |
 | HL2 §128, 128.4 | *A-NA 2 NA₄ 10 NA₄{ḪI.A} pa-[a]-i ták-k[u {N]A₄}ḫu-u-ḫa-an* | לשתי אבנים – עשר אבנים ייתן. אם (אבן) חוּחָה | `חֲמִשָּׁה בָקָר יְשַׁלֵּם תַּחַת הַשּׁוֹר` (שמות כא:לז) | [equivalent] | אותו יחס בדיוק: פי חמישה, בעין |
+| HL2 §144, 144.1 | *[ták-ku {LÚ}ŠU.I {URUDU}zi-na-al-li a-ri]-iš-ša pa-a-[i]* | [אם גַּלָּב זִינַלִּי (של) נחושת לחבר]ו ייתן, | `וְכִי יִשְׁאַל אִישׁ מֵעִם רֵעֵהוּ וְנִשְׁבַּר אוֹ מֵת … שַׁלֵּם יְשַׁלֵּם` (שמות כב:יג) | [equivalent] | כלי שהושאל לחבר וניזק – השואל משלם; בחוק החתי בעין, כלים שלמים (144.2) |
+| HL2 §144, 144.1 | *{LÚ}ŠU.I* | גַּלָּב | `תַּעַר הַגַּלָּבִים` (יחזקאל ה:א) | [cognate] | ŠU.I נקרא באכדית *gallābu*, קרובת `גַּלָּב`; דרך הקריאה האכדית של השומרוגרמה, לא דרך החתית |
+| HL2 §145, 145.2 | *[ták-ku -u]š ta-a-la-i na-aš-kán ku-uš-ša-na-az še-me-en-zi* | [אם …] יניח – הוא מן השְׂכַר יפסיד. | `לֹא תָלִין פְּעֻלַּת שָׂכִיר אִתְּךָ עַד בֹּקֶר` (ויקרא יט:יג) | [divergence] | התורה מגינה על השכיר; החוק החתי – על המעסיק מפני בנאי שלא השלים |
+| HL2 §145, 145.1 | *[ták-ku É GU₄ ku-iš-k]i ú-e-te-ez-zi 6 GÍN KÙ.BABBAR pa-a-i* | [אם מישהו בית שוורים] יבנה – שישה שקלים כסף ייתן. | `בְּרֵעֵהוּ יַעֲבֹד חִנָּם וּפֹעֲלוֹ לֹא יִתֶּן לוֹ` (ירמיהו כב:יג) | [equivalent] | הבנאי ושכרו |
+| HL2 §146a, 146a.1 | *[ták-ku É-er URU-i]a?-an {GIŠ}KIRI₆ na-aš-ma ú-e-ši-in ku-iš-ki uš-ne-eš-[kat-ta]* | [אם] מישהו בית, [עיר?], גן או מרעה יציע (למכירה), | `וְכִי תִמְכְּרוּ מִמְכָּר לַעֲמִיתֶךָ אוֹ קָנֹה מִיַּד עֲמִיתֶךָ אַל תּוֹנוּ אִישׁ אֶת אָחִיו` (ויקרא כה:יד) | [equivalent] | יושר במכירת קרקע; בתורה בין קונה למוכר, כאן נגד צד שלישי ש"מוחץ לפני" הקונה (עוקף אותו) |
+| HL2 §146a, 146a.4 | *[ ḫa-an-t]e-ez-zi-ia-aš-pát ḫa-ap-pa-ri-uš wa-a-ši* | […] במחירים הראשונים עצמם יקנה. | `אַרְבַּע מֵאוֹת שֶׁקֶל כֶּסֶף עֹבֵר לַסֹּחֵר` (בראשית כג:טז) | [equivalent] | המחיר שנקבע במשא ומתן מחייב; העוקף משלם קנס וקונה במחיר הראשון |
+| HL2 §149, 149.2 | *[n]u te-ez-zi BA.ÚŠ-wa-ra-aš iš-ḫa-aš-ši-ša-an* | ויאמר: "מת", ואדוניו | `וְגֹנֵב אִישׁ וּמְכָרוֹ וְנִמְצָא בְיָדוֹ מוֹת יוּמָת` (שמות כא:טז) | [divergence] | בתורה מכירת אדם – מוות; כאן המוכר השקרן מחזיר את האדם ונותן שני ראשים |
+| HL2 §149, 149.4 | *2 SAG.DU pa-a-i pár-na-aš-še-ia šu-⸢wa-a-ez⸣-z[i]* | שני ראשים ייתן, ואל ביתו יביט. | `כִּי יִמָּצֵא אִישׁ גֹּנֵב נֶפֶשׁ מֵאֶחָיו … וּמְכָרוֹ וּמֵת הַגַּנָּב הַהוּא` (דברים כד:ז) | [divergence] | אותו מקרה עקרוני (סחר באדם שאינו שלך); בתורה מיתה, כאן פיצוי בבני אדם |
+| HL2 §150, 150.1 | *ták-ku LÚ-eš ku-uš-ša-ni ti-i-e-[ez-zi A-NA I]TU 1{KAM} 1 GÍN.GÍN K[Ù.BABBAR pa-a-i]* | אם איש לשְׂכַר ייכ[נס – לחודש] אחד שקל אחד כ[סף ייתן]; | `בְּיוֹמוֹ תִתֵּן שְׂכָרוֹ` (דברים כד:טו) | [equivalent] | שכר השכיר; בתורה יום יום ובלי תעריף, כאן מחירון לחודש |
+| HL2 §151, 151.1 | *[ták-ku GU₄.APIN.L]Á ku-iš-ki ku-uš-ša-ni-ez-zi A-NA ITU 1{KAM} 1 G[ÍN.GÍN KÙ.BABBAR pa-a-i]* | [אם] מישהו [שור חרישה] ישכור – לחודש אחד שקל [אחד כסף ייתן]; | `אִם שָׂכִיר הוּא בָּא בִּשְׂכָרוֹ` (שמות כב:יד) | [equivalent] | הבהמה השכורה; בתורה – האחריות לנזק, כאן – דמי השכירות |
+| HL2 §157, 157.1 | *[ták-ku a-t]e-eš ZABAR ŠA 3 MA.NA KI.LÁ A-[NA IT]U 1{KAM} 1 GÍN KÙ.BABBAR ku-uš-ša-aš-še-et* | [אם גרזן] אָרָד של שלוש מנים משקל – לח[ודש] אחד שקל אחד כסף שְׂכָרוֹ; | `וְהָיְתָה הַפְּצִירָה פִים לַמַּחֲרֵשֹׁת וְלָאֵתִים וְלִשְׁלֹשׁ קִלְּשׁוֹן וּלְהַקַּרְדֻּמִּים` (שמואל א יג:כא) | [equivalent] | מחירון רשמי לכלי מתכת |
+| HL2 §157, 157.1 | *[ták-ku a-t]e-eš ZABAR …* | [אם גרזן] אָרָד … | `וְנִדְּחָה יָדוֹ בַגַּרְזֶן לִכְרֹת הָעֵץ` (דברים יט:ה) | [equivalent] | הגרזן ככלי עבודה |
+| HL2 §158a, 158a.1 | *[ták-ku LÚ-e]š?-pát BURU₁₄-i ku-uš-ša-ni [ti-i]-⸢e⸣-ez-zi še-ba-an iš-ḫa-a-i* | [אם איש] דווקא בקציר לשְׂכַר [ייכ]נס – אלומות יאלם, | `וְהִנֵּה אֲנַחְנוּ מְאַלְּמִים אֲלֻמִּים בְּתוֹךְ הַשָּׂדֶה` (בראשית לז:ז) | [equivalent] | אותה עבודה: קשירת האלומות בקציר |
+| HL2 §158b, 158b.1 | *[ták-ku MUNUS-TU]M? BURU₁₄-i ku-uš-ša-ni ti-i-e-ez-zi ŠA ITU 3{KAM} 12 PA ŠE ku-uš-ša-aš-še-et* | [אם אשה] בקציר לשְׂכַר תיכנס – של שלושה חודשים שנים עשר פָּרִיס שעורים שְׂכָרָהּ. | `לֹא תַעֲשֹׁק שָׂכִיר עָנִי וְאֶבְיוֹן` (דברים כד:יד) | [equivalent] | השכירים העונתיים; האשה – שליש מן האיש; בנוסח המאוחר (KBo 6.26) – שני חודשים |
+| HL2 §159, 159.1 | *[ták-ku ṢÍ-I]M-DÌ GU₄{ḪI.A} UD 1{KAM} ku-iš-ki tu-u-ri-ez-zi ½ PA ŠE ku-uš-ša-aš-še-et* | [אם] מישהו [צמד] שוורים יום אחד ירתום – חצי פָּרִיס שעורים שְׂכָרוֹ. | `וַיִּקַּח צֶמֶד בָּקָר וַיְנַתְּחֵהוּ` (שמואל א יא:ז) | [cognate] | *ṢIMDU* – האכדית *ṣimdu* "צמד", קרובת `צֶמֶד`; דרך האכדוגרמה |
+| HL2 §160b, 160b.1 | *[ták-ku a-te-eš Z]ABAR ŠA 2 MA.NA KI.LÁ a-ni-e-ez-zi 1 PA ZÍZ ku-uš-ša-[aš-še-et]* | [אם גרזן] אָרָד של שתי מנים משקל יעבד – פָּרִיס אחד כוסמת שְׂכָ[רוֹ]. | `וְהַחִטָּה וְהַכֻּסֶּמֶת לֹא נֻכּוּ` (שמות ט:לב) | [equivalent] | הכוסמת כדגן השדה |
+| HL2 §160a, 160a.1 | *[ták-ku {LÚ}SIMU]G …* | [אם נַפָּ]ח … | `וְהָיְתָה הַפְּצִירָה פִים לַמַּחֲרֵשֹׁת` (שמואל א יג:כא) | [equivalent] | שכר הנפח לפי מחירון; SIMUG נקרא באכדית *nappāḫu* (`נַפָּח`) |
+| HL2 §162, 162.1 | *ták-ku PA₅-an EGIR-an ar-ḫa ku-iš-ki na-a-i 1 GÍN KÙ.BABBAR* | אם מישהו פֶּלֶג מאחור הלאה יטה – שקל אחד כסף | `וַיָּרִיבוּ רֹעֵי גְרָר עִם רֹעֵי יִצְחָק לֵאמֹר לָנוּ הַמָּיִם` (בראשית כו:כ) | [equivalent] | זכויות מים בין שכנים; [absent] לתורה אין חוק על מי השקיה |
+| HL2 §162b, 162b.4 | *šar-ni-i]k-ze-el Ù KUŠ-ŠÚ UZU-ŠU [da]-a-i* | [פי]צוי, ואת עורו (ואת) בשרו [ייק]ח. | `וְגַם אֶת הַמֵּת יֶחֱצוּן` (שמות כא:לה) | [equivalent] | הבהמה המתה – בשרה ועורה – נכנסת לחשבון הפיצוי |

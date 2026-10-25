@@ -328,6 +328,16 @@ objects transliterated and vocalized (`קַרְפִּינָה`, `קַקַּפָ�
 the same deictic adverb, the Akkadogram writing the Hittite one; separating them would rewrite nine HL1 lines and the
 ritual formula *kiššan memai* `כָּךְ אוֹמֵר` for no reader's gain. (*apeniššan* keeps `באותה דרך`.)
 
+### 7.9 Merged from Sub2, part 2 (HL2 129.1–162b.4; 2026-10-25; accepted by the coordinator unless said)
+No deviation from HL1 (`מסחר`, `מכר`, `קנה`, `שְׂכַר`, `שכר`, `הפסיד`, `בנה` followed). New: ŠU.I `גַּלָּב` (Akk. *gallābu*), SIMUG
+`נַפָּח` (*nappāḫu*); *ṢIMDU* `צמד` ([cognate via the Akkadogram], 1 Sam 11:7); *ateš-* `גרזן`, *tapulli-* `קרדום` (1 Sam 13:21); ZÍZ
+`כוסמת`; *ušnešk-* `הציע (למכירה)`; *ḫappari-* "price" `מחיר` – **and ŠĪMU (§§178–186) `מחיר` too** (coordinator: the Akkadogram
+writes Hittite *ḫappar-* "price"; HL1's *ḫappar* "trade" `מסחר` is a split by sense); *weši-* `מרעה`; *peran walḫ-* "outbid"
+literal `לפניו ימחץ` (the sense in the notes); OS *uštul* = *waštul* `חטא` (**the `חטא` licence now also matches `ušt[uú]l`**; the
+four escapes at 146a.3, 146b.2, 147.2, 148.2 removed). **Rulings:** *tiya-* "step" `נכנס` (HL1 *anda tiya-*; so HL 187–200a
+`לא ייכנס אל המלך`, not the brief's `ייגש`); *išḫai-* "bind (sheaves)" `אלם` (↔ Gen 37:7) against HL1's *išḫiya-* "impose"
+`חייב`: a split by sense, accepted; TLHdig's two *warš-* ("clean" `ניקה`, "reap" `קצר`) stay apart.
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;
@@ -414,7 +424,7 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])[ובלהמכש]*(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=` | `מחץ` only for *walḫ-* |
 | `(?<![א-ת])[ובלהמכש]*(?:פיצה\|יפצה\|יפצו\|פיצוי\|פיצויים\|פצה)(?![א-ת])` | `šarnink\|šarnikz\|šar=nink` | `פיצה` only for *šarnink-* |
 | `(?<![א-ת])[ובלהמכש]*(?:בן חורין\|בת חורין\|בני חורין\|בנות חורין)(?![א-ת])` | `ellu\|elletu\|el-lum\|el-li\|el-le\|araw\|\bfrei\b` | `בן חורין` only for *ELLUM* / *arawanni-* |
-| `(?<![א-ת])[ובלהמכש]*(?:חטא\|חוטא\|חוטאת\|יחטא\|חטאו\|חטאת)(?![א-ת])` | `wašt\|wašt=\|freveln\|sünde` | `חטא` only for *wašta-* / *waštul* |
+| `(?<![א-ת])[ובלהמכש]*(?:חטא\|חוטא\|חוטאת\|יחטא\|חטאו\|חטאת)(?![א-ת])` | `wašt\|wašt=\|ušt[uú]l\|freveln\|sünde` | `חטא` only for *wašta-* / *waštul* |
 | `(?<![א-ת])[ובלהמכש]*(?:עברה\|עבירה\|עברות)(?![א-ת])` | `ḫarat\|ḫaratar` | `עברה` only for *ḫaratar* |
 | `(?<![א-ת])[ובלהמכש]*(?:שבועה\|שבועות\|נשבע\|ישבע\|יישבע\|נשבעו)(?![א-ת])` | `linga\|linki\|link\|nīš\|mamīt\|\beid\b` | `שבועה` only for *lingai-* |
 
