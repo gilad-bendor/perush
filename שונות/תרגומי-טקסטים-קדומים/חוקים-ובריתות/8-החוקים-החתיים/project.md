@@ -209,6 +209,72 @@ castrated) and HL 71? of the first tablet; it is not in the Konkordanz list of C
 tablet of HL 101–200 is "the second". (Both colophons of HL1 also say "Tablet 2" – CHiL `2!`: the
 open question of HL1, now with the second tablet's own count beside it.)
 
+## HL2: the coordinator's brief for the translator (Sub2, 2026-10-25; on top of `../translator-brief--hittite.md`)
+**Your text** is `composite-HL2.tsv` (read the section "HL2: the composite" above first: the leads, the recensions, the
+marks). Labels `<§>.<n>` (`101.1` … `200b.5`, `col1`); one Hebrew line per row; `@` + `fill`. **Parts** (one translator,
+resumed part by part): **P1 101.1–128.6** (90 rows), **P2 129.1–162b.4** (69), **P3 163.1–186.4** (105), **P4 187.1–col1**
+(66). File: `annotated-HL2.rtl.md`, built like `annotated-HL1.rtl.md` (title `# החוקים החתיים, הלוח השני: "אם גפן" – תרגום
+מבואר`, a short head paragraph: the base is our composite, the marks, the fixed words). Put `<!-- טרם תורגם: FROM–TO -->` for
+the rows not yet drafted. Headings `## §N – <Hebrew title>` (`## §146a – …`, `## §192 – …`); for the lost numbers a heading
+alone, no entries: `## §§114–117 – לא נשתמרו`, `## §§134–141 – לא נשתמרו`, `## §§153–156 – (אין טקסט)`, at their places.
+
+**HL2 follows HL1's Hebrew** for every shared word and formula (`../renderings.md` §7.1–§7.7 and the review rulings; check
+with `hittite_tools.py lemma` / `grep --all` / `lexmap` before fixing a word). The formulas of §H5 now fire on HL2's
+hyphenated text (F1 `אם`, F2/F3 `לפנים … ועתה`, F4 `ואל ביתו יביט`, F7 *ḫurkel* `תועבה`, F8 *pāi* `ייתן`, F9 `יגנוב`, and
+the new **F11 *UL / natta ḫaratar* = `אין עברה`**). New reservations for HL2's parallels (§H3, NEVER): `בער` and its forms
+(Exod 22:4–5; *lukk-* = `הצית`, *warnu-* = `שרף`), `מיטב`, `כלאים`, `הסיג`, `סקל`, `ירבע`/`לרבעה`, `דמיהם`, `ערכך`, and the
+verb `קרב` (`יקרב`, `תקרב` …: Lev 18:6, 19; 20:16); the old ones hold (`נאף`/`נואף`, `ערוה`, `תבל`, `זמה`, `יבם`, `יומת`,
+`הכה`, `נגח`, `מוהר` plene …). If a line truly needs a reserved or gated word, propose a licence in Proposals.
+
+**The composite's marks.** TLHdig's `[ ]` (restored, often from the duplicates – the OS-led rows are half restored),
+`⸢ ⸣` damaged, `〈 〉` omitted by the scribe (Hebrew `⟨ ⟩`), `!` corrected, `?` uncertain (keep it), `x` an unread sign
+(`[…]`), and **`*…*` = written over an erasure** in KBo 6.26: translate the text, say "על גבי מחיקה" in נוסחים where it
+matters. The bracket rule of HL1 holds (a Hebrew word is bracketed when the Hittite stem is restored). Row 192.3 is a
+later-only line: open it with `{נוסח מאוחר}`.
+
+**נוסחים** (every entry with a duplicate): every difference of content between the lead and its duplicates, above all
+**the Old Script copy against the New Script ones** and **the Old Hittite version (292.I) against the later (292.II)**:
+the figures (§157 axe weights, §158b months, §§119–129 the tariffs), the words (§168 OS *arḫan* "boundary" against NS
+ZAG; §106 OH "another's field" against KBo 6.11's "a cultivated field"; §112 KBo 6.10+ *ḪALQIM* "lost" against KBo 6.11
+*ḫalkin* "grain"; §111 KBo 6.10+ *appattari* against KBo 6.11 *ēpari*; §163 KBo 67.269 *MUN-an* "salt" where KBo 6.26
+has *išuwan*; §171 KBo 6.26 "her sons" against KBo 6.13+ "her son"; §191 KBo 6.26's "in two places" against KUB 29.34+
+"in one place"; §193 the brother's son and KBo 6.26's added "it is no offence"; §199 KBo 63.10 divides the pig/dog case
+from the ox), the paragraph divisions (the OS divides 158a/b, 160a/b, 173a/b; KBo 6.13+ divides 195a/b/c), and the
+§§ the OS has and the NS lacks (146b) or the reverse (162b, 192.3). The `witnesses` alignment is approximate: compare the
+whole §.
+
+**Look for** (briefs say "look for", never "translate as"; print every verse first): Exod 22:4–5 (HL 105–107: fire,
+grazing in another's field; `מֵיטַב שָׂדֵהוּ` ↔ the "good field" of 106); Lev 19:19 and Deut 22:9 (HL 166–167: seed upon
+seed); Deut 19:14, 27:17 (HL 168–169: the boundary – HL1 has *arḫa-* `גבול`; the OS here has *arḫan*, the NS ZAG: one
+Hebrew); Exod 22:17 (HL 111: clay for an image = sorcery; and HL 170, the snake killed while speaking another's name: MUŠ
+– Etana's *ṣerru* is `נָחָשׁ`, check `grep --all`; Lev 19:26 `לֹא תְנַחֲשׁוּ`, Gen 3); Exod 21:28–32 (HL 199: the ox that leaps
+on a man dies, a sheep dies in the man's place); Lev 18 and 20 (HL 187–200a: which unions are *ḫurkel* and which are "no
+offence"; the death penalty and the king's pardon; "he shall not approach the king, nor become a priest" ↔ Lev 21:16–23;
+the stepmother while the father lives ↔ Lev 18:8; the wife's sister after her death ↔ **Lev 18:18 `בְּחַיֶּיהָ`**; mother
+and daughter ↔ Lev 18:17, 20:14; the brother's wife while the brother lives ↔ Lev 18:16, 20:21); Deut 22:22–27 (HL 197–198:
+in the mountains / in the house, the husband's right to kill, "let both die" *2-pat akkandu* ↔ **Deut 22:22 `וּמֵתוּ גַּם
+שְׁנֵיהֶם`**, the husband who spares his wife spares the lover too ↔ Prov 6:32–35); Deut 25:5–10 and Gen 38 (HL 193: the
+brother, then the father, then the brother's son); Deut 21:18–21? (HL 171: the mother who disowns her son, and takes him
+back; HL 173b: the slave who rebels against his master); Exod 21:2–4 (HL 175: the free woman taken by a shepherd becomes a
+slave, her children); Gen 47:13–26? (HL 172: the man kept alive in a year of famine); Lev 27 (HL 176–186: prices,
+valuations); the substitute sheep (HL 166–167, 196, 199: *1 UDU … kaššaššaš ḫuittiyanta*) ↔ Gen 22:13 `תַּחַת בְּנוֹ`, Lev 16
+(a substitute, not a scapegoat: check the verb); Exod 22:9–14 (HL 145, 149, the hired and the sold; HL 162b?); and the
+code that revises itself (*karū … kinun=a*, HL 101, 119, 121, 122, 129, 166–167).
+
+**Suggestions to check (yours to decide, with grep first):** *katta wašta-* "sin with" `חטא עם` (*wašta-* = `חטא`); OH
+*akiaš* "he shall die" `ימות`; *šeš-* `שכב עם`; *wen-* "copulate" `בא על` (MAL *niāku*); *pupu-* "lover" `מאהב` (`נואף`
+reserved); *tiya-* "step up (to the king)" `ייגש`; *ḫuišnu-* "let live, spare" (one verb: `החיה`?); *2-pat akkandu* literal
+(`שניהם ימותו`); *ŠĪMU* `מחיר`; *paršiya-* (the boundary, the bread) one verb, not `הסיג` and not `שבר` (*duwarna-*); the
+verb of sowing in 166–167 (TLHdig *šuniye/a-*) against HL1's *šunna-* `מילא`; *ḪUR.SAG* `הר`; *ēpp-* `תפס`, *wemiya-*
+`מצא`, *āšk-* `שער`; the colophon as HL1's (DUB `לוח`, QATI `תַּם`).
+
+**Rank 3/5 (after drafting only).** No open modern translation of HL2 exists. Check against Hrozný 1922 (French, PD, rank 5;
+his numbering is ours; old readings) and Zimmern & Friedrich 1922 (*AO* 23/2, German, PD, rank 5; **their § numbers differ**
+– search by content), both OCR in `/tmp/claude-0/-home-user-perush/729bb44c-0cdc-53f9-8752-0b74b51d7bc2/scratchpad/rank5/`
+(`Hrozny-1922--Code-hittite.djvu.txt`, `Zimmern-Friedrich-1922--AO-23-2.djvu.txt`; OCR errors – never take a reading from
+them, guidelines §5.2); the CHD per word (`hittite_tools.py chd WORD`; no bulk extraction). Record disagreements in
+תרגומים ("Hrozný: «…»").
+
 ## Bible (look for; the parallels index is the product)
 Exod 21:12–14 (HL 1–4: killing; "his hand errs" ↔ 21:13), 21:18–19 (HL 10: the injurer pays the physician), 21:22–25 (HL
 17–18: a miscarriage, by month), 21:26–27 (HL 7–8, 11–16: blinding, a tooth, limbs: compensation, not talion), 21:28–36

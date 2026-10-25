@@ -103,6 +103,32 @@ def flat(s):
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
+_FOLD = str.maketrans("áàéèíìúùÁÀÉÈÍÌÚÙ", "aaeeiiuuaaeeiiuu", "₀₁₂₃₄₅₆₇₈₉")
+
+
+def fold(s):
+    """A TLHdig transliteration (flat) → a normalized form for the regexes written on CHiL's normalized text: the
+    syllables joined (`ták-ku` → `takku`), the sign-index accents and subscripts dropped, runs of one vowel written once
+    (`ḫu-u-ur-ki-il` → `ḫurkil`, `pa-a-i` → `pai`, `ka-ru-ú` → `karu`). Used beside the raw form, for the composite
+    texts (HL2, IN) only (2026-10-25, Sub2: the formulas and gate licences never fired on hyphenated text)."""
+    out = []
+    for t in s.split():
+        t = t.translate(_FOLD)
+        if "-" in t and not t.startswith("{"):
+            t = t.replace("-", "")
+        elif "-" in t:  # keep a determinative's word: {d}utu-ši → {d}utuši
+            t = t.replace("-", "")
+        t = re.sub(r"([aeiu])\1+", r"\1", t)
+        out.append(t)
+    return " ".join(out)
+
+
+def src_forms(key, text):
+    """The forms of a base line the names / formulas regexes are tried on: the flat line, and for a composite also folded."""
+    f = flat(text)
+    return [f, fold(f)] if UNITS[key][2] == "comp" else [f]
+
+
 # ---------------------------------------------------------------- base texts
 _DATA = {}
 _TLH = {}
@@ -250,6 +276,8 @@ def license_text(key, lab):
     if not r:
         return ""
     lems = " ".join(f"{flat(w[1])} {w[2].lower()}" for w in r["words"])
+    if UNITS[key][2] == "comp":  # TLHdig lemmas are written `ḫurk=el-`, `ḫara=ttar`: add them without the `=`
+        lems += " | " + lems.replace("=", "") + " | " + fold(flat(r["text"]))
     return f"{flat(r['text'])} | {lems}"
 
 
@@ -427,7 +455,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
     bad = 0
     plain = strip_marks(heb)
     r = row(key, lab) or {"text": "", "words": []}
-    srcf = flat(r["text"])
+    sfs = src_forms(key, r["text"])
     for rx, allow, why in reserved():
         try:
             m = re.search(rx, plain)
@@ -441,7 +469,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
             out.append(f"RESERVED {key} {lab}: «{m.group(0).strip()}» – {why}\n    {heb}\n    src: {r['text']}")
             bad += 1
     for srx, hv, hp, star in names():
-        if not re.search(srx, srcf):
+        if not any(re.search(srx, f) for f in sfs):
             continue
         if not _heb_has(plain, hp) and "[היתר שם: " not in body:
             out.append(f"NAME {key} {lab}: `{srx}` → {hv} (renderings §H2) is not in the line\n    {heb}")
@@ -456,7 +484,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
             out.append(f"UNVOCALIZED {key} {lab}: {why}\n    {heb}")
             bad += 1
     for fid, grx, hrx, _ in formulas():
-        if re.search(grx, srcf) and not re.search(hrx, nopunct(plain)) and "[סטייה מן הנוסחה" not in body:
+        if any(re.search(grx, f) for f in sfs) and not re.search(hrx, nopunct(plain)) and "[סטייה מן הנוסחה" not in body:
             out.append(f"FORMULA {key} {lab}: {fid} `{grx}` → `{hrx}` (renderings §H5)\n    {heb}\n    src: {r['text']}")
             bad += 1
     return bad
@@ -646,11 +674,12 @@ def cmd_data(key, a=None, b=None):
         for sig, lab, tx in r["mss"]:
             print(f"- ms {sig} {lab}: `{tx}`")
         srcf = flat(r["text"])
-        nn = [(h, st) for srx, h, hp, st in nm if re.search(srx, srcf)]
+        sfs = src_forms(key, r["text"])
+        nn = [(h, st) for srx, h, hp, st in nm if any(re.search(srx, f) for f in sfs)]
         if nn:
             print("- NAMES (renderings §H2): " + "; ".join(h for h, st in nn))
         for fid, grx, hrx, note in fs:
-            if re.search(grx, srcf):
+            if any(re.search(grx, f) for f in sfs):
                 print(f"- FORMULA {fid}: `{hrx}` ({note})")
         lt = license_text(key, r["label"])
         gated = [why for hx, lx, why in rs_ if lx and re.search(lx, lt)]
