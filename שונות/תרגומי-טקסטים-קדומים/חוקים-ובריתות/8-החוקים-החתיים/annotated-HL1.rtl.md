@@ -1128,8 +1128,8 @@
 
 ### 158
 `appezzin=at attaš annaš ḫullanzi`
-> ולאחר מכן האב וְהָאֵם יתנגדו לו,
-- **פירוק:** `appezzin=at` – appezzi(ya)- "later, rear", acc. sg. c. (adverbial "afterwards") + =at "it" ("ולאחר מכן … לו"); `attaš` – atta- "father" ("האב"); `annaš` – anna- "mother" ("והאם"); `ḫullanzi` – ḫulla- "fight, oppose, contest", pres. 3pl ("יתנגדו").
+> ולאחר מכן האב וְהָאֵם יתנגדו לכך,
+- **פירוק:** `appezzin=at` – appezzi(ya)- "later, rear", acc. sg. c. (adverbial "afterwards") + =at "it" ("ולאחר מכן … לכך"); `attaš` – atta- "father" ("האב"); `annaš` – anna- "mother" ("והאם"); `ḫullanzi` – ḫulla- "fight, oppose, contest", pres. 3pl ("יתנגדו").
 - **תרגומים:** CHiL: "(ma) più tardi il padre (e) la madre (della sposa) lo contestano," ("יערערו עליו") – מסכים בתוכן; `יערערו` הוא כבר *baqāru* של חוקי חמורבי.
 - **הערות:** *ḫulla-* הוא פועל של מלחמה ("להכות, להביס"); כאן – ההורים "נלחמים" בשידוך ומבטלים אותו.
 
@@ -1457,8 +1457,8 @@
 
 ### 202
 `Ú-UL=[an=z(a)] ḫapparaezzi`
-> לא [ימכור אותם].
-- **פירוק:** `Ú-UL=[an=z(a)]` – UL "not" + =an "it" + =za ("לא … [אותם]"); `ḫapparaezzi` – ḫapparai- "trade, sell", pres. 3sg ("[ימכור]").
+> לא ימכור [אותם].
+- **פירוק:** `Ú-UL=[an=z(a)]` – UL "not" + =an "it" + =za ("לא … [אותם]"); `ḫapparaezzi` – ḫapparai- "trade, sell", pres. 3sg ("ימכור").
 - **תרגומים:** CHiL: "e non li vende[rà]." – מסכים.
 - **הערות:** מי שנוטש את השדה אינו רשאי למכור אותו: הוא אינו בעליו. הקרקע חוזרת לבעלים או לקהילה, עם חובותיה.
 
@@ -1878,8 +1878,8 @@
 
 ### 262
 `[takku iw]aruwaš išḫāš A.ŠÀ{ḪI.A} kulei ār[ki …]`
-> [אם אדון] המַתָּן את השדות הַבּוּרִים י[פריש …],
-- **פירוק:** `[takku` – takku "if" ("[אם"), F1; `iw]aruwaš` – iwaru- "inheritance share", gen. ("המַתָּן"); `išḫāš` – išḫa- "lord, owner", nom. ("אדון]"); `A.ŠÀ{ḪI.A}` – A.ŠÀ "field", pl. ("את השדות"); `kulei` – kulei "fallow (land)" ("הבורים"); `ār[ki` – ark- "divide (off), separate, cut up", pres. 3sg ("י[פריש"); `…]` – lost ("…]").
+> [אם] אדון המַתָּן את השדות הַבּוּרִים י[פריש …],
+- **פירוק:** `[takku` – takku "if" ("[אם]"), F1; `iw]aruwaš` – iwaru- "inheritance share", gen. ("המַתָּן"); `išḫāš` – išḫa- "lord, owner", nom. ("אדון"); `A.ŠÀ{ḪI.A}` – A.ŠÀ "field", pl. ("את השדות"); `kulei` – kulei "fallow (land)" ("הבורים"); `ār[ki` – ark- "divide (off), separate, cut up", pres. 3sg ("י[פריש"); `…]` – lost ("…]").
 - **תרגומים:** CHiL: "[Se] l'ere[de delim]ita dei campi incolti […]" ("יתחום") – העברית `יפריש` ל־*ark-* "לחלק, לחתוך".
 - **הערות:** "אדון המַתָּן" – היורש הראשי, בעל הנחלה. "השדות הבורים" (*kulei*) – אדמה שאינה מעובדת, אולי החלק שנשאר משותף. אם היורש מפריש ממנה חלק ליורש אחר – זה חייב בלוּצִּי.
 
@@ -1931,7 +1931,7 @@
 
 ### 269
 `takku LÚ˽{G[}IŠTUKUL …] kuiš[ki w]āši`
-> אם מישהו יקנה [את כל השדות] של איש־הכלי,
+> אם מישהו יקנה {נוסח קדום: את כל השדות} של איש־הכלי,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `LÚ˽{G[}IŠTUKUL` – "of the man of the tool", gen. ("של איש־הכלי"); `…]` – lost (OS: "all his fields") ("[את כל השדות]"); `kuiš[ki` – kuiški "anyone" ("מישהו"); `w]āši` – waš- "buy", pres. 3sg ("יקנה").
 - **נוסחים:** הנוסח הקדום (291.1 213–219) שלם: `takku LÚ˽{GIŠ}TUKUL-aš A.ŠÀ{ḪI.A}-ŠU ḫūmandan kuiški wāši` – "את כל שדותיו" / `luzzi [karp]iezzi` / `takku A.ŠÀ{ḪI.A}-n=a mekkī wāši` – "ואם שדה רב יקנה" / `luzzi natta karpiezzi` / `takku {A.ŠÀ.ḪI.A}kulēi=ma ārki` / `našma LÚ{MEŠ} URU-LIM pianzi` / `ta luzzi karpiyezzi`. כלומר מי שקנה הכול – נושא בחובה; מי שקנה הרבה (אך לא הכול) – לא.
 - **תרגומים:** CHiL: "Se qualc[uno com]pra […] di un uomo del (servizio) TUKUL".
@@ -2201,7 +2201,7 @@
 ### 307
 `kūšan=a Ú-UL kuiški yēzzi`
 > "ושָׂכָר אף אחד אינו עושה (לנו),
-- **פירוק:** `kūšan=a` – kuššan- "wage, hire", acc. + =a ("ושָׂכָר"); `Ú-UL` – UL "not" ("אינו … לא"); `kuiški` – kuiški "anyone" ("אף אחד"); `yēzzi` – iya- "do, make", pres. 3sg ("עושה").
+- **פירוק:** `kūšan=a` – kuššan- "wage, hire", acc. + =a ("ושָׂכָר"); `Ú-UL` – UL "not" ("אינו"); `kuiški` – kuiški "anyone" ("אף אחד"); `yēzzi` – iya- "do, make", pres. 3sg ("עושה").
 - **תרגומים:** CHiL: "“Nessuno (ci) fa un pagamento," – מסכים: "אף אחד אינו עושה לנו תשלום".
 - **הערות:** "שכר אף אחד אינו עושה לנו" – אין מי שמשלם לנו על עבודתנו; ובכל זאת אנחנו חייבים בהלך. בקולם נשמעת הטענה של העובד הכפוי: עבודה בלי שכר.
 
@@ -3206,7 +3206,7 @@
 
 ### 452
 `[1 PA-RI]-SI? ŠE pāi`
-> [פָּרִיס אחד] שעורים ייתן.
+> [פָּרִיס אחד]? שעורים ייתן.
 - **פירוק:** `[1` – "one" ("[אחד"); `PA-RI]-SI?` – PARĪSU (Akk.) "parisu (a dry measure)", acc. ("פָּרִיס]"); `ŠE` – ŠE "barley", gen. ("שעורים"); `pāi` – pai- "give", pres. 3sg ("ייתן"), F8.
 - **תרגומים:** CHiL: "darà [1 PARISU ] di orzo (come risarcimento)."
 - **הערות:** `פָּרִיס` מנוקד (מידת יבש, כחצי "סאה" בבלית?). קנס קטן – שכר של הבהמה בעבודה שלא הוסכמה.
@@ -3260,8 +3260,8 @@
 
 ### 459
 `išḫaš=šiš [{UZ]}UÌ dāi`
-> אדוניו [את השומן] ייקח,
-- **פירוק:** `išḫaš=šiš` – išḫa- "owner" + "its" ("אדוניו"); `[{UZ]}UÌ` – Ì "fat, oil" (with the meat determinative UZU: "the fat (meat)") ("[את השומן]"); `dāi` – dā- "take", pres. 3sg ("ייקח").
+> אדוניו את השומן ייקח,
+- **פירוק:** `išḫaš=šiš` – išḫa- "owner" + "its" ("אדוניו"); `[{UZ]}UÌ` – Ì "fat, oil" (with the meat determinative UZU: "the fat (meat)") ("את השומן"); `dāi` – dā- "take", pres. 3sg ("ייקח").
 - **תרגומים:** CHiL: "(allora) il suo proprietario (della pecora) prenderà il grasso" – מסכים: "השומן".
 - **הערות:** "השומן" – הבשר השמן, החלק הטוב.
 
@@ -3397,8 +3397,8 @@
 
 ### 478
 `2 P[A-RI-SI ŠE p]āi`
-> שני פָּרִיסִים שעורים ייתן.
-- **פירוק:** `2` – "two" ("שני"); `P[A-RI-SI` – PARĪSU, pl. ("פָּרִיסִים"); `ŠE` – "barley" ("שעורים"); `p]āi` – pai- "give" ("ייתן"), F8.
+> שני פָּ[רִיסִים שעורים] ייתן.
+- **פירוק:** `2` – "two" ("שני"); `P[A-RI-SI` – PARĪSU, pl. ("פָּ[רִיסִים"); `ŠE` – "barley" ("שעורים]"); `p]āi` – pai- "give" ("ייתן"), F8.
 - **תרגומים:** CHiL: "[da]rà 2 [ PARISU di orzo] (come risarcimento)."
 
 ## §86 – חזיר שנכנס אל ערמה, אל שדה, אל גן
@@ -3750,8 +3750,8 @@
 
 ### 529
 `[tayazila]š 6 GÍN KÙ.BABBAR pāi`
-> על הגנבה שישה שקלים כסף ייתן,
-- **פירוק:** `[tayazila]š` – tayazzil- "theft", gen. ("על הגנבה"); `6` – "six" ("שישה"); `GÍN` – "shekel" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `pāi` – pai- "give" ("ייתן"), F8.
+> [על הגנבה] שישה שקלים כסף ייתן,
+- **פירוק:** `[tayazila]š` – tayazzil- "theft", gen. ("[על הגנבה]"); `6` – "six" ("שישה"); `GÍN` – "shekel" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `pāi` – pai- "give" ("ייתן"), F8.
 - **תרגומים:** CHiL: "(e) darà 6 sicli di argento (come risarcimento) del [furto]."
 
 ### 530
@@ -3982,8 +3982,8 @@
 
 ### 563
 `[G]U₄?{ḪI.A}-ŠU ētreškezzi`
-> את שוורו? יאכיל,
-- **פירוק:** `[G]U₄?{ḪI.A}-ŠU` – GU₄ "cattle", pl. (uncertain) + -ŠU "his" ("את שוורו?"); `ētreškezzi` – etri(ya)- "feed", iterative pres. 3sg ("יאכיל").
+> את שווריו? יאכיל,
+- **פירוק:** `[G]U₄?{ḪI.A}-ŠU` – GU₄ "cattle", pl. (uncertain) + -ŠU "his" ("את שווריו?"); `ētreškezzi` – etri(ya)- "feed", iterative pres. 3sg ("יאכיל").
 - **תרגומים:** CHiL: "egli dovrà nutrire i suoi (della vittima) [bo]vini"
 - **הערות:** המצית מאכיל את בקרו של הנפגע כל החורף – כי המספוא נשרף.
 
@@ -4017,8 +4017,8 @@
 
 ### col1
 `DUB 2!{KAM} takku […] ŠU {m}[… …] PA-NI {m}a[-… SA]G [I]Š-[ṬUR]`
-> לוח שני! של "אם […]" – יד […] לפני א[…] … כתב.
-- **פירוק:** `DUB` – DUB "tablet" ("לוח"); `2!{KAM}` – "second" (ordinal; the editors mark the number) ("שני!"); `takku` – takku "if" ("של \"אם"); `[…]` – lost ("[…]\""); `ŠU` – ŠU "hand (of the scribe)" ("יד"); `{m}[… …]` – a personal name, lost ("[…]"); `PA-NI` – PĀNI (Akk.) "before, in the presence of" ("לפני"); `{m}a[-…` – a personal name ("א[…]"); `SA]G` – broken (title?) ("…"); `[I]Š-[ṬUR]` – IŠṬUR (Akk.) "wrote" ("כתב").
+> לוח שני! של "אם […]" – יד […] לפני א[…] … [כתב].
+- **פירוק:** `DUB` – DUB "tablet" ("לוח"); `2!{KAM}` – "second" (ordinal; the editors mark the number) ("שני!"); `takku` – takku "if" ("של \"אם"); `[…]` – lost ("[…]\""); `ŠU` – ŠU "hand (of the scribe)" ("יד"); `{m}[… …]` – a personal name, lost ("[…]"); `PA-NI` – PĀNI (Akk.) "before, in the presence of" ("לפני"); `{m}a[-…` – a personal name ("א[…]"); `SA]G` – broken (title?) ("…"); `[I]Š-[ṬUR]` – IŠṬUR (Akk.) "wrote" ("[כתב]").
 - **נוסחים:** שורה זו – בכתב היד E בלבד (Rs. 2′), ואחריה "שאר הלוח לא נכתב". הקולופון של כתב היד C (col2–col4) אחר.
 - **תרגומים:** CHiL: "Seconda tavola “Se […]”, mano (di) […], ha [scritto] davanti a A[nuwanza, ufficiale di cor]te." – **CHiL משחזר את המפקח: "לפני א[נוּוַנְזָה, איש החצר]"** – אנוונזה, ראש הסופרים בחצר חַתּוּשָׁה (המאה ה־13); העברית משאירה את השבור שבור.
 - **הערות:** הקולופון – רישום הסופר בסוף הלוח: שם החיבור ("אם […]"), מספר הלוח, שם הסופר ("יד פלוני") ושם המפקח ("לפני פלוני"), כמו בקולופונים מחַתּוּשָׁה. **הלוח הזה נקרא כאן "לוח שני"** (כך גם ב־C, col2), אף שתוכנו הוא הלוח הראשון של החוקים (HL 1–100): אולי מניין אחר של הסדרה, אולי טעות; העורכים מסמנים את המספר (`2!`).
