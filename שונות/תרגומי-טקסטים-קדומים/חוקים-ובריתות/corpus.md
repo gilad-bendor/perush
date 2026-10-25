@@ -22,6 +22,8 @@ The user's standing decisions (from the flood and creation corpora) apply:
 | 5 | `5-חוקי-ליפית-אישתר/` | **The Laws of Lipit-Ištar** (CDLI P464355, 503 lines, Sumerian) | Sumerian, Isin, c. 1930 BCE | Prologue ↔ Lev 25:10 (`דרור`); §12–16 ↔ Deut 23:16–17; §17 ↔ Deut 19:16–19; §25–27 ↔ Gen 21:10, Judg 11; §29 ↔ Judg 14:20; §33 ↔ Deut 22:13–19; §34–37 ↔ Exod 22:13–14; epilogue ↔ Deut 27–28. |
 | 6 | `6-חוקי-אור-נמה/` | **The Laws of Ur-Namma** (CDLI P432130, 628 lines, Sumerian, with Civil's additional laws) | Sumerian, Ur III, 21st c. BCE | Prologue ↔ Exod 22:20–22, Lev 19:35–36, Ezek 45:9–12; laws ↔ Exod 21:12–27, 22:6–14; Deut 22:23–27; Num 27:8 (b008–b011). |
 | 7 | `7-החוקים-האשוריים-התיכונים-B/` | **The Middle Assyrian Laws, Tablet B** (ORACC P281780, KAV 2, 245 lines, §1–§20) | Akkadian (MA) | §8–9, §20 ↔ Deut 19:14, 27:17 (boundaries); §1 ↔ Deut 21:17; §6 ↔ Ruth 4, Jer 32. |
+| 8 | `8-החוקים-החתיים/` | **The Hittite Laws** (CTH 291–292, HL §1–§200): the first tablet "If a man" in its standard 13th-century text (CHiL CTH 291.2, 571 clauses, HL 1–100; the Old Hittite version 291.1 and the variants 291.3–5 in the apparatus), the **late parallel text** KBo 6.4 (CHiL CTH 291.PT, 206 clauses, §§ I–XLI), and the second tablet "If a vine" (CTH 292, HL 101–200: our composite from the TLHdig manuscripts) | **Hittite** (Old Hittite composition, c. 1650–1500 BCE; OS manuscript KBo 6.2, 16th c.; copies to the 13th c.) | Exod 21:18–19 (HL 10), 21:22 (HL 17–18), 22:1–5 (HL 57–70, 101–107), 22:15–16 (HL 28), 22:17 (HL 44b, 111); Lev 18 and 20 (HL 187–200); Deut 21:1–9 (HL 6; PT § IV: measuring the distance); Deut 22:23–27 (HL 197); Deut 25:5–10, Gen 38 (HL 193); a code that revises itself (*karū … kinun=a*). Round 4 run 6. |
+| 9 | `9-הוראות-לאנשי-בית-האל/` | **The Instructions for Temple Personnel** (CTH 264; KUB 13.4 + duplicates: our composite from TLHdig) | **Hittite** (Middle Hittite composition, c. 1400 BCE; NS copies) | Num 18:1–7, 22–23; 1:51–53; 3:38 (the guard duty of the sanctuary, the encroacher who dies: Milgrom 1970); Lev 22:1–16 (who eats the holy things); Lev 15:18; Mal 3:8 (defrauding the god). Round 4 run 6. |
 
 **Reading order for the commentary:** project 2 first for the Covenant Code (Exod 21–23: §250–252, §196–214, §117–126, §244–267; then Lev 18–20, 24, 25, Num 5, Deut 19–25 and the epilogue for Deut 27–28, Lev 26); project 1 first for Deuteronomy (§10, §12, §18, §29 for Deut 13; §4, §57 and §35–36 for 13:1 and 4:2; §24 for 6:5; §25, §34 for 29:13–14; §35 for 31:9–13; §37–§56 and §63–§65 for 28:20–44 and 28:23; §47, §69, §75 for 28:53–57). Then the other collections (projects 3–7) for the same verses: LE §53–58 and §12–13 beside LH §250–252 (Exod 21–22); MAL A §12–19, §55–56 for Deut 22; §8, §30–33, §43 for Deut 25; §40–41 for Gen 38; the Sumerian prologues for Exod 22:20–22 and Lev 25:10.
 
@@ -65,3 +67,17 @@ The user delegated the open decisions of projects 1–7 to the coordinator ("use
 | `translator-brief--laws.md` | The common brief of the sequential translators of projects 3–7 (reading list, tools, format, echo control, process, Part section). Reusable for MAL C–O, the Middle Assyrian Palace Decrees, the Edict of Ammiṣaduqa. |
 | `laws_config.py`, `laws_*.py` | Shared scripts of projects 3–7 (guidelines §10). |
 | `parallels-index.md` | The projects' parallels indexes merged, ordered by Bible verse (Exodus and Deuteronomy by chapter), with "Key findings for the commentary" (EST, LH, and the other collections) at the top. Regenerate with `python3 -I build_parallels_index.py` (this folder; it reads every project; the older `1-…/build_parallels_index.py` knows only project 1 – do not use it). |
+
+## The Hittite projects (8–9; Round 4 run 6, 2026-10-24)
+- **Language and tools.** The folder's first non-Semitic texts. Their binding tables are `renderings.md` §7 (law and
+  Instructions terms) and §H2–§H9 (names, reserved and gated words, formulas, traps, selftest; read by
+  `../tools/hittite_tools.py`, which also serves the ritual corpus `../טקסי-שילוח-וטיהור/`); the translator brief is
+  `translator-brief--hittite.md`. The cuneiform law rules (§5–§6) hold: *takku* = `אִם`, the class terms visible, the
+  Torah's emphatic or technical words reserved (`יוּמַת`, `הִכָּה`, the root יבם, `חָפְשִׁי`, `כֹּפֶר`, Lev 18's `עֶרְוָה`).
+- **Bases.** CHiL (the Corpus of Hittite Laws, Torri – Warbinek – Carnevale, HPM, CC BY-SA 4.0) for the first tablet and
+  the late parallel text: a clause-numbered critical edition (our labels = its clause numbers; the § = Hoffner's HL
+  number, CHiL's section titles). CTH 292 and CTH 264 have no HPM edition (2026-10-24): their composites are ours,
+  built from the TLHdig manuscripts (CC BY 4.0) in `composite-<KEY>.tsv` (label, §, the manuscript the line follows, its
+  tablet lines, the composite text, the duplicates, a note for every restoration from another manuscript), checked by
+  `hittite_tools.py comp-check`.
+
