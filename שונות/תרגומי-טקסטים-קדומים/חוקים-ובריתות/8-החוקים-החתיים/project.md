@@ -1014,6 +1014,108 @@ lacks); 1 Sam 13:21, Deut 19:5 ↔ §157, §§160–161 (a price list for metal 
 sheaves, `יאלם`); 1 Sam 11:7 ↔ §159 (*ṢIMDU* = `צֶמֶד`, a cognate through the Akkadogram); Exod 9:32 ↔ §160b; Gen 26:20
 ↔ §162 (water rights); Exod 21:34–35 ↔ §162b (the dead animal's meat and hide in the reckoning).
 
+### HL2 part 3 (163.1–186.4)
+Drafted 2026-10-25: 105 entries 163.1–186.4 (§§163–186, with 173a/b, 176a/b, 185a/b), placeholder now
+`<!-- טרם תורגם: 187.1–col1 -->`. Rulings of part 2 applied (ŠĪMU `מחיר`; *tiya-* `נכנס` kept for "step"; *išḫai-*
+`אלם`; the two *warš-*: 167.7 *warš-* "reap" `יקצור`). Hrozný 1922 and Zimmern–Friedrich 1922 quoted after drafting at the
+main row of most §§. `verify HL2`: 0 problems (66 rows placeholder); `selftest`: 0 failures; `check_bible_quotes.py`: 0.
+
+**Fixed for part 4 (copy byte for byte).**
+- **The substitute sheep:** *1 UDU X-aš kaššaššaš ḫuittiyanta* = `שה אחד חֵלֶף X ימשכו` (167.3 `ועתה שה אחד חֵלֶף האיש
+  ימשכו,`; 167.4 `שתי צאן חֵלֶף השוורים ימשכו;`). For 196.4–5 (*kēl 1 UDU kēll=a 1 UDU kaššaš / ḫuittiyanta*) and 199.6
+  (*kaššaš ḫuittiyanta*): *kaššaš* = `חֵלֶף`, *ḫuittiya-* = `משך` (`ימשכו`). `חֵלֶף` is MAL *kīmū*'s word (law corpus §6.1:
+  "instead of", `תחת` reserved), a common word shared across languages.
+- **The price pattern:** *ŠA (1) X n GÍN KÙ.BABBAR ŠIMŠU* = `של X (אחד) – n שקל(ים) כסף מחירו` (the suffix agrees in Hebrew:
+  `מחירו` / `מחירה`; ŠIMŠUNU `מחירם` / `מחירן`; without ŠIMŠU: `של X – n שקלים כסף`); the meat pattern *n X UZU-ŠUNU kuiš
+  wāši 1 UDU pāi* = `(של) n X – את בשרם מי שיקנה, שה אחד ייתן`.
+
+**New renderings (first row).**
+| Hittite | Hebrew | First | Note |
+|---|---|---|---|
+| *šuppala-* "livestock" | `בהמות` | 163.1 | not *šuppi-* (the gate's `šuppa(?!ti\|la)` already excludes it) |
+| *šiuniyaḫḫ-* "be god-struck" | `השתגע(?)` | 163.1 | from *šiu-* "god"; the etymology in the note |
+| *išuwan* / MUN "salt"; *išuwanalli-* | `מלח`; `מקום־המלח` | 163.3 | KBo 67.269 writes MUN |
+| *dai-/tiya-* "put, place" | `שׂם` (`ישׂים`, vocalized) | 163.3, 166.2 | **please confirm**: the creation corpus reserves `שָׂם` for Sum. *ĝar* / Akk. *šakānu*; no Hittite precedent; the alternatives are taken (`הניח` *dala-*, `העמיד` *tittanu-*, `נתן` *pai-*) |
+| *šakk-* "know" | `ידע` | 163.5 | |
+| *appatriya-* "impound, seize a pledge" | `עיקל` (`לעקל`) | 164.1 | ↔ Deut 24:10 |
+| *ḫarši-* "thick (cultic) loaf" | `חלה` | 164.2 | `כיכר` is GUN's |
+| *išpantuzzi-* "libation vessel" | `כלי־הנסך` | 164.3 | from *išpant-* "libate" (`הקריב` stays *šipant-*'s gate) |
+| *kinu-* "open" | `פתח` | 164.3 | |
+| KA.GAG (a beer) | `קָגָג` (transliterated) | 165.1 | |
+| *meḫur* "time" | `זמן` | 165.2 | |
+| SAG.KI "forehead, front" | `מצח` | 165.3 | crux |
+| *šuniya-* "sow" | `זרע` | 166.1 | **a separate verb from HL1's *šunna-* `מילא`**; NUMUN `זרע` (noun) |
+| *menei-* "face"; *duwan* "hither" | `פנים`; `לכאן` | 166.3 | |
+| *nai-* "turn" | `הטה` (part 2) | 166.5, 171.1 | |
+| *kaššaššaš* / *kaššaš*; *ḫuittiya-* | `חֵלֶף`; `משך` | 167.3 | see above |
+| *akkala-* "furrow" | `תלם` | 168.1 | as LH's *absin* |
+| *paršiya-* "break" (boundary, bread) | `פרץ` | 168.1, 169.2 | one verb as asked; `הסיג` (reserved), `שבר` (*duwarna-*) kept out; for bread Hebrew would say `פרס` (Isa 58:7, in the apparatus) |
+| *arḫa-* (OS) / ZAG (NS) "boundary" | `גבול` | 168.1 | HL1 |
+| *elzi-* "scales" | `מאזניים` | 169.3 | |
+| *tekan-* "earth" | `אדמה` | 169.3 | no Hittite precedent; Sum. *ki* is never `אדמה` in the creation corpus – a different language |
+| *aršikk-* (169.3) | `*השקיע*` | 169.3 | crux |
+| MUŠ "snake" | `נָחָשׁ` (vocalized) | 170.1 | the Sumerogram of Akk. *ṣerru*, Etana's `נָחָשׁ` |
+| ŠUM (Akk. *šumu*) | `שם` | 170.1 | [cognate via the Akkadogram] |
+| *anna-* | `אֵם` (HL1, vocalized) | 171.1 | |
+| *edi* "aside" | `הצידה` | 171.1 | HL1 *edi* `מן הצד ההוא` |
+| *šuwai-* "push" | `דחה` (HL1) | 171.2 | |
+| *iškiššana-*, *ḫuppulli-* | `אִשְׁקִישְׁשַׁנָּה`, `חוּפּוּלִּי` (transliterated) | 171.3–4 | |
+| *kišduwant-* "hungry" | `רעב` | 172.1 | |
+| *ḫuišnu-* "keep alive" | `החיה` | 172.2 | causative of HL1's *ḫuišwant-* `חי` |
+| PŪḪU "substitute" | `תחליף` | 172.2 | as Gilgameš *pūḫu* |
+| *pupulli-* "heap of ruins" | `חורבה` | 173a.2 | ↔ Ezra 6:11 `נְוָלוּ` |
+| DUGUD "dignitary" | `נכבד` | 173a.2 | |
+| NAKĀSU (Akkadogram) | `קצץ` | 173a.4 | LH's *nakāsu* `קצץ`; also HL1's *kukkurš-* `קצץ` – the Akkadogram probably writes that verb |
+| *arawe-* "make oneself free, rebel" | `מרד` | 173b.1 | from *arawa-* `פטור` (no gate needed: `בן חורין` not used) |
+| *zaḫḫ-* mp. "fight one another" | `נאבק` | 174.1 | `ריב`, `נצה` (Exod 21:18, Deut 25:11) kept out |
+| SIPA.UDU | `רועה צאן` | 175.1 | |
+| *išḫunau-* "degrade(?)" | `השפיל(?)` | 175.3 | |
+| *išḫuzzi-* "belt" | `חגורה` | 175.3 | |
+| *šamenu-* (caus. of *šamen-*) | `העלים(?)` | 176a.1 | |
+| *ḫaš-* "beget" | `הוליד` | 176a.2 | |
+| UMMIĀNU | `אֻמָּן` | 176b.1 | as the Akkadian corpora; [cognate via the Akkadogram] (Song 7:2) |
+| BÁḪAR; AŠGAB; ÁZLAG; *ĒPIŠ KABALLI* | `קַדָּר`; `בורסי`; `כובס`; `עושה קַבַּלִּי` | 176b.2–3 | Gilg. *paḫāru* `קַדָּר`; Ur-Namma *ašgab* `בורסי`, *azlag₂* `כובס`; `יוצר` stays *eṣēru*'s |
+| MUŠEN.DÙ (Akk. *usandû*) | `צַיַּד־ציפורים` | 177.1 | the Hittite augur; `ציפור` licensed |
+| *annanuwant-* | `מאולף` | 177.1 | as *annanuḫḫa-* |
+| ŠĪMU | `מחיר` | 178.1 | ruling |
+| ÁB.GAL; GU₄.GAL | `פרה גדולה`; `שור גדול` | 178.2, 185a.2 | |
+| *armaḫḫant-* | `הרה` | 178.4 | as HL1's *armawant-* |
+| AMAR; ANŠE.KUR.RA.NÍTA; ANŠE.NÍTA; ANŠE.MUNUS.AL.LÁ; UZ₆; SILA₄ | `עגל`; `סוס זכר`; `חמור זכר`; `אתון`; `עז`; `טלה` | 178.5 … | |
+| *zipattani-* | `זִיפַּטַּנִּי` | 181.3 | a liquid measure |
+| Ì.DU₁₀.GA; Ì.NUN; LÀL; GA.KIN.AG | `שמן טוב`; `חמאה`; `דבש`; `גבינה` | 181.3–5 | |
+| EMṢU | `קיבות(?)` | 181.6 | Hrozný "levain"; cognate of `חמץ` only through Akkadian, not used |
+| ḫappušant-, adupli-, iškalliššar, TÚG.BÁR, *ḪARUPTI*, *walli* | transliterated | 182, 185a | |
+| ZA.GÌN (colour) | `סַפִּיר` | 182.2 | the 2026-10-21 harmonization |
+| GÚ.È.A | `כותונת` | 182.5 | |
+| GADA | `פשתן` | 182.7 | |
+| *šiššur-* | `מושקה(?)` | 183.3 | |
+| *araḫzena-* "outer" | `חיצוני` | 183.5 | |
+| *takšeššar* "arrangement, tariff" | `הסדר` | 184.1 | `תקנה` is LH's *ṣimdat šarrim* |
+| *warḫui-* "thick-fleeced" | `סבוך` | 185a.4 | `שעיר` reserved (Lev 16) |
+
+**Deviations from HL1: none.** **Proposals:** (1) *dai-/tiya-* "put" `שׂם` (above, please confirm); (2) *šuniya-*
+`זרע` as a lemma of its own (HL1 *šunna-* `מילא` unchanged); (3) NAKĀSU `קצץ` shared with *kukkurš-*: accept as the
+Akkadogram of the same verb, or split.
+
+**Cruxes.** 163.1 *šiuniyaḫḫ-*; 163.3 *išuwan* (salt / mud); 165.3 *SAG.KI-za ḫarzi*; 166.2 *tiezzi* (OS *tianzi*);
+167.3 *kaššaššaš* (only from context); 168.1 *akkalan pedai*; 169.3 *elzimit=wa taknā aršikket*; 171 the ritual objects;
+172.1 "a hungry year" (Hrozný "New Year", Z&F "imprisoned for a year"); 173b.2 "goes into the pot"; 175.2 "in the 2nd or
+4th year" (Z&F: "for 2 or 4 years"); 175.3 *išḫunau-*, *išḫuzzi-*; 176a.1 *šamenu-*; 176b.4 10 shekels for a craftsman
+(fee or price?); 181.6 EMṢU; 183.4 ḪA.LA.NI; 184.1 the sentence; 185a.3 "10 calf hides – 1 mina" (Hrozný "(!)").
+**Variants recorded.** 166.1 OS word order; 167.1 OS *waršzi*; 168.1 OS *arḫan* / NS ZAG; 169.1 the OS lacks "buys a
+field"; 170.2 *=ma* / *=a*; 171.1 "her sons" (KBo 6.26) / "her son" (KBo 6.13+); 172.1 OS *witti*; 175.1 the OS lacks the
+steward; 178.5 AMAR 3 shekels (KUB 29.23+) / 2; 180.1 the harness horse 10 shekels (KUB 29.33+) / 20, and its "pasture
+horse" 15.
+
+**Key parallels.** Exod 21:33–34 ↔ §163 (a hazard left in a common place, no warning); Deut 24:10 ↔ §164 (the creditor
+entering the debtor's house); Lev 19:19, Deut 22:9 ↔ §166 (sowing seed on seed: another's seed, not two kinds;
+`כלאים` reserved); Gen 22:13 ↔ §167 (a sheep in place of a man); Deut 22:9 `פֶּן תִּקְדַּשׁ` ↔ §167.5 (re-consecration);
+Deut 19:14, 27:17 ↔ §§168–169 (the boundary under divine protection; a curse vs a rite and a declaration); Gen 3:1,
+Lev 19:26 ↔ §170; Deut 21:18, Hos 2:5 ↔ §171; Gen 47:19 ↔ §172; **Ezra 6:11, Dan 2:5 ↔ §173a (the house turned to a
+ruin-heap for defying the king's ruling – the same royal penalty)**; Exod 21:5 ↔ §173b; Exod 21:18 ↔ §174; Exod 21:4 ↔
+§175; Song 7:2, Isa 7:3 ↔ §176b; Exod 21:32, Lev 27:3 ↔ §177; 2 Sam 24:24, **1 Kgs 10:29 (horses for "the kings of the
+Hittites" at 150 shekels, against 20 in the Hittite list)**, Lev 27:16, Isa 7:23, Eccl 7:1 ↔ §§178–185.
+
 ## Part HL1: parallels index (the first tablet, 571 clauses)
 
 ### Parallels index
@@ -1270,3 +1372,28 @@ sheaves, `יאלם`); 1 Sam 11:7 ↔ §159 (*ṢIMDU* = `צֶמֶד`, a cognate 
 | HL2 §160a, 160a.1 | *[ták-ku {LÚ}SIMU]G …* | [אם נַפָּ]ח … | `וְהָיְתָה הַפְּצִירָה פִים לַמַּחֲרֵשֹׁת` (שמואל א יג:כא) | [equivalent] | שכר הנפח לפי מחירון; SIMUG נקרא באכדית *nappāḫu* (`נַפָּח`) |
 | HL2 §162, 162.1 | *ták-ku PA₅-an EGIR-an ar-ḫa ku-iš-ki na-a-i 1 GÍN KÙ.BABBAR* | אם מישהו פֶּלֶג מאחור הלאה יטה – שקל אחד כסף | `וַיָּרִיבוּ רֹעֵי גְרָר עִם רֹעֵי יִצְחָק לֵאמֹר לָנוּ הַמָּיִם` (בראשית כו:כ) | [equivalent] | זכויות מים בין שכנים; [absent] לתורה אין חוק על מי השקיה |
 | HL2 §162b, 162b.4 | *šar-ni-i]k-ze-el Ù KUŠ-ŠÚ UZU-ŠU [da]-a-i* | [פי]צוי, ואת עורו (ואת) בשרו [ייק]ח. | `וְגַם אֶת הַמֵּת יֶחֱצוּן` (שמות כא:לה) | [equivalent] | הבהמה המתה – בשרה ועורה – נכנסת לחשבון הפיצוי |
+| HL2 §163, 163.6 | *na-at a-ki šar-ni-ik-zi-il* | והן תמותנה – פיצוי. | `וְכִי יִפְתַּח אִישׁ בּוֹר … וְנָפַל שָׁמָּה שּׁוֹר אוֹ חֲמוֹר. בַּעַל הַבּוֹר יְשַׁלֵּם` (שמות כא:לג) | [equivalent] | מכשול שהושאר במקום משותף בלי אזהרה; המזיק משלם |
+| HL2 §164, 164.1 | *ták-ku *a-ap-pa-at-ri-wa-an*-zi ku-iš-k[i p]a-iz-zi* | אם מישהו לעקל ילך, | `לֹא תָבֹא אֶל בֵּיתוֹ לַעֲבֹט עֲבֹטוֹ` (דברים כד:י) | [equivalent] | הנושה הבא לבית החייב; בחוק החתי – פגיעה בכלי הקודש של הבית מחייבת קידוש מחדש |
+| HL2 §166, 166.1 | *ták-ku NUMUN-ni še-er NUMUN-an ku-iš-ki šu-ú-ni-ez-zi* | אם מישהו זרע על זרע יזרע, | `שָׂדְךָ לֹא תִזְרַע כִּלְאָיִם` (ויקרא יט:יט) | [divergence] | ההקבלה המוכרת אינה אותו דבר: בתורה שני מינים בשדה שלך, בחוק החתי זריעה על זרעו של אחר |
+| HL2 §166, 166.1 | *… NUMUN-an …* | … זרע … | `לֹא תִזְרַע כַּרְמְךָ כִּלְאָיִם` (דברים כב:ט) | [divergence] | כנ"ל |
+| HL2 §166, 166.5 | *ne-e-ia-an-zi LÚ-eš₁₇ a-ki GU₄{ḪI.A}-ia ak-kán-zi* | יטו; והאיש ימות, וגם השוורים ימותו. | `וְאֶת הַבְּהֵמָה תַּהֲרֹגוּ` (ויקרא כ:טו) | [divergence] | גם הבהמות שהיו בעבירה מתות; כאן הן כלי העונש |
+| HL2 §167, 167.3 | *ki-nu-na 1 UDU LÚ-na-aš ka-aš-*ša!-aš*-ša-aš ḫu-it-ti-an-ta* | ועתה שה אחד חֵלֶף האיש ימשכו, | `וַיִּקַּח אֶת הָאַיִל וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ` (בראשית כב:יג) | [equivalent] | בהמה חֵלֶף אדם; כאן החוק עצמו ממיר את עונש המוות בשה |
+| HL2 §167, 167.5 | *3 {DUG}KA.G[AG] pa-a-i ta a-ap-*pa šu-up-pí-ia-aḫ-ḫi** | שלושה כדי קָגָג ייתן, ובחזרה יקדש; | `פֶּן תִּקְדַּשׁ הַמְלֵאָה הַזֶּרַע אֲשֶׁר תִּזְרָע` (דברים כב:ט) | [divergence] | בתורה הזריעה הכפולה "מקדשת" (אוסרת) את היבול; כאן היא מחללת את השדה, והאשם מקדש אותו בחזרה |
+| HL2 §168, 168.1 | *ták-[ku A.ŠÀ-aš ar-ḫa-an ku-iš-ki pár-ši-i]a …* | אם [מישהו את גבול השדה יפרוץ] … | `לֹא תַסִּיג גְּבוּל רֵעֲךָ אֲשֶׁר גָּבְלוּ רִאשֹׁנִים` (דברים יט:יד) | [divergence] | הגבול מקודש בשני המקומות; בתורה עבירה, כאן פיצוי בקרקע וטקס קידוש |
+| HL2 §169, 169.4 | *nu te-ez-zi {D}UTU-uš {D}10-aš Ú-UL šu-ul-la-tar* | ויאמר: "אֵל השמש, אֵל הַסְּעָרָה – לא מחלוקת". | `אָרוּר מַסִּיג גְּבוּל רֵעֵהוּ; וְאָמַר כָּל הָעָם אָמֵן` (דברים כז:יז) | [divergence] | הצהרה לפני האל על הגבול: בתורה קללה על המסיג, כאן הצהרת תום לב של הקונה |
+| HL2 §170, 170.1 | *[ták-k]u ⸢LÚ EL-LAM⸣ MUŠ-an ku-en-zi da-me-e-el-la ŠU[M-an]* | אם איש בן חורין נָחָשׁ יהרוג, ושם של אחר | `וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה` (בראשית ג:א) | [equivalent] | הנחש כיצור בעל כוח מאגי; כישוף הנחש והשם |
+| HL2 §170, 170.1 | *… ŠU[M-an]* | … שם … | `טוֹב שֵׁם מִשֶּׁמֶן טוֹב` (קהלת ז:א) | [cognate] | ŠUM היא האכדית *šumu*, קרובת `שֵׁם`; דרך האכדוגרמה |
+| HL2 §171, 171.1 | *ták-ku an-na-aš TÚG-SÚ! DUMU.NITA-ši e-di! na-a-i …* | אם הָאֵם את בגדה מבנה הצידה תטה … | `כִּי יִהְיֶה לְאִישׁ בֵּן סוֹרֵר וּמוֹרֶה אֵינֶנּוּ שֹׁמֵעַ בְּקוֹל אָבִיו וּבְקוֹל אִמּוֹ` (דברים כא:יח) | [divergence] | האם מנשלת בטקס ומחזירה בטקס; בתורה – דין, בלי דרך חזרה |
+| HL2 §171, 171.1 | *… TÚG-SÚ! …* | … את בגדה … | `פֶּן אַפְשִׁיטֶנָּה עֲרֻמָּה` (הושע ב:ה) | [equivalent] | הסרת הבגד כסמל לניתוק קשר משפחתי |
+| HL2 §172, 172.1 | *ták-ku LÚ EL-LAM ki-iš-du-wa-an-ti MU{KAM}-ti ku-iš-ki* | אם מישהו איש בן חורין בשנה רעבה | `קְנֵה אֹתָנוּ וְאֶת אַדְמָתֵנוּ בַּלָּחֶם` (בראשית מז:יט) | [equivalent] | ברעב, החיים נקנים בחירות |
+| HL2 §173a, 173a.2 | *É-SÚ pu-p[u-u]l-li ki-i-ša …* | ביתו לחורבה ייעשה … | `וּבַיְתֵהּ נְוָלוּ יִתְעֲבֵד עַל דְּנָה` (עזרא ו:יא) | [equivalent] | אותו עונש למתנגד לדין המלך: ביתו נעשה לחורבה / לאשפה |
+| HL2 §173a, 173a.2 | *É-SÚ pu-p[u-u]l-li ki-i-ša* | ביתו לחורבה ייעשה | `וּבָתֵּיכוֹן נְוָלִי יִתְּשָׂמוּן` (דניאל ב:ה) | [equivalent] | כנ"ל, בחצר נבוכדנאצר |
+| HL2 §173b, 173b.1 | *ták-ku ARAD-aš iš-ḫi-iš-ši a-ra-〈u〉-ez-zi* | אם עבד באדוניו ימרוד, | `לֹא אֵצֵא חָפְשִׁי` (שמות כא:ה) | [divergence] | בתורה לעבד דרך לצאת לחופשי; בחוק החתי מי ש"משחרר את עצמו" נענש |
+| HL2 §174, 174.1 | *ták-ku LÚ{MEŠ} za-aḫ-ḫa-an-da ta *1?*-aš a-ki 1 SAG.DU pa-a-i* | אם אנשים ייאבקו, ואחד ימות – ראש אחד ייתן. | `וְכִי יְרִיבֻן אֲנָשִׁים וְהִכָּה אִישׁ אֶת רֵעֵהוּ … וְלֹא יָמוּת` (שמות כא:יח) | [divergence] | אותה פתיחה; בתורה הנפגע לא מת, כאן מת – והפיצוי "ראש" |
+| HL2 §175, 175.2 | *na-aš na-aš-šu 〈I-NA〉 MU 2{KAM} na-aš-ma I-NA MU 4{KAM} GÉME e-eš-zi* | היא – אם בשנה השנייה ⟨ו⟩אם בשנה הרביעית – אָמָה תהיה, | `הָאִשָּׁה וִילָדֶיהָ תִּהְיֶה לַאדֹנֶיהָ וְהוּא יֵצֵא בְגַפּוֹ` (שמות כא:ד) | [divergence] | מעמד האשה והילדים בנישואים עם עבד / איש־משק |
+| HL2 §176b, 176b.1 | *ták-ku DUMU UM-MI-A-AN* | אם בן־אֻמָּן | `מַעֲשֵׂה יְדֵי אָמָּן` (שיר השירים ז:ב) | [cognate] | *UMMIĀNU* – האכדית *ummânu*, קרובת `אָמָּן`; דרך האכדוגרמה |
+| HL2 §177, 177.3 | *dam-pu-u-pí-in ku-iš-ki wa-a-ši 20 GÍN KÙ.BABBAR pa-a-i* | בלתי מיומנים יקנה – עשרים שקל כסף ייתן. | `וְהָיָה עֶרְכְּךָ חֲמִשִּׁים שֶׁקֶל כֶּסֶף` (ויקרא כז:ג) | [equivalent] | ערך אדם בשקלים |
+| HL2 §178, 178.1 | *ŠA GU₄.APIN.LÁ ⸢12⸣ GÍN KÙ.BABBAR ŠI-IM-ŠU …* | של שור חרישה – שנים עשר שקל כסף מחירו; … | `וַיִּקֶן דָּוִד אֶת הַגֹּרֶן וְאֶת הַבָּקָר בְּכֶסֶף שְׁקָלִים חֲמִשִּׁים` (שמואל ב כד:כד) | [equivalent] | מחיר בקר בשקלי כסף; [absent] לתורה אין מחירון |
+| HL2 §178, 178.6 | *1 ANŠE.KUR.RA.MUNUS.AL.[L]Á …* | סוסה אחת … | `וְסוּס בַּחֲמִשִּׁים וּמֵאָה; וְכֵן לְכָל מַלְכֵי הַחִתִּים` (מלכים א י:כט) | [divergence] | המקרא זוכר את "מלכי החתים" כקוני סוסים במאה וחמישים שקל; במחירון החתי סוס רתמה – עשרים |
+| HL2 §183, 183.3 | *ŠA 1 IKU A.ŠÀ ši-iš-šu-ú-ra-aš 3 [* | של אִיקוּ אחד שדה מושקה(?) – שלושה […] | `וְהָיָה עֶרְכְּךָ לְפִי זַרְעוֹ זֶרַע חֹמֶר שְׂעֹרִים בַּחֲמִשִּׁים שֶׁקֶל כָּסֶף` (ויקרא כז:טז) | [equivalent] | מחיר קבוע לשדה: בתורה לפי הזרע, כאן לפי השטח והסוג |
+| HL2 §185a, 185a.1 | *ŠA 1 IKU {GIŠ}KIRI₆.{GIŠ}GEŠTIN 1 MA.NA KÙ.BABBAR ŠI-IM-ŠU* | של אִיקוּ אחד כרם – מנה כסף מחירו; | `אֲשֶׁר יִהְיֶה שָּׁם אֶלֶף גֶּפֶן בְּאֶלֶף כָּסֶף` (ישעיהו ז:כג) | [equivalent] | הכרם הנמדד במחירו |

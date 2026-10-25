@@ -338,6 +338,17 @@ four escapes at 146a.3, 146b.2, 147.2, 148.2 removed). **Rulings:** *tiya-* "ste
 `לא ייכנס אל המלך`, not the brief's `ייגש`); *išḫai-* "bind (sheaves)" `אלם` (↔ Gen 37:7) against HL1's *išḫiya-* "impose"
 `חייב`: a split by sense, accepted; TLHdig's two *warš-* ("clean" `ניקה`, "reap" `קצר`) stay apart.
 
+### 7.10 Merged from Sub2, part 3 (HL2 163.1–186.4; 2026-10-25; accepted by the coordinator unless said)
+No deviation from HL1. **Fixed patterns:** the substitute sheep *1 UDU (X-naš) kaššaššaš ḫuittiyanta* = `שה אחד חֵלֶף X ימשכו`
+(*kaššaš* `חֵלֶף`, as MAL *kīmū*; `תחת` stays the Torah's; *ḫuittiya-* `משך`); the price list `של X (אחד) – n שקל(ים) כסף מחירו`
+(ŠIMŠUNU `מחירם` / `מחירן`; without ŠIMŠU `של X – n שקלים כסף`; the meat lines `… – את בשרם מי שיקנה, שה אחד ייתן`). New: OS *arḫan*
+and NS ZAG "boundary" `גבול` (HL1 *arḫa-*); *paršiya-* (the boundary, the bread) `פרץ`; *šuniya-* "sow" `זרע` (≠ HL1 *šunna-*
+`מילא`); MUŠ `נָחָשׁ` (Etana); ŠUM `שם` [cognate via Akk. *šumu*]; *pupulli* `חורבה`; DUGUD `נכבד`; INAKKISU `יקצצו` (**ruling**: the
+Akkadogram of the same verb as HL1's *kukkurš-* `קצץ`, LH *nakāsu*); UMMIĀNU `אֻמָּן`; BÁḪAR `קַדָּר`; AŠGAB `בורסי`; ÁZLAG `כובס`;
+MUŠEN.DÙ `צַיַּד־ציפורים`; PŪḪU `תחליף`; *ḫuišnu-* `החיה`; *zaḫḫ-* `נאבק`; *takšeššar* `הסדר`; ZA.GÌN `סַפִּיר` (§6.7); *warḫui-*
+`סבוך` (`שעיר` reserved); EMṢU `קיבות(?)`. **Ruling (`שׂם`):** Hittite *dai-* "put" = `שָׂם` (`יָשִׂים`, vocalized; HLPT 165 has it):
+the counterpart of *šakānu* / *ĝar*, which hold the word in the other corpora, takes the same Hebrew across languages.
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;

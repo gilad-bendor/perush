@@ -1238,4 +1238,777 @@
 - **הקבלה:** [equivalent] `וְגַם אֶת הַמֵּת יֶחֱצוּן` (שמות כא:לה) – גם בתורה הבהמה המתה עצמה (בשרה, עורה) נחשבת חלק מן הפיצוי. [divergence] `וְהַמֵּת יִהְיֶה לּוֹ` (שמות כא:לד) – שם המת עובר למזיק; כאן (לפי KBo 6.10+) המזיק נותן גם את העור והבשר לבעל הצאן.
 - **הערות:** *šarnikzel* = `פיצוי`; KUŠ = `עור`, UZU = `בשר` כבלוח הראשון. הבשר והעור של בהמה שמתה עדיין שווים כסף, וחשבון הנזק מנכה אותם או מוסיף אותם.
 
-<!-- טרם תורגם: 163.1–col1 -->
+## §163 – בהמות שטוהרו, המלח שהונח, והחבר שלא ידע
+
+### 163.1
+`ták-ku šu-up-pa-la-aš-še-et ku-e-el-ka₄ ši-e-ú-ni-aḫ-ta`
+> אם בהמותיו של מישהו השתגעו(?),
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `šu-up-pa-la-aš-še-et` – šuppala- "livestock, animals" + =šet "his" ("בהמותיו"); `ku-e-el-ka₄` – kuiški "anyone", gen. ("של מישהו"); `ši-e-ú-ni-aḫ-ta` – šiuniyaḫḫ- (from šiu(n)- "god": "be seized by the god"; TLHdig "verrückt werden(?)"), mp. pret. 3sg ("השתגעו(?)").
+- **נוסחים:** KBo 31.66+, KBo 6.10+, HFAC 4, KBo 67.269 – זהים; KBo 6.15: `ši-ú-ni-ia-aḫ-ta`.
+- **הערות:** *šiuniyaḫḫ-* נגזר מן *šiu-* "אל": מילולית "נעשו אֱלֹהִיִּים", כלומר אחוזי אל – שיגעון או מחלה שנשלחה מן האל. מכאן הטיהור (163.2): המחלה היא טומאה. *šuppala-* "בהמות" אינו מן *šuppi-* "קדוש".
+
+### 163.2
+`ta-at pár-ku-nu-zi na-at ar-ḫa pé-en-na-a-i`
+> והוא יטהר אותן, ואותן הלאה יסיע;
+- **פירוק:** `ta-at` – ta "and" + =at "them" (n. pl.) ("ו… אותן"); `pár-ku-nu-zi` – parkunu- "purify", pres. 3sg ("יטהר"); `na-at` – nu "and" + =at "them" ("ואותן"); `ar-ḫa` – arḫa "away" ("הלאה"); `pé-en-na-a-i` – penna- "drive (away)", pres. 3sg ("יסיע").
+- **נוסחים:** KBo 31.66+: `*na*-at pár-ku-nu-uz-zi` – *nu* (על גבי מחיקה) במקום *ta*.
+- **הערות:** טיהור בהמות חולות – טקס (*parkunu-* = `טיהר`, מורשה בשער); "הלאה יסיע" – מרחיק אותן מן העדר.
+
+### 163.3
+`i-šu-wa-na-al-li-ma-kán i-šu-wa-an da-a-i`
+> ואילו על מקום־המלח – מלח ישׂים,
+- **פירוק:** `i-šu-wa-na-al-li-ma-kán` – išuwanalli- "salt-lick" (TLHdig "Salzlecke"), d.-l. + =ma "but" ("ואילו על מקום־המלח"); `i-šu-wa-an` – išuwan "salt(?)" (TLHdig "Salz"), acc. ("מלח"); `da-a-i` – dai- "put, place", pres. 3sg ("ישׂים").
+- **נוסחים:** KBo 67.269 (מאוחר): `]-kán MUN-an da-⸢a⸣-[i` – **MUN, השומרוגרמה "מלח"**, במקום *išuwan*: אישור לזיהוי. KBo 31.66+: `da-a-〈〈at〉〉-i` (סימן מיותר).
+- **הערות:** *dāi* כאן הוא *dai-* "לשים" (לא *dā-* "לקחת"): `ישׂים` (מנוקד). מקום־המלח – ליקוק המלח של הבהמות במרעה המשותף. המלח המונח שם בא מן הטיהור – והוא נושא את הטומאה (או את המחלה).
+
+### 163.4
+`a-ri-iš-ši-ma-at Ú-UL te-ez-zi {LÚ}a-ra-aš-ša`
+> ולחברו אותו לא יאמר, והחבר
+- **פירוק:** `a-ri-iš-ši-ma-at` – ara- "fellow, colleague", d.-l. + =šši "his" + =ma + =at "it" ("ולחברו אותו"); `Ú-UL` – "not" ("לא"); `te-ez-zi` – te-/tar- "say" ("יאמר"); `{LÚ}a-ra-aš-ša` – ara- "fellow", nom. + =a "and" ("והחבר").
+- **נוסחים:** KBo 31.66+: `L[Ú? ]x-⸢pa?-a-aš-ša Ú⸣-[UL]` – קריאה אחרת, שבורה.
+
+### 163.5
+`Ú-UL ša-ak-ki šu-up-pa-la-aš-⸢še-et⸣ pé-en-na-a-i`
+> לא יֵדַע – את בהמותיו יסיע,
+- **פירוק:** `Ú-UL` – "not" ("לא"); `ša-ak-ki` – šakk- "know", pres. 3sg ("יֵדַע"); `šu-up-pa-la-aš-⸢še-et⸣` – šuppala- + =šet "his" ("את בהמותיו"); `pé-en-na-a-i` – penna- "drive" ("יסיע").
+- **הערות:** החבר מביא את בהמותיו אל מקום־המלח.
+
+### 163.6
+`na-at a-ki šar-ni-ik-zi-il`
+> והן תמותנה – פיצוי.
+- **פירוק:** `na-at` – nu "and" + =at "they" (n. pl.) ("והן"); `a-ki` – ak- "die", pres. 3sg (with a n. pl. subject) ("תמותנה"); `šar-ni-ik-zi-il` – šarnikzel "compensation", nom.-acc. ("פיצוי").
+- **נוסחים:** KBo 25.85+ (הכתב הקדום): `⸢šar?-ni?-ik?⸣-[zi-il` – אותו סיום.
+- **תרגומים:** Hrozný 1922: «Si un jeune animal de quelqu'un devient orphelin, il l'élève et le fait sortir … mais à son compagnon il NE le dit PAS et le compagnon NE (le) sait PAS, son jeune animal il chasse et celui-ci meurt, compensation (a lieu)»; Zimmern–Friedrich 1922 (48*): «Wenn jemandes ……, er dieses entlaufen läßt, … er es seinem Genossen nicht sagt, sein Genosse es auch nicht weiß … und es stirbt, so (findet dafür) Entschädigung (statt)» – שניהם לפני זיהוי *šiuniyaḫḫ-*, *išuwan* ו־*parkunu-*; את מבנה המקרה (השתיקה כלפי החבר, המוות, הפיצוי) הבינו כמונו.
+- **הקבלה:** [equivalent] `וְכִי יִפְתַּח אִישׁ בּוֹר … וְנָפַל שָׁמָּה שּׁוֹר אוֹ חֲמוֹר. בַּעַל הַבּוֹר יְשַׁלֵּם` (שמות כא:לג–לד) – נזק שנגרם לבהמת הזולת בגלל מכשול שאדם השאיר במקום משותף ולא כיסה, ולא הזהיר.
+- **הערות:** האשמה היא השתיקה: מי שהשאיר את המלח המזוהם ולא הודיע לחברו חייב בפיצוי. *šarnikzel* = `פיצוי`.
+
+## §164 – ההולך לעקל ופותח במחלוקת
+
+### 164.1
+`ták-ku *a-ap-pa-at-ri-wa-an*-zi ku-iš-k[i p]a-iz-zi`
+> אם מישהו לעקל ילך,
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `*a-ap-pa-at-ri-wa-an*-zi` – appatriya- "seize (as a pledge), impound" (from ēpp- "seize"), inf. (over an erasure) ("לעקל"); `ku-iš-k[i` – kuiški "anyone" ("מישהו"); `p]a-iz-zi` – pai-/pā- "go" ("ילך").
+- **נוסחים:** KBo 25.85+ (הכתב הקדום), KBo 31.66+ – זהים.
+- **הקבלה:** [equivalent] `כִּי תַשֶּׁה בְרֵעֲךָ מַשַּׁאת מְאוּמָה לֹא תָבֹא אֶל בֵּיתוֹ לַעֲבֹט עֲבֹטוֹ` (דברים כד:י) – גם התורה מגבילה את הנושה הבא לבית החייב לקחת משכון.
+- **הערות:** *appatriya-* – לקיחת משכון (עיקול) מבית החייב.
+
+### 164.2
+`ta šu-ul-la-*tar* i-e-ez-zi [n]a-aš-šu {NINDA}ḫar-ši-in`
+> ומחלוקת יעשה, או את החלה
+- **פירוק:** `ta` – ta "and" ("ו"); `šu-ul-la-*tar*` – šullatar "quarrel" (written over an erasure) ("מחלוקת"); `i-e-ez-zi` – iya- "do, make" ("יעשה"); `[n]a-aš-šu` – naššu "either" ("או"); `{NINDA}ḫar-ši-in` – ḫarši- "thick (cultic) loaf", acc. ("את החלה").
+- **הערות:** *šullatar* = `מחלוקת` (כבלוח הראשון §1, `במחלוקת`).
+
+### 164.3
+`na-aš-ma {GIŠ.GEŠTIN}iš-pa-an-du-zi k[i-n]u-zi`
+> או את כלי־הנסך של היין יפתח,
+- **פירוק:** `na-aš-ma` – našma "or" ("או"); `{GIŠ.GEŠTIN}iš-pa-an-du-zi` – išpantuzzi- "libation vessel" (from išpant- / šipant- "libate"), of wine ("את כלי־הנסך של היין"); `k[i-n]u-zi` – kinu- "open, break open" ("יפתח").
+- **נוסחים:** KBo 25.85+: `[na-aš-šu NINDA ḫar-ši-i]n na-aš-ma {GEŠTIN}iš-pa-an-t[u-zi ki-nu-zi 1 UDU]`.
+- **הערות:** בבית החייב עומדים חלת הקודש וכד הנסך של אלי הבית; מי שבא לעקל, נכנס במריבה ושובר אותם – מחלל את הבית. העונש (165) הוא טקס קידוש מחדש, לא קנס.
+
+## §165 – הקידוש מחדש של הבית
+
+### 165.1
+`ta 1 UDU 10 NINDA{ḪI.A} 1 DUG KA.GAG pa-a-i t[a] ⸢É⸣-SÚ EGIR-pa`
+> ושה אחד, עשרה לחמים, כד אחד של קָגָג ייתן, ואת ביתו בחזרה
+- **פירוק:** `ta` – "and" ("ו"); `1` – "one" ("אחד"); `UDU` – "sheep" ("שה"); `10` – "ten" ("עשרה"); `NINDA{ḪI.A}` – NINDA "bread, loaves" ("לחמים"); `1` – "one" ("אחד"); `DUG` – DUG "jug, vessel" ("כד"); `KA.GAG` – KA.GAG a kind of beer ("קָגָג"); `pa-a-i` – "give" ("ייתן"); `t[a]` – "and" ("ו"); `⸢É⸣-SÚ` – É "house" + -SÚ "his" ("את ביתו"); `EGIR-pa` – "back, again" ("בחזרה").
+- **נוסחים:** **הכתב הקדום:** KBo 25.85+: `[10 NINDA{ḪI.A} 1 DUG KA.G]AG pa-a-i É-SÚ a-ap-pa šu-up-p[í-ia-aḫ-ḫi]` – *āppa* בחתית.
+- **הערות:** הסעיף ממשיך את 164 (חלוקת הרוזני): שה, לחם ושכר – מנחת הקידוש המחודש. *KA.GAG* – מין שכר (או הכד שלו), מתועתק. "ביתו" – בית מי? כנראה בית הנפגע.
+
+### 165.2
+`šu-up-pí-ia-aḫ-ḫi ku-it-ma-an MU{KAM}-za me-e-ḫu-ni a-ri`
+> יקדש; עד אשר השנה אל זמנה תגיע,
+- **פירוק:** `šu-up-pí-ia-aḫ-ḫi` – šuppiyaḫḫ- "make holy, consecrate", pres. 3sg ("יקדש"); `ku-it-ma-an` – kuitman "until" ("עד אשר"); `MU{KAM}-za` – MU "year", nom. ("השנה"); `me-e-ḫu-ni` – meḫur "time", d.-l. ("אל זמנה"); `a-ri` – ar- "arrive" ("תגיע").
+- **נוסחים:** KBo 25.85+: `[ku-it-ma-an ú-i-it-ti] me-e-a-ni a-ri` – "עד אשר השנה (*witti*, המילה החתית לשנה) אל *meyani* תגיע": מילים קדומות לאותו מובן.
+- **הערות:** *šuppiyaḫḫ-* = `קידש` (מורשה ל־*šuppi-*); *ar-* = `הגיע` כבלוח הראשון. "עד שהשנה תגיע אל זמנה" – עד שתמלא שנה.
+
+### 165.3
+`ta É-iš-ši SAG.KI-za ḫar-zi`
+> ובביתו מן המצח יחזיק(?).
+- **פירוק:** `ta` – "and" ("ו"); `É-iš-ši` – per "house", d.-l. + =šši "his" ("בביתו"); `SAG.KI-za` – SAG.KI "forehead, front", abl. ("מן המצח"); `ḫar-zi` – ḫar(k)- "hold, keep" ("יחזיק").
+- **תרגומים:** Hrozný 1922: «Si pour aller [à cheval] quelqu'u[n v]a, alors un choix il fai[t: o]u de la FARINE Fine ou DU VIN dans le vaisseau de sacrifice il m[e]t. Alors 1 MOUTON, 10 PAINS, 1 vaisseau (de bière) …»; Zimmern–Friedrich 1922 (49*–50*): «… entweder soll er Feinmehl oder Wein opfern …: alsdann 1 Schaf, 10 Brote, 1 Krug Bier spenden, dann wird er sein Haus wieder reinigen; sobald aber ein Jahr … vergangen ist, dann wird er seinem Hause …» – ובהערה: "*SAG.KI-za ḫarzi*, מילולית 'ייקח את מצחו (של הבית)' – כנראה טקס טיהור". *šullatar* "מחלוקת" אצלם "בחירה" (*Unterschied*).
+- **הערות:** ביטוי סתום: אולי "יתרחק מן הבית" (כפירוש הופנר), או "יחזיק את ביתו (של הנפגע) בחזיתו", כלומר יהיה אחראי לו כל השנה. התרגום מילולי. *ḫar(k)-* = `החזיק` כבלוח הראשון.
+
+## §166 – זרע על זרע: לפנים
+
+### 166.1
+`ták-ku NUMUN-ni še-er NUMUN-an ku-iš-ki šu-ú-ni-ez-zi`
+> אם מישהו זרע על זרע יזרע,
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `NUMUN-ni` – NUMUN "seed", d.-l. ("על זרע"); `še-er` – šer "upon, over" ("על"); `NUMUN-an` – NUMUN "seed", acc. ("זרע"); `ku-iš-ki` – kuiški "anyone" ("מישהו"); `šu-ú-ni-ez-zi` – šuniya- "sow" (lit. "dip, sink in"; TLHdig "eintauchen"), pres. 3sg ("יזרע").
+- **נוסחים:** **הכתב הקדום:** KBo 25.85+: `[ták-ku NUMUN-ni] ⸢NUMUN-an še-e-er ku-iš-ki⸣` – בסדר אחר (*šēr* אחרי המושא), אותו מובן.
+- **הקבלה:** [divergence] `שָׂדְךָ לֹא תִזְרַע כִּלְאָיִם` (ויקרא יט:יט); `לֹא תִזְרַע כַּרְמְךָ כִּלְאָיִם` (דברים כב:ט) – **ההקבלה הנזכרת תמיד, ואינה אותו דבר:** בתורה איסור לזרוע שני מינים בשדה אחד (שלך); בחוק החתי – מישהו זורע על זרעו של אחר, כלומר פוגע בשדה של שכנו (מעין "השגת גבול" של זרע). `כלאים` שמור לתורה (§H3).
+- **הערות:** *šuniya-* "לזרוע" (מילולית "לשקוע, להטביל" – הזרע נטמן באדמה) – פועל שונה מ־*šunna-* "למלא" של הלוח הראשון (`מילא`): `זרע`. NUMUN = `זרע` (שם עצם). מכאן ועד 169 – חוקי הקרקע הקשורים בפולחן: הפגיעה בשדה היא גם פגיעה בסדר שהאלים ערבים לו.
+
+### 166.2
+`GÚ-SÚ {GIŠ}APIN-an *še*-er ti-ez-zi ⸢2?⸣ ṢÍ-IM-DÌ GU₄{ḪI.A}`
+> את צווארו על המחרשה ישׂים; [שני?] צמדי שוורים
+- **פירוק:** `GÚ-SÚ` – GÚ "neck" + -SÚ "his" ("את צווארו"); `{GIŠ}APIN-an` – APIN "plough", acc. ("על המחרשה"); `*še*-er` – šer "upon" (*še* over an erasure) ("על"); `ti-ez-zi` – dai-/tiya- "put, place", pres. 3sg (OS: *tianzi* "they put") ("ישׂים"); `⸢2?⸣` – "two?" ("[שני?]"); `ṢÍ-IM-DÌ` – ṢIMDU "team, yoke" ("צמדי"); `GU₄{ḪI.A}` – "oxen" ("שוורים").
+- **נוסחים:** KBo 25.85+ (הכתב הקדום): `[šu-ú-ni-ez-zi GÚ-SÚ {GIŠ}APIN-i? še-e-er t]i-an-z[i]` – "ישימו" ברבים; `[2? ṢÍ-IM-DÌ GU₄{ḪI.A} tu-u-ri-ia-an-zi ke-e-el me-e-ni-iš-ši-it] tu-wa-a-an ke-e-el-l[a]` – אותו נוסח.
+- **הערות:** *tiezzi* כאן הוא *dai-/tiya-* "לשים" (צורת *tiya-* של "לשים", לא *tiya-* "להיכנס"): `ישׂים`, כמו *dāi* "ישים" ב־163.3. העונש של לפנים כעונש גנב המחרשה (121): הצוואר על המחרשה.
+
+### 166.3
+`tu-ri-ia-an-zi ke-e-*el* me-n[e!]-iš-ši-it du-wa-a-an`
+> ירתמו: את פני זה לכאן,
+- **פירוק:** `tu-ri-ia-an-zi` – turiya- "harness", pres. 3pl ("ירתמו"); `ke-e-*el*` – ka- "this one", gen. (*el* over an erasure) ("של זה"); `me-n[e!]-iš-ši-it` – menei- "face" + =šit "its" ("את פני"); `du-wa-a-an` – duwan "hither, this way" ("לכאן").
+
+### 166.4
+`ke-e-el-la me-ne-iš-ši-it du-wa-a-an`
+> ואת פני זה לכאן
+- **פירוק:** `ke-e-el-la` – ka- "this one", gen. + =a "and" ("ואת … זה"); `me-ne-iš-ši-it` – menei- "face" + =šit ("פני"); `du-wa-a-an` – "this way" ("לכאן").
+- **הערות:** "פני זה לכאן ופני זה לכאן" – הצמדים מופנים לכיוונים מנוגדים.
+
+### 166.5
+`ne-e-ia-an-zi LÚ-eš₁₇ a-ki GU₄{ḪI.A}-ia ak-kán-zi`
+> יטו; והאיש ימות, וגם השוורים ימותו.
+- **פירוק:** `ne-e-ia-an-zi` – nai- "turn", pres. 3pl ("יטו"); `LÚ-eš₁₇` – LÚ "man", nom. ("והאיש"); `a-ki` – ak- "die" ("ימות"); `GU₄{ḪI.A}-ia` – "oxen" + =ya "also" ("וגם השוורים"); `ak-kán-zi` – ak- "die", 3pl ("ימותו").
+- **נוסחים:** KBo 25.85+: `[… ne-e-ia-an-zi LÚ-aš a-ki GU₄{ME]Š}-ša ak-kán-zi` – זהה.
+- **תרגומים:** Hrozný 1922: «Si sur une SEMENce une (autre) SEMENCE quelqu'un sème, sur SA NUQUE la CHARRUE il (= on) met, on attelle, de ceux-ci leur face par ci, de ceux-là leur face par là …»; Zimmern–Friedrich 1922 (51*): «Wenn jemand Samen auf Samen aussät, auf seinen Nacken den Pflug legt?, man Rinder-Gespanne anspannt, von diesen einen Teil hierhin, und von diesen einen Teil dorthin treibt, (wobei) Menschen sterben, auch Rinder sterben» – ובהערה: אולי מנהג קדום של "מירוץ חורשים", שבוטל "בגלל אכזריותו".
+- **הקבלה:** [absent] אין בתורה עונש של קריעה; [divergence] `וְכִי יִגַּח שׁוֹר … סָקוֹל יִסָּקֵל הַשּׁוֹר` (שמות כא:כח) – בתורה השור "האשם" מומת; כאן השוורים, כלי העונש, מתים יחד עם האדם – כמו בהמה שהייתה בעבירה (`וְאֶת הַבְּהֵמָה תַּהֲרֹגוּ`, ויקרא כ:טו).
+- **הערות:** **העונש של לפנים**: האדם נקרע בין שני צמדי שוורים, והשוורים מתים גם הם (כנראה מוקרבים: הם "נטמאו" בדם). השדה – הנכס המקודש – נטמא בזריעה הכפולה, ומי שגרם לטומאה נקרע בכלי העבודה של השדה עצמו.
+
+## §167 – זרע על זרע: עתה – שה חֵלֶף האיש
+
+### 167.1
+`Ù A.ŠÀ-LAM ka-ru-ú-pát ku-iš šu-ú-ni-et`
+> ואת השדה – מי שזרע דווקא לפנים,
+- **פירוק:** `Ù` – U "and" ("ו"); `A.ŠÀ-LAM` – "field" ("את השדה"); `ka-ru-ú-pát` – karū "first, earlier" + =pat "precisely" ("דווקא לפנים"), F2; `ku-iš` – kui- "who" ("מי ש"); `šu-ú-ni-et` – šuniya- "sow", pret. 3sg ("זרע").
+- **נוסחים:** KBo 25.85+: `[Ù A.ŠÀ-LAM ka-ru-ú-pát ku-iš šu-ú-ni-et ta-az a]-pa-a-aš wa-ar-aš-še` – **"הוא יקצור"** (*waršzi*) במקום "הוא ייקח" (*dāi*, 167.2).
+- **הערות:** *karū=pat* "דווקא קודם" – מי שזרע ראשון. `לפנים` (F2) – כאן במובן "קודם", לא "בעבר הרחוק".
+
+### 167.2
+`ta-az a-pa-a-aš da-a-i ka-ru-ú ki-iš-ša-an e-eš-šer`
+> הוא ייקח לעצמו. לפנים כך היו עושים;
+- **פירוק:** `ta-az` – ta "and" + =z(a) "for himself" ("לעצמו"); `a-pa-a-aš` – apa- "he" ("הוא"); `da-a-i` – dā- "take" ("ייקח"); `ka-ru-ú` – karū "formerly" ("לפנים"), F2; `ki-iš-ša-an` – kiššan "thus" ("כך"); `e-eš-šer` – ešš- "used to do", pret. 3pl ("היו עושים").
+- **הערות:** "לפנים כך היו עושים" – אותה נוסחה כב־101.6 ו־121.3: העונש של 166 שייך לעבר.
+
+### 167.3
+`ki-nu-na 1 UDU LÚ-na-aš ka-aš-*ša!-aš*-ša-aš ḫu-it-ti-an-ta`
+> ועתה שה אחד חֵלֶף האיש ימשכו,
+- **פירוק:** `ki-nu-na` – kinun=a "but now" ("ועתה"), F3; `1` – "one" ("אחד"); `UDU` – "sheep" ("שה"); `LÚ-na-aš` – LÚ "man", gen. ("האיש"); `ka-aš-*ša!-aš*-ša-aš` – kaššaššaš "in place of, as a substitute for" (TLHdig "(u. B.)"; written over an erasure) ("חֵלֶף"); `ḫu-it-ti-an-ta` – ḫuittiya- "draw, pull", mp. pres. 3pl ("ימשכו").
+- **נוסחים:** KBo 25.85+: `[… ki-nu-na 1 UDU LÚ-na]-aš ka-aš-ša-aš-ša-aš` – זהה.
+- **תרגומים:** Zimmern–Friedrich 1922 (52*): «jetzt muß er 1 Schaf, das für einen Menschen als Ersatz eingesetzt wird, 2 Schafe, die für Rinder als Ersatz eingesetzt werden, 30 Brote, 3 Krüge Bier spenden» – "תחליף": אותו מובן ל־*kaššaššaš ḫuittiyanta* כאצלנו (`חֵלֶף … ימשכו`).
+- **הקבלה:** [equivalent] `וַיִּקַּח אֶת הָאַיִל וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ` (בראשית כב:יג) – בהמה חֵלֶף אדם; [divergence] – אצל אברהם התחליף בא במקום קורבן, כאן במקום עונש מוות של החוק: החוק עצמו "ממיר" את האדם בשה.
+- **הערות:** **נוסחת התחליף** (חוזרת ב־196.4–5 וב־199.6): *1 UDU … kaššaššaš ḫuittiyanta* = `שה אחד חֵלֶף … ימשכו`. *kaššaššaš* – "במקום" (המובן לפי ההקשר; המילה אינה מוכרת ממקום אחר); `חֵלֶף` – כמו *kīmū* של חוקי אשור התיכונה ("תחת" שמור). *ḫuittiya-* "למשוך" – השה "נמשך" אל המקום שבו היה האיש אמור להיקרע. העברית `ימשכו` – פעיל סתמי למדיום־פסיבום.
+- **הערת שוליים:** "ועתה שה אחד חֵלֶף האיש ימשכו": העונש הישן (166) – קריעת האדם בין שני צמדי שוורים – הומר בנוסח החוקים עצמו בהמתת שה אחד "במקומו", ושתי צאן במקום השוורים.
+
+### 167.4
+`2 UDU{ḪI.A} GU₄{ḪI.A} ka-aš-ša-aš-ša-aš ḫu-u-it-ti-an-ta 30 NINDA{ḪI.A}`
+> שתי צאן חֵלֶף השוורים ימשכו; שלושים לחמים,
+- **פירוק:** `2` – "two" ("שתי"); `UDU{ḪI.A}` – "sheep", pl. ("צאן"); `GU₄{ḪI.A}` – "oxen", gen. ("השוורים"); `ka-aš-ša-aš-ša-aš` – "in place of" ("חֵלֶף"); `ḫu-u-it-ti-an-ta` – ḫuittiya- "draw" ("ימשכו"); `30` – "thirty" ("שלושים"); `NINDA{ḪI.A}` – "loaves" ("לחמים").
+- **נוסחים:** KBo 25.85+: `[ḫu-e-et-ti-an-ta 2 UDU{ḪI.A} GU₄{ḪI.A}-aš ka-aš-ša-aš-ša]-aš ḫu-e-et-ti-an-ta` – *ḫuettiyanta* (כתיב קדום).
+
+### 167.5
+`3 {DUG}KA.G[AG] pa-a-i ta a-ap-*pa šu-up-pí-ia-aḫ-ḫi*`
+> שלושה כדי קָגָג ייתן, ובחזרה יקדש;
+- **פירוק:** `3` – "three" ("שלושה"); `{DUG}KA.G[AG]` – "jugs of KA.GAG beer" ("כדי קָגָג"); `pa-a-i` – "give" ("ייתן"); `ta` – "and" ("ו"); `a-ap-*pa*` – appa "back, again" ("בחזרה"); `*šu-up-pí-ia-aḫ-ḫi*` – šuppiyaḫḫ- "consecrate" (over an erasure) ("יקדש").
+- **נוסחים:** KBo 25.85+: `[30 NINDA{ḪI.A} 3 DUG KA.GAG pa-a-i ta a-ap-pa šu-up-p]í-ia-aḫ-ḫi` – זהה.
+- **הקבלה:** [divergence] `פֶּן תִּקְדַּשׁ הַמְלֵאָה הַזֶּרַע אֲשֶׁר תִּזְרָע` (דברים כב:ט) – בתורה הזריעה הכפולה "מקדשת" (אוסרת) את היבול; בחוק החתי הזריעה הכפולה מחללת את השדה, והאשם "מקדש אותו בחזרה".
+
+### 167.6
+`Ù A.ŠÀ-LAM ka-ru-ú-pát *ku-iš šu-ú-ni-e-et*`
+> ואת השדה – מי שזרע דווקא לפנים,
+- **פירוק:** `Ù` – "and" ("ו"); `A.ŠÀ-LAM` – "field" ("את השדה"); `ka-ru-ú-pát` – karū=pat ("דווקא לפנים"), F2; `*ku-iš šu-ú-ni-e-et*` – "who sowed" (over an erasure) ("מי שזרע").
+- **הערות:** אותה שורה כמו 167.1.
+
+### 167.7
+`ta-az a-pa-a-aš wa-ar-aš-zi`
+> הוא יקצור לעצמו.
+- **פירוק:** `ta-az` – ta + =z(a) ("לעצמו"); `a-pa-a-aš` – "he" ("הוא"); `wa-ar-aš-zi` – warš- "reap, harvest" ("יקצור").
+- **הערות:** "יקצור" – כמו בעותק הקדום כבר ב־167.1. *warš-* "לקצור" = `קצר` (106.4).
+
+## §168 – פריצת גבול השדה
+
+### 168.1
+`ták-[ku A.ŠÀ-aš ar-ḫa-an ku-iš-ki pár-ši-i]a 1 ak-ka-a-la-an pé-e-da-i BE-LÍ A.ŠÀ`
+> אם [מישהו את גבול השדה יפרוץ] – תלם אחד יישא; בעל השדה
+- **פירוק:** `ták-[ku` – takku "if" ("אם"), F1; `A.ŠÀ-aš` – "field", gen. ("השדה"); `ar-ḫa-an` – arḫa- "boundary", acc. ("את גבול"); `ku-iš-ki` – kuiški ("מישהו"); `pár-ši-i]a` – paršiya- "break", pres. 3sg ("יפרוץ"); `1` – "one" ("אחד"); `ak-ka-a-la-an` – akkala- "furrow" (TLHdig "Ackerfurche"), acc. ("תלם"); `pé-e-da-i` – peda- "carry (off)" ("יישא"); `BE-LÍ A.ŠÀ` – BĒL "owner" + A.ŠÀ ("בעל השדה").
+- **נוסחים:** **הכתב הקדום מול הנוסח המאוחר – מילת הגבול:** העותק הקדום (KBo 25.85+, המוביל) – *arḫan*, המילה החתית; KBo 6.26 ו־KBo 6.13+ (המאוחרים): `ZAG-an` – השומרוגרמה "גבול, צד". אותה מילה: `גבול` לשתיהן (כבלוח הראשון *arḫa-*). KBo 6.26: `ták-ku A.ŠÀ-an ZAG-an …` – "שדה, גבול" (נשוא כפול); ובהמשך `pé-en-na-a-i` – "יסיע" (את התלם?) במקום "יישא".
+- **הקבלה:** [divergence] `לֹא תַסִּיג גְּבוּל רֵעֲךָ אֲשֶׁר גָּבְלוּ רִאשֹׁנִים` (דברים יט:יד); `אָרוּר מַסִּיג גְּבוּל רֵעֵהוּ` (דברים כז:יז) – בתורה הסגת הגבול היא עבירה הנענשת בקללה; בחוק החתי – פיצוי בקרקע (אַמָּה) ומנחת קידוש: הגבול הוא דבר מקודש, כמו בתורה, ושבירתו מחייבת טקס. `הסיג` שמור לתורה (§H3); *paršiya-* = `פרץ` (ראו 169.2).
+- **הערות:** "יישא תלם" – הפורץ חורש תלם אחד מעבר לגבול (מסיע את הגבול). *peda-* = `נשא` (מורשה). *BĒL A.ŠÀ* = `בעל השדה` (106.3).
+
+### 168.2
+`A.Š[À-LAM 1 gi-pé-eš-šar kar-aš-še-ez-zi t]a-az da-a-i ar-ḫa-an-na ku-iš pár-ši-ia`
+> [שדה אַמָּה אחת יחתוך, ו]ייקח לעצמו; ומי שאת הגבול פרץ,
+- **פירוק:** `A.Š[À-LAM` – "field" ("שדה"); `1` – "one" ("אחת"); `gi-pé-eš-šar` – gipeššar "ell" ("אַמָּה"); `kar-aš-še-ez-zi` – karšš- "cut off" ("יחתוך"); `t]a-az` – ta + =z(a) ("ו… לעצמו"); `da-a-i` – dā- "take" ("ייקח"); `ar-ḫa-an-na` – arḫa- "boundary", acc. + =a "and" ("ו… את הגבול"); `ku-iš` – kui- "who" ("מי ש"); `pár-ši-ia` – paršiya- "break" ("פרץ").
+- **נוסחים:** KBo 6.26: `ZAG-an-na ku-iš pár-ši-ia` – *ZAG*; KBo 6.13+: `A.ŠÀ-an-na ku-iš` – "ומי שאת השדה …": שיבוש או נוסח שונה.
+- **הערות:** בעל השדה לוקח לעצמו רצועה של אַמָּה משדה הפורץ – פיצוי בקרקע, כנגד התלם שנלקח.
+
+### 168.3
+`1 UD[U 10 NINDA{ḪI.A} 1 {DUG}KA.GAG pa-a-i ta A.ŠÀ-LA]M a-ap-pa šu-up-pí-ia-aḫ-ḫi`
+> שה [אחד, עשרה לחמים, כד אחד של קָגָג ייתן, ואת השדה] בחזרה יקדש.
+- **פירוק:** `1` – "one" ("אחד"); `UD[U` – "sheep" ("שה"); `10` – "ten" ("עשרה"); `NINDA{ḪI.A}` – "loaves" ("לחמים"); `1 {DUG}KA.GAG` – "one jug of KA.GAG" ("כד אחד של קָגָג"); `pa-a-i` – "give" ("ייתן"); `ta` – "and" ("ו"); `A.ŠÀ-LA]M` – "field" ("את השדה"); `a-ap-pa` – "again" ("בחזרה"); `šu-up-pí-ia-aḫ-ḫi` – šuppiyaḫḫ- "consecrate" ("יקדש").
+- **נוסחים:** KBo 6.26, KBo 6.13+: `EGIR-pa` (השומרוגרמה) במקום *āppa*; KBo 6.13+: `1 {DUG}KA.GAG-ia` – "וגם כד".
+- **תרגומים:** Hrozný 1922: «Si d'un CHAMP la LIMITE quelqu'un sacrifie (consacre) …»; Zimmern–Friedrich 1922 (53*): «Wenn jemand die Grenze eines Feldes weiht …, der Eigentümer des Feldes soll vom Feld 1 Gibeschschar entnehmen … wer die Grenze weiht, soll 1 Schaf, 10 Brote, 1 Krug Bier spenden, dann wird er das Feld wieder reinigen» – שניהם קראו את *paršiya-* "להקדיש" (*weihen*), לא "לשבור".
+- **הערות:** אותה מנחה כמו בפגיעה בבית (165.1): השדה, כמו הבית, הוא מקום קדוש לאלים, והגבול – חלק מן הקדושה.
+
+## §169 – הקונה שדה ופורץ את הגבול
+
+### 169.1
+`ták-ku A.ŠÀ-LAM ku-iš-ki wa-a-ši ta ZAG-an pár-ši-ia`
+> אם מישהו שדה יקנה, ואת הגבול יפרוץ,
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `A.ŠÀ-LAM` – "field" ("שדה"); `ku-iš-ki` – kuiški ("מישהו"); `wa-a-ši` – waš- "buy" ("יקנה"); `ta` – "and" ("ו"); `ZAG-an` – ZAG "boundary" ("את הגבול"); `pár-ši-ia` – paršiya- "break" ("יפרוץ").
+- **נוסחים:** **הכתב הקדום חסר את "יקנה שדה":** KBo 25.85+: `ták-ku [ ar-ḫa-a]n pár-ši-ia {NINDA}ḫar-ši-⸢in da-a⸣-i` – "אם [מישהו את הגבו]ל יפרוץ, חלה ייקח" – בלי הקנייה. המוביל כאן הוא KBo 6.13+ (KBo 6.26 שבור).
+- **הקבלה:** [equivalent] `וָאֶקְנֶה אֶת הַשָּׂדֶה מֵאֵת חֲנַמְאֵל` (ירמיהו לב:ט) – קניית שדה כמעשה משפטי.
+- **הערות:** הקונה – שהגבול החדש עובר בשדהו – "פורץ" את הגבול הישן (מבטל אותו); ולכן עליו לפייס את האלים בטקס.
+
+### 169.2
+`{⸢NINDA⸣}ḫar-ši-in da-a-i ta-an {D}UTU-i pár-ši-ia`
+> חלה ייקח, ואותה לאֵל הַשֶּׁמֶשׁ יפרוץ,
+- **פירוק:** `{⸢NINDA⸣}ḫar-ši-in` – ḫarši- "thick loaf", acc. ("חלה"); `da-a-i` – dā- "take" ("ייקח"); `ta-an` – ta + =an "it" ("ואותה"); `{D}UTU-i` – UTU "the Sun-god", d.-l. ("לאֵל הַשֶּׁמֶשׁ"); `pár-ši-ia` – paršiya- "break" ("יפרוץ").
+- **נוסחים:** KBo 6.26: `{NINDA}ḫar-ši-i[n t]e-ez-zi` – "חלה – יאמר"(?): השמטה.
+- **הקבלה:** [equivalent] `הֲלוֹא פָרֹס לָרָעֵב לַחְמֶךָ` (ישעיהו נח:ז) – שבירת הלחם.
+- **הערות:** *paršiya-* "לשבור" – פועל אחד לשבירת הגבול ולפריסת הלחם (`פרץ`, לא `שבר` של *duwarna-* ולא `הסיג`): בחתית זו אותה מילה, והמשחק בין שני הנשואים הוא שמשמעותי – את הגבול ששבר, "שובר" הקונה בחלה לאל השמש, אל המשפט. *{d}UTU* = `אֵל הַשֶּׁמֶשׁ`.
+
+### 169.3
+`{⸢GIŠ⸣}el-zi-mi-it-wa tág-na-a ar-ši-ik-ke-et`
+> "את מאזניי באדמה *השקיע*",
+- **פירוק:** `{⸢GIŠ⸣}el-zi-mi-it-wa` – elzi- "scales (pair)", acc. + =mit "my" + =wa (quotative) ("את מאזניי"); `tág-na-a` – tekan- "earth", all. ("באדמה"); `ar-ši-ik-ke-et` – aršikk- (iterative of arš- "flow; set, plant"?), pret. 3sg ("*השקיע*").
+- **נוסחים:** KBo 25.85+: `ta-an [ ]-wa ta-a-ag-na-a [ar-š]a?-ke-e-et` – אותו משפט.
+- **הערות:** קריאה סתומה. "מאזני" הם אולי משל ליושר הגבול; "השקיע באדמה" – אולי "ביטל". לכן `*השקיע*` בסימן תרגום לא ודאי. *tekan-* = `אדמה`.
+
+### 169.4
+`nu te-ez-zi {D}UTU-uš {D}10-aš Ú-UL šu-ul-la-tar`
+> ויאמר: "אֵל השמש, אֵל הַסְּעָרָה – לא מחלוקת".
+- **פירוק:** `nu` – "and" ("ו"); `te-ez-zi` – te- "say" ("יאמר"); `{D}UTU-uš` – "Sun-god", nom. (vocative) ("אֵל השמש"); `{D}10-aš` – "Storm-god" ("אֵל הַסְּעָרָה"); `Ú-UL` – "not" ("לא"); `šu-ul-la-tar` – šullatar "quarrel" ("מחלוקת").
+- **נוסחים:** KBo 25.85+: `ta ki-[iš-ša-aš te-ez-zi … ] na-[at-ta šu-ul-la]-⸢a⸣-tar` – *natta* החתית במקום *UL*; KBo 6.26: `ki-iš-š[a-an-na?` – "וכך".
+- **תרגומים:** Hrozný 1922: «Si UN CHAMP quelqu'un acquiert, alors la LIMITE il …, de la FARINE Fine il prend, à la DÉESSE DU SOLEIL …: «Mon plant dans la terre tu as planté»»; Zimmern–Friedrich 1922 (54*): «Wenn jemand ein Feld erwirbt, dann soll er die Grenze weihen, Feinmehl nehmen, es dem Sonnengotte weihen und soll … sagen: (ob) der Sonnengott (oder) der Gott Tešup (angerufen wird), das macht keinen Unterschied» – *šullatar* שוב "הבדל"; הרוזני: "נטעת בארץ" (*aršikket*), כקריאתנו `*השקיע*` בערך.
+- **הקבלה:** [divergence] `אָרוּר מַסִּיג גְּבוּל רֵעֵהוּ; וְאָמַר כָּל הָעָם אָמֵן` (דברים כז:יז) – בשני המקומות הגבול מוגן בהצהרה מילולית לפני האל; בתורה – קללה על המסיג, כאן – הצהרת הקונה: "אין (כאן) מחלוקת", כלומר לא נעשה בכוונה רעה.
+- **הערות:** אל השמש ואל הסערה – אלי השבועה והמשפט, ערבים לגבולות. ההצהרה "לא מחלוקת" מזכירה את *šullatar* של 164.2: מי ששבר גבול מכריז שלא בא לריב.
+
+## §170 – הורג נחש ואומר שם של אחר
+
+### 170.1
+`[ták-k]u ⸢LÚ EL-LAM⸣ MUŠ-an ku-en-zi da-me-e-el-la ŠU[M-an]`
+> אם איש בן חורין נָחָשׁ יהרוג, ושם של אחר
+- **פירוק:** `[ták-k]u` – takku "if" ("אם"), F1; `⸢LÚ EL-LAM⸣` – "a free man" ("איש בן חורין"); `MUŠ-an` – MUŠ "snake", acc. ("נָחָשׁ"); `ku-en-zi` – kuen- "kill" ("יהרוג"); `da-me-e-el-la` – tamai- "other", gen. + =a "and" ("ו… של אחר"); `ŠU[M-an]` – ŠUM (Akk. *šumu*) "name", acc. ("שם").
+- **נוסחים:** KBo 6.13+: `ták-ku LÚ EL-LAM MUŠ-an ku-en-zi ta-me-el-la ŠUM-an` – זהה.
+- **הקבלה:** [equivalent] `וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה` (בראשית ג:א) – הנחש כיצור בעל כוח; [cognate] ŠUM היא האכדית *šumu* "שם", קרובת העברית `שֵׁם` – דרך האכדוגרמה.
+- **הערות:** **מעשה כישוף**: הורג נחש ובאותה שעה הוגה שם של אדם אחר – מעביר את המוות אל בעל השם. MUŠ = `נָחָשׁ` (השומרוגרמה של האכדית *ṣerru*, `נָחָשׁ` באגדת אתנה; מנוקד). *kuen-* = `הרג`. החוק אינו קורא לזה "כשפים" (*alwanzatar*), אך העונש – מנה כסף לבן חורין, מוות לעבד – מראה את חומרתו.
+
+### 170.2
+`te-ez-zi 1 MA.NA KÙ.BABBAR pa-a-i ták-ku ARAD-ša a-pa-a-aš-pát a-ki`
+> יאמר – מנה כסף ייתן; ואם עבד – הוא עצמו ימות.
+- **פירוק:** `te-ez-zi` – te- "say" ("יאמר"); `1` – "one" (–); `MA.NA` – "mina" ("מנה"); `KÙ.BABBAR` – "silver" ("כסף"); `pa-a-i` – "give" ("ייתן"), F8; `ták-ku` – "if" ("אם"); `ARAD-ša` – ARAD + =a ("ואם עבד"); `a-pa-a-aš-pát` – apa- "he" + =pat "himself" ("הוא עצמו"); `a-ki` – ak- "die" ("ימות").
+- **נוסחים:** KBo 6.13+: `ták-ku ARAD-ma a-pa-a-aš-pát a-ki` – *=ma* במקום *=a*.
+- **תרגומים:** Hrozný 1922: «Si UN HOMME LIBRE un SERPENT tue et le NOM (d'un autre) dit, 1 MINE D'ARGENT il donne; mais si (c'est) un ESCLAVE …»; Zimmern–Friedrich 1922 (55*): «Wenn ein freier Mann eine Schlange totschlägt und (dabei) den Namen eines andern ausspricht, so muß er 1 Mine Silber zahlen; wenn (es) aber ein Sklave (tut), so muß dieser vielmehr sterben» – ובהערה: "כישוף נחשים". מסכימים.
+- **הקבלה:** [divergence] `לֹא תְנַחֲשׁוּ וְלֹא תְעוֹנֵנוּ` (ויקרא יט:כו) – בעברית בלבד "נחש" ו"ניחוש" שותפים לאותיות; הקשר אינו בחתית.
+- **הערות:** "הוא עצמו ימות" – העבד, שאין לו כסף, משלם בגופו; *apāš=pat* = `הוא עצמו`.
+
+## §171 – האם המסלקת את בנה, ומחזירה אותו
+
+### 171.1
+`ták-ku an-na-aš TÚG-SÚ! DUMU.NITA-ši e-di! na-a-i nu-za-kán DUMU{MEŠ}-ŠU pa-ra-a`
+> אם הָאֵם את בגדה מבנה הצידה תטה, את בניה החוצה
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `an-na-aš` – anna- "mother", nom. ("הָאֵם"); `TÚG-SÚ!` – TÚG "garment" + -SÚ "her" ("את בגדה"); `DUMU.NITA-ši` – DUMU.NITA "son", d.-l. + =ši "her" ("מבנה"); `e-di!` – edi "aside, over there" ("הצידה"); `na-a-i` – nai- "turn" ("תטה"); `nu-za-kán` – nu + =za + =kan ("ו"); `DUMU{MEŠ}-ŠU` – "her sons" ("את בניה"); `pa-ra-a` – parā "out, forth" ("החוצה").
+- **נוסחים:** **"בניה" מול "בנה":** KBo 6.26 (המוביל): `DUMU{MEŠ}-ŠU` "בניה" (ברבים); KBo 6.13+: `ták-ku an-na-*aš* DUMU.NITA-iš-ši TÚG-SÚ e-di na-a-i` / `nu-za-kán DUMU-ŠU pa-ra-a šu-wa-a-ez-zi` – **"את בנה"** ביחיד, כבתחילת החוק.
+- **הקבלה:** [divergence] `כִּי יִהְיֶה לְאִישׁ בֵּן סוֹרֵר וּמוֹרֶה אֵינֶנּוּ שֹׁמֵעַ בְּקוֹל אָבִיו וּבְקוֹל אִמּוֹ` (דברים כא:יח) – גם התורה נותנת לאם (עם האב) כוח לגבי בן; אך שם להביאו לדין, כאן – לנשל אותו בטקס ולהחזירו. [equivalent] `פֶּן אַפְשִׁיטֶנָּה עֲרֻמָּה` (הושע ב:ה) – הסרת הבגד כסמל של ניתוק קשר משפחתי.
+- **הערות:** *anna-* = `אֵם`, מנוקד תמיד (`האם` נקרא "האם?"). הטקס: האם מסירה את בגדה (שכיסה את הבן? את בגדו?) – הצהרה סמלית שהבן אינו עוד בנה, כלומר נישול. *nai-* = `הטה`, *edi* = `הצידה` (כ"מן הצד ההוא" בלוח הראשון).
+
+### 171.2
+`šu-ú-i-ez-zi ma-a-an DUMU-ŠU EGIR-pa an-da ú-ez-zi`
+> תדחה. אם בנה בחזרה פנימה יבוא,
+- **פירוק:** `šu-ú-i-ez-zi` – šuwai- "push, drive out", pres. 3sg ("תדחה"); `ma-a-an` – mān "if, when" ("אם"); `DUMU-ŠU` – "her son" ("בנה"); `EGIR-pa` – "back" ("בחזרה"); `an-da` – anda "in" ("פנימה"); `ú-ez-zi` – uwa- "come" ("יבוא").
+- **הערות:** *šuwai-* = `דחה` כבלוח הראשון; *mān* = `אם` (תנאי). *uwa-* = `בא`.
+
+### 171.3
+`ta {GIŠ}IG-ŠU da-a-i ta i-di na-a-i {GIŠ}iš-ki-iš-ša-na-aš-ši-it`
+> ואת דלתה ייקח והצידה יטה, את אִשְׁקִישְׁשַׁנָּה שלה
+- **פירוק:** `ta` – "and" ("ו"); `{GIŠ}IG-ŠU` – IG "door" + -ŠU "her" ("את דלתה"); `da-a-i` – dā- "take" ("ייקח"); `ta` – "and" ("ו"); `i-di` – edi "aside" ("הצידה"); `na-a-i` – nai- "turn" ("יטה"); `{GIŠ}iš-ki-iš-ša-na-aš-ši-it` – iškiššana- a wooden household object, acc. + =šit "her" ("את אִשְׁקִישְׁשַׁנָּה שלה").
+- **נוסחים:** KBo 6.13+: `EGIR-pa an-da ú-ez-zi ta {GIŠ}IG da-a-i` / `ta e-di na-a-i {GIŠ}iš-ki-iš-ša-ni-še-et` – בלי "שלה" ליד "הדלת".
+- **הערות:** הבן החוזר מסיר מבית האם את הדלת ושני חפצי עץ – אולי מעשה סמלי הפוך: הוא "פותח" את הבית ו"מפרק" את הניתוק.
+
+### 171.4
+`{GIŠ}ḫu-u-up-pu-ul-li-iš-ši-it da-a-i`
+> ואת חוּפּוּלִּי שלה ייקח,
+- **פירוק:** `{GIŠ}ḫu-u-up-pu-ul-li-iš-ši-it` – ḫuppulli- a wooden object (TLHdig "Backtrog(?)", kneading trough?) + =šit "her" ("את חוּפּוּלִּי שלה"); `da-a-i` – "take" ("ייקח").
+- **הערות:** *ḫuppulli-* – אולי עריבת הלישה; *iškiššana-* – כלי עץ אחר. מתועתקים.
+
+### 171.5
+`ta e-di na-a-i tu-uš EGIR-pa da-a-i`
+> והצידה יטה; ואותם בחזרה ייקח,
+- **פירוק:** `ta` – "and" ("ו"); `e-di` – "aside" ("הצידה"); `na-a-i` – "turn" ("יטה"); `tu-uš` – ta + =uš "them" ("ואותם"); `EGIR-pa` – "back" ("בחזרה"); `da-a-i` – "take" ("ייקח").
+- **הערות:** מי לוקח בחזרה? כנראה האם – והיא מקבלת אותו חזרה (171.6).
+
+### 171.6
+`nu-za *DUMU.NITA-ŠU* EGIR-pa *DUMU.NITA-ŠU* i-e-ez-zi`
+> ואת בנה בחזרה לבנה תעשה.
+- **פירוק:** `nu-za` – nu + =za (reflexive: "for herself") ("ו"); `*DUMU.NITA-ŠU*` – "her son" (over an erasure) ("את בנה"); `EGIR-pa` – "back" ("בחזרה"); `*DUMU.NITA-ŠU*` – "her son" ("לבנה"); `i-e-ez-zi` – iya- "make" ("תעשה").
+- **נוסחים:** KBo 6.13+: `nu-za DUMU-ŠU EGIR-pa DUMU-ŠU i-ia-zi` – זהה; KBo 25.85+ (הכתב הקדום): `[ DUM]U.⸢NITA⸣-Š[A? …]`.
+- **תרגומים:** Hrozný 1922: «Si une mère SON VÊTEMENT à son FILS met de(hors) … répudie. Si SON FILS revient, … puis il (les) met dehors (et) elle les reprend: alors LE FILS de NOUVEAU SON FILS elle fait»; Zimmern–Friedrich 1922 (56*): «Wenn eine Mutter ihrem Sohne sein Kleid hinausschafft und dann ihren Sohn hinaustreibt, … so kann sie diese wieder (zurück)nehmen und muß dann ihren Sohn wieder zu ihrem Sohne machen» – מסכימים.
+- **הקבלה:** [divergence] `וְיִסְּרוּ אֹתוֹ וְלֹא יִשְׁמַע אֲלֵיהֶם` (דברים כא:יח) – בתורה אין דרך חזרה לבן הסורר אחרי הדין; בחוק החתי – הקשר שנותק בטקס חוזר בטקס.
+- **הערות:** אימוץ מחדש: "תעשה את בנה בחזרה לבנה". ההחלטה בידי האם – עדות לכוחה המשפטי של האם בבית החתי.
+
+## §172 – מי שהחיה אדם בשנת רעב
+
+### 172.1
+`ták-ku LÚ EL-LAM ki-iš-du-wa-an-ti MU{KAM}-ti ku-iš-ki`
+> אם מישהו איש בן חורין בשנה רעבה
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `LÚ EL-LAM` – "a free man", acc. ("איש בן חורין"); `ki-iš-du-wa-an-ti` – kišduwant- "hungry", d.-l. ("רעבה"); `MU{KAM}-ti` – MU "year", d.-l. ("בשנה"); `ku-iš-ki` – kuiški ("מישהו").
+- **נוסחים:** KBo 25.85+ (הכתב הקדום): `[… ki-iš-du-wa-an]-ti ú-i-it-ti` – *witti* (המילה החתית ל"שנה").
+- **הקבלה:** [equivalent] `קְנֵה אֹתָנוּ וְאֶת אַדְמָתֵנוּ בַּלָּחֶם; וְנִהְיֶה אֲנַחְנוּ וְאַדְמָתֵנוּ עֲבָדִים לְפַרְעֹה` (בראשית מז:יט) – ברעב אדם חופשי נותן את עצמו (או תחליף) תמורת מחייתו.
+- **הערות:** "שנה רעבה" – שנת בצורת. מי שהחזיק אדם בחיים (האכיל אותו) זכאי לתמורה.
+
+### 172.2
+`ḫu-iš-nu-zi ta *PU-UḪ-ŠU* pa-a-i ták-ku ARAD-ša 10 GÍN KÙ.BABBAR pa-a-i`
+> יחיה – הוא את תחליפו ייתן; ואם עבד – עשרה שקלים כסף ייתן.
+- **פירוק:** `ḫu-iš-nu-zi` – ḫuišnu- "keep alive, save" (causative of ḫuiš- "live"), pres. 3sg ("יחיה"); `ta` – "and" ("הוא"); `*PU-UḪ-ŠU*` – PŪḪU (Akkadogram) "substitute, replacement" + -ŠU "his" (over an erasure) ("את תחליפו"); `pa-a-i` – "give" ("ייתן"); `ták-ku` – "if" ("אם"); `ARAD-ša` – "and if a slave" ("ואם עבד"); `10` – "ten" ("עשרה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `pa-a-i` – "give" ("ייתן"), F8.
+- **נוסחים:** KBo 6.13+: `[ḫu-iš-nu-zi ta P]U-UḪ-ŠU 〈pa-a-i〉` – "ייתן" הושמט בידי הסופר; KBo 25.85+: `10 GÍN.GÍN` – זהה.
+- **תרגומים:** Hrozný 1922: «Si UN HOMME LIBRE (acc.) au nouvel An quelqu'un met en liberté, alors SON REMPLAÇANT il donne» – "שנה חדשה", "ישחרר"; Zimmern–Friedrich 1922 (57*): «Wenn jemand einen für ein Jahr gefangengesetzten freien Mann losläßt, so muß er einen Ersatz für ihn geben» – "ישחרר אסיר" (ובהערה: "מילולית: ישאיר בחיים"). *kišduwant-* "רעב" לא זוהה אז; התחליף (*PŪḪU*) – כמונו.
+- **הערות:** *ḫuišnu-* = `החיה` (הגורם של *ḫuišwant-* `חי` בלוח הראשון). *PŪḪU* "תחליף" (`תחליף` כבאפוס גילגמש, *pūḫu*): הניצול נותן אדם אחר תחתיו – כנראה עבד. עבד שניצל – מחירו עשרה שקלים (משולם בידי אדוניו).
+
+## §173a – המתנגד לדין המלך
+
+### 173a.1
+`ták-ku DI-IN LU[GA]L ku-iš-ki ḫu-u-ul-la-az-zi`
+> אם מישהו נגד דין המלך יתנגד,
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `DI-IN` – DĪNU "case, judgment" ("דין"); `LU[GA]L` – "king" ("המלך"); `ku-iš-ki` – kuiški ("מישהו"); `ḫu-u-ul-la-az-zi` – ḫulla- "oppose, fight against", pres. 3sg ("יתנגד").
+- **נוסחים:** KBo 25.85+ (הכתב הקדום): `[… ku-iš-ki] ḫu-ul-le-ez-zi` – צורה קדומה של אותו פועל.
+- **הערות:** *ḫulla-* = `התנגד` כבלוח הראשון; DĪN LUGAL = `דין המלך` (102.3, 111.1). "נגד" – תוספת העברית לפועל (`יתנגד ל־`).
+
+### 173a.2
+`É-SÚ pu-p[u-u]l-li ki-i-ša [t]ák-ku DI-IN {LÚ}DUGUD`
+> ביתו לחורבה ייעשה. אם דין של נכבד
+- **פירוק:** `É-SÚ` – É "house" + -SÚ "his" ("ביתו"); `pu-p[u-u]l-li` – pupulli- "heap of ruins" (TLHdig "Trümmerhaufen"), d.-l. ("לחורבה"); `ki-i-ša` – kiš- "become", pres. 3sg ("ייעשה"); `[t]ák-ku` – "if" ("אם"); `DI-IN` – DĪNU ("דין"); `{LÚ}DUGUD` – DUGUD "dignitary, high official" ("של נכבד").
+- **נוסחים:** KBo 25.85+: `[É-SÚ pu-pu-ul-li ki-i-ša]` – משוחזר.
+- **הקבלה:** [equivalent] `וּבַיְתֵהּ נְוָלוּ יִתְעֲבֵד עַל דְּנָה` (עזרא ו:יא) – **אותו עונש ובאותו מבנה**: מי שמשנה את צו המלך – ביתו ייעשה אשפה (נְוָלוּ); וכך `וּבָתֵּיכוֹן נְוָלִי יִתְּשָׂמוּן` (דניאל ב:ה). נוסחת עונש של חצר המלך, מן המזרח הקדום ועד הממלכה הפרסית.
+- **הערות:** *kiš-* = `נעשה` כבלוח הראשון. DUGUD (אכד. *kabtu* "כבד, נכבד") – פקיד רם, `נכבד`.
+- **הערת שוליים:** "ביתו לחורבה ייעשה" – הנוסחה החתית של עונש המתנגד לדין המלך, כנוסחת הצו של דריווש בעזרא ו:יא ("וּבַיְתֵהּ נְוָלוּ יִתְעֲבֵד").
+
+### 173a.3
+`ku-iš-ki ḫu-u-ul-li-ia-az-zi SAG.DU-SÚ`
+> מישהו יתנגד – את ראשו
+- **פירוק:** `ku-iš-ki` – kuiški ("מישהו"); `ḫu-u-ul-li-ia-az-zi` – ḫulliya- "oppose" ("יתנגד"); `SAG.DU-SÚ` – SAG.DU "head" + -SÚ "his" ("את ראשו").
+
+### 173a.4
+`I-NA-AK-KI-SÚ`
+> יקצצו.
+- **פירוק:** `I-NA-AK-KI-SÚ` – NAKĀSU (Akkadogram) "cut off", pres. 3pl + -šu "him" ("יקצצו").
+- **נוסחים:** KBo 25.85+: `SAG.DU-S]Ú I-[NA-AK-KI-SÚ]` – זהה. השורה במוביל ממשיכה ב־173b (פוצלה בגבול הסעיף).
+- **הערות:** *INAKKISŪ* – הפועל האכדי *nakāsu* "לחתוך, לקצוץ" (`קצץ` בחוקי חמורבי, וכך *kukkurš-* בלוח הראשון). המתנגד לדין של נכבד מומת, והמתנגד לדין המלך עצמו – ביתו נחרב: חוק שמבחין בין הפגיעה באדם ובין הפגיעה בבית.
+
+## §173b – העבד המורד באדוניו
+
+### 173b.1
+`ták-ku ARAD-aš iš-ḫi-iš-ši a-ra-〈u〉-ez-zi`
+> אם עבד באדוניו ימרוד,
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `ARAD-aš` – "slave", nom. ("עבד"); `iš-ḫi-iš-ši` – išḫa- "master", d.-l. + =šši "his" ("באדוניו"); `a-ra-〈u〉-ez-zi` – arawe- (from arawa- "free, exempt": "make oneself free", rebel), pres. 3sg ("ימרוד").
+- **נוסחים:** KBo 25.85+: `[… a-ra]-⸢a⸣-u-ez-zi` – הסימן *u* שהשמיט סופר KBo 6.26 נמצא בעותק הקדום.
+- **הקבלה:** [divergence] `וְאִם אָמֹר יֹאמַר הָעֶבֶד אָהַבְתִּי אֶת אֲדֹנִי … לֹא אֵצֵא חָפְשִׁי` (שמות כא:ה) – בתורה העבד יכול לצאת לחופשי (ומי שבוחר להישאר נרצע); בחוק החתי מי ש"משחרר את עצמו" נענש.
+- **הערות:** *arawe-* נגזר מ־*arawa-* "פטור, חופשי": מילולית "יעשה עצמו חופשי כנגד אדוניו" – מרד.
+
+### 173b.2
+`A-NA {DUG}ÚTUL pa-iz-zi`
+> אל הקדרה ילך.
+- **פירוק:** `A-NA {DUG}ÚTUL` – ANA "to" + ÚTUL "pot, cauldron" ("אל הקדרה"); `pa-iz-zi` – pai-/pā- "go" ("ילך").
+- **תרגומים:** Hrozný 1922: «Si LA JUSTICE DU R[O]I quelqu'un combat, SA MAISON devien[t] un amas de m[or]ts. [S]i LA JUS[TICE …] quelqu'un combat, SA TÊ[T]E ON COUPE. Si un ESCLAVE (contre) son maître s'é[l]ève, DANS LE (GRAND) POT il va»; Zimmern–Friedrich 1922 (58*): «Wenn jemand das Gericht des Königs verspottet, so soll sein Haus zu einem Trümmerhaufen werden; wenn jemand das Gericht des Hochangesehenen verspottet, so soll man seinen Kopf abschlagen. Wenn ein Sklave seinem Herrn sich gleichstellt, dann muß er in den „Topf“ gehen» – ובהערה: "הקדרה – כלי עונש או מקום עונש".
+- **הערות:** "אל הקדרה ילך" – עונש סתום: ייתכן מוות בקדרה רותחת, אולי שבועת ordeal; אולי לשון מושאלת ("יילך לאבדון"). ÚTUL = `קדרה` כבלוח הראשון (§25). העברית מילולית.
+
+## §174 – אנשים נאבקים, ואחד מת
+
+### 174.1
+`ták-ku LÚ{MEŠ} za-aḫ-ḫa-an-da ta *1?*-aš a-ki 1 SAG.DU pa-a-i`
+> אם אנשים ייאבקו, ואחד ימות – ראש אחד ייתן.
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `LÚ{MEŠ}` – "men" ("אנשים"); `za-aḫ-ḫa-an-da` – zaḫḫ- "fight, hit one another", mp. pres. 3pl ("ייאבקו"); `ta` – "and" ("ו"); `*1?*-aš` – "one" (over an erasure) ("אחד"); `a-ki` – "die" ("ימות"); `1` – "one" ("אחד"); `SAG.DU` – "head" ("ראש"); `pa-a-i` – "give" ("ייתן"), F8.
+- **נוסחים:** KBo 25.85+: זהה ככל שנשמר.
+- **תרגומים:** Hrozný 1922: «Si (parmi) DES HOMMES qui se battent, un tel meurt …»; Zimmern–Friedrich 1922 (59*): «Wenn von Menschen, die miteinander streiten, (einer) stirbt, so muß er 1 Person geben» – מסכימים.
+- **הקבלה:** [divergence] `וְכִי יְרִיבֻן אֲנָשִׁים וְהִכָּה אִישׁ אֶת רֵעֵהוּ … וְלֹא יָמוּת` (שמות כא:יח) – אותה פתיחה ("אנשים" שנאבקים); בתורה המקרה שבו הנפגע לא מת (ומי שמת – `מוֹת יוּמָת`); בחוק החתי – מישהו מת, והאחר נותן "ראש" אחד, כבלוח הראשון (§1–§4).
+- **הערות:** *zaḫḫ-* "להכות, להילחם" במדיום־פסיבום: "להיאבק זה בזה" – `נאבק` (`הכה` שמור; `ריב` ו־`נצה` – מילות התורה בשמות כא:יח ובדברים כה:יא). "ראש אחד" – פיצוי של אדם תחת אדם.
+
+## §175 – רועה או סוכן שלקחו אשה בת חורין
+
+### 175.1
+`ták-ku {LÚ}SIPA.UDU na-aš-ma {LÚ}AGRIG MUNUS-an EL-LE-TAM da-a-i`
+> אם רועה צאן או סוכן אשה בת חורין ייקח,
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `{LÚ}SIPA.UDU` – SIPA.UDU "shepherd" ("רועה צאן"); `na-aš-ma` – "or" ("או"); `{LÚ}AGRIG` – AGRIG "steward" ("סוכן"); `MUNUS-an` – "woman" ("אשה"); `EL-LE-TAM` – ELLETUM "free (fem.)" ("בת חורין"); `da-a-i` – dā- "take" ("ייקח").
+- **נוסחים:** **הכתב הקדום אינו מזכיר את הסוכן:** KBo 25.85+: `[ták-ku {LÚ}SIPA.UDU MUNUS-na-an E]L-LE-TAM da-a-i! na-aš-šu I-NA M[U 2{KAM}` – רק "רועה צאן".
+- **הערות:** **רועים וסוכנים** – אנשי משק של בית גדול (של ההיכל או של המקדש), לא בני חורין גמורים. בלוח הראשון (§35) כבר נדון סוכן או רועה ש"הבריח" אשה בת חורין. *AGRIG* = `סוכן` (שם).
+
+### 175.2
+`na-aš na-aš-šu 〈I-NA〉 MU 2{KAM} na-aš-ma I-NA MU 4{KAM} GÉME e-eš-zi`
+> היא – אם בשנה השנייה ⟨ו⟩אם בשנה הרביעית – אָמָה תהיה,
+- **פירוק:** `na-aš` – nu + =aš "she" ("היא"); `na-aš-šu` – naššu "either" ("אם"); `〈I-NA〉 MU 2{KAM}` – INA "in" (omitted by the scribe) + MU "year" + 2.KAM "second" ("⟨ב⟩שנה השנייה"); `na-aš-ma` – "or" ("אם"); `I-NA MU 4{KAM}` – "in the fourth year" ("בשנה הרביעית"); `GÉME` – "slave woman" ("אָמָה"); `e-eš-zi` – eš- "be" ("תהיה").
+- **נוסחים:** KBo 25.85+: `[… GÉME-i]š-ša-ri-ez-zi` – "תיעשה לאָמָה" (פועל מיוחד, *GÉME-iššarešš-*).
+- **הקבלה:** [divergence] `הָאִשָּׁה וִילָדֶיהָ תִּהְיֶה לַאדֹנֶיהָ וְהוּא יֵצֵא בְגַפּוֹ` (שמות כא:ד) – בשני החוקים הנישואין עם עבד (או עם איש־משק) משפיעים על מעמד האשה והילדים; בתורה – האשה שנתן האדון לעבדו נשארת של האדון; בחוק החתי – אשה בת חורין שנישאה לרועה יורדת לדרגת אָמָה.
+- **הערות:** "בשנה השנייה או בשנה הרביעית" – אולי לפי מעמדו של הבעל, אולי פרק זמן שבו האשה יכולה עוד לעזוב. GÉME = `אָמָה` (מנוקד, §H6).
+
+### 175.3
+`Ù DUMU{MEŠ}-ŠU iš-ḫu-na-a-an-zi iš-ḫu-uz-zi-ia-aš-ša`
+> ואת בניה ישפילו(?), ובחגורה
+- **פירוק:** `Ù` – "and" ("ו"); `DUMU{MEŠ}-ŠU` – "her sons" ("את בניה"); `iš-ḫu-na-a-an-zi` – išḫunau- "degrade, make subject(?)" (TLHdig "degradieren"), pres. 3pl ("ישפילו(?)"); `iš-ḫu-uz-zi-ia-aš-ša` – išḫuzzi- "belt", gen. + =a "and" ("ובחגורה").
+- **נוסחים:** KBo 25.85+: `Ù DUMU{MEŠ}-ŠU iš!-ḫu-na-an-[zi]` / `[iš-ḫu-uz-zi-uš-ša …]` – זהה.
+
+### 175.4
+`Ú-UL ku-iš-ki e-ep-zi`
+> אף אחד לא יתפוס.
+- **פירוק:** `Ú-UL` – "not" ("לא"); `ku-iš-ki` – kuiški ("אף אחד … לא"); `e-ep-zi` – ēpp- "seize" ("יתפוס").
+- **תרגומים:** Hrozný 1922: «Si UN BERGER ou UN … DUS… (une femme libre prend), alors elle (POUR) 2 ANNÉES ou POUR 4 ANNÉES … AUSSI SES ENFANTS on c[r]aint et les ceintures personne NE prend»; Zimmern–Friedrich 1922 (60*): «Wenn ein Schafhirte oder ein Salbenbereiter eine freie Frau nimmt, so muß sie entweder 2 Jahre lang oder 4 Jahre lang Sklavin sein, auch darf man seine Kinder …» – "למשך שנתיים או ארבע" (לא "בשנה השנייה"); AGRIG "מכין משחות".
+- **הערות:** "בחגורה אף אחד לא יתפוס" – אולי: אף אחד לא יתבע אותם (יאחז בחגורתם) לעבדות מלאה; הילדים מושפלים, אך אינם נמכרים. ביטוי סתום.
+
+## §176a – הפר מחוץ למכלאה; גיל הרבייה
+
+### 176a.1
+`ták-ku GU₄.MAḪ-aš ḫa-a-li ku-iš-ki ša-me-nu-uz-zi DI-IN LUGAL`
+> אם מישהו את מכלאת הפר יעלים(?) – דין המלך;
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `GU₄.MAḪ-aš` – GU₄.MAḪ "bull", gen. ("הפר"); `ḫa-a-li` – ḫali- "corral, pen", d.-l. ("את מכלאת"); `ku-iš-ki` – kuiški ("מישהו"); `ša-me-nu-uz-zi` – šamenu- (causative of šamen- "pass by, disappear") "make disappear, remove(?)" ("יעלים(?)"); `DI-IN LUGAL` – "the king's case" ("דין המלך").
+- **נוסחים:** KBo 25.85+: `[ ša-me]-nu-uz-zi DI-IN LUGAL` – זהה; KUB 29.23+: `⸢ták-ku⸣ [`.
+- **הערות:** לפי הופנר: מי שמחזיק פר מחוץ למכלאה (מוציא אותו מן המכלאה) – פר הרבעה שנועד למכלאת המלך או של הקהילה. הפועל קשה; *šamen-* = `הפסיד` (145.2), והגורם שלו `העלים`. ה"פר" (GU₄.MAḪ) = `פַּר` כבלוח הראשון (§57).
+
+### 176a.2
+`ḫa-*ap*-pár-ra-an-zi I-NA MU 3{KAM} ḫa-a-ši GU₄.APIN.LÁ`
+> ימכרו (אותו). בשנה השלישית יוליד שור החרישה,
+- **פירוק:** `ḫa-*ap*-pár-ra-an-zi` – ḫapparai- "sell", pres. 3pl (*ap* over an erasure) ("ימכרו"); `I-NA MU 3{KAM}` – "in the third year" ("בשנה השלישית"); `ḫa-a-ši` – ḫaš- "beget, sire" ("יוליד"); `GU₄.APIN.LÁ` – "plough-ox" ("שור החרישה").
+- **הערות:** ההגדרה שבסוף הסעיף – פר הוא שור שמרביע בשנתו השלישית – מזכירה את הגדרת ה"פר" בלוח הראשון (§57: "בן שנתיים – הוא פר"). *ḫapparai-* = `מכר`.
+
+### 176a.3
+`UDU.NÍTA MÁŠ.GAL I-NA MU 3{KAM} ḫa-a-ši`
+> הכבש, התיש – בשנה השלישית יוליד.
+- **פירוק:** `UDU.NÍTA` – "ram, male sheep" ("הכבש"); `MÁŠ.GAL` – "he-goat" ("התיש"); `I-NA MU 3{KAM}` – "in the third year" ("בשנה השלישית"); `ḫa-a-ši` – ḫaš- "beget" ("יוליד").
+- **נוסחים:** KBo 25.85+: `[ U]DU.NÍTA MÁŠ.GAL-aš I-NA MU 3{KAM} ḫa-a-š[i]` – זהה; KUB 29.23+: `I-NA MU 3[{KAM}`.
+- **תרגומים:** Hrozný 1922: «Si l'étable d'un GRAND TAUREAU quelqu'un tient secrète, on (le) vend(?). DANS LA 3e ANNÉE il engendre; LE TAUREAU, LE BÉLIER, LE BOUC DANS LA 3e ANNÉE engendre» – "יסתיר" ל־*šamenu-*, קרוב ל־`יעלים(?)` שלנו; Zimmern–Friedrich 1922 (61*): «Wenn jemand ein Großrind, das ……… ist, verkauft, so kann man beim Königsgericht (dagegen) Klage erheben. Im 3. Jahre muß (ein solches) zeugungsfähig sein».
+- **הערות:** UDU.NÍTA = `כבש`, MÁŠ.GAL = `תיש` כבלוח הראשון (מורשה). חקלאות מדויקת: גיל הבגרות של הזכרים קובע את ערכם (178).
+
+## §176b – הקונה אומן
+
+### 176b.1
+`ták-ku DUMU UM-MI-A-AN`
+> אם בן־אֻמָּן
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `DUMU UM-MI-A-AN` – DUMU "son" + UMMIĀNU (Akkadogram) "craftsman" ("בן־אֻמָּן").
+- **הערות:** *UMMIĀNU* היא האכדית *ummânu* "אומן" (`אֻמָּן` בקורפוסים האכדיים); [cognate] דרך האכדוגרמה – `מַעֲשֵׂה יְדֵי אָמָּן` (שיר השירים ז:ב).
+
+### 176b.2
+`ku-iš-ki wa-a-ši na-aš-šu {LÚ}BÁḪAR {LÚ}SIMUG.A {LÚ}NAGAR`
+> מישהו יקנה – בין קַדָּר, נַפָּח, נגר,
+- **פירוק:** `ku-iš-ki` – kuiški ("מישהו"); `wa-a-ši` – waš- "buy" ("יקנה"); `na-aš-šu` – naššu "either" ("בין"); `{LÚ}BÁḪAR` – BÁḪAR (Akk. *paḫāru*) "potter" ("קַדָּר"); `{LÚ}SIMUG.A` – SIMUG "smith" ("נַפָּח"); `{LÚ}NAGAR` – NAGAR "carpenter" ("נגר").
+- **נוסחים:** KBo 25.85+: `{LÚ}SIMUG` (בלי ‎.A); KUB 29.23+ – זהה.
+- **הערות:** BÁḪAR = `קַדָּר` (כ־*paḫāru* באפוס גילגמש; `יוצר` שמור ל־*eṣēru* של הקורפוסים האכדיים); SIMUG = `נַפָּח` (160a), NAGAR = `נגר` (הלוח הראשון).
+
+### 176b.3
+`{LÚ}AŠGAB {LÚ}ÁZLAG {LÚ}UŠ.BAR na-aš-šu? {LÚ}E-PIŠ {TÚG}KA-BAL-LI`
+> בורסי, כובס, אורג, או עושה קַבַּלִּי –
+- **פירוק:** `{LÚ}AŠGAB` – AŠGAB (Akk. *aškāpu*) "leather-worker" ("בורסי"); `{LÚ}ÁZLAG` – ÁZLAG (Akk. *ašlāku*) "fuller" ("כובס"); `{LÚ}UŠ.BAR` – "weaver" ("אורג"); `na-aš-šu?` – "or" ("או"); `{LÚ}E-PIŠ {TÚG}KA-BAL-LI` – ĒPIŠ "maker of" + KABALLU (Akk.) "leggings, gaiters" ("עושה קַבַּלִּי").
+- **נוסחים:** KUB 29.23+: `na-aš-ma E-PIŠ [` – *našma*.
+- **הקבלה:** [equivalent] `אֶל מְסִלַּת שְׂדֵה כוֹבֵס` (ישעיהו ז:ג) – הכובס כבעל מלאכה של העיר.
+- **הערות:** AŠGAB = `בורסי`, ÁZLAG = `כובס` (כבחוקי אור־נמה, *ašgab*, *azlag₂*); UŠ.BAR = `אורג` (הלוח הראשון). *KABALLU* – מתועתק.
+
+### 176b.4
+`ku-iš-ki wa-a-ši 10 GÍN KÙ.BABBAR pa-a-i`
+> מישהו יקנה – עשרה שקלים כסף ייתן.
+- **פירוק:** `ku-iš-ki` – kuiški ("מישהו"); `wa-a-ši` – waš- "buy" ("יקנה"); `10` – "ten" ("עשרה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `pa-a-i` – "give" ("ייתן"), F8.
+- **תרגומים:** Hrozný 1922: «… quelqu'un engage, ou UN POTIER, UN FORGERON, UN CORDONNIER, UN TAILLEUR … quelqu'un engage, 10 SICLES D'ARGENT il donne»; Zimmern–Friedrich 1922: «Wenn jemand einen Handwerksmeister anwirbt, entweder daß er einen Töpfer, einen Schmied, einen Schreiner, einen Schuster, einen Schneider, einen Weber, oder daß er einen ……-Tuchmacher anwirbt, so muß er 10 Sekel Silber zahlen» – שניהם "ישכור" (*anwirbt*) ל־*waš-* "לקנות": קניית אומן או שכירתו? המילה היא *waš-* "קנה", כבשאר החוקים.
+- **הערות:** המחיר של בעל מלאכה – עשרה שקלים; ראו 177: מחירו של "אדם בלתי מיומן" – עשרים! כנראה כאן מס הקנייה או מחיר השחרור, לא המחיר עצמו – או שהאומן "בן אומן" (שוליה).
+
+## §177 – הקונה מנחש־ציפורים או אדם בלתי מיומן
+
+### 177.1
+`ták-ku {LÚ}MUŠEN.DÙ-a[n a]n-na-nu-wa-an-ta-an ku-iš-ki wa-a-ši`
+> אם מישהו צַיַּד־ציפורים מאולף יקנה,
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `{LÚ}MUŠEN.DÙ-a[n` – MUŠEN.DÙ (Akk. *usandû* "fowler"; in Ḫatti the augur who observes birds) ("צַיַּד־ציפורים"); `a]n-na-nu-wa-an-ta-an` – annanuwant- (participle of annanu- "train") "trained" ("מאולף"); `ku-iš-ki` – kuiški ("מישהו"); `wa-a-ši` – "buy" ("יקנה").
+- **נוסחים:** KBo 25.85+: `[… ] 25 GÍN KÙ.BABBAR pa-a-i` – אותו מחיר.
+- **הערות:** **המנחש בציפורים** – מומחה לנבואה ממעוף הציפורים, מקצוע של חצר המלך החתי. מחירו (25 שקלים) – יותר מכל בעל מלאכה. `צַיַּד־ציפורים` – מילולי לפי השומרוגרמה ("עושה הציפורים"); `ציפור` מורשה ל־MUŠEN. *annanuwant-* = `מאולף` (כמו *annanuḫḫa-*, אותו שורש).
+
+### 177.2
+`25 GÍN KÙ.BA[BBAR] pa-a-i ták-ku LÚ-an na-aš-ma MUNUS-an`
+> עשרים וחמישה שקל כסף ייתן. אם מישהו איש או אשה
+- **פירוק:** `25` – "twenty-five" ("עשרים וחמישה"); `GÍN` – "shekel(s)" ("שקל"); `KÙ.BA[BBAR]` – "silver" ("כסף"); `pa-a-i` – "give" ("ייתן"); `ták-ku` – "if" ("אם"); `LÚ-an` – "man", acc. ("איש"); `na-aš-ma` – "or" ("או"); `MUNUS-an` – "woman", acc. ("אשה").
+
+### 177.3
+`dam-pu-u-pí-in ku-iš-ki wa-a-ši 20 GÍN KÙ.BABBAR pa-a-i`
+> בלתי מיומנים יקנה – עשרים שקל כסף ייתן.
+- **פירוק:** `dam-pu-u-pí-in` – dampupi- "untrained", acc. ("בלתי מיומנים"); `ku-iš-ki` – kuiški ("מישהו"); `wa-a-ši` – "buy" ("יקנה"); `20` – "twenty" ("עשרים"); `GÍN` – "shekel(s)" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `pa-a-i` – "give" ("ייתן"), F8.
+- **נוסחים:** KBo 25.85+: `[ ku-iš-ki] wa-a-ši 20 GÍN KÙ.BABBAR pa-a-[i]` – זהה.
+- **תרגומים:** Hrozný 1922: «Si u[n] HOMME OISELEUR habile quelqu'un engage, [25 SICLES] … non instruit[s] quelqu'un engage, 20 SICLES D'ARGENT»; Zimmern–Friedrich 1922 (62*): «Wenn jemand einen bewährten Vogelzüchter anwirbt, so muß er 25 Sekel Silber zahlen; wenn er einen noch unbewährten, Mann oder Frau, anwirbt, so braucht er (nur) 20 Sekel Silber zu zahlen» – "מגדל ציפורים" ל־MUŠEN.DÙ; ו"לא מיומן" מתייחס אצלם גם הוא לצייד הציפורים.
+- **הקבלה:** [equivalent] `כֶּסֶף שְׁלֹשִׁים שְׁקָלִים יִתֵּן לַאדֹנָיו` (שמות כא:לב) – מחיר קבוע של אדם; [equivalent] `וְהָיָה עֶרְכְּךָ חֲמִשִּׁים שֶׁקֶל כֶּסֶף` (ויקרא כז:ג) – ערך אדם בשקלים.
+- **הערות:** עשרים שקל לעבד פשוט (איש או אשה – אותו מחיר). *dampupi-* = `בלתי מיומן` (147.1).
+
+## §178 – מחירון: בקר וסוסים
+
+### 178.1
+`ŠA GU₄.APIN.LÁ ⸢12⸣ GÍN KÙ.BABBAR ŠI-IM-ŠU ŠA 1 GU₄.MAḪ 10 GÍN KÙ.BABBAR ŠI-IM-ŠU`
+> של שור חרישה – שנים עשר שקל כסף מחירו; של פַּר אחד – עשרה שקלים כסף מחירו;
+- **פירוק:** `ŠA` – ŠA "of" ("של"); `GU₄.APIN.LÁ` – "plough-ox" ("שור חרישה"); `⸢12⸣` – "twelve" ("שנים עשר"); `GÍN` – "shekel(s)" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – ŠĪMU (Akkadogram; Hitt. *ḫappar-*) "price" + -ŠU "its" ("מחירו"); `ŠA 1` – "of one" ("של … אחד"); `GU₄.MAḪ` – "bull" ("פַּר"); `10` – "ten" ("עשרה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירו").
+- **נוסחים:** KUB 29.23+ (נוסח קדום, כתב חדש) ו־KBo 25.85+ (הכתב הקדום): אותם מחירים ככל שנשמרו.
+- **תרגומים:** Hrozný 1922: «D'UN BŒUF DE CHARRUE (est) 15 (? 12?) SICLES …»; Zimmern–Friedrich 1922 (63*): «Für ein Pflugrind ist der Preis 15(?) Sekel Silber …» – שניהם התלבטו בספרה (15 או 12); TLHdig: `⸢12⸣` (פגום).
+- **הקבלה:** [equivalent] `וַיִּקֶן דָּוִד אֶת הַגֹּרֶן וְאֶת הַבָּקָר בְּכֶסֶף שְׁקָלִים חֲמִשִּׁים` (שמואל ב כד:כד) – מחיר בקר בשקלי כסף. [absent] לתורה אין מחירון; `וְהָיָה עֶרְכְּךָ` (ויקרא כז) – ערכי הקדש בלבד.
+- **הערות:** **המחירון (§§178–186)** – רשימה רשמית של מחירים קבועים, כנראה לשימוש הדיינים (בפיצויים) ולפיקוח על השוק. הנוסחה הקבועה: *ŠA X n GÍN KÙ.BABBAR ŠIMŠU* = `של X – n שקלים כסף מחירו` (בלי ŠIMŠU: `של X – n שקלים כסף`). *ŠĪMU* = `מחיר` (פסיקת המתאם: האכדוגרמה כותבת את *ḫappar-* החתית "מחיר"). שור חרישה (12) יקר מן הפר (10): כוח העבודה שווה יותר מכוח ההרבעה.
+
+### 178.2
+`ŠA 1 {GU₄}ÁB.GAL 7 GÍN KÙ.BABBAR ŠI-IM-ŠU 1 GU₄.APIN.LÁ 1 {GU₄}ÁB`
+> של פרה גדולה אחת – שבעה שקלים כסף מחירה; שור חרישה אחד, פרה אחת
+- **פירוק:** `ŠA 1` – "of one" ("של … אחת"); `{GU₄}ÁB.GAL` – ÁB.GAL "full-grown cow" ("פרה גדולה"); `7` – "seven" ("שבעה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירה"); `1` – "one" ("אחד"); `GU₄.APIN.LÁ` – "plough-ox" ("שור חרישה"); `1` – "one" ("אחת"); `{GU₄}ÁB` – "cow" ("פרה").
+- **הערות:** *-ŠU* "שלו" – בעברית מתאים למין הנקנה: `מחירו` / `מחירה`.
+
+### 178.3
+`i-ú-ga-aš-š[a] 5 GÍN KÙ.BABBAR ŠI-IM-ŠU nu ŠA 1 GU₄ ša-ú-i-ti-iš-ta-aš`
+> בני שנה – חמישה שקלים כסף מחירם; ושל שור גָּמוּל אחד
+- **פירוק:** `i-ú-ga-aš-š[a]` – iuga- "yearling", gen./nom. ("בני שנה"); `5` – "five" ("חמישה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירם"); `nu` – "and" ("ו"); `ŠA 1` – "of one" ("של … אחד"); `GU₄` – "ox" ("שור"); `ša-ú-i-ti-iš-ta-aš` – šawitišt- "weanling", gen. ("גָּמוּל").
+- **נוסחים:** KUB 29.23+ ו־KBo 25.85+: `i-ú-ga-aš-ša-an` – צורה אחרת של אותה מילה.
+- **הערות:** "שור חרישה ופרה בני שנה" – זוג של בני שנה במחיר אחד (מחירם, ברבים, אף ש־*ŠI-IM-ŠU* ביחיד). *iuga-* = `בן שנה`, *šawitišt-* = `גָּמוּל` (מנוקד) כבלוח הראשון.
+
+### 178.4
+`4 GÍN KÙ.BABBAR pa-⸢a⸣-i ták-ku {GU₄}ÁB ar-ma-aḫ-ḫa-an-ti`
+> ארבעה שקלים כסף ייתן. אם פרה הרה –
+- **פירוק:** `4` – "four" ("ארבעה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `pa-⸢a⸣-i` – "give" ("ייתן"), F8; `ták-ku` – "if" ("אם"); `{GU₄}ÁB` – "cow" ("פרה"); `ar-ma-aḫ-ḫa-an-ti` – armaḫḫant- "pregnant" (participle of armaḫḫ- "impregnate"), d.-l. ("הרה").
+- **נוסחים:** KUB 29.23+: `ŠA 1 {GU₄}ÁB ar-[ma-aḫ-ḫa-an-ta-aš 8 GÍN KÙ.BABBAR]` – "של פרה הרה אחת" (גניטיב, בלי *takku*).
+- **הערות:** כאן – "ייתן" במקום "מחירו": הרשימה עוברת לרגע לניסוח של תשלום. *armaḫḫant-* = `הרה` (כ־*armawant-* בלוח הראשון, אותו שורש).
+
+### 178.5
+`8 GÍN KÙ.BABBAR Š[A] 1 AMAR 2 GÍN KÙ.BABBAR ŠI-IM-ŠU 1 ANŠE.KUR.RA.NÍTA`
+> שמונה שקלים כסף; של עגל אחד – שני שקלים כסף מחירו; סוס זכר אחד,
+- **פירוק:** `8` – "eight" ("שמונה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `Š[A] 1` – "of one" ("של … אחד"); `AMAR` – "calf" ("עגל"); `2` – "two" ("שני"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירו"); `1` – "one" ("אחד"); `ANŠE.KUR.RA.NÍTA` – "stallion, male horse" ("סוס זכר").
+- **נוסחים:** **KUB 29.23+: `ŠA 1 AMAR 3 GÍN`** – העגל בשלושה שקלים, לא בשניים.
+
+### 178.6
+`1 ANŠE.KUR.RA.MUNUS.AL.[L]Á ŠA 1 ANŠE.NÍTA 1 ANŠE.MUNUS.AL.LÁ ŠI-IM-ŠU QA-TAM-MA-pát`
+> סוסה אחת, של חמור זכר אחד, אתון אחת – מחירם כך ממש.
+- **פירוק:** `1` – "one" ("אחת"); `ANŠE.KUR.RA.MUNUS.AL.[L]Á` – "mare" ("סוסה"); `ŠA 1` – "of one" ("של … אחד"); `ANŠE.NÍTA` – "male donkey" ("חמור זכר"); `1` – "one" ("אחת"); `ANŠE.MUNUS.AL.LÁ` – "female donkey" ("אתון"); `ŠI-IM-ŠU` – "its price" ("מחירם"); `QA-TAM-MA-pát` – QĀTAMMA=pat "exactly so, likewise" ("כך ממש").
+- **הקבלה:** [equivalent] `וְסוּס בַּחֲמִשִּׁים וּמֵאָה; וְכֵן לְכָל מַלְכֵי הַחִתִּים` (מלכים א י:כט) – המקרא זוכר את "מלכי החתים" כקוני סוסים, במחיר של מאה וחמישים שקל לסוס – פי שבעה ויותר מן המחירון החתי (20 שקלים לסוס רתמה, 180.1).
+- **הערות:** "כך ממש" – אותו מחיר כמו העגל? כנראה: כמו הסוס הזכר והסוסה (שמחירם לא נאמר כאן, ראו 180). *QĀTAMMA=pat* = `כך ממש` כבלוח הראשון.
+
+## §179 – מחירון: צאן ועזים
+
+### 179.1
+`ták-ku 1 UDU 1 GÍN KÙ.BABBAR [Š]I-IM-ŠU ŠA *3* UZ₆ 2 GÍN KÙ.BABBAR ŠI-IM-ŠU`
+> אם שה אחד – שקל אחד כסף מחירו; של שלוש עזים – שני שקלים כסף מחירן;
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `1` – "one" ("אחד"); `UDU` – "sheep" ("שה"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `[Š]I-IM-ŠU` – "its price" ("מחירו"); `ŠA *3*` – "of three" (*3* over an erasure) ("של שלוש"); `UZ₆` – "she-goat(s)" ("עזים"); `2` – "two" ("שני"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירן").
+- **נוסחים:** KUB 29.33+: `ŠA 1 UDU …` – "של שה" (בלי *takku*).
+- **הערות:** UZ₆ = `עז` (הלוח הראשון: ÙZ `עז`).
+
+### 179.2
+`ŠA 2 SILA₄ 1 GÍN KÙ.BABBAR Š[I-I]M-ŠU-NU ŠA 2 MÁŠ.TUR ½ GÍN 〈KÙ.BABBAR〉 ŠI-IM-ŠU-〈NU〉`
+> של שני טלאים – שקל אחד כסף מחירם; של שני גדיים – חצי שקל ⟨כסף⟩ מחיר⟨ם⟩.
+- **פירוק:** `ŠA 2` – "of two" ("של שני"); `SILA₄` – "lamb(s)" ("טלאים"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `Š[I-I]M-ŠU-NU` – "their price" ("מחירם"); `ŠA 2` – "of two" ("של שני"); `MÁŠ.TUR` – "kid(s)" ("גדיים"); `½` – "half" ("חצי"); `GÍN` – "shekel" ("שקל"); `〈KÙ.BABBAR〉` – "silver" (omitted) ("⟨כסף⟩"); `ŠI-IM-ŠU-〈NU〉` – "their price" ("מחיר⟨ם⟩").
+- **הערות:** SILA₄ = `טלה`, MÁŠ.TUR = `גדי` (הלוח הראשון).
+
+## §180 – מחירון: סוסים ופרדים
+
+### 180.1
+`ták-ku 1 ANŠE.KUR.RA tu-ri-ia-u-aš ⸢20⸣ GÍN KÙ.BABBAR ŠI-IM-ŠU`
+> אם סוס רתמה אחד – עשרים שקל כסף מחירו;
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `1` – "one" ("אחד"); `ANŠE.KUR.RA` – "horse" ("סוס"); `tu-ri-ia-u-aš` – turiyawaš (gen. of the verbal noun of turiya- "harness") ("רתמה"); `⸢20⸣` – "twenty" ("עשרים"); `GÍN` – "shekel(s)" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירו").
+- **נוסחים:** **KUB 29.33+:** `Š]A ANŠE.KUR.RA tu-u-ri-ia-wa-〈aš〉` / `10 GÍN KÙ.BABBAR ŠI-IM-ŠU` – **עשרה שקלים**, לא עשרים; ובהמשך (180.2) מוסיף `ŠA ANŠE.KUR.RA ú-e-ši-⸢ia-u⸣-wa-aš 15 GÍN` – "סוס מרעה" בחמישה עשר שקל, במקום "סוס" בארבעה עשר של המוביל.
+- **הערות:** "סוס רתמה" = `סוס רתמה` כבלוח הראשון (§64): סוס מאומן למרכבה, היקר מכל הבהמות חוץ מן הפרד.
+
+### 180.2
+`ŠA 1 ANŠE.GÌR.NUN.NA 1 MA.NA KÙ.BABBAR ŠI-IM-ŠU ŠA 1 ANŠE.KUR.RA`
+> של פרד אחד – מנה כסף מחירו; של סוס אחד
+- **פירוק:** `ŠA 1` – "of one" ("של … אחד"); `ANŠE.GÌR.NUN.NA` – "mule" ("פרד"); `1` – "one" (–); `MA.NA` – "mina" ("מנה"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירו"); `ŠA 1` – "of one" ("של … אחד"); `ANŠE.KUR.RA` – "horse" ("סוס").
+- **הערות:** הפרד – מנה כסף, ארבעים שקל, פי שניים מסוס רתמה: הכלאה יקרה ונדירה.
+
+### 180.3
+`14 GÍN KÙ.BABBAR ŠI-IM-ŠU ŠA 1 ANŠE.KUR.RA.NÍTA i-ú-ga-aš 10 GÍN KÙ.BABBAR ŠI-IM-ŠU`
+> – ארבעה עשר שקל כסף מחירו; של סוס זכר בן שנה אחד – עשרה שקלים כסף מחירו;
+- **פירוק:** `14` – "fourteen" ("ארבעה עשר"); `GÍN` – "shekel(s)" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירו"); `ŠA 1` – "of one" ("של … אחד"); `ANŠE.KUR.RA.NÍTA` – "male horse" ("סוס זכר"); `i-ú-ga-aš` – iuga- "yearling" ("בן שנה"); `10` – "ten" ("עשרה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירו").
+
+### 180.4
+`ŠA 1 ANŠE.KUR.RA.MUNUS.AL.LÁ i-ú-ga-aš 15 GÍN KÙ.BABBAR ŠI-IM-ŠU`
+> של סוסה בת שנה אחת – חמישה עשר שקל כסף מחירה.
+- **פירוק:** `ŠA 1` – "of one" ("של … אחת"); `ANŠE.KUR.RA.MUNUS.AL.LÁ` – "mare" ("סוסה"); `i-ú-ga-aš` – "yearling" ("בת שנה"); `15` – "fifteen" ("חמישה עשר"); `GÍN` – "shekel(s)" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירה").
+- **נוסחים:** KUB 29.33+: `⸢15⸣ GÍN.GÍN KÙ.BABBAR 〈ŠI-IM-ŠU〉` – זהה, בלי "מחירה".
+- **הערות:** הסוסה בת השנה יקרה מן הזכר בן השנה (15 מול 10): ערך הרבייה.
+
+## §181 – מחירון: בהמות צעירות, נחושת, שמן, דבש, גבינה
+
+### 181.1
+`ŠA 1 ANŠE.KUR.RA.NÍTA Ù ŠA 1 ANŠE.KUR.RA.MUNUS.AL.LÁ ša-ú-i-ti-iš-ta-aš`
+> של סוס זכר אחד ושל סוסה אחת גְּמוּלִים
+- **פירוק:** `ŠA 1` – "of one" ("של … אחד"); `ANŠE.KUR.RA.NÍTA` – "male horse" ("סוס זכר"); `Ù` – "and" ("ו"); `ŠA 1` – "of one" ("של … אחת"); `ANŠE.KUR.RA.MUNUS.AL.LÁ` – "mare" ("סוסה"); `ša-ú-i-ti-iš-ta-aš` – šawitišt- "weanling", gen. ("גְּמוּלִים").
+- **הערות:** `גְּמוּלִים` מנוקד (בלי ניקוד – "גמולים", תגמולים).
+
+### 181.2
+`4 GÍN KÙ.BABBAR ŠI-IM-ŠU 〈ŠA〉 4 MA.NA URUDU 1 GÍN KÙ.BABBAR ŠI-IM-ŠU`
+> – ארבעה שקלים כסף מחירם; ⟨של⟩ ארבע מנים נחושת – שקל אחד כסף מחירן;
+- **פירוק:** `4` – "four" ("ארבעה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירם"); `〈ŠA〉` – "of" (omitted) ("⟨של⟩"); `4` – "four" ("ארבע"); `MA.NA` – "minas" ("מנים"); `URUDU` – "copper" ("נחושת"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירן").
+- **הערות:** יחס המתכות: ארבע מנים נחושת (160 שקל משקל) – שקל כסף אחד.
+
+### 181.3
+`ŠA 1 zi-pát-ta-ni Ì.DU₁₀.GA 2 GÍN KÙ.BABBAR ŠA 1 zi-pát-ta-[ni]`
+> של זִיפַּטַּנִּי אחד שמן טוב – שני שקלים כסף; של זִיפַּטַּנִּי אחד
+- **פירוק:** `ŠA 1` – "of one" ("של … אחד"); `zi-pát-ta-ni` – zipattani- a liquid measure ("זִיפַּטַּנִּי"); `Ì.DU₁₀.GA` – "fine (perfumed) oil" ("שמן טוב"); `2` – "two" ("שני"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 1` – "of one" ("של … אחד"); `zi-pát-ta-[ni]` – "zipattani" ("זִיפַּטַּנִּי").
+- **הקבלה:** [equivalent] `טוֹב שֵׁם מִשֶּׁמֶן טוֹב` (קהלת ז:א) – "השמן הטוב" – שמן הבושם, מוצר יוקרה.
+- **הערות:** Ì.DU₁₀.GA – מילולית "שמן טוב" (DU₁₀ "טוב"): `שמן טוב`. *zipattani-* – מידת נוזלים, מתועתקת.
+
+### 181.4
+`Ì.ŠAḪ 1 GÍN KÙ.BABBAR ŠA 1 zi-pát-ta-ni Ì.NUN 1 GÍN KÙ.BABBAR`
+> שומן־חזיר – שקל אחד כסף; של זִיפַּטַּנִּי אחד חמאה – שקל אחד כסף;
+- **פירוק:** `Ì.ŠAḪ` – "lard" ("שומן־חזיר"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 1` – "of one" ("של … אחד"); `zi-pát-ta-ni` – "zipattani" ("זִיפַּטַּנִּי"); `Ì.NUN` – "butter, ghee" ("חמאה"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף").
+- **נוסחים:** KUB 29.33+: `[ŠA] 1 zi-pád-da-ni Ì.ŠAḪ 1 GÍ[N …] 〈ŠI-IM-ŠU〉` – זהה.
+- **הערות:** Ì.ŠAḪ = `שומן־חזיר` כבלוח הראשון; Ì.NUN = `חמאה` (כ־*i₃-nun* בגליליות גודאה).
+
+### 181.5
+`ŠA 1 zi-pád-da-ni *LÀL* 1 GÍN KÙ.BABBAR ŠA 2 GA.KIN.AG [1 GÍN KÙ.BABBAR]`
+> של זִיפַּטַּנִּי אחד דבש – שקל אחד כסף; של שתי גבינות – [שקל אחד כסף];
+- **פירוק:** `ŠA 1` – "of one" ("של … אחד"); `zi-pád-da-ni` – "zipattani" ("זִיפַּטַּנִּי"); `*LÀL*` – LÀL "honey" (over an erasure) ("דבש"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 2` – "of two" ("של שתי"); `GA.KIN.AG` – "cheese(s)" ("גבינות"); `[1 GÍN KÙ.BABBAR]` – "1 shekel of silver" ("[שקל אחד כסף]").
+- **הערות:** חמאה, דבש – שקל אחד; בגליליות גודאה ובחזון ישעיהו (`חֶמְאָה וּדְבַשׁ` (ישעיהו ז:טו)) – מזון המותרות של הארץ.
+
+### 181.6
+`ŠA 3 EM-ṢÚ 1 GÍN KÙ.BABBAR ŠI-IM-ŠU`
+> של שלוש קיבות(?) – שקל אחד כסף מחירן.
+- **פירוק:** `ŠA 3` – "of three" ("של שלוש"); `EM-ṢÚ` – EMṢU (Akkadogram, *emṣu* "sour"; here rennet or sour milk?) ("קיבות(?)"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירן").
+- **תרגומים:** Hrozný 1922: «D'1 zimittani DE BONNE HUILE (est) 2 SICLES … DE SAINDOUX (est) 1 SICLE … DE 3 (pièces de) LEVAIN (est) 1 SICLE D'ARGENT» – *EMṢU* "שְׂאוֹר" (*levain*): ראו הערה.
+- **הערות:** *emṣu* האכדי "חמוץ" (קרוב ל־`חָמֵץ`); ברשימת מוצרי החלב – אולי הקיבה (המחמיצה את החלב לגבינה). לכן `קיבות(?)` – בסימן שאלה. הרוזני: "שאור" (*levain*), וזו אפשרות טובה לא פחות; הקשר האטימולוגי עם `חָמֵץ` הוא דרך האכדית, ולא ננקט כאן מפני שהמשמעות אינה ודאית.
+
+## §182 – מחירון: בגדים
+
+### 182.1
+`ŠA {TÚG}ḫa-ap-pu-ša-an-da-aš 12 GÍN KÙ.BABBAR 1 TÚG.SIG 30 GÍ[N KÙ.BABBAR]`
+> של (בגד) חַפּוּשַׁנְט – שנים עשר שקל כסף; של בגד דק אחד – שלושים שקל [כסף];
+- **פירוק:** `ŠA` – "of" ("של"); `{TÚG}ḫa-ap-pu-ša-an-da-aš` – ḫappušant- a garment, gen. ("(בגד) חַפּוּשַׁנְט"); `12` – "twelve" ("שנים עשר"); `GÍN` – "shekel(s)" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `1` – "one" ("אחד"); `TÚG.SIG` – "fine garment" ("בגד דק"); `30` – "thirty" ("שלושים"); `GÍ[N` – "shekel(s)" ("שקל"); `KÙ.BABBAR]` – "silver" ("כסף").
+- **נוסחים:** KUB 29.33+: `{TÚG}ḫa-pu-ša-an-da-aš` – כתיב אחר.
+- **הערות:** הבגד הדק – הפריט היקר ברשימה (30 שקל), יותר מסוס. TÚG.SIG = `בגד דק` (144.3).
+
+### 182.2
+`ŠA 1 TÚG.SÍG ZA.GÌN 20 GÍN KÙ.BABBAR ŠA {TÚG}a-du-up-li 10 GÍN K[Ù.BABBAR]`
+> של בגד צמר סַפִּיר אחד – עשרים שקל כסף; של (בגד) אַדוּפְּלִי – עשרה שקלים כ[סף];
+- **פירוק:** `ŠA 1` – "of one" ("של … אחד"); `TÚG.SÍG` – "woollen garment" ("בגד צמר"); `ZA.GÌN` – "lapis lazuli; lapis-blue" ("סַפִּיר"); `20` – "twenty" ("עשרים"); `GÍN` – "shekel(s)" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA` – "of" ("של"); `{TÚG}a-du-up-li` – adupli- a garment ("(בגד) אַדוּפְּלִי"); `10` – "ten" ("עשרה"); `GÍN` – "shekels" ("שקלים"); `K[Ù.BABBAR]` – "silver" ("כסף").
+- **נוסחים:** KUB 29.33+: `ŠA TÚG.SIG 30 GÍN KÙ.BABBAR [ŠA TÚG.SIG] ZA.GÌN 20 GÍN` – "בגד דק ספיר" (SIG ולא SÍG).
+- **הערות:** ZA.GÌN = `סַפִּיר` (ההאחדה בין הקורפוסים: אבן הלָּזוּרִית הכחולה, הספיר המקראי – שמות כד:י); כאן צבע הבגד – כחול כספיר.
+
+### 182.3
+`1 {TÚG}iš-kal-li-iš-šar 3 GÍN KÙ.BABBAR ŠA 1 {TÚG}im-m[i?-`
+> (בגד) אִשְׁקַלִּישַׁר אחד – שלושה שקלים כסף; של (בגד) אִמּ[…] אחד
+- **פירוק:** `1` – "one" ("אחד"); `{TÚG}iš-kal-li-iš-šar` – iškalliššar a garment (cf. iškalla- "tear, slit") ("(בגד) אִשְׁקַלִּישַׁר"); `3` – "three" ("שלושה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 1` – "of one" ("של … אחד"); `{TÚG}im-m[i?-` – a garment, broken ("(בגד) אִמּ[…]").
+- **נוסחים:** KUB 29.33+: `ŠA {TÚG}iš-kal-le-eš-šar 3 GÍN.GÍN` – זהה (בסדר אחר בעותק).
+
+### 182.4
+`4 GÍN KÙ.BABBAR ŠA 1 TÚG.BÁR 1 GÍN KÙ.BABBAR ŠI-IM-ŠU`
+> – ארבעה שקלים כסף; של בגד־בָּאר אחד – שקל אחד כסף מחירו;
+- **פירוק:** `4` – "four" ("ארבעה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 1` – "of one" ("של … אחד"); `TÚG.BÁR` – TÚG.BÁR a (simple) garment ("בגד־בָּאר"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירו").
+- **הערות:** TÚG.BÁR – בגד פשוט (שמו השומרי מתועתק).
+
+### 182.5
+`Š[A] 1 {TÚG[}]G[Ú].È.A SIG 3 GÍ[N K]Ù.BA[BBAR] Š[A] 1 TÚG.GÚ.[`
+> של כותונת דקה אחת – שלושה ש[קלים] כ[סף]; של […] אחד
+- **פירוק:** `Š[A] 1` – "of one" ("של … אחת"); `{TÚG[}]G[Ú].È.A` – GÚ.È.A "shirt, tunic" (lit. "(garment) going out over the neck") ("כותונת"); `SIG` – "fine, thin" ("דקה"); `3` – "three" ("שלושה"); `GÍ[N` – "shekels" ("שקלים"); `K]Ù.BA[BBAR]` – "silver" ("כסף"); `Š[A] 1` – "of one" ("של … אחד"); `TÚG.GÚ.[` – a garment, broken ("[…]").
+- **נוסחים:** KBo 31.65: `ŠA 1 {TÚG}GÚ].È.A SIG` – זהה.
+- **הערות:** GÚ.È.A – הבגד העליון, שראשו יוצא דרך פתח הצוואר: `כותונת`.
+
+### 182.6
+`[ŠA] ⸢1⸣ TÚG 7 MA.NA KI.LÁ.BI [`
+> [של] בגד אחד שמשקלו שבע מנים […]
+- **פירוק:** `[ŠA]` – "of" ("של"); `⸢1⸣` – "one" ("אחד"); `TÚG` – "garment" ("בגד"); `7` – "seven" ("שבע"); `MA.NA` – "minas" ("מנים"); `KI.LÁ.BI` – KI.LÁ "weight" + -BI "its" ("שמשקלו").
+- **הערות:** בגד כבד של שבע מנים (כשלושה וחצי ק"ג) – מעיל או שמיכה של צמר.
+
+### 182.7
+`ŠA 1 GADA GAL 5 GÍN KÙ.BABBAR Š[I-IM-ŠU]`
+> של (בגד) פשתן גדול אחד – חמישה שקלים כסף מ[חירו].
+- **פירוק:** `ŠA 1` – "of one" ("של … אחד"); `GADA` – "linen (cloth)" ("(בגד) פשתן"); `GAL` – "large" ("גדול"); `5` – "five" ("חמישה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `Š[I-IM-ŠU]` – "its price" ("מחירו").
+
+## §183 – מחירון: דגנים, יין, שדות
+
+### 183.1
+`ŠA 3 PA ZÍZ 1 GÍN KÙ.BABBAR ŠA 4 P[A`
+> של שלושה פָּרִיס כוסמת – שקל אחד כסף; של ארבעה פָּ[רִיס …]
+- **פירוק:** `ŠA 3` – "of three" ("של שלושה"); `PA` – PARĪSU ("פָּרִיס"); `ZÍZ` – "emmer" ("כוסמת"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 4` – "of four" ("של ארבעה"); `P[A` – PARĪSU ("פָּ[רִיס").
+- **הערות:** כנראה "ארבעה פָּרִיס [שעורים] – [שקל אחד]": השעורים זולות מן הכוסמת.
+
+### 183.2
+`ŠA 1 PA GEŠTIN ½ GÍN KÙ.BABBAR ŠA PA [`
+> של פָּרִיס אחד יין – חצי שקל כסף; של פָּרִיס […]
+- **פירוק:** `ŠA 1` – "of one" ("של … אחד"); `PA` – PARĪSU ("פָּרִיס"); `GEŠTIN` – "wine" ("יין"); `½` – "half" ("חצי"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA PA [` – "of a parisu …" ("של פָּרִיס […]").
+- **הערות:** GEŠTIN כאן "יין" (`יין`; כצמח – `גפן`).
+
+### 183.3
+`ŠA 1 IKU A.ŠÀ ši-iš-šu-ú-ra-aš 3 [`
+> של אִיקוּ אחד שדה מושקה(?) – שלושה […]
+- **פירוק:** `ŠA 1` – "of one" ("של … אחד"); `IKU` – IKU ("אִיקוּ"); `A.ŠÀ` – "field" ("שדה"); `ši-iš-šu-ú-ra-aš` – šiššur- "irrigation(?)", gen. ("מושקה(?)"); `3` – "three" ("שלושה").
+- **הקבלה:** [equivalent] `וְהָיָה עֶרְכְּךָ לְפִי זַרְעוֹ זֶרַע חֹמֶר שְׂעֹרִים בַּחֲמִשִּׁים שֶׁקֶל כָּסֶף` (ויקרא כז:טז) – מחיר קבוע לשדה; בתורה לפי כמות הזרע, כאן לפי השטח והסוג.
+- **הערות:** שדה שלחין (מושקה) יקר משדה "של חלק" (183.4) ומשדה חיצוני (183.5).
+
+### 183.4
+`ŠA 1 IKU A.ŠÀ ḪA.LA.NI 2 GÍN KÙ.BAB[BAR ŠI-IM-ŠU]`
+> של אִיקוּ אחד שדה־החלק(?) – שני שקלים כס[ף מחירו];
+- **פירוק:** `ŠA 1` – "of one" ("של … אחד"); `IKU` – IKU ("אִיקוּ"); `A.ŠÀ` – "field" ("שדה"); `ḪA.LA.NI` – ḪA.LA "share, allotment" + NI ("החלק(?)"); `2` – "two" ("שני"); `GÍN` – "shekels" ("שקלים"); `KÙ.BAB[BAR` – "silver" ("כסף"); `ŠI-IM-ŠU]` – "its price" ("מחירו").
+- **הערות:** ḪA.LA = `חלק` (הלוח הראשון): שדה של נחלה מחולקת.
+
+### 183.5
+`a-ra-aḫ-ze-na-an-ši 1 GÍN KÙ.BAB[BAR ŠI-IM-ŠU]`
+> החיצוני – שקל אחד כס[ף מחירו].
+- **פירוק:** `a-ra-aḫ-ze-na-an-ši` – araḫzena- "outer, outlying, surrounding" ("החיצוני"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BAB[BAR` – "silver" ("כסף"); `ŠI-IM-ŠU]` – "its price" ("מחירו").
+- **הערות:** שדה מחוץ לתחום העיר – הזול מכולם.
+
+## §184 – "זהו ההסדר"
+
+### 184.1
+`ki-i ták-še-eš-šar URU-ri-ma-at-ša-at ma-aḫ-ḫa-an ⸢i?⸣-[ia-an?]`
+> זה ההסדר; ואילו בעיר – כפי שהוא [נעשה?].
+- **פירוק:** `ki-i` – kā- "this", nom.-acc. n. ("זה"); `ták-še-eš-šar` – takšeššar "arrangement, agreement, tariff" (from takš- "join, arrange") ("ההסדר"); `URU-ri-ma-at-ša-at` – URU "town", d.-l. + =ma "but" + =at + =šan ("ואילו בעיר … הוא"); `ma-aḫ-ḫa-an` – maḫḫan "as" ("כפי ש"); `⸢i?⸣-[ia-an?]` – iya- "make", participle? ("[נעשה?]").
+- **תרגומים:** Hrozný 1922: «Ceci (est) le classement; et dans la VILLe ceci (est) …» – "הסדר" (*classement*), כמונו.
+- **הערות:** משפט סיכום של המחירון: "זה ההסדר (הכללי); אך בעיר – כפי שנהוג בה". כלומר מחירי השוק העירוני רשאים לסטות מן התעריף. *takšeššar* מן *takš-* (`התקין` בלוח הראשון): `הסדר` (`תקנה` – *ṣimdat šarrim* של חוקי חמורבי).
+
+## §185a – מחירון: כרם ועורות
+
+### 185a.1
+`ŠA 1 IKU {GIŠ}KIRI₆.{GIŠ}GEŠTIN 1 MA.NA KÙ.BABBAR ŠI-IM-ŠU`
+> של אִיקוּ אחד כרם – מנה כסף מחירו;
+- **פירוק:** `ŠA 1` – "of one" ("של … אחד"); `IKU` – IKU ("אִיקוּ"); `{GIŠ}KIRI₆.{GIŠ}GEŠTIN` – "vineyard" ("כרם"); `1` – "one" (–); `MA.NA` – "mina" ("מנה"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠI-IM-ŠU` – "its price" ("מחירו").
+- **הקבלה:** [equivalent] `אֲשֶׁר יִהְיֶה שָּׁם אֶלֶף גֶּפֶן בְּאֶלֶף כָּסֶף` (ישעיהו ז:כג) – הכרם הנמדד במחירו: שקל לגפן.
+- **הערות:** הכרם – מנה כסף לאִיקוּ: פי עשרים משדה שלחין (183.3). כאן חוזר הלוח אל ראשיתו: "אם גפן" (101).
+
+### 185a.2
+`ŠA KUŠ GU₄.GAL 1 GÍN KÙ.BABBAR ŠA 5 KUŠ GU₄ ša-ú-i-ti-iš-ta-aš`
+> של עור שור גדול – שקל אחד כסף; של חמישה עורות שוורים גְּמוּלִים
+- **פירוק:** `ŠA` – "of" ("של"); `KUŠ` – "hide" ("עור"); `GU₄.GAL` – "large (full-grown) ox" ("שור גדול"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 5` – "of five" ("של חמישה"); `KUŠ` – "hides" ("עורות"); `GU₄` – "oxen" ("שוורים"); `ša-ú-i-ti-iš-ta-aš` – "weanling" ("גְּמוּלִים").
+
+### 185a.3
+`1 GÍN KÙ.BABBAR ŠA 10 KUŠ AMAR? 1 MA.NA KÙ.BABBAR ŠA KUŠ UDU`
+> – שקל אחד כסף; של עשרה עורות עגל? – מנה כסף; של עור שה
+- **פירוק:** `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 10` – "of ten" ("של עשרה"); `KUŠ` – "hides" ("עורות"); `AMAR?` – "calf" (uncertain reading) ("עגל?"); `1` – "one" (–); `MA.NA` – "mina" ("מנה"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA` – "of" ("של"); `KUŠ` – "hide" ("עור"); `UDU` – "sheep" ("שה").
+- **תרגומים:** Hrozný 1922: «DE 10 PEAUX DE VEAU(!) [1 MINE]» – גם הוא סימן קריאה על המחיר.
+- **הערות:** "עשרה עורות עגל – מנה כסף" אינו מתיישב עם שאר הרשימה (עור שור גדול – שקל): אולי טעות של הסופר (MA.NA במקום GÍN), או קריאה לא נכונה של AMAR.
+
+### 185a.4
+`wa-ar-ḫu-iš 1 GÍN KÙ.BABBAR ŠA 10 KUŠ UDU ḪA-RU-UP-TI 1 GÍN KÙ.BABBAR`
+> סבוך – שקל אחד כסף; של עשרה עורות שה חֲרוּפְּתִי – שקל אחד כסף;
+- **פירוק:** `wa-ar-ḫu-iš` – warḫui- "rough, thick (of fleece)", nom. ("סבוך"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 10` – "of ten" ("של עשרה"); `KUŠ` – "hides" ("עורות"); `UDU` – "sheep" ("שה"); `ḪA-RU-UP-TI` – ḪARUPTI (Akk. *ḫarpu* "early"? – shorn early?) ("חֲרוּפְּתִי"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף").
+- **הערות:** עור כבש עם צמר עבה ("סבוך") – שקל לעור אחד; עורות כבשים שנגזזו – שקל לעשרה. `שעיר` שמור לויקרא טז (§H3): *warḫui-* = `סבוך`. *ḪARUPTI* – מתועתק.
+
+### 185a.5
+`ŠA 4 KUŠ UZ₆ 1 GÍN KÙ.BABBAR ŠA 15 KUŠ UZ₆! wa-al-li`
+> של ארבעה עורות עז – שקל אחד כסף; של חמישה עשר עורות עז וַלִּי
+- **פירוק:** `ŠA 4` – "of four" ("של ארבעה"); `KUŠ` – "hides" ("עורות"); `UZ₆` – "goat" ("עז"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 15` – "of fifteen" ("של חמישה עשר"); `KUŠ` – "hides" ("עורות"); `UZ₆!` – "goat" ("עז"); `wa-al-li` – walli- (a quality of hides, unknown) ("וַלִּי").
+
+### 185a.6
+`1 GÍN KÙ.BABBAR ŠA 20 KUŠ SILA₄ 1 GÍN KÙ.BABBAR ŠA 20 KUŠ MÁŠ.TUR`
+> – שקל אחד כסף; של עשרים עורות טלה – שקל אחד כסף; של עשרים עורות גדי
+- **פירוק:** `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 20` – "of twenty" ("של עשרים"); `KUŠ` – "hides" ("עורות"); `SILA₄` – "lamb" ("טלה"); `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `ŠA 20` – "of twenty" ("של עשרים"); `KUŠ` – "hides" ("עורות"); `MÁŠ.TUR` – "kid" ("גדי").
+
+### 185a.7
+`1 GÍN KÙ.BABBAR`
+> – שקל אחד כסף.
+- **פירוק:** `1` – "one" ("אחד"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף").
+- **נוסחים:** השורה במוביל ממשיכה ב־185b (פוצלה בגבול הסעיף).
+
+## §185b – מחירון: בשר
+
+### 185b.1
+`2 GU₄.GAL UZU-ŠU-NU ku-iš wa-a-ši 1 UDU pa-a-i`
+> שני שוורים גדולים – את בשרם מי שיקנה, שה אחד ייתן.
+- **פירוק:** `2` – "two" ("שני"); `GU₄.GAL` – "large oxen" ("שוורים גדולים"); `UZU-ŠU-NU` – UZU "meat" + -ŠUNU "their" ("את בשרם"); `ku-iš` – kui- "who" ("מי ש"); `wa-a-ši` – waš- "buy" ("יקנה"); `1` – "one" ("אחד"); `UDU` – "sheep" ("שה"); `pa-a-i` – "give" ("ייתן"), F8.
+- **הערות:** **מחיר הבשר בשה**: מי שקונה את בשרם של שני שוורים מתים משלם שה אחד חי. UZU = `בשר` (162b.4).
+
+## §186 – מחירון: בשר (המשך)
+
+### 186.1
+`ŠA 2 GU₄ i-ú-ga-aš-ša-aš UZU-ŠU-NU [k]u-iš wa-a-ši 1 UDU pa-a-i`
+> של שני שוורים בני שנה – את בשרם מי שיקנה, שה אחד ייתן;
+- **פירוק:** `ŠA 2` – "of two" ("של שני"); `GU₄` – "oxen" ("שוורים"); `i-ú-ga-aš-ša-aš` – iuga- "yearling", gen. pl. ("בני שנה"); `UZU-ŠU-NU` – "their meat" ("את בשרם"); `[k]u-iš` – "who" ("מי ש"); `wa-a-ši` – "buy" ("יקנה"); `1 UDU` – "one sheep" ("שה אחד"); `pa-a-i` – "give" ("ייתן"), F8.
+
+### 186.2
+`5 GU₄ ša-ú-i-ti-iš-ta-aš UZU-[ŠU-N]U ku-iš wa-a-ši 1 UDU pa-a-i`
+> של חמישה שוורים גְּמוּלִים – את בשרם מי שיקנה, שה אחד ייתן;
+- **פירוק:** `5` – "five" ("חמישה"); `GU₄` – "oxen" ("שוורים"); `ša-ú-i-ti-iš-ta-aš` – "weanling" ("גְּמוּלִים"); `UZU-[ŠU-N]U` – "their meat" ("את בשרם"); `ku-iš` – "who" ("מי ש"); `wa-a-ši` – "buy" ("יקנה"); `1 UDU` – "one sheep" ("שה אחד"); `pa-a-i` – "give" ("ייתן"), F8.
+- **נוסחים:** KUB 29.34+: `[k]u-iš-[ki wa-a-ši` – "מישהו יקנה".
+- **הערות:** "של" מתווסף בעברית לפי 186.1; במוביל אין כאן ŠA.
+
+### 186.3
+`ŠA 10 UZU AMAR 1 UDU pa-a-i ŠA 10 [UZU] UDU 1 UDU pa-a-i`
+> של בשר עשרה עגלים – שה אחד ייתן; של [בשר] עשרה שׂים – שה אחד ייתן;
+- **פירוק:** `ŠA 10` – "of ten" ("של … עשרה"); `UZU` – "meat" ("בשר"); `AMAR` – "calves" ("עגלים"); `1 UDU` – "one sheep" ("שה אחד"); `pa-a-i` – "give" ("ייתן"); `ŠA 10` – "of ten" ("של … עשרה"); `[UZU]` – "meat" ("[בשר]"); `UDU` – "sheep" ("שׂים"); `1 UDU` – "one sheep" ("שה אחד"); `pa-a-i` – "give" ("ייתן"), F8.
+- **הערות:** `שׂים` (רבים של שה, מנוקד).
+
+### 186.4
+`ŠA 20 UZU SILA₄ 1 UDU pa-a-i t[ák-ku 20 U]ZU MÁŠ.TUR ku-iš-ki wa-a-ši 1 UDU pa-a-i`
+> של בשר עשרים טלאים – שה אחד ייתן; [אם בשר עשרים] גדיים מישהו יקנה – שה אחד ייתן.
+- **פירוק:** `ŠA 20` – "of twenty" ("של … עשרים"); `UZU` – "meat" ("בשר"); `SILA₄` – "lambs" ("טלאים"); `1 UDU` – "one sheep" ("שה אחד"); `pa-a-i` – "give" ("ייתן"); `t[ák-ku` – "if" ("אם"); `20 U]ZU` – "twenty … meat" ("בשר עשרים"); `MÁŠ.TUR` – "kids" ("גדיים"); `ku-iš-ki` – kuiški ("מישהו"); `wa-a-ši` – "buy" ("יקנה"); `1 UDU` – "one sheep" ("שה אחד"); `pa-a-i` – "give" ("ייתן"), F8.
+- **הערות:** סוף המחירון. מכאן (187) מתחילים חוקי הזיווגים האסורים והמותרים.
+
+<!-- טרם תורגם: 187.1–col1 -->
