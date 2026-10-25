@@ -178,9 +178,16 @@ def rows(key):
             s = secs.get(c["sec"], {})
             sec = c["sec"]
             hl = c.get("hl") or s.get("hl", "")
-            if kind == "chil" and not sec and key == "HL1":
+            lab = c["n"]
+            if kind == "chil" and not sec and out:
+                # the colophons: CHiL numbers each one's clauses from 1 again (HL1: 1, 1, 2, 3), so give them
+                # unique labels col1, col2 … in the edition's order (fixed 2026-10-25, Round 4 run 6 sub 1)
+                ncol = sum(1 for o in out if o["label"].startswith("col")) + 1
+                lab, hl, sec = "col%d" % ncol, "colophon", "colophon"
+                s = {"title": "Colofone"}
+            elif kind == "chil" and not sec and key == "HL1":
                 hl = "1"  # CHiL has no heading before HL 1
-            out.append({"label": c["n"], "sec": sec, "hl": hl, "sectitle": s.get("title", sec), "text": c["master"],
+            out.append({"label": lab, "sec": sec, "hl": hl, "sectitle": s.get("title", sec), "text": c["master"],
                         "words": words, "mss": c["mss"], "tr": c["tr"], "trlang": c.get("trlang", "")})
     else:
         for r in read_comp(key):

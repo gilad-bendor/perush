@@ -293,6 +293,9 @@ through an Akkadogram, which is the Akkadian word: say so).
 | *DINGIR-LUM* / *šiu-*; *DINGIR.MEŠ* | **אֵל** / **הָאֵל**; **הָאֵלִים** (always vocalized: trap H6) | `אֱלֹהִים` (never) | | Every corpus. |
 | *ZI* (*ištanza-*) "soul, mind"; *DUMU.LÚ.U₁₉.LU* "a son of man, mortal" | **נֶפֶשׁ**; **בֶּן אָדָם** | | | "Is the mind of man and of the gods any different?" (KUB 13.4 i 21–22): the translator keeps the question form. |
 
+### 7.3 Merged from Sub1, part 1 (HL1 1–145; 2026-10-25, Round 4 run 6 sub 1; all accepted by the coordinator)
+*šullatar* (abl. *šullannaz*) "quarrel" = `במחלוקת` (crux: CHiL "con intenzione"; `ריב` avoided, Exod 21:18); *arnu-* = `יַגִּיעַ` (always vocalized); *peḫute-* = `הוליך`; *uwate-* = `הביא`, *EGIR-pa uwate-* `הביא בחזרה` (`השיב` avoided); *peda-* = `נשא` (gated); *LÚ DAM.GÀR* and *unattalla-* = `תַּגָּר` (LH *tamkārum*; one Hebrew: 28 refers back to 21); *āššu-* `רכוש`; *taki-* `אחר`; *URU* `עיר`; *arḫa-* `גבול`; *gipeššar* `אַמָּה` (vocalized; ≠ GÉME `אָמָה`); *karšš-* `חתך`; *dā-* `לקח` (iter. `היו לוקחים`); *dašuwaḫḫ-* `עיוור`; *lak-* `הפיל` ([equivalent] Exod 21:27 `יַפִּיל`); *ZU₉* `שן`; *ḫunink-* `פצע`, ptcp. `הפצוע` ([equivalent] Exod 21:25 `פֶּצַע`; `חבל` is LH *ḫabālu*'s); *pešš-* `השליך` (also the miscarriage: `ישליך את בטנה`); *šarḫuwant-* `בטן`; *ištarnink-* `הֶחֱלָה` (vocalized); *šaktai-* `טיפל`; *pedan-* `מקום`; *aniya-* `עבד`; *kuitman* `עד אשר`; *mān* temporal `כאשר`; SIG₅ "recover" `החלים`; *LÚ A.ZU* `רופא`, *kuššan-* `שְׂכַר` (vocalized); *duwarna-* `שבר`; *wak-* `נשך`; *KIR₁₄* `אף`, GEŠTU `אוזן`, *GÌR* `רגל`; *iškalla-* `קרע`; *ITU n{KAM}* `החודש ה־n`; *išḫa-* `אדון`; *kanešš-* `הכיר`; *luwili-* / *luyumna-* `לוּוִי` (always vocalized: trap added to §H6); *ḫuwai-* `ברח`; *ēpp-* `תפס`; *manninkuwan* `בקרבת מקום`; *E.SIR* `נעליים`; *kez* / *edi* ÍD `מצד זה של הנהר` / `מן הצד ההוא של הנהר` (`מעבר` avoided); *pā(i)-* "go" `הלך`; *kururi KUR-e* `ארץ אויב`; *wemiya-* `מצא`; *ḫašša-* `מוקד`; ÚTUL `קדרה`; *luli-* `בריכה`; *paprešš-* `ייטמא`; *iwaru-* `מַתָּן` (`מַתָּנָהּ`); *warnu-* `שרף`; *atta-* `אב`. Numbers: 2–10 `שקלים`, 11+ `שקל`. Table fixes the same day: F6 also matches *keššar=šiš waštai* (11); F9 *dāyezzi*; `ייטמא` added to the `טמא` gate; six licences anchored (`ארז`, `פיצה`, `שלח`, `נשא`, `מחנה`, `שכב`; they matched inside other words or glosses); the colophons got unique labels `col1`–`col4` in the tool.
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;
@@ -348,12 +351,12 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])[ובלהמכש]*(?:תועבה\|תועבות)(?![א-ת])` | `ḫurkel` | `תועבה` only for *ḫurkel* |
 | `(?<![א-ת])[ובלהמכש]*(?:כשפים\|מכשף\|מכשפה\|כישוף\|כשף)(?![א-ת])` | `alwanz` | `כשפים` only for *alwanzatar* |
 | `(?<![א-ת])[ובלהמכש]*(?:טהר\|טיהר\|יטהר\|יטהרו\|טהור\|טהורה\|טהורים\|טהרה\|לטהר\|מטהר\|מטהרים\|טוהר)(?![א-ת])` | `parku\|parkun\|parkue` | `טהר` only for *parkui-* / *parkunu-* |
-| `(?<![א-ת])[ובלהמכש]*(?:טמא\|טמאה\|טומאה\|נטמא\|יטמא\|טמאים\|יטמאו)(?![א-ת])` | `papr` | `טמא` only for *papr-* |
+| `(?<![א-ת])[ובלהמכש]*(?:טמא\|טמאה\|טומאה\|נטמא\|יטמא\|ייטמא\|טמאים\|יטמאו)(?![א-ת])` | `papr` | `טמא` only for *papr-* |
 | `(?<![א-ת])[ובלהמכש]*(?:קדוש\|קדושה\|קדושים\|קודש\|קדש\|הקדיש\|קדשים\|קודשים)(?![א-ת])` | `šuppi\|šuppa\|šuppešš\|šuppiy\|šuppay\|šupp` | `קדש` only for *šuppi-* |
-| `(?<![א-ת])[ובלהמכש]*(?:שלח\|שילח\|ישלח\|ישלחו\|שולח\|שלחו\|שלחה\|משלח\|משלחים\|שלחנו\|אשלח)(?![א-ת])` | `tarn\|tarna\|parā tarn` | `שִׁלַּח` only for *tarna-* "let go, release" (Lev 14:7, 16:10, 21–22) |
-| `(?<![א-ת])[ובלהמכש]*(?:נשא\|ישא\|יישא\|תישא\|נושא\|נושאת\|נשאו\|ישאו\|יישאו\|נשאה\|אשא)(?![א-ת])` | `\bped\|pēd\|peda\|pedd` | `נשא` only for *peda-* "carry (off)" (Lev 16:22) |
+| `(?<![א-ת])[ובלהמכש]*(?:שלח\|שילח\|ישלח\|ישלחו\|שולח\|שלחו\|שלחה\|משלח\|משלחים\|שלחנו\|אשלח)(?![א-ת])` | `(?<!\w)tarn` | `שִׁלַּח` only for *tarna-* "let go, release" (Lev 14:7, 16:10, 21–22) |
+| `(?<![א-ת])[ובלהמכש]*(?:נשא\|ישא\|יישא\|תישא\|נושא\|נושאת\|נשאו\|ישאו\|יישאו\|נשאה\|אשא)(?![א-ת])` | `hinschaff\|wegschaff\|forttrag\|\bpedai\b\|\bpēdai\b\|pedanzi\|pēdanzi\|pedaḫḫi\|pedaš\b` | `נשא` only for *peda-* "carry (off)" (Lev 16:22) |
 | `(?<![א-ת])[ובלהמכש]*(?:צפור\|ציפור\|צפורים\|ציפורים\|צפרים)(?![א-ת])` | `mušen` | `צפור` only for *MUŠEN* (never `עוף`) |
-| `(?<![א-ת])[ובלהמכש]*(?:ארז\|ארזים)(?![א-ת])` | `erin\|eren` | `ארז` only for *GIŠ.ERIN* (Lev 14:4) |
+| `(?<![א-ת])[ובלהמכש]*(?:ארז\|ארזים)(?![א-ת])` | `\berin\b\|\beren\b\|giš\.erin` | `ארז` only for *GIŠ.ERIN* (Lev 14:4) |
 | `(?<![א-ת])[ובלהמכש]*(?:שמר\|ישמור\|ישמרו\|שומר\|שומרים\|שמרו\|משמרת\|משמרות\|משמר\|לשמור\|ושמרו)(?![א-ת])` | `paḫš\|paḫḫaš\|ḫaliy\|en\.nun\|ḫaliyatall` | `שמר` only for *paḫš-* / *ḫaliya-* / *EN.NUN* (Num 18; LH reserves it) |
 | `(?<![א-ת])[ובלהמכש]*(?:כהן\|כוהן\|כהנים\|כוהנים\|כהונה)(?![א-ת])` | `sanga\|šankunn` | `כהן` only for *LÚ SANGA* |
 | `(?<![א-ת])[ובלהמכש]*(?:הקריב\|יקריב\|מקריב\|הקריבו\|מקריבים\|קרבן\|קורבן\|קרבנות)(?![א-ת])` | `šipant\|šipand\|siskur\|sískur\|šipanz` | `הקריב` only for *šipant-* (SISKUR = `טקס`) |
@@ -362,13 +365,13 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])[ובלהמכש]*(?:עכבר\|עכברים)(?![א-ת])` | `péš` | `עכבר` only for *PÉŠ* (1 Sam 6:4) |
 | `(?<![א-ת])[ובלהמכש]*(?:תיש\|תישים)(?![א-ת])` | `máš\.gal` | `תיש` only for *MÁŠ.GAL* |
 | `(?<![א-ת])[ובלהמכש]*(?:אויב\|אויבים\|אויבו\|אויביו)(?![א-ת])` | `kúr\|kurur\|kuru=r\|feind` | `אויב` only for *LÚ.KÚR* / *kurur-* |
-| `(?<![א-ת])[ובלהמכש]*(?:מחנה\|מחנות)(?![א-ת])` | `karaš\|kar\(a\)š\|tuzz\|ugnu` | `מחנה` only for *KARAŠ* / *tuzzi-* (Lev 16:26–28) |
+| `(?<![א-ת])[ובלהמכש]*(?:מחנה\|מחנות)(?![א-ת])` | `\bkaraš\b\|kar\(a\)š\|tuzz\|ugnu` | `מחנה` only for *KARAŠ* / *tuzzi-* (Lev 16:26–28) |
 | `(?<![א-ת])[ובלהמכש]*(?:היכל\|היכלות)(?![א-ת])` | `é\.gal` | `היכל` only for *É.GAL* |
 | `(?<![א-ת])[ובלהמכש]*(?:זקנים\|זקני\|זקן)(?![א-ת])` | `šu\.gi\|greis\|mekkešš` | `זקנים` only for *LÚ.MEŠ ŠU.GI* (Deut 21:3) |
-| `(?<![א-ת])[ובלהמכש]*(?:שכב\|ישכב\|ישכבו\|שוכב\|שכבה\|תשכב\|שכבו)(?![א-ת])` | `\bšeš\|šašt\|šaš\b\|šašzi\|šešzi\|šeški\|schlafen` | `שכב` only for *šeš-* |
+| `(?<![א-ת])[ובלהמכש]*(?:שכב\|ישכב\|ישכבו\|שוכב\|שכבה\|תשכב\|שכבו)(?![א-ת])` | `\bšeš\|šašt\|(?<![\w=])šaš\b\|šašzi\|šešzi\|šeški\|schlafen` | `שכב` only for *šeš-* |
 | `(?<![א-ת])[ובלהמכש]*(?:לפנים)(?![א-ת])` | `karū\|karu\b\|früher` | `לפנים` only for *karū* (F2) |
 | `(?<![א-ת])[ובלהמכש]*(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=` | `מחץ` only for *walḫ-* |
-| `(?<![א-ת])[ובלהמכש]*(?:פיצה\|יפצה\|יפצו\|פיצוי\|פיצויים\|פצה)(?![א-ת])` | `šarnink\|šarnikz\|šar=nink\|kompens` | `פיצה` only for *šarnink-* |
+| `(?<![א-ת])[ובלהמכש]*(?:פיצה\|יפצה\|יפצו\|פיצוי\|פיצויים\|פצה)(?![א-ת])` | `šarnink\|šarnikz\|šar=nink` | `פיצה` only for *šarnink-* |
 | `(?<![א-ת])[ובלהמכש]*(?:בן חורין\|בת חורין\|בני חורין\|בנות חורין)(?![א-ת])` | `ellu\|elletu\|el-lum\|el-li\|el-le\|araw\|\bfrei\b` | `בן חורין` only for *ELLUM* / *arawanni-* |
 | `(?<![א-ת])[ובלהמכש]*(?:חטא\|חוטא\|חוטאת\|יחטא\|חטאו\|חטאת)(?![א-ת])` | `wašt\|wašt=\|freveln\|sünde` | `חטא` only for *wašta-* / *waštul* |
 | `(?<![א-ת])[ובלהמכש]*(?:עברה\|עבירה\|עברות)(?![א-ת])` | `ḫarat\|ḫaratar` | `עברה` only for *ḫaratar* |
@@ -382,10 +385,10 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | F3 | `\bkinun=a\b\|\bkinuna\b` | `ועתה` | "but now" |
 | F4 | `parna=šš[eē]=a šuw` | `ואל ביתו יביט` | "and he looks to his house" |
 | F5 | `^n=aš aki$` | `וימות` | "and he dies" (the case's second clause) |
-| F6 | `(?:qa-as-sú\|qāssu\|šu-aš=ššet\|šu-aš) waštai` | `ידו חוטאת` | "his hand errs" (the unintended killing) |
+| F6 | `(?:qa-as-sú\|qāssu\|šu-aš=ššet\|šu-aš\|kešš?[ai]r\S*) waštai` | `ידו חוטאת` | "his hand errs" (the unintended killing) |
 | F7 | `\bḫurkel\b` | `תועבה` | |
 | F8 | `^(?:\S+ ){0,6}p[āa]i$` | `(?:^\| )ו?י?יתן(?: \|$)\|(?:^\| )ו?תיתן(?: \|$)\|(?:^\| )ו?יתנו(?: \|$)` | *pāi* "he gives" closing a clause = `ייתן` |
-| F9 | `\bt[aā]y[ae]zzi\b` | `יגנוב\|יגנב` | "steals" |
+| F9 | `\b[td][aā]y[ae]zzi\b` | `יגנוב\|יגנב` | "steals" |
 | F10 | `^umma\b` | `(?:^\| )כה(?: \|$)` | *UMMA X* "thus (says) X" = `כֹּה (אוֹמֵר) X` (rituals) |
 
 ### H6. Traps: unvocalized strings that read as another Hebrew word (machine-read; both corpora)
@@ -399,6 +402,7 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:שמשי)(?![֑-ׇא-ת])` | `utu-ši` | "My Sun": `שִׁמְשִׁי` |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אמה\|אמתו\|אמתה)(?![֑-ׇא-ת])` | `géme\|magd` | GÉME: `אָמָה` ("cubit", "her mother") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:פריס)(?![֑-ׇא-ת])` | `parīsu\|\bpa\b` | PA: `פָּרִיס` |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:לווי\|לוויים\|לווית)(?![֑-ׇא-ת])` | `luwil\|luyumn\|lu-ú-i-li` | Luwian: `לוּוִי` ("escort"; Levi) |
 
 ### H9. Selftest (`hittite_tools.py selftest`: each line must give the expected result)
 | Line | Expect | Hebrew |
