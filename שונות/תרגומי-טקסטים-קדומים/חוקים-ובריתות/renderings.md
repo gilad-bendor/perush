@@ -359,6 +359,14 @@ reserved); *annanu-* `אילוף`; *walkiššaraḫḫ-* `בקי יעשה`; MA�
 new traps `אמהות`, `אמן` (UMMIĀNU), `יגע` (*šalik-*); composite reading notes at 189.1, 200a.2. Permissive false licences left as
 they are (they never block a right word): `שמר` by *ḫaliya-* "kneel" (198.5), `נשא` by the analyses of *pedi* (191.3).
 
+**Review rulings (Sub2, after the consistency pass, 2026-10-25):** the price list (§7.10): `של` only where ŠA is written (none
+at 178.2, 178.5, 182.1, 182.3, 185b.1, 186.2; `⟨של⟩` for an omitted ⟨ŠA⟩, 129.1, 181.2); the suffix of `מחיר` agrees with the
+Hebrew item (`מחירו` / `מחירה` / `מחירם` / `מחירן`). *kuššan* (§7.3) `שָׂכָר` vocalized: absolute `לְשָׂכָר`, `מן הַשָּׂכָר`, construct
+`שְׂכַר`. *naššu … našma* `בין … או` (`אם` stays *takku*'s); *maḫḫan* "as" `כמו ש־`; *kuiš* + present = `מי ש־` + future (HL2
+106.2, 168.2, 185b, 186; HL1 `מי שיביא`); plural UDU with numerals `צאן` (feminine numerals: `עשר צאן`); 1 GÍN = `שקל אחד כסף`
+(HL1 495 aligned). In HL 171 the mother is the subject of the whole § (171.3–5 changed: `תיקח`, `תטה`). §§153–156: numbers
+without text (not "lost").
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;

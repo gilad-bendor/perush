@@ -804,7 +804,7 @@ To change the text, edit those files and run: python3 -I -B tools/hittite_tools.
 
 **493** אם מישהו [ימחץ] כלב של חצר,  
 **494** וימות –  
-**495** שקל כסף ייתן.  
+**495** שקל אחד כסף ייתן.  
 
 ## §90 – כלב שטרף שומן־חזיר
 

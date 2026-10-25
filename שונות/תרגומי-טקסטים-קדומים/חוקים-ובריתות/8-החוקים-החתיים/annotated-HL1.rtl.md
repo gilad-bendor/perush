@@ -3515,8 +3515,8 @@
 
 ### 495
 `1 GÍN KÙ.BABBAR pāi`
-> שקל כסף ייתן.
-- **פירוק:** `1` – "one" (not rendered: `שקל` = one shekel); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `pāi` – pai- "give" ("ייתן"), F8.
+> שקל אחד כסף ייתן.
+- **פירוק:** `1` – "one" ("אחד"; aligned with HL2's `שקל אחד כסף`, Sub2 review 2026-10-25); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `pāi` – pai- "give" ("ייתן"), F8.
 - **תרגומים:** CHiL: "darà 1 siclo di argento."
 
 ## §90 – כלב שטרף שומן־חזיר
