@@ -349,6 +349,16 @@ MUŠEN.DÙ `צַיַּד־ציפורים`; PŪḪU `תחליף`; *ḫuišnu-* `�
 `סבוך` (`שעיר` reserved); EMṢU `קיבות(?)`. **Ruling (`שׂם`):** Hittite *dai-* "put" = `שָׂם` (`יָשִׂים`, vocalized; HLPT 165 has it):
 the counterpart of *šakānu* / *ĝar*, which hold the word in the other corpora, takes the same Hebrew across languages.
 
+### 7.11 Merged from Sub2, part 4 (HL2 187.1–col1; 2026-10-25; accepted by the coordinator)
+No deviation from HL1; the fixed patterns of §7.10 copied (196.4–5, 199.6), *tiya-* `לא ייכנס אל המלך`, *katta wašta-* `חטא עם`,
+*šeš-* `שכב (עם)`, *wen-* `בא על` (MAL *niāku*), F7 `תועבה`, F11 `אין עברה`, OH *akiaš* `ימות`, *ḫuišnu-* `החיה`, *pupu-* `מאהב`
+(`נואף` reserved), *2-pat akkandu* `שניהם ימותו` (literal; ↔ Deut 22:22), *ḫurki-* "wheel" `גלגל` (198.5). New: *arnuwala-*
+"deportee" `שבויה` (the word NAM.RA writes; HL1 `שבויים`); KAR.KID `זונה`; *šalik-* `יִגַּע`; *watku-* "leap" `קפץ` (`רבע`
+reserved); *annanu-* `אילוף`; *walkiššaraḫḫ-* `בקי יעשה`; MAḪAR `אצל`; GU₄ `שור` (§7.1; the selftest lines corrected). **Tables
+(coordinator):** the `שכב` licence no longer matches the Sumerogram ŠEŠ "brother" (`\bšeš-(?!š)` …; it licensed 193.1, 193.3);
+new traps `אמהות`, `אמן` (UMMIĀNU), `יגע` (*šalik-*); composite reading notes at 189.1, 200a.2. Permissive false licences left as
+they are (they never block a right word): `שמר` by *ḫaliya-* "kneel" (198.5), `נשא` by the analyses of *pedi* (191.3).
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;
@@ -430,7 +440,7 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])[ובלהמכש]*(?:מחנה\|מחנות)(?![א-ת])` | `\bkaraš\b\|kar\(a\)š\|tuzz\|ugnu` | `מחנה` only for *KARAŠ* / *tuzzi-* (Lev 16:26–28) |
 | `(?<![א-ת])[ובלהמכש]*(?:היכל\|היכלות)(?![א-ת])` | `é\.gal` | `היכל` only for *É.GAL* |
 | `(?<![א-ת])[ובלהמכש]*(?:זקנים\|זקני\|זקן)(?![א-ת])` | `šu\.gi\|greis\|mekkešš` | `זקנים` only for *LÚ.MEŠ ŠU.GI* (Deut 21:3) |
-| `(?<![א-ת])[ובלהמכש]*(?:שכב\|ישכב\|ישכבו\|שוכב\|שוכבים\|שוכבת\|שוכבות\|שכבה\|תשכב\|שכבו\|לשכב)(?![א-ת])` | `\bšeš\|šašt\|(?<![\w=])šaš\b\|šašzi\|šešzi\|šeški\|šiš=?k\|šešk\|(?<!ù ")schlafen` | `שכב` only for *šeš-* |
+| `(?<![א-ת])[ובלהמכש]*(?:שכב\|ישכב\|ישכבו\|שוכב\|שוכבים\|שוכבת\|שוכבות\|שכבה\|תשכב\|שכבו\|לשכב)(?![א-ת])` | `\bšeš-(?!š)\|\bšeš(?:k\|zi\|ten\|ta\b\|un\b)\|\bše-eš-(?!š)\|šašt\|(?<![\w=])šaš\b\|šašzi\|šešzi\|šeški\|šiš=?k\|šešk\|(?<!ù ")(?<!šeš ")(?<!šeš-šu ")schlafen` | `שכב` only for *šeš-* |
 | `(?<![א-ת])[ובלהמכש]*(?:לפנים)(?![א-ת])` | `karū\|karu\b\|karupat` | `לפנים` only for *karū* (F2) |
 | `(?<![א-ת])[ובלהמכש]*(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=` | `מחץ` only for *walḫ-* |
 | `(?<![א-ת])[ובלהמכש]*(?:פיצה\|יפצה\|יפצו\|פיצוי\|פיצויים\|פצה)(?![א-ת])` | `šarnink\|šarnikz\|šar=nink` | `פיצה` only for *šarnink-* |
@@ -477,6 +487,9 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:חפרה)(?![֑-ׇא-ת])` | `ḫippar` | *ḫippara-*: `חִפָּרָה` ("dug") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:גמול\|גמולים)(?![֑-ׇא-ת])` | `šawitišt` | weanling: `גָּמוּל` ("requital") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:איל\|אילים)(?![֑-ׇא-ת])` | `.` | ram `אַיִל` / stag `אַיָּל`: always vocalized |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אמהות\|אמהותיו\|אמהותיה)(?![֑-ׇא-ת])` | `.` | `אֲמָהוֹת` "slave women" / `אִמָּהוֹת` "mothers": always vocalized (HL2 194) |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אמן\|אמנים)(?![֑-ׇא-ת])` | `ummi\|um-mi` | UMMIĀNU `אֻמָּן` ("amen") |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:יגע\|תיגע)(?![֑-ׇא-ת])` | `šalik\|ša-li` | *šalik-* `יִגַּע` ("toils") |
 
 ### H9. Selftest (`hittite_tools.py selftest`: each line must give the expected result)
 | Line | Expect | Hebrew |
@@ -491,8 +504,9 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | HL1 35 | ok | `לפנים היו נותנים מנה כסף,` |
 | HL1 36 | ok | `ועתה עשרים שקל כסף ייתן,` |
 | HL1 36 | err | `אבל עכשיו עשרים שקל כסף ייתן,` |
-| HL2 187.1 | ok | `אם איש יחטא עם פרה – תועבה: ימות.` |
-| HL2 187.1 | err | `אם איש ישכב עם פרה – תועבה: ימות.` |
+| HL2 187.1 | ok | `אם איש יחטא עם שור – תועבה: ימות.` |
+| HL2 187.1 | err | `אם איש ישכב עם שור – תועבה: ימות.` |
+| HL2 193.1 | err | `ישכב,` |
 | HL2 194.4 | ok | `ובנו שוכבים (עמה) – אין עברה.` |
 | HL2 194.4 | err | `ובנו שוכבים (עמה) – אין חטא.` |
 | HL2 103.2 | err | `ישכב,` |

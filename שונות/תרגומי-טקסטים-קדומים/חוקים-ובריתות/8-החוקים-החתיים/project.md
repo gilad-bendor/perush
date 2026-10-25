@@ -1116,6 +1116,100 @@ ruin-heap for defying the king's ruling – the same royal penalty)**; Exod 21:5
 §175; Song 7:2, Isa 7:3 ↔ §176b; Exod 21:32, Lev 27:3 ↔ §177; 2 Sam 24:24, **1 Kgs 10:29 (horses for "the kings of the
 Hittites" at 150 shekels, against 20 in the Hittite list)**, Lev 27:16, Isa 7:23, Eccl 7:1 ↔ §§178–185.
 
+### HL2 part 4 (187.1–col1)
+Drafted 2026-10-25: 66 entries 187.1–col1 (§§187–200b, with 195a/b/c, 200a/b, and the colophon); **the placeholder is
+gone – the file ends with the colophon**. §§188–194 led by KUB 29.34+ (the OH version, NS copy), KBo 6.26 as a witness;
+KBo 25.85+ (OS) compared at §§193–196; 192.3 opened with `{נוסח מאוחר}`. Hrozný 1922 and Zimmern–Friedrich 1922 (their
+73†–86†) quoted after drafting at the main row of every §. `verify HL2 --strict`: 0 problems, 330/330 entries;
+`selftest`: 0 failures; `check_bible_quotes.py`: 0.
+
+**The fixed patterns, as copied.**
+- Substitute sheep: 196.4–5 `שה אחד חֵלֶף זה, ושה אחד חֵלֶף זו` / `ימשכו.` (*kaššaš* stands once for both genitives
+  *kēl … kēll=a*; the Hebrew repeats `חֵלֶף`); 199.5–6 `… שה אחד` / `חֵלֶף האיש ימשכו, ואותו יהרגו.` (*LÚ-naš* is at the
+  end of 199.5 in the Hittite; the Hebrew keeps it with `חֵלֶף` in 199.6 so that the pattern stays whole – said in the פירוק).
+- `לא ייכנס אל המלך`: 187.3, 188.3 (`לא [ייכנס] אל המלך`), 199.3–4 (across the line break: `ואילו הוא לא` / `ייכנס אל
+  המלך.`), 200a.2 (`והוא לא ייכנס אל המלך,`: no *=ma* there).
+- *wašta-* `חטא` (187, 188, 189, 190.2, 199.1, 200a.2), *waštul* / *waštai-* `חטא` (197.1–2); *šeš(k)-* `שכב` only in
+  194.2, 194.4, 195a.1, 200a.4; *wen-* `בא על` (191.2, 194.1, 200a.4); F7 `תועבה` exactly where the composite has
+  *ḫurkel* (188.1 and 191.3 lack it in the lead: not in the Hebrew, said in נוסחים); F11 `אין עברה`; OH *akiaš* `ימות`;
+  *ḫuišnu-* `החיה`; *pupu-* `מאהב`.
+- 194.4 is `ובנו שוכבים (עמה) – אין [עברה].` – the selftest line, with the bracket rule of HL1 (*ḫaratar* is restored in
+  KUB 29.34+); selftest passes.
+- §198: *2-pat akkandu* `"שניהם ימותו!"` (↔ Deut 22:22); *ḫurkin ḫalienzi* `ואת הגלגל יניעו(?)` – *ḫurki-* "wheel" =
+  `גלגל` (HL1's UMBIN, its Sumerogram), not *ḫurkel*: KBo 6.26 wrote *-in* over *-il* (Hrozný's note), no F7.
+- §200a *LÚ SANGA* `כהן` (licensed); the colophon `לוח שני של "אם גפן" – תַּם.` (DUB `לוח`, QATI `תַּם` as HL1), with the
+  "Tablet 2" note (HL1 col1/col2 also say 2; CHiL `2!`).
+
+**New renderings (first row).**
+| Hittite | Hebrew | First | Note |
+|---|---|---|---|
+| GU₄ (the generic bovine) | `שור` | 187.1 | **please confirm**: the selftest line 187.1 has `פרה`; §7.1 gives GU₄ `שור`, ÁB `פרה` (Hoffner "cow"; Hrozný's note: GU₄ covers ox, bull and cow). The selftest still passes (it tests the gates) |
+| *katta* (with the d.-l.) "with" | `עם` | 187.1 | |
+| *wen-* "have intercourse with" | `בא על` (`יבוא`) | 191.2 | ↔ Deut 25:5 `יָבֹא עָלֶיהָ` |
+| *annaneka-* "sister of one mother" | `אחיות מֵאֵם אחת` | 191.1 | one word, three Hebrew; `מֵאֵם` vocalized |
+| *neka-*, NIN, AḪĀSSA "sister" | `אחות` | 192.1, 195c.2, 200a.4 | |
+| *annawanna-* "stepmother" | `אמו החורגת` | 190.2 | |
+| *akkant-* (GIDIM) "the dead" | `מת` | 190.1 | |
+| *tiya-* (190.1, sexual?) | `ייכנסו(?)` | 190.1 | kept as `נכנס` (the ruling); the sense in the note |
+| *šani-* "the same"; *pedan-* | `אותו`; `מקום` | 191.3 | HLPT *pedan-* |
+| *DAM-anni dā-* | `לאשה ייקח` | 192.1 | HL1 *ANA DAM-ŠU dāi* `וייקח אותה לאשתו` |
+| LÚ ḪA.LA | `איש־חלקו` | 192.3 | HL1 |
+| *ḫar(k)-* (a wife) | `יחזיק` | 193.1, 195b.2 | `החזיק` (165.3, HL1) |
+| *dān* "secondly" | `שנית` | 193.1 | or *ta=an* "and her" (193.1) |
+| ATḪŪTU | `אחים` | 194.2 | |
+| KAR.KID | `זונה` | 194.3 | = Akk. *ḫarimtu* (Gilgameš `הזונה`) |
+| GÉME pl. | `אֲמָהוֹת`, `אַמְהוֹתָיו` | 194.1, 196.1 | vocalized ("mothers") |
+| MAḪAR (Akkadogram) | `אצל` | 195a.1 | kept apart from *katta* `עם` |
+| *šalik-* "touch" | `נגע` (`יִגַּע`, vocalized) | 195b.2 | unvocalized `יגע` = "tired" (Gilg. I 9) |
+| *kā-* (*kūn … kūn*, *kēl … kēl*) | `זה … זו` | 196.2–4 | the slave and the slave woman |
+| *ašeš-* | `הושיב` | 196.3 | |
+| *waššiya-* "clothe, cover" | `כיסה` | 198.4 | the act is a crux |
+| *ḫurki-* "wheel"; *ḫalai-*? | `גלגל`; `הניע(?)` | 198.5 | |
+| *watku-* "leap (upon)" | `קפץ` | 199.4 | Ugaritic *rqṣ* `קפץ`; `ירבע` reserved |
+| *arnuwala-* "deportee" | `שבויה` | 200a.3 | the word under NAM.RA = HL1 `שבויים`; Hrozný "étrangère", Z&F "Schwangere" |
+| *kiš-* "become" | `ייעשה` | 200a.3 | HL1 |
+| *annanu-* "train"; *annanumar* | `אילוף` (`לאילוף`, `של האילוף`) | 200b.1, 200b.3 | `לאלף` avoided (reads "to a thousand") |
+| *walkiššaraḫḫ-* "make expert" | `בקי יעשה` | 200b.4 | |
+| LÚ UM.ME.A (UMMIĀNU) | `אֻמָּן` | 200b.4 | 176b.1 |
+
+**Deviations from HL1: none.** **Proposals:** (1) GU₄ `שור` in 187.1 (above; or change the selftest line). (2) **Gate
+licences that fire falsely** (the tool not edited): `שכב` is licensed in 193.1 and 193.3 by the Sumerogram ŠEŠ "brother"
+(lower case `šeš-šu` matches `\bšeš`); `שמר` in 198.5 by *ḫalienzi* (`ḫaliy`); `נשא` and `מחץ` in 191.3 by the annotation
+of *pedi* (`ped=a- "hinschaffen"`) and a gloss. Suggest: `šeš` only when not followed by `-šu`/`-ŠU` (or test the
+unfolded `še-eš`), `ḫaliy` only as a word start of *ḫaliya-* "watch" with its own glosses, and the licence read without
+the unselected lemma alternatives. (3) **New traps** for §H6: `אמהות` / `אמהותיו` (GÉME pl.: "mothers"), `אמן` (*anna-*
++ *=šmann*: "amen", "craftsman"), `יגע` (*šalik-*: "tired"). (4) 189.1: KUB 29.34+ `na-a[š?-ša-aš` is a form of *anna-*
+"mother" (KBo 6.26 *an-na-ša-aš*); the annotation's *n=aš* is wrong – a composite note could say so. (5) 200a.2 KBo 6.26
+`LUGAL-*uš-aš*` (over an erasure) read as *LUGAL-i=aš* (as 187.3; Hrozný: "probablement une erreur"); a composite note
+could say so.
+
+**Cruxes.** 190.1 *akkantit tianzi* (with the dead; the verb *tiya-* or *dai-*); 191.3 KBo 6.26 *2-el pedi* ("in two
+places" or "in the place of both"), and its erasures (iii 35–39); 192.3 the later law (the widow and the "man of the
+share"; Hrozný and Z&F: the widow takes the share); 193.1 *ta-an* (*dān* or *ta=an*); 193.2 "the woman whom he had";
+198.4 *SAG.DU-SÚ waššiezzi* (whose head, and why); 198.5 *ḫurkin ḫalienzi*; 199.2 *=uš* "them" (the man and the
+animal?); 199.6 *n=an=kan kunanzi* (the sheep, as Z&F); 200a.1 why horse and mule are no offence; 200a.4 *annaššan*
+(KUB 29.33+ AMA?); 200b.4 {LÚ}UM.ME.A (doubtful); the colophon's "Tablet 2" against HL1's.
+
+**Variants recorded.** 187.2 / 188.2 *uwatezzi* (KBo 6.26) / *uwadanzi* (KUB 29.34+, and KBo 6.26 at 188); 188.1 KBo 6.26
+adds *ḫurkel akiaš*; 189.2–3 KBo 6.26 "the daughter / the son" without "his"; 190.1 KBo 6.26 GIDIM and the singular
+*tiezi*; 190.3 TI-anza; 191.1–3 KBo 6.26's erasures, "in one place" (KUB 29.34+ *šaniya pedi*) against KBo 6.26 *2-el
+pedi* and its erased *UL ḫaratar*; 192.1–2 only in KUB 29.34+, 192.3 only in KBo 6.26 (over an erasure); 193 the OS
+(KBo 25.85+) writes *attašš=iš* for *ABU-ŠU*; **193.3 the brother's son (KUB 29.34+, OS) against KBo 6.26's ⸢A?⸣ ŠEŠ-ŠU
+(Hrozný "1 FRÈRE") and its added "it is no offence"**; 194.2–4 OS *natta ḫaratar* for *UL ḫaratar*, KBo 6.26 *arawannin*
+(sg.), KBo 6.13+ shortened; 195a.1 KUB 29.34+ *šeškanzi* (pl.); **195a/b/c as KBo 6.13+ divides them** (one § in KBo
+6.26); 195c KBo 6.13+ and the OS add *=ya* "also" (her mother, her sister); 196.5 and 199.6 KUB 29.34+ / KBo 63.10 the
+active *ḫuittiyanzi*; 200a.3 KUB 29.33+ *kattan*; 200b.1 KUB 29.33+ *annanumanzi* in full, 200b.4 without UM.ME.A.
+
+**Key parallels.** Exod 22:18, Lev 18:23, 18:29 `מִכֹּל הַתּוֹעֵבֹת הָאֵלֶּה`, 20:15, Deut 27:21 ↔ §§187–188, 199–200a (the
+animals: the Torah condemns all, kills the animal too; the Hittite law spares horse and mule); Lev 18:7, 18:10, 18:17,
+18:22 ↔ §189; Lev 18:8, Gen 35:22, 2 Sam 16:22 ↔ §190 (the stepmother only while the father lives); Lev 20:14 ↔ §191,
+195c; **Lev 18:18 `בְּחַיֶּיהָ` ↔ §192 and 195c (the wife's sister: forbidden in her life, allowed after her death – the
+same rule)**; Deut 25:5–6, Gen 38:8 ↔ §193 ([absent]: the levirate without a term; the father and the brother's son
+beyond it); Amos 2:7 ↔ §194.3; Lev 18:16, 20:21 ↔ §195a; Lev 18:17 ↔ §195b; Lev 19:20, Gen 22:13 ↔ §§196, 199 (the
+substitute sheep); **Deut 22:23–27 ↔ §197 (the mountain / the house = the field / the city)**; **Deut 22:22 `וּמֵתוּ גַּם
+שְׁנֵיהֶם` ↔ §198 *2-pat akkandu***, Lev 20:10, Prov 6:34–35 ↔ §§197–198; Exod 21:28 ↔ §199.4–6; **Lev 21:16–23 ↔
+§200a ("he shall not approach the king, nor become a priest")**; Deut 21:11 ↔ §200a.4.
+
 ## Part HL1: parallels index (the first tablet, 571 clauses)
 
 ### Parallels index
@@ -1397,3 +1491,37 @@ Hittites" at 150 shekels, against 20 in the Hittite list)**, Lev 27:16, Isa 7:23
 | HL2 §178, 178.6 | *1 ANŠE.KUR.RA.MUNUS.AL.[L]Á …* | סוסה אחת … | `וְסוּס בַּחֲמִשִּׁים וּמֵאָה; וְכֵן לְכָל מַלְכֵי הַחִתִּים` (מלכים א י:כט) | [divergence] | המקרא זוכר את "מלכי החתים" כקוני סוסים במאה וחמישים שקל; במחירון החתי סוס רתמה – עשרים |
 | HL2 §183, 183.3 | *ŠA 1 IKU A.ŠÀ ši-iš-šu-ú-ra-aš 3 [* | של אִיקוּ אחד שדה מושקה(?) – שלושה […] | `וְהָיָה עֶרְכְּךָ לְפִי זַרְעוֹ זֶרַע חֹמֶר שְׂעֹרִים בַּחֲמִשִּׁים שֶׁקֶל כָּסֶף` (ויקרא כז:טז) | [equivalent] | מחיר קבוע לשדה: בתורה לפי הזרע, כאן לפי השטח והסוג |
 | HL2 §185a, 185a.1 | *ŠA 1 IKU {GIŠ}KIRI₆.{GIŠ}GEŠTIN 1 MA.NA KÙ.BABBAR ŠI-IM-ŠU* | של אִיקוּ אחד כרם – מנה כסף מחירו; | `אֲשֶׁר יִהְיֶה שָּׁם אֶלֶף גֶּפֶן בְּאֶלֶף כָּסֶף` (ישעיהו ז:כג) | [equivalent] | הכרם הנמדד במחירו |
+| HL2 §187, 187.1 | *ták-ku LÚ-iš GU₄-aš kat-ta [wa-aš-t]a-i ḫu-u-ur-ki-il a-ki-aš* | אם איש עם שור יחטא – תועבה: ימות. | `כָּל שֹׁכֵב עִם בְּהֵמָה מוֹת יוּמָת` (שמות כב:יח) | [equivalent] | מוות על המשכב עם בהמה |
+| HL2 §187, 187.1 | *ták-ku LÚ-iš GU₄-aš kat-ta [wa-aš-t]a-i ḫu-u-ur-ki-il a-ki-aš* | אם איש עם שור יחטא – תועבה: ימות. | `מִכֹּל הַתּוֹעֵבֹת הָאֵלֶּה` (ויקרא יח:כט) | [equivalent] | התורה מכנה את כל המשכבים האסורים של ויקרא יח "תועבות", כשם שהחוק החתי מכנה אותם *ḫurkel* |
+| HL2 §187, 187.1 | *ták-ku LÚ-iš GU₄-aš kat-ta [wa-aš-t]a-i ḫu-u-ur-ki-il a-ki-aš* | אם איש עם שור יחטא – תועבה: ימות. | `וְאֶת הַבְּהֵמָה תַּהֲרֹגוּ` (ויקרא כ:טו) | [divergence] | התורה הורגת גם את הבהמה; החוק החתי אינו אומר דבר על השור |
+| HL2 §188, 188.1 | *ták-ku LÚ-eš UDU-aš kat-ta w[a-aš-ta-i* | אם איש עם שה י[חטא …] | `וּבְכָל בְּהֵמָה לֹא תִתֵּן שְׁכָבְתְּךָ` (ויקרא יח:כג) | [equivalent] | גם השה בכלל הבהמות; כאן "תועבה" ומוות כ־187 (בעד, KBo 6.26) |
+| HL2 §189, 189.1 | *ták-ku LÚ-aš a-pé-e-el-pát na-a[š?-ša-aš kat-ta wa-aš-ta-i ḫu-ur-ki-il]* | אם איש עם אמו שלו [יחטא – תועבה]; | `עֶרְוַת אָבִיךָ וְעֶרְוַת אִמְּךָ לֹא תְגַלֵּה` (ויקרא יח:ז) | [equivalent] | הראשון ברשימת העריות בתורה, וגם כאן הראשון ברשימת בני המשפחה |
+| HL2 §189, 189.2 | *ták-ku LÚ-aš DUMU.MUNUS-aš-ša kat-ta wa-a[š-ta-i ḫu-ur-ki-il]* | אם איש עם בתו י[חטא – תועבה]; | `עֶרְוַת בַּת בִּנְךָ אוֹ בַת בִּתְּךָ` (ויקרא יח:י) | [absent] | איסור מפורש על הבת אין בויקרא יח; הוא נלמד מבת הבן ובת הבת (יח:י) ומן האשה ובתה (יח:יז) |
+| HL2 §189, 189.3 | *ták-ku 〈LÚ-aš〉 DUMU.NITA-aš kat-ta wa-aš-ta-a-⸢i⸣ [ḫu-ur-ki-il]* | אם ⟨איש⟩ עם בנו יחטא – [תועבה]. | `וְאֶת זָכָר לֹא תִשְׁכַּב מִשְׁכְּבֵי אִשָּׁה תּוֹעֵבָה הִוא` (ויקרא יח:כב) | [divergence] | התורה אוסרת כל משכב זכר ("תועבה" – אותה מילה); החוק החתי אוסר רק את הבן |
+| HL2 §190, 190.1 | *ták-ku-uš-ša-an ak-kán-ti-it ti-an-zi LÚ-M[A? MUNUS-TUM Ú-UL ḫa-ra-a-tar]* | אם עם מת ייכנסו(?) – איש [(או) אשה – אין עברה]. | – | [absent] | אין בתורה דין על משכב עם מת |
+| HL2 §190, 190.2 | *ták-ku LÚ-aš an-na-wa-an-na-aš-ša-aš kat-ta [wa-aš-ta-a-i Ú-UL ḫa-ra-tar]* | אם איש עם אמו החורגת [יחטא – אין עברה]; | `עֶרְוַת אֵשֶׁת אָבִיךָ לֹא תְגַלֵּה` (ויקרא יח:ח) | [divergence] | בתורה אשת האב אסורה תמיד (גם דברים כז:כ); בחוק החתי – רק בחיי האב |
+| HL2 §190, 190.3 | *ták-ku ad-da-aš-še-ša ḫu-iš-wa-an-za [ḫu-u-ur-ki-il]* | ואם אביו חי – [תועבה]. | `וַיִּשְׁכַּב אֶת בִּלְהָה פִּילֶגֶשׁ אָבִיו` (בראשית לה:כב) | [equivalent] | ראובן בחיי יעקב (וכן אבשלום, שמואל ב טז:כב): "תועבה" דווקא בחיי האב |
+| HL2 §191, 191.3 | *ut-ne-e Ú-UL ḫa-ra-a-tar ták-ku ša-ni-ia [pé-di nu ša-ak-ki]* | – אין עברה. אם באותו [מקום, והוא יודע] – | `וְאִישׁ אֲשֶׁר יִקַּח אֶת אִשָּׁה וְאֶת אִמָּהּ זִמָּה הִוא` (ויקרא כ:יד) | [divergence] | בתורה האשה ואמה אסורות בכל מקום; בחוק החתי – רק "באותו מקום, ביודעין" |
+| HL2 §192, 192.1 | *ták-ku LÚ-aš DAM-SÚ a-ki A-ḪA-[SÀ DAM-an-ni da-a-i]* | אם אשתו של איש תמות, את אחותה [לאשה ייקח] – | `וְאִשָּׁה אֶל אֲחֹתָהּ לֹא תִקָּח` … `בְּחַיֶּיהָ` (ויקרא יח:יח) | [equivalent] | בתורה האחות אסורה רק בחיי אשתו; אחרי מותה – מותרת, כמו כאן |
+| HL2 §193, 193.1 | *ták-ku LÚ-aš MUNUS-an ḫar-zi ta LÚ-eš a-ki DAM-SÚ [ŠEŠ-ŠU da-a-i ta-an A-BU-ŠU]* | אם איש אשה יחזיק, והאיש ימות – את אשתו [אחיו ייקח; ושנית אביו] | `יְבָמָהּ יָבֹא עָלֶיהָ וּלְקָחָהּ לוֹ לְאִשָּׁה` (דברים כה:ה) | [absent] | אותו מנהג (האח לוקח את אשת אחיו המת), בלי מונח מיוחד (`יבם` שמור) ובלי "הבן שיקום על שם אחיו" |
+| HL2 §193, 193.1 | *ták-ku LÚ-aš MUNUS-an ḫar-zi ta LÚ-eš a-ki DAM-SÚ [ŠEŠ-ŠU da-a-i ta-an A-BU-ŠU]* | אם איש אשה יחזיק, והאיש ימות – את אשתו [אחיו ייקח; ושנית אביו] | `בֹּא אֶל אֵשֶׁת אָחִיךָ` (בראשית לח:ח) | [divergence] | בבראשית לח החותן בא על כלתו שלא ביודעין; בחוק החתי האב הוא השלב השני, במפורש |
+| HL2 §193, 193.3 | *DUMU ŠEŠ-ŠU [da-a-i]* | בן אחיו [ייקח]. | `וְהָיָה הַבְּכוֹר אֲשֶׁר תֵּלֵד יָקוּם עַל שֵׁם אָחִיו הַמֵּת` (דברים כה:ו) | [divergence] | תכלית הייבום בתורה – שם המת; כאן רק סדר: אח, אב, בן אח |
+| HL2 §194, 194.3 | *Ú-UL ḫa-ra-a-tar ták-ku GÉME-aš na-aš-ma {MUNUS}KAR.[KID-aš kat-ta ad-da-aš]* | אין עברה. אם עם אָמָה או [זונה אב] | `וְאִישׁ וְאָבִיו יֵלְכוּ אֶל הַנַּעֲרָה לְמַעַן חַלֵּל אֶת שֵׁם קָדְשִׁי` (עמוס ב:ז) | [divergence] | מה שעמוס מוקיע כחילול השם, החוק החתי מתיר במפורש (באמה או בזונה) |
+| HL2 §195a, 195a.1 | *ták-ku LÚ-aš MA-ḪAR DAM ŠEŠ-ŠU še-eš-ke-ez-zi ŠEŠ-ŠU-ma* | אם איש אצל אשת אחיו שוכב, ואחיו | `עֶרְוַת אֵשֶׁת אָחִיךָ לֹא תְגַלֵּה` (ויקרא יח:טז) | [equivalent] | בחוק החתי האיסור תלוי בחיי האח, ואחרי מותו האח לוקח אותה (193); גם ויקרא כ:כא |
+| HL2 §195b, 195b.2 | *{MUNUS}a-ra-u-wa-an-ni-in ḫar-zi ta DUMU.MUNUS-ši-ia ša-li-ga* | בת חורין יחזיק, וגם בבתה יִגַּע – | `עֶרְוַת אִשָּׁה וּבִתָּהּ לֹא תְגַלֵּה` (ויקרא יח:יז) | [equivalent] | אותו איסור: האשה ובתה |
+| HL2 §195c, 195c.2 | *na-aš-ma *NIN-iš-ši* ša-li-i-ga ḫu-u-ur-ke-el* | או באחותה יִגַּע – תועבה. | `וְאִישׁ אֲשֶׁר יִקַּח אֶת אִשָּׁה וְאֶת אִמָּהּ זִמָּה הִוא` (ויקרא כ:יד) | [equivalent] | אותו איסור: אשתו ואמה |
+| HL2 §195c, 195c.2 | *na-aš-ma *NIN-iš-ši* ša-li-i-ga ḫu-u-ur-ke-el* | או באחותה יִגַּע – תועבה. | `וְאִשָּׁה אֶל אֲחֹתָהּ לֹא תִקָּח … בְּחַיֶּיהָ` (ויקרא יח:יח) | [equivalent] | בחיי אשתו גם אחותה "תועבה"; אחרי מותה – מותרת (192) |
+| HL2 §196, 196.4 | *ke-e-el 1 UDU ke-⸢e⸣-[e]l-la 1 UDU *ka-aš-ša-aš** | שה אחד חֵלֶף זה, ושה אחד חֵלֶף זו | `לֹא יוּמְתוּ כִּי לֹא חֻפָּשָׁה` (ויקרא יט:כ) | [divergence] | גם בתורה מעמד העבדות מקל (אין מוות); שם איש חופשי עם שפחה, כאן עבד ואמה: פירוד, ושה חֵלֶף כל אחד |
+| HL2 §197, 197.1 | *ták-ku *LÚ-aš* MUNUS-an ḪUR.SAG-i e-ep-zi LÚ-na-aš wa-aš-túl na-aš a-ki* | אם איש אשה בהר יתפוס – חטא האיש, וימות; | `וְאִם בַּשָּׂדֶה יִמְצָא הָאִישׁ אֶת הַנַּעֲרָ הַמְאֹרָשָׂה וְהֶחֱזִיק בָּהּ הָאִישׁ` … `וּמֵת הָאִישׁ אֲשֶׁר שָׁכַב עִמָּהּ לְבַדּוֹ` (דברים כב:כה) | [equivalent] | ההר כמו השדה: רק האיש מת; התורה נותנת את הנימוק (הצעקה, כב:כז), החוק החתי רק את המקום |
+| HL2 §197, 197.2 | *ták-ku É-ri-ma e-ep-zi MUNUS-na-aš wa-aš-ta-iš MUNUS-za* | ואם בבית יתפוס – חטא האשה: האשה | `אֶת הַנַּעֲרָ עַל דְּבַר אֲשֶׁר לֹא צָעֲקָה בָעִיר` (דברים כב:כד) | [equivalent] | בבית (בעיר) גם היא מתה |
+| HL2 §197, 197.4 | *tu-uš ku-en-zi *ḫa-ra-a-tar*-še-et NU.GÁL* | ואותם יהרוג – אין לו עברה. | `כִּי קִנְאָה חֲמַת-גָּבֶר` (משלי ו:לד) | [absent] | החכמה מכירה את חמת הבעל; בתורה אין לבעל זכות להרוג בעצמו |
+| HL2 §198, 198.3 | *{LÚ}pu-pu-un-na ḫu-iš-n[u]-zi ta SAG.DU-SÚ* | וגם את המאהב יחיה, ואת ראשו | `מוֹת יוּמַת הַנֹּאֵף וְהַנֹּאָפֶת` (ויקרא כ:י) | [divergence] | בתורה אין לבעל בחירה; כאן אם חס על אשתו – חייב לחוס גם על המאהב (ומשלי ו:לה: הבעל אינו מקבל פדיון) |
+| HL2 §198, 198.4 | *wa-aš-ši-e-ez-zi ták-ku [t]e-ez-zi 2-pát ak-kán-du* | יכסה. ואם יאמר: "שניהם ימותו!", | `וּמֵתוּ גַּם שְׁנֵיהֶם` (דברים כב:כב) | [equivalent] | *2-pat akkandu* מילולי, כדי שההקבלה תיראה; כאן זו רק אחת משתי האפשרויות של הבעל, וההכרעה בידי המלך |
+| HL2 §199, 199.1 | *ták-ku ŠAḪ-〈aš〉 UR.GI₇-aš kat-ta ku-iš-ki wa-aš-ta-i a-ki-aš* | אם עם חזיר (או) כלב מישהו יחטא – ימות. | `אָרוּר שֹׁכֵב עִם כָּל בְּהֵמָה` (דברים כז:כא) | [equivalent] | מוות על המשכב עם בהמה (חזיר, כלב) |
+| HL2 §199, 199.4 | *ti-i-ez-zi ták-ku GU₄-uš LÚ-[ni] wa-at-ku-zi* | ייכנס אל המלך. אם שור על איש יקפוץ, | `וְכִי יִגַּח שׁוֹר אֶת אִישׁ אוֹ אֶת אִשָּׁה וָמֵת סָקוֹל יִסָּקֵל הַשּׁוֹר` (שמות כא:כח) | [divergence] | השור "קופץ" (מינית) ואינו נוגח, והאדם אינו מת – ובכל זאת השור מת |
+| HL2 §199, 199.5 | *GU₄-uš a-ki LÚ-aš-ša Ú-UL ⸢a⸣-[ki] 1 UDU LÚ-na-aš* | השור ימות, והאיש לא ימות. שה אחד | `וְאֶת הַבְּהֵמָה תַּהֲרֹגוּ` (ויקרא כ:טו) | [equivalent] | הבהמה מתה |
+| HL2 §199, 199.6 | *ka-a-aš-ša-aš ḫu-u-it-ti-ia-a[n-ta] na-an-kán ku-na-an-zi* | חֵלֶף האיש ימשכו, ואותו יהרגו. | `וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ` (בראשית כב:יג) | [divergence] | שה חֵלֶף אדם; כאן השה מת במקום האיש שלא חטא, כדי להסיר את הטומאה |
+| HL2 §200a, 200a.1 | *ták-ku LÚ-aš ANŠE.KUR.RA-i na-aš-ma ANŠE.GÌR.NUN.NA kat-ta* | אם איש עם סוס או פרד | `כָּל שֹׁכֵב עִם בְּהֵמָה מוֹת יוּמָת` (שמות כב:יח) | [divergence] | בתורה כל בהמה; בחוק החתי סוס ופרד – "אין עברה", ושור, שה, חזיר וכלב – מוות |
+| HL2 §200a, 200a.3 | *{LÚ}SANGA-ša Ú-UL ki-i-ša ták-ku ar-nu-wa-la-an [ku-iš-ki]* | וגם כהן לא ייעשה. אם [מישהו] עם שבויה | `אִישׁ מִזַּרְעֲךָ לְדֹרֹתָם אֲשֶׁר יִהְיֶה בוֹ מוּם` (ויקרא כא:יז) | [equivalent] | פגם שאינו חטא ובכל זאת מרחיק מן הכהונה ומן הקודש; שם המום בגוף, כאן המעשה (Lev 21:16–23) |
+| HL2 §200a, 200a.4 | *kat-ta še-eš-ke-ez-zi an-na-aš-ša-an n[e]-k[a-aš-ša-an-na ú-en-zi]* | שוכב, ועל אִמָּהּ ועל [אחותה יבוא] – | `וְרָאִיתָ בַּשִּׁבְיָה אֵשֶׁת יְפַת תֹּאַר` (דברים כא:יא) | [divergence] | התורה מסדירה את המשכב עם השבויה כנישואים; כאן השבויה, אמה ואחותה – "אין עברה", כמו באמהות (194.1) |
+| HL2 §200b, 200b.5 | *nu-uš-ši 1 SAG.DU pa-a-i* | ולו ראש אחד ייתן. | – | [absent] | אין בתורה דין של שכר לימוד מלאכה |

@@ -2011,4 +2011,565 @@
 - **פירוק:** `ŠA 20` – "of twenty" ("של … עשרים"); `UZU` – "meat" ("בשר"); `SILA₄` – "lambs" ("טלאים"); `1 UDU` – "one sheep" ("שה אחד"); `pa-a-i` – "give" ("ייתן"); `t[ák-ku` – "if" ("אם"); `20 U]ZU` – "twenty … meat" ("בשר עשרים"); `MÁŠ.TUR` – "kids" ("גדיים"); `ku-iš-ki` – kuiški ("מישהו"); `wa-a-ši` – "buy" ("יקנה"); `1 UDU` – "one sheep" ("שה אחד"); `pa-a-i` – "give" ("ייתן"), F8.
 - **הערות:** סוף המחירון. מכאן (187) מתחילים חוקי הזיווגים האסורים והמותרים.
 
-<!-- טרם תורגם: 187.1–col1 -->
+## §187 – החוטא עם שור
+
+### 187.1
+`ták-ku LÚ-iš GU₄-aš kat-ta [wa-aš-t]a-i ḫu-u-ur-ki-il a-ki-aš`
+> אם איש עם שור יחטא – תועבה: ימות.
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `LÚ-iš` – LÚ "man", nom. ("איש"); `GU₄-aš` – GU₄ "cattle, ox" (the generic bovine), d.-l. ("עם שור"); `kat-ta` – katta "down; with" (postposition with the d.-l.: *X-aš katta* "with X") ("עם"); `[wa-aš-t]a-i` – wašta- "sin, offend", pres. 3sg ("יחטא"); `ḫu-u-ur-ki-il` – ḫurkel "abomination, unpermitted (sexual) union" ("תועבה"), F7; `a-ki-aš` – akiaš, the Old Hittite form of ak(k)- "die" ("he shall die"; the annotation's "Akiya" is a false lemma) ("ימות").
+- **נוסחים:** הסעיף מובל בידי KBo 6.26 (הנוסח המאוחר) – העותק היחיד שנשמר בו כולו; KUB 29.34+ (הנוסח הקדום, בכתב חדש) – רק `ták-ku LÚ-aš [` ("איש" בנטייה *-aš*); KUB 29.33+ – סימנים שבורים.
+- **תרגומים:** Hrozný 1922: «Si un HOMME une VACHE vi[ol]e, punition (a lieu): il meurt» (ובהערה: GU₄ הוא "סימן כללי לשלושת מיני בעלי הקרניים: שור, פר, פרה"); Zimmern–Friedrich 1922 (73†): «Wenn ein Mann ein Rind verge[walti]gt, so (findet) Bestrafung (statt), er muß sterben» – ובהערה: «Im geschlechtlichen Sinne; vgl. Lev. 18, 23; 20, 15f.». שניהם הבינו *ḫurkel* "עונש" (*punition*, *Bestrafung*), לא "תועבה", ואת *wašta-* "אנס" (*viole*, *vergewaltigt*); `יחטא` שלנו – המילה החתית עצמה.
+- **הקבלה:** [equivalent] `כָּל שֹׁכֵב עִם בְּהֵמָה מוֹת יוּמָת` (שמות כב:יח) – מוות על המשכב עם בהמה; [equivalent] `מִכֹּל הַתּוֹעֵבֹת הָאֵלֶּה` (ויקרא יח:כט) – התורה מכנה את כל המשכבים האסורים של ויקרא יח "תועבות", כשם שהחוק החתי מכנה אותם *ḫurkel*; [divergence] `וְאֶת הַבְּהֵמָה תַּהֲרֹגוּ` (ויקרא כ:טו) – התורה הורגת גם את הבהמה; החוק החתי אינו אומר דבר על השור (ראו 199.4–6).
+- **הערות:** כאן מתחילים חוקי הזיווגים (187–200a): כל אחד מהם קובע אם הזיווג הוא *ḫurkel* (`תועבה`, F7) או *UL ḫaratar* (`אין עברה`, F11). העונש – מוות (*akiaš*, הצורה הקדומה, כמו בגניבת החנית משער ההיכל, 126), אבל המלך רשאי לחון (187.2–3). *wašta-* = `חטא`, כמו *waštul* בלוח הראשון (`ידו חוטאת`); `שכב` רק ל־*šeš-* (194). GU₄ = `שור` (המילה הכללית, כבלוח הראשון; `פרה` היא ÁB).
+
+### 187.2
+`LUGAL-an a-aš-ki ú-wa-t[e-ez-z]i ku-en-zi-ma-an LUGAL-uš`
+> אל שער המלך יביא (אותו); בין שיהרוג אותו המלך,
+- **פירוק:** `LUGAL-an` – LUGAL "king", gen. (the old genitive in *-an*) ("המלך"); `a-aš-ki` – āšk- "gate (of the palace), court", d.-l. ("אל שער"); `ú-wa-t[e-ez-z]i` – uwate- "bring (here)", pres. 3sg ("יביא"); `ku-en-zi-ma-an` – kuen- "strike, kill", pres. 3sg + =ma "but" + =an "him" ("בין שיהרוג אותו"); `LUGAL-uš` – LUGAL "king", nom. ("המלך").
+- **נוסחים:** KUB 29.34+: `ú-wa-da-an-z[i` – **"יביאו"** (רבים סתמי), במקום *uwatezzi* ביחיד של KBo 6.26.
+- **הערות:** "שער המלך" (*LUGAL-an āški*) – מקום המשפט של המלך (ב־198, 199: "שער ההיכל", *KÁ É.GAL*). *uwate-* = `הביא`, *kuen-* = `הרג` (הלוח הראשון).
+
+### 187.3
+`ḫu-iš-n[u]-zi-i[a-an LUGAL-u]š LUGAL-i-ma-aš Ú-UL ti-ia-iz-zi`
+> ובין שיחיה [אותו המלך] – ואילו הוא לא ייכנס אל המלך.
+- **פירוק:** `ḫu-iš-n[u]-zi-i[a-an` – ḫuišnu- "keep alive, spare", pres. 3sg + =ya "and" + =an "him" ("ובין שיחיה [אותו]"); `LUGAL-u]š` – "king", nom. ("[המלך]"); `LUGAL-i-ma-aš` – LUGAL, d.-l. + =ma "but" + =aš "he" ("ואילו הוא … אל המלך"); `Ú-UL` – UL "not" ("לא"); `ti-ia-iz-zi` – tiya- "step, go (up to)", pres. 3sg ("ייכנס").
+- **נוסחים:** KUB 29.34+: `LUGAL-i-ma-aš Ú-[UL ti-ia-zi]`; KUB 29.33+: `LUGAL-i-ma-aš [Ú-UL` – זהה.
+- **תרגומים:** Hrozný 1922: «Dans la cellule du ROI il (= on) (r)am[èn]e et le ROI le tue e[t l]e [ROI le] fait viv[r]e: mais au ROI il NE vient PAS»; Zimmern–Friedrich 1922: «man bringt ihn vor des Königs Thron, und der König kann ihn erschlagen, es kann aber auch der König ihn leben lassen; er aber darf nicht vor den König treten» – ובהערה: «d.h. wohl: von sich aus mit einem Gnadengesuche» (כלומר: לא יבוא אל המלך מיוזמתו בבקשת חנינה).
+- **הערות:** *kuenzi=ma=an … ḫuišnuzi=ya=an* – שתי האפשרויות שבידי המלך, `בין … ובין`. *ḫuišnu-* = `החיה` (172.2); *tiya-* = `נכנס`, והנוסחה **`לא ייכנס אל המלך`** חוזרת ב־188.3, 199.3–4, 200a.2. המשמעות: גם אם המלך החיה אותו, האיש נשאר טמא ואסור לו להתקרב אל המלך – המלך החתי, הכוהן העליון, נשמר מכל טומאה.
+- **הערת שוליים:** "ואילו הוא לא ייכנס אל המלך": המוות אינו העונש היחיד. המלך רשאי לחון את החוטא, אבל לא לטהר אותו: מי שחטא עם בהמה מורחק לצמיתות מקרבת המלך, כמו בעל המום שלא יקרב אל המקדש (ויקרא כא:יז; ראו 200a.3).
+
+## §188 – החוטא עם שה
+
+### 188.1
+`ták-ku LÚ-eš UDU-aš kat-ta w[a-aš-ta-i`
+> אם איש עם שה י[חטא …]
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `LÚ-eš` – LÚ "man", nom. ("איש"); `UDU-aš` – UDU "sheep", d.-l. ("עם שה"); `kat-ta` – katta "with" ("עם"); `w[a-aš-ta-i` – wašta- "sin", pres. 3sg ("י[חטא"); the rest of the line is lost ("…]").
+- **נוסחים:** מכאן ועד 194 מוביל **KUB 29.34+** (הנוסח החתי הקדום, בכתב חדש), ו־KBo 6.26 (המאוחר) הוא עד: `tá[k-k]u L[Ú-iš UDU-aš kat-ta wa-aš-t]a-i ḫu-u-ur-ke-el a-ki-aš` – "… יחטא – **תועבה: ימות**", כ־187.1; KUB 29.33+: `[t]ák-ku LÚ-aš U[DU-aš kat-ta-an wa-aš-ta-a-i]` / `ḫu-ur-k[e-el` – *kattan* במקום *katta*.
+- **תרגומים:** Hrozný 1922: «S[i] … [vio]le, punition (a lieu): il meurt» – ובהערה: «Un animal domestique»; Zimmern–Friedrich 1922 (74†): «Wenn ein M[ann ein ...... ?] vergewaltigt» – ובהערה: «Ein anderes Tier». בשנת 1922 שם הבהמה היה שבור ב־KBo 6.26; את "שה" (UDU) שומרים עותקי הנוסח הקדום שנמצאו אחר כך.
+- **הקבלה:** [equivalent] `וּבְכָל בְּהֵמָה לֹא תִתֵּן שְׁכָבְתְּךָ` (ויקרא יח:כג).
+- **הערות:** אותו חוק כמו 187, בשה. *wašta-* = `חטא`; `תועבה` אינה בשורה (המילה שבורה ב־KUB 29.34+), ולכן איננה בעברית: היא בעד, KBo 6.26.
+
+### 188.2
+`ú-wa-da-an-zi ku-en-z[i`
+> יביאו (אותו); יהרוג [אותו המלך …]
+- **פירוק:** `ú-wa-da-an-zi` – uwate- "bring", pres. 3pl ("יביאו"); `ku-en-z[i` – kuen- "kill", pres. 3sg ("יהרוג"); the rest is lost ("[אותו המלך …]").
+- **נוסחים:** KBo 6.26: `[LUGAL-aš a-aš-ki ú-wa-da-an-z]i ku-en-zi-ma-an LUGAL-uš` – גם הוא ברבים כאן (*uwadanzi*), אף שב־187.2 ביחיד; KUB 29.33+: `LUGAL-an [a-aš-ki` / `ḫu-u-i[š-nu-zi-ia-an` – "אל שער המלך … ויחיה אותו".
+- **הערות:** בשורה של KUB 29.34+ "אל שער המלך" (*LUGAL-an āški*) היה בסוף השורה הקודמת, השבורה. *kuenz[i* – בלי *=ma=an* הנראה לעין; "בין … ובין" של 187.2 – בעדים.
+
+### 188.3
+`LUGAL-i-ma-aš Ú-UL [`
+> ואילו הוא לא [ייכנס] אל המלך.
+- **פירוק:** `LUGAL-i-ma-aš` – LUGAL, d.-l. + =ma "but" + =aš "he" ("ואילו הוא … אל המלך"); `Ú-UL` – "not" ("לא"); `[` – the verb is lost ("[ייכנס]").
+- **נוסחים:** KBo 6.26: `[ḫu-iš-nu-zi-i]a-a[n LUGAL-u]š LUGAL-i-ma-aš Ú-UL ti-i-ez-zi` – "[ובין שיחיה] אותו המלך – ואילו הוא לא ייכנס אל המלך"; KUB 29.33+: `ku-en-z[i-ma-an` / `LUGAL-i-m[a-aš Ú-UL ti-i-ez-zi]`.
+- **הערות:** הנוסחה של 187.3. בכתב היד המוביל נשמר רק סופה; "ובין שיחיה אותו המלך" – בעדים.
+
+## §189 – אם, בת ובן
+
+### 189.1
+`ták-ku LÚ-aš a-pé-e-el-pát na-a[š?-ša-aš kat-ta wa-aš-ta-i ḫu-ur-ki-il]`
+> אם איש עם אמו שלו [יחטא – תועבה];
+- **פירוק:** `ták-ku` – takku "if" ("אם"), F1; `LÚ-aš` – LÚ "man", nom. ("איש"); `a-pé-e-el-pát` – apel, gen. of apa- "he, that" + =pat "precisely, own" ("שלו"); `na-a[š?-ša-aš` – read *[an-]na-[aš-ša-aš]*: anna- "mother", d.-l. + =šaš "his" (as KBo 6.26 *an-na-ša-aš*; the annotation's *n=aš* does not fit) ("עם אמו"); `kat-ta` – "with" ("עם"); `wa-aš-ta-i` – wašta- "sin" ("[יחטא"); `ḫu-ur-ki-il]` – ḫurkel ("תועבה]"), F7.
+- **נוסחים:** KBo 6.26: `[ták-ku LÚ-i]š a-pé-e-e[l-pá]t an-na-ša-aš kat-ta wa-aš-ta-i` – "עם אמו שלו", והמילה "תועבה" עוברת לראש השורה הבאה; KUB 29.33+: `kat-ta-an [wa-aš-ta-a-i ḫu-ur-ki-il]`.
+- **תרגומים:** Hrozný 1922: «[Si u]n [HOMME] sa propr[e] mère viole, pu[nit]ion (a lieu)»; Zimmern–Friedrich 1922 (75†): «[Wenn ein Mann] seine eigene Mutter vergewaltigt, so (findet) Bestrafung (statt)».
+- **הקבלה:** [equivalent] `עֶרְוַת אָבִיךָ וְעֶרְוַת אִמְּךָ לֹא תְגַלֵּה` (ויקרא יח:ז) – הראשון ברשימת העריות בתורה, וגם כאן הראשון ברשימת בני המשפחה.
+- **הערות:** *apel=pat* – "שלו דווקא": אמו־מולידתו, להבדיל מאשת אביו (190.2: *annawanna-*, "אם חורגת", שאין בה עברה).
+
+### 189.2
+`ták-ku LÚ-aš DUMU.MUNUS-aš-ša kat-ta wa-a[š-ta-i ḫu-ur-ki-il]`
+> אם איש עם בתו י[חטא – תועבה];
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `LÚ-aš` – "man" ("איש"); `DUMU.MUNUS-aš-ša` – DUMU.MUNUS "daughter", d.-l. + =šša "his" ("עם בתו"); `kat-ta` – "with" ("עם"); `wa-a[š-ta-i` – wašta- "sin" ("י[חטא"); `ḫu-ur-ki-il]` – ḫurkel ("תועבה]"), F7.
+- **נוסחים:** KBo 6.26: `ḫu-u-u[r-k]i-il ták-ku L[Ú-iš] DUMU.MUNUS-aš kat-ta wa-aš-ta-i` – "עם **הבת**", בלי הכינוי "שלו" (*-šša*).
+- **תרגומים:** Hrozný 1922: «Si [un] HO[MME] la FILLE viole, pu[nit]ion (a lieu)»; Zimmern–Friedrich 1922: «wenn ein Ma[nn] die Tochter vergewaltigt, so (findet) Bestrafung (statt)».
+- **הקבלה:** [absent] – איסור מפורש על הבת אין בויקרא יח; הוא נלמד מ`עֶרְוַת בַּת בִּנְךָ אוֹ בַת בִּתְּךָ` (ויקרא יח:י) ומ`עֶרְוַת אִשָּׁה וּבִתָּהּ` (ויקרא יח:יז).
+
+### 189.3
+`ták-ku 〈LÚ-aš〉 DUMU.NITA-aš kat-ta wa-aš-ta-a-⸢i⸣ [ḫu-ur-ki-il]`
+> אם ⟨איש⟩ עם בנו יחטא – [תועבה].
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `〈LÚ-aš〉` – "man", omitted by the scribe ("⟨איש⟩"); `DUMU.NITA-aš` – DUMU.NITA "son", d.-l. ("עם בנו"); `kat-ta` – "with" ("עם"); `wa-aš-ta-a-⸢i⸣` – wašta- "sin" ("יחטא"); `[ḫu-ur-ki-il]` – ḫurkel ("[תועבה]"), F7.
+- **נוסחים:** KBo 6.26: `⸢ḫu⸣-[u]-⸢ur-ki⸣-il ták-ku LÚ-[iš] DUMU.NITA-aš kat-ta wa-aš-ta-i ḫu-u-ur-ki-il` – עם "איש" ("הבן", בלי "שלו", כמו 189.2); KUB 29.33+: `ták-ku DU[MU.NITA-aš …` – גם הוא בלי "איש".
+- **תרגומים:** Hrozný 1922: «Si [un] HOMME le [FI]LS viole, punition (a lieu)»; Zimmern–Friedrich 1922: «wenn ein Mann den Sohn vergewaltigt, so (findet) Bestrafung (statt)».
+- **הקבלה:** [divergence] `וְאֶת זָכָר לֹא תִשְׁכַּב מִשְׁכְּבֵי אִשָּׁה תּוֹעֵבָה הִוא` (ויקרא יח:כב) – התורה אוסרת כל משכב זכר ("תועבה" – אותה מילה כאן); החוק החתי אוסר רק את הבן, כחלק מן המשפחה.
+- **הערות:** "⟨איש⟩" הושמט גם ב־KUB 29.33+: אולי כבר בעותק שממנו העתיקו.
+
+## §190 – המת; אשת האב
+
+### 190.1
+`ták-ku-uš-ša-an ak-kán-ti-it ti-an-zi LÚ-M[A? MUNUS-TUM Ú-UL ḫa-ra-a-tar]`
+> אם עם מת ייכנסו(?) – איש [(או) אשה – אין עברה].
+- **פירוק:** `ták-ku-uš-ša-an` – takku "if" + =uš? + =šan (local particle) ("אם"), F1; `ak-kán-ti-it` – akkant- "dead (person)" (participle of ak(k)- "die"), instr. ("עם מת"); `ti-an-zi` – tiya- "step, go (into)", pres. 3pl (or dai- "put": the annotation leaves both) ("ייכנסו(?)"); `LÚ-M[A?` – LÚ (+ Akk. -MA?) "man" ("איש"); `MUNUS-TUM` – MUNUS "woman" (Akk. ending) ("[(או) אשה"); `Ú-UL` – "not" ("אין"); `ḫa-ra-a-tar]` – ḫaratar "offence" ("עברה]"), F11.
+- **נוסחים:** KBo 6.26: `⸢ták-ku-uš⸣-ša-an GIDIM-*it!* ti-e-zi LÚ-MA MUNUS-TUM Ú-UL ḫa-ra-a-tar` – **GIDIM** "מת, רוח מת" (הסומרוגרם במקום *akkantit*; *-it* כתוב על גבי מחיקה), והפועל **ביחיד** (*tiezi*, "ייכנס"); KUB 29.33+: `ták-ku-uš-[ša-an`.
+- **תרגומים:** Hrozný 1922: «Mais s[i] LIBRement ils viennent, HOMME (ou) FEMME, (IL) N'(Y A) PAS de punition»; Zimmern–Friedrich 1922 (76†): «Wenn sie ihm aber freiwillig sich hingeben, Mann oder Frau, so (findet) Strafverfolgung nicht (statt)» – שניהם קראו את הסימן של KBo 6.26 "מרצון" (*EL-LIŠ*, *librement*), לפני שנמצא העותק הקדום ובו *akkantit* "עם מת".
+- **הקבלה:** [absent] – אין בתורה דין על משכב עם מת.
+- **הערות:** קשה. הקריאה "עם מת" (*akkantit*) ודאית בעותק הקדום, ו־KBo 6.26 תומך בה (GIDIM); הפועל *tiya-* "ייכנס" – כאן במובן מיני ("יבוא אל"), כמו *wen-* (191.2)? "איש (או) אשה" – המת או המתה. החוק קובע: אין עברה – משום שהמת אינו "בעל" ואינו קרוב.
+- **הערת שוליים:** "אם עם מת ייכנסו – אין עברה": החוק החתי מוציא במפורש מן ה"תועבה" את המשכב עם מת. בשנת 1922 קראו את השורה "אם מרצון יבואו – איש או אשה – אין עונש", ומכאן "חוק החופש המיני" שהעתיקו ספרים רבים.
+
+### 190.2
+`ták-ku LÚ-aš an-na-wa-an-na-aš-ša-aš kat-ta [wa-aš-ta-a-i Ú-UL ḫa-ra-tar]`
+> אם איש עם אמו החורגת [יחטא – אין עברה];
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `LÚ-aš` – "man" ("איש"); `an-na-wa-an-na-aš-ša-aš` – annawanna- "stepmother", d.-l. + =ššaš "his" ("עם אמו החורגת"); `kat-ta` – "with" ("עם"); `[wa-aš-ta-a-i` – wašta- "sin" ("[יחטא"); `Ú-UL ḫa-ra-tar]` – "no offence" ("אין עברה]"), F11.
+- **נוסחים:** KBo 6.26: `ták-ku LÚ-aš {MUNUS}an-na-wa-*an-na*-aš-ša-〈aš〉 kat-ta *wa*-aš-ta-i` / `Ú-UL ḫa-ra-tar …` – עם המגדיר {MUNUS} ("אשה"), וחלקי המילים על גבי מחיקה.
+- **תרגומים:** Hrozný 1922: «Si un HOMME la belle-mère viole, (IL) N'(Y A) PAS de punition»; Zimmern–Friedrich 1922: «Wenn ein Mann seine Stiefmutter vergewaltigt, so (findet) Strafverfolgung nicht (statt)».
+- **הקבלה:** [divergence] `עֶרְוַת אֵשֶׁת אָבִיךָ לֹא תְגַלֵּה` (ויקרא יח:ח) – בתורה אשת האב אסורה תמיד (וכן `אָרוּר שֹׁכֵב עִם אֵשֶׁת אָבִיו` – דברים כז:כ); בחוק החתי – רק בחיי האב (190.3).
+- **הערות:** *annawanna-* – "אם חורגת", אשת האב שאינה אמו (מן *anna-* "אם"). `אמו החורגת` – שתי מילים למילה אחת.
+
+### 190.3
+`ták-ku ad-da-aš-še-ša ḫu-iš-wa-an-za [ḫu-u-ur-ki-il]`
+> ואם אביו חי – [תועבה].
+- **פירוק:** `ták-ku` – "if" ("ואם"), F1; `ad-da-aš-še-ša` – atta- "father" + =šše "his" + =a "but" (the annotation's "Vaterschaft" is a false lemma) ("אביו"); `ḫu-iš-wa-an-za` – ḫuišwant- "alive", nom. ("חי"); `[ḫu-u-ur-ki-il]` – ḫurkel ("[תועבה]"), F7.
+- **נוסחים:** KBo 6.26 (iii 31): `ták-ku ad-d[a]-aš-ši-iš-ša TI-an-za ḫu-u-ur-ki-il` – "חי" בסומרוגרם (TI); KUB 29.33+: `⸢ták⸣-[ku`.
+- **תרגומים:** Hrozný 1922: «mais si son père (est) VIVant, punition (a lieu)»; Zimmern–Friedrich 1922: «wenn aber sein Vater (noch) am Leben ist, so (findet) Bestrafung (statt)».
+- **הקבלה:** [equivalent] `וַיִּשְׁכַּב אֶת בִּלְהָה פִּילֶגֶשׁ אָבִיו` (בראשית לה:כב) – ראובן, בחיי יעקב; `וַיָּבֹא אַבְשָׁלוֹם אֶל פִּלַגְשֵׁי אָבִיו` (שמואל ב טז:כב) – בחיי דוד: המעשה שהחוק החתי מכנה "תועבה" הוא דווקא בחיי האב.
+- **הערות:** *ḫuišwant-* = `חי` (הלוח הראשון). העיקרון של החוקים החתיים: הזיווג אסור כשהוא פוגע בזכותו של איש חי (האב, האח: 195a) – לא מצד הקרבה עצמה.
+
+## §191 – אחיות ואמן
+
+### 191.1
+`ták-ku LÚ EL-LUM a-ra-u-wa-an-ni-uš an-na-ne-[ku-uš an-na-aš-ma-an-na]`
+> אם איש בן חורין על אחיות בנות חורין, מֵאֵם אחת, [וְעַל אִמָּן]
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `LÚ EL-LUM` – LÚ "man" + ELLUM (Akkadogram) "free" ("איש בן חורין"); `a-ra-u-wa-an-ni-uš` – arawanni- "free", acc. pl. c. ("בנות חורין"); `an-na-ne-[ku-uš` – annaneka- "sister (of the same mother)", acc. pl. ("על אחיות … מֵאֵם אחת"); `an-na-aš-ma-an-na]` – anna- "mother", acc. + =šmann "their" + =a "and" ("[וְעַל אִמָּן]").
+- **נוסחים:** KBo 6.26: `ták-ku LÚ *EL-LUM* a-*ra-u-wa?-an?-ni?-uš?* an-na-ne-ku-uš` – "בן חורין" ו"בנות חורין" **על גבי מחיקה**, והקריאה של האחרונה מסופקת; "ואמן" עובר לשורה הבאה.
+- **הערות:** *annaneka-* – "אחות מאותה אם" (מן *anna-* "אם" ו־*neka-* "אחות", 200a.4): `אחיות … מֵאֵם אחת` (מנוקד: "מאם"). *wen-* (191.2) = `בא על` – פועל חדש; בתורה `יְבָמָהּ יָבֹא עָלֶיהָ` (דברים כה:ה). `אִמָּן` מנוקד (בלי ניקוד: "אמן").
+
+### 191.2
+`ú-en-zi ka-a-aš ta-ki-ia ut-ne-e k[a-a-aš-ša ta-ki-ia]`
+> יבוא – זו בארץ אחרת, [וזו בארץ אחרת] –
+- **פירוק:** `ú-en-zi` – wen- "have intercourse (with)", pres. 3sg ("יבוא"); `ka-a-aš` – kā- "this (one)", nom. sg. c. ("זו"); `ta-ki-ia` – taki- "another", d.-l. ("אחרת"); `ut-ne-e` – utne- "land", d.-l. ("בארץ"); `k[a-a-aš-ša` – kāš + =a "and this (one)" ("[וזו"); `ta-ki-ia]` – "another" ("בארץ אחרת]"; the noun *utnē* is at the head of 191.3).
+- **נוסחים:** KBo 6.26: `an-na-aš-ma-an-na ú-en-zi ka-a-*aš* ta-ki-ia ut-ne-e` / `ka-a-aš-ša ta-ki-ia ut-ne-e-ia Ú-UL ḫa-ra-[tar]` – "**ובארץ** אחרת" (*utnē=ya*), ו־*kāš* על גבי מחיקה.
+- **תרגומים:** Hrozný 1922: «Si UN HOMME LIBRE (avec des (femmes) li[br]es) …, (avec) celles-ci et celles-là, couch[e], si (c'est) dans un pays, et si (c'est) dans un autre p[a]ys, (IL) N'(Y A) PAS de pun[ition]»; Zimmern–Friedrich 1922 (77†): «Wenn ein freier Mann freien (Frauen), dieser und jener, beiwohnt, dieser in einem fremden Lande und jener in einem fremden Lande, so (findet) Strafverfolgung nicht (statt)» – שניהם קראו את *annanekuš annašmann=a* כ"אלה ואלה" (*celles-ci et celles-là*, *dieser und jener*), ולא "אחיות … ואמן".
+- **הערות:** "זו בארץ אחרת וזו בארץ אחרת" – כל אחת מן הנשים בארץ אחרת: האיש לא ידע שהן קרובות. *taki-* = `אחר`, *utne-* = `ארץ` (הלוח הראשון).
+
+### 191.3
+`ut-ne-e Ú-UL ḫa-ra-a-tar ták-ku ša-ni-ia [pé-di nu ša-ak-ki]`
+> – אין עברה. אם באותו [מקום, והוא יודע] –
+- **פירוק:** `ut-ne-e` – utne- "land", d.-l. (rendered in 191.2: "בארץ אחרת") ("–"); `Ú-UL ḫa-ra-a-tar` – "no offence" ("אין עברה"), F11; `ták-ku` – "if" ("אם"); `ša-ni-ia` – šani- "the same, one", d.-l. ("באותו"); `[pé-di` – pedan- "place", d.-l. ("[מקום"); `nu` – "and" ("והוא"); `ša-ak-ki]` – šakk- "know", pres. 3sg ("יודע]").
+- **נוסחים:** KBo 6.26 (iii 35): `*ták-ku 2-el pé-di ša?-ak-ki ḫur-ki-il*` – **השורה כולה על גבי מחיקה**, ובה *2-el pedi* – מילולית "במקום של שתיים" (*2-el* – יחסת הקניין של "שתיים"), כלומר "**בשני מקומות**"? או "במקום של שתיהן", הוא "במקום אחד" של הנוסח הקדום; ואחריה, בשורה 36, *Ú-UL ḫa-ra-tar* מחוק. שורות 38–39 של KBo 6.26 מחוקות כולן.
+- **תרגומים:** Hrozný 1922: «si (c'est) 2 fois et …. sait, punition (a lieu) ((IL) N'(Y A) PAS de pun[it]ion)» – ובהערה: «Le scribe semble avoir hésité ici entre l'avis que l'acte … n'est pas punissable, et l'avis qu'il est punissable, mais il a pris parti – semble-t-il – enfin pour cette deuxième éventualité»; Zimmern–Friedrich 1922: «(1½ Zeilen stark radiert und deshalb unverständlich.)».
+- **הקבלה:** [divergence] `וְאִישׁ אֲשֶׁר יִקַּח אֶת אִשָּׁה וְאֶת אִמָּהּ זִמָּה הִוא` (ויקרא כ:יד) – בתורה האשה ואמה אסורות בכל מקום; בחוק החתי – רק "באותו מקום, ביודעין".
+- **הערות:** *šani- pedi* – "באותו מקום" (*šani-* "אותו, אחד"); *pedan-* = `מקום` (HLPT), *šakk-* = `ידע` (163.5). הניגוד: בארצות שונות – אין עברה; באותו מקום וביודעין – תועבה (191.4).
+- **הערת שוליים:** בשורות האלה (iii 35–39) סופר KBo 6.26 מחק וכתב מחדש: את "אם באותו מקום" החליף ב"בשני מקומות(?)", מחק "אין עברה", ובמקום החוק של 192 כתב חוק אחר (192.3). הוראת הנוסח הקדום – אחיות ואמן "באותו מקום וביודעין" – תועבה; מה בדיוק רצה הסופר המאוחר לשנות – נשאר ספק.
+
+### 191.4
+`ḫu-ur-ki-il`
+> תועבה.
+- **פירוק:** `ḫu-ur-ki-il` – ḫurkel ("תועבה"), F7.
+- **נוסחים:** KBo 6.26: `ḫur-ki-il` – בסוף השורה המחוקה (iii 35).
+- **הערות:** שורת כתב היד (KUB 29.34+ iv 17′) ממשיכה בתחילת 192.
+
+## §192 – אחות האשה המתה; (המאוחר:) איש־החלק והאלמנה
+
+### 192.1
+`ták-ku LÚ-aš DAM-SÚ a-ki A-ḪA-[SÀ DAM-an-ni da-a-i]`
+> אם אשתו של איש תמות, את אחותה [לאשה ייקח] –
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `LÚ-aš` – LÚ "man", gen. (or nom.: "a man – his wife dies") ("של איש"); `DAM-SÚ` – DAM "wife" + -SU (Akk.) "his" ("אשתו"); `a-ki` – ak(k)- "die", pres. 3sg ("תמות"); `A-ḪA-[SÀ` – AḪĀSSA (Akk.) "her sister" ("את אחותה"); `DAM-an-ni` – DAM-atar "wifehood, marriage", d.-l. ("[לאשה"); `da-a-i]` – dā- "take", pres. 3sg ("ייקח]").
+- **נוסחים:** רק KUB 29.34+ (הנוסח הקדום); בשורה זו של KBo 6.26 – חוק אחר (192.3).
+- **הקבלה:** [equivalent] `וְאִשָּׁה אֶל אֲחֹתָהּ לֹא תִקָּח` … `בְּחַיֶּיהָ` (ויקרא יח:יח) – בתורה האחות אסורה רק בחיי אשתו; אחרי מותה – מותרת, כמו כאן.
+- **הערות:** *DAM-anni dā-* – "לקח לאשה" (כמו *ANA DAM-ŠU dāi* בלוח הראשון, `וייקח אותה לאשתו`). *AḪĀSSA* – "אחותה" באכדוגרמה (שאר הסעיפים: *neka-*, NIN).
+
+### 192.2
+`Ú-UL ḫa-ra-a-[tar]`
+> אין [עברה].
+- **פירוק:** `Ú-UL` – "not" ("אין"); `ḫa-ra-a-[tar]` – ḫaratar "offence" ("[עברה]"), F11.
+- **הערות:** F11. נישואי האחות אחרי מות אשתו (הסורורט) – מותרים, וכך גם נישואי האלמנה לאח, לאב ולבן האח (193).
+
+### 192.3
+`*ták-ku LÚ-aš MUNUS-ni a-ki {[L]Ú}ḪA.LA-ŠU DAM-SÚ da-a-i*`
+> {נוסח מאוחר} אם איש לאשה ימות – איש־חלקו את אשתו ייקח.
+- **פירוק:** `*ták-ku` – "if" ("אם"), F1; `LÚ-aš` – "man", nom. ("איש"); `MUNUS-ni` – MUNUS "woman", d.-l. ("לאשה"); `a-ki` – ak(k)- "die" ("ימות"); `{[L]Ú}ḪA.LA-ŠU` – LÚ ḪA.LA "man of the share (partner, co-heir)" + -ŠU "his" ("איש־חלקו"); `DAM-SÚ` – "his wife" ("את אשתו"); `da-a-i*` – dā- "take" ("ייקח").
+- **נוסחים:** **KBo 6.26 בלבד** (iii 37), **השורה כולה על גבי מחיקה**: במקום החוק של 192.1–2 (אחות האשה) כתב הסופר המאוחר חוק אחר; שתי השורות שאחריה (38–39) מחוקות.
+- **תרגומים:** Hrozný 1922: «Si un HOMME à une (= d'une) FEMME meur[t], de l'HOMME SA PART SON ÉPOUSE prend»; Zimmern–Friedrich 1922 (78†): «Wenn der Mann einer Frau stirbt, so darf seine Ehefrau den Anteil des Mannes nehmen. (2 Zeilen fast ganz zerstört.)» – שניהם עשו את האשה נושא ואת *ḪA.LA-ŠU* "חלקו" מושא: האלמנה יורשת את חלק בעלה. אבל *{LÚ}ḪA.LA* הוא "איש־החלק" (כבלוח הראשון, `איש־חלקו`), והוא הנושא: שותפו של המת לוקח את אשתו.
+- **הערות:** "איש־חלקו" – השותף של המת בנחלה או בחובות הפאודליים (הלוח הראשון: `איש־חלקו`, לצד איש־הכלי). הנוסח המאוחר שם אותו במקום האח (193): הנחלה והאשה עוברות יחד. *MUNUS-ni aki* – "ימות לאשה": ימות ויותיר אשה.
+
+## §193 – האלמנה: האח, האב, בן האח
+
+### 193.1
+`ták-ku LÚ-aš MUNUS-an ḫar-zi ta LÚ-eš a-ki DAM-SÚ [ŠEŠ-ŠU da-a-i ta-an A-BU-ŠU]`
+> אם איש אשה יחזיק, והאיש ימות – את אשתו [אחיו ייקח; ושנית אביו]
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `LÚ-aš` – "man", nom. ("איש"); `MUNUS-an` – MUNUS "woman", acc. ("אשה"); `ḫar-zi` – ḫar(k)- "have, hold", pres. 3sg ("יחזיק"); `ta` – "and" ("ו"); `LÚ-eš` – "man", nom. ("האיש"); `a-ki` – "die" ("ימות"); `DAM-SÚ` – "his wife" ("את אשתו"); `[ŠEŠ-ŠU` – ŠEŠ "brother" + -ŠU "his" ("[אחיו"); `da-a-i` – dā- "take" ("ייקח"); `ta-an` – dān "secondly, then" (or *ta=an* "and her") ("ושנית"); `A-BU-ŠU]` – ABU (Akk.) "father" + -ŠU "his" ("אביו]").
+- **נוסחים:** KBo 6.26: `ták-ku LÚ-iš MUNUS-an ḫar-zi ta LÚ-iš a-ki DAM-SÚ` / `ŠE[Š-Š]U da-a-i ta-an A-BU-ŠU da-a-i`; **העותק בכתב הקדום KBo 25.85+**: `[… a-k]i DAM-S[Ú ŠEŠ-ŠU da]-a-i` / `[ta-an at-ta-aš-ši-iš da-a-i …]` – "אביו" במילה החתית (*attašš=iš*), לא באכדוגרמה.
+- **תרגומים:** Hrozný 1922: «Si un HOMME une FEMME prend, puis l'HOMME meurt, SA F[EMM]E (acc.) (S[O]N FRÈRE) prend, (ensuite) SON PÈRE la prend»; Zimmern–Friedrich 1922 (79†): «Wenn ein Mann eine Frau heiratet, dann der Mann stirbt, dann kann sein Bru[der] seine Ehefrau nehmen, alsdann kann sein Vater (sie) nehmen».
+- **הקבלה:** [absent] `יְבָמָהּ יָבֹא עָלֶיהָ וּלְקָחָהּ לוֹ לְאִשָּׁה` (דברים כה:ה) – אותו מנהג (האח לוקח את אשת אחיו המת), בלי מונח מיוחד ובלי "הבן שיקום על שם אחיו": החוק החתי קובע רק מי רשאי לקחת; [divergence] `בֹּא אֶל אֵשֶׁת אָחִיךָ` (בראשית לח:ח) – ובסוף הסיפור יהודה, חותנה, הוא שבא על תמר: מה שבבראשית לח קורה שלא ביודעין, בחוק החתי הוא השלב השני – האב.
+- **הערות:** *ḫar(k)-* = `החזיק` (165.3; כאן "שאשה לו"). *ŠEŠ-ŠU dāi* = `אחיו ייקח` (§7.1: הפעלים כמו שהם, בלי השורש `יבם`). *dān* – "פעם שנייה"; ראו 193.2 (*mān dān*).
+- **הערת שוליים:** "את אשתו אחיו ייקח, ושנית אביו": החוק החתי מכיר את נישואי האלמנה לאח המת כמו דברים כה, אבל ממשיך אל מה שהתורה אוסרת – האב, חותנה (ויקרא יח:טו), ואחריו בן האח. בתורה הייבום הוא יוצא מן הכלל של `עֶרְוַת אֵשֶׁת אָחִיךָ` (ויקרא יח:טז); בחוק החתי זהו סדר ירושה של האשה במשפחת הבעל.
+
+### 193.2
+`da-a-i ma-a-an da-a-an A-BU-ŠU-ia a-ki MUNUS-na-[an-na ku-in ḫar-ta]`
+> ייקח. כאשר שנית גם אביו ימות, ואת האש[ה אשר החזיק] –
+- **פירוק:** `da-a-i` – dā- "take" ("ייקח"); `ma-a-an` – mān "when" (temporal) ("כאשר"); `da-a-an` – dān "secondly, again" ("שנית"); `A-BU-ŠU-ia` – "his father" + =ya "also" ("גם אביו"); `a-ki` – "die" ("ימות"); `MUNUS-na-[an-na` – MUNUS "woman", acc. + =a "and" ("ואת האש[ה"); `ku-in` – kui- "which", acc. ("אשר"); `ḫar-ta]` – ḫar(k)- "have", pret. 3sg ("החזיק]").
+- **נוסחים:** KBo 6.26: `⸢ma-a-an ta-a-an A⸣-BU-ŠU-ia a-ki MUNUS-na-an-na ku-in ḫar-ta`; KBo 25.85+ (כתב קדום): `[… ma-a-an ta-a-a]n-na at-ta-aš-ši-š[a a-ki MUNUS]-na-an-na` – *dānn=a* ו*attašš=iš=a* "וגם אביו".
+- **תרגומים:** Hrozný 1922: «S[i] la de[ux]iè[m]e foi[s] aussi SON PÈRE meurt, alors 1 FRÈRE DE LUI, quelque FEMme qu'il ait pris, (la) prend, (IL) N'(Y A) PAS de punition»; Zimmern–Friedrich 1922: «wenn dann auch sein Vater stirbt, so kann 1 Bruder von ihm, welche Frau er (auch schon) geheiratet hat, (sie) nehmen, es (findet deswegen) Strafverfolgung nicht (statt)» – שניהם הבינו "אשר החזיק" כ"איזו אשה שתהיה לו" (של האח, שכבר נשוי), ולא "האשה אשר החזיק (האב)".
+- **הערות:** *mān* כאן זמני: `כאשר` (§7.3). "האשה אשר החזיק" – האלמנה, שהאב "החזיק" אחרי בנו.
+
+### 193.3
+`DUMU ŠEŠ-ŠU [da-a-i]`
+> בן אחיו [ייקח].
+- **פירוק:** `DUMU` – "son" ("בן"); `ŠEŠ-ŠU` – "his brother" ("אחיו"); `[da-a-i]` – dā- "take" ("[ייקח]").
+- **נוסחים:** KBo 6.26: `⸢A?⸣ ŠEŠ-ŠU da-a-i Ú-UL ḫa-ra-tar` – במקום "בן" סימן פגום (*A?*, ואצל Hrozný "1": "אח אחד שלו"), **ובסוף תוספת: "אין עברה"**; KBo 25.85+ (כתב קדום): `[… DUMU ŠEŠ-ŠU] [da]-a-i` – כמו המוביל, בלי "אין עברה".
+- **הקבלה:** [divergence] `וְהָיָה הַבְּכוֹר אֲשֶׁר תֵּלֵד יָקוּם עַל שֵׁם אָחִיו הַמֵּת` (דברים כה:ו) – תכלית הייבום בתורה – השם של המת; כאן אין תכלית, רק סדר: אח, אב, בן אח.
+- **הערות:** "בן אחיו" – בן אחיו של המת (אחיינו). KBo 6.26 מוסיף בסוף "אין עברה" – הנוסח המאוחר מצרף את 193 לחוקי ה"עברה"; הנוסח הקדום מסתפק בסדר הלוקחים.
+
+## §194 – אמהות אחיות ואמן; בת חורין ואחים; אב ובנו
+
+### 194.1
+`ták-ku LÚ EL-LUM GÉME{MEŠ}-uš an-na-né-ku-uš an-na-aš-m[a-an-na ú-en-zi]`
+> אם איש בן חורין על אֲמָהוֹת, אחיות מֵאֵם אחת, וְעַל אִמָּן [יבוא] –
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `LÚ EL-LUM` – "a free man" ("איש בן חורין"); `GÉME{MEŠ}-uš` – GÉME "slave woman", acc. pl. ("על אֲמָהוֹת"); `an-na-né-ku-uš` – annaneka- "sister (of one mother)", acc. pl. ("אחיות מֵאֵם אחת"); `an-na-aš-m[a-an-na` – anna- "mother" + =šmann "their" + =a "and" ("וְעַל אִמָּן"); `ú-en-zi]` – wen- "have intercourse with" ("[יבוא]").
+- **נוסחים:** העותק בכתב הקדום KBo 25.85+: `[… GÉME{ḪI.A}-uš an-n]a-ne-ku-uš an-na-aš-ma-an-⸢na⸣ ú-en-zi` – זהה (*EL-LAM*, {ḪI.A}); KBo 6.26: `ták-ku LÚ EL-LAM GÉME{ḪI.A}-uš an-na-né-ku-uš an-na-aš-ma-an-na` – זהה; KBo 6.13+: `ták-ku [`.
+- **תרגומים:** Hrozný 1922: «Si UN HOMME LIBRE (avec) des ESCLAVES FEMMES, (avec) celles-ci et celles-là, couche, (IL) N'(Y A) PAS de punition»; Zimmern–Friedrich 1922 (80†): «Wenn ein freier Mann Sklavinnen, dieser und jener, beiwohnt, so (findet) Strafverfolgung nicht (statt)».
+- **הערות:** המקבילה של 191 באמהות: מה שבבנות חורין "באותו מקום" תועבה, באמהות – אין עברה. `אֲמָהוֹת` מנוקד (בלי ניקוד: "אמהות"); GÉME = `אָמָה`.
+
+### 194.2
+`Ú-UL ḫa-ra-a-tar ták-ku a-ra-wa-an-ni-ia-aš k[at-ta AT-ḪU-U-TIM še-eš-kán-zi]`
+> אין עברה. אם עם בת חורין [אחים שוכבים] –
+- **פירוק:** `Ú-UL ḫa-ra-a-tar` – "no offence" ("אין עברה"), F11; `ták-ku` – "if" ("אם"); `a-ra-wa-an-ni-ia-aš` – arawanni- "free (woman)", d.-l. ("בת חורין"); `k[at-ta` – "with" ("עם"); `AT-ḪU-U-TIM` – ATḪŪTU (Akk.) "brothers, partners (in brotherhood)" ("[אחים"); `še-eš-kán-zi]` – šešk- (iterative of šeš- "sleep") "sleep (with)", pres. 3pl ("שוכבים]").
+- **נוסחים:** העותק בכתב הקדום KBo 25.85+: `[na-at-ta ḫa-ra-a-tar … a-ra-u-w]a-ni-ia-aš kat-ta AT-ḪU-Ú še-eš-kán-zi na-at-ta ḫa-ra-tar` – **_natta_ ḫaratar** (השלילה הקדומה, במקום *UL*), ו־*AT-ḪU-Ú*; KBo 6.26: `ú-en-zi Ú-UL ḫa-ra-tar ták-ku a-ra-u-wa-an-ni-*in*` / `AT-*ḪU-U-TIM še-eš-kán-zi* Ú-UL ḫa-ra-tar` – "בת חורין" בנשוא (*arawannin*), והמילים על גבי מחיקה.
+- **תרגומים:** Hrozný 1922: «Si (avec) une (femme) libre DES PARENTS couchent, (IL) N'(Y A) PAS de punition»; Zimmern–Friedrich 1922: «Wenn einer Freien die (eigenen) Verwandten beiwohnen, so (findet) Strafverfolgung nicht (statt)».
+- **הערות:** *ATḪŪTU* – "אחווה, שותפות" (CHiL "Partnerschaft"): אחים, ואולי שותפים. *šešk-* = `שכב` (§H4: `שכב` רק ל־*šeš-*). *arawanniyaš* – אולי ברבים ("עם בנות חורין"); KBo 6.26 ביחיד.
+
+### 194.3
+`Ú-UL ḫa-ra-a-tar ták-ku GÉME-aš na-aš-ma {MUNUS}KAR.[KID-aš kat-ta ad-da-aš]`
+> אין עברה. אם עם אָמָה או [זונה אב]
+- **פירוק:** `Ú-UL ḫa-ra-a-tar` – "no offence" ("אין עברה"), F11; `ták-ku` – "if" ("אם"); `GÉME-aš` – GÉME "slave woman", d.-l. ("עם אָמָה"); `na-aš-ma` – našma "or" ("או"); `{MUNUS}KAR.[KID-aš` – KAR.KID "prostitute", d.-l. ("[זונה"); `kat-ta` – "with" (rendered "עם" before *GÉME*); `ad-da-aš]` – atta- "father", nom. ("אב]").
+- **נוסחים:** KBo 25.85+ (כתב קדום): `[… k]at-ta at-ta-aš Ù DUMU-⸢ŠU⸣ še-eš-kán-zi` – *attaš* (בלי הכפלה); KBo 6.26: זהה; KBo 6.13+: `at-t[a-aš ] ⸢Ú⸣-UL ḫa-r[a-tar]` – קצר: "אב [ובנו] – אין עברה".
+- **תרגומים:** Hrozný 1922: «Si avec une ESCLAVE ou une femme PROSTITUÉE le père ET SON FILS couchent, (IL) N'(Y A) PAS de punition»; Zimmern–Friedrich 1922: «Wenn einer Sklavin oder einer Hure ein Vater und sein Sohn beiwohnen, so (findet) Strafverfolgung nicht (statt)».
+- **הקבלה:** [divergence] `וְאִישׁ וְאָבִיו יֵלְכוּ אֶל הַנַּעֲרָה לְמַעַן חַלֵּל אֶת שֵׁם קָדְשִׁי` (עמוס ב:ז) – מה שעמוס מוקיע כחילול השם, החוק החתי מתיר במפורש (באמה או בזונה).
+- **הערות:** KAR.KID = `זונה` (כ־*ḫarimtu* באכדית); GÉME = `אָמָה` (מנוקד).
+
+### 194.4
+`Ù DUMU-ŠU še-eš-kán-zi Ú-U[L ḫa-ra-a-tar]`
+> ובנו שוכבים (עמה) – אין [עברה].
+- **פירוק:** `Ù` – "and" ("ו"); `DUMU-ŠU` – "his son" ("בנו"); `še-eš-kán-zi` – šešk- "sleep (with)", pres. 3pl ("שוכבים"); `Ú-U[L` – "not" ("אין"); `ḫa-ra-a-tar]` – ḫaratar ("[עברה]"), F11.
+- **נוסחים:** KBo 25.85+ (כתב קדום): `[na-at-ta ḫ]a-ra-a-tar` – שוב *natta*; KBo 6.26: `Ù DUMU-ŠU še-eš-kán-zi Ú-UL ḫa-ra-tar!`.
+- **הערות:** שורת המבחן של הכלי (§H9): `שכב` – כאן מורשה (*šešk-*), ו־`אין עברה` – F11 (לא "אין חטא": *waštul* היא מילה אחרת).
+
+## §195a – אשת האח בחייו
+
+### 195a.1
+`ták-ku LÚ-aš MA-ḪAR DAM ŠEŠ-ŠU še-eš-ke-ez-zi ŠEŠ-ŠU-ma`
+> אם איש אצל אשת אחיו שוכב, ואחיו
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `LÚ-aš` – "man", nom. ("איש"); `MA-ḪAR` – MAḪAR (Akk.) "before, with" ("אצל"); `DAM` – "wife" ("אשת"); `ŠEŠ-ŠU` – "his brother" ("אחיו"); `še-eš-ke-ez-zi` – šešk- "sleep (with)", pres. 3sg ("שוכב"); `ŠEŠ-ŠU-ma` – "his brother" + =ma "but" ("ואחיו").
+- **נוסחים:** מכאן שוב KBo 6.26 מוביל. KUB 29.34+: `ták-ku LÚ-aš-ma MA-ḪAR DAM ŠEŠ-ŠÚ še-eš-kán-zi ŠE[Š-ŠU-ma …]` – *šeškanzi* **ברבים** (האיש והאשה?); KBo 25.85+ (כתב קדום): `[…]i Ù ŠEŠ-ŠU ḫu-iš-wa-an-za ḫu-ur-[ki-il]` – "**ו**אחיו חי"; KBo 6.13+: `ták-ku L[Ú-aš še-eš]-ke-ez-zi` – בלי *MAḪAR DAM ŠEŠ-ŠU*? (שבור).
+- **תרגומים:** Hrozný 1922: «Si un HOMME AVEC L'ÉPOUSE DE SON FRÈRE couche, tandis que SON FRÈRE (est) vivant, punition (a lieu)»; Zimmern–Friedrich 1922 (81†): «Wenn ein Mann ..... der Ehefrau seines Bruders beiwohnt, während sein Bruder anwesend ist, so (findet) Bestrafung (statt)» – ובהערה: «Oder: „noch am Leben ist“?».
+- **הקבלה:** [equivalent] `עֶרְוַת אֵשֶׁת אָחִיךָ לֹא תְגַלֵּה` (ויקרא יח:טז); `וְאִישׁ אֲשֶׁר יִקַּח אֶת אֵשֶׁת אָחִיו נִדָּה הִוא` (ויקרא כ:כא) – ובחוק החתי האיסור תלוי בחיי האח (195a.2), ואחרי מותו האח לוקח אותה (193).
+- **הערות:** *MAḪAR* – "לפני, אצל" (אכדוגרמה); `אצל` – כדי להבדיל מ־*katta* `עם`. *šešk-* = `שכב`.
+
+### 195a.2
+`ḫu-u-iš-wa-an-za ḫu-u-ur-ki-il`
+> חי – תועבה.
+- **פירוק:** `ḫu-u-iš-wa-an-za` – ḫuišwant- "alive" ("חי"); `ḫu-u-ur-ki-il` – ḫurkel ("תועבה"), F7.
+- **נוסחים:** KUB 29.33+: `ŠEŠ-aš-ma-aš-š[i ḫu-u-iš-wa-an-za` ו־KBo 6.13+: `ŠEŠ-aš-m[a?-aš-ši ] ḫur-ke-el` – "**ואחיו**" במילים חתיות (*ŠEŠ-aš=ma=šši*); **KBo 6.13+ מתחיל אחרי שורה זו סעיף חדש** (195b), ושוב לפני 195c: החלוקה ל־a/b/c היא שלו; ב־KBo 6.26 שלושתם סעיף אחד.
+- **הערות:** כמו 190.3: הזיווג "תועבה" כשהאיש שבזכותו נפגע עוד חי.
+
+## §195b – האשה ובתה
+
+### 195b.1
+`ták-ku LÚ-aš`
+> אם איש
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `LÚ-aš` – "man", nom. ("איש").
+- **נוסחים:** KUB 29.33+: `ták-ku-aš LÚ-[aš` – עם *=aš*.
+- **הערות:** שורת כתב היד (KBo 6.26 iii 50) מתחילה בסוף 195a.
+
+### 195b.2
+`{MUNUS}a-ra-u-wa-an-ni-in ḫar-zi ta DUMU.MUNUS-ši-ia ša-li-ga`
+> בת חורין יחזיק, וגם בבתה יִגַּע –
+- **פירוק:** `{MUNUS}a-ra-u-wa-an-ni-in` – arawanni- "free (woman)", acc. ("בת חורין"); `ḫar-zi` – ḫar(k)- "have, hold" (as wife) ("יחזיק"); `ta` – "and" ("ו"); `DUMU.MUNUS-ši-ia` – DUMU.MUNUS "daughter", d.-l. + =ši "her" + =ya "also" ("וגם בבתה"); `ša-li-ga` – šalik- "touch, approach (sexually)", pres. 3sg ("יִגַּע").
+- **נוסחים:** KUB 29.34+: `ša-li-i-ga ḫu-ur-ki-il` – זהה; KBo 25.85+ (כתב קדום): `[… ta] DUMU.MUNUS-ši-⸢ia⸣ ša-li-g[a] ⸢ḫu-ur-ki-il⸣` – זהה; KBo 6.13+: `ták-ku [ -i]n ḫar-zi` – בסעיף נפרד.
+- **תרגומים:** Hrozný 1922: «(§ 195 B:) Si un HOMME (nom.) une FEMME libre prend (épouse), puis de même sa FILLE il prend sexuellement, punition (a lieu)»; Zimmern–Friedrich 1922: «Wenn ein Mann eine freie Frau heiratet, dann auch mit ihrer Tochter Umgang pflegt, so (findet) Bestrafung (statt)».
+- **הקבלה:** [equivalent] `עֶרְוַת אִשָּׁה וּבִתָּהּ לֹא תְגַלֵּה` (ויקרא יח:יז).
+- **הערות:** *šalik-* "לגעת" = `נגע` (`יִגַּע` מנוקד: בלי ניקוד גם "יָגֵעַ"); ב־195b–c הוא הפועל המיני (במקום *šešk-*). "וגם בבתה" – בתה מאיש אחר, שהביאה אתה (Zimmern–Friedrich: «ihrer in die Ehe mitgebrachten Tochter»).
+
+### 195b.3
+`ḫu-u-ur-ki-il`
+> תועבה.
+- **פירוק:** `ḫu-u-ur-ki-il` – ḫurkel ("תועבה"), F7.
+- **נוסחים:** KBo 6.13+: `ta [ ḫur-k]e-el`.
+
+## §195c – הבת, ואמה או אחותה
+
+### 195c.1
+`ták-ku DUMU.MUNUS-SÀ ḫar-zi ta *an-ni-iš-ši*`
+> אם את בתה יחזיק, ובאִמָּהּ
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `DUMU.MUNUS-SÀ` – DUMU.MUNUS "daughter" + -ŠA (Akk.) "her" ("את בתה"); `ḫar-zi` – "have, hold" ("יחזיק"); `ta` – "and" ("ו"); `*an-ni-iš-ši*` – anna- "mother", d.-l. + =šši "her" (over an erasure) ("באִמָּהּ").
+- **נוסחים:** KBo 6.13+: `ták-ku [ a]n-na-še-ia` – "**וגם** באמה" (*anna=šše=ya*), בסעיף משלו; KBo 25.85+ (כתב קדום) ו־KUB 29.34+ – כמו המוביל.
+- **הערות:** `אִמָּהּ` מנוקד (בלי ניקוד: "אמה" – גם "אָמָה" וגם "אַמָּה"). "בתה" – בתה של האשה מ־195b: האיש לקח את הבת, ונגע באמה או באחותה.
+
+### 195c.2
+`na-aš-ma *NIN-iš-ši* ša-li-i-ga ḫu-u-ur-ke-el`
+> או באחותה יִגַּע – תועבה.
+- **פירוק:** `na-aš-ma` – "or" ("או"); `*NIN-iš-ši*` – NIN "sister", d.-l. + =šši "her" (over an erasure) ("באחותה"); `ša-li-i-ga` – šalik- "touch" ("יִגַּע"); `ḫu-u-ur-ke-el` – ḫurkel ("תועבה"), F7.
+- **נוסחים:** KUB 29.34+: `na-〈aš〉-ma NIN-iš-ši ša-li-i-ga [ḫu-ur-ki-il]`; KBo 25.85+ (כתב קדום): `[… n]a-aš-ma [NI]N-iš-ši-i[a] š[a-l]i-g[a]` – "**וגם** באחותה"; KBo 6.13+: `na-[aš-ma ] ḫur-ke-el`.
+- **תרגומים:** Hrozný 1922: «(§ 195 C:) Si SA FILLE il prend (épouse), puis sa mère ou sa SŒUR il prend sexuellement, punition (a lieu)»; Zimmern–Friedrich 1922: «Wenn er ihre Tochter heiratet, dann auch mit ihrer Mutter oder mit ihrer Schwester Umgang pflegt, so (findet) Bestrafung (statt)».
+- **הקבלה:** [equivalent] `וְאִישׁ אֲשֶׁר יִקַּח אֶת אִשָּׁה וְאֶת אִמָּהּ זִמָּה הִוא` (ויקרא כ:יד); [equivalent] `וְאִשָּׁה אֶל אֲחֹתָהּ לֹא תִקָּח … בְּחַיֶּיהָ` (ויקרא יח:יח) – כאן, בחיי אשתו, גם אחותה "תועבה"; אחרי מותה – מותרת (192).
+- **הערות:** NIN = `אחות` (כ־*neka-*, 200a.4). שלושת חלקי 195 – האשה, בתה, אמה ואחותה: כל קרובותיה של האשה שהאיש "מחזיק" אסורות עליו.
+
+## §196 – עבדים ואמהות בתועבה
+
+### 196.1
+`ták-ku ARAD{MEŠ}-ŠU GÉME{MEŠ}-ŠU [ḫu-u-ur-ki-il i-e]n?-z[i?]`
+> אם עבדיו ואַמְהוֹתָיו [תועבה יעשו],
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `ARAD{MEŠ}-ŠU` – ARAD "slave", pl. + -ŠU "his" ("עבדיו"); `GÉME{MEŠ}-ŠU` – GÉME "slave woman", pl. + -ŠU "his" ("ואַמְהוֹתָיו"); `[ḫu-u-ur-ki-il` – ḫurkel ("[תועבה"), F7; `i-e]n?-z[i?]` – iya- "do, make", pres. 3pl ("יעשו]").
+- **נוסחים:** KUB 29.34+: `ták-ku ARAD{MEŠ}-ŠU GÉME{MEŠ}-ŠU ḫu-u-[ur-ke-el i-ia-an-zi]`; KBo 25.85+ (כתב קדום): `[… ḫu-ur-ki-il i-ia-an-zi tu-uš] ar-n[u-an-z]i` – *arnuanzi*; KBo 6.13+: `⸢ták⸣-k[u ḫur-ke-e]l i-ia-an-z[i` (196.2).
+- **תרגומים:** Hrozný 1922: «Si LES ESCLAVES HOMMES (et) LES ESCLAVES FEMMES D[E quelqu'un couchent ensemble]»; Zimmern–Friedrich 1922 (82†): «Wenn [jemand] seine Knechte (und) seine Mägde …[…]».
+- **הערות:** "תועבה יעשו" – זיווג אסור בין עבד לאמה (קרובים?). `אַמְהוֹתָיו` מנוקד (בלי ניקוד: "אמהותיו").
+
+### 196.2
+`tu-uš a-ar-nu-wa-an-z[i] ⸢ku-u-un-na ta⸣-ki-ia URU-ri`
+> ואותם יַגִּיעוּ, ואת זה בעיר אחרת
+- **פירוק:** `tu-uš` – ta "and" + =uš "them" ("ואותם"); `a-ar-nu-wa-an-z[i]` – arnu- "move, bring (away)", pres. 3pl ("יַגִּיעוּ"); `⸢ku-u-un-na` – kūn, acc. of kā- "this (one)" + =a "and" ("ואת זה"); `ta⸣-ki-ia` – taki- "another", d.-l. ("אחרת"); `URU-ri` – URU "city", d.-l. ("בעיר").
+- **נוסחים:** KUB 29.34+: `ku-u-un-na ta-a-ki-ia URU-ri [ku-u-un-na ta-a-ki-ia URU-ri]` – *tāki-* בכתיב מלא.
+- **הערות:** *arnu-* = `יַגִּיעַ` (מנוקד, הלוח הראשון): "יעבירו אותם" ממקומם. *taki-* `אחר`, URU `עיר`.
+
+### 196.3
+`ku-u-un-na ta-ki-ia [U]RU-ri a-še-ša-an-zi`
+> ואת זו בעיר אחרת יושיבו;
+- **פירוק:** `ku-u-un-na` – "and this (one)" ("ואת זו"); `ta-ki-ia` – "another" ("אחרת"); `[U]RU-ri` – "city" ("בעיר"); `a-še-ša-an-zi` – ašeš- "settle, seat", pres. 3pl ("יושיבו").
+- **נוסחים:** KBo 25.85+ (כתב קדום): `[… ku-u-un-na] ta-ki-ia [UR]U-ri` – זהה.
+- **הערות:** "את זה … ואת זו" – העבד והאמה (בחתית *kūn … kūn*, בלי מין); *ašeš-* = `הושיב`.
+
+### 196.4
+`ke-e-el 1 UDU ke-⸢e⸣-[e]l-la 1 UDU *ka-aš-ša-aš*`
+> שה אחד חֵלֶף זה, ושה אחד חֵלֶף זו
+- **פירוק:** `ke-e-el` – kēl, gen. of kā- "this (one)" ("זה"); `1` – "one" ("אחד"); `UDU` – "sheep" ("שה"); `ke-⸢e⸣-[e]l-la` – kēl + =a "and of this (one)" ("ו… זו"); `1` – "one" ("אחד"); `UDU` – "sheep" ("שה"); `*ka-aš-ša-aš*` – kaššaš "in place of, as substitute for" (over an erasure; the KBo 25.85+ / 199.6 form) ("חֵלֶף", said with both genitives).
+- **נוסחים:** KBo 25.85+ (כתב קדום): `[… ka-aš-ša-aš] ḫu-it-⸢ti-ia⸣-an-ta` – זהה; KUB 29.34+: `a-še-ša-an-zi ke-e-el-la [1 UDU ke-e-el-la 1 UDU` – "**וגם** של זה".
+- **תרגומים:** Hrozný 1922: «de celui-ci (est) 1 MOUTON, de ce[ll]e-là 1 MOUTON (son) remplaçant»; Zimmern–Friedrich 1922: «diesen in einer fremden Stadt, jenen in einer fremden Stadt … für diesen 1 Schaf und für jenen 1 Schaf als Ersatz einsetze[n]».
+- **הקבלה:** [divergence] `לֹא יוּמְתוּ כִּי לֹא חֻפָּשָׁה` (ויקרא יט:כ) – גם בתורה מעמד העבדות מקל: אין מוות; אבל שם זה איש חופשי עם שפחה, וכאן עבד ואמה שיצאו מן ה"תועבה" בפירוד ובשה חֵלֶף כל אחד.
+- **הערות:** **נוסחת התחליף** (167.3): `שה אחד חֵלֶף X ימשכו`; כאן *kaššaš* פעם אחת לשתי יחסות הקניין (*kēl … kēll=a*), והעברית חוזרת עליו.
+
+### 196.5
+`ḫu-u-it-ti-ia-an-ta`
+> ימשכו.
+- **פירוק:** `ḫu-u-it-ti-ia-an-ta` – ḫuittiya- "draw, pull", mp. pres. 3pl ("ימשכו").
+- **נוסחים:** KUB 29.34+: `ḫu-it-ti-ia-an-[zi?]` – **בפעיל** (*ḫuittiyanzi*), במקום המדיום־פסיבום.
+- **הערות:** העבדים אינם מומתים: מפרידים ביניהם, מעבירים אותם לערים שונות, ושה "נמשך" (מומת?) במקום כל אחד מהם – העונש של "תועבה" מומר, כבחוק השדה (167).
+
+## §197 – בהר ובבית
+
+### 197.1
+`ták-ku *LÚ-aš* MUNUS-an ḪUR.SAG-i e-ep-zi LÚ-na-aš wa-aš-túl na-aš a-ki`
+> אם איש אשה בהר יתפוס – חטא האיש, וימות;
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `*LÚ-aš*` – "man", nom. (over an erasure) ("איש"); `MUNUS-an` – "woman", acc. ("אשה"); `ḪUR.SAG-i` – ḪUR.SAG "mountain", d.-l. ("בהר"); `e-ep-zi` – ēpp- "seize", pres. 3sg ("יתפוס"); `LÚ-na-aš` – "man", gen. ("האיש"); `wa-aš-túl` – waštul "sin, offence" ("חטא"); `na-aš` – nu "and" + =aš "he" ("ו"); `a-ki` – "die" ("ימות").
+- **נוסחים:** KUB 29.34+: `ták-ku LÚ-aš MUNUS-an ḪUR.SAG-i ⸢e⸣-[ep-zi` – זהה (בלי המחיקה).
+- **תרגומים:** Hrozný 1922: «Si un HOMME (nom.) une FEMME dans les MONTS saisit, (c'est) un crime de l'HOMME et il meurt»; Zimmern–Friedrich 1922 (83†): «Wenn ein Mann eine Frau im … ergreift, so (gilt) (nur) der Mann als Frevler und er muß sterben» – ובהערה: «Vgl. hierzu die entsprechende Vorschrift in Deut. 22, 23—27, wo auch die hier fehlende nähere Begründung für diese unterschiedliche Behandlung gegeben wird».
+- **הקבלה:** [equivalent] `וְאִם בַּשָּׂדֶה יִמְצָא הָאִישׁ אֶת הַנַּעֲרָ הַמְאֹרָשָׂה וְהֶחֱזִיק בָּהּ הָאִישׁ` … `וּמֵת הָאִישׁ אֲשֶׁר שָׁכַב עִמָּהּ לְבַדּוֹ` (דברים כב:כה) – ההר כמו השדה: רק האיש מת; `אֵין לַנַּעֲרָ חֵטְא מָוֶת` (דברים כב:כו) – "אין לה חטא" ו"חטא האיש" כאן.
+- **הערות:** *ēpp-* = `תפס` (הלוח הראשון). *waštul* = `חטא` – כאן שם עצם ("חטאו של האיש"), כמו `ידו חוטאת` (F6) לפועל. "בהר" – מחוץ ליישוב, שם איש לא ישמע את צעקתה. `וימות` – כנוסחה F5 (*n=aš aki*).
+- **הערת שוליים:** "אם בהר יתפוס – חטא האיש; אם בבית – חטא האשה": אותו עיקרון כמו בדברים כב:כג–כז (השדה מול העיר), בלי הנימוק של התורה – `כִּי בַשָּׂדֶה מְצָאָהּ צָעֲקָה הַנַּעֲרָ הַמְאֹרָשָׂה וְאֵין מוֹשִׁיעַ לָהּ` (דברים כב:כז): החוק החתי קובע רק את המקום. Zimmern–Friedrich ציינו את ההקבלה כבר ב־1922.
+
+### 197.2
+`ták-ku É-ri-ma e-ep-zi MUNUS-na-aš wa-aš-ta-iš MUNUS-za`
+> ואם בבית יתפוס – חטא האשה: האשה
+- **פירוק:** `ták-ku` – "if" ("ואם"), F1; `É-ri-ma` – per "house", d.-l. + =ma "but" ("בבית"); `e-ep-zi` – "seize" ("יתפוס"); `MUNUS-na-aš` – "woman", gen. ("האשה"); `wa-aš-ta-iš` – waštai- "sin" (noun), nom. ("חטא"); `MUNUS-za` – "woman", nom. ("האשה").
+- **נוסחים:** KUB 29.34+: `e-ep-zi MUNUS-na-aš wa-a[š-ta-iš` – זהה.
+- **הקבלה:** [equivalent] `אֶת הַנַּעֲרָ עַל דְּבַר אֲשֶׁר לֹא צָעֲקָה בָעִיר` (דברים כב:כד) – בבית (בעיר) גם היא מתה.
+- **הערות:** *waštai-* ו*waštul* (197.1) – שתי צורות של אותו שם, `חטא` לשתיהן.
+
+### 197.3
+`a-ki ták-ku-uš LÚ-iš ú-e-mi-ia-zi`
+> תמות. אם אותם האיש ימצא,
+- **פירוק:** `a-ki` – "die" ("תמות"); `ták-ku-uš` – takku "if" + =uš "them" (the annotation's *takk-* "correspond" is a false lemma) ("אם אותם"); `LÚ-iš` – "man", nom. (the husband) ("האיש"); `ú-e-mi-ia-zi` – wemiya- "find", pres. 3sg ("ימצא").
+- **תרגומים:** Hrozný 1922: «Mais si dans la MAISON il (la) saisit, (de même) la FEMME a péché; la FEMME meurt. Si l'HOMME (de la femme) les trouve, il les (peut) t[u]e(r); de punition pour lui IL N'Y A PAS»; Zimmern–Friedrich 1922: «wenn er sie aber im Hause ergreift, so hat (auch) die Frau gefrevelt, (auch) die Frau muß dann sterben. Wenn der Mann sie (beide) ertappt und erschlägt, so (findet) Strafverfolgung gegen ihn nicht (statt)».
+- **הערות:** "האיש" – הבעל (Hrozný: «l'HOMME (de la femme)»). *wemiya-* = `מצא` (הלוח הראשון).
+
+### 197.4
+`tu-uš ku-en-zi *ḫa-ra-a-tar*-še-et NU.GÁL`
+> ואותם יהרוג – אין לו עברה.
+- **פירוק:** `tu-uš` – ta "and" + =uš "them" ("ואותם"); `ku-en-zi` – kuen- "kill" ("יהרוג"); `*ḫa-ra-a-tar*-še-et` – ḫaratar "offence" + =šet "his" (over an erasure) ("לו עברה"); `NU.GÁL` – "(there) is not" ("אין").
+- **נוסחים:** KUB 29.34+: `tu-uš ku-en-zi [` – השאר שבור.
+- **הקבלה:** [absent] `כִּי קִנְאָה חֲמַת-גָּבֶר` (משלי ו:לד) – החכמה מכירה את חמת הבעל; התורה אינה נותנת לבעל לנקום בעצמו: `וּמֵתוּ גַּם שְׁנֵיהֶם` (דברים כב:כב) – בידי בית הדין.
+- **הערות:** *ḫaratar=šet NU.GÁL* – "עברתו אין", כלומר הבעל אינו חייב דבר: נוסח אחר מ־*UL ḫaratar* (F11), והעברית בהתאם.
+
+## §198 – בשער ההיכל: האשה והמאהב
+
+### 198.1
+`ták-ku-uš A-NA KÁ É.[G]AL ú-wa-te-ez-zi nu te-ez-zi`
+> אם אותם אל שער ההיכל יביא, ויאמר:
+- **פירוק:** `ták-ku-uš` – takku "if" + =uš "them" ("אם אותם"), F1; `A-NA KÁ` – ANA "to" + KÁ "gate" ("אל שער"); `É.[G]AL` – É.GAL "palace" ("ההיכל"); `ú-wa-te-ez-zi` – uwate- "bring" ("יביא"); `nu` – "and" ("ו"); `te-ez-zi` – te- "say", pres. 3sg ("יאמר").
+- **נוסחים:** KUB 29.34+: `ták-ku-uš A-NA [` – זהה.
+- **הערות:** KÁ = `שער` (כ־*āšk-* של 187.2), É.GAL = `היכל` (§H4). הבעל שתפס אותם (197) יכול שלא להרוג, אלא להביא את המקרה אל המלך.
+
+### 198.2
+`⸢DAM⸣-TI le-e a-ki n[u] DAM-SÚ ḫu-iš-nu-zi`
+> "אשתי אל תמות!" – ואת אשתו יחיה,
+- **פירוק:** `⸢DAM⸣-TI` – DAM "wife" + -TI (Akk.) "my" ("אשתי"); `le-e` – lē "not" (prohibitive) ("אל"); `a-ki` – "die" ("תמות"); `n[u]` – "and" ("ו"); `DAM-SÚ` – "his wife" ("את אשתו"); `ḫu-iš-nu-zi` – ḫuišnu- "keep alive, spare" ("יחיה").
+- **נוסחים:** KUB 29.34+: `nu DAM-SÚ [ḫu-iš-nu-zi` – זהה.
+- **הערות:** *lē* + הווה – `אל` + עתיד (§7.10). *ḫuišnu-* = `החיה`.
+
+### 198.3
+`{LÚ}pu-pu-un-na ḫu-iš-n[u]-zi ta SAG.DU-SÚ`
+> וגם את המאהב יחיה, ואת ראשו
+- **פירוק:** `{LÚ}pu-pu-un-na` – pupu- "lover, adulterer", acc. + =a "also" ("וגם את המאהב"); `ḫu-iš-n[u]-zi` – ḫuišnu- "spare" ("יחיה"); `ta` – "and" ("ו"); `SAG.DU-SÚ` – SAG.DU "head" + -SU "his" ("את ראשו").
+- **תרגומים:** Hrozný 1922: «… e[t] il fait vivre SON ÉPOUSE, de même l'adultère il fait v[i]vre; en ce cas SA TÊTE il marque» – ובהערה: «C'est-à-dire: il le marque comme esclave (ou comme adultère?)»; Zimmern–Friedrich 1922 (84†): «und er (so) seine Ehefrau leben läßt, so soll er auch den Ehebrecher leben lassen, jedoch darf er seinen Kopf bekleiden» – ובהערה: «Wohl eine symbolische Handlung im Sinne von „zum Sklaven machen“».
+- **הקבלה:** [divergence] `מוֹת יוּמַת הַנֹּאֵף וְהַנֹּאָפֶת` (ויקרא כ:י) – בתורה אין לבעל בחירה; כאן אם חס על אשתו – חייב לחוס גם על המאהב; `לֹא-יִשָּׂא פְּנֵי כָל-כֹּפֶר` (משלי ו:לה) – הבעל של משלי אינו מקבל פדיון.
+- **הערות:** *pupu-* = `מאהב` (לא `נואף`, השמור לויקרא כ:י: §H3). הכלל – הבעל אינו רשאי להעניש את המאהב ולחון את אשתו.
+
+### 198.4
+`wa-aš-ši-e-ez-zi ták-ku [t]e-ez-zi 2-pát ak-kán-du`
+> יכסה. ואם יאמר: "שניהם ימותו!",
+- **פירוק:** `wa-aš-ši-e-ez-zi` – waššiya- "clothe, cover", pres. 3sg ("יכסה"); `ták-ku` – "if" ("ואם"); `[t]e-ez-zi` – te- "say" ("יאמר"); `2-pát` – 2 "two" + =pat "(both) indeed" ("שניהם"); `ak-kán-du` – ak(k)- "die", imper. 3pl ("ימותו").
+- **נוסחים:** KUB 29.34+: `ták-ku t[e-ez-zi 2-pát ak-kán-du` – זהה.
+- **תרגומים:** Hrozný 1922: «S'il [d]it: «Que les deux meurent!»»; Zimmern–Friedrich 1922: «Wenn er aber spricht: „Sie sollen alle beide sterben“».
+- **הקבלה:** [equivalent] `וּמֵתוּ גַּם שְׁנֵיהֶם` (דברים כב:כב) – "שניהם" (*2-pat*) כמו "גם שניהם": מילולית, כדי שההקבלה תיראה.
+- **הערות:** "ואת ראשו יכסה" – מעשה סמלי שלא ברור: כיסוי ראש המאהב (Zimmern–Friedrich: סימן לעבדות), או ראש האשה (הצעיף). *2-pat akkandu* – ציווי לגוף שלישי: `ימותו`, מילולי.
+- **הערת שוליים:** "'שניהם ימותו!'" – בדיוק כמו `וּמֵתוּ גַּם שְׁנֵיהֶם` (דברים כב:כב), אלא שכאן זה רק אחד משני הדברים שהבעל רשאי לומר. ההחלטה האחרונה – בידי המלך (198.5–6).
+
+### 198.5
+`ta ḫu-ur-ki-*in* ḫa-l[i]-en-zi *ku-en-zi-uš*`
+> ואת הגלגל יניעו(?); בין שיהרוג אותם
+- **פירוק:** `ta` – "and" ("ו"); `ḫu-ur-ki-*in*` – ḫurki- "wheel", acc. sg. c. (*-in* over an erasure) ("את הגלגל"); `ḫa-l[i]-en-zi` – ḫalai-/ḫalāe- "set in (swinging) motion"? (or ḫaliya- "kneel"), pres. 3pl ("יניעו(?)"); `*ku-en-zi-uš*` – kuen- "kill" + =uš "them" (over an erasure) ("בין שיהרוג אותם").
+- **נוסחים:** KUB 29.34+: `ḫu-u[r-ki-in(?)` – רק תחילת המילה.
+- **תרגומים:** Hrozný 1922: «alors punition ils reçoivent; le ROI les tue et le ROI les fait vivre» – ובהערה: «-in, écrit sur -il»: הוא קרא *ḫurkin* כ*ḫurkel* "עונש"; Zimmern–Friedrich 1922: «dann (findet) Bestrafung (statt), ..[....] darf er sie [erschl]agen. Erschlagen kann sie (beide) der König, auch leben lassen kann sie der König».
+- **הערות:** *ḫurki-* "גלגל" = `גלגל` (כ־UMBIN, הסומרוגרם שלו, בלוח הראשון) – **לא** *ḫurkel* "תועבה": הסופר כתב תחילה *-il* ("תועבה") ותיקן ל־*-in* ("גלגל"). "יניעו את הגלגל" – טקס משפטי שאינו ידוע (גורל? עינוי?); המשמעות סתומה, ולכן (?). אין כאן F7.
+
+### 198.6
+`LUGAL-uš ḫu-u-iš-nu-zi-ia-aš LUGAL-uš`
+> המלך, ובין שיחיה אותם המלך.
+- **פירוק:** `LUGAL-uš` – "king", nom. ("המלך"); `ḫu-u-iš-nu-zi-ia-aš` – ḫuišnu- "spare" + =ya "and" + =aš "them" ("ובין שיחיה אותם"); `LUGAL-uš` – "king" ("המלך").
+- **הערות:** כמו 187.2–3. גם בניאוף ההחלטה האחרונה בידי המלך.
+
+## §199 – חזיר וכלב; השור והחזיר הקופצים
+
+### 199.1
+`ták-ku ŠAḪ-〈aš〉 UR.GI₇-aš kat-ta ku-iš-ki wa-aš-ta-i a-ki-aš`
+> אם עם חזיר (או) כלב מישהו יחטא – ימות.
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `ŠAḪ-〈aš〉` – ŠAḪ "pig", d.-l. (the ending omitted) ("עם חזיר"); `UR.GI₇-aš` – UR.GI₇ "dog", d.-l. ("(או) כלב"); `kat-ta` – "with" ("עם"); `ku-iš-ki` – kuiški "anyone" ("מישהו"); `wa-aš-ta-i` – wašta- "sin" ("יחטא"); `a-ki-aš` – akiaš "he shall die" ("ימות").
+- **נוסחים:** KBo 63.10 – קטע קטן: `]x x[`.
+- **תרגומים:** Hrozný 1922: «Si UN PORC, un CHIEN (acc.) [qu]elqu'un viole, il meurt»; Zimmern–Friedrich 1922 (85†): «Wenn jemand ein Schwein, einen Hund vergewaltigt, so muß er sterben».
+- **הקבלה:** [equivalent] `אָרוּר שֹׁכֵב עִם כָּל בְּהֵמָה` (דברים כז:כא).
+- **הערות:** בלי *ḫurkel*: החוק קובע מוות ואינו קורא למעשה "תועבה" (ולכן אין `תועבה` בשורה). ŠAḪ = `חזיר`, UR.GI₇ = `כלב`.
+
+### 199.2
+`A-NA KÁ É.GAL-LIM ú-wa-te-ez-zi ku-en-zi-uš`
+> אל שער ההיכל יביא (אותו); בין שיהרוג אותם
+- **פירוק:** `A-NA KÁ` – "to the gate" ("אל שער"); `É.GAL-LIM` – "palace" ("ההיכל"); `ú-wa-te-ez-zi` – uwate- "bring" ("יביא"); `ku-en-zi-uš` – kuen- "kill" + =uš "them" ("בין שיהרוג אותם").
+- **נוסחים:** KBo 63.10: `ú-wa-te-e]z-⸢zi⸣ k[u-en-zi-uš` – זהה.
+- **הערות:** "אותם" (*=uš*) – האיש והבהמה? או כל החוטאים מסוג זה (Hrozný: «C'est-à-dire: tous ceux qui commettent ce même acte»).
+
+### 199.3
+`LUGAL-uš ḫu-iš-nu-zi-ia-aš L[UG]AL-uš LUGAL-i-ma-aš Ú-UL`
+> המלך, ובין שיחיה אותם המלך – ואילו הוא לא
+- **פירוק:** `LUGAL-uš` – "king" ("המלך"); `ḫu-iš-nu-zi-ia-aš` – "and spare them" ("ובין שיחיה אותם"); `L[UG]AL-uš` – "king" ("המלך"); `LUGAL-i-ma-aš` – "but he … to the king" ("ואילו הוא … אל המלך", the last two words in 199.4); `Ú-UL` – "not" ("לא").
+- **נוסחים:** KBo 63.10: `Ú]-UL ti-i[a-` – *tiya-* בכתיב אחר.
+- **תרגומים:** Hrozný 1922: «A LA PORTE DU PALAIS on (l')amène, le ROI les tue et le R[O]I les fait vivre; mais au ROI il NE vient PAS»; Zimmern–Friedrich 1922: «bringt man (solche) zum Tore des Palastes, so kann der König sie erschlagen, auch kann der König sie leben lassen; vor den König aber darf ein solcher nicht treten».
+
+### 199.4
+`ti-i-ez-zi ták-ku GU₄-uš LÚ-[ni] wa-at-ku-zi`
+> ייכנס אל המלך. אם שור על איש יקפוץ,
+- **פירוק:** `ti-i-ez-zi` – tiya- "step up to" ("ייכנס"); `ták-ku` – "if" ("אם"); `GU₄-uš` – "ox", nom. ("שור"); `LÚ-[ni]` – "man", d.-l. ("על איש"); `wa-at-ku-zi` – watku- "jump, leap (upon)", pres. 3sg ("יקפוץ").
+- **תרגומים:** Hrozný 1922: «Si un TAUREAU un HO[MM]e saillit (cherche à saillir)»; Zimmern–Friedrich 1922: «Wenn ein Rind gegen einen Mann anläuft, so muß das Rind sterben» – ובהערה: «Auch wohl im geschlechtlichen Sinne gedacht, obwohl derartiges in Wirklichkeit bei Haustieren kaum vorkommt».
+- **הקבלה:** [divergence] `וְכִי יִגַּח שׁוֹר אֶת אִישׁ אוֹ אֶת אִשָּׁה וָמֵת סָקוֹל יִסָּקֵל הַשּׁוֹר` (שמות כא:כח) – אצלנו השור קופץ (מינית) ואינו נוגח, והאדם אינו מת.
+- **הערות:** הנוסחה `לא ייכנס אל המלך` עוברת את גבול השורה (199.3–4). *watku-* = `קפץ` – מילולי; `ירבע`/`רובע` (ויקרא יח:כג, כ:טז) שמורים לתורה (§H3). המעשה – בהמה "תוקפת" אדם מינית: האדם אינו אשם.
+
+### 199.5
+`GU₄-uš a-ki LÚ-aš-ša Ú-UL ⸢a⸣-[ki] 1 UDU LÚ-na-aš`
+> השור ימות, והאיש לא ימות. שה אחד
+- **פירוק:** `GU₄-uš` – "ox" ("השור"); `a-ki` – "die" ("ימות"); `LÚ-aš-ša` – "man" + =a "and" ("והאיש"); `Ú-UL` – "not" ("לא"); `⸢a⸣-[ki]` – "die" ("ימות"); `1` – "one" ("אחד"); `UDU` – "sheep" ("שה"); `LÚ-na-aš` – "man", gen. (rendered in 199.6: "חֵלֶף האיש").
+- **נוסחים:** KBo 63.10: `] a-ki LÚ-aš-ša ⸢Ú⸣-[UL` – זהה.
+- **הקבלה:** [equivalent] `וְאֶת הַבְּהֵמָה תַּהֲרֹגוּ` (ויקרא כ:טו) – הבהמה מתה.
+
+### 199.6
+`ka-a-aš-ša-aš ḫu-u-it-ti-ia-a[n-ta] na-an-kán ku-na-an-zi`
+> חֵלֶף האיש ימשכו, ואותו יהרגו.
+- **פירוק:** `ka-a-aš-ša-aš` – kaššaš "in place of" ("חֵלֶף"); `ḫu-u-it-ti-ia-a[n-ta]` – ḫuittiya- "draw", mp. pres. 3pl ("ימשכו"); `na-an-kán` – nu "and" + =an "him/it" + =kan ("ואותו"); `ku-na-an-zi` – kuen- "kill", pres. 3pl ("יהרגו").
+- **נוסחים:** KBo 63.10: `ḫu-u-it-t]i-an-⸢zi⸣ na-an-kán [` – **בפעיל** (*ḫuittianzi*), כמו KUB 29.34+ ב־196.5.
+- **תרגומים:** Hrozný 1922: «1 MOUTON (est) de l'HOMMe le remplaç[an]t; alors on le tue»; Zimmern–Friedrich 1922: «1 Schaf soll für den Mann als Ersatz eingesetzt werden, dieses soll man dann totschlagen».
+- **הקבלה:** [divergence] `וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ` (בראשית כב:יג) – השה חֵלֶף אדם; כאן השה מת במקום האיש שלא חטא, כדי להסיר ממנו את הטומאה.
+- **הערות:** **נוסחת התחליף** (167.3, 196.4–5). "ואותו יהרגו" – את השה (כ־Zimmern–Friedrich: «dieses»), לא את האיש: *=an* זכר־נקבה, והעברית `אותו` דו־משמעית כמו המקור.
+- **הערת שוליים:** "השור ימות, והאיש לא ימות: שה אחד חֵלֶף האיש ימשכו": האיש אינו חוטא, ובכל זאת "משהו" צריך למות במקומו – שה. זה ההיגיון של הטקס החתי (וגם של 167, 196): התחליף מסלק את הטומאה, לא את האשמה.
+
+### 199.7
+`ták-ku ŠAḪ-aš LÚ-ni wa-at-ku-z[i] Ú-UL ḫa-ra-a-tar`
+> אם חזיר על איש יקפוץ – אין עברה.
+- **פירוק:** `ták-ku` – "if" ("אם"); `ŠAḪ-aš` – "pig", nom. ("חזיר"); `LÚ-ni` – "man", d.-l. ("על איש"); `wa-at-ku-z[i]` – watku- "leap upon" ("יקפוץ"); `Ú-UL ḫa-ra-a-tar` – "no offence" ("אין עברה"), F11.
+- **תרגומים:** Hrozný 1922: «Si un PORC un HOMMe sailli[t] (cherch[e] à saillir), (IL) N'(Y A) PAS de punition»; Zimmern–Friedrich 1922: «Wenn ein Schwein gegen einen Mann anläuft, so (findet) Strafverfolgung nicht (statt)».
+- **הערות:** החזיר – בניגוד לשור – אינו מומת ואינו מטמא: אין עברה, ואין צורך בתחליף.
+
+## §200a – סוס ופרד; השבויה
+
+### 200a.1
+`ták-ku LÚ-aš ANŠE.KUR.RA-i na-aš-ma ANŠE.GÌR.NUN.NA kat-ta`
+> אם איש עם סוס או פרד
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `LÚ-aš` – "man", nom. ("איש"); `ANŠE.KUR.RA-i` – "horse", d.-l. ("עם סוס"); `na-aš-ma` – "or" ("או"); `ANŠE.GÌR.NUN.NA` – "mule" ("פרד"); `kat-ta` – "with" ("עם").
+- **תרגומים:** Hrozný 1922: «Si un HOMME (nom.) un CHEVAL ou UN (GRAND) M[U]LET viole, (IL) N'(Y A) PAS de punition»; Zimmern–Friedrich 1922 (86†): «Wenn ein Mann ein Pferd oder ein Maultier vergewaltigt, so (findet) Strafverfolgung nicht (statt)».
+- **הקבלה:** [divergence] `כָּל שֹׁכֵב עִם בְּהֵמָה מוֹת יוּמָת` (שמות כב:יח) – בתורה כל בהמה; בחוק החתי סוס ופרד – "אין עברה", ושור, שה, חזיר וכלב – מוות.
+- **הערות:** ANŠE.KUR.RA = `סוס`, ANŠE.GÌR.NUN.NA = `פרד`. מדוע סוס ופרד מותרים? אולי משום שאינם בהמות מאכל וקורבן (החזיר והכלב – הקורבנות של טקסי הטיהור?).
+
+### 200a.2
+`wa-aš-ta-i Ú-UL ḫa-ra-tar LUGAL-*uš-aš* Ú-UL ti-ez-zi`
+> יחטא – אין עברה; והוא לא ייכנס אל המלך,
+- **פירוק:** `wa-aš-ta-i` – wašta- "sin" ("יחטא"); `Ú-UL ḫa-ra-tar` – "no offence" ("אין עברה"), F11; `LUGAL-*uš-aš*` – LUGAL + =aš "he" (over an erasure; read *LUGAL-i=aš*, d.-l., as 187.3) ("והוא … אל המלך"); `Ú-UL` – "not" ("לא"); `ti-ez-zi` – tiya- "step up to" ("ייכנס").
+- **תרגומים:** Hrozný 1922: «mais au ROI il NE vient PAS» – ובהערה: «Probablement une erreur pour LUGAL-i-ma-aš»; Zimmern–Friedrich 1922: «der König tut (darüber) keinen Ausspruch» – הם קראו את *LUGAL-uš* בנושא: "המלך אינו פוסק".
+- **הערות:** הנוסחה `לא ייכנס אל המלך`. אין עונש – אבל האיש טמא, ולכן מורחק מן המלך ומן הכהונה (200a.3).
+
+### 200a.3
+`{LÚ}SANGA-ša Ú-UL ki-i-ša ták-ku ar-nu-wa-la-an [ku-iš-ki]`
+> וגם כהן לא ייעשה. אם [מישהו] עם שבויה
+- **פירוק:** `{LÚ}SANGA-ša` – LÚ SANGA "priest" + =a "and, also" ("וגם כהן"); `Ú-UL` – "not" ("לא"); `ki-i-ša` – kiš- "become", pres. 3sg ("ייעשה"); `ták-ku` – "if" ("אם"); `ar-nu-wa-la-an` – arnuwala- "deportee, civilian captive" (the Hittite word under NAM.RA), acc. ("עם שבויה"; "עם" is *katta*, 200a.4); `[ku-iš-ki]` – "anyone" ("[מישהו]").
+- **נוסחים:** KUB 29.33+: `ták-ku ar-nu-wa-la-an kat-ta-an ku-iš-ki še-eš-k[e-ez-zi]` – *kattan*, והחוק על השבויה בשורה משלו.
+- **תרגומים:** Hrozný 1922: «et HOMME PRÊTRE il NE devient PAS. Si (avec) une étrangère (…?) il couche»; Zimmern–Friedrich 1922: «auch wird er (deshalb) nicht zu einem Verschnittenen» – ובהערה: «Wörtlich: „Priester“»; ו־*arnuwala-* אצלם: «Wenn er einer Schwangeren beiwohnt».
+- **הקבלה:** [equivalent] `אִישׁ מִזַּרְעֲךָ לְדֹרֹתָם אֲשֶׁר יִהְיֶה בוֹ מוּם` (ויקרא כא:יז) – גם בתורה יש פגם שאינו חטא ובכל זאת מרחיק מן הכהונה ומן הקודש; [divergence] – שם המום בגוף, כאן המעשה.
+- **הערות:** LÚ SANGA = `כהן` (§H4, מורשה כאן). *kiš-* = `נעשה` (הלוח הראשון). *arnuwala-* = `שבויה` – כמו NAM.RA, הסומרוגרם של אותה מילה, `שבויים` בלוח הראשון (*arnuwala-* מן *arnu-* `יַגִּיעַ`: "המובא, המועבר").
+- **הערת שוליים:** "וגם כהן לא ייעשה": החוטא עם סוס או פרד אינו נענש, אבל נפסל מכהונה ומקרבת המלך – כמו בעל המום של ויקרא כא:טז–כג, שאינו חוטא ואינו "יקרב". המלך החתי והכוהנים נשמרים בטהרה, ומכאן ההבדל בין "עברה" (פלילית) לפסול (פולחני).
+
+### 200a.4
+`kat-ta še-eš-ke-ez-zi an-na-aš-ša-an n[e]-k[a-aš-ša-an-na ú-en-zi]`
+> שוכב, ועל אִמָּהּ ועל [אחותה יבוא] –
+- **פירוק:** `kat-ta` – "with" ("עם", rendered in 200a.3); `še-eš-ke-ez-zi` – šešk- "sleep (with)", pres. 3sg ("שוכב"); `an-na-aš-ša-an` – anna- "mother", acc. + =ššan "her" ("ועל אִמָּהּ"); `n[e]-k[a-aš-ša-an-na` – neka- "sister", acc. + =ššan "her" + =a "and" ("ועל [אחותה"); `ú-en-zi]` – wen- "have intercourse with" ("יבוא]").
+- **נוסחים:** KUB 29.33+: `[AMA-ša-a]n? n[e?-ka-aš]-š[a-an-n]a? ú-en-zi` – "אמה" בסומרוגרם (AMA)?
+- **הקבלה:** [divergence] `וְרָאִיתָ בַּשִּׁבְיָה אֵשֶׁת יְפַת תֹּאַר` (דברים כא:יא) – גם התורה מסדירה את המשכב עם השבויה, אבל כנישואים; כאן השבויה, אמה ואחותה – "אין עברה", כמו באמהות (194.1).
+- **הערות:** *neka-* "אחות" (ממנה *annaneka-*, 191.1). `אִמָּהּ` מנוקד.
+
+### 200a.5
+`Ú-UL *ḫa-ra-tar*`
+> אין עברה.
+- **פירוק:** `Ú-UL` – "not" ("אין"); `*ḫa-ra-tar*` – ḫaratar (over an erasure) ("עברה"), F11.
+- **נוסחים:** KUB 29.33+: `[Ú-UL ḫa-ra]-tar` – זהה.
+- **תרגומים:** Hrozný 1922: «il couche, la mère le (ou: la) …, (IL) N'(Y A) PAS de punition».
+- **הערות:** כאן מסתיימים חוקי הזיווגים (187–200a).
+
+## §200b – אילוף בן אצל אומן
+
+### 200b.1
+`ták-ku DUMU-an an-[na-nu-ma]-⸢an-zi⸣`
+> אם בן [לאילוף]
+- **פירוק:** `ták-ku` – "if" ("אם"), F1; `DUMU-an` – DUMU "son, child", acc. ("בן"); `an-[na-nu-ma]-⸢an-zi⸣` – annanu- "train, instruct", infinitive ("[לאילוף]").
+- **נוסחים:** KUB 29.33+: `[ták-ku DUMU]-an an-na-nu-ma-an-zi ku-iš-ki pa-[a-i]` – המילה שלמה.
+- **הערות:** *annanu-* = `אילף` (כ־*annanuḫḫa-* "מאולף", 119.1, 149.1): כאן על אדם – "ללמד מלאכה".
+
+### 200b.2
+`ku-iš-ki pa-a-i na-aš-šu {LÚ}NAGAR n[a-aš-ma {LÚ}SIMUG.A {L]Ú}⸢UŠ.BAR⸣`
+> מישהו ייתן – בין נגר, [או נַפָּח], אורג,
+- **פירוק:** `ku-iš-ki` – "anyone" ("מישהו"); `pa-a-i` – pai- "give" ("ייתן"); `na-aš-šu` – naššu "either" ("בין"); `{LÚ}NAGAR` – "carpenter" ("נגר"); `n[a-aš-ma` – "or" ("[או"); `{LÚ}SIMUG.A` – "smith" ("נַפָּח]"); `{L]Ú}⸢UŠ.BAR⸣` – "weaver" ("אורג").
+- **נוסחים:** KUB 29.33+: `[na-aš-š]u {LÚ}NAGAR na-aš-ma {LÚ}SIMUG.A n[a-aš-ma {LÚ}UŠ.BAR]` – זהה.
+- **הערות:** רשימת בעלי המלאכה כמו 176b: NAGAR `נגר`, SIMUG `נַפָּח`, UŠ.BAR `אורג`.
+
+### 200b.3
+`na-aš-ma {LÚ}AŠGAB na-aš-ma {LÚ}ÁZLAG n[u an-na-nu-um-m]a-aš`
+> או בורסי, או כובס – ו[של האילוף]
+- **פירוק:** `na-aš-ma` – "or" ("או"); `{LÚ}AŠGAB` – "leather-worker" ("בורסי"); `na-aš-ma` – "or" ("או"); `{LÚ}ÁZLAG` – "fuller" ("כובס"); `n[u` – "and" ("ו"); `an-na-nu-um-m]a-aš` – annanumar "training", gen. ("[של האילוף]").
+- **נוסחים:** KUB 29.33+: `[na-aš-m]a {LÚ}ÁZLAG nu an-na-nu-u[m-m]a-aš 6 ⸢GÍN⸣ [KÙ.BABBAR]` – "של האילוף" שלם.
+- **הערות:** "של האילוף – שישה שקלים" – כדגם המחירון (`של X – n שקלים כסף`, 178–186).
+
+### 200b.4
+`6 GÍN KÙ.BABBAR pa-a-i ták-ku-an {L[Ú}U]M?.[M]E?.⸢A?⸣-[a]š? wa-al-ki-iš-ša-⸢ra⸣-[aḫ-ḫi]`
+> שישה שקלים כסף ייתן. אם אותו [אֻמָּ]ן? בקי יעשה,
+- **פירוק:** `6` – "six" ("שישה"); `GÍN` – "shekels" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `pa-a-i` – "give" ("ייתן"); `ták-ku-an` – takku "if" + =an "him" ("אם אותו"); `{L[Ú}U]M?.[M]E?.⸢A?⸣-[a]š?` – LÚ UM.ME.A (UMMIĀNU) "craftsman", reading doubtful ("[אֻמָּ]ן?"); `wa-al-ki-iš-ša-⸢ra⸣-[aḫ-ḫi]` – walkiššaraḫḫ- "make skilled, train to expertise" (factitive of walkiššara- "skilled"), pres. 3sg ("בקי יעשה").
+- **נוסחים:** KUB 29.33+: `[pa]-a-i ták-ku-an wa-al-ki-[iš-ša-r]a-aḫ-ḫi [nu-uš-ši]` – **בלי "אומן"**: "אם יעשה אותו בקי".
+- **תרגומים:** Hrozný 1922: «6 SICLES D'ARGENT il donne; si (c'est) UN DIE[U], [MON SO]LEI[L], [un p]uissan[t], alors 1 PERSONNE il lui do[n]ne»; Zimmern–Friedrich 1922: «so muß er 6 Sekel Silber zahlen. Wenn ..[....] stark ist, so muß er ihm 1 Person geben» – ובהערה: «d. h. wohl: Wenn der Entleihende ein sehr vermögender Mann ist» – שניהם קראו *walkiššara-* "חזק" (על אדם עשיר), לפני שנמצא העותק ובו "לאילוף".
+- **הערות:** UMMIĀNU = `אֻמָּן` (176b.1). אם הלימוד הצליח, והבן נעשה בקי – המלמד מקבל "ראש" (200b.5).
+
+### 200b.5
+`nu-uš-ši 1 SAG.DU pa-a-i`
+> ולו ראש אחד ייתן.
+- **פירוק:** `nu-uš-ši` – nu "and" + =šši "to him" ("ולו"); `1` – "one" ("אחד"); `SAG.DU` – "head (person)" ("ראש"); `pa-a-i` – "give" ("ייתן"), F8.
+- **נוסחים:** KUB 29.33+: `[1 S]AG.DU pa-a-[i]` – זהה.
+- **תרגומים:** Hrozný 1922: «alors 1 PERSONNE il lui do[n]ne»; Zimmern–Friedrich 1922: «so muß er ihm 1 Person geben».
+- **הקבלה:** [absent] – אין בתורה דין של שכר לימוד מלאכה.
+- **הערות:** SAG.DU = `ראש` (§7.1: אדם כיחידת תשלום) – כלומר עבד. הסוף של הלוח השני הוא שכר לימוד, לא חוקי זיווגים: הסעיף האחרון חוזר אל המחירון (176b, 177).
+
+## הקולופון – סוף הלוח
+
+### col1
+`DUB 2{KAM} ták-ku {GIŠ}GEŠTIN-aš QA-TI`
+> לוח שני של "אם גפן" – תַּם.
+- **פירוק:** `DUB` – DUB "tablet" ("לוח"); `2{KAM}` – "second" (ordinal) ("שני"); `ták-ku` – takku "if" ("של \"אם"); `{GIŠ}GEŠTIN-aš` – GIŠ.GEŠTIN "vine", gen. ("גפן\""); `QA-TI` – QATI (Akk.) "finished" ("תַּם").
+- **נוסחים:** רק KBo 6.13+ (Rs. IV 1′); ב־KBo 6.26 שאר העמודה ריק, בלי קולופון.
+- **תרגומים:** Hrozný 1922: «TABLETTE 2. (Série:) «Si … VIGNES». (ELLE) EST FINIE».
+- **הערות:** הלוח קורא לעצמו "לוח שני" ובשם הסדרה על פי מילותיו הראשונות, "אם גפן" (*takku GIŠ.GEŠTIN-aš*, 101). **אבל גם שני הקולופונים של הלוח הראשון (HL1 col1, col2) אומרים "לוח שני"** – ולכן CHiL מסמן שם `2!`: אולי הספירה מתייחסת לסדרה אחרת (שני לוחות נפרדים, "אם איש" ו"אם גפן", כל אחד "שני" בסדרה משלו?), אולי טעות של אחד הסופרים. כאן המספר מתאים לתוכן: זה אכן הלוח השני של החוקים (HL 101–200). DUB = `לוח`, QATI = `תַּם` כבלוח הראשון.
