@@ -156,3 +156,132 @@ former tariff, and HL 9 / 25 name the king's act (`ועתה המלך … השל�
 `טיפל`, SIG₅ `החלים`, *antuḫša-* `אדם`, *arḫa-* `גבול`, *gipeššar* `אַמָּה`, *karšš-* `חתך`, DAM.GÀR / *unattalla-* `תַּגָּר`,
 *āššu-* `רכוש`, the numbers (2–10 plural `שקלים`, 11+ singular `שקל`; `מנה כסף`, `מאה מנה כסף`; `ראש אחד`, `שני ראשים`,
 `שנים עשר ראש`). § IV of HLPT (the corpse in the field) is the place for the Deut 21:1–9 measuring.
+
+### Part 2 (HL1 146–290)
+Drafted 2026-10-25: clauses 146–290 (HL §28–§52; CHiL sections 29–54; HL 49 is not in this text, and HL 50 begins in a
+gap). Base order kept: §35 (181–183) stands between §32 and §33 in ms. A, so the file has it there. `verify HL1`: 0
+problems (one repeated-line difference, 180/186, justified in the entry: Hittite *=an* is common gender, "her" / "him");
+`check_bible_quotes.py`: 0 problems. Placeholder `<!-- טרם תורגם: 291–col4 -->`.
+
+**New renderings fixed (lemma → Hebrew, first clause).**
+| Hittite | Hebrew | First | Note |
+|---|---|---|---|
+| *tar- / te-* "say"; ptcp. *taranza* | `אמר`; `אמורה (לאיש)` | 146 | the betrothal "by word"; `אֹרָשָׂה` stays the Torah's |
+| *pittenu-* "make run, elope with" | `הבריח` (`יבריח`) | 147 | causative of *pittai-*; ≠ *ḫuwai-* `ברח` |
+| *kuššan* "when" (adv.) | `כאשר` | 148 | homograph of *kuššan-* "wage" |
+| *ḫantezzi(ya)-* "first" | `הראשון` | 149 | |
+| *kui- kui-* "whatever" | `כל אשר` | 149 | |
+| *atta-*; *anna-* | `אב`; `אם` | 151 | |
+| *mimma-* "refuse" | `מאן` (`ימאן`, `ימאנו`) | 154 | [equivalent] Exod 22:16 `אִם מָאֵן יְמָאֵן אָבִיהָ` |
+| *tuḫš-* "cut off, separate" | `ניתק` (`וינתקו`) | 155 | kept apart from *ḫarp-* `נפרד` |
+| *ḫamenk-* "bind" (betrothal) | `קשורה (לאיש)` | 156 | |
+| *kušata* "bride-price" | `מֹהַר` (defective, always vocalized) | 157 | §7.1 |
+| *piddai-* "render, pay (a due)" | `הגיש` (`יגיש`) | 157 | `יביא` = *uwate-*; `ימסור` = LH *šarāku* (the dowry verb) |
+| *appezzi(ya)-* / *appezziyan* "later" | `לאחר מכן` | 158 | |
+| *ḫulla-* "fight, oppose" | `התנגד` (`יתנגדו`) | 158 | `יערערו` = LH *baqāru* |
+| *2-ŠU* "twice" | `פי שניים` | 160 | ↔ LH §160 `יכפיל וישיב` |
+| *nāwi* "not yet" | `טרם` | 161 | |
+| *šamen-* "pass by; forfeit" | `הפסיד` (`יפסיד`) | 164 | also needed in HL 48 (OS) |
+| *šiela-* (meaning uncertain) | `*פנויים*` | 165 | crux; CHiL "soli" |
+| *ar- anda* "come together" | `באו יחד` | 166 | |
+| *DAM* "wife"; *ANA DAM-ŠU dā-* | `אשה`; `לקח לאשתו` | 167 | |
+| *iya-* "do, make"; iter. *išša-* | `עשה` | 168 | both forms one Hebrew |
+| *idalawešš-* "become bad" | `היו רעים` | 169 | |
+| *naššu … našma* | `או ש… או ש…` | 169 | |
+| *ḫarp-* (mp) "separate" | `נפרד` (`ייפרדו`) | 170 | |
+| *šarra-* "divide"; *takšan* | `חלק` (`יחלקו`); `לשניים` | 171 | [equivalent] Exod 21:35 `וְחָצוּ` (`חצה` avoided) |
+| *DUMU*, *DUMU.MEŠ*, *DUMU.NITA* | `בן`, `בנים` | 168 | |
+| *DĪNU* + *QĀTAMMA=pat* | `דינם – כך ממש` | 175 | *QĀTAMMA=pat* = `כך ממש` (also 288) |
+| *AGRIG* "steward"; *SIPA* "shepherd" | `סוכן`; `רועה` | 181 | = Sum. *aĝrig* (Gudea `סוכן`), *sipa* |
+| *GÉME-iššaršš-* "become a slave woman" | `לאָמָה תיעשה` | 183 | |
+| *parā tarna-* "let go, release" | `שלח החוצה` (`ישלח`) | 180 | gated `שלח`; [equivalent] Exod 21:26 `לַחָפְשִׁי יְשַׁלְּחֶנּוּ`. CHiL reads *=an* in 180 as the slave ("him"); we read the wife |
+| *LÚ antiyant-* "in-marrying son-in-law" | `חתן־בית` | 185 | |
+| *šardiya-* "helper, supporter" | `עוזר` | 188 | |
+| *appanda* "after" | `אחרי` (`ואחריהם`) | 188 | |
+| *kiš-* "become" | `נעשה` (`ייעשה`, `נעשית`) | 191 | |
+| *UR.BAR.RA* "wolf" | `זאב` | 191 | = Sum. *ur-bar-ra* |
+| *ḫanneššar* "lawsuit" | `דין` | 192 | §7.1 |
+| *kartimmiya-* "be angry" | `זעם` (`יזעמו`) | 194 | |
+| *ḫar(k)-* "have, hold" | `החזיק` (`יחזיק`) | 198 | |
+| *ḫark-* "perish, be lost" | `אבד` (`יאבד`, `אבוד`) | 203 | homograph of *ḫar(k)-* "hold" |
+| *šaḫḫan*; *luzzi* | `שַׁחְחַן`; `לוּצִּי` | 199; 258 | §7.1; first note at 199 |
+| *arḫa* + *pešš-* "throw away" | `השליך הלאה` | 200 | |
+| *dala-* "leave" | `הניח` (`יניח`) | 201 | |
+| *ḫapparai-* "trade, sell"; *ḫappar* "deal" | `מכר` (`ימכור`); `מסחר` | 202; 279 | |
+| *LÚ GIŠTUKUL*; *GIŠTUKUL* (the service) | `איש־הכלי`; `הכלי` | 203 | §7.1. So UNŪTU "implements" = `חפצים` (251), not `כלים` |
+| *LÚ ILKI* | `אִישׁ־הַהֲלָךְ` (`הַהֲלָךְ` always vocalized: "the walker") | 204 | §7.1; [cognate via the Akkadogram] Ezra 7:24 `וַהֲלָךְ` |
+| *tittiya-* "install, assign" (ptcp.) | `מוצב` | 204 | |
+| *šiyattariya-* "have sealed/registered to oneself" | `רשם לעצמו` (`ירשום`) | 208 | `חתם` kept off (the Egyptian corpus's loanword) |
+| *NAM.RA* "deportee" | `שבויים` | 214 | |
+| *kuššaniya-* "hire" | `שכר` (`ישכור`) | 228 | the verb of *kuššan-*; `שָׂכָר` / `שְׂכַר` / `שְׂכָרוֹ` vocalized |
+| *laḫḫa-* "campaign" | `מערכה` (`למערכה`) | 229 | `מסע` = LH *ḫarrānu* |
+| *GU₄*; *KUN* "tail"; *BĒL GU₄* | `שור`; `זנב`; `בעל השור` | 237 | §5 *bēl* + noun |
+| *zinu-* (caus.) / *zai-* "cross" | `העביר` / `עבר` | 237, 240 | Hesiod's precedent for crossing a river; `עבר` is not a Hittite reservation, but Akkadian *ebēru* has it: **check** |
+| *šuwai-* "push, drive away" | `דחה` (`ידחה`) | 238 | ≠ *šuwaye-* "look" (F4); the CHiL gloss "(an)schauen" here is wrong |
+| *paḫḫur* / IZI "fire" | `אש` | 243 | |
+| *appa* "back, in return" | `בחזרה` | 245 | as *EGIR-pa* (103) |
+| *parkunu-* "purify" | `טיהר` (`יטהר`) | 246 | gated |
+| *kuptar* "remains"; *uktūri-* "cremation site" | `שיירים`; `מקומות השרֵפה` | 247 | CHiL "discarica" (crux) |
+| *alwanzatar* | `כשפים` | 249 | gated |
+| *DĪN LUGAL* | `דין המלך` | 250 | §7.1 |
+| UNŪTU "implements, goods" | `חפצים` | 251 | |
+| *wemiya-* | `מצא` | 251 | (§7.3) |
+| *piyanai-* "reward" | `גמל` (`[לו] יגמול`) | 253 | wisdom corpus has `גמל` for *riābu*: cross-language, no cognate |
+| *NÍ.ZU* "thief" | `גַּנָּב` (`לְגַנָּב`, vocalized) | 255 | §7.1 |
+| *iwaru* "inheritance share" | `מַתָּן` (`כְּמַתָּן`; `אדון המַתָּן`) | 256 | §7.1; one Hebrew for the dowry (HL 27) and the inheritance share |
+| *mekki-* "much"; *tepu-* "little" | `רב`; `מעט` | 257 | |
+| *karp-* "lift; render (a duty)" | `הרים` (`ירים`) | 258 | literal; `נשא` is gated to *peda-* |
+| *kulei* "fallow" | `בור` (`השדות הבורים`) | 262 | |
+| *ark-* "divide off" | `הפריש` (`יפריש`) | 262 | CHiL "delimita" |
+| *NÍG.BA* "gift" | `מַתַּת` (vocalized) | 265 | kept apart from *iwaru* `מַתָּן` |
+| *BANŠUR*; *NINDA* | `שולחן`; `לחם` | 267 | = Gilg. *paššūru* `שולחן` |
+| *waš-* "buy" | `קנה` (`יקנה`) | 269 | |
+| *ḫippara-* | `חִפָּרָה` (transliterated, always vocalized: "dug") | 276 | add to §H2 / §H6? |
+| *lē kuiški* | `אף אחד אל` | 277 | |
+| *eya-* (tree) | `עץ־אֵיָה` | 281 | |
+| *āšk-* "gate" | `שער` | 281 | |
+| *UŠ.BAR* "weaver" | `אורג` | 283 | = Sum. *uš-bar* |
+| *arawa-* and *ELLUM* **of a house** | `פטור` | 284, 286 | **proposal:** *ELLUM* of persons = `בן חורין`, of a house or land = `פטור` (= *arawa-*); the gate `בן חורין` is unaffected |
+| *LÚ.MEŠ ḪA.LA* "men of the share"; *NIŠŪTU* "kin" | `אנשי־חלקו`; `קרוביו` | 285 | |
+| *É.NA₄* "stone house"; *DUMU.LUGAL*; *BĒL ŠUPPATI* | `בית־האבן`; `בן־המלך`; `בעל *שֻׁפַּתִּי*` | 289 | *ŠUPPATI* transliterated; never `קדש` (the gate's licence `šupp` matches it: anchor the licence to *šuppi-*, `\bšuppi\|\bšuppa\b\|šuppešš`) |
+
+**Pre-set rows checked.** §7.1 *kušata* `מֹהַר`, *iwaru* `מַתָּן`, *šaḫḫan* / *luzzi*, *LÚ GIŠTUKUL* / *LÚ ILKI*, *ḪA.LA*
+`חלק`, *DĪNU*, *alwanzatar*, *parkunu-*, *ARAD/GÉME*, *ELLUM* – used as set (with the *ELLUM*-of-a-house proposal above).
+F1–F8 worked; F9 did not fire in this range (no *taya-*).
+
+**Gates and traps (new points).** `קדש`'s licence `šupp` matches *ŠUPPATI* (289): anchor it. Add `חפרה` (*ḫippara-*) and
+`הלך` / `ההלך` (*ILKI*, read "the walker") to §H6 if you want them enforced; `מהר` (bride-price) is already a trap in the
+law corpus guidelines ("quickly") – consider a §H6 row (licence `kušat`).
+
+**Cruxes (in the apparatus).** HL 28 / 154: what the parents "refuse" (to give her, or to compensate: CHiL); HL 31 *šiela-*
+(`*פנויים*`); HL 34 / 36 *parā tarna-*: whom "no one shall release" (the wife / the slave) and what it means (status kept,
+or no leaving); HL 35 / 183: "in the third year she becomes a slave" (OS `I-NA MU 3{KAM}`) vs CHiL "enslaved for 3 years";
+HL 37: who the "helpers" are (the family's pursuers, CHiL) and who dies; HL 38 / 194 the broken subject; HL 41 / 218 ms. A
+writes LÚ ILKI where OS and 291.3 have the man of the tool (scribal error; translated as written); HL 44b *uktūri-*
+(cremation site vs dump); HL 52 *ŠUPPATI*.
+
+**Versions worth the index.** HL 32–33: the OS spells out the division of goods and children that the standard text
+abbreviates to "their case is the same"; HL 42: the wages (12 / 6 shekels) are absent from the OS and present in 291.3 and
+the standard text – a later addition; HL 43: 291.3 adds an explanatory clause; HL 44b: OS "throws (*pešš-*) them into
+someone's house" (no field); HL 45: OS *āššu* "goods" for UNŪTU; HL 46: OS has no "and the šaḫḫan", 291.3 "fields of
+šaḫḫan"; HL 47a: OS exempts from "šaḫḫan (and) luzzi", the standard text only from luzzi (a narrowing), and names the king
+as the giver of the loaf; HL 50: the full OS list (Nerik, Arinna, Zippalanda, the eya-tree); HL 51: a privilege reduced
+(*karū … kinun=a* applied to an exemption, not a tariff) – already in the OS.
+
+**Parallels (selection).** Exod 22:15–16 ↔ HL 28–30 [equivalent / divergence]: the refusal of the father (`מָאֵן יְמָאֵן` ↔
+*mimma-*), but the Hittite parents act together and the betrothal is by word, then by "binding" and bride-price; double
+restitution ↔ LH §160; Exod 21:3–4 ↔ HL 31–36 [divergence]: in the Torah the slave's wife and children stay with the master,
+in HL the free father takes the children, the mother one child, the house is halved; Exod 21:2 ↔ HL 35 [divergence,
+reversal]: a free woman becomes a slave in the third year; Deut 19:6 ↔ HL 37 [divergence]: pursuit allowed, the abductor
+"has become a wolf"; Exod 22:14 ↔ HL 42; Exod 21:28 `בַעַל הַשּׁוֹר` ↔ HL 43; Exod 21:23 ↔ HL 43, 44a [divergence]: a person
+or a son handed over, not death; Exod 22:17 ↔ HL 44b [equivalent/divergence]: sorcery = moving the ritual's residue onto
+another's property, judged by the king; Lev 14:7 ↔ HL 44b; Deut 22:1–3, Lev 5:22 ↔ HL 45 [equivalent; divergence: a finder's
+reward, and the keeper "becomes a thief"]; 1 Sam 8:14; 1 Kgs 21:3; Lev 25:23 ↔ HL 39–48 (land held under service); 2 Sam 9:7,
+13 ↔ HL 47a [equivalent]: fields granted with bread from the king's table; Gen 47:22, Ezra 7:24 (`וַהֲלָךְ`) ↔ HL 50–51
+[equivalent]: cult personnel exempt from royal service.
+
+**Shared words for HLPT** (its §§ XXIX–XLI rework HL 28–49): all of the above, especially *pittenu-* `הבריח`, *piddai-*
+`הגיש`, *kušata* `מֹהַר`, *mimma-* `מאן`, *tuḫš-* `ניתק`, *šardiya-* `עוזר`, *ḫar(k)-* `החזיק` / *ḫark-* `אבד`, *karp-*
+`הרים`, *šaḫḫan* / *luzzi*, `איש־הכלי` / `אִישׁ־הַהֲלָךְ`, *tittiya-* `מוצב`, *šiyattariya-* `רשם לעצמו`, *kuššaniya-* `שכר`,
+*laḫḫa-* `מערכה`, *parkunu-* `טיהר`, *kuptar* `שיירים`, *alwanzatar* `כשפים`, UNŪTU `חפצים`, *piyanai-* `גמל`, *NÍG.BA*
+`מַתַּת`, *waš-* `קנה`, *kulei* `בור`, *ark-* `הפריש`, *ḫippara-* `חִפָּרָה`, *ḫappar(ai)-* `מסחר` / `מכר`, *šamen-* `הפסיד`.
