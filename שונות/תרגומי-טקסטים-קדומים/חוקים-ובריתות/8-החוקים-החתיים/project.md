@@ -464,3 +464,100 @@ spring]. *karū … kinun=a* in this part: HL 81 (pig, 1 mina → 12 shekels), 9
 part of this brief; the self-check above covers consistency by script. Points a reviewer may want to re-decide: `יַגִּיעַ`
 for *arnu-* (CHiL varies: "occuparsi di", "consegnare", "tenere"), `מחלוקת` (*šullatar*, CHiL "with intent"), the literal
 `ויטהר אותו` (castration), `לנתק` for vines, `יחייבו` (*išḫai-*), and the transliterated *tapešni* / BUBUTANU.
+
+### HLPT (206 clauses)
+Drafted 2026-10-25: `annotated-HLPT.rtl.md`, KBo 6.4 (CHiL CTH 291.PT), clauses 1–205 + col1 = 206 entries; 41 `## `
+headings (§ I–XLI, with CHiL's combined § XXVII–XXVIII, + the colophon), each `## § <roman> (cfr. HL n) – <title>`
+(the "cfr." only where CHiL gives one). `verify HLPT`: **1 problem, a tool false positive** (see below); otherwise clean,
+no repeated-line differences; `check_bible_quotes.py`: 0; `selftest`: 0 failures; `verify HL1 --strict`: still 0.
+CHiL's Italian inserted after drafting (every entry), with the disagreements marked **מחלוקת** (18, 151, 165).
+
+**Tool false positive (for the coordinator; I may not edit the tables).** `../טקסי-שילוח-וטיהור/renderings.md` §H2 row
+`ḫapall` → `חַפַּלָּה` (the place Ḫapalla) is unanchored and fires on the verb *ḫapallašai-* "injure (the head)" (HLPT 42).
+Suggested regex: `ḫapall(?!aš)` (or the determinative: `\{(?:uru|kur)\}ḫapall`). After the fix `verify HLPT` = 0.
+
+**Copying from HL1.** Every line that `data HLPT` marks identical, and every line whose Hittite is the same as an HL1 line
+(44–47, 53, 63, 64, 68, 70, 72, 157, 172, 174, 177, 178, 181, 185 …), carries HL1's Hebrew word for word; the only
+differences are the clause-final mark (`.` where the PT ends the law, e.g. 30, 34, 39, 67) and brackets (the PT preserves
+what HL1 restores: 172, 177, 178). Where the PT differs, only the difference was changed: *LÚ* `איש` for HL1's
+*antuḫša-* `אדם` (40, 51, 61, 66), no possessive on *keššar* / ŠU-aš (14, 29, 33: the formula `ידו חוטאת` kept), "of a
+slave" without "or of a slave woman" (31, 56).
+
+**Self-check.** No `@`, no placeholder; bullets in order in every entry. Formulas, each with one Hebrew: F1 ×53, F8 ×25,
+F4 ×1 (63), F5 ×3 (3, 134, 136), F6 ×4 (4, 14, 29, 33), F9 ×1 (202; *dāiyazi* is outside F9's regex, the Hebrew is
+`יגנוב` anyway). `lexmap` "one Hebrew for several lemmas", the new rows from HLPT: *taki-* / *tamai-* `אחרת` (the Old
+Hittite and the later word for "other": by design – the PT's *damēdani* replaces HL1's *takiya*); EN / *išḫa-* / *BĒLU*
+(`אדוניו`, and of a field `בעל`: the sign and the word); TI / *ḫuišwant-* `חי`; ŠÀ / *anda* `בתוך`; *išḫai-* / *išḫiya-*
+`יחייבו` (one verb); DAM `לאשה` (106, "as a wife") / *ANA* `לאשה` (HL1 178, "to a woman") – the same Hebrew string for two
+senses, natural Hebrew; `לוּ` (*man=mman*, 205, vocalized) / `לו` "to him". GAL "chief" is `שַׂר` (col1: `שַׂר הסופרים`,
+`שַׂר הרועים`), not `ראש` (that is SAG.DU's).
+
+**New renderings fixed (lemma → Hebrew, first clause).**
+| Hittite | Hebrew | First | Note |
+|---|---|---|---|
+| *āššuwaš anda* "among (his) goods" | `בתוך הרכוש` | 8 | CHiL "per i beni" (motive) |
+| *3-ŠU*; *1-ŠU* | `פי שלושה`; `פעם אחת` | 10; 146 | as *2-ŠU* `פי שניים` (HL1) |
+| *pē ḫar-* "have at hand" | `יחזיק עמו` | 11 | |
+| MA.NA pl. | `מנים` (`שתי מנים`, `שש מנים`); 11+ `מנה` (`שלושים מנה`) | 7 | feminine; as `שקלים` / `שקל` |
+| A.GÀR | `חלקת שדה` | 16 | §7.1 |
+| *dammeli-* (land) "untouched, uncultivated" | `לא מעובד` (coordinator; was `בְּתוּלִי`: `בתולה` is reserved for *batultu*) | 22 | `שׁוֹמֵם` is LH's (*dubad*); [divergence] Deut 21:4 `אֲשֶׁר לֹא יֵעָבֵד` |
+| *duwan … duwann=a* | `לכאן … ולכאן` | 22 | |
+| DANNA (*bēru*) | `פרסה` (`שלוש פרסאות`) | 22 | as *bēru* in the Akkadian love songs |
+| SI×SÁ (*ḫandai-*) mp. "be determined" | `תיקבע` | 23 | (`מצא` is *wemiya-*'s) |
+| *ḫapallašai-* "injure (the head)" | `פגע` (`יפגע בראשו`) | 42 | ≠ *ḫunink-* `פצע`; CHiL "rompe" |
+| *karmalaššai-* "remain stiff, be crippled" | `נָכֶה` (`יהיה נָכֶה`, vocalized) | 52 | ↔ 2 Sam 9:3 `נְכֵה רַגְלָיִם` |
+| *išḫizziya-* (EN-*izziya-*) "become master" | `השתלט` | 94 | |
+| *kutruwai-* (=*za*) "call to witness (for oneself)" | `העיד עדים` (`ויעיד לעצמו עדים`) | 151 | ↔ Jer 32:10 `וָאָעֵד עֵדִים`; CHiL "renderà testimonianza" |
+| *ḫarkan* (153) | `הוחזק` (*ḫar(k)-* "hold", not *ḫark-* "perish") | 153 | so CHiL's translation |
+| *arawaḫḫ-* "make exempt" | `פטר` (`יפטור`) | 161 | the verb of *arawa-* `פָּטוּר` (§7.1); ↔ 1 Sam 17:25 |
+| *dai-* "put" (=*ššan*) | `שׂם` (`ישים`) | 165 | crux: CHiL *dā-* "take" |
+| EN of a field | `בעל` | 164 | as HL1 241 `בעל השור` |
+| *eš-* "exist" (a house) | `קיים` | 168 | |
+| *punušš-* "ask" | `שאל` (`ישאלו`) | 187 | |
+| *ASĪRU* "captive" | `אסיר` (`האסיר`) | 196 | [cognate via the Akkadogram]: Akk. *asīru* < *esēru*, Heb. `אָסִיר` (Isa 42:7) – the root is shared (checked, cf. the QĀTU correction) |
+| *išḫiya-* "bind, impose" | `חייב` (`לא יחייבו`) | 203 | = *išḫai-* (HL1 523) |
+| *man=mman* (irrealis) | `לוּ` | 205 | |
+| DUB.SAR; DUMU.DUMU; GAL; NA.GAD; ḪALIBU | `סופר`; `נכד`; `שַׂר`; `רועים`; `*חָלִיבּוּ*` (transliterated) | col1 | names: `חַנִּיקּוּאִילִי`, `זִיטִי` ({m}LÚ), `קָרוּנוּוָה`, NU.GIŠ.SAR `נוּ־גִּישׁ־סַר` |
+
+**How a 13th-century jurist reworked the code (the apparatus's findings).**
+1. **Persons become silver.** HL 3–4's "heads" are gone: § II pays 2 minas for a slave woman (no *arnu-*, no F4).
+2. **New distinctions.** Intent vs accident (*šullannaza* / "his hand errs") carried from HL 1–4 into the merchant (§ III),
+   the blinding (§ V–VI); crippled or not (§ X–XI); 2–3 teeth (§ VII); goods or no goods (§ III); free man / woman (§ IV).
+3. **The old "formerly … now" reread as two grades of guilt.** HL 7: *karū* 1 mina / *kinun=a* 20 shekels → PT § V: 1 mina
+   for intent, 20 shekels for accident. HL 9: the palace share and the reform history are erased; only the result stays (41).
+4. **Fixed sums for open duties.** The physician's fee = 3 shekels (49); the finder without witnesses pays 3× (158); the
+   merchant's goods 3× (10); re-purification and simple (1-ŠU) compensation instead of "sorcery … the king's case" (§ XXXIV).
+5. **Tariffs.** Slaves = half a free man throughout (HL1 had a quarter or less: ear 12:3, nose 40:3); the fetus 20 / 10
+   shekels with no months (HL 17–18: 10 / 5 by month); the merchant 100 → 6 minas; the nose 30 "minas" (surely shekels:
+   MA.NA for GÍN, also 65).
+6. **F4 `ואל ביתו יביט` dropped** in all but one body law (63); *antuḫša-* → *LÚ*; ŠU, GEŠTU, UN for the Hittite words;
+   *GÍN.GÍN*.
+7. **Institutions → private procedure and royal discretion.** The finder calls witnesses (*kutruwai-*) instead of bringing
+   the animal to the king's gate / the elders (HL 71); the royal-gift holder *performs* luzzi unless the king exempts him
+   (HL 47a reversed); the buyer of a whole estate asks the king (*punušš-*) what luzzi to bear (HL 47b); šaḫḫan passes to a
+   buyer only if the seller and his house are gone (§ XXXVII); "all" (the whole field, with 291.3 `DA.BI-an`) replaces
+   "much" (§ XXXVIII).
+8. **The gloss of an obsolete word.** ḫippara- → *ASĪRU* "captive" in § XL–XLI (the oldest interpretation of *ḫippara-*);
+   the OS text (HL1 276, נוסחים) is otherwise word for word.
+9. **§ IV and Deut 21:1–9** (the key parallel): the PT adds what HL 6 lacked – the corpse in open country, and the
+   measuring, 3 DANNA each way, to the towns within: [equivalent] `וּמָדְדוּ אֶל הֶעָרִים אֲשֶׁר סְבִיבֹת הֶחָלָל` (Deut
+   21:2), `נֹפֵל בַּשָּׂדֶה` (21:1); [divergence] the result – the heir "takes those (towns)", i.e. compensation in land,
+   house and silver (18), vs the heifer, the washing and `יָדֵינוּ לֹא שָׁפְכֻה (שָׁפְכוּ) אֶת הַדָּם הַזֶּה` (21:7),
+   `וְנִכַּפֵּר לָהֶם הַדָּם` (21:8); [divergence] every town within the radius (*kuiš kuiš*) vs `הָעִיר הַקְּרֹבָה` (21:3);
+   [divergence] no town → the heir forfeits (26), while Deut assumes a town is always found. The same tool, two opposite
+   ends: the money of a family vs the blood-guilt of a land.
+
+**Cruxes (in the apparatus).** 8 *āššuwaš anda* (place vs motive); 18 *A.GÀR É* (three items vs CHiL "the estate of the
+field"); 22 *dammel pēdan*; 23 SI×SÁ; 24 *apūš=pat* (the towns / their people); 62, 65 MA.NA for GÍN; 151 *kutruwai-*;
+153 *ḫarkan*; 165 *dai-* / *dā-*; 179 *EN-aš* gen. (the field is ruined, as 192 – CHiL agrees); 190 *kuēll=a parā*;
+203 *išḫiya-*; 205 *man=mman* / *mān*; § XVIII–XXXIII's attributions (CHiL's "cfr." kept, my guesses marked "?").
+
+**Parallels (selection).** Deut 21:1–9 ↔ § IV (above); Exod 21:32 ↔ § II; Exod 22:3 ↔ § III (3× vs `שְׁנַיִם`); Exod 21:24,
+26–27 ↔ § V–VII (`יַפִּיל`); Exod 21:19 ↔ § IX; 2 Sam 9:3, Lev 24:20 ↔ § X; Exod 21:22 ↔ § XVI (fixed sum vs `בִּפְלִלִים`);
+Exod 22:17 ↔ § XXXIV; Deut 22:1–3, Exod 23:4, Jer 32:10, Lev 5:22–24 ↔ § XXXV; 1 Sam 17:25 ↔ § XXXVI; Lev 25:23 ↔
+§ XXXVII, § XL; Isa 42:7 ↔ *ASĪRU*.
+
+**Open points for the coordinator.** (1) The §H2 `ḫapall` regex (above). (2) From HL1: both colophons call that tablet
+"Tablet 2" (`2!`) though it holds HL 1–100 – still open; the PT colophon gives no tablet number or title, only the scribe's
+lineage, so it does not help. (3) HL 49 (§ XLI's parallel) is not in CHiL's HL1 base; the note relies on Hoffner's
+summary. (4) Review passes (fidelity, consistency, Hebrew) were not part of the brief.

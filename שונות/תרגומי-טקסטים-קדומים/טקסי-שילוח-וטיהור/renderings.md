@@ -48,7 +48,7 @@ against a goat; the god of the enemy against Azazel), appears in the apparatus a
 | Source (regex) | Hebrew | ★ | Note |
 |---|---|---|---|
 | `ašḫell` | `אַשְׁחֶלָּה` | | Ašḫella, "man of Ḫapalla" (Arzawa). |
-| `ḫapall` | `חַפַּלָּה` | | |
+| `ḫapall(?!aš)` | `חַפַּלָּה` | | (anchored 2026-10-25 by Round 4 run 6 sub 1: the verb *ḫapallašai-* "injure", HLPT 42) |
 | `uḫḫamuw\|uḫḫammuw` | `אוּחַמּוּוָה` | | Uḫḫamuwa, "man of Arzawa". |
 | `puliš` | `פּוּלִישָׁה` | | Puliša. |
 | `ambazz` | `אַמְבַּזִּי` | | Ambazzi (a woman ritual expert). |
