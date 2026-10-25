@@ -367,12 +367,12 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])[ובלהמכש]*(?:זקנים\|זקני\|זקן)(?![א-ת])` | `šu\.gi\|greis\|mekkešš` | `זקנים` only for *LÚ.MEŠ ŠU.GI* (Deut 21:3) |
 | `(?<![א-ת])[ובלהמכש]*(?:שכב\|ישכב\|ישכבו\|שוכב\|שכבה\|תשכב\|שכבו)(?![א-ת])` | `\bšeš\|šašt\|šaš\b\|šašzi\|šešzi\|šeški\|schlafen` | `שכב` only for *šeš-* |
 | `(?<![א-ת])[ובלהמכש]*(?:לפנים)(?![א-ת])` | `karū\|karu\b\|früher` | `לפנים` only for *karū* (F2) |
-| `(?<![א-ת])[ובלהמכש]*(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=\|schlagen` | `מחץ` only for *walḫ-* |
+| `(?<![א-ת])[ובלהמכש]*(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=` | `מחץ` only for *walḫ-* |
 | `(?<![א-ת])[ובלהמכש]*(?:פיצה\|יפצה\|יפצו\|פיצוי\|פיצויים\|פצה)(?![א-ת])` | `šarnink\|šarnikz\|šar=nink\|kompens` | `פיצה` only for *šarnink-* |
-| `(?<![א-ת])[ובלהמכש]*(?:בן חורין\|בת חורין\|בני חורין\|בנות חורין)(?![א-ת])` | `ellu\|elletu\|el-lum\|el-li\|el-le\|araw\|rein\|frei` | `בן חורין` only for *ELLUM* / *arawanni-* |
+| `(?<![א-ת])[ובלהמכש]*(?:בן חורין\|בת חורין\|בני חורין\|בנות חורין)(?![א-ת])` | `ellu\|elletu\|el-lum\|el-li\|el-le\|araw\|\bfrei\b` | `בן חורין` only for *ELLUM* / *arawanni-* |
 | `(?<![א-ת])[ובלהמכש]*(?:חטא\|חוטא\|חוטאת\|יחטא\|חטאו\|חטאת)(?![א-ת])` | `wašt\|wašt=\|freveln\|sünde` | `חטא` only for *wašta-* / *waštul* |
 | `(?<![א-ת])[ובלהמכש]*(?:עברה\|עבירה\|עברות)(?![א-ת])` | `ḫarat\|ḫaratar` | `עברה` only for *ḫaratar* |
-| `(?<![א-ת])[ובלהמכש]*(?:שבועה\|שבועות\|נשבע\|ישבע\|נשבעו)(?![א-ת])` | `linga\|linki\|link\|nīš\|mamīt\|eid` | `שבועה` only for *lingai-* |
+| `(?<![א-ת])[ובלהמכש]*(?:שבועה\|שבועות\|נשבע\|ישבע\|נשבעו)(?![א-ת])` | `linga\|linki\|link\|nīš\|mamīt\|\beid\b` | `שבועה` only for *lingai-* |
 
 ### H5. Formulas (machine-read; both corpora)
 | F | Composite (regex, flat) | Hebrew (regex on the unvocalized line without punctuation) | Note |
