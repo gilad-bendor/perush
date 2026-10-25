@@ -8,7 +8,7 @@
 
 ### 1
 `[takku LÚ-an n]ašma MUNUS-an š[ulla]nnaz kuiški kuenzi`
-> [אם] מישהו יהרוג [איש] או אשה במחלוקת,
+> [אם] מישהו יהרוג [איש או] אשה [במחלוקת],
 - **פירוק:** `[takku` – takku "if", conjunction ("אם"), F1; `LÚ-an` – LÚ "man", acc. sg. c. ("איש"); `n]ašma` – našma "or", conjunction ("או"); `MUNUS-an` – MUNUS "woman", acc. sg. c. ("אשה"); `š[ulla]nnaz` – šullatar "quarrel, dispute", abl. ("במחלוקת"); `kuiški` – kuiški "anyone", indef. nom. sg. c. ("מישהו"); `kuenzi` – kuen- "kill, strike dead", pres. 3sg ("יהרוג").
 - **נוסחים:** מן החוק הראשון לא נשתמר בנוסח החתי הקדום (291.1) אלא שריד (`[… …]ₓ`), ואין להשוות. כתב היד היחיד של נוסח התקן כאן הוא A (KBo 6.3).
 - **תרגומים:** CHiL (it.): "[Se] qualcuno uccide [un uomo] o una donna con [inte]nzione," – **מחלוקת:** CHiL מפרש את *šullannaz* "בכוונה" (con intenzione), כלומר הריגה מכוונת מול "ידו חוטאת" של §3. הופנר ורוב המילונים: *šullatar* "ריב, מחלוקת" (מן *šulla-* "להתקוטט"), וכך כאן. ההבדל מהותי להקבלה עם שמות כא:יב–יד: לפי CHiL החוק החתי מבחין בין כוונה לשגגה כמו התורה; לפי הקריאה שלנו – בין ריב ובין מכה שהסתיימה במוות.
@@ -41,7 +41,7 @@
 
 ### 5
 `[takku ARAD-an na]šma GÉME-an šullannaz kuiški kuēnzi`
-> [אם] מישהו יהרוג [עבד] או אָמָה במחלוקת,
+> [אם] מישהו יהרוג [עבד או] אָמָה במחלוקת,
 - **פירוק:** `[takku` – takku "if" ("אם"), F1; `ARAD-an` – ARAD "slave", acc. sg. c. ("עבד"); `na]šma` – našma "or" ("או"); `GÉME-an` – GÉME "slave woman", acc. sg. c. ("אָמָה"); `šullannaz` – šullatar "quarrel", abl. ("במחלוקת"); `kuiški` – kuiški "anyone" ("מישהו"); `kuēnzi` – kuen- "kill", pres. 3sg ("יהרוג").
 - **נוסחים:** הנוסח הקדום (291.1 1–3): `[… kuišk]i kuē[nzi]` / `[… LÚ-n=ak]u MUNUS-n=a[ku] …` / `[… šuwa]yezz[i]` – אותו מבנה; המספר שבור. משפט "אותו יַגִּיעַ" (6) אינו נראה בשרידי הנוסח הקדום.
 - **תרגומים:** CHiL: "[Se] qualcuno uccide [un servo] o una serva con intenzione," – ראו 1.
@@ -56,7 +56,7 @@
 
 ### 7
 `[Ù 2 SAG.D]U pāi LÚ-n=aku MUNUS-n=aku`
-> [ושני] ראשים ייתן, בין איש בין אשה,
+> [ושני ראשים] ייתן, בין איש בין אשה,
 - **פירוק:** `[Ù` – U "and" ("ו"); `2` – "two" ("שני"); `SAG.D]U` – SAG.DU "head", acc. pl. ("ראשים"); `pāi` – pai- "give", pres. 3sg ("ייתן"); `LÚ-n=aku` – LÚ + -aku ("בין איש"); `MUNUS-n=aku` – MUNUS + -aku ("בין אשה").
 - **תרגומים:** CHiL: "[e] darà (al suo posto) [due person]e, uomo oppure donna,".
 
@@ -105,14 +105,14 @@
 
 ### 14
 `[pa]rna=ššē=a šuwāezzi`
-> ואל ביתו יביט.
+> [ואל ביתו] יביט.
 - **פירוק:** `[pa]rna=ššē=a` – parn- "house", all. + "his" + "and" ("ואל ביתו"); `šuwāezzi` – šuwaye- "look", pres. 3sg ("יביט"). F4.
 
-## §4 – מחיצת עבד או אָמָה עד מוות
+## §4 – מחיצת עבד או אָמָה עד מוות: "ידו חוטאת"
 
 ### 15
 `[takk]u ARAD-an našma GÉME-an kuiški walaḫzi`
-> אם מישהו ימחץ עבד או אָמָה,
+> [אם] מישהו ימחץ עבד או אָמָה,
 - **פירוק:** `[takk]u` – takku "if" ("אם"), F1; `ARAD-an` – ARAD "slave", acc. ("עבד"); `našma` – našma "or" ("או"); `GÉME-an` – GÉME "slave woman", acc. ("אָמָה"); `kuiški` – kuiški "anyone" ("מישהו"); `walaḫzi` – walḫ- "strike", pres. 3sg ("ימחץ").
 - **נוסחים:** הנוסח הקדום (291.1 9–14) זהה במבנה ובתעריף: `[… kuiš]ki walaḫzi` / `n=aš aki` / `QA-AS-SÚ waštai` / `[ap]ūn arnuzzi` / `Ù 1 SAG.DU pāi` / `parn[a=šš]ē=a šuwāyezzi`.
 - **הקבלה:** [divergence] `וּמֵת תַּחַת יָדוֹ נָקֹם יִנָּקֵם` (שמות כא:כ) – בתורה מותו של עבד בידי אדוניו "נִקָּם"; כאן – ראש אחד.
@@ -131,7 +131,7 @@
 
 ### 18
 `[a]pūn arnuzi`
-> אותו יַגִּיעַ,
+> [אותו] יַגִּיעַ,
 - **פירוק:** `[a]pūn` – apa- "he", acc. ("אותו"); `arnuzi` – arnu- "bring, deliver", pres. 3sg ("יַגִּיעַ").
 
 ### 19
@@ -149,7 +149,7 @@
 
 ### 21
 `[takk]u {LÚ}DAM.GÀR {URU}ḪA-AT-TI kuiški kuenzi`
-> אם מישהו יהרוג תַּגָּר חַתִּי,
+> [אם] מישהו יהרוג תַּגָּר חַתִּי,
 - **פירוק:** `[takk]u` – takku "if" ("אם"), F1; `{LÚ}DAM.GÀR` – DAM.GÀR (Sumerogram; Akk. *tamkāru*) "merchant", acc. ("תַּגָּר"); `{URU}ḪA-AT-TI` – Ḫatti, gen. ("חַתִּי"); `kuiški` – kuiški "anyone" ("מישהו"); `kuenzi` – kuen- "kill", pres. 3sg ("יהרוג").
 - **נוסחים:** **בנוסח הקדום (291.1 15–22) התגר אינו "חַתִּי":** `takku {LÚ}DAM.GÀR kuiški kuēnzi` – כל תגר שהוא. התעריף זהה (מאה מנה כסף), וכן החלוקה לפי מקום ההריגה; אבל המקרה השלישי פותח שם ב־`našma` "או" (`našma I-NA KUR {URU}ḪA-AT-TI`, "או בארץ חַתִּי"), וכאן ב־*mān* (27).
 - **תרגומים:** CHiL: "[S]e qualcuno uccide un mercante di Ḫattuša," – מסכים ("תגר של חַתִּי").
@@ -165,7 +165,7 @@
 
 ### 23
 `[parn]a=ššē=a šuwāezzi`
-> ואל ביתו יביט.
+> [ואל ביתו] יביט.
 - **פירוק:** `[parn]a=ššē=a` – parn- "house", all. + "his" + "and" ("ואל ביתו"); `šuwāezzi` – šuwaye- "look", pres. 3sg ("יביט"). F4.
 
 ### 24
@@ -365,7 +365,7 @@
 
 ### 50
 `nu a[pū]n šāktāezzi`
-> ובו יטפל,
+> ו[בו] יטפל,
 - **פירוק:** `nu` – nu "and" ("ו"); `a[pū]n` – apa- "him", acc. ("בו"); `šāktāezzi` – šaktai- "provide sick-maintenance, tend (a sick person)", pres. 3sg ("יטפל").
 - **תרגומים:** CHiL: "(il colpevole) provvederà a q[uell]a" ("ידאג לו") – מסכים.
 - **הערות:** *šaktai-* – לדאוג לחולה: מזון, משכב, טיפול. ה"גלוס" של CHiL/TLHdig "kompensieren(?)" מוטל בספק (ובגללו הכלי מתיר כאן בטעות את `פיצה`); העברית הולכת אחרי המובן "לטפל".
@@ -406,7 +406,7 @@
 
 ### 56
 `{LÚ}A.ZU=ya kuššan apāš=pat [pā]i`
-> וגם את שְׂכַר הרופא – הוא עצמו ייתן.
+> וגם את שְׂכַר הרופא – הוא עצמו [ייתן].
 - **פירוק:** `{LÚ}A.ZU=ya` – A.ZU "physician", gen. + =ya "and, also" ("וגם … הרופא"); `kuššan` – kuššan- "wage, fee", acc. ("את שְׂכַר"); `apāš=pat` – apa- "he", nom. + =pat "himself" ("הוא עצמו"); `[pā]i` – pai- "give", pres. 3sg ("ייתן"), F8.
 - **תרגומים:** CHiL: "e sempre lui [paghe]rà il compenso del medico." – מסכים.
 - **הקבלה:** [equivalent] `וְרַפֹּא יְרַפֵּא` (שמות כא:יט) – בשני החוקים המכה נושא בהוצאות הריפוי; התורה אינה מזכירה רופא, החוק החתי מזכיר את שכרו. וכן חוקי חמורבי §206 (`ואת הרופא יפרע`).
@@ -538,7 +538,7 @@
 
 ### 74
 `[takk]u MUNUS-aš EL-LI šarḫuwanduš=šuš kuiški p[e]š[šiy]azi`
-> אם מישהו ישליך את בטנה של אשה בת חורין,
+> [אם] מישהו [ישליך] את בטנה של אשה בת חורין,
 - **פירוק:** `[takk]u` – takku "if" ("אם"), F1; `MUNUS-aš` – MUNUS "woman", gen. ("של אשה"); `EL-LI` – ELLUM "free", gen. ("בת חורין"); `šarḫuwanduš=šuš` – šarḫuwant- "belly, womb; (its) contents, foetus", acc. pl. + =šuš "her" ("את בטנה"); `kuiški` – "anyone" ("מישהו"); `p[e]š[šiy]azi` – pešš- "throw (out), cast off", pres. 3sg ("ישליך").
 - **נוסחים:** הנוסח הקדום (291.1 66–67) שבור (`[… …]-uš kuiški pešš[iyazi …]`). **בנוסח 291.3 (25–27) אין חלוקה לפי חודשים:** `[t]akku MUNUS-an EL-LAM šarḫūwanda kuiški peššiyazzi` / `20 GÍN KÙ.BABBAR pāi` / `parna=šše=ya šuwāezzi` – תעריף אחיד של עשרים שקל, כפול מן התעריף הגבוה של נוסח התקן.
 - **תרגומים:** CHiL: "[S]e qualcuno fa c[ad]ere il feto di una donna libera (provocandone l'aborto)," ("יפיל את העובר") – CHiL מתרגם לפי המובן; העברית שומרת את הפועל "להשליך" (*pešš-*) ואת "בטנה", כדי שהקורא יראה את הדימוי החתי ואת זהות הפועל עם 46. `הפיל` שמור כאן ל־*lak-* (השן, 34).
@@ -567,7 +567,7 @@
 
 ### 78
 `5 GÍN K[Ù.BABBAR] pāi`
-> חמישה שקלים כסף ייתן,
+> חמישה שקלים [כסף] ייתן,
 - **פירוק:** `5` – "five" ("חמישה"); `GÍN` – "shekel" ("שקלים"); `K[Ù.BABBAR]` – "silver" ("כסף"); `pāi` – pai- "give", pres. 3sg ("ייתן"), F8.
 - **תרגומים:** CHiL: "darà 5 sicli di ar[gento];".
 
@@ -580,7 +580,7 @@
 
 ### 80
 `takku GÉME-aš šarḫuwand[u]š=šuš kuiški peš[šiy]azi`
-> אם מישהו ישליך את בטנה של אָמָה,
+> אם מישהו [ישליך] את בטנה של אָמָה,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `GÉME-aš` – GÉME "slave woman", gen. ("של אָמָה"); `šarḫuwand[u]š=šuš` – šarḫuwant- "belly; foetus", acc. pl. + "her" ("את בטנה"); `kuiški` – "anyone" ("מישהו"); `peš[šiy]azi` – pešš- "throw (out)", pres. 3sg ("ישליך").
 - **נוסחים:** בנוסח 291.3 (28–29) – תעריף אחיד של עשרה שקלים, בלי חלוקה לחודשים (`[t]akku GÉME-an šarḫūwanda kuiški peššiyazi` / `10 GÍN KÙ.BABBAR pāi`).
 - **תרגומים:** CHiL: "Se qualcuno fa cadere il [f]eto di una serva (provocandone l'aborto)," – ראו 74.
@@ -619,7 +619,7 @@
 
 ### 85
 `[i]šḫaš=šiš=an ganešzi`
-> ואדוניו יכיר אותו,
+> [ואדוניו] יכיר אותו,
 - **פירוק:** `[i]šḫaš=šiš=an` – išḫa- "lord, master", nom. + =šiš "his" + =an "him" ("ואדוניו … אותו"); `ganešzi` – kanešš- "recognize, find out", pres. 3sg ("יכיר").
 - **תרגומים:** CHiL: "(e) il suo signore lo riconosce," – מסכים.
 - **הערות:** "אדוניו" – האדון של הנגנב: גם בן חורין "שייך" לבית, ובעל הבית הוא אדונו. האדון מזהה אותו (בשוק העבדים? בבית הקונה?) – וכך מתגלה הגניבה.
@@ -635,7 +635,7 @@
 
 ### 87
 `takku {URU}ḫat[tuši=pat] LÚ {URU}ḪA-AT-TI LÚ {URU}luwiyan kuiški dāyezzi`
-> אם ב[חַתּוּשָׁה עצמה] מישהו, איש חַתִּי, יגנוב איש לוּוִיָּה,
+> אם [בחַתּוּשָׁה עצמה] מישהו, איש חַתִּי, יגנוב איש לוּוִיָּה,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `{URU}ḫat[tuši=pat]` – Ḫattuša, d.-l. + =pat "itself" ("בחַתּוּשָׁה עצמה"); `LÚ` – LÚ "man", nom. ("איש"); `{URU}ḪA-AT-TI` – Ḫatti, gen. ("חַתִּי"); `LÚ` – LÚ "man", acc. ("איש"); `{URU}luwiyan` – Luwiya, acc. ("לוּוִיָּה"); `kuiški` – "anyone" ("מישהו"); `dāyezzi` – taya- "steal", pres. 3sg ("יגנוב").
 - **נוסחים:** הנוסח הקדום (291.1 72–76) זהה, ובו גם "אל ארץ לוּוִיָּה" במשפט הבא (`[n]=an A-NA KUR luwiya peḫutezzi`), ואותו תיקון: לפנים שנים עשר ראש, ועתה שישה.
 - **תרגומים:** CHiL: "Se [proprio a Ḫat]tuša qualcuno, uomo di Ḫattuša, rapisce un luvio," – מסכים.
@@ -644,7 +644,7 @@
 
 ### 88
 `n=an A-NA [KUR … p]ēḫutezzi`
-> ויוליך אותו אל [ארץ …],
+> ו[יוליך] אותו אל [ארץ …],
 - **פירוק:** `n=an` – nu + =an "him" ("ו… אותו"); `A-NA [KUR` – ANA "to" + KUR "land" ("אל [ארץ"); `…` – lost ("…]"); `p]ēḫutezzi` – peḫute- "lead (away)", pres. 3sg ("יוליך").
 - **נוסחים:** הנוסח הקדום: `A-NA KUR luwiya` – "אל ארץ לוּוִיָּה": הגנב מחזיר את הלווי אל ארצו – כדי למכור אותו שם?
 - **תרגומים:** CHiL: "e lo [p]orta nel [paese di …],".
@@ -664,7 +664,7 @@
 
 ### 91
 `pa[rna=ššē=a šuway]ēzzi`
-> [ואל ביתו] יביט.
+> [ואל ביתו יביט].
 - **פירוק:** `pa[rna=ššē=a` – parn- "house", all. + "his" + "and" ("ואל ביתו"); `šuway]ēzzi` – šuwaye- "look", pres. 3sg ("יביט"). F4.
 
 ## §20 – גניבת עבדו של איש חַתִּי מארץ לוּוִיָּה
@@ -680,14 +680,14 @@
 
 ### 93
 `[n]=an A-NA KUR {URU}ḪA-AT-TI uwatezzi`
-> ויביא אותו אל ארץ חַתִּי,
+> [ו]יביא אותו אל ארץ חַתִּי,
 - **פירוק:** `[n]=an` – nu + =an "him" ("ו… אותו"); `A-NA KUR` – "to the land" ("אל ארץ"); `{URU}ḪA-AT-TI` – Ḫatti ("חַתִּי"); `uwatezzi` – uwate- "bring (here)", pres. 3sg ("יביא").
 - **תרגומים:** CHiL: "[e] lo porta nel paese di Ḫattuša,".
 - **הערות:** *uwate-* "להביא (אל הדובר, הנה)" מול *peḫute-* "להוליך (משם, הלאה)" (84): הכיוון של הפועל מסמן את נקודת המבט של החוק – חַתִּי היא "כאן".
 
 ### 94
 `išḫaš=šiš=an [gane]šzi`
-> ואדוניו יכיר אותו,
+> ואדוניו [יכיר] אותו,
 - **פירוק:** `išḫaš=šiš=an` – išḫa- "master", nom. + "his" + =an "him" ("ואדוניו … אותו"); `[gane]šzi` – kanešš- "recognize", pres. 3sg ("יכיר").
 
 ### 95
@@ -706,7 +706,7 @@
 
 ### 97
 `takku ARAD LÚ {URU}luyumnaš IŠ-TU KUR {URU}luwiyaz kuišk[i dāye]zzi`
-> אם מישהו יגנוב עבד של איש לוּוִי מארץ לוּוִיָּה,
+> אם מישהו [יגנוב] עבד של איש לוּוִי מארץ לוּוִיָּה,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `ARAD` – ARAD "slave", acc. ("עבד"); `LÚ` – LÚ "man", gen. ("של איש"); `{URU}luyumnaš` – luwili- / luyumna- "Luwian", gen. ("לוּוִי"); `IŠ-TU KUR` – IŠTU "from" + KUR "land" ("מארץ"); `{URU}luwiyaz` – Luwiya, abl. ("לוּוִיָּה"); `kuišk[i` – kuiški "anyone" ("מישהו"); `dāye]zzi` – taya- "steal", pres. 3sg ("יגנוב").
 - **נוסחים:** הנוסח הקדום (291.1 82–86) זהה (`LÚ {URU}luwimanaš`), ובו "פיצוי אין".
 - **תרגומים:** CHiL: "Se qualcun[o rapi]sce un servo di un luvio dal paese di Luwiya".
@@ -719,7 +719,7 @@
 
 ### 99
 `išḫaš=šiš=an [gane]šzi`
-> ואדוניו יכיר אותו,
+> ואדוניו [יכיר] אותו,
 - **פירוק:** `išḫaš=šiš=an` – išḫa- "master" + "his" + =an "him" ("ואדוניו … אותו"); `[gane]šzi` – kanešš- "recognize", pres. 3sg ("יכיר").
 
 ### 100
@@ -754,7 +754,7 @@
 
 ### 104
 `t[akku manninkuan] ēpzi`
-> א[ם בקרבת מקום] יתפוס (אותו),
+> [אם בקרבת מקום] יתפוס (אותו),
 - **פירוק:** `t[akku` – takku "if" ("אם"), F1; `manninkuan]` – manninkuwan "near, nearby", adv. ("[בקרבת מקום]"); `ēpzi` – ēpp- "seize, catch", pres. 3sg ("יתפוס").
 - **תרגומים:** CHiL: "s[e] lo prende [nelle vicinanze]," – מסכים.
 
@@ -801,8 +801,8 @@
 
 ### 111
 `n=a[š A-NA K]UR {URU}l[uwiya paizzi]`
-> ו[ילך אל א]רץ לוּ[וִיָּה],
-- **פירוק:** `n=a[š` – nu + =aš "he" ("ו־"); `A-NA K]UR` – ANA "to" + KUR "land" ("[אל א]רץ"); `{URU}l[uwiya` – Luwiya, d.-l. ("לוּ[וִיָּה]"); `paizzi]` – pā(i)- "go", pres. 3sg ("[ילך]").
+> ו[ילך אל ארץ לוּוִיָּה],
+- **פירוק:** `n=a[š` – nu + =aš "he" ("ו־"); `A-NA K]UR` – ANA "to" + KUR "land" ("[אל ארץ]"); `{URU}l[uwiya` – Luwiya, d.-l. ("[לוּוִיָּה]"); `paizzi]` – pā(i)- "go", pres. 3sg ("[ילך]").
 - **תרגומים:** CHiL: "e [va nel pa]ese di L[uwiya],".
 - **הערות:** כאן נוסח התקן משאיר את "לוּוִיָּה" של הנוסח הקדום (ראו 83).
 
@@ -814,13 +814,13 @@
 
 ### 113
 `nu=šše 6 GÍ[N K]Ù.BABBAR pāi`
-> ולו שישה שקלים כסף ייתן,
+> ולו שישה [שקלים כסף] ייתן,
 - **פירוק:** `nu=šše` – nu + =šše "to him" ("ולו"); `6` – "six" ("שישה"); `GÍ[N` – "shekel" ("שקלים"); `K]Ù.BABBAR` – "silver" ("כסף"); `pāi` – pai- "give", pres. 3sg ("ייתן"), F8.
 - **תרגומים:** CHiL: "(il proprietario) darà a lui 6 sic[li di ar]gento.".
 
 ### 114
 `tak[ku ARAD-aš ḫūwai]`
-> א[ם עבד יברח],
+> [אם עבד יברח],
 - **פירוק:** `tak[ku` – takku "if" ("אם"), F1; `ARAD-aš` – ARAD "slave", nom. ("עבד"); `ḫūwai]` – ḫuwai- "flee", pres. 3sg ("יברח").
 
 ### 115
@@ -832,14 +832,14 @@
 
 ### 116
 `[ku]iš=an EGIR-[pa=ma uwatezzi]`
-> מי [שיביא אותו בחזרה],
+> [מי שיביא] אותו בחזרה,
 - **פירוק:** `[ku]iš=an` – kui- "who" + =an "him" ("מי ש… אותו"); `EGIR-[pa=ma` – appa "back" + =ma ("בחזרה"); `uwatezzi]` – uwate- "bring (here)", pres. 3sg ("[יביא]").
 - **תרגומים:** CHiL: "allora [co]lui che lo [riporta in]dietro,".
 
 ### 117
 `n=an=z=(š)an apāš=pat [d]ā[i]`
-> ואותו הוא עצמו יי[קח] לעצמו.
-- **פירוק:** `n=an=z=(š)an` – nu + =an "him" + =za reflexive + =šan (local particle, not rendered) ("ואותו … לעצמו"); `apāš=pat` – apa- "he", nom. + =pat "himself" ("הוא עצמו"); `[d]ā[i]` – dā- "take", pres. 3sg ("יי[קח]").
+> ואותו הוא עצמו [ייקח] לעצמו.
+- **פירוק:** `n=an=z=(š)an` – nu + =an "him" + =za reflexive + =šan (local particle, not rendered) ("ואותו … לעצמו"); `apāš=pat` – apa- "he", nom. + =pat "himself" ("הוא עצמו"); `[d]ā[i]` – dā- "take", pres. 3sg ("[ייקח]").
 - **תרגומים:** CHiL: "sempre lui se lo [pr]ende[rà] (come servo)." – מסכים.
 - **הערות:** מי שהעז ושלף עבד מארץ אויב – העבד שלו. הבעלות של האדון הראשון פוקעת כשהעבד חוצה את גבול האיבה.
 
@@ -862,15 +862,15 @@
 
 ### 120
 `LÚ-naš [ku]šš[a]n ŠA MU 1[{KAM} n MA.NA KÙ.BABBAR pāi]`
-> שְׂכַר איש של שנה אחת – [… מנה כסף ייתן],
+> [שְׂכַר] איש של שנה אחת – [… מנה כסף ייתן],
 - **פירוק:** `LÚ-naš` – LÚ "man", gen. ("איש"); `[ku]šš[a]n` – kuššan- "wage, hire", acc. ("שְׂכַר"); `ŠA MU 1[{KAM}` – ŠA "of" + MU "year" + "one" ("של שנה אחת"); `n` – number lost ("[…"); `MA.NA` – "mina" ("מנה"); `KÙ.BABBAR` – "silver" ("כסף"); `pāi]` – pai- "give", pres. 3sg ("ייתן]").
 - **תרגומים:** CHiL: "[darà] a lui il compen[so an]nuale(!) di un uomo [(corrispondente a) n mine di argento]" – CHiL מסמן את "שנתי" בסימן קריאה: הנוסח הקדום מונה לחודש.
 - **הערות:** המסתיר משלם לאדון את שכרו השנתי של פועל שכיר. הסכום לגבר שבור (העורכים: "n מנה").
 
 ### 121
 `MUN[US-š]a=ma kuššan ŠA [MU 1{KAM}] 40 GÍN [KÙ.BABBAR pāi]`
-> ואילו שְׂכַר אשה [של שנה אחת] – ארבעים שקל [כסף ייתן].
-- **פירוק:** `MUN[US-š]a=ma` – MUNUS "woman", gen. + =ma "but" ("ואילו … אשה"); `kuššan` – kuššan- "wage", acc. ("שְׂכַר"); `ŠA [MU 1{KAM}]` – "of [one year]" ("[של שנה אחת]"); `40` – "forty" ("ארבעים"); `GÍN` – "shekel" ("שקל"); `[KÙ.BABBAR` – "silver" ("[כסף"); `pāi]` – pai- "give", pres. 3sg ("ייתן]").
+> ואילו שְׂכַר [אשה של שנה אחת] – ארבעים שקל [כסף ייתן].
+- **פירוק:** `MUN[US-š]a=ma` – MUNUS "woman", gen. + =ma "but" ("ואילו … [אשה]"); `kuššan` – kuššan- "wage", acc. ("שְׂכַר"); `ŠA [MU 1{KAM}]` – "of [one year]" ("[של שנה אחת]"); `40` – "forty" ("ארבעים"); `GÍN` – "shekel" ("שקל"); `[KÙ.BABBAR` – "silver" ("[כסף"); `pāi]` – pai- "give", pres. 3sg ("ייתן]").
 - **תרגומים:** CHiL: "ma (se è una donna) [darà] il compenso [annuale] di una donna (corrispondente a) 40 sicli [di argento]." – מסכים.
 - **הערות:** שכר אשה לשנה: ארבעים שקל – מנה אחת. *=ma* "ואילו": הניגוד בין שכר הגבר לשכר האשה.
 
@@ -878,7 +878,7 @@
 
 ### 122
 `[takku] LÚ.U₁₉.LU-aš {DUG}ÚTUL-[i našma luliya] pap[rezzi]`
-> [אם] אדם ייטמא בקדרה [או בבריכה],
+> [אם] אדם [ייטמא] בקדרה [או בבריכה],
 - **פירוק:** `[takku]` – takku "if" ("[אם]"), F1; `LÚ.U₁₉.LU-aš` – antuḫša- "person", nom. ("אדם"); `{DUG}ÚTUL-[i` – ÚTUL "pot, bowl", d.-l. ("בקדרה"); `našma` – "or" ("[או"); `luliya]` – luli- "pond, basin, vat", d.-l./all. ("בבריכה]"); `pap[rezzi]` – paprešš- "become impure", pres. 3sg ("ייטמא").
 - **נוסחים:** הנוסח הקדום (291.1 107–115) זהה בתוכנו, אבל בשורה המקבילה ל־126 הוא כותב `[…-w]anna parna 3 GÍN KÙ.BABBAR daškēr` – "אל הבית של […] היו לוקחים שלושה שקלים", כלומר החלק הלך ל"בית" (של המלך?) ולא נקרא שם "היכל". הנוסח 291.4 (1–9) – `[kar]ū 6 GÍN.GÍN KÙ.BA[BBAR …]` וכו', ובשורה 7 `kuiš parkuēšz[i …]` – "מי שמטהר"(?) במקום "מי שנטמא": אולי מקרה נוסף, של מי שמטהר (מנקה) את הכלי.
 - **תרגומים:** CHiL (it.): "[Se] una persona [commette] impurità in un vaso [o in uno stagno]," ("יעשה טומאה") – CHiL מבין את *paprešš-* פעיל ("גורם טומאה"); צורת הפועל (*-ešš-*, "להיעשות") אינטרנזיטיבית: "ייטמא (ב־)", ומשמעה – טימא את הכלי בגופו.
@@ -930,8 +930,8 @@
 
 ### 130
 `[parna=ššē]=a šuw[ayezzi]`
-> [ואל ביתו] יב[יט].
-- **פירוק:** `[parna=ššē]=a` – parn- "house", all. + "his" + "and" ("[ואל ביתו]"); `šuw[ayezzi]` – šuwaye- "look", pres. 3sg ("יב[יט]"). F4.
+> [ואל ביתו יביט].
+- **פירוק:** `[parna=ššē]=a` – parn- "house", all. + "his" + "and" ("[ואל ביתו]"); `šuw[ayezzi]` – šuwaye- "look", pres. 3sg ("[יביט]"). F4.
 
 ## §26b–26c – פירוד בני זוג (שבור)
 
@@ -982,8 +982,8 @@
 
 ### 138
 `[…] pēḫu[tezzi]`
-> […] יולי[ך],
-- **פירוק:** `[…]` – lost ("[…]"); `pēḫu[tezzi]` – peḫute- "lead (away), take (there)", pres. 3sg ("יולי[ך]").
+> […] [יוליך],
+- **פירוק:** `[…]` – lost ("[…]"); `pēḫu[tezzi]` – peḫute- "lead (away), take (there)", pres. 3sg ("[יוליך]").
 - **נוסחים:** נוסח 291.3 (34–42) שלם יותר: `takku LÚ-aš DAM-ŠU dāi` – "אם איש ייקח את אשתו" / `n=an [parna=šša] pēḫutezzi` – "ויוליך אותה אל ביתו" / `iwaru=šši anda pēdāi` – "ואת מַתָּנָהּ פנימה תישא לו". ההבדלים התוכניים שם: (1) `n=aš LÚ-aš āššu=šet BIL-n[uzi]` – **האיש** שורף את רכושה (כאן: "ישרפו", בלשון רבים); (2) `DUMU.NITA=ši` – "ויש לה **בן**" (כאן: "בנים", DUMU.MEŠ). נוסח 291.5 (8–13) קרוב לנוסח התקן (`LÚ-naš āššu=〈še〉-et wa[rnuanzi]`).
 - **תרגומים:** CHiL: "[…] port[a …]".
 - **הערות:** "ייקח את אשתו ויוליך אותה (אל ביתו)" – הנישואין כהעברה של האשה מבית אביה לבית בעלה, והמַתָּן (*iwaru*, "החלק, הירושה") שהיא מביאה עמה מבית אביה.
@@ -998,8 +998,8 @@
 
 ### 140
 `takku MUNUS=z(a) a[piya aki]`
-> אם האשה ש[ם תמות],
-- **פירוק:** `takku` – takku "if" ("אם"), F1; `MUNUS=z(a)` – MUNUS "woman", nom. (+ =za) ("האשה"); `a[piya` – apiya "there", adv. ("ש[ם"); `aki]` – akk- "die", pres. 3sg ("תמות]").
+> אם האשה [שם תמות],
+- **פירוק:** `takku` – takku "if" ("אם"), F1; `MUNUS=z(a)` – MUNUS "woman", nom. (+ =za) ("האשה"); `a[piya` – apiya "there", adv. ("[שם"); `aki]` – akk- "die", pres. 3sg ("תמות]").
 - **תרגומים:** CHiL: "Se la donna [muore l]ì (nella casa),".
 
 ### 141
@@ -1063,7 +1063,7 @@
 
 ### 149
 `nu ḫantezziyaš LÚ-aš kuit kuit p[ešta]`
-> וכל אשר נתן האיש הראשון –
+> וכל אשר [נתן] האיש הראשון –
 - **פירוק:** `nu` – nu "and" ("ו"); `ḫantezziyaš` – ḫantezzi(ya)- "first, foremost", nom. sg. c. ("הראשון"); `LÚ-aš` – LÚ "man", nom. ("האיש"); `kuit kuit` – kui- "what", rel. acc. n., doubled = "whatever" ("כל אשר"); `p[ešta]` – pai- "give", pret. 3sg ("נתן").
 - **תרגומים:** CHiL: "qualsiasi cosa l'uomo precedente [ha dato],".
 
@@ -1171,8 +1171,8 @@
 
 ### 164
 `n=aš=kan šamenzi`
-> יפסיד אותו.
-- **פירוק:** `n=aš=kan` – nu + =aš "them" (acc. pl. c.) + =kan ("… אותו"); `šamenzi` – šamen- "pass by; forfeit, lose", pres. 3sg ("יפסיד").
+> והוא יפסיד (אותו).
+- **פירוק:** `n=aš=kan` – nu "and" + =aš "he", nom. sg. c. + =kan ("והוא"; the object "(אותו)" – the bride-price – is implied, as HLPT 26 `והוא יפסיד.`); `šamenzi` – šamen- "pass by; forfeit, lose", pres. 3sg ("יפסיד").
 - **תרגומים:** CHiL: "rinuncerà." ("יוותר") – אותו מובן.
 - **הקבלה:** [equivalent] חוקי חמורבי §159: החתן "שהביט באשה אחרת" – מפסיד את אשר הובל.
 - **הערות:** *šamen-* מילולית "לעבור, לחלוף על פני": המֹהַר "חולף" ממנו. איש שחזר בו – כספו אבד, אבל אין עליו קנס נוסף; ההורים שחזרו בהם – משלמים כפל (§29). הסימטריה אינה שלמה: המילה של בית האב יקרה יותר.
@@ -1190,8 +1190,8 @@
 
 ### 166
 `n=at anda aranzi`
-> ויגיעו יחד,
-- **פירוק:** `n=at` – nu + =at "they" (nom. pl.) ("ו־"); `anda` – anda "in, together", preverb ("יחד"); `aranzi` – ar- "arrive", pres. 3pl ("יגיעו").
+> ויגיעו זה אל זה,
+- **פירוק:** `n=at` – nu + =at "they" (nom. pl.) ("ו־"); `anda` – anda "in, together", preverb ("זה אל זה"); `aranzi` – ar- "arrive", pres. 3pl ("יגיעו").
 - **הערות:** *ar-* "להגיע" – הבסיס של *arnu-* "לגרום להגיע" (`יַגִּיעַ`, §1): `יגיעו`. `בא` שמור ל־*uwa-* "לבוא" (304, 456).
 - **תרגומים:** CHiL: "vanno (a vivere) assieme,".
 
@@ -1263,7 +1263,7 @@
 
 ### 181
 `takku MUNUS-an EL-LUM {LÚ}AGRIG našma {LÚ}SIPA pi[tt]e[nuz]i`
-> אם סוכן או רועה יבריח אשה בת חורין,
+> אם סוכן או רועה [יבריח] אשה בת חורין,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `MUNUS-an` – MUNUS "woman", acc. ("אשה"); `EL-LUM` – ELLUM "free" ("בת חורין"); `{LÚ}AGRIG` – AGRIG (Akk. *abarakku*) "steward, administrator", nom. ("סוכן"); `našma` – našma "or" ("או"); `{LÚ}SIPA` – SIPA "shepherd", nom. ("רועה"); `pi[tt]e[nuz]i` – pittenu- "elope with", pres. 3sg ("יבריח").
 - **נוסחים:** בכתב היד A של נוסח התקן §35 בא לפני §33–§34 (כך הסדר בבסיס, ולכן כאן). הנוסח הקדום (291.1 128–129): `takku MUNUS-nan EL-LE-TAM {LÚ}SIPA […]` / `[n]=aš I-NA MU 3{KAM} GÉME-re[zzi]` – בו נזכר הרועה (הסוכן אולי בשבור), ו"בשנה השלישית" קריאה ודאית.
 - **תרגומים:** CHiL: "Se un supervisore o un pastore fa [fuggi]re una donna libera".
@@ -1278,8 +1278,8 @@
 
 ### 183
 `n=aš I-[N]A [M]U 3?[{KAM} GÉM]E?-aššarešzi`
-> והיא [בשנה] השלישית? [לאָמָה] תיעשה.
-- **פירוק:** `n=aš` – nu + =aš "she" ("והיא"); `I-[N]A [M]U` – INA "in" + MU "year" ("[בשנה]"); `3?[{KAM}` – "third" (uncertain; the OS has 3) ("השלישית?"); `GÉM]E?-aššarešzi` – GÉME-iššaršš- "become a slave woman", pres. 3sg ("[לאָמָה] תיעשה").
+> והיא [בשנה] השלישית? [לאָמָה תיעשה].
+- **פירוק:** `n=aš` – nu + =aš "she" ("והיא"); `I-[N]A [M]U` – INA "in" + MU "year" ("[בשנה]"); `3?[{KAM}` – "third" (uncertain; the OS has 3) ("השלישית?"); `GÉM]E?-aššarešzi` – GÉME-iššaršš- "become a slave woman", pres. 3sg ("[לאָמָה תיעשה]").
 - **תרגומים:** CHiL: "allora ella sarà [asservita pe]r 3 an[ni]." – **CHiL: "תשועבד לשלוש שנים"** (שעבוד זמני); העברית, לפי הנוסח הקדום (`I-NA MU 3{KAM}`, "בשנה השלישית"), – אחרי שלוש שנים תיעשה אמה. *I-NA* "ב־" + מספר סודר (KAM) תומך בקריאה שלנו.
 - **הערות:** בלי מֹהַר אין נישואין של בת חורין: אחרי שלוש שנים בבית הרועה היא נעשית אמה. המֹהַר הוא אפוא לא רק מחיר – הוא מה ששומר על מעמדה.
 
@@ -1340,7 +1340,7 @@
 
 ### 186
 `n=an=kan parā [Ú-U]L kuiški tarnai`
-> ואותו אף אחד לא ישלח החוצה.
+> ואותו אף אחד [לא] ישלח החוצה.
 - **פירוק:** `n=an=kan` – nu + =an "him" + =kan ("ואותו"); `parā` – "out" ("החוצה"); `[Ú-U]L` – UL "not" ("לא"); `kuiški` – "anyone" ("אף אחד … לא"); `tarnai` – tarna- "let go, release", pres. 3sg ("ישלח").
 - **תרגומים:** CHiL: "allora nessuno lo affrancherà." – CHiL: "לא ישחרר אותו", כלומר מעמדו של החתן לא ישתנה.
 - **הערות:** החתית זהה ל־180; העברית שונה רק במין ("אותה" / "אותו"), כי *=an* הוא כינוי של המין המשותף, וההקשר מכריע: שם האשה, כאן החתן.
@@ -1350,7 +1350,7 @@
 
 ### 187
 `takku MUNUS-an ku[išk]i pittenuzzi`
-> אם מישהו יבריח אשה,
+> אם [מישהו] יבריח אשה,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `MUNUS-an` – MUNUS "woman", acc. ("אשה"); `ku[išk]i` – kuiški "anyone" ("מישהו"); `pittenuzzi` – pittenu- "elope with, abduct", pres. 3sg ("יבריח").
 - **נוסחים:** הנוסח הקדום (291.1 136–140) זהה בתוכנו: `takku MUNUS-nan kuiški pittinuzzi` / `n[u=kan šard]iyeš āppananda pā[n]z[i]` – שם "עוזרים" ברבים ("ילכו אחריהם") / `takku 3 LÚ{MEŠ} našma 2 LÚ{MEŠ} ak[kanzi]` – "שלושה או שניים" (בסדר הפוך) / `šarnikzil NU.GÁL` / `zik=wa UR.BAR.RA kištat`.
 - **תרגומים:** CHiL: "Se qual[cun]o fa fuggire una donna".
@@ -1358,14 +1358,14 @@
 
 ### 188
 `EGIR-anda=ma=[šm]aš=k[an ša]rdiyaš paizzi`
-> ואחריהם ילך עוזר,
+> ואחריהם ילך [עוזר],
 - **פירוק:** `EGIR-anda=ma=[šm]aš=k[an` – appanda "after, behind" + =ma + =šmaš "them" + =kan ("ואחריהם"); `ša]rdiyaš` – šardiya- "helper, ally, supporter", gen. sg./nom. ("עוזר"); `paizzi` – pā(i)- "go", pres. 3sg ("ילך").
 - **תרגומים:** CHiL: "e dietro a lo[ro (i fuggitivi)] va (un manipolo) dei sostenitori (della famiglia)," – CHiL: "חבורה של תומכי המשפחה"; העברית מילולית.
 - **הערות:** *šardiya-* – "עוזר, בעל ברית". "אחריהם" – אחרי הבורחים: העוזרים הם, כנראה, אנשי משפחת האשה הרודפים (כך CHiL), ו"שניים או שלושה" שמתו (189) הם מאנשי המבריח. בנוסח הקדום "עוזרים" ברבים.
 
 ### 189
 `takku 2 LÚ{MEŠ} na[šm]a 3 L[Ú{M]}EŠ akkanzi`
-> אם שני אנשים או שלושה אנשים ימותו,
+> אם שני אנשים [או] שלושה [אנשים] ימותו,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `2` – "two" ("שני"); `LÚ{MEŠ}` – LÚ "man", pl. ("אנשים"); `na[šm]a` – našma "or" ("או"); `3` – "three" ("שלושה"); `L[Ú{M]}EŠ` – LÚ, pl. ("אנשים"); `akkanzi` – akk- "die", pres. 3pl ("ימותו").
 - **תרגומים:** CHiL: "se muoiono 2 uomini [o] 3 [uo]mini".
 
@@ -1387,7 +1387,7 @@
 
 ### 192
 `takku LÚ.U₁₉.LU{MEŠ} [ḫa]nnešni appanteš`
-> אם בני אדם תפוסים בדין,
+> אם בני אדם תפוסים [בדין],
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `LÚ.U₁₉.LU{MEŠ}` – antuḫša- "person", pl. ("בני אדם"); `[ḫa]nnešni` – ḫanneššar "lawsuit, case", d.-l. ("בדין"); `appanteš` – ēpp- "seize", participle nom. pl. c. ("תפוסים").
 - **נוסחים:** הנוסח הקדום (291.1 141–146) מבהיר את השורה השבורה 194: `takku ḫannešnaš išḫāš lē[la]niatta` – "אם *בעל הדין* יתמלא חמה"; אחר כך `[… …]… šartiann=[a …]` / `n=aš aki` / `šarni[k]zil [N]U.GÁL` – כמו כאן.
 - **תרגומים:** CHiL: "Se degli uomini sono coinvolti in un [pro]cesso" – מסכים ("מעורבים"); העברית שומרת את "נתפסים" (*ēpp-*).
@@ -1413,7 +1413,7 @@
 
 ### 196
 `[n]=aš aki`
-> וימות –
+> [ו]ימות –
 - **פירוק:** `[n]=aš` – nu + =aš "he" ("ו־"); `aki` – akk- "die", pres. 3sg ("ימות"). F5.
 - **תרגומים:** CHiL: "[ed] egli muore,".
 
@@ -1437,15 +1437,15 @@
 
 ### 199
 `šaḫḫan[n=a išš]āi`
-> וגם את השַׁחְחַן יעשה,
+> וגם את השַׁחְחַן [יעשה],
 - **פירוק:** `šaḫḫan[n=a` – šaḫḫan "šaḫḫan (a feudal obligation)", acc. + =a "also" ("וגם את השַׁחְחַן"); `išš]āi` – iya- "do, perform", iterative pres. 3sg (iššai) ("יעשה").
 - **תרגומים:** CHiL: "[ese]guirà [il (suo servizio)] šaḫḫan." – CHiL משחזר "(שלו)" לפי הנוסח הקדום; העברית מתרגמת את *=a* "גם".
 - **הערות:** *šaḫḫan* ו־*luzzi* – שתי חובות השירות המרכזיות של בעלי הקרקע בחוק החתי, ומשמען המדויק שנוי במחלוקת. *šaḫḫan* היא כנראה חובה הקשורה בקרקע עצמה – תשלומים ושירותים למלך או לאדון (בעין ובעבודה); *luzzi* (§46 ואילך) – עבודת כפייה ציבורית (בניין, דרכים, קציר של ההיכל). הן מתועתקות (`שַׁחְחַן`, `לוּצִּי`), כי אין להן מקבילה עברית מדויקת. ה"עשייה" איטרטיבית: חובה שחוזרת שנה אחר שנה.
 
 ### 200
 `takku A.[ŠÀ{ḪI.A}=m]a arḫa peššiyazi`
-> ואם את השד[ות] ישליך הלאה,
-- **פירוק:** `takku` – takku "if" ("אם"), F1; `A.[ŠÀ{ḪI.A}=m]a` – A.ŠÀ "field", pl. + =ma "but" ("ו… את השד[ות]"); `arḫa` – arḫa "away", preverb ("הלאה"); `peššiyazi` – pešš- "throw (away)", pres. 3sg ("ישליך").
+> ואם את [השדות] ישליך הלאה,
+- **פירוק:** `takku` – takku "if" ("אם"), F1; `A.[ŠÀ{ḪI.A}=m]a` – A.ŠÀ "field", pl. + =ma "but" ("ו… את [השדות]"); `arḫa` – arḫa "away", preverb ("הלאה"); `peššiyazi` – pešš- "throw (away)", pres. 3sg ("ישליך").
 - **תרגומים:** CHiL: "[M]a se egli respinge i c[ampi]," ("ידחה") – העברית שומרת את *pešš-* "להשליך" (+ *arḫa* "הלאה").
 - **הערות:** "ישליך הלאה" – ינטוש, יוותר. אותו פועל של "המלך השליך" (46).
 
@@ -1462,11 +1462,11 @@
 - **תרגומים:** CHiL: "e non li vende[rà]." – מסכים.
 - **הערות:** מי שנוטש את השדה אינו רשאי למכור אותו: הוא אינו בעליו. הקרקע חוזרת לבעלים או לקהילה, עם חובותיה.
 
-## §40 – איש־הכלי שאבד ואיש־ההלך שבמקומו
+## §40 – איש־הכלי שאבד ואיש־הַהֲלָךְ שבמקומו
 
 ### 203
 `takku LÚ˽{GIŠ}[TUKUL ḫa]rakzi`
-> אם איש־[הכלי] יאבד,
+> אם איש־[הכלי יאבד],
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `LÚ˽{GIŠ}[TUKUL` – LÚ GIŠTUKUL "man of the tool (weapon)", nom. ("איש־[הכלי]"); `ḫa]rakzi` – ḫark- "perish, disappear, be lost", pres. 3sg ("יאבד").
 - **נוסחים:** הנוסח הקדום (291.1 152–165) זהה בתוכנו כמעט מילה במילה, ובו הצורות הקדומות (`šittariezzi` במקום `šiyattariyazi`, `kīša` במקום `kišari`); במקום "אם את הכלי ימאן" (211) – אותו נוסח. הנוסח 291.4 (26–38) – כמוהם.
 - **תרגומים:** CHiL: "Se un uomo del [(servizio) TUKUL sco]mpare," – מסכים ("ייעלם").
@@ -1475,7 +1475,7 @@
 
 ### 204
 `LÚ IL-KI tittianza`
-> ואִישׁ־הַהֲלָךְ מוצב (במקומו),
+> איש־הַהֲלָךְ מוצב (במקומו),
 - **פירוק:** `LÚ` – LÚ "man" ("איש"); `IL-KI` – ILKU (Akk.) "land-service, *ilku*", gen. ("־הַהֲלָךְ"); `tittianza` – tittiya- "install, assign", participle nom. sg. c. ("מוצב").
 - **תרגומים:** CHiL: "e un uomo del (servizio) ILKU è assegnato (al suo posto),".
 - **הקבלה:** [cognate loan] (דרך האכדוגרמה) *ILKU* = ארמית `הֲלָךְ` (מילה שאולה מן האכדית): `מִנְדָּה בְלוֹ וַהֲלָךְ לָא שַׁלִּיט לְמִרְמֵא עֲלֵיהֹם` (עזרא ז:כד) – אחד ממסי המלך, שממנו פטורים משרתי בית האל; המילה הארמית שאולה מן האכדית *ilku*.
@@ -1502,7 +1502,7 @@
 
 ### 208
 `nu=z(a) ŠA LÚ˽{GIŠ}TUKUL A.ŠÀ{ḪI.A} anda šiy[att]ariyazi`
-> וירשום לעצמו את שדות איש־הכלי,
+> ו[ירשום] לעצמו את שדות איש־הכלי,
 - **פירוק:** `nu=z(a)` – nu + =za "for himself" ("ו… לעצמו"); `ŠA LÚ˽{GIŠ}TUKUL` – "of the man of the tool" ("של איש־הכלי"); `A.ŠÀ{ḪI.A}` – A.ŠÀ "field", pl. ("את שדות"); `anda` – anda "in", preverb (not rendered); `šiy[att]ariyazi` – šiyattariya- "have (something) sealed / registered to oneself", pres. 3sg ("ירשום").
 - **תרגומים:** CHiL: "e assi[cur]a i campi dell'uomo (defunto) del (servizio) TUKUL in un documento sigillato" – מסכים במובן ("מבטיח בתעודה חתומה"); העברית `ירשום`.
 - **הערות:** *šiyattariya-* נגזר מ־*šiyatar* "חותם": המחליף "מחתים לעצמו" את השדות – מקבל עליהם תעודה חתומה. `ירשום` במקום "יחתים", כי `חָתַם` שמור בקורפוס המצרי למילה המצרית שממנה נשאל.
@@ -1521,20 +1521,20 @@
 
 ### 211
 `takku {GIŠ}TUKUL=[ma mi]mmai`
-> ואם את הכלי ימאן,
+> ואם את הכלי [ימאן],
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `{GIŠ}TUKUL=[ma` – GIŠTUKUL "tool" + =ma "but" ("ו… את הכלי"); `mi]mmai` – mimma- "refuse", pres. 3sg ("ימאן").
 - **תרגומים:** CHiL: "Ma se egli rifiuta il (servizio) TUKUL".
 
 ### 212
 `nu A.ŠÀ{ḪI.A} ŠA LÚ˽{GIŠ}TUKUL ḫarkantan t[aranzi]`
-> ואת שדות איש־הכלי – "אבוד" יאמרו,
+> ואת שדות איש־הכלי – "אבוד" [יאמרו],
 - **פירוק:** `nu` – nu "and" ("ו"); `A.ŠÀ{ḪI.A}` – A.ŠÀ "field", pl. ("את שדות"); `ŠA LÚ˽{GIŠ}TUKUL` – "of the man of the tool" ("איש־הכלי"); `ḫarkantan` – ḫark- "perish", participle acc. sg. c. ("אבוד"); `t[aranzi]` – te- / tar- "say, declare", pres. 3pl ("יאמרו").
 - **תרגומים:** CHiL: "allora si sta[bilisce] che i campi dell'uomo (defunto) del (servizio) TUKUL sono abbandonati" – אותו מובן ("יקבעו שהם נטושים").
 - **הערות:** "יאמרו (עליהם): של איש אבוד" – השדות מוכרזים כשדות של מי שאבד, ונמסרים לקהילה. המילה *ḫarkant-* כאן היא האבוד – אותו פועל של 203.
 
 ### 213
 `n=an LÚ{MEŠ} URU-r[iaš a]nneškanzi`
-> ואותם אנשי העיר יעבדו.
+> ואותם אנשי העיר [יעבדו].
 - **פירוק:** `n=an` – nu + =an "it" ("ואותם"); `LÚ{MEŠ}` – LÚ "man", pl. ("אנשי"); `URU-r[iaš` – URU "town", gen. ("העיר"); `a]nneškanzi` – aniya- "work", iterative pres. 3pl ("יעבדו").
 - **תרגומים:** CHiL: "e gli uomini [della c]ittà li [la]vorano.".
 - **הערות:** אנשי העיר – הקהילה המקומית – מעבדים את השדה הנטוש ונושאים בחובותיו, עד שיימצא לו בעל.
@@ -1598,7 +1598,7 @@
 
 ### 223
 `nu {GIŠ}[TUK]UL ḫarzi`
-> ואת הכלי יחזיק,
+> ואת [הכלי] יחזיק,
 - **פירוק:** `nu` – nu "and" ("ו"); `{GIŠ}[TUK]UL` – GIŠTUKUL "tool", acc. ("את הכלי"); `ḫarzi` – ḫar(k)- "hold", pres. 3sg ("יחזיק").
 
 ### 224
@@ -1753,8 +1753,8 @@
 
 ### 245
 `nu=šši EG[IR-pa DUMU.NITA-an pāi]`
-> ולו ב[חזרה בן ייתן].
-- **פירוק:** `nu=šši` – nu + =šši "to him" ("ולו"); `EG[IR-pa` – appa "back, in return" ("ב[חזרה"); `DUMU.NITA-an` – DUMU.NITA "son", acc. ("בן"); `pāi]` – pai- "give", pres. 3sg ("ייתן]"), F8.
+> ולו [בחזרה בן ייתן].
+- **פירוק:** `nu=šši` – nu + =šši "to him" ("ולו"); `EG[IR-pa` – appa "back, in return" ("[בחזרה"); `DUMU.NITA-an` – DUMU.NITA "son", acc. ("בן"); `pāi]` – pai- "give", pres. 3sg ("ייתן]"), F8.
 - **תרגומים:** CHiL: "allora [egli (il colpevole) darà] al po[sto suo un figlio]." – CHiL: "במקומו" (פירוש של *appa*); העברית מילולית "בחזרה".
 - **הקבלה:** [divergence] `וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ` (שמות כא:כג) – גם כאן נפש תחת נפש, אבל *בן* של ההורג נמסר לבית ההרוג (לעבוד שם? לבוא במקום המת?) – ולא ההורג מת.
 - **הערות:** "בן" – בנו של ההורג (או צעיר כלשהו מביתו) נמסר "בחזרה" למשפחה ששכלה. החוק מתייחס להריגה באש כמקרה מיוחד – אולי משום שאין כאן גופה "להגיע" (§1), אולי משום שמדובר בהטלה לאש בשעת מריבה.
@@ -1763,7 +1763,7 @@
 
 ### 246
 `takku antuḫša[n k]uiški parkunuzzi`
-> אם מישהו יטהר אדם,
+> אם [מישהו] יטהר אדם,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `antuḫša[n` – antuḫša- "person", acc. ("אדם"); `k]uiški` – kuiški "anyone" ("מישהו"); `parkunuzzi` – parkunu- "purify" (caus. of parkui- "pure"), pres. 3sg ("יטהר").
 - **נוסחים:** הנוסח הקדום (291.1 193–196): `takku LÚ.U₁₉.LU-an kuiški parkunuzzi` / `kuptarr=a uk[tūriaš …]` / `takku=at=an parna=ma kuēlka peššiezzi` – **"אם *ישליך* אותם אל ביתו של מישהו"** (ולא "יישא"), ובלי "אל השדה" / `al[wanzatar …]`. **נוסח 291.3 (93–97) זהה לנוסח התקן**, ובו הסיום `DI.KU₅ LUGAL` – "(זה) דין המלך" (בסומרוגרמה), כמו השחזור כאן.
 - **תרגומים:** CHiL: "Se [qu]alcuno purifica un [u]omo,".
@@ -1772,7 +1772,7 @@
 
 ### 247
 `kuptarr=a uktūriaš pē[dai]`
-> ואת השיירים אל מקומות השרֵפה יישא,
+> ואת השיירים אל מקומות השרֵפה [יישא],
 - **פירוק:** `kuptarr=a` – kuptar "remains, residue (of a ritual)", acc. + =a "and" ("ואת השיירים"); `uktūriaš` – uktūri- "cremation site, pyre", d.-l. pl. ("אל מקומות השרֵפה"); `pē[dai]` – peda- "carry (there)", pres. 3sg ("יישא").
 - **תרגומים:** CHiL: "por[terà] gli scarti alla discarica." – **CHiL: "אל המזבלה"** ל־*uktūri-*; העברית הולכת אחרי המובן "מקום שריפה (של מתים)", שבו מקובל לפרש את *uktūri-* ברבים. המחלוקת: מקום שריפה או סתם מקום השלכה.
 - **הערות:** *uktūri-* – מקום שריפת המתים, מחוץ ליישוב: שם מקומו של הטמא. שיירי הטיהור נשרפים או נקברים שם, ליד המתים.
@@ -1802,7 +1802,7 @@
 
 ### 251
 `[takku] Ú-NU-TE{MEŠ} [ku]iški wemiyazzi`
-> [אם] מישהו ימצא חפצים,
+> [אם מישהו] ימצא חפצים,
 - **פירוק:** `[takku]` – takku "if" ("[אם]"), F1; `Ú-NU-TE{MEŠ}` – UNŪTU (Akk.) "implements, goods", pl. ("חפצים"); `[ku]iški` – kuiški "anyone" ("מישהו"); `wemiyazzi` – wemiya- "find", pres. 3sg ("ימצא").
 - **נוסחים:** הנוסח הקדום (291.1 197–199) כותב `[takku] ā[š]šu k[uiški w]emiezzi` – "אם מישהו ימצא *רכוש*" (*āššu*, ולא האכדוגרמה UNŪTU), והסוף שבור. הנוסח 291.3 (98–102) – כנוסח התקן, ובו `KAR-zi` (הסומרוגרמה "ימצא").
 - **תרגומים:** CHiL: "[Se] qua[lcuno] trova degli attrezzi" ("כלים") – העברית `חפצים`, כי `כלי` שמור כאן ל־GIŠTUKUL.
@@ -1829,7 +1829,7 @@
 
 ### 255
 `n=aš {LÚ}NÍ.ZU k[išari]`
-> והוא לְגַנָּב ייעשה.
+> והוא לְגַנָּב [ייעשה].
 - **פירוק:** `n=aš` – nu + =aš "he" ("והוא"); `{LÚ}NÍ.ZU` – NÍ.ZU "thief", nom. ("לְגַנָּב"); `k[išari]` – kiš- "become", pres. 3sg mediopass. ("ייעשה").
 - **תרגומים:** CHiL: "allora egli div[enterà] un ladro." – מסכים.
 - **הערות:** `לְגַנָּב` מנוקד (`לגנב` נקרא "לגנוב"). המוצא שמחזיק במציאה "נעשה" גנב, ודינו כדין גנב (תשלום כפול ומשולש בחוקי הגנבה, §57 ואילך).
@@ -1847,21 +1847,21 @@
 
 ### 257
 `tak[ku=šši A.ŠÀ{ḪI.A}-aš mekkiš piyanza]`
-> א[ם רב מן השדות ניתן לו],
-- **פירוק:** `tak[ku=šši` – takku "if" + =šši "to him" ("א[ם … לו"), F1; `A.ŠÀ{ḪI.A}-aš` – A.ŠÀ "field", gen. ("מן השדות"); `mekkiš` – mekki- "much, great" ("רב"); `piyanza]` – pai- "give", participle nom. sg. c. ("ניתן]").
+> [אם רב מן השדות ניתן לו],
+- **פירוק:** `tak[ku=šši` – takku "if" + =šši "to him" ("[אם … לו"), F1; `A.ŠÀ{ḪI.A}-aš` – A.ŠÀ "field", gen. ("מן השדות"); `mekkiš` – mekki- "much, great" ("רב"); `piyanza]` – pai- "give", participle nom. sg. c. ("ניתן]").
 - **תרגומים:** CHiL: "s[e a lui è data una grande quantità di campi],".
 
 ### 258
 `[l]uzzi karapzi`
-> את הלוּצִּי ירים,
+> [את הלוּצִּי] ירים,
 - **פירוק:** `[l]uzzi` – luzzi "luzzi (corvée)", acc. ("את הלוּצִּי"); `karapzi` – karp- "lift, raise; render (a duty)", pres. 3sg ("ירים").
 - **תרגומים:** CHiL: "sosterrà il (servizio) luzzi," ("ישא") – אותו מובן; העברית `ירים` מילולית ל־*karp-*.
 - **הערות:** *luzzi* – עבודת הכפייה הציבורית: עבודה לבית המלך או לעיר (בניין, תיקון חומות ודרכים, שירות בעונות). מתועתק (`לוּצִּי`). הפועל *karp-* "להרים": את החובה "מרימים" – כמו משא. `ירים` מילולי, כי `נשא` שמור בעברית החתית ל־*peda-*.
 
 ### 259
 `takku=šši A.ŠÀ{Ḫ[}I.A tēpuš piyanza]`
-> אם [מעט מן השדות ניתן לו],
-- **פירוק:** `takku=šši` – takku "if" + =šši "to him" ("אם … לו"), F1; `A.ŠÀ{Ḫ[}I.A` – A.ŠÀ "field" ("[מן השדות"); `tēpuš` – tepu- "little, few" ("מעט"); `piyanza]` – pai- "give", participle ("ניתן]").
+> אם [מעט] מן השדות [ניתן] לו,
+- **פירוק:** `takku=šši` – takku "if" + =šši "to him" ("אם … לו"), F1; `A.ŠÀ{Ḫ[}I.A` – A.ŠÀ "field" ("מן השדות"); `tēpuš` – tepu- "little, few" ("[מעט]"); `piyanza]` – pai- "give", participle ("[ניתן]").
 
 ### 260
 `[luzz]i Ú-UL yēzzi`
@@ -1878,8 +1878,8 @@
 
 ### 262
 `[takku iw]aruwaš išḫāš A.ŠÀ{ḪI.A} kulei ār[ki …]`
-> [אם] אדון המַתָּן את השדות הַבּוּרִים י[פריש …],
-- **פירוק:** `[takku` – takku "if" ("[אם]"), F1; `iw]aruwaš` – iwaru- "inheritance share", gen. ("המַתָּן"); `išḫāš` – išḫa- "lord, owner", nom. ("אדון"); `A.ŠÀ{ḪI.A}` – A.ŠÀ "field", pl. ("את השדות"); `kulei` – kulei "fallow (land)" ("הבורים"); `ār[ki` – ark- "divide (off), separate, cut up", pres. 3sg ("י[פריש"); `…]` – lost ("…]").
+> [אם] אדון [המַתָּן] את השדות הַבּוּרִים [יפריש …],
+- **פירוק:** `[takku` – takku "if" ("[אם]"), F1; `iw]aruwaš` – iwaru- "inheritance share", gen. ("[המַתָּן]"); `išḫāš` – išḫa- "lord, owner", nom. ("אדון"); `A.ŠÀ{ḪI.A}` – A.ŠÀ "field", pl. ("את השדות"); `kulei` – kulei "fallow (land)" ("הבורים"); `ār[ki` – ark- "divide (off), separate, cut up", pres. 3sg ("[יפריש"); `…]` – lost ("…]").
 - **תרגומים:** CHiL: "[Se] l'ere[de delim]ita dei campi incolti […]" ("יתחום") – העברית `יפריש` ל־*ark-* "לחלק, לחתוך".
 - **הערות:** "אדון המַתָּן" – היורש הראשי, בעל הנחלה. "השדות הבורים" (*kulei*) – אדמה שאינה מעובדת, אולי החלק שנשאר משותף. אם היורש מפריש ממנה חלק ליורש אחר – זה חייב בלוּצִּי.
 
@@ -1909,8 +1909,8 @@
 
 ### 266
 `luzzi Ú-[UL …]`
-> את הלוּצִּי ל[א …],
-- **פירוק:** `luzzi` – luzzi, acc. ("את הלוּצִּי"); `Ú-[UL` – UL "not" ("ל[א"); `…]` – lost ("…]").
+> את הלוּצִּי [לא …],
+- **פירוק:** `luzzi` – luzzi, acc. ("את הלוּצִּי"); `Ú-[UL` – UL "not" ("[לא"); `…]` – lost ("…]").
 - **תרגומים:** CHiL: "il (servizio) luzzi n[on …]".
 
 ### 267
@@ -1931,7 +1931,7 @@
 
 ### 269
 `takku LÚ˽{G[}IŠTUKUL …] kuiš[ki w]āši`
-> אם מישהו יקנה {נוסח קדום: את כל השדות} של איש־הכלי,
+> אם מישהו [יקנה] {נוסח קדום: את כל השדות} של איש־הכלי,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `LÚ˽{G[}IŠTUKUL` – "of the man of the tool", gen. ("של איש־הכלי"); `…]` – lost (OS: "all his fields") ("[את כל השדות]"); `kuiš[ki` – kuiški "anyone" ("מישהו"); `w]āši` – waš- "buy", pres. 3sg ("יקנה").
 - **נוסחים:** הנוסח הקדום (291.1 213–219) שלם: `takku LÚ˽{GIŠ}TUKUL-aš A.ŠÀ{ḪI.A}-ŠU ḫūmandan kuiški wāši` – "את כל שדותיו" / `luzzi [karp]iezzi` / `takku A.ŠÀ{ḪI.A}-n=a mekkī wāši` – "ואם שדה רב יקנה" / `luzzi natta karpiezzi` / `takku {A.ŠÀ.ḪI.A}kulēi=ma ārki` / `našma LÚ{MEŠ} URU-LIM pianzi` / `ta luzzi karpiyezzi`. כלומר מי שקנה הכול – נושא בחובה; מי שקנה הרבה (אך לא הכול) – לא.
 - **תרגומים:** CHiL: "Se qualc[uno com]pra […] di un uomo del (servizio) TUKUL".
@@ -1948,8 +1948,8 @@
 
 ### 272
 `lu[zzi Ú-U]L karapzi`
-> את הלוּ[צִּי ל]א ירים,
-- **פירוק:** `lu[zzi` – luzzi, acc. ("את הלוּ[צִּי"); `Ú-U]L` – UL "not" ("ל]א"); `karapzi` – karp- "render", pres. 3sg ("ירים").
+> את [הלוּצִּי לא] ירים,
+- **פירוק:** `lu[zzi` – luzzi, acc. ("את [הלוּצִּי"); `Ú-U]L` – UL "not" ("לא]"); `karapzi` – karp- "render", pres. 3sg ("ירים").
 - **תרגומים:** CHiL: "[no]n sosterrà [il (servizio)] luzzi.".
 
 ### 273
@@ -1960,8 +1960,8 @@
 
 ### 274
 `na[šma LÚ]{MEŠ} URU-LIM pianzi`
-> א[ו אנשי] העיר ייתנו,
-- **פירוק:** `na[šma` – našma "or" ("א[ו"); `LÚ]{MEŠ}` – LÚ "man", pl. ("אנשי]"); `URU-LIM` – URU "town", gen. ("העיר"); `pianzi` – pai- "give", pres. 3pl ("ייתנו").
+> [או אנשי] העיר ייתנו,
+- **פירוק:** `na[šma` – našma "or" ("[או"); `LÚ]{MEŠ}` – LÚ "man", pl. ("אנשי]"); `URU-LIM` – URU "town", gen. ("העיר"); `pianzi` – pai- "give", pres. 3pl ("ייתנו").
 - **תרגומים:** CHiL: "op[pure gli abita]nti della città (gli) danno (dei campi),".
 
 ### 275
@@ -1974,8 +1974,8 @@
 
 ### 276
 `[{LÚ}ḫippar]aš [lu]zzi [ka]rpiez[zi …]`
-> [החִפָּרָה] את [הלוּ]צִּי [ירים] […],
-- **פירוק:** `[{LÚ}ḫippar]aš` – ḫippara- "ḫippara-man (a person of dependent status)", nom. ("[החִפָּרָה]"); `[lu]zzi` – luzzi, acc. ("את [הלוּ]צִּי"); `[ka]rpiez[zi` – karp- "render", pres. 3sg ("[ירים]"); `…]` – lost ("[…]").
+> [החִפָּרָה את הלוּצִּי ירים] […],
+- **פירוק:** `[{LÚ}ḫippar]aš` – ḫippara- "ḫippara-man (a person of dependent status)", nom. ("[החִפָּרָה"); `[lu]zzi` – luzzi, acc. ("את הלוּצִּי"); `[ka]rpiez[zi` – karp- "render", pres. 3sg ("ירים]"); `…]` – lost ("[…]").
 - **נוסחים:** הנוסח הקדום (291.1 220–226) שלם: `{LÚ}ḫipparaš luzzi karpiyezzi` / `nu {LÚ}ḫippari ḫāppar lē [ku]iški yezzi` – "ועם החִפָּרָה אל יעשה אף אחד מסחר" / `DUMU-ŠU A.ŠÀ-ŠU {GIŠ}KIRI₆.GEŠTIN-ŠU lē kuiški wāši` – "את בנו, את שדהו, את כרמו – אל יקנה אף אחד" / `[kui]š=z(a) {LÚ}ḫippari ḫāppar yezzi` – "מי שיעשה מסחר עם החִפָּרָה" / `n=aš=kan ḫāpparaz [šeme]nzi` – "יפסיד את (כספו) מן העסקה" / `{LÚ}ḫipparaš kuit ḫapparāet` / `ta=z āppa dāi` – "ואת אשר מכר החִפָּרָה – ייקח בחזרה".
 - **תרגומים:** CHiL: "[Un uomo di condizione serv]ile sost[iene] il (servizio) [luzzi]:" – CHiL מתרגם את *ḫippara-* "איש במעמד עבדות"; העברית מתעתקת.
 - **הקבלה:** [equivalent] `וְהָאָרֶץ לֹא תִמָּכֵר לִצְמִתֻת` (ויקרא כה:כג) – איסור מכירה של קרקע ושל בני אדם התלויים בה; [divergence] בתורה האיסור מגן על הנחלה של המשפחה, כאן – על מה שהחִפָּרָה מחזיק מטעם המלך.
@@ -1995,8 +1995,8 @@
 
 ### 279
 `[ḫāppar y]ez[zi]`
-> [מסחר י]עשה,
-- **פירוק:** `[ḫāppar` – ḫappar "trade, deal", acc. ("[מסחר"); `y]ez[zi]` – iya- "do, make", pres. 3sg ("י]עשה").
+> [מסחר יעשה],
+- **פירוק:** `[ḫāppar` – ḫappar "trade, deal", acc. ("[מסחר"); `y]ez[zi]` – iya- "do, make", pres. 3sg ("יעשה]").
 
 ### 280
 `[n=a]š=kan […]`
@@ -2023,7 +2023,7 @@
 
 ### 283
 `karū kuiš {URU}arinna {LÚ}UŠ.BAR kī[šat]`
-> לפנים – מי שבאֲרִינָּה לאורג נעשה,
+> לפנים – מי שבאֲרִינָּה לאורג [נעשה],
 - **פירוק:** `karū` – karū "formerly" ("לפנים"), F2; `kuiš` – kui- "who", rel. nom. ("מי ש־"); `{URU}arinna` – Arinna ("באֲרִינָּה"); `{LÚ}UŠ.BAR` – UŠ.BAR "weaver", nom. ("לאורג"); `kī[šat]` – kiš- "become", pret. 3sg mediopass. ("נעשה").
 - **נוסחים:** הנוסח הקדום (291.1 245–248) זהה בעיקרו: `[k]arū ku[iš {URU}arinna] {LÚ}UŠ.BAR kī[šat …]` / `[{LÚ.ME]}ŠḪA.LA-ŠU Ù {LÚ.MEŠ}NI-ŠU-Ú-ŠU ar[awēš …]` / `[…] šaḫḫa[n …]` / `[{URU}]ziplanti=ya QA-TAM-[MA=pat]` – כלומר גם הנוסח הקדום כבר מכיר את "לפנים" ואת צמצום הפטור. כתב היד D של נוסח התקן כותב בשורה 287 `karpiyezzi` (יחיד).
 - **תרגומים:** CHiL: "Un tempo colui che nella città di Arinna diven[iva] tessitore" – מסכים.
@@ -2160,8 +2160,8 @@
 
 ### 302
 `karū ÉRIN{MEŠ} MA-AN-DA ÉRIN{MEŠ} ŠA-A-LA ÉRIN{MEŠ} {URU}tamalki ÉRIN{MEŠ} {URU}ḫatrā ÉRIN{MEŠ} {URU}zalpa ÉRIN{MEŠ} {URU}tašḫiniya ÉRIN{MEŠ} {URU}ḫemuwa LÚ{MEŠ}˽{GIŠ}PAN {LÚ.MEŠ}NAGAR GIŠ-ṢÍ {LÚ.MEŠ}KUŠ₇ Ù {LÚ.MEŠ}karuḫališ=šmeš=a luzzi Ú-UL karpie[r`
-> לפנים – אנשי צבא המַנְדָּה, אנשי צבא השָׁלָה, אנשי צבא תַּמַלְקִי, אנשי צבא חַתְרָה, אנשי צבא זַלְפָּה, אנשי צבא תַּשְׁחִינִיָּה, אנשי צבא חֶמוּוָה, הקשתים, חרשי העץ, אנשי המרכבה ואנשי הקָרוּחָלִי שלהם – את הלוּצִּי לא הרימו,
-- **פירוק:** `karū` – karū "formerly" ("לפנים"), F2; `ÉRIN{MEŠ}` – ÉRIN (Akk. *ṣābu*) "troops", pl. ("אנשי צבא"); `MA-AN-DA` – MANDA (a troop category) ("המַנְדָּה"); `ŠA-A-LA` – ŠALA (a troop category) ("השָׁלָה"); `{URU}tamalki` – Tamalki ("תַּמַלְקִי"); `{URU}ḫatrā` – Ḫatra ("חַתְרָה"); `{URU}zalpa` – Zalpa ("זַלְפָּה"); `{URU}tašḫiniya` – Tašḫiniya ("תַּשְׁחִינִיָּה"); `{URU}ḫemuwa` – Ḫemuwa ("חֶמוּוָה"); `LÚ{MEŠ}˽{GIŠ}PAN` – LÚ GIŠPAN "bowman", pl. ("הקשתים"); `{LÚ.MEŠ}NAGAR` – NAGAR "carpenter", pl. ("חרשי"); `GIŠ-ṢÍ` – IṢU (Akk.) "wood", gen. ("העץ"); `{LÚ.MEŠ}KUŠ₇` – KUŠ₇ "chariot fighter, groom", pl. ("אנשי המרכבה"); `Ù` – U "and" ("ו"); `{LÚ.MEŠ}karuḫališ=šmeš=a` – karuḫali- (an obscure category) + =šmeš "their" + =a ("ואנשי הקָרוּחָלִי שלהם"); `luzzi` – luzzi, acc. ("את הלוּצִּי"); `Ú-UL` – UL "not" ("לא"); `karpie[r` – karp- "render", pret. 3pl ("הרימו").
+> לפנים – אנשי צבא המַנְדָּה, אנשי צבא השָׁלָה, אנשי צבא תַּמַלְקִי, אנשי צבא חַתְרָה, אנשי צבא זַלְפָּה, אנשי צבא תַּשְׁחִינִיָּה, אנשי צבא חֶמוּוָה, הקשתים, נגרי העץ, אנשי המרכבה ואנשי הקָרוּחָלִי שלהם – את הלוּצִּי לא הרימו,
+- **פירוק:** `karū` – karū "formerly" ("לפנים"), F2; `ÉRIN{MEŠ}` – ÉRIN (Akk. *ṣābu*) "troops", pl. ("אנשי צבא"); `MA-AN-DA` – MANDA (a troop category) ("המַנְדָּה"); `ŠA-A-LA` – ŠALA (a troop category) ("השָׁלָה"); `{URU}tamalki` – Tamalki ("תַּמַלְקִי"); `{URU}ḫatrā` – Ḫatra ("חַתְרָה"); `{URU}zalpa` – Zalpa ("זַלְפָּה"); `{URU}tašḫiniya` – Tašḫiniya ("תַּשְׁחִינִיָּה"); `{URU}ḫemuwa` – Ḫemuwa ("חֶמוּוָה"); `LÚ{MEŠ}˽{GIŠ}PAN` – LÚ GIŠPAN "bowman", pl. ("הקשתים"); `{LÚ.MEŠ}NAGAR` – NAGAR "carpenter" (Akk. *nagāru*), pl. ("נגרי"; [cognate loan] `נַגָּר`, as Gilgameš XII and the netherworld corpus); `GIŠ-ṢÍ` – IṢU (Akk.) "wood", gen. ("העץ"); `{LÚ.MEŠ}KUŠ₇` – KUŠ₇ "chariot fighter, groom", pl. ("אנשי המרכבה"); `Ù` – U "and" ("ו"); `{LÚ.MEŠ}karuḫališ=šmeš=a` – karuḫali- (an obscure category) + =šmeš "their" + =a ("ואנשי הקָרוּחָלִי שלהם"); `luzzi` – luzzi, acc. ("את הלוּצִּי"); `Ú-UL` – UL "not" ("לא"); `karpie[r` – karp- "render", pret. 3pl ("הרימו").
 - **נוסחים:** הנוסח הקדום (291.1 262–263) זהה, בכתיב `{URU}tamalkiya` ובצורת השלילה `natta`. כתב היד E של נוסח התקן משמיט כמה מן הקבוצות (המַנְדָּה, חַתְרָה, זַלְפָּה, חֶמוּוָה, הקשתים ואנשי המרכבה, ככל שאפשר לראות בשבור).
 - **תרגומים:** CHiL: "Un tempo le truppe MANDA, le truppe ŠALA, le truppe della città di Tamalki, le truppe della città di Ḫatra, le truppe della città di Zalpa, le truppe della città di Tašḫiniya, le truppe della città di Ḫemuwa, gli arcieri, i carpentieri, i carristi e i loro uomini karuḫale non sostenevano il (servizio) luzzi." – מסכים.
 - **הקבלה:** [cognate] (דרך האכדוגרמה) ÉRIN = *ṣābu* = `צָבָא` (§6.7). [equivalent] `וַיַּעַל הַמֶּלֶךְ שְׁלֹמֹה מַס מִכָּל יִשְׂרָאֵל` (מלכים א ה:כז) – עבודת הכפייה של המלך; [divergence] כאן הקודקס זוכר קבוצות שהיו פטורות ממנה.
@@ -2169,8 +2169,8 @@
 
 ### 303
 `šaḫḫan Ú-UL ēššer`
-> ואת השַׁחְחַן לא עשו.
-- **פירוק:** `šaḫḫan` – šaḫḫan, acc. ("ואת השַׁחְחַן"); `Ú-UL` – UL "not" ("לא"); `ēššer` – iya- "do", iterative pret. 3pl ("עשו").
+> את השַׁחְחַן לא עשו.
+- **פירוק:** `šaḫḫan` – šaḫḫan, acc. ("את השַׁחְחַן"); `Ú-UL` – UL "not" ("לא"); `ēššer` – iya- "do", iterative pret. 3pl ("עשו").
 - **תרגומים:** CHiL: "(e) non svolgevano il (servizio) šaḫḫan."
 - **הערות:** הצורה האיטרטיבית בעבר: "לא היו עושים" – מצב של דורות.
 
@@ -2425,7 +2425,7 @@
 - **פירוק:** `parna=ššē=a` – parn- "house", all. + "his" + "and" ("ואל ביתו"); `šuwāyezzi` – šuwaye- "look", pres. 3sg ("יביט"), F4.
 - **תרגומים:** CHiL: "e (la vittima) cercherà il risarcimento nella sua (del colpevole) casa."
 
-## §59 – גניבת איל
+## §59 – גניבת אַיִל
 
 ### 341
 `takku UDU.A.LUM kuiški tāyezzi`
@@ -2443,7 +2443,7 @@
 
 ### 343
 `ki[nun]=a [15] UDU{ḪI.A} pāi`
-> ועתה [חמש עשרה] צאן ייתן,
+> [ועתה חמש עשרה] צאן ייתן,
 - **פירוק:** `ki[nun]=a` – kinun "now" + =a ("ועתה"), F3; `[15]` – "fifteen" ("[חמש עשרה]"); `UDU{ḪI.A}` – "sheep" ("צאן"); `pāi` – pai- "give", pres. 3sg ("ייתן"), F8.
 - **תרגומים:** CHiL: "ma o[ra] egli darà [15] ovini:"
 - **הערות:** `צאן` בלשון נקבה עם המספר, כמו בתורה (`וְאַרְבַּע צֹאן`).
@@ -2518,7 +2518,7 @@
 
 ### 354
 `išḫ[aš=šiš=an] kanišzi`
-> ואדוניו יכיר אותו,
+> ואדוניו יכיר [אותו],
 - **פירוק:** `išḫ[aš=šiš=an]` – išḫa- "owner" + "his" + =an ("ואדוניו … אותו"); `kanišzi` – kanešš- "recognize", pres. 3sg ("יכיר").
 - **תרגומים:** CHiL: "e (poi) il [suo pro]prietario [lo] riconosce"
 
@@ -2540,7 +2540,7 @@
 - **פירוק:** `parna=ššē=a` – parn- "house", all. + "his" + "and" ("ואל ביתו"); `šuwāezzi` – šuwaye- "look", pres. 3sg ("יביט"), F4.
 - **תרגומים:** CHiL: "e (la vittima) cercherà il risarcimento nella sua (del colpevole) casa."
 
-## §62 – איל שנמצא וטוהר
+## §62 – אַיִל שנמצא וטוהר
 
 ### 358
 `takku UDU.A.LUM kuiški wemiyazzi`
@@ -2697,7 +2697,7 @@
 
 ### 380
 `takku [M]ÁŠ.GA[L] enanza`
-> אם תיש מבוית,
+> אם [תיש] מבוית,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `[M]ÁŠ.GA[L]` – MÁŠ.GAL "he-goat", nom. ("תיש"); `enanza` – enant- "tame", nom. ("מבוית").
 - **תרגומים:** CHiL: "se un [c]apro[ne] addomesticato,"
 
@@ -2709,7 +2709,7 @@
 
 ### 382
 `takku UDU.NÍTA ašau[n]i ḫarapta`
-> אם כבש אל הדיר ייפרד,
+> אם כבש אל [הדיר] ייפרד,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `UDU.NÍTA` – UDU.NÍTA "male sheep", nom. ("כבש"); `ašau[n]i` – ašawar "pen, fold", d.-l. ("אל הדיר"); `ḫarapta` – ḫarp- (mp) "separate and join", pres. 3sg ("ייפרד").
 - **תרגומים:** CHiL: "(o) se un ariete sconfina nello st[abb]io (di un altro)"
 
@@ -2728,7 +2728,7 @@
 
 ### 385
 `{LÚ}NÍ.[Z]U-an Ú-UL ēpzi`
-> ולא יתפוס (אותו) כְּגַנָּב.
+> ולא יתפוס (אותו) [כְּגַנָּב].
 - **פירוק:** `{LÚ}NÍ.[Z]U-an` – NÍ.ZU "thief", acc. ("כְּגַנָּב"); `Ú-UL` – UL "not" ("לא"); `ēpzi` – ēpp- "seize", pres. 3sg ("יתפוס").
 - **תרגומים:** CHiL: "(e) non catturerà (l'altro come) un ladro." – מסכים: "לא יתפוס (את האחר כ)גנב".
 - **הערות:** בעל הבהמה לא "יתפוס גנב" – לא יאשים את בעל הדיר בגנבה. החוק מבחין בין מי שלקח ובין מי שאליו באה הבהמה מעצמה.
@@ -2745,25 +2745,25 @@
 
 ### 387
 `[k]arū 12 [GU₄{ḪI]}.A pešker`
-> לפנים היו נותנים שנים עשר שור,
+> [לפנים] היו נותנים שנים עשר [שור],
 - **פירוק:** `[k]arū` – karū "formerly" ("לפנים"), F2; `12` – "twelve" ("שנים עשר"); `[GU₄{ḪI]}.A` – "cattle" ("שור"); `pešker` – pai- "give", iterative pret. 3pl ("היו נותנים").
 - **תרגומים:** CHiL: "[un] tempo si usavano dare 12 [bovi]ni"
 
 ### 388
 `k[inun]=a 6 G[U₄{ḪI]}.A pāi`
-> ועתה שישה שוורים ייתן,
+> [ועתה] שישה [שוורים] ייתן,
 - **פירוק:** `k[inun]=a` – kinun "now" + =a ("ועתה"), F3; `6` – "six" ("שישה"); `G[U₄{ḪI]}.A` – "cattle" ("שוורים"); `pāi` – pai- "give", pres. 3sg ("ייתן"), F8.
 - **תרגומים:** CHiL: "ma o[ra] egli darà 6 b[ovin]i:"
 
 ### 389
 `2 GU₄ MU.2 2 GU₄ MU.1 2 GU₄ šāwitišza p[ā]i`
-> שני שוורים בני שנתיים, שני שוורים בני שנה, שני שוורים גְּמוּלִים ייתן,
+> שני שוורים בני שנתיים, שני שוורים בני שנה, שני שוורים גְּמוּלִים [ייתן],
 - **פירוק:** `2 GU₄ MU.2` – ("שני שוורים בני שנתיים"); `2 GU₄ MU.1` – ("שני שוורים בני שנה"); `2 GU₄ šāwitišza` – ("שני שוורים גְּמוּלִים"); `p[ā]i` – pai- "give" ("ייתן"), F8.
 - **תרגומים:** CHiL: "d[ar]à 2 bovini di due anni, 2 bovini di un anno (e) 2 bovini nell'età dello svezzamento"
 
 ### 390
 `parna=ššē=a š[uwāe]zzi`
-> ואל ביתו יביט.
+> ואל ביתו [יביט].
 - **פירוק:** `parna=ššē=a` – parn- "house", all. + "his" + "and" ("ואל ביתו"); `š[uwāe]zzi` – šuwaye- "look", pres. 3sg ("יביט"), F4.
 - **תרגומים:** CHiL: "e (la vittima) [cerche]rà il risarcimento nella sua (del colpevole) casa."
 
@@ -3142,7 +3142,7 @@
 
 ### 443
 `takku ANŠE.KUR.RA armawandan ku[iški] walaḫzi`
-> אם מישהו ימחץ סוסה הרה,
+> אם [מישהו] ימחץ סוסה הרה,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `ANŠE.KUR.RA` – ANŠE.KUR.RA "horse" (here female) ("סוסה"); `armawandan` – armawant- "pregnant" ("הרה"); `ku[iški]` – "anyone" ("מישהו"); `walaḫzi` – walḫ- "strike", pres. 3sg ("ימחץ").
 - **תרגומים:** CHiL: "Se qual[cuno] colpisce una cavalla gravida (J: ingravidata)" – CHiL: "סוסה הרה" (J: "שהורתה") – מסכים.
 - **הערות:** הסומרוגרמה היא "סוס" (ANŠE.KUR.RA), ולא "סוסה" (§66, 379); המין נקבה מתוך "הרה".
@@ -3163,7 +3163,7 @@
 
 ### 446
 `[takku GU₄-aš našma ANŠE.KUR.RA-aš IG]I-ŠU kuiški [tašuwaḫzi]`
-> [אם] מישהו [יעוור] את עינו [של שור או של סוס],
+> [אם] מישהו [יעוור את עינו של שור או של סוס],
 - **פירוק:** `[takku` – takku "if" ("[אם]"), F1; `GU₄-aš` – GU₄ "ox", gen. ("[של שור"); `našma` – "or" ("או"); `ANŠE.KUR.RA-aš` – "horse", gen. ("של סוס]"); `IG]I-ŠU` – IGI "eye" + -ŠU "its" ("את עינו"); `kuiški` – "anyone" ("מישהו"); `[tašuwaḫzi]` – dašuwaḫḫ- "blind", pres. 3sg ("[יעוור]").
 - **נוסחים:** הנוסח הקדום (291.1 395–397) זהה, ובו אותו תעריף (שישה שקלים).
 - **תרגומים:** CHiL: "[Se qualcuno acc]eca [l'occhio di un bovino o di un cavallo]"
@@ -3185,7 +3185,7 @@
 
 ### 449
 `[takku GU₄-un kuišk]i kušaniezzi`
-> [אם מישהו] ישכור שור,
+> [אם מישהו] ישכור [שור],
 - **פירוק:** `[takku` – takku "if" ("[אם"), F1; `GU₄-un` – "ox", acc. ("שור"); `kuišk]i` – "anyone" ("מישהו]"); `kušaniezzi` – kuššaniya- "hire", pres. 3sg ("ישכור").
 - **נוסחים:** הנוסח הקדום (291.1 398–401) זהה (`nu=šše=an {KUŠ}ḫušan našma {KUŠ}tarušḫa anda dāi` … `1 PA-RI-SI? ŠE pāi`).
 - **תרגומים:** CHiL: "[Se qualcu]no prende [un bovino] a nolo"
@@ -3206,8 +3206,8 @@
 
 ### 452
 `[1 PA-RI]-SI? ŠE pāi`
-> [פָּרִיס אחד]? שעורים ייתן.
-- **פירוק:** `[1` – "one" ("[אחד"); `PA-RI]-SI?` – PARĪSU (Akk.) "parisu (a dry measure)", acc. ("פָּרִיס]"); `ŠE` – ŠE "barley", gen. ("שעורים"); `pāi` – pai- "give", pres. 3sg ("ייתן"), F8.
+> [פָּרִיס]? שעורים [אחד] ייתן.
+- **פירוק:** `[1` – "one" ("[אחד]"; after the measure, as 471 `פָּרִיס שעורים אחד`); `PA-RI]-SI?` – PARĪSU (Akk.) "parisu (a dry measure)", acc. ("[פָּרִיס]"); `ŠE` – ŠE "barley", gen. ("שעורים"); `pāi` – pai- "give", pres. 3sg ("ייתן"), F8.
 - **תרגומים:** CHiL: "darà [1 PARISU ] di orzo (come risarcimento)."
 - **הערות:** `פָּרִיס` מנוקד (מידת יבש, כחצי "סאה" בבלית?). קנס קטן – שכר של הבהמה בעבודה שלא הוסכמה.
 
@@ -3242,7 +3242,7 @@
 
 ### 457
 `[n]=aš EGIR-pa išḫi=šši pennai`
-> ואותם בחזרה לאדוניהם יסיע.
+> [ו]אותם בחזרה לאדוניהם יסיע.
 - **פירוק:** `[n]=aš` – nu + =aš "them" (acc. pl.) ("ואותם"); `EGIR-pa` – appa "back" ("בחזרה"); `išḫi=šši` – išḫa- "owner", d.-l. + =šši "its" ("לאדוניהם"); `pennai` – penna- "drive (away, there)", pres. 3sg ("יסיע").
 - **תרגומים:** CHiL: "[quindi] li riconduce al loro proprietario." – מסכים: "יחזיר אותם לבעליהם".
 - **הערות:** *penna-* "להסיע (משם)" – בן הזוג של *unna-* "לנהוג (הנה)" (§71, `ינהג`): כמו *peḫute-* / *uwate-* (§19–§20), הפועל מסמן את הכיוון.
@@ -3333,14 +3333,14 @@
 
 ### 469
 `6 GÍN KÙ.BAB[BAR pāi]`
-> שישה שקלים כסף [ייתן],
+> שישה שקלים [כסף ייתן],
 - **פירוק:** `6` – "six" ("שישה"); `GÍN` – "shekel" ("שקלים"); `KÙ.BAB[BAR` – "silver" ("כסף"); `pāi]` – pai- "give" ("[ייתן]"), F8.
 - **תרגומים:** CHiL: "[darà] 6 sicli di arg[ento]"
 
 ### 470
 `Ù ŠAḪ.TUR kappuwanzi`
-> וגם את החזרזירים יספרו,
-- **פירוק:** `Ù` – U "and" ("וגם"); `ŠAḪ.TUR` – ŠAḪ.TUR "piglet", pl. ("את החזרזירים"); `kappuwanzi` – kappuwai- "count", pres. 3pl ("יספרו").
+> ואת החזרזירים יספרו,
+- **פירוק:** `Ù` – U "and" ("ו"); `ŠAḪ.TUR` – ŠAḪ.TUR "piglet", pl. ("את החזרזירים"); `kappuwanzi` – kappuwai- "count", pres. 3pl ("יספרו").
 - **תרגומים:** CHiL: "e si conteranno i maialini:"
 - **הערות:** סופרים את העוברים – מספר החזרזירים שהחזירה הייתה ממליטה – ומשלמים גם עליהם.
 
@@ -3397,8 +3397,8 @@
 
 ### 478
 `2 P[A-RI-SI ŠE p]āi`
-> שני פָּ[רִיסִים שעורים] ייתן.
-- **פירוק:** `2` – "two" ("שני"); `P[A-RI-SI` – PARĪSU, pl. ("פָּ[רִיסִים"); `ŠE` – "barley" ("שעורים]"); `p]āi` – pai- "give" ("ייתן"), F8.
+> שני [פָּרִיסִים שעורים ייתן].
+- **פירוק:** `2` – "two" ("שני"); `P[A-RI-SI` – PARĪSU, pl. ("[פָּרִיסִים"); `ŠE` – "barley" ("שעורים"); `p]āi` – pai- "give" ("ייתן]"), F8.
 - **תרגומים:** CHiL: "[da]rà 2 [ PARISU di orzo] (come risarcimento)."
 
 ## §86 – חזיר שנכנס אל ערמה, אל שדה, אל גן
@@ -3503,7 +3503,7 @@
 
 ### 493
 `takku UR.GI₇ ḫilannaš kuiški wa[la]ḫzi`
-> אם מישהו ימחץ כלב של חצר,
+> אם מישהו [ימחץ] כלב של חצר,
 - **פירוק:** `takku` – takku "if" ("אם"), F1; `UR.GI₇` – "dog" ("כלב"); `ḫilannaš` – ḫila- "courtyard", gen. ("של חצר"); `kuiški` – "anyone" ("מישהו"); `wa[la]ḫzi` – walḫ- "strike", pres. 3sg ("ימחץ").
 - **תרגומים:** CHiL: "Se qualcuno colpisce un cane da cortile"
 
@@ -3542,7 +3542,7 @@
 
 ### 499
 `n=ašta Ì-an šarḫuwantaz=šet K[A]R-ezzi`
-> ואת השומן מבטנו ימצא,
+> ואת השומן מבטנו [ימצא],
 - **פירוק:** `n=ašta` – nu + =ašta ("ו"); `Ì-an` – Ì "fat", acc. ("את השומן"); `šarḫuwantaz=šet` – šarḫuwant- "belly", abl. + =šet "its" ("מבטנו"); `K[A]R-ezzi` – KAR (wemiya-) "find", pres. 3sg ("ימצא").
 - **תרגומים:** CHiL: "e recupera (C: “prende”) il grasso dalle sue interiora," – CHiL: "ויוציא את השומן ממעיו" (C: "ייקח"); KAR = "למצוא" (*wemiya-*), והעברית כמותו.
 - **הערות:** מוצאים את השומן בבטן הכלב – כלומר בעל השומן מבתר את הכלב ולוקח את שלו בחזרה. KAR היא הסומרוגרמה של *wemiya-* "למצוא": אותה עברית.
@@ -3558,7 +3558,7 @@
 
 ### 501
 `[takku NI]M.LÀL{ḪI.A}-an kammari kuiški tāyezi`
-> [אם] מישהו יגנוב דבורים בענן,
+> [אם] מישהו יגנוב [דבורים] בענן,
 - **פירוק:** `[takku` – takku "if" ("[אם"), F1; `NI]M.LÀL{ḪI.A}-an` – NIM.LÀL "bee", acc. ("דבורים"); `kammari` – kammara- "cloud, smoke; swarm", d.-l. ("בענן"); `kuiški` – "anyone" ("מישהו"); `tāyezi` – taya- "steal", pres. 3sg ("יגנוב"), F9.
 - **נוסחים:** הנוסח הקדום (291.1 428–429) זהה (`[kinun=a 5 GÍ]N KÙ.BABBAR pā[i …]`).
 - **תרגומים:** CHiL: "[Se] qualcuno ruba [delle a]pi in sciame" – CHiL: "דבורים בנחיל"; העברית שומרת את הדימוי "ענן" (*kammara-*).
@@ -3600,14 +3600,14 @@
 
 ### 507
 `karū BU-BU-Ú-TA-NU-UM ŠA NI[M.LÀL]`
-> לפנים – *בּוּבּוּתָנוּ* של הד[בורים],
-- **פירוק:** `karū` – karū "formerly" ("לפנים"), F2; `BU-BU-Ú-TA-NU-UM` – BUBUTANU (Akk.?; meaning uncertain) ("*בּוּבּוּתָנוּ*"); `ŠA NI[M.LÀL]` – ŠA "of" + NIM.LÀL "bee" ("של הד[בורים]").
+> לפנים – *בּוּבּוּתָנוּ* של [הדבורים],
+- **פירוק:** `karū` – karū "formerly" ("לפנים"), F2; `BU-BU-Ú-TA-NU-UM` – BUBUTANU (Akk.?; meaning uncertain) ("*בּוּבּוּתָנוּ*"); `ŠA NI[M.LÀL]` – ŠA "of" + NIM.LÀL "bee" ("של [הדבורים]").
 - **תרגומים:** CHiL: "una volta (lo si condannava) alle punture dell'alv[eare]," – **CHiL: "לפנים (דנו אותו) לעקיצות הכוורת"** – הקריאה "עקיצה" (ראו הערות); העברית מתעתקת את המילה הסתומה.
 - **הערות:** מילה אכדית סתומה. הופנר ואחרים מציעים: "לפנים – (העונש היה) עקיצת דבורים", כלומר הגנב הוצג לעקיצת הדבורים; אחרים – מונח למידה או לתשלום. מתועתקת ומסומנת כלא ודאית. אם הקריאה "עקיצה" נכונה, זהו המקום היחיד בלוח שבו תעריף ה"לפנים" הוא עונש גופני – והחוק החדש מחליף אותו בכסף.
 
 ### 508
 `[k]inun=a 6 GÍN KÙ.BABBAR pāi`
-> ועתה שישה שקלים כסף ייתן.
+> [ועתה] שישה שקלים כסף ייתן.
 - **פירוק:** `[k]inun=a` – kinun "now" + =a ("ועתה"), F3; `6` – "six" ("שישה"); `GÍN` – "shekel" ("שקלים"); `KÙ.BABBAR` – "silver" ("כסף"); `pāi` – pai- "give" ("ייתן"), F8.
 - **תרגומים:** CHiL: "ma [o]ra egli darà 6 sicli di argento."
 
@@ -3619,7 +3619,7 @@
 
 ### 510
 `[takk]u I-NA ŠÀ-BI NIM.LÀL NU.GÁL`
-> אם בתוכה דבורים אין,
+> [אם] בתוכה דבורים אין,
 - **פירוק:** `[takk]u` – takku "if" ("אם"), F1; `I-NA ŠÀ-BI` – INA "in" + ŠÀ "heart, inside" ("בתוכה"); `NIM.LÀL` – "bee" ("דבורים"); `NU.GÁL` – "there is not" ("אין").
 - **תרגומים:** CHiL: "[(e) s]e non c'è (alcuna) ape all'interno,"
 
@@ -3643,7 +3643,7 @@
 
 ### 513
 `[an]da(n)=ššan parna nāwi paizzi`
-> ופנימה אל הבית טרם ילך,
+> [ופנימה] אל הבית טרם ילך,
 - **פירוק:** `[an]da(n)=ššan` – andan "in(to)" + =šan ("ופנימה"); `parna` – per / parn- "house", all. ("אל הבית"); `nāwi` – nāwi "not yet" ("טרם"); `paizzi` – pā(i)- "go", pres. 3sg ("ילך").
 - **תרגומים:** CHiL: "(quando) [den]tro a una casa (altrui) non è ancora andato,"
 
@@ -3655,8 +3655,8 @@
 
 ### 515
 `takku ARAD-[an tapešn]i appanzi`
-> אם עבד יתפסו *[בטַפֶּשְׁנִ]י*,
-- **פירוק:** `takku` – takku "if" ("אם"), F1; `ARAD-[an` – ARAD "slave", acc. ("עבד"); `tapešn]i` – tapeššar, d.-l. ("*[בטַפֶּשְׁנִ]י*"); `appanzi` – ēpp- "seize", pres. 3pl ("יתפסו").
+> אם עבד יתפסו *[בטַפֶּשְׁנִי]*,
+- **פירוק:** `takku` – takku "if" ("אם"), F1; `ARAD-[an` – ARAD "slave", acc. ("עבד"); `tapešn]i` – tapeššar, d.-l. ("*[בטַפֶּשְׁנִי]*"); `appanzi` – ēpp- "seize", pres. 3pl ("יתפסו").
 - **תרגומים:** CHiL: "Se prendono [un s]ervo in flagranza (di reato)"
 
 ### 516
@@ -3667,7 +3667,7 @@
 
 ### 517
 `6 GÍN K[Ù.BABBAR] pāi`
-> שישה שקלים כסף ייתן.
+> שישה שקלים [כסף] ייתן.
 - **פירוק:** `6` – "six" ("שישה"); `GÍN` – "shekel" ("שקלים"); `K[Ù.BABBAR]` – "silver" ("כסף"); `pāi` – pai- "give" ("ייתן"), F8.
 - **תרגומים:** CHiL: "egli darà 6 sicli di ar[gento]."
 
@@ -3697,7 +3697,7 @@
 
 ### 521
 `kinun=a 12 GÍN KÙ.BABBAR [p]āi`
-> ועתה שנים עשר שקל כסף ייתן,
+> ועתה שנים עשר שקל כסף [ייתן],
 - **פירוק:** `kinun=a` – kinun "now" + =a ("ועתה"), F3; `12` – "twelve" ("שנים עשר"); `GÍN` – "shekel" ("שקל"); `KÙ.BABBAR` – "silver" ("כסף"); `[p]āi` – pai- "give" ("ייתן"), F8.
 - **תרגומים:** CHiL: "ma ora [egli d]arà 12 sicli di argento."
 
@@ -3716,7 +3716,7 @@
 
 ### 524
 `[ta]kku tepu tāyezzi`
-> אם מעט יגנוב,
+> [אם] מעט יגנוב,
 - **פירוק:** `[ta]kku` – takku "if" ("אם"), F1; `tepu` – tepu- "little" ("מעט"); `tāyezzi` – taya- "steal" ("יגנוב"), F9.
 - **תרגומים:** CHiL: "[s]e egli ruba poco,"
 
@@ -3728,7 +3728,7 @@
 
 ### 526
 `[parna=ššē=a šu]wāyezzi`
-> [ואל ביתו] יביט.
+> [ואל ביתו יביט].
 - **פירוק:** `[parna=ššē=a` – parn- "house", all. + "his" + "and" ("[ואל ביתו]"); `šu]wāyezzi` – šuwaye- "look", pres. 3sg ("יביט"), F4.
 - **תרגומים:** CHiL: "[E (la vittima) ce]rcherà il [risarcimento nella sua (del colpevole) casa]."
 
@@ -3736,7 +3736,7 @@
 
 ### 527
 `[t]ak[k]u ARAD-iš É-er tāyezzi`
-> אם עבד יגנוב בית,
+> [אם] עבד יגנוב בית,
 - **פירוק:** `[t]ak[k]u` – takku "if" ("אם"), F1; `ARAD-iš` – ARAD "slave", nom. ("עבד"); `É-er` – "house", acc. ("בית"); `tāyezzi` – taya- "steal", pres. 3sg ("יגנוב"), F9.
 - **נוסחים:** הנוסח הקדום (291.1 451–463) זהה בתוכנו; בו "יחתכו" ביחיד (`ištā[manu=ššuš kukkur]iškezzi` – "*יחתוך*"), ובסופו `[…] ARAD-an=pat šuwezzi`. הנוסח 291.4 (60–70) – כמו נוסח התקן, ובו במקום "ימאן" (539) `[… mimma]i`.
 - **תרגומים:** CHiL: "[S]e uno servo ruba (i beni di) una casa,"
@@ -3763,7 +3763,7 @@
 
 ### 531
 `[n=a]n āppa išḫi=šši pianzi`
-> ואותו בחזרה לאדוניו ייתנו.
+> [ואותו] בחזרה לאדוניו ייתנו.
 - **פירוק:** `[n=a]n` – nu + =an "him" ("ואותו"); `āppa` – appa "back" ("בחזרה"); `išḫi=šši` – išḫa- "master", d.-l. + "his" ("לאדוניו"); `pianzi` – pai- "give", pres. 3pl ("ייתנו").
 - **תרגומים:** CHiL: "[e lo] si restituirà al suo proprietario."
 
@@ -3775,7 +3775,7 @@
 
 ### 533
 `[mekk]i=še išḫiyanzi`
-> הרבה יחייבו אותו,
+> [הרבה] יחייבו אותו,
 - **פירוק:** `[mekk]i=še` – mekki- "much" + =še "on him" ("הרבה … אותו"); `išḫiyanzi` – išḫai- "impose", pres. 3pl ("יחייבו").
 - **תרגומים:** CHiL: "gli im[porranno molto];"
 
@@ -3812,8 +3812,8 @@
 
 ### 539
 `[takku m]immai=ma`
-> [ואם] ימאן,
-- **פירוק:** `[takku` – takku "if" ("[ואם"), F1; `m]immai=ma` – mimma- "refuse", pres. 3sg + =ma ("]ימאן").
+> [ואם ימאן],
+- **פירוק:** `[takku` – takku "if" ("[ואם"), F1; `m]immai=ma` – mimma- "refuse", pres. 3sg + =ma ("ימאן]").
 - **תרגומים:** CHiL: "Ma [se] egli (il proprietario) rifiuta (di farlo)"
 
 ### 540
@@ -3889,7 +3889,7 @@
 
 ### 550
 `par[n]a=ššē=a šuwāezzi`
-> ואל ביתו יביט.
+> [ואל ביתו] יביט.
 - **פירוק:** `par[n]a=ššē=a` – parn- "house", all. + "his" + "and" ("ואל ביתו"); `šuwāezzi` – šuwaye- "look", pres. 3sg ("יביט"), F4.
 - **תרגומים:** CHiL: "E (la vittima) cercherà il risarcimento nella sua (del colpevole) c[as]a."
 
@@ -3897,7 +3897,7 @@
 
 ### 551
 `[takk]u LÚ-aš EL-LUM É-er lukkizzi`
-> אם איש בן חורין יצית בית,
+> [אם] איש בן חורין יצית בית,
 - **פירוק:** `[takk]u` – takku "if" ("אם"), F1; `LÚ-aš` – LÚ "man", nom. ("איש"); `EL-LUM` – ELLUM "free" ("בן חורין"); `É-er` – "house", acc. ("בית"); `lukkizzi` – lukk- "set fire to, kindle", pres. 3sg ("יצית").
 - **נוסחים:** הנוסח הקדום (291.1 474–478) זהה בתוכנו (`LÚ.U₁₉.[LU=ku …] ēšza` / `nakkuš nat[ta šarnik]za`).
 - **תרגומים:** CHiL: "Se un uomo libero incendia una casa"
@@ -3905,7 +3905,7 @@
 
 ### 552
 `É-er [EG]IR-pa wetezzi`
-> את הבית בחזרה יבנה,
+> את הבית [בחזרה] יבנה,
 - **פירוק:** `É-er` – "house", acc. ("את הבית"); `[EG]IR-pa` – appa "back, again" ("בחזרה"); `wetezzi` – wete- "build", pres. 3sg ("יבנה").
 - **תרגומים:** CHiL: "(allora) egli costruirà di [nuovo] la casa (distrutta),"
 
@@ -3917,7 +3917,7 @@
 
 ### 554
 `LÚ.U₁₉.LU=ku GU₄=ku [UD]U=ku ēšzi`
-> בין אדם, בין שור, בין שה יהיה –
+> בין אדם, בין שור, בין [שה] יהיה –
 - **פירוק:** `LÚ.U₁₉.LU=ku` – antuḫša- "person" + -ku "whether" ("בין אדם"); `GU₄=ku` – "ox" + -ku ("בין שור"); `[UD]U=ku` – UDU "sheep" + -ku ("בין שה"); `ēšzi` – eš- "be", pres. 3sg ("יהיה").
 - **תרגומים:** CHiL: "– sia una persona o un bovino o un [ovi]no –"
 
@@ -3940,7 +3940,7 @@
 
 ### 557
 `išḫaš=šeš=a še[r] šarnikzi`
-> ואדוניו בעדו יפצה,
+> ואדוניו [בעדו] יפצה,
 - **פירוק:** `išḫaš=šeš=a` – išḫa- "master" + "his" + =a ("ואדוניו"); `še[r]` – šer "on behalf" ("בעדו"); `šarnikzi` – šarnink- "compensate", pres. 3sg ("יפצה").
 - **תרגומים:** CHiL: "(allora) il suo proprietario risarcirà so[pra (ciò)]" – CHiL: "יפצה עליו" – מסכים ("בעדו").
 
@@ -3973,7 +3973,7 @@
 
 ### 562
 `[tak]ku taišzin kuiški lukkizzi`
-> אם מישהו יצית *מתבן*,
+> [אם] מישהו יצית *מתבן*,
 - **פירוק:** `[tak]ku` – takku "if" ("אם"), F1; `taišzin` – taišzi- (a barn or hay store; meaning uncertain), acc. ("*מתבן*"); `kuiški` – "anyone" ("מישהו"); `lukkizzi` – lukk- "set fire", pres. 3sg ("יצית").
 - **נוסחים:** הנוסח הקדום (291.1 485–490) זהה בתוכנו; אחריו בכתב היד שתיים–שלוש שורות ריקות – סוף הלוח.
 - **תרגומים:** CHiL: "Se qualcuno incendia un fienile" – CHiL: "מתבן (fienile)" – מסכים.
@@ -3982,7 +3982,7 @@
 
 ### 563
 `[G]U₄?{ḪI.A}-ŠU ētreškezzi`
-> את שווריו? יאכיל,
+> [את שווריו?] יאכיל,
 - **פירוק:** `[G]U₄?{ḪI.A}-ŠU` – GU₄ "cattle", pl. (uncertain) + -ŠU "his" ("את שווריו?"); `ētreškezzi` – etri(ya)- "feed", iterative pres. 3sg ("יאכיל").
 - **תרגומים:** CHiL: "egli dovrà nutrire i suoi (della vittima) [bo]vini"
 - **הערות:** המצית מאכיל את בקרו של הנפגע כל החורף – כי המספוא נשרף.
