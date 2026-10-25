@@ -29,6 +29,186 @@ HL1 / HLPT: CHiL's clause numbers ("kola"), one Hebrew line per clause; the § i
 `## § IV (cfr. HL 6) – …`). HL2: `<§>.<n>`, one Hebrew line per composite line (= a line of the lead manuscript, or a
 clause where the composite joins duplicates: the TSV says).
 
+## HL2: the composite (CTH 292, the second tablet "If a vine")
+Built 2026-10-25 by the Round 4 run 6 Sub2 coordinator, **before the first translated line**. CHiL has not edited CTH 292,
+so the composite is ours: `composite-HL2.tsv` (330 rows), checked by `python3 -I -B ../../tools/hittite_tools.py comp-check
+HL2` (0 problems). It was generated once from the decisions below (`composite-HL2--made-by.py` keeps the decided map and
+the generator, for the record); **the TSV is now the source**: edit it, never re-run the generator over it.
+
+**Method.**
+1. **The manuscripts and their dates.** TLHdig 0.3 has 37 manuscripts in `CTH-292/`. Their script dates and Hoffner's sigla
+   come from the Mainz *Konkordanz der hethitischen Keilschrifttafeln* (`hethport.net/hetkonk/hetkonk_abfrage.php?c=292`,
+   read 2026-10-25): **one Old Script copy**, KBo 25.85+ (= KUB 29.25, 28, 29, 30, 32, 35, 36, 38 + KBo 25.5 + 25.85; "ah.",
+   Hoffner's *aa*); all the others are New Script ("jh."; KBo 63.10, KBo 65.169 "late NS"; KBo 31.65, KBo 19.8, KBo 70.12,
+   EBo 1313 no date given). The CTH sub-numbers sort them into **two recensions**: **292.I, the Old Hittite version** (the OS
+   copy; its NS copies KUB 29.23+, KUB 29.26+, KUB 29.34+, KBo 14.66+, KBo 14.67, KBo 70.12) and **292.II, the later version**
+   (KBo 6.26 – Hoffner's *p*, the fullest, HL 157–200 –, KBo 6.10+, 6.11, 6.12, 6.13+, 6.15, 6.16, KBo 31.66+, KUB 29.24+,
+   29.31, 29.33+, KBo 19.8, KBo 31.65); the small ones are not sub-classified. Hoffner's sigla: KBo 6.12 *a*, KUB 29.23+ *b*,
+   KBo 6.10+ *c*, KBo 6.11 *d*, KBo 6.13+ *e*, KBo 31.66+ *f*, KBo 19.6 *g*, KBo 19.9 *h*, KUB 29.24+ *i, k*, KBo 6.16 *j*,
+   KBo 31.63 *l*, Bo 8202 *m*, KBo 19.7+ *n*, KUB 29.26+ *o*, KBo 6.26 *p*, KBo 14.66+ *q*, KBo 31.64 *r*, HFAC 5 *s*,
+   KBo 14.67 *t*, KUB 29.31 *u*, KBo 6.15 *v*, KBo 31.65 *w*, KUB 29.33+ *x*, KUB 29.34+ *y*, KBo 22.66 *z* (not in TLHdig),
+   KBo 25.85+ *aa*, KBo 19.8 and HFAC 4 *bb*.
+2. **The § numbers.** Hoffner's HL numbering is Hrozný's (1922, the edition that created it; PD, archive.org
+   `codehittiteprove01hroz`, read for the numbering only), continued by Friedrich and Hoffner; Hrozný called his numbers from
+   §119 on "provisional", and kept gaps for lost text (§§ 114–117, 134–141, 153–156) that fixed the numbers ever since. Each
+   manuscript's lines were placed by their content and their paragraph dividers (`¶`), against Hrozný's §-by-§ text and
+   the landmarks every edition shares (the plough §121, the axes §157, the canal §162, seed on seed §166–167, the
+   boundary §168, the snake §170, the king's judgment §173, the prices §§178–186, the sexual laws §§187–200b). Hrozný's
+   sub-paragraphs (176 A/B, 185 A/B, 195 A–C, 200 A/B) are written 176a/176b …; **146a/146b, 158a/158b, 160a/160b, 162b
+   and 173a/173b are ours** (where the OS divides a paragraph of the NS copies, or holds one they lack, or, for 162b,
+   Hrozný's "§162/1"): marked in the table. Hoffner 1997 (©) was not in hand to check these labels.
+3. **The lead of each §** (guidelines §5.2, "Texts, recensions, numbering"): **the Old Script copy where it keeps at least
+   about two thirds of the text that the best copy keeps; else an NS copy of the Old Hittite version on the same terms;
+   else the fullest copy.** Preservation was measured by script (the signs outside `[ ]`, per § and per manuscript) and
+   checked by eye; two choices go by content: §111 (KUB 29.23+, the only copy that keeps the opening *šēni* "image") and
+   §169 (KBo 6.13+, complete where KBo 6.26 is broken). The OS leads §§118–119, 144–148, 151–152, 157–161 (44 rows); the
+   NS copies of the OH version lead §§104–106, 111, 124, 150, 188–194; the later version leads the rest.
+4. **The rows.** One row per line of the lead manuscript (`<§>.<n>`; the colophon `col1`); `text` = that line exactly as
+   TLHdig gives it, **including TLHdig's own restorations in `[ ]`** (its editors restore a broken copy from its
+   duplicates; e.g. the OS rows are largely restored from the NS copies, and every such restoration is visible as
+   brackets). Where a manuscript line holds the end of one § and the start of the next (KBo 6.26 at 173a/b, 176a/b, 185a/b,
+   195a/b/c, 200a/b; KUB 29.34+ at 191/192), the line is split at the § boundary and the note says so. Our own changes are
+   few and noted in the `note` column: one restoration (123.3, from KBo 6.10+ ii 2′), one continuation from another copy
+   (122.3, KBo 6.12 ii 9′ after KBo 31.66+ breaks off), and one later-only row (192.3, KBo 6.26 iii 37). TLHdig's marks:
+   `[ ]` restored, `⸢ ⸣` damaged, `〈 〉` omitted by the scribe, `〈〈 〉〉` to be deleted, `!` a correction, `?` uncertain,
+   **`*…*` written over an erasure** (TLHdig's `ras`; frequent in KBo 6.26 iii–iv), `x` an unread sign.
+5. **The duplicates** (`witnesses`): every other manuscript's lines of the §, each aligned to a lead row by an
+   order-preserving word-overlap alignment (the copies break their lines differently, so the alignment is approximate:
+   the translator compares the whole §). `hittite_tools.py data HL2` prints them under each row.
+6. **The tool** (`../../tools/hittite_tools.py`, 2026-10-25): a joined manuscript's lines are named with their fragment
+   (`{5} Vs. 2′`, as `tlh2md.py lines` prints them; the bare label repeats in a join: KBo 25.85+ has ten fragments), and a
+   label that TLHdig repeats even so gets `#n` (`{1} 1′#1`); `comp-check` reports an ambiguous label; a row that is only
+   part of its manuscript line keeps only its own words (so a neighbouring §'s word cannot license a gate).
+
+**Recension tags in the translation** (guidelines §6.8): a row from the later version that has no counterpart in the
+older (192.3) is tagged `{נוסח מאוחר}`; the נוסחים field of every entry gives the other copies' differences of content
+(above all OS ↔ NS: e.g. §157 the axe weights 3 minas / 1 mina 20 in the OS against 1 mina / ½ mina in KBo 6.26; §158b
+3 months against 2; §168 the OS boundary word *arḫan* against NS ZAG; §169 the OS lacks "buys a field"; §193 the brother's
+son (OS, KUB 29.34+) against KBo 6.26's damaged ⸢A?⸣ ŠEŠ-ŠU and its added "it is no offence"; §106 the OH "another's field"
+against KBo 6.11's "a cultivated field").
+
+### HL2 concordance (§ → lead manuscript → duplicates)
+Rec.: I = the Old Hittite version (I (OS) = the Old Script copy), II = the later version. Lines as TLHdig labels them.
+
+| § | Lead manuscript (lines) | Rec. | Duplicates (lines) | Certainty, notes |
+|---|---|---|---|---|
+| 101 | KBo 6.12 Vs. I 1 – Vs. I 7 | II | KUB 29.23+ {1} 1′ – {1} 2′ | sure |
+| 102 | KBo 6.12 Vs. I 8 – Vs. I 10 | II | KUB 29.23+ {1} 3′ – {1} 5′ | sure |
+| 103 | KBo 6.12 Vs. I 11 – Vs. I 14 | II | KUB 29.23+ {1} 6′ – {1} 9′ | sure |
+| 104 | KUB 29.23+ {1+2} 10′/Vs. I 1′ – {1+2} 11′/Vs. I 2′ | I | KBo 6.12 Vs. I 15 – Vs. I 16; KBo 19.6 2′ | sure |
+| 105 | KUB 29.23+ {1+2} 12′/Vs. I 3′ – {1+2} 16′/Vs. I 7′ | I | KBo 6.12 Vs. I 17 – Vs. I 21; KBo 19.6 3′ – 6′; KBo 6.10+ {1} Vs. I 3′ – {1} Vs. I 7′; KBo 6.11 Vs. I 2′ – Vs. I 3′ | sure |
+| 106 | KUB 29.23+ {3+1+2} 1′/17′/Vs. I 8′ – {3+1+2} 4′/20′/Vs. I 11′ | I | KBo 6.11 Vs. I 4′ – Vs. I 7′; KBo 6.12 Vs. I 22 – Vs. I 25; KUB 29.24+ {1} Vs. I 1′ – {1} Vs. I 5′; KBo 6.10+ {1} Vs. I 8′ – {1} Vs. I 10′; KBo 25.85+ {1} 1′ – {1} 3′; KBo 19.9 2′ – 4′ | sure |
+| 107 | KBo 6.11 Vs. I 8′ – Vs. I 11′ | II | KBo 6.12 Vs. I 26 – Vs. I 28; KUB 29.23+ {2} 5′/Vs. I 12′ – {2} 7′/Vs. I 14′; KUB 29.24+ {1} Vs. I 6′ – {1} Vs. I 9′; KBo 6.10+ {1} Vs. I 12′ – {1} Vs. I 14′; KBo 25.85+ {1} 4′ – {1} 6′; KBo 19.9 5′ – 8′ | sure |
+| 108 | KBo 6.11 Vs. I 12′ – Vs. I 15′ | II | KBo 6.12 Vs. I 29 – Vs. I 30; KUB 29.23+ {2} 8′/Vs. I 15′ – {3} 11′; KUB 29.24+ {1} Vs. I 10′ – {1} Vs. I 14′; KBo 6.10+ {1} Vs. I 15′ – {1} Vs. I 18′; KBo 19.9 9′ – 12′; KBo 25.85+ {1} 7′ | sure |
+| 109 | KBo 6.11 Vs. I 16′ – Vs. I 17′ | II | KUB 29.23+ {3} 12′; KBo 6.10+ {1} Vs. I 19′ – {1} Vs. I 20′; KBo 6.16 Vs. I 1′ – Vs. I 2′ | sure |
+| 110 | KBo 6.11 Vs. I 18′ – Vs. I 19′ | II | KUB 29.23+ {3} 13′ – {3} 14′; KBo 6.10+ {1} Vs. I 21′ – {1} Vs. I 22′; KBo 6.16 Vs. I 3′ – Vs. I 5′ | sure |
+| 111 | KUB 29.23+ {3} 15′ | I | KBo 6.11 Vs. I 20′; KBo 6.10+ {1} Vs. I 23′; KBo 6.16 Vs. I 6′ | sure; lead chosen for its opening (šēni 'image') |
+| 112 | KBo 6.11 Vs. I 21′ – Vs. I 23′ | II | KBo 6.10+ {1} Vs. I 24′ – {1} Vs. I 26′; KUB 29.24+ {2} 1′ – {2} 2′ | sure |
+| 113 | KUB 29.24+ {2} 3′ – {2} 8′ | II | KBo 6.11 Vs. I 24′ – Vs. I 27′; KBo 6.10+ {1} Vs. I 27′ – {1} Vs. I 30′; FHL 90 1′ – 4′ | sure |
+| 114–117 | – (lost) | | – | **lost**: KBo 6.10+ i breaks off after §113 (TLHdig i 31′ is empty); Hrozný counted two §§ of traces (114–115) and a gap of about two (116–117). Possibly some of the unplaced fragments below (KUB 13.31 '§114f.?'). |
+| 118 | KBo 25.85+ {2} Vs. 1′ – {2+3} Vs. 6′/2′ | I (OS) | KBo 31.66+ {1} Vs. I 1′ – {1} Vs. I 5′; KBo 31.63 Vs. 1′ – Vs. 2′ | ? (content too broken to name; placed by its position before §119, Hrozný's provisional number) |
+| 119 | KBo 25.85+ {2+3} Vs. 7′/3′ – {3} 5′ | I (OS) | KBo 31.66+ {1} Vs. I 6′ – {1} Vs. I 8′; KBo 31.63 Vs. 3′ – Vs. 5′ | sure |
+| 120 | KBo 31.66+ {1} Vs. I 9′ – {1} Vs. I 10′ | II | KBo 25.85+ {3} 6′ – {3} 7′; KBo 31.63 Vs. 6′ – Vs. 7′ | sure |
+| 121 | KBo 31.66+ {1} Vs. I 11′ – {1} Vs. I 14′ | II | KBo 25.85+ {3} 8′ – {3} 11′; KBo 6.12 Vs. II 1 – Vs. II 6; KBo 31.63 Vs. 8′ – Vs. 9′ | sure |
+| 122 | KBo 31.66+ {1} Vs. I 15′ – {1} Vs. I 16′ + KBo 6.12 ii 9 (the end) | II | KBo 6.12 Vs. II 7 – Vs. II 9; KBo 25.85+ {3} 12′ – {4} 1′; KBo 14.66+ {1} Vs. I 1′ – {1} Vs. I 6″ | sure |
+| 123 | KBo 6.12 Vs. II 10 – Vs. II 12 | II | KBo 6.10+ {1} Vs. II 1′ – {1} Vs. II 2′; KUB 29.26+ {1} 1′ – {1} 2′; KBo 19.7+ {1} Vs. 1′ – {1} Vs. 2′ | ? (only 'wheel' and '3 shekels' survive) |
+| 124 | KUB 29.26+ {1} 3′ – {2+1} 3′/6′ | I | KBo 6.10+ {1} Vs. II 3′ – {1} Vs. II 7′; KBo 19.7+ {1} Vs. 3′ – {1+2} Vs. 7′; KBo 31.66+ {2} Vs. II 1′ – {2} Vs. II 4′; KBo 6.12 Vs. II 13 – Vs. II 18 | sure |
+| 125 | KBo 6.10+ {1} Vs. II 8′ – {1} Vs. II 10′ | II | KUB 29.26+ {2+1} 4′/7′ – {2+1} 5′/8′; KBo 19.7+ {1+2} Vs. 7′ – {1+2} Vs. 8′; KBo 31.66+ {2} Vs. II 5′ – {2} Vs. II 7′; KBo 25.85+ {4} 2′ – {4} 3′; KBo 6.12 Vs. II 19 – Vs. II 20 | sure |
+| 126 | KBo 6.10+ {1} Vs. II 11′ – {1} Vs. II 16′ | II | KUB 29.26+ {2+1} 6′/9′ – {2+1} 9′/12′; KBo 31.66+ {2} Vs. II 8′ – {2} Vs. II 13′; KBo 25.85+ {4} 4′ – {4} 7′; Bo 8202 1′ – 7′; KBo 6.12 Vs. II 21 – Vs. II 23 | sure |
+| 127 | KBo 6.10+ {1} Vs. II 17′ – {1} Vs. II 19′ | II | KBo 25.85+ {4} 8′ – {4} 9′; KUB 29.26+ {2} 10′; Bo 8202 8′ | sure |
+| 128 | KBo 6.10+ {1} Vs. II 20′ – {1+2+3} Vs. II 25′/4′/5′ | II | KBo 25.85+ {4} 10′ – {4} 13′ | sure |
+| 129 | KBo 6.10+ {1+2+3} Vs. II 26′/5′/6′ – {1+2+3} Vs. II 29′/8′/9′ | II | – | sure |
+| 130 | KBo 6.10+ {1+2} Vs. II 30′/9′ – {1} Vs. II 32′ | II | – | sure |
+| 131 | KBo 6.10+ {1} Vs. II 33′ – {1} Vs. II 34′ | II | – | sure |
+| 132 | KBo 6.10+ {1} Vs. II 35′ – {1} Vs. II 37′ | II | – | sure |
+| 133 | KBo 6.10+ {1} Vs. II 38′ – {1} Vs. II 40′ | II | – | sure |
+| 134–141 | – (lost) | | – | **lost**: the end of KBo 6.10+ col. ii and the top of col. iii; Hrozný's estimate of 4 + 4 §§ fixed the numbering. Perhaps the OS fragment KBo 25.85+ {1} col. ii (below). |
+| 142 | KBo 6.10+ {1} Rs. III 1′ – {1} Rs. III 4′ | II | – | the § opening is lost |
+| 143 | KBo 6.10+ {1} Rs. III 5′ – {1} Rs. III 8′ | II | KBo 31.64 1′ – 5′; KBo 25.85+ {5} Vs. 1′ | sure |
+| 144 | KBo 25.85+ {5} Vs. 2′ – {5} Vs. 5′ | I (OS) | KBo 6.10+ {1} Rs. III 9′/1′ – {1+3} Rs. III 13′/5′ | sure |
+| 145 | KBo 25.85+ {5} Vs. 6′ – {5} Vs. 7′ | I (OS) | KBo 6.10+ {1+3} Rs. III 14′/6′ – {1+3} Rs. III 16′/8′; HFAC 5 1′ – 4′ | sure |
+| 146a | KBo 25.85+ {5} Vs. 8′ – {5} Vs. 11′ | I (OS) | KBo 6.10+ {1+3} Rs. III 17′/9′ – {1} Rs. III 21′; KBo 14.67 Vs.? II 1′ – Vs.? II 2′ | sure; the a/b labels are ours (the OS has a paragraph here that the NS copies lack) |
+| 146b | KBo 25.85+ {5} Vs. 12′ – {5} Vs. 14′ | I (OS) | – | ? an OS-only paragraph; label ours |
+| 147 | KBo 25.85+ {5} Vs. 15′ – {6+5} Vs. II 1′/Vs. 16′ | I (OS) | KBo 6.10+ {1} Rs. III 22′ – {1} Rs. III 24′; KBo 14.67 Vs.? II 3′ – Vs.? II 4′ | sure |
+| 148 | KBo 25.85+ {6+5} Vs. II 2′/Vs. 17′ – {6+5} Vs. II 3′/Vs. 18′ | I (OS) | KBo 6.10+ {1} Rs. III 25′ – {1} Rs. III 27′; KBo 14.67 Vs.? II 5′ – Vs.? II 6′ | sure |
+| 149 | KBo 6.10+ {1} Rs. III 28′ – {1} Rs. III 31′ | II | KBo 25.85+ {6} Vs. II 4′ – {6} Vs. II 6′; KBo 14.66+ {1+2} Vs. II 1′ – {1+2} Vs. II 2′; KBo 14.67 Vs.? II 7′ – Vs.? II 9′ | sure |
+| 150 | KBo 14.66+ {1+2} Vs. II 3′ – {1+2} Vs. II 4′ | I | KBo 25.85+ {6} Vs. II 7′ – {6} Vs. II 8′; KBo 6.10+ {1} Rs. III 32′ – {1} Rs. III 33′; KBo 14.67 Vs.? II 10′ – Vs.? II 11′ | sure |
+| 151 | KBo 25.85+ {6} Vs. II 9′ – {6} Vs. II 10′ | I (OS) | KBo 14.66+ {1+2} Vs. II 5′ – {1} Vs. II 6′; KBo 6.10+ {1} Rs. III 34′ – {1} Rs. III 36′; KBo 14.67 Vs.? II 12′ – Vs.? II 13′ | sure |
+| 152 | KBo 25.85+ {6} Vs. II 11′ – {6} Vs. II 12′ | I (OS) | KBo 14.66+ {1} Vs. II 7′ – {1} Vs. II 8′; KBo 6.10+ {1} Rs. III 37′ – {1} Rs. III 38′; KBo 14.67 Vs.? II 14′ | sure |
+| 153–156 | – (no text) | | – | **not attested**: Hrozný assumed a gap of about four §§ at the end of KBo 6.10+ col. iii; the copies found since (KBo 25.85+ ii 11′–13′, KBo 14.66+ ii 7′–9′) run from §152 straight to the axe of §157, so the numbers name no text. |
+| 157 | KBo 25.85+ {6} Vs. II 13′ – {6} Vs. II 15′ | I (OS) | KBo 6.26 Vs. I 1 – Vs. I 5; KBo 14.66+ {1} Vs. II 9′; KBo 19.7+ {1} Rs. 2′ – {1} Rs. 3′; KUB 29.24+ {1} Rs. IV 2′ – {1} Rs. IV 5′ | sure |
+| 158a | KBo 25.85+ {6} Vs. II 16′ – {6} Vs. II 18′ | I (OS) | KBo 6.26 Vs. I 6 – Vs. I 9; KBo 19.7+ {1} Rs. 4′ – {1} Rs. 6′ | a/b ours, after the OS divider between the man's and the woman's wages (NS: one paragraph) |
+| 158b | KBo 25.85+ {6} Vs. II 19′ | I (OS) | KBo 6.26 Vs. I 9 – Vs. I 10; KUB 29.31 1′ | a/b ours (see 158a) |
+| 159 | KBo 25.85+ {6} Vs. II 20′ | I (OS) | KBo 6.26 Vs. I 11 – Vs. I 12; KUB 29.31 2′ – 3′ | sure |
+| 160a | KBo 25.85+ {6} Vs. II 21′ | I (OS) | KBo 6.26 Vs. I 13 – Vs. I 14; KUB 29.31 4′; KBo 65.169 1′ – 2′ | a/b ours, after the OS dividers (NS: one paragraph) |
+| 160b | KBo 25.85+ {6} Vs. II 22′ | I (OS) | KBo 6.26 Vs. I 14 – Vs. I 15; KUB 29.31 5′ – 7′; KBo 6.15 Rs. IV 1′ – Rs. IV 3′ | a/b ours (see 160a) |
+| 161 | KBo 25.85+ {6} Vs. II 23′ | I (OS) | KBo 6.26 Vs. I 16 – Vs. I 17; KUB 29.31 8′ – 9′; KBo 6.15 Rs. IV 4′ – Rs. IV 5′; KBo 65.169 3′ – 4′ | sure |
+| 162 | KBo 6.26 Vs. I 18 – Vs. I 21 | II | KBo 6.15 Rs. IV 6′ – Rs. IV 8′; KUB 29.31 10′ – 12′; KBo 31.65 Vs. II 1′ – Vs. II 2′; KBo 65.169 5′ – 6′ | sure |
+| 162b | KBo 6.15 Rs. IV 9′ – Rs. IV 12′ | II | KBo 6.10+ {1} Rs. IV 6′ – {1} Rs. IV 9′ | ? Hrozný's '§162/1': a paragraph only in KBo 6.15 iv and KBo 6.10+ iv, not in KBo 6.26 |
+| 163 | KBo 6.26 Vs. I 22 – Vs. I 27 | II | KBo 31.66+ {3+4} Rs. IV 1 – {3+4+5} Rs. IV 6; KBo 6.15 Rs. IV 13′ – Rs. IV 16′; KBo 6.10+ {1} Rs. IV 10′ – {1} Rs. IV 12′; HFAC 4 1′ – 5′; KBo 67.269 1′ – 6′; KBo 25.85+ {7} 1′! | sure |
+| 164 | KBo 6.26 Vs. I 28 – Vs. I 30 | II | KBo 25.85+ {7} 2′! – {7} 3′!; KBo 31.66+ {3+5} Rs. IV 7 – {3+5} Rs. IV 9; HFAC 4 6′ – 7′ | sure |
+| 165 | KBo 6.26 Vs. I 31 – Vs. I 33 | II | KBo 25.85+ {7} 3′! – {7} 5′!; KBo 31.66+ {3} Rs. IV 10 – {3} Rs. IV 12 | sure |
+| 166 | KBo 6.26 Vs. I 34 – Vs. I 38 | II | KBo 25.85+ {7} 6′! – {6} Rs. III 3 | sure |
+| 167 | KBo 6.26 Vs. I 39 – Vs. I 45 | II | KBo 25.85+ {6} Rs. III 4 – {10+6} Rs. III 1′/8; KBo 66.239 1′ – 4′ | sure |
+| 168 | KBo 25.85+ {10+6} Rs. III 2′/9 – {10+6} Rs. III 4′/11 | I (OS) | KBo 6.26 Vs. I 46 – Vs. I 49; KBo 6.13+ {1} Vs. I 1 – {1} Vs. I 5; KBo 6.11 Rs. IV 1′ – Rs. IV 4′; VSNF 12.127 Vs. 1 – Vs. 5; KBo 66.239 5′ – 6′ | sure |
+| 169 | KBo 6.13+ {1} Vs. I 6 – {1} Vs. I 9 | II | KBo 6.26 Vs. I 50 – Vs. I 53; KBo 25.85+ {10+6} Rs. III 5′/12 – {10+6} Rs. III 7′/14; VSNF 12.127 Vs. 6 – Vs. 9 | sure |
+| 170 | KBo 6.26 Vs. II 1 – Vs. II 2 | II | KBo 6.13+ {1} Vs. I 10 – {1} Vs. I 12; VSNF 12.127 Vs. 10 – Vs. 11; KBo 25.85+ {10+6} Rs. III 8′/15 – {6} Rs. III 16 | sure |
+| 171 | KBo 6.26 Vs. II 3 – Vs. II 8 | II | KBo 6.13+ {1} Vs. I 13 – {1} Vs. I 18; VSNF 12.127 Vs. 12 – Vs. 13; KBo 25.85+ {8} 1′ | sure |
+| 172 | KBo 6.26 Vs. II 9 – Vs. II 10 | II | KBo 6.13+ {1} Vs. I 19 – {1} Vs. I 21; KBo 25.85+ {8} 2′ – {8} 3′ | sure |
+| 173a | KBo 6.26 Vs. II 11 – Vs. II 14 | II | KBo 25.85+ {8} 4′ – {8+9} 5′/1′ | a/b by content (the OS divides them) |
+| 173b | KBo 6.26 Vs. II 14 – Vs. II 15 | II | KBo 25.85+ {8+9} 6′/2′ | a/b by content (the OS divides them) |
+| 174 | KBo 6.26 Vs. II 16 | II | KBo 25.85+ {8+9+5} 7′/3′/1′ | sure |
+| 175 | KBo 6.26 Vs. II 17 – Vs. II 20 | II | KBo 25.85+ {9+5} 4′/2′ – {9+5} 6′/4′ | sure |
+| 176a | KBo 6.26 Vs. II 21 – Vs. II 23 | II | KBo 25.85+ {9+5} 7′/5′ – {9+5} 8′/6′; KUB 29.23+ {2} Rs. III 1′ – {2} Rs. III 2′ | Hrozný's 176 A/B |
+| 176b | KBo 6.26 Vs. II 23 – Vs. II 26 | II | KBo 25.85+ {9+5} 9′/7′ – {9+5} 10′/8′; KUB 29.23+ {2} Rs. III 3′ – {2} Rs. III 4′ | Hrozný's 176 A/B |
+| 177 | KBo 6.26 Vs. II 27 – Vs. II 29 | II | KBo 25.85+ {9+5} 11′/9′ – {5} 10′; KUB 29.23+ {2} Rs. III 5′ – {2} Rs. III 6′ | sure |
+| 178 | KBo 6.26 Vs. II 30 – Vs. II 35 | II | KUB 29.23+ {2} Rs. III 7′ – {2} Rs. III 12′; KBo 25.85+ {5} 11′ – {5} 14′ | sure |
+| 179 | KBo 6.26 Vs. II 36 – Vs. II 37 | II | KUB 29.23+ {2} Rs. III 13′ – {2} Rs. III 14′; KUB 29.33+ {2+1} Vs. I 3′ – {2+1} Vs. I 4′ | sure |
+| 180 | KBo 6.26 Vs. II 38 – Vs. II 41 | II | KUB 29.33+ {2+1} Vs. I 4′ – {2+1} Vs. I 7′; KUB 29.23+ {2} Rs. III 15′ – {2} Rs. III 18′ | sure |
+| 181 | KBo 6.26 Vs. II 42 – Vs. II 47 | II | KUB 29.33+ {2+1} Vs. I 8′ – {3} Vs. 6′ | sure |
+| 182 | KBo 6.26 Vs. II 48 – Rs. III 2 | II | KUB 29.33+ {3} Vs. 7′ – {3} Vs. 10′; KBo 31.65 Rs. IV 1 | sure |
+| 183 | KBo 6.26 Rs. III 3 – Rs. III 7 | II | – | sure |
+| 184 | KBo 6.26 Rs. III 8 | II | – | sure |
+| 185a | KBo 6.26 Rs. III 9 – Rs. III 15 | II | – | Hrozný's 185 A/B |
+| 185b | KBo 6.26 Rs. III 15 | II | – | Hrozný's 185 A/B |
+| 186 | KBo 6.26 Rs. III 16 – Rs. III 19 | II | KUB 29.34+ {1} Rs. IV 1′ | sure |
+| 187 | KBo 6.26 Rs. III 20 – Rs. III 22 | II | KUB 29.33+ {1} Vs. II 1′ – {1} Vs. II 2′; KUB 29.34+ {1} Rs. IV 2′ – {1} Rs. IV 4′ | sure |
+| 188 | KUB 29.34+ {1} Rs. IV 5′ – {1} Rs. IV 7′ | I | KBo 6.26 Rs. III 23 – Rs. III 25; KUB 29.33+ {1} Vs. II 3′ – {1} Vs. II 8′ | sure |
+| 189 | KUB 29.34+ {1} Rs. IV 8′ – {1} Rs. IV 10′ | I | KBo 6.26 Rs. III 26 – Rs. III 28; KUB 29.33+ {1} Vs. II 9′ – {1} Vs. II 13′ | sure |
+| 190 | KUB 29.34+ {1} Rs. IV 11′ – {1} Rs. IV 13′ | I | KBo 6.26 Rs. III 29 – Rs. III 31; KUB 29.33+ {1} Vs. II 14′ – {1} Vs. II 16′ | sure |
+| 191 | KUB 29.34+ {1} Rs. IV 14′ – {1} Rs. IV 17′ | I | KBo 6.26 Rs. III 32 – Rs. III 35 | sure |
+| 192 | KUB 29.34+ {1} Rs. IV 17′ – {1} Rs. IV 18′ + KBo 6.26 iii 37 (later version) | I | KBo 6.26 Rs. III 37 | the OH version (KUB 29.34+); KBo 6.26 iii 37 has another law here (a later-only row, 192.3) |
+| 193 | KUB 29.34+ {1} Rs. IV 19′ – {1} Rs. IV 21′ | I | KBo 6.26 Rs. III 40 – Rs. III 43; KBo 25.85+ {2+10} Rs. 1′/Rs. IV 2′ – {2+10} Rs. 3′/Rs. IV 4′ | sure |
+| 194 | KUB 29.34+ {1} Rs. IV 22′ – {1} Rs. IV 25′ | I | KBo 25.85+ {2+10} Rs. 4′/Rs. IV 5′ – {2+10} Rs. 7′/Rs. IV 8′; KBo 6.26 Rs. III 44 – Rs. III 48; KBo 6.13+ {1} Rs. III 1′ – {1+2} Rs. III 2′/1′ | sure |
+| 195a | KBo 6.26 Rs. III 49 – Rs. III 50 | II | KUB 29.34+ {2+1} Rs. IV 1′/26′ – {2+1} Rs. IV 2′/27′; KBo 25.85+ {2+10} Rs. 8′/Rs. IV 9′; KUB 29.33+ {1} Rs. III 1′ – {1} Rs. III 2′; KBo 6.13+ {1+2} Rs. III 3′/2′ – {1+2} Rs. III 4′/3′ | Hrozný's 195 A–C (KBo 6.13+ divides them) |
+| 195b | KBo 6.26 Rs. III 50 – Rs. III 52 | II | KUB 29.34+ {2+1} Rs. IV 2′/27′ – {2+1} Rs. IV 3′/28′; KBo 25.85+ {2+10} Rs. 9′/Rs. IV 10′; KUB 29.33+ {1} Rs. III 3′ – {1} Rs. III 4′; KBo 6.13+ {1+2} Rs. III 5′/4′ – {1+2} Rs. III 6′/5′ | Hrozný's 195 A–C |
+| 195c | KBo 6.26 Rs. III 52 – Rs. III 53 | II | KUB 29.34+ {2+1} Rs. IV 3′/28′ – {2} Rs. IV 4′; KBo 25.85+ {10} Rs. IV 11′ – {10} Rs. IV 12′; KUB 29.33+ {1} Rs. III 5′ – {1} Rs. III 6′; KBo 6.13+ {1+2} Rs. III 7′/6′ – {1+2} Rs. III 8′/7′ | Hrozný's 195 A–C |
+| 196 | KBo 6.26 Rs. IV 1 – Rs. IV 5 | II | KUB 29.34+ {2} Rs. IV 5′ – {2} Rs. IV 8′; KBo 25.85+ {10} Rs. IV 13′ – {10} Rs. IV 15′; KBo 6.13+ {1+2} Rs. III 9′/8′ – {1+2} Rs. III 10′/9′ | sure |
+| 197 | KBo 6.26 Rs. IV 6 – Rs. IV 9 | II | KUB 29.34+ {2} Rs. IV 9′ – {2} Rs. IV 11′ | sure |
+| 198 | KBo 6.26 Rs. IV 10 – Rs. IV 15 | II | KUB 29.34+ {2} Rs. IV 12′ – {2} Rs. IV 15′ | sure |
+| 199 | KBo 6.26 Rs. IV 16 – Rs. IV 22 | II | KBo 63.10 1′ – 5′ | sure |
+| 200a | KBo 6.26 Rs. IV 23 – Rs. IV 27 | II | KUB 29.33+ {3} Rs. 1 – {3} Rs. 3 | Hrozný's 200 A/B |
+| 200b | KBo 6.26 Rs. IV 27 – Rs. IV 31 | II | KUB 29.33+ {3+4} Rs. 4/1′ – {3+4} Rs. 8/5′ | Hrozný's 200 A/B |
+| colophon | KBo 6.13+ Rs. IV 1′ | II | – | sure |
+
+**Lost or only partly preserved.** Lost: §§114–117, 134–141 (no text in any copy), §§153–156 (numbers without text).
+Partly preserved (the translation is fragmentary): §§101–103 (the line beginnings), 118, 122–123, 129–133, 142, 146b,
+182–183 (line ends), 196 (the opening), and the OS-led §§ where only the TLHdig restorations fill the left half.
+
+**Unplaced fragments** (kept out of the composite; none can be aligned to a line): KBo 25.85+ {1} col. ii 1′–6′ (`ták-ku
+[LÚ` / `pár-na-[aš-še-ia` …; in the OS between §128 and §144, so perhaps §§129–133 or the lost 134–141); KBo 25.85+ {1}
+col. i 4′–7′ are §§107–108 only by position (in the witnesses); KBo 31.65 rev. iii 1–3 (`ták-ku PA₅-a[n` / `A.ŠÀ-iš-ši p[a-`:
+a canal law placed after §162 in this copy, not in KBo 6.26); KBo 19.8 ii (a theft of a beehive, `É.NIM.LÀL`, with
+*parnaššea šuwāezzi*: a law not in KBo 6.26 or 6.10+; perhaps in the gap §§114–117 or 134–141; Hoffner's *bb*); KUB 13.31
+("§114f.?" in the Konkordanz); KBo 14.67 iii 1′–4′; KBo 31.66+ iii 1′–3′; KBo 6.13+ ii 8′–20′ (only the first signs, `ŠA …`,
+`ŠI-IM-[ŠU]`, of the price list §§178–186); KBo 70.12 (the Konkordanz: a duplicate of §§150–152; its signs do not align);
+EBo 1313 (`LU]GAL-i-ma-aš`: §187, 188 or 199). **KUB 29.17+ is not CTH 292**: its text is HL 60 (the bull found and
+castrated) and HL 71? of the first tablet; it is not in the Konkordanz list of CTH 292 and is left out.
+
+**The colophon** (KBo 6.13+ iv 1′): `DUB 2{KAM} ták-ku {GIŠ}GEŠTIN-aš QA-TI` "Tablet 2, 'If a vine', finished": the
+tablet of HL 101–200 is "the second". (Both colophons of HL1 also say "Tablet 2" – CHiL `2!`: the
+open question of HL1, now with the second tablet's own count beside it.)
+
 ## Bible (look for; the parallels index is the product)
 Exod 21:12–14 (HL 1–4: killing; "his hand errs" ↔ 21:13), 21:18–19 (HL 10: the injurer pays the physician), 21:22–25 (HL
 17–18: a miscarriage, by month), 21:26–27 (HL 7–8, 11–16: blinding, a tooth, limbs: compensation, not talion), 21:28–36

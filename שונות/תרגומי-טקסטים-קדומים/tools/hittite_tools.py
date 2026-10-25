@@ -17,8 +17,11 @@
   hittite_tools.py chd WORD                   the Chicago Hittite Dictionary's free volumes, per word (a pointer only)
   hittite_tools.py comp-init KEY MS FROM TO SEC   starter rows of a composite (composite-<KEY>.tsv) from one TLHdig
                                               manuscript's lines FROM..TO (1-based), § numbers from SEC at each divider
-  hittite_tools.py comp-check KEY             the composite's rows against TLHdig (every manuscript line exists; a row
-                                              whose text differs from its manuscript line must say why in its note)
+  hittite_tools.py comp-check KEY             the composite's rows against TLHdig (every manuscript line exists and is
+                                              unambiguous; a row whose text differs from its manuscript line must say why
+                                              in its note). A joined manuscript's line is named with its fragment, as
+                                              `tlh2md.py lines` prints it (`{5} Vs. 2′`); a label TLHdig repeats even so
+                                              takes `#n` (`{1} 1′#2` = the 2nd such line). (2026-10-25)
   hittite_tools.py verify [KEY…] [--strict]
   hittite_tools.py build [KEY…]               translation-<KEY>.rtl.md + each project's translation.rtl.md
   hittite_tools.py grep '<regex>' [--all]     the unvocalized `>` lines of the Hittite texts (--all: every corpus)
@@ -113,6 +116,23 @@ def tlh_ms(cth, stem):
     return _TLH[k]
 
 
+def full_label(ln):
+    """A TLHdig line's label with its fragment, as `tlh2md.py lines` prints it (`{5} Vs. 2′`): the bare label repeats
+    in a join of several fragments (KBo 25.85+ has ten), so a composite names a joined manuscript's lines this way."""
+    return f"{{{ln['frag']}}} {ln['label']}" if ln.get("frag") else ln["label"]
+
+
+def find_lines(cth, stem, lab):
+    """The lines of a TLHdig manuscript with this label: the full label (with the fragment) first, else the bare one."""
+    lab = lab.strip()
+    k = 0
+    if "#" in lab:  # `{1} 1′#2`: the 2nd line with that label (TLHdig repeats some labels even with the fragment)
+        lab, k = lab.rsplit("#", 1)[0].strip(), int(lab.rsplit("#", 1)[1])
+    L = tlh_ms(cth, stem)
+    hit = [ln for ln in L if full_label(ln) == lab] or [ln for ln in L if ln["label"] == lab]
+    return hit[k - 1:k] if k else hit
+
+
 _FORMIDX = {}
 
 
@@ -194,16 +214,20 @@ def rows(key):
             words = []
             mss = []
             for part in r["mslines"].split(" + "):
-                for ln in tlh_ms(cth, r["ms"]):
-                    if ln["label"] == part.strip():
-                        words += [(w["form"], "", tlh2md.gloss(w)) for w in ln["words"]]
-                        mss.append((r["ms"], ln["label"], ln["text"]))
+                for ln in find_lines(cth, r["ms"], part)[:1]:
+                    words += [(w["form"], "", tlh2md.gloss(w)) for w in ln["words"]]
+                    mss.append((r["ms"], full_label(ln), ln["text"]))
+            if words and " ".join(t for _, _, t in mss) != r["text"]:
+                # a row that is part of a manuscript line (split at a § boundary) or restored: keep only the words of
+                # its own text, so that a neighbouring §'s word cannot license a gate here (2026-10-25, Sub2)
+                own = {_plainform(t) for t in r["text"].split()}
+                kept = [w for w in words if _plainform(w[0]) in own]
+                words = kept if kept else words
             for wtn in [x.strip() for x in r["wit"].split(";") if x.strip()]:
                 if ":" in wtn:
                     st, lab = wtn.split(":", 1)
-                    for ln in tlh_ms(cth, st.strip()):
-                        if ln["label"] == lab.strip():
-                            mss.append((st.strip(), ln["label"], ln["text"]))
+                    for ln in find_lines(cth, st.strip(), lab)[:1]:
+                        mss.append((st.strip(), full_label(ln), ln["text"]))
             out.append({"label": r["label"], "sec": r["sec"], "hl": r["sec"], "sectitle": r["sec"], "text": r["text"],
                         "words": words, "mss": mss, "tr": "", "trlang": "", "note": r["note"]})
     _DATA[key] = out
@@ -794,7 +818,7 @@ def cmd_comp_init(key, ms, a, b, sec):
     print("label\tsec\tms\tms_lines\ttext\twitnesses\tnote")
     for x in L[int(a) - 1:int(b)]:
         n += 1
-        print(f"{s}.{n}\t{s}\t{ms}\t{x['label']}\t{x['text']}\t\t")
+        print(f"{s}.{n}\t{s}\t{ms}\t{full_label(x)}\t{x['text']}\t\t")
         if x["par"]:
             s, n = s + 1, 0
 
@@ -811,9 +835,12 @@ def cmd_comp_check(key):
         parts = [p.strip() for p in r["mslines"].split(" + ") if p.strip()]
         found = []
         for p in parts:
-            hit = [ln for ln in tlh_ms(cth, r["ms"]) if ln["label"] == p]
+            hit = find_lines(cth, r["ms"], p)
             if not hit:
                 print(f"{r['label']}: no line `{p}` in {r['ms']}")
+                bad += 1
+            elif len(hit) > 1:
+                print(f"{r['label']}: `{p}` is ambiguous in {r['ms']} ({len(hit)} lines): add the fragment (`{{n}} {p}`)")
                 bad += 1
             else:
                 found.append(hit[0]["text"])
@@ -822,8 +849,12 @@ def cmd_comp_check(key):
             bad += 1
         for wtn in [x.strip() for x in r["wit"].split(";") if x.strip()]:
             st, _, lab = wtn.partition(":")
-            if not any(ln["label"] == lab.strip() for ln in tlh_ms(cth, st.strip())):
+            hit = find_lines(cth, st.strip(), lab)
+            if not hit:
                 print(f"{r['label']}: witness `{wtn}` not found")
+                bad += 1
+            elif len(hit) > 1:
+                print(f"{r['label']}: witness `{wtn}` is ambiguous ({len(hit)} lines): add the fragment")
                 bad += 1
     print(f"{key}: {len(labs)} composite rows, {bad} problem(s)")
     return bad == 0
