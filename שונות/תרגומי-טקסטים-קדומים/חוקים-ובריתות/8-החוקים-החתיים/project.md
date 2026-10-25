@@ -382,3 +382,85 @@ animal tariffs identical in OS and standard.
 `בן שנתיים`, `רחל`, `כבש`, `כבשה`, `צאן`, `שור חרישה`, `סוס רתמה`, `פרה`, `סוסה`, `פרד`, `חמור`, `אַיָּל`, `שה־הרים`),
 *turiya-* `רתם`, *šakuwaššar-* `בשלמותו`, *2-ki* `כפליים`, *unna-* `נהג`, *ḫink-* `הציג`, *karap-* `טרף`, *appatariya-*
 `עיכב`, *tayazzil-* `גנבה`, *enant-* `מבוית`, *ḫali-* `מכלאה`, *ašawar* `דיר`, *link-* `נשבע`.
+
+### Part 4 (HL1 440–col4)
+Drafted 2026-10-25: clauses 440–567 (HL §77a–§100; CHiL sections 79–103) and the colophons col1–col4. **HL1 is
+complete**: 571 entries, 104 `## ` headings (= the base's 103 sections + the colophon), no `@`, no placeholder.
+`verify HL1`: 0 problems (the one repeated-line difference is 180/186, accepted); `check_bible_quotes.py`: 0 problems;
+`selftest`: 0 failures. Also done at the start of this part: 291 notes the *takšan* split; 204's tag corrected to
+[cognate loan] (Aramaic `הֲלָךְ` is borrowed from *ilku*, not cognate); 302 (ÉRIN = *ṣābu* = `צָבָא`) is a true cognate and
+stays. Changed in earlier lines: 315 *takš-* `לבנות` → `להתקין` (`בנה` is now *wete-*'s, §98, §100); 166 *ar-* `יבואו` →
+`יגיעו` (`בא` is *uwa-*'s; *ar-* / *arnu-* = `הגיע` / `יַגִּיעַ`).
+
+**Whole-file self-check.** Formulas uniform across the file: F4 `ואל ביתו יביט` ×36, F5 `וימות` ×11, F6 `ידו חוטאת` ×2,
+F2 `לפנים` ×16 (one without *kinun=a*: §54), F3 ×15, F1 ×155, F8 ×77, F9 ×26 – each with one Hebrew. `lexmap`
+"one Hebrew for several lemmas" – all by design: Sumerogram / Akkadogram and the word it writes (*keššar* / *QĀSSU*,
+*ištaman-* / GEŠTU / *UZNU*, *wemiya-* / KAR, *uttar* / *AWĀTU*, *QĀTU* / ŠU `יד`, *parn-* / *per*), *BĒLU* of a person
+= *išḫa-* `אדון` (§5 rule; 536), the particles (*nu/ta/U* `ו`, *natta/UL* `לא`), *kuššan* "when" / *mān* `כאשר` (both
+"when"), *anda* / *takšan* `יחד` (166, 291; accepted split), `איל` (`אַיִל` / `אַיָּל`, vocalized: the new trap),
+`אמה` (`אָמָה` / `אַמָּה`, vocalized).
+
+**New renderings fixed (lemma → Hebrew, first clause).**
+| Hittite | Hebrew | First | Note |
+|---|---|---|---|
+| *armawant-* "pregnant" | `הרה` | 440 | [equivalent] Exod 21:22 `אִשָּׁה הָרָה` |
+| *šarḫuwanda* (no possessive) | `את הבטן` | 441 | §17 `את בטנה` |
+| IGI "eye" | `עין` | 446 | |
+| *ḫuša-*, *tarušḫa-* (harness parts) | `חוּשָׁה`, `טַרוּשְׁחָה` (transliterated) | 450 | crux: *anda dā-* "put on" (ours) / "carry off" (CHiL) |
+| PARĪSU, ŠE | `פָּרִיס` (pl. `פָּרִיסִים`), `שעורים` | 452 | §H6 |
+| MUL "star" | `כוכב` (`הכוכבים`) | 456 | |
+| *penna-* "drive (there)" | `הסיע` (`יסיע`) | 457 | pair of *unna-* `נהג` |
+| UZU Ì "fat"; KUŠ "hide" | `שומן`; `עור` | 459, 460 | |
+| ŠAḪ; NIGA; ŠAḪ.TUR; *kappi-* | `חזיר` (fem. `חזירה`); `מפוטם`; `חזרזיר`; `קטן` | 461–476 | the Torah's word only by necessity (no other Hebrew for "pig"); Lev 11:7 [absent] in the apparatus |
+| *ḫila-* "courtyard" | `חצר` (`של חצר`) | 465 | |
+| *kappuwai-* "count" | `ספר` (`יספרו`) | 470 | |
+| *šeli-* "grain heap" | `ערמה` | 479 | |
+| UR.GI₇; *LÚ UR.GI₇* | `כלב`; `איש־הכלבים` | 485, 489 | CHiL "cacciatore" |
+| Ì.ŠAḪ | `שומן־חזיר` | 496 | |
+| NIM.LÀL; *kammara-* "cloud, swarm"; É.NIM.LÀL | `דבורים`; `ענן`; `כוורת` | 501–509 | |
+| BUBUTANU | `*בּוּבּוּתָנוּ*` (transliterated; "bee-stings"? CHiL) | 507 | crux |
+| *tapeššar* | `*טַפֶּשְׁנִי*` (transliterated; "in the act"? CHiL) | 512 | crux |
+| *išḫai-* "bind, impose" | `חייב` (`יחייבו אותו`) | 523 | the verb of *išḫiul* `חובה` |
+| *kukkurš-* "cut off, mutilate" | `קצץ` (`יקצצו`) | 530 | LH *nakāsu* `קצץ` (cross-language); ↔ Deut 25:12 |
+| *šer* "on behalf of" | `בעדו` | 537 | |
+| ÉSAG "storage pit"; *ḫalki-* "grain" | `אסם`; `תבואה` | 541 | (LH *našpakum* `אסם`: cross-language) |
+| *šunna-* "fill" | `מילא` (`ימלא`) | 543 | |
+| *lukk-* "set fire" | `הצית` (`יצית`) | 551 | |
+| *wete-* "build" | `בנה` (`יבנה`) | 552 | |
+| *nakkuš-* "damage, loss" | `נזק` | 555 | |
+| *taišzi-* (a barn) | `*מתבן*` | 562 | Isa 25:10 |
+| *etri(ya)-* "feed" | `האכיל` (`יאכיל`) | 563 | |
+| *ḫamešḫant-* "spring" | `אביב` | 564 | |
+| IN.NU.DA "straw" | `תבן` | 566 | |
+| DUB; QATI; ŠU (scribe); PĀNI; IŠṬUR | `לוח`; `תם`; `יד`; `לפני`; `כתב` | col1–col2 | |
+
+**The colophons (translated as data).** ms. E: "Tablet 2! of 'If […]' – hand of […], before A[…] … wrote"; ms. C:
+"Tablet 2 – finished. 'If a man'. Of the father of His Majesty (`שִׁמְשִׁי`)". **Finding (looked, not presupposed):** col3
+"If a man" is the **title** of this tablet (its incipit, *takku LÚ-aš*), not a catch-line for the next tablet – the second
+tablet opens "If a vine" (*takku GIŠ.GEŠTIN-aš*). And both colophons call this tablet the **second** (DUB 2.KAM), though
+its content is HL 1–100 (the editors mark `2!`): an open point for HL2 / the coordinator. CHiL restores the supervisor in
+col1 as A[nuwanza], the court scribe of the 13th century. "Of the father of His Majesty" = the copy (or the redaction) of the
+present king's father.
+
+**Cruxes (in the apparatus).** 445 `2!` (OS: 3 shekels for a mare); 450 *anda dā-*; 507 BUBUTANU; 512 *tapešni*; 555
+*nakkuš Ú-UL šarnikzi* (no compensation for what perished inside: CHiL agrees "non risarcirà"); 562 *taišzi-*; 564 *arnu-*
+(CHiL "take care of them"); col1–col2 "tablet 2".
+
+**Parallels (selection).** Exod 21:22 ↔ HL 77a (`הָרָה`; the same *pešš-* as HL 17); Exod 21:26 ↔ HL 77b; Exod 22:14 ↔ HL
+78; Exod 22:4 ↔ HL 79, 86 [divergence: the field's owner uses the oxen one day, or may kill the pig but must return it];
+Exod 22:12, Amos 3:12, Exod 21:35 ↔ HL 80 (the remains divided: fat to the owner, hide to the culprit); Lev 11:7 ↔ HL 81–86
+[absent: the pig has a price in Ḫatti]; Exod 22:30 ↔ HL 87–90 [absent: the dog has a price by its work – a shepherd's dog
+= a free man's hand]; Exod 22:1 `בַּמַּחְתֶּרֶת` ↔ HL 90 (a thieving dog killed, no compensation) and HL 93 (the burglar
+caught before entering); Exod 22:6 ↔ HL 94; Deut 25:12, Exod 22:2 ↔ HL 95, 99 [divergence: the slave's nose and ears cut
+off, the free man pays; the master pays or gives up the slave]; Judg 14:8 ↔ HL 91; Deut 28:8 ↔ HL 96–97; Exod 22:5 ↔ HL
+98–100 [divergence: the arsonist rebuilds; a slave's master pays or loses him; a burnt barn – feed the cattle until
+spring]. *karū … kinun=a* in this part: HL 81 (pig, 1 mina → 12 shekels), 91 (bees, 1 mina? → 5), 92 (hives, "stings"? →
+6), 94 (house theft, 1 mina → 12): the last revision, perhaps, of a body penalty into silver.
+
+**Shared words for HLPT:** *armawant-* `הרה`, *penna-* `הסיע`, the pig and dog words, *išḫai-* `חייב`, *kukkurš-* `קצץ`,
+*lukk-* `הצית`, *wete-* `בנה`, *šunna-* `מילא`, ÉSAG `אסם`, PARĪSU `פָּרִיס`; and the earlier parts' tables.
+
+**For the coordinator (HL1 review).** The three review passes (fidelity, consistency, Hebrew) of the whole text were not
+part of this brief; the self-check above covers consistency by script. Points a reviewer may want to re-decide: `יַגִּיעַ`
+for *arnu-* (CHiL varies: "occuparsi di", "consegnare", "tenere"), `מחלוקת` (*šullatar*, CHiL "with intent"), the literal
+`ויטהר אותו` (castration), `לנתק` for vines, `יחייבו` (*išḫai-*), and the transliterated *tapešni* / BUBUTANU.
