@@ -824,6 +824,122 @@ Exod 22:17 ↔ § XXXIV; Deut 22:1–3, Exod 23:4, Jer 32:10, Lev 5:22–24 ↔ 
 lineage, so it does not help. (3) HL 49 (§ XLI's parallel) is not in CHiL's HL1 base; the note relies on Hoffner's
 summary. (4) Review passes (fidelity, consistency, Hebrew) were not part of the brief.
 
+### HL2 part 1 (101.1–128.6)
+Drafted 2026-10-25 (Round 4 run 6 Sub2, the HL2 translator): `annotated-HL2.rtl.md` – title, head paragraph, 90 entries
+101.1–128.6 (§§101–113, the heading `## §§114–117 – לא נשתמרו`, §§118–128), placeholder `<!-- טרם תורגם: 129.1–col1 -->`.
+Each entry: `@` + `fill`, the `>` line unvocalized and plene, פירוק (lexmap pattern), נוסחים (every duplicate with a
+difference of content), תרגומים (Hrozný 1922 and Zimmern–Friedrich 1922 from the OCR, after drafting, at the main row of
+each §; no CHD entries were fetched – the tool's `chd` only points to the website), הקבלה, הערות; 3 footnotes (111.1,
+121.2, 126.3). `verify HL2`: 0 problems (240 rows as placeholder notes); `selftest`: 22 lines, 0 failures;
+`check_bible_quotes.py annotated-HL2.rtl.md`: 0 problems.
+
+**New renderings fixed (Hittite → Hebrew, first row).** All grepped first (`lemma`, `grep --all`, `harmonize_survey.py heb`).
+| Hittite | Hebrew | First | Note |
+|---|---|---|---|
+| *maḫla-* "vine branch" | `זמורה` (pl. `זמורות` for the collective sg. of 108) | 101.1 | Num 13:23 `זְמוֹרָה`; Hrozný / Z&F "apple tree" are old readings |
+| *karpina-*; *kakkapa-*; *ummiyant-*; *appalašša-*; *šišiyama-*; *zaḫrai-*; *ḫuḫa-*; *ḫarmiyalli-* | transliterated, vocalized: `קַרְפִּינָה`, `קַקַּפָּה`, `אוּמִּיַּנְט`, `אַפַּלַּשָּׁה`, `שִׁישִׁיָּמָה`, `זַחְרַי`, `חוּחָה`, `חַרְמִיַּלִּי` | 101.1 … | unknown things, as HL1's *ḫuša-*, *tarušḫa-*; `חוגלה` (for *kakkapa-*, "rock partridge?") is Ludlul's *būṣu*, so not used |
+| SUM.SIKIL (Akk. *šamaškillu*) | `בָּצָל(?)` | 101.4 | TLHdig "Lauchpflanze", Z&F "white garlic"; Num 11:5 |
+| ZU₉ of a plant | `שן` (HL1 ZU₉) | 101.4 | "a clove" |
+| ŠUKUR "spear" | `חנית` | 101.5 | |
+| *walḫanzi* in a *karū* narrative | `מוחצים` (participle, habitual) | 101.5 | *walḫ-* = `מחץ` as HL1 |
+| *kiššan* "thus"; *ešš-* (iterative of *iya-*) | `כך`; `היו עושים` | 101.6 | **collision**: QĀTAMMA is `כך` too (brief §2, HL1 297) – see below |
+| *arawanni-* | `בן חורין` | 101.6 | as ELLUM (§7.1) |
+| GIŠ / *taru-* "wood"; GIŠ-ṢÍ/ṢÚ (*iṣu*) "tree" | `עץ` / `עצים` | 102.1, 105.3, 108.2 | one Hebrew for the Hittite word and its Sumerogram / Akkadogram |
+| GUN "talent" | `כיכר` (fem.: `שתי כיכרות`) | 102.2 | MAL *biltu* `כיכר` |
+| *arši-* "planting"; *arš(a)e-* "tend, (re)plant" | `נטיעה`; `נטע` (`יטע`) | 103.1, 103.2 | one root for the noun and its verb, as in Hittite; TLHdig's "fließen" rejected |
+| ḪAŠḪUR; ḪAŠḪUR.KUR.RA; ŠENNUR | `תפוח`; `תפוח־הרים` (literal); `עוזרר` | 104.1 | the identifications in the notes (apricot?, medlar?) |
+| *war-* "burn (intr.)" | `נשרף` (`יישרף`) | 105.3 | the intransitive of HL1's *warnu-* `שרף`; `בער` is reserved (§H3) |
+| *miyant-* "grown, fruit-bearing" | `מניב` | 105.1 | `פורה` avoided (Gen 1:28 `פְּרוּ`) |
+| *anda ēpp-* "catch (of fire)" | `תפס בתוכו` | 105.1–2 | ↔ Exod 22:5 `וּמָצְאָה` |
+| *peda-* of fire | `נשא` (gated, licensed) | 106.1 | |
+| *lukkant-* "set alight" | `מוצת` | 106.2 | the participle of `הצית` (*lukk-*) |
+| EN A.ŠÀ; BĒL / EN GIŠ.GEŠTIN | `בעל השדה`; `בעל הגפן` | 106.3, 113.3 | §5 *bēl* + noun; EN-ŠU alone stays `אדוניו` (121.1 `ואדוניה`) |
+| *warš(iya)-* "reap" | `קצר` | 106.4 | Hrozný "arroser" – old |
+| *iyatniyant-* "flourishing" | `שופע` | 107.1 | |
+| *ḫarnink-* "destroy" | `השחית` | 107.2 | ↔ Deut 20:19 `לֹא תַשְׁחִית אֶת עֵצָהּ` |
+| IKU (*ikû*) | `אִיקוּ` (transliterated) | 107.2 | as LH's *būru* `בור` |
+| *dannatta-* "empty, bare" | `ריק` | 107.3 | |
+| *taggaliyant-* "fenced" | `מגודר` | 108.1 | |
+| *amiyara-* / PA₅ "canal" | `תְּעָלָה` | 109.1 | as Gudea's Sum. *pa₅* `תעלה`; but the 2026-10-23 harmonization gave `תעלה` to Akk. *miṭirtu* and `פלג` to *palgu* (= PA₅'s Akkadian reading): **the coordinator should decide** whether PA₅ / *amiyara-* = `פלג` (cognate via the Sumerogram's reading) before part 2 (§162, the canal law) |
+| INBU "fruit" | `תנובה` | 109.1 | Etana's *inbu* `תנובה` |
+| *ark-* "cut off, divide" | `הפריש` (HL1) | 109.1 | Hrozný / Z&F "take" |
+| *ḫuššelli-* "clay pit(?)" | `מִכְרֶה(?)` (vocalized: "sold her") | 110.1 | `בור` is Etana's *būrtu* and HL1's *kulei* `בּוּר` |
+| *purut-* "clay" | `חוֹמֶר` (vocalized at first occurrence) | 110.1 | `טיט`, `עפר` reserved for their Akkadian cognates; Gen 11:3 `לַחֹמֶר` |
+| *mašiyan* "as much as" | `כמה ש־` | 110.2 (restored), 128.1 | |
+| *anda=šše(=ya)* "in addition to it (also)" | `(וגם) בנוסף לו` | 110.2, 128.2 | |
+| *apeniššuwant-* "such" | `כזה` | 110.2 | `כמותו` avoided (LE *meḫrum* `שכמותו`) |
+| *šena-* "figurine, image" | `פסלון` | 111.1 | `צלם`, `דמות`, `פסל`, `תמונה` (Gen 1:26, Exod 20:4) kept out; the Egyptian execration "פסלון־הקללה" shares the word (common vocabulary, same concept) |
+| *ēpari* / *appattari* (mp. of *ēpp-*) | `יתפוס` | 111.1 | HL1 *ēpp-* `תפס` |
+| *ḫalki-* (112.1 *ḫalkin*) | `תבואה(?)` (HL1) | 112.1 | crux: KBo 6.10+ *ḪALQIM* "lost" – see cruxes |
+| *dai-* + supine "begin" | `התחיל` (`יתחיל(?)`) | 112.3 | distinct from *dā-* `לקח` |
+| *karšant-* "cut" | `חתוך` (`את החתוכה`) | 113.1 | participle of HL1's *karš-* `חתך` |
+| *tuḫšanna-* (verbal noun of *tuḫš-*) | `לנתק` | 113.3 | HL1's *tuḫš-* of vineyards `לנתק` |
+| MUŠEN of a pond; *luli-* gen. | `ציפור־בריכה` | 119.1 | gated `ציפור` licensed |
+| APIN "plough" | `מחרשה` | 121.1 | as LH, EST, Ištar's Descent |
+| GÚ "neck" | `צוואר` | 121.1 | |
+| *šarā tittanu-* | `למעלה העמיד` | 121.2 | |
+| MAR.GÍD.DA "wagon" | `עֲגָלָה` (always vocalized: `עֶגְלָה` "heifer") | 122.1 | as Enmerkar's *mar* |
+| *anda appant-* (ptcp. of *anda ēpp-*) | `*אֲסוּרָה*` (vocalized: "forbidden") | 122.1 | crux: "harnessed" (↔ Gen 46:29 `וַיֶּאְסֹר יוֹסֵף מֶרְכַּבְתּוֹ`) or "with its contents" (Hrozný); `רתם` is *turiya-*'s |
+| *tapešni* | `*בטַפֶּשְׁנִי*` (HL1 §93) | 122.2 | |
+| *ḫurki-* "wheel" | `גלגל` | 123.2 | Hrozný / Z&F read *ḫurkil* "punishment" |
+| *taištiyant-* "loaded" | `טעון` | 124.2 | |
+| GIŠ ŠEN "wooden vessel" | `גיגית` | 125.1 | `שוקת` is *buginnu* / *buniĝ*'s |
+| KÁ É.GAL | `שער ההיכל` | 126.1 | KÁ = *āšk-* `שער` (HL1) |
+| ZABAR "bronze"; URUDU "copper" | `אָרָד` (vocalized); `נחושת` | 126.2–3 | as Ur-Namma / Gudea *zabar* `ארד`, Enmerkar *urud* `נחושת` (Gilgameš has *siparru* `נחושת`: a cross-corpus split, recorded) |
+| *akiaš* (OH "he shall die") | `ימות` | 126.3 | HL1 *ak-* `מת`; `יומת` reserved |
+| ZI.KIN.BAR / *šepikkušta-* "pin" | `מחט` | 126.3 | |
+| *gapina-* "thread"; TÚG; TÚG.SÍG | `חוטים`; `בגד`; `בגד צמר` | 126.5–6 | |
+| GIŠ IG "door" | `דלת` | 127.1 | |
+| *kuit kuit* "whatever" | `כל מה ש־` | 127.2 | |
+| SIG₄ "brick" | `לְבֵנִים` (vocalized) | 128.1 | |
+| *šamana-* "foundation"; NA₄ | `יסוד`; `אבן` | 128.3 | |
+
+**HL1 renderings followed (no deviation).** *takku* `אם`; *kuiški* `מישהו`; *tāya-* `גנב`; *pai-* `נתן`, *pešk-* `היו נותנים`;
+*karū … kinun=a* `לפנים … ועתה`; F4 `ואל ביתו יביט`; ARAD `עבד`; *gipeššar* `אַמָּה`; *karš-* `חתך`; *lukk-* `הצית`;
+*paḫḫur* `אש`; *luli-* `בריכה`; SIG₅ adj. `משובח`, SIG₅ verb `החלים`; *dā-* `לקח`; *ēpp-* `תפס`; *ark-* `הפריש`; *tarna-*
+`שלח`; *antuḫša-* `אדם`; *annanuḫḫa-* `מאולף`; *ḫalki-* `תבואה`; NAM.RA `שבויים`; LÚ GIŠTUKUL `אִישׁ־הַכְּלִי`; *šaḫḫan*
+`שַׁחְחַן` (vocalized every time); *iya-* `עשה`; *kuitman* `עד אשר`; *tuḫš-* `ניתק`; *šullatar* `במחלוקת`; *ḫark-* `אבד`;
+*šarnink-* `פיצה`; PARĪSU `פָּרִיס`, ŠE `שעורים`; *ḫuša-*, *tarušḫa-* transliterated; *dala-* `הניח`; KAR / *wemiya-* `מצא`;
+EN-ŠU `אדוניו`; alwanzatar `כשפים (הם)`, DĪN LUGAL `דין המלך` (HL1 §44b); *pā(i)-* "go" `הלך`; *natta* `לא`; *apa-* `הוא`.
+**Deviations from HL1: none.**
+
+**Tables (gates, licences, collisions) – proposals, not edits.**
+1. **`כך` for two words**: *kiššan* (HL2 101.6, 121.3, 167.2; the rituals' *kiššan memai* in §H3's note) and QĀTAMMA (brief
+   §2; HL1 175, 177, 288, 297, 370 …) are both `כך`. Proposal: keep *kiššan* = `כך` (the Hittite word, and §H3's
+   formula), and give QĀTAMMA `כְּמוֹ כֵן` / `באותו אופן` – or record the pair as an accepted split (QĀTAMMA is the
+   Akkadographic writing of the same adverb?). The coordinator decides; HL1's lines would change if so.
+2. **PA₅ / *amiyara-*** (above): `תעלה` vs `פלג`.
+3. No gate fired wrongly in part 1; the H4 licences matched every gated word I used (`מחץ` 101.5, `בן חורין` 101.6 and
+   121.1, `נשא` 106.1, `שלח` 107.1, `כשפים` 111.1, `ציפור` 119–120, `לפנים`, `היכל` 126, `פיצה` 127.2). The §H3 words
+   for HL 105–107 held: Exod 22:4–5's `בער`, `מיטב` stay in the apparatus (`יצית`, `יישרף`, `משובח` in the lines).
+4. **lexmap** reads a fragment item such as `` `t[a-` – the start of a word `` as a lemma "the" (also HL1 col4's
+   "(שאר הלוח לא נכתב)"): harmless; a tool rule "skip items whose lemma field starts with a lower-case English word"
+   would clean it.
+5. **Composite**: no correction needed in part 1. Note for the TSV's `note` column: 110.2's lost opening is *mašiyan*
+   (KUB 29.23+ 13′; I restored `[כמה]` and said so), and 119.2's lost opening holds *kuiški tāyezzi* (KBo 31.66+).
+
+**Cruxes (in the apparatus).** 101.5 the spear (*ŠUKUR-an walḫanzi*, "[…]-šiya": a public punishment? Hrozný restores
+"in the palace … they strike him with the spear", Z&F "a religious symbol"); 101.4 SUM.SIKIL (onion or garlic); 105.1–2
+the order *anda miyantan KIRI₆.GEŠTIN ēpzi* kept across the line break; 106.4 who reaps; 107.3 the OS 5 shekels for a bare
+vineyard against the NS 3 (Z&F print the 5); 109.1 *ark-* (cut off / take); 110.1 *ḫuššelli-*; 111.1 *ēpari* (seize /
+shape) and the OS-only *šēni*; **112.1 *ḫalkin* (KBo 6.11) against *ḪALQIM* (KBo 6.10+)** – probably the "lost"
+GIŠTUKUL-man of HL1 §40; 112.3 *dāi* = "begin" (KBo 6.11's order differs from KBo 6.10+'s *ḫarapzi*); 113.3 *tanza
+tuḫšannai*; 118 unplaceable; 120.1 *ummiyant-*; 121.2 the plough-thief's old punishment (the neck on the *appalašša-*,
+"by the oxen …"); 122.1 *anda appanda*; 122.2 *tapešni*; 123.2 *ḫurki-* "wheel" (TLHdig) vs *ḫurkil* (Hrozný, Z&F); 127.1
+*šullannaz* "in a quarrel" vs "intentionally" (Hrozný, Z&F – the CHiL reading of HL1 §1; the crux recurs here); 128.4 NS
+*ḫuḫa-* vs OS *ḫuwaši-* "stele".
+
+**Key parallels found.** Exod 22:4–5 ↔ §§105–107 (the fire that "catches", *anda ēpp-* ↔ `וּמָצְאָה`; `בִּשְׂדֵה אַחֵר` ↔
+*tamel A.ŠÀ-ŠU*; `וְשִׁלַּח אֶת בְּעִירֹה` ↔ *UDU.ḪI.A tarnāi*, with the same verb in the Hebrew: *tarna-* = `שלח`; `מֵיטַב
+שָׂדֵהוּ` ↔ SIG₅ A.ŠÀ – Z&F noted Exod 22:5 already in 1922); Exod 21:34 `וְהַמֵּת יִהְיֶה לּוֹ` ↔ §106, §113 (the damaged
+thing goes to the damager, the victim receives a sound one); Exod 22:3, 6 `שְׁנַיִם` ↔ §110, §128 (as much again);
+Exod 21:37 `חֲמִשָּׁה … תַּחַת` ↔ §128 (2 stones → 10: the same 1:5); Lev 19:23–25 and Deut 24:5 ↔ §112 (three years free,
+then the fourth); Exod 22:17, Deut 18:10 ↔ §111 (sorcery: "the king's case", not death); Exod 22:1, Deut 24:6 ↔ §121 (the
+plough-thief's former death); 1 Kgs 14:27, 2 Kgs 11:10 ↔ §126 (the guards' weapons at the king's gate; death for the
+spear, a fine for the wooden object); Deut 20:19 ↔ §104; Deut 23:25 ↔ §101; Isa 5:5 ↔ §108; Judg 15:5, 2 Sam 14:30
+(`וַיַּצִּתוּ`) ↔ §105–106; Gen 11:3 ↔ §110, §128; 1 Sam 9:9 ↔ §121.3; the tariff that halves for the slave and the
+code that cites its old law (101, 119, 121, 122).
+
 ## Part HL1: parallels index (the first tablet, 571 clauses)
 
 ### Parallels index
@@ -1018,3 +1134,46 @@ summary. (4) Review passes (fidelity, consistency, Hebrew) were not part of the 
 | PT § XXXIX, 187 | *LUGAL-un punuššanzi* | את המלך ישאלו, | `כִּי לִי הָאָרֶץ` (ויקרא כה:כג) | [absent] |  |
 | PT § XL, 196 | *{LÚ}A-SI-RUM-za ḫappar lē kuiški iyazi* | עם האסיר מסחר אף אחד אל יעשה, | `לְהוֹצִיא מִמַּסְגֵּר אַסִּיר` (ישעיהו מב:ז) | [cognate] | *ASĪRU* הוא המילה האכדית *asīru* "שבוי, אסיר" (מן *esēru* "לסגור, לכלוא"), קרובת העברית `אָסִיר` (שורש אס"ר); הקשר הוא דרך האכדוגרמה, לא דרך החתית |
 | PT § XL, 197 | *DUMU-ŠU A.ŠÀ-ŠU {GIŠ}KIRI₆.GEŠTIN-ŠÚ [l]ē kuiški wāši* | את בנו, את שדהו, את כרמו אף אחד [אל] יקנה. | `וְהָאָרֶץ לֹא תִמָּכֵר לִצְמִתֻת` (ויקרא כה:כג) | [divergence] | בתורה איסור כללי על מכירת קרקע לצמיתות; כאן איסור על קנייה מאדם מסוים (ובנו עמה), כדי לשמור את רכושו – ואת החובה שהוא נושא בה – במקומם |
+
+## Part HL2: parallels index (the second tablet)
+
+### Parallels index
+| Line | Original | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| HL2 §101, 101.1 | *] {GIŠ}ma-aḫ-la-an na-aš-ma {GIŠ}kar-pí-na-an* | […] זמורה או (עץ) קַרְפִּינָה | `וַיִּכְרְתוּ מִשָּׁם זְמוֹרָה וְאֶשְׁכּוֹל עֲנָבִים אֶחָד` (במדבר יג:כג) | [equivalent] | *maḫla-* – ענף הגפן |
+| HL2 §101, 101.4 | *GÍN.G]ÍN KÙ.BABBAR A-NA 1 ZU₉ SUM.SIKIL{SAR} 1 GÍN.GÍN KÙ.BABBAR* | [… שקל] כסף, לשן אחת של בָּצָל(?) שקל אחד כסף, | `וְאֶת הַבְּצָלִים וְאֶת הַשּׁוּמִים` (במדבר יא:ה) | [equivalent] | ירקות הבית; הזיהוי (בצל או שום) אינו ודאי |
+| HL2 §101, 101.7 | *pa]-a-i ták-ku ARAD-ša 3 GÍN.GÍN KÙ.BABBAR pa-a-i* | [… ייתן], ואם עבד – שלושה שקלים כסף ייתן. | `כִּי יִגְנֹב אִישׁ שׁוֹר אוֹ שֶׂה` (שמות כא:לז) | [absent] | בתורה אין הבחנה בין גנב בן חורין לגנב עבד; בחוק החתי העבד משלם מחצית |
+| HL2 §101, 101.7 | *pa]-a-i ták-ku ARAD-ša 3 GÍN.GÍN KÙ.BABBAR pa-a-i* | [… ייתן], ואם עבד – שלושה שקלים כסף ייתן. | `כִּי תָבֹא בְּכֶרֶם רֵעֶךָ וְאָכַלְתָּ עֲנָבִים כְּנַפְשְׁךָ שָׂבְעֶךָ; וְאֶל כֶּלְיְךָ לֹא תִתֵּן` (דברים כג:כה) | [divergence] | התורה מתירה לאכול בכרם הרע; החוק החתי דן בגניבת הצמח עצמו |
+| HL2 §102, 102.3 | *] GUN GIŠ DI-IN LUGAL-RI* | […] כיכרות עץ – דין המלך. | `עַד הָאֱלֹהִים יָבֹא דְּבַר שְׁנֵיהֶם` (שמות כב:ח) | [equivalent] | מקרה גניבה המובא לערכאה העליונה; בתורה בגלל ספק, כאן בגלל גודל הנזק |
+| HL2 §103, 103.4 | *ar-še-ez-z]i Ù 2 GÍN.GÍN KÙ.BABBAR pa-a-i* | יטע, ושני שקלים כסף ייתן. | `שְׁנַיִם יְשַׁלֵּם` (שמות כב:ג) | [divergence] | בתורה כפל; כאן החזרה בעבודה (נטיעה מחדש) וקנס לפי אורך הנטיעה |
+| HL2 §104, 104.1 | *[ták-ku {GI]Š}ḪAŠḪUR.KUR.RA na-aš-ma {GIŠ}ŠENNUR ku-iš-ki kar-aš-[zi]* | [אם] מישהו יחתוך תפוח־הרים או עוזרר, | `לֹא תַשְׁחִית אֶת עֵצָהּ לִנְדֹּחַ עָלָיו גַּרְזֶן כִּי מִמֶּנּוּ תֹאכֵל וְאֹתוֹ לֹא תִכְרֹת` (דברים כ:יט) | [divergence] | בתורה הגנה עקרונית על עץ המאכל במלחמה; בחוק החתי – נזק לרכוש, ומחירו בכסף |
+| HL2 §105, 105.2 | *[{GIŠ}KIRI₆.GEŠTIN e-ep-zi tá]k-ku GEŠTIN-iš [{GIŠ}ḪAŠḪU]R na-aš-ma {GIŠ}ḪAŠḪUR.KUR.RA [na-aš-ma]* | [כרם תתפוס – אם] גפן, [תפוח] או תפוח־הרים [או] | `כִּי תֵצֵא אֵשׁ וּמָצְאָה קֹצִים וְנֶאֱכַל גָּדִישׁ אוֹ הַקָּמָה אוֹ הַשָּׂדֶה` (שמות כב:ה) | [equivalent] | אותו מקרה: אש שהוצתה במקום אחד ו"מצאה" (*anda ēpp-* "תפסה בתוכו") את רכוש הזולת; זימרן ופרידריך השוו כבר ב־1922 |
+| HL2 §105, 105.2 | *[{GIŠ}KIRI₆.GEŠTIN e-ep-zi tá]k-ku GEŠTIN-iš …* | [כרם תתפוס – אם] גפן, … | `וַיַּבְעֵר מִגָּדִישׁ וְעַד קָמָה וְעַד כֶּרֶם זָיִת` (שופטים טו:ה) | [equivalent] | האש העוברת משדה לכרם ולמטע |
+| HL2 §105, 105.1 | *[ták-ku A.ŠÀ-an? ku-i]š-ki lu-uk-[ki-iz-zi …]* | [אם מישהו שדה?] יצית, … | `וַיַּצִּתוּ עַבְדֵי אַבְשָׁלוֹם אֶת הַחֶלְקָה בָּאֵשׁ` (שמואל ב יד:ל) | [equivalent] | הצתת שדה; *lukk-* = `הצית`, ו־`בער` של שמות כב נשאר של התורה |
+| HL2 §106, 106.1 | *[ták-ku p]a-aḫ-ḫur A-N[A A.ŠÀ]-ŠU ku-iš-ki pé-e-da-i [ta ta-me-e]l-la* | [אם] מישהו אש אל [שדה]ו יישא, [וגם של אחר] | `וּבִעֵר בִּשְׂדֵה אַחֵר` (שמות כב:ד) | [equivalent] | "שדה (של) אחר" – *tamel A.ŠÀ-ŠU* בנוסח הקדום; הנוסח המאוחר (KBo 6.11) – "שדה מניב" |
+| HL2 §106, 106.1 | *[ták-ku p]a-aḫ-ḫur …* (KBo 6.11: *tar-na-a-i*) | (KBo 6.11: "ישלח") | `וְשִׁלַּח אֶת בְּעִירֹה` (שמות כב:ד) | [equivalent] | הנוסח המאוחר "משלח" את האש באותו פועל, *tarna-* = `שלח`; התורה – את הבהמה (או, לפי מפרשים, את האש) |
+| HL2 §106, 106.3 | *[A.ŠÀ-L]AM a-pa-a-aš da-a-[i SI]G₅-an-da-an-na [A.ŠÀ A-NA EN] A.ŠÀ* | [שדה] – הוא ייקח לעצמו, [ושדה] משובח [לבעל] השדה | `מֵיטַב שָׂדֵהוּ וּמֵיטַב כַּרְמוֹ יְשַׁלֵּם` (שמות כב:ד) | [divergence] | בשניהם הנפגע מקבל מן הטוב (*SIG₅* `משובח` ↔ `מיטב`); בתורה מן התוצרת של המזיק, כאן חילופי שדות |
+| HL2 §106, 106.3 | *[A.ŠÀ-L]AM a-pa-a-aš da-a-[i …]* | [שדה] – הוא ייקח לעצמו, … | `וְהַמֵּת יִהְיֶה לּוֹ` (שמות כא:לד) | [equivalent] | הדבר שניזק עובר למזיק, והנפגע מקבל ערך שלם |
+| HL2 §107, 107.1 | *ták-ku LÚ.U₁₉.LU-aš i-ia-at-ni-ia-an-da-aš {GIŠ}KIRI₆.GEŠTIN UDU{ḪI.A} tar-na-a-i* | אם אדם לכרם שופע צאן ישלח, | `כִּי יַבְעֶר אִישׁ שָׂדֶה אוֹ כֶרֶם וְשִׁלַּח אֶת בְּעִירֹה וּבִעֵר בִּשְׂדֵה אַחֵר` (שמות כב:ד) | [equivalent] | אותו מקרה ואותו פועל: הבהמה "משולחת" אל כרם הזולת; הקבלה טיפולוגית של שני חוקים חקלאיים |
+| HL2 §107, 107.2 | *ta-a ḫar-ni-ik-zi ták-ku mi-an-da A-NA 1 IKU 10 GÍN KÙ.BABBAR pa-a-i* | וישחית (אותו): אם מניב – לאִיקוּ אחד עשרה שקלים כסף ייתן, | `מֵיטַב שָׂדֵהוּ וּמֵיטַב כַּרְמוֹ יְשַׁלֵּם` (שמות כב:ד) | [divergence] | בתורה בעין ומן הטוב; כאן בכסף, לפי שטח ולפי מצב הכרם (מניב / ריק; ובנוסח הקדום – חמישה שקלים לריק) |
+| HL2 §108, 108.1 | *ták-ku tág-ga-li-an-da-za {GIŠ}⸢KIRI₆⸣.GEŠTIN {GIŠ}ma-aḫ-la-an ku-iš-ki* | אם מישהו מכרם מגודר זמורות | `הָסֵר מְשׂוּכָּתוֹ וְהָיָה לְבָעֵר פָּרֹץ גְּדֵרוֹ וְהָיָה לְמִרְמָס` (ישעיהו ה:ה) | [equivalent] | הגדר מגינה על הכרם; בחוק החתי היא מכפילה את הקנס |
+| HL2 §110, 110.1 | *⸢ták-ku⸣ ḫu-u-uš-ši-el-li-ia-az pa-[ru]-ut ku-iš-ki da-a-i-ia-zi* | אם מישהו יגנוב חוֹמֶר מן המִכְרֶה(?), | `וְהַחֵמָר הָיָה לָהֶם לַחֹמֶר` (בראשית יא:ג) | [equivalent] | החומר כחומר בנייה |
+| HL2 §110, 110.2 | *[ da]-a-i-ia-az-zi an-da-še-ia a-pé-e-ni-iš-šu-u-wa-an pa-a-i* | [כמה] שיגנוב – וגם בנוסף לו כזה ייתן. | `אִם יִמָּצֵא הַגַּנָּב יְשַׁלֵּם שְׁנָיִם` (שמות כב:ו) | [equivalent] | "כמה שגנב, ועוד כזה" – תשלום כפל, כדין הגנב בתורה |
+| HL2 §111, 111.1 | *[ták-ku še-e]-ni pu-ru-ut k[u-iš-ki e-pa-a-ri al-wa-an-za-tar DI-IN LUGAL]* | [אם] מישהו חומר [לפסלון יתפוס – כשפים (הם), דין המלך]. | `מְכַשֵּׁפָה לֹא תְחַיֶּה` (שמות כב:יז) | [divergence] | בתורה חטא מוות; בחוק החתי "דין המלך". הנוסח הקדום לבדו שומר "לפסלון" |
+| HL2 §111, 111.1 | *… al-wa-an-za-tar DI-IN LUGAL* | … כשפים (הם), דין המלך | `קֹסֵם קְסָמִים מְעוֹנֵן וּמְנַחֵשׁ וּמְכַשֵּׁף` (דברים יח:י) | [equivalent] | הכישוף ברשימת העיסוקים האסורים |
+| HL2 §112, 112.2 | *[ ša-aḫ-ḫa-a]n Ú-UL i-ia〈〈an〉〉-zi I-NA MU 4{KAM}-ma ša-a[ḫ-ḫa-an]* | […] את השַׁחְחַן לא יעשה, ובשנה הרביעית את השַׁחְחַן | `שָׁלֹשׁ שָׁנִים יִהְיֶה לָכֶם עֲרֵלִים לֹא יֵאָכֵל` (ויקרא יט:כג) | [equivalent] | אותו מספר: שלוש שנים, ומעבר בשנה הרביעית (`וּבַשָּׁנָה הָרְבִיעִת`, ויקרא יט:כד); בתורה לפרי הנטיעה, כאן לחובת השבוי המתיישב – הקבלה טיפולוגית בלבד |
+| HL2 §112, 112.2 | *… I-NA MU 4{KAM}-ma ša-a[ḫ-ḫa-an]* | … ובשנה הרביעית את השַׁחְחַן | `נָקִי יִהְיֶה לְבֵיתוֹ שָׁנָה אֶחָת` (דברים כד:ה) | [equivalent] | פטור זמני מחובה ציבורית למי שמתחיל משק חדש |
+| HL2 §113, 113.2 | *[{GIŠ}GEŠTIN-an] a-pa-a-aš da-a-i SIG₅-an-na {GIŠ}GEŠTIN* | [גפן] – הוא ייקח, וגפן משובחת | `וְהַמֵּת יִהְיֶה לּוֹ` (שמות כא:לד) | [equivalent] | כמו ב־106: החותך לוקח את הגפן החתוכה ונותן גפן טובה |
+| HL2 §121, 121.2 | *{GIŠ}ap-pa-la-aš-ša-a[š š]a-ra-a ti-it-ta-nu-uz-zi t[a GU₄{ḪI.A}-it* | על האַפַּלַּשָּׁה למעלה יעמיד, ו[בשוורים …] | `אִם בַּמַּחְתֶּרֶת יִמָּצֵא הַגַּנָּב וְהֻכָּה וָמֵת אֵין לוֹ דָּמִים` (שמות כב:א) | [divergence] | בתורה המתת הגנב במחתרת היא התגוננות; בחוק החתי הישן – עונש בידי בעל המחרשה, בכלי שנגנב; והחוק החדש ממיר אותו בכסף |
+| HL2 §121, 121.2 | *{GIŠ}ap-pa-la-aš-ša-a[š …]* | על האַפַּלַּשָּׁה … | `לֹא יַחֲבֹל רֵחַיִם וָרָכֶב כִּי נֶפֶשׁ הוּא חֹבֵל` (דברים כד:ו) | [divergence] | כלי המחיה: בתורה מוגן מפני המלווה, בחוק החתי הישן – מפני הגנב, באכזריות |
+| HL2 §121, 121.3 | *ka-ru-ú kiš-an e-eš-šer ki-nu-na 6 GÍN.GÍN [KÙ.BABBAR pa-a-i]* | לפנים כך היו עושים, ועתה שישה שקלים [כסף ייתן], | `לְפָנִים בְּיִשְׂרָאֵל כֹּה אָמַר הָאִישׁ` (שמואל א ט:ט) | [equivalent] | הכותב המעיד על מנהג "של לפנים" שבטל |
+| HL2 §122, 122.1 | *ták-ku an-da ap-pa-an-da {GIŠ}MAR.GÍD.DA ku-iš-ki ta-a-i-e-ez-[zi* | אם מישהו יגנוב עֲגָלָה *אֲסוּרָה* […] | `וַיֶּאְסֹר יוֹסֵף מֶרְכַּבְתּוֹ` (בראשית מו:כט) | [equivalent] | "אסר" – רתימה; רק אם *anda appant-* הוא "רתום" (crux) |
+| HL2 §124, 124.3 | *[I-N]A A.ŠÀ da-l[i?-ia-zi ta ta-i-ez-zi ku-i]š-ki 3 GÍN KÙ.BABBAR pa-a-[i]* | [ב]שדה י[ניח, ו(אותן) יגנוב מישהו] – שלושה שקלים כסף ייתן, | `כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ כֶּסֶף אוֹ כֵלִים לִשְׁמֹר וְגֻנַּב מִבֵּית הָאִישׁ` (שמות כב:ו) | [equivalent] | היכן הושאר הרכוש כשנגנב: בתורה בבית השומר, כאן בשדה הפתוח |
+| HL2 §126, 126.2 | *6 GÍN.GÍN KÙ.BABBAR pa-a-i ták-ku I-NA KÁ É.GAL {GIŠ}ŠUKUR ZABAR* | שישה שקלים כסף ייתן. אם בשער ההיכל חנית אָרָד | `וְהִפְקִיד עַל יַד שָׂרֵי הָרָצִים הַשֹּׁמְרִים פֶּתַח בֵּית הַמֶּלֶךְ` (מלכים א יד:כז) | [equivalent] | נשק משמר המלך בפתח בית המלך |
+| HL2 §126, 126.2 | *… {GIŠ}ŠUKUR ZABAR* | … חנית אָרָד | `אֶת הַחֲנִית וְאֶת הַשְּׁלָטִים אֲשֶׁר לַמֶּלֶךְ דָּוִד` (מלכים ב יא:י) | [equivalent] | כלי הנשק כרכוש מלכותי |
+| HL2 §126, 126.3 | *ku-iš-ki ta-i-e-ez-zi a-ki-aš ták-ku ZI.KIN.BAR URUDU* | מישהו יגנוב – ימות. אם מחט נחושת | `כִּי יִגְנֹב אִישׁ שׁוֹר אוֹ שֶׂה וּטְבָחוֹ אוֹ מְכָרוֹ חֲמִשָּׁה בָקָר יְשַׁלֵּם` (שמות כא:לז) | [divergence] | בתורה אין גניבת רכוש שעונשה מוות; כאן – מוות לגונב חנית משער ההיכל (*akiaš* "ימות", פעיל) |
+| HL2 §127, 127.2 | *ku-it ku-it ḫar-ak-zi ta-at šar-⸢ni⸣-ik-zi* | כל מה שיאבד – ואותו יפצה, | `שַׁלֵּם יְשַׁלֵּם הַמַּבְעִר אֶת הַבְּעֵרָה` (שמות כב:ה) | [equivalent] | האחריות לנזק העקיף |
+| HL2 §128, 128.1 | *ták-ku SIG₄ ku-iš-ki ta-i-e-ez-zi ma-ši-ia-an* | אם מישהו יגנוב לְבֵנִים – כמה | `הָבָה נִלְבְּנָה לְבֵנִים וְנִשְׂרְפָה לִשְׂרֵפָה` (בראשית יא:ג) | [equivalent] | SIG₄ נקרא באכדית *libittu*, קרובת `לְבֵנָה` – דרך השומרוגרמה, לא דרך החתית |
+| HL2 §128, 128.2 | *ta-i-e-ez-zi an-da-aš-še〈〈aš-še〉〉 a-pé-e-ni-šu-u-wa-an ⸢pa-a-i⸣* | שיגנוב – בנוסף לו כזה ייתן. | `שְׁנַיִם יְשַׁלֵּם` (שמות כב:ג) | [equivalent] | כפל, כמו ב־110 |
+| HL2 §128, 128.3 | *ták-ku ša-ma-na-az NA₄[{ḪI.A}-u]š? ku-iš-ki ⸢ta⸣-i-e-[e]z-zi* | אם מישהו יגנוב אבנים מן היסוד, | `לְבֵנִים נָפָלוּ וְגָזִית נִבְנֶה` (ישעיהו ט:ט) | [divergence] | לבנים ואבנים כשתי דרגות בנייה |
+| HL2 §128, 128.4 | *A-NA 2 NA₄ 10 NA₄{ḪI.A} pa-[a]-i ták-k[u {N]A₄}ḫu-u-ḫa-an* | לשתי אבנים – עשר אבנים ייתן. אם (אבן) חוּחָה | `חֲמִשָּׁה בָקָר יְשַׁלֵּם תַּחַת הַשּׁוֹר` (שמות כא:לז) | [equivalent] | אותו יחס בדיוק: פי חמישה, בעין |

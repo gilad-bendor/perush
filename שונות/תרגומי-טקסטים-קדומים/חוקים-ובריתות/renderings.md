@@ -310,6 +310,24 @@ HLPT follows HL1's Hebrew wherever the Hittite is the same. New: *DANNA* (Akk. *
 
 **Review rulings (Sub1, after the consistency pass, 2026-10-25):** HL1 166 *ar- anda* `יגיעו זה אל זה` (`יחד` stays *takšan*'s); *arḫa-* keeps `גבול` (the Hittite boundary word is the real counterpart; HL2's boundary law HL 168–169 ↔ Deut 19:14 must check its own word); *karap-* keeps `טרף` (Ur-Namma's project-level reservation of `טרף` yields to the real counterpart, Exod 22:12). **Review rulings (Sub1, after the fidelity pass, 2026-10-25):** brackets – a Hebrew word is bracketed when the Hittite word's stem is restored (`[takk]u` → `[אם]`; a word with only its ending restored stays unbracketed, or is bracketed inside the word); words that the composite lacks and the Old Hittite version supplies get the recension tag `{נוסח קדום: …}` (guidelines §6.8 pattern; HL1 269); an edition's `?` is kept.
 
+### 7.8 Merged from Sub2, part 1 (HL2 101.1–128.6; 2026-10-25, Round 4 run 6 sub 2; accepted by the coordinator unless said)
+HL2 follows HL1 everywhere (no deviation). New: *maḫla-* `זמורה`; *arši-* / *arš(a)e-* `נטיעה` / `נטע`; GUN `כיכר`; GIŠ / *taru-* /
+GIŠ-ṢÍ `עץ`; ḪAŠḪUR `תפוח`, ḪAŠḪUR.KUR.RA `תפוח־הרים`, ŠENNUR `עוזרר`; SUM.SIKIL `בָּצָל(?)`; ŠUKUR `חנית`; *war-* (intr.)
+`נשרף` (`בער` reserved); *miyant-* `מניב`; *anda ēpp-* (fire) `תפס בתוכו` (↔ Exod 22:5 `וּמָצְאָה`); *lukkant-* `מוצת`; *warš(iya)-*
+"reap" `קצר`; *iyatniyant-* `שופע`; *ḫarnink-* `השחית`; IKU `אִיקוּ`; *dannatta-* `ריק`; *taggaliyant-* `מגודר`; **PA₅ / *amiyara-* =
+`פֶּלֶג`** (coordinator: PA₅ writes Akk. *palgu*, `פלג` in every corpus since the 2026-10-23 harmonization; the translator's
+`תעלה` is *miṭirtu*'s; changed at 109.1); INBU `תנובה` (Etana); *ḫuššelli-* `מִכְרֶה(?)`; *purut-* `חוֹמֶר` (`טיט`, `עפר` reserved);
+*mašiyan* `כמה ש־`; *anda=šše* `בנוסף לו`; *apeniššuwant-* `כזה`; *šena-* `פסלון`; mp. of *ēpp-* `יתפוס`; *dai-* + supine
+`התחיל`; *karšant-* `חתוך`; *tuḫšanna-* `לנתק`; MUŠEN of a pond `ציפור־בריכה`; APIN `מחרשה`; GÚ `צוואר`; *šarā tittanu-* `העמיד
+למעלה`; MAR.GÍD.DA `עֲגָלָה` (always vocalized); *anda appant-* `*אֲסוּרָה*` (crux); *ḫurki-* "wheel" `גלגל` (so GIŠ UMBIN, which
+writes *ḫurki-*, too); *taištiyant-* `טעון`; GIŠ ŠEN `גיגית`; KÁ É.GAL `שער ההיכל`; ZABAR `אָרָד`, URUDU `נחושת` (as Ur-Namma and
+Gudea; Gilgameš's *siparru* `נחושת` is a cross-corpus split, for the lead); OH *akiaš* `ימות`; ZI.KIN.BAR `מחט`; *gapina-*
+`חוטים`, TÚG `בגד`, TÚG.SÍG `בגד צמר`; GIŠ IG `דלת`; *kuit kuit* `כל מה ש־`; SIG₄ `לְבֵנִים`; *šamana-* `יסוד`, NA₄ `אבן`; unknown
+objects transliterated and vocalized (`קַרְפִּינָה`, `קַקַּפָּה`, `אוּמִּיַּנְט`, `אַפַּלַּשָּׁה`, `שִׁישִׁיָּמָה`, `זַחְרַי`, `חוּחָה`,
+`חַרְמִיַּלִּי`). **Ruling (`כך`):** *kiššan* "thus" and QĀTAMMA "so, likewise" (HL1 175 … 475) share `כך`: an accepted split –
+the same deictic adverb, the Akkadogram writing the Hittite one; separating them would rewrite nine HL1 lines and the
+ritual formula *kiššan memai* `כָּךְ אוֹמֵר` for no reader's gain. (*apeniššan* keeps `באותה דרך`.)
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;
