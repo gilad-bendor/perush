@@ -285,3 +285,100 @@ reward, and the keeper "becomes a thief"]; 1 Sam 8:14; 1 Kgs 21:3; Lev 25:23 ↔
 `הרים`, *šaḫḫan* / *luzzi*, `איש־הכלי` / `אִישׁ־הַהֲלָךְ`, *tittiya-* `מוצב`, *šiyattariya-* `רשם לעצמו`, *kuššaniya-* `שכר`,
 *laḫḫa-* `מערכה`, *parkunu-* `טיהר`, *kuptar* `שיירים`, *alwanzatar* `כשפים`, UNŪTU `חפצים`, *piyanai-* `גמל`, *NÍG.BA*
 `מַתַּת`, *waš-* `קנה`, *kulei* `בור`, *ark-* `הפריש`, *ḫippara-* `חִפָּרָה`, *ḫappar(ai)-* `מסחר` / `מכר`, *šamen-* `הפסיד`.
+
+### Part 3 (HL1 291–439)
+Drafted 2026-10-25: clauses 291–439 (HL §53–§76; CHiL sections 55–78). `verify HL1`: 0 problems (the one listed
+repeated-line difference is still 180/186, accepted); `check_bible_quotes.py`: 0 problems. Placeholder
+`<!-- טרם תורגם: 440–col4 -->`. The coordinator's two fixes (`וְהָאֵם`, `הַבּוּרִים`) kept.
+
+**New renderings fixed (lemma → Hebrew, first clause).**
+| Hittite | Hebrew | First | Note |
+|---|---|---|---|
+| *takšan* "together" (+ *eš-*) | `יחד` (`יחד יהיו`) | 291 | in 171 *takšan šarra-* was `לשניים יחלקו` (CHiL "a metà"): a split by sense, flag; `יחד` also renders *anda* in 166 (`ויבואו יחד`) – lexmap shows it |
+| *LÚ ḪA.LA-ŠU* | `איש־חלקו` | 291 | §7.4 `אנשי־חלקו` |
+| *gimra-* / LÍL "open country" | `בָּר` (vocalized) | 294 | the ritual corpus's word (§H3 note) |
+| *ṬUPPU* | `לוח` | 298 | §5 |
+| *karuwili-* "former" | `ישן` (`השדות הישנים`) | 299 | not `לפנים` (F2, *karū*) |
+| *QĀTU* "hand, share" | `יד` (`שתי ידות`) | 300 | [equivalent; coordinator: *qātu* is not the cognate of `יד` (= *idu*)] Gen 47:24 `וְאַרְבַּע הַיָּדֹת` |
+| ÉRIN.MEŠ | `אנשי צבא` | 302 | Akk. *ṣābu* = `צָבָא` (§6.7) |
+| MANDA, ŠALA, *karuḫali-* | `מַנְדָּה`, `שָׁלָה`, `קָרוּחָלִי` (transliterated) | 302 | |
+| *LÚ GIŠPAN*; *NAGAR GIŠ-ṢÍ*; *KUŠ₇* | `קשתים`; `חרשי העץ`; `אנשי המרכבה` | 302 | `חרשי העץ` ↔ `חָרַשׁ עֵצִים` (ישעיהו מד:יג) |
+| *uwa-* "come" | `בא` | 304 | |
+| *aruwai-* "bow down" | `השתחווה` (`משתחווים`, narrative present) | 305 | |
+| *tar-* iter. *taršk-* | `אומרים` | 306 | |
+| *ara-* "peer, friend" | `חבר` (`חבריכם`) | 313 | |
+| *apeniššan* "in that way" | `באותה דרך` | 314 | kept apart from *QĀTAMMA* `כך` |
+| *tuliya-* "assembly" | `אספה` | 310 | |
+| *tiya-* "step" (+ *anda*) | `נכנס` | 310 | |
+| *BÀD* "fortification"; *KASKAL LUGAL* | `חומה`; `דרך המלך` | 315 | |
+| *takš-* "join, build" | `בנה` (`לבנות`) | 315 | ms. C `pāuwanzi` "to go" |
+| *tuḫš-* (of vineyards) | `לנתק` | 316 | kept to the §7.4 Hebrew of the verb; CHiL "potare" |
+| *LÚ TIBIRA* "coppersmith" | `חרש־הנחושת` | 317 | `נפח` is Gilgameš's *nappāḫu* (cognate); ↔ 1 Kgs 7:14 `חֹרֵשׁ נְחֹשֶׁת` |
+| *NU.GIŠKIRI₆* "gardener" | `גנן` | 318 | as LH F41 (*nukaribbum*) |
+| *ḫumantiya=pat* | `כל אחד ואחד` | 318 | |
+| *GU₄.MAḪ* | `פַּר` (vocalized) | 319 | §7.1 |
+| *šawitišt-* "weanling" | `גָּמוּל` / `גְּמוּלִים` (always vocalized: "requital") | 320 | §7.1 |
+| *iuga-* / MU.1; *taiuga-* / MU.2 | `בן שנה`; `בן שנתיים` | 322, 324 | |
+| *ANŠE.KUR.RA.MAḪ* "stallion" | `סוס־הרבעה` | 330 | |
+| *UDU* pl. | `צאן` (feminine numerals: `שלושים צאן`, `שש צאן`, as `וְאַרְבַּע צֹאן`) | 342 | |
+| *UDU.U₈*; *UDU.NÍTA*; *UDU.ÁŠ.MUNUS.GÀR* | `רחל` (`רחלות`); `כבש`; `כבשה` (`כבשות`) | 344 | |
+| *parkunu-* of an animal ("castrate") | `טיהר` (`ויטהר אותו`) | 347 | literal: the Hittite euphemism; CHiL "castra"; ↔ Lev 22:24 |
+| *GU₄ APIN.LÁ*; *ANŠE.KUR.RA turiyawaš* | `שור חרישה`; `סוס רתמה` | 364, 369 | |
+| *turiya-* "harness" | `רתם` (`ירתום`) | 410 | |
+| *uttar* / *AWĀTU* "matter" | `דבר` (`דברו – כך ממש`) | 370, 392 | |
+| *enant-* "tame"; *annanuḫḫa-* "trained" | `מבוית`; `מאולף` | 371, 372 | |
+| *DÀRA.MAŠ* "stag" | `אַיָּל` (vocalized; ≠ UDU.A.LUM `אַיִל`) | 372 | add a §H6 row? |
+| *UDU.KUR.RA* | `שה־הרים` | 373 | |
+| *ÁB*; *ANŠE.KUR.RA.MUNUS.AL.LÁ* | `פרה`; `סוסה` | 378, 379 | |
+| *ḫali-* "corral"; *ašawar* "pen" | `מכלאה`; `דיר` | 379, 382 | (Gilg. `דיר` is *supūru*: cross-language) |
+| *ḫarp-* (mp) "stray (into another's pen)" | `נפרד אל` | 379 | §7.4 `נפרד`; CHiL "sconfina" |
+| *šakuwaššar-* "intact, complete" | `בשלמותו` | 384 | |
+| *2-ki* / *2-TAM* "double" | `כפליים` | 404 | kept apart from *2-ŠU* `פי שניים` |
+| *ANŠE.GÌR.NUN.NA*; *ANŠE* | `פרד`; `חמור` | 400 | §7.1 |
+| *unna-* "drive (here)" | `נהג` (`ינהג`) | 407 | |
+| *utne* "land, countryside" | `ארץ` (`בארץ`) | 408 | |
+| *ḫink-* "present, hand over" | `הציג` (`יציגו`) | 409 | |
+| *LÚ.MEŠ ŠU.GI* | `זקנים` | 409 | gated, §7.1 |
+| *tayazzil-* "theft" | `גנבה` | 420 | |
+| *SI* "horn" | `קרן` | 421 | |
+| SIG₅ (adj.) "good" | `משובח` | 423 | SIG₅ (verb) `החלים` (§10); `טוב` avoided |
+| *karap-* "devour" | `טרף` (`יטרוף`) | 430 | [equivalent] Exod 22:12 |
+| BA.ÚŠ "died" | `מת` | 434 | |
+| *link-* "swear" | `נשבע` (`וְיִשָּׁבַע`, vocalized: "be sated") | 435 | gated; the gate list has `ישבע` but not the plene `יישבע` |
+| *appatariya-* "impound, commandeer" | `עיכב` (`יעכב`) | 436 | CHiL "requisisce" |
+
+**Formulas and gates.** F1–F9 fired as set. Points: the `שבועה` gate should list `יישבע` / `ויישבע` (plene); the
+`לפנים` licence `früher` matches the gloss of *karuwili-* (299: "früherer") – harmless (the line has no `לפנים`), but anchor
+it if you want; `אַיָּל` vs `אַיִל` (DÀRA.MAŠ / UDU.A.LUM) and `גָּמוּל` (weanling) vs `גמול` (requital, *piyanai-* `יגמול`)
+could be §H6 traps.
+
+**Cruxes (in the apparatus).** 294 *gimraš=šaš* "of their open land" (CHiL "of his land"); 302 MANDA, ŠALA, *karuḫali-*;
+315–316 the syntax of HL 56 (a list of works no one is exempt from – CHiL) and *tuḫš-* of vines (prune or harvest); 347
+*parkunu-* = castrate (rendered literally); 374 MÁŠ.GAL! (the editors' emendation; the OS has the plough-ox as the
+measure); 379 / 382 *ḫarp-*; 419 *ark-* (CHiL "locks up"; we keep `יפריש`); 438 *apūn arnuzzi* (CHiL "keeps it");
+439 *kuššan-* "its hire" (CHiL "its value").
+
+**The numbers (Hittite "now" / "formerly" ↔ the Torah), for the index.** Bull 15 / 30 (5 two-year-olds, 5 yearlings, 5
+weanlings) ↔ Exod 21:37 five cattle for an ox; stallion 15 / 30; ram 15 / 30 sheep (5 ewes, 5 rams, 5 lambs) ↔ four sheep
+for a sheep (also 2 Sam 12:6 `אַרְבַּעְתָּיִם`); plough-ox 10 / 15; harness horse = plough-ox; cow 6 / 12; mare = cow; ewe or
+ram 6 / 12; a stolen animal found alive: returned + double (HL 70) ↔ Exod 22:3 `חַיִּים שְׁנַיִם יְשַׁלֵּם`; castration 7
+(about half the theft tariff) ↔ Lev 22:24; an ox dead in another's field: 2 (HL 72) ↔ Exod 21:34; horn or leg broken:
+exchange for a good ox, or keep it + 2 shekels (HL 74) ↔ Exod 21:36 `שׁוֹר תַּחַת הַשּׁוֹר`. Every tariff of HL 57–69 that
+has a "formerly" is halved (only the plough-ox by a third), and the OS already has the reduced tariffs.
+
+**Other parallels (selection).** Gen 47:24 (`יָדֹת`) ↔ HL 53; 1 Kgs 5:27, 12:4 ↔ HL 54–55 (forced labour; subjects petition
+the king; here the king's answer is "do as your fellows"); 1 Kgs 7:14 ↔ HL 56; Deut 22:2 ↔ HL 66, 71 [equivalent: the
+finder keeps the animal until the owner claims it; divergence: a public declaration at the king's gate or before the
+elders, and the finder may harness it]; Exod 23:4 ↔ HL 71; Exod 22:9–13 ↔ HL 75 [equivalent, the closest structural match
+in this part: a borrowed or hired animal dies, is devoured or lost → full replacement; "died by the god" → an oath,
+`שְׁבֻעַת יְהוָה תִּהְיֶה בֵּין שְׁנֵיהֶם`; divergence: the devoured animal is paid for in HL, not in the Torah]; Exod 9:3 `יַד
+יְהוָה … בְּמִקְנְךָ` ↔ OS HL 75 `I-NA QA-TI DINGIR-LIM` "by the hand of the god"; Exod 22:14 ↔ HL 76.
+
+**Versions.** HL 53: OS imperative *dāu*; mss. C, D plural partners; HL 54: ms. E omits several groups; HL 56: ms. C
+"to go"; HL 64: OS `uttar=šed=a kī=pat`; HL 65: OS measures by the plough-ox; HL 75: OS "by the hand of the god"; all the
+animal tariffs identical in OS and standard.
+
+**Shared words for HLPT** (§§ XXXI ff. rework HL 53–76?): the animal table (`פַּר`, `סוס־הרבעה`, `גָּמוּל`, `בן שנה`,
+`בן שנתיים`, `רחל`, `כבש`, `כבשה`, `צאן`, `שור חרישה`, `סוס רתמה`, `פרה`, `סוסה`, `פרד`, `חמור`, `אַיָּל`, `שה־הרים`),
+*turiya-* `רתם`, *šakuwaššar-* `בשלמותו`, *2-ki* `כפליים`, *unna-* `נהג`, *ḫink-* `הציג`, *karap-* `טרף`, *appatariya-*
+`עיכב`, *tayazzil-* `גנבה`, *enant-* `מבוית`, *ḫali-* `מכלאה`, *ašawar* `דיר`, *link-* `נשבע`.
