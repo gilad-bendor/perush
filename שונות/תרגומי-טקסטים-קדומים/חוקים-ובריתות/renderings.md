@@ -396,6 +396,32 @@ Hebrew item (`מחירו` / `מחירה` / `מחירם` / `מחירן`). *kušš
 (HL1 495 aligned). In HL 171 the mother is the subject of the whole § (171.3–5 changed: `תיקח`, `תטה`). §§153–156: numbers
 without text (not "lost").
 
+### 7.12 Merged from Sub3, part 1 (IN 1.1–7.18, §§1–7; 2026-10-26, Round 4 run 6 sub 3; accepted by the coordinator unless said)
+IN follows the Laws (no deviation; lexmap collisions *ḫarši-* `חלה`, *meḫur* `זמן` aligned to HL2). **Fixed formulas** (parts 2–4
+copy them byte for byte): F12 `ול־X היו יראים מאוד!` (*DINGIR.MEŠ-aš ZI-ni* `ולנפש הָאֵלִים היו יראים מאוד!`; with *marri*
+`… היו יראים מאוד, עד מאוד!`); F14 `וזה לו מות־ראש!` / `וזה לכם מות־ראש`; F13 accordingly `וזה לכם חטא־ראש`; *EGIR-pa waḫnumar
+lē ešzi* `הֲפִיכָה בחזרה – אַל תהיה לו!`; *DINGIR.MEŠ-aš ZI-ni* `לנפש הָאֵלִים`, *ZI DINGIR-LIM* `נפש הָאֵל`; *anda=ma* (§ opening)
+`ונוסף על כך:`; the address *anda=ma=za šumeš kuieš LÚ.MEŠ É DINGIR-LIM* `ונוסף על כך: אתם, אשר אנשי בית הָאֵל (אתם) –`
+(coordinator: accepted as proposed); *namma* `ועוד`; the §4 festival names (transparent ones translated: `חג החודש`, `חג השנה`,
+`חג הסתיו`, `חג האביב`, `חג הרעם`; the rest transliterated with `(?)`; *pul-* "lot" transliterated – `גורל` reserved; BIBRU
+`בִּיבְרוּ`, so §§18–19 `בִּיבְרוּ הָאֵל`); the oath 6.5–6.7. ***mēḫunaš mēḫuni*** (§§9, 15, 18): **coordinator: `בזמנו`** (the
+literal "at the time of times" in the פירוק; `מועד` reserved; the translator's `בזמן הזמנים` reads oddly). **Words:** *šanḫ-*
+"sweep" `מטואטא` / "seek out (to punish)" `דרש` (split by sense, accepted; [equivalent] Gen 9:5); *šarra-* "divide" `חלק` /
+"cross (a threshold)" `חצה` (split, accepted); *waḫnu-* "exchange" `המיר` ([equivalent] Lev 27:10) / *waḫnumar* `הֲפִיכָה`
+(split, accepted); UMBIN "fingernail" `ציפורן` (HL2's UMBIN "wheel" `גלגל`: the sign's two words); TUKU.TUKU-*nu-* `הזעים`;
+*idālawaḫḫ-* `הרע ל־`; *kaena-* `מחותן`; MÁŠ "family" `משפחה`; NUMUN `זרע`; *ḫalki-* `תבואה`; *ḫarnink-* `השחית`; *ḫūmandaz*
+`מכל וכל`; *warpant-* `רחוץ`; *kartant-* `גזוז`; *išḫiyeni-* `שער`; LÚ NINDA.DÙ.DÙ `אופה`; *paršur-* `תבשיל`; *ḫarnuwant-*
+`מרוסס`; *tamenk-* `דבק` (Gen 34:3); *ḫanḫaniya-* `קשוב`; *ḫalzai-* `קרא` (Hittite common vocabulary, like `עבר`: the Akkadian
+corpora's `קרא` for *nabû* does not bind it); SŪTU `סאה`; UPNU `חופן`; *šunnummeššar* `מילוי`; *tiyant-* `שׂוּם` (*šarā tiyanta*
+`השׂוּמִים למעלה`); *dai-* `שׂם` (§7.10); *ešša-* `עשה`; *wakšiyanu-* `החסיר`; *parā arnu-* `קדימה הִגִּיעַ`; *pē ḫar(k)-* `הוביל`;
+*aššuwant-* `חשוב`; *šarrumar* `חלוקה`; *ki-* `מונח`; *dāliya-* `הניח`; NINDA.SIG `לחם דק`; GAL "cup" `כוס`; *laḫu-* `שפך`;
+*maniyaḫḫ-* `מִנָּה` (Dan 1:5); *memiya-* `אמר`, *memian* `דבר`; *tarḫ-* `יכול`; *piyantalli-* `לחם־המתנה`; *kattaluzzi-* `מפתן`;
+DUMU.LÚ.U₁₉.LU `בן אדם`; *unnant-* `נִנְהָג`; NIGA `מפוטם`; *maklant-* `כחוש`; *iuk-* `עול`; *ašawar* `דיר`; SIG₅-*in* `היטב`; ŠÁM
+`מחיר`; KA×U `פה`; *zuwa-* `מזון`; *daššu-* `חזק`; *nuntarnu-* `מיהר`; *au-* `ראה`; *kiššan anda peda-* `כך פנימה נשא`. *tarna-*
+stays `שלח` (HL1, HL2, R1). **Tables (coordinator):** traps `דַּחִיָּה` (*taḫiya-*), `מַנּוּ` (*maniyaḫḫ-*); the selftest's IN 7.18
+ok-line replaced by the drafted line. **For the lead:** *dai-* `שׂם` here and in the Laws vs the ritual corpus's R1 `הִנִּיחַ`.
+**Note for all parts:** in a DINGIR line the H6 rule makes every `אל` an error unless vocalized: write `אֶל` / `אַל` there.
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;
@@ -542,6 +568,8 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אמן\|אמנים)(?![֑-ׇא-ת])` | `ummi\|um-mi` | UMMIĀNU `אֻמָּן` ("amen") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:יגע\|תיגע)(?![֑-ׇא-ת])` | `šalik\|ša-li` | *šalik-* `יִגַּע` ("toils") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אם\|אמות)(?=[ ־][הל]?א)` | `ama\.dingir` | AMA.DINGIR-LIM `אֵם הָאֵל` / `אִמּוֹת הָאֵל` ("if the god"; IN) |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:דחיה)(?![֑-ׇא-ת])` | `taḫiy\|da-ḫi-ia\|daḫiy` | *taḫiya-* (a festival): `דַּחִיָּה` ("rejection"; IN) |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:מנו)(?![֑-ׇא-ת])` | `maniyaḫ\|ma-ni-ia-aḫ` | *maniyaḫḫ-* imp.: `מַנּוּ` ("from him"; IN) |
 
 ### H9. Selftest (`hittite_tools.py selftest`: each line must give the expected result)
 | Line | Expect | Hebrew |
@@ -563,7 +591,7 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | HL2 194.4 | err | `ובנו שוכבים (עמה) – אין חטא.` |
 | HL2 103.2 | err | `ישכב,` |
 | HL2 198.3 | err | `וגם את הנואף יחיה,` |
-| IN 7.18 | ok | `לא יַרְפֶּה; ואתם – לנפש הָאֵלִים היו יראים מאוד.` |
+| IN 7.18 | ok | `לא תשלח! ולנפש הָאֵלִים היו יראים מאוד!` |
 | IN 7.18 | err | `לא יַרְפֶּה; ואתם – לנפש הָאֵלִים היו זהירים מאוד.` |
 | IN 18.13 | ok | `ייוודע – וזה לכם חטא־ראש; ואם לא` |
 | IN 18.13 | err | `ייוודע – וזה לכם חטא מוות; ואם לא` |

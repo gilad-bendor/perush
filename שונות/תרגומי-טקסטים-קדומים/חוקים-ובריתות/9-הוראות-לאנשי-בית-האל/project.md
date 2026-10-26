@@ -64,7 +64,7 @@ is now the source**: edit it, never re-run the generator over it.
 6. **Variant dividers** (for the נוסחים field): E has a ruling inside §9 (after A ii 65′ "… to the gods' soul") and inside §12
    (near A iii 40); C and B follow A's division wherever preserved.
 7. **Variants of content worth the translator's eye** (examples, not a list): D iv 7′ *išpandazza* "by night" where A iii 7
-   has GE₆-az; B ii 36′ and C ii 16 *akkatar* "death" where A ii 45′ has ÚŠ-tar (the same word, logogram vs. syllables); B
+   has GE₆-az; B ii 36′ *akkatar* "death" where A ii 45′ has ÚŠ-tar (the same word, syllables vs. logogram; corrected 2026-10-26: C ii 16, also *akkatar*, is our row 6.18 in §6, not a duplicate of A ii 45′); B
    iv 15′ the erroneous *šume〈〈eš〉〉el*; H i 13′ *NAG-na* over an erasure.
 
 ### IN concordance (§ → lead → duplicates; the KUB 13.4 citation form of the literature)
@@ -187,3 +187,65 @@ Exod 28:43 (the death of the priest who errs); the "minds of men and gods" (KUB 
 - 2026-10-25/26 (Sub3): the composite (312 rows, comp-check 0) and its concordance, pushed before the first translated line (a weekly-limit stop 2026-10-25 05:19 → 2026-10-26 07:26 UTC came in between; nothing lost).
 
 ## Proposals
+
+### IN part 1 (1.1–7.18)
+Drafted 2026-10-26 by the IN translator (Round 4 run 6 Sub3), rows 1.1–7.18 (95 rows, §§1–7) in `annotated-IN.rtl.md`;
+`verify IN` 0 problems (the undrafted rows are notes), `check_bible_quotes.py` 0, `selftest` 0 failures. Rank 3 consulted
+after drafting: Sturtevant & Bechtel 1935 (scratch OCR) and the CHD L–N, P, Š per word.
+
+**Formulas and repeated passages fixed (copy byte for byte in parts 2–4):**
+| Hittite | Hebrew | First row | Echo | Note |
+|---|---|---|---|---|
+| *nu=za X-i mekki naḫḫanteš ešten* (F12) | `ול־X היו יראים מאוד!` (7.18: `ולנפש הָאֵלִים היו יראים מאוד!`) | 7.18 | [equivalent] Lev 19:30 | X first, then `היו יראים`, then `מאוד`. |
+| … *mekki marri naḫḫanteš ešten* | `ולדבר הָאֵל היו יראים מאוד, עד מאוד!` (*marri* = `עד מאוד`, CHD "exceedingly") | 3.5 | same | *ANA INIM DINGIR-LIM* = `לדבר הָאֵל`. |
+| *SAG.DU-aš akkatar* / *ÚŠ-tar* (F14) | `וזה לו מות־ראש!` (*n=at=šši*); with =šmaš: `וזה לכם מות־ראש` | 6.18 | [divergence] Num 1:51 | parallels the selftest's F13 `וזה לכם חטא־ראש`. |
+| *EGIR-pa waḫnumar=šši lē ešzi* | `הֲפִיכָה בחזרה – אַל תהיה לו!` (vocalized; 8.27 *nu=šmaš EGIR-pa waḫnumar lē=pat ešzi* → `ולכם הֲפִיכָה בחזרה – אַל תהיה כלל!`) | 5.10 | – | EGIR-pa `בחזרה` (HLPT); `שוב` avoided. |
+| *DINGIR.MEŠ-aš ZI-ni* (one phrase) | `לנפש הָאֵלִים`; *ZI(-TUM) DINGIR-LIM* `נפש הָאֵל`; *ANA ZI-TUM DINGIR-LIM … dā-* `מנפש הָאֵל … תיקחו` | 4.11 | – | |
+| *anda=ma* (opening a §) | `ונוסף על כך:` | 4.1 | – | *anda* = `בנוסף` as HL2 *anda=šše*. |
+| the address *anda=ma=za šumeš kuieš LÚ.MEŠ É DINGIR-LIM* (9.1, 10.1) | **proposed** `ונוסף על כך: אתם, אשר אנשי בית הָאֵל (אתם) –`; with classes (12.1 *anda=ma=za namma šumeš LÚ.MEŠ SANGA …*) `ונוסף על כך, עוד: אתם, הכוהנים, …`; 14.1, 18.1 *šumaš kuieš X* `ונוסף על כך: אתם, אשר X (אתם) –` | (9.1) | – | not in part 1; 4.10 has the bare *šumeš LÚ.MEŠ É DINGIR-LIM* `אתם, אנשי בית הָאֵל`. |
+| *namma* "further" | `ועוד` | 2.1 | – | |
+| *meḫur* "time" | `זמן` (HL2 165.2 precedent; *kuedani meḫuni* `באיזה זמן שהוא`) | 7.17 | – | **proposed** for *mēḫunaš mēḫuni* (§§9, 15, 18): `בזמן הזמנים` (literal "at the time of times"; `מועד` reserved); alternative `בזמנו`. |
+| festival names (§4) | `חג החודש`, `חג השנה`, `חג הָאַיָּלִי(?)`, `חג הסתיו`, `חג האביב`, `חג הרעם`, `חג הַחִיָּרָה(?)`, `חג הַפּוּדָחָה(?)`, `חג הָאִישׁוּוָה(?)`, `חג הַשַּׁתְלַשָּׁה(?)`, `חג הַבִּיבְרוּ` (BIBRU, rhyton: transliterated, for §§18–19 *BIBRU DINGIR-LIM* `בִּיבְרוּ הָאֵל`), `חגי הכוהנים הקדושים`, `חגי הזקנים`, `חגי אִמּוֹת הָאֵל`, `חג הַדַּחִיָּה(?)`, `חגי אנשי הָאוּפַּטִי`, `חגי הַפּוּלָה(?)` (*pul-* "lot": `גורל` is reserved – transliterated), `חגי העידור(?)` | 4.1–4.6 | [divergence] Exod 23:14; Esth 3:7 (typological) | |
+| the oath of 6.5–6.7 | `"מי שמן החלה שלך, הָאֵל, ומכלי־הנסך לקח – אותו, הָאֵל, אדוני, אחריו [לֵךְ]! ואת ביתו – למטה, למעלה – יתפוס!"` | 6.5 | [equivalent] Josh 7:24 | *EN-YA* `אדוני`. |
+
+**Words fixed (Hittite → Hebrew, first row; all checked with `lemma` / `grep --all` / `harmonize_survey`):**
+*šanḫ-* split by sense: "sweep" `מטואטא` (2.6) / "seek out" `דרש` (3.2; [equivalent] Gen 9:5); *šarra-* split by sense: "divide"
+`חלק` (HL1; 5.7–5.10) / "cross (a threshold)" `חצה` (6.15; Sum. *bal* `חצה` in the other corpora); *waḫnu-* split: "exchange"
+`המיר` (7.8; [equivalent] Lev 27:10) / *EGIR-pa waḫnumar* `הֲפִיכָה בחזרה` (5.10); *UMBIN* "fingernail" `ציפורן` (2.3) against HL2
+*UMBIN* "wheel" `גלגל` (split by the sign's two words). *TUKU.TUKU-nu-* `הזעים` (`יַזְעִים`, 2.16; causative of HL1 `זעם`);
+*idālawaḫḫ-* `הרע ל־` (2.17); *kuen-* `הרג`; *kaena-* `מחותן`; *MÁŠ* "family" `משפחה`; *NUMUN* `זרע`; *ḫalki-* `תבואה`;
+*ḫarnink-* `השחית` (HL2); *ḫūmandaz* `מכל וכל`; *warpant-* `רחוץ`; *kartant-* `גזוז`; *išḫiyeni-* `שער`; *waššant- ḫark-*
+`לבוש (היה)`; *dān ēšdu* `לקוח יהיה`; *LÚ NINDA.DÙ.DÙ* `אופה`; *paršur-* `תבשיל`; *KÁ* `שער` (HL2); *ḫarnuwant-* `מרוסס`;
+*lā-* (ptcp., "relieved") `רפוי`; *tamenk-* `דבק` ([equivalent] Gen 34:3); *ḫanḫaniya-* (Luw.) `קשוב`; *ḫalzai-* `קרא`;
+*tettiyant-* `כלול` (?); *SŪTU* `סאה`; *UPNU* `חופן`; *šunnummeššar* `מילוי` (*šunna-* `מילא`); *tiyant-* (of *dai-*) `שׂוּם`
+(*šarā tiyanta* `השׂוּמִים למעלה`; *dai-* `שׂם` per §7.10 – **note: the ritual corpus's R1 still has *dai-* = `הִנִּיחַ`**: a
+cross-corpus split for the lead); *ayali-*, *ḫiyara-*, *pudaḫa-*, *išuwa-*, *šatlašša-*, *taḫiya-*, *upati-*, *pul-* transliterated;
+*ḫaḫratar* `עידור(?)`; *ešša-* `עשה` (iter.; *EZEN₄ ešša-* `עשה (חג)`); *ḫappar* `מסחר` (HL1); *wakšiyanu-* `החסיר`; *parā arnu-*
+`קדימה הִגִּיעַ` (`תַּגִּיעוּ`, vocalized); *pē ḫar(k)-* `הוביל` (5.3, 6.1); *aššuwant-* `חשוב`; *UBĀRU* `אורח` (§7.2);
+*takšan šarra-* (noun) `לשניים חלק` (HL1 171); *šarrumar* `חלוקה`; *ki-* "lie" `מונח`; *SAG.DU-az GAM-an kittaru* `בראש – למטה –
+מונח יהיה` (literal; crux); *dāliya-* `הניח` (HL1 *dala-*); *NINDA.SIG* `לחם דק` (`רקיק` avoided); *ḫarši-* `חלה` (HL2); *GAL*
+"cup" `כוס`; *laḫu-* `שפך`; *maniyaḫḫ-* `מִנָּה` (`מַנּוּ`, vocalized; [equivalent] Dan 1:5; `מסר` is LH's *šarāku*); *memiya-* /
+*mema-* `אמר` (*memian memi-* `דבר … אמר`); *tarḫ-* `יכול`; *piyantalli-* `לחם־המתנה` (CHD "donated bread"); *kattaluzzi-*
+`מפתן` (as Maqlû's *askuppu*); *pāuwaš* "of going (up)" `(מבני) העלייה`; *DUMU.LÚ.U₁₉.LU* `בן אדם`; *unnant-* `נִנְהָג`; *NIGA*
+`מפוטם` (HL1); *maklant-* `כחוש`; *mark-* `*פירק*`; *iuk-* "yoke" `עול`; *ašawar* `דיר` (HL1); *SIG₅-in* "well" `היטב`; *ŠÁM*
+`מחיר`; *KA×U* `פה`; *zuwa-* (Luw.) `מזון`; *pittinu-* `הבריח` (HL1); *daššu-* `חזק`; *nuntarnu-* `מיהר`; *au-* `ראה`;
+*EGIR-anda* `אחר כך`; *EGIR-an* `אחריו`; *kiššan anda peda-* `כך פנימה נשא` (literal: "argue to oneself"; `נשא` licensed).
+
+**Kept against the pre-set table / the selftest:** *tarna-* stays `שלח` (HL1, HL2 107.1, ritual R1): 7.4–7.6 `תשלחו`, 7.18 `לא
+תשלח!`. **The selftest's ok-line for IN 7.18 (`לא יַרְפֶּה; ואתם – לנפש הָאֵלִים היו יראים מאוד.`) differs from the drafted line
+(`לא תשלח! ולנפש הָאֵלִים היו יראים מאוד!`)**: it still passes (it tests F12 only), but I propose replacing it with the drafted
+line. No pre-set row of §7.2 was changed; *NINDA.GUR₄.RA UD-MI* = `לחם עבה יומי` as pre-set (2.1 plural `הלחמים העבים
+היומיים`); *išpantuzzi* `כלי־נסך` as pre-set.
+
+**Gates, traps, notes:** propose traps (always vocalized): `דַּחִיָּה` (*taḫiya-*; unvocalized "rejection"), `מַנּוּ` (*maniyaḫḫ-*
+imp.; "from him"). The vocalization rule of H6 for `אֵל` catches the preposition `אל` and the prohibitive `אל` in every DINGIR
+line – handled by vocalizing `אֶל` / `אַל` there (4 + 11 times in part 1): worth telling parts 2–4 up front. **A correction to
+"IN: the composite" point 7:** "B ii 36′ and C ii 16 *akkatar* where A ii 45′ has ÚŠ-tar" – C ii 16 is our row 6.18 (§6, A's lost
+col. ii top), not a duplicate of A ii 45′ (§8); B ii 36′ is the §8 duplicate. No gate or licence found wrong.
+
+**Cruxes (translated literally, marked, alternatives in the apparatus):** 1.13 *tamedani šarḫuwandaz lē ḫarnikteni*; 2.13 the
+subject of *n=at=ši … tamenkiškettari*; 2.14 *IGI-wannanza* `*מתרשל?*`; 2.15 read as a second question (S&B: "a different
+disposition toward him"); 2.19 *parranda ḫalzianzi=pat … UL kuitki iyanzi* (`*רק קוראים לו*`, the mildest step of the scale;
+S&B "revile him in public"); 2.20 *tettiyant-*; 5.9 *SAG.DU-az GAM-an kittaru*; 6.7 *kiyaḫḫut* (TLHdig's restoration; CHD "go
+after"); 6.11 the restored *lē* (CHD: the donated bread is *not* for wives, children, slaves; S&B 1935 read the opposite);
+7.3 *mark-* `*פירקתם*`; 7.10 statement, not S&B's question; 7.12 *anda peda-*; 7.14 the addressee of *au* "see!" (the god?).
