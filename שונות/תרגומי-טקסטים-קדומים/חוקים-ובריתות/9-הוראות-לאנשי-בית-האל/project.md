@@ -357,3 +357,78 @@ In 17.8–17.9 it is verbal (*parkuešteni / paprešteni*): `אם תיטהרו �
 **Cruxes:** 17.3 *taišteni* (S&B: "conceal"; I translate literally `תָּשִׂימוּ`, "put before"); 18.3–18.4
 UZU *ŠALĪTU* `שִׁלְיוֹת(?)` and *ḪAKKURRATU* (transliterated); 18.9 *šapp-* of milk (skimming?); 18.19 *zammurai-* (as in 11.7);
 18.20 / 19.14 ZI-aš / ZI-TI "of the soul" (the ordeal vessel); 19.1 *karšattar*.
+
+### IN review (a) fidelity
+Review pass (a), 2026-10-26: every entry (1.1–col4) read against the composite line, the פירוק and the `data` words; checked
+every negation, prohibitive, condition, question, tense/mood, the brackets (TLHdig's `[ ]`, `?`, the borrowed rows 6.8–7.10
+from C and 15.1 from B on their own brackets) and the row integrity. **48 `>` lines changed** (the פירוק aligned in each);
+no fixed rendering changed; `verify IN --strict` 0 problems, `check_bible_quotes.py` 0, `selftest` 0 failures. No negation,
+prohibitive or question was found reversed, and no Sturtevant & Bechtel 1935 reading against the composite (6.11's *lē*,
+7.10's statement, 13.7–13.8 are read as the composite and the CHD have them, and say so in the apparatus).
+
+Kinds of error: brackets not following the composite (a restored stem left unbracketed, a preserved word inside the
+brackets, a `?` of the composite dropped: 21 lines); words added outside `( )` (a particle the Hittite lacks: "from",
+"thus", "if", "therefore", "because", an object or subject pronoun: 9 lines); row integrity (a word of one row rendered
+in the next, or twice: 8.2–8.3, 12.2–12.3, 12.5–12.6, 14.15, 14.18, 19.9–19.10, 19.14–19.15); one grammar error (2.5: an
+enclitic read as subject of a transitive verb); one tense (12.4); four lacuna marks (2.18, 8.26, 10.5, 15.2).
+
+**Lines changed** (label: before → after – why):
+- 1.12: `ומן ההי[כל?]` → `ו(מן) ההי[כל?]` – the case of É.GAL is broken; "from" is ours (only =ašta).
+- 2.5: `הם, אלה, יעשו אותם` → `אותם אלה יעשו` – *n=aš apūš eššandu*: =aš is the acc. "them" (the loaves); an enclitic subject does not stand with a transitive verb; *apūš* is the subject (פירוק fixed).
+- 2.6: `עושים אותם` → `עושים (אותם)` – no object pronoun with *eššanzi*; =at is the house, subject of 2.7 *ēšdu* (פירוק fixed).
+- 2.13: `ונפשו בו דבקה` → `ו(נפשו) בו דבקה` – the text has only =at "it"; "his mind" is the interpretation (as the note says).
+- 2.15: `עבדו` → `עבדו?` – the composite has ⸢ARAD-ŠU?⸣.
+- 2.18: `– …[…]` → `– … …` – *x x-pát?*: two unread signs, nothing broken.
+- 4.4: `חגי הכוהנים הקדושים` → `חגי הכוהנים? הקדושים` – the plural rests on TLHdig's queried *{L[Ú.MEŠ}?]*.
+- 6.14: `[והוא – אם (מבני) העלייה אֶל] בית הָאֵל למעלה (הוא)` → `[והוא – אם אֶל] בית הָאֵל (מבני) העלייה למעלה (הוא)` – *pāuwaš* is preserved: it stood inside the restoration brackets.
+- 6.18: `[ואילו מי ש]יוליך` → `ואילו [מי ש]יוליך` – =ma is preserved on *pēḫutezzi=ma*; only *kuiš=an* is restored.
+- 7.2: `[ואילו אתם – לעצמכם]` → `[ואילו אתם – לעצמכם?]` – the composite restores *=za?* with a query.
+- 7.3: `אשר *פירקתם* לעצמכם` → `[אשר] *פירקתם* [לעצמכם]` – *šumaš=ma=az kuin* is wholly restored.
+- 7.5: `או שאותו אל המכלאה` → `[או שאותו] אל המכלאה` – *[našma=an=za=an=kan* is restored.
+- 7.9: `עליו לעצמכם תיקחו` → `עליו [לעצמכם] תיקחו` – *nu=za=kan* is restored.
+- 7.14: `את האדם ראה` → `את האדם [ראה]` – *a-ú* is restored (from C, B).
+- 8.2–8.3 (row integrity): `ולכם, מן הכסף, הזהב,` → `ולכם, של הָאֵלִים – מן הכסף, הזהב,`; `וחפצי הָאָרָד של הָאֵלִים – אין!` → `וחפצי הָאָרָד – אין!` – DINGIR.MEŠ-aš is in 8.2 (A ii 26′).
+- 8.11: `וכך עשוי יהיה ממש!` → `ו(כך) עשוי יהיה ממש!` – *n=at iyan=pat ēšdu* has no "thus" (*kiššan* comes only in the next clause).
+- 8.26: `אין … [אַל?]` → `אין, [אַל?]` – nothing is lost or unread between NU.GÁL and *[l]ē(?)*; the line's incompleteness is said in the note.
+- 9.15: `ואם על אדם` → `ו(אם) על אדם` – no *mān*: *nu=kan šumaš UN-aš uwaittari*; the condition is implied.
+- 9.18: `ולכן לנפש` → `ו(לכן) לנפש` – *n=ašta* is a plain connective; "therefore" is ours.
+- 10.5: `[…] –` → `[…]… –` – *[ ]x-zi*: the verb's end is preserved (as 2.5 `[…]…ים`).
+- 12.2–12.3: `… מישהו(?)` (12.2) → `…(?)`; `בבית־הַקָּרִימִּי – ישתכר` → `בבית־הַקָּרִימִּי – מישהו ישתכר` (12.3) – row integrity: *kuiški* is in 12.3 (A iii 37); the `?` belongs to the unread word of 12.2.
+- 12.4: `והולם את החג` → `ויהלום את החג` – pres. *zaḫzi* in the protasis: Hebrew future, like `ישתולל`, `ויעשה` (brief §2).
+- 12.5–12.6 (row integrity): `לחם, שכר –` → `לחם, שכר – למעלה`; `שׂוּם למעלה – יעשה!` → `שׂוּם – יעשה!` – *šarā* ends 12.5 (A iii 39), *tiyandan* opens 12.6.
+- 12.9: `ואת החג ישלים` → `ואת החג? ישלים` – the composite has ⸢EZEN₄-an?⸣.
+- 13.2: `בתוך בית הָאֵל` → `בתוך? בית הָאֵל` – ⸢ŠÀ?⸣.
+- 13.7: `ואילו בית הָאֵל` → `ואילו? בית הָאֵל` – ⸢-ma?⸣ (the `?` is on the particle).
+- 14.8: `טהורים לבשו!` → `טהורים [לבשו]!` – *[ú-e-eš]-tén*: the stem is restored.
+- 14.15: `וייתן לָאֵל לאכול` → `ולָאֵל לאכול` – row integrity: *pāi* "gives" is in 14.16 (`ולשתות ייתן`); 14.15 rendered it twice.
+- 14.18: `לאכילת הָאֵלִים` → `(לאכילת) הָאֵלִים` – "eating" (*adannaš*) is in 14.19; here only DINGIR.MEŠ-aš.
+- 14.19: `בזמן האכילה` → `בזמן [האכילה]` – *[a-da-an-n]a-aš*: the stem is restored.
+- 14.20: `וזה לו חטא!` → `[וזה] לו חטא!` – *[na-at-š]i*: =at is restored (F13 otherwise unchanged).
+- 14.24: `ידחה אותו(?)` → `ידחה(?) (אותו)` – no object pronoun in *parā dāi*; the note says the object is the bath.
+- 14.28: `ויעלים אותו` → `ויעלים [אותו]` – *[na-an* is restored.
+- 14.29: `וזה להם מות־ראש!` → `וזה [להם] מות־ראש!` – *[nu-uš-ma-ša-a]t*: =šmaš is restored.
+- 15.2: `אם […] משהו` → `אם […]… משהו` – *ma-a-[an ]x*: a lost stretch, then an unread sign.
+- 15.3: `או כל מה שהוא` → `או [כל מה] שהוא` – *[ku-it im-ma] ku-it*: the first *kuit imma* is restored.
+- 15.5: `עד שאדם טרם יאכל ממנו` → `עד ש[אדם] טרם יאכל ממנו` – *[UN-a]š* is restored (the fixed *ḫuelpi* string otherwise unchanged; 18.7 follows its own brackets).
+- 16.11: `מן הָאֵל` → `מן הָאֵל(?)` – the composite reads *DINGIR-LIM-ni(?)* (over an erasure).
+- 17.1: `אשר בידיכם` → `אשר [בידיכם]` – *[ḫar-t]e-ni*: the stem is restored.
+- 18.3: `ואתם לו` → `ו(אתם) לו` – no pronoun in *nu=šši*; "you" is the person of 18.4's *pē ḫarteni*.
+- 19.9–19.10 (row integrity): `– ואותו` → `– ואותו עד תום`; `יאכלו עד תום,` → `יאכלו,` – *arḫa* ends 19.9 (A iv 64).
+- 19.12: `כי את המזון` → `(כי) את המזון` – the Hittite has no "because" (*DINGIR.MEŠ-aš=kan ZI-aš=a=aš … dāer*).
+- 19.14–19.15 (row integrity): `מעל הַכַּן` → `מעל הַכַּן מטה`; `ייקחו מטה,` → `ייקחו,` – GAM ends 19.14 (A iv 69); the ordeal's fixed part (`את בִּיבְרוּ הָאֵל של הנפש`) unchanged.
+
+**Left for the coordinator (not changed):**
+1. **lē + iterative** (18.4 `אַל תאחרו אותם תמיד!`, 19.6 `אַל ימירו אותו תמיד!`): Hebrew "do not *always* delay" weakens a
+   general prohibition ("never"); 14.7 (`אַל יחצה`) drops the `תמיד` instead. Propose one rule for *lē* + *-šk-* (drop `תמיד`, or
+   `לעולם אַל`), for pass (b).
+2. **15.6** *arnuškitten* (imp. 2pl) is `מיד תגיעו תמיד!` (future with `!`) in the fixed *ḫuelpi* string: the brief maps the
+   imperative to the Hebrew imperative (`הגיעו`). A fixed rendering: pass (b).
+3. **Connectives**: *nu* rendered `ואילו` (11.8), `ואז` (7.9, 18.19), `אז` (18.21, 19.21) where the brief says `ו־` (`ואז` only where
+   the sequence is the point); left as defensible (apodosis), for pass (c).
+4. **Restored connectives and =za**: a restored *nu* alone (7.4, 7.18 `[nu-za]` in F12) is not bracketed as `[ו]`: a
+   one-letter connective, and 7.18 is the fixed F12 string. Restored enclitic pronouns are bracketed where a Hebrew word
+   renders them (6.18, 14.20, 14.28, 14.29).
+5. **Scribal omissions 〈 〉** (5.5, 8.25, 10.12, 11.1, 14.17, 16.10, 19.14) are all single syllables inside a word: the
+   Hebrew word is not marked `⟨ ⟩` (the פירוק says "the scribe omitted …"); `⟨ ⟩` would be for a whole omitted word (none).
+6. **19.14–19.15**: the ordeal's verb string recorded in "IN part 4" (`מעל הַכַּן ייקחו מטה`) is now `מעל הַכַּן מטה` / `ייקחו,`
+   (row integrity); the fixed part `את בִּיבְרוּ הָאֵל של הנפש` is unchanged.
