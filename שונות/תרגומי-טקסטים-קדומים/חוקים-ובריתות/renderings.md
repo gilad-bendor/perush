@@ -471,6 +471,16 @@ GUL-*aḫ-* = *walḫ-* `מחץ` (**the `מחץ` licence now matches GUL-aḫ-**
 offal words 18.3–18.4, *šapp-* 18.9, ZI-*aš* / ZI-TI, *karšattar*. **Tool note:** `lexmap` lists *iya-* (mid.) "go, march"
 (19.3 `יתלוו`) under *iya-* "make": a label for the report, not a collision.
 
+**Review rulings (Sub3, after passes (a) and (b), 2026-10-26):** brackets as HL1 (a Hebrew word bracketed when the Hittite stem
+is restored; a restored lone *nu* and the one-syllable scribal omissions inside a word are not marked – said in the intro);
+*lē* + iterative = `אַל` + future, **without `תמיד`** (the iterative in the פירוק only); a positive iterative takes `תמיד` only
+where the text stresses repetition (the *ḫuelpi* passage `מיד הַגִּיעוּ תמיד!`), else a plain verb or `היו` + participle
+(pass (c) aligns); the *ḫuelpi* passages of §15 and §18 identical, with imperatives; *menaḫḫanda* `כלפי` / with "see" `לקראת`
+(split by sense, accepted); *kuitman* `עד ש־` = HL1 `עד אשר` (one word, two spellings: accepted); *lē uškanzi* `אַל יהיו רואים`
+(`יראו` never written); *ḫar(k)-* "hold" `החזיק` (as the Laws); *imma* `אכן`; *kuedani mēḫuni* `באיזה זמן ש־`; adjectival
+*mekki-* `רב`, adverbial `מאוד`; *UL kuitki* `מאומה`; *1-aš 1-aš* `אחד אחד` (`כל אחד ואחד` stays HL1's *ḫumantiya=pat*);
+*UN-aš ZI-ni* `לנפש אדם`.
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;

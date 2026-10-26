@@ -432,3 +432,44 @@ enclitic read as subject of a transitive verb); one tense (12.4); four lacuna ma
    Hebrew word is not marked `⟨ ⟩` (the פירוק says "the scribe omitted …"); `⟨ ⟩` would be for a whole omitted word (none).
 6. **19.14–19.15**: the ordeal's verb string recorded in "IN part 4" (`מעל הַכַּן ייקחו מטה`) is now `מעל הַכַּן מטה` / `ייקחו,`
    (row integrity); the fixed part `את בִּיבְרוּ הָאֵל של הנפש` is unchanged.
+
+### IN review (b) consistency
+Review pass (b), 2026-10-26: every formula and repeated passage compared across its occurrences (F12 ×6, F13 ×4, F14 ×4,
+F16 ×2, the address ×6, *waḫnumar* ×2, *DINGIR.MEŠ-aš ZI-ni* ×7, *mēḫunaš mēḫuni* ×3, *išduwari* ×8, the *ḫuelpi*
+passages §15/§18, the oath §17/§18, the ordeal §18/§19, §19's case ↔ confession), every IN lemma of `lexmap` with more than
+one Hebrew against IN, HL1, HL2, HLPT, the names (§H2) and traps (§H6), every הקבלה tag. **24 `>` lines changed** (the
+פירוק, and the הערות where they quoted the line, aligned); `verify IN HL1 HL2 HLPT --strict` 0 problems (the one listed
+repeated-line difference is HL1 180/186, accepted 2026-10-25), `selftest` 0 failures, `check_bible_quotes.py` 0. Found
+consistent and left: F12/F13/F14/F16 wording, the address, *waḫnumar*, `לנפש הָאֵלִים` / `על נפש הָאֵלִים` (9.14),
+`בזמנו`, the oath (17.8–17.9 verb vs 18.20–18.21 adjective, as the Hittite), the ordeal string, *ḫūdāk* `מיד`, *kiššan anda
+peda-* `כך פנימה נשא`, §19's case and confession (apart from 19.9 below).
+
+**Lines changed** (label: before → after – why):
+- 18.4: `אַל תאחרו אותם תמיד!` → `אַל תאחרו אותם!` – ruling (i): *lē* + iterative = `אַל` + future (פירוק notes the iterative).
+- 19.6: `אַל ימירו אותו תמיד!` → `אַל ימירו אותו!` – ruling (i). (14.7 `אַל יחצה` already so.) *lē uškanzi* (15.6–15.7, 18.6) keeps `אַל יהיו רואים`: *uš-k-* is the ordinary stem of *au-*, fixed `רואים` (§7.2: the homograph `יראו` is not written).
+- 15.6: `מיד תגיעו תמיד! ולקראתו הָאֵלִים אַל` → `מיד הַגִּיעוּ תמיד! ואותו הָאֵלִים – לקראתו אַל` – ruling (ii): imp. *arnuškitten* = Hebrew imperative (as 18.7 `הביאו`; `תמיד` kept: a positive iterative, as 19.22 `רדוף תמיד`); =at … *menaḫḫanda* now as §18's copy (18.5–18.6 `ואותם הָאֵלִים – לקראתם`).
+- 19.11: `וזה להם חטא־ראש,` → `וזה להם חטא־ראש!` – F13 punctuation as 10.21, 17.9, 18.13.
+- 16.11: `וזה לכם חטא;` → `וזה לכם חטא!` – as 14.20, 15.8.
+- 18.13: `ייוודע (הדבר) – וזה` → `ייוודע (הדבר): וזה` – the *išduwari* formula as 14.28, 16.10, 17.6.
+- 17.7: `ואילו אם לא ייוודע,` → `ואילו אם לא ייוודע –` – the negative formula as 18.13–18.14, 19.13.
+- 9.12: `לפי נפש אדם` → `לנפש אדם` – *UN-aš ZI-ni* as 9.20 (`לנפש אדם`) and *DINGIR.MEŠ-aš ZI-ni* `לנפש הָאֵלִים` (9.18).
+- 7.17: `ואילו כאשר תתפוס – באיזה זמן שהוא –` → `ואילו באיזה זמן שתתפוס –`; 19.13: `באיזה זמן שהוא` → `באיזה זמן` (+ 19.14 `שיגיעו`) – *kuedani mēḫuni* = `באיזה זמן ש־` + verb, as 18.14 (`כאשר` was an added *maḫḫan*; `שהוא … שיגיעו` doubled the relative).
+- 7.13: `דבר [יאמר …] לא יעשה דבר!` → `מאומה [יאמר …] לא יעשה מאומה!` (7.12, 7.16 notes aligned) – *UL kuitki* `לא … מאומה` as 2.19; `דבר` is *memiya-* / *uttar*.
+- 7.15: `כמו שהיא עושה תמיד` → `כמו שהיא עושה` – *ešša-* is `עשה` without `תמיד` everywhere else (2.1, 2.5, 4.9, 9.2, 9.4).
+- 8.23: `ובאותו אופן ממש` → `וכך ממש –` – HL1 *QĀTAMMA=pat* `כך ממש` (§7.4; §7.8 ruling `כך`); `באותה דרך` is *apeniššan*.
+- 12.8: `חטא גדול` → `חטא רב` – *mekki-* `רב` (HL1 §7.4); `גדול` is GAL (10.8, 10.17).
+- 16.10: `אמנם` → `אכן` – *imma* `אכן` (§7.14, 13.7).
+- 10.10: `כל אחד ואחד` → `אחד אחד` – *1-aš 1-aš*; `כל אחד ואחד` is HL1's *ḫumantiya=pat* (§7.5).
+- 8.2: `בידיכם הוא` → `אתם מחזיקים`; 14.10: `אשר בידיכם` → `אשר (אתם) מחזיקים`; 17.1: `אשר [בידיכם]` → `אשר (אתם) [מחזיקים]` – *ḫar(k)-* "hold" = `החזיק` (HL1 198, 209, 256 …, HLPT, HL2 193); `יד` is ŠU / QĀTU's.
+- 19.9: `לעצמו ייקח` → `ייקח לעצמו` – §19's case in the confession's order (19.19 `ומסחר לקחנו לנו`).
+- 7.14: `את מזון־[נפשך]` → `את מזון [נפשך]` – as 19.21 `מזון נפשך`.
+- 11.2: `משוח` → `מְשׁוּחַ`; 12.1: `המשוחים` → `המְשׁוּחִים` – GUDU₁₂ always vocalized (§7.2).
+- 11.13: `הַלַּבַרְנָה` → `הַלַּבַּרְנָה` – the §H2 vocalization (`לַבַּרְנָה`).
+- 18.7 הקבלה (not a `>` line): the animal firstlings are Exod 22:29 `כֵּן תַּעֲשֶׂה לְשֹׁרְךָ לְצֹאנֶךָ`, now quoted (the note quoted 22:28 "the firstborn of your sons" for them).
+
+**For the coordinator:**
+1. *menaḫḫanda*: `כלפי` (14.3, §7.14) but `לקראתו` / `לקראתם` with *uškanzi* (15.6, 18.6: "look out for, wait for"). Left: propose a split by sense (`לקראת` with verbs of seeing), since `כלפיו אַל יהיו רואים` obscures the waiting.
+2. *kuitman*: HL1 `עד אשר` (§7.3) vs IN `עד ש־` (10.6, 14.17, 15.5, 18.6; §7.14 fixed `עד שאדם טרם יאכל ממנו`). The same particle; propose accepting `ש־` / `אשר` as one rendering (or align IN to `עד אשר`). 9.10 *kuitman* "meanwhile" `קודם כול` – a sense of its own.
+3. 14.2–14.3 F12: *DINGIR.MEŠ-aš | ZI-ni menaḫḫanda* split over the rows, rendered `הָאֵלִים: / כלפי נפשם` (left dislocation; the fixed noun phrase `נפש הָאֵלִים` is not written whole). Left as the row rule requires; flag if the phrase must appear whole.
+4. Positive iteratives are rendered three ways (`תמיד`: 6.15, 10.10, 11.3, 15.6–15.7, 19.22; `היו` + participle: 6.10, 6.16, 10.12–10.16, 17.4; nothing: 1.8, 2.11–2.12, 4.10–4.11, 9.16, 18.9). Not changed (no ruling); a rule for pass (c) or the lead.
+5. Cross-corpus (for `renderings.md`, not edited): §7.2 could add *ḫar(k)-* "hold" = `החזיק` in IN too; *imma* `אכן` (both 13.7, 16.10); *kuedani mēḫuni* `באיזה זמן ש־`; *mekki-* adj. `רב` / adv. `מאוד`. The F13 regex is satisfied by `חטא־ראש` only; the punctuation after F13/F14 (`!`) is not machine-checked.
