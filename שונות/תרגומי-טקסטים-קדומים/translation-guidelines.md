@@ -138,66 +138,165 @@ Moved to [`sources-registry.md`](sources-registry.md), with its numbering kept (
 
 For long texts, work in sections (e.g. 20–40 lines per session) and record progress in `project.md`.
 
-### 5.1 Pace: quotas apply everywhere (the user's words, 2026-10-22)
-- **The cloud's special allowance is over** (2026-10-22): Claude Cloud sessions are quota-limited like local ones. **Assume quota limits in every session.**
-- **Run sub-agents strictly one at a time**, in the cloud too, and tell every sub-agent to run its own sub-agents (if it has any) one at a time. Then a quota stop cuts only one effort, not several half-done ones. No parallel translators, not even on different texts or corpora; speed comes from good briefs and fixed renderings, not from parallel agents. Wall-clock time doesn't matter.
-- **Save as you go:** a translator writes each drafted section to disk at once, and the coordinator commits and pushes after every part it merges, so that a quota stop loses at most the part in progress. A stopped agent can be resumed later (SendMessage) or its part restarted from what is on disk.
-- **Commit and push to branch `main` after every milestone** (the user's instruction, 2026-10-21; cloud sessions). A milestone is a source secured, the renderings fixed, a translator's section merged, a review pass done, a project or run finished, `STATUS.md` updated. Work on `main` itself, not on the session branch the cloud creates (`git push origin main`). A cloud VM can be reclaimed at any time, so whatever is not pushed can be lost. Commit only your own files (`git commit -- <paths>`, never `-A`, never `docs/`), and `git pull --rebase origin main` before pushing when another session has pushed first.
-- (Until 2026-10-21 the cloud ran on a special allowance, and parallel sub-agents on separate texts were allowed there: the records below come from that time.)
-- **Sub-agents cannot start sub-agents** (seen 2026-10-21, the first parallel cloud round): the three run coordinators, started as sub-agents of the lead session, had no Agent tool, so no coordinator could start translators. Each coordinator translated its texts itself, one text or section at a time, with every safeguard kept (renderings fixed first, verify script, three passes, `check_bible_quotes.py`). To get real translator chains, the session itself must be the coordinator (one run per session), or the lead must start the translators directly and hand their output to the coordinators.
-- **The shared checkout and a rewritten `origin/main`** (2026-10-21): when the user rewrote `main`'s history mid-run (`docs/` moved to its own branch), every push from the shared checkout was rejected. The lead replayed the runs' commits onto the new `origin/main` in a separate worktree (`git worktree add --detach <scratch> origin/main`, `git cherry-pick <old-base>..main`, check that the trees differ only as expected, `git push origin HEAD:main`), while the coordinators kept committing locally.
-- **Web search is budgeted per session** (seen 2026-10-21, the world survey): about **200 `WebSearch` calls in all, shared by the session and every sub-agent**. Ten parallel research agents used it up within about 25 minutes; some got only 6–10 searches. Direct fetches (curl, WebFetch, git, catalogue APIs) were not limited, and searching worked again for the lead later the same session. So tell each research agent its share of searches, and to verify by fetching rather than searching.
-- **A session limit was hit in the cloud** (2026-10-21, ~22:00 UTC, Round 3 run 2, Etana): with several Round 3 sessions running at once, two parallel translator sub-agents failed at their start with HTTP 429 "You've hit your session limit · resets 10:50pm (UTC)", after the coordinator's setup work (sources, tools, renderings) and before any line was drafted; the VM then rebooted (the disk and the pushed work survived; `/tmp` scratch did not). The user lifted it the next day. So the cloud allowance is shared across the user's parallel sessions: keep the parallel sub-agents few (two per session), and commit before launching them.
-- **The same stop in Round 3 run 1** (2026-10-21, ~22:00 UTC, the creation corpus): its three parallel translators (one per text) all failed on the same 429 within their first minutes, before any line was written; the coordinator's setup (sources, renderings §9, gates, briefs) had been pushed first, so nothing was lost. Resumed the next day with one translator at a time (Summer and Winter, then Hoe and Plough, then the Farmer's Instructions), each following the earlier ones' Hebrew, with a scheduled check-in that committed each translator's saved sections; no further stop.
-- **The same stop in Round 3 run 3** (2026-10-21, ~22:00 UTC, the new corpus `נבואה-ומלכות/`): all five parallel translators (SAA 9 1, 2, 3, 4–11; Advice to a Prince) failed on the same 429 at their start, before any line was written; sources, tool, renderings and brief had been pushed first. Resumed 2026-10-22 with one translator at a time, after aligning the pre-set renderings with the corpora finished meanwhile (Etana's *agappu* `אֲגַף` and *ṣerru* `נָחָשׁ`).
-- **A seven-day warning paused a run** (2026-10-24, 05:47 UTC, Round 4 run 4, Hesiod): after the Theogony was finished (one sub-session, about 4 hours), the Works and Days sub-session found `rate_limit_info` = `allowed_warning` (`seven_day`, reset two days later) before its first translator, and stopped as the rule said; nothing was lost (nothing drafted yet). About 12 hours later the user set the Saturday–Monday exception (§5.1a) and the run resumed and finished the same day; the status stayed `seven_day` `allowed_warning` throughout, with no `five_hour` warning.
-- **If a cloud session does hit a quota, a rate limit or a forced delay** (an HTTP 429, "session limit", a usage cap, throttled agents), record it here at once: what happened, when, and after how much work. Then fall back to one agent at a time. This section must describe what is actually true.
+### 5.1 Pace: the quota's time ranges, the gate, agents at a time (the user's rules of 2026-10-30; they replace every earlier usage rule)
+The user's subscription is shared by all their sessions, and the translation process must never leave the user short.
+So it works only in the weeks' two "time ranges", when the user does not work - and there it should be **as aggressive
+as the rules allow**: the weekly quota does not carry over, so a range left idle is quota lost for good.
+- **The rules live in one generic script, `claude/quota-related-instructions.ts`** (from this folder:
+  `../../claude/quota-related-instructions.ts`) – an executable: run it as-is (its shebang runs node; no `node` before
+  it, no flags). Run it **without arguments** at the start of every session and after a
+  compaction, and follow its output: it prints the rules with the coming ranges' exact times. In short:
+  - **Range A - Shabbat:** from 1 hour before Shabbat enters until 4 hours before it exits (Tel Aviv). The 5-hour
+    limit may be used up (a 5-hour `allowed_warning` goes on; `rejected` waits for its reset); a **weekly**
+    `allowed_warning` stops the work until range B. **One agent at a time.**
+  - **Range B - Monday night:** from Monday 00:00 Israel time until the weekly reset (Monday 07:00 UTC: 09:00 Israel
+    in winter, 10:00 in summer). Everything left may be used, warnings included; `rejected` waits for its reset (the
+    weekly one: until the next range A). **Up to three agents at a time** (one when `utilization` is reported >= 90%).
+  - **Outside the ranges the process does not work at all**, whatever the quota says. Paid overage
+    (`isUsingOverage: true`) is never used.
+- **The gate**, before every heavy step (a child session, a sub-agent, a translator part, a review pass) and on every
+  wake-up: `get_session` (no id) → `../../claude/quota-related-instructions.ts check '<its rate_limit_info, as JSON>'`.
+  `GO range=<A|B> agents=<n> …` → go on, with at most `<n>` agents working; `WAIT <time> …` → commit, push your branch
+  (§5.1b), pause as §5.1c says, and end the turn. A sub-agent that is already running finishes its part (it saves as
+  it goes); the next gate stops the work. The status values: `allowed`, `allowed_warning` (the "warning" level),
+  `rejected` (the limit is reached); `rateLimitType` `five_hour` or `seven_day`; `rate_limit_info` shows one limit at a
+  time, so a 5-hour warning can hide a weekly one - hence a gate before *every* heavy step.
+- **Use every range to the full.** Wall-clock time does not matter; the ranges do. Have the next step ready so that
+  work starts at a range's first minute (paused sessions are woken at its start, §5.1c) and goes on until the gate
+  stops it; the orchestrator launches the next run the moment one ends.
+- **Agents at a time** = Claude agents producing tokens at once, over the whole tree of sessions (a session that ended
+  its turn, or only waits for its sub-agent, does not count). In this process:
+  - **range A: one** - one child session at a time, inside it one sub-agent at a time; a parent waits while its child works;
+  - **range B: up to three, on independent tracks only** - up to three runs in different corpora (§5.1c), or inside
+    one run up to three sub-agents on different texts (with the parallel-texts rules of §5.2: shared renderings fixed
+    first, each agent its own files), or a translator on one text beside a reviewer on another. Inside one text the
+    translators stay sequential (consistency). The share of each child is written in its prompt.
+  - Only the coordinator runs git (sub-agents write their files, never commit).
+- **Phase the work - scripts are not agents.** Most of a session's time goes to running scripts, and they can run in
+  parallel without any limit:
+  1. **think** - read, plan, fix the renderings and the briefs (one agent);
+  2. **write the scripts** (corpus tool, converter, gates) and test each on a small sample (one agent);
+  3. **run them - everything independent at once, in the background**: `tools/sources_sync.py fetch` (start it at
+     the very beginning of a session, before reading the guidelines: it takes 5–15 minutes), downloads, conversions,
+     every verifier, `check_bible_quotes.py` over all files, the builders (`&` … `wait`, `xargs -P`, Bash
+     `run_in_background`). Meanwhile go on with independent thinking, or end the turn and be woken when the
+     background task ends - **never a `sleep` loop**;
+  4. **process the results** (one agent; in range B up to three, on independent parts).
+- **Save as you go:** a translator writes each drafted section to disk at once; the coordinator commits (locally)
+  after every part it merges, so a stop loses at most the part in progress. A stopped agent is resumed with
+  SendMessage while its session lives, else its part is restarted from what is on disk.
+- **Facts of the cloud that shape a run** (seen on real runs; the stories are in `history.md`):
+  - **Sub-agents cannot start sub-agents** (2026-10-21): a coordinator started as a sub-agent had no Agent tool and
+    translated its texts itself. For translator chains the session itself must be the coordinator - or use
+    sub-sessions (§5.1c), which have the full tool set.
+  - **Web search is budgeted per session:** about **200 `WebSearch` calls**, shared by the session and every sub-agent
+    (ten parallel research agents used it up in 25 minutes). Tell each research agent its share, and to verify by
+    fetching (curl, WebFetch, catalogue APIs - not limited) rather than by searching.
+  - **A limit stops the whole account** at once (2026-10-21, 2026-10-25): parallel agents all fail together, and a
+    scheduled wake-up is delivered only after the reset. Hence the caps above, saving as you go, and committing
+    before launching agents.
+- **If a stop surprises you** (an HTTP 429, a "session limit", a forced delay, a status or a `rateLimitType` the
+  script does not know, a weekly reset that is not on Monday 07:00 UTC - the script prints a `NOTE`): record it in
+  `history.md` at once (what, when, after how much work) and in your report. This section must describe what is
+  actually true.
+- (The earlier usage rules - 2026-10-21 to 2026-10-26 - and the stops they met are told in `history.md`, H5.)
 
-### 5.1a Orchestrating a round from one prompt: a parent session and child sessions (the user, 2026-10-23)
-The user's intent: **a whole round runs from one user prompt** (e.g. `ancient-translations: orchestrate Round 4`), with
-the user needed only at the end. A cloud session can create first-class cloud sessions (`create_session`, claude-code-remote
-MCP); a child has the full tool set, its own sub-agents (nesting up to 8 levels), and can message its parent and re-title
-itself (all checked in the smoke test of 2026-10-23, `history.md`).
-- **The parent** (the session the user started) runs the round's runs **one child at a time** (the quota is shared by
-  all the user's sessions, §5.1):
-  1. before each child: commit and push; check its own `get_session` → `external_metadata.rate_limit_info.status`
-     (`allowed` / `allowed_warning` / `rejected`; the API documents no percentage, and `utilization` appears only near the
-     warning threshold): if not `allowed`, schedule a wake-up with `send_later` for 5 minutes after `resetsAt`, end the
-     turn, and launch on wake-up. **Exception (the user, 2026-10-24): on Saturday, Sunday and Monday (UTC date) an
-     `allowed_warning` whose `rateLimitType` is `seven_day` is ignored – go on as if `allowed`; the five-hour warning
-     (`five_hour`) is never ignored, nor is `rejected`.** The same rule holds for every child and sub-agent check;
-  2. `create_session` with `source_url: https://github.com/gilad-bendor/perush`, `source_revision: main` (**without
-     them the child has no checkout**), a title `Ancient translations <N>.<M> – <name>`, and the prompt built from
-     [`reports/child-prompt-template.md`](reports/child-prompt-template.md), which names the report path
-     `reports/round-<N>/run-<M>.md`;
-  3. schedule a safety-net `send_later` (about 60 minutes; again at each check-in) and **end the turn**: do not wait in a
-     script (a foreground command stops at 10 minutes, a background one at 2 hours, and a VM reboot kills both; the
-     message and the scheduled wake-ups survive);
-  4. on each wake-up (the child's `RUN DONE` / `RUN STOPPED` / `BLOCKED:` message, a check-in, or an automatic
-     notice that a child's turn failed): `python3 -I tools/child_report.py reports/round-<N>/run-<M>.md`; if MISSING,
-     `get_session` / `list_events` on the child to see where it is; answer a `BLOCKED:` child with `send_message`;
-     when the report is there, read it, settle its minor questions (the user's rule, STATUS §6), copy the questions
-     only the user can answer into `reports/round-<N>/questions-for-user.md`, archive the child, and start the next run;
-  5. after the last run: the lead's finalization (the cross-corpus harmonization, §5.2 "A harmonization pass"; every
-     verifier; STATUS, history), then **one** message to the user: the results and `questions-for-user.md`.
-- **Titles show the place in the hierarchy** (the user, 2026-10-23): every session's title starts with a short path –
-  the round's orchestrator `Round4: <what>`, a run `Round4/Run2: <texts>`, a sub-session of that run
-  `Round4/Run2/Sub1: <task>` – and, when it finishes, re-titles itself with `Done` as the last path segment
-  (`set_session_title`): `Round4/Run3/Done: <texts>`, `Round4/Done: <what>`, `Round4/Run2/Sub1/Done: <task>`.
+### 5.1b Git: one branch per session, squashed upward (the user, 2026-10-30)
+Every push reaches the repo's other sessions, and many small commits on `main` kept interrupting them. So **each
+session commits and pushes only on its own branch**, a finished branch goes into its parent's as **one** commit, and
+`main` gets **one commit per round**. `tools/branches.py` does all of it (`tools.md`):
+
+| Who | Branch | Made from | Made by |
+|---|---|---|---|
+| the round's orchestrator | `translation-round-<N>` | `origin/main` | `branches.py start-round <N>` |
+| a run (a child session) | `translation-round-<N>-run-<M>` | the round's branch | the parent: `branches.py new-child <branch>` |
+| a sub-session of a run | `translation-round-<N>-run-<M>-sub-<K>` | the run's branch | the run: `branches.py new-child <branch>` |
+
+- **A child session is created on its branch** (`create_session` … `source_revision: <its branch>`): it lands on it
+  (a shallow clone with that branch only, and no `origin/main` - seen 2026-10-30), and the session operator treats it
+  as the session's work branch. `new-child` first pushes the parent's state (and a round branch first takes in
+  `origin/main`'s new commits), so the child starts from everything its parent has.
+- **Round 4** began on `main` and finishes there (its children: `source_revision: main`), under the push rules below.
+  Round 5 is the first round on branches.
+- **Commit often, push seldom.** Commit (locally) after every milestone: a source secured, the renderings fixed, a part
+  merged, a review pass done - it is cheap, invisible to others, and survives a VM reboot or reclaim (the disk
+  persists). **Push** (`branches.py push`) only: before ending a turn (the cloud's Stop hook asks for it anyway), at a
+  gate's `WAIT`, before `new-child`, at `finish`, and otherwise at most about once an hour in a long turn.
+- **Commit only your own files** (`git add <paths>`; never `-A`; never `docs/` at the repo root - the RTL editor
+  regenerates it, the user commits it - nor `claude-sessions/`, `__pycache__/` or git-ignored content). `git commit --
+  <dir>` skips new, untracked files: `git add` them first.
+- **The shared files** (`STATUS.md`, the plan row, this file, `history.md`, `sources-registry.md`, `tools.md`,
+  `domains.txt`, `sources/.gitignore`, `sources/fetch-recipes.tsv`, `sources/MANIFEST.json`) are edited only at the
+  end of a run, in one commit; parallel runs meet there only at `finish`, where a conflict is two additions - keep
+  both. `MANIFEST.json`: add only the new items (a cloud `snapshot` drops the absent ones).
+- **Finishing a child** (after its report is committed): `branches.py finish -m "Ancient-texts translations: Round <N>
+  run <M> – <texts>"`. It merges the parent's new commits into the child's branch (on a conflict it stops: resolve,
+  commit, run it again), pushes the child's branch, and pushes one commit - the child's tree on top of the parent's
+  tip, its body listing the child's commits - to the parent's branch. Then the child messages the parent (with the
+  printed hash), and the parent runs `branches.py sync`.
+- **Finishing a round** - its very last step, after the lead's finalization: `branches.py finish --into-main -m
+  "Ancient-texts translations: Round <N> – <summary>"`: one commit on `main`. The round's and runs' branches stay on
+  origin as the detailed history (the git proxy refuses to delete branches anyway).
+- **`main` moves meanwhile** (the user's own work). It reaches a round at each `new-child` and at the round's finish -
+  so a rule the user changes on `main` mid-round (e.g. in the quota script) reaches running sessions only when told:
+  the orchestrator merges `origin/main` into the round's branch and tells its children to `git merge` it.
+- **Never** force-push, rewrite a pushed commit, push to another session's branch (except `finish` into your own
+  parent's), or push to `main` (except a round's finish, and Round 4). If a push is rejected because origin's history
+  was rewritten (2026-10-21), replay your commits in a separate worktree (`git worktree add --detach <scratch>
+  origin/<branch>`, `git cherry-pick`, check the trees, push).
+
+### 5.1c Orchestrating a round from one prompt: a parent session and child sessions (the user, 2026-10-23; revised 2026-10-30)
+The user's intent: **a whole round runs from one user prompt** (`ancient-translations: orchestrate Round <N>`), with
+the user needed only at the end. A cloud session can create first-class cloud sessions (`create_session`,
+claude-code-remote MCP); a child has the full tool set, its own sub-agents (nesting up to 8 levels), and can message
+its parent and re-title itself (the smoke test of 2026-10-23, `history.md`).
+- **The parent** (the session the user started; title `Round<N>: <what>`):
+  1. at its start: `../../claude/quota-related-instructions.ts`, then `branches.py start-round <N>` (resuming:
+     `branches.py checkout translation-round-<N>`);
+  2. before each child: **the gate** (§5.1). In range A one child at a time; in range B up to `agents` children at
+     once - runs in different corpora that share no open renderings - or fewer children with a larger share each;
+  3. `branches.py new-child translation-round-<N>-run-<M>`, then `create_session` with `source_url:
+     https://github.com/gilad-bendor/perush`, `source_revision: <the child's branch>` (**without them the child has no
+     checkout**), `model`, a title `Round<N>/Run<M>: <texts>`, and the prompt built from
+     [`reports/child-prompt-template.md`](reports/child-prompt-template.md) (report path, branches, agents share);
+  4. **end the turn with a wake-up scheduled - always**: a safety-net `send_later` about 60 minutes ahead inside a
+     range, at the next range's start outside one. Never wait in a script (a foreground command stops at 10 minutes,
+     a background one at 2 hours, a VM reboot kills both; messages and scheduled wake-ups survive);
+  5. on each wake-up (a child's `RUN DONE` / `RUN PAUSED` / `RUN STOPPED` / `BLOCKED:` message, a check-in, or a notice
+     that a child's turn failed): `branches.py sync`; `python3 -I tools/child_report.py reports/round-<N>/run-<M>.md`;
+     if MISSING, `get_session` / `list_events` on the child; answer a `BLOCKED:` child with `send_message`; when the
+     gate says GO, resume paused or failed children (below); when a report is there, read it, settle its minor
+     questions (the user's rule, STATUS §6), copy the questions only the user can answer into
+     `reports/round-<N>/questions-for-user.md`, archive the child, and start the next run at once;
+  6. after the last run: the lead's finalization on the round's branch (the cross-corpus harmonization, §5.2 "A
+     harmonization pass"; every verifier; STATUS, history), `branches.py finish --into-main` (§5.1b), the title
+     `Round<N>/Done: <what>`, then **one** message to the user: the results and `questions-for-user.md`.
+- **Pausing and resuming - the parent holds the slots.** A gate's `WAIT`:
+  - **inside the same range** (a 5-hour reset): the session schedules its own `send_later` at the printed time;
+  - **into another range**: a child pushes, sends its parent `RUN PAUSED – <title> – resume at <time> – <what is
+    next>`, and ends its turn **without** a wake-up of its own - the next range may allow fewer agents (three runs
+    paused at the end of range B, but range A allows one). The parent, woken at the range's start, runs the gate and
+    resumes up to `agents` children with `send_message` (`RESUME – run the gate, then go on`), the most advanced run
+    first. The top session (the parent; or a session the user started for a single run) schedules its own
+    `send_later` at the next range's start;
+  - a child whose turn failed on a limit is resumed by the parent in the next range like a paused one.
+- **Titles show the place in the hierarchy** (the user, 2026-10-23): `Round4: <what>`, `Round4/Run2: <texts>`,
+  `Round4/Run2/Sub1: <task>`; on finishing, `Done` becomes the last path segment (`set_session_title`):
+  `Round4/Run3/Done: <texts>`, `Round4/Done: <what>`, `Round4/Run2/Sub1/Done: <task>`.
 - **Model and effort** (the user, 2026-10-23): sessions run **Opus 5.5 at "high" effort** – pass `model: claude-opus-5-5`
-  to `create_session` (the effort is not a parameter there: a created session inherits the environment's, which is
-  "high"). A parent may choose a cheaper configuration when it judges it good enough for the task – e.g. Sonnet 5.5
-  for mechanical work (applying a decided table, downloading and converting sources, a survey) – and says so in the
-  child's prompt and in its own report. The same judgment applies to the `model` of a sub-agent; translation itself
-  (drafting, review passes) stays on Opus.
-- **Any session may launch a sub-session instead of a sub-agent** when the task is heavy enough (a whole text, a
-  whole corpus pass, a long sequential chain): the same rules hold one level down – one at a time, the prompt from the
-  template with the next title prefix and a report path (`reports/round-<N>/run-<M>--sub-<K>.md`), the child reports to
-  and messages its **immediate** parent, and the parent waits by ending its turn. A light task stays a sub-agent.
+  to `create_session` (the effort is inherited from the environment: "high"). A parent may choose a cheaper model when
+  it judges it good enough – e.g. Sonnet 5.5 for mechanical work (applying a decided table, downloading and converting
+  sources, a survey) – and says so in the child's prompt and its own report. The same for a sub-agent's `model`;
+  translation itself (drafting, review passes) stays on Opus.
+- **Any session may launch a sub-session instead of a sub-agent** when the task is heavy enough (a whole text, a whole
+  corpus pass, a long sequential chain): the same rules one level down – the gate, its branch
+  (`translation-round-<N>-run-<M>-sub-<K>`), the prompt from the template with the next title prefix, a report path
+  (`reports/round-<N>/run-<M>--sub-<K>.md`), a share of the run's agents; it reports to and messages its
+  **immediate** parent, and the parent waits by ending its turn. A light task stays a sub-agent.
 - **The child** follows the template: it never interacts with the user (questions go into its report; only a complete
-  block is sent to the parent as `BLOCKED:`); it checks its quota status before each heavy sub-agent; it pushes to
-  `main` as it goes; at the end it pushes the report, re-titles itself (`…/Done: …`), messages the parent,
-  and stops.
+  block is sent to the parent as `BLOCKED:`); it runs the gate before each heavy step, within its agents share; it
+  works and pushes only on its own branch; at the end it commits the report, runs `branches.py finish`, re-titles
+  itself (`…/Done: …`), messages the parent, and stops.
 
 ### 5.2 Rules learned (distilled; the full accounts, with examples, are in `history.md`)
 Each rule was learned the hard way on a real run; the run is named in brackets, and `history.md` tells the story (H1: the first corpus; H2: the per-run "Learned on …" blocks; H3: the former §11). **Every translator's brief must carry the rules marked ★.**

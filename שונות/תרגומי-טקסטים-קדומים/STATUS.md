@@ -4,13 +4,13 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-24 (Round 4 run 5 done: Erra and Išum I, in the netherworld corpus).
+Last updated: 2026-10-30 (the quota's time ranges and the branch-per-session git rules, guidelines §5.1–§5.1c; earlier: Round 4 run 5 done, Erra and Išum I).
 
 ## 1. Starting a session (local or Claude Cloud)
 
-**To run a whole round from one prompt** (Claude Cloud): start a session with `ancient-translations: orchestrate Round <N>`. It becomes the parent (title `Round<N>: …`) and runs each run as its own child session (`Round<N>/Run<M>: …`), one at a time, as guidelines §5.1a describes (reports in `reports/round-<N>/`); you hear from it at the end. To run a single run yourself instead: `ancient-translations: Round <N>, run <M>`.
+**To run a whole round from one prompt** (Claude Cloud): start a session with `ancient-translations: orchestrate Round <N>`. It becomes the parent (title `Round<N>: …`), creates the round's branch `translation-round-<N>`, and runs each run as its own child session (`Round<N>/Run<M>: …`) on its own branch, within the quota's time ranges, as guidelines §5.1–§5.1c describe (reports in `reports/round-<N>/`); at the end it squashes the round into `main` as one commit, and you hear from it. To run a single run yourself instead: `ancient-translations: Round <N>, run <M>`.
 
-1. **Sync with `main`** (a resumed cloud session wakes up on an old checkout: the session operator's report says so).
+1. **Sync with origin** – on `main`, or on the session's work branch (§5.1b; a resumed cloud session wakes up on an old checkout: the session operator's report says so). Then run `../../claude/quota-related-instructions.ts` and follow it (§5.1).
 2. **Restore the git-ignored sources:** most raw sources are not in git, since the repo is public (guidelines §8).
    ```
    python3 -I tools/sources_sync.py status          # what is missing (work tier)
@@ -29,18 +29,25 @@ Last updated: 2026-10-24 (Round 4 run 5 done: Erra and Išum I, in the netherwor
    - The archive tier (`--all`) needs downloads from archive.org, which redirects to changing hosts
      (`dn….archive.org`): with a "Limited" allowlist they fail. It is not needed for translating.
 3. **Read** `translation-guidelines.md` in full, then this file, then the plan (`curated-translation-candidates.md`,
-   "Round 2 plan"), then the corpus you will work in (`corpus.md`, `renderings.md`, the `project.md` files).
+   the current round's plan), then the corpus you will work in (`corpus.md`, `renderings.md`, the `project.md` files).
 
-## 2. Pace (guidelines §5.1)
+## 2. Pace and git (guidelines §5.1–§5.1c; the user's rules of 2026-10-30, replacing every earlier usage rule)
 
-- **Quotas apply in every session, the cloud included** (the user, 2026-10-22: the cloud's special allowance is
-  over). **One sub-agent at a time, always**, so that a quota stop cuts only one effort; translators save each section
-  to disk as they go, and the coordinator commits after every merged part. No parallel translators or runs.
+- **Two time ranges a week, nothing outside them:** run `../../claude/quota-related-instructions.ts` as-is (an executable; it
+  prints the rules and this week's times). **A – Shabbat** (1 hour before it enters → 4 hours before it exits): the 5-hour limit
+  may be used up, a weekly warning stops; one agent at a time. **B – Monday night** (Monday 00:00 Israel time → the
+  weekly reset, Monday 07:00 UTC): everything left, warnings included; up to three agents, on independent tracks.
+- **The gate** before every heavy step and on every wake-up: `get_session` → `../../claude/quota-related-instructions.ts
+  check '<rate_limit_info JSON>'` → `GO … agents=<n>` or `WAIT <time>` (push, pause, end the turn; §5.1c says who
+  wakes whom).
+- **Phase the work:** think and write the scripts with one agent; run every independent script at once in the
+  background (start `tools/sources_sync.py fetch` first thing); process the results.
 - **Sub-agents cannot start sub-agents** (guidelines §5.1): a coordinator started as a sub-agent translates its texts
-  itself. For real translator chains, make the session itself the coordinator (one run per session).
-- **Commit and push to `main` often:** after every finished section, not only at the end of a run. A cloud VM can be
-  reclaimed, and a session can end; work that is pushed survives. Never commit `docs/` at the repo root (the RTL editor
-  regenerates it; the user commits it).
+  itself. For real translator chains, make the session itself the coordinator, or launch sub-sessions (§5.1c).
+- **Git:** every session works and pushes only on its own branch (`translation-round-<N>`, `…-run-<M>`,
+  `…-run-<M>-sub-<K>`; `tools/branches.py`), commits locally often, pushes seldom, and squashes into its parent's
+  branch when done; `main` gets one commit per round. Round 4 finishes on `main`. Never commit `docs/` at the repo
+  root (the RTL editor regenerates it; the user commits it).
 
 ## 3. What is done
 
@@ -99,8 +106,8 @@ survey (`curated-translation-candidates--world.md`), ranked together. **One run 
 Quick wins between the runs: Šūpê-amēlu and the fables; the Poor Man of Nippur. Each new language needs a converter, a
 name table, renderings with reserved-word gates and a translator brief before its first line.
 
-Parallel sessions edit the shared files only at the end of their run, in one commit, after `git pull --rebase` (the
-plan's last paragraph). The user's review of the Round 1–2 drafts can go on alongside. The Round 2 runs, for the record:
+Parallel sessions edit the shared files only at the end of their run, in one commit; they meet at `tools/branches.py
+finish` (guidelines §5.1b). The user's review of the Round 1–2 drafts can go on alongside. The Round 2 runs, for the record:
 
 | Run | Texts | Base text | New corpus |
 |---|---|---|---|
@@ -133,7 +140,7 @@ A coordinator (one agent per run) gets this brief, adapted to its texts:
 - **Finish:** record what was learned where the guidelines' top box says (sources → `sources-registry.md`, tools
   → `tools.md`, decisions and false friends → §6.7, a lesson → one line in §5.2 + its story in `history.md`, a
   changelog line in `history.md`); update the plan row and this file; `git add` only its own files (never `-A`, never `docs/`,
-  `claude-sessions/`, `__pycache__/` or git-ignored content); commit ("Ancient-texts translations: …") and push.
+  `claude-sessions/`, `__pycache__/` or git-ignored content); commit ("Ancient-texts translations: …") on the run's own branch, and push it (guidelines §5.1b).
 - **Report:** what was translated and verified; key findings for the Bible; what the texts show of the ancient
   mind; open decisions for the user; anything skipped or failed.
 
