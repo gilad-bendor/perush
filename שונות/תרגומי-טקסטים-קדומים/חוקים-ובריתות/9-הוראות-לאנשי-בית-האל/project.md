@@ -291,3 +291,46 @@ from the drafted `למישהו יש – אל המשמרת ילך!` (it still pas
 reads it so; the logic is "silver not recorded as a royal gift"); 8.26 *DINGIR-LIM-n=a=šat NU.GÁL [l]ē(?)*; 10.6 (S&B's
 "omens" against TLHdig's *warapdu*); 11.3 *tarnešk-* (S&B "admits"); 11.7 *zammurai-*; 11.9 *ḫaliyattallaš=ši* "to his
 watchman/post".
+
+### IN part 3 (12.1–16.13)
+Drafted 2026-10-26 by the IN translator, rows 12.1–16.13 (73 rows, §§12–16), natural Hebrew order, each row's content in its
+row (phrases split across two rows are split the same way: 14.2–14.3, 16.7–16.8, 16.11–16.13). `verify IN` 0 problems,
+`check_bible_quotes.py` 0, `selftest` 0 failures; lexmap checked. Rank 3: S&B 1935; CHD L–N (*ninink-*, *mudai-*, *mekki-*,
+*meḫur*), P (*paḫš-*, *pai-*, *piyantalli-*), Š (*šalik-*, *šanna-*, *šakk-*, *šarra-*, *šeš-*, *-šši*).
+
+**Formulas fixed for part 4 (byte for byte):**
+| Hittite | Hebrew | First row | Later |
+|---|---|---|---|
+| *EGIR-zian=ma=at išduwari* / *appezzian=ma=aš išduwari* | `ואילו לאחר מכן ייוודע (הדבר)` (`:` or `–` after it as the clause needs) | 14.28, 16.10 | 17.6, 18.14, 19.11 |
+| *mān=ma=at UL=ma išduwari* (part 4 only) | **`ואילו אם לא ייוודע`** | – | 17.7, 19.13 |
+| F14 with two culprits, no *2-aš* | `וזה להם מות־ראש!`; *2-ušš=a=at akkandu* `וגם שניהם ימותו!` | 14.29 | |
+| the address with a class | `ונוסף על כך: אתם, אשר X (אתם) –` (14.1 `… אשר בעלי־התבשיל של כל הָאֵלִים (אתם) –`); with *namma* and a list: `ונוסף על כך – ועוד: אתם, X, Y, …` (12.1) | 14.1, 12.1 | 18.1 `ונוסף על כך: אתם, אשר רועי־הבקר של האל, רועי־הצאן של האל (אתם) –` |
+| F12 / F16 with *uddanī* | `בדבר X היו יראים מאוד!` (13.1), `ובדבר X היו נשמרים מאוד ממש, עד מאוד!` (13.11); F12 with abl. `מפני X היו יראים מאוד!` (12.9); with *menaḫḫanda* `כלפי נפשם היו יראים מאוד!` (14.3) | | |
+| *ḫuelpi* passage | `הטרי` (15.3); *ḫūdāk mēḫunaš mēḫuni pē ḫarten* `הובילו מיד, בזמנו!` (15.4); *kuitman=at UN-aš nāwi ezzai* `עד שאדם טרם יאכל ממנו` (15.5); `לנפש הָאֵלִים … מיד תגיעו` (15.5–15.6) | 15.3–15.6 | 18.16 (*kī ḫuelpi anzel ZI-ni ḫūdāk …* → `הטרי הזה … לנפשנו מיד …`) |
+| *waštul* alone | `וזה לו חטא!` / `וזה לכם חטא!` (*mekki waštul* `חטא גדול`) | 14.20, 15.8, 12.8 | |
+| the ordeal / oath (part 4 only) | not in part 3: *BIBRU DINGIR-LIM* `בִּיבְרוּ הָאֵל` (§7.12); I propose *ZI-aš arḫa eku-* "drink to the (god's) soul" `לנפש … תשתו` – to fix in part 4 | | 18.20–18.21, 19 |
+
+**Words fixed (Hittite → Hebrew, first row):** *ḫalluwai-* `קטטה` (as LE *risbatum*; `ריב` kept free); *nink-* `השתכר`;
+*ninink-* (mid.) `השתולל` (CHD L–N 4 "behave in a disorderly manner"); É *karimmi-* `בית־הַקָּרִימִּי` (transliterated: `מקדש`
+reserved); *zaḫ-* `הלם` (`הכה` reserved); *mudai-* (+za) `הזניח`; *ḫapuš-* `השלים`; *paḫḫur* / IZI `אש` (HL1); GUNNI `אח` (§H3);
+*kištanu-* `כיבה`; *šannapi šannapi* `פה ושם`; *ḫatant-* `יבש`; *imma* `אכן` / `אמנם`; *tinumar* `היתר(?)` (crux); EN.TU₇
+`בעל־התבשיל`; SAGI.A `מַשְׁקֶה` ([cognate via the Akkadogram] *šāqû*; Gen 40:1); LÚ GIŠ.BANŠUR `איש־השולחן`; MUḪALDIM `מבשל`
+(**split**: Akk. *nuḫatimmu* is `אופה` in the other corpora; here NINDA.DÙ.DÙ `אופה` stands beside it); KÚRUN.NA
+`מבשל־השכר`; *menaḫḫanda* `כלפי` / `לקראת`; *naḫšaratt-* `יראה` (licensed); *tiyan ḫark-* `שׂם` (imp. `שׂימו`); *weš-* `לבש`;
+GIR₄ `חרס`; *šalik-* `יִגַּע` (HL2); *peššiya-* `השליך` (HL1); *paprant-* `טמא`; *zakkar* `צואה`, *dūr* (Luw.) `שתן` (Mal 2:3);
+*aššanu-* `הסדיר`; *lukkatt-* `שחר`; *tamašš-* `לחץ`; *mazza-* `העז`; *ara-* `חבר` (HL); *šekkant-* ZI `בנפש יודעת` (=
+deliberately); *parā dai-* "postpone" `דחה` (idiom); *šaknuwant-* `מלוכלך` (≠ *paprant-* `טמא`); *šakk-* `ידע` (HL2);
+*šanna-* `העלים` (≠ *munnai-* `הסתיר`); LÚ APIN.LÁ (Akk. *ikkaru*) **`אִכָּר`** ([cognate loan via the Sumerogram]; the
+selftest's 15.3 err-line already uses `האיכרים`); *ariya-* "inquire by oracle" `שאל באות` (*punušš-* alone `שאל`);
+*tapariya-* `גזר`; *zankilai-* `קנס`; *waršanu-* `הרגיע`; *ištantanu-* `איחר` ([equivalent] Exod 22:28); *uiya-* "send (a
+man)" `שיגר` (`שלח` = *tarna-*); *takšan šarran* (noun) "half" `חצי` (16.7–16.8; `מחצה` fails the `מחץ` gate; part 1's 5.7–5.8
+`לשניים חלק` keeps the sense "share by share"); *uwa-* + verb "go and" `באו ו־`; *išḫuwai-* "pour, heap (grain)" `ערם`
+(`שפך` = *laḫu-*); ÉSAG `אסם` (HL1); *miyant-* `מניב` (HL2); DINGIR-LÌ-ŠU `הָאֵל שלו` (as 11.10).
+
+**For the coordinator:** (1) KBo 68.18 5′ has *naḫḫanteš* (F12) where A/C have *paḫḫaššanuwanteš* (F16) at 13.11 – noted in
+נוסחים. (2) Propose traps: `מַשְׁקֶה` (SAGI.A; Gilgameš's `מַשְׁקֶה` is *mašqû* "watering place"), `אִכָּר` (vocalize the first
+occurrence; plene `איכר` is fine). (3) The `מחץ` gate catches `מחצה` "half": harmless (I used `חצי`), but worth knowing.
+
+**Cruxes:** 12.2 the unread subject (*…tuḫmiyanza?*); 13.5–13.6 who extinguishes; 13.7–13.8 read as a rhetorical question
+(S&B: a statement); 13.10 *tinumar*; 14.21 *MAḪRI-ŠU LÚ GAL-ŠU EGIR-an tamašzi*; 14.24 *parā dai-* "postpone" (CHD);
+16.11 the sign 〈〈TAR?〉〉.

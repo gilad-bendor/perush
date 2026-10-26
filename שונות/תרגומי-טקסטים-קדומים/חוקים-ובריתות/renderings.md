@@ -442,6 +442,25 @@ Egyptian loanword's); *parā ēpp-* "present" `הושיט`; *gulš-* `חקוק`;
 DINGIR-LÌ-ŠU `הָאֵל שלו` (`אלוהיו` reserved). **Tables (coordinator):** traps `אֹמֵן`, `יִסֹּב`; H2 *labarna*; the selftest IN 11.4
 ok-line replaced by the drafted line.
 
+### 7.14 Merged from Sub3, part 3 (IN 12.1–16.13, §§12–16; 2026-10-26; accepted by the coordinator)
+**Formulas fixed for part 4:** *EGIR-zian / appezzian=ma išduwari* `ואילו לאחר מכן ייוודע (הדבר)` (14.28, 16.10), the negative
+`ואילו אם לא ייוודע` (part 4); F14 with two culprits `וזה להם מות־ראש! וגם שניהם ימותו!` (14.29); the address with a class
+`ונוסף על כך: אתם, אשר X (אתם) –`, with *namma* and a list `ונוסף על כך – ועוד: אתם, X, Y, …`; F12 / F16 with *uddanī* `בדבר X
+היו יראים / נשמרים מאוד!` (ablative `מפני`, *menaḫḫanda* `כלפי`); the *ḫuelpi* passage `הטרי`, `הובילו מיד, בזמנו!`, `עד שאדם
+טרם יאכל ממנו`. **Words:** *ḫalluwai-* `קטטה`; *nink-* `השתכר`; *ninink-* (mid.) `השתולל`; É *karimmi-* `בית־הַקָּרִימִּי`
+(`מקדש` reserved); *zaḫ-* `הלם`; *mudai-* `הזניח`; *ḫapuš-* `השלים`; GUNNI `אח`; *kištanu-* `כיבה`; *šannapi šannapi* `פה ושם`;
+*ḫatant-* `יבש`; *imma* `אכן`; *tinumar* `היתר(?)`; EN.TU₇ `בעל־התבשיל`; **SAGI.A `מַשְׁקֶה`** ([cognate via the Akkadogram]
+*šāqû*, Gen 40:1; always vocalized: Gilgameš's `מַשְׁקֶה` is *mašqû* "watering place" – trap); LÚ GIŠ.BANŠUR `איש־השולחן`;
+**MUḪALDIM `מבשל`** (*nuḫatimmu* "cook"; NINDA.DÙ.DÙ = Akk. *ēpû* "baker" holds the cognate `אופה`; the other corpora's
+*nuḫatimmu* `אופה` is a split for the lead); KÚRUN.NA `מבשל־השכר`; *menaḫḫanda* `כלפי`; *naḫšaratt-* `יראה` (licensed);
+*tiyan ḫark-* `שׂם`; *weš-* `לבש`; GIR₄ `חרס`; *šalik-* `יִגַּע`; *peššiya-* `השליך`; *paprant-* `טמא`; *zakkar* `צואה`, *dūr* `שתן`
+(Mal 2:3); *aššanu-* `הסדיר`; *lukkatt-* `שחר`; *tamašš-* `לחץ`; *mazza-* `העז`; *ara-* `חבר`; *šekkant-* ZI `בנפש יודעת`; *parā
+dai-* `דחה`; *šaknuwant-* `מלוכלך` (≠ *paprant-* `טמא`); *šakk-* `ידע`; *šanna-* `העלים` (≠ *munnai-* `הסתיר`); **LÚ APIN.LÁ `אִכָּר`**
+([cognate loan via the Sumerogram]: *ikkaru* < *engar*, §6.7); *ariya-* `שאל באות`; *tapariya-* `גזר`; *zankilai-* `קנס`;
+*waršanu-* `הרגיע`; *ištantanu-* `איחר` (Exod 22:28); *takšan šarran* "half" `חצי` (`מחצה` trips the `מחץ` gate; 5.7–5.8's
+`לשניים חלק` is "share by share" and stays). Variant: KBo 68.18 has F12 *naḫḫanteš* where A and C have F16 (13.11), in נוסחים.
+**Tables (coordinator):** trap `מַשְׁקֶה`. **For the lead:** *nuḫatimmu* `אופה` (other corpora) vs Hittite MUḪALDIM `מבשל`.
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;
@@ -593,6 +612,7 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:מנו)(?![֑-ׇא-ת])` | `maniyaḫ\|ma-ni-ia-aḫ` | *maniyaḫḫ-* imp.: `מַנּוּ` ("from him"; IN) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אומן\|אומניו\|אומנים\|אומניכם)(?![֑-ׇא-ת])` | `ùmmeda\|ummeda` | ÙMMEDA `אֹמֵן` (plene = UMMIĀNU `אֻמָּן`, "amen"; IN) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:יסוב\|יסב)(?![֑-ׇא-ת])` | `weḫ\|ú-e-eḫ\|ú-e-ḫ` | *weḫtari* `יִסֹּב` (IN) |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:משקה\|משקים)(?![֑-ׇא-ת])` | `sagi` | SAGI.A `מַשְׁקֶה` "cup-bearer" ("drink", Gilgameš's *mašqû* "watering place"; IN) |
 
 ### H9. Selftest (`hittite_tools.py selftest`: each line must give the expected result)
 | Line | Expect | Hebrew |
