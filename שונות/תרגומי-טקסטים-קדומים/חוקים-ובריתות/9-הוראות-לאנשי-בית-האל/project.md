@@ -249,3 +249,45 @@ disposition toward him"); 2.19 *parranda ḫalzianzi=pat … UL kuitki iyanzi* (
 S&B "revile him in public"); 2.20 *tettiyant-*; 5.9 *SAG.DU-az GAM-an kittaru*; 6.7 *kiyaḫḫut* (TLHdig's restoration; CHD "go
 after"); 6.11 the restored *lē* (CHD: the donated bread is *not* for wives, children, slaves; S&B 1935 read the opposite);
 7.3 *mark-* `*פירקתם*`; 7.10 statement, not S&B's question; 7.12 *anda peda-*; 7.14 the addressee of *au* "see!" (the god?).
+
+### IN part 2 (8.1–11.14)
+Drafted 2026-10-26 by the IN translator, rows 8.1–11.14 (87 rows, §§8–11), in natural Hebrew clause order (the coordinator's
+ruling), each row's content kept in its row (where a Hittite phrase is split across two rows, so is the Hebrew: 9.4–9.5
+`בזמנו`, 9.8–9.9, 10.1–10.2, 10.9–10.10). `verify IN` 0 problems, `check_bible_quotes.py` 0, `selftest` 0 failures; lexmap
+checked (*NÍG.BA* aligned to HL1 `מַתָּת`). Rank 3 after drafting: S&B 1935; CHD L–N (*lamniya-*, *lāman*, *marri*, *luri-*,
+*luli-*), Š (*šarra-*).
+
+**Formulas copied from part 1 / §7.12:** the address `ונוסף על כך: אתם, אשר אנשי בית הָאֵל (אתם) –` (9.1, 10.1); F12 without an
+object `והיו יראים מאוד!` (8.5); F14 `וזה לו מות־ראש!` (8.21), with =šmaš "to them" `וזה להם – לשניהם – מות־ראש!` (8.25–8.26); F13
+`וזה לו חטא־ראש!` (10.21); `הֲפִיכָה בחזרה – אַל תהיה כלל!` (8.27, **`ולהם`, not `ולכם`**: =šmaš there are the two culprits of
+8.25 – my part-1 proposal was wrong); *mēḫunaš mēḫuni* `בזמנו` (9.4–9.5); *mekki marri* `מאוד, עד מאוד!` (10.22).
+**New formula:** F16 with its object: *ḫaliyaš uddanī mekki paḫḫaššanuwanteš ešten* `המשמרת: בִּדְבָרָהּ היו נשמרים מאוד!`
+(10.1–10.2); pattern `בדבר X היו נשמרים מאוד!`.
+
+**Words fixed (Hittite → Hebrew, first row):** ÙMMEDA `אֹמֵן` (always vocalized; 8.2 crux; [equivalent] Num 11:12; ≠ UMMIĀNU
+`אֻמָּן`); UNŪT ZABAR `חפצי אָרָד`; *lamniya-* `נקוב`; KI.LÁ.BI `משקל`; *mašiwan* `כמה`; *kutru-* `עד`; *iyant-* (of a record)
+`עשוי`; *uššaniya-* / *ušniya-* `הציע למכירה` (HL2); *ḫarwaši* `בסתר`; EN.MEŠ URU ḪATTI `אדוני חַתִּי`; *wašiya-* `קנה` (HL1);
+GIŠ.ḪUR "record" `שטר` (Gudea's *ĝiš-ḫur* `צורה` is "plan": a split by sense across languages; [equivalent] Jer 32:10);
+*šiya-* "seal" `הטביע` (`חתם` kept for the Egyptian loan); *parā ēpp-* "present" `הושיט` (idiom); *ḫappirai-* `מכר` (HL1);
+*gulš-* `חקוק` (`חרות` avoided); *munnai-* `הסתיר`; *aška-* "gate" `שער` (*LUGAL-an aška* `שער המלך`); *2-pat akkandu* `שניהם
+ימותו` (HL2); *maḫḫan* temporal `כאשר` (8.19, 9.11; "as" stays `כמו ש־`); *šarā uwa-* `עלה`; *genu-* `ברך`; BURU₁₄ `קציר` (HL2);
+KASKAL `דרך`; *EGIR-pa tiya-* "back, support" `עמד מאחורי`, *peran arḫa tiya-* "pass, be done" `סר מלפני` (*tiya-* alone stays
+`נכנס`: idioms); *uwai-* (mid.) "be pitiable" `כאב (ל־ על)`; EGIR.UD-MI `בעתיד` (`אחרית הימים` kept for Akk. *aḫrât ūmī*);
+*idālawatar* `רעה`; *ar-* (mid.) "stand" `עמד`; NINDA `לחם`, *wātar* `מים`; ÚŠ-*tar* in "sell/buy death" `מוות`; *nekuz meḫur*
+`זמן הערב`; ***ḫūdāk* `מיד`**; GAM / *katta pai-* `לכו מטה`; *kattan šeš-* `שכב עם` (Laws); *šarā šešuwanzi* `לשכב למעלה` ([equivalent]
+1 Sam 3:3); *karš-* (mid.) "be cut off, fail" `ייחתך` (Laws `חתך`); GE₆ `לילה`; *weḫeškattalla-* `סובב` (§7.2), *weḫ(ešk)-*
+`סבב` (*weḫtari* `יִסֹּב`); *araḫza* `בחוץ`, *andurza* `בפנים`; Ù = *tešḫa-* `שינה`; SANGA GAL.GAL / TUR.TUR `הכוהנים הגדולים / הקטנים`;
+*peran ḫuwai-* "lead" `רץ בראש` (*ḫuwai-* "flee" HL1 `ברח`: split by sense); ŠA KÁ É DINGIR-LIM `של שער בית האל`; *kiš-*
+`נעשה` (HL1); *šaklai-* `מנהג`; *zammurai-* `בזז(?)`; *tiya-* + inf. `בא ל־`; BÀD `חומה`; *luriyaḫḫ-* `השפיל`, *luri-* `השפלה`;
+*nekumant-* `עירום`; *labarna-* `לַבַּרְנָה` (propose an H2 row: `labarn` → `לַבַּרְנָה`, ★ not needed); DINGIR-LÌ-ŠU `הָאֵל שלו`.
+
+**Proposals / for the coordinator:** (1) *DINGIR.MEŠ-aš ZI-ni* with "take payment" (9.14 *ZI-ni ḫappar lē datteni*) is
+`על נפש הָאֵלִים` ("at the gods' soul's expense"): `לנפש הָאֵלִים` would read "for the gods' soul"; propose `לנפש` with
+verbs of giving and fearing, `על נפש` with *ḫappar dā-*. (2) The H6 rule for `אֵל` also needs `אֶל` vocalized in DINGIR lines
+(done: 9.6, 11.14). (3) Traps: `אֹמֵן` (ÙMMEDA; "amen"), `יִסֹּב`. (4) The selftest IN 11.4 ok-line (`נמצא, אל המשמרת ילך!`) differs
+from the drafted `למישהו יש – אל המשמרת ילך!` (it still passes); propose replacing it.
+
+**Cruxes:** 8.2 ÙMMEDA-KUNU (syntax); 8.22–8.23 "whoever does *not* sell the king's gift … and likewise sells silver" (CHD
+reads it so; the logic is "silver not recorded as a royal gift"); 8.26 *DINGIR-LIM-n=a=šat NU.GÁL [l]ē(?)*; 10.6 (S&B's
+"omens" against TLHdig's *warapdu*); 11.3 *tarnešk-* (S&B "admits"); 11.7 *zammurai-*; 11.9 *ḫaliyattallaš=ši* "to his
+watchman/post".

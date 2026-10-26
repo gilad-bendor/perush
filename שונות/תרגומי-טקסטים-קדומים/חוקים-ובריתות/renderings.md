@@ -422,6 +422,26 @@ stays `שלח` (HL1, HL2, R1). **Tables (coordinator):** traps `דַּחִיָּ
 ok-line replaced by the drafted line. **For the lead:** *dai-* `שׂם` here and in the Laws vs the ritual corpus's R1 `הִנִּיחַ`.
 **Note for all parts:** in a DINGIR line the H6 rule makes every `אל` an error unless vocalized: write `אֶל` / `אַל` there.
 
+### 7.13 Merged from Sub3, part 2 (IN 8.1–11.14, §§8–11; 2026-10-26; accepted by the coordinator)
+Natural Hebrew clause order from here on (the coordinator's ruling after part 1; a Hittite phrase split over two rows is split
+the same way in Hebrew). Formulas copied from §7.12; **new:** F16 with its object `בדבר X היו נשמרים מאוד!` (10.1–10.2 `המשמרת:
+בִּדְבָרָהּ היו נשמרים מאוד!`); F13 `וזה לו חטא־ראש!`; F14 with two culprits `וזה להם – לשניהם – מות־ראש!`; 8.27 `ולהם הֲפִיכָה
+בחזרה – אַל תהיה כלל!` (=šmaš = the two culprits; corrected from part 1's proposal). **Ruling:** *DINGIR.MEŠ-aš ZI-ni* = `לנפש
+הָאֵלִים` with verbs of giving and fearing, **`על נפש הָאֵלִים`** with *ḫappar dā-* "take payment (at the gods' expense)" (9.14):
+accepted (the preposition follows the sense; the noun phrase is fixed). **Words:** ÙMMEDA `אֹמֵן` (always vocalized: plene
+`אומן` = UMMIĀNU `אֻמָּן` "craftsman" and "amen" – trap; [equivalent] Num 11:12); UNŪT ZABAR `חפצי אָרָד`; *lamniya-* `נקוב`;
+KI.LÁ.BI `משקל`; *kutru-* `עד`; *uššaniya-* `הציע למכירה` (HL2); *ḫarwaši* `בסתר`; EN.MEŠ URU ḪATTI `אדוני חַתִּי`; GIŠ.ḪUR "record"
+`שטר` (Gudea's *ĝiš-ḫur* "plan" `צורה`: a split by sense across languages; Jer 32:10); *šiya-* "seal" `הטביע` (`חתם` stays the
+Egyptian loanword's); *parā ēpp-* "present" `הושיט`; *gulš-* `חקוק`; *munnai-* `הסתיר`; *aška-* `שער`; *maḫḫan* temporal `כאשר`;
+*šarā uwa-* `עלה`; *genu-* `ברך`; KASKAL `דרך`; *EGIR-pa tiya-* `עמד מאחורי`, *peran arḫa tiya-* `סר מלפני` (idioms; *tiya-* alone
+`נכנס`); *uwai-* (mid.) `כאב`; EGIR.UD-MI `בעתיד`; *idālawatar* `רעה`; *ar-* (mid.) `עמד`; *wātar* `מים`; *nekuz meḫur* `זמן
+הערב`; *ḫūdāk* `מיד`; *katta pai-* `לכו מטה`; *šarā šešuwanzi* `לשכב למעלה` (1 Sam 3:3); *karš-* (mid.) `ייחתך`; GE₆ `לילה`;
+*weḫ(ešk)-* `סבב` (*weḫtari* `יִסֹּב`, trap); *araḫza* / *andurza* `בחוץ` / `בפנים`; Ù = *tešḫa-* `שינה`; SANGA GAL.GAL / TUR.TUR
+`הכוהנים הגדולים / הקטנים`; *peran ḫuwai-* `רץ בראש` (HL1 *ḫuwai-* "flee" `ברח`: split by sense); *zammurai-* `בזז(?)`; BÀD
+`חומה`; *luriyaḫḫ-* `השפיל`, *luri-* `השפלה`; *nekumant-* `עירום`; NÍG.BA `מַתָּת` (HL1); *labarna-* `לַבַּרְנָה` (H2 row added);
+DINGIR-LÌ-ŠU `הָאֵל שלו` (`אלוהיו` reserved). **Tables (coordinator):** traps `אֹמֵן`, `יִסֹּב`; H2 *labarna*; the selftest IN 11.4
+ok-line replaced by the drafted line.
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;
@@ -446,6 +466,7 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `\{d\}utu(?!-ši)` | `אֵל הַשֶּׁמֶשׁ` | | The Sun-god (Ištanu); never `שֶׁמֶשׁ` alone. |
 | `\{d\}(?:im\|10\|u\|iškur)\b` | `אֵל הַסְּעָרָה` | | The Storm-god (Tarḫunna), as the fifth-day dossier. |
 | `\{d\}(?:lamma\|kal)\b` | `אֵל הַמָּגֵן` | | The protective god (Kurunta, Innara). |
+| `labarn\|la-ba-ar-n` | `לַבַּרְנָה` | | Labarna, the royal title (as a name; IN 11.13). |
 
 ### H3. Reserved: never in a Hittite line (machine-read; both corpora)
 | Hebrew (regex on the unvocalized, bracket-free line) | Licence | Why |
@@ -570,6 +591,8 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אם\|אמות)(?=[ ־][הל]?א)` | `ama\.dingir` | AMA.DINGIR-LIM `אֵם הָאֵל` / `אִמּוֹת הָאֵל` ("if the god"; IN) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:דחיה)(?![֑-ׇא-ת])` | `taḫiy\|da-ḫi-ia\|daḫiy` | *taḫiya-* (a festival): `דַּחִיָּה` ("rejection"; IN) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:מנו)(?![֑-ׇא-ת])` | `maniyaḫ\|ma-ni-ia-aḫ` | *maniyaḫḫ-* imp.: `מַנּוּ` ("from him"; IN) |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אומן\|אומניו\|אומנים\|אומניכם)(?![֑-ׇא-ת])` | `ùmmeda\|ummeda` | ÙMMEDA `אֹמֵן` (plene = UMMIĀNU `אֻמָּן`, "amen"; IN) |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:יסוב\|יסב)(?![֑-ׇא-ת])` | `weḫ\|ú-e-eḫ\|ú-e-ḫ` | *weḫtari* `יִסֹּב` (IN) |
 
 ### H9. Selftest (`hittite_tools.py selftest`: each line must give the expected result)
 | Line | Expect | Hebrew |
@@ -595,6 +618,6 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | IN 7.18 | err | `לא יַרְפֶּה; ואתם – לנפש הָאֵלִים היו זהירים מאוד.` |
 | IN 18.13 | ok | `ייוודע – וזה לכם חטא־ראש; ואם לא` |
 | IN 18.13 | err | `ייוודע – וזה לכם חטא מוות; ואם לא` |
-| IN 11.4 | ok | `נמצא, אל המשמרת ילך!` |
+| IN 11.4 | ok | `למישהו יש – אל המשמרת ילך!` |
 | IN 15.3 | err | `או מה שהוא מן הביכורים אשר אתם, האיכרים, לָאֵלִים` |
 | IN 12.1 | err | `ואתם, הכוהנים, המְשׁוּחִים, אמות האל` |
