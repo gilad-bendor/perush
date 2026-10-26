@@ -289,9 +289,38 @@ through an Akkadogram, which is the Akkadian word: say so).
 | *ḫaliya-* "keep the night watch"; *ḫaliyatar*; *LÚ ḫaliyatalla-* "watchman"; *EN.NUN* "watch"; *paḫš-* "guard, protect" | **מִשְׁמֶרֶת** (`שָׁמַר מִשְׁמֶרֶת`, `שׁוֹמֵר`); `שָׁמַר` for *paḫš-* | | [equivalent] ↔ `וּשְׁמַרְתֶּם אֵת מִשְׁמֶרֶת הַקֹּדֶשׁ` (במדבר יח:ה) | Milgrom's comparison: the root `שמר` is gated to these words. |
 | *išḫiul* "obligation, instruction" (the text's own name: *ŠA LÚ.MEŠ É DINGIR-LIM išḫiul*) | **חוֹבָה** (pl. `חוֹבוֹת`) | `בְּרִית`, `תּוֹרָה`, `חֻקָּה` | [equivalent] | |
 | *šaklai-* "rite, custom (of the god)" | **מִנְהָג** | `חֹק`, `חֻקָּה`, `מִשְׁפָּט` | | |
-| *zakkiškittari* / *dammeli-*? the "outsider" who approaches | the translator, never `זָר` (reserved) | `זָר` | [equivalent] ↔ `וְהַזָּר הַקָּרֵב יוּמָת` (במדבר יח:ז) | |
+| *araḫzena-* "outer, foreign" (*araḫzenaš UL Ḫattušaš DUMU.LÚ.U₁₉.LU* "an outsider, not a man of Ḫattuša", IN 6.17; *araḫzenaš BÀD* "the outer wall", IN 11.8); *UBĀRU* "foreign guest" (IN 5.5, 6.13) | **חִיצוֹנִי** (HL2 183.5 precedent; `הַחוֹמָה הַחִיצוֹנָה`); **אוֹרֵחַ** | `זָר` (reserved), `גֵּר`, `תּוֹשָׁב` (reserved: ויקרא כב:י) | [equivalent] ↔ `וְהַזָּר הַקָּרֵב יוּמָת` (במדבר יח:ז) | **Corrected by Sub3 (2026-10-26):** the pre-set row named *zakkiškittari* / *dammeli-*, which the text does not have; the outsider is *araḫzena-* and the guest *UBĀRU*. |
 | *DINGIR-LUM* / *šiu-*; *DINGIR.MEŠ* | **אֵל** / **הָאֵל**; **הָאֵלִים** (always vocalized: trap H6) | `אֱלֹהִים` (never) | | Every corpus. |
 | *ZI* (*ištanza-*) "soul, mind"; *DUMU.LÚ.U₁₉.LU* "a son of man, mortal" | **נֶפֶשׁ**; **בֶּן אָדָם** | | | "Is the mind of man and of the gods any different?" (KUB 13.4 i 21–22): the translator keeps the question form. |
+
+**Checked against the transliteration by Sub3 before drafting (2026-10-26; the composite `9-…/composite-IN.tsv`).**
+Every row above is in the text except *EN.NUN* (absent) and *zakkiškittari* / *dammeli-* (absent: corrected above). Notes
+and additions, binding for the translator unless it proposes otherwise with a reason:
+- *ḫali-* has two words: "(night) watch" (*ḫāli paiddu* IN 11.4, *ḫaliyaš uttar* 10.1, *ḫāli … šarran* 10.18) = `מִשְׁמֶרֶת`, and
+  "corral" (*ḫāli anda tarnatteni* 7.5; *ḫaliyaz ašaunaz* 19.4) = `מִכְלָאָה` (HL1 precedent, with *ašawar* `דִּיר`). *LÚ
+  ḫaliyattalla-* "watchman" = `שׁוֹמֵר`; *LÚ weḫeškattalla-* "patrolman" and *weḫ(ešk)-* "patrol" = `סוֹבֵב` / `יְסוֹבְבוּ`
+  (↔ `הַשֹּׁמְרִים הַסֹּבְבִים בָּעִיר`, שיר השירים ג:ג, in the apparatus only); *paḫš-* "guard" = `שָׁמַר`; the formula
+  *paḫḫaššanuwanteš ešten* "be on your guard" = `הֱיוּ נִשְׁמָרִים` (F16; ↔ `וְנִשְׁמַרְתֶּם מְאֹד`, דברים ד:טו).
+- ***naḫḫanteš ešten*** "be fearful, reverent" (eight times, with *mekki* "much", *marri*) = **`הֱיוּ יְרֵאִים`** (F12): *naḫḫ-*
+  is the Hittite counterpart of Akk. *palāḫu*, which holds `ירא` in every corpus; ↔ `וּמִקְדָּשִׁי תִּירָאוּ` (ויקרא יט:ל).
+  `ירא` is gated (H4) to *naḫḫ-*; the homograph `יראו` "they will see" is not written (*uškanzi* = `רוֹאִים`).
+- ***SAG.DU-aš waštul*** "a sin of the head" (a capital offence; seven times) = **`חֵטְא־רֹאשׁ`** (F13; *waštul* `חֵטְא`,
+  SAG.DU `רֹאשׁ`, §7.1); ***SAG.DU-aš ÚŠ-tar*** / *akkatar* "death of the head" = **`מוֹת־רֹאשׁ`** (F14). ↔ `לָשֵׂאת חֵטְא לָמוּת`
+  (במדבר יח:כב), `וְלֹא יִשְׂאוּ עָלָיו חֵטְא וּמֵתוּ בוֹ` (ויקרא כב:ט): in the apparatus.
+- *kartimmiya-* / *TUKU.TUKU-(nu-)* "anger, make angry" = the root `זעם` (HL1 precedent: `יזעמו`); the Torah's `הִכְעִיס`
+  (דברים ד:כה) is reserved (H3).
+- *ḫuelpi* "the young, fresh (produce, animal)" = `הַטָּרִי` (by meaning), never `בִּכּוּרִים` / `רֵאשִׁית` / `בְּכוֹר`
+  (reserved, H3: ↔ שמות כג:יט, ויקרא כג:יד in the apparatus).
+- *NINDA.GUR₄.RA UD-MI* "the daily thick bread" = `לֶחֶם עָבֶה יוֹמִי` (or as the translator fixes it once); `לֶחֶם הַתָּמִיד`,
+  `לֶחֶם הַפָּנִים` reserved (במדבר ד:ז). *{DUG}išpantuzzi* "libation vessel" = `כְּלִי־נֶסֶךְ` (`נסך` gated to *išpant-* /
+  *šipant-*).
+- *SANGA GAL* / *TUR* = `כֹּהֵן גָּדוֹל` / `קָטָן` ([equivalent] ↔ `הַכֹּהֵן הַגָּדוֹל`, ויקרא כא:י); *GUDU₁₂* `מְשׁוּחַ`
+  (always vocalized; `הַכֹּהֵן הַמָּשִׁיחַ` stays the Torah's); *MUNUS AMA.DINGIR-LIM* `אֵם הָאֵל` (always vocalized: unvocalized
+  `אם האל` reads "if the god"; trap H6).
+- *EZEN₄* "festival" = `חַג`; *ḫamešḫa(nt)-* `אָבִיב` (HL1), *zena-* `סְתָו`. *DINGIR.MEŠ-aš ZI* "the gods' soul / will" = `נֶפֶשׁ
+  הָאֵלִים` (ZI `נֶפֶשׁ`, above); the translator fixes the phrase with the preposition once and keeps it.
+- Further reserved (H3), the Bible's words of the comparison (Lev 22:10, 18; Deut 23:22; Mal 3:8; Deut 4:25): `תּוֹשָׁב`,
+  `גֵּר`, `נֶדֶר`, `מִזְבֵּחַ`, `מַעֲשֵׂר`, `תְּרוּמָה`, `קָבַע`, `הִכְעִיס`.
 
 ### 7.3 Merged from Sub1, part 1 (HL1 1–145; 2026-10-25, Round 4 run 6 sub 1; all accepted by the coordinator)
 *šullatar* (abl. *šullannaz*) "quarrel" = `במחלוקת` (crux: CHiL "con intenzione"; `ריב` avoided, Exod 21:18); *arnu-* = `יַגִּיעַ` (always vocalized); *peḫute-* = `הוליך`; *uwate-* = `הביא`, *EGIR-pa uwate-* `הביא בחזרה` (`השיב` avoided); *peda-* = `נשא` (gated); *LÚ DAM.GÀR* and *unattalla-* = `תַּגָּר` (LH *tamkārum*; one Hebrew: 28 refers back to 21); *āššu-* `רכוש`; *taki-* `אחר`; *URU* `עיר`; *arḫa-* `גבול`; *gipeššar* `אַמָּה` (vocalized; ≠ GÉME `אָמָה`); *karšš-* `חתך`; *dā-* `לקח` (iter. `היו לוקחים`); *dašuwaḫḫ-* `עיוור`; *lak-* `הפיל` ([equivalent] Exod 21:27 `יַפִּיל`); *ZU₉* `שן`; *ḫunink-* `פצע`, ptcp. `הפצוע` ([equivalent] Exod 21:25 `פֶּצַע`; `חבל` is LH *ḫabālu*'s); *pešš-* `השליך` (also the miscarriage: `ישליך את בטנה`); *šarḫuwant-* `בטן`; *ištarnink-* `הֶחֱלָה` (vocalized); *šaktai-* `טיפל`; *pedan-* `מקום`; *aniya-* `עבד`; *kuitman* `עד אשר`; *mān* temporal `כאשר`; SIG₅ "recover" `החלים`; *LÚ A.ZU* `רופא`, *kuššan-* `שְׂכַר` (vocalized); *duwarna-* `שבר`; *wak-* `נשך`; *KIR₁₄* `אף`, GEŠTU `אוזן`, *GÌR* `רגל`; *iškalla-* `קרע`; *ITU n{KAM}* `החודש ה־n`; *išḫa-* `אדון`; *kanešš-* `הכיר`; *luwili-* / *luyumna-* `לוּוִי` (always vocalized: trap added to §H6); *ḫuwai-* `ברח`; *ēpp-* `תפס`; *manninkuwan* `בקרבת מקום`; *E.SIR* `נעליים`; *kez* / *edi* ÍD `מצד זה של הנהר` / `מן הצד ההוא של הנהר` (`מעבר` avoided); *pā(i)-* "go" `הלך`; *kururi KUR-e* `ארץ אויב`; *wemiya-* `מצא`; *ḫašša-* `מוקד`; ÚTUL `קדרה`; *luli-* `בריכה`; *paprešš-* `ייטמא`; *iwaru-* `מַתָּן` (`מַתָּנָהּ`); *warnu-* `שרף`; *atta-* `אב`. Numbers: 2–10 `שקלים`, 11+ `שקל`. Table fixes the same day: F6 also matches *keššar=šiš waštai* (11); F9 *dāyezzi*; `ייטמא` added to the `טמא` gate; six licences anchored (`ארז`, `פיצה`, `שלח`, `נשא`, `מחנה`, `שכב`; they matched inside other words or glosses); the colophons got unique labels `col1`–`col4` in the tool.
@@ -424,6 +453,14 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])[ובלהמכש]*(?:דמיהם\|דמיו\|דמיה)(?![א-ת])` | NEVER | Lev 20:9–16 `דְּמֵיהֶם בָּם` (no Hittite blood formula) |
 | `(?<![א-ת])[ובלהמכש]*(?:ערכך\|בערכך\|הערכך)(?![א-ת])` | NEVER | Lev 27:2–27 (HL 178–186: *ŠĪMU* = `מחיר`) |
 | `(?<![א-ת])[ובלהמכש]*(?:יקרב\|תקרב\|תקרבו\|לקרב\|קרבו\|יקרבו)(?![א-ת])` | NEVER | Lev 18:6, 14, 19; 20:16 (the Torah's verb of the sexual approach); HL 187–200a *tiya-* "step up to (the king)": not this verb |
+| `(?<![א-ת])[ובלהמכש]*(?:בכור\|בכורים\|ביכורים\|בכורה\|הבכורים\|ראשית)(?![א-ת])` | NEVER | Exod 23:19, Lev 23:10–14 (IN *ḫuelpi* = `הַטָּרִי`; IN, 2026-10-26) |
+| `(?<![א-ת])[ובלהמכש]*(?:תושב\|תושבים\|גר\|גרים\|הגר)(?![א-ת])` | NEVER | Lev 22:10, 18 (*UBĀRU* = `אורח`, *araḫzena-* = `חיצוני`) |
+| `(?<![א-ת])[ובלהמכש]*(?:נדר\|נדרים\|נדרו\|ידור\|נדרת)(?![א-ת])` | NEVER | Deut 23:22–24 (no Hittite vow word in IN) |
+| `(?<![א-ת])[ובלהמכש]*(?:מזבח\|מזבחות)(?![א-ת])` | NEVER | no altar in IN (GUNNI = `אח`) |
+| `(?<![א-ת])[ובלהמכש]*(?:מעשר\|מעשרות\|תרומה\|תרומות)(?![א-ת])` | NEVER | Num 18:21–28, Mal 3:8 |
+| `(?<![א-ת])[ובלהמכש]*(?:יקבע\|קבעתם\|קבענוך\|הקבע)(?![א-ת])` | NEVER | Mal 3:8 |
+| `(?<![א-ת])[ובלהמכש]*(?:כעס\|הכעיס\|יכעיס\|הכעיסו\|להכעיס\|מכעיס)(?![א-ת])` | NEVER | Deut 4:25 (*kartimmiya-* = `זעם`) |
+| `(?<![א-ת])[ובלהמכש]*(?:לחם התמיד\|לחם הפנים)(?![א-ת])` | NEVER | Num 4:7, Exod 25:30 (NINDA.GUR₄.RA UD-MI = `לחם עבה יומי`) |
 
 ### H4. Gated: allowed only where the source word is in the line (machine-read; both corpora)
 | Hebrew (regex) | Licence (regex on the licence text: composite + lemmas + glosses, lower case) | Why |
@@ -437,7 +474,9 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])[ובלהמכש]*(?:נשא\|ישא\|יישא\|תישא\|נושא\|נושאת\|נשאו\|ישאו\|יישאו\|נשאה\|אשא)(?![א-ת])` | `hinschaff\|wegschaff\|forttrag\|\bpedai\b\|\bpēdai\b\|pedanzi\|pēdanzi\|pedaḫḫi\|pedaš\b` | `נשא` only for *peda-* "carry (off)" (Lev 16:22) |
 | `(?<![א-ת])[ובלהמכש]*(?:צפור\|ציפור\|צפורים\|ציפורים\|צפרים)(?![א-ת])` | `mušen` | `צפור` only for *MUŠEN* (never `עוף`) |
 | `(?<![א-ת])[ובלהמכש]*(?:ארז\|ארזים)(?![א-ת])` | `\berin\b\|\beren\b\|giš\.erin` | `ארז` only for *GIŠ.ERIN* (Lev 14:4) |
-| `(?<![א-ת])[ובלהמכש]*(?:שמר\|ישמור\|ישמרו\|שומר\|שומרים\|שמרו\|משמרת\|משמרות\|משמר\|לשמור\|ושמרו)(?![א-ת])` | `paḫš\|paḫḫaš\|ḫaliy\|en\.nun\|ḫaliyatall` | `שמר` only for *paḫš-* / *ḫaliya-* / *EN.NUN* (Num 18; LH reserves it) |
+| `(?<![א-ת])[ובלהמכש]*(?:שמר\|ישמור\|ישמרו\|שומר\|שומרים\|שמרו\|משמרת\|משמרות\|משמר\|לשמור\|ושמרו)(?![א-ת])` | `paḫš\|paḫḫaš\|paḫḫš\|pa-aḫ-ḫa-aš\|pa-aḫ-ša\|ḫaliy\|ḫali-\|ḫa-a-li\b\|ḫa-li-ia\|\bḫali\b\|en\.nun\|ḫaliyatall` | `שמר` only for *paḫš-* / *ḫaliya-* / *EN.NUN* (Num 18; LH reserves it) |
+| `(?<![א-ת])[ובלהמכש]*(?:ירא\|יראים\|יראה\|יראות\|ייראו\|תיראו\|יראת)(?![א-ת])` | `naḫḫ\|naḫš\|na-aḫ-ḫ\|na-aḫ-š` | `ירא` only for *naḫḫ-* (= Akk. *palāḫu*); Lev 19:30 (IN F12) |
+| `(?<![א-ת])[ובלהמכש]*(?:נסך\|נסכים\|ניסך\|ינסך\|נוסך\|נסכו)(?![א-ת])` | `išpant\|išpand\|šipant\|šipand\|iš-pa-an\|ši-pa-an` | `נסך` only for *(i)špant-* "libate" and its vessel |
 | `(?<![א-ת])[ובלהמכש]*(?:כהן\|כוהן\|כהנים\|כוהנים\|כהונה)(?![א-ת])` | `sanga\|šankunn` | `כהן` only for *LÚ SANGA* |
 | `(?<![א-ת])[ובלהמכש]*(?:הקריב\|יקריב\|מקריב\|הקריבו\|מקריבים\|קרבן\|קורבן\|קרבנות)(?![א-ת])` | `šipant\|šipand\|siskur\|sískur\|šipanz` | `הקריב` only for *šipant-* (SISKUR = `טקס`) |
 | `(?<![א-ת])[ובלהמכש]*(?:שחט\|ישחט\|שוחט\|שחטו\|ישחטו\|שוחטים)(?![א-ת])` | `ḫukk\|ḫuek\|ḫuk-\|ḫukant\|ḫuekzi` | `שחט` only for *ḫuek-* "slaughter" |
@@ -471,6 +510,10 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | F9 | `\b[td][aā]y[ae]zzi\b\|\b[td][aā][iy][aei]z?zi\b` | `יגנוב\|יגנב` | "steals" |
 | F10 | `^umma\b` | `(?:^\| )כה(?: \|$)` | *UMMA X* "thus (says) X" = `כֹּה (אוֹמֵר) X` (rituals) |
 | F11 | `\b(?:ul\|natta) ḫaratar\b` | `אין(?: זו)? עברה` | *UL / natta ḫaratar* "it is no offence" = `אֵין עֲבֵרָה` (HL2, the sexual laws; §7.1) |
+| F12 | `naḫḫanteš\|na-aḫ-ḫa-an-te-eš` | `יראים` | *naḫḫanteš ešten* "be fearful" = `הֱיוּ יְרֵאִים` (IN) |
+| F13 | `sag\.du-?aš wa-?aš-?túl\|sag\.duaš waštul` | `חטא[ ־]ראש` | *SAG.DU-aš waštul* "a sin of the head" = `חֵטְא־רֹאשׁ` (IN) |
+| F14 | `sag\.du-?aš (?:úš-?tar\|uštar\|ag-?ga-?tar\|aggatar\|akkatar)` | `מות[ ־]ראש` | *SAG.DU-aš ÚŠ-tar* / *akkatar* "death of the head" = `מוֹת־רֹאשׁ` (IN) |
+| F16 | `paḫ(?:ḫa)?(?:š\|šša)nu(?:w)?ant\|pa-aḫ-(?:ḫa-aš-)?ša-nu` | `נשמרים` | *paḫḫaššanuwanteš ešten* "be on your guard" = `הֱיוּ נִשְׁמָרִים` (IN) |
 
 Formulas F1–F11 are tried on the flat composite and, for the composite texts (HL2, IN: TLHdig's hyphenated
 transliteration), also on its folded form (`ták-ku` → `takku`, `ḫu-u-ur-ki-il` → `ḫurkil`, `pa-a-i` → `pai`; `hittite_tools.py`
@@ -498,6 +541,7 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אמהות\|אמהותיו\|אמהותיה)(?![֑-ׇא-ת])` | `.` | `אֲמָהוֹת` "slave women" / `אִמָּהוֹת` "mothers": always vocalized (HL2 194) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אמן\|אמנים)(?![֑-ׇא-ת])` | `ummi\|um-mi` | UMMIĀNU `אֻמָּן` ("amen") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:יגע\|תיגע)(?![֑-ׇא-ת])` | `šalik\|ša-li` | *šalik-* `יִגַּע` ("toils") |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אם\|אמות)(?=[ ־][הל]?א)` | `ama\.dingir` | AMA.DINGIR-LIM `אֵם הָאֵל` / `אִמּוֹת הָאֵל` ("if the god"; IN) |
 
 ### H9. Selftest (`hittite_tools.py selftest`: each line must give the expected result)
 | Line | Expect | Hebrew |
@@ -519,3 +563,10 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | HL2 194.4 | err | `ובנו שוכבים (עמה) – אין חטא.` |
 | HL2 103.2 | err | `ישכב,` |
 | HL2 198.3 | err | `וגם את הנואף יחיה,` |
+| IN 7.18 | ok | `לא יַרְפֶּה; ואתם – לנפש הָאֵלִים היו יראים מאוד.` |
+| IN 7.18 | err | `לא יַרְפֶּה; ואתם – לנפש הָאֵלִים היו זהירים מאוד.` |
+| IN 18.13 | ok | `ייוודע – וזה לכם חטא־ראש; ואם לא` |
+| IN 18.13 | err | `ייוודע – וזה לכם חטא מוות; ואם לא` |
+| IN 11.4 | ok | `נמצא, אל המשמרת ילך!` |
+| IN 15.3 | err | `או מה שהוא מן הביכורים אשר אתם, האיכרים, לָאֵלִים` |
+| IN 12.1 | err | `ואתם, הכוהנים, המְשׁוּחִים, אמות האל` |

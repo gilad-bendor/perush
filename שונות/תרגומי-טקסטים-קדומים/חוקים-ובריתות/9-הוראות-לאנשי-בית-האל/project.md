@@ -95,6 +95,84 @@ Rank 3/5 for the translator (after drafting only): Sturtevant & Bechtel 1935 (En
 1935 readings: old, check every word against the CHD and the composite; kept in the session scratchpad, not in `sources/`);
 the CHD's free volumes L–N, P, Š per word.
 
+## IN: the coordinator's brief for the translator (Sub3, 2026-10-26; on top of `../translator-brief--hittite.md`)
+**Your text** is `composite-IN.tsv` (read "IN: the composite" above first: the leads, the borrowed rows, the marks).
+Labels `<§>.<n>` (`1.1` … `19.22`, `col1`–`col4`); one Hebrew line per row; `@` + `fill`. **Parts** (one translator, resumed
+part by part): **P1 1.1–7.18** (95 rows: the opening, the bakers, "the mind of man and of the gods", the festivals, the god's
+food), **P2 8.1–11.14** (87: the god's silver and gold, festivals in their time, the night watch, the rites), **P3
+12.1–16.13** (73: quarrels at the festival, the fire, the kitchen, the farmers' first produce, the seed grain), **P4
+17.1–col4** (57: the plough-ox, the herdsmen's young animals, the animals brought to the god, the colophon). File:
+`annotated-IN.rtl.md`, built like `../8-החוקים-החתיים/annotated-HL2.rtl.md` (title `# הוראות לאנשי בית האל – תרגום מבואר`, a
+short head paragraph: the base is our composite, the marks, the fixed words); `<!-- טרם תורגם: FROM–TO -->` for the rows not
+yet drafted. **Headings** `## §N – <Hebrew title> (KUB 13.4 <col. line–line>)`, the range from the concordance's second
+column in Hebrew-neutral form: `(KUB 13.4 i 1′–13′)`, `(KUB 13.4 i 60′–66′; ii לפי KBo 50.283+)` for §6, `(KUB 13.4 ii 5′–24′;
+ii 5′–16′ לפי KBo 50.283+)` for §7, `(KUB 13.4 ii 73′–iii 20)`, `(KUB 13.4 iv 1–11)`; the colophon `## קולופון (KUB 13.4 iv 78–81)`.
+
+**IN follows the Laws' Hebrew** (HL1, HL2, HLPT) for every shared word and formula: `../renderings.md` §7.1–§7.11 and the
+review rulings, and **§7.2 with its "Checked … by Sub3" block** (binding: *É DINGIR-LIM* `בית האל`, SANGA `כהן`, *ḫali-*
+watch `משמרת` / corral `מכלאה`, *paḫš-* `שמר`, *naḫḫanteš ešten* `היו יראים` F12, *SAG.DU-aš waštul* `חטא־ראש` F13, *ÚŠ-tar*
+`מות־ראש` F14, *paḫḫaššanuwanteš ešten* `היו נשמרים` F16, *araḫzena-* `חיצוני`, *UBĀRU* `אורח`, *ḫuelpi* `הטרי`, ZI `נפש` …).
+Check every word with `hittite_tools.py lemma` / `grep --all` / `lexmap` before fixing it. New reservations (§H3, NEVER):
+`בכורים`/`ראשית`, `תושב`/`גר`, `נדר`, `מזבח`, `מעשר`/`תרומה`, `קבע`, `הכעיס`, `לחם התמיד`/`לחם הפנים` – on top of the old ones
+(`זר`, `מקדש`/`משכן`/`מועד`, `יומת`, `קרב` the verb, `זבח`, `כופר`, `ברית`/`תורה`/`חוקה` …). Gated (§H4): `ירא` (*naḫḫ-*),
+`נסך` (*išpant-*), `שמר` (*paḫš-*, *ḫali-*), `כהן`, `קדש`, `טהר`, `טמא`, `חטא`, `היכל`, `זקנים`. Traps: `אֵל`/`אֵלִים`,
+`אֵם הָאֵל` (AMA.DINGIR-LIM), `חַתּוּשָׁה`, `שִׁמְשִׁי`.
+
+**Formulas and repeated passages to fix at their first occurrence and keep** (find them in the transliteration; ★): the
+address *anda=ma=za šumeš kuieš LÚ.MEŠ É DINGIR-LIM* "furthermore, you who are the men of the god's house" (§§9, 10; with
+the other classes §§12, 14, 15, 18); *nu=za … mekki (marri) naḫḫanteš ešten* (F12; CHD L–N *marri*); *EGIR-zian=ma=at
+išduwari* "but later it becomes known" and *mān=ma=at UL=ma išduwari* "but if it does not become known" (§§14, 16, 17, 18,
+19); *nu=šmaš=at SAG.DU-aš waštul* (F13); *DINGIR.MEŠ-aš ZI-ni* "to the gods' soul" (one phrase); *EGIR-pa waḫnumar lē ešzi*
+"let there be no turning back (pardon)" (§5, §8: one Hebrew); *mēḫunaš mēḫuni* "at the time of times" (`מועד` is reserved:
+choose another word, once); *ḫūdāk* "at once"; the ordeal *BIBRU DINGIR-LIM ZI-aš arḫa ekutteni* (§18, §19) and the oath
+formula *mān parkuweš … šumel DKAL-KUNU, takku papranteš=ma* (§17, §18): identical Hittite, identical Hebrew; the herdsmen's
+two speeches (§18, §19: *mān=wa=za kī ḫuelpi … piyawen*) – command and execution in the same words; §19's confession repeats
+its case (iv 62–66 ↔ 71–75) in the 1st person: the same words and order. The festival list of §4 (the names: translate the
+transparent ones – month, year, autumn *zena-* `סתיו`, spring *ḫamešḫa-* `אביב` (HL1), thunder *tetḫešnaš* –, transliterate and
+vocalize the rest with `(?)`).
+
+**נוסחים**: every difference of content between the lead and its duplicates (see the composite's points 6–7: B, C, D, E, H
+against A; the rows borrowed from C and B in §6, §7, §15: say there what A keeps of them); KBo 50.283+ is Sturtevant &
+Bechtel's KUB 13.5.
+
+**Look for** (briefs say "look for", never "translate as"; print every verse first): Num 18:1–7, 22–23 (`מִשְׁמֶרֶת`, the
+guard of the sanctuary, "the outsider who approaches dies": Milgrom 1970, *Studies in Levitical Terminology* I: the
+Hittite night watch is his main comparison – the watchman who does not go to his post dies, iii 30–34; the
+outsider who approaches the gods, §6), Num 1:51–53, 3:38; **Lev 22:1–16** (who eats the holy food: the priest's family,
+the slave, not the resident and the hired man; impurity until evening; ↔ §2 the bakers, §5 the god's food carried home to
+wives, children and slaves and given to an in-law or a guest, §14 the kitchen, sexual intercourse and the bath before
+entering); Lev 15:16–18 (§10, §14: the man who slept with a woman); Lev 10:9 (drink?); Lev 7:15–18 (§§15, 17, 18: eating
+the god's portion in time, before men eat); Mal 3:8 and Lev 27 (robbing the god of his property, §8: silver, gold, the
+king's gift; §16: the god's field called "ours" and the grain taken); the firstlings and tithes: Num 18:12–15, Exod 23:19,
+Exod 34:26, Lev 23:14 (§15, §18: before man eats it); Deut 23:22–24 (vows: §18?); **1 Sam 2:12–17** (the priests who take
+the god's meat before it is offered; §5, §19: the herdsman who sells the fattened ox and puts a lean one in its place);
+Lev 27:10, 33 (`לֹא יַחֲלִיפֶנּוּ … וְהָיָה הוּא וּתְמוּרָתוֹ`: §19 the substitute animal); Lev 6:5–6 (the fire that shall not
+go out; §13: the fire of the hearth at night); Ps 121:4 (`לֹא יָנוּם וְלֹא יִישָׁן שׁוֹמֵר`: §10 "let there be no sleep for
+them"); Song 3:3, 5:7 (the patrol); Job 7:17–18 / Ps 8:5 (what is man?) and Isa 55:8–9 (§2: "is the mind of man and of the
+gods any different?"), Mal 1:8 (§2: a servant and his master, "offer it to your governor"); Exod 28:43 (the death of the
+priest who errs). Echo control: Hittite never met Israel; Milgrom argues a typological (not genetic) parallel – say so.
+
+**The soul of the ancients** (the הערות): the god as master, the priest as servant (§2's parable of the slave: washed,
+clean clothes, food and drink, the master's mood; and his whole family dies with him: collective punishment); the
+fear of the god's anger "that does not hasten to seize, but when it seizes does not let go" (§7); the god's property and
+the king's gifts sealed and registered (§8); festivals at their time, not when it suits the priest (§9); the night watch
+of a city temple and the threat of the enemy (§10); the watchman who would rather stay home (§11); the kitchen's purity:
+pigs and dogs at the door, hair and nails cut, the bath after a night with a woman, the ordeal for the one who hides his
+impurity (§14); the farmers and the god's fields (§§15–17); the herdsmen and the young animals (§18), the swapped ox
+(§19); the oaths "if we did it, may the god pursue us". Not every line needs a note.
+
+**Rank 3/5 (after drafting only).** No open modern translation. **Sturtevant & Bechtel 1935** (*A Hittite Chrestomathy*, pp.
+127–174, transliteration of KUB 13.4 + KUB 13.5 with an English translation; full view, archive.org
+`in.ernet.dli.2015.279400`; OCR of the translation pages good, of the transliteration poor):
+`/tmp/claude-0/-home-user-perush/d5491f11-e246-5018-a562-08037f355ad7/scratchpad/sb/sb.txt` (the text from line ~6550; their §
+numbers are ours; their col. ii line numbers are A's + 7, and their ii 1–11 come from KUB 13.5 = C). Their readings are 1935
+readings (e.g. *karšattar* "castrate", now "selected portion"): never take a reading from them. **The CHD**, free volumes L–N, P
+and Š, per word only (its terms: no bulk extraction, no datasets): text files in
+`/tmp/claude-0/-home-user-perush/d5491f11-e246-5018-a562-08037f355ad7/scratchpad/chd/` (`chd_l-n.txt`, `chd_p.txt`, `chd_s.txt`,
+`chds1/3/4/5/6.txt`; the OCR writes *ḫ* as `h`, *š* as `s`: grep a word, read its entry; many lines of KUB 13.4 are quoted
+and translated there – a rank-3 reading for that word). Record every disagreement in תרגומים ("S&B 1935: «…»", "CHD L–N 194:
+«…»").
+
 ## Bible (look for)
 Num 18:1–7, 22–23 (the guard of the sanctuary: `מִשְׁמֶרֶת`, "the outsider who approaches shall die"), Num 1:51–53, 3:38;
 Lev 22:1–16 (the holy food, impurity, who may eat: the slave bought with silver, the hired man), Lev 15:18 (sleeping with a
