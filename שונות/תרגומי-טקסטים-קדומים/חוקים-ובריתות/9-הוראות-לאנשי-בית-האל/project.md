@@ -278,7 +278,7 @@ KASKAL `דרך`; *EGIR-pa tiya-* "back, support" `עמד מאחורי`, *peran a
 1 Sam 3:3); *karš-* (mid.) "be cut off, fail" `ייחתך` (Laws `חתך`); GE₆ `לילה`; *weḫeškattalla-* `סובב` (§7.2), *weḫ(ešk)-*
 `סבב` (*weḫtari* `יִסֹּב`); *araḫza* `בחוץ`, *andurza* `בפנים`; Ù = *tešḫa-* `שינה`; SANGA GAL.GAL / TUR.TUR `הכוהנים הגדולים / הקטנים`;
 *peran ḫuwai-* "lead" `רץ בראש` (*ḫuwai-* "flee" HL1 `ברח`: split by sense); ŠA KÁ É DINGIR-LIM `של שער בית האל`; *kiš-*
-`נעשה` (HL1); *šaklai-* `מנהג`; *zammurai-* `בזז(?)`; *tiya-* + inf. `בא ל־`; BÀD `חומה`; *luriyaḫḫ-* `השפיל`, *luri-* `השפלה`;
+`נעשה` (HL1); *šaklai-* `מנהג`; *tiya-* + inf. `בא ל־`; BÀD `חומה`; *luriyaḫḫ-* `השפיל`, *luri-* `השפלה`;
 *nekumant-* `עירום`; *labarna-* `לַבַּרְנָה` (propose an H2 row: `labarn` → `לַבַּרְנָה`, ★ not needed); DINGIR-LÌ-ŠU `הָאֵל שלו`.
 
 **Proposals / for the coordinator:** (1) *DINGIR.MEŠ-aš ZI-ni* with "take payment" (9.14 *ZI-ni ḫappar lē datteni*) is
@@ -334,3 +334,26 @@ occurrence; plene `איכר` is fine). (3) The `מחץ` gate catches `מחצה` 
 **Cruxes:** 12.2 the unread subject (*…tuḫmiyanza?*); 13.5–13.6 who extinguishes; 13.7–13.8 read as a rhetorical question
 (S&B: a statement); 13.10 *tinumar*; 14.21 *MAḪRI-ŠU LÚ GAL-ŠU EGIR-an tamašzi*; 14.24 *parā dai-* "postpone" (CHD);
 16.11 the sign 〈〈TAR?〉〉.
+
+### IN part 4 (17.1–col4)
+
+**Formulas fixed here (for §7.14):** (1) The oath, fixed at §18 and used again in 17.8–17.9:
+`ואם טהורים (אתם) – אֵל הַמָּגֵן שלכם! ואילו אם טמאים (אתם) –` (*mān parkuweš … šumel ᵈKAL-KUNU, takku papranteš=ma*).
+In 17.8–17.9 it is verbal (*parkuešteni / paprešteni*): `אם תיטהרו – אֵל הַמָּגֵן שלכם!` … `ואילו אם תיטמאו`.
+(2) The ordeal: `את בִּיבְרוּ הָאֵל של הנפש` (*BIBRU DINGIR-LIM ZI-aš/ZI-TI*), with `עד תום תשתו` in 18.19–18.20 and
+`מעל הַכַּן ייקחו מטה` in 19.14–19.15. (3) The confession (19.16–19.20) repeats the case (19.7–19.10) in the
+1st person, with the same verbs (`המיר`, `מסחר … לקח`, `ובמקומו כחוש שלח`, *uššaniya-* `הציע למכירה`).
+(4) The colophon follows HL1: `לוח ראשון: …` / `החובות – תַּם.` The §7.12–§7.14 formulas are copied byte for byte
+(F13, *išduwari*, the address, and the *ḫuelpi* passage in 18.5–18.7; F14 does not occur in this part).
+
+**New words:** *karšattar* `חֲתָךְ` (vocalized), a portion "cut" from the herd (from *karš-* `חתך`); *ištanana-*
+`כַּן` (vocalized; `מזבח` is reserved, H3); GU₄.NITA `שור זכר`; *parš-* "escape" `נמלט`; *šakuwantariyanu-* `ביטל`;
+*šapp-* `קילף` (said of milk); *ḫaššatar* `המלטה`; *unna-* `נהג` (as HL1 407); EZEN₄ GA `חג החָלָב`.
+
+**Gate/trap proposals:** (1) Add GUL-aḫ- (the logogram of *walḫ-*) to the `מחץ` licence; 17.5 uses an escape for now.
+(2) A trap `חָלָב` "milk", against `חֵלֶב` "fat" (18.8–18.9). (3) lexmap lists *iya-* (mid.) "go" (19.3 `יתלוו`) under
+*iya-* "make". It needs its own lemma label, like the *pai-* "go"/"give" pair (17.8 `תלכו`).
+
+**Cruxes:** 17.3 *taišteni* (S&B: "conceal"; I translate literally `תָּשִׂימוּ`, "put before"); 18.3–18.4
+UZU *ŠALĪTU* `שִׁלְיוֹת(?)` and *ḪAKKURRATU* (transliterated); 18.9 *šapp-* of milk (skimming?); 18.19 *zammurai-* (as in 11.7);
+18.20 / 19.14 ZI-aš / ZI-TI "of the soul" (the ordeal vessel); 19.1 *karšattar*.

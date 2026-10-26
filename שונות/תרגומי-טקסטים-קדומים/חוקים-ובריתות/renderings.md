@@ -461,6 +461,16 @@ dai-* `דחה`; *šaknuwant-* `מלוכלך` (≠ *paprant-* `טמא`); *šakk-*
 `לשניים חלק` is "share by share" and stays). Variant: KBo 68.18 has F12 *naḫḫanteš* where A and C have F16 (13.11), in נוסחים.
 **Tables (coordinator):** trap `מַשְׁקֶה`. **For the lead:** *nuḫatimmu* `אופה` (other corpora) vs Hittite MUḪALDIM `מבשל`.
 
+### 7.15 Merged from Sub3, part 4 (IN 17.1–col4, §§17–19 + colophon; 2026-10-26; accepted by the coordinator)
+The §7.12–§7.14 formulas copied byte for byte. **Fixed here:** the oath `ואם טהורים (אתם) – אֵל הַמָּגֵן שלכם! ואילו אם טמאים
+(אתם)` (§18; 17.8 the same apodosis); the ordeal `את בִּיבְרוּ הָאֵל של הנפש` (18.20, 19.14; only the verb differs); §19's
+confession (19.16–19.20) in the case's verbs (19.7–19.10), 1st person; the colophon as HL1 (`לוח ראשון: …`, `החובות – תַּם.`).
+**Words:** *ištanana-* "(offering) stand, altar" `כַּן` (`מזבח` reserved; always vocalized – trap); *karšattar* "selected
+portion" `חֲתָךְ` (vocalized; crux); GA "milk" `חָלָב` (always vocalized: `חֵלֶב` "fat" – trap); *waḫnu-* `המיר` (Lev 27:10);
+GUL-*aḫ-* = *walḫ-* `מחץ` (**the `מחץ` licence now matches GUL-aḫ-**; the escape at 17.5 removed). Cruxes: 17.3 *taišteni*, the
+offal words 18.3–18.4, *šapp-* 18.9, ZI-*aš* / ZI-TI, *karšattar*. **Tool note:** `lexmap` lists *iya-* (mid.) "go, march"
+(19.3 `יתלוו`) under *iya-* "make": a label for the report, not a collision.
+
 ### H2. Names (machine-read; both corpora)
 Regex on the composite in lower case without brackets (`hittite_tools.py` `flat`). Transcription: *š* `שׁ`, *ḫ* `ח`,
 *z* `ז` (Hebrew usage, though Hittite *z* was [ts]), *k* `ק`, *t* `ת`, *p* `פּ`, *w* `ו` (`וו` inside a word), *y* `י`;
@@ -555,7 +565,7 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])[ובלהמכש]*(?:זקנים\|זקני\|זקן)(?![א-ת])` | `šu\.gi\|greis\|mekkešš` | `זקנים` only for *LÚ.MEŠ ŠU.GI* (Deut 21:3) |
 | `(?<![א-ת])[ובלהמכש]*(?:שכב\|ישכב\|ישכבו\|שוכב\|שוכבים\|שוכבת\|שוכבות\|שכבה\|תשכב\|שכבו\|לשכב)(?![א-ת])` | `\bšeš-(?!š)\|\bšeš(?:k\|zi\|ten\|ta\b\|un\b)\|\bše-eš-(?!š)\|šašt\|(?<![\w=])šaš\b\|šašzi\|šešzi\|šeški\|šiš=?k\|šešk\|(?<!ù ")(?<!šeš ")(?<!šeš-šu ")schlafen` | `שכב` only for *šeš-* |
 | `(?<![א-ת])[ובלהמכש]*(?:לפנים)(?![א-ת])` | `karū\|karu\b\|karupat` | `לפנים` only for *karū* (F2) |
-| `(?<![א-ת])[ובלהמכש]*(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=` | `מחץ` only for *walḫ-* |
+| `(?<![א-ת])[ובלהמכש]*(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=\|gul-aḫ\|gulaḫ` | `מחץ` only for *walḫ-* |
 | `(?<![א-ת])[ובלהמכש]*(?:פיצה\|יפצה\|יפצו\|פיצוי\|פיצויים\|פצה)(?![א-ת])` | `šarnink\|šarnikz\|šar=nink` | `פיצה` only for *šarnink-* |
 | `(?<![א-ת])[ובלהמכש]*(?:בן חורין\|בת חורין\|בני חורין\|בנות חורין)(?![א-ת])` | `ellu\|elletu\|el-lum\|el-li\|el-le\|araw\|\bfrei\b` | `בן חורין` only for *ELLUM* / *arawanni-* |
 | `(?<![א-ת])[ובלהמכש]*(?:חטא\|חוטא\|חוטאת\|יחטא\|חטאו\|חטאת)(?![א-ת])` | `wašt\|wašt=\|ušt[uú]l\|freveln\|sünde` | `חטא` only for *wašta-* / *waštul* |
@@ -613,6 +623,8 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אומן\|אומניו\|אומנים\|אומניכם)(?![֑-ׇא-ת])` | `ùmmeda\|ummeda` | ÙMMEDA `אֹמֵן` (plene = UMMIĀNU `אֻמָּן`, "amen"; IN) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:יסוב\|יסב)(?![֑-ׇא-ת])` | `weḫ\|ú-e-eḫ\|ú-e-ḫ` | *weḫtari* `יִסֹּב` (IN) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:משקה\|משקים)(?![֑-ׇא-ת])` | `sagi` | SAGI.A `מַשְׁקֶה` "cup-bearer" ("drink", Gilgameš's *mašqû* "watering place"; IN) |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:חלב)(?![֑-ׇא-ת])` | `\bga\b` | GA `חָלָב` "milk" (`חֵלֶב` "fat"; IN) |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:כן)(?![֑-ׇא-ת])` | `ištanan\|iš-ta-na` | *ištanana-* `כַּן` "(offering) stand" ("yes, so"; IN) |
 
 ### H9. Selftest (`hittite_tools.py selftest`: each line must give the expected result)
 | Line | Expect | Hebrew |
