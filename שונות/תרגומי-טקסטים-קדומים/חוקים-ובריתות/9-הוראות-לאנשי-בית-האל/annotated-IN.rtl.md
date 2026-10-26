@@ -59,7 +59,7 @@
 
 ### 1.9
 `na-at ša-ra-a ti-ia-[an-ta-an`
-> ואותו למעלה שׂוּם […]
+> ואותו שׂוּם למעלה […]
 - **פירוק:** `na-at` – nu "and" + =at "it" ("ואותו"); `ša-ra-a` – šarā "up" ("למעלה"); `ti-ia-[an-ta-an` – tiyant-, participle of dai- "put" ("שׂוּם").
 - **הערות:** *šarā dai-* "לשׂוּם למעלה" – להעמיד, להציב (את מנות האל) מוכנות. הצירוף חוזר בסעיפים 4–5 (4.9, 5.1): המנחות "השׂוּמוֹת למעלה" הן מה שהוכן לאל ושייך לו.
 
@@ -92,7 +92,7 @@
 
 ### 2.1
 `nam-ma NIND[A.GU]R₄.RA{ḪI.A} UD-MI ku-i-e-eš e-eš-ša-an-zi na-at pár-[k]u-wa-iš a-ša-an-du`
-> ועוד: אלה אשר את הלחמים העבים היומיים עושים – טהורים יהיו!
+> ועוד: אלה אשר עושים את הלחמים העבים היומיים – טהורים יהיו!
 - **פירוק:** `nam-ma` – namma "further, moreover" ("ועוד"); `NIND[A.GU]R₄.RA{ḪI.A}` – NINDA.GUR₄.RA "thick bread, loaf", pl. ("הלחמים העבים"); `UD-MI` – UD-MI (Akkadogram ŪMI) "daily, of the day" ("היומיים"); `ku-i-e-eš` – kui- "who, which", rel. nom. pl. c. ("אלה אשר"); `e-eš-ša-an-zi` – ešša-, iterative of iya- "do, make", pres. 3pl ("עושים"); `na-at` – nu "and" + =at "they" (not translated); `pár-[k]u-wa-iš` – parkui- "pure, clean", nom. pl. c. ("טהורים"); `a-ša-an-du` – eš- "be", imp. 3pl ("יהיו").
 - **הקבלה:** [equivalent] `וְהֶעֱבִירוּ תַעַר עַל כָּל בְּשָׂרָם וְכִבְּסוּ בִגְדֵיהֶם וְהִטֶּהָרוּ` (במדבר ח:ז) – טהרת הלויים: גילוח, כביסת בגדים, טהרה – אותם שלושה צעדים כבשורות 2.2–2.3. ההקבלה טיפולוגית: החתים לא פגשו את ישראל; שני הכתבים מעידים על תפיסה משותפת של "טהרה" כניקיון גוף ובגד של מי שניגש אל האל. [divergence] `לֶחֶם הַתָּמִיד` (במדבר ד:ז) – הלחם היומי של האל החתי אינו לחם הפנים: הוא מזונו היומי של האל, הנאכל (במסגרת הפולחן) ולא מונח לפניו; ולכן `לחם עבה יומי` ולא מונחי התורה.
 - **הערות:** *NINDA.GUR₄.RA* – "הלחם העבה", כיכר הלחם הפולחנית הנפוצה ביותר בטקסים החתיים (`לֶחֶם עָבֶה`, כבטקסי השילוח). *UD-MI* – "של יום", המנה היומית. האל החתי חי בביתו ככל אדון: הוא אוכל ושותה בכל יום, ומי שמכינים את מזונו הם משרתי ביתו. *namma* "ועוד" פותח סעיף חדש; *anda=ma* ייתורגם `ונוסף על כך`.
@@ -107,7 +107,7 @@
 
 ### 2.3
 `UM[BIN-i]a da-a-an e-eš-du pár-ku-wa-ia TÚG{ḪI.A} wa-⸢aš⸣-ša-⸢an⸣ ḫar-kán-du`
-> וגם ציפורניהם – לקוחים יהיו; וגם בגדים טהורים לבושים יהיו.
+> וגם ציפורניהם – לקוחים יהיו; וגם לבושים יהיו בגדים טהורים.
 - **פירוק:** `UM[BIN-i]a` – UMBIN "fingernail" ("ציפורניהם") + =ya "and, also" ("וגם"); `da-a-an` – dā- "take", participle n. (*dān*) ("לקוחים"); `e-eš-du` – eš- "be", imp. 3sg ("יהיו"); `pár-ku-wa-ia` – parkui- "pure, clean", n. pl. ("טהורים") + =ya "also" ("וגם"); `TÚG{ḪI.A}` – TÚG "garment", pl. ("בגדים"); `wa-⸢aš⸣-ša-⸢an⸣` – waššant-, participle of wašš- "clothe, put on" ("לבושים"); `ḫar-kán-du` – ḫar(k)- "have, hold", imp. 3pl (with the participle: a resultative periphrasis, "let them have put on") ("יהיו").
 - **הערות:** *dān ēšdu* "לקוח יהיה" – כלומר יוסר. *waššan ḫarkandu* – צירוף הבינוני עם *ḫark-* "להחזיק" הוא תואר תוצאתי: "שיהיו (במצב של) לבושים"; תרגמנו `לבושים יהיו`. אותו צירוף בדיוק בעבד שבמשל (2.10).
 
@@ -121,7 +121,7 @@
 
 ### 2.5
 `[ ]-kán-zi na-aš a-pu-u-uš e-eš-ša-an-du I-NA É ⸢{LÚ}⸣NINDA.DÙ.DÙ-ma-aš-⸢kán⸣`
-> […]…ים – אותם אלה יעשו. ואילו בית האופים,
+> […]…ים – אלה יעשו אותם. ואילו בית האופים,
 - **פירוק:** `[ ]-kán-zi` – the end of a verb, pres. 3pl (*-kanzi*) ("[…]…ים"); `na-aš` – nu "and" + =aš "them", acc. pl. c. (the loaves; an enclitic subject does not stand with a transitive verb) ("אותם"); `a-pu-u-uš` – apa- "that (one)", nom. pl. c. (late form) ("אלה"); `e-eš-ša-an-du` – ešša-, iterative of iya- "do, make", imp. 3pl ("יעשו"); `I-NA É` – INA "in" + É "house" ("בית"); `⸢{LÚ}⸣NINDA.DÙ.DÙ-ma-aš-⸢kán⸣` – NINDA.DÙ.DÙ "baker", gen. pl. ("האופים") + =ma "but" ("ואילו") + =šmaš + =kan.
 - **הערות:** *LÚ NINDA.DÙ.DÙ* "עושה הלחם", האופה. *I-NA É* "בבית" – הצירוף הוא נושא המשפט הבא (2.6): "הבית שבו הם עושים אותם".
 
@@ -149,7 +149,7 @@
 
 ### 2.9
 `ZI-an-za-ma 1-aš-pát ARAD-ŠU ⸢ku⸣-wa-pí A-NA EN-ŠU pé-ra-⸢an⸣ ša-ra-a-ar-ta-ri`
-> ואילו הנפש – אחת היא ממש. עבדו, כאשר לפני אדוניו עומד,
+> ואילו הנפש – אחת היא ממש. כאשר עבדו עומד לפני אדוניו,
 - **פירוק:** `ZI-an-za-ma` – ZI "soul", nom. sg. ("הנפש") + =ma "but" ("ואילו"); `1-aš-pát` – 1 (*ā*-?) "one", nom. sg. c. ("אחת") + =pat "precisely" ("ממש"); `ARAD-ŠU` – ARAD "servant, slave" + -ŠU (Akk.) "his" ("עבדו"); `⸢ku⸣-wa-pí` – kuwapi "when" ("כאשר"); `A-NA EN-ŠU` – ANA "to" + EN "lord, master" + -ŠU "his" ("לפני אדוניו"); `pé-ra-⸢an⸣` – peran "before, in front of" ("לפני"); `ša-ra-a-ar-ta-ri` – šarā "up" + ar- "stand", mid. pres. 3sg ("עומד").
 - **נוסחים:** KBo 69.82 (O) i 1′: `[ ] ⸢EN-ŠU⸣` – "אדוניו", קצה שורה.
 - **הקבלה:** [equivalent] `הַקְרִיבֵהוּ נָא לְפֶחָתֶךָ הֲיִרְצְךָ אוֹ הֲיִשָּׂא פָנֶיךָ` (מלאכי א:ח) – גם מלאכי משווה את עבודת האל לשירות אדון בשר ודם: מה שלא יגישו לפחה, לא יגישו לאל. ההקבלה טיפולוגית, וקרובה מאוד בהיגיון.
@@ -157,14 +157,14 @@
 
 ### 2.10
 `na-aš wa-ar-pa-an-za nu pár-ku-wa-ia wa-aš-ša-an ḫar-⸢zi⸣`
-> והוא רחוץ, וגם (בגדים) טהורים לבוש הוא;
+> והוא רחוץ, וגם לבוש הוא (בגדים) טהורים;
 - **פירוק:** `na-aš` – nu "and" + =aš "he" ("והוא"); `wa-ar-pa-an-za` – warpant-, participle of warp- "bathe", nom. sg. c. ("רחוץ"); `nu` – nu "and" ("ו־"); `pár-ku-wa-ia` – parkui- "pure, clean", n. pl. ("טהורים") + =ya "also" ("וגם"); `wa-aš-ša-an` – waššant-, participle of wašš- "clothe" ("לבוש"); `ḫar-⸢zi⸣` – ḫar(k)- "have", pres. 3sg (resultative periphrasis) ("הוא").
 - **נוסחים:** B {1} i 15′ (`]x-an-zi`) ו־C {3} 2′: עקבות בלבד.
 - **הערות:** העבד הטוב רחוץ ולבוש בגדים נקיים – בדיוק מה שנדרש מן האופים (2.2–2.3; אותן מילים: *warpant-*, *parkuwaya waššan ḫark-*). המשל מנמק את החוק.
 
 ### 2.11
 `⸢nu⸣-uš-ši na-aš-šu a-da-an-na pé-eš-ke-ez-zi na-aš-ma-aš-ši a-ku-wa-an-na ⸢pé-eš-ke⸣-ez-zi`
-> ונותן לו – בין לאכול, או לשתות נותן לו;
+> ונותן לו – בין לאכול, או נותן לו לשתות;
 - **פירוק:** `⸢nu⸣-uš-ši` – nu "and" + =šši "to him" ("ו… לו"); `na-aš-šu` – naššu "either" ("בין"); `a-da-an-na` – ed- "eat", infinitive (*adanna*) ("לאכול"); `pé-eš-ke-ez-zi` – pai- "give", iterative pres. 3sg ("נותן"); `na-aš-ma-aš-ši` – našma "or" ("או") + =šši "to him" ("לו"); `a-ku-wa-an-na` – eku- "drink", infinitive ("לשתות"); `⸢pé-eš-ke⸣-ez-zi` – pai- "give", iterative pres. 3sg ("נותן").
 - **הערות:** *naššu … našma* "בין … או" (`../renderings.md` §7.11). צורות החזרה (*pešk-*, *azzikk-*, *akkušk-*) מתארות נוהג יומיומי, ולכן הבינוני (`נותן`, `אוכל`, `שותה`).
 
@@ -175,7 +175,7 @@
 
 ### 2.13
 `na-aš ZI-an ar-ḫa la-a-an-za na-at-ši-kán an-da ⸢da⸣-me-en-kiš-⸢ke-et-ta⸣`
-> הוא – בנפשו רפוי הלאה, ו(נפשו) בו דבקה;
+> הוא – רפוי הלאה בנפשו, ו(נפשו) דבקה בו;
 - **פירוק:** `na-aš` – nu "and" + =aš "he" ("הוא"); `ZI-an` – ZI "soul, mind", acc. of respect ("בנפשו"); `ar-ḫa` – arḫa "away" (preverb) ("הלאה"); `la-a-an-za` – lānt-, participle of lā- "loosen, release; relieve (the mind)", nom. sg. c. ("רפוי"); `na-at-ši-kán` – nu "and" + =at "it" (the mind?, see הערות) + =šši "to him" + =kan ("ו(נפשו) … בו"); `an-da` – anda "in, into" (preverb, not translated separately); `⸢da⸣-me-en-kiš-⸢ke-et-ta⸣` – tamenk- "attach, adhere", iterative mid. pres. 3sg ("דבקה").
 - **תרגומים:** S&B 1935: «he is relaxed in spirit and he is favorably inclined (?) to him»; CHD L–N s.v. *lā-* 7: «(in) his mind he is relieved».
 - **הקבלה:** [equivalent] `וַתִּדְבַּק נַפְשׁוֹ בְּדִינָה` (בראשית לד:ג) – אותו דימוי של נפש ה"דבקה" באחר, מתוך קרבה ורצון טוב.
@@ -198,7 +198,7 @@
 
 ### 2.16
 `TUKU.TUKU-nu-zi na-an-kán na-aš-šu ku-na-an-zi na-aš-ma-⸢kán⸣ KIR₁₄-ŠÚ ⸢IGI{ḪI.A}-ŠU⸣`
-> יַזְעִים – בין שאותו הורגים, או לאפו, לעיניו,
+> יַזְעִים – בין שהורגים אותו, או לאפו, לעיניו,
 - **פירוק:** `TUKU.TUKU-nu-zi` – TUKU.TUKU-nu- (kartimmiyanu-) "make angry" (causative of kartimmiya- `זעם`), pres. 3sg ("יַזְעִים"); `na-an-kán` – nu "and" + =an "him" + =kan ("אותו"); `na-aš-šu` – naššu "either" ("בין ש־"); `ku-na-an-zi` – kuen- "kill" (HL1 `הרג`), pres. 3pl ("הורגים"); `na-aš-ma-⸢kán⸣` – našma "or" ("או"); `KIR₁₄-ŠÚ` – KIR₁₄ "nose" + -ŠU "his" ("לאפו"); `⸢IGI{ḪI.A}-ŠU⸣` – IGI "eye", pl. + -ŠU ("לעיניו").
 - **נוסחים:** B {2} i 2″–3″: `na-an-kán na-aš-š[u` / `i-da-la-u-wa-aḫ-ḫa-[an-zi` – B שובר את השורה במקום אחר, והפועל "ירעו" בא אצלו בשורה הבאה; התוכן זהה.
 - **הקבלה:** [absent] בתורה אין עונש של עבד על הכעסת אדונו; להפך – חוקי העבד בשמות כא מגנים על גופו (עין ושן). המשל החתי מתאר את המציאות בלי ביקורת.
@@ -220,8 +220,8 @@
 
 ### 2.19
 `na-aš-ta pár-ra-an-da ḫal-zi-an-zi-pát na-an UL [k]u-i[t]-ki DÙ-an-⸢zi⸣`
-> ומעבר – *רק קוראים לו*, ואותו – לא עושים לו מאומה.
-- **פירוק:** `na-aš-ta` – nu "and" + =ašta (local particle) ("ו־"); `pár-ra-an-da` – parranda "across, over, beyond" ("מעבר"); `ḫal-zi-an-zi-pát` – ḫalzai- "call, summon", pres. 3pl ("קוראים") + =pat "only, just" ("רק"); `na-an` – nu "and" + =an "him" ("ואותו"); `UL` – UL "not" ("לא"); `[k]u-i[t]-ki` – kuitki "anything" ("מאומה"); `DÙ-an-⸢zi⸣` – DÙ (iya-) "do", pres. 3pl ("עושים").
+> ומעבר – *רק קוראים לו*, ולו – לא עושים מאומה.
+- **פירוק:** `na-aš-ta` – nu "and" + =ašta (local particle) ("ו־"); `pár-ra-an-da` – parranda "across, over, beyond" ("מעבר"); `ḫal-zi-an-zi-pát` – ḫalzai- "call, summon", pres. 3pl ("קוראים") + =pat "only, just" ("רק"); `na-an` – nu "and" + =an "him" ("ולו": the Hebrew "do to him"); `UL` – UL "not" ("לא"); `[k]u-i[t]-ki` – kuitki "anything" ("מאומה"); `DÙ-an-⸢zi⸣` – DÙ (iya-) "do", pres. 3pl ("עושים").
 - **נוסחים:** B {2} i 5″: `na-aš-ta pár-[ra-an-da` – זהה.
 - **תרגומים:** S&B 1935: «Then they revile him in public (?), and they consider him nothing at all» – הם הבינו "קוראים לו (גנאי) בפומבי"; אנו קוראים את השורה כאפשרות הקלה בסולם העונשים: "או שרק קוראים לו (לנזיפה), ואין עושים לו דבר".
 - **הערות:** משפט קשה; התרגום מילולי. *parranda ḫalzai-* – "לקרוא מעבר" (להזמין, לזמן?); *-pat* "רק". הקריאה שלנו מסיימת את הסולם שנפתח ב־2.16: בין מוות ובין נזיפה – הכול בידי האדון. *UL kuitki iyanzi* "לא עושים דבר".
@@ -239,7 +239,7 @@
 
 ### 3.1
 `⸢ma⸣-a-an-ma-aš-ta ZI-TUM DINGIR-L[IM-ma ku-i]š ⸢TUKU.TUKU-ia-nu-zi⸣`
-> ואילו אם מישהו את נפש הָאֵל יַזְעִים –
+> ואילו אם מישהו יַזְעִים את נפש הָאֵל –
 - **פירוק:** `⸢ma⸣-a-an-ma-aš-ta` – mān "if" + =ma "but" ("ואילו אם") + =ašta; `ZI-TUM` – ZI (Akk. *napištu*) "soul", acc. ("את נפש"); `DINGIR-L[IM-ma` – DINGIR-LIM "god", gen. ("האל") + =ma; `ku-i]š` – kuiš "someone" (indefinite after mān) ("מישהו"); `⸢TUKU.TUKU-ia-nu-zi⸣` – TUKU.TUKU-nu- "make angry", pres. 3sg ("יַזְעִים").
 - **נוסחים:** B {2+1} i 7″/31″: `ma-a-[an-ma-aš-ta a-pé]-⸢e⸣-da-ni-pát` – B שובר את השורה אחרת (ובו כבר "באותו עצמו" של 3.2); L 2′: `[ma-a-an-ma-aš]-⸢ta⸣ ZI DINGIR-LIM-ma ku-[iš` – זהה.
 - **הקבלה:** [equivalent] `פֹּקֵד עֲוֹן אָבֹת עַל בָּנִים עַל שִׁלֵּשִׁים וְעַל רִבֵּעִים לְשֹׂנְאָי` (שמות כ:ד) – גם אל ישראל "פוקד" חטא על הדורות; [divergence] שם הדורות (בנים, שלשים, רבעים), וכאן כל בית האב: אשה, בנים, זרע, עבדים, בהמה ותבואה (3.3–3.4). הקבלה טיפולוגית.
@@ -247,7 +247,7 @@
 
 ### 3.2
 `na-at-kán DINGIR-LIM a-pé-e-da-ni-p[át 1]-⸢e⸣-da-ni an-da š[a-an-aḫ-z]i`
-> האם הָאֵל אותו באותו (אדם) עצמו, באחד, ידרוש?
+> האם הָאֵל ידרוש אותו באותו (אדם) עצמו, באחד?
 - **פירוק:** `na-at-kán` – nu "and" + =at "it" + =kan ("אותו"); `DINGIR-LIM` – DINGIR-LIM "god", nom. ("האל"); `a-pé-e-da-ni-p[át` – apa- "that one", d.-l. sg. + =pat "the very" ("באותו … עצמו"); `1]-⸢e⸣-da-ni` – 1 "one", d.-l. sg. ("באחד"); `an-da` – anda "in, on" (preverb with šanḫ-); `š[a-an-aḫ-z]i` – šanḫ- "seek (out), require; avenge", pres. 3sg ("ידרוש").
 - **נוסחים:** C {3} 4′: `[ na-a]t-kán DINGIR-LUM a-pé-e-da-ni-pát [` – *DINGIR-LUM* (נומינטיב) במקום *DINGIR-LIM*; L 3′: `[ 1-e-da-n]i an-da ša-an-aḫ-z[i` – זהה.
 - **תרגומים:** S&B 1935: «does the god punish him alone for it?».
@@ -360,7 +360,7 @@
 
 ### 4.11
 `ḫa-ap-pár da-aš-ket₉-te-ni DINGIR{MEŠ}-*aš*-ma-*at-kán* ZI-ni wa-ak-ši-ia-nu-ut-te-ni`
-> מסחר לוקחים – ואילו לנפש הָאֵלִים אותם תחסירו –
+> לוקחים מסחר – ואילו לנפש הָאֵלִים תחסירו אותם –
 - **פירוק:** `ḫa-ap-pár` – ḫappar "trade, deal, price" (HL1 `מסחר`), acc. ("מסחר"); `da-aš-ket₉-te-ni` – dā- "take", iterative pres. 2pl (*dašk-*) ("לוקחים"); `DINGIR{MEŠ}-*aš*-ma-*at-kán*` – DINGIR "god", gen. pl. ("הָאֵלִים") + =ma "but" ("ואילו") + =at "them" ("אותם") + =kan (written over an erasure); `ZI-ni` – ZI "soul", d.-l. sg. ("לנפש"); `wa-ak-ši-ia-nu-ut-te-ni` – wakšiyanu- "cause to lack, make deficient", pres. 2pl ("תחסירו").
 - **נוסחים:** B {4} 7″–8″: `[ da-aš-ket₉-t]e-ni DINGIR{MEŠ}-aš-ma-at-kán` / `[ZI-ni wa-ak-ši-ia-nu-ut-te]-ni` – זהה, בלי המחיקה; C {3} 15′: `[ wa-ak-ši-ia-n]u-ut-te-ni`.
 - **תרגומים:** S&B 1935: «and you, temple officials, accept pay from those who give it …, you will cause it (the festival) to fall short of the desire of the god».
@@ -371,21 +371,21 @@
 
 ### 5.1
 `na-aš-ma-at-kán ma-a-an ša-ra-a ti-ia-an-da ku-wa-pí da-at-te-ni`
-> או אם את השׂוּמִים למעלה אי־פעם תיקחו,
+> או אם אי־פעם תיקחו את השׂוּמִים למעלה,
 - **פירוק:** `na-aš-ma-at-kán` – našma "or" ("או") + =at "them" ("את") + =kan; `ma-a-an` – mān "if" ("אם"); `ša-ra-a` – šarā "up" ("למעלה"); `ti-ia-an-da` – tiyant-, participle of dai- "put", n. pl. ("השׂוּמִים"); `ku-wa-pí` – kuwapi "ever, at some time" ("אי־פעם"); `da-at-te-ni` – dā- "take", pres. 2pl ("תיקחו").
 - **נוסחים:** B {7+4} 1″/9″: `[na-aš-ma]-at-kán ma-a-a[n ša-ra-a ti-ia-an-da ku]-wa-pí da-at-te-ni` – זהה; C {3+2} 16′/5″, J 1′: סוף השורה.
 - **תרגומים:** S&B 1935: «Or if you take it (i.e. the food and drink for the festival), when (it has been) set up».
 
 ### 5.2
 `na-at DINGIR{MEŠ}-aš ZI-ni pa-ra-a UL ar-nu-ut-te-ni nu-uš-ma-ša-at ar-ḫa`
-> ואותם לנפש הָאֵלִים קדימה לא תַּגִּיעוּ, ולכם אותם הלאה
+> ולא תַּגִּיעוּ אותם קדימה לנפש הָאֵלִים, ואותם – לכם – הלאה
 - **פירוק:** `na-at` – nu "and" + =at "them" ("ואותם"); `DINGIR{MEŠ}-aš` – DINGIR "god", gen. pl. ("הָאֵלִים"); `ZI-ni` – ZI "soul", d.-l. ("לנפש"); `pa-ra-a` – parā "forth" ("קדימה"); `UL` – UL "not" ("לא"); `ar-nu-ut-te-ni` – arnu- "bring, deliver" (HL1 `הִגִּיעַ`), pres. 2pl ("תַּגִּיעוּ"); `nu-uš-ma-ša-at` – nu "and" + =šmaš "for you" ("ולכם") + =at "them" ("אותם"); `ar-ḫa` – arḫa "away" ("הלאה").
 - **נוסחים:** B {7+4} 2″/10″, C {2} 6″, H i 1′ – זהים.
 - **הערות:** *parā arnu-* "להגיע (דבר) קדימה, עד" – להביא את המנה עד לאל עצמו. *arnu-* `הִגִּיעַ` כבחוקים (מנוקד תמיד).
 
 ### 5.3
 `I-NA É{MEŠ}-KU-NU pé-e ḫar-te-ni na-⸢at⸣ šu-me-⸢el⸣ DAM{MEŠ}-KU-NU DUMU{MEŠ}-KU-NU`
-> אל בתיכם תובילו, ואותם – נשיכם, בניכם,
+> תובילו אל בתיכם, ואותם – נשיכם, בניכם,
 - **פירוק:** `I-NA É{MEŠ}-KU-NU` – INA "in(to)" + É "house", pl. + -KUNU "your" ("אל בתיכם"); `pé-e` – pē "there, away" (preverb with ḫar(k)-); `ḫar-te-ni` – ḫar(k)- "hold", pres. 2pl; *pē ḫar(k)-* "take (away) to, carry off to" ("תובילו"); `na-⸢at⸣` – nu "and" + =at "them" ("ואותם"); `šu-me-⸢el⸣` – šumel "your" (gen. of šumeš) (not translated: -KUNU already says "your"); `DAM{MEŠ}-KU-NU` – DAM "wife", pl. + -KUNU ("נשיכם"); `DUMU{MEŠ}-KU-NU` – DUMU "child", pl. + -KUNU ("בניכם").
 - **נוסחים:** B {7+4} 3″/11″; C {2} 7″: `[ DAM{MEŠ}-KU-N]U DUMU{MEŠ}-KU-NU SAG.GÉME.ARAD{MEŠ}-K[U-NU]` – זהים.
 - **תרגומים:** S&B 1935: «and you carry it away from them to your houses, and your wives, your children, (and) your slaves eat it up».
@@ -410,7 +410,7 @@
 
 ### 5.6
 `pé-eš-te-ni A-NA ZI-TUM DINGIR-LIM-ma-at-kán da-at-te-ni`
-> תיתנו; ואילו מנפש הָאֵל אותם תיקחו,
+> תיתנו; ואילו מנפש הָאֵל תיקחו אותם,
 - **פירוק:** `pé-eš-te-ni` – pai- "give", pres. 2pl ("תיתנו"); `A-NA ZI-TUM` – ANA "to; (with dā-) from" + ZI (Akk. *napištu*) "soul" ("מנפש"); `DINGIR-LIM-ma-at-kán` – DINGIR-LIM "god", gen. ("הָאֵל") + =ma "but" ("ואילו") + =at "them" ("אותם") + =kan; `da-at-te-ni` – dā- "take", pres. 2pl ("תיקחו").
 - **נוסחים:** B {7} 6″: `[A-N]A ZI DINGIR-LIM-ma-at-kán` – *ZI* בלי התוספת האכדית; H i 4′: `[ ZI-TUM DINGIR-L]IM-ma-at-kán da-at-te-ni ⸢na-at⸣-ši ⸢pa-ra-a⸣-p[át` – H שובר את השורה אחרת.
 - **תרגומים:** S&B 1935: «(if) you take it from the god himself».
@@ -418,7 +418,7 @@
 
 ### 5.7
 `na-at-ši pa-ra-a-pát UL ar-nu-ut-te-ni na-at ták-ša-an šar-ra-aš`
-> ואותם לו קדימה ממש לא תַּגִּיעוּ, ואותם – לשניים חלק,
+> ולא תַּגִּיעוּ אותם לו קדימה ממש, ואותם – לשניים חלק,
 - **פירוק:** `na-at-ši` – nu "and" + =at "them" ("ואותם") + =šši "to him" ("לו"); `pa-ra-a-pát` – parā "forth" ("קדימה") + =pat "precisely" ("ממש"); `UL` – UL "not" ("לא"); `ar-nu-ut-te-ni` – arnu- "bring, deliver", pres. 2pl ("תַּגִּיעוּ"); `na-at` – nu "and" + =at "them" ("ואותם"); `ták-ša-an` – takšan "together; in half" (HL1 *takšan šarra-* `לשניים יחלקו`) ("לשניים"); `šar-ra-aš` – šarra- "part, share", nom. sg. ("חלק").
 - **נוסחים:** B {7} 7″; C {2} 10″: `[ na-a]t ták-ša-an šar-ra-aš` – זהים.
 - **תרגומים:** S&B 1935: «and do not bring it straight to him, and share by share you give it away».
@@ -433,7 +433,7 @@
 
 ### 5.9
 `SAG.DU-⸢az⸣ GAM-an ki-it-ta-ru na-at-kán le-e šar-ra-at-te-ni`
-> בראש – למטה – מונח יהיה! ואותם אַל תחלקו!
+> יהיה מונח בראש, למטה! ואַל תחלקו אותם!
 - **פירוק:** `SAG.DU-⸢az⸣` – SAG.DU "head", abl. ("בראש"); `GAM-an` – GAM-an (kattan) "down, below" ("למטה"); `ki-it-ta-ru` – ki- "lie, be placed", mid. imp. 3sg ("מונח יהיה"); `na-at-kán` – nu "and" + =at "them" ("ואותם") + =kan; `le-e` – lē "not!" ("אַל"); `šar-ra-at-te-ni` – šarra- "divide", pres. 2pl ("תחלקו").
 - **נוסחים:** B {7} 9″: `[na]-⸢at-kán le-e⸣ [`; H i 6′: `[ SA]G.DU-za GAM-an ki-it-ta-ru na-at-kán le-[e` – *SAG.DU-za* (כתיב אחר של אבלטיב) – זהים.
 - **תרגומים:** S&B 1935: «Do not divide it (i.e. the food)».
@@ -453,7 +453,7 @@
 
 ### 6.1
 `IŠ-TU NINDA KAŠ GEŠTIN I-NA É DINGIR-LIM ḫu-u-ma-an ša-ra-a pé-e ḫar-tén`
-> מן הלחם, השכר, היין – אֶל בית הָאֵל הכול למעלה הובילו!
+> מן הלחם, השכר, היין – הובילו הכול למעלה אֶל בית הָאֵל!
 - **פירוק:** `IŠ-TU NINDA` – IŠTU "from, of" + NINDA "bread" ("מן הלחם"); `KAŠ` – KAŠ "beer" ("השכר"); `GEŠTIN` – GEŠTIN "wine" ("היין"); `I-NA É` – INA "in(to)" + É "house" ("אל בית"); `DINGIR-LIM` – DINGIR-LIM "god", gen. ("הָאֵל"); `ḫu-u-ma-an` – ḫūman "everything" ("הכול"); `ša-ra-a` – šarā "up" ("למעלה"); `pé-e` – pē "there" (preverb); `ḫar-tén` – ḫar(k)- "hold", imp. 2pl; *pē ḫar(k)-* "take, bring (to)" ("הובילו").
 - **נוסחים:** H i 8′: `[ ša-ra]-⸢a⸣ pé-e ḫar-tén IŠ-TU NINDA.GUR₄.RA DINGIR-LIM-za-kán [` – H שובר את השורה אחרת וממשיך מיד ב־6.2.
 - **תרגומים:** S&B 1935: «Of the bread, beer, (and) wine carry everything up into the temple».
@@ -469,7 +469,7 @@
 
 ### 6.3
 `KAŠ-ma-kán GEŠTIN IŠ-TU GAL-ia še-er ar-ḫa le-e ku-iš-ki la-a-ḫu-u-i`
-> ואילו את השכר, את היין – גם מן הכוס – מלמעלה הלאה אף אחד אַל ישפוך!
+> ואילו את השכר, את היין – גם מן הכוס – אף אחד אַל ישפוך מלמעלה הלאה!
 - **פירוק:** `KAŠ-ma-kán` – KAŠ "beer" ("את השכר") + =ma "but" ("ואילו") + =kan; `GEŠTIN` – GEŠTIN "wine" ("את היין"); `IŠ-TU GAL-ia` – IŠTU "from" + GAL "cup" ("מן הכוס") + =ya "also" ("גם"); `še-er` – šer "above, on top" ("מלמעלה"); `ar-ḫa` – arḫa "away" ("הלאה"); `le-e` – lē "not!" ("אַל"); `ku-iš-ki` – kuiški "anyone" ("אף אחד"); `la-a-ḫu-u-i` – laḫu- "pour", pres. 3sg ("ישפוך").
 - **נוסחים:** H i 9′: `[ KAŠ-m]a-kán {DUG}iš-pa-an-du-uz-zi-ia še-er a[r-ḫa]` – H כותב "(גם) מכלי־הנסך" (*išpantuzzi-*) במקום "מן הכוס" (*GAL*) של A; C {1} ii 1: `[ š]e-⸢er⸣ ar-ḫa le-e ku-iš-k[i`; KBo 61.323 lk. Kol. 1′: עקבות.
 - **תרגומים:** S&B 1935: «And let no one dip up beer (or) wine from the libation bowl»; CHD L–N s.v. *laḫu(wai)-* מביא את השורה בין עדויות הפועל.
@@ -477,7 +477,7 @@
 
 ### 6.4
 `ḫu-u-ma-an-pát DINGIR-LIM-ni 〈〈EGIR-pa〉〉 ma-ni-ia-aḫ-tén nam-ma-aš-ma-aš PA-NI DINGIR-LIM me-mi-an`
-> את הכול ממש לָאֵל מַנּוּ! ועוד – לכם, לפני הָאֵל, דבר
+> מַנּוּ לָאֵל את הכול ממש! ועוד – לכם, לפני הָאֵל, דבר
 - **פירוק:** `ḫu-u-ma-an-pát` – ḫūman "everything" ("את הכול") + =pat "precisely" ("ממש"); `DINGIR-LIM-ni` – DINGIR-LIM "god", d.-l. ("לָאֵל"); `〈〈EGIR-pa〉〉` – EGIR-pa "back", written by mistake (to be deleted; not translated); `ma-ni-ia-aḫ-tén` – maniyaḫḫ- "hand over, allot, assign" (CHD L–N), imp. 2pl ("מַנּוּ"); `nam-ma-aš-ma-aš` – namma "further, then" ("ועוד") + =šmaš "for you" ("לכם"); `PA-NI DINGIR-LIM` – PĀNI (Akk.) "before" + DINGIR-LIM ("לפני הָאֵל"); `me-mi-an` – memiya- "word", acc. sg. ("דבר").
 - **נוסחים:** C {1} ii 2: `[ m]a-ni-ia-aḫ-tén nam-ma-aš-ma-aš PA-NI DIN[GIR-LIM]` – בלי ה־*EGIR-pa* המיותר; H i 10′: `[ DINGIR]-LIM!-ni ma-ni-ia-aḫ-tén …` – גם הוא בלעדיו. ה־*EGIR-pa* של A הוא טעות סופר.
 - **תרגומים:** S&B 1935: «devote every bit to the god. Furthermore, in the presence of the god speak for yourselves (these) words»; CHD L–N s.v. *memiya-*: «Furthermore, speak (this) word for yourselves before the god».
@@ -549,7 +549,7 @@
 
 ### 6.13
 `[ ] ma-a-an {LÚ}Ú-BA-RUM-ma ku-e-da-ni ú-ez-zi [ ]`
-> […] ואילו אם אורח אל מישהו יבוא […]
+> […] ואילו אם אורח יבוא אל מישהו […]
 - **פירוק:** `[ ]` – lost; `ma-a-an` – mān "if" ("אם"); `{LÚ}Ú-BA-RUM-ma` – UBĀRU "guest" ("אורח") + =ma "but" ("ואילו"); `ku-e-da-ni` – kuedani "to someone" (indefinite after mān) ("אל מישהו"); `ú-ez-zi` – uwa- "come", pres. 3sg ("יבוא"); `[ ]` – lost.
 - **נוסחים:** H i 17′: `[ ku-e-d]a-ni-⸢ki?⸣ ú-ez-zi na-aš ma-a-an` – H כותב *kuedanikki* (הכינוי הסתמי המלא) – ההבדל שמזכיר CHD L–N s.v. *mān* 10 (*mān* + כינוי סתמי).
 - **תרגומים:** S&B 1935: «But if a citizen comes to anyone».
@@ -565,8 +565,8 @@
 
 ### 6.15
 `[{GIŠ}kat-ta-lu-uz-zi š]ar-ra-aš-ke-et-ta na-an [a-da-an-n]a ša-ra-a`
-> [מפתן] חוצה תמיד – אותו [לאכול] למעלה
-- **פירוק:** `[{GIŠ}kat-ta-lu-uz-zi` – kattaluzzi- "threshold" ("[מפתן]"); `š]ar-ra-aš-ke-et-ta` – šarra- "cross (a threshold), transgress", iterative mid. pres. 3sg ("חוצה תמיד"); `na-an` – nu "and" + =an "him" ("אותו"); `[a-da-an-n]a` – ed- "eat", infinitive ("[לאכול]"); `ša-ra-a` – šarā "up" ("למעלה").
+> [מפתן] חוצה – אותו [לאכול] למעלה
+- **פירוק:** `[{GIŠ}kat-ta-lu-uz-zi` – kattaluzzi- "threshold" ("[מפתן]"); `š]ar-ra-aš-ke-et-ta` – šarra- "cross (a threshold), transgress", iterative mid. pres. 3sg ("חוצה": the habitual of the personnel; review (c) ruling, no `תמיד`); `na-an` – nu "and" + =an "him" ("אותו"); `[a-da-an-n]a` – ed- "eat", infinitive ("[לאכול]"); `ša-ra-a` – šarā "up" ("למעלה").
 - **תרגומים:** CHD Š (*šarra-* 3a): «and he is accustomed to crossing the gods' and the king's threshold, (let him escort him up. Let him eat and drink)».
 - **הערות:** *šarra-* הוא פועל אחד בשני מובנים: "לחלק" (סעיף 5: `חלק`) ו"לחצות, לעבור (גבול, שבועה)". כאן – חציית המפתן, ולכן `חוצה` (פיצול לפי המובן, כמו *šanḫ-*). צורת החזרה: מי שרגיל לחצות את המפתן.
 
@@ -599,7 +599,7 @@
 
 ### 7.1
 `[ ] UDU ku-iš DINGIR-LIM-ni a-da-an-na u-un-na-an-za`
-> […] שה, אשר אֶל הָאֵל לאכול נִנְהָג,
+> […] שה, אשר נִנְהָג אֶל הָאֵל לאכול,
 - **פירוק:** `[ ]` – lost (B: "an ox or"?); `UDU` – UDU "sheep" ("שה"); `ku-iš` – kuiš "which", rel. nom. sg. ("אשר"); `DINGIR-LIM-ni` – DINGIR-LIM "god", d.-l. ("אל הָאֵל"); `a-da-an-na` – ed- "eat", infinitive ("לאכול"); `u-un-na-an-za` – unnant-, participle of unna- "drive (here)" (HL1 `נהג`), nom. sg. c. ("נִנְהָג").
 - **נוסחים:** כתב היד המוביל כאן הוא C (KBo 50.283+ ii 17): A ii 5′–16′ שבור (A ii 6′: `[ -n]i` בלבד); העותק האחר הוא B ii 1′–9′.
 - **תרגומים:** S&B 1935: «If an ox or a sheep is brought for the god to eat».
@@ -608,7 +608,7 @@
 
 ### 7.2
 `[šu-ma-aš-ma-za?-kán n]a-aš-šu GU₄ NIGA na-aš-ma UDU NIGA ar-ḫa e-ep-te-ni`
-> [ואילו אתם – לעצמכם?] בין שור מפוטם או שה מפוטם הלאה תתפסו,
+> [ואילו אתם – לעצמכם?] תתפסו הלאה בין שור מפוטם או שה מפוטם,
 - **פירוק:** `[šu-ma-aš-ma-za?-kán` – šumaš "you" + =ma "but" + =za "for yourselves" ("[ואילו אתם – לעצמכם?]"; TLHdig's `?` on =za); `n]a-aš-šu` – naššu "either" ("בין"); `GU₄` – GU₄ "ox" ("שור"); `NIGA` – NIGA "fattened" (HL1 `מפוטם`) ("מפוטם"); `na-aš-ma` – našma "or" ("או"); `UDU` – UDU "sheep" ("שה"); `NIGA` – "fattened" ("מפוטם"); `ar-ḫa` – arḫa "away" ("הלאה"); `e-ep-te-ni` – ēpp- "seize, take", pres. 2pl ("תתפסו").
 - **נוסחים:** B {1} ii 1′: `[š]u-ma-aš-ma-⸢za⸣-k[án` – מאשר את השחזור.
 - **הערות:** *arḫa ēpp-* "לתפוס הלאה" – לקחת לעצמכם, להפריש.
@@ -631,14 +631,14 @@
 
 ### 7.5
 `[na-aš-ma-an-za-an-kán ḫ]a-a-li an-da tar-na-at-te-ni na-aš-ma-an-za-an-kán i-ú-ki`
-> [או שאותו] אל המכלאה פנימה תשלחו, או שאותו לעול
+> [או שאותו] תשלחו פנימה אל המכלאה, או שאותו לעול
 - **פירוק:** `[na-aš-ma-an-za-an-kán` – našma "or" + =an "it" + =za + =an + =kan ("[או שאותו]"); `ḫ]a-a-li` – ḫali- "corral, pen" (HL1 `מכלאה`), d.-l. ("אל המכלאה"); `an-da` – anda "in" ("פנימה"); `tar-na-at-te-ni` – tarna- "let (in)", pres. 2pl ("תשלחו"); `na-aš-ma-an-za-an-kán` – našma "or" + =an "it" ("או שאותו"); `i-ú-ki` – iuk- "yoke", d.-l. ("לעול").
 - **נוסחים:** B {1} ii 4′: `na-aš-ma-an-za-an-kán ḫa-a-li a[n-da` – זהה.
 - **הערות:** *ḫali-* כאן "מכלאה" ולא "משמרת" (`../renderings.md` §7.2: שתי מילים). העול: השור המוקדש לאל נרתם לחריש בשדה של הכוהן.
 
 ### 7.6
 `[kat-ta-an da-a-it-t]e-ni na-aš-ma-za-kán UDU a-ša-u-ni an-da tar-na-at-te-ni`
-> [מתחת תָּשִׂימוּ], או שאת השה אל הדיר פנימה תשלחו,
+> [מתחת תָּשִׂימוּ], או שאת השה תשלחו פנימה אל הדיר,
 - **פירוק:** `[kat-ta-an` – kattan "under, beneath" ("[מתחת]"); `da-a-it-t]e-ni` – dai- "put, place", pres. 2pl ("[תָּשִׂימוּ]"); `na-aš-ma-za-kán` – našma "or" + =za + =kan ("או ש־"); `UDU` – UDU "sheep" ("את השה"); `a-ša-u-ni` – ašawar "(sheep)fold" (HL1 `דיר`), d.-l. ("אל הדיר"); `an-da` – anda "in" ("פנימה"); `tar-na-at-te-ni` – tarna- "let (in)", pres. 2pl ("תשלחו").
 - **נוסחים:** B {1} ii 5′: `GAM-an da-a-it-te-ni na-aš-ma-an-za-an-k[án` – *kattan* בסימן GAM; A ii 9′, 12′; KBo 52.261 4′–5′ – זהים.
 
@@ -661,8 +661,8 @@
 
 ### 7.9
 `[pé-eš-te-ni nu-za-kán Š]ÁM še-er da-at-te-ni na-aš-ta DINGIR-LIM-ni`
-> [תיתנו], ואת המחיר עליו [לעצמכם] תיקחו – ואז מן הָאֵל,
-- **פירוק:** `[pé-eš-te-ni` – pai- "give", pres. 2pl ("[תיתנו]"); `nu-za-kán` – nu "and" + =za "for yourselves" ("[לעצמכם]", restored) + =kan; `Š]ÁM` – ŠÁM (ŠĪMU) "price" (HL2 `מחיר`) ("את המחיר"); `še-er` – šer "on top, over (it)" ("עליו"); `da-at-te-ni` – dā- "take", pres. 2pl ("תיקחו"); `na-aš-ta` – nu + =ašta ("ואז"); `DINGIR-LIM-ni` – DINGIR-LIM "god", d.-l. ("מן הָאֵל").
+> [תיתנו], ותיקחו [לעצמכם] את המחיר עליו – ומן הָאֵל,
+- **פירוק:** `[pé-eš-te-ni` – pai- "give", pres. 2pl ("[תיתנו]"); `nu-za-kán` – nu "and" + =za "for yourselves" ("[לעצמכם]", restored) + =kan; `Š]ÁM` – ŠÁM (ŠĪMU) "price" (HL2 `מחיר`) ("את המחיר"); `še-er` – šer "on top, over (it)" ("עליו"); `da-at-te-ni` – dā- "take", pres. 2pl ("תיקחו"); `na-aš-ta` – nu + =ašta ("ו־"); `DINGIR-LIM-ni` – DINGIR-LIM "god", d.-l. ("מן הָאֵל").
 - **נוסחים:** A ii 15′: `[ še-e]r da-at-te-ni`; B {1} ii 8′: `nu-za-kán ŠÁM še-er da-at-te-ni n[a-aš-t]a DI[NGIR-LIM-ni` – זהים.
 - **תרגומים:** S&B 1935: «and take a price for (it)».
 - **הערות:** *ŠÁM* הוא הסימן השומרי של *ŠĪMU* "מחיר" (`מחיר` כבחוקים החתיים, HL 178–186).
@@ -678,7 +678,7 @@
 
 ### 7.11
 `na-an-za [ n]a-aš-ma-an ta-me-e-da-ni pé-eš-te-ni`
-> ואותו לעצמכם […] או שאותו לאחר תיתנו,
+> ואותו לעצמכם […] או שאותו תיתנו לאחר,
 - **פירוק:** `na-an-za` – nu "and" + =an "it" ("ואותו") + =za "for yourselves" ("לעצמכם"); `[` – lost; `n]a-aš-ma-an` – našma "or" + =an "it" ("או שאותו"); `ta-me-e-da-ni` – tamai- "other", d.-l. ("לאחר"); `pé-eš-te-ni` – pai- "give", pres. 2pl ("תיתנו").
 - **נוסחים:** כאן חוזר A להוביל (ii 17′). C ii 26–27 אינו שומר משפט זה (או שומר אותו רק בשחזור); B {1} ii 10′: `na-aš-ma-an ⸢ta⸣-me-e-da-ni pé-eš-te-ni nu ki-iš-⸢ša-an⸣ [an-da pé-e-da-at-te-ni]` – B שומר את המשך המשפט (7.12).
 
@@ -1073,7 +1073,7 @@
 
 ### 9.18
 `i-da-a-la-u-an-ni-pát a-ra-an-ta-ri na-aš-ta DINGIR{MEŠ}-aš-pát ZI-ni`
-> לרעה ממש זה יעמוד. ו(לכן) לנפש הָאֵלִים בלבד
+> זה יעמוד לרעה ממש. ו(לכן) לנפש הָאֵלִים בלבד
 - **פירוק:** `i-da-a-la-u-an-ni-pát` – idālawatar "evil", d.-l. ("לרעה") + =pat ("ממש"); `a-ra-an-ta-ri` – ar- "stand", mid. pres. 3sg ("יעמוד"); `na-aš-ta` – nu + =ašta ("ו־"; "(לכן)" added); `DINGIR{MEŠ}-aš-pát` – DINGIR, gen. pl. ("הָאֵלִים") + =pat "only" ("בלבד"); `ZI-ni` – ZI, d.-l. ("לנפש").
 - **נוסחים:** E {3} 10″; F {2} 6′ – זהים; F {1} 1′: `[É?-er?-r]a?-⸢az⸣` (9.20).
 - **תרגומים:** S&B 1935: «they will persist in injuring you, (namely) yourselves, your wives, your children, (and) your slaves».
@@ -1148,7 +1148,7 @@
 
 ### 10.7
 `[n]a-aš I-NA É DINGIR-LIM še-e-šu-u-an-zi ⸢ḫu-u⸣-[da-a-ak š]a-ra-a ú-ed-du`
-> והוא – לבית הָאֵל לשכב (שם) מיד יעלה!
+> והוא – מיד יעלה לבית הָאֵל לשכב (שם)!
 - **פירוק:** `[n]a-aš` – nu + =aš "he" ("והוא"); `I-NA É DINGIR-LIM` – INA "into" + "god's house" ("לבית הָאֵל"); `še-e-šu-u-an-zi` – šeš- "sleep, spend the night", infinitive ("לשכב (שם)"); `⸢ḫu-u⸣-[da-a-ak` – ḫūdāk "at once" ("מיד"); `š]a-ra-a` – šarā "up" ("יעלה"); `ú-ed-du` – uwa- "come", imp. 3sg ("יעלה").
 - **הקבלה:** [equivalent] `וּסְבִיבוֹת בֵּית הָאֱלֹהִים יָלִינוּ: כִּי עֲלֵיהֶם מִשְׁמֶרֶת` (דברי הימים א ט:כז); `וּשְׁמוּאֵל שֹׁכֵב בְּהֵיכַל יְהוָה` (שמואל א ג:ג) – משרתי הקודש לנים בבית האל. הקבלה טיפולוגית.
 - **הערות:** *šeš-* "לישון, ללון" – `שכב` (גדור, מותר), כמו "ושמואל שוכב בהיכל". *šarā uwa-* `עלה` (8.19).
@@ -1170,14 +1170,14 @@
 
 ### 10.10
 `{GIŠ}kat-ta-lu-uz-zi šar-re-eš-ke-ez-zi nu 1-aš 1-aš I-NA É DINGIR-LIM`
-> את המפתן חוצה תמיד – אחד אחד בבית הָאֵל
-- **פירוק:** `{GIŠ}kat-ta-lu-uz-zi` – kattaluzzi- "threshold" (`מפתן`) ("את המפתן"); `šar-re-eš-ke-ez-zi` – šarra- "cross", iterative pres. 3sg (`חצה`) ("חוצה תמיד"); `nu` – nu (not translated); `1-aš 1-aš` – 1 "one", nom., doubled: "each one" ("אחד אחד"); `I-NA É DINGIR-LIM` – "in the god's house" ("בבית הָאֵל").
+> את המפתן חוצה – אחד אחד בבית הָאֵל
+- **פירוק:** `{GIŠ}kat-ta-lu-uz-zi` – kattaluzzi- "threshold" (`מפתן`) ("את המפתן"); `šar-re-eš-ke-ez-zi` – šarra- "cross", iterative pres. 3sg (`חצה`) ("חוצה": habitual; no `תמיד`, as 6.15); `nu` – nu (not translated); `1-aš 1-aš` – 1 "one", nom., doubled: "each one" ("אחד אחד"); `I-NA É DINGIR-LIM` – "in the god's house" ("בבית הָאֵל").
 - **נוסחים:** D {1} iv 5′–6′: `šar-ri-iš-ke-ez-zi` (כתיב אחר); KBo 61.323 r. Kol. 1′ – עקבות.
 - **הערות:** *DINGIR.MEŠ-aš kattaluzzi* "מפתן האלים" נחלק בין 10.9 ל־10.10. "מי שחוצה את המפתן" = מי שזכאי להיכנס (6.15). *1-aš 1-aš* "אחד אחד" (`כל אחד ואחד` הוא *ḫumantiya=pat* של HL1).
 
 ### 10.11
 `ša-ra-a še-e-šu-u-wa-an-zi le-e-pát kar-aš-ta-ri`
-> מלשכב למעלה אַל ייחתך כלל!
+> אַל ייחתך כלל מלשכב למעלה!
 - **פירוק:** `ša-ra-a` – šarā "up" ("למעלה"); `še-e-šu-u-wa-an-zi` – šeš- "sleep", infinitive ("מלשכב"); `le-e-pát` – lē + =pat ("אַל … כלל"); `kar-aš-ta-ri` – karš- "cut (off)" (HL1 karšš-, HL2 karš- `חתך`), mid. pres. 3sg ("ייחתך").
 - **נוסחים:** KBo 61.323 r. Kol. 2′ – עקבות.
 - **תרגומים:** S&B 1935: «Let them severally not neglect (?) to spend the night up in the temple».
@@ -1228,7 +1228,7 @@
 
 ### 10.18
 `pé-ra-an ḫu-u-⸢ia⸣-an-za e-eš-du nam-ma-ma ku-i-e-eš {LÚ.MEŠ}SANGA`
-> רץ בראש יהיה! ועוד: (אלה) אשר הם כוהנים –
+> יהיה רץ בראש! ועוד: (אלה) אשר הם כוהנים –
 - **פירוק:** `pé-ra-an` – peran "in front" ("בראש"); `ḫu-u-⸢ia⸣-an-za` – ḫuyant-, participle of ḫuwai- "run" ("רץ"); `e-eš-du` – eš- "be", imp. 3sg ("יהיה"); `nam-ma-ma` – namma "further" ("ועוד") + =ma; `ku-i-e-eš` – kuiēš "who", nom. pl. ("(אלה) אשר"); `{LÚ.MEŠ}SANGA` – "priests" ("הם כוהנים").
 - **נוסחים:** D {1} iv 15′ – זהה.
 - **תרגומים:** S&B 1935: «let one important priest be in command of the patrolmen».
@@ -1307,7 +1307,7 @@
 ### 11.3
 `tar-né-eš-⸢ke⸣-ez-zi na-aš tar-né-eš-ke-ed-du-pát ma-a-an {LÚ}ḫa-li-⸢ia-at⸣-tal-[`
 > שולח תמיד – ישלח תמיד! אם (משמרת) השומר
-- **פירוק:** `tar-né-eš-⸢ke⸣-ez-zi` – tarna- "let (go, in)" (`שלח`), iterative pres. 3sg ("שולח תמיד"); `na-aš` – nu + =aš "he" (not translated); `tar-né-eš-ke-ed-du-pát` – tarna-, iterative imp. 3sg ("ישלח תמיד") + =pat; `ma-a-an` – mān "if" ("אם"); `{LÚ}ḫa-li-⸢ia-at⸣-tal-[` – ḫaliyattalla- "watchman" ("השומר").
+- **פירוק:** `tar-né-eš-⸢ke⸣-ez-zi` – tarna- "let (go, in)" (`שלח`), iterative pres. 3sg ("שולח תמיד": the custom stressed – the verb doubled, the iterative twice, =pat); `na-aš` – nu + =aš "he" (not translated); `tar-né-eš-ke-ed-du-pát` – tarna-, iterative imp. 3sg ("ישלח תמיד") + =pat; `ma-a-an` – mān "if" ("אם"); `{LÚ}ḫa-li-⸢ia-at⸣-tal-[` – ḫaliyattalla- "watchman" ("השומר").
 - **נוסחים:** D {2} iv 5′: `[ tar-ni]-iš-ke-ed-du-pát` (כתיב אחר).
 - **תרגומים:** S&B 1935: «if anyone admits a priest, an IM.ME-priest, (and) keepers, let him admit (them)».
 - **הערות:** משפט סתום: *tarnešk-* "לשלוח, להניח (להיכנס)", בצורת החזרה; כנראה "כפי שכל אחד נוהג (לצאת לתפקידו?) – כך ינהג". התרגום מילולי, ו־*tarna-* `שלח` כבכל הטקסטים החתיים.
@@ -1343,8 +1343,8 @@
 
 ### 11.8
 `na-an a-ra-aḫ-zé-na-aš BÀD-aš UL ú-wa-an-zi nu a-pu-u-uš LÚ{MEŠ}˽É DINGIR-LIM`
-> ואותו (אנשי) החומה החיצונה לא רואים, ואילו אנשי בית הָאֵל ההם
-- **פירוק:** `na-an` – nu + =an "him" ("ואותו"); `a-ra-aḫ-zé-na-aš` – araḫzena- "outer" (`חיצוני`), gen.? ("החיצונה"); `BÀD-aš` – BÀD "wall" (HL1 `חומה`), gen. ("(אנשי) החומה"); `UL` – "not" ("לא"); `ú-wa-an-zi` – au(š)- "see", pres. 3pl ("רואים"); `nu` – nu ("ואילו"); `a-pu-u-uš` – apa- "those", acc. pl. ("ההם"); `LÚ{MEŠ}˽É DINGIR-LIM` – "men of the god's house" ("אנשי בית הָאֵל").
+> ו(אנשי) החומה החיצונה לא רואים אותו, ואנשי בית הָאֵל ההם
+- **פירוק:** `na-an` – nu + =an "him" ("ו… אותו"); `a-ra-aḫ-zé-na-aš` – araḫzena- "outer" (`חיצוני`), gen.? ("החיצונה"); `BÀD-aš` – BÀD "wall" (HL1 `חומה`), gen. ("(אנשי) החומה"); `UL` – "not" ("לא"); `ú-wa-an-zi` – au(š)- "see", pres. 3pl ("רואים"); `nu` – nu ("ו־"; no =ma: the contrast is in "outer" / "inside"); `a-pu-u-uš` – apa- "those", acc. pl. ("ההם"); `LÚ{MEŠ}˽É DINGIR-LIM` – "men of the god's house" ("אנשי בית הָאֵל").
 - **נוסחים:** D {2} iv 11′–12′ – זהה.
 - **תרגומים:** S&B 1935: «the surrounding walls do not see him; the temple officials see such (persons) within».
 - **הערות:** *araḫzenaš BÀD* `החומה החיצונה` (`../renderings.md` §7.2). ההיגיון: מה שהחומה החיצונה מחמיצה, שומרי המקדש שבפנים רואים – ולכן אסור להם לעזוב את המשמרת.
@@ -1358,7 +1358,7 @@
 
 ### 11.10
 `a-pa-a-aš-ma A-NA DINGIR-LÌ-ŠU ša-ra-a še-e-šu-u-an-zi le-e kar-aš-ta-ri`
-> ואילו הוא – אצל הָאֵל שלו – מלשכב למעלה אַל ייחתך!
+> ואילו הוא – אצל הָאֵל שלו – אַל ייחתך מלשכב למעלה!
 - **פירוק:** `a-pa-a-aš-ma` – apa- "he, that one" ("ואילו הוא") + =ma; `A-NA DINGIR-LÌ-ŠU` – ANA "to, with" + DINGIR-LIM "god" + -ŠU "his" ("אצל הָאֵל שלו"); `ša-ra-a` – šarā "up" ("למעלה"); `še-e-šu-u-an-zi` – šeš- "sleep", infinitive ("מלשכב"); `le-e` – lē ("אַל"); `kar-aš-ta-ri` – karš- "cut off", mid. pres. 3sg ("ייחתך").
 - **נוסחים:** E {2} iii 2′; K 5′ – זהים.
 - **הערות:** *DINGIR-LÌ-ŠU* "האל שלו" – לכל איש בית האל יש אל שהוא משרת. `הָאֵל שלו` (`אלוהיו` שמור: `אֵל` בכל הקורפוסים).
@@ -1387,7 +1387,7 @@
 
 ### 11.14
 `*I-⸢NA*⸣ É DINGIR-LÌ-ŠU pé-e-da-a-ú nu-uš-ši a-pa-a-aš lu-ú-ri-eš e-eš-du`
-> אֶל בית הָאֵל שלו יישא, וזו תהיה לו השפלה!
+> יישא אֶל בית הָאֵל שלו, וזו תהיה לו השפלה!
 - **פירוק:** `*I-⸢NA*⸣ É DINGIR-LÌ-ŠU` – INA "into" + É "house" + DINGIR-LIM + -ŠU "his" ("אֶל בית הָאֵל שלו"); `pé-e-da-a-ú` – peda- "carry" (`נשא`), imp. 3sg ("יישא"); `nu-uš-ši` – nu + =šši "to him" ("לו"); `a-pa-a-aš` – apa- "that" ("וזו"); `lu-ú-ri-eš` – luri- "humiliation", nom. ("השפלה"); `e-eš-du` – eš- "be", imp. 3sg ("תהיה").
 - **נוסחים:** C {1} iii 5′: `lu-u-ri-iš`; E {2} iii 6′: `lu-ú-ri-iš` – כתיבים אחרים.
 - **תרגומים:** CHD L–N s.v. *luri-*: «"Let that be his humiliation!"».
@@ -1638,7 +1638,7 @@
 
 ### 14.13
 `a-da-an-na ⸢pa-a⸣-i a-pé-e-⸢da⸣-ni-ma DINGIR{MEŠ}-eš za-ak-kar 𒑱du-ú-úr`
-> לאכול ייתן – ואילו לאותו (אחד) הָאֵלִים צואה ושתן
+> ייתן לאכול – ואילו לאותו (אחד) הָאֵלִים צואה ושתן
 - **פירוק:** `a-da-an-na` – ed- "eat", inf. ("לאכול"); `⸢pa-a⸣-i` – pai- "give", pres. 3sg ("ייתן"); `a-pé-e-⸢da⸣-ni-ma` – apa-, d.-l. ("ואילו לאותו (אחד)") + =ma; `DINGIR{MEŠ}-eš` – DINGIR, nom. pl. ("הָאֵלִים"); `za-ak-kar` – zakkar "excrement" ("צואה"); `𒑱du-ú-úr` – dūr (Luw., gloss wedge) "urine" ("ושתן").
 - **נוסחים:** C {1} iii 37′; B {5+1} iii 10′/19′ – זהים.
 - **תרגומים:** S&B 1935: «then the gods will give him dung (and) urine to eat (and) to drink».
@@ -1646,7 +1646,7 @@
 
 ### 14.14
 `a-da-an-na ⸢a-ku-wa⸣-an-na pí-an-zi ma-a-an-na-za MUNUS-i ku-iš GAM-an še-eš-zi`
-> לאכול ולשתות ייתנו! ואם מישהו עם אשה ישכב –
+> ייתנו לאכול ולשתות! ואם מישהו ישכב עם אשה –
 - **פירוק:** `a-da-an-na` – ed-, inf. ("לאכול"); `⸢a-ku-wa⸣-an-na` – eku-, inf. ("ולשתות"); `pí-an-zi` – pai- "give", pres. 3pl ("ייתנו"); `ma-a-an-na-za` – mān "if" + =a + =za ("ואם"); `MUNUS-i` – MUNUS "woman", d.-l. ("עם אשה"); `ku-iš` – kuiš "someone" ("מישהו"); `GAM-an` – kattan "with" ("עם"); `še-eš-zi` – šeš- "sleep" (`שכב`), pres. 3sg ("ישכב").
 - **נוסחים:** C {1} iii 38′; B {5} iii 11′; I 1′ – זהים.
 - **הקבלה:** [divergence] `וְאִשָּׁה אֲשֶׁר יִשְׁכַּב אִישׁ אֹתָהּ שִׁכְבַת זָרַע וְרָחֲצוּ בַמַּיִם וְטָמְאוּ עַד הָעָרֶב` (ויקרא טו:יח) – ראו 10.5.
@@ -1689,7 +1689,7 @@
 
 ### 14.20
 `[na-at-š]i wa-aš-túl ma-a-an-ma-za IT-TI MUNUS-TI ku-iš še-eš-zi`
-> [וזה] לו חטא! ואילו אם מישהו עם אשה ישכב,
+> [וזה] לו חטא! ואילו אם מישהו ישכב עם אשה,
 - **פירוק:** `[na-at-š]i` – nu + =at "it", restored ("[וזה]") + =šši "to him" ("לו"); `wa-aš-túl` – waštul (`חטא`) ("חטא"); `ma-a-an-ma-za` – mān "if" + =ma ("ואילו אם") + =za; `IT-TI MUNUS-TI` – "with a woman" ("עם אשה"); `ku-iš` – kuiš "someone" ("מישהו"); `še-eš-zi` – šeš- (`שכב`), pres. 3sg ("ישכב").
 - **נוסחים:** C {1} iii 43′; I 6′ – זהים.
 - **תרגומים:** CHD Š s.v. *šeš-*: «But if someone (i.e., a priest) goes to bed with a woman (… let him most definitely wash)».
@@ -1809,8 +1809,8 @@
 
 ### 15.7
 `uš-kán-zi ma-a-an-[na-a]t iš-ta-an-ta-nu-uš-ket₉-te-ni`
-> יהיו רואים! ואם אותו תאחרו תמיד,
-- **פירוק:** `uš-kán-zi` – au(š)- "see, look", iterative pres. 3pl; with *menaḫḫanda* "look out for, wait for" ("יהיו רואים"); `ma-a-an-[na-a]t` – mān "if" + =a + =at "it" ("ואם אותו"); `iš-ta-an-ta-nu-uš-ket₉-te-ni` – ištantanu- "delay", iterative pres. 2pl ("תאחרו תמיד").
+> יהיו רואים! ואם תאחרו אותו,
+- **פירוק:** `uš-kán-zi` – au(š)- "see, look", iterative pres. 3pl; with *menaḫḫanda* "look out for, wait for" ("יהיו רואים"); `ma-a-an-[na-a]t` – mān "if" + =a + =at "it" ("ואם … אותו"); `iš-ta-an-ta-nu-uš-ket₉-te-ni` – ištantanu- "delay", iterative pres. 2pl ("תאחרו"; no `תמיד`, as 18.4).
 - **נוסחים:** H iv 2 – זהה.
 - **תרגומים:** S&B 1935: «Let the gods not keep looking for them. But if you do delay them, that is a sin for you».
 - **הקבלה:** [equivalent] `מְלֵאָתְךָ וְדִמְעֲךָ לֹא תְאַחֵר` (שמות כב:כח) – אותה מצווה: לא לאחר את מתנת האל מן התבואה. הקבלה טיפולוגית.
@@ -1831,7 +1831,7 @@
 
 ### 15.10
 `IŠ-*TU* GU₄-ia-aš-ma-aš 10 UDU-ia za-an-ki-la-an-zi`
-> וגם שור ועשר צאן יקנסו מכם,
+> וגם יקנסו מכם שור ועשר צאן,
 - **פירוק:** `IŠ-*TU* GU₄-ia-aš-ma-aš` – IŠTU "with" + GU₄ "ox" ("שור") + =ya "also" ("וגם") + =šmaš "you" ("מכם"); `10` – "ten" ("ועשר"); `UDU-ia` – UDU "sheep" + =ya ("צאן"); `za-an-ki-la-an-zi` – zankilai- "fine, punish", pres. 3pl ("יקנסו").
 - **נוסחים:** H iv 4 – זהה.
 - **הערות:** הקנס – שור ועשרה צאן – הוא בעצמו קרבן: הוא מפייס את "נפש האלים" (15.11). `עשר צאן` – מספר נקבי עם *UDU* ברבים, כבחוקים (HL2).
@@ -1847,13 +1847,13 @@
 
 ### 16.1
 `an-da-ma ma-a-an ḫal-ki-in a-ni-ia-at-te-ni nu-uš-ma-aš ma-a-an {LÚ}⸢SANGA⸣`
-> ונוסף על כך: אם תבואה תעבדו, ואם הכוהן
+> ונוסף על כך: אם תעבדו תבואה, ואם הכוהן
 - **פירוק:** `an-da-ma` – anda=ma ("ונוסף על כך"); `ma-a-an` – mān "if" ("אם"); `ḫal-ki-in` – ḫalki- "grain" (`תבואה`), acc. ("תבואה"); `a-ni-ia-at-te-ni` – aniya- "work, cultivate" (HL1 `עבד`), pres. 2pl ("תעבדו"); `nu-uš-ma-aš` – nu + =šmaš "to you" (16.2); `ma-a-an` – mān "if" ("ואם"); `{LÚ}⸢SANGA⸣` – "priest" ("הכוהן").
 - **הערות:** האִכָּרים עובדים בשדות האל (שדות המקדש), והכוהן מפקח.
 
 ### 16.2
 `A-NA NUMUN a-ni-ia-u-an-zi UN-an EGIR-an UL u-i-ia-zi šu-ma-a-⸢ša⸣-at`
-> לעבודת הזרע אדם אחריכם לא ישגר – לכם אותו
+> לא ישגר אדם אחריכם לעבודת הזרע – אותו לכם
 - **פירוק:** `A-NA NUMUN` – ANA "for" + NUMUN "seed" ("הזרע"); `a-ni-ia-u-an-zi` – aniya- "work", inf. ("לעבודת"); `UN-an` – UN "man", acc. ("אדם"); `EGIR-an` – EGIR-an "after, behind" ("אחריכם"); `UL` – "not" ("לא"); `u-i-ia-zi` – uiya- "send (a person)", pres. 3sg ("ישגר"); `šu-ma-a-⸢ša⸣-at` – šumaš "to you" ("לכם") + =at "it" ("אותו").
 - **נוסחים:** H iv 6: `[ ] {LÚ}SANGA A-NA NUMUN` – H שובר אחרת.
 - **תרגומים:** S&B 1935: «and if the priest does not send you a man back to plant the seed, do you manage its planting».
@@ -1861,14 +1861,14 @@
 
 ### 16.3
 `a-ni-ia-u-wa-an-zi ma-ni-ia-aḫ-ḫi nu me-ek-ki a-ni-ia-at-te-ni`
-> לעבוד ימנה – ותעבדו הרבה,
+> ימנה לעבוד – ותעבדו הרבה,
 - **פירוק:** `a-ni-ia-u-wa-an-zi` – aniya-, inf. ("לעבוד"); `ma-ni-ia-aḫ-ḫi` – maniyaḫḫ- "assign, allot" (`מִנָּה`), pres. 3sg ("ימנה"); `nu` – nu ("ו־"); `me-ek-ki` – mekki "much" ("הרבה"); `a-ni-ia-at-te-ni` – aniya-, pres. 2pl ("ותעבדו").
 - **נוסחים:** H iv 7 – עקבות.
 - **תרגומים:** CHD L–N s.v. *mekki-*: «(you) sow much, …».
 
 ### 16.4
 `A-NA {LÚ}SANGA-ma-at pé-ra-an te-pu me-ma-at-te-ni na-aš-ma A.ŠÀ DINGIR-LIM`
-> ואילו לפני הכוהן "מעט" תאמרו עליו; או שדה הָאֵל
+> ואילו לפני הכוהן תאמרו עליו "מעט"; או שדה הָאֵל
 - **פירוק:** `A-NA {LÚ}SANGA-ma-at` – ANA "to" + LÚ SANGA ("לפני הכוהן") + =ma ("ואילו") + =at "it" ("עליו"); `pé-ra-an` – peran "before" ("לפני"); `te-pu` – tepu- "little" (HL1 `מעט`) ("מעט"); `me-ma-at-te-ni` – mema- "say" (`אמר`), pres. 2pl ("תאמרו"); `na-aš-ma` – našma "or" ("או"); `A.ŠÀ DINGIR-LIM` – A.ŠÀ "field" + DINGIR-LIM ("שדה הָאֵל").
 - **נוסחים:** H iv 8: `… A-NA˽PA-NI {LÚ}SANGA-ma-at` – *ANA PANI* "לפני" במילה האכדית.
 - **הקבלה:** [equivalent] `וְגַם גָּנְבוּ וְגַם כִּחֲשׁוּ וְגַם שָׂמוּ בִכְלֵיהֶם` (יהושע ז:יא) – גנבה מרכוש האל והכחשה. ההקבלה טיפולוגית.
@@ -1889,7 +1889,7 @@
 
 ### 16.7
 `na-aš-ma ḫal-ki-uš ku-wa-pí šu-un-na-at-te-ni nu ták-ša-an šar-ra-an`
-> או כאשר את התבואה תמלאו – "חצי"
+> או כאשר תמלאו את התבואה – "חצי"
 - **פירוק:** `na-aš-ma` – našma "or" ("או"); `ḫal-ki-uš` – ḫalki- "grain", acc. pl. ("את התבואה"); `ku-wa-pí` – kuwapi "when" ("כאשר"); `šu-un-na-at-te-ni` – šunna- "fill" (HL1 `מילא`), pres. 2pl ("תמלאו"); `nu` – nu (not translated); `ták-ša-an` – takšan "in half" ("חצי" with šarran); `šar-ra-an` – šarra- "part", acc. ("חצי").
 - **נוסחים:** H iv 11 – עקבות.
 - **הערות:** "למלא" – את האסמים (HL1 `[את האסם] בתבואה ימלא`). *takšan šarran* "חלק לשניים", כלומר חצי: מצהירים על מחצית מן היבול, ואת המחצית האחרת מעלימים. בסעיף 5 תורגם אותו צירוף `לשניים חלק` (שם במובן "חלק אחר חלק"); כאן `חצי` (`מחצה` נאסר: שער של `מחץ`; ראו ההצעות).
@@ -1930,7 +1930,7 @@
 
 ### 16.13
 `⸢ÉSAG⸣{MEŠ}-aš an-da iš-ḫu-u-wa-an-zi`
-> אל האסמים יערמו.
+> יערמו אל האסמים.
 - **פירוק:** `⸢ÉSAG⸣{MEŠ}-aš` – ÉSAG "granary" (HL1 `אסם`), d.-l. pl. ("האסמים"); `an-da` – anda "into" ("אל"); `iš-ḫu-u-wa-an-zi` – išḫuwai- "pour, throw, heap", pres. 3pl ("יערמו").
 - **הערות:** *išḫuwai-* "לשפוך (גרעינים), לערום" – `ערם` (`שפך` הוא *laḫu-*, 6.3).
 
@@ -1952,7 +1952,7 @@
 
 ### 17.3
 `na-an ar-ḫa e-ez-za-at-te-ni šu-ma-aš-ma-an-kán DINGIR{MEŠ}-aš ta-a-iš-t[e]-ni`
-> ותאכלו אותו עד תום – ואילו אתם לָאֵלִים תָּשִׂימוּ (לאמור):
+> ותאכלו אותו עד תום – ואילו אתם תָּשִׂימוּ לָאֵלִים (לאמור):
 - **פירוק:** `na-an` – nu + =an "it" ("אותו"); `ar-ḫa` – arḫa (*arḫa ed-* "eat up", `עד תום`) ("עד תום"); `e-ez-za-at-te-ni` – ed- "eat", pres. 2pl ("ותאכלו"); `šu-ma-aš-ma-an-kán` – šumeš "you" ("ואילו אתם") + =ma + =an + =kan; `DINGIR{MEŠ}-aš` – DINGIR, d.-l. pl. ("לָאֵלִים"); `ta-a-iš-t[e]-ni` – dai- "put, set", pres. 2pl ("תָּשִׂימוּ").
 - **תרגומים:** S&B 1935: «and (if) you conceal it from the gods, (saying)».
 - **הערות:** *dai-* `שׂם`: "תשימו לפני האלים" – כלומר תציגו לפניהם את התירוץ (ההמשך הוא ציטוט). S&B: "תסתירו מן האלים". התרגום מילולי.
@@ -1986,7 +1986,7 @@
 
 ### 17.8
 `⸢nu DINGIR-LIM-ni pa-it⸣-te-ni ták-ku pár-ku-e[š-t]e-ni šu-me-el {D}KAL-KU-NU`
-> אֶל הָאֵל תלכו: אם תיטהרו – אֵל הַמָּגֵן שלכם!
+> תלכו אֶל הָאֵל: אם תיטהרו – אֵל הַמָּגֵן שלכם!
 - **פירוק:** `⸢nu` – nu ("ו־"); `DINGIR-LIM-ni` – DINGIR-LIM, d.-l. ("אֶל הָאֵל"); `pa-it⸣-te-ni` – pai- "go", pres. 2pl ("תלכו"); `ták-ku` – takku "if" ("אם"); `pár-ku-e[š-t]e-ni` – parkuešš- "become pure (= be acquitted)", pres. 2pl ("תיטהרו"); `šu-me-el` – šumel "your" ("שלכם"); `{D}KAL-KU-NU` – ᵈKAL (ᵈLAMMA) "the protective god" + -KUNU ("אֵל הַמָּגֵן שלכם").
 - **תרגומים:** CHD P s.v. *pai-*: «You shall go to the god (for an ordeal)»; S&B 1935: «and you go before the god – if you are acquitted, (it is due to) your protecting deity; if you are convicted, it is a capital sin for you».
 - **הקבלה:** [divergence] `עַד הָאֱלֹהִים יָבֹא דְּבַר שְׁנֵיהֶם` (שמות כב:ח) – גם בתורה ספק בעניין פיקדון מובא "אל האלוהים"; אך שם להכרעה, וכאן למבחן (אורדאל). הקבלה טיפולוגית.
@@ -2056,7 +2056,7 @@
 
 ### 18.9
 `GA ku-wa-pí šap-pé-eš-kán-zi na-an-kán le-e ša-ku-wa-an-ta-ri-ia-nu-ut-te-ni`
-> כאשר את החָלָב מקלפים – אַל תבטלו אותו!
+> כאשר מקלפים את החָלָב – אַל תבטלו אותו!
 - **פירוק:** `GA` – "milk" ("את החלב"); `ku-wa-pí` – kuwapi "when" ("כאשר"); `šap-pé-eš-kán-zi` – šapp- "peel, scrape; (milk:) skim(?)", iterative pres. 3pl ("מקלפים"); `na-an-kán` – nu + =an "it" ("אותו") + =kan; `le-e` – lē ("אַל"); `ša-ku-wa-an-ta-ri-ia-nu-ut-te-ni` – šakuwantariyanu- "leave idle, neglect", pres. 2pl ("תבטלו").
 - **נוסחים:** B {2} iv 5′ – זהה.
 - **תרגומים:** S&B 1935: «Or, if there is a festival of the cup for any god, when they clean the cup, do not neglect it».
@@ -2124,8 +2124,8 @@
 
 ### 18.19
 `DINGIR{MEŠ}-aš-ma-wa-kán ZI-an za-am-mu-ra-a-u-e-en na-aš-ta BI-IB-RU DINGIR-LIM`
-> ואילו את נפש הָאֵלִים בזזנו(?)" – ואז את בִּיבְרוּ הָאֵל
-- **פירוק:** `DINGIR{MEŠ}-aš-ma-wa-kán` – DINGIR, gen. pl. ("הָאֵלִים") + =ma ("ואילו") + =wa + =kan; `ZI-an` – ZI, acc. ("את נפש"); `za-am-mu-ra-a-u-e-en` – zammurai- "harm, plunder(?), offend", pret. 1pl ("בזזנו(?)"); `na-aš-ta` – nu + =ašta ("ואז"); `BI-IB-RU` – BIBRU "rhyton" ("את בִּיבְרוּ"); `DINGIR-LIM` – ("הָאֵל").
+> ואילו את נפש הָאֵלִים בזזנו(?)" – ואת בִּיבְרוּ הָאֵל
+- **פירוק:** `DINGIR{MEŠ}-aš-ma-wa-kán` – DINGIR, gen. pl. ("הָאֵלִים") + =ma ("ואילו") + =wa + =kan; `ZI-an` – ZI, acc. ("את נפש"); `za-am-mu-ra-a-u-e-en` – zammurai- "harm, plunder(?), offend", pret. 1pl ("בזזנו(?)"); `na-aš-ta` – nu + =ašta ("ו־"); `BI-IB-RU` – BIBRU "rhyton" ("את בִּיבְרוּ"); `DINGIR-LIM` – ("הָאֵל").
 - **נוסחים:** B {2} iv 14′: `… BI-IB-RU DINGIR-LIM ZI-aš ar-ḫa e-ku-ut-te-ni` – B שומר את סוף המבחן בשורה זו.
 - **הערות:** *zammurai-* (11.7) – "לפגוע, לבזוז(?)". אחרי השבועה בא **המבחן**: שתיית הביבְּרוּ של האל (4.4).
 
@@ -2139,8 +2139,8 @@
 
 ### 18.21
 `šu-me-el {D}KAL-KU-NU ták-ku-za *pa*-ap-ra-an-te-eš-ma na-aš-ta QA-DU`
-> אֵל הַמָּגֵן שלכם! ואילו אם טמאים (אתם) – אז עם
-- **פירוק:** `šu-me-el` – šumel "your" ("שלכם"); `{D}KAL-KU-NU` – ᵈKAL "protective god" + -KUNU ("אֵל הַמָּגֵן"); `ták-ku-za` – takku "if" + =za ("אם"); `*pa*-ap-ra-an-te-eš-ma` – paprant- "impure", nom. pl. ("טמאים (אתם)") + =ma ("ואילו"); `na-aš-ta` – nu + =ašta ("אז"); `QA-DU` – QADU "with" ("עם").
+> אֵל הַמָּגֵן שלכם! ואילו אם טמאים (אתם) – ועם
+- **פירוק:** `šu-me-el` – šumel "your" ("שלכם"); `{D}KAL-KU-NU` – ᵈKAL "protective god" + -KUNU ("אֵל הַמָּגֵן"); `ták-ku-za` – takku "if" + =za ("אם"); `*pa*-ap-ra-an-te-eš-ma` – paprant- "impure", nom. pl. ("טמאים (אתם)") + =ma ("ואילו"); `na-aš-ta` – nu + =ašta, opening the apodosis ("ו־", as 17.9 `– וזה`); `QA-DU` – QADU "with" ("עם").
 - **נוסחים:** B {2} iv 15′: `… pár-ku-wa-e-〈eš〉 šu-me-〈〈eš〉〉-el …` – B השמיט הברה בראשון והוסיף הברה מיותרת בשני (*šume〈〈eš〉〉el*).
 - **תרגומים:** CHD P s.v. *paprant-* 2: «If you are found innocent (it is due to) your patron deity, but if you are found guilty (you will perish together with your wives and your children)».
 
@@ -2155,7 +2155,7 @@
 
 ### 19.1
 `an-da-ma-aš-ta ma-a-an kar-ša-at-tar ku-wa-pí kar-aš-te-ni`
-> ונוסף על כך: אם אי־פעם את החֲתָךְ תחתכו,
+> ונוסף על כך: אם אי־פעם תחתכו את החֲתָךְ,
 - **פירוק:** `an-da-ma-aš-ta` – anda=ma + =ašta ("ונוסף על כך"); `ma-a-an` – mān "if" ("אם"); `kar-ša-at-tar` – karšattar "the cut, selected portion (of the herd)" (from karš- `חתך`) ("את החֲתָךְ"); `ku-wa-pí` – kuwapi "ever" ("אי־פעם"); `kar-aš-te-ni` – karš- "cut, separate", pres. 2pl ("תחתכו").
 - **נוסחים:** B {2} iv 17′ – זהה.
 - **תרגומים:** S&B 1935: «Again, if in (the temple properties) you ever castrate (animals)» – קריאה ישנה של *karšattar*.
@@ -2163,7 +2163,7 @@
 
 ### 19.2
 `na-at DINGIR{MEŠ}-aš A-NA EN{MEŠ}-KU-NU u-un-na-an-zi nu kar-ša-ad-da-⸢ni⸣`
-> ואותו אֶל הָאֵלִים, אדוניכם, ינהגו – ועם החֲתָךְ
+> וינהגו אותו אֶל הָאֵלִים, אדוניכם – ועם החֲתָךְ
 - **פירוק:** `na-at` – nu + =at "it" ("ואותו"); `DINGIR{MEŠ}-aš` – DINGIR "god", d.-l. pl. ("אֶל הָאֵלִים"); `A-NA EN{MEŠ}-KU-NU` – EN "lord", pl., with ANA "to" + -KUNU "your" ("אדוניכם"); `u-un-na-an-zi` – unna- "drive (here)" (`נהג`), pres. 3pl ("ינהגו"); `nu` – nu ("ו־"); `kar-ša-ad-da-⸢ni⸣` – karšattar, d.-l. ("עם החֲתָךְ").
 - **נוסחים:** B {2} iv 18′: `… nu kar-ša-ad-da-⸢ni⸣ kat-ta-an` – B כותב *kattan* במילים.
 
@@ -2228,7 +2228,7 @@
 
 ### 19.12
 `DINGIR{MEŠ}-aš-kán ZI-aš-ša-aš ša-ne-ez-zi-in 𒑱zu-u-wa-an da-a-er`
-> (כי) את המזון המעודן של נפש הָאֵלִים לקחו!
+> (כי) לקחו את המזון המעודן של נפש הָאֵלִים!
 - **פירוק:** `DINGIR{MEŠ}-aš-kán` – DINGIR, gen. pl. ("הָאֵלִים") + =kan (no causal particle: "(כי)" added); `ZI-aš-ša-aš` – ZI, gen. ("של נפש") + =a + =aš; `ša-ne-ez-zi-in` – šanezzi- "fine, pleasant, choice", acc. ("המעודן"); `𒑱zu-u-wa-an` – zuwa- (Luw.) "food, morsel" (`מזון`) ("את המזון"); `da-a-er` – dā- "take", pret. 3pl ("לקחו").
 - **נוסחים:** B {2} iv 26′: `[DINGIR{MEŠ}-aš-ká]n ZI-*ni* …` – B כותב "לנפש" (דטיב) במקום "של נפש".
 - **הערות:** *šanezzi-* "נעים, משובח, מעודן" – `מעודן` (`משובח` הוא SIG₅). *zuwa-* `מזון` (7.14).
@@ -2258,7 +2258,7 @@
 > "אם את המזון המעודן של הָאֵלִים מן הפה
 - **פירוק:** `ma-a-an-wa-kán` – mān "if" + =wa (quotative) + =kan ("אם"); `DINGIR{MEŠ}-aš` – ("של הָאֵלִים"); `ša-ne-ez-zi-in` – šanezzi- ("המעודן"); `𒑱zu-u-wa-an` – zuwa- ("את המזון"); `KA×U-az` – KA×U "mouth", abl. ("מן הפה").
 - **תרגומים:** CHD P s.v. *parā*: «If we pulled the fine bread from the gods' mouth».
-- **הערות:** **הווידוי** (19.16–19.22) חוזר על המקרה (19.8–19.12) בגוף ראשון, באותן מילים ובאותו סדר: `המזון המעודן` (19.12), `המרנו, ומסחר לקחנו לנו` (19.8–19.9 `ימיר, ומסחר / לעצמו ייקח`), `ובמקומו כחוש שלחנו` (19.10 `ובמקומו כחוש ישלחו`). ו"מן הפה החוצה משכנו" – כ־7.10 (`מן הפה החוצה תמשכו`).
+- **הערות:** **הווידוי** (19.16–19.22) חוזר על המקרה (19.8–19.12) בגוף ראשון, באותן מילים ובאותו סדר: `המזון המעודן` (19.12), `המרנו, ומסחר לקחנו לנו` (19.8–19.9 `ימיר, ומסחר / ייקח לעצמו`), `ובמקומו כחוש שלחנו` (19.10 `ובמקומו כחוש ישלחו`). ו"מן הפה החוצה משכנו" – כ־7.10 (`מן הפה החוצה תמשכו`).
 
 ### 19.17
 `pa-ra-a an-za-a-aš ḫu-u-it-ti-ia-u-en nu-wa-*ra*-an-*na*-ša-an an-ze-el`
@@ -2288,15 +2288,15 @@
 
 ### 19.21
 `nu-wa-an-na-aš zi-ik DINGIR-LUM tu-el ZI-aš 𒑱zu-u-wa še-er`
-> אז אתה, הָאֵל, בגלל מזון נפשך – אותנו
-- **פירוק:** `nu-wa-an-na-aš` – nu "then" ("אז") + =wa + =nnaš "us" ("אותנו"); `zi-ik` – zik "you" (sg.) ("אתה"); `DINGIR-LUM` – DINGIR-LUM "god", nom./voc. ("הָאֵל"); `tu-el` – tuel "your" ("־ך"); `ZI-aš` – ZI, gen. ("נפשך"); `𒑱zu-u-wa` – zuwa- "food" ("מזון"); `še-er` – šer "on account of, because of" ("בגלל").
+> ואתה, הָאֵל, בגלל מזון נפשך – אותנו
+- **פירוק:** `nu-wa-an-na-aš` – nu, opening the apodosis ("ו־", as 18.21) + =wa + =nnaš "us" ("אותנו"); `zi-ik` – zik "you" (sg.) ("אתה"); `DINGIR-LUM` – DINGIR-LUM "god", nom./voc. ("הָאֵל"); `tu-el` – tuel "your" ("־ך"); `ZI-aš` – ZI, gen. ("נפשך"); `𒑱zu-u-wa` – zuwa- "food" ("מזון"); `še-er` – šer "on account of, because of" ("בגלל").
 - **נוסחים:** B {2} iv 34′: `[ Z]I-aš 𒑱zu-u-wa-aš še-er QA-D[U` – B ממשיך באותה שורה.
 - **הערות:** הפנייה הישירה אל האל (*zik DINGIR-LUM*, "אתה, האל") – כבשבועה של 6.5. בשורה זו *DINGIR-LUM* בנומינטיב: `האל` (פנייה), מנוקד (`הָאֵל`).
 
 ### 19.22
 `QA-DU DAM{MEŠ}-NI DUMU{MEŠ}-NI pár-ḫe-eš-ke`
-> עם נשינו ובנינו רדוף תמיד!"
-- **פירוק:** `QA-DU` – QADU "with" ("עם"); `DAM{MEŠ}-NI` – "our wives" ("נשינו"); `DUMU{MEŠ}-NI` – "our children" ("ובנינו"); `pár-ḫe-eš-ke` – parḫ- "chase, pursue", iterative imp. 2sg ("רדוף תמיד").
+> עם נשינו ובנינו – רדוף!"
+- **פירוק:** `QA-DU` – QADU "with" ("עם"); `DAM{MEŠ}-NI` – "our wives" ("נשינו"); `DUMU{MEŠ}-NI` – "our children" ("ובנינו"); `pár-ḫe-eš-ke` – parḫ- "chase, pursue", iterative imp. 2sg ("רדוף"; no `תמיד`: nothing stresses repetition).
 - **תרגומים:** CHD P s.v. *parḫ-*: «(pursue) our wives and children».
 - **הקבלה:** [equivalent] `פֹּקֵד עֲוֹן אָבֹת עַל בָּנִים` (שמות כ:ד) – ראו 3.1: האל הרודף את האשם ואת ביתו; כאן האשמים עצמם מזמינים זאת בשבועה. ההקבלה טיפולוגית.
 - **הערות:** החיבור מסתיים בקללה עצמית: הרועים מבקשים מן האל לרדוף אותם ואת משפחותיהם אם רימו. כך נסגר המעגל שנפתח בסעיפים 2–3: האל כאדון, והבית כולו נושא באחריות.
