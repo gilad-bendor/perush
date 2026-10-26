@@ -13,7 +13,8 @@ OUT = os.path.join(HERE, 'parallels-index.md')
 PROJECTS = [('EST', '1-אמנת-הירושה-של-אסרחדון'), ('LH', '2-חוקי-חמורבי'), ('LE', '3-חוקי-אשנונה'),
             ('MAL', '4-החוקים-האשוריים-התיכונים-A'), ('LI', '5-חוקי-ליפית-אישתר'), ('UN', '6-חוקי-אור-נמה'),
             ('MALB', '7-החוקים-האשוריים-התיכונים-B'),
-            ('HL', '8-החוקים-החתיים')]  # HL added 2026-10-25 (Round 4 run 6 sub 1): "HL1 §n, clause" / "PT § roman, clause"; HL2 rows "HL2 §n, row" (sub 2)
+            ('HL', '8-החוקים-החתיים'),  # HL added 2026-10-25 (Round 4 run 6 sub 1): "HL1 §n, clause" / "PT § roman, clause"; HL2 rows "HL2 §n, row" (sub 2)
+            ('IN', '9-הוראות-לאנשי-בית-האל')]  # IN added 2026-10-26 (Round 4 run 6 sub 3): rows "<§>.<n>" of our CTH 264 composite
 BOOKS = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים', 'יהושע', 'שופטים', 'שמואל א', 'שמואל ב', 'מלכים א', 'מלכים ב',
          'ישעיהו', 'ירמיהו', 'יחזקאל', 'הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה', 'נחום', 'חבקוק', 'צפניה', 'חגי',
          'זכריה', 'מלאכי', 'תהלים', 'תהילים', 'משלי', 'איוב', 'שיר השירים', 'רות', 'איכה', 'קהלת', 'אסתר', 'דניאל',
@@ -73,7 +74,8 @@ out = [keep.rstrip('\n'), '', '## The table', '',
        'LH = the Laws of Hammurabi (§ and CDLI composite line; "prol." / "epil." = prologue / epilogue); '
        'LE = the Laws of Eshnunna (§ and CDLI composite line); MAL = the Middle Assyrian Laws, Tablet A (§ and tablet line, ORACC); '
        'MALB = the Middle Assyrian Laws, Tablet B; LI = the Laws of Lipit-Ištar; UN = the Laws of Ur-Namma (§ (Roth 1997) and CDLI composite line); '
-       'HL = the Hittite Laws ("HL1 §n, clause" = the first tablet, CHiL CTH 291.2; "PT § roman, clause" = the late parallel text KBo 6.4; "HL2 §n, row" = the second tablet, our composite from the TLHdig manuscripts, rows "<§>.<n>").', '']
+       'HL = the Hittite Laws ("HL1 §n, clause" = the first tablet, CHiL CTH 291.2; "PT § roman, clause" = the late parallel text KBo 6.4; "HL2 §n, row" = the second tablet, our composite from the TLHdig manuscripts, rows "<§>.<n>"); '
+       'IN = the Instructions for Temple Personnel (CTH 264; rows "<§>.<n>" of our composite from the TLHdig manuscripts, lead KUB 13.4).', '']
 cur = None
 for r in rows:
     b, c, v = key(r)

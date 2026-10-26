@@ -656,7 +656,7 @@ def cmd_data(key, a=None, b=None):
     for r in sp:
         if r["sec"] != lastsec:
             lastsec = r["sec"]
-            print(f"## § {r['sectitle'] or r['sec']}" + (f"  [HL {r['hl']}]" if r.get("hl") else ""))
+            print(f"## § {r['sectitle'] or r['sec']}" + (f"  [HL {r['hl']}]" if r.get("hl") and key.startswith("HL") else ""))
             if key == "HL1" and r.get("hl"):
                 for one in re.split(r"\s+e\s+", r["hl"]):
                     w = witnesses_by_hl(one.strip())
