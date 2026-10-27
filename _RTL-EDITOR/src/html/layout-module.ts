@@ -23,8 +23,8 @@ import { isRtlFile } from "../../public/src/tables.js";
 import { fenceScanner } from "./includes";
 import { GROUP_MARK, LINE_MARK, MARGIN_MARK, NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, ROW_MARK, stripLayoutMarks } from "./layout-marks";
 import type {
-    FileLayout, FolderLayout, Heading, HeadingContext, LayoutEntries, LayoutFile, LayoutOfFile, LayoutOfFolder, LineGroup,
-    Output, PageSettings, Static,
+    FileLayout, FolderLayout, FooterContext, Heading, HeadingContext, LayoutEntries, LayoutFile, LayoutOfFile, LayoutOfFolder,
+    LineGroup, Output, PageSettings, RunningHeading, Static,
 } from "./layout-schema";
 import { paragraphRanges } from "./md-to-html";
 import { measureAt } from "./text-measure";
@@ -223,10 +223,13 @@ export function layoutFileOf(mdPath: string, content: string | (() => string)): 
 // ------------------------------------------------------------------------------------------------
 // What the chain answers
 
-const ENTRIES = new Set(["output", "page", "groups", "pageBreakBefore", "attention", "data"]);
+const ENTRIES = new Set(["output", "page", "pdf", "groups", "pageBreakBefore", "attention", "data"]);
 const FILE_ENTRIES = new Set([...ENTRIES, "sourceMd5"]);
 const OUTPUTS = new Set(["laid-out", "plain", "none"]);
 const PAGE_ENTRIES = new Set(["fontSize", "marginInline", "marginBlock"]);
+const PDF_ENTRIES = new Set(["indexDepth", "footerTitle"]);
+/** The deepest heading there is - an index that deep lists them all. */
+export const DEEPEST_HEADING = 6;
 
 const isStrings = (value: unknown): value is readonly string[] => Array.isArray(value) && value.every(item => typeof item === "string");
 const isCount = (value: unknown): value is number => Number.isInteger(value) && (value as number) >= 0;
@@ -273,6 +276,19 @@ function shapeError(answer: unknown, own: boolean): string | null {
             if (value !== undefined && (typeof value !== "number" || !(value > 0))) return `"page.${key}" must be a positive number`;
         }
     }
+    if (layout.pdf !== undefined) {
+        if (typeof layout.pdf !== "object" || layout.pdf === null) return "\"pdf\" must be an object";
+        for (const [key, value] of Object.entries(layout.pdf)) {
+            if (!PDF_ENTRIES.has(key)) return `unknown entry "pdf.${key}" (known: ${[...PDF_ENTRIES].join(", ")})`;
+        }
+        const { indexDepth, footerTitle } = layout.pdf as Record<string, unknown>;
+        if (indexDepth !== undefined && !(isCount(indexDepth) && indexDepth <= DEEPEST_HEADING)) {
+            return `"pdf.indexDepth" must be a whole number, 0 to ${DEEPEST_HEADING}`;
+        }
+        if (footerTitle !== undefined && typeof footerTitle !== "string" && typeof footerTitle !== "function") {
+            return "\"pdf.footerTitle\" must be a string, or a function";
+        }
+    }
     if (layout.groups !== undefined) {
         if (!Array.isArray(layout.groups)) return "\"groups\" must be a list";
         for (const [i, group] of layout.groups.entries()) {
@@ -309,14 +325,14 @@ export type LayoutChain = {
     files: string[];
 };
 
-/** The answers merged in order, each entry the last one given - `page` field by field. */
+/** The answers merged in order, each entry the last one given - `page` and `pdf` field by field. */
 function merge(answers: readonly LayoutEntries[]): LayoutEntries {
     const merged: Record<string, unknown> = {};
     for (const answer of answers) {
         for (const key of ENTRIES) {
             const value = (answer as Record<string, unknown>)[key];
             if (value === undefined) continue;
-            merged[key] = key === "page" ? { ...merged.page as object, ...value as object } : value;
+            merged[key] = key === "page" || key === "pdf" ? { ...merged[key] as object, ...value as object } : value;
         }
     }
     return merged as LayoutEntries;
@@ -394,10 +410,15 @@ const outputs = new Map<string, { stamp: string, output: Output }>();
 // ------------------------------------------------------------------------------------------------
 // The answer, resolved
 
-/** A file's layout with no function left in it - what the page is made with. */
+/**
+ * A file's layout with no function left in it - what the page is made with - but one: the footer's title,
+ * whose context (the headings at the top of a sheet) exists only once the page is made, and for a book only
+ * once the files it embeds are in it.
+ */
 export type ResolvedLayout = {
     output: Output;
     page: PageSettings | null;
+    pdf: ResolvedPdfSettings;
     groups: readonly LineGroup[];
     /** Whether each heading starts a sheet, by its line - those the layout left to the mirror are not here. */
     pageBreaks: Map<number, boolean>;
@@ -407,9 +428,55 @@ export type ResolvedLayout = {
     sourceMd5: string | null;
 };
 
+/** What the PDF is made with (PdfSettings) - every entry given. */
+export type ResolvedPdfSettings = {
+    indexDepth: number;
+    /** The footer's title for the headings in force at the top of a sheet. May throw, or answer a non-string. */
+    footerTitle: (chain: readonly RunningHeading[]) => unknown;
+};
+
+/** The mirror's own footer title: the outermost heading in force. */
+export const defaultFooterTitle = (chain: readonly RunningHeading[]): string => chain[0]?.text ?? "";
+
+/** What a file no module says anything of is printed with. */
+export const DEFAULT_PDF_SETTINGS: ResolvedPdfSettings = { indexDepth: DEEPEST_HEADING, footerTitle: defaultFooterTitle };
+
+/** A heading's Markdown as plain text - near enough to what the page prints, for checking a module early. */
+function plainText(markdown: string): string {
+    return markdown.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/\[\^[^\]]*\]/g, "").replace(/[*_`]/g, "").trim();
+}
+
+/** Every chain of headings a sheet could open under - the empty one, and the one each heading begins. */
+function headingChains(headings: readonly Heading[]): RunningHeading[][] {
+    const chains: RunningHeading[][] = [[]];
+    let chain: RunningHeading[] = [];
+    for (const { level, text } of headings) {
+        chain = [...chain.filter(outer => outer.level < level), { level, text: plainText(text) }];
+        chains.push(chain);
+    }
+    return chains;
+}
+
 /** The chain's merged answer for its file, every function in it called. */
 export function resolveLayout(chain: LayoutChain): ResolvedLayout | { error: string } {
     const { file, merged } = chain;
+    const title = merged.pdf?.footerTitle;
+    const footerTitle = title === undefined ? defaultFooterTitle
+        : typeof title === "string" ? () => title
+        : (headings: readonly RunningHeading[]) => title({ chain: headings, file } satisfies FooterContext);
+    // Asked now of every chain the file's own headings make, so that a function that goes wrong is said at
+    // the top of the page; a book's are known only later, and a wrong answer there leaves its footer blank.
+    for (const headings of typeof title === "function" ? headingChains(file.headings) : []) {
+        let answer: unknown;
+        try {
+            answer = footerTitle(headings);
+        } catch (error) {
+            return { error: `"pdf.footerTitle" threw at ${JSON.stringify(headings.map(h => h.text))}: ${(error as Error).message}` };
+        }
+        if (typeof answer !== "string") {
+            return { error: `"pdf.footerTitle" returned ${JSON.stringify(answer)} at ${JSON.stringify(headings.map(h => h.text))} - not a string` };
+        }
+    }
     const pageBreaks = new Map<number, boolean>();
     const pageBreak = merged.pageBreakBefore;
     if (pageBreak !== undefined && pageBreak !== null) {
@@ -429,6 +496,7 @@ export function resolveLayout(chain: LayoutChain): ResolvedLayout | { error: str
     return {
         output: merged.output ?? "plain",
         page: merged.page ?? null,
+        pdf: { indexDepth: merged.pdf?.indexDepth ?? DEEPEST_HEADING, footerTitle },
         groups: merged.groups ?? [],
         pageBreaks,
         attention: merged.attention ?? [],

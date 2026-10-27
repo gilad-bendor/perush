@@ -9,12 +9,12 @@
 //     a/b/c.layout.ts                 the file's own, for a/b/c.md (translation.rtl.md → translation.rtl.layout.ts)
 //
 // Any of them may be missing. What the chain answers is merged, the nearer a module the stronger: an entry
-// one leaves out is taken from the modules before it (`page` field by field).
+// one leaves out is taken from the modules before it (`page` and `pdf` field by field).
 //
 // **The editor knows nothing of what a file is about.** It gives a module elementary capabilities - the
 // file's lines and paragraphs, and the width of any text on paper (LayoutFile) - and takes back elementary
 // decisions (LayoutEntries): whether the file gets a page, the printed page's settings, which headings
-// start a sheet, and which of its lines share printed rows (`groups`). Everything else - what a numbered
+// start a sheet, which of its lines share printed rows (`groups`), and its PDF's index and footers (`pdf`). Everything else - what a numbered
 // line is, where a row should break, what a translation's layout session decided - is the business of the
 // modules, and of the code they import: a translation's rows are worked out in
 // שונות/תרגומי-טקסטים-קדומים/layout/, by its .layout.ts.
@@ -78,6 +78,47 @@ export type PageSettings = {
     readonly marginInline?: number;
     /** Its top and bottom margins, in millimetres. The mirror's own: 18. */
     readonly marginBlock?: number;
+};
+
+/**
+ * What only a PDF has - an HTML page has no pages: the page numbers of its index, and the footer of every sheet.
+ * Left out, an entry keeps the mirror's own value.
+ */
+export type PdfSettings = {
+    /**
+     * The deepest heading the PDF's index lists: 0 for no index at all, 1 for the `#`s only, 2 for `#` and `##`, ...
+     * The mirror's own: 6, every heading. Each entry is `<the heading>.......<its page>`.
+     *
+     * The index is the file's own `<תוכן-העניינים>` if it has one, or else one the PDF adds of itself - right
+     * below the page's opening `#`, or at its top when it opens with none.
+     */
+    readonly indexDepth?: number;
+    /**
+     * The title in the middle of every sheet's footer (its page number stands at the line's end). A function is
+     * asked with the headings in force at the *top* of the sheet. The mirror's own: the outermost of them -
+     * `chain[0]`, or "" before the first heading.
+     */
+    readonly footerTitle?: SchemaValue<FooterContext, string>;
+};
+
+/** A heading in force at some point of the page, as printed - plain text, no Markdown. */
+export type RunningHeading = {
+    /** 1 for `#`, 2 for `##`, ... */
+    readonly level: number;
+    readonly text: string;
+};
+
+/** What `footerTitle` is asked with. */
+export type FooterContext = {
+    /**
+     * The headings in force at the top of the sheet, the outermost first: the last heading before it, and each
+     * shallower one above that - `[# חוקי אשנונה, ## מחירים ושכר, ### §3 – שכירות עגלה]`. A heading standing at
+     * the very top of the sheet counts. Empty before the first heading. Only the page's own headings, as an
+     * index has them - not one inside a pseudo-tag, a quote or a list. A book's include those of the files it
+     * embeds.
+     */
+    readonly chain: readonly RunningHeading[];
+    readonly file: LayoutFile;
 };
 
 /**
@@ -172,6 +213,8 @@ export type LayoutEntries = {
     readonly output?: Output;
     /** Applies to the file's own page only - not to a book that embeds it, which has its own. */
     readonly page?: PageSettings;
+    /** Its PDF's index and footers. The file's own PDF only - a book that embeds it has its own. */
+    readonly pdf?: PdfSettings;
     /**
      * Which of its lines share printed rows. Applies wherever the file is printed - its own page, and a
      * book embedding it. A nearer module's list replaces a farther one's whole.

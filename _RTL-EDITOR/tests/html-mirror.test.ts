@@ -119,7 +119,7 @@ describe("HtmlMirror", () => {
         await write("a/b.rtl.md", "# כותרת");
         const m = mirror();
         expect(await m.syncFile("a/b.rtl.md")).toBe("rendered");
-        expect(await readFile(page("a/b.rtl.md"), "utf-8")).toContain('<h1 id="כותרת">כותרת</h1>');
+        expect(await readFile(page("a/b.rtl.md"), "utf-8")).toContain('<h1 id="כותרת" data-running-title="כותרת">כותרת</h1>');
         expect(await readFile(page("a/b.rtl.md"), "utf-8")).toContain('<nav class="breadcrumbs"><a dir="auto" href="../../index.html">פירוש</a> / ');
         expect(await m.syncFile("a/b.rtl.md")).toBe("fresh");
     });

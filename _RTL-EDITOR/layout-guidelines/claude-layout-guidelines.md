@@ -15,6 +15,7 @@ Every Markdown file of the repository gets an HTML page and a PDF (`docs/_HTML-F
   | `groups` | which consecutive lines of a paragraph share printed rows, where those rows start, and what of each line goes to the margin |
   | `pageBreakBefore` | which headings start a new sheet |
   | `page` | the printed font size and margins |
+  | `pdf` | the PDF's index - how deep it goes (`indexDepth`) - and the title in its footers (`footerTitle`) - see §3 |
   | `attention` | what a layout session should look at - listed by `layout-status` |
   | `data` | anything the modules or their tools want to pass along - the editor passes it on and nothing more |
   | `sourceMd5` | a file's own layout only: the MD5 of the file it was made for |
@@ -46,6 +47,7 @@ The root's `.layout.ts` gives the editor's own folders (`_RTL-EDITOR/` and the l
   - **Rules first, then exceptions named by their words.** Where a kind's logic takes rules, prefer a rule with a few exceptions over a list of hand-made decisions. A rule lays out text it has never seen: an edit, even a renumbering, leaves it working. Name an exception by the words it is about, never by line number - a number moves when lines are added. Fall back to a list where a text needs more judgement than a rule and its exceptions can hold; and say so in your report.
 - **The return type is spelled out** (`(file, above): FileLayout => ...`), so that `tsc` catches a misspelled entry - which it does not otherwise.
 - **The tools never write a module.** What they propose they print - as constants ready to be put into the module - or write to `--out=<path>`. You put them in, replacing the old constants. A kind's tool has a `template` to start a module with.
+- **Look at the PDF's index and footers too** (§3) - the defaults list every heading, and title every sheet with the outermost one.
 - **`sourceMd5` is the file's MD5 as the layout was made for it.** Whenever you change the layout for a new version of the file, put the file's MD5 in too. When a file changed but its rows still fit (`layout-status --check` says so), updating `SOURCE_MD5` is all there is to do.
 - **A kind's `check` must pass** - it type-checks the module, and fails while `sourceMd5` is not the file's.
 - **Commit nothing** unless the user asks you to.
@@ -53,7 +55,27 @@ The root's `.layout.ts` gives the editor's own folders (`_RTL-EDITOR/` and the l
 - **Ask which files**, unless the user already said (`layout-status` lists the candidates), and **report per file** what you decided (and why, where it was not obvious) and anything a tool could not handle.
 - The pages in `docs/` follow on their own while the editor's server (`bun run dev` in `_RTL-EDITOR`) is running: the layout modules and what they import are watched, and the pages and PDFs under one are re-rendered within a second or so (a PDF takes a little longer). Without the server, `bun run rebuild-whole-html-folder` in `_RTL-EDITOR` does it.
 
-## 3. The general tools
+## 3. The PDF's index and footers
+
+A PDF has what its HTML page cannot - pages - and with them two things the HTML does not show: an index whose every entry is `<heading> ........ <page>`, and a footer on every sheet, the title in the middle and the page number at the line's end. The editor makes both by itself (`_RTL-EDITOR/src/html/pdf-pages.ts`); a layout decides only two things about them, in `pdf` (a field left out keeps the mirror's own):
+
+- **`indexDepth`** - the deepest heading the index lists: `0` no index, `1` the `#`s only, `2` down to `##`, ... The mirror's own is `6`, every heading. The index is the file's own `<תוכן-העניינים>` if it has one; otherwise the PDF adds one right below the page's opening `#`.
+- **`footerTitle`** - a string, or a function of `{ chain, file }`: `chain` is the headings in force at the *top* of the sheet, the outermost first (`[# חוקי אשנונה, ## מחירים ושכר, ### §3 – שכירות עגלה]`), each `{ level, text }` as plain text. The mirror's own is `chain[0]` - the outermost heading, "" before the first one.
+
+**What to decide**, looking at the PDF (`preview`, or the mirror's own PDF):
+
+- **The index is a way into the text, not a copy of its headings.** List the sections a reader would look for, and stop above the ones that are only labels. In `חוקי אשנונה` the `###`s are the laws themselves - `§1 – מחירים בשקל כסף`, some sixty of them, a line or two each: listed, they make the index three pages long and add nothing the page does not show at a glance. Its `indexDepth` is `2`: the groups of laws (`## מחירים ושכר`, `## מֹהַר ונישואים`, ...), each with its page. A rule of thumb: a level whose sections are mostly shorter than a third of a page does not belong in the index.
+- **The footer says where the reader is - at the level where the text changes subject.** The title alone is right when the file is one subject; when it has chapters, the chapter is what the reader wants to see: `<first> / <second>` - `chain.filter(h => h.level <= 2).map(h => h.text).join(" / ")`. Keep it short: drop a long parenthesis from the title (`חוקי אשנונה (אשנונה, המאה ה־19 לפנה"ס)` → `חוקי אשנונה`) - with a rule (`text.replace(/ \(.*\)$/, "")`), not by copying the words in, so that a retitled heading still works.
+- **A book** (a file of `<כלול-בהדפסה>`) gets the headings of the files it embeds in its `chain`; its own layout decides, not theirs.
+
+```ts
+pdf: {
+    indexDepth: 2,
+    footerTitle: ({ chain }) => chain.filter(h => h.level <= 2).map(h => h.text.replace(/ \(.*\)$/, "")).join(" / "),
+},
+```
+
+## 4. The general tools
 
 Here, in `_RTL-EDITOR/layout-guidelines/`:
 

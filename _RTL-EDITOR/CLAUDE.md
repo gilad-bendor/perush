@@ -46,7 +46,8 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 - A ```` ```html ```` fenced block is written to the page as raw HTML, the fence lines gone - the one
    way a file may put HTML of its own on its page. See "The raw-HTML fence" below
 - Every page of the HTML mirror is also printed to a PDF under `../docs/_PDF-FROM-MD/`, easier to print and
-   to share - see "The PDF mirror" below
+   to share - see "The PDF mirror" below. A PDF has what a page cannot: an index whose entries end with their page
+   numbers, and a footer on every sheet - see "The PDF's pages"
 - Two buttons beside the help button open the current file in a tab of its own: the printer its PDF,
    the `</>` to its left its HTML page
 
@@ -87,6 +88,7 @@ bun run rows status
 - `fonts/` - The pages' fonts: David CLM (Culmus) and GNU FreeSerif, with their licences
 - `src/html/folder-index.ts` - The `index.html` of every folder of `../docs/_HTML-FROM-MD`
 - `src/html/pdf-mirror.ts` - Every page of the HTML mirror printed to `../docs/_PDF-FROM-MD`, by Playwright's Chromium
+- `src/html/pdf-pages.ts` - What a PDF has and its page does not: the index's page numbers, and the footers
 - `src/rebuild-whole-html-folder.ts` - `bun run rebuild-whole-html-folder`
 - `layout-guidelines/` - What a layout session (a Claude session deciding how pages are laid out) works with,
    whatever it lays out: its prompt, `claude-layout-guidelines.md`, and the general tools. The code that *applies* a
@@ -119,7 +121,8 @@ bun run rows status
 - `tests/line-rows.test.ts` / `tests/layout-module.test.ts` - Unit tests for `line-rows.ts` / the layout modules, their
    bundling, measuring and marks (`bun test`). The translations' layout logic has its own, beside it:
    `bun test ../שונות/תרגומי-טקסטים-קדומים/layout/tests/`
-- `tests/pdf-mirror.test.ts` - Unit tests for the PDF mirror - these print real PDFs, in Chromium
+- `tests/pdf-mirror.test.ts` / `tests/pdf-pages.test.ts` - Unit tests for the PDF mirror and its pages - these print
+   real PDFs, in Chromium
 
 ## API Endpoin
 - `GET /api/files` - `{files, serverTimestamp}`: the whole tree, and a cursor to poll changes with
@@ -618,7 +621,8 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
 - **Lines a layout gathers into groups share printed rows.** See "Lines that share rows" below.
 - `` `a`\`b` `` is two code spans with a backslash between them - see "A backslash between code spans".
 - **An index** goes where the file's `<תוכן-העניינים>` line stands, and nowhere else (`renderIndexes()`):
-  a collapsible `<nav class="index">` of the headings of `#`..`###` **below** it, titled
+  a collapsible `<nav class="index">` of the headings of `#`..`###` **below** it (on paper as deep as the file's layout
+  says, with page numbers - see "The PDF's pages"), titled
   **תוכן העניינים** in an RTL page and **Contents** in an LTR one, indented from the shallowest
   level present. Headings inside a pseudo-tag, quote or list are not listed - they are details of that
   block. Every heading gets an `id` (words joined by `-`, niqqud and punctuation dropped, `-2`, `-3`
@@ -645,7 +649,8 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
   any index (not those inside a pseudo-tag, quote or list), and only when there are at least two - an index of
   one entry says nothing. It is `<nav class="index page-index">`, so it looks like the file's own index, and
   like the trail it cannot be selected and is not printed (`display: none` in `@media print`) - which is
-  what keeps it out of every PDF. A file that asks for `<תוכן-העניינים>` gets both - except a file that
+  what keeps it out of every PDF - which has an index of its own instead (see "The PDF's pages"). A file that asks
+  for `<תוכן-העניינים>` gets both - except a file that
   embeds others (`hasIncludeDirective()`: a `<כלול-בהדפסה>` line, faulty or not), which gets none: such a file
   is a book, like `פירוש/הדפסה.rtl.md`, and has its own index if it wants one.
 - **The trail and the page index are faded** (`opacity: 0.7`), in the text's own colour with their links
@@ -765,7 +770,7 @@ to the file's folder, then the file's own, `<name>.layout.ts` (`a/b/c.md` → `a
 `translation.rtl.layout.ts`). Any of them may be missing. Each is a function (its default export), called with the
 file and with what the folders' modules before it answered (`above`, the root's first); `layoutChainFor()` lists
 them. The answers are merged, the nearer module the stronger - an entry one leaves out is taken from those before
-it, `page` field by field.
+it, `page` and `pdf` field by field.
 
 **The editor knows nothing of what a file is about.** The contract, `src/html/layout-schema.ts` (types only), gives a
 module elementary capabilities and takes back elementary decisions; everything else - what a numbered line is,
@@ -786,6 +791,7 @@ where a row should break - is the business of the modules and the code they impo
 | `groups` | which lines share printed rows (`LineGroup`: from, to, row starts or `"auto"`, margin note lengths) | its page, and books embedding it |
 | `pageBreakBefore` | which headings start a sheet - `SchemaValue<HeadingContext, boolean \| null>` | its own page |
 | `page` | `fontSize` (pt), `marginInline`, `marginBlock` (mm) | its own page |
+| `pdf` | `indexDepth` (0 none, 1 `#`, ... 6 all; the default), `footerTitle` - `SchemaValue<FooterContext, string>` (default: the outermost heading) | its own PDF |
 | `attention` | messages for a layout session - `layout-status` lists them | the tools |
 | `data` | anything modules and their tools pass along (plain data); the editor only passes it on | the tools |
 | `sourceMd5` | a file's own only | the tools |
@@ -809,7 +815,10 @@ the file changed since).
   server's root is `..`. **`outputOf()`**, asked of every file at every sweep, keeps its answer until the file or a
   module of its chain changes - the translations' module reads and parses its file to answer.
 - **`resolveLayout()` calls every function** and checks every answer's shape (types are gone at run time), giving a
-  `ResolvedLayout` with no function in it.
+  `ResolvedLayout` with no function in it - but `pdf.footerTitle`, whose context (the headings at the top of a sheet,
+  a book's embedded ones among them) exists only once the page is made. It is asked at once of every chain the
+  file's own headings make, so that one that throws or answers no string is said at the top of the page, like any
+  other; `md-to-html.ts` calls it again for the page's headings, a wrong answer there leaving the title blank.
 - **It reaches the page through the text**: `applyLayout()` puts the marks of `layout-marks.ts` into it - the groups'
   (see "Lines that share rows"), and `PAGE_BREAK_MARK` / `NO_PAGE_BREAK_MARK` right after a heading's `#`s, which the
   `page_breaks` core rule turns into `.page-break-before` / `.no-page-break-before`. Page breaks and `page` go to the
@@ -1042,6 +1051,51 @@ printed - a list of links is no document to print - but every folder of the PDF 
   to a file that has no page - are left as they are.
 - **Size.** A PDF embeds its fonts, so each is some 300-600 KB - several hundred MB for the tree, which is
   worth knowing before committing it all.
+
+### The PDF's pages
+
+A page of the mirror is one long scroll, and only the printer knows where its sheets break - so a PDF has two
+things its page does not: **an index whose entries end with their page numbers**, `<heading> ........ <page>`, and
+**a footer on every sheet**, a title in the middle and the page number at the line's end (the left, in Hebrew).
+A file's layout decides how deep the index goes and what the title says (`pdf`, see "A file's layout"); the rest is
+here, the same for every PDF - the mirror's and the layout tools' preview alike.
+
+**The page carries what the printer needs, unseen on screen** (`md-to-html.ts`, `RenderOptions.pdf`, which the mirror
+always passes):
+
+- **Every index has room for page numbers**: an entry is `.index-text`, `.index-leader`, `.index-page`, the last two
+  shown on paper only - a flex row, the leader a dotted `border-bottom` that takes what room is left, the numbers in a
+  column of a fixed width at the line's end. An index holds *every* heading: the screen shows them down to `###`
+  (`INDEX_DEEPEST_LEVEL`, by `.index-level-N` classes), paper as deep as the layout's `indexDepth` (`pdfStyle()`).
+- **A page with no index of its own gets one for paper** (`printIndex()`, `.print-index`, hidden on screen): the
+  headings below the page's opening `#`, placed right after it - as if `<תוכן-העניינים>` stood there - or all of
+  them, at the top, when the page opens with no `#`. Not for fewer than two entries. A file with its own index has
+  only that one numbered.
+- **Every heading carries the footer's title** of a sheet that opens under it (`data-running-title`; `<main>`'s for a
+  sheet before the first heading) - the layout's `footerTitle` asked with the chain of headings in force there.
+  Only the page's own headings, as an index has them - not one in a pseudo-tag, a quote or a list.
+- `<body>` says the sheet's margins (`data-margin-inline`, `data-margin-block`), for the footer to stand in.
+
+**The printer** (`pdf-pages.ts`, `printPages()`, in the tab the page is loaded in):
+
+1. **Prints once, and reads where every heading landed.** Chromium writes a named destination for each id a link
+   points at - so a hidden link points at each heading and each index target - and pdf-lib reads them back: the
+   sheet, and the height on it. **The height is measured from the top of the sheet's content**, the margin left out
+   (`pageHeight - y`). That is what tells whether a heading *stands at the top* of its sheet: nothing above it but its
+   own top margin - which Chromium keeps after a forced break and drops after one of its own (so the test is
+   "offset ≤ margin-top + 1pt", the margin read under `emulateMedia("print")`).
+2. **Fills in the index, and prints again** - the numbers in their fixed column move nothing, which the second print
+   is checked for (and printed again, at most three times).
+3. **Prints the footers apart, and lays them over the sheets.** The same tab is turned into a document of one sheet
+   per sheet - the page's fonts kept, its styles dropped - Chromium prints it, and pdf-lib lays each over its sheet as
+   a form (`embedPdf`, one copier, so the footer's font is in the file once). A sheet's title is that of the last
+   heading before its top, or at it (`sheetTitles()`).
+
+Why not CSS: Chromium numbers pages in `@page` margin boxes, but has neither `string-set` (a running title) nor
+`target-counter()` (a heading's page in the index). And not Playwright's `footerTemplate`: one template for every
+sheet, with no way to know the heading in force there.
+
+Three prints instead of one: a PDF takes some three times as long to make, which the background queue absorbs.
 
 ### The print and HTML buttons
 

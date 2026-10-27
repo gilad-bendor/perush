@@ -11,7 +11,8 @@ import { join, relative } from "path";
 import { spawnSync } from "child_process";
 import { PDFDocument } from "pdf-lib";
 import { renderMarkdownPage } from "../src/html/md-to-html";
-import { applyLayout, type ResolvedLayout } from "../src/html/layout-module";
+import { applyLayout, DEFAULT_PDF_SETTINGS, type ResolvedLayout, type ResolvedPdfSettings } from "../src/html/layout-module";
+import { printPages } from "../src/html/pdf-pages";
 import type { LineGroup, PageSettings } from "../src/html/layout-schema";
 import { REPO_ROOT } from "./tree";
 
@@ -29,12 +30,13 @@ export function readSource(mdFile: string): string {
  * embedded, as it has no folder around it; with `sourceLines`, every grouped line says which line it is.
  */
 export function pageHtml(mdFile: string, content: string, groups: readonly LineGroup[], page: PageSettings | null,
-                         options: { sourceLines?: boolean, pageBreaks?: Map<number, boolean> } = {}): string {
+                         options: { sourceLines?: boolean, pageBreaks?: Map<number, boolean>, pdf?: ResolvedPdfSettings } = {}): string {
+    const pdf = options.pdf ?? DEFAULT_PDF_SETTINGS;
     const resolved: ResolvedLayout = {
-        output: "plain", page, groups, pageBreaks: options.pageBreaks ?? new Map(), attention: [], data: {}, sourceMd5: null,
+        output: "plain", page, pdf, groups, pageBreaks: options.pageBreaks ?? new Map(), attention: [], data: {}, sourceMd5: null,
     };
     return renderMarkdownPage(applyLayout(content, resolved, true), relative(REPO_ROOT, mdFile),
-        { sourceLines: options.sourceLines, fonts: "embed", page: page ?? undefined });
+        { sourceLines: options.sourceLines, fonts: "embed", page: page ?? undefined, pdf });
 }
 
 let browser: Browser | null = null;
@@ -102,7 +104,7 @@ export async function measureGroups(html: string): Promise<MeasuredGroup[]> {
     }
 }
 
-/** Prints a page to `<out>/preview.pdf` as the PDF mirror would, and these of its pages to PNGs (pdftoppm). */
+/** Prints a page to `<out>/preview.pdf` as the PDF mirror would - page numbers, footers and all, and these of its pages to PNGs (pdftoppm). */
 export async function printPreview(html: string, pages: number[] | null, out: string): Promise<{ pdf: string, pageCount: number, pngs: string[] }> {
     browser ??= await chromium.launch();
     mkdirSync(out, { recursive: true });
@@ -114,7 +116,8 @@ export async function printPreview(html: string, pages: number[] | null, out: st
             await document.fonts.ready;
             window.dispatchEvent(new Event("beforeprint"));
         });
-        writeFileSync(pdf, await tab.pdf({ printBackground: true, preferCSSPageSize: true, format: "A4" }));
+        // With the index's page numbers and the footers, as the mirror prints it.
+        writeFileSync(pdf, (await printPages(tab)).pdf);
     } finally {
         await tab.close();
     }

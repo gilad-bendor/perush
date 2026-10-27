@@ -3,7 +3,7 @@ import { mkdir, mkdtemp, rm, utimes, writeFile } from "fs/promises";
 import { tmpdir } from "os";
 import { dirname, join, relative } from "path";
 import {
-    applyLayout, folderLayoutPathsFor, isFolderLayoutFile, isLayoutFile, layoutChainFor, layoutFileOf, layoutFor,
+    applyLayout, DEFAULT_PDF_SETTINGS, folderLayoutPathsFor, isFolderLayoutFile, isLayoutFile, layoutChainFor, layoutFileOf, layoutFor,
     layoutPathFor, loadLayoutModule, md5Of, outputOf, resolveLayout, runChain, type ResolvedLayout,
 } from "../src/html/layout-module";
 import type { LayoutOfFile } from "../src/html/layout-schema";
@@ -14,7 +14,9 @@ import { isIgnoredWatchPath } from "../src/fs-changes";
 
 const TEXT = "# לוח\n\n**1** אחת,\n**2** שתיים.\n**3** שלוש,\n\n## סוף";
 const MD5 = md5Of(TEXT);
-const nothing: ResolvedLayout = { output: "plain", page: null, groups: [], pageBreaks: new Map(), attention: [], data: {}, sourceMd5: null };
+const nothing: ResolvedLayout = {
+    output: "plain", page: null, pdf: DEFAULT_PDF_SETTINGS, groups: [], pageBreaks: new Map(), attention: [], data: {}, sourceMd5: null,
+};
 
 describe("the layout modules of a file", () => {
     test("are every folder's .layout.ts above it, the root's first, then its own <name>.layout.ts", () => {
@@ -123,6 +125,14 @@ describe("a layout module", () => {
         expect(await outputOf(dir, "tech/never-written.md")).toBe("plain");
     });
 
+    test("pdf is merged field by field, the nearer module the stronger", async () => {
+        await module(".layout.ts", 'export default () => ({ pdf: { indexDepth: 1, footerTitle: "root" } });');
+        await module("p.layout.ts", `export default () => ({ sourceMd5: "${MD5}", pdf: { indexDepth: 2 } });`);
+        const { resolved } = await layoutFor(dir, "p.md", TEXT, true);
+        expect(resolved!.pdf.indexDepth).toBe(2);
+        expect(resolved!.pdf.footerTitle([{ level: 1, text: "x" }])).toBe("root");
+    });
+
     test("an answer of the wrong shape is said what is wrong with", async () => {
         const problem = async (answer: string, own = true) => {
             await module(own ? "w.layout.ts" : "sub/.layout.ts", `export default () => (${answer});`);
@@ -135,6 +145,10 @@ describe("a layout module", () => {
         expect(await problem(`{ sourceMd5: "${MD5}", groups: [{ from: 2, to: 3, rowStarts: [9] }] }`)).toContain("rowStarts");
         expect(await problem(`{ sourceMd5: "${MD5}", groups: [{ from: 2, to: 3, rowStarts: "auto", margins: [1] }] }`)).toContain("margins");
         expect(await problem(`{ sourceMd5: "${MD5}", data: { f: () => 1 } }`)).toContain("plain data");
+        expect(await problem(`{ sourceMd5: "${MD5}", pdf: { depth: 2 } }`)).toContain('unknown entry "pdf.depth"');
+        expect(await problem(`{ sourceMd5: "${MD5}", pdf: { indexDepth: 7 } }`)).toContain("0 to 6");
+        expect(await problem(`{ sourceMd5: "${MD5}", pdf: { indexDepth: 1.5 } }`)).toContain("0 to 6");
+        expect(await problem(`{ sourceMd5: "${MD5}", pdf: { footerTitle: 3 } }`)).toContain("a string, or a function");
         expect(await problem("null")).toContain("cannot be null");
         expect(await problem(`{ sourceMd5: "${MD5}" }`, false)).toContain("unknown entries: sourceMd5");
         expect(await problem("null", false)).toBeUndefined();
@@ -202,6 +216,28 @@ describe("a layout in the text", () => {
         expect(page).toContain("@page { margin: 18mm 20mm; }");
         expect(renderMarkdownPage("שלום", "x.rtl.md", { fonts: "embed" })).toContain("data:font/otf;base64,");
         expect(renderMarkdownPage("hello", "x.md", { fonts: "../_fonts" })).not.toContain("@font-face");
+    });
+
+    test("pdf: every heading, and the outermost heading as the footer's title - unless the layout says otherwise", async () => {
+        const chain = await runChain("/nowhere", layoutFileOf("c.md", TEXT));
+        const resolved = (entries: object) => resolveLayout({ ...chain, merged: entries, answered: true });
+        const plain = resolved({}) as ResolvedLayout;
+        expect(plain.pdf.indexDepth).toBe(6);
+        expect(plain.pdf.footerTitle([{ level: 1, text: "ספר" }, { level: 2, text: "פרק" }])).toBe("ספר");
+        expect(plain.pdf.footerTitle([])).toBe("");
+        const joined = resolved({ pdf: { footerTitle: ({ chain }: { chain: { text: string }[] }) => chain.map(h => h.text).join(" / ") } });
+        expect((joined as ResolvedLayout).pdf.footerTitle([{ level: 1, text: "ספר" }, { level: 2, text: "פרק" }])).toBe("ספר / פרק");
+    });
+
+    test("a footerTitle that throws, or answers no string, is caught at once - asked of every chain of the file's headings", async () => {
+        const chain = await runChain("/nowhere", layoutFileOf("c.md", TEXT));
+        const resolved = (footerTitle: unknown) => resolveLayout({ ...chain, merged: { pdf: { footerTitle } } as object, answered: true });
+        const asked: string[][] = [];
+        resolved(({ chain }: { chain: { text: string }[] }) => (asked.push(chain.map(h => h.text)), ""));
+        expect(asked).toEqual([[], ["לוח"], ["לוח", "סוף"]]);
+        expect((resolved(({ chain }: { chain: unknown[] }) => chain.length > 1 ? 7 : "") as { error: string }).error)
+            .toContain('"pdf.footerTitle" returned 7 at ["לוח","סוף"] - not a string');
+        expect((resolved(() => { throw new Error("oops"); }) as { error: string }).error).toContain("threw at []: oops");
     });
 
     test("pageBreakBefore is resolved per heading, and its answer checked", async () => {

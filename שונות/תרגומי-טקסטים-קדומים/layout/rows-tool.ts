@@ -395,7 +395,7 @@ async function preview(mdFile: string, pages: string | undefined, out: string): 
     const { laidOut, page, error } = await readLayout(mdFile);
     if (error) console.log(`A LAYOUT MODULE WENT WRONG, and what it says is ignored: ${error}`);
     const resolved = laidOut.resolved;
-    const html = pageHtml(mdFile, readSource(mdFile), resolved?.groups ?? [], page, { pageBreaks: resolved?.pageBreaks });
+    const html = pageHtml(mdFile, readSource(mdFile), resolved?.groups ?? [], page, { pageBreaks: resolved?.pageBreaks, pdf: resolved?.pdf });
     const wanted = numberSet(pages ?? "1-3");
     const printed = await printPreview(html, wanted ? [...wanted] : null, out);
     if (!printed.pngs.length) throw new Error(`no such pages: ${pages} - the PDF has ${printed.pageCount}`);

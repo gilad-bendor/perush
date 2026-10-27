@@ -38,7 +38,7 @@ import type { Stats } from "fs";
 import { renderMarkdownPage } from "./md-to-html";
 import type { Breadcrumb } from "./md-to-html";
 import { errorMarkerLine, expandIncludes, hasIncludeDirective } from "./includes";
-import { layoutChainFor, layoutFor, outputOf } from "./layout-module";
+import { DEFAULT_PDF_SETTINGS, layoutChainFor, layoutFor, outputOf } from "./layout-module";
 import { FONT_FACES, FONT_FILES, FONTS_DIR } from "./text-measure";
 
 import { FOLDER_INDEX_NAME, folderIndexPages, mirrorSummary, siteIndexPage } from "./folder-index";
@@ -315,6 +315,7 @@ export class HtmlMirror {
                 pageIndex: !hasIncludeDirective(content),
                 fonts: `${"../".repeat(mdPath.split("/").length)}${posix.basename(SITE_FONTS_DIR)}/`,
                 page: own.resolved?.page ?? undefined,
+                pdf: own.resolved?.pdf ?? DEFAULT_PDF_SETTINGS,
             });
 
             let outcome: SyncOutcome;

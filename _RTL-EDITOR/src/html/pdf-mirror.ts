@@ -21,6 +21,9 @@
 //
 // The folder indexes of this mirror are HtmlMirror's work, as they list the very same pages.
 //
+// What a PDF has and its page does not - the page numbers of its index, and a footer on every sheet - is
+// pdf-pages.ts's: it prints the page twice, and the footers apart.
+//
 // **The links are rewritten on the way.** The page is loaded as a file, so every link in it is a
 // file:// URL - which Chrome writes into the PDF as it is, and which leads nowhere once the PDF is
 // shared. A link into docs/ is pointed at the same file on GitHub Pages, and a link to anything else
@@ -39,12 +42,13 @@ import { pathToFileURL } from "url";
 import type { Browser } from "playwright";
 import { HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, logSiteChange, PDF_MIRROR_DIR, pdfPathFor } from "./html-mirror";
 import { writeFileSafe } from "../write-file-safe";
+import { printPages } from "./pdf-pages";
 
 // The PDF mirror's paths are html-mirror.ts's, which lists this mirror in its indexes too.
 export { PDF_MIRROR_DIR, PDF_MIRROR_NAME, pdfPathFor } from "./html-mirror";
 
 /** The code a PDF depends on besides its page. */
-const RENDERER_FILES = [join(import.meta.dir, "pdf-mirror.ts")];
+const RENDERER_FILES = [join(import.meta.dir, "pdf-mirror.ts"), join(import.meta.dir, "pdf-pages.ts")];
 
 /** The document-info key a PDF's stamp is kept under. */
 const STAMP_KEY = "PerushSource";
@@ -191,7 +195,8 @@ export class PdfMirror implements PageCompanion {
                 await document.fonts.ready;
                 window.dispatchEvent(new Event("beforeprint"));
             });
-            printed = await tab.pdf({ printBackground: true, preferCSSPageSize: true, format: "A4" });
+            // The index's page numbers, and the footers (pdf-pages.ts).
+            printed = (await printPages(tab)).pdf;
         } finally {
             await tab.close();
         }
@@ -312,7 +317,7 @@ export class PdfMirror implements PageCompanion {
     }
 }
 
-/** What a PDF printed from this page, by this code, with its links pointed at `urls`, is stamped with. */
+/** What a PDF printed from this page, by this code (pdf-pages.ts's too), with its links pointed at `urls`, is stamped with. */
 export function sourceStamp(pageHtml: string, printer: string, urls: PublicUrls | null): string {
     return createHash("md5").update(printer).update("\0").update(JSON.stringify(urls))
         .update("\0").update(pageHtml).digest("hex");

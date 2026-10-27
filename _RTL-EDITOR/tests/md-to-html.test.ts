@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { markdownToHtml, readablePath, readableUrl, renderMarkdownPage } from "../src/html/md-to-html";
+import { markdownToHtml, PAGE_STYLE, readablePath, readableUrl, renderMarkdownPage } from "../src/html/md-to-html";
 import type { EmbedError } from "../src/html/includes";
 
 const html = (markdown: string) => markdownToHtml(markdown).trim();
@@ -271,15 +271,17 @@ describe("the index", () => {
     const TAG = "<תוכן-העניינים>";
     const sections = `${TAG}\n# חלק א\n## א1. ההצעה\n### פרט\n#### עמוק מדי\n# חלק ב\n`;
 
-    test("the tag's line becomes the index, linking every section down to ###", () => {
+    test("the tag's line becomes the index, linking every section - down to ### on screen", () => {
         const page = renderMarkdownPage(sections, "פירוש/a.rtl.md");
         expect(page).toMatch(/<main>\n<nav class="index">\n<details open>\n<summary>תוכן העניינים<\/summary>/);
-        expect(page.match(/<li class="index-depth-(\d)">/g)).toEqual([
-            '<li class="index-depth-0">', '<li class="index-depth-1">', '<li class="index-depth-2">', '<li class="index-depth-0">',
+        expect(page.match(/<li class="index-depth-\d index-level-\d">/g)).toEqual([
+            '<li class="index-depth-0 index-level-1">', '<li class="index-depth-1 index-level-2">', '<li class="index-depth-2 index-level-3">',
+            '<li class="index-depth-3 index-level-4">', '<li class="index-depth-0 index-level-1">',
         ]);
-        expect(page).not.toContain(">עמוק מדי</a>");
+        // A #### is listed for paper, which may go that deep - and hidden on screen, which does not.
+        expect(PAGE_STYLE).toMatch(/^\.index \.index-level-4, \.index \.index-level-5, \.index \.index-level-6, [^{]*\{ display: none; \}/m);
         expect(page).toContain('<h2 id="א1-ההצעה">');
-        expect(page).toContain(`<a href="#א1-ההצעה">א1. ההצעה</a>`);
+        expect(page).toContain(`<a href="#א1-ההצעה"><span class="index-text">א1. ההצעה</span><span class="index-leader"></span><span class="index-page"></span></a>`);
     });
 
     test("no tag, no index - but the headings still get their ids", () => {
@@ -297,17 +299,17 @@ describe("the index", () => {
     test("an LTR page calls it Contents", () => {
         const page = renderMarkdownPage(`Notes\n\n${TAG}\n## One\n## Two`, "docs/notes.md");
         expect(page).toContain("<summary>Contents</summary>");
-        expect(page).toContain('<li class="index-depth-0"><a href="#one">One</a></li>');
+        expect(page).toContain('<li class="index-depth-0 index-level-2"><a href="#one"><span class="index-text">One</span>');
     });
 
     test("a single heading is index enough - the file asked for one", () => {
-        expect(renderMarkdownPage(`Notes\n\n${TAG}\n## One`, "docs/notes.md")).toContain('<a href="#one">One</a>');
+        expect(renderMarkdownPage(`Notes\n\n${TAG}\n## One`, "docs/notes.md")).toContain('<a href="#one"><span class="index-text">One</span>');
     });
 
     test("an index lists the headings below it, and only those", () => {
         const page = renderMarkdownPage(`## לפני\n${TAG}\n## אחרי`, "a.rtl.md");
-        expect(page).toContain(">אחרי</a>");
-        expect(page).not.toContain(">לפני</a>");
+        expect(page).toContain(">אחרי</span>");
+        expect(page).not.toContain(">לפני</span>");
         // The heading above it is not listed, but it is still a place a link can point at.
         expect(page).toContain('<h2 id="לפני">');
     });
@@ -333,9 +335,9 @@ describe("the index", () => {
         const page = renderMarkdownPage(`${TAG}\n## א\n${TAG}\n## ב`, "a.rtl.md");
         const indexes = page.split('<nav class="index">').slice(1);
         expect(indexes).toHaveLength(2);
-        expect(indexes[0]).toContain(">א</a>");
-        expect(indexes[1]).not.toContain(">א</a>");
-        expect(indexes[1]).toContain(">ב</a>");
+        expect(indexes[0]).toContain(">א</span>");
+        expect(indexes[1]).not.toContain(">א</span>");
+        expect(indexes[1]).toContain(">ב</span>");
     });
 
     test("niqqud and punctuation leave the id, and a repeated heading gets a distinct one", () => {
@@ -343,17 +345,17 @@ describe("the index", () => {
         expect(page).toContain('<h2 id="יום-ראשון-אור">');
         expect(page).toContain('<h2 id="יום-ראשון-אור-2">');
         expect(page).toContain('<h2 id="כל-המילה">');
-        expect(page).toContain("<code>כָּל</code> - <em>המילה</em></a>");
+        expect(page).toContain("<code>כָּל</code> - <em>המילה</em></span>");
     });
 
     test("a heading inside a pseudo-tag is not a section", () => {
         const page = renderMarkdownPage(`${TAG}\n## א\n<עיון>\n## בתוך העיון\n</עיון>`, "a.rtl.md");
-        expect(page).not.toContain(">בתוך העיון</a>");
+        expect(page).not.toContain(">בתוך העיון</span>");
     });
 
     test("a link in a heading keeps its text, without nesting a link in the entry", () => {
         const page = renderMarkdownPage(`${TAG}\n## [א](x.md)\n## ב`, "a.rtl.md");
-        expect(page).toContain(`<a href="#א">א</a></li>`);
+        expect(page).toContain(`<a href="#א"><span class="index-text">א</span>`);
     });
 });
 
@@ -474,5 +476,61 @@ describe("HTML comments on lines of their own", () => {
 
     test("a left-to-right page keeps it", () => {
         expect(body("Line\n\n<!--\nnote\n-->\n", "a.md")).toContain("note");
+    });
+});
+
+describe("what the page carries for its PDF", () => {
+    const joined = { indexDepth: 6, footerTitle: (chain: readonly { text: string }[]) => chain.map(h => h.text).join(" / ") };
+    const BOOK = "# ספר\n\nפתיחה\n\n## פרק א\n\n### סעיף\n\n## פרק ב\n";
+
+    test("nothing, unless it is asked for", () => {
+        const page = renderMarkdownPage(BOOK, "a.rtl.md");
+        expect(page).not.toContain("data-running-title");
+        expect(page).not.toContain('class="index print-index"');
+        expect(page).not.toContain("data-margin-inline");
+    });
+
+    test("every heading, the footer's title of a sheet that opens under it - <main> that of a sheet before the first", () => {
+        const page = renderMarkdownPage(`הקדמה\n\n${BOOK}<עיון>\n## בתוך העיון\n</עיון>`, "a.rtl.md", { pdf: joined });
+        expect(page).toContain('<main data-running-title="">');
+        expect(page).toContain('<h1 id="ספר" data-running-title="ספר">');
+        expect(page).toContain('<h3 id="סעיף" data-running-title="ספר / פרק א / סעיף">');
+        expect(page).toContain('<h2 id="פרק-ב" data-running-title="ספר / פרק ב">');
+        // A heading inside a box is a detail of the box, not a section.
+        expect(page).toContain('<h2 id="בתוך-העיון">');
+    });
+
+    test("a title that throws, or is not a string, is left blank", () => {
+        const page = renderMarkdownPage(BOOK, "a.rtl.md", { pdf: { indexDepth: 6, footerTitle: chain => chain.length > 1 ? 5 : "" } });
+        expect(page).toContain('<h2 id="פרק-א" data-running-title="">');
+        const thrown = renderMarkdownPage(BOOK, "a.rtl.md", { pdf: { indexDepth: 6, footerTitle: () => { throw new Error("x"); } } });
+        expect(thrown).toContain('<h1 id="ספר" data-running-title="">');
+    });
+
+    test("an index of its own for paper, right below its opening #, of the headings below it", () => {
+        const page = renderMarkdownPage(BOOK, "a.rtl.md", { pdf: joined });
+        const index = page.indexOf('<nav class="index print-index">');
+        expect(index).toBeGreaterThan(page.indexOf("</h1>"));
+        expect(index).toBeLessThan(page.indexOf("<p>פתיחה</p>"));
+        const nav = page.slice(index, page.indexOf("</nav>", index));
+        expect(nav).not.toContain(">ספר</span>");
+        expect(nav).toContain(">פרק א</span>");
+        expect(nav).toContain('<li class="index-depth-1 index-level-3">');
+        expect(PAGE_STYLE).toContain(".print-index { display: none; }");
+    });
+
+    test("at the top when the page opens with no #; none for fewer than two entries, or when the file has an index of its own", () => {
+        expect(renderMarkdownPage("## א\n## ב", "a.rtl.md", { pdf: joined })).toMatch(/<main[^>]*>\n<nav class="index print-index">/);
+        expect(renderMarkdownPage("# ספר\n## א", "a.rtl.md", { pdf: joined })).not.toContain('class="index print-index"');
+        expect(renderMarkdownPage("# ספר\n## א\n### ב", "a.rtl.md", { pdf: { ...joined, indexDepth: 2 } })).not.toContain('class="index print-index"');
+        expect(renderMarkdownPage(`# ספר\n<תוכן-העניינים>\n## א\n## ב`, "a.rtl.md", { pdf: joined })).not.toContain('class="index print-index"');
+    });
+
+    test("paper goes as deep as the layout says, and its margins are told to the printer", () => {
+        const deep = renderMarkdownPage(BOOK, "a.rtl.md", { pdf: { ...joined, indexDepth: 4 }, page: { marginInline: 20 } });
+        expect(deep).toContain("@media print { .index li.index-level-5, .index li.index-level-6 { display: none; } }");
+        expect(deep).toContain('<body class="rtl" data-margin-inline="20" data-margin-block="18">');
+        expect(renderMarkdownPage(BOOK, "a.rtl.md", { pdf: { ...joined, indexDepth: 0 } })).toContain("@media print { .index { display: none; } }");
+        expect(renderMarkdownPage(BOOK, "a.rtl.md", { pdf: joined })).not.toContain("<style>@media print { .index");
     });
 });
