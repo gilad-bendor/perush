@@ -72,13 +72,31 @@ export const SITE_FONTS_DIR = posix.join(SITE_DIR, "_fonts");
 const NO_JEKYLL_TEXT = "Tells GitHub Pages to serve docs/ as is, without Jekyll - which would drop every name starting with \"_\".\n"
     + "Written by _RTL-EDITOR (html-mirror.ts).\n";
 
+/** What a mirror wrote and deleted under docs/ since it was last asked - for the "in sync" lines of server.ts. */
+export type SiteChanges = { written: number; deleted: number; since: number | null };
+
+const noChanges = (): SiteChanges => ({ written: 0, deleted: 0, since: null });
+/** Counted by logSiteChange(): a PDF is the PDF mirror's, anything else - its indexes too - this one's. */
+const siteChanges = { html: noChanges(), pdf: noChanges() };
+
 /**
  * Says on the console what was changed under docs/ - every file written or deleted there, and every
- * folder deleted - by either mirror.
+ * folder deleted - by either mirror. And counts the files, for takeSiteChanges().
  * @param fullPath  as joined onto `root`
  */
 export function logSiteChange(root: string, change: "wrote" | "deleted" | "deleted folder", fullPath: string): void {
     console.log(`docs/: ${change} ${relative(root, fullPath)}`);
+    if (change === "deleted folder") return;
+    const counts = siteChanges[fullPath.endsWith(".pdf") ? "pdf" : "html"];
+    counts[change === "wrote" ? "written" : "deleted"]++;
+    counts.since ??= Date.now();
+}
+
+/** What a mirror wrote and deleted since the last call - and starts counting again. */
+export function takeSiteChanges(mirror: "html" | "pdf"): SiteChanges {
+    const counts = siteChanges[mirror];
+    siteChanges[mirror] = noChanges();
+    return counts;
 }
 
 /** The code a page depends on besides its file - a change to any of them makes every page stale. */
@@ -200,12 +218,34 @@ export class HtmlMirror {
     private readonly dependencies = new Map<string, Set<string>>();
     /** The same, the other way round: md path -> the pages that have to be rebuilt when it changes. */
     private readonly dependents = new Map<string, Set<string>>();
+    /** Syncs started by a timer - of one file, or of the indexes - that have not finished yet. */
+    private running = 0;
+    /** Called, soon, whenever a piece of this mirror's work is done - to ask `busy` whether it was the last one. */
+    onSettled: (() => void) | null = null;
 
     /**
      * @param root             the root of the served tree
      * @param rendererMtimeMs  pages older than this are stale whatever their file says
      */
     constructor(private readonly root: string, private readonly rendererMtimeMs: number) {}
+
+    /**
+     * Has the mirror work scheduled or under way - a file's sync, the indexes', a sweep? Its PDFs aside:
+     * PdfMirror.idle() says when those are done.
+     */
+    get busy(): boolean {
+        return this.timers.size > 0 || this.running > 0 || this.sweeping !== null || this.indexTimer !== undefined;
+    }
+
+    /** How many files have a page - null until the first sweep has found out. */
+    get pageCount(): number | null {
+        return this.pagedFiles?.size ?? null;
+    }
+
+    private settled(): void {
+        // Not at once: the work that just ended may be about to schedule more (notePage() the indexes).
+        if (this.onSettled) setTimeout(() => this.onSettled?.(), 0);
+    }
 
     /** A mirror whose pages go stale whenever the rendering code changes. */
     static async create(root: string): Promise<HtmlMirror> {
@@ -233,9 +273,14 @@ export class HtmlMirror {
         clearTimeout(this.timers.get(mdPath));
         this.timers.set(mdPath, setTimeout(() => {
             this.timers.delete(mdPath);
+            this.running++;
             this.syncFile(mdPath)
                 .then(outcome => this.notePage(mdPath, outcome !== "removed" && outcome !== "absent"))
-                .catch(error => console.error(`HTML mirror: cannot sync ${mdPath}:`, error));
+                .catch(error => console.error(`HTML mirror: cannot sync ${mdPath}:`, error))
+                .finally(() => {
+                    this.running--;
+                    this.settled();
+                });
         }, SYNC_DEBOUNCE_MS));
     }
 
@@ -252,7 +297,14 @@ export class HtmlMirror {
         if (!changed) return;
         clearTimeout(this.indexTimer);
         this.indexTimer = setTimeout(() => {
-            this.syncIndexes().catch(error => console.error("HTML mirror: cannot sync the indexes:", error));
+            this.indexTimer = undefined;
+            this.running++;
+            this.syncIndexes()
+                .catch(error => console.error("HTML mirror: cannot sync the indexes:", error))
+                .finally(() => {
+                    this.running--;
+                    this.settled();
+                });
         }, INDEX_DEBOUNCE_MS);
     }
 
@@ -391,7 +443,10 @@ export class HtmlMirror {
      */
     syncTree(treePaths: Iterable<string>): Promise<SweepResult> {
         // One sweep at a time: a slow first one must not be joined by the periodic one.
-        this.sweeping ??= this.sweep([...treePaths]).finally(() => this.sweeping = null);
+        this.sweeping ??= this.sweep([...treePaths]).finally(() => {
+            this.sweeping = null;
+            this.settled();
+        });
         return this.sweeping;
     }
 

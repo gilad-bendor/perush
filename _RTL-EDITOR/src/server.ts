@@ -8,7 +8,8 @@ import { formatTables, isAiGeneratedFile } from "../public/src/tables.js";
 import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes";
 import type { FileSystemChange } from "./fs-changes";
 import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
-import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR } from "./html/html-mirror";
+import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR, takeSiteChanges } from "./html/html-mirror";
+import type { SiteChanges } from "./html/html-mirror";
 import { outputOf } from "./html/layout-module";
 import { PDF_MIRROR_DIR, PdfMirror, pdfPathFor } from "./html/pdf-mirror";
 import { lineEndingOf, toLf, withLineEnding } from "./line-endings";
@@ -93,6 +94,41 @@ function scheduleRescan() {
     }, RESCAN_DEBOUNCE_MS);
 }
 
+// "In sync" lines
+//
+// Each mirror says on the console when it has nothing left to do: once at startup, and after that
+// whenever it wrote or deleted anything since it last said so - the 15 s sweep, finding nothing, stays
+// silent. The PDFs are printed from the pages, so they are in sync only once the pages are too.
+
+const startedAt = Date.now();
+let htmlInSyncSaid = false;
+let pdfInSyncSaid = false;
+
+function inSyncLine(mirror: string, count: number, unit: string, changes: SiteChanges, first: boolean): string | null {
+    if (!first && !changes.written && !changes.deleted) return null;
+    const seconds = (from: number) => `${((Date.now() - from) / 1000).toFixed(1)} s`;
+    const what = changes.written || changes.deleted ? `${changes.written} written, ${changes.deleted} deleted` : "nothing to write";
+    const when = first ? `${seconds(startedAt)} after startup` : `over ${seconds(changes.since!)}`;
+    return `${mirror}: all ${count} ${unit} in sync - ${what}, ${when}`;
+}
+
+function reportMirrorsInSync(): void {
+    if (!htmlMirror || !pdfMirror || htmlMirror.busy) return;
+    const count = htmlMirror.pageCount;
+    if (count === null) return;           // before the first sweep, which is what knows the pages
+    const html = inSyncLine("HTML mirror", count, "pages", takeSiteChanges("html"), !htmlInSyncSaid);
+    if (html) console.log(html);
+    htmlInSyncSaid = true;
+    // The PDFs the pages scheduled are printed in the background - and when they are, the pages must
+    // still be in sync, or the PDFs are not: then the next time the pages are, this is asked again.
+    void pdfMirror.idle().then(() => {
+        if (htmlMirror!.busy) return;
+        const pdf = inSyncLine("PDF mirror", htmlMirror!.pageCount ?? count, "PDFs", takeSiteChanges("pdf"), !pdfInSyncSaid);
+        if (pdf) console.log(pdf);
+        pdfInSyncSaid = true;
+    });
+}
+
 async function startWatchingTree() {
     fsSnapshot = snapshotOfTree(await getMarkdownFiles(MARKDOWN_DIR));
     fsChangeLog.startCovering();
@@ -113,6 +149,7 @@ async function startWatchingTree() {
     htmlMirror = await HtmlMirror.create(MARKDOWN_DIR);
     pdfMirror = await PdfMirror.create(MARKDOWN_DIR);
     htmlMirror.companion = pdfMirror;
+    htmlMirror.onSettled = reportMirrorsInSync;
     const syncHtmlMirror = async () => {
         const { rendered, removed, indexes } = await htmlMirror!.syncTree(fsSnapshot);
         if (rendered || removed || indexes) {

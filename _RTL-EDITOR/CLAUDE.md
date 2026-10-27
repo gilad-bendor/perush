@@ -687,6 +687,14 @@ ever: only a page whose content really changed makes its own dependents be re-sy
   file left the tree, and prunes the folders that leaves empty - **unless the tree is empty**, which
   is far likelier a failed walk than a deleted project.
 
+**The console says when the mirrors are in sync**: `HTML mirror: all N pages in sync - ...`, then `PDF mirror: all N PDFs
+in sync - ...` - once at startup, and after that whenever a mirror wrote or deleted anything since it last said so, with
+the counts (`reportMirrorsInSync()` in `server.ts`). The HTML mirror is in sync when it is not `busy` (no sync timer,
+no sync under way, no sweep); it calls `onSettled` whenever a piece of work ends. The PDFs, once that is so and
+`PdfMirror.idle()` too. `logSiteChange()` counts what it logs - a `.pdf` for the PDF mirror, anything else for the HTML
+one - and `takeSiteChanges()` hands the counts over. This is done without touching `pdf-mirror.ts`, on purpose: its
+code is in every PDF's stamp, so any edit to it reprints them all.
+
 **Folder indexes.** `docs/_HTML-FROM-MD/` and every folder under it get an `index.html`
 (`folder-index.ts`): a breadcrumb trail back up, starting from `docs/index.html` - titled **פירוש** (`SITE_TITLE`) -
 and a `..` heading the list of the subfolders and then the pages directly in the folder - folders first,
