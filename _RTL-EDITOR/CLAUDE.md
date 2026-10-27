@@ -700,7 +700,8 @@ code is in every PDF's stamp, so any edit to it reprints them all.
 and a `..` heading the list of the subfolders and then the pages directly in the folder - folders first,
 as in the file tree, each linking to its own index. Nothing deeper is listed. A page is named by its file without `.rtl.html` /
 `.html`, unless two pages of the folder would then share a name - then both keep their full name.
-A file named `index.md` would take its folder's index, so its page is `index.md.html` (`htmlPathFor()`).
+A file named `index.md` would take its folder's index, so its page is `index.md.html` (`htmlPathFor()`) - and
+so is an `INDEX.md`'s, in any case: macOS's disk ignores case, and takes `INDEX.html` for `index.html`.
 
 **What an index lists is what git would.** Only pages whose `.md` file git does not ignore - tracked, or
 new and not yet added (`git ls-files --cached --others --exclude-standard`) - and only the folders holding

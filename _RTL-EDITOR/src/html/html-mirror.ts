@@ -137,10 +137,11 @@ export function isMirroredFile(mdPath: string): boolean {
 /**
  * Where the page of a Markdown file goes, relative to the root of the served tree.
  *
- * A file named `index.md` would take its folder's index.html, so its page is `index.md.html`.
+ * A file named `index.md` would take its folder's index.html, so its page is `index.md.html` - and so is
+ * `INDEX.md`'s, or `Index.md`'s: a disk that ignores case (macOS's, by default) takes `INDEX.html` for `index.html`.
  */
 export function htmlPathFor(mdPath: string): string {
-    const pagePath = posix.basename(mdPath) === "index.md" ? `${mdPath}.html` : mdPath.replace(/\.md$/, ".html");
+    const pagePath = posix.basename(mdPath).toLowerCase() === "index.md" ? `${mdPath}.html` : mdPath.replace(/\.md$/, ".html");
     return posix.join(HTML_MIRROR_DIR, pagePath);
 }
 

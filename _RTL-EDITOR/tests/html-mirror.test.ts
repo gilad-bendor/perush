@@ -44,6 +44,9 @@ describe("htmlPathFor", () => {
 
     test("an index.md does not take its folder's index.html", () => {
         expect(htmlPathFor("a/index.md")).toBe("docs/_HTML-FROM-MD/a/index.md.html");
+        // On a disk that ignores case, INDEX.html is index.html.
+        expect(htmlPathFor("a/INDEX.md")).toBe("docs/_HTML-FROM-MD/a/INDEX.md.html");
+        expect(htmlPathFor("a/Index.md")).toBe("docs/_HTML-FROM-MD/a/Index.md.html");
         expect(htmlPathFor("a/index.rtl.md")).toBe("docs/_HTML-FROM-MD/a/index.rtl.html");
     });
 });
