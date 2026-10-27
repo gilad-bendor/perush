@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { applyLayout, layoutFileOf } from "../../../../_RTL-EDITOR/src/html/layout-module";
+import { applyLayout, DEFAULT_PDF_SETTINGS, layoutFileOf } from "../../../../_RTL-EDITOR/src/html/layout-module";
 import { markdownToHtml, renderMarkdownPage } from "../../../../_RTL-EDITOR/src/html/md-to-html";
 import { continuesLabel, echoesOf, isNumberLabel, labelPieces, lineSimilarity, numberedLines, runsOf } from "../numbered-lines";
 import { translationLayout } from "../translation-layout";
@@ -8,7 +8,7 @@ import { translationLayout } from "../translation-layout";
 const html = (markdown: string, rows: Parameters<typeof translationLayout>[2] = {}) => {
     const file = layoutFileOf("x.rtl.md", markdown);
     const layout = translationLayout(file, [], rows);
-    const resolved = { output: "plain" as const, page: null, groups: layout.groups ?? [], pageBreaks: new Map(), attention: [], data: {}, sourceMd5: null };
+    const resolved = { output: "plain" as const, page: null, pdf: DEFAULT_PDF_SETTINGS, groups: layout.groups ?? [], pageBreaks: new Map(), attention: [], data: {}, sourceMd5: null };
     return markdownToHtml(applyLayout(markdown, resolved, true)).trim();
 };
 

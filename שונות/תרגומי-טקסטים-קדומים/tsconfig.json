@@ -1,0 +1,17 @@
+{
+  // The translations' layout code (layout/ and each text's <name>.layout.ts) - checked with the settings of
+  // _RTL-EDITOR, whose node_modules also provides the Bun types (this folder has none of its own).
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "typeRoots": ["../../_RTL-EDITOR/node_modules", "../../_RTL-EDITOR/node_modules/@types"],
+    "types": ["bun-types"]
+  },
+  "include": ["**/*.ts"]
+}

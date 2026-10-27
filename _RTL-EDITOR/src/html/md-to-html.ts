@@ -490,7 +490,7 @@ markdown.core.ruler.push("empty_link_text", (state: StateCore) => {
         for (let i = children.length - 2; i >= 0; i--) {
             if (children[i].type !== "link_open" || children[i + 1].type !== "link_close") continue;
             const href = children[i].attrGet("href");
-            if (!href) continue;
+            if (typeof href !== "string" || !href) continue;
             const text = new state.Token("text", "", 0);
             text.content = safeDecodeUri(href);
             children.splice(i + 1, 0, text);
