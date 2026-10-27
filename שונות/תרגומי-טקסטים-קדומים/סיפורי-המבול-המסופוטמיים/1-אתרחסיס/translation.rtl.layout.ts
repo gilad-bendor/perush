@@ -14,7 +14,7 @@ import { lineSimilarity } from "../../layout/numbered-lines";
 import { endsSentence } from "../../layout/rows";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "380be9af4d9953ee50ff4c4fb7753b1a";
+const SOURCE_MD5 = "36657cfc5ed603b24dc90b08da150bf5";
 
 /** A row must not end after a line whose words end so (the words as plainWords() gives them). */
 const KEEP_WITH_NEXT: readonly string[] = [
