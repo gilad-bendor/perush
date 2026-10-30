@@ -15,7 +15,7 @@ import { join, basename } from "path";
 import matter from "gray-matter";
 // @ts-ignore — no type declarations for preprocess
 import preprocessLib from "preprocess";
-import type { AgentDefinition, AgentId, ProcessEventKind } from "./types";
+import type { AgentDefinition, AgentId, ProcessEventKind } from "./types.ts";
 import {
   PARTICIPANT_AGENTS_DIR,
   PROMPTS_DIR,
@@ -35,14 +35,14 @@ import {
   USE_STUB_SDK,
   ROOT_PROJECT_DIR,
 
-} from "./config";
+} from "./config.ts";
 import {
   stubQuery,
   type StubQuery,
-} from "./stub-sdk";
-import type { SDKQueryResult } from "./real-sdk";
+} from "./stub-sdk.ts";
+import type { SDKQueryResult } from "./real-sdk.ts";
 import {logInfo} from "./logs.ts";
-export { discoverAgents, getAgentDefinitions, getAgentById, resetAgentCache } from "./agent-static-info";
+export { discoverAgents, getAgentDefinitions, getAgentById, resetAgentCache } from "./agent-static-info.ts";
 
 // ---------------------------------------------------------------------------
 // Template Resolution
@@ -338,7 +338,7 @@ let _realQueryFn: ((params: { prompt: string; options: Record<string, unknown> }
 
 async function getRealQueryFn(): Promise<(params: { prompt: string; options: Record<string, unknown> }) => AnyQuery> {
   if (!_realQueryFn) {
-    const mod = await import("./real-sdk");
+    const mod = await import("./real-sdk.ts");
     _realQueryFn = mod.realQuery as any;
   }
   return _realQueryFn!;

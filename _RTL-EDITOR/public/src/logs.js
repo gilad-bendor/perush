@@ -19,7 +19,7 @@ export function consoleError() {
     _logByMethod('error', arguments);
 
     // Show a brief warning sign, to draw the user's attention of the problem.
-    // This is specifically useful to alert the user that `bun run dev` is not running.
+    // This is specifically useful to alert the user that `npm run dev` is not running.
     const warnSign = document.createElement('div');
     warnSign.classList.add('warn-sign');
     warnSign.innerHTML = '🛑';

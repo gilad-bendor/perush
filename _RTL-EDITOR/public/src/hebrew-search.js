@@ -1,5 +1,5 @@
 // A plain (non-RegExp) search that reads Hebrew the way a reader does - see hebrewSearchPattern().
-// Plain ESM with no editor dependency, like tables.js, so it can be unit-tested under Bun.
+// Plain ESM with no editor dependency, like tables.js, so it can be unit-tested under Node.
 
 /** A character the search skips over in the text: niqqud, cantillation, maqaf, sof pasuq, geresh/gershayim, varika. */
 const SKIPPED = '[\\u0591-\\u05c7\\u05ef-\\u05f4\\ufb1e]';

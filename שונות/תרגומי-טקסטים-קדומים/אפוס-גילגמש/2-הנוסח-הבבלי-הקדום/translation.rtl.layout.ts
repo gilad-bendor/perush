@@ -10,10 +10,10 @@
 // ":" stays with what it introduces, unless that is a speech; a broken line is a free place for a break. What
 // the punctuation does not show is said below, by the words of the line.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost, type NumberedLine, type UnitContext } from "../../layout/translation-layout";
-import { lineSimilarity } from "../../layout/numbered-lines";
-import { endsSentence } from "../../layout/rows";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost, type NumberedLine, type UnitContext } from "../../layout/translation-layout.ts";
+import { lineSimilarity } from "../../layout/numbered-lines.ts";
+import { endsSentence } from "../../layout/rows.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "4043e1a79a09940276d559dc8ca71fb7";

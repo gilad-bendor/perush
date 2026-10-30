@@ -6,8 +6,8 @@
 // (punctuation) is already at the fewest rows. The rules below only move breaks to where the sense pauses:
 // a direct speech ends its row, and a few lines are kept with the line they lead into or pair with.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "12042d195e5fdfd99d6015186ba2b87d";

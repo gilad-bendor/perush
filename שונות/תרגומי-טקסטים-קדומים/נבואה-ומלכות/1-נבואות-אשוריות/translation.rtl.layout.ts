@@ -10,8 +10,8 @@
 // lacuna a free place to break. So the vocatives ("אסרחדון, ...") and the formulas ("אל תירא", "אנוכי אשתר
 // של ארבאיל") mostly start rows by themselves. What punctuation does not show is named below by its words.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost, type UnitContext } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost, type UnitContext } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "44e3b7179121ecd78254af74db440905";

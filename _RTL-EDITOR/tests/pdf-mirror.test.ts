@@ -1,11 +1,12 @@
-import { afterAll, beforeEach, describe, expect, test } from "bun:test";
+import { afterAll, beforeEach, describe, expect, test } from "./test-kit.ts";
 import { mkdtemp, mkdir, readFile, rm, utimes, writeFile } from "fs/promises";
+import { spawnSync } from "child_process";
 import { existsSync } from "fs";
 import { tmpdir } from "os";
 import { dirname, join } from "path";
 import { pathToFileURL } from "url";
-import { HtmlMirror } from "../src/html/html-mirror";
-import { PdfMirror, pdfPathFor, publicUrls, readStamp, sourceStamp } from "../src/html/pdf-mirror";
+import { HtmlMirror } from "../src/html/html-mirror.ts";
+import { PdfMirror, pdfPathFor, publicUrls, readStamp, sourceStamp } from "../src/html/pdf-mirror.ts";
 
 describe("pdfPathFor", () => {
     test("mirrors the page's path under _PDF-FROM-MD, .html becoming .pdf", () => {
@@ -17,11 +18,11 @@ describe("pdfPathFor", () => {
 describe("publicUrls", () => {
     test("GitHub Pages for docs/, GitHub for the rest - from the origin remote", async () => {
         const root = await mkdtemp(join(tmpdir(), "pdf-urls-"));
-        const git = (...args: string[]) => Bun.spawnSync(["git", ...args], { cwd: root });
+        const git = (...args: string[]) => spawnSync("git", args, { cwd: root });
         git("init", "-q", "-b", "main");
         git("remote", "add", "origin", "git@github.com:Some-One/perush.git");
         const urls = (await publicUrls(root))!;
-        const top = Bun.spawnSync(["git", "rev-parse", "--show-toplevel"], { cwd: root }).stdout.toString().trim();
+        const top = spawnSync("git", ["rev-parse", "--show-toplevel"], { cwd: root }).stdout.toString().trim();
         expect(urls.docs).toEqual([pathToFileURL(join(top, "docs")).href + "/", "https://some-one.github.io/perush/"]);
         expect(urls.repo).toEqual([pathToFileURL(top).href + "/", "https://github.com/Some-One/perush/blob/main/"]);
 
@@ -54,7 +55,7 @@ describe("PdfMirror", () => {
         await mirror.close();
     });
 
-    test("prints a page, leaves a fresh PDF alone, and deletes it with its page", async () => {
+    test("prints a page, leaves a fresh PDF alone, and deletes it with its page", { timeout: 30_000 }, async () => {
         await write("a.md", "# a");
         const htmlMirror = new HtmlMirror(root, 1_000_000);
         await htmlMirror.syncFile("a.md");
@@ -70,9 +71,9 @@ describe("PdfMirror", () => {
         await htmlMirror.syncFile("a.md");
         expect(await mirror.syncFile("a.md")).toBe("removed");
         expect(existsSync(join(root, pdfPathFor("a.md")))).toBe(false);
-    }, 30_000);
+    });
 
-    test("a PDF is stamped with its page, and judged by the stamp - not by the dates", async () => {
+    test("a PDF is stamped with its page, and judged by the stamp - not by the dates", { timeout: 30_000 }, async () => {
         await write("a.md", "# a");
         await new HtmlMirror(root, 1_000_000).syncFile("a.md");
         const pagePath = join(root, "docs/_HTML-FROM-MD/a.html");
@@ -105,9 +106,9 @@ describe("PdfMirror", () => {
         await writeFile(pdfPath, "%PDF-1.4 printed by someone else");
         expect(await readStamp(pdfPath)).toBeNull();
         expect(await mirror.syncFile("a.md")).toBe("printed");
-    }, 30_000);
+    });
 
-    test("its links lead to GitHub Pages and GitHub, not to this disk", async () => {
+    test("its links lead to GitHub Pages and GitHub, not to this disk", { timeout: 30_000 }, async () => {
         await write("x/a.md", "[b](b.md) [image](image.png) [here](#a) [folder](./)\n\n# a");
         await write("x/b.md", "b");
         await new HtmlMirror(root, 1_000_000).syncFile("x/a.md");
@@ -116,9 +117,9 @@ describe("PdfMirror", () => {
         expect(pdf).toContain("https://example.github.io/repo/_PDF-FROM-MD/x/b.pdf)");
         expect(pdf).toContain("https://github.com/example/repo/blob/main/x/image.png");
         expect(pdf).not.toContain("file://");
-    }, 30_000);
+    });
 
-    test("read from this server, a PDF's links lead back to this server - on disk, to GitHub Pages", async () => {
+    test("read from this server, a PDF's links lead back to this server - on disk, to GitHub Pages", { timeout: 30_000 }, async () => {
         await write("x/a.md", "[b](b.md#ב) [image](image.png)");
         await write("x/b.md", "# ב");
         await new HtmlMirror(root, 1_000_000).syncFile("x/a.md");
@@ -131,9 +132,9 @@ describe("PdfMirror", () => {
         expect((await readFile(join(root, pdfPathFor("x/a.md")))).toString("latin1"))
             .toContain("https://example.github.io/repo/_PDF-FROM-MD/x/b.pdf");
         expect(await mirror.servedFrom(pdfPathFor("x/a.md"), "https://example.github.io/repo/")).toBeNull();
-    }, 30_000);
+    });
 
-    test("a link to a heading of another page scrolls its PDF there, by a destination with an ASCII name", async () => {
+    test("a link to a heading of another page scrolls its PDF there, by a destination with an ASCII name", { timeout: 30_000 }, async () => {
         await write("x/a.md", "[b](b.md#שני_ב) [same](#ראשון)\n\n# ראשון");
         await write("x/b.md", "# אחד\n\nטקסט\n\n# שני_ב\n\nטקסט");
         const htmlMirror = new HtmlMirror(root, 1_000_000);
@@ -151,9 +152,9 @@ describe("PdfMirror", () => {
         const b = await PDFDocument.load(await readFile(join(root, pdfPathFor("x/b.md"))));
         const dests = b.catalog.lookup(PDFName.of("Dests"), PDFDict).keys().map(key => key.decodeText());
         expect(dests).toEqual(expect.arrayContaining([name("אחד"), name("שני_ב")]));
-    }, 30_000);
+    });
 
-    test("HtmlMirror schedules every page it syncs, and a sweep deletes the orphans", async () => {
+    test("HtmlMirror schedules every page it syncs, and a sweep deletes the orphans", { timeout: 30_000 }, async () => {
         await write("a.md", "a");
         await write("orphan.md", "o");
         const htmlMirror = new HtmlMirror(root, 1_000_000);
@@ -167,5 +168,5 @@ describe("PdfMirror", () => {
         await mirror.idle();
         expect(existsSync(join(root, pdfPathFor("a.md")))).toBe(true);
         expect(existsSync(join(root, pdfPathFor("orphan.md")))).toBe(false);
-    }, 30_000);
+    });
 });

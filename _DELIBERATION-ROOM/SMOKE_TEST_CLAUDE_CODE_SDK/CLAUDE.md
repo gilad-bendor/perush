@@ -6,9 +6,9 @@ You are running a **live smoke test** of the `@anthropic-ai/claude-agent-sdk` np
 
 ## How to Work
 
-1. First, run `bun init -y && bun add @anthropic-ai/claude-agent-sdk` to set up the project.
+1. First, run `npm install` to set up the project (its `package.json` holds the SDK).
 2. Create test files (e.g., `test-01-basic-query.ts`, `test-02-session-resume.ts`, etc.) for each test category.
-3. Run each test with `bun run <file>`.
+3. Run each test with `node <file>`.
 4. After each test, come back here and update the results section below.
 5. If a test fails, note the exact error, the expected vs. actual behavior, and any workarounds.
 6. Keep tests minimal — just enough to verify the feature works. Don't build a full application.
@@ -19,7 +19,7 @@ The Deliberation Room (`../CLAUDE.md`) makes specific assumptions about this SDK
 
 ## Environment
 
-- Runtime: **Bun** (not Node)
+- Runtime: **Node 22+** (it runs the `.ts` files as they are - native type stripping)
 - SDK version: **0.2.62**
 - Claude Code version: **2.1.62**
 - Working directory: this directory (`../SMOKE_TEST_CLAUDE_CODE_SDK/`)
@@ -32,7 +32,7 @@ The Deliberation Room (`../CLAUDE.md`) makes specific assumptions about this SDK
 
 ## Test 1: Package Installation and Basic Import
 
-**What to verify**: The package `@anthropic-ai/claude-agent-sdk` can be installed via bun and its main export `query` can be imported.
+**What to verify**: The package `@anthropic-ai/claude-agent-sdk` can be installed via npm and its main export `query` can be imported.
 
 **Design assumption**: `import { query } from "@anthropic-ai/claude-agent-sdk";`
 

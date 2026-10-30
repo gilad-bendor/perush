@@ -14,8 +14,8 @@
 // and each tablet's introduction already walks through them by their line numbers. The footer is the poem and the
 // tablet at the top of the sheet ("לודלול בל נמקי / לוח II"), without their quoted incipits.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost, type NumberedLine, type UnitContext } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost, type NumberedLine, type UnitContext } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "e91273b4bf2c5365c43c15ee150663dd";

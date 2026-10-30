@@ -5,7 +5,7 @@
  * and response parsing. Uses real persona files from participant-agents/.
  */
 
-import { describe, test, expect, beforeAll, beforeEach, afterAll } from "bun:test";
+import { describe, test, expect, beforeAll, beforeEach, afterAll } from "../test-kit.ts";
 import { join } from "path";
 import {
   discoverAgents,
@@ -25,13 +25,13 @@ import {
   clearSessions,
   registerSession,
   registerMeeting,
-} from "../../src/session-manager";
-import { resetStubState } from "../../src/stub-sdk";
+} from "../../src/session-manager.ts";
+import { resetStubState } from "../../src/stub-sdk.ts";
 import {
   PARTICIPANT_AGENTS_DIR,
   PROMPTS_DIR,
   ORCHESTRATOR_FILE,
-} from "../../src/config";
+} from "../../src/config.ts";
 
 beforeEach(() => {
   resetAgentCache();
@@ -214,11 +214,11 @@ describe("resolveTemplate", () => {
 
 describe("resolveIncludeRegion", () => {
   // Lazy import to avoid circular issues — pull from the same module
-  let resolveIncludeRegion: typeof import("../../src/session-manager").resolveIncludeRegion;
-  const tmpDir = join(import.meta.dir, "__include-region-tmp");
+  let resolveIncludeRegion: typeof import("../../src/session-manager.ts").resolveIncludeRegion;
+  const tmpDir = join(import.meta.dirname, "__include-region-tmp");
 
   beforeAll(async () => {
-    resolveIncludeRegion = (await import("../../src/session-manager")).resolveIncludeRegion;
+    resolveIncludeRegion = (await import("../../src/session-manager.ts")).resolveIncludeRegion;
     const { mkdirSync, writeFileSync } = await import("fs");
     mkdirSync(tmpDir, { recursive: true });
     writeFileSync(join(tmpDir, "sample.md"), [
@@ -315,7 +315,7 @@ describe("extractDictionary", () => {
   });
 
   describe("section boundaries (synthetic source)", () => {
-    const tmpDir = join(import.meta.dir, "__dictionary-tmp");
+    const tmpDir = join(import.meta.dirname, "__dictionary-tmp");
     const write = async (name: string, lines: string[]) => {
       const { mkdirSync, writeFileSync } = await import("fs");
       mkdirSync(tmpDir, { recursive: true });

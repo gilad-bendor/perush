@@ -1,6 +1,6 @@
-import { describe, expect, test } from "bun:test";
-import { layoutFileOf } from "../../../../_RTL-EDITOR/src/html/layout-module";
-import { translationFile, translationLayout, type TranslationRows } from "../translation-layout";
+import { describe, expect, test } from "../../../../_RTL-EDITOR/tests/test-kit.ts";
+import { layoutFileOf } from "../../../../_RTL-EDITOR/src/html/layout-module.ts";
+import { translationFile, translationLayout, type TranslationRows } from "../translation-layout.ts";
 
 const TEXT = "# לוח\n\n**1** אחת,\n**2** שתיים.\n**3** שלוש,\n**4** ארבע.\n\n## סוף\n\n**10** עשר\n**11** אחת עשרה";
 const SPEECH = "**1** אמר המלך לעבדיו,\n**2** לכו אל העיר.\n**3** שאו את הכסף,\n**4** והביאו אותו לכאן.\n"

@@ -2,7 +2,7 @@
  * Playwright browser testing helper for RTL Editor
  *
  * Usage:
- *   bun run playwright-test.ts [options]
+ *   node playwright-test.ts [options]
  *
  * Options:
  *   --url=<url>         URL to open (default: http://localhost:3000)

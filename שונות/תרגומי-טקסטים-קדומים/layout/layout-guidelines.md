@@ -34,8 +34,8 @@ You decide it once per translation, in its own layout module, `translation.rtl.l
 **A list of breaks** - the form a hand-made layout takes (Atrahasis):
 
 ```ts
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as these rows were made for it.
 const SOURCE_MD5 = "a3dbf6827c6e07e5763fd11adf7cbd45";
@@ -75,8 +75,8 @@ A few labelled lines are in no run at all, such as a note (`I 7a–i`) or a stre
 **A rule** - the form to prefer (the general guidelines, §2). `template <file> --rules` prints this, ready to fill in:
 
 ```ts
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 const SOURCE_MD5 = "…";
 
@@ -119,10 +119,10 @@ Try a module before replacing the file's own: write it anywhere, and give it to 
 From the session's folder (or anywhere under `_RTL-EDITOR/`):
 
 ```bash
-bun run rows <command> <path/to/translation.rtl.md> [options]
+npm run rows -- <command> <path/to/translation.rtl.md> [options]
 ```
 
-(It is `layout/rows-tool.ts`, beside these guidelines: `bun rows-tool.ts ...` there is the same.)
+(npm passes the options on only after the `--`, and runs the tool in `_RTL-EDITOR/`: give the path from the repository root. It is `layout/rows-tool.ts`, beside these guidelines: `node rows-tool.ts ...` there is the same, and takes a path from there too.)
 
 It renders the file exactly as the mirror does - with the layout module, the fonts and the print settings - and lays it out in the same Chromium, at the same width, as the PDF printer. So **its measurements are the PDF's.** It takes a second or two per file. It reads the module and never writes it (the general guidelines, §2).
 

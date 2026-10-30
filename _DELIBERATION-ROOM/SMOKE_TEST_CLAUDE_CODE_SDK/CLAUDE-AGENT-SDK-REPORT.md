@@ -3,7 +3,7 @@
 **Date**: 2026-02-27
 **SDK**: `@anthropic-ai/claude-agent-sdk@0.2.62`
 **Claude Code**: v2.1.62
-**Runtime**: Bun 1.3.8 (macOS arm64)
+**Runtime**: Node 22 (macOS arm64) - `npm install`, then `node <test-file>.ts`
 **Test model**: `claude-haiku-4-5` (cost minimization)
 
 ---

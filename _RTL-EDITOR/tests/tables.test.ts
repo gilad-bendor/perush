@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "./test-kit.ts";
 import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, mirrorBoxCharacters, parseTables, setHeaderAtCursor, visualWidth } from "../public/src/tables.js";
 
 /** Formats and returns just the text, for the common case where the cursor is irrelevant. */

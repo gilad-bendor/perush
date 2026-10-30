@@ -1,4 +1,4 @@
-import { describe, test, expect, beforeEach } from "bun:test";
+import { describe, test, expect, beforeEach } from "../test-kit.ts";
 import {
   stubQuery,
   extractStubResponseBlock,
@@ -9,7 +9,7 @@ import {
   type StubSDKAssistantMessage,
   type StubSDKResultSuccess,
   type StubSDKStreamEvent,
-} from "../../src/stub-sdk";
+} from "../../src/stub-sdk.ts";
 
 beforeEach(() => {
   resetStubState();

@@ -1,11 +1,11 @@
 // Brings the whole HTML mirror - and the PDF mirror printed from it - up to date once, without
-// starting the server:  bun run rebuild-whole-html-folder
+// starting the server:  npm run rebuild-whole-html-folder
 // The server does the same at startup and keeps it up to date while it runs - see html-mirror.ts.
 
-import { snapshotOfTree } from "./fs-changes";
-import { HtmlMirror } from "./html/html-mirror";
-import { PdfMirror } from "./html/pdf-mirror";
-import { getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
+import { snapshotOfTree } from "./fs-changes.ts";
+import { HtmlMirror } from "./html/html-mirror.ts";
+import { PdfMirror } from "./html/pdf-mirror.ts";
+import { getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree.ts";
 
 const started = performance.now();
 const mirror = await HtmlMirror.create(MARKDOWN_DIR);

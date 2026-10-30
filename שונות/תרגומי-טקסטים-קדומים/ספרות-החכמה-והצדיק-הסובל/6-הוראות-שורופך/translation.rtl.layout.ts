@@ -8,8 +8,8 @@
 // than a break between two, and a line that ends with "," "–" or ";" goes on into the next. The opening
 // formula, said three times (1-13, 73-82, 143-152), gets rows of its own. The rest is said below, by words.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "d32cd9de687552b37cf1ccfb7ee98a38";

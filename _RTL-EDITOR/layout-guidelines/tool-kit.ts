@@ -10,15 +10,15 @@ import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join, relative } from "path";
 import { spawnSync } from "child_process";
 import { PDFDocument } from "pdf-lib";
-import { renderMarkdownPage } from "../src/html/md-to-html";
-import { applyLayout, DEFAULT_PDF_SETTINGS, type ResolvedLayout, type ResolvedPdfSettings } from "../src/html/layout-module";
-import { printPages } from "../src/html/pdf-pages";
-import type { LineGroup, PageSettings } from "../src/html/layout-schema";
-import { REPO_ROOT } from "./tree";
+import { renderMarkdownPage } from "../src/html/md-to-html.ts";
+import { applyLayout, DEFAULT_PDF_SETTINGS, type ResolvedLayout, type ResolvedPdfSettings } from "../src/html/layout-module.ts";
+import { printPages } from "../src/html/pdf-pages.ts";
+import type { LineGroup, PageSettings } from "../src/html/layout-schema.ts";
+import { REPO_ROOT } from "./tree.ts";
 
-export { markdownFiles, REPO_ROOT } from "./tree";
-export { layoutFileOf, layoutFor, layoutPathFor, md5Of, outputOf, type PageLayout } from "../src/html/layout-module";
-export { ROW_SAFETY_PX } from "../src/html/text-measure";
+export { markdownFiles, REPO_ROOT } from "./tree.ts";
+export { layoutFileOf, layoutFor, layoutPathFor, md5Of, outputOf, type PageLayout } from "../src/html/layout-module.ts";
+export { ROW_SAFETY_PX } from "../src/html/text-measure.ts";
 
 /** A file's text, `\n`-separated. */
 export function readSource(mdFile: string): string {
@@ -136,9 +136,12 @@ export async function printPreview(html: string, pages: number[] | null, out: st
 
 /** What tsc says of a layout module - nothing when it type-checks. */
 export function typeErrors(modulePath: string): string {
-    const editor = join(import.meta.dir, "..");
-    const result = spawnSync(join(editor, "node_modules/.bin/tsc"), ["--noEmit", "--strict", "--target", "es2022", "--lib", "es2022",
-        "--module", "esnext", "--moduleResolution", "bundler", "--skipLibCheck", "--types", "bun-types", modulePath], { cwd: editor, encoding: "utf-8" });
+    const editor = join(import.meta.dirname, "..");
+    // The settings of the tsconfig files: what Node's type stripping takes - `.ts` on every relative import,
+    // `import type` for types, erasable syntax only.
+    const result = spawnSync(join(editor, "node_modules/.bin/tsc"), ["--noEmit", "--strict", "--target", "es2023", "--lib", "es2023",
+        "--module", "nodenext", "--moduleResolution", "nodenext", "--allowImportingTsExtensions", "--verbatimModuleSyntax",
+        "--erasableSyntaxOnly", "--skipLibCheck", "--types", "node", modulePath], { cwd: editor, encoding: "utf-8" });
     if (result.error) return `tsc did not run: ${result.error.message}`;
     return result.status === 0 ? "" : (result.stdout + result.stderr).trim();
 }

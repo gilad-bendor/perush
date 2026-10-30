@@ -1,7 +1,7 @@
-diff --git a/dist/index.cjs b/dist/index.cjs
-index f4747c0f231e74293da056e07a8cc95c2ef51e47..b0b62e8dc9c9ffceb73053e13eb837ad5f67b239 100644
---- a/dist/index.cjs
-+++ b/dist/index.cjs
+diff --git a/node_modules/@codemirror/view/dist/index.cjs b/node_modules/@codemirror/view/dist/index.cjs
+index f4747c0..b0b62e8 100644
+--- a/node_modules/@codemirror/view/dist/index.cjs
++++ b/node_modules/@codemirror/view/dist/index.cjs
 @@ -1012,8 +1012,12 @@ function processBracketPairs(line, rFrom, rTo, isolates, outerType) {
                              let type = (flags & 2 /* Bracketed.EmbedInside */) ? outerType :
                                  !(flags & 4 /* Bracketed.OppositeInside */) ? 0 :
@@ -55,10 +55,10 @@ index f4747c0f231e74293da056e07a8cc95c2ef51e47..b0b62e8dc9c9ffceb73053e13eb837ad
                  for (let piece of RectangleMarker.forRange(view, className, cursor))
                      cursors.push(piece);
              }
-diff --git a/dist/index.js b/dist/index.js
-index 9d78d57867ec416e35317d9ff5505fc7b423be13..98da7c87775ff2a5ceb36a394f2bcb44b2aaa7c3 100644
---- a/dist/index.js
-+++ b/dist/index.js
+diff --git a/node_modules/@codemirror/view/dist/index.js b/node_modules/@codemirror/view/dist/index.js
+index 9d78d57..98da7c8 100644
+--- a/node_modules/@codemirror/view/dist/index.js
++++ b/node_modules/@codemirror/view/dist/index.js
 @@ -1008,8 +1008,12 @@ function processBracketPairs(line, rFrom, rTo, isolates, outerType) {
                              let type = (flags & 2 /* Bracketed.EmbedInside */) ? outerType :
                                  !(flags & 4 /* Bracketed.OppositeInside */) ? 0 :

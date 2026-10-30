@@ -1,16 +1,16 @@
-import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { afterEach, beforeEach, describe, expect, test } from "./test-kit.ts";
 import { mkdir, mkdtemp, rm, utimes, writeFile } from "fs/promises";
 import { tmpdir } from "os";
 import { dirname, join, relative } from "path";
 import {
     applyLayout, DEFAULT_PDF_SETTINGS, folderLayoutPathsFor, isFolderLayoutFile, isLayoutFile, layoutChainFor, layoutFileOf, layoutFor,
     layoutPathFor, loadLayoutModule, md5Of, outputOf, resolveLayout, runChain, type ResolvedLayout,
-} from "../src/html/layout-module";
-import type { LayoutOfFile } from "../src/html/layout-schema";
-import { markdownWidthEm, measureAt, textWidthEm } from "../src/html/text-measure";
-import { markdownToHtml, renderMarkdownPage } from "../src/html/md-to-html";
-import { GROUP_MARK, LINE_MARK, MARGIN_MARK, NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, ROW_MARK } from "../src/html/layout-marks";
-import { isIgnoredWatchPath } from "../src/fs-changes";
+} from "../src/html/layout-module.ts";
+import type { LayoutOfFile } from "../src/html/layout-schema.ts";
+import { markdownWidthEm, measureAt, textWidthEm } from "../src/html/text-measure.ts";
+import { markdownToHtml, renderMarkdownPage } from "../src/html/md-to-html.ts";
+import { GROUP_MARK, LINE_MARK, MARGIN_MARK, NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, ROW_MARK } from "../src/html/layout-marks.ts";
+import { isIgnoredWatchPath } from "../src/fs-changes.ts";
 
 const TEXT = "# לוח\n\n**1** אחת,\n**2** שתיים.\n**3** שלוש,\n\n## סוף";
 const MD5 = md5Of(TEXT);
@@ -48,9 +48,9 @@ describe("a layout module", () => {
     };
     const failure = async (path: string) => (await loadLayoutModule(path) as { error: string }).error;
 
-    test("may import files of the repository by a relative path - bundled with them - and types from anywhere", async () => {
+    test("may import files of the repository by a relative path - loaded with them - and types from anywhere", async () => {
         await module("lib/logic.ts", "export const answer = () => ({ output: \"none\" });");
-        const path = await module("a/.layout.ts", 'import type { X } from "nowhere";\nimport { answer } from "../lib/logic";\nexport default answer;');
+        const path = await module("a/.layout.ts", 'import type { X } from "nowhere";\nimport { answer } from "../lib/logic.ts";\nexport default answer;');
         const loaded = await loadLayoutModule(path) as { layout: () => unknown, files: string[] };
         expect(loaded.layout()).toEqual({ output: "none" });
         expect(loaded.files.map(file => relative(dir, file))).toEqual(["a/.layout.ts", "lib/logic.ts"]);
@@ -58,13 +58,13 @@ describe("a layout module", () => {
 
     test("may import a file whose path is Hebrew", async () => {
         await module("שונות/לוגיקה.ts", "export const answer = () => ({ output: \"none\" });");
-        const path = await module("a/.layout.ts", 'import { answer } from "../שונות/לוגיקה";\nexport default answer;');
+        const path = await module("a/.layout.ts", 'import { answer } from "../שונות/לוגיקה.ts";\nexport default answer;');
         expect((await loadLayoutModule(path) as { layout: () => unknown }).layout()).toEqual({ output: "none" });
     });
 
     test("may not import a package, nor a file that is not there", async () => {
         expect(await failure(await module("p.layout.ts", 'import { x } from "fontkit";\nexport default () => x;'))).toContain('not "fontkit"');
-        expect(await failure(await module("m.layout.ts", 'import { x } from "./missing";\nexport default () => x;'))).toContain("which is no file");
+        expect(await failure(await module("m.layout.ts", 'import { x } from "./missing.ts";\nexport default () => x;'))).toContain("which is no file");
     });
 
     test("must export a function, and load", async () => {
@@ -75,7 +75,7 @@ describe("a layout module", () => {
 
     test("is loaded afresh once it changes - or anything it imports does", async () => {
         await module("lib/v.ts", "export const v = 1;");
-        const path = await module("x.layout.ts", 'import { v } from "./lib/v";\nexport default () => ({ data: { v } });');
+        const path = await module("x.layout.ts", 'import { v } from "./lib/v.ts";\nexport default () => ({ data: { v } });');
         expect((await loadLayoutModule(path) as { layout: () => unknown }).layout()).toEqual({ data: { v: 1 } });
         await module("lib/v.ts", "export const v = 2;");
         expect((await loadLayoutModule(path) as { layout: () => unknown }).layout()).toEqual({ data: { v: 2 } });

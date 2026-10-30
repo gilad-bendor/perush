@@ -5,8 +5,8 @@
 // It reads a layout module, and never writes one: what it proposes it prints - the row starts and the
 // file's MD5, as constants ready to be put into the module - and a session puts them there.
 //
-//     bun rows-tool.ts <command> <file.md> [options]                           (here)
-//     bun run rows <command> <file.md> [options]                               (in _RTL-EDITOR)
+//     node rows-tool.ts <command> <file.md> [options]                          (here)
+//     npm run rows -- <command> <file.md> [options]                            (in _RTL-EDITOR)
 //
 // A path is taken relative to the current folder, or else to the repo root; the paths it prints are
 // relative to the repo root.
@@ -55,14 +55,14 @@
 import { existsSync, readFileSync, statSync, writeFileSync } from "fs";
 import { basename, dirname, join, relative, resolve } from "path";
 import { tmpdir } from "os";
-import type { PageSettings } from "../../../_RTL-EDITOR/src/html/layout-schema";
+import type { PageSettings } from "../../../_RTL-EDITOR/src/html/layout-schema.ts";
 import {
     closeBrowser, layoutFileOf, layoutFor, layoutPathFor, markdownFiles, md5Of, measureGroups, outputOf, pageHtml, printPreview,
     readSource, REPO_ROOT, ROW_SAFETY_PX, typeErrors, type PageLayout,
-} from "../../../_RTL-EDITOR/layout-guidelines/tool-kit";
-import { type NumberedLine } from "./numbered-lines";
-import { proposeRows, type MeasuredLine } from "./rows";
-import { predictedLineWidths, translationFile, translationLayout, type RowsBy } from "./translation-layout";
+} from "../../../_RTL-EDITOR/layout-guidelines/tool-kit.ts";
+import type { NumberedLine } from "./numbered-lines.ts";
+import { proposeRows, type MeasuredLine } from "./rows.ts";
+import { predictedLineWidths, translationFile, translationLayout, type RowsBy } from "./translation-layout.ts";
 
 /** A file's printed rows, as the tool works with them: the lines that start a row, and those to review. */
 type VerseLayout = { rows: string[], review?: string[] };
@@ -449,8 +449,8 @@ async function template(mdFile: string, rules: boolean): Promise<string> {
         const path = relative(dirname(mdFile), target);
         return path.startsWith(".") ? path : `./${path}`;
     };
-    const schema = relativeTo(join(REPO_ROOT, "_RTL-EDITOR/src/html/layout-schema"));
-    const logic = relativeTo(join(import.meta.dir, "translation-layout"));
+    const schema = relativeTo(join(REPO_ROOT, "_RTL-EDITOR/src/html/layout-schema.ts"));
+    const logic = relativeTo(join(import.meta.dirname, "translation-layout.ts"));
     const header = `// The layout of ${basename(mdFile)}'s page and PDF - see _RTL-EDITOR/src/html/layout-schema.ts, and
 // שונות/תרגומי-טקסטים-קדומים/layout/layout-guidelines.md. Pure: it imports only the translations' layout
 // logic, and everything else comes in its arguments.
@@ -692,7 +692,7 @@ async function main(): Promise<number> {
             await preview(file, option("pages"), option("out") ?? join(tmpdir(), `rows-tool-${process.pid}`));
             return 0;
         default: {
-            const source = readFileSync(import.meta.path, "utf-8").split("\n");
+            const source = readFileSync(import.meta.filename, "utf-8").split("\n");
             console.log(source.slice(0, source.findIndex(line => !line.startsWith("//"))).map(line => line.slice(3)).join("\n"));
             return command ? 2 : 0;
         }

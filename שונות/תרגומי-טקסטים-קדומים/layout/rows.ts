@@ -6,7 +6,7 @@
 // punctuation. translation-layout.ts runs it with whatever costs a layout gives; the rows tool
 // (rows-tool.ts) proposes rows with it.
 //
-// Pure, and imports nothing: a layout module bundles it.
+// Pure, and imports nothing: a layout module imports it.
 
 // ------------------------------------------------------------------------------------------------
 // Proposing a layout

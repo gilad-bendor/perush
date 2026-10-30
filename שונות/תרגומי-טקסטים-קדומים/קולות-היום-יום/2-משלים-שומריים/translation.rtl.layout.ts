@@ -8,8 +8,8 @@
 // so the row does not end there; a line that ends with a bare "…" (a word lost mid-sentence) is inside its
 // clause; a direct speech keeps rows of its own.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "41e3a187b1ba69a5f0fc67314fa0a408";

@@ -50,7 +50,7 @@ its VM was reclaimed). The operator relies on all of it.
   the `boot_id`, and says when the VM rebooted and when the checkout was cloned.
 - The SessionStart hook runs on `startup`, `resume` and `compact` (a resume and a compaction in a row run it twice).
   On a resume it runs the **checkout's own** (maybe stale) operator - the recheck after the sync brings the new one.
-- Installed: node 22, bun, python 3.13, perl, jq, gh, rg, curl, GNU coreutils, git-lfs. **Missing: gawk** (mawk only).
+- Installed: node 22 (22.23), python 3.13, perl, jq, gh, rg, curl, GNU coreutils, git-lfs. **Missing: gawk** (mawk only).
   The environment's **setup script** (claude.ai UI) runs as root before the session, cached for ~7 days.
 
 ### Git

@@ -7,8 +7,8 @@
 // rising together as one run, so those lines stand one to a row and no rule here reaches them. The rows below
 // lay out the Ur manuscript's appendix: line beginnings, a word or two each, broken where a new statement opens.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "0f5c37e054e22a045aba27b955c49caf";

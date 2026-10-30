@@ -1,6 +1,6 @@
-import { describe, expect, test } from "bun:test";
-import { markdownToHtml, renderMarkdownPage } from "../src/html/md-to-html";
-import { GROUP_MARK, LINE_MARK, MARGIN_MARK, ROW_MARK } from "../src/html/layout-marks";
+import { describe, expect, test } from "./test-kit.ts";
+import { markdownToHtml, renderMarkdownPage } from "../src/html/md-to-html.ts";
+import { GROUP_MARK, LINE_MARK, MARGIN_MARK, ROW_MARK } from "../src/html/layout-marks.ts";
 
 const html = (markdown: string) => markdownToHtml(markdown).trim();
 const G = GROUP_MARK, L = LINE_MARK, R = ROW_MARK, M = MARGIN_MARK;

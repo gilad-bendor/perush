@@ -2,19 +2,20 @@
   "name": "deliberation-room",
   "version": "0.1.0",
   "description": "Multi-agent deliberation system for biblical commentary analysis",
+  "type": "module",
   "scripts": {
-    "dev-model-haiku": " export PARTICIPANT_MODEL=claude-haiku-4-5  ; bun run dev-model-default",
-    "dev-model-sonnet": "export PARTICIPANT_MODEL=claude-sonnet-4-6 ; bun run dev-model-default",
-    "dev-model-opus": "  export PARTICIPANT_MODEL=claude-opus-4-7   ; bun run dev-model-default",
-    "dev-model-default": "bun run dev:css & sleep 3 ; bun run dev:server",
-    "dev:server": "lsof -ti:4100 | xargs kill -9 2>/dev/null; bun --watch src/server.ts",
-    "dev:css": "set -x ; pkill -f 'tailwindcss -i public/input.css -o public/compiled-style.css --watch --poll' ; bun run update-browsers-list ; tail -f /dev/null | bunx tailwindcss -i public/input.css -o public/compiled-style.css --watch --poll",
-    "build:css": "bun run update-browsers-list ; bunx tailwindcss -i public/input.css -o public/compiled-style.css --minify",
-    "test": "bun test",
-    "test:smoke": "REAL_SDK_TEST=true bun test tests/real-sdk-smoke.test.ts",
-    "test:e2e": "bun run tests/e2e/landing-page.test.ts && bun run tests/e2e/conversation.test.ts && bun run tests/e2e/uncommitted-perush-dialog.test.ts && bun run tests/e2e/integration.test.ts",
-    "check": "tsc --noEmit && bun run update-browsers-list && bunx tailwindcss -i public/input.css -o /dev/null 2>&1",
-    "update-browsers-list": "OUT=$(npx update-browserslist-db@latest 2>&1) || echo \"$OUT\""
+    "dev-model-haiku": " export PARTICIPANT_MODEL=claude-haiku-4-5  ; npm run dev-model-default",
+    "dev-model-sonnet": "export PARTICIPANT_MODEL=claude-sonnet-4-6 ; npm run dev-model-default",
+    "dev-model-opus": "  export PARTICIPANT_MODEL=claude-opus-4-7   ; npm run dev-model-default",
+    "dev-model-default": "npm run dev:css & sleep 3 ; npm run dev:server",
+    "dev:server": "lsof -ti:4100 | xargs kill -9 2>/dev/null; node --watch src/server.ts",
+    "dev:css": "set -x ; pkill -f 'tailwindcss -i public/input.css -o public/compiled-style.css --watch --poll' ; npm run update-browsers-list ; tail -f /dev/null | npx tailwindcss -i public/input.css -o public/compiled-style.css --watch --poll",
+    "build:css": "npm run update-browsers-list ; npx tailwindcss -i public/input.css -o public/compiled-style.css --minify",
+    "test": "NODE_ENV=test node --test --test-concurrency=1 'tests/unit/*.test.ts'",
+    "test:smoke": "REAL_SDK_TEST=true NODE_ENV=test node --test tests/real-sdk-smoke.test.ts",
+    "test:e2e": "NODE_ENV=test node --test --test-concurrency=1 tests/e2e/landing-page.test.ts tests/e2e/conversation.test.ts tests/e2e/uncommitted-perush-dialog.test.ts tests/e2e/integration.test.ts",
+    "check": "tsc --noEmit && npm run update-browsers-list && npx tailwindcss -i public/input.css -o /dev/null 2>&1",
+    "update-browsers-list": "OUT=$(npm update caniuse-lite baseline-browser-mapping 2>&1) || echo \"$OUT\""
   },
   "dependencies": {
     "@anthropic-ai/claude-agent-sdk": "^0.2.0",
@@ -22,11 +23,13 @@
     "caniuse-lite": "^1.0.30001786",
     "gray-matter": "^4.0.3",
     "preprocess": "^3.2.0",
+    "ws": "^8.22.0",
     "yaml": "^2.8.3",
     "zod": "^3.24.0"
   },
   "devDependencies": {
-    "@types/bun": "^1.3.8",
+    "@types/node": "^22.20.5",
+    "@types/ws": "^8.18.2",
     "playwright": "^1.58.0",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.9.3"

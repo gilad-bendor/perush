@@ -22,7 +22,7 @@
 // page is laid out as @media print will lay it out, measured, and let go.
 
 import type { StateCore, Token } from "markdown-it";
-import { GROUP_MARK, LINE_MARK, MARGIN_MARK, ROW_MARK, stripLayoutMarks } from "./layout-marks";
+import { GROUP_MARK, LINE_MARK, MARGIN_MARK, ROW_MARK, stripLayoutMarks } from "./layout-marks.ts";
 
 /** The printed sheet: its margins on either side and top and bottom, and the text's size - `@page` in PAGE_STYLE. */
 export const PRINT_MARGIN_INLINE_MM = 16;

@@ -9,8 +9,8 @@
 // (it introduces what follows - "בלימודך – ראה בלוח:", "אשנה ... – בוא, אומרה לך:"). The rest is said below, by
 // the words of the lines.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "916b9dbb65852d5d8f6d160d86fd9059";

@@ -1,11 +1,13 @@
-import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { afterEach, beforeEach, describe, expect, test } from "./test-kit.ts";
 import { mkdtemp, mkdir, readFile, rm, stat, utimes, writeFile } from "fs/promises";
+import { spawnSync } from "child_process";
 import { existsSync } from "fs";
 import { tmpdir } from "os";
 import { dirname, join } from "path";
-import { HtmlMirror, NO_JEKYLL_PATH, SITE_INDEX_PATH, htmlPathFor, isMirroredFile, mirroredHref, pageBreadcrumbs } from "../src/html/html-mirror";
-import { folderIndexPages, mirrorSummary, siteIndexPage } from "../src/html/folder-index";
-import { md5Of } from "../src/html/layout-module";
+import { setTimeout as sleep } from "timers/promises";
+import { HtmlMirror, NO_JEKYLL_PATH, SITE_INDEX_PATH, htmlPathFor, isMirroredFile, mirroredHref, pageBreadcrumbs } from "../src/html/html-mirror.ts";
+import { folderIndexPages, mirrorSummary, siteIndexPage } from "../src/html/folder-index.ts";
+import { md5Of } from "../src/html/layout-module.ts";
 
 describe("isMirroredFile", () => {
     test("every Markdown file gets a page", () => {
@@ -105,7 +107,7 @@ describe("HtmlMirror", () => {
     const RENDERER_MTIME = 1_000_000;       // long before any file the tests write
     const mirror = () => new HtmlMirror(root, RENDERER_MTIME);
     const page = (mdPath: string) => join(root, htmlPathFor(mdPath));
-    const git = (...args: string[]) => Bun.spawnSync(["git", ...args], { cwd: root });
+    const git = (...args: string[]) => spawnSync("git", args, { cwd: root });
     const write = async (mdPath: string, content: string) => {
         await mkdir(dirname(join(root, mdPath)), { recursive: true });
         await writeFile(join(root, mdPath), content);
@@ -247,7 +249,7 @@ describe("HtmlMirror", () => {
 
         await write("b.rtl.md", "שני");
         m.scheduleSync("b.rtl.md");
-        await Bun.sleep(600);
+        await sleep(600);
         for (const holder of ["a.rtl.md", "c.rtl.md"]) {
             expect(await readFile(page(holder), "utf-8")).toContain("שני");
         }
@@ -261,7 +263,7 @@ describe("HtmlMirror", () => {
 
         await write("b.rtl.md", "הנה הוא");
         m.scheduleSync("b.rtl.md");
-        await Bun.sleep(600);
+        await sleep(600);
         expect(await readFile(page("a.rtl.md"), "utf-8")).toContain("הנה הוא");
     });
 
@@ -277,9 +279,9 @@ describe("HtmlMirror", () => {
 
         // The layout file appears, importing logic of its own - and the watcher's event for it reaches both pages.
         await write("t/logic.ts", "export const groups = [{ from: 0, to: 3, rowStarts: [2], margins: [5, 5, 5, 5] }];");
-        await write("t/translation.rtl.layout.ts", `import { groups } from "./logic";\nexport default () => ({ sourceMd5: "${md5Of(lines)}", groups });`);
+        await write("t/translation.rtl.layout.ts", `import { groups } from "./logic.ts";\nexport default () => ({ sourceMd5: "${md5Of(lines)}", groups });`);
         m.scheduleSync("t/translation.rtl.layout.ts");
-        await Bun.sleep(600);
+        await sleep(600);
         expect(await rows("t/translation.rtl.md")).toBe(2);
         expect(await rows("book.rtl.md")).toBe(2);
         expect(await readFile(page("t/translation.rtl.md"), "utf-8")).not.toMatch(/[\uE001-\uE006]/);
@@ -287,7 +289,7 @@ describe("HtmlMirror", () => {
         // An edit to what it imports reaches them too.
         await write("t/logic.ts", "export const groups = [{ from: 0, to: 3, rowStarts: [1, 2, 3], margins: [5, 5, 5, 5] }];");
         m.scheduleSync("t/logic.ts");
-        await Bun.sleep(600);
+        await sleep(600);
         expect(await rows("book.rtl.md")).toBe(4);
     });
 
@@ -320,7 +322,7 @@ describe("HtmlMirror", () => {
         const m = mirror();
         await m.syncTree(["a.rtl.md", "b.rtl.md"]);
         m.scheduleSync("a.rtl.md");
-        await Bun.sleep(600);
+        await sleep(600);
         expect(await readFile(page("a.rtl.md"), "utf-8")).toContain("הפניה מעגלית");
         expect(await m.syncFile("a.rtl.md")).toBe("fresh");
     });
@@ -372,7 +374,7 @@ describe("HtmlMirror", () => {
         await writeFile(join(root, ".layout.ts"), "export default () => null;");
         await utimes(join(root, ".layout.ts"), new Date(), new Date(Date.now() + 5000));
         m.scheduleSync(".layout.ts");
-        await Bun.sleep(600);
+        await sleep(600);
         expect(existsSync(page("tech/b.md"))).toBe(true);
     });
 

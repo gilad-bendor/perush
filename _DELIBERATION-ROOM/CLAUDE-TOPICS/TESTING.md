@@ -9,12 +9,18 @@
 **Always capture full output to a temp file** so failure analysis doesn't require re-running the suite:
 
 ```bash
-TMP=$(mktemp /tmp/bun-test.XXXXX); bun test 2>&1 | tee "$TMP" | tail -5; echo "Full output file: $TMP"
+TMP=$(mktemp /tmp/node-test.XXXXX); npm test 2>&1 | tee "$TMP" | tail -8; echo "Full output file: $TMP"
 ```
 
-This gives an inline summary (pass/fail counts) and saves the full output for immediate `Read` if failures need investigation. **Never re-run the test suite just to try a different grep pattern** — read the temp file instead.
+This gives an inline summary (node:test's closing `# tests` / `# pass` / `# fail` lines) and saves the full output for immediate `Read` if failures need investigation. **Never re-run the test suite just to try a different grep pattern** — read the temp file instead.
 
-## Unit Tests (`bun:test`)
+## Unit Tests (`node:test`)
+
+The tests run on `node:test`, written with `tests/test-kit.ts`: it re-exports `describe`, `test` and the hooks (`beforeAll`/`afterAll` are `before`/`after`), and has a Jest-style `expect()` on `node:assert` with the matchers the tests use - a test that needs another adds it there. `describe.skipIf(c)` is `describe(name, { skip: c }, ...)`.
+
+- `npm test` runs `tests/unit/*.test.ts` one file at a time (`--test-concurrency=1`): the tests create git worktrees and branches in the real repo, and start servers on fixed ports. `node --test` runs every file in a process of its own.
+- **`NODE_ENV=test`** is set by `npm test` (and by the E2E tests for the server they spawn); `config.ts` also counts any `node --test` process as a test (`NODE_TEST_CONTEXT`), so a single file run as `node --test tests/unit/config.test.ts` is one too. Under tests, meetings never touch the real repo's `main`.
+- E2E: `npm run test:e2e`. The real SDK smoke test: `npm run test:smoke` (real API calls, ~$0.10).
 
 Test each module in isolation. Use the stub SDK (see below) to avoid API calls in tests.
 
@@ -34,13 +40,12 @@ Git worktree creation (`createMeetingWorktree`) takes ~1.5s per call. Tests in `
 - **Share worktrees across tests** using `beforeAll`/`afterAll` wherever possible. Group tests that can operate on the same meeting into a single `describe` block with a shared worktree.
 - **Batch cleanup**: track all meeting IDs and clean up in a single `afterAll` rather than per-test `afterEach`.
 - **Merge related assertions**: if two tests would both need to create a meeting + run cycles + test one thing, merge them into a single test that checks both things.
-- **Avoid `mock.module()`** for `meetings-db` — Bun leaks module mocks across test files in the same process, breaking unrelated tests (e.g., `server.test.ts`).
 - **Pure-logic tests** (e.g., `generateMeetingId`, `detectPerushChanges`) don't need worktrees — keep them in separate `describe` blocks.
 
 **Test patterns**:
 ```typescript
-import { describe, test, expect, beforeEach, afterEach } from "bun:test";
-import { createStubSDK } from "../../src/stub-sdk";
+import { describe, test, expect, beforeEach, afterEach } from "../test-kit.ts";
+import { createStubSDK } from "../../src/stub-sdk.ts";
 
 describe("session-manager", () => {
   test("extractAssessment parses valid JSON from agent response", () => {
@@ -63,6 +68,8 @@ Located in `tests/e2e/`. Use `mock-ws-server.ts` to replay canned WebSocket even
 3. **Agent panel**: Tab switching, assessment display, importance badges, collapse/expand.
 4. **Interactions**: Attention button states, rollback dialog, status-read bar transitions, Director input submission.
 5. **Uncommitted perush files dialog** (`uncommitted-perush-dialog.test.ts`): the mock server answers `start-meeting` with `uncommitted-changes`; `mockServer.received` records what the client sends.
+
+**Known failure:** `integration.test.ts`'s "create meeting" step waits for the phase "המתנה", while the UI now shows "מוּשהֶה" - the test is stale, not the server.
 
 ## Stub Agent SDK
 
@@ -96,7 +103,7 @@ Located in `tests/e2e/`. Use `mock-ws-server.ts` to replay canned WebSocket even
 
 ```typescript
 // Usage in tests:
-import { createStubSDK } from "../../src/stub-sdk";
+import { createStubSDK } from "../../src/stub-sdk.ts";
 
 const sdk = createStubSDK();
 const query = sdk.query({
@@ -117,22 +124,22 @@ The project includes `playwright-test.ts` for browser automation and debugging. 
 
 ```bash
 # Open browser and keep it open for inspection (headed mode)
-bun run playwright-test.ts --url=http://localhost:4100
+node playwright-test.ts --url=http://localhost:4100
 
 # Take a screenshot
-bun run playwright-test.ts --url=http://localhost:4100 --screenshot=debug.png
+node playwright-test.ts --url=http://localhost:4100 --screenshot=debug.png
 
 # Log browser console messages
-bun run playwright-test.ts --url=http://localhost:4100 --console
+node playwright-test.ts --url=http://localhost:4100 --console
 
 # Click on an element
-bun run playwright-test.ts --url=http://localhost:4100 --click=".start-meeting-btn"
+node playwright-test.ts --url=http://localhost:4100 --click=".start-meeting-btn"
 
 # Evaluate JavaScript in the browser
-bun run playwright-test.ts --url=http://localhost:4100 --eval="document.querySelector('.conversation-feed').children.length"
+node playwright-test.ts --url=http://localhost:4100 --eval="document.querySelector('.conversation-feed').children.length"
 
 # Headless mode (for automated checks)
-bun run playwright-test.ts --url=http://localhost:4100 --headless --screenshot=test.png
+node playwright-test.ts --url=http://localhost:4100 --headless --screenshot=test.png
 ```
 
 ### CLI Options
@@ -148,9 +155,9 @@ bun run playwright-test.ts --url=http://localhost:4100 --headless --screenshot=t
 
 ### Writing custom Playwright diagnostic scripts
 
-For complex visual bugs (RTL layout, streaming text, WebSocket state, etc.), write a **custom TypeScript Playwright script** and run it with `bun run <script.ts>`. This is much more powerful than the CLI flags above.
+For complex visual bugs (RTL layout, streaming text, WebSocket state, etc.), write a **custom TypeScript Playwright script** and run it with `node <script.ts>`. This is much more powerful than the CLI flags above.
 
-**Prerequisites:** The dev server must be running (`bun run dev-model-haiku` on port 4100).
+**Prerequisites:** The dev server must be running (`npm run dev-model-haiku` on port 4100).
 
 **Key patterns for custom scripts:**
 

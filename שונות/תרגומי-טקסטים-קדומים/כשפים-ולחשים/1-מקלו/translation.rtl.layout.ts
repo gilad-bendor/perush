@@ -11,9 +11,9 @@
 // a row would rather start at an incantation's name ("הקסם "...": ..."), and never ends right after one. What
 // the punctuation does not show - mostly parallel pairs - is said below, by the words of the lines.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost, type UnitContext } from "../../layout/translation-layout";
-import { endsSentence } from "../../layout/rows";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost, type UnitContext } from "../../layout/translation-layout.ts";
+import { endsSentence } from "../../layout/rows.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "f0b14e62c022c96bf3c65554c303638d";

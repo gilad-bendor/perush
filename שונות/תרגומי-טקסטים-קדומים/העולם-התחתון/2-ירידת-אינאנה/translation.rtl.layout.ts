@@ -9,8 +9,8 @@
 // speech ending its row, and each repetition broken as its first occurrence ("alike"). What punctuation does not
 // show - mostly parallel pairs - is named below by the words of the line.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "20a37913b3cc44d2febd850f23c79891";

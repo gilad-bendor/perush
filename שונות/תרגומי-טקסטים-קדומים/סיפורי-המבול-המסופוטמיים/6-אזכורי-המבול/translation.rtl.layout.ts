@@ -11,8 +11,8 @@
 // row). What the punctuation does not show - a couplet of two sentences, a verb kept with its objects, the
 // repetition of Enki's speech (F 123-128) shaped as its first telling - is said below, by the words of the line.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "7de0dd05b98e70156e562dd15ea89bfd";

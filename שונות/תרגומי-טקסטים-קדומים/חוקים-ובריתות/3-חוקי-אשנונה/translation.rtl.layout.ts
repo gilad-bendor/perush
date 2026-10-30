@@ -7,8 +7,8 @@
 // nothing however empty it is, so the default fills the first row and leaves the law's tail alone on the
 // second, mid-phrase. The rules below are what keeps the protasis and the apodosis apart instead.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "2258cbdc231ad082c51aa1b1f640ead0";

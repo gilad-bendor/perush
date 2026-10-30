@@ -9,10 +9,10 @@
 // into the next (more so when the next opens with a dash too); two lines nearly alike in letters stay together.
 // The parallel pairs no punctuation shows are named below by their words.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost, type UnitContext } from "../../layout/translation-layout";
-import { lineSimilarity } from "../../layout/numbered-lines";
-import { endsSentence } from "../../layout/rows";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost, type UnitContext } from "../../layout/translation-layout.ts";
+import { lineSimilarity } from "../../layout/numbered-lines.ts";
+import { endsSentence } from "../../layout/rows.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "11aaeb873a81345c5c08587be9e0fa5d";

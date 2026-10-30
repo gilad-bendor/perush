@@ -1,4 +1,4 @@
-#!/usr/bin/env bun
+#!/usr/bin/env node
 /**
  * Tests 2, 3, 5, 17, 18: Basic query, init message, streaming, result message, assistant message
  */

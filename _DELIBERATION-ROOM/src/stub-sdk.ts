@@ -13,7 +13,7 @@
  * Imports only from: types.ts (no other src/ imports)
  */
 
-import { STUB_RESPONSE_DELAY_MS } from "./config";
+import { STUB_RESPONSE_DELAY_MS } from "./config.ts";
 
 // ---------------------------------------------------------------------------
 // Types matching the real SDK interface (subset we use)

@@ -1,27 +1,27 @@
-import { file, serve } from "bun";
+import { spawnSync } from "child_process";
 import { join, posix } from "path";
 import { readFile, stat, mkdir } from "fs/promises";
-import { watch } from "fs";
-import { renderScriptFileForEditor } from "./terminal-render";
+import { existsSync, watch } from "fs";
+import { mimeTypeOf, serve } from "./http-server.ts";
+import { renderScriptFileForEditor } from "./terminal-render.ts";
 // The very module the browser loads - so that a table is laid out identically on both sides.
 import { formatTables, isAiGeneratedFile } from "../public/src/tables.js";
-import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes";
-import type { FileSystemChange } from "./fs-changes";
-import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
-import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR, takeSiteChanges } from "./html/html-mirror";
-import type { SiteChanges } from "./html/html-mirror";
-import { outputOf } from "./html/layout-module";
-import { PDF_MIRROR_DIR, PdfMirror, pdfPathFor } from "./html/pdf-mirror";
-import { lineEndingOf, toLf, withLineEnding } from "./line-endings";
-import { writeFileSafe } from "./write-file-safe";
+import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes.ts";
+import type { FileSystemChange } from "./fs-changes.ts";
+import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree.ts";
+import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR, takeSiteChanges } from "./html/html-mirror.ts";
+import type { SiteChanges } from "./html/html-mirror.ts";
+import { outputOf } from "./html/layout-module.ts";
+import { PDF_MIRROR_DIR, PdfMirror, pdfPathFor } from "./html/pdf-mirror.ts";
+import { lineEndingOf, toLf, withLineEnding } from "./line-endings.ts";
+import { writeFileSafe } from "./write-file-safe.ts";
 
 const PORT = 4000;
 
 // docs/ - where the HTML/PDF mirrors are written - is a symlink to a worktree of the branch "auto-docs".
 // Make sure it is in place before anything is written there (the script is idempotent, and locked).
-const ensureDocs = Bun.spawnSync([join(import.meta.dir, "..", "..", "scripts", "ensure-docs-worktree.sh")],
-    { stdout: "inherit", stderr: "inherit" });
-if (ensureDocs.exitCode !== 0) {
+const ensureDocs = spawnSync(join(import.meta.dirname, "..", "..", "scripts", "ensure-docs-worktree.sh"), { stdio: "inherit" });
+if (ensureDocs.status !== 0) {
     console.error("scripts/ensure-docs-worktree.sh failed - not starting (the mirrors would be written to the wrong place).");
     process.exit(1);
 }
@@ -207,7 +207,7 @@ serve({
         const url = new URL(request.url);
 
         if (url.pathname === "/") {
-            return new Response(await file("./public/index.html").text(), {
+            return new Response(await readFile("./public/index.html", "utf-8"), {
                 headers: { "Content-Type": "text/html" }
             });
         }
@@ -215,7 +215,7 @@ serve({
         if (url.pathname.startsWith("/public/")) {
             const filePath = `.${url.pathname}`;
             try {
-                const content = await file(filePath).arrayBuffer();
+                const content = await readFile(filePath);
                 const mimeType = filePath.endsWith(".css") ? "text/css" :
                     filePath.endsWith(".js") ? "application/javascript" : "text/plain";
                 return new Response(content, {
@@ -234,7 +234,7 @@ serve({
         if (url.pathname.startsWith("/node_modules/")) {
             const filePath = `.${url.pathname}`;
             try {
-                const content = await file(filePath).arrayBuffer();
+                const content = await readFile(filePath);
                 return new Response(content, {
                     headers: { "Content-Type": "application/javascript" }
                 });
@@ -276,9 +276,9 @@ serve({
             } catch (error) {
                 console.error(`Cannot bring the ${asPdf ? "PDF" : "page"} of ${filePath} up to date:`, error);
             }
-            if (!(await file(join(MARKDOWN_DIR, target)).exists())) {
+            if (!existsSync(join(MARKDOWN_DIR, target))) {
                 // A file its layout gives no page (layout-schema.ts's `output: "none"`) is there, and says why.
-                const none = await file(join(MARKDOWN_DIR, filePath)).exists() && await outputOf(MARKDOWN_DIR, filePath) === "none";
+                const none = existsSync(join(MARKDOWN_DIR, filePath)) && await outputOf(MARKDOWN_DIR, filePath) === "none";
                 return printErrorPage(none ? `לקובץ "${filePath}" אין דף ואין PDF: העימוד שלו קובע כך (output: "none").`
                     : `הקובץ "${filePath}" לא נמצא.`);
             }
@@ -301,8 +301,8 @@ serve({
                 }
                 path = posix.join(path, "index.html");
             }
-            const served = file(join(MARKDOWN_DIR, path));
-            if (!(await served.exists())) {
+            const served = join(MARKDOWN_DIR, path);
+            if (!(await stat(served).catch(() => null))?.isFile()) {
                 return new Response("Not found", { status: 404 });
             }
             // A PDF's links lead to GitHub Pages - unless it is read here, when they lead back here.
@@ -315,7 +315,7 @@ serve({
             if (local) {
                 return new Response(local as Uint8Array<ArrayBuffer>, { headers: { "Content-Type": "application/pdf", "Cache-Control": "no-cache" } });
             }
-            return new Response(served, { headers: { "Cache-Control": "no-cache" } });
+            return new Response(await readFile(served), { headers: { "Content-Type": mimeTypeOf(path), "Cache-Control": "no-cache" } });
         }
 
         if (url.pathname.startsWith("/api/file/")) {

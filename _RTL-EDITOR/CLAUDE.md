@@ -1,6 +1,7 @@
 # Hebrew Markdown RTL Editor
 
-A TypeScript Bun web-server project for editing Hebrew Markdown files with browser-based interface.
+A TypeScript web-server project for editing Hebrew Markdown files with browser-based interface. It runs on Node (22 or
+later), which runs the TypeScript as it is - there is no build step.
 
 ## Features
 
@@ -54,26 +55,34 @@ A TypeScript Bun web-server project for editing Hebrew Markdown files with brows
 ## Setup
 
 ```bash
-# Install dependencies
-bun install
+# Install dependencies (which applies `patches/` - see "Mixed-direction lines" below)
+npm install
 
-# Start development server
-bun run dev
+# Start development server, on port 4000
+npm run dev
 
-# Build for production
-bun run build
+# Type-check the server side and the browser code
+npm run check
 
 # Bring ../docs/_HTML-FROM-MD up to date once, without the server
-bun run rebuild-whole-html-folder
+npm run rebuild-whole-html-folder
 
 # What needs a layout session (see "A file's layout" below), and a translation's printed rows
-bun run layout-status
-bun run rows status
+npm run layout-status
+npm run rows -- status
 ```
+
+npm passes options on to a script only after a `--` (`npm run rows -- report <file> --text`).
+
+`npm run dev` restarts the server on a change under `src/` or `public/src/` only (`--watch-path`), not on a change
+to any file it imported, as plain `node --watch` would: the server imports the layout modules itself (see "A file's
+layout"), and every edit of one - or of the translations' layout code - would restart it.
 
 ## Project Structure
 
-- `src/server.ts` - Main Bun web server
+- `src/server.ts` - Main web server
+- `src/http-server.ts` - The server on `node:http`: each request handed to `server.ts`'s handler as a Web `Request`, its
+   `Response` written back; a static file's `Content-Type` (`mimeTypeOf()`)
 - `src/fs-changes.ts` - Tree snapshots, their differences, and the log a client polls
 - `src/markdown-tree.ts` - The tree of `.md` files the editor shows, and the names it skips
 - `src/html/` - The Markdown → HTML capability, entered through `HtmlMirror`
@@ -89,12 +98,12 @@ bun run rows status
 - `src/html/folder-index.ts` - The `index.html` of every folder of `../docs/_HTML-FROM-MD`
 - `src/html/pdf-mirror.ts` - Every page of the HTML mirror printed to `../docs/_PDF-FROM-MD`, by Playwright's Chromium
 - `src/html/pdf-pages.ts` - What a PDF has and its page does not: the index's page numbers, and the footers
-- `src/rebuild-whole-html-folder.ts` - `bun run rebuild-whole-html-folder`
+- `src/rebuild-whole-html-folder.ts` - `npm run rebuild-whole-html-folder`
 - `layout-guidelines/` - What a layout session (a Claude session deciding how pages are laid out) works with,
    whatever it lays out: its prompt, `claude-layout-guidelines.md`, and the general tools. The code that *applies* a
    layout is in `src/html/`; what a kind of file needs is in a `layout/` folder of its own - the translations' is
-   `../שונות/תרגומי-טקסטים-קדומים/layout/` (their logic, `bun run rows`, their guidelines and tests)
-- `layout-guidelines/layout-status.ts` - `bun run layout-status`: the files whose layout is missing, obsolete, flagged or broken
+   `../שונות/תרגומי-טקסטים-קדומים/layout/` (their logic, `npm run rows`, their guidelines and tests)
+- `layout-guidelines/layout-status.ts` - `npm run layout-status`: the files whose layout is missing, obsolete, flagged or broken
 - `layout-guidelines/tool-kit.ts` - What a kind's layout tool is built on: a page as the mirror makes it, measured in
    Chromium, printed to a PDF; a module type-checked
 - `src/write-file-safe.ts` - Atomic file writes, shared by the POST handler and the mirror
@@ -110,17 +119,21 @@ bun run rows status
 - `public/src/pseudo-tags.js` - Which pseudo-tags are void, shared by the browser and the server
 - `public/src/hebrew-search.js` - What a plain Find matches in Hebrew text (niqqud, precomposed letters, shin/sin)
 - `public/style.css` - Styling with RTL support
-- `tests/tables.test.ts` - Unit tests for `tables.js` (`bun test`)
-- `tests/links.test.ts` - Unit tests for `links.js` (`bun test`)
-- `tests/hebrew-search.test.ts` - Unit tests for `hebrew-search.js` (`bun test`)
-- `tests/edit-locations.test.ts` - Unit tests for `edit-locations.js` (`bun test`)
-- `tests/fs-changes.test.ts` - Unit tests for `fs-changes.ts` (`bun test`)
-- `tests/line-endings.test.ts` - Unit tests for `line-endings.ts` (`bun test`)
+- `public/tsconfig.json` - The browser code, type-checked as JavaScript; `tsconfig.json` is the server side's. Both
+   are checked by `npm run check`
+- `tests/test-kit.ts` - What the tests are written with: `node:test`'s `describe`/`test`/hooks, and a Jest-style
+   `expect()` (see "Unit tests")
+- `tests/tables.test.ts` - Unit tests for `tables.js` (`npm test`)
+- `tests/links.test.ts` - Unit tests for `links.js` (`npm test`)
+- `tests/hebrew-search.test.ts` - Unit tests for `hebrew-search.js` (`npm test`)
+- `tests/edit-locations.test.ts` - Unit tests for `edit-locations.js` (`npm test`)
+- `tests/fs-changes.test.ts` - Unit tests for `fs-changes.ts` (`npm test`)
+- `tests/line-endings.test.ts` - Unit tests for `line-endings.ts` (`npm test`)
 - `tests/md-to-html.test.ts` / `tests/html-mirror.test.ts` / `tests/includes.test.ts` - Unit tests for
-   the HTML mirror (`bun test`)
+   the HTML mirror (`npm test`)
 - `tests/line-rows.test.ts` / `tests/layout-module.test.ts` - Unit tests for `line-rows.ts` / the layout modules, their
-   bundling, measuring and marks (`bun test`). The translations' layout logic has its own, beside it:
-   `bun test ../שונות/תרגומי-טקסטים-קדומים/layout/tests/`
+   loading, measuring and marks (`npm test`). The translations' layout logic has its own, beside it, which `npm test`
+   runs too: `../שונות/תרגומי-טקסטים-קדומים/layout/tests/`
 - `tests/pdf-mirror.test.ts` / `tests/pdf-pages.test.ts` - Unit tests for the PDF mirror and its pages - these print
    real PDFs, in Chromium
 
@@ -148,7 +161,7 @@ Set `MARKDOWN_DIR` environment variable to specify the directory containing Mark
 ### Table formatting
 
 `public/src/tables.js` is the single source of truth for tables. It is plain ESM with no editor
-dependency, so `markdown-editor.js` imports it in the browser and `server.ts` imports it in Bun -
+dependency, so `markdown-editor.js` imports it in the browser and `server.ts` imports it in Node -
 which is what keeps both sides' idea of a table's layout identical.
 
 Three input formats are recognised and all collapse to one canonical box-drawing form:
@@ -461,7 +474,7 @@ and `<תוכן-העניינים>` by the page's index of headings (see "The tabl
 **Except the void ones.** `<כלול-בהדפסה ...>` and `<תוכן-העניינים>` have no closing tag, the way
 HTML's own `<img>` has none - and nothing in the text says so, just as `<img>` is void because the spec says it is. So the
 names are listed, once, in `public/src/pseudo-tags.js` - plain ESM, imported by the browser and by
-Bun, like `tables.js` - and both sides ask `isVoidPseudoTag()`:
+the server, like `tables.js` - and both sides ask `isVoidPseudoTag()`:
 
 - The editor's tag stack does not take it: it decorates its own line and nothing below it. Push it
   and it is never popped, so the rest of the file wears its colour.
@@ -767,7 +780,7 @@ many characters of each line are its margin note are all the layout's to say (`L
 **The translations' rows** are worked out in `../שונות/תרגומי-טקסטים-קדומים/layout/`: what a numbered line is and
 which ones run on (`numbered-lines.ts`), what a break costs and the rows that cost least (`rows.ts`), and the entry
 point their layout modules call, `translationLayout()` (`translation-layout.ts`), which hands the editor the groups.
-Its tool, `bun run rows` (`rows-tool.ts`), measures what the PDF gets - the page rendered with
+Its tool, `npm run rows` (`rows-tool.ts`), measures what the PDF gets - the page rendered with
 `RenderOptions.sourceLines` (every grouped line carries `data-source-line`), laid out in Playwright's Chromium after
 `beforeprint`, under `measuring-print` (`tool-kit.ts`) - and proposes, checks and compares rows. Its guidelines are
 `layout-guidelines.md` there.
@@ -814,11 +827,15 @@ the file changed since).
 
 `layout-module.ts` does the rest, the same for the mirror (`HtmlMirror.syncPage()`) and the layout tools:
 
-- **A module may import files of the repository, by a relative path** - and types from anywhere. `moduleFiles()`
-  follows the imports (`Bun.Transpiler.scanImports()`, which does not list type imports) and refuses a package or a
-  missing file; `Bun.build` bundles the module with them into one file, named by its content, which is imported.
-  Every file of the bundle is an input of the page. It must also be **pure** - nothing on disk, no clock - or the
-  mirror's freshness test would be wrong. That one cannot be checked.
+- **A module may import files of the repository, by a relative path naming the file in full** (`"./rows.ts"`, as
+  Node wants) - and types from anywhere. Node loads it, with no bundle: it is imported as
+  `file:///.../x.layout.ts?layout=<version>`, a version never used before, and a resolve hook
+  (`module.registerHooks()`, acting only on a URL that carries `?layout=`) passes that version down to every file it
+  imports, at every depth. So a module that changed, or any file it imports, is a new URL, and is loaded afresh -
+  Node's own cache of modules cannot be cleared. (An old version stays in memory once loaded: a few KB per edit.) The
+  same hook refuses a package or a missing file, and records every file asked for (a type-only import is erased
+  before it gets there); each is an input of the page. A module must also be **pure** - nothing on disk, no clock -
+  or the mirror's freshness test would be wrong. That one cannot be checked.
 - **It is loaded again only when one of its files changes** - each is `stat`ed, nothing more, as long as none has.
   The path is made absolute first: `import()` takes a relative one to be relative to `layout-module.ts`, and the
   server's root is `..`. **`outputOf()`**, asked of every file at every sweep, keeps its answer until the file or a
@@ -1196,7 +1213,8 @@ offset 4 (the *start* of "ttt") while the line ends at 7. These patches keep the
   arrival at the start. Only for a caret's side of ±1: the selection layer asks `coordsAtPos()` with ±2, and
   its rectangles are untouched. A line that is one run throughout (an English line of an RTL file) is left
   alone.
-- **`patches/@codemirror%2Fview@6.39.11.patch`** (`bun patch`, applied by `bun install`): CodeMirror's bidi
+- **`patches/@codemirror+view+6.39.11.patch`** (`patch-package`, applied by `npm install`'s `postinstall`; the
+  package is pinned to exactly 6.39.11): CodeMirror's bidi
   algorithm forgot that a bracket pair resolved by rule N0 counts as a strong character for the pairs after
   it, so in `אאא [ttt](x.md)` it took `(x.md)` for LTR while the browser paints the parentheses RTL. Every
   Markdown link in Hebrew text was affected: the arrows moved the cursor the wrong way over the `(`, and a
@@ -1210,8 +1228,8 @@ offset 4 (the *start* of "ttt") while the line ends at 7. These patches keep the
     range. `bidiEdgeSelectionExtension()` sets that side through `rangeWithSide()` - an arrival at the left of
     the "1" is painted there - since `EditorSelection.range()` takes no side; for every range CodeMirror makes
     itself, the side it holds is the one it used to be painted with.
-  Re-making the patch (`bun patch @codemirror/view@6.39.11`, edit, `bun patch --commit ...`) adds an empty
-  `.bun-tag-*` file to it - drop that entry from the patch file.
+  Re-making the patch: edit the files under `node_modules/@codemirror/view/`, then `npx patch-package
+  @codemirror/view` writes it anew.
 - **`bidiEdgeSelectionExtension()`**: Shift+Left / Shift+Right over a character whose two sides are the same
   offset (by its side, `assoc`) - a step over it changed only the side, and a selection did not grow at all.
   When a step keeps the head's offset, the character whose glyph lies between the two painted carets is
@@ -1255,8 +1273,15 @@ The editor uses CodeMirror 6. Key CSS classes:
 ### Unit tests
 
 ```bash
-bun test                 # runs tests/*.test.ts
+npm test                              # every tests/**/*.test.ts, and the translations' layout tests
+node --test tests/tables.test.ts      # one file
 ```
+
+The tests run on `node:test`, written with `tests/test-kit.ts`: it re-exports `describe`, `test` and the hooks
+(`beforeAll`/`afterAll` are `before`/`after`), and has a Jest-style `expect()` on `node:assert` - with the matchers
+the tests use, no more: a test that needs another adds it there. `node --test` runs every file in a process of its
+own; `npm test` runs them one at a time (`--test-concurrency=1`). The summary is the last lines of the output
+(`# tests`, `# pass`, `# fail`).
 
 `tests/tables.test.ts` covers `tables.js` end to end - format conversion, layout, cursor mapping and
 the structural key operations. It is much faster to iterate on than the browser, so reach for it
@@ -1270,7 +1295,7 @@ Use these files for testing (in `test-files/` directory):
 Each links to the other, so Cmd+click can be tried in an LTR and an RTL file alike.
 
 ### Manual Testing
-1. Start server: `bun run dev`
+1. Start server: `npm run dev`
 2. Open browser at http://localhost:4000/
 3. Click on test files in the file tree to open them
 4. Test with both English and Hebrew files
@@ -1284,22 +1309,22 @@ Playwright is the **primary tool for investigating visual/UI bugs** in this edit
 
 ```bash
 # Open browser and keep it open for inspection (headed mode)
-bun run playwright-test.ts --url=http://localhost:4000
+node playwright-test.ts --url=http://localhost:4000
 
 # Take a screenshot
-bun run playwright-test.ts --url=http://localhost:4000 --screenshot=debug.png
+node playwright-test.ts --url=http://localhost:4000 --screenshot=debug.png
 
 # Log browser console messages
-bun run playwright-test.ts --url=http://localhost:4000 --console
+node playwright-test.ts --url=http://localhost:4000 --console
 
 # Click on a file in the tree to open it
-bun run playwright-test.ts --url=http://localhost:4000 --click=".file-item.file"
+node playwright-test.ts --url=http://localhost:4000 --click=".file-item.file"
 
 # Evaluate JavaScript in the browser
-bun run playwright-test.ts --url=http://localhost:4000 --eval="document.querySelector('.cm-content').innerText"
+node playwright-test.ts --url=http://localhost:4000 --eval="document.querySelector('.cm-content').innerText"
 
 # Headless mode (for CI or automated checks)
-bun run playwright-test.ts --url=http://localhost:4000 --headless --screenshot=test.png
+node playwright-test.ts --url=http://localhost:4000 --headless --screenshot=test.png
 ```
 
 #### CLI Options
@@ -1316,10 +1341,10 @@ bun run playwright-test.ts --url=http://localhost:4000 --headless --screenshot=t
 #### Writing custom Playwright diagnostic scripts
 
 For complex visual bugs (cursor positioning, RTL layout, selection behavior, etc.),
-write a **custom TypeScript Playwright script** and run it with `bun run <script.ts>`.
+write a **custom TypeScript Playwright script** and run it with `node <script.ts>`.
 This is much more powerful than the CLI flags above.
 
-**Prerequisites:** The dev server must be running (`bun run dev` on port 4000).
+**Prerequisites:** The dev server must be running (`npm run dev` on port 4000).
 
 **Key patterns for custom scripts:**
 

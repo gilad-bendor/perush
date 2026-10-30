@@ -14,8 +14,8 @@
 // in Tablet VII, one name and its two lines each. The footer is the poem and the tablet at the top of the sheet
 // ("אֱנוּמָה אֱלִישׁ / לוח IV"), each without what follows its colon.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost, type NumberedLine, type UnitContext } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost, type NumberedLine, type UnitContext } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "83b34b01a7c45542c92c28ff34770815";

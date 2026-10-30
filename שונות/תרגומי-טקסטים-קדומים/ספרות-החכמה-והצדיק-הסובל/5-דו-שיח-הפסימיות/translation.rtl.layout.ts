@@ -11,9 +11,9 @@
 // The PDF has no index: it is four pages, and its stanzas - the only sections - are five or six rows each, all
 // seen at a glance; listed down to them, the index would be as long as a stanza. The footer is the title.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost, type UnitContext } from "../../layout/translation-layout";
-import { endsSentence } from "../../layout/rows";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost, type UnitContext } from "../../layout/translation-layout.ts";
+import { endsSentence } from "../../layout/rows.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "b193219dc5f2458062314e297e39a678";

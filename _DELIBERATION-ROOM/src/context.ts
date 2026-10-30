@@ -8,7 +8,7 @@
  */
 
 import {AsyncLocalStorage} from "node:async_hooks";
-import type {ClientMessage} from "./types";
+import type {ClientMessage} from "./types.ts";
 
 // ---------------------------------------------------------------------------
 // AsyncLocalStorage context

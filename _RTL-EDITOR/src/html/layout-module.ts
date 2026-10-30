@@ -2,7 +2,7 @@
 // merged, and put into its text for the renderer to read.
 //
 //     layoutChainFor()     the modules that lay a file out: every folder's `.layout.ts` above it, then its own
-//     loadLayoutModule()   a module, bundled with what it imports, checked
+//     loadLayoutModule()   a module, loaded with what it imports, checked
 //     layoutFileOf()       what a module is told about a file (LayoutFile) - read lazily
 //     runChain()           what each module of the chain answers, checked, and merged
 //     resolveLayout()      the merged answer with every function in it called - plain data (ResolvedLayout)
@@ -15,19 +15,21 @@
 // the repository, a syntax error, a function that throws, an answer of the wrong shape - is a problem for
 // the page to show, never an exception: the page is still made, without what that module would have said.
 
-import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "fs";
+import { createHash } from "crypto";
+import { readFileSync, statSync } from "fs";
 import { stat } from "fs/promises";
-import { tmpdir } from "os";
-import { dirname, join, posix, resolve } from "path";
+import { registerHooks } from "module";
+import { dirname, posix, resolve } from "path";
+import { fileURLToPath, pathToFileURL } from "url";
 import { isRtlFile } from "../../public/src/tables.js";
-import { fenceScanner } from "./includes";
-import { GROUP_MARK, LINE_MARK, MARGIN_MARK, NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, ROW_MARK, stripLayoutMarks } from "./layout-marks";
+import { fenceScanner } from "./includes.ts";
+import { GROUP_MARK, LINE_MARK, MARGIN_MARK, NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, ROW_MARK, stripLayoutMarks } from "./layout-marks.ts";
 import type {
     FileLayout, FolderLayout, FooterContext, Heading, HeadingContext, LayoutEntries, LayoutFile, LayoutOfFile, LayoutOfFolder,
     LineGroup, Output, PageSettings, RunningHeading, Static,
-} from "./layout-schema";
-import { paragraphRanges } from "./md-to-html";
-import { measureAt } from "./text-measure";
+} from "./layout-schema.ts";
+import { paragraphRanges } from "./md-to-html.ts";
+import { measureAt } from "./text-measure.ts";
 
 /** A folder's layout module - for every file under it. */
 export const FOLDER_LAYOUT_NAME = ".layout.ts";
@@ -60,61 +62,80 @@ export function isFolderLayoutFile(path: string): boolean {
 
 /** The MD5 a file's own layout records of it (`sourceMd5`) - of its text as it is on disk. */
 export function md5Of(text: string): string {
-    return new Bun.CryptoHasher("md5").update(text).digest("hex");
+    return createHash("md5").update(text).digest("hex");
 }
 
 // ------------------------------------------------------------------------------------------------
 // Loading
+//
+// A module is imported as `file:///.../x.layout.ts?layout=<version>`, a version never used before, and every import
+// made from a URL carrying `?layout=` is given the same one (the hook below). A new version is a new URL at every
+// depth, so a module that changed - or any file it imports - is loaded afresh: Node's own cache of modules cannot be
+// cleared. As that cache never forgets, an old version stays in memory once loaded - a few KB per edit.
 
-/** A module, ready to run - and every file it was bundled from (absolute), for the page to depend on. */
+/** A module, ready to run - and every file it was loaded from (absolute), for the page to depend on. */
 export type LoadedLayout = { layout: (...args: never[]) => unknown, files: string[] } | { error: string, files: string[] };
 
-const transpiler = new Bun.Transpiler({ loader: "ts" });
 const loadedModules = new Map<string, { files: string[], stamp: string, loaded: LoadedLayout }>();
-const BUNDLES_DIR = join(tmpdir(), "perush-layout-bundles");
 
-/** The file an import names: `./x` → `./x`, `./x.ts` or `./x/index.ts`, whichever is a file. */
-function resolveImport(from: string, specifier: string): string | null {
-    const base = resolve(dirname(from), specifier);
-    return [base, `${base}.ts`, join(base, "index.ts")].find(candidate => existsSync(candidate) && statSync(candidate).isFile()) ?? null;
+const VERSION_PARAMETER = "layout";
+let lastVersion = 0;
+/** Every file a version being loaded has asked for, the module's own first - with its mtime when it was asked for. */
+const versionFiles = new Map<string, Map<string, number | undefined>>();
+
+/** An import a layout module may not make - said as it is, not as a failure to load. */
+class RefusedImport extends Error {}
+
+/** The version a module's URL carries - null for any module but a layout module's or what it imports. */
+function versionOf(url: string | undefined): string | null {
+    return url?.startsWith("file:") ? new URL(url).searchParams.get(VERSION_PARAMETER) : null;
 }
 
 /**
- * An import's path as written. scanImports() hands a non-ASCII one back with its UTF-8 bytes read as Latin-1
- * (`./שונות` → `./×©×...`), so it is read back as UTF-8 - when that gives valid text, as it always does then.
+ * A `.ts` file is an ES module, said so here: the repository's root has no package.json to say it (one would turn
+ * scripts/*.js into ES modules), and Node would warn that it had to guess, for the root's `.layout.ts`.
  */
-function importPath(scanned: string): string {
-    if (!/[\u0080-\u00ff]/.test(scanned) || /[^\u0000-\u00ff]/.test(scanned)) return scanned;
-    const decoded = Buffer.from(scanned, "latin1").toString("utf8");
-    return decoded.includes("\ufffd") ? scanned : decoded;
+function formatOf(path: string): string | undefined {
+    return /\.ts(\?|$)/.test(path) ? "module-typescript" : undefined;
 }
 
-/** A module and every file it imports, at any depth - or what is wrong with an import. */
-function moduleFiles(entry: string): { files: string[], error?: string } {
-    const files: string[] = [];
-    const queue = [entry];
-    while (queue.length) {
-        const file = queue.shift()!;
-        if (files.includes(file)) continue;
-        files.push(file);
-        // `import type` is gone once transpiled, and scanImports() does not list it: whatever it lists runs.
-        for (const { path: scanned } of transpiler.scanImports(readFileSync(file, "utf-8"))) {
-            const path = importPath(scanned);
-            if (!path.startsWith("./") && !path.startsWith("../")) {
-                return { files, error: `a layout module may import only files of the repository, by a relative path - not "${path}"` };
-            }
-            const target = resolveImport(file, path);
-            if (!target) return { files, error: `${posix.basename(file)} imports "${path}", which is no file` };
-            queue.push(target);
+registerHooks({
+    resolve(specifier, context, nextResolve) {
+        const version = versionOf(context.parentURL);
+        // The module itself is taken as it is asked for - not by its real path, so that its imports are found from
+        // where it is said to be, and are recorded under that path.
+        if (version === null) return versionOf(specifier) === null ? nextResolve(specifier, context) : { url: specifier, format: formatOf(specifier), shortCircuit: true };
+        // A type-only import is gone before it gets here: whatever is asked for here runs.
+        const importer = fileURLToPath(context.parentURL!);
+        if (!specifier.startsWith("./") && !specifier.startsWith("../")) {
+            throw new RefusedImport(`a layout module may import only files of the repository, by a relative path - not "${specifier}"`);
         }
-    }
-    return { files };
+        const target = resolve(dirname(importer), specifier);
+        const info = statSync(target, { throwIfNoEntry: false });
+        if (!info?.isFile()) {
+            const hint = posix.extname(specifier) ? "" : ` - an import names its file in full: "${specifier}.ts"`;
+            throw new RefusedImport(`${posix.basename(importer)} imports "${specifier}", which is no file${hint}`);
+        }
+        const files = versionFiles.get(version);
+        if (files && !files.has(target)) files.set(target, info.mtimeMs);
+        return { url: `${pathToFileURL(target).href}?${VERSION_PARAMETER}=${version}`, format: formatOf(target), shortCircuit: true };
+    },
+});
+
+/** What a module's files are, as of now - their mtimes. */
+async function stampOf(files: string[]): Promise<string> {
+    return (await Promise.all(files.map(async file => `${file}:${(await stat(file).catch(() => null))?.mtimeMs}`))).join("|");
+}
+
+/** Where a syntax error is - Node says it only on the first line of the stack: `<path or URL>:<line>`. */
+function whereOf(error: unknown): string {
+    const where = error instanceof SyntaxError ? /^(\S.*?)(?:\?\S*)?:(\d+)\n/.exec(error.stack ?? "") : null;
+    return where ? ` (${posix.basename(where[1])}, line ${where[2]})` : "";
 }
 
 /**
- * The layout module at `path`, bundled with what it imports - null when there is none. Loaded again when
- * any of its files changes; a bundle is a file of its own, named by its content, so a module unchanged
- * is never imported twice.
+ * The layout module at `path`, loaded with what it imports - null when there is none. Loaded again when
+ * any of its files changes, and only then.
  *
  * @param path  absolute, or relative to the current folder - made absolute here, as `import()` would take a
  *              relative path to be relative to this module (the server's root is "..")
@@ -123,48 +144,32 @@ export async function loadLayoutModule(path: string): Promise<LoadedLayout | nul
     path = resolve(path);
     const info = await stat(path).catch(() => null);
     if (!info?.isFile()) return null;
-    const stampOf = async (files: string[]) =>
-        (await Promise.all(files.map(async file => `${file}:${(await stat(file).catch(() => null))?.mtimeMs}`))).join("|");
 
-    // Unchanged files are what it was: no reading, no bundling - only a stat of each.
+    // Unchanged files are what it was: no reading, no loading - only a stat of each.
     const cached = loadedModules.get(path);
     if (cached && await stampOf(cached.files) === cached.stamp) return cached.loaded;
 
-    let found: { files: string[], error?: string };
-    try {
-        found = moduleFiles(path);
-    } catch (error) {
-        found = { files: [path], error: `it does not load: ${(error as Error).message}` };
-    }
-    const stamp = await stampOf(found.files);
-    if (cached?.stamp === stamp) {
-        loadedModules.set(path, { ...cached, files: found.files });
-        return cached.loaded;
-    }
-
+    // Each file's mtime is taken before Node reads it, so that a change made meanwhile is a change of the stamp.
+    const version = String(++lastVersion);
+    const seen = new Map<string, number | undefined>([[path, info.mtimeMs]]);
+    versionFiles.set(version, seen);
     let loaded: LoadedLayout;
-    if (found.error) {
-        loaded = { error: found.error, files: found.files };
-    } else {
-        try {
-            const built = await Bun.build({ entrypoints: [path], target: "bun", format: "esm" });
-            if (!built.success) throw new Error(built.logs.map(log => String(log)).join("; "));
-            const code = await built.outputs[0].text();
-            mkdirSync(BUNDLES_DIR, { recursive: true });
-            const bundle = join(BUNDLES_DIR, `${new Bun.CryptoHasher("sha1").update(code).digest("hex")}.js`);
-            writeFileSync(bundle, code);
-            const module = await import(bundle);
-            loaded = typeof module.default === "function" ? { layout: module.default, files: found.files }
-                : { error: "its default export must be a function: (file, above) => its layout", files: found.files };
-        } catch (error) {
-            loaded = { error: `it does not load: ${(error as Error).message}`, files: found.files };
-        }
+    try {
+        const module = await import(`${pathToFileURL(path).href}?${VERSION_PARAMETER}=${version}`);
+        loaded = typeof module.default === "function" ? { layout: module.default, files: [...seen.keys()] }
+            : { error: "its default export must be a function: (file, above) => its layout", files: [...seen.keys()] };
+    } catch (error) {
+        const message = error instanceof RefusedImport ? error.message : `it does not load: ${(error as Error).message}${whereOf(error)}`;
+        loaded = { error: message, files: [...seen.keys()] };
+    } finally {
+        versionFiles.delete(version);
     }
-    loadedModules.set(path, { files: found.files, stamp, loaded });
+    const stamp = [...seen].map(([file, mtimeMs]) => `${file}:${mtimeMs}`).join("|");
+    loadedModules.set(path, { files: loaded.files, stamp, loaded });
     return loaded;
 }
 
-/** What a module is, as of now - the stamp of the files it was bundled from; "" when there is none. */
+/** What a module is, as of now - the stamp of the files it was loaded from; "" when there is none. */
 async function moduleStamp(path: string): Promise<string> {
     return await loadLayoutModule(path) ? loadedModules.get(resolve(path))!.stamp : "";
 }
@@ -321,7 +326,7 @@ export type LayoutChain = {
     /** Whether any module answered at all. */
     answered: boolean;
     problems: LayoutProblem[];
-    /** Every file the chain's modules were bundled from, from the root - for the page to depend on. */
+    /** Every file the chain's modules were loaded from, from the root - for the page to depend on. */
     files: string[];
 };
 

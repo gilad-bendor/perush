@@ -2,8 +2,8 @@
 
 import { join, extname } from "path";
 import { readdir, stat } from "fs/promises";
-import { HTML_MIRROR_NAME } from "./html/html-mirror";
-import { PDF_MIRROR_NAME } from "./html/pdf-mirror";
+import { HTML_MIRROR_NAME } from "./html/html-mirror.ts";
+import { PDF_MIRROR_NAME } from "./html/pdf-mirror.ts";
 
 /** The root of the served tree. Every path the API, the file tree and the HTML mirror use is relative to it. */
 export const MARKDOWN_DIR = "..";

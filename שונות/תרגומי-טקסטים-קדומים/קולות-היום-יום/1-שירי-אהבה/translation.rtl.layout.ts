@@ -11,8 +11,8 @@
 // a sentence; a direct speech ends its row. What the punctuation does not show - mostly parallel pairs with
 // a comma or none between them, and a speaker's change - is said below, by the words of the line.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost, type UnitContext } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost, type UnitContext } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "2389e68354b56d04782d3d2e0804a427";

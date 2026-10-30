@@ -2,12 +2,12 @@
  * playwright-test.ts — Playwright CLI helper for browser debugging.
  *
  * Quick-start usage:
- *   bun run playwright-test.ts --url=http://localhost:4100
- *   bun run playwright-test.ts --url=http://localhost:4100 --screenshot=debug.png
- *   bun run playwright-test.ts --url=http://localhost:4100 --console
- *   bun run playwright-test.ts --url=http://localhost:4100 --click=".start-meeting-btn"
- *   bun run playwright-test.ts --url=http://localhost:4100 --eval="document.title"
- *   bun run playwright-test.ts --url=http://localhost:4100 --headless --screenshot=test.png
+ *   node playwright-test.ts --url=http://localhost:4100
+ *   node playwright-test.ts --url=http://localhost:4100 --screenshot=debug.png
+ *   node playwright-test.ts --url=http://localhost:4100 --console
+ *   node playwright-test.ts --url=http://localhost:4100 --click=".start-meeting-btn"
+ *   node playwright-test.ts --url=http://localhost:4100 --eval="document.title"
+ *   node playwright-test.ts --url=http://localhost:4100 --headless --screenshot=test.png
  */
 
 import { chromium } from "playwright";

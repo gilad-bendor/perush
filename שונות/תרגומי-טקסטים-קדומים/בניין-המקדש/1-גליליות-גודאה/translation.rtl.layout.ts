@@ -11,9 +11,9 @@
 // and their standards, the seven squares, the gods' gifts, the appointees and their epithets) - is named below
 // by the words of the lines, in the order of the file.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
-import { lineSimilarity } from "../../layout/numbered-lines";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
+import { lineSimilarity } from "../../layout/numbered-lines.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "735fe262c1aaa05fc15535a1cd1c70c0";

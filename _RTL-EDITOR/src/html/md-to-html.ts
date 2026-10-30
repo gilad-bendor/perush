@@ -27,12 +27,12 @@ import type { StateBlock, StateCore, StateInline, Token } from "markdown-it";
 import { isRtlFile, parseTables } from "../../public/src/tables.js";
 import { INDEX_TAG_NAME, isVoidPseudoTag } from "../../public/src/pseudo-tags.js";
 import { headingSlug } from "../../public/src/links.js";
-import { errorLineIndex } from "./includes";
-import type { EmbedError } from "./includes";
-import { LINE_ROWS_SCRIPT, LINE_ROWS_STYLE, lineRowsRule, PRINT_FONT_SIZE, PRINT_MARGIN_BLOCK_MM, PRINT_MARGIN_INLINE_MM } from "./line-rows";
-import { NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, stripLayoutMarks } from "./layout-marks";
-import { FONT_FACES, FONT_FAMILIES, FONTS_DIR, LAST_RESORT, type FontFace, type FontRole } from "./text-measure";
-import type { PageSettings, RunningHeading } from "./layout-schema";
+import { errorLineIndex } from "./includes.ts";
+import type { EmbedError } from "./includes.ts";
+import { LINE_ROWS_SCRIPT, LINE_ROWS_STYLE, lineRowsRule, PRINT_FONT_SIZE, PRINT_MARGIN_BLOCK_MM, PRINT_MARGIN_INLINE_MM } from "./line-rows.ts";
+import { NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, stripLayoutMarks } from "./layout-marks.ts";
+import { FONT_FACES, FONT_FAMILIES, FONTS_DIR, LAST_RESORT, type FontFace, type FontRole } from "./text-measure.ts";
+import type { PageSettings, RunningHeading } from "./layout-schema.ts";
 import { readFileSync } from "fs";
 import { join } from "path";
 

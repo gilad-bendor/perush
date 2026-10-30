@@ -9,8 +9,8 @@
 // ends its row. What the punctuation does not show - parallel pairs, and the building list that the hoe says
 // back to the plough (13-17 / 122-126), laid out alike - is named below by its words.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "df6258c08fecb6265036b4a41d154859";

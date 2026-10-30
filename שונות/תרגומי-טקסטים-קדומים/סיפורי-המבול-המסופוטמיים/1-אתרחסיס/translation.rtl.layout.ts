@@ -8,10 +8,10 @@
 // two. Speech has rows of its own: a row ends where a speech closes, and starts where one opens. What the
 // text's punctuation does not show is said below, line by line, by the words of the line.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost, type NumberedLine, type UnitContext } from "../../layout/translation-layout";
-import { lineSimilarity } from "../../layout/numbered-lines";
-import { endsSentence } from "../../layout/rows";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost, type NumberedLine, type UnitContext } from "../../layout/translation-layout.ts";
+import { lineSimilarity } from "../../layout/numbered-lines.ts";
+import { endsSentence } from "../../layout/rows.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "36657cfc5ed603b24dc90b08da150bf5";

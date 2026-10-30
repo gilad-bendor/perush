@@ -10,9 +10,9 @@
 // one; and a repeated message laid out like its first telling (`similar`: the messenger's "יעלה" / "תעלה",
 // "אעיף" / "אבריח"). What none of these shows is named below by the words of the line.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
-import { lineSimilarity } from "../../layout/numbered-lines";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
+import { lineSimilarity } from "../../layout/numbered-lines.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "2e4adf169158d7a1d317a4f63c1bb5d4";

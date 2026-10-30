@@ -8,8 +8,8 @@
 // שאר..."), cheap before a speech formula ("פתח את פיו") or a speech that opens, and before a line that is all
 // lacuna. What the punctuation does not show - mostly pairs of lines - is said below, by the words of the line.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "47c176064c407f1ed7a842b39c21d18a";

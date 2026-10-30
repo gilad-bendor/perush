@@ -19,8 +19,8 @@
 // modules, and of the code they import: a translation's rows are worked out in
 // שונות/תרגומי-טקסטים-קדומים/layout/, by its .layout.ts.
 //
-//     import type { FileLayout, LayoutOfFile } from "<relative path to>/_RTL-EDITOR/src/html/layout-schema";
-//     import { translationLayout } from "../../layout/translation-layout";
+//     import type { FileLayout, LayoutOfFile } from "<relative path to>/_RTL-EDITOR/src/html/layout-schema.ts";
+//     import { translationLayout } from "../../layout/translation-layout.ts";
 //
 //     const layout: LayoutOfFile = (file, above): FileLayout => ({
 //         sourceMd5: SOURCE_MD5,
@@ -33,7 +33,7 @@
 //
 // The rules of a module, which layout-module.ts enforces where it can:
 // - **Imports: files of the repository only, by a relative path** (and types from anywhere). The editor
-//   bundles a module with what it imports, and every file of the bundle is an input of the page.
+//   loads a module with what it imports, and every file it loads is an input of the page.
 // - **Pure.** The same arguments give the same result: no file reading, no clock, no randomness. A page
 //   that changed without its sources changing would defeat the mirror's freshness test, and every PDF
 //   would be printed again for nothing.

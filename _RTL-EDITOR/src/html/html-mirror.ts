@@ -32,19 +32,21 @@
 // Nothing here decides *when* to look; server.ts calls scheduleSync() for a file the watcher saw
 // change, and syncTree() at startup and on its periodic rescan.
 
+import { execFile } from "child_process";
 import { dirname, join, posix, relative } from "path";
+import { promisify } from "util";
 import { copyFile, mkdir, readdir, readFile, rmdir, stat, unlink, utimes } from "fs/promises";
 import type { Stats } from "fs";
-import { renderMarkdownPage } from "./md-to-html";
-import type { Breadcrumb } from "./md-to-html";
-import { errorMarkerLine, expandIncludes, hasIncludeDirective } from "./includes";
-import { DEFAULT_PDF_SETTINGS, layoutChainFor, layoutFor, outputOf } from "./layout-module";
-import { FONT_FACES, FONT_FILES, FONTS_DIR } from "./text-measure";
+import { renderMarkdownPage } from "./md-to-html.ts";
+import type { Breadcrumb } from "./md-to-html.ts";
+import { errorMarkerLine, expandIncludes, hasIncludeDirective } from "./includes.ts";
+import { DEFAULT_PDF_SETTINGS, layoutChainFor, layoutFor, outputOf } from "./layout-module.ts";
+import { FONT_FACES, FONT_FILES, FONTS_DIR } from "./text-measure.ts";
 
-import { FOLDER_INDEX_NAME, folderIndexPages, mirrorSummary, siteIndexPage } from "./folder-index";
-import type { MirrorSummary } from "./folder-index";
-import { writeFileSafe } from "../write-file-safe";
-import type { PageCompanion } from "./pdf-mirror";
+import { FOLDER_INDEX_NAME, folderIndexPages, mirrorSummary, siteIndexPage } from "./folder-index.ts";
+import type { MirrorSummary } from "./folder-index.ts";
+import { writeFileSafe } from "../write-file-safe.ts";
+import type { PageCompanion } from "./pdf-mirror.ts";
 
 /** The mirror's folder, relative to the root of the served tree - under docs/, which GitHub Pages serves. */
 export const HTML_MIRROR_DIR = "docs/_HTML-FROM-MD";
@@ -101,17 +103,17 @@ export function takeSiteChanges(mirror: "html" | "pdf"): SiteChanges {
 
 /** The code a page depends on besides its file - a change to any of them makes every page stale. */
 const RENDERER_FILES = [
-    join(import.meta.dir, "md-to-html.ts"),
-    join(import.meta.dir, "html-mirror.ts"),
-    join(import.meta.dir, "includes.ts"),
-    join(import.meta.dir, "line-rows.ts"),
-    join(import.meta.dir, "layout-module.ts"),
-    join(import.meta.dir, "layout-marks.ts"),
-    join(import.meta.dir, "text-measure.ts"),
+    join(import.meta.dirname, "md-to-html.ts"),
+    join(import.meta.dirname, "html-mirror.ts"),
+    join(import.meta.dirname, "includes.ts"),
+    join(import.meta.dirname, "line-rows.ts"),
+    join(import.meta.dirname, "layout-module.ts"),
+    join(import.meta.dirname, "layout-marks.ts"),
+    join(import.meta.dirname, "text-measure.ts"),
     ...Object.values(FONT_FACES).flatMap(face => [face.main, face.fallback]).map(file => join(FONTS_DIR, file)),
-    join(import.meta.dir, "../../public/src/tables.js"),
-    join(import.meta.dir, "../../public/src/pseudo-tags.js"),
-    join(import.meta.dir, "../../public/src/links.js"),
+    join(import.meta.dirname, "../../public/src/tables.js"),
+    join(import.meta.dirname, "../../public/src/pseudo-tags.js"),
+    join(import.meta.dirname, "../../public/src/links.js"),
 ];
 
 /** How long a changed file is left to settle before its page is rendered - one render for a burst of saves. */
@@ -228,7 +230,13 @@ export class HtmlMirror {
      * @param root             the root of the served tree
      * @param rendererMtimeMs  pages older than this are stale whatever their file says
      */
-    constructor(private readonly root: string, private readonly rendererMtimeMs: number) {}
+    private readonly root: string;
+    private readonly rendererMtimeMs: number;
+
+    constructor(root: string, rendererMtimeMs: number) {
+        this.root = root;
+        this.rendererMtimeMs = rendererMtimeMs;
+    }
 
     /**
      * Has the mirror work scheduled or under way - a file's sync, the indexes', a sweep? Its PDFs aside:
@@ -631,10 +639,10 @@ async function gitListing(root: string): Promise<Set<string> | null> {
 
 async function gitLsFiles(root: string, args: string[]): Promise<Set<string> | null> {
     try {
-        const git = Bun.spawn(["git", "ls-files", "-z", ...args], { cwd: root, stdout: "pipe", stderr: "ignore" });
-        const output = await new Response(git.stdout).text();
-        if (await git.exited !== 0) return null;
-        return new Set(output.split("\0").filter(Boolean));
+        // A failure - git exiting with an error, or not there at all - is a rejection; its stderr is not shown.
+        const { stdout } = await promisify(execFile)("git", ["ls-files", "-z", ...args],
+            { cwd: root, encoding: "utf-8", maxBuffer: 1 << 30 });
+        return new Set(stdout.split("\0").filter(Boolean));
     } catch {
         return null;
     }

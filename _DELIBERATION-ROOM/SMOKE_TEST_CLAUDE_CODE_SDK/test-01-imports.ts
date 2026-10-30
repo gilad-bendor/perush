@@ -1,4 +1,4 @@
-#!/usr/bin/env bun
+#!/usr/bin/env node
 /**
  * Test 1: Package Installation and Basic Import
  * Verify what the SDK exports and their types.

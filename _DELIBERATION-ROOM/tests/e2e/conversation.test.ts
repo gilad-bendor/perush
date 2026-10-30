@@ -5,9 +5,9 @@
  * Tests streaming, RTL, phase transitions, agent panel, status-read bar.
  */
 
-import { describe, test, expect, beforeAll, afterAll, afterEach } from "bun:test";
+import { describe, test, expect, beforeAll, afterAll, afterEach } from "../test-kit.ts";
 import { chromium, type Browser, type Page } from "playwright";
-import { createMockServer } from "./mock-ws-server";
+import { createMockServer } from "./mock-ws-server.ts";
 
 let browser: Browser;
 let page: Page;
@@ -323,7 +323,7 @@ describe("sync with existing cycles", () => {
       expect(thirdSpeaker).toBe("shalom");
     } finally {
       // Close page before stopping server to avoid page.close() hanging in afterEach
-      // (Bun's server.stop(true) severs the WS, leaving the page in a state where close() blocks)
+      // (the mock's stop() severs the WS, leaving the page in a state where close() blocks)
       if (page && !page.isClosed()) await page.close();
       cyclesMock.stop();
     }

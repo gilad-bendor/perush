@@ -11,8 +11,8 @@
 // or a list); cheaper where a speech closes. The formulaic passages - the question and answer of Ninhursag's healing, Isimud's "X! - he says to him; / he cuts
 // it for him, and he eats", Ninmah's creatures - get a rule each; what no rule shows is named below by words.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "a4dae11b951be5a61caf2413089af9cb";

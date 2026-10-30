@@ -16,9 +16,9 @@
 // - **A repeated passage** (echoesOf()): lines that repeat, word for word (or nearly - `"similar"`), an earlier passage of two lines or
 //   more, in the same order.
 //
-// Pure, and imports nothing that runs but files of this folder: a layout module bundles it.
+// Pure, and imports nothing that runs but files of this folder: a layout module imports it.
 
-import type { LayoutFile } from "../../../_RTL-EDITOR/src/html/layout-schema";
+import type { LayoutFile } from "../../../_RTL-EDITOR/src/html/layout-schema.ts";
 
 /** A numbered line of the file: `**12** text`. */
 export type NumberedLine = {

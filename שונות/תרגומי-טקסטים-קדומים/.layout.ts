@@ -8,8 +8,8 @@
 // be, broken where the text pauses, a repeated passage laid out like the first time it was said. Any other
 // file - a per-tablet working file, a source - has each run on one row, which the browser wraps.
 
-import type { FolderLayout, LayoutOfFolder } from "../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout } from "./layout/translation-layout";
+import type { FolderLayout, LayoutOfFolder } from "../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout } from "./layout/translation-layout.ts";
 
 const layout: LayoutOfFolder = (file, above): FolderLayout | null => file.name === "translation.rtl.md"
     ? { output: "laid-out", ...translationLayout(file, above, { rowBreak: ({ cost }) => cost, repeatedPassages: "alike" }) }

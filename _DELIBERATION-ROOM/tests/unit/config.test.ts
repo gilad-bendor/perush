@@ -1,4 +1,5 @@
-import { describe, test, expect } from "bun:test";
+import { describe, test, expect } from "../test-kit.ts";
+import { existsSync } from "node:fs";
 import { resolve, join } from "path";
 import { homedir } from "os";
 import {
@@ -30,7 +31,7 @@ import {
   PARTICIPANT_TOOLS,
   ORCHESTRATOR_TOOLS,
   ORCHESTRATOR_FILE,
-} from "../../src/config";
+} from "../../src/config.ts";
 import {SESSION_BRANCH_PREFIX, TAG_PREFIX} from "../../src/types.ts";
 
 // ---------------------------------------------------------------------------
@@ -102,7 +103,7 @@ describe("Path config", () => {
 
   test("DICTIONARY_SOURCE_MD points to an existing file under ../פירוש/", async () => {
     expect(DICTIONARY_SOURCE_MD.startsWith(join(ROOT_PROJECT_DIR, "פירוש"))).toBe(true);
-    expect(await Bun.file(DICTIONARY_SOURCE_MD).exists()).toBe(true);
+    expect(existsSync(DICTIONARY_SOURCE_MD)).toBe(true);
   });
 });
 
@@ -225,7 +226,7 @@ describe("Assessment config", () => {
 
 describe("Stub mode", () => {
   test("USE_STUB_SDK is true in test environment", () => {
-    // bun:test sets NODE_ENV=test
+    // `npm test` sets NODE_ENV=test
     expect(USE_STUB_SDK).toBe(true);
   });
 });

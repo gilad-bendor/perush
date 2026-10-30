@@ -6,8 +6,8 @@ This guide covers **ad-hoc interactive debugging** — launching the server, dri
 
 ## Prerequisites
 
-1. Dependencies installed: `bun install`
-2. CSS built: `bun run build:css` (or use `bun run dev-model-haiku` which runs it automatically)
+1. Dependencies installed: `npm install`
+2. CSS built: `npm run build:css` (or use `npm run dev-model-haiku` which runs it automatically)
 3. No other process on port 4100 (check with `lsof -i :4100`)
 
 ## Starting the Server
@@ -16,7 +16,7 @@ This guide covers **ad-hoc interactive debugging** — launching the server, dri
 
 ```bash
 cd /path/to/perush/_DELIBERATION-ROOM
-USE_STUB_SDK=true bun run dev-model-haiku # this will auto-kill any running server
+USE_STUB_SDK=true npm run dev-model-haiku # this will auto-kill any running server
 ```
 
 See "Log File" in the main `CLAUDE.md` to learn how to view the app's logs
@@ -26,7 +26,7 @@ See "Log File" in the main `CLAUDE.md` to learn how to view the app's logs
 Only use the real SDK when specifically testing agent behavior (costs money):
 
 ```bash
-bun run dev-model-haiku
+npm run dev-model-haiku
 ```
 
 If running inside a Claude Code session, the real SDK may fail with "Claude Code process exited with code 1" — the `SDK_ENV_VARS_TO_STRIP` cleanup in `real-sdk.ts` handles known env vars, but other environment conflicts may exist. The stub SDK does not have this limitation.
@@ -35,10 +35,10 @@ If running inside a Claude Code session, the real SDK may fail with "Claude Code
 
 ### Inline Script (Recommended for Complex Flows)
 
-Write a `bun -e` inline script for full control:
+Write an inline script for full control, run from `_DELIBERATION-ROOM/` (so that `playwright` is found). It is plain JavaScript: Node 22 strips TypeScript types from files, not from `-e` - for TypeScript, write a `.ts` file and run it with `node <file>.ts`.
 
 ```bash
-bun -e '
+node --input-type=module -e '
 import { chromium } from "playwright";
 (async () => {
   const browser = await chromium.launch({ headless: true });
@@ -55,13 +55,13 @@ import { chromium } from "playwright";
 
 ```bash
 # Screenshot
-bun run playwright-test.ts --headless --screenshot=/tmp/debug.png
+node playwright-test.ts --headless --screenshot=/tmp/debug.png
 
 # Headed mode (visible browser, stays open)
-bun run playwright-test.ts
+node playwright-test.ts
 
 # With console logging
-bun run playwright-test.ts --headless --console --wait=5000
+node playwright-test.ts --headless --console --wait=5000
 ```
 
 ## Simulating a Full Meeting Flow
@@ -249,7 +249,7 @@ Use the `Read` tool to view PNG screenshots — Claude Code can read images.
 
 ### Adding Debug Console.logs to Server Code
 
-When server behavior is unclear, add temporary `console.log` statements to the relevant module (`session-manager.ts`, `orchestrator.ts`, `server.ts`), then restart the server. Bun picks up changes on restart — no build step needed. All `console.*` output is automatically captured in the log file — use `./scripts/active-logs-full.sh -f` to watch new lines appear in real time.
+When server behavior is unclear, add temporary `console.log` statements to the relevant module (`session-manager.ts`, `orchestrator.ts`, `server.ts`), and save: the dev server runs under `node --watch`, which restarts it on the change — no build step (a meeting in progress is ended gracefully, and can be resumed). All `console.*` output is automatically captured in the log file — use `./scripts/active-logs-full.sh -f` to watch new lines appear in real time.
 
 Useful places to add logging:
 - `session-manager.ts: createSession` — trace session creation and registry state

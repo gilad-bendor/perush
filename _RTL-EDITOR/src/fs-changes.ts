@@ -5,7 +5,7 @@
 // (fs.watch, the rescans it triggers) lives in server.ts; everything here is testable on its own.
 
 import { extname } from "path";
-import type { FileData } from "./markdown-tree";
+import type { FileData } from "./markdown-tree.ts";
 
 export type FileSystemChange = {
     /** As the file tree and /api/file name it. A folder ends with "/". */
@@ -78,11 +78,14 @@ export class FsChangeLog {
     /** The oldest moment this log can still answer for; 0 until the first snapshot is taken. */
     private coversSince = 0;
 
-    constructor(
-        /** How many changes to keep. Beyond this, the oldest are dropped and coversSince moves up. */
-        private readonly maxChanges = 2000,
-        private readonly clock: () => number = Date.now,
-    ) {}
+    /** How many changes to keep. Beyond this, the oldest are dropped and coversSince moves up. */
+    private readonly maxChanges: number;
+    private readonly clock: () => number;
+
+    constructor(maxChanges = 2000, clock: () => number = Date.now) {
+        this.maxChanges = maxChanges;
+        this.clock = clock;
+    }
 
     /** A timestamp to hand a client, strictly later than every one issued or recorded before it. */
     now(): number {

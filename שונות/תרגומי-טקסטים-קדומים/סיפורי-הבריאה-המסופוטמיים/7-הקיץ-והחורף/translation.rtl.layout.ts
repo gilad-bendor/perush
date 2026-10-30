@@ -9,8 +9,8 @@
 // stays with the speech's last line, and ends the row there; a line ending with ":" that does not open a speech
 // (a list, the colophon) ends its row. The few pairs that punctuation does not show are named below.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "064b18ace7a0d05645454cf4849a0037";

@@ -6,7 +6,10 @@
  */
 
 import { join } from "path";
-import { serveStaticFile } from "../../src/server";
+import { realpathSync } from "node:fs";
+import { WebSocketServer, type WebSocket } from "ws";
+import { serveStaticFile } from "../../src/server.ts";
+import { createWebServer } from "../../src/http-server.ts";
 
 const MIME_TYPES: Record<string, string> = {
   ".html": "text/html; charset=utf-8",
@@ -17,7 +20,7 @@ const MIME_TYPES: Record<string, string> = {
   ".svg": "image/svg+xml",
 };
 
-const PUBLIC_DIR = join(import.meta.dir, "../../public");
+const PUBLIC_DIR = join(import.meta.dirname, "../../public");
 
 export interface MockEvent {
   delay?: number; // ms to wait before sending
@@ -85,12 +88,6 @@ const DEFAULT_AGENTS: MockAgentDef[] = [
   },
 ];
 
-type ServerWebSocket<T> = {
-  send(data: string | ArrayBuffer): void;
-  close(): void;
-  data: T;
-};
-
 export function createMockServer(options: MockServerOptions = {}) {
   const {
     port = 4200,
@@ -101,11 +98,11 @@ export function createMockServer(options: MockServerOptions = {}) {
     perushScope = { trackedPaths: ["פירוש/", "נספחים-לפירוש/"], trackedPathsSource: "src/config.ts (PERUSH_TRACKED_PATHS)" },
   } = options;
 
-  const clients = new Set<ServerWebSocket<unknown>>();
+  const clients = new Set<WebSocket>();
   /** Every client message received (parsed) - for tests to assert what the client sent */
   const received: Array<Record<string, any>> = [];
 
-  async function sendSequence(ws: ServerWebSocket<unknown>, events: MockEvent[]) {
+  async function sendSequence(ws: WebSocket, events: MockEvent[]) {
     for (const event of events) {
       if (event.delay) {
         await new Promise((r) => setTimeout(r, event.delay));
@@ -116,67 +113,76 @@ export function createMockServer(options: MockServerOptions = {}) {
     }
   }
 
-  const server = Bun.serve({
-    port,
-    async fetch(req, server) {
-      const url = new URL(req.url);
-      const pathname = url.pathname;
+  const server = createWebServer(async (req) => {
+    const url = new URL(req.url);
+    const pathname = url.pathname;
 
-      // WebSocket upgrade
-      if (pathname === "/ws") {
-        const success = server.upgrade(req);
-        if (success) return new Response(null, { status: 101 });
-        return new Response("WebSocket upgrade failed", { status: 400 });
-      }
+    // A WebSocket upgrade never gets here (see the "upgrade" handler below)
+    if (pathname === "/ws") {
+      return new Response("WebSocket upgrade failed", { status: 400 });
+    }
 
-      // Mock API
-      if (pathname === "/api/agents") {
-        return Response.json(agents);
-      }
-      if (pathname === "/api/meetings") {
-        return Response.json(meetings);
-      }
-      if (pathname === "/api/perush-scope") {
-        return Response.json(perushScope);
-      }
+    // Mock API
+    if (pathname === "/api/agents") {
+      return Response.json(agents);
+    }
+    if (pathname === "/api/meetings") {
+      return Response.json(meetings);
+    }
+    if (pathname === "/api/perush-scope") {
+      return Response.json(perushScope);
+    }
 
-      // SPA catch-all: /meeting/* paths served by the frontend router
-      if (pathname.startsWith("/meeting/")) {
-        return serveStaticFile("/", PUBLIC_DIR, MIME_TYPES);
-      }
+    // SPA catch-all: /meeting/* paths served by the frontend router
+    if (pathname.startsWith("/meeting/")) {
+      return serveStaticFile("/", PUBLIC_DIR, MIME_TYPES);
+    }
 
-      // Static files
-      return serveStaticFile(pathname, PUBLIC_DIR, MIME_TYPES);
-    },
-    websocket: {
-      open(ws) {
-        clients.add(ws as any);
-        if (onConnectEvents.length > 0) {
-          sendSequence(ws as any, onConnectEvents).catch(console.error);
-        }
-      },
-      message(ws, message) {
-        const raw = typeof message === "string" ? message : new TextDecoder().decode(message as unknown as ArrayBuffer);
+    // Static files
+    return serveStaticFile(pathname, PUBLIC_DIR, MIME_TYPES);
+  });
+
+  // The WebSocket, on the same port as the server's (src/server.ts)
+  const wss = new WebSocketServer({ noServer: true });
+  server.on("upgrade", (req, socket, head) => {
+    if (new URL(req.url ?? "/", "http://localhost").pathname !== "/ws") {
+      socket.end("HTTP/1.1 400 Bad Request\r\n\r\n");
+      return;
+    }
+    wss.handleUpgrade(req, socket, head, (ws) => {
+      clients.add(ws);
+      if (onConnectEvents.length > 0) {
+        sendSequence(ws, onConnectEvents).catch(console.error);
+      }
+      ws.on("message", (data) => {
         try {
-          const parsed = JSON.parse(raw);
+          const parsed = JSON.parse(data.toString());
           received.push(parsed);
           const typeEvents = onMessageEvents[parsed.type];
           if (typeEvents) {
-            sendSequence(ws as any, typeEvents).catch(console.error);
+            sendSequence(ws, typeEvents).catch(console.error);
           }
         } catch {}
-      },
-      close(ws) {
-        clients.delete(ws as any);
-      },
-    },
+      });
+      ws.on("close", () => {
+        clients.delete(ws);
+      });
+    });
   });
+
+  server.listen(port);
 
   return {
     server,
-    port: server.port,
-    url: `http://localhost:${server.port}`,
-    stop: () => server.stop(true),
+    port,
+    url: `http://localhost:${port}`,
+    /** Stops at once: every WebSocket and HTTP connection is dropped */
+    stop: () => {
+      for (const ws of wss.clients) ws.terminate();
+      wss.close();
+      server.closeAllConnections();
+      server.close();
+    },
     received,
     broadcast: (msg: Record<string, unknown>) => {
       const json = JSON.stringify(msg);
@@ -187,8 +193,8 @@ export function createMockServer(options: MockServerOptions = {}) {
   };
 }
 
-// Run standalone if executed directly
-if (import.meta.main) {
+// Run standalone if executed directly (`node tests/e2e/mock-ws-server.ts`)
+if (process.argv[1] && realpathSync(process.argv[1]) === import.meta.filename) {
   const mock = createMockServer({
     port: 4200,
     onConnectEvents: [

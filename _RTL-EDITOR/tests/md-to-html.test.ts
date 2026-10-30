@@ -1,6 +1,6 @@
-import { describe, expect, test } from "bun:test";
-import { markdownToHtml, PAGE_STYLE, readablePath, readableUrl, renderMarkdownPage } from "../src/html/md-to-html";
-import type { EmbedError } from "../src/html/includes";
+import { describe, expect, test } from "./test-kit.ts";
+import { markdownToHtml, PAGE_STYLE, readablePath, readableUrl, renderMarkdownPage } from "../src/html/md-to-html.ts";
+import type { EmbedError } from "../src/html/includes.ts";
 
 const html = (markdown: string) => markdownToHtml(markdown).trim();
 

@@ -7,8 +7,8 @@
 // (+30), a speech ending its row, the speech formula starting one, and each gate a row of its own. What the
 // punctuation does not show - mostly parallel pairs - is said below, line by line, by the words of the line.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "7286ef7e827f6a361a5320b581bc075b";

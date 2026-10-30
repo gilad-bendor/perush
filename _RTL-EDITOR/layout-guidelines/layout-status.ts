@@ -1,7 +1,7 @@
 // What needs a layout session: every Markdown file whose layout is missing, obsolete, flagged or broken.
 //
-//     bun run layout-status [folder] [--check]      (in _RTL-EDITOR)
-//     bun layout-status.ts [folder] [--check]       (here)
+//     npm run layout-status -- [folder] [--check]   (in _RTL-EDITOR)
+//     node layout-status.ts [folder] [--check]      (here)
 //
 // It asks every file's chain of layout modules (_RTL-EDITOR/src/html/layout-schema.ts) and lists:
 //   NO LAYOUT    the chain says the file should have a layout of its own (`output: "laid-out"`), and it has none
@@ -20,12 +20,12 @@
 
 import { existsSync, readFileSync } from "fs";
 import { join, resolve } from "path";
-import { layoutFileOf, layoutFor, layoutPathFor, md5Of, runChain } from "../src/html/layout-module";
-import { closeBrowser, markdownFiles, measureGroups, pageHtml, REPO_ROOT } from "./tool-kit";
+import { layoutFileOf, layoutFor, layoutPathFor, md5Of, runChain } from "../src/html/layout-module.ts";
+import { closeBrowser, markdownFiles, measureGroups, pageHtml, REPO_ROOT } from "./tool-kit.ts";
 
 const args = process.argv.slice(2);
 if (args.includes("--help")) {
-    const source = readFileSync(import.meta.path, "utf-8").split("\n");
+    const source = readFileSync(import.meta.filename, "utf-8").split("\n");
     console.log(source.slice(0, source.findIndex(line => !line.startsWith("//"))).map(line => line.slice(3)).join("\n"));
     process.exit(0);
 }

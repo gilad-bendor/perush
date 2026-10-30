@@ -9,8 +9,8 @@
 // into "אנקי לצידו העמיד."), a line with no punctuation is inside its clause. The rest - couplets the
 // punctuation does not show, refrains - is named below by the words of the lines.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost, type NumberedLine } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost, type NumberedLine } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "f893931fe75f4867522859a452ec1c20";

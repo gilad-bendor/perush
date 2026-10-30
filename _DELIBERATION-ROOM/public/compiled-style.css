@@ -904,6 +904,17 @@ body {
   background-color: rgb(180 83 9 / var(--tw-bg-opacity, 1));
 }
 
+.btn-confirm:disabled {
+  cursor: not-allowed;
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity, 1));
+}
+
+.btn-confirm:disabled:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity, 1));
+}
+
 .btn-send {
   align-self: stretch;
   border-radius: 0.25rem;
@@ -1679,6 +1690,135 @@ body {
   display: flex;
   justify-content: flex-end;
   gap: 0.75rem;
+}
+
+.modal-content--wide {
+  max-width: 42rem;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Uncommitted Perush Files Dialog                                 */
+
+/* --------------------------------------------------------------- */
+
+.perush-scope-note {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(120 113 108 / var(--tw-text-opacity, 1));
+}
+
+.uncommitted-intro {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(68 64 60 / var(--tw-text-opacity, 1));
+}
+
+.uncommitted-legend {
+  margin-bottom: 0.75rem;
+  list-style-type: disc;
+}
+
+.uncommitted-legend > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.uncommitted-legend {
+  padding-inline-start: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(87 83 78 / var(--tw-text-opacity, 1));
+}
+
+.uncommitted-bulk {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.btn-link {
+  --tw-text-opacity: 1;
+  color: rgb(180 83 9 / var(--tw-text-opacity, 1));
+}
+
+.btn-link:hover {
+  text-decoration-line: underline;
+}
+
+.uncommitted-files {
+  margin-bottom: 0.75rem;
+  max-height: 20rem;
+}
+
+.uncommitted-files > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+  --tw-divide-opacity: 1;
+  border-color: rgb(245 245 244 / var(--tw-divide-opacity, 1));
+}
+
+.uncommitted-files {
+  overflow-y: auto;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(231 229 228 / var(--tw-border-opacity, 1));
+}
+
+.uncommitted-file {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.uncommitted-file-path {
+  min-width: 0px;
+  flex: 1 1 0%;
+  word-break: break-all;
+}
+
+.uncommitted-file-status {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(120 113 108 / var(--tw-text-opacity, 1));
+}
+
+.uncommitted-file-choices {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.75rem;
+}
+
+.uncommitted-file-choice {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.uncommitted-scope {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(120 113 108 / var(--tw-text-opacity, 1));
 }
 
 .rollback-preview {

@@ -9,7 +9,7 @@
 # The editor knows nothing of what a file is about: a kind of file keeps its layout logic, its tools and
 # its guidelines in a "layout/" folder of its own. Today the one kind is the translations' printed rows -
 # "שונות/תרגומי-טקסטים-קדומים/layout/", and its "layout-guidelines.md", which the session reads.
-# "bun run layout-status" (in _RTL-EDITOR) lists the files whose layout is missing or obsolete.
+# "npm run layout-status" (in _RTL-EDITOR) lists the files whose layout is missing or obsolete.
 #
 # CLAUDE_SESSION_DIR       the folder (relative to the repo root) that "claude" runs in.
 # --setting-sources user   skips the project sources - and with them the project's

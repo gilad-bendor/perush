@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "./test-kit.ts";
 import { ChangeSet, Text } from "@codemirror/state";
 import { EditLocations, MAX_EDIT_LOCATIONS } from "../public/src/edit-locations.js";
 

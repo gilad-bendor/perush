@@ -1,4 +1,4 @@
-// Widths of text on the printed page, computed in Bun - with no browser - from the font files the page is
+// Widths of text on the printed page, computed on the server - with no browser - from the font files the page is
 // printed in (fonts/, which every right-to-left page loads - RenderOptions.fonts in md-to-html.ts).
 //
 // Two fonts, so that no character is left to whatever the machine has: David CLM (Culmus), and for what
@@ -17,10 +17,10 @@
 import * as fontkit from "fontkit";
 import MarkdownIt from "markdown-it";
 import { join } from "path";
-import type { Measure, PageSettings } from "./layout-schema";
-import { PRINT_FONT_SIZE_PT, PRINT_MARGIN_INLINE_MM } from "./line-rows";
+import type { Measure, PageSettings } from "./layout-schema.ts";
+import { PRINT_FONT_SIZE_PT, PRINT_MARGIN_INLINE_MM } from "./line-rows.ts";
 
-export const FONTS_DIR = join(import.meta.dir, "../../fonts");
+export const FONTS_DIR = join(import.meta.dirname, "../../fonts");
 
 /** The faces of the page's two fonts, by file - regular, bold, italic, bold italic. */
 export const FONT_FACES = {

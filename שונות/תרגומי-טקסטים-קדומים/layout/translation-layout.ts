@@ -21,13 +21,13 @@
 // The translations folder's .layout.ts calls this for every Markdown file of the folder; a translation's own
 // translation.rtl.layout.ts calls it again with its own decisions, and its answer is the one that counts.
 //
-// Pure, and imports nothing that runs but files of this folder: a layout module bundles it.
+// Pure, and imports nothing that runs but files of this folder: a layout module imports it.
 
 import type {
     FolderLayout, LayoutFile, LineGroup, Measure as PageMeasure, PageSettings, SchemaValue,
-} from "../../../_RTL-EDITOR/src/html/layout-schema";
-import { continuesLabel, echoesOf, numberedLines, runsOf, type NumberedLine } from "./numbered-lines";
-import { breakPenalty, endsSentence, proposeRows, type BreakCost } from "./rows";
+} from "../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { continuesLabel, echoesOf, numberedLines, runsOf, type NumberedLine } from "./numbered-lines.ts";
+import { breakPenalty, endsSentence, proposeRows, type BreakCost } from "./rows.ts";
 
 export type { BreakCost, NumberedLine };
 

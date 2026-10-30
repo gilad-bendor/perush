@@ -1,8 +1,8 @@
-import { describe, expect, test } from "bun:test";
-import { applyLayout, DEFAULT_PDF_SETTINGS, layoutFileOf } from "../../../../_RTL-EDITOR/src/html/layout-module";
-import { markdownToHtml, renderMarkdownPage } from "../../../../_RTL-EDITOR/src/html/md-to-html";
-import { continuesLabel, echoesOf, isNumberLabel, labelPieces, lineSimilarity, numberedLines, runsOf } from "../numbered-lines";
-import { translationLayout } from "../translation-layout";
+import { describe, expect, test } from "../../../../_RTL-EDITOR/tests/test-kit.ts";
+import { applyLayout, DEFAULT_PDF_SETTINGS, layoutFileOf } from "../../../../_RTL-EDITOR/src/html/layout-module.ts";
+import { markdownToHtml, renderMarkdownPage } from "../../../../_RTL-EDITOR/src/html/md-to-html.ts";
+import { continuesLabel, echoesOf, isNumberLabel, labelPieces, lineSimilarity, numberedLines, runsOf } from "../numbered-lines.ts";
+import { translationLayout } from "../translation-layout.ts";
 
 /** A file laid out as the translations' .layout.ts lays out a file with no layout of its own - and rendered. */
 const html = (markdown: string, rows: Parameters<typeof translationLayout>[2] = {}) => {

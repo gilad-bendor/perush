@@ -1,10 +1,11 @@
-import { afterAll, describe, expect, test } from "bun:test";
+import { afterAll, describe, expect, test } from "./test-kit.ts";
+import { spawnSync } from "child_process";
 import { mkdtemp, rm, writeFile } from "fs/promises";
 import { tmpdir } from "os";
 import { join } from "path";
 import { chromium, type Browser } from "playwright";
-import { renderMarkdownPage, type RenderOptions } from "../src/html/md-to-html";
-import { printPages } from "../src/html/pdf-pages";
+import { renderMarkdownPage, type RenderOptions } from "../src/html/md-to-html.ts";
+import { printPages } from "../src/html/pdf-pages.ts";
 
 // A sheet of A4 at the mirror's margins holds 297mm - 2 * 18mm of content.
 const FULL_SHEET = "calc(297mm - 36mm - 1px)";
@@ -47,9 +48,9 @@ describe("printPages", () => {
         const dir = await mkdtemp(join(tmpdir(), "pdf-pages-"));
         try {
             await writeFile(join(dir, "book.pdf"), pdf);
-            const text = (sheet: number) => Bun.spawnSync(["pdftotext", "-f", String(sheet), "-l", String(sheet), "-layout", join(dir, "book.pdf"), "-"])
+            const text = (sheet: number) => spawnSync("pdftotext", ["-f", String(sheet), "-l", String(sheet), "-layout", join(dir, "book.pdf"), "-"])
                 .stdout.toString();
-            if (!Bun.which("pdftotext")) return;          // poppler is not installed - the rest is checked above
+            if (spawnSync("which", ["pdftotext"]).status !== 0) return;          // poppler is not installed - the rest is checked above
             expect(text(2)).toMatch(/Book \/ A\s+2\s*$/);
             // The index, with its dotted leaders drawn as a border, not as text: "A ... 1".
             expect(text(1)).toMatch(/^\s*Two\s+5\s*$/m);

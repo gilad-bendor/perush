@@ -16,7 +16,7 @@
 # the launchers as the options of a session that was started without a launcher (e.g. a cloud session).
 # Each value is a single line in double quotes, with no $ or ` characters.
 # DESCRIPTION                 one line that tells the user (and Claude) what the option is for.
-DESCRIPTION="Develop the RTL editor - the Bun web server for editing Hebrew Markdown, with its HTML mirror and PDF export."
+DESCRIPTION="Develop the RTL editor - the Node web server for editing Hebrew Markdown, with its HTML mirror and PDF export."
 
 PROMPT_FILE="CLAUDE.md"
 

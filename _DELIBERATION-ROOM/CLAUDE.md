@@ -28,7 +28,7 @@ For everything else — architecture, implementation, infrastructure — this fi
 
 ```
 ┌────────────────────────────────────────────┐
-│         SERVER (TypeScript + Bun)          │
+│         SERVER (TypeScript on Node)        │
 │                                            │
 │  ┌───────────────┐  ┌──────────────┐       │
 │  │ HTTP Server   │  │ WebSocket    │       │
@@ -52,7 +52,7 @@ For everything else — architecture, implementation, infrastructure — this fi
 └────────────────────────────────────────────┘
 ```
 
-**Server**: A single Bun process — HTTP + WebSocket + orchestrator. Only one meeting active at a time.
+**Server**: A single Node process — HTTP + WebSocket + orchestrator. Only one meeting active at a time.
 
 **Conversation Store**: Git branches as the database. Each meeting on an orphan branch (`sessions/<meeting-id>`). No meeting data on `main` — ever. See [CLAUDE-TOPICS/GIT-PERSISTENCE.md](CLAUDE-TOPICS/GIT-PERSISTENCE.md).
 
@@ -199,7 +199,8 @@ The `participants` array is authoritative: all iteration (assessments, template 
 
 | Component | Technology |
 |-----------|-----------|
-| Runtime | **Bun** (native WebSocket in `Bun.serve()`) |
+| Runtime | **Node 22+** (runs the TypeScript as it is — native type stripping, no build step) |
+| HTTP / WebSocket | **node:http** (behind a small `Request` → `Response` adapter) + **ws** |
 | Language | **TypeScript** |
 | Frontend | **Vanilla HTML/JS + Tailwind CSS** (RTL logical properties, no framework) |
 | Agent sessions | **@anthropic-ai/claude-agent-sdk** (persistent sessions with `resume`) |
@@ -207,7 +208,7 @@ The `participants` array is authoritative: all iteration (assessments, template 
 | Frontmatter | **gray-matter** |
 | Meeting serialization | **yaml** (human-readable meeting.yaml with block scalars) |
 | Persistence | **Git branches (worktrees)** |
-| Tests | **bun:test** (unit) + **Playwright** (E2E) |
+| Tests | **node:test** (unit, with `tests/test-kit.ts`) + **Playwright** (E2E) |
 
 ## Project Structure
 
@@ -216,6 +217,8 @@ _DELIBERATION-ROOM/
 ├── CLAUDE.md                                      ← this file
 ├── CLAUDE-TOPICS/                                 ← spin-out detail files (see below)
 ├── package.json
+├── package-lock.json
+├── .npmrc                                         ← legacy-peer-deps (the SDK's zod 4 peer)
 ├── tsconfig.json
 ├── tailwind.config.ts
 ├── playwright-test.ts                             ← Playwright CLI helper
@@ -238,7 +241,8 @@ _DELIBERATION-ROOM/
 │   ├── active-logs-short.sh                       ← print/follow header lines only
 │   └── DANGER-DELETE-ALL-MEETINGS.sh
 ├── src/
-│   ├── server.ts                                  ← Bun web server (HTTP + WebSocket), entry point
+│   ├── server.ts                                  ← web server (HTTP + WebSocket), entry point
+│   ├── http-server.ts                             ← node:http → the server's Request/Response handler
 │   ├── orchestrator.ts                            ← deliberation loop, phase management
 │   ├── agent-static-info.ts                       ← agent discovery and static identity data (globally importable)
 │   ├── session-manager.ts                         ← Agent SDK sessions, template resolution
@@ -271,6 +275,7 @@ _DELIBERATION-ROOM/
 │   │   ├── session-manager.test.ts
 │   │   ├── stub-sdk.test.ts
 │   │   └── types.test.ts
+│   ├── test-kit.ts                                ← node:test's describe/test + a Jest-style expect()
 │   ├── real-sdk-smoke.test.ts                     ← real SDK smoke test (~$0.10)
 │   └── e2e/
 │       ├── landing-page.test.ts
@@ -288,17 +293,17 @@ _DELIBERATION-ROOM/
 
 ```bash
 # Install dependencies
-bun install
+npm install
 
 # Start the server (port 4100) + Tailwind watcher
-bun run dev-model-default   # Costly: only the user is allowed to execute this 
-bun run dev-model-haiku     # ClaudeCode is allowed to execute this
+npm run dev-model-default   # Costly: only the user is allowed to execute this 
+npm run dev-model-haiku     # ClaudeCode is allowed to execute this
 
 # Run unit tests — ALWAYS use this exact pattern (captures full output for investigation without re-running):
-TMP=$(mktemp /tmp/bun-test.XXXXX); bun test 2>&1 | tee "$TMP" | tail -5; echo "Full output file: $TMP"
+TMP=$(mktemp /tmp/node-test.XXXXX); npm test 2>&1 | tee "$TMP" | tail -8; echo "Full output file: $TMP"
 
 # Run real SDK smoke test (costs ~$0.10, requires claude CLI auth)
-bun run test:smoke
+npm run test:smoke
 
 # Open in browser
 open http://localhost:4100
@@ -306,10 +311,10 @@ open http://localhost:4100
 
 ### First-Run Preconditions
 
-1. `bun install`
+1. `npm install`
 2. Claude CLI installed and authenticated (for real SDK sessions)
 3. `git config core.quotepath false` (Hebrew filenames in branch listings)
-4. `bun run build:css` (or `bun run dev-model-default` / `bun run dev-model-haiku` which run it automatically)
+4. `npm run build:css` (or `npm run dev-model-default` / `npm run dev-model-haiku` which run it automatically)
 
 ### Configuration
 
@@ -328,6 +333,7 @@ types.ts             ← types-asserts.ts (compile-time only), zod
 config.ts            ← types.ts
 context.ts           ← types.ts (+ node:async_hooks)
 utils.ts             ← (no src/ imports)
+http-server.ts       ← (no src/ imports) (+ node:http)
 logs.ts              ← config.ts, context.ts, utils.ts (+ node:fs, node:path)
 meetings-db.ts       ← types.ts, config.ts, logs.ts
 stub-sdk.ts          ← config.ts
@@ -335,21 +341,21 @@ real-sdk.ts          ← config.ts, logs.ts
 agent-static-info.ts ← types.ts, config.ts, logs.ts
 session-manager.ts   ← types.ts, config.ts, agent-static-info.ts, stub-sdk.ts, real-sdk.ts, logs.ts
 orchestrator.ts      ← types.ts, config.ts, meetings-db.ts, session-manager.ts, agent-static-info.ts, logs.ts
-server.ts            ← types.ts, config.ts, context.ts, orchestrator.ts, session-manager.ts, agent-static-info.ts, meetings-db.ts, utils.ts, logs.ts
+server.ts            ← types.ts, config.ts, context.ts, http-server.ts, orchestrator.ts, session-manager.ts, agent-static-info.ts, meetings-db.ts, utils.ts, logs.ts
 ```
 
 **No upward arrows.** No circular imports.
 
 ### Code Style & Conventions
 
-- Follow `../_RTL-EDITOR` patterns for Bun/TypeScript.
+- Follow `../_RTL-EDITOR` patterns for Node/TypeScript.
 - Keep the orchestrator loop readable — it should read like pseudocode.
 - **Agent-extensible**: adding a new Participant-Agent requires only a `.md` file with frontmatter — no code changes. Never hardcode agent IDs.
 - Frontend is vanilla JS with ES modules. **Desktop-only** — no responsive breakpoints.
 - **Use zod `.safeParse()` at every boundary** — especially when parsing AI output.
 - **Idempotency**: every state-mutating operation must be safe to retry after a crash.
 - **Atomic writes**: `meeting.yaml` written via temp-file-then-rename.
-- **Git with literal Hebrew or globs**: use the `git()` helper in `meetings-db.ts` (argument list), never `` $`...` `` - see [GIT-PERSISTENCE.md](CLAUDE-TOPICS/GIT-PERSISTENCE.md).
+- **Git always with an argument list**: `git()` / `gitResult()` in `meetings-db.ts` (`git(root, "log", "-1", ...)`), never a shell command line - Hebrew paths, globs and messages reach git exactly as written. See [GIT-PERSISTENCE.md](CLAUDE-TOPICS/GIT-PERSISTENCE.md).
 - **RTL-first**: Tailwind logical properties only (`ms-`, `me-`, `ps-`, `pe-`, `start-`, `end-`). Physical `left`/`right` is **forbidden**.
 
 ### Keeping Documentation Up to Date
@@ -381,6 +387,8 @@ server.ts            ← types.ts, config.ts, context.ts, orchestrator.ts, sessi
 ### Graceful Shutdown
 
 `SIGINT`/`SIGTERM` → interrupt active queries → commit current state → remove worktree → close WebSocket connections → exit.
+
+`npm run dev-model-*` runs the server under `node --watch`, which restarts it with a `SIGTERM` whenever a file it imported changes: editing a source file during a meeting ends the meeting gracefully (it can be resumed).
 
 ### No Memory — Use Git-Tracked Docs Instead
 

@@ -9,8 +9,7 @@
  *   but batch cleanup in afterAll.
  */
 
-import { describe, test, expect, beforeAll, beforeEach, afterEach, afterAll } from "bun:test";
-import { $ } from "bun";
+import { describe, test, expect, beforeAll, beforeEach, afterEach, afterAll } from "../test-kit.ts";
 import { join } from "path";
 import { mkdtemp, mkdir, writeFile, readFile, rm } from "fs/promises";
 import { tmpdir } from "os";
@@ -28,12 +27,13 @@ import {
   setEventHandlers,
   setDirectorTimeout,
   resetOrchestrator,
-} from "../../src/orchestrator";
-import type { OrchestratorEvents } from "../../src/orchestrator";
-import { resetStubState } from "../../src/stub-sdk";
-import { resetAgentCache } from "../../src/session-manager";
-import { PrivateAssessment, Phase, meetingIdToBranchName, MeetingId } from "../../src/types";
-import { generateMeetingId, setPerushGitRootForTests } from "../../src/meetings-db.ts";
+} from "../../src/orchestrator.ts";
+import type { OrchestratorEvents } from "../../src/orchestrator.ts";
+import { resetStubState } from "../../src/stub-sdk.ts";
+import { resetAgentCache } from "../../src/session-manager.ts";
+import { type PrivateAssessment, type Phase, meetingIdToBranchName, type MeetingId } from "../../src/types.ts";
+import { generateMeetingId, git, setPerushGitRootForTests } from "../../src/meetings-db.ts";
+import { DELIBERATION_DIR } from "../../src/config.ts";
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -76,10 +76,10 @@ function createEventCollector(): { events: CollectedEvents; handlers: Partial<Or
 
 async function cleanupMeeting(meetingId: MeetingId): Promise<void> {
   try {
-    const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
+    const gitRoot = (await git(DELIBERATION_DIR, "rev-parse", "--show-toplevel")).trim();
     const worktreePath = join(gitRoot, "_DELIBERATION-ROOM/.meetings", meetingId);
-    try { await $`git worktree remove --force ${worktreePath}`.quiet(); } catch {}
-    try { await $`git branch -D ${meetingIdToBranchName(meetingId)}`.quiet(); } catch {}
+    try { await git(DELIBERATION_DIR, "worktree", "remove", "--force", worktreePath); } catch {}
+    try { await git(DELIBERATION_DIR, "branch", "-D", meetingIdToBranchName(meetingId)); } catch {}
   } catch {}
 }
 
@@ -391,14 +391,7 @@ describe("perush files on main", () => {
   const AGENT_FILE = "בלשנות/ניתוחים-לשוניים/עד.rtl.md";
   let repo: string;
 
-  async function repoGit(...args: string[]): Promise<string> {
-    const proc = Bun.spawn(["git", "-C", repo, ...args], { stdout: "pipe", stderr: "pipe" });
-    const [stdout, stderr, exitCode] = await Promise.all([
-      new Response(proc.stdout).text(), new Response(proc.stderr).text(), proc.exited,
-    ]);
-    if (exitCode !== 0) throw new Error(`git ${args.join(" ")}: ${stderr}`);
-    return stdout;
-  }
+  const repoGit = (...args: string[]) => git(repo, ...args);
   async function write(file: string, content: string): Promise<void> {
     await mkdir(join(repo, file, ".."), { recursive: true });
     await writeFile(join(repo, file), content);

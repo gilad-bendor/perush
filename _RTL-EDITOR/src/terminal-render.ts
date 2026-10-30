@@ -10,9 +10,8 @@
 //
 // We replay through @xterm/headless - the same VT parser xterm.js uses in the browser.
 
-// A default import rather than `{ Terminal }`: the package is CommonJS, and Node (unlike Bun)
-// cannot pick named exports out of it - scripts/name-claude-sessions.js imports this module
-// under Node.
+// A default import rather than `{ Terminal }`: the package is CommonJS, and Node cannot pick
+// named exports out of it.
 import xterm from "@xterm/headless";
 const { Terminal } = xterm;
 

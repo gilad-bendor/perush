@@ -10,9 +10,9 @@
 // it leads into; a speech ending its row; each question starting a row, with its answer where they fit. What
 // none of these shows - a tercet, a few pairs - is named below by the words of the line.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
-import { lineSimilarity } from "../../layout/numbered-lines";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
+import { lineSimilarity } from "../../layout/numbered-lines.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "f0e16bbc8a9bf41ec38680f331e27bf7";

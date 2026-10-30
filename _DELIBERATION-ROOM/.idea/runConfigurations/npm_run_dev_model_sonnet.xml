@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="bun run dev-model-default" type="ShConfigurationType">
-    <option name="SCRIPT_TEXT" value="bun install &amp;&amp; bun run dev-model-default" />
+  <configuration default="false" name="npm run dev-model-sonnet" type="ShConfigurationType">
+    <option name="SCRIPT_TEXT" value="npm install &amp;&amp; npm run dev-model-sonnet" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="" />
     <option name="SCRIPT_OPTIONS" value="" />

@@ -11,8 +11,8 @@
 // - A line ending with no pause is inside its clause (the Hebrew keeps the verb last), as in Eshnunna.
 // The exceptions below are parallel pairs no punctuation shows.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "ca9d521d571b943444b9f0f0b843de37";

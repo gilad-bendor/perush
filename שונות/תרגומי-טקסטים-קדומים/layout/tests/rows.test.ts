@@ -1,5 +1,5 @@
-import { describe, expect, test } from "bun:test";
-import { breakPenalty, endsSentence, proposeRows } from "../rows";
+import { describe, expect, test } from "../../../../_RTL-EDITOR/tests/test-kit.ts";
+import { breakPenalty, endsSentence, proposeRows } from "../rows.ts";
 
 describe("proposing rows", () => {
     const line = (text: string, width = 10) => ({ key: text, width, text });

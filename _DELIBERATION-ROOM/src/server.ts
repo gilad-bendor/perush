@@ -1,23 +1,27 @@
 /**
- * server.ts — Bun web server (HTTP + WebSocket), main entry point.
+ * server.ts — The web server (HTTP + WebSocket), main entry point.
  *
  * Serves static frontend files, REST API for meeting management,
- * and WebSocket for real-time deliberation communication.
+ * and WebSocket (the `ws` package, at /ws) for real-time deliberation communication.
  *
- * Imports from: orchestrator.ts, types.ts, config.ts, context.ts
+ * Imports from: orchestrator.ts, types.ts, config.ts, context.ts, http-server.ts
  */
 
-import { runWithContext } from "./context";
+import { runWithContext } from "./context.ts";
 import { join, extname, resolve } from "path";
 import { readFile, stat } from "fs/promises";
-import { SERVER_PORT, DELIBERATION_DIR, PERUSH_TRACKED_PATHS, PERUSH_TRACKED_PATHS_SOURCE } from "./config";
+import { realpathSync } from "node:fs";
+import type { Server } from "node:http";
+import { WebSocketServer } from "ws";
+import { serve, portOf } from "./http-server.ts";
+import { SERVER_PORT, DELIBERATION_DIR, PERUSH_TRACKED_PATHS, PERUSH_TRACKED_PATHS_SOURCE } from "./config.ts";
 import {
   ClientMessageSchema,
   type MeetingId,
   type PerushFileDecision,
   type ServerMessage,
   type SpeakerId,
-} from "./types";
+} from "./types.ts";
 import {
   setEventHandlers,
   startMeeting,
@@ -34,11 +38,11 @@ import {
   getPhase,
   getActiveSpeaker,
   cancelHumanTurn,
-} from "./orchestrator";
+} from "./orchestrator.ts";
 import {
   discoverAgents,
   getAgentDefinitions,
-} from "./session-manager";
+} from "./session-manager.ts";
 import {
   listMeetings,
   readEndedMeeting,
@@ -109,12 +113,12 @@ export async function serveStaticFile(
 // WebSocket connection tracking
 // ---------------------------------------------------------------------------
 
-const connectedClients = new Set<ServerWebSocket<unknown>>();
+const connectedClients = new Set<ClientSocket>();
 
-type ServerWebSocket<T> = {
-  send(data: string | ArrayBuffer): void;
+/** What the server needs of a client's WebSocket (a `ws` WebSocket - or a test's fake) */
+type ClientSocket = {
+  send(data: string): void;
   close(): void;
-  data: T;
 };
 
 // ---------------------------------------------------------------------------
@@ -171,7 +175,7 @@ function buildSyncBody(fields: {
  * Returns false for any other error.
  */
 function askAboutUncommittedPerush(
-  ws: ServerWebSocket<unknown>,
+  ws: ClientSocket,
   err: unknown,
   context: "start" | "resume",
   decisions: Record<string, PerushFileDecision> | undefined,
@@ -191,7 +195,7 @@ function askAboutUncommittedPerush(
 }
 
 /** Send a message to a single client. */
-function sendTo(ws: ServerWebSocket<unknown>, message: ServerMessageBody): void {
+function sendTo(ws: ClientSocket, message: ServerMessageBody): void {
   const messageId = nextServerMessageId();
   const withId = { messageId, ...message };
   logInfo("server", `WS >-> (sendTo) ${message.type} (${messageId})\n${prettyLog(withId).replace(/^/gm, '    ')}`);
@@ -413,7 +417,7 @@ async function stopDeliberationLoop(): Promise<void> {
 // WebSocket message handler
 // ---------------------------------------------------------------------------
 
-async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promise<void> {
+async function handleWsMessage(ws: ClientSocket, raw: string): Promise<void> {
   let parsed: unknown;
   try {
     parsed = JSON.parse(raw);
@@ -616,14 +620,15 @@ async function handleWsMessage(ws: ServerWebSocket<unknown>, raw: string): Promi
 
 const PUBLIC_DIR = join(DELIBERATION_DIR, "public");
 
-async function handleHttpRequest(req: Request, server: any): Promise<Response> {
+/** The path the browser opens its WebSocket on (public/src/app.js) */
+const WS_PATH = "/ws";
+
+async function handleHttpRequest(req: Request): Promise<Response> {
   const url = new URL(req.url);
   const pathname = url.pathname;
 
-  // WebSocket upgrade
-  if (pathname === "/ws") {
-    const success = server.upgrade(req);
-    if (success) return new Response(null, { status: 101 });
+  // A WebSocket upgrade never gets here (see createServer) - a plain request for the WebSocket's path does
+  if (pathname === WS_PATH) {
     return new Response("WebSocket upgrade failed", { status: 400 });
   }
 
@@ -675,41 +680,70 @@ async function handleHttpRequest(req: Request, server: any): Promise<Response> {
 // Server startup
 // ---------------------------------------------------------------------------
 
-/** Start the Bun web server. Returns the server instance. */
-export async function createServer(port: number = SERVER_PORT): Promise<ReturnType<typeof Bun.serve>> {
+/** A running server: the port it listens on, and how to stop it */
+export interface RunningServer {
+  port: number;
+  /** Closes every WebSocket and the HTTP server */
+  stop(): Promise<void>;
+}
+
+/** Start the web server: HTTP (node:http) + the WebSocket on WS_PATH (`ws`). */
+export async function createServer(port: number = SERVER_PORT): Promise<RunningServer> {
   // Discover agents at startup
   await discoverAgents();
 
   // Wire events
   setupOrchestratorEvents();
 
-  return Bun.serve({
-    port,
-    fetch(req, server) {
-      return handleHttpRequest(req, server);
-    },
-    websocket: {
-      open(ws) {
-        connectedClients.add(ws as any);
-        logInfo("server", `WS client connected (total: ${connectedClients.size})`);
-      },
-      message(ws, message) {
-        const raw = typeof message === "string" ? message : message.toString();
-        handleWsMessage(ws as any, raw);
-      },
-      close(ws) {
-        connectedClients.delete(ws as any);
+  const server: Server = await serve({ port, fetch: handleHttpRequest });
+
+  // The WebSocket shares the HTTP server's port: a request to upgrade on WS_PATH becomes a client
+  const wss = new WebSocketServer({ noServer: true });
+  server.on("upgrade", (req, socket, head) => {
+    const { pathname } = new URL(req.url ?? "/", "http://localhost");
+    if (pathname !== WS_PATH) {
+      socket.end("HTTP/1.1 400 Bad Request\r\n\r\n");
+      return;
+    }
+    wss.handleUpgrade(req, socket, head, (ws) => {
+      connectedClients.add(ws);
+      logInfo("server", `WS client connected (total: ${connectedClients.size})`);
+      ws.on("message", (data) => {
+        handleWsMessage(ws, data.toString());
+      });
+      ws.on("close", () => {
+        connectedClients.delete(ws);
         logInfo("server", `WS client disconnected (total: ${connectedClients.size})`);
-      },
-    },
+      });
+      ws.on("error", (err) => logError("server", "WS client error", err));
+    });
   });
+
+  return {
+    port: portOf(server),
+    async stop() {
+      // Each client is closed with a close frame - and dropped if it hasn't answered within a second
+      const open = [...wss.clients].filter(ws => ws.readyState !== ws.CLOSED);
+      await Promise.race([
+        Promise.all(open.map(ws => new Promise<void>(resolve => {
+          ws.once("close", () => resolve());
+          ws.close(1001, "Server shutting down");
+        }))),
+        new Promise<void>(resolve => setTimeout(resolve, 1000).unref()),
+      ]);
+      for (const ws of wss.clients) ws.terminate();
+      wss.close();
+      server.closeAllConnections();
+      await new Promise<void>(resolve => server.close(() => resolve()));
+    },
+  };
 }
 
 // ---------------------------------------------------------------------------
 // Graceful shutdown
 // ---------------------------------------------------------------------------
 
-async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<void> {
+async function gracefulShutdown(server: RunningServer): Promise<void> {
   logInfo("server", `graceful shutdown initiated (${connectedClients.size} client(s), meeting=${getMeeting()?.meetingId ?? "none"})`);
 
   // Notify clients
@@ -734,7 +768,7 @@ async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<v
   connectedClients.clear();
 
   // Stop the server
-  server.stop();
+  await server.stop();
 
   logInfo("server", `shutdown complete`);
   process.exit(0);
@@ -744,7 +778,17 @@ async function gracefulShutdown(server: ReturnType<typeof Bun.serve>): Promise<v
 // Main entry point (when run directly)
 // ---------------------------------------------------------------------------
 
-if (import.meta.main) {
+/** Whether this file is the one node was asked to run (`node src/server.ts`) - not imported by a test */
+function isMainModule(): boolean {
+  if (!process.argv[1]) return false;
+  try {
+    return realpathSync(process.argv[1]) === import.meta.filename;
+  } catch {
+    return false;
+  }
+}
+
+if (isMainModule()) {
   const server = await createServer();
   logInfo("server", `Deliberation Room server running on http://localhost:${server.port}`);
 

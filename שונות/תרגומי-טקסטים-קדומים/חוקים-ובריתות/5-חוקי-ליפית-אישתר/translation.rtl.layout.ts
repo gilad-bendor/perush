@@ -10,8 +10,8 @@
 // a sentence or a couplet ends. No `repeatedPassages`: it changes nothing here but §32, where it copied §31's
 // break after "אחרי אשר האב מת," - which in §31 ends a full row, and in §32 opens the apodosis.
 
-import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema";
-import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout";
+import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
+import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
 const SOURCE_MD5 = "386c3b168e6907dab2f044375d7a9539";

@@ -5,34 +5,38 @@
  * and verifies the full deliberation cycle: assess → select → speak → UI update.
  */
 
-import { describe, test, expect, beforeAll, afterAll } from "bun:test";
+import { describe, test, expect, beforeAll, afterAll } from "../test-kit.ts";
 import { chromium, type Browser, type Page } from "playwright";
+import { spawn, spawnSync, type ChildProcess } from "node:child_process";
+import { once } from "node:events";
 
 let browser: Browser;
 let page: Page;
-let serverProc: ReturnType<typeof Bun.spawn>;
+let serverProc: ChildProcess;
+let serverStderr = "";
 const PORT = 4100; // Matches SERVER_PORT in config.ts
 
 beforeAll(async () => {
   // Kill any orphan server on the test port from a previous run
   try {
-    Bun.spawnSync(["bash", "-c", `lsof -ti:${PORT} | xargs kill -9 2>/dev/null`]);
+    spawnSync("bash", ["-c", `lsof -ti:${PORT} | xargs kill -9 2>/dev/null`]);
   } catch {}
 
   // Start the real server with stub SDK on a test port
-  serverProc = Bun.spawn(
-    ["bun", "run", "src/server.ts"],
+  serverProc = spawn(
+    process.execPath,
+    ["src/server.ts"],
     {
       env: {
         ...process.env,
         NODE_ENV: "test",  // Activates USE_STUB_SDK
         // Override port via a simple env var (we'll need to handle this)
       },
-      stdout: "pipe",
-      stderr: "pipe",
-      cwd: import.meta.dir + "/../../",
+      stdio: ["ignore", "ignore", "pipe"],
+      cwd: import.meta.dirname + "/../../",
     }
   );
+  serverProc.stderr!.on("data", (chunk: Buffer) => { serverStderr += chunk.toString(); });
 
   // Wait for server to be ready
   let ready = false;
@@ -48,10 +52,7 @@ beforeAll(async () => {
   }
 
   if (!ready) {
-    const stderr = serverProc.stderr instanceof ReadableStream
-      ? await new Response(serverProc.stderr).text()
-      : String(serverProc.stderr ?? "");
-    throw new Error(`Server failed to start within 15s. stderr: ${stderr}`);
+    throw new Error(`Server failed to start within 15s. stderr: ${serverStderr}`);
   }
 
   browser = await chromium.launch({ headless: true });
@@ -60,9 +61,10 @@ beforeAll(async () => {
 afterAll(async () => {
   await page?.close();
   await browser?.close();
-  serverProc?.kill();
   // Wait for process to exit
-  try { await serverProc?.exited; } catch {}
+  const exited = serverProc && serverProc.exitCode === null ? once(serverProc, "exit") : undefined;
+  serverProc?.kill();
+  try { await exited; } catch {}
 });
 
 describe("full integration (stub SDK)", () => {

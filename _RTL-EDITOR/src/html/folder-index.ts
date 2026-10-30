@@ -8,7 +8,7 @@
 
 import { posix } from "path";
 import MarkdownIt from "markdown-it";
-import { PAGE_STYLE, readablePath, renderBreadcrumbs } from "./md-to-html";
+import { PAGE_STYLE, readablePath, renderBreadcrumbs } from "./md-to-html.ts";
 
 /** The file name every folder's index takes. */
 export const FOLDER_INDEX_NAME = "index.html";
