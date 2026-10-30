@@ -36,7 +36,7 @@
 
 ### 5
 `n=at ḪUL-uwaš UN{MEŠ}-aš ḫarpanall[iyaš peški]`
-> ואותה – לאנשים הרעים, ליריבים – [תן]!
+> ואותה – לאנשים הרעים, ליריבים – [תן]!"
 - **פירוק:** `n=at` – nu + =at "it", acc. ("ואותה"); `ḪUL-uwaš` – idālawa- (ḪUL) "evil", d.-l. pl. ("הרעים"); `UN{MEŠ}-aš` – "people", d.-l. pl. ("לאנשים"); `ḫarpanall[iyaš` – "rivals" (partly restored; "ליריבים"); `peški]` – pai- "give", iterative imper. 2sg (restored; "[תן]").
 - **נוסחים:** זהה ל־AM 22 / 67 (שם *idālauwaš* בהברות, כאן ḪUL בסימן; אותן מילים, אותה עברית).
 - **תרגומים:** Christiansen (HPM): "Und [gib] sie den bösen Menschen, den Feind[en]!“"
@@ -84,9 +84,9 @@
 
 ### 11
 `ḪUL-uwašš=a UN{MEŠ}-aš ANZELLU ḫurkilaza paprannaza mulatnaza [_] NÍ.TE LUGAL QĀTAMMA parkuešdu`
-> כך גם גוף המלך – מן האִסּוּר של האנשים הרעים, מן התועבה, מן הטומאה, מן המוּלָאתַר – יטהר כך!"
-- **פירוק:** `ḪUL-uwašš=a` – idālawa- (ḪUL) "evil", gen. pl. + =a "also" ("גם … הרעים"); `UN{MEŠ}-aš` – "people", gen. pl. ("של האנשים"); `ANZELLU` – ANZELLU (Akk. *anzillu*) "taboo, abomination", abl. ("מן האִסּוּר", R1a); `ḫurkilaza` – ḫurkil "abomination", abl. ("מן התועבה", F7); `paprannaza` – papratar "impurity", abl. ("מן הטומאה"); `mulatnaza` – mulātar, abl. ("מן המוּלָאתַר"); `[_]` – a lost sign (not translated); `NÍ.TE LUGAL` – NÍ.TE "body" + LUGAL "king" ("גוף המלך"); `QĀTAMMA` – "so" ("כך"); `parkuešdu` – parkuešš- "become pure", imper. 3sg ("יטהר").
-- **נוסחים:** מקביל ל־AM 30 / 76 (`כך את החולי הרע של האדם הזה – יטהרו הָאֵלִים מן הגוף הלאה כך!"`): כאן "גוף המלך" הוא הנושא, והפועל עומד ("יטהר"), ובמקום "החולי הרע" – רשימה של ארבע מילות טומאה ואיסור. C שומר חלק מן הרשימה.
+> כך גם גוף המלך – מן האִסּוּר של האנשים הרעים, מן התועבה, מן הטומאה, מן המוּלָאתַר – יטהר!"
+- **פירוק:** `ḪUL-uwašš=a` – idālawa- (ḪUL) "evil", gen. pl. + =a "also" ("גם … הרעים"); `UN{MEŠ}-aš` – "people", gen. pl. ("של האנשים"); `ANZELLU` – ANZELLU (Akk. *anzillu*) "taboo, abomination", abl. ("מן האִסּוּר", R1a); `ḫurkilaza` – ḫurkil "abomination", abl. ("מן התועבה", F7); `paprannaza` – papratar "impurity", abl. ("מן הטומאה"); `mulatnaza` – mulātar, abl. ("מן המוּלָאתַר"); `[_]` – a lost sign (not translated); `NÍ.TE LUGAL` – NÍ.TE "body" + LUGAL "king" ("גוף המלך"); `QĀTAMMA` – "so" ("כך", at the head, as AM 76); `parkuešdu` – parkuešš- "become pure", imper. 3sg ("יטהר").
+- **נוסחים:** מקביל ל־AM 30 / 76 (`כך את החולי הרע של האדם הזה – יטהרו הָאֵלִים מן הגוף הלאה!"`): כאן "גוף המלך" הוא הנושא, והפועל עומד ("יטהר"), ובמקום "החולי הרע" – רשימה של ארבע מילות טומאה ואיסור. C שומר חלק מן הרשימה.
 - **תרגומים:** Christiansen (HPM): "so möge von Tabubruch, von sexueller Greuel, von Unreinheit, von mulātar böser Menschen der Körper des Königs ebenso rein sein!“" – "Tabubruch" ל־ANZELLU, "sexuelle Greuel" ל־*ḫurkil*; אנו `אִסּוּר`, `תועבה` (R1a, F7).
 - **הקבלה:** [equivalent] `תּוֹעֵבָה הִוא` (ויקרא יח:כב) – *ḫurkil* היא בחוקים החתיים המילה לעבירות המין האסורות, כמו `תּוֹעֵבָה` בתורה; ו־`מִטֻּמְאֹת בְּנֵי יִשְׂרָאֵל` (ויקרא טז:טז). [divergence] כאן התועבה והטומאה אינן מעשים של המלך, אלא דבר שבא "מן האנשים הרעים" – מן הכישוף של האויבים – ודבק בגופו, ויש לטהר אותו ממנו כמו בגד מלוכלך.
 - **הערות:** ארבע מילים לדבר אחד: *ANZELLU* (באכדית "דבר אסור", מה שהאל מתעב), *ḫurkil* (התועבה של החוקים), *papratar* (הטומאה), *mulātar* (לוּוִית). הנוסח השני מתרגם את "הרעה" של הנוסח הראשון לשפה של טומאה ודין. *ANZELLU* `אִסּוּר` ו־*ḫurkil* `תועבה` – שתי עבריות לשתי המילים שעומדות כאן זו לצד זו.
@@ -142,16 +142,16 @@
 
 ### 18
 `EGIR=ŠU=kan {MUNUS}ŠU.GI NA[GGA tepu] {SÍG}ištaggai anda ḫ[ūlaliyezzi]`
-> ואחריו – הזקנה: [מעט] בְּ[דִיל] – במיתר כו[רכת],
-- **פירוק:** `EGIR=ŠU=kan` – "after it" ("ואחריו"); `{MUNUS}ŠU.GI` – MUNUS ŠU.GI "old woman", nom. ("הזקנה"); `NA[GGA` – "tin" (partly restored; "בְּ[דִיל]"); `tepu]` – "a little" (restored; "[מעט]"); `{SÍG}ištaggai` – "bowstring", d.-l. ("במיתר"); `anda` – "in" (in "ב־"); `ḫ[ūlaliyezzi]` – ḫulaliya- "wrap", pres. 3sg (partly restored; "כו[רכת]").
+> ואחריו – הזקנה: [מעט] בְּ[דִיל] – במיתר [כורכת],
+- **פירוק:** `EGIR=ŠU=kan` – "after it" ("ואחריו"); `{MUNUS}ŠU.GI` – MUNUS ŠU.GI "old woman", nom. ("הזקנה"); `NA[GGA` – "tin" (partly restored; "בְּ[דִיל]"); `tepu]` – "a little" (restored; "[מעט]"); `{SÍG}ištaggai` – "bowstring", d.-l. ("במיתר"); `anda` – "in" (in "ב־"); `ḫ[ūlaliyezzi]` – ḫulaliya- "wrap", pres. 3sg (the stem restored but its first sign; "[כורכת]").
 - **נוסחים:** מקביל ל־AM 34 / 80 (`ומעט בְּדִיל – במיתר כורכת,`), עם הנושא במפורש: "הזקנה".
 - **תרגומים:** Christiansen (HPM): "Anschließend w[ickelt] die Beschwörerin in eine Bogensehne [ein wenig Zi]nn hinein." – "die Beschwörerin" ל־MUNUS ŠU.GI; אנו `הזקנה` (המילולי).
 - **הערות:** כאן בלבד נזכר בשמו מי שעושה את הטקס: *{MUNUS}ŠU.GI* "האשה הזקנה" – תואר המקצוע של המומחיות הטקסיות. זו אַמְבַּזִּי.
 
 ### 19
 `n=at LUGAL ZAG-ni ŠU=[ŠU GÌR=ŠU] anda ḫamanzi`
-> ואותו – אל המלך, לימין, אל י[דו ואל רגלו] – קושרת.
-- **פירוק:** `n=at` – nu + =at "it" ("ואותו"); `LUGAL` – "king" ("אל המלך"); `ZAG-ni` – "right" ("לימין"); `ŠU=[ŠU` – "his hand" (partly restored; "אל י[דו]"); `GÌR=ŠU]` – "his foot" (restored; "[ואל רגלו]"); `anda` – "on" (in "אל"); `ḫamanzi` – ḫamank- "tie", pres. 3sg ("קושרת").
+> ואותו – אל המלך, לימין, אל יד[ו ואל רגלו] – קושרת.
+- **פירוק:** `n=at` – nu + =at "it" ("ואותו"); `LUGAL` – "king" ("אל המלך"); `ZAG-ni` – "right" ("לימין"); `ŠU=[ŠU` – "his hand" (ŠU preserved, the suffix restored; "אל יד[ו]"); `GÌR=ŠU]` – "his foot" (restored; "[ואל רגלו]"); `anda` – "on" (in "אל"); `ḫamanzi` – ḫamank- "tie", pres. 3sg ("קושרת").
 - **נוסחים:** מקביל ל־AM 35 / 81 (`ואותו – אל האדונים, לימין, אל ידו ואל רגלו – מפנה.`): כאן "אל המלך", והפועל *ḫamank-* "קושרת" במקום *nai-* "מפנה".
 - **תרגומים:** Christiansen (HPM): "Man bindet es dem König rechts an [seine] Hände [und Füße.]" – "Man bindet" (סתמי); אנו `קושרת` (היא).
 

@@ -197,8 +197,8 @@
 
 ### 25
 `nu=za=kan DINGIR-LUM {D}IM=wa KUR=KA andan naišḫut`
-> ואתה, הָאֵל, אֵל הַסְּעָרָה – אֶל ארצך פְּנֵה פנימה!
-- **פירוק:** `nu=za=kan` – nu "and" + =za + =kan ("ו־"); `DINGIR-LUM` – "god", voc. ("ואתה, הָאֵל"); `{D}IM=wa` – IM "the Storm-god" + =wa(r) ("אֵל הַסְּעָרָה"); `KUR=KA` – KUR "land" + =KA (Akk.) "your" ("אֶל ארצך"); `andan` – andan "into" ("פנימה"); `naišḫut` – nai- "turn", imper. 2sg mp ("פְּנֵה").
+> ו(אתה), הָאֵל, אֵל הַסְּעָרָה – אֶל ארצך פְּנֵה פנימה!
+- **פירוק:** `nu=za=kan` – nu "and" + =za + =kan ("ו־"); `DINGIR-LUM` – "god", voc. ("(אתה), הָאֵל": no *zik* in the text); `{D}IM=wa` – IM "the Storm-god" + =wa(r) ("אֵל הַסְּעָרָה"); `KUR=KA` – KUR "land" + =KA (Akk.) "your" ("אֶל ארצך"); `andan` – andan "into" ("פנימה"); `naišḫut` – nai- "turn", imper. 2sg mp ("פְּנֵה").
 - **נוסחים:** B `INA KUR-KA` ("אל ארצך", במפורש).
 - **תרגומים:** Görke (HPM): "Gottheit, Wettergott, wende dich deinem Land zu!" – "Gottheit, Wettergott" – כמונו: אותו אֵל.
 - **הערות:** האֵל הזר נקרא כאן בשם: "אֵל הסערה" – כנראה אֵל הסערה של ארץ האויב, ולא תַּרְחוּנָה של חַתִּי. לכל ארץ אֵל סערה משלה, והוא שולח מגפה על אויביו. "אל ארצך פנה": לך הביתה.

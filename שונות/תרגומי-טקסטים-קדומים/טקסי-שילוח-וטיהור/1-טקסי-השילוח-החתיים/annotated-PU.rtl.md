@@ -8,8 +8,8 @@
 
 ### 1
 `[U]MMA Puliša [LÚ {URU} …(?) ]`
-> כה (אומר) פּוּלִישָׁה, [איש העיר …(?)]:
-- **פירוק:** `[U]MMA` – UMMA (Akkadogram) "thus" (the first sign restored; "כה", F10); `Puliša` – Puliša, personal name ("פּוּלִישָׁה"); `[LÚ {URU} …(?)]` – "man of the city …" (restored; "[איש העיר …(?)]").
+> כה (אומר) פּוּלִישָׁה, [איש …(?)]:
+- **פירוק:** `[U]MMA` – UMMA (Akkadogram) "thus" (the first sign restored; "כה", F10); `Puliša` – Puliša, personal name ("פּוּלִישָׁה"); `[LÚ {URU} …(?)]` – "man of (the city) …" (restored; the determinative URU not translated; "[איש …(?)]").
 - **תרגומים:** Collins (HPM): "According to Pulisa, [man of … ]"
 - **הערות:** מוצאו של פּוּלִישָׁה אבד בשבר. הטקס כולו נוגע למלך ולצבאו: מגפה שהמלך הביא עמו מן המלחמה.
 
@@ -210,8 +210,8 @@
 
 ### 28
 `EGIR-anta=ma 1 GU4.MAḪ 1 UD[U.ÁŠ.MUNUS.GÀR-ya ūnnanzi]`
-> ואילו אחר כך – פר אחד, [וגם כבשה] אח[ת – נוהגים];
-- **פירוק:** `EGIR-anta=ma` – EGIR-anda "afterwards" + =ma ("ואילו אחר כך"); `1 GU4.MAḪ` – GU₄.MAḪ "bull" ("פר אחד"); `1 UD[U.ÁŠ.MUNUS.GÀR-ya` – UDU.ÁŠ.MUNUS.GÀR "ewe" + =ya (mostly restored; "[וגם כבשה] אח[ת]"); `ūnnanzi]` – unna- "drive (hither)", pres. 3pl (restored; "[נוהגים]").
+> ואילו אחר כך – פר אחד, [וגם כבשה] אחת – [נוהגים];
+- **פירוק:** `EGIR-anta=ma` – EGIR-anda "afterwards" + =ma ("ואילו אחר כך"); `1 GU4.MAḪ` – GU₄.MAḪ "bull" ("פר אחד"); `1 UD[U.ÁŠ.MUNUS.GÀR-ya` – UDU.ÁŠ.MUNUS.GÀR "ewe" + =ya (the number preserved, the noun mostly restored; "[וגם כבשה] אחת"); `ūnnanzi]` – unna- "drive (hither)", pres. 3pl (restored; "[נוהגים]").
 - **תרגומים:** Collins (HPM): "Thereafter, [they drive in] one bull [and] one e[we]"
 - **הערות:** אחרי הזוג האנושי – זוג של בהמות: פר לאֵל וכבשה לאֵלָה.
 
@@ -265,14 +265,14 @@
 
 ### 36
 `[ANA LUGAL]=ya=wa NÍ.TE=ŠU EN{MEŠ} E[RÍN{M]}EŠ [ANŠ]E.KUR.RA{Ḫ[}I.A] [ŪL(?)] IDI`
-> [וגם המלך] – את גופו, את האדונים, את אנשי הצבא, את הסוסים – [אַל(?)] תדע!
-- **פירוק:** `[ANA LUGAL]=ya=wa` – ANA "to, of" + LUGAL "king" (restored) + =ya + =wa ("[וגם המלך]"); `NÍ.TE=ŠU` – NÍ.TE "body" + =ŠU "his" ("את גופו"); `EN{MEŠ}` – EN "lord", pl. ("את האדונים"); `E[RÍN{M]}EŠ` – ÉRIN.MEŠ "troops" (partly restored; "את אנשי הצבא", HL1); `[ANŠ]E.KUR.RA{Ḫ[}I.A]` – "horses" (partly restored; "את הסוסים"); `[ŪL(?)]` – UL "not" (restored, uncertain; "[אַל(?)]"); `IDI` – IDI (Akk. *idû* "know"), here imper. 2sg "know, take notice" (parallel to *šak*, 37; *UL IDI* is elsewhere "I do not know") ("תדע").
-- **תרגומים:** Collins (HPM): "and [with respect to] the person of [the king], the lords, the inf[antry, and the cha]riot[ry do not] take notice," – "[do not] take notice" – *IDI* כציווי; כך גם אנו בתיקון (`[אַל(?)] תדע`). "chariotry" ל־ANŠE.KUR.RA; אנו `סוסים`.
+> [וגם המלך] – את גופו, את האדונים, את אנשי הצבא, את הסוסים – [לא(?)] תדע!
+- **פירוק:** `[ANA LUGAL]=ya=wa` – ANA "to, of" + LUGAL "king" (restored) + =ya + =wa ("[וגם המלך]"); `NÍ.TE=ŠU` – NÍ.TE "body" + =ŠU "his" ("את גופו"); `EN{MEŠ}` – EN "lord", pl. ("את האדונים"); `E[RÍN{M]}EŠ` – ÉRIN.MEŠ "troops" (partly restored; "את אנשי הצבא", HL1); `[ANŠ]E.KUR.RA{Ḫ[}I.A]` – "horses" (partly restored; "את הסוסים"); `[ŪL(?)]` – UL "not" (restored, uncertain; *UL*, not *lē*: "[לא(?)]" + future, not `אַל`); `IDI` – IDI (Akk. *idû* "know"), here imper. 2sg "know, take notice" (parallel to *šak*, 37; *UL IDI* is elsewhere "I do not know") ("תדע").
+- **תרגומים:** Collins (HPM): "and [with respect to] the person of [the king], the lords, the inf[antry, and the cha]riot[ry do not] take notice," – "[do not] take notice" – *IDI* כציווי; כך גם אנו – בגוף שני, אך בשלילת *UL* (`[לא(?)] תדע`, לא `אַל`: *lē* הוא לשון האיסור, ו־*UL* כאן משוחזר בספק). "chariotry" ל־ANŠE.KUR.RA; אנו `סוסים`.
 - **הערות:** משפט קשה. *IDI* הוא כאן כנראה ציווי ("דע!"), כמו *šak* "דע!" שבמשפט הבא: "את המלך, את גופו, את האדונים, את הצבא ואת הסוסים – [אל] תדע (אל תשים לב אליהם); ואותו (החולי) – דע אותו כשל ארץ האויב!" האֵל מתבקש להפנות את מבטו מן המלך וצבאו אל ארץ האויב. ה"לא" הוא השלמה של העורכת, בסימן שאלה; בלעדיו, *UL IDI* הוא בטקסטים אחרים "איני יודע".
 
 ### 37
 `n=at ŠA KUR {LÚ}KÚR šak`
-> ואותו – (כדבר) של ארץ האויב – דע!
+> ואותו – (כדבר) של ארץ האויב – דע!"
 - **פירוק:** `n=at` – nu "and" + =at "it", acc. ("ואותו"); `ŠA KUR {LÚ}KÚR` – "of the enemy land" ("של ארץ האויב"); `šak` – šakk- / šek- "know", imper. 2sg ("דע", IN `ידע`).
 - **תרגומים:** Collins (HPM): "(but) take notice of the land of the enemy!”" – "take notice" – כמונו (`דע`).
 
@@ -312,8 +312,8 @@
 
 ### 43
 `[nu=war=aš m]ān DINGIR-LIM LÚ nu=wa=tta [GU4.MAḪ unuwa]ndan ašuša[n]tan mālantan AD[DIN]`
-> [ואם] הוא אֵל זכר – לך [פר מקוש]ט, בעל־עגילים, *מקובל* נת[תי];
-- **פירוק:** `[nu=war=aš` – nu + =war + =aš "he", nom. (restored; "[ו־] … הוא"); `m]ān` – mān "if" ("[אם]"); `DINGIR-LIM LÚ` – "god, male" ("אֵל זכר"); `nu=wa=tta` – nu "then" + =wa + =tta "to you" ("לך"); `[GU4.MAḪ unuwa]ndan` – GU₄.MAḪ "bull" + unuwant- "adorned", acc. (mostly restored; "[פר מקוש]ט"); `ašuša[n]tan` – ašušant- "with earrings", acc. ("בעל־עגילים"); `mālantan` – mala- "approve", ptcp. acc. = "approved, acceptable" ("*מקובל*"); `AD[DIN]` – ADDIN (Akk. *nadānu*) "I gave", 1sg ("נת[תי]").
+> [ואם הוא] אֵל זכר – לך [פר מקוש]ט, בעל־עגילים, *מקובל* נת[תי];
+- **פירוק:** `[nu=war=aš` – nu + =war + =aš "he", nom. (restored; "[ו־ … הוא]"); `m]ān` – mān "if" ("[אם]"); `DINGIR-LIM LÚ` – "god, male" ("אֵל זכר"); `nu=wa=tta` – nu "then" + =wa + =tta "to you" ("לך"); `[GU4.MAḪ unuwa]ndan` – GU₄.MAḪ "bull" + unuwant- "adorned", acc. (mostly restored; "[פר מקוש]ט"); `ašuša[n]tan` – ašušant- "with earrings", acc. ("בעל־עגילים"); `mālantan` – mala- "approve", ptcp. acc. = "approved, acceptable" ("*מקובל*"); `AD[DIN]` – ADDIN (Akk. *nadānu*) "I gave", 1sg ("נת[תי]").
 - **נוסחים:** B שומר את *mān … unuwandan ašuša[n…]*; A: `-a-la-` על גבי מחיקה.
 - **תרגומים:** Collins (HPM): "if he is a male god, to you I have gi[ven] an [ado]rned, ringed, and powerful(?) bull." – "powerful(?)" ל־*mālant-*; אנו `*מקובל*` (מן *mala-* "להסכים, לאשר"). שתי ההצעות אינן ודאיות.
 - **הקבלה:** [absent] `לְרָצוֹן` של קרבנות התורה אינו כאן: *mālant-* הוא "מאושר, מוסכם" – פר שהאֵל יסכים לקבל, ולא מונח של כשרות קרבן. (`לרצון` שמור.)
@@ -321,7 +321,7 @@
 
 ### 44
 `[nu=wa=ká]n zik DINGIR-L[IM LÚ parā] galanganza ēš`
-> ואתה, אֵל [זכר] – הֱיֵה מפויס!
+> [ו]אתה, אֵל [זכר] – הֱיֵה מפויס!
 - **פירוק:** `[nu=wa=ká]n` – nu + =wa + =kan (restored; "[ו־]"); `zik` – zik "you" ("ואתה"); `DINGIR-L[IM` – "god" (partly restored; "אֵל"); `LÚ` – "male" (restored; "[זכר]"); `parā]` – parā (restored; not translated); `galanganza` – galank- "appease", ptcp. nom. sg. c. ("מפויס"); `ēš` – eš- "be", imper. 2sg ("הֱיֵה").
 - **נוסחים:** A ממקם את *[parā]* בשורה הבאה; B שומר `zik DINGIR-L[IM`.
 - **תרגומים:** Collins (HPM): "You, O male god, be pacified."
@@ -329,8 +329,8 @@
 
 ### 45
 `nu=w[a kī ÚŠ-an kā]š GU4.MAḪ EGIR-[pa] INA KUR {LÚ}KÚR pēdau`
-> ו[את המגפה הזאת – ה]פר הזה [בחזרה] אל ארץ האויב יישא!
-- **פירוק:** `nu=w[a` – nu + =wa ("ו־"); `kī ÚŠ-an` – "this plague", acc. (restored; "[את המגפה הזאת]"); `kā]š` – kāš "this one" ("הזה"); `GU4.MAḪ` – "bull" ("[ה]פר"); `EGIR-[pa]` – appa "back" (restored; "[בחזרה]"); `INA KUR {LÚ}KÚR` – "into the enemy land" ("אל ארץ האויב"); `pēdau` – peda- "carry (away)", imper. 3sg ("יישא").
+> ו[את המגפה הזאת –] הפר [הזה] בחזרה אל ארץ האויב יישא!
+- **פירוק:** `nu=w[a` – nu + =wa ("ו־"); `kī ÚŠ-an` – "this plague", acc. (restored; "[את המגפה הזאת]"); `kā]š` – kāš "this one" (mostly restored; "[הזה]"); `GU4.MAḪ` – "bull" ("הפר"); `EGIR-[pa]` – appa "back" (EGIR preserved, as 26; "בחזרה"); `INA KUR {LÚ}KÚR` – "into the enemy land" ("אל ארץ האויב"); `pēdau` – peda- "carry (away)", imper. 3sg ("יישא").
 - **נוסחים:** B שומר `GU4.MAḪ EGIR[-pa`.
 - **תרגומים:** Collins (HPM): "Let [th]is bull carry [this plague] back into the land of the enemy."
 - **הקבלה:** [equivalent] `וְנָשָׂא הַשָּׂעִיר עָלָיו אֶת כָּל עֲוֹנֹתָם` (ויקרא טז:כב) – כמו 26, ועכשיו הנושא בהמה, כבויקרא. [divergence] פר ולא שעיר, ו"בחזרה אל ארץ האויב" ולא "אל ארץ גזרה".
@@ -418,7 +418,7 @@
 
 ### 56
 `[ 1-EN SÍS]KUR ŠA {f}Ummaya [ … ]`
-> [טקס] אחד – של אוּמַּיָּה […]
-- **פירוק:** `[ 1-EN SÍS]KUR` – "one ritual" (partly restored; "[טקס] אחד"); `ŠA {f}Ummaya` – ŠA "of" + Ummaya, woman's name ("של אוּמַּיָּה"); `[ … ]` – lost ("[…]").
+> [טקס אחד] – של אוּמַּיָּה […]
+- **פירוק:** `[ 1-EN SÍS]KUR` – "one ritual" (partly restored, the number lost; "[טקס אחד]", as 55); `ŠA {f}Ummaya` – ŠA "of" + Ummaya, woman's name ("של אוּמַּיָּה"); `[ … ]` – lost ("[…]").
 - **תרגומים:** Collins (HPM): "[ … one ritu]al of Ummaya [ … ]"
 - **הערות:** אוּמַּיָּה היא אשה (*{f}*), מומחית טקסית, כמו אַמְבַּזִּי. הסופר אסף על לוח אחד שני טקסים: של איש ושל אשה – כמו שלוח אַשְׁחֶלָּה אסף שלושה (AS 99–107).

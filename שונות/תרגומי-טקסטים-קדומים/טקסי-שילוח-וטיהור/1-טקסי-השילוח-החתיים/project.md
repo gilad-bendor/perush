@@ -300,3 +300,59 @@ Lev 14:5; AM2 1, 11, 17 ↔ Lev 16:16 (`מִטֻּמְאֹת`), Lev 18:22 (`תּ
 
 **For the reviewers:** AM 225–228 is the old woman's own prayer (her house, her eya-tree, her freedom, her family), the ritual
 expert's "I" at its fullest; AM2 18 is the only place where she is named by her title. AM has no colophon proper: 260 `תַּם` only.
+
+### Review (a): fidelity
+Written 2026-10-30 by the fidelity reviewer. All 481 `>` lines read against their composites, the TLHdig/CHiL glosses and the HPM
+translation. The פירוק was changed with every line (its Hebrew in `("…")` = the line's). After the edits: `verify AS UH PU AM AM2
+--strict` 0 problems (one notice only: AM 101 / 189, justified in 189's note), `check_bible_quotes.py` 0, `selftest` 0. No new Bible
+verse quoted. Changed: AS 3 lines, UH 1, PU 8, AM 39, AM2 4 (55 lines).
+
+**Changes to formulas (every copy changed):**
+- **The god's vocative without *zik*:** AS 55 `ואתה, הָאֵל – כְּאֵל אכול ושתה!` → `ו(אתה), הָאֵל – כְּאֵל אכול ושתה!`; UH 25 `ואתה, הָאֵל,
+  אֵל הַסְּעָרָה …` → `ו(אתה), הָאֵל, …` – no *zik* in either composite (IN 19.21, which has *zik*, keeps `ואתה`). **The coordinator should
+  update R2's fixed string** (renderings.md line "the god's meal").
+- **The fuller's refrain "so may the gods purify":** AM 30, 76, 155, AM2 11 had `כך … כך!` – two `כך` for one *QĀTAMMA* (the opening
+  `כך` added). The trailing `כך` removed; *QĀTAMMA* = the opening `כך`, as in the extinguishing refrain (9, 57, 134, 210). AM 76
+  `כך את החולי הרע של האדם הזה – יטהרו הָאֵלִים מן הגוף הלאה!"`; 155 `כך גם לאלה – את החולי הרע – יטהרו מן הגוף!"`; AM2 11 `… –
+  יטהר!"`; AM 30 (brackets, below).
+
+**Line by line** (old → new; reason):
+- AS 54 `ל[ך, לָאֵל]` → `ל[ך?, לָאֵל]` (the edition's `t[uk(?)`). AS 55, UH 25: above. AS 63 `ואילו כאשר` → `ואילו [כאשר]` (*[maḫḫ]an*: stem
+  restored).
+- PU 1 `[איש העיר …(?)]` → `[איש …(?)]` (the determinative URU is not translated). PU 28 `[וגם כבשה] אח[ת – נוהגים]` → `[וגם כבשה] אחת –
+  [נוהגים]` (the number 1 preserved). PU 36 `[אַל(?)] תדע` → `[לא(?)] תדע` (*UL*, not *lē*; Collins's 2nd person kept). PU 37 `… – דע!` →
+  `… – דע!"` (the speech of 34 never closed; 42's quote mark had closed it). PU 43 `[ואם] הוא` → `[ואם הוא]` (*=aš* restored). PU 44
+  `ואתה` → `[ו]אתה` (*nu* restored). PU 45 `ו[את המגפה הזאת – ה]פר הזה [בחזרה]` → `ו[את המגפה הזאת –] הפר [הזה] בחזרה` (GU₄.MAḪ and
+  EGIR preserved, *kā]š* restored). PU 56 `[טקס] אחד` → `[טקס אחד]` (*1-EN* restored; as 55).
+- AM 13 `ו[לפני]הם` → `[ולפני]הם` (=*[a]*). AM 14 `[ואת כ]ל זה` → `[ואת כ]ל [זה]` (*kī* restored). AM 17 `ו[אילו` → `[ואילו`. AM 18
+  `מעלי[הם לוקחת הלאה]` → `מעליהם [לוקחת הלאה]` (=*šmaš* preserved). AM 22 `לאנשים [הר]עים` → `ל[אנשים הר]עים`; AM 67 `לאנשים` → `ל[אנשים]`
+  (UN restored). AM 27 `"[כשם ש]את זה – הכו[בסים …]` → `"כשם שאת זה – [הכובסים …]`; AM 73 `"[כשם ש]את בד־הפשתן הזה` → `"כשם שאת
+  בד־הפשתן [הזה]`; AM 152 `"[כשם שאת בד־הפשתן הזה]` → `"כשם ש[את בד־הפשתן הזה]` (*maḫḫan* is preserved in all three; ÁZLAG restored in
+  27, *kī* in 73). AM 30 `[כך את החולי … הזה – יטהרו … הלאה] כך!"` → `כך [את החולי הרע של] האדם [הזה –] יטהרו [הָאֵלִים מן הגוף הלאה]!"`
+  (*QĀTAMMA* and *parku[nuwandu]*'s stem preserved; the refrain above). AM 34 `ומעט` → `[ו]מעט`; AM 135 `ותבואה` → `[ו]תבואה`; AM 40
+  `ואותה` → `[ו]אותה`; AM 41 `ואת [העכבר]` → `[ואת העכבר]` (*[nu]* restored). AM 43 `לך!"` → `[לך]!"` (=*[tta]*). AM 44 `מפזרת` → `[מפזרת]`
+  (*š[uḫḫāi]*). AM 66 `מראשו, [מי]דיו, [מרגליו]` → `מראש[ו?], [מי]דיו?, [מרגליו?]` (the edition's three `?`). AM 113 `[אבן סַפִּיר, א]ֹדֶם` →
+  `[אבן סַפִּיר], אֹדֶם`; AM 252 `[א]ֹדֶם` → `אֹדֶם` (GUG preserved, only NA₄ restored). AM 119 `אומר לפניך` → `[אומר] לפני(ך)` (*[mem]ai*;
+  "you" not in the text). AM 122 `"[תַּרְפַּתַּשִּׁי], אשר סובב` → `[תַּרְפַּתַּשִּׁי], אשר [סובב]` (the quote opened and never closed – 123–125
+  are prescriptions, HPM has none; *w[eḫatta]*). AM 136 `[קשת אחת?]` → `קשת [אחת?]` (PAN preserved). AM 147 `[שנים ארוכות]` → `שנים
+  [ארוכות]` (MU preserved). AM 159 `מעמו` → `[מהם] עמו` (*katti=šši* "with him", not "from him"; [=šmaš] restored was untranslated). AM 174
+  `לָאֵ[לִים הזכרים?` → `לָאֵלִים? [הזכרים?` (DINGIR? preserved, its `?` kept). AM 175 `אשר [סובב לפני (האדם)]` → `אשר סובב [לפני] (האדם)`.
+  AM 176 `[לחם עבה] אחד` → `[לחם] עבה [אחד]`. AM 189 `הכב[ד – כ]ך` → `הכב[ד … – כ]ך` (the gap was silent). AM 206 `כל ז[ה על הפַּדַּנִי
+  שָׂ]מָה` → `כל זה [על הפַּדַּנִי] שָׂמָה`. AM 210 `החו[לי הרע שעל הא]דונים` → `החו[לי] הרע שעל [הא]דונים` (*idalu*, *šer* preserved). AM 211
+  `וגם [את] המי[תר]` → `[וגם את] המי[תר]` (=*a* restored). AM 221 `[ועלוות עצים]` → `[ו]עלוות [עצים]`. AM 222 `[… לָאֵלִים הזכרים של
+  תַּרְפַּתַּשִּׁי]` → `[…] – לָאֵלִים הזכרים [של תַּרְפַּתַּשִּׁי]` (DINGIR.LÚ.MEŠ preserved). AM 227 `[ואת החולי הר]ע` → `[ואת] החולי [הר]ע`
+  (*inan* preserved). AM 228 `(בחיים) החזק` → `בחיים החזק` (TI-an is written: not an addition). AM 238 `[את הכתף ה]ימנית` → `[ו]את הכתף
+  [הימנית …]` (ZAG.UDU preserved, ZAG-an and *nu* restored). AM 255 `"[תַּרְפַּתַּשִּׁי]` → `"[… תַּרְפַּתַּשִּׁי]` (the gap). AM 76, 155: the
+  refrain above. Notes adjusted: AM 159 נוסחים, AM 189 הערות, PU 36 תרגומים, AM2 11 נוסחים; פירוק of AM 100, 104 now quote the composite
+  without the brackets it lacks.
+- AM2 5 `[תן]!` → `[תן]!"` (the speech, whose opening is lost, ends here: 6 is a prescription; HPM closes it). AM2 11: the refrain. AM2 18
+  `כו[רכת]` → `[כורכת]` (*ḫ[ūlaliyezzi]*). AM2 19 `אל י[דו` → `אל יד[ו` (ŠU preserved).
+
+**Cruxes decided:** PU 36 (above: 2nd person kept, `לא`). AM 216–220: *UL* + present stays `לא` + participle (a statement, not HPM's
+"soll nicht"; a prohibition would be *lē*). AM 119 *peran*: `לפני(ך)`, "previously" noted in the פירוק. AM2 19 *ḫamanzi*: kept 3sg `קושרת`
+(ḫa-ma-an-zi = *ḫamank-zi* with the *k* unwritten, as 6 *ḫamakzi* without the nasal; HPM's "man bindet" is a 3pl reading – noted here).
+**Cruxes left, as marked:** AS 16 *kattan weḫattari* (`סובב למטה`, unmarked: the coordinator may add `?`), 32 LUGAL's case, 47, 56, 69,
+103; UH 13–14, 28, 32; PU 3/7, 21, 27/47 `(דברי) אֵלָה` (Collins "in case the deity is female"), 34, 38, 43; AM 5/53, 10, 12, 15, 27, 37 /
+39 *nai-* `הפנה` (HPM "winden"), 115, 191, 196, 228, 235, 248, 251, 257; AM2 15, 17 *arai-*. **For the coordinator:** AM 216 `בא` and
+218 `סובב` are masculine beside 219 `אומרת` – if the subject of 216–220 is Ambazzi (as 194 `היא באה בחזרה`), both become feminine; the
+subject is lost, so I left them. AM 157 *kattan* (said in Part 4 to be rendered) has no Hebrew (`אַל תיאבק בהם עוד!`): HPM "damit".

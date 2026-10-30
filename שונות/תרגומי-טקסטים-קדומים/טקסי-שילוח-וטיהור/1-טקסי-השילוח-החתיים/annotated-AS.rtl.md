@@ -436,16 +436,16 @@
 
 ### 54
 `kinuna=wa kāša t[uk(?) ANA DINGIR]-LIM zeiantaz namma IŠTU UZU NINDA KAŠ [ … ]-edani piyawēn`
-> ועתה – הנה, ל[ך, לָאֵל], מן המבושל, ועוד מן הבשר, הלחם והשכר […] נתנו;
-- **פירוק:** `kinuna=wa` – kinun "now" + =wa(r) ("ועתה", F3); `kāša` – kāša "here, behold" ("הנה", F21); `t[uk(?)` – tuk "to you", dat. (restored; "ל[ך]"); `ANA DINGIR]-LIM` – ANA "to" + DINGIR-LIM "god" (restored; "[לָאֵל]"); `zeiantaz` – zeyant- "cooked", ptcp., abl. ("מן המבושל"); `namma` – namma "further" ("ועוד"); `IŠTU UZU NINDA KAŠ` – IŠTU "from, with" + UZU "meat" + NINDA "bread" + KAŠ "beer" ("מן הבשר, הלחם והשכר"); `[ … ]-edani` – the end of a d.-l. ("[…]"); `piyawēn` – pai- "give", pret. 1pl ("נתנו").
+> ועתה – הנה, ל[ך?, לָאֵל], מן המבושל, ועוד מן הבשר, הלחם והשכר […] נתנו;
+- **פירוק:** `kinuna=wa` – kinun "now" + =wa(r) ("ועתה", F3); `kāša` – kāša "here, behold" ("הנה", F21); `t[uk(?)` – tuk "to you", dat. (restored; the edition's `?` kept: "ל[ך?]"); `ANA DINGIR]-LIM` – ANA "to" + DINGIR-LIM "god" (restored; "[לָאֵל]"); `zeiantaz` – zeyant- "cooked", ptcp., abl. ("מן המבושל"); `namma` – namma "further" ("ועוד"); `IŠTU UZU NINDA KAŠ` – IŠTU "from, with" + UZU "meat" + NINDA "bread" + KAŠ "beer" ("מן הבשר, הלחם והשכר"); `[ … ]-edani` – the end of a d.-l. ("[…]"); `piyawēn` – pai- "give", pret. 1pl ("נתנו").
 - **נוסחים:** C1 שונה: `ḫūišawaz` ("מן החי"? "מן הנא"?) לצד המבושל, ו־`SUM-en` (הסימן של *pai-*); הקריאה קשה.
 - **תרגומים:** Chrzanowska (HPM): "Jetzt haben wir d[ir, Gottheit,] hier vom Gegarten (und) außerdem Fleisch, Brot (und) Bier [ … ] … gegeben." – כמונו.
 - **הערות:** "מן המבושל … ומן הבשר": האֵל מקבל ארוחה מבושלת, כמו בן אדם מכובד. *zeyant-* "מבושל" הוא הבינוני של *zē-*, הפועל העומד שאת הגורם שלו (*zanu-* "לבשל") ראינו ב־47.
 
 ### 55
 `nu=wa=za DINGIR-LUM DINGIR-LIM-nili [e]t=za eku`
-> ואתה, הָאֵל – כְּאֵל אכול ושתה!
-- **פירוק:** `nu=wa=za` – nu "and" + =wa(r) + =za reflexive ("ו־"); `DINGIR-LUM` – DINGIR-LUM "god", nom.-voc. ("ואתה, הָאֵל"); `DINGIR-LIM-nili` – šiuniliš (DINGIR-LIM-nili) "in a godly way, as a god" ("כְּאֵל"); `[e]t=za` – ed- "eat", imper. 2sg + =za ("אכול"); `eku` – eku- "drink", imper. 2sg ("ושתה").
+> ו(אתה), הָאֵל – כְּאֵל אכול ושתה!
+- **פירוק:** `nu=wa=za` – nu "and" + =wa(r) + =za reflexive ("ו־"); `DINGIR-LUM` – DINGIR-LUM "god", nom.-voc. ("(אתה), הָאֵל": no *zik* in the text, the pronoun marks the vocative); `DINGIR-LIM-nili` – šiuniliš (DINGIR-LIM-nili) "in a godly way, as a god" ("כְּאֵל"); `[e]t=za` – ed- "eat", imper. 2sg + =za ("אכול"); `eku` – eku- "drink", imper. 2sg ("ושתה").
 - **נוסחים:** C1 שבור.
 - **תרגומים:** Chrzanowska (HPM): "Oh Gottheit, nach Götterart [is]s (und) trink" – "nach Götterart" – כמונו (`כְּאֵל`).
 - **הקבלה:** [absent] אין במקרא הזמנה לאל "לאכול ולשתות"; [divergence] `הַאוֹכַל בְּשַׂר אַבִּירִים וְדַם עַתּוּדִים אֶשְׁתֶּה` (תהלים נ:יג) – המקרא שולל את המחשבה שהאל אוכל.
@@ -509,8 +509,8 @@
 
 ### 63
 `[maḫḫ]an=ma=at=kan IŠTU SÍSKUR arḫa aranzi`
-> ואילו כאשר הם מגיעים הלאה מן הטקס,
-- **פירוק:** `[maḫḫ]an=ma` – maḫḫan "when" + =ma ("ואילו כאשר"); `=at=kan` – =at "they", nom. pl. + =kan ("הם"); `IŠTU SÍSKUR` – IŠTU "from" + SÍSKUR "ritual" ("מן הטקס"); `arḫa` – arḫa "away", preverb ("הלאה"); `aranzi` – ar- "arrive, reach", pres. 3pl ("מגיעים").
+> ואילו [כאשר] הם מגיעים הלאה מן הטקס,
+- **פירוק:** `[maḫḫ]an=ma` – maḫḫan "when" (the stem restored) + =ma ("ואילו [כאשר]"); `=at=kan` – =at "they", nom. pl. + =kan ("הם"); `IŠTU SÍSKUR` – IŠTU "from" + SÍSKUR "ritual" ("מן הטקס"); `arḫa` – arḫa "away", preverb ("הלאה"); `aranzi` – ar- "arrive, reach", pres. 3pl ("מגיעים").
 - **נוסחים:** A שבור (מ־B ו־C).
 - **תרגומים:** Chrzanowska (HPM): "[Soba]ld aber sie sich von dem (Ort des) Ritual(s) wegbegeben," – "sich … wegbegeben" ("מתרחקים"); אנו `מגיעים הלאה` – *ar-* "להגיע" בכל מקום.
 - **הערות:** "מגיעים הלאה מן הטקס" – כלומר מסיימים אותו, יוצאים ממנו. (הקריאה *arra-* "לרחוץ" אפשרית בכתב, אבל הכתיב *a-ra-an-zi* הוא של *ar-* "להגיע", כמו ב־36.)

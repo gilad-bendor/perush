@@ -115,7 +115,7 @@ Every row of R1 was checked against the five HPM composites (AS, UH, PU, AM, AM2
 ## R2. Merged from Sub4, part 1 (AS, 109 clauses; 2026-10-30; accepted by the coordinator unless said)
 **Fixed strings for UH, PU, AM (byte for byte):** F17 `איזה אֵל אשר עשה את המגפה הזאת` (a speech-opening `"` only where the speech
 opens: AS 16 opens it, `"איזה אֵל אשר סובב למטה –`); F18 `וְיִפָּנֶה פנימה בטובה!"`; *takšulant- ēšdu* `בשלום יהיה!`; *menaḫḫanda*
-`כלפי` (IN); "whoever finds it" `ומי שימצא אותה –` / `… הארץ ההיא תיקח לה!"`; the god's meal `ואתה, הָאֵל – כְּאֵל אכול ושתה!`
+`כלפי` (IN); "whoever finds it" `ומי שימצא אותה –` / `… הארץ ההיא תיקח לה!"`; the god's meal `ו(אתה), הָאֵל – כְּאֵל אכול ושתה!` (the `(אתה)` added at review (a): no *zik*)
 (*DINGIR-LIM-nili* `כְּאֵל`), `"והָאֵל ההוא – יאכל וגם ישתה!`; the participants `ואוכלים,` / `ואוכלים ושותים,`; the day's end `והם
 באים הלאה.`, `היום השני – [תַּם].`; F19 `ביום השני, כשעולה השחר, בהשכמה, מיד –`; *anda kiššan memanzi* `ועליהם כך אומרים:`, with
 *QĀTAMMA=pat* `ועליהם כך ממש אומרים:`; the drive `ואותם מסיעים אל הבָּר(, עוד אל מקום אחר);`, *unna-* `נוהגים`; the portions (AS
