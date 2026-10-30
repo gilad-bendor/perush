@@ -116,6 +116,57 @@ Noah's sacrifice); Gen 2:5, 2:15 (HE 1:60: without man the Storm-god must plough
 goddesses at the millstone); Ps 38:13 (HE 1:63); 2 Kgs 4:10 (HE 1:94, the chair and table); Prov 22:17 (HE 1:103); Nah
 2:11, Ezek 7:17 (HE 1:119); Jer 18:3 (HE 1:120, the potter's wheel); Gen 8:21 `אֶל לִבּוֹ` (HE 1:33, F32).
 
+### Translator 1, part 2 (HE 2–29)
+Drafted 2026-10-30: HE 2:1–29:15 (570 clauses, fragments 2–29) in `annotated-HE.rtl.md`; the placeholder is gone.
+`verify HE --strict` 0, `verify IL --strict` 0 (dossier identical), `check_bible_quotes.py` 0 on both, `selftest` 0.
+HPM read after each block (2–4, 5–9, 10–29); its corrections adopted and noted under **תרגומים** (notably: the fasting
+guest of 5:15–23 is male, not Ištar; 6:14 *ašanza* "true"; 6:26 "seven days"; 7:4–9 irrealis; 8:31 "what kind of woman";
+16:4 / 4:21 SIG₇ "ten thousand"; 22:9 imperative; 25:15–17 *kupri-* "bitumen"; 26:12 *ninink-* "move"; 27:19 "where you
+sent me").
+
+**1. Part-1 rulings applied.** §H5 F33/F38 notes and `translator-brief--myths.md` §2 now carry the strings used
+(`(כאשר) X שמע את הדברים`; `שמו לו … כסא לשבת` / `ושולחן מקושט לאכול – שם לו`; the jussive `ישימו לו כסא לשבת` HE 5:10,
+`ולאכול – שולחן יקשטו לו!` 5:11). M1 and §H2 got Kella, Taḫpurili, Zaliyanu/Zalinu, Zašḫapuna, Tazzuwaši, Piḫa-ziti,
+Walwa-ziti (regexes tested: `verify IL --strict` 0; IL's `זליינו` normalized to `זלינו` = `זַלִיַנוּ`).
+
+**2. Formula reuse (byte-identical modulo brackets):** F30 (4:18 fem. `אִשְׁתַּר החלה לומר אל חֶדַמּוּ:`; 6:27, 8:30, 22:1,
+26:20, 27:18, 27:23 `X החל לומר את הדברים אל Y:`; broken ones `[…] החל [לומר]:`); F31 (4:47, 8:32 `אשתר [החלה] להשיב אל
+חדמו:`; 6:13, 8:21, 20:19 `X החל להשיב את הדברים אל Y:`); F32 (7:3, 7:10); F33 (21:7, 26:33); F36 (26:34, 28:11 `ו[קם]
+חיש,`); F37 (20:7); F38 (5:10, 5:15); messenger 6:28–29, 22:2–4, 28:2–3 as 1:101–103. New repeated passage: the
+command/execution of 26:25–30 / 27:9–13 (`ואילו מקוּמֶּה – החלונות אשר פתוחים …, ואותם פנימה יכסו/כיסו`; `ובתוך הבית
+לאכול ולשתות הרבה הכן/הכין`).
+
+**3. New renderings (first line):** *šallanu-* `גידל` (2:5); ḪAŠḪUR `תפוח`, *ekunima-* `קור` (2:11); SILA₄ `טלה`; LIM-*tili*
+`באלפים`; *ḫarziyala-* `שבלול?` (HPM); BIL.ZA.ZA `צפרדע`; MEŠEDDU `רומח`; LÀL/*milit* `דבש`; *lellipai-* `ליקק`; *kašt-*
+`רעב` (3:7); *alpa-* `ענן`; *aššiyatar* `אהבה`; *šaḫi-*, *parnulli-* transliterated; *daššu-* `עז` (`מים עזים`, Isa 43:16);
+*waršiya-* `ניגב` (`מחה` reserved); *waršula-* `ריח` (also 1:108, changed from `הרגעה`); *tešḫa-* `שינה`; *tarḫuili-* `אדיר`
+(`גבור` stays UR.SAG's); *nekumant-* `עירום` (4:23, 8:20; Gen 2:25 – footnote); LÚ-*natar* `גבריות`; *armaḫḫ-* `עִבֵּר`;
+*karitt-* `שיטפון`; KI.SIKIL `עלמה`; *išḫa-* `אדון`; *kappuwai-* `דאג` (HPM); BIBRÛ `ריטון`; *ašant-* `אמת`; *nekuz meḫur*
+`עת הערב` (`מועד` reserved); *arkammi-* `כינור`, *galgalturi-* `מצלתיים?`; *tuliya-* `אספה`; *zaḫḫ-* `חבט`; *tarpanalli-*
+transliterated (`תַּרְפַּנַלִּי`, "rival"); *ḫaliḫla-* `השתחווה`; *ninganu-* `הרווה`; É.DU₁₀.ÚS.SA `בית הרחצה`; *arra-* `השתטף`
+(ritual §R1); Ì.DÙG.GA `שמן טוב`; UR.TUR `גור`; Ninatta / Kulitta / Ammezzadu / Ḫuršana / Kuppila / Uraš transcribed;
+GURUŠ `בחור`; TUKUL `כלי נשק`; ZA.GÌN `סַפִּיר`; *ḫaluga-* `בשורה`, LÚ *ḫalukattalla-* / KIN.GI₄.A `שליח`; KILĪLU `עֲטָרָה`;
+*duddumili* `בשקט`; *iyanna-* `יצא לדרך`; *karuššiya-* `השתתק` (HPM "gleichgültig"); *auri-* `מצפה` (`מגדל` reserved);
+BURU₅ `ארבה`; *karip-* `זלל`; *kupri-* **`כֹּפֶר`** (25:15, 17; below); ALAM `פסל` (`צלם` kept for the comparison);
+*duddu-* `חנן`; *ninink-* `הניע`; *karimmi-* transliterated `קָרִימִּי` (no clash with É DINGIR-LIM / É.GAL); *ištapp-* `כיסה`;
+AB `חלון`; *aššanu-* `ביצע`; *peya-* = *uiya-* `שיגר` (a two-lemma split, as close synonyms); *kariya-* `הסתיר`;
+*šamnai-* `הציב` (HPM "erschuf": no creation verb); ḫali- `מכלאה` (IN).
+
+**4. Gates and tables (for the lead; law/ritual files untouched):**
+- **`שגר` is blocked by the law §H3 `גר` row** (the prefix class `(?:ש|כש)?` reads ש־גר), although the myth brief fixes
+  *uiya-* `שִׁגֵּר`: five escapes (26:22–24, 27:5–6). Fix: exclude `שגר` (e.g. `(?<![א-ת])ו?(?:כש)?[בלהמכ]?(?:גר…)` or a
+  negative lookahead for `שגר`).
+- **`כפר` (law §H3, NEVER) blocks the real cognate:** Hittite *kupri-* "bitumen" (25:15, 17) is the Akkadian loan *kupru*
+  = `כֹּפֶר` (Gen 6:14; guidelines §6.7). Escaped twice; propose a licence `kupri`.
+- Part-1 gate list stands (`גבור` / ḪUR.SAG, `ירא` / *watarnaḫḫ-*, `חטא` / *ešuwaštati*, `עברה`, `הקריב` / BAL).
+- F8 (`pāi` = `ייתן`) fires on imperatives "give!" (4:44, 22:9): two `[סטייה מן הנוסחה]` escapes; propose restricting F8
+  to the law keys.
+
+**5. Cruxes:** HE 2:21, 4:20–22, 4:32 (heap of heads), 5:28 / 7:14 *tarpanalli-*, 6:14, 8:34 *šarauwar*, 12:16, 20:9–11
+(HPM vs us), 21:15 (Ḫedammu's birth on Kumarbi's knees? – Gen 50:23, 30:3 in the apparatus), 25:15–18 (bitumen, seven
+years: context lost), 29:7 (IB = Uraš). The order of fragments 2–29 is HPM's, not the story's.
+
 ## Progress
 - 2026-10-30: base secured, renderings fixed, brief written (the coordinator).
+- 2026-10-30: translator 1, part 2: HE 2:1–29:15 drafted (no review passes yet).
 - 2026-10-30: translator 1, part 1: IL 1–128 and HE 1:1–1:128 drafted (no review passes yet).

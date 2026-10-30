@@ -32,12 +32,12 @@ H-tables of `../חוקים-ובריתות/renderings.md` and `../טקסי-שיל
 | X *memiškiwan dāiš* "began to speak" | `X הֵחֵל לוֹמַר` (fem. `הֵחֵלָּה`, pl. `הֵחֵלּוּ`) |
 | X *ANA* Y *EGIR-pa memiškiwan dāiš* "began to answer" | `X הֵחֵל לְהָשִׁיב אֶל Y` |
 | X *ANA ZI-ŠU memiškiwan dāiš* "began to speak to his own mind" | `X הֵחֵל לוֹמַר אֶל נַפְשׁוֹ` |
-| *mān* X *uddār ištamašta* "when X heard the words" | `כַּאֲשֶׁר שָׁמַע X אֶת הַדְּבָרִים` |
+| *mān* X *uddār ištamašta* "when X heard the words" | `כַּאֲשֶׁר X שָׁמַע אֶת הַדְּבָרִים` (subject first; without *mān*: `X שָׁמַע אֶת הַדְּבָרִים`; translator 1, HE 1:76, 1:89) |
 | *ŠU-za GIŠ.GIDRU-an dāš* "he took a staff in his hand" | `לָקַח מַקֵּל בְּיָדוֹ` |
 | *IŠTU GÌR.MEŠ-ŠU KUŠ.E.SIR … liliwanduš IM.MEŠ-uš šarkuit* "he put on his feet (as) shoes the swift winds" | `וּלְרַגְלָיו נָעַל נַעֲלַיִם – אֶת הָרוּחוֹת הַמְּהִירוֹת` (the first translator fixes the exact string at its first occurrence and records it) |
 | *šarā ḫūdak arāiš* "he rose at once" | `קָם חִישׁ` |
 | *dankui tekan* / GE₆-*i* KI-*pi* "the dark earth" | `הָאֲדָמָה הָאֲפֵלָה` |
-| *ašanna=šši GIŠ.ŠÚ.A tiyandu … adanna=ma=šši GIŠ.BANŠUR unuwandu* | `יַצִּיגוּ לוֹ כִּסֵּא לָשֶׁבֶת … וְשֻׁלְחָן לֶאֱכֹל יַעַרְכוּ לוֹ` |
+| *ašanna=šši GIŠ.ŠÚ.A tiyandu … adanna=ma=šši GIŠ.BANŠUR unuwandu* | *dai-* = `שָׂם`: `שמו לו, לים, כסא לשבת,` … `ושולחן מקושט לאכול – שם לו,` (HE 1:94, 1:96); the jussive: `ישימו לו כסא לשבת` (translator 1) |
 | *uddār=ta kwe temi* "the words which I speak to you" | `אֶת הַדְּבָרִים אֲשֶׁר אֲנִי אוֹמֵר לְךָ` |
 | *uddānaš GEŠTU-an parā lagān ḫark* "hold (your) ear inclined to the words" | `הַטֵּה אָזְנְךָ לַדְּבָרִים` (+ note: Prov 22:17 `הַט אָזְנְךָ`) |
 Every other repeated passage (the messenger repeating his master's words; command and execution): **identical Hittite gets

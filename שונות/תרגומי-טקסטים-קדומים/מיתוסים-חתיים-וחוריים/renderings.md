@@ -63,6 +63,11 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | {D}Inara, {m}Ḫupašiya, {m}Kella | `אִינָרָה`, `חוּפַּשִׁיָּה`, `קֶלָּה` | (IL; the dossier's forms) |
 | {URU}Kiškilušša | `כִּישְׁכִּילוּשָּׁה` | The dossier's form (written before the *k* `ק` convention; kept for the identity with the dossier). |
 | {URU}Ziggaratta, Nerik, Tanipiya, Tarukka, Kaštama | `זִיגָּרָתָּה`, `נֵרִיק`, `תַּנִּיפִּיָּה`, `תַּרוּקָּה`, `קַשְׁתַּמָּה` | |
+| {m}Kella / Killa | `קֶלָּה` | The GUDU₁₂-priest of Nerik who tells IL (IL 1, 102, 127). |
+| {m}Taḫpurili | `תַּחְפּוּרִילִי` | A GUDU₁₂-priest (IL 108–111). |
+| {D}Zaliyanu / Zalinu (mountain and god) | `זַלִיַנוּ` | One Hebrew for both spellings (IL 64–120). |
+| {D}Zašḫapuna, {D}Tazzuwaši | `זַשְׁחַפּוּנָה`, `תַּזּוּוַשִׁי` | Zaliyanu's wife and concubine (IL 107–120). |
+| {m}Piḫa-LÚ, {m}UR.MAḪ-LÚ | `פִּיחָה־זִיטִי`, `וַלְוַה־זִיטִי` | The colophon's scribe and chief scribe (IL 128; Luwian readings). |
 | {URU}Kumme / Kummiya | `קוּמֶּה` ★ | (unvocalized "height, storey") Teššub's city. |
 | {URU}Ninuwa / Nenuwa | `נִינְוֵה` | The biblical form (Jonah); Ištar's city. |
 | {URU}Abzuwa | `אַבְּזוּוָה` | Ea's abode (the Apsû; a note). |
@@ -147,6 +152,13 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | `ziggaratt` | `זִיגָּרָתָּה` | | |
 | `\{m\}appu` | `אַפּוּ` | ★ | Appu |
 | `\{uru\}kumm` | `קוּמֶּה` | ★ | Kumme |
+| `\{m\}k[ie]ll` | `קֶלָּה` | | Kella (IL) |
+| `taḫpuril` | `תַּחְפּוּרִילִי` | | |
+| `zaliyan\|zalin[uū]` | `זַלִיַנוּ` | | Zaliyanu / Zalinu |
+| `zašḫap` | `זַשְׁחַפּוּנָה` | | |
+| `t[aā]zzuwaš` | `תַּזּוּוַשִׁי` | | |
+| `piḫa-lú` | `פִּיחָה־זִיטִי` | | |
+| `ur\.maḫ-lú` | `וַלְוַה־זִיטִי` | | |
 | `\{uru\}n[ie]nuw` | `נִינְוֵה` | | Nineveh |
 | `\{uru\}a[bp]z[uū]w` | `אַבְּזוּוָה` | | |
 | `\{íd\}aranzaḫ` | `אַרַנְזַח` | | |
@@ -190,12 +202,12 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | F30 | `(?<!egir-pa )(?<!egir-an )memišk\S*w?an d[aā]i` | `הח(?:ל\|לה\|לו) לומר` | *memiškiwan dāiš* "began to speak" = `הֵחֵל לוֹמַר` |
 | F31 | `egir-pa memišk\S*w?an d[aā]i` | `הח(?:ל\|לה\|לו) להשיב` | *EGIR-pa memiškiwan dāiš* "began to answer" = `הֵחֵל לְהָשִׁיב` |
 | F32 | `zi-šu memišk\|zi-ni memišk\|ištanzan` | `נפש` | *ANA ZI-ŠU* "to his own mind" = `אֶל נַפְשׁוֹ` |
-| F33 | `(?:uddār\|inim\S*)\S* (?:ištamašt\|išt[aā]maš\|išme)` | `שמע\S* (?:את )?(?:ה)?דברי` | "heard the words" = `שָׁמַע אֶת הַדְּבָרִים` |
+| F33 | `(?:uddār\|inim\S*)\S* (?:ištamašt\|išt[aā]maš\|išme)` | `שמע\S* (?:את )?(?:ה)?דברי` | "heard the words" = `(כַּאֲשֶׁר) X שָׁמַע אֶת הַדְּבָרִים` (subject first; HE 1:76, 1:89) |
 | F34 | `gidru-an d[aā]` | `מקל` | "took a staff (in the hand)" = `לָקַח מַקֵּל (בְּיָדוֹ)` |
 | F35 | `e\.sir\S* liliwan[td]\S* im\{meš\}` | `הרוחות המהירות` | the wind-shoes = `… נַעֲלַיִם … הָרוּחוֹת הַמְּהִירוֹת` |
 | F36 | `šarā ḫūdak ar[aā]i` | `קמ?\S* חיש` | "rose at once" = `קָם חִישׁ` |
 | F37 | `dankui\S* (?:tekan\|dagān\|taknī\|ki-)\|ge6-i ki-pi\|ge6-i ki` | `האדמה האפלה` | the netherworld "the dark earth" = `הָאֲדָמָה הָאֲפֵלָה` |
-| F38 | `ašanna=šši \{giš\}šú\.a` | `כסא לשבת` | the welcome: `כִּסֵּא לָשֶׁבֶת` … `שֻׁלְחָן לֶאֱכֹל` |
+| F38 | `ašanna=šši \{giš\}šú\.a` | `כסא לשבת` | the welcome (*dai-* = `שָׂם`): `שמו לו, לים, כסא לשבת,` … `ושולחן מקושט לאכול – שם לו,` (HE 1:94, 1:96) |
 
 ## H6. Traps (machine-read; the myth texts only)
 | Unvocalized (regex on the raw line) | Condition (regex on the licence text) | Why |
