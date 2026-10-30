@@ -17,7 +17,7 @@
 
 ### 2
 `mān=kan KUR-e anda našma ŠÀ KARAŠ ÚŠ-kan kišari`
-> אם בתוך הארץ, או בקרב המחנה, נעשית מגפה,
+> אם בתוך הארץ, או בקרב המחנה, מגפה נעשית,
 - **פירוק:** `mān=kan` – mān "if", conjunction ("אם") + =kan local particle (not translated); `KUR-e` – utne (KUR) "land", d.-l. sg. ("הארץ"); `anda` – anda "in(side)", postposition ("בתוך"); `našma` – našma "or" ("או"); `ŠÀ` – ŠÀ (Sumerogram, = Akk. *libbu*) "inside, in the midst of" ("בקרב"); `KARAŠ` – KARAŠ "army camp" ("המחנה"); `ÚŠ-kan` – ÚŠ (*ḫenkan*) "plague, death", nom.-acc. sg. n. + =kan ("מגפה"); `kišari` – kiš- "happen, become", pres. 3sg mp ("נעשית").
 - **נוסחים:** B1 כותב את הפועל `DÙ-ri` (הסימן השומרי של *kiš-*). C1 שונה לגמרי: `mān MU.KAM-za ḫarranza KARAŠ-ia 1 anda [akkiškittari]` – "אם השנה מקולקלת, ובתוך המחנה [מתים תמיד]" (ההשלמה של העורכת, לפי פתיחת טקס המגפה של זַרְפִּיָּה, CTH 757; ראו הקולופון, 102).
 - **תרגומים:** Chrzanowska (HPM): "Wenn im Lande oder im Inneren des Feldlagers eine Seuche ausbricht," – כמונו ("Seuche"); *kiš-* "ausbrechen" – אצלנו `נעשית`, הפועל של *kiš-* בחוקים.
@@ -131,8 +131,8 @@
 
 ### 16
 `kuiš=wa=kan DINGIR-LUM kattan weḫattari`
-> "איזה אֵל אשר סובב למטה –
-- **פירוק:** `kuiš=wa=kan` – kui- "which, whichever", nom. sg. c. + =wa(r) quotative (the quotation marks) + =kan ("איזה … אשר", F17); `DINGIR-LUM` – DINGIR-LUM (*šiu-*) "god", nom. ("אֵל"); `kattan` – kattan "down, below; alongside" ("למטה"); `weḫattari` – weḫ- "turn, go around", pres. 3sg mp ("סובב").
+> "איזה אֵל אשר *סובב למטה* –
+- **פירוק:** `kuiš=wa=kan` – kui- "which, whichever", nom. sg. c. + =wa(r) quotative (the quotation marks) + =kan ("איזה … אשר", F17); `DINGIR-LUM` – DINGIR-LUM (*šiu-*) "god", nom. ("אֵל"); `kattan` – kattan "down, below; alongside" ("*למטה*"; a crux: "here, beside us" or "down", R2); `weḫattari` – weḫ- "turn, go around", pres. 3sg mp ("*סובב*"; HPM "sich (her)abwendet": uncertain, so marked `*…*` as the other cruxes).
 - **תרגומים:** Chrzanowska (HPM): "„Welche Gottheit sich (her)abwendet," – "sich (her)abwendet" – *kattan weḫ-* "פונה (אלינו) למטה"; אנו `סובב`, כבהוראות (*weḫ-* `סבב`): האֵל המסתובב, או הפונה אל המחנה. שתי הקריאות אפשריות.
 - **הקבלה:** [equivalent] `כִּי יְהוָה אֱלֹהֶיךָ מִתְהַלֵּךְ בְּקֶרֶב מַחֲנֶךָ` (דברים כג:טו) – האל המתהלך במחנה. [divergence] בדברים האל הולך במחנה כדי להציל, והמחנה צריך להיות ראוי לנוכחותו; כאן האֵל המשוטט הוא מקור הרעה, ואין יודעים מי הוא.
 - **הערות:** "איזה אֵל אשר …": המומחה אינו יודע מי האֵל שהביא את המגפה, ולכן הוא פונה אל כל אֵל שהוא. הספק הזה הוא לב תפיסת המגפה: אֵל זר, אולי אֵל האויב, משוטט ("סובב", כמו *weḫ-* של השומרים הסובבים ב־IN) למטה, בארץ, בין בני האדם. *kattan* הוא "למטה" וגם "ליד, עם" – האֵל ש"מסתובב כאן אצלנו".
@@ -399,11 +399,11 @@
 
 ### 49
 `nu=ššan {UZU}Ì NINDA.GUR4.RA{ḪI.A} {URUDU}GÍR.TUR-li=ya kattan ḫandanzi`
-> ועליה מכינים זה לצד זה את החֵלֶב, את הלחמים העבים וגם את הסכין הקטנה;
-- **פירוק:** `nu=ššan` – nu "and" + =ššan "on (it)" ("ועליה"); `{UZU}Ì` – Ì "fat" ("את החֵלֶב"); `NINDA.GUR4.RA{ḪI.A}` – "thick bread", pl. ("את הלחמים העבים"); `{URUDU}GÍR.TUR-li=ya` – GÍR.TUR "small knife" (determinative URUDU "copper") + =ya "also" ("וגם את הסכין הקטנה"); `kattan` – kattan "alongside, side by side" ("זה לצד זה"); `ḫandanzi` – ḫandai- "prepare, arrange", pres. 3pl ("מכינים").
+> ועליה מכינים זה לצד זה את השומן, את הלחמים העבים וגם את הסכין הקטנה;
+- **פירוק:** `nu=ššan` – nu "and" + =ššan "on (it)" ("ועליה"); `{UZU}Ì` – Ì "fat" ("את השומן"; the Laws' UZU Ì / Ì `שומן`, HL1 459, 497, 499, binding for the shared word; `חֵלֶב` stays Ì.UDU "tallow", UH 19, 24); `NINDA.GUR4.RA{ḪI.A}` – "thick bread", pl. ("את הלחמים העבים"); `{URUDU}GÍR.TUR-li=ya` – GÍR.TUR "small knife" (determinative URUDU "copper") + =ya "also" ("וגם את הסכין הקטנה"); `kattan` – kattan "alongside, side by side" ("זה לצד זה"); `ḫandanzi` – ḫandai- "prepare, arrange", pres. 3pl ("מכינים").
 - **נוסחים:** C1 `kattan` כתוב אולי `ki-ša-an` (העורכת: שיבוש); A נקטע כאן (`===`).
 - **תרגומים:** Chrzanowska (HPM): "Fett, Dickbrote, und ein kleines Messer aus Kupfer ordnen sie nebeneinander an." – "ordnen … nebeneinander an" – כמונו (`זה לצד זה`); *ḫandai-* אצלנו `מכינים` בכל מקום.
-- **הקבלה:** [divergence] `כָּל חֵלֶב לַיהוָה` (ויקרא ג:טז) – בתורה החלב שייך לאל ונשרף; כאן החֵלֶב מוגש לאֵל על העלווה, לצד הלחם והסכין, כארוחה.
+- **הקבלה:** [divergence] `כָּל חֵלֶב לַיהוָה` (ויקרא ג:טז) – בתורה החלב שייך לאל ונשרף; כאן השומן (*Ì*, `שומן` כבחוקים) מוגש לאֵל על העלווה, לצד הלחם והסכין, כארוחה.
 - **הערות:** הסכין הקטנה מונחת לצד האוכל – כלי אכילה לאֵל? כמו סועד אנושי, האֵל יקבל את הבשר ואת הסכין לחתוך בה.
 
 ### 50

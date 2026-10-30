@@ -356,3 +356,72 @@ verse quoted. Changed: AS 3 lines, UH 1, PU 8, AM 39, AM2 4 (55 lines).
 39 *nai-* `הפנה` (HPM "winden"), 115, 191, 196, 228, 235, 248, 251, 257; AM2 15, 17 *arai-*. **For the coordinator:** AM 216 `בא` and
 218 `סובב` are masculine beside 219 `אומרת` – if the subject of 216–220 is Ambazzi (as 194 `היא באה בחזרה`), both become feminine; the
 subject is lost, so I left them. AM 157 *kattan* (said in Part 4 to be rendered) has no Hebrew (`אַל תיאבק בהם עוד!`): HPM "damit".
+
+### Review (b): consistency
+Written 2026-10-30 by the consistency reviewer. Method: a script printed every copy of each Ambazzi refrain (the Part 3 table) and
+of the cross-text formulas side by side with its composite (brackets and vowels normalized); `verify --strict`; the "identical" /
+"similar" lists of `data KEY` for all five texts (74 pairs with different Hebrew, each read); `lexmap` filtered to the rituals (one
+lemma → two Hebrews; one Hebrew → two lemmas), and the ritual lemmas against HL1 / HL2 / HLPT / IN. After the edits: `verify AS UH PU
+AM AM2 --strict` 0 problems (the AM 101 / 189 notice only, justified in 189), `selftest` 0 failures, `check_bible_quotes.py` 0.
+Changed: AS 3 lines, AM 7, AM2 2 (12 lines; the פירוק / notes with them).
+
+**Checked and found consistent (no change):** F17 (AS 16, 17, 26, 81; UH 11, 15; PU 42), the indefinite god (UH 3; PU 4, 20), F18 (AS 84;
+UH 17, 26; PU 24, 46), F19 (AS 42, 74, 87), F21 `הנה` (AS 18, 27, 38, 39, 52, 54; UH 12; PU 21; AM 114), *(anda) kiššan memai* (AS 15,
+25, 37, 51; UH 10, 20; PU 16, 19, 33, 41), the drive (AS 20, 34, 43, 77, 90; UH 9, 18; AM 88, 215) and *unna-* (AS 75, 87; UH 5, 12, 27;
+PU 28), the god's meal (AS 55, 82; AM 96, 181), the day's end (AS 58, 73, 86, 98; 73a, 86a), the participants (AS 72, 85, 97; AM 112,
+247), the portions (AS 70 = 95), *EGIR-pa … pēdau* (PU 26, 45), *galanganza ēš* (PU 23, 44); every Ambazzi refrain in all its copies
+(3–9 / 51–57 / 128–134 / 207–210; 10–14 / 58–60 / 135–138 / 200–206 / AM2 12; 15–25 / 61–70 / 139–149 / 211 / AM2 1–5 / 256; 26–33 /
+71–79 / 150–159 / AM2 6–11; 34–44 / 80–89 / 160–172 / AM2 18–21; 45–50 / 90–110 / 173–189 / 221–224 / 233–245; 113–116 / 190–193 /
+252–255): every difference of Hebrew corresponds to a difference of the Hittite, except the lines below. Ambazzi's 1sg / 3sg is
+feminine throughout AM / AM2 (216, 218 were the only exceptions); Ašḫella's, Uḫḫamuwa's, Puliša's masculine. Names: vocalized at the
+first occurrence in each file (AM 2, 50, 93; AM2 15; AS 1, 101, 104; UH 1; PU 1, 56); Mammai ★ vocalized in every line.
+
+**Line by line** (old → new; reason):
+- AS 2 `נעשית מגפה,` → `מגפה נעשית,` (the word order of the identical *ÚŠ-kan kišari* in AS 107 `[מגפה] נעשית` and PU 5 `מגפה נעש[ית]`).
+- AS 16 `"איזה אֵל אשר סובב למטה –` → `"איזה אֵל אשר *סובב למטה* –` (the crux *kattan weḫattari* marked as the other cruxes; פירוק says so;
+  **R2's fixed string** "AS 16 opens it, `"איזה אֵל אשר סובב למטה –`" should be updated by the coordinator).
+- AS 49 `את החֵלֶב` → `את השומן` (*{UZU}Ì*: the Laws have UZU Ì / Ì `שומן` in HL1 459, 497, 499, binding for the shared word; the
+  הקבלה with Lev 3:16 kept, the note says Ì = `שומן`). **R1a's "Ì / Ì.UDU = `חֵלֶב`" should be narrowed to Ì.UDU** (below).
+- AM 128 `[ועצי־הח]וּוַלִּי – [אל האגן האָדֹם] מפזרת;` → `[ואל האגן האָדֹם – עצי־הח]וּוַלִּי מפזרת;` (the composite has the order of 3,
+  *ANA DÍLIM.GAL SA5 ḫulliš*, not of 51 *ḫulliš ANA …*; the restoration follows the Hittite).
+- AM 136 `– ואותה במיתר משוכה;` → `– ואותה – במיתר משוכה;` (= 11 `[ואותן – במיתר משוכות]`, the same *n=at IŠTU ištaggai ḫuittiyan*).
+- AM 157 `אַל תיאבק בהם עוד!` → `אַל תיאבק בהם עוד *מקרוב*!` (*kattan* had no Hebrew, though Part 4 says it was rendered; now rendered by
+  sense, R2, marked uncertain – HPM "damit"; פירוק, נוסחים, תרגומים aligned).
+- AM 216 `[…] בא בחזרה,` → `[…] באה בחזרה,`; AM 218 `סובב, לא […]` → `סובבת, לא […]` (subject decided: Ambazzi, as 194 *mān=aš parna=ma
+  āppa uizzi* `היא באה בחזרה` – she returns after the release of 212–215 and does not turn, speak or curse, 218–220 – and as 219
+  `אומרת`; 217 `נעשה` (*kišari*, impersonal) and 250 `בא` (the sickness, `החולי`) stay masculine; the note of 220 aligned).
+- AM 224 `ל[מַמַּאי]` → `לְ[מַמַּאי]`, AM 241 `ל[מַמַּאי שָׂמָה]` → `לְ[מַמַּאי שָׂמָה]` (as 93, 105, 187 `לְמַמַּאי`).
+- AM2 11 `יטהר!"` → `יִטְהַר!"` (*parkuešš-* "become pure" is the intransitive; unvocalized `יטהר` is also the Laws' *parkunu-* "he
+  shall purify", HL1 246, HLPT 142, 144, HL2 163.2: the collision removed by the vowels).
+- AM2 21 `ואותו [אל העכבר הקטן] שָׂמָה;` → `ואותו שָׂמָה [אל העכבר הקטן];` (the word order of the refrain 37, 83, 163 `ואותו מפנה אל העכבר
+  הקטן;` – the same Hittite order, *n=at=kan ANA PÉŠ.TUR nāi / dāi*).
+
+**Decided without change:** AM2 19 *ḫamanzi* stays 3sg `קושרת`: the evidence is against the 3pl – the subject {MUNUS}ŠU.GI is named in
+18 with the 3sg *ḫūlaliyezzi*, 20 and 21 are 3sg *dāi*, the AM copies (35, 81, 161) are 3sg *nāi*; and *ḫa-ma-an-zi* reads as the 3sg
+*ḫamank-zi* with the *k* of *-nkz-* unwritten (as AM2 6 *ḫa-ma-ak-zi* leaves out the nasal), whereas a 3pl *ḫamankanzi* would have
+lost a whole syllable. HPM's "man bindet" is noted in the פירוק. AM2 8 `עובדים` (3sg KIN-zi with a plural subject: Hebrew agreement) /
+9 `מטהר` (3sg, no subject): kept, the Hittite's own difference. AM 3 `אגן אָדֹם` (first mention) / 51, 128 `האגן האָדֹם`: kept.
+
+**Splits accepted (one lemma, two Hebrews), with the reason:** *kattan* by sense (`אצל`, `מתחת`, `עמם`, `זה לצד זה`, `למטה`, `לצד־`,
+`*מקרוב*`; R2); *ištarna* `בין` / `דרך` (R2); *dai-* `שָׂם` / *dā-* `לקח` (two verbs); *pai-* "go" `לֵךְ` / *pai-* "give" `נתן`
+(homonyms); *iya-* `עשה` / *iya-* (mp) `יוצא` (PU 3, homonyms); *tiya-* `נכנס` / `עומד` (PU 10, 11, 18: idioms, Part 2); *ḫantezzi-*
+`ראשון` / AM 108 `הקדמי` (the fore ankle); *kunna-* `ימין` / ZAG `ימני` / ZAG `גבול` (HL2); ÚR `ירך` (AS, PU) / `איבר` (AM; R4);
+*išḫiya-* `אסר` (HL1 `חייב`), *ḫink-* `הרכין` (HL1 `הציג`), *paršiya-* `פרס` (HL2 `פרץ`), *šanḫ-* `קלה` (IN `דרש`), *āššu-* `טוב` (HL1
+`רכוש`), *išḫuwa-* `זרה` (IN `ערם`) – all recorded in R2–R4; **new for the lead:** *nai-* rituals `הפנה` (R1) against HL2 162, 166, 171
+`הטה` (the diverting of water): a split by sense, accepted, not yet recorded in the law file's §7; Ì.UDU "tallow" `חֵלֶב` (UH 19, 24)
+beside Ì `שומן`: two Sumerograms, two words (as the Laws' Ì.ŠAḪ `שומן־חזיר`).
+
+**Collisions (one Hebrew, two lemmas) found and how resolved:** `חלב` – Ì (AS 49) vs Laws Ì `שומן`: fixed (AS 49 `שומן`), GA "milk"
+`חָלָב` (IN) is the trap's; `יטהר` – *parkuešš-* (AM2 11) vs *parkunu-* (Laws): vocalized `יִטְהַר`; `אומר` – *memai-* vs *tar-* (AM2
+*tezzi*, HL1 306, HLPT 188, IN 11.5): accepted (R1a; the Laws themselves use `אמר` for *tar-*); `הביא` – *uda-* vs *uwate-* (PU 12, Laws
+`יביא`): accepted (two near-synonymous "bring" verbs; the Laws do the same); `נעשה` – *kiš-* (AS 2, 5) vs *iya-* passive (HL2 184.1
+`[נעשה?]`): accepted (passive of `עשה` = *iya-*'s own root); `דרך` – *ištarna* (AS 33) vs KASKAL (UH 9; IN): accepted in R2 (preposition
+vs noun); `מלבין` – *ḫarkešš-* (AM 29, 75; AM2 10) vs restored *ḫarganu-* (PU 34): accepted (one root *ḫark-*, the Hebrew verb both
+"turns white" and "whitens"); `תַּם` – TIL / QATI (R2); `איל` – UDU.ŠIR (AS, `אַיִל` ★) vs HL1 UDU.A.LUM `אַיִל` and DÀRA.MAŠ `אַיָּל`:
+UDU.ŠIR / UDU.A.LUM are both "ram" (accepted; the breeding sense of UDU.ŠIR shows at AS 88, while MÁŠ.ŠIR AM 232 is `תיש־ההרבעה` –
+**for the lead**: whether UDU.ŠIR should be qualified the same way), the stag is vocalized; `מלח` – MUN (AS 64) vs HL2 163.3 *išuwan*
+`מלח` (outside these files: **for the lead**, *išuwan*'s meaning is uncertain). Same-word variants (`עצי־החוּוַלִּי` *ḫuwalli-* /
+*ḫulli-*, `אֵל המגן` LAMMA / {D}KAL, `אש` IZI / *paḫḫur*, `עצים` GIŠ / IṢU, `בלילה` GE₆ / *išpant-*) are one word.
+
+**For the coordinator (renderings.md):** R2 AS 16 string (`*סובב למטה*`); R1a "Fat and milk" → Ì `שומן` (the Laws), Ì.UDU `חֵלֶב` ★; the H6
+`חלב` trap's condition `\{uzu\}ì\b|\bì\b` now has no ritual line (only Ì.UDU); Part 4's "157 + *kattan*" is now true (`*מקרוב*`).

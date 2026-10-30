@@ -922,8 +922,8 @@
 
 ### 128
 `[nu=ššan ANA {DUG}DÍLIM.GAL SA5 ḫ]ulliš šuḫḫāi`
-> [ועצי־הח]וּוַלִּי – [אל האגן האָדֹם] מפזרת;
-- **פירוק:** `[nu=ššan` – nu + =ššan (restored); `ANA {DUG}DÍLIM.GAL SA5` – "into the red basin" (restored; "[אל האגן האָדֹם]"); `ḫ]ulliš` – ḫulli-, acc. pl. (partly restored; "[ועצי־הח]וּוַלִּי"); `šuḫḫāi` – šuḫḫa- "scatter", pres. 3sg ("מפזרת").
+> [ואל האגן האָדֹם – עצי־הח]וּוַלִּי מפזרת;
+- **פירוק:** `[nu=ššan` – nu + =ššan (restored); `ANA {DUG}DÍLIM.GAL SA5` – "into the red basin" (restored; "[ואל האגן האָדֹם]": the order of 3, as the Hittite, not of 51); `ḫ]ulliš` – ḫulli-, acc. pl. (partly restored; "[עצי־הח]וּוַלִּי"); `šuḫḫāi` – šuḫḫa- "scatter", pres. 3sg ("מפזרת").
 - **נוסחים:** כאן *šuḫḫa-* "מפזרת" במקום *dai-* "שׂמה" של 51 (ו־*išḫuwa-* "אני זורה" של 3).
 - **תרגומים:** Christiansen (HPM): "[Und auf eine rote Schale] schüttet sie Wacholderholz(?)."
 
@@ -977,7 +977,7 @@
 
 ### 136
 `[p]ūrpūriyaš ḫūrtallišš=a išnaš [1? {G]}IŠPAN n=at=kan IŠTU {SÍG}ištaggai ḫuittiyan`
-> כדורים, וגם חוּרְטַלִּים של בצק, קשת [אחת?] – ואותה במיתר משוכה;
+> כדורים, וגם חוּרְטַלִּים של בצק, קשת [אחת?] – ואותה – במיתר משוכה;
 - **פירוק:** `[p]ūrpūriyaš` – pūrpūri- "ball", pl. ("כדורים"); `ḫūrtallišš=a` – ḫurtalli-, pl. + =a "and" ("וגם חוּרְטַלִּים"); `išnaš` – išna- "dough", gen. ("של בצק"); `[1? {G]}IŠPAN` – "one? bow" (the number restored, PAN preserved; "קשת [אחת?]"); `n=at=kan` – nu + =at "it" + =kan ("ואותה"); `IŠTU {SÍG}ištaggai` – IŠTU "with" + "bowstring" ("במיתר"); `ḫuittiyan` – ḫuittiya- "draw", ptcp. ("משוכה").
 - **תרגומים:** Christiansen (HPM): "[Ku]geln und Gemengsel aus Teig, [1?] Bogen – er ist mit einer Bogensehne bespannt –" – "Gemengsel" ל־*ḫurtalli-* – ראו 10.
 
@@ -1122,10 +1122,10 @@
 
 ### 157
 `n=aš=šan lē namma kattan zaḫḫiškiši`
-> אַל תיאבק בהם עוד!
-- **פירוק:** `n=aš=šan` – nu + =aš "them", acc. pl. + =šan ("בהם"); `lē` – "do not" ("אַל"); `namma` – "any more" ("עוד"); `kattan` – kattan "with, beside" (not translated separately: "בהם"); `zaḫḫiškiši` – zaḫḫ- "fight", iterative pres. 2sg ("תיאבק").
-- **נוסחים:** לעומת 31 ו־77: כאן בלי שם בפנייה, ועם *kattan*.
-- **תרגומים:** Christiansen (HPM): "bekämpfe sie nicht länger damit!" – "damit" ל־*kattan*; אנו בלי תרגום נפרד.
+> אַל תיאבק בהם עוד *מקרוב*!
+- **פירוק:** `n=aš=šan` – nu + =aš "them", acc. pl. + =šan ("בהם"); `lē` – "do not" ("אַל"); `namma` – "any more" ("עוד"); `kattan` – kattan "beside, with; down" (by sense, R2; "*מקרוב*": uncertain); `zaḫḫiškiši` – zaḫḫ- "fight", iterative pres. 2sg ("תיאבק").
+- **נוסחים:** לעומת 31 ו־77: כאן בלי שם בפנייה, ועם *kattan* (`*מקרוב*`).
+- **תרגומים:** Christiansen (HPM): "bekämpfe sie nicht länger damit!" – "damit" ל־*kattan*; אנו `*מקרוב*` (*kattan* "בצד, עם": המאבק מקרוב; לא ודאי).
 
 ### 158
 `[ī]t? kūn {GIŠ}tarzun namma zaḫḫiški`
@@ -1522,8 +1522,8 @@
 
 ### 216
 `[ … ] āppa uizz[i]`
-> […] בא בחזרה,
-- **פירוק:** `[ … ]` – lost; `āppa` – "back" ("בחזרה"); `uizz[i]` – uwa- "come", pres. 3sg ("בא").
+> […] באה בחזרה,
+- **פירוק:** `[ … ]` – lost; `āppa` – "back" ("בחזרה"); `uizz[i]` – uwa- "come", pres. 3sg ("באה": Ambazzi, as 194 `היא באה בחזרה`).
 - **תרגומים:** Christiansen (HPM): "[ … ] kehrt zurück."
 
 ### 217
@@ -1534,9 +1534,9 @@
 
 ### 218
 `weḫzi UL [ … ]`
-> סובב, לא […]
-- **פירוק:** `weḫzi` – weḫ- "turn, go around", pres. 3sg ("סובב"); `UL` – "not" ("לא"); `[ … ]` – lost.
-- **תרגומים:** Christiansen (HPM): "Wenden soll er/sie sich nicht […]" – "Wenden soll er/sie sich nicht" – *UL weḫzi* כאיסור; אנו `סובב, לא` (שבור). 
+> סובבת, לא […]
+- **פירוק:** `weḫzi` – weḫ- "turn, go around", pres. 3sg ("סובבת": Ambazzi, as 216, 219); `UL` – "not" ("לא"); `[ … ]` – lost.
+- **תרגומים:** Christiansen (HPM): "Wenden soll er/sie sich nicht […]" – "Wenden soll er/sie sich nicht" – *UL weḫzi* כאיסור; אנו `סובבת, לא` (שבור). 
 
 ### 219
 `[ … ] UL memai`
@@ -1549,7 +1549,7 @@
 > [ק]ללה? לא[…]
 - **פירוק:** `[ḫ]ūwarti` – ḫurt- / ḫuwart- "curse"?, d.-l.? (partly restored, uncertain; "[ק]ללה?", R1 *ḫurtai-* `קללה`); `UL[(-) … ]` – "not" + lost ("לא[…]").
 - **תרגומים:** Christiansen (HPM): "Verfluchen soll er/sie nicht." – "Verfluchen soll er/sie nicht" – כמונו בעיקר (`[ק]ללה? לא`).
-- **הערות:** 216–220 שבורים מכדי שאפשר יהיה לדעת את מהלך הדברים: אולי תנאי ("אם … בא בחזרה, … נעשה, … לא אומרת").
+- **הערות:** 216–220 שבורים מכדי שאפשר יהיה לדעת את מהלך הדברים: אולי תנאי ("אם … באה בחזרה, … נעשה, … לא אומרת").
 
 ### 221
 `[nu GIŠ-ruwaš30 {GIŠ}l]aḫurnuzzi dāi`
@@ -1572,8 +1572,8 @@
 
 ### 224
 `1 NINDA.GUR4.RA ANA {D}Ma[mmai] paršiya`
-> לחם עבה אחד – ל[מַמַּאי] – פורסת;
-- **פירוק:** `1 NINDA.GUR4.RA` – "one thick bread" ("לחם עבה אחד"); `ANA {D}Ma[mmai]` – ANA "to" + Mammai (partly restored; "ל[מַמַּאי]"); `paršiya` – paršiya- "break", pres. 3sg ("פורסת").
+> לחם עבה אחד – לְ[מַמַּאי] – פורסת;
+- **פירוק:** `1 NINDA.GUR4.RA` – "one thick bread" ("לחם עבה אחד"); `ANA {D}Ma[mmai]` – ANA "to" + Mammai (partly restored; "לְ[מַמַּאי]"); `paršiya` – paršiya- "break", pres. 3sg ("פורסת").
 - **תרגומים:** Christiansen (HPM): "1 Dickbrot für Ma[mma] bricht sie."
 
 ## §49″ – תפילת הזקנה על עצמה
@@ -1692,8 +1692,8 @@
 
 ### 241
 `[{UZU}MAŠ.SÌL] {D}Mam[mai dāi]`
-> [את המותן] – ל[מַמַּאי שָׂמָה];
-- **פירוק:** `[{UZU}MAŠ.SÌL]` – "hip" (restored; "[את המותן]"); `{D}Mam[mai` – Mammai (partly restored; "ל[מַמַּאי]"); `dāi]` – dai- "put" (restored; "[שָׂמָה]").
+> [את המותן] – לְ[מַמַּאי שָׂמָה];
+- **פירוק:** `[{UZU}MAŠ.SÌL]` – "hip" (restored; "[את המותן]"); `{D}Mam[mai` – Mammai (partly restored; "לְ[מַמַּאי]"); `dāi]` – dai- "put" (restored; "[שָׂמָה]").
 - **תרגומים:** Christiansen (HPM): "[Die Hüfte legt sie] der Mamm[a hin],"
 
 ### 242

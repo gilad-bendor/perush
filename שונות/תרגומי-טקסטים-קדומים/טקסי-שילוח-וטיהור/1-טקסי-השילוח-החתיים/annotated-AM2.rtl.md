@@ -84,8 +84,8 @@
 
 ### 11
 `ḪUL-uwašš=a UN{MEŠ}-aš ANZELLU ḫurkilaza paprannaza mulatnaza [_] NÍ.TE LUGAL QĀTAMMA parkuešdu`
-> כך גם גוף המלך – מן האִסּוּר של האנשים הרעים, מן התועבה, מן הטומאה, מן המוּלָאתַר – יטהר!"
-- **פירוק:** `ḪUL-uwašš=a` – idālawa- (ḪUL) "evil", gen. pl. + =a "also" ("גם … הרעים"); `UN{MEŠ}-aš` – "people", gen. pl. ("של האנשים"); `ANZELLU` – ANZELLU (Akk. *anzillu*) "taboo, abomination", abl. ("מן האִסּוּר", R1a); `ḫurkilaza` – ḫurkil "abomination", abl. ("מן התועבה", F7); `paprannaza` – papratar "impurity", abl. ("מן הטומאה"); `mulatnaza` – mulātar, abl. ("מן המוּלָאתַר"); `[_]` – a lost sign (not translated); `NÍ.TE LUGAL` – NÍ.TE "body" + LUGAL "king" ("גוף המלך"); `QĀTAMMA` – "so" ("כך", at the head, as AM 76); `parkuešdu` – parkuešš- "become pure", imper. 3sg ("יטהר").
+> כך גם גוף המלך – מן האִסּוּר של האנשים הרעים, מן התועבה, מן הטומאה, מן המוּלָאתַר – יִטְהַר!"
+- **פירוק:** `ḪUL-uwašš=a` – idālawa- (ḪUL) "evil", gen. pl. + =a "also" ("גם … הרעים"); `UN{MEŠ}-aš` – "people", gen. pl. ("של האנשים"); `ANZELLU` – ANZELLU (Akk. *anzillu*) "taboo, abomination", abl. ("מן האִסּוּר", R1a); `ḫurkilaza` – ḫurkil "abomination", abl. ("מן התועבה", F7); `paprannaza` – papratar "impurity", abl. ("מן הטומאה"); `mulatnaza` – mulātar, abl. ("מן המוּלָאתַר"); `[_]` – a lost sign (not translated); `NÍ.TE LUGAL` – NÍ.TE "body" + LUGAL "king" ("גוף המלך"); `QĀTAMMA` – "so" ("כך", at the head, as AM 76); `parkuešdu` – parkuešš- "become pure", imper. 3sg ("יִטְהַר": vocalized, the intransitive Qal; *parkunu-* "purify" is `טיהר`).
 - **נוסחים:** מקביל ל־AM 30 / 76 (`כך את החולי הרע של האדם הזה – יטהרו הָאֵלִים מן הגוף הלאה!"`): כאן "גוף המלך" הוא הנושא, והפועל עומד ("יטהר"), ובמקום "החולי הרע" – רשימה של ארבע מילות טומאה ואיסור. C שומר חלק מן הרשימה.
 - **תרגומים:** Christiansen (HPM): "so möge von Tabubruch, von sexueller Greuel, von Unreinheit, von mulātar böser Menschen der Körper des Königs ebenso rein sein!“" – "Tabubruch" ל־ANZELLU, "sexuelle Greuel" ל־*ḫurkil*; אנו `אִסּוּר`, `תועבה` (R1a, F7).
 - **הקבלה:** [equivalent] `תּוֹעֵבָה הִוא` (ויקרא יח:כב) – *ḫurkil* היא בחוקים החתיים המילה לעבירות המין האסורות, כמו `תּוֹעֵבָה` בתורה; ו־`מִטֻּמְאֹת בְּנֵי יִשְׂרָאֵל` (ויקרא טז:טז). [divergence] כאן התועבה והטומאה אינן מעשים של המלך, אלא דבר שבא "מן האנשים הרעים" – מן הכישוף של האויבים – ודבק בגופו, ויש לטהר אותו ממנו כמו בגד מלוכלך.
@@ -164,9 +164,9 @@
 
 ### 21
 `n=at=kan [ANA PÉŠ.TUR] dāi`
-> ואותו [אל העכבר הקטן] שָׂמָה;
+> ואותו שָׂמָה [אל העכבר הקטן];
 - **פירוק:** `n=at=kan` – nu + =at "it" + =kan ("ואותו"); `[ANA PÉŠ.TUR]` – "to the little mouse" (restored; "[אל העכבר הקטן]"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
-- **נוסחים:** מקביל ל־AM 37 / 83 (`ואותו מפנה אל העכבר הקטן;`): כאן *dai-* "שׂמה" (כמו כתב היד B של AM 37), לא *nai-*.
+- **נוסחים:** מקביל ל־AM 37 / 83 (`ואותו מפנה אל העכבר הקטן;`): כאן *dai-* "שׂמה" (כמו כתב היד B של AM 37), לא *nai-*; סדר המילים כבפזמון.
 - **תרגומים:** Christiansen (HPM): "und legt es [auf eine Maus.]" – "legt es auf eine Maus" – כמונו (*dai-* `שׂמה`).
 - **הקבלה:** [divergence] `וְצַלְמֵי עַכְבְּרֵיכֶם הַמַּשְׁחִיתִם אֶת הָאָרֶץ` (שמואל א ו:ה) – ראו AM 37. טיפולוגי.
 

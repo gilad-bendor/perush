@@ -93,7 +93,7 @@ Every row of R1 was checked against the five HPM composites (AS, UH, PU, AM, AM2
   `אֹדֶם` ★, NA₄ KÁ.DINGIR.RA `אֶבֶן־בָּבֶל`, the unknown *lullūri*, *TI*, *barašḫa* transliterated and vocalized (`בַּרַשְׁחָה`:
   never the string `בראש`); AN.BAR `בַּרְזֶל`, NAGGA `בְּדִיל`, URUDU `נְחֹשֶׁת`, ZABAR `אָרָד` (HL2), KÙ.BABBAR `כֶּסֶף`, GUŠKIN
   `זָהָב`.
-- **Fat and milk:** Ì / Ì.UDU "fat, tallow" (AS 49; UH 19, 24) = `חֵלֶב` ★ (trap: `חָלָב`); GA.KIN.AG (UH 32) `גְּבִינָה`; EMṢU
+- **Fat and milk:** Ì.UDU "tallow" (UH 19, 24) = `חֵלֶב` ★ (trap: `חָלָב`); {UZU}Ì "fat" (AS 49) = `שומן` (the Laws, HL1 459; review (b)); GA.KIN.AG (UH 32) `גְּבִינָה`; EMṢU
   (UH 32) as HL2 `*קֵבָה*?` / the translator.
 - ***ANZELLU*** (AM2 11, 17; Akk. *anzillu*) = **`אִסּוּר`**: in AM2 it stands beside *ḫurkil* (`תּוֹעֵבָה`, the Laws, F7), so the
   two words need two Hebrews; Etana's *anzillu* `תּוֹעֵבָה` is a split noted for the lead. *papratar* `טֻמְאָה`; *mulātar*
@@ -114,7 +114,7 @@ Every row of R1 was checked against the five HPM composites (AS, UH, PU, AM, AM2
 
 ## R2. Merged from Sub4, part 1 (AS, 109 clauses; 2026-10-30; accepted by the coordinator unless said)
 **Fixed strings for UH, PU, AM (byte for byte):** F17 `איזה אֵל אשר עשה את המגפה הזאת` (a speech-opening `"` only where the speech
-opens: AS 16 opens it, `"איזה אֵל אשר סובב למטה –`); F18 `וְיִפָּנֶה פנימה בטובה!"`; *takšulant- ēšdu* `בשלום יהיה!`; *menaḫḫanda*
+opens: AS 16 opens it, `"איזה אֵל אשר *סובב למטה* –`, a crux since review (b)); F18 `וְיִפָּנֶה פנימה בטובה!"`; *takšulant- ēšdu* `בשלום יהיה!`; *menaḫḫanda*
 `כלפי` (IN); "whoever finds it" `ומי שימצא אותה –` / `… הארץ ההיא תיקח לה!"`; the god's meal `ו(אתה), הָאֵל – כְּאֵל אכול ושתה!` (the `(אתה)` added at review (a): no *zik*)
 (*DINGIR-LIM-nili* `כְּאֵל`), `"והָאֵל ההוא – יאכל וגם ישתה!`; the participants `ואוכלים,` / `ואוכלים ושותים,`; the day's end `והם
 באים הלאה.`, `היום השני – [תַּם].`; F19 `ביום השני, כשעולה השחר, בהשכמה, מיד –`; *anda kiššan memanzi* `ועליהם כך אומרים:`, with
@@ -216,7 +216,7 @@ wife" in a woman's prayer, 235, 248 *šuppa-*, 257; AM2 17 *arḫa arai-*.
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אדום\|אדומה\|אדומים\|אדומות)(?![֑-ׇא-ת])` | `sa5\|sa₅\|ēšḫar` | red `אָדֹם` (plene `אדום` = Edom) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:לבן\|לבנה\|לבנים\|לבנות)(?![֑-ׇא-ת])` | `babbar` | white `לָבָן` (Laban, "to a son"; `לבנה` brick / moon) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:עז)(?![֑-ׇא-ת])` | `uz6-an\|uz6 \{d\}` | she-goat `עֵז` ("strong", `עֹז`; the rituals' UZ₆ – the Laws' ÙZ lines are unambiguous in context) |
-| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:חלב)(?![֑-ׇא-ת])` | `ì\.udu\|\{uzu\}ì\b\|\bì\b` | fat `חֵלֶב` (milk `חָלָב`) |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:חלב)(?![֑-ׇא-ת])` | `ì\.udu` | tallow `חֵלֶב` (milk `חָלָב`) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:בר)(?![֑-ׇא-ת])` | `líl\|gimr` | the open country `בָּר` ("son", "grain", "pure") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אודם)(?![֑-ׇא-ת])` | `gug` | carnelian `אֹדֶם` (plene reads "redness") |
 | `(?<![֑-ׇא-ת])[ובלמכש]?(?:השבעה\|שבעה)(?![֑-ׇא-ת])` | `imin\.imin\|inim\.inim` | the Seven `הַשִּׁבְעָה` ("the oath", "seven") |
