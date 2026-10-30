@@ -1282,8 +1282,8 @@
 
 ### 5:17
 `[adanna=ma=šši {GIŠ}BANŠUR-un] unuēr`
-> [ושולחן לאכול] קישטו [לו],
-- **פירוק:** `[adanna=ma=šši {GIŠ}BANŠUR-un]` – restored ("[ושולחן לאכול … לו]"); `unuēr` – unuwai- "adorn", pret. 3pl ("קישטו").
+> [ולאכול – שולחן] קישטו [לו],
+- **פירוק:** `[adanna=ma=šši {GIŠ}BANŠUR-un]` – restored ("[ולאכול – שולחן … לו]"); `unuēr` – unuwai- "adorn", pret. 3pl ("קישטו").
 
 ### 5:18
 `nu=ššan parā UL šali[kta]`

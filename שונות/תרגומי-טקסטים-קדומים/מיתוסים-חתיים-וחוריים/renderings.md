@@ -126,7 +126,7 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | `\{d\}alal` | `אֲלַלוּ` | | |
 | `ta[šs]miš\|da[šs]miš\|\{d\}tašmit` | `תַּשְׁמִישׁוּ` | ★ | |
 | `\{d\}ištar\|\{d\}gašan(?!\.)` | `אִשְׁתַּר` | | |
-| `ḫe[bp]at\|ḫe[bp]add` | `חֶבַּת` | | |
+| `ḫe[bp]a[td]` | `חֶבַּת` | | (translator 2: was `ḫe[bp]at\|ḫe[bp]add`, which missed *ḫepadun*, UL 3.1:35) |
 | `\{d\}ninatt` | `נִינַתָּה` | | |
 | `\{d\}kul[il]?[td]d?a` | `קוּלִיתָּה` | | |
 | `ḫedamm` | `חֶדַמּוּ` | | |

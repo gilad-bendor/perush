@@ -138,6 +138,76 @@ Ps 1:4 (1:112: chaff); Prov 22:17 (1:131); Th. 517–519 (1:166: Upelluri ~ Atla
 [divergence], Dan 2:35 [equivalent], Th. 820–825 (1:204: the stone that grows to heaven; Typhoeus); Hab 3:4 (1:211: rays);
 Gen 24:33 (1:241: the guest who will not eat before his message).
 
+### Translator 2, part 2 (UL 2–10)
+Drafted 2026-10-30: UL 2:1–2:169 (tablet 2), 3.1:1–3.1:301 (tablet 3, first piece; no 3.1:150 in HPM), 3.2:1–15, and
+fragments 4–10 (559 clauses). The placeholder is gone and the intro covers all three tablets. `verify UL --strict` 0,
+`verify HE KU IL --strict` 0, `selftest` 0, `check_bible_quotes.py` 0 on UL, KU, HE. HPM was read after each block (2:1–169,
+3.1:1–99, 3.1:100–199, 3.1:200–301, 3.2–10); its corrections that I adopted are in **תרגומים** or made silently where the draft
+only had a placeholder ("…"): 2:92 (Ištar puts the stones *on herself*), 3.1:35 (*arai-* "hold fast" `*עצרה*`), 3.1:70
+(`*ימלא*` the years), 3.1:214 (KI.BAD "far from"), 3.1:271/281 ("his wish"), 3.1:291 (3sg), 3.1:293 ("because"), 3.2:10 (imperative).
+
+**Part-1 rulings applied:** KU 49 *ḫatuga-* → `נוראים` (and so UL 2:105, 5:8); KU 57 *naḫšarant-* moved off `נורא` to
+`המטיל יראה` (from *naḫḫ-* `ירא`); HE 5:17 → `[ולאכול – שולחן] קישטו [לו],` (its פירוק too); ṬĒMU / *ḫalugatalla-* `שליח` kept.
+
+**1. The brief's "Ištar singing naked" is not in this text.** UL 2:82 has *waššiyat unuttat* "she clothed herself, adorned
+herself"; no *nekumant-* anywhere in UL 2–10 (the nakedness is HE 4:23, 8:20). So no `ערום`; the note at 2:82 says it and
+1:127's note was corrected. The deaf, blind stone is there (2:97–100: `האיש חירש … ואילו בעיניו הוא עיוור`), with Ps 115:5–6.
+
+**2. Heaven and earth cut apart (3.1:217–235).** *nepiš tekann=a* URUDU *kuruzzit arḫa kuer-* = `ואת השמים ואת הארץ במַחְתֵּךְ של
+נחושת חתכו זה מזה` (3.1:219; footnote) and `אשר בו חתכו את השמים ואת הארץ זה מזה!` (3.1:234). *kuruzzi-* (from *kuer-*)
+`מַחְתֵּךְ`; URUDU *ardala-* "saw" **`מַשּׂוֹר הַנְּחֹשֶׁת`** (3.1:142, 3.1:233; Isa 10:15); *ard-* "saw off" `נסר` (3.1:235).
+Gen 1:6–7 [divergence] (`הבדיל`, `רקיע` reserved, never used); Hesiod Th. 176–181 in the note. Gen 11:4 [divergence] at 3.1:30
+(the stone "finds" the temples; no "head" in the Hittite, so `ראשו בשמים` never used).
+
+**3. Repeated passages copied (byte for byte modulo brackets):** F33 `(כאשר) X שמע את הדברים` (2:131, 3.1:62, 3.1:224);
+F34–F35 (3.1:45–46 imperative to Takiti, **feminine** `קחי מקל [ביד]ך!` / `[ולרג]לייך נעלי נעליים – את [הרוחות] המהירות!`;
+3.1:64–65 as 1:13–14); F36 `וקם חיש,` (3.1:63 = HE 1:77/90), `[ומן הכס]א קם חיש,` (3.1:104 = 1:12); `ובבת אחת חצו,` (3.1:106 =
+1:159); `מיהר, החיש,` (2:132; fem. 3.1:51); `ו[הטה] לי [אוזנך] לדברים!` (3.1:90 = HE 28:3); `את הדברים אשר אני אומר לך –` (3.1:89);
+`ומפני הַזַּעַם […] השתנה.` (2:12, 2:60, 3.1:159 as 1:216); `"היה חי, אאה!` (3.1:170 = 3.1:198; KU 68); `וגם דבר איש לא הביא לך?`
+(3.1:177 = 205); `אבן־השו אשר בתוך המים צמחה –` (3.1:180 = 210); Ea's plan and its execution (3.1:91–97 → 3.1:107–112:
+`חמש פעמים נרכין (ראש)` → `הרכין (ראש)`); Ištar's/Kumarbi's "scatter the gods like birds" (3.2:15 = 1:115); the
+Storm-god's chariot command/execution (2:115–130 → 2:131–142). **Listed by `verify` as "identical source, different
+Hebrew" – justified:** the feminine forms of 1:81/1:133/2:132 at 3.1:45, 3.1:46, 3.1:51 (Takiti is a goddess).
+
+**4. New renderings (first line).** *šanezziš-* `נעם` (2:14, 2:25); *išpai-* `שבע`, *ḫaššik-* `התרווה` (2:18–20); ATḪŪTU `אחים`
+(2:39); *piddai-* "run" `רץ` (2:41, 2:46, 3.1:130; KU's "fled" `נס` with *peran arḫa*: a split by preverb); *te-* `אמר` (2:48);
+Mount Ḫazzi `הר חַזִּי` (2:56; Isa 14:13 `צָפוֹן` in the note); *šapidduwa-* `*מבעית*`; NA₄ ŠU.U `אֶבֶן־הַשּׁוּ` (as IL 112);
+*išḫaḫru* `דמעות`, *arš-* `זרם`, PA₅ `פלג` (2:62; Lam 3:48); *dagan* "on the ground" `על הארץ`; *daganzipa-* **`אדמה`** (2:90,
+3.1:28, 3.1:217; *tekan* stays `ארץ`); *naḫšaratt-* pl. `אימות` (2:66); *mal* `תבונה` (as KU 228); *waššiya-* mid. `התלבש`;
+BALAG.DI `תוף`; *galgalturi-* `מצלתיים` (HE); *šamešiya-* `הקטיר`; *išḫamai-* n. `שיר`; *arkuwai-* `*ענה*`; *aku-* `אבן הים`,
+*paššila-* `חלוק־אבן`; *ḫunḫueššar* `נחשול` (`מבול` reserved; HE's *ḫunḫuwana-* `גאות`); *šunna-* `מילא`; *duddumiyant-* `חירש`;
+*dašuwant-* `עיוור` (as the Laws' *dašuwaḫḫ-* `עיוור`); *kariyašḫa-* `*חנינה*`; *wemiya-* **`מצא`** (2:103, 3.1:30; UL 1:204
+changed from `משיג` to `מוצא` for one verb); *ḫaštališ-* `נעשה גבור` (licensed); GULGULLATU `גולגולת` [cognate, Exod 16:16]
+(2:105; KU's *tarna-* `גולגולת?` should move – **for the lead: KU 117, 118, 168 → `קודקוד?`**); *ḫatukešš-* `נעשה נורא`;
+*kištanu-* `כיבה`; ŠÀ.GAL `מספוא` (UH); *iškiya-* `מרח` (UH); *ḫališšiya-* `ציפה`; BUBŪTU `*סרן*`; *ḫaršiḫarši-* `סערות־הרעם`;
+*ḫeu-* `גשם`; *want-* `לוהט`; É.ŠÀ *šešuwaš* `חדר המשכב` (licensed *šeš-*); *ḫandai-* `ערך`, *tiššai-* `התקין`; Šeri/Šerišu
+one Hebrew `שֵׁרִי`, Tella `תֶּלָּה`, Mount Imgarra `אִימְגַּרָּה`; *ḫilammar* `בית־השער`; *gipeššar* `אַמָּה` (= AMMATU);
+UNŪT MÈ `כלי המלחמה`; *maniyaḫḫ-* `הפקיד` (vocalization trap `מנו` avoided); *tetḫai-* `רעם`, *tetḫeššar* `רעם`; *ḫan-* `שאב`;
+*katkattinu-* `הרעיד`; *weḫ-* `הסתובב` (as HE); *pargatar* `גובה`; *ištapp-* `כיסה` (as HE); GAŠAN `גבירה`; SUḪUR.LA₅
+`משרתות`; *šuḫḫa-* `גג`; *wakkariya-* `חסר`; *ešuwaštati* `נשב`; *genzu dai-* `שם רחמים` (3.1:100; **HE has *genzuwai-* `חס`**);
+*annalla-* `ישן`, *dadalla-* / *ḫuḫadalla-* `של האבות` / `של אבות־האבות`, É NA₄KIŠIB `בית החותם`, *šai-* `חתם`; *kuwašš-*
+`נשק` (3.1:131–132, Ps 2:12); *patalḫa-* `כף רגל` (KU 207 `סוליה`); *ḫila-* `חצר`; *weda-* `בנה`; GIG `כאב`; *akkant-* `מת`,
+*akkatar* `מוות`; SAḪAR `אבק` (`עפר` avoided as the Laws reserve it; Gen 3:19 in the note); *palwai-* `הריע`; *uwai-* `געה`;
+*tuliya-* `אספה` (as HE); *ḫaliya-* `כרע`; *tetana-* `שיער`; *ešša-* `עשה`; NA₄ NUNUZ `חרוז`; KI.MIN `וכו'`; LÚ-*nili* `כגבר`;
+NÍG.GIG `כָּבֵד` (vocalized), *ḫaḫri-* `ריאות`, ÉLLAG `כליות`; AN.BAR `ברזל`; *ḫurki-* `גלגל`; *tiyarit-* `*גלגלים*` (HPM
+"Spindel").
+
+**5. Gates and names.** §H2 Ḫebat `ḫe[bp]at|ḫe[bp]add` missed *ḫepadun* (3.1:35): **changed to `ḫe[bp]a[td]`** (tested).
+Escapes with reasons: `יראה` "he will see" (2:64, 2:66; the *au(š)-* homograph, as part 1); `הארז` (2:107: GIŠ.ERIN broken,
+the licence misses it). Gate proposals of part 1 stand (GI `קנה`, `ḫāli`, `šippanz`, `ירא` homograph, F8 imperative).
+
+**6. Cruxes.** 2:43 *walliwalli-* (HPM "die Ungestüme?"); 2:90 *arkuwai-*; 2:101 *kariyašḫa-*; 2:119–121 the chariot parts;
+3.1:24 *šargann-*; 3.1:35 *arai-*; 3.1:98 *wašdumati*; 3.1:133 *ḫulḫuliya-*; 3.1:208 *arušuwaru*; 3.1:225 *weḫ-* with an object
+(HPM "drehte … die Schulter"); 3.1:252 *gullušši-*; 3.1:254 *āšma* (HPM "einst"; KU 46 `ראשונה`); 3.1:264 *uwai-*; 3.1:265
+*gagaštiya-*; the order of fragments 4–10 (HPM's).
+
+**7. Parallels for the index.** Job 2:13 (2:61: sitting on the ground); Lam 3:48 (2:62: tears like canals); Isa 14:13 (2:56
+Ḫazzi = Zaphon; 3.1:276 "I will go up to heaven, to kingship"); Ps 115:5–6 (2:99: eyes that do not see, ears that do not
+hear); Exod 16:16 (2:105: GULGULLATU [cognate]); Gen 11:4 [divergence] (3.1:30); Judg 17:6 (3.1:85: "no king in heaven"); Isa
+10:15 (3.1:142: the saw); Ps 2:12 (3.1:132: kissing the feet); Gen 1:6–7 [divergence] and Th. 176–181 (3.1:219, 3.1:234:
+heaven and earth cut apart); Gen 3:19 (3.1:252: the dead as dust).
+
 ## Progress
+- 2026-10-30: translator 2, part 2: UL 2:1–10:10 drafted (no review passes yet); UL complete.
 - 2026-10-30: translator 2, part 1: KU 1–296 and UL 1:1–1:253 drafted (no review passes yet).
 - 2026-10-30: base secured, renderings fixed, brief written (the coordinator).
