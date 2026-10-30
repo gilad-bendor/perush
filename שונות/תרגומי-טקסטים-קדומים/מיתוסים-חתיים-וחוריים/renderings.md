@@ -77,7 +77,7 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | {m}Appu | `אַפּוּ` ★ | (unvocalized "his nose / his anger") |
 | Appu's sons ḪUL-lu, NÍG.SI.SÁ | `רַע`, `יָשָׁר` (names, no article) | "Wrong" and "Right": `צַדִּיק` is reserved (§H3). Check the transliteration before believing this row. |
 | {URU}Zalpa, Kaneš, Neša, Tamarmara | `זַלְפָּה` ★, `קָנֵשׁ`, `נֵשָׁה`, `תַּמַרְמַרָה` | |
-| SR: {URU}Ebla, {URU}Ikinkal(i)š, Megi, Zazalla, Purra, Allani | `אֶבְּלָה`, `אִיקִינְקַלִּישׁ`, `מֶגִי`, `זַזַּלָּה`, `פּוּרָּה`, `אַלָּנִי` | Ebla's king, its orator, the captive leader; the Sun-goddess of the Earth (Allani). |
+| SR: {URU}Ebla, {URU}Ikinkal(i)š, Megi, Zazalla, Purra, Allani; (translator 3:) Pazzanikarri, {URU}Lulluwa, {m}Pizi[…], the gentilic *eplumena-* | `אֶבְּלָה` ★, `אִיקִינְקַלִּישׁ`, `מֶגִי`, `זַזַּלָּה`, `פּוּרָּה` ★, `אַלָּנִי`; `פַּזַּנִיקַרִּי`, `לוּלּוּוָה`, `פִּיזִי[…]`, `בני אֶבְּלָה` | Ebla's king, its orator (son of Pazzanikarri), the captive leader; the Sun-goddess of the Earth (Allani: the Hittite writes only *taknaš* {D}UTU = `אֵלַת־הַשֶּׁמֶשׁ שֶׁל הָאֲדָמָה`; the name `אַלָּנִי` is used in notes only). ★ Ebla ("her mourning") and Purra ("fruitful") always vocalized (§H6). |
 | KU/UL (translator 2): {D}Nara, Napšara, Minki, Ammunki, Ammezzadu, Ninlil, Kulkulimma; Mount Kanzura, Mount Tašša; {D}A.GILIM, {D}KA.ZAL, {D}NAM.ḪÉ, {D}EN.KI; the bull Šeri; {URU}Urkiš; the *ikunta* lake; the scribes Ašḫapala, Tarḫuntaššu, LAMMA-SUM, Waršiya, Ziti | `נָרָה`, `נַפְּשָׁרָה`, `מִינְקִי`, `אַמּוּנְקִי`, `אַמֶּזַּדּוּ`, `נִינְלִיל`, `קוּלְקוּלִימָּה`; `הַר קַנְזוּרָה`, `הַר תַּשָּׁה`; `אַ־גִּילִים`, `קַזַל`, `שֶׁפַע` (a name, no article), `אֶנְקִי`; `שֵׁרִי`; `אוּרְקִישׁ`; `אגם אִיקוּנְתָה`; `אַשְׁחַפָּלָה`, `תַּרְחוּנְתַּשּׁוּ`, `קוּרוּנְטָה־פִּיָּה?`, `וַרְשִׁיָּה`, `זִיטִי` | NAM.ḪÉ "abundance" (= *iyatar*, the dossier's `שפע`) as a deity; A.GILIM untranslated (reading unknown). |
 
 ## M2. Key terms (Hittite → Hebrew)
@@ -173,19 +173,27 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | `\{d\}ka\.zal` | `קַזַל` | | KA.ZAL (KU 118) |
 | `\{d\}en\.ki\b` | `אֶנְקִי` | | Enki = Ea (KU 225) |
 | `ašḫapal` | `אַשְׁחַפָּלָה` | | the scribe of KU (KU 287, 292) |
+| `\{d\}šuwaliy` | `שׁוּוַלִיַּת` | | Šuwaliyatt (SR 13.2.1; KU 89; Round 5 run 2, translator 3) |
+| `\{d\}zuen` | `אֵל הַיָּרֵחַ` | | the Moon-god written {D}ZUEN (SR 13.11.2; translator 3) |
+| `\{m\}m[eē]+[kg]` | `מֶגִי` | | Megi, king of Ebla (SR; translator 3) |
+| `zazall` | `זַזַּלָּה` | | Zazalla, the orator of Ebla (SR) |
+| `\{m\}purr` | `פּוּרָּה` | ★ | Purra, the captive (SR; unvocalized "fruitful") |
+| `\{uru\}epl` | `אֶבְּלָה` | ★ | Ebla (SR; unvocalized "her mourning"; the gentilic *eplumena-* `בני אֶבְּלָה`) |
+| `\{uru\}iki(?:n)?kal` | `אִיקִינְקַלִּישׁ` | | Ikinkališ (SR 19.1.1, 19.2.1, 19.15.3, 19.17.1) |
+| `\{m\}pazz` | `פַּזַּנִיקַרִּי` | | Pazzanikarri, Zazalla's father (SR 15.13.3) |
+| `\{uru\}lul+uw` | `לוּלּוּוָה` | | Lulluwa (SR 10.1.1, 10.3.3) |
 
 ## H3. Reserved: never in a myth line (machine-read; the myth texts only)
 | Hebrew (regex on the unvocalized, bracket-free line) | Licence | Why |
 |---|---|---|
-| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:תנין\|תנינים\|התנין\|לויתן\|רהב\|בריח\|עקלתון)(?![א-ת])` | NEVER | Gen 1:21, Isa 27:1 (the dossier's rule: MUŠ = `נחש`) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:תנין\|תנינים\|התנין\|לויתן\|רהב\|עקלתון)(?![א-ת])` | NEVER | Gen 1:21, Isa 27:1 (the dossier's rule: MUŠ = `נחש`) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:ברא\|בורא\|יברא\|נברא\|נבראו\|בריאה\|בריאת\|בראשית)(?![א-ת])` | NEVER | Gen 1:1 |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:שאול\|שאולה)(?![א-ת])` | NEVER | Sheol (*dankui- tekan* = `האדמה האפלה`); `לשאול` "to ask" is never written (guidelines §6.7) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:תהום\|תהומות\|תהו\|בהו)(?![א-ת])` | NEVER | Gen 1:2 |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:רקיע\|הבדיל\|יבדיל\|מבדיל\|הבדילו\|הובדלו\|הבדלה\|נבדל\|נבדלו\|ויבדל)(?![א-ת])` | NEVER | Gen 1:6–7 (*kuer-* = `חתך`) |
-| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:מגדל\|מגדלו\|מגדלים)(?![א-ת])` | NEVER | Gen 11:4 (Ullikummi is a stone, not a tower) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:מבול\|המבול)(?![א-ת])` | NEVER | Gen 6–9 (no flood in these texts) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:נפלים\|נפילים)(?![א-ת])` | NEVER | Gen 6:4 |
-| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:מחה\|ימחה\|אמחה\|נמחה\|נמחו\|למחות\|וימח)(?![א-ת])` | NEVER | Gen 6:7, 7:23 (*ḫarnink-* = `השמיד`) |
+| `(?<![א-ת])ו?(?:כש)?[בלהמכ]?(?:מחה\|ימחה\|אמחה\|נמחה\|נמחו\|למחות\|וימח)(?![א-ת])` | NEVER | Gen 6:7, 7:23 (*ḫarnink-* = `השמיד`); the bare `ש` prefix dropped by translator 3 (SR 15.6.4: it read `שמחה` "rejoices" as ש־מחה, as the law `גר` row read `שגר`) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:השחית\|ישחית\|משחית\|השחיתה\|להשחית\|נשחתה\|שחת)(?![א-ת])` | NEVER | Gen 6:11–13, 9:11 |
 | `(?<![א-ת])ו?(?:שבת\|ישבות\|וישבות\|שבתון)(?![א-ת])` | NEVER | Gen 2:2 (`לשבת` "to sit" is allowed: the prefix class here is `ו` only) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:דרור\|יובל\|היובל\|שמיטה\|שמטה)(?![א-ת])` | NEVER | Lev 25:10, Deut 15 (*parā tarnumar* = `שחרור`) |
@@ -204,6 +212,8 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:נחש\|נחשים\|ניחש)(?![א-ת])` | `muš\|illuyank\|illiyank\|elliyank\|illiunk\|ḫedamm\|schlange` | `נחש` only for MUŠ / *illuyanka-* (the dossier's comparison word) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:גבור\|גיבור\|גבורים\|גיבורים\|גבורה\|גבורת)(?![א-ת])` | `ur\.sag\|ḫaštal\|qarrad\|qarrād\|held` | `גבור` only for UR.SAG / *ḫaštali-* (Gen 6:4) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:ערום\|עירום\|ערומה\|עירומה\|ערומים\|עירומים\|עירמה)(?![א-ת])` | `nekum\|nackt` | `ערום` only for *nekumant-* (Gen 2:25, 3:7) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:מגדל\|מגדלו\|מגדלים)(?![א-ת])` | `an\.za\.gàr\|an\.za\.gar` | `מגדל` only for AN.ZA.GÀR "tower" (SR's tower parable ↔ Gen 11:4; Ullikummi is a stone, not a tower). Made a gate 2026-10-30 (translator 3) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:בריח\|בריחים\|הבריח)(?![א-ת])` | `ḫattal\|riegel` | `בריח` only for *ḫattalu-* "bolt" (the rituals' word; Isa 27:1 `נָחָשׁ בָּרִחַ` stays the apparatus's) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:קנה\|קונה\|קנו\|קניתי\|יקנה)(?![א-ת])` | `wašš\|šám\|kauf` | `קנה` only for "buy" (Gen 14:19: never for Elkunirša) |
 
 ## H5. Formulas (machine-read; the myth texts only)
@@ -232,6 +242,8 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:ישר)(?![֑-ׇא-ת])` | `níg\.si\.sá` | Appu's son "Right" `יָשָׁר` (a name: vocalized) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:רע)(?![֑-ׇא-ת])` | `ḫul-lu\|ḫul-u` | Appu's son "Wrong" `רַע` (a name; "friend") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:זעם)(?![֑-ׇא-ת])` | `.` | `זַעַם` (noun) / `זָעַם` (verb): vocalize where both could be read |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אבלה)(?![֑-ׇא-ת])` | `.` | Ebla `אֶבְּלָה` ("her mourning"; SR, translator 3) |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:פורה)(?![֑-ׇא-ת])` | `.` | Purra `פּוּרָּה` ("fruitful"; SR, translator 3) |
 
 ## H8. The fifth-day dossier's Illuyanka excerpt: revisions pending for the lead (machine-read)
 `verify IL` checks that IL 8–17 equal the dossier's KBo 3.7 i 9–20 (`../מיתוסים-אוגריתיים/3-תיק-היום-החמישי/annotated-IL.rtl.md`)
