@@ -186,5 +186,97 @@ part of this section.
 - A privative compound (*a-vātá*) carries the gated word: the licence regex should match the stem inside a compound.
 - Remembered rank-3 wordings are as unreliable as remembered verses: quote only after `tr`.
 
+## RV10.90 1a–16d (translator 1, Round 5 run 1, part 2)
+
+### Scope
+RV 10.90, the Puruṣa hymn, all 64 pādas: `annotated-RV10.90.rtl.md`, `translation--intro-RV10.90.rtl.md`, generated
+`translation-RV10.90.rtl.md`. Also one change in part 1's RV10.72.7b (below).
+
+### Sources consulted
+VedaWeb Zurich text and morphology; `tr` (Griffith, Geldner, Grassmann, Elizarenkova) after drafting; Jamison's commentary
+on X.90 (`X.61–191-9-25-26.txt`); Enūma eliš IV 137–140, V 53–62 (`../../סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/`);
+Grímnismál 40–41 (Ymir), cited only from knowledge, in a few words. Every Bible verse was printed before it was quoted.
+
+### Decisions
+- ***púruṣa* / *pū́ruṣa* = `אָדָם`** (gated, licensed). The cosmic Man and the name Puruṣa are explained in the apparatus and
+  in a footnote; tagged [equivalent] to Gen 1:27 at 1a, with the warning that the link runs through the Hebrew word.
+- The bahuvrīhis are rendered with `בעל …` (*sahásraśīrṣan* `בעל אלף הראשים` and so on); *tripā́d* `שלושת רבעיו` /
+  `בשלושת רבעיו` (Jamison: a bahuvrīhi in both verses); *pā́da* `רבע` (its sense "foot" is noted).
+- *áti* (1d, 2d, 5c) `מעל` (Jamison: the Man's "beyondness"); *ánna* `מזון`; *amr̥tatvá* `אלמוות` (as *amŕ̥ta*); √*īś*
+  `שלט`; *bhūtá* `נהיה`; *bhávya* `שעתיד להיות`.
+- Virāj `וִירָאג'` (new name, feminine in the Hebrew, although Zurich tags it masculine).
+- **√*tan* + *yajñá* = `פרש (זבח)`** (6b, 15c), split from 10.129.5a *ví √tan* `נמתח` (an idiom: the sacrifice is spread
+  like a weave).
+- *havís* `מנחה` (6a, 6d; Jamison notes the doubling); *ā́jya* `חמאה מזוקקת`; *pr̥ṣadājyá* `חמאה מזוקקת מנומרת`; *idhmá*
+  `העצים`; *samídh* `זרדים`; *paridhí* `מקלות־הגדר`; *barhís* `מצע העשב`; prá √ukṣ `הזה`; *sarvahút* `נוסך הכל`
+  (Jamison: "offering everything", not "fully offered").
+- *vasantá* `אביב`, *grīṣmá* `קיץ`, *śarád* `סתיו`.
+- *paśú* `בהמה`; *vāyavyà* `של הרוח` (*vāyú* = `רוּחַ`); *āraṇyá* `של הבר`; ***grāmyá* `של היישוב`**: `כפר` is blocked by the
+  כפר gate (the "village" is not the root of atonement, but the gate rightly cannot tell them apart).
+- *ŕ̥c* `פסוקי־ההלל`; *sā́man* `נעימות`; *chándas* `משקלים`; *yájus* `אמרת־הזבח` (`נוסח` is *bráhman*'s).
+- *ajāví* `התיישים והכבשים` (renderings §5.4).
+- The four classes: *brāhmaṇá* `בְּרַהְמִין` (renderings), *rājanyà* `רָאגַ'נְיָה`, *vaíśya* `וַאישְׁיָה`, *śūdrá*
+  `שׁוּדְרָה` (new transliterations, with a note).
+- *candrámas* `ירח`; *cákṣus* `עין`; *múkha* `פה`; ***prāṇá* `נשימה`, *vāyú* `רוח`** (Gen 2:7 in the apparatus;
+  `נְשָׁמָה` never); *nā́bhi* `טבור`; *śíras* `ראש`; *díś* `כיוון`; *śrótra* `אוזן`; ***loká* `עולם`** (the coordinator's
+  ruling).
+- √*bandh* `כפת` (15d; Gen 22:9 in the apparatus); *yajñéna yajñám ayajanta* `בזבח זבחו … את הזבח` (one root, זבח).
+- *dhárman* `יסוד`; √*sac* `הגיע`; *pū́rva* `קדמון`; the Sādhyas `הַסָּאדְהְיָה` (new name).
+- 8a = 9a are identical lines, with identical Hebrew.
+- **Part 1 change: RV10.72.7b *bhúvana* `העולמות` → `ההוויות`**, because `עוֹלָם` is now *loká*'s (§11.1).
+
+### Open decisions for the user
+- *púruṣa* = `אדם` is binding, but 10.90 is the place where a reader most needs the name. The footnote at 1a gives it.
+  Should the clean translation instead print `האדם (פּוּרוּשָׁה)` at its first occurrence?
+
+### Progress log
+- 2026-10-30: drafted 1–8 (saved, filled, verified: the כפר gate caught `הכפר` in 8d, fixed to `היישוב`), then 9–16; read
+  `tr` and corrected the Griffith/Geldner quotations; passes (a) to (c): `אֵלֶּה` vocalized (16b); quotation spellings
+  fixed; built; `verify --strict` and `check_bible_quotes` clean for the project.
+
+### The text on its own terms
+- The Man exceeds the world he covers (1cd, 2d, 5c *áti*); only a quarter of him is "all that came to be" (3–4).
+- Virāj is born of him, and he of her (5ab): a loop of births, as with Aditi and Dakṣa (10.72.4–5).
+- Creation is a sacrifice: the gods offer the Man, and the seasons are its butter, wood and oblation (6). Every later
+  sacrifice repeats this first one, and so keeps the world going (16).
+- From the sacrifice come the animals, sorted as the priests sorted them (air, wild, village; teeth in both jaws or not;
+  horse, cow, goat and sheep), and the Vedas themselves (8–10): the sacred word is not a human invention.
+- The four classes come from his mouth, arms, thighs and feet (12). This is the only place in the Rigveda that names all
+  four, and it is the religious charter of caste.
+- The body is the world: mind → moon, eye → sun, breath → wind, head → sky, feet → earth (13–14). This is the root of the
+  Brāhmaṇic "connections" (*bándhu*).
+- "With the sacrifice the gods sacrificed the sacrifice" (16a): the sacrifice is instrument, victim and act at once.
+
+### Key parallels
+- [equivalent] 1a ↔ `וַיִּבְרָא אֱלֹהִים אֶת הָאָדָם בְּצַלְמוֹ` (בראשית א:כז): a primordial "man". In the Veda the world is
+  made from him; in Genesis he comes last.
+- [divergence] 5a ↔ `וַיִּבֶן יְהוָה אֱלֹהִים אֶת הַצֵּלָע אֲשֶׁר לָקַח מִן הָאָדָם לְאִשָּׁה` (בראשית ב:כב): a female born
+  from the Man; but here he is reborn from her.
+- [divergence] 6a (Enūma eliš IV–V, Ymir) ↔ Genesis: a world made from a body (an enemy's body in Babylon and the North, a
+  sacrificed body in India) against a world made by speech.
+- [divergence] 13a ↔ `וַיַּעַשׂ אֱלֹהִים אֶת שְׁנֵי הַמְּאֹרֹת הַגְּדֹלִים` (בראשית א:טז): moon and sun are born from the
+  Man's mind and eye, not made and hung in the sky.
+- [divergence] 13d ↔ `וַיִּפַּח בְּאַפָּיו נִשְׁמַת חַיִּים` (בראשית ב:ז): the world's wind comes out of the Man's breath;
+  the reverse direction.
+- [absent] 12a ↔ `הֲלוֹא אָב אֶחָד לְכֻלָּנוּ` (מלאכי ב:י): one origin of all humans. In the Bible (and in m. Sanh. 4:5)
+  it means equality; in the Veda it grounds the hierarchy.
+- [divergence] 15d ↔ `וַיַּעֲקֹד אֶת יִצְחָק בְּנוֹ` (בראשית כב:ט): a man bound as a sacrificial animal. In the Veda he is
+  killed, and the world is made from him.
+
+### Proposals for the shared renderings
+- *amr̥tatvá* `אלמוות`; *ánna* `מזון`; *áti* (preverb) `מעל`; *pā́da* (quarter) `רבע`; *tripā́d* `שלושת רבעיו`.
+- Virāj `וִירָאג'` (` viraj`), the Sādhyas `הַסָּאדְהְיָה` (` sadhy`), *rājanyà* `רָאגַ'נְיָה`, *vaíśya* `וַאישְׁיָה`,
+  *śūdrá* `שׁוּדְרָה` (new names and transliterations for §3.1).
+- √*tan* + *yajñá* `פרש`; *havís* `מנחה` (confirmed); *ā́jya* `חמאה מזוקקת`; *idhmá* `עצים`; *samídh* `זרד`; *paridhí*
+  `מקל־גדר`; *barhís* `מצע העשב`.
+- *ŕ̥c* `פסוק־הלל`, *sā́man* `נעימה`, *chándas* `משקל`, *yájus* `אמרת־זבח`.
+- *grāmyá* `של היישוב` (*grā́ma* `יישוב`: `כפר` is blocked by the כפר gate); *āraṇyá* `של הבר`.
+- *prāṇá* `נשימה` (confirmed); *cákṣus* `עין`; *nā́bhi* `טבור`; *díś* `כיוון` (with *pradíś*).
+- *bhúvana* `הוויה` (`עולם` is *loká*'s).
+
+### Lessons for the guidelines
+- A root gate catches homographs from prefix + word: `כפרה` "like a cow" (RV 1.32.9d) and `הכפר` "the village" both read as
+  the root כפר. The translator rephrases (`כמו פרה`, `היישוב`); the tool could check a `כ` + noun reading.
+
 ## Parallels index
 (generated from the הקבלה bullets by `../build_parallels_index.py`)
