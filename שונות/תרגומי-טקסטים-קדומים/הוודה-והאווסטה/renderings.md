@@ -84,7 +84,7 @@ rendered).
 | Manu | ` man(?:u\|uh\|ur\|um\|una\|ave\|oh\|or)\b` | `מָנוּ` | ★ | the first sacrificer, father of mankind; the flood's survivor (`מנו` "they counted") |
 | Hariścandra | ` hariscandr` | `הַרִישְׁצַנְדְּרָה` |  | the king (AB 7.13) |
 | Rohita | ` rohit` | `רוֹהִיטָה` |  | his son |
-| Nārada | ` narad` | `נָארַדָה` |  | the sage |
+| Nārada | ` narad(?!h)` | `נָארַדָה` |  | the sage |
 | Śunaḥśepa | ` sunahsep` | `שׁוּנַהְשֵׁפָּה` |  | "Dog's Tail" (a note) |
 | Ajīgarta | ` ajigart` | `אַגִ'יגַרְטָה` |  | his father; Sauyavasi `סָאוּיַוַסִי` |
 | Viśvāmitra | ` visvamitr` | `וִישְׁוָמִיטְרָה` |  |  |
@@ -270,10 +270,10 @@ where the fire-offering is near.
 | F1 | `kasmai devaya havisa vidhema` | `לאיזה אל נכבד במנחה` | RV 10.121.1–9 (the refrain: "To which god shall we do honour with an oblation?") |
 | F2 | `ahann ahim` | `הרג את הנחש` | RV 1.32.1c, 2a (the dossier) |
 | F3 | `peresat zarathustro ahurem mazdam` | `שאל זרתושטרה את אהורה מזדה` | Vd 2.1 (the question formula) |
-| F4 | `ahura mazda mainiio spenista datare gaethanam astuuaitinam asaum` | `אהורה מזדה,? הרוח` | Vd 2.1 (the address: "Ahura Mazdā, most bounteous spirit, maker of the bony living beings, follower of the Order!" – the VD translator fixes the whole Hebrew in a Proposal; *mainiiu* = `רוּחַ` [equivalent], *dātar* = `עוֹשֶׂה`, never `בּוֹרֵא`) |
+| F4 | `ahura mazda mainiio spenista datare gaethanam astuuaitinam asaum` | `אהורה מזדה, הרוח הנדיבה ביותר, עושה בעלי החיים בעלי העצמות, נאמן הסדר` | Vd 2.1 (fixed by the VD translator, §11.3) |
+| F4b | `datare gaethanam astuuaitinam asaum` | `עושה בעלי החיים בעלי העצמות, נאמן הסדר` | Vd 2.39, 42, 43 (the short address) |
 | F5 | `sa hovaca` | `אמר` | ŚB, AB: "he said" |
 
-(F4 checks only its opening; the VD translator fixes the rest and the coordinator tightens the regex.)
 
 ## 9. Repeated lines and the dossier
 - Identical folded source lines get identical Hebrew (`verify` lists every difference: justify or fix). Vd 2's three
@@ -332,3 +332,20 @@ where the fire-offering is near.
   *śyená* `נץ`; *carṣaṇí* `עמים`. The dossier's 1.32 revised in 5a and 5d (both files identical: `verify RV1.32`).
 - Tool fixes: the `עפר` licence no longer includes *reṇú* (`אבק`); the כפר gate allows the simile "like a bull / cow"
   where the source has *iva* / *ná* with a cattle word.
+
+### 11.3 The flood: ŚB 1.8.1, MBh 3.185, Vd 2 (translator 2; merged 2026-10-30)
+- F4 fixed: `אֲהוּרָה מַזְדָּה, הרוח הנדיבה ביותר, עושה בעלי החיים בעלי העצמות, נאמן הסדר!`; F4b the short address
+  (2.39, 42, 43). Av. *spəṇta* `נדיב` (not the root קדש: `הרוח הקדושה` would echo Ps 51:13 – open for the user);
+  *aṣ̌auuan* `נאמן הסדר`; *mrū-* `אמר`, *aog-* `דיבר`, *paiti-aog-* `השיב`, *pərəs-* mid. `נועץ`; *yazata* `ראויי
+  הזבח`, *māzdaiiasni* `זובחי מזדה` (Av. *yaz-* = Skt *yaj* = `זבח`); *frād-* / *vard-* `הצמיח` / `הגדיל` (not
+  `פרה` / `רבה`); *vi-šu* `התרחב` / `הרחיב`; *ham-gam* / *haṇjamana* `התאסף` / `אספה`; *aŋra mainiiu* `הרוח
+  המזיקה`; *raōcana* `חלון`; *miϑβara* `זוגות־זוגות`; *frakauua* `גיבן`.
+- Names: Vaivasvata `מָנוּ בן וִיוַסְוַנְט`; Av. *vīuuaŋhana* `בן וִיוַנְגְהְוַנְט` (Yama, Manu and Yima visibly
+  brothers); Brahmā `בְּרַהְמָה`; Vaiśaṃpāyana, Gaṅgā, Karšiptar, Uruuatat̰.nara as in the files.
+- Sanskrit: √*bhr̥* `גידל`; *pralaya* `כיליון`; √*sr̥j* / *sarga* `שילח` / `שילוח` (the RV's root kept); *tapas* +
+  √*tap* `התלהט להט`; *animiṣa* `שאינו ממצמץ`; *āśís* `ברכה`. Recorded splits: *éka* + *evá* `לבדו`; epic *salila*
+  `מים` (the RV's *salilá* keeps `נחשול`); √*bandh* of a boat `קשר` (a victim `כפת`); *upa-* √*kl̥p* `הכין`, *ava-*
+  `ערך`.
+- Tool fixes: the `רוח`, `טוב`, `חי` licences widened (*vāta* in compounds, the vocative *sādho*, CAB's *gaiia*); the
+  deva trap no longer fires on `אל` "to" because of an unrelated *dev*-string; `ave` prints the whole CAB record; the
+  Nārada regex skips *narādhipa*.

@@ -481,7 +481,7 @@ RESERVED = [
     # --- only for the source's own counterpart (renderings §5.2) ---
     (W + alt("נחש", "הנחש", "נחשים", "הנחשים", "נחשי", "נחשה") + E, r" ahi| ahe| azh| azi| sarp| ahin", "נָחָשׁ only for áhi / Av. aži / sarpá"),
     (W + alt("חושך", "חשך", "החושך", "החשך", "חשכה", "חשיכה", "בחושך", "בחשך", "מחושך") + E, r"tama|tamis|tamas|andha|temah|tqma|tqm", "חֹשֶׁךְ only for támas / andhá (Av. təmah)"),
-    (W + alt("רוח", "רוחות", "הרוח", "הרוחות", "רוחו", "ברוח", "רוחי", "לרוח") + E, r" vat| avat| vay| vaat| vata| vayu| mainii| mainy| manyu", "רוּחַ only for vā́ta / vāyú (Av. vāta) – the wind – and Av. mainiiu 'spirit'; ātmán = נֶפֶשׁ, prāṇá = נְשִׁימָה"),
+    (W + alt("רוח", "רוחות", "הרוח", "הרוחות", "רוחו", "ברוח", "רוחי", "לרוח") + E, r"vat|vay|vaat|vayu|mainii|mainy|manyu", "רוּחַ only for vā́ta / vāyú (Av. vāta) – the wind – and Av. mainiiu 'spirit'; ātmán = נֶפֶשׁ, prāṇá = נְשִׁימָה"),
     (W + alt("זרע", "הזרע", "זרעו", "זרעים", "זרעה", "זרעם", "לזרע", "מזרע") + E, r"ret|bij|taoxm|tauxm|taox|garbh|vap", "זֶרַע only for rétas / bī́ja / Av. taoxman (and √vap 'sow')"),
     (W + alt("קשת", "הקשת", "קשתו", "בקשת", "קשתי") + E, r"dhanu|dhanv|thanva|indradhan", "קֶשֶׁת only for dhánus (Gen 9:13 in the apparatus)"),
     (W + alt("איל", "האיל", "אילים", "האילים") + E, r"mes|vrsn|aja |ura", "אַיִל only for meṣá (ram)"),
@@ -489,14 +489,14 @@ RESERVED = [
     (W + alt("אדמה", "האדמה", "באדמה", "לאדמה", "אדמתו", "מאדמה", "מהאדמה") + E, r"bhum|bhu|zam|zem|kse|ksa|ksm", "אֲדָמָה only for bhū́mi (and Av. zam 'ground' where by sense)"),
     (W + alt("אדם", "האדם", "לאדם", "באדם", "מאדם", "כאדם") + E, r"purus|purs|puru|nar|nr|mas|masy|purusa", "אָדָם only for púruṣa (Av. maṣ̌iia 'man')"),
     (W + alt("טוב", "טובה", "טובים", "טובות", "הטוב", "הטובה", "הטובים", "הטובות", "טובו", "טובת", "מיטב", "היטיב", "וטוב") + E,
-     r"bhadr|vasu|vasv|vam|sadhu|siva|\bsu|vohu|vanh|vahis|srir|sri|hu|sev|sobh|kalya|bhavya|jyes|sres", "טוֹב only for bhadrá / vásu / vāmá / sādhú / su- (Av. vohu, vahišta)"),
+     r"bhadr|vasu|vasv|vam|sadh|siva|\bsu|vohu|vanh|vahis|srir|sri|hu|sev|sobh|kalya|bhavya|jyes|sres", "טוֹב only for bhadrá / vásu / vāmá / sādhú / su- (Av. vohu, vahišta)"),
     (W + alt("ברך", "בירך", "ברכה", "ברכת", "מבורך", "יברך", "ברוך", "ברכו", "ברכם", "ברכות") + E, r"asis|asir|svast|vand|bhadr", "the root ברך only for āśís ('blessing, wish') / svastí"),
     (W + alt("ארור", "ארורה", "ארר", "אורר", "מארה") + E, r"sap|abhisap|nirrt", "the root ארר only for √śap"),
     (W + alt("שבת", "השבת", "שבתו", "שביתה", "שבתה", "וישבות", "שבות") + E, None, "the root שבת never"),
     (W + alt("קדוש", "קדושה", "קדושים", "הקדוש", "קודש", "הקודש", "קדש", "קידש", "מקדש", "המקדש") + E, r"medhy|yajniy|pavitr|puny|suc|yasniy|yazat|spent", "the root קדש only for médhya / yajñíya / Av. spəṇta / yazata"),
     (W + alt("מזבח", "המזבח", "מזבחות", "מזבחו") + E, r"vedi|uttaraved|yup", "מִזְבֵּחַ only for védi (the altar-ground) – yū́pa = עַמּוּד־הַזֶּבַח"),
     (r"(?<![א-ת])ו?(?:נח|נוח|ינוח|לנוח)(?![א-ת])", r"(?!)", "נָח never (the string of Noah): √śī = שָׁכַב, √viś = שָׁקַע"),
-    (W + alt("חי", "חיה", "חיים", "החיים", "חית", "חיות") + E, r"jiv|jiva|asu|ayu|ayus|prana|jav|gaya|gay|gaeth|pasu|svap|mrg|bhu|jan|vaj|ji|vita|stao|pasv|vay|tiryag", "חַי / חַיָּה / חַיִּים only for jīvá / ásu / ā́yus / mr̥gá (animal) / Av. gaiia"),
+    (W + alt("חי", "חיה", "חיים", "החיים", "חית", "חיות") + E, r"jiv|jiva|asu|ayu|ayus|prana|jav|gaya|gay|gai|gaeth|pasu|svap|mrg|bhu|jan|vaj|ji|vita|stao|pasv|vay|tiryag", "חַי / חַיָּה / חַיִּים only for jīvá / ásu / ā́yus / mr̥gá (animal) / Av. gaiia"),
 ]
 
 V = NIQ
@@ -504,7 +504,7 @@ RW = rf"(?<![{V}א-ת])[ובלמהכש]?"
 RE_ = rf"(?![{V}א-ת])"
 # (regex on the RAW line, condition regex on the licence text: if it matches, the unvocalized string is an error; why)
 TRAPS = [
-    (RW + r"(?:אל|אלים|אלה|אלות|אלי|אלת)" + RE_, r"dev|deva|daev|sura|bhaga|yazat|ahur", "deva: אֵל / אֵלִים / אֵלָה / אֵלוֹת always vocalized ('to', 'these')"),
+    (RW + r"(?:אל|אלים|אלה|אלות|אלי|אלת)" + RE_, r" dev| daev| sura| yazat", "deva: אֵל / אֵלִים / אֵלָה / אֵלוֹת always vocalized ('to', 'these')"),
     (RW + r"(?:ימה)" + RE_, r"yama|yima", "Yama / Yima: always vocalized יָמָה / יִימָה ('to the sea')"),
     (RW + r"(?:ימי)" + RE_, r"yami", "Yamī: always vocalized יָמִי ('days of')"),
     (RW + r"(?:מנו)" + RE_, r"manu|manav|manor|manos|mano", "Manu: always vocalized מָנוּ ('they counted', 'from us')"),
@@ -925,7 +925,7 @@ def _cab(params):
 def cmd_ave(form):
     d = _cab({"op": "word", "form": form})
     for r in d.get("results", []) if isinstance(d.get("results"), list) else [d]:
-        print(json.dumps(r, ensure_ascii=False)[:1500])
+        print(json.dumps(r, ensure_ascii=False)[:8000])
     if not d.get("results"):
         d = _cab({"op": "search", "query": form, "mode": "contains", "limit": 15})
         for r in d.get("results", []):
