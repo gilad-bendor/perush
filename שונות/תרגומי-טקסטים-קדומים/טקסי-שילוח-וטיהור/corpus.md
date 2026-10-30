@@ -24,3 +24,11 @@ Prayers if a later round wants them beside the rites.
 - The danger and the method: `renderings.md` (intro). The Lev 14 / 16 words are gated to their real Hittite counterparts
   or reserved; the comparison lives in the apparatus.
 - Parallels index: each project's in its `project.md`, merged here in `parallels-index.md` by Bible verse.
+
+## Status
+| # | Project | Status |
+|---|---|---|
+| 1 | `1-טקסי-השילוח-החתיים/` (AS 109, UH 33, PU 56, AM 260, AM2 23 clauses) | **Complete** 2026-10-30 (Round 4 run 6 sub 4): drafted by one Opus translator in four parts, three review passes, intros, built (`translation.rtl.md`), 102 parallels rows, print stub `../הדפסה/טקסי-שילוח-וטיהור/1-טקסי-השילוח-החתיים.rtl.md`. |
+
+The corpus tool is `../tools/hittite_tools.py` (keys AS, UH, PU, AM, AM2); the parallels index is built by
+`build_parallels_index.py` here (it also writes each text's "Part <KEY>: parallels index" into the project's `project.md`).
