@@ -155,6 +155,16 @@ verbs `מאדים`, `מוריק`, `משחיר`, `[ומלבין?]`; IDI `תדע`,
 (the old `[ובלהמכש]*` read `מש`, `שו` as prefixes: `משגר`, `שוזר`; the PU 17 escape removed); H2 row the Seven; traps `השבעה` /
 `לשבעה` ("the oath") and `אלה` with DINGIR.MUNUS ("these").
 
+## R4. Merged from Sub4, part 3 (AM 1–110, §1–§25′; 2026-10-30; accepted by the coordinator)
+The Ambazzi refrains are fixed at their first copies (the table with all four copies' lines: `1-…/project.md`, Proposals, Part 3)
+and copied byte for byte into 51–110. The 3sg prescriptions are Ambazzi's own (feminine), the 3pl her helpers (AM2 18 names
+*{MUNUS}ŠU.GI* "the old woman"). **Words:** *šanḫ-* "roast" `קלה` (AM 5, 53: a homonym of IN's *šanḫ-* "sweep, seek"); SÍG *ištagga-*
+"bowstring" `מיתר`; MAŠ.SÌL "hip" `המותן`; *AŠAR 2-ŠU* "in a second place"; *innarawatar* `כוח`; *šuḫḫa-* `פיזר`; *nanna-* "drive
+off" `הרחיק`; *kuer-* `כרת`; ÚR "limb" `איבר` in AM (`ירך` in AS, PU: split by sense, accepted). **Names:** Mammai `מַמַּאי` ★ (AM),
+Mammāimi `מַמָּאִימִי` (AM2): two H2 rows (the two escapes removed). **Tables:** traps `ממאי`, `שאלה` (*šāla-*); the AM 86 selftest
+line replaced by the drafted one (`ואותה`: the evil). Not added: `לֵךְ`, `שָׂמָה` (too common for a licence-free trap; the reviewers
+check them by eye).
+
 ## H2. Names (machine-read; the ritual texts)
 | Source (regex) | Hebrew | ★ | Note |
 |---|---|---|---|
@@ -167,7 +177,8 @@ verbs `מאדים`, `מוריק`, `משחיר`, `[ומלבין?]`; IDI `תדע`,
 | `tarpatt\|tarpadd` | `תַּרְפַּתַּשִּׁי` | | Tarpattašši, a Luwian god (Luwian *tarpatt-* "substitute"?: a note). |
 | `alauwaim\|alāuwaim` | `אֲלַוַּיְמִי` | | Alauwaimi, a Luwian god. |
 | `zarniz` | `זַרְנִיזָה` | | Zarniza. |
-| `mamm[aā]` | `מַמָּאִימִי` | | Mammai / Mammaimi. (AM *Mammai* / AM2 *Mammāimi*: the translator decides one form or two, in Proposals) |
+| `mamm[aā]i(?!m)\|mamma\b\|mamma=` | `מַמַּאי` | ★ | Mammai (AM; unvocalized "from what"), Sub4 part 3 |
+| `mamm[aā]im` | `מַמָּאִימִי` | | Mammāimi (AM2) |
 | `\{d\}inim\.inim\.bi\|\{d\}imin\.imin\.bi` | `שִּׁבְעָה` | ★ | the Seven, `הַשִּׁבְעָה` (UH 28 `לַשִּׁבְעָה`; both manuscripts {D}IMIN.IMIN.BI, the composite's INIM.INIM.BI a slip; = Akk. *Sebettu*, Erra's `הַשִּׁבְעָה`) |
 | `zarpiy` | `זַרְפִּיָּה` | | Zarpiya, the author of the first ritual on the tablet (AS 101). |
 
@@ -201,6 +212,8 @@ verbs `מאדים`, `מוריק`, `משחיר`, `[ומלבין?]`; IDI `תדע`,
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אודם)(?![֑-ׇא-ת])` | `gug` | carnelian `אֹדֶם` (plene reads "redness") |
 | `(?<![֑-ׇא-ת])[ובלמכש]?(?:השבעה\|שבעה)(?![֑-ׇא-ת])` | `imin\.imin\|inim\.inim` | the Seven `הַשִּׁבְעָה` ("the oath", "seven") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אלה)(?![֑-ׇא-ת])` | `dingir\.munus\|dingir munus` | goddess `אֵלָה` ("these") |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:ממאי)(?![֑-ׇא-ת])` | `mamm` | Mammai `מַמַּאי` ("from what") |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:שאלה)(?![֑-ׇא-ת])` | `šāla\|šala` | the hide *šāla-* `שָׁאלָה` ("question") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:עטרה)(?![֑-ׇא-ת])` | `kilīl\|kilil` | `עֲטָרָה` (Ataroth, "crowned her") – vocalize once |
 
 ## H9. Selftest (ritual lines)
@@ -230,6 +243,6 @@ verbs `מאדים`, `מוריק`, `משחיר`, `[ומלבין?]`; IDI `תדע`,
 | UH 6 | ok | `ומכניסים צמר כחול, צמר אָדֹם, צמר ירוק, צמר שחור וצמר לָבָן,` |
 | UH 12 | err | `"הנה את הכבש המעוטר הזה לך, לָאֵל, לרצון הבאנו;` |
 | AM 41 | ok | `ואת העַכְבָּר הקטן משלחים הלאה.` |
-| AM 86 | ok | `"ואותו העכבר הקטן הזה אל ההרים הגבוהים, אל העמקים העמוקים, אל הדרכים הארוכות יישא!"` |
+| AM 86 | ok | `ואותה העכבר הקטן הזה אל ההרים הגבוהים, אל העמקים העמוקים, אל הדרכים הארוכות יישא!"` |
 | AM 95 | err | `ואת העז לאֲלַוַּיְמִי מקריבה:` |
 | AM2 11 | ok | `וכך יטוהר גם גוף המלך מן האיסור, מן התועבה, מן הטומאה, מן ה… של האנשים הרעים!` |

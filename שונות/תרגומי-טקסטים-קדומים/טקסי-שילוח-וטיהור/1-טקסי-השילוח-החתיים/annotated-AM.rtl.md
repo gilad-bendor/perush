@@ -1,0 +1,800 @@
+# טקס אַמְבַּזִּי (CTH 391.1) – תרגום מבואר
+
+נוסח הבסיס: המהדורה הביקורתית של B. Christiansen בפורטל ההיתיתולוגיה של מיינץ (HPM, "Beschwörungsrituale der Hethiter", 2017; CC BY-SA 4.0; על בסיס מהדורתה Christiansen 2006, StBoT 48): נוסח משולב לכל משפט (kolon), ותחתיו כתבי היד. הטקס נשמר בכתב חתי חדש (המאה ה־13 לפנה"ס), במסורת לוּוִית. כתב היד העיקרי הוא A (A1+2, צד קדמי, טורים I–IV), ולצדו השברים B ו־C (וכמה שברים קטנים בהמשך הטקס), כפי שהם מופיעים במהדורה; מספרי הלוחות אינם נתונים בקבצי הבסיס שלנו. ראשית הטור הראשון שבורה, ורבות מן ההשלמות שבו – של העורכת – לקוחות מן העותקים החוזרים של אותם פזמונים בהמשך הלוח: הטקס בנוי מסבבים, וכל סבב חוזר על המעשים ועל הדברים של קודמו. נוסח שני וקצר של הטקס (CTH 391.2) מתורגם בקובץ נפרד (AM2). מספרי השורות הם מספרי המשפטים של HPM; בחלק הזה 1–110 (§1–§25′).
+
+**הדוברת.** אַמְבַּזִּי היא אשה (*{f}*), "הזקנה" (*{MUNUS}ŠU.GI*), כלומר מומחית טקסית. היא מדברת בגוף ראשון ("אני זורה", "אני מכבה", "אני אומרת"), ובאותם מעשים עצמם הכתוב עובר לגוף שלישי יחיד ("זורה", "מכבה", "אומרת": 3–7 לעומת 51–55). הנושא של הפעלים בגוף שלישי יחיד הוא, אם כן, אַמְבַּזִּי עצמה – כך גם בנוסח השני, שבו "הזקנה" נזכרת בשמה כנושא אותם מעשים (AM2 18) – והם מתורגמים בלשון נקבה (`אומרת`, `שׂמה`). הפעלים ברבים ("משלחים", "מבשלים") הם של העוזרים.
+
+סימנים: `[ ]` – משוחזר (בידי העורכת, לפי הסבבים המקבילים; ההשלמה מסומנת בעברית כמו בחתית); `[…]` – שבור; `…` – מילה שלא נקראה; `( )` – הוסף לשם הבנה; `?` – קריאה או פירוש לא ודאיים; `*…*` – תרגום לא ודאי. מילה עברית מוקפת בסוגריים מרובעים כשגזע המילה החתית משוחזר. המילים הקבועות כבשאר טקסי השילוח (`annotated-AS.rtl.md`, `annotated-UH.rtl.md`, `annotated-PU.rtl.md`; `../renderings.md` §R1–§R3): *idālu-* = `רע`, *idālu* = `הרעה`; *PÉŠ.TUR* = `עכבר קטן`; *arḫa tarna-* = `שילח הלאה`; *nai-* = `הפנה`; *peda-* = `נשא`; *kištanu-* = `כיבה`; *ḫuittiya-* = `משך`; *parkunu-* = `טיהר`; *ÁZLAG* = `כובס`; *zaḫḫ-* = `נאבק`; *išḫuwa-* = `זרה`, *šuḫḫa-* = `פיזר`; *šipant-* = `הקריב`; *TI-tar* = `חיים`, *MU.ḪI.A GÍD.DA* = `שנים ארוכות`, *innarawatar* = `כוח`; *maḫḫan … QĀTAMMA* = `כשם ש… כך`; *QĀTAMMA* = `כך`; *EGIR-anda* = `אחר כך`; *DINGIR.LÚ.MEŠ* = `הָאֵלִים הזכרים`.
+
+## §1 – הקערה והאש
+
+### 1
+`UMMA {f}Ambazzi`
+> כה (אומרת) אַמְבַּזִּי:
+- **פירוק:** `UMMA` – UMMA (Akkadogram) "thus" ("כה", F10); `{f}Ambazzi` – Ambazzi, woman's name ("אַמְבַּזִּי").
+- **תרגומים:** Christiansen (HPM): "Folgendermaßen (spricht) Ambazzi:"
+- **הערות:** אַמְבַּזִּי – אשה, ובהמשך היא "הזקנה" (*{MUNUS}ŠU.GI*, AM2 18): התואר של המומחיות הטקסיות החתיות, הנשים הזקנות היודעות לחשים ומעשים. השם לוּוִי. הטקס מכוון אל אלים לוּוִיִּים, ומתאר את הרעה כחומר שאפשר לכבות, למשוך, לכבס ולשלוח הלאה בעכבר.
+
+### 2
+`mān {D}Za[rnizan {D}Tarpat]tašši[n] iyami`
+> כאשר ל[זַרְנִיזָה] ו[לתַּרְפַּתַּשִּׁי] אני עושה (טקס):
+- **פירוק:** `mān` – mān "when, if" ("כאשר"); `{D}Za[rnizan` – Zarniza, a deity, acc. (partly restored: the Hebrew brackets the whole name; "ל[זַרְנִיזָה]"); `{D}Tarpat]tašši[n]` – Tarpattašši, a deity, acc. (partly restored; "ו[לתַּרְפַּתַּשִּׁי]"); `iyami` – iya- "do, make; perform (a ritual) for (acc. of the god)", pres. 1sg ("אני עושה").
+- **תרגומים:** Christiansen (HPM): "Wenn ich Za[rniza und Tarpa]tassa behandle," – "behandle" – כמונו (*iya-* + האל כמושא: `עושה (טקס) ל־`).
+- **הערות:** "כאשר אני עושה (טקס) לזַרְנִיזָה ולתַּרְפַּתַּשִּׁי": שני אלים לוּוִיִּים, שמונחים גם הם בגוף ראשון של המומחית. שמו של תַּרְפַּתַּשִּׁי קשור אולי למילה הלוּוִית *tarpatt-* "תחליף", ואולי הוא האל שמקבל את התחליף (העכבר) – השערה בלבד. *iya-* עם האלוהות כמושא – "לעשות (טקס) לאֵל".
+
+### 3
+`nu=ššan ANA {DUG}DÍLIM.GAL S[A5 {GIŠ}ḫ]uw[alliš išḫuwaḫḫi`
+> ואל אגן אָ[דֹם – עצי־ח]וּוַ[לִּי אני זורה],
+- **פירוק:** `nu=ššan` – nu "and" + =ššan ("ו־"); `ANA {DUG}DÍLIM.GAL` – ANA "into" + DÍLIM.GAL "large bowl, basin" ("אל אגן"); `S[A5` – SA₅ "red" ("אָ[דֹם]"); `{GIŠ}ḫ]uw[alliš` – GIŠ ḫuwalli- (*ḫulli-*), a wood or kindling, acc. pl. ("[עצי־ח]וּוַ[לִּי]"); `išḫuwaḫḫi` – išḫuwa- "strew, throw", pres. 1sg (restored; "[אני זורה]").
+- **תרגומים:** Christiansen (HPM): "dann schütte ich auf eine ro[te] Schale [Wa]cholder[holz](?)," – "Wacholderholz(?)" ל־*ḫuwalli-* ("עץ ערער?"); אנו בתעתיק, `עצי־חוּוַלִּי`.
+- **הקבלה:** [divergence] `וְצִוָּה הַכֹּהֵן וְשָׁחַט אֶת הַצִּפּוֹר הָאֶחָת אֶל כְּלִי חֶרֶשׂ עַל מַיִם חַיִּים` (ויקרא יד:ה) – גם בטקס המצורע כלי ומים בפתח הטקס; כאן אגן אדום, עצים (בוערים?) ומים שמכבים אותם (6). הדמיון טיפולוגי.
+- **הערות:** *ḫuwalli-* (וגם *ḫulli-*, 51) – עצים או קיסמים שמבעירים באגן; ב־6 הם מכובים במים. *DÍLIM.GAL* – קערה גדולה, `אגן` (כדי להבדיל מ־*ḫuppar* `קערה`).
+
+### 4
+`šer=a=ššan ḫalkin kar(a)š išḫuwaḫḫi`
+> ועל גביו – תבואה (ו)כוסמת אני זורה;
+- **פירוק:** `šer=a=ššan` – šer "above, on top" + =a "and" + =ššan ("ועל גביו"); `ḫalkin` – ḫalki- "grain", acc. ("תבואה", HL1); `kar(a)š` – karaš (= ZÍZ) "emmer wheat", acc. ("כוסמת", HL2); `išḫuwaḫḫi` – išḫuwa- "strew", pres. 1sg ("אני זורה").
+- **תרגומים:** Christiansen (HPM): "oben darauf aber schütte ich Gerste und karš-Getreide." – "Gerste und karš-Getreide" – *ḫalki-* "שעורה" אצלה; אנו `תבואה` (HL1) ו`כוסמת` (ZÍZ = *karaš*, HL2).
+
+### 5
+`n=at=kan šanḫuwanzi`
+> ואותו קולים,
+- **פירוק:** `n=at=kan` – nu "and" + =at "it", acc. + =kan ("ואותו"); `šanḫuwanzi` – šanḫ- "roast", pres. 3pl ("קולים"; a homonym of *šanḫ-* "seek; sweep", IN).
+- **תרגומים:** Christiansen (HPM): "Und man röstet es." – "röstet" – כך גם אנו בתיקון (`קולים`).
+- **הערות:** *šanḫ-* כאן "לקלות" (כ־Christiansen: "röstet"): התבואה והכוסמת נקלות על העצים הבוערים באגן. זו מילה אחרת מ־*šanḫ-* "לבקש; לטאטא" של ההוראות (`מטואטא`, `דרש`): שני פעלים הומונימיים, ושתי מילים עבריות. הנושא ברבים – העוזרים.
+
+### 6
+`namma [{G]}IŠḫuwalliš witenit kištanumi`
+> ועוד: את עצי־החוּוַלִּי במים אני מכבה,
+- **פירוק:** `namma` – namma "further, then" ("ועוד"); `[{G]}IŠḫuwalliš` – ḫuwalli-, acc. pl. ("את עצי־החוּוַלִּי"); `witenit` – wātar "water", instr. ("במים"); `kištanumi` – kištanu- "extinguish", pres. 1sg ("אני מכבה", IN `כיבה`).
+- **תרגומים:** Christiansen (HPM): "Dann lösche ich das Wacholderhol[z](?) mit Wasser"
+
+### 7
+`nu m[em]aḫḫi`
+> ואני אומ[רת]:
+- **פירוק:** `nu` – nu "and" ("ו־"); `m[em]aḫḫi` – memai- "speak, say", pres. 1sg (partly restored; "אני אומ[רת]").
+- **תרגומים:** Christiansen (HPM): "und s[pr]eche:"
+
+## §2 – הכיבוי: "כשם שאת אלה כיביתי"
+
+### 8
+`maḫḫan=kan kē kišta[nunu]n`
+> "כשם שאת אלה כיב[יתי],
+- **פירוק:** `maḫḫan=kan` – maḫḫan "as" + =kan ("כשם ש־"); `kē` – kā- "this", acc. pl. n. ("את אלה"); `kišta[nunu]n` – kištanu- "extinguish", pret. 1sg (partly restored; "כיב[יתי]").
+- **תרגומים:** Christiansen (HPM): "„Wie [ic]h dieses ausgelö[sch]t habe,"
+- **הערות:** משל של כיבוי – "פזמון הכיבוי", שחוזר בכל סבב (8–9, 56–57, 133–134, 209–210): כשם שהאש באגן כבתה במים, כך תכבה הרעה. הרעה היא כמו אש: היא בוערת על האדם, ואפשר לכבות אותה.
+
+### 9
+`idālu=ya=kan ANA {LÚ.MEŠ}BĒLŪTIM šer QĀTAM[MA ki]štaru`
+> כך גם הרעה שעל האדונים – [ת]כבה!"
+- **פירוק:** `idālu=ya=kan` – idālu "evil", nom.-acc. n. + =ya "also" + =kan ("גם הרעה"); `ANA {LÚ.MEŠ}BĒLŪTIM` – ANA "to" + BĒLŪTU (Akk.) "lords" ("האדונים"); `šer` – šer "upon, above" ("שעל"); `QĀTAM[MA` – QĀTAMMA "so, likewise" ("כך"); `ki]štaru` – kištai- (mp) "be extinguished", imper. 3sg (partly restored; "[ת]כבה").
+- **תרגומים:** Christiansen (HPM): "so soll auch eben[so] das Böse über den Herren [erlö]schen!“"
+- **הקבלה:** [absent] אין במקרא טקס של כיבוי אש כמשל להסרת רע. ההפך: `כִּי הוּא כְּאֵשׁ מְצָרֵף` (מלאכי ג:ב) – האל עצמו כאש המטהרת.
+- **הערות:** "האדונים" (*BĒLŪTU*, *EN.MEŠ*) – בעלי הטקס, אנשים רמי מעלה שהטקס נעשה בעבורם. הרעה "שעליהם" – מונחת עליהם, כמשא או כמחלה.
+
+## §3 – הקשת, החיצים והעור
+
+### 10
+`nu=ššan ḫalkin kar(a)š ḫ[urt]a[l]linzi pūr[p]ūriēšš=a iš[n]aš 2 {G[}IŠPAN]`
+> ותבואה, כוסמת, ח[וּרְטַ]לִּים, וגם כדורים של בצק, שתי [קשתות],
+- **פירוק:** `nu=ššan` – nu "and" + =ššan ("ו־"); `ḫalkin` – ḫalki- "grain", acc. ("תבואה"); `kar(a)š` – "emmer" ("כוסמת"); `ḫ[urt]a[l]linzi` – ḫurtalli-, an object (of dough?), acc. pl. (partly restored; "ח[וּרְטַ]לִּים"); `pūr[p]ūriēšš=a` – pūrpūri- "ball, lump", acc. pl. + =a "and" ("וגם כדורים"); `iš[n]aš` – išna- "dough", gen. ("של בצק"); `2 {G[}IŠPAN]` – GIŠPAN "bow", "two" (partly restored; "שתי [קשתות]").
+- **תרגומים:** Christiansen (HPM): "Und darauf Gerste und karš-Getreide, Ge[meng]sel und Kugeln aus T[e]ig, 2 B[ogen]" – "Gemengsel" ("תערובת") ל־*ḫurtalli-*; אנו בתעתיק.
+- **הערות:** רשימה של חפצים קטנים שמונחים יחד על מגש (14): זרעים, כדורי בצק, *ḫurtalli-* (מילה לא ברורה, אולי עוגה או צורה מבצק), קשתות וחיצים (12) – כלי מלחמה, כלי צייד. המטרה נאמרת בפזמון של 31–33: האלים לא ייאבקו עוד באדונים, אלא בחפצים האלה.
+
+### 11
+`[n=at=š]an [IŠTU {SÍG}ištaggai ḫuitt]iyan`
+> [ואותן – במיתר משוכות];
+- **פירוק:** `[n=at=š]an` – nu "and" + =at "them", acc. pl. + =šan (partly restored; "[ואותן]"); `[IŠTU {SÍG}ištaggai` – IŠTU "with" + SÍG ištagga- "bowstring" (determinative "wool") (restored; "[במיתר]"); `ḫuitt]iyan` – ḫuittiya- "draw, pull", ptcp. ("[משוכות]": strung).
+- **תרגומים:** Christiansen (HPM): "– sie sind [mit einer Bogensehne besp]annt –" – "mit einer Bogensehne bespannt" – *SÍG ištagga-* "מיתר": כך גם אנו בתיקון.
+- **הערות:** "משוכות בצמר" – מיתר הקשת עשוי צמר; משפט כולו משוחזר לפי 58. *ištagga-* (עם הסימן "צמר") הוא המיתר, חוט של צמר.
+
+### 12
+`[6? GI{ḪI.]}A[peran=ma=ššan išnaš p]ūrpūr[īēš {GIŠ}ḫattalu {GIŠ}tarzuwān]`
+> [שישה? חיצים; ואילו לפניהם – ]כדור[י בצק, בריח, תַּרְזוּ];
+- **פירוק:** `[6? GI{ḪI.]}A` – GI "arrow" (lit. "reed"), pl. (restored; "[שישה? חיצים]"); `[peran=ma=ššan` – peran "before, in front" + =ma + =ššan (restored; "[ואילו לפניהם]"); `išnaš` – išna- "dough", gen. (restored; "[בצק]"); `p]ūrpūr[īēš` – pūrpūri- "ball" ("כדור[י]"); `{GIŠ}ḫattalu` – ḫattalu- "bolt, bar (of a door)" (restored; "[בריח]"); `{GIŠ}tarzuwān]` – tarzu-, a wooden object, acc. (restored; "[תַּרְזוּ]").
+- **תרגומים:** Christiansen (HPM): "[6? Pfeil]e, [davor aber K]uge[ln aus Teig, ein Querbalkenriegel und ein Sicherungsriegel];" – "Querbalkenriegel" ו"Sicherungsriegel" ל־*ḫattalu* ול־*tarzu-*: שני סוגי בריח; אנו `בריח` ו`תַּרְזוּ` (בתעתיק).
+- **הערות:** המספר "שישה?" – העורכת מסיקה זאת מן הסבבים האחרים (שלושה חיצים לקשת אחת, 59). *ḫattalu* "בריח" ו־*tarzu-* (חפץ עץ לא מזוהה: בסבב הבא האלים נשלחים "להיאבק בתַּרְזוּ הזה", 32) – אולי מטרה או בובה.
+
+### 13
+`{KUŠ}šālaš=[a pera]n [ḫaminkanza]`
+> ו[לפני]הם – עור־שָׁאלָה [קשור].
+- **פירוק:** `{KUŠ}šālaš=[a` – KUŠ šāla-, a kind of hide or leather, nom. + =a "and" ("ו … עור־שָׁאלָה"); `pera]n` – peran "before" (partly restored; "[לפני]הם"); `[ḫaminkanza]` – ḫamank- "tie, bind", ptcp. nom. (restored; "[קשור]").
+- **תרגומים:** Christiansen (HPM): "ein šāla-Lederriemen [aber ist dav]or [festgebunden.]"
+- **הערות:** *šāla-* – סוג של עור (התעתיק מנוקד: בלי ניקוד "שאלה").
+
+### 14
+`[nu=ššan kī ḫū]man {GI}padd[anī d]āi`
+> [ואת כ]ל זה על הפַּדַּנִי שָׂמָה.
+- **פירוק:** `[nu=ššan` – nu + =ššan (restored; "[ו־]"); `kī` – kā- "this", acc. n. (restored; "[את] … זה"); `ḫū]man` – ḫūmant- "all" (partly restored; "[כ]ל"); `{GI}padd[anī` – GI paddani-, a reed tray or basket, d.-l. ("על הפַּדַּנִי"); `d]āi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "[Und] dies alles [l]egt sie [in einen] Ko[rb]." – "Korb" ל־*GI paddani-*; אנו בתעתיק (`הפַּדַּנִי`), בלי לנחש את צורתו.
+- **הערות:** *paddani-* (עם הסימן "קנה") – מגש או סל של קנה, שעליו הכול מונח ומוגש. הפועל בגוף שלישי – אַמְבַּזִּי עצמה (ראו המבוא).
+
+## §4 – הצמר: מן הרגליים עד הראש
+
+### 15
+`[nu=za SÍG ašaran dāi]`
+> [ולוקחת לה צמר־אַשַׁרָה];
+- **פירוק:** `[nu=za` – nu + =za reflexive (restored; "[ו … לה]"); `SÍG` – "wool" (restored; "[צמר]"); `ašaran` – ašara-, a quality of wool ("white"?), acc. (restored; "[אַשַׁרָה]"); `dāi]` – dā- "take" (with =za), pres. 3sg (restored; "[לוקחת]").
+- **תרגומים:** Christiansen (HPM): "[Und sie nimmt sich weiße Wolle]" – "weiße Wolle" ל־*SÍG ašara-*; אנו בתעתיק (`צמר־אַשַׁרָה`), כי `לָבָן` הוא BABBAR / *ḫarki-*.
+- **הערות:** *ašara-* – כנראה תואר של הצמר (אולי "לבן"); נשאר בתעתיק. כל המשפט משוחזר לפי 61.
+
+### 16
+`n=an=šan ANA B[ĒLŪTI IŠTU GÌR{MEŠ}=ŠUNU kē]z kēzziya [ANA SAG.DU=ŠU šarā ḫ]uittiyai`
+> ואותו – על הא[דונים, מרגליהם, מצד ז]ה ומצד זה, [עד לראשו] – מושכת [למעלה];
+- **פירוק:** `n=an=šan` – nu "and" + =an "it", acc. sg. c. + =šan ("ואותו"); `ANA B[ĒLŪTI` – ANA "on" + BĒLŪTU "lords" (partly restored; "על הא[דונים]"); `IŠTU GÌR{MEŠ}=ŠUNU` – IŠTU "from" + GÌR "foot", pl. + "their" (restored; "[מרגליהם]"); `kē]z kēzziya` – kēz … kēzzi=ya "on this side and on that" (partly restored; "[מצד ז]ה ומצד זה"); `[ANA SAG.DU=ŠU` – ANA "to" + SAG.DU "head" + "his" (restored; "[עד לראשו]"); `šarā` – šarā "up" (restored; "[למעלה]"); `ḫ]uittiyai` – ḫuittiya- "draw, pull", pres. 3sg ("מושכת").
+- **תרגומים:** Christiansen (HPM): "und [z]ieht sie den He[rren von ihren Füßen von dieser Sei]te und jener Seite [zu ihren Köpfen hinauf]"
+- **הקבלה:** [absent] אין במקרא טקס כזה; וגם אין הוא נגיעה בדם (ויקרא יד:יד, על תנוך האוזן, הבוהן והאגודל): כאן הצמר עובר על כל הגוף ו"אוסף" את הרעה.
+- **הערות:** חוט צמר נמשך על גוף האדונים, מן הרגליים אל הראש, מצד זה ומצד זה: הוא אוסף את הרעה מן הגוף, כמו שאוספים מוך מבגד. אחר כך הוא מוסר לעכבר (37).
+
+### 17
+`EGIR-an ka[ttayaš=ma=šan=k]an [iškišaz ḫuittiy]ai`
+> ומאחור, ו[אילו למטה – מגבם מושכ]ת;
+- **פירוק:** `EGIR-an` – appan "behind" ("ומאחור"); `ka[ttayaš=ma=šan=k]an` – katta "down" + =ya + =ma + =šmaš "them" + =kan (partly restored; "ו[אילו למטה … ־ם]"); `[iškišaz` – iškiša- "back", abl. (restored; "[מגב־]"); `ḫuittiy]ai` – ḫuittiya- "draw", pres. 3sg ("[מושכ]ת").
+- **תרגומים:** Christiansen (HPM): "[und zie]ht [sie ihnen] hinten [ vom Rücken her] hin[ab]."
+
+### 18
+`namma=at=šmaš=[at=kan arḫa dāi]`
+> ועוד: אותו מעלי[הם לוקחת הלאה];
+- **פירוק:** `namma=at=šmaš=[at=kan` – namma "then" + =at "it" + =šmaš "from them" + =at + =kan (partly restored; "ועוד: אותו מעלי[הם]"); `arḫa` – arḫa "away" (restored; "[הלאה]"); `dāi]` – dā- "take", pres. 3sg (restored; "[לוקחת]").
+- **תרגומים:** Christiansen (HPM): "Dann [nimmt sie] sie ihnen [weg.]"
+
+### 19
+`[n=an=]šan {GI}paddanī dāi`
+> [ואותו] על הפַּדַּנִי שָׂמָה.
+- **פירוק:** `[n=an=]šan` – nu + =an "it" + =šan (restored; "[ואותו]"); `{GI}paddanī` – paddani-, d.-l. ("על הפַּדַּנִי"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "[Und sie legt [sie] in den Korb."
+
+## §5 – "משוך את הרעה"
+
+### 20
+`[nu memai]`
+> [ואומרת:]
+- **פירוק:** `[nu` – nu (restored; "[ו־]"); `memai]` – memai- "speak", pres. 3sg (restored; "[אומרת]").
+- **תרגומים:** Christiansen (HPM): "[Und sie/er spricht]:"
+
+### 21
+`arḫa=šši=kan idālu ḫuitteššar [ḫu]ittiyai! SAG.DU-it ŠU{MEŠ}-it GÌR{MEŠ}-it [ḫ]ūmantet {UZU}ÚR-it`
+> "משוך ממנו הלאה את המשיכה הרעה – מן הראש, מן הידיים, מן הרגליים, מכל איבר!
+- **פירוק:** `arḫa=šši=kan` – arḫa "away" + =šši "from him" + =kan ("ממנו הלאה"); `idālu` – idālu- "evil", acc. n. ("הרעה"); `ḫuitteššar` – ḫuittiyaššar "pull, drawing", acc. n. (the noun of *ḫuittiya-*; "את המשיכה"); `[ḫu]ittiyai!` – ḫuittiya- "draw", imper. 2sg (the tablet: 3sg; emended by the editor; "משוך"); `SAG.DU-it` – SAG.DU "head", instr. ("מן הראש"); `ŠU{MEŠ}-it` – ŠU "hand", pl. instr. ("מן הידיים"); `GÌR{MEŠ}-it` – GÌR "foot", pl. instr. ("מן הרגליים"); `[ḫ]ūmantet` – ḫūmant- "all, every", instr. ("מכל"); `{UZU}ÚR-it` – ÚR "limb", instr. ("איבר").
+- **תרגומים:** Christiansen (HPM): "„Aus ihm heraus [zi]ehe das böse Ziehen, aus dem Kopf, aus den Händen, aus den Füßen, aus [je]dem Glied," – כמונו ("das böse Ziehen" – `המשיכה הרעה`).
+- **הקבלה:** [absent] אין מקבילה מקראית ל"משיכת" הרעה מאיברי הגוף. הקרוב ביותר בטקסי הטיהור – מגע של חומר טקסי בחלקי הגוף (ויקרא יד:יד), שאינו מושך דבר החוצה.
+- **הערות:** "משוך את המשיכה הרעה" – צירוף של פועל ושם מאותו שורש (*ḫuittiya- ḫuittiyaššar*): הרעה היא דבר שנמשך אל האדם, ועכשיו יש למשוך אותו בחזרה החוצה. המשיכה במשל שבחוט הצמר (16) נעשית כאן בדיבור. הפנייה בגוף שני – כנראה אל האֵל (זַרְנִיזָה ותַּרְפַּתַּשִּׁי), או אל הצמר עצמו. *ÚR* כאן "איבר" (בנוסח השני: "תשעת האיברים", AM2 4), ובטקסי אַשְׁחֶלָּה ופּוּלִישָׁה "הירך": שתי משמעויות של הסימן, לפי ההקשר.
+
+### 22
+`n=[a]t [id]ālauwaš [UN]{MEŠ} ḫarpanalliyaš [peški]`
+> ואותה – לאנשים [הר]עים, ליריבים – [תן]!
+- **פירוק:** `n=[a]t` – nu "and" + =at "it", acc. ("ואותה"); `[id]ālauwaš` – idālawa- "evil", d.-l. pl. (partly restored; "[הר]עים"); `[UN]{MEŠ}` – UN "person, people", pl. (partly restored; "לאנשים"); `ḫarpanalliyaš` – ḫarpanalli- "rival, opponent", d.-l. pl. ("ליריבים"); `[peški]` – pai- "give", iterative imper. 2sg (restored; "[תן]").
+- **תרגומים:** Christiansen (HPM): "und [gib e]s den [bös]en [Mensch]en, den Feinden!“" – "den Feinden" ל־*ḫarpanalli-*; אנו `ליריבים` (`אויב` הוא LÚ.KÚR / *kurur-*).
+- **הקבלה:** [divergence] `וְשִׁלַּח בְּיַד אִישׁ עִתִּי הַמִּדְבָּרָה` (ויקרא טז:כא) – בויקרא הרעה מורחקת אל מקום שאין בו איש; כאן היא "ניתנת" לבני אדם אחרים: לאויבים, לרשעים. הדמיון טיפולוגי.
+- **הערות:** "האנשים הרעים, היריבים" – הרעה אינה נעלמת אלא עוברת אל מי שראוי לה: האויבים. זו מוסר ההשבה של עולם הטקס החתי: הרע חוזר אל הרעים.
+
+## §6 – החיים לאדונים
+
+### 23
+`[AN]A {LÚ.MEŠ}EN=ma TI-tar inn[arawatar MU{ḪI.A} GÍD.DA piški]`
+> ואילו לאדונים – חיים, [כוח, שנים ארוכות תן]!"
+- **פירוק:** `[AN]A {LÚ.MEŠ}EN=ma` – ANA "to" + EN "lord", pl. + =ma "but" ("ואילו לאדונים"); `TI-tar` – ḫuišwatar (TI-tar) "life", acc. ("חיים"); `inn[arawatar` – innarawatar "vigour, strength", acc. (partly restored; "[כוח]"); `MU{ḪI.A} GÍD.DA` – MU "year", pl. + GÍD.DA "long" (restored; "[שנים ארוכות]"); `piški]` – pai- "give", iterative imper. 2sg (restored; "[תן]").
+- **תרגומים:** Christiansen (HPM): "[„De]n Herren aber [gib] Leben, Kra[ft, lange Jahre!“" – "Kraft" ל־*innarawatar* – כמונו (`כוח`).
+- **הקבלה:** [divergence] `וּלְמַעַן יַאֲרִכֻן יָמֶיךָ` (דברים ו:ב) – גם בתורה אריכות ימים היא הברכה, אבל כשכר על שמירת המצוות; כאן מתנה שהאל מתבקש לתת בתמורה לרעה שנלקחה. התרגום `שנים ארוכות` (ולא `האריך ימים`) שומר על ההבדל. טיפולוגי.
+- **הערות:** סוף הפזמון: את הרע לרעים, ואת הטוב לאדונים. *innarawatar* – "כוח, חיוניות" (מן *innarā-* "בכוח, בעצמה"); `כוח`, ולא `עוז` (המילה של *ʿz* האוגריתי).
+
+### 24
+`[{S]}ÍGištaggann=a QĀTAMMA i[yazi]`
+> וגם את המיתר – כך [עושה];
+- **פירוק:** `[{S]}ÍGištaggann=a` – SÍG ištagga- "bowstring", acc. + =a "also" ("וגם את המיתר"); `QĀTAMMA` – "so, likewise" ("כך"); `i[yazi]` – iya- "do", pres. 3sg (partly restored; "[עושה]").
+- **תרגומים:** Christiansen (HPM): "Und mit der Bogensehne ver[fährt sie] ebenso"
+- **הערות:** אותו מעשה – משיכה על הגוף, מן הרגליים אל הראש – נעשה שוב, במיתר של הקשת.
+
+### 25
+`[memai=a QĀTAMMA=pat]`
+> [וגם אומרת כך ממש.]
+- **פירוק:** `[memai=a` – memai- "speak", pres. 3sg + =a "also" (restored; "[וגם אומרת]"); `QĀTAMMA=pat]` – "exactly so" (restored; "[כך ממש]").
+- **תרגומים:** Christiansen (HPM): "[und spricht in eben derselben Weise.]"
+
+## §7 – משל הכובסים
+
+### 26
+`[nu]=šmaš=kan GADA anda QĀTAMM[A ḫamakzi]`
+> [ו]בד־פשתן עליהם כך [קושרת];
+- **פירוק:** `[nu]=šmaš=kan` – nu + =šmaš "on them" + =kan ("[ו] … עליהם"); `GADA` – GADA "linen (cloth)" ("בד־פשתן"); `anda` – anda "on, in" (in "עליהם"); `QĀTAMM[A` – "so, likewise" ("כך"); `ḫamakzi]` – ḫamank- "tie, bind", pres. 3sg (restored; "[קושרת]").
+- **נוסחים:** הפועל משוחזר לפי AM2 6.
+- **תרגומים:** Christiansen (HPM): "[Und] ebenso [bindet sie] ihnen ein Leinentuch um:"
+
+### 27
+`[k]ī=kan maḫḫan {LÚ.ME}[ {Š}ÁZLAG tannaran anniyanzi]`
+> "[כשם ש]את זה – הכו[בסים עובדים את ה*גס*],
+- **פירוק:** `[k]ī=kan` – kā- "this", acc. n. + =kan ("[את] זה"); `maḫḫan` – maḫḫan "as" ("[כשם ש־]"); `{LÚ.ME}[ {Š}ÁZLAG` – LÚ ÁZLAG "fuller, washerman", pl. (partly restored; "הכו[בסים]"); `tannaran` – tannara-, a state of cloth ("raw, unbleached"?) (restored; "[ה*גס*]"); `anniyanzi]` – aniya- "work, treat", pres. 3pl (restored; "[עובדים]").
+- **תרגומים:** Christiansen (HPM): "„Wie die Wä[scher dies]es [säubern]" – "säubern" ל־*aniya-* ובלי *tannara-*; אנו `עובדים` (*aniya-* בחוקים `עבד`) ו`ה*גס*`.
+- **הקבלה:** [equivalent] `וּכְבֹרִית מְכַבְּסִים` (מלאכי ג:ב) – אותו משל: הכובס המנקה, כדימוי לטיהור; ו־`תְּכַבְּסֵנִי וּמִשֶּׁלֶג אַלְבִּין` (תהלים נא:ט) – הכיבוס שמלבין (ראו 29). [divergence] `כִּי אִם תְּכַבְּסִי בַּנֶּתֶר וְתַרְבִּי לָךְ בֹּרִית נִכְתָּם עֲוֹנֵךְ לְפָנַי` (ירמיהו ב:כב) – אצל ירמיהו הכתם אינו יורד. ההקבלות טיפולוגיות: משל הכובס הוא משל משותף לחברות שכיבסו בגדים בנחל; במקרא הכתם הוא עוון, כאן "רעה" וחולי.
+- **הערות:** "משל הכובסים" (27–30, 73–76, 152–155, AM2 8–11): כשם שהכובסים מטפלים בבד הגס, מנקים ממנו את הלכלוך, והוא מלבין – כך יטהרו האלים את האדם מן הרעה ומן החולי. הרעה היא כתם על הבד, שאפשר להוציא בכיבוס.
+
+### 28
+`[nu=]šši=kan {SÍG}mar[iḫšin parkunuwanzi]`
+> [ו]ממנו [את] המָ[רִיחְשִׁי מטהרים],
+- **פירוק:** `[nu=]šši=kan` – nu + =šši "from it" + =kan ("[ו]ממנו"); `{SÍG}mar[iḫšin` – SÍG mariḫši-, something in the wool (lint, dirt?), acc. (partly restored; "[את] המָ[רִיחְשִׁי]"); `parkunuwanzi]` – parkunu- "purify, clean", pres. 3pl (restored; "[מטהרים]").
+- **תרגומים:** Christiansen (HPM): "[und] von ihm die Fuss[eln(?) entfernen]" – "Fusseln(?)" ל־*mariḫši-* – כמונו (בתעתיק).
+- **הערות:** *mariḫši-* (עם הסימן "צמר") – כנראה המוך או הלכלוך שבבד; נשאר בתעתיק. *parkunu-* "לטהר" – אותו פועל של הטיהור הטקסי (30): הכובס "מטהר" את הבד, והאלים "מטהרים" את האדם.
+
+### 29
+`[n=a]t ḫarkišzi`
+> [והוא] מלבין –
+- **פירוק:** `[n=a]t` – nu + =at "it", nom. (restored; "[והוא]"); `ḫarkišzi` – ḫarkešš- "become white", pres. 3sg ("מלבין").
+- **תרגומים:** Christiansen (HPM): "[und e]s weiß wird,"
+- **הקבלה:** [equivalent] `אִם יִהְיוּ חֲטָאֵיכֶם כַּשָּׁנִים כַּשֶּׁלֶג יַלְבִּינוּ` (ישעיהו א:יח) – ההלבנה כתוצאה של הטיהור; וגם שם הצמר: `אִם יַאְדִּימוּ כַתּוֹלָע כַּצֶּמֶר יִהְיוּ` (ישעיהו א:יח). טיפולוגי.
+
+### 30
+`[kēl=ma a]ntuḫš[aš idālu inan DINGIR{MEŠ} NÍ.TE-az arḫa] QĀTAMMA parku[nuwandu]`
+> [כך את החולי הרע של] האדם [הזה – יטהרו הָאֵלִים מן הגוף הלאה] כך!"
+- **פירוק:** `[kēl=ma` – kā- "this", gen. + =ma (restored; "[של … הזה]"); `a]ntuḫš[aš` – antuḫša- "person", gen. (partly restored; "האדם"); `idālu` – idālu- "evil", acc. n. (restored; "[הרע]"); `inan` – inan "sickness", acc. n. (restored; "[את החולי]"); `DINGIR{MEŠ}` – "the gods", nom. (restored; "[הָאֵלִים]"); `NÍ.TE-az` – NÍ.TE "body", abl. (restored; "[מן הגוף]"); `arḫa]` – arḫa "away" (restored; "[הלאה]"); `QĀTAMMA` – "so" ("כך"); `parku[nuwandu]` – parkunu- "purify", imper. 3pl (partly restored; "[יטהרו]").
+- **נוסחים:** B מתחיל כאן (שרידים).
+- **תרגומים:** Christiansen (HPM): "[so sollen die Götter die böse inan-Krankheit dieses M]ensch[en aus dem Körper] ebenso [ent]fern[en]!" – "die böse inan-Krankheit" – כמונו (`החולי הרע`); "entfernen" ל־*parkunu-*; אנו `יטהרו` (R1, הפועל של הטיהור).
+- **הערות:** *maḫḫan … QĀTAMMA* – "כשם ש… כך": את ה"כך" (*QĀTAMMA*) שבסוף הפסוק החתי מקדימה העברית לראש המשפט (`[כך]`), וחוזרת עליו בסופו כדי לשמור על הסדר. *inan* "חולי": הרעה והחולי הם דבר אחד – הלכלוך שבגוף.
+
+## §8 – "אל תיאבקו בהם עוד"
+
+### 31
+`{D}Zarnizaš {D}Tarpattaššiš lē=war=[uš] namma zaḫḫiškiši17`
+> "זרניזה, תרפתשי – אַל תיאבק [בהם] עוד!
+- **פירוק:** `{D}Zarnizaš` – Zarniza, nom.-voc. ("זרניזה"); `{D}Tarpattaššiš` – Tarpattašši, nom.-voc. ("תרפתשי"); `lē=war=[uš]` – lē "do not" + =war + =uš "them", acc. pl. (partly restored; "אַל … [בהם]"); `namma` – namma "further, any more" ("עוד"); `zaḫḫiškiši` – zaḫḫ- "fight, strike", iterative pres. 2sg ("תיאבק", HL2 `נאבק`).
+- **נוסחים:** B שומר את סוף המשפט (`namma zaḫḫiškiši`).
+- **תרגומים:** Christiansen (HPM): "Zarniza, Tarpatassa: Bekämpfe [sie] nicht länger!"
+- **הקבלה:** [divergence] `וַיֵּאָבֵק אִישׁ עִמּוֹ עַד עֲלוֹת הַשָּׁחַר` (בראשית לב:כה) – אדם נאבק עם ישות אלוהית; שם יעקב שורד ומתברך, כאן האלים "נאבקים" באדם במחלה, ומתבקשים להפסיק. דמיון של פועל ומוטיב בלבד (`נאבק` הוא כאן *zaḫḫ-*, כבחוקים), טיפולוגי.
+- **הערות:** האלים "נאבקים" באדונים – הם מכים בהם במחלה. הפזמון (31–33, 77–79, 156–159) מבקש מהם להפנות את מאבקם מן האדם אל התַּרְזוּ (32). *lē* + צורה חוזרת: "אל תמשיך להיאבק" (`אַל` + עתיד, בלי `תמיד`, כפסיקת ההוראות).
+
+### 32
+`it=wa=za kūn {GIŠ}ta[rzun] namma zaḫḫiški`
+> לֵךְ – עם התַּ[רְזוּ] הזה היאבק עוד!
+- **פירוק:** `it=wa=za` – pai- "go", imper. 2sg + =wa + =za ("לֵךְ"); `kūn` – kā- "this", acc. sg. c. ("הזה"); `{GIŠ}ta[rzun]` – tarzu-, acc. (partly restored; "התַּ[רְזוּ]"); `namma` – "further" ("עוד"); `zaḫḫiški` – zaḫḫ- "fight", iterative imper. 2sg ("היאבק").
+- **תרגומים:** Christiansen (HPM): "Geh, bekämpfe fortan diesen Sicher[ungsriegel]!" – "Sicherungsriegel" ל־*tarzu-* – ראו 12.
+- **הערות:** התַּרְזוּ – חפץ העץ שהונח עם הקשתות (12) – הוא "יריב" חלופי: האלים יילחמו בו במקום באדונים. כמו התחליף האנושי של פּוּלִישָׁה – אבל כאן מעץ.
+
+### 33
+`nu=wa=šmaš idālu katt[an arḫa] nanni`
+> ואת הרעה – מעליהם [הלאה] הרחק!"
+- **פירוק:** `nu=wa=šmaš` – nu + =wa + =šmaš "from them" ("מעליהם"); `idālu` – idālu "evil", acc. ("ואת הרעה"); `katt[an` – kattan "from beside" (in "מעליהם"); `arḫa]` – arḫa "away" (restored; "[הלאה]"); `nanni` – nanna- "drive, lead (away)", imper. 2sg ("הרחק").
+- **נוסחים:** B כותב `ḪUL` (הסימן של "רע").
+- **תרגומים:** Christiansen (HPM): "[Und] das Böse [t]reibe von [i]hnen da[mit fort]!“" – "treibe … fort" – כמונו (`הרחק`).
+- **הערות:** *nanna-* – "להוביל, להסיע" (הצורה החוזרת של *nai-*?); `הרחק` כאן, כדי להבדיל מ־*penna-* `הסיע` ו־*unna-* `נהג`.
+
+## §9 – הבדיל על היד והרגל
+
+### 34
+`[nu]=ššan NAGGA tepu {SÍG}ištaggai anda ḫūlāliēzzi`
+> ומעט בְּדִיל – במיתר כורכת,
+- **פירוק:** `[nu]=ššan` – nu + =ššan ("ו־"); `NAGGA` – NAGGA "tin" ("בְּדִיל", R1); `tepu` – tepu- "little", acc. n. ("מעט"); `{SÍG}ištaggai` – SÍG ištagga- "bowstring", d.-l. ("במיתר"); `anda` – anda "in" (in "ב־"); `ḫūlāliēzzi` – ḫulaliya- "wind, wrap", pres. 3sg ("כורכת").
+- **נוסחים:** B שומר `NAGGA tepu`.
+- **תרגומים:** Christiansen (HPM): "[Und] sie wickelt in eine Bogensehne ein wenig Zinn ein"
+
+### 35
+`[n]=at=šan ANA {LÚ.MEŠ}EN-TIM kunni ANA QĀTĪ=ŠU [GÌ]R=ŠU nāi`
+> ואותו – אל האדונים, לימין, אל ידו ואל רגלו – מפנה.
+- **פירוק:** `[n]=at=šan` – nu + =at "it", acc. + =šan ("ואותו"); `ANA {LÚ.MEŠ}EN-TIM` – ANA "to" + EN.MEŠ "lords" ("אל האדונים"); `kunni` – kunna- "right", d.-l. ("לימין"); `ANA QĀTĪ=ŠU` – ANA "to" + QĀTU "hand" + "his" ("אל ידו"); `[GÌ]R=ŠU` – GÌR "foot" + "his" ("ואל רגלו"); `nāi` – nai- "turn, direct", pres. 3sg ("מפנה").
+- **נוסחים:** B `ANA BĒLUTIM kūn[ni …]`.
+- **תרגומים:** Christiansen (HPM): "[u]nd windet es den Herren rechts um ihre Hände und ihre [Fü]ße." – "windet … um" ל־*nai-*; אנו `מפנה` (R1, R2).
+- **הקבלה:** [divergence] `וְנָתַן הַכֹּהֵן עַל תְּנוּךְ אֹזֶן הַמִּטַּהֵר הַיְמָנִית; וְעַל בֹּהֶן יָדוֹ הַיְמָנִית וְעַל בֹּהֶן רַגְלוֹ הַיְמָנִית` (ויקרא יד:יד) – גם בטיהור המצורע הצד הימני, היד והרגל; שם דם ושמן ניתנים עליהם, כאן בדיל כרוך בצמר מוצמד אליהם ונלקח שוב, אל העכבר. טיפולוגי.
+- **הערות:** הבדיל הכרוך בצמר מוצמד לצד הימני – אל היד ואל הרגל: נקודות שבהן הרעה נכנסת לגוף, או נקודות שמייצגות את כולו. אחר כך הוא נלקח (36) וניתן לעכבר (37).
+
+## §10 – העכבר
+
+### 36
+`[n]amma=at=šmaš=at=kan arḫa dāi`
+> ועוד: אותו מעליהם לוקחת הלאה;
+- **פירוק:** `[n]amma=at=šmaš=at=kan` – namma "then" + =at "it" + =šmaš "from them" + =at + =kan ("ועוד: אותו מעליהם"); `arḫa` – arḫa "away" ("הלאה"); `dāi` – dā- "take", pres. 3sg (*dā-*: with *arḫa*, "take off"; "לוקחת").
+- **נוסחים:** A השמיט את *arḫa* (שבור); B שלם.
+- **תרגומים:** Christiansen (HPM): "[D]ann nimmt sie es von ih[nen weg]"
+
+### 37
+`n=at=kan [A]NA PÉŠ.TUR nāi`
+> ואותו מפנה אל העַכְבָּר הקטן;
+- **פירוק:** `n=at=kan` – nu + =at "it", acc. + =kan ("ואותו"); `[A]NA PÉŠ.TUR` – ANA "to" + PÉŠ.TUR "little mouse" ("אל העַכְבָּר הקטן"); `nāi` – nai- "turn, direct", pres. 3sg ("מפנה").
+- **נוסחים:** B `dāi` – "שָׂמָה" (במקום "מפנה").
+- **תרגומים:** Christiansen (HPM): "und win[det] (Text B: legt) es um eine Maus." – "windet es um eine Maus" (B: "legt") – *nai-*; אנו `מפנה אל העכבר` (הכרעת הרכז).
+- **הקבלה:** [divergence] `וְצַלְמֵי עַכְבְּרֵיכֶם הַמַּשְׁחִיתִם אֶת הָאָרֶץ` (שמואל א ו:ה) – גם בשמואל עכברים במנחה שנשלחת עם המגפה אל האל; אבל שם עכברי זהב הם דמות המכה (העכברים "המשחיתים את הארץ"), וכאן עכבר חי הוא הנושא שמוציא את הרעה. טיפולוגי.
+- **הערות:** "מפנה אל העכבר" – הבדיל והצמר, ועמם הרעה, "מופנים" אל העכבר: אולי נקשרים עליו. העכבר הקטן – חיה של חורים, שבורחת אל מקומות שאדם אינו מגיע אליהם.
+
+### 38
+`arḫa=wa=šmaš=kan daḫḫun [i]dālu`
+> "לקחתי מעליהם הלאה את הרעה,
+- **פירוק:** `arḫa=wa=šmaš=kan` – arḫa "away" + =wa + =šmaš "from them" + =kan ("מעליהם הלאה"); `daḫḫun` – dā- "take", pret. 1sg ("לקחתי"); `[i]dālu` – idālu "evil", acc. ("את הרעה").
+- **תרגומים:** Christiansen (HPM): "„Ich habe das Böse von euch/ihnen weggenommen"
+
+### 39
+`nu=war=at=kan ANA PÉŠ.TUR neḫḫun`
+> ואותה הפניתי אל העכבר הקטן;
+- **פירוק:** `nu=war=at=kan` – nu + =war + =at "it", acc. + =kan ("ואותה"); `ANA PÉŠ.TUR` – "to the little mouse" ("אל העכבר הקטן"); `neḫḫun` – nai- "turn", pret. 1sg ("הפניתי").
+- **תרגומים:** Christiansen (HPM): "und habe es um eine Maus gewunden!"
+
+### 40
+`[nu]=war=at kā[š PÉŠ.]TUR-aš pargauwaš ḪUR.SAG{ḪI.A}-aš ḫallūwaš ḫār[iyaš dalu]gauwaš KASKAL{ḪI.A}-aš pēdāu`
+> ואותה [העכבר] הקטן הז[ה] אל ההרים הגבוהים, אל העמקים העמוקים, אל הדרכים [הא]רוכות יישא!"
+- **פירוק:** `[nu]=war=at` – nu + =war + =at "it", acc. ("ואותה"); `kā[š` – kāš "this", nom. ("הז[ה]"); `PÉŠ.]TUR-aš` – PÉŠ.TUR "little mouse", nom. (partly restored; "[העכבר] הקטן"); `pargauwaš` – parku- "high", d.-l. pl. ("הגבוהים"); `ḪUR.SAG{ḪI.A}-aš` – ḪUR.SAG "mountain", d.-l. pl. ("אל ההרים"); `ḫallūwaš` – ḫallu- "deep", d.-l. pl. ("העמוקים"); `ḫār[iyaš` – ḫariya- "valley", d.-l. pl. ("אל העמקים"); `dalu]gauwaš` – dalugi- "long", d.-l. pl. (partly restored; "[הא]רוכות"); `KASKAL{ḪI.A}-aš` – KASKAL "road", d.-l. pl. ("אל הדרכים"); `pēdāu` – peda- "carry (away)", imper. 3sg ("יישא").
+- **נוסחים:** B `ḪUR.SAG{MEŠ}` ו־`KASKAL-aš` (יחיד).
+- **תרגומים:** Christiansen (HPM): "[Nun] soll dies[e Ma]us es über hohe Berge, durch [tie]fe Täl[er], auf [wei]ten Wegen forttragen!“" – כמונו.
+- **הקבלה:** [equivalent] `וְנָשָׂא הַשָּׂעִיר עָלָיו אֶת כָּל עֲוֹנֹתָם אֶל אֶרֶץ גְּזֵרָה` (ויקרא טז:כב) – אותו פועל ("יישא"), ואותו יעד מנותק. [divergence] כאן הנושא עכבר, והיעד מתואר בשירה – הרים גבוהים, עמקים עמוקים, דרכים ארוכות – ולא "ארץ" אחת. טיפולוגי.
+- **הערות:** שלוש תמונות של מרחק: למעלה (ההרים), למטה (העמקים), לאורך (הדרכים). העכבר יישא את הרעה אל מעבר לעולמו של האדם, אל מקום שאין בו בני אדם. זה פזמון חוזר (40, 86, 167), אחד היפים בטקסים החתיים.
+
+## §11 – שילוח העכבר: "קח אותו, אחר נותנים לך לאכול"
+
+### 41
+`[nu PÉ]Š.TUR arḫa tarnanzi`
+> ואת [העכבר] הקטן משלחים הלאה.
+- **פירוק:** `[nu` – nu (restored; "[ו־]"); `PÉ]Š.TUR` – PÉŠ.TUR "little mouse", acc. (partly restored; "את [העכבר] הקטן"); `arḫa` – arḫa "away" ("הלאה"); `tarnanzi` – tarna- "let go, release", pres. 3pl ("משלחים").
+- **תרגומים:** Christiansen (HPM): "[Und] man lässt die [Ma]us los:" – כמונו (*arḫa tarna-* `משלחים הלאה`).
+- **הקבלה:** [divergence] `וְשִׁלַּח אֶת הַצִּפֹּר הַחַיָּה עַל פְּנֵי הַשָּׂדֶה` (ויקרא יד:ז); `וְשִׁלַּח אֶת הַצִּפֹּר הַחַיָּה אֶל מִחוּץ לָעִיר אֶל פְּנֵי הַשָּׂדֶה` (ויקרא יד:נג) – אותו פועל (*arḫa tarna-* "לשחרר הלאה" = `שִׁלַּח`), ובעל חיים חי שמשוחרר ונושא את הרעה הלאה. [absent] הציפור עצמה אינה בטקסים החתיים האלה: כאן עכבר. ההקבלה טיפולוגית.
+
+### 42
+`{D}Zarn[izaš {D}]Tarpattaššiš [kū]n=za zik dā`
+> "זרנ[יזה, ת]רפתשי – [את ז]ה קח לך אתה!
+- **פירוק:** `{D}Zarn[izaš` – Zarniza, voc. (partly restored; "זרנ[יזה]"); `{D}]Tarpattaššiš` – Tarpattašši, voc. (partly restored; "[ת]רפתשי"); `[kū]n=za` – kā- "this", acc. (partly restored) + =za ("[את ז]ה … לך"); `zik` – zik "you", nom. ("אתה"); `dā` – dā- "take", imper. 2sg ("קח").
+- **תרגומים:** Christiansen (HPM): "„Zarn[iza], Tarpatassa, [die]se nimm d[u] dir!"
+- **הערות:** העכבר הוא מתנה – או תחליף – לאלים: "קח אותו אתה". ובמשפט הבא: "ולאכול – אחר": העכבר אינו מזון; המזון האמיתי יבוא.
+
+### 43
+`adanna=ma=[tta dama]īn [pī]weni`
+> ואילו לאכול – [א]חר נ[ות]נים לך!"
+- **פירוק:** `adanna=ma` – ed- "eat", inf. + =ma "but" ("ואילו לאכול"); `=[tta` – "to you" (restored; "לך"); `dama]īn` – damai- "other", acc. (partly restored; "[א]חר"); `[pī]weni` – pai- "give", pres. 1pl (partly restored; "נ[ות]נים").
+- **תרגומים:** Christiansen (HPM): "Zu essen aber[ geb]en wir [dir eine and]ere!“"
+- **הערות:** "ניתן לך אחר לאכול" – בעלי החיים שיוקרבו בסבב (העֵז לאֲלַוַּיְמִי, 89, 95). האלים רעבים, והטקס מאכיל אותם – כמו אצל אַשְׁחֶלָּה.
+
+### 44
+`nu kuptar arḫa š[uḫḫāi]`
+> ואת השיירים מפזרת הלאה.
+- **פירוק:** `nu` – nu "and" ("ו־"); `kuptar` – kuptar "remains, leftovers", acc. ("ואת השיירים", HL1); `arḫa` – arḫa "away" ("הלאה"); `š[uḫḫāi]` – šuḫḫa- "pour, scatter", pres. 3sg (partly restored; "מפזרת").
+- **תרגומים:** Christiansen (HPM): "Und den Abfall sch[üttet sie] fort." – "schüttet … fort" ל־*šuḫḫa-*; אנו `מפזרת הלאה`.
+- **הערות:** את שאריות החומרים (זרעים, בצק) – מפזרת הלאה, אל השדה. *šuḫḫa-* "לפזר, לשפוך" – `מפזרת` (`זרה` הוא *išḫuwa-*, `שפך` – *laḫu-* של ההוראות).
+
+## §12 – העלווה והלחם
+
+### 45
+`[nu na]mma damedani pēdi {GIŠ}la[ḫurnuzzi dāi]`
+> [ו]עוד, במקום אחר – ע[לווה שָׂמָה];
+- **פירוק:** `[nu` – nu (restored; "[ו]"); `na]mma` – namma "further" ("עוד"); `damedani pēdi` – damai- "other" + pedan- "place", d.-l. ("במקום אחר"); `{GIŠ}la[ḫurnuzzi` – laḫḫurnuzzi- "foliage", acc. (partly restored; "ע[לווה]"); `dāi]` – dai- "put", pres. 3sg (restored; "[שָׂמָה]").
+- **תרגומים:** Christiansen (HPM): "Außerdem [legt sie] an einem anderen Ort La[ub hin]."
+
+### 46
+`[1] NINDA.GUR4.RA paršiya 1 NINDA.GUR4.RA [ … ]`
+> לחם עבה [אחד] פורסת, לחם עבה אחד […]
+- **פירוק:** `[1] NINDA.GUR4.RA` – "one thick bread" (the numeral restored; "לחם עבה [אחד]"); `paršiya` – paršiya- "break (bread)", pres. 3sg ("פורסת"); `1 NINDA.GUR4.RA` – "one thick bread" ("לחם עבה אחד"); `[ … ]` – lost ("[…]").
+- **תרגומים:** Christiansen (HPM): "[1] Dickbrot bricht sie, 1 Dickbro[t … ]?"
+- **הערות:** *paršiya-* "לשבור, לבצוע" – בחוקים (HL2 168) גם "לפרוץ (גבול)", `פרץ`; כאן הלחם, `פורסת` (`פָרֹס לָרָעֵב לַחְמֶךָ`): פיצול לפי ההקשר. ראו 91–93: לחם לכל אֵל.
+
+### 47
+`[ … ]an[ … ] … [ … ]`
+> […]…[…]…[…]
+- **פירוק:** `[ … ]an[ … ]` – lost and traces ("[…]…[…]"); `…` – unread ("…"); `[ … ]` – lost ("[…]").
+- **תרגומים:** Christiansen (HPM): "[ … ]"
+
+## §13′ – הקערה בסבב השני, לאֲלַוַּיְמִי
+
+### 48
+`kuiēš peran [weḫ]anda`
+> (אלה) אשר [סוב]בים לפני (האדם) –
+- **פירוק:** `kuiēš` – kui- "who", nom. pl. c., relative ("אשר"); `peran` – peran "in front, before" ("לפני (האדם)": the object is not stated; `לפנים` is *karū*'s, F2); `[weḫ]anda` – weḫ- "turn, go around", pres. 3pl mp (partly restored; "[סוב]בים", AS 16).
+- **תרגומים:** Christiansen (HPM): "Die sich vorn [befind]en," – "Die sich vorn befinden"; אנו `אשר סובבים לפני (האדם)` (*weḫ-* `סבב`, AS 16).
+- **הערות:** "אשר סובבים לפנים" – כנראה תיאור של אלים (בהמשך: *{D}Tarpattaššiš kuiš peran weḫatta* "תַּרְפַּתַּשִּׁי אשר סובב לפנים", 122, 156…): אלים "המסתובבים לפני" האדם – רוחות שמהלכות לפניו בדרך, או בשמירה, או באיום.
+
+### 49
+`n=ašta apūš wereškiz[zi]`
+> ואותם מזמנת;
+- **פירוק:** `n=ašta` – nu + =ašta ("ו־"); `apūš` – apa- "those", acc. pl. c. ("ואותם"); `wereškiz[zi]` – weriya- "call, summon", iterative pres. 3sg (the ending restored; "מזמנת").
+- **תרגומים:** Christiansen (HPM): "jene ruf[t] sie jeweils herbei." – "ruft … herbei" – כמונו (`מזמנת`).
+- **הערות:** *weriya-* "לקרוא, להזמין" (`קרא` הוא *ḫalzai-* של ההוראות).
+
+### 50
+`[EGI]R-anda=ma {D}Alauwaimin [š]ipanti`
+> ואילו אחר כך – לאֲלַוַּיְמִי מקריבה;
+- **פירוק:** `[EGI]R-anda=ma` – EGIR-anda "afterwards" + =ma ("ואילו אחר כך"); `{D}Alauwaimin` – Alauwaimi, a deity, acc. ("לאֲלַוַּיְמִי"); `[š]ipanti` – šipant- "offer, libate (to: acc. of the god)", pres. 3sg ("מקריבה").
+- **תרגומים:** Christiansen (HPM): "[Dan]ach aber opfert sie dem/r Alauwaima."
+- **הערות:** אֲלַוַּיְמִי – אל לוּוִי (השם בצורת בינוני לוּוִי, *-imi*). *šipant-* עם האל כמושא: "לנסך לאֵל, להקריב לו".
+
+### 51
+`nu=šš[an] ḫulliš ANA {DUG}DÍLIM.GAL SA5 [d]āi`
+> ועצי־החוּוַלִּי – אל האגן האָדֹם שָׂמָה;
+- **פירוק:** `nu=šš[an]` – nu + =ššan ("ו־"); `ḫulliš` – ḫulli- (= ḫuwalli-), acc. pl. ("ועצי־החוּוַלִּי"); `ANA {DUG}DÍLIM.GAL SA5` – "into the red basin" ("אל האגן האָדֹם"); `[d]āi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "Und sie [le]gt Wacholderholz(?) auf eine rote Schale."
+
+### 52
+`šer=a=ššan ḫalkin kar(a)š išḫūwāi`
+> ועל גביו – תבואה (ו)כוסמת זורה;
+- **פירוק:** `šer=a=ššan` – šer "on top" + =a + =ššan ("ועל גביו"); `ḫalkin` – "grain" ("תבואה"); `kar(a)š` – "emmer" ("כוסמת"); `išḫūwāi` – išḫuwa- "strew", pres. 3sg ("זורה").
+- **תרגומים:** Christiansen (HPM): "Oben darauf aber schüttet sie Gerste und karš-Getreide"
+
+### 53
+`n=at=kan šanḫuwanzi`
+> ואותו קולים,
+- **פירוק:** `n=at=kan` – nu + =at "it" + =kan ("ואותו"); `šanḫuwanzi` – šanḫ- "roast", pres. 3pl ("קולים").
+- **תרגומים:** Christiansen (HPM): "Und man röstet es."
+
+### 54
+`n=ašta ḫulliš witenit kištanuzi`
+> ואת עצי־החוּוַלִּי במים מכבה,
+- **פירוק:** `n=ašta` – nu + =ašta ("ו־"); `ḫulliš` – ḫulli-, acc. pl. ("את עצי־החוּוַלִּי"); `witenit` – "with water" ("במים"); `kištanuzi` – kištanu- "extinguish", pres. 3sg ("מכבה").
+- **תרגומים:** Christiansen (HPM): "Und sie löscht das Wacholderholz(?) mit Wasser aus"
+
+### 55
+`nu memai`
+> ואומרת:
+- **פירוק:** `nu` – nu "and" ("ו־"); `memai` – memai- "speak", pres. 3sg ("אומרת").
+- **תרגומים:** Christiansen (HPM): "und spricht:"
+
+### 56
+`maḫḫan=kan kī kištanunun`
+> "כשם שאת זה כיביתי,
+- **פירוק:** `maḫḫan=kan` – maḫḫan "as" + =kan ("כשם ש־"); `kī` – kā- "this", acc. n. ("את זה"); `kištanunun` – kištanu- "extinguish", pret. 1sg ("כיביתי").
+- **תרגומים:** Christiansen (HPM): "„Wie ich dieses ausgelöscht habe,"
+- **הערות:** כמו 8 (שם *kē* "אלה", כאן *kī* "זה").
+
+### 57
+`idālu=ya=kan ANA EN{MEŠ}-TIM šer QĀTAMMA kištaru`
+> כך גם הרעה שעל האדונים – תכבה!"
+- **פירוק:** `idālu=ya=kan` – idālu "evil" + =ya "also" + =kan ("גם הרעה"); `ANA EN{MEŠ}-TIM` – "to the lords" ("האדונים"); `šer` – "upon" ("שעל"); `QĀTAMMA` – "so" ("כך"); `kištaru` – kištai- (mp) "be extinguished", imper. 3sg ("תכבה").
+- **תרגומים:** Christiansen (HPM): "so soll auch ebenso das Böse über den Herren erlöschen!“"
+
+## §14′ – הקשת והחיצים בסבב השני
+
+### 58
+`nu išnāš pūrpūriēš ḫūrtallenzi 1 {GIŠ}PAN ēzzaš nu=ššan {SÍG}ištaggaš ḫuittiyanza`
+> וכדורי בצק, חוּרְטַלִּים, קשת אחת של אֶזָּה – ועליה מיתר משוך –,
+- **פירוק:** `nu` – nu "and" ("ו־"); `išnāš` – išna- "dough", gen. ("בצק"); `pūrpūriēš` – pūrpūri- "ball", nom.-acc. pl. ("כדורי"); `ḫūrtallenzi` – ḫurtalli-, acc. pl. ("חוּרְטַלִּים"); `1 {GIŠ}PAN` – "one bow" ("קשת אחת"); `ēzzaš` – ēzza-, a wood (?), gen. ("של אֶזָּה"); `nu=ššan` – nu + =ššan "on it" ("ועליה"); `{SÍG}ištaggaš` – SÍG ištagga- "bowstring", nom. ("מיתר"); `ḫuittiyanza` – ḫuittiya- "draw", ptcp. nom. sg. c. ("משוך").
+- **תרגומים:** Christiansen (HPM): "Und Kugeln und Gemengsel aus Teig, 1 Bogen aus Rohr und davor/darüber ist eine Bogensehne gespannt." – "1 Bogen aus Rohr" – *ēzzaš* "של קנה"; אנו בתעתיק (`של אֶזָּה`).
+- **הערות:** *ēzza-* – אולי סוג עץ (או "מוץ"?): נשאר בתעתיק.
+
+### 59
+`3 GI{ḪI.A} ēzzaš perann=a=ššan išnaš pūrpūrīēš {GIŠ}ḫattalu {GIŠ}tarzuwān peran=ma=ššan {KUŠ}šālaš ḫaminkanza`
+> שלושה חיצים של אֶזָּה; וגם לפניהם – כדורי בצק, בריח, תַּרְזוּ; ואילו לפניהם – עור־שָׁאלָה קשור.
+- **פירוק:** `3 GI{ḪI.A}` – GI "arrow", pl. ("שלושה חיצים"); `ēzzaš` – ēzza-, gen. ("של אֶזָּה"); `perann=a=ššan` – peran "in front" + =a "and" + =ššan ("וגם לפניהם"); `išnaš pūrpūrīēš` – "balls of dough" ("כדורי בצק"); `{GIŠ}ḫattalu` – "bolt" ("בריח"); `{GIŠ}tarzuwān` – tarzu-, acc. ("תַּרְזוּ"); `peran=ma=ššan` – peran "in front" + =ma + =ššan ("ואילו לפניהם"); `{KUŠ}šālaš` – šāla- "hide", nom. ("עור־שָׁאלָה"); `ḫaminkanza` – ḫamank- "tie", ptcp. nom. ("קשור").
+- **תרגומים:** Christiansen (HPM): "3 Pfeile aus Rohr und davor die Kugeln aus Teig, ein Querbalkenriegel, ein Sicherungsriegel, davor aber ist ein šāla-Lederriemen befestigt." – "3 Pfeile aus Rohr" – ראו 58.
+
+### 60
+`nu=ššan kī ḫūman {GI}paddanī dāi`
+> ואת כל זה על הפַּדַּנִי שָׂמָה.
+- **פירוק:** `nu=ššan` – nu + =ššan ("ו־"); `kī` – "this" ("את … זה"); `ḫūman` – "all" ("כל"); `{GI}paddanī` – paddani-, d.-l. ("על הפַּדַּנִי"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "Und dies alles legt sie in den Korb."
+- **הערות:** זהה ל־14.
+
+## §15′ – הצמר בסבב השני
+
+### 61
+`nu=za SÍG ašaran dāi`
+> ולוקחת לה צמר־אַשַׁרָה;
+- **פירוק:** `nu=za` – nu + =za reflexive ("ו … לה"); `SÍG` – "wool" ("צמר"); `ašaran` – ašara-, acc. ("אַשַׁרָה"); `dāi` – dā- "take" (with =za), pres. 3sg ("לוקחת").
+- **תרגומים:** Christiansen (HPM): "Und sie nimmt sich weiße Wolle" – "weiße Wolle" – ראו 15.
+
+### 62
+`n=an=šan ANA BĒLŪTI IŠTU GÌR{MEŠ}=ŠUNU ANA SAG.DU=ŠU kēz kēzziya [ḫ]uittiyai`
+> ואותו – על האדונים, מרגליהם עד לראשו, מצד זה ומצד זה – מושכת;
+- **פירוק:** `n=an=šan` – nu + =an "it" + =šan ("ואותו"); `ANA BĒLŪTI` – "on the lords" ("על האדונים"); `IŠTU GÌR{MEŠ}=ŠUNU` – "from their feet" ("מרגליהם"); `ANA SAG.DU=ŠU` – "to his head" ("עד לראשו"); `kēz kēzziya` – "on this side and that" ("מצד זה ומצד זה"); `[ḫ]uittiyai` – ḫuittiya- "draw", pres. 3sg ("מושכת").
+- **תרגומים:** Christiansen (HPM): "und sie [z]ieht sie den Herren von ihren Füßen zu ihren Köpfen von dieser Seite und jener Seite hinauf,"
+- **הערות:** כמו 16, בסדר מילים אחר (וכאן בלי *šarā* "למעלה").
+
+### 63
+`EGIR-an katta=ya=šmaš=kan iškišaz [ḫ]uittiyai`
+> ומאחור, וגם למטה – מגבם מושכת;
+- **פירוק:** `EGIR-an` – appan "behind" ("ומאחור"); `katta=ya=šmaš=kan` – katta "down" + =ya "also" + =šmaš "their" + =kan ("וגם למטה … ־ם"); `iškišaz` – iškiša- "back", abl. ("מגב־"); `[ḫ]uittiyai` – ḫuittiya- "draw", pres. 3sg ("מושכת").
+- **תרגומים:** Christiansen (HPM): "Und hinten [z]ieht sie sie ihnen vom Rücken her hinab."
+
+### 64
+`nu=šmaš=a[t=ka]n arḫa dāi`
+> ואותו מעליהם לוקחת הלאה;
+- **פירוק:** `nu=šmaš=a[t=ka]n` – nu + =šmaš "from them" + =at "it" + =kan ("ואותו מעליהם"); `arḫa` – "away" ("הלאה"); `dāi` – dā- "take", pres. 3sg ("לוקחת").
+- **תרגומים:** Christiansen (HPM): "Und sie/er nimmt si[e] von ihnen weg"
+
+### 65
+`[n]a=at=šan ANA {GI}paddan[ī] dāi`
+> [ו]אותו על הפַּדַּנִי שָׂמָה.
+- **פירוק:** `[n]a=at=šan` – nu + =at "it" + =šan (the first sign restored; "[ו]אותו"); `ANA {GI}paddan[ī]` – "on the paddani" ("על הפַּדַּנִי"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "und legt sie in den Korb."
+
+## §16′ – "משוך את הרעה" בסבב השני
+
+### 66
+`[a]rḫa=ši=ka[n] idālu ḫuitt[iy]aššar ḫuittiya [I]ŠTU SAG.[DU=ŠU? Š]U?{MEŠ}=[Š]U [GÌR?{MEŠ}?]=ŠU`
+> "משוך ממנו הלאה את המשיכה הרעה – מראשו, [מי]דיו, [מרגליו]!
+- **פירוק:** `[a]rḫa=ši=ka[n]` – arḫa "away" + =šši "from him" + =kan ("ממנו הלאה"); `idālu` – "evil" ("הרעה"); `ḫuitt[iy]aššar` – "pull, drawing" ("את המשיכה"); `ḫuittiya` – ḫuittiya- "draw", imper. 2sg ("משוך"); `[I]ŠTU SAG.[DU=ŠU?` – "from his head" ("מראשו"); `Š]U?{MEŠ}=[Š]U` – "his hands" (partly restored; "[מן י]דיו"); `[GÌR?{MEŠ}?]=ŠU` – "his feet" (restored; "[מן רגליו]").
+- **תרגומים:** Christiansen (HPM): "„Aus ihm [he]raus zieh[e] das böse Zie[he]n, [a]us [seinem?] Ko[pf?, sei]nen [Hä]nden, seinen [Füßen?],"
+- **הערות:** כמו 21, בניסוח אחר (*IŠTU* … "שלו" במקום המקרה הכלי), ובלי "מכל איבר".
+
+### 67
+`n=at idāl[auwaš UN]{MEŠ} ḫarpanall[iyaš] peški`
+> ואותה – לאנשים הרעים, ליריבים – תן!
+- **פירוק:** `n=at` – nu + =at "it", acc. ("ואותה"); `idāl[auwaš` – "evil", d.-l. pl. ("הרעים"); `UN]{MEŠ}` – "people" ("לאנשים"); `ḫarpanall[iyaš]` – "rivals" ("ליריבים"); `peški` – pai- "give", iterative imper. 2sg ("תן").
+- **תרגומים:** Christiansen (HPM): "und gib es den bös[en Mensch]en, den Fein[den]!"
+- **הערות:** זהה ל־22 (כאן משומר יותר).
+
+### 68
+`ANA EN{MEŠ}[ ... T]I-tar innarawatar MU{ḪI.A} GÍD.DA piški`
+> לאדונים […] – חיים, כוח, שנים ארוכות תן!"
+- **פירוק:** `ANA EN{MEŠ}[ ... ]` – "to the lords" + lost ("לאדונים […]"); `[T]I-tar` – "life" ("חיים"); `innarawatar` – "vigour" ("כוח"); `MU{ḪI.A} GÍD.DA` – "long years" ("שנים ארוכות"); `piški` – pai- "give", iterative imper. 2sg ("תן").
+- **תרגומים:** Christiansen (HPM): "Den Herr[en aber] gib [L]eben, Kraft, lange Jahre!“"
+- **הערות:** כמו 23; בחלל שאחרי "לאדונים" היה אולי *-TIM-ma* ("ואילו").
+
+### 69
+`[{SÍG}i]štaggann=a QĀTAMMA iyazi`
+> וגם את המיתר – כך עושה;
+- **פירוק:** `[{SÍG}i]štaggann=a` – SÍG ištagga- + =a "also" ("וגם את המיתר"); `QĀTAMMA` – "so" ("כך"); `iyazi` – iya- "do", pres. 3sg ("עושה").
+- **תרגומים:** Christiansen (HPM): "Und mit der Bogensehne verfährt sie ebenso"
+
+### 70
+`memai=a QĀTAMMA=pat`
+> וגם אומרת כך ממש.
+- **פירוק:** `memai=a` – memai- "speak", pres. 3sg + =a "also" ("וגם אומרת"); `QĀTAMMA=pat` – "exactly so" ("כך ממש").
+- **תרגומים:** Christiansen (HPM): "und spricht in eben derselben Weise."
+
+## §17′ – משל הכובסים בסבב השני
+
+### 71
+`[nu nam]ma GADA-an QĀTAMMA iyazi`
+> [ועו]ד: את בד־הפשתן – כך עושה;
+- **פירוק:** `[nu nam]ma` – nu + namma "further" (partly restored; "[ועו]ד"); `GADA-an` – GADA "linen", acc. ("את בד־הפשתן"); `QĀTAMMA` – "so" ("כך"); `iyazi` – iya- "do", pres. 3sg ("עושה").
+- **תרגומים:** Christiansen (HPM): "[Und da]nn verfährt sie mit dem Leinentuch ebenso"
+
+### 72
+`nu memai`
+> ואומרת:
+- **פירוק:** `nu` – nu ("ו־"); `memai` – memai- "speak", pres. 3sg ("אומרת").
+- **תרגומים:** Christiansen (HPM): "und spricht:"
+
+### 73
+`[kī=ka]n GADA-an maḫḫan {LÚMEŠ}ÁZLAG tannaran [anniy]anzi`
+> "[כשם ש]את בד־הפשתן הזה – הכובסים [עובדים] את ה*גס*,
+- **פירוק:** `[kī=ka]n` – kā- "this" + =kan (restored; "[את] … הזה"); `GADA-an` – "linen", acc. ("בד־הפשתן"); `maḫḫan` – "as" ("[כשם ש־]": the word is preserved, its Hebrew stands with the restored opening); `{LÚMEŠ}ÁZLAG` – "fullers" ("הכובסים"); `tannaran` – tannara- ("ה*גס*"); `[anniy]anzi` – aniya- "work, treat", pres. 3pl (the stem restored; "[עובדים]").
+- **תרגומים:** Christiansen (HPM): "„Wie die Wäscher [dieses] Leinentuch [säuber]n"
+- **הערות:** כמו 27, עם "בד־הפשתן".
+
+### 74
+`nu=šši=kan {SÍG}mariḫšin [arḫa?] parkunuwanzi`
+> וממנו [הלאה?] את המָרִיחְשִׁי מטהרים,
+- **פירוק:** `nu=šši=kan` – nu + =šši "from it" + =kan ("וממנו"); `{SÍG}mariḫšin` – mariḫši-, acc. ("את המָרִיחְשִׁי"); `[arḫa?]` – arḫa "away" (restored, uncertain; "[הלאה?]"); `parkunuwanzi` – parkunu- "purify", pres. 3pl ("מטהרים").
+- **תרגומים:** Christiansen (HPM): "und die Fusseln(?) von ihm [ent]fernen"
+
+### 75
+`n=at ḫarkišzi`
+> והוא מלבין –
+- **פירוק:** `n=at` – nu + =at "it", nom. ("והוא"); `ḫarkišzi` – ḫarkešš- "become white", pres. 3sg ("מלבין").
+- **תרגומים:** Christiansen (HPM): "und es weiß wird,"
+
+### 76
+`[kē]l=ma antuḫšaš idālu inan DINGIR{MEŠ} [NÍ.T]E-az arḫa QĀTAMMA parkunuwandu`
+> כך את החולי הרע של האדם הזה – יטהרו הָאֵלִים מן הגוף הלאה כך!"
+- **פירוק:** `[kē]l=ma` – kā- "this", gen. + =ma ("של … הזה"); `antuḫšaš` – antuḫša- "person", gen. ("האדם"); `idālu` – "evil" ("הרע"); `inan` – inan "sickness", acc. ("את החולי"); `DINGIR{MEŠ}` – "the gods", nom. ("הָאֵלִים"); `[NÍ.T]E-az` – NÍ.TE "body", abl. ("מן הגוף"); `arḫa` – "away" ("הלאה"); `QĀTAMMA` – "so" ("כך"); `parkunuwandu` – parkunu- "purify", imper. 3pl ("יטהרו").
+- **תרגומים:** Christiansen (HPM): "so sollen ebenso die Götter die böse inan-Krankheit [diese]s Menschen aus dem [Körp]er entfernen!“"
+- **הערות:** זהה ל־30 (שם משוחזר).
+
+## §18′ – "אל תיאבק בהם עוד" – לאֲלַוַּיְמִי
+
+### 77
+`[{D}Al]auwaimi lē=aš namma zaḫḫiškiši`
+> "[אֲלַ]וַּיְמִי – אַל תיאבק בהם עוד!
+- **פירוק:** `[{D}Al]auwaimi` – Alauwaimi, voc. (partly restored; "[אֲלַ]וַּיְמִי"); `lē=aš` – lē "do not" + =aš "them", acc. pl. c. ("אַל … בהם"); `namma` – "any more" ("עוד"); `zaḫḫiškiši` – zaḫḫ- "fight", iterative pres. 2sg ("תיאבק").
+- **תרגומים:** Christiansen (HPM): "[„Al]auwaima, bekämpfe sie nicht länger!"
+
+### 78
+`[it=z]a kūn {GIŠ}tarzun namma zaḫḫiški`
+> [לֵךְ] – עם התַּרְזוּ הזה היאבק עוד!
+- **פירוק:** `[it=z]a` – pai- "go", imper. 2sg + =za (restored; "[לֵךְ]"); `kūn` – "this" ("הזה"); `{GIŠ}tarzun` – tarzu-, acc. ("התַּרְזוּ"); `namma` – "further" ("עוד"); `zaḫḫiški` – zaḫḫ- "fight", iterative imper. 2sg ("היאבק").
+- **תרגומים:** Christiansen (HPM): "[Geh,] bekämpfe fortan diesen Sicherungsriegel!"
+
+### 79
+`nu=wa=šmaš idālu kattan arḫa nanni`
+> ואת הרעה – מעליהם הלאה הרחק!"
+- **פירוק:** `nu=wa=šmaš` – nu + =wa + =šmaš "from them" ("מעליהם"); `idālu` – "evil" ("ואת הרעה"); `kattan` – "from beside" (in "מעליהם"); `arḫa` – "away" ("הלאה"); `nanni` – nanna- "drive away", imper. 2sg ("הרחק").
+- **תרגומים:** Christiansen (HPM): "Und treibe das Böse damit von ihnen fort!“"
+- **הערות:** זהה ל־33.
+
+## §19′ – הבדיל בסבב השני
+
+### 80
+`nu=ššan NAGGA tepu {SÍG}ištaggai anda ḫūlalīēzzi`
+> ומעט בְּדִיל – במיתר כורכת,
+- **פירוק:** `nu=ššan` – nu + =ššan ("ו־"); `NAGGA` – "tin" ("בְּדִיל"); `tepu` – "little" ("מעט"); `{SÍG}ištaggai` – SÍG ištagga- "bowstring", d.-l. ("במיתר"); `anda` – "in" (in "ב־"); `ḫūlalīēzzi` – ḫulaliya- "wrap", pres. 3sg ("כורכת").
+- **תרגומים:** Christiansen (HPM): "Und sie wickelt ein wenig Zinn in eine Bogensehne ein"
+
+### 81
+`n=at=šan ANA BĒLŪTIM kunni ANA QĀTĪ=ŠU GÌR=ŠU nāi`
+> ואותו – אל האדונים, לימין, אל ידו ואל רגלו – מפנה.
+- **פירוק:** `n=at=šan` – nu + =at "it" + =šan ("ואותו"); `ANA BĒLŪTIM` – "to the lords" ("אל האדונים"); `kunni` – "right" ("לימין"); `ANA QĀTĪ=ŠU` – "to his hand" ("אל ידו"); `GÌR=ŠU` – "his foot" ("ואל רגלו"); `nāi` – nai- "turn, direct", pres. 3sg ("מפנה").
+- **תרגומים:** Christiansen (HPM): "und windet es den Herren rechts um ihre Hände und ihre Füße."
+
+## §20′ – העכבר בסבב השני
+
+### 82
+`namma=at=šmaš=at=kan arḫa dāi`
+> ועוד: אותו מעליהם לוקחת הלאה;
+- **פירוק:** `namma=at=šmaš=at=kan` – namma "then" + =at "it" + =šmaš "from them" + =at + =kan ("ועוד: אותו מעליהם"); `arḫa` – "away" ("הלאה"); `dāi` – dā- "take", pres. 3sg ("לוקחת").
+- **תרגומים:** Christiansen (HPM): "Dann nimmt sie es von ihnen weg"
+
+### 83
+`n=at=kan ANA PÉŠ.TUR nāi`
+> ואותו מפנה אל העכבר הקטן;
+- **פירוק:** `n=at=kan` – nu + =at "it" + =kan ("ואותו"); `ANA PÉŠ.TUR` – "to the little mouse" ("אל העכבר הקטן"); `nāi` – nai- "turn", pres. 3sg ("מפנה").
+- **תרגומים:** Christiansen (HPM): "und windet es um eine Maus:"
+
+### 84
+`arḫa=wa=šmaš=kan daḫḫun idālu`
+> "לקחתי מעליהם הלאה את הרעה,
+- **פירוק:** `arḫa=wa=šmaš=kan` – arḫa + =wa + =šmaš "from them" + =kan ("מעליהם הלאה"); `daḫḫun` – dā- "take", pret. 1sg ("לקחתי"); `idālu` – "evil" ("את הרעה").
+- **תרגומים:** Christiansen (HPM): "„Von euch/ihnen habe ich das Böse weggenommen"
+
+### 85
+`nu=war=at=kan ANA PÉŠ.TUR neḫḫun`
+> ואותה הפניתי אל העכבר הקטן;
+- **פירוק:** `nu=war=at=kan` – nu + =war + =at "it" + =kan ("ואותה"); `ANA PÉŠ.TUR` – "to the little mouse" ("אל העכבר הקטן"); `neḫḫun` – nai- "turn", pret. 1sg ("הפניתי").
+- **תרגומים:** Christiansen (HPM): "und habe es um eine Maus gewunden."
+
+### 86
+`nu=war=at kāš PÉŠ.TUR pargauwaš ḪUR.SAG{MEŠ}-aš ḫallūwāš ḫāriyaš (Ras.) dālugauwaš KASKAL{ḪI.A}-aš pēdāu`
+> ואותה העכבר הקטן הזה אל ההרים הגבוהים, אל העמקים העמוקים, אל הדרכים הארוכות יישא!"
+- **פירוק:** `nu=war=at` – nu + =war + =at "it", acc. ("ואותה"); `kāš` – "this", nom. ("הזה"); `PÉŠ.TUR` – "little mouse", nom. ("העכבר הקטן"); `pargauwaš ḪUR.SAG{MEŠ}-aš` – "to the high mountains" ("אל ההרים הגבוהים"); `ḫallūwāš ḫāriyaš` – "to the deep valleys" ("אל העמקים העמוקים"); `(Ras.)` – an erasure on the tablet (not translated); `dālugauwaš KASKAL{ḪI.A}-aš` – "to the long roads" ("אל הדרכים הארוכות"); `pēdāu` – peda- "carry", imper. 3sg ("יישא").
+- **תרגומים:** Christiansen (HPM): "Nun soll diese Maus es über hohe Berge, durch tiefe Täler, auf weiten Wegen forttragen!“"
+- **הערות:** זהה ל־40 (כאן שלם).
+
+## §21′ – שילוח העכבר: "קח אותו – ולאכול, עֵז"
+
+### 87
+`nu PÉŠ.TUR arḫa tarnāi`
+> ואת העכבר הקטן משלחת הלאה.
+- **פירוק:** `nu` – nu ("ו־"); `PÉŠ.TUR` – "little mouse", acc. ("ואת העכבר הקטן"); `arḫa` – "away" ("הלאה"); `tarnāi` – tarna- "release", pres. 3sg ("משלחת").
+- **תרגומים:** Christiansen (HPM): "Und sie lässt die Maus los."
+- **הערות:** כמו 41, אבל ביחיד: כאן אַמְבַּזִּי עצמה משחררת את העכבר.
+
+### 88
+`{D}Alauwaimi kūn=za zik penni`
+> "אֲלַוַּיְמִי – את זה הסע לך אתה!
+- **פירוק:** `{D}Alauwaimi` – Alauwaimi, voc. ("אֲלַוַּיְמִי"); `kūn=za` – kā- "this", acc. + =za ("את זה … לך"); `zik` – "you" ("אתה"); `penni` – penna- "drive (away)", imper. 2sg ("הסע").
+- **תרגומים:** Christiansen (HPM): "„Alauwaima, diese lasse du hinwegziehen!" – "lasse du hinwegziehen" ל־*penna-*; אנו `הסע`.
+- **הערות:** כמו 42, אבל במקום "קח" – "הסע": האל מתבקש להסיע את העכבר הלאה, כמו בהמה.
+
+### 89
+`adanna=ma=tta UZ6-an peḫḫi`
+> ואילו לאכול – עֵז אני נותנת לך!"
+- **פירוק:** `adanna=ma=tta` – ed- "eat", inf. + =ma "but" + =tta "to you" ("ואילו לאכול … לך"); `UZ6-an` – UZ₆ "she-goat", acc. ("עֵז"); `peḫḫi` – pai- "give", pres. 1sg ("אני נותנת").
+- **תרגומים:** Christiansen (HPM): "Zu essen aber gebe ich dir eine Ziege!“"
+- **הקבלה:** [divergence] `שְׁנֵי שְׂעִירֵי עִזִּים לְחַטָּאת` (ויקרא טז:ה) – גם כאן עז (נקבה), אבל היא לא נושאת את הרעה: העכבר נושא, והעֵז היא מזון לאל. טיפולוגי.
+- **הערות:** החלוקה בין שני בעלי החיים ברורה: העכבר – לשאת את הרעה; העֵז – לאכול. רעבו של האל מסופק, והוא יניח לאדם.
+
+## §22′ – העלווה והלחמים לאלים
+
+### 90
+`nu GIŠ-ruwaš {GIŠ}laḫurnuzi dāi`
+> ועלוות עצים שָׂמָה;
+- **פירוק:** `nu` – nu ("ו־"); `GIŠ-ruwaš` – taru- (GIŠ-ru) "tree, wood", gen. pl. ("עצים"); `{GIŠ}laḫurnuzi` – laḫḫurnuzzi- "foliage", acc. ("ועלוות"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "Und sie legt Laub von Bäumen hin"
+
+### 91
+`nu 1 NINDA.GUR4.RA GÍD.DA {D}Alauwaimaš DINGIR.LÚ{MEŠ}-aš paršiya`
+> ולחם עבה ארוך אחד – לָאֵלִים הזכרים של אֲלַוַּיְמִי – פורסת;
+- **פירוק:** `nu` – nu ("ו־"); `1 NINDA.GUR4.RA GÍD.DA` – "one long thick bread" ("לחם עבה ארוך אחד"); `{D}Alauwaimaš` – Alauwaimi, gen. ("של אֲלַוַּיְמִי"); `DINGIR.LÚ{MEŠ}-aš` – DINGIR.LÚ.MEŠ "male gods", d.-l. pl. ("לָאֵלִים הזכרים"); `paršiya` – paršiya- "break (bread)", pres. 3sg ("פורסת").
+- **תרגומים:** Christiansen (HPM): "und bricht 1 langes Dickbrot den männlichen Göttern des/r Alauwaima."
+- **הערות:** "האלים הזכרים של אֲלַוַּיְמִי" – פמליה של אלים זכרים סביב אֲלַוַּיְמִי. הלחם הארוך – למשפחת האלים כולה.
+
+### 92
+`1 NINDA.GUR4.RA {D}Alauwaimi paršiya`
+> לחם עבה אחד – לאֲלַוַּיְמִי – פורסת;
+- **פירוק:** `1 NINDA.GUR4.RA` – "one thick bread" ("לחם עבה אחד"); `{D}Alauwaimi` – Alauwaimi, d.-l. ("לאֲלַוַּיְמִי"); `paršiya` – paršiya- "break", pres. 3sg ("פורסת").
+- **תרגומים:** Christiansen (HPM): "1 Dickbrot bricht sie für Alauwaima,"
+
+### 93
+`1 NINDA.GUR4.RA {D}Mammai paršiya`
+> לחם עבה אחד – לְמַמַּאי – פורסת;
+- **פירוק:** `1 NINDA.GUR4.RA` – "one thick bread" ("לחם עבה אחד"); `{D}Mammai` – Mammai, a goddess, d.-l. ("לְמַמַּאי"); `paršiya` – paršiya- "break", pres. 3sg ("פורסת").
+- **תרגומים:** Christiansen (HPM): "1 Dickbrot bricht sie für Mamma."
+- **הערות:** מַמַּאי – אלה לוּוִית (בנוסח השני: *Mammāimi*, `מַמָּאִימִי`). שתי הצורות נשמרות כפי שהן בכל נוסח (הצורה עם *-imi* היא הבינוני הלוּוִי, כמו אֲלַוַּיְמִי).
+
+### 94
+`n=an=šan {GIŠ}laḫurnuzziyaš dāi`
+> ואותו על העלווה שָׂמָה.
+- **פירוק:** `n=an=šan` – nu + =an "it", acc. + =šan ("ואותו"); `{GIŠ}laḫurnuzziyaš` – laḫḫurnuzzi-, d.-l. ("על העלווה"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **נוסחים:** C מתחיל כאן: `PĀNI {UZU}…` – "לפני הבשר" (שונה?).
+- **תרגומים:** Christiansen (HPM): "Und sie legt es auf das Laub."
+
+## §23′ – העֵז לאֲלַוַּיְמִי
+
+### 95
+`n=ašta UZ6 {D}Alauwaimi šipanti`
+> ואת העֵז – לאֲלַוַּיְמִי מקריבה:
+- **פירוק:** `n=ašta` – nu + =ašta ("ו־"); `UZ6` – UZ₆ "she-goat", acc. ("ואת העֵז"); `{D}Alauwaimi` – Alauwaimi, d.-l. ("לאֲלַוַּיְמִי"); `šipanti` – šipant- "offer", pres. 3sg ("מקריבה").
+- **תרגומים:** Christiansen (HPM): "Und dann opfert sie die Ziege für Alauwaima."
+- **הקבלה:** [divergence] `וּמֵאֵת עֲדַת בְּנֵי יִשְׂרָאֵל יִקַּח שְׁנֵי שְׂעִירֵי עִזִּים לְחַטָּאת` (ויקרא טז:ה) – שעירי עזים בויקרא, כאן עֵז נקבה; בויקרא האחד לחטאת והאחד לשילוח, וכאן העז היא הקרבן, והעכבר הוא המשולח. טיפולוגי.
+
+### 96
+`zik ēt`
+> "אתה – אכול!"
+- **פירוק:** `zik` – zik "you", nom. ("אתה"); `ēt` – ed- "eat", imper. 2sg ("אכול").
+- **תרגומים:** Christiansen (HPM): "„Du, iss!“"
+- **הערות:** שתי מילים: ההזמנה הישירה ביותר לאל בכל הטקסים האלה.
+
+### 97
+`n=an PĀNI NINDA.GUR4.RA{ḪI.A} ḫattai`
+> ואותה לפני הלחמים העבים דוקרת;
+- **פירוק:** `n=an` – nu + =an "it, her", acc. ("ואותה"); `PĀNI NINDA.GUR4.RA{ḪI.A}` – PĀNI "before" + "thick breads" ("לפני הלחמים העבים"); `ḫattai` – ḫatta- "pierce, stab, slaughter", pres. 3sg ("דוקרת", R2).
+- **תרגומים:** Christiansen (HPM): "Und vor den Dickbroten sticht sie sie ab." – "sticht sie sie ab" – כמונו (`דוקרת`).
+
+### 98
+`n=ašta ZAG-an {UZU}GEŠTU-an arḫa kuērzi`
+> ואת האוזן הימנית כורתת הלאה;
+- **פירוק:** `n=ašta` – nu + =ašta ("ו־"); `ZAG-an` – kunna- (ZAG) "right", acc. ("הימנית"); `{UZU}GEŠTU-an` – GEŠTU "ear", acc. ("את האוזן"); `arḫa` – "away, off" ("הלאה"); `kuērzi` – kuer- "cut (off)", pres. 3sg ("כורתת").
+- **תרגומים:** Christiansen (HPM): "Und sie schneidet das rechte Ohr ab"
+- **הקבלה:** [divergence] `וְנָתַן הַכֹּהֵן עַל תְּנוּךְ אֹזֶן הַמִּטַּהֵר הַיְמָנִית` (ויקרא יד:יד) – האוזן הימנית בטקס הטיהור: שם של האדם המיטהר, כאן של הבהמה המוקרבת, ומנה לאל. טיפולוגי.
+- **הערות:** האוזן הימנית של העֵז נכרתת, מתבשלת (99) ומונחת על הלחם (100): מנה מיוחדת. הצד הימני מועדף, כמו בקישור הבדיל (35).
+
+### 99
+`n=at zanuzi`
+> ואותה מבשלת;
+- **פירוק:** `n=at` – nu + =at "it", acc. ("ואותה"); `zanuzi` – zanu- "cook", pres. 3sg ("מבשלת").
+- **תרגומים:** Christiansen (HPM): "und kocht es."
+
+### 100
+`n=at ANA NINDA.GUR4.RA{ḪI.A} AŠAR 2-ŠU dāi`
+> ואותה על הלחמים העבים – במקום שני – שָׂמָה;
+- **פירוק:** `[n=at` – nu + =at "it" (restored; "ואותה"); `AN]A NINDA.GUR4.RA{ḪI.A}` – "on the thick breads" ("על הלחמים העבים"); `AŠAR 2-ŠU` – AŠRU "place" + 2-ŠU "second" ("במקום שני"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "Und an einem anderen Ort legt sie es auf Dickbrote." – "an einem anderen Ort" ל־*AŠAR 2-ŠU*; אנו `במקום שני`.
+
+### 101
+`{UZU}NÍG.GIG QĀTAMMA šipanti`
+> ואת הכבד – כך מקריבה.
+- **פירוק:** `{UZU}NÍG.GIG` – "liver", acc. ("ואת הכבד"); `QĀTAMMA` – "so, likewise" ("כך"); `šipanti` – šipant- "offer", pres. 3sg ("מקריבה").
+- **תרגומים:** Christiansen (HPM): "Die Leber opfert sie ebenso."
+
+## §24′ – מנות הבשר
+
+### 102
+`ZAG-an{UZU}ZAG.UDU zanuwanzi`
+> את הכתף הימנית מבשלים;
+- **פירוק:** `ZAG-an{UZU}ZAG.UDU` – ZAG "right" + ZAG.UDU "shoulder" ("את הכתף הימנית"); `zanuwanzi` – zanu- "cook", pres. 3pl ("מבשלים").
+- **תרגומים:** Christiansen (HPM): "Die rechte Schulter kocht man."
+- **הקבלה:** [divergence] `וְאֵת שׁוֹק הַיָּמִין תִּתְּנוּ תְרוּמָה לַכֹּהֵן` (ויקרא ז:לב) – הצד הימני כמנה המובחרת; כאן מנה לאלים. טיפולוגי (כמו AS 70).
+
+### 103
+`nu {UZU}QĀTAM DINGIR.LÚ{MEŠ}-aš dāi`
+> ואת (נתח) היד – לָאֵלִים הזכרים שָׂמָה;
+- **פירוק:** `nu` – nu ("ו־"); `{UZU}QĀTAM` – QĀTU (Akk.) "hand" (a cut of meat: the foreleg) ("ואת (נתח) היד"); `DINGIR.LÚ{MEŠ}-aš` – "male gods", d.-l. pl. ("לָאֵלִים הזכרים"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "Und den Huf legt sie den männlichen Göttern hin." – "Huf" ל־*UZU QĀTU*; אנו `(נתח) היד` (האכדוגרמה "יד").
+
+### 104
+`{UZU}muḫrain=ma {D}Alauwaimi dāi`
+> ואילו את נתח־המוּחְרַי – לאֲלַוַּיְמִי שָׂמָה;
+- **פירוק:** `[{UZU}muḫrai]n=ma` – UZU muḫrai-, a cut of meat, acc. (partly restored) + =ma ("ואילו את נתח־המוּחְרַי"); `{D}Alauwaimi` – "for Alauwaimi" ("לאֲלַוַּיְמִי"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "den muḫrai-Körperteil aber legt sie Alauwaima hin."
+
+### 105
+`{UZU}MAŠ.SÌL {D}Mammai dāi21`
+> את המותן – לְמַמַּאי שָׂמָה;
+- **פירוק:** `{UZU}MAŠ.SÌL` – MAŠ.SÌL "hip" ("את המותן"); `{D}Mammai` – Mammai, d.-l. ("לְמַמַּאי"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **נוסחים:** A שבור בראשו; C שומר את שם האלה.
+- **תרגומים:** Christiansen (HPM): "Die Hüfte legt sie Mamma hin." – "Hüfte" ל־MAŠ.SÌL – כך גם אנו בתיקון (`המותן`).
+- **הערות:** מַמַּאי – כמו ב־93 (בנוסח השני: *Mammāimi*, `מַמָּאִימִי`).
+
+### 106
+`namma šipanti`
+> ועוד – מקריבה.
+- **פירוק:** `namma` – namma "further, then" ("ועוד"); `šipanti` – šipant- "offer", pres. 3sg ("מקריבה").
+- **תרגומים:** Christiansen (HPM): "Außerdem libiert sie." – "libiert" ל־*šipant-* – המובן היסודי "לנסך"; אנו `מקריבה`, כבכל הטקסטים החתיים.
+
+## §25′ – עוד מנות
+
+### 107
+`GÙB-lan {UZU}ZAG.[U]DU QĀTAMMA šipanti`
+> את הכתף השמאלית – כך מקריבה;
+- **פירוק:** `GÙB-lan` – GÙB-la- "left", acc. ("השמאלית"); `{UZU}ZAG.[U]DU` – "shoulder" ("את הכתף"); `QĀTAMMA` – "so" ("כך"); `šipanti` – šipant- "offer", pres. 3sg ("מקריבה").
+- **תרגומים:** Christiansen (HPM): "Die linke Schulter opfert sie ebenso."
+
+### 108
+`1 {UZU}KURŠINNU ZAG-an ḫantezzin DINGIR.LÚ{MEŠ}-aš dāi`
+> קרסול ימני אחד, הקדמי – לָאֵלִים הזכרים שָׂמָה;
+- **פירוק:** `1 {UZU}KURŠINNU` – KURŠINNU (Akk. *kuršinnu*) "ankle, lower leg", "one" ("קרסול … אחד"); `ZAG-an` – "right" ("ימני"); `ḫantezzin` – ḫantezzi- "first, front", acc. ("הקדמי"); `DINGIR.LÚ{MEŠ}-aš` – "male gods", d.-l. pl. ("לָאֵלִים הזכרים"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "1 Fußknöchel, (nämlich) den rechten vorderen, legt sie den männlichen Göttern hin" – "Fußknöchel" – כמונו (`קרסול`).
+
+### 109
+`½ SAG.DU {UZU}GABA ⸢{UZU}⸣šarḫūwantan [ … ] dāi`
+> חצי ראש, את החזה, את הבטן […] שָׂמָה;
+- **פירוק:** `½ SAG.DU` – "half (a) head" ("חצי ראש"); `{UZU}GABA` – "breast" ("את החזה"); `⸢{UZU}⸣šarḫūwantan` – šarḫuwant- "belly, innards", acc. ("את הבטן", HL1); `[ … ]` – lost ("[…]"); `dāi` – dai- "put", pres. 3sg ("שָׂמָה").
+- **תרגומים:** Christiansen (HPM): "Eine Hälfte des Kopfes, die Brust, das Leibesinnere, [ … ] legt sie hin"
+
+### 110
+`nu šipanti`
+> ומקריבה.
+- **פירוק:** `nu` – nu ("ו־"); `šipanti` – šipant- "offer", pres. 3sg ("מקריבה").
+- **תרגומים:** Christiansen (HPM): "und sie opfert."
+- **הערות:** מנות הבשר (102–110, וחוזרות ב־183–189, 238–245): כל אֵל מקבל את חלקו – האלים הזכרים את היד ואת הקרסול, אֲלַוַּיְמִי את המוּחְרַי, מַמַּאי את המותן. סעודה שבה לכל אורח מנה לפי מעלתו.
+
+<!-- טרם תורגם: 111–260 -->

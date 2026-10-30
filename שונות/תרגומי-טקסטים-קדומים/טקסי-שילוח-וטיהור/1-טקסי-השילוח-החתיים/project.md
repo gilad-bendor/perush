@@ -195,3 +195,68 @@ the restored *[ḫarganušk]i?* `[ומלבין?]`; ÉRIN.MEŠ `אנשי צבא` 
 `אֵל הַסְּעָרָה`, `אֵל הַשֶּׁמֶשׁ`, `אֵל הַמָּגֵן`, `הַשִּׁבְעָה`; *šipant-* `הקריב`; *idālu-* `רע`, *idālu* `הרעה`; *peda-* `נשא`, *EGIR-pa …
 peda-* `בחזרה … יישא`; *arḫa tarna-* `שילח הלאה`; *penna-* `הסיע`, *unna-* `נהג`; *PŪḪU* `תחליף`; *galank-* `מפויס`; *walḫ-* `מחץ`;
 *ištarna* `בין` / `דרך`; *ar-* "arrive" `הגיע`; the mouse is not in AS / UH / PU (PÉŠ.TUR `עכבר קטן` from R1).
+
+### Part 3 (AM 1–110)
+Written 2026-10-30 by the translator, after drafting AM 1–110 (§1–§25′) in `annotated-AM.rtl.md` (placeholder `<!-- טרם תורגם:
+111–260 -->`). `verify AM`: 0 problems; `check_bible_quotes.py`: 0 problems. Christiansen's German read after the draft (only the
+edition's textual notes before). Two `[היתר שם: …]` escapes (AM 93, 105), below.
+
+**The speaker (decided once, in the intro and at AM 1, 14):** the 3sg prescriptions are Ambazzi herself – the same acts alternate
+1sg / 3sg (AM 3–7 *išḫuwaḫḫi … kištanumi … memaḫḫi* against 51–55 *išḫūwāi … kištanuzi … memai*), and AM2 18 names
+{MUNUS}ŠU.GI "the old woman" as the subject – so feminine participles (`אומרת`, `שׂמה`, `זורה`, `מכבה`, `מושכת`, `לוקחת`, `מפנה`,
+`כורכת`, `מקריבה`, `פורסת`, `מפזרת`, `דוקרת`, `כורתת`, `מבשלת`, `משלחת`, `מזמנת`); her 1st person `אני זורה`, `אני מכבה`, `אני
+אומרת`, `אני נותנת`; the 3pl verbs (`קולים`, `משלחים`, `מבשלים`) are the helpers.
+
+**Refrains – the fixed Hebrew (part 1 = first copy; copy byte for byte, person / number as the Hittite has it):**
+| Refrain | Fixed Hebrew (first full copy) | Copies |
+|---|---|---|
+| The bowl | `ואל אגן אָדֹם – עצי־חוּוַלִּי אני זורה,` / 3sg `ועצי־החוּוַלִּי – אל האגן האָדֹם שָׂמָה;` (51 *dāi*; 128 *šuḫḫāi* → `מפזרת`) · `ועל גביו – תבואה (ו)כוסמת אני זורה;` / `… זורה;` · `ואותו קולים,` · `ועוד: את עצי־החוּוַלִּי במים אני מכבה,` / `ואת עצי־החוּוַלִּי במים מכבה,` · `ואני אומרת:` / `ואומרת:` | 3–7; 51–55; 128–132; 207–208 |
+| The extinguishing | `"כשם שאת אלה כיביתי,` (*kē*) / `"כשם שאת זה כיביתי,` (*kī*) · `כך גם הרעה שעל האדונים – תכבה!"` (134, 210 add *inan* "sickness": `כך גם הרעה – החולי – שעל האדונים – תכבה!"` proposed) | 8–9; 56–57; 133–134; 209–210 |
+| Bow, arrows, hide | 58–59 (the full copy): `וכדורי בצק, חוּרְטַלִּים, קשת אחת של אֶזָּה – ועליה מיתר משוך –,` · `שלושה חיצים של אֶזָּה; וגם לפניהם – כדורי בצק, בריח, תַּרְזוּ; ואילו לפניהם – עור־שָׁאלָה קשור.` · `ואת כל זה על הפַּדַּנִי שָׂמָה.` (10 begins `ותבואה, כוסמת, …`, 135 *paddani šuḫḫāi* `… על הפַּדַּנִי מפזרת;`) | 10–14; 58–60; 135–138; 200–206; AM2 12 |
+| The wool, feet to head | `ולוקחת לה צמר־אַשַׁרָה;` · `ואותו – על האדונים, מרגליהם עד לראשו, מצד זה ומצד זה – מושכת;` (16, 140 with `למעלה`, other order: `… מרגליהם, מצד זה ומצד זה, עד לראשו – מושכת למעלה;`) · `ומאחור, וגם למטה – מגבם מושכת;` · `ועוד: אותו מעליהם לוקחת הלאה;` · `ואותו על הפַּדַּנִי שָׂמָה.` | 15–19; 61–65; 139–143; 211 |
+| "Draw out the evil" | `ואומרת:` · `"משוך ממנו הלאה את המשיכה הרעה – מן הראש, מן הידיים, מן הרגליים, מכל איבר!` (145 `ממנם`, pl.) · `ואותה – לאנשים הרעים, ליריבים – תן!` · `ואילו לאדונים – חיים, כוח, שנים ארוכות תן!"` (*innarawatar* `כוח`) | 20–23; 66–68; 144–147; AM2 1–5; 256 (`חיים, כוח, שנים ארוכות`) |
+| The bowstring likewise | `וגם את המיתר – כך עושה;` · `וגם אומרת כך ממש.` | 24–25; 69–70; 148–149 |
+| The fuller | `ובד־פשתן עליהם כך קושרת;` (26; 71 `ועוד: את בד־הפשתן – כך עושה;`) · `ואומרת:` · `"כשם שאת בד־הפשתן הזה – הכובסים עובדים את ה*גס*,` · `וממנו (הלאה?) את המָרִיחְשִׁי מטהרים,` · `והוא מלבין –` · `כך את החולי הרע של האדם הזה – יטהרו הָאֵלִים מן הגוף הלאה כך!"` | 26–30; 71–76; 150–155; AM2 6–11 (`ŠÀ.TAM` "stewards"; AM2 *tezzi* `אומרת`) |
+| "Do not keep fighting" | `"X – אַל תיאבק בהם עוד!` · `לֵךְ – עם התַּרְזוּ הזה היאבק עוד!` · `ואת הרעה – מעליהם הלאה הרחק!"` (*nanna-* `הרחיק`) | 31–33; 77–79; 156–159 |
+| The tin | `ומעט בְּדִיל – במיתר כורכת,` · `ואותו – אל האדונים, לימין, אל ידו ואל רגלו – מפנה.` | 34–35; 80–81; 160–161; AM2 18–19 (*ḫamank-* `קושרת`) |
+| The mouse | `ועוד: אותו מעליהם לוקחת הלאה;` · `ואותו מפנה אל העכבר הקטן;` · `"לקחתי מעליהם הלאה את הרעה,` · `ואותה הפניתי אל העכבר הקטן;` · `ואותה העכבר הקטן הזה אל ההרים הגבוהים, אל העמקים העמוקים, אל הדרכים הארוכות יישא!"` | 36–40; 82–86; 162–167; AM2 20–21 |
+| The release | `ואת העכבר הקטן משלחים הלאה.` / 3sg `… משלחת הלאה.` | 41; 87; 168 |
+| "Take him – another to eat" | `"X – את זה קח לך אתה!` (88 *penni*: `הסע`) · `ואילו לאכול – אחר נותנים לך!"` (89 `עֵז אני נותנת לך!"`) · `ואת השיירים מפזרת הלאה.` | 42–44; 88–89; 169–172 |
+| The breads | `ועוד, במקום אחר – עלווה שָׂמָה;` / `ועלוות עצים שָׂמָה;` · `לחם עבה ארוך אחד – לָאֵלִים הזכרים של X – פורסת;` · `לחם עבה אחד – ל־X – פורסת;` · `ואותו על העלווה שָׂמָה.` | 45–46; 90–94; 173–177; 221–224 |
+| The meat portions | `את הכתף הימנית מבשלים;` · `ואת (נתח) היד – לָאֵלִים הזכרים שָׂמָה;` · `ואילו את נתח־המוּחְרַי – ל־X שָׂמָה;` · `את המותן – לְמַמַּאי שָׂמָה;` · `ועוד – מקריבה.` · `את הכתף השמאלית – כך מקריבה;` · `ואת הכבד – כך מקריבה.` · `קרסול ימני אחד, הקדמי – לָאֵלִים הזכרים שָׂמָה;` · `חצי ראש, את החזה, את הבטן […] שָׂמָה;` · `ומקריבה.` | 97–110; 178–189; 233–245 |
+
+**New renderings:** DÍLIM.GAL `אגן` (`קערה` stays *ḫuppar*); GIŠ *ḫuwalli-* / *ḫulli-* `עצי־חוּוַלִּי` (HPM "Wacholderholz(?)");
+*ḫalki-* `תבואה`, *kar(a)š* `כוסמת`; ***šanḫ-* "roast" `קלה`** (AM 5, 53; a homonym of IN's *šanḫ-* "sweep, seek" `מטואטא` / `דרש`:
+two words); *kištanu-* `כיבה` (IN), mp *kištai-* `כבה`; *maḫḫan … QĀTAMMA* `כשם ש… כך`; BĒLŪTU / EN.MEŠ `אדונים`; *ḫurtalli-*
+transliterated (HPM "Gemengsel"); *pūrpūri-* `כדור`, *išna-* `בצק`; GIŠPAN `קשת`, GI "arrow" `חץ`; **SÍG *ištagga-* "bowstring" =
+`מיתר`** (HPM; I first had a transliteration: corrected everywhere); *ēzza-* transliterated `אֶזָּה` (HPM "Rohr"); GIŠ *ḫattalu*
+`בריח`; GIŠ *tarzu-* transliterated `תַּרְזוּ` (HPM "Sicherungsriegel": a second kind of bolt); KUŠ *šāla-* `עור־שָׁאלָה` (always
+vocalized: "question"); GI *paddani-* transliterated `פַּדַּנִי` (HPM "Korb"); SÍG *ašara-* transliterated `צמר־אַשַׁרָה` (HPM "weiße
+Wolle": `לָבָן` stays BABBAR / *ḫarki-*); *kēz kēzziya* `מצד זה ומצד זה`; *iškiša-* `גב`; *ḫuittiyaššar* `משיכה` (the figura etymologica
+kept); ÚR "limb" `איבר` (AM; AS, PU `ירך`: split by sense, AM2 4 "nine limbs"); *idālawa-* `רע` (pl. `הרעים`); *ḫarpanalli-* `יריב`
+(`אויב` is LÚ.KÚR); *innarawatar* `כוח`; GADA `בד־פשתן`; LÚ ÁZLAG `כובס` (HL2); *tannara-* `*גס*`; SÍG *mariḫši-* transliterated;
+*ḫarkešš-* `הלבין`; *inan* `חולי`; *zaḫḫ-* `נאבק` (HL2); *it* (*pai-* imper.) `לֵךְ` (vocalized); *nanna-* `הרחיק`; NAGGA `בְּדִיל`;
+*ḫulaliya-* `כרך`; *kunna-* `ימין`; *šuḫḫa-* `פיזר` (neither `שפך` nor `זרה`); *kuptar* `שיירים` (HL1); *paršiya-* of bread `פרס`
+(HL2 "breach" `פרץ`: split by sense); *weriya-* `זימן`; *weḫ-* + *peran* `סובבים לפני (האדם)` (`לפנים` is gated to *karū*); UZ₆ `עֵז`
+★; *ḫatta-* `דקר` (R2); *kuer-* "cut off" `כרת` (`חתך` is *karš-*, `קצץ` *kukkurš-*); *AŠAR 2-ŠU* `במקום שני`; UZU QĀTU `(נתח) היד`
+(HPM "Huf"); UZU *muḫrai-* transliterated; MAŠ.SÌL `מותן` (HPM "Hüfte"); GÙB-la- `שמאלי`; KURŠINNU `קרסול`; *šarḫuwant-* `בטן`
+(HL1); DINGIR.LÚ.MEŠ `הָאֵלִים הזכרים`; *GIŠ-ru* (*taru-*) `עצים`.
+
+**Names:** Zarniza `זַרְנִיזָה`, Tarpattašši `תַּרְפַּתַּשִּׁי` (Luwian *tarpatt-* "substitute"? – a note at AM 2), Alauwaimi
+`אֲלַוַּיְמִי` (HPM "Alauwaima"). **Mammai: two forms, as the texts have them** – AM *Mammai* `מַמַּאי` ★ (always vocalized: "from
+what"), AM2 *Mammāimi* `מַמָּאִימִי` (the Luwian *-imi* form, like Alauwaimi). **Proposed H2 change:** split the row `mamm[aā]` into
+`mamm[aā]i\b|mamma=` → `מַמַּאי` ★ and `mammāim|mammaim` → `מַמָּאִימִי`; then the two escapes at AM 93 and 105 can go.
+
+**Gates / traps:** `לפנים` (F2's gate) blocked *peran* "in front" (AM 48): right as it stands (written `לפני (האדם)`); new traps
+proposed: `שאלה` with KUŠ *šāla-*, `ממאי` with *Mammai*, `לך` with *it* (`לֵךְ`), `שמה` with *dai-* fem. (`שָׂמָה`: "there, her
+name"), `קולים` is unambiguous enough. The selftest's AM 86 ok-line (`ואותו העכבר …`) differs from the drafted `ואותה העכבר …`
+(*=at* = the evil, `הרעה`, fem.): please replace it by the drafted line; AM 41 and AM 95 match.
+
+**Cruxes:** AM 5 / 53 the subject of *šanḫuwanzi*; 10 *ḫurtalli-*; 12 the number of arrows; 15 *ašara-*; 21 the addressee of
+"draw out" (the god? the wool?); 27 *tannara-*; 37 *nai-* "turn to" or "wind round" (HPM) the mouse; 48–49 who "goes about in front";
+94 C's `PĀNI {UZU}…`; 100 *AŠAR 2-ŠU*; 103 UZU QĀTU ("hand" / "hoof").
+
+**For part 4 (111–260, AM2):** the precious things (113–116, 190–193, 252–255) take R1a's stones and metals (`כֶּסֶף`, `זָהָב`, `אֶבֶן
+סַפִּיר`, `אֹדֶם` ★, `אֶבֶן־בָּבֶל`, `לוּלּוּרִי`, `תִּי`, `בַּרַשְׁחָה` ★ – never the string `בראש`, `בַּרְזֶל`, `בְּדִיל`, `נְחֹשֶׁת`, `אָרָד`);
+*šuḫḫa-* `פיזר` there too; Tarpattašši's epithet *kuiš peran weḫatta* `אשר סובב לפני (האדם)` (122, 126, 156, 169, 175, 179, 185, 230);
+*zik azzikki* (181) as AM 82's iterative `אכול`; AM2 11's ANZELLU `אִסּוּר` / *ḫurkil* `תּוֹעֵבָה` / *papratar* `טֻמְאָה` (R1a).
