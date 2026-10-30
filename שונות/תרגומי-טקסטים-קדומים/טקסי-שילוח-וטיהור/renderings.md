@@ -165,6 +165,15 @@ Mammāimi `מַמָּאִימִי` (AM2): two H2 rows (the two escapes removed).
 line replaced by the drafted one (`ואותה`: the evil). Not added: `לֵךְ`, `שָׂמָה` (too common for a licence-free trap; the reviewers
 check them by eye).
 
+## R5. Merged from Sub4, part 4 (AM 111–260, AM2 1–23; 2026-10-30; accepted by the coordinator)
+The refrains copied from the part-3 table, changed only where the Hittite changes (each change tagged in נוסחים); AM2 compared
+line by line with AM (same Hittite, same Hebrew: AM2 5 = AM 22). **Words:** ANZELLU `אִסּוּר`, *ḫurkil* `תועבה`, *papratar* `טומאה`,
+*mulātar* `מוּלָאתַר` (transliterated); ŠÀ.TAM `פקידי המשק`; GIŠ *ḫattalwant-* `בריח`, GIŠ SAG.KUL `מנעול`; *alpu-* `*מחודד*`;
+*gulli-* `*הגומה*`; GIŠ *eya-* `עץ־אֵיָה` (HL1); *arawaḫ-* `פטר` (HLPT); MÁŠ.ŠIR `תיש־ההרבעה` (as HL1 `סוס־הרבעה`); *anda tarna-* of
+the blood and the evil `הכניס`; QATI `תַּם`; *pāi* as a command `תן` (AM 117–118: F8 is the Laws' "he shall give"; the two
+escapes are kept rather than narrowing F8, which the Laws need). **Cruxes for the review:** AM 191 *laḫḫiya*, 216–220, 228 DAM "my
+wife" in a woman's prayer, 235, 248 *šuppa-*, 257; AM2 17 *arḫa arai-*.
+
 ## H2. Names (machine-read; the ritual texts)
 | Source (regex) | Hebrew | ★ | Note |
 |---|---|---|---|

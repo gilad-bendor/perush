@@ -260,3 +260,43 @@ name"), `קולים` is unambiguous enough. The selftest's AM 86 ok-line (`וא�
 סַפִּיר`, `אֹדֶם` ★, `אֶבֶן־בָּבֶל`, `לוּלּוּרִי`, `תִּי`, `בַּרַשְׁחָה` ★ – never the string `בראש`, `בַּרְזֶל`, `בְּדִיל`, `נְחֹשֶׁת`, `אָרָד`);
 *šuḫḫa-* `פיזר` there too; Tarpattašši's epithet *kuiš peran weḫatta* `אשר סובב לפני (האדם)` (122, 126, 156, 169, 175, 179, 185, 230);
 *zik azzikki* (181) as AM 82's iterative `אכול`; AM2 11's ANZELLU `אִסּוּר` / *ḫurkil* `תּוֹעֵבָה` / *papratar* `טֻמְאָה` (R1a).
+
+### Part 4 (AM 111–260, AM2)
+Written 2026-10-30 by the translator, after drafting AM 111–260 (`annotated-AM.rtl.md`, now complete) and AM2 1–23
+(`annotated-AM2.rtl.md`). `verify AM AM2 --strict`: 0 problems; `check_bible_quotes.py` on both: 0 problems. Christiansen's German read
+after the drafts. Two `[סטייה מן הנוסחה: …]` escapes (AM 117, 118: F8 is the Laws' 3sg *pāi* `ייתן`; here *pāi* is the imperative
+"give!" `תן` – **proposal:** limit F8's composite regex to the law texts, or exclude a *pāi* that follows an accusative in a speech).
+
+**Refrains copied** (the part-3 table) into 128–177, 183–189, 200–211, 221–224, 236–245 and AM2 1–21, changing only what the Hittite
+changes; every difference is tagged in **נוסחים**. The changes: 128, 135 *šuḫḫa-* `מפזרת` (for *dai-* / *išḫuwa-*); 133 *kištanun*;
+134 / 210 *idālu inan* `החולי הרע` → `יכבה` (masc.); 139 no *=za*; 145 plural (`מהם`, `הראשים`); 146 no UN.MEŠ (`לרעים, ליריבים`);
+149 no *=pat* (`כך`); 153 no *arḫa*; 155 `כך גם לאלה – את החולי הרע – יטהרו מן הגוף כך!"`; 157 no name, + *kattan*; 159 *katti=šši*
+`מעמו`; 161 BĒLU sg. `האדון`; 170 no *zik*; 181 *azzikki* = 96's `"אתה – אכול!"`; 183 + IZI `באש`; 185, 240 muḫrai- to Tarpattašši;
+188 `כך מבשלים`; 190 order of the stones + `לָאֵל`; AM2: 1–4 *papratar*, *mulātar*, SUD-ru `תימשך`; 4 "nine limbs" `מתשעת האיברים`;
+5 = AM 22 (ḪUL = *idālawa-*); 6 `ואחריו`; 7 *tezzi* = `אומרת`; 8 ŠÀ.TAM `פקידי המשק` for ÁZLAG, KIN-zi sg.; 9 sg. `מטהר`; 11 the
+king's body and the four impurity words; 18 the subject {MUNUS}ŠU.GI `הזקנה`; 19 *ḫamank-* `קושרת` for *nai-*; 20 `מעליו`; 21 *dai-*.
+
+**New renderings:** URUDU.NAG `כלי־נחושת`; NA₄ TI `אבן תִּי` (HPM "Lebensstein"), *lulluri-* `לוּלּוּרִי`, *barašḫa-* / *barašḫi-*
+`בַּרַשְׁחָה` / `בַּרַשְׁחִי` (the string `בראש` never occurs); *kuišš=a* (kuitta) `מכל אחד`; *uwātar* `ראייה`; *āššu memiški* `אמור טוב`,
+*SIG₅-in memiški* `היטב אמור`; *parkunumar* `טיהור`; Tarpattašši's epithet *kuiš peran weḫatta* `אשר סובב לפני (האדם)` (122, 126, 156
+pl. `סובבים`, 169, 175, 179, 185, 230); *laḫḫiya-* `צא למערכה?` (HL1 *laḫḫa-* `מערכה`; HPM "durchstreife"); *awan arḫa tiya-* `סור
+הלאה` (IN idiom); *appa uwa-* `בא בחזרה` (`שוב` avoided); GIŠ *eya-* `עץ־אֵיָה` (HL1); *warḫui-* `סבוך` (HL2); *alpu-* `*מחודד*`; KÁ
+`שער`; DUG ÚTUL `קדרה` (HL1); *araḫza* `אל החוץ`; *arawaḫḫ-* `פטר` (HLPT); DAM `אשה` (`[אשת]י?`); TI-an *ḫark-* `החזיק (בחיים)`; MÁŠ.ŠIR
+`תיש־ההרבעה` (the gated `תיש`, qualified as HL1's `סוס־הרבעה`); GAL.ZABAR `כוס אָרָד`; *tarna-* of blood into a cup `הכניס` (R1a);
+GIŠ GAG.URUDU `מסמר־נחושת`; *iniššan* `באופן ההוא`; *gulli-* `*גומה*` (HPM "Loch"); *duwān duwanna* `לכאן ולכאן`; *arḫa ed-* `אכל עד
+תום` (*arḫa* by sense); QATI `תַּם` (HL1). AM2: *mulātar* (Luwian) transliterated `מוּלָאתַר`; ANZELLU `אִסּוּר`, *ḫurkil* `תועבה`
+(F7), *papratar* `טומאה`; *parkuešš-* `טהר` (intr.); ŠÀ.TAM `פקידי המשק` (HPM "Kämmerer"); BAL `הניף` (by sense; IN *waḫnu-*
+`המיר`); GIŠ *ḫattalwant-* `בריח`, GIŠ SAG.KUL `מנעול` (HPM: "Querbalkenriegel" / "Sicherungsriegel"); GIŠ IG `דלת` (HL2); *ḫeš-*
+`פתח`; *arḫa arai-* `קם הלאה` (HPM "zurückhalten": a crux); {MUNUS}ŠU.GI `הזקנה` (the `זקן` gate licensed by ŠU.GI).
+
+**Cruxes:** 115 *=mu* (with "go" or with "speak"); 119 *peran* ("before you" / "previously"); 191 *laḫḫiya*; 196 *alpu*; 216–220
+(negated presents or prohibitions, HPM "soll nicht"); 228 DAM in a woman's mouth (the sign partly restored, `?`; perhaps a prayer copied
+from a man's version); 235 (what is poured into the pots at the gate); 248 *šuppa-*; 251 *gulli-*; 257 *[…]arḫut*; AM2 15 SAG.KUL; 17
+*arai-* "rise" or "hold back".
+
+**Parallels (all typological):** 113 / 190 ↔ 1 Sam 6:5 (`כָּבוֹד` to the god of the plague); 180 the mouse offered ↔ 1 Sam 6:4, [absent]
+(Lev 11:29 forbids it); 197 / 227 / 235 the door-post struck and "do not let the evil in" ↔ Exod 12:22–23; 234 the blood in a vessel ↔
+Lev 14:5; AM2 1, 11, 17 ↔ Lev 16:16 (`מִטֻּמְאֹת`), Lev 18:22 (`תּוֹעֵבָה` = *ḫurkil*); 251 ↔ Lev 16:22.
+
+**For the reviewers:** AM 225–228 is the old woman's own prayer (her house, her eya-tree, her freedom, her family), the ritual
+expert's "I" at its fullest; AM2 18 is the only place where she is named by her title. AM has no colophon proper: 260 `תַּם` only.
