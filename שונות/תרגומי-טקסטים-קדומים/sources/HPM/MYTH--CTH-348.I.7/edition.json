@@ -1,0 +1,356 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.7",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.7 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ _ _ ]x x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-uš mān iš-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ (_) ]x-uš ma-a-an ⸢iš⸣-x[ ... ] ¬¬¬"
+]
+],
+"tr": "Als [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}kumarbiš=za uddār P[ĀNI ZI-ŠU memiškiuwan dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"⸢{d}ku⸣-mar-bi-iš-za ud-da-a-⸢ar⸣ P[A-NI ... ]"
+]
+],
+"tr": "Kumarbi [begann], die Worte z[u sich selbst zu sprechen:]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "ūk=man {d}kumarbin {GIŠ}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"ú-uk-ma-an {d}ku-mar-bí-in {GIŠ}x[ ... ]"
+]
+],
+"tr": "„Mich, den Kumarbi, würde [ ... ].",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "mān tūliyaš pedi marri-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"ma-a-an tu-u-li-ya-aš pé-di mar-ri-x[ ... ]"
+]
+],
+"tr": "Wenn am Ort der Versammlung [jemand] überstü[rzt ... ],1",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "mān=mu kuwat zaḫta",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"ma-a-an-mu ku-wa-at za-aḫ-ta"
+]
+],
+"tr": "wenn er mich aus irgendeinem Grund schlüge,",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}É.A[ ... ] ḫaddannaš LUGAL-uš man [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"{d}É.⸢A⸣[ ... ] ḫa-ad-da-an-na-aš LUGAL-uš ma-an x[ ... ]"
+]
+],
+"tr": "würde Ea, der König der Weisheit, [ ... ]2",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "mān DUMU.LÚ.U19.LU-UTTI kuwat[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"ma-a-an DUMU.LÚ.U19.LU-UT-TI ku-wa-⸢at⸣[ ... ]"
+]
+],
+"tr": "Wenn die Menschheit aus irgendeinem Grund [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}É.A-ašš=a ḫantezzi[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"{d}É.A-aš-ša ḫa-an-te-ez-zi[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] auch Ea [ ... ] vorderst[- ... ]“3",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3'",
+"hl": "",
+"master": "{d}kumarbi=za PĀNI ZI-ŠU mem[iškiuwan dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"{d}ku-mar-bí-za1 PA-NI ZI-ŠU me-m[i-iš-ki-u-wa-an ... ]"
+]
+],
+"tr": "Kumarbi [begann], zu sich selbst [zu] spr[echen]:",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3'",
+"hl": "",
+"master": "ūk {d}kumarbin DUMU {d}A[NIM? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"ú-uk (Rasur) {d}ku-mar-bí-in DUMU {d}⸢A⸣-[NIM? ... ]"
+]
+],
+"tr": "„Mich, den Kumarbi, A[nus?4] Sohn, [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3'",
+"hl": "",
+"master": "ANA {d}ammezzadu=ma=mu ḫa-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"A-NA {d}am-me-ez-za-du-ma-mu ḫa-x[ ... ]"
+]
+],
+"tr": "Zu Ammezzadu aber [ ... ] mich [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 3'",
+"hl": "",
+"master": "DINGIR{MEŠ}-aš=ma=kan ištarna {d}kumarb[i- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"⸢DINGIR⸣{MEŠ}-aš-ma-kán iš-tar-na {d}ku-mar-b[i- ... ]"
+]
+],
+"tr": "Unter den Göttern aber [ ... ] Kumarb[i ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 3'",
+"hl": "",
+"master": "[m]ān ANA {d}10 {LÚ}tarpanal[li ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"[m]a-a-an A-NA {d}10 {LÚ}tar-pa-na-al-[li ... ]"
+]
+],
+"tr": "[W]enn dem Wettergott ein Riva[le ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] ANA {d}10 UR.SAG-iš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"[ _ _ _ ]x A-NA {d}10 UR.SAG-iš x[ ... ]"
+]
+],
+"tr": "Der Held [ ... ] zum Wettergott [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-šan=man ma-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"[ ... ]x-⸢ša⸣-an-ma-an ma-[ ... ]"
+]
+],
+"tr": "[ ... ] würde [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... -a]nteš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"17'",
+"[ ... -a]n-te-eš x[ ... ]"
+]
+],
+"tr": "Die [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]ēzzai",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"[ ... ]⸢e⸣-ez-za-i"
+]
+],
+"tr": "[ ... ] isst [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"19'",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 3':1": "Siegelová 1971, 48, liest: {d}ku-mar-bí<-iš>-za.",
+"T1": "Vgl. dazu CHD L-N 185a: „If in the place of assembly [someone speaks(?)] rashly(?)“. Vgl. auch einen anderen Vorschlag von Hoffner, Myths2 1998, 52: „[Why] would [you] boil(?) [at] me, Kumarbi, like a [ ... ], in the place of assembly?“",
+"T2": "Hoffner, Myths2 1998, 53, hat eine andere Kola-Aufteilung: „Why would you strike me, Ea, [ ... ], King of Wisdom? [Why] would you [ ... ]?“ Vgl. auch die folgende Fußnote.",
+"T3": "Vgl. Hoffner, Myths2 1998, 53: „Why would [you defend(?)] mankind, [ ... ] and Ea, foremost [among the gods]?“ Vgl. auch die vorangehende Fußnote.",
+"T4": "Hoffner, Myths2 1998, 53: „Alalu?“"
+}
+}

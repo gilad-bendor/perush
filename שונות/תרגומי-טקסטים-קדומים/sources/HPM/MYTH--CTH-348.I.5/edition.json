@@ -1,0 +1,746 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.5",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.5 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3''",
+"title": "§ 3''",
+"hl": ""
+},
+{
+"id": "§ 4''",
+"title": "§ 4''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 1'",
+"x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "I[D? ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 2'",
+"I[D!?1 ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "per[an? ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 3'",
+"pé-r[a?-an? ... ]"
+]
+],
+"tr": "[ ... ] vor[ne? ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "DINGIR{MEŠ}[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 4'",
+"DINGIR{MEŠ}[ ... ]"
+]
+],
+"tr": "Die Götter [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "{d}10-n[i? ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 5'",
+"{d}10-n[i? ... ] ¬¬¬"
+]
+],
+"tr": "[ ... dem?] Wettergott [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 6'",
+"⸢{d}⸣[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 7'",
+"x[ ... ]"
+],
+[
+"C",
+"",
+"Rs. III bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]-ti [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x-ti x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]-zi {d}IŠTAR-iš {URU}n[enuwaš MUNUS.LUGAL-aš]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x-zi2 {d}⸢IŠTAR⸣-iš ⸢{URU}⸣n[e-nu-wa-aš ... ]"
+]
+],
+"tr": "Er/Sie [ ...]t1, Ištar, [Königin von] N[inive]:",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ašanna=šši {GIŠ}ŠÚ.A-an tiyandu]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ] [ ... ]"
+],
+[
+"B",
+"1'",
+"[ ... ]x x x[ ... ]"
+]
+],
+"tr": "„[Zum Sitzen sollen sie ihm einen Stuhl hinstellen!]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ad]anna=ma=šši {GIŠ}BANŠUR-un [u]nuwandu",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[a-d]a-an-na-ma-aš-ši {GIŠ}BANŠUR-un [ ... ]"
+],
+[
+"B",
+"2'",
+"[ ... ú]-nu-wa-an-du"
+]
+],
+"tr": "Zum [Ess]en aber sollen sie ihm einen Tisch [d]ecken!“",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3''",
+"hl": "",
+"master": "[kwitman eniššan memišker]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ] [ ... ]"
+],
+[
+"B",
+"2'",
+"[ ... ] [ ... ]"
+]
+],
+"tr": "[Während sie so sprachen,]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 3''",
+"hl": "",
+"master": "[{d}I]ŠTAR-iš=ma=šmaš kattan ār(a)š",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[{d}I]ŠTAR-iš-ma-aš-ma-aš kat-ta-an a-ar-⸢aš3⸣"
+],
+[
+"B",
+"3'",
+"[ ... kat-ta-a]n a-ar-aš"
+]
+],
+"tr": "gelangte [I]štar aber zu ihnen hinab.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 3''",
+"hl": "",
+"master": "n=a[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"⸢na4⸣-a[š ... ]"
+],
+[
+"B",
+"3'",
+"n[a-aš ... ]"
+]
+],
+"tr": "Si[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ašanna=šš]i {GIŠ}ŠÚ.A-an tiyer",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[a-ša-an-na-aš-š]i {GIŠ}ŠÚ.A-an ti-i-er!5"
+],
+[
+"B",
+"4'",
+"[ ... ]"
+]
+],
+"tr": "[Zum Sitzen] stellten sie [ih]m2 einen Stuhl hin,",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 3''",
+"hl": "",
+"master": "UL=aš=za=kan eša[t]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"Ú-UL-aš-za-kán e-ša-a[t]"
+],
+[
+"B",
+"4'",
+"[Ú-U]L-aš-za-kán e-š[a-at]"
+]
+],
+"tr": "(und) er setz[te] sich nicht.",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 3''",
+"hl": "",
+"master": "[adanna=ma=šši {GIŠ}BANŠUR-un] unuēr",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ] [ ... ] ⸢ú⸣-nu-e-er"
+],
+[
+"B",
+"4'",
+"[ ... ] [ ... ]"
+]
+],
+"tr": "[Zum Essen aber] deckten sie [ihm einen Tisch,]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=ššan parā UL šali[kta]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"nu-uš-ša-an pa-ra-a Ú-UL ša-li-i[k-ta]"
+],
+[
+"B",
+"5'",
+"[ ... ]x-kán pa-ra-a ⸢Ú⸣-[UL ... ]"
+]
+],
+"tr": "(und) er gi[ng] nicht daran.",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 3''",
+"hl": "",
+"master": "[GAL-in=ši parā piē]r",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ] [ ... pí-e-e]r"
+],
+[
+"B",
+"5'",
+"[ ... ] [ ... ]"
+]
+],
+"tr": "[Sie gab]en [ihm einen Becher,]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=kan purin UL dāi[š]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"nu-kán pu-ri-⸢in⸣ Ú-UL da-a-i[š]"
+],
+[
+"B",
+"6'",
+"[nu-ká]n ⸢pu-u-ri-in⸣ [ ... ]"
+],
+[
+"B",
+"",
+"Der Text bricht ab."
+]
+],
+"tr": "und er leg[te] (seine) Lippe nicht (daran).3",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 3''",
+"hl": "",
+"master": "[{UR]}Unē[nuwaš MUNUS.LUGAL-aš ... memi]škiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[{UR]}Une-⸢e⸣-[nu-wa-aš ... ] [ ... me-mi-i]š-ki-u-wa-an da-a-⸢iš⸣"
+]
+],
+"tr": "[Die Königin von] Ni[nive] begann [ ... ] zu [spre]chen:",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 3''",
+"hl": "",
+"master": "kuwat=za UL ez[atti ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"ku-wa-at-za Ú-UL e-z[a-at-ti ... ]"
+]
+],
+"tr": "„Warum is[st du] nicht[ ... ]?",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 3''",
+"hl": "",
+"master": "[kuwat] UL ekutti ammel išḫā=mi",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ] Ú-UL e-ku-ut-ti am-me-el iš-ḫa-a-mi"
+]
+],
+"tr": "[Warum] trinkst du nicht, mein Herr4?“",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]adātar",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"x[ ... ] [ ... ]⸢a⸣-da-a-tar"
+]
+],
+"tr": "[ ... ] das Essen.",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu kwit akuwatar UL ša-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"nu ku-it a-ku-wa-tar Ú-UL ša-x[ ... ]"
+],
+[
+"C",
+"Rs. IV 1'",
+"[ ... Ú-U]L š[a- ... ]"
+]
+],
+"tr": "Das Trinken, das nicht [ ... ]5,",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]-na arunan DINGIR{MEŠ}-naš menaḫḫand[a ... ]-ēr",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ ... ]x-na ⸢a⸣-ru-na-an DINGIR{MEŠ}-na-aš me-na-aḫ-ḫa-an-d[a ... ] [ ... ]x-⸢e⸣-ni6"
+],
+[
+"C",
+"Rs. IV 2'",
+"[ ... DINGIR{M]}EŠ-aš IGI-an-d[a] [ ... ]"
+]
+],
+"tr": "[ ...]ten sie das Meer den Göttern gegenübe[r ... ]",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 3''",
+"hl": "",
+"master": "n=aš=kan nepiši daganzi[pi ... ]-aš",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"na-aš-kán ⸢ne⸣-pí-ši da-ga-an-zi-[pí ... ] [ ... ]x-aš"
+],
+[
+"C",
+"Rs. IV 3'",
+"[ ... ]ne-pí-ši [ ... ]"
+]
+],
+"tr": "Er [ ... ]te in Himmel (und) Erd[e ... ].",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=kan aruni anda kwin tarpan[allin ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"nu-kán a-⸢ru⸣-ni an-da ku-in tar-pa-n[a-al-li-in ... ]"
+],
+[
+"C",
+"Rs. IV 4'",
+"[n]u-kán a-ru-ni an-da [ ... ]"
+]
+],
+"tr": "[Der] Riva[le ... ], den [ ... ] im Meer [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... š]akiyaz memaḫḫi",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"[ ... š]a-ki-ya-az me-ma-aḫ-ḫi"
+],
+[
+"C",
+"Rs. IV 5'",
+"[ ... ]x ša-ki-ya-za [ ... ]"
+]
+],
+"tr": "[ ... ] spreche ich durch das Vorzeichen.",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu {MUŠ}ḫedam[mu- ... ]-na [ ... ] memišket",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"nu {MUŠ}ḫé-dam-[mu- ... ] [ ... ]x me-mi-iš-ke-et"
+],
+[
+"C",
+"Rs. IV 6'",
+"[ ... ]x-na7 [ ... me-mi-iš-ke-e]t"
+]
+],
+"tr": "Ḫedam[mu] sprach [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 3''",
+"hl": "",
+"master": "n=an {d}IŠTAR-iš [ ... ]-ma kappūwaet",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"na-an {d}IŠTAR-⸢iš⸣ x[ ... ] ¬¬¬"
+],
+[
+"C",
+"Rs. IV 8'",
+"[ ... ]-ma kap-pu-u-wa-et ==="
+],
+[
+"C",
+"",
+"Bevor Rs. IV abbricht, sind noch etwa drei unbeschriebene Zeilenenden erhalten."
+]
+],
+"tr": "und Ištar kümmerte sich [ ... ] um ihn.",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... {d}]IŠTAR-in išdammašta",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"[ ... {d}]⸢IŠTAR⸣-in iš-⸢dam⸣-ma-aš-ta"
+]
+],
+"tr": "[ ... ] hörte Ištar.",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... -z]i arḫa ḫallanniešk[ezzi]",
+"words": [],
+"mss": [
+[
+"A",
+"17'",
+"[ ... -z]i ar-ḫa ḫal-la-an-⸢ni-eš⸣-k[e-ez-zi]"
+]
+],
+"tr": "[ ... ] zerstö[rt ... ] völlig.",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"17'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "36",
+"sec": "§ 4''",
+"hl": "",
+"master": "[išḫaḫru=ma=šš]i=kan parā PA5{ḪI.A}-[uš mān aršanzi]",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"[iš-ḫa-aḫ-ru-ma-aš-š]i-kán pa-ra-a PA5⸢{ḪI.A}⸣8-[uš ... ]"
+]
+],
+"tr": "[Die Tränen aber fließen ih]m heraus [wie] Kanäl[e].",
+"trlang": "DE"
+},
+{
+"n": "37",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"[ ...? ] [ ... ]x x x x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Das Zeichen ist nach Kollation am Original über Rasur geschrieben.",
+"§ 3'':2": "Siegelová 1971, 44: ú-i]z-zi.",
+"§ 3'':3": "Spuren am Original passen zu -aš.",
+"§ 3'':4": "Spuren am Original passen zu -na.",
+"§ 3'':5": "Text: -ni.",
+"§ 3'':6": "Der Text hat eindeutig -ni.Es ist nicht klar, ob zu -ir emendiert werden muß.",
+"§ 3'':7": "Nach Kollation am Original Zeichen über Rasur.",
+"§ 4'':8": "Lesung nach Kollation am Original.",
+"T1": "Unklar ist, ob Ištar selbst kommt oder ihr Gast, so dass eine Entscheidung für die Deutung von {d}⸢IŠTAR⸣-iš als Nom. oder Vok. nicht möglich ist. Sowohl Hoffner, Myths2 1998, 52, als auch Pecchioli Daddi – Polvani 1990, 139, ergänzen in der Lücke: „sie kommt.“ Allerdings übersetzen beide auch das Pers.pr. -šši in den folgenden Kola mit „ihr“, siehe dazu unten.",
+"T2": "Siegelová 1971, 45, nimmt an, dass Ištar hier der Referent ist (ebenso wie Hoffner und Pecchioli Daddi – Polvani). Anders CHD Š 103b: „him“ (mit Bezug auf Ullikummi!). Vgl. Anmerkung zu Kolon 23.",
+"T3": "Vgl. CHD Š 103b.",
+"T4": "Hoffner, Myths2 1998, 52, und Pecchioli Daddi – Polvani 1990, 139, übersetzen beide „meine Herrin“. Das ist nach HED 2, 385, auch möglich. Hoffner – Melchert 2008 äußern sich nicht dazu. Zu bedenken bleibt auch, dass Ištar sonst häufig als GAŠAN-IA „meine Herrin“ bezeichnet wird.",
+"T5": "Anders Hoffner, Myths2 1998, 52: „It it because you don't know drinking?“"
+}
+}

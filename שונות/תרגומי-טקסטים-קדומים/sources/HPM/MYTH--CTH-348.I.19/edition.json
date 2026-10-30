@@ -1,0 +1,155 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.19",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.19 (TX 2009-09-08, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "a-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"⸢a?⸣-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] kurkiš[ni? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ] kur-ki-⸢iš?⸣-[ni?2 ... ] ¬¬¬"
+]
+],
+"tr": "[ ... am] Ufe[r ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}IŠTAR-iš [IN]IM-ar [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"{d}IŠTAR-⸢iš⸣ [IN]IM-⸢ar⸣ x[ ... ]"
+]
+],
+"tr": "Ištar [ ... ] die [Wo]rte [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] ḫaršallanza [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ] ḫar-ša-[a]l-la-an-za x[ ... ]"
+]
+],
+"tr": "[ ... ] zornig [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "tēpawe=mu GA.⸢KU7?⸣ [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"te-e-pa-u-e-mu GA.⸢KU7?⸣ x[ ... ]"
+]
+],
+"tr": "Mir, dem Geringen, [ ... ] süße Milch.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] AWĀTĒ{MEŠ} ḫūmanda [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ] A-WA-TE{MEŠ} ḫu-u-ma-[a]n-da x[ ... ]"
+]
+],
+"tr": "[ ... ] alle Worte [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] iyattat",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ] i-ya-at-ta-at"
+]
+],
+"tr": "[ ... ] ging [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=aš=ka[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"na-aš-ká[n ... ] ¬¬¬"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "Er [ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':2": "Siegelová, StBoT 14, 1971, 66 liest: KUR ki-x[ ."
+}
+}

@@ -12,6 +12,10 @@
   - `CTH-292/` – the Laws, second tablet "If a vine" (37 manuscripts: KBo 6.10+, 6.11, 6.12, 6.13+, 6.26, KBo 25.85+,
     KUB 29.23+, 29.33+ …), the base of our composite of HL 101–200 (CHiL has not edited it yet);
   - `CTH-264/` – the Instructions for Temple Personnel (19 manuscripts; KUB 13.4 = 307 lines), the base of our composite;
+  - `CTH-3/` (the Tale of Zalpa: KBo 22.2 leads; KBo 3.38 is not in TLHdig), `CTH-789/` (the Song of Release, 123
+    files; each line carries `lg="Hit"` or `lg="Hur"`: the Hittite side is read by script), `CTH-324/`, `CTH-342/`,
+    `CTH-344/`, `CTH-345/`, `CTH-348/`, `CTH-360/` (the myths' manuscripts, for the word glosses of the HPM editions)
+    – added 2026-10-30, Round 5 run 2;
   - `CTH-391/`, `CTH-394/`, `CTH-407/`, `CTH-410/`, `CTH-757/` (KUB 9.31, the collective tablet with Uḫḫamuwa, Zarpiya and
     Ašḫella) – the elimination rituals' manuscripts, for the word glosses (the composites are HPM's, `../HPM/`).
 - **Format notes:** `<lb lnr="Vs. I 9"/>` lines (`{€n}` = which joined fragment); `<w trans=… mrp0sel=… mrp1=…>`: the

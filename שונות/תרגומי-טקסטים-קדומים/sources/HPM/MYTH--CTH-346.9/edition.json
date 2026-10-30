@@ -1,0 +1,585 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.9",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.9 (TX 2009-08-31, TRde 2009-08-31)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+},
+{
+"id": "§ 5'",
+"title": "§ 5'",
+"hl": ""
+},
+{
+"id": "§ 6'",
+"title": "§ 6'",
+"hl": ""
+},
+{
+"id": "§ 7'",
+"title": "§ 7'",
+"hl": ""
+},
+{
+"id": "§ 8'",
+"title": "§ 8'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-nu[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 1'",
+"[ ... ]x-⸢nu⸣-u[š ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... d]anauš nep[i- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 2'",
+"[ ... d]a-⸢na⸣-uš ⸢ne⸣-p[í- ... ]"
+]
+],
+"tr": "[ ... ] ... Him[mel ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-napḫatiš nep[i ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 3'",
+"[ ... ]x-na-ap-ḫa-ti-iš ne-p[í- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] Him[mel ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... -m]iš {d}10 danauš weteni ištarna [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 4'",
+"[ ... -m]i?-⸢iš⸣ {d}10 da-na-uš ú-e-te-ni iš-tar-na [ ... ]"
+]
+],
+"tr": "[ ... ] der Wettergott [ ... ] die danai-1 mitten im Wasser [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]nepiši šalikišketta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 5'",
+"[ ... ]ne-pí-ši ša-li-ki-iš-ke-et-ta"
+]
+],
+"tr": "[ ... ] näherte sich dem Himmel [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=ašta[ ... ]-iš ḫatugaš palaḫšet",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 5'",
+"na-aš-ta[ ... ] [ ... ]x-iš ḫa-tu-ga-aš pa-la-aḫ-še-et"
+]
+],
+"tr": "[ ... ] bedeckte der schreckliche [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu nepiš[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 6'",
+"nu ne-pí-š[a-1 ... ] ¬¬¬"
+]
+],
+"tr": "und [ ... ] Himmel[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-anta kwit ēššai arunaš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 7'",
+"[ ... ]x-an-ta ku-it e-eš-ša-i a-ru-na-aš"
+]
+],
+"tr": "Weil/Was es [ ... ] erschafft, das Meer,",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3'",
+"hl": "",
+"master": "nu tamai-[ ... ]-yaš parkuwayaš {GIŠ}MAR-an kišarrata dai[š]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 7'",
+"nu ta-ma-⸢i?⸣-2[ ... ] [ ... ]-ya-aš pár-ku-wa-ya-aš {GIŠ}MAR-an ki-šar-ra-ta da-i[š]"
+]
+],
+"tr": "leg[te] ein ander[er] den Spaten aus Bronze2 in deine Hand3 [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... daga]nzipaš tagganī karittiš?",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 9'",
+"[ ... da-ga-a]n-zi-pa-aš tág-ga-ni-i ⸢ka?⸣3-⸢ri⸣-it-ti-iš"
+]
+],
+"tr": "An der Brust der [Er]de [ ... ] die Fluten.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3'",
+"hl": "",
+"master": "ḪUR.SAG[{MEŠ}? ... ] paššuwaš kišantati",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 9'",
+"ḪUR.SAG[{MEŠ}?] [ ... ]x pa-aš-šu-wa-aš ki-ša-an-ta-ti"
+]
+],
+"tr": "Die Berg[e] entstanden [ ... ] auf Steinen.4",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3'",
+"hl": "",
+"master": "lelḫuwarti[maš?4 utn]ē? anda kāriēr",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 10'",
+"le-el-ḫu-wa-ar-ti-[ma?-aš?] [ut-ne?]-⸢e?⸣ an-da ka-a-ri-e-er ¬¬¬"
+]
+],
+"tr": "Fluten bedeckten das [Lan]d.5",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 4'",
+"hl": "",
+"master": "[arāe]r? lelḫurtimaš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 12'",
+"[a-ra-a?-e]r le-el-ḫu-ur-ti-ma-aš"
+]
+],
+"tr": "Sie [erhob]en? sich, die Fluten",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 4'",
+"hl": "",
+"master": "nu šarā {d}UTU {d}30 wemi-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 12'",
+"nu ša-ra-a {d}UTU {d}30 ú-e-mi-5[ ... ]"
+]
+],
+"tr": "und reicht[en] hinauf zum Sonnengott (und) Mondgott",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 4'",
+"hl": "",
+"master": "[nu? šar]ā nepišaš MUL{ḪI.A}-uš we-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 13'",
+"[nu? ša-r]a-a ne-pí-ša-aš MUL{ḪI.A}-uš ú-⸢e⸣-6[ ... ] ¬¬¬"
+]
+],
+"tr": "und rei[chten hinau]f zu den Sternen des Himmels.",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 5'",
+"hl": "",
+"master": "[{d}ku]marbiš uddār ANA DINGIR{MEŠ} memieškiuwa[n dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 14'",
+"[{d}ku]-mar-bi-iš ud-da-a-ar A-NA DINGIR{MEŠ} me-mi-eš-ki-u-wa-a[n ... ]"
+]
+],
+"tr": "[Ku]marbi [begann], die Worte zu den Göttern zu sprech[en]:",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 5'",
+"hl": "",
+"master": "[ ... -i]š DINGIR{MEŠ}-eš UL kwin DINGIR-LAM šekkuwēn",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 15'",
+"[ _ -i]š DINGIR{MEŠ}-eš Ú-UL ku-in DINGIR-LAM še-ek-ku-u-e-en"
+]
+],
+"tr": "„[ ... ] Götter, welche Gottheit erkannten wir nicht an?6",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 5'",
+"hl": "",
+"master": "n[=an? ... š]ekkuwēn arunan",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 15'",
+"(Rasur) n[a?-an ... ] [š]e-ek-ku-u-e-en a-ru-na-an"
+]
+],
+"tr": "Wir [k]annten [es? ... ], das Meer.",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 5'",
+"hl": "",
+"master": "n=an=za KI-aš ḫašša ku[- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 16'",
+"na-an-za KI-aš ḫa-aš-ša ku-x[- ... ]"
+]
+],
+"tr": "[ ... ] ihn [ ... ] zum Herd7 der Erde [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 5'",
+"hl": "",
+"master": "utatten aruni arkamman",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 17'",
+"⸢ú⸣-ta-at-te-en a-ru-ni ar-kam-ma-an ¬¬¬"
+]
+],
+"tr": "Überbringt dem Meer einen Tribut!“",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 6'",
+"hl": "",
+"master": "[{N]}A4kunan {NA4}ZA.GÌN {NA4}parašḫaš KÙ.BABBAR GUŠKIN A-ni an[da GAR-ru?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 18'",
+"[{N]}A4ku-na-an {NA4}ZA.GÌN {NA4}pa-⸢ra-aš⸣-ḫa-aš KÙ.BABBAR GUŠKIN A-ni an-[da GAR-ru?]7"
+]
+],
+"tr": "Schmuckstein8, Lapislazuli, parašha-Stein, Silber, Gold [sollen] im Wasser [liegen!?]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 6'",
+"hl": "",
+"master": "[nu=kan A-n]i? anda peššiyaweni",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 18'",
+"[nu-kán] [A?-n]i an-da pé-eš-ši-ya-u-e-ni"
+]
+],
+"tr": "In [das Was]ser werfen wir (sie).",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 6'",
+"hl": "",
+"master": "nu GIM-an arunaš arkamm[an ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 19'",
+"nu GIM-an a-ru-na-aš ar-kam-m[a-an ... ]"
+]
+],
+"tr": "Als das Meer [den] Tribu[t ... ],",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 6'",
+"hl": "",
+"master": "[ _ _ 8 ] arāntari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 19'",
+"[ ... ] [ _ _ ] a-ra-a-an-ta-ri"
+]
+],
+"tr": "stehen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 6'",
+"hl": "",
+"master": "nu=kan DINGIR{MEŠ}-aš ištarna UL kwi[š- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 20'",
+"nu-kán DINGIR{MEŠ}-aš iš-tar-na Ú-UL ku-i[š- ... ] [ ... ]x"
+]
+],
+"tr": "Keine[r] inmitten der Götter [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 6'",
+"hl": "",
+"master": "eḫu {d}IŠTAR-li {URU}ninuwaš MUNUS.LUGAL-aš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 21'",
+"e-ḫu {d}IŠTAR-li {URU}ni-nu-wa-aš MUNUS.LUGAL-aš"
+]
+],
+"tr": "Komm, Ištar, Königin von Ninive!",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 6'",
+"hl": "",
+"master": "nu [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 21'",
+"nu x[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 7'",
+"hl": "",
+"master": "[ ... ] ḫatraiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 22'",
+"[ ... ]x ḫa-at-ra-iš"
+]
+],
+"tr": "[ ... ] schriebst du:",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 7'",
+"hl": "",
+"master": "nu=mu tuwan tu[k ... ]-annaš?",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 22'",
+"nu-mu tu-wa-an tu-u[k ... ] [ ... ]x-⸢an?-na?-aš?⸣"
+]
+],
+"tr": "„[ ... ] di[r]/dic[h] mir/mich [ ... ] hierher9.",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 7'",
+"hl": "",
+"master": "ḫwišnuši=ma",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 23'",
+"⸢ḫu⸣-iš-nu-ši-ma"
+]
+],
+"tr": "Du lässt (sie) aber am Leben.",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 7'",
+"hl": "",
+"master": "nu=mu=z[a? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 23'",
+"nu-mu-z[a? ... ] [ ... ] ¬¬¬"
+]
+],
+"tr": "und mir/mich [ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 8'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 25'",
+"[ ... ]x x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2':1": "Blam, Fs Lebrun I, 2004, 70: ne-pí-š[a-aš; Schwemer, Wettergottgestalten 2001, 452, liest: ne-pí-š[a?-az?.",
+"§ 3':2": "Blam, Fs Lebrun I, 2004, 71: ta-ma-i-[iš?. Schwemer, Wettergottgestalten 2001, 452, liest: ta-mai-i [ und übersetzt: „ein anderes[“.",
+"§ 3':3": "So die nach Kollation am Original mögliche Lesung. Zeichen ist über Rasur geschrieben. Blam, Fs Lebrun I, 2004, 71: ga-, vgl. Schwemer, Wettergottgestalten 2001, 452 (g°a-).",
+"§ 3':4": "So auch CHD L-N 60a und Schwemer, Wettergottgestalten 2001, 452.",
+"§ 4':5": "Blam, Fs Lebrun I, 2004, 71: ú-e-mi-[er]; ebenso Schwemer, Wettergottgestalten 2001, 452.",
+"§ 4':6": "Blam, Fs Lebrun I, 2004, 71: ú-e-[mi-er]; ebenso Schwemer, Wettergottgestalten 2001, 452.",
+"§ 6':7": "Ergänzung folgt Schwemer, Wettergottgestalten 2001, 452.",
+"§ 6':8": "Blam, Fs Lebrun I, 2004, 71: Ú-UL?.",
+"T1": "Vgl. dazu Schwemer, Wettergottgestalten 2001, 452 Anm. 3741.",
+"T2": "So auch Schwemer, Wettergottgestalten 2001, 452; CHD P 167a. Eventuell auch als Ableitung von parkui- „rein“ zu verstehen: „auf die reinen [ ... ]“.",
+"T3": "So nach Schwemer, Wettergottgestalten 2001, 452, der kiššara-ta als All.Sg. mit enkl. Poss.pr. analysiert. Anders Blam 2004, 72.",
+"T4": "Vgl. Schwemer, Wettergottgestalten 2001, 452 mit anderer Kolaaufteilung: „[und] an der Brust der [Unter]welt wurden die Fluten den Berg[en ... a]n den Sockeln.“",
+"T5": "Vgl. CHD L-N 60a: „The outpourings(?) enveloped the land.“",
+"T6": "Vgl. Schwemer, Wettergottgestalten 2001, 452: „[Groß]e Götter, welchen Gott kennen wir nicht?“",
+"T7": "Vgl. dazu Schwemer, Wettergottgestalten, 452, mit Anm. 3740.",
+"T8": "Vgl. dazu HED 4 308f. („copper“); siehe auch die Anmerkung zu KUB 33.96+ Vs. I 10 (CTH 345.I.1 Kolon 10) mit Literaturhinweisen zur Bedeutung „Schmuckstein“. Schwemer, Wettergottgestalten 2001, 452: „ku(wa)nnan-Stein“.",
+"T9": "Nach HEG III 490f. ist das Adverb „hierher“ immer mit Pleneschreibung belegt (tuwān, duwān). Schwemer, Wettergottgestalten 2001, 452, übersetzt „fern“ - vgl. dazu HEG III 486f. s.v. tuwa „fern“."
+}
+}

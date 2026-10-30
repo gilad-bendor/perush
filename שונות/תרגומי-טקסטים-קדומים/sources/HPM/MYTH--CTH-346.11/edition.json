@@ -1,0 +1,474 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.11",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.11 (TX 2009-08-31, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3''",
+"title": "§ 3''",
+"hl": ""
+},
+{
+"id": "§ 4''",
+"title": "§ 4''",
+"hl": ""
+},
+{
+"id": "§ 5'''",
+"title": "§ 5'''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2'",
+"[ ... ]x-x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3''",
+"[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 4''",
+"[ ... ]x"
+],
+[
+"A",
+"",
+"Vs. I bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 3''",
+"hl": "",
+"master": "⸢n=an⸣=za=kan [ ... ]-an [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 1'",
+"⸢na-an⸣-za-kán x-x-⸢an⸣ x[ ... ]"
+]
+],
+"tr": "[ ... ] ihn sich [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ] UL ginzuwala[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs II 1'",
+"[ ... ] Ú-UL gi-in-zu-wa-la-a[n ... ]"
+]
+],
+"tr": "[ ... ] nicht den freundli[chen ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=tta ezzan GIM-a[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 3'",
+"nu-ut-ta ez-za-an GIM-a[n ... ]"
+]
+],
+"tr": "[ ... ] dir/dich wi[e] Stroh [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3''",
+"hl": "",
+"master": "lalawešan=m[a GIM-an? GÌR-it? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 4'",
+"la-la-ú-e-ša-an-m[a ... ]"
+]
+],
+"tr": "[ ... wie] eine Ameise ab[er mit dem Fuß ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=tta=kkan GE6-i takn[ī ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5'",
+"nu-ut-ták-kán GE6-i ták-n[i-i ... ]"
+]
+],
+"tr": "[ ... ] dir/dich in der dunklen Erd[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ] nepišaš? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5'",
+"[ ... ] ne-⸢pí-ša-aš?⸣ x[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] des Himmels? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 4''",
+"hl": "",
+"master": "uw[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 7'",
+"ú-w[a- ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8'",
+"[ (_) ]x[ ... ]"
+],
+[
+"A",
+"",
+"Vs. II bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 5'''",
+"hl": "",
+"master": "⸢DINGIR{MEŠ}⸣ memian? ištam[aššanzi?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1'",
+"⸢DINGIR{MEŠ} me?-mi-an iš-ta⸣-m[a-aš-ša-an-zi?]"
+]
+],
+"tr": "Die Götter hör[en?] die Worte?1.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 5'''",
+"hl": "",
+"master": "[ ... ] {GIŠ}ŠÚ.A-an šanḫiškanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1'",
+"[ ... ] {GIŠ}ŠÚ.A-an ša-an-ḫi-iš-kán-⸢zi⸣"
+]
+],
+"tr": "[ ... ] suchen den Thron",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 5'''",
+"hl": "",
+"master": "aruna[š ... ] šanḫiškezi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 2'",
+"⸢a-ru-na⸣-[aš ... ] ša-an-ḫi-iš-ke-zi"
+]
+],
+"tr": "Das Mee[r] sucht [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 5'''",
+"hl": "",
+"master": "GE6-yaš daganzip[aš ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3'",
+"GE6-ya-aš da-ga-an-zi-p[a-aš ... ]"
+]
+],
+"tr": "[ ... ] der dunklen Erd[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 5'''",
+"hl": "",
+"master": "UL=aš=kan anzedaz=pat mitnaz[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4'",
+"Ú-UL-aš-kán an-ze-da-az-pát mi-it-na-az[ ... ]1"
+]
+],
+"tr": "Er [ ... ] nicht aufgrund unserer Entscheidung2 [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 5'''",
+"hl": "",
+"master": "[ ... a]nzedaz {d}gulšaza iyanza",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4'",
+"[ ...2 ] [a]n-ze-da-az {d}gul!3-ša-za i-ya-an-za4"
+]
+],
+"tr": "[ ... ] von [u]nseren Schicksalsgöttinnen ist es gemacht.",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 5'''",
+"hl": "",
+"master": "nu {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 5'",
+"nu ⸢{d}⸣[ ... ]"
+]
+],
+"tr": "Und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 5'''",
+"hl": "",
+"master": "[nu=w]ar=aš=kan apēdani katta wet",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 6'",
+"[nu-w]a-ra-aš-kán a-pé-e-da-ni kat-ta ú-et"
+]
+],
+"tr": "Er kam zu dem/der hinab.",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 5'''",
+"hl": "",
+"master": "[ ... ] daganzipaš?",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 6'",
+"x[ ... ] [ _ (_) ]x ⸢da-ga-an-zi⸣-p[a?]-⸢aš?⸣"
+]
+],
+"tr": "[ ... ] der Erde? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 5'''",
+"hl": "",
+"master": "[a]ttaš=ma=ši nepiš[a?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 7'",
+"[a]t-ta-aš-ma-ši ne-pí-š[a?- ... ]"
+]
+],
+"tr": "Der [V]ater aber [ ... ] ihm [ ... ] Himme[l- ... ]",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 5'''",
+"hl": "",
+"master": "[ ... ]{d}10 parrada UL[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 8'",
+"[ ... ]⸢{d}⸣10 pár-ra-da Ú-UL[ ... ]"
+]
+],
+"tr": "[ ... ] nicht hinüber3 zum Wettergott [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 5'''",
+"hl": "",
+"master": "[ ... ] ēšta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 9'",
+"[ ... ]x e-eš-ta"
+]
+],
+"tr": "[ ... ] war [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 5'''",
+"hl": "",
+"master": "mān[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 9'",
+"ma-a-an[ ... ]"
+]
+],
+"tr": "Als [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 5'''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 10'",
+"[ ... ]x x[ _ ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Rs. III bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 5''':1": "CHD L-N 306b ergänzt: [iyanza?].",
+"§ 5''':2": "CHD L-N 306b ergänzt: [naškan].",
+"§ 5''':3": "Text: {d}IŠTAR.. Emendiert mit CHD L-N 306b und Polvani, Fs Alp 1992, 451.",
+"§ 5''':4": "Die Kolaaufteilung folgt CHD L-N 306b.",
+"T1": "Wörtlich: „das Wort, den Ausspruch“.",
+"T2": "Siehe dazu CHD L-N 306b, mit einer Ergänzung (vgl. die Anm. der Transliteration) „It [is] not [done?] on our own authority(?)“ mit Diskussion der Wortbedeutung: „The opposition between m. and fate/destiny in KBo 26.91 fits the suggested translation '(personal) authority'. Since the action was decreed by destiny, it did not originate from a personal decision of the actor.“",
+"T3": "Unsicher, ob zu parranda „(hin)über“ gehörig – siehe CHD P 135b."
+}
+}

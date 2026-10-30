@@ -1,0 +1,773 @@
+{
+"kind": "MYTH",
+"cth": "CTH 324.4",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 324.4 (TX 2009-08-13, TRde 2009-08-10)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+},
+{
+"id": "§ 5'",
+"title": "§ 5'",
+"hl": ""
+},
+{
+"id": "§ 6'",
+"title": "§ 6'",
+"hl": ""
+},
+{
+"id": "§ 7'",
+"title": "§ 7'",
+"hl": ""
+},
+{
+"id": "§ 8''",
+"title": "§ 8''",
+"hl": ""
+},
+{
+"id": "§ 9''",
+"title": "§ 9''",
+"hl": ""
+},
+{
+"id": "§ 10''",
+"title": "§ 10''",
+"hl": ""
+},
+{
+"id": "§ 11''",
+"title": "§ 11''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 1'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[nu=ššan iyaḫḫ]u[t]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 1'",
+"[ ... i-ya-aḫ-ḫ]u-[ut]1 ¬¬¬"
+]
+],
+"tr": "[G]e[h darauf!]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "[GÌR{ḪI.A}-aš=ta kattan ŠA GA.KIN.AG ... te]ḫḫu[n]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 2'",
+"[ ... te-e]ḫ-ḫu-u[n]"
+]
+],
+"tr": "Ich [ste]llt[e ... des Käses unter deine Füße.]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 3'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... t]eḫḫu[n]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 4'",
+"[ ... t]e-⸢eḫ⸣-ḫu-u[n]"
+]
+],
+"tr": "Ich [ste]llt[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] dāi?",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5'",
+"[ ... ] da-a-⸢i?⸣[] ¬¬¬"
+]
+],
+"tr": "[ ... ] nimmt/stellt er?.",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... GÙ]B-laza [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 6'",
+"[ ... GÙ]B-la-za (Rasur) [ ... ]"
+]
+],
+"tr": "[ ... li]nks [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... {Ḫ]}I.A adanna [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 7'",
+"[ ... {Ḫ]}I.A a-da-an-na [ ... ]"
+]
+],
+"tr": "[ ... ] zu Essen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3'",
+"hl": "",
+"master": "[nu=tta {DUG}KA.G]AG gulšantan [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8'",
+"[ ... {DUG}KA.G]AG gul-ša-an-ta-an [ ... ]"
+]
+],
+"tr": "[ ... dir] den eingeritzten [Bech]er [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... walh]it? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 9'",
+"[ ... wa-al-h]i?-it [ ... ]"
+]
+],
+"tr": "[ ... ] mit [walḫ]i-Getränk? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] tarnaḫḫun",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 10'",
+"[ ... ] tar-na-aḫ-ḫu-un ¬¬¬"
+]
+],
+"tr": "Ich ließ [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 4'",
+"hl": "",
+"master": "[nu=za ēt šanezzi]2",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 11'",
+"[ ... ]"
+]
+],
+"tr": "[Iss Erstklassiges]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 4'",
+"hl": "",
+"master": "[nu=za] išpāi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 11'",
+"[ ... ] iš-pa-a-i"
+]
+],
+"tr": "[und] stille deinen Hunger!",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 4'",
+"hl": "",
+"master": "[nu=za eku šanezzi]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 12'",
+"[ ... ]"
+]
+],
+"tr": "[Trink Erstklassiges]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 4'",
+"hl": "",
+"master": "[nu=za] ninga",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 12'",
+"[ ... ] ni-in-g(a)"
+]
+],
+"tr": "[und] stille deinen Durst!",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 13'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... EGIR-pa] ḫandaḫḫut",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 14'",
+"[ ... ] ḫa-an-da-aḫ-ḫu-ut ¬¬¬ 4"
+]
+],
+"tr": "[ ... ] komm [wieder] in Ordnung!",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 5'",
+"hl": "",
+"master": "[nu=tta takšuliandu kangatia]ndu?",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 15'",
+"[ ... kán-ga-ti-a]n!?-du"
+]
+],
+"tr": "Sie? sollen? [dir freundlich sein? (und) dich beruhigen?!]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 5'",
+"hl": "",
+"master": "šanezziš [ ...5 kal]lešdu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 15'",
+"ša-né-ez-zi-iš [ ... kal]-le-eš-du"
+]
+],
+"tr": "Das erstklassige [ ... ] soll [ruf]en!",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 5'",
+"hl": "",
+"master": "[ ... ] Ì.NUN-anza",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 17'",
+"[ ... ]x Ì.NUN-an-za ¬¬¬"
+]
+],
+"tr": "[ ... ], das Butterschmalz.",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 6'",
+"hl": "",
+"master": "[kāša=tta KI.MIN parḫ]uwenaš kitta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 18'",
+"[ ... pár-ḫ]u-u-e-na-aš ki-it-ta"
+]
+],
+"tr": "[Hier] liegt [für dich desgleichen parḫ]uena-.",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 6'",
+"hl": "",
+"master": "[ ... Z]I-KA=ya [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 19'",
+"[ ... Z]I-KA-ya [ ... ]"
+]
+],
+"tr": "Auch deine [Se]ele [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 6'",
+"hl": "",
+"master": "[ANA LU]GAL MUNUS.LUGAL [DUMU{MEŠ}.LUGAL KUR {URU}ḫatti=ya a]nda āššuli nāišḫut",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 20'",
+"[ ... LU]GAL MUNUS.LUGAL [ ... a]n-da a-aš-šu-li na-a-iš-ḫu-ut ¬¬¬"
+]
+],
+"tr": "Wende dich [dem Kö]nig, der Königin, [den Prinzen und dem Land Ḫatti] im Guten zu!",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 7'",
+"hl": "",
+"master": "[kāša=tta KI.MIN gala]ktar kitta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 22'",
+"[ ... ga-la-a]k-tar ki-it-ta"
+]
+],
+"tr": "[Hier] liegt [für dich desgleichen gala]ktar.",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 7'",
+"hl": "",
+"master": "[ ... k]alankanteš [ašandu]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 23'",
+"[ ... k]a-la-an-kán-te-eš [ ... ]"
+]
+],
+"tr": "[ ... sollen b]eruhigt [sein]!",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 7'",
+"hl": "",
+"master": "[ANA LUGAL MUNUS.LUGAL D]UMU{MEŠ}LUGAL [KUR {URU}hatti=ya anda aššuli] ⸢nāišhut⸣",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 24'",
+"[ ... D]UMU{MEŠ} LUGAL [ ... aš-šu-li] ⸢na-a-iš-hu-ut⸣"
+],
+[
+"A",
+"",
+"Vs. II bricht ab."
+]
+],
+"tr": "Wende dich [dem König, der Königin, den P]rinzen [und dem Land Hatti im Guten] zu!",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 8''",
+"hl": "",
+"master": "[kāša=tta KI.MIN DIM4 ki]tta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1'",
+"¬¬¬ [ ... ki-i]t-ta"
+]
+],
+"tr": "[Hier li]egt [für dich desgleichen Malz].",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 8''",
+"hl": "",
+"master": "[nu DIM4 maḫḫan tepšu]š?",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 2'",
+"[ ... te-ep-šu-u]š?"
+]
+],
+"tr": "[So wie Malz trock]en (ist),",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 8''",
+"hl": "",
+"master": "[UL=an gimra pēdan]zi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3'",
+"[ ... pé-e-da-an]-zi"
+]
+],
+"tr": "[man es nicht auf das Feld bring]t",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 8''",
+"hl": "",
+"master": "n=an NUMUN-an [yenzi]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3'",
+"na-an NUMUN-an [ ... ]"
+]
+],
+"tr": "und es (nicht) zur Saat [macht],",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 8''",
+"hl": "",
+"master": "[UL=ma=an NINDA-an] yenzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4'",
+"[ ... ] i-en-zi"
+]
+],
+"tr": "[es aber nicht zu Brot] macht",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 8''",
+"hl": "",
+"master": "[É {NA4}KIŠIB] tianzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 5'",
+"[ ... ] ti-an-⸢zi⸣ ¬¬¬"
+]
+],
+"tr": "(und ins) [Vorratshaus] legt,",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 9''",
+"hl": "",
+"master": "[{d}telipinuwašš=a karp]iš kardimiyaz [waštul šāwar QĀTAMM]A tēpšawēšdu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 6'",
+"[ ... kar-p]í-iš kar-di-mi-ya-⸢az⸣ [ ... QA-TAM-M]A te-e-ep-ša-u-e-eš-du ¬¬¬"
+]
+],
+"tr": "[ebens]o sollen1 [auch des Telipinu Wu]t, Zorn, [Frevel (und) Ärger] vertrocknen!",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§ 10''",
+"hl": "",
+"master": "[ ... kardim]iyawandaš ⸢ZI⸣-ŠU [ ... {GIŠ}wa]ršamaš wešuriyattati",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 8'",
+"[ ... kar-di-m]i-ya-u-an-da-aš ⸢ZI⸣-ŠU [ ... {GIŠ}wa-a]r-ša<-ma>-aš ú-e-šu-ri-ya-at-ta-ti"
+]
+],
+"tr": "[ ... ] des [Zorn]igen Seele [ ... ] erstickte [im Feuer]holz.2",
+"trlang": "DE"
+},
+{
+"n": "36",
+"sec": "§ 10''",
+"hl": "",
+"master": "[nu {GIŠ}waršaman maḫḫa]n lukka[n]zi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 10'",
+"[ ... ma-aḫ-ḫa-a]n lu-uk-ká[n]-zi"
+]
+],
+"tr": "[Wen]n man [Feuerholz] in Brand se[t]zt,",
+"trlang": "DE"
+},
+{
+"n": "37",
+"sec": "§ 10''",
+"hl": "",
+"master": "[n=ašta anda 4 ḫalḫaltuma]riaš lalukkišzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 11'",
+"[ ... ḫal-ḫal-tu-ma]-ri-aš la-lu-⸢uk⸣-kiš-zi"
+]
+],
+"tr": "wird es [in den vier Eck]en hell.",
+"trlang": "DE"
+},
+{
+"n": "38",
+"sec": "§ 10''",
+"hl": "",
+"master": "[ ... d]andukešnaš DUMU-aš [ ... u]ddār iyat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 12'",
+"[ ... d]a-an-du-ke-eš-na-aš DUMU-aš [ ... u]d-da-a-ar i-ya-at"
+]
+],
+"tr": "Das Kind der [St]erblichkeit machte [ ... ] die [W]orte.",
+"trlang": "DE"
+},
+{
+"n": "39",
+"sec": "§ 10''",
+"hl": "",
+"master": "[ ... a]nda QĀTAMMA [lalukkišdu]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 14'",
+"[ ... a]n-da QA-TAM-MA [ ... ]"
+]
+],
+"tr": "[ ... soll] ebenso [da]rin [hell werden].",
+"trlang": "DE"
+},
+{
+"n": "40",
+"sec": "§ 10''",
+"hl": "",
+"master": "[ ... karp]išš=a [kardimiyaz waštul šāwa]r [arḫa QĀTAMMA w]arānu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 15'",
+"[ ... kar-p]í-iš-ša [ ... ša-a-u-a]r [ ... w]a-ra-a-nu ¬¬¬"
+]
+],
+"tr": "[Ebenso] sollen3 auch [Wu]t, [Zorn, Frevel (und) Ärg]er [verb]rennen.",
+"trlang": "DE"
+},
+{
+"n": "41",
+"sec": "§ 11''",
+"hl": "",
+"master": "[ ... na]kkiš DINGIR-uš [ ... p]arāiš?",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 18'",
+"[ ... na-a]k-ki-iš DINGIR-uš [ ... p]a?-ra-a-iš"
+]
+],
+"tr": "Der [gewi]chtige Gott [f]achte [ ... ] an.",
+"trlang": "DE"
+},
+{
+"n": "42",
+"sec": "§ 11''",
+"hl": "",
+"master": "[ ... dammielaz? pēd]az? [ ... ḫaššī?] išḫuwā[i]š",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 20'",
+"[ ... pé-e?-d]a-az [ ... ] iš-ḫu-wa-a-[i]š"
+]
+],
+"tr": "[Von unberührtem? Or]t? schüttete er [ ... in den Herd?.]",
+"trlang": "DE"
+},
+{
+"n": "43",
+"sec": "§ 11''",
+"hl": "",
+"master": "[ ... š]iyantat?",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 22'",
+"[ ... š]i?-ya-an-ta-at"
+]
+],
+"tr": "[ ... d]rückten [ ... ] ein.",
+"trlang": "DE"
+},
+{
+"n": "44",
+"sec": "§ 11''",
+"hl": "",
+"master": "[ ... ]-at",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 23'",
+"[ ... ]-at ¬¬¬6"
+],
+[
+"A",
+"",
+"Rs. III bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Vgl. zur Ergänzung KUB 60.33 Rs. 5' (CTH 335.18).",
+"§ 4':2": "Vgl. zur Ergänzung KUB 33.14 Vs. II 7'ff. (CTH 324.5).",
+"§ 4':3": "Vgl. zu den Ergänzungen KUB 33.77+ Vs. I 9ff. (CTH 334.2).",
+"§ 4':4": "Das könnte zum vorigen Kolon gehören. Platz ist allerdings vorhanden für wesentlich mehr.",
+"§ 5':5": "Mazoyer 2003, 65: [wa-ar-šu-la-aš? ...",
+"§ 11'':6": "Auch nach Kollation am Foto läßt sich nicht entscheiden, ob am Paragraphenstrich noch ein Zeichenrest oder nur ein Kratzer zu sehen ist.",
+"T1": "Form ist Sg.",
+"T2": "Vgl. hierzu KBo 26.124+ Rs. III 7'f. (CTH 325).",
+"T3": "Form ist Sg."
+}
+}

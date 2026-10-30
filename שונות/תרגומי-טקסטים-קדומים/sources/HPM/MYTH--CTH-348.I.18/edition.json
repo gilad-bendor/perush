@@ -1,0 +1,124 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.18",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.18 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-pu[k- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"¬¬¬ [ ... ]x-pu-u[k- ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]=kan wē[ḫ?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x-kán ú-e-e[ḫ?1- ... ]"
+]
+],
+"tr": "[ ... ] wen[d?- ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... A]NA {MUŠ}ḫed[ammu ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... A]-NA {MUŠ}ḫé-d[am-mu ... ]"
+]
+],
+"tr": "[ ... ] zu Ḫed[ammu ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ta ann[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]x-ta an-n[a- ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... a]rḫa? mer-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... a]r?-ḫa me-er-x[ ... ]"
+]
+],
+"tr": "[ ... ] verschwind[-?1 ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "-iz- nach Kollation am Foto unwahrscheinlich.",
+"T1": "Vgl. CHD L-N 293ff. s.v. merr-, mirr-, mar-."
+}
+}

@@ -1,0 +1,182 @@
+{
+"kind": "MYTH",
+"cth": "CTH 324.9",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 324.9 (TX 2009-08-26, TRde 2009-08-26)",
+"sections": [
+{
+"id": "§ 1",
+"title": "§ 1",
+"hl": ""
+},
+{
+"id": "§ 2",
+"title": "§ 2",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1",
+"hl": "",
+"master": "[UDU-uš=ma=ta=kkan] katti=ti arḫa [paizzi]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 1",
+"[ ... ] kat-ti-ti ar-ḫa [ ... ]"
+]
+],
+"tr": "[Das Schaf aber läuft] unter dir hindurch,",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1",
+"hl": "",
+"master": "[nu=šše=št]a ēšri ḫuē[zta]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 2",
+"[nu-uš-še-eš-t]a e-eš-ri ḫu-⸢e⸣-[ez-ta] ¬¬¬"
+]
+],
+"tr": "[und du] reiß[t ihm] das Vlies aus.1",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2",
+"hl": "",
+"master": "[kēdani ANA E]N ⸢SÍSKUR⸣ {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 3",
+"[ ... E]N ⸢SÍSKUR⸣ {d}x[ ... ]"
+]
+],
+"tr": "[Diesem Ri]tualherrn [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 4",
+"[ ... ]x x x[ ... ]"
+],
+[
+"A",
+"",
+"Die Vs. bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 1'",
+"[ ... ]x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] parḫa-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 2'",
+"[ ... ]x pár-ḫa-[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 3''",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] kiš-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 4''",
+"[ ... ]x ⸢ki?-iš⸣-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]⸢MU?⸣ [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 5''",
+"[ ... ]⸢MU?⸣ x[ ... ]"
+],
+[
+"A",
+"",
+"Es fehlt etwa eine Zeile bis zum unteren Rand."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1:T1": "Vgl. hierzu KUB 17.10 Rs. IV 1f. (CTH 324.1).",
+"T1": "Vgl. hierzu KUB 17.10 Rs. IV 1f. (CTH 324.1)."
+}
+}

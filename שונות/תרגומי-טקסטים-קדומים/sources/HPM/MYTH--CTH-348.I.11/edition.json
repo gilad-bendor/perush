@@ -1,0 +1,235 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.11",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.11 (TX 2009-09-08, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2''",
+"title": "§ 2''",
+"hl": ""
+},
+{
+"id": "§ 3'''",
+"title": "§ 3'''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-aš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2'",
+"[ ... ]x-aš"
+],
+[
+"A",
+"",
+"Ende von Vs. I. Bis zum unteren Rand etwa 3 Zeilen. Sichtbar ist noch der Rest eines Paragraphenstrichs. ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2''",
+"hl": "",
+"master": "{MUŠ}ḫedamm[uš {d}IŠ]TAR-li memi[škiuwan dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 1'",
+"¬¬¬ {MUŠ}ḫé-dam-m[u-uš {d}IŠ]TAR-li me-mi-i[š-ki-u-wa-an ... ]"
+]
+],
+"tr": "Ḫedamm[u begann], zu [Iš]tar [zu] spre[chen]:",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2''",
+"hl": "",
+"master": "zik MUNUS-n[a?- ... ] awan arḫa [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 2'",
+"zi-ik MUNUS-n[a?-_] ⸢a⸣-wa-an ar-ḫa x[ ... ]"
+]
+],
+"tr": "Du [ ... ] Fra[u] ganz weg [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2''",
+"hl": "",
+"master": "nu=tta arḫa ētmi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 3'",
+"nu-ut-ta ar-ḫa e-et-mi"
+]
+],
+"tr": "Ich fresse dich auf!",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2''",
+"hl": "",
+"master": "ka-[ ... ] ḫaršalanta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 3'",
+"ka-[ ... ] ḫar-ša-la-an-ta"
+]
+],
+"tr": "[ ... ] zornig,",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2''",
+"hl": "",
+"master": "n=at=mu=za z[i?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 4'",
+"na-at-mu-za1 z[i?2- ... ]"
+]
+],
+"tr": "und es [ ... ] mir [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5'",
+"x x[]x [] ==="
+],
+[
+"A",
+"",
+"Ende von Vs. II."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3'''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1'",
+"[ ... ]x x x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3'''",
+"hl": "",
+"master": "[ ... ]-a=mu pedi [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 2'",
+"[ ... ]-a?-mu pé-di [ ... ]"
+]
+],
+"tr": "[ ... ] mir am Ort [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3'''",
+"hl": "",
+"master": "[ ... {U]}RUnenuwan[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3'",
+"[ ... {U]}RU⸢ne⸣-nu-wa-an[ ... ]"
+]
+],
+"tr": "[ ... ] Ninive [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3'''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4'",
+"[ ... ]x x x[ ... ]"
+],
+[
+"A",
+"",
+"Rs. III bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2'':1": "na-at-mu-za über Rasur.",
+"§ 2'':2": "Siegelova, StBoT 14, 1971, 56: zu-x[. Die kleinen Waagrechten sind nach Kollation am Original eher der Rest einer Rasur."
+}
+}

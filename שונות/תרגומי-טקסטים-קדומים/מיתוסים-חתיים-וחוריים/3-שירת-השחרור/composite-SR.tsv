@@ -1,0 +1,423 @@
+label	sec	ms	ms_lines	text	witnesses	note
+13.1.1	13 §1	KBo 32.13+	{1} Vs. 1b	{D}IŠKUR-aš ma-⸢aḫ⸣-ḫa-an i-ia-at-ta-at na-aš-kán		
+13.1.2	13 §1	KBo 32.13+	{1} Vs. 2b	ták-na-a-aš {D}UTU-wa-aš {É}ḫa-le-en-tu-u-wa-aš		
+13.1.3	13 §1	KBo 32.13+	{1} Vs. 3b	an-da-an i-ia-an-ni-iš nu-uš-ši {GIŠ}ŠÚ.A-ŠU		
+13.1.4	13 §1	KBo 32.13+	{1} Vs. 4b	{D}IŠKUR-*aš-kán LUGAL-uš* ma-aḫ-ḫa-an a-aš-ka-az		
+13.1.5	13 §1	KBo 32.13+	{1} Vs. 5b	an-da-an ú-et nu-uš-ša-an ŠA A.ŠÀ IKU		
+13.1.6	13 §1	KBo 32.13+	{1} Vs. 6b	A-NA {GIŠ}ŠÚ.A {D}IŠKUR-aš pár-ga-u-an e-ša-at		
+13.1.7	13 §1	KBo 32.13+	{1} Vs. 7b	A.ŠÀ 7 ta-wa-al-la-aš-ma-aš-ša-an A-NA {GIŠ}GÌR.GUB		
+13.1.8	13 §1	KBo 32.13+	{1} Vs. 8b	GÌR{ḪI.A}-ŠU pár-ak-nu-ut		
+13.2.1	13 §2	KBo 32.13+	{1} Vs. 9b	{D}IŠKUR-aš-kán {D}šu-wa-li-ia-az-za-aš-ša		
+13.2.2	13 §2	KBo 32.13+	{1} Vs. 10b	kat-ta-an-ta ta-an-ku-wa-i ták-ni-i i-ia-an-né-er		
+13.2.3	13 §2	KBo 32.13+	{1} Vs. 11b	nu-za-an an-da iš-ḫu-zi-ia-et ták-na-a-aš {D}UTU-uš		
+13.2.4	13 §2	KBo 32.13+	{1} Vs. 12b	na-aš A-NA {D}IŠKUR pé-ra-an ú-e-ḫa-at-ta		
+13.2.5	13 §2	KBo 32.13+	{1} Vs. 13b	nu ša-né-ez-zi-in EZEN₄-an i-e-et		
+13.2.6	13 §2	KBo 32.13+	{1} Vs. 14b	ták-na-a-aš ḫa-at-tal-wa-aš ták-na-a-aš {D}UTU-uš		
+13.3.1	13 §3	KBo 32.13+	{1} Vs. 15b	nu SIG₇-an GU₄{ḪI.A}-un ḫa-at-te-eš {D}IŠKUR-un-ni		
+13.3.2	13 §3	KBo 32.13+	{1} Vs. 16b	šal-la-i pé-ra-an SIG₇-an GU₄{ḪI.A}-un ḫa-at-te-eš		
+13.3.3	13 §3	KBo 32.13+	{1} Vs. 17b	3 SIG₇ {UDU}GUKKAL+KUN{ḪI.A}-na ḫa-at-te-eš		
+13.3.4	13 §3	KBo 32.13+	{1} Vs. 18b	kap-pu-wa-u-wa-ar-ma ku-e-da-ni NU.GÁL		
+13.3.5	13 §3	KBo 32.13+	{1} Vs. 19b	MÁŠ.TUR-i SILA₄-i MÁŠ.GAL-ia nu a-pé-ni-iš-šu-wa-an		
+13.3.6	13 §3	KBo 32.13+	{1} Vs. 20b	ḫa-at-ta-at		
+13.4.1	13 §4	KBo 32.13+	{1} Vs. 21b	{LÚ.MEŠ}NINDA.DÙ.DÙ ḫa-an-da-a-er {LÚ.MEŠ}SAGI-ia		
+13.4.2	13 §4	KBo 32.13+	{1} Vs. 22b	an-da a-re-er {LÚ.MEŠ}MUḪALDIM-ma-kán {UZU}GABA{ḪI.A}		
+13.4.3	13 §4	KBo 32.13+	{1} Vs. 23b	ša-ra-a da-a-er na-aš-kán {DUG}DÍLIM.GAL ku-uš-ku-uš-šu-ul-la-az [ ]		
+13.4.4	13 §4	KBo 32.13+	{1} Vs. 24b	an-da ú-te-er nu a-da-a-an-na-aš me-⸢e⸣-ḫur		
+13.4.5	13 §4	KBo 32.13+	{1} Vs. 25b	ti-i-e-et nu-za {D}IŠKUR-aš LUGAL-uš a-da-a-an-na		
+13.4.6	13 §4	KBo 32.13+	{1} Vs. 26b	e-ša-at ka-ru-ú-li-uš-ma-za DINGIR{MEŠ}-uš		
+13.4.7	13 §4	KBo 32.13+	{1} Vs. 27b	{D}IŠKUR-aš ZAG-az a-ša-aš-ta		
+13.5.1	13 §5	KBo 32.13+	{1} Vs. 28b	ták-na-aš-ma {D}UTU-uš {D}IŠKUR-un-ni pé-ra-an		
+13.5.2	13 §5	KBo 32.13+	{1} Vs. 29b	{LÚ}SAGI-aš i-wa-ar ti-i-e-et		
+13.5.3	13 §5	KBo 32.13+	{1} Vs. 30b	ki-iš-ra-aš-ma-aš-ši ga-lu-lu-pé-e-eš-še-eš ta-lu-ga-e-[eš]		
+13.5.4	13 §5	KBo 32.13+	{1} Vs. 31b	na-at-kán mi-ia-u-e-eš-pát ga-lu-lu-pé-e-eš		
+13.5.5	13 §5	KBo 32.13+	{1} Vs. 32b	[A-NA B]I-[I]B-RI kat-ta-an-ta ki-an-ta-ri		
+13.5.6	13 §5	KBo 32.13+	{1} Vs. 33b	[IŠ-TU ḫal-wa-n]i-it-ma ku-e-ez a-ku-wa-an-na		
+13.5.7	13 §5	KBo 32.13+	{1} Vs. 34b	[pí-iš-ke-ez-zi a-pé-e-d]a-⸢ša⸣ an-da aš-šu-wa-a-tar ki-⸢it⸣-t[a(-)		
+13.5.8	13 §5	KBo 32.13+	{1} Vs. 35b	[ ]x x-⸢at⸣-ta[r		
+13.5.9	13 §5	KBo 32.13+	{2} 1b′	]x x ⸢GEŠTIN⸣-an		
+13.5.10	13 §5	KBo 32.13+	{2} 2b′	]x		
+13.6.1	13 §6	KBo 32.13+	{2} 3b′	]x a-da-an-na		
+13.6.2	13 §6	KBo 32.13+	{2} 4b′	az-zi-ik-k]a-an-zi ak-ku-uš-k[a-an-zi		
+13.6.3	13 §6	KBo 32.13+	{2} 5b′	{D]UG}⸢ti⸣-šu-mi-ša-aš-ma-kán		
+13.6.4	13 §6	KBo 32.13+	{2} 6b′	]		
+13.7.1	13 §7	KBo 32.13+	{2} 7b′	]x-at 2-aš 3-aš 4-aš		
+13.7.2	13 §7	KBo 32.13+	{2} 8b′	]x-aš-ša		
+13.7.3	13 §7	KBo 32.13+	{2} 9b′	]		
+13.8.1	13 §8	KBo 32.13+	{2} 10b′	]-a-az ⸢ar-ḫa⸣ x-x-x[		
+13.8.2	13 §8	KBo 32.13+	{3} 1b′	5-⸢uš? 6?⸣-[		
+13.8.3	13 §8	KBo 32.13+	{3} 2b′	GEŠTIN-it x[		
+13.9.1	13 §9	KBo 32.13+	{3} 3b′	nu-za {D}IŠKU[R		
+13.9.2	13 §9	KBo 32.13+	{3} 4b′	⸢pí?⸣-[ ]x-x[		
+13.9.3	13 §9	KBo 32.13+	{1} Rs. 1b′	[ ]x x x x		
+13.9.4	13 §9	KBo 32.13+	{1} Rs. 2b′	[ š]ar-ra-aš-kán-zi		
+13.9.5	13 §9	KBo 32.13+	{1} Rs. 3b′	[ -e]š-ta		
+13.9.6	13 §9	KBo 32.13+	{1} Rs. 4b′	[ ]x x ma-⸢aḫ-ḫa-an⸣ š[ar-ra-at-t]a-at		
+13.9.7	13 §9	KBo 32.13+	{1} Rs. 5b′	[ ] {D}IŠKUR-un-ni pé-ra-⸢an⸣ [ša-r]a-a ti-i-e-⸢et⸣		
+13.10.1	13 §10	KBo 32.13+	{1} Rs. 6b′	nu {D}⸢IŠKUR⸣(-)[ ] AN x[ ]x		
+13.10.2	13 §10	KBo 32.13+	{1} Rs. 7b′	da-[ ]x		
+13.10.3	13 §10	KBo 32.13+	{1} Rs. 8b′	kat-t[a -i]š-ke-ši		
+13.10.4	13 §10	KBo 32.13+	{1} Rs. 9b′	te-e[š-		
+13.10.5	13 §10	KBo 32.13+	{1+4} Rs. 10b′/1b′	ku-i[t(-) ]x-⸢ga⸣-x[ ]x		
+13.10.6	13 §10	KBo 32.13+	{1+4} Rs. 11b′/2b′	ša-an-[		
+13.11.1	13 §11	KBo 32.13+	{1+4} Rs. 12b′/3b′	{D}UTU-uš a-r[u- ]x-ri {D}IŠ[KUR-		
+13.11.2	13 §11	KBo 32.13+	{1+4} Rs. 13b′/4b′	[me]-mi-iš-ke-u-a[n da-iš ] ⸢{D⸣}ZUEN-mi [		
+13.11.3	13 §11	KBo 32.13+	{1+4} Rs. 14b′/5b′	[pé-r]a-an ar-ḫ[a ]-un na-aš-ta [		
+13.11.4	13 §11	KBo 32.13+	{1+4} Rs. 15b′/6b′	[ ]x-an t[a-an-ku-w]a-i ták-ni-i [		
+13.11.5	13 §11	KBo 32.13+	{1+4} Rs. 16b′	[ša]-me-nu-[		
+13.12.1	13 §12	KBo 32.13+	{1} Rs. 17′	[ ]x x[ p]a-ra-a tar-nu-ma[r		
+13.12.2	13 §12	KBo 32.13+	{1} Rs. 18′	[ ]x[ ]x-zi {LÚ}NA[R(-)		
+13.12.3	13 §12	KBo 32.13+	{1} Rs. 19′	[ ] ⸢Ú⸣-UL QA-TI		
+14.1.1	14 §1	KBo 32.14	Vs. 1b	a-li-⸢ia⸣-n[a-an]-za a-pé-el tu-e-eg-ga-a[z-še-et]		
+14.1.2	14 §1	KBo 32.14	Vs. 2b	ḪUR.SAG-aš a-wa-an ar-ḫa šu-ú-e-et nu-uš-š[a-an]		
+14.1.3	14 §1	KBo 32.14	Vs. 3b	a-li-ia-aš pa-ra-a ta-me-e-da-ni ḪUR.SAG-i pa-[it]		
+14.1.4	14 §1	KBo 32.14	Vs. 4b	na-aš wa-ar-ke-eš-ta na-aš šu-u-ul-le-e-et		
+14.1.5	14 §1	KBo 32.14	Vs. 5b	nu a-ap-pa ḪUR.SAG-an ḫu-ur-za-ke-u-an da-iš		
+14.1.6	14 §1	KBo 32.14	Vs. 6b	ú-e-ši-ia-aḫ-ḫa-ri ku-e-da-ni ḪUR.SAG-i ma-a-na-an		
+14.1.7	14 §1	KBo 32.14	Vs. 7b	pa-aḫ-ḫu-e-na-an-za ⸢ar⸣-ḫa wa-ar-nu-zi {D}IŠKUR-aš-ma-na-an		
+14.1.8	14 §1	KBo 32.14	Vs. 8b	wa-la-aḫ-zi pa-aḫ-ḫu-e-na-an-za-ma-na-an ar-ḫa wa-ar-nu-zi		
+14.1.9	14 §1	KBo 32.14	Vs. 9b	ḪUR.SAG-aš-ša ma-aḫ-ḫa-an iš-ta-ma-aš-ta		
+14.1.10	14 §1	KBo 32.14	Vs. 10b	nu-uš-ši-kán ŠÀ-ŠU an-da iš-tar-ak-ki-at		
+14.1.11	14 §1	KBo 32.14	Vs. 11b	nu ḪUR.SAG-aš a-li-ia-na-an a-ap-pa ḫu-wa-ar-za-aš-ta		
+14.1.12	14 §1	KBo 32.14	Vs. 12b	a-li-ia-na-an ku-in wa-ar-ga-nu-nu-un		
+14.1.13	14 §1	KBo 32.14	Vs. 13b	ki-nu-na-mu a-ap-pa ḫu-ur-za-ke-zi pé-eš-ši-an-du-ia-an		
+14.1.14	14 §1	KBo 32.14	Vs. 14b	a-li-ia-na-an {LÚ.MEŠ}ṢA-A-I-DU-TIM da-a-an-du-ma-an		
+14.1.15	14 §1	KBo 32.14	Vs. 15b	{LÚ.MEŠ}MUŠEN.DÙ-TIM {UZU}Ì {LÚ.MEŠ}ṢA-A-I-DU-TIM da-an-du		
+14.1.16	14 §1	KBo 32.14	Vs. 16b	KUŠ-ma {LÚ.MEŠ}MUŠEN.DÙ-TIM da-an-du		
+14.2.1	14 §2	KBo 32.14	Vs. 17b	Ú-UL-ma a-li-ia-na-aš nu an-tu-wa-aḫ-ḫa-aš		
+14.2.2	14 §2	KBo 32.14	Vs. 18b	a-pa-a-aš LÚ-aš a-pé-el-kán URU-az ku-iš ar-ḫa ḫu-wa-iš		
+14.2.3	14 §2	KBo 32.14	Vs. 19b	na-aš ta-me-e-da-ni KUR-ia a-ar-aš ma-na-aš šu-u-ul-li-it		
+14.2.4	14 §2	KBo 32.14	Vs. 20b	nu-uš-ša-an EGIR-pa URU-ri i-da-a-lu ták-ki-⸢iš⸣-ke-u-an da-iš		
+14.2.5	14 §2	KBo 32.14	Vs. 21b	URU-ia-ša-an DINGIR{MEŠ} ḫu-wa-ar-ta-an ḫar-kán-zi		
+14.3.1	14 §3	KBo 32.14	Vs. 23b	ar-ḫa da-a-li-eš-tén a-pa-a-at ut-tar nu-uš-ma-aš ta-ma-i		
+14.3.2	14 §3	KBo 32.14	Vs. 24b	ut-tar me-mi-iš-ke-mi ḫa-at-re-eš-šar iš-ta-ma-aš-[ke-t]én		
+14.3.3	14 §3	KBo 32.14	Vs. 25b	ḫa-at-ta-a-tar-ma-aš-ma-aš me-mi-iš-ke-mi		
+14.4.1	14 §4	KBo 32.14	Vs. 26b	a-li-ia-na-aš na-aš-ta ÍD-an ta-pu-ša ku-i-e-eš		
+14.4.2	14 §4	KBo 32.14	Vs. 27b	ú-e-še-eš nu a-pu-u-uš ⸢ú⸣-e-ši-ia-at-ta-ri		
+14.4.3	14 §4	KBo 32.14	Vs. 28b	ke-e-zi-⸢ia⸣-ká[n] ⸢ku-i⸣-e-eš ú-e-še-eš nu-uš-ša-an a-pé-e-da-aš-ša [ ]		
+14.4.4	14 §4	KBo 32.14	Vs. 29b	š[a-a-ku-wa] ⸢zi⸣-ik-ke-zi na-aš-ša-an ta-pu-ša-aš ú-e-ši-ia-aš		
+14.4.5	14 §4	KBo 32.14	Vs. 30b	⸢a-ar⸣-aš Ú-UL ki-ma ú-e-mi-et Ú-UL		
+14.5.1	14 §5	KBo 32.14	Vs. 31b	Ú-UL-ma a-li-ia-aš nu an-tu-wa-aḫ-ḫa-aš		
+14.5.2	14 §5	KBo 32.14	Vs. 32b	a-pa-a-aš LÚ-aš BE-EL-ŠU ku-in a-ú-ri-aš iš-ḫa-a-an i-e-zi		
+14.5.3	14 §5	KBo 32.14	Vs. 33b	na-an ši-e-da-ni te-li-pu-u-ri-ia a-ú-ri-aš iš-ḫa-a-an		
+14.5.4	14 §5	KBo 32.14	Vs. 34b	i-e-er ta-a-an-ma-aš-ša-an te-li-pu-u-ri-ia ša-a-ku-wa		
+14.5.5	14 §5	KBo 32.14	Vs. 35b	zi-ik-ke-zi nu-za a-pé-e-da-ni LÚ-ni DINGIR{MEŠ} še-e-er		
+14.5.6	14 §5	KBo 32.14	Vs. 36b	ḫa-at-ta-a-tar ši-iš-ḫe-er na-aš-kán a-pé-e-da-ni te-li-pu-u-ri-ia		
+14.5.7	14 §5	KBo 32.14	Vs. 37b	a-ar-aš Ú-⸢UL⸣ 𒀹 ta-a-an-ma te-li-pu-u-ri		
+14.5.8	14 §5	KBo 32.14	Vs. 38b	ú-e-mi-et Ú-UL		
+14.6.1	14 §6	KBo 32.14	Vs. 39b	ar-ḫa da-a-li-eš-tén a-pa-a-at ut-tar nu-uš-ma-aš ta-ma-i		
+14.6.2	14 §6	KBo 32.14	Vs. 40b	ut-tar me-mi-iš-ke-mi ḫa-at-re-eš-šar iš-ta-ma-aš-ke-tén		
+14.6.3	14 §6	KBo 32.14	Vs. 41b	ḫa-at-ta-a-tar-ma-aš-ma-aš me-mi-iš-ke-mi		
+14.7.1	14 §7	KBo 32.14	Vs. 42b	te-eš-šum-mi-in {LÚ}SIMUG wa-al-li-ia-an-ni la-a-ḫu-uš		
+14.7.2	14 §7	KBo 32.14	Vs. 43b	la-a-ḫu-ša-an ti-iš-ša-a-et na-an šu-up-pí-iš-du-wa-ri-it		
+14.7.3	14 §7	KBo 32.14	Vs. 44b	da-iš na-an gul-aš-ta nu-uš-ši-eš-ta ma-iš-ti		
+14.7.4	14 §7	KBo 32.14	Vs. 45b	an-da la-a-lu-uk-ki-iš-nu-ut la-a-ḫu-uš-ma-an ku-iš		
+14.7.5	14 §7	KBo 32.14	Vs. 46b	na-an a-ap-pa mar-la-a-an-za URUDU-aš ḫu-ur-za-ke-u-an da-i[š]		
+14.7.6	14 §7	KBo 32.14	Vs. 47b	ma-a-an-wa-mu la-a-ḫu-uš ku-iš ma-an-wa-aš-ši-kán ki-iš-šar-aš		
+14.7.7	14 §7	KBo 32.14	Vs. 48b	ar-ḫa du-wa-ar-na-at-ta-ri ku-un-na-aš-ma-an-wa-aš-ši-kán		
+14.7.8	14 §7	KBo 32.14	Vs. 49b	iš-ḫu-na-ú-uš ar-ḫa ú-i-šu-u-ri-ia-at-ta-ri		
+14.7.9	14 §7	KBo 32.14	Vs. 50b	ma-aḫ-ḫa-an {LÚ}SIMUG iš-ta-ma-aš-ta		
+14.7.10	14 §7	KBo 32.14	Vs. 51b	nu-uš-ši-eš-ta ŠÀ-ŠU an-da iš-tar-ak-ki-at		
+14.8.1	14 §8	KBo 32.14	Vs. 52b	nu-za {LÚ}SIMUG PA-NI ŠÀ-ŠU me-mi-iš-ke-u-an da-iš		
+14.8.2	14 §8	KBo 32.14	Vs. 53b	ku-wa-at-wa URUDU-an ku-in la-a-ḫu-un nu-wa-mu a-ap-pa		
+14.8.3	14 §8	KBo 32.14	Vs. 54b	ḫu-u-ur-za-ke-zi nu te-eš-šum-mi-ia {LÚ}SIMUG		
+14.8.4	14 §8	KBo 32.14	Vs. 55b	ḫu-u-ur-ta-a-in te-et wa-al-aḫ-du-ia-an		
+14.8.5	14 §8	KBo 32.14	Vs. 56b	{D}IŠKUR-aš te-eš-šum-mi-in nu-uš-ši šu-up-pí-iš-du-wa-ri-uš		
+14.8.6	14 §8	KBo 32.14	Vs. 57b	ar-ḫa ša-ak-ku-ri-e-ed-〈du〉 te-eš-šum-mi-iš-kán		
+14.8.7	14 §8	KBo 32.14	Vs. 58b	an-da a-mi-ia-ri ma-uš-du		
+14.8.8	14 §8	KBo 32.14	Vs. 59b	šu-up-pí-iš-du-wa-ri-i-e-eš-ma-kán an-da		
+14.8.9	14 §8	KBo 32.14	Vs. 60b	ÍD-i mu-wa-a-an-ta-ru		
+14.9.1	14 §9	KBo 32.14	Rs. 1b	Ú-UL te-eš-šum-mi-iš nu an-tu-wa-aḫ-ḫa-aš		
+14.9.2	14 §9	KBo 32.14	Rs. 2b	a-pa-a-aš DUMU-ŠU A-NA A-BI-ŠU ku-iš me-na-aḫ-ḫa-an-ta		
+14.9.3	14 §9	KBo 32.14	Rs. 3b	ku-u-ru-ur šal-le-eš-ta-al na-aš me-e-a-ni a-ar-aš		
+14.9.4	14 §9	KBo 32.14	Rs. 4b	na-aš-ta nam-ma at-ta-aš-ša-an an-da Ú-UL a-uš-zi		
+14.9.5	14 §9	KBo 32.14	Rs. 5b	ŠA A-BI-ŠU DINGIR{MEŠ} ku-in ḫu-wa-ar-ta-an ḫar-kán-zi		
+14.10.1	14 §10	KBo 32.14	Rs. 6b	ar-ḫa da-a-li-eš-tén a-pa-a-at ut-tar nu-uš-ma-aš ta-ma-i ut-tar		
+14.10.2	14 §10	KBo 32.14	Rs. 7b	me-mi-iš-ke-mi ḫa-at-re-eš-šar iš-ta-ma-aš-tén		
+14.10.3	14 §10	KBo 32.14	Rs. 8b	ḫa-at-ta-a-tar-ma-aš-ma-aš me-mi-iš-ke-mi		
+14.11.1	14 §11	KBo 32.14	Rs. 9b	{NINDA}ku-gul-la-an UR.GI₇-aš UDUN-ni-ia pé-ra-an ar-ḫa pít-⸢te⸣-nu-ut		
+14.11.2	14 §11	KBo 32.14	Rs. 10b	pa-ra-a-an-kán ḫu-it-ti-at UDUN-ni-ia-az na-an-kán Ì-i		
+14.11.3	14 §11	KBo 32.14	Rs. 11b	an-da šu-ú-ni-at ša-ak-ni-ia-an-kán an-da		
+14.11.4	14 §11	KBo 32.14	Rs. 12b	šu-ú-ni-at na-aš-za e-ša-at na-an a-da-a-an-na da-iš		
+14.12.1	14 §12	KBo 32.14	Rs. 13b	Ú-UL UR.GI₇-aš nu an-tu-wa-aḫ-ḫa-aš ma-ni-ia-aḫ-ḫi-aš iš-ḫa-a-an		
+14.12.2	14 §12	KBo 32.14	Rs. 14b	ku-in BE-EL-ŠU i-e-zi nu-uš-ša-an a-pé-e-da-ni		
+14.12.3	14 §12	KBo 32.14	Rs. 15b	URU-ri EGIR-an IGI.DU₈{ḪI.A} da-a-an-na ma-ak-nu-ut		
+14.12.4	14 §12	KBo 32.14	Rs. 16b	na-aš me-ek-ki šu-u-ul-li-it na-aš-ta nam-ma URU-an an-da Ú-UL		
+14.12.5	14 §12	KBo 32.14	Rs. 17b	a-uš-zi na-an-za PA-NI BE-LÍ-ŠU i-ši-ia-aḫ-⸢ḫu⸣-u-an-⸢zi⸣ tar-ḫu-er		
+14.12.6	14 §12	KBo 32.14	Rs. 18b	nu IGI.DU₈{ḪI.A} ku-e pa-a-ši-iš-ke-et na-at PA-NI BE-LÍ-ŠU		
+14.12.7	14 §12	KBo 32.14	Rs. 19b	li-il-ḫu-wa-an da-iš		
+14.13.1	14 §13	KBo 32.14	Rs. 20b	ar-ḫa da-a-li-eš-tén a-pa-a-at ut-tar nu-uš-ma-aš ta-⸢ma⸣-a-i ut-tar		
+14.13.2	14 §13	KBo 32.14	Rs. 21b	me-ma-aḫ-ḫi ḫa-at-re-eš-šar iš-ta-ma-aš-tén ḫa-at-ta-a-tar-ma-aš-ma-aš		
+14.13.3	14 §13	KBo 32.14	Rs. 22b	me-mi-iš-ke-mi		
+14.14.1	14 §14	KBo 32.14	Rs. 28	[g]i-i-lu-ši-iš-kán {NINDA}ku-gul-la-an UDUN-ni-ia-az pa-ra-a šal-la-an-na-i pa-ra-a-an-kán UDUN-ia-az ḫu-it-ti-at		
+14.14.2	14 §14	KBo 32.14	Rs. 29	[na-an-k]án an-da Ì-i šu-ú-ni-at ša-ak-ni-ia-an-kán an-da šu-ú-ni-at na-aš-za e-ša-at na-an a-da-a-an-na da-iš		
+14.14.3	14 §14	KBo 32.14	Rs. 30	[Ú-UL g]i-i-lu-ú-ši-iš nu an-tu-wa-aḫ-ḫa-aš {LÚ}ut-ni-ia-aš-ḫa-an ku-in BE-EL-ŠU i-e-zi nu-uš-ša-an a-pé-e-da-ni		
+14.14.4	14 §14	KBo 32.14	Rs. 31	[URU-ri] EGIR-an IGI.DU₈{ḪI.A} da-a-an-na ma-ak-nu-ut na-aš me-ek-ki šu-u-ul-li-it na-aš-ta nam-ma URU-an an-da Ú-UL		
+14.14.5	14 §14	KBo 32.14	Rs. 32	[a-uš-z]i na-an-za PA-NI BE-⸢LÍ-ŠU⸣ i-ši-ia-aḫ-ḫu-u-an-zi tar-ḫu-er nu IGI.DU₈{ḪI.A} ku-e pa-a-ši-iš-ke-et na-at PA-NI BE-LÍ-ŠU li-il-ḫu-wa-an da-iš		
+14.15.1	14 §15	KBo 32.14	Rs. 34	[a]r-ḫa da-a-li-eš-tén a-pa-a-at ut-tar nu-uš-ma-aš ta-ma-⸢i⸣ u[t-t]ar me-ma-aḫ-ḫi ḫa-at-re-eš-šar iš-ta-ma-aš-tén ḫa-at-ta-a-tar-ma-a[š-m]a-aš me-mi-iš-ke-mi		
+14.16.1	14 §16	KBo 32.14	Rs. 41	[{LÚ}NAGAR] AN.ZA.GÀR-an ⸢wa-al⸣-li-i[a]-an-ni ú-e-te-et nu-uš-ši-kán ḫu-u-t[a]-nu-uš kat+ta-an-ta ták-na-a-aš {D}UTU-i kat+t[a a]r-nu-ut		
+14.16.2	14 §16	KBo 32.14	Rs. 42	[ ]-ul-lu-ud-du-[u]š-ma ša-ra-a ne-pí-ši ma-an-ni-in-ku-wa-aḫ-ḫa-aš ú-e-te-et-ma-an ku-iš na-an mar-la-a-[an-za]		
+14.16.3	14 §16	KBo 32.14	Rs. 43	[ku-uz-za] a-ap-pa ḫu-u-ur-za-ke-u-an da-iš ú-e-te-et-wa-mu ku-iš ma-an-wa-aš-ši-kán ki-iš-šar-aš ar-ḫa du-wa-ar-n[a-at-t]a-ri		
+14.16.4	14 §16	KBo 32.14	Rs. 44	[ku-un-na-aš-m]a-⸢an⸣-ši-kán iš-ḫu-⸢na-a⸣-uš [a]r-ḫa ú-i-šu-u-ri-ia-at-ta-ri IŠ-ME {LÚ}NAGAR nu-uš-ši-kán ŠÀ-ŠU an-da ⸢i⸣-[da-a-l]a-u-eš-ta		
+14.16.5	14 §16	KBo 32.14	Rs. 45	[nu-za {LÚ}NAGAR] ⸢PA⸣-NI ZI-ŠU me-mi-iš-ke-zi ku-wa-at ú-e-te-nu-un ku-in ku-ut-ta-an nu-mu ḫu-u-ur-za-ke-zi nu {LÚ}NAGAR		
+14.16.6	14 §16	KBo 32.14	Rs. 46	[A-NA AN.ZA.GÀR] ḫu-u-ur-ta-in te-et wa-al-aḫ-du-ia-an {D}IŠKUR-aš AN.ZA.GÀR nu-uš-ši ša-a-ma-nu-uš še-er ḫu-i-nu-ud-du		
+14.16.7	14 §16	KBo 32.14	Rs. 47	[ ]-ar-ši-kán kat+ta-an-ta a-mi-ia-ri ma-uš-du SIG₄-ma-kán kat+ta-an-ta ÍD-i ma-uš-du		
+14.17.1	14 §17	KBo 32.14	Rs. 50	[Ú-UL] AN.ZA.GÀR nu an-tu-wa-⸢aḫ⸣-ḫa-aš a-pa-a-aš DUMU-aš at-ti-iš-ši ku-iš me-na-aḫ-ḫa-an-ta {LÚ}KÚR-aš na-aš šal-le-eš-ta		
+14.17.2	14 §17	KBo 32.14	Rs. 51	[na-aš e]-la-aš-na a-ar-aš na-aš-ta nam-ma at-ta-aš-ša-an an-da Ú-UL ⸢a-uš⸣-zi ŠA A-BI-ŠU-ma-an DINGIR{MEŠ}		
+14.17.3	14 §17	KBo 32.14	Rs. 52	[ ] ḫu-wa-ar-ta-an ḫar-kán-zi		
+14.18.1	14 §18	KBo 32.14	Rs. 54	[ar-ḫa d]a-a-li-eš-tén a-pa-a-at [u]t-tar nu-uš-ma-aš ta-ma-i ut-tar me-ma-aḫ-ḫi ḫa-at-re-eš-šar ⸢iš-ta⸣-ma-aš-tén ḫa-at-ta-a-tar-ma-aš-ma-aš me-mi-iš-ke-mi		
+14.19.1	14 §19	KBo 32.14	u. Rd. 66	ḫar-ra-an-kán GIŠ-ru x[ š]a-ra-⸢a⸣ [		
+14.19.2	14 §19	KBo 32.14	u. Rd. 67	ANŠE-ma-at-kán [ ]x-ti-[		
+14.19.3	14 §19	KBo 32.14	u. Rd. 68	pí-[ ]x x[ ]x-ta [ ]x-⸢zi⸣ x x x x(-)al-d[i?(-)		
+14.19.4	14 §19	KBo 32.14	u. Rd. 69	[ ti-it-nu-ut-ma-a]n k[u-i]š nu mar-la-a-an-za GIŠ-ru-wa-an-za		
+14.19.5	14 §19	KBo 32.14	u. Rd. 70	[ ]x ti-⸢it⸣-nu-ut-mu ku-iš		
+14.19.6	14 §19	KBo 32.14	u. Rd. 71	[ma-an-wa]-aš-[ši]-kán [k]i-i[š-šar-aš ar-ḫa] du-wa-ar-na-at-ta-at		
+14.20.1	14 §20	KBo 32.14	lk. Rd. 1	ku-un-na-aš-ma-an-ši-kán iš-ḫu-na-a-uš ar-ḫa [ ŠÀ-ŠU an-da-a]n		
+14.20.2	14 §20	KBo 32.14	lk. Rd. 2	i-da-a-la-u-eš-ta nu-za ḫa-an-da-a-an-za PA-NI Z[I-ŠU me-mi-iš-ke-zi nu GIŠ]-i		
+14.20.3	14 §20	KBo 32.14	lk. Rd. 3	ḫa-an-da-a-an-za ḫu-u-ur-ta-in te-et wa-al-aḫ-du-ia-a[t {D}IŠKUR-aš GIŠ-ru ] A-NA PA₅		
+14.20.4	14 §20	KBo 32.14	lk. Rd. 4	mu-wa-an-ta-ru {GIŠ}pár-aš-tu-e-eš-ma-kán an-da ú-e-te-ni iš-ḫu-[wa-a-an-ta-ru ]x za-az-ga-a-i		
+14.20.5	14 §20	KBo 32.14	lk. Rd. 5	na-aš GAL-le-eš-ta na-aš e-la-aš-ni a-ar-aš nu-za UM-MI-A-AN-ŠU ⸢za⸣-az-ga-a-⸢i⸣ [ ]x x[ ]x		
+14.20.6	14 §20	KBo 32.14	lk. Rd. 6	ḫa-aḫ-ra-an-ni a-ki UR.GI₇-ša-aš-kán i-wa-a[r ]x[		
+14.20.7	14 §20	KBo 32.14	lk. Rd. 7	ŠA-PAL [{GIŠ}Š]Ú.⸢A⸣ a-k[i ]x[		
+15.1.1	15 §1	KBo 32.15	Vs. 2b′	[ ]x[ ]x[		
+15.1.2	15 §1	KBo 32.15	Vs. 3b′	[ me-n]a-aḫ-⸢ḫa-an⸣-t[a me-mi-i]š-ke-et		
+15.2.1	15 §2	KBo 32.15	Vs. 4b′	[ {D}IŠ]KUR-aš ši-iš-ši-ia-ni-it dam-mi-iš-ḫa-a-an-za		
+15.2.2	15 §2	KBo 32.15	Vs. 5b′	[pa-ra-a tar-nu-mar ú]-⸢e⸣-wa-ak-ki ma-a-an {D}IŠKUR-aš		
+15.2.3	15 §2	KBo 32.15	Vs. 6b′	[ ši-i]š-ši-ia-u-an-za nu ku-iš-ša {D}IŠKUR-un-ni		
+15.2.4	15 §2	KBo 32.15	Vs. 6bA′	[1 GÍN KÙ.BABBAR pa-a-i]		
+15.3.1	15 §3	KBo 32.15	Vs. 7b′	[nu KÙ.SI₂₂ ku-i]š-ša ½ GÍN pa-a-i KÙ.BABBAR-ma-aš-š[i]		
+15.3.2	15 §3	KBo 32.15	Vs. 8b′	[1 GÍN ku-iš-ša pí-i-ú-e-n]i ma-a-na-aš ki-iš-du-wa-an-za-⸢ma {D⸣}IŠKUR-aš		
+15.3.3	15 §3	KBo 32.15	Vs. 9b′	nu [A-NA DINGI]R-LIM ku-iš-ša 1 PA ŠE pí-i-ú-[e-ni]		
+15.4.1	15 §4	KBo 32.15	Vs. 10b′	ZÍZ-tar [ku-i]š-ša ½ PA-RI-SI šu-un-na-i š[e- -m]a-aš-ši		
+15.4.2	15 §4	KBo 32.15	Vs. 11b′	ku-iš-⸢ša⸣ 1 PA-RI-SA₂₀ šu-un-na-i ma-a-an ⸢{D⸣}[IŠKUR]-aš-ma		
+15.4.3	15 §4	KBo 32.15	Vs. 12b′	ne-ku-⸢ma⸣-an-za na-an ku-iš-ša {TÚG}ku-ši-ši-⸢ia⸣-az wa-aš-ša-u-e-ni		
+15.4.4	15 §4	KBo 32.15	Vs. 13b′	DINGIR-uš UN		
+15.5.1	15 §5	KBo 32.15	Vs. 14b′	[m]a-a-na-aš ḫur-ta-an-za-ma {D}IŠKUR-aš nu-uš-ši ku-iš-ša		
+15.5.2	15 §5	KBo 32.15	Vs. 15b′	⸢Ì⸣.DU₁₀.GA *1* ku-ú-pí-in pí-i-ú-e-ni nu-uš-ši iš-ḫu-eš-šar		
+15.5.3	15 §5	KBo 32.15	Vs. 16b′	pa-ra-a šu-un-nu-me-ni na-an-kán pal-la-an-ti-ia-az		
+15.5.4	15 §5	KBo 32.15	Vs. 17b′	a-ap-pa tar-nu-me-ni DINGIR-uš UN		
+15.6.1	15 §6	KBo 32.15	Vs. 18b′	na-an-kán ḫu-⸢iš⸣-nu-mi-ni {D}IŠKUR-an {LÚ}ši-iš-ši-ia-la-an		
+15.6.2	15 §6	KBo 32.15	Vs. 19b′	dam-mi-iš-ḫi-iš-⸢ke⸣-ez-zi-an ku-iš Ú-UL-ma-an		
+15.6.3	15 §6	KBo 32.15	Vs. 20b′	i-ia-u-e-ni pa-ra-a ⸢tar⸣-nu-mar na-aš-ta tu-uk A-NA {M}me-e-ki		
+15.6.4	15 §6	KBo 32.15	Vs. 21b′	ZI-KA an-da tu-uš-ke-ez-zi		
+15.7.1	15 §7	KBo 32.15	Vs. 22b′	1-ŠU-kán tu-uk A-NA {M}me-e-ki ZI-KA an-da		
+15.7.2	15 §7	KBo 32.15	Vs. 23b′	Ú-UL du-uš-ke-ez-zi ta-a-an pé-e-di-ma-kán		
+15.7.3	15 §7	KBo 32.15	Vs. 24b′	A-NA {M}pur-ra a-ap-pa pí-an-ti ZI-ŠU an-da		
+15.7.4	15 §7	KBo 32.15	Vs. 25b′	du-uš-k[e-ez]-zi		
+15.8.1	15 §8	KBo 32.15	Vs. 26b′	a-pu-u-uš ar-ḫa ku-it tar-nu-m[e-n]i an-za-a-ša a-da-an-[na]		
+15.8.2	15 §8	KBo 32.15	Vs. 27b′	ku-iš pí-iš-ke-ez-zi {LÚ.MEŠ}SAGI-ia-at-na-aš		
+15.8.3	15 §8	KBo 32.15	Vs. 28b′	pa-ra-a-ia-aš-na-aš pí-iš-ke-u-wa-ni {LÚ.MEŠ}MUḪALDIM-ša-at-na-aš		
+15.8.4	15 §8	KBo 32.15	Vs. 29b′	ar-ra-aš-kán-zi-ia-*aš-na*-aš		
+15.9.1	15 §9	KBo 32.15	Rs. 1b	ma-al-ki-an-zi-ma ku-it {SÍG}šu-ú-i[l		
+15.9.2	15 §9	KBo 32.15	Rs. 2b	šu-uk-šu-uk-ki-iš ma-aḫ-ḫa-an [		
+15.9.3	15 §9	KBo 32.15	Rs. 3b	ma-a-an ták-kán pa-ra-a tar-nu-mar-ma [		
+15.9.4	15 §9	KBo 32.15	Rs. 4b	tu-el ARAD-DÁM GÉME-TAM pa-[ra-a tar-na]		
+15.10.1	15 §10	KBo 32.15	Rs. 5b	DUMU-KA-za ar-ḫa ma-ni-ia-aḫ DAM-[KA		
+15.10.2	15 §10	KBo 32.15	Rs. 6b	ŠU-PUR na-aš-ta kat-ta x[		
+15.10.3	15 §10	KBo 32.15	Rs. 7b	⸢{GIŠ⸣}ŠÚ.A-ki URU-ri {M}me-e-[ki-		
+15.11.1	15 §11	KBo 32.15	Rs. 8b	nu ma-aḫ-ḫa-an {M}me-e-ke-[eš] ut-tar iš-t[a-ma-aš-ta]		
+15.11.2	15 §11	KBo 32.15	Rs. 9b	na-aš ú-e-eš-ga-u-an d[a-a]-iš ú-e-eš-[		
+15.11.3	15 §11	KBo 32.15	Rs. 10b	{M}me-e-ke-eš na-aš {D}[IŠ]KUR-un-ni GÌR{ḪI.A}-aš kat-t[a-an]		
+15.11.4	15 §11	KBo 32.15	Rs. 11b	ḫa-li-iš-ke-et-[t]a		
+15.12.1	15 §12	KBo 32.15	Rs. 12b	{M}me-e-ke-eš ud-da-a-⸢ar⸣ a-ru-wa-an-za {D}IŠKUR-un-ni		
+15.12.2	15 §12	KBo 32.15	Rs. 13b	me-mi-iš-ke-ez-zi [i]š-ta-ma-aš-mu {D}IŠKUR-aš		
+15.12.3	15 §12	KBo 32.15	Rs. 14b	{URU}kum-mi-ia-aš LU[GA]L GAL		
+15.13.1	15 §13	KBo 32.15	Rs. 15b	ú-ga-an pé-⸢e⸣-[ḫu-t]e-mi pa-ri-iš-ša-a-an		
+15.13.2	15 §13	KBo 32.15	Rs. 16b	am-me-el-ma-a[n U]RU-aš Ú-UL pa-a-i		
+15.13.3	15 §13	KBo 32.15	Rs. 17b	ŠA {M}pa-az-z[a-ni-k]ar-ri-ma DUMU-ŠU {M}za-a-za-al-la-aš		
+15.13.4	15 §13	KBo 32.15	Rs. 18b	pa-ra-a tar-nu-[mar] ⸢Ú⸣-UL pa-a-i nu-za {M}me-e-ke-eš		
+15.13.5	15 §13	KBo 32.15	Rs. 19b	a-pé-el U[RU-LAM]-ŠU wa-aš-du-la-az pár-ku-nu-ut		
+15.13.6	15 §13	KBo 32.15	Rs. 20b	{URU}e-ep-[la-an UR]U-an URU-ri še-er wa-aš-túl{ḪI.A} pé-eš-ši-e-et		
+15.14.1	15 §14	KBo 32.15	Rs. 21b	[ ]x x[ ]x ku-it {URU}kum-mi-ia-aš GAL-iš LUGAL-uš		
+15.14.2	15 §14	KBo 32.15	Rs. 22b	[ ku?-i]t {URU}kum-mi-ia-aš GAL-iš LUGAL-uš		
+15.14.3	15 §14	KBo 32.15	Rs. 23b	[ ]x nu NA₄-ri me-na-aḫ-ḫa-an-⸢ta⸣		
+15.14.4	15 §14	KBo 32.15	Rs. 24b	[ ]		
+15.15.1	15 §15	KBo 32.15	Rs. 25b	[ ]x[		
+15.15.2	15 §15	KBo 32.15	Rs. 26b	[ ]x		
+15.15.3	15 §15	KBo 32.15	lk. Rd. 1	DUB 5{KAM} pa-ra-a tar-nu-ma-aš Ú-U[L QA-TI]		
+16.1.1	16 §1	KBo 32.16	Vs. 1b	[ ]x-aš me-ma-iš-ši ku-iš me-na-aḫ-ḫa-an-⸢da?⸣		
+16.1.2	16 §1	KBo 32.16	Vs. 2b	[ ]x iš-tar-na {LÚ.MEŠ}ŠU.GI-aš NU.GÁL-ma-aš		
+16.1.3	16 §1	KBo 32.16	Vs. 3b	[me-ma-i]š?-ši ku-iš me-na-aḫ-ḫa-an-ta		
+16.1.4	16 §1	KBo 32.16	Vs. 4b	[ ]x-ar-ku-⸢ar⸣-ši k[u-i]š i-e-ez-zi		
+16.1.5	16 §1	KBo 32.16	Vs. 5b	[Ú-UL] ku-i[š-ki] te-ez-zi		
+16.2.1	16 §2	KBo 32.16	Vs. 6b	[nu? ma]-a-an [U]RU-ri-ma me-ek-ki ⸢me⸣-mi-iš-ga-tal-la-aš		
+16.2.2	16 §2	KBo 32.16	Vs. 7b	[ku-e-el]-kán [ud]-da-a-ar a-ap-pa Ú-UL ku-iš-ki		
+16.2.3	16 §2	KBo 32.16	Vs. 8b	[wa-aḫ-nu]-z[i {M}]za-a-za-al-la-aš-ma me-ek-ki me-mi-iš-ka₄-tal-la-aš		
+16.2.4	16 §2	KBo 32.16	Vs. 9b	[nu-uš-ši tu-l]i-ia-aš pé-e-di ud-da-a-ar-še-et		
+16.2.5	16 §2	KBo 32.16	Vs. 10b	[Ú-UL ku-i]š-ki tar-uḫ-zi		
+16.3.1	16 §3	KBo 32.16	Vs. 11b	[{M}za-a-za-al]-la-aš {M}me-e-ki me-mi-iš-k[e-u-a]n da-iš		
+16.3.2	16 §3	KBo 32.16	Vs. 12b	ku-wa-at ḫa-li-ia-tar me-mi-i[š-		
+16.3.3	16 §3	KBo 32.16	Vs. 13b	{URU}e-ep-l[u]-me-na-aš MUL-aš {M}m[e-		
+16.4.1	16 §4	KBo 32.16	Vs. 14b	ku-iš-kán [ ]x-da		
+16.4.2	16 §4	KBo 32.16	Vs. 15b	kat+ta-aš-[ ]x-an		
+16.4.3	16 §4	KBo 32.16	Vs. 16b	SI-ŠU [ me-m]i-iš-ke-⸢et⸣		
+16.5.1	16 §5	KBo 32.16	Vs. 17b	[ ]x[ da]m-mi-⸢iš⸣-ḫa-an-za		
+16.5.2	16 §5	KBo 32.16	Vs. 18b	[ ma-a-a]n {D}IŠKUR-aš		
+16.5.3	16 §5	KBo 32.16	Vs. 19b	[ ] nu ku-iš-ša		
+16.5.4	16 §5	KBo 32.16	Vs. 20b	[ 1 GÍN KÙ].BABBAR p[a-a]-i		
+16.6.1	16 §6	KBo 32.16	Vs. 21b	[ KÙ.SI₂₂ ku-iš]-ša ½ GÍN pa-a-i KÙ.BABBAR-ma-aš-*ši*		
+16.6.2	16 §6	KBo 32.16	Vs. 22b	[ ] ma-a-na-aš ki-iš-du-wa-an-za-ma ⸢{D⸣}IŠKUR-[aš]		
+16.6.3	16 §6	KBo 32.16	Vs. 23b	[nu A-NA DINGI]R-LIM ku-iš-ša 1 PA ŠE pí-i-ú-e-ni		
+16.7.1	16 §7	KBo 32.16	Vs. 24b	[ ½ PA-R]I-SI šu-un-na-i		
+16.7.2	16 §7	KBo 32.16	Vs. 25b	[ ku-i]š-ša 1 PA-⸢RI⸣-SA₂₀ šu-un-na-i		
+16.7.3	16 §7	KBo 32.16	Vs. 26b	[ ] na-an ku-iš-ša		
+16.7.4	16 §7	KBo 32.16	Vs. 27b	[ U]N		
+16.8.1	16 §8	KBo 32.16	Vs. 28b	[ ] ku-iš-ša		
+16.8.2	16 §8	KBo 32.16	Vs. 29b	[ ]x		
+16.8.3	16 §8	KBo 32.16	Vs. 30b	[ U]N		
+16.8.4	16 §8	KBo 32.16	Rs. 1b′	]x[ -a]n-⸢ta-ru⸣ x[ ]x		
+16.8.5	16 §8	KBo 32.16	Rs. 2b′	]x ḫa-a-aš-še-ša ku-i-⸢e⸣-e[š ]x-an-ni		
+16.8.6	16 §8	KBo 32.16	Rs. 3b′	] na-at-za EGIR-pa BE-LÍ-ŠU x x-⸢an-du⸣		
+16.9.1	16 §9	KBo 32.16	Rs. 4b′	]x-wa ŠA {LÚ}NAR ku-uš-ša-ni		
+16.9.2	16 §9	KBo 32.16	Rs. 5b′	] le-e e-eš-zi {NA₄}ARA₅-ia-wa ku-iš		
+16.9.3	16 §9	KBo 32.16	Rs. 6b′	wa-a]l-lu-uš-ke-zi nu a-pé-e-da-ni-ia		
+16.9.4	16 §9	KBo 32.16	Rs. 7b′	] pa-ra-a tar-nu-mar le-e e-eš-zi		
+16.9.5	16 §9	KBo 32.16	Rs. 8b′	]x ku-iš ÍD-az ḫa-a-ni		
+16.9.6	16 §9	KBo 32.16	Rs. 9b′	]x ku-uš-ša-an Ú-UL pa-[		
+16.9.7	16 §9	KBo 32.16	Rs. 10b′	]x a-pé-el ḫu-un-ḫu-ul-[ -i]š		
+16.9.8	16 §9	KBo 32.16	Rs. 11b′	ú-i]-ú-i-iš-ke-ez-zi		
+16.10.1	16 §10	KBo 32.16	Rs. 12b′	]-⸢ia-tal-la⸣-aš SIG₅-in		
+16.10.2	16 §10	KBo 32.16	Rs. 13b′	]x a-pé-el		
+16.10.3	16 §10	KBo 32.16	Rs. 14b′	]x x		
+16.10.4	16 §10	KBo 32.16	Rs. 15b′	aš-šu]-⸢li⸣ tar-na		
+16.10.5	16 §10	KBo 32.16	Rs. 16b′	EGI]R-pa		
+16.10.6	16 §10	KBo 32.16	Rs. 17b′	] ⸢a⸣-da-an-na		
+16.10.7	16 §10	KBo 32.16	Rs. 18b′	]		
+16.11.1	16 §11	KBo 32.16	Rs. 19b′	]		
+19.1.1	19 §1	KBo 32.19	Vs. 1b	⸢DUMU{MEŠ⸣} {URU⸢}i⸣-ki-in-kal ⸢ar⸣-[ḫa aš-šu-li tar-na]		
+19.1.2	19 §1	KBo 32.19	Vs. 2b	ar-ḫa-ma-an tar-n[a {M}pur-ra-an-pá]t		
+19.1.3	19 §1	KBo 32.19	Vs. 3b	EGIR-pa pí-ia-⸢an⸣-[ta-an A-NA 9 LUGA]L{MEŠ}		
+19.1.4	19 §1	KBo 32.19	Vs. 4b	ku-iš a-⸢da-a⸣-[an-na pí-iš-ke-ez-z]i		
+19.2.1	19 §2	KBo 32.19	Vs. 5b	{URU}i-ki-in-[ka-li-iš-ša {GIŠ}ŠÚ.A-aš URU-r]i		
+19.2.2	19 §2	KBo 32.19	Vs. 6b	A-NA 3 LUGAL{MEŠ} [a-da-a-an-na pí-iš-ke]-et		
+19.2.3	19 §2	KBo 32.19	Vs. 7b	{URU}e-ep-la-m[a? {GIŠ}ŠÚ.A-aš URU-ri A-N]A 6 LUGAL{MEŠ}		
+19.2.4	19 §2	KBo 32.19	Vs. 8b	a-da-a-an-na [pí-iš-ke-et]		
+19.2.5	19 §2	KBo 32.19	Vs. 9b	ki-nu-un-ma-aš ⸢{D⸣}[IŠKUR-aš {M}me-e-g]a-i [t]u-⸢uk⸣		
+19.2.6	19 §2	KBo 32.19	Vs. 10b	pé-ra-an ša-r[a-a ar-ta-ri]		
+19.3.1	19 §3	KBo 32.19	Vs. 11b	ma-a-an pa-⸢ra-a⸣ [tar-nu-mar i-ia-at-te-ni]		
+19.3.2	19 §3	KBo 32.19	Vs. 12b	{URU}e-ep-la-m[a {GIŠ}ŠÚ.A-aš URU-ri]		
+19.3.3	19 §3	KBo 32.19	Vs. 13b	nu ma-a-an pa-ra-[a tar-nu-mar i-ia-at-t]e-ni		
+19.3.4	19 §3	KBo 32.19	Vs. 14b	nu-uš-ma-aš {GIŠ}TUKUL[{ḪI.A}-KU-NU ] ⸢i⸣-wa-ar		
+19.3.5	19 §3	KBo 32.19	Vs. 15b	šar-la-a-[mi]		
+19.4.1	19 §4	KBo 32.19	Vs. 16b	nu šu-me-en-za-an-[pát {GIŠ}TUKUL{ḪI.A}-KU-NU ú-ez-z]i		
+19.4.2	19 §4	KBo 32.19	Vs. 17b	ḫar-pa-na-al-l[i-uš ḫu-ul-la-an-ni-wa-a]n da-a-i		
+19.4.3	19 §4	KBo 32.19	Vs. 18b	{A.ŠÀ}ḫar-ša-a-u-[ar-ma-aš-ma-aš ú-ez-z]i		
+19.4.4	19 §4	KBo 32.19	Vs. 19b	wa-al-li-i[a-an-ni ma-a-i]		
+19.5.1	19 §5	KBo 32.19	Vs. 20b	ma-a-an Ú-UL-m[a i-ia]-at-t[e-ni]		
+19.5.2	19 §5	KBo 32.19	Vs. 21b	pa-ra-a tar-nu-mar {UR[U}e-ep-l]a-i ⸢{GIŠ}ŠÚ⸣.A-aš URU-ri		
+19.5.3	19 §5	KBo 32.19	Vs. 22b	nu nam-ma UD 7{KAM}-[az nu-u]š-ša-an am-mu-uk		
+19.5.4	19 §5	KBo 32.19	Vs. 23b	šu-ma-a-aš tu-e-[eg-ga-ša-m]a-aš ú-wa-mi		
+19.6.1	19 §6	KBo 32.19	Vs. 24b	{URU}e-ep-la-an U[RU-an ḫ]ar-ni-⸢ik⸣-[m]i		
+19.6.2	19 §6	KBo 32.19	Vs. 25b	na-aš ma-a-an Ú-U[L ku-uš-ša-an-g]a a-ša-a-an-za		
+19.6.3	19 §6	KBo 32.19	Vs. 26b	na-an a-pé-ni-iš-š[u-wa-an i-ia-m]i		
+19.7.1	19 §7	KBo 32.19	Vs. 27b	{URU}e-ep-la-aš URU-aš [kat-te-e-ra-aš w]a-aḫ-nu-eš-šar		
+19.7.2	19 §7	KBo 32.19	Vs. 28b	ar-ḫa {DUG}te-e[š-šum-mi-ia-aš i-wa-a]r du-wa-ar-na-aḫ-ḫ[i]		
+19.7.3	19 §7	KBo 32.19	Vs. 29b	ša-ra-a-az-zi-[ia-ša wa-aḫ-nu-e-eš-ša]r		
+19.7.4	19 §7	KBo 32.19	Vs. 30b	ar-ḫa ḫu-u-u[š-ši-li-ia-aš i-wa-a]r		
+19.7.5	19 §7	KBo 32.19	Vs. 31b	ša-ak-ku-ri-[i-e-mi]		
+19.8.1	19 §8	KBo 32.19	Vs. 32b	KI.LAM-ni-ma-ká[n iš-tar-na pé-e-d]i		
+19.8.2	19 §8	KBo 32.19	Vs. 33b	{URU}e-ep-la-a[š {DUG}te-eš-šum]-mi-ia-aš		
+19.8.3	19 §8	KBo 32.19	Vs. 34b	i-wa-ar d[u-wa-ar-na-aḫ-ḫi]		
+19.9.1	19 §9	KBo 32.19	Vs. 35b	am-me-ta-az-ma-an [ a]š-šu-u-ra-a-mi		
+19.9.2	19 §9	KBo 32.19	Vs. 36b	ša-ra-a-az-zi-i[a-ša wa-aḫ-nu-e-eš-na-aš] ḫa-a-aš-ša-an [ ]		
+19.9.3	19 §9	KBo 32.19	Vs. 37b	na-an kat-ta kat-t[e- ] ar-nu-mi		
+19.10.1	19 §10	KBo 32.19	Vs. 38b	kat-te-e-ra-aš-kán w[a-aḫ-nu-e-eš-na-aš ḫa]-⸢a⸣-aš-ša-an		
+19.10.2	19 §10	KBo 32.19	Vs. 39b	kat-ta-an-ta ÍD-⸢i⸣ [		
+19.10.3	19 §10	KBo 32.19	Vs. 40b	⸢ša⸣-ra-a-az-zi-ia-aš-⸢ma⸣-[kán wa-aḫ-nu]-⸢e⸣-eš-na-aš		
+19.10.4	19 §10	KBo 32.19	Vs. 41b	[ḫa]-a-aš-ša-an kat-ta-an-t[a ]x		
+19.10.5	19 §10	KBo 32.19	Vs. 42b	[wa-aḫ-nu]-⸢e⸣-eš-ni iš-ḫu-[		
+19.11.1	19 §11	KBo 32.19	Vs. 43b	[ ]x ki-⸢iš-ša⸣-an [ -m]i?		
+19.11.2	19 §11	KBo 32.19	Vs. 44b	[ ]-ni-i[k- ]x IGI x x-uš		
+19.11.3	19 §11	KBo 32.19	Vs. 45b	[ ]x-iš(-)[ me-na-aḫ-ḫ]a-an-ta me-mi-iš-ke-zi		
+19.11.4	19 §11	KBo 32.19	Vs. 46b	[ ]x AN [ ]-mi-ia-aš		
+19.11.5	19 §11	KBo 32.19	Vs. 47b	[ ]x[		
+19.12.1	19 §12	KBo 32.19	Vs. 48b	[ ud-d]a-a-[ar ]x		
+19.12.2	19 §12	KBo 32.19	Vs. 49b	nu-uš-š[i ]x-an pé-ra-[an		
+19.12.3	19 §12	KBo 32.19	Vs. 50b	mu-n[a?- ]-an ar-ḫ[a]		
+19.12.4	19 §12	KBo 32.19	Vs. 51b	tu-u-[ -k]án		
+19.12.5	19 §12	KBo 32.19	Vs. 52b	ša-né-[ez-zi- me]-mi-iš-t[a?]		
+19.13.1	19 §13	KBo 32.19	Rs. 1b	{M}m[e?- {LÚ].MEŠ}ŠU.G[I		
+19.13.2	19 §13	KBo 32.19	Rs. 2b	x[ {LÚ.MEŠ}Š]U.G[I		
+19.13.3	19 §13	KBo 32.19	Rs. 3b	[ ] da-a-[i]		
+19.13.4	19 §13	KBo 32.19	Rs. 4b	[ ]		
+19.13.5	19 §13	KBo 32.19	Rs. 5b	[ ]		
+19.13.6	19 §13	KBo 32.19	Rs. 6b	[ ]x		
+19.13.7	19 §13	KBo 32.19	Rs. 7b′	[ ]x-tén		
+19.13.8	19 §13	KBo 32.19	Rs. 8b′	[ ]		
+19.13.9	19 §13	KBo 32.19	Rs. 9b′	[ ták?]-ku-wa-ra-aš-ta		
+19.13.10	19 §13	KBo 32.19	Rs. 10b′	[ ]		
+19.13.11	19 §13	KBo 32.19	Rs. 11b′	[ ]		
+19.13.12	19 §13	KBo 32.19	Rs. 12b′	[ ]x		
+19.13.13	19 §13	KBo 32.19	Rs. 13b′	[ ]		
+19.14.1	19 §14	KBo 32.19	Rs. 14b′	[ ]x-pa-aš-ša-a-aš		
+19.14.2	19 §14	KBo 32.19	Rs. 15b′	[ Ú]-UL wa-ša-a-an-za		
+19.14.3	19 §14	KBo 32.19	Rs. 16b′	[ ]		
+19.14.4	19 §14	KBo 32.19	Rs. 17b′	[ ]-e ku-⸢uš⸣-ša-an		
+19.14.5	19 §14	KBo 32.19	Rs. 18b′	[ ]		
+19.14.6	19 §14	KBo 32.19	Rs. 19b′	[ -z]i		
+19.14.7	19 §14	KBo 32.19	Rs. 20b′	[ ]		
+19.14.8	19 §14	KBo 32.19	Rs. 21b′	[ ]		
+19.14.9	19 §14	KBo 32.19	Rs. 22b′	[ ]-an-zi		
+19.14.10	19 §14	KBo 32.19	Rs. 23b′	[ ]x		
+19.15.1	19 §15	KBo 32.19	Rs. 24b′	[ dam-mi]-iš-ḫa an-ni-iš-ke-zi		
+19.15.2	19 §15	KBo 32.19	Rs. 25b′	[ ša-a-a]k-ki		
+19.15.3	19 §15	KBo 32.19	Rs. 26b′	[DUMU{MEŠ} {URU}i]-⸢ki-kal-wa⸣ ar-ḫ[a aš-šu]-li tar-na		
+19.16.1	19 §16	KBo 32.19	Rs. 27b′	[ar-ḫa-ma-an-w]a tar-na {M}pur-ra-⸢an⸣-[pát]		
+19.16.2	19 §16	KBo 32.19	Rs. 28b′	[EGIR-pa pí-ia-an-t]a-an A-NA 9 LUGAL{MEŠ}-wa ku-iš		
+19.16.3	19 §16	KBo 32.19	Rs. 29b′	[a-da-a-an-na] pí-iš-ke-et		
+19.17.1	19 §17	KBo 32.19	Rs. 30b′	[{URU}i-ki-in-ka-li-i]š-ša-wa {GIŠ}ŠÚ.A-aš URU-ri		
+19.17.2	19 §17	KBo 32.19	Rs. 31b′	[A-NA 3 LUGAL{MEŠ}] a-da-a-an-na pí-iš-ke-et		
+19.17.3	19 §17	KBo 32.19	Rs. 32b′	[{URU}e-ep-la-m]a-wa {GIŠ}ŠÚ.A-aš URU-ri ⸢A⸣-NA 6 LUGAL{MEŠ}		
+19.17.4	19 §17	KBo 32.19	Rs. 33b′	[a-da-an-na p]í-iš-ke-et ki-nu-un-ma-wa-ra-aš		
+19.17.5	19 §17	KBo 32.19	Rs. 34b′	⸢{D⸣}IŠ[KUR-aš ]-i tu-uk {M}me-e-ga-i pé-ra-an ša-ra-a		
+19.17.6	19 §17	KBo 32.19	Rs. 35b′	ar-ta-r[i]		
+19.18.1	19 §18	KBo 32.19	Rs. 36b′	nu-wa ma-a-an pa-ra-a tar-nu-m[ar i-i]a-at-te-ni		
+19.18.2	19 §18	KBo 32.19	Rs. 37b′	[{U]RU}e-ep-la-i {GIŠ}ŠÚ.A-aš URU-r[i n]u-wa ma-a-an		
+19.18.3	19 §18	KBo 32.19	Rs. 38b′	pa-ra-a tar-nu-mar i-ia-⸢at⸣-te-n[i]		
+19.18.4	19 §18	KBo 32.19	Rs. 39b′	nu-wa-aš-ma-aš {GIŠ}TUKUL{ḪI.A}-KU-NU [ ]x-na-aš i-wa-ar		
+19.18.5	19 §18	KBo 32.19	Rs. 40b′	šar-la-a-⸢mi⸣		
+19.19.1	19 §19	KBo 32.19	Rs. 41b′	[nu-w]a ú-ez-zi šu-me-en-za-an ⸢{GIŠ⸣}TUKUL{ḪI.A}-KU-NU		
+19.19.2	19 §19	KBo 32.19	Rs. 42b′	[ḫar-pa]-na-al-li-uš ḫu-ul-la-an-ni-wa-an da-a-i		
+19.19.3	19 §19	KBo 32.19	Rs. 43b′	[{A].ŠÀ}ḫar-ša-a-u-ar-ma-wa-aš-ma-aš ú-ez-zi		
+19.19.4	19 §19	KBo 32.19	Rs. 44b′	[w]a-al-li-ia-an-ni ma-a-i		
+19.20.1	19 §20	KBo 32.19	Rs. 45b′	[m]a-a-an-wa-ra-at Ú-UL-ma i-ia-at-te-ni		
+19.20.2	19 §20	KBo 32.19	Rs. 46b′	[pa-r]a-a tar-nu-mar {URU}e-ep-la-i {GIŠ}ŠÚ.A-aš URU-ri		
+19.20.3	19 §20	KBo 32.19	Rs. 47b′	nu-wa nam-ma UD 7{KAM}-az nu-wa-aš-ša-an am-mu-uk		
+19.20.4	19 §20	KBo 32.19	Rs. 48b′	šu-ma-a-aš tu-e-eg-ga-ša-⸢ma⸣-aš ú-wa-mi		
+19.21.1	19 §21	KBo 32.19	Rs. 49b′	nu-wa {URU}e-ep-la-an URU-an ḫar-ni-ik-mi		
+19.21.2	19 §21	KBo 32.19	Rs. 50b′	nu-wa-ra-aš ma-a-⸢an⸣ Ú-UL ku-uš-ša-an-ga		
+19.21.3	19 §21	KBo 32.19	Rs. 51b′	a-ša-a-an-za URU-aš nu-wa-ra-an QA-TAM-M[A i-i]a-[m]i		
+19.22.1	19 §22	KBo 32.19	u. Rd. 1	pa-ra-a] tar-nu-ma-[aš Ú-UL Q]A-TI		
+10.1.1	10 §1	KBo 32.10	Vs. 1b	KU]R {URU}lu-ul-lu-wa		
+10.1.2	10 §1	KBo 32.10	Vs. 2b	l]e-e aš-šu-ul le-e		
+10.1.3	10 §1	KBo 32.10	Vs. 3b	]x-ia-a-tar le-e ú-⸢e⸣-mi-ia-zi		
+10.2.1	10 §2	KBo 32.10	Vs. 4b	-z]a ḫu-u-ma-an-ta-aš {LÚ}SIPA-aš		
+10.2.2	10 §2	KBo 32.10	Vs. 5b	] ne-pí-ša-az {D}UTU-uš		
+10.2.3	10 §2	KBo 32.10	Vs. 6b	] da-iš		
+10.3.1	10 §3	KBo 32.10	Vs. 7b	{URU}kum-mi-i]a-aš LUGAL GAL		
+10.3.2	10 §3	KBo 32.10	Vs. 8b	] ⸢ḫar⸣-ni-in-⸢ki-iš⸣-ki(-)[		
+10.3.3	10 §3	KBo 32.10	Vs. 9b	KUR {URU}l]u-ul-lu-wa [		
+10.3.4	10 §3	KBo 32.10	Vs. 10b	] ⸢Ú⸣-UL [		
+10.4.1	10 §4	KBo 32.10	Rs. 1b′	x[		
+10.4.2	10 §4	KBo 32.10	Rs. 2b′	{M}pí-z[i-		
+10.4.3	10 §4	KBo 32.10	Rs. 3b′	I-NA É.E[N.NU.UN		
+10.4.4	10 §4	KBo 32.10	Rs. 4b′	ŠA {M}pur-ra-ma-kán [ ]x x[ ]x(-)zi(-)[		
+10.4.5	10 §4	KBo 32.10	Rs. 5b′	NA₄-i an-da iš-ḫi-i-ia-an ŠA {M}pur-ra-aš-š[a-an]		
+10.4.6	10 §4	KBo 32.10	Rs. 6b′	ḫi-in-kán *an*-da {NA₄}ku-un-ku-nu-zi iš-ḫi-ia-a[n]		
+10.4.7	10 §4	KBo 32.10	Rs. 7b′	ḫar-zi {URU}kum-mi-ia-aš ⸢{D}IŠTAR⸣ {D⸢}IŠKUR⸣-aš		
+10.5.1	10 §5	KBo 32.10	Rs. 8′	] QA-TI		
+17.1.1	17 §1	KBo 32.17	Rs. 1b′	š[u-		
+17.1.2	17 §1	KBo 32.17	Rs. 2b′	É [		
+17.1.3	17 §1	KBo 32.17	Rs. 3b′	{URU}e-e[p-		
+17.2.1	17 §2	KBo 32.17	Rs. 4b′	{M}za-a-z[a-al-la-		
+17.2.2	17 §2	KBo 32.17	Rs. 5b′	ma-a-m[a-		
+17.2.3	17 §2	KBo 32.17	Rs. 6b′	É{ḪI.A}-x[		
+17.2.4	17 §2	KBo 32.17	Rs. 7b′	te-eḫ-ḫ[u-un		
+17.2.5	17 §2	KBo 32.17	Rs. 8b′	ma-an-x[		
+17.2.6	17 §2	KBo 32.17	Rs. 9b′	[		
+17.3.1	17 §3	KBo 32.17	Rs. 10b′	x[		
+17.3.2	17 §3	KBo 32.17	Rs. 11b′	nu ⸢gi-im⸣-[		
+17.3.3	17 §3	KBo 32.17	Rs. 12b′	i-e-e[t		
+17.3.4	17 §3	KBo 32.17	Rs. 13b′	me-na-aḫ-[ḫa-an-da?		
+17.4.1	17 §4	KBo 32.17	Rs. 14b′	gi-i[m-		
+17.4.2	17 §4	KBo 32.17	Rs. 15b′	ku-i[t(-)		
+17.4.3	17 §4	KBo 32.17	Rs. 16b′	ki-x[		

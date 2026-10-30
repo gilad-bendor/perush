@@ -1,0 +1,156 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.24",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.24 (TX 2009-09-08, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ḫ]al[k]in [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ḫ]al-[k]i-in1 (Rasur) [ ... ]"
+]
+],
+"tr": "[ ... ] das [G]et[re]ide (Akk.) [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -a]k? EZEN4-ni anda [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... -a]k? EZEN4-ni an-da [ ... ]"
+]
+],
+"tr": "[ ... ] beim Fest [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ŠU BURU5{ḪI.A} arḫa ME-a[š]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]x-ŠU BURU5{ḪI.A} ar-ḫa ME-a[š] ¬¬¬"
+]
+],
+"tr": "Sein [ ... ] nah[m] die Heuschrecken fort.",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] EGIR-an arḫa pai[t]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]x EGIR-an ar-ḫa pa-i[t]"
+]
+],
+"tr": "[ ... ] gin[g] wieder zurück [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... k]aripaškiwan dā[iš]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... k]a-ri-pa-aš-ki-u-an da-a-[iš]"
+]
+],
+"tr": "[ ... ] beg[ann, ... ] zu [f]ressen.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] anda aranda[n? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]x an-da a-ra-an-⸢da2⸣-a[n?] [ ... ]"
+]
+],
+"tr": "[ ... ] den darin stehend[en ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] nepišaz [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]x ne-pí-ša-⸢az⸣ [ ... ]"
+]
+],
+"tr": "[ ... ] aus dem Himmel [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ](-)an(-)[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ](-)⸢an?⸣(-)[ _ _ ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Polvani, FsAlp 1992, 446: ]x ku-in. Nach Kollation am Original ist die Lesung eindeutig.",
+"§ 2':2": "Lesung nach Kollation am Original."
+}
+}

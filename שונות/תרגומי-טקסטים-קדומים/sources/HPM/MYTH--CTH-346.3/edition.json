@@ -1,0 +1,341 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.3",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.3 (TX 2009-08-27, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"[ _ ]x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[a]nd[a ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2'",
+"[a]n-d[a ... ]"
+]
+],
+"tr": "[ ... i]n [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=a[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3'",
+"na-a[š ... ] ¬¬¬"
+]
+],
+"tr": "E[r ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}mukiš[anu ANA {d}kumarbi ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 4'",
+"{d}⸢mu!⸣-ki-š[a-nu ... ]"
+]
+],
+"tr": "Mukiš[anu begann zu Kumarbi zu sprechen]:",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "EN-YA=mu [ ... ] ḪUR.SAG{MEŠ} ÍD{M[}EŠ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 5'",
+"EN-YA-mu x[ ... ] ḪUR.SAG{MEŠ} ⸢ÍD⸣{M[}EŠ ... ]"
+]
+],
+"tr": "„Mein Herr, [ ... ] mir die Berge (und) Flüs[se ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] anda arnua[n- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6'",
+"[ ... ] an-da ar-nu-a[n- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] bring[- ... ] hinein.“",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3'",
+"hl": "",
+"master": "mān {d}kumarb[iš ŠA {d}mukišanu uddār IŠME]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 8'",
+"ma-a-an {d}ku-mar-b[i-iš ... ]"
+]
+],
+"tr": "Als Kumarb[i des Mukišanu Worte gehört hatte],",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3'",
+"hl": "",
+"master": "n=aš šarā ḫ[ūdak araiš]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 9'",
+"na-aš ša-ra-a ḫ[u-u-da-ak ... ]"
+]
+],
+"tr": "[stand] er so[gleich] auf",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] šarā pait",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 9'",
+"[ ... ] ša-ra-a pa-it"
+]
+],
+"tr": "[und] ging nach oben [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 10'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3'",
+"hl": "",
+"master": "nu DINGIR{MEŠ} ḫūmante[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 11'",
+"nu DINGIR{MEŠ} ḫu-u-ma-an-te-e[š ... ]"
+]
+],
+"tr": "All[e] Götter [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ...? ] INA {ḪUR.SAG}šepiša [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 11'",
+"[ ...? ] I-NA {ḪUR.SAG}še-pí-ša [ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] zum Berg Šepiša [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 4'",
+"hl": "",
+"master": "{d}kumarbiš uddā[r ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 13'",
+"{d}ku-mar-bi-iš ud-da-a-a[r ... ]"
+]
+],
+"tr": "Kumarbi [ ... ] die Wort[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... DIN]GIR{MEŠ} ḫūmanteš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 13'",
+"[ ... ] [DIN]GIR{MEŠ} ḫu-u-ma-an-te-eš x[ ... ]"
+]
+],
+"tr": "Alle [Göt]ter [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... k]witki",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 14'",
+"[ ... ] [k]u-it-ki"
+]
+],
+"tr": "[Irg]endetwas [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 4'",
+"hl": "",
+"master": "šumeš=ma=mu x[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 15'",
+"šu-me-eš-ma!1-mu x[ ... ]"
+]
+],
+"tr": "Ihr aber [ ... ] mir [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 4'",
+"hl": "",
+"master": "[kin]un=ma=šmaš ud-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 16'",
+"[ki-n]u-un-ma-aš-ma-aš ud-x[ ... ]"
+]
+],
+"tr": "[Jet]zt aber [ ... ] ihnen/euch [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ _ -z]a? aratte-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 17'",
+"[ _ -z]a? a-ra-at-te-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 18'",
+"[ _ ]x[ _ (_) ]x[ ... ]"
+],
+[
+"A",
+"",
+"Ende der Vs. I."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 4':1": "Nach Kollation am Foto Zeichen -ma- mit Beschädigung möglich."
+}
+}

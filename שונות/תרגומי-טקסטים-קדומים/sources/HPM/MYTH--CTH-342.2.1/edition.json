@@ -1,0 +1,816 @@
+{
+"kind": "MYTH",
+"cth": "CTH 342.2.1",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 342.2.1 (TX 2009-08-22, TRde 2009-08-22)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+},
+{
+"id": "§ 5''",
+"title": "§ 5''",
+"hl": ""
+},
+{
+"id": "§ 6''",
+"title": "§ 6''",
+"hl": ""
+},
+{
+"id": "§ 7''",
+"title": "§ 7''",
+"hl": ""
+},
+{
+"id": "§ 8''",
+"title": "§ 8''",
+"hl": ""
+},
+{
+"id": "§ 9'''",
+"title": "§ 9'''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 1'",
+"¬¬¬ [ ... ]x ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... -a]z?",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 2'",
+"[ ... -a]z?"
+],
+[
+"B",
+"",
+"Es fehlen ca. 3 Zeilen. ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] wezzi",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 3''",
+"[ ... ]x ú-ez-zi"
+]
+],
+"tr": "[ ... ] kommt.",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-wa",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 4''",
+"[ ... ]x-wa"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]Ì-ŠU [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 5''",
+"[ ... ]Ì-ŠU1 [ ... ]"
+]
+],
+"tr": "[ ... ] sein Öl [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... {d}UTU?] AN-Ê [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 6''",
+"[ ... ] ⸢AN?⸣-E [ ... ]"
+]
+],
+"tr": "[ ... Sonnengott] des Himmels [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 7''",
+"[ ... ]x2"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-ta",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 8''",
+"[ ... ]-ta ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 9''",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 10''",
+"[ ... ]x"
+],
+[
+"B",
+"",
+"Vs. II bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 5''",
+"hl": "",
+"master": "n=aš tiyaddu",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 1'",
+"¬¬¬ na-aš ti-ya-ad-du"
+]
+],
+"tr": "Er soll sich hinstellen!",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 1'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 5''",
+"hl": "",
+"master": "nu=ššan kwiš LUGAL(-)[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 2'",
+"nu-uš-ša-an ku-iš LUGAL(-)[ ... ]"
+]
+],
+"tr": "Der König, der [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ...? ] kanti=ya ÉRIN{MEŠ}-TI [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 2'",
+"[ ...? ] ka-an-ti-ya ÉRIN{MEŠ}-⸢TI⸣ x3[ ... ]"
+]
+],
+"tr": "[ ... ] und dem Getreide des Heeres [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ...? ] {GIŠ}GIGIR=ya alwanza tak-[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 3'",
+"[ ...? ] {GIŠ}GIGIR-ya al-wa-an-za ták-x[ ... ]"
+]
+],
+"tr": "[ ... ] und Wagen verzaubert [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 5''",
+"hl": "",
+"master": "n=an=šan ḪUL-lu ti-[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 5'",
+"na-an-ša-an ḪUL-lu ti-[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] ihn schlecht [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 6''",
+"hl": "",
+"master": "{d}IŠTAR-aš MUL-aš we[zzi]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 6'",
+"{d}IŠTAR-aš MUL-aš ú-e[z-zi]"
+]
+],
+"tr": "Der Stern der Ištar ko[mmt].",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 6''",
+"hl": "",
+"master": "nu=za kēdanta w[itenit] arrattaru",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 1'",
+"[ar-ra-at?-t]a?-r[u?]"
+],
+[
+"B",
+"Vs. III 7'",
+"nu-za ke-e-da-an-ta ú-[i-te-ni-it] ar-ra-at-ta-ru"
+]
+],
+"tr": "Er soll sich mit diesem W[asser] waschen,",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 6''",
+"hl": "",
+"master": "Ì-a[z iškeddu]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 1'",
+"[ ... ]"
+],
+[
+"B",
+"Vs. III 8'",
+"Ì-a[z ... ]"
+]
+],
+"tr": "[mi]t Öl [salben],",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 6''",
+"hl": "",
+"master": "NINDA-an ēzzašdu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 2'",
+"[ ... e-ez-z]a-aš-d[u] ¬¬¬"
+],
+[
+"B",
+"Vs. III 9'",
+"NINDA-an e-ez-za-aš-du"
+]
+],
+"tr": "Brot essen",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 6''",
+"hl": "",
+"master": "GEŠTIN e[kuddu]",
+"words": [],
+"mss": [
+[
+"A",
+"",
+"Kolon fehlt in A."
+],
+[
+"B",
+"Vs. III 9'",
+"GEŠTIN ⸢e?⸣-[ku-ud-du] ¬¬¬"
+]
+],
+"tr": "(und) Wein t[rinken]!",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 7''",
+"hl": "",
+"master": "{d}kumarbiš MUL-aš w[ezzi]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 3'",
+"[ _ (_) ]x-x-aš-ša4 ⸢MUL⸣-a[š ... ]"
+],
+[
+"B",
+"Vs. III 10'",
+"{d}ku-mar-bi-iš MUL!5-aš ú-[ez-zi]"
+]
+],
+"tr": "Der Stern des Kumarbi1 k[ommt].",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 7''",
+"hl": "",
+"master": "nu=za kēdanta wit[enit] arrattaru",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 3'",
+"[ ... ] [ki]-⸢i⸣-da-an-⸢ta⸣ ú-⸢i⸣-t[e-ni-it] [ar-r]a-an-⸢ta-ru⸣"
+],
+[
+"B",
+"Vs. III 11'",
+"nu-za ke-e-da-an-ta ú-⸢i6⸣-[te-ni-it] ar-ra-at-ta-ru"
+]
+],
+"tr": "Er soll sich mit diesem Wa[sser] waschen,",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 7''",
+"hl": "",
+"master": "Ì-az i[škiddu]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 5'",
+"Ì-⸢az⸣ i[š-ki-id-du]"
+],
+[
+"B",
+"Vs. III 12'",
+"Ì-a[z ... ]"
+]
+],
+"tr": "mit Öl s[alben],",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 7''",
+"hl": "",
+"master": "NINDA-an e[z]zašdu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 6'",
+"[ ... e]-e[z-z]a-[aš]-⸢du!?⸣"
+],
+[
+"B",
+"Vs. III 13'",
+"NINDA-an e-za-aš-du"
+]
+],
+"tr": "Brot e[s]sen",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 7''",
+"hl": "",
+"master": "GEŠTIN ekudd[u]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 6'",
+"⸢GEŠTIN⸣ e-ku-ud-d[u] ==="
+],
+[
+"A",
+"",
+"Ende der Vs."
+],
+[
+"B",
+"Vs. III 13'",
+"GEŠTIN ⸢e⸣-[ku-ud-du7] ¬¬¬"
+]
+],
+"tr": "(und) Wein trinke[n]!",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 8''",
+"hl": "",
+"master": "nu LUGAL-aš {LÚ}KÚR [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 14'",
+"nu LUGAL-aš {LÚ}KÚR [ ... ]"
+]
+],
+"tr": "[ ... ] Feind des Königs [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 8''",
+"hl": "",
+"master": "[ ...? ] NINDA-an lē [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 14'",
+"[ ...? ] NINDA-an le-e x x[ ... ]"
+]
+],
+"tr": "[ ... soll] das Brot nicht [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 8''",
+"hl": "",
+"master": "[ ...? ] alwan-[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 15'",
+"[ ...? ] al-wa-an-[ ... ]"
+]
+],
+"tr": "[ ... ] verzaub[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 8''",
+"hl": "",
+"master": "[ ...? ] ēzz[a- ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. III 16'",
+"[ ...? ] ⸢e-ez⸣-z[a- ... ]"
+],
+[
+"B",
+"",
+"Vs. III bricht ab."
+]
+],
+"tr": "[ ... ] ess[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 9'''",
+"hl": "",
+"master": "[k]āša {d}IM-aš [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 1'",
+"¬¬¬ [k]a-a-ša {d}IM-aš x[ ... ]"
+]
+],
+"tr": "Der Wettergott [ ... h]ier [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 9'''",
+"hl": "",
+"master": "kwit UDU-iš? nā-[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 2'",
+"ku-it ⸢UDU?⸣-iš na-a-[ ... ]"
+]
+],
+"tr": "Was [ ... ] Schaf? [ ... ]?",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 9'''",
+"hl": "",
+"master": "kwit ARNA it-[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 3'",
+"ku-it AR-NA it-x[ ... ]"
+]
+],
+"tr": "Was [ ... ] Schuld?",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 9'''",
+"hl": "",
+"master": "maḫḫan ANA ⸢LÚ?⸣[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 4'",
+"ma-aḫ-ḫa-an A-NA ⸢LÚ?⸣[ ... ]"
+]
+],
+"tr": "Wie [ ... ] dem Mann [ ... ]?",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§ 9'''",
+"hl": "",
+"master": "ḫatugaš 1-aš LUGAL-uš[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 5'",
+"ḫa-tu-ga-aš 1-aš LUGAL-uš[ ... ]"
+]
+],
+"tr": "Der eine schreckliche König [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "36",
+"sec": "§ 9'''",
+"hl": "",
+"master": "apel ANA {LÚ}KÚ[R ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 6'",
+"a-pé-el A-NA {LÚ}KÚ[R ... ]"
+]
+],
+"tr": "[ ... ] zu seinem Fei[nd ... ]",
+"trlang": "DE"
+},
+{
+"n": "37",
+"sec": "§ 9'''",
+"hl": "",
+"master": "ḫatugaēš a-[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 7'",
+"ḫa-tu-ga-e-eš a-[ ... ]"
+]
+],
+"tr": "Die schrecklichen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "38",
+"sec": "§ 9'''",
+"hl": "",
+"master": "{d}10-ni GIM-an alw[a?- ... ] ḫūmanda anda l[ag]ān",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 1",
+"[ḫu]-⸢u⸣-[m]a-an-da an-da l[a-g]a-⸢a!⸣-an8"
+],
+[
+"B",
+"Rs. IV 8'",
+"{d}10-ni GIM-an al-w[a?- ... ] ḫu-u-ma-an-da an-d[a ... ]"
+]
+],
+"tr": "Wie alles dem Wettergott zau[b-? ... ] hi[nge]neigt (ist),",
+"trlang": "DE"
+},
+{
+"n": "39",
+"sec": "§ 9'''",
+"hl": "",
+"master": "LUGAL-i=ma MUNUS.LUGAL-ri KUR.KUR{MEŠ}-TIM ḫūmanda QĀTAMM[A] lagān ēšdu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 2",
+"[LUG]AL-i-ma ⸢MUNUS.LUGAL⸣-ri KUR.KUR{MEŠ}-TIM [ḫ]u-u-ma-an-⸢da⸣ an-da QA-TAM-M[A] la-ga-a-an e-eš-du"
+],
+[
+"B",
+"Rs. IV 10'",
+"LUGAL-i-ma MUNUS.LUGAL-⸢ri⸣ [ ... ] ḫu-u-ma-an-da QA-TAM-M[A] la-ga-a-an ⸢e-eš⸣-[du]"
+]
+],
+"tr": "ebens[o] soll(en) dem König aber (und) der Königin alle Länder geneigt sein!",
+"trlang": "DE"
+},
+{
+"n": "40",
+"sec": "§ 9'''",
+"hl": "",
+"master": "{d}U[TU ... D]UMU.LÚ.U19.LU GIM-an [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 4",
+"{d}U[TU ... ] [D]UMU.LÚ.U19.LU GIM-an x[ ... ]"
+],
+[
+"B",
+"Rs. IV 12'",
+"[ ... ] x[ ... ]"
+],
+[
+"B",
+"",
+"Rs. IV bricht ab."
+]
+],
+"tr": "Wie [ ... ] Sonn[engott ... M]ensch [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "41",
+"sec": "§ 9'''",
+"hl": "",
+"master": "[LU]GAL-i=ma MUNUS.LUGAL-ri[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 6",
+"[LU]GAL-i-ma MUNUS.LUGAL-⸢ri⸣[ ... ] [ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Rs. bricht ab."
+],
+[
+"B",
+"",
+"Rs. V ist, soweit erhalten, unbeschrieben."
+]
+],
+"tr": "[ebenso soll] dem [Kö]nig aber (und) der Königin [ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 3':1": "Groddek, DBH 14, 2004, 113, liest: -ni-šu.",
+"§ 3':2": "Groddek, DBH 14, 2004, 113, liest: -aš.",
+"§ 5'':3": "Groddek, DBH 14, 2004, 113 liest: ÉRIN{MEŠ} ⸢ti⸣-x[.",
+"§ 7'':4": "Möglicherweise [{d}k]u-mar!?-b[i]?-ša.",
+"§ 7'':5": "Text: NAB.",
+"§ 7'':6": "Groddek, DBH 14, 2004, 114: -⸢e?⸣-.",
+"§ 7'':7": "Groddek, DBH 14, 2004, 114, liest: GEŠTIN-a[n e-ku-ud-du].",
+"§ 9''':8": "Der Anfang des Kolon steht in der Kolumne davor, die komplett abgebrochen ist.",
+"T1": "Text A liefert wohl den notwendigen Genitiv Kumarbiyaš o.ä. Der Satz dürfte parallel zu Kolon 17 konstruiert sein."
+}
+}

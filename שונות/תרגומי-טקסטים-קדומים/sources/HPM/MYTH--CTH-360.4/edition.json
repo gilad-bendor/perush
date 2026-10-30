@@ -1,0 +1,84 @@
+{
+"kind": "MYTH",
+"cth": "CTH 360.4",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 360.4 (TX 2009-08-30, TRde 2009-08-26)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]x-kuwa[r ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x-ku-wa-a[r ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]x {LÚ}ḪUL-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x {LÚ}ḪUL-[ ... ]"
+]
+],
+"tr": "[ ... ] Schlech[t ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... mem]iškiuw[an dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... me-mi]-iš-ki-u-w[a-an ... ]"
+]
+],
+"tr": "[ ... begann zu sp]rech[en ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {LÚ}N]ÍG.S[I.SÁ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... {LÚ}N]ÍG.S[I.SÁ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... G]erec[ht ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

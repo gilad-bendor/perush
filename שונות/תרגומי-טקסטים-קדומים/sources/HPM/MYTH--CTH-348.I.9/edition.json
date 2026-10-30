@@ -1,0 +1,594 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.9",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.9 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-et",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]-⸢et⸣"
+]
+],
+"tr": "[ ... -]te",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "⸢n=aš⸣ [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"⸢na-aš⸣ x[ ... ]"
+]
+],
+"tr": "Er [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -š]an tiyawen[i]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... -š]a?-an ti-ya-u-e-n[i]"
+]
+],
+"tr": "Wir trete[n ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -m]i",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ] [ ... -m]i"
+],
+[
+"B",
+"1'",
+"[ ... ]"
+]
+],
+"tr": "I[ch ...]e [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "{MUŠ}ḫedammun da-[ ... -m]i",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"{MUŠ}ḫé<-dam>-mu-un da-x[ ... ] [ ... -m]i"
+],
+[
+"B",
+"1'",
+"[ ... ]x [ ... ] [ ... ]"
+]
+],
+"tr": "I[ch ...]e den Ḫedammu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=kan mān {MUŠ}ḫ[edamm]un [ ... ]-ri",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"nu-kán ma-a-an {MUŠ}ḫ[é-dam-mu-un] [ ... ]-ri"
+],
+[
+"B",
+"2'",
+"[ ... {MUŠ}ḫé-dam-m]u-un x[ ... ] [ ... ]"
+]
+],
+"tr": "Und wenn den Ḫ[edamm]u [ ... ]t,",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "mān=ma=kan {MUŠ}ḫeda[mmu- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"ma-a-an-ma-kán {MUŠ}ḫé-da[m-mu- ... ]"
+],
+[
+"B",
+"3'",
+"[ma-a-an-ma]-kán {MUŠ}ḫ[é-dam-mu- ... ]"
+]
+],
+"tr": "wenn aber Ḫeda[mmu ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... amm]el waštu[l]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... wa-a]š-tú[l] ¬¬¬"
+],
+[
+"B",
+"4'",
+"[ ... am-m]e-el wa-aš-tú[l] ¬¬¬"
+]
+],
+"tr": "[ ... mei]n Freve[l].",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[GIM-an ... memiyauwa]nzi zinnišket",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... me-mi-ya-u-wa-a]n-zi zi-in-ni-⸢iš⸣<-ke>-et"
+],
+[
+"B",
+"5'",
+"[ ... ] zi-in-né-et"
+]
+],
+"tr": "[Als ...1 ] aufgehört hatte zu [spreche]n,",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=aš=za arḫa [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"na-aš-za a[r-ḫa] [ ... ]"
+],
+[
+"B",
+"5'",
+"na-aš-za ar-ḫa [ ... ]"
+]
+],
+"tr": "[ ... ] er fort.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "[{d}IŠTAR-i]š=ma=kan INA É.DU10.ÚS.SA anda pai[t]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[{d}IŠTAR-iš-ma-ká]n I-NA É.DU10.ÚS.SA an-da pa-i[t]"
+],
+[
+"B",
+"6'",
+"[{d}IŠTAR-i]š-ma-kán I-NA É.DU10.ÚS.SA [ ... ]"
+]
+],
+"tr": "[Ištar] aber gin[g] ins Haus der Waschung.",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] anda arrumanzi pait",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ar-ru-m]a-an-zi pa-it"
+],
+[
+"B",
+"7'",
+"[ ... ] an-da ar-ru-ma-an-zi pa-it"
+]
+],
+"tr": "Sie ging [ ... ] hinein, um sich zu waschen,",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=za ārrašta",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"nu-za a-ar<-ra>-aš-ta"
+],
+[
+"B",
+"8'",
+"[ ... ]"
+]
+],
+"tr": "und wusch sich.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... -a]ḫta",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ]"
+],
+[
+"B",
+"8'",
+"[ ... -a]ḫ-ta"
+]
+],
+"tr": "[ ... -]te.",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 2'",
+"hl": "",
+"master": "TA Ì.DÙG.GA=ma=za šanezzit išket",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... Ì.DÙG.G]A-ma-za ša-né-ez-zi-it iš-ke-et"
+],
+[
+"B",
+"8'",
+"TA Ì.DÙG.GA-ma-za [ ... ]"
+]
+],
+"tr": "Sie salbte sich aber mit erstklassigem Feinöl",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 2'",
+"hl": "",
+"master": "[nu=za unuw]attat",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ] [ ... ]"
+],
+[
+"B",
+"9'",
+"[ ... ú-nu-w]a-at-ta-at"
+]
+],
+"tr": "[und schm]ückte [sich].",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 2'",
+"hl": "",
+"master": "āššiyatar=ma=šši UR.TUR{MEŠ} GIM-an EGIR-an ḫuwayantari",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ ... ] UR.TUR{MEŠ} GIM-an EGIR-an ḫu-wa-ya-an-d[a-ri] ¬¬¬"
+],
+[
+"B",
+"9'",
+"a-aš-ši-ya-tar-ma-aš-ši [ ... ḫu-wa-y]a-an-ta-ri ¬¬¬"
+]
+],
+"tr": "Die Lieblichkeiten2 aber laufen ihr wie junge Hündchen hinterher.",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 3'",
+"hl": "",
+"master": "[{d}IŠTAR-iš ANA {d}ninatta {d}k]ulitta memiškiwan daiš",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"[ ... {d}k]u-li-it-ta me-mi-iš-ki-u-an da-iš"
+],
+[
+"B",
+"11'",
+"[ ... ]x x x x x[ ... ]"
+],
+[
+"B",
+"",
+"Text bricht ab."
+],
+[
+"C",
+"1'",
+"¬¬¬ [ ... {d}ku-li-i]t-ta [ ... ]"
+]
+],
+"tr": "[Ištar] begann, [zu Ninatta (und) K]ulitta zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... galgaltū]ri ēpten",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"x[ ... ] [ ... gal-gal-tu-u]-ri e-ep-tén"
+],
+[
+"C",
+"2'",
+"[ ... e-e]p-tén"
+]
+],
+"tr": "„Ergreift das [galgaltu]ri-Instrument [ ... ]!",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 3'",
+"hl": "",
+"master": "nu=kan arunaš arḫ[i ... a]runi? arkammi[t ... wa]l(a)ḫten1",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"nu-kán a-ru-na-aš ar-ḫ[i2 ... ] [ ... ]"
+],
+[
+"C",
+"3'",
+"[ ... a?]-ru-ni ar-kam-mi-i[t] [ ... wa?-a]l-aḫ-tén"
+]
+],
+"tr": "[Am] Ufer des Meeres [sch]lagt am Meer? [ ... mit] dem arkammi-Instrument!",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 3'",
+"hl": "",
+"master": "[GÙ]B-laz=ma galgaltūri GUL-aḫt[en]",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"[GÙ]B?-la-za-ma gal-gal-tu-u-ri GUL-aḫ-t[én]"
+],
+[
+"C",
+"4'",
+"GÙB-la-az-m[a] [ ... ]"
+]
+],
+"tr": "Links3 aber schla[gt] das galgalturi-Instrument!4",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-uš LUGAL-eznann[i ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"[ ... ] [ ... ]"
+],
+[
+"C",
+"5'",
+"[ ... ]x-⸢uš⸣ LUGAL-ez-na-an-n[i [ ... ]"
+]
+],
+"tr": "[ ... ] dem Königtum [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 3'",
+"hl": "",
+"master": "[m]ān=aš? ḫalukan kuwatka ištama[šzi]",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"[ma?]-⸢a?⸣-na-aš ḫa-lu-kán ku-wa-at-ka4 iš-ta-ma-[aš-zi]"
+],
+[
+"C",
+"6'",
+"[ ... ]"
+]
+],
+"tr": "[We]nn er die Botschaft irgendwie hör[t],",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-nan aūmmieni",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"[ ... ]x-⸢na?⸣-an a-ú-um-mi-e-ni"
+],
+[
+"C",
+"6'",
+"[ ... ]x x"
+],
+[
+"C",
+"",
+"Text bricht ab."
+]
+],
+"tr": "sehen wir den [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 3'",
+"hl": "",
+"master": "GIM-an a-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"GIM-an ⸢a⸣-[ ... ] ¬¬¬"
+]
+],
+"tr": "Wenn [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... {d}nina]ttaš {d}kulidda[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"17'",
+"[ ... {d}ni-na-a]t-⸢ta⸣-aš {d}ku-li-id-da-[aš ... ]"
+]
+],
+"tr": "[ ... Nina]tta (und) Kulitta[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ] na-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"[ ... ]x x ⸢na⸣-x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 3':1": "Es ist nicht klar, ob es sich hier wirklich um ein Kolon handelt. Vielleicht haben in den Exemplaren unterschiedliche Formulierungen gestanden. Von der Platzverteilung her unwahrscheinlich ist, dass dem a-ru-na-aš ar-ḫ[i in A das a?]-ru-ni in C entspricht.",
+"§ 3':2": "Oder kam in der Zeichenform hi-pát ?",
+"T1": "Vgl. zu einer Ergänzung „Tessub(?)“ Hoffner, Myths2 1998, 54.",
+"T2": "Vgl. dazu Pecchioli Daddi – Polvani 1990, 141 Anm. 8.",
+"T3": "Oder: „mit der Linken“.",
+"T4": "Vgl. dazu Hoffner, Myths2 1998, 54: „At the sea on the right play the arkammi, on the left play the galgalturi.“ Siehe auch Pecchioli Daddi – Polvani 1990, 141: „... e sulla riva del mare andate [ ... ] e da sinistra suonate i crotali.“"
+}
+}
