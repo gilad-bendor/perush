@@ -363,3 +363,16 @@ where the fire-offering is near.
   `מַדְהוּצְ'נְדַס`, Gautama `גָּאוּטַמָה`; Uṣas `שַׁחַר`, the Viśve Devāḥ `כָּל־הָאֵלִים`.
 - Tool fixes: the name check splits on `…`; the Agni name rule applies in the RV only; the `עֶרְוָה` gate no longer reads
   `שערות` "hairs" as ש + ערות.
+
+### 11.5 Yama and the dead: RV 10.10, 10.14–10.18 (translator 4; merged 2026-10-30)
+- *svadhā́* in the funeral hymns `סְוַדְהָא` (pl. `קריאות־הסְוַדְהָא`), *svā́hā* `סְוָאהָא` (the split from 10.129's
+  `כֹּחַ עַצְמִי` recorded); 10.10: *sahaśéyya* `משכב־יחד`, *ni √gam* `בא על`, *jāmí* `אחווה` (`בני־אחווה`), *ájāmi*
+  `לא־אחווה`, *pāpá* `רע` (no Lev 18 word in a line); *parā́ √i* `הלך למרחוק`; *sám √gam* `התאחד`, *saṃgámana*
+  `מאחד`; *jīvaloká* `עולם החיים`; *ásunīti* `הנהגת־החִיּוּת`; *kṣám* `תבל`; √*dah* `שרף`, √*śuc* `בער`, √*tap* `להט`,
+  √*hi* `שגר`; *kravyā́d* `אוכל־הבשר`, *jātávedas* `יודע־הנולדים` (translated epithets); *yóni* `רחם` (`מיטה` in
+  10.18.7d: a split by sense). Names: Gandharva, Mātalī, the Kavyas, Vairūpas, Navagvas, Atharvan, Bhṛgu, Saramā, Viṣṇu,
+  the Aśvins, the Vasiṣṭhas, as in the files.
+- **Rulings:** *śárīra* = `גְּוִיָּה` everywhere, *tanū́* = `גוף` (RV 1.32.10b changed from `הגוף`); *svadhā́* stays
+  transliterated in the funeral hymns; 10.10.14d `הסכמה טובה מאוד` kept, with its note that the echo of Gen 1:31 exists
+  only in Hebrew.
+- Tool fixes: `בֶּרֶךְ` "knee" licensed by *jā́nu*; the `טוב` licence covers *vásiṣṭha*.
