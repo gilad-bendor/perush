@@ -45,3 +45,5 @@ eupt.uni-goettingen.de
 # Added 2026-10-23 (Round 4 run 1, the fifth-day dossier): Bugge's Edda, Chinese Wikisource (the Kojiki).
 etext.old.no
 zh.wikisource.org
+isac.uchicago.edu
+# ^ Round 4 run 6 (Hittite): the Chicago Hittite Dictionary's free volumes (per word; PDFs on isac-assets.s3.amazonaws.com, above). hethport.net (the Mainz portal, its CHiL / BESRIT editions and the Konkordanz) and zenodo.org (TLHdig) are above.

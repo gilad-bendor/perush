@@ -218,6 +218,18 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 - **LSJ** per word through the Logeion API (`anastrophe.uchicago.edu/logeion-api/detail?w=<lemma>&type=normal`; `hesiod_tools.py lsj`); never bulk-extracted.
 - **Not used:** West's editions and commentaries (1966, 1978), Most's Loeb (2006/2018), Clay & Vergados 2025 (all ©: recalled only, never quoted); the Hebrew translations (Spann 1956, Shabtai 2004, Bouzaglo 2017; ©, not consulted).
 
+### 4.4v Hittite: the Laws, the Temple Instructions, the elimination rituals (Round 4 run 6, 2026-10-24/30)
+| Folder | What |
+|---|---|
+| `HPM/CHiL--CTH-291.1` … `CHiL--CTH-291.PT` | **BASE TEXT** (the Laws, first tablet, and the late parallel text). The Corpus of Hittite Laws (G. Torri, L. Warbinek, A. Carnevale, ed., hethiter.net/: CTH 291.x), on the Hethitologie-Portal Mainz (`hethport.net`, the new address of `hethiter.net`; offline 2026-10-21, back by 2026-10-23): clause-numbered critical editions of the six versions of tablet 1, every manuscript, TLHdig's lemma + German gloss per word, an Italian translation (rank 3). **CC BY-SA 4.0**: the parsed files committed, the raw HTML git-ignored (`HPM/.gitignore`; `tools/hpm2md.py fetch` re-obtains it). CTH 292 not edited in CHiL (2026-10-30). |
+| `HPM/BESRIT--CTH-394`, `-410`, `-407`, `-391.1`, `-391.2` | **BASE TEXT** (the rituals of Ašḫella, Uḫḫamuwa, Puliša, Ambazzi): the HPM project "Beschwörungsrituale der Hethiter" (eds. Chrzanowska, Görke, Collins, Christiansen), clause-numbered, every manuscript, German / English translation (rank 3); CC BY-SA 4.0, as above. |
+| `TLHdig/` | TLHdig Beta 0.3 (Zenodo 10.5281/zenodo.20328284, **CC BY 4.0**): the 74 MB zip git-ignored (recipe + manifest item, 2026-10-30); the CTH folders 264, 292, 321, 391, 394, 407, 410, 757 extracted and committed. The base of our composites of CTH 292 (`חוקים-ובריתות/8-…/composite-HL2.tsv`) and CTH 264 (`9-…/composite-IN.tsv`), and the word glosses of the rituals. |
+
+- **The Mainz Konkordanz** (`hethport.net/hetkonk/hetkonk_abfrage.php?c=<CTH>`): script dates, joins and Hoffner's sigla per manuscript – used for both composites (reachable 2026-10-25/26).
+- **Rank 3 / 5, consulted after drafting, kept in session scratchpads only (not in `sources/`):** Hrozný 1922, *Code hittite* (archive.org `codehittiteprove01hroz`, PD; the § numbering of HL 101–200); Zimmern & Friedrich 1922, *Hethitische Gesetze* (*AO* 23/2; archive.org `hethitischegeset0023hitt`, PD, German, OCR; its § numbers differ); Sturtevant & Bechtel 1935, *A Hittite Chrestomathy* (archive.org `in.ernet.dli.2015.279400`, full view, DLI scan; KUB 13.4 + 13.5 transliterated and translated, pp. 127–174; the § numbering of CTH 264; US renewal status unverified).
+- **The Chicago Hittite Dictionary** (free volumes L–N, P, Š and the supplements): `isac.uchicago.edu/publications/hittite-dictionary-volume-{l-n,p,s}` → PDFs on `isac-assets.s3.amazonaws.com/isac-publications/chd_l-n.pdf`, `chd_p.pdf`, `chd_s.pdf`, `chds1/3/4/5/6.pdf`; **per word only** (its terms: no bulk extraction, no datasets; never committed).
+- **Not used (©, records only):** Hoffner 1997 (*The Laws of the Hittites*), Süel 1985, Taggar-Cohen 2006, Miller 2013 (WAW 31), Mouton 2016, Christiansen 2006 (StBoT 48), Bawanypeck 2005; Neufeld 1951 (English and Hebrew, not reached); Singer 2009 (`החתים ותרבותם`, Hebrew).
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).

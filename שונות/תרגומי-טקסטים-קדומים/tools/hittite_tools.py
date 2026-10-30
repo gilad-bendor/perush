@@ -772,9 +772,10 @@ def cmd_lexmap(pat=None):
 
 
 def cmd_chd(word):
-    print("The Chicago Hittite Dictionary (CHD) – free volumes L–N, P, Š (ISAC, isac.uchicago.edu/research/publications/chd):\n"
-          "consult it per word (its terms: no bulk extraction, no datasets), e.g. the eCHD search at\n"
-          f"  https://isac.uchicago.edu/research/projects/chicago-hittite-dictionary  (word: {word})\n"
+    print("The Chicago Hittite Dictionary (CHD) – free volumes L–N, P, Š and the supplements (ISAC):\n"
+          "  https://isac.uchicago.edu/publications/hittite-dictionary-volume-l-n (-p, -s) → PDFs on\n"
+          "  https://isac-assets.s3.amazonaws.com/isac-publications/chd_l-n.pdf, chd_p.pdf, chd_s.pdf, chds1/3/4/5/6.pdf\n"
+          f"consult it per word only (its terms: no bulk extraction, no datasets; never commit it). Word: {word}\n"
           "For words outside L–Š: HW² (©), Kloekhorst 2008 (©), Tischler (©) are records only; TLHdig's German glosses "
           "(`lemma`) and the HPM editions' translations are the open evidence.")
 

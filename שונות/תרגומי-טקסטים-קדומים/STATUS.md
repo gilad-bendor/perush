@@ -4,7 +4,7 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-30 (the quota's time ranges and the branch-per-session git rules, guidelines §5.1–§5.1c; earlier: Round 4 run 5 done, Erra and Išum I).
+Last updated: 2026-10-30 (Round 4 run 6 done: Hittite law and ritual – the Laws, the Temple Instructions, the elimination rituals; the quota's time ranges and the branch-per-session git rules, guidelines §5.1–§5.1c; earlier: Round 4 run 5 done, Erra and Išum I).
 
 ## 1. Starting a session (local or Claude Cloud)
 
@@ -57,7 +57,8 @@ All of it is a **first draft**: complete, verified by script, three review passe
 |---|---|---|---|
 | `סיפורי-המבול-המסופוטמיים/` | Atra-ḫasīs I–III, Gilg. XI 1–208, the Sumerian Flood Story, the other Akkadian versions, Berossus + Abydenus, flood references | (see `corpus.md`) | per project (see `corpus.md`) |
 | `סיפורי-הבריאה-המסופוטמיים/` | 1 Enūma eliš I–VII; 2 the creation and Eden companions (7 texts); 3 Bird and Fish; 4 Enki and the World Order; 5 the Farmer's Instructions; 6 Hoe and Plough; 7 Summer and Winter (5–7 Round 3 run 1) | 3,435 | `1-אנומה-אליש/verify.py`, `2-…/verify.py`, `sumerian_tools.py verify 3…7 --strict` |
-| `חוקים-ובריתות/` | 1 Esarhaddon's Succession Treaty; 2 Hammurabi (§66–99 missing in the base text); 3 Eshnunna; 4 MAL A; 5 Lipit-Ištar; 6 Ur-Namma; 7 MAL B | 6,731 | `laws_*.py` |
+| `חוקים-ובריתות/` | 1 Esarhaddon's Succession Treaty; 2 Hammurabi (§66–99 missing in the base text); 3 Eshnunna; 4 MAL A; 5 Lipit-Ištar; 6 Ur-Namma; 7 MAL B; **8 the Hittite Laws** (HL1 = CHiL CTH 291.2, HL 1–100; HL2 = CTH 292, HL 101–200, our TLHdig composite; HLPT = the late parallel text KBo 6.4); **9 the Instructions for Temple Personnel** (CTH 264, our TLHdig composite) (8–9 Round 4 run 6, the folder's first Hittite texts) | 6,731 + 1,419 | `laws_*.py`; `../tools/hittite_tools.py verify HL1 HL2 HLPT IN --strict` |
+| `טקסי-שילוח-וטיהור/` | 1 the Hittite elimination rituals: Ašḫella (CTH 394), Uḫḫamuwa (CTH 410), Puliša (CTH 407), Ambazzi (CTH 391.1–2), from the HPM editions (Round 4 run 6; a new corpus for sending-away and purification rites) | 481 | `../tools/hittite_tools.py verify AS UH PU AM AM2 --strict`, `selftest` |
 | `אפוס-גילגמש/` | SB I–X, XI 209–328, XII; the OB tablets | 3,217 | `verify.py --strict` |
 | `ספרות-החכמה-והצדיק-הסובל/` | 1 Ludlul I–V; 2 the Babylonian Theodicy; 3 the Great Prayer to Šamaš; 4 Counsels of Wisdom; 5 the Dialogue of Pessimism; 6 the Instructions of Šuruppag (Sumerian; 3–6 Round 3 run 4) | 1,562 | `wisdom_tools.py verify --strict` |
 | `קינות-על-ערים/` | 1 the Lament for Ur; 2 the Curse of Agade (OB + Ur III) | 763 | `lament_tools.py verify --strict` |
@@ -101,7 +102,9 @@ survey (`curated-translation-candidates--world.md`), ranked together. **One run 
 3. Egyptian wisdom and creation (Amenemope, Merikare, the Heavenly Cow, the Memphite Theology; base AED-TEI): **done (first draft), 2026-10-24**, `חכמה-ובריאה-במצרים/` (report `reports/round-4/run-3.md`);
 4. Hesiod (Theogony + Works and Days; base Perseus + treebank): **done (first draft), 2026-10-24**, `הסיודוס/` (report `reports/round-4/run-4.md`);
 5. Erra and Išum (eBL): **done (first draft) for Tablet I, 2026-10-24**, project 5 of `העולם-התחתון/` (191 lines; Tablets II–V are not edited on eBL yet and wait for it: `sources/_records-only--Erra-and-Ishum-II-V/`; report `reports/round-4/run-5.md`);
-6. Hittite law and ritual (the Laws, the Temple Instructions, the elimination rituals; base TLHdig).
+6. Hittite law and ritual: **done (first draft), 2026-10-30** – the Hittite Laws (both tablets + the late parallel text, 1,107 lines; project 8 of `חוקים-ובריתות/`), the Instructions for Temple Personnel (312; project 9), the elimination rituals of Ašḫella, Uḫḫamuwa, Puliša and Ambazzi (481; the new corpus `טקסי-שילוח-וטיהור/`); bases: the HPM editions (CHiL, BESRIT; CC BY-SA) and our composites from TLHdig 0.3 (CC BY 4.0); `tools/hittite_tools.py` (report `reports/round-4/run-6.md`). Ḫedammu (for the fifth-day dossier) not done: not cheap (no HPM clause edition found), left for a later round.
+
+**Round 4 is complete** (run 2, the Edict of Ammiṣaduqa, waits on access).
 
 Quick wins between the runs: Šūpê-amēlu and the fables; the Poor Man of Nippur. Each new language needs a converter, a
 name table, renderings with reserved-word gates and a translator brief before its first line.
