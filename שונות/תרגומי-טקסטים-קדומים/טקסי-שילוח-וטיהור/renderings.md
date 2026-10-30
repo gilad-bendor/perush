@@ -112,6 +112,33 @@ Every row of R1 was checked against the five HPM composites (AS, UH, PU, AM, AM2
   170–172); the breads (90–94, 173–177, 221–224); the meat portions (102–110, 183–189, 238–245); the precious things
   (113–116, 190–193, 252–255). The translator lists each refrain's Hebrew in Proposals after part 1.
 
+## R2. Merged from Sub4, part 1 (AS, 109 clauses; 2026-10-30; accepted by the coordinator unless said)
+**Fixed strings for UH, PU, AM (byte for byte):** F17 `איזה אֵל אשר עשה את המגפה הזאת` (a speech-opening `"` only where the speech
+opens: AS 16 opens it, `"איזה אֵל אשר סובב למטה –`); F18 `וְיִפָּנֶה פנימה בטובה!"`; *takšulant- ēšdu* `בשלום יהיה!`; *menaḫḫanda*
+`כלפי` (IN); "whoever finds it" `ומי שימצא אותה –` / `… הארץ ההיא תיקח לה!"`; the god's meal `ואתה, הָאֵל – כְּאֵל אכול ושתה!`
+(*DINGIR-LIM-nili* `כְּאֵל`), `"והָאֵל ההוא – יאכל וגם ישתה!`; the participants `ואוכלים,` / `ואוכלים ושותים,`; the day's end `והם
+באים הלאה.`, `היום השני – [תַּם].`; F19 `ביום השני, כשעולה השחר, בהשכמה, מיד –`; *anda kiššan memanzi* `ועליהם כך אומרים:`, with
+*QĀTAMMA=pat* `ועליהם כך ממש אומרים:`; the drive `ואותם מסיעים אל הבָּר(, עוד אל מקום אחר);`, *unna-* `נוהגים`; the portions (AS
+70 = 95) `ואת החזה, את הכתף הימנית, את הכבד ואת הלב – מן המבושל – שָׂם …`; *laḫḫurnuzzi išpar-* `ועלווה פורשים`; "drinking the
+god" `… – שלוש פעמים שותה`; *idālu* `רע` / `הרעה`.
+**Words:** *kiš-* `נעשה`; *ḫandai-* `הכין`; *ḫarki-* `לָבָן`, *dankui-* `שחור`; *tukk-* `חשוב`; *šuel* `חוט`; *taruppai-* `אגד`
+(`שוזר` was blocked by an over-wide `זר` regex – fixed, see below); NA₄ NUNUZ `אבן־חרוז`, KAMKAMMATU `טבעת`, A.GAR₅ `עופרת`,
+AN.BAR `ברזל`; *ḫamank-* `קשר`; GIŠ ZA.LAM.GAR `אוהל`; GÚ `צוואר`, SI `קרן`; *weḫ-* `סבב`; *išḫiya-* "tie up" `אסר` (HL1 "impose"
+`חייב`: split by sense, accepted); *warši-* `הירגע`; *piddai-* `הגיש`; DUG KUKUBI `קנקן`, DUG GÌR.GÁN `כד`, GAL `כוס`, GIR₄ `חרס`;
+*ašaš-* `הושיב`; *ar-* (mp) `עמד`, *ar-* "arrive" `הגיע`; *wargant-* `שמן`, NÍG.GIG `כבד`, ŠÀ `לב`, ÚR `ירך`; AMĪLŪTU `בני האדם`;
+*pukk-* `שנוא`; *ḫink-* "bow" `הרכין (ראש)` (HL1 "present" `הציג`: split by sense, accepted); *pittalai-* `הפקיר`; *anzel* `שלנו`;
+*uda-* `הביא`; ***ḫatta-* "stab, slaughter" `דקר`** (`שחט` stays *ḫuek-*'s); *zanu-* `בישל`, *zeyant-* `מבושל`; *laḫḫurnuzzi*
+`עלווה`; *išpar-* `פרש`; *tagān* `על הקרקע`; GÍR.TUR `סכין קטנה`; *aššanu-* `הסדיר`; *kuitman* "while" `כל עוד` (split by sense
+from HL1 "until"); *āra* `מותר`; MUN `מלח`; *išḫuwa-* "strew" `זרה` (IN "heap" `ערם`: split by sense, accepted; R1a amended);
+IZI `אש`; *ištarna* `בין` / `דרך`; *aniyatt-* `*הציוד*`; GABA `חזה`, ZAG.UDU `כתף`, ZAG `ימני`; 3-ŠU `שלוש פעמים`; INIM `דבר`;
+MU.KAM `שנה`, *ḫarrant-* `מקולקלת`; DUB.1.KAM `לוח אחד`; *anda nai-* (beads) `השחיל` (split by sense from *nai-* `הִפְנָה`);
+*kattan* by sense (`אצל`, `מתחת`, `עמם`, `למטה`), said in each פירוק.
+**Coordinator's rulings:** ***arra-* "wash" = `שָׁטַף`** (changed at AS 65: IN's *warp-* "bathe" holds `רחץ`; ↔ Lev 15:11 `וְיָדָיו
+לֹא שָׁטַף בַּמָּיִם`); R1a corrected: AS 60 is *dai-* "put down" (paired with 62 *šarā dā-* "pick up"); AS 36 is "a place where
+ours do not arrive" (the brief's "do not know" is not on the tablet: the [divergence] with `אֶרֶץ גְּזֵרָה` is defined from "our"
+side). **Tables:** the H3 `זר` regex now allows at most `ו` + two prefix letters, or `ש` alone (it caught `שוזר`); the selftest
+ok-lines AS 17, AS 84 replaced by the drafted lines, AS 11 added.
+
 ## H2. Names (machine-read; the ritual texts)
 | Source (regex) | Hebrew | ★ | Note |
 |---|---|---|---|
@@ -166,10 +193,11 @@ Every row of R1 was checked against the five HPM composites (AS, UH, PU, AM, AM2
 | UH 3 | err | `ואם אלוהי האויב עשה אותה,` |
 | UH 3 | err | `ואם איזה אל של האויב עשה אותה,` |
 | UH 3 | ok | `וְאִם אֵיזֶשֶׁהוּ אֵל שֶׁל אוֹיֵב עָשָׂה אוֹתָהּ,` |
-| AS 17 | ok | `"אֵיזֶה אֵל אֲשֶׁר עָשָׂה אֶת הַמַּגֵּפָה הַזֹּאת –` |
+| AS 17 | ok | `איזה אֵל אשר עשה את המגפה הזאת –` |
 | AS 17 | err | `"איזה אלוהים עשה את המגפה הזאת –` |
 | AS 17 | err | `"מי הָאֵל אֲשֶׁר עָשָׂה אֶת הַמַּגֵּפָה הַזֹּאת –` |
 | AS 17 | err | `"איזה אל אשר עשה את המגפה הזאת –` |
+| AS 11 | ok | `ואותם יחד שוזר;` |
 | AS 20 | ok | `ובשחר אני מסיע אותם אל הבָּר.` |
 | AS 20 | err | `ובשחר אני מסיע אותם אל המדבר.` |
 | AS 20 | err | `ובשחר אני מסיע אותם אל הבר.` |
@@ -178,7 +206,7 @@ Every row of R1 was checked against the five HPM composites (AS, UH, PU, AM, AM2
 | AS 33 | ok | `ועוד: את האֵילִים, את האשה, את הלחם העבה ואת השכר – דרך המחנה נושאים הלאה.` |
 | AS 42 | err | `ביום השני, עם שחר, מיד – שישה אֵילִים, שישה תישים,` |
 | AS 84 | err | `"ויפנה בשלום פנימה!"` |
-| AS 84 | ok | `"ויפנה פנימה בטובה!"` |
+| AS 84 | ok | `וְיִפָּנֶה פנימה בטובה!"` |
 | UH 6 | err | `ומכניסים צמר כחול, צמר אדום, צמר ירוק, צמר שחור וצמר לבן,` |
 | UH 6 | ok | `ומכניסים צמר כחול, צמר אָדֹם, צמר ירוק, צמר שחור וצמר לָבָן,` |
 | UH 12 | err | `"הנה את הכבש המעוטר הזה לך, לָאֵל, לרצון הבאנו;` |
