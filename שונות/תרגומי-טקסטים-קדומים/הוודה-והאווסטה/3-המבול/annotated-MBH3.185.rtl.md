@@ -168,8 +168,8 @@
 
 ### 13a
 `atha kālena mahatā sa matsyaḥ sumahān abhūt`
-> ואחרי זמן רב נעשה הדג ההוא גדול מאוד,
-- **פירוק:** `atha` – "ו" ("ו"); `kālena` – kāla- "זמן", יחסת הכלי ("אחרי זמן"); `mahatā` – mahant- ("רב"); `saḥ matsyaḥ` ("הדג ההוא"); `sumahān` – su-mahant- "גדול מאוד" ("גדול מאוד"); `abhūt` – √bhū, אאוריסט 3 יחיד ("נעשה").
+> ואחרי זמן רב נהיה הדג ההוא גדול מאוד,
+- **פירוק:** `atha` – "ו" ("ו"); `kālena` – kāla- "זמן", יחסת הכלי ("אחרי זמן"); `mahatā` – mahant- ("רב"); `saḥ matsyaḥ` ("הדג ההוא"); `sumahān` – su-mahant- "גדול מאוד" ("גדול מאוד"); `abhūt` – √bhū, אאוריסט 3 יחיד ("נהיה").
 
 ### 13c
 `aliñjare jale caiva nāsau samabhavat kila`

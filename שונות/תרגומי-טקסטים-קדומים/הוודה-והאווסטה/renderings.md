@@ -253,7 +253,7 @@ the Bible passages the corpus is compared with (Gen 1–3, 6–9, 22; Lev 18): *
 the root שבת; `נָח` (the string of Noah: write `שָׁכַב`, `שָׁקַע`, `נִרְגַּע`).
 
 ### 7.2 Only for their source counterpart
-`נָחָשׁ` (*áhi*, Av. *aži*), `חֹשֶׁךְ` (*támas*), `רוּחַ` (*vā́ta / vāyú* – the wind; *ātmán* `נֶפֶשׁ`, *prāṇá* `נְשִׁימָה`,
+`נָחָשׁ` (*áhi*, Av. *aži*; *sarpá* "snake", RV 10.16.6b, as the tool licenses: §11.8), `חֹשֶׁךְ` (*támas*), `רוּחַ` (*vā́ta / vāyú* – the wind; *ātmán* `נֶפֶשׁ`, *prāṇá* `נְשִׁימָה`,
 *ásu* `חִיּוּת`), `זֶרַע` (*rétas*, *bī́ja*, Av. *taoxman*), `קֶשֶׁת` (*dhánus*), `אַיִל` (*meṣá*), `עָפָר` (*pāṃsú*),
 `אֲדָמָה` (*bhū́mi*), `אָדָם` (*púruṣa*; Av. *maṣ̌iia*), `טוֹב` (*bhadrá*, *vásu*, *vāmá*, *sādhú*, *su-*, Av. *vohu*),
 the root ברך (*āśís*, *svastí*), the root ארר (*√śap*), the root קדש (*médhya*, *yajñíya*, Av. *spəṇta*), `מִזְבֵּחַ`
@@ -392,3 +392,59 @@ where the fire-offering is near.
   `סוס`, *gocara* `מרעה`, √*yuj* `רתם`, *yoga* `רתימה`; *saṃsāra* `הסבב`; *padá* `מדרך`; *nitya* `קבוע`, *dhruvá*
   `יציב`, *dhárma* `משפט`; *kṣura* `תער`; *medhā́* `דעת`. The base (GRETIL) lacks KU 2.15 (noted at 2.14b).
 - Tool fixes: the `טוב` licence covers *śreyas*; the Indra name rule skips *indriya* "sense".
+
+### 11.8 Cross-text consistency review (merged 2026-10-30)
+Pass (b) across the 20 texts, after the four translators: `lexmap` (every "more than one Hebrew" lemma judged; most are
+inflection, preverbs, particles, or homographs merged by the folding: *hu* "pour" / *hū* "call", *kr̥* / *kr̥̄*, *śū́ra* /
+*sū́ra*, √*āp* / *áp*), `lemma`, `grep`, and a reverse lookup of the key Hebrew words. The key words agree across the
+Sanskrit texts: *devá* `אֵל`, *ātmán* `נפש`, *prāṇá* `נשימה`, *ásu* `חִיּוּת`, *tanū́* `גוף`, *śárīra* `גְּוִיָּה`, *mánas*
+`מחשבה`, *pr̥thivī́* `ארץ`, *bhū́mi* `אדמה`, *dyú* `שמים`, *ā́pas* `מים`, *samudrá* `ים`, *párvata* / *girí* `הר`, *yajñá* /
+√*yaj* `זבח` (Av. *yaz-* too), *havís* `מנחה`, √*hu* / *ā́huti* `נסך`, *médha* `לשד הזבח`, *paśú* `בהמה`, √*han* `הרג`,
+√*bandh* / *ni-√yuj* `כפת`, *así* `חרב`, *putrá* `בן`, *pitŕ̥* `אב` / `האבות`, *mr̥tyú* `מָוֶת`, *amŕ̥ta(tva)* `אלמוות`,
+*r̥tá* `סדר` (Av. *aša* too), *satyá* `אמת`, √*sr̥j* `שלח` / `שילוח`, √*jan* `נולד` / `הוליד`, √*bhū* `נהיה` / `היה`, √*kr̥*
+`עשה`, *loká* `עולם`, *rájas* `מרחב`, *prajā́* `צאצאים`, and the names (Manu, Yama, Yima, Agni – `אש` outside the RV
+except where the god speaks or is invoked, AB 7.16–17 –, Indra, Varuṇa, Prajāpati, Vivasvant).
+
+**Changes (13 `>` lines, 11 rows; the פירוק and the generated files follow):**
+| Lemma | Old Hebrew | New Hebrew | Lines | Reason |
+|---|---|---|---|---|
+| *nár / nara* | `איש` | `גבר` | KU1 2.8a, 3.9a | §5.1 *nár* `גֶּבֶר`, as MBh 3.185.54c (*naraḥ* `הגבר`) and the RV |
+| *vadhá* (pl.) | `כלי־הקטל` | `נשקי הקטל` | RV1.32 6c | §11.2 *vadhá* `נשק הקטל` (5b); `כלי־ההרג` stays *vádhar*'s (9b) – no dossier pāda touched |
+| √*bhū* | `נעשה` | `נהיה` | MBH3.185 13a | §5.1 √*bhū* `נִהְיָה`; `נעשה` is √*kr̥*'s passive |
+| *súkr̥ta* | `המתוקן` | `העשוי היטב` | RV10.34 11b | as RV 10.15.13d and KU 3.1a |
+| *iṣṭāpūrtá* | `הזבחים והנדבות` | `הזבחים ומעשי הנדיבות` | RV10.14 8b (and its note) | the earlier precedent, KU 1.8a `זבחים ומעשי נדיבות` |
+| *purú* | `מרחבי (הגועש)` | `(הגועש) הרב` | RV10.10 1b | `מרחב` is *rájas*'s alone (§5.1, §11.1) |
+| *uruvyácas* | `רחבת־המרחב` | `רחבת־ההיקף` | RV10.18 10b | the same: *vyácas* "extent" is not *rájas* |
+| *yazata* | `ראויי־הזבח` | `ראויי הזבח` | VD2 20, 21 | §11.3's form, as RV *yajñíya* (10.14.5a, 6c; 10.18.2d) |
+| *mártya* | `לבן־התמותה` | `לבן התמותה` | RV10.15 7b | §5.1 `בֶּן תְּמוּתָה`, as everywhere else |
+| *vaivasvata* | `בן־ויוסונט` | `בן ויוסונט` | KU1 1.7b | as RV 10.14.1c and MBh 3.185 (1c, 10c, 11a, 51c) |
+| *gharmá* | `החלבים` | `החֲלָבִים` (vocalized) | RV7.103 9d | "milks", not *médas* `חֵלֶב` "fat" (RV 10.16) |
+
+**Splits checked and kept** (each has a line in its apparatus; the five marked + got it in this review):
+- *nár* `אנשים` in VD2 41 (a pair of man and woman); *zam* `ארץ` (and `אדמה` as material, VD2 31) against RV *kṣám*
+  `תבל` (+ VD2 8); Av. *dātar* / *dā-* `עושה` (F4) against Skt *dhātár* `הַמַּעֲמִיד`, Av. *maṣ̌iia* `אדם` (§5.3) against
+  *mártya*, Av. *mainiiu* `רוח` against *manyú* `כעס` (+ VD2 1); Av. *ahu-* "existence" `הקיום` against *ásu* (+ VD2 22);
+  Av. *pasu* `צאן` against *paśú* `בהמה` (§5.3).
+- *páyas* `לשד` (RV 10.17.14) beside *médha* `לשד הזבח` (+ RV10.17 14a); *suvidátra* `נדיב` (RV 10.14–10.17) beside Av.
+  *spəṇta* `נדיב` (+ RV10.14 10c).
+- *dhárma* `הדבר` (KU 1.21a) / `משפט`; *rūpá* `יופי` (AB 7.13.8b, the gāthā) / `צורה`; *yóni* `רחם` / `מיטה` / `קן`
+  (RV 10.34.11b); *vā́c* `קול` / `מלה` / `דיבור` by sense; *dyú* "day" `הימים` (RV 10.17.11a); √*as* `נעשה` in AB 7.17.2e
+  (the change of name, noted); √*bandh* of a boat `קשר`; *śā́sa* `סכין` / *así* `חרב`; *svadhā́*; *vratá*; *salilá*; the
+  recorded *éka* + *evá* `לבדו`; *zam* `אדמה` in VD2 31 (Gen 2:7 tagged [divergence]).
+- One Hebrew for several near-synonyms (kept, not reserved words): `מים` (*ā́pas*, *ámbhas*, *udaka*, *jala*, epic
+  *salila*), `ים` (*samudrá*, *sāgara*), `גיבור` (*vīrá*, *śū́ra*), `אישה` (*strī́*, *nā́rī*, *yóṣit*, *jāyā́*), `טוב־לב`
+  (*sumánas*, MBh's vocative *sādho*, *suhŕ̥daya-*).
+- `נָחָשׁ` for *sarpá* (RV 10.16.6b): the tool licenses it and the entry says so; §7.2 now names it.
+
+**Bible-comparison lines** (the key parallels of the six projects, ~55 lines): every tag fits the Hebrew of its line; no
+false echo found (`חרב` / `סכין`, `כפת`, `ספינה`, `שטף`, `זבח`, `נסך` keep Gen 6–9 and 22's words out of the lines), and
+the real hidden echoes are written and tagged (`חושך`, `רוח`, `זרע`, `אדמה` RV 10.18.10a, `אדם` RV 10.90, `גיבן` Vd 2.29,
+`חורף` Vd 2.22). No line of the RV 1.32 dossier excerpt changed.
+
+**Open (for the user):**
+- Av. *dā-* / *dātar* against Skt *dhā* / *dhātár*: the cognate rule (*aša* = *r̥tá*) would give `מעמיד`, but F4's
+  `עושה` follows the Avestan sense "create"; kept, open.
+- `עושה` is then both Av. *dātar* and √*kr̥* / Av. *kar-* (`עשה`); `נדיב` both *spəṇta* and *suvidátra*; `לשד` both
+  *páyas* and *médha*'s head word – each recorded, none a reserved word.
+- RV 10.10.13d / 14b (the one repeated-line difference `verify` lists: `תחבק` / `יחבק`) is justified by the change of
+  subject.
