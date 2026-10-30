@@ -475,7 +475,7 @@ RESERVED = [
     (W + alt("העולה", "עולות", "העולות", "לעולה") + E, r"(?!)", "עֹלָה never (āhuti = נֶסֶךְ; yajñá = זֶבַח); the bare string עולה 'rising' is not gated – vocalize it עוֹלֶה"),
     (W + alt("ניחוח", "ניחח", "הניחוח") + E, None, "נִיחוֹחַ never (Gen 8:21)"),
     (W + alt("נשמה", "נשמת", "נשמתו", "נשמות", "הנשמה") + E, None, "נְשָׁמָה never: prāṇá = נְשִׁימָה, √an = נָשַׁם, ātmán = נֶפֶשׁ (Gen 2:7 in the apparatus)"),
-    (W + alt("ערוה", "ערות", "ערוות", "ערותה", "ערותו") + E, None, "עֶרְוָה never (Lev 18 in the apparatus)"),
+    (W + alt("ערוה", "ערוות", "ערותה", "ערותו", "וערות") + E, None, "עֶרְוָה never (Lev 18 in the apparatus)"),
     (W + alt("מאור", "מאורות", "המאורות", "המאור", "מאורים") + E, None, "מָאוֹר never (sū́rya = שֶׁמֶשׁ, candrámas = יָרֵחַ)"),
     (W + alt("כפר", "כפרה", "כופר", "יכפר", "הכפורים", "כפורים") + E, r"(?:iva| na |nna ).*(?:gav| go| ga| dhen|vrs|vats|usr)|(?:gav| go| ga| dhen|vrs|vats|usr).*(?:iva| na )", "the root כפר never – except the simile כְּ־ + פַּר / פָּרָה 'like a bull / cow' where the source has iva / ná with a cattle word (write it vocalized)"),
     # --- only for the source's own counterpart (renderings §5.2) ---
@@ -567,7 +567,7 @@ def lic(rx, key, lab):
 
 def _heb_has(plain, h):
     h = strip_marks(h)
-    words = re.split(r"[\s,.;:!?–—()\[\]]+", plain)
+    words = re.split(r"[\s,.;:!?–—…()\[\]]+", plain)
     cands = {h}
     if len(h) > 3 and h.startswith("ה"):
         cands.add(h[1:])
@@ -590,7 +590,7 @@ def _heb_has(plain, h):
 def _find_word(heb, hp):
     first = hp.split()[0].split("־")[0]
     cands = {first} | ({first[1:]} if len(first) > 3 and first.startswith("ה") else set())
-    for w in re.split(r"[\s־,.;:!?–—()\[\]]+", heb):
+    for w in re.split(r"[\s־,.;:!?–—…()\[\]]+", heb):
         p = strip_marks(w)
         for c in cands:
             for k in range(0, 4):
@@ -617,7 +617,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
             out.append(f"RESERVED {key} {lab}: «{m.group(0).strip()}» – {why}\n    {heb}\n    src: {src}")
             bad += 1
     for rx, hv, hp, star, what in names():
-        if not re.search(rx, srcf):
+        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv"):
             continue
         if not _heb_has(plain, hp):
             if f"[היתר שם: " in body:

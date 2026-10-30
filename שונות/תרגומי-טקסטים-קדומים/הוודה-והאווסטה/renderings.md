@@ -349,3 +349,17 @@ where the fire-offering is near.
 - Tool fixes: the `רוח`, `טוב`, `חי` licences widened (*vāta* in compounds, the vocative *sādho*, CAB's *gaiia*); the
   deva trap no longer fires on `אל` "to" because of an unrelated *dev*-string; `ave` prints the whole CAB record; the
   Nārada regex skips *narādhipa*.
+
+### 11.4 The binding: ŚB 1.2.3.6–9, AB 7.13–18, KU vallī 1 (translator 3; merged 2026-10-30)
+- √*yaj* with the instrumental kept (`ובו אזבח לך`, `זבח לי בו!`); *niṣ-√krī* `פָּדָה` [equivalent, Ex 13:13, 34:20 –
+  open for the user]; *ni-√yuj*, *ni-√dā* `כפת`; *śā́sa* `סַכִּין` (a split from *así* `חֶרֶב`: two source words);
+  *vi-√śas* `נִתַּח`; the four priests `כוהן־הקריאה` / `כוהן־המעשה` / `כוהן־הנוסח` / `כוהן־הזמרה`; *abhí-√sic* `יצק על`
+  (not `משח`); *om* `אוֹם` (not `אמן`); *tathā́* `כן`; *jyéṣṭha* / *kániṣṭha* / *madhyamá* `הגדול` / `הקטן` /
+  `האמצעי`; *jyaiṣṭhya* `בכורה` (open); *tāta* `יקירי`; *sákhi* `חבר` (*mitrá* is `רֵעַ`); √*car* `נדד`, the refrain
+  *carā evá* `"נדוד!"`; √*jan* `נולד` throughout (the son, the teeth, the dropsy); √*labh* `השיג`; *médhya* `ראוי
+  לזבח` (instead of the root קדש: the RESERVED licence stays, the rendering changes); *kimpúruṣa* `מֵעֵין־אָדָם` (not
+  `מה אדם`: Ps 144:3); *pā́ṅkta* `מחומש`; *mr̥tyupāśa* `חבלי מָוֶת` [equivalent, Ps 18:5, 116:3]; *uṣṭra* `גמל` (open:
+  MW "buffalo"). Names: Devarāta `דֵּוַרָאטָה`, Jamadagni `גַ'מַדַגְנִי`, Ayāsya `אַיָאסְיָה`, Madhuchandas
+  `מַדְהוּצְ'נְדַס`, Gautama `גָּאוּטַמָה`; Uṣas `שַׁחַר`, the Viśve Devāḥ `כָּל־הָאֵלִים`.
+- Tool fixes: the name check splits on `…`; the Agni name rule applies in the RV only; the `עֶרְוָה` gate no longer reads
+  `שערות` "hairs" as ש + ערות.
