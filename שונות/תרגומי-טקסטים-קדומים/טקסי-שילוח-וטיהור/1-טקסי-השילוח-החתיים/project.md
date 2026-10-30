@@ -6,8 +6,8 @@ traditions, as one project (the survey's recommendation, `../../curation-surveys
 §2.3.1), keys of `../../tools/hittite_tools.py`:
 - **AS** – the ritual of **Ašḫella**, man of Ḫapalla, against a plague in the army (CTH 394; HPM ed. A. Chrzanowska;
   109 clauses, §1–§9): rams tethered before the officers' tents at night, an adorned woman sent with them to the enemy.
-- **UH** – the ritual of **Uḫḫamuwa**, man of Arzawa (CTH 410; HPM ed. S. Görke; 33 clauses, §1–§4): a ram crowned with
-  coloured wool driven to the enemy land, "to the god of the road".
+- **UH** – the ritual of **Uḫḫamuwa**, man of Arzawa (CTH 410; HPM ed. S. Görke; 33 clauses, §1–§4): a male sheep (*UDU.NÍTA*, not a
+  ram: R1a) crowned with a wreath of coloured wool, driven to the enemy land, "to the god of the road".
 - **PU** – the ritual of **Puliša** against a plague brought from the enemy's land (CTH 407; HPM ed. B.-J. Collins,
   English; 56 clauses, §1–§8 + colophon): a prisoner and a woman (or a bull and a ewe) sent back to the enemy god.
 - **AM** – the ritual of **Ambazzi** (CTH 391.1; HPM ed. B. Christiansen; 260 clauses, 57 §§): a mouse carries the evil
@@ -33,7 +33,13 @@ of the enemy god); Zech 5:5–11 (the woman in the ephah carried off to Shinar);
 typological.
 
 ## Open decisions
-(Proposals and decisions go here)
+- **2026-10-30, Sub4, before the first line** (the ritual corpus `renderings.md` §R1a, H3/H5/H6/H9; the law file's H3/H4 licences):
+  *dai-* `שָׂם` with the Laws (R1's `הִנִּיחַ` dropped); *penna-* `הִסִּיעַ` / *unna-* `נָהַג` with the Laws; *anda tarna-*
+  `הִכְנִיס` (`שִׁלַּח` only for release); UH's animal is UDU.NÍTA `כֶּבֶשׂ`; ANZELLU `אִסּוּר` beside *ḫurkil* `תּוֹעֵבָה`;
+  LÚ ŠU.DAB `אָסִיר`; F17 (the plague's god), F18 (*aššuli* `בטובה`), F19 (the dawn), F21 (*kāša* `הִנֵּה`); new traps
+  (`אָדֹם`, `לָבָן`, `עֵז`, `חֵלֶב`, `בָּר`, `אֹדֶם`, `עֲטָרָה`); new reserved words (Lev 1:4 `נרצה`, 1 Sam 6 `אשם`/`טחורים`,
+  `ארץ גזרה`, `עתי`, `מלאך`, Zech 5 `איפה`/`שנער`); gate licences widened (`נשא` *pēdāu*, `תועבה` *ḫurkil*, `תיש` MÁŠ.ŠIR,
+  `סמך` forms). No MUŠEN and no ERIN in the five texts: Lev 14's bird and cedar are [absent].
 
 ## Progress
 - 2026-10-24: base (HPM, TLHdig), tool, renderings (`../renderings.md`, `../../חוקים-ובריתות/renderings.md` §7, §H2–§H9),
