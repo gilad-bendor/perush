@@ -219,6 +219,7 @@ finalization (then deletes the rows). This run does not edit the dossier.
 | The dossier's string | Ours | Why |
 |---|---|---|
 | `ואל הסערה – את כל האלים` | `וְאֵל הַסְּעָרָה – אֶת כָּל הָאֵלִים` | KBo 3.7 i 12 = IL 10 (DINGIR.MEŠ): unvocalized `ואל` / `האלים` read as "and to" / "these"; the Hittite tools' trap (law renderings §H6) requires `אֵל` / `אֵלִים` vocalized in a line with DINGIR. |
+| `ואִינָרָה [… ל]זִיגָּרָתָּה` | `ואִינָרָה [ל]זִיגָּרָתָּה` | KBo 3.7 i 19 = IL 16 (Round 5 run 2, translator 1): the gap between the goddess's name (preserved in KBo 3.7 i and ms D `{d}i-na-ra-a[š`) and the town holds only the preposition (TLHdig `_ (_)`, one or two signs; HPM restores *INA*): the dossier's `[…` suggests a lost word. |
 
 ## H9. Selftest (myth lines; `hittite_tools.py selftest`)
 | Line | Expect | Hebrew |
