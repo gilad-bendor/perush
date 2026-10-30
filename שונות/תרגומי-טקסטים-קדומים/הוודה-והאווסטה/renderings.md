@@ -98,6 +98,9 @@ rendered).
 | Ahura Mazdā | ` ahur\w* mazd` | `אֲהוּרָה מַזְדָּה` |  | (Vd) "the Wise Lord" |
 | Zaraθuštra | ` zarathustr` | `זָרָתוּשְׁטְרָה` |  | (Vd) |
 | Yima | ` yim(?:a\|o\|ai\|ahe\|em\|om\|e)\b` | `יִימָה` | ★ | (Vd) = Vedic Yama (a cognate pair: the note) |
+| Virāj | ` viraj` | `וִירָאג'` |  | (10.90.5) the female principle born from the Man |
+| the Sādhyas | ` sadhy` | `הַסָּאדְהְיָה` |  | (10.90) a class of ancient gods |
+| Mārtāṇḍa | ` martand` | `מָארְטָאנְדָּה` |  | (10.72.8–9) "from the dead egg" |
 | Ārmaiti | ` a?ra?mait` | `אָרְמַאִיטִי` |  | (Vd 2.10) the earth's goddess, "Right-mindedness" |
 | Airyana Vaējah | ` airii?ene vaejah` | `אַירְיָנֶם וַאֵגָ'ה` |  | (Vd 2.20) "the Aryan Expanse" |
 
@@ -312,3 +315,20 @@ where the fire-offering is near.
   the apparatus; an open question for the user); *loká* = `עוֹלָם`, so that *rájas* keeps `מֶרְחָב` alone.
 - Tool fixes (2026-10-30): the Himavat regex no longer matches the adjective *himávant* "snowy"; the `עולה` gate blocks
   only the cult forms (`העולה`, `עולות`, `לעולה`), not the participle "rising".
+
+### 11.2 RV 10.90, RV 1.32 (translator 1, part 2; merged 2026-10-30)
+- Also from part 1: *mahimán* `גדולה`, *mahitvá* `גודל`; *tuchyá* `ריקות`; √*guh* `חבוי`; ápi √*dhā* `סגור`; *addhā́*
+  `בוודאות`; *aṅgá* `אכן`; *ádhyakṣa* `המשגיח`; *manīṣā́* `תבונה`; *tadā́nīm* `אז`, *tárhi* `באותה עת`; *rā́jan* `מלך`;
+  *jágat* `העולם הנע`; √*īś* `שלט`; *dvipád / cátuṣpad* `בעל שתי הרגליים / בעל ארבע הרגליים`; *bála* `כוח`; *br̥hánt*
+  `רם`; *pradíś* `כיוונים`; *tīvrá* `חריף`; √*nr̥t* `רקד`; *bhúvana* `ההוויות` (not `עולם`, which is *loká*'s: 10.72.7b
+  changed); *saṃvatsará* `שנה`; *rā́trī* `לילה`; the closing formula *vayáṃ syāma pátayo rayīṇā́m* `נהיה נא אדוני עושר`.
+- 10.90: *púruṣa* `אדם` (the name Puruṣa in a note and footnote); √*tan* + *yajñá* `פרש (זבח)`; *yajñéna yajñám
+  ayajanta* `בזבח זבחו האֵלִים את הזבח`; *sarvahút* `נוסך הכל`; *amr̥tatvá* `אלמוות`; *ánna* `מזון`; *pā́da* (quarter)
+  `רבע`; *ā́jya* `חמאה מזוקקת`; *idhmá* `עצים`; *samídh* `זרד`; *paridhí* `מקל־גדר`; *barhís* `מצע העשב`; the classes
+  `בְּרַהְמִין`, `רָאגַ'נְיָה`, `וַאישְׁיָה`, `שׁוּדְרָה`; names Virāj `וִירָאג'`, the Sādhyas `הַסָּאדְהְיָה` (added to §3.1).
+- 1.32: *vŕ̥ṣan* `פר`; *maghávan* `בעל־השפע`; *sā́yaka* `חץ`; *suta* `סחוט`; *tríkadruka* `שלושת הגביעים`; √*han* `הרג`,
+  but `הנחית` where the object is the weapon (7b); √*pr̥tany* `ערך קרב`; √*yudh* `נלחם`; √*ji* `ניצח`; *vyàṃsa*
+  `פרוש־הכתפיים`; *vadhá* `נשק הקטל`; *vatsá* `עגל`; *vidyút* `ברק`, *tanyatú* `רעם`, *míh* `ערפל`, *hrādúni* `ברד`;
+  *śyená* `נץ`; *carṣaṇí* `עמים`. The dossier's 1.32 revised in 5a and 5d (both files identical: `verify RV1.32`).
+- Tool fixes: the `עפר` licence no longer includes *reṇú* (`אבק`); the כפר gate allows the simile "like a bull / cow"
+  where the source has *iva* / *ná* with a cattle word.

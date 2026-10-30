@@ -477,7 +477,7 @@ RESERVED = [
     (W + alt("נשמה", "נשמת", "נשמתו", "נשמות", "הנשמה") + E, None, "נְשָׁמָה never: prāṇá = נְשִׁימָה, √an = נָשַׁם, ātmán = נֶפֶשׁ (Gen 2:7 in the apparatus)"),
     (W + alt("ערוה", "ערות", "ערוות", "ערותה", "ערותו") + E, None, "עֶרְוָה never (Lev 18 in the apparatus)"),
     (W + alt("מאור", "מאורות", "המאורות", "המאור", "מאורים") + E, None, "מָאוֹר never (sū́rya = שֶׁמֶשׁ, candrámas = יָרֵחַ)"),
-    (W + alt("כפר", "כפרה", "כופר", "יכפר", "הכפורים", "כפורים") + E, None, "the root כפר never"),
+    (W + alt("כפר", "כפרה", "כופר", "יכפר", "הכפורים", "כפורים") + E, r"(?:iva| na |nna ).*(?:gav| go| ga| dhen|vrs|vats|usr)|(?:gav| go| ga| dhen|vrs|vats|usr).*(?:iva| na )", "the root כפר never – except the simile כְּ־ + פַּר / פָּרָה 'like a bull / cow' where the source has iva / ná with a cattle word (write it vocalized)"),
     # --- only for the source's own counterpart (renderings §5.2) ---
     (W + alt("נחש", "הנחש", "נחשים", "הנחשים", "נחשי", "נחשה") + E, r" ahi| ahe| azh| azi| sarp| ahin", "נָחָשׁ only for áhi / Av. aži / sarpá"),
     (W + alt("חושך", "חשך", "החושך", "החשך", "חשכה", "חשיכה", "בחושך", "בחשך", "מחושך") + E, r"tama|tamis|tamas|andha|temah|tqma|tqm", "חֹשֶׁךְ only for támas / andhá (Av. təmah)"),
@@ -485,7 +485,7 @@ RESERVED = [
     (W + alt("זרע", "הזרע", "זרעו", "זרעים", "זרעה", "זרעם", "לזרע", "מזרע") + E, r"ret|bij|taoxm|tauxm|taox|garbh|vap", "זֶרַע only for rétas / bī́ja / Av. taoxman (and √vap 'sow')"),
     (W + alt("קשת", "הקשת", "קשתו", "בקשת", "קשתי") + E, r"dhanu|dhanv|thanva|indradhan", "קֶשֶׁת only for dhánus (Gen 9:13 in the apparatus)"),
     (W + alt("איל", "האיל", "אילים", "האילים") + E, r"mes|vrsn|aja |ura", "אַיִל only for meṣá (ram)"),
-    (W + alt("עפר", "העפר", "עפרה", "לעפר") + E, r"pams|renu|panc|pasu", "עָפָר only for pāṃsú / reṇú (dust)"),
+    (W + alt("עפר", "העפר", "עפרה", "לעפר") + E, r"pams|panc", "עָפָר only for pāṃsú (reṇú = אָבָק, §11.1)"),
     (W + alt("אדמה", "האדמה", "באדמה", "לאדמה", "אדמתו", "מאדמה", "מהאדמה") + E, r"bhum|bhu|zam|zem|kse|ksa|ksm", "אֲדָמָה only for bhū́mi (and Av. zam 'ground' where by sense)"),
     (W + alt("אדם", "האדם", "לאדם", "באדם", "מאדם", "כאדם") + E, r"purus|purs|puru|nar|nr|mas|masy|purusa", "אָדָם only for púruṣa (Av. maṣ̌iia 'man')"),
     (W + alt("טוב", "טובה", "טובים", "טובות", "הטוב", "הטובה", "הטובים", "הטובות", "טובו", "טובת", "מיטב", "היטיב", "וטוב") + E,
