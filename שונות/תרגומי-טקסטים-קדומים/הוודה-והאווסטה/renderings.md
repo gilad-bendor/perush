@@ -376,3 +376,11 @@ where the fire-offering is near.
   transliterated in the funeral hymns; 10.10.14d `הסכמה טובה מאוד` kept, with its note that the echo of Gen 1:31 exists
   only in Hebrew.
 - Tool fixes: `בֶּרֶךְ` "knee" licensed by *jā́nu*; the `טוב` licence covers *vásiṣṭha*.
+
+### 11.6 The gambler and the frogs: RV 10.34, 7.103 (translator 4, part 2; merged 2026-10-30)
+- *akṣá* `קובייה` (feminine), *kitavá* `מהמר`, √*dīv* `הימר`, √*krīḍ* `שיחק`, *íriṇa* `גומת ההימור`, *sabhā́*
+  `בית־הוועד`, *babhrú* `החומות`, *vrā́ta* / *gaṇá* `להקה`; *maṇḍū́ka* `צְפַרְדֵּעַ` (feminine verbs, as Exod 8:2);
+  *ugrá* `עז`, *dhr̥ṣṇú* `נועז` (RV 10.16.7c changed); *manyú* `כעס`; *mitrá* (friendship) `רעות`; *kr̥ṣí* / √*kr̥ṣ*
+  `חריש` / `חרש`; *vā́cam akrata* `השמיעו קול`. Names: Mūjavant `מוּגַ'וַנְט`; *vibhī́daka* `וִיבְּהִידַקָה`.
+- **Rulings:** *vratá* splits by sense – a god's ordinance `תקנה`, a person's observance `נדר` (*vratacārín*
+  `מקיימי־נדר`); RV 10.34.11d keeps `אַגְנִי` (in the RV the fire is the god: renderings §3.2).
