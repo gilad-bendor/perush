@@ -184,7 +184,7 @@ New terms that a later text of any corpus may need: *nam-ḫe₂* = `שגשוג`
 | 197 | *zag-mu-ka* | בתקופת השנה | `וְחַג הָאָסִיף תְּקוּפַת הַשָּׁנָה` (שמות לד:כב) | [equivalent] | The ingathering at the turn of the year. |
 | 209 | *uĝ₃-il₂* | הסבל | `וַיְהִי לִשְׁלֹמֹה שִׁבְעִים אֶלֶף נֹשֵׂא סַבָּל` (מלכים א ה:כט) | [equivalent] | Porters of royal building. |
 | 210 | *baḫar₂ im ba-al* | הקדר – טיט חופר | `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה` (בראשית ב:ז) | [divergence] | The potter and his clay are only a craftsman here; `יוֹצֵר` is not used (reserved). |
-| 213 | *muḫaldim* | טבח | `לְרַקָּחוֹת וּלְטַבָּחוֹת וּלְאֹפוֹת` (שמואל א ח:יג) | [equivalent] | The royal kitchen. |
+| 213 | *muḫaldim* | מבשל | `לְרַקָּחוֹת וּלְטַבָּחוֹת וּלְאֹפוֹת` (שמואל א ח:יג) | [equivalent] | The royal kitchen. |
 | 215 | *sed₄* | בקור | `וְקֹר וָחֹם` (בראשית ח:כב) | [equivalent] | Cold = Winter's season. |
 | 220 | *muru₉ … ḫe₂-ĝal₂ an-na* | העב … שפע השמים | `הִנֵּה עָב קְטַנָּה כְּכַף אִישׁ עֹלָה מִיָּם` (מלכים א יח:מד) | [equivalent] | The rain-cloud. |
 | 227 | *gu₇ naĝ gal-gal-e ba-tuš-en* | לאכילה ולשתייה גדולות ישבת | `וַיֵּשֶׁב הָעָם לֶאֱכֹל וְשָׁתוֹ` (שמות לב:ו) | [equivalent] | Sitting down to the feast (Summer's season). |

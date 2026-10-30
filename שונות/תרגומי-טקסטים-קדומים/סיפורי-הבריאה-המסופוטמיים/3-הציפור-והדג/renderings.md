@@ -80,7 +80,7 @@ Lemmas: ETCSL's TEI lemmas (ORACC has no text of 5.3.5). "Lines" = ETCSL labels.
 | *tur₃*; *amaš*; *sipad*; *unud* | רפת; דיר; רועה; בוקר | [equivalent] ↔ ד:ב; עמוס ז:יד | | 9 |
 | *e₂-gal* | היכל | [cognate] (*ekallu* > `הֵיכָל`) | Decision 4. | 40 var., 45A, 73, 173 |
 | *kisal*; *kisal-luḫ* | חצר; מטאטא החצר | | | 38, 39, 74, 88, 89 |
-| *muḫaldim*; *lunga₃*; *i₃-du₈* | אופה; מבשל השכר; שוער | | | 90 |
+| *muḫaldim*; *lunga₃*; *i₃-du₈* | מְבַשֵּׁל (2026-10-30 harmonization, was אופה); מבשל השכר; שוער | | `אוֹפֶה` is Akk. *ēpû*'s cognate; `טַבָּח` is *ṭabāḫu*'s | 90 |
 | *banšur*; *ĝišbun*; *kiĝ₂-sig*; *unu₂* | שולחן; משתה; סעודת הערב; אולם | | | 68, 169, 172, 174 |
 | *me-te*; *ḫe₂-du₇* | עדי; תפארת | | | 50, 73, 74, 168, 172 |
 | *maḫ*; *nam-maḫ*; *gal-zu*; *gur₄* | נשגב; רוממות; בקי; עבה / עובי | | | 17, 31, 57, 63, 70, 79, 81, 91, 100, 128, 136, 142, 159, 166 |
@@ -99,6 +99,7 @@ Lemmas: ETCSL's TEI lemmas (ORACC has no text of 5.3.5). "Lines" = ETCSL labels.
 | *ud ul re*; *ud ul-le₂-a* | הימים ההם הרחוקים | | Never `עולם`. | 1, 134 |
 
 ## Changelog
+- **2026-10-30 harmonization** (`../../harmonization--2026-10-30.md`, row 4): *muḫaldim* = `מְבַשֵּׁל` (was `אופה`): 90 `האופה, מבשל השכר` → `המבשל, מבשל השכר` (gloss and note; *lunga₃* keeps `מבשל השכר`).
 - 2026-10-21 harmonization (cross-corpus decisions): *ur₄* = `אָסַף` (5 `קיבץ וקיבץ` → `אסף ואסף`); `הַסַּפִּירִי` vocalized at 96, its note completed; `אינאנה` in the apparatus → `אִינַנָּה`; *mušen* = `צִפּוֹר` now in all corpora (open decision 1 settled).
 - 2026-10-19: created by the coordinator (empty).
 - 2026-10-19: translator, run 1 (whole text): names, formulas and terms above.

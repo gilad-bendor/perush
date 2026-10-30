@@ -94,7 +94,7 @@ Vocalize at the first occurrence in each file; **always** where marked ★ (they
 | *zikurrudû* | זִיקוּרוּדָא | Transliterated ("cutting of the throat": magic that cuts off life); note. |
 | *dibalû* | עִוּוּת דִּין | ↔ איוב ח:ג `הַאֵל יְעַוֵּת מִשְׁפָּט` [equivalent] (`מִשְׁפָּט` reserved for *šipṭu*). |
 | *kadabbedû* | סְתִימַת פֶּה | ("seizing of the mouth", muteness). |
-| *šurḫungû* | הַשְׁקָטַת חֵמָה | |
+| *šurḫungû* | הַשְׁקָטַת לֵב (2026-10-30 harmonization, was `הַשְׁקָטַת חֵמָה`) | The literal Sumerian *šà-ḫun-ĝá* "heart-calming"; `חֵמָה` is *imtu*'s (III 14, 21); `כַּעַס` is *agāgu*'s, `נִרְגַּע` *pašāḫu*'s. |
 | *šabalbalû*; *ṣūd pānī* | שַׁבַּלְבַּלּוּ; סְחַרְחֹרֶת פָּנִים | |
 | *šanê ṭēmi*; *ṭēma šunnû* | שִׁנּוּי טַעַם; שִׁנָּה אֶת טַעְמוֹ | **[cognate idiom]** ↔ שמואל א כא:יד `וַיְשַׁנּוֹ אֶת טַעְמוֹ` (David feigning madness), תהלים לד:א: both words and the sense ("madness") match. A deliberate exception to the flood corpus's *ṭēmu* = `דַּעַת` (§6.7), for this idiom only; elsewhere *ṭēmu* by sense. |
 | *kipdu*; *kapādu* | מַחֲשָׁבָה; חָשַׁב | *ša ana lemutti ikpudūni* = `אֲשֶׁר לְרָעָה חָשְׁבוּ עָלַי` ↔ בראשית נ:כ `אַתֶּם חֲשַׁבְתֶּם עָלַי רָעָה` [equivalent]; ירמיהו יח:יח. |
@@ -292,7 +292,7 @@ files (`pars`, `incipits`).
 | VI 63 | kišpūša ruhûša rusûša upšāšûša lemnūti | `כן כשפיה, רירה, כבלה, מזימותיה הרעות` |
 | VII 52a | kišpī ruhû rusû up[šāšû lemnūti] | `כשפים, ריר, כבל, מז[ימות רעות]` |
 | I 89; IV 10 | ipšu bārtu amāt lemutti râmu zīru | `מעשה, מרד, דבר רעה, אהבה, שנאה,` |
-| I 90; IV 11 | dibalâ zikurudâ kadabbedâ šurhungâ | `עיוות דין, זִיקוּרוּדָא, סתימת פה, השקטת חמה,` |
+| I 90; IV 11 | dibalâ zikurudâ kadabbedâ šurhungâ | `עיוות דין, זִיקוּרוּדָא, סתימת פה, השקטת לב,` |
 | I 91 | šabalbalê ṣūd pānī u šanê ṭēmu | `שַׁבַּלְבַּלּוּ, סחרחורת פנים ושינוי טעם` |
 | IV 12 | šabalbalâ ṣūd pānī u šanê ṭēmu | `שַׁבַּלְבַּלּוּ, סחרחורת פנים ושינוי טעם` |
 | I 111; II 144 | muhalliq raggī zēr kaššāpi u kaššāpti | `מאבד הרשעים, זרע מכשף ומכשפה,` |
@@ -519,3 +519,5 @@ harmonization; settled 2026-10-23: `פֵּאֵר` / `תִּפְאֶרֶת` every
 2026-10-23 harmonization (rows 10, 18, 19): *dalālu* → `פֵּאֵר`, *dalīlu* → `תִּפְאֶרֶת`; *nissatu* → `יָגוֹן`, *ašuštu* → `דַּאֲבוֹן`; *bâʾu* → `עָבַר`. Changed lines: II 17, 75, 225 `את הלוליך אהלל` → `את תפארתך אפאר` (the three lines stay identical; II 225 is not in the table: the same formula); V 71, 72 `יגון` (*ašuštu*) → `דאבון`; VII 38 `(ו)הדאבון` → `(ו)היגון`, VII 125 `דאבון` → `יגון` (not in the table: the same *nissatu*); VII 13 `אל יחצו אליי את הפתח` → `אל יעברו אליי את הפתח`; IV 151 `כמי גאות אשטוף אותן` → `כמי גאות אעבור עליהן`; the introductions of V and VII. (The table's "Maqlû I 13, 17, 38, 71, 72, 75" are VII 13, II 17, VII 38, V 71, V 72, II 75.) New overlap inside Maqlû: `עבר` now renders both *bâʾu* (IV 151, VII 13) and *ebēru* (II 35 `העוברות`). `maqlu_tools.py` FORMULAS: the formula *dalīlīka ludlul* = `את תפארתך אפאר` added (§6 ★).
 
 2026-10-23 harmonization, batch C (row 19, revised): *bâʾu* "pass along, go" → `צָעַד` in every corpus; of water "sweep over" `שָׁטַף` (by sense). Changed lines: VII 13 `אל יעברו אליי את הפתח` (batch B; before it `אל יחצו אליי את הפתח`) → `אל יצעדו אליי בפתח` (*bāba* as an accusative of place, `ב־` as Etana's `בשער … – צעדו`); IV 151 `כמי גאות אעבור עליהן` (batch B) → back to `כמי גאות אשטוף אותן`. `עבר` is again *ebēru*'s alone (II 35 `העוברות`): the batch B overlap is gone. No `צעד` for another source word in Maqlû.
+
+- **2026-10-30 harmonization** (`../harmonization--2026-10-30.md`, rows 1, 2): *imtu* "venom" = `חֵמָה` [cognate] (construct `חֲמַת`; was `אֶרֶס`), *šurḫungû* = `הַשְׁקָטַת לֵב` (§2.2; was `הַשְׁקָטַת חֵמָה`). Changed lines: III 14 `בארסה גזרה את ההליכה` → `בחמתה גזרה את ההליכה`; III 21 `את ארסך יגזור` → `את חמתך יגזור`; I 90 = IV 11 `השקטת חמה` → `השקטת לב` (and §9's fixed-lines row); V 59 `את השקטת החמה` → `את השקטת הלב`; their glosses and notes (III 14, 21; I 90; V 59) and project.md's parallels rows III 14, I 90. V 134's note (Prov 15:1 `יָשִׁיב חֵמָה`, "השקטת החמה") describes the proverb, not this line's rendering: unchanged.
