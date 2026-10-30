@@ -10,14 +10,13 @@ AB 7.13–18, ŚB 1.2.3.6–9, KU 1 (vallīs 1–3). Base texts and line units: 
 
 <!-- The translators insert their sections here, above "## Parallels index". -->
 
-## SB1.2.3 6a–9b, AB7 13.1a–18.17a, KU1 1.1a–1.29b (translator 3, Round 5 run 1)
+## SB1.2.3 6a–9b, AB7 13.1a–18.17a, KU1 1.1a–3.17c (translator 3, Round 5 run 1)
 
 ### Scope
 The "binding" texts, drafted in the order SB1.2.3 → AB7 → KU1: ŚB 1.2.3.6–9 complete (8 TITUS sentences, Weber's
 accented text without word division; the two `...` of 6b expanded in `( )`); AB 7.13–18 complete (250 TITUS lines,
-prose and gāthās; TITUS has no 16.3 and no 18.15); KU vallī 1 complete (1.1a–1.29b, 59 half-verses). **KU vallīs 2–3
-(2.1a–3.17c, 83 lines) are not drafted**: a `<!-- טרם תורגם: 2.1a–3.17c -->` placeholder; `verify KU1` is clean
-without `--strict`. Files: `annotated-<KEY>.rtl.md`, `translation--intro-<KEY>.rtl.md`, the generated
+prose and gāthās; TITUS has no 16.3 and no 18.15); KU adhyāya 1 complete: vallī 1 (1.1a–1.29b, 59 half-verses) in part 1, vallīs 2–3 (2.1a–3.17c, 84
+half-verses; the base has no 2.15) in part 2, at the coordinator's request after the merge (renderings §11.4). Files: `annotated-<KEY>.rtl.md`, `translation--intro-<KEY>.rtl.md`, the generated
 `translation-<KEY>.rtl.md` and `translation.rtl.md`.
 
 ### Sources consulted
@@ -95,7 +94,38 @@ without `--strict`. Files: `annotated-<KEY>.rtl.md`, `translation--intro-<KEY>.r
   `(עד כאן דבריו.)` (and 15.7c `(אֵלֶּה שמותיהם.)`); F5 *sa hovāca* `אמר`; RV verses cited by their first words are given
   in quotation marks as titles, followed by `…`. `אֶל`, `אַל`, `אֵלֶּה`, `אֵלַי` vocalized throughout (the deva trap).
 
+### Decisions (part 2: KU vallīs 2–3)
+- **The pair śréyas / préyas = `הַטּוֹב` / `הַנָּעִים`** (2.1–2.2). The `טוֹב` gate's licence list (§7.2: *bhadrá,
+  vásu, vāmá, sādhú, su-* …; the regex has *sres*, *sri*, *jyes*) does **not** cover *śréyas* (folded *sreyas*): the
+  three lines carry `[היתר שער: הטוב – śréyas]`. Proposal: add *srey* to the licence. Rejected: `המועיל` (too
+  utilitarian), `המיטב` (gated too), `הטוב יותר` (heavy for a refrain). *préyas* `נעים`, not `אהוב`, though it is the
+  comparative of *priyá* (`אהוב`, kept in 2.3a): a recorded split, for the opposition's sake. *sādhú* in the same
+  line (2.1b) `ייטב לו`.
+- **The self and its ladder:** *ātmán* `נפש` throughout (also "the great self" `הנפש הגדולה`); *buddhí* `שכל`;
+  *mánas* `מחשבה`; *indriyá* `חוש` (`[היתר שם]` on the two lines where the Indra regex fires on *indriya*);
+  *vijñāna* `הבנה`; *ártha* `יעד` (2.1b "falls from the goal", 3.10a "the objects"); *avyakta* `הבלתי־גלוי`;
+  *púruṣa* `אָדָם` (3.11, the Person of RV 10.90); *pára* by sense (`מעל` in the ladder, `אחר`, `החוף`); *kā́ṣṭhā*
+  `קצה`; *bráhman* (n.) stays `נֹסַח` (2.16a, 2.25a, 3.2a; *brahmaloka* `עולם הנוסח`, *brahmavid* `יודעי הנוסח`) –
+  a deliberate choice so the reader sees the formulation become the absolute (noted at 2.16a); *akṣára*
+  `הבלתי־כלה` ("syllable" = *om* in the note).
+- **The chariot (3.3–3.9):** *rátha* `מרכבה`, *rathín* `בעל המרכבה`, *sā́rathi* `עגלון`, *pragraha* `מושכות`,
+  *háya* `סוס` (as *áśva*), *gocara* `מרעה`, *bhoktár* `הנהנה`; √*yuj* / *yukta* `רתם` / `רתום` (§11.6), and
+  *yoga* in 2.12b `רתימה` (the literal sense, noted); *saṃsāra* `הסבב`; *padá* `מדרך` (SB 1.8.1's word),
+  "Viṣṇu's highest step" `המדרך העליון של וִישְׁנוּ`.
+- **Other words:** *vidyā́* / *avidyā́* `ידיעה` / `אי־ידיעה`; *dhī́ra* and *vipaścít* `חכם`; *manda* `כסיל`;
+  *paṇḍita* `בקיא`; *medhā́* `דעת` (as *alpamedhas* `קטן־הדעת`; not *médha*); *prajñāna* `בינה`; *manīṣín*
+  `נבון` (*manīṣā́* `תבונה`, §11.2); *prā́jña* `נבון`; *nitya* / *a-nitya* `קבוע` / `לא קבוע`; *dhruvá*
+  `יציב`; *śāśvatá* `תמידי`; *sanātana* `הנצחי` (as MBh); *purāṇá* `קדמון`; *dhárma* `משפט` (2.14a; 1.21a's "matter"
+  `הדבר` is a split by sense); *krátu* `רצון`; *śúci* `טהור` (RV 10.17's `צח` split by sense); *kṣura* `תער`;
+  *gahvara* `מעמקים` (not `תהום`); *kṣatrá* `שלטון`; *odaná* / *upasecana* `דייסה` / `תבלין`; *vā́c* `דיבור`
+  (SB 1.8.1's `קול` by sense); √*yam* `ריסן`; *śrāddha* `מנחת האבות`; √*vad* `דיבר` kept (3.1b, 3.14b `כך מדברים`).
+  Name: Viṣṇu `וִישְׁנוּ`.
+
 ### Open decisions for the user
+- *śréyas* = `הַטּוֹב` with gate permits, pending a licence change (above).
+- KU 2.20b *dhātuprasādāt*: Hume's "through the grace of the Creator" (followed, `בחסד המעמיד`) or Śaṅkara's
+  "through the calm of the senses". KU 2.8b *ananyaprokte* (Hume followed). KU 3.14a *várān*: "the boons" (followed)
+  or Śaṅkara's "the excellent (teachers)".
 - 13.1a *rājāputra*: read *rājā aputraḥ* "a king without a son" (TITUS's long ā; the next sentence explains it); Keith
   reads *rājaputra* "the son of a king".
 - 15.1d *nānā śrāntāya*: Keith's "manifold is the prosperity of the weary" (followed) or Sāyaṇa's alternative *nā
@@ -104,7 +134,6 @@ without `--strict`. Files: `annotated-<KEY>.rtl.md`, `translation--intro-<KEY>.r
 - *jyaiṣṭhya* `בְּכוֹרָה` (a biblical status word for a Vedic one) vs a neutral `מעמד הגדול`; and *niṣ-√krī* `פָּדָה`.
 - KU 1.11a *matprasr̥ṣṭaḥ* (who is "dismissed by me": the father, or – emended – the boy); KU 1.27a statement or question.
 - *uṣṭra* "camel" (Eggeling) vs MW's Vedic "buffalo".
-- KU vallīs 2–3 remain to be translated.
 
 ### Progress log
 - 2026-10-30: drafted SB1.2.3 (one pass), then Eggeling; AB7 khaṇḍa by khaṇḍa (13, 14, 15, 16, 17, 18), each saved and
@@ -120,6 +149,12 @@ without `--strict`. Files: `annotated-<KEY>.rtl.md`, `translation--intro-<KEY>.r
   `עדיף` in both lines; *aputra* one Hebrew; ŚB's *ā-√nī* / *abhi-ghāraya* separated (`הביא` / `זילף`).
 - Review (c) Hebrew (the generated files read through): quotation marks of the gāthās and of KU's speeches completed;
   15.1d `רבת־פנים`; KU 1.25b `היפות` (not the ambiguous `הנאות`).
+- Part 2 (KU 2.1a–3.17c): read renderings §11.4–§11.6 and the `lexmap` first; drafted vallī 2 and vallī 3, each
+  saved, filled and verified; Hume after each. Gates met: *śréyas* `הטוב` (three permits); `בשבתו` "when he sits"
+  hit the שבת root (→ `כשהוא יושב`); the Indra regex on *indriya* (two `[היתר שם]`). Pass (a): Hume's readings
+  checked against the OCR before quoting. Pass (b): √*vad* aligned (`כך מדברים`), *sanātana* aligned with MBh,
+  *śā́nti* / *śānta* `שקט`. Pass (c): the speeches' quotation marks (2.13b closes Death's first speech, 3.1b's inner
+  quote single). `verify KU1 --strict`: no problems.
 - `check_bible_quotes.py` on all annotated, intro and generated files: 0 problems (one ketiv fixed, Gen 27:29). `verify
   SB1.2.3 AB7 --strict`: no problems; `verify KU1`: no problems (the placeholder noted). `build` run for the three KEYs.
 
@@ -149,6 +184,13 @@ without `--strict`. Files: `annotated-<KEY>.rtl.md`, `translation--intro-<KEY>.r
   sons to those who want them; the teller earns a thousand – the story of a son sold for three hundred.
 - **KU 1**: a boy confronts a father who gives worthless cows; he goes to Death, is a guest who must be "quieted"
   with water, and refuses sons, cattle, gold, long life and lovely women for one question: does a man exist after death?
+- **KU 2–3, Death's answer**: the good and the pleasant both "bind" (2.1); the self is smaller than the small and
+  greater than the great, unborn and undying – "if the slayer thinks he slays … neither understands" (2.18–19), the
+  last word of a dossier that began with a father sharpening a knife; it is not won by teaching or learning, it
+  *chooses* (√*vr̥*, the verb of the boy's three boons) whom it will (2.23); the self rides the body as a chariot,
+  the senses are horses, the mind the reins (3.3–9); the way is "the sharpened edge of a razor" (3.14, the same verb
+  *ni-√śā* as Ajīgarta's whetting); the knower is "freed from the mouth of Death" (3.15b = the boy's first boon,
+  1.11b); and Death himself is only the sauce on the rice of the priests and kings (2.25).
 
 ### Key parallels
 - [divergence] Gen 22:9 `וַיַּעֲקֹד` ↔ AB 16.1c–f: the father binds his son – for a hundred cows, when no priest will.
@@ -168,6 +210,12 @@ without `--strict`. Files: `annotated-<KEY>.rtl.md`, `translation--intro-<KEY>.r
 - [equivalent] Gen 9:25, 16:12, 21:13 ↔ AB 18.2b–d: rejected sons as ancestors of peoples on the margins.
 - [equivalent] Qoh 3:21 `מִי יוֹדֵעַ רוּחַ בְּנֵי הָאָדָם` ↔ KU 1.20a; 1 Kgs 3:11–13 ↔ KU 1.23–1.27 (long life and
   riches refused – here offered by Death to buy silence).
+- [equivalent] Deut 30:15, 19 (life and good, death and evil … choose life) ↔ KU 2.1–2.2: two ways and a choice –
+  but between the good and the pleasant, not good and evil.
+- [equivalent] Job 28:12, 23 (where is wisdom found … God understands its way) ↔ KU 2.9a, 2.23: knowledge not won by
+  search; in Job God knows its place, in the Kaṭha the self chooses whom it will.
+- [divergence] Qoh 12:7 (the spirit returns to God who gave it) ↔ KU 2.18: the self was never born and returns nowhere.
+- [divergence] Ps 32:9 (horse and mule, bit and bridle) ↔ KU 3.3–3.6, the chariot; Prov 4:18–19 ↔ 3.14b (the path).
 
 ### Proposals for the shared renderings
 - §5.4 additions: *ni-√dā* "bind" `כפת` (RV 5.2.7's *nidita*); *śā́sa* "knife" `סַכִּין` (distinct from *así*
@@ -183,6 +231,10 @@ without `--strict`. Files: `annotated-<KEY>.rtl.md`, `translation--intro-<KEY>.r
 - *médha* stays `לְשַׁד הַזֶּבַח`; *médhya* `ראוי לזבח` (AB 14.3c…) rather than the root קדש that §7.2 licenses for it –
   a proposal: keep קדש for *yajñíya* only, so that *médhya* stays visibly "full of *médha*".
 - *mr̥tyú* as a common noun (*janmamr̥tyū*) `מָוֶת` too, vocalized, as the name.
+- Part 2: add *srey* to the `טוֹב` licence (the pair *śréyas* / *préyas* `הַטּוֹב` / `הַנָּעִים`, fixed); *buddhí*
+  `שכל`, *indriyá* `חוש`, *vijñāna* `הבנה`, *vidyā́* `ידיעה`, *saṃsāra* `סבב`, *akṣára* `הבלתי־כלה`, *nitya* `קבוע`,
+  *rátha* / *sā́rathi* `מרכבה` / `עגלון`, *padá* `מדרך`; *bráhman* (n.) `נֹסַח` also in its Upaniṣadic sense;
+  the Indra regex should skip *indriya* (as the Himavat regex skips *himávant*).
 - Names: those listed under Decisions (Devarāta `דֵּוַרָאטָה`, Jamadagni `גַ'מַדַגְנִי`, Ayāsya `אַיָאסְיָה`, Gautama
   `גָּאוּטַמָה`, Madhuchandas `מַדְהוּצְ'נְדַס` …) into §3.1; Uṣas `שַׁחַר` and the Viśve Devāḥ `כָּל־הָאֵלִים` as names.
 

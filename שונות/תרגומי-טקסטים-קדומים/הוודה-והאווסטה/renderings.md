@@ -56,7 +56,7 @@ rendered).
 ### 3.1 The table
 | Source name | folded regex | Hebrew | ★ | Note |
 |---|---|---|---|---|
-| Indra | ` indr` | `אִינְדְּרָה` |  | the storm and warrior god; Av. Indra a demon (Vd 10.9) |
+| Indra | ` indr(?!iy)` | `אִינְדְּרָה` |  | the storm and warrior god; Av. Indra a demon (Vd 10.9) |
 | Vṛtra (RV 1.32) | ` vrtr` | `וְרִטְרָה` |  | "the Obstruction" (√*vr̥* "cover, block"); the dossier's form |
 | Tvaṣṭṛ | ` tvast` | `תְּוַשְׁטָר` |  | the divine craftsman (the dossier's form) |
 | Dānu (1.32.9) | ` danu` | `דָּאנוּ` |  | Vṛtra's mother |
@@ -384,3 +384,11 @@ where the fire-offering is near.
   `חריש` / `חרש`; *vā́cam akrata* `השמיעו קול`. Names: Mūjavant `מוּגַ'וַנְט`; *vibhī́daka* `וִיבְּהִידַקָה`.
 - **Rulings:** *vratá* splits by sense – a god's ordinance `תקנה`, a person's observance `נדר` (*vratacārín*
   `מקיימי־נדר`); RV 10.34.11d keeps `אַגְנִי` (in the RV the fire is the god: renderings §3.2).
+
+### 11.7 The Kaṭha Upaniṣad, vallīs 2–3 (translator 3, part 2; merged 2026-10-30)
+- *śréyas* / *préyas* `הַטּוֹב` / `הַנָּעִים` (`נעים` split from *priyá* `אהוב`); *buddhí* `שכל`, *indriyá* `חוש`,
+  *vijñāna* `הבנה`, *avyakta* `הבלתי־גלוי`; *bráhman* `נֹסַח` also in the Upaniṣad (*brahmaloka* `עולם הנוסח`);
+  *akṣára* `הבלתי־כלה` (noted: also "syllable"); *rátha* `מרכבה`, *sā́rathi* `עגלון`, *pragraha* `מושכות`, *háya*
+  `סוס`, *gocara* `מרעה`, √*yuj* `רתם`, *yoga* `רתימה`; *saṃsāra* `הסבב`; *padá* `מדרך`; *nitya* `קבוע`, *dhruvá*
+  `יציב`, *dhárma* `משפט`; *kṣura* `תער`; *medhā́* `דעת`. The base (GRETIL) lacks KU 2.15 (noted at 2.14b).
+- Tool fixes: the `טוב` licence covers *śreyas*; the Indra name rule skips *indriya* "sense".
