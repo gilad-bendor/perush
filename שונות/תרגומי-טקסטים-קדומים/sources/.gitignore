@@ -94,3 +94,22 @@ CUC/*
 # The fifth-day dossier (Round 4 run 1, 2026-10-23): VedaWeb's TEI has copyrighted translation layers (only the Zurich
 # layer, CC BY 4.0, is committed, as rv_1.032--zurich.tsv); TLHdig's zip is ignored by *.zip (its CTH-321 files are committed)
 VedaWeb/*.tei
+
+# The Vedic and Avestan corpus (Round 5 run 1, 2026-10-30): TITUS forbids republication; GRETIL's HTML e-texts are
+# "reference only"; CAB's licence has no version; csl-orig's licence unchecked; Jamison's commentary ©; large PD OCR.
+# Committed: the READMEs, the VedaWeb Zurich TSVs (CC BY 4.0), the Kaṭha TEI and its TSV (CC BY-NC-SA).
+VedaWeb/*--translations.tsv
+TITUS/*
+!TITUS/README.md
+GRETIL/*
+!GRETIL/README.md
+!GRETIL/sa_kathopaniSad.xml
+!GRETIL/katha_1-3.tsv
+CAB/*
+!CAB/README.md
+Sanskrit-lexicon--csl-orig/*
+!Sanskrit-lexicon--csl-orig/README.md
+Jamison--Rigveda-commentary/*
+!Jamison--Rigveda-commentary/README.md
+Archive-org--PD-translations/*
+!Archive-org--PD-translations/README.md
