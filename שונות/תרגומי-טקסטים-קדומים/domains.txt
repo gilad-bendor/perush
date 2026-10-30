@@ -47,3 +47,7 @@ etext.old.no
 zh.wikisource.org
 isac.uchicago.edu
 # ^ Round 4 run 6 (Hittite): the Chicago Hittite Dictionary's free volumes (per word; PDFs on isac-assets.s3.amazonaws.com, above). hethport.net (the Mainz portal, its CHiL / BESRIT editions and the Konkordanz) and zenodo.org (TLHdig) are above.
+# Added 2026-10-30 (Round 5 run 1, the Vedic and Avestan corpus): the TITUS mirror (the ŚB and the Aitareya Brāhmaṇa;
+# local use only), Jamison's Rigveda commentary (UCLA). VedaWeb (GitHub raw), GRETIL, CAB and archive.org are above.
+titus.fkidg1.uni-frankfurt.de
+rigvedacommentary.alc.ucla.edu

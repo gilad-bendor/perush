@@ -230,6 +230,24 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 - **The Chicago Hittite Dictionary** (free volumes L–N, P, Š and the supplements): `isac.uchicago.edu/publications/hittite-dictionary-volume-{l-n,p,s}` → PDFs on `isac-assets.s3.amazonaws.com/isac-publications/chd_l-n.pdf`, `chd_p.pdf`, `chd_s.pdf`, `chds1/3/4/5/6.pdf`; **per word only** (its terms: no bulk extraction, no datasets; never committed).
 - **Not used (©, records only):** Hoffner 1997 (*The Laws of the Hittites*), Süel 1985, Taggar-Cohen 2006, Miller 2013 (WAW 31), Mouton 2016, Christiansen 2006 (StBoT 48), Bawanypeck 2005; Neufeld 1951 (English and Hebrew, not reached); Singer 2009 (`החתים ותרבותם`, Hebrew).
 
+### 4.4w Vedic and Avestan: the Rigveda, the Brāhmaṇas, the Mahābhārata, the Kaṭha Upaniṣad, the Vīdēvdād (`הוודה-והאווסטה/`; Round 5 run 1, 2026-10-30)
+- **VedaWeb** (`sources/VedaWeb/`): the Rigveda TEI, books 1, 7, 10 (git-ignored); per hymn the **Zurich text and
+  morphology** (CC BY 4.0) as committed TSVs (`rv_<B>.<HHH>--zurich.tsv`), and the translation layers (Griffith,
+  Grassmann – PD; Geldner, Elizarenkova – ©) as local TSVs. Made by `הוודה-והאווסטה/vedic_tools.py convert`.
+- **TITUS** mirror `titus.fkidg1.uni-frankfurt.de` (`sources/TITUS/`): Weber's accented ŚB (1.2, 1.8) and Aufrecht's AB
+  (7.13–18 = pages ab236–241); **no republication** → git-ignored; the only accessible e-text of the AB (GRETIL has none).
+- **GRETIL** (`sources/GRETIL/`): MBh 3 (BORI; "reference only", ignored), ŚB 1 (unaccented; ignored), the Kaṭha TEI
+  (CC BY-NC-SA, committed with its TSV; it lacks KU 2.15).
+- **CAB** (`sources/CAB/`): the Avestan linguistic corpus (Vd 2 complete, Geldner's numbering; licence "CC" without a
+  version → ignored) and the online dictionary API (`dictionary-data.xql`, op `word|search|glossary|lemma-words`: per-form
+  analyses with Bartholomae's lemmas).
+- **Dictionaries** (`sources/Sanskrit-lexicon--csl-orig/`): Monier-Williams and Grassmann from csl-orig on GitHub raw (the
+  Cologne site answers 403); ignored, per word.
+- **Rank 3** (`sources/Jamison--Rigveda-commentary/`, ©, ignored): Jamison's online commentary (2026-09 version), PDFs +
+  text; (`sources/Archive-org--PD-translations/`, ignored): Eggeling SBE 12, Keith HOS 25, Darmesteter SBE 4, Hume 1921,
+  Ganguli vols. 2–3, Bartholomae 1904 (OCR text).
+- Hebrew translations (Peter 2006, Fridman 2014; ©, Carmel) were not consulted.
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).

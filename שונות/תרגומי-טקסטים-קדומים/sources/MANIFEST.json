@@ -18779,6 +18779,682 @@
      "c845a23223bb9461eeb215f5ede0e223c8871473873c6123eadaeb72114fcd36"
     ]
    }
+  },
+  {
+   "id": "VedaWeb/rv_book_01.tei",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/VedaWebProject/vedaweb-data/main/rigveda/TEI/rv_book_01.tei",
+   "note": "VedaWeb TEI (Round 5 run 1); the TSVs are made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_book_01.tei": [
+     43847826,
+     "c5c18d89a415ea16917f0f63616ee9fff7e32c4828b67f1e7647d2d023bc984c"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_book_07.tei",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/VedaWebProject/vedaweb-data/main/rigveda/TEI/rv_book_07.tei",
+   "note": "VedaWeb TEI (Round 5 run 1); the TSVs are made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_book_07.tei": [
+     18936506,
+     "b182a5b4752f5aa2c02ae07828c9810015a1f30d12f7ffce7687051b36677fce"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_book_10.tei",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/VedaWebProject/vedaweb-data/main/rigveda/TEI/rv_book_10.tei",
+   "note": "VedaWeb TEI (Round 5 run 1); the TSVs are made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_book_10.tei": [
+     40017181,
+     "e2e4deebb0cb418fd6b10c48c08967353de2d5d70114042af93418c4e2907060"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/sbm002.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/sbm/sbm002.htm",
+   "note": "TITUS ŚB (local only)",
+   "files": {
+    "TITUS/sbm002.htm": [
+     201861,
+     "29fd941b7257ca163bc809c39eb186a890dacfa963c5cc36768d123e79e5f1c0"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/sbm008.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/sbm/sbm008.htm",
+   "note": "TITUS ŚB (local only)",
+   "files": {
+    "TITUS/sbm008.htm": [
+     176800,
+     "43335ac6083e4084d32ba175f7bb85b18d72502d2fcd4bb7a1e4e93f2d94a054"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab236.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab236.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab236.htm": [
+     19090,
+     "eb3f72bb0d396068c1400b4ce14e728aa7385e35100feeae4dd6a4cf2ea8615f"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab237.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab237.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab237.htm": [
+     19689,
+     "5c0600667eb50147c181e2275680d971501c509a9a455e57844f6e39cb5fb107"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab238.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab238.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab238.htm": [
+     24452,
+     "c671611a17dc0474f568a1f4217927cb9baef579fcfbab143b4f19176bef5512"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab239.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab239.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab239.htm": [
+     23527,
+     "3f4566cd9ed9ebc8e20518e4655f49ee01a80c9cb12c8f8392321af75a939b1e"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab240.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab240.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab240.htm": [
+     24862,
+     "4e07e9dee5ca952abca3097b7631253e2b4d387e63a5251359c9713449554150"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab241.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab241.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab241.htm": [
+     20018,
+     "7d1aa93a092d5654d73e72e76cf5ef367732dcb97007ab61490f52ee7a6100c6"
+    ]
+   }
+  },
+  {
+   "id": "GRETIL/mbh_03_u.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_03_u.htm",
+   "note": "GRETIL MBh 3 (reference only)",
+   "files": {
+    "GRETIL/mbh_03_u.htm": [
+     1980413,
+     "018668ae4468c0e14d557e4380e409144f68a53d3b76f941b345b7dba57884b8"
+    ]
+   }
+  },
+  {
+   "id": "GRETIL/sb_01_u.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/2_bra/satapath/sb_01_u.htm",
+   "note": "GRETIL ŚB 1 (reference only)",
+   "files": {
+    "GRETIL/sb_01_u.htm": [
+     239590,
+     "50aefd5a364efa688e3767ec407f143b5174726e79ed94f3bc65b9ce5526ab5b"
+    ]
+   }
+  },
+  {
+   "id": "CAB/cab_corpus_plain.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://cab.geschkult.fu-berlin.de/exist/apps/cab/modules/get_corpus_plain.xql",
+   "note": "CAB linguistic corpus",
+   "files": {
+    "CAB/cab_corpus_plain.txt": [
+     1302672,
+     "3533a77dc1ffd964e7a901a09d769000ccb3331ad3ee9de76b05c68dba30ba6b"
+    ]
+   }
+  },
+  {
+   "id": "CAB/cab_corpus.xml",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://cab.geschkult.fu-berlin.de/exist/apps/cab/modules/get_corpus_xml.xql",
+   "note": "CAB linguistic corpus (XML)",
+   "files": {
+    "CAB/cab_corpus.xml": [
+     2483582,
+     "be30e486d8f905e97aebe4bb6c3c5daf4e47824f43e0fd8e185a510a0d5de117"
+    ]
+   }
+  },
+  {
+   "id": "CAB/cab_corpus.json",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://cab.geschkult.fu-berlin.de/exist/apps/cab/modules/get_corpus_json.xql",
+   "note": "CAB linguistic corpus (JSON)",
+   "files": {
+    "CAB/cab_corpus.json": [
+     2249854,
+     "47085d3e9739a5152ff0949af11659ab105de601e7dd8d37a854ffb25e3d8add"
+    ]
+   }
+  },
+  {
+   "id": "Sanskrit-lexicon--csl-orig/gra.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02/gra/gra.txt",
+   "note": "Grassmann",
+   "files": {
+    "Sanskrit-lexicon--csl-orig/gra.txt": [
+     6339693,
+     "991cfc16b8524bbac0d11d11832e0a8c15e571df2d969c6a54cc6cfce6554874"
+    ]
+   }
+  },
+  {
+   "id": "Sanskrit-lexicon--csl-orig/mw.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02/mw/mw.txt",
+   "note": "Monier-Williams",
+   "files": {
+    "Sanskrit-lexicon--csl-orig/mw.txt": [
+     50163993,
+     "e4641dc4384de459408368a9b34b2a13c90a19b0ecd4671f92c055b7578d0129"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/I.1-99-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/I.1-99-9-25-26.pdf",
+   "note": "Jamison commentary (©, local)",
+   "files": {
+    "Jamison--Rigveda-commentary/I.1-99-9-25-26.pdf": [
+     1256408,
+     "9596b57d712d4d5305c8913eb82de9ef5827087a0bbd8ae4a83708ec08a3e70a"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/I.1-99-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "I.1-99-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/I.1-99-9-25-26.txt": [
+     653310,
+     "2a7ac332354b1db2edf8f2dd6830cbf438f7f0fbc3257cc1d9fd399627df36f9"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/VII.56–104-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/VII.56%E2%80%93104-9-25-26.pdf",
+   "note": "Jamison commentary (©, local)",
+   "files": {
+    "Jamison--Rigveda-commentary/VII.56–104-9-25-26.pdf": [
+     800778,
+     "6a977ec71f715d8566907f9ed02cedbc240d6e0cdecfdd811bfec052ad6e3aab"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/VII.56–104-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "VII.56–104-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/VII.56–104-9-25-26.txt": [
+     428694,
+     "f84350b4f788280968e973a67a55ed441939ded8559019cadaa0770f7727d13f"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/X.1–60-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/X.1%E2%80%9360-9-25-26.pdf",
+   "note": "Jamison commentary (©, local)",
+   "files": {
+    "Jamison--Rigveda-commentary/X.1–60-9-25-26.pdf": [
+     2013888,
+     "1dc5c4e398bdda7d0f88fdec4ca0bdb6d8330cd992a81ea25084108b19659018"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/X.1–60-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "X.1–60-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/X.1–60-9-25-26.txt": [
+     1172385,
+     "8046a46c142c5dd83b2836e34b7a01ded11bff7c7b878c9c42af16c2ad436e30"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/X.61–191-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/X.61%E2%80%93191-9-25-26.pdf",
+   "note": "Jamison commentary (©, local)",
+   "files": {
+    "Jamison--Rigveda-commentary/X.61–191-9-25-26.pdf": [
+     1948536,
+     "38cb6059b7b49eb15bb88c5f869ed4146564eacecf955263fdfb3483cea4ce31"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/X.61–191-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "X.61–191-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/X.61–191-9-25-26.txt": [
+     1190264,
+     "05784076a292baa3e8e32f24a67b72334d3f1f6526c0f559c8f7f7226dde2c38"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Eggeling-1882--SBE-12_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/in.ernet.dli.2015.238711/2015.238711.The-Satapatha-brahmana_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Eggeling-1882--SBE-12_djvu.txt": [
+     1081912,
+     "51a668876b18e9a3777b733f36095837c42a130558e2b14aa7250857f43afe8b"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Keith-1920--HOS-25_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/rigvedabrahmana00keitgoog/rigvedabrahmana00keitgoog_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Keith-1920--HOS-25_djvu.txt": [
+     1909025,
+     "f66017dd5ed275afb7c78170a5b80b9ba29c671ab302821edf4f9291392f3e99"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Darmesteter-1880--SBE-4_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/TheZendAvestaPart1TheVendidad/TheZendAvestaPart1TheVendidad_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Darmesteter-1880--SBE-4_djvu.txt": [
+     625919,
+     "7195851f730b255befe04abe9ba631c75868e0643c29a17ed7118471b77ed077"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Hume-1921--Upanishads_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/thirteenprincipa00hume/thirteenprincipa00hume_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Hume-1921--Upanishads_djvu.txt": [
+     1291813,
+     "ec0e1158460a6d8b547970f72308aa625009f5a08929fcf22bda742bfb96802b"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Ganguli--vol02_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/mahabharataofkri02royp/mahabharataofkri02royp_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Ganguli--vol02_djvu.txt": [
+     3021584,
+     "b1045baba131a8e26f99f09615178a594f7fb3b7127f920dad682d9f0ecea9a2"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Ganguli--vol03_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/mahabharataofkri03royp/mahabharataofkri03royp_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Ganguli--vol03_djvu.txt": [
+     2055934,
+     "6e00a0fcd2a581c0933382d15033d9501de7a5ebc158f345a4e18227110f4cff"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Bartholomae-1904_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/altiranischeswr00bartgoog/altiranischeswr00bartgoog_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Bartholomae-1904_djvu.txt": [
+     0,
+     "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/sb_1.8.1.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "TITUS/sb_1.8.1.tsv": [
+     3139,
+     "7a103677caabe823b615c5a516ded33ffd8f52415822952a606c0c382fea6dab"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/sb_1.2.3.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "TITUS/sb_1.2.3.tsv": [
+     1626,
+     "9a72c25d6a2b4f27b36858c46e5ba6e53cc5377dba4bcb3f15a2418ad849b625"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab_7.13-18.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "TITUS/ab_7.13-18.tsv": [
+     15322,
+     "470843484e7a6e328f5f9e87516b36c3da1ada23b93e004d8e51b9882ccd41a1"
+    ]
+   }
+  },
+  {
+   "id": "GRETIL/mbh_3.185.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "GRETIL/mbh_3.185.tsv": [
+     7035,
+     "b28783afa3b1785080640fb895d482d1a8220f8eba82d17c2dd94673f0d7d835"
+    ]
+   }
+  },
+  {
+   "id": "CAB/vd_2.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "CAB/vd_2.tsv": [
+     12513,
+     "ebf3ac73199971178f5e4955080980aab1264deb4cfd772a160bcbb3616d66e8"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_1.032--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_1.032--translations.tsv": [
+     20443,
+     "c015d8046e82d2e24d44f4be0c65e0597ef04c42f0f30e589b356b01e2a6b73c"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.010--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.010--translations.tsv": [
+     13552,
+     "a221216395037246d692e6a83b9df20282ecbeb24303aa7426303f2164151bd3"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.014--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.014--translations.tsv": [
+     15992,
+     "b5fe9ebc72df1e70108bd8b1f2b78acd0e1efb78b2aab3c0833b31aeae0b51b4"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.015--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.015--translations.tsv": [
+     13599,
+     "a55c181c9425030469c07afb4ebfea6ccbea5bce334c57f91026f745ad7ebdbf"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.016--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.016--translations.tsv": [
+     15030,
+     "ceeb41b43368761de4f73aab393da842a41c2110bfba85d0aaf0e931072874ea"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.017--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.017--translations.tsv": [
+     12877,
+     "4f2937f084212ea7707efcc3bb5b3ee24f9ce7c1fbfb2b043a3e55083495dcf8"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.018--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.018--translations.tsv": [
+     15159,
+     "37d4cdd28dd7e744b1a42278bcc1f4a9733bc97e06d58365af2d87f6aad8ca0d"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.034--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.034--translations.tsv": [
+     15886,
+     "e888ee92b70ac069459b70cb9fd8aff4087f43935f08eba7183afd9ef08e0455"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.072--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.072--translations.tsv": [
+     6215,
+     "2b63e1520dd2daa2d51b46e419bd97c8c06a60eb5069f0e2a4a95042c5cf30bc"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.090--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.090--translations.tsv": [
+     12390,
+     "5a03dea5a1b67e7b1080aefa535a394ef33543c3062651cf684721690367bdc8"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.121--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.121--translations.tsv": [
+     9528,
+     "0f78d1b387a398944c2b0456aa877661c48c47e05d8492258b724f14f96629c4"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.129--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.129--translations.tsv": [
+     7768,
+     "1e95aff68c28ca2737c4a9af95c4cbf8f0e90dc41b3d9524796df6cf758de73a"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.190--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.190--translations.tsv": [
+     2079,
+     "57b82b5090129a77097cb6a2c4f40d67d65aacfde545fb59b4ac361845a4f174"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_7.103--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_7.103--translations.tsv": [
+     11360,
+     "948d4b9375cd0389e186dde222872a0de7344bc6905225ee1717ffc78a8e4db6"
+    ]
+   }
   }
  ]
 }
