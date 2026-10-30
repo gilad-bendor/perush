@@ -78,6 +78,7 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | Appu's sons ḪUL-lu, NÍG.SI.SÁ | `רַע`, `יָשָׁר` (names, no article) | "Wrong" and "Right": `צַדִּיק` is reserved (§H3). Check the transliteration before believing this row. |
 | {URU}Zalpa, Kaneš, Neša, Tamarmara | `זַלְפָּה` ★, `קָנֵשׁ`, `נֵשָׁה`, `תַּמַרְמַרָה` | |
 | SR: {URU}Ebla, {URU}Ikinkal(i)š, Megi, Zazalla, Purra, Allani | `אֶבְּלָה`, `אִיקִינְקַלִּישׁ`, `מֶגִי`, `זַזַּלָּה`, `פּוּרָּה`, `אַלָּנִי` | Ebla's king, its orator, the captive leader; the Sun-goddess of the Earth (Allani). |
+| KU/UL (translator 2): {D}Nara, Napšara, Minki, Ammunki, Ammezzadu, Ninlil, Kulkulimma; Mount Kanzura, Mount Tašša; {D}A.GILIM, {D}KA.ZAL, {D}NAM.ḪÉ, {D}EN.KI; the bull Šeri; {URU}Urkiš; the *ikunta* lake; the scribes Ašḫapala, Tarḫuntaššu, LAMMA-SUM, Waršiya, Ziti | `נָרָה`, `נַפְּשָׁרָה`, `מִינְקִי`, `אַמּוּנְקִי`, `אַמֶּזַּדּוּ`, `נִינְלִיל`, `קוּלְקוּלִימָּה`; `הַר קַנְזוּרָה`, `הַר תַּשָּׁה`; `אַ־גִּילִים`, `קַזַל`, `שֶׁפַע` (a name, no article), `אֶנְקִי`; `שֵׁרִי`; `אוּרְקִישׁ`; `אגם אִיקוּנְתָה`; `אַשְׁחַפָּלָה`, `תַּרְחוּנְתַּשּׁוּ`, `קוּרוּנְטָה־פִּיָּה?`, `וַרְשִׁיָּה`, `זִיטִי` | NAM.ḪÉ "abundance" (= *iyatar*, the dossier's `שפע`) as a deity; A.GILIM untranslated (reading unknown). |
 
 ## M2. Key terms (Hittite → Hebrew)
 | Hittite | Hebrew | Rejected | Echo | Reason |
@@ -104,7 +105,7 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | *šarā ar-* "rise"; *ḫūdak* "at once"; *nuntarnu-* "hurry" | **קָם**; **חִישׁ**; **מִהֵר** | `מַהֵר` unvocalized (a trap: *kušata*) – write `חִישׁ` | | F36. |
 | GIŠ.ŠÚ.A "chair"; GIŠ.BANŠUR "table" (the welcome) | **כִּסֵּא**; **שֻׁלְחָן** | | [equivalent] ↔ `מִטָּה וְשֻׁלְחָן וְכִסֵּא` (מלכים ב ד:י) | F38: `כִּסֵּא לָשֶׁבֶת … שֻׁלְחָן לֶאֱכֹל`. |
 | *nekumant-* "naked" | **עָרוֹם** (gated) | | [equivalent] ↔ `וַיִּהְיוּ שְׁנֵיהֶם עֲרוּמִּים` (בראשית ב:כה) | Ištar before Ḫedammu and Ullikummi. |
-| *genu-* "knee" (Anu's, KU) | **בֶּרֶךְ** | (a euphemism kept literal; the note says what is meant) | [divergence] ↔ `וַיַּרְא חָם … אֵת עֶרְוַת אָבִיו` (בראשית ט:כב) | `עֶרְוָה` is reserved in every Hittite line. |
+| *paršina-* "loins" (Anu's, KU 35; corrected 2026-10-30 by translator 2: the "knees" of the older literature is a rejected emendation, CHD P); *genu-* "knee" (UL) | **מָתְנַיִם**; **בֶּרֶךְ** | | [divergence] ↔ `וַיַּרְא חָם … אֵת עֶרְוַת אָבִיו` (בראשית ט:כב) | `עֶרְוָה` is reserved in every Hittite line. |
 | *armai-* "be pregnant"; *ḫašš-* "give birth"; *šallanu-* "rear" | **הָרָה** ★ (vocalized); **יָלַד**; **גִּדֵּל** | | | |
 | NA₄ *kunkunuzzi-* "basalt (diorite)" | **בַּזֶּלֶת** | | | Ullikummi's stone. |
 | URUDU "copper"; ZABAR "bronze"; AN.BAR "iron" | **נְחֹשֶׁת**; **אָרָד** ★; **בַּרְזֶל** | | | The 2026-10-30 harmonization. |
@@ -130,8 +131,8 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | `\{d\}kul[il]?[td]d?a` | `קוּלִיתָּה` | | |
 | `ḫedamm` | `חֶדַמּוּ` | | |
 | `šertapšuruḫ` | `שֶׁרְתַּפְּשׁוּרוּחִי` | | |
-| `ul[lu]{1,2}kumm` | `אוּלִּיקוּמִּי` | | |
-| `upel+ur\|ubel+ur` | `אוּפֶּלּוּרִי` | | |
+| `ul+[iu]kumm` | `אוּלִּיקוּמִּי` | | (Round 5 run 2, translator 2: was `ul[lu]{1,2}kumm`, which missed *ullikummi*) |
+| `upel+[uū]r\|ubel+[uū]r` | `אוּפֶּלּוּרִי` | | (translator 2: *upellūri* with ū was missed) |
 | `impal+[uū]r` | `אִמְפַּלּוּרִי` | | |
 | `mukišan` | `מוּקִישָׁנוּ` | | |
 | `iršir` | `אִירְשִׁירָּה` | | |
@@ -163,6 +164,15 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | `\{uru\}a[bp]z[uū]w` | `אַבְּזוּוָה` | | |
 | `\{íd\}aranzaḫ` | `אַרַנְזַח` | | |
 | `\{íd\}m[aā]la` | `מָלָה` | | |
+| `kanzur\|ganzur` | `קַנְזוּרָה` | | Mount Kanzura (KU 57, 177–178; translator 2) |
+| `\{gu4\}š[eē]r` | `שֵׁרִי` | | Šeri, the Storm-god's bull (KU 85, 210, 221) |
+| `\{d\}napšar` | `נַפְּשָׁרָה` | | (KU 4, 77) |
+| `\{d\}ammunk` | `אַמּוּנְקִי` | | (KU 4) |
+| `\{d\}išḫar` | `אִישְׁחָרָה` | | Išḫara (KU 6; M1) |
+| `\{uru\}urkiš` | `אוּרְקִישׁ` | | Kumarbi's city (UL 1:15) |
+| `\{d\}ka\.zal` | `קַזַל` | | KA.ZAL (KU 118) |
+| `\{d\}en\.ki\b` | `אֶנְקִי` | | Enki = Ea (KU 225) |
+| `ašḫapal` | `אַשְׁחַפָּלָה` | | the scribe of KU (KU 287, 292) |
 
 ## H3. Reserved: never in a myth line (machine-read; the myth texts only)
 | Hebrew (regex on the unvocalized, bracket-free line) | Licence | Why |

@@ -60,7 +60,7 @@ identical Hebrew, in the same order** – find them with `data` ("identical" / "
   **The dossier's IL excerpt (IL 8–17 = KBo 3.7 i 9–20) is copied word for word** (`verify IL` compares them); a revision
   goes into `renderings.md` §H8, never into the dossier.
 - **KU, UL (Gen 6:1–4, 9:20–27, 11:1–9; Gen 1:6–8):** the generations of kings in heaven, each deposing the one before
-  (Hesiod's Theogony is translated in `../הסיודוס/`: compare with it in the apparatus); Kumarbi biting off Anu's "knees"
+  (Hesiod's Theogony is translated in `../הסיודוס/`: compare with it in the apparatus); Kumarbi biting Anu's loins (*paršina-*, KU 35; not "knees": a rejected emendation)
   (↔ Ham and Noah, and the rabbinic reading that Ham castrated his father, b. Sanh. 70a – say it is reception); a stone
   child who grows until he reaches heaven (↔ Gen 11:4) on the shoulder of the giant who carries heaven and earth; the old
   copper tool with which heaven and earth were once cut apart (↔ Gen 1:6–7: no `הִבְדִּיל`, no `רָקִיעַ`).
