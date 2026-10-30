@@ -80,7 +80,7 @@
 - **נוסחים:** זהה ל־AM 75.
 - **תרגומים:** Christiansen (HPM): "und es weiß wird,"
 
-## §3′ – גוף המלך יטהר
+## §3′ – גוף המלך יִטְהַר
 
 ### 11
 `ḪUL-uwašš=a UN{MEŠ}-aš ANZELLU ḫurkilaza paprannaza mulatnaza [_] NÍ.TE LUGAL QĀTAMMA parkuešdu`
@@ -117,7 +117,7 @@
 
 ### 15
 `{D}Zarnizaš {D}Tarpaddaššiš {D}Alāuwaimiš {D}Mammāimiš DINGIR{MEŠ}.LÚ{MEŠ} {GIŠ}ḫattalwanza GIM-an {GIŠ}SAG.KUL EGIR-pa nannāi`
-> "זַרְנִיזָה, תַּרְפַּתַּשִּׁי, אֲלַוַּיְמִי, מַמָּאִימִי, הָאֵלִים הזכרים – כשם שהבריח את המנעול בחזרה מרחיק,
+> "זַרְנִיזָה, תַּרְפַּתַּשִּׁי, אֲלַוַּיְמִי, מַמָּאִימִי, הָאֵלִים הזכרים – כשם שהבריח מרחיק את המנעול בחזרה,
 - **פירוק:** `{D}Zarnizaš` – Zarniza, voc. ("זַרְנִיזָה"); `{D}Tarpaddaššiš` – Tarpattašši ("תַּרְפַּתַּשִּׁי"); `{D}Alāuwaimiš` – Alauwaimi ("אֲלַוַּיְמִי"); `{D}Mammāimiš` – Mammāimi ("מַמָּאִימִי"); `DINGIR{MEŠ}.LÚ{MEŠ}` – "male gods" ("הָאֵלִים הזכרים"); `{GIŠ}ḫattalwanza` – ḫattalwant- "bolt, the bolting (piece)", nom. ("הבריח"); `GIM-an` – maḫḫan "as" ("כשם ש־"); `{GIŠ}SAG.KUL` – SAG.KUL (Akk. *sikkūru*) "lock, bar", acc. ("את המנעול"); `EGIR-pa` – "back" ("בחזרה"); `nannāi` – nanna- "drive, push (away)", pres. 3sg ("מרחיק", AM 33).
 - **נוסחים:** B שומר את סוף המשפט. בנוסח הראשון זַרְנִיזָה ותַּרְפַּתַּשִּׁי (AM 2, 31) ואֲלַוַּיְמִי ומַמַּאי (AM 77, 93) נזכרים לחוד; כאן הארבעה יחד, ו"מַמָּאִימִי" בצורתו הלוּוִית.
 - **תרגומים:** Christiansen (HPM): "„Zarniza, Tarpatassa, Alauwaima, Mamma, ihr männlichen Götter: Wie der Querbalkenriegel den Sicherungsriegel zurücklenkt" – "Wie der Querbalkenriegel den Sicherungsriegel zurücklenkt" – *SAG.KUL* אצלה "בריח הביטחון" (= *tarzu-*?); אנו `המנעול`.

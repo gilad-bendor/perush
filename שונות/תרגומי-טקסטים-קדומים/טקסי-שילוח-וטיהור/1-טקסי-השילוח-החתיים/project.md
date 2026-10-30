@@ -221,7 +221,7 @@ edition's textual notes before). Two `[היתר שם: …]` escapes (AM 93, 105)
 | The tin | `ומעט בְּדִיל – במיתר כורכת,` · `ואותו – אל האדונים, לימין, אל ידו ואל רגלו – מפנה.` | 34–35; 80–81; 160–161; AM2 18–19 (*ḫamank-* `קושרת`) |
 | The mouse | `ועוד: אותו מעליהם לוקחת הלאה;` · `ואותו מפנה אל העכבר הקטן;` · `"לקחתי מעליהם הלאה את הרעה,` · `ואותה הפניתי אל העכבר הקטן;` · `ואותה העכבר הקטן הזה אל ההרים הגבוהים, אל העמקים העמוקים, אל הדרכים הארוכות יישא!"` | 36–40; 82–86; 162–167; AM2 20–21 |
 | The release | `ואת העכבר הקטן משלחים הלאה.` / 3sg `… משלחת הלאה.` | 41; 87; 168 |
-| "Take him – another to eat" | `"X – את זה קח לך אתה!` (88 *penni*: `הסע`) · `ואילו לאכול – אחר נותנים לך!"` (89 `עֵז אני נותנת לך!"`) · `ואת השיירים מפזרת הלאה.` | 42–44; 88–89; 169–172 |
+| "Take him – another to eat" | `"X – את זה קח לך אתה!` (88 *penni*: `הסע`) · `ואילו לאכול – אחר אנו נותנים לך!"` (review (c)) (89 `עֵז אני נותנת לך!"`) · `ואת השיירים מפזרת הלאה.` | 42–44; 88–89; 169–172 |
 | The breads | `ועוד, במקום אחר – עלווה שָׂמָה;` / `ועלוות עצים שָׂמָה;` · `לחם עבה ארוך אחד – לָאֵלִים הזכרים של X – פורסת;` · `לחם עבה אחד – ל־X – פורסת;` · `ואותו על העלווה שָׂמָה.` | 45–46; 90–94; 173–177; 221–224 |
 | The meat portions | `את הכתף הימנית מבשלים;` · `ואת (נתח) היד – לָאֵלִים הזכרים שָׂמָה;` · `ואילו את נתח־המוּחְרַי – ל־X שָׂמָה;` · `את המותן – לְמַמַּאי שָׂמָה;` · `ועוד – מקריבה.` · `את הכתף השמאלית – כך מקריבה;` · `ואת הכבד – כך מקריבה.` · `קרסול ימני אחד, הקדמי – לָאֵלִים הזכרים שָׂמָה;` · `חצי ראש, את החזה, את הבטן […] שָׂמָה;` · `ומקריבה.` | 97–110; 178–189; 233–245 |
 
@@ -425,3 +425,47 @@ UDU.ŠIR / UDU.A.LUM are both "ram" (accepted; the breeding sense of UDU.ŠIR sh
 
 **For the coordinator (renderings.md):** R2 AS 16 string (`*סובב למטה*`); R1a "Fat and milk" → Ì `שומן` (the Laws), Ì.UDU `חֵלֶב` ★; the H6
 `חלב` trap's condition `\{uzu\}ì\b|\bì\b` now has no ritual line (only Ì.UDU); Part 4's "157 + *kattan*" is now true (`*מקרוב*`).
+
+### Review (c): Hebrew
+Written 2026-10-30 by the Hebrew reviewer. Method: each text read aloud as a continuous Hebrew text (the `>` lines and the `## `
+headings in order), checking clause order, agreement (Ambazzi feminine: a script listed every masculine form in AM / AM2 – only
+the fuller's subject `הוא`, the god's `סובב`, the imperatives and AM2 9 `מטהר`, all right), prepositions, ambiguous unvocalized
+words, register and Lev 14 / 16 phrasing; every 1pl / 2nd-person Hittite verb checked for a Hebrew pronoun. The פירוק glosses
+changed with every line. After the edits: `build`; `verify AS UH PU AM AM2 --strict` 0 problems (the AM 101 / 189 notice only);
+`selftest` 51 lines, 0 failures; `check_bible_quotes.py` 0 on the five annotated files, the six intros and the built files.
+**Changed: AS 5 lines, UH 1, PU 8, AM 5, AM2 1 (20 `>` lines), and 12 headings.**
+
+**Lines** (old → new; reason):
+- **Clause order** (Hittite S-O-V where Hebrew needs the verb earlier; images kept in order where Hebrew allows): PU 2 `[אם המלך את
+  א]רץ האויב מוחץ,` → `[אם המלך] מוחץ [את א]רץ האויב,`; PU 3 / 7 (the pair) `… הלאה יוצא` → `… [יוצא] הל[אה]` / `… יוצ]א [הלאה]`;
+  PU 8 `של הארץ – אסיר אחד ואשה אחת – תופסים;` → `אסיר אחד ואשה אחת של הארץ – תופסים;`; AM2 15 `כשם שהבריח את המנעול בחזרה
+  מרחיק,` → `כשם שהבריח מרחיק את המנעול בחזרה,`; AS 62 `עוד לא לוקח` ("not yet") → `לא לוקח אותם לו עוד` (*namma UL* "no more").
+- **Prepositions / grammar:** PU 14 `מלבישים לאיש` → `מלבישים את האיש`, PU 15 `ואילו לאשה –` → `ואילו את האשה –` (`הלביש` takes the
+  person as object, Gen 27:15, Exod 29:5; *ANA* is the Hittite case); PU 16 `ואל האיש המלך כך אומר:` → `ואל האיש – המלך כך אומר:`
+  (as PU 19; "the man the king" read as one phrase); AS 6 `כל אשר הם` → `יהיו אשר יהיו` (*kuiēš kuiēš* "whoever"); AS 9 `לא חשוב
+  מאומה.` → `אין (זה) חשוב במאומה.`; AS 11 `ואותו הוא מאגד` → `ואותו מאגד` (the 3sg prescriptions have no pronoun elsewhere).
+- **The 1pl present** (a bare participle reads as "they"): AM 43 `[א]חר נ[ות]נים [לך]!"` → `[א]חר אנו נ[ות]נים [לך]!"`, AM 171 `אחר
+  נותנים לך!"` → `אחר אנו נותנים לך!"` (*pīweni*). **A refrain, both copies changed** (89 is 1sg `אני נותנת` and stays); the
+  heading §11 with them. **For the coordinator:** the Part 3 refrain table (line "Take him – another to eat") now reads
+  `ואילו לאכול – אחר אנו נותנים לך!"`; no `renderings.md` string holds it (R1a names the refrain without Hebrew).
+- **Niqqud where a reading misleads:** AS 18, PU 43, AM 114 `לך` → `לְךָ` ("go" at the head of a speech); UH 23 `ושבעים` → `ושְׂבֵעִים`
+  ("seventy"); AM 155 `לאלה` → `לָאֵלֶּה` (a goddess beside the gods); AM 226 `ופטור` → `וּפְטוֹר` (the adjective "exempt").
+- **Headings:** PU §1 `הכה` → `מוחץ` (`הכה` is H3-reserved; *walḫ-*); AM §8, §18′, §38′ `אל תיאבקו` / `אל` → `אַל תיאבק` (the
+  line's singular); AM §27′ `דַּבֵּר טוב` → `אמור טוב` (the lines' *memai*; `דִּבֶּר טוֹב` would add Num 10:29 / Esth 7:9), §22′, §27′
+  `האלים` → `הָאֵלִים`, §43′ `לך` → `לֵךְ`, §30′ `קרבן` → `הקרבה` (`קָרְבָּן` rejected in R1); AS §7 `ומנחה` → `והקרבה`, §9 `לאלי` →
+  `לְאֵלֵי`; AM2 §3′ `יטהר` → `יִטְהַר` (as the line).
+
+**Read and left:** the dash-fronted O–V order throughout (the IN model; Hebrew allows it); AS 45 `מגיעים אותם` (*arnu-*, HL1
+`יַגִּיעַ`: one verb); AS 66 `שורפים אש` (*warnu-* `שרף`; `הבעיר` is H3-reserved); AS 60 `אף אחד לא` (IN 6.2); the refrains `ואת הרעה –
+מעליהם הלאה הרחק!`, `ואותה העכבר הקטן הזה … יישא!`, PU 45 `בחזרה … יישא!` (fixed strings, poetic order). No Lev 14 / 16 phrasing
+found in the lines beyond the gated, intended verbs (`שִׁלַּח`, `נשא`, `שָׂמִים … את ידיהם` with `אל`, not `על`).
+
+**The introductions** (new): `translation--intro-AS.rtl.md`, `-UH`, `-PU`, `-AM`, `-AM2` (title line = the annotated title without
+"– תרגום מבואר"; 3 paragraphs each: the rite, carrier and destination; the expert, the NS manuscripts, the HPM editor, CC BY-SA 4.0,
+the clause numbering, the brackets; one or two Bible comparisons, typological unless Wright 1987 / Janowski & Wilhelm 1993 are
+named) and the project's `translation--intro.rtl.md` (the corpus and its shared logic, the editions and numbering, the brackets
+table, the fixed words `מגפה`, `אֵל`, `שִׁלַּח`, `נשא`, `בָּר`, `ארץ האויב`, and the Bible comparison left to the apparatus). Verses
+quoted, each printed first: Lev 16:22; Lev 14:4, 14:7; 1 Sam 5:11, 6:4, 6:8. **Gate check of the intros:** a script stripped niqqud
+(keeping the maqaf, `[֑-ֽֿ-ׇ]`) and the backticked quotations, and applied all 44 H3 regexes of both renderings files to every line:
+2 hits in the first draft (`מדבר` "speaks", AS and UH: rewritten `מספר`), then 0. Reserved words (`שָׂעִיר`, `עֲוֹנֹתָם`, `אֶרֶץ
+גְּזֵרָה`, `תוֹלַעַת`, `אֵזֹב`) occur only inside the quoted verses.

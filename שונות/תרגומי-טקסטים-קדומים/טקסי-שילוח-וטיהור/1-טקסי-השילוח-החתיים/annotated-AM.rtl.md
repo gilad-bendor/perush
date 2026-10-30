@@ -230,7 +230,7 @@
 - **תרגומים:** Christiansen (HPM): "[so sollen die Götter die böse inan-Krankheit dieses M]ensch[en aus dem Körper] ebenso [ent]fern[en]!" – "die böse inan-Krankheit" – כמונו (`החולי הרע`); "entfernen" ל־*parkunu-*; אנו `יטהרו` (R1, הפועל של הטיהור).
 - **הערות:** *maḫḫan … QĀTAMMA* – "כשם ש… כך": את ה"כך" (*QĀTAMMA*) שבסוף הפסוק החתי מקדימה העברית לראש המשפט (`[כך]`), וחוזרת עליו בסופו כדי לשמור על הסדר. *inan* "חולי": הרעה והחולי הם דבר אחד – הלכלוך שבגוף.
 
-## §8 – "אל תיאבקו בהם עוד"
+## §8 – "אַל תיאבק בהם עוד"
 
 ### 31
 `{D}Zarnizaš {D}Tarpattaššiš lē=war=[uš] namma zaḫḫiškiši17`
@@ -313,7 +313,7 @@
 - **הקבלה:** [equivalent] `וְנָשָׂא הַשָּׂעִיר עָלָיו אֶת כָּל עֲוֹנֹתָם אֶל אֶרֶץ גְּזֵרָה` (ויקרא טז:כב) – אותו פועל ("יישא"), ואותו יעד מנותק. [divergence] כאן הנושא עכבר, והיעד מתואר בשירה – הרים גבוהים, עמקים עמוקים, דרכים ארוכות – ולא "ארץ" אחת. טיפולוגי.
 - **הערות:** שלוש תמונות של מרחק: למעלה (ההרים), למטה (העמקים), לאורך (הדרכים). העכבר יישא את הרעה אל מעבר לעולמו של האדם, אל מקום שאין בו בני אדם. זה פזמון חוזר (40, 86, 167), אחד היפים בטקסים החתיים.
 
-## §11 – שילוח העכבר: "קח אותו, אחר נותנים לך לאכול"
+## §11 – שילוח העכבר: "קח אותו, אחר אנו נותנים לך לאכול"
 
 ### 41
 `[nu PÉ]Š.TUR arḫa tarnanzi`
@@ -331,8 +331,8 @@
 
 ### 43
 `adanna=ma=[tta dama]īn [pī]weni`
-> ואילו לאכול – [א]חר נ[ות]נים [לך]!"
-- **פירוק:** `adanna=ma` – ed- "eat", inf. + =ma "but" ("ואילו לאכול"); `=[tta` – "to you" (restored; "[לך]"); `dama]īn` – damai- "other", acc. (partly restored; "[א]חר"); `[pī]weni` – pai- "give", pres. 1pl (partly restored; "נ[ות]נים").
+> ואילו לאכול – [א]חר אנו נ[ות]נים [לך]!"
+- **פירוק:** `adanna=ma` – ed- "eat", inf. + =ma "but" ("ואילו לאכול"); `=[tta` – "to you" (restored; "[לך]"); `dama]īn` – damai- "other", acc. (partly restored; "[א]חר"); `[pī]weni` – pai- "give", pres. 1pl (partly restored; "אנו נ[ות]נים").
 - **תרגומים:** Christiansen (HPM): "Zu essen aber[ geb]en wir [dir eine and]ere!“"
 - **הערות:** "ניתן לך אחר לאכול" – בעלי החיים שיוקרבו בסבב (העֵז לאֲלַוַּיְמִי, 89, 95). האלים רעבים, והטקס מאכיל אותם – כמו אצל אַשְׁחֶלָּה.
 
@@ -560,7 +560,7 @@
 - **תרגומים:** Christiansen (HPM): "so sollen ebenso die Götter die böse inan-Krankheit [diese]s Menschen aus dem [Körp]er entfernen!“"
 - **הערות:** זהה ל־30 (שם משוחזר).
 
-## §18′ – "אל תיאבק בהם עוד" – לאֲלַוַּיְמִי
+## §18′ – "אַל תיאבק בהם עוד" – לאֲלַוַּיְמִי
 
 ### 77
 `[{D}Al]auwaimi lē=aš namma zaḫḫiškiši`
@@ -652,7 +652,7 @@
 - **הקבלה:** [divergence] `שְׁנֵי שְׂעִירֵי עִזִּים לְחַטָּאת` (ויקרא טז:ה) – גם כאן עז (נקבה), אבל היא לא נושאת את הרעה: העכבר נושא, והעֵז היא מזון לאל. טיפולוגי.
 - **הערות:** החלוקה בין שני בעלי החיים ברורה: העכבר – לשאת את הרעה; העֵז – לאכול. רעבו של האל מסופק, והוא יניח לאדם.
 
-## §22′ – העלווה והלחמים לאלים
+## §22′ – העלווה והלחמים לָאֵלִים
 
 ### 90
 `nu GIŠ-ruwaš {GIŠ}laḫurnuzi dāi`
@@ -820,12 +820,12 @@
 - **הקבלה:** [divergence] `וּנְתַתֶּם לֵאלֹהֵי יִשְׂרָאֵל כָּבוֹד` (שמואל א ו:ה) – המנחה היקרה לאל שנשלחת עם המגפה; כאן מעט מכל מתכת ואבן, מפוזר לאֵל. טיפולוגי.
 - **הערות:** רשימת כל הדברים היקרים של העולם החתי: מתכות (כסף, זהב, ברזל, בדיל, נחושת, ארד) ואבנים (לפיס, קרנליאן, "אבן בבל", ושלוש שאינן מזוהות). "מעט מכל אחד": מנחה סמלית, דגימה של כל העושר. *ZA.GÌN* – הלפיס־לזולי, `סַפִּיר` (כבכל הקורפוסים: האבן המקראית היא הלפיס).
 
-## §27′ – אֲלַוַּיְמִי, "דַּבֵּר טוב לפני האלים"
+## §27′ – אֲלַוַּיְמִי, "אמור טוב לפני הָאֵלִים"
 
 ### 114
 `[{D}Alauwai]mi kāša=tta KÙ.BABBAR GUŠKIN {NA4}ZA.GÌN [peḫḫun]`
-> "[אֲלַוַּ]יְמִי – הנה, לך כסף, זהב, אבן סַפִּיר [נתתי];
-- **פירוק:** `[{D}Alauwai]mi` – Alauwaimi, voc. (partly restored; "[אֲלַוַּ]יְמִי"); `kāša=tta` – kāša "here, behold" + =tta "to you" ("הנה, לך", F21); `KÙ.BABBAR GUŠKIN {NA4}ZA.GÌN` – "silver, gold, lapis" ("כסף, זהב, אבן סַפִּיר"); `[peḫḫun]` – pai- "give", pret. 1sg (restored; "[נתתי]").
+> "[אֲלַוַּ]יְמִי – הנה, לְךָ כסף, זהב, אבן סַפִּיר [נתתי];
+- **פירוק:** `[{D}Alauwai]mi` – Alauwaimi, voc. (partly restored; "[אֲלַוַּ]יְמִי"); `kāša=tta` – kāša "here, behold" + =tta "to you" ("הנה, לְךָ", F21); `KÙ.BABBAR GUŠKIN {NA4}ZA.GÌN` – "silver, gold, lapis" ("כסף, זהב, אבן סַפִּיר"); `[peḫḫun]` – pai- "give", pret. 1sg (restored; "[נתתי]").
 - **תרגומים:** Christiansen (HPM): "„[Alauwai]ma! Soeben [habe ich] dir Silber, Gold, Blaustein [gegeben]!"
 
 ### 115
@@ -903,7 +903,7 @@
 - **פירוק:** `[ … ]` – lost ("[…]"); `UL` – "not" ("לא"); `pēdai` – peda- "carry (away)", pres. 3sg ("נושאת").
 - **תרגומים:** Christiansen (HPM): "[ … ] schafft sie nicht hin." – "schafft sie nicht hin" – כמונו (`לא נושאת`).
 
-## §30′ – קרבן לאֵל הסובב
+## §30′ – הקרבה לאֵל הסובב
 
 ### 126
 `[ … 22 ku]iš peran weḫatta`
@@ -1106,12 +1106,12 @@
 
 ### 155
 `kēdašš=a=kan idālu inan NÍ.TE-az QĀTAMMA parkunuwandu`
-> כך גם לאלה – את החולי הרע – יטהרו מן הגוף!"
-- **פירוק:** `kēdašš=a=kan` – kā- "this", d.-l. pl. + =a "also" + =kan ("גם לאלה"); `idālu` – "evil" ("הרע"); `inan` – "sickness", acc. ("את החולי"); `NÍ.TE-az` – "body", abl. ("מן הגוף"); `QĀTAMMA` – "so" ("כך", at the head, as 76); `parkunuwandu` – parkunu- "purify", imper. 3pl ("יטהרו").
+> כך גם לָאֵלֶּה – את החולי הרע – יטהרו מן הגוף!"
+- **פירוק:** `kēdašš=a=kan` – kā- "this", d.-l. pl. + =a "also" + =kan ("גם לָאֵלֶּה"); `idālu` – "evil" ("הרע"); `inan` – "sickness", acc. ("את החולי"); `NÍ.TE-az` – "body", abl. ("מן הגוף"); `QĀTAMMA` – "so" ("כך", at the head, as 76); `parkunuwandu` – parkunu- "purify", imper. 3pl ("יטהרו").
 - **נוסחים:** לעומת 30 ו־76: כאן "לאלה" (*kēdaš*, ברבים) במקום "של האדם הזה", ובלי "האלים" ובלי *arḫa*; A כותב `QA-TAM-<MA>`.
 - **תרגומים:** Christiansen (HPM): "so sollen sie (die Götter) ebenso die böse inan-Krankheit diesen (Herren) aus dem Körper entfernen!“" – "diesen (Herren)" – כמונו (`לאלה`), והנושא "(die Götter)" מובלע.
 
-## §38′ – "אל תיאבק בהם עוד" בסבב השלישי
+## §38′ – "אַל תיאבק בהם עוד" בסבב השלישי
 
 ### 156
 `{D}Tarpattaššan kuiš peran weḫanda`
@@ -1214,8 +1214,8 @@
 
 ### 171
 `adanna=ma=tta dam[aī]n pīweni`
-> ואילו לאכול – אחר נותנים לך!"
-- **פירוק:** `adanna=ma=tta` – ed- "eat", inf. + =ma + =tta "to you" ("ואילו לאכול … לך"); `dam[aī]n` – damai- "other", acc. ("אחר"); `pīweni` – pai- "give", pres. 1pl ("נותנים").
+> ואילו לאכול – אחר אנו נותנים לך!"
+- **פירוק:** `adanna=ma=tta` – ed- "eat", inf. + =ma + =tta "to you" ("ואילו לאכול … לך"); `dam[aī]n` – damai- "other", acc. ("אחר"); `pīweni` – pai- "give", pres. 1pl ("אנו נותנים").
 - **תרגומים:** Christiansen (HPM): "Zu essen aber geben wir dir eine an[de]re!“"
 
 ### 172
@@ -1339,7 +1339,7 @@
 - **תרגומים:** Christiansen (HPM): "Die Leber [ … ] opfert sie [ebens]o."
 - **הערות:** כמו 101; אלא שכאן יש בין "הכבד" ל"כך" פער בלוח (`…` של המהדורה), ולכן `…` בשורה – ההבדל היחיד מ־101.
 
-## §43′ – הדברים היקרים, ו"לך אל ההרים"
+## §43′ – הדברים היקרים, ו"לֵךְ אל ההרים"
 
 ### 190
 `nu KÙ.BABBAR GUŠKIN {NA4}ZA.GÌN {NA4}GUG {N[}A4TI {N]}A4KÁ.DINGIR.RA {NA4}lulluri {NA4}barašḫi AN.BAR NAGGA URUDU ZABAR ANA DINGIR-LIM kuitta tepu šuḫḫāi`
@@ -1587,9 +1587,9 @@
 
 ### 226
 `nu=mu=kan arauwa[ḫ]`
-> ופטור אותי!
-- **פירוק:** `nu=mu=kan` – nu + =mu "me" + =kan ("ו … אותי"); `arauwa[ḫ]` – arawaḫḫ- "free, release (from obligation)", imper. 2sg (the last sign restored; "פטור", HLPT `פטר`).
-- **תרגומים:** Christiansen (HPM): "und lass mich frei!" – "lass mich frei" – כמונו (`פטור אותי`).
+> וּפְטוֹר אותי!
+- **פירוק:** `nu=mu=kan` – nu + =mu "me" + =kan ("ו … אותי"); `arauwa[ḫ]` – arawaḫḫ- "free, release (from obligation)", imper. 2sg (the last sign restored; "פְטוֹר", HLPT `פטר`).
+- **תרגומים:** Christiansen (HPM): "und lass mich frei!" – "lass mich frei" – כמונו (`פְטוֹר אותי`).
 - **הערות:** *arawaḫḫ-* – "לעשות בן חורין, לפטור (מחובה)": מילה של החוק. הזקנה מבקשת להיות "פטורה" – אולי מן הרעה שנגעה בה בעת הטקס.
 
 ### 227

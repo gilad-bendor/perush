@@ -50,8 +50,8 @@
 
 ### 6
 `nu kuiēš kuiēš EN{MEŠ}KARAŠ ḫūmanteš`
-> ואדוני המחנה, כל אשר הם – כולם –
-- **פירוק:** `nu` – nu "and", connective ("ו־"); `kuiēš kuiēš` – kui- "who", nom. pl. c., doubled = distributive "whoever" ("כל אשר הם"); `EN{MEŠ}KARAŠ` – EN "lord" pl. + KARAŠ "camp" ("אדוני המחנה"); `ḫūmanteš` – ḫūmant- "all, every", nom. pl. c. ("כולם").
+> ואדוני המחנה, יהיו אשר יהיו – כולם –
+- **פירוק:** `nu` – nu "and", connective ("ו־"); `kuiēš kuiēš` – kui- "who", nom. pl. c., doubled = distributive "whoever" ("יהיו אשר יהיו"); `EN{MEŠ}KARAŠ` – EN "lord" pl. + KARAŠ "camp" ("אדוני המחנה"); `ḫūmanteš` – ḫūmant- "all, every", nom. pl. c. ("כולם").
 - **תרגומים:** Chrzanowska (HPM): "welche Herren des Feldlagers auch immer alle (da sind),"
 - **הערות:** "אדוני המחנה" הם מפקדי הצבא, ובראשם המלך (22, 32). המשפט פותח רשימה: כל מפקד ומפקד, בלי יוצא מן הכלל, משתתף בטקס בעצמו ובבהמה משלו.
 
@@ -72,8 +72,8 @@
 
 ### 9
 `UL kuitki tuqqari`
-> לא חשוב מאומה.
-- **פירוק:** `UL` – UL (Akkadogram) "not" ("לא"); `kuitki` – kuišk- "anything", nom.-acc. n. (*UL kuitki* = `מאומה`, IN); `tuqqari` – tukk- "be visible, be important, matter", pres. 3sg mp ("חשוב").
+> אין (זה) חשוב במאומה.
+- **פירוק:** `UL` – UL (Akkadogram) "not" ("אין"); `kuitki` – kuišk- "anything", nom.-acc. n. (*UL kuitki* = `מאומה`, IN; "במאומה"); `tuqqari` – tukk- "be visible, be important, matter", pres. 3sg mp ("חשוב").
 - **נוסחים:** D `duqqāti` (צורת עבר?).
 - **תרגומים:** Chrzanowska (HPM): "spielt keine Rolle."
 - **הערות:** אחת ההערות הנדירות שבהן כותב הטקס אומר במפורש מה *אינו* חשוב. הקפדנות של הטקס מכוונת: הצבע אינו משנה, אבל מספר הבהמות, מינן ומינן (אַיִל, רחל שלא הורבעה – 88) משנים.
@@ -89,8 +89,8 @@
 
 ### 11
 `n=at 1-an anda darupaizzi`
-> ואותו הוא מאגד לאחד;
-- **פירוק:** `n=at` – nu "and" + =at "it", acc. sg. n. ("ואותו"); `1-an` – 1 "one", acc. (*1-an* = "into one"; "לאחד"); `anda` – anda "in, together", preverb (in "מאגד … לאחד"); `darupaizzi` – taruppai- "gather, twist together, unite", pres. 3sg ("הוא מאגד").
+> ואותו מאגד לאחד;
+- **פירוק:** `n=at` – nu "and" + =at "it", acc. sg. n. ("ואותו"); `1-an` – 1 "one", acc. (*1-an* = "into one"; "לאחד"); `anda` – anda "in, together", preverb (in "מאגד … לאחד"); `darupaizzi` – taruppai- "gather, twist together, unite", pres. 3sg ("מאגד").
 - **נוסחים:** B1 `taruppaizzi`.
 - **תרגומים:** Chrzanowska (HPM): "und er flicht sie zu einem (Faden) zusammen." – כמונו, והנושא – כל אחד מאדוני המחנה (כמו בהערתה).
 - **הערות:** הפועל בגוף שלישי יחיד, אף שסביבו (10, 12) מדבר אַשְׁחֶלָּה בגוף ראשון: הנושא הוא כנראה כל אחד מאדוני המחנה (7), שכל אחד מהם מאגד את החוטים לאַיִל שלו. האדם שבעבורו נעשה הטקס משתתף בעבודה בידיו.
@@ -147,8 +147,8 @@
 
 ### 18
 `nu=wa=ta kāša kūš UDU.ŠIR{ḪI.A} kattan išḫiyanun`
-> לך – הנה, את האֵילִים האלה אסרתי למטה;
-- **פירוק:** `nu=wa=ta` – nu "and" + =wa(r) + =ta "to you", dat. ("לך"); `kāša` – kāša "here, behold" ("הנה", F21); `kūš` – kā- "this", acc. pl. c. ("האלה"); `UDU.ŠIR{ḪI.A}` – UDU.ŠIR "ram", acc. pl. ("האֵילִים"); `kattan` – kattan "down, below" ("למטה"); `išḫiyanun` – išḫiya- "bind, tie up", pret. 1sg ("אסרתי").
+> לְךָ – הנה, את האֵילִים האלה אסרתי למטה;
+- **פירוק:** `nu=wa=ta` – nu "and" + =wa(r) + =ta "to you", dat. ("לְךָ"); `kāša` – kāša "here, behold" ("הנה", F21); `kūš` – kā- "this", acc. pl. c. ("האלה"); `UDU.ŠIR{ḪI.A}` – UDU.ŠIR "ram", acc. pl. ("האֵילִים"); `kattan` – kattan "down, below" ("למטה"); `išḫiyanun` – išḫiya- "bind, tie up", pret. 1sg ("אסרתי").
 - **נוסחים:** B1 `nu=wa=ta kāša` בכתיב חריג (`nu-wa-ta`, `ka-a-ša!`).
 - **תרגומים:** Chrzanowska (HPM): "diese Widder habe ich dir jetzt/hier angebunden." – "jetzt/hier" ל־*kattan*; אנו `למטה` (המילה בכל מקום אחר בטקס: "מתחת, ליד, למטה").
 - **הקבלה:** [equivalent] `אֹסְרִי לַגֶּפֶן עִירֹה` (בראשית מט:יא) – קשירת בהמה במקום, אותו פועל; ו־`וַאֲסַרְתֶּם אֶת הַפָּרוֹת בָּעֲגָלָה` (שמואל א ו:ז), במשלוח המנחה אל האל.
@@ -500,12 +500,12 @@
 
 ### 62
 `šarā=za=at namma UL dāi`
-> ולמעלה – עוד לא לוקח אותם לו.
+> ולמעלה – לא לוקח אותם לו עוד.
 - **פירוק:** `šarā=za=at` – šarā "up", preverb + =za reflexive + =at "it / them", acc. ("ולמעלה … אותם לו"); `namma` – namma "again, further" ("עוד"); `UL` – "not" ("לא"); `dāi` – dā- "take", pres. 3sg ("לוקח").
 - **תרגומים:** Chrzanowska (HPM): "(und) (niemand) nimmt es später (wieder) auf." – "(und) (niemand) nimmt es später (wieder) auf" – כמונו.
 - **הערות:** "ולמעלה עוד לא לוקח": מה שהונח על הקרקע (או נפל אליה) – לא ירים אותו עוד אחר כך. כלי שנגע בקרקע שבה הוגש המזון לאֵל הזר נשאר שם. זה טאבו מוכר בטקסי השילוח: מה שהוגש לאֵל הזר, ומה שנגע ברעה, אסור להחזיר אל המחנה.
 
-## §7 – הרחיצה, מעבר בין האש, ומנחה לאֵל המגן
+## §7 – הרחיצה, מעבר בין האש, והקרבה לאֵל המגן
 
 ### 63
 `[maḫḫ]an=ma=at=kan IŠTU SÍSKUR arḫa aranzi`
@@ -701,7 +701,7 @@
 - **נוסחים:** רק ב־E1 (שכתב בטעות "4"); D: `[ … ] QA-TI` – "[…] תַּם".
 - **תרגומים:** Chrzanowska (HPM): "Dritter Tag beendet."
 
-## §9 – היום הרביעי: פר, רחל וכבשים לאלי השמים
+## §9 – היום הרביעי: פר, רחל וכבשים לְאֵלֵי השמים
 
 ### 87
 `INA UD.4.KAM mān lukkatta karūwariwar ḫūdāk 1 GU4.MAḪ 1 UDU.'SÍG+MUNUS' 3 UDU.NÍTA ūnniyanzi`

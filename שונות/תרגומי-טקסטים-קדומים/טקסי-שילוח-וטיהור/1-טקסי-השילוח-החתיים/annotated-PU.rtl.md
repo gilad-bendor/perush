@@ -4,7 +4,7 @@
 
 סימנים: `[ ]` – משוחזר (בידי העורכת; ההשלמה מסומנת בעברית כמו בחתית, ואינה ממולאת בשתיקה); `[…]` – שבור; `…` – מילה שלא נקראה; `( )` – הוסף לשם הבנה; `?` – קריאה או פירוש לא ודאיים; `*…*` – תרגום לא ודאי. מילה עברית מוקפת בסוגריים מרובעים כשגזע המילה החתית משוחזר. המילים הקבועות כבטקסי אַשְׁחֶלָּה ואוּחַמּוּוָה (`annotated-AS.rtl.md`, `annotated-UH.rtl.md`; `../renderings.md` §R1–§R2): *UMMA X* = `כה (אומר) X`; *ÚŠ* = `מגפה`; *KUR LÚ.KÚR* = `ארץ האויב`, *kururaš* = `של אויב`; *kuiš DINGIR-LUM* = `איזה אֵל אשר`, *kuiški DINGIR-LUM* = `איזשהו אֵל`; *LÚ ŠU.DAB* = `אסיר`; *PŪḪU* = `תחליף`; *unuwant-* = `מקושט`; *galank-* = `מפויס`; *aššuli … nai-* = `פנה פנימה בטובה`; *EGIR-pa … peda-* = `בחזרה … יישא`; *GU₄.MAḪ* = `פר`; *UDU.ÁŠ.MUNUS.GÀR* = `כבשה`; *kāša* = `הנה`, *kāš* = `זה`; *EGIR-anda* = `אחר כך`.
 
-## §1 – הפתיחה: אם המלך הכה את ארץ האויב
+## §1 – הפתיחה: אם המלך מוחץ את ארץ האויב
 
 ### 1
 `[U]MMA Puliša [LÚ {URU} …(?) ]`
@@ -15,7 +15,7 @@
 
 ### 2
 `[mān LUGAL-uš KU]R {LÚ}KÚR GUL-aḫzi`
-> [אם המלך את א]רץ האויב מוחץ,
+> [אם המלך] מוחץ [את א]רץ האויב,
 - **פירוק:** `[mān` – mān "if" (restored; "[אם]"); `LUGAL-uš` – LUGAL "king", nom. (restored; "[המלך]"); `KU]R {LÚ}KÚR` – KUR "land" (partly restored) + LÚ.KÚR "enemy" ("[את א]רץ האויב"); `GUL-aḫzi` – walḫ- (GUL-aḫ-) "strike, defeat", pres. 3sg ("מוחץ", HL1 `מחץ`).
 - **תרגומים:** Collins (HPM): "[When the king] attacks an enemy [lan]d"
 - **הקבלה:** [divergence] `וַיִּתֵּן יְהוָה דֶּבֶר בְּיִשְׂרָאֵל מֵהַבֹּקֶר וְעַד עֵת מוֹעֵד` (שמואל ב כד:טו) – גם שם המגפה פוגעת בעם שבראשו מלך מנצח; אבל שם היא עונש על חטא המלך, וכאן היא מחיר הניצחון: המנוצחים, ואלוהיהם, הם שולחיה.
@@ -23,7 +23,7 @@
 
 ### 3
 `n=[aš=kan IŠTU ZAG KUR {LÚ}KÚR arḫa iy]at[t]ari`
-> ו[הוא מגבול ארץ האויב הלאה יוצ]א,
+> ו[הוא מגבול ארץ האויב יוצ]א [הלאה],
 - **פירוק:** `n=[aš=kan` – nu "and" + =aš "he", nom. + =kan (restored; "ו[הוא]"); `IŠTU ZAG KUR {LÚ}KÚR` – IŠTU "from" + ZAG "border" + KUR LÚ.KÚR "the enemy land" (restored; "[מגבול ארץ האויב]"); `arḫa` – arḫa "away" (restored; "[הלאה]"); `iy]at[t]ari` – iya- (mp) "go, march", pres. 3sg ("[יוצ]א").
 - **תרגומים:** Collins (HPM): "and [re]turns [from the enemy border,]" – "[re]turns" ל־*arḫa iya-*; אנו `יוצא` (*iya-* "ללכת, לצעוד" + *arḫa* "הלאה"): הנושא חוזר מן הגבול – אותה תמונה.
 - **הערות:** *iya-* בבינוני (mp) הוא "ללכת, לצעוד" (בהוראות: `יתלוו`, IN 19.3); כאן "לצאת" מן הגבול, לפי ההקשר.
@@ -52,14 +52,14 @@
 
 ### 7
 `maḫḫan n=aš=kan IŠTU ZAG KUR {LÚ}KÚR arḫ[a iyattari]`
-> כאשר הוא מגבול ארץ האויב הל[אה יוצא],
+> כאשר הוא מגבול ארץ האויב [יוצא] הל[אה],
 - **פירוק:** `maḫḫan` – maḫḫan "when" ("כאשר"); `n=aš=kan` – nu + =aš "he", nom. + =kan ("הוא"); `IŠTU ZAG KUR {LÚ}KÚR` – "from the border of the enemy land" ("מגבול ארץ האויב"); `arḫ[a` – arḫa "away" ("הל[אה]"); `iyattari]` – iya- (mp) "go", pres. 3sg (restored; "[יוצא]").
 - **תרגומים:** Collins (HPM): "While he [is] re[turning] from the enemy border," – "While he [is] re[turning]" – ראו 3; *maḫḫan* אצלנו `כאשר`.
 - **הערות:** כאן נשמר מה ש־3 שוחזר לפיו.
 
 ### 8
 `[Š]A KUR-TI 1 {LÚ}ŠU.DAB 1 MUNUS-TUM=ya appanzi`
-> של הארץ – אסיר אחד ואשה אחת – תופסים;
+> אסיר אחד ואשה אחת של הארץ – תופסים;
 - **פירוק:** `[Š]A` – ŠA "of" (the first sign restored; "של"); `KUR-TI` – KUR "land", gen. ("הארץ"); `1 {LÚ}ŠU.DAB` – LÚ ŠU.DAB "captive", acc. ("אסיר אחד", R1a); `1 MUNUS-TUM=ya` – "one woman" + =ya "and" ("ואשה אחת"); `appanzi` – ēpp- / app- "seize, take", pres. 3pl ("תופסים", HL1 `תפס`).
 - **נוסחים:** A כותב `ŠA <A> KUR-TI` (סימן שהושמט, לפי העורכת).
 - **תרגומים:** Collins (HPM): "they pick one (war) captive and one woman of the (enemy’s) land." – "they pick" ל־*ēpp-*; אנו `תופסים`, כבחוקים.
@@ -101,21 +101,21 @@
 
 ### 14
 `n=at ANA LÚ waššiyanzi`
-> ואותם מלבישים לאיש;
-- **פירוק:** `n=at` – nu "and" + =at "them", acc. pl. ("ואותם"); `ANA LÚ` – ANA "to" + LÚ "man" ("לאיש"); `waššiyanzi` – waššiya- "clothe, dress (someone)", pres. 3pl ("מלבישים"; the causative of *weš-* "wear", IN `לבש`).
+> ואותם מלבישים את האיש;
+- **פירוק:** `n=at` – nu "and" + =at "them", acc. pl. ("ואותם"); `ANA LÚ` – ANA "to" + LÚ "man" ("את האיש"); `waššiyanzi` – waššiya- "clothe, dress (someone)", pres. 3pl ("מלבישים"; the causative of *weš-* "wear", IN `לבש`).
 - **תרגומים:** Collins (HPM): "They put them on the man."
 - **הערות:** "האיש" הוא האסיר. מכאן הטקס קורא לו "איש" – "האיש המקושט" (21).
 
 ### 15
 `ANA MUNUS-TI=ma {TÚG}NÍG.LÁM.MEŠ ŠA MUNUS-TI [wašši]yanzi`
-> ואילו לאשה – בגדי פאר של אשה [מל]בישים.
-- **פירוק:** `ANA MUNUS-TI=ma` – ANA "to" + "woman" + =ma "but" ("ואילו לאשה"); `{TÚG}NÍG.LÁM.MEŠ` – "festive garments" ("בגדי פאר"); `ŠA MUNUS-TI` – ŠA "of" + "woman" ("של אשה"); `[wašši]yanzi` – waššiya- "clothe", pres. 3pl (the stem restored; "[מל]בישים").
+> ואילו את האשה – בגדי פאר של אשה [מל]בישים.
+- **פירוק:** `ANA MUNUS-TI=ma` – ANA "to" + "woman" + =ma "but" ("ואילו את האשה"); `{TÚG}NÍG.LÁM.MEŠ` – "festive garments" ("בגדי פאר"); `ŠA MUNUS-TI` – ŠA "of" + "woman" ("של אשה"); `[wašši]yanzi` – waššiya- "clothe", pres. 3pl (the stem restored; "[מל]בישים").
 - **תרגומים:** Collins (HPM): "But on the woman they [put] the garments of a woman."
 - **הערות:** האשה לובשת בגדי פאר של אשה – אולי של המלכה. הזוג הלבוש בגדי מלכות הוא תחליף לזוג המלכותי, כמו שהאשה המקושטת של אַשְׁחֶלָּה ישבה לפני אוהל המלך (AS 22).
 
 ### 16
 `nu=kan ANA LÚ LUGAL-uš anda kišan memai`
-> ואל האיש המלך כך אומר:
+> ואל האיש – המלך כך אומר:
 - **פירוק:** `nu=kan` – nu "and" + =kan ("ו־"); `ANA LÚ` – ANA "to" + LÚ "man" ("אל האיש"); `LUGAL-uš` – "king", nom. ("המלך"); `anda` – anda "into, over", preverb (in "אל"); `kišan` – kiššan "thus" ("כך"); `memai` – memai- "speak", pres. 3sg ("אומר").
 - **תרגומים:** Collins (HPM): "To the man the king says as follows—"
 - **הערות:** *ANA X anda memai* – "מדבר אל תוך X" (R1a: `וְאֶל הָאִישׁ … כָּךְ אוֹמֵר`).
@@ -312,8 +312,8 @@
 
 ### 43
 `[nu=war=aš m]ān DINGIR-LIM LÚ nu=wa=tta [GU4.MAḪ unuwa]ndan ašuša[n]tan mālantan AD[DIN]`
-> [ואם הוא] אֵל זכר – לך [פר מקוש]ט, בעל־עגילים, *מקובל* נת[תי];
-- **פירוק:** `[nu=war=aš` – nu + =war + =aš "he", nom. (restored; "[ו־ … הוא]"); `m]ān` – mān "if" ("[אם]"); `DINGIR-LIM LÚ` – "god, male" ("אֵל זכר"); `nu=wa=tta` – nu "then" + =wa + =tta "to you" ("לך"); `[GU4.MAḪ unuwa]ndan` – GU₄.MAḪ "bull" + unuwant- "adorned", acc. (mostly restored; "[פר מקוש]ט"); `ašuša[n]tan` – ašušant- "with earrings", acc. ("בעל־עגילים"); `mālantan` – mala- "approve", ptcp. acc. = "approved, acceptable" ("*מקובל*"); `AD[DIN]` – ADDIN (Akk. *nadānu*) "I gave", 1sg ("נת[תי]").
+> [ואם הוא] אֵל זכר – לְךָ [פר מקוש]ט, בעל־עגילים, *מקובל* נת[תי];
+- **פירוק:** `[nu=war=aš` – nu + =war + =aš "he", nom. (restored; "[ו־ … הוא]"); `m]ān` – mān "if" ("[אם]"); `DINGIR-LIM LÚ` – "god, male" ("אֵל זכר"); `nu=wa=tta` – nu "then" + =wa + =tta "to you" ("לְךָ"); `[GU4.MAḪ unuwa]ndan` – GU₄.MAḪ "bull" + unuwant- "adorned", acc. (mostly restored; "[פר מקוש]ט"); `ašuša[n]tan` – ašušant- "with earrings", acc. ("בעל־עגילים"); `mālantan` – mala- "approve", ptcp. acc. = "approved, acceptable" ("*מקובל*"); `AD[DIN]` – ADDIN (Akk. *nadānu*) "I gave", 1sg ("נת[תי]").
 - **נוסחים:** B שומר את *mān … unuwandan ašuša[n…]*; A: `-a-la-` על גבי מחיקה.
 - **תרגומים:** Collins (HPM): "if he is a male god, to you I have gi[ven] an [ado]rned, ringed, and powerful(?) bull." – "powerful(?)" ל־*mālant-*; אנו `*מקובל*` (מן *mala-* "להסכים, לאשר"). שתי ההצעות אינן ודאיות.
 - **הקבלה:** [absent] `לְרָצוֹן` של קרבנות התורה אינו כאן: *mālant-* הוא "מאושר, מוסכם" – פר שהאֵל יסכים לקבל, ולא מונח של כשרות קרבן. (`לרצון` שמור.)

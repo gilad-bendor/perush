@@ -183,8 +183,8 @@
 
 ### 23
 `nu=war=at išpiyanteš ašandu`
-> ושבעים יהיו!
-- **פירוק:** `nu=war=at` – nu "and" + =war + =at "they", nom. pl. ("ו־"); `išpiyanteš` – išpai- "be sated", ptcp. nom. pl. c. ("שבעים"); `ašandu` – eš- "be", imper. 3pl ("יהיו").
+> ושְׂבֵעִים יהיו!
+- **פירוק:** `nu=war=at` – nu "and" + =war + =at "they", nom. pl. ("ו־"); `išpiyanteš` – išpai- "be sated", ptcp. nom. pl. c. ("שְׂבֵעִים"); `ašandu` – eš- "be", imper. 3pl ("יהיו").
 - **תרגומים:** Görke (HPM): "Und sie sollen gesättigt sein!"
 
 ### 24
