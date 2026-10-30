@@ -475,7 +475,7 @@ RESERVED = [
     (W + alt("העולה", "עולות", "העולות", "לעולה") + E, r"(?!)", "עֹלָה never (āhuti = נֶסֶךְ; yajñá = זֶבַח); the bare string עולה 'rising' is not gated – vocalize it עוֹלֶה"),
     (W + alt("ניחוח", "ניחח", "הניחוח") + E, None, "נִיחוֹחַ never (Gen 8:21)"),
     (W + alt("נשמה", "נשמת", "נשמתו", "נשמות", "הנשמה") + E, None, "נְשָׁמָה never: prāṇá = נְשִׁימָה, √an = נָשַׁם, ātmán = נֶפֶשׁ (Gen 2:7 in the apparatus)"),
-    (W + alt("ערוה", "ערוות", "ערותה", "ערותו", "וערות") + E, None, "עֶרְוָה never (Lev 18 in the apparatus)"),
+    (W + alt("ערוה", "ערוות", "ערותה", "ערותו") + E, None, "עֶרְוָה never (Lev 18 in the apparatus)"),
     (W + alt("מאור", "מאורות", "המאורות", "המאור", "מאורים") + E, None, "מָאוֹר never (sū́rya = שֶׁמֶשׁ, candrámas = יָרֵחַ)"),
     (W + alt("כפר", "כפרה", "כופר", "יכפר", "הכפורים", "כפורים") + E, r"(?:iva| na |nna ).*(?:gav| go| ga| dhen|vrs|vats|usr)|(?:gav| go| ga| dhen|vrs|vats|usr).*(?:iva| na )", "the root כפר never – except the simile כְּ־ + פַּר / פָּרָה 'like a bull / cow' where the source has iva / ná with a cattle word (write it vocalized)"),
     # --- only for the source's own counterpart (renderings §5.2) ---
