@@ -457,7 +457,7 @@ RESERVED = [
     # --- never (renderings §5.1): the words of Gen 1–3, 6–9 and 22 that no Indo-Iranian word licenses ---
     (W + alt("אלוהים", "אלהים", "אלהי", "אלוהיו", "אלוהינו", "אלוהיך") + E, None, "deva = אֵל, devāḥ = אֵלִים: אֱלֹהִים never"),
     (W + alt("ברא", "בורא", "בראו", "בראה", "בראתי", "נברא", "נבראו", "בריאה", "בריאת", "יברא", "בראם", "בוראו", "בריאתו", "הבריאה", "בריות", "בריה", "הבריות") + E, None, "the root ברא never (√sr̥j = שִׁלַּח, visŕ̥ṣṭi = הַשְׁלָחָה; √jan = הוֹלִיד; √kr̥ = עָשָׂה; √takṣ = חִשֵּׁל)"),
-    (W + alt("תהום", "תהומות", "התהום", "תהומה") + E, None, "תְּהוֹם never (salilá = מַיִם גּוֹאִים; gambhīra = עָמֹק)"),
+    (W + alt("תהום", "תהומות", "התהום", "תהומה") + E, None, "תְּהוֹם never (salilá = נַחְשׁוֹל; gambhīra = עָמֹק)"),
     (W + alt("תהו", "ותהו", "בהו", "ובהו") + E, None, "תֹּהוּ / בֹּהוּ never"),
     (W + alt("רקיע", "הרקיע", "רקיעים") + E, None, "רָקִיעַ never (antárikṣa = חֲלַל־הָאֲוִיר; dyú = שָׁמַיִם)"),
     (W + alt("ראשית", "בראשית", "מראשית", "ראשיתו", "ראשיתם") + E, None, "רֵאשִׁית never: ágre = בַּתְּחִלָּה, prathamá = רִאשׁוֹן (Gen 1:1 in the apparatus)"),
@@ -472,7 +472,7 @@ RESERVED = [
     (W + alt("עקד", "ויעקד", "עקדה", "העקדה", "עקדו", "עקוד", "נעקד", "לעקוד", "עקידה", "העקידה") + E, None, "the root עקד never (√bandh = כָּפַת; Gen 22:9 in the apparatus)"),
     (W + alt("מאכלת", "המאכלת") + E, None, "מַאֲכֶלֶת never (así = חֶרֶב; Gen 22:6, 10 in the apparatus)"),
     (W + alt("שה", "השה", "שיו") + E, None, "שֶׂה never (Gen 22:7–8)"),
-    (W + alt("עולה", "העולה", "עולות", "לעולה") + E, r"(?!)", "עֹלָה never (āhuti = נְסִיכָה; yajñá = זֶבַח) – write `עוֹלֶה` 'rising' vocalized"),
+    (W + alt("העולה", "עולות", "העולות", "לעולה") + E, r"(?!)", "עֹלָה never (āhuti = נֶסֶךְ; yajñá = זֶבַח); the bare string עולה 'rising' is not gated – vocalize it עוֹלֶה"),
     (W + alt("ניחוח", "ניחח", "הניחוח") + E, None, "נִיחוֹחַ never (Gen 8:21)"),
     (W + alt("נשמה", "נשמת", "נשמתו", "נשמות", "הנשמה") + E, None, "נְשָׁמָה never: prāṇá = נְשִׁימָה, √an = נָשַׁם, ātmán = נֶפֶשׁ (Gen 2:7 in the apparatus)"),
     (W + alt("ערוה", "ערות", "ערוות", "ערותה", "ערותו") + E, None, "עֶרְוָה never (Lev 18 in the apparatus)"),
@@ -481,7 +481,7 @@ RESERVED = [
     # --- only for the source's own counterpart (renderings §5.2) ---
     (W + alt("נחש", "הנחש", "נחשים", "הנחשים", "נחשי", "נחשה") + E, r" ahi| ahe| azh| azi| sarp| ahin", "נָחָשׁ only for áhi / Av. aži / sarpá"),
     (W + alt("חושך", "חשך", "החושך", "החשך", "חשכה", "חשיכה", "בחושך", "בחשך", "מחושך") + E, r"tama|tamis|tamas|andha|temah|tqma|tqm", "חֹשֶׁךְ only for támas / andhá (Av. təmah)"),
-    (W + alt("רוח", "רוחות", "הרוח", "הרוחות", "רוחו", "ברוח", "רוחי", "לרוח") + E, r" vat| vay| vaat| vata| vayu| mainii| mainy| manyu", "רוּחַ only for vā́ta / vāyú (Av. vāta) – the wind – and Av. mainiiu 'spirit'; ātmán = נֶפֶשׁ, prāṇá = נְשִׁימָה"),
+    (W + alt("רוח", "רוחות", "הרוח", "הרוחות", "רוחו", "ברוח", "רוחי", "לרוח") + E, r" vat| avat| vay| vaat| vata| vayu| mainii| mainy| manyu", "רוּחַ only for vā́ta / vāyú (Av. vāta) – the wind – and Av. mainiiu 'spirit'; ātmán = נֶפֶשׁ, prāṇá = נְשִׁימָה"),
     (W + alt("זרע", "הזרע", "זרעו", "זרעים", "זרעה", "זרעם", "לזרע", "מזרע") + E, r"ret|bij|taoxm|tauxm|taox|garbh|vap", "זֶרַע only for rétas / bī́ja / Av. taoxman (and √vap 'sow')"),
     (W + alt("קשת", "הקשת", "קשתו", "בקשת", "קשתי") + E, r"dhanu|dhanv|thanva|indradhan", "קֶשֶׁת only for dhánus (Gen 9:13 in the apparatus)"),
     (W + alt("איל", "האיל", "אילים", "האילים") + E, r"mes|vrsn|aja |ura", "אַיִל only for meṣá (ram)"),

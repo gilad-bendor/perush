@@ -93,7 +93,7 @@ rendered).
 | Vājaśravas(a) | ` vajasrav` | `וָאגַ'שְׁרַוַס` |  | his father (KU) |
 | Mṛtyu (Death) | ` mrtyu` | `מָוֶת` |  | translated, a name without the article (KU; RV 10.18): always vocalized (§7) |
 | Mārkaṇḍeya | ` markandey` | `מַרְקַנְדֵּיָה` |  | the narrator (MBh) |
-| Himavat (Himālaya) | ` himav` | `הִימָוַנְט` |  | the snow-mountain (MBh 3.185) |
+| Himavat (Himālaya) | ` himavat(?:ah\|as)\b` | `הִימָוַנְט` |  | the snow-mountain (MBh 3.185) |
 | Naubandhana | ` naubandhan` | `נָאוּבַּנְדְהַנָה` |  | "Ship-Binding", the peak (a note) |
 | Ahura Mazdā | ` ahur\w* mazd` | `אֲהוּרָה מַזְדָּה` |  | (Vd) "the Wise Lord" |
 | Zaraθuštra | ` zarathustr` | `זָרָתוּשְׁטְרָה` |  | (Vd) |
@@ -164,7 +164,7 @@ the Bible passages the corpus is compared with (Gen 1–3, 6–9, 22; Lev 18): *
 | *gárbha* | `עֻבָּר` |  | 10.121.1, 7 |
 | *√kr̥* | `עָשָׂה` |  |  |
 | *√takṣ* | `חִשֵּׁל` throughout (the dossier) |  | "fashion, carve, forge" |
-| *√dhā* | `שָׂם` / `הֶעֱמִיד` by sense (*dhātár* "Arranger" 10.190.3 = `הַמְּסַדֵּר`) |  |  |
+| *√dhā* | `הֶעֱמִיד` (and `שָׂם` by sense); *dhātár* = `הַמַּעֲמִיד` (§11.1) | `הַמְּסַדֵּר` (`סֵדֶר` = *r̥tá*) |  |
 | *r̥tá* | `סֵדֶר` | `צֶדֶק`, `חֹק` | "the cosmic truth-order"; Av. *aša* (its cognate) also `סֵדֶר` [cognate across Indo-Iranian] |
 | *satyá* | `אֱמֶת` |  |  |
 | *púruṣa* | `אָדָם` [equivalent] (gated) | `אִישׁ` | 10.90 the cosmic Man (the name Puruṣa in the apparatus); ŚB 1.2.3 a human victim |
@@ -184,7 +184,7 @@ the Bible passages the corpus is compared with (Gen 1–3, 6–9, 22; Lev 18): *
 | *r̥ṣi* | `חוֹזֶה` |  | "seer"; *saptarṣi* `שִׁבְעַת הַחוֹזִים` |
 | *kaví* | `מְשׁוֹרֵר` |  | "poet-sage" |
 | *hŕ̥d* | `לֵב` |  |  |
-| *loká* | `מֶרְחָב` (of the dead: `מֶרְחַב־` + genitive) | `עוֹלָם` | "free space, world" |
+| *loká* | `עוֹלָם` (*pitr̥loká* `עוֹלַם הָאָבוֹת`, *svargá loká* `עוֹלַם הָאוֹר`) | `מֶרְחָב` (= *rájas*) | "free space, world": settled 2026-10-30 (§11.1) to keep *rájas* `מֶרְחָב` alone |
 
 ### 5.2 The serpent and the waters (RV 1.32; the dossier's renderings, §9)
 | Source | Hebrew | Note |
@@ -297,4 +297,18 @@ where the fire-offering is near.
 | SB1.8.1 4b | ok | `בשנה פלונית יבוא השטף` |
 
 ## 11. Merged from the translators (numbered by part; the coordinator)
-(empty)
+### 11.1 RV 10.129, 10.121, 10.72, 10.190 (translator 1; merged 2026-10-30)
+- Confirmed in real lines: every pre-set row of §5.1 it met. New (binding from now on): *a-vātá* `בלי רוח` (the wind
+  stays visible; `vedic_tools` now licenses `רוח` by *avāta*); *praketá* `סימן` (`אות` reserved by sense: Gen 1:14),
+  *apraketá* `חסר־סימן`; *amŕ̥ta* `אלמוות` (plene, as Hesiod); *ābhú* `הַנִּהְיֶה`; *bándhu* `קרבה` / `קרוב`;
+  *raśmí* `מיתר`; *sám √vr̥t* `התהווה` (the formula *sám avartata ágre* `התהווה בתחילה`); √*an* `נשם`; *visárjana*
+  `שילוח`; *páti* `אדון`; √*dhr̥* `החזיק`; √*stambh* `תמך`; √*dr̥h* `מוצק`; *dhárman* `יסוד`; *nā́ka* `הכיפה`; *ásu*
+  `חִיּוּת`; *dákṣa* (common noun) `כשרון`; *yugá* `עידן`; *ā́śā* `פאות`; *uttānápad* `פשוקת־הרגליים`; *bhū́* `אדמה`;
+  *sám √dham* `נפח`, *karmā́ra* `נַפָּח` (the natural smith's verb, tagged against Gen 2:7); *reṇú* `אבק`; √*kl̥p* caus.
+  `ערך`; *vaśín* `מושל`; *ví √dhā* `חילק`; *ahorātrá* `ימים ולילות`; *arṇavá* `גועש`; *svàr* `האור`. Names: Dakṣa
+  `דַּקְשָׁה`, Rasā `רַסָה`, Mārtāṇḍa `מָארְטָאנְדָּה`, the Yatis `יַתִּים` (always vocalized: "orphans").
+- **Rulings:** *dhātár* = `הַמַּעֲמִיד` (accepted: `סֵדֶר` is *r̥tá*'s, and √*dhā* = `העמיד` keeps the root);
+  *yathāpūrvám* (10.190.3b) = `זה אחר זה (?)` by the RV dictionaries (accepted; "as before", the later cyclic reading, in
+  the apparatus; an open question for the user); *loká* = `עוֹלָם`, so that *rájas* keeps `מֶרְחָב` alone.
+- Tool fixes (2026-10-30): the Himavat regex no longer matches the adjective *himávant* "snowy"; the `עולה` gate blocks
+  only the cult forms (`העולה`, `עולות`, `לעולה`), not the participle "rising".
