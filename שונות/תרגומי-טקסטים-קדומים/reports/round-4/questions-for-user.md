@@ -46,3 +46,9 @@ No question for the user. Tablet I (191 lines) is done; Tablets II–V wait for 
 win (the Poor Man of Nippur stays a quick win for a later session): with the seven-day quota near its warning line, the
 remaining planned run (Hittite) goes first.
 
+## Run 6 – Hittite law and ritual (report: `run-6.md`)
+
+No question for the user. (The modern editions that would check our two composites – Hoffner 1997, Miller 2013, Taggar-Cohen
+2006 … – are © and are not bought, per the standing rule; the cruxes they would settle are marked in the texts.) Ḫedammu,
+left by run 1's dossier to this run, was not done (no open clause edition) – left for a later round.
+
