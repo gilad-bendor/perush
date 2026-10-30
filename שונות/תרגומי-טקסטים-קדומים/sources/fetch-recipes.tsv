@@ -164,3 +164,56 @@ LXX-Rahlfs-1935--el-wikisource/proverbs-rahlfs.wikitext	url	work	https://el.wiki
 LXX-Rahlfs-1935--el-wikisource/judges-rahlfs.wikitext	url	work	https://el.wikisource.org/w/index.php?action=raw&title=%CE%9A%CF%81%CE%B9%CF%84%CE%B1%CE%AF%20%28%CE%91%CE%BB%CE%B5%CE%BE%CE%B1%CE%BD%CE%B4%CF%81%CE%B9%CE%BD%CF%8C%CF%82%20%CE%9A%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%CF%82%29%20%28Rahlfs%29	the current revision; Judges in Rahlfs' A text (Codex Alexandrinus; the B text is a separate page) – Round 4 run 4
 LXX-Rahlfs-1935--el-wikisource/ezekiel-rahlfs.wikitext	url	work	https://el.wikisource.org/w/index.php?action=raw&title=%CE%99%CE%B5%CE%B6%CE%B5%CE%BA%CE%B9%CE%AE%CE%BB%20%28Rahlfs%29	the current revision (Round 4 run 4, the Hesiod corpus's LXX layer: see the README)
 TLHdig/TLHbasisONLINE25_1_ZENODO_Beta_03.zip	url	work	https://zenodo.org/api/records/20328284/files/TLHbasisONLINE25_1_ZENODO_Beta_03.zip/content	TLHdig Beta 0.3 (Hittite, all published tablets, per manuscript; CC BY 4.0; md5 f9acbc8db3111cc7dd88d82f7819a912); its CTH folders used by Round 4 run 6 are committed under sources/TLHdig/CTH-*
+# Round 5 run 1 (2026-10-30): the Vedic and Avestan corpus
+VedaWeb/rv_book_01.tei	url	work	https://raw.githubusercontent.com/VedaWebProject/vedaweb-data/main/rigveda/TEI/rv_book_01.tei	VedaWeb TEI (Round 5 run 1); the TSVs are made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_book_07.tei	url	work	https://raw.githubusercontent.com/VedaWebProject/vedaweb-data/main/rigveda/TEI/rv_book_07.tei	VedaWeb TEI (Round 5 run 1); the TSVs are made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_book_10.tei	url	work	https://raw.githubusercontent.com/VedaWebProject/vedaweb-data/main/rigveda/TEI/rv_book_10.tei	VedaWeb TEI (Round 5 run 1); the TSVs are made by הוודה-והאווסטה/vedic_tools.py convert
+TITUS/sbm002.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/sbm/sbm002.htm	TITUS ŚB (local only)
+TITUS/sbm008.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/sbm/sbm008.htm	TITUS ŚB (local only)
+TITUS/ab236.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab236.htm	TITUS AB 7.13–18 (local only)
+TITUS/ab237.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab237.htm	TITUS AB 7.13–18 (local only)
+TITUS/ab238.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab238.htm	TITUS AB 7.13–18 (local only)
+TITUS/ab239.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab239.htm	TITUS AB 7.13–18 (local only)
+TITUS/ab240.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab240.htm	TITUS AB 7.13–18 (local only)
+TITUS/ab241.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab241.htm	TITUS AB 7.13–18 (local only)
+GRETIL/mbh_03_u.htm	url	work	https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_03_u.htm	GRETIL MBh 3 (reference only)
+GRETIL/sb_01_u.htm	url	work	https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/2_bra/satapath/sb_01_u.htm	GRETIL ŚB 1 (reference only)
+CAB/cab_corpus_plain.txt	url	work	https://cab.geschkult.fu-berlin.de/exist/apps/cab/modules/get_corpus_plain.xql	CAB linguistic corpus
+CAB/cab_corpus.xml	url	work	https://cab.geschkult.fu-berlin.de/exist/apps/cab/modules/get_corpus_xml.xql	CAB linguistic corpus (XML)
+CAB/cab_corpus.json	url	work	https://cab.geschkult.fu-berlin.de/exist/apps/cab/modules/get_corpus_json.xql	CAB linguistic corpus (JSON)
+Sanskrit-lexicon--csl-orig/gra.txt	url	work	https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02/gra/gra.txt	Grassmann
+Sanskrit-lexicon--csl-orig/mw.txt	url	work	https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02/mw/mw.txt	Monier-Williams
+Jamison--Rigveda-commentary/I.1-99-9-25-26.pdf	url	work	https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/I.1-99-9-25-26.pdf	Jamison commentary (©, local)
+Jamison--Rigveda-commentary/I.1-99-9-25-26.txt	pdftotext	work	I.1-99-9-25-26.pdf	
+Jamison--Rigveda-commentary/VII.56–104-9-25-26.pdf	url	work	https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/VII.56%E2%80%93104-9-25-26.pdf	Jamison commentary (©, local)
+Jamison--Rigveda-commentary/VII.56–104-9-25-26.txt	pdftotext	work	VII.56–104-9-25-26.pdf	
+Jamison--Rigveda-commentary/X.1–60-9-25-26.pdf	url	work	https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/X.1%E2%80%9360-9-25-26.pdf	Jamison commentary (©, local)
+Jamison--Rigveda-commentary/X.1–60-9-25-26.txt	pdftotext	work	X.1–60-9-25-26.pdf	
+Jamison--Rigveda-commentary/X.61–191-9-25-26.pdf	url	work	https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/X.61%E2%80%93191-9-25-26.pdf	Jamison commentary (©, local)
+Jamison--Rigveda-commentary/X.61–191-9-25-26.txt	pdftotext	work	X.61–191-9-25-26.pdf	
+Archive-org--PD-translations/Eggeling-1882--SBE-12_djvu.txt	url	work	https://archive.org/download/in.ernet.dli.2015.238711/2015.238711.The-Satapatha-brahmana_djvu.txt	PD OCR text
+Archive-org--PD-translations/Keith-1920--HOS-25_djvu.txt	url	work	https://archive.org/download/rigvedabrahmana00keitgoog/rigvedabrahmana00keitgoog_djvu.txt	PD OCR text
+Archive-org--PD-translations/Darmesteter-1880--SBE-4_djvu.txt	url	work	https://archive.org/download/TheZendAvestaPart1TheVendidad/TheZendAvestaPart1TheVendidad_djvu.txt	PD OCR text
+Archive-org--PD-translations/Hume-1921--Upanishads_djvu.txt	url	work	https://archive.org/download/thirteenprincipa00hume/thirteenprincipa00hume_djvu.txt	PD OCR text
+Archive-org--PD-translations/Ganguli--vol02_djvu.txt	url	work	https://archive.org/download/mahabharataofkri02royp/mahabharataofkri02royp_djvu.txt	PD OCR text
+Archive-org--PD-translations/Ganguli--vol03_djvu.txt	url	work	https://archive.org/download/mahabharataofkri03royp/mahabharataofkri03royp_djvu.txt	PD OCR text
+Archive-org--PD-translations/Bartholomae-1904_djvu.txt	url	work	https://archive.org/download/altiranischeswr00bartgoog/altiranischeswr00bartgoog_djvu.txt	PD OCR text
+TITUS/sb_1.8.1.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+TITUS/sb_1.2.3.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+TITUS/ab_7.13-18.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+GRETIL/mbh_3.185.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+CAB/vd_2.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_1.032--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.010--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.014--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.015--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.016--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.017--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.018--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.034--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.072--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.090--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.121--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.129--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_10.190--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+VedaWeb/rv_7.103--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
