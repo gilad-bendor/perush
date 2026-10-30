@@ -100,4 +100,26 @@ would break the sense: skip it, and report.
 
 ## C. Applied
 
-(Filled in as the batches are applied.)
+Applied 2026-10-30 in two batches, one agent at a time (Opus).
+
+**Batch A** (rows 1–4, 8): Enūma eliš I 136, II 22, III 26, 84 (the refrain `בְּחֵמָה כְּדָם מילאה את גופם`), I 162, II 48,
+III 52, 110 (`חמתך הצבורה תרפה את העצום!` – adjective and verb follow the feminine noun), IV 53, 62, V 51; Maqlû III 14, 21
+(row 1), I 90, IV 11, V 59 (row 2); Gudea's renderings only – no Gudea line has *um-mi-a* (row 3); Nergal SB b+42, c+57,
+Adapa SB a+10, a+11, Bird and Fish 90, Summer and Winter 213 (row 4); the Heavenly Cow 93 (row 8). The per-tablet
+`translation-I…V.rtl.md` of Enūma eliš and `translation-1-Adapa.rtl.md` are hand-kept and were edited to match. Batch A
+found row 9 (*uggatu*: the wisdom corpus had `חֵמָה`), added to the table and applied in batch B.
+
+**Batch B** (rows 5–7, 9): Gilgameš SB I 25 and its flood-references copy, the flood references o 9, EST 530 (and the §64
+heading `שמי אָרָד`), 649, LH 2612′ (vocalized), 2616′, 2631′, 2635′, 2641′, 2645′, Maqlû II 38, 76, 92, 104, RT 33′, 34′
+(and the §9 fixed lines), Ludlul IV a+21 `כְּאָרָד` (row 5); Erra I 141 (with its flood-references copy and the §12.6
+fixed-lines table), 181, MAL A r v 48, Ludlul II 71 (row 6); Ištar 98, 99 (`ומים מתוכה אשתה`: the feminine `חֵמֶת`;
+Gen 21:14 added as [equivalent]) (row 7); Ludlul I 5 `שממה קִצְפּוֹ` (vocalized: unvocalized it reads "they were angry"),
+I 37 (row 9). Copper (*erû* / URUDU) stays `נחושת` in Gilgameš V 133, VIII 67, 163, Erra 160, the flood I₂ 4, 9, the Šamaš
+Hymn 94, LE, the Sargon legend, Maqlû RT 141′ and the love lyrics.
+
+Kept after batch B: the Instructions' `TÚG-TUM` (IN 8.1, 8.9, 8.23) keeps `בגד` – a Sumerogram with an Akkadian phonetic
+complement, not a spelled Akkadogram (principle 3).
+
+Every touched corpus was rebuilt (translations, parallels indexes) and its verifier passed with `--strict`;
+`check_bible_quotes.py` passed on every touched file; then every verifier of the folder was run (see
+`reports/round-4/final.md`).

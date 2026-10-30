@@ -925,10 +925,10 @@
 ### 2612'
 `i-na _gir2 gag zabar_`
 `N: ina karzilli siparrim`
-> באיזמל נחושת
-- **פירוק:** `ina` – "ב־"; `GÍR.GAG ZABAR` = *karzilli siparrim* "איזמל של נחושת (ארד)": *karzillu* "איזמל, סכין מנתחים", *siparru* "נחושת, ארד", יחסת קניין.
+> באיזמל אָרָד
+- **פירוק:** `ina` – "ב־"; `GÍR.GAG ZABAR` = *karzilli siparrim* "איזמל של ארד": *karzillu* "איזמל, סכין מנתחים", *siparru* "ארד", יחסת קניין.
 - **תרגומים:** CDLI: "with a bronze lancet".
-- **הערות:** **החלטה:** *karzillu* = `איזמל` (המילה המשנאית לכלי המנתח), *siparru* = `נחושת` (רנדרינג הקורפוס §4). השורה חוזרת שבע פעמים ב־§215–§220 בעברית זהה.
+- **הערות:** **החלטה:** *karzillu* = `איזמל` (המילה המשנאית לכלי המנתח), *siparru* = `אָרָד` (רנדרינג הקורפוס §4; הרמוניזציה 2026-10-30, קודם `נחושת`, שהיא *erû* "נחושת"; מנוקד בהופעה הראשונה). השורה חוזרת שש פעמים ב־§215–§220 בעברית זהה.
 
 ### 2613'
 `i-pu-usz-ma`
@@ -959,7 +959,7 @@
 ### 2616'
 `i-na _gir2 gag zabar_`
 `N: ina karzilli siparrim`
-> באיזמל נחושת
+> באיזמל ארד
 - **פירוק:** כמו 2612'.
 - **תרגומים:** CDLI: "with a bronze lancet".
 
@@ -1080,7 +1080,7 @@
 ### 2631'
 `i-na _gir2 gag zabar_`
 `N: ina karzilli siparrim`
-> באיזמל נחושת
+> באיזמל ארד
 - **פירוק:** כמו 2612'.
 - **תרגומים:** CDLI: "with a bronze lancet".
 
@@ -1111,7 +1111,7 @@
 ### 2635'
 `i-na _gir2 gag zabar_`
 `N: ina karzilli siparrim`
-> באיזמל נחושת
+> באיזמל ארד
 - **פירוק:** כמו 2612'.
 - **תרגומים:** CDLI: "with a bronze lancet".
 
@@ -1161,7 +1161,7 @@
 ### 2641'
 `i-na _gir2 gag zabar_`
 `N: ina karzilli siparrim`
-> באיזמל נחושת
+> באיזמל ארד
 - **פירוק:** כמו 2612'.
 - **תרגומים:** CDLI: "with a bronze lancet".
 
@@ -1195,7 +1195,7 @@
 ### 2645'
 `i-na _gir2 gag zabar_`
 `N: ina karzilli siparrim`
-> באיזמל נחושת
+> באיזמל ארד
 - **פירוק:** כמו 2612'.
 - **תרגומים:** CDLI: "with a bronze lancet".
 

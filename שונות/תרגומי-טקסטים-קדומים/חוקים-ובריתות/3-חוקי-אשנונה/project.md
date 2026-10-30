@@ -51,7 +51,7 @@ Corpus: `../corpus.md` (law and treaty), project 3. Read `../../translation-guid
 
 ### Open decisions for the user
 1. **`פַּרְסִיכְתּוּ`** for PI (*pānum*) – one word with LH; alternative `פָּנוּ` (CDLI's LE reading) or `בָּרִיג`.
-2. **`נחושת`** for *erû* "copper" (16–17) collides with LH's `נחושת` for *siparru* "bronze" (2612' ff.); alternatives: keep both (Hebrew `נְחֹשֶׁת` covers both metals) or change *siparru* to `ארד` in LH.
+2. **`נחושת`** for *erû* "copper" (16–17) collides with LH's `נחושת` for *siparru* "bronze" (2612' ff.); alternatives: keep both (Hebrew `נְחֹשֶׁת` covers both metals) or change *siparru* to `ארד` in LH. **Settled by the 2026-10-30 harmonization (row 5): *siparru* = `אָרָד` in every Akkadian text; *erû* keeps `נחושת`.**
 3. **`נִקֵּב`** for *naqābu* "deflower" (88, 106): the cognate, but in Hebrew "pierce"; alternative `בִּתֵּק` (no biblical basis) or a periphrasis.
 4. **`כד`** for *kirrum* (91, 95): literal ("jar"); alternative `משתה` (CDLI "nuptial feast", an interpretation).
 5. **`("שָׁבוּר")`** for the scribal *ḫepi* (94); alternative `[…]` (but the tablet is not broken here).

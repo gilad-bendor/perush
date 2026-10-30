@@ -113,7 +113,7 @@ The flood corpus's shared renderings (`../סיפורי-המבול-המסופוט
 | *saḫaršubbû* (SAḪAR.ŠUB.BA) | צָרַעַת | [equivalent] ↔ `בִּשְׁחִין מִצְרַיִם … וּבַגָּרָב וּבֶחָרֶס` (דברים כח:כז) [divergence] | The skin disease that drives its bearer out of society "like a wild ass, like a gazelle into the steppe". `צָרַעַת` is the Hebrew counterpart in meaning (ויקרא יג:מו); the note gives the Akkadian and Deut 28:27's terms. |
 | *eklētu*; *eṭû* "dark" | חֲשֵׁכָה; אָפֵל | [equivalent] ↔ `כַּאֲשֶׁר יְמַשֵּׁשׁ הָעִוֵּר בָּאֲפֵלָה` (דברים כח:כט) | `חֲשֵׁכָה`, not `חֹשֶׁךְ` (Gen 1:2) and not `אֲפֵלָה` (Deut 28:29): the reader should see the equivalence, not an identical word. *eṭû* "be dark" = `אָפֵל` (adj.) only in *ūmēkunu lū eṭû*. |
 | *niṭil īni* "sight of the eyes" | מַרְאֵה עֵינַיִם (*ina niṭil īnīkunu* = `לְמַרְאֵה עֵינֵיכֶם`) | [equivalent] ↔ `לְעֵינֶיךָ` (דברים כח:לא–לב) | |
-| *parzillu*; *siparru* | בַּרְזֶל; נְחֹשֶׁת | [cognate] (*parzillu* = בַּרְזֶל, a shared culture word); [equivalent] (*siparru*) ↔ דברים כח:כג; ויקרא כו:יט | |
+| *parzillu*; *siparru* (ZABAR) | בַּרְזֶל; אָרָד (2026-10-30 harmonization, was נְחֹשֶׁת; vocalized at its first occurrence in each text) | [cognate] (*parzillu* = בַּרְזֶל, a shared culture word); [equivalent] (*siparru*: biblical `נְחֹשֶׁת` is bronze – the same metal in other words) ↔ דברים כח:כג; ויקרא כו:יט | Copper (*erû*, URUDU) keeps `נְחֹשֶׁת`. |
 | *zunnu*; *zanānu* | גֶּשֶׁם; יָרַד (גֶּשֶׁם), "may it rain" = `יַגְשִׁים` | [equivalent] ↔ `מְטַר אַרְצְךָ` (דברים כח:כד) | `מָטָר` / `הִמְטִיר` kept out. |
 | *dišpu*; *matāqu* | דְּבַשׁ; מָתַק | [cognate] | |
 | *tinūru* | תַּנּוּר | [cognate] | |
@@ -240,6 +240,8 @@ Each Sumerian legal formula takes the Hebrew of its standard Akkadian equivalent
 
 2026-10-23 harmonization, batch B (row 21): *tubāqu* → `מְצוֹדָה` (frees `פח` for *gišparru* inside EST; [equivalent] Eccl 9:12); changed line: EST 582 `כאשר ציפור בפח תופשים` → `כאשר ציפור במצודה תופשים` (and the §80 heading). No other *tubāqu* in the corpus.
 
+- **2026-10-30 harmonization** (`../harmonization--2026-10-30.md`, rows 5, 6): *siparru* (ZABAR) "bronze" = `אָרָד` (§4's row; vocalized at its first occurrence in each text; was `נְחֹשֶׁת`, which stays *erû* / URUDU "copper": LE 16–17, the Hittite texts); *ṣubātu* "garment" = `שִׂמְלָה` in Akkadian (MAL A's row; was `בגד`; the Hittite TÚG, incl. the Instructions' TÚG-TUM, keeps `בגד`). Changed lines: EST 530 `מתוך שמים של נחושת` → `מתוך שמים של אָרָד` (and the §64 heading `שמי אָרָד`, the footnote, the notes; Deut 28:23 stays [equivalent]), 649 `שַׁמַשׁ רשת של נחושת עליכם` → `שַׁמַשׁ רשת של ארד עליכם` (and the 651 footnote's wording), the part 5–7 introductions and fixed-words lists, the note at 440 (part 5); LH 2612′ `באיזמל נחושת` → `באיזמל אָרָד`, 2616′, 2631′, 2635′, 2641′, 2645′ → `באיזמל ארד`; MAL A r v 48 `בין בגד, בין […]` → `בין שמלה, בין […]`; LE's note at 16–17 and its open decision 2 (settled); project.md rows and decision lists of EST, LH, MAL A; §7's ZABAR remark; the parallels index rebuilt.
+
 ## 7. The Hittite texts: the Laws (project 8) and the Instructions for Temple Personnel (project 9) (fixed 2026-10-24 by the Round 4 run 6 coordinator, before drafting)
 **Binding for every Hittite text of the folder** (`tools/hittite_tools.py` keys HL1, HL2, HLPT, IN) and, for the tables
 §H2–§H9, for the Hittite rituals too (`../טקסי-שילוח-וטיהור/`): the tool reads the H-tables of both corpus files. The
@@ -350,7 +352,7 @@ GIŠ-ṢÍ `עץ`; ḪAŠḪUR `תפוח`, ḪAŠḪUR.KUR.RA `תפוח־הרי�
 `התחיל`; *karšant-* `חתוך`; *tuḫšanna-* `לנתק`; MUŠEN of a pond `ציפור־בריכה`; APIN `מחרשה`; GÚ `צוואר`; *šarā tittanu-* `העמיד
 למעלה`; MAR.GÍD.DA `עֲגָלָה` (always vocalized); *anda appant-* `*אֲסוּרָה*` (crux); *ḫurki-* "wheel" `גלגל` (so GIŠ UMBIN, which
 writes *ḫurki-*, too); *taištiyant-* `טעון`; GIŠ ŠEN `גיגית`; KÁ É.GAL `שער ההיכל`; ZABAR `אָרָד`, URUDU `נחושת` (as Ur-Namma and
-Gudea; Gilgameš's *siparru* `נחושת` is a cross-corpus split, for the lead); OH *akiaš* `ימות`; ZI.KIN.BAR `מחט`; *gapina-*
+Gudea; *siparru* is `אָרָד` in every Akkadian text too since the 2026-10-30 harmonization); OH *akiaš* `ימות`; ZI.KIN.BAR `מחט`; *gapina-*
 `חוטים`, TÚG `בגד`, TÚG.SÍG `בגד צמר`; GIŠ IG `דלת`; *kuit kuit* `כל מה ש־`; SIG₄ `לְבֵנִים`; *šamana-* `יסוד`, NA₄ `אבן`; unknown
 objects transliterated and vocalized (`קַרְפִּינָה`, `קַקַּפָּה`, `אוּמִּיַּנְט`, `אַפַּלַּשָּׁה`, `שִׁישִׁיָּמָה`, `זַחְרַי`, `חוּחָה`,
 `חַרְמִיַּלִּי`). **Ruling (`כך`):** *kiššan* "thus" and QĀTAMMA "so, likewise" (HL1 175 … 475) share `כך`: an accepted split –

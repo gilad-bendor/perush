@@ -1329,7 +1329,7 @@ Files: `annotated-RT.rtl.md`, `translation--intro-RT.rtl.md`, generated `transla
   אספת האלים כולם"`; 134'–135' the Nuska prayer; 137' `"שבועה, שבועה"` (SAG.BA = *māmītu*) and `"הבית מושבע"`; 178'
   `"נושא אני את מקלותיי"`.
 - **Voice:** the exorcist 2nd person, the patient 3rd; present-future = Hebrew future; *manû* `מָנָה` (§3).
-- **The materials follow the rubrics of II–IV** where those exist (33' `צלם נחושת, גפרית` = II 76; 39' = II 182; 50'
+- **The materials follow the rubrics of II–IV** where those exist (33' `צלם ארד, גפרית` = II 76, since the 2026-10-30 harmonization; 39' = II 182; 50'
   `אֵלָה *בכובע ובשוק*` = III 115a; 57' / 64'–66' `תמשח … תכרוך` = III 153a, IV 94a).
 - **New words:** *nēpešu* `טקס` (§6's colophon); *marṣu* `חולה`; *appu* `קצה`; *burzigallu* `בּוּרְזִיגַלּוּ`,
   *šukbusu* `שׁוּכְּבּוּסוּ`, *maṣḫatu* `מַצְחַתוּ`, *šaḫarru* `שַׁחַרּוּ`, *akalu* `אַכַּל`, *šubû* `שׁוּבּוּ`
