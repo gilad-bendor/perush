@@ -139,6 +139,22 @@ ours do not arrive" (the brief's "do not know" is not on the tablet: the [diverg
 side). **Tables:** the H3 `זר` regex now allows at most `ו` + two prefix letters, or `ש` alone (it caught `שוזר`); the selftest
 ok-lines AS 17, AS 84 replaced by the drafted lines, AS 11 added.
 
+## R3. Merged from Sub4, part 2 (UH 33, PU 56 clauses; 2026-10-30; accepted by the coordinator)
+**Fixed strings:** the indefinite god *kuiški DINGIR-LUM* = `איזשהו אֵל` (UH 3, PU 4, 20); DINGIR.MUNUS = `אֵלָה` ★, DINGIR LÚ =
+`אֵל זכר`; F17 with "of the enemy" `"איזה אֵל של ארץ האויב אשר עשה את המגפה הזאת –` (UH 11), 2nd person `ואילו אתה, איזה אֵל אשר
+עשית את המגפה הזאת –` (UH 15); F18 as a command `פְּנֵה פנימה בטובה (עוד)!`; *takšul-* `לשלום`, *takšulai-* `עשה שלום`; *EGIR-pa …
+pēdau* `בחזרה … יישא!`; *galanganza ēš* `הֱיֵה מפויס!`; *ANA LÚ … anda kišan memai* `ואל האיש … כך אומר:`; *EGIR-anda* `אחר כך`;
+the wool list in UH 6's order and words. **Words:** KILĪLU `עֲטָרָה`, *ḫaršanallai-* `עיטר`, `מעוטר`; KASKAL `דרך`; KÉŠ `הקשר?`
+(crux); ANŠE.KUR.RA DINGIR-LIM `סוסי הָאֵל`; ŠÀ.GAL `מספוא`; *išpai-* `שבע`; GIGIR `מרכבה`; *iški(ya)-* "smear" `מרח` (`משח` kept
+off); {D}IMIN.IMIN.BI "the Seven" `הַשִּׁבְעָה` ★ (H2 row; the composite's INIM.INIM.BI is a slip – both manuscripts IMIN); GA.KIN.AG
+`גבינה`; EMṢU `קֵבָה(?)`, NINDA EMṢU `לחם *חמוץ*`; DUG *pulla-* `כלי־פּוּלָּה`; INBU `תנובה`; `אֵל של הדרך` (UH 33); *iya-* (mp) +
+*arḫa* `יוצא` (by sense); TÚG NÍG.LÁM `בגדי פאר`; *waššiya-* `הלביש`; *āššu-* "good" `טוב` (HL1's *āššu-* "property" `רכוש`: two
+words, accepted); *uiya-* "send" `שיגר` (`שלח` is *tarna-*'s); *šalli-* `גדול`; *karp-* `הרים`; *ašušant-* `בעל־עגילים`; the colour
+verbs `מאדים`, `מוריק`, `משחיר`, `[ומלבין?]`; IDI `תדע`, *šakk-* `דע`; *mālant-* `*מקובל*` (crux); ADDIN `נתתי`; *ḫuinu-* `הריץ`;
+*kuit* "because" `מפני ש־`. **Tables (coordinator):** the prefix class of every H3/H4 row in both files is now `ו?(?:ש|כש)?[בלהמכ]?`
+(the old `[ובלהמכש]*` read `מש`, `שו` as prefixes: `משגר`, `שוזר`; the PU 17 escape removed); H2 row the Seven; traps `השבעה` /
+`לשבעה` ("the oath") and `אלה` with DINGIR.MUNUS ("these").
+
 ## H2. Names (machine-read; the ritual texts)
 | Source (regex) | Hebrew | ★ | Note |
 |---|---|---|---|
@@ -152,18 +168,19 @@ ok-lines AS 17, AS 84 replaced by the drafted lines, AS 11 added.
 | `alauwaim\|alāuwaim` | `אֲלַוַּיְמִי` | | Alauwaimi, a Luwian god. |
 | `zarniz` | `זַרְנִיזָה` | | Zarniza. |
 | `mamm[aā]` | `מַמָּאִימִי` | | Mammai / Mammaimi. (AM *Mammai* / AM2 *Mammāimi*: the translator decides one form or two, in Proposals) |
+| `\{d\}inim\.inim\.bi\|\{d\}imin\.imin\.bi` | `שִּׁבְעָה` | ★ | the Seven, `הַשִּׁבְעָה` (UH 28 `לַשִּׁבְעָה`; both manuscripts {D}IMIN.IMIN.BI, the composite's INIM.INIM.BI a slip; = Akk. *Sebettu*, Erra's `הַשִּׁבְעָה`) |
 | `zarpiy` | `זַרְפִּיָּה` | | Zarpiya, the author of the first ritual on the tablet (AS 101). |
 
 ## H3. Reserved: never in a ritual line (machine-read; added by Sub4, 2026-10-30; the law file's H3 holds the Lev 14 / 16 words)
 | Hebrew (regex on the unvocalized, bracket-free line) | Licence | Why |
 |---|---|---|
-| `(?<![א-ת])[ובלהמכש]*(?:נרצה\|ירצה\|לרצון\|ורצה)(?![א-ת])` | NEVER | Lev 1:4 `וְנִרְצָה לוֹ` (*galank-* = `מְפֻיָּס`) |
-| `(?<![א-ת])[ובלהמכש]*(?:שלמים\|ניחוח\|ריח ניחוח)(?![א-ת])` | NEVER | the Torah's sacrifice words |
-| `(?<![א-ת])[ובלהמכש]*(?:אשם\|אשמה\|טחורים\|עפלים\|עפליכם)(?![א-ת])` | NEVER | 1 Sam 6:3–5 (the Philistines' "guilt offering" and tumours) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:נרצה\|ירצה\|לרצון\|ורצה)(?![א-ת])` | NEVER | Lev 1:4 `וְנִרְצָה לוֹ` (*galank-* = `מְפֻיָּס`) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:שלמים\|ניחוח\|ריח ניחוח)(?![א-ת])` | NEVER | the Torah's sacrifice words |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:אשם\|אשמה\|טחורים\|עפלים\|עפליכם)(?![א-ת])` | NEVER | 1 Sam 6:3–5 (the Philistines' "guilt offering" and tumours) |
 | `(?<![א-ת])ארץ גזרה(?![א-ת])` | NEVER | Lev 16:22 (*KUR LÚ.KÚR* = `ארץ האויב`) |
-| `(?<![א-ת])[ובלהמכש]*(?:עתי)(?![א-ת])` | NEVER | Lev 16:21 `אִישׁ עִתִּי` |
-| `(?<![א-ת])[ובלהמכש]*(?:מלאך\|המלאך\|מלאכים)(?![א-ת])` | NEVER | 2 Sam 24:16 (no Hittite counterpart in the rituals) |
-| `(?<![א-ת])[ובלהמכש]*(?:שנער\|איפה\|האיפה)(?![א-ת])` | NEVER | Zech 5:6–11 (`איפה` "where": write `היכן`) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:עתי)(?![א-ת])` | NEVER | Lev 16:21 `אִישׁ עִתִּי` |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:מלאך\|המלאך\|מלאכים)(?![א-ת])` | NEVER | 2 Sam 24:16 (no Hittite counterpart in the rituals) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:שנער\|איפה\|האיפה)(?![א-ת])` | NEVER | Zech 5:6–11 (`איפה` "where": write `היכן`) |
 
 ## H5. Formulas (machine-read; the ritual texts; added by Sub4, 2026-10-30)
 | F | Composite (regex, flat) | Hebrew (regex on the unvocalized line without punctuation) | Note |
@@ -182,6 +199,8 @@ ok-lines AS 17, AS 84 replaced by the drafted lines, AS 11 added.
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:חלב)(?![֑-ׇא-ת])` | `ì\.udu\|\{uzu\}ì\b\|\bì\b` | fat `חֵלֶב` (milk `חָלָב`) |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:בר)(?![֑-ׇא-ת])` | `líl\|gimr` | the open country `בָּר` ("son", "grain", "pure") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אודם)(?![֑-ׇא-ת])` | `gug` | carnelian `אֹדֶם` (plene reads "redness") |
+| `(?<![֑-ׇא-ת])[ובלמכש]?(?:השבעה\|שבעה)(?![֑-ׇא-ת])` | `imin\.imin\|inim\.inim` | the Seven `הַשִּׁבְעָה` ("the oath", "seven") |
+| `(?<![֑-ׇא-ת])[ובלמהכש]?(?:אלה)(?![֑-ׇא-ת])` | `dingir\.munus\|dingir munus` | goddess `אֵלָה` ("these") |
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:עטרה)(?![֑-ׇא-ת])` | `kilīl\|kilil` | `עֲטָרָה` (Ataroth, "crowned her") – vocalize once |
 
 ## H9. Selftest (ritual lines)

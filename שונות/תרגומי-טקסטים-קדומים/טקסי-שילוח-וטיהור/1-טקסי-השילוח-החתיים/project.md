@@ -131,3 +131,67 @@ in words at AS 10 and 35; new parallels worth the index: AS 16 ↔ Deut 23:15 (t
 AS 17 ↔ 1 Sam 6:9 (`הוּא עָשָׂה לָנוּ אֶת הָרָעָה`); AS 18 ↔ 1 Sam 6:7 (`וַאֲסַרְתֶּם`); AS 67 ↔ Num 31:23–24 (through the fire, back to
 the camp); AS 88 ↔ 1 Sam 6:7, Num 19:2 (the unused animal); AS 70 / 95 ↔ Lev 7:32–34 (breast and right side); AS 75 ↔ Lev 11:7 (the
 pig as an offering, [absent]).
+
+### Part 2 (UH, PU)
+Written 2026-10-30 by the translator, after drafting UH 1–33 (`annotated-UH.rtl.md`) and PU 1–56 (`annotated-PU.rtl.md`). `verify UH`
+and `verify PU`: 0 problems (PU 17 carries one escape, below); `check_bible_quotes.py` on both files: 0 problems. Rank 3 (Görke, Collins) was read
+only after the drafts; for UH and PU I read only the textual notes of `edition.json`, not the translation notes. **AS 11:** I keep
+`מאגד` (*taruppai-* "gather, unite": `אגד` is the better word; R2 already lists it).
+
+**Fixed strings (copied from AS, or fixed here for AM):**
+- F17: UH 11 `"איזה אֵל של ארץ האויב אשר עשה את המגפה הזאת –`; UH 15 (2nd person) `ואילו אתה, איזה אֵל אשר עשית את המגפה הזאת –`;
+  PU 42 `"איזה אֵל [של אויב] אשר [עשה את המגפה הזאת] –`.
+- **The indefinite god, fixed:** *kuiški DINGIR-LUM* = `איזשהו אֵל` (UH 3 `ואם איזשהו אֵל של אויב עשה אותה,` = the selftest line,
+  unvocalized; PU 4 `[… בין] איזשהו אֵל [זכר, או אֵלָה …]`; PU 20 `"אם אולי את המגפה הזאת – איזשהו אֵל זכר של ארץ האויב עשה,`).
+  DINGIR.MUNUS / *ŠA DINGIR MUNUS-TI* = `אֵלָה` (always vocalized: "these"); DINGIR LÚ = `אֵל זכר`.
+- F18 as an imperative: `פְּנֵה פנימה בטובה` (UH 17 `ואל ארץ חַתִּי – פְּנֵה פנימה בטובה עוד!"`, UH 26 `ואילו אל ארץ חַתִּי – פְּנֵה פנימה
+  בטובה!"`; PU 24 / 46 `ואילו אל המלך, …, אל המחנה ואל ארץ חַתִּי – פְּנֵה פנימה בטובה עוד!`); UH 25 without *aššuli* `… אֶל ארצך פְּנֵה פנימה!`.
+- *takšul-* `לשלום` (UH 12 `הנה, את הכבש המעוטר הזה – לך, לָאֵל, לשלום נהגנו;`), *takšulai-* `עשה שלום` (UH 14 3sg, UH 16 imper.
+  `כך עשה שלום!`); *menaḫḫanda* `כלפי`.
+- *EGIR-pa … pēdau* `בחזרה … יישא!` (PU 26 `ובחזרה [אל ארץ האויב יי]שא!"`, PU 45 `… [בחזרה] אל ארץ האויב יישא!`).
+- *galanganza ēš* `הֱיֵה מפויס!` (PU 23, 44; with the instrument PU 23 `באיש המקושט ה[זה] הֱיֵה מפויס!`).
+- *(anda) kiššan memanzi* `ועליו / ועליהם כך אומרים:` (UH 10, 20); *ANA LÚ … anda kišan memai* `ואל האיש … כך אומר:` (PU 16, 19).
+- The drive: UH 9 `ואת הכבש – אל דרך האויב מסיעים קדימה.`, UH 18 `… אל ארץ האויב מסיעים הלאה.`; *unna-* `נוהגים` (UH 5, 27; PU 28).
+- The wool: UH 6 `ומכניסים צמר כחול, צמר אָדֹם, צמר ירוק, צמר שחור וצמר לָבָן,` (= the selftest line); PU 32 the same colour order.
+- *EGIR-anda* `אחר כך` (IN; UH 19, 27; PU 28, 47, 49).
+
+**New renderings:** KILĪLU `עֲטָרָה` (vocalized once), *ḫaršanallai-* `עיטר`, ptcp. `מעוטר` (R1a; UH 7, 8, 12, 18); KASKAL `דרך` (IN; UH 9,
+33; PU 9, 10); KÉŠ "knot, bond" `הקשר?` (UH 13; Görke "Herde"; B has BÀD "wall"); *daššu-* `חזק` (IN); *maḫḫan* "as" `כמו ש־` (HL2);
+ANŠE.KUR.RA DINGIR-LIM `סוסי הָאֵל`; ŠÀ.GAL "fodder" `מספוא`; Ì.UDU `חֵלֶב` ★ (R1a); *turiya-* `רתם` (HL1); *išpai-* "be sated" `שבע`;
+GIGIR `מרכבה`; *iški(ya)-* "smear" `מרח` (`משח` avoided: IN's GUDU₁₂ is `מְשׁוּחַ`); **{D}IMIN.IMIN.BI "the Seven" = `הַשִּׁבְעָה` ★**
+(UH 28: the composite prints `{D}INIM.INIM.BI`, but both manuscripts have IMIN.IMIN.BI; Görke "Siebengottheit"; = Akk. *Sebettu*, Erra's
+`הַשִּׁבְעָה`; **proposed H2 row**: `\{d\}imin\.imin\.bi|\{d\}inim\.inim\.bi` → `הַשִּׁבְעָה` ★, "always vocalized: 'the seven, the oath'");
+*kuen-* `הרג` (UH 30, HL1); GA.KIN.AG `גבינה` (R1a); EMṢU alone `קֵבָה(?)` (HL2 `קיבות(?)`; Görke "Lab"), NINDA EMṢU `לחם *חמוץ*`; DUG
+*pulla-* `כלי־פּוּלָּה`; GIŠ INBU `תנובה` (HL2); DINGIR ŠA KASKAL-NIM `אֵל של הדרך` (UH 33). PU: *walḫ-* (GUL-aḫ-) `מחץ`; *iya-* (mp)
+"go, march" with *arḫa* `יוצא` (PU 3, 7; Collins "returns"; IN 19.3 had `יתלוו`: by sense); *ēpp-* `תפס` (HL1); *kattan tiya-* `עומדים
+לצד־`, *EGIR SISKUR tiya-* `עומד מאחורי הטקס` (idioms, as IN; *tiya-* alone `נכנס`, PU 10); *uwate-* `הביא`; NÍ.TE `גוף` (IN);
+TÚG NÍG.LÁM "festive garments" `בגדי פאר`; *waššiya-* "clothe" `הלביש` (the causative of *weš-* `לבש`, IN); *āššu-* "good" `טוב` (PU 17,
+53; HL1's *āššu-* "property" `רכוש`: two words); *uiya-* "send" `משגר` (PU 17; `שלח` is *tarna-*'s; Ugaritic *lʾak* has `שִׁיגֵּר` too: a
+shared common word across languages); PŪḪU `תחליף` (HL2); *šalli-* `גדול`; ÚR `ירך` (as AS 28); *galank-* `מפויס` (R1a); *karp-* "lift"
+`הרים` (PU 25, R1); GEŠTU `אוזן` (HL1); *ašušant-* "with earrings" `בעל־עגילים`; KA×U `פה` (IN); *ḫuittiya-* `משך` (R1; PU 32 "from the
+king's mouth draws forth"); the colour verbs (R1a) `מאדים` (*ēšḫarwaḫḫ-*), `מוריק` (*ḫaḫlaḫḫ-*, restored), `משחיר` (*dankuwaḫḫ-*), and
+the restored *[ḫarganušk]i?* `[ומלבין?]`; ÉRIN.MEŠ `אנשי צבא` (HL1); IDI (Akk.) "know!" `תדע`, *šakk-* `דע` (PU 36–37); ZÍZ `כוסמת`
+(HL2); *mālant-* `*מקובל*` (PU 43; Collins "powerful(?)"; `לרצון` reserved); ADDIN (Akk.) `נתתי`; *ḫuinu-* "make run" `הריץ` (PU 48);
+ṬUPPU `לוח`; *kuit* "because" `מפני ש־` (PU 34, with Collins).
+
+**Gates / tables:**
+- **The H3 `גר` regex** (Lev 22:10, 18) matches `משגר` (the participle of `שִׁגֵּר`, PU 17): the prefix class `[ובלהמכש]*` reads `מש` as
+  two prefix letters – the same flaw as the `זר` regex fixed in R2. PU 17 carries `[היתר שער: משגר …]`; please apply the R2 fix to
+  `גר` / `גרים` / `הגר` (and check `תושב`, `נדר`, `זבח` the same way).
+- Proposed H2 row for {D}IMIN.IMIN.BI (above), and a trap: unvocalized `השבעה` / `לשבעה` reads "the oath" / "to seven".
+- The selftest's UH 6 and UH 3 ok-lines match the drafted lines (UH 3 now unvocalized: `ואם איזשהו אֵל של אויב עשה אותה,`); UH 12's
+  err-line stays valid (`לרצון`).
+
+**Cruxes:** UH 13–14 (KÉŠ "knot" or "herd"; the subject of *takšulāizzi*); UH 25 (the Storm-god as the enemy's god, or Ḫatti's?); UH 28
+(the composite's INIM.INIM.BI); UH 32 EMṢU; PU 3/7 *arḫa iya-* ("go out" / "return"); PU 21 *PŪḪĪ=ŠU* (whose substitute?); PU 27 / 47
+*ŠA DINGIR MUNUS-TI* ("the words of a goddess" / "in case the deity is female"); PU 34 *kuit* and the last colour verb; PU 36 *[UL] IDI*
+(imperative, with Collins; elsewhere "I do not know"); PU 43 *mālant-*; PU 38 *dāi*.
+
+**For Ambazzi (part 3) – shared words fixed so far:** the wool and colours (SÍG `צמר`; ZA.GÌN `כחול`, SA₅ `אָדֹם` ★, SIG₇.SIG₇
+`ירוק`, GE₆ `שחור`, BABBAR `לָבָן` ★; the colour verbs above); *šuel* `חוט`; *anda tarna-* `הכניס`, *taruppai-* `אגד`; *ḫuittiya-*
+`משך` (AM's "wool drawn from feet to head"); KA×U `פה`; Ì / Ì.UDU `חֵלֶב` ★; GA.KIN.AG `גבינה`; INBU `תנובה`; NINDA.GUR₄.RA `לחם
+עבה`; DUG ḫuppar `קערה`, KUKUBI `קנקן`, GAL `כוס`; *zanu-* `בישל`, *zeyant-* `מבושל`; *kuen-* `הרג`, *ḫatta-* `דקר`; the god's portions
+(AS 70 / 95: GABA `חזה`, ZAG.UDU ZAG-an `הכתף הימנית`, NÍG.GIG `כבד`, ŠÀ `לב`); "drinking the god" `… – שלוש פעמים שותה`; the gods
+`אֵל הַסְּעָרָה`, `אֵל הַשֶּׁמֶשׁ`, `אֵל הַמָּגֵן`, `הַשִּׁבְעָה`; *šipant-* `הקריב`; *idālu-* `רע`, *idālu* `הרעה`; *peda-* `נשא`, *EGIR-pa …
+peda-* `בחזרה … יישא`; *arḫa tarna-* `שילח הלאה`; *penna-* `הסיע`, *unna-* `נהג`; *PŪḪU* `תחליף`; *galank-* `מפויס`; *walḫ-* `מחץ`;
+*ištarna* `בין` / `דרך`; *ar-* "arrive" `הגיע`; the mouse is not in AS / UH / PU (PÉŠ.TUR `עכבר קטן` from R1).
