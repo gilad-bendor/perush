@@ -206,8 +206,8 @@
 
 ### 31
 `n=ašta {MUŠ}illuyankaš QADU [DUMU{MEŠ}-ŠU] šarā wēr`
-> והנחש עם [ילדיו] עלו,
-- **פירוק:** `n=ašta` – nu + =ašta ("ו־"); `{MUŠ}illuyankaš` – "the serpent", nom. ("הנחש"); `QADU [DUMU{MEŠ}-ŠU]` – QADU (Akkadogram) "together with" + DUMU.MEŠ "children" + -ŠU "his", restored ("עם [ילדיו]"); `šarā` – šarā "up" ("עלו", with the verb); `wēr` – uwa- "come", pret. 3pl ("עלו").
+> והנחש עם [בניו] עלו,
+- **פירוק:** `n=ašta` – nu + =ašta ("ו־"); `{MUŠ}illuyankaš` – "the serpent", nom. ("הנחש"); `QADU [DUMU{MEŠ}-ŠU]` – QADU (Akkadogram) "together with" + DUMU.MEŠ "children, sons" + -ŠU "his", restored ("עם [בניו]"); `šarā` – šarā "up" ("עלו", with the verb); `wēr` – uwa- "come", pret. 3pl ("עלו").
 - **הערות:** "עלו" – מילולית "באו מעלה" (*šarā uwa-*). הנחש יש לו משפחה: גם בנוסח השני (78–81) לנחש יש בת, והמשפחה היא חלק מן העלילה.
 
 ### 32
@@ -303,8 +303,8 @@
 
 ### 47
 `nu=wa=za DAM-KA DUMU{MEŠ}-KA autt[i]`
-> תראה את אשתך ואת ילדיך!"
-- **פירוק:** `nu=wa=za` – nu + =wa + =z(a) ("ו־", not rendered); `DAM-KA` – DAM "wife" + -KA "your" ("את אשתך"); `DUMU{MEŠ}-KA` – DUMU.MEŠ "children" + -KA ("ואת ילדיך"); `autt[i]` – au(š)- "see", pres. 2sg ("תראה").
+> תראה את אשתך ואת בניך!"
+- **פירוק:** `nu=wa=za` – nu + =wa + =z(a) ("ו־", not rendered); `DAM-KA` – DAM "wife" + -KA "your" ("את אשתך"); `DUMU{MEŠ}-KA` – DUMU.MEŠ "children, sons" + -KA ("ואת בניך"); `autt[i]` – au(š)- "see", pres. 2sg ("תראה").
 - **הערות:** האיסור הוא בבת אחת אזהרה ונבואה: אם תביט – תראה, ותתגעגע. לחופשיה יש אשה וילדים; הקרבה לאלה ניתקה אותו מהם.
 
 ## §12 – חופשיה מציץ בחלון
@@ -324,9 +324,9 @@
 
 ### 50
 `nu DAM-SU! DUMU{MEŠ}-[ŠU aušta]`
-> ו[ראה] את אשתו ואת י[לדיו].
-- **פירוק:** `nu` – nu ("ו־"); `DAM-SU!` – DAM "wife" + -ŠU "his" ("את אשתו"); `DUMU{MEŠ}-[ŠU` – DUMU.MEŠ "children" + [-ŠU] ("ואת י[לדיו]"); `aušta]` – au(š)- "see", pret. 3sg, restored ("ו[ראה]").
-- **הערות:** הנבואה של 47 מתקיימת מלה במלה: "תראה את אשתך ואת ילדיך" – "וראה את אשתו ואת ילדיו".
+> ו[ראה] את אשתו ואת ב[ניו].
+- **פירוק:** `nu` – nu ("ו־"); `DAM-SU!` – DAM "wife" + -ŠU "his" ("את אשתו"); `DUMU{MEŠ}-[ŠU` – DUMU.MEŠ "children" + [-ŠU] ("ואת ב[ניו]"); `aušta]` – au(š)- "see", pret. 3sg, restored ("ו[ראה]").
+- **הערות:** הנבואה של 47 מתקיימת מלה במלה: "תראה את אשתך ואת בניך" – "וראה את אשתו ואת בניו". DUMU.MEŠ – `בנים` (כבחוקים, HL 168), במובן "ילדים".
 
 ## §13 – חופשיה מבקש לשוב הביתה
 
@@ -816,6 +816,6 @@
 
 ### 128
 `{m}piḫa-LÚ [{LÚ}DUB.SAR?] PĀNI {m}UR.MAḪ-LÚ? GAL DU[B.SAR{M]}EŠ IŠṬU[R]`
-> פִּיחָה־זִיטִי [הסופר?] כתב, לפני וַלְוַה־זִיטִי?, רב הסופרים.
-- **פירוק:** `{m}piḫa-LÚ` – Piḫa-ziti (LÚ = Luwian *ziti-* "man"), personal name ("פִּיחָה־זִיטִי"); `[{LÚ}DUB.SAR?]` – "scribe", restored ("[הסופר?]"); `PĀNI` – PĀNI (Akkadogram) "before, in the presence of" ("לפני"); `{m}UR.MAḪ-LÚ?` – Walwa-ziti (UR.MAḪ "lion" = Luwian *walwa-*) ("וַלְוַה־זִיטִי?"); `GAL DU[B.SAR{M]}EŠ` – "chief of the scribes" ("רב הסופרים"); `IŠṬU[R]` – IŠṬUR (Akkadogram, *šaṭāru*) "wrote" ("כתב").
-- **הערות:** הסופר וממונהו: הלוח נכתב בבית הספר של חתושה, תחת עינו של רב הסופרים. השמות כתובים בסימני־מלה (LÚ, UR.MAḪ), וקריאתם בלוּוִית היא השערה מקובלת.
+> פִּיחָה־זִיטִי [הסופר?] כתב, לפני וַלְוַה־זִיטִי?, שַׂר הסופרים.
+- **פירוק:** `{m}piḫa-LÚ` – Piḫa-ziti (LÚ = Luwian *ziti-* "man"), personal name ("פִּיחָה־זִיטִי"); `[{LÚ}DUB.SAR?]` – "scribe", restored ("[הסופר?]"); `PĀNI` – PĀNI (Akkadogram) "before, in the presence of" ("לפני"); `{m}UR.MAḪ-LÚ?` – Walwa-ziti (UR.MAḪ "lion" = Luwian *walwa-*) ("וַלְוַה־זִיטִי?"); `GAL DU[B.SAR{M]}EŠ` – "chief of the scribes" ("שַׂר הסופרים", as HLPT col1); `IŠṬU[R]` – IŠṬUR (Akkadogram, *šaṭāru*) "wrote" ("כתב").
+- **הערות:** הסופר וממונהו: הלוח נכתב בבית הספר של חתושה, תחת עינו של שר הסופרים. השמות כתובים בסימני־מלה (LÚ, UR.MAḪ), וקריאתם בלוּוִית היא השערה מקובלת.
