@@ -19481,6 +19481,446 @@
      "cad2c8578ae9ff5d76c664d8b4b57a83ed233aab483687bd86fb69d248e2e4df"
     ]
    }
+  },
+  {
+   "id": "eBL/Cuthaean-MB-A/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "12",
+    "Middle Babylonian",
+    "A"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Cuthaean-MB-A/_raw/chapter-display.json": [
+     778075,
+     "7afb871beb4bdf6e850f0bee242415b9bec74335252c292493a2eee4c9340bf3"
+    ],
+    "eBL/Cuthaean-MB-A/bibliography.md": [
+     2116,
+     "f4dc927760cdc09e0069297db5b49e856401c146bc48c6ccf76da066cd92cf9a"
+    ],
+    "eBL/Cuthaean-MB-A/chapter.atf": [
+     11147,
+     "cfbdd368e835815950099f25e2352982d706440df966c5b655848dd1a6a4dc5a"
+    ],
+    "eBL/Cuthaean-MB-A/glossary.md": [
+     39752,
+     "4727ec61fb04d6bb427ddeaf6872ecff0e2ac7907b65c98f054478192e54bb6d"
+    ],
+    "eBL/Cuthaean-MB-A/manuscripts.md": [
+     715,
+     "e1d4929e118514092c35e0598fd8e740a2734863affd8c97d43fb8837b13b1c7"
+    ],
+    "eBL/Cuthaean-MB-A/reading-edition.md": [
+     26140,
+     "16eeb7bbc9cb806ed12692c87d0b7d6c861983658cf9f2c0dd69fa3fdd37a1fa"
+    ]
+   },
+   "raw_files": 127
+  },
+  {
+   "id": "eBL/Cuthaean-MB-B/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "12",
+    "Middle Babylonian",
+    "B"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Cuthaean-MB-B/_raw/chapter-display.json": [
+     141819,
+     "676bad1097d4bab897026319f697edcc11553a0bf4ac4e91eb018efe703519fe"
+    ],
+    "eBL/Cuthaean-MB-B/bibliography.md": [
+     2116,
+     "3f789c72e589bc5b6d6437703b2389c1eea95f638bca0cccd48353e4890e91ae"
+    ],
+    "eBL/Cuthaean-MB-B/chapter.atf": [
+     1819,
+     "5d8d6dfac260f3cb7613ce32f70ea989e00b34739ee3198de08dea169e178ff6"
+    ],
+    "eBL/Cuthaean-MB-B/glossary.md": [
+     4906,
+     "b8c681c0864d8e7d74b1de2b31d6c552d2e4bbf1f158c047729d682ba27c5a1f"
+    ],
+    "eBL/Cuthaean-MB-B/manuscripts.md": [
+     714,
+     "0ada092b1c7a3e8bc1e5eb0cf6c3783afeefbb18007c95916bafb55e834bcded"
+    ],
+    "eBL/Cuthaean-MB-B/reading-edition.md": [
+     3735,
+     "d686712601015c614ab7053bdedcf9e5f0110e2a05d57d50c3332b694e9c50ef"
+    ]
+   },
+   "raw_files": 22
+  },
+  {
+   "id": "eBL/Cuthaean-OB-I/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "12",
+    "Old Babylonian",
+    "I"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Cuthaean-OB-I/_raw/chapter-display.json": [
+     720057,
+     "a43751ba4de02d855cb798e8c78d50446ef9d4e4ddacff6e507391ae55764a6e"
+    ],
+    "eBL/Cuthaean-OB-I/bibliography.md": [
+     2110,
+     "ac101f2c0dbefa4032837d1717be8cc05f4969c36c5ca83ea2e91889cd2f3672"
+    ],
+    "eBL/Cuthaean-OB-I/chapter.atf": [
+     11057,
+     "794fd5061eb427939a005bf087d5b9847ce77f2a9fe77d34b547211b2f5ca8dc"
+    ],
+    "eBL/Cuthaean-OB-I/glossary.md": [
+     38317,
+     "0e16625ab92947d77634e0d980b8a43f6fb1611211df4b1806bf09fda8dd1e68"
+    ],
+    "eBL/Cuthaean-OB-I/manuscripts.md": [
+     701,
+     "69bd82459778c2b0402715b77df29cb2c33d60e02ac4ff76683763ed7eea5aec"
+    ],
+    "eBL/Cuthaean-OB-I/reading-edition.md": [
+     27697,
+     "041940637bcb117ac2918d8292a2e514dbba4620699a7c16831425a71ea73922"
+    ]
+   },
+   "raw_files": 116
+  },
+  {
+   "id": "eBL/Cuthaean-OB-II/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "12",
+    "Old Babylonian",
+    "II"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Cuthaean-OB-II/_raw/chapter-display.json": [
+     91015,
+     "81855498c14bf0cacc4c6f6419b91477dc05fa734d4a1e741f48ccbd05b01bcf"
+    ],
+    "eBL/Cuthaean-OB-II/bibliography.md": [
+     2127,
+     "42b90be50b16cffd29af54885e6aadf1a0af5f0e380dd52bdddff42757fb62bf"
+    ],
+    "eBL/Cuthaean-OB-II/chapter.atf": [
+     971,
+     "749707dcde5809bfbaa6d63f6eac7f9dc8e18d9fdc0a71318eb33672f780caf2"
+    ],
+    "eBL/Cuthaean-OB-II/glossary.md": [
+     2637,
+     "511fcb0bb4b22e7fa3c21fbd26f30a956c7a0439592146c000fca95c797600fb"
+    ],
+    "eBL/Cuthaean-OB-II/manuscripts.md": [
+     718,
+     "58673d1f60303f09d32e06ae356a616d6701f99066b6d5eb058c616490398bc7"
+    ],
+    "eBL/Cuthaean-OB-II/reading-edition.md": [
+     2332,
+     "b06f9637ff7e0e0cf887e7d4bfcebf9b608fc8862b881f2eff92c33afacd2d17"
+    ]
+   },
+   "raw_files": 19
+  },
+  {
+   "id": "eBL/Cuthaean-SB/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "12",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Cuthaean-SB/_raw/chapter-display.json": [
+     4718518,
+     "a10f9eb08a8c4a0fec89d4cd636a1836b1782e002e94409972a8eff92b38d93a"
+    ],
+    "eBL/Cuthaean-SB/bibliography.md": [
+     2158,
+     "29fb2041f2325aa8100737d8670dee7242bf699be74950b515b7c777ecae25d8"
+    ],
+    "eBL/Cuthaean-SB/chapter.atf": [
+     58767,
+     "aaa55d9bb8f6b23d880c893489d738843d42851a5ff243d758912a0d90995acf"
+    ],
+    "eBL/Cuthaean-SB/glossary.md": [
+     118819,
+     "995f1c7419533e3608621cda141ec522831966a18ee3236d425bc87050de569f"
+    ],
+    "eBL/Cuthaean-SB/manuscripts.md": [
+     3067,
+     "5aa2a48268b7dc8e51b65049678a6b15c553aa198dd24881b20126753ab31dd6"
+    ],
+    "eBL/Cuthaean-SB/reading-edition.md": [
+     125198,
+     "d71177843c4fc28a0ff8134e59917d922974dd85ff50ffa4a288317e88ac1719"
+    ]
+   },
+   "raw_files": 377
+  },
+  {
+   "id": "eBL/Fable-Ox-and-Horse/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "9",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Fable-Ox-and-Horse/_raw/chapter-display.json": [
+     2310284,
+     "35483e19088946e780c6b1e660721d808c47eb5beccb8e81c88e9d842a182cf9"
+    ],
+    "eBL/Fable-Ox-and-Horse/bibliography.md": [
+     1658,
+     "86e118662930e8537d9f7324419cafb93d7eb0c28b9fc3cd1b66a142b5ad6268"
+    ],
+    "eBL/Fable-Ox-and-Horse/chapter.atf": [
+     33733,
+     "a2360477f800b392f23f0244b7a0c6343e2afc15a34737befe99f6ad53938104"
+    ],
+    "eBL/Fable-Ox-and-Horse/glossary.md": [
+     95575,
+     "6e772aa1e572ffe06e97d24e46ab37f2c0f4a8cb2843c5d2626e19a1be36e1fc"
+    ],
+    "eBL/Fable-Ox-and-Horse/manuscripts.md": [
+     1276,
+     "85566e3f902b93bacf80c304c474d0b140f14071d8f73986f1bb11a2ba426c65"
+    ],
+    "eBL/Fable-Ox-and-Horse/reading-edition.md": [
+     78146,
+     "0031bd573722a684be84d7fbe07c5ec5627749a623ae68f65f3ba06cd38f7279"
+    ]
+   },
+   "raw_files": 279
+  },
+  {
+   "id": "eBL/Fable-Palm-and-Vine/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "12",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Fable-Palm-and-Vine/_raw/chapter-display.json": [
+     890449,
+     "ee0c44f4cc89659c1bb7a7358633f889012047b5e87b2d7be1b3921f00d43e2e"
+    ],
+    "eBL/Fable-Palm-and-Vine/bibliography.md": [
+     970,
+     "ecb6ebf3ca57417f0d97b7121c15882ae67b8a2fa1d6763c5d719486c2e4acfe"
+    ],
+    "eBL/Fable-Palm-and-Vine/chapter.atf": [
+     13955,
+     "1adb5f2b8d2a1fb603cf88b5547f5c67047eaf3d5c8999e4a90598128f9d15be"
+    ],
+    "eBL/Fable-Palm-and-Vine/glossary.md": [
+     68608,
+     "fa281865eac096fff36ed81400f669484c7ef835323f5d823b069e658962dd26"
+    ],
+    "eBL/Fable-Palm-and-Vine/manuscripts.md": [
+     848,
+     "9213a27f3196cc75f39529c2b8e915f2564670e7e762abf762b5c1353227ecb8"
+    ],
+    "eBL/Fable-Palm-and-Vine/reading-edition.md": [
+     31989,
+     "b2e4e500e6d6b595d49f51a502058096c489d4985fdb09b1640b9d83cd0db7e2"
+    ]
+   },
+   "raw_files": 204
+  },
+  {
+   "id": "eBL/Fable-Poplar/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "8",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Fable-Poplar/_raw/chapter-display.json": [
+     1027794,
+     "102bd8c0a57433d2f49342a090fb6b5d52e583319f513354576d280b22376837"
+    ],
+    "eBL/Fable-Poplar/bibliography.md": [
+     825,
+     "e22b47703944ac6aeeb4f846e49c6bc23eaa132307ff7527ca19339593759857"
+    ],
+    "eBL/Fable-Poplar/chapter.atf": [
+     15073,
+     "92dc10e5b0d3fe3344de7a84601eb724ec78730384997e78eae04331daf8f218"
+    ],
+    "eBL/Fable-Poplar/glossary.md": [
+     59192,
+     "6acdfd0e94ea46bf18c848d940a8644f43ffe5781a2e3baca023fd4980a892a4"
+    ],
+    "eBL/Fable-Poplar/manuscripts.md": [
+     1113,
+     "ab3181d2fb5fe955e6373bd010ef0b1f58df7f156c44f60a9465a3d183480f19"
+    ],
+    "eBL/Fable-Poplar/reading-edition.md": [
+     33450,
+     "5c4c7ad3c9c25b9a5181a3a248e885236d2112d8d7812f806d7cb118befec0a7"
+    ]
+   },
+   "raw_files": 170
+  },
+  {
+   "id": "eBL/Fable-Spider/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "11",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Fable-Spider/_raw/chapter-display.json": [
+     791430,
+     "d0343b7fdf9cec8279b5ab43b5df42f809e0369a3ad1bf844abb66eb00f3a80f"
+    ],
+    "eBL/Fable-Spider/bibliography.md": [
+     1744,
+     "6291f865f0156e38b767aeda33d779be89c5a09fda7764ff1fdec6c88b922759"
+    ],
+    "eBL/Fable-Spider/chapter.atf": [
+     11797,
+     "447fb09cbf94979c2fbe2c836d1a2301d72ac0e7171382a448f302fc4a445fc0"
+    ],
+    "eBL/Fable-Spider/glossary.md": [
+     34378,
+     "d7ac8ce098e2e0e061900bc6c961682ec9f5c47bea81aa87fb3006b2afdfc3ea"
+    ],
+    "eBL/Fable-Spider/manuscripts.md": [
+     687,
+     "c51e08723a61cb67e16e6bea5c9ba082917081b1ddb8fc30e3d020a297865d4c"
+    ],
+    "eBL/Fable-Spider/reading-edition.md": [
+     25218,
+     "5afb6210b74b009298f39b74be50cb85cd35c2391d8e7463fe1798804975e9e8"
+    ]
+   },
+   "raw_files": 123
+  },
+  {
+   "id": "eBL/Fable-Wren/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "13",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Fable-Wren/_raw/chapter-display.json": [
+     607103,
+     "a2fb56d4cc00eaffe771ce66a9783b53857dbad38434e40e1d89d4e76f2441e4"
+    ],
+    "eBL/Fable-Wren/bibliography.md": [
+     895,
+     "239d0cf51cb1637044f37f43c4cc644f743d7ae2af82af906ba1daebc3242f5d"
+    ],
+    "eBL/Fable-Wren/chapter.atf": [
+     8310,
+     "fc8889c4ba4e41555eb5ba01ba7afc3e955c3f6b39ea3ec495f046a26e593688"
+    ],
+    "eBL/Fable-Wren/glossary.md": [
+     26960,
+     "257626107d9a009c9a48e0cace0d723b83d06c32f708eebcd31d82d84e2171c0"
+    ],
+    "eBL/Fable-Wren/manuscripts.md": [
+     1000,
+     "d0b9656047d8194a8b7050058786aa5d18ed4b19208737caedb13a60810083db"
+    ],
+    "eBL/Fable-Wren/reading-edition.md": [
+     21526,
+     "d927bc73eb4d8a25ca1a9c746bf85973a75220418d33774c77e6f6e5636d52a0"
+    ]
+   },
+   "raw_files": 80
+  },
+  {
+   "id": "eBL/Poor-Man-of-Nippur/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "11",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Poor-Man-of-Nippur/_raw/chapter-display.json": [
+     2494833,
+     "f3c0b2bd5aa85f7e5bd8848a7c1ecc24692d42e71a1cd4ca89d369d1b47745cd"
+    ],
+    "eBL/Poor-Man-of-Nippur/bibliography.md": [
+     2181,
+     "4376bb02a453a53b89bdaef805a3cadee103572e97aa0632e588419225529c7a"
+    ],
+    "eBL/Poor-Man-of-Nippur/chapter.atf": [
+     40467,
+     "67176a39031efd728e157ed3041ebc5e8e217cd375ab4e965cf83617c1a24ac5"
+    ],
+    "eBL/Poor-Man-of-Nippur/glossary.md": [
+     104162,
+     "750558bec25ed427f16ae3e0909034f1940196d2d9766cbbecc16faa7fcf19cd"
+    ],
+    "eBL/Poor-Man-of-Nippur/manuscripts.md": [
+     1169,
+     "a440d7577001f266b69a22abde5c0e9769a85910236dd3677a0dc0f5fa6a7214"
+    ],
+    "eBL/Poor-Man-of-Nippur/reading-edition.md": [
+     96108,
+     "cb6aaab930268d813f2cf5e276cf122d5ae34424556ff9a9e97f8b75f8f7c088"
+    ]
+   },
+   "raw_files": 322
   }
  ]
 }
