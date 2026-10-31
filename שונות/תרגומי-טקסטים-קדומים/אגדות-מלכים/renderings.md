@@ -528,6 +528,14 @@ apparatus); the Morning Star *dilbat* `דִּלְבַּת` (Isa 14:12 [divergenc
 `כּוּתָה` ★ (2 Kgs 17:24 `וּמִכּוּתָה`), Emeslam `אֵמֶסְלָם`, Nergal `נֵרְגַּל`. **Split left for the lead:** *gimillu*
 `חֶמְלָה` here (the sense "mercy"; Enūma eliš and Gilgameš *gimilla turru* `הֵשִׁיב גְּמוּל`, kept so `גָּמַל` stays
 *riābu*'s).
+#### 11.6.3 Part CL3 (MB A, MB B), 2026-10-31
+SB's Hebrew copied where the Akkadian is the same (b+13–14 = SB 99–100; b+11 `רָזוֹן`, `כָּפָן`; b+16 negates SB 102;
+the MB refrain `שישה מלכים הם, שותפים, מו[פיעים], ושש מאות – חילם.` reuses SB 37). New: *ḫurru* `חוֹר`, *rittu* `כַּף`,
+*gihlû* `אֵבֶל`, *šibṭu* `מַכָּה`, *maḫīru* `מְחִיר` [cognate], *šapāru* `שָׁלַח` (Qal) / *ṭarādu* `שִׁלַּח` (Piel),
+*šīmta šiāmu* `גָּזַר גּוֹרָל`, *palāḫu* (of a god) `יָרֵא`, *šukênu* `הִשְׁתַּחֲוָה`, *šalālu šallata* `שָׁלַל שָׁלָל`
+[cognate], *aklu* `לֶחֶם`, *bulluṭ libbi* `מְחַיֵּה לֵב`, *šīrāš* `סֹבֶא` (Ludlul), *nâlu* `שָׁכַב`, *šittu* `שֵׁנָה`, *šeʾû*
+`בִּקֵּשׁ`, *kibru* `קָצֶה`, *kāru* `נָמָל`, *abullu* `שַׁעַר`, *ṣâlu* `רָב`; Akkad `אַכַּד`. Open: *zummû* `*שְׁכוֹל*`,
+*šumšu lū zikir* `שמו יהי לְזֵכֶר`.
 
 ## Changelog
 - 2026-10-31: §11 the Cuthaean Legend (project 4) – names, grammar, formulas, reserved and gated words; fixed by the Round 5 run 5 coordinator before the first part.
