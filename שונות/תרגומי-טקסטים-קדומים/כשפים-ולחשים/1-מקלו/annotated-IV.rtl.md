@@ -87,8 +87,8 @@
 
 ### 11
 `dibalâ zikurudâ kadabbedâ šurhungâ`
-> עיוות דין, זִיקוּרוּדָא, סתימת פה, השקטת חמה,
-- **פירוק:** `dibalâ` – *dibalû* "עיוות דין"; `zikurudâ` – *zikurrudû* (כשף "חיתוך הגרון"); `kadabbedâ` – *kadabbedû* "סתימת פה"; `šurhungâ` – *šurḫungû* "השקטת חמה".
+> עיוות דין, זִיקוּרוּדָא, סתימת פה, השקטת לב,
+- **פירוק:** `dibalâ` – *dibalû* "עיוות דין"; `zikurudâ` – *zikurrudû* (כשף "חיתוך הגרון"); `kadabbedâ` – *kadabbedû* "סתימת פה"; `šurhungâ` – *šurḫungû* "השקטת לב".
 - **תרגומים:** eBL: "Perversion of justice, *Zikurrudâ*-magic, muteness, pacification,".
 - **הערות:** שורה קבועה (`../renderings.md` §9; `[מקבילה: I 90]`). *zikurrudû* מתועתק (`../renderings.md` §2.2): כשף שמקצר את החיים; ראו 52–62.
 

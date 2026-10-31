@@ -451,10 +451,10 @@
 
 ### 59
 `šurhungâ ša tēpušāni tušēpišāni ana muhhīkunu ēpuša šanê ṭēmi [ša tēpušāni tušēpišāni ana muhhīkunu ēpuša]`
-> את השקטת החמה אשר עֲשִׂיתֶם לי, עִשִּׂיתֶם לי – על קדקדכם עָשִׂיתִי; את שינוי הטעם אשר עֲשִׂיתֶם לי, עִשִּׂיתֶם לי – על קדקדכם עָשִׂיתִי.
-- **פירוק:** `šurhungâ` – *šurḫungû* "השקטת חמה"; `ša … ēpuša` – (כמו 57); `šanê` – "שינוי" (סמיכות); `ṭēmi` – "טעם"; `[…]` – (כמו 57).
+> את השקטת הלב אשר עֲשִׂיתֶם לי, עִשִּׂיתֶם לי – על קדקדכם עָשִׂיתִי; את שינוי הטעם אשר עֲשִׂיתֶם לי, עִשִּׂיתֶם לי – על קדקדכם עָשִׂיתִי.
+- **פירוק:** `šurhungâ` – *šurḫungû* "השקטת לב"; `ša … ēpuša` – (כמו 57); `šanê` – "שינוי" (סמיכות); `ṭēmi` – "טעם"; `[…]` – (כמו 57).
 - **תרגומים:** eBL: "Pacification that you have performed against me, have had performed against me, I perform against you. Madness [that you have performed against me, have had performed against me, I perform against you].".
-- **הערות:** הנוסחה בקיצור (`KIMIN`; 58). *šurḫungû* = `הַשְׁקָטַת חֵמָה`, *šanê ṭēmi* = `שִׁנּוּי טַעַם` (`../renderings.md` §2.2).
+- **הערות:** הנוסחה בקיצור (`KIMIN`; 58). *šurḫungû* = `הַשְׁקָטַת לֵב` (הרמוניזציה 2026-10-30, היה `השקטת חמה`), *šanê ṭēmi* = `שִׁנּוּי טַעַם` (`../renderings.md` §2.2).
 
 ### 60
 `utukku lemnu tušaṣbitāʾinni utukku lemnu liṣbatku[nūši]`

@@ -1,0 +1,989 @@
+{
+"kind": "BESRIT",
+"cth": "CTH 407",
+"citation": "B.-J. Collins (ed.), hethiter.net/: CTH 407 (TX 10.11.2014, TRen 23.07.2014)",
+"sections": [
+{
+"id": "§1",
+"title": "§1",
+"hl": ""
+},
+{
+"id": "§2",
+"title": "§2",
+"hl": ""
+},
+{
+"id": "§3",
+"title": "§3",
+"hl": ""
+},
+{
+"id": "§4",
+"title": "§4",
+"hl": ""
+},
+{
+"id": "§5",
+"title": "§5",
+"hl": ""
+},
+{
+"id": "§6",
+"title": "§6",
+"hl": ""
+},
+{
+"id": "§7",
+"title": "§7",
+"hl": ""
+},
+{
+"id": "§8'",
+"title": "§8'",
+"hl": ""
+},
+{
+"id": "Colophon",
+"title": "Colophon",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§1",
+"hl": "",
+"master": "[U]MMA Puliša [LÚ {URU} …(?) ]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 1",
+"[U]M-MA mPu-li-ša [LÚ {URU} …(?) ]"
+]
+],
+"tr": "According to Pulisa, [man of … ]",
+"trlang": "EN"
+},
+{
+"n": "2",
+"sec": "§1",
+"hl": "",
+"master": "[mān LUGAL-uš KU]R {LÚ}KÚR GUL-aḫzi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 1",
+"[ma-a-an LUGAL-uš] [KU]⸢R⸣ {LÚ}KÚR GUL-aḫ-zi"
+]
+],
+"tr": "[When the king] attacks an enemy [lan]d",
+"trlang": "EN"
+},
+{
+"n": "3",
+"sec": "§1",
+"hl": "",
+"master": "n=[aš=kan IŠTU ZAG KUR {LÚ}KÚR arḫa iy]at[t]ari",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 2",
+"n[a-aš-kán IŠ-TU ZAG KUR {LÚ}KÚR ar-ḫa] [i-y]a-at-[t]a-ri"
+]
+],
+"tr": "and [re]turns [from the enemy border,]",
+"trlang": "EN"
+},
+{
+"n": "4",
+"sec": "§1",
+"hl": "",
+"master": "[… mān ŠA KUR {LÚ}KÚR n]aššu DINGIR-LUM kuiški [LÚ našma DINGIR.MUNUS … ]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 3",
+"[… ma-a-an ŠA KUR {LÚ}KÚR] [n]a-aš-šu DINGIR-LUM ku-iš-⸢ki⸣ [LÚ na-aš-ma DINGIR.MUNUS … ]"
+]
+],
+"tr": "[if] either some male deity [or female deity is angry]",
+"trlang": "EN"
+},
+{
+"n": "5",
+"sec": "§1",
+"hl": "",
+"master": "[nu ŠÀ(?)] DUMU.U19.LÚ.ULÙ.LU ÚŠ-an kišar[i]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 4",
+"[nu ŠÀ(?)] DUMU.U19.LÚ.ULÙ.LU ÚŠ-an ki-ša-r[i]"
+]
+],
+"tr": "[and (as a result)] a plague occur[s among(?)] the people,",
+"trlang": "EN"
+},
+{
+"n": "6",
+"sec": "§1",
+"hl": "",
+"master": "[nu kišan iyami]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 5",
+"[nu kiš-an i-ya-mi] ¬¬¬"
+]
+],
+"tr": "[I do the following:]",
+"trlang": "EN"
+},
+{
+"n": "7",
+"sec": "§2",
+"hl": "",
+"master": "maḫḫan n=aš=kan IŠTU ZAG KUR {LÚ}KÚR arḫ[a iyattari]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 6",
+"⸢ma⸣-aḫ-ḫa-an na-aš-kán IŠ-TU ZAG KUR ⸢{LÚ}KÚR⸣ ar-ḫ[a i-ya-at-ta-ri]"
+]
+],
+"tr": "While he [is] re[turning] from the enemy border,",
+"trlang": "EN"
+},
+{
+"n": "8",
+"sec": "§2",
+"hl": "",
+"master": "[Š]A KUR-TI 1 {LÚ}ŠU.DAB 1 MUNUS-TUM=ya appanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 7",
+"[Š]A <A> KUR-TI1 1 {LÚ}ŠU.DAB 1 MUNUS-TUM-ya ap-pa-an-zi"
+]
+],
+"tr": "they pick one (war) captive and one woman of the (enemy’s) land.",
+"trlang": "EN"
+},
+{
+"n": "9",
+"sec": "§2",
+"hl": "",
+"master": "nu LUG[AL-uš kuedani KASKAL-ši] IŠTU KUR {LÚ}KÚR uit",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 7",
+"nu LUG[AL-uš ku-e-da-ni KASKAL-ši] IŠ-TU KUR {LÚ}KÚR ú-it"
+]
+],
+"tr": "[On which(ever) road] the ki[ng] came from the land of the enemy,",
+"trlang": "EN"
+},
+{
+"n": "10",
+"sec": "§2",
+"hl": "",
+"master": "nu=kan LUGAL-uš apēdani KASKAL-ši ti[yazi]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 8",
+"nu-kán LUGAL-uš a-pé-e-da-ni KASKAL-ši t[i-ya-zi]"
+]
+],
+"tr": "the king s[tands] on that road.",
+"trlang": "EN"
+},
+{
+"n": "11",
+"sec": "§2",
+"hl": "",
+"master": "EN{MEŠ}-TI=ya=šši kattan hūmanteš tiyanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 9",
+"EN{MEŠ}-TI-ya-aš-ši kat-ta-an ḫu-u-ma-an-te-eš ti-ya-an-zi"
+]
+],
+"tr": "All of the lords stand with him.",
+"trlang": "EN"
+},
+{
+"n": "12",
+"sec": "§2",
+"hl": "",
+"master": "1 {LÚ}ŠU.DAB=ya=ši 1 MUNUS-TUM-ya peran wedanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 9",
+"1 {LÚ}⸢ŠU⸣.DAB-ya-ši 1 MUNUS-TUM-ya pé-ra-an ú-e-da-an-zi"
+]
+],
+"tr": "They bring the captive and the woman before him.",
+"trlang": "EN"
+},
+{
+"n": "13",
+"sec": "§2",
+"hl": "",
+"master": "nu=za=kan NÍ.TE=ŠU {TÚG}NÍG.LÁM{MEŠ} arḫa dāi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 10",
+"nu-za-kán NÍ.TE-ŠU {TÚG}NÍG.LÁM{MEŠ} ar-ḫa da-a-i"
+]
+],
+"tr": "He removes the garments from his body.",
+"trlang": "EN"
+},
+{
+"n": "14",
+"sec": "§2",
+"hl": "",
+"master": "n=at ANA LÚ waššiyanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 11",
+"na-at A-NA ⸢LÚ⸣ wa-aš-ši-ya-an-zi"
+]
+],
+"tr": "They put them on the man.",
+"trlang": "EN"
+},
+{
+"n": "15",
+"sec": "§2",
+"hl": "",
+"master": "ANA MUNUS-TI=ma {TÚG}NÍG.LÁM.MEŠ ŠA MUNUS-TI [wašši]yanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 11",
+"A-NA MUNUS-TI-ma {TÚG}NÍG.LÁM.MEŠ ŠA MUNUS-TI [wa-aš-š]⸢i⸣-ya-an-zi"
+]
+],
+"tr": "But on the woman they [put] the garments of a woman.",
+"trlang": "EN"
+},
+{
+"n": "16",
+"sec": "§2",
+"hl": "",
+"master": "nu=kan ANA LÚ LUGAL-uš anda kišan memai",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 12",
+"nu-kán A-NA LÚ LUGAL-uš an-da ⸢kiš-an⸣ me-ma-i"
+]
+],
+"tr": "To the man the king says as follows—",
+"trlang": "EN"
+},
+{
+"n": "17",
+"sec": "§2",
+"hl": "",
+"master": "mān LUGAL-i=m[a ŪL] āššu nu tamain uyazi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 13",
+"ma-a-an LUGAL-i-m[a Ú-UL] a-aš-šu nu ta-ma-in u-ya-z[i]"
+]
+],
+"tr": "if it is [not] convenient for the king, the he sen[ds] another",
+"trlang": "EN"
+},
+{
+"n": "18",
+"sec": "§2",
+"hl": "",
+"master": "nu EGIR SISKUR apaš tiyazi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 13",
+"nu EGIR SISKUR a-pa-aš ti-ya-zi"
+]
+],
+"tr": "and that one takes care of the ritual—",
+"trlang": "EN"
+},
+{
+"n": "19",
+"sec": "§2",
+"hl": "",
+"master": "[nu=kan AN]A LÚ apāš anda kišan [mema]i",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 14",
+"[nu-kán A-N]A LÚ a-pa-a-aš an-da kiš-an [me-ma]-i"
+]
+],
+"tr": "that one [sa]ys [to] the man as follows:",
+"trlang": "EN"
+},
+{
+"n": "20",
+"sec": "§2",
+"hl": "",
+"master": "mān=man kī ÚŠ-an ŠA KUR {LÚ}KÚR kuiški DINGIR-LIM LÚ DÙ-at",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 14",
+"⸢ma-ma-an-wa⸣ ki-i ÚŠ-an ŠA KUR {LÚ}KÚR ⸢ku-iš⸣-ki DINGIR-LIM LÚ DÙ-at"
+]
+],
+"tr": "“If some male god of the enemy land has caused this plague,",
+"trlang": "EN"
+},
+{
+"n": "21",
+"sec": "§2",
+"hl": "",
+"master": "nu=wa=šši k[āš]a LÚ unuwantan ANA {LÚ}PŪḪĪ=ŠU piḫḫun",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 15",
+"nu-wa-aš-ši k[a-a-š]a LÚ ú-nu-wa-an-ta-an A-NA {LÚ}PU-ḪI-ŠU pí-iḫ-ḫu-un"
+]
+],
+"tr": "I have j[us]t given to him an adorned man as a substitute.",
+"trlang": "EN"
+},
+{
+"n": "22",
+"sec": "§2",
+"hl": "",
+"master": "IŠTU SAG.DU=ŠU=wa kā[š šall]iš {UZU}ŠÀ-za=wa kāš šalliš ÚR-azza=ya=wa k[āš šalli]š",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 16",
+"IŠ-TU SAG.DU-ŠU-wa ka-a-[aš šal-l]i-iš {UZU}ŠÀ-za-wa ka-a-aš šal-li-iš ÚR-az-za-ya-wa ka[-a-aš šal-li]-iš"
+]
+],
+"tr": "This o[ne is gr]eat with respect to his head, this one is great with respect to his heart, and this [one is gr]eat with respect to his limb.",
+"trlang": "EN"
+},
+{
+"n": "23",
+"sec": "§2",
+"hl": "",
+"master": "nu=wa=kan zik DINGIR-LIM LÚ k[ēz] LÚ unuwan[tit parā] galangaza ēš",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 18",
+"nu-wa-kán zi-ik DINGIR-LIM LÚ k[e-e-ez] LÚ ú-nu-wa-an-[ti-it pa-ra-a] ga-la-an-ga-za e-eš"
+]
+],
+"tr": "You, male deity, be [pla]cated [with] th[is] adorned man.",
+"trlang": "EN"
+},
+{
+"n": "24",
+"sec": "§2",
+"hl": "",
+"master": "ANA LUGAL-i=ma=wa ANA [EN{MEŠ}] ANA K[ARAŠ U ANA] KUR {URU}ḪATTI anda aššul[i namm]a ne[šḫut]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv i 19",
+"A-NA LUGAL-i-ma-wa A-NA [EN{MEŠ}] A-NA K[ARAŠ Ù A-NA] KUR {URU}ḪA-AT-TI an-da aš-šu-[li nam-m]a ne-[eš15-ḫu-ut"
+]
+],
+"tr": "Tu[rn agai]n in friendship to the king, the [lords], the ar[my, and to] the land of Hatti.",
+"trlang": "EN"
+},
+{
+"n": "25",
+"sec": "§2",
+"hl": "",
+"master": "[ … ]x-ma=wa ÚŠ-an kāš {LÚ}ŠU.DAB ka[rapdu]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv i 20",
+"[ … ]x-ma-wa ⸢ÚŠ⸣-an ka-a-aš {LÚ}ŠU.DAB ka[r-ap-du]"
+]
+],
+"tr": "[…] but [let] this prisoner be[ar] the plague",
+"trlang": "EN"
+},
+{
+"n": "26",
+"sec": "§2",
+"hl": "",
+"master": "EGIR-[pa=wa INA KUR {LÚ}KÚR p]ēdau",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 21",
+"EGIR-[pa-wa I-NA KUR {LÚ}KÚR p]é-e-da-ú ¬¬¬"
+]
+],
+"tr": "and [tr]ansport (it) back[ into the land of the enemy.]”",
+"trlang": "EN"
+},
+{
+"n": "27",
+"sec": "§3",
+"hl": "",
+"master": "[AN]A MUNUŠ-TI=ma=kan anda ŠA DIN[GIR MUNUS-T]I mema[i- … -m]a QĀTAMMA=pat",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 22",
+"[A-N]A MUNUŠ-TI-ma-kán an-da ŠA DIN[GIR MUNUS-T]I me-ma-[i o o o -m]a QA-TAM-MA-pát ¬¬¬"
+]
+],
+"tr": "He speak[s t]o the woman as well in the same way in case the dei[ty] is f[emale].",
+"trlang": "EN"
+},
+{
+"n": "28",
+"sec": "§4",
+"hl": "",
+"master": "EGIR-anta=ma 1 GU4.MAḪ 1 UD[U.ÁŠ.MUNUS.GÀR-ya ūnnanzi]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 23",
+"EGIR-an-ta-ma 1 GU4.MAḪ 1 UD[U.ÁŠ.MUNUS.GÀR-ya u-un-na-an-zi]"
+]
+],
+"tr": "Thereafter, [they drive in] one bull [and] one e[we]",
+"trlang": "EN"
+},
+{
+"n": "29",
+"sec": "§4",
+"hl": "",
+"master": "[nu … ŠA K]UR {LÚ}KÚR=pat",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 23",
+"[nu … ŠA K]UR {LÚ}KÚR-pát"
+]
+],
+"tr": "[and … of] the same enemy [l]and.",
+"trlang": "EN"
+},
+{
+"n": "30",
+"sec": "§4",
+"hl": "",
+"master": "n=an GEŠTU{ḪI.A}=ŠU ašušan[tan… ]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 24",
+"na-an GEŠTU{ḪI.A}-ŠU a-šu-ša-an[-ta-an … ]"
+]
+],
+"tr": "His (the bull’s) ears [are] ringed [ … ].",
+"trlang": "EN"
+},
+{
+"n": "31",
+"sec": "§4",
+"hl": "",
+"master": "[ … ]x-zi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 24",
+"[ … ]x-zi"
+]
+],
+"tr": "[ … ] he/[th]ey [ … ]",
+"trlang": "EN"
+},
+{
+"n": "32",
+"sec": "§4",
+"hl": "",
+"master": "SÍG SA5 SÍG SIG7.SIG7 SÍG G[E6 SÍG BABBAR … ]ANA LUGAL KA×U-az parā ḫuitti[yazi]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 25",
+"SÍG SA5 SÍG SIG7.SIG7 SÍG G[E6 SÍG BABBAR … ]⸢A⸣-NA LUGAL KA×U-az pa-ra-a ḫu-it-ti-[ya-zi]"
+]
+],
+"tr": "He dra[ws] forth red wool, yellow-green wool, bla[ck] wool, [white wool …] from the king’s mouth.",
+"trlang": "EN"
+},
+{
+"n": "33",
+"sec": "§4",
+"hl": "",
+"master": "[nu kišan anda memai]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 26",
+"[nu kiš-an an-da me-ma-i]"
+]
+],
+"tr": "[He says as follows:]",
+"trlang": "EN"
+},
+{
+"n": "34",
+"sec": "§4",
+"hl": "",
+"master": "[LUG]AL-uš=wa kuit ēšḫarwaḫ[ḫeškitta ḫaḫlaḫḫeškitta da]nkuwaḫḫeškitta [ḫarganušk]i? [ittaya]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 27",
+"[LUG]AL-uš-wa ku-it e-eš-ḫar-wa-aḫ-[ḫe-eš-ki-it-ta ḫa-aḫ-la-aḫ-ḫe-eš-ki-it-ta] [da]-an-ku-wa-aḫ-ḫe-eš-ki-it-ta [ḫar-ga-nu-uš-k]i?-[it-ta-ya]"
+]
+],
+"tr": "“Because the king kept becoming blood[-red, yellow-green, b]lack, [and white …],",
+"trlang": "EN"
+},
+{
+"n": "35",
+"sec": "§4",
+"hl": "",
+"master": "[nu ap]āt EGIR-pa ANA KUR {LÚ}K[ÚR ] x-x[…]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 29",
+"[nu a-p]a-a-at EGIR-pa A-NA KUR {LÚ}K[ÚR ] x-x[…]"
+]
+],
+"tr": "[let th]at […] back to the land of the en[emy]",
+"trlang": "EN"
+},
+{
+"n": "36",
+"sec": "§4",
+"hl": "",
+"master": "[ANA LUGAL]=ya=wa NÍ.TE=ŠU EN{MEŠ} E[RÍN{M]}EŠ [ANŠ]E.KUR.RA{Ḫ[}I.A] [ŪL(?)] IDI",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 30",
+"[A-NA LUGAL]-ya-wa NÍ.TE-ŠU EN{MEŠ} E[RÍN{M]}EŠ [ANŠ]⸢E.KUR.RA{Ḫ⸣}[I.A] [Ú-UL(?)] I-DI"
+]
+],
+"tr": "and [with respect to] the person of [the king], the lords, the inf[antry, and the cha]riot[ry do not] take notice,",
+"trlang": "EN"
+},
+{
+"n": "37",
+"sec": "§4",
+"hl": "",
+"master": "n=at ŠA KUR {LÚ}KÚR šak",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 31",
+"na-at ŠA KUR {LÚ}KÚR ša-ak"
+]
+],
+"tr": "(but) take notice of the land of the enemy!”",
+"trlang": "EN"
+},
+{
+"n": "38",
+"sec": "§4",
+"hl": "",
+"master": "[ …]x dāi",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 31",
+"[ …] [ _ _ _ ]x da-a-i"
+]
+],
+"tr": "[ … ] he takes.",
+"trlang": "EN"
+},
+{
+"n": "39",
+"sec": "§4",
+"hl": "",
+"master": "n=at=kán ANA ZÍZ x[ … ]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 32",
+"na-at-kán A-NA ZÍZ x[ … ]"
+]
+],
+"tr": "And to/for wheat [ … ]",
+"trlang": "EN"
+},
+{
+"n": "40",
+"sec": "§4",
+"hl": "",
+"master": "[nu GU4.MAḪ a]šušantan [ … ]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 33",
+"[nu GU4.MAḪ a]-šu-ša-an-ta-an ----2 x[ … ]"
+]
+],
+"tr": "The ringed bull [they bring]",
+"trlang": "EN"
+},
+{
+"n": "41",
+"sec": "§4",
+"hl": "",
+"master": "[nu k]išša[n m]emai",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 34",
+"[nu kiš-an m]e-ma-i"
+],
+[
+"B",
+"Obv. 2'",
+"[ … k]i-is-sa-a[n … ]"
+]
+],
+"tr": "[and] he [s]ays[ as follows]:",
+"trlang": "EN"
+},
+{
+"n": "42",
+"sec": "§4",
+"hl": "",
+"master": "kuiš=wa DINGIR-LUM kū[ruras kī ÚŠ-an DÙ-at]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 34",
+"ku-iš-wa DINGIR-LUM ku-u-[ru-ra-aš ki-i ÚŠ-an DÙ-at]"
+]
+],
+"tr": "“The god [of] the enem[y] who [caused this plague],",
+"trlang": "EN"
+},
+{
+"n": "43",
+"sec": "§4",
+"hl": "",
+"master": "[nu=war=aš m]ān DINGIR-LIM LÚ nu=wa=tta [GU4.MAḪ unuwa]ndan ašuša[n]tan mālantan AD[DIN]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 35",
+"[nu-wa-ra-aš m]a-a-an DINGIR-LIM LÚ nu-wa-at-ta [GU4.MAḪ ú-nu-wa-an-da-an] [a-šu-ša-an-]ta-an ma-a-la-an-ta-an3 AD[-DIN]"
+],
+[
+"B",
+"Obv. 3'",
+"nu-wa-ra-aš ma-a[-an … -a]n-da-an a-šu-ša[-… ]"
+]
+],
+"tr": "if he is a male god, to you I have gi[ven] an [ado]rned, ringed, and powerful(?)1 bull.",
+"trlang": "EN"
+},
+{
+"n": "44",
+"sec": "§4",
+"hl": "",
+"master": "[nu=wa=ká]n zik DINGIR-L[IM LÚ parā] galanganza ēš",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 36",
+"[nu-wa-kán zi-ik DINGIR-LIM LÚ] [pa-ra-a] ga-la-an-ga-an-za e-eš"
+],
+[
+"B",
+"Obv. 5'",
+"[ … ]x zi-ik DINGIR-L[IM …"
+]
+],
+"tr": "You, O male god, be pacified.",
+"trlang": "EN"
+},
+{
+"n": "45",
+"sec": "§4",
+"hl": "",
+"master": "nu=w[a kī ÚŠ-an kā]š GU4.MAḪ EGIR-[pa] INA KUR {LÚ}KÚR pēdau",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 37",
+"nu-w[a ki-i ÚŠ-an ka-a-aš GU4.MAḪ] {Obv.} {i} {38} [EGIR-pa] I-NA KUR {LÚ}KÚR pé-e-da-ú"
+],
+[
+"B",
+"Obv. 6'",
+"[ … ]x GU4.MAḪ EGIR[-"
+]
+],
+"tr": "Let [th]is bull carry [this plague] back into the land of the enemy.",
+"trlang": "EN"
+},
+{
+"n": "46",
+"sec": "§4",
+"hl": "",
+"master": "[ANA LUGAL=ma=wa ANA DUMU{MEŠ}.]LUGAL EN{MEŠ} ANA KARAŠ U ANA K[UR {URU}ḪATTI anda aššuli namma nešḫut]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 38",
+"[A-NA LUGAL-ma-wa A-NA DUMU{MEŠ}.LUGAL] [E]N{MEŠ} A-NA KARAŠ Ù!4 A-NA K[UR {URU}ḪA-AT-TI an-da aš-šu-li nam-ma ne-eš15-ḫu-ut] ¬¬¬"
+],
+[
+"B",
+"Obv. 7'",
+"[ … ].LUGAL ⸢EN{MEŠ}⸣ [ … ]"
+]
+],
+"tr": "[Turn again in friendship to the king, to the prin]ces, the lords, the army and to the la[nd of Hatti].”",
+"trlang": "EN"
+},
+{
+"n": "47",
+"sec": "§5",
+"hl": "",
+"master": "EGIR-anda=ma UDU.ÁŠ.MUNUS.GÀR unu[wantan …] anda ŠA DINGIR MUNUS-TUM memai [QĀTAMMA=pat]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 40",
+"EGIR-an-da-ma UDU.ÁŠ.MUNUS.GÀR ú-nu-[wa-an-ta-an …] an-da ŠA DINGIR MUNUS5-TUM me-ma-i [QA-TAM-MA-pát] ¬¬¬"
+]
+],
+"tr": "Afterwards, he speaks (regarding) the ado[rned] ewe [also in the same way] in case the deity is female.",
+"trlang": "EN"
+},
+{
+"n": "48",
+"sec": "§6",
+"hl": "",
+"master": "namma GU4.MAḪ ašušant[an UDU.ÁŠ.MUNUS.GÀR=ya ANA {LÚ}ŠU.DAB] MUNUS-TI-ya peran ḫuinuw[anzi ]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 42",
+"nam-ma GU4.MAḪ6 a-šu-ša-an-ta-[an UDU.ÁŠ.MUNUS.GÀR-ya A-NA {LÚ}ŠU.DAB] MUNUS-TI-ya pé-ra-an ḫu-i-nu-w[a-an-zi …] ¬¬¬"
+]
+],
+"tr": "Then the ringed bull [and the ewe are made to] run in front [of the captive] and the woman.",
+"trlang": "EN"
+},
+{
+"n": "49",
+"sec": "§7",
+"hl": "",
+"master": "EGIR-anda=ma namm[a …]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. i 44",
+"EGIR-an-ta-ma7 nam-m[a … ] (traces) 8 ¬¬¬"
+]
+],
+"tr": "Then afterwards […].",
+"trlang": "EN"
+},
+{
+"n": "50",
+"sec": "§8'",
+"hl": "",
+"master": "kui[š…]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. ii 1'",
+"ku-i[š(?) ]"
+]
+],
+"tr": "Who [ … ]",
+"trlang": "EN"
+},
+{
+"n": "51",
+"sec": "§8'",
+"hl": "",
+"master": "IŠTU [ … ]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. ii 2'",
+"IŠ-TU [ … ]"
+]
+],
+"tr": "[ … ] from/with [ … ]",
+"trlang": "EN"
+},
+{
+"n": "52",
+"sec": "§8'",
+"hl": "",
+"master": "[ … ] pēda[u …]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. ii 2'",
+"[ … ] pé-e-da-[ú …]"
+]
+],
+"tr": "[ … ] he transports [ … ]",
+"trlang": "EN"
+},
+{
+"n": "53",
+"sec": "§8'",
+"hl": "",
+"master": "[ … ] āššu nam[ma … ]",
+"words": [],
+"mss": [
+[
+"A",
+"Obv. ii 4'",
+"[ … ] ⸢a-aš⸣-šu nam-[ma … ] ¬¬¬9"
+]
+],
+"tr": "good [ … ], the[n … ]",
+"trlang": "EN"
+},
+{
+"n": "54",
+"sec": "Colophon",
+"hl": "",
+"master": "[ … ] ANA TUPPI 2 SÍSKUR [aniyan]",
+"words": [],
+"mss": [
+[
+"A",
+"l.e. 1",
+"[ … ] A-NA TUP-PÍ 2 SÍSKUR [a-ni-ya-an]"
+]
+],
+"tr": "[ … ] On the tablet [are prepared] two rituals",
+"trlang": "EN"
+},
+{
+"n": "55",
+"sec": "Colophon",
+"hl": "",
+"master": "[1-EN SÍSKU]R ŠA {m}Puliša",
+"words": [],
+"mss": [
+[
+"A",
+"l.e. 2",
+"[1-EN SÍSKU]R ŠA {m}Pu-li-ša10"
+]
+],
+"tr": "[One ritua]l of Puliša [ … ]",
+"trlang": "EN"
+},
+{
+"n": "56",
+"sec": "Colophon",
+"hl": "",
+"master": "[ 1-EN SÍS]KUR ŠA {f}Ummaya [ … ]",
+"words": [],
+"mss": [
+[
+"A",
+"l.e. 3",
+"[ 1-EN SÍS]KUR ŠA {f}Um-ma-ya [ … ]"
+]
+],
+"tr": "[ … one ritu]al of Ummaya [ … ]",
+"trlang": "EN"
+}
+],
+"notes": {
+"§2:1": "TI written over an erasure.",
+"§4:2": "Approximately four erased signs.",
+"§4:3": "-a-la- written over an erasure.",
+"§4:4": "Written over an erasure.",
+"§4:T1": "Meaning of mālant- uncertain. Kümmel’s suggestion “powerful(?)” tentatively endorsed by CHD.",
+"§5:5": "ŠA DINGIR MUNUS written over an erasure.",
+"§6:6": "GU4 written over an erasure.",
+"§7:7": "-an-ta-ma written over an erasure.",
+"§7:8": "Remainder of the column broken.",
+"§8':9": "A double paragraph stroke follows this line, after which is inscribed the Ritual of Ummaya.",
+"Colophon:10": "-ša written over an erasure.",
+"T1": "Meaning of mālant- uncertain. Kümmel’s suggestion “powerful(?)” tentatively endorsed by CHD."
+}
+}

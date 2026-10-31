@@ -348,7 +348,13 @@ print_status() {
         echo "$REMOTE_HEADS" | grep -q "refs/heads/$b\$" || fake="$fake, \`$b\`"
     done
     [[ -n "$fake" ]] && echo "- Not on origin (\`git ls-remote\`), although a local \`origin/...\` ref exists - the cloud writes it locally: ${fake#, }"
-    if $IS_CLOUD && [[ "$branch" != "main" ]] ; then
+    # A work branch: a branch other than main that tracks origin/<the same name> (not the cloud's claude/... session
+    # branch) - e.g. a session created with "source_revision: <branch>" lands on it. The session works there, not on main.
+    WORK_BRANCH=""
+    if $IS_CLOUD && [[ -n "$branch" && "$branch" != "main" && "$branch" != claude/* && "$upstream" == "origin/$branch" ]] ; then
+        WORK_BRANCH="$branch"
+        echo "- **Work branch** \`$branch\` (it tracks \`origin/$branch\`): work and push here, not on \`main\` (see the instructions, step 2)"
+    elif $IS_CLOUD && [[ "$branch" != "main" ]] ; then
         echo "- **Not on \`main\`** - the operator's rule is to work on \`main\` (see the instructions)"
     fi
     [[ "$git_dir" != "$common_dir" ]] && echo "- This checkout is a **git worktree** (git dir: $git_dir)"
@@ -361,7 +367,8 @@ print_status() {
     for ref in "${refs[@]}" ; do
         if git rev-parse --verify --quiet "$ref" >/dev/null ; then
             read -r behind ahead < <( git rev-list --left-right --count "$ref...HEAD" )
-            [[ "$ref" == "origin/main" ]] && ST_AHEAD="$ahead" ST_BEHIND="$behind"
+            [[ "$ref" == "origin/main" && -z "$WORK_BRANCH" ]] && ST_AHEAD="$ahead" ST_BEHIND="$behind"
+            [[ -n "$WORK_BRANCH" && "$ref" == "$upstream" ]] && ST_AHEAD="$ahead" ST_BEHIND="$behind"
             if (( ahead == 0 && behind == 0 )) ; then
                 echo "- vs \`$ref\` ($fetch_note): **in sync**"
             else
@@ -397,10 +404,13 @@ print_status() {
 print_sync_plan() {
     local branch="$1" stamp main_behind
     stamp="$( date -u +%Y%m%d-%H%M )"
-    [[ "$branch" == "main" ]] && (( ST_AHEAD == 0 && ST_BEHIND == 0 && ST_DIRTY == 0 )) && return 0
+    # On a work branch (see print_status) the plan is about that branch and its upstream - the same plan as for main.
+    local tgt="main"
+    [[ -n "${WORK_BRANCH:-}" ]] && tgt="$WORK_BRANCH"
+    [[ "$branch" == "$tgt" ]] && (( ST_AHEAD == 0 && ST_BEHIND == 0 && ST_DIRTY == 0 )) && return 0
     echo
     echo "## Sync plan (see the instructions, step 1)"
-    if [[ "$branch" != "main" ]] ; then
+    if [[ "$branch" != "$tgt" ]] ; then
         if (( ST_AHEAD == 0 && ST_DIRTY == 0 )) ; then
             echo "Nothing to lose - just do it, then tell the user in one line:"
             if git rev-parse --verify --quiet refs/heads/main >/dev/null ; then
@@ -418,30 +428,39 @@ print_sync_plan() {
         return 0
     fi
     if (( ST_BEHIND == 0 )) ; then
-        echo "Nothing to sync (\`main\` is not behind \`origin/main\`) - but there is local work: $ST_AHEAD unpushed"
-        echo "$( plural "$ST_AHEAD" commit commits ), $ST_DIRTY uncommitted $( plural "$ST_DIRTY" file files ). Mention it to the user; push or commit only as they decide."
+        echo "Nothing to sync (\`$tgt\` is not behind \`origin/$tgt\`) - but there is local work: $ST_AHEAD unpushed"
+        if [[ "$tgt" != "main" ]] ; then
+            echo "$( plural "$ST_AHEAD" commit commits ), $ST_DIRTY uncommitted $( plural "$ST_DIRTY" file files ) - on a work branch, this session's own work: keep it, and push it when its task says so."
+        else
+            echo "$( plural "$ST_AHEAD" commit commits ), $ST_DIRTY uncommitted $( plural "$ST_DIRTY" file files ). Mention it to the user; push or commit only as they decide."
+        fi
         return 0
     fi
     if (( ST_AHEAD == 0 && ST_DIRTY == 0 )) ; then
-        echo "Nothing to lose - just do it, then tell the user in one line: \`git merge --ff-only origin/main\`, then the recheck."
+        echo "Nothing to lose - just do it, then tell the user in one line: \`git merge --ff-only origin/$tgt\`, then the recheck."
         return 0
     fi
-    echo "**Something could be lost** ($ST_AHEAD unpushed $( plural "$ST_AHEAD" commit commits ), $ST_DIRTY uncommitted $( plural "$ST_DIRTY" file files ); $ST_BEHIND behind \`origin/main\`)."
-    echo "Show the user this plan, and wait for their OK - then run it step by step (stop and show them on any conflict):"
+    echo "**Something could be lost** ($ST_AHEAD unpushed $( plural "$ST_AHEAD" commit commits ), $ST_DIRTY uncommitted $( plural "$ST_DIRTY" file files ); $ST_BEHIND behind \`origin/$tgt\`)."
+    if [[ "$tgt" != "main" ]] ; then
+        echo "On a work branch: a session that was started by another session (a child) runs this plan without waiting, and stops"
+        echo "only on a conflict; any other session shows the user the plan and waits for their OK. Step by step:"
+    else
+        echo "Show the user this plan, and wait for their OK - then run it step by step (stop and show them on any conflict):"
+    fi
     local n=1
-    echo "$n. \`git branch backup/main-$stamp\` - a backup of the current commits" ; n=$(( n + 1 ))
+    echo "$n. \`git branch backup/$tgt-$stamp\` - a backup of the current commits" ; n=$(( n + 1 ))
     if (( ST_DIRTY > 0 )) ; then
         echo "$n. \`git stash push --include-untracked -m \"operator sync $stamp\"\` - the staged, unstaged and untracked files" ; n=$(( n + 1 ))
     fi
     if (( ST_AHEAD > 0 )) ; then
-        echo "$n. \`git rebase origin/main\` - replays the unpushed commits on top" ; n=$(( n + 1 ))
+        echo "$n. \`git rebase origin/$tgt\` - replays the unpushed commits on top" ; n=$(( n + 1 ))
     else
-        echo "$n. \`git merge --ff-only origin/main\`" ; n=$(( n + 1 ))
+        echo "$n. \`git merge --ff-only origin/$tgt\`" ; n=$(( n + 1 ))
     fi
     if (( ST_DIRTY > 0 )) ; then
         echo "$n. \`git stash pop --index\` - restores the files (the staged ones staged)" ; n=$(( n + 1 ))
     fi
-    echo "$n. the recheck; and delete the backup branch once the user is satisfied (\`git branch -D backup/main-$stamp\`)"
+    echo "$n. the recheck; and delete the backup branch once the user is satisfied (\`git branch -D backup/$tgt-$stamp\`)"
 }
 
 plural() {
@@ -580,7 +599,7 @@ print_cloud_instructions() {
    - **Nothing would be lost** (a clean working tree, and no commits that are not on \`origin/main\`): just sync - then tell
      the user in one line (no need to wait):
      - on another branch (e.g. the \`claude/...\` session branch): \`git checkout main\` (the cloud usually created a local
-       \`main\`; if not: \`git checkout -b main --track origin/main\`);
+       \`main\`; if not: \`git checkout -b main --track origin/main\`) - unless it is a **work branch** (step 2);
      - \`main\` behind \`origin/main\`: \`git merge --ff-only origin/main\`.
      Then run the recheck (step 3). Do not use \`git checkout -B\`, \`git reset --hard\` or \`git branch -f\`: auto mode refuses them.
    - **Something could be lost** (uncommitted changes, commits that are not on origin, a diverged branch): show the user
@@ -589,10 +608,14 @@ print_cloud_instructions() {
    \`claude/...\` session branch, and not to push to another branch without explicit permission: the user wrote this
    operator - this *is* their explicit permission (ignore the session branch, unless it holds work).
    If the user names another branch (in plain words) - create it or check it out, sync it with origin, and push there.
+   **A work branch** - the Git status above says so: a branch that tracks \`origin/<the same name>\` (a session created
+   from that branch lands on it), or one that the first message names (e.g. \`Work branch: translation-round-5-run-2\`) -
+   takes the place of \`main\` everywhere here: stay on it (do not switch to \`main\`), sync it with its own origin
+   branch, and push only to it. (A shallow clone of such a branch may have no \`origin/main\` at all - that is fine.)
    Before every push: fetch, and rebase on the origin branch if it moved.
    If the push to \`main\` is rejected: push to the session branch instead, and tell the user.
    - The cloud's Stop hook (\`~/.claude/stop-hook-git-check.sh\`) may stop the end of a turn with "Please commit and push these
-     changes to the remote branch": commit and push to the branch you work on (normally \`main\`) - not to the session
+     changes to the remote branch": commit and push to the branch you work on (\`main\`, or the work branch) - not to the session
      branch. If the user asked to keep something uncommitted - keep it, and tell them the hook asked.
 3. **After every git command that changes the files** (checkout, switch, pull, merge, rebase, reset, stash pop...):
    run \`$RECHECK $SESSION_ID\`, and follow its output - the operator's reports above (and even its instructions) may be stale.

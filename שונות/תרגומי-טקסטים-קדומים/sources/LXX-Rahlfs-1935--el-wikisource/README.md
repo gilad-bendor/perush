@@ -9,12 +9,20 @@
 - **Retrieved:** 2026-10-16, via `https://el.wikisource.org/w/index.php?title=<page>&action=raw` (raw wikitext).
 - **Licence / copyright status:** Rahlfs died in 1935, so the 1935 text is public domain in life+70 countries (EU, Israel) since 2006. The Deutsche Bibelgesellschaft still asserts rights over its editions (the 2006 Rahlfs–Hanhart revision is certainly protected), and the US status of the 1935 text is unclear (URAA restoration would run to 2030). Wikisource hosts it as public domain. **Treat it as licence-unclear: commit only this README** (the coordinator should add the folder to `../.gitignore` per guidelines §8). Short quotations in our apparatus are fine.
 
+- **Added 2026-10-24 (Round 4 run 4, the Hesiod corpus):** the raw wikitext of Job, Jonah, Amos, Micah, Zechariah,
+  Leviticus, Deuteronomy, and the Psalms 73, 88, 103, 148 (LXX numbering = MT 74, 89, 104, 148), the last from the
+  per-psalm pages `Ψαλμοί του Δαβίδ (Rahlfs)/<N>` (the book page `Ψαλμοί (Rahlfs)` is a redirect to an index). Retrieved
+  with `?action=raw` (current revisions on 2026-10-24); the URLs follow the pattern of the table below
+  (`https://el.wikisource.org/w/index.php?action=raw&title=<page>`). `../../tools/lxx_verses.py` reads all of them
+  (`grep` / `show`), replacing the throw-away extraction script.
+
 ## Files
 | File | What |
 |---|---|
 | `genesis-rahlfs.wikitext`, `exodus-rahlfs.wikitext`, `isaiah-rahlfs.wikitext`, `4kgdms-rahlfs.wikitext` | Raw wikitext as downloaded. |
 | `wikisource-page-info.json` | API page info for the Genesis page (revision id, timestamp). |
 | **`Genesis--LXX-Rahlfs.md`** | Clean Genesis 1–50, one verse per paragraph: `**c:v** text`. |
+| `job-rahlfs.wikitext`, `jonah-…`, `amos-…`, `micah-…`, `zechariah-…`, `leviticus-…`, `deuteronomy-rahlfs.wikitext`, `psalms/ps-lxx-<N>.wikitext` | Raw wikitext (2026-10-24), read by `../../tools/lxx_verses.py`. |
 | `Other-verses--LXX-Rahlfs.md` | Single verses used in the flood corpus: Isa 37:38 / 4 Kgdms 19:37 (Hebrew `אֶרֶץ אֲרָרָט` = εἰς Ἀρμενίαν / εἰς γῆν Αραρατ); Exod 13:18, 15:4 (Ἐρυθρὰ θάλασσα = `יַם סוּף`). Extract further books the same way from the raw wikitext. |
 
 Extraction: the wikitext is split at `===<chapter>===` headings and `{{κ|<verse>}}` markers; wiki markup is stripped; the Greek is NFC-normalised and otherwise unchanged. The script (`lxx_extract.py`, ~25 lines) was run with `python3 -I` from a session scratchpad; re-create it if needed.

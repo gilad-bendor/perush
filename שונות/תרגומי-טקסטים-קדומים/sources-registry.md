@@ -63,6 +63,7 @@ Added 2026-10-16: **`ORACC/cams-gkab--P363353--Uruk-List-of-Kings-and-Sages/`** 
 - **`Berossus/DFHG--…`, correction:** DFHG's digital text omits a printed line of fr. 7 §2 (the animals in the vessel). It is restored in the .md between ⟨ ⟩; see the README.
 - **`LXX-Rahlfs-1935--el-wikisource/`**: the Septuagint (Rahlfs 1935) of Genesis, Exodus, Isaiah and 4 Kingdoms, from Greek Wikisource. License unclear, so only the README is committed. Use it for an "LXX layer" when the source is Greek (§6.4).
 - **Other Akkadian and Sumerian texts in the corpus:** `eBL/Erra-SB-I/` (Erra and Išum I, Marduk on the flood) and `eBL/Gilgamesh-SB-I/` (the prologue).
+- **`eBL/Erra-SB-I/`** is also the **BASE TEXT** of `העולם-התחתון/5-ארה-ואישום/` (Round 4 run 5, 2026-10-24): eBL `L/1/5`, Standard Babylonian I, ed. E. Jiménez (rev. Mitto, Földi, Hätinen, Rozzi), Jiménez's English, 191 lines, ~25 manuscripts (among them the Aššur and Tarbiṣu amulets). **Tablets II–V are not edited on eBL yet** (chapters with manuscripts, no lines, 2026-10-24); no open edition: `_records-only--Erra-and-Ishum-II-V/`.
 
 ### 4.4a Akkadian – Enūma eliš (the creation corpus, `סיפורי-הבריאה-המסופוטמיים/`)
 - **`eBL/Enuma-elish-SB-I/` … `eBL/Enuma-elish-SB-VII/`**: **BASE TEXT.** eBL `L/1/2`, *Poem of Creation*, ed. A. C. Heinrich (rev. Z. J. Földi, E. Jiménez), translation B. R. Foster: all seven tablets, 1,098 lines (162 / 162 / 138 / 146 / 158 / 166 / 166), 23–75 manuscripts per tablet, notes, and eBL's list of **parallel lines** (repeated passages). Fetched 2026-10-16 with `tools/ebl_fetch.py`. Gitignored (eBL policy, §8). It is more complete than Lambert 2013 (*Babylonian Creation Myths*, paid, not used) and Kämmerer & Metzler 2012.
@@ -176,6 +177,58 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 - **`ORACC/_bulk/cmawro.zip`**: ORACC cmawro (CC0): its Akkadian glossary gives lemma candidates for every normalized form (`maqlu_tools.py lem`); no texts in the zip.
 - **`Tallqvist-1895--Maqlu/`**: Tallqvist 1895, the first edition (public domain; archive.org OCR, committed): rank 5 only.
 - Not open (records only): Abusch 2016 (AMD 10, Brill), Abusch 2015 (SBL WAW 37: not ours, §2.3), Meier 1937 (AfO Beiheft 2), Schwemer 2007 (*Abwehrzauber und Behexung*).
+
+### 4.4r Ugaritic: the Baal Cycle and the short myths and charms (`מיתוסים-אוגריתיים/`; Round 4 run 1, 2026-10-23)
+| Folder | What |
+|---|---|
+| `CUC/` | **BASE TEXT.** The Copenhagen Ugaritic Corpus v0.2.8 (Zenodo 21380577, concept DOI 10.5281/zenodo.10695308; **CC BY-NC 4.0**, git-ignored with fetch recipes): KTU³'s readings of 278 tablets as Text-Fabric, with DULAT-based machine parses per word (reviewed by hand for KTU 1.3 and 1.5 I–II). `tools/cuc2md.py` converts it (`text/KTU-1.x.md`; line data for `ugarit_tools.py`). See its README for the format notes (`cert` True = certain). |
+| `Ben-Yehuda--Cassuto-1951--HaEla-Anat/` | Cassuto, *האלה ענת* (1951), public domain: Hebrew transcription + vocalized Hebrew translation of KTU 1.3 (and parts of others), with commentary and the biblical parallels. Rank 5–6: register check only; its Hebrew-letter transcription convention is adopted. |
+
+- **EUPT** (Göttingen, `eupt.uni-goettingen.de`, checked 2026-10-23): the new critical edition of the Ugaritic poetic texts is published through a TIDO viewer; its phase 1 (Kirta, Aqhat, the Rephaim; Louvre collation March 2026) is not yet out as data, and the Baal Cycle is phase 2. Nothing to use yet for KTU 1.1–1.6; re-check before Aqhat / Kirta ("Ugarit II").
+- **Not used:** KTU³ (paid); KTU² scan on archive.org (rights unclear); DULAT³ (Brill, paid: CUC's glosses are DULAT's, per word); SBL WAW PDFs (Pardee, *Ritual and Cult*: not ours, guidelines §2.3); the modern translations (Smith & Pitard, Pardee in *COS*, Wyatt, Smith in *UNP*) are © and not online: the translators check against what they know of them, marked as recalled, and against Cassuto.
+
+### 4.4s The fifth-day dossier's sources (`מיתוסים-אוגריתיים/3-תיק-היום-החמישי/`; Round 4 run 1, 2026-10-23)
+| Folder | What |
+|---|---|
+| `AED-TEI/Merikare--pPetersburg-1116A/` | Merikare E 130–136 from AED-TEI (the TLA 2018 corpus as TEI; GitHub `simondschweitzer/aed-tei`): transliteration, lemmas, German translation. **CC BY-SA 4.0**, committed. The Egyptian run (Round 4 run 3) should secure AED-TEI in full. |
+| `Perseus--Hesiod/` | Hesiod, *Theogony* (Evelyn-White 1914, PD text; Perseus markup CC BY-SA), committed. |
+| `TLHdig/CTH-321/` | The Illuyanka myth, KBo 3.7 etc., from TLHdig 0.3 (Zenodo 10.5281/zenodo.20328284, **CC BY 4.0**); the 74 MB zip is git-ignored (recipe in `fetch-recipes.tsv`), the CTH 321 files committed. The Hittite run (run 6) uses the same zip. |
+| `VedaWeb/rv_1.032--zurich.tsv` | Rigveda 1.32, the Zurich text and morphology layer (**CC BY 4.0**), extracted by `dossier_tools.py rvtsv` from VedaWeb's `rv_book_01.tei` (ignored: `VedaWeb/*.tei`). |
+| `Bugge-1867--Saemundar-Edda/hymis.html` | *Hýmiskviða* from Bugge 1867 (PD), `etext.old.no`. |
+| `Wikisource-zh--Kojiki/kojiki-jokan.html` | *Kojiki* Book 1 from zh.wikisource (PD text; page CC BY-SA). The Wikimedia API answered 429 to scripts once; the saved page serves. |
+- **Not reached:** ru.wikisource (the Dove Book) answered 429; Ulukau and NZETC (the Kumulipo, Ika-tere) block scripts; ctext.org forbids scraping; DEAPS has no Deir ʿAllā record. The dossier's `project.md` lists every excerpt not done and why.
+
+### 4.4t Egyptian: wisdom and creation (`חכמה-ובריאה-במצרים/`; Round 4 run 3, 2026-10-23)
+| Folder | What |
+|---|---|
+| `AED-TEI/` | **BASE TEXT.** AED-TEI (Schweitzer 2019: the TLA's January 2018 snapshot as TEI; **CC BY-SA 4.0, committed**), fetched per text from `raw.githubusercontent.com/simondschweitzer/aed-tei/master/files/<ID>.xml` (+ `_st`, `_wt`): Amenemope (pBM EA 10474 + five older witnesses), Merikare (three witnesses), the Heavenly Cow (Seti I, Tutankhamun, Ramesses VI), PT 571, 486, 527, 600, pWestcar, the Bremner-Rhind Apophis books. The table of folders and TLA IDs is in its README. `zenodo.org` was unreachable on 2026-10-23 (raw GitHub sufficed); `dictionary.xml` is not on GitHub (use the TLA lemma ids and the `_wt` glosses). **Never scrape the live TLA** (decoy page for crawlers). |
+| `El-Hawary-2010--Wortschoepfung--OBO-243/` | **BASE TEXT** of the Memphite Theology (not in AED): El Hawary 2010 (OBO 243, ZORA open access, ©). The PDF, its text layer, his German and notes are git-ignored (recipes); **`memphite-transliteration.tsv` (committed) is our transcription of his transliteration from the page images** (the text layer garbles ḥ ḫ ẖ ḏ ṯ ꜣ ꜥ), 88 rows, by an agent, checked against the text layer. |
+| `Hornung-1997--Himmelskuh--OBO-46/` | Hornung 1997 (OBO 46, ZORA open access, ©; PDF git-ignored, recipe): the Heavenly Cow's synoptic edition and German – rank 3–4. Book page ≈ PDF page − 17. |
+| `Lange-1925--Weisheitsbuch-des-Amenemope/` | Lange 1925 (public domain; archive.org OCR, committed): rank 5 for Amenemope, same page.line numbering. |
+
+- **Not used:** the live TLA (JS wall, decoy page); Nederhof's St Andrews PDFs and Ramses Online (no licence: consult only); Shupak 2016 (Hebrew Amenemope, ©, not consulted); Lichtheim, Simpson, Allen (©, recalled only, never quoted verbatim). Sethe 1928 (PD) for the Memphite Theology was not downloaded (archive.org redirects): a later check of El Hawary's readings against it is possible.
+
+### 4.4u Greek: Hesiod (`הסיודוס/`; Round 4 run 4, 2026-10-24)
+| Folder | What |
+|---|---|
+| `Perseus--Hesiod/` | **BASE TEXT.** Evelyn-White 1914 (Loeb; public domain), Perseus `canonical-greekLit` TEI (markup CC BY-SA 4.0, **committed**): the Theogony (1,042 lines with Galen's 929a–t) and the Works and Days (831 lines; WD 310 is not in the file). `<del>` = Evelyn-White's brackets, `<add>` = 929a–t. Through `raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0020/…`. |
+| `Perseus-Treebank--Hesiod/` | The Perseus AGDT 2.1 treebank of both poems (lemma, morphology, syntax per word; CC BY-SA 3.0, **committed**), aligned to the lines by `tools/perseus2md.py` (0 unaligned words). Known slips in its README. |
+| `LXX-Rahlfs-1935--el-wikisource/` | The Septuagint (Rahlfs 1935, from Greek Wikisource raw wikitext; licence unclear: **git-ignored**, recipes and manifest items): Genesis, Exodus, Leviticus, Deuteronomy, Judges (the A text), 4 Kingdoms, Isaiah, Ezekiel, Jonah, Amos, Micah, Zechariah, Job, Proverbs, Psalms 73, 88, 103, 148 (LXX numbering). Read by `tools/lxx_verses.py`. Wikimedia sometimes answers 429 (a re-fetch works). |
+
+- **LSJ** per word through the Logeion API (`anastrophe.uchicago.edu/logeion-api/detail?w=<lemma>&type=normal`; `hesiod_tools.py lsj`); never bulk-extracted.
+- **Not used:** West's editions and commentaries (1966, 1978), Most's Loeb (2006/2018), Clay & Vergados 2025 (all ©: recalled only, never quoted); the Hebrew translations (Spann 1956, Shabtai 2004, Bouzaglo 2017; ©, not consulted).
+
+### 4.4v Hittite: the Laws, the Temple Instructions, the elimination rituals (Round 4 run 6, 2026-10-24/30)
+| Folder | What |
+|---|---|
+| `HPM/CHiL--CTH-291.1` … `CHiL--CTH-291.PT` | **BASE TEXT** (the Laws, first tablet, and the late parallel text). The Corpus of Hittite Laws (G. Torri, L. Warbinek, A. Carnevale, ed., hethiter.net/: CTH 291.x), on the Hethitologie-Portal Mainz (`hethport.net`, the new address of `hethiter.net`; offline 2026-10-21, back by 2026-10-23): clause-numbered critical editions of the six versions of tablet 1, every manuscript, TLHdig's lemma + German gloss per word, an Italian translation (rank 3). **CC BY-SA 4.0**: the parsed files committed, the raw HTML git-ignored (`HPM/.gitignore`; `tools/hpm2md.py fetch` re-obtains it). CTH 292 not edited in CHiL (2026-10-30). |
+| `HPM/BESRIT--CTH-394`, `-410`, `-407`, `-391.1`, `-391.2` | **BASE TEXT** (the rituals of Ašḫella, Uḫḫamuwa, Puliša, Ambazzi): the HPM project "Beschwörungsrituale der Hethiter" (eds. Chrzanowska, Görke, Collins, Christiansen), clause-numbered, every manuscript, German / English translation (rank 3); CC BY-SA 4.0, as above. |
+| `TLHdig/` | TLHdig Beta 0.3 (Zenodo 10.5281/zenodo.20328284, **CC BY 4.0**): the 74 MB zip git-ignored (recipe + manifest item, 2026-10-30); the CTH folders 264, 292, 321, 391, 394, 407, 410, 757 extracted and committed. The base of our composites of CTH 292 (`חוקים-ובריתות/8-…/composite-HL2.tsv`) and CTH 264 (`9-…/composite-IN.tsv`), and the word glosses of the rituals. |
+
+- **The Mainz Konkordanz** (`hethport.net/hetkonk/hetkonk_abfrage.php?c=<CTH>`): script dates, joins and Hoffner's sigla per manuscript – used for both composites (reachable 2026-10-25/26).
+- **Rank 3 / 5, consulted after drafting, kept in session scratchpads only (not in `sources/`):** Hrozný 1922, *Code hittite* (archive.org `codehittiteprove01hroz`, PD; the § numbering of HL 101–200); Zimmern & Friedrich 1922, *Hethitische Gesetze* (*AO* 23/2; archive.org `hethitischegeset0023hitt`, PD, German, OCR; its § numbers differ); Sturtevant & Bechtel 1935, *A Hittite Chrestomathy* (archive.org `in.ernet.dli.2015.279400`, full view, DLI scan; KUB 13.4 + 13.5 transliterated and translated, pp. 127–174; the § numbering of CTH 264; US renewal status unverified).
+- **The Chicago Hittite Dictionary** (free volumes L–N, P, Š and the supplements): `isac.uchicago.edu/publications/hittite-dictionary-volume-{l-n,p,s}` → PDFs on `isac-assets.s3.amazonaws.com/isac-publications/chd_l-n.pdf`, `chd_p.pdf`, `chd_s.pdf`, `chds1/3/4/5/6.pdf`; **per word only** (its terms: no bulk extraction, no datasets; never committed).
+- **Not used (©, records only):** Hoffner 1997 (*The Laws of the Hittites*), Süel 1985, Taggar-Cohen 2006, Miller 2013 (WAW 31), Mouton 2016, Christiansen 2006 (StBoT 48), Bawanypeck 2005; Neufeld 1951 (English and Hebrew, not reached); Singer 2009 (`החתים ותרבותם`, Hebrew).
 
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.

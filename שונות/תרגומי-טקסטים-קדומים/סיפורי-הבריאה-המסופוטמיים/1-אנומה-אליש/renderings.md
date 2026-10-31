@@ -20,7 +20,7 @@ Set before drafting. They recur in I 141–143 = II 27–29 = III 31–33 = III 
 | 10 | *kulīlu* (I 143) | אִישׁ־דָּג | Fish-man. |
 | 11 | *kusarikku* (I 143) | אִישׁ־שׁוֹר | Bison / bull-man. |
 
-Group words: *nabnītu* "creature(s)" = `מִבְנִים`; *ištēn-ešret* = `אַחַד־עָשָׂר`; *imtu* "venom" = `אֶרֶס`.
+Group words: *nabnītu* "creature(s)" = `מִבְנִים`; *ištēn-ešret* = `אַחַד־עָשָׂר`; *imtu* "venom" = `חֵמָה` [cognate] (construct `חֲמַת`, suffixed `חמתך`, `חמתה`; the free form always vocalized, so that it does not read `חַמָּה` "sun"; 2026-10-30 harmonization, was `אֶרֶס`; ↔ `חֲמַת תַּנִּינִם` Deut 32:33).
 
 ## 2. Fixed passage: Tiāmat's army (I 129–162 = II 15–48 = III 19–52 = III 77–110)
 Drafted by the coordinator before Tablet I (2026-10-16). **Every copy uses exactly this Hebrew, line for line.** The only permitted differences are where the Akkadian differs (check the normalizations of each copy against I; the apparatus of each copy says "[מקבילה: I 129]" etc.). In the clean translation and the annotated `>` lines the text is identical, including niqqud and punctuation. If a copy is the first occurrence of a name in its tablet, the name is already vocalized here, so no change is needed.
@@ -34,7 +34,7 @@ Drafted by the coordinator before Tablet I (2026-10-16). **Every copy uses exact
 | 133 | 19 | 23 | 81 | ummu ḫubūr pātiqat kalāma | האם חֻבּוּר, המעצבת כל, |
 | 134 | 20 | 24 | 82 | ušraddi kakka lā maḫra ittalad mušmaḫḫī | הוסיפה נשק שאין לעמוד בפניו, ילדה נחשים אדירים, |
 | 135 | 21 | 25 | 83 | zaqtū-ma šinnī lā pādû attāʾī | חדי שיניים, לא חסים …, |
-| 136 | 22 | 26 | 84 | imta kīma dāmi zumuršunu ušmalli | בארס כדם מילאה את גופם. |
+| 136 | 22 | 26 | 84 | imta kīma dāmi zumuršunu ušmalli | בְּחֵמָה כְּדָם מילאה את גופם. |
 | 137 | 23 | 27 | 85 | ušumgallī nadrūti pulḫāti ušalbiš-ma | דרקוני־ענק עזים הלבישה אימות, |
 | 138 | 24 | 28 | 86 | melammī uštaššâ iliš umtaššil | זוהר העמיסה עליהם, לאל המשילה אותם: |
 | 139 | 25 | 29 | 87 | āmiršunu šarbābiš liḫḫarmim | הרואה אותם – יתמוטט באין אונים! |
@@ -60,7 +60,7 @@ Drafted by the coordinator before Tablet I (2026-10-16). **Every copy uses exact
 | 159 | 45 | 49 | 107 | innana qingu šušqû leqû anūti | עתה, משהוגבה קינגו ולקח את שררת אנו, |
 | 160 | 46 | 50 | 108 | an ilī mārīša šīmata ištīma | לאלים, בניה, גזר גורל: |
 | 161 | 47 | 51 | 109 | epšu pîkunu gīra linīḫḫa | מעשה פיכם יניח את האש, |
-| 162 | 48 | 52 | 110 | imtuk kitmuru magšara lišrabbib | ארסך הצבור ירפה את העצום! |
+| 162 | 48 | 52 | 110 | imtuk kitmuru magšara lišrabbib | חמתך הצבורה תרפה את העצום! |
 
 Notes for the apparatus (Tablet I gives them in full; the copies refer back to I):
 - 132 *ukkinnu* = `מוֹעֵצָה` (≠ *puḫru* `אֲסֵפָה`); *banû* = `בָּנָה` even here ("building strife").
@@ -335,6 +335,7 @@ Rows added by the tablet translators (lemma | Hebrew | first line | note).
 | The names 10–50 of Tablet VII (Asarre … Nēberu) | see the table in project.md, Tablet VII | VII 1–124 | Hyphenation policy: project.md, Tablet VII, decision 1. *Tutu* = `טוּטוּ`; *Addu* = `אַדּוּ`; "Lord of the Lands" and "Ea" translated. |
 
 ## Changelog
+- **2026-10-30 harmonization** (`../../harmonization--2026-10-30.md`, row 1): *imtu* = `חֵמָה` [cognate] (was `אֶרֶס`): the refrain I 136 = II 22 = III 26 = III 84 `בארס כדם מילאה את גופם` → `בְּחֵמָה כְּדָם מילאה את גופם` (and §2's row); I 162 = II 48 = III 52 = III 110 `ארסך הצבור ירפה את העצום` → `חמתך הצבורה תרפה את העצום` (feminine agreement; III 110 keeps its brackets; and §2's row); IV 53 `נושאות ארס` → `נושאות חֵמָה`; IV 62 `סם לכבות ארס` → `סם לכבות חֵמָה`; V 51 `צְבֹר את ארסה` → `צְבֹר את חמתה`; §1's group-words line; the glosses and notes of these lines, IV 40's note; project.md's parallels rows I 136, IV 62.
 - 2026-10-23 harmonization (`../../harmonization--2026-10-23.md` rows 4, 20): *ḫaṭṭu* = `שַׁרְבִיט` (IV 29 `שבט` → `שרביט`); Kakka = `כַּכָּא` (every `גַּגָּא` / `גגא` of Tablet III – 2, 3, 11, 67, the headings, the notes and the introductions; the note at III 2 rewritten).
 - 2026-10-21 harmonization (cross-corpus decisions): *karû* = `כְּרִי` (VII 78 `שופך ערמות` → `שופך כְּרִים`); *šiptu* = `קֶסֶם` / *tû* = `לַחַשׁ` confirmed (II open decision 6 settled); *sukkallu* = `וְזִיר`, *kabattu* = `כָּבֵד` unchanged.
 - 2026-10-16 (after Tablet I): I 156 = II 42 = III 46 = III 104 changed from `…על כולם, האנונכי!` to `…על כולם, על האנונכי!` (the Akkadian is an apposition, not a vocative; the Tablet I translator's proposal). Bible quotations in §1–§2 corrected to the repo's text.

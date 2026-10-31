@@ -57,12 +57,12 @@ Words used in this project and not (yet) in the shared `../renderings.md`. The s
 | *šukuttu* | עֲדִי | `פֶּסֶל`, `צֶלֶם` | | Erra 127, 140, 142 |
 | *šiknu* | תֹּאַר | | | Erra 140 |
 | *šipītu šamê u erṣeti* | תֶּפֶר הַשָּׁמַיִם וְהָאָרֶץ | | | Erra 133, 136, 170 |
-| *šiknāt napišti* | יְצוּרֵי הַנֶּפֶשׁ | | *napištu* = `נֶפֶשׁ` (shared) | Erra 137 |
+| *šiknāt napišti* | בַּעֲלֵי הַנֶּפֶשׁ (2026-10-24, Round 4 run 5: was `יְצוּרֵי הַנֶּפֶשׁ`; the root יצר is reserved in the netherworld corpus, which shares these lines) | | *napištu* = `נֶפֶשׁ` (shared) | Erra 137 |
 | *zēru* | זֶרַע | | [equivalent] ז:ג | Erra 138 |
 | *uqnû* (Sum. ZA.GIN₃) | סַפִּיר | `לָזוּרִיט` (until 2026-10-21) | [equivalent]: biblical `סַפִּיר` is lapis lazuli (Exod 24:10; Ezek 1:26; Job 28:6); the cross-corpus decision of 2026-10-21 | Gilg. I 27; Erra 154; Uruk List o 10 |
 | *šêtu* "to be left over" | נוֹתַר | | [equivalent] ז:כג | Erra 145 |
 | *rēḫu* | שְׁאֵרִית | | | Erra 146 |
-| *mēsu* / *elmēšu* | עֵץ הַמֵּסוּ / אֶבֶן הָאֶלְמֵשׁוּ | | untranslated names of materials | Erra 148–152 |
+| *mēsu* / *elmēšu* | (עֵץ) הַמֵּסוּ / עִנְבָּר (2026-10-24: *elmēšu* as Gilgameš) | | untranslated names of materials | Erra 148–152 |
 | *šīr ilī* | בְּשַׂר הָאֵלִים | | *šīru* = `בָּשָׂר` (shared) | Erra 150 |
 | *purādu* | קַרְפִּיּוֹן | `דָּג` | | Erra 162 |
 | *šuklulu* | שֻׁכְלַל | | [cognate] Aram. `שַׁכְלִלוּ` | Erra 162 |

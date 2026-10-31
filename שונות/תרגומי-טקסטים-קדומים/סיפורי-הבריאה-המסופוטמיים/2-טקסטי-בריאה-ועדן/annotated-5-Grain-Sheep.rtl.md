@@ -1223,7 +1223,7 @@
 - **פירוק:** `lu₂-silaĝ-ĝa₂` – "איש הבצק" (ETCSL "baker"); `ba-ḫi` – ḫi "לערבב" (ḫamṭu, *ba-*): "עירבב"; `ki-a` – "על הארץ"; `mi-ni-in-ĝar` – ORACC `{mu.i.n:~}`: ĝar "לשים"; ḫamṭu: "שם".
 - **תרגומים:** ETCSL: "the baker's assistant mixes you and throws you on the floor". אנו: עבר (ḫamṭu).
 - **הקבלה:** [equivalent] `וַיָּשֶׂם שָׁם אֶת הָאָדָם` (בראשית ב:ח) – *ĝar* = `שָׂם` (דרך העברית בלבד).
-- **הערות:** *ĝar* = `שָׂם` (renderings §4, טקסט 3); *ki* = `הָאָרֶץ`. *lu₂-silaĝ* = `אִישׁ־הַבָּצֵק` (אדפה *nuḫatimmu* = `אוֹפֶה`).
+- **הערות:** *ĝar* = `שָׂם` (renderings §4, טקסט 3); *ki* = `הָאָרֶץ`. *lu₂-silaĝ* = `אִישׁ־הַבָּצֵק` (אדפה *nuḫatimmu* = `מְבַשֵּׁל`, מאז 2026-10-30).
 
 ### 158
 `ki-sikil du₈ gu-la šu bur₂-ra-am₃`

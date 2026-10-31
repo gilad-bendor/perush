@@ -58,6 +58,11 @@ its VM was reclaimed). The operator relies on all of it.
 - Commits are signed, committer `Claude <noreply@anthropic.com>`.
 - The cloud's system prompt says to develop on the session branch and not to push elsewhere without explicit
   permission. The operator states that permission (the user wrote it): work on `main`.
+- **A session created from a branch** (`create_session` with `source_revision: <branch>`, e.g. a translation run's
+  `translation-round-5-run-2`) **lands on that branch**, tracking `origin/<branch>`, in a shallow clone of that branch
+  only - there is no `origin/main` ref at all (a test session, 2026-10-30). The operator calls such a branch (one that
+  tracks `origin/<the same name>`, and is not a `claude/...` one) a **work branch**: it reports it, does not tell the
+  session to move to `main`, and makes the sync plan against its own upstream.
 - The cloud's **Stop hook** (`~/.claude/stop-hook-git-check.sh`) blocks the end of a turn when there are uncommitted
   changes or untracked files ("Please commit and push these changes to the remote branch"). It compares with
   `origin/<current branch>`, so working on `main` satisfies it.

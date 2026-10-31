@@ -130,7 +130,7 @@ Echo tags: guidelines §6.4. Section 1–3 were fixed by the coordinator **befor
 | *nâḫu* G / D; *sakātu* | נָח / הֵנִיחַ (`יָנִיחוּ`); שָׁתַק | [cognate] (*nâḫu*); *sakātu* ~ `הַסְכֵּת` | | MB 64'; SB e+17 |
 | *uggatu* | קֶצֶף | | Enūma eliš family. | MB 61'; SB c+2 |
 | *kullumu* | הֶרְאָה | | | MB 31', 65'; SB a+3 |
-| *nuḫatimmu*; *nuḫatimmūtu*; *paššuru*; *rakāsu* / *paṭāru* (table) | אוֹפֶה; אֲפִיָּה; שֻׁלְחָן; עָרַךְ / פֵּרֵק | | Not `מְלָאכָה`. | SB a+10–a+14 |
+| *nuḫatimmu*; *nuḫatimmūtu*; *paššuru*; *rakāsu* / *paṭāru* (table) | מְבַשֵּׁל; בִּשּׁוּל (2026-10-30 harmonization, were אוֹפֶה; אֲפִיָּה); שֻׁלְחָן; עָרַךְ / פֵּרֵק | | Not `מְלָאכָה`. `אוֹפֶה` is the cognate of *ēpû* "baker". | SB a+10–a+14 |
 | *elippu*; *šaḫḫītu*; *maḫāru* D (boat); *neqelpû* | סְפִינָה; מִפְרָשִׂית; הִשִּׁיט; שָׁט | | | SB a+15, a+19–a+21 |
 | *maṣṣartu*; *šubarrû*; *bēlūtu* | מִשְׁמֶרֶת; פְּטוֹר (2026-10-23 harmonization, was חֵרוּת); אֲדָנוּת | | *šubarrû* as Enūma eliš and Advice to a Prince. | SB e+9–e+11 |
 | *arkât ūmī* | לְאֹרֶךְ יָמִים | [cognate] (*ark-*) | Not `לְעוֹלָם`, not `בְּאַחֲרִית הַיָּמִים`. | SB e+11 |
@@ -588,6 +588,7 @@ Akkadian lemmas: SEAL (checked with the eBL dictionary); Sumerian in the notes. 
 | *pirištu*; *mūdû*; *kullumu*; *niṣirtu*; *gabarû labīru* | סוֹד; הַיּוֹדֵעַ; הֶרְאָה; נְצוּרָה; הֶעְתֵּק יָשָׁן | [cognate] (*niṣirtu* ~ נצר) | Colophons. | rev. 31; colophon B 5–6 |
 
 ## Changelog
+- **2026-10-30 harmonization** (`../../harmonization--2026-10-30.md`, row 4): *nuḫatimmu* = `מְבַשֵּׁל`, *nuḫatimmūtu* = `בִּשּׁוּל` (were `אוֹפֶה`, `אֲפִיָּה`). Changed lines: Adapa SB a+10 `עם האופים את האפייה עושה` → `עם המבשלים את הבישול עושה`, a+11 `עם אופי ארידו את האפייה ⟨עושה⟩` → `עם מבשלי ארידו את הבישול ⟨עושה⟩`; their glosses and notes, Grain and Sheep 157's note (the Adapa cross-reference), and project.md's parallels rows SB a+10 (three).
 - 2026-10-23 harmonization (`../../harmonization--2026-10-23.md` rows 7, 12): *palgu* = `פֶּלֶג` (KAR 4 obv. 13 `סוללה ותעלה […]` → `סוללה ופלג […]`; obv. 5 kept, its Hebrew is the Sumerian *pa₅*); *šubarrû* = `פְּטוֹר` (Adapa SB e+10 `את חירותו שָׂם` → `את פטורו שָׂם`).
 - 2026-10-21 harmonization (cross-corpus decisions, see the corpus `renderings.md` §8): *mušen* = `צִפּוֹר` (E&Nḫ 18, Hoe 83; KAR 4 rev. 13 *iṣṣūru*); Inana `אִינַנָּה` in the apparatus too (`אינאנה` replaced, incl. the Hoe heading 49–51); the [equivalent] note on `סַפִּיר` added at Hoe 12; *šiptu* = `קֶסֶם` / *tû* = `לַחַשׁ` settled; *šembizid* = `פּוּךְ`, *sukkal* = `וְזִיר`, *karû* = `כְּרִי` unchanged.
 - 2026-10-16: §1–3 written by the coordinator before drafting text 1, from the corpus renderings, the flood corpus's shared renderings and Sumerian project 3.
