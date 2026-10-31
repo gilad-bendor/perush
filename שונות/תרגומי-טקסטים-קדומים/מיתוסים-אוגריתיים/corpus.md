@@ -28,6 +28,10 @@ it, after checking Göttingen's EUPT edition.
 | `1-מחזור-בעל/` | **The Baal Cycle**, KTU 1.1–1.6 (Ilimilku's six tablets; the order of 1.1–1.2 is debated) | CUC v0.2.8 (KTU³), `../sources/CUC/` | 1,372 (1.1 118, 1.2 132, 1.3 258, 1.4 447, 1.5 172, 1.6 245) | **first draft, 2026-10-23** (Round 4 run 1; three passes, `ugarit_tools.py verify --strict`) |
 | `2-מיתוסים-ולחשים/` | **The short myths and charms**: KTU 1.23 (Šaḥar and Šalim), 1.24 (Nikkal and Yarikh), 1.114 (El's banquet), 1.100 and 1.107 (the serpent charms), 1.108 (Rapiʾu, king of eternity), 1.82 and 1.83 (charms against the serpent and the *tnn*) | CUC v0.2.8 | 377 (1.23 76, 1.24 50, 1.114 31, 1.100 79, 1.107 54, 1.108 27, 1.82 43, 1.83 17) | **first draft, 2026-10-23** (Round 4 run 1) |
 | `3-תיק-היום-החמישי/` | **The fifth-day dossier** (Gen 1:20–23): short excerpts from the other cultures (world list §5A), each from its own language | per excerpt (see its `project.md`) | 100 (six excerpts: Egyptian, Greek, Hittite, Vedic, Old Norse, Old Japanese) | **first draft, 2026-10-23** (`dossier_tools.py verify --strict`) |
+| `4-אקהת/` | **The Aqhat epic**, KTU 1.17–1.19 (Danel's son, Anat's bow, the eagles; Ilimilku) | CUC v0.2.8 (KTU³); EUPT not out yet | 489 (1.17 189, 1.18 76, 1.19 224) | **first draft, 2026-10-31** (Round 5 run 3; three passes + an independent fidelity review) |
+| `5-כרתא/` | **The Kirta epic**, KTU 1.14–1.16 (the king without heirs, the campaign for Ḥurriya, the vow, the illness, Yaṣṣib) | **EUPT 2025** (Göttingen, CC BY-SA; rank 1 for readings, `../sources/EUPT/`) on CUC's line skeleton | 703 (1.14 300, 1.15 136, 1.16 267) | **first draft, 2026-10-31** (Round 5 run 3; reviewed) |
+| `6-הרפאים/` | **The Rephaim texts** KTU 1.20–1.22 and the royal funerary liturgy KTU 1.161 | CUC v0.2.8 | 131 (1.20 23, 1.21 14, 1.22 60, 1.161 34) | **first draft, 2026-10-31** (Round 5 run 3; reviewed) |
+| `7-טקסים/` | **Rituals**: KTU 1.40 (atonement / purification of the city), 1.119 (a month's sacrifices and the prayer for a besieged city), 1.39 (a sacrifice list) | CUC v0.2.8 | 101 (1.40 43, 1.119 36, 1.39 22) | **first draft, 2026-10-31** (Round 5 run 3; reviewed) |
 
 ## How the parts relate
 
@@ -40,8 +44,17 @@ formulas and epithets (El's banquet, the *tnn* charms, the "birds of heaven and 
 
 ## Tools and files
 
-- `ugarit_tools.py` (in this folder): `units`, `data`, `fill`, `pars`, `lex`, `dulat`, `verify [--strict]`, `build`,
+- `ugarit_tools.py` (in this folder): `units`, `data`, `fill`, `pars`, `lex`, `dulat`, `eupt` (Kirta), `verify [--strict]`, `build`,
   `grep [--all]`, `gates`, `selftest`. It reads CUC through `../tools/cuc2md.py` (the converter from CUC's Text-Fabric
   dataset). See its docstring and `../tools.md`.
 - `renderings.md` binds every translator; `translator-brief--ugaritic.md` is the common brief.
 - `parallels-index.md`: generated from the annotated **הקבלה** bullets by `build_parallels_index.py`.
+
+## Round 5 run 3 (2026-10-31): the epics and the rituals
+
+Read after the cycle: Aqhat (1.17 → 1.19), then the Rephaim texts (1.20–1.22: Danel again, inviting the dead kings),
+then 1.161 (the Rephaim in the royal cult); Kirta (1.14 → 1.16) stands alone (its scribe is Ilimilku too); the rituals
+show the cult the myths presuppose. **Left for later:** the rest of 1.39–1.148 (1.41 / 1.87 the month of the first wine,
+1.43, 1.46 …), the letters, the other Rephaim-related texts (1.113 the king list); EUPT's editions of Aqhat and the
+Rephaim when they appear (re-check the readings then).
+
