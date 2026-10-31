@@ -142,7 +142,7 @@ As 1.20.
 - I:11 *tštr* `*תתור*` (Gt of *twr*, `תּוּר`, Num 13:2); *ʿpt* `עוף` (licensed).
 - I:15 *ʿbrm* `עוברים` [cognate]; *kš* `תמר`; I:16 *dpr* `*הדיף*`, *qʿl* `*פרח גפן*` (new, italic).
 - I:18 *mrṯ* `עסיס` (new; `תירוש` stays *trṯ*'s), *srnm* `סְרָנִים` [cognate] (Judg 16:5), *bld* `בְּלַד` (transcribed); I:19 *ġll* `עַלָּל`, *išryt* `אושר` (§12.5), *ʿnq smd* `*ענק חרוזים*`; I:20 `לבנון, טל עסיס (אשר) חרש אֵל` – *ṭṣ* read *ṭl*; *ḥrṯ* `חרש` (1.5 VI:20). **No "wine of El's choice" on the tablet**: the verb is *ḥrṯ* "plough, cultivate".
-- I:24 *prʿ* `*ראשית*` (DULAT "first fruit"; `ביכורים` avoided: the root בכר is *bkr*'s).
+- I:24 *prʿ* `*תנובה*` (DULAT "first fruit"; `ביכורים` avoided: the root בכר is *bkr*'s; `ראשית` – first drafted here – moved to *rišyt*, its cognate, in 1.119:25).
 - II:16 *ydr* `ידור` (§12.2, licensed); II:17 *ʿṣ amr* `עץ? האֹמֶר`; II:18 `נַחַת, כֵּס השררה` from 1.16 VI:24 without *l*.
 - II:24 *ʿrhm* `עריהם` ("their towns"; "their donkeys" `עַיִר` in the note).
 - Column order: CUC's (I before II); the note says the invitation (II) may precede the feast (I).
@@ -179,7 +179,7 @@ As 1.20.
 I:12–14 = 1.4 VI:40–43, 1.1 IV:30–32; I:21–25 = §6.10 (1.17 II:32–39, 1.14 III:11); II:3–11, 19–21 = 1.21 II; II:18 ↔ 1.16 VI:24, 1.3 IV:3, 1.6 V:6; II:22–26 = 1.20 II:3–7, 1.14 IV:32–33.
 
 ### Proposals for the shared renderings
-- *ʿbš* `*ישבחו*`; *dpr* `*הדיף*`; *qʿl* `*פרח גפן*`; *mrṯ* `עסיס`; *srn* `סֶרֶן` [cognate]; *prʿ* (I) `*ראשית*`; *ʿnq* `ענק` [cognate]; *kš* `תמר`; *ʿbr* (n.) `עובר`; *twr* Gt `*תתור*`; *ʿllmy/n* transcribed (`עַלְלְמִי`, `עַלְלְמָן`); names `תַּמְק`, `יַחְפַּן החַיְלִי`, `תַּמְךְ`, `בְּלַד`, `עַלָּל`.
+- *ʿbš* `*ישבחו*`; *dpr* `*הדיף*`; *qʿl* `*פרח גפן*`; *mrṯ* `עסיס`; *srn* `סֶרֶן` [cognate]; *prʿ* (I) `*תנובה*`; *ʿnq* `ענק` [cognate]; *kš* `תמר`; *ʿbr* (n.) `עובר`; *twr* Gt `*תתור*`; *ʿllmy/n* transcribed (`עַלְלְמִי`, `עַלְלְמָן`); names `תַּמְק`, `יַחְפַּן החַיְלִי`, `תַּמְךְ`, `בְּלַד`, `עַלָּל`.
 
 ### Lessons for the guidelines
 - The famous detail again: "the wine of El's choice" is not on the tablet (*yḥrṯ il* "El cultivated").
@@ -202,7 +202,7 @@ As 1.20 (no Cassuto, no EUPT). Rank 3 (Bordreuil & Pardee 1982, Levine & de Tarr
 - 17 *ʿdmt* `שממה` ×3 (new); 18 *šḫn* `*לַהֲטִי*` (new, italic; cognate `שְׁחִין` in the note); 19 *nyr rbt* `הנִּיר הרַבָּה` (*nyr* `נִיר` §10, *rb* `רַב` §4.1 – the Gen 1:16 `הַמָּאוֹר הַגָּדֹל` contrast in the note), *ʿln* `ממעל`, *tṣḥ* `צווחת`.
 - 20–22: *aṯr bʿlk* `אחר בַּעַלְךָ` (vocalized), *l ksih* `מִכִּסְאוֹ` (*l* "from", §10), *arṣ rd* `לארץ רֵד`, *špl* `שְׁפַל` (qal; `הִשְׁפִּיל` is *ġly*'s), *ʿpr* `עפר` (licensed); *tḥt* `תחת`.
 - 26: the tablet has *tḥm* "message"; read as a slip for *tḥt*: `*תחת*` (italic, explained).
-- 27–30: *ṯʿy* `והקרב` (new: the verb "offer"; the officiant *ṯʿy* `שׁוֹעַ` stays the title); *ʿšty* `אחת` (cognate `עַשְׁתֵּי` noted); *qdm* D `תְּקַדֵּם` [cognate] (Mic 6:6); *ʿṣr* `צפור` (licensed).
+- 27–30: *ṯʿy* `והגש` (the verb "offer"; first drafted `והקרב`, moved because *šqrb* (1.40) is the cognate of `הקריב`; the officiant *ṯʿy* `שׁוֹעַ` stays the title); *ʿšty* `אחת` (cognate `עַשְׁתֵּי` noted); *qdm* D `תְּקַדֵּם` [cognate] (Mic 6:6); *ʿṣr* `צפור` (licensed).
 - 31–34: *šlm* `שלום` (construct `שלום עמורפי`, no *l*); *bah* `*ביתו*` (obscure; by the parallel *bth*); *ṯġr* `שער` (§12.2).
 
 ### Open decisions for the user
@@ -218,6 +218,7 @@ As 1.20 (no Cassuto, no EUPT). Rank 3 (Bordreuil & Pardee 1982, Levine & de Tarr
 - Pass (b) consistency: 3 = 10 identical; 2 / 9 differ only as *rpim* / *rpi*; names checked against §1.2.
 - Pass (c) Hebrew: read the generated translation; no change.
 - `verify 1.161 --strict`: 0 problems; `check_bible_quotes.py` on all files: 0 problems.
+- Revised during the rituals (1.40, 1.119), same session: 27–30 *ṯʿy* `והקרב` → `והגש` (*šqrb* is the cognate of `הקריב`); 1.22 I:24 *prʿ* `*ראשית*` → `*תנובה*` (*rišyt*, 1.119:25, is the cognate of `ראשית`). Rebuilt; `verify --strict` 0.
 
 ### The text on its own terms
 - A royal death is a summons: the ancestors are called by name, from the mythic clan (Didanu) through named Rephaim to the father and the dead king himself (2–12) – the king joins a line, not a void.
@@ -241,7 +242,7 @@ As 1.20 (no Cassuto, no EUPT). Rank 3 (Bordreuil & Pardee 1982, Levine & de Tarr
 2, 9 ↔ 1.15 III:3, 14 (`רפאי הארץ`); 3, 10 ↔ 1.15 III:4, 15 (`קיבוץ דִּתָּן`, spelled *ddn* here); 8, 24 `הרפאים הקדמונים` ↔ 1.20 II:10.
 
 ### Proposals for the shared renderings
-- *ẓl* `צֵל` / `צְלָלִים` [cognate] (`צֶלֶם` never for *ẓl*); *qbʔ* `הוזמן`; *ʿdmt* `שממה`; *šḫn* `*להט*`; *ṯʿy* (vb) `הקריב`; *qdm* D `קִדֵּם`; *ʿšty* `אחת`; *špl* G `שָׁפֵל`; *ddn* `דִּדָּן` (= *dtn*); names `אוּלְכָּן`, `תִּרְמָן`, `סִדָּן־וְרַדָּן`, `תַּר־עַלְלְמָן`, `עַמִּתְתַמְרוּ`, `עַמּוּרָפִי`, `תַּרְיֶלִּי`.
+- *ẓl* `צֵל` / `צְלָלִים` [cognate] (`צֶלֶם` never for *ẓl*); *qbʔ* `הוזמן`; *ʿdmt* `שממה`; *šḫn* `*להט*`; *ṯʿy* (vb) `הגיש` (revised during 1.40); *qdm* D `קִדֵּם`; *ʿšty* `אחת`; *špl* G `שָׁפֵל`; *ddn* `דִּדָּן` (= *dtn*); names `אוּלְכָּן`, `תִּרְמָן`, `סִדָּן־וְרַדָּן`, `תַּר־עַלְלְמָן`, `עַמִּתְתַמְרוּ`, `עַמּוּרָפִי`, `תַּרְיֶלִּי`.
 
 ### Lessons for the guidelines
 - A licence built from the transliteration must not split a word at an in-word deletion (`k{i}⸢si⸣h`): strip the damage marks first, then join.

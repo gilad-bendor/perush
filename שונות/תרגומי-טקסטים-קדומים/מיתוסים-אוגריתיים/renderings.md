@@ -694,3 +694,19 @@ transcribed (`עוֹלָם` reserved for *ʿlm*); names `תַּמְק`, `יַח�
 `תַּרְמָן`), `סִדָּן־וְרַדָּן`, `עַמִּתְתַמְרוּ`, `עַמּוּרָפִי`, `תַּרְיֶלִּי`. The famous "wine of El's choice" is not on the
 tablet (1.22 I:20 *yḥrṯ il*). Tool: the licence text also holds each word with in-word deletions joined (1.161:20
 *k{i}si*). Accepted splits: *aṯr* / *aḫr* `אחר`; *ʔtw* / *bwʾ* `בא`.
+
+### 12.9 Merged after translator 3 (KTU 1.40, 1.119, 1.39), Round 5 run 3, 2026-10-31
+
+All Proposals accepted (`7-טקסים/project.md`). **§12.8 revised by the translator:** *šqrb* (Š of *qrb*) = `הקריב` [cognate],
+so *ṯʿ* / *ṯʿy* "offering / offer" = `הגשה` / `הגיש` (Amos 5:25; 1.161:27–30 changed); *rišyt* = `ראשית` [cognate], so 1.22
+I:24 *prʿ* = `*תנובה*`. **KTU 1.40's refrain** (fixed at lines 24–34, copied into every copy): `זו ההגשה (אשר) נגיש, זו
+השחיטה (אשר) נִשְׁחֲטָה: יִנָּשֵׂא אל אבי בני אֵל, … אל קהל בני אֵל, אל תַּכְמָן וְשׁוּנַם: הנה השֶּׂה / העַיִר!`; *u* `או`, *l p*
+`לפי`, *npy* `טָהֳרָה` (the root כפר never: Lev 16's `כִּפֶּר` is the finding), *qṣrt npš* `קוצר נפש` [cognate] (Num 21:4),
+*qṭt tqṭṭ* `*קלקלה* … *תקלקלו*`, *šn yp* `השתנה יָפְיְכֶם`, *mšr* `מֵישָׁרִים` [cognate], *mpḫrt* `קהל` (*pḫr* stays
+`אֲסֵפָה`), *gr* `גֵּר` (1.119: the verb `יתגרה`), *yman* `יָוָן`, *ḫty* `החִתִּי`, *ġbr* `הגִּבְרִי` (with ג: `העברי` would
+manufacture "the Hebrew"). **1.119:31 reads *dkr* `זָכָר`, not *bkr*** (the famous "firstborn" is not on the tablet: 2 Kgs
+3:27 a [divergence] of situation only). *al* (1.119) `אָנָּא`; *ʿšrt* `*מעשר*` (Gen 28:22; DULAT "banquet" in the note); *ḥl*
+`חוֹל`; *brr* `בָּר`; *šnpt* `הנפה`. 1.39: *ilhm* / *ilh* transcribed `אִלָהוּם` / `אִלָהוּ` (the form of `אֱלֹהִים`: a
+note, never a line), *šrp* `שְׂרֵפָה` [equivalent `עֹלָה`], *šlmm* `שְׁלָמִים` [cognate], *mtntm* / *kbd* `מָתְנַיִם` / `כָּבֵד` (Lev
+3:4), *pgr* `פֶּגֶר`. Tool: the `נדר` gate licensed by *mḏr* / *nḏr*, the `גדל` gate by *mdgl*. Left for the next session on
+the Baal Cycle: *yp* `יֹפִי` / *ysmt* `יופי` (1.5–1.6).
