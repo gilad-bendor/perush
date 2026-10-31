@@ -210,6 +210,8 @@ RESERVED_CL.update({
     B + P + r'(זרע|זרעו|זרעם|זרעך)' + E: [r'zēru|zērū|zēr\b|perʾu|pirʾu|liplipp'],
     B + P + r'(צלם|דמות)' + E: [r'ṣalmu|tamšīlu'],
 })
+for _k in [k for k in RESERVED_CL if '(גן|גנה|' in k]:
+    RESERVED_CL[_k] = RESERVED_CL[_k] + [r'magan']          # Magan = מָגָן (CL1, SB.60)
 RESERVED['CL'] = RESERVED_CL
 
 TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
@@ -269,7 +271,15 @@ FORMULAS = {'EA': [
     (r'atkal(ak)?kum-ma \| šamaš', r'^בך בטחתי, שמש', '"I trusted in you, Šamaš" (§10.3)'),
     (r'ūmišam-ma \|\|? imta(na)?h?hara', r'יום יום – אל שמש מתחנן', '"day after day he appealed" (§10.3)'),
     (r'ana (šâšū?|šuāšu)(-ma)? \|\| ana \S+ \| iz', r'אליו, אל [^,]+, דיבר(ה)?:', '"X said to him, to Y" (§10.6.2)'),
-], 'CL': [  # renderings.md §11.3 (enforced once the first copy of each formula is drafted)
+], 'CL': [  # renderings.md §11.3 / §11.6.1 (fixed by CL1, 2026-10-31)
+    (r'ašāl-ma ilī rabûti', r'^שאלתי את האלים הגדולים,$', '"I asked the great gods" (§11.6.1)'),
+    (r'ištar ilaba zababa anunītu', r'^אשתר, אילבה, זבבה, אנוניתו,$', 'the omen gods 1 (§11.6.1)'),
+    (r'šullat haniš šamaš qurāda', r'^שולת, חניש, שמש הגבור\.$', 'the omen gods 2 (§11.6.1)'),
+    (r'alsi mārī bārî umaʾʾir', r'^הצעקתי את בני הבוחן, ציוויתי \(עליהם\),$', 'the diviners summoned (§11.6.1)'),
+    (r'sebet ana pān sebet puhādī alput', r'^שבעה אל פני שבעה טלאים נגעתי,$', 'seven by seven lambs (§11.6.1)'),
+    (r'^ukīn guhšî ellūti', r'מתקני־קנה טהורים\.$', 'the reed stands (§11.6.1)'),
+    (r'kīam aqbi ana libbīya umma lū anākū-ma', r'^כך אמרתי אל לבי, לאמור – אני עצמי:$', '"thus I said to my heart" (§11.6.1)'),
+    (r'ina libbīšunu ištēn balṭu ul ittūra', r'ומתוכם אחד חי לא שב', '"not one returned alive" (§11.6.1)'),
 ]}
 
 
