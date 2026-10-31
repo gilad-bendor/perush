@@ -668,3 +668,16 @@ renderings (full list in the Proposals): *ḥtk* `שושלת`, *rš* `רֻשַּ
 with *ʿz* `עוז`); *ibr* keeps its cognate `אַבִּיר`, *gmr* `*אביר*` (1.2 I:46, 1.6 VI:6) to move – left for the next
 session on the Baal Cycle (noted, like *dt*); *ḥtṯ* / *ksp* both `כסף` (the Hittite loanword: an accepted split); *mʿ*
 `*יחדיו*` / `*נא*` and *ypq* / *pq* `הפיק` accepted.
+
+### 12.7 Merged after translator 2 (KTU 1.15, 1.16), Round 5 run 3, 2026-10-31
+
+All Proposals accepted (`5-כרתא/project.md`, "KTU 1.15", "KTU 1.16"). **Confirmed by the coordinator:** *zbl* (III) "one
+carried" = `*הַסָּבוּל*` (1.14 II:45, IV:23 revised; *zbl* ~ Akk. *zabālu*, Isa 46:7), because *dw* "sick" keeps its
+cognate `דָּוֶה` (§12.6 revised). The illness words, one each: *mrṣ* `חָלָה` / `חֳלִי`, *dw* `דָּוֶה`, *mdw* `מַדְוֶה`, *zbln*
+`דְּוַי`, *anšt* `אֲנוּשָׁה`. Šaʿtiqat is made with *ṭiṭ* `טיט`, *qrṣ* `קָרַץ` [cognate] (Job 33:6) and *škn* Š `הִשְׁכִּין`
+– the roots יצר and עשה never (Gen 2:7's `וַיִּיצֶר` is the [divergence]). *bkr* D `בִּכֵּר` (Deut 21:16), *ṣġrt* `צעירה`;
+*rpi arṣ* `רפאי הארץ`, *qbṣ* `קיבוץ`; *ynq ḥlb* `יונק חלב`, *mṣṣ ṯd* `מוצץ שַׁד`; *prr* `אָפֵר` (Num 30:9); *ʿtq* `נֶעְתַּק`;
+*mtm* `מְתִים` (`כִּמְתִים תמות`; the reading "the dead" in the notes); names `דִּתָּן`, `נַנַּי`, `אִלְשׁ`, `חֲבוּר`. EUPT
+followed in ~35 more places (1.15 V:1–4: EUPT's traces, not KTU³'s restored copy). **Collisions accepted as noted splits:**
+*nrt* (II) "ploughland" / *nyr* "luminary" both `נִיר` (two Hebrew homographs, both cognates); *smkt* `מרומים` / *mrym*;
+*mgṯ* `*טבח*` / *ṭbḫ*; *dmm* "wail" `ילל` / *dm* "be still" `דום` (two lemmas).

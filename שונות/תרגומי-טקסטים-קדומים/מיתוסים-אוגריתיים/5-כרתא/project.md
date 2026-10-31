@@ -256,4 +256,247 @@ VI:35–37 = 1.2 I:19 `יצאו לדרך …, לא ישבו`), the day count §6
 - **Brief keywords can be wrong for a famous scene**: the "bridegroom" of Kirta's levy is *trḫ ḥdṯ*, not *ḫtn*, and the
   "eight" of the opening are brothers, not wives – check the brief's lemma before reserving a word for it.
 
+## KTU 1.15
+
+Translator 2 of Round 5 run 3, resumed (2026-10-31). Files: `annotated-1.15.rtl.md`, `translation--intro-1.15.rtl.md`,
+the generated `translation-1.15.rtl.md`.
+
+### Scope
+
+All 136 CUC lines (I 8, II 28, III 31, IV 30, V 29, VI 10); every column lacks its top and bottom. I: the end of
+Pabil's message (Ḥurriya draws the hungry by the hand; Udum will moan like a cow for its calf); II: the gods come to the
+wedding, Baal asks El to bless, El takes cup and goblet and blesses: seven sons, eight; Yaṣṣib who sucks Athirat's milk
+and Anat's breast; III: "Kirta is very high among the Rephaim of the earth, the assembly of the clan of Ditan"; the
+daughters; "the youngest of them I will make firstborn"; the births over seven years; Athirat remembers the vow; IV–VI:
+Ḥurriya's feasts for the "bulls" and "gazelles" of Ḫabur; weeping over Kirta as over a dead man; Yaṣṣib to reign.
+
+### Sources consulted
+
+As for 1.14 (CUC, EUPT `eupt 1.15` with `--tr` after drafting, `renderings.md` §1–§12.6, the earlier tablets, the
+repository's Bible). EUPT's reconstructed extra lines ("(i 1)" …, after I:8) are not entries; they are mentioned at
+I:8.
+
+### Decisions
+
+- **EUPT against CUC** (each `EUPT:` in the פירוק): I:3 *tṯṯkrn w tbun* "she will be delivered and will come" (CUC
+  *ʿbdn* "servants"); I:4 *m!swnh*; II:8 *ṯ[ġ]r* "gatekeeper" (CUC *tʿ ʿšr*); II:13 *[l t]tbʿ*, *l lṭpn*; II:23 *ḥẓ!rk*;
+  III:6 *bnt*; V:1–4 (EUPT reads only traces where KTU³ restores IV:15–18: translated as EUPT reads; the three
+  repeated-line differences `verify` lists are this, justified at V:4).
+- **El's blessing:** *brkm ybrk* `בָּרֵךְ יְבָרֵךְ` (Gen 22:17); *mrr* `*אימץ*` (§12.4); *ṯmn* D `*תְּשַׁמֵּן*` ("make eight",
+  by analogy with *ṯlṯ* D `שִׁלֵּשׁ`); *ynq ḥlb* `יונק חלב`, *mṣṣ ṯd* `מוצץ שַׁד` (Isa 60:16, 66:11); *mšnqt* `מינקת`
+  (Gen 24:59); *rm* `רם`; *rpi arṣ* `רפאי הארץ`; *qbṣ* `קיבוץ`; *dtn* `דִּתָּן` (a name; Num 16:1 `דָּתָן` only in a note);
+  *pġt* `רִיבָה` (the common noun; Aqhat's name `פּוּגַת`); ***ṣġrthn abkrn* `הצעירה שבהן – אֲבַכְּרֶנָּה!`**; *atw* `אָתָה`;
+  *ahl* `אוהל` // *mšknt* `משכן` (Num 24:5); *dr il* `דּוֹר אֵל`.
+- **The vow remembered:** *tdr* (Gp of *ndr*) `נֻדְּרוּ`; *ḫss* "remember" `זכר` (the root of Ḫasīs); *ṯny* `שנה` ("did he
+  change / repeat his vow"); ***apr* `אָפֵר`** (*prr*, Num 30:9 `וְהֵפֵר אֶת נִדְרָהּ`).
+- **The opening:** *rġb* `רעב`, *mẓma* `צמא`, *mṯk* `*מושכת*` (the cognate of משך); *ṯkr* Š `*תְּסֻכַּר*` (Isa 19:4);
+  *zġy* `*הָמָה*`; *nḥ* `נָהָה`; *arḫ* `פרה`, *ʿgl* `עגל`, *bn ḫpṯ* `בני *החופש*`.
+- **The feasts:** *ṭbḫ* `טבח`; *šmn mri* `שמני מריאים`; *rḥbt* `קנקני` (1.4 VI:53); *ṣḥ* "invite" `צווח`; *ṯr* / *ẓby*
+  `שוורים` / `צביים` (titles of the nobles); *ḫbr rbt / ṯrrt* `חֲבוּר הרבה / הנשגבת` (Kirta's town, as Udum's epithets);
+  *ḫm mr* `ביתן המור`; *qdm* `קדם`; *ṣʿ* `קערה` (1.3); *ḥrb* `חרב`; *št* `שָׁתָה` (`שָׂם`, II:9); *adn* `אדון` / *bʿl* `בעל`
+  (IV:28 / VI:5); *rgm ṯrm* `מִלַּת שוורים` (the bulls' cry; §4.2 *rgm* `מִלָּה`); *qbr* `קבר`; *šrk* `*נצמד*`; *ʿrb špš* `בוא
+  שַׁפְּשׁ`; *ṣbu* (II) `צאת` (DULAT "setting", EUPT "rising"); *bḫr* `בחור`; *anšt* `אֲנוּשָׁה` (Jer 15:18).
+
+### Open decisions for the user
+
+1. II:24 *tṯtmnm* `*תְּשַׁמֵּן*` (a coined verb "make eight") or a paraphrase?
+2. III:7–12 *pġt* `ריבה` (common noun) or a title "princess"?
+3. III:29–30: what Athirat threatens to "annul" (*apr idt*: the agreement? the blessing?).
+4. V:13 / VI:7 *rgm ṯrm* `מִלַּת שוורים` (literal) or "the bellowing of bulls" (EUPT)?
+5. V:19 / 1.16 I:36 *ṣbu* (II): sunrise (EUPT) or sunset (DULAT)?
+
+### Progress log
+
+- Drafted in seven sections and saved in one file pass, filled and verified (the column I–VI sections).
+- Pass (a): brackets against CUC and EUPT; V:1–4 follow EUPT (justified). Pass (b): the blessing (III:2–4 = III:13–15),
+  the births (III:5 = III:20–21), the feast (IV:3–9 = IV:14–20, IV:24–27 = V:7–10 = VI:4) compared; §6.5 corrected at
+  V:9, VI:3 (`וענתה`). Pass (c): `translation-1.15.rtl.md` read; one footnote (III:16).
+- `verify 1.15 --strict`: 136 entries, 0 problems, 3 justified repeated-line differences; quotes: 0 problems.
+
+### The text on its own terms
+
+- **The bride praised for charity** (I:1–2): the princess draws the hungry and the thirsty by the hand; her town will
+  moan like a cow for its calf (I:5–7) – a daughter given away is a loss to a city.
+- **The gods at a human wedding** (II:1–20): El, Baal, Yarikh, Kothar, Raḥmay, Resheph – the "assembly of the gods";
+  Baal the intercessor, El the blesser with cup and goblet.
+- **The blessing reverses the ruin** (II:23–24): the numerical climax that counted the dead (1.14 I:8–9) now counts
+  sons: seven, eight.
+- **A king suckled by goddesses** (II:26–28): Yaṣṣib will suck the milk of Athirat and the breast of Anat.
+- **Honour among the dead kings** (III:2–4, 13–15): the blessing promises a place among the Rephaim, the assembly of
+  Ditan – the royal ancestors.
+- **The youngest daughter as firstborn** (III:16): El overturns the order of birth for a daughter.
+- **The forgotten vow** (III:22–30): seven years of births, and then the goddess remembers; illness follows.
+- **Mourning before death** (V:12–23): at the king's own feast the guests weep over him and speak of his son's reign.
+
+### Key parallels
+
+- [cognate] **Isa 60:16** `וְיָנַקְתְּ חֲלֵב גּוֹיִם וְשֹׁד מְלָכִים תִּינָקִי` – II:26–27 (*ynq ḥlb* // *mṣṣ ṯd*).
+- [divergence] **Deut 21:16** `לֹא יוּכַל לְבַכֵּר` – III:16 (*abkrn*, the same verb, by El and for a daughter); Gen 48:14.
+- [cognate] **Isa 14:9, 26:19** `רְפָאִים` – III:3, 14 (*rpi arṣ*).
+- [cognate] **Num 30:9** `וְהֵפֵר אֶת נִדְרָהּ`; **Deut 23:22**, **Eccl 5:3** – III:25–30 (the vow, *ndr*, *prr*).
+- [cognate] **Gen 22:17** `כִּי בָרֵךְ אֲבָרֶכְךָ` – II:18 (*brkm ybrk*); **Ruth 4:11** – II:21–22 (the wife coming into the
+  house).
+- [cognate] **Num 24:5** `אֹהָלֶיךָ … מִשְׁכְּנֹתֶיךָ` – III:18–19 (*ahl* // *mšknt*).
+
+### Lines shared with other tablets
+
+1.14 VI:16 (I:8), 1.14 IV:40–42 (II:21–23: El blesses in the words of Kirta's vow), 1.14 III:20–21 (I:4), 1.14 V:13–14
+(IV:2), 1.17 I:23–24 (*brk* // *mrr*), 1.4 VI:53 (*rḥbt yn*), §6.1, §6.5, §6.6.
+
+### Proposals for the shared renderings
+
+- **Names:** `דִּתָּן` (*dtn*), `נַנַּי` (1.16), `אִלְשׁ` (1.16), `חֲבוּר` (*ḫbr*, Kirta's town, with `בֵּית־חֲבוּר`), `רַחְמַי`
+  (§10, confirmed), `יַצֻּב`, `תִתְמָנִת`, `אִלְחוּ`, `שַׁעֲתִקַת` (§12.1, confirmed).
+- **New one-lemma renderings:** *rġb* `רָעֵב`; *mẓma* `צָמֵא`; *mṯk* `*מָשַׁךְ*`; *ṯkr* Š `*סֻכַּר*`; *nḥ* `נָהָה`; *zġy*
+  `*הָמָה*` (beside *zġt* `נביחה`: a split by sense); *ṯġr* `שׁוֹעֵר` (§10); *ṯmn* D `*שִׁמֵּן*`; *ynq* `יָנַק`; *mṣṣ*
+  `מָצַץ`; *mšnqt* `מֵינֶקֶת`; *rm* `רָם`; *qbṣ* `קִבּוּץ`; *pġt* `רִיבָה`; *bkr* D `בִּכֵּר`; *atw* `אָתָה`; *mšknt* `מִשְׁכָּן`;
+  *ḫss* "remember" `זָכַר`; *prr* `הֵפֵר`; *mri* `מְרִיא`; *ḫm* `בִּיתָן`; *qdm* `קִדֵּם`; *qbr* `קָבַר`; *šrk* `*נִצְמַד*`; *bḫr*
+  `בָּחוּר`; *anšt* `אֲנוּשָׁה`; *ṣbu* (II) `צֵאת`.
+
+### Lessons for the guidelines
+
+- **An edition that adds reconstructed lines** (EUPT's "(i 1)" …) must not shift the entries: keep the base text's
+  labels and bring the reconstruction into the notes.
+
+## KTU 1.16
+
+Translator 2 of Round 5 run 3, resumed (2026-10-31). Files: `annotated-1.16.rtl.md`, `translation--intro-1.16.rtl.md`,
+the generated `translation-1.16.rtl.md`.
+
+### Scope
+
+All 267 CUC lines (I 62, II 60, III 17, IV 17, V 52, VI 59); II:1–16, II:52–60, V:1–9 and V:30–52 are fragments
+(II:59–60 have no EUPT line: CUC's traces). I: Ilḥu's lament ("do gods die?"), Kirta sends him to fetch Thitmanit
+under the pretext of a feast; II: Thitmanit's lament (the same words); III: the drought – Baal's rain withheld, bread,
+wine and oil used up; IV: El summons the heralds Ilš and his wife; V: El asks seven times "who among the gods will cast
+out the illness?", no god answers, El fashions Šaʿtiqat from clay; VI: Šaʿtiqat heals the king ("Death is shattered"),
+Kirta eats and sits on his throne; Yaṣṣib's challenge ("you do not judge the widow's case"); the father's curse; the
+colophon of Ilimilku.
+
+### Sources consulted
+
+As for 1.14 and 1.15; the earlier tablets for the copied lines (1.2 I:7–9 the curse, 1.6 V:6 the throne, 1.6 VI:54 the
+colophon, 1.4 IV:58 El's answer, 1.17 V:7–8 the widow's case, 1.5 VI:5 *ksm mhyt*, 1.1 IV:2 *gm ṣḥ*).
+
+### Decisions
+
+- **EUPT against CUC** (≈ 25, each marked): I:12 *yʿrb!*; I:14 *n!šmḫ*; I:17 *ap!*; I:23 *yḥ*; **I:31 *[ġ]zr* "hero" (CUC
+  *aḫr*)**; I:42, I:54 (no "jar"); **I:56–60 EUPT's restorations *[mrṣ]*, *[hm dw]*, *[l mrṣ]*, *[l dw]*** (the question
+  and the denial); II:33 *tṣr*; V:22 *i!n*; V:23 *d!pid*; V:28 *ymll*; VI:1 *dm!*; VI:6 *mt*; VI:13 *šʿtqt* (CUC
+  *šʿtẓt*); VI:14 *la!t*; VI:17 *ṭbḫ*; VI:19 *ḥry*; VI:20 *w⟨y⟩lḥm*; **VI:24 *drkt* without suffix** (`השררה`; the one
+  repeated-line difference with 1.6 V:6, justified); VI:29 *l k[rt]*; VI:57 *qdqdk!*.
+- **The words of illness, one each:** *mrṣ* `חָלָה` / `חֳלִי`; ***dw* `דָּוֶה`** [cognate] (Lev 15:33); ***mdw* `מַדְוֶה`**
+  [cognate] (Deut 7:15, with `חֹלִי`: the pair *mrṣ* // *mdw*); *zbln* `דְּוַי` (1.14; Ps 41:4 `עֶרֶשׂ דְּוָי` at VI:36 –
+  the cognate pair is complete); *anšt* `אֲנוּשָׁה` (1.15 V:27; EUPT "companion" at VI:36 noted). **Revision of 1.14:**
+  *zbl* (III) "one carried" changed from `הַדָּוֶה` to `*הַסָּבוּל*` (1.14 II:45, IV:23; Isa 46:7 `יִסְבְּלֻהוּ`; *zbl* ~
+  Akk. *zabālu* ~ סבל), because `דָּוֶה` is the cognate of *dw*.
+- **The lament:** *ʿtq* `נֶעְתַּק` (the root of Šaʿtiqat); *ḫšt* `*קבורה*`; *ap* "entrance" `בְּאַף` (1.17 V:6);
+  ***mtm* `מְתִים`** (men; `כִּמְתִים תמות` ↔ Ps 82:7); ***u ilm tmtn* `אוֹ אֵלִים ימותו`** (Ps 82:6–7: `אֱלֹהִים` never in a
+  line); *ntn* `קינה`, *bd* `נהי`; *ṣrry* `*פסגות*` (§1.2 *ṣrrt*); *ḥlm* (fortress) `*מצודה*`; *nny* `נַנַּי`; *mknpt*
+  `רחבת־הכנף`; *blmt* `בַּל־מוות` (1.17); *gyl* `גיל`; *šnn* `שִׁנֵּן`; *dmm* "wail" `יִלֵּל` (apart from 1.14's *dm*
+  "be still" `דּוֹם`); *mḫ* `מוח`; *rḥmt* `רחמנית`; *smkt* `מרומים`; *tgh* `נוגה`; *ʿšr(t)* `משתה`; *tp* `תוף` (Ex
+  15:20); *šyr* `שיר`; *mgn* (I) `*מִגֵּן*`; *mrḥ* `רומח`, *grgr* `כידון`, *trẓẓ* `*מרוצה*`, *tl* `*תְּלִי*`.
+- **Thitmanit:** *mn* `כמה`; *mndʿ* `מי יודע` (Joel 2:14); *ṣrr* `צרח`; *rwm* `הרים`; *tnqt* (I) `זעקה`; *nky* `מוכה`;
+  *škllt* `*כחוש*`; *ʿry* `ערום` (Gen 2:25 only as a note).
+- **The drought:** *twr* `תּוּר` (Num 13:2); *ksm mhyt* `*פֶּלַח* *נְאוֹת*` (1.5 VI:5); ***ʿly* `העליון`** (Baal's epithet;
+  1 Sam 2:10 `עָלָו בַּשָּׁמַיִם יַרְעֵם`; Gen 14:18's `אֵל עֶלְיוֹן` as a [divergence]); *nrt* (II) `נִיר` (a Hebrew homograph
+  of *nyr* `נִיר`, noted); *smm* `סַמִּים`; *tlm* `תלם`; *ʿṭrṭrt* `עטרה`; *ʿbd dgn* `עובדי דָּגָן` (the god and the grain);
+  *kly* `כָּלָה`; *ʿdn* (bin) `*טנא*`; *ḥmt* (II) `חֵמֶת`.
+- **El and Šaʿtiqat:** *ngr* `כָּרוֹז`, *ilš* `אִלְשׁ`; *ḥkm* `חכם`; *bnwn* `בניין`; the seven questions with the number
+  verbs `ישנה, ישלש … ירבע, יחמש … *יְשַׁשֵּׁשׁ*, יְשַׁבֵּעַ`; *ydy* (I) `השליך` (1.17), *grš* `גירש`, *ydt* `משליכת`; *ḥrš*
+  Gt `אֶתְחָרֵשׁ` (craft and spell, Isa 3:3); *škn* Š `הִשְׁכִּין` (not `עשה` / `יצר`); *rḥt* `*רחת*`; *mll* `*מלל*`; *rṯ* `רפש`
+  (1.17); ***ṭiṭ* `טיט`, *qrṣ* `קָרַץ`** (Job 33:6; Gen 2:7's `יָצַר` / `עָפָר` absent and stated as the finding).
+- **The healing:** *mt* `מָוֶת`; *dm* `הֲרֵי` (1.3 III:20); *ḫtt* `חַת` (§10); *lʾy* `הֶלְאָה` (1.14 I:33); *gly* `נגלה`;
+  *nṣr* `מתייפחת`; *dʾy* `דאה`; *šrr* `שׁוֹרֵר`; *ḫṭ* `שרביט`; *pṭr* `פטר`; ***dʿt* `זֵעָה`** (Gen 3:19, [cognate] word,
+  [divergence] context); *npš* (throat) `נפש`; *brlt* `תאווה`; *ṯrm* `חתך`; *pqd* `פקד`; *mgṯ* `*טֶבַח*`; *ʿd* (III)
+  `*אולם*`.
+- **Yaṣṣib:** *ysr* `ייסר` (Ps 16:7; Deut 21:18), *ggn* `*בטן*`; *ištmʿ* `השמע`; *qġ* `הטה`; *ġz* `שודד`; *dbr* `הדביר` (Ps
+  18:48); *ṯwy* `*עצר*`; *šql* (Š *qyl*) `הִפִּיל`; *ġlt* `רפיון`; ***dn dn almnt / ṯpṭ ṯpṭ* copied from 1.17 V:7–8
+  (`דן דין אלמנה`, `שָׁפַט שֶׁפֶט`), in the negative and 2nd person**; *qṣr npš* `קצר־הנפש`; *dl* `דל`; *ṯšm* `*עושק*`;
+  *ksl* `כסל`; *šlḥm* `הסעיד`.
+- **The curse:** copied from 1.2 I:7–9 (`ישבור … ראשך, עַתְּתַרְת־שֵׁם־בַּעַל … קדקדך; תיפול בגבול`); *ḥpn* `*חופן*`;
+  *w tʿn* = *ʿnw* `ותֵעָנֶה` with `[סטייה מן הנוסחה]`. The colophon: `סופר: אִלִימִלְכּוּ, השׁוֹעַ.`
+
+### Open decisions for the user
+
+1. I:3 / I:17 *ik mtm* / *k mtm*: "how – men" / "like men" (`מְתִים`), or "the dead" (`מֵתִים`)?
+2. *ḫšt* `*קבורה*` (DULAT "mausoleum").
+3. III:6 *ʿly* `העליון` (the cognate epithet, given to Baal) or a neutral "the Exalted"?
+4. VI:6–7 *ʿrm tdu mt*: "she flew over the towns – death" (literal) or "she chased Death from the towns" (EUPT)?
+5. VI:36 *anšt*: "illness" (DULAT; `אנושה`) or "companion" (EUPT)?
+6. *zbl* (III) in 1.14 revised to `*הַסָּבוּל*` – accept?
+
+### Progress log
+
+- Drafted in twelve sections, saved in two batches (I–II; III–VI), each filled and verified.
+- Pass (a): brackets and EUPT readings (above). Pass (b): Ilḥu's and Thitmanit's laments (I:2–23 = II:35–49), the
+  sickness question (I:56–60, II:19–23), El's seven questions (V:10–22), Yaṣṣib's speech (VI:27–38 = VI:41–53), the
+  curse (= 1.2 I:7–9), the throne line (= 1.6 V:6) compared; VI:55 Horon vocalized; III:6 / III:8 difference justified.
+  Pass (c): `translation-1.16.rtl.md` read; four footnotes (I:22, V:29, VI:34, VI:58).
+- `verify 1.16 --strict`: 267 entries, 0 problems, 2 justified repeated-line differences; quotes: 0 problems (all three
+  tablets and intros rechecked; 1.14 rebuilt after the *zbl* revision, 0 problems).
+
+### The text on its own terms
+
+- **A son's theology** (I:2–23): "we rejoiced in your immortality … or do gods die?" – the king as son of El is
+  expected not to die; his illness is a crisis of belief, voiced by his children.
+- **The household as dogs** (I:2): without the father the children are strays at the tomb's entrance.
+- **Mountains weep for a king** (I:6–9): Ṣapon and Nannay, Baal's mountains, are summoned to mourn.
+- **The kind lie** (I:31–62): the father protects his tender daughter by a pretext of a feast; the brother denies the
+  illness at the gate; her jar falls (KTU³).
+- **Drought follows the king's sickness** (III:2–16): the rain of Baal fails, bread, wine and oil run out – king and land
+  share one health.
+- **The silence of the gods** (V:10–22): seven times El asks; none answers; the old god makes the cure himself.
+- **Healing made of clay** (V:26–29): El pinches clay like a potter; the healer is a creature, not a god; her name is
+  "she who removes".
+- **Healing as eating** (VI:10–21): washed of sweat, the king's throat is opened, and he eats – recovery is appetite.
+- **The just king** (VI:33–50): kingship is judging the widow, the wretched, the poor, feeding the orphan; a sick king
+  who cannot do this has lost the throne – in his son's eyes.
+- **The father's curse** (VI:54–58): the king curses his son with the gods' own curse (Baal's on Yam).
+
+### Key parallels
+
+- [divergence] **Ps 82:6–7** `אֲנִי-אָמַרְתִּי אֱלֹהִים אַתֶּם … אָכֵן כְּאָדָם תְּמוּתוּן` – I:17–23, II:40–44: in the psalm the
+  gods are sentenced to die like men; in Kirta the son asks whether a son of El, or the gods, can die.
+- [cognate] **Job 33:6** `מֵחֹמֶר קֹרַצְתִּי גַם-אָנִי` – V:29 (*qrṣ*, *ṭiṭ*); [divergence] **Gen 2:7** (`יָצַר`, `עָפָר` absent).
+- [cognate] **Jer 5:28** `דִּין לֹא דָנוּ דִּין יָתוֹם`; **Isa 1:23**, **10:2**; **Ps 82:3** – VI:33–34, 45–50.
+- [equivalent] **2 Sam 15:4** (Absalom at the gate) – VI:37; [divergence] **Deut 21:18** (the rebellious son, *ysr*) –
+  VI:26.
+- [equivalent] **Gen 9:25**, **49:4** – the father's curse, VI:54–58.
+- [cognate] **Deut 7:15** `חֹלִי … מַדְוֵי` – *mrṣ* // *mdw*; **Ps 41:4** `עֶרֶשׂ דְּוָי` – VI:36 (*ʿrš zbln*).
+- [cognate] **Gen 3:19** `בְּזֵעַת אַפֶּיךָ` – VI:10 (*dʿt*), the word, not the motif.
+- [equivalent] **Joel 1:10–11**, **1 Kgs 17:12** – the drought, III:12–16; [cognate] **Ex 15:20** (the drum in the
+  sister's hand) – I:41.
+
+### Lines shared with other tablets
+
+1.14 I:1 (I:1), 1.14 VI:16 (I:24, VI:54), 1.2 I:7–9 (VI:54–57), 1.6 V:6 (VI:24, *drkt* without suffix per EUPT), 1.6
+VI:54 (VI:59), 1.4 IV:58 (IV:9, V:23), 1.17 V:7–8 (VI:33–34), 1.5 VI:5 (III:4), 1.1 IV:2 (IV:16), 1.2 I:25 (V:25).
+
+### Proposals for the shared renderings
+
+- **Names:** `אִלְחוּ`, `תִתְמָנִת`, `שַׁעֲתִקַת` (confirmed); new `נַנַּי`, `אִלְשׁ`.
+- **Illness (fixed for the corpus):** *mrṣ* `חָלָה` / `חֳלִי`; *dw* `דָּוֶה`; *mdw* `מַדְוֶה`; *zbln* `דְּוַי`; *anšt* `אֲנוּשָׁה`;
+  ***zbl* (III) `*הַסָּבוּל*` (revising §12.6's `הַדָּוֶה`)**.
+- **New one-lemma renderings:** *ʿtq* `נֶעְתַּק`, *ḫšt* `*קְבוּרָה*`, *ntn* `קִינָה`, *bd* (I) `נְהִי`, *ḥlm* (fortress)
+  `*מְצוּדָה*`, *šnn* `שִׁנֵּן`, *blmt* `בַּל־מָוֶת`, *gyl* `גִּיל`, *dmm* (wail) `יִלֵּל`, *mḫ* `מֹחַ`, *ʿšr(t)* `מִשְׁתֶּה`, *tp*
+  `תֹּף`, *mrḥ* `רֹמַח`, *grgr* `כִּידוֹן`, *ṣrr* `צָרַח`, *tnqt* (I) `זְעָקָה`, *mndʿ* `מִי יוֹדֵעַ`, *twr* `תּוּר`, *ʿly* `הָעֶלְיוֹן`,
+  *nrt* (II) `נִיר`, *smm* `סַמִּים`, *ʿṭrṭrt* `עֲטָרָה`, *ḥmt* (II) `חֵמֶת`, *ngr* `כָּרוֹז`, *ḥkm* `חָכַם`, *bnwn* `בִּנְיָן`,
+  *ḥrš* Gt `הִתְחָרֵשׁ`, *škn* Š `הִשְׁכִּין`, *ṭiṭ* `טִיט`, *qrṣ* `קָרַץ`, *dʿt* `זֵעָה`, *pṭr* `פָּטַר`, *brlt* `תַּאֲוָה`, *ṯrm*
+  `חָתַךְ`, *ysr* `יִסֵּר`, *qġ* `הִטָּה`, *ġz* `שׁוֹדֵד`, *dbr* `הִדְבִּיר`, *ġlt* `רִפְיוֹן`, *qṣr npš* `קְצַר־נֶפֶשׁ`, *dl* `דַּל`,
+  *ksl* `כֶּסֶל`, *ʿd* (III) `*אוּלָם*`.
+- **Collisions:** (1) *zbl* (III) / *dw*: settled by the revision above. (2) *nrt* (II) and *nyr* both `נִיר` (a Hebrew
+  homograph; both cognates; accepted). (3) *smkt* `מרומים` beside *mrym* `מרומי` (§1.2): a split by root, noted. (4)
+  *mgṯ* `*טבח*` shares the root of *ṭbḫ* `טבח` (Gen 43:16 pairs them): accepted. (5) *dmm* "wail" `ילל` vs 1.14's *dm*
+  "be still" `דום` (two lemmas, EUPT/DULAT). (6) *anšt* in VI:36: DULAT "illness" kept; EUPT's "companion" noted.
+- **Gate note:** 1.16 V:31–32 have *tnn* / *ytnnh* as a verb form (not "dragon"): translated `…`; the `תנין` gate would
+  have been licensed by the letters – a reminder that licences by string can license a false friend.
+
+### Lessons for the guidelines
+
+- **A cluster of near-synonyms needs a fixed table before the tablet** (Kirta's five words for illness): fix the
+  cognate for each one first (*dw* דָּוֶה, *mdw* מַדְוֶה) and move the by-sense renderings of earlier tablets.
+- **A licence by letters can admit a false friend** (*tnn* inside a verb form): read the line before trusting a
+  licensed gate.
+
 ## Parallels index
