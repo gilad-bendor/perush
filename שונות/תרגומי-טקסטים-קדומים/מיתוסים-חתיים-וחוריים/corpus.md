@@ -39,4 +39,8 @@ IL → HE (the serpents; the dossier) → KU → UL (the Kumarbi cycle: kingship
 → SR → ZA, AP, EL (the tales) → TE.
 
 ## Status
-See each `project.md`. The parallels index: `parallels-index.md`.
+**First draft complete (2026-10-31, Round 5 run 2):** all nine texts, 3,164 lines – drafted by four translators, three
+review passes (fidelity, consistency, Hebrew), intros, built clean translations (`translation.rtl.md` per project), print
+stubs in `../הדפסה/מיתוסים-חתיים-וחוריים/`, the parallels index (216 rows, key findings at its top). Not yet reviewed by
+the user. Pending for the lead: Ḫedammu into the fifth-day dossier; the dossier revisions of `renderings.md` §H8; the
+splits of `renderings.md` M3. Details per text: each `project.md`.
