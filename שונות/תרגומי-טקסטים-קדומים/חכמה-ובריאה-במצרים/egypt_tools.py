@@ -60,6 +60,14 @@ MT_DE = os.path.join(ROOT, "sources", "El-Hawary-2010--Wortschoepfung--OBO-243",
 P1 = "1-מוסר-אמנמופה"
 P2 = "2-בריאה-במצרים"
 P3 = "3-ספר-הפרה-השמימית"
+# the tales and Book of the Dead 125 (Round 5 run 6, 2026-10-31)
+P4 = "4-מעשה-בשני-האחים"
+P5 = "5-פפירוס-וסטקר"
+P6 = "6-ספר-המתים-125"
+P7 = "7-סינוהה"
+P8 = "8-המלח-הנטרף"
+PROJECTS = (P1, P2, P3, P4, P5, P6, P7, P8)
+TALES = {"TB", "WE", "BD", "SI", "SS"}   # the gates scoped to the tales (RESERVED entries with a key set)
 # KEY: (project, Hebrew title, kind, file, selection)
 UNITS = {
     "AM": (P1, "מוּסַר אֲמֶנֶמוֹפֶּה", "aed", "Amenemope--pBM-EA-10474/5JO44VJZERAB3HQUHMFSMNXH6I.xml", None),
@@ -70,9 +78,16 @@ UNITS = {
     "PT600": (P2, "טקסט הפירמידות 600 (פֶּפִּי השני)", "aed", "PT-600--East-wall/NHY7Q7ERPNEWTK5BWG7KELURNU.xml", None),
     "MT": (P2, "התאולוגיה של מֹף (אבן שַׁבַּכָּה)", "tsv", None, None),
     "HC": (P3, "ספר הפרה השמימית (קבר סֵתִי הראשון)", "aed", "Heavenly-Cow--KV17-Seti-I/WHEOIX5P5ZAVVFU4BGO6OWASV4.xml", None),
+    "TB": (P4, "מעשה בשני האחים (פפירוס ד׳אורביני)", "aed", "Two-Brothers--pDOrbiney-BM-EA-10183/C6HNRC4K7FAYBHNDS3LV24EANI.xml", None),
+    "WE": (P5, "סיפורי פפירוס וֶסְטְקָר", "aed", "Westcar--pBerlin-P-3033/J4EXGHLCL5DR7JHSPDWTVEKMDY.xml", None),
+    "BD": (P6, "ספר המתים, פרק 125 (פפירוס נוּ)", "aed", "BD-125--pNu-BM-EA-10477/FGGZPRDYGBHV3AFOH5EXBPKDQY.xml", None),
+    "SI": (P7, "סיפור סִינוּהֶה", "aed-SI", ("Sinuhe--pBerlin-P-10499-R/QZCOZWR7YVAGNLPTMZIMHL6TYQ.xml",
+                                           "Sinuhe--pBerlin-P-3022-B/JIPPXMXOTNCQDIKJIQVYWMKOWU.xml"), (1, 23)),
+    "SS": (P8, "סיפור המלח הנטרף (פפירוס פטרבורג 1115)", "aed", "Shipwrecked-Sailor--pPetersburg-1115/QUFWZTEPLRE4NHKCPAJXGSAOSQ.xml", None),
 }
 PROJECT_TITLES = {P1: "מוסר אמנמופה", P2: "בריאת העולם במצרים: מריכרע, התאולוגיה של מֹף, טקסטי הפירמידות",
-                  P3: "ספר הפרה השמימית"}
+                  P3: "ספר הפרה השמימית", P4: "מעשה בשני האחים", P5: "סיפורי פפירוס וסטקר",
+                  P6: "ספר המתים, פרק 125: הווידוי השלילי", P7: "סיפור סינוהה", P8: "סיפור המלח הנטרף"}
 # the variant witnesses a translator consults (printed by `data KEY --wit`)
 WITNESSES = {
     "AM": ["Amenemope--tLouvre-E-17173/J54RCGRIM5CYLB5T27RUS5G7D4.xml", "Amenemope--oKairo-SR-1840/WWBWAINUHFAXBCPM4JT7CR4EZA.xml",
@@ -82,7 +97,12 @@ WITNESSES = {
     "HC": ["Heavenly-Cow--Tutankhamun-shrine/62AD3D3IY5EMTHDDJZ5UV42RWM.xml", "Heavenly-Cow--KV9-Ramses-VI/ENW4HOGRDVHFFB4UNYYQZQ4ZKY.xml"],
     "PT571": ["PT-571--West-wall-south/PFW6EIFCGRBQ5KWI44CEVLMVAI.xml"],
     "PT486": ["PT-486--East-wall/43NPRIN3UJGCJN7UOHQKGNYJLA.xml"],
+    "BD": ["BD-125--pJuja-CG-51189/ZJ45MN6I2BEBXIOF4E2OH4PK64.xml", "BD-125--pMaiherperi-CG-24095/S4KP2OGKXFCPPK7Q5MHFEE6R7A.xml"],
+    "SI": ["Sinuhe--oAshmolean-1945.40-AOS/RP2F6BGNDBAARDBNDHGFSFPIEM.xml"],
 }
+# pWestcar 2,21–4,7: the fifth-day dossier's excerpt (WC). Its `>` lines are the dossier's, kept identical by verify
+# (the dossier is not edited from here: a revision is recorded in WE's entry as `[סטייה מן התיק: <reason>]`, for the lead).
+DOSSIER_WC = os.path.join(ROOT, "מיתוסים-אוגריתיים", "3-תיק-היום-החמישי", "annotated-WC.rtl.md")
 NIQ = "֑-ֽֿ-ׇ"
 
 
@@ -126,6 +146,16 @@ def rows(key):
                 continue
             c = l.rstrip("\n").split("\t")
             out.append({"label": c[0].strip(), "text": c[1].strip(), "words": [], "sents": [], "orig": c[0].strip()})
+    elif kind == "aed-SI":
+        # Sinuhe: R 1–23 (pBerlin 10499; the beginning, lost in B), then B 1–311 (pBerlin 3022). B's Amherst
+        # fragments (labels Am., An., …: the lost start of B, parallel to R) and its '?' line are left to the apparatus.
+        for pref, path in (("R", f[0]), ("B", f[1])):
+            for ln in aed2md.parse(os.path.join(AED, path)):
+                lab = ln["label"].strip()
+                if not re.match(r"^\d+$", lab) or (pref == "R" and not (sel[0] <= int(lab) <= sel[1])):
+                    continue
+                out.append({"label": pref + lab, "text": " ".join(w["surf"] for w in ln["words"]), "words": ln["words"],
+                            "sents": ln["sents"], "orig": ln["label"]})
     else:
         lines = aed2md.parse(os.path.join(AED, f))
         for i, ln in enumerate(lines):
@@ -136,6 +166,8 @@ def rows(key):
                 lab = f"E{i + 1}"
             elif key.startswith("PT"):
                 lab = _pt_label(lab)
+            elif key in TALES:
+                lab = re.sub(r"^rto\s+", "", lab.strip()).replace(" ", "")
             words = _alt_gaps(ln["words"]) if key == "AM" else ln["words"]
             out.append({"label": lab, "text": " ".join(w["surf"] for w in words), "words": words,
                         "sents": ln["sents"], "orig": ln["label"]})
@@ -322,6 +354,40 @@ RESERVED = [
     (W + alt("משפט", "המשפט", "משפטו", "משפטי", "משפטים", "משפטך") + E, None, "מִשְׁפָּט never: qnb.t = בֵּית־דִּין, wpi̯ = שָׁפַט? (renderings §4.1)"),
     (W + alt("ברית", "הברית", "בריתי", "בריתו") + E, None, "בְּרִית never"),
     (W + alt("עולם", "עולמים", "לעולם", "העולם") + E, None, "עוֹלָם never: nḥḥ = נֶצַח, ḏ.t = עַד (the cross-corpus rule; Prov 22:28 `גְּבוּל עוֹלָם` in the apparatus)"),
+    # --- the tales and BD 125 (renderings §11; Round 5 run 6): scoped to TALES (the 4th element) ---
+    # Gen 39 (the Two Brothers): the words of Joseph and Potiphar's wife only for their Egyptian counterparts
+    (W + alt("שכב", "שכבה", "שכבי", "שכבו", "ישכב", "תשכב", "נשכב", "אשכב", "לשכב", "שוכב", "שוכבת", "שכבנו", "שכבתי", "משכב", "משכבה", "משכבו") + E,
+     r"sḏr|nk\b|nk\.|nk=|nkk|nkj|nki̯|ẖdr|ḫdr|wnm-ẖdr|sḏr\.t", "the root שכב only for sḏr 'lie, sleep' / nk 'copulate' [equivalent Gen 39:7, 12, 14 `שִׁכְבָה עִמִּי`]", TALES),
+    (W + alt("בגד", "בגדו", "בגדים", "בגדיו", "הבגד", "הבגדים", "בגדי", "בגדה", "בגדיה") + E,
+     r"ḥbs|dꜣj|mnḫ|šs\b|šsr|ḥꜣ,tj|sḏꜣ|dꜣjw|jfd|sšd|ḥbs\.w", "בֶּגֶד only for a garment word (ḥbs, dꜣjw, mnḫ.t …) [Gen 39:12–18: the garment left in her hand]", TALES),
+    (W + alt("צחק", "לצחק", "צחוק", "מצחק", "צחקה", "צחקו", "ויצחק", "יצחק", "ותצחק") + E, r"sbṯ|zbṯ|sbt", "the root צחק only for sbṯ 'laugh' (Gen 39:14, 17 `לְצַחֶק בָּנוּ`; Gen 18:12–15)", TALES),
+    (W + alt("מאן", "מיאן", "וימאן", "ימאן", "מאנה", "מאנו", "מסרב", "סירב", "סרב", "סירבה") + E, None, "the refusal verbs never (Gen 39:8 `וַיְמָאֵן`): render the Egyptian by its own sense", TALES),
+    (W + alt("חרה", "ויחר", "יחר", "חרון", "חרי", "חרונו", "חרתה") + E, None, "the root חרה never (Gen 39:19 `וַיִּחַר אַפּוֹ`): the Egyptian anger words by their own sense (the leopard simile literal)", TALES),
+    (W + alt("סהר", "הסהר", "בסהר") + E, None, "`בֵּית הַסֹּהַר` never (Gen 39:20)", TALES),
+    (W + alt("עברי", "העברי", "עבריה", "עברים", "העברים", "עבריות") + E, None, "עִבְרִי never", TALES),
+    # Ex 14 (Westcar's parted lake)
+    (W + alt("בקע", "ויבקע", "נבקע", "נבקעו", "ויבקעו", "בוקע", "בקעה", "בקעו", "מבוקע") + E, None, "the root בקע never (Ex 14:16, 21): Westcar's verb by its own sense", TALES),
+    (W + alt("חומה", "חומות", "החומה", "כחומה") + E, r"jnb|sbt[y]?|sbtj|jnb\.w", "חוֹמָה only for jnb / sbtj 'wall' (Ex 14:22, 29 `וְהַמַּיִם לָהֶם חֹמָה`)", TALES),
+    (W + alt("נד", "כנד", "כמו נד") + E, None, "נֵד never (Ex 15:8, Ps 78:13)", TALES),
+    (W + alt("יבשה", "היבשה", "ביבשה", "חרבה", "החרבה", "בחרבה", "יבשת") + E, r"šwi̯|šwj|šw\.w|šwy|wšr", "יַבָּשָׁה / חָרָבָה only for šwi̯ 'dry' / wšr 'dry up' (Ex 14:21–22 `לֶחָרָבָה`, `בַּיַּבָּשָׁה`)", TALES),
+    (W + alt("גזר", "גזרים", "לגזרים") + E, None, "the root גזר never in a tale (Ps 136:13 `לְגֹזֵר יַם סוּף לִגְזָרִים`)", TALES),
+    # Deut 26:13–14, the Decalogue, Ps 15, Ps 24 (BD 125)
+    (W + alt("רצח", "רצחתי", "תרצח", "ירצח", "רוצח", "רצחו") + E, None, "the root רצח never (Ex 20:13): smꜣ = הָרַג", TALES),
+    (W + alt("נאף", "ניאף", "ניאפתי", "תנאף", "נואף", "נואפת", "נאפה", "ניאפה") + E, None, "the root נאף never (Ex 20:14): nk ḥm.t z = שָׁכַב עִם אֵשֶׁת אִישׁ (by sense)", TALES),
+    (W + alt("חמד", "חמדתי", "תחמד", "חומד", "חמדה", "יחמד") + E, None, "the root חמד never (Ex 20:17)", TALES),
+    (W + alt("נקי", "נקיה", "נקיים", "נקיתי", "ונקי", "נקיון", "ניקיון") + E, None, "נָקִי never (Ps 24:4 `נְקִי כַפַּיִם`; the wisdom corpus's reservation): wꜥb = טָהוֹר", TALES),
+    (W + alt("בר", "ובר") + r"\s+" + alt("לבב", "לב") + E, None, "`בַּר לֵבָב` never (Ps 24:4)", TALES),
+    (W + alt("נשך", "בנשך", "הנשך", "תרבית") + E, None, "נֶשֶׁךְ / תַּרְבִּית never (Ps 15:5; Lev 25:36–37)", TALES),
+    (W + alt("אוני", "באוני", "בעוני") + E, None, "`בְאֹנִי` never (Deut 26:14)", TALES),
+    (W + alt("בער", "ביער", "בערתי", "ביערתי", "תבער", "יבער", "בוער", "בוערת", "בערה", "הבערה") + E, None, "the root בער never (Deut 26:13–14 `בִּעַרְתִּי`): the fire / removal verbs by their own sense", TALES),
+    # Deut 8:8 (Sinuhe's land of Yaa): the seven species only for their Egyptian words
+    (W + alt("תאנה", "תאנים", "התאנים", "תאנתו", "תאני") + E, r"dꜣb|dꜣb\.w|nḥ,t|nh,t", "תְּאֵנָה only for dꜣb 'fig' [equivalent Deut 8:8]", TALES),
+    (W + alt("גפן", "הגפן", "גפנים", "ענבים", "הענבים", "ענב", "ענבי") + E, r"jꜣrr|jꜣrr,t|jrp", "גֶּפֶן / עֲנָבִים only for jꜣrr.t 'grapes, vine' [equivalent Deut 8:8]", TALES),
+    (W + alt("דבש", "הדבש", "דבשה", "דבשו") + E, r"bj,t|bj\.t|bj\b|bjt", "דְּבַשׁ only for bj.t 'honey' [equivalent Deut 8:8; Ex 3:8]", TALES),
+    (W + alt("זית", "זיתים", "הזית", "הזיתים", "זיתי") + E, r"ḏd,t|ḏd\.t|ḏdt|bꜣq|bꜣq,t", "זַיִת only for ḏd.t / bꜣq 'olive' [equivalent Deut 8:8]", TALES),
+    (W + alt("זבת", "זבה") + E, None, "`זָבַת חָלָב וּדְבָשׁ` never (Ex 3:8)", TALES),
+    # the serpent (the dossier rule: `נָחָשׁ` the comparison word for every culture's serpent)
+    (W + alt("נחש", "נחשים", "הנחש", "הנחשים", "נחשי", "נחשה") + E, r"ḥfꜣ|ḥfꜣw|ḥfꜣ,w|ꜥꜣpp|ḏdf|nḥꜣ|nꜣw|ꜥpp|sꜣ-tꜣ|ḏd\b|ḏd,t|ꜥrꜥr", "נָחָשׁ only for a serpent word (ḥfꜣw …) [equivalent Gen 3:1, Ex 7:9–12]", TALES),
 ]
 
 V = NIQ
@@ -393,7 +459,10 @@ def check_line(key, lab, heb, body, fixed, out):
     bad = 0
     plain = strip_marks(heb)
     src = plain_src((row(key, lab) or {}).get("text", ""))
-    for rx, allow, why in RESERVED:
+    for ent in RESERVED:
+        rx, allow, why = ent[:3]
+        if len(ent) > 3 and key not in ent[3]:
+            continue
         if re.search(rx, plain) and not (allow and lic(allow, key, lab)):
             if "[היתר שער:" in body and re.search(r"\[היתר שער: [^\]]*" + re.escape(re.search(rx, plain).group(0).strip()), body):
                 continue
@@ -428,6 +497,40 @@ def translation_lines(key):
             out[m.group(1)] = re.sub(r"\[\^[^\]]+\]", "", m.group(2)).rstrip()
             seq.append(m.group(1))
     return out, seq
+
+
+def dossier_wc():
+    """{label: hebrew} of the fifth-day dossier's pWestcar excerpt (WC)."""
+    out, cur = {}, None
+    if not os.path.exists(DOSSIER_WC):
+        return out
+    for l in open(DOSSIER_WC, encoding="utf-8"):
+        l = l.rstrip("\n")
+        m = re.match(r"^### (\S+)\s*$", l)
+        if m:
+            cur = m.group(1)
+        elif cur and l.startswith("> "):
+            out[cur] = l[2:].strip()
+            cur = None
+    return out
+
+
+def check_dossier_wc(heb, body):
+    """WE's lines 2,21–4,7 that the dossier has (WC) must equal the dossier's `>` lines exactly; a line marked
+    `[סטייה מן התיק: <reason>]` is listed as a pending dossier revision (for the lead), not an error."""
+    bad, pend = 0, []
+    for lab, dh in dossier_wc().items():
+        if lab not in heb:
+            continue
+        if heb[lab] != dh:
+            if "[סטייה מן התיק:" in body.get(lab, ""):
+                pend.append(lab)
+                continue
+            print(f"WE {lab}: differs from the fifth-day dossier (WC)\n    WC: {dh}\n    WE: {heb[lab]}")
+            bad += 1
+    n = len([l for l in dossier_wc() if l in heb])
+    print(f"WE: {n} line(s) shared with the dossier's WC checked" + (f"; pending dossier revisions: {', '.join(pend)}" if pend else ""))
+    return bad
 
 
 def verify(keys, strict=False):
@@ -483,6 +586,8 @@ def verify(keys, strict=False):
             bad += check_line(key, k, heb[k], body.get(k, ""), fixed, msgs)
         for m in msgs:
             print(m)
+        if key == "WE":
+            bad += check_dossier_wc(heb, body)
         tr = translation_lines(key)
         if tr is not None:
             tl, tseq = tr
@@ -598,7 +703,10 @@ def cmd_tr(key, a=None, b=None):
         for r in _span(key, a, b):
             print(f"[{r['label']}] {de.get(r['label'], '(none)')}")
         return
-    trs = aed2md.translations(os.path.join(AED, UNITS[key][3]))
+    fs = UNITS[key][3] if isinstance(UNITS[key][3], tuple) else (UNITS[key][3],)
+    trs = {}
+    for f in fs:   # Sinuhe: R and B (their sentence ids are distinct)
+        trs.update(aed2md.translations(os.path.join(AED, f)))
     seen = []
     for r in _span(key, a, b):
         for s in r["sents"]:
@@ -686,8 +794,10 @@ def cmd_grep(pat, every=False):
 
 def cmd_gates():
     print("RESERVED (Hebrew regex | licensed by | why):")
-    for rx, allow, why in RESERVED:
-        print(f"  {rx}\n      ← {allow or 'NEVER'}  ({why})")
+    for ent in RESERVED:
+        rx, allow, why = ent[:3]
+        scope = f" [only {', '.join(sorted(ent[3]))}]" if len(ent) > 3 else ""
+        print(f"  {rx}\n      ← {allow or 'NEVER'}  ({why}){scope}")
     print("\nTRAPS:")
     for rx, cond, why in TRAPS:
         print(f"  {rx}  [{cond}]  {why}")
@@ -801,7 +911,7 @@ def build(keys=None):
     for k in pk:
         build_one(k)
     bad = 0
-    for proj in (P1, P2, P3):
+    for proj in PROJECTS:
         ks = [k for k in present_keys() if UNITS[k][0] == proj]
         if not ks:
             continue
