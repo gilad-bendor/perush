@@ -514,6 +514,20 @@ trips the `בלל` gate); *perʾu* `צֶאֱצָא` (`זֶרַע` kept for *zēr
 `אַחוּדַנָדִיח`, `חוּרּוּכִּידוּ`; places `פּוּרוּשְׁחַנְדַּר`, `פּוּחְלוּ`, `פּוּרַנְשׁוּ`, `אֻמַּן־מַנְדָּה`, `שׁוּבַּת־אֶנְלִיל` ★, `סוּבַּרְתּוּ`,
 `גּוּטִיּוּם`, `עֵילָם`, `דִּלְמוּן`, `מָגָן` ★, `מֵלוּחָה` ★; demons `שֵׁדוּ` ★, `נַמְתָּר`, `אוּטוּכּוּ`, `רוֹבֵץ`. Tool: Magan
 licenses the `גן` gate.
+#### 11.6.2 Part CL2 (SB 94–180), 2026-10-31
+Repeats copied (108–113 = 72–77; 114 = 17 in the 1st person; 124 = 79; 156 negates 88 `לא תיסער, לא תיבוך,`). Fixed:
+97 *šakin abūbu* `מבול מְחוֹלָל` (Erra's verb, as a stative participle); 102–103 *ḫalāqu* D `אִבֵּד` (`לאבד את זרע?
+האנושות,`; `מָחָה` stays reserved), *šubšû* `להביא לִכְלַל הֲוָיָה`, *malāku* `נמלך`; **_qāta wabālu_ = `הֵבִיא יָד`**
+(literal, keeps *wabālu* `הֵבִיא` and the play with 147; the coordinator accepts it; `שָׁלַח יָד` Gen 22:12, 37:22 in the
+apparatus); the Morning Star *dilbat* `דִּלְבַּת` (Isa 14:12 [divergence]); 145 *sūtu* `סְאָה`, *šiqlu* `שֶׁקֶל` [cognates,
+2 Kgs 7:1]; Ea `אֵאָה, האדון, פתח את פיו ואמר,` / `דיבר אל האלים, שותפיו:`; 104 `בהגיע ראש השנה של השנה הרביעית,`;
+130 `עֲזֹב! זרע האובדים – לא תְאַבֵּד.`; *rēša našû* `נָשָׂא רֹאשׁ`; *quʾʾû* `קִוָּה`; *nakāru* `הִתְנַכֵּר`, *nakru* `אוֹיֵב`;
+*ḫušaḫḫu* `כָּפָן`, *arurtu* `חֶסֶר`, *nebrītu* `רָזוֹן`; *dannūtu* `מִבְצָר`; *iššiakku* / *rubû* `מוֹשֵׁל` / `נָשִׂיא`;
+*gullultu* `עֲבֵרָה` (`רָעָה` is *lemuttu*); *dumqu* `חֶסֶד` here (`טוֹב` gated), 172 `לעבירתם – גְּמֹל חסד;` (*riābu*
+`גָּמַל`); 171 `"הֵן, אדוני!"`; 159 `אתה – בחיק אשתך מלאכה תעשה!`; *šullumu* `שַׁלֵּם`; *papāḫu* `פַּפָּח`; Kutha
+`כּוּתָה` ★ (2 Kgs 17:24 `וּמִכּוּתָה`), Emeslam `אֵמֶסְלָם`, Nergal `נֵרְגַּל`. **Split left for the lead:** *gimillu*
+`חֶמְלָה` here (the sense "mercy"; Enūma eliš and Gilgameš *gimilla turru* `הֵשִׁיב גְּמוּל`, kept so `גָּמַל` stays
+*riābu*'s).
 
 ## Changelog
 - 2026-10-31: §11 the Cuthaean Legend (project 4) – names, grammar, formulas, reserved and gated words; fixed by the Round 5 run 5 coordinator before the first part.
