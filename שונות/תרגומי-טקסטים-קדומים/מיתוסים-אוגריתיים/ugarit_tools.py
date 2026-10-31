@@ -20,6 +20,9 @@ python3 -I -B from any folder.
                                                           corpus in the folder), with the source line
     python3 -I -B ugarit_tools.py dulat '<regex>'          CUC's DULAT-based lexicon (lexeme, DULAT page, POS, gloss):
                                                           the dictionary's headwords and short senses, per word
+    python3 -I -B ugarit_tools.py eupt KEY [FROM [TO]] [--tr]  EUPT's edition of Kirta (1.14–1.16): transliteration,
+                                                          epigraphy, vocalization, morphology; --tr adds its German /
+                                                          English translation and notes (read them after drafting)
     python3 -I -B ugarit_tools.py gates                    print the reserved / gated words, traps and formulas
     python3 -I -B ugarit_tools.py selftest                 run the gates on the test lines of renderings.md §9
 
@@ -708,6 +711,44 @@ def cmd_grep(pat, every=False):
                 print(f"{os.path.relpath(f, ROOT)} {lab}: {ln[2:].strip()[:140]}   ‹{(srcl or '')[:100]}›")
 
 
+EUPT_DIR = os.path.join(ROOT, "sources", "EUPT", "text")
+
+
+def cmd_eupt(key, a=None, b=None, tr=False):
+    """EUPT's edition (Kirta, KTU 1.14–1.16; rank 1 for readings): per CUC line the transliteration, the epigraphic
+    notes, the vocalization and morphology of its unit; with --tr also the German / English translation and the
+    philological notes (rank 3–4: read them only after drafting the line)."""
+    p = os.path.join(EUPT_DIR, f"KTU-{key}.json")
+    if not os.path.exists(p):
+        sys.exit(f"no EUPT edition for KTU {key} (EUPT has 1.14–1.16; run ../tools/eupt2md.py convert)")
+    d = json.load(open(p, encoding="utf-8"))
+    labs = order(key) + [l for l in d["lines"] if l.startswith("(")]
+    if a:
+        i = labs.index(a)
+        j = labs.index(b) if b else i
+        labs = labs[i:j + 1]
+    seen = set()
+    for lab in labs:
+        r = row(key, lab)
+        e = d["lines"].get(lab)
+        print(f"### {lab}")
+        print(f"- CUC:  `{r['text'] if r else '-'}`")
+        print(f"- EUPT: `{e['translit'] if e else '(no EUPT line)'}`")
+        for n in (e or {}).get("epi", []):
+            print(f"  - epigraphy ({n[1]}): {n[2]}")
+        for u in d["units"]:
+            if lab in u["lines"] and u["id"] not in seen:
+                seen.add(u["id"])
+                print(f"- unit {', '.join(u['lines'])} voc: {u['voc']}")
+                print(f"  morph: {' | '.join(u['morph'])}")
+                if tr:
+                    print(f"  de: {u['de']}")
+                    print(f"  en: {u['en']}")
+                    for n in u["notes"]:
+                        print(f"  - note [{n[0]}] {n[1]}: {n[2]}")
+        print()
+
+
 def cmd_dulat(pat):
     p = os.path.join(CUC_DIR, "lexicon_and_grammar", "ugaritic_lexicon.txt")
     rx = re.compile(pat)
@@ -883,6 +924,10 @@ def main():
         sys.exit(0 if build(rest) else 1)
     if cmd == "grep" and rest:
         return cmd_grep(rest[0], "--all" in a)
+    if cmd == "eupt" and rest:
+        tr = "--tr" in rest
+        rest = [x for x in rest if x != "--tr"]
+        return cmd_eupt(*rest[:3], tr=tr)
     if cmd == "dulat" and rest:
         return cmd_dulat(rest[0])
     if cmd == "gates":
