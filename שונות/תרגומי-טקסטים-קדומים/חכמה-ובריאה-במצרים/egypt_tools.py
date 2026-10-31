@@ -461,6 +461,8 @@ def check_line(key, lab, heb, body, fixed, out):
     plain = strip_marks(heb)
     # whole words that a gate's prefix class misreads (TB 6,3 `לברוח` "to flee", 8,7 `מרוח` "smeared"): not the gated word
     plain = re.sub(r"(?<![א-ת])(?:לברוח|מרוח)(?![א-ת])", " ", plain)
+    if re.search(r"ḥmsi̯|ḥms\b|ḥmsj|ḥms\.", license_text(key, lab)):   # `לשבת` "to sit" (ḥmsj), not the root שבת (WE 3,8)
+        plain = re.sub(r"(?<![א-ת])ו?לשבת(?![א-ת])", " ", plain)
     src = plain_src((row(key, lab) or {}).get("text", ""))
     for ent in RESERVED:
         rx, allow, why = ent[:3]

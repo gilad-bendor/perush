@@ -623,3 +623,16 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
 6. Gates fixed (the coordinator): the `זבת` gate takes only `ו` as a prefix (`הכוזבת` "the liar", 17,6); the `ענבים` licence
    includes the spelling `jꜣ~jr` (13,8); the two `[היתר שער]` notes may go.
 
+### 11.8 Round 5 run 6 – WE part 1 (1,1-11–4,17), merged 2026-10-31 (translator 2)
+1. **The royal decree after each wonder** (fixed by 1,12–1,17, copied at 4,12–4,17; binding for 6,22ff. and the later
+   wonders, only the names and brackets change): `אז אמר הוד מלכות מלך־הדרום־והצפון X אמיתי־הקול: תן שיתנו תקרובת: לחם
+   אלף, שֵׁכָר – כדים מאה, שור אחד, קטורת – כדורים שניים, למלך… ; וכן לגרום שיתנו עוגה אחת, שֵׁכָר – קנקן אחד, בשר – נתח
+   גדול, קטורת – כדור אחד לכוהן־הקורא החרטום Y, ראיתי את מעשהו של דעת. אז עשו כמצוות הוד מלכותו, כולן.`
+2. **Narrative:** `X pw jri̯.n Y` = a plain past verb; ḫr-m-ḫt `ואחרי`; jst `והרי`; the jn-cleft `X הוא ה…`; ḏi̯=j sḏm `אשמיע`;
+   jt (forefather) `אב`; the dawn as TB's string without `כן`; `שָׁטָה` / `שָׁטוּ` always vocalized (`שִׁטָּה` gate).
+3. **Words:** mꜣꜥ (offering) `תקרובת`, sntr `קטורת`, šzp.t `ביתן`, wbꜣ.yt `משרתת`, pds `ארגז` (`תֵּבָה` only ḏbꜣ.t), wn.t `דְּבִיר`,
+   ḥw.t-nṯr `בית־האל`, ẖnw `הבירה`, jtrw `יאור` [loanword]; splits by sense recorded at the lines: jṯj `תפס`/`לקח`,
+   rḏj `נתן`/`גרם`/`שם`, ꜥḥꜥ `קם`/`חיכה`, wꜥb `טהור`/`רחץ`.
+4. **Gate fixed (the coordinator):** `לשבת` "to sit" is allowed where the line has ḥmsj.
+5. The 27 dossier lines (2,21–4,7) copied byte for byte by script; no pending dossier revision.
+
