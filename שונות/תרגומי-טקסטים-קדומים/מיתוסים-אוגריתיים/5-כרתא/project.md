@@ -312,6 +312,17 @@ I:8.
   the births (III:5 = III:20–21), the feast (IV:3–9 = IV:14–20, IV:24–27 = V:7–10 = VI:4) compared; §6.5 corrected at
   V:9, VI:3 (`וענתה`). Pass (c): `translation-1.15.rtl.md` read; one footnote (III:16).
 - `verify 1.15 --strict`: 136 entries, 0 problems, 3 justified repeated-line differences; quotes: 0 problems.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against EUPT (transliteration, vocalization,
+  morphology) and CUC. **26 `>` lines changed**, each with a `(תיקון סוקר: …)` note: 20 brackets / uncertainty (the
+  partial-restoration rule – one sign or an ending restored → no bracket: II:8, II:12, II:20, II:28, III:9–11, III:14, IV:9,
+  IV:14–15, V:10, V:16 (the ending of *uṣbʿ[t]*), V:17, V:21, VI:5; whole stretches bracketed: V:26; III:2 a lost `[…]` added; III:5; V:5 and VI:8 `?`
+  for EUPT's doubtful readings); 2 additions moved into `( )` (II:21 `(אשר)` had been inside the restoration; III:29 the
+  suffix of `נדר(ו)` is not on the tablet); 1 doubled word (II:17–18 `בימין` was translated in both lines); 3 meaning
+  (II:18 *brkm ybrk* `בָּרֵךְ בֵּרַךְ`, narrative past as EUPT and §3, Num 23:11, not the future `יְבָרֵךְ`; V:14, V:16 *mtm*
+  `מֵת?` singular, EUPT *mêtVma*). פירוק: 4 added where an entry had only a `[מקבילה]` but differs from its parallel
+  (IV:15, IV:16, IV:18, V:25); 4 stems corrected to EUPT (II:15, II:20 *mrr* G; II:24 *ṯmn* tD; III:25 *ḫss* L). No
+  negation or *l* errors found. Rebuilt; `verify 1.14 1.15 1.16 --strict` 0 problems (the same 3 justified repeated-line
+  differences); `check_bible_quotes.py` 0 problems.
 
 ### The text on its own terms
 
@@ -435,6 +446,20 @@ colophon, 1.4 IV:58 El's answer, 1.17 V:7–8 the widow's case, 1.5 VI:5 *ksm mh
   Pass (c): `translation-1.16.rtl.md` read; four footnotes (I:22, V:29, VI:34, VI:58).
 - `verify 1.16 --strict`: 267 entries, 0 problems, 2 justified repeated-line differences; quotes: 0 problems (all three
   tablets and intros rechecked; 1.14 rebuilt after the *zbl* revision, 0 problems).
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against EUPT and CUC. **44 `>` lines
+  changed**, each with a `(תיקון סוקר: …)` note: 24 brackets / uncertainty (one sign or an ending restored → no bracket:
+  I:47, I:48, II:5, II:10, II:17, II:24, II:33, II:46, III:1, III:15, IV:4, IV:9, IV:10, V:6, V:15, V:19, V:25, V:27,
+  V:49, VI:28; I:31, I:44 `?` for EUPT's doubtful readings; V:18 EUPT restores both words; **VI:31 the brackets were
+  reversed** – *[ġ]rm* read, *[tṯwy]* wholly restored); 12 meaning, person, number or tense: **I:39–40, I:61–62 *krtn dbḥ
+  dbḥ mlk ʿšr ʿšrt*** = `כרתא זָבַח זבח, המלך הזמין משתה` (EUPT: two verbs, *dabiḥa*, *ʿaššira*; the draft `כרתא – זבח, זבח
+  המלך – משתה` lost both verbs; *ʿšr* D = `הזמין` as 1.3 I:9, 1.17 VI:30); **I:60 *adnkm* `אדונך`** (2nd fem. sg. + enclitic
+  *-m*, EUPT; not `אדוניכם`); **VI:26 *ywsrnn ggnh* `וייסר אותו *בטנו*`** (singular, not `וייסרוהו`); I:12–13 narrative
+  past `בכה, ושינן` (as II:35); **IV:3 and IV:16 *ṣḥ* imperative `צְוַח`** (IV:3 had the same past `צווח` as its execution
+  IV:6); I:28, IV:13 imperatives vocalized; 3 one-lemma fixes (I:5, I:19, II:41 *ʿtq* `תֵּעָתֵק`, as I:2 and the Decisions,
+  not `תעבור`); 2 omissions (I:41 *tpk* `תופך`; II:32 *ybmh* `*יְבָמָהּ*?`, read but untranslated); 1 addition moved into
+  `( )` (V:28 `(ב)`); 2 italics (VI:18, VI:21 *mgṯ* `*טֶבַח*`, §12.7). פירוק added to 14 entries (I:61–62, II:22–23, V:18,
+  V:21 – parallels that differ; the fragments II:2–9, II:55–56). No negation or *l* errors found. Rebuilt; `verify` 0
+  problems (the same justified repeated-line differences); quotes 0.
 
 ### The text on its own terms
 
