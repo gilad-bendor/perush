@@ -453,6 +453,12 @@ Notes on the fixed lines (the translators keep them in their apparatus):
 | 1.1 II:5 | err | `נִבְרָא` |
 | 1.2 I:22 | ok | `מַלְאֲכֵי יָם, מִשְׁלַחַת שׁוֹפֵט נָהָר` |
 | 1.2 I:22 | err | `שְׁלִיחֵי יָם, מִשְׁלַחַת הַשּׁוֹפֵט נָהָר` |
+| 1.18 IV:20 | ok | `נְשָׁרִים יְרַחֲפוּ, יִתְבּוֹנֵן [בַּלַּהֲקָה אֲשֶׁר]` |
+| 1.18 IV:20 | err | `נְשָׁרִים יָעוּפוּ, יִתְבּוֹנֵן [בַּלַּהֲקָה אֲשֶׁר]` |
+| 1.17 I:17 | ok | `[דָּ]נִאֵל, אִישׁ רָפִא, נֶאֱנַח, הַגִּבּוֹר` |
+| 1.17 I:17 | err | `[דָּ]נִאֵל, מְתֵי רָפָא, נֶאֱנַח, הַגִּבּוֹר` |
+| 1.17 V:8 | ok | `דִּין אַלְמָנָה, שׁוֹפֵט מִשְׁפַּט יָתוֹם.` |
+| 1.17 V:9 | err | `בְּשָׂאתוֹ אֶת עֵינָיו – וַיַּרְא קֶשֶׁת` |
 
 ## 10. Changes and proposals merged (by run and translator)
 
@@ -562,3 +568,62 @@ alternative questions); *pq* Š `סִיפֵּק`; *krm* "rams" `כָּרִים`;
 `בָּמֳתֵי אָרֶץ`, Amos 4:13, in the note). Tool: a word split across two lines is licensed in both (`license_text`); the §6.1
 regex accepts plene `וצווח`.
 
+
+## 12. The epics and the rituals (Round 5 run 3, coordinator, 2026-10-31; before the first line)
+
+Projects `4-אקהת/` (KTU 1.17–1.19), `5-כרתא/` (1.14–1.16), `6-הרפאים/` (1.20–1.22), `7-טקסים/` (1.40 …). Everything in §1–§11
+binds. The rows below are **drafts by the coordinator** (guidelines §5.2: the first translator may revise a row with a
+reason in its Proposals; after the merge it is fixed). The verifier enforces the new gates and formulas (`gates`).
+
+### 12.1 Names (vocalized at the first occurrence in each file; ★ = always vocalized)
+
+| Ugaritic | Hebrew | Notes |
+|---|---|---|
+| *dnil* (Dāniʾilu), Danel | `דָּנִאֵל` | [cognate] the righteous `דָּנִאֵל` of Ezek 14:14, 20 (ketiv `דנאל`), 28:3 – not the Daniel of the book; vocalize at least at the first occurrence |
+| *mt rpi* (Danel's epithet) | `אִישׁ רָפִא` | *mt* "man" (the corpus's *mt* = `מְתִים`, pl.; a singular `מְתֵי` does not exist in Hebrew: an accepted split by number, noted); *rpi* = the Healer / Rapiʾu (`רָפִא`, §1.1): "the Rapiʾan man"; the reading "man of the Healer" vs "Healer-man" in a note |
+| *ġzr mt hrnmy* | `הַגִּבּוֹר, אִישׁ הַהַרְנַמִּי` | *hrnmy* "the Harnamite" (a gentilic: a place Harnam); the gate checks `אִישׁ הַהַרְנַמִּי` |
+| *aqht* (ʾAqhatu) | `אַקְהָת` | [cognate?] the Levite `קְהָת` (Gen 46:11, Ex 6:16): a note only |
+| *dnty* (Danataya), Danel's wife; *mṯt* "lady" | `דַּנָּתַי`; `גְּבֶרֶת` | `דַּנָּתַי` ★ (unvocalized it reads as nothing, but vocalize anyway for the name) |
+| *pġt* (Puġatu), Danel's daughter; *ṯkmt mym* "who carries water (on the shoulder)" | `פּוּגַת`; `נוֹשֵׂאת הַמַּיִם עַל שִׁכְמָהּ`? | *ṯkm* "shoulder" [cognate] `שְׁכֶם` (Gen 24:15, 45: Rebekah `וְכַדָּהּ עַל שִׁכְמָהּ`): the translator fixes the epithet at its first occurrence |
+| *yṭpn* (Yaṭpānu), *mhr št* | `יַטְפָּן`; `לוֹחֵם?` by sense | *mhr* (I) = `מָהִיר` in the corpus (§4.2); *št* is debated ("the Sutean" / "lady's"?): the translator decides, a note |
+| *kṯrt bnt hll snnt* | `הַכּוֹתָרוֹת, בְּנוֹת הִלָּל, הַ…` | §1.1 (the Kotharot); *hll* = `הִלָּל` (§10, 1.24); *snnt* "swallows"? (DULAT): the translator fixes it |
+| *ḥrgb*, *ṣml* (eagles) | `חַרְגַּב`, `צַמֶּלֶת`? | names of the eagles; the translator fixes them |
+| *qrt ablm*, *mrrt tġll bnr*, *knrt* | by the same principle; biblical forms where the Bible names the place (`כִּנֶּרֶת`, Num 34:11) | 1.19 III–IV |
+| *krt* (Kirta / Kirtu; EUPT "Kirtu") | `כִּרְתָּא` ★ | always vocalized (`כרת` "cut"); the final aleph as in `כַּכָּא` |
+| *mṯb*, *ḥry* (Ḥurriya), Kirta's bride | `חֻרַּיָּה` | |
+| *pbl mlk*, *udm* (Udum) | `פַּבִּל הַמֶּלֶךְ`, `אוּדֻם` | *udm rbt* `אוּדֻם הָרַבָּה`, *udm trrt* `אוּדֻם *הַנִּשְׂגֶּבֶת*` (the translator of 1.14 fixes) |
+| *yṣb* (Yaṣṣubu), *ilḥu*, *ṯtmnt*, *šʿtqt* | `יַצֻּב`, `אִלְחוּ`, `תִּתְמָנִת` ("the eighth"), `שַׁעֲתִקַת` ("she who removes"?: the healer made by El, 1.16 V) | |
+| *ʿṯtrt* (the goddess), *qdš* (Qudšu), *ṣdynm*, *ṣrm* | `עַתְּתַרְת`; *qdš* by §5.2; `צִידוֹנִים`, `צוֹר` (biblical forms; Kirta 1.14 IV 35–39) | |
+| *rpum*, *rpim*, *ilnym* (1.20–1.22) | `רְפָאִים` (§1.1), `אֵלֹנִים`? | the translator of 1.20–1.22 fixes them; *ilnym* "the divine ones" |
+
+### 12.2 Key terms of the epics (pre-set; one Hebrew per lemma)
+
+| Ugaritic | Hebrew | Tag / note |
+|---|---|---|
+| *rḫp* (D) | the root רחף: `רִחֵף`, `מְרַחֵף` / `מְרַחֶפֶת` | [cognate] **Gen 1:2** `וְרוּחַ אֱלֹהִים מְרַחֶפֶת`, Deut 32:11 `כְּנֶשֶׁר … יְרַחֵף`: the eagles of Anat over Aqhat (1.18 IV:20–32; 1.19 I:32). **Checked by script** (a source *rḫp* needs the root רחף in the Hebrew; §5.2 keeps the root for *rḫp*) |
+| *nšr*, pl. *nšrm* | `נֶשֶׁר`, `נְשָׁרִים` | [cognate]; reserved (gate). *diy* (bird of prey, kite) `דַּאָה` (§10) |
+| *knp* | `כָּנָף` | [cognate] |
+| *almnt*, *ytm* | `אַלְמָנָה`, `יָתוֹם` | [cognate] Ex 22:21, Deut 10:18, 24:17 – Danel and Kirta judge the widow's case (1.17 V:8, 1.16 VI:33–34, 45–50); reserved |
+| *dn* (vb) / *dn* (n.); *ṯpṭ* | `דָּן`, `דִּין`; `שָׁפַט` (§4.2) | [cognate] `יָדִין דִּין` (Jer 5:28) |
+| *ṯġr*; *adrm d b grn* | `שַׁעַר`; `הָאַדִּירִים אֲשֶׁר בַּגֹּרֶן` | the elders at the threshing floor (Ruth 3–4; 1 Kgs 22:10 `בְּגֹרֶן פֶּתַח שַׁעַר`); *ṯġr* "gate" [cognate] `שַׁעַר` (the gatekeeper *ṯġr* `שׁוֹעֵר` of §10 is the same root) |
+| *qšt*; *qṣʿt* | `קֶשֶׁת`; `*חִצִּים*`? | *qšt* [cognate] Gen 9:13 `אֶת קַשְׁתִּי נָתַתִּי בֶּעָנָן` (the bow as a divine artefact: a [divergence]); reserved. *qṣʿt* (DULAT "arrows"? / "bow-ends"): the translator decides |
+| *nṣb*; *skn* | `הִצִּיב`; `*מַצֵּבָה*` by sense, the cognate `סֹכֵן` in the note | Gen 28:18, 35:14, 20 (Jacob's stele); `מַצֵּבָה` gated to *nṣb* / *skn* |
+| *ilib* | `אֵל־אָבִיו` (`אֵל־אָבִי`, `אֵל־אָבִיךָ`) | [cognate] Gen 46:3 `הָאֵל אֱלֹהֵי אָבִיךָ`, 49:25 `מֵאֵל אָבִיךָ`; "the god of the father" / "the divinized ancestor": a note |
+| *aḫd ydh b škrn* | `אוֹחֵז בְּיָדוֹ בְּשִׁכְרוֹנוֹ` | the son's duties (1.17 I 26–34, I 44–II 8, II 16–23): ↔ **Gen 9:20–27** (Noah drunk; Shem and Japheth cover him, Ham sees): [divergence]. *škr* = `שָׁכַר`, `שִׁכָּרוֹן` (§4.3) |
+| *ʿms* | `עָמַס` / `נָשָׂא` by sense | [cognate] Isa 46:3 `הָעֲמֻסִים מִנִּי-בֶטֶן`: the translator fixes |
+| *the son's duties* (four copies in 1.17) | **one Hebrew**, fixed at the first copy (I 26–34), copied word for word, person changed as the Ugaritic changes (3rd → 2nd → 1st) | `verify` lists every repeated line that differs |
+| *bkr*; *ṣġr* | `בְּכוֹר`, `בִּכֵּר`; `צָעִיר` | [cognate]; 1.15 III 16: the youngest made firstborn ↔ Deut 21:15–17, Gen 25:23, 48:14–20; reserved |
+| *ndr* | `נָדַר`, `נֶדֶר` | [cognate] Kirta's vow (1.14 IV 36–43) ↔ Gen 28:20–22; reserved |
+| *ḫtn*, *ḫtt*; *mhr* (II); *ṯlḫ* | `הִתְחַתֵּן`, `חֲתֻנָּה`?; `מֹהַר`; `שִׁלּוּחִים` (§10) | Kirta's marriage; Deut 20:7, 24:5 (the bridegroom who does not go to war: 1.14 II 48–50, IV 26–28) |
+| *ʿbd ʿlm* | `עֶבֶד עוֹלָם` | [cognate] Deut 15:17, Job 40:28 (Pabil's offer) |
+| *ḥlm*; *ḏhrt* | `חֲלוֹם`; `חִזָּיוֹן` | [cognate] (*ḥlm*); Kirta's dream (1.14 I 35–III 51) ↔ Gen 28:12, 1 Kgs 3:5 |
+| *ʿrb*, *šrp*, *dbḥ*, *šlmm* (1.40 and the rituals) | `נִכְנַס` (§5.4), `שָׂרַף`, `זֶבַח`, `שְׁלָמִים` | *šlmm* [cognate] `זֶבַח שְׁלָמִים` (Lev 3) – the translator of 1.40 fixes the ritual words and their tags (**Lev 16**, Lev 4–5) |
+
+### 12.3 The base text of Kirta: EUPT (2025)
+
+KTU 1.14–1.16 have a new critical edition: **EUPT** (*Edition des ugaritischen poetischen Textkorpus*, Göttingen, ed. C.
+Steinberger et al., 2025; collated on the tablets and casts; **CC BY-SA 4.0**; `../sources/EUPT/`). For Kirta it is
+**rank 1 for readings**: the line skeleton stays CUC's (KTU³ line numbers = EUPT's), but where EUPT reads a letter, word
+or restoration differently, the Hebrew follows EUPT and the פירוק says `EUPT: …` (the backticked line stays CUC's,
+filled by the tool). EUPT's German and English translations and its commentary are **rank 3–4**: read them **after**
+drafting the line (`ugarit_tools.py eupt KEY LABEL`), never before; quote them briefly, with attribution.

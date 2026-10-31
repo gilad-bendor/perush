@@ -23,7 +23,8 @@ python3 -I -B from any folder.
     python3 -I -B ugarit_tools.py gates                    print the reserved / gated words, traps and formulas
     python3 -I -B ugarit_tools.py selftest                 run the gates on the test lines of renderings.md §9
 
-KEY = a KTU tablet number (1.1 … 1.6, 1.23, 1.24, 1.114, 1.100, 1.107, 1.108, 1.82, 1.83); its annotated file is
+KEY = a KTU tablet number (1.1 … 1.6, 1.23, 1.24, 1.114, 1.100, 1.107, 1.108, 1.82, 1.83; Round 5 run 3: 1.17–1.19
+Aqhat, 1.14–1.16 Kirta, 1.20–1.22 the Rephaim, 1.40); its annotated file is
 <project>/annotated-<KEY>.rtl.md. Labels are CUC's (= KTU's): "III:38" (column:line) or "62" (one-column tablets).
 
 The base text is the Copenhagen Ugaritic Corpus (../sources/CUC/, git-ignored; restore with
@@ -61,6 +62,10 @@ CACHE = os.path.join(ROOT, "sources", "CUC", "text", "_lines.json")   # git-igno
 
 P1 = "1-מחזור-בעל"
 P2 = "2-מיתוסים-ולחשים"
+P4 = "4-אקהת"
+P5 = "5-כרתא"
+P6 = "6-הרפאים"
+P7 = "7-טקסים"
 UNITS = {
     "1.1": (P1, "מחזור בעל, לוח א (KTU 1.1)"),
     "1.2": (P1, "מחזור בעל, לוח ב (KTU 1.2)"),
@@ -76,8 +81,20 @@ UNITS = {
     "1.108": (P2, "רָפִא, מלך עולם (KTU 1.108)"),
     "1.82": (P2, "לחש נגד הנחש והתנין (KTU 1.82)"),
     "1.83": (P2, "התנין הכבול (KTU 1.83)"),
+    "1.17": (P4, "אַקְהָת, לוח א (KTU 1.17)"),
+    "1.18": (P4, "אַקְהָת, לוח ב (KTU 1.18)"),
+    "1.19": (P4, "אַקְהָת, לוח ג (KTU 1.19)"),
+    "1.14": (P5, "כִּרְתָּא, לוח א (KTU 1.14)"),
+    "1.15": (P5, "כִּרְתָּא, לוח ב (KTU 1.15)"),
+    "1.16": (P5, "כִּרְתָּא, לוח ג (KTU 1.16)"),
+    "1.20": (P6, "הָרְפָאִים, לוח א (KTU 1.20)"),
+    "1.21": (P6, "הָרְפָאִים, לוח ב (KTU 1.21)"),
+    "1.22": (P6, "הָרְפָאִים, לוח ג (KTU 1.22)"),
+    "1.40": (P7, "טקס הכפרה (KTU 1.40)"),
 }
-PROJECT_TITLES = {P1: "מחזור בעל (KTU 1.1–1.6)", P2: "מיתוסים ולחשים קצרים מאוגרית"}
+PROJECT_TITLES = {P1: "מחזור בעל (KTU 1.1–1.6)", P2: "מיתוסים ולחשים קצרים מאוגרית",
+                  P4: "אַקְהָת (KTU 1.17–1.19)", P5: "כִּרְתָּא (KTU 1.14–1.16)",
+                  P6: "הָרְפָאִים (KTU 1.20–1.22)", P7: "טקסים מאוגרית (KTU 1.40 …)"}
 NIQ = "֑-ֽֿ-ׇ"
 
 
@@ -312,6 +329,14 @@ RESERVED = [
     (W + alt("גד", "גדי", "הגדי", "גדיים", "גדיה") + E, r"\bgd\b|gdy|gdm", "גַּד (coriander) only for gd [cognate] (Ex 16:31): the 'kid' reading of KTU 1.23:14 is rejected"),
     (W + alt("אור", "האור", "אורו", "אורה", "אורות", "מאור", "מאורות", "המאור") + E, r"\bar\b|\bir\b|ảr|\bủr\b|ỉr|ảr|nyr|\bnr\b", "אוֹר only for ar 'light' [cognate] (Gen 1:3): nrt = נֵר; מָאוֹר never (Gen 1:14–16)"),
     (W + alt("חושך", "חשך", "החושך", "חשכה", "חשיכה", "חשכת") + E, r"ḥšk|ẓlm|ġlm", "חֹשֶׁךְ only for ḥšk / ẓlm (Gen 1:2)"),
+    # Round 5 run 3 (the epics: Aqhat, Kirta, the Rephaim, KTU 1.40)
+    (W + alt("נשר", "נשרים", "הנשר", "הנשרים", "נשרי", "כנשר") + E, r"nšr", "נֶשֶׁר only for nšr [cognate] (Deut 32:11, the eagle that `יְרַחֵף`)"),
+    (W + alt("אלמנה", "אלמנות", "האלמנה", "אלמנת", "אלמנתו") + E, r"almn", "אַלְמָנָה only for almnt [cognate] (Ex 22:21, Deut 10:18)"),
+    (W + alt("יתום", "יתומים", "היתום", "היתומים", "יתומה", "יתומי") + E, r"ytm", "יָתוֹם only for ytm [cognate] (Ex 22:21, Deut 10:18)"),
+    (W + alt("מצבה", "מצבת", "מצבות", "מצבתו", "המצבה") + E, r"nṣb|skn", "מַצֵּבָה only for nṣb / skn (Gen 28:18, 35:14, 20)"),
+    (W + alt("קשת", "הקשת", "קשתו", "קשתי", "קשתך", "קשתות") + E, r"qšt|qšṯ", "קֶשֶׁת only for qšt [cognate] (Gen 9:13: the bow in the cloud)"),
+    (W + alt("בכור", "בכורה", "הבכור", "בכורי", "בכורו", "בכורת", "בכורות", "בכרתי", "אבכר", "יבכר") + E, r"bkr", "בְּכוֹר / בִּכֵּר only for bkr [cognate] (Deut 21:15–17, Gen 48–49)"),
+    (W + alt("נדר", "נדרו", "נדרה", "נדרי", "ידור", "אדור", "נודר", "נדרים", "נדרתי") + E, r"ndr", "נֶדֶר / נָדַר only for ndr [cognate] (Gen 28:20)"),
 ]
 
 V = NIQ
@@ -377,6 +402,9 @@ FORMULAS = [
     (r"\bšlyṭ d šbʿt rašm\b", r"(?:ה)?שליט אשר לו שבעה ראשים", "šlyṭ d šbʿt rašm = `הַשַּׁלִּיט אֲשֶׁר לוֹ שִׁבְעָה רָאשִׁים` (§6.8)"),
     (r"\bḥln\b.*\bbhtm\b", r"חלון (?:ב)?בית", "ḥln b bhtm = `חַלּוֹן בַּבַּיִת` (§6.9)"),
     (r"\burbt b qrb hkl", r"ארו?בה בקרב (?:ה)?היכל", "urbt b qrb hklm = `אֲרֻבָּה בְּקֶרֶב הַהֵיכָל` (§6.9)"),
+    (r"\b[ayt]?r[ḫḥ]p(?:n|t)?\b|\btrḫpn\b", r"רח[פף]", "rḫp = the root רחף (`רִחֵף`, `מְרַחֶפֶת`) [cognate] Gen 1:2, Deut 32:11 (renderings §12)"),
+    (r"\bmt rpi\b", r"אי?ש[ \-־]רפא", "mt rpi = `אִישׁ רָפִא` (renderings §12)"),
+    (r"\bmt hrnmy\b", r"אי?ש[ \-־](?:ה)?הרנמי", "mt hrnmy = `אִישׁ הַהַרְנַמִּי` (renderings §12)"),
     (r"\bbdqt ʿrpt\b", r"בדק (?:ב)?ענני?ם?|בדק בעננים", "bdqt ʿrpt = `בֶּדֶק בָּעֲנָנִים` (§6.9)"),
 ]
 
@@ -808,7 +836,7 @@ def build(keys=None):
     for k in pk:
         build_one(k)
     bad = 0
-    for proj in (P1, P2):
+    for proj in PROJECT_TITLES:
         ks = [k for k in present_keys() if UNITS[k][0] == proj]
         if not ks:
             continue
