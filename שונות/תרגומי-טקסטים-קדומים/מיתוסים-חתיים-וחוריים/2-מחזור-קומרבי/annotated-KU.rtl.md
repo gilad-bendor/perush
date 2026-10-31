@@ -394,8 +394,8 @@
 
 ### 64
 `[ ... ]-tā-[ ... ] {d}kumarbi ⸢innarawaz?⸣=šitt=a [ ... p]arā eḫu`
-> […] קומרבי, [מן] ה*כוח*? שלו גם […] – בוא החוצה!
-- **פירוק:** `{d}kumarbi` ("קומרבי"); `innarawaz?=šitt=a` – innarawa- "vigour"?, abl. + poss. 3sg + =a ("[מן] ה*כוח*? שלו גם"); `[p]arā eḫu` – parā "out" + eḫu "come!" ("בוא החוצה").
+> […] קומרבי, מן ה*כוח*? שלו גם […] – בוא החוצה!
+- **פירוק:** `{d}kumarbi` ("קומרבי"); `innarawaz?=šitt=a` – innarawa- "vigour"?, abl. + poss. 3sg + =a ("מן ה*כוח*? שלו גם"); `[p]arā eḫu` – parā "out" + eḫu "come!" ("בוא החוצה").
 - **הערות:** מכאן ועד סוף הטור השני: דיאלוג בין אלים – בתוך גופו של קומרבי ומחוצה לו – על הדרך שבה ייצא האל ההרה. הוצעו לו פתחים שונים בגוף.
 
 ### 65
@@ -682,16 +682,16 @@
 
 ### 117
 `NA4-an=war=an GIM-an paršanut tarna(n)=ššan {d}kumarbin`
-> כמו אבן ריסק אותו – בגולגולתו?, את קומרבי;
-- **פירוק:** `NA4-an=war=an` – NA₄ "stone", acc. + =wa + =an "him" ("אבן … אותו"); `GIM-an` – "like" ("כמו"); `paršanut` – paršanu- "break up, crush", pret. 3sg ("ריסק"); `tarna(n)=ššan` – tarna- "skull?" + poss. 3sg ("בגולגולתו?"); `{d}kumarbin` – acc. ("את קומרבי").
-- **הערות:** *tarna-* – כנראה הגולגולת או קודקוד הראש. גם *paršanu-* "לרסק" נדיר (CHD P: "break up").
+> כמו אבן ריסק אותו – בקודקודו?, את קומרבי;
+- **פירוק:** `NA4-an=war=an` – NA₄ "stone", acc. + =wa + =an "him" ("אבן … אותו"); `GIM-an` – "like" ("כמו"); `paršanut` – paršanu- "break up, crush", pret. 3sg ("ריסק"); `tarna(n)=ššan` – tarna- "head-top, crown of the head?" + poss. 3sg ("בקודקודו?"); `{d}kumarbin` – acc. ("את קומרבי").
+- **הערות:** *tarna-* – כנראה קודקוד הראש (`גולגולת` נשמרת ל־GULGULLATU, UL 2:105). גם *paršanu-* "לרסק" נדיר (CHD P: "break up").
 
 ### 118
 `nu=war=aš=ši=šta šarā tarnaz=šit wet {d}KA.ZAL-aš UR.SAG-iš ⸢LUGAL-uš⸣`
-> ומגולגולתו? יצא מעלה קַזַל, המלך הגבור."
-- **פירוק:** `nu=war=aš=ši=šta` ("ו… הוא … -ו"); `šarā` ("מעלה"); `tarnaz=šit` – tarna- "skull?", abl. + poss. 3sg ("ומגולגולתו?"); `wet` – uwa- "come", pret. 3sg ("יצא"); `{d}KA.ZAL-aš` – KA.ZAL (an epithet-name of the Storm-god?) ("קַזַל"); `UR.SAG-iš` ("הגבור"); `LUGAL-uš` ("המלך").
+> ומקודקודו? יצא מעלה קַזַל, המלך הגבור."
+- **פירוק:** `nu=war=aš=ši=šta` ("ו… הוא … -ו"); `šarā` ("מעלה"); `tarnaz=šit` – tarna- "head-top?", abl. + poss. 3sg ("ומקודקודו?"); `wet` – uwa- "come", pret. 3sg ("יצא"); `{d}KA.ZAL-aš` – KA.ZAL (an epithet-name of the Storm-god?) ("קַזַל"); `UR.SAG-iš` ("הגבור"); `LUGAL-uš` ("המלך").
 - **הקבלה:** [equivalent] הסיודוס, תולדות האלים 886–890, 924 – זאוס בולע את מֵטִיס ההרה, ואַתֵנָה נולדת מראשו: אל שבלע ונעשה הרה, ובנו (בתו) יוצא מן הראש. [equivalent] "המלך הגבור" – UR.SAG (`גבור`) הוא כינויו הקבוע של אל הסערה (M2); השוו `הֵמָּה הַגִּבֹּרִים` (בראשית ו:ד) – רק בצליל המלה, לא במוטיב.
-- **הערות:** "קזל" (KA.ZAL) – כנראה כינוי של אל הסערה או של אחד האלים שבתוכו; האל הראשון שיוצא מן הגולגולת.
+- **הערות:** "קזל" (KA.ZAL) – כנראה כינוי של אל הסערה או של אחד האלים שבתוכו; האל הראשון שיוצא מן הקודקוד.
 
 ## §14′ – קומרבי לפני אאה; האבן
 
@@ -731,8 +731,8 @@
 
 ### 125
 `[n=aš] ANA {d}A.A menaḫḫanda memiški[uwan daiš]`
-> [והוא] החל לומר מול אאה:
-- **פירוק:** `[n=aš]` ("[והוא]"); `ANA {d}A.A menaḫḫanda` – "facing Ea" ("מול אאה"); `memiški[uwan daiš]` ("החל לומר", F30).
+> [והוא החל] לומר מול אאה:
+- **פירוק:** `[n=aš]` ("[והוא]"); `ANA {d}A.A menaḫḫanda` – "facing Ea" ("מול אאה"); `memiški[uwan daiš]` ("[החל] לומר", F30).
 
 ### 126
 `[DU]MU-an=⸢mu⸣ pāi`
@@ -816,8 +816,8 @@
 
 ### 141
 `n=an=za andan uški[š]ki[u]wan [daiš]`
-> והחל להביט בו פנימה.
-- **פירוק:** `n=an=za` – nu + =an "him" + =z ("ו… בו"); `andan` ("פנימה"); `uški[š]ki[u]wan [daiš]` – au(š)- "see", iter. + -wan dai- "began" ("החל להביט").
+> ו[החל] להביט בו פנימה.
+- **פירוק:** `n=an=za` – nu + =an "him" + =z ("ו… בו"); `andan` ("פנימה"); `uški[š]ki[u]wan [daiš]` – au(š)- "see", iter. + -wan dai- "began" ("[החל] להביט").
 
 ### 142
 `[... -i]š {d}kumarbiš azz(i)kkiuwan dāiš`
@@ -965,9 +965,9 @@
 
 ### 168
 `nu tarna(n)=ššet ⸢TÚG-an⸣ mān [ ... ] anda šēkuēr tarna(n)=ššan {d}kumarbin`
-> ואת גולגולתו – כמו בגד […] פנימה …, את קומרבי בגולגולתו.
-- **פירוק:** `nu tarna(n)=ššet` – tarna- "skull?" + poss. 3sg ("ואת גולגולתו"); `TÚG-an` – TÚG "garment" ("בגד"); `mān` ("כמו"); `anda šēkuēr` – an unclear verb, pret. 3pl ("פנימה …"); `tarna(n)=ššan {d}kumarbin` ("את קומרבי בגולגולתו").
-- **הערות:** כנראה האלים מתקנים (תופרים?) את גולגולתו של קומרבי שנבקעה כמו בגד (השוו 117–118).
+> ואת קודקודו? – כמו בגד […] פנימה …, את קומרבי בקודקודו.
+- **פירוק:** `nu tarna(n)=ššet` – tarna- "head-top?" + poss. 3sg ("ואת קודקודו?"); `TÚG-an` – TÚG "garment" ("בגד"); `mān` ("כמו"); `anda šēkuēr` – an unclear verb, pret. 3pl ("פנימה …"); `tarna(n)=ššan {d}kumarbin` ("את קומרבי בקודקודו").
+- **הערות:** כנראה האלים מתקנים (תופרים?) את קודקודו של קומרבי שנבקעה כמו בגד (השוו 117–118).
 
 ### 169
 `[āššuwaz p]ēdaz UR.SAG-iš {d}IM-aš parā wet`
@@ -1527,8 +1527,8 @@
 
 ### 272
 `[nu INA] ITU 10{KAM} KI-aš wiweški[wan dāiš]`
-> [ובחו]דש העשירי החלה הארץ לצעוק.
-- **פירוק:** `[nu INA] ITU 10{KAM}` ("[ובחו]דש העשירי"); `KI-aš` – KI (*tekan*) "earth", nom. ("הארץ"); `wiweški[wan dāiš]` – wiwai- "scream, cry out", iter. + -wan dai- ("החלה לצעוק").
+> [ובחו]דש העשירי [החלה] הארץ לצעוק.
+- **פירוק:** `[nu INA] ITU 10{KAM}` ("[ובחו]דש העשירי"); `KI-aš` – KI (*tekan*) "earth", nom. ("הארץ"); `wiweški[wan dāiš]` – wiwai- "scream, cry out", iter. + -wan dai- ("[החלה] … לצעוק").
 - **הערות:** צעקות הלידה – כמו קומרבי (146). אותו פועל.
 
 ## §28⁗ – הארץ יולדת שני בנים; השליח

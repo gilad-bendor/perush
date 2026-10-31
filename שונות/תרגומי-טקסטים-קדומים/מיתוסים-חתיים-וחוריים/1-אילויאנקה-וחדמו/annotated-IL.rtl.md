@@ -729,8 +729,8 @@
 
 ### 115
 `nu wattarwa šer {NA4}ŠU.U ŠÚ.A kitta`
-> ליד המעיין מונח כסא אבן־השו,
-- **פירוק:** `nu` – nu ("ו־", not rendered); `wattarwa` – wattaru- "spring, fountain", d.-l. ("המעיין"); `šer` – šer "at, above" ("ליד"); `{NA4}ŠU.U ŠÚ.A` – ("כסא אבן־השו"); `kitta` – ki- "lie, be placed", pres. 3sg mid. ("מונח").
+> מעל המעיין מונח כסא אבן־השו,
+- **פירוק:** `nu` – nu ("ו־", not rendered); `wattarwa` – wattaru- "spring, fountain", d.-l. ("המעיין"); `šer` – šer "above, over" ("מעל"; HPM "über"); `{NA4}ŠU.U ŠÚ.A` – ("כסא אבן־השו"); `kitta` – ki- "lie, be placed", pres. 3sg mid. ("מונח").
 - **נוסחים:** D `PÚ-i` – הסומרוגרמה PÚ "מעיין, באר" במקום *wattaru-*.
 
 ### 116
@@ -764,8 +764,8 @@
 
 ### 120
 `kwit=a {d}zalinuišaš DAM-SU {d}tāzzuwašiš šašanz(a)š=šiš`
-> ומשום שזשחפונה היא אשתו של זלינו, ותַּזּוּוַשִׁי – פילגשו,
-- **פירוק:** `kwit=a` – kuit "because" + =a ("ומשום ש־"); `{d}zalinuišaš` – Zalinu, gen. ("של זלינו"); `DAM-SU` – "his wife" ("אשתו"); `{d}tāzzuwašiš` – Tazzuwaši (a goddess), nom. ("ותַּזּוּוַשִׁי"); `šašanz(a)š=šiš` – šašant- "concubine" + =šiš "his" ("פילגשו").
+> ומשום ש(זשחפונה) היא אשתו של זלינו, ותַּזּוּוַשִׁי – פילגשו,
+- **פירוק:** `kwit=a` – kuit "because" + =a ("ומשום ש־"; the subject, Zašḫapuna, is not written: "(זשחפונה) היא"); `{d}zalinuišaš` – Zalinu, gen. ("של זלינו"); `DAM-SU` – "his wife" ("אשתו"); `{d}tāzzuwašiš` – Tazzuwaši (a goddess), nom. ("ותַּזּוּוַשִׁי"); `šašanz(a)š=šiš` – šašant- "concubine" + =šiš "his" ("פילגשו").
 - **הערות:** *šašant-* "פילגש" – מילולית אולי "בת־המשכב" (מן *šeš-* "לשכב"). הכלי מתיר כאן את `שכב`, אבל `פילגש` (כבחוקי אשור התיכונה) הוא המלה העברית למעמד הזה.
 
 ### 121
@@ -816,6 +816,6 @@
 
 ### 128
 `{m}piḫa-LÚ [{LÚ}DUB.SAR?] PĀNI {m}UR.MAḪ-LÚ? GAL DU[B.SAR{M]}EŠ IŠṬU[R]`
-> פִּיחָה־זִיטִי [הסופר?] כתב, לפני וַלְוַה־זִיטִי?, שַׂר הסופרים.
-- **פירוק:** `{m}piḫa-LÚ` – Piḫa-ziti (LÚ = Luwian *ziti-* "man"), personal name ("פִּיחָה־זִיטִי"); `[{LÚ}DUB.SAR?]` – "scribe", restored ("[הסופר?]"); `PĀNI` – PĀNI (Akkadogram) "before, in the presence of" ("לפני"); `{m}UR.MAḪ-LÚ?` – Walwa-ziti (UR.MAḪ "lion" = Luwian *walwa-*) ("וַלְוַה־זִיטִי?"); `GAL DU[B.SAR{M]}EŠ` – "chief of the scribes" ("שַׂר הסופרים", as HLPT col1); `IŠṬU[R]` – IŠṬUR (Akkadogram, *šaṭāru*) "wrote" ("כתב").
+> פִּיחָה־זִיטִי [הסופר?] כתב, לפני וַלְוַה־זִיטִי?, שַׂר הס[ופר]ים.
+- **פירוק:** `{m}piḫa-LÚ` – Piḫa-ziti (LÚ = Luwian *ziti-* "man"), personal name ("פִּיחָה־זִיטִי"); `[{LÚ}DUB.SAR?]` – "scribe", restored ("[הסופר?]"); `PĀNI` – PĀNI (Akkadogram) "before, in the presence of" ("לפני"); `{m}UR.MAḪ-LÚ?` – Walwa-ziti (UR.MAḪ "lion" = Luwian *walwa-*) ("וַלְוַה־זִיטִי?"); `GAL DU[B.SAR{M]}EŠ` – "chief of the scribes" ("שַׂר הס[ופר]ים", as HLPT col1; DU[B.SAR.M]EŠ half-restored); `IŠṬU[R]` – IŠṬUR (Akkadogram, *šaṭāru*) "wrote" ("כתב").
 - **הערות:** הסופר וממונהו: הלוח נכתב בבית הספר של חתושה, תחת עינו של שר הסופרים. השמות כתובים בסימני־מלה (LÚ, UR.MAḪ), וקריאתם בלוּוִית היא השערה מקובלת.

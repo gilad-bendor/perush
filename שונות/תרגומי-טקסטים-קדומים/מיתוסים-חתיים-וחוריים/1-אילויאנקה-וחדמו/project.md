@@ -170,3 +170,4 @@ years: context lost), 29:7 (IB = Uraš). The order of fragments 2–29 is HPM's,
 - 2026-10-30: base secured, renderings fixed, brief written (the coordinator).
 - 2026-10-30: translator 1, part 2: HE 2:1–29:15 drafted (no review passes yet).
 - 2026-10-30: translator 1, part 1: IL 1–128 and HE 1:1–1:128 drafted (no review passes yet).
+- 2026-10-31: review pass (a) fidelity – 36 lines changed (IL 115, 120, 128; HE 1:12, 1:33, 1:61, 2:5, 3:7, 4:17, 4:18, 4:20, 5:21, 6:8, 6:23, 7:10, 8:3, 8:20, 8:21, 8:30, 8:32, 8:39, 11:3, 16:8, 20:4, 20:10, 20:19, 21:9, 27:18, 27:23; KU 64, 117, 118, 125, 141, 168, 272).

@@ -65,8 +65,8 @@
 
 ### 1:12
 `tiyat?=⸢ma⸣ [ ... ] ⸢GE6-i⸣ KI-pi GAM-anda`
-> ו[הוא] צעד? […] מטה, אל האדמה האפלה.
-- **פירוק:** `tiyat?=ma` – tiya- "step, go", pret. 3sg? + =ma ("ו[הוא] צעד?"); `GE6-i KI-pi` – GE₆ "dark" + KI (*tekan*) "earth", d.-l. ("אל האדמה האפלה", F37); `GAM-anda` – kattanda "down into" ("מטה").
+> וצעד? […] מטה, אל האדמה האפלה.
+- **פירוק:** `tiyat?=ma` – tiya- "step, go", pret. 3sg? + =ma ("וצעד?"); `GE6-i KI-pi` – GE₆ "dark" + KI (*tekan*) "earth", d.-l. ("אל האדמה האפלה", F37); `GAM-anda` – kattanda "down into" ("מטה").
 - **תרגומים:** HPM: "Er trat? aber [ ... ] in die dunkle Erde hinab." – כמונו.
 - **הקבלה:** [equivalent] שאול המקראית – "האדמה האפלה" היא העולם התחתון, מקום המתים והאלים הקדמונים; המלה `שאול` אינה באה בשורה (שמורה), וההשוואה בהערה בלבד.
 - **הערות:** **האדמה האפלה** (*dankui- tekan*, כאן בסומרוגרמות GE₆ KI) – כינוי העולם התחתון בשירי חורי: ה"אדמה" שמתחת לארץ. אין בשורה עצמה שם, והנושא שבור: לפי ההקשר (15–21: אינו אוכל ואינו שותה) – אולי קומרבי, אולי אל אחר.
@@ -186,8 +186,8 @@
 
 ### 1:33
 `[n]u=za PĀNI ZI-ŠU memiškiuwan [dāiš]`
-> [ו]החל לומר אל נפשו:
-- **פירוק:** `[n]u=za` – nu + =z(a) ("[ו]"); `PĀNI ZI-ŠU` – PĀNI "before" + ZI "soul, mind" + -ŠU "his" ("אל נפשו", F32); `memiškiuwan [dāiš]` – memai- "speak", iterative supine + dai- "began", restored ("החל לומר", F30).
+> [והחל] לומר אל נפשו:
+- **פירוק:** `[n]u=za` – nu + =z(a) ("[ו]"); `PĀNI ZI-ŠU` – PĀNI "before" + ZI "soul, mind" + -ŠU "his" ("אל נפשו", F32); `memiškiuwan [dāiš]` – memai- "speak", iterative supine + dai- "began", restored ("[החל] לומר", F30).
 - **הקבלה:** [equivalent] `וַיֹּאמֶר יְהוָה אֶל לִבּוֹ` (בראשית ח:כא) – הדיבור הפנימי של האל. בעברית המקראית "אל לבו", בחתית "לפני נפשו" (ZI).
 - **הערות:** הנוסחה של שירי חורי למחשבה: האל "מדבר לפני נפשו". המקור *PĀNI ZI-ŠU* "לפני נפשו" ולא *ANA ZI-ŠU* "אל נפשו", אבל הנוסחה אחת, וכך העברית (F32).
 
@@ -344,8 +344,8 @@
 
 ### 1:61
 `nu wezzi=ma {d}GAŠAN-iš {d}ḫepatušš=a [{NA4}A]RA5 apāšila mallanzi`
-> ואשתר וחֶבַּת גם הן יבואו, ובאבן [הרחיים] בעצמן יטחנו."
-- **פירוק:** `nu` – ("ו־"); `wezzi=ma` – uwa- "come", pres.-fut. 3sg + =ma ("גם הן יבואו"); `{d}GAŠAN-iš` – GAŠAN "lady" = Ištar (D: `{d}IŠTAR-iš`), nom. ("אשתר"); `{d}ḫepatušš=a` – Ḫebat, nom. + =a "and" ("וחֶבַּת"); `[{NA4}A]RA5` – NA₄.ARA₅ "millstone" ("ובאבן [הרחיים]"); `apāšila` – apašila "themselves" ("בעצמן"); `mallanzi` – malla- "grind", pres.-fut. 3pl ("יטחנו").
+> ויבואו אשתר וחֶבַּת, ובאבן [הרחיים] בעצמן יטחנו."
+- **פירוק:** `nu` – ("ו־"); `wezzi=ma` – uwa- "come", pres.-fut. 3sg + =ma ("ויבואו"; =ma not rendered); `{d}GAŠAN-iš` – GAŠAN "lady" = Ištar (D: `{d}IŠTAR-iš`), nom. ("אשתר"); `{d}ḫepatušš=a` – Ḫebat, nom. + =a "and" ("וחֶבַּת"); `[{NA4}A]RA5` – NA₄.ARA₅ "millstone" ("ובאבן [הרחיים]"); `apāšila` – apašila "themselves" ("בעצמן"); `mallanzi` – malla- "grind", pres.-fut. 3pl ("יטחנו").
 - **הקבלה:** [equivalent] `עַד בְּכוֹר הַשִּׁפְחָה אֲשֶׁר אַחַר הָרֵחָיִם` (שמות יא:ה); `קְחִי רֵחַיִם וְטַחֲנִי קָמַח` (ישעיהו מז:ב) – הטחינה ברחיים היא עבודת השפחה הנמוכה, ובישעיהו – סימן להשפלת הגבירה. כך כאן: המלכות האלוהיות תטחנה בעצמן.
 - **הערות:** **חבת** – אשת אל הסערה החורי. בני אדם בשביל האלים: האיש חורש, האשה טוחנת – חלוקת העבודה של בית חקלאי, שהאלים יאלצו לעשות בעצמם. *wezzi* ביחיד עם שני נושאים – כמו בעברית ("ותבוא … וחבת").
 
@@ -759,8 +759,8 @@
 
 ### 2:5
 `{MUŠ}ḫedammun=ma=ka[n ... menaḫḫand]a šallanuškanzi`
-> ואת חֶדַמּוּ […] מגדלים לנוכח […].
-- **פירוק:** `{MUŠ}ḫedammun=ma=ka[n` – Ḫedammu, acc. + =ma + =kan ("ואת חֶדַמּוּ"); `menaḫḫand]a` – menaḫḫanda "facing, opposite" ("לנוכח"); `šallanuškanzi` – šallanu- "rear, make great", iterative pres. 3pl ("מגדלים").
+> ואת חֶדַמּוּ […] [לנוכח] מגדלים.
+- **פירוק:** `{MUŠ}ḫedammun=ma=ka[n` – Ḫedammu, acc. + =ma + =kan ("ואת חֶדַמּוּ"); `menaḫḫand]a` – menaḫḫanda "facing, opposite" ("[לנוכח]"); `šallanuškanzi` – šallanu- "rear, make great", iterative pres. 3pl ("מגדלים").
 - **הערות:** *šallanu-* "לגדל" (M2 `גִּדֵּל`). [היתר שער: מגדלים – בינוני של `גִּדֵּל` (*šallanu-*), לא שם העצם] הנחש מגודל כילד, בידי אומנות (אלות?); בשיר הוא נולד לקומרבי מבת הים.
 
 ### 2:6
@@ -890,7 +890,7 @@
 
 ### 3:7
 `[n]u=šši=kan kāšti [peran ... ]`
-> ו[…] לו – מפני הרעב […]
+> ו[…] לו – [מפני] הרעב […]
 - **פירוק:** `[n]u=šši=kan` – nu + =šši "to him" ("ו … לו"); `kāšti` – kašt- "hunger", d.-l. ("הרעב"); `[peran` – peran "before, because of", restored ("[מפני]").
 
 ### 3:8
@@ -1022,15 +1022,15 @@
 
 ### 4:17
 `nu=za BIL.ZA.ZA ḫarziyalušš=a GU7-ezzi`
-> ואוכל צפרדעים ולטאות?.
-- **פירוק:** `nu=za` – ("ו־"); `BIL.ZA.ZA` – "frog" ("צפרדעים"); `ḫarziyalušš=a` – ḫarziyala- + =a ("ולטאות?"); `GU7-ezzi` – GU₇ (*ed-*) "eat", pres. 3sg ("ואוכל").
+> ואוכל צפרדעים ושבלולים?.
+- **פירוק:** `nu=za` – ("ו־"); `BIL.ZA.ZA` – "frog" ("צפרדעים"); `ḫarziyalušš=a` – ḫarziyala- "snail?" (HPM; as 2:16) + =a ("ושבלולים?"); `GU7-ezzi` – GU₇ (*ed-*) "eat", pres. 3sg ("ואוכל").
 
 ## קטע 4 (CTH 348.I.4), §4″ – אשתר מציגה את גופה העירום
 
 ### 4:18
 `[{d}IŠTAR-i]š ANA {MUŠ}ḫedammu memiškiuwan daiš`
-> אִשְׁתַּר החלה לומר אל חֶדַמּוּ:
-- **פירוק:** `[{d}IŠTAR-i]š` – ("אִשְׁתַּר"); `ANA {MUŠ}ḫedammu` – ("אל חֶדַמּוּ"); `memiškiuwan daiš` – ("החלה לומר", F30).
+> [אִשְׁתַּר] החלה לומר אל חֶדַמּוּ:
+- **פירוק:** `[{d}IŠTAR-i]š` – ("[אִשְׁתַּר]"); `ANA {MUŠ}ḫedammu` – ("אל חֶדַמּוּ"); `memiškiuwan daiš` – ("החלה לומר", F30).
 
 ### 4:19
 `šarā=kan namma e[ḫu]`
@@ -1039,8 +1039,8 @@
 
 ### 4:20
 `⸢nu=kan⸣ daššawa[z A{Ḫ]}I.A-naza [ ... t]arrawašš=a takšan? ištarna? eḫu`
-> ובוא [מן] המים [העזים], מבין […] והאדירים!"
-- **פירוק:** `nu=kan` – ("ו־"); `daššawa[z A{Ḫ]}I.A-naza` – "from the strong waters" ("[מן] המים [העזים]"); `t]arrawašš=a` – tarrawa- "mighty" + =a ("והאדירים"); `takšan? ištarna?` – "in the middle, between" ("מבין"); `eḫu` – ("ובוא").
+> ובוא [מן] המים העזים, מבין […] והאדירים!"
+- **פירוק:** `nu=kan` – ("ו־"); `daššawa[z A{Ḫ]}I.A-naza` – "from the strong waters" ("[מן] המים העזים"); `t]arrawašš=a` – tarrawa- "mighty" + =a ("והאדירים"); `takšan? ištarna?` – "in the middle, between" ("מבין"); `eḫu` – ("ובוא").
 - **תרגומים:** HPM: "Komm in der Mitte zwischen [ ... ] und den [M]ächtigen au[s] den schwere[n Wass]ern herbei!" – כמונו.
 
 ### 4:21
@@ -1303,8 +1303,8 @@
 
 ### 5:21
 `[{UR]}Unē[nuwaš MUNUS.LUGAL-aš ... memi]škiuwan dāiš`
-> [מלכת נ]ינְוֵה [… החלה ל]ומר:
-- **פירוק:** `[{UR]}Unē[nuwaš MUNUS.LUGAL-aš` – ("[מלכת נ]ינְוֵה"); `memi]škiuwan dāiš` – ("[החלה ל]ומר", F30).
+> [מלכת נ]ינְוֵה […] החלה [ל]ומר:
+- **פירוק:** `[{UR]}Unē[nuwaš MUNUS.LUGAL-aš` – ("[מלכת נ]ינְוֵה"); `memi]škiuwan dāiš` – ("החלה [ל]ומר", F30).
 
 ### 5:22
 `kuwat=za UL ez[atti ... ]`
@@ -1422,7 +1422,7 @@
 
 ### 6:8
 `[ ... tak]nī kattanta pai[t]`
-> […] אל האר]ץ מטה הלך.
+> [… אל האר]ץ מטה הלך.
 - **פירוק:** `tak]nī` – tekan, d.-l. ("[אל האר]ץ"); `kattanta` – "down" ("מטה"); `pai[t]` – ("הלך").
 
 ## קטע 6 (CTH 348.I.6), §2′ – הים מזמין את קומרבי לביתו
@@ -1503,8 +1503,8 @@
 
 ### 6:23
 `[nu=k]an GAL-in arunan {d}ku[ma]rbiyaza É-erza IŠTU [ ... a]rkammiyaza [galgaltū]riyaza ZABAR U IŠTU BIBRÎ{ḪI.A} ⸢ZABAR⸣ [pa]rā uwat[er]`
-> [ו]את הים הגדול – מבית קומרבי, ב[כינו]ר, ובמצלתיים? של אָרָד ובריטונים של ארד – הוציאו.
-- **פירוק:** `[nu=k]an` – ("[ו]"); `GAL-in arunan` – "the great sea", acc. ("את הים הגדול"); `{d}ku[ma]rbiyaza É-erza` – "from Kumarbi's house" ("מבית קומרבי"); `IŠTU [ ... a]rkammiyaza` – IŠTU "with" + arkammi- "lyre" (HPM "Leier"), abl. ("ב[כינו]ר"); `[galgaltū]riyaza ZABAR` – galgalturi- "cymbal?" + "bronze" ("ובמצלתיים? של אָרָד"); `U IŠTU BIBRÎ{ḪI.A} ZABAR` – "and with bronze rhyta" ("ובריטונים של ארד"); `[pa]rā uwat[er]` – parā uwate- "bring forth", pret. 3pl ("הוציאו").
+> [ו]את הים הגדול – מבית קומרבי, ב[כינו]ר, וב[מצלתיים?] של אָרָד ובריטונים של ארד – הוציאו.
+- **פירוק:** `[nu=k]an` – ("[ו]"); `GAL-in arunan` – "the great sea", acc. ("את הים הגדול"); `{d}ku[ma]rbiyaza É-erza` – "from Kumarbi's house" ("מבית קומרבי"); `IŠTU [ ... a]rkammiyaza` – IŠTU "with" + arkammi- "lyre" (HPM "Leier"), abl. ("ב[כינו]ר"); `[galgaltū]riyaza ZABAR` – galgalturi- "cymbal?" + "bronze" ("וב[מצלתיים?] של אָרָד"); `U IŠTU BIBRÎ{ḪI.A} ZABAR` – "and with bronze rhyta" ("ובריטונים של ארד"); `[pa]rā uwat[er]` – parā uwate- "bring forth", pret. 3pl ("הוציאו").
 
 ### 6:24
 `[ ... IN]A É-ŠU arḫa pēḫuter`
@@ -1639,8 +1639,8 @@
 
 ### 7:10
 `{d}kumarbi=za PĀNI ZI-ŠU mem[iškiuwan dāiš]`
-> קומרבי החל [לומר] אל נפשו:
-- **פירוק:** `{d}kumarbi=za` – ("קומרבי"); `PĀNI ZI-ŠU` – ("אל נפשו", F32); `mem[iškiuwan dāiš]` – ("החל [לומר]", F30).
+> קומרבי [החל לומר] אל נפשו:
+- **פירוק:** `{d}kumarbi=za` – ("קומרבי"); `PĀNI ZI-ŠU` – ("אל נפשו", F32); `mem[iškiuwan dāiš]` – ("[החל לומר]", F30).
 
 ### 7:11
 `ūk {d}kumarbin DUMU {d}A[NIM? ... ]`
@@ -1703,7 +1703,7 @@
 
 ### 8:3
 `pāwe[ni]`
-> נלך […]
+> נלך.
 - **פירוק:** `pāwe[ni]` – pai- "go", pres. 1pl ("נלך").
 
 ### 8:4
@@ -1786,14 +1786,14 @@
 
 ### 8:20
 `{d}IŠTAR-i[š A-NA {MUŠ}ḫed]ammu IGI-anda NÍ.TE{MEŠ} nekumanta šarā ēpt[a]`
-> אשתר [מול חד]מו את איבריה העירומים הרימה מעלה.
-- **פירוק:** `{d}IŠTAR-i[š` – ("אשתר"); `A-NA {MUŠ}ḫed]ammu IGI-anda` – ("[מול חד]מו"); `NÍ.TE{MEŠ} nekumanta` – "naked limbs" ("את איבריה העירומים"); `šarā ēpt[a]` – šarā "up" + epp- "hold", pret. 3sg ("הרימה מעלה").
+> אשתר [מול חד]מו את איבריה העירומים החזיקה מעלה.
+- **פירוק:** `{d}IŠTAR-i[š` – ("אשתר"); `A-NA {MUŠ}ḫed]ammu IGI-anda` – ("[מול חד]מו"); `NÍ.TE{MEŠ} nekumanta` – "naked limbs" ("את איבריה העירומים"); `šarā ēpt[a]` – šarā "up" + epp- "hold", pret. 3sg ("החזיקה מעלה"; not `הרים`, the word of karp-).
 - **הערות:** כמו 4:23 (שם בהווה, "מושיטה קדימה"). העירום הוא נשקה של האלה.
 
 ### 8:21
 `[{MU]}Šḫedammuš INIM{MEŠ}-ar {d}IŠTAR-li EGIR-pa memi[škiuwan dāiš]`
-> חֶדַמּוּ החל להשיב את הדברים אל אשתר:
-- **פירוק:** `[{MU]}Šḫedammuš` – ("חֶדַמּוּ"); `INIM{MEŠ}-ar` – ("את הדברים"); `{d}IŠTAR-li` – Ištar, d.-l. ("אל אשתר"); `EGIR-pa memi[škiuwan dāiš]` – ("החל להשיב", F31).
+> חֶדַמּוּ [החל] להשיב את הדברים אל אשתר:
+- **פירוק:** `[{MU]}Šḫedammuš` – ("חֶדַמּוּ"); `INIM{MEŠ}-ar` – ("את הדברים"); `{d}IŠTAR-li` – Ištar, d.-l. ("אל אשתר"); `EGIR-pa memi[škiuwan dāiš]` – ("[החל] להשיב", F31).
 
 ### 8:22
 `[zi]kk=a=za kwiš DINGIR-LIM-iš`
@@ -1837,8 +1837,8 @@
 
 ### 8:30
 `[{MUŠ}ḫ]edammuš INIM{MEŠ}-ar ANA {d}IŠTAR memiš[kiuwan dāiš]`
-> חֶדַמּוּ החל לומר את הדברים אל אשתר:
-- **פירוק:** `[{MUŠ}ḫ]edammuš` – ("חֶדַמּוּ"); `INIM{MEŠ}-ar` – ("את הדברים"); `ANA {d}IŠTAR` – ("אל אשתר"); `memiš[kiuwan dāiš]` – ("החל לומר", F30).
+> חֶדַמּוּ [החל] לומר את הדברים אל אשתר:
+- **פירוק:** `[{MUŠ}ḫ]edammuš` – ("חֶדַמּוּ"); `INIM{MEŠ}-ar` – ("את הדברים"); `ANA {d}IŠTAR` – ("אל אשתר"); `memiš[kiuwan dāiš]` – ("[החל] לומר", F30).
 
 ### 8:31
 `kwiš=za MUNUS-naš zik`
@@ -1847,8 +1847,8 @@
 
 ### 8:32
 `{d}IŠTAR-iš ANA {MUŠ}ḫed[ammu EGIR-pa] memiškiuwan dāiš`
-> אשתר [החלה] להשיב אל חֶדַ[מּוּ]:
-- **פירוק:** `{d}IŠTAR-iš` – ("אשתר"); `ANA {MUŠ}ḫed[ammu` – ("אל חֶדַ[מּוּ]"); `EGIR-pa] memiškiuwan dāiš` – ("[החלה] להשיב", F31).
+> אשתר החלה [להשיב] אל חֶדַ[מּוּ]:
+- **פירוק:** `{d}IŠTAR-iš` – ("אשתר"); `ANA {MUŠ}ḫed[ammu` – ("אל חֶדַ[מּוּ]"); `EGIR-pa] memiškiuwan dāiš` – ("החלה [להשיב]", F31).
 
 ### 8:33
 `ammuk=za {MUNUS}KI.SIKIL ḫarš[alanza?]`
@@ -1883,8 +1883,8 @@
 
 ### 8:39
 `{MUŠ}ḫedammuš {d}IŠTAR-li mem[iškiuwan dāiš]`
-> חֶדַמּוּ החל [לומר] אל אשתר:
-- **פירוק:** `{MUŠ}ḫedammuš` – ("חֶדַמּוּ"); `{d}IŠTAR-li` – ("אל אשתר"); `mem[iškiuwan dāiš]` – ("החל [לומר]", F30).
+> חֶדַמּוּ [החל לומר] אל אשתר:
+- **פירוק:** `{MUŠ}ḫedammuš` – ("חֶדַמּוּ"); `{d}IŠTAR-li` – ("אל אשתר"); `mem[iškiuwan dāiš]` – ("[החל לומר]", F30).
 
 ### 8:40
 `kwiš=za MUNUS-naš`
@@ -2153,8 +2153,8 @@
 
 ### 11:3
 `{MUŠ}ḫedamm[uš {d}IŠ]TAR-li memi[škiuwan dāiš]`
-> חֶדַמּוּ החל [לומר] אל אִשְׁתַּר:
-- **פירוק:** `{MUŠ}ḫedamm[uš` – ("חֶדַמּוּ"); `{d}IŠ]TAR-li` – Ištar, d.-l. ("אל אִשְׁתַּר"); `memi[škiuwan dāiš]` – ("החל [לומר]", F30).
+> חֶדַמּוּ [החל לומר] אל אִשְׁתַּר:
+- **פירוק:** `{MUŠ}ḫedamm[uš` – ("חֶדַמּוּ"); `{d}IŠ]TAR-li` – Ištar, d.-l. ("אל אִשְׁתַּר"); `memi[škiuwan dāiš]` – ("[החל לומר]", F30).
 - **הערות:** כמו 8:39.
 
 ### 11:4
@@ -2517,8 +2517,8 @@
 
 ### 16:8
 `[a]uriyaš=kan [ ... ]`
-> [מן] המצפה […]
-- **פירוק:** `[a]uriyaš=kan` – auri- "lookout, watchtower", gen./abl. ("[מן] המצפה").
+> של המצפה […]
+- **פירוק:** `[a]uriyaš=kan` – auri- "lookout, watchtower", gen. ("של המצפה").
 - **הערות:** *auri-* "מצפה" – `מגדל` שמור (בראשית יא:ד).
 
 ### 16:9
@@ -2663,8 +2663,8 @@
 
 ### 20:4
 `[n]=an išḫ[a- ... ]`
-> ואותו [האד]ון? […]
-- **פירוק:** `[n]=an` – ("ואותו"); `išḫ[a-` – išḫa- "lord"? ("[האד]ון?").
+> ואותו האד[ון?] […]
+- **פירוק:** `[n]=an` – ("ואותו"); `išḫ[a-` – išḫa- "lord"? ("האד[ון?]").
 
 ### 20:5
 `[ ... u]ttar ištama-[ _ ]`
@@ -2694,8 +2694,8 @@
 
 ### 20:10
 `[n]=aš karūššiyattat=pat`
-> והוא השתתק.
-- **פירוק:** `[n]=aš` – ("והוא"); `karūššiyattat=pat` – karuššiya- "be silent", pret. 3sg mid. + =pat ("השתתק").
+> והוא השתתק כליל.
+- **פירוק:** `[n]=aš` – ("והוא"); `karūššiyattat=pat` – karuššiya- "be silent", pret. 3sg mid. + =pat ("השתתק כליל").
 - **תרגומים:** HPM: "Er war ganz gleichgültig" – אנו לפי משמעות הפועל, "שתק".
 
 ### 20:11
@@ -2741,8 +2741,8 @@
 
 ### 20:19
 `[{d}k]umarbiš uddār {d}10-ni EGI[R-pa memiškiuwan dāi]š`
-> קומרבי החל להשיב את הדברים אל אֵל הַסְּעָרָה:
-- **פירוק:** `[{d}k]umarbiš` – ("קומרבי"); `uddār` – ("את הדברים"); `{d}10-ni` – ("אל אֵל הַסְּעָרָה"); `EGI[R-pa memiškiuwan dāi]š` – ("החל להשיב", F31).
+> קומרבי [החל להשיב] את הדברים אל אֵל הַסְּעָרָה:
+- **פירוק:** `[{d}k]umarbiš` – ("קומרבי"); `uddār` – ("את הדברים"); `{d}10-ni` – ("אל אֵל הַסְּעָרָה"); `EGI[R-pa memiškiuwan dāi]š` – ("[החל להשיב]", F31).
 
 ### 20:20
 `{ḪUR.SAG}ḫūršanaza=kan [ ... ]`
@@ -2798,8 +2798,8 @@
 
 ### 21:9
 `[n]=aš=ši=kan KILĪLU [ ... ] GUŠKIN [ ... ]`
-> ו[שמו] לו עֲטָרָה […] של זהב […]
-- **פירוק:** `[n]=aš=ši=kan` – ("ו … לו"); `KILĪLU` – KILĪLU (Akkadogram) "wreath, crown" ("עֲטָרָה"); `GUŠKIN` – "gold" ("של זהב").
+> והוא – לו עֲטָרָה […] של זהב […]
+- **פירוק:** `[n]=aš=ši=kan` – ("והוא – לו"; the verb is lost); `KILĪLU` – KILĪLU (Akkadogram) "wreath, crown" ("עֲטָרָה"); `GUŠKIN` – "gold" ("של זהב").
 
 ### 21:10
 `[ ... ] {d}kumarbiš {LÚ}ḫal[ukattalla- ... ]`
@@ -3427,8 +3427,8 @@
 
 ### 27:18
 `[{d}mukiš]anuš uddār ANA {d}kumarbi memi[škiwan daiš]`
-> [מוקיש]נו החל לומר את הדברים אל קומרבי:
-- **פירוק:** `[{d}mukiš]anuš` – ("[מוקיש]נו"); `uddār` – ("את הדברים"); `ANA {d}kumarbi` – ("אל קומרבי"); `memi[škiwan daiš]` – ("החל לומר", F30).
+> [מוקיש]נו [החל] לומר את הדברים אל קומרבי:
+- **פירוק:** `[{d}mukiš]anuš` – ("[מוקיש]נו"); `uddār` – ("את הדברים"); `ANA {d}kumarbi` – ("אל קומרבי"); `memi[škiwan daiš]` – ("[החל] לומר", F30).
 
 ### 27:19
 `[piy]at=mu kuwapi`
@@ -3453,8 +3453,8 @@
 
 ### 27:23
 `[{d}kum]arbiš uddār ANA {d}muki[šanu memiškiwan daiš]`
-> קומרבי החל לומר את הדברים אל מוּקִי[שָׁנוּ]:
-- **פירוק:** `[{d}kum]arbiš uddār` – ("קומרבי … את הדברים"); `ANA {d}muki[šanu` – ("אל מוּקִי[שָׁנוּ]"); `memiškiwan daiš]` – ("החל לומר", F30).
+> קומרבי [החל לומר] את הדברים אל מוּקִי[שָׁנוּ]:
+- **פירוק:** `[{d}kum]arbiš uddār` – ("קומרבי … את הדברים"); `ANA {d}muki[šanu` – ("אל מוּקִי[שָׁנוּ]"); `memiškiwan daiš]` – ("[החל לומר]", F30).
 
 ### 27:24
 `[ ... -z]i?`
