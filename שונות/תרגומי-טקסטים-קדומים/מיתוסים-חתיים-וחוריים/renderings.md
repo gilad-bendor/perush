@@ -116,6 +116,60 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | *tuppa-* (Zalpa's "chests, containers") | **אַרְגָּז** (pl. `אַרְגָּזִים`) | `תֵּבָה`, `סַל`, `קֻפָּה` (reserved / other corpora's) | [equivalent] ↔ `וַתִּקַּח לוֹ תֵּבַת גֹּמֶא` (שמות ב:ג) | Check the transliteration: *tuppuš šakanda šunnaš* "filled the containers with fat". |
 | *šakan* / Ì "fat, oil" | **שֻׁמָּן** | `זֶפֶת`, `חֵמָר` (reserved) | [divergence] ↔ `וַתַּחְמְרָה בַחֵמָר וּבַזָּפֶת` (שמות ב:ג) | (the Laws' {UZU}Ì `שומן`) |
 | GIŠ.ZA.LAM.GAR "tent" | **אֹהֶל** | | [equivalent] ↔ `פֶּתַח הָאֹהֶל` (בראשית יח:א) | EL. |
+| *māḫḫan* … *QĀTAMMA* (the analogy of the spells, TE 132–195, 222) | **`כְּמוֹ שֶׁ… – כָּךְ …`**; with *U* / *-a* / *-ya* "also": **`כָּךְ גַּם …`** | `כך גם X – כך Y` (two `כך` for one *QĀTAMMA*) | | One `כך` per *QĀTAMMA*, at the head of the second clause; no `כך` where the line has no *QĀTAMMA* (TE 217, 241: `גם …`). Fixed in the consistency pass, 2026-10-31. |
+| *ḫandai-* "arrange, prepare"; *išḫuwai-* "scatter, strew"; *epp-* "seize, hold"; *karaš* / ZÍZ "emmer"; {DUG}*palḫi-* "cauldron"; *iya-* mid. "march"; *šanezzi-* "pleasant"; *mekki* "much" | **עָרַךְ**; **זָרָה**; **תָּפַס**; **כֻּסֶּמֶת**; **דּוּד**; **הִתְקַדֵּם**; **נָעִים**; **הַרְבֵּה** / **לָרֹב** / **רַבָּה** | `הֵכִין`; `פִּזֵּר` (the rituals' *šuḫḫai-*), `עָרַם`; `אָחַז`; `תְּבוּאָה` (that is *ḫalki-*); `כְּלִי`; `הָלַךְ` (that is *pai-*); `מָתוֹק` (*mili(t)-*), `מֻבְחָר`; `שֶׁפַע` (that is *iyatar*) | | Unified across the nine texts in the consistency pass, 2026-10-31 (the rituals' precedents: AM *ḫalkin karaš išḫuwaḫḫi* `תבואה (ו)כוסמת אני זורה`; HL2 ZÍZ `כוסמת`). The epithet {D}10 *kummiyaš* UR.SAG-*iš* LUGAL-*uš* = `אֵל הַסְּעָרָה שֶׁל קוּמֶּה, הַמֶּלֶךְ הַגִּבּוֹר` (the Hittite order; unvocalized `הגבור`, not `הגיבור`). |
+
+**Partial restorations (the corpus rule, consistency pass 2026-10-31).** A word restored only in a sign or an ending, whose
+meaning-bearing stem is preserved, is not bracketed (`memišk[anzi]` = `אומרים`, UL 3.1:41; `U]R.SAG-in` = `הגבור`, HE 10:7); a word whose stem is restored is bracketed whole
+(`[ … memiyauwa]nzi` = `[לומר]`, HE 9:9; `[mekki ḫand]āet` = `[הרבה ערך]`, HE 27:13), not split inside the Hebrew word
+(`[… לדב]ר` → `[לומר]`). A bracket must never split a reserved or ★ word past the gate or the vocalization check: `מדב[רים`
+(UL 3.1:41) is now `אומרים`; a half-bracketed ★ name is vocalized all the same (`[ואילו מקוּ]מֶּה`, HE 27:9; `תַּ[שְׁמִישׁוּ]`,
+UL 2:160; `[תַּשְׁמִי]שׁוּ`, UL 3.1:87).
+
+## M3. Splits kept (consistency pass, 2026-10-31)
+Every Hittite word below has more than one Hebrew word (or one Hebrew word serves more than one Hittite word) **on purpose**;
+every other split found by the pass was unified (M2 above; the lines are listed in each project's Progress). Homonyms are two
+words, not a split: *arai-* "rise" `קָם` / "stop" `עָצַר` (UL 3.1:35, TE 157–161, 219–222); *ar-* "arrive" `הִגִּיעַ` / *ar-*
+mid. "stand" `עָמַד`; *eš-* "sit" `יָשַׁב` / "be" `הָיָה`; *ḫark-* "hold" `הֶחֱזִיק` / "perish" `אָבַד`; *ḫaš-* "give birth"
+`יָלְדָה` / "open" `פָּתַח` (TE 233); *wašš-* "clothe" `הִלְבִּישׁ` / "buy" `קָנָה`; *tarna-* "let go" `שִׁלַּח` / "skull"
+`קָדְקֹד`; *šeš-* A "sleep" `שָׁכַב` / B "prosper" `שִׂגְשֵׂג` (IL 4, 6); *peda-* "carry" `נָשָׂא` / *pedan* "place" `מָקוֹם`.
+
+| Hittite | Hebrew A (texts) | Hebrew B (texts) | Why |
+|---|---|---|---|
+| *tekan* / KI "earth" | `אֶרֶץ` – the cosmic earth, "heaven and earth" (HE 1:10, 1:73, KU 72, UL) | `אֲדָמָה` – the netherworld's ground: F37 `הָאֲדָמָה הָאֲפֵלָה` (all), *taknaš* {D}UTU `אֵלַת־הַשֶּׁמֶשׁ שֶׁל הָאֲדָמָה` (SR, TE 232, EL), *taknaš ḫattalu* `בריח האדמה` (SR 13.2.6) | M2 (F37): the ground into which the dead go is kept apart from the cosmic `אֶרֶץ`. *daganzipa-* "the ground" (UL 2:90, 3.1:28, 3.1:217; HE 5:27) shares `אֲדָמָה`; *utne-* / KUR "land" shares `אֶרֶץ` (IL 4–5, AP 1:7): Hebrew `אֶרֶץ` is both "earth" and "land". |
+| *memai-* / *mema-* / *memišk-*, *te-*, *tar-* "say" | `אָמַר` (all) | – | One Hebrew for the Hittite synonyms of "say", as the Laws and rituals; `דִּבֵּר` is never a verb here (`מדבר` reserved, brief §3; KU 51, HE 9:9 unified to `לומר`). The noun `דָּבָר` = *uttar* / INIM / *memiya(n)-* (two Hittite nouns of "word, matter"). |
+| *daššu-* "strong, mighty" | `עַז` – gods, waters, strife (KU 11, 22; HE 4:11 `מים עזים`, Isa 43:16; HE 29:10; UL 1:227–228) | `חָזָק` – things: KALAG.GA (= *daššu-*) stones (UL 2:121, 2:140), as the Laws and rituals | Sense: might of persons and forces / physical strength. |
+| *piddai-* "run, flee" | `רָץ` (UL 2:41, 2:46, 3.1:130) | `נָס` with *peran arḫa* "flee from" (KU 17, 30); `עָף` of a bird (EL 1.2:18) | Preverb and subject (translators 2, 4). |
+| *ḫuwai-* "run, flee, spread" | `בָּרַח` (SR) | `רָץ` "run after" (HE 9:17, sharing *piddai-*'s word); `הִתְפַּשֵּׁט` of a plant (TE 30) | Sense. |
+| *šarra-* "divide" | `חָצָה` – the songs (UL 1:159, HE, SR) | `חִלֵּק` – an inheritance (AP 1:119–141), with the Laws | Sense (translator 4). |
+| *tarḫ-* "prevail" | `גָּבַר (עַל)` (IL 9, KU 16, UL 3.1:17, 42) | `יָכֹל` with an infinitive (KU 231, TE 69) | Construction (translator 2). |
+| *kappuwai-* "count; care for" | `סָפַר` (KU 14, 61, 267) | `דָּאַג` (HE, TE 48, 244) | Sense (HPM). |
+| *tarna-* "let go" | `שִׁלַּח` (gated; all) | `הִשְׁאִיר` "leave behind" (EL 2.2:22) | Sense (translator 4); `שלח` stays *tarna-*'s only. |
+| Ì / *šakan* | `שֻׁמָּן` – fat, food ({UZU}Ì; ZA 1.2, AP 1:17, TE 259) | `שֶׁמֶן` – oil for anointing (SR, EL 2.1:19, TE 134, 147) | Sense (translators 3–4; the Laws' {UZU}Ì `שומן`). |
+| *ešri-* | `תֹּאַר` "form" (IL 92) | {SÍG}*ēšri* `גִּיזָה` "fleece" (TE 216) | The determinative (translator 4). |
+| *tešḫa-* / Ù | `שֵׁנָה` "sleep" (HE 4:14, AP 1:30) | `חֲלוֹם` "dream" (EL 1.2:30, 2.2:27, 2.2:32) | Sense. |
+| *wišuriya-* | `נֶחֱנַק` (TE 20–24) | `נִמְעַךְ` (SR) | Sense: stifled / crushed. |
+| ÚŠ / *ḫenkan* | `מַגֵּפָה` – the god's plague (SR 10.4.6; the rituals) | `הַמָּוֶת` – a man's doom (ZA 3.2) | Sense (translator 4). |
+| SISKUR | `מִנְחָה` – the offering given to the gods (HE 1:46, 1:55) | `טֶקֶס` – the ritual (EN SISKUR `אֲדוֹן הַטֶּקֶס`, EL 1.3:7–9; the rituals §R1) | Sense (translator 1; for the lead). |
+| DUMU | `בֵּן` – "son of" (IL, SR 15.10.1, AP; DUMU.NITA, DUMU.MEŠ `בָּנִים`) | `יֶלֶד` – the newborn child (UL 1:99–106, 1:172, 1:190; KU 126, 214) | Sense (translator 2). |
+| *aniya-* | `עָשָׂה` (SR 19.15.1, TE 200) | `טִפֵּל` – a ritual treatment (TE 166) | Sense. `עָשָׂה` is shared with *iya-* / DÙ (synonyms). |
+| *naḫšaratt-* "fear" | `יִרְאָה` (sg., UL 1:52; the *naḫḫ-* family `יָרֵא`, KU 57 `הַמַּטִּיל יִרְאָה`) | `אֵימוֹת` (pl., UL 2:66; Ps 55:5) | Number: `יִרְאָה` has no plural in use (translator 2). |
+| *kištant-* "famine"; *kištuwant-* "hungry" | `כָּפָן` (TE 41, 63, beside *kašt-* `רָעָב` in the same text) | `רָעֵב` (adj., SR 15.4–15.5; HL2's *kišduwant-*) | No Hebrew adjective of `כָּפָן`; *kašt-* "hunger" = `רָעָב` (HE 3:7, UL 1:230, TE 40). |
+| *menaḫḫanda* "facing" | `מוּל` (KU 15–27, UL 1:7–8, HE 2:5, 5:26) | `לִקְרַאת` going to meet (UL 1:55, ZA 4.2); `כְּנֶגֶד` speaking against (SR 16.1.1–3) | Construction. |
+| *ašma* | `רִאשׁוֹנָה` (KU 46, UL 3.1:254) | `הֵן` (ZA 2.7, AP 1:65) | Context (HPM "einst" / "siehe"; translator 4). |
+| *namma* | `עוֹד` (IL 35, 93, 95; TE 222) | `אָז` "then" (EL 1.1:2, 22) | Context (HPM). |
+| *mekki* | `הַרְבֵּה` / `לָרֹב` / `רַבָּה` (IL 13, 106, HE 26:30, 27:13) | `גָּדוֹל` of a person, "a great orator" (SR 16.2.1, 16.2.3) | Sense; both avoid `שֶׁפַע` (*iyatar*). |
+| *ḫali-* | `מִכְלָאָה` "pen" (HE 20:9, IN) | `מִשְׁמֶרֶת` "night watch" (UL 1:91) | Sense. |
+| *kariya-* "cover" | `הִסְתִּיר` (HE) | `עָטוּי` of a table (AP 1:21) | Context (translator 4). |
+| *ḫalugatalla-* / LÚ.KIN.GI₄.A / ṬĒMU | `שָׁלִיחַ` (all) | – | Synonyms of "messenger" (the coordinator, part 1). |
+| *uiya-* / *peya-* / ŠAPĀRU | `שִׁגֵּר` (all) | – | Synonyms of "send" (translator 1; SR). |
+| SI "horn" / *kalmara-* "ray" | `קֶרֶן` (SR / UL 1:211, 1:218) | – | Hebrew `קֶרֶן` is both (Hab 3:4 `קַרְנַיִם מִיָּדוֹ`). |
+| *liliwant-* / *nutarriya-* "swift" | `מָהִיר` (F35, HE 1:85, TE 53 / UL 1:209, 3.1:186, 3.1:215) | – | Synonyms; *nutarriya-* is of the root of *nuntarnu-* `מִהֵר`. |
+| *maz(z)-* | `עָמַד בִּפְנֵי` (KU 28, 47) | IN 14.22 `הֵעֵז` "dare" (law precedent) | Construction (translator 2). |
+| *waḫnu-* | `סוֹבֵב` (UL 1:211, 1:218) | IN `הֵמִיר` (law precedent) | Sense (translator 2). |
+| *ḫarp-* mid. | `הִצְטָרֵף` "join" (IL 20) | the Laws' `נִפְרַד` (with *arḫa*, HL1 170, 379) | Preverb (translator 1). |
+| *ḫarnink-* | `הִשְׁמִיד` (all myths, M2) | the Laws' `הִשְׁחִית` (HL2 107.2) | `השחית` is reserved in the myths (§H3). |
+| *malai-*, *zinna-*, *kanešš-*, *tiya-*, *ḫulla-* | – | – | Unified in this pass: `אִשֵּׁר` (HE 4:10, KU 276), `סִיֵּם` (KU 50), `הִכִּיר` (HE 4:16), `צָעַד` (HE 6:22), `הֵבִיס` (UL 3.1:254). |
 
 ## H2. Names (machine-read; the myth texts only)
 | Source (regex) | Hebrew | ★ | Note |
@@ -272,6 +326,8 @@ finalization (then deletes the rows). This run does not edit the dossier.
 |---|---|---|
 | `ואל הסערה – את כל האלים` | `וְאֵל הַסְּעָרָה – אֶת כָּל הָאֵלִים` | KBo 3.7 i 12 = IL 10 (DINGIR.MEŠ): unvocalized `ואל` / `האלים` read as "and to" / "these"; the Hittite tools' trap (law renderings §H6) requires `אֵל` / `אֵלִים` vocalized in a line with DINGIR. |
 | `ואִינָרָה [… ל]זִיגָּרָתָּה` | `ואִינָרָה [ל]זִיגָּרָתָּה` | KBo 3.7 i 19 = IL 16 (Round 5 run 2, translator 1): the gap between the goddess's name (preserved in KBo 3.7 i and ms D `{d}i-na-ra-a[š`) and the town holds only the preposition (TLHdig `_ (_)`, one or two signs; HPM restores *INA*): the dossier's `[…` suggests a lost word. |
+| `והכינה הכול בשפע:` | `וערכה הכול לָרֹב:` | KBo 3.7 i 14 = IL 13 (consistency pass, 2026-10-31): *ḫandai-* is `עָרַךְ` in every myth text (UL 2:129, 3.1:4, HE 26:30, 27:13, TE 247); *mekki* `לָרֹב` / `הַרְבֵּה` (root רבב, IL 106, HE 26:30) – the dossier's `בשפע` gave *mekki* the root of *iyatar* `שֶׁפַע` (IL 15): two source words in one Hebrew root. |
+| `כלי יין, כלי מַרְנוּוַנְט, כלי וַלְחִי – ובכלים` | `דוד יין, דוד מַרְנוּוַנְט, דוד וַלְחִי – ובדודים` | KBo 3.7 i 15–17 = IL 14–15 (consistency pass, 2026-10-31): {DUG}*palḫi-* is `דּוּד` in HE 27:14 and TE 235 (and IL 33 now); `כלי` is the Hebrew of TUKUL / UNŪTU. |
 
 ## H9. Selftest (myth lines; `hittite_tools.py selftest`)
 | Line | Expect | Hebrew |

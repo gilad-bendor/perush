@@ -748,7 +748,7 @@
 `U ŠA {d}t[elipinu ZI-KA?21] QĀTAMMA militēšt[u?]`
 > כך גם [נפשך?], תֶּ[לִיפִּינוּ], תמתק!
 - **פירוק:** `U ŠA {d}t[elipinu ZI-KA?]` – Akk. u "and" + "your soul, Telipinu" ("כך גם [נפשך?], תֶּ[לִיפִּינוּ]": ZI-KA is restored); `QĀTAMMA` ("כך"); `militēšt[u?]` – militešš- "become sweet", imp. 3sg ("תמתק").
-- **הערות:** נוסחת ההשוואה: *māḫḫan* … *QĀTAMMA* = `כמו ש… – כך …` (U "and": `כך גם`), בכל הלחשים להלן.
+- **הערות:** נוסחת ההשוואה: *māḫḫan* … *QĀTAMMA* = `כמו ש… – כך …`: כל *QĀTAMMA* – `כך` אחד, בראש המשפט השני; עם *U* / *-a* / *-ya* "גם" – `כך גם …` (133–195, 222); ובאין *QĀTAMMA* אין `כך` (217, 241: `גם …` בלבד). (בדיקת העקביות, 2026-10-31: הטיוטה כתבה `כך גם X – כך Y`, שני `כך` ל־*QĀTAMMA* אחד, בשורות 136–195 ו־222, והוסיפה `כך` ב־217, 241.)
 
 ### 134
 `{GIŠ}SERDUM=ma=z māḫḫan Ì-ŠU ŠÀ-it [ḫarzi]`
@@ -762,8 +762,8 @@
 
 ### 136
 `zikk=a {d}telipinu [LUGAL-un?] ištanzanit ŠÀ-it QĀTAMMA āššu ḫar(a)[k]23`
-> כך גם אתה, תֶּלִיפִּינוּ, [את המלך?] בנפשך (ו)בלבך – כך טוב – החזק!
-- **פירוק:** `zikk=a {d}telipinu` – "you too, Telipinu" ("כך גם אתה, תֶּלִיפִּינוּ"); `[LUGAL-un?]` ("[את המלך?]"); `ištanzanit ŠÀ-it` – "with soul (and) heart" ("בנפשך (ו)בלבך"); `QĀTAMMA āššu` ("כך טוב"); `ḫar(a)[k]` – ḫark-, imp. 2sg ("החזק").
+> כך גם אתה, תֶּלִיפִּינוּ, [את המלך?] בנפשך (ו)בלבך בטוב החזק!
+- **פירוק:** `zikk=a {d}telipinu` – "you too, Telipinu" ("כך גם אתה, תֶּלִיפִּינוּ"); `[LUGAL-un?]` ("[את המלך?]"); `ištanzanit ŠÀ-it` – "with soul (and) heart" ("בנפשך (ו)בלבך"); `QĀTAMMA` (in "כך גם"); `āššu` – "well, in good" ("בטוב"); `ḫar(a)[k]` – ḫark-, imp. 2sg ("החזק").
 - **הערות:** השמן בזית והיין בצימוק – הטוב השמור בפנים; כך יחזיק האל את המלך בלבו.
 
 ### 137
@@ -783,8 +783,8 @@
 
 ### 140
 `[U ŠA {d}telipinu] ZI-KA ŠA DUMU.LÚ.U19.LU{MEŠ} uddanāš QĀTAMMA takšanza ē[šdu]`
-> [כך גם] נפשך, [תֶּלִיפִּינוּ], עם דברי בני האדם – כך מאוחדת תה[יה]!
-- **פירוק:** `[U ŠA {d}telipinu] ZI-KA` ("[כך גם] נפשך, [תֶּלִיפִּינוּ]"); `ŠA DUMU.LÚ.U19.LU{MEŠ} uddanāš` – "with the words of mankind" ("עם דברי בני האדם"); `QĀTAMMA` ("כך"); `takšanza ē[šdu]` ("מאוחדת תה[יה]").
+> כך [גם] נפשך, [תֶּלִיפִּינוּ], עם דברי בני האדם מאוחדת תה[יה]!
+- **פירוק:** `[U ŠA {d}telipinu] ZI-KA` ("[גם] נפשך, [תֶּלִיפִּינוּ]"); `ŠA DUMU.LÚ.U19.LU{MEŠ} uddanāš` – "with the words of mankind" ("עם דברי בני האדם"); `QĀTAMMA` ("כך", preserved: so unbracketed, at the head of the clause); `takšanza ē[šdu]` ("מאוחדת תה[יה]").
 
 ### 141
 `[ZÍZ-tar māḫḫ]an24 parkui`
@@ -793,8 +793,8 @@
 
 ### 142
 `{d}telipinuš ZI-ŠU QĀTAMMA parkuēštu`
-> נפשו של תֶּלִיפִּינוּ – כך תיטהר!
-- **פירוק:** `{d}telipinuš ZI-ŠU` ("נפשו של תֶּלִיפִּינוּ"); `QĀTAMMA` ("כך"); `parkuēštu` – parkuešš- "become pure", imp. 3sg ("תיטהר").
+> כך נפשו של תֶּלִיפִּינוּ תיטהר!
+- **פירוק:** `{d}telipinuš ZI-ŠU` ("נפשו של תֶּלִיפִּינוּ"); `QĀTAMMA` ("כך", at the head of the clause: the analogy formula, note at 133); `parkuēštu` – parkuešš- "become pure", imp. 3sg ("תיטהר").
 
 ### 143
 `LÀL-i[t māḫḫan] maliddu`
@@ -808,8 +808,8 @@
 
 ### 145
 `{d}telipinuwašš=a ZI-[ŠU?] QĀTAMMA militišdu`
-> כך גם נפש[ו?] של תֶּלִיפִּינוּ – כך תמתק,
-- **פירוק:** `{d}telipinuwašš=a ZI-[ŠU?]` ("כך גם נפש[ו?] של תֶּלִיפִּינוּ"); `QĀTAMMA militišdu` ("כך תמתק").
+> כך גם נפש[ו?] של תֶּלִיפִּינוּ תמתק,
+- **פירוק:** `{d}telipinuwašš=a ZI-[ŠU?]` ("כך גם נפש[ו?] של תֶּלִיפִּינוּ"); `QĀTAMMA` (in "כך גם"); `militišdu` ("תמתק").
 
 ### 146
 `n=aš QĀTAMMA miyēštu`
@@ -842,8 +842,8 @@
 
 ### 151
 `zig!=a! {d}telipinuš QĀTAMMA ḫandaḫḫut`
-> כך גם אתה, תֶּלִיפִּינוּ – כך היה ערוך!
-- **פירוק:** `zig!=a!` – "you too" ("כך גם אתה"); `{d}telipinuš` ("תֶּלִיפִּינוּ"); `QĀTAMMA` ("כך"); `ḫandaḫḫut` – ḫandaḫḫ- "be put in order", imp. 2sg mid. ("היה ערוך").
+> כך גם אתה, תֶּלִיפִּינוּ, היה ערוך!
+- **פירוק:** `zig!=a!` – "you too" ("כך גם אתה"); `{d}telipinuš` ("תֶּלִיפִּינוּ"); `QĀTAMMA` (in "כך גם"); `ḫandaḫḫut` – ḫandaḫḫ- "be put in order", imp. 2sg mid. ("היה ערוך").
 
 ## §24″–§25″ – תֶּלִיפִּינוּ בא משתולל; קַמְרוּשֶׁפָּה עוצרת
 
@@ -936,8 +936,8 @@
 
 ### 168
 `nu=šša[n] kar(a)š ŠA {d}kamrušepa UDU{ḪI.A}-ŠU išḫūḫḫun`
-> ועליה את התבואה של צאן קַמְרוּשֶׁפָּה ערמתי.
-- **פירוק:** `nu=šša[n]` ("ועליה"); `kar(a)š` – karaš "wheat, grain" ("את התבואה"; HPM "karš-Getreide"; EL 2.4:4 `תבואה`); `ŠA {d}kamrušepa UDU{ḪI.A}-ŠU` ("של צאן קַמְרוּשֶׁפָּה"); `išḫūḫḫun` – išḫuwai- "heap, strew", pret. 1sg ("ערמתי").
+> ועליה את הכוסמת של צאן קַמְרוּשֶׁפָּה זריתי.
+- **פירוק:** `nu=šša[n]` ("ועליה"); `kar(a)š` – karaš "wheat, grain" ("את הכוסמת": karaš = ZÍZ (141), as the Laws and the rituals; `תבואה` is *ḫalki-*'s (28); HPM "karš-Getreide" (consistency pass, 2026-10-31)); `ŠA {d}kamrušepa UDU{ḪI.A}-ŠU` ("של צאן קַמְרוּשֶׁפָּה"); `išḫūḫḫun` – išḫuwai- "heap, strew", pret. 1sg ("זריתי": *išḫuwai-* `זרה`, as AM 4 `תבואה (ו)כוסמת אני זורה` (*ḫalkin kar(a)š išḫuwaḫḫi*) and UL 1:115 (consistency pass, 2026-10-31)).
 
 ## §27″ – "את חרונו לקחתי…"
 
@@ -1002,13 +1002,13 @@
 
 ### 180
 `{d}telipinuwašš=a karp[iš] kardimiyaz waštul šāwar QĀTAMMA warā[nu]`
-> כך גם החרון, הַזַּעַם, החטא (ו)הטינה של תֶּלִיפִּינוּ – כך יישרפו!
-- **פירוק:** `{d}telipinuwašš=a` ("כך גם … של תֶּלִיפִּינוּ"); `karp[iš] kardimiyaz waštul šāwar` ("החרון, הַזַּעַם, החטא (ו)הטינה"); `QĀTAMMA` ("כך"); `warā[nu]` – ura- "burn", imp. 3pl ("יישרפו").
+> כך גם החרון, הַזַּעַם, החטא (ו)הטינה של תֶּלִיפִּינוּ יישרפו!
+- **פירוק:** `{d}telipinuwašš=a` ("כך גם … של תֶּלִיפִּינוּ"); `karp[iš] kardimiyaz waštul šāwar` ("החרון, הַזַּעַם, החטא (ו)הטינה"); `QĀTAMMA` (in "כך גם"); `warā[nu]` – ura- "burn", imp. 3pl ("יישרפו").
 - **הערות:** נוסחת "הארבעה" – אחת לכל הלחשים (180, 186, 217, 222–223, 241).
 
 ### 181
 `[DIM4?] māḫḫan tepšuš`
-> [וכמו שהלתת?] יבשה,
+> כמו ש[הלתת?] יבשה,
 - **פירוק:** `[DIM4?] māḫḫan` ("[וכמו שהלתת?]"); `tepšuš` – tepšu- "dry, barren" ("יבשה").
 
 ### 182
@@ -1033,8 +1033,8 @@
 
 ### 186
 `{d}telipinuwašš=a karpi[š kardimiyaz] wašdul šāuwar QĀTAMMA tepšawēš[du]`
-> כך גם החרון, [הַזַּעַם], החטא (ו)הטינה של תֶּלִיפִּינוּ – כך ייבשו!
-- **פירוק:** `{d}telipinuwašš=a karpi[š kardimiyaz] wašdul šāuwar` ("כך גם החרון, [הַזַּעַם], החטא (ו)הטינה של תֶּלִיפִּינוּ"); `QĀTAMMA tepšawēš[du]` – tepšawešš- "become dry, barren", imp. 3sg ("כך ייבשו").
+> כך גם החרון, [הַזַּעַם], החטא (ו)הטינה של תֶּלִיפִּינוּ ייבשו!
+- **פירוק:** `{d}telipinuwašš=a karpi[š kardimiyaz] wašdul šāuwar` ("כך גם החרון, [הַזַּעַם], החטא (ו)הטינה של תֶּלִיפִּינוּ"); `QĀTAMMA` (in "כך גם"); `tepšawēš[du]` – tepšawešš- "become dry, barren", imp. 3sg ("ייבשו").
 - **הערות:** [היתר שער: החטא – *wašdul* (waštul בכתיב d); הרישיון רואה רק *wašt-*]
 
 ## §29″ – האש הנכבית
@@ -1057,8 +1057,8 @@
 
 ### 190
 `karpiš=a kardimiyaz šāuwar QĀTAMM[A kištaru]`
-> כך גם החרון, הַזַּעַם (ו)הטינה – כך [יכבו]!
-- **פירוק:** `karpiš=a kardimiyaz šāuwar` ("כך גם החרון, הַזַּעַם (ו)הטינה"); `QĀTAMM[A kištaru]` ("כך [יכבו]").
+> כך גם החרון, הַזַּעַם (ו)הטינה [יכבו]!
+- **פירוק:** `karpiš=a kardimiyaz šāuwar` ("כך גם החרון, הַזַּעַם (ו)הטינה"); `QĀTAMM[A` (in "כך גם"); `kištaru]` ("[יכבו]").
 
 ## §30″ – "שַׁלַּח את החרון!"
 
@@ -1085,8 +1085,8 @@
 
 ### 195
 `{d}telipinuwašš=a k[arpiš kardimiyaz] šāuwar āppa QĀTAMMA lē w[ezzi]`
-> כך גם החר[ון, הַזַּעַם] (ו)הטינה של תֶּלִיפִּינוּ – כך בחזרה אל יבו[או]!
-- **פירוק:** `{d}telipinuwašš=a k[arpiš kardimiyaz] šāuwar` ("כך גם החר[ון, הַזַּעַם] (ו)הטינה של תֶּלִיפִּינוּ"); `āppa QĀTAMMA` ("כך בחזרה"); `lē w[ezzi]` ("אל יבו[או]").
+> כך גם החר[ון, הַזַּעַם] (ו)הטינה של תֶּלִיפִּינוּ בחזרה אל יבו[או]!
+- **פירוק:** `{d}telipinuwašš=a k[arpiš kardimiyaz] šāuwar` ("כך גם החר[ון, הַזַּעַם] (ו)הטינה של תֶּלִיפִּינוּ"); `āppa` ("בחזרה"); `QĀTAMMA` (in "כך גם"); `lē w[ezzi]` ("אל יבו[או]").
 
 ## §31″ – האלים תחת העוזרד
 
@@ -1206,8 +1206,8 @@
 
 ### 217
 `{d}telipini=ya=kan [ka]rpin kardimiyattan wašdul šāwar ḫuitti`
-> כך גם מתֶּלִיפִּינוּ את החרון, הַזַּעַם, החטא (ו)הטינה משוך!
-- **פירוק:** `{d}telipini=ya=kan` ("כך גם מתֶּלִיפִּינוּ"); `[ka]rpin kardimiyattan wašdul šāwar` ("את החרון, הַזַּעַם, החטא (ו)הטינה"); `ḫuitti` – ḫuittiya-, imp. 2sg ("משוך").
+> גם מתֶּלִיפִּינוּ את החרון, הַזַּעַם, החטא (ו)הטינה משוך!
+- **פירוק:** `{d}telipini=ya=kan` ("גם מתֶּלִיפִּינוּ": -ya "also"; no QĀTAMMA in the line, so no `כך`); `[ka]rpin kardimiyattan wašdul šāwar` ("את החרון, הַזַּעַם, החטא (ו)הטינה"); `ḫuitti` – ḫuittiya-, imp. 2sg ("משוך").
 - **הערות:** [היתר שער: החטא – *wašdul* (waštul בכתיב d); הרישיון רואה רק *wašt-*]
 
 ## §35‴ – הסיר והכף
@@ -1236,8 +1236,8 @@
 
 ### 222
 `[nam]ma=ya ammel ŠA DUMU.LÚ.U19.LU{MEŠ} uttanānteš {d}telipinui [k]arpin kardimiyattan šāwar QĀTAMMA arandu`
-> כך גם הדברים שלי, של בני האדם – את החרון, הַזַּעַם (ו)הטינה של תֶּלִיפִּינוּ – כך יעצרו!
-- **פירוק:** `[nam]ma=ya` ("כך גם"); `ammel ŠA DUMU.LÚ.U19.LU{MEŠ} uttanānteš` – "my words, of mankind" ("הדברים שלי, של בני האדם"); `{d}telipinui [k]arpin kardimiyattan šāwar` ("את החרון, הַזַּעַם (ו)הטינה של תֶּלִיפִּינוּ"); `QĀTAMMA arandu` – arai-, imp. 3pl ("כך יעצרו").
+> [עוד], כך גם הדברים שלי, של בני האדם – את החרון, הַזַּעַם (ו)הטינה של תֶּלִיפִּינוּ יעצרו!
+- **פירוק:** `[nam]ma=ya` – namma "further, again" (its stem restored: "[עוד]") + =ya "also" ("גם"); `ammel ŠA DUMU.LÚ.U19.LU{MEŠ} uttanānteš` – "my words, of mankind" ("הדברים שלי, של בני האדם"); `{d}telipinui [k]arpin kardimiyattan šāwar` ("את החרון, הַזַּעַם (ו)הטינה של תֶּלִיפִּינוּ"); `QĀTAMMA` (in "כך גם"); `arandu` – arai-, imp. 3pl ("יעצרו").
 
 ## §36‴ – הזעם יוצא מן הבית אל דרך אֵלַת־הַשֶּׁמֶשׁ שֶׁל הָאֲדָמָה
 
@@ -1343,8 +1343,8 @@
 
 ### 241
 `U ŠA {d}telipinu karpin kardimiyattan wašdul šāuwar anda ēpdu`
-> כך גם את החרון, הַזַּעַם, החטא (ו)הטינה של תֶּלִיפִּינוּ – בפנים יתפסו!
-- **פירוק:** `U ŠA {d}telipinu` ("כך גם … של תֶּלִיפִּינוּ"); `karpin kardimiyattan wašdul šāuwar` ("את החרון, הַזַּעַם, החטא (ו)הטינה"); `anda ēpdu` – epp- "seize", imp. 3sg ("בפנים יתפסו").
+> גם את החרון, הַזַּעַם, החטא (ו)הטינה של תֶּלִיפִּינוּ – בפנים יתפסו!
+- **פירוק:** `U ŠA {d}telipinu` ("גם … של תֶּלִיפִּינוּ": Akk. *u* "and, also"; no QĀTAMMA in the line, so no `כך`); `karpin kardimiyattan wašdul šāuwar` ("את החרון, הַזַּעַם, החטא (ו)הטינה"); `anda ēpdu` – epp- "seize", imp. 3sg ("בפנים יתפסו").
 - **הערות:** [היתר שער: החטא – *wašdul* (waštul בכתיב d); הרישיון רואה רק *wašt-*]
 
 ### 242

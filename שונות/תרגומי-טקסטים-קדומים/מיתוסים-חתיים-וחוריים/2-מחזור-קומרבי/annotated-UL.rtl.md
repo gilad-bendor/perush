@@ -645,8 +645,8 @@
 
 ### 1:115
 `DINGIR{MEŠ}=ma=wa=kan ḫūmanduš [nepiš]az GAM MUŠEN{ḪI.A} GIM-an išḫuwāu`
-> ואת כל הָאֵלִים מן [השמים] מטה – כמו צפורים – יפזר!
-- **פירוק:** `DINGIR{MEŠ}=ma=wa=kan ḫūmanduš` ("ואת כל הָאֵלִים"); `[nepiš]az` ("מן [השמים]"); `GAM` ("מטה"); `MUŠEN{ḪI.A}` – MUŠEN "bird", pl. ("צפורים"); `GIM-an` ("כמו"); `išḫuwāu` – išḫuwai- "scatter, throw down", imp. 3sg ("יפזר").
+> ואילו את כל הָאֵלִים מן [השמים] מטה – כמו צפורים – יזרה!
+- **פירוק:** `DINGIR{MEŠ}=ma=wa=kan ḫūmanduš` ("ואילו את כל הָאֵלִים": =ma as 3.1:278, 3.2:15); `[nepiš]az` ("מן [השמים]"); `GAM` ("מטה"); `MUŠEN{ḪI.A}` – MUŠEN "bird", pl. ("צפורים"); `GIM-an` ("כמו"); `išḫuwāu` – išḫuwai- "scatter, throw down", imp. 3sg ("יזרה": *išḫuwai-* `זרה`, as the rituals (AM 4, 52, 129) and TE 168; `פיזר` is the rituals' *šuḫḫai-* (consistency pass, 2026-10-31)).
 
 ### 1:116
 `nu=war=aš dannaruš {DUG}ÚTUL{ḪI.A}-u[š GIM-an a]rḫa duwarn[e]škeddu`
@@ -702,8 +702,8 @@
 
 ### 1:125
 `lē=m[a=war=an aušz]i {d}10-aš {URU}kumm[iyaš U]R.SAG-liuš LUGAL-uš`
-> ואַל [יִרְאֵהוּ] אֵל הסערה, המלך הגבור של קוּמֶּה!
-- **פירוק:** `lē=m[a=war=an` ("ואַל … -הוּ"); `aušz]i` – au(š)- "see", pres. 3sg ("[יִרְאֵהוּ]"); `{d}10-aš` ("אֵל הסערה"); `{URU}kumm[iyaš` – "of Kumme" ("של קוּמֶּה"); `U]R.SAG-liuš` – "heroic" ("הגבור"); `LUGAL-uš` ("המלך").
+> ואַל [יִרְאֵהוּ] אֵל הסערה של קוּמֶּה, המלך הגבור!
+- **פירוק:** `lē=m[a=war=an` ("ואַל … -הוּ"); `aušz]i` – au(š)- "see", pres. 3sg ("[יִרְאֵהוּ]"); `{d}10-aš` ("אֵל הסערה"); `{URU}kumm[iyaš` – "of Kumme" ("של קוּמֶּה": the epithet in the Hittite order, as HE 1:60, 20:14, UL 3.1:157, 3.2:14 (consistency pass, 2026-10-31)); `U]R.SAG-liuš` – "heroic" ("הגבור"); `LUGAL-uš` ("המלך").
 
 ### 1:126
 `nu=w[a]r=⸢an=kan⸣ lē kwenzi`
@@ -2253,7 +2253,7 @@
 
 ### 2:160
 `nu {d}10-aš A-NA {d}d[ašmišu memi]škiuwan [d]āiš`
-> ואל הסערה החל [לומר] אל ת[שמישו]:
+> ואל הסערה החל [לומר] אל תַּ[שְׁמִישׁוּ]:
 - **פירוק:** `nu {d}10-aš` ("ואל הסערה"); `A-NA {d}d[ašmišu` ("אל ת[שמישו]"); `memi]škiuwan [d]āiš` ("החל [לומר]", F30).
 
 ### 2:161
@@ -2511,8 +2511,8 @@
 
 ### 3.1:41
 `aši=wa kwin {d}ullukummin {NA4}kunkunuzin memišk[anzi]`
-> את אוליקומי ההוא, את הבזלת, אשר מדב[רים עליו] –
-- **פירוק:** `aši=wa kwin {d}ullukummin {NA4}kunkunuzin` ("את אוליקומי ההוא, את הבזלת, אשר"); `memišk[anzi]` – memai- iter. pres. 3pl ("מדב[רים עליו]").
+> את אוליקומי ההוא, את הבזלת, אשר אומרים (עליו) –
+- **פירוק:** `aši=wa kwin {d}ullukummin {NA4}kunkunuzin` ("את אוליקומי ההוא, את הבזלת, אשר"); `memišk[anzi]` – memai- iter. pres. 3pl ("אומרים (עליו)": the stem *memišk-* is preserved, only the ending restored – not bracketed, renderings M2; `מדבר` is reserved in every Hittite line, and the bracket had split it past the gate: consistency pass, 2026-10-31).
 
 ### 3.1:42
 `[nu=w]ar=an=z=an tar[u]ḫta kuwatka ammel LÚ-an nakkin [ ... ]-an`
@@ -2758,7 +2758,7 @@
 
 ### 3.1:87
 `[{d}tašmiš]uš {d}10-ni EGIR-pa memiškiwan dāiš`
-> [תשמי]שו החל להשיב אל אל הסערה:
+> [תַּשְׁמִי]שׁוּ החל להשיב אל אל הסערה:
 - **פירוק:** `[{d}tašmiš]uš {d}10-ni EGIR-pa memiškiwan dāiš` ("[תשמי]שו החל להשיב אל אל הסערה", F31).
 
 ### 3.1:88
@@ -3642,8 +3642,8 @@
 
 ### 3.1:254
 `āšma=an ḫullanun [ ... ] {d}ullukummin {NA4}ŠU.U-zin`
-> "ראשונה – נלחמתי בו, […] באוליקומי, באבן־השו!
-- **פירוק:** `āšma=an` ("ראשונה … בו"); `ḫullanun` – ḫulla- "fight, defeat", pret. 1sg ("נלחמתי"); `{d}ullukummin {NA4}ŠU.U-zin` ("באוליקומי, באבן־השו").
+> "ראשונה – הבסתי אותו, […] את אוליקומי, את אבן־השו!
+- **פירוק:** `āšma=an` ("ראשונה … אותו"); `ḫullanun` – ḫulla- "fight, defeat", pret. 1sg ("הבסתי": as ZA 4.2, AP 1:68, SR; HPM "schlug ich" (consistency pass, 2026-10-31)); `{d}ullukummin {NA4}ŠU.U-zin` ("את אוליקומי, את אבן־השו").
 
 ### 3.1:255
 `n=an ītten zaḫḫeškitten namma`
@@ -3682,8 +3682,8 @@
 
 ### 3.1:262
 `nu {d}10-aš {URU}kummiyaš ⸢UR.SAG-iš⸣ LUGAL-uš ištamašta`
-> ושמע אֵל הסערה, המלך הגבור של קוּמֶּה.
-- **פירוק:** `nu {d}10-aš {URU}kummiyaš UR.SAG-iš LUGAL-uš` ("אֵל הסערה, המלך הגבור של קוּמֶּה"); `ištamašta` ("ושמע").
+> ושמע אֵל הסערה של קוּמֶּה, המלך הגבור.
+- **פירוק:** `nu {d}10-aš {URU}kummiyaš UR.SAG-iš LUGAL-uš` ("אֵל הסערה של קוּמֶּה, המלך הגבור", as 1:125 (consistency pass, 2026-10-31)); `ištamašta` ("ושמע").
 
 ### 3.1:263
 `n=at duliyaš pedi anda erer`
@@ -3772,8 +3772,8 @@
 
 ### 3.1:278
 `DINGIR{MEŠ}=ma=wa=kan nepišaz katta memal mān išḫuw[a]ḫḫi`
-> ואילו את הָאֵלִים מן השמים מטה – כמו גריסים – אפזר!'"
-- **פירוק:** `DINGIR{MEŠ}=ma=wa=kan` ("ואילו את הָאֵלִים"); `nepišaz katta` ("מן השמים מטה"); `memal mān` ("כמו גריסים"); `išḫuw[a]ḫḫi` – išḫuwai- "scatter", pres. 1sg ("אפזר").
+> ואילו את הָאֵלִים מן השמים מטה – כמו גריסים – אזרה!'"
+- **פירוק:** `DINGIR{MEŠ}=ma=wa=kan` ("ואילו את הָאֵלִים"); `nepišaz katta` ("מן השמים מטה"); `memal mān` ("כמו גריסים"); `išḫuw[a]ḫḫi` – išḫuwai- "scatter", pres. 1sg ("אזרה", as 1:115 (consistency pass, 2026-10-31)).
 - **הערות:** כמו קללת קומרבי (1:115), "כצפורים" – וכאן "כגריסים".
 
 ## לוח 3, קטע 1, §32⁶ – אוליקומי משיב
@@ -3975,8 +3975,8 @@
 
 ### 3.2:15
 `DINGIR{MEŠ}=ma=wa=kan n[epišaz katta MUŠEN{ḪI.A} GIM-an išḫuwau?]`
-> ואילו את הָאֵלִים מ[ן השמים מטה – כמו צפורים – יפזר?]!'"
-- **פירוק:** `DINGIR{MEŠ}=ma=wa=kan` ("ואילו את הָאֵלִים"); `n[epišaz katta MUŠEN{ḪI.A} GIM-an išḫuwau?]` ("מ[ן השמים מטה – כמו צפורים – יפזר?]").
+> ואילו את הָאֵלִים מ[ן השמים מטה – כמו צפורים – יזרה?]!'"
+- **פירוק:** `DINGIR{MEŠ}=ma=wa=kan` ("ואילו את הָאֵלִים"); `n[epišaz katta MUŠEN{ḪI.A} GIM-an išḫuwau?]` ("מ[ן השמים מטה – כמו צפורים – יזרה?]").
 - **הערות:** כמו 1:115.
 
 ## קטע 4 (CTH 345.I.4), §1′ – אשתר יוצאת מנינוה

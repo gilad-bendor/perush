@@ -311,16 +311,16 @@
 
 ### 50
 `nu uwaši ŠA {ḪUR.SAG}tašša {NA4}perunuš IŠTU SAG.DU-⸢KA⸣ GUL-aḫḫuwanzi zinniškeši`
-> ותבוא, ותכלה למחוץ בראשך את סלעי הר תַּשָּׁה!"
-- **פירוק:** `nu uwaši` – nu + uwa- "come", pres. 2sg ("ותבוא"); `ŠA {ḪUR.SAG}tašša` – "of Mount Tašša" ("הר תַּשָּׁה"); `{NA4}perunuš` – peruna- "rock", acc. pl. ("את סלעי"); `IŠTU SAG.DU-KA` – "with your head" ("בראשך"); `GUL-aḫḫuwanzi` – walḫ- "strike", inf. ("למחוץ"); `zinniškeši` – zinna- "finish", iter. pres. 2sg ("ותכלה").
+> ותבוא, ותסיים למחוץ בראשך את סלעי הר תַּשָּׁה!"
+- **פירוק:** `nu uwaši` – nu + uwa- "come", pres. 2sg ("ותבוא"); `ŠA {ḪUR.SAG}tašša` – "of Mount Tašša" ("הר תַּשָּׁה"); `{NA4}perunuš` – peruna- "rock", acc. pl. ("את סלעי"); `IŠTU SAG.DU-KA` – "with your head" ("בראשך"); `GUL-aḫḫuwanzi` – walḫ- "strike", inf. ("למחוץ"); `zinniškeši` – zinna- "finish", iter. pres. 2sg ("ותסיים": *zinna-* `סיים` with an infinitive too, as 51, 136 (consistency pass, 2026-10-31)).
 - **הערות:** קללה של אנו: קומרבי, עם הריונו, יגיע לבסוף לנגח את סלעי ההר בראשו – מכאב, או מבהלה. *peruna-* `סלע` (IL 41).
 
 ## §7 – קומרבי יורק
 
 ### 51
 `mān {d}anuš memiyauwanzi zinnet`
-> כאשר אָנוּ סיים לדבר,
-- **פירוק:** `mān` ("כאשר"); `{d}anuš` ("אנו"); `memiyauwanzi` – memai- "speak", inf. ("לדבר"); `zinnet` – zinna- "finish", pret. 3sg ("סיים").
+> כאשר אָנוּ סיים לומר,
+- **פירוק:** `mān` ("כאשר"); `{d}anuš` ("אנו"); `memiyauwanzi` – memai- "speak", inf. ("לומר": *memai-* `אמר`, as UL 1:189 `סיים לומר` (consistency pass, 2026-10-31)); `zinnet` – zinna- "finish", pret. 3sg ("סיים").
 
 ### 52
 `n=aš=šan šarā AN-ši p[ait]`
@@ -1552,8 +1552,8 @@
 
 ### 276
 `n=u[š(-)? ... ] INA {GIŠ}GU.ZA-[Š]U? malāet`
-> ו[…] על כסא[ו] *הכיר*.
-- **פירוק:** `n=u[š` ("ו"); `INA {GIŠ}GU.ZA-[Š]U?` ("על כסא[ו]"); `malāet` – malai- "approve, acknowledge", pret. 3sg ("*הכיר*").
+> ו[…] על כסא[ו] *אישר*.
+- **פירוק:** `n=u[š` ("ו"); `INA {GIŠ}GU.ZA-[Š]U?` ("על כסא[ו]"); `malāet` – malai- "approve, acknowledge", pret. 3sg ("*אישר*": *malai-* one verb with HE 4:10 (consistency pass, 2026-10-31); HPM "erkannte … an").
 
 ### 277
 `{d}EA?[ ... ] šanezzi uttar nānnai[t? ... ]`

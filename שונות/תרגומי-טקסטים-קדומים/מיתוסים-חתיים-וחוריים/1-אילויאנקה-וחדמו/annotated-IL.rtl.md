@@ -91,19 +91,19 @@
 
 ### 13
 `nu ḫūman mekki ḫandaet`
-> והכינה הכול בשפע:
-- **פירוק:** `nu` – nu ("ו־"); `ḫūman` – ḫumant- "all", n. ("הכול"); `mekki` – mekki "much" ("בשפע"); `ḫandaet` – ḫandai- "arrange, prepare", pret. 3sg ("הכינה").
+> וערכה הכול לָרֹב:
+- **פירוק:** `nu` – nu ("ו־"); `ḫūman` – ḫumant- "all", n. ("הכול"); `mekki` – mekki "much" ("לָרֹב": `שפע` is *iyatar*'s, IL 15 – two source words had one root; *mekki* `רבה` IL 106, `הרבה` HE 26:30); `ḫandaet` – ḫandai- "arrange, prepare", pret. 3sg ("ערכה": as UL 2:129, TE 247). Revised from the dossier's `והכינה הכול בשפע` (consistency pass, 2026-10-31): renderings §H8.
 
 ### 14
 `GEŠTIN-aš {DUG}palḫi marnuwandaš {DUG}palḫi [wa]lḫiyaš {DUG}palḫi`
-> כלי יין, כלי מַרְנוּוַנְט, כלי וַלְחִי –
-- **פירוק:** `GEŠTIN-aš` – GEŠTIN "wine", gen. ("יין"); `{DUG}palḫi` – palḫi- "cauldron, large vessel" ("כלי"); `marnuwandaš` – marnuwant- (a kind of beer), gen. ("מַרְנוּוַנְט"); `[wa]lḫiyaš` – walḫi- (a drink), gen. ("וַלְחִי"); `{DUG}palḫi` – ("כלי").
-- **הערות:** שלושה משקאות בשלושה דודים גדולים: יין, *marnuwant* ו־*walḫi* (שני סוגי שכר). המספר שלוש והחזרה (`כלי … כלי … כלי`) הם מבנה של סיפור בעל פה. *walḫi* אינו קשור ל־*walḫ-* "להכות" (שהכלי מזהה בטעות; `מחץ` אינו בשורה).
+> דוד יין, דוד מַרְנוּוַנְט, דוד וַלְחִי –
+- **פירוק:** `GEŠTIN-aš` – GEŠTIN "wine", gen. ("יין"); `{DUG}palḫi` – palḫi- "cauldron, large vessel" ("דוד": *palḫi-* as HE 27:14, TE 235; the dossier had `כלי` – revised {C}, renderings §H8); `marnuwandaš` – marnuwant- (a kind of beer), gen. ("מַרְנוּוַנְט"); `[wa]lḫiyaš` – walḫi- (a drink), gen. ("וַלְחִי"); `{DUG}palḫi` – ("דוד").
+- **הערות:** שלושה משקאות בשלושה דודים גדולים: יין, *marnuwant* ו־*walḫi* (שני סוגי שכר). המספר שלוש והחזרה (`דוד … דוד … דוד`) הם מבנה של סיפור בעל פה. *walḫi* אינו קשור ל־*walḫ-* "להכות" (שהכלי מזהה בטעות; `מחץ` אינו בשורה).
 
 ### 15
 `[nu {DU]}Gpalḫaš a[nd]an iyāda! y[ēt]`
-> ובכלים עשתה שפע.
-- **פירוק:** `[nu` – nu ("ו־"); `{DU]G}palḫaš` – palḫa- "vessel", d.-l. pl. ("ובכלים"); `a[nd]an` – andan "inside" (with the d.-l.: "in"); `iyāda!` – iyatar "abundance, plenty" ("שפע"); `y[ēt]` – iya- "do", pret. 3sg ("עשתה").
+> ובדודים עשתה שפע.
+- **פירוק:** `[nu` – nu ("ו־"); `{DU]G}palḫaš` – palḫa- "vessel", d.-l. pl. ("ובדודים": revised from the dossier's `ובכלים`, renderings §H8); `a[nd]an` – andan "inside" (with the d.-l.: "in"); `iyāda!` – iyatar "abundance, plenty" ("שפע"); `y[ēt]` – iya- "do", pret. 3sg ("עשתה").
 - **תרגומים:** HPM: "In den Fässern sc[haffte] sie Ü[be]rfluss." – כמונו.
 
 ## §5 – אינרה הולכת לזיגרתה
@@ -217,9 +217,9 @@
 
 ### 33
 `n=ašta {DUG}palḫan ḫūmandan ek[wer]`
-> ושתו כל כלי וכלי,
-- **פירוק:** `n=ašta` – nu + =ašta ("ו־"); `{DUG}palḫan` – palḫa- "vessel", acc. sg. ("כלי"); `ḫūmandan` – ḫumant- "every, whole", acc. sg. ("כל … וכלי"); `ek[wer]` – eku- "drink", pret. 3pl ("ושתו").
-- **הערות:** "כל כלי וכלי" – *ḫūmandan* ביחיד: "כל כלי" או "הכלי כולו". שלושת הכלים של 14 התרוקנו.
+> ושתו כל דוד ודוד,
+- **פירוק:** `n=ašta` – nu + =ašta ("ו־"); `{DUG}palḫan` – palḫa- "vessel", acc. sg. ("דוד", as 14 (consistency pass, 2026-10-31)); `ḫūmandan` – ḫumant- "every, whole", acc. sg. ("כל … ודוד"); `ek[wer]` – eku- "drink", pret. 3pl ("ושתו").
+- **הערות:** "כל דוד ודוד" – *ḫūmandan* ביחיד: "כל דוד" או "הדוד כולו". שלושת הדודים של 14 התרוקנו.
 
 ### 34
 `n=e=za ninkēr`

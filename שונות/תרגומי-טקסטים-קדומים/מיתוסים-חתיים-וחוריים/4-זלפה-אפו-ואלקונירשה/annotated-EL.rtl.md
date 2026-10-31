@@ -44,8 +44,8 @@
 
 ### 1.1:7
 `[n=aš6 šarā] tiyat`
-> [וקם] (ו)צעד,
-- **פירוק:** `[n=aš šarā]` – "and he up" ("[וקם]"); `tiyat` – tiya- "step", pret. 3sg ("(ו)צעד").
+> [ו]התרומם,
+- **פירוק:** `[n=aš šarā]` – "and he up" ("[ו]"); `tiyat` – *šarā tiya-* "rise" ("התרומם", as UL 1:57, 1:59, 3.1:153; the verb preserved, so unbracketed; HPM "[und er] stand [auf]" (consistency pass, 2026-10-31)).
 
 ### 1.1:8
 `n=aš ŠA {ÍD}māla ḫaršumnaš ār[(a)š]`
@@ -1462,8 +1462,8 @@
 
 ### 2.4:4
 `[ ... k]ar(a)š parā appeškeši`
-> […] את התבואה אתה מושיט.
-- **פירוק:** `[ ... k]ar(a)š` – karaš "wheat, grain" ("[…] את התבואה"); `parā appeškeši` ("אתה מושיט").
+> […] את הכוסמת אתה מושיט.
+- **פירוק:** `[ ... k]ar(a)š` – karaš "wheat, grain" ("[…] את הכוסמת": karaš = ZÍZ, `כוסמת` as HL2 160b, 183 and the rituals (AM 4, 10: `תבואה (ו)כוסמת` = *ḫalkin karaš*); `תבואה` is *ḫalki-*'s (consistency pass, 2026-10-31)); `parā appeškeši` ("אתה מושיט").
 
 ### 2.4:5
 `našma [ ... U]R.BAR.RA KA5.A MUŠ GÍR.TAB [ ... ]`

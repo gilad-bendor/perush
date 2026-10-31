@@ -76,5 +76,6 @@ Lev 7:32 (266: the right thigh). In words only: the Akkadian "land of no return"
 
 ## Progress
 - 2026-10-31: review pass (a) fidelity – 13 lines changed (3, 6, 8, 18, 90, 100, 128, 133, 138, 145, 164, 194, 207): brackets (3, 6, 8, 133, 138, 145, 164, 207), added words removed or put in ( ) (18 `יצא`, 128 `ו`, 194 `(מי)`), 90 *=še* "to him" (was `ולהם`), 100 *ḫāraš* nom. + instr. "with (his) wings" (was `כנף הנשר`). Open for pass (b): the analogy formula `כך גם X – כך Y` (133–195, 217, 222, 241; the note at 133) renders one QATAMMA twice and, at 222, leaves *namma* untranslated.
+- 2026-10-31: review pass (b) consistency – 14 lines changed (136, 140, 142, 145, 151, 168, 180, 181, 186, 190, 195, 217, 222, 241; the note at 133). The analogy formula (the coordinator's ruling): one `כך` per *QĀTAMMA*, `כמו ש… – כך …`, with *U* / *-a* / *-ya* `כך גם …`; no `כך` where the line has no *QĀTAMMA* (217, 241 `גם …`); 222 *[nam]ma* now rendered `[עוד]`; 181 `[וכמו ש…]` → `כמו ש[…]` (no *nu*). 168 *karaš* `כוסמת` and *išḫuwai-* `זריתי` (as the rituals' AM 4 `תבואה (ו)כוסמת אני זורה`). Recorded in renderings M2 / M3.
 - 2026-10-31: translator 4: TE 1–267 drafted, HPM read after drafting (no review passes by a second reader yet).
 - 2026-10-30: base secured, renderings fixed, brief written (the coordinator).

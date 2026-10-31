@@ -213,8 +213,8 @@
 
 ### 1:38
 `{d}IŠTAR-iš=ma=kan aruni p[arā pait]`
-> ואשתר אל הים [יצאה].
-- **פירוק:** `{d}IŠTAR-iš=ma=kan` – Ištar, nom. + =ma + =kan ("ואשתר"); `aruni` – aruna- "sea", d.-l. ("אל הים"); `p[arā pait]` – parā "forth" + pai- "go", pret. 3sg, restored ("[יצאה]").
+> ואשתר [הלכה קדימה] אל הים.
+- **פירוק:** `{d}IŠTAR-iš=ma=kan` – Ištar, nom. + =ma + =kan ("ואשתר"); `aruni` – aruna- "sea", d.-l. ("אל הים"); `p[arā pait]` – parā "forth" + pai- "go", pret. 3sg, restored ("[הלכה קדימה]": *parā pai-* as UL 1:212, 4:9 (consistency pass, 2026-10-31); draft `[יצאה]`).
 
 ### 1:39
 `[ ... ] {d}IŠTAR-in aušta`
@@ -336,8 +336,8 @@
 
 ### 1:60
 `[nu] wezzi {d}10-aš {URU}kummiyaš UR.SAG-iš LUGAL-uš {GIŠ}APIN-an [apašil]a ēpzi`
-> [ו]יבוא אֵל הַסְּעָרָה של קוּמֶּה, המלך הגיבור, ואת המחרשה [בעצמו] יתפוס.
-- **פירוק:** `[nu]` – ("[ו]"); `wezzi` – uwa- "come", pres.-fut. 3sg ("יבוא"); `{d}10-aš` – the Storm-god, nom. ("אֵל הַסְּעָרָה"); `{URU}kummiyaš` – Kummiya (Kumme), gen. ("של קוּמֶּה"); `UR.SAG-iš` – UR.SAG "hero", nom. ("הגיבור"); `LUGAL-uš` – "king", nom. ("המלך"); `{GIŠ}APIN-an` – APIN "plough", acc. ("את המחרשה"); `[apašil]a` – apašila "himself" ("[בעצמו]"); `ēpzi` – epp- "seize, take hold", pres.-fut. 3sg ("יתפוס").
+> [ו]יבוא אֵל הַסְּעָרָה של קוּמֶּה, המלך הגבור, ואת המחרשה [בעצמו] יתפוס.
+- **פירוק:** `[nu]` – ("[ו]"); `wezzi` – uwa- "come", pres.-fut. 3sg ("יבוא"); `{d}10-aš` – the Storm-god, nom. ("אֵל הַסְּעָרָה"); `{URU}kummiyaš` – Kummiya (Kumme), gen. ("של קוּמֶּה"); `UR.SAG-iš` – UR.SAG "hero", nom. ("הגבור": one spelling of the epithet, as KU/UL); `LUGAL-uš` – "king", nom. ("המלך"); `{GIŠ}APIN-an` – APIN "plough", acc. ("את המחרשה"); `[apašil]a` – apašila "himself" ("[בעצמו]"); `ēpzi` – epp- "seize, take hold", pres.-fut. 3sg ("יתפוס").
 - **הקבלה:** [equivalent] `וְאָדָם אַיִן לַעֲבֹד אֶת הָאֲדָמָה` (בראשית ב:ה) – בלי אדם אין מי שיעבד את האדמה; כאן – בלי אדם האל עצמו יצטרך לחרוש. וכן `וַיִּקַּח יְהוָה אֱלֹהִים אֶת הָאָדָם; וַיַּנִּחֵהוּ בְגַן עֵדֶן לְעָבְדָהּ וּלְשָׁמְרָהּ` (בראשית ב:טו): האדם נועד לעבודה. אצל אאה זו עבודה בשביל האלים, כבאתרחסיס.
 - **תרגומים:** HPM: "Es wird (noch dazu) kommen, (dass) der Wettergott … [selbs]t den Pflug ergreift." – HPM מבין את *wezzi* כ"יבוא (הזמן)"; אנו משאירים את הצירוף מילולי.
 - **הערות:** "יבוא … ויתפוס" – צירוף חתי של "בוא" ופועל עיקרי ("ילך ויתפוס"). התמונה – מלך האלים הגיבור מאחורי המחרשה – היא הלצה מרה: האלים בלי בני אדם הם איכרים. **קומה** (Kummiya) – עירו של אל הסערה החורי תֶּשׁוּבּ, בהרים שמצפון לאשור.
@@ -759,8 +759,8 @@
 
 ### 2:5
 `{MUŠ}ḫedammun=ma=ka[n ... menaḫḫand]a šallanuškanzi`
-> ואת חֶדַמּוּ […] [לנוכח] מגדלים.
-- **פירוק:** `{MUŠ}ḫedammun=ma=ka[n` – Ḫedammu, acc. + =ma + =kan ("ואת חֶדַמּוּ"); `menaḫḫand]a` – menaḫḫanda "facing, opposite" ("[לנוכח]"); `šallanuškanzi` – šallanu- "rear, make great", iterative pres. 3pl ("מגדלים").
+> ואת חֶדַמּוּ […] [מול] מגדלים.
+- **פירוק:** `{MUŠ}ḫedammun=ma=ka[n` – Ḫedammu, acc. + =ma + =kan ("ואת חֶדַמּוּ"); `menaḫḫand]a` – menaḫḫanda "facing, opposite" ("[מול]": *menaḫḫanda* as KU 15–27, UL 1:7–8 (consistency pass, 2026-10-31)); `šallanuškanzi` – šallanu- "rear, make great", iterative pres. 3pl ("מגדלים").
 - **הערות:** *šallanu-* "לגדל" (M2 `גִּדֵּל`). [היתר שער: מגדלים – בינוני של `גִּדֵּל` (*šallanu-*), לא שם העצם] הנחש מגודל כילד, בידי אומנות (אלות?); בשיר הוא נולד לקומרבי מבת הים.
 
 ### 2:6
@@ -981,8 +981,8 @@
 
 ### 4:10
 `ma[ḫḫan {d}IŠTAR-i]š {URU}nenuwaš MUNUS.LUGAL-aš [ ... ] malāet`
-> כא[שר אִשְׁתַּ]ר, מלכת נִינְוֵה, […] הסכימה,
-- **פירוק:** `ma[ḫḫan` – maḫḫan "when" ("כא[שר]"); `{d}IŠTAR-i]š` – Ištar ("[אִשְׁתַּ]ר"); `{URU}nenuwaš` – Nineveh, gen. ("נִינְוֵה"); `MUNUS.LUGAL-aš` – "queen" ("מלכת"); `malāet` – malai- "agree, approve", pret. 3sg ("הסכימה").
+> כא[שר אִשְׁתַּ]ר, מלכת נִינְוֵה, […] אישרה,
+- **פירוק:** `ma[ḫḫan` – maḫḫan "when" ("כא[שר]"); `{d}IŠTAR-i]š` – Ištar ("[אִשְׁתַּ]ר"); `{URU}nenuwaš` – Nineveh, gen. ("נִינְוֵה"); `MUNUS.LUGAL-aš` – "queen" ("מלכת"); `malāet` – malai- "agree, approve", pret. 3sg ("אישרה": *malai-* one verb with KU 276 (consistency pass, 2026-10-31); HPM "zustimmte").
 
 ### 4:11
 `nu=⸢kan⸣ āššiyatar {GIŠ}šaḫin {GI[}Šparnull]inn=a daššawaš A{ḪI.A}-naš šunniyat`
@@ -1006,8 +1006,8 @@
 
 ### 4:14
 `[nu=ka]n ANA {MUŠ}ḫedammu tarḫuili ZI{ḪI.A}-Š[U šanezziš] tešḫaš ēpta`
-> [ו]את חֶדַמּוּ האדיר – את נפשותיו – אחזה שינה [מתוקה].
-- **פירוק:** `[nu=ka]n` – ("[ו]"); `ANA {MUŠ}ḫedammu` – "Ḫedammu", d.-l. ("את חֶדַמּוּ"); `tarḫuili` – tarḫuili- "mighty", d.-l. ("האדיר"); `ZI{ḪI.A}-Š[U` – ZI "soul", pl. + -ŠU ("את נפשותיו"); `šanezziš]` – šanezzi- "sweet, pleasant"?, restored ("[מתוקה]"); `tešḫaš` – tešḫa- "sleep", nom. ("שינה"); `ēpta` – epp- "seize", pret. 3sg ("אחזה").
+> [ו]את חֶדַמּוּ האדיר – את נפשותיו – תפסה שינה [נעימה].
+- **פירוק:** `[nu=ka]n` – ("[ו]"); `ANA {MUŠ}ḫedammu` – "Ḫedammu", d.-l. ("את חֶדַמּוּ"); `tarḫuili` – tarḫuili- "mighty", d.-l. ("האדיר"); `ZI{ḪI.A}-Š[U` – ZI "soul", pl. + -ŠU ("את נפשותיו"); `šanezziš]` – šanezzi- "sweet, pleasant"?, restored ("[נעימה]": *šanezzi-* `נעים` as UL 1:103, KU 277, SR, AP; `מתוק` is *mili(t)-*'s, TE 132); `tešḫaš` – tešḫa- "sleep", nom. ("שינה"); `ēpta` – epp- "seize", pret. 3sg ("תפסה": *epp-* `תפס` in every text (consistency pass, 2026-10-31)).
 - **הערות:** *tarḫuili-* "אדיר, עז" (מן *tarḫu-* "לגבור", `גבר`); `גִּבּוֹר` שמור ל־UR.SAG. "נפשותיו" ברבים – כאילו יש לנחש כמה נפשות (כמה ראשים?).
 
 ### 4:15
@@ -1017,8 +1017,8 @@
 
 ### 4:16
 `[ ... UL?4] kwitki kanišzi`
-> [לא?] מבחין בדבר.
-- **פירוק:** `[UL?]` – restored ("[לא?]"); `kwitki` – "anything" ("בדבר"); `kanišzi` – kanešš- "recognize, notice", pres. 3sg ("מבחין").
+> [לא?] מכיר בדבר.
+- **פירוק:** `[UL?]` – restored ("[לא?]"); `kwitki` – "anything" ("בדבר"); `kanišzi` – kanešš- "recognize, notice", pres. 3sg ("מכיר": *kanešš-* as ZA 2.12–13 (consistency pass, 2026-10-31)).
 
 ### 4:17
 `nu=za BIL.ZA.ZA ḫarziyalušš=a GU7-ezzi`
@@ -1122,8 +1122,8 @@
 
 ### 4:35
 `n=aš=ši? peran iyattari {d}IŠTAR-iš {URU}nenuw[aš MUNUS.LUGAL]`
-> והיא הולכת לפניו – אִשְׁתַּר, [מלכת] נִינְוֵה.
-- **פירוק:** `n=aš=ši?` – nu + =aš "she" + =ši "him" ("והיא … לפניו"); `peran` – ("לפני"); `iyattari` – iya- mid. "walk, go", pres. 3sg ("הולכת"); `{d}IŠTAR-iš {URU}nenuw[aš MUNUS.LUGAL]` – ("אִשְׁתַּר, [מלכת] נִינְוֵה").
+> והיא מתקדמת לפניו – אִשְׁתַּר, [מלכת] נִינְוֵה.
+- **פירוק:** `n=aš=ši?` – nu + =aš "she" + =ši "him" ("והיא … לפניו"); `peran` – ("לפני"); `iyattari` – iya- mid. "walk, go", pres. 3sg ("מתקדמת": *iya-* mid. `התקדם` as KU 119, UL 1:60–61, SR 13.1.1; `הלך` is *pai-*'s (consistency pass, 2026-10-31)); `{d}IŠTAR-iš {URU}nenuw[aš MUNUS.LUGAL]` – ("אִשְׁתַּר, [מלכת] נִינְוֵה").
 
 ### 4:36
 `[ ... ā]r(a)š {d}IŠTAR-iš`
@@ -1378,8 +1378,8 @@
 
 ### 5:36
 `[išḫaḫru=ma=šš]i=kan parā PA5{ḪI.A}-[uš mān aršanzi]`
-> [ודמעותיו] זורמות החוצה [כ]פלגים.
-- **פירוק:** `[išḫaḫru=ma=šš]i=kan` – išḫaḫru- "tears" + =šši "his" ("[ודמעותיו]"); `parā` – ("החוצה"); `PA5{ḪI.A}-[uš mān aršanzi]` – PA₅ "canal" + mān "like" + arš- "flow", pres. 3pl, restored ("זורמות … [כ]פלגים").
+> [ודמעותיו זורמות] החוצה [כמו] פלגים.
+- **פירוק:** `[išḫaḫru=ma=šš]i=kan` – išḫaḫru- "tears" + =šši "his" ("[ודמעותיו]"); `parā` – ("החוצה"); `PA5{ḪI.A}-[uš mān aršanzi]` – PA₅ "canal" + mān "like" + arš- "flow", pres. 3pl, restored ("[זורמות] … [כמו] פלגים": as UL 2:62, the same line; *aršanzi* restored, so bracketed (consistency pass, 2026-10-31)).
 - **הערות:** הדמעות כפלגים – התמונה החוזרת של הבכי בשירי חורי. PA₅ `פלג` (כבחוקים).
 
 ### 5:37
@@ -1497,8 +1497,8 @@
 
 ### 6:22
 `nekuzz=a meḫur tīyat`
-> ועת הערב באה,
-- **פירוק:** `nekuzz=a meḫur` – nekuz meḫur "evening time" + =a ("ועת הערב"); `tīyat` – tiya- "step, come", pret. 3sg ("באה").
+> ועת הערב צעדה,
+- **פירוק:** `nekuzz=a meḫur` – nekuz meḫur "evening time" + =a ("ועת הערב"); `tīyat` – tiya- "step, come", pret. 3sg ("צעדה": *tiya-* `צעד`, as KU 62, 271, AP 1:91 (`החודש … צעד`) (consistency pass, 2026-10-31)).
 - **הערות:** `עת` – `מועד` שמור בכל שורה חתית.
 
 ### 6:23
@@ -1644,8 +1644,9 @@
 
 ### 7:11
 `ūk {d}kumarbin DUMU {d}A[NIM? ... ]`
-> "אני, קומרבי, בן אָנוּ? […]
-- **פירוק:** `ūk` – ("אני"); `{d}kumarbin` – ("קומרבי"); `DUMU {d}A[NIM?` – "son of Anu?" ("בן אָנוּ?").
+> "אותי, את קומרבי, בן אָנוּ? […]
+- **פירוק:** `ūk` – "I" (here with the acc. apposition: "me", as 7:4) ("אותי"); `{d}kumarbin` – acc. ("את קומרבי"); `DUMU {d}A[NIM?` – "son of Anu?" ("בן אָנוּ?").
+- **תרגומים:** HPM: "Mich, den Kumarbi, A[nus?] Sohn" – כמונו; 7:4 ו־7:11 באותה לשון (`אותי, את קומרבי`), כי *{d}kumarbin* יחסת פעול בשתיהן (בדיקת העקביות, 2026-10-31; טיוטתנו כאן: "אני, קומרבי").
 - **הערות:** קומרבי מזכיר את מוצאו: בשירת ההגחה (`../2-מחזור-קומרבי/`) הוא נכנס לשלשלת המלכים בשמים אחרי אנו.
 
 ### 7:12
@@ -1666,8 +1667,8 @@
 
 ### 7:15
 `[ ... ] ANA {d}10 UR.SAG-iš [ ... ]`
-> […] לאֵל הַסְּעָרָה הגיבור […]
-- **פירוק:** `ANA {d}10` – ("לאֵל הַסְּעָרָה"); `UR.SAG-iš` – "hero" ("הגיבור").
+> […] לאֵל הַסְּעָרָה הגבור […]
+- **פירוק:** `ANA {d}10` – ("לאֵל הַסְּעָרָה"); `UR.SAG-iš` – "hero" ("הגבור").
 
 ### 7:16
 `[ ... ]-šan=man ma-[ ... ]`
@@ -1988,8 +1989,8 @@
 
 ### 9:9
 `[GIM-an ... memiyauwa]nzi zinnišket`
-> [כאשר … לדב]ר סיים,
-- **פירוק:** `[GIM-an ... memiyauwa]nzi` – restored: "when … to speak" ("[כאשר … לדב]ר"); `zinnišket` – zenna- "finish", iterative pret. 3sg ("סיים").
+> [כאשר … לומר] סיים,
+- **פירוק:** `[GIM-an ... memiyauwa]nzi` – restored: "when … to speak" ("[כאשר … לומר]": *memai-* `אמר`, as UL 1:189 `סיים לומר`; the stem restored, so the word is bracketed (consistency pass, 2026-10-31)); `zinnišket` – zenna- "finish", iterative pret. 3sg ("סיים").
 
 ### 9:10
 `n=aš=za arḫa [ ... ]`
@@ -2018,8 +2019,8 @@
 
 ### 9:15
 `TA Ì.DÙG.GA=ma=za šanezzit išket`
-> ובשמן טוב מובחר נמשחה,
-- **פירוק:** `TA Ì.DÙG.GA=ma=za` – IŠTU "with" + Ì.DÙG.GA "fine oil" ("ובשמן טוב"); `šanezzit` – šanezzi- "first-class, pleasant", instr. ("מובחר"); `išket` – išk- "anoint", pret. 3sg ("נמשחה").
+> ובשמן טוב נעים נמשחה,
+- **פירוק:** `TA Ì.DÙG.GA=ma=za` – IŠTU "with" + Ì.DÙG.GA "fine oil" ("ובשמן טוב"); `šanezzit` – šanezzi- "first-class, pleasant", instr. ("נעים": *šanezzi-* one word (consistency pass, 2026-10-31)); `išket` – išk- "anoint", pret. 3sg ("נמשחה").
 
 ### 9:16
 `[nu=za unuw]attat`
@@ -2041,8 +2042,8 @@
 
 ### 9:19
 `[ ... galgaltū]ri ēpten`
-> "[…את המצ]לתיים אחזו!
-- **פירוק:** `galgaltū]ri` – galgalturi- "cymbal?" ("[המצ]לתיים"); `ēpten` – epp- "seize, hold", imp. 2pl ("אחזו").
+> "[…את המצ]לתיים תפסו!
+- **פירוק:** `galgaltū]ri` – galgalturi- "cymbal?" ("[המצ]לתיים"); `ēpten` – epp- "seize, hold", imp. 2pl ("תפסו": *epp-* `תפס` (consistency pass, 2026-10-31); cf. Gen 4:21 `תֹּפֵשׂ כִּנּוֹר`).
 
 ### 9:20
 `nu=kan arunaš arḫ[i ... a]runi? arkammi[t ... wa]l(a)ḫten1`
@@ -2115,8 +2116,8 @@
 
 ### 10:7
 `[ ... U]R.SAG-in DINGIR-i[n ... ]`
-> […] את האֵל הגי[בור …]
-- **פירוק:** `U]R.SAG-in` – UR.SAG "hero", acc. ("הגי[בור]"); `DINGIR-i[n` – "god", acc. ("את האֵל").
+> […] את האֵל הגבור […]
+- **פירוק:** `U]R.SAG-in` – UR.SAG "hero", acc. ("הגבור": only the first sign restored, so not bracketed – renderings M2); `DINGIR-i[n` – "god", acc. ("את האֵל").
 
 ### 10:8
 `[ ... -e]l šunnez[i]`
@@ -2638,8 +2639,8 @@
 
 ### 19:7
 `[ ... ] iyattat`
-> […] הלכה.
-- **פירוק:** `iyattat` – iya- mid. "walk, go", pret. 3sg ("הלכה").
+> […] התקדמה.
+- **פירוק:** `iyattat` – iya- mid. "walk, go", pret. 3sg ("התקדמה": *iya-* mid. as 4:35 (consistency pass, 2026-10-31)).
 
 ### 19:8
 `n=aš=ka[n ... ]`
@@ -2716,8 +2717,8 @@
 
 ### 20:14
 `nu=šši=kan {d}10-aš {URU}[kummiyaš U]R.SAG-liš LUGAL-uš IGI-anda pait`
-> ולקראתו הלך אֵל הַסְּעָרָה של [קוּמֶּה], המלך ה[גי]בור.
-- **פירוק:** `nu=šši=kan` – ("ו … ־ו"); `{d}10-aš {URU}[kummiyaš` – ("אֵל הַסְּעָרָה של [קוּמֶּה]"); `U]R.SAG-liš LUGAL-uš` – "the heroic king" ("המלך ה[גי]בור"); `IGI-anda pait` – "went to meet" ("לקראתו הלך").
+> ולקראתו הלך אֵל הַסְּעָרָה של [קוּמֶּה], המלך הגבור.
+- **פירוק:** `nu=šši=kan` – ("ו … ־ו"); `{d}10-aš {URU}[kummiyaš` – ("אֵל הַסְּעָרָה של [קוּמֶּה]"); `U]R.SAG-liš LUGAL-uš` – "the heroic king" ("המלך הגבור": only a sign restored); `IGI-anda pait` – "went to meet" ("לקראתו הלך").
 
 ### 20:15
 `nu [ ... ] ANA {d}kumarbi memiškiuwan dāiš`
@@ -2898,8 +2899,8 @@
 
 ### 22:11
 `ŠŪŠI {MUNUS.MEŠ}KI.SIKIL=m[a ... ]-it ⸢anda⸣ [a]ppanteš ašan[du]`
-> ואילו שישים העלמות […] פנימה אחוזות יהיו!
-- **פירוק:** `ŠŪŠI {MUNUS.MEŠ}KI.SIKIL=m[a` – ("ואילו שישים העלמות"); `anda` – ("פנימה"); `[a]ppanteš ašan[du]` – epp- "seize", ptcp. pl. + eš-, imp. 3pl ("אחוזות יהיו").
+> ואילו שישים העלמות […] פנימה תפוסות יהיו!
+- **פירוק:** `ŠŪŠI {MUNUS.MEŠ}KI.SIKIL=m[a` – ("ואילו שישים העלמות"); `anda` – ("פנימה"); `[a]ppanteš ašan[du]` – epp- "seize", ptcp. pl. + eš-, imp. 3pl ("תפוסות יהיו": *epp-* `תפס` (consistency pass, 2026-10-31)).
 
 ### 22:12
 `[ ... ]-ait`
@@ -3299,8 +3300,8 @@
 
 ### 26:30
 `[ŠÀ É-TI=ma=kan adanna akuwanna me]kki ḫandāi10`
-> [ובתוך הבית לאכול ולשתות הר]בה הכן!
-- **פירוק:** `[ŠÀ É-TI=ma=kan adanna akuwanna me]kki` – restored after 27:13 ("[ובתוך הבית לאכול ולשתות הר]בה"); `ḫandāi` – ḫandai- "prepare", imp. 2sg ("הכן").
+> [ובתוך הבית לאכול ולשתות הרבה] ערוך!
+- **פירוק:** `[ŠÀ É-TI=ma=kan adanna akuwanna me]kki` – restored after 27:13 ("[ובתוך הבית לאכול ולשתות הרבה]"); `ḫandāi` – ḫandai- "prepare, arrange", imp. 2sg ("ערוך": as UL 2:129, 3.1:4, TE 247 (consistency pass, 2026-10-31)).
 
 ### 26:31
 `nu=za šallin a[runan kalleš]`
@@ -3380,8 +3381,8 @@
 
 ### 27:9
 `[{URU}kum]miyaz=m[a kwiē]š {GIŠ}AB{MEŠ}-uš aranteš e[šer]`
-> [ואילו מקו]מה – [החלונות אש]ר פתוחים היו,
-- **פירוק:** `[{URU}kum]miyaz=m[a` – ("[ואילו מקו]מה"); `kwiē]š {GIŠ}AB{MEŠ}-uš` – ("[החלונות אש]ר"); `aranteš e[šer]` – ("פתוחים היו").
+> [ואילו מקוּ]מֶּה – [החלונות אש]ר פתוחים היו,
+- **פירוק:** `[{URU}kum]miyaz=m[a` – ("[ואילו מקוּ]מֶּה": Kumme ★ vocalized also when half-bracketed); `kwiē]š {GIŠ}AB{MEŠ}-uš` – ("[החלונות אש]ר"); `aranteš e[šer]` – ("פתוחים היו").
 
 ### 27:10
 `[n=aš=ka]n anda ⸢ištapper⸣`
@@ -3400,15 +3401,15 @@
 
 ### 27:13
 `ŠÀ É-TI=ma=kan adanna akuw[anna mekki ḫand]āet`
-> ובתוך הבית לאכול ולשתות [הרבה הכי]ן.
-- **פירוק:** `ŠÀ É-TI=ma=kan` – ("ובתוך הבית"); `adanna akuw[anna` – ("לאכול ולשתות"); `mekki ḫand]āet` – ("[הרבה הכי]ן").
+> ובתוך הבית לאכול ולשתות [הרבה ערך].
+- **פירוק:** `ŠÀ É-TI=ma=kan` – ("ובתוך הבית"); `adanna akuw[anna` – ("לאכול ולשתות"); `mekki ḫand]āet` – ("[הרבה ערך]": *ḫandai-* `ערך`; the stem restored, so bracketed (consistency pass, 2026-10-31)).
 - **הערות:** הביצוע (9–13) חוזר על הפקודה (26:25–30) באותן מלים.
 
 ### 27:14
 `{DUG}palḫiuš=ma IŠTU KAŠ.GEŠTIN šunn[aš]`
 > ואת הדודים ביין־שכר מילא.
 - **פירוק:** `{DUG}palḫiuš=ma` – palḫi- "cauldron", acc. pl. ("ואת הדודים"); `IŠTU KAŠ.GEŠTIN` – "with beer-wine" ("ביין־שכר"); `šunn[aš]` – šunna- "fill", pret. 3sg ("מילא").
-- **הערות:** *palḫi-* – הדודים הגדולים של משתה אינרה (IL 14, שם `כלי`, מן התיק).
+- **הערות:** *palḫi-* – הדודים הגדולים של משתה אינרה (IL 14; שם עתה גם `דוד`, בבדיקת העקביות 2026-10-31 – תיקון לתיק, renderings §H8).
 
 ### 27:15
 `[{GIŠ}BANŠ]UR{ḪI.A}-uš=ma unuwanduš IŠTU NINDA ḫarpay[er]`
@@ -3443,8 +3444,8 @@
 
 ### 27:21
 `[ŠÀ] É-TI=ya=kan adanna akuwanna [ḫandānun]`
-> ו[בתוך] הבית לאכול ולשתות [הכנתי],
-- **פירוק:** `[ŠÀ] É-TI=ya=kan` – ("ו[בתוך] הבית"); `adanna akuwanna` – ("לאכול ולשתות"); `[ḫandānun]` – ("[הכנתי]").
+> ו[בתוך] הבית לאכול ולשתות [ערכתי],
+- **פירוק:** `[ŠÀ] É-TI=ya=kan` – ("ו[בתוך] הבית"); `adanna akuwanna` – ("לאכול ולשתות"); `[ḫandānun]` – ("[ערכתי]").
 
 ### 27:22
 `[GIM-an ŠA] EN-YA ZI-aš taparriyan [ḫarta]`

@@ -1001,8 +1001,8 @@
 
 ### 14.20.4
 `mu-wa-an-ta-ru {GIŠ}pár-aš-tu-e-eš-ma-kán an-da ú-e-te-ni iš-ḫu-[wa-a-an-ta-ru ]x za-az-ga-a-i`
-> ייפלו! ואילו הנצרים – אל תוך המים יתפזר[ו!" …]… …
-- **פירוק:** `mu-wa-an-ta-ru` – muwa-, mid. imp. 3pl ("ייפלו"); `{GIŠ}pár-aš-tu-e-eš-ma-kán` – paraštu- "shoot, sprout", nom. pl. + =ma ("ואילו הנצרים"); `an-da ú-e-te-ni` – watar "water", d.-l. ("אל תוך המים"); `iš-ḫu-[wa-a-an-ta-ru` – išḫuwai- "scatter", mid. imp. 3pl ("יתפזר[ו"; UL); `za-az-ga-a-i` – zazgai- (unclear verb), pres. 3sg ("…").
+> ייפלו! ואילו הנצרים – אל תוך המים יִזָּר[וּ!" …]… …
+- **פירוק:** `mu-wa-an-ta-ru` – muwa-, mid. imp. 3pl ("ייפלו"); `{GIŠ}pár-aš-tu-e-eš-ma-kán` – paraštu- "shoot, sprout", nom. pl. + =ma ("ואילו הנצרים"); `an-da ú-e-te-ni` – watar "water", d.-l. ("אל תוך המים"); `iš-ḫu-[wa-a-an-ta-ru` – išḫuwai- "scatter", mid. imp. 3pl ("יִזָּר[וּ": *išḫuwai-* `זרה`, as UL 1:115 and the rituals (consistency pass, 2026-10-31)); `za-az-ga-a-i` – zazgai- (unclear verb), pres. 3sg ("…").
 
 ### 14.20.5
 `na-aš GAL-le-eš-ta na-aš e-la-aš-ni a-ar-aš nu-za UM-MI-A-AN-ŠU ⸢za⸣-az-ga-a-⸢i⸣ [ ]x x[ ]x`
