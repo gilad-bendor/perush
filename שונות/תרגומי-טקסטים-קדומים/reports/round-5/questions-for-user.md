@@ -33,3 +33,8 @@ No question from run 1 needs the user.
    guidelines §5.2, Hesiod); the transliteration stays in the note.
 
 No question from run 2 needs the user.
+
+## Run 3 – Ugaritic epics and rituals (report: `run-3.md`)
+
+No question for the user. The about 40 philological cruxes (*uzr*, *mtm*, *npy* …) are translated with a choice and the
+alternative in the note, and listed under each tablet's "Open decisions" for the user's review of the drafts.
