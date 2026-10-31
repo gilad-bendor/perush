@@ -23,3 +23,13 @@ reading choices, each already translated with the defensible choice and the alte
    (the cross-language cognate question, guidelines §6.7).
 
 No question from run 1 needs the user.
+
+## Run 2 – Hurro-Hittite myths (report: `run-2.md`)
+
+**Settled by the orchestrator (minor):**
+1. SISKUR keeps the split by sense – `מנחה` in Ḫedammu (the gods' offerings from mankind), `טקס` in the rituals – as a
+   recorded split; the lead's harmonization looks at it with the other Hittite splits.
+2. Appu's sons keep their names by meaning (`רַע`, `יָשָׁר`), as the Hittite hearer heard them (the speaking-names rule,
+   guidelines §5.2, Hesiod); the transliteration stays in the note.
+
+No question from run 2 needs the user.
