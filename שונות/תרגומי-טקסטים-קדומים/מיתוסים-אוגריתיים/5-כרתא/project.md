@@ -154,6 +154,17 @@ reading", never quoted. Cassuto 1951 has no Kirta.
 - Tool: two minimal fixes, reported to the coordinator: `eupt --tr` never printed the translation (the flag was
   stripped from the argument list before the test); and the licence text of a Kirta line now includes EUPT's
   transliteration (III:59 CUC *ṣr*, EUPT *ʿṣr*: the `צִפּוֹר` gate blocked the right word). `selftest` 51/0.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against EUPT and CUC, and the command /
+  execution pairs (II:9–III:14 → III:52–V:12) and the messages (III:22–49 → V:30–VI:15, VI:17–35) compared word by word.
+  Identical Ugaritic already had identical Hebrew, and every difference the verifier lists (II:30 / IV:11, II:45 / IV:23)
+  is the tablet's. **26 `>` lines changed**, each with a `(תיקון סוקר: …)` note. 22 of them are brackets or `?`: one sign
+  or an ending restored → no bracket (I:2, I:8, I:9, I:42, II:10, II:13, II:19, III:43, IV:33, IV:48, V:12, V:13, V:28,
+  V:29, VI:1, VI:6, VI:10–13, VI:15); II:14 the bracket had covered the read *ymn*. **3 commands vocalized as
+  imperatives** (II:20–21 `עֲלֵה … וַעֲלֵה … רְכַב`, II:23 `זְבַח`): their executions IV:2–5 (`ועלה … רכב`, `זבח`, past) were
+  spelt with the same letters. italics for *ṯrrt* `*הנשגבת*` (§12.6) at V:42 and VI:12 (VI:12 also counted among the brackets); 1.15 IV:9, IV:20 and V:26 italicized
+  the same way. פירוק was added to 3 entries (IV:45, V:4, V:5). No meaning, negation or *l* errors were found. The
+  shorter, damaged messages were left as KTU³ / EUPT restore them, with their brackets. Rebuilt; `verify 1.14 1.15 1.16
+  --strict` 0 problems (the same 7 justified repeated-line differences); quotes 0.
 
 ### The text on its own terms
 
@@ -323,6 +334,7 @@ I:8.
   (IV:15, IV:16, IV:18, V:25); 4 stems corrected to EUPT (II:15, II:20 *mrr* G; II:24 *ṯmn* tD; III:25 *ḫss* L). No
   negation or *l* errors found. Rebuilt; `verify 1.14 1.15 1.16 --strict` 0 problems (the same 3 justified repeated-line
   differences); `check_bible_quotes.py` 0 problems.
+  Then, during the review of 1.14: IV:9, IV:20 and V:26 *ṯrrt* italicized to `*הנשגבת*` (§12.6), with notes.
 
 ### The text on its own terms
 
