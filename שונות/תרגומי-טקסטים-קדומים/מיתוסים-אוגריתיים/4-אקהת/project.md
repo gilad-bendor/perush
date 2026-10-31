@@ -233,4 +233,227 @@ scene (1.19 I:21–25), *b nši ʿnh* (1.19 II), Danel's return home (1.19 IV:8�
 - **CUC's machine parse misreads verbs as numerals and particles** (*šbʿ* "sated" as "seven", *mk* "behold" as "puddle",
   *ṯlṯ* "third" as "copper", *tmrnn* as a personal name): every number-shaped word needs a check against the context.
 
+## KTU 1.18
+
+Translator 1 of Round 5 run 3, resumed (2026-10-31). Files: `annotated-1.18.rtl.md`, `translation--intro-1.18.rtl.md`,
+the generated `translation-1.18.rtl.md`.
+
+### Scope
+
+All 76 CUC lines: I:1–34 (Anat threatens El in the words of 1.3 V; El yields; Anat offers Aqhat brotherhood and to teach
+him hunting near Qrt Ablm, the moon-god's town), IV:1–42 (Anat hires Yaṭpan; her plan – Yaṭpan carried "like an eagle"
+in her belt, the eagles hovering over Aqhat at his meal; the execution word for word; Anat weeps). Columns II–III are
+lost.
+
+### Sources consulted
+
+As for 1.17 (CUC, DULAT via `dulat`, `lex`, `grep --all`, the corpus's earlier tablets, the repository Bible).
+
+### Decisions
+
+- ***rḫp* (IV:20–21, IV:30–32):** the root רחף everywhere. *nšrm trḫpn* (plan and execution, identical Ugaritic) =
+  `נשרים מרחפים` in both (a circumstantial clause: "as he sits to eat … over him eagles hovering, a band of kites
+  watching" – the Hebrew participle, a noted departure from §3's narrative past, chosen for the syntax, the same in both
+  copies); *arḫp ank ʿl* `ארחף אני; על` (speech, future); its execution *trḫp ʿnt ʿl [aqht]* `מְרַחֶפֶת ענת; על [אקהת]`
+  (3 f. sg.: the participle is the Gen 1:2 form because the subject is feminine; the note says that this is the
+  translator's tense choice and states what hovers over what). [cognate] Gen 1:2 and Deut 32:11 at IV:20, IV:21, IV:31,
+  IV:32, with the contrast: predators over a victim vs the spirit over the waters / the eagle protecting its young.
+- **Plan and execution** (IV:17–27 → IV:27–37) copied word for word, only person and tense changed: `אשיתך כנשר
+  בחגורתי, כדאה בְּתַעְרִי` → `שָׁתָה אותו כנשר בחגורתה, כדאה בְּתַעְרָהּ`; `הלום פעמיים קדקד, / שלוש פעמים על האוזן; שפוך
+  כרוצח / דם, כשוחט – על ברכיו; תצא / כרוח נפשו, כרוק תאוותו, / כקיטור באפו` → `הלם … שפך … יצאה …`. *diy* (I) `דאה`
+  (§10); *ḥbl* `חבל` (1 Sam 10:5 `חֶבֶל נְבִאִים`); *bṣr* `צופה`; *tʿrt* `תַּעַר` [cognate] (Jer 47:6); *ḥbš* `חגורה`
+  (1.3); *ʿdb* `תקן`; *šyt* `שית`; *šiy* `רוצח`; *šḫṭ* `שוחט`; *iṯl* `רוק`; *rḥ* `רוח` (licensed).
+- **I:7–19** copied from 1.3 V:20–28 where identical (`הוֹ אֵל`, `אַל תש[מח]`, `אוֹחֲזֵם`, `בִּגְדֻלַּת אָרְכִּי`,
+  `קדקדך; אוליך [שיבתך בדם]`, `שיבת זקנך *בְּמֵעַיִם*`, `ידעתיך, בת, … אֲנוּשָׁה`, `עומדת בפנייך`); new: *plṭ*
+  `פלט`, *ʿḏr* `עזר`, *ḫnp* `חנופה` [cognate], *dṯ ydṯ* `דוֹשׁ יָדוּשׁ`, *mʿqb* `מְעַקֵּב`.
+- ***mhr št*** = `מהיר *הַשָּׂרָה*` ("the Lady's warrior", Anat's): *št* "lady" because 1.19 IV:59 *ib št* "the enemies
+  of *št*" fits only that sense; rejected: "the Sutean" (noted), *šyt*. (`גְּבִירָה` is *rbt*'s, `גְּבֶרֶת` *mṯt*'s.)
+- ***l aḥwy*** (IV:27) = `אכן אֲחַיֶּה` (asseverative: Anat meant to revive him; she weeps at IV:39); "I will not let
+  him live" noted. In 1.19 I:16 the clear negation `לא אֲחַיֶּה` (Anat's confession) is rendered so.
+- **Names:** `יַטְפָּן` (short *yṭp* `יַטְפּ`), `קרת אָבִלִם` (*ablm*; `אָבֵל` "meadow", the pun on `אֲבֵלִים` noted), `יָרִחַ`.
+  *qrt* `קרת`; *mgdl* `מגדל`; *aḫ* "brother, lover" `אח` (Song 8:1).
+
+### Open decisions for the user
+
+1. *l aḥwy* (IV:27): "I will surely revive him" or "I will not let him live"? 2. *mhr št*: the Lady's warrior or the
+Sutean? 3. IV:40–42 (Anat's lament) are too broken for a sure reading.
+
+### Progress log
+
+- Drafted in one file (76 entries), filled and verified; passes: (a) brackets and the split words (*[d]|iym* moved to
+  IV:21, *km|šiy* to IV:35); (b) plan / execution compared string by string; 1.3 V copies checked; *št* revised from
+  `*הַסּוּתִי*` to `*הַשָּׂרָה*` after 1.19 IV:59; names unvocalized after their first occurrence; (c) the generated file read
+  through. Build, `verify 1.18 --strict` 0 problems, quotes 0 problems.
+
+### The text on its own terms
+
+- **The goddess over the old god** (I:7–19): Anat threatens her father's grey head with blood – and El yields, calling
+  her "incurable" and "godless of heart": the divine family has no authority that can stop a determined goddess.
+- **Seduction by kinship** (I:23–29): "you are a brother, and I …", "I will teach you hunting" – the goddess offers the
+  mortal exactly what he had mocked her for (1.17 VI:40).
+- **The hunter hunted** (IV:17–37): the goddess becomes a falconer; the killer is a bird of prey she carries; the hero
+  dies at a meal, "his breath going out like wind, his life like spittle, like smoke from his nose" – death as the
+  reverse of the breath of life.
+- **The killer weeps** (IV:38–42): Anat mourns the man she had killed, for a bow she did not get (1.19 I:14–17).
+
+### Key parallels
+
+- **Gen 1:2; Deut 32:11** (IV:20–32): *rḫp* D = `מְרַחֶפֶת` / `יְרַחֵף` [cognate]; the same verb and stem, over a
+  victim. The Hebrew participle is the translator's syntactic choice, noted at each line.
+- **Gen 2:7** (IV:25): breath, nose and *npš* – the soul goes out "like wind … like smoke from his nose" [divergence].
+- **Deut 32:11** (IV:17): *km nšr* … *rḫp* = `כְּנֶשֶׁר … יְרַחֵף` [cognate].
+- **Gen 9:6** (IV:23): *špk … dm* `שָׁפַךְ דָּם` [equivalent].
+- **Song 8:1** (I:24): "brother" in the language of love [cognate].
+
+### Lines shared with other tablets
+
+1.3 V:20–28 (I:7–17); 1.4 IV:58 (I:15); 1.17 VI:16 (I:23); 1.17 V:9–10 / 1.3 IV:38 (I:21–22); 1.2 I:21 *l ṯrm*
+`לִפְרוֹס`; the plan / execution internally; the eagles' lines are copied in 1.19 I:32–33 and the death lines in 1.19
+II:38–44.
+
+### Proposals for the shared renderings
+
+- *rḫp* in a circumstantial clause = the participle (`מרחפים`, `מְרַחֶפֶת`), finite elsewhere (`ארחף`); *nšr* `נשר`;
+  *diy* (I) `דאה`, *diy* (II) "pinion" `אֶבְרָה` (1.19 III); *ḥbl* `חבל`; *bṣr* `צופה`; *tʿrt* `תער`; *mhr št* `מהיר
+  *השרה*`; *yṭpn* `יַטְפָּן`; *ablm* `אָבִלִם`; *ḫnp* `חנופה`; *plṭ* `פלט`; *ʿḏr* `עזר`; *dṯ* `דוש`; *mʿqb* `מעקב`;
+  *ṯir* `שאר`; *išryt* `אושר`; *lmd* `לימד`; *šiy* `רוצח`; *šḫṭ* `שוחט`; *iṯl* `רוק`; *ṣmt* (n.) `הַצְמָתָה`; *ʿrs*
+  `*עלז*`? (`*ונעלוזה*`, italic).
+- **Collision:** *išryt* `אושר` (cognate) vs 1.3 V:31 `חיי אושר` for *ḥyt ḥẓt* – the cognate keeps `אושר`; 1.3 V:31
+  could move (e.g. `*חיי חֶסֶד*`?) at the next Baal session.
+
+### Lessons for the guidelines
+
+- **A verb in a circumstantial clause** (the eagles "hovering" while the victim eats) should be fixed once for both
+  plan and execution; the corpus rule "narrative prefix = past" needs this exception written down.
+
+## KTU 1.19
+
+Translator 1 of Round 5 run 3, resumed (2026-10-31). Files: `annotated-1.19.rtl.md`, `translation--intro-1.19.rtl.md`,
+the generated `translation-1.19.rtl.md`; `translation.rtl.md` now holds 1.17–1.19.
+
+### Scope
+
+All 224 CUC lines: I:1–49 (the bow broken, Anat's confession; Danel at the gate; Pughat sees the drought and the
+eagles; Danel's curse on the rain), II:1–57 (Pughat saddles the donkey; Danel embraces the dry shoots; the messengers'
+news; the trembling), III:1–56 (the eagles' wings broken three times; the remains found in Ṣamal; the burial in Kinneret;
+the curses on Qor-Mayim and Mararat), IV:1–62 (the curse on Qrt Ablm; seven years of mourning; the sacrifice; Pughat's
+blessing, disguise and visit to Yaṭpan; the scribe's note "here one returns to the story"). No colophon.
+
+### Sources consulted
+
+As for 1.17–1.18.
+
+### Decisions
+
+- **Pughat's epithet** (fixed at II:1, copied in II:6–7, IV:28, IV:37–38): *ṯkmt mym, ḥspt l šʿr ṭl, ydʿt hlk kbkbm* =
+  `סוֹבֶלֶת־שְׁכֶם המים, חושפת מן השיער טל, יודעת את הליכת הכוכבים`. *ṯkmt* keeps the cognate `שְׁכֶם` (Gen 24:15 Rebekah)
+  without `נשא` (*nšʾ*'s); *ḥsp* `חשף` as 1.3 II:38; *šʿr* `שיער`; *hlk* `הליכת` as 1.17 V:10.
+- **The curse on the rain** (I:42–46): `שבע שנים / יחסר בַּעַל, שמונה – רוכב / העננים: בַּל טל, בַּל רביבים, / בַּל *שֶׁטֶף*
+  שתי התהומות, בַּל / טוב קול בעל!` – *ṣrk* `חסר`, *bl* `בַּל`, *ṭb* `טוב` (licensed), *ql* `קול`. [cognate] 2 Sam 1:21,
+  1 Kgs 17:1 (printed), the "seven … eight" climax noted.
+- **The wings broken three times** (III:1–41): one Hebrew for the request (jussive `בעל ישבור … תיפולנה תחת רגליי;
+  אבקע … ואחזה: אם יש שומן, אם יש עצם – אבכה ואקברנו, אשית בחור אֵלֵי הארץ`), the execution (`בעל שבר … נפלו תחת
+  רגליו; בקע … וחזה: אין שומן, אין עצם`), the restoration (`בעל יבנה … יפרחו וידאו`) – copied for the eagles, Ḥargab and
+  Ṣamal with only number and gender changed. *diy* (II) "pinion" = `אברה` (Deut 32:11 `אֶבְרָתוֹ`), kept apart from
+  *diy* (I) `דאה`; *ḥdy* `חזה`; *npr* `פרח`, *dʾy* `דאה`, *ʿp* `עופף` (three flight verbs, three words); *ḫrt ilm arṣ*
+  `חור אֵלֵי הארץ` (1.5 V:5–6, 1.6 I:17–18).
+- **The curses on the towns** (III:44–IV:7): `הוֹי לך, X, אשר עלייך נמחץ אקהת הגבור` and the refrain `כָּעֵת – בָּרִחַ,
+  ולעולם; כָּעֵת – ולדור דור: *מתקן* אחרון מטה ידו!` copied in all three; *yṣm* "curse" `זָעַם` (Num 23:8; `אָרַר` avoided:
+  not a cognate, it would make the Gen 4:11 echo); *ʿnt* (II) `כָּעֵת` (§10); *brḥ* `בָּרִחַ` (Gen 4:12 `נָע וָנָד`
+  [equivalent]); *l ht w ʿlmh* `מֵעַתָּה ועד עולם` (Ps 113:2 [cognate]); *ʿwrt* `עיוורת`. Town names: `קוֹר־מַיִם`,
+  `מְרָרַת תַּעְלִל בְּנֵר`, `קרת אָבִלִם`; *knrt* `כִּנֶּרֶת` (biblical form).
+- **The trembling formula** (II:44–48) restored and copied from 1.3 III:32–35 in the masculine and in the tablet's own
+  order; `*גידי*` kept from 1.3/1.4 (the *dt* / *gd* split left for later, §12.4).
+- **The gate scene** (I:19–25) and **Danel's action formula** copied from §12.4; the remaining 1.17 copies: *b nši ʿnh
+  w yphn* (II:56, III:14, III:28), *gm l … k yṣḥ* (I:49), "the son's duties" do not recur.
+- **Other choices:** *ur* `*אוּר*` (II:17, 24: "warmth, fire", the cognate of `אוּר` Isa 31:9 – see Tool problems);
+  *npṣ* `בגדי` (IV:44, 46 – see Tool problems); *ypʿ* `צמח`; *bṣql* `*ניצן*`; *šblt* `שיבולת`; *asm* `אסם`; *aḥl*
+  `אַחְלַי`; *ḥmdrt* `*שדפה*` (Gen 41:6); *yġlm* `*צחיחים*`; *palt* `*בור*`; *aklt* `*אכולה*`; *kst* `גלימה`, *all* `אדרת`
+  (1.6 II:11); *pẓġm ġr* `*מחתכי* עור` (`פצע` is *hdy*'s, `גדד`/`שרט` reserved); *bkyt*, *mšspdt* `בוכות`, `מספידות`;
+  *dġṯ* `*עתר*` (Ezek 8:11; `קטורת` would share *qṭr*'s root); *qry* D `הִקְרָה`; *ṯb* `השיב` (IV:19, as 1.3 IV:21);
+  *ʔdm* N `התאדמה`; *ḫlpn* `*מַחֲלָף*` (Ezra 1:9); *nšg* `*נדן*`; *agrt* `*שכירה*`; *ib* `אויב`; *msk* `מסך`; *hndt …
+  mspr* `והנה – *ישוב* אל המספר` (a scribal rubric).
+
+### Open decisions for the user
+
+1. I:2–18 (Anat's confession and the first drought signs) are badly broken; many words are left `…` or italic.
+2. *ʿdb uḫry mṭ ydh* (the refrain's last line): "the last (of them) takes up the staff of his hand" (exile, blindness)
+   – the reading is uncertain. 3. *bkm* (II:8–9): "weeping" (followed) or DULAT's "then". 4. *agrtn* (IV:51): "our
+   hireling" or "our mistress" (Yaṭpan's men mistake Pughat for Anat?). 5. IV:57–60 (Yaṭpan's drunken speech) – obscure.
+
+### Progress log
+
+- Drafted in four saves (I; II; III; IV), each filled and verified. Passes: (a) brackets, split words (*b šp|th*,
+  *diy|hyt*, *diy|hmt*, *yšt|ql*, *aq|ht*, *b k|bkbm*, *tq|ḥ*, *ġ|zr*) and scribal omissions ⟨ ⟩; (b) the three wing
+  sequences and the three curses compared string by string; the one verifier difference (III:31 / III:43, identical
+  Ugaritic, the pronoun on the next line differs) justified at both lines; first-occurrence vocalization (`דָּנִאֵל`,
+  `אַקְהָת`, `עֲנָת`, `בַּעַל`, `פּוּגַת`) added; (c) the generated file read: `על הענבים?`, *ḫlpn* moved from `*ח[רב]*` to
+  `*מַחֲ[לָף]*` (`חרב` is *ḥrb* in the next line). Build; `verify 1.19 --strict` 0 problems (1 justified repeated-line
+  difference); quotes 0 problems on all files.
+
+### The text on its own terms
+
+- **The land dies with the heir** (I:17–46): the blight begins at Aqhat's death; the father's curse binds the rain for
+  "seven years, eight": the king's grief and the fertility of the land are one thing.
+- **The daughter's world** (II:1–7, IV:28–38): she carries water, gathers dew at dawn, knows the stars' courses – the
+  household's labour and its calendar; she saddles the donkey for her old father.
+- **Tenderness to the crops** (II:12–25): the king embraces and kisses the last green shoots and wishes his son's hand
+  would gather them – the hope that does not yet know.
+- **The news** (II:26–48): "while the word was still in his mouth" the messengers come; the body's trembling formula is
+  the same for gods and men.
+- **Bones must be buried** (III:1–41): the father cuts open birds to find "fat and bone" – some remnant to weep over and
+  bury; and he asks Baal to heal the innocent birds again.
+- **Blood guilt falls on places** (III:44–IV:7): the towns near the killing are cursed, "now and for all generations":
+  responsibility is territorial, not only personal.
+- **Seven years of mourning, then sacrifice** (IV:8–31): professional weepers, lacerated skin, the time counted in days,
+  months and years – and the end of mourning marked by sending the weepers out and offering to the gods.
+- **The avenging sister** (IV:32–61): blessed by her father, she takes up the blood-feud no son is left to take; she
+  dresses as a warrior under a woman's dress – the answer to her brother's "shall women hunt?" (1.17 VI:40).
+- **Recitation** (IV:62): the scribe's note "here one returns to the story" shows the epic was read aloud in
+  instalments.
+
+### Key parallels
+
+- **2 Sam 1:21; 1 Kgs 17:1** (I:42–46): no dew, no showers on the place where the hero fell [cognate].
+- **Gen 1:2; Deut 32:11** (I:32): *nšrm trḫpn ʿl bt abh* `מְרַחֶפֶת עַל` [cognate]; Deut 28:49 `כַּאֲשֶׁר יִדְאֶה הַנָּשֶׁר`
+  (III:14 *dʾy*) [cognate]; Deut 32:11 `אֶבְרָתוֹ` (*diy* (II), III:2) [equivalent].
+- **Deut 21:1–9; Gen 4:10–12** (III:44–IV:7): the towns near the unsolved killing – cursed, not atoning [divergence];
+  *brḥ* ↔ `נָע וָנָד` [equivalent].
+- **Gen 24:15** (II:1): *ṯkmt my* ↔ `וְכַדָּהּ עַל שִׁכְמָהּ` [cognate].
+- **1 Sam 31:12–13; Gen 37:33–35** (III:5, III:40, II:42): the remains gathered and buried; the father weeps for the son
+  [equivalent].
+- **Judg 4:19–21** (IV:53, II:38, IV:45): `הַשְׁקִינִי` and `רַקָּתוֹ` – the woman, the drink and the warrior in the tent
+  [cognate words; typological divergence].
+- **Ps 113:2** (IV:5–6): `מֵעַתָּה וְעַד עוֹלָם` [cognate]; **Gen 50:10; Jer 9:16** (IV:10–15): the weepers and the
+  "seven" of mourning [cognate / equivalent].
+- **Qoh 10:8** (I:13): the viper in the hedge [cognate].
+
+### Lines shared with other tablets
+
+1.17 V:5–10 (I:19–26), V:15 (I:49), II:24–25 (IV:8–9), I:36 (IV:36), I:23–24 (IV:32–33); 1.18 IV:20–26 (I:32–33,
+II:29–30, II:38–44); 1.4 IV:4–15 (II:3–11); 1.3 III:32–35 (II:44–47); 1.2 IV:6 (II:26, III:7, III:21, III:35); 1.5
+V:5–6, 1.6 I:17–18 (III:6); 1.4 II:12 (I:29, II:27); 1.23:52 (IV:50–51); 1.108:4–5 (IV:27).
+
+### Proposals for the shared renderings
+
+- Pughat's epithet (above) and the curse refrain – candidates for §12 fixed strings.
+- *diy* (II) "pinion" `אֶבְרָה` (a new lemma row beside *diy* (I) `דַּאָה`); *ḥdy* `חזה` confirmed; *npr* `פרח`; *dʾy*
+  `דאה`; *ʿp* (vb) `עופף`; *yṣm* `זָעַם`; *brḥ* "fugitive" `בָּרִחַ`; *ʿwr* `עיוור`; *qbr* `קבר`; *bqʿ* `בקע`; *šmt* "fat"
+  `שומן`; *ʿẓm* `עצם`; *mdgt* `*מחילה*`; *knrt* `כִּנֶּרֶת`; *bkyt* `בוכות`; *mšspdt* `מספידות`; *pẓġ* `*מחתך*`; *dġṯ*
+  `*עתר*`; *ṣrk* `חסר`; *šrʿ* `*שטף*`; *yr* `יורה`; *ġnb* `ענב`; *ḥmṣ* `חמץ`; *ṯql* `שקל`; *mḫlpt* `מחלפות` (as 1.107);
+  *bšr* `בישר`; *nṣḥ* `נצח`; *lʾy* (vb) `נצח`?/`*נגבר*` (here `ננצח` – a possible collision with *nṣḥ*: noted); *rqt*
+  `רקה`; *umt* `אומה`; *ʿl* (III) `*עוּל*`; *mʿrb* `מערב`; *minš* `מחנה`; *qbʿt* `קֻבַּעַת` (§10); *ḫlpn* `*מחלף*`;
+  *nšg* `*נדן*`; *mspr* `מספר` (§10).
+- **Revisions to rows of 1.17 / 1.18 made here:** *mhr št* `מהיר *הַשָּׂרָה*` (1.18, see there).
+- **Collisions for the coordinator:** (1) *lʾy* `ננצח` (II:35) and *nṣḥ* `ניצחוני` (II:36) share the root נצח in
+  adjacent lines (a deliberate pair? DULAT *lʾy* "prevail": `נגבר` would avoid it); (2) *irš* `תבע` (1.17) vs 1.3 V:28
+  *tarš* `תחפצי` – one lemma, two Hebrew words across the cycle; (3) *išryt* `אושר` vs 1.3 V:31 (see 1.18).
+
+### Lessons for the guidelines
+
+- **Gates that read a prefix + a short word** misfire on the commonest construct forms: `בגדי` "garments of" was read as
+  ב + `גדי` "kid" (the *gd* gate). Test every short-word gate on construct plurals with ב/כ/ל/מ/ה.
+- **Licence regexes written with DULAT's aleph letters** (`\bủr\b`) never match, because the tool folds ả/ỉ/ủ to a/i/u
+  before matching; write licences in the folded form.
+
 ## Parallels index

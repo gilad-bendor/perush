@@ -648,3 +648,7 @@ All the translator's Proposals (`4-אקהת/project.md`, "KTU 1.17") are accepte
   1.17 V:7. (2) *dt* `*גידי*` in 1.3 III:35 and 1.4 II:20 against *gd* `גִּיד`: left for the next session on the Baal
   Cycle (a minor split; the italic marks the uncertain word there). (3) *qṣʿt* `*חצים*` against Kirta's *ḥẓ* (the cognate of
   `חֵץ`): *ḥẓ* takes `חֵץ` (the cognate keeps it, §5.2), and *qṣʿt* stays `*חצים*` in italics as a split noted at its lines.
+
+### 12.5 Merged after translator 1 (KTU 1.18, 1.19), Round 5 run 3, 2026-10-31
+
+All Proposals accepted (`4-אקהת/project.md`, "KTU 1.18", "KTU 1.19"): *mhr št* = `מהיר *הַשָּׂרָה*` (§12.1 revised; 1.19 IV:59 *ib št*); *nšrm trḫpn* = `נשרים מרחפים, צופה חבל דאות` (a circumstantial participle, noted) – the *rḫp* lines are the run's Gen 1:2 finding; Pughat's epithet `סוֹבֶלֶת־שְׁכֶם המים, חושפת מן השיער טל, יודעת את הליכת הכוכבים` and the town-curse refrain (`הוֹי לך, X, אשר עלייך נמחץ אקהת הגבור` …) fixed; *yṣm* `זָעַם` (`אָרַר` avoided: not a cognate, Gen 4:11); *diy* (II) `אֶבְרָה` apart from *diy* (I) `דַּאָה`; *npr* `פרח`, *dʾy* `דאה`, *ʿp* `עופף`; *bṣr* `צופה`; *ḥbl* `חבל`; *tʿrt* `תַּעַר`; names `אָבִלִם`, `קוֹר־מַיִם`, `מְרָרַת תַּעְלִל בְּנֵר`, `חַרְגַּב`, `צַמֶּלֶת`, `כִּנֶּרֶת`. Tool: the `אור` gate licensed by *ur* "fire" (`*אוּר*`, Isa 31:9), the `גד` gate by *npṣ* (`בגדי` "garments of"), the *rḫp* check accepts plene `ריחפ`. **Left as noted splits:** *irš* `תבע` (1.17) / 1.3 V:28 `תחפצי`; *išryt* `אושר` / 1.3 V:31 `חיי אושר` (*ḥyt ḥẓt*); *lʾy* / *nṣḥ* in adjacent lines (1.19 II:35–36).
