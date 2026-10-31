@@ -612,3 +612,14 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
 6. **Names:** Rꜥ-Ḥrw-ꜣḫ.tj `רַא־חַרְאַחְתִּי`; Pꜣ-Rꜥ `רַא`.
 7. **Gate fixed (the coordinator):** `לברוח` and `מרוח` are no longer read as `רוח` (the prefix class); `השבת` "you returned"
    still trips the שבת gate: write another form or an `[היתר שער]`.
+
+### 11.7 Round 5 run 6 – TB part 2 (10,1–20,1), merged 2026-10-31 (translator 1)
+1. y~mꜥ "sea" = `יָם` [cognate: a Semitic loanword in Late Egyptian; the god Yam in the note].
+2. ꜥḥꜣ by sense: "fight" `נִלְחַם`, "quarrel" `רָב`; jrj-ꜥḥꜣwtj "adversary" `בַּעַל־רִיב`.
+3. Cult: ꜥbt `מִנְחָה`, wdn `זֶבַח`, mꜣꜥ "offer" `הִקְרִיב`, hrw nfr `יוֹם טוֹב`.
+4. Court: špsj.t `גְּבִירָה`, jrj-pꜥ.t `נָסִיךְ`, zꜣ-nsw `בֶּן־הַמֶּלֶךְ`, jmj-rʾ mšꜥ wr `הַמְּמֻנֶּה עַל הַצָּבָא הַגָּדוֹל`; the
+   impersonal tw "one" for the king = `(הַמֶּלֶךְ)`.
+5. Splits by sense: šrj.t "daughter" `בַּת` (šrj `קָטָן`); wpj "open (the heart)" `גִּלָּה`.
+6. Gates fixed (the coordinator): the `זבת` gate takes only `ו` as a prefix (`הכוזבת` "the liar", 17,6); the `ענבים` licence
+   includes the spelling `jꜣ~jr` (13,8); the two `[היתר שער]` notes may go.
+

@@ -48,7 +48,7 @@ reading" from memory only (never quoted verbatim). Bible verses printed / checke
   register). Reason: Hebrew `הגדול / הקטן` is the Bible's own elder/younger pair (Gen 27:15, 42:13), and `קטן` also
   means "child", so 1,2 keeps the Egyptian repetition (*sn šrjw … mj-sḫrw-n šrjw* "like a (son) little one"). Collision:
   AM 2.13 ktj `הקטן` (one line) – a proposal below.
-- **Narrative frame:** wn.jn / ꜥḥꜥ.n = `ואז` + past; ḫr-jr = `ובכן` (1,1, 2,2, 5,7); ḫr-jr-m-ḫt = `ואחרי כן`;
+- **Narrative frame:** wn.jn / ꜥḥꜥ.n = `ואז` + past; ḫr-jr = `והנה` (1,1, 2,2, 5,7; the coordinator's §11.6, was `ובכן`); ḫr-jr-m-ḫt = `ואחרי כן`;
   j.n=f (ḥr ḏd n=f) = `– כך אמר לו` (one Hebrew verb for the quotative + infinitive); m-ḏd / r-ḏd = `לאמור`; ḫr (particle)
   = `הרי` (kept three times in 3,9–3,10 and in its copies 5,2, 7,4–7,5); js / jstw = `ואכן` (js bn, interrogative, `הלא`);
   jr (topic) = `הנה`, jr "if" = `אם`; jḫ "then, so" = `אפוא` (8,2, 9,6), jḫ "what?" = `מה`; wꜥ-n (indefinite article) not
@@ -109,7 +109,7 @@ reading" from memory only (never quoted verbatim). Bible verses printed / checke
   `קוּמִי`, `מַהֵר`, `הָבֵא`, `עֲמוֹד`).
 - `verify TB`: 0 problems (the part-2 placeholder is a note); `build`; `check_bible_quotes.py` on the three files: 0
   problems; `build_parallels_index.py` run (the table below regenerated).
-- **Gate notes:** three right words were caught by gates and passed with `[היתר שער: …]` in the entry: `לברוח` (6,3) and
+- **Gate notes (the two `רוח` notes removed after the coordinator's gate fix):** three right words were caught by gates and passed with `[היתר שער: …]` in the entry: `לברוח` (6,3) and
   `מרוח` (8,7) by the `רוח` gate (prefix class reads ל־ב־ / מ־ as prefixes), and the draft `השבת` "you returned" (9,5,
   later changed to the future `תשיב` for the grammar, not for the gate).
 
@@ -160,7 +160,7 @@ None copied. Shared strings with AM: `האירה הארץ` (ḥḏ tꜣ, AM 9.18
    social sense (AM 25.20, 26.1) as a split by sense; AM 2.13 ktj `הקטן` shares the word (one line) – recorded.
 2. **grg "lie, falsehood" = `כָּזָב`** (TB 7,4, 7,8 `בכזב`), to keep ꜥḏꜣ = `שֶׁקֶר` (AM, TB 4,6–4,8); §11.3's "grg = שֶׁקֶר"
    (for BD) would put two Egyptian lemmas in one Hebrew word. ꜥḏꜣ "the false one" `השקרן` against mꜣꜥ.tj `האמיתי`.
-3. **The narrative particles of Late Egyptian:** ḫr-jr `ובכן` (collides with AM's ḫr-rʾ-ꜥ `ובכן`; in TB 8,6 ḫr-rʾ-ꜥ
+3. **The narrative particles of Late Egyptian:** ḫr-jr `והנה` (settled by the coordinator; `ובכן` stays AM's ḫr-rʾ-ꜥ; in TB 8,6 ḫr-rʾ-ꜥ
    "still" is `עוד`), ḫr-jr-m-ḫt `ואחרי כן`, j.n=f `– כך אמר`, ḫr `הרי`, js / jstw `ואכן`, jḫ `אפוא` / `מה`, wꜥ-n untranslated.
 4. **Names:** Rꜥ-Ḥrw-ꜣḫ.tj `רַא־חַרְאַחְתִּי`; Pꜣ-Rꜥ `רַא`; the dawn formula `האירה הארץ, ויום שני נהיה`.
 5. **Household and farm words** for the other tales: ḥm.t / s.t-ḥm.t `אשה` (two lemmas – keep or split?), hꜣy `בעל`, ꜥḥꜣwtj
@@ -174,13 +174,104 @@ None copied. Shared strings with AM: `האירה הארץ` (ḥḏ tꜣ, AM 9.18
 - In Late Egyptian narrative the indefinite article wꜥ-n should be fixed as "not translated" before the first line, or it
   drifts into `אחד` in some lines.
 
+## TB 10,1–20,1 (part 2; Round 5 run 6, translator 1, 2026-10-31)
+
+### Scope
+Labels 10,1–20,1 (99 entries): the sea and the lock of hair (10,1–11,5), Pharaoh's envoys and the wife's betrayal,
+Bata's death (11,6–12,10), the brother finds the heart (13,1–14,5), Bata as a bull (14,6–15,10), the bull's death and
+the persea trees (16,1–17,5), the splinter and the son (17,6–18,10), Bata's kingship, the trial of the wife and the
+colophon (19,1–20,1). The only large restoration is the formula in 19,2–19,3.
+
+### Coordinator decisions applied (§11.6)
+ḫr-jr = `והנה` (part 1: 1,1, 2,2, 5,7 changed from `ובכן`; part 2: 16,7); ḫr-rʾ-ꜥ "still" `עוד` (8,6); šrj `קטן`, grg
+`כזב`; the two part-1 gate notes (`לברוח`, `מרוח`) removed after the gate fix.
+
+### Decisions
+- **Fixed strings repeated:** the dawn formula (12,7; 13,6; 14,9–15,1; 16,6), `ימים רבים אחרי זה` (10,4; 11,7–11,8; 15,7;
+  17,3; 17,8–17,9; 18,6; 19,1; 19,2 restored), `כמנהגו של כל יום` (10,4; 13,9), and a night variant `ואחרי כן – לילה
+  נהיה –` (13,9). Commands and fulfilments copy each other: 8,5 → 13,5 (`עשה … שנים בחיפושו`), 8,5 → 13,8–13,9
+  (`קערה של מים צוננים`), 8,6 → 12,9 (`ונתנו לו גביע של שֵׁכָר, והוא עשה קצף`), 7,1 → 19,5 (`נשפט עמה לפניהם`), 14,8 →
+  15,4 (`פלא גדול`), 16,2–16,4 → 17,9–18,1 (the feast, `והיה טוב לו עמה`, the oath `תן לי שבועה באֵל`), 12,4 → 18,1 (`תן
+  שיכרתו`), 6,7 → 16,9–16,10 (`האחד … על הצד האחד … והאחר על האחר`).
+- **New words:** y~mꜥ "sea" `ים` [cognate: Semitic loanword]; nḥm `הציל` (§11.3); ꜥḥꜣ "fight" `נלחם` / "quarrel" `רב`
+  (split by sense, 10,3 / 10,9–11,2; jrj-ꜥḥꜣwtj `בעל־ריב` 19,10); wpj "open (the heart)" `גילה` (10,3; "judge" `פסק` /
+  "litigate" `נשפט` stay); nbd.t "lock" `קליעה`, šnj `שער`; rḫtj `כובס`, ḥrj `ראש`; stj `ריח`, sgnn `משחה`; mrj.t `מזח`;
+  ḫꜣs.t "hill" `תל` (11,2) / "foreign land" `ארץ־נכר`; zẖꜣ.w `סופרים`, rḫ.w-jḫ.t `יודעי־הדברים`; šrj.t "daughter" `בת`
+  (11,5: split by sense from šrj `קטן`); mw "water, seed" `מי` (11,5); nḏ.t-ḥr `תשורה`; wpwtj `שליח` (wpw.t `שליחות`);
+  rmṯ-mšꜥ `אנשי־צבא`, tj-n.t-ḥtrj `אנשי־הצמדים` (ḥtr `צמד`); sꜥb `עדי`; nhm `צהל`; mrj `אהב`; dhn `מינה`; špsj.t (ꜥꜣ.t)
+  `(ה)גבירה (הגדולה)`; sksk `קיצץ`; ḥmt "copper (tools)" `נחושת`; jrp `יין`, ḥwꜣ.w `ריקבון`; ḥꜥw `מקל`, ṯbw.t `נעל`,
+  ḫꜥ.w n rʾ-ꜥ-ḫt `כלי מלחמה`, mšꜥ `צעד`; ḥꜥtj `מיטה`; jꜣrr.t `ענב`; nš `רעד`, qnj `חיבק`, jrj "companion" `חבר`; jwn
+  `צבע`; psd `גב`; ršw `שמח`; ꜥbt `מנחה`, wdn `זבח`, mꜣꜥ `הקריב`; wꜥb.t `בית־הטוהר?`; hrw nfr `יום טוב`; wḏḥ `מזג`;
+  mjs.t `כָּבֵד`; ktkt `ניער`; snf `דם`, bnš `מזוזה`, tꜣ-ꜥꜣ "gate" `שער`; šwꜣb `עץ־פרסאה`; ḫꜥj `הופיע`, sšd `חלון`,
+  ḫsbḏ `ספיר`, mꜣḥ `זר`, wrrj.t `מרכבה`, ḏꜥm `זהב־לבן`; nḏꜣ `קיסם`, pwj `עף`; šzp jwr `קיבל הריון`, jꜣd.t `רגע`; zꜣ-ṯꜣj
+  `בן־זכר`; mnꜥ.t `אומנת`, ḫnm.t `מינקת`; rnn `טיפח`; ḥmww `חרש`, jpdw `רהיטים`; zꜣ-nsw n Kš `בן־המלך של כּוּשׁ`, jrj-pꜥ.t
+  `נסיך`; wḏꜣ n ꜥnḫ `נסע לחיים`, mnj `עגינה`; m-ḥtp `בנחת`; zẖꜣ.w "writing" `כתב`; jmj-rʾ mšꜥ wr `הממונה על הצבא הגדול`.
+- **Names:** Km.t `כֵּמֶת`; Kš `כּוּשׁ`; the scribes Qꜣ-gꜣbw `קָאגַבּוּ` (TLA "Kai-geba"), Ḥrj `חוֹרִי`, Mrj-m-jp.t
+  `מֶרִימוֹפֶּת`, Jnn `אִנֵנָה`; Stẖj-Mrj-n-Ptḥ `סֵתִי־מֶרֶנְפְּתָח`; Thoth `תְּחוּת`; "where 'one' is" (*tw* for the king)
+  rendered `אשר (המלך) שם` – `(פרעה)` in a parenthesis tripped the pr-ꜥꜣ gate, and `המלך` is the honest gloss.
+- **Grammar:** 10,1–10,2: *jṯꜣ=t* ("take you") opens 10,2 in Egyptian; the Hebrew moves it to 10,1 (recorded); 19,1–19,2:
+  ⟨r⟩ "to" at the end of 19,1 rendered as the prefix of `לנסיך` in 19,2.
+
+### Open decisions for the user
+1. 15,7 / 16,2 *wꜥb.t* "the pure place" (`בית־הטוהר?`) – TLA "Tempelschlachthof (?)".
+2. 17,4 ⟨mꜣḥ⟩ ḥḏw "garland of onions?" and the lost verb `ו(עלה)`.
+3. 19,7 *wḏꜣ n ꜥnḫ* "went to life" (`נסע לחיים`) or the TLA's "departed from life".
+4. 13,8 *jꜣ~jr* `ענב` – the `ענבים` gate licence (`jꜣrr`) does not cover this spelling: passed with `[היתר שער]`.
+
+### Progress log (part 2)
+- Drafted 10,1–20,1 in eight sections, each filled, built and verified; the TLA read after each section. Changes from
+  it: 11,4 *n pr-ꜥꜣ* "to Pharaoh" (not "of"); 11,5 `=k` superfluous (`תשורה`, not `תשורה לך`); notes for 14,6, 16,1,
+  19,7.
+- Passes: (a) brackets (19,2 restored formula in one bracket; 15,5 `[לו]`; 18,2 `[קטן]`; 20,1 `[הנסיך]`, `[הממונה על]`,
+  `מֶרֶנְ[פְּתָח]`); (b) the repeated strings above checked line by line; ḫr-jr `והנה` over the whole text; (c) the
+  generated translation read through.
+- `verify TB --strict`: 0 problems (185/185); `build`; `check_bible_quotes.py` on the three files: 0 problems;
+  `build_parallels_index.py` run.
+- **Gate notes:** `הכוזבת` (17,6, grg.t) trips the `זבת` gate of Ex 3:8 (the prefix class reads ה־כ־ו); `ענב` (13,8)
+  passed for the licence spelling. Both with `[היתר שער: …]`.
+
+### The text on its own terms (part 2)
+- **The sea as a god** (*ym*, the Semitic word: the Canaanite Yam) desires the woman and the cedar helps it (10,5–10,7);
+  pun *ꜥš* "call" / *ꜥš* "cedar".
+- **Scent as a sign of divinity:** the lock smells of ointment; the wise men know "the seed of every god" is in it
+  (10,8–11,5).
+- **The betrayer and the secret:** Bata "opened his whole heart" to her (10,3); she has the tree cut (12,4).
+- **Signs at a distance:** beer foams, wine rots (12,9–12,10), as promised (8,6).
+- **Swallowing as the thread of life:** the catfish swallows the phallus, the heart swallows the water, the queen
+  swallows the splinter and conceives (7,9; 14,1; 18,5).
+- **Metamorphosis by *ḫpr*:** Bata "comes into being" as bull, trees, splinter, son, king (14,5; 15,1; 16,10; 18,7).
+- **Blood on the doorposts** grows into two persea trees – life from sacrifice (16,9–16,10).
+- **The king's death as flight to the sky; the dead "moor" and "go to life"** (19,3; 19,7).
+- **Justice at the end:** the trial "before them" fulfils "I will be judged with you before him" (7,1 → 19,5); the elder
+  brother becomes the younger's heir – the household order reversed (19,6–19,7).
+- **The scribe's curse:** Thoth as the adversary of whoever speaks against the book (19,9–19,10).
+
+### Key parallels (part 2)
+- 16,9 ↔ Ex 12:7 (`עַל שְׁתֵּי הַמְּזוּזֹת`) [equivalent]: blood on the two doorposts – there protection from death, here
+  the seed of new life [divergence].
+- 18,7 ↔ Jer 20:15 (`יֻלַּד לְךָ בֵּן זָכָר`) [equivalent]: the same announcement.
+- 12,4 ↔ Judg 16:6 [equivalent]: the woman who learns the hero's secret and betrays it.
+- 19,5 ↔ 1 Sam 12:7 (`וְאִשָּׁפְטָה אִתְּכֶם לִפְנֵי יְהוָה`) [equivalent]; 11,4 ↔ Gen 41:8 [divergence] (the king's wise
+  men, here "knowers of things", not `חַרְטֻמִּים`); 10,8 ↔ Ex 2:5 [divergence] (the river brings something to Pharaoh's
+  house); 14,4 ↔ Gen 33:4, 45:15 [equivalent] (the brothers embrace and speak); 16,2–16,3 ↔ Esth 1:10, 5:6, 8:17
+  [equivalent] (the king's feast, wine and the woman's request).
+
+### Proposals for the shared renderings (part 2)
+1. y~mꜥ "sea" = `ים` [cognate: Semitic loanword] (the corpus word for š "lake" `אגם` stays).
+2. ꜥḥꜣ "fight" `נלחם` / "quarrel" `רב` (split by sense); jrj-ꜥḥꜣwtj `בעל־ריב`.
+3. The cult words: ꜥbt `מנחה`, wdn `זבח`, mꜣꜥ `הקריב` (ḥtp.w stays `קרבנות`); hrw nfr `יום טוב`.
+4. Court titles: špsj.t `גבירה`, jrj-pꜥ.t `נסיך`, zꜣ-nsw `בן־המלך`, jmj-rʾ mšꜥ wr `הממונה על הצבא הגדול`, zẖꜣ.w-pr-ḥḏ
+   `סופר־בית־האוצר`.
+5. **Gate fix:** the `זבת` gate's prefix class reads `הכוזבת` / `כוזבת` (grg.t) as `זבת`; the `ענבים` licence needs the
+   spelling `jꜣ~jr`.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
 ### Parallels index (TB)
 | Line | Source | Hebrew rendering | Bible | Tag | Comment |
 |---|---|---|---|---|---|
-| 1,1 | [j]r mntwf ḫru̯ =tw sn 2 n wꜥ mw,t{t} n wꜥ jt Jnp,w rn (n) pꜣ ꜥꜣ jw Bꜣ~tʾ rn (n) pꜣ šrjw ḫr-jr [J]np,w sw [ẖr],j pr ẖr[,j] ḥm,t | הנה הוא – אומרים: שני אחים של אם אחת ושל אב אחד; אַנוּבִּיס – שם הגדול, ובָּטָה – שם הקטן. ובכן אנוביס – [יש לו] בית, יש לו אשה, | `וַתֹּסֶף לָלֶדֶת אֶת אָחִיו אֶת הָבֶל` (בראשית ד:ב) | divergence | שני אחים בני אם אחת, אחד בבית ובשדה (קין "עֹבֵד אֲדָמָה") ואחד רועה; כאן האחים אינם מתחרים על חסד אל, וסיפורם מתחיל באחדות. |
+| 1,1 | [j]r mntwf ḫru̯ =tw sn 2 n wꜥ mw,t{t} n wꜥ jt Jnp,w rn (n) pꜣ ꜥꜣ jw Bꜣ~tʾ rn (n) pꜣ šrjw ḫr-jr [J]np,w sw [ẖr],j pr ẖr[,j] ḥm,t | הנה הוא – אומרים: שני אחים של אם אחת ושל אב אחד; אַנוּבִּיס – שם הגדול, ובָּטָה – שם הקטן. והנה אנוביס – [יש לו] בית, יש לו אשה, | `וַתֹּסֶף לָלֶדֶת אֶת אָחִיו אֶת הָבֶל` (בראשית ד:ב) | divergence | שני אחים בני אם אחת, אחד בבית ובשדה (קין "עֹבֵד אֲדָמָה") ואחד רועה; כאן האחים אינם מתחרים על חסד אל, וסיפורם מתחיל באחדות. |
 | 1,2 | [jw] [pꜣy] =f sn šrjw m-ḏi̯ =f mj-sḫr,w-n šrjw jw mntwf j:jri̯{.tw} n =f ḥbs.w.pl jw =f ḥr šmi̯.t m-sꜣ nꜣy =f jꜣw,t r? sḫ,t.pl | ואחיו הקטן אצלו כמו (בן) קטן; הוא העושה לו בגדים, והוא הולך אחרי עדריו אל? השדות, | `וְיִשְׂרָאֵל אָהַב אֶת יוֹסֵף מִכָּל בָּנָיו … וְעָשָׂה לוֹ כְּתֹנֶת פַּסִּים` (בראשית לז:ג) | divergence | ביוסף האב עושה בגד לבן האהוב; כאן ההפך: הצעיר, שהוא "כבן", עושה את הבגדים לגדול – עבודת בן בית, לא אות להעדפה. |
 | 1,4 | [m] [ꜥḥꜣ,w]tj nfr nn-wn ⟨mj-⟩qd =f m ⟨pꜣ⟩ tꜣ ⟨r-⟩ḏr =f js wn pḥ[,tj] n nṯr jm =f [ḫr-jr]-m-ḫt hrw.pl qn,w ⟨ḥr-⟩sꜣ nn [jw] ⸢pꜣy⸣ =f sn šrj | [גבר] טוב, אין כמוהו בכל הארץ; ואכן כוח של אֵל היה בו. [ואחרי] כן – ימים רבים אחרי זה – ואחיו הקטן | `וַיְהִי יְהוָה אֶת יוֹסֵף וַיְהִי אִישׁ מַצְלִיחַ` (בראשית לט:ב) | equivalent | הגיבור הצעיר שיש בו "משהו מן האל"; במצרית זה "כוח של אל" – כוח גופני (*pḥ.tj*), לא הצלחה. |
 | 1,4 | [m] [ꜥḥꜣ,w]tj nfr nn-wn ⟨mj-⟩qd =f m ⟨pꜣ⟩ tꜣ ⟨r-⟩ḏr =f js wn pḥ[,tj] n nṯr jm =f [ḫr-jr]-m-ḫt hrw.pl qn,w ⟨ḥr-⟩sꜣ nn [jw] ⸢pꜣy⸣ =f sn šrj | [גבר] טוב, אין כמוהו בכל הארץ; ואכן כוח של אֵל היה בו. [ואחרי] כן – ימים רבים אחרי זה – ואחיו הקטן | `וַתָּחֶל רוּחַ יְהוָה לְפַעֲמוֹ` (שופטים יג:כה) | equivalent | כוח אלוהי בגיבור (שמשון). |
@@ -191,7 +282,7 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | 1,10 | [jw]? =[s]n (ḥr) ḏd n =f nfr pꜣ stjmw{.pl} [n] s,t ḥmn.t? mtw =f sḏm pꜣ ḏd =sn nb mtw =f jṯꜣ[y] =w r tꜣ s,t | [והם] אומרים לו: "טוב הירק [של] מקום פלוני?"; ושמע את כל אשר אמרו, ולקח אותם אל המקום | `וַיִּפְתַּח יְהוָה אֶת פִּי הָאָתוֹן וַתֹּאמֶר לְבִלְעָם` (במדבר כב:כח) | divergence | בהמה מדברת; אצל בלעם זה נס חד־פעמי, כאן זה מנהגו של כל יום, ובטה "שומע" ומבין. |
 | 2,1 | nfr.t n s[t]jm[w].pl n,t[j] st (ḥr) ꜣbw =s[n] [jw] ⸢nꜣ⸣ jḥ.pl n,tj r-ḥꜣ,t =f ḥr ḫpr nfr r-jqr zp-2 q(ꜣ)b =sn ms.w.pl =sn | הטוב בירק אשר הם חפצים בו. והבקר אשר לפניו נהיה יפה מאוד מאוד; הכפילו את ולדותיהם | `וְאַרְבֶּה אוֹתְךָ בִּמְאֹד מְאֹד` (בראשית יז:ב) | equivalent | "מאוד מאוד": במצרית *zp-2* "פעמיים" – סימן הכפלה של המלה הקודמת |
 | 2,1 | nfr.t n s[t]jm[w].pl n,t[j] st (ḥr) ꜣbw =s[n] [jw] ⸢nꜣ⸣ jḥ.pl n,tj r-ḥꜣ,t =f ḥr ḫpr nfr r-jqr zp-2 q(ꜣ)b =sn ms.w.pl =sn | הטוב בירק אשר הם חפצים בו. והבקר אשר לפניו נהיה יפה מאוד מאוד; הכפילו את ולדותיהם | `וַיְבָרֶךְ יְהוָה אֶת בֵּית הַמִּצְרִי בִּגְלַל יוֹסֵף` (בראשית לט:ה) | equivalent | מקנה הבית מצליח בזכות הצעיר. |
-| 2,2 | ⟨r-⟩jqr zp-2 ḫr-jr ḥr [t]rj n skꜣ jw pꜣy =f sn [ꜥꜣ] ḥr ḏd n =f jmm grg⟨.tw⟩ n =n ḥtrj,pl […] | מאוד מאוד. ובכן, בעת החריש אמר לו אחיו [הגדול]: "תן שיוכנו לנו צמדים […] | `וַיִּקַּח צֶמֶד בָּקָר וַיְנַתְּחֵהוּ` (שמואל א יא:ז) | equivalent | צמד השוורים לחריש. |
+| 2,2 | ⟨r-⟩jqr zp-2 ḫr-jr ḥr [t]rj n skꜣ jw pꜣy =f sn [ꜥꜣ] ḥr ḏd n =f jmm grg⟨.tw⟩ n =n ḥtrj,pl […] | מאוד מאוד. והנה, בעת החריש אמר לו אחיו [הגדול]: "תן שיוכנו לנו צמדים […] | `וַיִּקַּח צֶמֶד בָּקָר וַיְנַתְּחֵהוּ` (שמואל א יא:ז) | equivalent | צמד השוורים לחריש. |
 | 2,3 | r skꜣ pꜣ-wn tꜣ ꜣḥ,t pri̯.tj jw =s[t] nfr.t[j] n skꜣ =st m-mj,tt mtw =k j[y.t] r | לחרוש, כי השדה יצא (מן המים), והוא טוב לחרוש אותו; וכמו כן תבוא אל | `וְתֵרָאֶה הַיַּבָּשָׁה` (בראשית א:ט) | divergence | גם במצרים האדמה "יוצאת" מן המים – כל שנה, כשהיאור נסוג; זה נוף חקלאי ולא בריאה. |
 | 2,10 | n pꜣy =f sn ꜥꜣ jw =tw ḥmsi̯ ḥr nbd =st wn.jn =f ḥr ḏd n =sst ꜥḥꜥ ḏi̯ ={j}⟨t⟩ n ={t}⟨j⟩ ⸢pr,t⸣ | אחיו הגדול כשיושבים וקולעים אותה. ואז אמר לה: "קוּמִי, תני לי זרע, | `וַיְהִי כְּהַיּוֹם הַזֶּה וַיָּבֹא הַבַּיְתָה לַעֲשׂוֹת מְלַאכְתּוֹ וְאֵין אִישׁ מֵאַנְשֵׁי הַבַּיִת שָׁם בַּבָּיִת` (בראשית לט:יא) | divergence | הצעיר בא אל הבית כשהגבר איננו; ביוסף הוא בא לעבודתו, כאן הוא נשלח להביא זרע. |
 | 3,6 | [ꜥꜣ] jm =k ḫr tw≡j ḥr ptrj nꜣy =k tj~n~rʾ m-mn.t jw jb =st ⟨r⟩ rḫ =f m rḫ n ⸢ꜥḥꜣ,wtj⸣ wn.[j]n =sst ḥr | [גדול] בך, והרי אני רואה את חילך יום יום." ורצתה לדעת אותו כדעת גבר. ואז | `וַיְהִי כְּדַבְּרָהּ אֶל יוֹסֵף יוֹם יוֹם וְלֹא שָׁמַע אֵלֶיהָ לִשְׁכַּב אֶצְלָהּ` (בראשית לט:י) | equivalent | "יום יום": אשת פוטיפר מדברת אליו יום יום, אשת אנוביס "רואה את חילו יום יום" – הביטוי עצמו הוא המלה המצרית הרגילה ל"מדי יום" (*m-mn.t*) |
@@ -243,3 +334,24 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | 9,8 | m pꜣ tꜣ (r-)ḏr =⟨f⟩ jw nṯr nb{.t} jm =st wn.jn tꜣ 7 Ḥ,t-ḥr,t{p}.pl ḥr jy.t ⟨r⟩ ptrj =st jw =sn ḥr ḏd ⟨m⟩ rʾ{.wj} | בכל הארץ, וכל אֵל בה. ואז באו שבע החתחורות לראות אותה, ואמרו בפה | — | absent | בבראשית אין גורל שנגזר על האשה בשעת בריאתה |
 | 9,8 | m pꜣ tꜣ (r-)ḏr =⟨f⟩ jw nṯr nb{.t} jm =st wn.jn tꜣ 7 Ḥ,t-ḥr,t{p}.pl ḥr jy.t ⟨r⟩ ptrj =st jw =sn ḥr ḏd ⟨m⟩ rʾ{.wj} | בכל הארץ, וכל אֵל בה. ואז באו שבע החתחורות לראות אותה, ואמרו בפה | `וַיְבִאֶהָ אֶל הָאָדָם` (בראשית ב:כב) | divergence | שם האשה מובאת אל האדם, כאן באות האלות לראות אותה ולגזור את גורלה. |
 | 9,9 | wꜥ j:jri̯{.t} =st mt ⟨m⟩ dm,t wn.jn =f ḥr ꜣbi̯ =st r-jqr zp-2 jw =st (ḥr) ḥmsi̯ ={t} m pꜣy =f pr jw wršu̯ =f | אחד: "בחרב היא תמות." ואז חפץ בה מאוד מאוד, והיא יושבת בביתו, כשהוא מבלה | `זֹאת הַפַּעַם עֶצֶם מֵעֲצָמַי וּבָשָׂר מִבְּשָׂרִי` (בראשית ב:כג) | divergence | האדם מקבל את האשה בדבר שירה; בטה "חופץ בה מאוד מאוד", אבל על האשה כבר נגזר מוות. |
+| 10,8 | pꜣ y~mꜥ{,t} ḥr jni̯ =st r Km,t jw =f (ḥr) wꜣḥ =st m tꜣ s,t (n) nꜣ rḫt,j.w.pl-n-pr-ꜥꜣ-ꜥnḫ-(w)ḏꜣ-s(nb) wn.jn pꜣ stj | הים הביא אותה אל כֵּמֶת, ושת אותה במקום כובסי פַּרְעֹה, חיים, שלום, בריאות. ואז הריח | `וַתֵּרֶד בַּת פַּרְעֹה לִרְחֹץ עַל הַיְאֹר` (שמות ב:ה) | divergence | המים מביאים אל פרעה דבר מן החוץ (שם תבה ובה ילד, כאן קליעת שער). |
+| 11,4 | wn.jn =tw ḥr jni̯ nꜣ ⟨zẖꜣ.w.pl⟩ rḫ.y.pl-(j)ḫ,t.pl n pr-ꜥꜣ ꜥnḫ-(w)ḏꜣ-s(nb) wn.jn =sn ḥr ḏd n pr-ꜥꜣ ꜥnḫ-(w)ḏꜣ-s(nb) jr tꜣj nbd(,t) šn,tj | ואז הביאו את הסופרים, יודעי־הדברים, אל פרעה, חיים, שלום, בריאות; ואז אמרו לפרעה, חיים, שלום, בריאות: "הנה קליעת השער הזאת – | `וַיִּשְׁלַח וַיִּקְרָא אֶת כָּל חַרְטֻמֵּי מִצְרַיִם וְאֶת כָּל חֲכָמֶיהָ` (בראשית מא:ח) | divergence | פרעה מכנס את חכמי ארצו לפתור את הבלתי מובן; כאן הם "יודעי־הדברים" (*rḫ.w jḫ.t*), לא *ḥry-tp* (`חרטם`), והם אכן יודעים. |
+| 12,1 | s,t-ḥm,t jm =sn jw =⟨tw⟩ ḥr ḏi̯.t n =sst sꜥb nb{.t} nfr n s,t-ḥm,t m ḏr,t =st wn.jn tꜣ s,t-ḥm,t ḥr jy.t r | אשה עמם, ונתנו לה בידה כל עדי יפה של אשה. ואז באה האשה אל | `וַיּוֹצֵא הָעֶבֶד כְּלֵי כֶסֶף וּכְלֵי זָהָב וּבְגָדִים וַיִּתֵּן לְרִבְקָה` (בראשית כד:נג) | equivalent | תכשיטים כמתנת חיזור. |
+| 12,4 | pꜣy =st hꜣy jw =st ḥr ḏd ={j} n ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jmm šꜥd⟨.tw⟩ pꜣ ꜥš mtw =tw sksk =f jw =tw | בעלה; ואמרה להוד מלכותו, חיים, שלום, בריאות: "תן שיכרתו את הארז, ויקצצו אותו." ו | `הַגִּידָה נָּא לִי בַּמֶּה כֹּחֲךָ גָדוֹל` (שופטים טז:ו) | equivalent | האשה שחושפת את סוד כוחו (או חייו) של הגיבור ומוסרת אותו לאויב (דלילה ושמשון). |
+| 13,1 | ḥꜥw,pl ḥnꜥ nꜣy =f tjw,t.du m-mj,tt nꜣy =f ḥbs.w.pl ḥnꜥ nꜣy =f ḫꜥ,w.pl n.w rʾ-ꜥ-ḫt jw =f ḥr fꜣi̯.ṱ =f r mꜥ~šꜥ{.pl} | מקלו ואת נעליו, וכמו כן את בגדיו ואת כלי מלחמתו; ונשא את עצמו לצעוד | `מָתְנֵיכֶם חֲגֻרִים נַעֲלֵיכֶם בְּרַגְלֵיכֶם וּמַקֶּלְכֶם בְּיֶדְכֶם` (שמות יב:יא) | equivalent | ציוד ההולך לדרך ארוכה: מקל, נעליים. |
+| 14,1 | jw ḥꜣ,tj =f (ḥr) ꜥmꜣm nꜣ mw jw Bꜣ~tʾ ḥr nš{.pl} m ḥꜥ,t =f nb{.t} jw =f ḥr ḫpr ḥr nw(ꜣ) r pꜣy =f sn ꜥꜣ | ולבבו בולע את המים, ובטה רועד בכל גופו, ונהיה מביט אל אחיו הגדול, | `וַיִּגְהַר עָלָיו; וַיְזוֹרֵר הַנַּעַר עַד שֶׁבַע פְּעָמִים וַיִּפְקַח הַנַּעַר אֶת עֵינָיו` (מלכים ב ד:לה) | equivalent | תחיית מת: רעד, ואחר כך פקיחת העיניים. |
+| 14,4 | wꜥ jm =sn jw wꜥ ḥr md.t m-ḏi̯ pꜣy =f jr,j m-j⟨m⟩ =sn wn.jn Bꜣ~tʾ ḥr ḏd n pꜣy =f | את האחר מהם, ואחד מדבר עם חברו מהם. ואז אמר בטה אל | `וַיָּרָץ עֵשָׂו לִקְרָאתוֹ וַיְחַבְּקֵהוּ וַיִּפֹּל עַל צַוָּארָו וַיִּשָּׁקֵהוּ וַיִּבְכּוּ` (בראשית לג:ד) | equivalent | פיוס אחים בחיבוק |
+| 14,4 | wꜥ jm =sn jw wꜥ ḥr md.t m-ḏi̯ pꜣy =f jr,j m-j⟨m⟩ =sn wn.jn Bꜣ~tʾ ḥr ḏd n pꜣy =f | את האחר מהם, ואחד מדבר עם חברו מהם. ואז אמר בטה אל | `וְאַחֲרֵי כֵן דִּבְּרוּ אֶחָיו אִתּוֹ` (בראשית מה:טו) | equivalent | אחרי הבכי, האחים מדברים. |
+| 15,6 | qn,w (j)ḫ,t.pl qn,w jw pr-ꜥꜣ ꜥnḫ-(w)ḏꜣ-s(nb) ḥr mrw.t =f r-jqr zp-2 r r(m)ṯ.pl nb(.w) n,tj m pꜣ tꜣ r-ḏr =f | רבים ודברים רבים; ופרעה, חיים, שלום, בריאות, אוהב אותו מאוד מאוד, מכל בני האדם אשר בכל הארץ. | `וַיְהִי יְהוָה אֶת יוֹסֵף … וַיִּתֵּן חִנּוֹ בְּעֵינֵי שַׂר בֵּית הַסֹּהַר` (בראשית לט:כא) | equivalent | הצעיר שהודח זוכה לחסד השליט. |
+| 16,2 | pꜣy =st hꜣy wn.jn =f ḥr pri̯ m tꜣ wꜥb,t jw ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) ḥr ḥmsi̯ ḥr jri̯.t hrw-nfr r-ḥnꜥ =st jw =st ḥr | לה בעלה. ואז יצא מבית־הטוהר; והוד מלכותו, חיים, שלום, בריאות, ישב לעשות יום טוב עמה, והיא | `לַיְּהוּדִים הָיְתָה אוֹרָה וְשִׂמְחָה … מִשְׁתֶּה וְיוֹם טוֹב` (אסתר ח:טז–יז) | equivalent | "יום טוב" כחג ומשתה (*hrw nfr*, מילולית "יום טוב"). |
+| 16,3 | wḏḥ{.pl} n ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jw =tw (ḥr) nfr m-ḏi̯ =sst r-jqr zp-2 wn.jn =s[st] ḥr ḏd n ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jmm ꜥrq n =j ⸢n⸣ nṯr m-ḏd jr | מוזגת להוד מלכותו, חיים, שלום, בריאות, והיה טוב לו עמה מאוד מאוד. ואז אמרה להוד מלכותו, חיים, שלום, בריאות: "תן לי שבועה באֵל לאמור: 'הנה | `כְּטוֹב לֵב הַמֶּלֶךְ בַּיָּיִן` (אסתר א:י) | equivalent | בקשה מן המלך ברגע של שמחת יין |
+| 16,3 | wḏḥ{.pl} n ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jw =tw (ḥr) nfr m-ḏi̯ =sst r-jqr zp-2 wn.jn =s[st] ḥr ḏd n ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jmm ꜥrq n =j ⸢n⸣ nṯr m-ḏd jr | מוזגת להוד מלכותו, חיים, שלום, בריאות, והיה טוב לו עמה מאוד מאוד. ואז אמרה להוד מלכותו, חיים, שלום, בריאות: "תן לי שבועה באֵל לאמור: 'הנה | `מַה שְּׁאֵלָתֵךְ וְיִנָּתֵן לָךְ` (אסתר ה:ו) | equivalent | הבטחת המלך לאשה. |
+| 16,9 | ḫꜣꜥ⟨.tw⟩ n =f ḏf-zp-2 2 n sn⟨f⟩ r-gs pꜣ {wr}⟨bꜣ~⟩nš{.w.pl} 2 n ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jw tꜣ wꜥ ḥr ḫpr ⟨ḥr⟩ tꜣ ⟨wꜥ⟩ rw~jꜣ,j n | שיוטלו ממנו שתי טיפות דם בצד שתי המזוזות של הוד מלכותו, חיים, שלום, בריאות; והאחת נהייתה על הצד האחד של | `וְלָקְחוּ מִן הַדָּם וְנָתְנוּ עַל שְׁתֵּי הַמְּזוּזֹת וְעַל הַמַּשְׁקוֹף` (שמות יב:ז) | equivalent | דם על שתי המזוזות של השער |
+| 16,9 | ḫꜣꜥ⟨.tw⟩ n =f ḏf-zp-2 2 n sn⟨f⟩ r-gs pꜣ {wr}⟨bꜣ~⟩nš{.w.pl} 2 n ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) jw tꜣ wꜥ ḥr ḫpr ⟨ḥr⟩ tꜣ ⟨wꜥ⟩ rw~jꜣ,j n | שיוטלו ממנו שתי טיפות דם בצד שתי המזוזות של הוד מלכותו, חיים, שלום, בריאות; והאחת נהייתה על הצד האחד של | `וְלָקְחוּ מִן הַדָּם וְנָתְנוּ עַל שְׁתֵּי הַמְּזוּזֹת וְעַל הַמַּשְׁקוֹף` (שמות יב:ז) | divergence | בשמות הדם מגן על הבית מן המוות, כאן דם השור הנשחט הוא זרע של חיים חדשים (שני העצים). |
+| 18,7 | ḥr msy.t{.pl} wꜥ-n zꜣ-ṯꜣy jw =tw ḥr šmi̯.t r ḏd n ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) msy =tw | ילדה בן־זכר; והלכו לומר להוד מלכותו, חיים, שלום, בריאות: "יוּלַּד | `אֲשֶׁר בִּשַּׂר אֶת אָבִי לֵאמֹר יֻלַּד לְךָ בֵּן זָכָר` (ירמיהו כ:טו) | equivalent | אותה בשורה, באותן מלים: "יולד לך בן זכר". |
+| 18,8 | n =k wꜥ-n zꜣ-ṯꜣy wn.jn =tw ḥr jni̯.ṱ =f jw =tw ḥr ḏi̯.t n =f mnꜥ,t ḫnm(,t).pl jw =tw | לך בן־זכר." ואז הביאו אותו, ונתנו לו אומנת ומינקות; ו | `וַתָּמָת דְּבֹרָה מֵינֶקֶת רִבְקָה` (בראשית לה:ח) | equivalent | המינקת בבית אצילים. |
+| 18,10 | m rnn =f jw ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) ḥr mrw.t{.n} =f r-jqr zp-2 m tꜣ wnw,t jw =tw ḥr dhꜣ{d}⟨n⟩ =f | מטפחים אותו; והוד מלכותו, חיים, שלום, בריאות, אהב אותו מאוד מאוד בשעה ההיא, ומינו אותו | `אֲשֶׁר טִפַּחְתִּי וְרִבִּיתִי` (איכה ב:כב) | equivalent | טיפוח הילד. |
+| 19,3 | [qn,w] m (j)r(,j)-pꜥ,t-⸢m-pꜣ-tꜣ-(r-)ḏr≡f⸣? wn.jn ḥm =f ꜥnḫ-(w)ḏꜣ-s(nb) ḥr pwy r tꜣ p,t ⸢wn.jn⸣ =⸢tw⸣ | [רבות] כנסיך של הארץ כולה?; ואז עף הוד מלכותו, חיים, שלום, בריאות, אל השמים. ואז | `וַיַּעַל אֵלִיָּהוּ בַּסְעָרָה הַשָּׁמָיִם` (מלכים ב ב:יא) | divergence | עלייה השמימה; במצרים זו לשון קבועה למות המלך ("עף אל השמים", מתאחד עם השמש), לא נס. |
+| 19,5 | ḫpr.w m-ḏi̯ =j [wn.jn]? =[tw] (ḥr)? jni̯ n =f tꜣy =f ḥm,t jw =f ḥr wpw.t ḥnꜥ =st m-bꜣḥ =sn jw =tw ḥr jri̯ tjw jm =sn | אשר נהיו לי." [ואז] הביאו לו את אשתו, ונשפט עמה לפניהם, ועשו "הן" ביניהם. | `וְאִשָּׁפְטָה אִתְּכֶם לִפְנֵי יְהוָה` (שמואל א יב:ז) | equivalent | שוב: "נשפט עמה לפניהם". |
+| 19,9 | jri̯ n zẖꜣ,w Jni̯~nꜣ pꜣ nb n pꜣj zẖꜣ,w jr pꜣ n,tj jw =f ⟨r⟩ mdw m pꜣj zẖꜣ,w | נעשה בידי הסופר אִנֵנָה, בעל הכתב הזה. הנה מי שידבר בכתב הזה – | `וַתְּדַבֵּר מִרְיָם וְאַהֲרֹן בְּמֹשֶׁה` (במדבר יב:א) | equivalent | "דיבר ב־" במובן "דיבר נגד". |
+| 19,10 | jri̯ n =f Ḏḥw,tj ⟨r⟩ jr,j-ꜥḥꜣ,wtj | יעשה לו תְּחוּת לבעל־ריב. | `לֹא תֹסֵף עָלָיו וְלֹא תִגְרַע מִמֶּנּוּ` (דברים יג:א) | equivalent | שמירה על נוסח הכתוב. |

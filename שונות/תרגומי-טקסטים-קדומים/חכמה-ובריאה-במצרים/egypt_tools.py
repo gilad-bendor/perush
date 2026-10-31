@@ -382,10 +382,10 @@ RESERVED = [
     (W + alt("בער", "ביער", "בערתי", "ביערתי", "תבער", "יבער", "בוער", "בוערת", "בערה", "הבערה") + E, None, "the root בער never (Deut 26:13–14 `בִּעַרְתִּי`): the fire / removal verbs by their own sense", TALES),
     # Deut 8:8 (Sinuhe's land of Yaa): the seven species only for their Egyptian words
     (W + alt("תאנה", "תאנים", "התאנים", "תאנתו", "תאני") + E, r"dꜣb|dꜣb\.w|nḥ,t|nh,t", "תְּאֵנָה only for dꜣb 'fig' [equivalent Deut 8:8]", TALES),
-    (W + alt("גפן", "הגפן", "גפנים", "ענבים", "הענבים", "ענב", "ענבי") + E, r"jꜣrr|jꜣrr,t|jrp", "גֶּפֶן / עֲנָבִים only for jꜣrr.t 'grapes, vine' [equivalent Deut 8:8]", TALES),
+    (W + alt("גפן", "הגפן", "גפנים", "ענבים", "הענבים", "ענב", "ענבי") + E, r"jꜣrr|jꜣrr,t|jrp|jꜣ~jr", "גֶּפֶן / עֲנָבִים only for jꜣrr.t 'grapes, vine' [equivalent Deut 8:8]", TALES),
     (W + alt("דבש", "הדבש", "דבשה", "דבשו") + E, r"bj,t|bj\.t|bj\b|bjt", "דְּבַשׁ only for bj.t 'honey' [equivalent Deut 8:8; Ex 3:8]", TALES),
     (W + alt("זית", "זיתים", "הזית", "הזיתים", "זיתי") + E, r"ḏd,t|ḏd\.t|ḏdt|bꜣq|bꜣq,t", "זַיִת only for ḏd.t / bꜣq 'olive' [equivalent Deut 8:8]", TALES),
-    (W + alt("זבת", "זבה") + E, None, "`זָבַת חָלָב וּדְבָשׁ` never (Ex 3:8)", TALES),
+    (r"(?<![א-ת])ו?" + alt("זבת", "זבה") + E, None, "`זָבַת חָלָב וּדְבָשׁ` never (Ex 3:8)", TALES),
     # the serpent (the dossier rule: `נָחָשׁ` the comparison word for every culture's serpent)
     (W + alt("נחש", "נחשים", "הנחש", "הנחשים", "נחשי", "נחשה") + E, r"ḥfꜣ|ḥfꜣw|ḥfꜣ,w|ꜥꜣpp|ḏdf|nḥꜣ|nꜣw|ꜥpp|sꜣ-tꜣ|ḏd\b|ḏd,t|ꜥrꜥr", "נָחָשׁ only for a serpent word (ḥfꜣw …) [equivalent Gen 3:1, Ex 7:9–12]", TALES),
 ]
