@@ -366,3 +366,14 @@ Order (the plan: Palm and Vine and the Poplar first, Judg 9:8–15): PM; then PV
 
 ### 12.4 Merged from the translators
 (The coordinator adds one record per part.)
+#### 12.4.1 PM (the Poor Man, 161 labels), 2026-10-31
+The tale's repeated scenes fixed at the first copy and copied (strings in `7-העני-מניפור/project.md`, Proposals): `עם לבו
+העלוב – הוא נמלך:`; `שמלה אשר אין לה חליפה`; `אל שער חזן ניפור – הוא צעד.`; `אל השוער, מחזיק השער, דבר דיבר:`;
+`גימיל־נינורתה, בצאתו את השער,`; `'בעבור המשא האחד אשר השתת עליי,`; the count `על אחד – שלושה תגמולים אגמלך!'"` …
+`שלוש פעמים תגמולים גמלתיך!"`; `את מידותיו הכה, אנקה השית עליו.` Terms: *ḫazannu* `חַזָּן` [cognate] (kept; the
+modern "cantor" in a note), *laputtû* `ממונה`; *malku* `נסיך` (kept apart from *šarru* `מלך`); *ina ṭēmi šarri* `בְּטַעַם
+המלך` [cognate, Jonah 3:7]; *riābu* `גמל`, *rību* `תגמול`; *šulmānu* `שַׁלְמוֹן` [cognate, Isa 1:23]; *kadrû* `מתנה`;
+*qīštu* `תשורה`; *lummunu* `עלוב`; *šulušītu* `משולשת` (Gen 15:9); *biltu* `משא`; *emēdu* `השית` / N `נצמד`; *kidinnu*
+`חסות`; *kūm* `חֵלֶף`; *gipāru* `מכלאה` (a split by sense: Erra `מרעה`, Enūma eliš `אחו`). The coordinator keeps the
+translator's open choices as drafted (minor). Tool note: `pars` does not resolve eBL's bare "L I.11 16" links (no stage
+or chapter); `verify`'s identical-normalization check covered them.
