@@ -46,7 +46,7 @@ TEXTS = [
     ("SU", SHU, "5.6.1--Instructions-of-Shuruppag", "5.6.1", "-", None, None, "הוראות שׁוּרוּפַּךְ"),
     # Round 5, run 5 (2026-10-31): the Poor Man of Nippur (eBL L/1/11) and the fables (contest literature, L/2/8–13)
     ("PM", PMN, "Poor-Man-of-Nippur", "11", "-", None, None, "העני מִנִּיפּוּר"),
-    ("PV", FAB, "Fable-Palm-and-Vine", "12", "-", None, None, "הדקל והגפן"),
+    ("PV", FAB, "Fable-Palm-and-Vine", "12", "-", None, None, "הדקל והיין"),
     ("PO", FAB, "Fable-Poplar", "8", "-", None, None, "סדרת הצפצפה"),
     ("OH", FAB, "Fable-Ox-and-Horse", "9", "-", None, None, "סדרת השור והסוס"),
     ("SP", FAB, "Fable-Spider", "11", "-", None, None, "סדרת העכביש"),

@@ -377,3 +377,13 @@ modern "cantor" in a note), *laputtû* `ממונה`; *malku* `נסיך` (kept ap
 `חסות`; *kūm* `חֵלֶף`; *gipāru* `מכלאה` (a split by sense: Erra `מרעה`, Enūma eliš `אחו`). The coordinator keeps the
 translator's open choices as drafted (minor). Tool note: `pars` does not resolve eBL's bare "L I.11 16" links (no stage
 or chapter); `verify`'s identical-normalization check covered them.
+#### 12.4.2 PV, PO (Palm and Vine 54, the Poplar 82), 2026-10-31
+Formulas: `אני – X,` (*anākū-ma*); `פתח את פיו, ואליו דיבר:` (*īpuš-ma pâšu izzakkar ana šuāši*); `X פתח(ה) את פיו
+(פיה), ואל Y דבר דיבר(ה):`; `X אל Y דבר דיבר:` (as PM 27); `בוא, אוֹמְרָה לך` (*gana luqbīka*, Theodicy 1); `סובא
+מובחר – נפש האנשים –` (Theodicy 32). The contestants are names without the article: *arhānû* `דֶּקֶל` (`תָּמָר` stays
+*gišimmaru*'s; **a split for the lead**: Sum. *ĝišimmar* is `דקל` in Gudea, Lipit-Ištar and EWO), *karānu* `יַיִן` (the
+text is "Palm and Wine", `הדקל והיין`), *ṣarbatu* `צַפְצָפָה`, *martû* `מַרְתּוּ` ★; *šaššūgu* `שַׁשּׁוּגוּ`, *adāru*
+`אֲדָרוּ`. *ṣillu ṭābu* `צל טוב` [cognate twice, Hos 4:13]; *emēdu* "lean" `נשען` (not `חסה`: Jiménez's "seeks refuge"
+would make Judg 9:15); *ṣulūlu* `סכך`; *šanānu* `התחרה`, *šitnuntu* `התחרות`; *alālu* Gt `התהלל` [cognate]; *ḫaṭṭu*
+`מקל`; *ušurtu* `מַעַשְׂרוֹת?` (eBL "group of ten"; open); *rukūbu* `רְכוּב`, *birtu* `בירה`, *marru* "spade" `מָרָא`
+[cognates]; *lulīmu* `יַחְמוּר`; *arāmu* `עטה` / *katāmu* `כיסה`. eBL slips reported in `8-משלי-המחלוקת/project.md`.
