@@ -652,3 +652,19 @@ All the translator's Proposals (`4-אקהת/project.md`, "KTU 1.17") are accepte
 ### 12.5 Merged after translator 1 (KTU 1.18, 1.19), Round 5 run 3, 2026-10-31
 
 All Proposals accepted (`4-אקהת/project.md`, "KTU 1.18", "KTU 1.19"): *mhr št* = `מהיר *הַשָּׂרָה*` (§12.1 revised; 1.19 IV:59 *ib št*); *nšrm trḫpn* = `נשרים מרחפים, צופה חבל דאות` (a circumstantial participle, noted) – the *rḫp* lines are the run's Gen 1:2 finding; Pughat's epithet `סוֹבֶלֶת־שְׁכֶם המים, חושפת מן השיער טל, יודעת את הליכת הכוכבים` and the town-curse refrain (`הוֹי לך, X, אשר עלייך נמחץ אקהת הגבור` …) fixed; *yṣm* `זָעַם` (`אָרַר` avoided: not a cognate, Gen 4:11); *diy* (II) `אֶבְרָה` apart from *diy* (I) `דַּאָה`; *npr* `פרח`, *dʾy* `דאה`, *ʿp* `עופף`; *bṣr* `צופה`; *ḥbl* `חבל`; *tʿrt* `תַּעַר`; names `אָבִלִם`, `קוֹר־מַיִם`, `מְרָרַת תַּעְלִל בְּנֵר`, `חַרְגַּב`, `צַמֶּלֶת`, `כִּנֶּרֶת`. Tool: the `אור` gate licensed by *ur* "fire" (`*אוּר*`, Isa 31:9), the `גד` gate by *npṣ* (`בגדי` "garments of"), the *rḫp* check accepts plene `ריחפ`. **Left as noted splits:** *irš* `תבע` (1.17) / 1.3 V:28 `תחפצי`; *išryt* `אושר` / 1.3 V:31 `חיי אושר` (*ḥyt ḥẓt*); *lʾy* / *nṣḥ* in adjacent lines (1.19 II:35–36).
+
+### 12.6 Merged after translator 2 (KTU 1.14), Round 5 run 3, 2026-10-31
+
+All Proposals accepted (`5-כרתא/project.md`, "KTU 1.14"). §12.1–§12.2 revised: Ḥurriya's title is *mṯt* `הגבֶרֶת חֻרַּיָּה`
+(not "*mṯb*"); the bridegroom of 1.14 is *trḫ ḥdṯ* `מְאָרֵשׂ חדש` (not *ḫtn*) and he **goes** to war (Deut 20:7, 24:5:
+[divergence], the same three words *yṣʾ*, *ḥdṯ*, *ṣbʾ*, the opposite rule); *ḏhrt* = *ḏrt* = *hdrt* `חזיון`. New names:
+`בֵּית־חֲבוּר`, `אֲתִירַת צוֹר` / `אֵלַת צִידוֹנִים`, `הנעמן, עלם אֵל`, `עבד אֵל`, `אבי אדם`, `כִּרְתָּא השׁוֹעַ`. New one-lemma
+renderings (full list in the Proposals): *ḥtk* `שושלת`, *rš* `רֻשַּׁשׁ`, *ʿrw* `עֻרְעֲרָה`, *šlḥ* `שֶׁלַח`, *yrṯ* `יורש`, *nhmmt*
+`תנומה`, *mgdl* `מגדל`, *gl* `גֻּלָּה`, *škr* "hire" `שָׂכַר` (always vocalized), *ṯnn* `*שִׁנְאַנִּים*` (not *tnn*: never
+`תנין`), *zbln* `דְּוַי`, *zbl* "sick" `הַדָּוֶה` (so *mrṣ* in 1.16 takes another word), *ʿdn* `המון`, *ṣbu* `צבא`, *mġd*
+`מחיה`, *ušn* `תשורה`, *tsm* `יפעה`, *ndr* `נדר`, *iṯ* `יש`. **Kirta's readings follow EUPT in ~20 places** (each marked
+`EUPT:` in the פירוק). Tool: the licence text of a Kirta line includes EUPT's transliteration (1.14 III:59 *ʿṣr*);
+`eupt --tr` fixed. **Collisions settled:** *ṯrrt* `*הנשגבת*` everywhere (1.100:64 changed from `*העזה*`, which collided
+with *ʿz* `עוז`); *ibr* keeps its cognate `אַבִּיר`, *gmr* `*אביר*` (1.2 I:46, 1.6 VI:6) to move – left for the next
+session on the Baal Cycle (noted, like *dt*); *ḥtṯ* / *ksp* both `כסף` (the Hittite loanword: an accepted split); *mʿ*
+`*יחדיו*` / `*נא*` and *ypq* / *pq* `הפיק` accepted.

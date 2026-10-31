@@ -179,7 +179,22 @@ def license_text(key, lab):
         for part in (p[2] or "").split(";"):
             if part.strip() and part.strip() != "?":
                 lems.append(_norm_lemma(part))
+    # Kirta: EUPT is rank 1 for readings (renderings §12.3), so its transliteration licenses too (1.14 III:59 ṣr → ʿṣr)
+    e = _eupt_line(key, lab)
+    if e:
+        words += " " + re.sub(r"[\[\]⸢⸣{}<>()!?]|\(Text:[^)]*\)", "", e).replace("ˁ", "ʿ").replace(" . ", " ")
     return (words + " | " + " ".join(sorted(set(lems)))).lower()
+
+
+_EUPT_CACHE = {}
+
+
+def _eupt_line(key, lab):
+    """EUPT's transliteration of a line (Kirta only), or ''."""
+    if key not in _EUPT_CACHE:
+        p = os.path.join(ROOT, "sources", "EUPT", "text", f"KTU-{key}.json")
+        _EUPT_CACHE[key] = json.load(open(p, encoding="utf-8"))["lines"] if os.path.exists(p) else {}
+    return (_EUPT_CACHE[key].get(lab) or {}).get("translit", "")
 
 
 # ---------------------------------------------------------------- annotated files
@@ -925,7 +940,7 @@ def main():
     if cmd == "grep" and rest:
         return cmd_grep(rest[0], "--all" in a)
     if cmd == "eupt" and rest:
-        tr = "--tr" in rest
+        tr = "--tr" in a
         rest = [x for x in rest if x != "--tr"]
         return cmd_eupt(*rest[:3], tr=tr)
     if cmd == "dulat" and rest:
