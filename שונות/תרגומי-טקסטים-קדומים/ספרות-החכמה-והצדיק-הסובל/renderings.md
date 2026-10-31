@@ -395,3 +395,10 @@ no `מבול`), *gapāšu* `גאה`, *nagbu* `המעמקים`, *natbāku* `זר�
 [cognate], *urû* `אורווה` [cognate], *nādu* `נאד` [cognate], *katappû* `רסן`, *appātu* `מושכות`, *agālu* `עַיִר`,
 *tupšikku* `סל`, *rubṣu* `גללים`, *šimtu* (brand) `תו`. Kept as drafted (minor): `הנאדר בקרב` for the horse's *naʾdu*
 epithet; *qablu* `קרב` beside *qerbu* (vocalized); *emēdu* by sense (`השית`, `נשען`, `עמוס`).
+#### 12.4.4 SP, WR (the Spider 59, the Wren 42), 2026-10-31
+*ettūtu* `עַכָּבִישׁ` (gated); *ḫamānīru* `חַמָּנִירוּ` ★, *ešqapīzu* `אֶשְׁקַפִּיזוּ` ★; Ninšiku `נִינְשִׁיכּוּ`, Utaʾūlu
+`אוּתָאוּלוּ`; the creation words as the creation corpus (*bašāmu* `תכן`, *eṣēru* `צר`, *uṣurtu* `צורה`, *burūmû*
+`רום־השמים` – never `רקיע`; *nabû* `קָרָא`); *šiknat napišti* `בעלי הנפש` (Erra); *zubbu* `זבוב`, *pīru* `פיל`. The Wren:
+`גִּדְרוֹן` and `נֶשֶׁר` as names, the epithet `התשוש והדל` (*akû lapnu*); *qinna qanānu* `קינן קן` (Gilgameš), *watmu*
+`אפרוח` (Etana), *surdû* `נֵץ`, *dayyān kitti* `דיין האמת`, *ṣabābu* `הניף` (not `רחף`). Jiménez's "master of flies"
+(SP 19) is not Baal-zebub: *bēl arni* … *lāʾiṭ zubbī* (a false echo of the English, corrected).

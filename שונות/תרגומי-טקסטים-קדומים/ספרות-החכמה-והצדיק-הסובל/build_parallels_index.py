@@ -20,7 +20,9 @@ SOURCES = [("Ludlul", os.path.join(A, "1-לודלול", "project.md")),
            ("Šamaš Hymn", os.path.join(A, "3-התפילה-הגדולה-לשמש", "project.md")),
            ("Counsels", os.path.join(A, "4-עצות-חכמה", "project.md")),
            ("Dialogue", os.path.join(A, "5-דו-שיח-הפסימיות", "project.md")),
-           ("Šuruppag", os.path.join(A, "6-הוראות-שורופך", "project.md"))]
+           ("Šuruppag", os.path.join(A, "6-הוראות-שורופך", "project.md")),
+           ("Poor Man", os.path.join(A, "7-העני-מניפור", "project.md")),
+           ("Fables", os.path.join(A, "8-משלי-המחלוקת", "project.md"))]
 OUT = os.path.join(A, "parallels-index.md")
 G = {'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9, 'י': 10, 'כ': 20, 'ל': 30, 'מ': 40, 'נ': 50,
      'ס': 60, 'ע': 70, 'פ': 80, 'צ': 90, 'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400}
@@ -32,7 +34,7 @@ BOOKS = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים', '
 SECTIONS = [("Job", ['איוב']), ("Psalms", ['תהלים']), ("Qohelet", ['קהלת']), ("Proverbs", ['משלי']),
             ("Lamentations", ['איכה']), ("Isaiah", ['ישעיהו']), ("Jeremiah", ['ירמיהו']),
             ("The Torah", ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים'])]
-ORDER = ['I', 'II', 'III', 'IV', 'V', 'Th1', 'Th2', 'SH', 'CW', 'DP', 'SU']
+ORDER = ['I', 'II', 'III', 'IV', 'V', 'Th1', 'Th2', 'SH', 'CW', 'DP', 'SU', 'PM', 'PV', 'PO', 'OH', 'SP', 'WR']
 refre = re.compile(r'(%s)[\s\-]+([א-ת]{1,3}):([א-ת]{1,3})' % '|'.join(
     b.replace(' ', '[ \\-]') for b in sorted(BOOKS, key=len, reverse=True)))
 

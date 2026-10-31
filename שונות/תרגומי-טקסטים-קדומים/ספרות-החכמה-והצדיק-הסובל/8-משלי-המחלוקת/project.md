@@ -429,3 +429,140 @@ the corpus renderings, PV/PO, Gilgameš (VI 53 for the horse's epithet), the cro
   spring flood, not *abūbu*; rendering it `מבול` would have manufactured a Gen 6–9 echo.
 - A recurring speech formula restored in most copies should be fixed with its bracket placement rule (Hebrew order ≠
   Akkadian order: a broken *izzakkar* goes to the end of the Hebrew line in brackets).
+
+## SP
+
+### Scope
+The Series of the Spider (eBL `L/2/11`, ed. and tr. E. Jiménez), all 59 labels (1–34, 42–65, 107); NinNA1 (Nineveh,
+1–14) and AššNA1 (Aššur, the main witness). A creation prologue (1–6), the Spider's boast (7–8), Ninšiku (Ea) creating
+two small creatures, *ḫamānīru* and *ešqapīzu*, naming them (9–12), their "battle" and *ešqapīzu*'s mockery of the
+Spider (13–23), the Spider's rebuke (24–34), *ḫamānīru*'s answer (42–54); the rest fragments.
+
+### Sources consulted
+eBL edition, ATF, glossary; Jiménez's English; Enūma eliš I 1 (*enūma* `כאשר`), Erra (*šiknat napišti*, *nabnītu*),
+Etana (*nammaštû*, *būl ṣēri*), the Theodicy 265 (*šibqu*), the creation corpus (*uṣurtu*, *bašāmu*).
+
+### Decisions
+- *ettūtu* = `עַכָּבִישׁ` (gated); *ḫamānīru* `חַמָּנִירוּ`, *ešqapīzu* `אֶשְׁקַפִּיזוּ` (transliterated, always vocalized);
+  Ninšiku `נִינְשִׁיכּוּ`; Utaʾūlu `אוּתָאוּלוּ`.
+- Creation verbs as the creation corpus: *banû* `בנה`, *bašāmu* `תכן`, *wapû* Š `הופיע`, *eṣēru* `צר` (cognate יצר in
+  the apparatus), *uṣurtu* `צורה`; *burūmû* `רום־השמים` (never `רקיע`); *kiūru* `קִיאוּר`.
+- Beings: *šiknat napišti* `בעלי הנפש`, *nammaštû* `נעים`, *būl ṣēri* `בהמת השדה`, *umām ṣēri* `חית השדה`, *būl Šakkan*
+  `בהמת שַׁכַּן`, *nabnītu* `תולדה`.
+- *nabû* `קָרָא` (licensed: naming), *nibītu* `כינוי`, *zikru* `זכר`; *šarāḫu* D/Š `הידר`, Dt/Št `התהדר`; *ṣuḫāru*
+  `קטנטן`; *ganūnu* `מדור`; *kiṣṣu* `קודש`; *zubbu* `זבוב`; *laʾātu* `בלע`; *šuparruru* `פרש`; *pīru* `פיל`; *ṭarādu*
+  `הבריח` (not `טרד`); *seḫû* `סער`; *dāriš* `לעד`; *muttaggišu* `משוטט`; *tabnītu* `בנין`; *kubukku* `און`.
+
+### Open decisions for the user
+1. *kiūru* restored by eBL (`[קִיאוּר?]`) – transliterated.
+2. 9 *attalad* "I (hereby) bore" – the performative perfect rendered `ילדתי`.
+3. 61: eBL's T has "weapon" from the ATF (*kakku*), the normalization has "…" – the Hebrew follows N.
+
+### Progress log
+- 2026-10-31: drafted 1–107 in one saved file; `verify` caught `הנה?` (reserved) in 9 – removed.
+- Passes: (a) brackets narrowed in 6, 7, 10, 11, 12, 32–34, 45, 63; 26 `[עצ]תי`; (b) the lists 4 / 28 identical;
+  *nabû* `קראתי` licensed; (c) 25 `משלי` (reads "Proverbs") → `שלי`.
+- `verify SP --strict` 0; `check_bible_quotes.py` 0; two footnotes.
+
+### Parallels index (SP)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 3 | *šiknat napišti* | בעלי הנפש | `וְכֹל אֲשֶׁר יִקְרָא לוֹ הָאָדָם נֶפֶשׁ חַיָּה הוּא שְׁמוֹ` (בראשית ב:יט) | [equivalent] | "Forms of life" / `נֶפֶשׁ חַיָּה`; the Hebrew avoids both `נפש חיה` and `רמש`. |
+| 4 | *būl ṣēri umām ṣēri* | בהמת השדה, חית השדה | `וַיִּצֶר יְהוָה אֱלֹהִים מִן הָאֲדָמָה כָּל חַיַּת הַשָּׂדֶה וְאֵת כָּל עוֹף הַשָּׁמַיִם` (בראשית ב:יט) | [equivalent] | **Key:** "beasts of the field" created, then named (10–12). |
+| 7 | *ettūtu uštarraḫ* | עכביש התהדר | `וּבֵית עַכָּבִישׁ מִבְטַחוֹ` (איוב ח:יד) | [divergence] | The spider as futile trust (Job, Isa 59:5) / the spider boasting of strength. |
+| 10 | *[a]ttabi šumēšun* | קראתי את שמותם | `וַיִּקְרָא הָאָדָם שֵׁמוֹת לְכָל הַבְּהֵמָה וּלְעוֹף הַשָּׁמַיִם וּלְכֹל חַיַּת הַשָּׂדֶה` (בראשית ב:כ) | [cognate] | **Key:** *nabû* / `קָרָא` of naming the creatures; the god names them here, the man in Genesis. |
+| 12 | *zikiršu* | זכרו | `זֶה שְּׁמִי לְעֹלָם וְזֶה זִכְרִי לְדֹר דֹּר` (שמות ג:טו) | [cognate] | *zikru* "name" / `זֵכֶר`. |
+| 19 | *bēl arni lāʾiṭ zumbī* | בעל עוון, בולע זבובים | `בְּבַעַל זְבוּב אֱלֹהֵי עֶקְרוֹן` (מלכים ב א:ב) | [divergence] | Jiménez's "master of flies" manufactures Baal-zebub; *bēl* goes with *arni*. *zubbu* / `זְבוּב` [cognate]. |
+| 19 | *zumbī* | זבובים | `זְבוּבֵי מָוֶת יַבְאִישׁ יַבִּיעַ שֶׁמֶן רוֹקֵחַ` (קהלת י:א) | [cognate] | |
+| 20 | *ušparraru eṭla* | פורש על העלם | `קוּרֵיהֶם לֹא יִהְיוּ לְבֶגֶד` (ישעיהו נט:ו) | [equivalent] | The web spread at night; Isaiah's webs that cover nothing. Also `וְקוּרֵי עַכָּבִישׁ יֶאֱרֹגוּ` (ישעיהו נט:ה). |
+| 21 | *pīra* | הפיל | — | [cognate] | *pīru* / `פִּיל` (post-biblical). |
+| 22 | *īrurūšu bān ilī* | ארוהו בונה האלים | `אָרוּר אַתָּה מִכָּל הַבְּהֵמָה וּמִכֹּל חַיַּת הַשָּׂדֶה` (בראשית ג:יד) | [divergence] | A small creature cursed by a god, "as its name" says. |
+| 31 | *uṣṣirū ana dāriš* | צרו לעד | `וַיִּצֶר יְהוָה אֱלֹהִים מִן הָאֲדָמָה` (בראשית ב:יט) | [cognate] | *eṣēru* / `יצר` – root only: "design, fix the pattern" (rendered `צר`). |
+
+### The text on its own terms
+- A **creation prologue** for a quarrel (1–6): the assembly of gods builds the world, brings forth living beings and
+  gives every kind its dwelling and its shrine – even insects belong to the sacred order.
+- **Ea answers boasting by creation** (9–12): the god "bears" two tiny rivals and names them ironically ("the mighty").
+- The **"designs of the great gods"** that Anu, Enlil and Ea fixed forever (30–31): quarrel among creatures disturbs
+  cosmic order; the boaster turns peacemaker (24–33) – a wisdom twist.
+- The **spider seen by its enemies** (19–22): fly-swallower, spreading its web over the sleeper at night, cursed.
+- **Debate as lawsuit** (48: "you stand in his case"), creatures with shrines and great meals (52–53).
+
+### Lines shared with other files
+- 26 cf. Theodicy 265 (`למד את תחבולותיי`); 4 ≈ 28 (the lists of creatures, identical Hebrew).
+
+### Proposals for the shared renderings
+- *ettūtu* `עכביש`; *nammaštû* `נעים`; *umām ṣēri* `חית השדה`; *šiknat napišti* `בעלי הנפש`; *burūmû* `רום־השמים`;
+  *eṣēru* `צר`; *zikru* (name) `זכר`; *šarāḫu* Dt/Št `התהדר`; *zubbu* `זבוב`; *pīru* `פיל`; *ṭarādu* `הבריח`.
+
+### Lessons for the guidelines
+- A rank-3 phrase can build a famous echo out of a construct chain that belongs elsewhere (19 "master of flies"): parse
+  every *bēl* + noun before tagging.
+
+## WR
+
+### Scope
+The Story of the Poor, Forlorn Wren (eBL `L/2/13`, ed. and tr. E. Jiménez), all 42 labels (1–27, 29–43); Late
+Babylonian and Parthian library tablets from Babylon and school tablets from Babylon and Nippur. Eagle nests on the
+mountain, Wren lays eggs on a low plant; Wren prays to Šamaš, the judge; Eagle is bound and brought down; Wren calls the
+birds to praise Šamaš; the closing moral.
+
+### Sources consulted
+eBL edition, ATF, glossary; Jiménez's English; Etana (`../../אגדות-מלכים/`, *erû* `נֶשֶׁר`, *watmu* `אפרוח`, the eagle's
+punishment); Gilgameš X 309 (*qinna qanānu*).
+
+### Decisions
+- *duqduqqu* = `גִּדְרוֹן` (the config title), *arû* = `נֶשֶׁר`, both as names without the article; the epithet *akû
+  lapnu* = `התשוש והדל` (3, 5, 12, 38: *akû* as in PO/OH, *lapnu* corpus §3).
+- *qinna qanānu* `קינן קן`; *watmu* `אפרוח` (`גוזל` reserved); *pelû* `ביצה`; *nīnû* `נִינוּ` (transliterated plant);
+  *surdû* `נֵץ`; *mutellu* `רם`; *mugdašru* `אדיר`; *nukaribbu* `גנן`; *šisītu* `צעקה`; *palāḫu* (physical) `פחד`;
+  *ṣummû* `צמא`; *dayyān kitti* `דיין האמת` (not "righteous"); *kamû* `שבה`; *kitta epēšu* `עשה אמת`; *tanitta dabābu*
+  `סיפר תהילה`; *ṣabābu* `הניף` (not `רחף`, `פרש`); *masnaqtu* `מבחן`; *damqātu* `חסדים`; *qabû* "call" `אמר` (15:
+  `קרא` reserved for *nabû*).
+
+### Open decisions for the user
+1. *duqduqqu* `גדרון` (identification uncertain).
+2. 43 *damqātu* (adj. *damqu*, "good things") rendered `חסדיו` (the *damiqtu* noun's word) rather than `נאותיו`.
+3. 38 the verb is restored (*uštamḫiranni?*), `[השווה?]`.
+
+### Progress log
+- 2026-10-31: drafted 1–43 in two saved parts; 15 `קוראים` (reserved `קרא`) → `אומרים`; 32 an added `[מן]` removed.
+- Passes: (a) brackets narrowed in 6, 12, 22, 32; (b) the epithet identical in 3, 5, 12, 38; (c) read aloud.
+- `verify WR --strict` 0; `check_bible_quotes.py` 0 (one fixed: a bare "לב:יא" read as Genesis); two footnotes.
+
+### Parallels index (WR)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 1 | *arû ina šadî iqtanan qinna* | נשר בהר קינן קן | `אִם-עַל-פִּיךָ יַגְבִּיהַּ נָשֶׁר; וְכִי יָרִים קִנּוֹ` (איוב לט:כז) | [equivalent] | *qinna qanānu* / `קִנֵּן קֵן` [cognate]. |
+| 2 | *iltakna pelâšu* | שׂם את ביציו | `כִּי יִקָּרֵא קַן צִפּוֹר לְפָנֶיךָ בַּדֶּרֶךְ בְּכָל עֵץ אוֹ עַל הָאָרֶץ אֶפְרֹחִים אוֹ בֵיצִים` (דברים כב:ו) | [equivalent] | The small bird's exposed nest. |
+| 8 | *surdû* | הנץ | `הֲמִבִּינָתְךָ יַאֲבֶר-נֵץ` (איוב לט:כו) | [equivalent] | Hawk and eagle together (Job 39:26–27). |
+| 9 | *ana akāl šīrī* | לאכול את הבשר | `מִשָּׁם חָפַר-אֹכֶל` (איוב לט:כט) | [equivalent] | The eagle's prey; `וְאֶפְרֹחָו יְעַלְעוּ-דָם` (איוב לט:ל). |
+| 19 | *atmī arî* | אפרוחי נשר | `כְּנֶשֶׁר יָעִיר קִנּוֹ עַל גּוֹזָלָיו יְרַחֵף` (דברים לב:יא) | [equivalent] | Eagle and young (`אפרוח` per Etana; `גוזל` reserved). |
+| 23 | *šamaš dayyān ki[tti]* | שמש, דיין הא[מת] | `הֲשֹׁפֵט כָּל הָאָרֶץ לֹא יַעֲשֶׂה מִשְׁפָּט` (בראשית יח:כה) | [equivalent] | The divine judge appealed to by the weak; Jiménez's "righteous" is *kittu* "truth". |
+| 35 | *kitta epšā* | עשו אמת | `וְעָשִׂיתָ עִמָּדִי חֶסֶד וֶאֱמֶת` (בראשית מז:כט) | [equivalent] | "Doing truth" = loyalty. |
+| 36 | *tanittašu dubbā* | ספרו את תהילתו | `לְדֹר וָדֹר נְסַפֵּר תְּהִלָּתֶךָ` (תהלים עט:יג) | [equivalent] | The thanksgiving vocabulary. |
+| 38 | *duqduqqa akâ lapna itti arî danni* | גדרון התשוש והדל, עם הנשר החזק | `מֵקִים מֵעָפָר דָּל מֵאַשְׁפֹּת יָרִים אֶבְיוֹן` (שמואל א ב:ח) | [equivalent] | The god raising the poor (*lapnu* = `דל`). |
+| 39 | *lā iqabbi arû mā šaqi šadû* | אל יאמר נשר: 'רם ההר!' | `אִם תַּגְבִּיהַּ כַּנֶּשֶׁר וְאִם בֵּין כּוֹכָבִים שִׂים קִנֶּךָ מִשָּׁם אוֹרִידְךָ` (עובדיה א:ד) | [equivalent] | **Key:** the proud eagle's high nest and its fall (also `כִּי תַגְבִּיהַּ כַּנֶּשֶׁר קִנֶּךָ מִשָּׁם אוֹרִידְךָ`, ירמיהו מט:טז). |
+| 40 | *šapil nīnû* | שפל הנינו | `וְרָמֵי הַקּוֹמָה גְּדוּעִים וְהַגְּבֹהִים יִשְׁפָּלוּ` (ישעיהו י:לג) | [cognate] | *šapālu* / `שָׁפֵל`; high and low reversed. |
+| 41 | *ša bēl ittīšu qinna iqannan* | מי שבל עמו – קן יקנן | `אִם-יְהוָה לֹא-יִבְנֶה בַיִת` (תהלים קכז:א) | [equivalent] | **Key:** the closing proverb – a home only with the god; also `גַּם-צִפּוֹר מָצְאָה בַיִת וּדְרוֹר קֵן לָהּ` (תהלים פד:ד). |
+| 42 | *iṣappap kappī urabba bukuršu* | יניף כנפיים, יגדל את בכורו | `יִפְרֹשׂ כְּנָפָיו יִקָּחֵהוּ יִשָּׂאֵהוּ עַל אֶבְרָתוֹ` (דברים לב:יא) | [equivalent] | Wings that raise the young. |
+
+### The text on its own terms
+- A **school text** with a moral (copied by pupils in Babylon and Nippur): the small trust the god, the great fall.
+- **Prayer of the persecuted** (4–26): the bird spreads its wings like hands, names itself by its misery ("the one-shekel
+  bird", "small is my stature"), describes hunger, thirst and fear, and appeals to Šamaš, "judge of truth".
+- **Divine reversal and thanksgiving** (29–38): the eagle bound and brought down; the rescued bird calls all birds to
+  "make truth" (alliance) and praise the god – a thanksgiving psalm in miniature.
+- **Etana's eagle punished again**: the same crime (eating a neighbour's young) and the same punishment (wings).
+- **The moral** (39–43): neither pride nor complaint – "he whom Bēl is with builds a nest".
+
+### Lines shared with other files
+- 1 *qinna qanānu* = Gilgameš's `קנן קן`; Etana's eagle words copied (*erû*, *watmu*, *kappu*).
+
+### Proposals for the shared renderings
+- *duqduqqu* `גִּדְרוֹן`; *akû lapnu* `התשוש והדל`; *pelû* `ביצה`; *surdû* `נֵץ`; *nukaribbu* `גנן`; *dayyān kitti* `דיין
+  האמת`; *kitta epēšu* `עשה אמת`; *ṣabābu* `הניף`; *masnaqtu* `מבחן`; *nīnû* `נִינוּ`.
+
+### Lessons for the guidelines
+- A gate on `קרא` catches the ordinary "they call me" (*qabû*): write `אומרים לי`; and a bare reference such as "לב:יא"
+  is read as Genesis by the quote checker – always write the book.

@@ -22,6 +22,8 @@ Added to the corpus by Round 3, run 4 of `../curated-translation-candidates.md`:
 | 3 | `3-התפילה-הגדולה-לשמש/` | *The Great Prayer to Šamaš* | eBL `L/3/4` (ed. G. Rozzi; tr. Foster): `../sources/eBL/Shamash-Hymn-SB/` | 200 | `annotated-SH.rtl.md` |
 | 4 | `4-עצות-חכמה/` | *Counsels of Wisdom* | eBL `L/2/3` (ed. Zs. J. Földi; tr. Foster): `../sources/eBL/Counsels-of-Wisdom-SB/` | 159 (1–54, A+1–A+105) | `annotated-CW.rtl.md` |
 | 5 | `5-דו-שיח-הפסימיות/` | *The Dialogue of Pessimism* | eBL `L/2/4` (ed. A. A. Fadhil; tr. Foster, Sarabia, Khatabe): `../sources/eBL/Dialogue-of-Pessimism-SB/` | 93 (1–38, a+1–a+7, 39–86) | `annotated-DP.rtl.md` |
+| 7 | `7-העני-מניפור/` | *The Poor Man of Nippur* (Round 5 run 5) | eBL `L/1/11` (ed. Jiménez et al.; tr. Foster): `../sources/eBL/Poor-Man-of-Nippur/` | 161 | `annotated-PM.rtl.md` |
+| 8 | `8-משלי-המחלוקת/` | the fables (contest literature): Palm and Vine, the Poplar, Ox and Horse, the Spider, the Wren (Round 5 run 5) | eBL `L/2/12`, `L/2/8`, `L/2/9`, `L/2/11`, `L/2/13` (ed. and tr. Jiménez): `../sources/eBL/Fable-*/` | 54 + 82 + 217 + 59 + 42 = 454 | `annotated-PV`, `-PO`, `-OH`, `-SP`, `-WR` |
 | 6 | `6-הוראות-שורופך/` | *The Instructions of Šuruppag* (Sumerian) | ETCSL 5.6.1 (+ ORACC morph via `../tools/sumerian_workbench.py`): `../sources/ETCSL/5.6.1--Instructions-of-Shuruppag/`; 1–13 = the flood corpus's lines (checked) | 288 (1–280 + 8 lettered) | `annotated-SU.rtl.md` |
 
 Rank 3–4 for Ludlul: **Lenzi 2023** (OBO 300, open access; `../sources/Lenzi-2023--…/`: chapter 2 text and translation, chapter 3 notes, chapters 5–11 on the poem's world; Oshima's numbering, align by content). For both: the ancient commentaries (`../sources/CCP/`). Not available: Lambert 1960, Oshima 2013/2014, Annus & Lenzi 2010 (`../sources/_records-only--Wisdom-and-righteous-sufferer/`).
@@ -56,6 +58,8 @@ Rank 3–4 for Ludlul: **Lenzi 2023** (OBO 300, open access; `../sources/Lenzi-2
 | 3 | The Great Prayer to Šamaš | **complete (first draft), 2026-10-22**: 200 lines; translators SH-a (1–100), SH-b (101–200); print stub `../הדפסה/ספרות-החכמה-והצדיק-הסובל/3-התפילה-הגדולה-לשמש.rtl.md`. |
 | 4 | Counsels of Wisdom | **complete (first draft), 2026-10-22**: 159 labels; print stub `…/4-עצות-חכמה.rtl.md`. |
 | 5 | The Dialogue of Pessimism | **complete (first draft), 2026-10-22**: 93 labels; print stub `…/5-דו-שיח-הפסימיות.rtl.md`. |
+| 7 | The Poor Man of Nippur | **complete (first draft), 2026-10-31**: 161 labels, one translator; print stub `…/7-העני-מניפור.rtl.md`. Why here, not in `קולות-היום-יום/`: renderings §12. |
+| 8 | The fables | **complete (first draft), 2026-10-31**: 454 labels in five files, one translator resumed per file (PV+PO, OH, SP+WR); print stub `…/8-משלי-המחלוקת.rtl.md`. |
 | 6 | The Instructions of Šuruppag | **complete (first draft), 2026-10-22**: 288 entries; translators SU-a (1–142), SU-b (143–280); print stub `…/6-הוראות-שורופך.rtl.md`. |
 
 Round 3 run 4: six translators, one at a time after the quota stop of 2026-10-21 (guidelines §5.1), each with the run brief; renderings merged after each (§11.10–§11.15). `verify --strict` on all eleven files: 1,642 entries, 0 problems; `check_bible_quotes.py`: 0.
