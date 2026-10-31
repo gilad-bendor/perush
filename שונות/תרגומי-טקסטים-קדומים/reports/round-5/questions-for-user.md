@@ -56,3 +56,8 @@ alternative in the note, and listed under each tablet's "Open decisions" for the
 **Settled by the orchestrator (minor):** Sefire's *ʿdy* (not translated yet) is left to the run that does Sefire,
 under the cross-language principles of guidelines §6.7; the echo tag on proper names (`[cognate]` when the name is the
 same word, else `[equivalent]`) goes to the lead's harmonization at the end of this round.
+
+## Run 5 – the Cuthaean Legend, the Poor Man of Nippur, the fables (report: `run-5.md`)
+
+No question for the user. The cruxes are translated with a choice and noted under each project's open decisions, for
+the user's review of the drafts.
