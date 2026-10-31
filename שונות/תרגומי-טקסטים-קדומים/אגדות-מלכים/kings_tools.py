@@ -1,7 +1,9 @@
 """Verify, build and look up the legends-of-kings corpus (אגדות-מלכים/): Enmerkar and the Lord of Aratta (ETCSL 1.8.2.3,
 key EA, Sumerian), the Sargon Birth Legend (King 1907, key SB, Akkadian) and Etana (eBL L/1/9, six chapters, key ET,
 Akkadian; added 2026-10-21/22: labels `<chapter>.<eBL label>`, reserved words licensed by the eBL lemma, `data ET` /
-`pars ET` show each line's related lines in all versions with their Hebrew).
+`pars ET` show each line's related lines in all versions with their Hebrew), and the Cuthaean Legend of Narām-Sîn
+(eBL L/1/12, five chapters OBI OBII MBA MBB SB, key CL; added 2026-10-31, Round 5 run 5: the same eBL machinery, eBL's
+parallels of any L I.<n> text, ranges "31-33" linked line by line; `fill KEY` writes eBL's N into every `@` line).
 
 Written 2026-10-21 (Round 2, run 6), adapted from ../קינות-על-ערים/lament_tools.py and ../בניין-המקדש/temple_tools.py.
 Add a project as a PROJECTS entry.
@@ -60,7 +62,15 @@ ET_CHAPTERS = [  # (key, eBL folder under sources/eBL, (stage, chapter) as eBL's
     ('II', 'Etana-SB-II', ('SB', 'II')), ('III', 'Etana-SB-III', ('SB', 'III')),
 ]
 PROJECTS['ET'] = dict(dir='3-אגדת-אתנה', annotated=[f'annotated-{c}.rtl.md' for c, _, _ in ET_CHAPTERS], base='ebl',
-                      chapters=ET_CHAPTERS)
+                      chapters=ET_CHAPTERS, textno='9')
+# The Cuthaean Legend of Narām-Sîn (eBL L/1/12; Round 5, run 5): five chapters, labels `<chapter key>.<eBL label>`.
+CL_CHAPTERS = [
+    ('OBI', 'Cuthaean-OB-I', ('OB', 'I')), ('OBII', 'Cuthaean-OB-II', ('OB', 'II')),
+    ('MBA', 'Cuthaean-MB-A', ('MB', 'A')), ('MBB', 'Cuthaean-MB-B', ('MB', 'B')),
+    ('SB', 'Cuthaean-SB', ('SB', '-')),
+]
+PROJECTS['CL'] = dict(dir='4-אגדת-כותה', annotated=[f'annotated-{c}.rtl.md' for c, _, _ in CL_CHAPTERS], base='ebl',
+                      chapters=CL_CHAPTERS, textno='12')
 EXTRA_GREP_AKK = ['אפוס-גילגמש/1-הנוסח-הבבלי-התקני/annotated-*.rtl.md', 'אפוס-גילגמש/2-הנוסח-הבבלי-הקדום/annotated-*.rtl.md',
                   'סיפורי-המבול-המסופוטמיים/*/annotated*.rtl.md', 'סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/annotated-*.rtl.md',
                   'סיפורי-הבריאה-המסופוטמיים/2-טקסטי-בריאה-ועדן/annotated-1-Adapa.rtl.md',
@@ -183,6 +193,24 @@ RESERVED_ET.update({
     r'חרם|חרמו': [],
 })
 RESERVED['ET'] = RESERVED_ET
+# The Cuthaean Legend (renderings.md §11.4): Etana's gates (licensed by the eBL lemma), minus Etana's own "never" rows
+# for Gen 30 and Gen 10:10, plus the omen, flood and created-host words.
+RESERVED_CL = {k: v for k, v in RESERVED_ET.items() if not any(x in k for x in ('דודאים', 'עקרה', 'ממלכה', 'סולם'))}
+del RESERVED_CL[r'מלאכה|מלאכת']
+RESERVED_CL.update({
+    B + P + r'(מלאכה|מלאכת|מלאכתו|מלאכתם)' + E: [r'šipru'],              # *šipru* = מְלָאכָה (the user, 2026-10-23)
+    B + P + r'(מבול|המבול|במבול|למבול)' + E: [r'abūbu'],
+    B + P + r'(מצבה|מצבת|מצבתי|מצבות|מצבתך|מצבותי)' + E: [r'narû'],
+    B + P + r'(נפילים|נפלים|הנפילים)' + E: [],                            # Gen 6:4: the apparatus only
+    B + P + r'(גבור|גיבור|גבורים|גיבורים|הגיבור|הגבור)' + E: [r'qurādu|qarrādu|qardu|eṭlu'],
+    B + P + r'(מזבח|מזבחות|מזבחי)' + E: [],                               # *guhšû* is a reed altar: never מִזְבֵּחַ
+    B + P + r'(אוב|אובות|ידעוני|ידעונים|קוסם|קסמים|מעונן|מכשף|חובר)' + E: [],  # Deut 18:10–11, 1 Sam 28: apparatus
+    B + P + r'(שואלת|השואלת|שואל|השואל|שואלים)' + E: [r'šāʾil|šāʼil|ša-i-l|šâlu|šālu'],
+    B + r'ו?(מחה|ימחה|אמחה|נמחה|מחו|למחות)' + E: [r'pašāṭu'],              # Gen 6:7 `אֶמְחֶה`: apparatus only
+    B + P + r'(זרע|זרעו|זרעם|זרעך)' + E: [r'zēru|zērū|zēr\b|perʾu|pirʾu|liplipp'],
+    B + P + r'(צלם|דמות)' + E: [r'ṣalmu|tamšīlu'],
+})
+RESERVED['CL'] = RESERVED_CL
 
 TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     'אותו': ('Utu (אוּתוּ)', r'\{d\}utu\b'), 'איננה': ('Inana (אִינַנָּה)', r'inana|inanna'),
@@ -195,6 +223,9 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     'אתנה': ('Etana (אֵתָנָה; "I will give")', r'etan'), 'שמש': ('Šamaš / the sun (שַׁמַשׁ / שֶׁמֶשׁ)', r'šamaš|šamš'),
     'אנו': ('Anu (אָנוּ; "we")', r'(^|[\s|(\[])(anu|anim|ānim|ani|anum)\b'), 'סין': ('Sîn (סִין; the desert of Sin)', r'sîn|sīn'),
     'שכן': ('Šakkan (שַׁכַּן)', r'šakkan'), 'ברו': ('*bēru* (בֵּרוּ)', r'bēr[au]\b|bēri\b'), 'אט': ('*eṭemmu* (אִט; "slowly")', r'eṭemm'),
+    # the Cuthaean Legend (renderings §11.1)
+    'מגן': ('Magan (מָגָן)', r'magan'), 'מלוחה': ('Meluḫḫa (מֵלוּחָה)', r'meluhh'), 'כותה': ('Kutha (כּוּתָה)', r'kut[eiû]'),
+    'בלת': ('Bēlet-ilī (בֵּלֶת־אִילִי)', r'bēlet'), 'נרם': ('Narām-Sîn (נָרָם־סִין)', r'narām'),
     'ציר': ('*ra-gaba* (צִיר)', r'ra₂?-gaba'), 'צירי': ('*ra-gaba* (צִירִי)', r'ra₂?-gaba'), 'צירה': ('*ra-gaba* (צִירָהּ)', r'ra₂?-gaba'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
@@ -238,6 +269,7 @@ FORMULAS = {'EA': [
     (r'atkal(ak)?kum-ma \| šamaš', r'^בך בטחתי, שמש', '"I trusted in you, Šamaš" (§10.3)'),
     (r'ūmišam-ma \|\|? imta(na)?h?hara', r'יום יום – אל שמש מתחנן', '"day after day he appealed" (§10.3)'),
     (r'ana (šâšū?|šuāšu)(-ma)? \|\| ana \S+ \| iz', r'אליו, אל [^,]+, דיבר(ה)?:', '"X said to him, to Y" (§10.6.2)'),
+], 'CL': [  # renderings.md §11.3 (enforced once the first copy of each formula is drafted)
 ]}
 
 
@@ -310,16 +342,16 @@ def king_lines(rel):
     return out
 
 
-ET_PAR_RE = re.compile(r'^\s*(cf\.\s*)?L I\.9 (\w+) "([^"]+)" (\S+)\s*$')
+ET_PAR_RE = re.compile(r'^\s*(cf\.\s*)?L I\.(\d+) (\w+) "([^"]+)" (\S+)\s*$')
 
 
-def ebl_chapter(folder):
+def ebl_chapter(folder, chapters=None, textno='9'):
     """[{label, N, T, L (lemma list), lraw, par [(cf, full label)], block (the line's whole reading-edition text)}]."""
     path = os.path.join(SRC, 'eBL', folder, 'reading-edition.md')
     out, cur = [], None
     if not os.path.exists(path):
         return out
-    bymap = {sc: c for c, _, sc in ET_CHAPTERS}
+    bymap = {sc: c for c, _, sc in (chapters or ET_CHAPTERS)}
     for ln in open(path, encoding='utf-8'):
         ln = ln.rstrip('\n')
         m = re.match(r'^### (\S+)\s*$', ln)
@@ -340,8 +372,11 @@ def ebl_chapter(folder):
         elif ln.startswith('- **Parallels:**'):
             for x in ln[16:].split(';'):
                 m2 = ET_PAR_RE.match(x)
-                if m2 and (m2.group(2), m2.group(3)) in bymap:
-                    cur['par'].append((bool(m2.group(1)), f'{bymap[(m2.group(2), m2.group(3))]}.{m2.group(4)}'))
+                if m2 and m2.group(2) == textno and (m2.group(3), m2.group(4)) in bymap:
+                    lab2 = m2.group(5)
+                    m3 = re.match(r'^(\d+)-(\d+)$', lab2)   # a range (SB "31-33"): link to each line
+                    for l3 in ([str(i) for i in range(int(m3.group(1)), int(m3.group(2)) + 1)] if m3 else [lab2]):
+                        cur['par'].append((bool(m2.group(1)), f'{bymap[(m2.group(3), m2.group(4))]}.{l3}'))
     return out
 
 
@@ -349,7 +384,7 @@ def ebl_all(key):
     """{full label: line dict} and the full label order, over the project's chapters."""
     res, order = {}, []
     for c, folder, _ in PROJECTS[key]['chapters']:
-        for d in ebl_chapter(folder):
+        for d in ebl_chapter(folder, PROJECTS[key]['chapters'], PROJECTS[key].get('textno', '9')):
             k = f'{c}.{d["label"]}'
             d['full'] = k
             res[k] = d
@@ -479,7 +514,7 @@ def verify(key, strict=False):
             if ln.startswith('## '):
                 for tok in re.split(r'[\s,.;:!?"\'()\[\]–—]+', ln[3:]):
                     base = PREFIX.sub('', strip(tok), count=1)
-                    if base in ('אותו', 'איננה', 'אן', 'שומר', 'אכי', 'אשתר', 'אתנה', 'שמש', 'אנו') and not NIQQUD.search(tok):
+                    if base in ('אותו', 'איננה', 'אן', 'שומר', 'אכי', 'אשתר', 'אתנה', 'שמש', 'אנו', 'מגן', 'מלוחה', 'סין', 'בלת') and not NIQQUD.search(tok):
                         problems.append(f'heading "{ln.strip()}": unvocalized "{tok}"')
     if pending:
         (problems if strict else notes).append(f'{pending} entries not yet drafted')
@@ -690,14 +725,15 @@ def et_related(key, k, order, res):
 
 
 def et_data(key, a, b, out):
+    P = PROJECTS[key]
     order, res = ebl_all(key)
     heb = et_hebrew(key)
     i, j = order.index(a), order.index(b)
-    L = [f'# Translator data {key} {a}–{b} (Etana, eBL L/1/9)', '',
+    L = [f'# Translator data {key} {a}–{b} ({P["dir"]}, eBL L/1/{P.get("textno", "9")})', '',
          'Per line: the eBL reading-edition block (N = normalization: copy it exactly as the backticked line of the entry;',
          'T = Foster\'s English, rank 3 – read it only AFTER your own reading; L = lemmas with eBL glosses – check the stem;',
          'notes; parallels; every manuscript\'s ATF). Then "Related lines": eBL\'s parallels and near-identical',
-         'normalizations in all six versions, with the Hebrew already given to them (copy it where the Akkadian is the same).', '']
+         'normalizations in all the versions, with the Hebrew already given to them (copy it where the Akkadian is the same).', '']
     for k in order[i:j + 1]:
         L.append(f'## {k}')
         L += [x for x in res[k]['block'] if x.strip()]
@@ -771,6 +807,30 @@ def pars(key, a, b):
                 print(f'    {r:.2f} {k2}: `{t2}`\n         > {heb}')
 
 
+def fill(key):
+    """Replace every backticked `@` source line of the project's annotated files by eBL's N (never retype it)."""
+    P = PROJECTS[key]
+    order, res = ebl_all(key)
+    n = 0
+    for a in P['annotated']:
+        p = os.path.join(HERE, P['dir'], a)
+        if not os.path.exists(p):
+            continue
+        out, cur = [], None
+        for ln in open(p, encoding='utf-8').read().split('\n'):
+            m = re.match(r'^### (\S+)\s*$', ln)
+            if m:
+                cur = m.group(1)
+            if ln.strip() == '`@`' and cur in res:
+                ln = '`' + res[cur]['N'] + '`'
+                n += 1
+            elif ln.strip() == '`@`':
+                print(f'{a}: no base line for {cur}')
+            out.append(ln)
+        open(p, 'w', encoding='utf-8').write('\n'.join(out))
+    print(f'filled {n} lines')
+
+
 def main():
     a = sys.argv[1:]
     if len(a) < 2:
@@ -790,6 +850,9 @@ def main():
         return
     if a[0] == 'data' and len(a) > 4:
         data(a[1], a[2], a[3], a[4])
+        return
+    if a[0] == 'fill':
+        fill(a[1])
         return
     if a[0] == 'pars' and len(a) > 3:
         pars(a[1], a[2], a[3])

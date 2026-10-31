@@ -425,7 +425,81 @@ Full list: `3-אגדת-אתנה/project.md` ("Part ET4"). For a later Akkadian t
 
 2026-10-23 harmonization, Etana, batch C (`harmonization--2026-10-23.md` row 19, revised): *bâʾu* "pass along, go" → `צָעַד` (`עָבַר` is reserved for its cognate *ebēru*; `חָלַף` is *etēqu*'s, II `חלף את ההר`); changed lines: III.b+3 and b+5 `– עברנו;` → `– צעדנו;`, b+40 `– עברו;` → `– צעדו;`, b+42 `– עברו];` → `– צעדו];` (b+5 and b+42 are not in the table: the same verb; the dream and its fulfilment stay in the same words), with the b+3 footnote, the Tablet III introduction, the ET4 fixed strings (§10.6.4) and the project tables. Collision: *akāšu* is also `צעד` (OBS a+3 `הנחש צעד הֵנָּה`), recorded, not changed.
 
+## 11. The Cuthaean Legend of Narām-Sîn (project 4, `4-אגדת-כותה/`; Round 5, run 5, 2026-10-31) – fixed before the first part
+Fixed by the coordinator from a reading of eBL's five chapters (345 labels: OB I, OB II, MB A, MB B, SB) and the earlier
+Akkadian corpora. **§0.2 and §10 (Etana: the eBL machinery, the Akkadian grammar §10.2, the gated words §10.4) bind**;
+this section adds what the Cuthaean Legend needs. The rows are drafts for "look for", never "translate as" (guidelines
+§5.2 ★): the translator reads the transliteration first, may revise a row at its first occurrence with the reason in
+`project--CL<n>.md`, and after the merge the row binds (FORMULAS in `kings_tools.py`, key CL, is filled then).
+
+### 11.1 Names (★ = vocalized at every occurrence; checked by TRAPS)
+| Source | Hebrew | Notes |
+|---|---|---|
+| Narām-Sîn | נָרָם־סִין ★ | King of Akkade (c. 2254–2218), Sargon's grandson; the legend makes him Sargon's son (SB 2: note). `סין` reads "Sin / China". |
+| Sargon (*šarru-kīn*) | סַרְגּוֹן | As project 2 (and ↔ `סַרְגוֹן` ישעיהו כ:א, the Assyrian namesake: note once). |
+| Enmerkar | אֶנְמֶרְכַּר | As project 1 (the same king: Narām-Sîn blames his failure to leave a stela). |
+| Šamaš (*qurādu*) | שַׁמַשׁ ★ (הַגִּבּוֹר) | §10.1. |
+| The gods of the omen list: Ištar, Ilaba, Zababa, Annunītu, Šullat, Ḫaniš | אִשְׁתַּר, אִילַבָּה, זַבַּבָּה, אַנּוּנִיתוּ, שׁוּלַּת, חָנִישׁ | Ilaba: the god of Akkade's dynasty; Zababa: of Kiš (`זַבַּבָּה`, the Hittite myths' form); Annunītu: Ištar as warrior of Akkade; Šullat and Ḫaniš: the flood corpus's pair (guidelines §6.5). |
+| Ea; Enlil; Anu; Tiāmat; Bēlet-ilī; the Anunnakkū; Nergal | אֵאָה; אֶנְלִיל; אָנוּ ★; תִּיאָמַת; בֵּלֶת־אִילִי ★; הָאֲנוּנָּכִּי; נֵרְגַּל | Earlier corpora. Bēlet-ilī: unvocalized `בלת` reads "without": vocalized (TRAPS). Nergal: ↔ `וְאַנְשֵׁי כוּת עָשׂוּ אֶת נֵרְגַל` (2 Kgs 17:30): a note at the first occurrence (print the verse). |
+| Kutha; Emeslam | כּוּתָה ★; אֵמֶסְלָם | Kutha = the Bible's `כּוּת` (2 Kgs 17:24, 30): the note says so (guidelines §6.4 rule 6: the biblical place name where the Bible names it: the first translator decides between `כּוּת` and `כּוּתָה`, with the reason; the TRAPS row covers `כותה`). Emeslam = Nergal's temple at Kutha. |
+| Elam; Dilmun; Magan; Meluḫḫa; Gutium; Subartu; Ummān-manda; Burušḫanda; Puḫlu; Puranšu; Lullubu | עֵילָם; דִּלְמוּן; מָגָן ★; מֵלוּחָה ★; גּוּטִיּוּם; שׁוּבַּרְתּוּ?; אֻמַּן־מַנְדָּה; בּוּרוּשְׁחַנְדָּה; … | Earlier forms first (`עילם`, `דלמון`, `מלוחה`, `גוטיום` exist: grep). Magan: `מגן` "shield"; Meluḫḫa: `מלוחה` "salted": always vocalized (TRAPS). The rest: the translator transcribes from the normalization and records them. |
+| The host's family: Anu-banini, Melili, the seven brothers (Memanduḫ, Medudu, …, Ḫurrukidu) | transcribed from N (e.g. `אָנוּבָּנִינִי`, `מֵלִילִי`) | Anu-banini is also a historical Lullubean king (note). |
+
+### 11.2 Grammar
+As §10.2. The SB is a first-person royal narrative (*narû*): preterites = past; *lū anāku-ma* "I myself"; the
+wisdom of the end (149–180) is mostly **imperatives and prohibitives** (*lā* + present = `לא` + future: "you shall not";
+*ai* + preterite = `אַל`): keep the difference visible. *-ma* not "and then" each time.
+
+### 11.3 Formulas and repeated passages (the first copy fixes them; checked by FORMULAS after the merge)
+| Source | Hebrew (draft) | Lines (SB; the other versions in `pars CL`) |
+|---|---|---|
+| *ištar ilaba zababa anunītu* / *šullat ḫaniš šamaš qurāda* | `אִשְׁתַּר, אִילַבָּה, זַבַּבָּה, אַנּוּנִיתוּ,` / `שׁוּלַּת, חָנִישׁ, שַׁמַשׁ הַגִּבּוֹר.` | 12–13, 76–77, 112–113 (vocalized in each copy: ★ names) |
+| *ašāl-ma ilī rabûti* | `שאלתי את האלים הגדולים:` | 11, 75, 111. *šâlu* = `שָׁאַל` [cognate]; gated (§11.4). |
+| *alsi mārī bārî umaʾʾir* | `הצעקתי את בני הבוחן, ציוויתי (עליהם),` (draft) | 14, 72, 108 (cf. 63 *alsi rēdâ umaʾʾir*). *šasû* "summon" = `הִצְעִיק` (Erra); *wuʾʾuru* "instruct, commission" = the translator fixes (`צִוָּה`? `הִפְקִיד`? grep); *mārū bārî* "sons of the diviner" = the guild of diviners: keep literal `בני הבוחן` (*bārû* = `הַבּוֹחֵן`, the wisdom corpus) and note `בְּנֵי הַנְּבִיאִים` (2 Kgs 2:3) [equivalent]. |
+| *sebet ana pān sebet puḫādī alput* | the translator fixes (*lapātu* "touch" = the extispicy act; *puḫādu* = `טָלֶה`) | 15, 73, 109 |
+| *ukīn guḫšî ellūti* | `הכינותי מזבחות־קנה טהורים` is **not** allowed (`מִזְבֵּחַ` reserved: the Akkadian has no *zbḥ*): the translator fixes (e.g. `דוכני־קנה`? `מתקני־קנה`?) | 16, 74, 110. *kânu* D = `כּוֹנֵן`; *ellu* = `טָהוֹר` (the root קדש never). |
+| *kīam aqbi ana libbīya umma lū anākū-ma* | `כך אמרתי אל לבי: "אני בעצמי …"` (draft) | 79, 89, 124 (↔ `וַיֹּאמֶר … אֶל לִבּוֹ` בראשית ח:כא [equivalent]: the Hebrew idiom is the same; print the verse) |
+| *X šattu ina kašādi … ummāna ušēṣī-ma ina libbīšunu ištēn balṭu ul ittūra* | the translator fixes in 85 and copies it in 86–87 | 85–87; *târu* = `שׁוּב` (gated). |
+| *ina luṭê luput ina ṣillê šuḫul* ↔ *ina luṭê alput, ina ṣillê ašḫul* | command ↔ execution in the same words and order | 65 ↔ 70–71 |
+| *(šumma) dāmū uṣûni* … *amēlūtu šunu* / *šēdu namtaru utukku rābiṣu lemnūtu šipir enlil šunu* | the translator fixes | 66–68 (the demons in a hostile list transliterated, as the wisdom and witchcraft corpora: `שֵׁדוּ`, `נַמְתָּרוּ`?, `אוּטוּכּוּ`, `רוֹבֵץ` [cognate, Gen 4:7]; *šipir enlil* = `מְלֶאכֶת אֶנְלִיל` (*šipru* = `מְלָאכָה`, the user's rule; gated)) |
+
+### 11.4 Reserved and gated (RESERVED_CL; licensed by the eBL lemma)
+- **Inherited:** §10.4 (Etana's gates), except its "never" rows for Gen 30 and Gen 10:10 (`דּוּדָאִים`, `עֲקָרָה`,
+  `מַמְלָכָה`, `סֻלָּם`), which do not concern this text.
+- **New gates:** `מַבּוּל` only *abūbu* (97–98; [equivalent], guidelines §6.7; *abūba šakānu* = `חולל מבול` is Erra's
+  formula: SB 97 *šakin abūbu* is a stative – the translator decides and notes it); `מַצֵּבָה` only *narû* (LH, Advice to
+  a Prince); `מְלָאכָה` only *šipru*; `שׁוֹאֵל` / `שׁוֹאֶלֶת` only *šâlu* / *šāʾilu* / *šāʾiltu* (Gudea's `שׁוֹאֶלֶת` =
+  *šāʾiltu*); `גִּבּוֹר` only *qurādu* / *qarrādu* / *eṭlu*; `מָחָה` only *pašāṭu* (Gen 6:7's `אֶמְחֶה` in the apparatus);
+  `זֶרַע` only *zēru* / *perʾu* / *lipliptu*; `צֶלֶם` / `דְּמוּת` only *ṣalmu* / *tamšīlu*.
+- **Never** (apparatus only): `נְפִילִים` (Gen 6:4: the created host is the comparison, not the translation);
+  `מִזְבֵּחַ` (*guḫšû* is a reed stand); the words of Deut 18:10–11 and 1 Sam 28 (`אוֹב`, `יִדְּעֹנִי`, `קֹסֵם`,
+  `מְעוֹנֵן`, `מְכַשֵּׁף`, `חֹבֵר`); plus §5's never list (`בָּרָא`, `עוֹלָם`, `טֶרֶם`, `אֱלֹהִים`, `מַלְאָךְ` …).
+- **Precedents to follow** (grep before any other word, ★): *narû* `מַצֵּבָה`; *tupšennu* `תיבת־הלוחות` and *šitassi*
+  `וקרא בקול` (SB 1 = Gilgameš I 24–27: copy the Gilgameš Hebrew where the words are the same); *bārû* `הַבּוֹחֵן`;
+  *eṭemmu* `אִט` ★; *ummānu* (army) – the translator fixes (Gilgameš `הָמוֹן`, Advice `חַיִל`; *ṣābu* `צָבָא` [cognate],
+  law corpus); *amēlūtu* (humankind) – the flood corpus's word; *šubšû* = `הֵבִיא לִכְלַל הֲוָיָה` (guidelines §6.7,
+  SB 103); *banû* `בָּנָה`; *apsû* `הָאַפְּסוּ`; *annû* "yes" = `הֵן` (wisdom §11; SB 171 *annû bēlī*); *riābu*
+  "requite" = `גָּמַל` and *lemuttu* / *dumqu* (SB 172: ↔ 1 Sam 24:18, Gen 44:4, 50:15–21, Prov 25:21–22: print them);
+  *šullumu* `שִׁלֵּם` (reserved, law corpus); *qāta wabālu* "lay a hand on" (SB 125, 148): the translator decides (the
+  Bible's `שָׁלַח יָד`, Gen 22:12, 37:22, in the apparatus whatever the choice).
+
+### 11.5 What to look for (both purposes; "look for", never "translate as")
+- **Bible:** Deut 17:18–20 and Josh 8:32 (the king's written instruction; the stela for future kings); Deut 18:10–14,
+  1 Sam 28:6 (no answer "by dreams, by Urim, by prophets"), 1 Sam 14:36–37, 1 Kgs 22 (asking the god before battle),
+  1 Sam 15 (to destroy or spare the enemy); Gen 6:1–4 (beings of mixed nature), Num 13:33; Gen 6:7, 9:11 (Ea: the
+  decision to destroy "the seed of mankind"); Lev 26, Deut 28 (plagues, famine), 2 Kgs 6:25, 7:1 (prices in famine);
+  Isa 19:2, Mic 7:6 (civil strife); Deut 20 (war); Deut 24:5, Qoh 9:9; Prov 25:21–22,
+  1 Sam 24:18, Gen 44:4; Isa 14:12 (the Morning Star: *dilbat* ↔ `הֵילֵל בֶּן שָׁחַר`?); 2 Kgs 17:24–30 (Kutha, Nergal).
+- **The soul of the ancients:** the *narû* literature (a fictive stela, a king's lesson to his successors); kingship
+  under the omens; the hubris of a king who wants to go "like a brigand"; the despair (*essehi enneši*); the test of
+  the strangers' humanity; Ea as the gods' conscience; the New Year rites; the Morning Star (Ištar) as an oracle;
+  the ethics of non-resistance; the curse on the enemy land in the voice of a god.
+
+### 11.6 Merged from the parts
+(The coordinator adds one record per part: CL1–CL4.)
+
 ## Changelog
+- 2026-10-31: §11 the Cuthaean Legend (project 4) – names, grammar, formulas, reserved and gated words; fixed by the Round 5 run 5 coordinator before the first part.
 - 2026-10-23: the 2026-10-23 harmonization applied to Etana (end of §10); §10.3–§10.4 quotations corrected.
 - 2026-10-23: the 2026-10-23 harmonization applied to Enmerkar (end of §9.6).
 - 2026-10-21: written before the first part, from the temple, lament, creation, flood, Gilgameš, law and wisdom
