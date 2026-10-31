@@ -510,7 +510,7 @@
 | תהלים כט:ג | EA 543 | {d}iškur an ki-a gu₃ nun-bi di-dam | אישכור, המשמיע … קול גדול | `קוֹל יְהוָה עַל-הַמָּיִם: אֵל-הַכָּבוֹד הִרְעִים` (תהלים כט:ג) | equivalent | The storm god's thunder. |
 | תהלים לה:ח | ET II.22 | gišparru māmīt šamaš … l[ibārūšu?] | הפח, שבועת שַׁמַשׁ – יתהפכו עליו, וי[לכדוהו?] | `וְרִשְׁתּוֹ אֲשֶׁר-טָמַן תִּלְכְּדוֹ` (תהלים לה:ח) | equivalent | The trap of the divine judge catches; *bâru* = `לָכַד`. Also II.48 (`בְּרֶשֶׁת-זוּ טָמָנוּ נִלְכְּדָה רַגְלָם`, תהלים ט:טז). |
 | תהלים לה:ח | ET II.81 | ina lā īdû | בלא ידע | `תְּבוֹאֵהוּ שׁוֹאָה לֹא-יֵדָע: וְרִשְׁתּוֹ אֲשֶׁר-טָמַן תִּלְכְּדוֹ` (תהלים לה:ח) | equivalent | Caught unawares, in the god's trap (ET2 linked Ps 35:8 to II.47). |
-| תהלים לז:ד | CL SB.173 | *taṣbâti* | *משאלות* | `וְיִתֶּן-לְךָ מִשְׁאֲלֹת לִבֶּךָ` (תהלים לז:ד) | [equivalent] | Uncertain word. |
+| תהלים לז:ד | CL SB.173 | *taṣbâti* | *מילוי־חפצים* | `וְיִתֶּן-לְךָ מִשְׁאֲלֹת לִבֶּךָ` (תהלים לז:ד) | [equivalent] | Uncertain word; a parallel of concept only (the Hebrew avoids the root of *šâlu*: reviewer). |
 | תהלים מא:י | ET OBS.a+12 | ana erîm ramānī anāku ašruk | לנשר – את עצמי – אני הֶעֱנַקְתִּי | `גַּם-אִישׁ שְׁלוֹמִי אֲשֶׁר-בָּטַחְתִּי בוֹ אוֹכֵל לַחְמִי הִגְדִּיל עָלַי עָקֵב` (תהלים מא:י) | equivalent | The trusted friend who ate of mine and betrayed. |
 | תהלים מה:י | EA 594 | en-me-er-kar₂ barag-ge₄ mu-un-da-ab-si | אנמרכר – את הדוכן עמה מילא | `נִצְּבָה שֵׁגַל לִימִינְךָ בְּכֶתֶם אוֹפִיר` (תהלים מה:י) | equivalent | The goddess/queen beside the king on the throne. |
 | תהלים מח:ט | ET I.5 | ukinnū | כּוֹנְנוּ | `אֱלֹהִים יְכוֹנְנֶהָ עַד-עוֹלָם` (תהלים מח:ט) | equivalent | The god establishes his city. |

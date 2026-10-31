@@ -318,7 +318,7 @@ header paragraph "חלק CL2"; the מספור sentence updated).
 | SB.168 | *līkul šīr rēdûtīka* | יאכל את בשר *רַגְלִיֶּיךָ* | `הַנִּחוּ לוֹ וִיקַלֵּל` (שמואל ב טז:יא) | [equivalent] | Non-retaliation (our proposal). |
 | SB.170–171 | *lū ašrāta lū sanqāta / annû bēlī apulšunūti* | הֱיֵה נכנע, הֱיֵה מְרֻסָּן / "הֵן, אדוני!" – ענה אותם | `הָבִיאוּ אֶת צַוְּארֵיכֶם בְּעֹל מֶלֶךְ בָּבֶל וְעִבְדוּ אֹתוֹ וְעַמּוֹ וִחְיוּ` (ירמיהו כז:יב) | [equivalent] | Submission to the stronger enemy as the god's will. |
 | SB.172 | *ana gullultīšunu rīb dumqī* | לעבירתם – גְּמֹל חסד | `כִּי אַתָּה גְּמַלְתַּנִי הַטּוֹבָה וַאֲנִי גְּמַלְתִּיךָ הָרָעָה` (שמואל א כד:יז); `לָמָּה שִׁלַּמְתֶּם רָעָה תַּחַת טוֹבָה` (בראשית מד:ד); `אִם רָעֵב שֹׂנַאֲךָ הַאֲכִלֵהוּ לָחֶם` (משלי כה:כא); `אַל-תֹּאמַר כַּאֲשֶׁר עָשָׂה-לִי כֵּן אֶעֱשֶׂה-לּוֹ` (משלי כד:כט); `אֱלֹהִים חֲשָׁבָהּ לְטֹבָה` (בראשית נ:כ) | [equivalent] | *riābu* = `גָּמַל`, the verb of 1 Sam 24:17 (the repository's numbering; 24:18 in most editions); `טוֹב` reserved, *dumqu* = `חֶסֶד`. |
-| SB.173 | *taṣbâti* | *משאלות* | `וְיִתֶּן-לְךָ מִשְׁאֲלֹת לִבֶּךָ` (תהלים לז:ד) | [equivalent] | Uncertain word. |
+| SB.173 | *taṣbâti* | *מילוי־חפצים* | `וְיִתֶּן-לְךָ מִשְׁאֲלֹת לִבֶּךָ` (תהלים לז:ד) | [equivalent] | Uncertain word; a parallel of concept only (the Hebrew avoids the root of *šâlu*: reviewer). |
 | SB.179–180 | *šūt yâši taktarba arkû liktarrabka kâša* | אתה אשר אותי בירכת – הָאַחֲרוֹן יברך אותך – אותך! | `וַאֲבָרְכָה מְבָרְכֶיךָ` (בראשית יב:ג); `מְבָרְכֶיךָ בָרוּךְ` (במדבר כד:ט); `וְאָמַר הַדּוֹר הָאַחֲרוֹן בְּנֵיכֶם` (דברים כט:כא) | [equivalent] | The blessing returning to the blesser; closes SB.30 "I did not bless him". |
 
 ### Key findings
@@ -361,7 +361,7 @@ header paragraph "חלק CL2"; the מספור sentence updated).
 4. ***gimillu*** = `חֶמְלָה` here (127), not the `גְּמוּל` of Enūma eliš / Gilgameš, because `גָּמַל` is *riābu* in
    this text (172) and *gamālu* "spare" ≠ `גָּמַל` "requite" (guidelines §6.7). Proposed as a corpus split by sense.
 5. ***papāḫu*** transliterated `פַּפָּח` (no Hebrew without `דְּבִיר` or the root קדש).
-6. ***tākaltu*** (125) = `קֵבָה` by the extispicy sense; ***taṣbâtu*** (173) `*משאלות*` and ***rēdûtu*** (168)
+6. ***tākaltu*** (125) = `קֵבָה` by the extispicy sense; ***taṣbâtu*** (173) `*מילוי־חפצים*` (reviewer: was `*משאלות*`, which shares the root of *šâlu*) and ***rēdûtu*** (168)
    `*רַגְלִיֶּיךָ*` in italics; *lizkurū?* (176) `יַזְכִּירוּ?` (eBL: perhaps *lišṭurū* "let them write").
 7. ***aḫāzu* Š** (142) = `לֻמַּד` by sense (*lamādu* does not occur in this text).
 
