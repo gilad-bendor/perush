@@ -627,3 +627,24 @@ Steinberger et al., 2025; collated on the tablets and casts; **CC BY-SA 4.0**; `
 or restoration differently, the Hebrew follows EUPT and the פירוק says `EUPT: …` (the backticked line stays CUC's,
 filled by the tool). EUPT's German and English translations and its commentary are **rank 3–4**: read them **after**
 drafting the line (`ugarit_tools.py eupt KEY LABEL`), never before; quote them briefly, with attribution.
+
+### 12.4 Merged after translator 1 (KTU 1.17), Round 5 run 3, 2026-10-31
+
+All the translator's Proposals (`4-אקהת/project.md`, "KTU 1.17") are accepted; the §12.2 rows they revise now read:
+- *aḫd ydh b škrn* = `אוחז בידו בשכרון` (no suffix on *škrn* in any copy; §12.2's `בְּשִׁכְרוֹנוֹ` withdrawn); *skn* =
+  `מַצֵּבָה` (not italic: DULAT "stela", Emar *sikkanu*); *ʿms* = the root עמס (`מְעַמְּסוֹ`, as 1.6 I:12, 1.114:18);
+  *qṣʿt* `*חצים*` (italic).
+- **The son's duties (fixed; 1.19 and any later copy follow them word for word, the person as the tablet has it):**
+  `מציב מצבת אֵל־אביו, בקודש` / `*ציון* עמו; מן הארץ מוציא קיטורו,` / `מן העפר נוטר שרידיו; סוגר לְחָיֵי מנאציו,
+  מגרש את העושה לו (רָעָה);` / `אוחז בידו בשכרון, מְעַמְּסוֹ כי שָׂבַע יין;` / `טורף חלקו בבית בעל, ומנתו בבית אֵל;` /
+  `טָח גגו ביום טיט, רוחץ בגדיו ביום רפש.`
+- **Danel's action formula:** *apnk dnil mt rpi aphn ġzr mt hrnmy* = `אחרי כן דנאל, איש רָפִא, אף הנה הגבור, איש ההרנמי`.
+- **The gate line:** *ydn dn almnt yṯpṭ ṯpṭ ytm* = `דן דין אלמנה, שָׁפַט שֶׁפֶט יתום` (*ṯpṭ* n. = `שֶׁפֶט`, the cognate).
+- New one-lemma renderings: *uzr* `אָזוּר` (crux), *ztr* `*ציון*`, *qṭr* `קיטור`, *aṯr* "remains" `שרידים`, *spʾ* `טורף`,
+  *mnt* "portion" `מנת`, *irš* `תבע`, *bʿl* (vb) `פעל`, *qry* D `הִקְרָה`, *mṯn rgmm* `מִשְׁנֵה מילים`, *nʿmn* `הנַּעֲמָן`,
+  *gd* "sinew" `גִּיד` [cognate] (Gen 32:33), *ʿmq* `*תקיף*`, *kdd* `*פעוט*`.
+- **Collisions settled by the coordinator:** (1) *adr* keeps its cognate `אַדִּיר` (the gate scene's `הָאַדִּירִים`);
+  *aliy(n)* keeps `אַדִּיר` in its §6.6 epithets (a fixed formula through the whole cycle) – an accepted split, noted at
+  1.17 V:7. (2) *dt* `*גידי*` in 1.3 III:35 and 1.4 II:20 against *gd* `גִּיד`: left for the next session on the Baal
+  Cycle (a minor split; the italic marks the uncertain word there). (3) *qṣʿt* `*חצים*` against Kirta's *ḥẓ* (the cognate of
+  `חֵץ`): *ḥẓ* takes `חֵץ` (the cognate keeps it, §5.2), and *qṣʿt* stays `*חצים*` in italics as a split noted at its lines.
