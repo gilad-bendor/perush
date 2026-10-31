@@ -258,6 +258,9 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 - **`Finkelstein-Naaman-Roemer-2019--Mesha-line-31/`** – *Tel Aviv* 46 (2019), open on HAL; rank 4 for Mesha 31 (PDF git-ignored, recipe).
 - **`_records-only--Words-in-stone/`** – Tell Fekheriye, Sefire, Deir ʿAllā (the editions on **Persée**, free to read, PDFs refused to scripts: a person can save them), Khirbet el-Qom, Ketef Hinnom I, the ʿAjrud wall poem, Langlois 2019.
 
+### 4.4y The Cuthaean Legend, the Poor Man of Nippur, the fables (eBL; Round 5 run 5, 2026-10-31)
+- **`eBL/Cuthaean-OB-I/`, `-OB-II/`, `-MB-A/`, `-MB-B/`, `-SB/`** (eBL `L/1/12`, ed. Mitto, rev. Földi, Hätinen, Heinrich, Jiménez; tr. Foster; 74 + 13 + 63 + 15 + 180 = 345 labels): the base of `אגדות-מלכים/4-אגדת-כותה/`. **`eBL/Poor-Man-of-Nippur/`** (`L/1/11`, ed. Jiménez et al.; tr. Foster; 161): the base of `ספרות-החכמה-והצדיק-הסובל/7-העני-מניפור/`. **`eBL/Fable-Palm-and-Vine/`, `-Poplar/`, `-Ox-and-Horse/`, `-Spider/`, `-Wren/`** (`L/2/12`, `8`, `9`, `11`, `13`; ed. and tr. Jiménez; 54 + 82 + 217 + 59 + 42): the base of `…/8-משלי-המחלוקת/`. All fetched with `tools/ebl_fetch.py` on 2026-10-31 (no empty **N:** lines), gitignored, restored by the built-in eBL rule (11 items added to `MANIFEST.json`). Not available (purchases; records only): Westenholz 1997 (*Legends of the Kings of Akkade*), Jiménez 2017 (*The Babylonian Disputation Poems*), Lambert 1960 (*BWL*), Gurney 1956 / Cooper 1975 (the Poor Man).
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).
