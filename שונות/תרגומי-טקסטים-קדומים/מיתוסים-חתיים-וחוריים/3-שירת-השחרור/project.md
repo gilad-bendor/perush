@@ -139,3 +139,4 @@ like a vessel – the cup of the smith's parable returns); Mic 1:6 (19.10.2: the
 ## Progress
 - 2026-10-30: translator 3: SR 13.1.1–17.4.3 drafted (all 422 rows; no review passes by a second reader yet).
 - 2026-10-30: base secured, renderings fixed, brief written (the coordinator).
+- 2026-10-31: review pass (a) fidelity – 23 lines changed (SR 13.6.3, 14.4.4, 14.5.6, 14.12.2–14.12.5, 14.14.3–14.14.5, 14.16.2, 14.16.4, 14.17.2, 15.2.1, 16.4.3, 19.1.1, 19.2.1, 19.3.4, 19.7.1, 19.8.2, 19.9.2, 19.15.3, 19.16.1). Brackets (restored vs preserved words, esp. *tarna* in 19.15.3/19.16.1); tense: present *a-uš-zi* rendered past in 14.12.5/14.14.5 (now "אינו מביט" as 14.9.4); *URU-ri* moved into the previous line and so doubled in 14.14.3–4 (each line now holds its own word); 14.5.6 "אך" without -ma → "ו"; 15.2.1 "אם" was our own restoration shown as the edition's → "(אם)"; 13.6.3 the determinative DUG as "[כלי]" → "(כלי)".

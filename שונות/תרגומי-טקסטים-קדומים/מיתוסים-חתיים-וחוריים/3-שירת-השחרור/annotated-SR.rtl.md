@@ -239,8 +239,8 @@
 
 ### 13.6.3
 `{D]UG}⸢ti⸣-šu-mi-ša-aš-ma-kán`
-> ואילו ה[כלי] *תִּישׁוּמִישָׁה* –
-- **פירוק:** `{D]UG}⸢ti⸣-šu-mi-ša-aš-ma-kán` – DUG tišumiša- (a vessel; perhaps = teššummi- "cup") + =ma ("ואילו ה[כלי] *תִּישׁוּמִישָׁה*").
+> ואילו ה(כלי) *תִּישׁוּמִישָׁה* –
+- **פירוק:** `{D]UG}⸢ti⸣-šu-mi-ša-aš-ma-kán` – DUG tišumiša- (a vessel; perhaps = teššummi- "cup") + =ma ("ואילו ה(כלי) *תִּישׁוּמִישָׁה*"; the determinative DUG is rendered for sense, in ( )).
 
 ### 13.6.4
 `]`
@@ -538,8 +538,8 @@
 
 ### 14.4.4
 `š[a-a-ku-wa] ⸢zi⸣-ik-ke-zi na-aš-ša-an ta-pu-ša-aš ú-e-ši-ia-aš`
-> את העיניים הוא שם. והוא אל המרעים אשר לצד –
-- **פירוק:** `š[a-a-ku-wa]` – šakuwa "eyes" ("את העיניים"); `⸢zi⸣-ik-ke-zi` – zikk- (iter. of dai- "put"), pres. 3sg ("הוא שם"); `na-aš-ša-an` ("והוא"); `ta-pu-ša-aš ú-e-ši-ia-aš` – "of the side, the pastures" ("אל המרעים אשר לצד").
+> את [העיניים] הוא שם. והוא אל המרעים אשר לצד –
+- **פירוק:** `š[a-a-ku-wa]` – šakuwa "eyes" ("את [העיניים]"); `⸢zi⸣-ik-ke-zi` – zikk- (iter. of dai- "put"), pres. 3sg ("הוא שם"); `na-aš-ša-an` ("והוא"); `ta-pu-ša-aš ú-e-ši-ia-aš` – "of the side, the pastures" ("אל המרעים אשר לצד").
 - **הקבלה:** [equivalent] `וְאָשִׂימָה עֵינִי עָלָיו` (בראשית מד:כא) – "שׂם עין" על דבר.
 
 ### 14.4.5
@@ -578,8 +578,8 @@
 
 ### 14.5.6
 `ḫa-at-ta-a-tar ši-iš-ḫe-er na-aš-kán a-pé-e-da-ni te-li-pu-u-ri-ia`
-> חכמה *הקצו*; אך אל החבל ההוא
-- **פירוק:** `ḫa-at-ta-a-tar` ("חכמה"); `ši-iš-ḫe-er` – šišḫ- / išḫiya- "assign, decree"(?), pret. 3pl ("*הקצו*"); `na-aš-kán` ("אך … הוא"); `a-pé-e-da-ni te-li-pu-u-ri-ia` ("אל החבל ההוא").
+> חכמה *הקצו*; ואל החבל ההוא
+- **פירוק:** `ḫa-at-ta-a-tar` ("חכמה"); `ši-iš-ḫe-er` – šišḫ- / išḫiya- "assign, decree"(?), pret. 3pl ("*הקצו*"); `na-aš-kán` ("ו"; no -ma: the contrast is the reader's); `a-pé-e-da-ni te-li-pu-u-ri-ia` ("אל החבל ההוא").
 - **הערות:** *šišḫ-* אינו ודאי (TLHdig "לבחור"): האלים קבעו לו את מידת חכמתו – והוא חרג ממנה.
 
 ### 14.5.7
@@ -795,24 +795,24 @@
 
 ### 14.12.2
 `ku-in BE-EL-ŠU i-e-zi nu-uš-ša-an a-pé-e-da-ni`
-> אשר אדוניו עושה אותו; ובעיר ההיא
-- **פירוק:** `ku-in BE-EL-ŠU i-e-zi` ("אשר אדוניו עושה אותו"); `nu-uš-ša-an a-pé-e-da-ni` ("ו … ההיא").
+> אשר אדוניו עושה אותו; ובאותה
+- **פירוק:** `ku-in BE-EL-ŠU i-e-zi` ("אשר אדוניו עושה אותו"); `nu-uš-ša-an a-pé-e-da-ni` ("ובאותה").
 
 ### 14.12.3
 `URU-ri EGIR-an IGI.DU₈{ḪI.A} da-a-an-na ma-ak-nu-ut`
-> הוא הרבה מאחור את לקיחת המסים;
-- **פירוק:** `URU-ri` ("בעיר"); `EGIR-an` – appan "afterwards, behind" ("מאחור"); `IGI.DU₈{ḪI.A}` – IGI.DU₈.A "tribute, audience gift" ("המסים"); `da-a-an-na` – dā-, inf. ("לקיחת"); `ma-ak-nu-ut` – maknu- "multiply", pret. 3sg ("הרבה").
+> עיר הוא הרבה מאחור את לקיחת המסים;
+- **פירוק:** `URU-ri` ("עיר"; kept in its own line); `EGIR-an` – appan "afterwards, behind" ("מאחור"); `IGI.DU₈{ḪI.A}` – IGI.DU₈.A "tribute, audience gift" ("המסים"); `da-a-an-na` – dā-, inf. ("לקיחת"); `ma-ak-nu-ut` – maknu- "multiply", pret. 3sg ("הרבה").
 - **הערות:** IGI.DU₈.A (באכדית *tāmartu*) – המתנה שמביאים בבואם לפני השליט, ובכלל מסים ומנחות־חובה; כאן `מסים`.
 
 ### 14.12.4
 `na-aš me-ek-ki šu-u-ul-li-it na-aš-ta nam-ma URU-an an-da Ú-UL`
-> והתגאה מאוד, ואל העיר עוד לא
-- **פירוק:** `na-aš me-ek-ki šu-u-ul-li-it` ("והתגאה מאוד"); `na-aš-ta nam-ma URU-an an-da Ú-UL` ("ואל העיר עוד לא").
+> והתגאה מאוד, ואל העיר עוד אינו
+- **פירוק:** `na-aš me-ek-ki šu-u-ul-li-it` ("והתגאה מאוד"); `na-aš-ta nam-ma URU-an an-da Ú-UL` ("ואל העיר עוד אינו").
 
 ### 14.12.5
 `a-uš-zi na-an-za PA-NI BE-LÍ-ŠU i-ši-ia-aḫ-⸢ḫu⸣-u-an-⸢zi⸣ tar-ḫu-er`
-> הביט. ואותו – לפני אדוניו – להלשין עליו יכלו,
-- **פירוק:** `a-uš-zi` ("הביט"; pres. "looks"); `na-an-za` ("ואותו"); `PA-NI BE-LÍ-ŠU` ("לפני אדוניו"); `i-ši-ia-aḫ-⸢ḫu⸣-u-an-⸢zi⸣` – išiyaḫḫ- "reveal, denounce", inf. ("להלשין עליו"); `tar-ḫu-er` – tarḫ- "be able, prevail", pret. 3pl ("יכלו"; KU 231).
+> מביט. ואותו – לפני אדוניו – להלשין עליו יכלו,
+- **פירוק:** `a-uš-zi` ("מביט"; pres., as 14.9.4); `na-an-za` ("ואותו"); `PA-NI BE-LÍ-ŠU` ("לפני אדוניו"); `i-ši-ia-aḫ-⸢ḫu⸣-u-an-⸢zi⸣` – išiyaḫḫ- "reveal, denounce", inf. ("להלשין עליו"); `tar-ḫu-er` – tarḫ- "be able, prevail", pret. 3pl ("יכלו"; KU 231).
 
 ### 14.12.6
 `nu IGI.DU₈{ḪI.A} ku-e pa-a-ši-iš-ke-et na-at PA-NI BE-LÍ-ŠU`
@@ -859,19 +859,19 @@
 
 ### 14.14.3
 `[Ú-UL g]i-i-lu-ú-ši-iš nu an-tu-wa-aḫ-ḫa-aš {LÚ}ut-ni-ia-aš-ḫa-an ku-in BE-EL-ŠU i-e-zi nu-uš-ša-an a-pé-e-da-ni`
-> [לא גִּי]לוּשִׁי הוא – אדם הוא: מושל־הארץ אשר אדוניו עושה אותו; ובעיר ההיא
-- **פירוק:** `[Ú-UL g]i-i-lu-ú-ši-iš` ("[לא גִּי]לוּשִׁי הוא"); `nu an-tu-wa-aḫ-ḫa-aš` ("אדם הוא"); `{LÚ}ut-ni-ia-aš-ḫa-an` – utniyašḫa- "governor of the land", acc. ("מושל־הארץ"); `ku-in BE-EL-ŠU i-e-zi` ("אשר אדוניו עושה אותו"); `nu-uš-ša-an a-pé-e-da-ni` ("ובעיר ההיא").
+> [לא גִּי]לוּשִׁי הוא – אדם הוא: מושל־הארץ אשר אדוניו עושה אותו; ובאותה
+- **פירוק:** `[Ú-UL g]i-i-lu-ú-ši-iš` ("[לא גִּי]לוּשִׁי הוא"); `nu an-tu-wa-aḫ-ḫa-aš` ("אדם הוא"); `{LÚ}ut-ni-ia-aš-ḫa-an` – utniyašḫa- "governor of the land", acc. ("מושל־הארץ"); `ku-in BE-EL-ŠU i-e-zi` ("אשר אדוניו עושה אותו"); `nu-uš-ša-an a-pé-e-da-ni` ("ובאותה").
 - **הערות:** במקום "אדון־מחוז" (14.12.1) – "מושל־הארץ" (*utniyašḫa-*, מן *utne-* "ארץ").
 
 ### 14.14.4
 `[URU-ri] EGIR-an IGI.DU₈{ḪI.A} da-a-an-na ma-ak-nu-ut na-aš me-ek-ki šu-u-ul-li-it na-aš-ta nam-ma URU-an an-da Ú-UL`
-> [בעיר] הוא הרבה מאחור את לקיחת המסים, והתגאה מאוד, ואל העיר עוד לא
-- **פירוק:** `[URU-ri] EGIR-an IGI.DU₈{ḪI.A} da-a-an-na ma-ak-nu-ut` (as 14.12.3); `na-aš me-ek-ki šu-u-ul-li-it` ("והתגאה מאוד"); `na-aš-ta nam-ma URU-an an-da Ú-UL` ("ואל העיר עוד לא").
+> [עיר] הוא הרבה מאחור את לקיחת המסים, והתגאה מאוד, ואל העיר עוד אינו
+- **פירוק:** `[URU-ri] EGIR-an IGI.DU₈{ḪI.A} da-a-an-na ma-ak-nu-ut` ("[עיר] …", as 14.12.3); `na-aš me-ek-ki šu-u-ul-li-it` ("והתגאה מאוד"); `na-aš-ta nam-ma URU-an an-da Ú-UL` ("ואל העיר עוד אינו").
 
 ### 14.14.5
 `[a-uš-z]i na-an-za PA-NI BE-⸢LÍ-ŠU⸣ i-ši-ia-aḫ-ḫu-u-an-zi tar-ḫu-er nu IGI.DU₈{ḪI.A} ku-e pa-a-ši-iš-ke-et na-at PA-NI BE-LÍ-ŠU li-il-ḫu-wa-an da-iš`
-> [הבי]ט. ואותו – לפני אדוניו – להלשין עליו יכלו, ואת המסים אשר היה בולע – אותם לפני אדוניו החל לשפוך.
-- **פירוק:** as 14.12.5–7.
+> [מבי]ט. ואותו – לפני אדוניו – להלשין עליו יכלו, ואת המסים אשר היה בולע – אותם לפני אדוניו החל לשפוך.
+- **פירוק:** as 14.12.5–7 (`[a-uš-z]i` pres. "[מבי]ט").
 
 ## KBo 32.14, §15 – פזמון החכמה
 
@@ -891,8 +891,8 @@
 
 ### 14.16.2
 `[ ]-ul-lu-ud-du-[u]š-ma ša-ra-a ne-pí-ši ma-an-ni-in-ku-wa-aḫ-ḫa-aš ú-e-te-et-ma-an ku-iš na-an mar-la-a-[an-za]`
-> ואילו את [ה…]יו – מעלה, אל השמים, קירב. ואת מי שבנה אותו – הוא, השוטה,
-- **פירוק:** `[ ]-ul-lu-ud-du-[u]š-ma` – a broken noun, acc. pl. + =ma ("ואילו את [ה…]יו"); `ša-ra-a ne-pí-ši` – "up to heaven" ("מעלה, אל השמים"); `ma-an-ni-in-ku-wa-aḫ-ḫa-aš` – manninkuwaḫḫ- "bring near", pret. 3sg ("קירב"); `ú-e-te-et-ma-an ku-iš` – "but who built it" ("ואת מי שבנה אותו"); `na-an mar-la-a-[an-za]` ("הוא, השוטה").
+> ואילו את [ה…]יו – מעלה, אל השמים, קירב. ואת מי שבנה אותו – הוא, [השוטה],
+- **פירוק:** `[ ]-ul-lu-ud-du-[u]š-ma` – a broken noun, acc. pl. + =ma ("ואילו את [ה…]יו"); `ša-ra-a ne-pí-ši` – "up to heaven" ("מעלה, אל השמים"); `ma-an-ni-in-ku-wa-aḫ-ḫa-aš` – manninkuwaḫḫ- "bring near", pret. 3sg ("קירב"); `ú-e-te-et-ma-an ku-iš` – "but who built it" ("ואת מי שבנה אותו"); `na-an mar-la-a-[an-za]` ("הוא, [השוטה]").
 - **הערות:** אין כאן "ראש": החלק העליון שבור (…*ulludduš*). לכן `ראשו בשמים` לא נכתב.
 
 ### 14.16.3
@@ -902,8 +902,8 @@
 
 ### 14.16.4
 `[ku-un-na-aš-m]a-⸢an⸣-ši-kán iš-ḫu-⸢na-a⸣-uš [a]r-ḫa ú-i-šu-u-ri-ia-at-ta-ri IŠ-ME {LÚ}NAGAR nu-uš-ši-kán ŠÀ-ŠU an-da ⸢i⸣-[da-a-l]a-u-eš-ta`
-> [ולו] זרועו [הימנית] תימעך!" שמע הנגר, ולבו בתוכו נעשה רַע.
-- **פירוק:** `[ku-un-na-aš-m]a-⸢an⸣-ši-kán iš-ḫu-⸢na-a⸣-uš [a]r-ḫa ú-i-šu-u-ri-ia-at-ta-ri` (as 14.7.7–8); `IŠ-ME` – Akk. *išme* "he heard" ("שמע"); `{LÚ}NAGAR` ("הנגר"); `nu-uš-ši-kán ŠÀ-ŠU an-da ⸢i⸣-[da-a-l]a-u-eš-ta` – idalawešš- "become bad", pret. 3sg ("ולבו בתוכו נעשה רַע"; KU).
+> [ו]לו זרועו [הימנית] תימעך!" שמע הנגר, ולבו בתוכו נעשה רַע.
+- **פירוק:** `[ku-un-na-aš-m]a-⸢an⸣-ši-kán iš-ḫu-⸢na-a⸣-uš [a]r-ḫa ú-i-šu-u-ri-ia-at-ta-ri` ("[ו]לו זרועו [הימנית] תימעך", as 14.7.7–8); `IŠ-ME` – Akk. *išme* "he heard" ("שמע"); `{LÚ}NAGAR` ("הנגר"); `nu-uš-ši-kán ŠÀ-ŠU an-da ⸢i⸣-[da-a-l]a-u-eš-ta` – idalawešš- "become bad", pret. 3sg ("ולבו בתוכו נעשה רַע"; KU).
 - **הערות:** "לבו נעשה רע" – במקום "לבו חלה" של המשלים הקודמים.
 
 ### 14.16.5
@@ -935,8 +935,8 @@
 
 ### 14.17.2
 `[na-aš e]-la-aš-na a-ar-aš na-aš-ta nam-ma at-ta-aš-ša-an an-da Ú-UL ⸢a-uš⸣-zi ŠA A-BI-ŠU-ma-an DINGIR{MEŠ}`
-> [והגיע] לבגרות, ובאביו עוד אינו מביט; ואילו אותו – אֵלֵי אביו
-- **פירוק:** `[na-aš e]-la-aš-na a-ar-aš` – elaššar "growth", d.-l.(?) ("[והגיע] לבגרות"); `na-aš-ta nam-ma at-ta-aš-ša-an an-da Ú-UL ⸢a-uš⸣-zi` (as 14.9.4); `ŠA A-BI-ŠU-ma-an DINGIR{MEŠ}` ("ואילו אותו – אֵלֵי אביו").
+> [ו]הגיע לבגרות, ובאביו עוד אינו מביט; ואילו אותו – אֵלֵי אביו
+- **פירוק:** `[na-aš e]-la-aš-na a-ar-aš` – elaššar "growth", d.-l.(?) ("[ו]הגיע לבגרות"; a-ar-aš preserved); `na-aš-ta nam-ma at-ta-aš-ša-an an-da Ú-UL ⸢a-uš⸣-zi` (as 14.9.4); `ŠA A-BI-ŠU-ma-an DINGIR{MEŠ}` ("ואילו אותו – אֵלֵי אביו").
 - **הערות:** *elaššar* "גדילה" – כאן `לבגרות`, במקום *meyani* `לפרקו` של 14.9.3.
 
 ### 14.17.3
@@ -1036,8 +1036,8 @@
 
 ### 15.2.1
 `[ {D}IŠ]KUR-aš ši-iš-ši-ia-ni-it dam-mi-iš-ḫa-a-an-za`
-> "[… אם אֵל הַסְּ]עָרָה עשוק בחוב,
-- **פירוק:** `[ {D}IŠ]KUR-aš` ("[אֵל הַסְּ]עָרָה"); `ši-iš-ši-ia-ni-it` – šiššiyan- "debt", instr. ("בחוב"); `dam-mi-iš-ḫa-a-an-za` – dammišḫai- "oppress, damage", part. ("עשוק").
+> "[…] (אם) [אֵל הַסְּ]עָרָה עשוק בחוב,
+- **פירוק:** `[ {D}IŠ]KUR-aš` ("[אֵל הַסְּ]עָרָה"; "(אם)" is ours, after 15.2.2 and 16.5.2, not a restoration of the edition); `ši-iš-ši-ia-ni-it` – šiššiyan- "debt", instr. ("בחוב"); `dam-mi-iš-ḫa-a-an-za` – dammišḫai- "oppress, damage", part. ("עשוק").
 - **הקבלה:** [equivalent] `לֹא תַעֲשֹׁק שָׂכִיר עָנִי וְאֶבְיוֹן` (דברים כד:יד) – העושק של העבד והשכיר; כאן האל עצמו "עשוק בחוב", כאחד מעבדי החוב.
 - **הערות:** *šiššiyan-* "חוב", *šiššiyala-* "נושה" (15.6.1): לשון החוב והנושה, שממנה צומח עבד החוב. האל מוצג כמי שנלחץ בחוב – ולכן הוא תובע שחרור.
 
@@ -1415,8 +1415,8 @@
 
 ### 16.4.3
 `SI-ŠU [ me-m]i-iš-ke-⸢et⸣`
-> קרנו […] היה או[מר].
-- **פירוק:** `SI-ŠU` – SI "horn" + -ŠU ("קרנו"); `[me-m]i-iš-ke-⸢et⸣` – memišk-, pret. 3sg ("היה או[מר]").
+> קרנו […] היה אומר.
+- **פירוק:** `SI-ŠU` – SI "horn" + -ŠU ("קרנו"); `[me-m]i-iš-ke-⸢et⸣` – memišk-, pret. 3sg ("היה אומר").
 - **הקבלה:** [equivalent] `וְיָרֵם קֶרֶן מְשִׁיחוֹ` (שמואל א ב:י) – הקרן כסמל הכוח והגאווה.
 
 ## KBo 32.16, §5–§8 – טענת בעלי העבדים, בנוסח השני (שבור)
@@ -1594,8 +1594,8 @@
 
 ### 19.1.1
 `⸢DUMU{MEŠ⸣} {URU⸢}i⸣-ki-in-kal ⸢ar⸣-[ḫa aš-šu-li tar-na]`
-> את בני אִיקִינְקַלִּישׁ [שַׁלַּח הלאה בטובה!]
-- **פירוק:** `⸢DUMU{MEŠ⸣}` – "sons" ("את בני"); `{URU⸢}i⸣-ki-in-kal` – Ikinkal(iš) ("אִיקִינְקַלִּישׁ"); `⸢ar⸣-[ḫa aš-šu-li tar-na]` – arḫa aššuli tarna- "release in favour", imp. 2sg ("[שַׁלַּח הלאה בטובה!]", F18).
+> את בני אִיקִינְקַלִּישׁ [שַׁלַּח] הל[אה בטובה]!
+- **פירוק:** `⸢DUMU{MEŠ⸣}` – "sons" ("את בני"); `{URU⸢}i⸣-ki-in-kal` – Ikinkal(iš) ("אִיקִינְקַלִּישׁ"); `⸢ar⸣-[ḫa aš-šu-li tar-na]` – arḫa aššuli tarna- "release in favour", imp. 2sg ("[שַׁלַּח] הל[אה בטובה]", F18; ar- preserved).
 - **הקבלה:** [equivalent] `וְכִי תְשַׁלְּחֶנּוּ חָפְשִׁי מֵעִמָּךְ לֹא תְשַׁלְּחֶנּוּ רֵיקָם` (דברים טו:יג) – השחרור "בטובה", לא בידיים ריקות; [equivalent] `וּקְרָאתֶם דְּרוֹר בָּאָרֶץ לְכָל יֹשְׁבֶיהָ` (ויקרא כה:י) – שחרור כללי של העבדים.
 - **הערות:** אל הסערה פונה אל מֶגִי, מלך אֶבְּלָה (19.2.5). "בני אִיקִינְקַלִּישׁ" – תושבי עיר שנכבשה בידי אֶבְּלָה, ששועבדו. *arḫa / parā tarna-* `שִׁלַּח` (שער), *parā tarnumar* `שִׁחְרוּר`. בשורה החורית המקבילה המלה *kirenzi*, שהיא האכדית *andurāru* – קרובת `דְּרוֹר` העברית: הקשר בין השיר לבין "קריאת הדרור" של ויקרא כה ושל ירמיהו לד עובר דרך החורית והאכדית; המלה החתית (*parā tarnumar*, "שילוח החוצה") היא תרגום ולא קרובה.
 
@@ -1619,8 +1619,8 @@
 
 ### 19.2.1
 `{URU}i-ki-in-[ka-li-iš-ša {GIŠ}ŠÚ.A-aš URU-r]i`
-> [ובאִיקִינְקַלִּישׁ, עיר הכס]א,
-- **פירוק:** `{URU}i-ki-in-[ka-li-iš-ša` – Ikinkališ + =a ("[ובאִיקִינְקַלִּישׁ"); `{GIŠ}ŠÚ.A-aš URU-r]i` – "in the city of the throne" ("עיר הכס]א").
+> [ו]באִיקִינְ[קַלִּישׁ, עיר הכס]א,
+- **פירוק:** `{URU}i-ki-in-[ka-li-iš-ša` – Ikinkališ + =a ("[ו]באִיקִינְ[קַלִּישׁ"); `{GIŠ}ŠÚ.A-aš URU-r]i` – "in the city of the throne" ("עיר הכס]א").
 - **הערות:** "עיר הכסא" – עיר המלוכה, הבירה.
 
 ### 19.2.2
@@ -1670,8 +1670,8 @@
 
 ### 19.3.4
 `nu-uš-ma-aš {GIŠ}TUKUL[{ḪI.A}-KU-NU ] ⸢i⸣-wa-ar`
-> את כלי[־הנשק שלכם] – כמו […] –
-- **פירוק:** `nu-uš-ma-aš` ("־כם"); `{GIŠ}TUKUL[{ḪI.A}-KU-NU` – GIŠ.TUKUL "weapon, tool", pl. + -KUNU "your" ("את כלי[־הנשק שלכם]"; UL); `⸢i⸣-wa-ar` ("כמו").
+> את כלי־הנשק [שלכם] – כמו […] –
+- **פירוק:** `nu-uš-ma-aš` ("־כם"); `{GIŠ}TUKUL[{ḪI.A}-KU-NU` – GIŠ.TUKUL "weapon, tool", pl. + -KUNU "your" ("את כלי־הנשק [שלכם]"; UL); `⸢i⸣-wa-ar` ("כמו").
 
 ### 19.3.5
 `šar-la-a-[mi]`
@@ -1744,8 +1744,8 @@
 
 ### 19.7.1
 `{URU}e-ep-la-aš URU-aš [kat-te-e-ra-aš w]a-aḫ-nu-eš-šar`
-> את [ההקף התחתון] של אֶבְּלָה, העיר,
-- **פירוק:** `{URU}e-ep-la-aš URU-aš` – gen. ("של אֶבְּלָה, העיר"); `[kat-te-e-ra-aš` – katterra- "lower" ("[התחתון"); `w]a-aḫ-nu-eš-šar` – waḫnueššar "turning, circuit (of walls)" ("[ההקף]").
+> את ההקף [התחתון] של אֶבְּלָה, העיר,
+- **פירוק:** `{URU}e-ep-la-aš URU-aš` – gen. ("של אֶבְּלָה, העיר"); `[kat-te-e-ra-aš` – katterra- "lower" ("[התחתון]"); `w]a-aḫ-nu-eš-šar` – waḫnueššar "turning, circuit (of walls)" ("ההקף").
 - **הערות:** *waḫnueššar* (מן *waḫnu-* "לסובב") – כנראה חומת העיר הסובבת, התחתונה והעליונה (העיר התחתונה והאקרופוליס).
 
 ### 19.7.2
@@ -1777,8 +1777,8 @@
 
 ### 19.8.2
 `{URU}e-ep-la-a[š {DUG}te-eš-šum]-mi-ia-aš`
-> את אֶבְּלָ[ה – כמו ספ]ל
-- **פירוק:** `{URU}e-ep-la-a[š` ("את אֶבְּלָ[ה"); `{DUG}te-eš-šum]-mi-ia-aš` ("[ספ]ל").
+> את אֶבְּלָ[ה –] כמו [ספ]ל
+- **פירוק:** `{URU}e-ep-la-a[š` ("את אֶבְּלָ[ה"); `{DUG}te-eš-šum]-mi-ia-aš` ("[ספ]ל"; "כמו" = *iwar* of 19.8.3, preserved).
 
 ### 19.8.3
 `i-wa-ar d[u-wa-ar-na-aḫ-ḫi]`
@@ -1793,8 +1793,8 @@
 
 ### 19.9.2
 `ša-ra-a-az-zi-i[a-ša wa-aḫ-nu-e-eš-na-aš] ḫa-a-aš-ša-an [ ]`
-> ואת [ה]*בסיס* [של ההקף] העליון […]
-- **פירוק:** `ša-ra-a-az-zi-i[a-ša` ("ואת … העליון"); `wa-aḫ-nu-e-eš-na-aš]` – gen. ("[של ההקף]"); `ḫa-a-aš-ša-an` – ḫašša- "hearth, base(?)", acc. ("*בסיס*").
+> ואת ה*בסיס* [של ההקף] העליון […]
+- **פירוק:** `ša-ra-a-az-zi-i[a-ša` ("ואת … העליון"); `wa-aḫ-nu-e-eš-na-aš]` – gen. ("[של ההקף]"); `ḫa-a-aš-ša-an` – ḫašša- "hearth, base(?)", acc. ("ה*בסיס*").
 - **הערות:** *ḫašša-* הוא בדרך כלל "אח, מוקד" (TLHdig גם "נכד"); כאן כנראה הבסיס התחתון של החומה. מסומן כלא ודאי.
 
 ### 19.9.3
@@ -1991,14 +1991,14 @@
 
 ### 19.15.3
 `[DUMU{MEŠ} {URU}i]-⸢ki-kal-wa⸣ ar-ḫ[a aš-šu]-li tar-na`
-> "[את בני אִיקִינְ]קַלִּישׁ [שַׁלַּח] הל[אה בטו]בה!
-- **פירוק:** `[DUMU{MEŠ} {URU}i]-⸢ki-kal-wa⸣` – + =wa (quotative) ("[את בני אִיקִינְ]קַלִּישׁ"); `ar-ḫ[a aš-šu]-li tar-na` ("[שַׁלַּח] הל[אה בטו]בה", F18).
+> "[את בני אִיקִינְ]קַלִּישׁ שַׁלַּח הל[אה בטו]בה!
+- **פירוק:** `[DUMU{MEŠ} {URU}i]-⸢ki-kal-wa⸣` – + =wa (quotative) ("[את בני אִיקִינְ]קַלִּישׁ"); `ar-ḫ[a aš-šu]-li tar-na` ("שַׁלַּח הל[אה בטו]בה", F18; tar-na preserved).
 - **הערות:** מגי מוסר לזקנים את דבר האל מלה במלה (עם *=wa*, מלית המובאה): 19.15.3–19.21.3 = 19.1.1–19.6.3. העברית שומרת על אותן מלים.
 
 ### 19.16.1
 `[ar-ḫa-ma-an-w]a tar-na {M}pur-ra-⸢an⸣-[pát]`
-> [ואילו שַׁלַּח אות]ו הלאה – את פּוּרָּה [עצמו],
-- **פירוק:** `[ar-ḫa-ma-an-w]a tar-na` ("[ואילו שַׁלַּח אות]ו הלאה"); `{M}pur-ra-⸢an⸣-[pát]` ("את פּוּרָּה [עצמו]").
+> [ואילו] שַׁלַּח [אות]ו [הלאה] – את פּוּרָּה [עצמו],
+- **פירוק:** `[ar-ḫa-ma-an-w]a tar-na` ("[ואילו] שַׁלַּח [אות]ו [הלאה]"; tar-na preserved); `{M}pur-ra-⸢an⸣-[pát]` ("את פּוּרָּה [עצמו]").
 
 ### 19.16.2
 `[EGIR-pa pí-ia-an-t]a-an A-NA 9 LUGAL{MEŠ}-wa ku-iš`
