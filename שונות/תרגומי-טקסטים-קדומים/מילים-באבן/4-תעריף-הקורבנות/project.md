@@ -8,6 +8,6 @@
   transliteration (after KAI, © – consulted for line division only, not used as a base).
 - **Product:** Hebrew translation with the transcription (guidelines §6.7: Punic is translated). Renderings and gates:
   `../renderings.md` §4.
-- **Open:** the meaning of `צועת`, `קצרת`, `יצלת`, `שלבמ`, `שצפ`, `חזת`, `אגננ`, `צצ`, `בדצ`, `למבמחסר באטומטא` (all
-  transliterated); line 1's first word (`ב[עת`, "tariff"?); `אלמ` "the gods" or "the god".
+- **Open:** the meaning of `צועת`, `קצרת`, `יצלת`, `שלבמ`, `שצפ`, `חזת`, `אגננ`, `צצ` (transliterated); `בדצ` (`*שׁוֹנָה* מֵ־`, Cooke's "other (?) than") and
+  `למבמחסר באטומטא` (`*עוֹד חֲסֵרוֹת* … *בָּאַטּוּמְטָא*`) rendered tentatively; line 1's first word (`ב[עת`, "tariff"?); `אלמ` "the gods" or "the god".
 - **Next:** the Carthage tariff (CIS I 167, Cooke no. 43, PD) – same tool, same renderings.

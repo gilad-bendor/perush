@@ -8,6 +8,8 @@
   raw page works).
 - **In this folder:** `gezer-calendar.tsv`, `mesad-hashavyahu.tsv`, `ketef-hinnom-2.tsv` – square script, our
   conventions (no final forms; `[ ]` for Wikipedia's `{}` restorations).
+- **Our changes:** KH2 line 1 `[...]` added before the uncertain ה (the line's start is lost); GZ line 5 divided
+  `קצר וכל` (Wikipedia: `qṣrw kl`).
 - **Status as a base:** an open text of a modern find whose critical edition is ©; used under the coordinator's
   decision of 2026-10-31 (a question for the user in `reports/round-5/run-4.md`). Bases of `מילים-באבן/2-…` (KH) and
   `3-…` (MH, GZ).
