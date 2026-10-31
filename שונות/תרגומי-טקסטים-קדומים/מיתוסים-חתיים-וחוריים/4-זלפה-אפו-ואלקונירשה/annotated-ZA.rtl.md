@@ -48,8 +48,8 @@
 
 ### 2.1
 `ma-a-an MU{ḪIA} iš-tar-na pa-a-er nu M[UNUS.LUGA]L nam-⸢ma⸣ 30 MUNUS.DUMU ⸢ḫa⸣-a-aš-ta`
-> כאשר שנים בינתיים עברו, ו[המלכ]ה עוד שלושים בנות ילדה.
-- **פירוק:** `ma-a-an` – mān "when" ("כאשר"); `MU{ḪIA}` – "years" ("שנים"); `iš-tar-na` – ištarna "in between" ("בינתיים"); `pa-a-er` – pai- "go", pret. 3pl ("עברו"); `nu M[UNUS.LUGA]L` ("ו[המלכ]ה"); `nam-ma` – namma "again, further" ("עוד"; as IN, IL); `30 MUNUS.DUMU` – "30 daughters" ("שלושים בנות"); `ḫa-a-aš-ta` ("ילדה").
+> כאשר שנים בינתיים עברו, [המלכ]ה עוד שלושים בנות ילדה.
+- **פירוק:** `ma-a-an` – mān "when" ("כאשר"); `MU{ḪIA}` – "years" ("שנים"); `iš-tar-na` – ištarna "in between" ("בינתיים"); `pa-a-er` – pai- "go", pret. 3pl ("עברו"); `nu M[UNUS.LUGA]L` ("[המלכ]ה"; the *nu* of the main clause after *mān* is not rendered: `כאשר …, ו…` read badly); `nam-ma` – namma "again, further" ("עוד"; as IN, IL); `30 MUNUS.DUMU` – "30 daughters" ("שלושים בנות"); `ḫa-a-aš-ta` ("ילדה").
 
 ### 2.2
 `šu-uš a-pa-ši-la ša-al-la-nu-uš-ket₉ ⸢DUMU⸣.NITA{MEŠ} ⸢a⸣-[ap-p]a {URU}ne-e-ša ia-an-zi`
@@ -59,8 +59,8 @@
 
 ### 2.3
 `nu ANŠE-in na-an-ni-an-zi ma-a-an {URU}⸢ta⸣-ma-⸢ar⸣-[ma-ra] ⸢a⸣-ri-er nu tar-ši-kán-zi`
-> וחמור מובילים. כאשר אל תַּמַרְמַ[רָה] הגיעו, ואומרים:
-- **פירוק:** `nu` ("ו"); `ANŠE-in` – "donkey", acc. ("חמור"); `na-an-ni-an-zi` – nanniya- "drive, lead (an animal)", pres. 3pl ("מובילים"); `ma-a-an` ("כאשר"); `{URU}ta-ma-ar-[ma-ra]` – Tamarmara ("אל תַּמַרְמַ[רָה]"); `a-ri-er` – ar- "arrive", pret. 3pl ("הגיעו"); `nu` ("ו"); `tar-ši-kán-zi` – tar- "say", iter. pres. 3pl ("אומרים").
+> וחמור מובילים. כאשר אל תַּמַרְמַ[רָה] הגיעו, אומרים:
+- **פירוק:** `nu` ("ו"); `ANŠE-in` – "donkey", acc. ("חמור"); `na-an-ni-an-zi` – nanniya- "drive, lead (an animal)", pres. 3pl ("מובילים"); `ma-a-an` ("כאשר"); `{URU}ta-ma-ar-[ma-ra]` – Tamarmara ("אל תַּמַרְמַ[רָה]"); `a-ri-er` – ar- "arrive", pret. 3pl ("הגיעו"); `nu` (not rendered after *mān*); `tar-ši-kán-zi` – tar- "say", iter. pres. 3pl ("אומרים").
 - **הערות:** *nanniya-* `הוביל` – מלה אחרת מן *unna-* `נָהַג` ומן *penna-* `הִסִּיעַ` של הטקסים (R1a). תַּמַרְמַרָה – עיר בדרך מזַלְפָּה אל נֵשָׁה, מקומה אינו ידוע. השם אינו בטבלת H2: הסוגר חוצה אותו (בעיה ידועה של בדיקת הניקוד).
 
 ### 2.4
@@ -108,8 +108,8 @@
 
 ### 2.11
 `⸢nu-uš⸣-ma-aš DINGIR{DIDLI}-eš ⸢ta⸣-ma-i-in ka-ra-a-⸢ta⸣-an ⸢da-i-er⸣ nu ⸢AMA⸣-ŠU-NU`
-> והאֵלִים שׂמו להם *מראה* אחר, ואמם
-- **פירוק:** `nu-uš-ma-aš` – nu + =šmaš "to them" ("ו… להם"); `DINGIR{DIDLI}-eš` – "gods", nom. pl. ("האֵלִים"); `ta-ma-i-in` – tamai- "other", acc. ("אחר"); `ka-ra-a-ta-an` – karatt- "inner nature, trait; appearance?", acc. ("*מראה*"); `da-i-er` – dai- "put", pret. 3pl ("שׂמו"); `nu AMA-ŠU-NU` – AMA "mother" + Akk. *-šunu* "their" ("ואמם").
+> הָאֵלִים שׂמו להם *מראה* אחר, ואמם
+- **פירוק:** `nu-uš-ma-aš` – nu + =šmaš "to them" ("להם"; the *nu* after the *mān* of 2.10 not rendered); `DINGIR{DIDLI}-eš` – "gods", nom. pl. ("האֵלִים"); `ta-ma-i-in` – tamai- "other", acc. ("אחר"); `ka-ra-a-ta-an` – karatt- "inner nature, trait; appearance?", acc. ("*מראה*"); `da-i-er` – dai- "put", pret. 3pl ("שׂמו"); `nu AMA-ŠU-NU` – AMA "mother" + Akk. *-šunu* "their" ("ואמם").
 - **תרגומים:** *karatt-* – TLHdig "Wesenszug" (תכונה), ויש המפרשים "קרביים", "טבע". בהקשר – מה שמונע מן האם להכיר את בניה: לכן `*מראה*`, מסומן כלא ודאי.
 - **הקבלה:** [divergence] `וַיַּכֵּר יוֹסֵף אֶת אֶחָיו` (בראשית מב:ח) – ההכרה החסרה היא מנוע הסיפור כאן ושם; כאן האם היא שאינה מכירה, ובשל האלים.
 - **הערות:** האלים, שגידלו את הבנים, הם שמשנים את מראם – והם אחראים גם למה שיבוא.
