@@ -170,6 +170,8 @@ def license_text(key, lab):
     if not r:
         return ""
     words = plain_src(r["text"]).replace("ˤ", "ʿ")
+    # a deletion inside a word (1.161:20 k{i}sih = ksih) must not split the word for the licence
+    words += " " + plain_src(re.sub(r"(?<=\w)\{[^}]*\}(?=\w)", "", re.sub(r"[\[\]⸢⸣⟨⟩]", "", r["text"] or ""))).replace("ˤ", "ʿ")
     # a word split across two lines (1.4 VII:25–26 ḥ | ln): license it in both lines by joining the edge tokens
     rs = rows(key)
     i = rs.index(r)

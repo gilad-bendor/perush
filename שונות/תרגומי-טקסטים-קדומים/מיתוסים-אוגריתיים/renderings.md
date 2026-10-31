@@ -681,3 +681,16 @@ cognate `דָּוֶה` (§12.6 revised). The illness words, one each: *mrṣ* `�
 followed in ~35 more places (1.15 V:1–4: EUPT's traces, not KTU³'s restored copy). **Collisions accepted as noted splits:**
 *nrt* (II) "ploughland" / *nyr* "luminary" both `נִיר` (two Hebrew homographs, both cognates); *smkt* `מרומים` / *mrym*;
 *mgṯ* `*טבח*` / *ṭbḫ*; *dmm* "wail" `ילל` / *dm* "be still" `דום` (two lemmas).
+
+### 12.8 Merged after translator 3 (KTU 1.20–1.22, 1.161), Round 5 run 3, 2026-10-31
+
+All Proposals accepted (`6-הרפאים/project.md`). §12.1 revised: *ilnym* = `אֵלִיִּים` (the corpus's form since 1.1 III:19,
+not the draft `אֵלֹנִים`). The invitation formula fixed in 1.21 and copied into 1.22 II; the journey copies 1.14 IV:32–33.
+*ẓlm* (1.161) = `צְלָלִים` [cognate `צֵל`] – not `צֶלֶם` (*ṣlm*). 1.161 reads *qbṣ ddn* = `קיבוץ דִּדָּן` (the tablet's form;
+the same ancestor as Kirta's `דִּתָּן`: a noted variant). *qrʾ* (1.161) passive `נקראתם`; *qbʾ* `הוּזְמַנְתֶּם`; *špl* `שְׁפַל`
+(qal; `הִשְׁפִּיל` stays *ġly*'s); *ṯʿy* `הקרב`; *qdm* D `קִדֵּם` (Mic 6:6); *mṭʿt* `מַטָּע`; *grnt* `גרנות`; *mrṯ* `עסיס`
+(`תירוש` stays *trṯ*'s); *srn* `סְרָנִים` [cognate]; *prʿ* `*ראשית*`; *ʿnq* `ענק`; *kš* `תמר`; *ʿdmt* `שממה`; *ʿllmy/n*
+transcribed (`עוֹלָם` reserved for *ʿlm*); names `תַּמְק`, `יַחְפַּן החַיְלִי`, `אוּלְכָּן`, `תִּרְמָן` (≠ the colophon's
+`תַּרְמָן`), `סִדָּן־וְרַדָּן`, `עַמִּתְתַמְרוּ`, `עַמּוּרָפִי`, `תַּרְיֶלִּי`. The famous "wine of El's choice" is not on the
+tablet (1.22 I:20 *yḥrṯ il*). Tool: the licence text also holds each word with in-word deletions joined (1.161:20
+*k{i}si*). Accepted splits: *aṯr* / *aḫr* `אחר`; *ʔtw* / *bwʾ* `בא`.
