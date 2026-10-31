@@ -19455,6 +19455,32 @@
      "948d4b9375cd0389e186dde222872a0de7344bc6905225ee1717ffc78a8e4db6"
     ]
    }
+  },
+  {
+   "id": "Merlo-1994--Kuntillet-Ajrud/Merlo-1994.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://hal.science/hal-04399146v1/file/05merlo2.pdf",
+   "note": "Merlo 1994, HAL (open access)",
+   "files": {
+    "Merlo-1994--Kuntillet-Ajrud/Merlo-1994.pdf": [
+     2252226,
+     "25aa57386b067e081d449a9205b549630f3c505ed480ad5ebb3f683c7b5baec8"
+    ]
+   }
+  },
+  {
+   "id": "Finkelstein-Naaman-Roemer-2019--Mesha-line-31/FNR-2019.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://hal.science/hal-03819192/document",
+   "note": "Finkelstein, Naaman, Roemer 2019, HAL",
+   "files": {
+    "Finkelstein-Naaman-Roemer-2019--Mesha-line-31/FNR-2019.pdf": [
+     2415701,
+     "cad2c8578ae9ff5d76c664d8b4b57a83ed233aab483687bd86fb69d248e2e4df"
+    ]
+   }
   }
  ]
 }

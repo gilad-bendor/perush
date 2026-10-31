@@ -51,3 +51,10 @@ isac.uchicago.edu
 # local use only), Jamison's Rigveda commentary (UCLA). VedaWeb (GitHub raw), GRETIL, CAB and archive.org are above.
 titus.fkidg1.uni-frankfurt.de
 rigvedacommentary.alc.ucla.edu
+# Added 2026-10-31 (Round 5 run 4, the inscriptions corpus `מילים-באבן/`): Wikisource (Compston's Mesha) and Wikipedia
+# (CC BY-SA transcriptions), HAL (open articles: Merlo 1994, Finkelstein et al. 2019), Persée (free to read; PDFs refuse
+# scripts – a person saves them).
+en.wikisource.org
+en.wikipedia.org
+hal.science
+www.persee.fr
