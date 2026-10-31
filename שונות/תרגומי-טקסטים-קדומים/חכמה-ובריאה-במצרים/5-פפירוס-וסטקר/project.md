@@ -122,4 +122,53 @@ The AED-TEI base through `egypt_tools.py data`; the TLA's German (`tr WE`) after
 - Copying a dossier excerpt by script (label → `>` + bullets) keeps it byte-identical and leaves time for the
   in-between lines; the dossier's notes that say "not translated here" need a one-word adaptation.
 
+## WE 4,18–7,26 (part 2; Round 5 run 6, translator 1)
+
+### Scope
+Labels `4,18`–`7,26` (89 entries): Baufre's wonder (Snefru's boredom, the rowing girls, the lost fish-pendant,
+Djadjaemankh folds half the lake on the other half, the third decree 6,17–6,22), Hordjedef's critique of past wonders
+and the introduction of Djedi (6,23–7,8), Hordjedef's journey to Djedi (7,9–7,16), the exchange of greetings (7,17–7,26). Placeholder now
+`<!-- טרם תורגם: 8,1–12,25 -->`. Review passes not yet done (next session).
+
+### Decisions
+- **The third decree** (6,17–6,22) copies §11.8.1; the Egyptian's own changes kept: `להוד מלכות` before the king (6,19),
+  no `בשר – נתח גדול` and no number after `כדור` (6,20), the magician's two titles (6,20-21–6,21).
+- **The parted lake (6,8–6,12):** rḏj rmn n mw ḥr wꜥ=sn `שם חצי מי האגם על האחד מהם`; wdb `נהפך`; the 12 → 24 cubits
+  kept as numbers; ḏd.t.n=f m ḥkꜣ.w `את אשר אמר בקסמים`. No word of Ex 14 in the lines; the הקבלה quotes Ex 14:21–22
+  [divergence] (motif, not dependence). ḏr.jn=f "finally it was" `ובאחרונה` (`ולבסוף` trips the סוף gate).
+- **Words:** s.t-qb.t `מקום־רענון`, qbb `התרענן`; dbn `סבב`; ꜥ.t `חדר`; pr-nswt `בית־המלכות` (`בית־המלך` is stp-sꜣ);
+  pr-ꜥꜣ `פַּרְעֹה` by §4.2 (5,2 "the lake of the Great House": the palace sense in a note); ḥwj-ꜣ `הלוואי`; bꜣw `סירה`;
+  ꜥḥꜥ.w (ship) `אניות`; nfr.t (maiden) `נערה`; ẖnj / ẖn.t `חתר` / `חתירה`; m-ḫd m-ḫnt `במורד ובמעלה`; zš `סבך`;
+  ḫfꜣꜣ.t `גדה`; wsr `מָשׁוֹט` (collision: AM's `משוט` is ḥmw – flagged); nḫꜣw `תליון־הדג`, mfkꜣ.t `טורקיז`; gr `שתק`;
+  štjw `משוט־הקצב`, štj.t `ראש־החותרות`, rmn "row" `שורה` / rmn "half" `חצי` (two TLA lemmas); sn.tj `כמוהו`, ḏbꜣ(w)
+  `תמורה`/`המיר`; ḥnw.t `בעלת`; fqꜣ (verb) `גמל`; zẖꜣw-mḏꜣ.t `סופר־המגילה`; mꜣꜥ.t / grg `אמת` / `כזב`; Ḏd-Snfrw
+  `גֶ׳דֶד־סְנֶפְרוּ`; mꜣj `אריה`; jp.t `החדרים הנעולים`; ꜣḫ.t (the pyramid) `אופק`; Thoth `תְּחוּת`; qnjw `כיסא־משא`;
+  ḥrtj `בדרך הארץ` (`יבשה` gated); šꜣs `שָׁט` throughout (also over land, Job 1:7's `מִשּׁוּט`).
+- **nfr** by sense: `טוב` (5,14 "the heart was good"; bw-nb-nfr, hrw nfr) / `יפה` (5,5–5,6, 5,10: landscape and bodies).
+
+### Open decisions for the user
+- wsr "oar" `מָשׁוֹט` collides with AM's `משוט` (ḥmw): keep (never in one line) or `משוט־חתירה`? ꜥḥꜥ.w `אניות` vs
+  the reserved ship words (§10.10.3). 7,10 ḫnt(j)-ẖty.t: month name (TLA) or "upstream"?
+
+### Progress log
+- 2026-10-31 (part 2): drafted 4,18–7,26 in six sections, `fill` + `verify WE` after each; gate hit 6,11 `ולבסוף`
+  (fixed); TLA compared (5,15 `הסתבכה` → `העבירה (יד)`; the rest agrees). build: 164 lines, 0 problems;
+  `check_bible_quotes.py` 0 problems.
+
+### The text on its own terms (part 2)
+- The bored king and the cure of beauty (4,22–5,14): the magician prescribes a boat of girls in nets.
+- The girl who wants her own pendant, not the king's copy (5,22–5,24; 6,7): property and will, even before the king.
+- Magic as speech and as measure: "he said what he said in magic" (6,8, 6,12), and 12 + 12 = 24 cubits (6,11).
+- Hordjedef's critique: past wonders cannot be tested for truth (mꜣꜥ.t) or lie (6,23–6,25); a living one can.
+- Djedi, a commoner of 110 years who eats like the dead kings' offering (7,1–7,3); Khufu seeks Thoth's secret chambers
+  for his "horizon" (7,5–7,8).
+- Death as mooring, burial and "joining the earth", the dead "lying until daylight"; the greeting blesses the ka and
+  the ba for the netherworld (7,18, 7,25–7,26).
+
+### Key parallels (part 2)
+- [divergence] Ex 14:21–22 – the lake's waters "put" one half upon the other (6,9).
+- [equivalent] Gen 50:26 `בֶּן מֵאָה וָעֶשֶׂר שָׁנִים` – Djedi's 110 years (7,2).
+- [equivalent] Gen 15:15 `תָּבוֹא אֶל אֲבֹתֶיךָ` – "lead you to your fathers" in a good old age (7,22).
+- [equivalent] Esth 1:10 `כְּטוֹב לֵב הַמֶּלֶךְ` – the king's heart made good (5,14).
+
 ## Parallels index

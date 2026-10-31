@@ -636,3 +636,12 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
 4. **Gate fixed (the coordinator):** `לשבת` "to sit" is allowed where the line has ḥmsj.
 5. The 27 dossier lines (2,21–4,7) copied byte for byte by script; no pending dossier revision.
 
+### 11.9 Round 5 run 6 – WE part 2 (4,18–7,26), merged 2026-10-31 (translator 2; review passes pending)
+1. The third decree (6,17–6,22) copies §11.8.1 with the Egyptian's three differences (recorded at the lines).
+2. The lake (6,8–6,12): `שם חצי מי האגם על האחד מהם`, `נהפך`; no Ex 14 word in the lines (Ex 14:21–22 [divergence] in the apparatus).
+3. Words: `מקום־רענון` / `התרענן`, pr-nswt `בית־המלכות`, `סירה`, ꜥḥꜥ.w `אניות`, `נערה`, `חתר` / `חתירה`, `תליון־הדג`, mfkꜣ.t `טורקיז`,
+   `סופר־המגילה`, Ḏd-Snfrw `גֶ׳דֶד־סְנֶפְרוּ`, ꜣḫ.t (the pyramid) `אופק`, `כיסא־משא`; nfr by sense `טוב` / `יפה` (a split, recorded:
+   the טוב gate licenses both); šꜣs `שָׁט` throughout.
+4. **Kept (the coordinator):** wsr "oar" (WE) and AM's ḥmw "steering oar" both `משוט` – never in one line; to be reviewed at the lead's harmonization.
+5. Gate trap: `ולבסוף` "finally" trips the סוף gate – write `ובאחרונה` (no gate change: `סוף` must stay licensed by ṯwfj).
+
