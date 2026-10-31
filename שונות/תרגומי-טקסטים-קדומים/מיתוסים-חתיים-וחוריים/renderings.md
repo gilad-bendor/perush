@@ -182,6 +182,23 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | `\{uru\}iki(?:n)?kal` | `אִיקִינְקַלִּישׁ` | | Ikinkališ (SR 19.1.1, 19.2.1, 19.15.3, 19.17.1) |
 | `\{m\}pazz` | `פַּזַּנִיקַרִּי` | | Pazzanikarri, Zazalla's father (SR 15.13.3) |
 | `\{uru\}lul+uw` | `לוּלּוּוָה` | | Lulluwa (SR 10.1.1, 10.3.3) |
+| `zalpuw` | `זַלְפָּה` | ★ | Zalpuwa, the Old Hittite form of Zalpa (ZA 1.4; translator 4: the law row `zalpa` misses it) |
+| `\{uru\}kan[ie]š` | `קָנֵשׁ` | | Kaneš = Neša (ZA 1.1, 2.7; translator 4) |
+| `\{uru\}neš` | `נֵשָׁה` | | Neša (ZA 2.2, 2.10; translator 4) |
+| `\{m\}ḫapp` | `חַפִּי` | | Ḫappi, the rebel prince (ZA 2.18–5.2; translator 4) |
+| `\{uru\}alḫi` | `אַלְחִיוּתָה` | | Alḫiuta (ZA 2.18) |
+| `ḫaraḫš` | `חַרַחְשׁוּ` | | Ḫaraḫšu (ZA 4.1) |
+| `tamnašš` | `תַּמְנַשּׁוּ` | | Tamnaššu (ZA 4.3) |
+| `\{m\}tabarn\|\{m\}taparn` | `תַּבַּרְנָה` | | Tabarna, as a person's name (ZA 5.2; the title *labarna* is the law table's `לַבַּרְנָה`) |
+| `zimbir` | `סִפַּר` | | Sippar, the Sun-god's city (AP 1:131, 1:154; translator 4) |
+| `\{uru\}kuzin` | `קוּזִינָה` | | Kuzina = Ḫarran, the Moon-god's city (AP 1:132) |
+| `\{d\}nanay` | `נַנַיָּה` | | Nanaya (AP 1:135) |
+| `kiššin` | `קִישִּׁינָה` | | Kiššina, Nanaya's city (AP 1:135) |
+| `\{d\}amar\.utu` | `מַרְדּוּךְ` | | Marduk (AP 1:136; the Akkadian corpora's form) |
+| `ká\.dingir\.ra` | `בָּבֶל` | | Babylon (AP 1:136; guidelines §6.4) |
+| `\{uru\}amurr` | `אֱמֹרִי` | | Amurru (EL 1.2:58; the biblical form, guidelines §6.4) |
+| `za\.ba4\.ba4` | `זַבַּבָּה` | | Zababa (EL 2.2:16, 2.3:16; M1) |
+| `\{d\}nin\.é\.gal` | `נִינֶגַל` | | Ninegal (EL 2.3:10) |
 
 ## H3. Reserved: never in a myth line (machine-read; the myth texts only)
 | Hebrew (regex on the unvocalized, bracket-free line) | Licence | Why |
@@ -219,8 +236,8 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 ## H5. Formulas (machine-read; the myth texts only)
 | F | Composite (regex, flat) | Hebrew (regex on the unvocalized line without punctuation) | Note |
 |---|---|---|---|
-| F30 | `(?<!egir-pa )(?<!egir-an )memišk\S*w?an d[aā]i` | `הח(?:ל\|לה\|לו) לומר` | *memiškiwan dāiš* "began to speak" = `הֵחֵל לוֹמַר` |
-| F31 | `egir-pa memišk\S*w?an d[aā]i` | `הח(?:ל\|לה\|לו) להשיב` | *EGIR-pa memiškiwan dāiš* "began to answer" = `הֵחֵל לְהָשִׁיב` |
+| F30 | `(?<!egir-pa )(?<!egir-an )(?<!āppa )(?<!appa )memišk\S*w?an d[aā]i` | `הח(?:ל\|לה\|לו) לומר` | *memiškiwan dāiš* "began to speak" = `הֵחֵל לוֹמַר` (*āppa* added to the lookbehinds by translator 4, AP 1:54) |
+| F31 | `(?:egir-pa\|āppa\|appa) memišk\S*w?an d[aā]i` | `הח(?:ל\|לה\|לו) להשיב` | *EGIR-pa* / *āppa memiškiwan dāiš* "began to answer" = `הֵחֵל לְהָשִׁיב` (*āppa*, the phonetic spelling of EGIR-pa, AP 1:54: translator 4) |
 | F32 | `zi-šu memišk\|zi-ni memišk\|ištanzan` | `נפש` | *ANA ZI-ŠU* "to his own mind" = `אֶל נַפְשׁוֹ` |
 | F33 | `(?:uddār\|inim\S*)\S* (?:ištamašt\|išt[aā]maš\|išme)` | `שמע\S* (?:את )?(?:ה)?דברי` | "heard the words" = `(כַּאֲשֶׁר) X שָׁמַע אֶת הַדְּבָרִים` (subject first; HE 1:76, 1:89) |
 | F34 | `gidru-an d[aā]` | `מקל` | "took a staff (in the hand)" = `לָקַח מַקֵּל (בְּיָדוֹ)` |
