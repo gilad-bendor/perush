@@ -100,3 +100,12 @@ More tools (2026-10-24, the netherworld corpus, Round 4 run 5): `netherworld_too
   - **`מיתוסים-חתיים-וחוריים/3-שירת-השחרור/composite-SR--made-by.py`** – the one-off generator of the Song of Release composite (the `lg="Hit"` lines of seven KBo 32 tablets); **`מיתוסים-חתיים-וחוריים/build_parallels_index.py`** – the corpus's parallels index (adapted from the ritual corpus's builder, one project folder per key).
   - **`חוקים-ובריתות/8-החוקים-החתיים/composite-HL2--made-by.py`, `9-הוראות-לאנשי-בית-האל/composite-IN--made-by.py`** – the one-off generators of the two composites (the decided map and the lead measure, `--measure`), kept for the record; the TSVs are the source.
   - **`חוקים-ובריתות/build_parallels_index.py`** now reads projects 8 (HL) and 9 (IN); **`טקסי-שילוח-וטיהור/build_parallels_index.py`** (new) writes each ritual's parallels table into `project.md` from the הקבלה bullets and merges them by Bible book and verse into the corpus `parallels-index.md`.
+
+### `מילים-באבן/stone_tools.py` (Round 5 run 4, 2026-10-31) – the inscriptions corpus
+`fill | verify [--strict] | build | translit KEY | selftest` (keys MS AJ KH MH GZ MT CT; config `TEXTS`). Two modes: **reading**
+(Hebrew, Moabite – `verify` checks that the vocalized reading has exactly the base's letters, in order, with the same letters
+inside `[ ]`; niqqud, maqaf, final forms, spaces and punctuation ignored) and **translation** (Punic – reserved words with
+their licensing Punic word, traps that must be vocalized, every numeral of the base in the translation). Bases are TSV
+files (`label<TAB>square script`, no final forms) under `sources/`; the Latin transliteration is generated. `build` writes
+the clean files (each line: the reading / translation, then the square-script line), the combined project files and
+`parallels-index.md`. A model for any future epigraphic corpus (Aramaic, Phoenician, Ammonite).

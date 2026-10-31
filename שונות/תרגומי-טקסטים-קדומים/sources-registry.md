@@ -250,6 +250,14 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
   Ganguli vols. 2–3, Bartholomae 1904 (OCR text).
 - Hebrew translations (Peter 2006, Fridman 2014; ©, Carmel) were not consulted.
 
+### 4.4x Northwest Semitic inscriptions (`מילים-באבן/`; Round 5 run 4, 2026-10-31)
+- **`Compston-1919--Mesha-Stele/`** – Compston 1919 (PD; English Wikisource, proofread): the Mesha stele in square script, `mesha.tsv`, committed. **BASE** of project 1.
+- **`Cooke-1903--North-Semitic-Inscriptions/`** – Cooke 1903 (PD; archive.org `textbookofnorths00cookuoft`; page images `…/page/n<leaf-1>_w1100.jpg`, leaf map `…_page_numbers.json`; the OCR is good for the English only): the Marseille tariff (no. 42) and the Carthage tariff (no. 43), read from the page images, committed. **BASE** of project 4. Also holds Mesha (1), Siloam (2), the Phoenician royal and Old Aramaic texts (PD) for later runs.
+- **`Wikipedia--Hebrew-inscriptions/`** – the transcriptions in the English Wikipedia articles on the Gezer calendar, the Mesad Hashavyahu ostracon and Ketef Hinnom II (CC BY-SA 4.0), committed with attribution. **BASE** of projects 2 (KH) and 3 – a decision of the run (question for the user).
+- **`Merlo-1994--Kuntillet-Ajrud/`** – Merlo, *SEL* 11 (1994), open on HAL: ʿAjrud 8.017 and 8.021 (`ajrud.tsv`, committed; the PDF git-ignored with a recipe). **BASE** of project 2 (AJ).
+- **`Finkelstein-Naaman-Roemer-2019--Mesha-line-31/`** – *Tel Aviv* 46 (2019), open on HAL; rank 4 for Mesha 31 (PDF git-ignored, recipe).
+- **`_records-only--Words-in-stone/`** – Tell Fekheriye, Sefire, Deir ʿAllā (the editions on **Persée**, free to read, PDFs refused to scripts: a person can save them), Khirbet el-Qom, Ketef Hinnom I, the ʿAjrud wall poem, Langlois 2019.
+
 ### 4.5 Reference tools and comparative studies
 - **`Reference-tools/RESOURCES.md`** – the catalogue of dictionaries, grammars, sign lists and APIs, with tested access mechanisms. Read it before any lexical work.
 - **`Comparative-studies/INDEX.md`** – 49 studies on the Mesopotamian flood ↔ Genesis 6–9 (8 open-access PDFs downloaded; the rest listed with access status).
