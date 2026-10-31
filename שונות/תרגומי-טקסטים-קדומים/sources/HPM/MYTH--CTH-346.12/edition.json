@@ -1,0 +1,502 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.12",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.12 (TX 2010-12-30, TRde 2010-12-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2''",
+"title": "§ 2''",
+"hl": ""
+},
+{
+"id": "§ 3''",
+"title": "§ 3''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] kwēzza iyattari",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"¬¬¬ [ ... ] ⸢ku-e⸣-ez-za ⸢i-ya⸣-at-ta-ri"
+]
+],
+"tr": "Von wo [ ... ] geht.1",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "n[u ... -k]an kwēzza",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"n[u ... ] [ ... -k]án ku-e-ez-za"
+]
+],
+"tr": "und von wo [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=kan ḫūma[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2'",
+"nu-kán ḫu-u-ma-a[n1 ... ]"
+]
+],
+"tr": "[ ... ] all[e(s) ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[IŠT]U? {URU}ḫatti=kan GAM miešni DU-anta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3'",
+"[IŠ-T]U? ⸢{URU}⸣ḫa-at-ti-kán GAM mi-eš2-ni DU-an-ta"
+]
+],
+"tr": "Sie gehen2 zum Wohlergehen [au]s der Stadt Ḫatti hinab.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[KUR.KU]R{ḪI.A} {URU}mittanni=[a]t=kan šani[ya ...? š]anḫi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 4'",
+"[KUR?.KU]R{ḪI.A} {URU}mi-it-ta-an-ni-ya-[a]t3-kán ša-ni-[ya ...? ] [ša]-an-ḫi"
+]
+],
+"tr": "Durchsuch sie, die Mittani-[Länd]er, am selb[en Ort].",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=za ḫattanduš UN{ḪI.A}-u[š ...? š]anḫeški",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 5'",
+"nu-za ḫa-at-ta-an-du-uš UN{ḪI.A}-u[š ...? ] [š]a-an-ḫe-eš-ki"
+]
+],
+"tr": "[S]uche die klugen Mensche[n ... ]!",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "kwiēš=man AŠŠUM? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6'",
+"ku-i-e-eš4-ma-an AŠ-ŠUM!? x[ ... ]"
+]
+],
+"tr": "Welche wegen? [ ... ] würden,",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {L]}Ú.MEŠpatilaḫiti=ya tiyawe[ni]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6'",
+"[ ... ] [{L]}Ú.MEŠ⸢pa-ti⸣-la-ḫi-ti-ya ti-ya-u-e-[ni] ==="
+],
+[
+"A",
+"",
+"Vs. I bricht ab."
+]
+],
+"tr": "stell[en] wir [ ... ] und in das patili-Priesteramt.3",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2''",
+"hl": "",
+"master": "{d}takiduš INIM{MEŠ} {d}ḫepat IŠME",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 1",
+"¬¬¬ ⸢{d}⸣ta-ki-du-uš INIM{MEŠ} {d}ḫé-pát IŠ-ME"
+]
+],
+"tr": "Takidu hörte der Ḫepat Worte",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2''",
+"hl": "",
+"master": "n=aš {URU}ši[mmurra p]ait",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 1",
+"na-aš {URU}ši-⸢im⸣-mu!-ur-ra [p]a-it"
+]
+],
+"tr": "und [g]ing nach Šimmurra.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2''",
+"hl": "",
+"master": "nu {f}kutiladun punušta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 2",
+"nu {f}ku-ti-la-du-un pu-nu-uš-ta5 (Rasur)"
+],
+[
+"B",
+"1'",
+"[ ... pu?-n]u?-⸢uš?-ta?⸣"
+]
+],
+"tr": "Sie befragte Kutiladu,",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2''",
+"hl": "",
+"master": "[nu]=za=kan {f}kutiladuš waštul tarnaš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 3",
+"[nu]-za-kán {f}ku-ti-la-du-uš6 wa-aš-túl tar-na-aš"
+],
+[
+"B",
+"2'",
+"[ ... tar-n]a-aš7"
+]
+],
+"tr": "[und] Kutiladu ließ von der Sünde ab.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2''",
+"hl": "",
+"master": "nu {d}ḫepat [w]alleškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 3",
+"nu {d}ḫé-pát [w]a-al-le-eš-ke-ez-zi"
+],
+[
+"B",
+"",
+"(Kolon fehlt in B wahrscheinlich)"
+]
+],
+"tr": "Sie preist Ḫepat.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2''",
+"hl": "",
+"master": "nu {d}[t]akiduš ANA {d}ḫepat [me]miyan pēdaš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 4",
+"nu {d}[t]a-ki-du-uš A-NA {d}ḫé-pát [me]-⸢mi⸣-ya-an pé-e-da-aš"
+],
+[
+"B",
+"3'",
+"[ ... ]"
+]
+],
+"tr": "[T]akidu brachte die [Nac]hricht zu Ḫepat:",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 2''",
+"hl": "",
+"master": "{URU}šimmurra=wa pāun",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 5",
+"⸢{URU}⸣ši-im-mu-ur-ra-wa ⸢pa-a⸣-u[n]"
+],
+[
+"B",
+"3'",
+"[{URU}ši-im-mu-ur-r]a-wa pa-⸢a⸣-[u]n?"
+]
+],
+"tr": "„Ich ging in die Stadt Šimmurra,",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ]{f}kutiladun punuššun",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 6",
+"[ _ _ ]⸢{f}⸣ku-ti-la-du-un [p]u-nu-uš-šu-un"
+],
+[
+"B",
+"4'",
+"[ ... {f}ku-ti-la-d]u-un pu-nu-uš-šu-un"
+]
+],
+"tr": "ich befragte Kutiladu,",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 2''",
+"hl": "",
+"master": "nu=za=kan [ ... ] tarnaš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 6",
+"nu-za-kán x[ ... ] [ _ _ (_) ]"
+],
+[
+"B",
+"5'",
+"[ ... ]x tar-na-aš (Rasur)"
+]
+],
+"tr": "und [ ... ] ließ.",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 2''",
+"hl": "",
+"master": "⸢nu⸣ {d}ḫepat walleškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 7",
+"⸢nu⸣ {d}ḫé-pát wa-⸢al⸣-le-eš-ke-ez-[zi] ¬¬¬"
+],
+[
+"B",
+"6'",
+"[ ... wa-a]l-li-iš-ke-ez-zi ¬¬¬"
+]
+],
+"tr": "Sie preist Ḫepat.“",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]⸢ANA⸣ {d}takidu memieškiuwan d[āiš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 8",
+"[ ... ]⸢A-NA⸣ {d}ta-ki-[d]u me-mi-eš-ki-[u-wa-an ... ]"
+],
+[
+"B",
+"7'",
+"[ ... {d}t]a-ki-du me-mi-iš-ki-u-wa-an da-[a-iš]"
+]
+],
+"tr": "[ ... ] beg[ann], zu Takidu zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 3''",
+"hl": "",
+"master": "[{URU}šimm]urra URU-ri īt",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 9",
+"[{URU}ši-im-m]u-ur-ra URU-r[i] ⸢i⸣-it"
+],
+[
+"B",
+"8'",
+"[ ... U]RU-ri i-it"
+],
+[
+"B",
+"",
+"Text bricht ab 8 ."
+]
+],
+"tr": "„Geh nach [Šimm]urra in die Stadt",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=w[a ... ] dā",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 9",
+"nu-w[a ... ] [ ... ]x da-a"
+]
+],
+"tr": "und nimm [ ... ]!",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ] ēp",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 10",
+"(Rasur) [ _ _ ]x[ ... ] [ ... ]x e-ep"
+]
+],
+"tr": "Ergreife [ ... ]!",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 11",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... p]eran [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 12",
+"[ ... p]í-an [ ... ]"
+]
+],
+"tr": "[ ... v]or [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 13",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Rs. IV bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Polvani, Fs Alp 1992, 449: ḫu-u-ma-an-[te-eš?.",
+"§ 1':2": "Zeichen -eš- über Rasur.",
+"§ 1':3": "CHD P 244b: -[a]t-. Nach Kollation am Foto ist diese Lesung möglich.",
+"§ 1':4": "Zeichen -eš- über Rasur.",
+"§ 2'':5": "-nu-uš-ta über Rasur.",
+"§ 2'':6": "-kán {f}ku-ti-la-du-uš über Rasur.",
+"§ 2'':7": "In dieses Kolon gehören auch noch die nicht zuordenbaren Zeichenreste aus KBo 26.89.",
+"§ 3'':8": "Die drei in B noch vorhandenen Zeilenreste lassen sich nicht sinnvoll in die Partitur einarbeiten: 9' [ ... {f}ku-ti-la-d]u-un i-da-x[ _ ]x x x 10' [ ... -u]n ši-⸢pa-an?⸣-[ ... ] 11' [ ... ]x[ ... ]. Nach Kollation am Foto ist in Zeile 9' sowohl die Lesung i-da-l[a- als auch i-da-l[u- möglich.",
+"T1": "Vgl. zu diesem und den folgenden Kola CHD L-N 244b: „From what does he go and [ ... ]? From what [ ... ]? They al[l] go down from Hatti in gentleness(?)/prosperity(?).“",
+"T2": "Wörtlich: „Sie (sind) gehend ...“",
+"T3": "Vgl. CHD P 244b+ 245a: „Search [ ... ] them, (namely) the lands of Mitanni, keep searching [ ... ] for wise people, whom we might install in [ ... -ship] and in the patili-priesthood.“"
+}
+}

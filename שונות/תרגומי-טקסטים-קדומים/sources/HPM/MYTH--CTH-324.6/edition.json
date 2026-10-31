@@ -1,0 +1,107 @@
+{
+"kind": "MYTH",
+"cth": "CTH 324.6",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 324.6 (TX 2009-08-26, TRde 2009-08-26)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... tel]ipinun [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1",
+"[ ... te-l]i-pí-nu-un [ ... ]"
+]
+],
+"tr": "[ ... den Tel]ipinu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] É.GAL [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2",
+"[ ... ] É.GAL [ ... ]"
+]
+],
+"tr": "[ ... ] Palast [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]edun?",
+"words": [],
+"mss": [
+[
+"A",
+"3",
+"[ ... ]⸢e?⸣-du-un"
+]
+],
+"tr": "Ich aß? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4",
+"[ ... ]2 ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5",
+"[ ... ]x"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':2": "Es ist nicht sicher, ob noch eine Zeile vor dem Paragraphenstrich folgt."
+}
+}

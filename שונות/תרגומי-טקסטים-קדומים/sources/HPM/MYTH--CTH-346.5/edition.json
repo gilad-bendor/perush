@@ -1,0 +1,675 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.5",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.5 (TX 2009-08-30, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-an da-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x-x-⸢an⸣1 da-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]NÍ.TE-aš=šan m[u?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ _ _ ]NÍ.TE-aš-ša-an m[u?-2 ... ]"
+]
+],
+"tr": "[ ... ] an den Gliedern [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... š]akki",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ] [ _ š]a-ak-ki"
+]
+],
+"tr": "[ ... k]ennt [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "{d}kumarbi-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"{d}ku-mar-bi-x[ ... ]"
+]
+],
+"tr": "Kumarbi [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-zan UD{KAM.ḪI.A}-uš kap[pūwa- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ _ (_) ]x-za-an UD{KAM.ḪI.A}-uš kap-[pu-u-wa-3 ... ]"
+]
+],
+"tr": "[ ... ] zä[hl- ... ] die Tage [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... IT]U{KAM.ḪI.A}-uš gul(a)škez[zi]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ _ IT]U{KAM.ḪI.A}-uš gul-aš-⸢ke-ez⸣-[zi]"
+]
+],
+"tr": "[ ... ] schreib[t ... ] die [Mon]ate auf.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... k]ēdanta {GIŠ}BANŠUR [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ] [k]e?-e-da-an-ta {GIŠ}BANŠUR x[ ... ]"
+]
+],
+"tr": "[ ... d]amit den Tisch [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-et",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ] [ (_) ]x-et4"
+]
+],
+"tr": "[ ... -]te.",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=ššan UD{KAM.ḪI.A}-uš[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"nu-uš-ša-an ⸢UD{KAM⸣}.ḪI.A-uš[ ...5 ]"
+]
+],
+"tr": "[ ... ] die Tage [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ITU] 1{KAM} pait",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ _ ] 1{KAM} pa-it"
+]
+],
+"tr": "Der erste [Monat] ging.",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1'",
+"hl": "",
+"master": "ITU 2{KAM} tiya[t]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"ITU 2⸢{KAM}⸣ ti-ya-a[t]"
+]
+],
+"tr": "Der zweite Monat tra[t] ein.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ...6 ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 1'",
+"hl": "",
+"master": "[IT]U 5{KAM} ITU 6[{KAM}] ITU 7 ITU 8{KAM} tiya[t]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[IT]U ⸢5⸣{KAM} ITU 6[{KAM}] ITU 7 ITU 8{KAM} ti-ya-a[t]"
+]
+],
+"tr": "Der fünfte [Mon]at, der sechs[te] Monat, der siebte Monat, der achte Monat tra[t] ein.",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... tu]ḫḫeškiuwan tiy[a]t",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ] [tú]ḫ-ḫe-eš-ki-u-⸢wa⸣-an7 ti-y[a-a]t ¬¬¬"
+]
+],
+"tr": "[ ... ] be[g]ann zu [k]reißen.1",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 2'",
+"hl": "",
+"master": "[{ḪUR.S]}AGwāšittaš tuḫḫāet",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"[{ḪUR.S]}AGwaa-a-ši-it-ta-aš túḫ-ḫa-a-et"
+]
+],
+"tr": "Der [Ber]g Wašitta kreißte.2",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... t]uḫḫiman [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"[ (_) t]úḫ-ḫi-ma-an x x x x[ ... ]"
+]
+],
+"tr": "[ ... ] das [K]reißen3 [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... -a]r {d}kumarbiš ištama[št]a",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"[ _ (_) -a]r8 {d}ku-mar-bi-iš iš-ta-ma-[aš-t]a"
+]
+],
+"tr": "Kumarbi hö[rt]e [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 2'",
+"hl": "",
+"master": "{ḪUR.SAG}wāšit[ta tu]ḫḫāet",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"{ḪUR.SAG}⸢waa-a-ši-it⸣-[ta9] [tú]ḫ-ḫa-a-et"
+]
+],
+"tr": "Der Berg Wašit[ta kr]eißte,",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=šši ḪUR.SAG{MEŠ} ḫūmanteš uwann[a p]āer",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"nu-uš-ši ḪUR.SAG{MEŠ} ḫu-⸢u⸣-ma-an-te-eš ú-w[a]-⸢an?⸣-n[a] [pa]-a-er"
+]
+],
+"tr": "und alle Berge [g]ingen zu ihm, um nachzuseh[en].4",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 2'",
+"hl": "",
+"master": "{ḪUR.SAG}wāšitta ḪUR.SAG{MEŠ} ḫūmanteš [me]miškiuwan dāer",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"{ḪUR.SAG}wa!10-a-a-ši-it-ta ⸢ḪUR⸣.SAG{MEŠ} ḫu-u-ma-an-te-eš [me]-mi-iš-ki-u-wa-an da-a-er"
+]
+],
+"tr": "Alle Berge begannen, zum Berg Wašitta zu [sp]rechen:",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 2'",
+"hl": "",
+"master": "{ḪUR.SAG}wāšitta [k]uwa[t=wa tu]ḫḫāet",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"{ḪUR.SAG}wa-a-ši-it-⸢ta⸣ [k]u-⸢wa⸣-[at-wa] [tú]ḫ-ḫa-a-et"
+]
+],
+"tr": "„Berg Wašita, [w]aru[m] hast du [gekr]eißt?",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 2'",
+"hl": "",
+"master": "DUMU-annaza=wa=za tuḫḫiman UL šakti",
+"words": [],
+"mss": [
+[
+"A",
+"17'",
+"DUMU-an-na-za-wa-za túḫ-ḫi-ma-an Ú-UL ša-⸢ak-ti⸣"
+]
+],
+"tr": "Von Jugend an kennst du das Kreißen nicht.",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 2'",
+"hl": "",
+"master": "UL=an=ta=kkan {d}gul(a)ššeš gul(a)ššer",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"⸢Ú⸣-UL-an11-ták-kán {d}gul-aš-še12-eš gul-aš-še-er"
+]
+],
+"tr": "Die Schicksalsgöttinnen schrieben es dir nicht zu.",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 2'",
+"hl": "",
+"master": "⸢UL⸣=ma=an[=ta]=kkan [AM]A-aš šer ḫašta",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"⸢Ú-UL⸣-ma-an-[tá]k-⸢kán⸣ [AM]A-aš še-er ḫa-aš-ta"
+]
+],
+"tr": "Die [Mut]ter aber schuf es [dir] nicht.“5",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 2'",
+"hl": "",
+"master": "{ḪUR.SAG}wāšittaš ⸢dapiaš⸣ ḪUR.SAG{MEŠ} [EG]IR-pa memiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"19'",
+"{ḪUR.SAG}wa-a-a-ši-it-⸢ta⸣-aš ⸢da-pí-aš ḪUR⸣.SAG⸢{MEŠ}⸣ [EG]IR-pa me-mi-iš-ki-u-wa-an da-a-iš"
+]
+],
+"tr": "Der Berg Wašitta begann, allen Bergen zu antworten:",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 2'",
+"hl": "",
+"master": "DUMU-annaza?=wa=z tuḫḫiman UL ĪDE",
+"words": [],
+"mss": [
+[
+"A",
+"20'",
+"DUMU-an-⸢na?-za?⸣-wa-az ⸢túḫ⸣-ḫi-ma-⸢an⸣ Ú-UL I-DE"
+]
+],
+"tr": "„Von Jugend an? kenne ich das Kreißen nicht.",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 2'",
+"hl": "",
+"master": "UL=an=mu=kan {d}gul(a)ššeš gul(a)ššer",
+"words": [],
+"mss": [
+[
+"A",
+"21'",
+"Ú-UL-an-mu-kán {d}gul-⸢aš-še-eš⸣ gul-aš-še-er"
+]
+],
+"tr": "Die Schicksalsgöttinnen schrieben es mir nicht zu.",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 2'",
+"hl": "",
+"master": "UL=ma=an=mu=ššan AMA-YA šer ḫāšta",
+"words": [],
+"mss": [
+[
+"A",
+"22'",
+"Ú-UL-ma-an-mu-uš-ša-an AMA-YA še-er ḫa-a-aš-ta ¬¬¬"
+]
+],
+"tr": "Meine Mutter aber schuf es mir nicht.“6",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] ḪUR.SAG{MEŠ}-aš ištarn[a] {LÚ}UBĀRUM mān [ ... wet13]",
+"words": [],
+"mss": [
+[
+"A",
+"23'",
+"[ ... ]x-x ḪUR.SAG{MEŠ}-aš iš-tar-n[a] {LÚ}Ú-BA-RUM ma-a-an [ ... ]"
+]
+],
+"tr": "Das Kreiß[en ... ]",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 3'",
+"hl": "",
+"master": "[n]u=mu=za katti=šši šašnut",
+"words": [],
+"mss": [
+[
+"A",
+"24'",
+"[n]u-mu-za kat-ti-iš-ši ša-aš-nu-ut"
+]
+],
+"tr": "und ließ mich mit ihm schlafen.",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 3'",
+"hl": "",
+"master": "nu apit pantalaz=pat [ ... ] tuḫḫeškiuwan teḫḫun",
+"words": [],
+"mss": [
+[
+"A",
+"24'",
+"nu a-pí-it pa-an-ta-la-az-pát [ ... ]x túḫ-ḫe-eš-ki-u-wa-an te-eḫ-ḫu-un"
+]
+],
+"tr": "Von dem Zeitpunkt an [ ... ] begann ich zu kreißen.7",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... -i]t ḫattanteš",
+"words": [],
+"mss": [
+[
+"A",
+"26'",
+"[ ... -i]t ḫa-at-ta-an-te-eš"
+]
+],
+"tr": "[ ... ] geschlagene [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 3'",
+"hl": "",
+"master": "EGIR-pa=at=za [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"26'",
+"⸢EGIR⸣-pa-at-za [ ... ]"
+]
+],
+"tr": "[ ... ] es [ ... ] zurück [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ITU] 9[{KAM} p]ait",
+"words": [],
+"mss": [
+[
+"A",
+"27'",
+"[ ... ] ⸢9⸣[{KAM} p]a-it"
+]
+],
+"tr": "Der neun[te Monat g]ing,",
+"trlang": "DE"
+},
+{
+"n": "36",
+"sec": "§ 3'",
+"hl": "",
+"master": "nu ITU 10{KAM} tiyat",
+"words": [],
+"mss": [
+[
+"A",
+"27'",
+"nu ITU 10{KAM} ti-ya-at"
+]
+],
+"tr": "und der zehnte Monat trat ein.",
+"trlang": "DE"
+},
+{
+"n": "37",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-teš tuḫḫeškiwa[n t]iy[at]",
+"words": [],
+"mss": [
+[
+"A",
+"28'",
+"[ ... ]x-te-eš túḫ-ḫe-eš-⸢ki-wa⸣-[an t]i-y[a-at]"
+]
+],
+"tr": "[ ... b]eg[ann] zu kreiße[n].",
+"trlang": "DE"
+},
+{
+"n": "38",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"29'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "39",
+"sec": "§ 3'",
+"hl": "",
+"master": "nu tuḫḫim[an ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"29'",
+"nu túḫ-ḫi-m[a-an ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Friedrich, JKF 2, 1952, 150: [me?-m]i?-[y]a?-an da-[.",
+"§ 1':2": "Friedrich, JKF 2, 1952, 150: m[u?-un-na-a-it?.",
+"§ 1':3": "Friedrich, JKF 2, 1952, 150: kap-[pu-eš-ki-wa-an da-a-iš].",
+"§ 1':4": "Friedrich, JKF 2, 1952, 150: [ú?]-it.",
+"§ 1':5": "Friedrich, JKF 2, 1952, 150: pa-a-ir ...",
+"§ 1':6": "ITU 3{KAM} ITU 4{KAM} ti-ya-at.",
+"§ 1':7": "Friedrich, JKF 2, 1952, 150: [nu t]uḫ-°.",
+"§ 2':8": "Friedrich, JKF 2, 1952, 151: [ki?-ša?]-ri. HEG III 406: [URU?-]ri.",
+"§ 2':9": "Friedrich, JKF 2, 1952, 151: °-aš ku-it], HEG III 406: {ḪUR.SAG}waa-⸢a-ši-it-ta⸣[-aš (...)].",
+"§ 2':10": "Text: ši-.",
+"§ 2':11": "Zeichen -an- über Rasur.",
+"§ 2':12": "Zeichen -še- über Rasur.",
+"§ 3':13": "Friedrich, JKF 2, 1952, 151: [ú-iš-ki-it?.",
+"T1": "Vgl. zu den folgenden Zeilen auch HEG III 406 mit einer Übersetzung „keuchen“ und Hinweisen auf weitere Literatur zur Bedeutung des Verbs.",
+"T2": "Vgl. Anmerkung zum vorangehenden Kolon.",
+"T3": "Friedrich, JKF 1952/53, 151f., übersetzt „Schwangerschaft“.",
+"T4": "Vgl. HEG III 406: „und alle Berge gingen, um ihn zu sehen.“",
+"T5": "Vgl. HEG III 406: „Weder haben die Schicksalsgöttinnen dir das vorherbestimmt, noch hat (deine) Mutter dir das geboren.“ Vgl. auch Anm. zu Kolon 29.",
+"T6": "Vgl. dazu auch HED 3, 213: „nor has my mother borne it on my behalf.“ Vgl. zur Interpretation HEG III 406 mit weiteren Literaturhinweisen.",
+"T7": "Vgl. CHD P 94 mit einem anderen Ergänzungsvorschlag."
+}
+}

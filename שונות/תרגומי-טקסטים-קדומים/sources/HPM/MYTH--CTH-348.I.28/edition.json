@@ -1,0 +1,217 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.28",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.28 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... m]emiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"1",
+"¬¬¬ [ ... m]e-mi-⸢iš-ki⸣-u-wa-an da-a-⸢iš⸣"
+]
+],
+"tr": "[ ... ] begann, [ ... ] zu [s]prechen:",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... uddār=ta? kw]e temi",
+"words": [],
+"mss": [
+[
+"A",
+"2",
+"[ ... ku]-⸢e⸣ te-mi"
+]
+],
+"tr": "[Die Worte, di]e ich [dir?] sage,",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=mu uddānaš G[EŠTU-an parā lagān ḫar(a)k]",
+"words": [],
+"mss": [
+[
+"A",
+"2",
+"nu-mu ud-da-a-na-aš G[EŠTU-an ... ]"
+]
+],
+"tr": "[halte] meinen Worten (dein) O[hr geneigt!]“",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -i]n=ma EGI[R]-an dāi",
+"words": [],
+"mss": [
+[
+"A",
+"3",
+"[ ... -i]n-ma EGI[R]-an da-a-i"
+]
+],
+"tr": "[ ... ] aber stellt er hinten hin.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "GI[Š? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3",
+"GI[Š? ... ]"
+]
+],
+"tr": "H[olz? ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]INA É.GAL-LIM ša-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4",
+"[ ... ]⸢I⸣-NA É.⸢GAL⸣-LIM ša-x[ ... ]"
+]
+],
+"tr": "[ ... ] im/in den Palast [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -a]ttari",
+"words": [],
+"mss": [
+[
+"A",
+"5",
+"[ ... -a]t-⸢ta⸣-ri"
+]
+],
+"tr": "[ ... ]t.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "uddā[r(-) ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5",
+"ud-da-a-a[r(-) ... ]"
+]
+],
+"tr": "Wort[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-e išdanḫ[a-? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6",
+"[ ... ]-⸢e⸣ iš-da-an-ḫ[a?- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] kost[-",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "[n=aš šar]ā ḫūdā[k arāiš?]",
+"words": [],
+"mss": [
+[
+"A",
+"7",
+"[ ... ša-r]a-a ḫu-u-da-a-a[k ... ]"
+]
+],
+"tr": "[Er stand?] soglei[ch au]f.",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ...? ]",
+"words": [],
+"mss": [
+[
+"A",
+"7",
+"[ ...? ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ...? ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

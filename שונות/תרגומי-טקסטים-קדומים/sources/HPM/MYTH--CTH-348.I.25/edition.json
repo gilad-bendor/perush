@@ -1,0 +1,508 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.25",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.25 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x x[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... -š]ankura[š? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... -š]a?-an-ku-ra-a[š? _ ]x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... dāi]š?",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... da?-a?-i]š"
+]
+],
+"tr": "[ ... bega]nn? [ ... zu sprechen:]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "kwedan[i=w]ar=aš=kan [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"ku-e-da-n[i-w]a-ra-⸢aš-kán⸣ [ ... ] [ ... ]"
+]
+],
+"tr": "„Welche[m ... ] er [ ... ]?",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[kw]edani=war=aš=⸢kan⸣ minu ti-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ku]-⸢e⸣-da-ni-wa-ra-aš-⸢kán⸣ mi-nu ⸢ti⸣-1[ ... ]"
+]
+],
+"tr": "[We]lchem [ ... ] er [ ... ]?1",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]anda dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]⸢an⸣-da da-a-iš"
+]
+],
+"tr": "[ ... ] stellte [ ... ] hinein.",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "anda=war=an=kan ī[t?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"an-da-wa-ra-an-kán i-i[t?-2 ... ] [ ... ]"
+]
+],
+"tr": "Ihn hinein [ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}10-aš ḫalugan IŠME",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"⸢{d}⸣10-aš ḫa-lu-⸢ga⸣-an IŠ-ME3"
+]
+],
+"tr": "Der Wettergott hörte? die Botschaft,",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=aš katti[=šši? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"na-aš kat-ti-i[š-ši? ... ]"
+]
+],
+"tr": "und er [ ... ] bei [ihm? ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]x da-a-iš"
+]
+],
+"tr": "[ ... ] begann [ ... zu sprechen:]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "ALAM {d}10-ni uddār [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"ALAM {d}10-ni ud-da-a-ar [ ... ]"
+]
+],
+"tr": "„Die Statue [ ... ] dem Wettergott die Worte [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] {d}10-aš",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x {d}10-aš"
+]
+],
+"tr": "[ ... ], der Wettergott.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}É.A-aš=wa=kan GALGA-aš EN-aš",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"{d}É.A-aš-wa-kán GALGA-aš EN-aš"
+]
+],
+"tr": "Ea, Herr der Weisheit,",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2'",
+"hl": "",
+"master": "kwe?-[ ... ]{d}10-aš",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"ku-⸢e?⸣-[ ... ] [ ... ]⸢{d}⸣10-aš"
+]
+],
+"tr": "welch[- ... ], der Wettergott?",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 2'",
+"hl": "",
+"master": "ANA kupri=kkan kwin [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"A-NA ku-up-ri-[i]k-kán ku-in x[ ... ] ¬¬¬"
+]
+],
+"tr": "Welchen [ ... ] im Asphalt2 [ ... ]?",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 3'",
+"hl": "",
+"master": "[n]u=wa KUR-e kupriyanza ⸢ḫarzi⸣",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[n]u-wa KUR-e ku-up-ri-ya-an-za ⸢ḫar-zi⸣"
+]
+],
+"tr": "[U]nd das Land hält der Asphalt.3",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 3'",
+"hl": "",
+"master": "⸢MU⸣ 7{K[}AM ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"⸢MU 7⸣{K[}AM ... ]"
+]
+],
+"tr": "[ ... ] sieben Jahre4 [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-ēzza weiškittar[i?]",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ ... ]-⸢e?⸣-ez-za ú-e-iš-ki-it-ta-r[i?]"
+]
+],
+"tr": "[ ... ] aus [ ... ] schrei[t ... ]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... -a]nza? ḫarzi",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ ... ] [ ... -a]n?-za ḫar-zi"
+]
+],
+"tr": "[ ... ] hält [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 3'",
+"hl": "",
+"master": "ḫūmant[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"ḫu-u-ma-an-t[a- ... ]"
+]
+],
+"tr": "All[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] {d}EA-aš uddā[r ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"[ ... ] {d}É-A-aš ud-da-a-a[r ... ]"
+]
+],
+"tr": "[ ... ] des Ea Wort[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-aš duddutta[t]",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"[ ... ]x-aš du-ud-du-ut-ta-a[t]"
+]
+],
+"tr": "[ ... ] behandelt[e ... ] gnädig.5",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] idalauwaz [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"[ ... ] i-da-la-u-wa-az [ ... ]"
+]
+],
+"tr": "[ ... ] aus dem bösen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... d]uddutta-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"[ ... d]u-ud-du-ut-ta-[ ... ]"
+]
+],
+"tr": "[ ... be]handel[- ... ] gnädig.",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] a-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"17'",
+"[ ... ] a-x[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ] NA4[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"[ ... ] NA4[ ... ]"
+]
+],
+"tr": "[ ... ] Stein [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"19'",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2':1": "Vgl. CHD L-N 291a, die definitiv minu von t[i?- separieren.",
+"§ 2':2": "Die Partikelkette erfordert ein transitives Verb, so dass es sich hier nicht um den Imperativ Sg. des Verbs „gehen“ handeln kann.",
+"§ 2':3": "Die Lesung IŠ-ME ist nach Kollation am Foto eindeutig.",
+"T1": "Nach CHD L-N 290f. ist minu Adv. unbekannter Bedeutung. Siehe ebendort 291a die Diskussion der verschiedenen Bedeutungsvorschläge.",
+"T2": "Vgl. dazu Haas 2003, 240.",
+"T3": "Hier dürfte es sich um das eben genannte kupri- n. in der Ergativform handeln. Vgl. dazu Hoffner – Melchert 2008, 66f.",
+"T4": "Oder „siebtes Jahr“; vgl. dazu Hoffner – Melchert 2008, 167.",
+"T5": "Vgl. HEG III 476."
+}
+}

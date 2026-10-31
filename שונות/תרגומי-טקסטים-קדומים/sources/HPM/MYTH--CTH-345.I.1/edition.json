@@ -1,0 +1,5326 @@
+{
+"kind": "MYTH",
+"cth": "CTH 345.I.1",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 345.I.1 (TX 2009-08-31, TRde 2009-08-29)",
+"sections": [
+{
+"id": "§ 1",
+"title": "§ 1",
+"hl": ""
+},
+{
+"id": "§ 2",
+"title": "§ 2",
+"hl": ""
+},
+{
+"id": "§ 3",
+"title": "§ 3",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+},
+{
+"id": "§ 5'",
+"title": "§ 5'",
+"hl": ""
+},
+{
+"id": "§ 6'",
+"title": "§ 6'",
+"hl": ""
+},
+{
+"id": "§ 7''",
+"title": "§ 7''",
+"hl": ""
+},
+{
+"id": "§ 8''",
+"title": "§ 8''",
+"hl": ""
+},
+{
+"id": "§ 9''",
+"title": "§ 9''",
+"hl": ""
+},
+{
+"id": "§ 10''",
+"title": "§ 10''",
+"hl": ""
+},
+{
+"id": "§ 11''",
+"title": "§ 11''",
+"hl": ""
+},
+{
+"id": "§ 12''",
+"title": "§ 12''",
+"hl": ""
+},
+{
+"id": "§ 13''",
+"title": "§ 13''",
+"hl": ""
+},
+{
+"id": "§ 14''",
+"title": "§ 14''",
+"hl": ""
+},
+{
+"id": "§ 15''",
+"title": "§ 15''",
+"hl": ""
+},
+{
+"id": "§ 16''",
+"title": "§ 16''",
+"hl": ""
+},
+{
+"id": "§ 17''",
+"title": "§ 17''",
+"hl": ""
+},
+{
+"id": "§ 18''",
+"title": "§ 18''",
+"hl": ""
+},
+{
+"id": "§ 19''",
+"title": "§ 19''",
+"hl": ""
+},
+{
+"id": "§ 20''",
+"title": "§ 20''",
+"hl": ""
+},
+{
+"id": "§ 21''",
+"title": "§ 21''",
+"hl": ""
+},
+{
+"id": "§ 22''",
+"title": "§ 22''",
+"hl": ""
+},
+{
+"id": "§ 23''",
+"title": "§ 23''",
+"hl": ""
+},
+{
+"id": "§ 24''",
+"title": "§ 24''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... ]-x-zan i[šḫamiḫḫi]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1",
+"[ ... ]x x[ ... ]"
+],
+[
+"B",
+"Vs. I 1",
+"[ ... ]-x-za-an i[š-ḫa-mi-iḫ-ḫi]"
+]
+],
+"tr": "[ ... ] bes[inge ich],",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... kw]edani ZI-ni anda",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2",
+"[ ... ] ⸢ZI-ni an⸣-da"
+],
+[
+"B",
+"Vs. I 1",
+"[ ... ] x [ku]-⸢e⸣-⸢da-ni⸣ [Z]I-ni an-da"
+]
+],
+"tr": "[ ... ] in [we]lchem Sinn [ ... ] (ist),",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1",
+"hl": "",
+"master": "ḫattatar=⸢ma?⸣ k[wiš?] ⸢ZI-ni=kan?⸣ [a]ndan daškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2",
+"G[ALGA?-tar?-ma?] k[u?-iš? ... d]a-⸢aš-ke⸣-ez-zi"
+],
+[
+"B",
+"Vs. I 2",
+"ḫa-at-ta-tar-⸢ma? ZI?-ni?-kán?⸣1 [a]n-da!-⸢an⸣ da-aš-ke-ez-zi"
+]
+],
+"tr": "d[er] Ratsschluss aber [i]n den Sinn nimmt.",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1",
+"hl": "",
+"master": "ḫūmantaš DINGIR{MEŠ} addan {d}kumarbin išḫamiḫḫi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3",
+"da-pí-y[a?-aš ... ] {d}⸢ku⸣-m[ar-b]i-⸢in iš⸣-ḫa-mi-iḫ-ḫi ¬¬¬"
+],
+[
+"B",
+"Vs. I 3",
+"ḫu-u-ma-an-ta-aš DINGIR{MEŠ} ⸢SAG?2⸣ ad-da-an {d}ku-mar-bi-in3 < > (Rasur) 4"
+]
+],
+"tr": "Den Vater aller Gött[er], Kumarbi, besinge ich.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1",
+"hl": "",
+"master": "{d}kumarbiš=za ḫat<ta>tar ZI-ni peran daškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 5",
+"{d}ku-mar-bi-iš-za ḫa-at<-ta>-tar ZI-ni pí-an ⸢da⸣-[aš-ke-ez-zi]"
+],
+[
+"B",
+"Vs. I 4",
+"{d}ku-mar-bi-iš5 GA[LGA]-tar ZI-ni ⸢kat⸣-ta-an da-aš-ke-ez-zi"
+],
+[
+"C",
+"Vs. I 4'",
+"[ ... kat-ta-a]n [ ... ]"
+]
+],
+"tr": "Kumarbi nimmt sich Ratsschluss in den Sinn.1",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1",
+"hl": "",
+"master": "nu ḪUL-lun UD{KAM}-an {LÚ}ḪUL-an šallanuškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6",
+"nu ḪUL-lu-un UD{KAM}-an {LÚ}ḪUL-an šal-la-[nu-uš-ke-ez-zi]"
+],
+[
+"B",
+"Vs. I 5",
+"UD{K[}AM-a]n (Rasur) ku-iš6 (Rasur) {LÚ}⸢ḪUL⸣-an šal-la-nu-uš-ke-ez-zi"
+],
+[
+"C",
+"Vs. I 6",
+"[ ... šal-la-nu-uš-ke-ez-z]i"
+]
+],
+"tr": "Er zieht einen schlechten Tag als Schlechten (Menschen) groß2",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1",
+"hl": "",
+"master": "nu=za {d}10-ni menaḫḫanda idalawatar ša[nḫiškezzi]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 7",
+"nu {d}10-ni IGI-an-da i-da-la-wa-tar ša-a[n-ḫi-iš-ke-ez-zi]"
+],
+[
+"B",
+"Vs. I 6",
+"nu-za {d}⸢10-ni⸣ me-na-aḫ-ḫa-an-[d]a ḪUL-u-tar7 da-aš-ke-ez-zi"
+],
+[
+"C",
+"Vs. I 6'",
+"[ ... da-aš-ke-ez-z]i"
+]
+],
+"tr": "und pl[ant] gegen den Wettergott Übles.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1",
+"hl": "",
+"master": "nu {d}10-ni menaḫḫanda :tarpanallin šallanuškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 8",
+"nu {d}10-ni :tar-pa-na-al-li-in šal-la-nu-u[š-ke-ez-zi] ¬¬¬"
+],
+[
+"B",
+"Vs. I 7",
+"nu ⸢{d}⸣10-ni me-na-aḫ-ḫa-an-da ⸢tar-pa-na⸣-al-li-in šal-la-nu-uš-ke-ez-zi ¬¬¬"
+],
+[
+"C",
+"Vs. I 7'",
+"[ ... šal-la-nu-uš]-ke-ez-zi"
+]
+],
+"tr": "Gegen den Wettergott zieht er einen Rivalen groß.",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2",
+"hl": "",
+"master": "{d}kumarbiš=za ZI-ni peran ḫattatar [daškezzi]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 9",
+"{d}ku-mar-bi-iš-za ZI8-ni pí-an ⸢ḫa-at⸣-[ta-tar ... ]"
+],
+[
+"B",
+"Vs. I 9",
+"nu-za {d}ku-mar-bi-iš ZI-ni kat-ta-an ḫa-at-ta-tar < >9"
+],
+[
+"C",
+"Vs. I8'",
+"[ ... Z]I-ni10"
+]
+],
+"tr": "Kumarbi [nimmt] sich Ratsschluss in den Sinn.",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2",
+"hl": "",
+"master": "n=at {NA4}kunnan mān išgariškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 10",
+"na-at {NA4}ku-un-na-an ⸢ma-a⸣-[an ... ] ¬¬¬"
+],
+[
+"B",
+"Vs. I 9",
+"[{N]}A4NUNUZ ma-a-an iš-ga-ri-iš-ke-ez-zi"
+],
+[
+"C",
+"Vs. I 9'",
+"[ ... iš-ga-ri-iš-ke-ez-z]i"
+]
+],
+"tr": "Er steckt ihn sich wie einen Schmuckstein3 an.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2",
+"hl": "",
+"master": "mān=za {d}kumarbiš ZI-ni ⸢peran GALGA-tar ME-aš⸣",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 11",
+"ma-a-an-za {d}ku-mar-bi-iš ḫ[a-at-ta-tar ... ]"
+],
+[
+"B",
+"Vs. I 10",
+"ma-a-an-za {d}ku-[ma]r-bi-iš ZI11-ni ⸢pí-an GALGA-tar ME-aš⸣"
+]
+],
+"tr": "Als sich Kumarbi den Ratsschluss in den Sinn genommen hatte,",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2",
+"hl": "",
+"master": "n=aš=kan {GIŠ}ŠÚ.A-az šarā ḫūdak araiš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 12",
+"na-aš-kán {GIŠ}ŠÚ.A-az ša-ra-a [ ... ]"
+],
+[
+"B",
+"Vs. I 10a",
+"na-⸢aš⸣-kán UGU ḫu-u-da-⸢ak⸣ a-ra-iš"
+]
+],
+"tr": "erhob er sich sogleich vom Stuhl4.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2",
+"hl": "",
+"master": "ŠU-za {GIŠ}GIDRU-an dāš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 13",
+"ŠU-za {GIŠ}GIDRU-an da-a-aš"
+],
+[
+"B",
+"",
+"(Kolon fehlt in B.)"
+]
+],
+"tr": "Er nahm einen Stab mit der Hand.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2",
+"hl": "",
+"master": "IN[A GÌR{MEŠ}-ŠU=ma=za] {KUŠ}E.SIR{ḪI.A}-uš liliwanduš IM[{MEŠ}-uš] šarkuet12",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 13",
+"I-N[A ... ] li-li-wa-an-du-uš IM[{MEŠ}-uš ... ]"
+],
+[
+"B",
+"Vs. I 11",
+"GAM-an {KUŠ}E.SIR{ḪI.A}-uš šar-ku-et"
+]
+],
+"tr": "A[n seine Füße aber] zog er Schuhe, die eilenden Wind[e].5",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 2",
+"hl": "",
+"master": "n=aš=kan {URU}urkišaz URU-za arḫa iyann[i]š",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 15",
+"na-aš-kán {URU}úr-ki-ša-[az ... ]"
+],
+[
+"B",
+"Vs. I 11",
+"n[a-a]š-kán {URU}úr-ki-ša-az URU-za ar-ḫa i-ya-an-n[i]-⸢iš⸣"
+]
+],
+"tr": "Von der Stadt Urkiš aus z[o]g er los",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 2",
+"hl": "",
+"master": "n=aš :ikunta lūli=kan anda ār(a)š",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 16",
+"na-aš i-ku-un-ta l[u!-ú-li-kán ... ] ¬¬¬"
+],
+[
+"B",
+"Vs. I 12",
+"na-aš :⸢i⸣-[k]u-un-ta ⸢lu-ú⸣-li-kán an-da a-ar-aš"
+]
+],
+"tr": "und kam am ikunta6-Quellteich an.",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 2",
+"hl": "",
+"master": "mān=kan {d}kumarb[iš ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 17",
+"ma-a-an-kán {d}⸢ku⸣-mar-b[i-iš ... ]"
+],
+[
+"B",
+"",
+"(Kolon fehlt in B.)"
+]
+],
+"tr": "Als Kumarb[i ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 2",
+"hl": "",
+"master": "nu=kan ikunta lū[li and]a šalliš {NA4}peruna[š k]ittari",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 18",
+"[x]-x-ta? i-k[u-un-ta lu-ú-li ... ]"
+],
+[
+"B",
+"Vs. I 13",
+"nu-kán i-ku-un-ta lu-⸢ú⸣-[li an-d]a šal-li-iš {NA4}pé-ru-na-[aš k]i-it-ta-ri"
+]
+],
+"tr": "[I]m ikunta-Que[llteich l]iegt ein großer Fels.",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 2",
+"hl": "",
+"master": "n=aš dalugašti ⸢3⸣ DANNA",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 19",
+"[ ... ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Vs. I bricht ab."
+],
+[
+"B",
+"Vs. I 15",
+"na-aš da-lu-ga-aš-ti ⸢3⸣ DANNA"
+]
+],
+"tr": "In der Länge (ist) er drei Meilen7.",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 2",
+"hl": "",
+"master": "palḫašti[=ma=aš ... DANNA] 1/2 DANNA=ya",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 15",
+"pal-ḫa-aš-ti-[ma-aš _ _ ] 1/2 DANNA-ya"
+],
+[
+"C",
+"Vs. I 17'",
+"[ ... DANNA-y]a"
+]
+],
+"tr": "In der Breite [aber (ist) er x] und eine halbe Meile.",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 2",
+"hl": "",
+"master": "katta=kan kwit ḫarzi",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 16",
+"kat-ta-kán ku-it ḫar-zi"
+]
+],
+"tr": "Was er unten hat,",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 2",
+"hl": "",
+"master": "nu=kán [ ... ] ZI-anza parā watkut",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 16",
+"nu-kán [ ... ] ZI-an-za pa-ra-a wa-at-ku-ut"
+]
+],
+"tr": "[(darauf)] richtete sich (sein, d.h. des Kumarbi) Begehren.8",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 2",
+"hl": "",
+"master": "n=aš=z=aš {NA4}p[eruni] ⸢kattan šešta⸣",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 17",
+"na-aš-za-aš {NA4}p[é-ru-ni] ⸢kat-ta-an še-eš-ta⸣"
+],
+[
+"C",
+"Vs. I 20'",
+"[ ... še-eš-t]a"
+]
+],
+"tr": "Er schlief [mit dem] Fe[lsen].",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 2",
+"hl": "",
+"master": "nu=šši=kan LÚ-natar and[a- ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 18",
+"nu-uš-ši-kán LÚ-na-tar an-d[a- ... ] [ ... ]"
+]
+],
+"tr": "Er [ ...]te ihm seine Mannheit hin[ein].9",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 2",
+"hl": "",
+"master": "[n=a]n=z=an=kan 5-ŠU dāš",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 19",
+"[na-a]n-za-an-kán 5-ŠU da-a-aš"
+]
+],
+"tr": "Er nahm [ih]n fünfmal.",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 2",
+"hl": "",
+"master": "[namma=an=z]=an=kan 10-ŠU dāš",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 20",
+"[nam-ma-an-z]a-an-kán 10-ŠU da-a-aš ¬¬¬"
+]
+],
+"tr": "Und [noch] zehnmal nahm er [ihn].",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 3",
+"hl": "",
+"master": "[ ... ]{GIŠ}GIDRU eni dāš",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 21",
+"[ ... ]{GIŠ}GIDRU e-ni d[a]-⸢a-aš⸣"
+]
+],
+"tr": "[ ... ] er nahm jenen Stab.",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 3",
+"hl": "",
+"master": "[ ... ]x x x x[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 22",
+"[ ... ]x x x x[ ... ]"
+],
+[
+"B",
+"",
+"Vs. I bricht ab."
+],
+[
+"C",
+"",
+"Lücke von ca. 4 Zeilen."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 3",
+"hl": "",
+"master": "[ ... ]x-az [ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Vs. I 24",
+"[ ... ]x-az [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 3",
+"hl": "",
+"master": "[ ... ]x",
+"words": [],
+"mss": [
+[
+"C",
+"Vs. I 25",
+"[ ... ]x"
+],
+[
+"C",
+"",
+"Lücke von ca. einer Zeile."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 3",
+"hl": "",
+"master": "[ ... ]x",
+"words": [],
+"mss": [
+[
+"C",
+"Vs. I 27",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 3",
+"hl": "",
+"master": "[ ... ]x",
+"words": [],
+"mss": [
+[
+"C",
+"Vs. I 28",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 3",
+"hl": "",
+"master": "[ ... ]x",
+"words": [],
+"mss": [
+[
+"C",
+"Vs. I 29",
+"[ ... ]x"
+],
+[
+"C",
+"",
+"Vs. I bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]x x",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5",
+"[ ... ]x x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... {d}kumarbi]š DINGIR{MEŠ}-aš addaš ēšzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 6",
+"[ ... {d}ku-mar-bi-i]š ⸢DINGIR{MEŠ}⸣-aš ad-da-aš e-eš-zi"
+]
+],
+"tr": "[Kumarbi], der Vater der Götter, sitzt [da?10].",
+"trlang": "DE"
+},
+{
+"n": "36",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ] {d}kumarbin aušta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 7",
+"[ ... ]x {d}⸢ku⸣-mar-bi-in a-uš-ta"
+]
+],
+"tr": "[ ... ] erblickte den Kumarbi.",
+"trlang": "DE"
+},
+{
+"n": "37",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ] aruni iyanneš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8",
+"[ ... ] ⸢a-ru⸣-ni i-ya-an-né-eš ¬¬¬"
+]
+],
+"tr": "[ ... ] er ging zum Meer.",
+"trlang": "DE"
+},
+{
+"n": "38",
+"sec": "§ 5'",
+"hl": "",
+"master": "nu {d}impaluri[š] INIM{MEŠ}-ar aruni EGIR-pa memiškiuw[an] dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 9",
+"[ ... ] ⸢INIM⸣{MEŠ}-ar a-ru-ni EGIR-pa [ ... d]a-a-iš"
+],
+[
+"C",
+"Vs. II 1",
+"nu {d}im-pa-lu-ri-i[š INIM{MEŠ}-a]r a-ru-ni EGIR-pa me-mi-iš-ki-u-w[a-an] da!-a-iš"
+]
+],
+"tr": "Impaluri begann, die Worte dem Meer wieder zu sag[en]:",
+"trlang": "DE"
+},
+{
+"n": "39",
+"sec": "§ 5'",
+"hl": "",
+"master": "EN-YA=mu=kan kwit [ ... ]-at",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 10",
+"EN-YA-mu-kán ku-it [ ... ]-at"
+],
+[
+"C",
+"",
+"(Kolon fehlt in C.)"
+]
+],
+"tr": "„Was mein Herr mir [ ...]te,",
+"trlang": "DE"
+},
+{
+"n": "40",
+"sec": "§ 5'",
+"hl": "",
+"master": "nu=za=kan arunan tapuša [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 11",
+"nu-za-kán a-ru-na-an ta-pu-ša13 [ ... ]14"
+],
+[
+"C",
+"",
+"(Kolon fehlt in C.)"
+]
+],
+"tr": "[ich ging] zur Seite des Meeres.11",
+"trlang": "DE"
+},
+{
+"n": "41",
+"sec": "§ 5'",
+"hl": "",
+"master": "[ ... ]=kan ša[k]uwayanun",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 12",
+"[ ... ]-kán ša-[k]u-wa-ya-nu-un"
+],
+[
+"C",
+"",
+"(Kolon fehlt in C.)"
+]
+],
+"tr": "Ich s[ch]aute [ ... ].",
+"trlang": "DE"
+},
+{
+"n": "42",
+"sec": "§ 5'",
+"hl": "",
+"master": "{d}kumarbiš=wa=kan [{GIŠ}Š]Ú.A-ŠU! ēšzi DINGIR{MEŠ}-aš addaš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 13",
+"[{d}k]u-mar-bi-iš DINGIR{MEŠ}-aš ad-da-aš e-eš-zi ¬¬¬"
+],
+[
+"B",
+"Vs. II 1",
+"DINGIR{MEŠ}-aš ad-da-aš"
+],
+[
+"C",
+"Vs. II 3",
+"{d}ku-mar-bi-iš-wa-kán [{GIŠ}Š]Ú.A-ŠU!15 e-eš-zi DINGIR{MEŠ}-aš ad-d[a-aš]"
+]
+],
+"tr": "Kumarbi sitzt auf seinem [Th]ron, der Vater der Götter.“",
+"trlang": "DE"
+},
+{
+"n": "43",
+"sec": "§ 5'",
+"hl": "",
+"master": "[mān arunaš {d}impal]uriyaš INIM{MEŠ}-ar IŠME",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 14",
+"[ ... {d}im-pa-l]u-ri-ya-aš INIM{MEŠ}-ar IŠ-ME"
+],
+[
+"B",
+"",
+"(Kolon fehlt in B.)"
+],
+[
+"C",
+"",
+"(Kolon fehlt in C.)"
+]
+],
+"tr": "[Als das Meer] des [Impal]uri Worte gehört hatte,",
+"trlang": "DE"
+},
+{
+"n": "44",
+"sec": "§ 5'",
+"hl": "",
+"master": "nu arunaš ANA {d}im[pal]uri EGIR-pa memiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 15",
+"[ ... {d}im-pa-lu-ri-y]a EGIR-pa me-mi-iš-ki-u-wa-an da-iš"
+],
+[
+"B",
+"Vs. II 1",
+"nu a-ru-na-aš ⸢A-NA {d}⸣[im-pa-al-lu-ri] EGIR-pa ⸢me⸣-mi-iš-ki-u-wa-an da-a-iš"
+],
+[
+"C",
+"Vs. II 4",
+"nu a-ru-na-aš A-NA {d}im-[pa-l]u-ri EGIR-pa me-mi-iš-ke-ez-zi"
+]
+],
+"tr": "begann das Meer dem Im[pa]luri zu antworten:",
+"trlang": "DE"
+},
+{
+"n": "45",
+"sec": "§ 5'",
+"hl": "",
+"master": "[{d}impaluri ... INIM{MEŠ}-a]r=ta kwie [memiškemi]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 16",
+"[ ... INIM{MEŠ}-a]r-ta ku-i-e [ ... ]"
+],
+[
+"B",
+"",
+"(Kolon fehlt in B.)"
+],
+[
+"C",
+"",
+"(Kolon fehlt in C.)"
+]
+],
+"tr": "[„Impaluri, ...12 die Wort]e,13 die ich dir sage,",
+"trlang": "DE"
+},
+{
+"n": "46",
+"sec": "§ 5'",
+"hl": "",
+"master": "[ ... ] GEŠTU-an parā [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 17",
+"[ ... ] GEŠTU-an pa-ra-a [ ... ]"
+],
+[
+"B",
+"",
+"(Kolon fehlt in B.)"
+],
+[
+"C",
+"",
+"(Kolon fehlt in C.)"
+]
+],
+"tr": "Text A: [halte ihnen] das Ohr ge[neigt!]",
+"trlang": "DE"
+},
+{
+"n": "47",
+"sec": "§ 5'",
+"hl": "",
+"master": "{d}impaluri kē=mu uddār ištamaš",
+"words": [],
+"mss": [
+[
+"A",
+"",
+"(Kolon fehlt in A)"
+],
+[
+"B",
+"Vs. II 3",
+"{d}im-pa-al-lu-ri ke-e-mu ud-da-a-ar ⸢iš-ta⸣-[ma-aš]"
+],
+[
+"C",
+"Vs. II 5",
+"{d}im-pa-lu-ri ke-e-mu u[d-d]a-a-ar iš-ta-ma-aš"
+]
+],
+"tr": "Text B/C: Impaluri, höre meine Worte an.",
+"trlang": "DE"
+},
+{
+"n": "48",
+"sec": "§ 5'",
+"hl": "",
+"master": "n=at īt ANA {d}kumarbi peran daššanut",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 18",
+"[ ... ke]-⸢e?⸣ da-aš-ša-u-wa [ ... ]"
+],
+[
+"B",
+"Vs. II 4",
+"na-at i-it A-NA {d}ku-mar-bi pé-ra-an <da->aš-ša-[nu-ut] ¬¬¬"
+],
+[
+"C",
+"Vs. II 6",
+"na-at i-it A-NA {d}k[u-ma]r-bi pé-ra-an da-aš-ša-nu-ut ¬¬¬"
+]
+],
+"tr": "Geh (und) richte sie Kumarbi aus.14",
+"trlang": "DE"
+},
+{
+"n": "49",
+"sec": "§ 5'",
+"hl": "",
+"master": "nu īt ANA {d}kumarbi memi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 19",
+"[ ... ] me-mi"
+],
+[
+"B",
+"Vs. II 5",
+"nu i-it A-NA {d}ku-mar-bi me-mi"
+],
+[
+"C",
+"Vs. II 7",
+"nu i-it {d}ku-mar-b[i _ _ ]"
+]
+],
+"tr": "Geh (und) sprich zu Kumarbi:15",
+"trlang": "DE"
+},
+{
+"n": "50",
+"sec": "§ 5'",
+"hl": "",
+"master": "kuwat=wa É-ri menaḫḫanda ka[rtimmiy]auwanza wet",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 20",
+"[ ... ] ⸢{d}ku-mar-bi-in⸣ [ ... ]"
+],
+[
+"B",
+"Vs. II 5",
+"ku-wa-at-wa É-ri me-na-aḫ-ḫa-an-da TUKU.TUKU-an-za ú-et"
+],
+[
+"C",
+"Vs. II 7",
+"[k]u-wa-at-wa É-ri IGI-an-da ka[r-tim-mi-y]a-u-wa-an-za ú-et"
+]
+],
+"tr": "‚Warum kam er zü[rne]nd vor (mein) Haus,",
+"trlang": "DE"
+},
+{
+"n": "51",
+"sec": "§ 5'",
+"hl": "",
+"master": "nu=wa É-er katkattimaš ēpta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 21",
+"[ ... ]x-ya pí-an EGIR-pa [ ... ]"
+],
+[
+"B",
+"Vs. II 7",
+"nu-wa É-er kat-kat-ti-ma-aš e-ep-ta"
+],
+[
+"C",
+"Vs. II 9",
+"nu-wa É-er kat-kat-te-[ma-aš e]-ep-ta"
+]
+],
+"tr": "Beben ergriff das Haus,16",
+"trlang": "DE"
+},
+{
+"n": "52",
+"sec": "§ 5'",
+"hl": "",
+"master": "SAG.GÉME.ARAD{MEŠ}=ya naḫšaraza ēpta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 22",
+"[ ... ]x-ir na-aḫ-ša-ra-za [ ... ]"
+],
+[
+"B",
+"Vs. II 7",
+"SAG.GÉME.ARA[D{MEŠ}-ya] na-aḫ-ša-ra-za e-ep-ta"
+],
+[
+"C",
+"Vs. II 9",
+"SAG.GÉME.ARAD{MEŠ}-ya na-aḫ-ša-ra-za e-e[p-ta]"
+]
+],
+"tr": "und Furcht ergriff das Gesinde.",
+"trlang": "DE"
+},
+{
+"n": "53",
+"sec": "§ 5'",
+"hl": "",
+"master": "[amm]ukk=a=wa=kan [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 23",
+"[am-m]u-uk-ka4-wa-kán [ ... ]"
+],
+[
+"B",
+"",
+"(Kolon fehlt in B.)"
+],
+[
+"C",
+"",
+"(Kolon fehlt in C.)"
+]
+],
+"tr": "Und [ic]h [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "54",
+"sec": "§ 5'",
+"hl": "",
+"master": "tuk=wa IGI-anda {GIŠ}ERIN-pi karū duwarnan",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 24",
+"[ ... ]x-nu-ut"
+],
+[
+"B",
+"Vs. II 8",
+"tu-uk-wa IGI-an-da {GIŠ}ERIN-pí ka-ru-ú du-wa-ar-na-an"
+],
+[
+"C",
+"Vs. II 10",
+"[tu-u]k-wa IGI-an-da {GIŠ}ERIN-pí ka-ru-⸢ú⸣ [du-wa-a]r-na-an"
+]
+],
+"tr": "Für dich17 (ist) schon Zeder gebrochen,",
+"trlang": "DE"
+},
+{
+"n": "55",
+"sec": "§ 5'",
+"hl": "",
+"master": "TU7{ḪI.A}=ya=tta menaḫḫanda karū zanuwan",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 25",
+"[ ... n]u-ut"
+],
+[
+"B",
+"Vs. II 10",
+"TU7{ḪI.A}-ya-at-ta me-na-aḫ-ḫa-an-da ka-ru-ú za-nu-wa-an"
+],
+[
+"C",
+"Vs. II 12",
+"⸢TU7⸣{ḪI.A}-ya-at-ta I[GI-an-da k]a-ru-ú za-nu-wa-an"
+]
+],
+"tr": "und für dich (sind) schon Suppen gekocht.",
+"trlang": "DE"
+},
+{
+"n": "56",
+"sec": "§ 5'",
+"hl": "",
+"master": "tuk=ma=wa IGI-anda UD{KAM}-ti GE6{KAM}-ti=ya {LÚ.MEŠ}NAR=ma=wa! GIŠ {d}INANNA{ḪI.A} menaḫḫanda tiššan ḫarkanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 26",
+"[ ... ]x e-ep-pé-er [ ... GIŠ {d}]⸢INANNA{ḪI⸣}.A [ ... ]"
+],
+[
+"B",
+"Vs. II 11",
+"tu-uk-ma-wa!16 IGI-an-da UD{KAM}-ti GE6{KAM}-ti-⸢ya⸣ {LÚ.MEŠ}NAR-ma-ši GIŠ {d}INANNA{ḪI.A} me-na-aḫ-ḫa-an-da [t]i-eš-ša-an ḫar-kán-zi"
+],
+[
+"C",
+"Vs. II 13",
+"[tu-uk-ma-w]a IGI-an-[da UD{KAM}-t]i GE6{KAM}-ti-ya [{L]}Ú.⸢MEŠNAR⸣-m[a? _ GIŠ] {d}I[NANNA{ḪI.A} m]e-na-aḫ-ḫa-an-da ti-iš-ša-an ḫ[ar-kán-zi]"
+]
+],
+"tr": "Für dich aber halten Tag und Nacht die Sänger die Leiern18 bereit.",
+"trlang": "DE"
+},
+{
+"n": "57",
+"sec": "§ 5'",
+"hl": "",
+"master": "šarā tīya",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 28",
+"[ ... ]x-uš tu-uk [ ... ]"
+],
+[
+"B",
+"Vs. II 13",
+"ša-ra-a ti-i-ya"
+],
+[
+"C",
+"Vs. II 15",
+"[ša-r]a-a ti-i-ya"
+]
+],
+"tr": "Steh auf,",
+"trlang": "DE"
+},
+{
+"n": "58",
+"sec": "§ 5'",
+"hl": "",
+"master": "nu INA É-YA arḫa eḫu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 29",
+"[ ... a]n-da [ ... ]"
+],
+[
+"B",
+"Vs. II 14",
+"[ _ I-N]A É-YA ar-ḫa e-ḫu"
+],
+[
+"C",
+"Vs. II 16",
+"nu I-NA É-YA a[r-ḫa ... ]"
+]
+],
+"tr": "und komm fort in mein Haus!‘“",
+"trlang": "DE"
+},
+{
+"n": "59",
+"sec": "§ 5'",
+"hl": "",
+"master": "n=aš šarā tīyat {d}kumarbiš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 30",
+"[ ... ]x-⸢a⸣-x-an"
+],
+[
+"B",
+"Vs. II 15",
+"[ _ _ ša]-ra-a ti-i-ya-at {d}ku-mar-⸢bi-iš⸣"
+],
+[
+"C",
+"Vs. II 17",
+"na-aš ša-ra-a ti-[i-ya-at {d}ku]-⸢mar-bi-iš⸣"
+]
+],
+"tr": "Er stand auf, der Kumarbi,",
+"trlang": "DE"
+},
+{
+"n": "60",
+"sec": "§ 5'",
+"hl": "",
+"master": "nu=šši {d}impaluriš peran iyattari",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 16",
+"[ _ _ _ {d}i]m-pa-al-lu-ri-iš pé-ra-an ⸢i-ya-at-ta-at⸣"
+],
+[
+"C",
+"Vs. II 18",
+"nu-uš-ši {d}im-pa-lu-r[i-iš pé-ra-a]n i-ya-at-ta-ri"
+]
+],
+"tr": "und ihm voran geht Impaluri.",
+"trlang": "DE"
+},
+{
+"n": "61",
+"sec": "§ 5'",
+"hl": "",
+"master": "{d}kumarbiš=ma [IŠTU] ⸢É-ŠU⸣ iyattari",
+"words": [],
+"mss": [
+[
+"B",
+"",
+"(Kolon fehlt in B.)"
+],
+[
+"C",
+"Vs. II 19",
+"{d}ku-mar-bi-iš-ma [ _ _ ] ⸢É-ŠU i⸣-ya-at-ta-ri"
+]
+],
+"tr": "Kumarbi aber geht [aus] seinem Haus,",
+"trlang": "DE"
+},
+{
+"n": "62",
+"sec": "§ 5'",
+"hl": "",
+"master": "n=aš iyanniya[t] {d}kumarbiš",
+"words": [],
+"mss": [
+[
+"B",
+"",
+"(Kolon fehlt in B.)"
+],
+[
+"C",
+"Vs. II 20",
+"na-aš i-ya-an-ni-ya-[at] ⸢{d}⸣ku-mar-bi-iš"
+]
+],
+"tr": "und er zo[g] los, der Kumar[bi].",
+"trlang": "DE"
+},
+{
+"n": "63",
+"sec": "§ 5'",
+"hl": "",
+"master": "n=aš=kan arunaš É-ri anda pait",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 17",
+"[na-aš-ká]n a!-⸢ru-na-aš⸣ É-ri an-da p[a-i]t ¬¬¬"
+],
+[
+"C",
+"Vs. II 21",
+"na-aš-kán a-ru-na-aš ⸢É⸣-ri an-da pa-it ¬¬¬"
+]
+],
+"tr": "Er g[in]g in das Haus des Meeres.",
+"trlang": "DE"
+},
+{
+"n": "64",
+"sec": "§ 6'",
+"hl": "",
+"master": "nu arunaš IQBI",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 18",
+"[ _ a-r]u-na-aš IQ-BI"
+],
+[
+"C",
+"Vs. II 22",
+"nu a-ru-na-aš IQ-BI"
+]
+],
+"tr": "Das Meer sprach:",
+"trlang": "DE"
+},
+{
+"n": "65",
+"sec": "§ 6'",
+"hl": "",
+"master": "ANA {d}kumarbi=wa {GIŠ}ḫaššalli ašanna tiyandu",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 18",
+"A-NA ⸢{d}ku-mar-bi⸣-wa [{GIŠ}ḫa-a]š-ša-al-li a-ša-an-na ti-ya-an-du"
+],
+[
+"C",
+"Vs. II 22",
+"A-N[A] ⸢{d}⸣ku-mar-bi-wa {GIŠ}ḫa-aš-ša-al-li ⸢a⸣-ša-an-na ti-ya-an-du"
+]
+],
+"tr": "„Für Kumarbi stelle man einen Schemel zum Sitzen hin,",
+"trlang": "DE"
+},
+{
+"n": "66",
+"sec": "§ 6'",
+"hl": "",
+"master": "{GIŠ}BANŠUR-un=ma=w[a]=šši peran tiyandu",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 20",
+"[{GIŠ}BA]NŠUR-un-ma-aš-ši pé-ra-an ti-ya-an-du"
+],
+[
+"C",
+"Vs. II 24",
+"{GIŠ}BANŠUR-un-ma-w[a-aš-š]i pé-ra-an ti-ya-an-du"
+]
+],
+"tr": "einen Tisch aber stelle man vor ihn hin.",
+"trlang": "DE"
+},
+{
+"n": "67",
+"sec": "§ 6'",
+"hl": "",
+"master": "adanna=wa=šš[i a]kuwanna udandu",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 21",
+"[nu-u]š17-ši (Rasur) a-da-an-na ú-da-an-du"
+],
+[
+"C",
+"Vs. II 25",
+"a-da-an-na-wa-aš-š[i a]-ku-wa-an-na ú-da-an-du"
+]
+],
+"tr": "Man bringe ih[m] zu essen (und) zu [t]rinken19.",
+"trlang": "DE"
+},
+{
+"n": "68",
+"sec": "§ 6'",
+"hl": "",
+"master": "KAŠ-eššar=ma=wa=šši akuwanna udandu",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 22",
+"[KAŠ]-eš-šar-ma-aš-ši a-ku-wa-an-na ú-da-an-du"
+],
+[
+"C",
+"Vs. II 26",
+"KAŠ-eš-šar-ma-wa-aš-š[i a-k]u-wa-an-na ú-da-an-du"
+]
+],
+"tr": "Bier aber bringe man ihm zum Trinken.“",
+"trlang": "DE"
+},
+{
+"n": "69",
+"sec": "§ 6'",
+"hl": "",
+"master": "{LÚ.MEŠ}MUḪALDIM TU7{ḪI.A} uter",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 23",
+"[{L]}ÚMUḪALDIM{ḪI.A} TU7{ḪI.A} ú-te-er"
+],
+[
+"C",
+"Vs. II 27",
+"⸢{LÚ.MEŠ}⸣MUḪALDIM TU7{ḪI.A} ⸢ú⸣-[t]e-er"
+]
+],
+"tr": "Die Köche brachten die Suppen,",
+"trlang": "DE"
+},
+{
+"n": "70",
+"sec": "§ 6'",
+"hl": "",
+"master": "{LÚ.MEŠ}SAGI.A=ma=šši GEŠTIN KU7 akuwanna uter",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 23",
+"{LÚ}SAGI.A-ma-aš-ši [GEŠT]IN KU7 a-ku-wa-an-na ú-te-er"
+],
+[
+"C",
+"Vs. II 27",
+"{LÚ.MEŠ}SAGI.A-ma-aš-ši GEŠTIN KU7 a-ku-wa-an-n[a ú-t]e-er"
+]
+],
+"tr": "die Mundschenke aber brachten ihm süßen Wein zum Trinken.",
+"trlang": "DE"
+},
+{
+"n": "71",
+"sec": "§ 6'",
+"hl": "",
+"master": "1-ŠU ekwer",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 24",
+"1-ŠU e-⸢ku⸣-er"
+],
+[
+"C",
+"Vs. II 28",
+"1-ŠU e-ku-er"
+]
+],
+"tr": "Sie tranken einmal.",
+"trlang": "DE"
+},
+{
+"n": "72",
+"sec": "§ 6'",
+"hl": "",
+"master": "2-ŠU ekwer",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 25",
+"[2]-ŠU e-⸢ku⸣-er"
+],
+[
+"C",
+"Vs. II 28",
+"2-ŠU e-ku-e[r]"
+]
+],
+"tr": "Sie tranken zweimal.",
+"trlang": "DE"
+},
+{
+"n": "73",
+"sec": "§ 6'",
+"hl": "",
+"master": "3-ŠU ekwer",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 25",
+"3-ŠU e-ku-er"
+],
+[
+"C",
+"Vs. II 29",
+"3-ŠU e-k[u-er]"
+]
+],
+"tr": "Sie tranken dreimal.",
+"trlang": "DE"
+},
+{
+"n": "74",
+"sec": "§ 6'",
+"hl": "",
+"master": "4-ŠU ekwer",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 25",
+"4-ŠU e-ku-er"
+],
+[
+"C",
+"Vs. II 29",
+"⸢4⸣-ŠU e-ku-er"
+]
+],
+"tr": "Sie tranken viermal.",
+"trlang": "DE"
+},
+{
+"n": "75",
+"sec": "§ 6'",
+"hl": "",
+"master": "5-ŠU ekwer",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 26",
+"[5-Š]U e-ku-er"
+],
+[
+"C",
+"Vs. II 29",
+"5-ŠU e-ku-er"
+]
+],
+"tr": "Sie tranken fünfmal.",
+"trlang": "DE"
+},
+{
+"n": "76",
+"sec": "§ 6'",
+"hl": "",
+"master": "6-ŠU ekwer",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 26",
+"6-ŠU e-ku-er"
+],
+[
+"C",
+"Vs. II 30",
+"6-ŠU ⸢e⸣-[ku-er]"
+]
+],
+"tr": "Sie tranken sechsmal.",
+"trlang": "DE"
+},
+{
+"n": "77",
+"sec": "§ 6'",
+"hl": "",
+"master": "7-ŠU ekwer",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 26",
+"7-ŠU e-⸢ku⸣-[er]"
+],
+[
+"C",
+"Vs. II 30",
+"⸢7⸣-ŠU e-ku-er"
+]
+],
+"tr": "Sie tranken siebenmal.",
+"trlang": "DE"
+},
+{
+"n": "78",
+"sec": "§ 6'",
+"hl": "",
+"master": "nu {d}kumarbiš ANA {d}mukišanu {LÚ}SUKKAL-ŠU memiškiuwan d[āiš]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 27",
+"[ _ {d}k]u-mar-bi-iš A-NA {d}mu-ki-ša-nu [ ... ]"
+],
+[
+"C",
+"Vs. II 30",
+"nu {d}ku-mar-bi-iš A-NA [{d}mu-ki-ša-n]u {LÚ}SUKKAL-ŠU me-mi-iš-ki-u-wa-an d[a-a-iš]"
+]
+],
+"tr": "Kumarbi be[gann], zu Mukišanu, seinem Wesir, zu sprechen.",
+"trlang": "DE"
+},
+{
+"n": "79",
+"sec": "§ 6'",
+"hl": "",
+"master": "{d}m[ukišanu {LÚ}SUKK]AL-YA memiyan=da kwin memaḫḫi",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 28",
+"[me-mi-y]a-an-da ku-in me-⸢ma⸣-aḫ-ḫi"
+],
+[
+"C",
+"Vs. II 32",
+"{d}m[u-ki-ša-nu {LÚ}SUKK]AL-YA me-mi-an-da ku-in me-ma-a[ḫ-ḫi]"
+]
+],
+"tr": "„M[ukišanu], mein [Wes]ir,20 das Wort, das ich dir sage,",
+"trlang": "DE"
+},
+{
+"n": "80",
+"sec": "§ 6'",
+"hl": "",
+"master": "⸢nu=mu⸣ GEŠTU-[an parā] ēp",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 28",
+"⸢nu-mu GEŠTU⸣-[an ... ]"
+],
+[
+"C",
+"Vs. II 33",
+"⸢nu⸣-[mu ... ] e-ep"
+]
+],
+"tr": "halte mir (dein) Oh[r hin].",
+"trlang": "DE"
+},
+{
+"n": "81",
+"sec": "§ 6'",
+"hl": "",
+"master": "ŠU-za {GIŠ}GIDRU-an dā",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 29",
+"[ _ _ {GIŠ}GIDRU-a]n da-a"
+],
+[
+"C",
+"Vs. II 33",
+"ŠU-za {GIŠ}GIDRU-an da-a"
+]
+],
+"tr": "Nimm einen Stab mit der Hand,",
+"trlang": "DE"
+},
+{
+"n": "82",
+"sec": "§ 6'",
+"hl": "",
+"master": "[INA GÌR{MEŠ}-KA=ma=za {KUŠ}]E.SIR{ḪI.A}-uš šarkui",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 29",
+"[ ... ]"
+],
+[
+"C",
+"Vs. II 34",
+"[ ... {KUŠ}]⸢E⸣.SIR!{ḪI.A}-uš šar-ku-i"
+]
+],
+"tr": "[an deine Füße aber] zieh Schuhe,",
+"trlang": "DE"
+},
+{
+"n": "83",
+"sec": "§ 6'",
+"hl": "",
+"master": "nu ī[t]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 30",
+"[ ... ]"
+],
+[
+"C",
+"Vs. II 34",
+"nu ⸢i⸣-i[t]"
+]
+],
+"tr": "und ge[h].",
+"trlang": "DE"
+},
+{
+"n": "84",
+"sec": "§ 6'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. II 30",
+"[ ... ] x [ ... ]"
+],
+[
+"C",
+"Vs. II 35",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "85",
+"sec": "§ 6'",
+"hl": "",
+"master": "[n]u=kan A{ḪI.A}-naš and[a ...]",
+"words": [],
+"mss": [
+[
+"C",
+"Vs. II 35",
+"[n]u-kán A{ḪI.A}-na-aš an-d[a]"
+]
+],
+"tr": "Zum Wasser hi[n ... ]21",
+"trlang": "DE"
+},
+{
+"n": "86",
+"sec": "§ 6'",
+"hl": "",
+"master": "[nu=kan? kē udd]ār A{ḪI.A}-aš pera[n memi]",
+"words": [],
+"mss": [
+[
+"C",
+"Vs. II 36",
+"[ ... ud-da-a]-ar A⸢{ḪI⸣}.A-aš pé-ra-a[n ... ]"
+]
+],
+"tr": "[diese Wor]te [sprich v]or den Wassern:",
+"trlang": "DE"
+},
+{
+"n": "87",
+"sec": "§ 6'",
+"hl": "",
+"master": "[ ... {d}ku]marbi[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Vs. II 37",
+"[ ... {d}ku]-⸢mar-bi⸣[ ... ]"
+],
+[
+"C",
+"",
+"Vs. II bricht ab."
+]
+],
+"tr": "‚[ ... Ku]marbi [ ... ]‘“",
+"trlang": "DE"
+},
+{
+"n": "88",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1",
+"[ ... ] x [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "89",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 2",
+"[ ... ]x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "90",
+"sec": "§ 7''",
+"hl": "",
+"master": "[m]ān GE6-a[z ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3",
+"[ma]-⸢a-an⸣ GE6-a[z ... ]"
+]
+],
+"tr": "[A]ls es Nach[t ... ]",
+"trlang": "DE"
+},
+{
+"n": "91",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... ḫ]āli t[iyat]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3",
+"[ ... ] [ḫa]-a-li t[i-ya-at]"
+]
+],
+"tr": "[ ... die Na]chtwache t[rat ein ... ]",
+"trlang": "DE"
+},
+{
+"n": "92",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... t]iyat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4",
+"[ ... ] [t]i-ya-at"
+]
+],
+"tr": "[ ... t]rat ein.",
+"trlang": "DE"
+},
+{
+"n": "93",
+"sec": "§ 7''",
+"hl": "",
+"master": "u-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 5",
+"⸢ú⸣-[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "94",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... ] NA4-aš NA4-an na-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 5",
+"[ ... ] ⸢NA4?⸣-aš NA4-an ⸢na⸣-[ ... ]"
+]
+],
+"tr": "[ ... ] der Stein den Stein [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "95",
+"sec": "§ 7''",
+"hl": "",
+"master": "n=an ḫaššanuš[k- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 7",
+"na-an ḫa-aš-ša-nu-uš-[ ... ]"
+]
+],
+"tr": "[ ... ] bring[-... ] ihn zur Welt [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "96",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... ] {NA4}perunaš arḫa [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 7",
+"[ ... ] {NA4}pé-ru-na-aš ar-ḫa [ ... ]"
+]
+],
+"tr": "[ ... ] Felsen weg [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "97",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... ] DUMU {d}kumarbi lalu[k- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 8",
+"[ ... ] DUMU {d}ku-mar-bi la-lu-u[k- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] Sohn Kumarbi leucht[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "98",
+"sec": "§ 8''",
+"hl": "",
+"master": "ḫaššanuer=an MUNUS{M[}EŠ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 10",
+"ḫa-aš-ša-nu-e-ra-an MUNUS{M[}EŠ ... ]"
+],
+[
+"E",
+"1'",
+"[ ... ]x"
+]
+],
+"tr": "Sie brachten ihn zur Welt, die Frau[en ... ]22",
+"trlang": "DE"
+},
+{
+"n": "99",
+"sec": "§ 8''",
+"hl": "",
+"master": "nu {d}gulšuš DINGIR.M[AḪ{ḪI.A}-uš DUMU-an karper]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 11",
+"⸢nu {d}⸣gul-šu-uš DINGIR.M[AḪ{ḪI.A}-uš ... ]"
+],
+[
+"E",
+"1'",
+"nu ⸢{d}⸣[ ... ]"
+]
+],
+"tr": "Die Schicksalsgöttinnen (und) die Muttergött[innen hoben das Kind hoch]",
+"trlang": "DE"
+},
+{
+"n": "100",
+"sec": "§ 8''",
+"hl": "",
+"master": "[n=an=kan ANA {d}k]um[arbi g]inuwaš ḫalāe[r]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 11",
+"[ ... {d}k]u-m[ar-bi] [g]i-nu-wa-aš ḫa-la-a-e[r]"
+],
+[
+"E",
+"1'",
+"[ ... ] [ ... gi-nu]-wa-aš ḫa-l[a-a-er]"
+]
+],
+"tr": "und setzten23 [ihn dem K]um[arbi] auf die K[nie].",
+"trlang": "DE"
+},
+{
+"n": "101",
+"sec": "§ 8''",
+"hl": "",
+"master": "[{d}kumar]biš=⸢za⸣ a[ši D]UMU.NITA-a[n] duškiškiuwan dā[iš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 12",
+"[{d}ku-mar]-⸢bi-iš-za a⸣-[ši D]UMU.NITA-a[n] du-uš-ki-iš-ki-u-wa-an da-⸢a⸣-[iš]"
+],
+[
+"E",
+"3'",
+"[du-u]š-ki-iš-k[i-u-wa-an ... ]"
+]
+],
+"tr": "[Kumar]bi bega[nn], sich an je[nem S]oh[n] zu erfreuen.",
+"trlang": "DE"
+},
+{
+"n": "102",
+"sec": "§ 8''",
+"hl": "",
+"master": "[n]=an kunkeškiuwan d[āiš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 13",
+"[na]-an ku-un-ke-eš-ki-u-wa-an d[a-a-iš]"
+],
+[
+"E",
+"",
+"(Kolon fehlt in E.)"
+]
+],
+"tr": "Er be[gann], ihn zu wiegen24",
+"trlang": "DE"
+},
+{
+"n": "103",
+"sec": "§ 8''",
+"hl": "",
+"master": "nu šanezzi ŠUM-an [ ... p]eškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 14",
+"nu ša-ne-ez-zi ŠUM-an [ _ _18 p]é-eš-ki-u-wa-an da-a-iš ¬¬¬"
+],
+[
+"E",
+"",
+"(Kolon fehlt in E.)"
+]
+],
+"tr": "und begann, (ihm) einen erstklassigen Namen [ ... ] zu [g]eben.",
+"trlang": "DE"
+},
+{
+"n": "104",
+"sec": "§ 8''",
+"hl": "",
+"master": "{d}kumarbiš=za PĀNI Z[I-ŠU memi]škiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 15",
+"{d}ku-mar-bi-iš-za PA-NI Z[I-ŠU me-mi-i]š-ki-u-wa-an da-a-iš"
+],
+[
+"E",
+"4'",
+"⸢{d}⸣ku-mar-bi-iš-z[a ... ]"
+]
+],
+"tr": "Kumarbi begann, zu [sich selb]st zu [spre]chen:25",
+"trlang": "DE"
+},
+{
+"n": "105",
+"sec": "§ 8''",
+"hl": "",
+"master": "kwit=wa=šši=kan ŠUM-an [teḫḫi?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 16",
+"ku-it-wa-aš-ši-kán ŠUM-an [ _ _ _ ]"
+],
+[
+"E",
+"5'",
+"ku-it-wa-aš-ši-k[án ... ]"
+]
+],
+"tr": "„Welchen Namen [gebe] ich ihm?",
+"trlang": "DE"
+},
+{
+"n": "106",
+"sec": "§ 8''",
+"hl": "",
+"master": "[{d}]gulšuš=wa=mu DINGIR.MAḪ{ḪI.A}-uš kwin DUMU-an SUM-er",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 16",
+"[{d}]gul-šu-uš-wa-mu DINGIR.MAḪ{ḪI.A}-uš ku-in DUMU-an SUM-er"
+],
+[
+"E",
+"5'",
+"[ ... ] DINGIR.MAḪ{MEŠ}-uš ku-[in ... ]"
+]
+],
+"tr": "Der Sohn, den mir die Schicksalsgöttinnen (und) die Muttergöttinnen gaben,",
+"trlang": "DE"
+},
+{
+"n": "107",
+"sec": "§ 8''",
+"hl": "",
+"master": "nu=war[=aš=kan] NÍ.TE-az arḫa {GIŠ}šiyatal mān watkut",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 17",
+"nu-wa-r[a-aš-kán] NÍ.TE-az ar-ḫa {GIŠ}ši-ya-tal ma-a-an wa-at-ku-ut"
+],
+[
+"E",
+"6'",
+"[ ... ] ⸢ma-a⸣-a[n ... ]"
+]
+],
+"tr": "sprang aus dem Körper hervor wie ein Speer.",
+"trlang": "DE"
+},
+{
+"n": "108",
+"sec": "§ 8''",
+"hl": "",
+"master": "paidd[u=wa=šša]n {d}ullikummi ŠUM-an ēšdu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 18",
+"pa-id-d[u-wa-aš-ša-a]n {d}ul-li-kum-mi ŠUM-an e-eš-du"
+]
+],
+"tr": "Fort[an] soll Ullikummi (= ‚Zerstöre Kumme!‘26) der Name sein.",
+"trlang": "DE"
+},
+{
+"n": "109",
+"sec": "§ 8''",
+"hl": "",
+"master": "nu=war=aš=kan nepiši [LUGAL-izna]nni UGU paiddu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 19",
+"nu-wa-ra-aš-kán ne-pí-ši [LUGAL-iz-na-a]n-ni UGU pa-id-du"
+]
+],
+"tr": "Er soll in den Himmel zum [König]tum hinaufgehen.",
+"trlang": "DE"
+},
+{
+"n": "110",
+"sec": "§ 8''",
+"hl": "",
+"master": "nu=wa=kan {URU}kummiyan URU-[an šan]ezzin GAM tamašdu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 20",
+"nu-wa-kán {URU}kum-mi-ya-an URU-[an ša-n]e-ez-zi-in GAM ta-ma-aš-du"
+]
+],
+"tr": "Er soll Kummiya, die [erst]klassige Stadt, nieder drücken.",
+"trlang": "DE"
+},
+{
+"n": "111",
+"sec": "§ 8''",
+"hl": "",
+"master": "{d}10-an=ma=wa GUL-aḫdu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 21",
+"{d}10-an-ma-wa GUL-aḫ-du"
+]
+],
+"tr": "Den Wettergott aber soll er schlagen.",
+"trlang": "DE"
+},
+{
+"n": "112",
+"sec": "§ 8''",
+"hl": "",
+"master": "nu=war[=an e]zzan GIM-an arḫa puššaeddu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 21",
+"nu-wa-r[a-an e]z-za-an GIM-an ar-ḫa pu-uš-ša-ed-du"
+]
+],
+"tr": "Er soll [ihn] wie [S]preu zerkleinern.",
+"trlang": "DE"
+},
+{
+"n": "113",
+"sec": "§ 8''",
+"hl": "",
+"master": "lalakwešan=ma=war=an[=kan GIM-an] GÌR-it anda pašiḫaeddu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 22",
+"la-la-ku-e-ša-an-ma-wa-ra-an-[kán ... ] GÌR-it an-da pa-ši-ḫa-ed-du"
+]
+],
+"tr": "Er soll ihn aber [wie] eine Ameise mit dem Fuß zertreten.",
+"trlang": "DE"
+},
+{
+"n": "114",
+"sec": "§ 8''",
+"hl": "",
+"master": "{d}tašmišun=ma=wa ḫaḫḫa[rin G]I-an mān arḫa zaḫreškeddu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 23",
+"{d}ta-aš-mi-šu-un-ma-wa ḫa-aḫ-ḫa-[ri-in G]I-an ma-a-an ar-ḫa za-aḫ-re-eš-ke-ed-du"
+]
+],
+"tr": "Den Tašmišu aber soll er wie ein dün[nes R]ohr zerquetschen.",
+"trlang": "DE"
+},
+{
+"n": "115",
+"sec": "§ 8''",
+"hl": "",
+"master": "DINGIR{MEŠ}=ma=wa=kan ḫūmanduš [nepiš]az GAM MUŠEN{ḪI.A} GIM-an išḫuwāu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 24",
+"DINGIR{MEŠ}-ma-wa-kán ḫu-u-ma-an-du-uš [ne-pí-š]a-az GAM MUŠEN{ḪI.A}19 GIM-an iš-ḫu-wa-a-ú"
+]
+],
+"tr": "Alle Götter aber soll er wie Vögel aus dem [Himm]el hinab schütten.",
+"trlang": "DE"
+},
+{
+"n": "116",
+"sec": "§ 8''",
+"hl": "",
+"master": "nu=war=aš dannaruš {DUG}ÚTUL{ḪI.A}-u[š GIM-an a]rḫa duwarn[e]škeddu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 25",
+"nu-wa-ra-aš dan-na-ru-uš {DUG}ÚTUL{ḪI.A}-u[š _ _ a]r-ḫa du-wa-ar-n[é-e]š-ke-ed-du ¬¬¬"
+]
+],
+"tr": "Er soll sie [wie] leere Töpf[e ze]rbre[c]hen.“",
+"trlang": "DE"
+},
+{
+"n": "117",
+"sec": "§ 9''",
+"hl": "",
+"master": "mān {d}kumarbiš INIM{MEŠ}-ar mem[iyauwanz]i zi[nn]et!?",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 26",
+"ma-a-an {d}ku-mar-bi-iš INIM⸢{MEŠ}⸣-ar me-m[i-ya-u-wa-an-z]i zi-i[n-ni]-et!?"
+]
+],
+"tr": "Als Kumarbi die Worte fer[tig] gesp[roche]n ha[tt]e,",
+"trlang": "DE"
+},
+{
+"n": "118",
+"sec": "§ 9''",
+"hl": "",
+"master": "nu=za PĀNI ZI-ŠU memiškiuwan [dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 27",
+"nu-za PA-NI ZI-ŠU me-mi-iš-ki-u-wa-⸢an⸣ [ _ _ _ ]"
+]
+],
+"tr": "[begann] er, zu sich selbst zu sprechen:27",
+"trlang": "DE"
+},
+{
+"n": "119",
+"sec": "§ 9''",
+"hl": "",
+"master": "[kwed]ani=wa[r]=an peḫḫi aši DUMU-an",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 27",
+"[ku-e-d]a-ni-wa-[r]a-⸢an⸣ pé-eḫ-ḫi a-ši DUMU-an"
+]
+],
+"tr": "„[We]m gebe ich ihn, jenen Sohn?",
+"trlang": "DE"
+},
+{
+"n": "120",
+"sec": "§ 9''",
+"hl": "",
+"master": "kwiš=war=an=z=ša[n dāi]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 28",
+"ku-iš-wa-ra-an-za-a[n ... ]"
+]
+],
+"tr": "Wer [nimmt] ihn28,",
+"trlang": "DE"
+},
+{
+"n": "121",
+"sec": "§ 9''",
+"hl": "",
+"master": "[nu=war=a]n uppiyaššar DÙ-zi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 28",
+"[nu-wa-ra-a]n up-pí-ya-aš-šar DÙ-zi"
+]
+],
+"tr": "behandelt [ih]n als Geschenk29",
+"trlang": "DE"
+},
+{
+"n": "122",
+"sec": "§ 9''",
+"hl": "",
+"master": "nu=war[=a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 29",
+"nu-wa-r[a- ... ] x x x x x x"
+]
+],
+"tr": "und [ ... ]?",
+"trlang": "DE"
+},
+{
+"n": "123",
+"sec": "§ 9''",
+"hl": "",
+"master": "nu=war=an=⸢kan⸣ [GE6]-i ⸢KI-pi=ya anda⸣ [pēd]ai?",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 30",
+"nu-wa-ra-an-⸢kán⸣ [GE6]-⸢i KI-pí-ya an-da⸣ [pé-e-d]a-⸢i?⸣"
+]
+],
+"tr": "Und (wer) wird ihn in die [dunkle] Erde hinein[bring]en?",
+"trlang": "DE"
+},
+{
+"n": "124",
+"sec": "§ 9''",
+"hl": "",
+"master": "nu=war=an [nepiša]š {d}UTU-uš {d}[30-ašš=a l]ē uwa[nz]i",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 31",
+"nu-wa-ra-an [ne-pí-ša-a]š {d}UTU-uš {d}[30-aš-ša l]e-e ú-wa-a[n-z]i"
+]
+],
+"tr": "Der Sonnengott des [Himmel]s [und der Mondgott] sollen ihn [nic]ht se[he]n!",
+"trlang": "DE"
+},
+{
+"n": "125",
+"sec": "§ 9''",
+"hl": "",
+"master": "lē=m[a=war=an aušz]i {d}10-aš {URU}kumm[iyaš U]R.SAG-liuš LUGAL-uš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 32",
+"le-e-m[a-wa-ra-an a-uš-z]i {d}10-aš {URU}kum-m[i-ya-aš U]R.SAG-li-uš LUGAL-uš"
+]
+],
+"tr": "Nicht ab[er soll ihn] der Wettergott [sehe]n, der [h]eldenhafte König der Stadt Kumm[iya].",
+"trlang": "DE"
+},
+{
+"n": "126",
+"sec": "§ 9''",
+"hl": "",
+"master": "nu=w[a]r=⸢an=kan⸣ lē kwenzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 33",
+"nu-w[a]-⸢ra-an-kán le⸣-e ku-en-zi"
+]
+],
+"tr": "Er soll ihn nicht töten!",
+"trlang": "DE"
+},
+{
+"n": "127",
+"sec": "§ 9''",
+"hl": "",
+"master": "lē[=war]=an aušzi {d}IŠTAR-iš {URU}ninuwaš MUNUS.LUGAL-aš tar-[ ... ]-kantaš MUNUS-aš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 33",
+"le-[e-wa-ra]-an a-uš-zi ⸢{d}⸣IŠTAR-iš {URU}ni-nu-wa-aš MUNUS.LUGAL-aš tar-[x-x?]-kán-ta-aš MUNUS-aš"
+]
+],
+"tr": "Nicht soll ihn Ištar sehen, die Königin der Stadt Ninive, die [ ... ] Frau!",
+"trlang": "DE"
+},
+{
+"n": "128",
+"sec": "§ 9''",
+"hl": "",
+"master": "[n]u=war=an ḫaḫḫarin GI-an G[I]M-an arḫa lē zaḫḫureškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 35",
+"[n]u-wa-ra-an ḫa-aḫ-ḫa-ri!-in GI-an G[I]M-an ar-ḫa le-e ⸢za-aḫ-ḫu⸣-re-eš-ke-ez-zi ¬¬¬"
+]
+],
+"tr": "Sie soll ihn nicht w[i]e ein dünnes Rohr zerquetschen!“",
+"trlang": "DE"
+},
+{
+"n": "129",
+"sec": "§ 10''",
+"hl": "",
+"master": "{d}kumarbiš ANA {d}impal[ur]i memiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 37",
+"{d}ku-mar-bi-iš A-NA {d}⸢im-pa⸣-l[u-r]i me-mi-iš-ki-u-wa-an da-a-iš"
+]
+],
+"tr": "Kumarbi begann, zu Impal[ur]i zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "130",
+"sec": "§ 10''",
+"hl": "",
+"master": "{d}impaluri INIM{MEŠ}-a[r=ta] kwe memiškemi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 38",
+"{d}im-pa-lu-ri INIM{MEŠ}-a[r-ta] ku-e! me-mi-iš-ke-mi"
+]
+],
+"tr": "„Impaluri, die Wort[e], die ich [dir] sage,",
+"trlang": "DE"
+},
+{
+"n": "131",
+"sec": "§ 10''",
+"hl": "",
+"master": "nu=mu uddanaš GEŠTU-an p[arā] lagān ḫar(a)k",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 39",
+"nu-mu ud-da-na-aš ⸢GEŠTU⸣-an p[a-ra-a] la-ga-a-an ḫar-ak"
+]
+],
+"tr": "halte meinen Worten das Ohr h[in]geneigt.",
+"trlang": "DE"
+},
+{
+"n": "132",
+"sec": "§ 10''",
+"hl": "",
+"master": "ŠU-za {GIŠ}GIDRU-an dā",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 39",
+"ŠU-za {GIŠ}GIDRU-an da-a"
+]
+],
+"tr": "Nimm einen Stab mit der Hand.",
+"trlang": "DE"
+},
+{
+"n": "133",
+"sec": "§ 10''",
+"hl": "",
+"master": "I[NA GÌR{MEŠ}-K]A=ma=za {KUŠ}E.SIR{ḪI.A}-uš liliwanduš IM{MEŠ}-uš šark[ui]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 40",
+"I-[NA GÌR{MEŠ}-K]A!-ma-za {KUŠ}E.SIR{ḪI.A}-uš (Rasur) li-li-wa-an-du-uš IM{MEŠ}-uš šar-k[u-i]"
+]
+],
+"tr": "A[n dei]ne [Füße] aber zie[h] Schuhe, die eilenden Winde.",
+"trlang": "DE"
+},
+{
+"n": "134",
+"sec": "§ 10''",
+"hl": "",
+"master": "[nu] {d}irširraš GAM-an īt",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 41",
+"[ _ ] {d}ir-ši-ir20-ra-aš GAM-an i-it"
+]
+],
+"tr": "Geh zu den Irširra-Gottheiten hinab",
+"trlang": "DE"
+},
+{
+"n": "135",
+"sec": "§ 10''",
+"hl": "",
+"master": "nu kī dašša[uwa] INIM{MEŠ}-ar {d}irširaš peran memi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 42",
+"nu ki-i da-aš-ša-[u-wa] INIM{MEŠ}-ar {d}ir-ši-ra-aš pí-an me-mi"
+]
+],
+"tr": "und sprich diese gewichti[gen] Worte zu den Irširra-Gottheiten:",
+"trlang": "DE"
+},
+{
+"n": "136",
+"sec": "§ 10''",
+"hl": "",
+"master": "uwatten",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 43",
+"ú-wa-at-tén"
+]
+],
+"tr": "‚Kommt!",
+"trlang": "DE"
+},
+{
+"n": "137",
+"sec": "§ 10''",
+"hl": "",
+"master": "ḫalz[eš]šai=wa=šmaš {d}kumarbiš DINGIR{MEŠ}-aš addaš DINGIR{MEŠ}-aš parna",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 43",
+"ḫal-z[e-eš]-ša-i-wa-aš-ma-aš {d}ku-mar-bi-iš DINGIR{MEŠ}-aš ad-da-aš ⸢DINGIR⸣{MEŠ}-aš pár-na"
+]
+],
+"tr": "Er ru[ft] euch, der Kumarbi, der Vater der Götter, ins Haus der Götter.",
+"trlang": "DE"
+},
+{
+"n": "138",
+"sec": "§ 10''",
+"hl": "",
+"master": "I[NIM-n]i=ma=wa=šmaš kuedani ḫalzeššai",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 44",
+"I[NIM-n]i-ma-wa-aš-ma-aš ku-⸢e⸣-da-ni ḫal-ze-eš-ša-i"
+]
+],
+"tr": "In der Angelegenheit aber, in der er euch ruft,",
+"trlang": "DE"
+},
+{
+"n": "139",
+"sec": "§ 10''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 45",
+"[ ... ] x [ ... ] x x [ ... ]21"
+]
+],
+"tr": "[ ... ]30",
+"trlang": "DE"
+},
+{
+"n": "140",
+"sec": "§ 10''",
+"hl": "",
+"master": "[n]u=wa ḫūtak uwatten",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 45",
+"[n]u-wa ḫu-u-⸢ta⸣-ak ú-wa-at-tén ¬¬¬"
+]
+],
+"tr": "Kommt sofort!‘",
+"trlang": "DE"
+},
+{
+"n": "141",
+"sec": "§ 11''",
+"hl": "",
+"master": "[n=an=za? {d}irširriu]š danzi DUMU-an",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 46",
+"[ ... {d}ir-ši-ir-ri-u]š da-an-zi DUMU-an"
+],
+[
+"C",
+"Rs. III 1",
+"[ ... DUM]U-an"
+]
+],
+"tr": "[Die Irširra]-Gottheiten nehmen [es], das Kind.",
+"trlang": "DE"
+},
+{
+"n": "142",
+"sec": "§ 11''",
+"hl": "",
+"master": "n=an apūš [pēdanzi GE6]-i KI-pi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 46",
+"na-an a-pu-u-uš [ ... GE6]-i KI-pí"
+],
+[
+"C",
+"Rs. III 1",
+"[ ... ] [ ... ]"
+]
+],
+"tr": "und die [bringen] es [in die dunkl]e Erde.",
+"trlang": "DE"
+},
+{
+"n": "143",
+"sec": "§ 11''",
+"hl": "",
+"master": "{d}irširriūš=⸢ma⸣=kan [ ... ] SAG.LI{ḪI.A}-uš IGI{ḪI.⸢}A⸣[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 47",
+"{d}ir-ši-ir-ri-uš-⸢ma⸣-kán [ ... ] SAG.LI{ḪI.A}-uš22"
+],
+[
+"C",
+"Rs. III 2",
+"[{d}ir-ši-i]r-ri-u-u[š-ma-kán ... ] [ ... ]{ḪI.A}-uš IGI{ḪI.⸢}A⸣[ ... ] [ ... ]"
+]
+],
+"tr": "Die Irširra-Gottheiten aber [ ... ] ... Augen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "144",
+"sec": "§ 11''",
+"hl": "",
+"master": "UL=ma=aš šallayaš [ ...?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 48",
+"Ú-UL-ma-aš šal-la-⸢ya-aš⸣ [ ...?] ==="
+],
+[
+"A",
+"",
+"Ende von Rs. III."
+],
+[
+"C",
+"Rs. III 4",
+"[ ... ]"
+]
+],
+"tr": "Nicht aber [ ... ] er zu den großen [ ... ].“31",
+"trlang": "DE"
+},
+{
+"n": "145",
+"sec": "§ 11''",
+"hl": "",
+"master": "[nu GIM-an?] {d}impaluri[š uddar ištamašt]a",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 4",
+"[ ... ] ⸢{d}⸣im-pa-lu-ri-i[š] [ ... iš-ta-ma-aš-t]a"
+]
+],
+"tr": "[Als?] Impaluri [die Worte gehör]t hatte,",
+"trlang": "DE"
+},
+{
+"n": "146",
+"sec": "§ 11''",
+"hl": "",
+"master": "ŠU-za {GIŠ}GIDRU-an [dāš]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 5",
+"ŠU-za {GIŠ}GIDRU-an [ ... ]"
+]
+],
+"tr": "[nahm er] einen Stab mit der Hand.",
+"trlang": "DE"
+},
+{
+"n": "147",
+"sec": "§ 11''",
+"hl": "",
+"master": "[INA GÌR{MEŠ}-ŠU {KUŠ}E.SIR{ḪI.A}-u]š šarkuet",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 6",
+"[ ... {KUŠ}E.SIR{ḪI.A}-u]š šar-ku-et"
+]
+],
+"tr": "[An seine Füße] zog er [die Schuhe],",
+"trlang": "DE"
+},
+{
+"n": "148",
+"sec": "§ 11''",
+"hl": "",
+"master": "[n=aš=kan? parā? iya]ttat {d}impaluri[š]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 7",
+"[ ... i-ya-a]t-ta-at {d}im-pa-lu-ri-i[š]"
+]
+],
+"tr": "[und er gi]ng [hinaus?], der Impaluri,",
+"trlang": "DE"
+},
+{
+"n": "149",
+"sec": "§ 11''",
+"hl": "",
+"master": "[n=aš=kan {d}irširr]aš anda ār(a)š",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 8",
+"[ ... {d}ir-ši-ir-r]a-aš an-da a-ar-aš ¬¬¬"
+]
+],
+"tr": "[und] kam bei den [Irširr]a-Gottheiten an.",
+"trlang": "DE"
+},
+{
+"n": "150",
+"sec": "§ 12''",
+"hl": "",
+"master": "[nu {d}impaluriš ud]dār ANA {d}irširraš [EGIR-pa memiškiuw]an dāiš",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 9",
+"[ ... ud]-da-a-ar A-NA {d}ir-ši-ir-ra-aš [ ... me-mi-iš-ki-u-w]a-an da-a-iš"
+]
+],
+"tr": "[Impaluri] begann, die [Wor]te den Irširra-Gottheiten [wieder zu sagen]:",
+"trlang": "DE"
+},
+{
+"n": "151",
+"sec": "§ 12''",
+"hl": "",
+"master": "uwatten=wa",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 10",
+"ú-wa-at-tén-wa"
+]
+],
+"tr": "„Kommt!",
+"trlang": "DE"
+},
+{
+"n": "152",
+"sec": "§ 12''",
+"hl": "",
+"master": "[ḫalzeššai=wa=šm]aš {d}kumarbiš DINGIR{MEŠ}-aš attaš",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 1",
+"[ ... ] x x [ ... ]"
+],
+[
+"C",
+"Rs. III 11",
+"[ḫal-ze-eš-ša-i-wa-aš-m]a-aš {d}ku-mar-<bi>-iš DINGIR{MEŠ}-aš at-ta-aš"
+]
+],
+"tr": "Es ruft [eu]ch Kumarbi, der Vater der Götter.",
+"trlang": "DE"
+},
+{
+"n": "153",
+"sec": "§ 12''",
+"hl": "",
+"master": "[ḫalzeššai]=ma=wa=šmaš kuedani memiyani",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 2",
+"[ḫal-ze-eš-ša-i]-ma-wa-[aš-ma-aš] [ ... ]"
+],
+[
+"C",
+"Rs. III 12",
+"[ḫal-ze-eš-ša-i-ma-wa-a]š-ma-aš ku-e-da-ni me-mi-ya-ni"
+]
+],
+"tr": "Die Angelegenheit aber, in der er euch [ruft],",
+"trlang": "DE"
+},
+{
+"n": "154",
+"sec": "§ 12''",
+"hl": "",
+"master": "[nu=war=an?] ⸢UL⸣ ša[ggaḫ]ḫi",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 3",
+"[ ... ] ⸢Ú-UL⸣ ša-a[g-ga-aḫ-ḫi]"
+],
+[
+"C",
+"Rs. III 13",
+"[ ... ša-ag-ga-aḫ]-ḫi23"
+]
+],
+"tr": "[die] ke[nn]e ich nicht.",
+"trlang": "DE"
+},
+{
+"n": "155",
+"sec": "§ 12''",
+"hl": "",
+"master": "nu=wa nuntarnutten uwaten",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 4",
+"[ ... ]"
+],
+[
+"C",
+"Rs. III 13",
+"nu-wa nu-un-tar-nu-ut-tén ú-wa-tén"
+]
+],
+"tr": "Beeilt euch, kommt!“",
+"trlang": "DE"
+},
+{
+"n": "156",
+"sec": "§ 12''",
+"hl": "",
+"master": "[n]u GIM-an [{d}irš]irriš INIM{ḪI.A}-ar ištamaše[r]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 4",
+"[n]u GIM-an [ ... INIM{MEŠ}-a]r iš-ta-ma-ši[r]"
+],
+[
+"C",
+"Rs. III 14",
+"[ ... {d}ir-š]i-ir-ri-⸢iš⸣ INIM{ḪI.A}-ar iš-t[a-ma-šir]"
+]
+],
+"tr": "Als die [Irš]irra-Gottheiten die Worte hörte[n],",
+"trlang": "DE"
+},
+{
+"n": "157",
+"sec": "§ 12''",
+"hl": "",
+"master": "[n=at nuntarnuer l]iliwaḫḫer",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 6",
+"[ ... li-li-w]a-aḫ-ḫe-er"
+],
+[
+"C",
+"Rs. III 15",
+"[ ... l]i-li-wa-aḫ-ḫe-er"
+]
+],
+"tr": "[beeilten (und) s]puteten sie sich.",
+"trlang": "DE"
+},
+{
+"n": "158",
+"sec": "§ 12''",
+"hl": "",
+"master": "[n=at {GIŠ}ŠÚ.A-az šarā ara]ēr",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 16",
+"[ ... a-ra]-e-er"
+]
+],
+"tr": "[Sie stand]en [vom Stuhl auf.]",
+"trlang": "DE"
+},
+{
+"n": "159",
+"sec": "§ 12''",
+"hl": "",
+"master": "n=at 1-anki šarrer",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 7",
+"[ ... ] ⸢1⸣-an-ki šar-re-er"
+],
+[
+"C",
+"Rs. III 16",
+"na-at 1-an-ki [ ... ]"
+]
+],
+"tr": "Sie durchquerten (den Raum) mit einem Mal32",
+"trlang": "DE"
+},
+{
+"n": "160",
+"sec": "§ 12''",
+"hl": "",
+"master": "[nu=kan I]TTI {d}kumarbi erer",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 8",
+"[ ... e-re]-er"
+],
+[
+"C",
+"Rs. III 17",
+"[ ... I]T-TI {d}ku-mar-bi e-re-er"
+]
+],
+"tr": "und gelangten [z]u Kumarbi.",
+"trlang": "DE"
+},
+{
+"n": "161",
+"sec": "§ 12''",
+"hl": "",
+"master": "nu {d}kumarbiš [{d}i]rširraš memiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 8",
+"nu {d}ku-mar-bi-iš [ ... me-mi-i]š-ki-⸢u-wa⸣-an da-a-iš ¬¬¬"
+],
+[
+"C",
+"Rs. III 18",
+"[ _ ] ⸢{d}⸣[ku-mar-bi-iš {d}i]r-ši-ir-ra-aš me-⸢mi⸣-i[š-ki-u-wa-an] da-a-iš ¬¬¬"
+]
+],
+"tr": "Kumarbi begann, zu den [I]rširra-Gottheiten zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "162",
+"sec": "§ 13''",
+"hl": "",
+"master": "kūn[=wa=za? DUMU-an? d]atten",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 10",
+"[ ... d]a-⸢at⸣-tén"
+],
+[
+"C",
+"Rs. III 20",
+"ku-u-un-[wa-za? _ _ da-a]t-tén"
+]
+],
+"tr": "„Dieses [Kind? n]ehmt,",
+"trlang": "DE"
+},
+{
+"n": "163",
+"sec": "§ 13''",
+"hl": "",
+"master": "nu=war=an uppeššar24 iyat[ten]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 10",
+"nu-wa-ra-an up-pé-eš-šar [ _ _ _ _ ]"
+],
+[
+"C",
+"Rs. III 20",
+"nu-wa-ra-an «šu-»up-pé-e[š-šar] i-ya-at-[tén]"
+]
+],
+"tr": "behandel[t] es (als) Geschenk.",
+"trlang": "DE"
+},
+{
+"n": "164",
+"sec": "§ 13''",
+"hl": "",
+"master": "[n]u=war=an GE6-i KI-pi pēdatt[en]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 11",
+"[n]u-wa-ra-an GE6-i KI-pí pé-da-at-t[én]"
+],
+[
+"C",
+"Rs. III 21",
+"[ _ _ _ _ G]E6-i KI-pí pé-e-ta-a[t-tén]"
+]
+],
+"tr": "Bring[t] es in die dunkle Erde.",
+"trlang": "DE"
+},
+{
+"n": "165",
+"sec": "§ 13''",
+"hl": "",
+"master": "nuntarnutten=wa liliwaḫten",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 1",
+"[ ... ]x x[ ... ]"
+],
+[
+"B",
+"Rs. III 12",
+"[nu-u]n-⸢tar⸣-nu-ut-⸢tén⸣-wa li-li-wa-aḫ-tén"
+],
+[
+"C",
+"Rs. III 22",
+"nu-un-tar-nu-u[t-tén-wa li-l]i-wa-aḫ-tén"
+]
+],
+"tr": "Beeilt (und) sputet euch!",
+"trlang": "DE"
+},
+{
+"n": "166",
+"sec": "§ 13''",
+"hl": "",
+"master": "nu=war=an=kan ANA {d}upellūri ZAG-ni {UZU}ZAG.UDU-ni {GIŠ}ŠU.I tiyatten",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 2",
+"[ _ {GI]}Š?ši-ya-tal?25 ti-x[ ... ]"
+],
+[
+"B",
+"Rs. III 13",
+"nu-wa-ra-an-kán A-NA {d}ú-pé-el-lu-ú-ri (Rasur) ZAG-ni {UZU}ZAG.UDU-ni {GIŠ}ŠU.I ti-ya-at-tén"
+],
+[
+"C",
+"Rs. III 23",
+"nu-wa-ra-an-k[án _ _ ] ⸢{d}⸣ú-pé-el-lu-ri ZAG-ni {UZU}ZAG.U[DU-ni {GIŠ}Š]U.I ti-ya-at-té[n]"
+]
+],
+"tr": "Setzt ihn Upelluri (wie) einen Speer auf die rechte Schulter.",
+"trlang": "DE"
+},
+{
+"n": "167",
+"sec": "§ 13''",
+"hl": "",
+"master": "INA UD 1{KAM}=war=aš AMMATU pargawēške[dd]aru",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 2",
+"[ ... ] [n]a-iš-ke-et-ta26"
+],
+[
+"B",
+"Rs. III 15",
+"I-NA UD 1{KAM}-wa-ra-aš AM-MA-DU pár-ga-u-e-eš-ki[d9-d]a-ru"
+],
+[
+"C",
+"Rs. III 25",
+"I-NA UD 1{KAM}-wa-r[a-aš AM-M]A-DU pár-ga-u-e-e[š-kid9-da-ru]"
+]
+],
+"tr": "An einem Tag soll er eine Elle33 wach[s]en.",
+"trlang": "DE"
+},
+{
+"n": "168",
+"sec": "§ 13''",
+"hl": "",
+"master": "INA ITU 1{KAM}=ma=war=aš IKU-an pargawēš[kidd]aru",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 3",
+"x[ ... ] na-iš-ke-et-ta27"
+],
+[
+"B",
+"Rs. III 16",
+"I-NA ITU 1{KAM}-ma-wa-ra-aš IKU-an pár-ga-u-e-eš-[kid9-d]a-ru"
+],
+[
+"C",
+"Rs. III 26",
+"I-NA ITU 1{KAM}-ma-w[a-ra-aš IK]U-an pár-ga-u-e-e[š-kid9-da-ru]"
+]
+],
+"tr": "In einem Monat aber soll er ein IKU-Maß34 wac[hs]en.",
+"trlang": "DE"
+},
+{
+"n": "169",
+"sec": "§ 13''",
+"hl": "",
+"master": "SAG.DU-i=ma=wa=šši=kan kwiš NA4-aš walḫanniškettari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 4",
+"x[ ... ]"
+],
+[
+"B",
+"Rs. III 17",
+"SAG.DU-i-ma-wa-aš-ši-kán ku-iš NA4-aš wa-al-ḫa-an-ni-iš-kit9-ta-ri"
+],
+[
+"C",
+"Rs. III 27",
+"SAG.DU-i-ma-wa-[aš-ši-kán k]u-iš NA4-aš wa-al-ḫa-an-ni-i[š-kit9-ta-ri] ¬¬¬"
+]
+],
+"tr": "Der Stein aber, der ihm an den Kopf geschlagen wird,",
+"trlang": "DE"
+},
+{
+"n": "170",
+"sec": "§ 13''",
+"hl": "",
+"master": "nu=war=aš IGI{ḪI.A}-waš waššiyattaru",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 5",
+"na-at IGI{ḪI.A}-wa-aš wa-[aš-ši-ya-at-ta-ru] ¬¬¬"
+],
+[
+"B",
+"Rs. III 19",
+"nu-wa28-ra-aš IGI{ḪI.A}-i wa-aš-ši-ya-at-ta-ru ==="
+]
+],
+"tr": "soll auf (seine) Augen gedeckt sein.“35",
+"trlang": "DE"
+},
+{
+"n": "171",
+"sec": "§ 14''",
+"hl": "",
+"master": "nu GIM-an {d}irširr[uš INI]M{MEŠ}-ar ⸢ištamaššer⸣",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 6",
+"nu GIM-an {d}ir-ši-ir-r[u-uš INI]M⸢{MEŠ}-ar iš-ta-ma-aš-šir⸣"
+]
+],
+"tr": "Als die Irširr[a-Gottheiten die Wor]te gehört hatten,",
+"trlang": "DE"
+},
+{
+"n": "172",
+"sec": "§ 14''",
+"hl": "",
+"master": "nu=kan ANA {d}kumarb[i DUMU-an g]inuwaz arḫa dāer",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 7",
+"nu-kán A-NA {d}ku-mar-b[i _ _ g]i-nu-wa-az ar-ḫa da-a-er"
+]
+],
+"tr": "nahmen sie dem [K]umarbi [das Kind] von den [K]nien.",
+"trlang": "DE"
+},
+{
+"n": "173",
+"sec": "§ 14''",
+"hl": "",
+"master": "{d}iršir[ruš] DUMU-an karper",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 7",
+"{d}⸢ir-ši-ir⸣-[ru-uš] DUMU-an kar-pé-er"
+]
+],
+"tr": "Die Iršir[ra-Gottheiten] hoben das Kind hoch",
+"trlang": "DE"
+},
+{
+"n": "174",
+"sec": "§ 14''",
+"hl": "",
+"master": "nu[=šmaš=an=k]an {UZU}GABA-i anda TÚG-an GIM-an tamaššer",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 8",
+"nu-u[š-ma-ša-an-k]án {UZU}GABA-i an-da TÚG-an GIM-an ta-ma-aš-ši-er"
+]
+],
+"tr": "und drückten [ihn sich] wie ein Kleidungsstück an [die] Brust.",
+"trlang": "DE"
+},
+{
+"n": "175",
+"sec": "§ 14''",
+"hl": "",
+"master": "⸢n=an⸣ IM{M[}EŠ? GIM-a]n? karper",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 9",
+"⸢na-an IM⸣{M[}EŠ? GIM-a]n? kar-pé-er"
+]
+],
+"tr": "Sie hoben ihn hoch [wi]e? der Wind",
+"trlang": "DE"
+},
+{
+"n": "176",
+"sec": "§ 14''",
+"hl": "",
+"master": "n=an=kan ANA {d}ellel ginuwaš ḫalāer",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 9",
+"na-an-kán A-NA {d}el-le!-el gi-nu-wa-aš ḫa-⸢la⸣-a-er"
+]
+],
+"tr": "und setzten ihn Enlil auf die Knie.36",
+"trlang": "DE"
+},
+{
+"n": "177",
+"sec": "§ 14''",
+"hl": "",
+"master": "nu {d}[e]lalluš IGI{ḪI.A}-wa kar(a)pta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 10",
+"nu ⸢{d}⸣[e]-la-al-lu-uš IGI⸢{ḪI.A}⸣-wa kar-ap-ta"
+]
+],
+"tr": "[E]nlil hob die Augen.",
+"trlang": "DE"
+},
+{
+"n": "178",
+"sec": "§ 14''",
+"hl": "",
+"master": "nu=za DUMU-an šakuiškezz[i]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 11",
+"nu-za DUMU-an ša-ku-iš-ke-ez-z[i]"
+]
+],
+"tr": "Er schau[t] das Kind an,",
+"trlang": "DE"
+},
+{
+"n": "179",
+"sec": "§ 14''",
+"hl": "",
+"master": "DINGIR-LIM-anni=ya=aš p[er]an aranza",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 11",
+"DINGIR-LIM-an-ni-ya-aš p[í]-an a-ra-an-za"
+]
+],
+"tr": "Er steht v[o]r der Gottheit stehend,",
+"trlang": "DE"
+},
+{
+"n": "180",
+"sec": "§ 14''",
+"hl": "",
+"master": "NÍ.TE-aš=ma=šši NA4-aš {NA4}ku[nk]unuzziyaš DÙ-anza",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 12",
+"NÍ.TE-aš-ma-aš-ši NA4-aš {NA4}ku-[un-k]u-nu-uz-zi-ya-aš DÙ-an-za ¬¬¬"
+]
+],
+"tr": "der Körper aber (ist) ihm aus Stein, aus Di[or]it37, gemacht.",
+"trlang": "DE"
+},
+{
+"n": "181",
+"sec": "§ 15''",
+"hl": "",
+"master": "nu=za {d}elliluš PĀNI Z[I-Š]U memiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 13",
+"nu-za {d}el-li-lu-uš PA-NI Z[I-Š]U me-mi-iš-ki-u-wa-an da-a-iš"
+]
+],
+"tr": "Enlil begann, zu sich s[el]bst zu sprechen:38",
+"trlang": "DE"
+},
+{
+"n": "182",
+"sec": "§ 15''",
+"hl": "",
+"master": "kwiš=war=aš aši DUMU-aš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 14",
+"ku-iš-wa-ra-aš a-ši DUMU-aš"
+],
+[
+"D",
+"Rs. III 1'",
+"a-ši [ ... ]"
+]
+],
+"tr": "„Wer ist jenes Kind,",
+"trlang": "DE"
+},
+{
+"n": "183",
+"sec": "§ 15''",
+"hl": "",
+"master": "kw[in] namma šallanuēr {d}gulšuš DINGIR.MAḪ{MEŠ}-uš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 14",
+"ku-[in] nam-ma šal-la-nu-e-er {d}gul-šu-uš DINGIR.MAḪ{MEŠ}-uš"
+],
+[
+"D",
+"Rs. III 1'",
+"[ ... ]"
+]
+],
+"tr": "da[s] sie noch39 großgezogen haben, die Schicksalsgöttinnen (und) die Muttergöttinnen?",
+"trlang": "DE"
+},
+{
+"n": "184",
+"sec": "§ 15''",
+"hl": "",
+"master": "kwiš=war=aš [namma] uškezzi šallayaš DINGIR{MEŠ}-aš daššawēš zaḫḫāu[š]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 15",
+"ku-iš-wa-ra-aš [ _ _ ] uš-ke-ez-zi šal-la-ya-aš DINGIR{MEŠ}-aš da-aš-ša-u-⸢e⸣-eš za-aḫ-ḫa-u[š]"
+],
+[
+"D",
+"Rs. III 2'",
+"ku-iš-w[a-ra-aš ... ] za-aḫ-ḫa-a-u[š]"
+]
+],
+"tr": "Wer wird sie [noch] sehen, die schweren Schlachte[n] der großen Götter?40",
+"trlang": "DE"
+},
+{
+"n": "185",
+"sec": "§ 15''",
+"hl": "",
+"master": "[nu=w]a? UL kwēlka",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 16",
+"[nu-w]a? Ú-UL ku-e-el-ka4"
+],
+[
+"D",
+"Rs. III 3'",
+"[ ... ]"
+]
+],
+"tr": "Es (ist) nicht (das Kind) irgendeines (anderen),",
+"trlang": "DE"
+},
+{
+"n": "186",
+"sec": "§ 15''",
+"hl": "",
+"master": "ŠA {d}kumarbi=pat=war=a[t idal]utar",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 17",
+"ŠA {d}ku-⸢mar⸣-bi-pát-wa-ra-a[t i-da-l]u-tar"
+],
+[
+"D",
+"Rs. III 3'",
+"[ ... ] ḪUL-tar"
+]
+],
+"tr": "es (ist) das [Üb]el nur des Kumarbi.",
+"trlang": "DE"
+},
+{
+"n": "187",
+"sec": "§ 15''",
+"hl": "",
+"master": "{d}kumarbiš=wa GIM-an {d}10-an šallanut",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 17",
+"{d}ku-mar-bi-iš-wa GIM-an {d}10-an šal-la-nu-ut"
+],
+[
+"D",
+"Rs. III 4'",
+"{d}ku-ma[r-bi-iš-wa ... ]"
+]
+],
+"tr": "Wie Kumarbi den Wettergott großzogen,",
+"trlang": "DE"
+},
+{
+"n": "188",
+"sec": "§ 15''",
+"hl": "",
+"master": "IGI-anda=ma=wa[=šši] kān {NA4}kunkunuzzin tarpanallin šalla[nut]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 18",
+"IGI-an-da-ma-wa-a[š-ši ka]-a-an {NA4}ku-un-ku-nu-uz-<zi>-in tar-pa-na-⸢al⸣-li-in šal-la-[nu-ut] ¬¬¬"
+],
+[
+"D",
+"Rs. III 4'",
+"[ ... ] ka-a-an {NA4}ku-un-k[u-nu-uz-zi-in ... ] ¬¬¬"
+]
+],
+"tr": "zo[g] er [ihm] gegenüber aber diesen Diorit (als) Rivalen groß.“",
+"trlang": "DE"
+},
+{
+"n": "189",
+"sec": "§ 16''",
+"hl": "",
+"master": "mān {d}elliluš uddā[r memiy]auwanzi [zinnet]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 20",
+"ma-a-an {d}el-li-lu-uš INIM[{MEŠ}-ar me-mi-y]a-⸢u-wa-an-zi⸣ [ ... ]"
+],
+[
+"D",
+"Rs. III 6'",
+"ma-a-an {d}el-li-lu-uš ud-da-⸢a⸣-[ar ... ]"
+]
+],
+"tr": "Als Enlil die Wort[e fertig gesp]rochen hatte,",
+"trlang": "DE"
+},
+{
+"n": "190",
+"sec": "§ 16''",
+"hl": "",
+"master": "nu=kan DUMU-an ANA {d}upelluri ZAG-ni {UZU}ZAG.UDU-ni {GIŠ}š[iyatal tiyēr]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 21",
+"nu-kán DUMU-[a]n A-NA {d}ú-pé-e[l-lu-r]i ZAG-ni ⸢{UZU}⸣ZAG.UDU-ni {GIŠ}š[i-ya-tal ... ] ¬¬¬"
+],
+[
+"D",
+"Rs. III 7'",
+"nu-kán DUMU-an A-NA {d}ú-pé-el-lu-r[i ... ] ¬¬¬"
+]
+],
+"tr": "[setzten sie] das Kind (wie einen) S[peer] dem Upelluri auf die rechte Schulter.",
+"trlang": "DE"
+},
+{
+"n": "191",
+"sec": "§ 17''",
+"hl": "",
+"master": "šalliškezzi=ya=aš {NA4}kunkunuzziš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 22",
+"šal-li-⸢iš⸣-ke-ez-zi-ya-aš {NA4}ku-un-ku-nu-uz-zi-iš"
+],
+[
+"D",
+"Rs. III 8'",
+"šal-le-eš-ke-ez-zi-ya-aš {NA4}ku-u[n-ku-nu-uz-zi-iš]"
+]
+],
+"tr": "Er wird groß, der Diorit.",
+"trlang": "DE"
+},
+{
+"n": "192",
+"sec": "§ 17''",
+"hl": "",
+"master": "n=an daššamuš ⸢A{ḪI.A}?⸣ šallanuškanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 22",
+"na-an da-aš-ša-mu-uš ⸢A?{ḪI?}.A? šal-la-nu-uš-kán-zi⸣"
+],
+[
+"D",
+"Rs. III 8'",
+"[ ... da-aš-ša-m]u-u[š ... ] šal-la-nu-uš-kán-zi"
+]
+],
+"tr": "Die starken Wasser?41 lassen ihn wachsen.",
+"trlang": "DE"
+},
+{
+"n": "193",
+"sec": "§ 17''",
+"hl": "",
+"master": "INA UD 1{KAM}=ya=aš 1 AMMATU parkiškettari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 23",
+"INA UD 1{KAM}-ya-aš 1 AM-MA-DU pár-⸢ki⸣-iš-kit9-ta-ri"
+],
+[
+"D",
+"Rs. III 9'",
+"I-NA UD 1{K[}AM-ya-aš ... pár-ki-iš-ki]t9-t[a-ri]"
+]
+],
+"tr": "Und an einem Tag wächst er eine Elle.",
+"trlang": "DE"
+},
+{
+"n": "194",
+"sec": "§ 17''",
+"hl": "",
+"master": "INA ⸢ITU 1{KAM}⸣=ma=aš 1 ⸢IKU-an⸣ [p]arkiškettari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 24",
+"[ ... p]ár-ki-iš-kit9-ta-ri"
+],
+[
+"D",
+"Rs. III 10'",
+"I-⸢NA ITU 1{KAM}⸣-ma-aš 1 ⸢IKU-an⸣ [ ... ]"
+]
+],
+"tr": "In einem Monat aber [w]ächst er ein IKU-Maß.",
+"trlang": "DE"
+},
+{
+"n": "195",
+"sec": "§ 17''",
+"hl": "",
+"master": "SAG.DU=ma=šši=ššan kwiš NA4-aš walḫeškettari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 24",
+"SAG.DU-ma-aš-ši-iš-ša-an [ ... wa-al-ḫi-i]š-ke-et-ta-ri"
+],
+[
+"D",
+"Rs. III 10'",
+"[SAG.DU-ma-aš-š]i-iš-š[a-an] ⸢ku⸣-iš NA4-aš wa-al-ḫe-e[š-ke-et-ta-ri]"
+]
+],
+"tr": "Der Stein aber, der ihm an den Kopf geschlagen wird,",
+"trlang": "DE"
+},
+{
+"n": "196",
+"sec": "§ 17''",
+"hl": "",
+"master": "n=aš IGI{ḪI.A}-waš [w]aššišk[etta]ri",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 25",
+"na-aš IGI{ḪI.A}-wa-aš [wa-aš-ši-ya-at-ta]-ri ¬¬¬"
+],
+[
+"D",
+"Rs. III 11'",
+"[ ... w]a-aš-ši-<iš>-k[e-et-ta-ri] ¬¬¬"
+]
+],
+"tr": "ist auf (seine) Augen [g]ede[ckt].",
+"trlang": "DE"
+},
+{
+"n": "197",
+"sec": "§ 18''",
+"hl": "",
+"master": "mān INA UD 15{KAM} ti[yat]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 27",
+"[ ... ]"
+],
+[
+"D",
+"Rs. III 12'",
+"ma-a-an I-NA UD 15{KAM} ti-[ya-at]"
+]
+],
+"tr": "Als der fünfzehnte Tag ein[trat],",
+"trlang": "DE"
+},
+{
+"n": "198",
+"sec": "§ 18''",
+"hl": "",
+"master": "[n]u NA4-aš parkišta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 27",
+"[n]u NA4-aš pár-ki-iš-ta"
+],
+[
+"D",
+"Rs. III 12'",
+"[ ... pár-ki-iš-t]a"
+]
+],
+"tr": "war der Stein hoch gewachsen.",
+"trlang": "DE"
+},
+{
+"n": "199",
+"sec": "§ 18''",
+"hl": "",
+"master": "n=aš=kan aruni ginuwaš {GIŠ}šiyatal G[IM-an arta]t",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 27",
+"na-aš-kán a-ru-ni gi-nu-wa-aš [ ... ar-ta-a]t"
+],
+[
+"D",
+"Rs. III 12'",
+"na-aš-ká[n ... ] gi-nu-wa-aš {GIŠ}ši-ya-tal G[IM-an ... ]"
+]
+],
+"tr": "Er [stan]d mit den Knien w[ie] ein Speer im Wasser.42",
+"trlang": "DE"
+},
+{
+"n": "200",
+"sec": "§ 18''",
+"hl": "",
+"master": "witenaz=aš=kan arḫa wet NA4-aš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 28",
+"ú-i-te-na-za-aš-kán ar-ḫa ú-et NA4-aš"
+],
+[
+"D",
+"Rs. III 13",
+"[ú-i-te-na-za-a]š-kán a[r-ḫa ... ] NA4-aš"
+]
+],
+"tr": "Er kam43 aus dem Wasser hervor, der Stein.",
+"trlang": "DE"
+},
+{
+"n": "201",
+"sec": "§ 18''",
+"hl": "",
+"master": "n=aš pargašti pi-[ ... ] mān",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 29",
+"[ ... ]x ma-a-an"
+],
+[
+"D",
+"Rs. III 14'",
+"na-aš pár-ga-aš-ti pí-[ ... ]"
+]
+],
+"tr": "Er (ist) in der Höhe wie ein [ ... ].",
+"trlang": "DE"
+},
+{
+"n": "202",
+"sec": "§ 18''",
+"hl": "",
+"master": "nu=šši=kan arunaš išḫuzziyaš pedi TÚG-aš mān anda pēdanza",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 29",
+"nu-uš-ši-kán a-ru-na-aš [ ... pé-d]i TÚG-aš ma-a-an an-da pé-e-da-an-za"
+],
+[
+"D",
+"Rs. III 14'",
+"[ ... ] ⸢a⸣-ru-na-aš iš-ḫu-uz-zi-ya-aš pé-di TÚ[G-aš ... pé-e-da-an]-za!29"
+]
+],
+"tr": "Ihm reicht das Meer bis zur Stelle des Gürtels wie ein Kleidungsstück.44",
+"trlang": "DE"
+},
+{
+"n": "203",
+"sec": "§ 18''",
+"hl": "",
+"master": ":maldanišaš GIM-an k[a]rpeškettari NA4-aš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 31",
+"[ ... ka]r-pé-eš-ke-et-ta-ri NA4-aš"
+],
+[
+"D",
+"Rs. III 16'",
+":ma-al-da-ni-ša-aš GIM-an k[ar-pé-eš-ke-et-ta-ri ... ]"
+]
+],
+"tr": "Wie ein maldani-45 e[r]hebt er sich, der Stein",
+"trlang": "DE"
+},
+{
+"n": "204",
+"sec": "§ 18''",
+"hl": "",
+"master": "nu=kan nepiši UGU É{MEŠ} karimnuš ku[n]tarrann=a anda wemiškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 31",
+"nu-kán ne-pí-ši UGU [ ... ku-un]-tar-ra-an-na an-da ú-e-mi-iš-ke-ez-zi ¬¬¬"
+],
+[
+"D",
+"Rs. III 16'",
+"[nu-ká]n ne-pí-ši [ ... ] É{MEŠ} ka-ri-im-nu-uš ku-u[n-tar-ra-an-na ... ] ú-e-mi-iš-k[e-ez-zi] ¬¬¬"
+]
+],
+"tr": "und stößt oben im Himmel an die Tempel und das ku[n]tarra-Gemach46.",
+"trlang": "DE"
+},
+{
+"n": "205",
+"sec": "§ 19''",
+"hl": "",
+"master": "nu=kan {d}UTU-uš nepiša[z katta š]akuwaet",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 33",
+"[ ... š]a-ku-wa-et"
+],
+[
+"D",
+"Rs. III 18'",
+"nu-kán {d}UTU-uš ne-pí-ša-a[z _ _ ša-ku-wa]-⸢a⸣-et"
+]
+],
+"tr": "Der Sonnengott [b]lickte [vo]m Himmel [hinab],",
+"trlang": "DE"
+},
+{
+"n": "206",
+"sec": "§ 19''",
+"hl": "",
+"master": "nu=za {d}ullukummin šakuiškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 33",
+"nu-za {d}ul-lu-kum-mi-in ša-ku-iš-ke-ez-zi"
+],
+[
+"D",
+"Rs. III 18'",
+"nu-za {d}[ul-lu-kum-mi-in] ša-ku-iš-ke-ez-zi"
+]
+],
+"tr": "und er betrachtet Ullikummi.",
+"trlang": "DE"
+},
+{
+"n": "207",
+"sec": "§ 19''",
+"hl": "",
+"master": "{d}ulluk[ummiš=a=za n]epišaš {d}UTU-un šakuiškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 34",
+"[ ... ne-pí-ša]-aš!30 {d}UTU-un ša-ku-iš-ke-ez-zi"
+],
+[
+"D",
+"Rs. III 19'",
+"{d}ul-lu-k[um-mi-ša-za n]e-pí-ša-aš {d}UTU-[un] ša-ku-iš-ke-ez-zi"
+]
+],
+"tr": "Ullik[ummi aber] sieht den Sonnengott des [H]immels an.",
+"trlang": "DE"
+},
+{
+"n": "208",
+"sec": "§ 19''",
+"hl": "",
+"master": "nu=za {d}UTU-uš [PĀNI ZI]-ŠU memiškiuwa[n dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 34",
+"nu-za {d}UTU-uš [ ... me-mi]-⸢iš-ke-ez⸣-[zi]"
+],
+[
+"D",
+"Rs. III 20'",
+"nu-za {d}U[TU-uš _ _ ZI]-ŠU me-mi-iš-ki-u-wa-[an ... ]"
+]
+],
+"tr": "Der Sonnengott [begann, zu sich] selbst zu spreche[n]:47",
+"trlang": "DE"
+},
+{
+"n": "209",
+"sec": "§ 19''",
+"hl": "",
+"master": "kwiš=wa=kan DINGIR-LUM [ ... ] nutarriyaš aruni anda [artari]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 35",
+"[ku-iš-w]a-kán DINGIR-LUM nu-tar-ri-ya-aš a-ru-ni an-da [ ... ]"
+],
+[
+"D",
+"Rs. III 21'",
+"ku-iš-wa-kán DINGIR-LUM ki-x[ ... ]x-aš a-ru-ni an-ta [ ... ]"
+]
+],
+"tr": "„Welche (im Entstehen) schnelle48 Gottheit [steht] (da) im Meer?49",
+"trlang": "DE"
+},
+{
+"n": "210",
+"sec": "§ 19''",
+"hl": "",
+"master": "nu=wa=šši NÍ.TE{MEŠ} ḫ[u-...-t]a? DINGIR{MEŠ}-aš UL takki",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 36",
+"[nu-wa-aš]-ši NÍ.TE{MEŠ} ḫ[u?-x-x-t]a? DINGIR{MEŠ}-aš Ú-UL ta-ak-ki ¬¬¬"
+],
+[
+"D",
+"Rs. III 22'",
+"nu-wa-aš-ši NÍ.TE{MEŠ}-aš ḫ[u?- _ _ _ DIN]GIR{MEŠ}-aš Ú-UL ta-a[k-ki] ¬¬¬"
+]
+],
+"tr": "Sein Körper [ ... ] entspricht nicht (dem) der Götter.“50",
+"trlang": "DE"
+},
+{
+"n": "211",
+"sec": "§ 20''",
+"hl": "",
+"master": "nepišaš {d}UTU-uš kalmaru[š] waḫnut",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 37",
+"[ _ _ _ _ ] ⸢{d}⸣UTU-uš kal-ma-ru-u[š wa-aḫ-nu-u]t"
+],
+[
+"D",
+"Rs. III 23'",
+"ne-pí-ša-aš ⸢{d}UTU-uš⸣ [ _ _ _ _ ] wa-aḫ-nu-ut"
+]
+],
+"tr": "Der Sonnengott des Himmels wandte (seine) Strahle[n]",
+"trlang": "DE"
+},
+{
+"n": "212",
+"sec": "§ 20''",
+"hl": "",
+"master": "n=aš=kan aruni parā pait",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 37",
+"na-aš-kán a-ru-ni pa-ra-a pa-it"
+],
+[
+"D",
+"Rs. III 23'",
+"na-aš-⸢kán a-ru-ni⸣ [ ... ] ⸢pa-it⸣"
+]
+],
+"tr": "und ging hinaus zum Meer.",
+"trlang": "DE"
+},
+{
+"n": "213",
+"sec": "§ 20''",
+"hl": "",
+"master": "⸢nu⸣ mā[n] {d}UTU-uš aruni parā ⸢ār(a)š⸣",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 38",
+"[ _ _ _ (_) ] ⸢{d}UTU⸣-uš a-ru-ni pa-r[a-a a-ar-a]š"
+],
+[
+"D",
+"Rs. III 24'",
+"⸢nu ma-a⸣-[an ... pa]-⸢ra-a a-ar-aš⸣"
+]
+],
+"tr": "Al[s] der Sonnengott hinaus zum Meer gelangte,",
+"trlang": "DE"
+},
+{
+"n": "214",
+"sec": "§ 20''",
+"hl": "",
+"master": "{d}UTU-uš=za ŠU-an SAG.KI-i=šši peran ēpta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 38",
+"{d}UTU-za ŠU-an SAG.KI-iš-ši pí-an e-ep-ta"
+],
+[
+"D",
+"Rs. III 24'",
+"⸢{d}⸣UTU-uš-za Š[U-an] [ ... ]"
+]
+],
+"tr": "hielt sich der Sonnengott die Hand an seine Stirn.",
+"trlang": "DE"
+},
+{
+"n": "215",
+"sec": "§ 20''",
+"hl": "",
+"master": "[ ... {d}u]ll[uku]mmin and[a ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 39",
+"[ ... {d}u]l-l[u-ku]m-mi-in an-d[a ... ]x"
+],
+[
+"D",
+"Rs. III 25'",
+"[ ... {d}ul-lu-kum]-mi-in an-[da ... ]"
+]
+],
+"tr": "[ ... ] den [U]ll[iku]mmi hinein [ ... ]51",
+"trlang": "DE"
+},
+{
+"n": "216",
+"sec": "§ 20''",
+"hl": "",
+"master": "nu=šši TUKU.TUKU-atti peran [ ... ] tameummaḫta[t]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 39",
+"nu-uš-ši TUKU.TUKU-at-ti pí-an [ ... ] ta-me-u[m-m]a-aḫ-ta-a[t] ¬¬¬"
+],
+[
+"D",
+"Rs. III 26'",
+"[ ... t]a-me-um-ma-a[ḫ-ta-at] ¬¬¬"
+]
+],
+"tr": "Und ihm änderte sich vor Zorn [die Farbe].52",
+"trlang": "DE"
+},
+{
+"n": "217",
+"sec": "§ 21''",
+"hl": "",
+"master": "[mā]n nepiš[aš] {d}UTU-uš DINGIR-LU[M arun]i? aušta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 41",
+"[ma-a-a]n ne-pí-š[a-aš] ⸢{d}⸣UTU-uš DINGIR-LU[M ... ] ⸢a-uš⸣-ta"
+],
+[
+"D",
+"Rs. III 27'",
+"[ ... a-ru-n]i? a-uš-ta"
+]
+],
+"tr": "[Al]s der Sonnengott des Himmel[s] die Gotthe[it] im [Meer]53 sah,",
+"trlang": "DE"
+},
+{
+"n": "218",
+"sec": "§ 21''",
+"hl": "",
+"master": "nu {d}UTU-uš kalmaruš dān EGIR-p[a wa]ḫnut",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 41",
+"nu {d}UTU-uš kal-ma-ru-uš ⸢da⸣-a-an EGIR-p[a wa-a]ḫ-nu-ut"
+],
+[
+"D",
+"Rs. III 27'",
+"[ ... ] [ ... wa-aḫ-nu]-ut"
+]
+],
+"tr": "[wa]ndte der Sonnengott zum zweiten Mal wied[er] (seine) Strahlen.",
+"trlang": "DE"
+},
+{
+"n": "219",
+"sec": "§ 21''",
+"hl": "",
+"master": "n=aš=kan [ ... ] p[ar]ā iyanneš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 42",
+"na-aš-ká[n ... pa-r]a-a i-ya-an-né-eš"
+],
+[
+"D",
+"Rs. III 28'",
+"na-aš-kán p[a-ra-a] [ ... ]"
+]
+],
+"tr": "Er ging [ ... ] h[ina]us.",
+"trlang": "DE"
+},
+{
+"n": "220",
+"sec": "§ 21''",
+"hl": "",
+"master": "n=aš {d}10-ni GAM-an iyanneš {d}[UTU-uš?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 43",
+"na-aš {d}10-ni GAM-an ⸢i-ya⸣-an-né-eš ⸢{d}⸣[UTU-uš?]"
+],
+[
+"D",
+"Rs. III 29'",
+"[ ... GAM-a]n i-ya-an-ni-i[š ... ]"
+]
+],
+"tr": "Und er ging hinab zum Wettergott, [der Sonnengott].",
+"trlang": "DE"
+},
+{
+"n": "221",
+"sec": "§ 21''",
+"hl": "",
+"master": "[nu mān?] {d}UTU-un IGI-anda aušta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 43",
+"[ _ _ _ (_) ] {d}UTU-un IGI-an-da a-uš-ta"
+],
+[
+"C",
+"Rs. IV 1",
+"[ ... ]"
+],
+[
+"D",
+"Rs. III 30'",
+"[ ... me-na-aḫ-ḫa-an-d]a a-uš-ta"
+]
+],
+"tr": "[Als] er dem Sonnengott entgegensah,",
+"trlang": "DE"
+},
+{
+"n": "222",
+"sec": "§ 21''",
+"hl": "",
+"master": "nu {d}tašmišuš {d}10-[ni] mem[iškiuwa]n dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 44",
+"nu {d}ta-aš-mi-šu-uš ⸢{d}10⸣-[ni] me-m[i-iš-ki-u-wa-an da-a-i]š"
+],
+[
+"C",
+"Rs. IV 1",
+"[ ... {d}ta-aš-m]i-⸢šu-uš⸣ [ ... me-mi-iš-ki-u-wa-a]n da-⸢a⸣-iš"
+],
+[
+"D",
+"Rs. III 31'",
+"[ _ {d}ta-aš-mi-šu-u]š ⸢{d}⸣[10-ni me-mi-iš-ki-u-wa-a]n da-a-iš"
+]
+],
+"tr": "begann Tašmišu, [zum] Wettergott zu spr[eche]n:",
+"trlang": "DE"
+},
+{
+"n": "223",
+"sec": "§ 21''",
+"hl": "",
+"master": "kwit=war=aš wezzi AN-aš {d}UTU-uš KUR-e[aš LUGAL-uš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 44",
+"ku-it-wa-ra-aš ú-ez-zi AN-aš {d}UTU-u[š ... ]"
+],
+[
+"C",
+"Rs. IV 3",
+"[ ... ú-e]z-zi [ ... ]"
+],
+[
+"D",
+"Rs. III 31'",
+"ku-i[t-wa-ra-aš] [ ... {d}U]TU-uš KUR-e-[aš ... ]"
+]
+],
+"tr": "„Warum kommt er, der Sonnengott des Himmels, [der König der] Länd[er]?",
+"trlang": "DE"
+},
+{
+"n": "224",
+"sec": "§ 21''",
+"hl": "",
+"master": "wezzi=ma=war=aš kwedani memiyani",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 45",
+"[ú-ez-zi-m]a-wa-ra-aš ⸢ku⸣-e-da-ni me-mi-ya-ni"
+],
+[
+"C",
+"Rs. IV 4",
+"⸢ú⸣-ez-zi-wa-ra-aš [ ... ]"
+],
+[
+"D",
+"Rs. III 32'",
+"[ú-ez-z]i-ma-wa-ra-aš [ ... ] [ ... ]"
+]
+],
+"tr": "Die Angelegenheit aber, in welcher er kommt,",
+"trlang": "DE"
+},
+{
+"n": "225",
+"sec": "§ 21''",
+"hl": "",
+"master": "nu=wa memiya[š nakkiš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 46",
+"nu-wa me-mi-ya-a[š ... ]"
+],
+[
+"C",
+"Rs. IV 5",
+"[nu-w]a me-mi-ya-aš [ ... ]"
+],
+[
+"D",
+"Rs. III 33'",
+"nu-wa me-mi-y[a-aš ... ]"
+]
+],
+"tr": "die Angelegen[heit ist wichtig].54",
+"trlang": "DE"
+},
+{
+"n": "226",
+"sec": "§ 21''",
+"hl": "",
+"master": "[U]L=war=aš arḫa peššiyauwaš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 46",
+"[Ú-U]L-wa-ra-aš ar-ḫa ⸢pé-eš-ši⸣-ya-u-wa-[aš]"
+],
+[
+"C",
+"Rs. IV 6",
+"[Ú-UL-wa-r]a-aš ar-ḫa pí-iš-ši-⸢ya⸣-u-wa-aš ¬¬¬"
+],
+[
+"D",
+"Rs. III 33'",
+"[ ... ] [pé-eš-ši-y]a-u-wa-aš"
+]
+],
+"tr": "Sie ist [nic]ht abzutun.55",
+"trlang": "DE"
+},
+{
+"n": "227",
+"sec": "§ 21''",
+"hl": "",
+"master": "daššuš=war=aš ḫalluwaiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 47",
+"da-aš-šu-uš-wa-ra-aš ḫal-lu-wa-iš"
+],
+[
+"C",
+"Rs. IV 7",
+"[ ... ḫa]l-lu-wa-iš"
+],
+[
+"D",
+"Rs. III 34'",
+"da-aš-šu-[uš-wa-ra-aš ... ]"
+]
+],
+"tr": "Er ist schwer, der Streit.",
+"trlang": "DE"
+},
+{
+"n": "228",
+"sec": "§ 21''",
+"hl": "",
+"master": "daššuš[=ma=war=aš] zaḫḫāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 47",
+"⸢da-aš-šu-uš⸣-[ma-wa-ra-aš] ⸢za-aḫ-ḫa⸣-a-iš"
+],
+[
+"C",
+"Rs. IV 7",
+"da-aš-šu-ya-wa-ra-⸢at⸣ [ ... ]"
+],
+[
+"D",
+"Rs. III 34'",
+"[ ... ] [za-aḫ-ḫa-a-i]š"
+]
+],
+"tr": "Schwer [aber ist er], der Kampf.",
+"trlang": "DE"
+},
+{
+"n": "229",
+"sec": "§ 21''",
+"hl": "",
+"master": "nepišaš=ma=war=aš ḫarnamniyašḫaš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 48",
+"ne-pí-ša-aš-ma-wa-ra-aš ḫar-nam-ni-ya-aš-ḫa-aš"
+],
+[
+"C",
+"Rs. IV 8",
+"[ŠA]-ME-E-wa-ra-aš [ḫar-nam-ni-ya-aš-ḫ]a-aš"
+],
+[
+"D",
+"Rs. III 35'",
+"ne-pí-ša-aš-ma-w[a-ra-aš ... ]"
+]
+],
+"tr": "Er ist ein Aufruhr des Himmels.56",
+"trlang": "DE"
+},
+{
+"n": "230",
+"sec": "§ 21''",
+"hl": "",
+"master": "ŠA KUR-TI=ma=war=aš kāšza akkatarr=a",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 48",
+"ŠA [KUR-ma]-wa-ra-aš ka-aš-za ak-ka4-tar-ra ¬¬¬"
+],
+[
+"C",
+"Rs. IV 9",
+"ŠA KUR-TI-ma-wa-ra-aš ka-a-aš-za [ ... ]"
+],
+[
+"D",
+"Rs. III 36'",
+"[ ... KUR-ma-w]a-ra-aš ka-aš-za31 [ ... ]"
+]
+],
+"tr": "Des Landes aber Hunger und Tod (ist er).“",
+"trlang": "DE"
+},
+{
+"n": "231",
+"sec": "§ 21''",
+"hl": "",
+"master": "{d}10-aš ANA {d}tašmišuš memiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 49",
+"{d}10-aš A-NA {d}ta-aš-mi-šu-uš me-mi-iš-ki-u-wa-an da-a-i[š]"
+],
+[
+"C",
+"Rs. IV 10",
+"[x-d]a?-ma-⸢aš?⸣ {d}10-aš me-mi-ya-an [me-mi-iš-ke-ez-z]i"
+],
+[
+"D",
+"Rs. III 36'",
+"[ ... ] [me-mi-iš-ki-u-w]a-an da-a-iš"
+]
+],
+"tr": "Der Wettergott begann, zu Tašmišu zu sprechen:57",
+"trlang": "DE"
+},
+{
+"n": "232",
+"sec": "§ 21''",
+"hl": "",
+"master": "ašanna=šši {GIŠ}ŠÚ.A-an tiyandu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 49",
+"⸢a⸣-ša-an-na-aš-ši {GIŠ}ŠÚ.A-an ti-ya-an-du"
+],
+[
+"C",
+"Rs. IV 11",
+"pé-ra-an ša-ra-a-wa-aš-ma-aš [ ... ] a-ra-an-ta-ri ==="
+],
+[
+"D",
+"Rs. III 37'",
+"a-š[a-an-na-aš-ši ... ]"
+]
+],
+"tr": "„Zum Sitzen soll man ihm einen Stuhl hinstellen.58",
+"trlang": "DE"
+},
+{
+"n": "233",
+"sec": "§ 21''",
+"hl": "",
+"master": "adanna=ma=šši {GIŠ}BANŠUR-un unuw[and]u",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 50",
+"a-da-an-na-ma-aš-ši {GIŠ}BANŠUR-un ú-nu-w[a-an-d]u ¬¬¬"
+],
+[
+"D",
+"Rs. III 38'",
+"[a-da-an-na-m]a-aš-ši {GIŠ}BANŠUR-u[n ... ] ¬¬¬"
+]
+],
+"tr": "Zum Essen aber soll man ihm eine Tafel sch[mücke]n.“",
+"trlang": "DE"
+},
+{
+"n": "234",
+"sec": "§ 22''",
+"hl": "",
+"master": "[k]uitman eneššan memišker",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 51",
+"[k]u-it-ma-an e-né-eš-ša-an me-mi-iš-ke-er"
+],
+[
+"D",
+"Rs. III 39'",
+"[ _ _ _ _ ] ⸢e⸣-ni-iš-ša-an m[e-mi-iš-ke-er]"
+]
+],
+"tr": "[W]ährend sie so sprachen,",
+"trlang": "DE"
+},
+{
+"n": "235",
+"sec": "§ 22''",
+"hl": "",
+"master": "{d}UTU-uš=ma=šmaš [parn]i tiyat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 51",
+"{d}UTU-uš-ma-aš-ma-aš [pár-n]i ti-ya-at"
+],
+[
+"D",
+"Rs. III 40'",
+"[ ... ]"
+]
+],
+"tr": "trat der Sonnengott aber zu ihnen ins [Hau]s.",
+"trlang": "DE"
+},
+{
+"n": "236",
+"sec": "§ 22''",
+"hl": "",
+"master": "ašanna=šši {GIŠ}ŠÚ.A-an tiyēr!",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 52",
+"a-ša-an-na-aš-ši {GIŠ}ŠÚ.A-an ti-i!-e!-er!32"
+],
+[
+"D",
+"Rs. III 40'",
+"[a]-⸢ša-an-na-aš⸣-[ši ... ]"
+]
+],
+"tr": "Zum Sitzen stellten sie ihm einen Stuhl hin,",
+"trlang": "DE"
+},
+{
+"n": "237",
+"sec": "§ 22''",
+"hl": "",
+"master": "n=aš=za UL [eš]at",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 52",
+"na-aš-za Ú-UL [e-ša]-at"
+],
+[
+"D",
+"Rs. III 41'",
+"[ ... ]"
+]
+],
+"tr": "und er [setz]te sich nicht.",
+"trlang": "DE"
+},
+{
+"n": "238",
+"sec": "§ 22''",
+"hl": "",
+"master": "adanna=[m]a=šši {GIŠ}BANŠUR-un unuēr",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 52",
+"a-da-an-na<-aš>33-[m]a-aš-ši {GIŠ}BANŠUR-un ú-nu-e-er"
+],
+[
+"D",
+"Rs. III 41'",
+"[ ... ]x x x x[ ... ]"
+],
+[
+"D",
+"",
+"Rs. III bricht ab."
+]
+],
+"tr": "Zum Essen [ab]er schmückten sie ihm eine Tafel,",
+"trlang": "DE"
+},
+{
+"n": "239",
+"sec": "§ 22''",
+"hl": "",
+"master": "nu=kan parā UL šal[ikt]a",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 53",
+"nu-kán pa-ra-a Ú-UL ša-l[i-ik-t]a"
+]
+],
+"tr": "und er näh[er]te sich nicht.59",
+"trlang": "DE"
+},
+{
+"n": "240",
+"sec": "§ 22''",
+"hl": "",
+"master": "GAL-in=ši piēr",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 53",
+"GAL-in-ši pí-e-er"
+]
+],
+"tr": "Einen Becher gaben sie ihm,",
+"trlang": "DE"
+},
+{
+"n": "241",
+"sec": "§ 22''",
+"hl": "",
+"master": "nu=ššan pūrin ⸢UL⸣ dāi[š]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 54",
+"nu-uš-ša-an pu-u-ri-in ⸢Ú-UL⸣ da-a-i[š] ¬¬¬"
+]
+],
+"tr": "und er leg[te] die Lippe nicht daran.",
+"trlang": "DE"
+},
+{
+"n": "242",
+"sec": "§ 23''",
+"hl": "",
+"master": "[n]=aš {d}10-aš {d}UTU-i EGIR-pa memiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 55",
+"[n]a-aš {d}10-aš {d}UTU-i EGIR-pa me-mi-iš-ki-u-wa-an da-a-iš"
+]
+],
+"tr": "Der Wettergott begann, zum Sonnengott wiederum zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "243",
+"sec": "§ 23''",
+"hl": "",
+"master": "{LÚ}ŠÀ.TA[M ... ḪUL]-luš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 55",
+"{LÚ}ŠÀ.TA[M _ ḪUL]-⸢lu-uš⸣"
+]
+],
+"tr": "„(Ist) der Kämmer[er schlec]ht,",
+"trlang": "DE"
+},
+{
+"n": "244",
+"sec": "§ 23''",
+"hl": "",
+"master": "[{GIŠ}ŠÚ.A-an? kwi]š dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 55",
+"[ ... ] [ku-i]š da-a-iš"
+]
+],
+"tr": "d[er den Stuhl?] hingestellt hat,60",
+"trlang": "DE"
+},
+{
+"n": "245",
+"sec": "§ 23''",
+"hl": "",
+"master": "nu=za UL ešat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 56",
+"nu-za UL e-ša-at"
+]
+],
+"tr": "(so dass) du dich nicht gesetzt hast?",
+"trlang": "DE"
+},
+{
+"n": "246",
+"sec": "§ 23''",
+"hl": "",
+"master": "LÚ <{GIŠ}>BAN[ŠUR]-aš ḪUL-lu[š]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 56",
+"LÚ <{GIŠ}>BAN[ŠUR]-aš ḪUL-lu-u[š]"
+]
+],
+"tr": "Ist der Tisch[bedienste]te schlech[t],",
+"trlang": "DE"
+},
+{
+"n": "247",
+"sec": "§ 23''",
+"hl": "",
+"master": "[{GIŠ}BANŠUR-un? kwiš d]āiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 56",
+"[ ... ku-iš] [da]-a-iš"
+]
+],
+"tr": "[der den Tisch? ge]deckt hat,",
+"trlang": "DE"
+},
+{
+"n": "248",
+"sec": "§ 23''",
+"hl": "",
+"master": "nu=za UL ezatta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 57",
+"nu-za Ú-UL e-za-at-ta"
+]
+],
+"tr": "(so dass) du nicht gegessen hast?",
+"trlang": "DE"
+},
+{
+"n": "249",
+"sec": "§ 23''",
+"hl": "",
+"master": "{LÚ}SAGI.A-aš ḪUL-l[uš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 57",
+"{LÚ}SAGI.A-aš ḪUL-l[u-uš]"
+]
+],
+"tr": "Ist der Mundschenk schlec[ht],",
+"trlang": "DE"
+},
+{
+"n": "250",
+"sec": "§ 23''",
+"hl": "",
+"master": "[GAL-in?] kwiš pāiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 57",
+"[ ... ] ku-iš pa-a-iš"
+]
+],
+"tr": "der [den Becher] gereicht hat,",
+"trlang": "DE"
+},
+{
+"n": "251",
+"sec": "§ 23''",
+"hl": "",
+"master": "nu UL ekutt[a]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 58",
+"nu Ú-UL e-ku-ut-t[a] ==="
+],
+[
+"A",
+"",
+"Ende von Rs. IV."
+]
+],
+"tr": "(so dass) du nicht getrunk[en hast]?“",
+"trlang": "DE"
+},
+{
+"n": "252",
+"sec": "§ 24''",
+"hl": "",
+"master": "DUB 1{KAM} SÌR {d}ullikumm[i ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"lk. Rd. 1",
+"[ ... ] DUB 1{KAM} SÌR {d}ul-li-kum-m[i ... ]"
+],
+[
+"C",
+"Rs. IV 13",
+"DUB 1{KAM} ŠA {d}ul-li-k[um-mi ... ]"
+]
+],
+"tr": "Tafel 1 des Liedes von Ullikumm[i ... ]",
+"trlang": "DE"
+},
+{
+"n": "253",
+"sec": "§ 24''",
+"hl": "",
+"master": "[ ... ]-mau",
+"words": [],
+"mss": [
+[
+"A",
+"lk.Rd. 2",
+"[ ... ]-x-ma-ú"
+],
+[
+"C",
+"",
+"Rs. IV bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1:1": "kuiš wohl nicht vorhanden in diesem Exemplar.",
+"§ 1:2": "Lesung unsicher, passt nicht in den Kontext",
+"§ 1:3": "Zeichen -in- nach Foto über Rasur.",
+"§ 1:4": "Die lt. Autographie lesbaren Zeichen sind ḫa-nu-za, wovon das ḫa als radiert betrachtet und das nu-za zum nächsten Kolon gezählt werden könnte.",
+"§ 1:5": "Nach Foto {d}ku-mar-bi-iš über Rasur geschrieben.",
+"§ 1:6": "Nach Foto ku-iš über Rasur geschrieben.",
+"§ 1:7": "ḪUL-u-tar über Rasur.",
+"§ 1:T1": "Vgl. die unterschiedlichen Übersetzungen: Haas, Literatur 2006, 158: „Kumarbi nimmt sich Schlau[heit vor seinen Sinn]“; Pecchioli Daddi – Polvani 1990, 150: „Kumarbi riflette Frau sé“; Hoffner, Hittite Myths2 1998, 56: „Kumarbi forms in his mind a clever plan.“",
+"§ 1:T2": "Text B: „Der, der einen schlechten Tag groß zieht,“.",
+"§ 2:8": "ZI nach Kollation am Foto über Rasur.",
+"§ 2:9": "Hier geht es nach normalem Spatium direkt mit dem nächsten Kolon weiter; das Verb scheint vergessen.",
+"§ 2:10": "Die Formulierung von Exemplar C scheint an dieser Stelle abzuweichen, da die Ergänzung nach A und B den zur Verfügung stehenden Platz nicht ausfüllt.",
+"§ 2:11": "Nach Kollation am Foto {d}ku-[ma]r-bi-iš ZI über Rasur.",
+"§ 2:12": "Zur Ergänzung vgl. KUB 33.106+ VS II 2ff.",
+"§ 2:T3": "Vgl. dazu Haas, Literatur 2006, 159: „kunnan-Schmuckstein“; Pecchioli Daddi – Polvani 1990, 151: „grani di collana“; Hoffner, Myths2 1998, 57: „beads“.",
+"§ 2:T4": "Om. in Text B.",
+"§ 2:T5": "Text B: „Unten zog er die Schuhe an“. Vgl. CHD Š 271a. Vgl. Haas, Literatur 2006, 159, zu einer Übersetzung: „die Schuhe als eilige Winde“; ähnlich Hoffner, Myths2 1998, 57: „winds like winged shoes“; Pecchioli Daddi – Polvani 1990, 151: „come scarpe veloci venti“; so auch CHD Š 271b: „swift winds ... as shoes“.",
+"§ 2:T6": "Vgl. zur Diskussion dieses Wortes besonders Starke, StBoT 31, 1990, 540f. Siehe auch Pecchioli Daddi – Polvani 1990, 151 Anm. 3, und Singer 2002, 129.",
+"§ 2:T7": "Eine hethitische Meile (DANNA) entspricht wohl etwa 900m (Starke, StBoT 41, 1995, 22). Vgl. auch RlA 7, 521a, wo es vielleicht 1500m entspricht.",
+"§ 2:T8": "Wörtl.: „sprang sein Begehren hervor.“ Ähnliches dürfte sich am Beginn von KUB 33.108 Vs. II? (CTH 350.3) zugetragen haben.",
+"§ 2:T9": "Vgl. Haas, Literatur 2006, 159: „da [ergoss sich sein] Sperma auf diesen.“; Hoffner, Myths2 1998, 57: „His penis [thrust(?)] into her.“; Pecchioli Daddi – Polvani 1990, 151: „la virilità fluì dentro di lui“.",
+"§ 5':13": "Nach Kollation am Foto steht das Zeichen auf dem Rand und ist in der Autographie vergessen. Dahinter sind noch unlesbare Spuren zu sehen, die vielleicht zur Rückseite gehören.",
+"§ 5':14": "Siehe Hoffner – Melchert 2008, 248, für eine Ergänzung [iyanniyanun].",
+"§ 5':15": "Zeichen nach Foto so wie in der Autographie.",
+"§ 5':16": "Text: -aš-ši.",
+"§ 6':17": "Der Platz ist in der Lücke ist gerade ausreichend für zwei kurze Zeichen.",
+"§ 8'':18": "Güterbock, JCS 5, 18: -še-et oder DUMU-li.",
+"§ 8'':19": "GAM MUŠEN{ḪI.A} über Rasur.",
+"§ 10'':20": "Zeichen über Rasur.",
+"§ 10'':21": "Diese Stelle ist wohl parallel zu Kolon 154.",
+"§ 11'':22": "Sind li und {ḪI.A} vertauscht und ist UR].SAG{ḪI.A}-li-uš zu lesen?",
+"§ 12'':23": "Anders Güterbock 1946, *14, der hier -te]n liest. Dem folgen Haas, Hoffner, Pecchioli Daddi – Polvani.",
+"§ 13'':24": "Vgl. dazu Kolon 121.",
+"§ 13'':25": "Nach Kollation am Foto Zeichen über Rasur.",
+"§ 13'':26": "Güterbock, JCS 5, 22: [n]a-iš-ki-it-ta-r[u]. Ebenso liest CHD L-N 350a, 363b. In Güterbock 1946, *15 steht [n]a-iš-ki-it-ta x[.",
+"§ 13'':27": "Güterbock, JCS 5, 22: na-iš-ki-it-ta-r[u]. Ebenso liest CHD L-N 350a, 363b. In Güterbock 1946, *15 steht na-iš-ki-it-ta x[.",
+"§ 13'':28": "Nach Kollation am Foto nu-wa über Rasur.",
+"§ 18'':29": "Text: -zi.",
+"§ 19'':30": "Text: -an.",
+"§ 21'':31": "-aš-za über Rasur.",
+"§ 22'':32": "Text: ti-ya-an-du. So auch nach Foto.",
+"§ 22'':33": "Bei -aš handelt es sich wohl um eine Verschreibung, vgl. die parallele Konstruktion in Kolon 233.",
+"T1": "Vgl. die unterschiedlichen Übersetzungen: Haas, Literatur 2006, 158: „Kumarbi nimmt sich Schlau[heit vor seinen Sinn]“; Pecchioli Daddi – Polvani 1990, 150: „Kumarbi riflette Frau sé“; Hoffner, Hittite Myths2 1998, 56: „Kumarbi forms in his mind a clever plan.“",
+"T2": "Text B: „Der, der einen schlechten Tag groß zieht,“.",
+"T3": "Vgl. dazu Haas, Literatur 2006, 159: „kunnan-Schmuckstein“; Pecchioli Daddi – Polvani 1990, 151: „grani di collana“; Hoffner, Myths2 1998, 57: „beads“.",
+"T4": "Om. in Text B.",
+"T5": "Text B: „Unten zog er die Schuhe an“. Vgl. CHD Š 271a. Vgl. Haas, Literatur 2006, 159, zu einer Übersetzung: „die Schuhe als eilige Winde“; ähnlich Hoffner, Myths2 1998, 57: „winds like winged shoes“; Pecchioli Daddi – Polvani 1990, 151: „come scarpe veloci venti“; so auch CHD Š 271b: „swift winds ... as shoes“.",
+"T6": "Vgl. zur Diskussion dieses Wortes besonders Starke, StBoT 31, 1990, 540f. Siehe auch Pecchioli Daddi – Polvani 1990, 151 Anm. 3, und Singer 2002, 129.",
+"T7": "Eine hethitische Meile (DANNA) entspricht wohl etwa 900m (Starke, StBoT 41, 1995, 22). Vgl. auch RlA 7, 521a, wo es vielleicht 1500m entspricht.",
+"T8": "Wörtl.: „sprang sein Begehren hervor.“ Ähnliches dürfte sich am Beginn von KUB 33.108 Vs. II? (CTH 350.3) zugetragen haben.",
+"T9": "Vgl. Haas, Literatur 2006, 159: „da [ergoss sich sein] Sperma auf diesen.“; Hoffner, Myths2 1998, 57: „His penis [thrust(?)] into her.“; Pecchioli Daddi – Polvani 1990, 151: „la virilità fluì dentro di lui“.",
+"T10": "Haas, Literatur 2006, 160, ergänzt: „auf dem Thron“.",
+"T11": "Vgl. Hoffner – Melchert 2008, 248, für die Ergänzung und Übersetzung.",
+"T12": "Vgl. zu einer Ergänzung „mein Wezir“ Haas, Literatur 2006, 160, Hoffner, Myths2 1998, 57, und Pecchioli Daddi – Polvani 1990, 151.",
+"T13": "Vgl. hier den parallelen Ausdruck in KUB 33.96+ Rs. III 38f. (Kolon 130) und KUB 33.106+ Vs. II 18f. (CTH 345.I.3.1 Kolon 89).",
+"T14": "So nach HHW 172. Wörtl.: „Geh (und) mache sie vor Kumarbi stark.“ Vgl. Kronasser, EHS 455: „mach meine Worte stark!“",
+"T15": "Text A hat hier wohl abweichend: „[Geh und ]sprich diese gewichtigen [Worte zu Kumarbi]!“ So nach Haas, Literatur 2006, 160, Hoffner, Myths2 1998, 57, und Pecchioli Daddi – Polvani 1990, 151.",
+"T16": "Vgl. Pecchioli Daddi – Polvani 1990, 151, für die Kausalverbindung: „così che il tremito ....“",
+"T17": "So nach Haas, Literatur 2006, 160; vgl. Pecchioli Daddi – Polvani 1990, 151: „davanti a te“; Hoffner, Myths2 1998, 57: „in anticipation of you“.",
+"T18": "Zur Bedeutungsbestimmung vgl. Schuol 2004: 97ff.",
+"T19": "Om. in Text B.",
+"T20": "Diese Ansprache fehlt in Text B.",
+"T21": "Haas, Literatur 2006, 160: „und in die Wasser hine[in, ...“.",
+"T22": "Güterbock 1946, 60, schlägt eine Ergänzung zu {MUNUSŠ}ḫašnupallaš „Hebamme“ vor. Dem folgen Haas, Literatur 2006, 161, und Pecchioli Daddi – Polvani 1990, 152. Vgl. auch die unterschiedlichen Übersetzungen: Haas, ebd.: „[Die Hebammen] brachten ihn zur Welt...“; Hoffner, Myths2 1998, 57: „[The ... ] women made her give birth.“ Pecchioli Daddi – Polvani ebd.: „[Le levatrici] lo fecero nascere“.",
+"T23": "Siehe zu ḫalāi- „jdm./etw. in Bewegung setzen, anstoßen“ HED 3, 12 und vgl. Hoffner, Myths2 1998, 58: „and cradled [him] on Kumarbi's knees.“ HED 3, 12: „they thrust [the baby on Kumarbi's knees]“. Vgl. zu diesem Ausdruck Hoffner 1968, JNES 27, 198ff, bes. 201 mit Anm. 27; Beckman, StBoT 29, 1983, 48f. und Dardano, OrNS 71, 2002, 396f.",
+"T24": "So nach HED 4, 249; anders Haas, Literatur 2006, 161: „ihn zu mustern“; Hoffner, Myths2 1998, 58: „begann to clean(?) him“; Pecchioli Daddi – Polvani 1990, 152: „prese ad accarezzarlo“.",
+"T25": "Vgl. zu dem Ausdruck CHD L-N 260b.",
+"T26": "Vgl. Haas 1994: 89.",
+"T27": "Vgl. zu dem Ausdruck CHD L-N 260b.",
+"T28": "Vgl. hierzu die parallele Konstruktion in Kolon 162f.",
+"T29": "Wörtlich: „Sendung“; vgl. Haas, Literatur 2006, 162: „Gepäckstück“.",
+"T30": "Vgl. Haas, Literatur 2006, 162, zu einer Ergänzung „[ist kein Aufschub]“; Pecchioli Daddi – Polvani 1990, 153: „non lo sapete [ ... ]“",
+"T31": "Vgl. Haas, Literatur 2006, 162, für eine Ergänzung „den großen Göttern soll er unsichtbar sein!“ Ebenso Pecchioli Daddi – Polvani 1990, 153: „egli ai grandi dei non [sarà visibile]“.",
+"T32": "Vgl. CHD Š 238: „They crossed all at once.“ Vgl. Haas, Literatur 2006, 163: „und mit einem einzigen (Schritt/Lauf, oder: in einem einzigen Augenblick) schritten sie aus“; Hoffner, Myths2 1998, 58: „made the trip in one stage“; Pecchioli Daddi – Polvani 1990, 153: „e in un momento coprirono il percorso“. Vgl. auch KUB 12.65 Rs. III 11' (CTH 348.1 Kolon 92).",
+"T33": "Eine hethitische Elle entspricht wohl in etwa 30 cm; 30 Ellen ergeben ein IKU-Maß (Starke, StBoT 41, 1995, 21). Nach RlA VII, 520b, entspricht 1 Elle etwa 50 cm. Vgl. auch die Bemerkung von Hoffner, Myths2 1998, 78 Anm. 20: „The absolute value of these units is currently disputed.“",
+"T34": "Ein IKU-Maß ist ein Hundertstel einer Meile (DANNA) und entspricht damit wohl etwa 9m (Starke, StBoT 41, 1995, 21). Nach RlA VII 520b, entspricht ein IKU etwa 15m (?).",
+"T35": "Hoffner, Myths2 1998, 58, übersetzt: „Whatever stone strikes(?) its head, may it do it no harm(?).“ mit dem Hinweis auf die ungewisse Deutung. Haas, Literatur 2006, 163, erklärt wie folgt: „d.h. der Stein soll seine Augen bedecken, damit Ullikummi die Ištar nicht sehen kann.“ Nach Pecchioli Daddi – Polvani 1990, 153 Anm. 10, ist es vielleicht eine Anspielung auf die Blindheit des Ullikummi, der nichts wahrnimmt. Vgl. 2. Tafel II 12'.",
+"T36": "Siehe zu ḫalāe- „jdm./etw. in Bewegung setzen, anstoßen“ HED 3, 12 und vgl. Hoffner, Myths2 1998, 58: „and cradled [him] on Kumarbi's knees.“ HED 3, 12: „they thrust [the baby on Kumarbi's knees]“. Vgl. zu diesem Ausdruck Hoffner, JNES 27, 1968, 198ff, bes. 201 mit Anm. 27; Beckman, StBoT 29, 1983, 48f. und Dardano, OrNS 71, 2002, 396f.",
+"T37": "Vgl. zu diesem harten Gestein „Basalt“ oder „Diorit“ Haas, Mat.Mag. 2003, 208f.; Pecchioli Daddi – Polvani 1990, 154 mit Anm. 12 und Hinweisen auf weitere Literatur. Siehe auch Singer (2002: 130, Anm. 27).",
+"T38": "Vgl. zu dem Ausdruck CHD L-N 260b.",
+"T39": "Hoffner, Myhts2 1998, 59, übersetzt: „again“ mit Erklärung in Anm. 22, S. 78.",
+"T40": "Anders Hoffner, Myths2 1998, 59: „Who can [any longer] bear the intense struggles of the great gods?“; Pecchioli Daddi – Polvani 1990, 154: „È lui che vedrà le forti battaglie dei grandi dei?“",
+"T41": "So auch Pecchioli Daddi – Polvani 1990, 154. Haas, Literatur 2006, 163, liest „Götter“.",
+"T42": "So auch Hoffner, Myths2 1998, 59: „it was standing like a shaft with the sea coming up to its knees“; anders Haas, Literatur 2006, 163: „Da [stan]d er im Meer (bis) an die Knien wie ein Speer“.",
+"T43": "Haas, Literatur 2006, 163: „ragte“.",
+"T44": "Wörtlich: „Ihm (ist) das Meer bis zur Stelle des Gürtels wie ein Kleidungsstück hingeschafft.“; vgl. CHD P 352a: „The sea having reached (lit. „was brought“) up to his waist (lit. „the place of the belt“) like a garment“ mit Diskussion der Varianten.",
+"T45": "Vgl. für eine Interpretation „Pilz“ Pecchioli Daddi – Polvani 1990, 154 mit Anm. 13. Haas, Literatur 2006, 163: „maltani-Turm“; vgl. auch CHD L-N 135b mit verschiedenen Interpretationen. HED 6, 28: „(sledge)hammer, bludgeon, cudgel, club, mace“ (o.ä.).",
+"T46": "Wörtl.: „findet die Tempel und das ku[n]tarra-Gemach“ . Vgl. dazu Haas, Literatur 2006, 163; Pecchioli Daddi – Polvani 1990, 154 Anm. 14.",
+"T47": "Vgl. zu dem Ausdruck CHD L-N 260b.",
+"T48": "Vgl. CHD L-N 473a: „swift“. So auch Haas, Literatur 2006, 164: „Gott der Schnelligkeit“; Hoffner, Myths2 1998, 59: „quickly growing deity“; Pecchioli Daddi – Polvani 1990, 154: „veloce dio“. Anders Starke 1990: 368.",
+"T49": "Bei ki-x-[x] könnte es sich um kinun ‚jetzt‘ handeln.",
+"T50": "Ähnlich Hoffner, Myths2 1998, 59: „His body is unlike that of all the other gods.“ Güterbock 1946, *17 Anm. 7: „Und sein Leib gleicht den [anderen(?)] Göttern nicht.“ Anders Pecchioli Daddi – Polvani 1990, 154: „Il suo corpo [ ... ] non è diverso da quello degli dei!“ und Haas, Literatur 2006, 164: „Sein Körper ist [steinern] – den Göttern ähnelt er nicht.“",
+"T51": "Siehe Haas, Literatur 2006, 164, mit einer Ergänzung: „[und starrte] den Ullikummi (nochmals) an;“ ebenso Hoffner, Myths2 1998, 59: „[He got a] close [look] at Ullikummi.“",
+"T52": "Vgl. HEG III 84 mit einer Ergänzung ZI-ŠU? „sein Sinn?“. Hoffner, Myths2 1998, 59: „From anger his appearance changed.“",
+"T53": "Anders Haas, Literatur 2006, 164: „den ge[waltigen] Stein“; Hoffner, Myths2 1998, 59: „the god E[llil]“.",
+"T54": "Vgl. Haas, Literatur 2006, 164: „Die Angelegenheit, in der er kommt, ist eine sch[werwiegende Angelegenheit]“; Hoffner, Myths2 1998, 59: „On what business does he come? The matter must be [important].“",
+"T55": "Vgl. CHD P 321a.",
+"T56": "Haas, Literatur 2006, 164: „Aufruhr gegen den Himmel“.",
+"T57": "Text C: „[ ... ] der Wettergott [sprich]t die Rede.“",
+"T58": "Text C: „vor ihnen soll [ ... ] aufgestellt werden“. Vgl. zu der Konstruktion CHD P 298b (sub 1 c 1' d'), 307b (sub 12 c 1' e').",
+"T59": "Vgl. CHD Š 103b.",
+"T60": "Anders Hoffner, Myths2 1998, 59: „Is it because the chamberlain set up the chair so badly,...“"
+}
+}

@@ -1,0 +1,189 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.23",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.23 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]{d}10-ni? memiškiuwan [dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"¬¬¬ [ ... ]⸢{d}10?⸣-ni me-mi-iš-ki-u-wa-an [ ... ]"
+]
+],
+"tr": "[ ... begann,] zum Wettergott? zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]šamnāet",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ] [ ... ]ša-am-na-a-et"
+]
+],
+"tr": "[ ... ] erschuf [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "{d}10-aš ANA {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"{d}10-aš A-NA {d}x[ ... ]"
+]
+],
+"tr": "Der Wettergott [ ... ] zu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]{MEŠ} ḫūmanta ŠA MUŠ SAG[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]x{MEŠ} ḫu-u-ma-an-ta ŠA MUŠ SAG[1 ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] alle [ ... ] Ko[pf] der Schlange [ ... ].",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... {URU}kummi]yazza arḫa iyanner",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... {URU}kum-mi?]-⸢ya⸣-az-za ar-ḫa i-ya-an-né-er"
+]
+],
+"tr": "[ ... ] gingen aus [Kumm]e fort.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-pi? pāer",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ] [ ... ]x-⸢pí?⸣ pa-a-er"
+]
+],
+"tr": "[ ... ] gingen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu GIM-an {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"nu GIM-an {d}[ ... ]"
+]
+],
+"tr": "Und als [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... d]āiš",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... d]a-a-iš"
+]
+],
+"tr": "[ ... l]egte [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "DINGIR{MEŠ} ma-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"DINGIR{MEŠ} ma?-x2[ ... ]"
+]
+],
+"tr": "Die Götter [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... {L]}ÚKIN.GI4.A?[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... {L]}Ú?⸢KIN?⸣.GI4!?.⸢A?!⸣3[ ... ]"
+],
+[
+"A",
+"",
+"Der Text bricht ab."
+]
+],
+"tr": "[ ... ] Bote? [ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Polvani 1992, 445, ergänzt zu SAG.[DU(?); ebenso CHD Š 125a.",
+"§ 2':2": "Polvani 1992, 445: ma-ni-(?)[. Nach Kollation am Original ist -ni- möglich.",
+"§ 2':3": "Polvani 1992, 445: ]x-tap-ḫu-u-x[. Nach Kollation am Original entspricht die Autographie in etwa den auf der Tafel stehenden Zeichen."
+}
+}

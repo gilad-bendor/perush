@@ -1,0 +1,394 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.21",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.21 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] pai[t]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"¬¬¬ [ ... ]x pa-i[t]"
+]
+],
+"tr": "[ ... ] gin[g ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "",
+"words": [],
+"mss": [
+[
+"B",
+"1'",
+"[ ... ]x x x x[ ... ]"
+],
+[
+"--",
+"",
+"[ ... ]{d}kumarbiy[a ... ]"
+],
+[
+"A",
+"1'",
+"[ ... ]"
+],
+[
+"B",
+"2'",
+"[ ... ]{d}ku-mar-bi-y[a ... ]"
+]
+],
+"tr": "[ ... ] dem Kumarbi[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {GI]}ŠDÌM-az [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... {GI]}ŠDÌM-az x[ ... ]"
+],
+[
+"B",
+"3'",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ] vom Pfeiler [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=aš ANA {d}kumarbi [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... A-N]A {d}ku-mar-bi [ ... ]"
+],
+[
+"B",
+"3'",
+"na-aš A-NA [ ... ] [ ... ]"
+]
+],
+"tr": "Er [ ... ] zu Kumarbi [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[n]u arunaš uddā[r ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... a-r]u-na-aš ud-da-⸢a⸣-a[r ... ]"
+],
+[
+"B",
+"4'",
+"[n]u a-ru-na-a[š ... ]"
+]
+],
+"tr": "[ ... ] die Wort[e] des Meeres [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... EG]IR-pa QĀTAMMA kappuw[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... EG]IR-pa QA-TAM-MA ka[p-pu-wa- ... ] ¬¬¬"
+],
+[
+"B",
+"",
+"5' [ ... QA-TAM-M]A kap-⸢pu⸣-w[a- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] kümmer[- ... ] ebenso um [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[m]ān {d}kumarbiš ar[unaš uddā]r? IŠME",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ma]-⸢a⸣-an {d}ku-mar-bi-iš a-r[u-na-aš ... ]"
+],
+[
+"B",
+"6'",
+"[ ... ud-da-a-a]r? IŠ-ME"
+]
+],
+"tr": "[A]ls Kumarbi [die Wort]e [des] Me[eres] vernahm,",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]{LÚ}ḫalukattallan 7-Š[U ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]{LÚ}ḫa-lu-kat-tal-la-an 7-Š[U ... ] [ ... ]"
+],
+[
+"B",
+"6'",
+"x[ ... ] [ ... ]"
+]
+],
+"tr": "[ ... ] den Boten siebenm[al ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[n]=aš=ši=kan KILĪLU [ ... ] GUŠKIN [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[n]a?-aš-ši-kán KI-LI-LU [ ... ]"
+],
+[
+"B",
+"7'",
+"[ ... ]x GUŠKIN x[ ... ]"
+]
+],
+"tr": "Er [ ... ] ihm einen Kranz [ ... ] Gold [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] {d}kumarbiš {LÚ}ḫal[ukattalla- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]x {d}ku-mar-bi-iš {LÚ}ḫa-l[u-kat-tal-la- ... ]"
+],
+[
+"B",
+"8'",
+"[ ... ]⸢{d}ku-mar-bi⸣-i[š ... ]"
+]
+],
+"tr": "Kumarbi [ ... ] Bo[ten ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] GAM-anta duddumil[i ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ] GAM-an-ta du-ud-du-mi-l[i ... ] ¬¬¬"
+],
+[
+"B",
+"9'",
+"[ ... ]x du-ud-du-m[i-li ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] leis[e] hinab [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3'",
+"hl": "",
+"master": "[{d}kumar]biš=kan aruni GAM-a[n] ār(a)š",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[{d}ku-mar]-bi-iš-kán a-ru-ni GAM-a[n ... ]"
+],
+[
+"B",
+"10'",
+"[ ... ]⸢a⸣-ar-aš"
+]
+],
+"tr": "[Kumar]bi gelangte hina[b] zum Meer.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 3'",
+"hl": "",
+"master": "adanna=šši akuwanna p[iyēr?]",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"[a-da-an-n]a-aš-ši a-ku-wa-an-na p[í?-i-e-er?]"
+],
+[
+"B",
+"10'",
+"a-da-an-n[a-aš-ši ... ] [ ... ]"
+]
+],
+"tr": "Sie g[aben?] ihm zu Essen (und) zu Trinken.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-za DUMU.NITA-an kar(a)pta",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"[ ... ]x-za DUMU.NITA-an kar-ap-[ta]"
+],
+[
+"B",
+"11'",
+"[ ... ka]r-[a]p-ta"
+]
+],
+"tr": "[ ... ] ho[b] den Sohn hoch",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 3'",
+"hl": "",
+"master": "⸢n=an?⸣ [AN]A {d}kumarbi g[inuwaš ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"[ ... A-N]A ⸢{d}⸣ku-mar-bi g[i-nu-wa-aš ... ]"
+],
+[
+"B",
+"11'",
+"⸢na-an?⸣ [ ... ] [ ... ]"
+]
+],
+"tr": "und [ ... ] ihn? [au]f Kumarbis K[nie.]1",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 3'",
+"hl": "",
+"master": "[{d}kumarbi]š=za=kan? DUMU-a[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"[{d}ku-mar-bi-iš?-z]a?-[k]án DUMU-a[n ... ]"
+],
+[
+"B",
+"12'",
+"[{d}ku-mar-bi?-i]š-za-ká[n ... ]"
+],
+[
+"B",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[Kumarbi ... ] de[n] Sohn [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-an?(-)[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"[ ... ]x-⸢an?⸣(-)[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"T1": "Wörtl.: „dem Kurmarbi auf (seine) Knie“."
+}
+}

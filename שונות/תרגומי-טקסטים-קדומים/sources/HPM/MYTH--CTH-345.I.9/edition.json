@@ -1,0 +1,183 @@
+{
+"kind": "MYTH",
+"cth": "CTH 345.I.9",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 345.I.9 (TX 2009-08-29, TRde 2009-08-29)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "par[ā ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"pa-r[a-a ... ]"
+]
+],
+"tr": "Hina[us ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "kwe[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"ku-e[ ... ]"
+]
+],
+"tr": "Welche [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "ḪUR.SAG[(-) ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"ḪUR.SAG[(-) ... ]"
+]
+],
+"tr": "[ ... ] Berg [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "ZAG-na-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"ZAG-na-[ ... ]"
+]
+],
+"tr": "Recht[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "{GIŠ}tiy[arita(-) ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"{GIŠ}ti-y[a-ri-ta(-) ... ]"
+]
+],
+"tr": "Spin[deln1 ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "AN-iš-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"AN-iš-[ ... ]"
+]
+],
+"tr": "Himmel[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu ne[pí-? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"nu ne-[pí?- ... ]"
+]
+],
+"tr": "und [ ... ] Him[mel? ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] wi[- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ] ú-i-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=k[an? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"nu-k[án? ... ]"
+]
+],
+"tr": "Und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"x1["
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Am Foto sind Reste einer weiteren Zeile zu sehen.",
+"T1": "Siehe dazu die Anmerkung zu CTH 345.I.3.1 Kolon 265."
+}
+}

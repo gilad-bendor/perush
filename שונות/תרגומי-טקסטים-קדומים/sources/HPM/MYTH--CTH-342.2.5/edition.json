@@ -1,0 +1,318 @@
+{
+"kind": "MYTH",
+"cth": "CTH 342.2.5",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 342.2.5 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"¬¬¬ [ ... ]x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "⸢nu⸣=za ki-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"⸢nu⸣-za ki-x[ ... ]"
+]
+],
+"tr": "Und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... akuwa]ndu?",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... a-ku-wa?-a]n?-du"
+]
+],
+"tr": "Sie sollen [ ... trink]en!",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "⸢NINDA-an⸣ adand[u?]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"⸢NINDA-an⸣ a-da-an-d[u?]"
+]
+],
+"tr": "Sie solle[n?] Brot essen!",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ...? ] [ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "ANŠE.KUR.RA{MEŠ}-i=šši [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"ANŠE.KUR.RA{MEŠ}-iš-ši [ ... ]"
+]
+],
+"tr": "[ ... ] seinen Wagenkämpfern [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] LUGAL-waš ÉRIN{MEŠ}-TI ANŠE.[KUR.RA{MEŠ} ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ] LUGAL-wa-aš ÉRIN{MEŠ}-TI ANŠE.[KUR.RA{MEŠ} ...? ] [ ...? ]"
+]
+],
+"tr": "[ ... ] Truppen des Königs (und) die Wagen[kämpfer ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {MUNU]}S.MEŠSUḪUR.LA5 ḫukmat[al- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... {MUNU]}S.MEŠSUḪUR.LA5 ḫu-uk-ma-t[al- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] Dienerinnen (und) Besch[wörer? ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] uwandu",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]x ú-wa-an-du"
+]
+],
+"tr": "Die [ ... ] sollen kommen",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=za kēda-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"nu-za ke-e-⸢da⸣-[ ... ]"
+]
+],
+"tr": "und sich dies[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "[GE]ŠTIN-an=ma akuwandu",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[GE]ŠTIN-an-ma a-ku-wa-an-du ¬¬¬"
+]
+],
+"tr": "[We]in aber sollen sie trinken!",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-aš? dapiaš DINGIR{MEŠ}-aš MUL{ḪI.A} [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x-aš? da-pí-aš DINGIR{MEŠ}-aš MUL{ḪI.A} [ ... ]"
+]
+],
+"tr": "Die Sterne aller Götter [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... -i]tt=a=za iškandu",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... -i]t-ta-za iš-kán-du"
+]
+],
+"tr": "Auch sollen sie sich mit [Öl] salben!",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 3'",
+"hl": "",
+"master": "NINDA-an [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"NINDA-an x[ ... ]"
+]
+],
+"tr": "[Sie sollen] Brot [essen!]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] MUL{ḪI.A} mān par-ku-wa-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ]x MUL{ḪI.A} ma-a-an par-ku-wa-[ ... ]"
+]
+],
+"tr": "Wie die Sterne [ ... ] rein[- ... ],",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] ANŠE.KUR.RA{MEŠ} UḪ7-za QĀTAMM[A [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ ... ] ⸢ANŠE.KUR.RA⸣{MEŠ} UḪ7-za QA-TAM-M[A ... ]"
+]
+],
+"tr": "ebenso sollen die Wagenkämpfer [ ... ] vom Zauber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] ⸢kē⸣ pa-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"[ ... ]x x⸢ke-e⸣ pa-x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ] diese [ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

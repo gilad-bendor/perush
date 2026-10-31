@@ -1,0 +1,100 @@
+{
+"kind": "MYTH",
+"cth": "CTH 360.3",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 360.3 (TX 2009-08-27, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ _ (_) ]x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[{LÚ}]ḪUL-aš [ŠEŠ-aš? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[{LÚ}]ḪUL-aš [ŠEŠ-aš? ... ]"
+]
+],
+"tr": "[Bruder] Schlecht [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "idālu[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"i-da-a-lu-u[š ... ]"
+]
+],
+"tr": "[ ... ] schlecht [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "ḫarranz[a ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"ḫar-ra-an-z[a ... ]"
+]
+],
+"tr": "[ ... ] beschädigt [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"x x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

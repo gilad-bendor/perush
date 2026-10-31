@@ -1,0 +1,212 @@
+{
+"kind": "MYTH",
+"cth": "CTH 345.I.6",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 345.I.6 (TX 2009-08-23, TRde 2009-08-20)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ _ _ _ ]x x-x-x[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ _ _ _ ]x x-x-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ _ _ ]-an šarā[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ _ _ ]-an ša-ra-a[ ... ]"
+]
+],
+"tr": "[ ... ] hinauf [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ _ (_) ]x{MEŠ} :tarša-x[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ _ (_) ]x{MEŠ} :tar-ša-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... me]naḫḫanda [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ] [me]-na-aḫ-ḫa-an-da [ ... ]"
+]
+],
+"tr": "[ ... ge]genüber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=an SAG.KI-SU [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"⸢na⸣-an SAG.KI-SÚ [ ... ]"
+]
+],
+"tr": "[ ... ] seine Stirn [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] {NA4}ŠU.U-in x[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ] {NA4}ŠU.U-in x[ ... ]"
+]
+],
+"tr": "[ ... ] den Diorit [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] arḫa tiyē[r?]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ] ar-ḫa ti-i-e-e[r?]"
+]
+],
+"tr": "[ ... ] trate[n?] weg.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "ištarna=ma=ka[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"iš-tar-na-ma-ká[n ... ]"
+]
+],
+"tr": "In der Mitte aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... n]amma šak[u- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ] [n]am-ma ša-k[u- ... ]"
+]
+],
+"tr": "[ ...f]erner [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ _ ]x-aš te-x[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ _ ]x-aš te-x[ ... ]"
+]
+],
+"tr": "[ ...]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ _ _ (_) ]x x[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ _ _ (_) ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

@@ -1,0 +1,198 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.14",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.14 (TX 2009-08-27, TRde 2009-08-24)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... w]ar(a)[pzi?]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... w]a?-⸢ar⸣-a[p?-zi?]"
+]
+],
+"tr": "[ ... w]ä[scht? ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ .. .]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ .. .]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] galgalt[ūri ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x gal-gal-t[u-u-ri ... ]"
+]
+],
+"tr": "[ ... ] galgalt[uri-Instrument ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] É-ŠU pēḫu[ter?]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ] É-ŠU pé-⸢e-ḫu⸣-[te?-er?]"
+]
+],
+"tr": "[ ... ] schaff[ten? ... zu] seinem Haus.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-i {GIŠ}ŠÚ.A-ki kula-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]-i {GIŠ}ŠÚ.A-ki ku-la-[ ... ]"
+]
+],
+"tr": "[ ... ] Stuhl [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-anza IŠTU É [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x-an-za IŠ-TU É [ ... ]"
+]
+],
+"tr": "[ ... ] aus dem Haus [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {URU}ku]mmiya? URU-ri an[da? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... {URU}?ku]m?-mi-ya1 URU-ri an-[da? ... ]"
+]
+],
+"tr": "[ ... ] nach [Ku]mme? i[n] die Stadt [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] IGI-anda aušt[a?]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]x IGI-an-da ⸢a-uš?⸣-t[a]"
+]
+],
+"tr": "[ ... ] sa[h? ... ] entgegen.",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x[ _ ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Polvani, Fs Alp 1992, 452 liest: GU]D GE6-ya."
+}
+}

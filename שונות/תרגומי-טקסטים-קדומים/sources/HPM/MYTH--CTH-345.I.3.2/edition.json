@@ -1,0 +1,296 @@
+{
+"kind": "MYTH",
+"cth": "CTH 345.I.3.2",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 345.I.3.2 (TX 2009-08-30, TRde 2009-08-29)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2''",
+"title": "§ 2''",
+"hl": ""
+},
+{
+"id": "§ 3'''",
+"title": "§ 3'''",
+"hl": ""
+},
+{
+"id": "§ 4'''",
+"title": "§ 4'''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... memiškiwa]n? daiš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1",
+"[ ... me-mi-iš-ki-u-a]n? da-iš"
+]
+],
+"tr": "[ ... ] begann zu [spreche]n:",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] wetena[z? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2",
+"[ ... ]x ú-e-te-na-a[z? ... ]"
+]
+],
+"tr": "„[ ... aus] dem Wasse[r ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-aštari",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"[ ... ]x-aš-ta-ri1"
+],
+[
+"A",
+"",
+"Vs. I bricht ab."
+]
+],
+"tr": "[ ... ] wird ge[...]t.“",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2''",
+"hl": "",
+"master": "{d}upel[luriš ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 1",
+"{d}ú-pé-el-[lu-ri-iš ... ]"
+],
+[
+"A",
+"",
+"Vs. II bricht ab."
+]
+],
+"tr": "Upel[luri ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 3'''",
+"hl": "",
+"master": "⸢nu⸣ [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1'",
+"⸢nu⸣ x2 x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 3'''",
+"hl": "",
+"master": "nu=za {NA4}ŠU.U-[zi- ... ] ēššāi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 2'",
+"nu-za ⸢{NA4}ŠU.U⸣-[zi- ... ] e-eš-ša-a-i"
+]
+],
+"tr": "Der Dior[it] führt aus [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3'''",
+"hl": "",
+"master": "[nu u]ll[ikummiš? {d}10-ni memiškiwan dāiš?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3'",
+"[nu {d}u]l?-l[i?-kum-mi-iš ... ]3"
+]
+],
+"tr": "[ ... U]ll[ikummi? begann, zum Wettergott zu sprechen.]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3'''",
+"hl": "",
+"master": "{d}10 {d}A.A-aš=w[a GA]LGA-aš LUGAL-u[š] tuetaz tiyat []",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4'",
+"{d}10 {d}A.A-aš-w[a GA]LGA-aš LUGAL-u[š] tu-e-ta-az ti-ya-at [] ¬¬¬"
+]
+],
+"tr": "„Wettergott! Ea, der König der [Wei]sheit, tr[at] an deine Seite.1",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 4'''",
+"hl": "",
+"master": "ammuk=wa=za ZI-ni EGIR-pa [ ... ] ⸢GALGA-tar⸣ memiškinun",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 6'",
+"am-mu-uk-wa-za ZI-ni EGIR-pa [ ... ] ⸢GALGA-tar⸣ me-mi-iš-ki-nu-un"
+]
+],
+"tr": "Ich sprach zu mir selbst den Rat [ ... ]:",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 4'''",
+"hl": "",
+"master": "ZI-ni=wa=za kattan ḫattatar da[ški?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 8'",
+"ZI-ni-wa-za kat-⸢ta⸣-[a]n ḫa-at-ta-tar da-[aš-ki?]"
+]
+],
+"tr": "‚Nim[m?] dir Ratsschluss in den Sinn.‘",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 4'''",
+"hl": "",
+"master": "nu=wa kiššan memišk[iwan dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 9'",
+"nu-wa ki-iš-ša-[a]n me-mi-iš-k[i-u-an ... ]"
+]
+],
+"tr": "Er [begann], folgendermaßen zu spre[chen]:",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 4'''",
+"hl": "",
+"master": "AN-ši=wa=kan ša[r]ā pa[iddu?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 10'",
+"AN-ši-wa-kán ša-[r]a-a ⸢pa⸣-[id-du?]"
+]
+],
+"tr": "‚Er soll hi[na]uf in den Himmel ge[hen]2.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 4'''",
+"hl": "",
+"master": "nu=wa=za {URU}kummi[ya]n [URU-an šanezzin? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 11'",
+"nu-wa-za {URU}kum-mi-[ya-a]n [URU-an ... ]"
+]
+],
+"tr": "Er soll Kummi[ya, die erstklassige Stadt ... ].",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 4'''",
+"hl": "",
+"master": "[{d}10-an=ma=wa] ŠA {URU}kummiy[a UR.SAG-in LUGAL-un GUL-aḫdu?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 11'",
+"[ ... ] ŠA {URU}kum-mi-y[a ... ]"
+]
+],
+"tr": "[Er soll aber den Wettergott, den heldenhaften König] der Stadt Kummiy[a, schlagen?].",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 4'''",
+"hl": "",
+"master": "DINGIR{MEŠ}=ma=wa=kan n[epišaz katta MUŠEN{ḪI.A} GIM-an išḫuwau?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 13'",
+"DINGIR{MEŠ}-ma-wa-kán n[e-pí-ša-az ... ] ¬¬¬"
+],
+[
+"A",
+"",
+"Ende von Rs. III."
+],
+[
+"A",
+"",
+"Die Rs. IV ist, soweit erhalten, unbeschrieben."
+]
+],
+"tr": "Die Götter aber [soll er wie Vögel aus dem] H[immel hinabschütten].",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Auf dem Kolumnentrenner nach oben über den oberen Rand geschrieben.",
+"§ 3''':2": "Der Zeichenrest ist nach Kollation am Foto kein DINGIR; dahinter sind noch weitere unlesbare Spuren zu erkennen.",
+"§ 3''':3": "Nach Kollation am Foto ist nicht klar, was zu lesen ist. Trabazo liest n[u {d}ul-° (nach einer Ergänzung von Güterbock, siehe Trabazo: BCBO 6, S. 250 Anm. 120), jedoch sieht es in der Autographie und auf dem Foto so aus, als stehe an der (oben) abgebrochenen Stelle mehr als ein Zeichen. Alternativ käme eine Lesung nu {d}[ul-° in Frage, wobei dann aber der Raum zwischen e-eš-ša-i und nu ungewöhnlich groß wäre.",
+"T1": "Vgl. dazu ähnliche Ausdrücke in KUB 33.106+ Rs. IV 24' und 30' (CTH 345.I.3.1 Kola 272 und 282).",
+"T2": "Zu diesem und den folgenden Kola vgl. die parallelen Formulierung in KUB 33.93 III 19'ff. (CTH 345.I.1 Kola 109-115)."
+}
+}

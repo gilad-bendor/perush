@@ -1,0 +1,336 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.13",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.13 (TX 2009-09-08, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] nepi[š? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x ne-⸢pí⸣-i[š? ... ]"
+]
+],
+"tr": "[ ... ] Himme[l ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... n]epišaš alp[u- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... n]e-pí-ša-aš al-p[u- ... ]"
+]
+],
+"tr": "[ ... die] Wolk[en] des [Hi]mmels [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -š]anzi",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... -š]a?-an-zi"
+]
+],
+"tr": "Sie [ ... -]en",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"nu x1[ ... ]"
+]
+],
+"tr": "Und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]INA É ABI[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]⸢I⸣-NA É A-BI[ ... ]"
+]
+],
+"tr": "[ ... ] im Haus des Vaters [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -z]i UL tarn[a?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... -z]i Ú-UL tar-n[a?- ... ]"
+]
+],
+"tr": "[ ... ] lass[- ... ] nicht los.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {d}]gulšuš DINGIR.MAḪ[{MEŠ} ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... {d}]⸢gul-šu-uš⸣ DINGIR.⸢MAḪ⸣[{MEŠ} ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] Schicksalsgöttinnen (und) Muttergöttin[nen ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... memišk]iwan daiš",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... me-mi-iš-k]i-u-an da-iš"
+]
+],
+"tr": "[ ... ] begann zu [sprec]hen:",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"x[ ... ]"
+]
+],
+"tr": "„[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-anni uwat[a?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]x-an-ni ú-wa-t[a?- ... ]"
+]
+],
+"tr": "In [ ... ] bring[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-za tūwa[z ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ]x-za ⸢tu⸣-u-wa-a[z] x[ ... ]"
+]
+],
+"tr": "[ ... von] Ferne [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] uddār [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ ... ]x ud-⸢da-a-ar⸣ [ ... ]"
+]
+],
+"tr": "[ ... ] die Worte [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-za {MUŠ}ḫedamm[u- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"[ ... ]x-za {MUŠ}ḫé-dam-m[u- ... ]"
+]
+],
+"tr": "[ ... ] Ḫedamm[u ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... n]epiši daganz[ipi ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"[ ... n]e-pí-ši da-ga-an-z[i-pí ... ]"
+]
+],
+"tr": "[ ... ] in [H]immel (und) Erd[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... memi]škiwan daiš",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"[ ... me-mi-i]š-ki-u-an da-iš"
+]
+],
+"tr": "[ ... ] begann zu [spre]chen:",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-zi",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"[ ... ] [ ... ]x-zi"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 3'",
+"hl": "",
+"master": "u-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"ú-[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Siegelová, StBoT 14, 1971, 62: nu-u[t?-."
+}
+}

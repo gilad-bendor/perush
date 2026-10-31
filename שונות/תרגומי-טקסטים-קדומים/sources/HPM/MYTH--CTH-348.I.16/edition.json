@@ -1,0 +1,204 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.16",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.16 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... nu]=nnaš=kan SAG.DU [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... nu?-u]n-na-aš-⸢kán SAG?⸣.DU x[ _ _ (_) ]x[ ... ]"
+]
+],
+"tr": "[ ... ] uns [ ... ] Kopf [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ši anda {GIŠ}ḫašikkaš w[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x-ši an-da {GIŠ}ḫa-ši-ik-ka4-aš w[a- ... ]"
+]
+],
+"tr": "[ ... ] in dem [ ... ] ḫašikka-Frucht1 [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]SIG7 arḫa UL tarnai",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]SIG7 ar-ḫa Ú-UL tar-na-i"
+]
+],
+"tr": "[ ... ] lässt [ ... ]-tausend2 [ ... ] nicht fort.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]watkuz[zi]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ...? ] [ ... ]wa-at-ku-uz-[zi] ¬¬¬"
+]
+],
+"tr": "[ ... ] spring[t (hervor) ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... {M]}UŠḫedammuš[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... {M]}UŠḫé-dam-mu-uš[ _ _ _ ]x x[ ... ]"
+]
+],
+"tr": "[ ... ] der Ḫedammu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[a]uriyaš=kan [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[a]-⸢ú⸣-ri-ya-aš-kán x[ ... ]"
+]
+],
+"tr": "[ ... ] der [G]renzwache [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]x x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=kan[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"nu-kán[ ... ]"
+]
+],
+"tr": "Und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"T1": "Vgl. dazu HED 3, 232, und Haas 2003, 272-275.",
+"T2": "SIG ist „10000“ - in der Lücke ist daher noch eine Zahl zu erwarten."
+}
+}
