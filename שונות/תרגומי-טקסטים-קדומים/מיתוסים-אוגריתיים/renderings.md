@@ -710,3 +710,7 @@ manufacture "the Hebrew"). **1.119:31 reads *dkr* `זָכָר`, not *bkr*** (the
 note, never a line), *šrp* `שְׂרֵפָה` [equivalent `עֹלָה`], *šlmm* `שְׁלָמִים` [cognate], *mtntm* / *kbd* `מָתְנַיִם` / `כָּבֵד` (Lev
 3:4), *pgr* `פֶּגֶר`. Tool: the `נדר` gate licensed by *mḏr* / *nḏr*, the `גדל` gate by *mdgl*. Left for the next session on
 the Baal Cycle: *yp* `יֹפִי` / *ysmt* `יופי` (1.5–1.6).
+- **Independent fidelity review (Round 5 run 3), after §12.9:** 194 lines fixed in all 16 new tablets (Kirta 96, Aqhat 63, the
+  Rephaim and rituals 35; ≈ 85% brackets, the rest meaning, person, tense, omissions); each marked `(תיקון סוקר: …)`. **1.18
+  IV:32 *trḫp ʿnt* = `רִחֲפָה ענת`** (past: the main narrative verb; the participle `מְרַחֶפֶת` would have reproduced Gen
+  1:2's form through a tense the tablet does not give); the circumstantial *nšrm trḫpn* `נשרים מרחפים` stays.

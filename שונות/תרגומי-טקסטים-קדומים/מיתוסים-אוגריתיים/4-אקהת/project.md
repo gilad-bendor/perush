@@ -137,6 +137,7 @@ below. 6. VI:30–32 (Baal "revived" and feasted): the usual reading is followed
   footnotes for the cruxes and the key parallels.
 - `ugarit_tools.py build 1.17`; `verify 1.17 --strict`: 189 entries, 0 problems, 0 repeated-line differences;
   `check_bible_quotes.py` on the three files: 0 problems.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against CUC / KTU³ (parses, DULAT; no EUPT). **9 `>` lines changed**, all brackets (one sign or an ending restored → no bracket: I:9, I:17, II:17, II:21, II:33, V:5, VI:3, VI:32, VI:54), each with a `(תיקון סוקר: …)` note. **The son's duties** (I:26–33, I:42–47 + II:1–8, II:16–23) and Danel's action formula, the gate line and the feast lines: identical Hebrew where the Ugaritic is identical, the person changing as on the tablet (3rd → 2nd → 1st); the order of II:4–6 (*spu ksmk* before *aḫd ydk*) is the tablet's. No meaning, negation or *l* errors found. Rebuilt; `verify 1.17 1.18 1.19 --strict` 0 problems (the one repeated-line difference, 1.19 III:31 / III:43, is the next word on the tablet, *hyt* / *hmt*); quotes 0.
 
 ### The text on its own terms
 
@@ -284,6 +285,7 @@ Sutean? 3. IV:40–42 (Anat's lament) are too broken for a sure reading.
   IV:21, *km|šiy* to IV:35); (b) plan / execution compared string by string; 1.3 V copies checked; *št* revised from
   `*הַסּוּתִי*` to `*הַשָּׂרָה*` after 1.19 IV:59; names unvocalized after their first occurrence; (c) the generated file read
   through. Build, `verify 1.18 --strict` 0 problems, quotes 0 problems.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against CUC / KTU³ (parses, DULAT; no EUPT). **16 `>` lines changed**, with notes: 15 brackets (I:12 *[dq]nk* had only `[ז]` bracketed; IV:13 *tḥ[wy]* had none – both now bracketed as restored; the rest one sign or an ending → no bracket: I:16–18, I:21, I:27, I:29, IV:21, IV:29–31, IV:35–36, IV:39); **1 tense: IV:32 *trḫp ʿnt* `רִחֲפָה ענת`** (narrative prefix, the main action, §3), not the participle `מְרַחֶפֶת` – the participle reproduced Gen 1:2's form through a tense the tablet does not give; the root רחף and the cognate tag stay, the הקבלה and הערות of the entry are adjusted. This supersedes the wording `מְרַחֶפֶת ענת` in the Decisions and Key parallels above; the accepted circumstantial participle of *nšrm trḫpn* (IV:20, IV:31; 1.19 I:32, §12.5) is unchanged. *rḫp* lines checked: IV:20, 31 `מרחפים` (3 m. pl., circumstantial), IV:21 `ארחף` (1 c. sg., speech, future), IV:32 `רִחֲפָה` (3 f. sg., past). Rebuilt; `verify 1.17 1.18 1.19 --strict` 0 problems (the one repeated-line difference, 1.19 III:31 / III:43, is the next word on the tablet, *hyt* / *hmt*); quotes 0.
 
 ### The text on its own terms
 
@@ -390,6 +392,7 @@ As for 1.17–1.18.
   `אַקְהָת`, `עֲנָת`, `בַּעַל`, `פּוּגַת`) added; (c) the generated file read: `על הענבים?`, *ḫlpn* moved from `*ח[רב]*` to
   `*מַחֲ[לָף]*` (`חרב` is *ḥrb* in the next line). Build; `verify 1.19 --strict` 0 problems (1 justified repeated-line
   difference); quotes 0 problems on all files.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against CUC / KTU³ (parses, DULAT; no EUPT). **38 `>` lines changed**, all brackets, each with a note: one sign or an ending restored → no bracket (e.g. I:2, I:22, I:31, II:2, II:13, II:21, II:24, II:30–31, II:38, II:42–43, II:45, II:48, III:1, III:4, III:7, III:18, III:21, III:35–36, IV:20, IV:22, IV:27, IV:45, IV:47–50, IV:59, IV:61); a word CUC reads had been bracketed (I:28, II:37, II:39, II:41, II:49, II:56, IV:56). *rḫp* (I:32 `נשרים מרחפים`, §12.5) correct. Pughat's epithet, the town-curse refrain and the eagle passages (III:1–41: the three *knp … bʿl yṯbr* / *ybn* rounds) compared: identical where the Ugaritic is identical. No meaning, negation or *l* errors found. Rebuilt; `verify 1.17 1.18 1.19 --strict` 0 problems (the one repeated-line difference, 1.19 III:31 / III:43, is the next word on the tablet, *hyt* / *hmt*); quotes 0.
 
 ### The text on its own terms
 
