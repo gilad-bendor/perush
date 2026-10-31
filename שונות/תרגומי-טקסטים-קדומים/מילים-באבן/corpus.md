@@ -22,12 +22,12 @@ a silver amulet, a potsherd, a limestone tablet.
 | KH | `2-ברכות-באבן-ובכסף/` (`annotated-ketef-hinnom`) | Ketef Hinnom amulet II, c. 600 BCE | Hebrew (Judahite) | 12 | English Wikipedia (CC BY-SA), after Barkay et al. 2004 | first draft, reviewed |
 | MH | `3-קול-הקוצר-ולוח-השנה/` (`annotated-mesad-hashavyahu`) | The Mesad Hashavyahu ostracon (KAI 200), c. 630 BCE | Hebrew (Judahite) | 14 | English Wikipedia (CC BY-SA), after Naveh 1960 | first draft, reviewed |
 | GZ | `3-קול-הקוצר-ולוח-השנה/` (`annotated-gezer`) | The Gezer calendar (KAI 182), 10th c. BCE | Hebrew / "Canaanite" | 7 + margin | English Wikipedia (CC BY-SA) | first draft, reviewed |
-| MT | `4-תעריף-הקורבנות/` | The Marseille tariff (CIS I 165, KAI 69), 4th–3rd c. BCE | Punic | 21 | Cooke 1903 no. 42 (PD) | first draft, reviewed |
+| MT | `4-תעריף-הקורבנות/` (`annotated`) | The Marseille tariff (CIS I 165, KAI 69), 4th–3rd c. BCE | Punic | 21 | Cooke 1903 no. 42 (PD) | first draft, reviewed |
+| CT | `4-תעריף-הקורבנות/` (`annotated-carthage`) | The Carthage tariff (CIS I 167, KAI 74), 4th–3rd c. BCE | Punic | 11 | Cooke 1903 no. 43 (PD) | first draft (self-reviewed; its Hebrew copies the reviewed MT) |
 
 **Recorded, not done** (no open base text reachable on 2026-10-31; details and pointers in
 `../sources/_records-only--Words-in-stone/README.md`): Tell Fekheriye (Aramaic side), the Sefire treaties, the Deir
-ʿAllā Balaam text, Khirbet el-Qom, Ketef Hinnom I, the other ʿAjrud texts (the wall poem), the Carthage tariff
-(Cooke 43, PD – possible next), the Punic *mlk* stelae.
+ʿAllā Balaam text, Khirbet el-Qom, Ketef Hinnom I, the other ʿAjrud texts (the wall poem), the Punic *mlk* stelae.
 
 ## Reading order
 1. Mesha (the Torah's Transjordan from the other side; *ḥerem*). 2. The blessings (Num 6:24–26; Deut 33:2; 16:21).
@@ -57,7 +57,9 @@ a silver amulet, a potsherd, a limestone tablet.
   Deut 33:10), `שֶׁלֶם` (Amos 5:22), `בְּלִיל` (Lev 2:4 `בְּלוּלֹת`), `מַשְׂאֵת` (2 Chr 24:6), `אֲגוֹרָה` (1 Sam 2:36); the
   hide to the offerer, not the priest (Lev 7:8 [divergence]); the poor exempt from the priests' fee (Lev 5:7, 14:21:
   the Torah cheapens the offering, Carthage waives the fee); a priest who overcharges is fined by the state (1 Sam
-  2:13–16); no `חַטָּאת`, no `אָשָׁם`, no breast and thigh, no atonement [absent].
+  2:13–16); no `חַטָּאת`, no `אָשָׁם`, no breast and thigh, no atonement [absent]. **The Carthage tariff decides the hide the other way:**
+  the skin goes to the priests, as in Lev 7:8 – two temples of one culture split on one item, and the Torah sides with
+  one of them.
 
 ## For the ancient mind
 Royal piety that is also massacre, told as gratitude; a god who is angry and then "returns" a town "in my days"; a king

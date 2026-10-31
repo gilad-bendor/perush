@@ -47,12 +47,15 @@ TEXTS = {
     "GZ": ("Wikipedia--Hebrew-inscriptions/gezer-calendar.tsv", "3-קול-הקוצר-ולוח-השנה/annotated-gezer.rtl.md",
            "3-קול-הקוצר-ולוח-השנה/translation-gezer.rtl.md", "reading", "לוח גזר"),
     "MT": ("Cooke-1903--North-Semitic-Inscriptions/marseille-tariff.tsv", "4-תעריף-הקורבנות/annotated.rtl.md",
-           "4-תעריף-הקורבנות/translation.rtl.md", "translation", "תעריף הקורבנות ממרסיי"),
+           "4-תעריף-הקורבנות/translation-marseille.rtl.md", "translation", "תעריף הקורבנות ממרסיי"),
+    "CT": ("Cooke-1903--North-Semitic-Inscriptions/carthage-tariff.tsv", "4-תעריף-הקורבנות/annotated-carthage.rtl.md",
+           "4-תעריף-הקורבנות/translation-carthage.rtl.md", "translation", "תעריף הקורבנות מקרתגו"),
 }
 # The combined clean files of the projects with several texts (built from the per-text files, in this order).
 COMBINED = {
     "2-ברכות-באבן-ובכסף/translation.rtl.md": ["AJ", "KH"],
     "3-קול-הקוצר-ולוח-השנה/translation.rtl.md": ["MH", "GZ"],
+    "4-תעריף-הקורבנות/translation.rtl.md": ["MT", "CT"],
 }
 
 NIQQUD = re.compile(r"[֑-ֽֿ-ׇ]")  # keeps the maqaf (U+05BE)
@@ -95,7 +98,7 @@ RESERVED_PUN = [
     (W(r"איל|אייל|איילים"), r"איל", "אַיָּל only for ʾyl"),
     (W(r"אימר|אמר"), r"אמר", "אִמַּר (lamb) only for ʾmr"),
     (W(r"גדי"), r"גדא", "גְּדִי only for gdʾ"),
-    (W(r"עז"), r"עז", "עֵז only for ʿz"),
+    (W(r"עז|עיזים|עזים"), r"עז", "עֵז only for ʿz"),
     (W(r"חלב"), r"חלב", "חָלָב / חֵלֶב only for ḥlb"),
     (W(r"שמן"), r"שמנ", "שֶׁמֶן only for šmn"),
     (W(r"משפחה|משפחת"), r"שפח", "מִשְׁפָּחָה only for špḥ"),
