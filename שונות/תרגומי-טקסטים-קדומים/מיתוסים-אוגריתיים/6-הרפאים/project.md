@@ -62,6 +62,7 @@ CUC v0.2.8 (KTU³) through `ugarit_tools.py data`, `pars`, `lex`, `dulat`; DULAT
 - Pass (b) consistency: the journey line aligned with 1.14 IV:32–33 (`אחר – עם שַׁפְּשׁ`); the invitation lines checked against 1.21 / 1.22 by `verify` (0 differences).
 - Pass (c) Hebrew: read the generated `translation-1.20.rtl.md`; no change.
 - `build 1.20`; `verify 1.20 --strict`: 0 problems; `check_bible_quotes.py`: 0 problems (one remembered Ezek 14:14 wording with `וְאִיּוֹב` corrected to the verse's `נֹחַ דָּנִאֵל`).
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against CUC / KTU³ (the parses, DULAT; no EUPT for this text). **1 `>` line changed** (I:1 *[r]pum*: only one sign restored → no bracket), with a `(תיקון סוקר: …)` note. No meaning, negation, *l* or person errors found; every restoration from a parallel says so in its פירוק. Rebuilt; `verify 1.20 1.21 1.22 1.161 1.40 1.119 1.39 --strict` 0 problems, 0 repeated-line differences; quotes 0.
 
 ### The text on its own terms
 - The dead kings are guests, not ghosts: they are invited by name to a house, harness horses, ride chariots, travel three days and eat and drink (II:2–7; 1.22 I:21–24) – the afterlife of a royal line is a banquet of the living with their ancestors.
@@ -108,6 +109,7 @@ As 1.20.
 
 ### Progress log
 - Drafted II:1–V:1; `verify 1.21` clean. Passes (a)–(c): no change; the formula's two copies (II:3–4, II:11–12) are identical bracket-free (verify: 0 differences). Quotes: 0 problems.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against CUC / KTU³ (the parses, DULAT; no EUPT for this text). **2 `>` lines changed**, with notes: II:2 had restored the preposition `אל` inside the brackets, though it is neither on the tablet nor in KTU³'s restoration – it is now `(אל)`, and *[b]ty* is unbracketed (one sign); II:3 *[h]kly* (one sign). No meaning, negation, *l* or person errors found; every restoration from a parallel says so in its פירוק. Rebuilt; `verify 1.20 1.21 1.22 1.161 1.40 1.119 1.39 --strict` 0 problems, 0 repeated-line differences; quotes 0.
 
 ### The text on its own terms
 - The *marzeaḥ* – the drinking society that the Bible knows as the house of mourning (Jer 16:5) – is the frame of the meal with the dead (II:1, 5).
@@ -158,6 +160,7 @@ As 1.20.
 - Pass (b) consistency: invitation lines = 1.21 (verify: 0 differences); journey lines = 1.20 II:3–7; slaughter lines = 1.4 VI.
 - Pass (c) Hebrew: read the generated translation; no further change.
 - `verify 1.22 --strict`: 0 problems.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against CUC / KTU³ (the parses, DULAT; no EUPT for this text). **7 `>` lines changed**, all brackets, with notes: one sign or an ending restored → no bracket (I:3, II:8, II:10, II:17, II:24, II:26); II:7 *bʿl* is read by CUC. The invitation formula (II:1–11, II:19–26) is the same Hebrew as 1.21 II:1–12 and 1.20 II:1–6. No meaning, negation, *l* or person errors found; every restoration from a parallel says so in its פירוק. Rebuilt; `verify 1.20 1.21 1.22 1.161 1.40 1.119 1.39 --strict` 0 problems, 0 repeated-line differences; quotes 0.
 
 ### The text on its own terms
 - A blessing for a line, not a person: "your son, your son's son after you" (I:2–3) and the kiss of the young one (I:4) – the dead ancestors bless the living house with descendants.
@@ -219,6 +222,7 @@ As 1.20 (no Cassuto, no EUPT). Rank 3 (Bordreuil & Pardee 1982, Levine & de Tarr
 - Pass (c) Hebrew: read the generated translation; no change.
 - `verify 1.161 --strict`: 0 problems; `check_bible_quotes.py` on all files: 0 problems.
 - Revised during the rituals (1.40, 1.119), same session: 27–30 *ṯʿy* `והקרב` → `והגש` (*šqrb* is the cognate of `הקריב`); 1.22 I:24 *prʿ* `*ראשית*` → `*תנובה*` (*rišyt*, 1.119:25, is the cognate of `ראשית`). Rebuilt; `verify --strict` 0.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against CUC / KTU³ (the parses, DULAT; no EUPT for this text). No line changed (the brackets, the passive *qritm* / *qbitm* / *qra*, the *tḥt* list and the seven offerings checked). No meaning, negation, *l* or person errors found; every restoration from a parallel says so in its פירוק. Rebuilt; `verify 1.20 1.21 1.22 1.161 1.40 1.119 1.39 --strict` 0 problems, 0 repeated-line differences; quotes 0.
 
 ### The text on its own terms
 - A royal death is a summons: the ancestors are called by name, from the mythic clan (Didanu) through named Rephaim to the father and the dead king himself (2–12) – the king joins a line, not a void.

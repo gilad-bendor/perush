@@ -71,6 +71,7 @@ CUC v0.2.8 (KTU³) via `data`, `pars`, `lex`, `dulat`; the corpus files; the Heb
 - Pass (b) consistency: the four copies against 24–34 (verify: 0 repeated-line differences); m./f. per tablet.
 - Pass (c) Hebrew: read the generated translation; no change.
 - `verify 1.40 --strict`: 0; `check_bible_quotes.py`: 0.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against CUC / KTU³ (the parses, DULAT; no EUPT for this text). **12 `>` lines changed**, all brackets, with notes: one sign or an ending restored → no bracket (19, 22, 25, 26, 37, 39, 40, 42); a word read in CUC had been bracketed (4 *ġbr*, 20 *p*, 43 *ṯkmn*); 10 and 36 *[np]y* bracketed whole. **The refrain** (6–8, 16–17, 24–25, 32–34, 40–43) is identical Hebrew in every copy; masculine (copies I, III: *-km*, `תחטאו`, `תקלקלו`) and feminine (copies II, IV: *-kn*, `תחטאנה`, `תקלקלנה`) follow the tablet; the restorations of copy I (6–17) each name the copy they are restored from. No meaning, negation, *l* or person errors found; every restoration from a parallel says so in its פירוק. Rebuilt; `verify 1.20 1.21 1.22 1.161 1.40 1.119 1.39 --strict` 0 problems, 0 repeated-line differences; quotes 0.
 
 ### The text on its own terms
 - Sin as a catalogue of possibilities: the ritual does not know what was done, so it names every way – foreign influence, oppressors, anger, impatience, a petty misdeed, a fault in the cult itself – and covers them all (11–15, 28–32).
@@ -119,6 +120,7 @@ As 1.40.
 
 ### Progress log
 - Drafted 1–36; `verify` blocked 12 (`למגדל`) → licence fix; 30 `נדר` → licence fix; then clean. Passes (a)–(c): no further change. `verify 1.119 --strict` 0; quotes 0.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against CUC / KTU³ (the parses, DULAT; no EUPT for this text). **8 `>` lines changed**, all brackets, with notes: one sign or an ending restored → no bracket (11, 19, 31, 32, 34); a word read in CUC had been bracketed (9, 15 *bʿl*; 33 *bt*). No meaning, negation, *l* or person errors found; every restoration from a parallel says so in its פירוק. Rebuilt; `verify 1.20 1.21 1.22 1.161 1.40 1.119 1.39 --strict` 0 problems, 0 repeated-line differences; quotes 0.
 
 ### The text on its own terms
 - Holiness has hours: at sunset the king becomes "profane" again (4, 23–24), after washing himself "pure" (5) – the king moves in and out of sacred status by the calendar.
@@ -165,6 +167,7 @@ As 1.40.
 
 ### Progress log
 - Drafted 1–22; `verify 1.39` clean; quotes: three wordings aligned with the verses (Lev 3:4, Ps 8:5 maqaf, 1 Kgs 17:17). Passes (a)–(c): no further change. `--strict` 0.
+- Independent fidelity review (Round 5 run 3), 2026-10-31: every line checked against CUC / KTU³ (the parses, DULAT; no EUPT for this text). **5 `>` lines changed**, all brackets, with notes: one sign restored → no bracket (5, 17, 18, 19, 20). No meaning, negation, *l* or person errors found; every restoration from a parallel says so in its פירוק. Rebuilt; `verify 1.20 1.21 1.22 1.161 1.40 1.119 1.39 --strict` 0 problems, 0 repeated-line differences; quotes 0.
 
 ### The text on its own terms
 - The pantheon as a table of portions: every god gets an animal by size and kind – "big" (*gdlt*) or "little" (*dqt*), ram, bird – an economy of honour.
