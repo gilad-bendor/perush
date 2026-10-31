@@ -564,7 +564,7 @@ byte (`verify WE` checks it); the dossier is **not** edited from here: a revisio
 | mw "water"; š "lake" | `מַיִם`; `אֲגַם` | the dossier's |
 | mꜣꜥ.t; jzf.t; wꜥb | `אֱמֶת`; `עָוֶל`; `טָהוֹר` | §4.1; jzf.t (the opposite of Maat) = `עָוֶל` (Deut 32:4 `אֵין עָוֶל` in the note); wꜥb as HC (§10.11.4); `נָקִי` never in a tale (gate) |
 | BD's `n jri̯=j X` | `לֹא עָשִׂיתִי X` | the negated past; one Hebrew verb per Egyptian verb through the 42 denials |
-| smꜣ "kill"; ṯꜣw/jṯꜣ "steal"; grg "lie" | `הָרַג`; `גָּנַב`; `שֶׁקֶר` | Ex 20:13–16 [equivalent] in the apparatus; `רָצַח`, `נָאַף`, `חָמַד` never (gate) |
+| smꜣ "kill"; ṯꜣw/jṯꜣ "steal"; grg "lie" | `הָרַג`; `גָּנַב`; `כָּזָב` (§11.6: ꜥḏꜣ keeps `שֶׁקֶר`) | Ex 20:13–16 [equivalent] in the apparatus; `רָצַח`, `נָאַף`, `חָמַד` never (gate) |
 | nmḥ; ꜥwꜣ "rob"; nḥm "take away; save" | `דַּל` (§4.3); `גָּזַל`; the translator fixes nḥm (precedent AM 1.11 `להצילו`), by sense if needed, recorded | |
 | wsḫ.t (hall) n.t Mꜣꜥ.tj | `אוּלַם שְׁתֵּי הָאֱמֶת` | "the Two Truths": a note |
 | ḥsb qd.w "the reckoning of characters" | `חֶשְׁבּוֹן הַמִּדּוֹת` | |
@@ -592,3 +592,23 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
    copies copy it (`verify` lists differences).
 4. Sinuhe's letter formula and the king's epithets: fixed by their first copy.
 5. `ḏd.jn X` = `אָז אָמַר X`; `ꜥḥꜥ.n sḏm.n=f` = `וְאָז` + past (§3a).
+
+### 11.6 Round 5 run 6 – TB part 1 (1,1–9,9), merged 2026-10-31 (translator 1)
+1. **Kinship:** ꜥꜣ / šrj (the elder / younger brother) = `הַגָּדוֹל` / `הַקָּטָן` (Gen 27:15's pair; `קָטָן` "child" keeps the
+   pun of 1,1–1,2); AM's `זוטר` stays for the social sense; AM 2.13 ktj `הקטן` – two lemmas, never in one line (kept).
+2. **grg "lie" = `כָּזָב`** (TB 7,4, 7,8; BD 29 `n ḏd=j grg` follows), ꜥḏꜣ "false" = `שֶׁקֶר` / ꜥḏꜣ "the false one" `הַשַּׁקְרָן`
+   against mꜣꜥ.tj `הָאֲמִתִּי`.
+3. **Late Egyptian particles:** wn.jn / ꜥḥꜥ.n = `וְאָז` + past; ḫr-jr-m-ḫt = `וְאַחֲרֵי כֵן`; j.n=f = `– כָּךְ אָמַר לוֹ`; ḫr =
+   `הֲרֵי`; js / jstw = `וְאָכֵן`; jḫ = `אֵפוֹא` (interrogative `מָה`); wꜥ-n (the indefinite article) not translated.
+   **Collision settled (the coordinator): ḫr-jr = `וְהִנֵּה`** (the topicalizing `jr` = `הִנֵּה`, §3a), because `וּבְכֵן` is fixed
+   for AM's ḫr-rʾ-ꜥ (§3a); ḫr-rʾ-ꜥ "still" (TB 8,6) = `עוֹד` by sense. TB part 1's `ובכן` for ḫr-jr changes in part 2's pass.
+4. **Fixed narrative strings (copied at every repetition):** the dawn `וְאַחֲרֵי כֵן – הֵאִירָה הָאָרֶץ, וְיוֹם שֵׁנִי נִהְיָה –`;
+   `יָמִים רַבִּים אַחֲרֵי זֶה`; `כְּמִנְהָגוֹ שֶׁל כָּל יוֹם`; `נִהְיָה … כִּנְמַר־הַדָּרוֹם`; `בּוֹא, נַעֲשֶׂה לָנוּ [שָׁעָה], נִשְׁכַּב` (3,7;
+   5,1 and 7,6 without `לנו`); `אֶצְלִי כְּמִנְהַג אֵם / אָב` (3,9–3,10; 5,2; 7,4–7,5).
+5. **Words:** mḥ m "seize" `אָחַז`; wꜥr "flee" `בָּרַח`; rḫ (sexually) `יָדַע`; qd `בָּנָה`, jrj `עָשָׂה` (9,6 / 9,7: the command
+   and the execution differ in the Egyptian); hꜣy `בַּעַל`, ꜥḥꜣwtj `גֶּבֶר`, ꜥḏd `עֶלֶם`, jhꜣ.t `רֶפֶת`, jḥ `בָּקָר` / jḥ.t `פָּרָה`,
+   mnjw `רוֹעֶה`, jꜣw.t "herd" `עֵדֶר` (≠ jꜣw.t "old age" `זִקְנָה`), ẖdb `הֵמִית`, njwj `חֲנִית`, dm.t `חֶרֶב`, bḫn `מִבְצָר`; ḥm.t
+   and s.t-ḥm.t both `אִשָּׁה` (kept: one meaning).
+6. **Names:** Rꜥ-Ḥrw-ꜣḫ.tj `רַא־חַרְאַחְתִּי`; Pꜣ-Rꜥ `רַא`.
+7. **Gate fixed (the coordinator):** `לברוח` and `מרוח` are no longer read as `רוח` (the prefix class); `השבת` "you returned"
+   still trips the שבת gate: write another form or an `[היתר שער]`.

@@ -459,6 +459,8 @@ def check_line(key, lab, heb, body, fixed, out):
     """Run the gates on one entry; append messages to out; return the number of errors."""
     bad = 0
     plain = strip_marks(heb)
+    # whole words that a gate's prefix class misreads (TB 6,3 `לברוח` "to flee", 8,7 `מרוח` "smeared"): not the gated word
+    plain = re.sub(r"(?<![א-ת])(?:לברוח|מרוח)(?![א-ת])", " ", plain)
     src = plain_src((row(key, lab) or {}).get("text", ""))
     for ent in RESERVED:
         rx, allow, why = ent[:3]
