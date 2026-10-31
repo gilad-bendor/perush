@@ -38,3 +38,21 @@ No question from run 2 needs the user.
 
 No question for the user. The about 40 philological cruxes (*uzr*, *mtm*, *npy* …) are translated with a choice and the
 alternative in the note, and listed under each tablet's "Open decisions" for the user's review of the drafts.
+
+## Run 4 – "Words in stone" (report: `run-4.md`)
+
+**For the user:**
+1. **Three key inscriptions wait for PDFs that only a browser can fetch.** The open editions of **Tell Fekheriye**
+   (CRAI 1981; Syria 1983 – the *ṣlm* / *dmwt* pair of Gen 1:26), **Sefire** (Dupont-Sommer and Starcky 1960; CRAI 1957)
+   and **Deir ʿAllā** (Caquot and Lemaire, Syria 1977) are free to read on Persée, but its server refuses scripted
+   downloads (403, then 500). If you save them from a browser into `sources/` (the URLs are in
+   `sources/_records-only--Words-in-stone/README.md`), a later round can translate them.
+2. **Please confirm: a Wikipedia (CC BY-SA) transcription as an interim base text.** The run used it for Mesad
+   Hashavyahu, Ketef Hinnom II and the Gezer calendar, on the view that an openly licensed transcription of an ancient
+   text is not "transcribing from a © book". **Settled meanwhile by the orchestrator:** accepted as an interim base, on
+   the model of the Sargon Birth Legend on King 1907 – each project says it awaits a check against the critical edition.
+   If you say no, those three become records-only (one script pass).
+
+**Settled by the orchestrator (minor):** Sefire's *ʿdy* (not translated yet) is left to the run that does Sefire,
+under the cross-language principles of guidelines §6.7; the echo tag on proper names (`[cognate]` when the name is the
+same word, else `[equivalent]`) goes to the lead's harmonization at the end of this round.
