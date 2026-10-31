@@ -27,7 +27,7 @@ python3 -I -B from any folder.
     python3 -I -B ugarit_tools.py selftest                 run the gates on the test lines of renderings.md §9
 
 KEY = a KTU tablet number (1.1 … 1.6, 1.23, 1.24, 1.114, 1.100, 1.107, 1.108, 1.82, 1.83; Round 5 run 3: 1.17–1.19
-Aqhat, 1.14–1.16 Kirta, 1.20–1.22 the Rephaim, 1.40); its annotated file is
+Aqhat, 1.14–1.16 Kirta, 1.20–1.22 + 1.161 the Rephaim, 1.40, 1.119, 1.39 the rituals); its annotated file is
 <project>/annotated-<KEY>.rtl.md. Labels are CUC's (= KTU's): "III:38" (column:line) or "62" (one-column tablets).
 
 The base text is the Copenhagen Ugaritic Corpus (../sources/CUC/, git-ignored; restore with
@@ -93,7 +93,10 @@ UNITS = {
     "1.20": (P6, "הָרְפָאִים, לוח א (KTU 1.20)"),
     "1.21": (P6, "הָרְפָאִים, לוח ב (KTU 1.21)"),
     "1.22": (P6, "הָרְפָאִים, לוח ג (KTU 1.22)"),
+    "1.161": (P6, "טקס הרפאים: הלוויית המלך (KTU 1.161)"),
     "1.40": (P7, "טקס הכפרה (KTU 1.40)"),
+    "1.119": (P7, "תפילה לבעל בעת מצור (KTU 1.119)"),
+    "1.39": (P7, "רשימת זבחים (KTU 1.39)"),
 }
 PROJECT_TITLES = {P1: "מחזור בעל (KTU 1.1–1.6)", P2: "מיתוסים ולחשים קצרים מאוגרית",
                   P4: "אַקְהָת (KTU 1.17–1.19)", P5: "כִּרְתָּא (KTU 1.14–1.16)",
