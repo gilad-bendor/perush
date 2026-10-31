@@ -186,7 +186,7 @@ wife" in a woman's prayer, 235, 248 *šuppa-*, 257; AM2 17 *arḫa arai-*.
 | `tarpatt\|tarpadd` | `תַּרְפַּתַּשִּׁי` | | Tarpattašši, a Luwian god (Luwian *tarpatt-* "substitute"?: a note). |
 | `alauwaim\|alāuwaim` | `אֲלַוַּיְמִי` | | Alauwaimi, a Luwian god. |
 | `zarniz` | `זַרְנִיזָה` | | Zarniza. |
-| `mamm[aā]i(?!m)\|mamma\b\|mamma=` | `מַמַּאי` | ★ | Mammai (AM; unvocalized "from what"), Sub4 part 3 |
+| `mamm[aā]i(?!m)\|(?<![a-zš])mamma\b\|(?<![a-zš])mamma=` | `מַמַּאי` | ★ | Mammai (AM; unvocalized "from what"), Sub4 part 3 |
 | `mamm[aā]im` | `מַמָּאִימִי` | | Mammāimi (AM2) |
 | `\{d\}inim\.inim\.bi\|\{d\}imin\.imin\.bi` | `שִּׁבְעָה` | ★ | the Seven, `הַשִּׁבְעָה` (UH 28 `לַשִּׁבְעָה`; both manuscripts {D}IMIN.IMIN.BI, the composite's INIM.INIM.BI a slip; = Akk. *Sebettu*, Erra's `הַשִּׁבְעָה`) |
 | `zarpiy` | `זַרְפִּיָּה` | | Zarpiya, the author of the first ritual on the tablet (AS 101). |

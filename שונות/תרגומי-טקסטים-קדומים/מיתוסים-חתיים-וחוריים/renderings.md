@@ -140,6 +140,7 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | `\{d\}nin\.tu\|ḫannaḫann` | `חַנַּחַנָּה` | | |
 | `ka[m]+a?rušep` | `קַמְרוּשֶׁפָּה` | | |
 | `telipin` | `תֶּלִיפִּינוּ` | | |
+| `(?:taknaš\|takna-aš\|ták-na-aš) \{d\}utu` | `אֵלַת־הַשֶּׁמֶשׁ שֶׁל הָאֲדָמָה` | | the Sun-goddess of the Earth (Allani); the law row's Sun-god skips her (2026-10-30) |
 | `\{d\}30\b` | `אֵל הַיָּרֵחַ` | | the Moon-god |
 | `\{d\}a\.ab\.ba\|\{d\}arun` | `אֵל הַיָּם` | | the Sea |
 | `\{d\}ellel\|\{d\}ellil\|\{d\}en\.líl\|\{d\}elall` | `אֶנְלִיל` | | |
@@ -227,11 +228,11 @@ each file; ★ = always. Biblical places take their biblical form (guidelines §
 | Hebrew (regex) | Licence (regex on the licence text: composite + lemmas + glosses, lower case) | Why |
 |---|---|---|
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:נחש\|נחשים\|ניחש)(?![א-ת])` | `muš\|illuyank\|illiyank\|elliyank\|illiunk\|ḫedamm\|schlange` | `נחש` only for MUŠ / *illuyanka-* (the dossier's comparison word) |
-| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:גבור\|גיבור\|גבורים\|גיבורים\|גבורה\|גבורת)(?![א-ת])` | `ur\.sag\|ḫaštal\|qarrad\|qarrād\|held` | `גבור` only for UR.SAG / *ḫaštali-* (Gen 6:4) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:גבור\|גיבור\|גבורים\|גיבורים\|גבורה\|גבורת)(?![א-ת])` | `(?<!ḫ)ur\.sag\|ḫaštal\|qarrad\|qarrād\|held` | `גבור` only for UR.SAG / *ḫaštali-* (Gen 6:4) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:ערום\|עירום\|ערומה\|עירומה\|ערומים\|עירומים\|עירמה)(?![א-ת])` | `nekum\|nackt` | `ערום` only for *nekumant-* (Gen 2:25, 3:7) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:מגדל\|מגדלו\|מגדלים)(?![א-ת])` | `an\.za\.gàr\|an\.za\.gar` | `מגדל` only for AN.ZA.GÀR "tower" (SR's tower parable ↔ Gen 11:4; Ullikummi is a stone, not a tower). Made a gate 2026-10-30 (translator 3) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:בריח\|בריחים\|הבריח)(?![א-ת])` | `ḫattal\|riegel` | `בריח` only for *ḫattalu-* "bolt" (the rituals' word; Isa 27:1 `נָחָשׁ בָּרִחַ` stays the apparatus's) |
-| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:קנה\|קונה\|קנו\|קניתי\|יקנה)(?![א-ת])` | `wašš\|šám\|kauf` | `קנה` only for "buy" (Gen 14:19: never for Elkunirša) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:קנה\|קונה\|קנו\|קניתי\|יקנה)(?![א-ת])` | `wašš\|šám\|kauf\|\bgi\b\|{giš}gi\b` | `קנה` only for "buy" (Gen 14:19: never for Elkunirša) |
 
 ## H5. Formulas (machine-read; the myth texts only)
 | F | Composite (regex, flat) | Hebrew (regex on the unvocalized line without punctuation) | Note |
