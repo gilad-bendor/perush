@@ -1,0 +1,3393 @@
+{
+"kind": "BESRIT",
+"cth": "CTH 394",
+"citation": "A. Chrzanowska (ed.), hethiter.net/: CTH 394 (TX 13.07.2016, TRde 23.03.2016)",
+"sections": [
+{
+"id": "§1",
+"title": "§1",
+"hl": ""
+},
+{
+"id": "§2",
+"title": "§2",
+"hl": ""
+},
+{
+"id": "§3",
+"title": "§3",
+"hl": ""
+},
+{
+"id": "§4",
+"title": "§4",
+"hl": ""
+},
+{
+"id": "§5",
+"title": "§5",
+"hl": ""
+},
+{
+"id": "§6",
+"title": "§6",
+"hl": ""
+},
+{
+"id": "§7",
+"title": "§7",
+"hl": ""
+},
+{
+"id": "§8",
+"title": "§8",
+"hl": ""
+},
+{
+"id": "§9",
+"title": "§9",
+"hl": ""
+},
+{
+"id": "Kol.",
+"title": "Kol.",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§1",
+"hl": "",
+"master": "UMMA {m}Ašḫella LÚ {URU}Ḫapalla",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 14",
+"UM-MA {m}Aš-ḫe-el-la LÚ {URU}Ḫa-pa-al-la"
+],
+[
+"B1",
+"Rs. III 1",
+"⸢UM-MA {m}⸣[ _ _ _ -l]a ⸢LÚ {URU}⸣Ḫa-pa-al-la"
+],
+[
+"C1",
+"Vs. 1",
+"⸢UM⸣-MA {m}Aš-ḫe-⸢la⸣ LÚ KUR {URU}Ḫa-pal-la"
+],
+[
+"D",
+"Vs. II 2'",
+"UM-[ … ]"
+]
+],
+"tr": "Folgendermaßen (spricht) Ašḫella, der Mann aus Ḫapalla:",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§1",
+"hl": "",
+"master": "mān=kan KUR-e anda našma ŠÀ KARAŠ ÚŠ-kan kišari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 14",
+"ma-a-an-kán KUR-[e _ _ ] na-aš-ma ŠÀ KARAŠ ÚŠ-kán ki-ša-ri"
+],
+[
+"B1",
+"Rs. III 2",
+"ma-a-an-kán KUR-e an-da na-aš-ma ŠÀ KARAŠ Ú[Š-kán] DÙ-ri"
+],
+[
+"C1",
+"Vs. 2",
+"ma-a-an MU.KAM-za ḫar-ra-an-za KARAŠ-ia {Ras.} 1 ⸢an-da⸣2 [akkiškittari]3"
+],
+[
+"D",
+"Vs. II 2'",
+"[ … ] na-aš[-ma … ] ¬¬¬"
+]
+],
+"tr": "Wenn im Lande oder im Inneren des Feldlagers eine Seuche ausbricht1,",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§1",
+"hl": "",
+"master": "nu kī SÍSKUR iyami",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 15",
+"nu ki-i S[ÍSKUR … ] ¬¬¬"
+],
+[
+"B1",
+"Rs. III 3",
+"nu ki-i SÍSKUR i-ia-mi"
+],
+[
+"C1",
+"Vs. 3",
+"nu ki-i SÍSKUR DÙ-mi ¬¬¬"
+],
+[
+"D",
+"Vs. II 3'",
+"[ … ] ¬¬¬"
+]
+],
+"tr": "dann führe ich dieses Ritual aus:",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§2",
+"hl": "",
+"master": "nu kī daḫḫi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 16",
+"nu ki-i da-aḫ-ḫi"
+],
+[
+"B1",
+"Rs. III 4",
+"nu ki-i da-aḫ-ḫi"
+],
+[
+"C1",
+"Vs. 4",
+"DÙ-mi-ma ki-iš-ša-an"
+],
+[
+"D",
+"Vs. II 4'",
+"nu ki[- … ]"
+]
+],
+"tr": "Und dieses nehme ich2:",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§2",
+"hl": "",
+"master": "maḫḫan UD.KAM-az nekuz meḫūni kišari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 16",
+"ma-aḫ-ḫa-an UD.KAM-az ne-ku-uz me-ḫu-u-ni ki-ša-ri"
+],
+[
+"B1",
+"Rs. III 4",
+"ma-aḫ-ḫa-an UD-az ne-ku-uz [ ] me-e-ḫu-e-ni DÙ-ri"
+],
+[
+"C1",
+"Vs. 4",
+"GIM-an { … } UD.KAM-za ne-ku-uz me-ḫu-[ … ]"
+],
+[
+"D",
+"Vs. II 4'",
+"[ … -k]u-u[z … ] ki-ša-ri"
+]
+],
+"tr": "Wenn der Tag zur Nachtzeit wird,",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§2",
+"hl": "",
+"master": "nu kuiēš kuiēš EN{MEŠ}KARAŠ ḫūmanteš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 17",
+"nu ku-i-e-eš ku-i-e-eš EN{MEŠ}[KAR] AŠ ḫu-u-ma-[an-te]-eš"
+],
+[
+"B1",
+"Rs. III 5",
+"nu ku-e-eš ku-i-e-eš E[N{MEŠ}] KARAŠ ḫu-u-ma-an-te-eš"
+],
+[
+"C1",
+"Vs. 5",
+"nu ku-e-eš ku-e-eš EN{MEŠ} KARAŠ ḫu-u-ma-an-te-eš"
+],
+[
+"D",
+"Vs. II 5'",
+"n[u … KA]RAŠ ḫ[u- … ]"
+]
+],
+"tr": "welche Herren des Feldlagers auch immer alle (da sind),",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§2",
+"hl": "",
+"master": "nu=za ḫūmanza UDU.ŠIR ḫandaizzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 18",
+"nu-za ḫu-u-ma-an-za UDU.ŠIR ḫa-an-[da]-iz-zi"
+],
+[
+"B1",
+"Rs. III 6",
+"nu-za ḫu-u-ma-an-za UDU.ŠIR-aš ḫa-an-da!4-iz-zi"
+],
+[
+"C1",
+"Vs. 5",
+"nu[ … ] ⸢UDU⸣.ŠIR ḫa-an-da-iz-zi"
+],
+[
+"D",
+"Vs. II 6'",
+"nu-za ḫu-u-ma-an[- … ]"
+]
+],
+"tr": "jeder (von ihnen) stellt einen Widder bereit.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§2",
+"hl": "",
+"master": "UDU.ŠIR{ḪI.A}=ma mān ḫargaēš mān tankuēš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 19",
+"UDU.ŠIR{ḪI.A}-ma ma-a-an ḫar-ga-e-eš ma-a-an ta-an-ku-e-eš"
+],
+[
+"B1",
+"Rs. III 7",
+"UDU.ŠIR-aš{ḪI.A}-ma ma-a-an ḫar-ga-e-eš ma-a-an ta-an-ku-wa-e-eš"
+],
+[
+"C1",
+"Vs. 6",
+"UDU.ŠIR-ma ma-a-an ḫar-⸢ga⸣-e-eš ma-a-an da-an-ku-wa-e-eš"
+],
+[
+"D",
+"Vs. II 6'",
+"[ … U]DU. Š[IR … ] ma-a-an ḫar-ga-e-uš[ … ]"
+]
+],
+"tr": "Ob die Widder aber hell oder dunkel (sind),",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§2",
+"hl": "",
+"master": "UL kuitki tuqqari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 20",
+"Ú-UL ku-it-ki ⸢tu-uq-qa-ri⸣"
+],
+[
+"B1",
+"Rs. III 9",
+"Ú-UL ku-it-ki tu-uq-qa-ri"
+],
+[
+"C1",
+"Vs. 7",
+"Ú-UL ku-it-ki du-uq-qa-a-ri"
+],
+[
+"D",
+"Vs. II 7'",
+"⸢Ú-UL⸣ [ … ] ku-it-ki du-uq-qa-a-ti"
+]
+],
+"tr": "spielt keine Rolle.",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§2",
+"hl": "",
+"master": "nu šūēl SÍG.BABBAR SÍG.SA5 SÍG.SIG7.SIG7 anda tarnaḫḫi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 20",
+"[nu šu-ú-]⸢e⸣-él SÍG.BABBAR SÍG.SA5 SÍG.SIG7.SIG7 an-[da tar-na-aḫ-ḫi]"
+],
+[
+"B1",
+"Rs. III 9",
+"nu šu-ú-e-el SÍG.BABBAR SÍG.SA5 SÍG.SIG7.SIG7 an-da tar-na-aḫ-ḫi"
+],
+[
+"C1",
+"Vs. 7",
+"nu ⸢šu⸣?-⸢ú⸣?[- … ] SÍG.BABBAR SÍG.SA5 SÍG.SIG7.SIG7 an-da tar-na-aḫ-ḫi"
+],
+[
+"D",
+"Vs. II 8'",
+"[ … ] ⸢SÍG⸣.BAB[BAR]? SÍG.SA5 an-da tar-na-aḫ-ḫi"
+]
+],
+"tr": "Einen Faden weiße Wolle, rote Wolle, gelbgrüne Wolle füge ich ineinander,3",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§2",
+"hl": "",
+"master": "n=at 1-an anda darupaizzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 21",
+"[na-]at 1-an an-da da-ru-pa-iz-zi"
+],
+[
+"B1",
+"Rs. III 11",
+"na-at 1-an an-da ta-ru-up-pa-iz-zi"
+],
+[
+"C1",
+"Vs. 8",
+"na-at 1-an an-da da[- … ]"
+],
+[
+"D",
+"Vs. II 9'",
+"[ … -d]a ta-ru-p[a- … ]"
+]
+],
+"tr": "und er4 flicht sie zu einem (Faden) zusammen.",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§2",
+"hl": "",
+"master": "nu=kan 1-EN {NA4}NUNUZ 1 KAMKAMMATU AN.BAR ŠA A.GAR5=ia anda neḫḫi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 22",
+"nu-kán 1-EN [ _ _ _ KAM-KAM-]MA-TU4 AN.BAR ŠA A.GAR5-ia an-da ne-eḫ-ḫi"
+],
+[
+"B1",
+"Rs. III 11",
+"nu-kán 1-EN {NA4}NUNUZ 1 KAM-KAM-MA-TU4 ŠA {NA4}A!.GAR55 {Ras.} an-da ne-eḫ-ḫi"
+],
+[
+"C1",
+"Vs. 9",
+"nu-kán 1-EN {NA4}NUNUZ 1 KAM-KAM-MA-TU4 AN.BAR ŠA A.GAR5-ia an-da ne-e[ḫ-ḫi]"
+],
+[
+"D",
+"Vs. II 10'",
+"nu-za!?-an {NA4}NUNUZ 2 KAM-KAM-MA-TU4-ia ⸢ŠA6 AN.BAR⸣ ŠA A!.GAR57[ … ] an-da ne-eḫ-ḫi"
+]
+],
+"tr": "Dann füge ich 1 Perle?, 15 Ring (aus) Eisen und aus Blei zusammen",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§2",
+"hl": "",
+"master": "n=at=kan ANA UDU.ŠIR{ḪI.A} {UZU}GÚ=ŠUNU SI{ḪI.A}=ŠUNU=ia anda ḫamangami",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 23",
+"na-at-[kán A]-NA UDU.ŠIR{ḪI.A} {UZU}GÚ-ŠU-NU SI{ḪI.A}-⸢ŠU⸣-NU-ia an-da ḫa-ma-an-ga-mi"
+],
+[
+"B1",
+"Rs. III 13",
+"na-at-kán A-NA UDU.ŠIR-aš{ḪI.A} {UZU}GÚ-ŠU-NU SI{ḪI.A}-ŠU-NU-ia ḫa-ma-an-ki"
+],
+[
+"C1",
+"Vs. 10",
+"na-at-kán A-NA UDU.ŠIR-aš{ḪI.A} {UZU}GÚ-ŠU-NU SI-ŠU-NU-ia an-da ḫa-ma-an-g[a-mi]"
+],
+[
+"D",
+"Vs. II 11'",
+"na-at A-NA UDU.ŠIR{ḪI.A} GÚ-ŠU-NU SI x[ … ] an-da ḫa-ma-an-ga-mi"
+]
+],
+"tr": "und binde es den Widdern um ihren Nacken und ihre Hörner.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§2",
+"hl": "",
+"master": "n=aš GE6-az ANA PĀNI {GIŠ}ZA.LAM.GAR{ḪI.A} ḫamanganzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 24",
+"na-aš GE6-az ⸢A-NA PA-NI⸣ {GIŠ}ZA.LAM.GAR{ḪI.A} ḫa-ma-an-ga-an-zi"
+],
+[
+"B1",
+"Rs. III 14",
+"na-aš GE6-az A-NA PA-NI {GIŠ}ZA.LAM.GAR{ḪI.A}ḫa-ma-an-kán-zi"
+],
+[
+"C1",
+"Vs. 11",
+"na-aš GE6-az A-NA PA-NI {GIŠ}ZA.LAM.GAR{ḪI.A}ḫa-ma-an-ga-an-zi"
+],
+[
+"D",
+"Vs. II 12'",
+"na-aš iš-pa-an-da-az A-NA PA-NI {GIŠ}ZA.LAM.GAR{ḪI.A} ḫa-ma-an-ga-an-zi"
+]
+],
+"tr": "Sie binden sie in der Nacht vor den Zelten an",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§2",
+"hl": "",
+"master": "nu=kan anda kiššan memanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 25",
+"nu-kán an-da [ki-iš-ša-a]n me-ma-an-zi"
+],
+[
+"B1",
+"Rs. III 16",
+"nu-kán an-da ki-iš-ša-an me-ma-an-zi"
+],
+[
+"C1",
+"Vs. 12",
+"nu-kán an-da ki-iš-ša-an me-ma-an-zi"
+],
+[
+"D",
+"Vs. II 14'",
+"[n]u-kán an-da ki-iš-ša-an me-ma-an-zi"
+]
+],
+"tr": "und sprechen dabei folgendermaßen:",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§2",
+"hl": "",
+"master": "kuiš=wa=kan DINGIR-LUM kattan weḫattari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 26",
+"ku-iš-wa-kán DINGIR-LUM [kat]-ta-an [ú-e-ḫa-at]-ta-ri"
+],
+[
+"B1",
+"Rs. III 16",
+"ku-iš-wa-kán DINGIR-LUM kat-ta-an ú-e-ḫa-at-ta-ri"
+],
+[
+"C1",
+"Vs. 12",
+"ku-iš-wa DINGIR-LUM kat-ta-an ú-e-ḫa-at[-ta-]ri"
+],
+[
+"D",
+"Vs. II 14'",
+"ku-iš-[wa-]⸢kán?⸣[ … ]8"
+]
+],
+"tr": "„Welche Gottheit sich (her)abwendet,",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§2",
+"hl": "",
+"master": "kuiš=wa DINGIR-LUM kī ÚŠ-kan iyat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 27",
+"ku-iš-wa DINGIR-LUM ki-i ÚŠ-kán i-ia-at"
+],
+[
+"B1",
+"Rs. III 18",
+"ku-iš-wa DINGIR-LUM ki-i ÚŠ-kán i-ia-at"
+],
+[
+"C1",
+"Vs. 13",
+"ku-iš-wa DINGIR-LUM ki-i ÚŠ-kán i-ia-at"
+],
+[
+"D",
+"Vs. II 14'",
+"[ … ]9 ⸢ki⸣-i ÚŠ-an i-ia-at"
+]
+],
+"tr": "welche Gottheit diese Seuche (auch) verursacht hat,",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§2",
+"hl": "",
+"master": "nu=wa=ta kāša kūš UDU.ŠIR{ḪI.A} kattan išḫiyanun",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 28",
+"[ … ] ka-a-ša ku-u-uš UDU.ŠIR{ḪI.A} kat-ta-an i[š-ḫi]-ia-nu-un"
+],
+[
+"B1",
+"Rs. III 19",
+"nu-wa-ta10 ka-a-ša!11 ku-u-uš UDU.ŠIR-aš{ḪI.A} kat-ta-an iš-ḫi-ia-nu-un"
+],
+[
+"C1",
+"Vs. 13",
+"nu-wa-at-ta {x} ka-a-⸢ša⸣ {x} ku-u-uš UDU.ŠI[R … ] kat-ta-an iš-ḫi-ia-nu-un"
+],
+[
+"D",
+"Vs. II 15'",
+"nu-wa-at-ta ka-a-ša [ … ]12 ku-u-uš UDU.ŠIR{ḪI.A} kat-ta-an iš[- … ]"
+]
+],
+"tr": "diese Widder habe ich dir jetzt/hier angebunden.",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§2",
+"hl": "",
+"master": "nu=wa=kan katta waršiyaḫḫut",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 29",
+"[ … kat]-ta wa-ar-ši-ia-aḫ-ḫu-ut ¬¬¬"
+],
+[
+"B1",
+"Rs. III 20",
+"nu-wa-kán kat-ta wa-ar-ši-ia-aḫ-ḫu-ut ¬¬¬"
+],
+[
+"C1",
+"Vs. 14",
+"nu-wa-kán kat-ta wa-ar-ši-ia-aḫ-ḫu-ut ¬¬¬"
+],
+[
+"D",
+"Rs. III 2",
+"nu-wa-kán kat-ta wa-ar-ši-ia-aḫ-ḫu-⸢ut⸣"
+]
+],
+"tr": "Begnüge dich damit!“",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§3",
+"hl": "",
+"master": "lukkatti=ma=aš LÍL-ri pennaḫḫi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 30",
+"[lu-uk-kat-]ti-ma-aš LÍL-ri pé-en-na-aḫ-ḫi"
+],
+[
+"B1",
+"Rs. III 21",
+"lu-uk-kat-ti-ma-aš ⸢LÍL⸣-r[i] pé-na-aḫ-ḫi13"
+],
+[
+"C1",
+"Vs. 15",
+"lu-uk-kat-ti-ma-aš { … } LÍL-ri pé-en-na-⸢aḫ-ḫi⸣"
+],
+[
+"D",
+"Rs. III 2",
+"⸢lu⸣[- … ] gi-im-ri pé-en-na-aḫ-ḫi14"
+]
+],
+"tr": "Am nächsten Morgen aber treibe ich sie aufs (freie) Feld.",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§3",
+"hl": "",
+"master": "nu kuedaniya ANA UDU.ŠIR kattan 1 {DUG}KUKUBI 1 NINDA.GUR4.RA 1 GAL.GIR4 piddanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 30",
+"nu ku-e-da-ni-[ia]? [ _ _ UDU.ŠI]R kat-ta-an 1 {DUG}KU-KU-BI <1> NINDA.GUR4.RA 1 GAL.G[IR4] [píd-da-a]n-zi"
+],
+[
+"B1",
+"Rs. III 22",
+"nu ku-e-da-ni-ia [ _ _ ] UDU.ŠIR-aš{ḪI.A} kat-ta-an 1 {DUG}KU-KU-BI 1 NINDA.[GUR4.R]A 1 GAL. { … } píd-da-an-zi"
+],
+[
+"C1",
+"Vs. 15",
+"nu ke-e-da-ni A-NA UDU.ŠIR-aš kat-ta-an {DUG}ḪAB.ḪAB 1 NINDA.GUR4.RA 1 GAL ⸢DUG.GIR4⸣?15 píd-da-a-an-zi"
+],
+[
+"D",
+"Rs. III 3",
+"nu ku-e-da-ni-ia A?[-NA? … ] kat-ta-an 1 {DUG}KU-KU-UB GEŠTIN 1 NINDA.GUR4.RA 1 {DUG}[ … ] píd-da-an-zi"
+]
+],
+"tr": "Zu jedem Widder bringen sie 1 Kanne, ein Dickbrot (und) 1 Becher aus gebranntem Ton.",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§3",
+"hl": "",
+"master": "ANA {GIŠ}ZA.LAM.GAR LUGAL=ma peran MUNUS-TUM unuwandan ašaši",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 32",
+"A-NA {GIŠ}ZA.LAM.GAR LUGAL-ma pé-ra-an MUNUS-[TU4] [ú-nu]-wa-an-da-an a-ša-ši"
+],
+[
+"B1",
+"Rs. III 24",
+"A-NA {GIŠ}ZA.LAM.GAR [LUGAL-m]a pé-ra-an MUNUS-TU4 ú-nu-wa-an-ta-[an ] ⸢a⸣-ša-ši"
+],
+[
+"C1",
+"Vs. 16",
+"A-NA {GIŠ}ZA.LAM.GAR LUGAL-ma pé-ra-an MUNUS-TU4 ú-nu-wa-an-ta-an a-ša-ši"
+],
+[
+"D",
+"Rs. III 5",
+"A-NA {GIŠ}ZA.LAM.GAR LUGAL-ma pé-ra-an [ _ _ ] ú-nu-wa-an-da-an a-ša-ši"
+]
+],
+"tr": "Vor das Zelt des Königs aber setzt er6 eine geschmückte Frau;",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§3",
+"hl": "",
+"master": "1 {DUG}ḫūppar KAŠ 3 NINDA.GUR4.RA ANA MUNUS-TI kattan dāi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 33",
+"1 {DUG}ḫu-u-up-pár KAŠ 3 NINDA.[GUR4.RA] [ _ _ MUNU]S-TI kat-ta-an da-a-i ¬¬¬"
+],
+[
+"B1",
+"Rs. III 25",
+"1 {DUG}ḫu-up-pár KAŠ 3 NINDA.GUR4.RA A-N[A MUN]US-TI kat-ta-an da-a-i ¬¬¬"
+],
+[
+"C1",
+"Vs. 17",
+"1 {DUG}ḫu-up-pár KAŠ 3 NINDA.GUR4.RA A-NA MUNUS-TI kat-ta-an da-a-i ¬¬¬"
+],
+[
+"D",
+"Rs. III 6",
+"1 {DUG}ḫu-u-up-pár KAŠ 3 NINDA.GUR4.RA{ḪI.A} A-NA MUNUS-TI kat-ta-an da-a-i ¬¬¬"
+]
+],
+"tr": "1 ḫuppar-Gefäß Bier (und) 3 Dickbrote stellt er neben die Frau.",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§4",
+"hl": "",
+"master": "namma=kan ANA UDU.ŠIR{ḪI.A} EN{MEŠ} KARAŠ QĀTĪ=ŠUNU parā tiyanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 35",
+"[n]am-ma-kán A-NA UDU.ŠIR{ḪI.A} EN{MEŠ} KARAŠ QA-TI-ŠU-NU pa-r[a-a ti-ia-a]n-zi"
+],
+[
+"B1",
+"Rs. III 27",
+"nam-ma-kán A-N[A U]DU.ŠIR{ḪI.A} EN{MEŠ} KARAŠ QA-TI-ŠU-NU-x[ ]16ti-ia-an-zi"
+],
+[
+"C1",
+"Vs. 18",
+"nam-ma-kán A-NA UDU.ŠIR-aš{ḪI.A} EN{MEŠ} KARAŠ QA-TI-ŠU-NU ti-ia-an- {Ras.} zi"
+],
+[
+"D",
+"Rs. III 8",
+"nam-ma-kán A-NA UDU.ŠIR{ḪI.A} EN{MEŠ} KARAŠ QA-TI[- … ]"
+]
+],
+"tr": "Dann strecken die Herren des Feldlagers ihre Hände nach den Widdern aus",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§4",
+"hl": "",
+"master": "nu=kan anda kiššan memanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 36",
+"[nu]-kán an-da ki-iš-ša-an me-ma-an-zi"
+],
+[
+"B1",
+"Rs. III 28",
+"nu-kán an-da ki-iš-ša-an me-ma-an-z[i]"
+],
+[
+"C1",
+"Vs. 19",
+"nu-kán an-da ki-iš-ša-an me-ma-an-zi"
+],
+[
+"D",
+"Rs. III 9",
+"nu-kán an-da ki-iš-ša-an me-ma-an-zi"
+]
+],
+"tr": "und sprechen folgendermaßen dabei:",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§4",
+"hl": "",
+"master": "kuiš=wa DINGIR-LIM kī ÚŠ-kan iyat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 36",
+"ku-iš-wa DINGIR-LIM ki-i ÚŠ-kán i-ia-at"
+],
+[
+"B1",
+"Rs. III 29",
+"ku-iš-wa DINGIR-LIM ki-i ÚŠ-an i-ia-at"
+],
+[
+"C1",
+"Vs. 19",
+"ku-iš-wa DINGIR-LIM ki-i ÚŠ-an i-ia-at"
+],
+[
+"D",
+"Rs. III 9",
+"ku-iš-⸢ki⸣?[ … ] ki-i ÚŠ-an i-ia-at"
+]
+],
+"tr": "„Welche Gottheit diese Seuche (auch) verursacht hat,",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§4",
+"hl": "",
+"master": "kinuna=wa kāša UDU.ŠIR{ḪI.A} arantari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 37",
+"ki-nu-na-wa ka-a-ša UDU.ŠIR{ḪI.A} a-ra-an-ta-ri"
+],
+[
+"B1",
+"Rs. III 30",
+"ki-nu-na-w[a k]a-a-ša UDU.ŠIR-aš{ḪI.A} a-ra-an-ta-ri"
+],
+[
+"C1",
+"Vs. 20",
+"ki-nu-na-wa ka-a-ša UDU.ŠIR-aš{ḪI.A} a-ra-an-ta-ri"
+],
+[
+"D",
+"Rs. III 10",
+"ki-nu-na-wa ka-a-ša UDU[ _ (_ ) _ _ ] a-ra-an-da-ri"
+]
+],
+"tr": "jetzt stehen die Widder hier (bereit).",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§4",
+"hl": "",
+"master": "nu=war=at IŠTU {UZU}NÍG.GIG {UZU}ŠÀ U IŠTU {UZU}ÚR mekki warganteš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 38",
+"nu-wa-ra-at IŠ-TU {UZU}NÍG.GIG {UZU}ŠÀ Ù IŠ-TU {UZU}ÚR me-ek-ki wa-ar-kán-te-eš"
+],
+[
+"B1",
+"Rs. III 31",
+"nu-wa-ra-at [ ] IŠ-TU {UZU}NÍG.GIG {UZU}ŠÀ Ù IŠ-TU {UZU}ÚR me-ek-k[i] wa-ag-ga-an-te-eš"
+],
+[
+"C1",
+"Vs. 20",
+"nu-wa-ra-at IŠ-TU {UZU}NÍG.GIG {UZU}ŠÀ Ù IŠ-TU {UZU}ÚR me-ek-ki wa-ar-ga-an-te-eš"
+],
+[
+"D",
+"Rs. III 11",
+"nu-wa-ra-at IŠ-TU {UZU}NÍG.G[IG … ] Ù {UZU}Ì-ia me-ek-ki wa-ar-ga-an-te-eš"
+]
+],
+"tr": "Sie sind an Innereien, Herz und Glied7 sehr fett.",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§4",
+"hl": "",
+"master": "nu=wa=šši=kan ŠA AMĪLŪTI UZU pug(ga)taru namma",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 39",
+"nu-wa-aš-ši-kán ŠA A-MI-LU-UT-TI UZU pu-ug-ta-r[u nam-m]a"
+],
+[
+"B1",
+"Rs. III 32",
+"nu-uš-ši-kán ŠA A-[M]I-LU-UT-TI UZU pu-ug-ga-ta-ru nam-ma"
+],
+[
+"C1",
+"Vs. 22",
+"nu-wa-aš-ši-kán ŠA A-MI-LÚ-UT-TI UZU pu-ug-ga-ru nam-ma"
+],
+[
+"D",
+"Rs. III 13",
+"nu-wa-aš-ši-kán ŠA A-MI-LU-UT-TI {UZU}Ì p[u- … ]"
+]
+],
+"tr": "Ihr (der Gottheit) soll das Fleisch8 der Menschheit abermals verhasst sein!",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§4",
+"hl": "",
+"master": "nu=wa=ššan katta(n) kēdaš UDU.ŠIR{ḪI.A} waršiyaḫḫut",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 40",
+"nu-wa-aš-ša-an kat-ta ke-e-da-aš UDU.ŠIR{ḪI.A} wa-ar-ši-i[a-aḫ-ḫu-u]t"
+],
+[
+"B1",
+"Rs. III 34",
+"nu-w[a]-aš-ša-an kat-ta-an ke-e-da-aš UDU.ŠIR{ḪI.A} w[a-a]r-ši-ia-aḫ-ḫu-ut"
+],
+[
+"C1",
+"Vs. 22",
+"nu-wa-aš-ša-an kat-ta ke-e-da-aš UDU.ŠIR-aš{ḪI.A} wa-ar-ši-ia-⸢aḫ⸣-⸢ḫu⸣-⸢ut⸣"
+],
+[
+"D",
+"Rs. III 14",
+"nu-wa-aš-ša-an kat-ta-an ke-e-da-aš UDU.ŠIR{ḪI.A} wa-ar-ši-ia-aḫ-ḫu-ut"
+]
+],
+"tr": "Du sollst dich mit diesen Widdern zufrieden geben!“",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§4",
+"hl": "",
+"master": "nu EN{MEŠ} KARAŠ ANA UDU.ŠIR{ḪI.A} EGIR-an katta ḫinkanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 41",
+"nu EN{MEŠ} KARAŠ A-NA UDU.ŠIR{ḪI.A} EGIR-an kat-ta ḫi-in-kán-zi"
+],
+[
+"B1",
+"Rs. III 35",
+"nu EN{MEŠ} KARAŠ A-NA UDU.ŠIR{ḪI.A} [EGI]R-an kat-ta ḫi-in-kán-zi {Ras.}"
+],
+[
+"C1",
+"Vs. 23",
+"nu EN{MEŠ} KARAŠ A-NA UDU.ŠIR-aš{ḪI.A} EGIR-an ḫi-in-ga-an-zi"
+],
+[
+"D",
+"Rs. III 15",
+"nu EN{MEŠ} KARAŠ A-N[A … ] [EGIR]-⸢an⸣ ḫi-in-ga-an-zi"
+]
+],
+"tr": "Die Herren des Feldlagers verneigen sich hinter den Widdern,",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§4",
+"hl": "",
+"master": "LUGAL=ya ANA MUNUS-TI unuwanti EGIR-an ḫinganzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 42",
+"LUGAL-ya A-NA MUNUS-TI ú-nu-wa-an-ti EGIR-an ḫi-in-ga<-an>-zi ¬¬¬17"
+],
+[
+"B1",
+"Rs. III 36",
+"LUGAL-ia MUNUS-TI ⸢ú⸣-nu-wa-an-ti EGIR-an ḫi-in-kán-zi"
+],
+[
+"C1",
+"Vs. 24",
+"LUGAL-ia A-NA MUNUS-TI ú-nu-wa-an-ti EGIR-an ḫi-in-ga-an-zi"
+],
+[
+"D",
+"Rs. III 16",
+"LUGAL-ia A-N[A … ] [ … ]x EGIR-an kat-t[a … ]-ik?-[ … ]"
+]
+],
+"tr": "auch (hinter) dem König (und) hinter der geschmückten Frau verneigen sie sich9.",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§5",
+"hl": "",
+"master": "namma=kan UDU.ŠIR{ḪI.A} MUNUS-an NINDA.GUR4.RA KAŠ=ya ANA KARAŠ ištarna arḫa pēdanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 44",
+"nam-ma-kán UDU.ŠIR{ḪI.A} MUNUS-an NINDA.GUR4.R[A] KAŠ-ia A-NA KARAŠ iš-tar-na ar-ḫa pé-e-da-an-zi"
+],
+[
+"B1",
+"Rs. III 37",
+"nam-ma-kán [UDU].ŠIR{ḪI.A} MUNUS-TUM-ia NINDA.GUR4.RA KAŠ-ia KARAŠ ⸢iš⸣-tar-na ar-ḫa pé-e-da-an-zi"
+],
+[
+"C1+2",
+"Vs. 25/x+1",
+"nam-ma-kán UDU.ŠIR-aš{ḪI.A} MUNUS-TUM-ia NINDA.GUR4.RA KAŠ-ia KARAŠ iš-tar-na ar-ḫa ⸢pé-da⸣-an-zi"
+],
+[
+"D",
+"Rs. III 18",
+"[ … ŠI]R{ḪI.A} MUNUS-T[UM … ] [ … ] ar-ḫa [ … ]"
+]
+],
+"tr": "Dann schafft man die Widder, die Frau, das Dickbrot und das Bier mitten durch das Feldlager weg.",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§5",
+"hl": "",
+"master": "n=aš LÍL-ri pennianzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 45",
+"[n]a-aš {Ras.} LÍL-ri pé-en-ni-an-zi"
+],
+[
+"B1",
+"Rs. III 39",
+"na-aš LÍL-ri pé-en-ni-an-zi"
+],
+[
+"C1+2",
+"Vs. 26/2'",
+"na-aš LÍL-ri pé-en-na-an-zi"
+],
+[
+"D",
+"Rs. III 20",
+"[ … ] x [ … ]"
+]
+],
+"tr": "Sie treiben sie auf das (freie) Feld",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§5",
+"hl": "",
+"master": "n=aš=kan pānzi ANA ZAG {LÚ}KÚR anda arḫa pittalanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 46",
+"na-aš-kán pa-a-an-zi A-NA ZAG {LÚ}KÚR an-da ar-ḫa pít-ta-la-an-zi"
+],
+[
+"B1",
+"Rs. III 40",
+"na-aš-kán p[a-(a-)a]n-zi ZAG {LÚ}KÚR an-da ar-ḫa píd-da-la-an-z[i]"
+],
+[
+"C1+2",
+"Vs. 26/2'",
+"na-aš-kán pa-a-an-zi A-NA ZAG {LÚ}KÚR an-da ar-ḫa pí-it-ta-la-an-zi"
+]
+],
+"tr": "(und) verlassen sie dann im Grenzgebiet des Feindes,",
+"trlang": "DE"
+},
+{
+"n": "36",
+"sec": "§5",
+"hl": "",
+"master": "kuedani pidi anzel UL aranzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 47",
+"ku-e-da-ni pí-di an-ze-el Ú-UL a-ra-an-zi"
+],
+[
+"B1",
+"Rs. III 41",
+"[ _ _ -n]i pí-di a[n-ze-e]l Ú-UL a-ra-an-z[i]"
+],
+[
+"C1+2",
+"Vs. 27/3'",
+"ku-e-da-⸢ni⸣ pí-di an-ze-el Ú-UL a-ra-an-zi"
+]
+],
+"tr": "an einem Ort, an den unsere (Leute)10 nicht gelangen.11",
+"trlang": "DE"
+},
+{
+"n": "37",
+"sec": "§5",
+"hl": "",
+"master": "nu=kan anda QĀTAMMA=pat memiškanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 48",
+"nu-kán an-da QA-TAM-MA-pát me-mi-iš-kán-zi"
+],
+[
+"B1",
+"Rs. III 42",
+"[ … ]"
+],
+[
+"C1+2",
+"Vs. 28/4'",
+"nu-kán an-da QA-TAM-MA-pát me-mi-iš-kán-zi"
+]
+],
+"tr": "Dabei spricht man ebenso immer wieder:",
+"trlang": "DE"
+},
+{
+"n": "38",
+"sec": "§5",
+"hl": "",
+"master": "kāša=wa=ššan kuit kēl ŠA KARAŠ idālu ANA AMĪLŪTI GU4{ḪI.A} UDU{ḪI.A} ANŠE.KUR.RA{MEŠ} ANŠE.GÌR.NUN.NA U ANA ANŠE{ḪI.A} anda ēšta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 48",
+"ka-a-ša-wa-aš-ša-an ku-it ke-e-el ŠA KARAŠ i-da-a-lu A-NA A-MI-LU-UT-TI GU4{ḪI.A} UDU{ḪI.A} ANŠE.KUR.RA{MEŠ} ANŠE.GÌR.NUN.NA Ù A-NA ANŠE{ḪI.A} an-da e-eš-ta"
+],
+[
+"B1",
+"Rs. III 43",
+"ka-a-ša-w[a- … ] GU4[ … ]"
+],
+[
+"C1+2",
+"Vs. 28/4'",
+"ka-a-ša-wa-aš-ša-an ku-i[t … ] i-da-a-lu A-NA A-MI-LU-UT-TI GU4{ḪI.A} UDU{ḪI.A} ANŠE.KUR.RA{MEŠ} ANŠE.GÌR.NUN.N[A] Ù A-NA ANŠE{MEŠ} ku-it an-da e-eš-ta"
+]
+],
+"tr": "„Siehe, das Übel dieses Heerlagers, das für Menschen, Rinder, Schafe, Pferde, Maultiere und für Esel darin war,",
+"trlang": "DE"
+},
+{
+"n": "39",
+"sec": "§5",
+"hl": "",
+"master": "kinuna=war=at=kan kāša IŠTU KARAŠ kūš UDU.ŠIR{ḪI.A} MUNUS-TUM=ia arḫa uter",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 51",
+"ki-nu-na-wa-ra-at-kán ka-a-ša IŠ-T[U KARAŠ] ku-u-uš UDU.ŠIR{ḪI.A} MUNUS-TUM-ia ar-ḫa ú-te-er"
+],
+[
+"C1+2",
+"Vs. 30/6'",
+"ki-nu-na-wa-ra-at-kán ka-a-š[a] IŠ-TU KARAŠ ku-u-uš UDU.ŠIR-aš{ḪI.A} MUNUS-TUM ar-ḫa ú-te-er"
+],
+[
+"E1",
+"Rs. III x+1",
+"[ … ]x x[ … ] [ … a]r-ḫa ú-te-er"
+]
+],
+"tr": "haben jetzt diese Widder und die Frau aus dem Feldlager weggebracht.",
+"trlang": "DE"
+},
+{
+"n": "40",
+"sec": "§5",
+"hl": "",
+"master": "nu=war=at=za kuiš wemiyazzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 52",
+"nu-wa-ra-at-za [ku-iš] ú-e-mi-ia-az-zi"
+],
+[
+"C1+2",
+"Vs. 32/8'",
+"nu-wa-ra-aš-za ku-iš ú-e-mi-ia-zi"
+],
+[
+"E1",
+"Rs. III 3'",
+"[ … ]"
+]
+],
+"tr": "Wer sie antrifft,",
+"trlang": "DE"
+},
+{
+"n": "41",
+"sec": "§5",
+"hl": "",
+"master": "nu=wa=za kī idālu ÚŠ-an apāš KUR-eanza dāu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 53",
+"nu-wa-za ki-i i-da-a-lu ÚŠ-an a-pa-a-aš KUR-e-an-za da-a-ú ¬¬¬"
+],
+[
+"C1+2",
+"Vs. 32/8'",
+"nu-wa-za ki-i ḪUL ÚŠ-an18 a-pa-[ … ]-za da-a-ú ¬¬¬"
+],
+[
+"E1",
+"Rs. III 3'",
+"nu-wa-za [ … -]⸢e⸣-an-za da-a-ú ¬¬¬"
+]
+],
+"tr": "möge jene Bevölkerung diese böse Seuche an sich nehmen!“",
+"trlang": "DE"
+},
+{
+"n": "42",
+"sec": "§6",
+"hl": "",
+"master": "INA UD.2.KAM mān lukkatta karūwariuar ḫūdak 6 UDU.ŠIR{ḪI.A} 6 MÁŠ.GAL 12 {DUG}GÌR.GÁN 12 GAL{ḪI.A} 12 NINDA.GUR4.RA 1 {DUG}ḫūppar KAŠ 3 GÍR.TUR ZABAR ḫandanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 55",
+"I-NA UD.2.KAM ma-a-an lu-uk-kat-ta ka-ru-ú-wa-ri-u-ar ḫu-u-[da-ak] 6 UDU.ŠIR{ḪI.A} 6 MÁŠ.GAL 12 ⸢{DUG}⸣GÌR.GÁN 12 GAL{ḪI.A} 12 NINDA.GUR4.[RA] 1 {DUG}ḫu-u-up-pár KAŠ 3 GÍR.TUR ZABAR ḫa-an-da-an-zi"
+],
+[
+"B2",
+"x+1",
+"I-[ … ]? ḫu-u-d[a- ... ] 14? NINDA.GUR4.RA [ … ]"
+],
+[
+"C1+2",
+"Vs. 33/9'",
+"I-NA UD.2.KAM ma-a-an lu-uk-kat-ta ka-ri-wa-a-ri-ua-ar ḫu-da[- … ] UDU.]⸢ŠIR⸣?-aš? ⸢6⸣ MÁŠ.GAL 12 {DUG}GÌR.GÁN 12 GAL{ḪI.A} 12 NINDA.GUR4.RA 1 {DUG}ḫu-up-pár KAŠ 3 GÍR.T[UR … ] ḫa-⸢an⸣-⸢da⸣-an[-zi]"
+],
+[
+"E1",
+"Rs. III 5'",
+"[ … k]a-ru-ú-a-ri-wa-ar ḫu-da-ak [ … 12 {DUG}GÌ] R.GÁN 12 {DUG}GAL 12 NINDA.GUR4.RA [ … GÌ]R? ḫa-an-da-an-zi"
+],
+[
+"F1",
+"x+1",
+"[ ... ḫ]u-u-da-a[k … ] [ … ] ⸢X+2⸣19 NINDA.GUR4.RA ⸢11?⸣ [ … ] [ … ] ḫa-an-ta-an-z[i]"
+]
+],
+"tr": "Am zweiten Tag, wenn es hell wird, stellen gleich am Morgen 6 Widder, 6 Ziegenböcke, 12 Kannen, 12 Becher, 12 Dickbrote, 1 ḫuppar-Gefäß Bier (und) 3 kleine Dolche (aus) Bronze bereit.",
+"trlang": "DE"
+},
+{
+"n": "43",
+"sec": "§6",
+"hl": "",
+"master": "n=aš LÍL-ri namma tamēdani AŠRI pennianzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 58",
+"na-aš LÍL-ri nam-ma ta-me-e-da-ni AŠ-RI pé-en-ni-a[n-zi]"
+],
+[
+"B2",
+"4'",
+"na-aš LÍL-ri [ … ]"
+],
+[
+"C1",
+"Vs. 35",
+"na-aš LÍL-ri nam-ma da-me-e-da-ni AŠ-RI pé-en-na-an-zi"
+],
+[
+"E1",
+"Rs. III 7'",
+"na-aš LÍL-ri nam-ma ta-[me-e-da-]⸢ni⸣ AŠ-RI pé-en-ni-an-zi"
+],
+[
+"F1",
+"3'",
+"[ … ] [ … ] pé-en-ni-ia-an-z[i]"
+]
+],
+"tr": "Sie treiben sie (sc. die Widder und die Ziegenböcke) auf das (freie) Feld an einen weiteren12 anderen Ort,",
+"trlang": "DE"
+},
+{
+"n": "44",
+"sec": "§6",
+"hl": "",
+"master": "kī=ia ḫūman kattan pedanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 59",
+"ki-i-ia ḫu-u-ma-an kat-ta-an pé-e-da-an-zi"
+],
+[
+"B2",
+"5'",
+"ki-i ḫu-u-ma-an [ … ]"
+],
+[
+"C1",
+"Vs. 35",
+"[ … ] kat-ta-an pé-e-da-an-zi"
+],
+[
+"E1",
+"Rs. III 8'",
+"ki-i-ia ḫu-u-ma-an kat-ta-an pé-e-da-an-zi"
+],
+[
+"F1",
+"4'",
+"[ … ] [ … ]"
+]
+],
+"tr": "auch all dies nehmen sie mit.",
+"trlang": "DE"
+},
+{
+"n": "45",
+"sec": "§6",
+"hl": "",
+"master": "n=aš maḫḫan gimri arnuwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 60",
+"na-aš ma-aḫ-ḫa-an gi-im-ri ar-nu-wa-an-zi"
+],
+[
+"B2",
+"5'",
+"[ … ] LÍL-ri ar-nu-w[a?- … ]"
+],
+[
+"C1",
+"Vs. 36",
+"na-aš ma-aḫ-ḫa-an LÍL-ri ar-nu- [ … ]"
+],
+[
+"E1",
+"Rs. III 9'",
+"na-aš ma-aḫ-ḫa-an LÍL-ri ar-nu-an-zi"
+],
+[
+"F1",
+"5'",
+"[n]a-aš GIM-an LÍ[L-ri … ]"
+]
+],
+"tr": "Sobald sie sie ins (freie) Feld gelangen lassen,",
+"trlang": "DE"
+},
+{
+"n": "46",
+"sec": "§6",
+"hl": "",
+"master": "n=aš tagān ḫattanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 61",
+"na-aš ta-ga-a-an ḫa-at-ta-an-zi"
+],
+[
+"B2",
+"6'",
+"[ … ]"
+],
+[
+"C1",
+"Vs. 37",
+"na-aš da-ga-an ḫa-at-ta-an-zi"
+],
+[
+"E1",
+"Rs. III 10'",
+"na-aš ta-ga-a-an kat-ta ḫa-an-da-an-zi"
+],
+[
+"F1",
+"6'",
+"[ … ḫ]a-⸢at⸣-⸢ta⸣-a[n-zi]"
+]
+],
+"tr": "schlachten sie sie zu Boden13.",
+"trlang": "DE"
+},
+{
+"n": "47",
+"sec": "§6",
+"hl": "",
+"master": "n=aš pittalwanteš zanuwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 61",
+"na-aš pít-tal-wa-an-t[e-eš] za-nu-wa-an-zi"
+],
+[
+"B2",
+"7'",
+"na-aš pít-tal-ú-x-[ … ]"
+],
+[
+"C1+3",
+"Vs. 37/1'",
+"na-aš pít-tal-wa-an-t[e-eš za-nu-w]a-a[n-zi]"
+],
+[
+"E1",
+"Rs. III 10'",
+"na-aš pít-tal-wa-an-te-eš za-nu-an-zi"
+],
+[
+"F2",
+"x+1",
+"20[na]-aš p[ít?- … ]"
+]
+],
+"tr": "Sie kochen sie nature14.",
+"trlang": "DE"
+},
+{
+"n": "48",
+"sec": "§6",
+"hl": "",
+"master": "nu {GIŠ}laḫḫurnuzi kattan išparānzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 62",
+"nu {GIŠ}la-aḫ-ḫur-nu-zi kat-ta-an iš-pár-ra-an-zi"
+],
+[
+"B2",
+"8'",
+"nu la-aḫ-ḫur-nu-u[z- … ]"
+],
+[
+"C1+3",
+"Vs. 38/2'",
+"nu {GIŠ}la-aḫ-ḫur-nu-uz-zi kat-ta-an iš-pár-ra-an-z[i]"
+],
+[
+"E1",
+"Rs. III 11'",
+"nu {GIŠ}la-aḫ-ḫur-nu-zi kat-ta iš-pár-ra-a[n-z]i"
+],
+[
+"F2",
+"2'",
+"[ … kat-ta]-an iš-p[ár-ra-an-zi]"
+]
+],
+"tr": "Sie breiten Laubwerk aus.",
+"trlang": "DE"
+},
+{
+"n": "49",
+"sec": "§6",
+"hl": "",
+"master": "nu=ššan {UZU}Ì NINDA.GUR4.RA{ḪI.A} {URUDU}GÍR.TUR-li=ya kattan ḫandanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 63",
+"nu-uš-ša-an {UZU}Ì NINDA.GUR4.RA{ḪI.A} ==="
+],
+[
+"B2",
+"8'",
+"[ … ] *{UZU}*Ì NINDA.GUR4.RA[{ḪI.A} … ] x x x x [ … ]"
+],
+[
+"C1+3",
+"Vs. 38/2'",
+"⸢nu⸣-u[š-ša-an] ⸢{UZU}⸣Ì NINDA.GU[R4.RA{ḪI.A}] GÍR.TUR-li-ia kat!?-ta!?-an21 ḫa-an-da-an-zi"
+],
+[
+"E1",
+"Rs. III 12'",
+"nu-uš-«uš»-ša-an {UZU}Ì NINDA.GUR4.RA{ḪI.A} {URUDU}GÍR.TUR kat-t[a-an ḫa-a]n-ta-an-zi"
+],
+[
+"F2",
+"3'",
+"[ … ] {UZU}Ì x[ … ] [ … ]"
+]
+],
+"tr": "Fett, Dickbrote, und ein kleines Messer aus Kupfer ordnen sie nebeneinander an.",
+"trlang": "DE"
+},
+{
+"n": "50",
+"sec": "§6",
+"hl": "",
+"master": "namma IŠTU KAŠ GAL{ḪI.A} {DUG}GÌR.GÁN šunnianzi",
+"words": [],
+"mss": [
+[
+"C1+3",
+"Vs. 39/3'",
+"na[m-ma _ _ _ GA]L{ḪI.A} {DUG}GÌ[R.GÁN] šu-un-ni-an-zi"
+],
+[
+"E1",
+"Rs. III 13'",
+"nam-ma IŠ-⸢TU KAŠ GAL⸣{ḪI.A} {DUG}GÌR.GÁN šu-un-ni[- … ]"
+],
+[
+"F2",
+"4'",
+"[ … ] GAL{ḪI.A} {DU[}G … ]"
+]
+],
+"tr": "Ferner füllt man die Becher (und) die Kanne mit Bier.",
+"trlang": "DE"
+},
+{
+"n": "51",
+"sec": "§6",
+"hl": "",
+"master": "namma=kan anda kiššan memaḫ[ḫanzi]",
+"words": [],
+"mss": [
+[
+"C1+3",
+"Vs. 40/4'",
+"nam-ma-kán an-da k[i]-i[š-ša-an _ _ _ _ _ -z]i"
+],
+[
+"E1",
+"Rs. III 14'",
+"nam-ma-kán ⸢an-da⸣ ki-iš-ša-an me-⸢ma-aḫ⸣-[ _ _ _ ]"
+],
+[
+"F2",
+"5'",
+"[ … ] ⸢kiš⸣-an [ … ]"
+]
+],
+"tr": "Dann spri[cht] man folgendermaßen dabei:",
+"trlang": "DE"
+},
+{
+"n": "52",
+"sec": "§6",
+"hl": "",
+"master": "kāš[a=wa(= … )] ḫūdak ḫantezzi palši … [ … ]",
+"words": [],
+"mss": [
+[
+"C1+3",
+"Vs. 40/4'",
+"ka-a-š[a-wa(= … )]22 ḫu-da-ak ḫa-an-te-ez-zi pal-ši ú-x[ … ]23"
+],
+[
+"E1",
+"Rs. III 14'",
+"[ … ] ḫ[u]-u-da-⸢ak⸣ ḫa-an-te-ez-zi [ … ]"
+],
+[
+"G1",
+"4'",
+"ka-a-š[a- … ]"
+]
+],
+"tr": "„Nu[n] gleich beim ersten Mal … [ … ]15,",
+"trlang": "DE"
+},
+{
+"n": "53",
+"sec": "§6",
+"hl": "",
+"master": "[ … ] tarnummen",
+"words": [],
+"mss": [
+[
+"C1",
+"Vs. 41",
+"[ … ]24 tar-nu-um- {Ras.} me-⸢en⸣"
+],
+[
+"E1",
+"Rs. III 16'",
+"[ _ _ _ ] t[ar?]-n[u?-u]m?[- _ _ ]"
+],
+[
+"G1",
+"5'",
+"[ … ]"
+]
+],
+"tr": "[ … ] haben wir [ … ] losgelassen.16",
+"trlang": "DE"
+},
+{
+"n": "54",
+"sec": "§6",
+"hl": "",
+"master": "kinuna=wa kāša t[uk(?) ANA DINGIR]-LIM zeiantaz namma IŠTU UZU NINDA KAŠ [ … ]-edani piyawēn",
+"words": [],
+"mss": [
+[
+"B1",
+"Rs. IV 1",
+"25 [ _ _ _ -]LIM zé-ia-an-ta-az nam-ma IŠ-TU UZU NINDA KAŠ [ _ _ -d]a-ni pí-ia-u-⸢e-en⸣"
+],
+[
+"C1",
+"Vs. 42",
+"ki-nu-na-wa ka-a-ša x[ … ]26 ḫu-u-i-ša-u-wa-a[z27 (ca. 2-3 Zeichen) ]x x-⸢e-da-ni {Ras.} SUM-en⸣28"
+],
+[
+"E1",
+"Rs. III 16'",
+"k[i]-n[u]-n[a- … ] (Text E 1 bricht ab.)"
+]
+],
+"tr": "Jetzt haben wir d[ir, Gottheit,] hier vom Gegarten (und) außerdem Fleisch, Brot (und) Bier [ … ] … gegeben.",
+"trlang": "DE"
+},
+{
+"n": "55",
+"sec": "§6",
+"hl": "",
+"master": "nu=wa=za DINGIR-LUM DINGIR-LIM-nili [e]t=za eku",
+"words": [],
+"mss": [
+[
+"B1",
+"Rs. IV 2",
+"nu-wa-za DINGIR-LUM {Ras.} DINGIR-LIM-ni-li [e-e]z-za e-ku29"
+],
+[
+"C1",
+"Vs. 43",
+"nu-w[a- … ] [ … ] x e x[ … ]"
+]
+],
+"tr": "Oh Gottheit, nach Götterart [is]s (und) trink17",
+"trlang": "DE"
+},
+{
+"n": "56",
+"sec": "§6",
+"hl": "",
+"master": "antuḫši=ma=wa=za kattan lē pešti",
+"words": [],
+"mss": [
+[
+"B1",
+"Rs. IV 3",
+"an-⸢tu-uḫ-ši-ma-wa-za30 kat-ta⸣-an le-e pé-eš-ti"
+],
+[
+"C1",
+"Vs. 44",
+"[ … -a]n? le-e pé-eš-ti"
+]
+],
+"tr": "und dem Menschen aber überlasse nichts!“18",
+"trlang": "DE"
+},
+{
+"n": "57",
+"sec": "§6",
+"hl": "",
+"master": "n=at EGIR-an katta ḫinkanzi",
+"words": [],
+"mss": [
+[
+"B1",
+"Rs. IV 4",
+"[na-a]t EGIR-an kat-ta ḫi-in-kán-zi"
+],
+[
+"C1",
+"Vs. 44",
+"na-at E[GIR-an … ]"
+]
+],
+"tr": "Sie verneigen sich tief",
+"trlang": "DE"
+},
+{
+"n": "58",
+"sec": "§6",
+"hl": "",
+"master": "n=at=za arḫa uwanzi",
+"words": [],
+"mss": [
+[
+"B1",
+"Rs. IV 4",
+"na-at-za ar-ḫa [ú]-⸢wa-an-zi⸣"
+],
+[
+"C1",
+"Vs. 45",
+"x x [ … ] ⸢ú⸣-wa-an-zi"
+]
+],
+"tr": "und gehen weg.",
+"trlang": "DE"
+},
+{
+"n": "59",
+"sec": "§6",
+"hl": "",
+"master": "kuitman=kan DINGIR-LUM aššanuškanzi",
+"words": [],
+"mss": [
+[
+"B1",
+"Rs. IV 5",
+"ku-it-ma-an-kán DINGIR-LUM aš-ša-<nu>-uš-kán-zi"
+],
+[
+"C1",
+"Vs. 45",
+"[ … ]?31"
+]
+],
+"tr": "Solange sie die Gottheit versorgen,",
+"trlang": "DE"
+},
+{
+"n": "60",
+"sec": "§6",
+"hl": "",
+"master": "nu=za UNŪTUM tagān katta UL kuiški dāi",
+"words": [],
+"mss": [
+[
+"B1",
+"Rs. IV 6",
+"⸢nu-za Ú⸣-NU-TUM ta-ga-a-an kat-ta Ú-UL ku-iš-ki da-a-i"
+],
+[
+"C1",
+"Vs. 46",
+"[ … ]?"
+]
+],
+"tr": "legt niemand das Gerät (der Gottheit) auf den Boden",
+"trlang": "DE"
+},
+{
+"n": "61",
+"sec": "§6",
+"hl": "",
+"master": "[U]L āra",
+"words": [],
+"mss": [
+[
+"B1",
+"Rs. IV 7",
+"⸢Ú⸣-[U]L a-a-ra"
+],
+[
+"C1",
+"Vs. 46",
+"[ … ]?"
+]
+],
+"tr": "– es ist [nic]ht recht –",
+"trlang": "DE"
+},
+{
+"n": "62",
+"sec": "§6",
+"hl": "",
+"master": "šarā=za=at namma UL dāi",
+"words": [],
+"mss": [
+[
+"B1",
+"Rs. IV 7",
+"ša-ra-a-za-at nam-ma Ú-UL da-a-i ¬¬¬"
+],
+[
+"C1",
+"Vs. 46",
+"[ … ] ==="
+]
+],
+"tr": "(und) (niemand) nimmt es später (wieder) auf.",
+"trlang": "DE"
+},
+{
+"n": "63",
+"sec": "§7",
+"hl": "",
+"master": "[maḫḫ]an=ma=at=kan IŠTU SÍSKUR arḫa aranzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 1",
+"[ … ]-zi"
+],
+[
+"B1",
+"Rs. IV 8",
+"[ma-aḫ-ḫ]a-an-ma-at-kán IŠ-TU SÍSKUR ar-ḫa a-ra-an-zi"
+],
+[
+"C1",
+"Rs. 1",
+"[ … -a]t-kán IŠ-T[U … ]"
+]
+],
+"tr": "[Soba]ld aber sie sich von dem (Ort des) Ritual(s) wegbegeben,",
+"trlang": "DE"
+},
+{
+"n": "64",
+"sec": "§7",
+"hl": "",
+"master": "[nu=za=kan] weteni anda MUN išḫūwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 2",
+"[ … ]"
+],
+[
+"B1",
+"Rs. IV 9",
+"[nu-za-kán]32 ú-e-te-ni an-da {Ras.} MUN iš-ḫu-u-wa-an-zi"
+],
+[
+"C1",
+"Rs. 1",
+"[ … ] [ _ _ _ ] iš-ḫu-wa-an-zi"
+]
+],
+"tr": "streuen sie in das Wasser Salz hinein.",
+"trlang": "DE"
+},
+{
+"n": "65",
+"sec": "§7",
+"hl": "",
+"master": "nu=za=kan QĀTĪ=ŠUNU apez ārri",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 3",
+"nu-za-ká[n … ]"
+],
+[
+"B1",
+"Rs. IV 10",
+"[nu-za-ká]n QA-TI-ŠU-NU a-pé-ez a-ar-ri"
+],
+[
+"C1+4",
+"Rs. 2/1'",
+"nu-za-⸢kán QA-TI⸣-Š[U-NU a-pé-]⸢e?-ez?⸣ [ … ]"
+]
+],
+"tr": "Sie waschen19 sich damit ihre Hände.",
+"trlang": "DE"
+},
+{
+"n": "66",
+"sec": "§7",
+"hl": "",
+"master": "namma IZI 2 AŠRA warnuwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 4",
+"nam-ma I[ZI … ]x ⸢wa-ar-nu-an⸣-[zi]"
+],
+[
+"B1",
+"Rs. IV 10",
+"nam-ma IZI 2 AŠ-RA33 [wa-ar-n]u-wa-an-zi"
+],
+[
+"C1+4",
+"Rs. 3/2'",
+"[ … ] ⸢2⸣ AŠ-RA34 wa-ar-nu-an-zi"
+]
+],
+"tr": "Ferner zünden sie zwei Feuerstellen an",
+"trlang": "DE"
+},
+{
+"n": "67",
+"sec": "§7",
+"hl": "",
+"master": "n=at=kan ištarna arḫa uwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 4",
+"[na-at-ká]n iš-tar-na a[r-ḫa] ú-wa-an-zi"
+],
+[
+"B1",
+"Rs. IV 11",
+"na-at-kán iš-tar-na ar-ḫa ú-wa-an-zi"
+],
+[
+"C1+4",
+"Rs. 3/2'",
+"⸢na⸣-at-[ _ _ ]-⸢tar⸣-na ar-ḫ[a …] [ … ]-zi"
+]
+],
+"tr": "(und) gehen mitten hindurch.",
+"trlang": "DE"
+},
+{
+"n": "68",
+"sec": "§7",
+"hl": "",
+"master": "ḫantezziaz=za=ma 2 MÁŠ.GAL 1 {DUG}ḫūppar GEŠTIN 5 NINDA.GUR4.RA ḫandanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 5",
+"ḫa-an-te-e[-zi-az-za]-ma 2 MÁŠ.GAL 1 ⸢{DUG}ḫu⸣-u-up-pár GEŠTIN 5 NINDA.GUR4.RA ḫa-an-da-an-zi"
+],
+[
+"B1",
+"Rs. IV 12",
+"[ḫa-an-t]e-ez-zi-az-za-ma 2 MÁŠ.GAL 1 {DUG}ḫu-up-pár GEŠTIN 5 NINDA.GUR4.RA [ḫa-an]-da-iz-zi"
+],
+[
+"C1+4",
+"Rs. 4/3'",
+"nu 2 MÁŠ.GAL 1 {DUG}ḫu-⸢up-pár⸣ GE[ŠTIN 5 NIND]A.GUR4.RA [ ] [ _ _ -a]n-da-an-zi"
+],
+[
+"E1",
+"Rs. IV 1'",
+"x[ … ]"
+]
+],
+"tr": "Davor bereiten sie zwei Ziegenböcke, ein ḫuppar-Gefäß Wein (und) fünf Dickbrote vor.",
+"trlang": "DE"
+},
+{
+"n": "69",
+"sec": "§7",
+"hl": "",
+"master": "nu=kan 2 MÁŠ.GAL ANA {D}LAMMA aniyaddaš šipanti",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 7",
+"nu-kán 2 MÁŠ.GAL A-NA {D}LAMMA a-n[i-i]a-ad-da-aš ši-pa-an-ti"
+],
+[
+"B1",
+"Rs. IV 13",
+"nu-kán 2 MÁŠ.GAL A-NA {D}LAMMA a-ni-ia-at-ta-aš [ši-pa]-an-ti"
+],
+[
+"C1+4",
+"Rs. 5/4'",
+"nu-kán 2 MÁŠ.GAL A-NA {D}[LAMMA] a-ni-ia-at-ta-aš [ ] [ši-pa-]an-zi"
+],
+[
+"E1",
+"Rs. IV 1'",
+"[ … ] ši-ip[-pa-an-ti]"
+]
+],
+"tr": "Er opfert20 die zwei Ziegenböcke für die Schutzgottheit der Opferzurüstung.",
+"trlang": "DE"
+},
+{
+"n": "70",
+"sec": "§7",
+"hl": "",
+"master": "nu=kan {UZU}GAB {UZU}ZAG.UDU ZAG-an {UZU}NÍG.GIG {UZU}ŠÀ zeiantaz {GIŠ}laḫḫurnuzzi dāi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 8",
+"nu-kán {UZU}GAB {UZU}ZAG.UDU ⸢ZAG⸣-an {UZU}NÍG.GIG {UZU}⸢ŠÀ⸣ zé-ia-an-ta-az {GIŠ}la-aḫ-ḫur-nu-uz-zi da-a-i"
+],
+[
+"B1",
+"Rs. IV 14",
+"nu-kán {UZU}GAB {UZU}ZAG.UDU ZAG-an {UZU}NÍG.GIG {UZU}ŠÀ ⸢zé⸣-an-ta-az {GIŠ}la-aḫ-ḫur-nu-uz-zi da-a-i"
+],
+[
+"C1+4",
+"Rs. 6/5'",
+"nu-kán {UZU}GAB {UZU}ZA[G.UDU … ]-an {UZU}NÍG.GIG {UZU}ŠÀ [zé-i]a-an-da-za la-aḫ-ḫur-nu-uz-zi d[a-a-i]"
+],
+[
+"E1",
+"Rs. IV 2'",
+"[ … ] zé-an-d[a- … ]"
+]
+],
+"tr": "Er legt Brustfleisch, die rechte Schulter, Eingeweide, Herz (und) von dem Gegarten auf das Laubwerk.",
+"trlang": "DE"
+},
+{
+"n": "71",
+"sec": "§7",
+"hl": "",
+"master": "nu aniyattaš {D}LAMMA 3-ŠU ekuzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 10",
+"nu a-ni-⸢ia-at⸣-ta-aš {D}LAMMA ḫal-zi-ia-aš 3-ŠU e-ku-zi"
+],
+[
+"B1",
+"Rs. IV 15",
+"nu {D}LAMMA ⸢a⸣-ni-ia-at-ta-aš 3-ŠU e-ku-uz-zi"
+],
+[
+"C1+4",
+"Rs. 7/6'",
+"[n]u? {D}LAMMA a-ni-ia-at-ta-aš 3-ŠU e-ku-zi"
+],
+[
+"E1",
+"Rs. IV 3'",
+"[ … ] 3-ŠU e-ku-z[i]"
+]
+],
+"tr": "Die Schutzgottheit der Opferzurüstung trinkt er dreimal21.",
+"trlang": "DE"
+},
+{
+"n": "72",
+"sec": "§7",
+"hl": "",
+"master": "nu=za adanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 11",
+"[nu-za a]-da-an-zi"
+],
+[
+"B1",
+"Rs. IV 16",
+"nu-za a-da-an-zi"
+],
+[
+"C1+4",
+"Rs. 8/7'",
+"nu-za a-da-an-zi"
+],
+[
+"E1",
+"Rs. IV 4'",
+"[ … ]"
+]
+],
+"tr": "Sie essen",
+"trlang": "DE"
+},
+{
+"n": "73",
+"sec": "§7",
+"hl": "",
+"master": "n=at=za arḫa uwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 11",
+"na-⸢at⸣-za ar-ḫa ú-wa-an-zi ¬¬¬"
+],
+[
+"B1",
+"Rs. IV 17",
+"na-at-za ar-ḫa ú-wa-an- zi ¬¬¬"
+],
+[
+"C1+5+4",
+"Rs. 8/1'/7'",
+"n[a-a]t-[za] ar-ḫa ú-wa-an-zi ¬¬¬35"
+],
+[
+"E1",
+"Rs. IV 4'",
+"[ … ]"
+]
+],
+"tr": "und gehen weg.",
+"trlang": "DE"
+},
+{
+"n": "73a",
+"sec": "§7",
+"hl": "",
+"master": "UD.2.KAM [TIL]",
+"words": [],
+"mss": [
+[
+"E1",
+"Rs. IV 5'",
+"UD.2.KAM [ … ]? ¬¬¬"
+]
+],
+"tr": "Zweiter Tag [beendet].22",
+"trlang": "DE"
+},
+{
+"n": "74",
+"sec": "§8",
+"hl": "",
+"master": "INA UD.3.KAM mān lukkatta karūwariwar ḫūdāk",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 13",
+"I-NA UD.3.KAM ma-a-an lu-uk-k[at-t]a ka-ru-ú(-)w[a-ri-wa-a]r ḫu-u-da-a-ak"
+],
+[
+"B1",
+"Rs. IV 18",
+"I-NA UD.3.KAM ma-a-an lu-uk-kat-ta ka-ru-ú-wa-ri-wa-ar ḫu-u-da-ak"
+],
+[
+"C1+5+4",
+"Rs. 9(",
+"10)/2'/8' I-NA UD.3.KAM ma-a-an lu-uk-kat-ta ka-ru-⸢ú⸣[- _ _ -w]a-ar ḫu-da-ak"
+],
+[
+"E1",
+"Rs. IV 6'",
+"I-NA UD.3.KAM ma-a-an l[u- … -]⸢a⸣-ri-wa-ar ḫu-u-da-⸢a⸣-[ak]"
+]
+],
+"tr": "Wenn es am dritten Tag gleich am Morgen hell wird,",
+"trlang": "DE"
+},
+{
+"n": "75",
+"sec": "§8",
+"hl": "",
+"master": "nu 1 MÁŠ.GAL 1 UDU.NÍTA 1 ŠAḪ unnianzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 14",
+"nu 1 MÁŠ.GAL 1 [UDU].NÍTA 1 ŠAḪ <u-un-ni-an-zi>36"
+],
+[
+"B1",
+"Rs. IV 19",
+"nu 1 MÁŠ.GAL 1 UDU 1 ŠAḪ u-un-ni-an-zi"
+],
+[
+"C1+5+4",
+"Rs. 10(",
+"11)/3'/9' 1 MÁŠ.GAL 1 UDU.NITA 1 ŠAḪ u-un-ni-an-zi"
+],
+[
+"E1",
+"Rs. IV 7'",
+"nu 1 MÁŠ.GAL 1 UDU.NITA 1 ŠAḪ [u-u]n-⸢ni⸣-an-zi"
+]
+],
+"tr": "treiben sie einen Ziegenbock, ein männliches Schaf23 (und) ein Schwein her",
+"trlang": "DE"
+},
+{
+"n": "76",
+"sec": "§8",
+"hl": "",
+"master": "EGIR-ann=a 3 NINDA.GUR4.RA 1 {DUG}ḫuppar KAŠ ḫandānzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 14",
+"<EGIR-an-na> 3 NINDA.GUR4.⸢RA⸣ 1 {DUG}ḫu-u-up-pár KAŠ-ia ḫa-an-da-a-an-zi"
+],
+[
+"B1",
+"Rs. IV 20",
+"EGIR-an-na 3 NINDA.GUR4.RA 1 {DUG}ḫu-up-pár KAŠ ḫa-an-da-an!-zi37"
+],
+[
+"C1+5+4",
+"Rs. 10(",
+"11)/3'/9' [EGIR]-an-na 3 NINDA.GUR4.RA 12)/4'/10' 1 {DUG}ḫu-up-pár KAŠ ḫa-an-da-a-an-zi"
+],
+[
+"E1",
+"Rs. IV 7'",
+"pé-ra-an-na 3 NINDA.GUR4.RA 1 {DUG}ḫu-u-up-pár KAŠ ḫa-an-da-a-⸢an⸣-zi"
+]
+],
+"tr": "und dahinter24 bereiten sie drei dicke Brote (und) ein ḫuppar-Gefäß mit Bier vor.",
+"trlang": "DE"
+},
+{
+"n": "77",
+"sec": "§8",
+"hl": "",
+"master": "n=aš LÍL-ri namma tamēdani AŠRI pennianzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 15",
+"na-aš LÍL-ri!38 nam-ma ta-me-e-da-ni AŠ-RI pé-en-ni-an-zi"
+],
+[
+"B1",
+"Rs. IV 21",
+"na-aš LÍL-ri nam-ma ta-me-e-da-ni AŠ-RI pé-en-ni-ia-an-zi"
+],
+[
+"C1+5+4",
+"Rs. 11(",
+"12)/4'/10' na-a[š] LÍL-ri nam-ma da-me-⸢e⸣-[d]a-n[i … ] 13)/5' pé-en-na-an-zi"
+],
+[
+"E1",
+"Rs. IV 8'",
+"na-aš nam-ma ta-me-e-da-ni AŠ-RI pé-en-ni-an-zi"
+]
+],
+"tr": "Sie treiben sie (sc. den Widder, das Schaf und das Schwein) auf das (freie) Feld an einen weiteren25 anderen Ort hin26.",
+"trlang": "DE"
+},
+{
+"n": "78",
+"sec": "§8",
+"hl": "",
+"master": "nu {GIŠ}laḫḫurnuzzi išparranzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 17",
+"nu {GIŠ}la-aḫ-ḫur-nu-uz-zi iš-pár-ra-an-zi"
+],
+[
+"B1",
+"Rs. IV 22",
+"nu la-aḫ-ḫur-nu-uz-zi iš-pa-ra-an-zi"
+],
+[
+"C1+5",
+"Rs. 12(",
+"13)/5' nu la-aḫ-ḫur-nu-uz-zi [ ] iš-pár-ra-an-zi [ ]"
+],
+[
+"E1",
+"Rs. IV 9'",
+"nu {GIŠ}la-aḫ-ḫur-nu-zi iš-pa-ra-an-zi"
+]
+],
+"tr": "Sie breiten Laubwerk aus.",
+"trlang": "DE"
+},
+{
+"n": "79",
+"sec": "§8",
+"hl": "",
+"master": "nu=ššan 3 NINDA.GUR4.RA {GIŠ}laḫḫurnuzzi šer tianzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 18",
+"nu-uš-ša-an 3 NINDA.GUR4.RA ⸢{GIŠ}⸣la-aḫ-ḫur-nu-uz-zi ⸢še⸣-er ti-an-zi { … }"
+],
+[
+"B1",
+"Rs. IV 22",
+"nu-uš-ša-an 3 NINDA.GUR4.RA EGIR-pa ti-ia-zi"
+],
+[
+"C1+5",
+"Rs. 13(",
+"14)/6' nu-uš-ša-an 3 NINDA.GUR4.RA EGIR-pa ti-an-⸢zi⸣"
+],
+[
+"E1",
+"Rs. IV 9'",
+"nu-uš-ša-an 3 NINDA.G[UR4.RA] ⸢EGIR-pa ti⸣-an-zi"
+]
+],
+"tr": "(und) legen die drei Brote auf das Laubwerk.",
+"trlang": "DE"
+},
+{
+"n": "80",
+"sec": "§8",
+"hl": "",
+"master": "nu=kan MÁŠ.GAL UDU.NÍTA ŠAḪ apēdani ANA DINGIR-LIM šipandanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 19",
+"nu-kán ⸢MÁŠ⸣.GAL UDU.NÍTA ŠAḪ [a-pé-e-da-ni] ⸢A⸣-NA DINGIR-LIM ši-pa-an-da-a[n]-zi"
+],
+[
+"B1",
+"Rs. IV 23",
+"nu-kán MÁŠ.GAL UDU ŠAḪ a-pé-e-da-ni A-NA DINGIR-LIM ši-pa-an-da-an-zi"
+],
+[
+"C1+5",
+"Rs. 13(",
+"14)/6' nu-kán MÁŠ.GAL UDU.NITA Š[AḪ] 15)/7' a-pé-da-ni-pát A-NA DINGIR-LIM ši-pa-an-da[-a]n-zi"
+],
+[
+"E1",
+"Rs. IV 10'",
+"nu-ká[n M]ÁŠ.⸢GAL⸣ UDU.NITA ŠAḪ-ia a-pé-e-da-ni-pát [A-N]A DINGIR-⸢LIM š[i-i]p-pa-a[n-d]a-an-zi"
+]
+],
+"tr": "(Mit den folgenden Wörtern) opfern sie den Ziegenbock, das männliche Schaf (und) das Schwein eben jener Gottheit,",
+"trlang": "DE"
+},
+{
+"n": "81",
+"sec": "§8",
+"hl": "",
+"master": "kuiš=kan DINGIR-LUM kī ÚŠ-an ŠÀ KARAŠ iyat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 20",
+"ku-iš-kán [DINGIR-LUM] [k]i-i ÚŠ-an ŠÀ KARA[Š D]Ù-at"
+],
+[
+"B1",
+"Rs. IV 24",
+"ku-iš-kán DINGIR-LUM ki-i ÚŠ-an ŠÀ KARAŠ i-ia-at"
+],
+[
+"C1+5",
+"Rs. 14(",
+"15)/7' ku-iš-*kán* DINGIR-LUM 16)/8' ki-i ÚŠ-an ŠÀ KARAŠ i-ia-at"
+],
+[
+"E1",
+"Rs. IV 11'",
+"ku-iš-kán ki-i ÚŠ-kán ŠÀ KARA[Š … ]"
+]
+],
+"tr": "(und zwar) (der) Gottheit, die diese Seuche im Feldlager verursacht hat:27",
+"trlang": "DE"
+},
+{
+"n": "82",
+"sec": "§8",
+"hl": "",
+"master": "nu=wa apāš DINGIR-LUM azzikkiddu akkuškiddu=ia",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 21",
+"nu-wa a-pa-⸢a⸣-[aš DINGIR-LUM] [az-z]i-ik-ki-id-du [ak-k]u-uš-ki-id-du-ia"
+],
+[
+"B1",
+"Rs. IV 25",
+"nu a-pa-a-aš DINGIR-LUM az-zi-iš-ki-id-du ak-ku-uš-ki-id-du"
+],
+[
+"C1+5",
+"Rs. 15(",
+"16)/8' nu-wa a-[pa-aš] ⸢DINGIR-LUM az⸣-zi-ik-ki-id-[du] 17)/9' ak-ku-uš-ki-id-du"
+],
+[
+"E1",
+"Rs. IV 12'",
+"⸢nu-wa⸣ a-pa-a-aš DINGIR-⸢LUM az-zi⸣-ik-ki-id-du ak-ku-uš-ki-id-du"
+]
+],
+"tr": "„Jene Gottheit soll essen und trinken!",
+"trlang": "DE"
+},
+{
+"n": "83",
+"sec": "§8",
+"hl": "",
+"master": "nu=war=aš ANA KUR {URU}Ḫatti U ANA KARAŠ {URU}Ḫatti menaḫḫanda takšulānza ēšdu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 23",
+"⸢nu⸣-wa-ra-aš A-NA KUR {URU}Ḫa-⸢at⸣-ti Ù A-NA KA[RAŠ] {URU}Ḫa-at-ti me-na-aḫ-ḫa-an-da ták-šu-la-a-an-⸢za⸣ [e-eš-du]"
+],
+[
+"B1",
+"Rs. IV 26",
+"nu-wa-ra-aš A-NA KUR {URU}Ḫa-at-ti Ù ŠA {URU}Ḫa-at-ti KARAŠ me-na-aḫ-ḫa-an-<da> ták-šu-la-a-an-za e-eš-du"
+],
+[
+"C1+5",
+"Rs. 16(",
+"17)/9' nu-wa-ra-aš A-NA KUR{URU}Ḫ[a-at-ti] ⸢Ù A-NA! KUR⸣ {URU}Ḫa-at-[ti] 18) KARAŠ me-na-aḫ-ḫa-an-da ták-šu-la-an-za ⸢e⸣-eš-du"
+],
+[
+"E1",
+"Rs. IV 13'",
+"nu-wa-ra-aš A-NA KUR {URU}Ḫa-at-ti ⸢Ù⸣ A-NA ŠA {URU}Ḫa-at-ti KARAŠ me-na-aḫ-ḫa-an-ta ták-šu-la-a-an-⸢za e⸣-eš-du"
+]
+],
+"tr": "Dem Lande Ḫatti und dem Heer des (Landes) Ḫatti gegenüber soll sie friedlich sein!28",
+"trlang": "DE"
+},
+{
+"n": "84",
+"sec": "§8",
+"hl": "",
+"master": "nu=war=aš=kan andan aššuli neyāru",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 25",
+"nu-wa-ra-aš-kán an-da-an aš-šu-⸢li ne⸣-ia-a-ru"
+],
+[
+"B1",
+"Rs. IV 28",
+"nu-wa-ra-aš-kán an-da-an aš-šu-li ne-ia-ru"
+],
+[
+"C1",
+"Rs. 18",
+"nu-wa-ra-aš-kán an-da-⸢an⸣ aš-šu-li ne-ia-ru"
+],
+[
+"D",
+"Rs. IV 1'",
+"[ … -l]i!?"
+],
+[
+"E1",
+"Rs. IV 14'",
+"nu-wa-ra-aš-kán ⸢an-da⸣ aš-šu-li ⸢ne⸣-ia-a-ru"
+]
+],
+"tr": "Möge sie sich ihnen freundlich zuwenden!“",
+"trlang": "DE"
+},
+{
+"n": "85",
+"sec": "§8",
+"hl": "",
+"master": "nu=za adanzi akuwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 26",
+"nu-za a-da-an-zi a-ku-wa-an-zi"
+],
+[
+"B1",
+"Rs. IV 29",
+"nu-za a-da-an-zi a-ku-wa-an-zi"
+],
+[
+"C1",
+"Rs. 19",
+"nu-za a-da-an-zi a-ku-an-zi"
+],
+[
+"D",
+"Rs. IV 2'",
+"[ … ]"
+],
+[
+"E1",
+"Rs. IV 15'",
+"nu-za a-da-an-zi ⸢a-ku⸣-wa-an-zi"
+]
+],
+"tr": "Dann essen (und) trinken sie",
+"trlang": "DE"
+},
+{
+"n": "86",
+"sec": "§8",
+"hl": "",
+"master": "n=at arḫa uwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 26",
+"[na]-⸢at⸣ ar-ḫa ú-wa-an- zi ¬¬¬"
+],
+[
+"B1",
+"Rs. IV 30",
+"na-at-za ar-ḫa ú-wa-an- zi ¬¬¬"
+],
+[
+"C1",
+"Rs. 19",
+"na-at-za ar-ḫa ú-wa-⸢an⸣-[zi] ¬¬¬"
+],
+[
+"D",
+"Rs. IV 2'",
+"[ … ]"
+],
+[
+"E1",
+"Rs. IV 15'",
+"na-at-za ar-ḫa ú-wa-an-zi"
+]
+],
+"tr": "(und) gehen weg.",
+"trlang": "DE"
+},
+{
+"n": "86a",
+"sec": "§8",
+"hl": "",
+"master": "UD.3!.KAM TIL",
+"words": [],
+"mss": [
+[
+"D",
+"Rs. IV 2'",
+"[ … ] QA-TI ¬¬¬"
+],
+[
+"E1",
+"Rs. IV 15'",
+"UD.3!39.KAM TIL ¬¬¬"
+]
+],
+"tr": "Dritter Tag beendet.29",
+"trlang": "DE"
+},
+{
+"n": "87",
+"sec": "§9",
+"hl": "",
+"master": "INA UD.4.KAM mān lukkatta karūwariwar ḫūdāk 1 GU4.MAḪ 1 UDU.'SÍG+MUNUS' 3 UDU.NÍTA ūnniyanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 28",
+"I-NA UD.4.KAM ma-a-an lu-uk-kat-ta ka-ru-⸢ú⸣-wa-ri-wa-ar ḫu-u-da-a-ak GU4.MAḪ 1 UDU.'SÍG+MUNUS' 3 UDU.NÍTA u-un-ni-ia-an-zi"
+],
+[
+"B1",
+"Rs. IV 31",
+"I-NA UD.4.KAM ma-a-an lu-uk-kat-ta ka-ru-ú-wa-ri-wa-ar ḫu-u-da-ak 1 GU4.MAḪ 1 UDU.'SÍG+MUNUS' {Ras.} 3 UDU-*ia* u-un-ni-ia-an-zi"
+],
+[
+"C1",
+"Rs. 20",
+"I-NA UD.4.KAM ma-a-an lu-uk-kat-ta ka-ru-ú-a-ri-wa-ar ḫu-da-ak 1 GU4.MAḪ 1 UDU.'SÍG+MUNUS' 1 UDU.NITA u-un-ni-an-zi"
+],
+[
+"D",
+"Rs. IV 3'",
+"[ … ]"
+],
+[
+"E1",
+"Rs. IV 16'",
+"I-NA UD.4.KAM ma-a-an lu-uk-kat-ta ka-ru-ú-a-ri-wa-ar ḫu-u-da-a-ak 1 GU4.MAḪ 1 UDU.'SÍG+MUNUS' 3 UDU.NITA u-un-ni-an-zi"
+],
+[
+"F3",
+"x+1",
+"[ … I-N]A UD.4.KA[M … ] [ … ḫu-]⸢u⸣-da-ak[ … ] [ … ]"
+]
+],
+"tr": "Wenn es am vierten Tag hell wird, treibt man gleich am Morgen einen Stier, ein Mutterschaf, drei männliche Schafe herbei,",
+"trlang": "DE"
+},
+{
+"n": "88",
+"sec": "§9",
+"hl": "",
+"master": "ANA UDU.'SÍG+MUNUS'=ma=ššan kuedani UDU.ŠIR nāwi pānza",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 30",
+"A-NA UDU.'SÍG+MUNUS'-ma-aš-ša-an ku-e-da-ni UDU.ŠIR-aš40 na-a-ú-i pa-a-an-za"
+],
+[
+"B1",
+"Rs. IV 33",
+"A-NA UDU.'SÍG+MUNUS'-ma-aš-ša-an UDU.ŠIR-aš ku-e-da-ni na-a-ui5 pa-iz-zi"
+],
+[
+"C1",
+"Rs. 21",
+"A-NA UDU.'SÍG+MUNUS'-ma-aš-ša-an UDU.ŠIR-aš ku-e-da-ni na-a-ui5 pa!-a-iz-zi41"
+],
+[
+"D",
+"Rs. IV 4'",
+"[ … -]an"
+],
+[
+"E1",
+"Rs. IV 17'",
+"A-NA UDU.'SÍG+MUNUS'-ma-aš-ša-an ⸢UDU.ŠIR⸣-aš ku-e-da-ni na-ui5 pa-iz-zi"
+],
+[
+"F3",
+"3'",
+"[ … A-N]A UDU.'SÍG+MUNU[S' … ] [ … -u]i5 pa-iz-z[i]"
+]
+],
+"tr": "(und zwar) ein Mutterschaf, zu dem ein Widder noch nicht gegangen (ist);",
+"trlang": "DE"
+},
+{
+"n": "89",
+"sec": "§9",
+"hl": "",
+"master": "10 NINDA.GUR4.RA=ia 1 {DUG}ḫūppar KAŠ 1 {DUG}ḫūppar GEŠTIN",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 31",
+"10 NINDA.GUR4.RA-ia 1 {DUG}ḫu-u-up-pár KAŠ 1 {DUG}ḫu-u-up-pár GEŠTIN"
+],
+[
+"B1",
+"Rs. IV 34",
+"10 NINDA.GUR4.RA 1 {DUG}ḫu-up-pár KAŠ 1 {DUG}ḫu-up-pár GEŠTIN"
+],
+[
+"C1",
+"Rs. 22",
+"10 NINDA.GUR4.RA 1 {DUG}ḫu-up-pár KAŠ 1 {DUG}ḫu-up-pár GEŠTIN"
+],
+[
+"D",
+"Rs. IV 5'",
+"[ … ] KAŠ"
+],
+[
+"E1",
+"Rs. IV 18'",
+"10 NINDA.GUR4.RA{ḪI.A} 1 {DUG}ḫu-u-up-pár KAŠ ⸢1⸣ [{DU]}G⸢hu⸣-u-up-pár GEŠTIN"
+],
+[
+"F3",
+"5'",
+"[ … {DU]}G⸢ḫu⸣-up-pár KAŠ[ … ]"
+]
+],
+"tr": "(es gibt) auch zehn Brote, ein ḫuppar-Gefäß Bier (und) ein ḫuppar-Gefäß Wein.",
+"trlang": "DE"
+},
+{
+"n": "90",
+"sec": "§9",
+"hl": "",
+"master": "n=at LÍL-ri namma tamēdani pedi pennianzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 32",
+"na-at LÍL!-ri42 nam-ma ta-me-e-da-ni pé-di pé-en-ni-an-zi"
+],
+[
+"B1",
+"Rs. IV 35",
+"na-at LÍL-ri da-me-e-da-ni pé-di pé-en-ni-ia-an-zi"
+],
+[
+"C1",
+"Rs. 23",
+"na-at LÍL-ri nam-ma da-me-e-da-ni pé-di pé-en-ni-an-zi"
+],
+[
+"E1",
+"Rs. IV 19'",
+"na-at gi-im-ri nam-ma ta-me-e-da-ni pé-e-di [pé-en]-ni-an-zi"
+],
+[
+"F3",
+"6'",
+"[ … -]da-an-zi"
+]
+],
+"tr": "Sie treiben sie (sc. den Stier, das Mutterschaf und die Schafe) auf das (freie) Feld an einen weiteren anderen Ort.30",
+"trlang": "DE"
+},
+{
+"n": "91",
+"sec": "§9",
+"hl": "",
+"master": "nu=kan GU4 ANA {D}IM šipanti",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 33",
+"nu-kán GU4 A-NA {D}IM ši-⸢pa⸣-an-ti ¬¬¬"
+],
+[
+"B1",
+"Rs. IV 36",
+"nu-kán GU4 A-NA {D}IM ši-pa-an-ti"
+],
+[
+"C1",
+"Rs. 24",
+"nu-kán GU4 A-NA {D}IM ši-pa-an-da-an-ti { … }"
+],
+[
+"E1",
+"Rs. IV 20'",
+"nu-kán GU4 A-NA {D}IM ši-ip-pa-an-ti"
+],
+[
+"F3",
+"6'",
+"nu[ … ]"
+]
+],
+"tr": "Er opfert31 ein Rind32 dem Wettergott,",
+"trlang": "DE"
+},
+{
+"n": "92",
+"sec": "§9",
+"hl": "",
+"master": "UDU.'SÍG+MUNUS'=ma=kan ANA {D}UTU šipanti",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 34",
+"UDU.'SÍG+MUNUS'-ma-kán A-NA {D}UTU ši-pa-an-ti"
+],
+[
+"B1",
+"Rs. IV 36",
+"UDU.'SÍG+MUNUS'-ma-kán A-NA {D}UTU ši-pa-an-ti"
+],
+[
+"C1",
+"Rs. 25",
+"UDU.'SÍG+MUNUS'-ma-kán { … } *A*-NA {D}UTU ši-pa-an-ti"
+],
+[
+"E1",
+"Rs. IV 20'",
+"UDU.'SÍG+MUNUS'-ma-kán [A-N]A {D}UTU ši-ip-pa-an-ti"
+],
+[
+"F3",
+"7'",
+"[UDU.]'SÍG+MUNUS'-ma-kán A-N[A … ]"
+]
+],
+"tr": "das Mutterschaf hingegen der Sonnengottheit.",
+"trlang": "DE"
+},
+{
+"n": "93",
+"sec": "§9",
+"hl": "",
+"master": "3 UDU=ma=kan ḫūmandaš DINGIR{MEŠ}-aš šipandanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 34",
+"3 UDU-ma-kán ḫu-[u]-ma-an-da-aš DINGIR{MEŠ}-aš ši-pa-an-da-an-zi"
+],
+[
+"B1",
+"Rs. IV 37",
+"3 UDU-ma-kán ḫu-u-ma-an-da-aš DINGIR{MEŠ}-aš [š]i-pa-an-da-an-zi"
+],
+[
+"C1",
+"Rs. 25",
+"3 UDU-ma-⸢kán⸣ ḫu-ma-an-da-aš DINGIR{MEŠ}-aš ši-pa-an-da-an-zi"
+],
+[
+"E1",
+"Rs. IV 21'",
+"3 UDU.NITA-ma-kán ḫu-u-ma-an-da-a-aš DINGIR{MEŠ}-aš [ši-i]p-p[a-an-da-an-z]i"
+],
+[
+"F3",
+"8'",
+"⸢3⸣ UDU-ma-kán ḫu-u-ma-a[n- … ]"
+]
+],
+"tr": "Die drei Schafe aber opfern sie allen Göttern.",
+"trlang": "DE"
+},
+{
+"n": "94",
+"sec": "§9",
+"hl": "",
+"master": "nu {GIŠ}laḫḫurnuzzi dagān išparranzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 35",
+"nu {GIŠ}la-aḫ-ḫur-nu-uz-zi [da-ga-a]-an iš-pár-ra-an-zi"
+],
+[
+"B1",
+"Rs. IV 38",
+"nu {GIŠ}la-aḫ-ḫur-nu-uz-zi da-ga-a-an [iš-pá]r-ra-an-zi"
+],
+[
+"C1",
+"Rs. 27",
+"nu {GIŠ}la-aḫ-ḫur-nu-uz-zi *da-ga-a-an* iš-pár-ra-an-zi"
+],
+[
+"E1",
+"Rs. IV 22'",
+"nu {GIŠ}la-aḫ-ḫur-nu-zi da-ga-a-an iš-pár-ra-an-zi"
+],
+[
+"F3",
+"9'",
+"⸢nu⸣ {GIŠ}la-aḫ-ḫur-nu-uz-z[i … ] [iš-pár-ra-an-z]i"
+]
+],
+"tr": "Sie breiten Laubwerk auf dem Boden aus.",
+"trlang": "DE"
+},
+{
+"n": "95",
+"sec": "§9",
+"hl": "",
+"master": "nu {UZU}GABA {UZU}ZAG.UDU ZAG-an {UZU}NÍG.GIG {UZU}ŠÀ NINDA.GUR4.RA=ia zeiandaz EGIR-pa dāi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 36",
+"nu {UZU}GABA {UZU}ZAG.UDU ⸢ZAG⸣[-an] {UZU}NÍG.GIG {UZU}ŠÀ NINDA.GUR4.RA-ia zé-ia-[an-da]-az EGIR-pa da-a-i"
+],
+[
+"B1",
+"Rs. IV 39",
+"nu {UZU}GABA {UZU}ZAG.UDU ZAG-an [{UZU}NÍG.G]IG {UZU}ŠÀ NINDA.GUR4.RA-ia zi-ia-an-da-az [EGIR-pa d]a-a-i"
+],
+[
+"C1",
+"Rs. 28",
+"nu {UZU}GABA {UZU}ZAG.UDU ZAG-an {UZU}NÍG.GIG {UZU}ŠÀ { … } >{GIŠ}la-ḫur-nu-zi-aš da-a-i<43 NINDA.GUR4.RA-ia zi-ia-an-da-az EGIR-pa da-a-i"
+],
+[
+"E1",
+"Rs. IV 23'",
+"[ … {UZU}]⸢ZAG.UDU {UZU}⸣NÍG.GIG {UZU}ŠÀ NINDA.GUR4.RA-⸢ia zi-ia-an-ta-az⸣ [ _ _ _ _ _ ]"
+],
+[
+"F3",
+"10'",
+"⸢nu⸣ {UZU}GABA {UZU}ZAG.UDU [ … ] [ … ] ⸢NINDA⸣.GUR4.RA <{UZU}ŠÀ> zé-ia-an-ta-[az … ]"
+]
+],
+"tr": "Er legt wieder33 Brustfleisch, rechte Schulter, Eingeweide, Herz und Dickbrot (und) von dem Gegarten hin.",
+"trlang": "DE"
+},
+{
+"n": "96",
+"sec": "§9",
+"hl": "",
+"master": "nu {D}UTU ŠAMÊ {D}IM DINGIR{ḪI.A}=ia ḫūmanteš 3-ŠU ekuzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 38",
+"nu {D}UTU ŠA-ME-E {D}IM [DINGIR{ḪI.]}A-ia ḫu-u-ma-an-te-eš 3-ŠU e-ku-zi"
+],
+[
+"B1",
+"Rs. IV 41",
+"nu {D}UTU ŠA-ME-E {D}IM DINGIR{MEŠ}-ia [ḫu-u-ma-an-t]e-eš 3-ŠÚ a-ku-wa-an-zi"
+],
+[
+"C1",
+"Rs. 30",
+"nu {D}UTU ŠA-ME-E {D}IM DINGIR{MEŠ}-ia ḫu-u-ma-an-te-eš 3-ŠU e-ku-zi"
+],
+[
+"E1+2",
+"Rs. IV 24'",
+"[nu {D}]⸢UTU ŠA⸣-[ME-]⸢E⸣ {D}U DINGIR{MEŠ}-ia ḫ[u-u-ma-an-te-eš] [ _ _ _ _ _ ]"
+],
+[
+"F3",
+"12'",
+"[n]u {D}UTU-aš AN-⸢ME⸣-E44 {D}[ … ] [ … ] ⸢3⸣-ŠU e-ku-zi"
+]
+],
+"tr": "Die Sonnengottheit des Himmels, den Wettergott und alle Götter trinken sie dreimal.",
+"trlang": "DE"
+},
+{
+"n": "97",
+"sec": "§9",
+"hl": "",
+"master": "nu=za adanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 39",
+"nu-za a-da-an-zi"
+],
+[
+"B1",
+"Rs. IV 42",
+"nu-za a-da-an-zi"
+],
+[
+"C1",
+"Rs. 31",
+"nu-za a-da-an-zi"
+],
+[
+"E1+2",
+"Rs. IV 25'",
+"[ … ] ⸢a⸣-da-an-z[i"
+],
+[
+"F3",
+"13'",
+"nu[ … ]"
+]
+],
+"tr": "(Dann) essen sie",
+"trlang": "DE"
+},
+{
+"n": "98",
+"sec": "§9",
+"hl": "",
+"master": "n=at=za arḫa uwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 40",
+"na-at-za ar-ḫa ú-wa-an-zi ==="
+],
+[
+"B1",
+"Rs. IV 43",
+"[ _ _ _ a]r-ḫa ú-wa-an-zi ==="
+],
+[
+"C1",
+"Rs. 32",
+"na-at-za ar-ḫa ú-wa-an-zi ==="
+],
+[
+"E1+2",
+"Rs. IV 25'",
+"[n]a-[at-za] ⸢ar-ḫa⸣ [ _ _ _ _ ] ==="
+],
+[
+"F3",
+"14'",
+"[n]a-at ar-ḫa pa-⸢a⸣[-an-zi] ==="
+]
+],
+"tr": "(und) gehen weg.",
+"trlang": "DE"
+},
+{
+"n": "99",
+"sec": "Kol.",
+"hl": "",
+"master": "DUB.1.KAM",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 41",
+"DUB.1.KAM"
+],
+[
+"F3",
+"15'",
+"[ … D]UB.1.KAM"
+]
+],
+"tr": "Eine Tafel.",
+"trlang": "DE"
+},
+{
+"n": "100",
+"sec": "Kol.",
+"hl": "",
+"master": "nu=ššan 3 SISKUR aniyan",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 41",
+"nu-uš-ša-an 3 SISKUR a-ni-ia-an"
+],
+[
+"B1",
+"Rs. IV 44",
+"[nu-uš-š]a-an 3 SÍSKUR a-ni-ia-an"
+],
+[
+"F3",
+"15'",
+"nu-uš-š[a?- … ]"
+]
+],
+"tr": "Darauf sind drei Rituale aufgeführt.",
+"trlang": "DE"
+},
+{
+"n": "101",
+"sec": "Kol.",
+"hl": "",
+"master": "1 SISKUR INIM {I}Zarpiya",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 42",
+"1 SISKUR INIM {I}Za-ar-pí-i-a"
+]
+],
+"tr": "Ein Ritual: Wort des Zarpiya:",
+"trlang": "DE"
+},
+{
+"n": "102",
+"sec": "Kol.",
+"hl": "",
+"master": "mān MU.KAM-za ḫarranza",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 42",
+"ma-a-an MU.KAM-za ḫar-ra-an-za"
+]
+],
+"tr": "„Wenn ein Jahr schlecht ist,",
+"trlang": "DE"
+},
+{
+"n": "103",
+"sec": "Kol.",
+"hl": "",
+"master": "nu SISKUR kilāuwaš GIM-an DÙ-anzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 43",
+"nu SISKUR ki-la-a-u-wa-aš GIM-an DÙ-an-zi"
+]
+],
+"tr": "führen sie das Ritual des kelu durch“.",
+"trlang": "DE"
+},
+{
+"n": "104",
+"sec": "Kol.",
+"hl": "",
+"master": "1 SISKUR INIM {I}Uḫḫamūwa",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 44",
+"1 SISKUR INIM {I}Uḫ-ḫa-mu-u-wa"
+]
+],
+"tr": "Ein Ritual: Wort des Uḫḫamuwa:",
+"trlang": "DE"
+},
+{
+"n": "105",
+"sec": "Kol.",
+"hl": "",
+"master": "mān=kan ŠÀ KUR-TI našma URU-LIM akkiškizzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 44",
+"ma-a-<an>-kán ŠÀ KUR-TI na-aš-ma URU-LIM ak-kiš-ki-iz-zi {Ras.}"
+],
+[
+"F3",
+"16'",
+"[ … -]an-kán ŠÀ [ … ]"
+]
+],
+"tr": "„Wenn im Inneren des Landes oder der Stadt immer gestorben wird“.",
+"trlang": "DE"
+},
+{
+"n": "106",
+"sec": "Kol.",
+"hl": "",
+"master": "1 SISKUR INIM {I}Ašḫella",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 46",
+"1 SISKUR INIM {I}Aš-ḫe-el-la"
+],
+[
+"C1",
+"Rs. 33",
+"SÍSKUR ÚŠ-aš ŠA {I}Aš-ḫe-el-la LÚ {URU}Ḫa-pal-la QA-TI"
+],
+[
+"F3",
+"",
+"[ … ]x x[ … ]45"
+]
+],
+"tr": "Ein Ritual: Wort des Ašḫella:34",
+"trlang": "DE"
+},
+{
+"n": "107",
+"sec": "Kol.",
+"hl": "",
+"master": "mān=kan ŠA-[BI] KUR-TI našma ŠÀ-BI [KARAŠ]{ḪI.A} [ÚŠ]-kan kišari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 46",
+"ma-a-an-kán ŠÀ-⸢BI KUR⸣-TI na-aš-ma ŠÀ-B[I KARAŠ]{ḪI.A} [ÚŠ]-kán ki-ša-ri"
+],
+[
+"B1",
+"Rs. IV 45",
+"[ … ]-ma ŠÀ KARAŠ"
+]
+],
+"tr": "„Wenn im Inner[en] des Landes oder im Inneren des [Heerlagers] eine [Seu]che ausbricht“.",
+"trlang": "DE"
+}
+],
+"notes": {
+"§1:1": "Nach Fotokollation. Eine Lesung -kán (Dinçol 1985, 11-12 Anm. 4) scheint unwahrscheinlich.",
+"§1:2": "Lesung (unsicher) nach Fotokollation.",
+"§1:3": "Zu dieser Ergänzung vgl. den incipit des Seuchenrituals von Zarpiya (CTH 757). Anders Dinçol 1985, 11: an-[da ki-ša-ri]; HW2 Ḫ, 565a, 265a: an-[da ÙS-kán ki-ša-ri].",
+"§1:T1": "Exemplar C: Wenn das Jahr schlecht (ist) und innerhalb des Feldlagers immer wieder gestorben wird .",
+"§2:4": "In der Autographie te-.",
+"§2:5": "Text: ZA.GAR5. Das letzte Zeichen steht über Rasur.",
+"§2:6": "Lesung nach Fotokollation.",
+"§2:7": "Text: E.GAR5.",
+"§2:8": "Die Lücke ist für den in den Duplikaten erhaltenen Text sehr klein. Möglicherweise wurde er auf dem Tafelrand geschrieben.",
+"§2:9": "Siehe Fußnote 8.",
+"§2:10": "Eine solche Graphie ist ungewöhnlich (vgl. Ex. C und D); der Schreiber könnte ein -at- weggelassen haben. Die selbe Graphie ist in dem El-Amarna Brief EA 32 (VBoT 2) belegt, der bekanntlich zahlreiche Schreiberfehler enthält.",
+"§2:11": "Text: -ta.",
+"§2:12": "Ende der Kolumne.",
+"§2:T2": "Exemplar C: Und ich tue (es) aber folgendermaßen.",
+"§2:T3": "Exemplar D wird keine gelbgrüne Wolle erwähnt.",
+"§2:T4": "Wahrscheinlich richtig ist die Aussage von Kümmel 1987, 286 Anm. 8 a), nach der sich die 3. Sg. auf „jeden der Herren des Feldlagers“ (vgl. kolon 6-7) bezieht. Vgl. auch Anm. c) in Dinçol 1985, 23.",
+"§2:T5": "Text D: „2“.",
+"§3:13": "Diese Graphie ist nur hier belegt; zu erwarten wäre pennaḫḫi.",
+"§3:14": "gi-im-ri pé-en-na-aḫ-ḫi wurde über Rasur geschrieben.",
+"§3:15": "Ergänzung nach Dinçol 1985, 14.",
+"§3:T6": "Nach Kümmel 1987, 286 Anm. 17 a) bezieht sich das Subjekt der Verbalform auf den König. Das ist aber unwahrscheinlich, weil der König erst später erwähnt wird (kolon 32) und zu diesem Zeitpunkt wohl noch nicht an dem Ritual teilnimmt. Deswegen ist es wahrscheinlicher, dass hier, genau wie in kolon 11, jeder der Herren des Feldlagers der Agens ist (vgl. Anm. 4).",
+"§4:16": "Eine Lesung kat-[ta] (so Dinçol 1985, 14 Anm. 43) kann nicht angenommen werden, weil das Zeichen vor der Lücke ein vorgezogenen unteren Keil aufweist, den das Zeichen KAT nicht besitzt (vgl. oben Rs. III 22 und 25).",
+"§4:17": "Der Paragraphenstrich findet nur in diesem Exemplar Verwendung.",
+"§4:T7": "Exemplar D: {UZU}Ì „Fett“ anstatt {UZU}ÚR wie in den übrigen Exemplaren.",
+"§4:T8": "Exemplar D: {UZU}Ì „Fett“ anstatt UZU wie in den übrigen Exemplaren.",
+"§4:T9": "Die Exemplare B1 und C1 geben die korrekte Verbalform wieder. Der Schreiber von KUB 9.31 (Ex. A) hat einfach das Zeichen -an ausgelassen (vgl. auch Dinçol 1985, 24). Ferner nimmt der König nie an Seuchenritualen teil – im vorliegenden Fall handelt es sich um eine indirekte Erwähnung. Für eine unterschiedliche Meinung vgl. Mouton 2016, 179 mit Anm. 2.",
+"§5:18": "ÚŠ-an wurde über Rasur geschrieben.",
+"§5:T10": "Zu dem „free-standing genitive independent pronoun“ vgl. Hoffner – Melchert 2008, 256 sub 16.62.",
+"§5:T11": "Zur Übersetzung dieser zwei kola vgl. CHD P, 333b. Anders Kümmel 1987, 286-287 (ohne periphrastische Konstruktion): „Sie gehen, ins Gebiet des Feindes hinein lassen sie sie weglaufen, (so daß) sie nicht an einen Ort von uns gelangen“.",
+"§6:19": "X ist hier eine Dezimalzahl. Siehe auch Anm. 4 in Roszkowska-Mutschler 2007, 10.",
+"§6:20": "Es ist unklar, ob der Anschluss am Ende der Zeile F1 6' folgt oder erst in der darauffolgenden Zeile zu platzieren ist, deshalb wird die ursprüngliche Nummerierung von F2 behalten.",
+"§6:21": "Da eine Graphie ki-ša-an für das Adverb kiššan nicht belegt ist, könnte es sich um eine Verschreibung für kat-ta-an handeln.",
+"§6:22": "Dinçol 1985, 17 schlägt folgende Ergänzung vor: ka-aš-ma-wa tu-uk A-NA DINGIR-LIM ŠÀ.GAL. Für diese Ergänzung fehlt Platz, es ist Raum für ca. 11 Zeichen vorhanden, nach Dinçol müssten jedoch 22 Zeichen ergänzt werden. Siehe auch Souček 1963, 167f.",
+"§6:23": "Die Fotokollation lässt den Anfang von zwei waagrechten Keilen vor der Lücke sehen. Die Ergänzung in Dinçol 1985, 17 ú-[tu-um-me-en] scheint daher nicht zu passen.",
+"§6:24": "Für die Ergänzung in Dinçol 1985, 17 nu-wa tu-uk A-NA DINGIR-LIM 6 UDU.ŠIR-aš{ḪI.A} 6 MÁŠ.GAL-ia gibt es nicht genügend Raum.",
+"§6:25": "Der Anfang des Satzes stand in dem nicht erhaltenen Ende der Rs. III.",
+"§6:26": "Dinçol 1985, 17 ergänzt tu-uk A-NA DINGIR-LIM zé-ia-an-ta-az nam-ma IŠ-TU UZU NINDA KAŠ. Für diese Anzahl an Zeichen gibt es nicht genügend Raum.",
+"§6:27": "Lesung nach Fotokollation; Dinçol 1985, 17: ḫu-u-i-ša-[wa-az .",
+"§6:28": "Wegen mehrfacher Korrekturen ist die ganze Zeile sehr schwer zu lesen. Die vorgeschlagenen Lesungen sind nicht völlig sicher. Vermutlich gibt Ex. C eine Variante durch das Hinzufügen von ḫūišawaz wieder.",
+"§6:29": "Vgl. CHD Š, 508b.",
+"§6:30": "Diese Lesung ist durch Fotokollation bestätigt; vgl. HW2 Ḫ 607b.",
+"§6:31": "Von dieser Zeile bis zum Ende der Kolumne ist der Text schwer beschädigt. Einzelne Zeichen sind teilweise noch sichtbar, entsprechen denen von Exemplar B jedoch nicht. Nach der Anmerkung in der Autographie sind Zeichen „flacher und anscheinend von anderer Hand geschrieben“, sowie „mehrfach korrigiert ( … ), zum Teil wohl ungültig“.",
+"§6:T12": "„Einem weiteren (namma) anderen Ort“ in Bezug auf die kola 20 und 34.",
+"§6:T13": "Das enklitische Personalpronomen Akk.Pl.c. in den kola 43, 45 und 46 bezieht sich nur auf die sechs Widder und die sechs Ziegenböcke (vgl. kolon 42). Das Demonstrativpronomen Akk.Pl.n. kī bezieht sich auf die anderen in kolon 42 erwähnten Objekte.",
+"§6:T14": "Oder Man kocht sie ausgenommen. Die Bedeutung des Wortes pittalwa(n)- bleibt in diesem Kontext unsicher. Die Kontexte, die mit Öl, Brot und verschiedenen Materialien und Artefakten verbunden sind, verweisen auf die Bedeutung „einfach“, „rein“, „unbearbeitet“, „ohne Zusätze“, „schmucklos“, „ungemustert“ o.ä. Es ist unklar, ob sich diese Bedeutung auch auf Kontexte beziehen kann, die von gekochtem Fleisch handeln. Dagegen siehe hethiter.net/: CTH 716.2 §5 Anm.6 in Übersetzung, sowie hethiter.net/: CTH 757 §11, Zeile 65. Vgl. auch CHD P, 358-359.",
+"§6:T15": "Dinçol 1985, 24, schlägt folgende Ergänzung des Satzes vor: [Siehe, dir, der Gottheit, haben] wir gleich beim ersten Mal [die Nahrung] her[gebracht].",
+"§6:T16": "Dinçol 1985, 24, schlägt folgende Ergänzung vor: [dir, der Gottheit,] haben wir [6 Widder und 6 Ziegenböcke] losgelassen.",
+"§6:T17": "Für die Übersetzung der kola 55-56 vgl. HEG Š/2, 1086, und HW2 Ḫ, 607b. Vgl. Kümmel 1987, 287: „[ … ] vom Gegarten. Ferner haben wir (zusammen) mit Fleisch, Brot, Bier [ … ] gegeben“ und CHD Š, 508b: „Then we gave to the deity some cooked meat, bread (and) beer [ … ], (saying) 'You are a god (and act) in a godly manner. Eat (and) drink'“ (or w. double -za: „'You, O god, eat (and) drink as a god'“).",
+"§6:T18": "Vgl. CHD P, 53b: „but do not give(?) yourself under a human being“.",
+"§7:32": "Ergänzung nach Dinçol 1985, 18.",
+"§7:33": "2 AŠ-RA wurde über Rasur geschrieben.",
+"§7:34": "AŠ wurde über Rasur geschrieben.",
+"§7:35": "In der Autographie deutet die Zeilennummerierung eine unbeschriebene Zeile an, obwohl auf der Tafel für eine zusätzliche Zeile zu wenig Platz vorhanden ist.",
+"§7:T19": "Verb Sg.",
+"§7:T20": "Zu bemerken ist der Subjektwechsel. Von hier bis kolon 71 dürfte der Ritualausführende selbst, Ašḫella, die Handlungen durchführen.",
+"§7:T21": "Ex. A fügt ḫalziyaš nach {D}LAMMA hinzu. Pace Kümmel 1987, 287 ist halziyaš nicht als akkadisches Lehnwort von ḪALṢI „Festung“ zu identifizieren (vgl. HW2 Ḫ, 111a). Dieser Zusatz bleibt unerklärt.",
+"§7:T22": "Nur in Exemplar E.",
+"§8:36": "Der Schreiber des Exemplars A hat das Verb unnianzi sowie das Adverb EGIR-ann=a (s. folgenden kolon) ausgelassen.",
+"§8:37": "Das vorletzte Zeichen ist IZ. Da an allen anderen Stellen und Exemplaren die 3. Prs. Plural geschrieben ist, dürfte hier entsprechend zu emendieren sein.",
+"§8:38": "In der Autographie É-ri.",
+"§8:39": "Im Text: 4.",
+"§8:T23": "Exemplar B einfach „Schaf“.",
+"§8:T24": "Exemplar E „davor“.",
+"§8:T25": "„Einen weiteren (namma) anderen Ort“ in Bezug auf kola 20, 34 und 43.",
+"§8:T26": "Vgl. kolon 43 mit Anm. 12.",
+"§8:T27": "Kein Exemplar dieses kolon zeigt die enklitische Partikel der direkten Rede, deshalb wird kolon 81 als Apposition zum vorigen kolon interpretiert (vgl. anders kolon 26). Kümmel 1987, 287 lässt die direkte Rede hier beginnen.",
+"§8:T28": "Vgl. HW2 A, 532b-533a.",
+"§8:T29": "Nur Exemplar E.",
+"§9:40": "Nach Fotokollation.",
+"§9:41": "Text: pár-a-iz-zi.",
+"§9:42": "Text: É-ri.",
+"§9:43": "{GIŠ}la-ḫur-nu-zi-aš da-a-i nach Anmerkung in der Autographie: „Flacher und anscheinend von anderer Hand geschrieben“. Ein Vergleich mit den anderen Exemplaren empfiehlt eine Emendierung dieses Zusatzes.",
+"§9:44": "Siehe dazu auch HbOr I/33, 874f., 877.",
+"§9:T30": "Vgl. kola 20, 34, 43 und 77.",
+"§9:T31": "Für einen vergleichbaren Subjektwechsel siehe kolon 69 mit Anm. 20.",
+"§9:T32": "Evtl. Schreiberversehen in allen Abschriften, da in kolon 87 ein Stier (GU4.MAḪ) auf den Opferplatz hingetrieben wird.",
+"§9:T33": "Die selbe Handlung wurde schon in kolon 71 (ohne Erwähnung von dickem Brot) durchgeführt. Das könnte das Vorkommen des Adverbs/Postposition EGIR-pa „wieder“ erklären. Vgl. auch die völlig unterschiedliche Übersetzung in Kümmel 1987, 288, der der Variante des Exemplars C folgt (vgl. dazu Anmerkung 43 zu kolon 95 in der Umschrift).",
+"Kol.:45": "Zuordnung unsicher.",
+"Kol.:T34": "Exemplar C: „Seuchenritual des Ašhella des Mannes aus Ḫapalla (ist) beendet.“",
+"T1": "Exemplar C: Wenn das Jahr schlecht (ist) und innerhalb des Feldlagers immer wieder gestorben wird .",
+"T2": "Exemplar C: Und ich tue (es) aber folgendermaßen.",
+"T3": "Exemplar D wird keine gelbgrüne Wolle erwähnt.",
+"T4": "Wahrscheinlich richtig ist die Aussage von Kümmel 1987, 286 Anm. 8 a), nach der sich die 3. Sg. auf „jeden der Herren des Feldlagers“ (vgl. kolon 6-7) bezieht. Vgl. auch Anm. c) in Dinçol 1985, 23.",
+"T5": "Text D: „2“.",
+"T6": "Nach Kümmel 1987, 286 Anm. 17 a) bezieht sich das Subjekt der Verbalform auf den König. Das ist aber unwahrscheinlich, weil der König erst später erwähnt wird (kolon 32) und zu diesem Zeitpunkt wohl noch nicht an dem Ritual teilnimmt. Deswegen ist es wahrscheinlicher, dass hier, genau wie in kolon 11, jeder der Herren des Feldlagers der Agens ist (vgl. Anm. 4).",
+"T7": "Exemplar D: {UZU}Ì „Fett“ anstatt {UZU}ÚR wie in den übrigen Exemplaren.",
+"T8": "Exemplar D: {UZU}Ì „Fett“ anstatt UZU wie in den übrigen Exemplaren.",
+"T9": "Die Exemplare B1 und C1 geben die korrekte Verbalform wieder. Der Schreiber von KUB 9.31 (Ex. A) hat einfach das Zeichen -an ausgelassen (vgl. auch Dinçol 1985, 24). Ferner nimmt der König nie an Seuchenritualen teil – im vorliegenden Fall handelt es sich um eine indirekte Erwähnung. Für eine unterschiedliche Meinung vgl. Mouton 2016, 179 mit Anm. 2.",
+"T10": "Zu dem „free-standing genitive independent pronoun“ vgl. Hoffner – Melchert 2008, 256 sub 16.62.",
+"T11": "Zur Übersetzung dieser zwei kola vgl. CHD P, 333b. Anders Kümmel 1987, 286-287 (ohne periphrastische Konstruktion): „Sie gehen, ins Gebiet des Feindes hinein lassen sie sie weglaufen, (so daß) sie nicht an einen Ort von uns gelangen“.",
+"T12": "„Einem weiteren (namma) anderen Ort“ in Bezug auf die kola 20 und 34.",
+"T13": "Das enklitische Personalpronomen Akk.Pl.c. in den kola 43, 45 und 46 bezieht sich nur auf die sechs Widder und die sechs Ziegenböcke (vgl. kolon 42). Das Demonstrativpronomen Akk.Pl.n. kī bezieht sich auf die anderen in kolon 42 erwähnten Objekte.",
+"T14": "Oder Man kocht sie ausgenommen. Die Bedeutung des Wortes pittalwa(n)- bleibt in diesem Kontext unsicher. Die Kontexte, die mit Öl, Brot und verschiedenen Materialien und Artefakten verbunden sind, verweisen auf die Bedeutung „einfach“, „rein“, „unbearbeitet“, „ohne Zusätze“, „schmucklos“, „ungemustert“ o.ä. Es ist unklar, ob sich diese Bedeutung auch auf Kontexte beziehen kann, die von gekochtem Fleisch handeln. Dagegen siehe hethiter.net/: CTH 716.2 §5 Anm.6 in Übersetzung, sowie hethiter.net/: CTH 757 §11, Zeile 65. Vgl. auch CHD P, 358-359.",
+"T15": "Dinçol 1985, 24, schlägt folgende Ergänzung des Satzes vor: [Siehe, dir, der Gottheit, haben] wir gleich beim ersten Mal [die Nahrung] her[gebracht].",
+"T16": "Dinçol 1985, 24, schlägt folgende Ergänzung vor: [dir, der Gottheit,] haben wir [6 Widder und 6 Ziegenböcke] losgelassen.",
+"T17": "Für die Übersetzung der kola 55-56 vgl. HEG Š/2, 1086, und HW2 Ḫ, 607b. Vgl. Kümmel 1987, 287: „[ … ] vom Gegarten. Ferner haben wir (zusammen) mit Fleisch, Brot, Bier [ … ] gegeben“ und CHD Š, 508b: „Then we gave to the deity some cooked meat, bread (and) beer [ … ], (saying) 'You are a god (and act) in a godly manner. Eat (and) drink'“ (or w. double -za: „'You, O god, eat (and) drink as a god'“).",
+"T18": "Vgl. CHD P, 53b: „but do not give(?) yourself under a human being“.",
+"T19": "Verb Sg.",
+"T20": "Zu bemerken ist der Subjektwechsel. Von hier bis kolon 71 dürfte der Ritualausführende selbst, Ašḫella, die Handlungen durchführen.",
+"T21": "Ex. A fügt ḫalziyaš nach {D}LAMMA hinzu. Pace Kümmel 1987, 287 ist halziyaš nicht als akkadisches Lehnwort von ḪALṢI „Festung“ zu identifizieren (vgl. HW2 Ḫ, 111a). Dieser Zusatz bleibt unerklärt.",
+"T22": "Nur in Exemplar E.",
+"T23": "Exemplar B einfach „Schaf“.",
+"T24": "Exemplar E „davor“.",
+"T25": "„Einen weiteren (namma) anderen Ort“ in Bezug auf kola 20, 34 und 43.",
+"T26": "Vgl. kolon 43 mit Anm. 12.",
+"T27": "Kein Exemplar dieses kolon zeigt die enklitische Partikel der direkten Rede, deshalb wird kolon 81 als Apposition zum vorigen kolon interpretiert (vgl. anders kolon 26). Kümmel 1987, 287 lässt die direkte Rede hier beginnen.",
+"T28": "Vgl. HW2 A, 532b-533a.",
+"T29": "Nur Exemplar E.",
+"T30": "Vgl. kola 20, 34, 43 und 77.",
+"T31": "Für einen vergleichbaren Subjektwechsel siehe kolon 69 mit Anm. 20.",
+"T32": "Evtl. Schreiberversehen in allen Abschriften, da in kolon 87 ein Stier (GU4.MAḪ) auf den Opferplatz hingetrieben wird.",
+"T33": "Die selbe Handlung wurde schon in kolon 71 (ohne Erwähnung von dickem Brot) durchgeführt. Das könnte das Vorkommen des Adverbs/Postposition EGIR-pa „wieder“ erklären. Vgl. auch die völlig unterschiedliche Übersetzung in Kümmel 1987, 288, der der Variante des Exemplars C folgt (vgl. dazu Anmerkung 43 zu kolon 95 in der Umschrift).",
+"T34": "Exemplar C: „Seuchenritual des Ašhella des Mannes aus Ḫapalla (ist) beendet.“"
+}
+}

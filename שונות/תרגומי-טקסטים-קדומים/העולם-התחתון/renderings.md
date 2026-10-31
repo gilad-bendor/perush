@@ -1,4 +1,4 @@
-# Shared renderings: the netherworld corpus (the Descent of Ištar, Inana's Descent)
+# Shared renderings: the netherworld corpus (the Descent of Ištar, Inana's Descent; Nergal and Ereškigal; Bilgameš, Enkidu and the Netherworld; Erra and Išum)
 
 Binding for both projects of this folder (`corpus.md`). Echo tags follow guidelines §6.4: [cognate], [equivalent], [divergence], [absent]. Fixed by the corpus coordinator **before the first line was drafted** (2026-10-21), after reading both base texts in full; the drafting of each text may revise a row with a reason (recorded in §9 and in the project's `project.md`), after which it binds every copy. Quotations here are checked by `../tools/check_bible_quotes.py`.
 
@@ -165,7 +165,7 @@ The Akkadian poem is a shortened retelling of the Sumerian one, and the ancient 
 | Akk. *kummu*; *aḫītu*; *aḫu* II | `חֶדֶר`; `צַד`; `צַד` | |
 | Akk. *anḫiš*; *illakā dimāšu* | `בִּיגִיעָה`; `זוֹלְגוֹת דִּמְעוֹתָיו` (Gilgameš) | |
 | Akk. *emqu*; *banû* | `חָכָם`; `בָּנָה` | Gilgameš. |
-| Akk. *ḫalziqqu* (eBL lemma *ḫazīqatu* "headcloth" is a slip: the determinative is KUŠ, "leather") | `נֹאד` | [equivalent] ↔ `שִׂימָה דִמְעָתִי בְנֹאדֶךָ` (תהלים נו:ט). |
+| Akk. *ḫalziqqu* (eBL lemma *ḫazīqatu* "headcloth" is a slip: the determinative is KUŠ, "leather") | `חֵמֶת` (always vocalized; 2026-10-30 harmonization, was `נֹאד`, which is the cognate of *nādu*, Erra I 58) | [equivalent] ↔ `וְחֵמַת מַיִם` (בראשית כא:יד); `שִׂימָה דִמְעָתִי בְנֹאדֶךָ` (תהלים נו:ט). |
 | Akk. *epinnu*; *ḫabannatu*; *maštītu*; *askuppu*; *manzāzu*; *mūšabu*; *ṣillu*; *dūru*; *šakru*; *ṣamû* | `מַחֲרֵשָׁה`; `בִּיב`; `שְׁתִיָּה`; `מִפְתָּן`; `מַעֲמָד`; `מוֹשָׁב`; `צֵל`; `חוֹמָה`; `שִׁכּוֹר`; `צָמֵא` | Gilgameš where it has them. |
 | Akk. *zaʾānu* D; *ayyaru* (stone) | `עִטֵּר`; `אַבְנֵי־אַיָּרוּ` (transliterated) | |
 | Akk. *kussû*; *ḫurāṣu* | `כִּסֵּא` [cognate]; `זָהָב` | |
@@ -266,7 +266,7 @@ Projects **3 Nergal and Ereškigal** (Akkadian, eBL `L/1/6`: the Middle Babyloni
 | *šarrūtu*; *erṣetu rapaštu*; *qaqqaru rapšu*; *erṣetu rabītu*; *ṭuppu ša nēmeqi* | `מַלְכוּת`; `הָאָרֶץ הָרְחָבָה` (Gilgameš); `הַקַּרְקַע הָרְחָבָה`; `הָאָרֶץ הַגְּדוֹלָה`; `לוּחַ הַחָכְמָה` | |
 | *dīna diānu* / *dīna epēšu*; *parṣū* | `דָּן דִּין` / `עָשָׂה דִּין`; `פֻּלְחָן` (§2) | Law corpus (*dīnum* `דִּין`). |
 | *našāqu*; *dimtu*; *kapāru* D (tears) | `נָשַׁק` [cognate]; `דִּמְעָה`; `מָחָה` | *kapāru* "wipe" ~ `כִּפֵּר` [cognate] ↔ `אֲכַפְּרָה פָנָיו בַּמִּנְחָה` (בראשית לב:כא); [equivalent] ↔ `וּמָחָה אֲדֹנָי יְהוִה דִּמְעָה מֵעַל כָּל פָּנִים` (ישעיהו כה:ח). `כפר` stays gated (*kupru*), so `כִּפֵּר` is not written. (Cross-corpus note: the treaty corpus has *pašāṭu* = `מָחָה`: a different text, recorded.) |
-| *nuḫatimmu*; *ṭābiḫu*; *sīrāšû*; *šāqû*; *mēsû*, *mesû* (*šēpī*) | `אוֹפֶה`; `טַבָּח` [cognate]; the translator; `מַשְׁקֶה` [cognate]; `רָחַץ` (`רָחַץ רַגְלַיִם`) | [cognate] ↔ `מַשְׁקֵה מֶלֶךְ מִצְרַיִם וְהָאֹפֶה` (בראשית מ:א); [equivalent] ↔ `וְרַחֲצוּ רַגְלֵיכֶם` (בראשית יח:ד). |
+| *nuḫatimmu*; *ṭābiḫu*; *sīrāšû*; *šāqû*; *mēsû*, *mesû* (*šēpī*) | `מְבַשֵּׁל` (2026-10-30 harmonization, was `אוֹפֶה`: `אוֹפֶה` is the cognate of *ēpû* "baker"); `טַבָּח` [cognate]; the translator; `מַשְׁקֶה` [cognate]; `רָחַץ` (`רָחַץ רַגְלַיִם`) | [cognate] (*šāqû*) / [equivalent] (*nuḫatimmu*) ↔ `מַשְׁקֵה מֶלֶךְ מִצְרַיִם וְהָאֹפֶה` (בראשית מ:א); [equivalent] ↔ `וְרַחֲצוּ רַגְלֵיכֶם` (בראשית יח:ד). |
 | *akalu*; *šīru*; *šikaru*; *kussû*; *mesīt šēpī* | `לֶחֶם`; `בָּשָׂר`; `שֵׁכָר` [cognate]; `כִּסֵּא` [cognate]; the translator | §5. |
 | *zikar u sinniš* (*ša zikar u sinniš*) | `זָכָר וּנְקֵבָה` (`אֲשֶׁר לְזָכָר וּנְקֵבָה`) | *zikaru* ~ `זָכָר` [cognate], *sinništu* `נְקֵבָה` [equivalent] ↔ `זָכָר וּנְקֵבָה בָּרָא אֹתָם` (בראשית א:כז). `בָּרָא` stays reserved. |
 | *narmaku*; *mayyālu*; *naʾduru* (*innadrū*) | `חֲדַר הָרַחְצָה`; `מִשְׁכָּב` (Gilg. XII 147); `לָפַת` (Gilg. XII 88 `לָפְתוּ`) | |
@@ -385,7 +385,202 @@ The fourteen demons, fixed at MB a+26–29 and copied at b+3–9: `מִתְבָ�
 
 2026-10-23 harmonization, batch B (rows 5, 20, 23): *parakku* → `דּוּכָן` (`כִּסֵּא` stays *kussû*'s); Kakka → `כַּכָּא` (eBL's *Kakka*, a final aleph: neither `ככה` "thus" nor `קקה`; always vocalized; Enūma eliš now has the same form); the advice formula's plene `תיאחז`. Changed lines: NE SB c+35 `כֵּס המלכות` → `דוכן המלכות`; every `כַּכָּה` of Nergal and Ereškigal → `כַּכָּא` – the `>` lines SB a+1, a+2, a+11, a+14, a+15, a+16, a+17, a+18, a+19, a+21, a+33, a+39, a+44, e+43, e+44 (bracket-split forms included), the headings, the notes (also the misspelt `כככה` of ten notes) and the introduction; Inana 30A `עצתי תֵּאָ[חז]!` → `עצתי תיא[חז]!`. `netherworld_tools.py`: the Kakka trap now also catches an unvocalized `ככא`, and the gate formula requires `הביאו את האל ככא`.
 
+- **2026-10-30 harmonization** (`../harmonization--2026-10-30.md`, rows 4, 6, 7): *nuḫatimmu* (LU₂.MUḪALDIM) "cook" = `מְבַשֵּׁל` (was `אוֹפֶה`, the cognate of *ēpû* "baker"; §11.3's row). Changed lines: NE SB b+42 `האופה לחם נושא לך` → `המבשל לחם נושא לך`, c+57 `האופה לחם נושא לו` → `המבשל לחם נושא לו`; their gloss and notes, c+59's parallel note; the introduction (`translation--intro.rtl.md`: `לחם המבשל`, `שכר מבשל־השכר`; Gen 40:1); project.md's taboos table; the parallels index rebuilt (Gen 40:1 now [equivalent] for *nuḫatimmu*; only *šāqû* is the cognate). Row 6: *ṣubātu* "garment" = `שִׂמְלָה` in Erra too (was `בגד` there, a recorded split): ER 141 `ולטהר את בגדיי` → `ולטהר את שמלותיי` (§12.6's fixed-lines row, and the flood references' copy, §7 there), 181 `וגִּירָּה את בגדך יטהר` → `וגִּירָּה את שמלתך יטהר`; their glosses and notes, ER project.md decision 20. Row 7: *ḫalziqqu* "waterskin" = `חֵמֶת` (always vocalized; was `נֹאד`, now only *nādu*'s, ER 58; §5's row): IS 98 `אל הנאד שִׂים את אזנך` → `אל החֵמֶת שִׂים את אזנך`, 99 `יתנו לי את הנאד, ומים מתוכו אשתה` → `יתנו לי את החֵמֶת, ומים מתוכה אשתה` (feminine); their glosses and notes (98, 99, 105's sewer note), [equivalent] Gen 21:14 `וְחֵמַת מַיִם` added at 98, the introduction, IS project.md, the notes on *nādu* (ER 58, ER project.md 8) and on *ummud* (GEN 259); the parallels index rebuilt. No NA copy carries the word.
+
+## 12. Round 4 (run 5, 2026-10-24): project 5, Erra and Išum I (fixed by the coordinator before the first line)
+Project **5 Erra and Išum** (Akkadian, eBL `L/1/5`, Standard Babylonian Tablet I, 191 lines, ed. E. Jiménez, rev. Mitto, Földi, Hätinen, Rozzi; Jiménez's English). Tablets II–V are not edited on eBL yet (2026-10-24: their chapters list the manuscripts but no lines; "an edition … will be uploaded in the course of 2025/2026"), and no open edition of them exists (Cagni 1969 / 1970 are © and lending-only): the project is Tablet I, and II–V wait for eBL (`project.md`). §0–§11 bind it like the other projects. Read the base text in full first (`netherworld_tools.py lines ER 1 191`), with the precedent table the coordinator gives you.
+
+### 12.1 Inheritance specific to this text
+- **Erra I 126–162 is already translated** (2026-10-16), as §7 of the flood corpus's flood references (`../סיפורי-המבול-המסופוטמיים/6-אזכורי-המבול/annotated.rtl.md`, "## 7."). **These 37 lines are copied letter for letter** (the Gilgameš-copy rule of §3, guidelines §5.2 "an earlier corpus's text"), in the revised form of §12.6, and `verify ER` checks that the two files agree. The revisions bring the 2026-10-16 lines in line with rules fixed later (the coordinator applies each one to the flood corpus too, with its notes and parallels rows): a translator who wants to change a fixed line proposes it with a reason, and the coordinator changes both files.
+- **Atra-ḫasīs** (`../סיפורי-המבול-המסופוטמיים/1-אתרחסיס/`): the noise of mankind that keeps the gods awake is the same motif in the same words: *ḫubūru* = `הֲמֻלָּה`, *rigmu* = `שָׁאוֹן`, *šittu* = `שֵׁנָה`, *nišū* = `הָאֲנָשִׁים` (Atra-ḫasīs II 41, 82, 793: `מהמולתם נטרד האל`, `מהמולתם נמנעה ממני שינה`, `מהמולתם לא תאחזני שינה`). Erra I 41, 73, 82 follow them.
+- **Gilg. XI 135** `וכל בני האנוש נהפכו לטיט` (*itūrā ana ṭiṭṭi*): *târu ana* "turn into" = `נֶהְפַּךְ לְ־` (I 74; and the D in 172, `הָפַךְ לְ־`); *târu* "return" keeps `שָׁב` / `הֵשִׁיב` (gated, §6).
+- **Nergal and Ereškigal** (project 3): the speech formula (*pâšu īpuš-ma iqabbi … amāta izakkar* = `פתח את פיו ואמר, אל X דבר דיבר:`), *annīta ina šemêšu* = `כשמעו את זאת`, *tebû* = `קם`, *ebbu* = `צַח` / *ellu* = `טָהוֹר`, Erra `אֶרָּה` ★, Anu `אָנוּ` ★, *gallû* = `שֵׁד־גַּלָּה` (pl. `שֵׁדֵי־גַּלָּה`), *erkallu* = `אִירְכַּלָּה` (Ištar, NE), *kurnugû* = `כּוּרְנוּגִי`, *arallû* = `אֲרַלּוּ`.
+
+### 12.2 Names (★ = vocalized at every occurrence; checked by `verify`)
+| Source | Hebrew | Notes |
+|---|---|---|
+| Erra; Nergal (118) | ★ אֶרָּה; נֵרְגַל | §11.2. The note at the first Erra: the plague god, Nergal's other name. |
+| Išum; Hendursaĝa (2); Engidudu (21) | ★ אִישׁוּם; הֶנְדּוּרְסַגָּה; אֶנְגִּידוּדוּ | `אישום` unvocalized = Modern "indictment". Line 3 is an etymographic play on the name Hendursaĝa (eBL note): say so. |
+| the Sebetti (*sebettu*, "the Seven") | ★ הַשִּׁבְעָה | EST, Maqlû (`הַשִּׁבְעָה`). Unvocalized `השבעה` reads "the oath" (*hašbaʿa*). The number *sebe* "seven" stays `שִׁבְעָה` (29 `שִׁבְעָה אֵלִים`, 162 `שִׁבְעַת הַחֲכָמִים`). |
+| Anu; Ellil; Ea; Marduk (*Marūtuk*); Adad; Šamaš (116 *šamšu*: the sun, eBL "the sun god") | ★ אָנוּ; אֶנְלִיל; אֵאָה; מַרְדּוּךְ; אֲדַד; ★ שֶׁמֶשׁ / שַׁמַשׁ | Corpora. In 116 decide sun or god by the normalization (lower-case *šamši* = the noun) and vocalize. |
+| Mami (Erra's wife, 20) | ★ מָמִי | Atra-ḫasīs (`מָמִי`); `ממי` = "from me". |
+| Girra (*gīru*, the fire god, 141, 181) | ★ גִּירָּה | Maqlû. As a common noun (33, 113 "fire") *gīru* = `אֵשׁ` (by sense; eBL lemmatizes both as *gīru* I). |
+| Šakkan (*būl šakkan*, 43, 77, 85) | ★ שַׁכַּן | LH / Lipit-Ištar (`שַׁכַּן`); `שכן` = "neighbour". *būl šakkan* = `בֶּהֱמַת שַׁכַּן`. |
+| the Igigi; the Anunnaki; the Apsû | הָאִיגִיגִי; הָאֲנוּנָּכִּי; הָאַפְּסוּ | Corpora. |
+| Šuanna (Babylon, 124); Esagil; Etemenanki; Eḫalanki | שׁוּאַנָּה; אֵסַגִּיל; אֵטֵמֵנַנְכִּי; אֵחַלַנְכִּי | The flood references (128). The note at Šuanna: a name of Babylon (`בָּבֶל`). |
+| Ninildu; Kusibanda; Ninagal (155–159) | נִינִילְדּוּ; כּוּסִיבַּנְדָּה; נִינַגַל | The flood references. |
+| *erkallu*; *kurnugû*; *arallû* | אִירְכַּלָּה; כּוּרְנוּגִי; אֲרַלּוּ | §12.1. |
+
+### 12.3 Key terms
+| Source | Hebrew | Tag / reason |
+|---|---|---|
+| *erṣetu* (earth, beside *šamû*; in 28 Earth as Anu's mate); *mātu* "land" (pl. *mātātu*) | both `(הָ)אָרֶץ`, pl. `הָאֲרָצוֹת` | In this tablet *erṣetu* is never the netherworld (that is *erkallu*, *kurnugû*, *arallû*), so it takes the Hebrew it has in every Akkadian corpus, as *mātu* does (Atra-ḫasīs, Gilgameš, the laws): one Hebrew for the two words, as everywhere; the parse names the word. Keeps Gen 6:11–13 (`הָאָרֶץ`) visible for *sapān māti*. |
+| *šubtu* | `מוֹשָׁב` | Enūma eliš (`מושב`, Marduk's seat), the flood references (133 `קמתי ממושבי`); the root ישב is the cognate's (*wašābu*). The Gilgameš formula *šubat irkalla* (`משכן אירכלה`) is not in this text. |
+| *tebû* (of a god rising from his seat; of weapons raised) | `קָם` | NE §11.3. Š *šutbû* (146) = `הֵנִיף` (the flood references). |
+| *dekû* | `הֵעִיר` | (19, 123) ↔ `עוּרָה לָמָּה תִישַׁן אֲדֹנָי` (תהלים מד:כד) (print it). |
+| *ṣalālu*; *šittu*; *dalpu* | `יָשֵׁן` (and `שָׁכַב` only for *nâlu*); `שֵׁנָה`; `נְדוּד־שֵׁנָה` / `שֶׁאֵינוֹ יָשֵׁן` (the translator fixes it) | Gilgameš, Atra-ḫasīs. |
+| *ḫubūru*; *rigmu* | `הֲמֻלָּה`; `שָׁאוֹן` | Atra-ḫasīs (§12.1). |
+| *nišū*; *dadmū*; *ṣalmāt qaqqadi*; *tenēšētu* | `הָאֲנָשִׁים` (*nišī dadmē* = `אַנְשֵׁי הַיִּשּׁוּבִים`); `יִשּׁוּבִים`; `שְׁחוֹרֵי הָרֹאשׁ`; `בְּנֵי הָאֱנוֹשׁ` | Atra-ḫasīs, the flood references, Gilg. XI 135 (*tenēšētu* `בני האנוש`). |
+| *šīmtu*; *šiāmu* | `גּוֹרָל`; `גָּזַר` (*šīmta šiāmu* = `גָּזַר גּוֹרָל`) | Etana, creation (`גזר גורל`). |
+| *nabû* (29 *ittabi zikiršun* "named them") | `קָרָא` (`קרא את שמם`) | The naming verb (§6.7); gated by `verify`. ↔ `וַיִּקְרָא אֶת שְׁמָם` (בראשית ה:ב) (print it). |
+| *šasû* "call, summon" (31) | the root צעק (Hiphil `הִצְעִיק` "summoned", שמואל א י:יז) | Maqlû (*šasû* `צָעַק`); `קרא` is *nabû*'s, and both are in 29–31. |
+| *ṭēma šakānu* (31) | `שָׂם טַעַם` | [cognate idiom] ↔ Aramaic `שָׂם טְעֵם` (עזרא ה:יג, ו:ג; print them); a note says it means "gave orders", not "taste" (§6.7). |
+| *šakānu* | `שָׂם` (every form; *pānī šakānu* 124 = `שָׂם פָּנָיו`) | §6; the creation corpus. ↔ `שׂוֹם תְּשִׂמוּן פְּנֵיכֶם` (ירמיהו מב:טו) (print it). 132 keeps the flood formula *abūba šakānu* = `חוללתי מבול` (§12.6). |
+| *imtu* "venom" | `חֵמָה` (*imat mūti* = `חֲמַת מָוֶת`; *imat bašmi* = `חֲמַת פֶּתֶן`) | [cognate] (Akk. *imtu* < *ḥimtu*; Heb. `חֵמָה` "venom", דברים לב:כד, לג; תהלים נח:ה). A note says Hebrew `חֵמָה` is also "wrath", the Akkadian only "venom". **A split with Enūma eliš and Maqlû (*imtu* `אֶרֶס`)**, recorded for the lead (the cognate rule). Gated by `verify`. |
+| *bašmu* | `פֶּתֶן` | [cognate] (Ugaritic *bṯn* `פֶּתֶן`, the Ugaritic corpus; Enūma eliš's *bašmu* `פֶּתֶן`) ↔ `וְרֹאשׁ פְּתָנִים אַכְזָר` (דברים לב:לג). Gated. |
+| *mūtu* | `מָוֶת` | Corpora. |
+| *ṭābiḫu*; *ṭabāḫu* | `טַבָּח`; `טָבַח` / `טֶבַח` | [cognate] (§6.7). ↔ `לְמַעַן טְבֹחַ טֶבַח` (יחזקאל כא:טו) (the sword sharpened to slaughter; print it) at 91. |
+| *kakku* (sg.); *kakkū* (pl.) | `נֶשֶׁק`; `כְּלֵי־נֶשֶׁק` (with suffixes: `כְּלֵי־נִשְׁקוֹ`, `כְּלֵי־נִשְׁקְךָ`) | Enūma eliš, Gilgameš (`כלי־נשקו`). Erra speaks *to* his weapons (7, 17): the plural is addressed. |
+| *namṣaru*; *patru* | `חֶרֶב`; `סַכִּין` | Gilgameš (*namṣaru* `חרב`, *patru* `סכין`), the Dialogue (`סכין`). `חרב` gated to *namṣaru* (↔ `מִחוּץ תְּשַׁכֶּל חֶרֶב` (דברים לב:כה)). |
+| *uṣṣu*; *qaštu*; *lišānu* (of an arrow) | `חֵץ`; `קֶשֶׁת`; `לָשׁוֹן` | [cognate]s. `חץ` gated to *uṣṣu* (↔ `חִצַּי אֲכַלֶּה בָּם` (דברים לב:כג), לב:מב). |
+| *šuḫtu*; *kepû* | `חֲלוּדָה`; `קָהָה` | Ludlul (`חלודה`); ↔ `אִם קֵהָה הַבַּרְזֶל` (קהלת י:י) (print it). |
+| *qû* (88, threads) | `קַו` | [cognate] (temple corpus *gu* = *qû* `קַו`); ↔ `וְקוּרֵי עַכָּבִישׁ יֶאֱרֹגוּ` (ישעיהו נט:ה) [equivalent] in the note. |
+| *daltu*; *edēlu* | `דֶּלֶת`; `נָעַל` | [cognate] / Etana (*edēlu* `נעל`). 27 `אִישׁוּם – דֶּלֶת הוּא: לִפְנֵיהֶם נְעוּלָה` (the translator may refine the word order, not the words). ↔ שמות יב:כב–כג (the door the destroyer may not pass). `דלת` gated to *daltu*. |
+| *bābu* | `שַׁעַר` | NE (`אל שער אנו…`). 189 *imna u šumēla ša bābīka* `מימין ומשמאל לשערך`. |
+| *rabāṣu* Š (189) | `הִרְבִּיץ` | [cognate] (*rābiṣu* `רוֹבֵץ`, wisdom corpus; Gen 4:7). |
+| *alāku* + *idu* (40, 44, 98) | `הָלַךְ לְצַד` (*lillikū idāka* = `ילכו לצדך`) | Etana (*idu* `צַד`). |
+| *ālik maḫri* (11, 99, 105, 108); *alik pānīya* (99) | `הַהוֹלֵךְ לְפָנִים` (with a suffix `הַהוֹלֵךְ לְפָנַי` / `לְפָנָיו`); `לֵךְ לְפָנַי` | Jiménez's "champion" hides the image; ↔ `לְפָנָיו יֵלֶךְ דָּבֶר וְיֵצֵא רֶשֶׁף לְרַגְלָיו` (חבקוק ג:ה) (the plague god's escort; print it). |
+| *ṣēru* (the battlefield); *ālik ṣēri*; *āšib āli* | `שָׂדֶה` (Gilgameš / flood rule); `הַהוֹלֵךְ אֶל הַשָּׂדֶה`; `יוֹשֵׁב הָעִיר` | Fixed for the soldiers' speech 47–59 (repeated: identical Hebrew). |
+| *tāḫāzu*; *epēš tāḫāzi* | `מִלְחָמָה`; `עֲשׂוֹת מִלְחָמָה` | Enūma eliš; ↔ `עָשׂוּ מִלְחָמָה` (בראשית יד:ב) [equivalent idiom]. |
+| *qurādu*; *qardu*; *qurdu* | `גִּבּוֹר` (*qurādu erra* = `אֶרָּה הַגִּבּוֹר`, *qarrād ilī* = `גִּבּוֹר הָאֵלִים`, *qarrād lā šanān* = `גִּבּוֹרִים שֶׁאֵין לָהֶם מִתְחָרֶה`); `גִּבּוֹר`; `גְּבוּרָה` | Gilgameš, EST (`השבעה, האלים הגיבורים`), the flood references. Gated to these three words (other strength words take other Hebrew: *gašru* `תַּקִּיף`, *dannu* `חָזָק`, *emūqu* `כֹּחַ`). The note at 29: seven warrior gods born to a god by Earth ↔ `הֵמָּה הַגִּבֹּרִים` (בראשית ו:ד) [divergence]. |
+| *šanānu* | `הִתְחָרָה` (`מִתְחָרֶה`) | Gilgameš. |
+| *ezzu*; *ezēzu*; *agāgu* (Š *šuggugu*) | `זוֹעֵם`; `זָעַם`; `קָצַף` (Š `הִקְצִיף`) | Corpora (*agāgu* `קצף`: Gilgameš, Advice to a Prince, Enūma eliš). 132 `קצפתי` (§12.6); 123 `אקציף` ↔ `הִקְצַפְתָּ` (דברים ט:ז) (print it). |
+| *palāḫu*; *šaḫātu*; *galātu* | `יָרֵא`; `נִבְהַל` / Št `הִבָּהֵל`; `נִבְעַת` (stative `מַבְעִית`) | The prophecy corpus (*palāḫu* = ירא only); the translator fixes *šaḫātu* once (`נבהל`) and keeps it. |
+| *raʾābu* (Š "make tremble"); *nâšu*; *arāru* B "quake" (74 *līrur*) | `רָעַד` / `הִרְעִיד`; `זָע`; `רָגַז` | The flood references (134 `שהרעדתי`, 135 `שזע`). **`ארר` never for *arāru* B**: it is *arāru* "curse" (`אָרַר`, Gilgameš). `רגז` ↔ `שָׁמְעוּ עַמִּים יִרְגָּזוּן` (שמות טו:יד) (print it) at the litany 62–74. |
+| *šemû* | `שָׁמַע` | The litany 62–70 `X יִשְׁמְעוּ וְ…` (the same opening in every line). |
+| *nâdu* | `שִׁבַּח` | Enūma eliš, Gilgameš. |
+| *kanāšu*; *kamāsu*; *nīru* | `נִכְנַע`; `כָּרַע`; `עֹל` | NE (*kamāsu* `כרע`), Lipit-Ištar (*nīru* `עול`). |
+| *biltu* | tribute (66) `מַשָּׂא`; yield (135) `יְבוּל` | By sense (the flood references 135 `יבול`); `מַשָּׂא` keeps the root of carrying (*wabālu* / נשא). |
+| *gamālu* | `חָמַל` | False friend of `גָּמַל` (§6.7). 37 `ואל תחמול על איש` ↔ `וְאַל תַּחְמֹלוּ` (יחזקאל ט:ה) (print it). |
+| *bâʾu* | `צָעַד`; of water (171) `שָׁטַף` | The 2026-10-23 harmonization, row 19. |
+| *kippatu* | `חוּג` | [equivalent] ↔ `חוּג הָאָרֶץ` (ישעיהו מ:כב). |
+| *ziāqu*; *šāru* | `נָשַׁב`; `רוּחַ` | Corpora. |
+| *kabābu* (33); *ḫamāṭu*; *nablu* | `דָּלַק`; `לָהַט`; `שַׁלְהֶבֶת` | Maqlû's fire verbs keep their own (*qamû* `בִּעֵר`, *qalû* `קָלָה`, *šarāpu* `שָׂרַף`, *ḫamāṭu* `לָהַט`); *kabābu* takes a free one. |
+| *labbu*; *nēšu*; *barbaru*; *rīmu* | `לָבִיא`; `אַרְיֵה`; `זְאֵב`; `רְאֵם` | [cognate] *labbu*, *rīmu*; Gilgameš. |
+| *būlu*; *nammaššû* | `בְּהֵמָה`; `הַנָּע` (pl. `הַנָּעִים`) | Gilgameš, Atra-ḫasīs, creation 2 (`הנע`): not `רֶמֶשׂ` (a false echo of Gen 1:24). |
+| *kapādu*; *lemuttu* / *lemnu* | `חָשַׁב`; `רָעָה` / `רַע` | Maqlû (*kapādu* `חָשַׁב`). 102 ↔ `אַתֶּם חֲשַׁבְתֶּם עָלַי רָעָה` (בראשית נ:כ) (print it). |
+| *târu ana arkī* (103) | `שָׁב לְאָחוֹר` | ↔ `שׁוּב מֵחֲרוֹן אַפֶּךָ` (שמות לב:יב) (print it). |
+| *rēmu* (101); *aḫulap* | `רַחֲמִים`; `רַב!` | The wisdom corpus. |
+| *qâlu* | "be silent" (95 *qâliš*) `בִּדְמָמָה`; "listen" (106 *qūlam-ma*) `הַאֲזֵן` | Advice to a Prince, the prophecies (by sense, as there). |
+| *awû* Gt (*ītammi*) | `שָׂח` ★ | Gilgameš (`קם ושח אל רעהו`). Unvocalized `שח` = "bowed". |
+| *zakāru*; *qabû*; *amātu*; *awātu*; *atmû* | `דִּבֵּר`; `אָמַר`; `דָּבָר` | NE. 147 *ul aqbi* = `לא אמרתי` (§12.6). |
+| *zikru*; *šumu*; *nibītu* | `זֵכֶר`; `שֵׁם`; the translator fixes one word (`כִּנּוּי`?) | Keep the three apart. |
+| *wâru* D (*umtaʾʾer*) | `צִוָּה` | The flood references (141). |
+| *ûrtu* | `צַו` | The wisdom corpus (`תּוֹרָה` never). |
+| *paqādu* | `פָּקַד` | [cognate]. |
+| *ṭiābu*; *ṭāb eli* (93, 191 *elīšu iṭīb*) | `טוֹב`, `יָטַב`; `יִיטַב עָלָיו` | The wisdom corpus (*ṭāb eli šamaš* = `טוֹב עַל שַׁמַשׁ`); ↔ `וַיִּיטַב הַדָּבָר בְּעֵינֵי הַמֶּלֶךְ` (אסתר א:כא) (print it). |
+| *šamnu*; *ulû* | `שֶׁמֶן`; `מֵיטַב` | [cognate]; ↔ `כַּשֶּׁמֶן הַטּוֹב עַל הָרֹאשׁ` (תהלים קלג:ב). |
+| *damiqtu* (81) | `חֶסֶד` (*damiqta epēšu* = `עָשָׂה חֶסֶד`) | Gilgameš (*dumqu* `חֶסֶד`, the same root); ↔ `וַעֲשֵׂה חֶסֶד עִם אֲדֹנִי אַבְרָהָם` (בראשית כד:יב) (print it). |
+| *mâtu* Š (*šumuttu*, 43) | `הֵמִית` | LH (reserved for it). |
+| *maqātu*; Š | `נָפַל`; `הִפִּיל` | Corpora. |
+| *sapānu*; *ḫalāqu* D | `שִׁטֵּחַ`; `אִבֵּד` | Not `מָחָה`, `הִשְׁחִית`, `הִשְׁמִיד` (Gen 6–7: the apparatus discusses them). |
+| *ummânu*; *apkallu* | ★ `אֻמָּן` (the flood corpus's Akkadian precedent; Gudea's Sumerian *um-mi-a* has `אָמָּן`: a split for the lead); `חָכָם` (162 `שבעת החכמים`) | [cognate]; every corpus *apkallu* `חכם`. ↔ בראשית ו:ד (`הַנְּפִלִים … אַנְשֵׁי הַשֵּׁם`), ד:כ–כב [divergence] in the notes only (§12.5). |
+| *mēsu*; *elmēšu* | `(עֵץ) הַמֵּסוּ`; `עִנְבָּר` | The flood references (`מֵסוּ`); Gilgameš (*elmēšu* `עִנְבָּר`, not `חַשְׁמַל`: יחזקאל א:ד in the note). |
+| *šukuttu*; *šiknu*; *simtu*; *agû*; *melammu* | `עֲדִי`; `תֹּאַר`; `הוֹלֵם` (*simat* X = `הַהוֹלֵם אֶת X`); `כֶּתֶר`; `זֹהַר` | The flood references; Ex 33:4–6 (`וְלֹא שָׁתוּ אִישׁ עֶדְיוֹ עָלָיו`, the people strip their ornaments when God will not go among them) in the note at 127 [divergence]. |
+| *šiknāt napišti* | `בַּעֲלֵי הַנֶּפֶשׁ` | (137, 174, 177) Revised from the flood references' `יצורי הנפש` (the root יצר is reserved in this corpus, §6). *napištu* = `נֶפֶשׁ` [cognate]. |
+| *nabnītu*; *binûtu* | `תּוֹלְדָה`; `צֶאֱצָאִים` | 137 `תולדתם` (the flood references); 161 *binût tâmti* `צאצאי הים` (revised from `יציר`, §12.6). |
+| *banû*; *bānû* | `בָּנָה`; `בּוֹנֶה` | The creation verbs (§6.7). 158 `בונה אל ואדם` (revised from `יוצר`). |
+| *epēšu* | `עָשָׂה` | The creation verbs. 139 `בית עשיתי` (revised from `בניתי`). |
+| *kânu* D | `כּוֹנֵן` | The creation verbs. 157 (revised from `מתקינים`). |
+| *leqû* | `לָקַח` (gated) | 127 *leqât urūša* `לקח טינופת`; 77, 120 *šēṭūta leqû* `לקח בוז`. |
+| *ṣabātu* | `אָחַז` | The 2026-10-21 harmonization (no *aḫāzu* in this text). 96 *luṣbat ḫarrāna* `אֹחֲזָה אֹרַח` (cf. `וְיֹאחֵז צַדִּיק דַּרְכּוֹ` (איוב יז:ט)). 138 `אחזתי בידי` (revised from `לקחתי`). |
+| *ḫarrānu*; *urḫu*; *ṭūdu*; *nērebu* | `אֹרַח`; `דֶּרֶךְ`; `שְׁבִיל`; `מָבוֹא` | Etana, Gilgameš. |
+| *edēqu* (G, N) | `עָטָה` / `הִתְעַטֵּף` | Gilgameš. 8 *nandiqā kakkīkun* `התעטפו בכלי־נשקכם`, 143 `התעטפתי בכתר אדנותי`, 178 `אתעטף בכלי־נשקי` (one verb in all three). |
+| *zīmu*; *niṭlu* | `זִיו`; `מַבָּט` | Corpora (*zīmu* `זיו`). 141, 144 revised (`קלסתר` → `זיו`). |
+| *ebēbu* D | `טִהֵר` | The flood references (141, 162). |
+| *nawāru* D; *nabāṭu* Š | `הֵאִיר`; `הִבְהִיק` | The flood references. |
+| *rubû* | `נָשִׂיא` (*rubû marūtuk* = `הַנָּשִׂיא מַרְדּוּךְ`) | The wisdom and prophecy corpora. |
+| *tamlû* | `מִלּוֹא` | [cognate] (§6.7). 59 `היכל המלוא`. |
+| *maṣallu* | `מְלוּנָה` | Gilgameš; ↔ `כִּמְלוּנָה בְמִקְשָׁה` (ישעיהו א:ח). |
+| *isinnu*; *šikaru*; *akalu* | `חַג`; `שֵׁכָר`; `לֶחֶם` | Corpora. |
+| *reḫû* | sexual (28) `נִזְקַק לְ־` (NE §11.3); of sleep (82) `נִתַּךְ` (Gilgameš `השינה הניתכת`) | Split by sense, as the two precedents. |
+| *walādu* | `יָלַד` | 29 `ילדה לו` (בראשית כא:ב in the note). |
+| *ḫīrtu* | `רַעְיָה` | Enūma eliš. |
+| *urinnu* | ★ `נֵס` | The temple corpus (*urin* = `נֵס`); `נס` = "miracle". |
+| *namû* | `נָוֶה` | [cognate] (Advice to a Prince). |
+| *ikkaru*; *zēru* | `אִכָּר`; `זֶרַע` | [cognate]s (the flood references 138). |
+| *iṣṣūru* | `צִפּוֹר` | Every corpus. |
+| *ṭarādu* (185) | the translator fixes it (grep the corpora; not `גֵּרֵשׁ` if another word fits: Gen 3:24) | |
+
+### 12.4 Formulas fixed before drafting (checked by `verify` where a regex can do it)
+| Source | Hebrew |
+|---|---|
+| *(X) pâšu īpuš-ma iqabbi / ana Y … amāta izakkar* (104–105, split over two lines) | `X פתח את פיו ואמר,` / `אל Y … דבר דיבר:` (NE) |
+| *īpuš-ma pâšu izakkar ana Y* (94, 164, 169, 180) | `פתח את פיו, אל Y דיבר:` |
+| *īpuš-ma pâšu ana Y ītammi* (126) / *… šar ilī ītammi* (129) | `פתח את פיו, אל Y שָׂח:` / `פתח את פיו מלך האלים ושָׂח,` |
+| *ītammi ana kakkīšu* (7, 17) | `שָׂח אל כלי־נשקו:` (the rest of the line follows) |
+| *ana sebetti qarrād lā šanān* (8, 18; 23 *ša sebetti …*, 97 *sebettu …*) | `אל הַשִּׁבְעָה, גיבורים שאין להם מתחרה:` (the same phrase, with its case, in all four) |
+| *lillikū idāka* (40, 44) | `ילכו לצדך` |
+| *qurādu erra* | `אֶרָּה הגיבור` (vocative and subject) |
+| *qarrād ilī* | `גיבור האלים` |
+| *ālik ṣēri*; *āšib āli* (49–56) | `ההולך אל השדה`; `יושב העיר` |
+| *ul ubbala* (57–59) | `לא ישווה ל־` (the same verb in the three lines) |
+| *X lišmû-ma* (62–70) | `ישמעו X ו־…` / `X ישמעו ו־…` (one order, all nine lines) |
+| *ḫubūru* (41, 73, 82) | `הֲמֻלָּה` |
+| *šipīt šamê (u) erṣeti* (133, 136, 170, 182) | `תפר השמים והארץ` |
+| *ina šubtīya atbē(-ma)* (132, 133, 170) | `קמתי ממושבי` / `אקום ממושבי` |
+| *aššu šipri šâšu ša taqbû* (131, 149) | `אשר למלאכה ההיא שאמרת` |
+| *ali* (150–162) | `אַיֵּה` |
+| *annīta ina šemêšu* (100, 168, 179) | `כשמעו את זאת` (NE) |
+| *išmē-ma* (92, 163, 190) | `שמע` + the same order in the three lines |
+| *amāt X iqbû elīšu iṭīb* (93, 191) | `דברי X אשר אמר(ו) – ייטבו עליו` (the translator fixes the form once) |
+| *X illûnim-ma* (171, 175, 177) | `X יעלו ו־` |
+| *kakkīya ezzūti* (98, 186) | `כלי־נשקי הזועמים` |
+| *rubû marūtuk* | `הנשיא מרדוך` |
+| *šiknāt napišti* | `בעלי הנפש` |
+
+### 12.5 Reserved for project 5 (added to §6; checked by `verify`)
+- **Never** (the plan's Torah focus: the apparatus, not the translation, shows the contact): the root שחת (`מַשְׁחִית`, `הִשְׁחִית`, `שַׁחַת`; שמות יב:יג, כג; בראשית ו:יא–יג); `נֶגֶף` / `נָגַף` / `מַגֵּפָה` (cf. `וְלֹא יִהְיֶה בָכֶם נֶגֶף לְמַשְׁחִית` (שמות יב:יג)); `רֶשֶׁף`; `קֶטֶב`; `דֶּבֶר` as "pestilence" (not checkable: the translator never uses it); `הִסְתִּיר` / `הֶסְתֵּר` / `נִסְתַּר` (cf. `וְהִסְתַּרְתִּי פָנַי` (דברים לא:יז)); `נְפִלִים` / `נְפִילִים`; `אַנְשֵׁי הַשֵּׁם`; `מְזוּזָה` (Exod 12:7, Deut 6:9: the amulet use of Tablet V is not in Tablet I).
+- **Gated:** `חמה` / `חמת` – *imtu*; `פתן` – *bašmu*; `חץ` / `חצים` / `חצי־` – *uṣṣu*; `חרב` – *namṣaru*; `מבול` – *abūbu*; `גיבור` / `גבור` / `גבורה` – *qurādu* / *qardu* / *qurdu*; `דלת` – *daltu*; `אות` (the noun) – *ittu*; `קרא` – *nabû*; `שד` – also *gallû* (the corpus's `שֵׁד־גַּלָּה`).
+
+### 12.6 The fixed lines 126–162 (the flood references' Hebrew of 2026-10-16, revised; copy letter for letter)
+Revised words in **bold** in the reason column; every other word is the 2026-10-16 line unchanged.
+
+| Line | Hebrew (binding) | Revision and reason |
+|---|---|---|
+| 126 | `פתח את פיו, אל מלך האלים שָׂח:` | `דיבר` → **`שָׂח`**: *ītammi* (*awû* Gt) is `שָׂח` (Gilgameš); `דיבר` is *zakāru*'s (§12.4) |
+| 127 | `"מדוע העֲדִי, ההולם את אדנותך, אשר ככוכבי השמים מלא היה הדר – לקח טינופת?` | `אות` → **`ההולם את`** (*simat*, as 150, 161; `אות` is *ittu*'s, §12.5); `נטנף` → **`לקח טינופת`** (*leqât urūša*: *leqû* `לקח`, gated) |
+| 128 | `כתר אדנותך, שהבהיק את אֵחַלַנְכִּי כמו את אֵטֵמֵנַנְכִּי – פניו מכוסים!"` | unchanged |
+| 129 | `פתח את פיו מלך האלים ושָׂח,` | `ודיבר` → **`ושָׂח`** (126) |
+| 130 | `אל אֶרָּה, גיבור האלים, דבר דיבר:` | `אמר דבר` → **`דבר דיבר`** (*amāta izakkar*, the NE formula) |
+| 131 | `"אֶרָּה הגיבור, אשר למלאכה ההיא שאמרת לעשות:` | unchanged |
+| 132 | `כאשר פעם קצפתי, וקמתי ממושבי, וחוללתי מבול,` | `זעמתי` → **`קצפתי`** (*agāgu*, §12.3); `וחוללתי מבול` kept: the flood corpus's formula *abūba šakānu* = `חולל מבול` (its renderings §3a; Gilg. XI 14, Atra-ḫasīs), which wins over the plain *šakānu* `שׂם` (a formula takes one Hebrew) |
+| 133 | `קמתי ממושבי, ותפר השמים והארץ נפרם.` | unchanged |
+| 134 | `השמים, שהרעדתי: מקום עמידתם של כוכבי השמים השתנה, ולא השבתי (אותם) למקומם.` | `אותם` → **`(אותם)`** (not in the Akkadian; = 137) |
+| 135 | `אִירְכַּלָּה, שזע: יבול התלם פחת, ולעד קשה לגבותו.` | `העולם התחתון` → **`אִירְכַּלָּה`** (*erkallu*, the corpus's name; `עולם` is reserved, §6); `ועד עולם` → **`ולעד`** (the same) |
+| 136 | `תפר השמים והארץ, שנפרם: המעמקים פחתו, הגאות נסוגה; שבתי וראיתי – קשה היה לשבוע.` | `חזרתי והבטתי` → **`שבתי וראיתי`** (*atūr āmur*: *târu* `שוב`, *amāru* `ראה`) |
+| 137 | `ושל בעלי הנפש – תולדתם התמעטה, ולא השבתי (אותם) למקומם.` | `ויצורי` → **`ושל בעלי`** (*ša* opening a topic = `של X –`, as 23, 41, 55, 71, 90) (*ša šiknāt napišti*, §12.3); `(דבר) למקומו` → **`(אותם) למקומם`** (*ašruššun*, = 134) |
+| 138 | `עד אשר, כאיכר, את זרען אחזתי בידי.` | `לקחתי` → **`אחזתי`** (*ṣabātu*); `עד ש` → `עד אשר` (word order kept) |
+| 139 | `בית עשיתי וישבתי בתוכו.` | `בניתי` → **`עשיתי`** (*epēšu*) |
+| 140 | `עֶדְיִי, שנהדף(?) במבול, ותוארו החשיך:` | vocalization only |
+| 141 | `להבהיק את זיוי ולטהר את שמלותיי ציוויתי את גִּירָּה.` | `קלסתרי` → **`זיוי`** (*zīmu*); `גִּירָא` → **`גִּירָּה`** (Maqlû); `בגדיי` → **`שמלותיי`** (*ṣubātu* = `שִׂמְלָה`, the 2026-10-30 harmonization) |
+| 142 | `אחרי שהאיר את עֶדְיִי והשלים את המלאכה,` | `העדי` → **`עֶדְיִי`** (*šukuttī* "my") |
+| 143 | `התעטפתי בכתר אדנותי, ושבתי למקומי.` | `עטיתי את` → **`התעטפתי ב־`** (*annadqū*, N: = 8, 178) |
+| 144 | `זיוי הוטב, ומבטי מבעית.` | `קלסתרי נאה` → **`זיוי הוטב`** (*zīmūʾa ṭubbû*: *zīmu*; *ṭiābu* D) |
+| 145 | `האנשים שנותרו מן המבול ראו את עשיית המלאכה.` | unchanged |
+| 146 | `אילו הנפתי את כלי־נשקי, הייתי מאבד את השארית.` | `נשקי` → **`כלי־נשקי`** (*kakkīya*, pl.) |
+| 147 | `את האֻמָּנִים ההם הורדתי אל האַפְּסוּ, ולא אמרתי שיעלו.` | `ציוויתי` → **`אמרתי`** (*qabû*; `ציווה` is *wâru*'s); `האֻמָּנִים` kept (the flood corpus's *ummânu* = `אֻמָּן`, its renderings §3a; Gudea's Sumerian *um-mi-a* has `אָמָּן`: a split for the lead) |
+| 148 | `את מקומם של (עץ) המֵסוּ (ו)העִנְבָּר שיניתי, ולא הראיתי לאיש.` | `ואבן האֶלְמֵשׁוּ` → **`(ו)העִנְבָּר`** (Gilgameš); `עץ` → **`(עץ)`** (not in the Akkadian); `את מקום` → **`את מקומם של`** (*ašaršun*) |
+| 149 | `ועתה, אשר למלאכה ההיא שאמרת, אֶרָּה הגיבור:` | unchanged |
+| 150 | `איה (עץ) המֵסוּ, בשר האלים, ההולם את מלך הכל,` | `עץ` → **`(עץ)`** |
+| 151 | `העץ הטהור, העלם הנעלה, הראוי לאדנות,` | unchanged |
+| 152 | `אשר בים הרחב, במים, מאה בֵּרוּ (מהלך) – שורשו הגיע עד עמקי אֲרַלּוּ,` | `ש־` → **`אשר`** (`שבים` trips the `שוב` gate: "returning") |
+| 153 | `וצמרתו, במרום, נשענה על שמי אָנוּ?` | unchanged |
+| 154 | `איה הזַגִּינְדּוּרוּ הצח, שהתקינו(?) כְּסַפִּיר?` | `הבהיר` → **`הצח`** (*ebbu*, NE) |
+| 155 | `איה נִינִילְדּוּ, הנגר הגדול של שלטוני העליון,` | unchanged |
+| 156 | `נושא הקרדום של שֶׁמֶשׁ(?) צחה, היודע את העץ ההוא,` | `בהירה` → **`צחה`** (*ebbu*); `שֶׁמֶשׁ` vocalized (the sun / Šamaš trap) |
+| 157 | `שמבהיקים אותו כיום, ומכוננים אותו תחתיי?` | `ומתקינים` → **`ומכוננים`** (*kânu* D) |
+| 158 | `איה כּוּסִיבַּנְדָּה, בונה אל ואדם, שידיו מובחרות,` | `יוצר` → **`בונה`** (*bānû*; the root יצר is reserved, §6) |
+| 159 | `איה נִינַגַל, נושא אבן הרכב ואבן השכב [...],` | `התחתית` → **`השכב`** (the lower millstone, Mishnaic `שֶׁכֶב וָרֶכֶב`; `תַּחְתִּית` is reserved in this corpus, §6: Deut 32:22 `שְׁאוֹל תַּחְתִּית`) |
+| 160 | `הלש(?) את הנחושת הקשה כעור, מעצב הכ[לים]?` | unchanged |
+| 161 | `איה האבנים המובחרות, צאצאי הים הרחב, ההולמות את הכתר?` | `יציר` → **`צאצאי`** (*binûtu*; the root יצר) |
+| 162 | `איה שבעת החכמים של האפסו, הקַרְפִּיּוֹנִים הצחים, שכמו אֵאָה אדונם שוכללו בתבונה נעלה, מטהרי גופי?"` | `הבהירים` → **`הצחים`** (*ebbu*) |
+
+### 12.7 Merged after part 1 (lines 1–99, 2026-10-24)
+Accepted from the translator's proposals (`5-ארה-ואישום/project.md`, with reasons): *šaḫātu* = `נִרְתַּע` (Gilgameš I 180, 188, Ludlul II 108; `נבהל` is *parādu*'s), not `נִבְהַל`; *ṭūdu* = `נָתִיב` (`שביל` is *kibsu*'s); *ulmu* = `מַגְזֵרָה`; 27 `לפני[הם] נעול` (the stative *edil* is masculine: Išum is the one shut); 29 `ו"הַשִּׁבְעָה" קרא את זכרם` (*zikru* `זֵכֶר`); *lā* + present = `לא` + future (37 `ולא תחמול`), *ē* + preterite = `אל`; 93 = 191 `דבר X אשר אמר – יָטַב עליו.`; *ša* opening a topic = `של X – …` (23, 41, 55, 71, 90; fixed line 137 aligned to `ושל בעלי הנפש`); Irkalla = `אִירְכַּלָּה` (the corpus form of IS and NE; §12.1–§12.2 and fixed line 135 aligned). Words fixed for part 2: `שָׂח אל X:`; `שמע אותו/אותם אֶרָּה הגיבור,` (163); `ההולך לפני־` + suffix (105, 108); *leqû šēṭūta* `לקח … בוז`; *nišī dadmē* `אנשי היישובים`; *zikru* `זכר`; *gīru* (noun) `אש`, *qīšu* `יער`, *apu* `אגם`; *kippatu* `חוג`; *māḫiru* `יריב`; *idu* "arm" `זרועות`; *rašû* `היה ל־`; *nadû* `השליך`; *malku* `מלך` (shared with *šarru*: a split, recorded). Tool: the `חמה` gate no longer reads `מלחמה`.
+
 ## Changelog
+- 2026-10-24 (Round 4, run 5): §12 added – the binding renderings of project 5 (Erra and Išum I), fixed by the coordinator before the first line; Erra I 126–162 copied from the flood references in a revised form (§12.6), checked by `verify ER`.
 - 2026-10-23: end of §11.15, the 2026-10-23 harmonization batch B (NE c+35, Kakka, Inana 30A); the tool's Kakka trap and gate formula.
 - 2026-10-23: §11.15, the 2026-10-23 harmonization (GEN 182).
 - 2026-10-21: written by the corpus coordinator before the first line, from the Gilgameš, wisdom, lament, temple, creation and law corpora and a reading of both base texts in full.

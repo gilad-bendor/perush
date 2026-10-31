@@ -4,13 +4,13 @@
 > continue. **Keep it current:** every session that finishes a run, settles a decision or changes the plan updates it
 > in the same commit.
 
-Last updated: 2026-10-23 (Round 3 complete; its cross-corpus splits settled; Round 4 is next).
+Last updated: 2026-10-30 (**Round 4 complete**: the lead's finalization – the cross-corpus harmonization `harmonization--2026-10-30.md`, every verifier passing; earlier the same day: Round 4 run 6 done: Hittite law and ritual – the Laws, the Temple Instructions, the elimination rituals; the quota's time ranges and the branch-per-session git rules, guidelines §5.1–§5.1c; earlier: Round 4 run 5 done, Erra and Išum I).
 
 ## 1. Starting a session (local or Claude Cloud)
 
-**To run a whole round from one prompt** (Claude Cloud): start a session with `ancient-translations: orchestrate Round <N>`. It becomes the parent (title `Round<N>: …`) and runs each run as its own child session (`Round<N>/Run<M>: …`), one at a time, as guidelines §5.1a describes (reports in `reports/round-<N>/`); you hear from it at the end. To run a single run yourself instead: `ancient-translations: Round <N>, run <M>`.
+**To run a whole round from one prompt** (Claude Cloud): start a session with `ancient-translations: orchestrate Round <N>`. It becomes the parent (title `Round<N>: …`), creates the round's branch `translation-round-<N>`, and runs each run as its own child session (`Round<N>/Run<M>: …`) on its own branch, within the quota's time ranges, as guidelines §5.1–§5.1c describe (reports in `reports/round-<N>/`); at the end it squashes the round into `main` as one commit, and you hear from it. To run a single run yourself instead: `ancient-translations: Round <N>, run <M>`.
 
-1. **Sync with `main`** (a resumed cloud session wakes up on an old checkout: the session operator's report says so).
+1. **Sync with origin** – on `main`, or on the session's work branch (§5.1b; a resumed cloud session wakes up on an old checkout: the session operator's report says so). Then run `../../claude/quota-related-instructions.ts` and follow it (§5.1).
 2. **Restore the git-ignored sources:** most raw sources are not in git, since the repo is public (guidelines §8).
    ```
    python3 -I tools/sources_sync.py status          # what is missing (work tier)
@@ -29,18 +29,25 @@ Last updated: 2026-10-23 (Round 3 complete; its cross-corpus splits settled; Rou
    - The archive tier (`--all`) needs downloads from archive.org, which redirects to changing hosts
      (`dn….archive.org`): with a "Limited" allowlist they fail. It is not needed for translating.
 3. **Read** `translation-guidelines.md` in full, then this file, then the plan (`curated-translation-candidates.md`,
-   "Round 2 plan"), then the corpus you will work in (`corpus.md`, `renderings.md`, the `project.md` files).
+   the current round's plan), then the corpus you will work in (`corpus.md`, `renderings.md`, the `project.md` files).
 
-## 2. Pace (guidelines §5.1)
+## 2. Pace and git (guidelines §5.1–§5.1c; the user's rules of 2026-10-30, replacing every earlier usage rule)
 
-- **Quotas apply in every session, the cloud included** (the user, 2026-10-22: the cloud's special allowance is
-  over). **One sub-agent at a time, always**, so that a quota stop cuts only one effort; translators save each section
-  to disk as they go, and the coordinator commits after every merged part. No parallel translators or runs.
+- **Two time ranges a week, nothing outside them:** run `../../claude/quota-related-instructions.ts` as-is (an executable; it
+  prints the rules and this week's times). **A – Shabbat** (1 hour before it enters → 4 hours before it exits): the 5-hour limit
+  may be used up, a weekly warning stops; one agent at a time. **B – Monday night** (Monday 00:00 Israel time → the
+  weekly reset, Monday 07:00 UTC): everything left, warnings included; up to three agents, on independent tracks.
+- **The gate** before every heavy step and on every wake-up: `get_session` → `../../claude/quota-related-instructions.ts
+  check '<rate_limit_info JSON>'` → `GO … agents=<n>` or `WAIT <time>` (push, pause, end the turn; §5.1c says who
+  wakes whom).
+- **Phase the work:** think and write the scripts with one agent; run every independent script at once in the
+  background (start `tools/sources_sync.py fetch` first thing); process the results.
 - **Sub-agents cannot start sub-agents** (guidelines §5.1): a coordinator started as a sub-agent translates its texts
-  itself. For real translator chains, make the session itself the coordinator (one run per session).
-- **Commit and push to `main` often:** after every finished section, not only at the end of a run. A cloud VM can be
-  reclaimed, and a session can end; work that is pushed survives. Never commit `docs/` at the repo root (the RTL editor
-  regenerates it; the user commits it).
+  itself. For real translator chains, make the session itself the coordinator, or launch sub-sessions (§5.1c).
+- **Git:** every session works and pushes only on its own branch (`translation-round-<N>`, `…-run-<M>`,
+  `…-run-<M>-sub-<K>`; `tools/branches.py`), commits locally often, pushes seldom, and squashes into its parent's
+  branch when done; `main` gets one commit per round. Round 4 finishes on `main`. Never commit `docs/` at the repo
+  root (the RTL editor regenerates it; the user commits it).
 
 ## 3. What is done
 
@@ -50,16 +57,22 @@ All of it is a **first draft**: complete, verified by script, three review passe
 |---|---|---|---|
 | `סיפורי-המבול-המסופוטמיים/` | Atra-ḫasīs I–III, Gilg. XI 1–208, the Sumerian Flood Story, the other Akkadian versions, Berossus + Abydenus, flood references | (see `corpus.md`) | per project (see `corpus.md`) |
 | `סיפורי-הבריאה-המסופוטמיים/` | 1 Enūma eliš I–VII; 2 the creation and Eden companions (7 texts); 3 Bird and Fish; 4 Enki and the World Order; 5 the Farmer's Instructions; 6 Hoe and Plough; 7 Summer and Winter (5–7 Round 3 run 1) | 3,435 | `1-אנומה-אליש/verify.py`, `2-…/verify.py`, `sumerian_tools.py verify 3…7 --strict` |
-| `חוקים-ובריתות/` | 1 Esarhaddon's Succession Treaty; 2 Hammurabi (§66–99 missing in the base text); 3 Eshnunna; 4 MAL A; 5 Lipit-Ištar; 6 Ur-Namma; 7 MAL B | 6,731 | `laws_*.py` |
+| `חוקים-ובריתות/` | 1 Esarhaddon's Succession Treaty; 2 Hammurabi (§66–99 missing in the base text); 3 Eshnunna; 4 MAL A; 5 Lipit-Ištar; 6 Ur-Namma; 7 MAL B; **8 the Hittite Laws** (HL1 = CHiL CTH 291.2, HL 1–100; HL2 = CTH 292, HL 101–200, our TLHdig composite; HLPT = the late parallel text KBo 6.4); **9 the Instructions for Temple Personnel** (CTH 264, our TLHdig composite) (8–9 Round 4 run 6, the folder's first Hittite texts) | 6,731 + 1,419 | `laws_*.py`; `../tools/hittite_tools.py verify HL1 HL2 HLPT IN --strict` |
+| `טקסי-שילוח-וטיהור/` | 1 the Hittite elimination rituals: Ašḫella (CTH 394), Uḫḫamuwa (CTH 410), Puliša (CTH 407), Ambazzi (CTH 391.1–2), from the HPM editions (Round 4 run 6; a new corpus for sending-away and purification rites) | 481 | `../tools/hittite_tools.py verify AS UH PU AM AM2 --strict`, `selftest` |
 | `אפוס-גילגמש/` | SB I–X, XI 209–328, XII; the OB tablets | 3,217 | `verify.py --strict` |
 | `ספרות-החכמה-והצדיק-הסובל/` | 1 Ludlul I–V; 2 the Babylonian Theodicy; 3 the Great Prayer to Šamaš; 4 Counsels of Wisdom; 5 the Dialogue of Pessimism; 6 the Instructions of Šuruppag (Sumerian; 3–6 Round 3 run 4) | 1,562 | `wisdom_tools.py verify --strict` |
 | `קינות-על-ערים/` | 1 the Lament for Ur; 2 the Curse of Agade (OB + Ur III) | 763 | `lament_tools.py verify --strict` |
 | `בניין-המקדש/` | 1 the Gudea Cylinders A–B | 1,300 | `temple_tools.py verify GU --strict` |
-| `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent; 3 Nergal and Ereškigal (MB Amarna + SB); 4 Bilgameš, Enkidu and the Netherworld (five recensions; the source of Gilg. XII) (3–4 Round 3 run 5) | 1,482 | `netherworld_tools.py verify IS\|IN\|NE\|GEN --strict` |
+| `העולם-התחתון/` | 1 the Descent of Ištar (SB + NA); 2 Inana's Descent; 3 Nergal and Ereškigal (MB Amarna + SB); 4 Bilgameš, Enkidu and the Netherworld (five recensions; the source of Gilg. XII) (3–4 Round 3 run 5); 5 Erra and Išum, Tablet I (eBL; II–V not edited on eBL yet; Round 4 run 5) | 1,673 | `netherworld_tools.py verify IS\|IN\|NE\|GEN\|ER --strict` |
 | `אגדות-מלכים/` | 1 Enmerkar and the Lord of Aratta; 2 the Sargon Birth Legend (on King 1907 only: check against Westenholz 1997); 3 Etana (all six eBL versions, Round 3 run 2) | 1,275 | `kings_tools.py verify EA --strict`, `… verify SB --strict`, `… verify ET --strict` |
 | `קולות-היום-יום/` | 1 OB / Old Akkadian love lyrics and incantations (LAOS 4, 25 texts); 2 Sumerian proverbs (coll. 1 complete, selections of 2–3); 3 Lu-diĝira + eight Sumerian letters | 1,513 | `kol_tools.py verify LOVE PROV LET --strict` |
 | `נבואה-ומלכות/` | 1 the Assyrian prophecies (SAA 9 1–11, all eleven texts); 2 Advice to a Prince (eBL `L/2/5`) | 707 | `prophecy_tools.py verify --strict` |
 | `כשפים-ולחשים/` | 1 Maqlû, Tablets I–VIII and the Ritual Tablet (eBL `Mag/1/1`; Round 3 run 6) | 1,595 | `maqlu_tools.py verify --strict` |
+| `חכמה-ובריאה-במצרים/` | 1 the Instruction of Amenemope (551); 2 Egyptian creation: Merikare E 130–138, Pyramid Texts 571, 486, 527, 600, the Memphite Theology (115); 3 the Book of the Heavenly Cow (Seti I, 95 columns) (Round 4 run 3) | 761 | `egypt_tools.py verify --strict`, `selftest` |
+| `הסיודוס/` | 1 the Theogony (all 1,042 lines of Evelyn-White's text, with Galen's 929a–t); 2 the Works and Days (all 831 lines; WD 310 is not in the base) – the folder's first Archaic Greek corpus, with the LXX layer (Round 4 run 4) | 1,873 | `hesiod_tools.py verify --strict`, `selftest` |
+| `מיתוסים-אוגריתיים/` | 1 the Baal Cycle, KTU 1.1–1.6; 2 the short myths and charms (KTU 1.23, 1.24, 1.114, 1.100, 1.107, 1.108, 1.82, 1.83); 3 the fifth-day dossier (six excerpts: Egyptian, Greek, Hittite, Vedic, Old Norse, Old Japanese; + pWestcar and the Apophis spells, Round 4 run 3) (Round 4 run 1) | 1,749 + 100 | `ugarit_tools.py verify --strict`, `3-…/dossier_tools.py verify --strict` |
+
+**Checked at the Round 4 finalization (2026-10-30):** every verifier above (all keys, `--strict` where the tool takes it, the selftests) and `tools/check_bible_quotes.py` over all 708 `.md` files of the folder passed after the harmonization – including the Round 4 rows (Ugaritic, the dossier, Egyptian, Hesiod, Erra I, the Hittite texts). The dossier's parallels tables are now generated by the corpus builder (`מיתוסים-אוגריתיים/build_parallels_index.py`).
 
 Every finished translation has a print stub in `הדפסה/` (guidelines §7.4). Each corpus has a `parallels-index.md`
 with its key findings at the top.
@@ -86,18 +99,22 @@ table's order; inside a run, its sub-agents strictly one at a time (quotas, §2)
 "Round 4 plan". It merges the Mesopotamian texts left after Round 3 with the first non-Mesopotamian texts from the world
 survey (`curated-translation-candidates--world.md`), ranked together. **One run at a time** (guidelines §5.1), started with
 `ancient-translations: Round 4, run N`:
-1. the Ugaritic myths (the Baal Cycle + the short myths and charms), with the fifth-day dossier – for Gen 1:21, now;
+1. the Ugaritic myths (the Baal Cycle + the short myths and charms), with the fifth-day dossier – for Gen 1:21, now: **done (first draft), 2026-10-23**, `מיתוסים-אוגריתיים/` (report `reports/round-4/run-1.md`);
 2. the Edict of Ammiṣaduqa – only if an open base text is found (none on 2026-10-22);
-3. Egyptian wisdom and creation (Amenemope, Merikare, the Heavenly Cow, the Memphite Theology; base AED-TEI);
-4. Hesiod (Theogony + Works and Days; base Perseus + treebank);
-5. Erra and Išum (eBL);
-6. Hittite law and ritual (the Laws, the Temple Instructions, the elimination rituals; base TLHdig).
+3. Egyptian wisdom and creation (Amenemope, Merikare, the Heavenly Cow, the Memphite Theology; base AED-TEI): **done (first draft), 2026-10-24**, `חכמה-ובריאה-במצרים/` (report `reports/round-4/run-3.md`);
+4. Hesiod (Theogony + Works and Days; base Perseus + treebank): **done (first draft), 2026-10-24**, `הסיודוס/` (report `reports/round-4/run-4.md`);
+5. Erra and Išum (eBL): **done (first draft) for Tablet I, 2026-10-24**, project 5 of `העולם-התחתון/` (191 lines; Tablets II–V are not edited on eBL yet and wait for it: `sources/_records-only--Erra-and-Ishum-II-V/`; report `reports/round-4/run-5.md`);
+6. Hittite law and ritual: **done (first draft), 2026-10-30** – the Hittite Laws (both tablets + the late parallel text, 1,107 lines; project 8 of `חוקים-ובריתות/`), the Instructions for Temple Personnel (312; project 9), the elimination rituals of Ašḫella, Uḫḫamuwa, Puliša and Ambazzi (481; the new corpus `טקסי-שילוח-וטיהור/`); bases: the HPM editions (CHiL, BESRIT; CC BY-SA) and our composites from TLHdig 0.3 (CC BY 4.0); `tools/hittite_tools.py` (report `reports/round-4/run-6.md`). Ḫedammu (for the fifth-day dossier) not done: not cheap (no HPM clause edition found), left for a later round.
+
+**Round 4 is complete** (2026-10-30): runs 1, 3, 4 and 6 done; run 5 partial (Erra I; II–V wait for eBL); run 2 skipped (the Edict of Ammiṣaduqa waits on access). The lead's finalization: the cross-corpus harmonization of the round's splits (`harmonization--2026-10-30.md`, §6 below), every verifier, the shared files; report `reports/round-4/final.md`; open questions for the user: `reports/round-4/questions-for-user.md`.
+
+**Next: Round 5** – planned and started by the orchestrator (the parent session) in a separate session, per the user's instruction of 2026-10-30; it is the first round on branches (guidelines §5.1b).
 
 Quick wins between the runs: Šūpê-amēlu and the fables; the Poor Man of Nippur. Each new language needs a converter, a
 name table, renderings with reserved-word gates and a translator brief before its first line.
 
-Parallel sessions edit the shared files only at the end of their run, in one commit, after `git pull --rebase` (the
-plan's last paragraph). The user's review of the Round 1–2 drafts can go on alongside. The Round 2 runs, for the record:
+Parallel sessions edit the shared files only at the end of their run, in one commit; they meet at `tools/branches.py
+finish` (guidelines §5.1b). The user's review of the Round 1–2 drafts can go on alongside. The Round 2 runs, for the record:
 
 | Run | Texts | Base text | New corpus |
 |---|---|---|---|
@@ -130,7 +147,7 @@ A coordinator (one agent per run) gets this brief, adapted to its texts:
 - **Finish:** record what was learned where the guidelines' top box says (sources → `sources-registry.md`, tools
   → `tools.md`, decisions and false friends → §6.7, a lesson → one line in §5.2 + its story in `history.md`, a
   changelog line in `history.md`); update the plan row and this file; `git add` only its own files (never `-A`, never `docs/`,
-  `claude-sessions/`, `__pycache__/` or git-ignored content); commit ("Ancient-texts translations: …") and push.
+  `claude-sessions/`, `__pycache__/` or git-ignored content); commit ("Ancient-texts translations: …") on the run's own branch, and push it (guidelines §5.1b).
 - **Report:** what was translated and verified; key findings for the Bible; what the texts show of the ancient
   mind; open decisions for the user; anything skipped or failed.
 
@@ -168,6 +185,8 @@ Still open:
 | The Sargon Birth Legend's base text | King 1907 (our transcription from the page images) | Westenholz 1997 is not to be bought (the user's rule): check again if an open copy appears |
 | EST's transliterations (found by Round 3 run 3) | `tools/cdl2md.py` doubled compound logograms until 2026-10-22: 118 + 41 lines in the EST source files and their copies in `חוקים-ובריתות/1-…/` (the Hebrew is unaffected) | regenerate the EST source files with the fixed converter when ORACC is reachable (`tools.md`) |
 | The per-text open decisions | see each `project.md` | minor ones: the next session on that corpus decides them (the user's rule) |
+
+**The cross-corpus splits of Round 4 were settled on 2026-10-30** (by the lead, under the user's rule): nine changes and the kept splits, with three cross-language principles (a cognate reservation protects a Semitic text's own cognate, not the common vocabulary of a non-Semitic corpus; a loanword's Hebrew belongs to its source language; inside one language the cognate keeps the Hebrew, a formula wins, a Hittite Akkadogram takes its Akkadian word's Hebrew) – table `harmonization--2026-10-30.md`; guidelines §6.7; a "2026-10-30 harmonization" line in each touched corpus's `renderings.md`. Applied in two batches, one agent at a time; every verifier and `check_bible_quotes.py` passed afterwards.
 
 The decisions settled earlier (2026-10-18) are in the Gilgameš renderings §12, `חוקים-ובריתות/corpus.md` and the
 flood corpus renderings.

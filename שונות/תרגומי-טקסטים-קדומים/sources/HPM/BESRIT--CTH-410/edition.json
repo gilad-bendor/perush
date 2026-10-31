@@ -1,0 +1,782 @@
+{
+"kind": "BESRIT",
+"cth": "CTH 410",
+"citation": "S. Görke (ed.), hethiter.net/: CTH 410 (TX 09.12.2013, TRde 20.07.2012)",
+"sections": [
+{
+"id": "§1",
+"title": "§1",
+"hl": ""
+},
+{
+"id": "§2",
+"title": "§2",
+"hl": ""
+},
+{
+"id": "§3",
+"title": "§3",
+"hl": ""
+},
+{
+"id": "§4",
+"title": "§4",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§1",
+"hl": "",
+"master": "UMMA {m}Uḫḫamuwa LÚ {URU}Arzawa",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 17",
+"UM-MA {m}Uḫ-ḫa-mu-u-wa LÚ {URU}Ar-za-u-wa"
+],
+[
+"B",
+"Vs. II 43",
+"UM-MA {m}Uḫ-ḫa-mu-u-wa LÚ {URU}Ar-za-u-wa"
+],
+[
+"C",
+"Vs. II 18'",
+"UM-MA {m}Uḫ-ḫa-am-mu-u-wa LÚ {URU}Ar-za-u-wa"
+]
+],
+"tr": "Folgendermaßen (spricht) Uḫḫamuwa, der Mann aus Arzawa:",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§1",
+"hl": "",
+"master": "mān=kan ŠÀ KUR-TI akkiškittari",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 17",
+"ma-a-an-kán ŠÀ KUR-TI ak-ki-iš-ki-it-ta-ri"
+],
+[
+"B",
+"Vs. II 43",
+"ma-a-an-kán ŠÀ KUR-[TI] ak-ki-iš-ki-it-ta-ri"
+],
+[
+"C",
+"Vs. II 18'",
+"ma-a-an-kán ŠÀ ⸢KUR⸣-TI ak-ki-iš-ki-it-ta-ri"
+]
+],
+"tr": "„Wenn im Landesinneren ein Sterben herrscht,",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§1",
+"hl": "",
+"master": "n=at mān kururaš kuiški DINGIR-LUM iyan ḫarzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 18",
+"na-at ma-a-an ku-ru-ra-aš ku-iš-ki DINGIR-LUM i-ya-an ḫar-zi"
+],
+[
+"B",
+"Vs. II 44",
+"na-at ma-a-an ku-u-ru-ra-aš ku-[iš-]ki DINGIR-LIM i-ya-an ḫar-zi"
+],
+[
+"C",
+"Vs. II 19'",
+"na-at ma-a-an ku-u-ru-ra-aš ⸢x-x⸣ ku-iš-ki DINGIR-LUM i-ya-an ḫar-zi"
+]
+],
+"tr": "und wenn es irgendeine feindliche Gottheit gemacht hat,",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§1",
+"hl": "",
+"master": "nu kiššan iyami",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 19",
+"nu ki-iš-ša-an i-ya-mi ¬¬¬"
+],
+[
+"B",
+"Vs. II 45",
+"nu ki-iš-ša-an i-ya-mi ¬¬¬"
+],
+[
+"C",
+"Vs. II 20'",
+"nu ki-iš-ša-an i-[ya-mi] ¬¬¬"
+]
+],
+"tr": "dann handle ich folgendermaßen:",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§2",
+"hl": "",
+"master": "1 UDU.NÍTA unniyanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 20",
+"1 UDU.NÍTA u-ni-ya-an-zi"
+],
+[
+"B",
+"Vs. II 46",
+"⸢2?⸣ UDU.NÍTA u-un-ni-ya-an-zi"
+],
+[
+"C",
+"Vs. II 21'",
+"1 UDU.NÍTA u-un-ni-ya-an-zi"
+]
+],
+"tr": "1 Widder treibt man herbei.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§2",
+"hl": "",
+"master": "nu SÍG ZA.GÌN SÍG SA5 SÍG SIG7.SIG7 SÍG GE6 SÍG BABBAR=ya anda tarnanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 20",
+"nu SÍG ZA.GÌN SÍG SA5 SÍG SIG7.SIG7 SÍG GE6 SÍG BABBAR-ya an-da tar-na-an-zi"
+],
+[
+"B",
+"Vs. II 46",
+"nu SÍG ZA.GÌN SÍG SA5 [SÍ]G SIG7.SIG7 SÍG GE6 SÍG BABBAR-ya an-da tar-na-an-z[i]"
+],
+[
+"C",
+"Vs. II 21'",
+"nu SÍG ZA.GÌN SÍG SA5 SÍG [ … ] SÍG GE6 SÍG BABBAR-ya an-da tar-na-an-zi"
+]
+],
+"tr": "Blaue Wolle, rote Wolle, grüne Wolle, schwarze Wolle und weiße Wolle flechtet man ineinander.",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§2",
+"hl": "",
+"master": "n=at {SÍG}KILĪLU iyanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 21",
+"na-at {SÍG}KI-I-LI-LU1 i-ya-an-zi"
+],
+[
+"B",
+"Vs. II 48",
+"[na-a]t {SÍG}KI-LU-LI i-ya-an-zi"
+],
+[
+"C",
+"Vs. II 22'",
+"na-at x[ … ] i-ya-an-⸢zi⸣"
+]
+],
+"tr": "Und macht es (zu) einem Wollkranz.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§2",
+"hl": "",
+"master": "nu 1 UDU.NÍTA ḫaršanalanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 22",
+"nu 1 UDU.NÍTA ḫar-ša-na-la-an-zi"
+],
+[
+"B",
+"Vs. II 48",
+"nu 1 UDU.NÍTA [ḫar-š]a-na-la-an-zi"
+],
+[
+"C",
+"Vs. II 23'",
+"nu 1 UDU.NÍTA ḫar-ša-na-al-l[a-an-zi]"
+]
+],
+"tr": "Und 1 Widder bekränzt man.",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§2",
+"hl": "",
+"master": "nu UDU.NÍTA ANA KASKAL {LÚ}KÚR parā penniyanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 22",
+"nu UDU.NÍTA A-NA KASKAL {LÚ}KÚR pa-ra-a pé-en-ni-ya-an-zi"
+],
+[
+"B",
+"Vs. II 49",
+"nu 1 UDU.NÍTA A-NA KASKAL {LÚ}KÚR pa-[ra-a] [pé-en-n]i-ya-an-zi"
+],
+[
+"C",
+"Vs. II 23'",
+"[ … ] ⸢A-NA⸣ [ … ] x ⸢pa⸣-ra-a pé-⸢en-ni-ya⸢-[an]-⸢zi⸣ [ … ] (Vs. II bricht ab.)"
+]
+],
+"tr": "Und den Widder treibt man auf die Straße des Feindes hinaus.",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§2",
+"hl": "",
+"master": "nu=šši=kan anda kiššan memanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 24",
+"nu-uš-ši-kán an-da ki-iš-[š]a-an me-ma-an-zi"
+],
+[
+"B",
+"Vs. II 50",
+"nu-uš-ši-kán an-da ki-⸢iš⸣-š[a-an] [me-ma-an]-zi"
+]
+],
+"tr": "Und dabei sagt man ihm folgendermaßen:",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§2",
+"hl": "",
+"master": "kuiš=wa DINGIR-LUM KUR {LÚ}KÚR kī ÚŠ-an iyan ḫarzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 24",
+"ku-iš-wa DINGIR-LUM KUR {LÚ}KÚR ki-i ÚŠ-an i-[i]a-an ḫar-zi"
+],
+[
+"B",
+"Vs. II 51",
+"ku-iš-wa DINGIR-LIM ŠA KUR {LÚ}KÚR [ki-i ḫi-in]-kán ⸢i-ya-an ḫar-zi⸣"
+]
+],
+"tr": "„Welche Gottheit des Feindeslandes diese Seuche gemacht hat,",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§2",
+"hl": "",
+"master": "nu kāša kūn UDU.NÍTA ḫaršanallandan tuk ANA DINGIR-LIM takšulanni ūnnummen",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 25",
+"nu ka-a-ša ku-u-un UDU.NÍTA ḫar-ša-na-al-la-an-t[a]-an tu-uk A-NA DINGIR-LIM ták-šu-la-an-ni u-un-nu-um-me-en"
+],
+[
+"B",
+"Vs. II 52",
+"nu ka-a-ša [ku-u-un UD]U.NÍTA ḫar-ša-na-al-la-an-da-an tu-uk A[-NA DINGIR-LIM] [ták-šu-la]-an-ni u-un-nu-um-mi-in"
+]
+],
+"tr": "diesen bekränzten Widder haben wir jetzt dir, der Gottheit, zum Frieden her getrieben.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§2",
+"hl": "",
+"master": "nu KÉŠ maḫḫan daššuwanza",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 27",
+"nu KÉŠ ma-aḫ-ḫa-an da-aš-šu-wa-an-za"
+],
+[
+"B",
+"Vs. II 54",
+"nu BÀD ma-aḫ-ḫa-a[n] [da-aš-šu]-wa-an-za"
+]
+],
+"tr": "Und wie die Herde/Befestigung1 stark ist",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§2",
+"hl": "",
+"master": "kēdani=ya ANA UDU.NÍTA menaḫḫanda takšulāizzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 28",
+"ke-e-da-ni-ya A-NA UDU.NÍTA me-na-aḫ-ḫa-an-da ták-šu-la-a-iz-zi"
+],
+[
+"B",
+"Vs. II 55",
+"ke-e-da-ni-ya A-NA UDU.NÍTA [me-na-aḫ-ḫa]-an-da ták-šu-la-iz-zi"
+]
+],
+"tr": "und (dennoch) mit diesem Widder Frieden schließt,",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§2",
+"hl": "",
+"master": "zig=ma kuiš DINGIR-LUM kī ḫenkan iyan ḫarti",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 29",
+"zi-ik-ka4 ku-iš DINGIR-LUM ki-i ḫe-en-kán i-ya-an ḫar-ti"
+],
+[
+"B",
+"Vs. II 56",
+"zi-ik-ma ku-iš DINGIR-LIM [ki-i ḫi-i]n-ga-an i-ya-an ḫar-ti"
+]
+],
+"tr": "sollst du aber, Gottheit, die du diese Pest gemacht hat,",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§2",
+"hl": "",
+"master": "nu ANA KUR {URU}KÙ.BABBAR-ti menaḫḫanda QĀTAMMA takšulāi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 30",
+"nu A-NA KUR {URU}KÙ.BABBAR-ti me-na-aḫ-ḫa-an-da QA-TAM-MA ták-šu-la-a-i"
+],
+[
+"B",
+"Vs. II 57",
+"nu A-NA KUR {URU}Ḫa-at-ti [me-na-aḫ-ḫa]-an-da QA-TAM-MA ták-šu-la-a-i"
+]
+],
+"tr": "mit dem Lande Ḫatti ebenso Frieden schließen.",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§2",
+"hl": "",
+"master": "nu=ššan KUR {URU}Ḫatti aššuli anda namma nāišḫut",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 31",
+"nu-uš-ša-an KUR {URU}Ḫa-at-ti aš-šu-li an-da nam-ma na-a-iš-ḫu-ut"
+],
+[
+"B",
+"Vs. II 59",
+"[nu-uš-š]a-an A-NA KUR {URU}Ḫa-at-ti a-aš-⸢šu⸣-li an-da nam-ma [na-a-i]š-ḫu-ut"
+]
+],
+"tr": "Wende dich dem Land Hatti wieder im Guten zu.“",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§2",
+"hl": "",
+"master": "nu 1 UDU ḫaršannalantan INA KUR {LÚ}KÚR arḫa pennanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 32",
+"nu 1 UDU ḫar-ša-an-na-la-an-ta-an I-NA KUR {LÚ}KÚR ar-ḫa pé-en-na-an-zi ¬¬¬"
+],
+[
+"B",
+"Vs. II 60",
+"nu 1-EN UDU ḫar-ša-na-al-la-an-ta-an [I-NA KUR] {LÚ}KÚR ar-ḫa pé-en-na-an-zi ¬¬¬"
+]
+],
+"tr": "Und das 1 bekränzte Schaf treibt man in das Land des Feindes weg.",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§3",
+"hl": "",
+"master": "nu EGIR-anda ANA ANŠE.KUR.RA{MEŠ} DINGIR-LIM ŠÀ.GAL{ḪI.A} {UZU}Ì.UDU=ya udanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 34",
+"nu EGIR-an-da A-NA ANŠE.KUR.RA{MEŠ} DINGIR-LIM ŠÀ.GAL{ḪI.A} {UZU}Ì.UDU-ya ú-da-an-zi"
+],
+[
+"B",
+"Vs. II 62",
+"[nu EGI]R-an-⸢da⸣ A-⸢NA⸣ ANŠE.KUR.RA{MEŠ} DINGIR-LIM ŠÀ.GAL.{ḪI.A} [{U]}ZUÌ.UDU-ya ⸢ú⸣-da-an-zi"
+]
+],
+"tr": "Und anschließend bringt man für die Pferde der Gottheit Futter und Schaffett her.",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§3",
+"hl": "",
+"master": "nu=ššan anda kiššan memanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 35",
+"nu-uš-ša-an an-da ki-iš-ša-an me-ma-an-zi"
+],
+[
+"B",
+"Vs. II 63",
+"nu-uš-ša-an an-da GK ki-iš-ša-an me-ma-an-[zi] ==="
+]
+],
+"tr": "Und dabei spricht man folgendermaßen:",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§3",
+"hl": "",
+"master": "ANŠE.KUR.RA{MEŠ}=wa tūriyan ḫarti",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 36",
+"ANŠE.KUR.RA{MEŠ}-wa tu-u-ri-ya-an ḫar-ti"
+],
+[
+"B",
+"Rs. III 1",
+"⸢ANŠE.KUR.RA{MEŠ}-wa tu-u-ri-ya-an⸣ [ḫar-ti]"
+]
+],
+"tr": "„Du hast die Pferde angeschirrt.",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§3",
+"hl": "",
+"master": "nu=wa kī ŠÀ.GAL{ḪI.A} ēzzandu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 36",
+"nu-wa ki-i ŠÀ.GAL{ḪI.A} e-ez!2-za-an-du"
+],
+[
+"B",
+"Rs. III 2",
+"nu-wa ki-i ŠÀ.GAL{ḪI.A} e-ez-za-an-⸢du⸣"
+]
+],
+"tr": "Und dieses Futter sollen sie fressen!",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§3",
+"hl": "",
+"master": "nu=war=at išpiyanteš ašandu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 37",
+"nu-wa-ra-at iš-pí-ya-an-te-eš a-ša-an-du"
+],
+[
+"B",
+"Rs. III 3",
+"nu-wa-ra-at iš-pí-ya-an-te-eš a-ša-⸢an-du⸣"
+]
+],
+"tr": "Und sie sollen gesättigt sein!",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§3",
+"hl": "",
+"master": "{GIŠ}GIGIR=ya=wa=ta=kkan IŠTU Ì.UDU iškiyan ešdu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 38",
+"{GIŠ}GIGIR-ya-wa-ták-kán IŠ-TU Ì.UDU iš-ki-⸢ya⸣-an e-eš-du"
+],
+[
+"B",
+"Rs. III 4",
+"{GIŠ}GIGIR-ya-wa-ták-kán IŠ-TU {UZU}Ì.UDU iš-ki-ya-an e-eš-du"
+]
+],
+"tr": "Und dein Wagen soll mit Schaffett beschmiert sein!",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§3",
+"hl": "",
+"master": "nu=za=kan DINGIR-LUM {D}IM=wa KUR=KA andan naišḫut",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 39",
+"nu-za-kán DINGIR-LUM {D}IM-wa KUR-KA an-da-⸢na⸣? na-iš-ḫu-ut"
+],
+[
+"B",
+"Rs. III 5",
+"nu-za-kán DINGIR-LUM {D}IM3 I-NA KUR-KA an-da-an na-iš-ḫu-ut"
+]
+],
+"tr": "Gottheit, Wettergott, wende dich deinem Land zu!",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§3",
+"hl": "",
+"master": "INA KUR {URU}Ḫatti=ma=wa=kan anda aššuli nāišḫut",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 40",
+"I-NA KUR {URU}Ḫa-at-ti-ma-wa-kán an-da aš-šu-li na-iš-ḫu-ut ¬¬¬"
+],
+[
+"B",
+"Rs. III 6",
+"I-NA KUR {URU}Ḫa-at-ti-ma-wa-kán an-da aš-šu-li na-a-iš-ḫu-ut ¬¬¬"
+]
+],
+"tr": "Wende dich dem Land Ḫatti auch2 im Guten zu!“",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§4",
+"hl": "",
+"master": "EGIR-anda=ma 1 MÁŠ.GAL 2 UDU{ḪI.A} ūnnanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 42",
+"EGIR-an-da-ma 1 MÁŠ.GAL 2 UDU{ḪI.A} ku-en-ni-ya-an-za4"
+],
+[
+"B",
+"Rs. III 8",
+"EGIR-an-da-ma 1 MÁŠ.GAL 2 UDU{ḪI.A} u-un-na-an-zi"
+]
+],
+"tr": "Anschließend aber treibt man einen Ziegenbock (und) 2 Schafe herbei.",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§4",
+"hl": "",
+"master": "nu=kan MÁŠ.GAL {D}INIM.INIM.BI šipanti",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 43",
+"nu-kán MÁŠ.GAL {D}IMIN.IMIN.BI ši-pa-an-ti"
+],
+[
+"B",
+"Rs. III 9",
+"nu-kán MÁŠ.GAL {D}IMIN.IMIN.BI ši-pa-an-ti"
+]
+],
+"tr": "Und den Ziegenbock opfert er der Siebengottheit,",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§4",
+"hl": "",
+"master": "1 UDU=ma=kan {D}UTU-i šipanti",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. III 9",
+"1 UDU-ma-kán {D}UTU-i ši-pa-an-ti"
+]
+],
+"tr": "1 Schaf aber opfert er der Sonnengottheit",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§4",
+"hl": "",
+"master": "1 UDU=ma=kan kunanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 43",
+"1 UDU-ma-kán ku-na-an-zi"
+],
+[
+"B",
+"Rs. III 10",
+"1 UDU-ma-kán ku-na-an-zi"
+]
+],
+"tr": "und 1 Schaf schlachtet man",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§4",
+"hl": "",
+"master": "n=an zanuwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 44",
+"na-an za-nu-wa-an-zi"
+],
+[
+"B",
+"Rs. III 10",
+"na-an za-nu-wa-an-zi"
+]
+],
+"tr": "und kocht es.",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§4",
+"hl": "",
+"master": "namma 1 GA.KIN.AG 1 EMṢU 1 {DUG}pullan NINDA EMṢU 1 {DUG}ḫūppar GEŠTIN 1 {DUG}ḫūppar KAŠ {GIŠ}INBI{ḪI.A} udanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 44",
+"nam-ma 1 GA.<1>KIN.AG 1 EM-ṢÚ 1 {DUG}pu-ul-la-an NINDA EM-ṢÚ 1 {DUG}ḫu-u-up-pár GEŠTIN 1 {DUG}ḫu-up-pár KAŠ {GIŠ}IN-BI{ḪI.A} ú-da-an-zi"
+],
+[
+"B",
+"Rs. III 11",
+"nam-ma 1 GA.KIN.AG 1 EM-ṢÚ 1 {DUG}pu-ul-la-an NINDA EM-ṢÚ 1 {DUG}ḫu-u-up-pár GEŠTIN 1 {DUG}ḫu-u-up-pár KAŠ {GIŠ}IN-BI{ḪI.A} ú-da-[an-zi]"
+],
+[
+"D",
+"Vs. II 1'",
+"ú-[da-an-zi]"
+]
+],
+"tr": "Ferner bringt man 1 Käse, 1 Lab, 1 pulla-Gefäß saures Brot, 1 ḫuppar-Gefäß Wein, 1 ḫuppar-Gefäß Bier (und) Früchte herbei.",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§4",
+"hl": "",
+"master": "n=at ANA DINGIR-LIM ŠA KASKAL-NIM iyanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 47",
+"na-at A-NA DINGIR-LIM ŠA KASKAL-NIM i-ya-an-z[i] ==="
+],
+[
+"B",
+"Rs. III 13",
+"na-at A-NA DINGIR-LIM ŠA KASKAL-NIM i-ya-an-z[i] ==="
+],
+[
+"D",
+"Vs. II 1'",
+"[ … ] ==="
+]
+],
+"tr": "Und man bereitet es für die Gottheit des Weges.",
+"trlang": "DE"
+}
+],
+"notes": {
+"§2:1": "Die Zeichen -li-lu stehen über Rasur.",
+"§2:T1": "Vgl. zu einer Lesung KÉŠ (das Zeichen SÌR – HZL 106) Trabazo 2002, 470f. mit Anm. 19; Collins 1997, 162, liest „fortress“ und damit das Zeichen BÀD.",
+"§3:2": "Das Zeichen ist ku.",
+"§3:3": "Es folgt eine Rasur, unter der eventuell -wa zu erkennen sein könnte.",
+"§3:T2": "Siehe zu dieser kontrastierenden Funktion von -a/-ma Hoffner – Melchert 2008, 395-399.",
+"§4:4": "Nach HED 4, 211, ist das eine korrupte Form und keine Form eines Partizips von kuen- „töten“.",
+"T1": "Vgl. zu einer Lesung KÉŠ (das Zeichen SÌR – HZL 106) Trabazo 2002, 470f. mit Anm. 19; Collins 1997, 162, liest „fortress“ und damit das Zeichen BÀD.",
+"T2": "Siehe zu dieser kontrastierenden Funktion von -a/-ma Hoffner – Melchert 2008, 395-399."
+}
+}

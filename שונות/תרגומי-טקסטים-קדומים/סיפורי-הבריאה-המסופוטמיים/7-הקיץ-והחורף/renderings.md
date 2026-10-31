@@ -128,7 +128,7 @@ The project's own terms (guidelines §6.6); the corpus `../renderings.md` (§0�
 | *a₂ aĝ₂* | צוה | [equivalent] ↔ בראשית ב:טז | §6.2. | 201, 217 |
 | *ma₂-la₂* | ספינת־משא | | | 205 |
 | *lu₂-gi-ze*; *bar-ḫu-da*; *ze₂*; *dar* | תולש־הקנים; ברחודה; תלש; ביקע | | | 162, 208 |
-| *šidim*; *uĝ₃-il₂*; *baḫar₂*; *uš-bar*; *muḫaldim* | בנאי; סבל; קדר; אורג; טבח | [equivalent] ↔ מלכים א ה:כט; שמואל א ח:יג | *baḫar₂* never `יוֹצֵר` (reserved). | 209–214 |
+| *šidim*; *uĝ₃-il₂*; *baḫar₂*; *uš-bar*; *muḫaldim* | בנאי; סבל; קדר; אורג; מבשל (2026-10-30 harmonization, was טבח) | [equivalent] ↔ מלכים א ה:כט; שמואל א ח:יג | *baḫar₂* never `יוֹצֵר` (reserved). | 209–214 |
 | *e-sir₂* | נעליים / רחוב by sense | | | 215, 274 |
 | *niĝ₂-gur₁₁* | רכוש | | G&S. | 218 |
 | *lugal* (owner) | בעלים | | | 219 |
@@ -161,3 +161,5 @@ The project's own terms (guidelines §6.6); the corpus `../renderings.md` (§0�
 | *gam*; *u₃-gul ĝar* | כרע; שָׂם בקשה | [equivalent] ↔ בראשית לג:ג | §9.4; Enmerkar. | 310 |
 | *bal* (of a liquid) | נסך | [equivalent] ↔ במדבר כח:ז | elsewhere *bal* = `הָפַךְ`. | 314 |
 | *teš₂-bi*; *dug₃* (verb) | יחדיו; טוב (להם) / היטיב | [equivalent] ↔ תהלים קלג:א | | 286, 303, 315; 246, 251, 315 |
+
+- **2026-10-30 harmonization** (`../../harmonization--2026-10-30.md`, row 4): *muḫaldim* = `מְבַשֵּׁל` (was `טבח`; `טַבָּח` is *ṭabāḫu*'s): 213 `טבח – לחם המשתאות הגדולים` → `מבשל – לחם המשתאות הגדולים` (gloss, note, project.md's parallels row 213).

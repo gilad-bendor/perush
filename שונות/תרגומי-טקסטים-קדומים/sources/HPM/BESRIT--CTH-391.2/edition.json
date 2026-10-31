@@ -1,0 +1,463 @@
+{
+"kind": "BESRIT",
+"cth": "CTH 391.2",
+"citation": "B. Christiansen (ed.), hethiter.net/: CTH 391.2 (TX 07.02.2017, TRde 07.02.2017)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+},
+{
+"id": "§ 5'",
+"title": "§ 5'",
+"hl": ""
+},
+{
+"id": "§ 6'",
+"title": "§ 6'",
+"hl": ""
+},
+{
+"id": "§ 7'",
+"title": "§ 7'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "papratar [:mulātar] SUD-ru",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 1'",
+"⸢pa-ap-ra-tar⸣ [:mu-la-a-tar]1 SUD-ru"
+]
+],
+"tr": "„Unreinheit [und mulātar] möge gezogen sein,",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "IGI{ḪI.A}-waza SUD-[r]u",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 2'",
+"IGI{ḪI.A}-wa-za ⸢SUD⸣-[r]u"
+]
+],
+"tr": "aus den Augen möge (sie) gezogen sein,",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "ŠU{ME[}Š-za] SUD-ru",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 2'",
+"⸢ŠU⸣{ME[}Š-za] SUD-ru"
+]
+],
+"tr": "[aus] den Händen möge (sie) gezogen sein,",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "9-za {UZU}ÚR-za SUD-ru",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 3'",
+"9-za {UZU}ÚR-za SUD-ru"
+]
+],
+"tr": "aus den 9 Körperteilen möge (sie) gezogen sein!",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=at ḪUL-uwaš UN{MEŠ}-aš ḫarpanall[iyaš peški]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 4'",
+"na-at ḪUL-u-wa-aš UN{MEŠ}-aš ḫar-pa-na-al-l[i-ia-aš2 pé-eš-ki3] ¬¬¬"
+]
+],
+"tr": "Und [gib] sie den bösen Menschen, den Feind[en]!“",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "EGIR=ŠU=kan GADA anda QĀTAMMA ḫamakzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5'",
+"EGIR-ŠÚ-kán GADA an-da QA-TAM-MA ḫa-⸢ma⸣-ak-zi"
+]
+],
+"tr": "Danach bindet sie ebenso ein Leinentuch an",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu tezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 6'",
+"nu te-ez-zi4"
+]
+],
+"tr": "und spricht:",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "GADA GIM-an {LÚ.MEŠ}ŠÀ.TAM tannarantan KIN-zi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 6'",
+"GADA GIM-an {LÚ.MEŠ}ŠÀ.TAM ta-an-na-ra-an-tanX KIN-zi"
+]
+],
+"tr": "„Wie die Kämmerer das Leinentuch säubern",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=šši=kan :mariḫšin arḫa parkunuzzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 7'",
+"nu-uš-ši-kán :ma-ri-iḫ-ši-in ar-ḫa pár-ku-<nu>-uz-zi"
+],
+[
+"C",
+"Vs.? x+1",
+"[ … m]a-⸢ri-iḫ-ši-in⸣ [ … ]"
+]
+],
+"tr": "und von ihm die Fusseln entfernen,",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=at ḫarkēšzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 9'",
+"na-at ḫar-ke-e-eš-zi ¬¬¬"
+],
+[
+"C",
+"Vs.? 2'",
+"[ … ḫar-ke-e-eš-]zi ¬¬¬"
+]
+],
+"tr": "und es weiß wird,",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3'",
+"hl": "",
+"master": "ḪUL-uwašš=a UN{MEŠ}-aš ANZELLU ḫurkilaza paprannaza mulatnaza [_] NÍ.TE LUGAL QĀTAMMA parkuešdu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 10'",
+"ḪUL-u-wa-aš-ša UN{MEŠ}-aš AN-ZE-EL-LU ḫur-ki-la-za pa-ap-ra-an-na-za5 mu-la-at-na-za [ _ ] NÍ.TE LUGAL QA-TAM-MA pár-ku-eš-du ==="
+],
+[
+"C",
+"Vs.? 3'",
+"[ḪUL-u-wa-aš-š]a UN{MEŠ}-aš AN-Z[E-EL-LU] [ … ] ⸢pa⸣-ap-ra-na-za :mu-[la-at-na-za] [ … NÍ.TE LUGA]L QA-TAM-MA pár-⸢ku⸣-[ … ] ¬¬¬"
+]
+],
+"tr": "so möge von Tabubruch, von sexueller Greuel, von Unreinheit, von mulātar böser Menschen der Körper des Königs ebenso rein sein!“",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 4'",
+"hl": "",
+"master": "EGIR=ŠU=ma=kan {GIŠ}ḫattalu tarzuwan {GI}paddāni dāi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1",
+"EGIR-ŠÚ-ma-kán {GIŠ}ḫa-at-ta-lu tar-zu-wa-an {GI}pád-da-a-ni da-a-i"
+],
+[
+"C",
+"Vs.? 6'",
+"[ … ] {GIŠ}ḫ[a … ] [ … ] x [ … ]"
+]
+],
+"tr": "Danach aber legt sie einen Querbalkenriegel (und) einen Sicherungsriegel in einen Korb.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 4'",
+"hl": "",
+"master": "n=at LUGAL-i šer arḫa BAL-zi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 2",
+"na-at LUGAL-i še-er ar-ḫa BAL-zi"
+]
+],
+"tr": "Und sie schwenkt ihn über dem König hinweg",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 4'",
+"hl": "",
+"master": "nu tezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3",
+"nu te-ez-zi ¬¬¬"
+]
+],
+"tr": "und spricht:",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 5'",
+"hl": "",
+"master": "{D}Zarnizaš {D}Tarpaddaššiš {D}Alāuwaimiš {D}Mammāimiš DINGIR{MEŠ}.LÚ{MEŠ} {GIŠ}ḫattalwanza GIM-an {GIŠ}SAG.KUL EGIR-pa nannāi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4",
+"{D}Za-ar-ni-za-aš {D}Tar-pa-ad-da-aš-ši-iš {D}A-la-a-ú-wa-i-mi-iš {D}Ma-am-ma-a-i-mi-iš DINGIR{MEŠ}.LÚ{MEŠ} {GIŠ}ḫa-at-tal-wa-an-za GIM-an {GIŠ}SAG.KUL EGIR-pa na-an-na-a-i"
+],
+[
+"B16",
+"r.Kol. 1'",
+"{D}A-la-u-wa-i-mi-iš {D}Ma-a[m-… ] DINGIR{MEŠ}.LÚ{MEŠ} {GIŠ}ḫa-at-tal-wa-za [ … ] {GIŠ}SAG.KUL EGIR-pa na-an-⸢na-a⸣[-i]"
+]
+],
+"tr": "„Zarniza, Tarpatassa, Alauwaima, Mamma, ihr männlichen Götter: Wie der Querbalkenriegel den Sicherungsriegel zurücklenkt",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 5'",
+"hl": "",
+"master": "{GIŠ}IG=ia EGIR-pa ḫēškizzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 8",
+"{GIŠ}IG-ya EGIR-pa ḫé-eš-ki-iz-zi"
+],
+[
+"B1",
+"r.Kol. 4'",
+"{GIŠ}IG-ya EGIR-pa ḫé-e[š-ki-iz-zi]"
+]
+],
+"tr": "und die Tür somit öffnet,",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 5'",
+"hl": "",
+"master": "LUGAL-i=ya ḪUL-uwaš UN{MEŠ} ANZELLU ḫurkil papratar :mulātar QĀTAMMA arḫa araiddu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 9",
+"LUGAL-i-ia ḪUL-u-wa-aš UN{MEŠ} AN-ZE-EL-LU ḫur-ki-il pa-ap-ra-tar :mu-la-a-tar QA-TAM-MA ar-ḫa a-ra-id-du ¬¬¬"
+],
+[
+"B1+2",
+"r.Kol. 5'",
+"LUGAL-i-ia ḪUL-u-wa-aš [ … ] AN-ZE-EL-LU ḫur-ke-el [… ] :mu-u-la-tar QA-TAM-MA a[r-ḫa … ] ¬¬¬"
+]
+],
+"tr": "so soll er von dem König Tabubruch, sexuelle Greuel, Unreinheit, mulātar böser Menschen ebenso zurückhalten.“",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 6'",
+"hl": "",
+"master": "EGIR=ŠU=kan {MUNUS}ŠU.GI NA[GGA tepu] {SÍG}ištaggai anda ḫ[ūlaliyezzi]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 12",
+"[ … ] x [ … ]"
+],
+[
+"B2",
+"r.Kol. 8'",
+"EGIR-⸢ŠÚ⸣-kán {MUNUS}ŠU.GI NA[GGA te-pu] {SÍG}iš-tág-ga-i an-da ḫ[u-u-la-li-i-e-ez-zi]7"
+]
+],
+"tr": "Anschließend w[ickelt] die Beschwörerin in eine Bogensehne [ein wenig Zi]nn hinein.1",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 6'",
+"hl": "",
+"master": "n=at LUGAL ZAG-ni ŠU=[ŠU GÌR=ŠU] anda ḫamanzi",
+"words": [],
+"mss": [
+[
+"B2",
+"r.Kol. 10'",
+"na-at LUGAL ZAG-ni ŠU-[ŠU GÌR-ŠU] an-da ḫa-ma-an-zi"
+]
+],
+"tr": "Man bindet es dem König rechts an [seine] Hände [und Füße.]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 6'",
+"hl": "",
+"master": "na[mma=at=ši=kan] arḫa dāi",
+"words": [],
+"mss": [
+[
+"B2",
+"r.Kol. 11'",
+"na[m-ma-at-ši-kán] ⸢ar⸣-ḫa da-a-i"
+]
+],
+"tr": "Da[nn] nimmt sie [es ihm] weg",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 6'",
+"hl": "",
+"master": "n=at=kan [ANA PÉŠ.TUR] dāi",
+"words": [],
+"mss": [
+[
+"B2",
+"r.Kol. 12'",
+"na-at-kán [A-NA PÉŠ.TUR] ⸢da⸣-a-i"
+]
+],
+"tr": "und legt es [auf eine Maus.]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 6'",
+"hl": "",
+"master": "nu tezzi",
+"words": [],
+"mss": [
+[
+"B2",
+"r.Kol. 13'",
+"nu te-ez-zi ¬¬¬"
+]
+],
+"tr": "Sie spricht.",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 7'",
+"hl": "",
+"master": "[ … ] … [ … ]",
+"words": [],
+"mss": [
+[
+"B2",
+"r.Kol. 14'",
+"[ … ]x[ … ]"
+]
+],
+"tr": "[ … ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Erg. nach Rs. III 10.",
+"§ 1':2": "Erg. nach CTH 391.1 A Vs. I 22.",
+"§ 1':3": "Erg. nach CTH 391.1 A Vs. II 22.",
+"§ 2':4": "Vor nu befindet sich ein eradiertes Zeichen.",
+"§ 3':5": "Es folgen drei eradierte Zeichen.",
+"§ 5':6": "Die weiteren Zeichen der linken Kolumnen stellen einen weiteren Textteil dar, der sich in Text A nicht erhalten hat.",
+"§ 6':7": "Siehe zur Ergänzung der folgenden Kola CTH 391.1 Kola 80ff. und Christiansen B. 2006a, 168.",
+"§ 6':T1": "Vgl. dazu CTH 391.1 Vs. I 34 (Kolon 34).",
+"T1": "Vgl. dazu CTH 391.1 Vs. I 34 (Kolon 34)."
+}
+}

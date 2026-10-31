@@ -1,0 +1,446 @@
+{
+"kind": "CHIL",
+"citation": "Giulia Torri, Livio Warbinek, Antonio Carnevale (ed.), hethiter.net/: CTH 291.5 (TX 2026-08-30; TRen 2025-10-22)",
+"sections": [
+{
+"id": "28",
+"title": "Section 1: Separazione dei coniugi (HL 26b e 26c)",
+"hl": "26b e 26c"
+},
+{
+"id": "29",
+"title": "Section 2: Morte della moglie (HL 27)",
+"hl": "27"
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "takku=z(a) MUNUS-za LÚ-an m[immai]",
+"words": [
+[
+"takku=z(a)",
+"wenn:CNJ=REFL",
+"Ⓐ takku"
+],
+[
+"MUNUS-za",
+"Frau:NOM.SG.C",
+"MUNUS"
+],
+[
+"LÚ-an",
+"Mann:ACC.SG.C",
+"LÚ"
+],
+[
+"m[immai]",
+"weigern:3SG.PRS",
+"mimm=a-"
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 1′",
+"ták-ku-za MUNUS-za ⸢LÚ-an⸣ m[i-im-ma-i"
+]
+],
+"tr": "Se una donna rif[iuta] un uomo",
+"trlang": "IT"
+},
+{
+"n": "2",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "[ … ] pāi",
+"words": [
+[
+"[ … ]",
+"",
+""
+],
+[
+"pāi",
+"geben:3SG.PRS",
+"pai-/pe-/piya-"
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 1′",
+"pa-a-i"
+]
+],
+"tr": "darà […",
+"trlang": "IT"
+},
+{
+"n": "3",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "Ù ŠA NUMUN{ḪI.A}-aš k[uššan …]",
+"words": [
+[
+"Ù",
+"und:CNJadd",
+"U"
+],
+[
+"ŠA NUMUN{ḪI.A}-aš",
+"Samen:GEN.PL",
+"NUMUN"
+],
+[
+"k[uššan",
+"Sold:ACC.SG.N",
+"kušš=an-"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 2′",
+"Ù ŠA NUMUN{ḪI.A}-aš k[u-uš-ša-an"
+]
+],
+"tr": "e il co[mpenso] della prole […]",
+"trlang": "IT"
+},
+{
+"n": "4",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "Ù DUMU{MEŠ} LÚ=pat […]",
+"words": [
+[
+"Ù",
+"und:CNJadd",
+"U"
+],
+[
+"DUMU{MEŠ}",
+"Kind:ACC.PL(UNM)",
+"DUMU"
+],
+[
+"LÚ=pat",
+"Mann:NOM.SG(UNM)=FOC",
+"Ⓐ LÚ"
+],
+[
+"[…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 3′",
+"Ù DUMU{MEŠ} LÚ-pát ["
+]
+],
+"tr": "e proprio l'uomo […] i figli.",
+"trlang": "IT"
+},
+{
+"n": "5",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "takku=z(a) LÚ-ša MUNUS-an šuw[aezzi …]",
+"words": [
+[
+"takku=z(a)",
+"wenn:CNJ=REFL",
+"Ⓐ takku"
+],
+[
+"LÚ-ša",
+"Mann:NOM.SG(UNM)=CNJctr",
+"LÚ"
+],
+[
+"MUNUS-an",
+"Frau:ACC.SG.C",
+"MUNUS"
+],
+[
+"šuw[aezzi",
+"(an)schauen:3SG.PRS",
+"šuw=aye/a-"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 4′",
+"ták-ku-za LÚ-ša MUNUS-an šu-ú-[wa-ez-zi"
+]
+],
+"tr": "Ma se un uomo resp[inge] la donna […]",
+"trlang": "IT"
+},
+{
+"n": "6",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "n=an ḫapraezzi",
+"words": [
+[
+"n=an",
+"CONNn=PPRO.3SG.C.ACC",
+"n=an"
+],
+[
+"ḫapraezzi",
+"Handel treiben:3SG.PRS",
+"ḫapr=ā(e)-"
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 5′",
+"na-an ḫa-ap-ra-ez-zi"
+]
+],
+"tr": "e la vende",
+"trlang": "IT"
+},
+{
+"n": "7",
+"sec": "28",
+"hl": "26b e 26c",
+"master": "w[ā- …]",
+"words": [
+[
+"w[ā-",
+"",
+""
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 5′",
+"w[a-"
+]
+],
+"tr": "[…]",
+"trlang": "IT"
+},
+{
+"n": "8",
+"sec": "29",
+"hl": "27",
+"master": "takku LÚ-aš DAM-SÚ dāi",
+"words": [
+[
+"takku",
+"wenn:CNJ",
+"takku"
+],
+[
+"LÚ-aš",
+"Mann:NOM.SG.C",
+"LÚ"
+],
+[
+"DAM-SÚ",
+"Ehefrau:ACC.SG(UNM)_DEM2/3.GEN.SG",
+"DAM-SÚ"
+],
+[
+"dāi",
+"nehmen:3SG.PRS",
+"dā-/d-"
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 6′",
+"ták-ku LÚ-aš DAM-SÚ da-a-i"
+]
+],
+"tr": "Se un uomo prende sua moglie",
+"trlang": "IT"
+},
+{
+"n": "9",
+"sec": "29",
+"hl": "27",
+"master": "[…] iwāru-〈šeta〉-az anda pēd[ai …]",
+"words": [
+[
+"[…]",
+"",
+""
+],
+[
+"iwāru-〈šeta〉-az",
+"Erbschaft:ACC.SG.N;Erbschaft:POSS.3SG.ACC;Erbschaft:REFL",
+"iwar=u-"
+],
+[
+"anda",
+"hinein-:PREV",
+"anda"
+],
+[
+"pēd[ai",
+"hinschaffen:3SG.PRS",
+"ped=a-"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 6′",
+"[ i-w[a]-a-ru-〈še-ta〉-az an-da pé-e-d[a-i"
+]
+],
+"tr": "[…port]erà dentro (la casa) la sua d[ote per sé]",
+"trlang": "IT"
+},
+{
+"n": "10",
+"sec": "29",
+"hl": "27",
+"master": "LÚ-naš āššu=〈še〉-et wa[rnuanzi]",
+"words": [
+[
+"LÚ-naš",
+"Mann:GEN.SG",
+"LÚ-n"
+],
+[
+"āššu=〈še〉-et",
+"gut:ACC.PL.N=POSS.3SG.ACC.SG.N",
+"⓷Ⓐ ašš=u-"
+],
+[
+"wa[rnuanzi]",
+"verbrennen:3PL.PRS",
+"war=nu-"
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 8′",
+"LÚ-na-aš a-aš-šu-〈še〉-et wa-a[r-nu-an-zi"
+]
+],
+"tr": "[…] si bruce[ranno] i suoi beni, dell’uomo,",
+"trlang": "IT"
+},
+{
+"n": "11",
+"sec": "29",
+"hl": "27",
+"master": "… [dā]i",
+"words": [
+[
+"…",
+"",
+""
+],
+[
+"[dā]i",
+"nehmen:3SG.PRS",
+"dā-/d-"
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 8′",
+"[da-a]-i"
+]
+],
+"tr": "[…] (e) ter[rà …]",
+"trlang": "IT"
+},
+{
+"n": "12",
+"sec": "29",
+"hl": "27",
+"master": "mān=[aš …]",
+"words": [
+[
+"mān=[aš",
+"wie:CNJ=PPRO.3SG.C.NOM",
+"Ⓐ man"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 9′",
+"ma-a-n[a-aš"
+]
+],
+"tr": "[…] Se [lei …]",
+"trlang": "IT"
+},
+{
+"n": "13",
+"sec": "29",
+"hl": "27",
+"master": "[iw]aru=[ššet …]",
+"words": [
+[
+"[iw]aru=[ššet",
+"Erbschaft:ACC.SG.N=POSS.3SG.ACC.SG.N",
+"⓷Ⓐ iwar=u-"
+],
+[
+"…]",
+"",
+""
+]
+],
+"mss": [
+[
+"A",
+"Vs. II 10′",
+"[i-w]a-ru-[uš-še-et Text bricht ab"
+]
+],
+"tr": "[…] la [sua d]ote […]",
+"trlang": "IT"
+}
+],
+"notes": {},
+"cth": "CTH 291.5"
+}

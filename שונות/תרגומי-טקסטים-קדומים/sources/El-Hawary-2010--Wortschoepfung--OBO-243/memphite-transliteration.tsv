@@ -1,0 +1,93 @@
+# Memphite Theology (Shabaka Stone, BM EA 498) – transliteration, lines 1a–64
+# Source: El Hawary, Amr: Wortschöpfung. Die Memphitische Theologie und die Siegesstele des Pije – zwei Zeugen kultureller Repräsentation in der 25. Dynastie (OBO 243), Fribourg/Göttingen 2010, section 2.3.1.2.3 "Übersetzung", printed pp. 115–138 = PDF pp. 128–151 (file Hawary,El_2010_Wortschopfung.pdf), left column.
+# Format: label<TAB>transliteration<TAB>pdf-page. One row per edition line; " | " separates the printed sentence rows (blocks) of a line; the wrapped print lines inside one block are joined with a space (or without one after a line-final hyphen, which is part of the transliteration).
+# Conventions: ꜣ (U+A723) aleph, ꜥ (U+A725) ayin, j, ḥ ḫ ẖ ḏ ṯ š q k as printed; "=" for El Hawary's suffix-pronoun sign (⸗); [ ] destroyed; ( ) not present in the original; ⟨ ⟩ omitted by mistake (printed < >); { } superfluous; / column split marker; […] for erased (hatched) text; the cartouche signs are written 𓍹 … 𓍺 (U+13379/U+1337A); the vertical bars of the scenic notes (lines 10b–18b, 12b, 20b, 21b) are written │ (U+2502) so as not to clash with the " | " row separator; [Stš] in 30b and šnw.t in 61 are printed with a glyph-fallback sign resembling ʕ, read as š; footnote numbers are dropped (see memphite-notes.tsv); multiple spaces are reduced to one.
+# Date: 2026-10-23. Transcribed from the page images by an AI agent; checked against the text layer.
+1a	ꜥnḫ Ḥrw sb[ꜣ]q-tꜣ.wj Nb.tj sb[ꜣ]q-tꜣ.wj Ḥrw-nbw sb[ꜣ]q-tꜣ.wj njsw.t-bj.t 𓍹Nfr-kꜣ-Rꜥw𓍺 sꜣ-Rꜥw [Šꜣbꜣkꜣ] mrjj Ptḥ rsj-jnbw=f ꜥnḫ(.w) mj Rꜥw ḏ.t	128
+1b	ꜥnḫ Ḥrw sb[ꜣ]q-tꜣ.wj Nb.tj sb[ꜣ]q-tꜣ.wj Ḥrw-nbw sb[ꜣ]q-tꜣ.wj njsw.t-bj.t 𓍹Nfr-kꜣ-Rꜥw𓍺 sꜣ-Rꜥw [Šꜣbꜣkꜣ] mrjj Zkr rsj-jnbw=f ꜥnḫ(.w) mj Rꜥw ḏ.t	128
+2	spẖr jn ḥm=f sẖꜣ.w pn n-mꜣw.t m pr jtj=f Ptḥ-rsj-jnbw=f | js gm.n ḥm=f m jrj(.t) .n tp.jw-ꜥ | jw ⟨=f⟩ m wnm(.t).n dm.w | n rḫ.n.tw=f m ḥꜣ.t r pḥ(.wj) | ꜥḥꜥ.n s[pẖr](.w) [sẖꜣ.w pn] n-mꜣw.t nfr.w r jm.j=[f] ẖr-ḥꜣ.t | n-mrw(.t) ḏd rn=f swꜣḥ mnw=f m pr jtj=f Ptḥ rsj-jnbw=f m ꜣw(.t)-ḏ.t | m jrj .n sꜣ-Rꜥw [Šꜣbꜣkꜣ] n jtj=f Ptḥ-tꜣ-ṯ(nn) jrj=f djw-ꜥnḫ ḏ.t	129-130
+3	( ) | Ptḥ pn pw mꜣṯ m rn-wr nn | ( )	130
+4	( ) | tꜣ-šmꜥw (tꜣ-)mḥw pw | smꜣw pn ḫꜥ(.w) m njsw.t ḫꜥ(.w) m bjtj | ( )	130-131
+5	( )	131
+6	( ) | wtt-sw | jn Jtmw msj psḏ.t | ( )	131
+7	( ) | jꜥb n=f psḏ.t | (jw) wpj.n=f Ḥrw ḥnꜥ [Stš] | ( )	131-132
+8	ḫwj.n=f šnṯ=sn | ḏj=f [Stš] m njswt m tꜣ-šmꜥw ḏr bsj=f jm m Sw | sw(t) Gb | ḏj=f Ḥrw m bjtj m tꜣ-mḥw | ḏr bw mḥj jtj=f jm	132
+9	m Psš.t-tꜣ.wj | sw(t) Ḥrw Stš ꜥḥꜥ(.w) ḥr (j)ꜣ.t | ḥtp=sn tꜣ.wj m ꜥnw | ṯꜣš-tꜣ.wj pw {tꜣ.wj m ꜥnw tꜣš-tꜣ.wj pw} | ( )	132-133
+10a	ḏd-mdw Gb (ḫft) [Stš] | jsj ṯ(w) r bw msj=k jm	133
+10b	│ Stš │ rsj │	133
+11a	ḏd-mdw Gb (ḫft) Ḥr | jsj ṯ(w) r bw mḥw jtj=k jm	133
+11b	│ Ḥrw │ mḥw │	134
+12a	ḏd-mdw Gb (ḫft) Ḥrw [Stš] | wpj.n(=j) ṯn	134
+12b	│ ( ) │ mḥw/ rsj │	134
+10c	ḏwj ḥr-jb n Gb twt psš.t Ḥrw n psš.t [Stš]	134
+11c	sw(t) Gb | (jw) rdj(.w) jwꜥ.t=f n Ḥrw sꜣ pw	134
+12c	n sꜣ=f wpj-ẖ.t=f | ( )	134
+13a	ḏd-mdw Gb (ḫf)t psḏ.t | wḏ.n(=j)	134
+13b	│ Ḥrw │ wtwtj │	135
+14a	ḏd-mdw Gb (ḫft) psḏ.t | (j)wꜥ.t(=j)	135
+14b	│ Ḥrw │ jwꜥ.t │	135
+15a	ḏd-mdw Gb (ḫft) psḏ.t | n pf jwꜥw	135
+15b	│ Ḥrw │ jwꜥ.tj │	135
+16a	ḏd-mdw Gb (ḫft) psḏ.t | n sꜣ n sꜣ(=j)	135
+16b	│ Ḥrw │ sꜣb-[šmꜥ.w] │	135
+17a	ḏd-mdw Gb (ḫft) psḏ.t | wpj ẖ.t(=j)	135
+17b	│ Ḥrw │ Wpjwꜣwt [mḥw] │	135
+18a	ḏd-mdw Gb (ḫft) psḏ.t | sꜣ(=j) pw msj(.w)	135
+18b	│ Ḥrw │ msj(.w) Wpj-wꜣwt │	135
+13c	ꜥḥꜥ Ḥrw tp tꜣ | sw(t) dmḏ tꜣ pn | mꜣṯ m rn-wr Tꜣ-ṯnn rsj-jnbw=f nb ḏ.t | (jw) rd.n	136
+14c	wr.tj-ḥkꜣ.w m tp=f | sw(t) Ḥrw pw ḫꜥj.w m njsw.t-bjtj | smꜣ-tꜣ.wj m jnbw-⟨ḥḏ⟩ | m bw smꜣ(.w) tꜣ.wj jm	136-137
+15c	ḫpr.n (w)dj.w [š]nꜥ wꜣḏ r rw.tj ḥw.t-(kꜣ)-Ptḥ | Ḥrw [Stš] pw ḥtp.wj smꜣ.w(j) snsn=sn tm(.w) šnṯ.t=sn	137
+16c	m [b]w [prj]=sn jm | smꜣ(.w) m ḥwt-(kꜣ)-Ptḥ [mḫꜣ].t tꜣ.wj fꜣj(j).t tꜣ šmꜥ (tꜣ) mḥw jm=s | tꜣ pn pw […]	137
+17c	[…] [qrs.t] n.t Wsjr m ḥw.t-Zkr	138
+18c	[…] [wḏ Ḥrw n] | Nb.t-Ḥw.t Js.t m ḏdj	138
+19	n mḥj.n Wsjr ḥr mw=f | mꜣ.tw Js.t [Nb.t-Ḥwt ptr=sn sw…] […] [ḫwj]=sn mḥj=f	138
+20c	[…] [s]pr=sn sw r	138
+21c	[tꜣ] […] | [ḫpr Wsjr] m tꜣ m	139
+22	ḥwt-sr m [gs-mḥ.tj n tꜣ pn] […]	139
+20a	ḏd-mdw Ḥrw (ḫft) Js.t Nb.t-Ḥw.t | jsj nḏrj jm=f	139
+20b	│ [Wsjr] │ […] │	139
+21a	ḏd-mdw Js.t/Nb.t-Ḥw.t(ḫft) Wsjr | jjj.n=n jṯj=n kw [sn=n]	139
+21b	│ [Wsjr] │ […] │	139
+23	[ḫpr].n qd(.w) ḥw.t[-sr] […]	139
+24a,b	ḏd[-mdw]Gb (ḫft) Ḏḥwtj […]	140
+24c	[…]	140
+25a	( ) […]	140
+26a	( ) […]	140
+25b	ḏd-mdw Ḥrw […]	140
+26b	ḏd-mdw Ḥrw […]	140
+27	[…] dj Js.t jnt […]	140
+28a-35a	[…]	140
+28b	ḏd-mdw Js.t (ḫft) [Ḥrw Stš] | mj [ṯ]n w[ḏꜣ] […]	141
+29b	ḏd[-mdw Js.t (ḫft) Ḥrw Stš] | ḥtp jr=ṯn […]	141
+30b	ḏd-mdw Jst (ḫft) Ḥrw [Stš] | [nḏ]m n=ṯn ꜥnḫ jr=s […]	141
+31b	ḏd-mdw Js.t (ḫft) Ḥrw [Stš] | sw(t) ꜥḥ=f rm(w)=ṯn […]	141
+32b	ḏd-mdw Js.t (ḫft) Ḥrw [Stš] | […]	141
+33b	ḏd-mdw Js.t (ḫft) Ḥrw [Stš] | […]	141
+34b	ḏd-mdw Js.t (ḫft) Ḥrw [Stš] | […]	141
+35b	ḏd-mdw Js.t (ḫft) Ḥrw [Stš] | […]	141
+36	[…] ḥw.t-sr b(w) pn […]	142
+37-44	[…]	142
+45	wr ꜥꜣ nb jm.j (?) […]	142
+46	dmḏ (?) ( ) […]	142
+47	mj qd=f rꜥ-nb (?) […]	142
+48	nṯr.w ḫpr.w m Ptḥ	143
+49a	Ptḥ ḥr.j (j)s.t-wrt / | [rsj jnb.w=f]	143
+50a	Ptḥ-Nnw / | jtj [jrj] Jtmw	143
+51a	Ptḥ-Nn.t / | mw.t msj(t) Jtmw	143
+52a	Ptḥ-wr / | ḥꜣ.tj ns pw n psḏ[.t]	143
+49b	[Ptḥ-nḏm-ꜥnḫ] / | […] nb ḫ[r].t nb ꜥꜣ […] [=f] nb nṯr(?) msj nṯrw	144
+50b	[Ptḥ-ꜥḥ-rmw] / | […] njw[.t] […] msj nṯrw | ( )	144
+51b	[Ptḥ-dmḏ tꜣ.wj(?)] / | […] | ( )	144
+52b	Ptḥ-nfr […] / | [sḫpr Nfrtm] r šr.t Rꜥw rꜥ-nb | ( )	144
+53	(nṯr.w ḫpr.w m Ptḥ) ḫpr(.w) m ḥꜣ.tj ḫpr(.w) m ns m tj.t Jtmw | jw wr ꜥꜣ Ptḥ swḏ(.w) [n=f nṯr.w nb].w kꜣ.w=sn sk m ḥꜣ.tj pn m ns pn | ( )	144-145
+54	⟨jw⟩ ḫpr.n Ḥrw jm=f ⟨jw⟩ ḫpr.n Ḏḥw.tj jm=f m Ptḥ | ḫpr.n sḫm ḥꜣ.tj ns m ꜥ.wt [nb ḥr] sbꜣ wnt=f m-ḫnt ẖ.t nb m-ḫn(t) rꜣ nb n nṯr.w nb.w rmṯ nb ꜥw.t nb ḥfꜣ.t nb | ꜥnḫ=t(w) ḥr kꜣꜣ.t jḫ.t nb mrr.t=f | ꜥnḫ=t(w) ḥr wḏ(.t)-mdw (jḫ.t nb mrr.t=f)	145
+55	psḏ.t=f m-bꜣḥ=f | m jbḥ.w m sp.t(j) | mtw.t ḏr.tj Jtmw jpꜣ | ḫpr[.n js] psḏ.t Jtmw m mtw.t=f m ḏbꜥ.w=f | psḏ.t ḥm pw jbḥ.w sp.tj m rꜣ pn mꜣṯ rn n jḫ.t nb.t prj.n Šw Tfn.t jm=f	146
+56	msḫn.t nṯr.w | (jw) mꜣꜣ jr.tj sḏm msḏr.wj | ssn fnḏ ṯꜣw sjꜥr=sn ḫr ḥꜣt.j | ntf dd prj ꜥrqjj.t nb(.t) | jn ns wḥm kꜣꜣ.t ḥꜣ.tj | sw(t) msj nṯr.w nb.w | Jtmw psḏ.t=f sk | ḫpr.n js mdw-nṯr nb m kꜣꜣ.t	146-147
+57	ḥꜣt.j wḏ.t ns | sw(t) jrj kꜣ.w mtn ḥms.wt | jrr ḏfꜣw nb ḥtp.t nb m md.t tn | jrr mrr.t msḏ.t | sw(t) dj ꜥnḫ n ẖr(.j)-ḥtp dj mt n ẖr(.j)-ḫnb.t | sw(t) jrj kꜣ.t nb ḥmw.t nb | jrj.t ꜥ.wj šm(.t) rd.wj	147-148
+58	nmnm ꜥ.t nb ḫft wḏ=f md.t | (j)n kꜣꜣ.t ḥꜣ.tj pr.t m ns jrr.t ꜣw n jḫ.t nb | ḫpr.n ḏd jrj tmw sḫpr nṯr.w r Ptḥ | Tꜣ-ṯnn [j]s pw msj nṯr.w prj.n jḫ.t nb jm=f m ḥtp m ḏfꜣw m	148
+59	ḥtp.t-nṯr.w m jḫ.t nb.t nfr.t | sw(t) Ḏḥwtj sꜣ(ꜣ) ꜥꜣ pḥ.tj=f r nṯr.w | sw(t) ḥtp | m-ḫt jrj.t=f jḫ.t nb.t | mdw-nṯr nb sk | (jw) msj.n=f nṯr.w jrj.n=f njw.wt grg.n=f sp(ꜣ).wt dj.n=f nṯr.w ḥr ḫm(.w)	148-149
+60	=sn srwḏ.n=f pꜣw.t=sn grg.n=f ḫm.w=sn | (jw) stwt.n=f ḏ.t=sn r ḥtp jb.w=sn | sw(t) ꜥq nṯr.w m ḏ.t=sn m ḫt nb m ꜥꜣ.t nb(.t) m jm(.w) nb jḫ.t nb rd(.t) ḥr-ḫtw=f	149
+61	(jw) ḫpr.n=sn jm | sw(t) jꜥb n=f nṯr.w nb.w kꜣ.w=sn js(t) | ḥtpj ẖnmjj m nb tꜣ.wj | šnw.t nṯr js.t wr.t | ẖnm.t jb nṯr.w jm.j(w) ḥw.t(-kꜣ)-Ptḥ nb.t ꜥnḫ nb ( ) | jrr.t ꜥnḫ-tꜣ.wj jm=s	149-150
+62	n-wnt Wsjr mḥj=f ḥr mw=f | mꜣ.tw Js.t Nb.t-Ḥw.t ptr=sn sw mnḫ=sn jm=f | wḏ Ḥrw n Js.t Nb.t-Ḥw.t m ḏdj nḏrj=sn m Wsjr ḫwj=sn mḥj=f	150
+63	pẖr=sn r tp-tr=s(n) | spr=sn sw r tꜣ | ꜥq=f sbḫ.wt štꜣ.w m ḏsr.w n.w nb.w nḥḥ r nmt.t wbn-m-ꜣḫ.t-ḥr-mṯn.w-Rꜥw m js.t wr.t	150-151
+64	ẖnm=f m stp-sꜣ snsn=f r nṯr.w Tꜣ-ṯnn Ptḥ nb-rnp.wt=s(n) | ḫpr Wsjr m tꜣ m ḥw.t-sr m gs-mḥt.t n tꜣ pn | spr n=f r=f sꜣ=f Ḥrw ḫꜥ.(w) m njswt-bjtj m ẖnw-ꜥ(ḥ) jtj=f Wsjr ḥnꜥ nṯr.w tpj.w-ꜥ=f jm.jw-ḫt=f	151
