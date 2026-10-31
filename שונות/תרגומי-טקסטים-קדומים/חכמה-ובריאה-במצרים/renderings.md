@@ -393,7 +393,20 @@ parallels table.
 | HC 3 | ok | `אָז אָמַר הוֹד מַלְכוּתוֹ אֶל אֲשֶׁר בְּעִקְּבוֹתָיו: קִרְאוּ לִי אֶת עֵינִי, וְאֶת שׁוּ` |
 | HC 1 | ok | `[נִהְיָה, אֵפוֹא, שֶׁזָּרַח רַא], הָאֵל שֶׁנִּהְיָה מֵעַצְמוֹ` |
 | HC 1 | err | `[נִהְיָה, אֵפוֹא, שֶׁזָּרַח רע], הָאֵל שֶׁנִּהְיָה מֵעַצְמוֹ` |
-
+| TB 1,7 | ok | `ושכב הוא` |
+| TB 1,2 | err | `ושכב הוא` |
+| TB 1,2 | ok | `והוא עושה לו בגדים` |
+| TB 1,5 | err | `והוא עושה לו בגדים` |
+| TB 3,8 | err | `ויחר אפו` |
+| BD 25 | ok | `הוֹ נחא־חר, היוצא מרא־סטאו: לא הרגתי אדם.` |
+| BD 25 | err | `הוֹ נחא־חר, היוצא מרא־סטאו: לא רצחתי אדם.` |
+| BD 17 | err | `נקי אני` |
+| SI B81 | ok | `ארץ טובה היא, יָאָא שמה; אין כמוה בארץ; יש בה תאנים` |
+| SI B82 | ok | `ועמהן ענבים; רב בה היין מן המים, רב` |
+| SI B80 | err | `ועמהן ענבים` |
+| SS 61 | ok | `על פניי, ומצאתי: נחש` |
+| SS 64 | err | `נחש הוא` |
+| AM 7.12 | ok | `וְאַל תִּשְׁכַּב` |
 
 ## 10. Changes and proposals merged (by run and translator)
 
@@ -489,3 +502,93 @@ parallels table.
 In `../מיתוסים-אוגריתיים/3-תיק-היום-החמישי/` (KEYs `WC`, `AP`), following this corpus: msḥ `תִּמְסָח`, ḥf / ḥfꜣw `נָחָשׁ`, Re `רַא` ★, ḥry-tp `חַרְטֹם` [cognate: loanword] (the full title `הַכֹּהֵן־הַקּוֹרֵא הַחַרְטֹם`), ḫꜣꜥ "throw" `הֵטִיל` (§10.7.1), ḫpr m `נִהְיָה לְ־`, šꜣs `שׁוּט` (§10.12.1; its past `שָׁט` shares the letters of MK E133's sqdj `שָׁט` "sails" – two verbs, never in one line), sḏ.t `שַׁלְהֶבֶת`, ḫ.t `אֵשׁ`, sḫr "overthrow" `הִכְרִיעַ`, mḏꜣ.t "book" `מְגִלָּה`; new: mnḥ "wax" `שַׁעֲוָה`, š "lake" `אֲגַם`, ḏꜣ.t "depth" `עֹמֶק`, ḥry-pr "steward" `סוֹכֵן הַבַּיִת`, hbnj `הָבְנִים` [cognate: loanword, Ezek 27:15]. The dossier's own gates check them.
 
 - **2026-10-30 harmonization** (`../harmonization--2026-10-30.md`, row 8): ẖr.t-nṯr = `חֶלְקַת־הָאֵל` (was `נַחֲלַת־הָאֵל`; §10.12 item 5). Changed line: HC 93 `חי בנחלת־האל` → `חי בחלקת־האל` (gloss and note; the parallels indexes rebuilt).
+
+## 11. The tales and Book of the Dead 125 (Round 5 run 6, 2026-10-31; fixed by the coordinator before the first line)
+
+**Why here, not a new corpus.** The tales share this corpus's language (Middle Egyptian: Sinuhe, the Shipwrecked Sailor,
+Westcar, BD 125; Late Egyptian: the Two Brothers, as Amenemope), its base (AED-TEI), its tool and its renderings; BD 125's
+forty-two denials are the other face of Amenemope's ethics ("no one is sinless"), and Westcar's wax crocodile is
+already in the fifth-day dossier from this corpus's words. A new corpus would have duplicated the renderings and
+opened splits for the lead to harmonize; the folder name stays (renaming breaks the print stubs), `corpus.md` says
+that it now holds the tales too.
+
+### 11.1 The texts (KEYs)
+| KEY | Text | Base (AED-TEI) | Lines (labels) | Project |
+|---|---|---|---|---|
+| TB | The Tale of the Two Brothers, pD'Orbiney (pBM EA 10183) recto, Late Egyptian, c. 1200 BCE (Seti II) | `AED-TEI/Two-Brothers--pDOrbiney-BM-EA-10183/` | 185 (page,line `1,1`–`19,10`, the colophon `20,1`) | `4-מעשה-בשני-האחים/` |
+| WE | The Tales of pWestcar (pBerlin P 3033), the end of a tale, the tales of Nebka's and Snefru's time, Djedi, the birth of the three kings | `AED-TEI/Westcar--pBerlin-P-3033/` | 305 (`1,1-11`, `1,12` … `12,25`) | `5-פפירוס-וסטקר/` |
+| BD | The Book of the Dead, chapter 125 (the hall of the Two Truths, the negative confession), pNu (pBM EA 10477), 18th dynasty | `AED-TEI/BD-125--pNu-BM-EA-10477/` (+ pJuja, pMaiherperi: `data BD --wit`) | 115 (`1`–`115`) | `6-ספר-המתים-125/` |
+| SI | The Story of Sinuhe: R 1–23 (pBerlin P 10499, the opening lost in B), then B 1–311 (pBerlin P 3022) | `AED-TEI/Sinuhe--pBerlin-P-10499-R/`, `…-3022-B/` (+ the Ashmolean ostracon AOS: `--wit`) | 334 (`R1`–`R23`, `B1`–`B311`) | `7-סינוהה/` |
+| SS | The Shipwrecked Sailor, pPetersburg 1115 | `AED-TEI/Shipwrecked-Sailor--pPetersburg-1115/` | 191 (`1`–`189`, `30-31`, `40-41`) | `8-המלח-הנטרף/` |
+
+Sinuhe: R 24 = B 1 (`njs.n=tw n wꜥ jm …`); B's Amherst fragments (`Am.`, `An.` …: its lost start, parallel to R)
+and AOS (the Ramesside ostracon, nearly the whole text) are witnesses for the apparatus. **pWestcar 2,21–4,7** (the
+wax crocodile, 27 lines) is the fifth-day dossier's excerpt WC: the WE file copies the dossier's `>` lines byte for
+byte (`verify WE` checks it); the dossier is **not** edited from here: a revision is written in the WE entry as
+`[סטייה מן התיק: <reason>]` and listed for the lead.
+
+### 11.2 Names (★ = always vocalized)
+| Egyptian | Hebrew | Notes |
+|---|---|---|
+| Jnpw (Anubis, the elder brother) | `אַנוּבִּיס` | the Greek form (familiar); the god's name, borne by a man |
+| Bꜣtꜣ (Bata, the younger) | `בָּטָה` | a god of Saka (the 17th nome); "the ba of the land"? (a note) |
+| Ḫnmw (Khnum) | `חְנוּם` (§3.1) | he "builds" Bata a wife (qd = `בָּנָה`: Gen 2:22 `וַיִּבֶן` [equivalent], §11.3) |
+| the Seven Hathors (Ḥw.t-Ḥr 7) | `שֶׁבַע הַחַתְחוֹרוֹת` | the fate-decreeing goddesses |
+| pꜣ jn.t pꜣ ꜥš (the Valley of the Cedar) | `עֵמֶק הָאֶרֶז` | ꜥš = `אֶרֶז` [equivalent] (the conifer of Lebanon; cedar / pine / fir debated: a note) |
+| Snfrw, Ḫwfw, Ḏd-f-Rꜥ, Ḫꜥ-f-Rꜥ, Bꜣw-f-Rꜥ, Ḥr-ḏd-f | `סְנֶפְרוּ`, `ח׳וּפוּ`, `גֶ׳דֶפְרַא`, `חַעֶפְרַא`, `בָּאוּפְרַא`, `חוֹרְגֶ׳דֶף` | Khufu: Herodotus's Cheops (a note); ḫ = ח (§2.2), `ח׳` only to tell Khufu from a Hebrew word |
+| Nb-kꜣ, Ḏsr, Ḏd(j), Wbꜣ-jnr, Ḏꜣḏꜣ-m-ꜥnḫ | `נֶבְּקָה`, `גֶ׳וֹסֶר`, `גֶ׳דִי`, `וֶבָּאוֹנֶר` (the dossier's), `גָ׳אגָ׳אאֶמְעַנְח` | |
+| Rd-ḏd.t; Wsr-kꜣ=f, Sꜣḥ-Rꜥ, Kꜣkꜣj | `רוּדְגֶ׳דֶת`; `וֹסֶרְכָּאֶף`, `סָאחוּרַא`, `כָּאכָּאי` | the three kings' mother and the kings |
+| Zꜣ-nh.t (Sinuhe) | `סִינוּהֶה` | "son of the sycamore" (a note); the Hebrew usage |
+| Z-n-wsr.t, Jmn-m-ḥꜣ.t | `סֶנוּסֶרֶת`, `אַמֶנֶמְחַת` | `שְׂנֻסֶרֶת` rejected |
+| Rṯnw (Retjenu), Jꜣꜣ (Yaa), Qdm (Qedem), Kpnj (Byblos) | `רֶצֶ׳נוּ`, `יָאָא`, `קֶדֶם` ★, `כֶּפֶּנִי` | Qedem: the Bible's `קֶדֶם` (Gen 25:6, 29:1 `אֶרֶץ בְּנֵי קֶדֶם`) [equivalent], always vocalized ("east, before"); Byblos = `גְּבַל` (Ezek 27:9) in the note |
+| ꜥmw-nnšj (Ammunenshi) | `עַמּוּנֶנְשִׁי` | the West Semitic name in the note (*ʿAmmu-…*) |
+| ꜥꜣm.w (Asiatics) | `הָעַאמוּ` | transliterated (a people word; "Asiatics" a note); not `עַם`, not `כְּנַעֲנִים` |
+| ḥqꜣ (ruler) | `שַׁלִּיט` (§10.11.7) | `ḥqꜣ ḫꜣs.wt` "ruler of the foreign lands" = `שַׁלִּיט אַרְצוֹת־הַנֵּכָר` (the source of "Hyksos": a note) |
+| the island's serpent (SS) | `הַנָּחָשׁ` | ḥfꜣw = `נָחָשׁ` (§10.11.2; the dossier rule) |
+| the "Lord of Punt" (SS), Pwnt | `פּוּנְט` | |
+| Wsjr NN (BD: "the Osiris Nu") | `אוֹסִירִיס נוּ` | the dead man becomes "an Osiris" (a note); the scribe's lost name `[…]` |
+
+### 11.3 Key terms (one Hebrew per lemma; first the Bible-sensitive ones)
+| Egyptian | Hebrew | Tag / note |
+|---|---|---|
+| sḏr "lie, sleep"; nk "copulate" | `שָׁכַב`; `שָׁכַב עִם` | the only words for the root שכב (gate): Gen 39:7, 12 `שִׁכְבָה עִמִּי` [equivalent] |
+| ḥbs "clothes, garment" | `בֶּגֶד` / `בְּגָדִים` | the only word for `בֶּגֶד` with dꜣjw, mnḫ.t (gate); Gen 39:12–18 [divergence]: no garment in the wife's hand in TB |
+| qd "build" | `בָּנָה` | as AM; Khnum "builds" a wife (Gen 2:22 [equivalent]) |
+| ḥm.t "wife, woman" | `אִשָּׁה` | ḥm.t ṯꜣy "a man's wife" = `אֵשֶׁת אִישׁ` (Lev 20:10 [equivalent]) |
+| ḥm=f; pr-ꜥꜣ | `הוֹד מַלְכוּתוֹ`; `פַּרְעֹה` [cognate: loanword] | as §4.2 (TB writes pr-ꜥꜣ 17 times: the Bible's own word for the king, from this period) |
+| ꜥḥꜥ.n (narrative) | `וְאָז` (the dossier's WC `ואז`) | `ḏd.jn X` = `אָז אָמַר X` (§10.10.1) |
+| bjꜣ.yt "wonder, marvel" (WE) | `פֶּלֶא` | Ex 15:11 `עֹשֵׂה פֶלֶא` [equivalent] |
+| ḥkꜣ.w "magic"; šdj "recite" | `קְסָמִים` (§3.1); `קָרָא` (§10.12.2) | |
+| ẖry-ḥb (ḥry-tp) | `הַכֹּהֵן־הַקּוֹרֵא (הַחַרְטֹם)` | the dossier's; ḥry-tp = `חַרְטֹם` [cognate: loanword], Ex 7:11 |
+| msḥ | `תִּמְסָח` | never `תַּנִּין` (§5.1) |
+| mw "water"; š "lake" | `מַיִם`; `אֲגַם` | the dossier's |
+| mꜣꜥ.t; jzf.t; wꜥb | `אֱמֶת`; `עָוֶל`; `טָהוֹר` | §4.1; jzf.t (the opposite of Maat) = `עָוֶל` (Deut 32:4 `אֵין עָוֶל` in the note); wꜥb as HC (§10.11.4); `נָקִי` never in a tale (gate) |
+| BD's `n jri̯=j X` | `לֹא עָשִׂיתִי X` | the negated past; one Hebrew verb per Egyptian verb through the 42 denials |
+| smꜣ "kill"; ṯꜣw/jṯꜣ "steal"; grg "lie" | `הָרַג`; `גָּנַב`; `שֶׁקֶר` | Ex 20:13–16 [equivalent] in the apparatus; `רָצַח`, `נָאַף`, `חָמַד` never (gate) |
+| nmḥ; ꜥwꜣ "rob"; nḥm "take away; save" | `דַּל` (§4.3); `גָּזַל`; the translator fixes nḥm (precedent AM 1.11 `להצילו`), by sense if needed, recorded | |
+| wsḫ.t (hall) n.t Mꜣꜥ.tj | `אוּלַם שְׁתֵּי הָאֱמֶת` | "the Two Truths": a note |
+| ḥsb qd.w "the reckoning of characters" | `חֶשְׁבּוֹן הַמִּדּוֹת` | |
+| ḫꜣs.t | `מִדְבָּר` (HC); ḫꜣs.wt "foreign lands" `אַרְצוֹת־הַנֵּכָר` | split by sense (a desert hill / a foreign country), recorded at the lines |
+| the seven species (SI B81–83) | dꜣb `תְּאֵנָה`, jꜣrr.t `עֲנָבִים`, jrp `יַיִן`, bj.t `דְּבַשׁ`, bꜣq `שֶׁמֶן־זַיִת`? / ḏd.t `זַיִת`, jt `שְׂעוֹרָה`, bd.t `כֻּסֶּמֶת` | Deut 8:8 [equivalent]: each word gated to its Egyptian word |
+| tꜣ pw nfr (SI B81) | `אֶרֶץ טוֹבָה הִיא` | nfr = `טוֹב` (§5.2): Deut 8:7 `אֶרֶץ טוֹבָה` [equivalent] |
+| qrs "bury", qrs.w "burial", wt "coffin" | `קָבַר`, `קְבוּרָה`, `אָרוֹן` | Gen 50:26 `וַיִּישֶׂם בָּאָרוֹן` [equivalent]; Gen 47:30, 50:5 (burial in the homeland); ḏbꜣ.t (chest, coffin) = `תֵּבָה` only (§4.2) |
+| jꜣw.t "old age"; ḥꜣ.t-zp / rnp.t | `זִקְנָה`; `שָׁנָה` | Djedi's 110 years (WE 7,2): Gen 50:26 `בֶּן מֵאָה וָעֶשֶׂר שָׁנִים` [equivalent: the Egyptian ideal life span] |
+| kꜣ, bꜣ | `כָּא` ★, `בָּא` ★ | §3.1 |
+
+### 11.4 Reserved and gated in the tales (`TALES` in `egypt_tools.py`; added to §5)
+Never in a tale line: the roots מאן / סרב (Gen 39:8), חרה (39:19), `סֹהַר` (39:20), `עִבְרִי`, the root בקע (Ex
+14:16, 21), `נֵד` (Ex 15:8), the root גזר (Ps 136:13), the roots רצח / נאף / חמד (Ex 20), `נָקִי` and `בַּר לֵבָב`
+(Ps 24:4), `נֶשֶׁךְ` / `תַּרְבִּית` (Ps 15:5), `אוֹנִי` (Deut 26:14), the root בער (Deut 26:13), `זָבַת` (Ex 3:8). Only for
+their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), the root צחק (sbṯ), `חוֹמָה` (jnb, sbtj), `יַבָּשָׁה` /
+`חָרָבָה` (šwi̯, wšr), `נָחָשׁ` (ḥfꜣw …), the Deut 8:8 words (`תְּאֵנָה` dꜣb, `גֶּפֶן` / `עֲנָבִים` jꜣrr.t, `דְּבַשׁ` bj.t,
+`זַיִת` ḏd.t / bꜣq). And everything of §5.1–§5.2.
+
+### 11.5 Formulas
+1. BD 125 B (21–62): `j X pri̯ m Y n jri̯=j Z` = `הוֹ X, הַיּוֹצֵא מִ־Y: לֹא עָשִׂיתִי Z.` (the vocative `j` = `הוֹ`, §3a;
+   `pri̯ m` = `הַיּוֹצֵא מִ־`; the denial's verb by its own Egyptian verb). Fixed by its first line (21); checked by the
+   verifier's formula (`הו … היוצא`).
+2. BD 125: `jw=j wꜥb.kw` (×4) = `טָהוֹר אֲנִי` (the `zp-4` "four times" as `(אַרְבַּע פְּעָמִים)`).
+3. Westcar's royal decree after each wonder (1,17ff., 4,17ff., 6,22ff.): fixed by its first drafted copy; the later
+   copies copy it (`verify` lists differences).
+4. Sinuhe's letter formula and the king's epithets: fixed by their first copy.
+5. `ḏd.jn X` = `אָז אָמַר X`; `ꜥḥꜥ.n sḏm.n=f` = `וְאָז` + past (§3a).
