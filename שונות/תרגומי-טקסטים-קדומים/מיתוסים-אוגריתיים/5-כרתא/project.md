@@ -14,10 +14,10 @@ creates the healer Šaʿtiqat; the king restored; Yaṣṣib's revolt and his fa
 
 ## Base text and versions
 
-**EUPT** (Göttingen, 2025; collated; CC BY-SA 4.0; ) is the newest critical edition and **rank 1 for
+**EUPT** (Göttingen, 2025; collated; CC BY-SA 4.0; `../../sources/EUPT/`) is the newest critical edition and **rank 1 for
 the readings** (renderings §12.3); the line skeleton and the word parses are CUC's (KTU³; the same line numbers). Where
 EUPT reads otherwise, the Hebrew follows EUPT and the פירוק says so. EUPT's English / German translation and commentary
-are rank 3–4 (read after drafting, ). Other rank 3 (not in the folder; never quoted
+are rank 3–4 (read after drafting, `ugarit_tools.py eupt KEY LABEL --tr`). Other rank 3 (not in the folder; never quoted
 verbatim): Greenstein in *Ugaritic Narrative Poetry*, Pardee in *COS* I, Wyatt 2002, Ginsberg 1946.
 
 ## Line numbering
