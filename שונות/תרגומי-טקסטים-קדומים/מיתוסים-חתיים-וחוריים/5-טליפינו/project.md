@@ -75,5 +75,6 @@ rising in fury); Num 20:17 (230–231: the king's road, not field or vineyard); 
 Lev 7:32 (266: the right thigh). In words only: the Akkadian "land of no return" (240); Etana's eagle (53).
 
 ## Progress
+- 2026-10-31: review pass (a) fidelity – 13 lines changed (3, 6, 8, 18, 90, 100, 128, 133, 138, 145, 164, 194, 207): brackets (3, 6, 8, 133, 138, 145, 164, 207), added words removed or put in ( ) (18 `יצא`, 128 `ו`, 194 `(מי)`), 90 *=še* "to him" (was `ולהם`), 100 *ḫāraš* nom. + instr. "with (his) wings" (was `כנף הנשר`). Open for pass (b): the analogy formula `כך גם X – כך Y` (133–195, 217, 222, 241; the note at 133) renders one QATAMMA twice and, at 222, leaves *namma* untranslated.
 - 2026-10-31: translator 4: TE 1–267 drafted, HPM read after drafting (no review passes by a second reader yet).
 - 2026-10-30: base secured, renderings fixed, brief written (the coordinator).

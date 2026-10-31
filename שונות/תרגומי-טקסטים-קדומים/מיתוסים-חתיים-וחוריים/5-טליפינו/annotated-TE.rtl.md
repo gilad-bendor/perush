@@ -21,8 +21,8 @@
 
 ### 3
 `[{d}]telipinuš=⸢a⸣ [ ... ]`
-> [וגם] תֶּלִיפִּינוּ […]
-- **פירוק:** `[{d}]telipinuš=a` – Telipinu + =a ("[וגם] תֶּלִיפִּינוּ").
+> וגם תֶּלִיפִּינוּ […]
+- **פירוק:** `[{d}]telipinuš=a` – Telipinu + =a ("וגם תֶּלִיפִּינוּ": only the determinative is restored).
 - **הערות:** תֶּלִיפִּינוּ – אל הצמיחה והפריון, בנו של אֵל הַסְּעָרָה; מיתוס "האל הנעלם" הוא מן העתיקים באנטוליה, ונאמר בטקס להשבת האל.
 
 ### 4
@@ -36,8 +36,8 @@
 
 ### 6
 `[{d}t]elipinuš=⸢a⸣ [ ... ]`
-> [וגם] תֶּלִיפִּינוּ […]
-- **פירוק:** `[{d}t]elipinuš=a` ("[וגם] תֶּלִיפִּינוּ").
+> וגם [תֶּ]לִיפִּינוּ […]
+- **פירוק:** `[{d}t]elipinuš=a` ("וגם [תֶּ]לִיפִּינוּ").
 
 ## §2′ – (שבר) הזעם מתחיל
 
@@ -49,7 +49,7 @@
 
 ### 8
 `[ ... {GIŠ}kura]kkin pēššiēt`
-> [… את] ה[מוט] השליך,
+> […] את ה[מוט] השליך,
 - **פירוק:** `[{GIŠ}kura]kkin` – kurakki- "pillar, beam", acc. ("ה[מוט]"); `pēššiēt` – pešš(iya)- "throw", pret. 3sg ("השליך").
 
 ### 9
@@ -103,7 +103,7 @@
 
 ### 18
 `É-erza=aš=kan p[ai]t`
-> ומן הבית יצא ה[ל]ך.
+> ומן הבית ה[ל]ך.
 - **פירוק:** `É-erza=aš=kan` – per "house", abl. ("ומן הבית"); `p[ai]t` ("ה[ל]ך").
 
 ## §4′ – הערפל, העשן, והחיות הדוחות את ולדותיהן
@@ -515,8 +515,8 @@
 
 ### 90
 `DINGIR{MEŠ}=še=šta pid-[ ... ]`
-> ולהם הָאֵלִים … […]
-- **פירוק:** `DINGIR{MEŠ}=še=šta` ("ו… הָאֵלִים"); `pid-[ ... ]` ("… […]").
+> הָאֵלִים לו … […]
+- **פירוק:** `DINGIR{MEŠ}=še=šta` + =šše "to him" ("הָאֵלִים לו"; HPM "ihm"); `pid-[ ... ]` ("… […]").
 
 ### 91
 `{d}telipinuš=wa lēlani[ttat]`
@@ -569,8 +569,8 @@
 
 ### 100
 `ḫāraš=a{MUŠEN} parta[unit ... ]`
-> ואילו כנף הנשר […]
-- **פירוק:** `ḫāraš=a{MUŠEN}` – "of the eagle" + =a ("ואילו … הנשר"); `parta[unit ... ]` – partawar "wing", instr. ("כנף […]").
+> ואילו הנשר בכנ[פיו …]
+- **פירוק:** `ḫāraš=a{MUŠEN}` – "the eagle", nom. + =a ("ואילו הנשר"); `parta[unit ... ]` – partawar "wing", instr. ("בכנ[פיו …]"; HPM "mit den Flügeln").
 
 ### 101
 `š=an gišnuer`
@@ -720,8 +720,8 @@
 
 ### 128
 `karāz=šan talliyē[ddu]`
-> ו*תוכו* *יירגע*!
-- **פירוק:** `karāz=šan` – karatt- "inside, innards" ("ו*תוכו*"); `talliyē[ddu]` – talliya- "become calm?", imp. 3sg ("*יירגע*"; HPM "soll ruhig werden").
+> *תוכו* *יירגע*!
+- **פירוק:** `karāz=šan` – karatt- "inside, innards" ("*תוכו*"); `talliyē[ddu]` – talliya- "become calm?", imp. 3sg ("*יירגע*"; HPM "soll ruhig werden").
 
 ### 129
 `kāša {GIŠ}šamamma kitta`
@@ -746,8 +746,8 @@
 
 ### 133
 `U ŠA {d}t[elipinu ZI-KA?21] QĀTAMMA militēšt[u?]`
-> כך גם נפשך, תֶּ[לִיפִּינוּ], תמתק!
-- **פירוק:** `U ŠA {d}t[elipinu ZI-KA?]` – Akk. u "and" + "your soul, Telipinu" ("כך גם נפשך, תֶּ[לִיפִּינוּ]"); `QĀTAMMA` ("כך"); `militēšt[u?]` – militešš- "become sweet", imp. 3sg ("תמתק").
+> כך גם [נפשך?], תֶּ[לִיפִּינוּ], תמתק!
+- **פירוק:** `U ŠA {d}t[elipinu ZI-KA?]` – Akk. u "and" + "your soul, Telipinu" ("כך גם [נפשך?], תֶּ[לִיפִּינוּ]": ZI-KA is restored); `QĀTAMMA` ("כך"); `militēšt[u?]` – militešš- "become sweet", imp. 3sg ("תמתק").
 - **הערות:** נוסחת ההשוואה: *māḫḫan* … *QĀTAMMA* = `כמו ש… – כך …` (U "and": `כך גם`), בכל הלחשים להלן.
 
 ### 134
@@ -773,8 +773,8 @@
 
 ### 138
 `nu ŠA {d}telipinu ZI-[KA? ... ] iškeddu`
-> ואת נפשך, תֶּלִיפִּינוּ, […] ימרח!
-- **פירוק:** `nu ŠA {d}telipinu ZI-[KA?` ("ואת נפשך, תֶּלִיפִּינוּ"); `... ] iškeddu` – iški- "anoint", imp. 3sg ("[…] ימרח").
+> ואת נפש[ך?], תֶּלִיפִּינוּ, […] ימרח!
+- **פירוק:** `nu ŠA {d}telipinu ZI-[KA?` ("ואת נפש[ך?], תֶּלִיפִּינוּ"); `... ] iškeddu` – iški- "anoint", imp. 3sg ("[…] ימרח").
 
 ### 139
 `DIM4 BAPPIR ZI-it māḫḫan takšant[a]`
@@ -808,8 +808,8 @@
 
 ### 145
 `{d}telipinuwašš=a ZI-[ŠU?] QĀTAMMA militišdu`
-> כך גם נפשו של תֶּלִיפִּינוּ – כך תמתק,
-- **פירוק:** `{d}telipinuwašš=a ZI-[ŠU?]` ("כך גם נפשו של תֶּלִיפִּינוּ"); `QĀTAMMA militišdu` ("כך תמתק").
+> כך גם נפש[ו?] של תֶּלִיפִּינוּ – כך תמתק,
+- **פירוק:** `{d}telipinuwašš=a ZI-[ŠU?]` ("כך גם נפש[ו?] של תֶּלִיפִּינוּ"); `QĀTAMMA militišdu` ("כך תמתק").
 
 ### 146
 `n=aš QĀTAMMA miyēštu`
@@ -916,8 +916,8 @@
 
 ### 164
 `kāšma {d}ḫapantali {d}UTU-aš UDU{ḪI.A}-ŠU w[ešiyaten?]`
-> הִנֵּה – לחַפַּנְתַּלִי את צאן אֵל הַשֶּׁמֶשׁ [רעו]!
-- **פירוק:** `kāšma` ("הִנֵּה"); `{d}ḫapantali` – Ḫapantali, d.-l.? ("לחַפַּנְתַּלִי"); `{d}UTU-aš UDU{ḪI.A}-ŠU` – "the Sun-god's sheep" ("את צאן אֵל הַשֶּׁמֶשׁ"); `w[ešiyaten?]` – wešiya- "pasture", imp. 2pl ("[רעו]"; HPM "H[ütet?]").
+> הִנֵּה – לחַפַּנְתַּלִי את צאן אֵל הַשֶּׁמֶשׁ [רעו?]!
+- **פירוק:** `kāšma` ("הִנֵּה"); `{d}ḫapantali` – Ḫapantali, d.-l.? ("לחַפַּנְתַּלִי"); `{d}UTU-aš UDU{ḪI.A}-ŠU` – "the Sun-god's sheep" ("את צאן אֵל הַשֶּׁמֶשׁ"); `w[ešiyaten?]` – wešiya- "pasture", imp. 2pl ("[רעו?]"; HPM "H[ütet?]").
 
 ### 165
 `n=ašta 12 UDU.NÍTA{ḪI.A} kar(a)šten?`
@@ -1080,8 +1080,8 @@
 
 ### 194
 `nu māḫḫan {GIŠ}ŠEN-aš ā[ppa parza] UL aršiēzzi`
-> וכמו שמי הצינור [למעלה] בחזרה אינם זורמים –
-- **פירוק:** `nu māḫḫan` ("וכמו ש"); `{GIŠ}ŠEN-aš` – ŠEN "pipe, channel", gen. ("מי הצינור"); `ā[ppa parza]` – "back upward" ("[למעלה] בחזרה"); `UL aršiēzzi` – arš- "flow", pres. 3sg ("אינם זורמים").
+> וכמו ש(מי) הצינור [למעלה] בחזרה אינם זורמים –
+- **פירוק:** `nu māḫḫan` ("וכמו ש"); `{GIŠ}ŠEN-aš` – ŠEN "pipe, channel", gen. ("(מי) הצינור": the water is not written; HPM "(das Wasser)"); `ā[ppa parza]` – "back upward" ("[למעלה] בחזרה"); `UL aršiēzzi` – arš- "flow", pres. 3sg ("אינם זורמים").
 
 ### 195
 `{d}telipinuwašš=a k[arpiš kardimiyaz] šāuwar āppa QĀTAMMA lē w[ezzi]`
@@ -1153,8 +1153,8 @@
 
 ### 207
 `[idalun] EME-an dāḫḫun`
-> [את] הלשון [הרעה] לקחתי,
-- **פירוק:** `[idalun] EME-an` – "the evil tongue" ("[את] הלשון [הרעה]"); `dāḫḫun` ("לקחתי").
+> את הלשון [הרעה] לקחתי,
+- **פירוק:** `[idalun] EME-an` – "the evil tongue" ("את הלשון [הרעה]"); `dāḫḫun` ("לקחתי").
 
 ### 208
 `id[alun patalḫan dāḫḫun40]`

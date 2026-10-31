@@ -17,8 +17,8 @@
 
 ### 1.2
 `[ki]-⸢i-wa⸣ ku-it wa-al-ku-an ⸢ḫa⸣-a-aš-⸢ḫu⸣-un ⸢tup⸣-pu-uš ⸢ša-kán-da⸣ šu-un-na-aš`
-> "זה – מה *ההמון* אשר ילדתי!" ארגזים בשומן מילאה,
-- **פירוק:** `[ki]-i-wa` – kā- "this", nom.-acc. n. + =wa ("זה"); `ku-it` – kui- "what" ("מה"); `wa-al-ku-an` – *walku-* (meaning uncertain: "horde, brood"?), nom.-acc. ("*ההמון*"); `ḫa-a-aš-ḫu-un` – ḫaš- "give birth", pret. 1sg ("ילדתי"); `tup-pu-uš` – tuppa- "chest, container", acc. pl. ("ארגזים"); `ša-kán-da` – šakan "fat, oil", instr. ("בשומן"); `šu-un-na-aš` – šunna- "fill", pret. 3sg ("מילאה").
+> "[ז]ה – מה *ההמון* אשר ילדתי!" ארגזים בשומן מילאה,
+- **פירוק:** `[ki]-i-wa` – kā- "this", nom.-acc. n. + =wa ("[ז]ה"); `ku-it` – kui- "what" ("מה"); `wa-al-ku-an` – *walku-* (meaning uncertain: "horde, brood"?), nom.-acc. ("*ההמון*"); `ḫa-a-aš-ḫu-un` – ḫaš- "give birth", pret. 1sg ("ילדתי"); `tup-pu-uš` – tuppa- "chest, container", acc. pl. ("ארגזים"); `ša-kán-da` – šakan "fat, oil", instr. ("בשומן"); `šu-un-na-aš` – šunna- "fill", pret. 3sg ("מילאה").
 - **תרגומים:** *walkuan* קשה: TLHdig אינו מכריע ("Walkui"? "schlagen?"); הספרות מפרשת "המון", "ולד" או "מפלצת". קריאתנו – קריאת־תמהון של האם, והמלה מסומנת כלא ודאית.
 - **הקבלה:** [divergence] `וַתַּחְמְרָה בַחֵמָר וּבַזָּפֶת` (שמות ב:ג) – אם משה טחה את התבה מבחוץ בחמר ובזפת, כדי שלא יחדרו המים; כאן הארגזים *מלאים* שומן (*šakan*, Ì: השמן או השומן). אולי לאיטום, אולי למזון לדרך – הטקסט אינו אומר. *tuppa-* `ארגז` (M2) ולא `תבה` (מלה מצרית, שמורה); *šakan* `שומן` (M2; הקורפוס החוקי: {UZU}Ì `שומן`).
 - **הערות:** שירת השחרור (SR) מבחינה בין Ì `שמן` לבין *šakni-* `שומן`; כאן *šakan* בשומן, לפי M2. האם אינה זורקת את הילדים: היא מכינה להם כלי.
@@ -53,8 +53,8 @@
 
 ### 2.2
 `šu-uš a-pa-ši-la ša-al-la-nu-uš-ket₉ ⸢DUMU⸣.NITA{MEŠ} ⸢a⸣-[ap-p]a {URU}ne-e-ša ia-an-zi`
-> ואותן היא בעצמה הייתה מְגַדֶּלֶת. הבנים בחזרה אל נֵשָׁה הולכים,
-- **פירוק:** `šu-uš` – šu + =uš ("ואותן"); `a-pa-ši-la` – apašila "(she) herself" ("היא בעצמה"); `ša-al-la-nu-uš-ket₉` – šallanu-, iter. pret. 3sg ("הייתה מְגַדֶּלֶת"); `DUMU.NITA{MEŠ}` – "sons" ("הבנים"); `a-[ap-p]a` – appa "back" ("בחזרה"); `{URU}ne-e-ša` – Neša, all. ("אל נֵשָׁה"); `ia-an-zi` – iya- "go, march", pres. 3pl ("הולכים").
+> ואותן היא בעצמה הייתה מְגַדֶּלֶת. הבנים ב[חזרה] אל נֵשָׁה הולכים,
+- **פירוק:** `šu-uš` – šu + =uš ("ואותן"); `a-pa-ši-la` – apašila "(she) herself" ("היא בעצמה"); `ša-al-la-nu-uš-ket₉` – šallanu-, iter. pret. 3sg ("הייתה מְגַדֶּלֶת"); `DUMU.NITA{MEŠ}` – "sons" ("הבנים"); `a-[ap-p]a` – appa "back" ("ב[חזרה]"); `{URU}ne-e-ša` – Neša, all. ("אל נֵשָׁה"); `ia-an-zi` – iya- "go, march", pres. 3pl ("הולכים").
 - **הערות:** הבנות גדלות בבית האם, הבנים – בידי האלים, רחוק. ההווה (*iyanzi*) פותח את הסצנה הבאה: הסיפור עובר להווה של המספר. הבנים חוזרים "בחזרה" – אל העיר שאינם יודעים שהיא עירם.
 
 ### 2.3
