@@ -20,7 +20,7 @@ The tests run on `node:test`, written with `tests/test-kit.ts`: it re-exports `d
 
 - `npm test` runs `tests/unit/*.test.ts` one file at a time (`--test-concurrency=1`): the tests create git worktrees and branches in the real repo, and start servers on fixed ports. `node --test` runs every file in a process of its own.
 - **`NODE_ENV=test`** is set by `npm test` (and by the E2E tests for the server they spawn); `config.ts` also counts any `node --test` process as a test (`NODE_TEST_CONTEXT`), so a single file run as `node --test tests/unit/config.test.ts` is one too. Under tests, meetings never touch the real repo's `main`.
-- E2E: `npm run test:e2e`. The real SDK smoke test: `npm run test:smoke` (real API calls, ~$0.10).
+- E2E: `npm run test:e2e`. The real SDK smoke test: `npm run test:smoke` (real API calls, ~$0.20-0.40, ~5 minutes).
 
 Test each module in isolation. Use the stub SDK (see below) to avoid API calls in tests.
 

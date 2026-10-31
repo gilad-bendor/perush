@@ -142,7 +142,7 @@ describe("full integration (stub SDK)", () => {
 
     // Wait for idle phase
     await page.waitForFunction(() =>
-      document.getElementById("status-read-phase")?.textContent === "המתנה"
+      document.getElementById("status-read-phase")?.textContent === "מוּשהֶה"
     , { timeout: 10000 });
   }, 30000);
 });

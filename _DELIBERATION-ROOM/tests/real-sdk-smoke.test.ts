@@ -28,6 +28,10 @@ const MEETINGS_DIR = join(DELIBERATION_DIR, ".meetings");
 const PORT = 4199;
 const HAIKU_MODEL = "claude-haiku-4-5";
 
+/** Every client message carries a messageId ("C1", "C2", ...) - as app.js sends them. */
+let clientMessageSeq = 0;
+const nextMessageId = () => `C${++clientMessageSeq}`;
+
 // ---------------------------------------------------------------------------
 // Guard: skip unless explicitly requested
 // ---------------------------------------------------------------------------
@@ -175,6 +179,7 @@ describe("real SDK smoke test", { skip: process.env.REAL_SDK_TEST !== "true" }, 
             ws.send(
               JSON.stringify({
                 type: "human-speech",
+                messageId: nextMessageId(),
                 content: "נקודה מעניינת. המשיכו בניתוח.",
               }),
             );
@@ -234,10 +239,8 @@ describe("real SDK smoke test", { skip: process.env.REAL_SDK_TEST !== "true" }, 
     ws.send(
       JSON.stringify({
         type: "start-meeting",
+        messageId: nextMessageId(),
         title: "SDK Smoke Test",
-        openingPrompt:
-          "נדון בפסוק הראשון: בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ. " +
-          "מה משמעות המילים לפי המילון? השיבו בקצרה.",
         participants: ["milo", "shalom"],
       }),
     );
@@ -255,6 +258,17 @@ describe("real SDK smoke test", { skip: process.env.REAL_SDK_TEST !== "true" }, 
     meetingId = syncMsg.meeting.meetingId;
     console.log(`[smoke] Meeting created: ${meetingId}`);
 
+    // The opening prompt is the Director's first speech (a new meeting waits for it)
+    ws.send(
+      JSON.stringify({
+        type: "human-speech",
+        messageId: nextMessageId(),
+        content:
+          "נדון בפסוק הראשון: בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ. " +
+          "מה משמעות המילים לפי המילון? השיבו בקצרה.",
+      }),
+    );
+
     expect(meetingId).toBeTruthy();
     expect(syncMsg.meeting.participants).toEqual(["milo", "shalom"]);
 
@@ -265,7 +279,7 @@ describe("real SDK smoke test", { skip: process.env.REAL_SDK_TEST !== "true" }, 
     console.log("[smoke] Waiting for cycle 1...");
     await waitFor(
       (msgs) => countOf((m) => m.type === "speech") >= 1,
-      120_000,
+      300_000, // the assessments think with tools - minutes, even on haiku
       "cycle 1 speech",
     );
     const speech1 = messages.filter((m) => m.type === "speech").at(-1);
@@ -274,7 +288,7 @@ describe("real SDK smoke test", { skip: process.env.REAL_SDK_TEST !== "true" }, 
     console.log("[smoke] Waiting for cycle 2...");
     await waitFor(
       (msgs) => countOf((m) => m.type === "speech") >= 2,
-      120_000,
+      300_000, // the assessments think with tools - minutes, even on haiku
       "cycle 2 speech",
     );
     const speech2 = messages.filter((m) => m.type === "speech").at(-1);
@@ -324,12 +338,13 @@ describe("real SDK smoke test", { skip: process.env.REAL_SDK_TEST !== "true" }, 
     // ------ Phase 4: End meeting ------
 
     console.log("[smoke] Ending meeting...");
-    ws.send(JSON.stringify({ type: "command", command: "/end" }));
+    ws.send(JSON.stringify({ type: "command", messageId: nextMessageId(), command: "/end" }));
 
     await waitFor(
-      (msgs) => msgs.some((m) => m.type === "phase" && m.phase === "idle"),
+      // (not "phase idle" - the cycles already sent one, and the meeting is committed and ended only after it)
+      (msgs) => msgs.some((m) => m.type === "meeting-ended"),
       30_000,
-      "phase idle (meeting ended)",
+      "meeting-ended",
     );
     console.log("[smoke] Meeting ended.");
 
@@ -375,5 +390,5 @@ describe("real SDK smoke test", { skip: process.env.REAL_SDK_TEST !== "true" }, 
     console.log(
       `[smoke] Estimated cost: $${meeting.totalCostEstimate?.toFixed(2) ?? "unknown"}`,
     );
-  }, 300_000); // 5 minute timeout
+  }, 900_000); // 15 minute timeout
 });

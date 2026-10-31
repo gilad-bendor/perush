@@ -218,7 +218,6 @@ _DELIBERATION-ROOM/
 ├── CLAUDE-TOPICS/                                 ← spin-out detail files (see below)
 ├── package.json
 ├── package-lock.json
-├── .npmrc                                         ← legacy-peer-deps (the SDK's zod 4 peer)
 ├── tsconfig.json
 ├── tailwind.config.ts
 ├── playwright-test.ts                             ← Playwright CLI helper
@@ -276,7 +275,7 @@ _DELIBERATION-ROOM/
 │   │   ├── stub-sdk.test.ts
 │   │   └── types.test.ts
 │   ├── test-kit.ts                                ← node:test's describe/test + a Jest-style expect()
-│   ├── real-sdk-smoke.test.ts                     ← real SDK smoke test (~$0.10)
+│   ├── real-sdk-smoke.test.ts                     ← real SDK smoke test (~$0.20-0.40)
 │   └── e2e/
 │       ├── landing-page.test.ts
 │       ├── conversation.test.ts
@@ -302,7 +301,7 @@ npm run dev-model-haiku     # ClaudeCode is allowed to execute this
 # Run unit tests — ALWAYS use this exact pattern (captures full output for investigation without re-running):
 TMP=$(mktemp /tmp/node-test.XXXXX); npm test 2>&1 | tee "$TMP" | tail -8; echo "Full output file: $TMP"
 
-# Run real SDK smoke test (costs ~$0.10, requires claude CLI auth)
+# Run real SDK smoke test (costs ~$0.20-0.40 and ~5 minutes, requires claude CLI auth)
 npm run test:smoke
 
 # Open in browser
