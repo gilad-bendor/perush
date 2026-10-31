@@ -387,3 +387,11 @@ text is "Palm and Wine", `הדקל והיין`), *ṣarbatu* `צַפְצָפָה
 would make Judg 9:15); *ṣulūlu* `סכך`; *šanānu* `התחרה`, *šitnuntu* `התחרות`; *alālu* Gt `התהלל` [cognate]; *ḫaṭṭu*
 `מקל`; *ušurtu* `מַעַשְׂרוֹת?` (eBL "group of ten"; open); *rukūbu* `רְכוּב`, *birtu* `בירה`, *marru* "spade" `מָרָא`
 [cognates]; *lulīmu* `יַחְמוּר`; *arāmu* `עטה` / *katāmu* `כיסה`. eBL slips reported in `8-משלי-המחלוקת/project.md`.
+#### 12.4.3 OH (Ox and Horse, 217), 2026-10-31
+Formulas: `שור פתח את פיו ואמר, אל סוס, הנאדר בקרב, דיבר:` (Gilgameš's speech formula; the epithet from Gilg. VI 53) /
+`סוס פתח את פיו ואמר, אל שור המושלם דבר דיבר:` (*gitmālu* `מושלם`, Theodicy). Contestants *alpu* `שׁוֹר`, *sīsû* `סוּס`
+[cognate], no article. *tāḫāzu* `מלחמה`, *qablu* `קרב`, *tuqumtu* `תגרה`; the opening flood is *mīlu* `גאות` (no *abūbu*:
+no `מבול`), *gapāšu* `גאה`, *nagbu* `המעמקים`, *natbāku* `זרם` (`שטף` stays *raḫāṣu*'s), *ugāru* `שדמה`, *bamātu* `במות`
+[cognate], *urû* `אורווה` [cognate], *nādu* `נאד` [cognate], *katappû* `רסן`, *appātu* `מושכות`, *agālu* `עַיִר`,
+*tupšikku* `סל`, *rubṣu* `גללים`, *šimtu* (brand) `תו`. Kept as drafted (minor): `הנאדר בקרב` for the horse's *naʾdu*
+epithet; *qablu* `קרב` beside *qerbu* (vocalized); *emēdu* by sense (`השית`, `נשען`, `עמוס`).

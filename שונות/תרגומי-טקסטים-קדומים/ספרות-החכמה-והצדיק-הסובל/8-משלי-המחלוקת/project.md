@@ -295,3 +295,137 @@ As PV (`../../sources/eBL/Fable-Poplar/`); Etana (`../../אגדות-מלכים/`
 ### Lessons for the guidelines
 - In a fragmentary composite whose fragments' order is unknown, the section headings should name the fragment letters
   (a, b, c, d) so the reader sees that the order is the editor's; the intro says so.
+
+## OH
+
+### Scope
+The Series of Ox and Horse (eBL `L/2/9`, ed. and tr. E. Jiménez), all 217 labels in nine fragments (1, A+1–A+38,
+D+1–D+15, E+1–E+10, A+1'–A+32', B+0–B+38, B+1'–B+37', C+1–C+18, F+1–F+21, G+1–G+6); Nineveh library tablets only
+(NinNA1a–c, NinNA2–5; Lambert's A–G). Opening: Ištar (restored from the catch-line), Enlil hearing prayers, the spring
+flood (A+9–A+20), Ox and Horse's friendship turning into a quarrel (A+21–A+23), then alternating speeches; the end and
+any verdict are lost. Files `annotated-OH.rtl.md`, `translation--intro-OH.rtl.md`, generated `translation-OH.rtl.md`.
+
+### Sources consulted
+eBL edition, ATF, glossary, notes (`../../sources/eBL/Fable-Ox-and-Horse/`); Jiménez's English after each draft line;
+the corpus renderings, PV/PO, Gilgameš (VI 53 for the horse's epithet), the cross-corpus survey for every new word.
+
+### Decisions
+- **Contestants:** *alpu* = `שׁוֹר` (the cognate `אֲלָפִים` in the apparatus, A+21), *sisû* = `סוּס` [cognate]; names
+  without the article.
+- **The two speech formulas** (fixed, each ~9 copies, identical by `verify`):
+  Ox – `שור פתח את פיו ואמר, אל סוס, הנאדר בקרב, דיבר:` (Gilgameš's `X פתח את פיו ואמר, אל Y דיבר:` + the horse's
+  epithet copied from Gilgameš VI 53 `הסוס, הנאדר בקרב`; *naʾdu* is `נזהר` in the Theodicy – a recorded split);
+  Horse – `סוס פתח את פיו ואמר, אל שור המושלם דבר דיבר:` (Nergal and Ereškigal's pattern; *gitmālu* = `מושלם`).
+- **War words** one each: *tāḫāzu* `מלחמה`, *qablu* `קרב` (Gilgameš; *qerbu* "inside" is vocalized `קִרְבָּהּ` at A+19),
+  *tuqumtu* `תגרה`.
+- **The flood scene** (A+9–A+20 = A+27–A+32 in the Ox's mouth, copied line for line): *mīlu* `גאות`, *gapāšu* `גאה`,
+  *nagbu* `המעמקים`, *ṣuṣû* `סבך־קנים`, *tabālu* `סילק` (Š `הסיע`), *wabālu* `הוביל`, *qerbetu* `כרים`, *bamātu* `במות`
+  [cognate], *makāru* `הרווה`, *tamertu* `נאות`, *ugāru* `שדמה`, *ḫarru* `אפיק`, *natbāku* `זרם`, *raḫāṣu* `שטף`,
+  *šaddûʾa* `*סחף ההרים*`, *mēreštu* `מזרע`, *ruṭibtu* `רטיבות` [cognate], *ḫarbu* `חרבה` [cognate]. **No *abūbu***: no
+  `מבול`.
+- **Other words:** *rūʾūta epēšu* `עשה עמיתות`; *ṣālūtu* `מריבה`; *ulṣu* `עליצות`; *rîtu* `מרעית`; *rēš šatti* `ראש
+  השנה` [cognate]; *erēšu* `חרש`; *rāḫ kīdi* `מפרה הבר`; *darāsu* `דרס` [cognate]; *nakāru* D `נִכֵּר`; *šimtu* (brand)
+  `תו`; *lāsimu* `רץ`; *ēnu* `אֵנוּ`; *padānu* `משעול` (Gilgameš; SH's *sulû* `משעול` – recorded); *kadāru* `התנשא`;
+  *gīdu* `גיד` [cognate] (beside §3's *šerʾānu* `גיד`: one logogram SA, recorded); *katappû* `רסן`; *appātu* `מושכות`;
+  *balāṣu* `נעוץ` (Ludlul II 73); *ašṭu* `קשה`; *ḫarḫarru* `שרשרת`; *rubṣu* `גללים` (Ludlul II 106); *agālu* `עַיִר`;
+  *tupšikku* `סל`; *nādu* `נאד` [cognate]; *tayyāru* `חנינה`; *urû* `אורווה` [cognate]; *agurru* `לבנים שרופות`;
+  *kabāsu* `דרך`; *šarāḫu* D `מהודר`; *qadāšu* D `קידש` [cognate]; *šalālu* `שלל` [cognate]; *karāṣu*/*kerṣu*
+  `קרץ`/`קריצה` (Ludlul V 80); *igru* `שכר`; *mersu* `מֶרְסוּ`; *ešertu* `מעונות?`; *emēdu* stat. `עמוס` (a third
+  sense-split of *emēdu*).
+
+### Open decisions for the user
+1. The horse's epithet: Gilgameš's `הנאדר בקרב` (copied) vs the wisdom corpus's *naʾdu* = `נזהר` (Theodicy).
+2. *alpu* = `שור` (natural) vs the cognate `אֶלֶף` (poetic, Ps 8:8, Prov 14:4) – drafted `שור`.
+3. *qablu* `קרב` beside *qerbu* `קרב` in one file (homographs; DP had avoided `קרב` for war).
+4. *gīdātu* (Held) `גיד` vs Lambert's *šerʾānu*, which the corpus also renders `גיד`.
+5. *bamātu* `במות` [cognate] in its topographic sense – a reader may hear the cult "high places".
+
+### Progress log
+- 2026-10-31: drafted all 217 labels in nine saved sections (1–A+17, A+18–A+26, A+27–A+38, D+1–D+8, D+9–E+10,
+  A+1'–A+32', B+0–B+38, B+1'–B+37', C/F/G).
+- Pass (a) fidelity: brackets by the partial-restoration rule – about 30 lines unbracketed or narrowed where the root is
+  preserved (A+9, A+10, A+13, A+14, A+16, A+33, A+35, D+3, D+4, D+13, E+3, E+5, A+13', A+16', A+18', A+27'–A+29', C+11–C+16,
+  F+5, F+10, B+25'–B+28'); D+14 `[אתה]`; C+7 an added object removed.
+- Pass (b) consistency: the 18 formula lines and the flood repeats (A+15 = A+29, A+16 = A+31) identical by `verify`;
+  `natbāku` moved `שטף` → `זרם` to free `שטף` for *raḫāṣu*.
+- Pass (c) Hebrew: A+4' `כבשמלה` → `כשמלה`; A+2' `ו[תווך]`; F heading.
+- `verify OH --strict`: 0 problems; `check_bible_quotes.py`: 0 (one fixed: Qoh 1:15 `לִתְקֹן`). Seven footnotes.
+
+### Parallels index (OH)
+| Line | Akkadian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| A+10 | *pura[tti]* | פְּרָת | `וְהַנָּהָר הָרְבִיעִי הוּא פְרָת` (בראשית ב:יד) | [cognate] | The river names. |
+| A+11 | *idi]glat* | החִדֶּקֶל | `וְשֵׁם הַנָּהָר הַשְּׁלִישִׁי חִדֶּקֶל` (בראשית ב:יד) | [cognate] | Eden's rivers as the source of plenty. |
+| A+12 | *igdapšū mê nagbi ul īšû pāna u bāba* | גאו מי המעמקים, אין להם פנים ושער | `נִבְקְעוּ כָּל מַעְיְנֹת תְּהוֹם רַבָּה` (בראשית ז:יא) | [divergence] | **Key:** the waters of the deep "beyond measure" – a curse in Genesis, the yearly blessing here; the scene is *mīlu* (spring flood), not *abūbu*. Restored word. |
+| A+14 | *bamāti* | הבמות | `וְדֹרֵךְ עַל בָּמֳתֵי אָרֶץ` (עמוס ד:יג) | [cognate] | *bamātu* "open slopes" / `בָּמוֹת` in its topographic sense. |
+| A+14 | *tamerāti* | הנאות | `בִּנְאוֹת דֶּשֶׁא יַרְבִּיצֵנִי` (תהלים כג:ב) | [equivalent] | Pasture lands. |
+| A+13 | *qarbāti* | הכרים | `יִרְעֶה מִקְנֶיךָ בַּיּוֹם הַהוּא כַּר נִרְחָב` (ישעיהו ל:כג) | [equivalent] | Pasture after the rains. |
+| A+17 | *ana ruṭibti ittūrū* | לרטיבות נהפכו | `מִזֶּרֶם הָרִים יִרְטָבוּ` (איוב כד:ח) | [cognate] | *ruṭibtu* / רטב, from mountain torrents. |
+| A+17 | *ašrāt lā mērešti … ana ruṭibti ittūrū* | מקומות שאין בהם מזרע – לרטיבות נהפכו | `יְשֻׂשׂוּם מִדְבָּר וְצִיָּה; וְתָגֵל עֲרָבָה וְתִפְרַח כַּחֲבַצָּלֶת` (ישעיהו לה:א) | [equivalent] | The waste turned fertile. |
+| A+18 | *išīhū šammū* | גבהו העשבים | `מַצְמִיחַ חָצִיר לַבְּהֵמָה` (תהלים קד:יד) | [equivalent] | Grass for the beasts. |
+| A+21 | *alpu u sisû* | שׁוֹר וסוּס | `צֹנֶה וַאֲלָפִים כֻּלָּם` (תהלים ח:ח) | [cognate] | *alpu* / `אֶלֶף` (poetic "cattle"); *sisû* / `סוּס`. Also `בְּאֵין אֲלָפִים אֵבוּס בָּר` (משלי יד:ד). |
+| A+21 | *alpu* | שור | `יָדַע שׁוֹר קֹנֵהוּ וַחֲמוֹר אֵבוּס בְּעָלָיו` (ישעיהו א:ג) | [equivalent] | The faithful working ox. |
+| A+23 | *ippuša ṣālūta* | ועשו מריבה | `אַל נָא תְהִי מְרִיבָה בֵּינִי וּבֵינֶךָ וּבֵין רֹעַי וּבֵין רֹעֶיךָ` (בראשית יג:ח) | [divergence] | Plenty breeds a quarrel (Abram and Lot's herds). |
+| A+24 | *sisî naʾid qabli* | סוס, הנאדר בקרב | `וּמֵרָחוֹק יָרִיחַ מִלְחָמָה` (איוב לט:כה) | [equivalent] | The war-horse; the epithet = Gilgameš VI 53. |
+| A+26 | *ina rēš šatti* | בראש השנה | `בְּרֹאשׁ הַשָּׁנָה בֶּעָשׂוֹר לַחֹדֶשׁ` (יחזקאל מ:א) | [cognate] | The same phrase; the Babylonian year begins in spring (Nisan). |
+| A+34 | *idakkukū būrūnī* | מדלגים עגלינו | `וַיַּרְקִידֵם כְּמוֹ-עֵגֶל` (תהלים כט:ו) | [equivalent] | Gambolling calves. |
+| A+35 | *idarrisa* | דורס | — | [cognate] | *darāsu* / `דרס` (post-biblical Hebrew). |
+| A+2' | *šimtī* | תוי | `וְהִתְוִיתָ תָּו עַל מִצְחוֹת הָאֲנָשִׁים` (יחזקאל ט:ד) | [equivalent] | The owner's brand. |
+| A+4' | *kīma ṣubāti nalbušāku* | כשמלה לבוש אני | `הֲתַלְבִּישׁ צַוָּארוֹ רַעְמָה` (איוב לט:יט) | [equivalent] | The war-horse "clothed" (mane / bronze armour). |
+| A+5' | *mār lāsimi* | בן־הרץ | `וַיֹּאמֶר הַמֶּלֶךְ לָרָצִים הַנִּצָּבִים עָלָיו` (שמואל א כב:יז) | [equivalent] | The king's runners. |
+| A+6' | *šarru … rubû ul ibaʾʾū padāna* | מלך … ונשיא – לא יצעדו במשעול | `רַק לֹא יַרְבֶּה לּוֹ סוּסִים` (דברים יז:טז) | [divergence] | **Key:** the horse as the emblem of rule in Babylon; the Torah limits the king's horses. |
+| A+10' | *kal narkabti* | כל המרכבה | `וַיִּבְטְחוּ עַל רֶכֶב כִּי רָב` (ישעיהו לא:א) | [divergence] | The chariot as the army's trust; here the ox claims it is made of him. |
+| A+11'–A+12' | *ina maškīya … ina gīdātīya* | בעורותיי … בגידיי | `עוֹר וּבָשָׂר תַּלְבִּישֵׁנִי; וּבַעֲצָמוֹת וְגִידִים תְּשֹׂכְכֵנִי` (איוב י:יא) | [cognate] | *gīdu* / `גִּיד`; skin and sinews as building material (of a body / a chariot). |
+| A+13' | *išpat[a]* | האשפה | `עָלָיו תִּרְנֶה אַשְׁפָּה` (איוב לט:כג) | [cognate] | The quiver on the war-horse. |
+| A+14' | *arīrī* | כידונים | `לַהַב חֲנִית וְכִידוֹן` (איוב לט:כג) | [equivalent] | Weapons of the chariot. |
+| A+15' | *katappū* | רסני | `בְּמֶתֶג-וָרֶסֶן עֶדְיוֹ לִבְלוֹם` (תהלים לב:ט) | [equivalent] | **Key:** the horse ruled by the bridle, "without understanding" (A+16'–A+18'). |
+| A+17' | *balṣā-ma īnāka* | נעוצות – עיניך | — | — | = Ludlul II 73 (restoration; Hebrew copied). |
+| A+27' | *ašṭātā-ma alap* | קשה אתה, שור | `כִּי עַם קְשֵׁה עֹרֶף הוּא` (שמות לד:ט) | [equivalent] | The stubborn beast. |
+| A+29' | *qaqqaru rubuṣka* | הקרקע – גלליך | — | — | = Ludlul II 106 `בגלליי לנתי כשור` (restored word). |
+| B+9 | *dimtašu kīma mê nādi* | דמעתו כמי הנאד | `שִׂימָה דִמְעָתִי בְנֹאדֶךָ` (תהלים נו:ט) | [cognate] | *nādu* / `נֹאד` with *dimtu* / `דִּמְעָה`: tears and waterskin together. |
+| B+11 | *attā u agālu tazabbilā tupšikka* | אתה והעַיִר – תסבלו סלים | `הֲסִירוֹתִי מִסֵּבֶל שִׁכְמוֹ; כַּפָּיו מִדּוּד תַּעֲבֹרְנָה` (תהלים פא:ז) | [cognate] | *zabālu* / `סבל` and the labour basket; ox and ass as the working pair (`לֹא תַחֲרֹשׁ בְּשׁוֹר וּבַחֲמֹר יַחְדָּו`, דברים כב:י). |
+| C+4 | *nissaba hitbuṣat išebbi* | ניסבה נתפחה, תשבע | `וְרָב-תְּבוּאוֹת בְּכֹחַ שׁוֹר` (משלי יד:ד) | [equivalent] | **Key:** the ox's whole argument in one proverb. |
+| C+6 | *quddušat ana ilī* | מקודשת לאלים | — | [cognate] | *qadāšu* / `קִדֵּשׁ`. |
+| C+11 | *nadi urûʾa* | מוצבת אורוותי | `וַיְהִי לִשְׁלֹמֹה אַרְבָּעִים אֶלֶף אֻרְוֹת סוּסִים לְמֶרְכָּבוֹ` (מלכים א ה:ו) | [cognate] | *urû* / `אֻרְוָה`: the royal horse stalls. |
+| C+13 | *utaqqanū* | מתקנים | `מְעֻוָּת לֹא יוּכַל לִתְקֹן` (קהלת א:טו) | [cognate] | *taqānu* / `תקן`. |
+| C+16 | *[ul inn]akkal šīrī* | לא ייאכל בשרי | `כֹּל מַפְרֶסֶת פַּרְסָה וְשֹׁסַעַת שֶׁסַע פְּרָסֹת מַעֲלַת גֵּרָה בַּבְּהֵמָה אֹתָהּ תֹּאכֵלוּ` (ויקרא יא:ג) | [divergence] | Horse flesh not eaten: unclean in the Torah, too noble here. |
+| E+3 | *iṭṭira napšassu* | יחלץ את נפשו | `שֶׁקֶר הַסּוּס לִתְשׁוּעָה; וּבְרֹב חֵילוֹ לֹא יְמַלֵּט` (תהלים לג:יז) | [divergence] | The horse saves its rider (claim) / "a vain hope for victory" (psalm). Also `לֹא בִגְבוּרַת הַסּוּס יֶחְפָּץ` (תהלים קמז:י). |
+| B+28' | *ikruṣu keressun* | קרצו את קריצתן | `מֵחֹמֶר קֹרַצְתִּי גַם-אָנִי` (איוב לג:ו) | [cognate] | *karāṣu* / `קרץ`: creation from pinched clay (= Ludlul V 80). |
+| F+19 | *ašallal* | אשלול | — | [cognate] | *šalālu* / `שָׁלַל`. |
+| F+10 | *ellā šullumā* | טהורים, שלמים | — | [equivalent] | Unblemished offerings (the Bible's `תָּמִים`, reserved here). |
+
+### The text on its own terms
+- **The spring flood as blessing** (A+9–A+20, A+27–A+32): springs, Euphrates and Tigris, snow-melt torrents, reed
+  thickets swept away, wasteland turned moist – the agricultural year of Babylonia; "the head of the year" is spring.
+- **Satiety breeds quarrel** (A+21–A+23): friends grown fat on pasture "rejoice" and start a dispute – the genre framed
+  as sport.
+- **Field against chariot**: the ox is "son of the meadow" (A+35), plough and "fertiliser of the steppe" (A+32), source
+  of grain consecrated to the gods (C+4–C+6); the horse is the king's: courier, governor, priest and prince ride it
+  (A+5'–A+6'), its stable stands before the king, attendants choose its greens, it treads baked bricks (C+10–C+14).
+- **Materials of war**: the ox's hide and sinews make the chariot, the reins, the quiver (A+10'–A+15') – Assyrian
+  technology argued from below.
+- **Insults of rank**: the ox eats bran and lies in dung, chained, carries panniers with the donkey, is "a house-born
+  slave" (A+27'–A+29', B+7, B+11); the horse is "untrustworthy", "strange-looking", blinkered (A+16'–A+18', B+14–B+15).
+- **Food taboos as status**: the horse's flesh "is not eaten" (C+16).
+- **Prayer language** in the ox's mouth ("let me bless", "decree my welfare", B+25'–B+26') and creation language in
+  the horse's ("pinched off the clay", "unnamed", "names", B+28'–B+30').
+- **King and prince** appear near the end (F+2), perhaps as judges, as Enlil in the Sumerian contests.
+
+### Lines shared with other files
+- The two speech formulas (18 lines), identical throughout; the Ox formula = Gilgameš's pattern with Gilgameš VI 53's
+  epithet; the Horse formula = Nergal and Ereškigal's pattern.
+- A+15 = A+29, A+16 = A+31 (identical); A+12/A+27, A+13/A+28, A+14/A+30, A+17/A+32 (cf., the shared words identical).
+- A+17' ← Ludlul II 73; A+29' ~ Ludlul II 106; B+28' ← Ludlul V 80 (Hebrew copied).
+
+### Proposals for the shared renderings
+- Formulas: `שור פתח את פיו ואמר, אל סוס, הנאדר בקרב, דיבר:` / `סוס פתח את פיו ואמר, אל שור המושלם דבר דיבר:`.
+- *alpu* `שׁוֹר`, *sisû* `סוּס`; *tāḫāzu* `מלחמה`, *qablu* `קרב`, *tuqumtu* `תגרה`; *urû* `אורווה`; *nādu* `נאד`; *gīdu*
+  `גיד`; *katappû* `רסן`, *appātu* `מושכות`; *bamātu* `במות`; *qerbetu* `כרים`; *tamertu* `נאות`; *ṣuṣû* `סבך־קנים`;
+  *natbāku* `זרם`, *raḫāṣu* `שטף`; *ḫarbu* `חרבה`; *ruṭibtu* `רטיבות`; *darāsu* `דרס`; *agālu* `עַיִר`; *tupšikku* `סל`;
+  *šalālu* `שלל`; *qadāšu* D `קידש`; *taqānu* D `תקן`; *šimtu* (brand) `תו`.
+
+### Lessons for the guidelines
+- A brief's "the series opens with a flood" must be checked against the lemma: the flood here is *mīlu*, the yearly
+  spring flood, not *abūbu*; rendering it `מבול` would have manufactured a Gen 6–9 echo.
+- A recurring speech formula restored in most copies should be fixed with its bracket placement rule (Hebrew order ≠
+  Akkadian order: a broken *izzakkar* goes to the end of the Hebrew line in brackets).
