@@ -171,6 +171,8 @@ mid. "stand" `עָמַד`; *eš-* "sit" `יָשַׁב` / "be" `הָיָה`; *ḫ
 | *ḫarnink-* | `הִשְׁמִיד` (all myths, M2) | the Laws' `הִשְׁחִית` (HL2 107.2) | `השחית` is reserved in the myths (§H3). |
 | *malai-*, *zinna-*, *kanešš-*, *tiya-*, *ḫulla-* | – | – | Unified in this pass: `אִשֵּׁר` (HE 4:10, KU 276), `סִיֵּם` (KU 50), `הִכִּיר` (HE 4:16), `צָעַד` (HE 6:22), `הֵבִיס` (UL 3.1:254). |
 
+- **2026-11-02 harmonization** (the Round 5 finalization, `../harmonization--2026-11-02.md`): no myth `>` line changed. The tool: F8 (*pāi* `ייתן`) scoped to the law keys (its escapes removed from KU 126, HE 4:44, HE 22:9, AP 1:17–19); F18 requires *aššuli* in its formula (escape removed from SR 10.1.2); *kupri-* licenses `כֹּפֶר` (HE 25:15, 25:17 [cognate, Gen 6:14]; escapes removed). The §H8 revisions applied to the dossier's IL; the dossier now also copies HE as HD (60 lines, `verify HE`). Kept by sense, with reasons in the table: SISKUR `מנחה` (Ḫedammu) / `טקס` (the rituals, EN SISKUR), *ḫarnink-* `השמיד` (myths) / `השחית` (the Laws), and the M3 splits.
+
 ## H2. Names (machine-read; the myth texts only)
 | Source (regex) | Hebrew | ★ | Note |
 |---|---|---|---|

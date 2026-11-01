@@ -239,6 +239,33 @@ The plan named ten inscriptions; seven had an open base reachable from the cloud
 ### Learned on Round 5 run 5 – the Cuthaean Legend, the Poor Man of Nippur, the fables (2026-10-31, `אגדות-מלכים/` project 4; `ספרות-החכמה-והצדיק-הסובל/` projects 7–8)
 All seven eBL chapters of the plan row were fetched again (eleven chapters: the Cuthaean Legend has five), 960 labels, no empty **N:** lines. The coordinator placed the Cuthaean Legend in the kings corpus as Etana's sibling (key CL of `kings_tools.py`, whose eBL reader was generalized rather than copied) and the Poor Man and the five fables in the wisdom corpus (`wisdom_tools.py` reads eBL natively; `קולות-היום-יום/`'s tool reads no eBL). The whole run fitted in one quota range A (06:30–11:29 UTC), one agent at a time: one translator for the Cuthaean Legend resumed through four parts (SB 1–93, SB 94–180, MB A–B, OB I–II; the fullest version first, the others copying its Hebrew), one for the Poor Man, one for the fables resumed through three parts (Palm and Vine + the Poplar, Ox and Horse, the Spider + the Wren); the coordinator merged, recorded and committed after every part. The translators revised five pre-set rows (*wuʾʾuru* `צִוָּה`, *guḫšû* `מִתְקַן־קָנֶה`, *umma* `לאמור`, Anunītu with one n, Subartu) and caught three false echoes of the English (Judg 9:15's "refuge", Baal-zebub's "master of flies", Job 1:1's "there once was"), and a gate tripped by a place name (Magan / `גן`). An independent fidelity reviewer then went through all 960 entries (one agent, resumed per batch): 56 fixes, all brackets but one (SB 173 `משאלות`, a word sharing the reserved root שאל) – and it found the convention line of the wisdom files contradicting the partial-restoration rule (now: only the lost letters are bracketed); PM 77/79 lost a Hebrew-only שאל pun (*izzimtu* `מַאֲוַי`).
 
+- **Round 5, the round's account (2026-10-30 → 11-02; a parent session orchestrating child sessions, the first round on
+  branches and under the quota's two time ranges, guidelines §5.1–§5.1c):** six runs, all done (first drafts), about
+  8,100 lines – run 1 Vedic Genesis (the new corpus `הוודה-והאווסטה/`, 1,312), run 2 the Hurro-Hittite myths (the new
+  corpus `מיתוסים-חתיים-וחוריים/`, 3,164), run 3 the Ugaritic epics and rituals (`מיתוסים-אוגריתיים/` 4–7, 1,424), run 4
+  "Words in stone" (the new corpus `מילים-באבן/`, 113 entries), run 5 the Cuthaean Legend, the Poor Man of Nippur and the
+  fables (960), run 6 the Egyptian tales and BD 125 (`חכמה-ובריאה-במצרים/` 4–8, 1,130).
+  - **The ranges:** runs 1–5 and the first half of run 6 ran in range A (Shabbat, 2026-10-30/31), one at a time, each a
+    child session on its own branch, squashed into `translation-round-5` at its finish; range A ended at 11:29 UTC on
+    10-31 with run 6 half done – it committed, pushed and sent `RUN PAUSED`; the parent resumed it at range B's start
+    (2026-11-01 22:02 UTC), where it ran three translators at once. The VM rebooted during the pause; nothing was lost
+    (everything pushed). No quota warning at any gate of the round.
+  - **The rewritten main:** on 2026-10-31/11-01 `main` was rewritten (Round 4 squashed as `10c0342`) and brought the
+    user's print layout (`layout/`, a `translation.rtl.layout.ts` beside each of the 44 older translations); the parent
+    merged it into the round's branch (`5e423a6`) before the finalization. The layout guidelines do not require a
+    module per translation: Round 5's 27 new translations print by the folder's default rule, with no overflowing row,
+    and wait for a layout session.
+  - **The finalization** (2026-11-01 23:26 → 11-02, a child of the orchestrator, `translation-round-5-run-7`, range B,
+    two apply agents at once on independent files, Opus): the harmonization (`harmonization--2026-11-02.md`: eight
+    rows, two new rules – the echo tag on proper names, one Hebrew for a cognate pair of cousin languages – and the kept
+    splits with reasons; most of the about forty items were cross-language or by sense, settled by the 2026-10-30
+    principles without a change); Ḫedammu (60 lines) into the fifth-day dossier with an identity check in
+    `hittite_tools.py` (`DOSSIER = {IL, HE}`); the dossier's Illuyanka revisions and Westcar's notation; every verifier
+    (45 runs) and `check_bible_quotes.py` over 1,011 files. An apply agent found git-ignored sources missing and ran a
+    second `sources_sync.py fetch` beside the lead's; the first verifier run failed five verifiers on sources the
+    fetch had not restored yet (eBL, CUC) – rerun after it. The rows tool needed `npm ci` in `_RTL-EDITOR` and the
+    cloud's own Playwright (`tools.md`).
+
 ## H3. Lessons learned (formerly §11)
 
 - Search the **digital corpora first** (eBL, ORACC, SEAL, ETCSL). In 2026 they are often more current than any printed edition: eBL's Gilg. XI includes joins and NABU notes from 2026.
@@ -342,3 +369,4 @@ The accounts, as they stood in §5.1:
 - 2026-10-31 (Round 5 run 4): "Words in stone" – the new corpus `מילים-באבן/` (the Mesha stele, the ʿAjrud blessings, Ketef Hinnom II, the Mesad Hashavyahu ostracon, the Gezer calendar – readings, not translations; the Marseille and Carthage tariffs – translated; 113 entries); `stone_tools.py` (a letter-identity verifier for readings); guidelines §5.2 "Northwest Semitic inscriptions" and §6.7 "The inscriptions corpus"; Fekheriye, Sefire, Deir ʿAllā, el-Qom recorded (`sources/_records-only--Words-in-stone/`).
 - 2026-10-31 (Round 5 run 5): the Cuthaean Legend of Narām-Sîn (all five eBL versions, 345; `אגדות-מלכים/4-אגדת-כותה/`, `kings_tools.py` key CL, renderings §11), the Poor Man of Nippur (161; `ספרות-החכמה-והצדיק-הסובל/7-העני-מניפור/`) and the five fables (454; `…/8-משלי-המחלוקת/`; renderings §12); guidelines §5.2 "Mesopotamian literature from eBL" and §6.7 (two entries); `sources-registry.md` §4.4y; `tools.md`; 11 eBL items in `MANIFEST.json`.
 - 2026-11-01 (Round 5 run 6): the Egyptian tales and BD 125 – projects 4–8 of `חכמה-ובריאה-במצרים/` (the Two Brothers 185, pWestcar in full 305 – its 2,21–4,7 the fifth-day dossier's WC, identical by script –, BD 125 on pNu 115, Sinuhe R 1–23 + B 1–311 334, the Shipwrecked Sailor 191: 1,130 lines), AED-TEI; `egypt_tools.py` keys TB WE BD SI SS, the `TALES` gates, `build KEY`; renderings §11–§11.13; guidelines §5.2 "Egyptian tales" and §6.7; one translator per text, three in parallel in range B, an independent fidelity reviewer per text (8 + 43 + 7 + 1 + 14 = 73 lines fixed); paused once at the end of range A (2026-10-31 11:16 UTC) and resumed in range B. Report `reports/round-5/run-6.md`.
+- 2026-11-02 (Round 5 finalization): **Round 5 complete.** The cross-corpus harmonization `harmonization--2026-11-02.md` (Av. *dātar* `מעמיד`, *aggu* / *aggiš* `קצף`, *kupri-* `כֹּפֶר` licensed, the Hittite F8 / F18 scoped, Westcar's notation, the dossier's Illuyanka; two rules: the echo tag on proper names – guidelines §6.4 – and cousin languages, §6.7); Ḫedammu (HD, 60 lines) in the fifth-day dossier, `hittite_tools.py verify HE`; guidelines §5.2 "The Round 5 finalization" (two lessons); `tools.md` (HD, `DOSSIER`, `[keys: …]`, the rows tool in the cloud); STATUS, the plan's completion line and "Later" list; report `reports/round-5/final.md`.

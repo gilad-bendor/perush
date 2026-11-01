@@ -174,6 +174,8 @@ the blood and the evil `הכניס`; QATI `תַּם`; *pāi* as a command `תן`
 escapes are kept rather than narrowing F8, which the Laws need). **Cruxes for the review:** AM 191 *laḫḫiya*, 216–220, 228 DAM "my
 wife" in a woman's prayer, 235, 248 *šuppa-*, 257; AM2 17 *arḫa arai-*.
 
+- **2026-11-02 harmonization** (the Round 5 finalization, `../harmonization--2026-11-02.md`): no ritual `>` line changed; F8 no longer applies to the rituals (AM 117–118's escapes removed); F18 requires *aššuli* in its formula; SISKUR `טקס` kept (Ḫedammu's offerings `מנחה`, by sense).
+
 ## H2. Names (machine-read; the ritual texts)
 | Source (regex) | Hebrew | ★ | Note |
 |---|---|---|---|
