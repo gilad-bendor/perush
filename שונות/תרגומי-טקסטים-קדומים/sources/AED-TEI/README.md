@@ -34,7 +34,13 @@
 | `PT-486--West-wall/`, `PT-486--East-wall/` | PT 486 (Pepi I; Pepi II) | ZAV2GQBVWBDSBOQIX4JNXP3DYI, 43NPRIN3UJGCJN7UOHQKGNYJLA | 3, 9 | project 2 (PT486) |
 | `PT-527--West-wall/` | PT 527 (Merenre) | UY2LJNHE4JEFLMATP2CN3YLXH4 | 4 | project 2 (PT527) |
 | `PT-600--East-wall/` | PT 600 (Pepi II) | NHY7Q7ERPNEWTK5BWG7KELURNU | 7 | project 2 (PT600) |
-| `Westcar--pBerlin-P-3033/` | Die Erzählungen des pWestcar | J4EXGHLCL5DR7JHSPDWTVEKMDY | 305 | (the wax crocodile, 2.x–4.x: for the fifth-day dossier) |
+| `Westcar--pBerlin-P-3033/` | Die Erzählungen des pWestcar | J4EXGHLCL5DR7JHSPDWTVEKMDY | 305 | the dossier's WC (2,21–4,7); the whole text: project 5 (WE; Round 5 run 6) |
+| `Two-Brothers--pDOrbiney-BM-EA-10183/` | Recto: Das Zweibrüdermärchen (pD'Orbiney = pBM EA 10183) | C6HNRC4K7FAYBHNDS3LV24EANI | 185 (`1,1`–`20,1`) | project 4 (TB; Round 5 run 6) |
+| `Sinuhe--pBerlin-P-10499-R/`, `Sinuhe--pBerlin-P-3022-B/` | Sinuhe (R; B with the Amherst fragments) | QZCOZWR7YVAGNLPTMZIMHL6TYQ, JIPPXMXOTNCQDIKJIQVYWMKOWU | R 1–23 used + B 1–311 | project 7 (SI) |
+| `Sinuhe--oAshmolean-1945.40-AOS/` | Sinuhe (the Ashmolean ostracon) | RP2F6BGNDBAARDBNDHGFSFPIEM | 129 | witness (SI) |
+| `Shipwrecked-Sailor--pPetersburg-1115/` | Die Geschichte des Schiffbrüchigen | QUFWZTEPLRE4NHKCPAJXGSAOSQ | 191 | project 8 (SS) |
+| `BD-125--pNu-BM-EA-10477/` | Tb 125 (pNu) | FGGZPRDYGBHV3AFOH5EXBPKDQY | 115 | project 6 (BD) |
+| `BD-125--pJuja-CG-51189/`, `BD-125--pMaiherperi-CG-24095/` | Tb 125 (pJuja; pMaiherperi) | ZJ45MN6I2BEBXIOF4E2OH4PK64, S4KP2OGKXFCPPK7Q5MHFEE6R7A | 121, 98 | witnesses (BD) |
 | `Bremner-Rhind--4-Overthrowing-Apophis/`, `Bremner-Rhind--5-Names-of-Apophis/` | pBM 10188: the Book of Overthrowing Apophis; the Names of Apophis | A2PTGDCYB5E4XK6OORW6V4QHOE, 2Z3OHH5EKZEUTAFMAIWR2PXTGE | 264, 60 | (the Apophis spells: for the fifth-day dossier) |
 
 - **Line numbering:** the `<lb n="[…]"/>` of each manuscript (page.line for papyri; columns for the Cow; the wall,
