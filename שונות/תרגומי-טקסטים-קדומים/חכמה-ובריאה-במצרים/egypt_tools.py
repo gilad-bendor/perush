@@ -918,6 +918,8 @@ def build(keys=None):
     bad = 0
     for proj in PROJECTS:
         ks = [k for k in present_keys() if UNITS[k][0] == proj]
+        if keys and not any(k in keys for k in ks):   # `build KEY`: only that KEY's project (parallel translators)
+            continue
         if not ks:
             continue
         if len(ks) == 1 and proj != P2:
@@ -939,7 +941,7 @@ def build(keys=None):
         if sorted(set(refs)) != sorted(defs) or len(refs) != len(set(refs)):
             print(f"{proj}: footnote mismatch ({len(refs)} refs, {len(defs)} defs)")
             bad += 1
-    ok = verify(present_keys())
+    ok = verify(pk if keys else present_keys())
     return ok and bad == 0
 
 
