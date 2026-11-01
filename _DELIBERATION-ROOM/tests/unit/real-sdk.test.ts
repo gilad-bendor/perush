@@ -5,9 +5,9 @@
  * Does NOT make real API calls — uses the stub SDK for actual query tests.
  */
 
-import { describe, test, expect } from "bun:test";
-import { _stripStubResponseBlocks, realQuery } from "../../src/real-sdk";
-import { USE_STUB_SDK } from "../../src/config";
+import { describe, test, expect } from "../test-kit.ts";
+import { _stripStubResponseBlocks, realQuery } from "../../src/real-sdk.ts";
+import { USE_STUB_SDK } from "../../src/config.ts";
 
 describe("stripStubResponseBlocks", () => {
   test("passes through prompt with no stub blocks", () => {

@@ -1,0 +1,23 @@
+{
+  // The browser code (public/), checked as JavaScript; the esm.sh imports are typed from node_modules.
+  // The server side has its own: ../tsconfig.json.
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "typeRoots": ["../node_modules", "../node_modules/@types"],
+    "types": [],
+    "checkJs": true,
+    "allowJs": true,
+    "paths": {
+      "https://esm.sh/codemirror": ["../node_modules/codemirror"],
+      "https://esm.sh/@codemirror/*": ["../node_modules/@codemirror/*"],
+      "https://esm.sh/@lezer/*": ["../node_modules/@lezer/*"]
+    }
+  },
+  "include": ["**/*"]
+}

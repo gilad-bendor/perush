@@ -22,8 +22,9 @@
 // Every folder of the mirror, the root included, also gets an index.html listing its pages (see
 // folder-index.ts). An index depends only on which pages exist, so it is rewritten whenever its
 // content would change, rather than by date - and removed, with its folder, once no page is left under it.
-// The indexes list only the pages whose file git does not ignore, and mark as technical those a
-// .printignore names. docs/index.html, the page GitHub Pages opens with, is the root's index again.
+// The indexes list only the pages whose file git does not ignore. A file whose layout says `output: "none"`
+// (layout-schema.ts) - a technical one - gets no page at all. docs/index.html, the page GitHub Pages
+// opens with, is the root's index again.
 //
 // Whatever `companion` is set to (the PDF mirror - see pdf-mirror.ts) hears of every page synced, and
 // of every sweep.
@@ -31,16 +32,21 @@
 // Nothing here decides *when* to look; server.ts calls scheduleSync() for a file the watcher saw
 // change, and syncTree() at startup and on its periodic rescan.
 
+import { execFile } from "child_process";
 import { dirname, join, posix, relative } from "path";
-import { readdir, readFile, rmdir, stat, unlink, utimes } from "fs/promises";
+import { promisify } from "util";
+import { copyFile, mkdir, readdir, readFile, rmdir, stat, unlink, utimes } from "fs/promises";
 import type { Stats } from "fs";
-import { renderMarkdownPage } from "./md-to-html";
-import type { Breadcrumb } from "./md-to-html";
-import { expandIncludes, hasIncludeDirective } from "./includes";
-import { FOLDER_INDEX_NAME, folderIndexPages, mirrorSummary, siteIndexPage } from "./folder-index";
-import type { MirrorSummary } from "./folder-index";
-import { writeFileSafe } from "../write-file-safe";
-import type { PageCompanion } from "./pdf-mirror";
+import { renderMarkdownPage } from "./md-to-html.ts";
+import type { Breadcrumb } from "./md-to-html.ts";
+import { errorMarkerLine, expandIncludes, hasIncludeDirective } from "./includes.ts";
+import { DEFAULT_PDF_SETTINGS, layoutChainFor, layoutFor, outputOf } from "./layout-module.ts";
+import { FONT_FACES, FONT_FILES, FONTS_DIR } from "./text-measure.ts";
+
+import { FOLDER_INDEX_NAME, folderIndexPages, mirrorSummary, siteIndexPage } from "./folder-index.ts";
+import type { MirrorSummary } from "./folder-index.ts";
+import { writeFileSafe } from "../write-file-safe.ts";
+import type { PageCompanion } from "./pdf-mirror.ts";
 
 /** The mirror's folder, relative to the root of the served tree - under docs/, which GitHub Pages serves. */
 export const HTML_MIRROR_DIR = "docs/_HTML-FROM-MD";
@@ -62,26 +68,52 @@ export const SITE_INDEX_PATH = posix.join(SITE_DIR, FOLDER_INDEX_NAME);
  * is for whoever finds it.
  */
 export const NO_JEKYLL_PATH = posix.join(SITE_DIR, ".nojekyll");
+/** Where the pages' font is served from (text-measure.ts's fonts/, copied) - beside the mirrors, in docs/. */
+export const SITE_FONTS_DIR = posix.join(SITE_DIR, "_fonts");
+
 const NO_JEKYLL_TEXT = "Tells GitHub Pages to serve docs/ as is, without Jekyll - which would drop every name starting with \"_\".\n"
     + "Written by _RTL-EDITOR (html-mirror.ts).\n";
 
+/** What a mirror wrote and deleted under docs/ since it was last asked - for the "in sync" lines of server.ts. */
+export type SiteChanges = { written: number; deleted: number; since: number | null };
+
+const noChanges = (): SiteChanges => ({ written: 0, deleted: 0, since: null });
+/** Counted by logSiteChange(): a PDF is the PDF mirror's, anything else - its indexes too - this one's. */
+const siteChanges = { html: noChanges(), pdf: noChanges() };
+
 /**
  * Says on the console what was changed under docs/ - every file written or deleted there, and every
- * folder deleted - by either mirror.
+ * folder deleted - by either mirror. And counts the files, for takeSiteChanges().
  * @param fullPath  as joined onto `root`
  */
 export function logSiteChange(root: string, change: "wrote" | "deleted" | "deleted folder", fullPath: string): void {
     console.log(`docs/: ${change} ${relative(root, fullPath)}`);
+    if (change === "deleted folder") return;
+    const counts = siteChanges[fullPath.endsWith(".pdf") ? "pdf" : "html"];
+    counts[change === "wrote" ? "written" : "deleted"]++;
+    counts.since ??= Date.now();
+}
+
+/** What a mirror wrote and deleted since the last call - and starts counting again. */
+export function takeSiteChanges(mirror: "html" | "pdf"): SiteChanges {
+    const counts = siteChanges[mirror];
+    siteChanges[mirror] = noChanges();
+    return counts;
 }
 
 /** The code a page depends on besides its file - a change to any of them makes every page stale. */
 const RENDERER_FILES = [
-    join(import.meta.dir, "md-to-html.ts"),
-    join(import.meta.dir, "html-mirror.ts"),
-    join(import.meta.dir, "includes.ts"),
-    join(import.meta.dir, "../../public/src/tables.js"),
-    join(import.meta.dir, "../../public/src/pseudo-tags.js"),
-    join(import.meta.dir, "../../public/src/links.js"),
+    join(import.meta.dirname, "md-to-html.ts"),
+    join(import.meta.dirname, "html-mirror.ts"),
+    join(import.meta.dirname, "includes.ts"),
+    join(import.meta.dirname, "line-rows.ts"),
+    join(import.meta.dirname, "layout-module.ts"),
+    join(import.meta.dirname, "layout-marks.ts"),
+    join(import.meta.dirname, "text-measure.ts"),
+    ...Object.values(FONT_FACES).flatMap(face => [face.main, face.fallback]).map(file => join(FONTS_DIR, file)),
+    join(import.meta.dirname, "../../public/src/tables.js"),
+    join(import.meta.dirname, "../../public/src/pseudo-tags.js"),
+    join(import.meta.dirname, "../../public/src/links.js"),
 ];
 
 /** How long a changed file is left to settle before its page is rendered - one render for a burst of saves. */
@@ -107,10 +139,11 @@ export function isMirroredFile(mdPath: string): boolean {
 /**
  * Where the page of a Markdown file goes, relative to the root of the served tree.
  *
- * A file named `index.md` would take its folder's index.html, so its page is `index.md.html`.
+ * A file named `index.md` would take its folder's index.html, so its page is `index.md.html` - and so is
+ * `INDEX.md`'s, or `Index.md`'s: a disk that ignores case (macOS's, by default) takes `INDEX.html` for `index.html`.
  */
 export function htmlPathFor(mdPath: string): string {
-    const pagePath = posix.basename(mdPath) === "index.md" ? `${mdPath}.html` : mdPath.replace(/\.md$/, ".html");
+    const pagePath = posix.basename(mdPath).toLowerCase() === "index.md" ? `${mdPath}.html` : mdPath.replace(/\.md$/, ".html");
     return posix.join(HTML_MIRROR_DIR, pagePath);
 }
 
@@ -188,12 +221,40 @@ export class HtmlMirror {
     private readonly dependencies = new Map<string, Set<string>>();
     /** The same, the other way round: md path -> the pages that have to be rebuilt when it changes. */
     private readonly dependents = new Map<string, Set<string>>();
+    /** Syncs started by a timer - of one file, or of the indexes - that have not finished yet. */
+    private running = 0;
+    /** Called, soon, whenever a piece of this mirror's work is done - to ask `busy` whether it was the last one. */
+    onSettled: (() => void) | null = null;
 
     /**
      * @param root             the root of the served tree
      * @param rendererMtimeMs  pages older than this are stale whatever their file says
      */
-    constructor(private readonly root: string, private readonly rendererMtimeMs: number) {}
+    private readonly root: string;
+    private readonly rendererMtimeMs: number;
+
+    constructor(root: string, rendererMtimeMs: number) {
+        this.root = root;
+        this.rendererMtimeMs = rendererMtimeMs;
+    }
+
+    /**
+     * Has the mirror work scheduled or under way - a file's sync, the indexes', a sweep? Its PDFs aside:
+     * PdfMirror.idle() says when those are done.
+     */
+    get busy(): boolean {
+        return this.timers.size > 0 || this.running > 0 || this.sweeping !== null || this.indexTimer !== undefined;
+    }
+
+    /** How many files have a page - null until the first sweep has found out. */
+    get pageCount(): number | null {
+        return this.pagedFiles?.size ?? null;
+    }
+
+    private settled(): void {
+        // Not at once: the work that just ended may be about to schedule more (notePage() the indexes).
+        if (this.onSettled) setTimeout(() => this.onSettled?.(), 0);
+    }
 
     /** A mirror whose pages go stale whenever the rendering code changes. */
     static async create(root: string): Promise<HtmlMirror> {
@@ -221,9 +282,14 @@ export class HtmlMirror {
         clearTimeout(this.timers.get(mdPath));
         this.timers.set(mdPath, setTimeout(() => {
             this.timers.delete(mdPath);
+            this.running++;
             this.syncFile(mdPath)
                 .then(outcome => this.notePage(mdPath, outcome !== "removed" && outcome !== "absent"))
-                .catch(error => console.error(`HTML mirror: cannot sync ${mdPath}:`, error));
+                .catch(error => console.error(`HTML mirror: cannot sync ${mdPath}:`, error))
+                .finally(() => {
+                    this.running--;
+                    this.settled();
+                });
         }, SYNC_DEBOUNCE_MS));
     }
 
@@ -240,7 +306,14 @@ export class HtmlMirror {
         if (!changed) return;
         clearTimeout(this.indexTimer);
         this.indexTimer = setTimeout(() => {
-            this.syncIndexes().catch(error => console.error("HTML mirror: cannot sync the indexes:", error));
+            this.indexTimer = undefined;
+            this.running++;
+            this.syncIndexes()
+                .catch(error => console.error("HTML mirror: cannot sync the indexes:", error))
+                .finally(() => {
+                    this.running--;
+                    this.settled();
+                });
         }, INDEX_DEBOUNCE_MS);
     }
 
@@ -261,11 +334,39 @@ export class HtmlMirror {
                 this.recordDependencies(mdPath, null);
                 return await this.removePage(pagePath) ? "removed" : "absent";
             }
+            // A file its layout gives no page - which it watches still, as a change to it may give one.
+            if (await outputOf(this.root, mdPath) === "none") {
+                this.recordDependencies(mdPath, new Set([mdPath, ...layoutChainFor(mdPath)]));
+                return await this.removePage(pagePath) ? "removed" : "absent";
+            }
             const page = await statOrNull(pagePath);
             if (attempt === 0 && page && await this.isFresh(mdPath, page.mtimeMs)) return "fresh";
 
-            const content = await readFile(sourcePath, "utf-8");
-            const expanded = await expandIncludes(mdPath, content, path => this.loadMarkdown(path));
+            // A file is read with its layout (layout-module.ts) - for its own page and when it is embedded
+            // alike - and its folder's layout module is one more thing the page is made from.
+            const layoutPaths = new Set<string>();
+            const layoutErrors: { file: string, message: string }[] = [];
+            const withLayout = async (path: string, text: string, ownPage: boolean) => {
+                const laidOut = await layoutFor(this.root, path, text, ownPage);
+                for (const layoutPath of laidOut.layoutPaths) layoutPaths.add(layoutPath);
+                for (const problem of laidOut.problems) {
+                    layoutErrors.push(problem);
+                    console.error(`HTML mirror: a layout of ${path} is ignored - ${problem.file}: ${problem.message}`);
+                }
+                return laidOut;
+            };
+            const own = await withLayout(mdPath, await readFile(sourcePath, "utf-8"), true);
+            const content = own.content;
+            const expanded = await expandIncludes(mdPath, content, async path => {
+                const text = await this.loadMarkdown(path);
+                return text === null ? null : (await withLayout(path, text, false)).content;
+            });
+            for (const layoutPath of layoutPaths) expanded.dependencies.add(layoutPath);
+            // A layout that went wrong is said at the top of the page, as a faulty embedding is.
+            for (const { file, message } of layoutErrors) {
+                expanded.errors.push({ id: `שגיאה-${expanded.errors.length + 1}`, file, line: 1, message: `העימוד לא הוחל: ${message}` });
+                expanded.content = `${errorMarkerLine(expanded.errors.length - 1)}\n\n${expanded.content}`;
+            }
             this.recordDependencies(mdPath, expanded.dependencies);
             const html = renderMarkdownPage(expanded.content, mdPath, {
                 hrefFor: href => mirroredHref(mdPath, href),
@@ -273,6 +374,9 @@ export class HtmlMirror {
                 breadcrumbs: pageBreadcrumbs(mdPath),
                 // A file made of others - הדפסה.rtl.md - is a book, and has its own index if it wants one.
                 pageIndex: !hasIncludeDirective(content),
+                fonts: `${"../".repeat(mdPath.split("/").length)}${posix.basename(SITE_FONTS_DIR)}/`,
+                page: own.resolved?.page ?? undefined,
+                pdf: own.resolved?.pdf ?? DEFAULT_PDF_SETTINGS,
             });
 
             let outcome: SyncOutcome;
@@ -348,16 +452,26 @@ export class HtmlMirror {
      */
     syncTree(treePaths: Iterable<string>): Promise<SweepResult> {
         // One sweep at a time: a slow first one must not be joined by the periodic one.
-        this.sweeping ??= this.sweep([...treePaths]).finally(() => this.sweeping = null);
+        this.sweeping ??= this.sweep([...treePaths]).finally(() => {
+            this.sweeping = null;
+            this.settled();
+        });
         return this.sweeping;
     }
 
     private async sweep(treePaths: string[]): Promise<SweepResult> {
-        const mdPaths = treePaths.filter(path => !path.endsWith("/") && isMirroredFile(path));
+        // The files that get a page: every Markdown file but the recordings, and those their layout gives none.
+        const mdPaths: string[] = [];
+        const unpublished: string[] = [];
+        for (const path of treePaths) {
+            if (path.endsWith("/") || !isMirroredFile(path)) continue;
+            (await outputOf(this.root, path) === "none" ? unpublished : mdPaths).push(path);
+        }
         let rendered = 0;
         let removed = 0;
 
-        for (const mdPath of mdPaths) {
+        // Those that get none are synced too - which removes their pages, and records what they depend on.
+        for (const mdPath of [...mdPaths, ...unpublished]) {
             try {
                 if (await this.syncFile(mdPath) === "rendered") rendered++;
             } catch (error) {
@@ -386,15 +500,13 @@ export class HtmlMirror {
      * folders - that no page is left under. @returns how many were written or removed.
      *
      * An index lists only the pages whose file git does not ignore - tracked, or new and not yet
-     * added - and marks as technical the ones a .printignore names (see gitListing()). Neither a
-     * .gitignore nor a .printignore is a Markdown file, so an edit to one reaches here through the
-     * periodic sweep, within 15 s.
+     * added (see gitListing()). A .gitignore is no Markdown file, so an edit to one reaches here
+     * through the periodic sweep, within 15 s.
      */
     async syncIndexes(): Promise<number> {
         if (!this.pagedFiles?.size) return 0;
         const listing = await gitListing(this.root);
-        const listed = [...this.pagedFiles].filter(mdPath => !listing || listing.notIgnored.has(mdPath));
-        const technical = listed.filter(mdPath => listing?.technical.has(mdPath));
+        const listed = [...this.pagedFiles].filter(mdPath => !listing || listing.has(mdPath));
 
         // The PDF mirror holds the same pages as this one, so its indexes are these very lists - it
         // gets them here rather than working them out again. A PDF not printed yet is listed a moment early.
@@ -403,10 +515,9 @@ export class HtmlMirror {
         for (const [mirrorDir, pathFor] of [[HTML_MIRROR_DIR, htmlPathFor], [PDF_MIRROR_DIR, pdfPathFor]] as const) {
             const pageOf = (mdPath: string) => posix.relative(mirrorDir, pathFor(mdPath));
             const pages = listed.map(pageOf);
-            const technicalPages = new Set(technical.map(pageOf));
             const name = posix.basename(mirrorDir);
-            changed += await this.syncMirrorIndexes(mirrorDir, folderIndexPages(pages, name, technicalPages, SITE_TITLE));
-            mirrors.push(mirrorSummary(pages, name, technicalPages));
+            changed += await this.syncMirrorIndexes(mirrorDir, folderIndexPages(pages, name, SITE_TITLE));
+            mirrors.push(mirrorSummary(pages, name));
         }
         if (await this.syncSiteIndex(mirrors)) changed++;
         return changed;
@@ -463,6 +574,16 @@ export class HtmlMirror {
             logSiteChange(this.root, "wrote", noJekyllPath);
         }
 
+        // The pages' font, which every right-to-left page loads from here.
+        for (const name of FONT_FILES) {
+            const target = join(this.root, SITE_FONTS_DIR, name);
+            const [from, to] = await Promise.all([stat(join(FONTS_DIR, name)), statOrNull(target)]);
+            if (to?.size === from.size) continue;
+            await mkdir(dirname(target), { recursive: true });
+            await copyFile(join(FONTS_DIR, name), target);
+            logSiteChange(this.root, "wrote", target);
+        }
+
         const html = siteIndexPage(SITE_TITLE, mirrors, files);
         if (await readFileOrNull(indexPath) === html) return false;
         await writeFileSafe(indexPath, html);
@@ -506,38 +627,22 @@ export class HtmlMirror {
 }
 
 /**
- * Which files of the tree the indexes list, as git sees them - or null when `root` is not in a git
- * work tree, and git cannot be asked.
- *
- * - `notIgnored`: every file git does not ignore - the tracked ones, and the untracked ones not ignored.
- * - `technical`: the files a `.printignore` matches. It is read exactly like a .gitignore - in any
- *   folder, for the files under it - which is why git itself is asked to read it.
+ * Which files of the tree the indexes list, as git sees them - every file git does not ignore: the
+ * tracked ones, and the untracked ones not ignored. Null when `root` is not in a git work tree, and git
+ * cannot be asked.
  */
-async function gitListing(root: string): Promise<{ notIgnored: Set<string>; technical: Set<string> } | null> {
+async function gitListing(root: string): Promise<Set<string> | null> {
     // -z: names as they are, where the default would quote every Hebrew one in octal escapes.
-    // --others: the untracked files too. --directory keeps the second walk out of untracked folders
-    // it would list whole (node_modules and the like), and "*.md" out of everything else.
-    const notIgnored = await gitLsFiles(root, ["--cached", "--others", "--exclude-standard"]);
-    const technical = await gitLsFiles(root, ["--cached", "--others", "--ignored", "--directory",
-        "--exclude-per-directory=.printignore", "--", "*.md"]);
-    if (!notIgnored || !technical) return null;
-
-    // A whole folder named in a .printignore comes back as the folder: "dir/".
-    const folders = [...technical].filter(path => path.endsWith("/"));
-    if (folders.length) {
-        for (const file of notIgnored) {
-            if (folders.some(folder => file.startsWith(folder))) technical.add(file);
-        }
-    }
-    return { notIgnored, technical };
+    // --others: the untracked files too.
+    return await gitLsFiles(root, ["--cached", "--others", "--exclude-standard"]);
 }
 
 async function gitLsFiles(root: string, args: string[]): Promise<Set<string> | null> {
     try {
-        const git = Bun.spawn(["git", "ls-files", "-z", ...args], { cwd: root, stdout: "pipe", stderr: "ignore" });
-        const output = await new Response(git.stdout).text();
-        if (await git.exited !== 0) return null;
-        return new Set(output.split("\0").filter(Boolean));
+        // A failure - git exiting with an error, or not there at all - is a rejection; its stderr is not shown.
+        const { stdout } = await promisify(execFile)("git", ["ls-files", "-z", ...args],
+            { cwd: root, encoding: "utf-8", maxBuffer: 1 << 30 });
+        return new Set(stdout.split("\0").filter(Boolean));
     } catch {
         return null;
     }

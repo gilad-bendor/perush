@@ -7,7 +7,7 @@
 // Pretty-print utility (YAML-like, for WS message logging)
 // ---------------------------------------------------------------------------
 
-import {LogCategory, logError} from "./logs.ts";
+import {type LogCategory, logError} from "./logs.ts";
 
 /**
  * Serializes a value into a compact, human-readable YAML-like string.

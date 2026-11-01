@@ -16,6 +16,7 @@
 //   escaping that everything else in a file gets.
 // - A `שגיאה-N` marker left by includes.ts becomes a dark-red block where the faulty directive was,
 //   and the page opens with the list of them.
+// - Lines a file's layout gathers into groups share printed rows (line-rows.ts).
 // - `<תוכן-העניינים>`, alone on its line, becomes an index of the headings below it - titled
 //   "תוכן העניינים" in an RTL page, "Contents" in an LTR one. A file without that line gets none.
 //
@@ -26,8 +27,14 @@ import type { StateBlock, StateCore, StateInline, Token } from "markdown-it";
 import { isRtlFile, parseTables } from "../../public/src/tables.js";
 import { INDEX_TAG_NAME, isVoidPseudoTag } from "../../public/src/pseudo-tags.js";
 import { headingSlug } from "../../public/src/links.js";
-import { errorLineIndex } from "./includes";
-import type { EmbedError } from "./includes";
+import { errorLineIndex } from "./includes.ts";
+import type { EmbedError } from "./includes.ts";
+import { LINE_ROWS_SCRIPT, LINE_ROWS_STYLE, lineRowsRule, PRINT_FONT_SIZE, PRINT_MARGIN_BLOCK_MM, PRINT_MARGIN_INLINE_MM } from "./line-rows.ts";
+import { NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, stripLayoutMarks } from "./layout-marks.ts";
+import { FONT_FACES, FONT_FAMILIES, FONTS_DIR, LAST_RESORT, type FontFace, type FontRole } from "./text-measure.ts";
+import type { PageSettings, RunningHeading } from "./layout-schema.ts";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export type RenderOptions = {
     /** Rewrites a link's href - the page does not live next to the file it was made from. */
@@ -47,6 +54,34 @@ export type RenderOptions = {
      * on screen only, like the trail. Given whatever the file asks for with `<תוכן-העניינים>`.
      */
     pageIndex?: boolean;
+    /**
+     * Writes every grouped line's source line on it, as `data-source-line` - for the layout tools, which
+     * have to know which line is which. Never for the mirror.
+     */
+    sourceLines?: boolean;
+    /**
+     * Where a right-to-left page loads its font from (fonts/, see text-measure.ts): a folder's URL,
+     * relative to the page - or "embed", every face written into the page itself, for a page with no
+     * folder around it (the layout tool's). Left out, the page names the font but does not load it, and
+     * a browser without it falls back to David.
+     */
+    fonts?: string;
+    /** The printed page as the file's layout has it (layout-schema.ts) - anything left out as PAGE_STYLE has it. */
+    page?: PageSettings;
+    /**
+     * What the PDF printer needs of the page, as the file's layout has it (layout-schema.ts's PdfSettings) - left
+     * out, the page is made for the screen alone: no index of its own for the PDF, no footer titles. See "The
+     * PDF's pages" below.
+     */
+    pdf?: PdfOptions;
+};
+
+/** RenderOptions.pdf. */
+export type PdfOptions = {
+    /** The deepest heading the printed index lists - 0 for none. */
+    indexDepth: number;
+    /** The footer's title for the headings in force at the top of a sheet - "" for a function that throws or gives no string. */
+    footerTitle: (chain: readonly RunningHeading[]) => unknown;
 };
 
 /** One step of a breadcrumb trail - a folder's index to go up to, or, with no href, the page itself. */
@@ -60,6 +95,11 @@ type Env = {
     indexesByToken?: Map<number, string>;
     /** A right-to-left page drops its line-delimited HTML comments - see commentBlockRule(). */
     isRtl?: boolean;
+    /** Set by lineRowsRule() when the page has lines that share rows - and so needs its script. */
+    hasLineRows?: boolean;
+    sourceLines?: boolean;
+    /** The PDF's own index, and the position of the heading_close it follows - see printIndex(). */
+    printIndex?: { html: string, after: number };
 };
 
 const markdown = new MarkdownIt({
@@ -195,6 +235,26 @@ markdown.core.ruler.push("list_runs_on", (state: StateCore) => {
         const open = tokens.findLast((token, j) => j < i && token.level === close.level && token.type === close.type.replace("_close", "_open"));
         open?.attrJoin("class", "runs-on");
     }
+});
+
+// Lines a file's layout gathers into groups share printed rows: see line-rows.ts.
+markdown.core.ruler.push("line_rows", lineRowsRule);
+
+/**
+ * A heading a layout starts a sheet with - or keeps from starting one - carries the mark right after its
+ * `#`s (layout-marks.ts), which becomes a class here. Any other layout mark left in the text is dropped.
+ */
+markdown.core.ruler.push("page_breaks", (state: StateCore) => {
+    state.tokens.forEach((token, i) => {
+        if (token.type !== "inline") return;
+        const opening = state.tokens[i - 1];
+        if (opening?.type === "heading_open") {
+            const breaks = token.content.startsWith(PAGE_BREAK_MARK), keeps = token.content.startsWith(NO_PAGE_BREAK_MARK);
+            if (breaks || keeps) opening.attrJoin("class", breaks ? "page-break-before" : "no-page-break-before");
+        }
+        token.content = stripLayoutMarks(token.content);
+        for (const child of token.children ?? []) if (child.type === "text") child.content = stripLayoutMarks(child.content);
+    });
 });
 
 // ------------------------------------------------------------------------------------------------
@@ -430,7 +490,7 @@ markdown.core.ruler.push("empty_link_text", (state: StateCore) => {
         for (let i = children.length - 2; i >= 0; i--) {
             if (children[i].type !== "link_open" || children[i + 1].type !== "link_close") continue;
             const href = children[i].attrGet("href");
-            if (!href) continue;
+            if (typeof href !== "string" || !href) continue;
             const text = new state.Token("text", "", 0);
             text.content = safeDecodeUri(href);
             children.splice(i + 1, 0, text);
@@ -474,11 +534,25 @@ function safeDecodeUri(href: string): string {
  */
 function prepareDocument(content: string, isRtl: boolean, options: RenderOptions):
         { tokens: Token[], env: Env, headings: HeadingEntry[] } {
-    const env: Env = { hrefFor: options.hrefFor, errors: options.errors, isRtl };
+    const env: Env = { hrefFor: options.hrefFor, errors: options.errors, isRtl, sourceLines: options.sourceLines };
     const tokens = markdown.parse(content, env);
     const headings = documentHeadings(tokens, env);
     env.indexesByToken = renderIndexes(tokens, headings, isRtl);
+    if (options.pdf) {
+        setRunningTitles(tokens, headings, options.pdf);
+        const ownIndex = [...env.indexesByToken.values()].some(Boolean);
+        if (!ownIndex) env.printIndex = printIndex(tokens, headings, isRtl, options.pdf.indexDepth);
+    }
     return { tokens, env, headings };
+}
+
+/**
+ * Every paragraph of the document, as the source lines it spans (0-based, both ends included) - what a
+ * layout may gather lines of into groups (line-rows.ts), as the renderer sees them.
+ */
+export function paragraphRanges(content: string): { from: number, to: number }[] {
+    return markdown.parse(content, {}).filter(token => token.type === "paragraph_open" && token.map)
+        .map(token => ({ from: token.map![0], to: token.map![1] - 1 }));
 }
 
 /** The body of the page - exported for the tests. */
@@ -498,6 +572,9 @@ export function renderMarkdownPage(content: string, filePath: string, options: R
     const errors = renderErrors(options.errors ?? [], isRtl);
     const trail = options.breadcrumbs?.length ? `${renderBreadcrumbs(options.breadcrumbs)}\n` : "";
     const pageIndex = options.pageIndex ? renderPageIndex(headings, isRtl) : "";
+    // The PDF's own index follows the page's opening `#` - or, with none, opens the page.
+    const printIndexHtml = env.printIndex?.after === -1 ? env.printIndex.html : "";
+    const pdfCss = options.pdf ? pdfStyle(options.pdf) : "";
     const body = markdown.renderer.render(tokens, markdown.options, env);
     const fileName = filePath.split("/").pop() ?? filePath;
     const title = firstHeadingText(tokens) ?? fileName.replace(/(\.rtl)?\.md$/, "");
@@ -511,11 +588,11 @@ export function renderMarkdownPage(content: string, filePath: string, options: R
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escape(title)}</title>
 <style>${PAGE_STYLE}</style>
-</head>
-<body class="${isRtl ? "rtl" : "ltr"}">
-<main>
-${trail}${pageIndex}${errors}${body}</main>
-</body>
+${isRtl && options.fonts ? `<style>${fontsStyle(options.fonts)}</style>\n` : ""}${options.page ? `<style>${pageSettingsStyle(options.page)}</style>\n` : ""}${pdfCss ? `<style>${pdfCss}</style>\n` : ""}</head>
+<body class="${isRtl ? "rtl" : "ltr"}"${options.pdf ? pdfAttributes(options.page ?? {}) : ""}>
+<main${options.pdf ? ` data-running-title="${escape(footerTitleOf(options.pdf, []))}"` : ""}>
+${trail}${pageIndex}${errors}${printIndexHtml}${body}</main>
+${env.hasLineRows ? `<script>${LINE_ROWS_SCRIPT}</script>\n` : ""}</body>
 </html>
 `;
 }
@@ -534,8 +611,12 @@ ${trail}${pageIndex}${errors}${body}</main>
 // content of its own to close over - and the editor shows the line itself, as it shows every other
 // pseudo-tag.
 
-/** The deepest heading the index lists - below that it is a list of details, not of sections. */
+/**
+ * The deepest heading an index lists on screen - below that it is a list of details, not of sections. On paper
+ * the file's layout decides (PdfOptions.indexDepth), so an index holds every heading, and hides the deeper ones.
+ */
 const INDEX_DEEPEST_LEVEL = 3;
+const DEEPEST_HEADING = 6;
 
 /** `<תוכן-העניינים>` and nothing else on the line; the indentation, like any other block's, is its own. */
 const INDEX_TAG_LINE = new RegExp(`^<${INDEX_TAG_NAME}>\\s*$`);
@@ -581,8 +662,11 @@ function renderIndexes(tokens: Token[], entries: HeadingEntry[], isRtl: boolean)
     return indexes;
 }
 
-/** A heading of the document, as an index would list it - and where in the token stream it stands. */
-type HeadingEntry = { position: number, level: number, id: string, html: string };
+/**
+ * A heading of the document, as an index would list it - and where in the token stream it stands. `text` is
+ * what a footer's title is made of: the heading as plain text.
+ */
+type HeadingEntry = { position: number, level: number, id: string, html: string, text: string };
 
 /**
  * Every heading an index may list, in the order they stand in - and, on the way, an `id` on every
@@ -602,11 +686,13 @@ function documentHeadings(tokens: Token[], env: Env): HeadingEntry[] {
         token.attrSet("id", id);
 
         const level = Number(token.tag.slice(1));
-        if (token.level !== 0 || level > INDEX_DEEPEST_LEVEL) return;
+        if (token.level !== 0) return;
         // The entry is a link itself, so a link inside the heading keeps its text and loses its <a>.
         const inline = children.filter(child => child.type !== "link_open" && child.type !== "link_close");
         const html = markdown.renderer.renderInline(inline, markdown.options, env).trim();
-        if (html) entries.push({ position, level, id, html });
+        const text = children.filter(child => child.type === "text" || child.type === "code_inline")
+            .map(child => child.content).join("").replace(/\s+/g, " ").trim();
+        if (html) entries.push({ position, level, id, html, text });
     });
 
     return entries;
@@ -619,7 +705,8 @@ function documentHeadings(tokens: Token[], env: Env): HeadingEntry[] {
  * not bring it along. A page with one heading or none gets none: an index of one entry says nothing.
  */
 function renderPageIndex(entries: HeadingEntry[], isRtl: boolean): string {
-    return entries.length > 1 ? renderIndex(entries, isRtl, "index page-index") : "";
+    const shown = entries.filter(entry => entry.level <= INDEX_DEEPEST_LEVEL);
+    return shown.length > 1 ? renderIndex(shown, isRtl, "index page-index") : "";
 }
 
 /** One index, of the headings given - or "" when there are none, which leaves the tag's line out. */
@@ -628,8 +715,11 @@ function renderIndex(entries: HeadingEntry[], isRtl: boolean, className = "index
 
     // Indented relative to the shallowest heading present: a file whose sections are all ## starts flush.
     const topLevel = Math.min(...entries.map(entry => entry.level));
+    // Each entry has room for its page number, which only the PDF printer fills in (pdf-pages.ts) - and which only
+    // paper shows, after a dotted leader.
     const items = entries.map(({ level, id, html }) =>
-        `<li class="index-depth-${level - topLevel}"><a href="#${markdown.utils.escapeHtml(readableUrl(id))}">${html}</a></li>`
+        `<li class="index-depth-${level - topLevel} index-level-${level}"><a href="#${markdown.utils.escapeHtml(readableUrl(id))}">`
+        + `<span class="index-text">${html}</span><span class="index-leader"></span><span class="index-page"></span></a></li>`
     ).join("\n");
     return `<nav class="${className}">
 <details open>
@@ -640,6 +730,75 @@ ${items}
 </details>
 </nav>
 `;
+}
+
+// ------------------------------------------------------------------------------------------------
+// The PDF's pages
+//
+// A page of the mirror has no pages - only its PDF does. So the page carries what the PDF printer
+// (pdf-pages.ts) needs, unseen on screen, and the printer does the rest once it knows where the sheets
+// break:
+//
+// - **Every index has room for page numbers** (`.index-leader`, `.index-page`), shown on paper only, and
+//   filled in by the printer. An index holds every heading; how deep paper goes is the layout's
+//   `pdf.indexDepth` (pdfStyle()), how deep the screen goes INDEX_DEEPEST_LEVEL.
+// - **A page with no index of its own gets one for paper** (printIndex()), as if `<תוכן-העניינים>` stood
+//   right below its opening `#`.
+// - **Every heading carries the footer's title** for a sheet that opens under it (`data-running-title`, and
+//   `<main>`'s for a sheet before the first heading) - worked out here, as the layout's function cannot be
+//   handed to the browser. The printer picks, for each sheet, the heading in force at its top.
+
+/** Calls the layout's footerTitle - "" for one that throws, or does not answer with a string. */
+function footerTitleOf(pdf: PdfOptions, chain: readonly RunningHeading[]): string {
+    try {
+        const title = pdf.footerTitle(chain);
+        return typeof title === "string" ? title : "";
+    } catch {
+        return "";
+    }
+}
+
+/** Puts on every heading of the document the footer's title of a sheet that opens under it. */
+function setRunningTitles(tokens: Token[], entries: HeadingEntry[], pdf: PdfOptions): void {
+    let chain: RunningHeading[] = [];
+    for (const { position, level, text } of entries) {
+        chain = [...chain.filter(outer => outer.level < level), { level, text }];
+        tokens[position].attrSet("data-running-title", footerTitleOf(pdf, chain));
+    }
+}
+
+/**
+ * The index the PDF opens with when the file has none of its own: the headings below the page's opening `#`
+ * (the title, which a reader has just read), placed right after it - or, for a page that opens with no `#`,
+ * all of them, at its top. Not for a page with fewer than two headings that deep: an index of one entry says
+ * nothing.
+ */
+function printIndex(tokens: Token[], entries: HeadingEntry[], isRtl: boolean, depth: number): { html: string, after: number } | undefined {
+    const first = entries[0];
+    const opening = first?.level === 1 ? first : null;
+    const listed = entries.filter(entry => entry !== opening && entry.level <= depth);
+    if (listed.length < 2) return undefined;
+    const after = opening ? tokens.findIndex((token, i) => i > opening.position && token.type === "heading_close") : -1;
+    return { html: renderIndex(listed, isRtl, "index print-index"), after };
+}
+
+const renderHeadingClose = markdown.renderer.rules.heading_close
+    ?? ((tokens, index, options, _env, self) => self.renderToken(tokens, index, options));
+markdown.renderer.rules.heading_close = (tokens, index, options, env, self) => {
+    const after = (env as Env).printIndex;
+    return renderHeadingClose(tokens, index, options, env, self) + (after?.after === index ? after.html : "");
+};
+
+/** How deep the indexes go on paper. */
+function pdfStyle(pdf: PdfOptions): string {
+    const hidden = pdf.indexDepth === 0 ? [".index"]
+        : Array.from({ length: DEEPEST_HEADING - pdf.indexDepth }, (_, i) => `.index li.index-level-${pdf.indexDepth + i + 1}`);
+    return hidden.length ? `@media print { ${hidden.join(", ")} { display: none; } }` : "";
+}
+
+/** The sheet's margins, in millimetres, for the printer to put the footer in. */
+function pdfAttributes(page: PageSettings): string {
+    return ` data-margin-inline="${page.marginInline ?? PRINT_MARGIN_INLINE_MM}" data-margin-block="${page.marginBlock ?? PRINT_MARGIN_BLOCK_MM}"`;
 }
 
 /** A heading's id - see headingSlug() in links.js, which the editor finds an "#anchor" by too. */
@@ -683,6 +842,44 @@ export function renderBreadcrumbs(steps: Breadcrumb[]): string {
 
 // The editor's look, from public/style.css and the HighlightStyle in markdown-editor.js - keep the
 // two in step when either changes. The folder indexes (folder-index.ts) build on it too.
+const FACE_CSS: Record<FontFace, string> = {
+    regular: "font-weight: normal; font-style: normal",
+    bold: "font-weight: bold; font-style: normal",
+    italic: "font-weight: normal; font-style: italic",
+    boldItalic: "font-weight: bold; font-style: italic",
+};
+const embeddedFonts = new Map<string, string>();
+
+/** The page's two fonts, loaded from `fonts` - a folder's URL, or "embed" (RenderOptions.fonts). */
+function fontsStyle(fonts: string): string {
+    const url = (file: string) => {
+        if (fonts !== "embed") return `${fonts.replace(/\/?$/, "/")}${file}`;
+        if (!embeddedFonts.has(file)) embeddedFonts.set(file, `data:font/otf;base64,${readFileSync(join(FONTS_DIR, file)).toString("base64")}`);
+        return embeddedFonts.get(file)!;
+    };
+    return [
+        ...(Object.keys(FONT_FACES) as FontFace[]).flatMap(face => (["main", "fallback"] as FontRole[]).map(role =>
+            `@font-face { font-family: '${FONT_FAMILIES[role]}'; src: url("${url(FONT_FACES[face][role])}") format("opentype"); ${FACE_CSS[face]}; }`,
+        )),
+        `@font-face { font-family: '${LAST_RESORT.family}'; src: url("${url(LAST_RESORT.file)}") format("opentype"); }`,
+    ].join("\n");
+}
+
+/** The printed page as a file's layout sets it - for paper, and for the moment of measuring before it. */
+function pageSettingsStyle(page: PageSettings): string {
+    const fontSize = page.fontSize === undefined ? null : `${page.fontSize}pt`;
+    const inline = page.marginInline ?? PRINT_MARGIN_INLINE_MM, block = page.marginBlock ?? PRINT_MARGIN_BLOCK_MM;
+    const margins = page.marginInline !== undefined || page.marginBlock !== undefined;
+    return [
+        "@media print {",
+        margins ? `    @page { margin: ${block}mm ${inline}mm; }` : "",
+        fontSize ? `    body { font-size: ${fontSize}; }` : "",
+        "}",
+        fontSize ? `html.measuring-print body { font-size: ${fontSize}; }` : "",
+        margins ? `html.measuring-print main { width: calc(210mm - ${2 * inline}mm); }` : "",
+    ].filter(Boolean).join("\n");
+}
+
 export const PAGE_STYLE = `
 * { box-sizing: border-box; }
 body {
@@ -693,7 +890,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
 }
-body.rtl { font-family: 'David', 'Narkisim', 'Times New Roman', serif; }
+body.rtl { font-family: '${FONT_FAMILIES.main}', '${FONT_FAMILIES.fallback}', '${LAST_RESORT.family}', 'David', 'Narkisim', 'Times New Roman', serif; }
 body.ltr { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif; }
 main { max-width: 60rem; margin: 0 auto; }
 
@@ -777,15 +974,20 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
 .index .index-depth-0:first-child { margin-top: 0; }
 .index .index-depth-1 { padding-inline-start: 1.5em; }
 .index .index-depth-2 { padding-inline-start: 3em; font-size: 0.93em; }
+.index .index-depth-3 { padding-inline-start: 4.5em; font-size: 0.93em; }
+.index .index-depth-4 { padding-inline-start: 6em; font-size: 0.93em; }
+.index .index-depth-5 { padding-inline-start: 7.5em; font-size: 0.93em; }
+/* What only paper has: the deeper headings, the page numbers, and the PDF's own index - see "The PDF's pages". */
+.index .index-level-4, .index .index-level-5, .index .index-level-6, .index .index-leader, .index .index-page, .print-index { display: none; }
 .page-index { margin-top: 0.6em; }
 .page-index a { color: #0066cc; }
-
+${LINE_ROWS_STYLE}
 /* On paper. The print button (and הדפסה.rtl.md, a file that exists to be printed) makes this a
    real destination rather than a courtesy, so the page is laid out for the sheet it lands on. */
 @media print {
     /* The reading column is the sheet, so the margins move from the body to the page box. */
-    @page { margin: 18mm 16mm; }
-    body { padding: 0; font-size: 11.5pt; }
+    @page { margin: ${PRINT_MARGIN_BLOCK_MM}mm ${PRINT_MARGIN_INLINE_MM}mm; }
+    body { padding: 0; font-size: ${PRINT_FONT_SIZE}; }
     main { max-width: none; }
 
     /* The backgrounds are not decoration - the colour is what says whether a block is an עיון or a
@@ -804,11 +1006,27 @@ blockquote > :last-child, li > :last-child { margin-bottom: 0; }
     h1 { break-before: page; }
     main > :first-child, main > h1:first-of-type { break-before: auto; }
 
+    /* A heading a file's layout starts a sheet with, or keeps from starting one (layout-schema.ts). */
+    .page-break-before { break-before: page !important; }
+    .no-page-break-before { break-before: auto !important; }
+
     /* The way around the site, which paper - and so every PDF - has no use for. */
     .breadcrumbs, .page-index { display: none; }
 
     /* An index the reader had collapsed would otherwise print as its title and nothing else. */
     .index details > :not(summary) { display: block; }
+
+    /* On paper an index is "<heading> ........ <page>", the numbers lined up at the line's end (pdf-pages.ts
+       fills them in); how deep it goes is the file's layout's to say (pdfStyle()). */
+    .print-index { display: block; }
+    .index .index-level-4, .index .index-level-5, .index .index-level-6 { display: list-item; }
+    .index li a { display: flex; align-items: baseline; }
+    .index .index-text { flex: 0 1 auto; }
+    .index .index-leader {
+        display: block; flex: 1 1 1.5em; min-width: 1.5em; margin: 0 0.35em;
+        border-bottom: 1.5px dotted currentColor; opacity: 0.55; transform: translateY(-0.28em);
+    }
+    .index .index-page { display: block; min-width: 2em; text-align: end; font-variant-numeric: tabular-nums; }
 
     /* A link on paper cannot be followed; the blue and the underline are only noise. */
     a { color: inherit; text-decoration: none; }

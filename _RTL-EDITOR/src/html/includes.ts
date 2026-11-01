@@ -79,9 +79,12 @@ export type ExpandResult = {
 /** Reads a Markdown file of the tree, or answers null when there is none. */
 export type MarkdownLoader = (mdPath: string) => Promise<string | null>;
 
-/**
- * Is this line one of the `שגיאה-N` markers, and which error is it?  (md-to-html.ts's business.)
- */
+/** The marker line that stands for the `index`-th error of the page - see md-to-html.ts. */
+export function errorMarkerLine(index: number): string {
+    return `${SENTINEL}error:${index}${SENTINEL}`;
+}
+
+/** Is this line one of the `שגיאה-N` markers, and which error is it?  (md-to-html.ts's business.) */
 export function errorLineIndex(lineText: string): number | null {
     const match = ERROR_LINE.exec(lineText);
     return match ? Number(match[1]) : null;
@@ -206,7 +209,7 @@ function quotesForMessage(): string {
  * A running answer to "is this line code rather than Markdown?" - true for a fence marker and for
  * every line between a pair of them. Nothing inside a fence is a heading or a directive.
  */
-function fenceScanner(): (line: string) => boolean {
+export function fenceScanner(): (line: string) => boolean {
     let fence: string | null = null;
     return line => {
         const match = /^ {0,3}(`{3,}|~{3,})(.*)$/.exec(line);
@@ -447,7 +450,7 @@ export async function expandIncludes(
     /** Records an error and gives back the line that stands for it in the expanded text. */
     const fail = (file: string, lineIndex: number, message: string): string => {
         errors.push({ id: `שגיאה-${errors.length + 1}`, file, line: lineIndex + 1, message });
-        return `${SENTINEL}error:${errors.length - 1}${SENTINEL}`;
+        return errorMarkerLine(errors.length - 1);
     };
 
     const loadLines = async (mdPath: string): Promise<string[] | null> => {

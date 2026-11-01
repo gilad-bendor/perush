@@ -25,8 +25,8 @@ import type {
   ProcessEventKind,
   ProcessRecord,
   ProcessEventRecord,
-} from "./types";
-import { createFormattedTime } from "./types";
+} from "./types.ts";
+import { createFormattedTime } from "./types.ts";
 import {
   DIRECTOR_TIMEOUT_MS,
   USE_STUB_SDK,
@@ -36,8 +36,8 @@ import {
   commitPerushUpdate,
   commitPerushBeforeRollback,
   commitPerushRollback,
-} from "./config";
-import { logInfo, logWarn, logError } from "./logs";
+} from "./config.ts";
+import { logInfo, logWarn, logError } from "./logs.ts";
 import {
   createMeetingWorktree,
   initializeMeeting,
@@ -69,7 +69,7 @@ import {
   interruptAll,
   clearSessions,
   getAllSessionIds,
-} from "./session-manager";
+} from "./session-manager.ts";
 
 // ---------------------------------------------------------------------------
 // Types for orchestrator events
@@ -144,8 +144,12 @@ function meetingPerushScope(): PerushScope {
  * Director hasn't decided about all of them. The server sends them to the Director (`uncommitted-changes`).
  */
 export class UndecidedPerushChangesError extends Error {
-  constructor(readonly changes: PerushChange[], readonly scope: PerushScope) {
+  readonly changes: PerushChange[];
+  readonly scope: PerushScope;
+  constructor(changes: PerushChange[], scope: PerushScope) {
     super(`${changes.length} uncommitted perush file(s) need the Director's decision`);
+    this.changes = changes;
+    this.scope = scope;
   }
 }
 
@@ -740,7 +744,7 @@ export async function handleRollback(
   // Phase 5: Commit the rollback
   onProgress?.("complete", "שחזור הושלם.");
   await writeMeetingAtomic(currentWorktreePath, currentMeeting);
-  const { commitRollback } = await import("./config");
+  const { commitRollback } = await import("./config.ts");
   await commitWithMessage(currentWorktreePath, commitRollback(targetCycleNumber));
 
   // Phase 6: Send sync with editingCycle (done by the caller — server.ts)

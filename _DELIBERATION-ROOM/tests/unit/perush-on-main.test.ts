@@ -2,11 +2,11 @@
  * perush-on-main.test.ts — The perush files on main (detect → commit → rollback), run against a scratch git
  * repository with the real Hebrew folder names.
  *
- * Regression test: Bun's $`...` turned literal Hebrew into "u05E4u05D9...", so `git add פירוש/` failed
- * silently - and nothing was ever committed or rolled back.
+ * Regression test: a shell once turned literal Hebrew into "u05E4u05D9...", so `git add פירוש/` failed
+ * silently - and nothing was ever committed or rolled back. git is now always run with an argument list.
  */
 
-import { describe, test, expect, beforeEach, afterEach } from "bun:test";
+import { describe, test, expect, beforeEach, afterEach } from "../test-kit.ts";
 import { mkdtemp, mkdir, writeFile, readFile, rm, stat } from "fs/promises";
 import { tmpdir } from "os";
 import { join } from "path";
@@ -17,6 +17,7 @@ import {
   getPerushHead,
   rollbackPerushOnMain,
   defaultPerushScope,
+  git as gitIn,
 } from "../../src/meetings-db.ts";
 import type { PerushScope } from "../../src/types.ts";
 
@@ -28,14 +29,8 @@ const OTHER_FILE = "scripts/other.txt";
 
 let repo: string;
 
-async function git(...args: string[]): Promise<string> {
-  const proc = Bun.spawn(["git", "-C", repo, ...args], { stdout: "pipe", stderr: "pipe" });
-  const [stdout, stderr, exitCode] = await Promise.all([
-    new Response(proc.stdout).text(), new Response(proc.stderr).text(), proc.exited,
-  ]);
-  if (exitCode !== 0) throw new Error(`git ${args.join(" ")}: ${stderr}`);
-  return stdout;
-}
+/** git in the scratch repository */
+const git = (...args: string[]) => gitIn(repo, ...args);
 
 async function write(file: string, content: string): Promise<void> {
   await mkdir(join(repo, file, ".."), { recursive: true });

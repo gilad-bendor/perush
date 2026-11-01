@@ -1,5 +1,6 @@
 .DS_Store
 *.log
+__pycache__/
 .logs/
 node_modules/
 _scratch*

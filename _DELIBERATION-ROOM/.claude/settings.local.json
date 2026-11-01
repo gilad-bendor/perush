@@ -5,7 +5,8 @@
   "permissions": {
     "allow": [
       "Bash(npx tsc:*)",
-      "Bash(bun test:*)",
+      "Bash(npm test:*)",
+      "Bash(node --test:*)",
       "Bash(for f:*)",
       "Bash(do echo:*)",
       "Bash(done)"

@@ -4,9 +4,9 @@
  * Uses Playwright with a mock WebSocket server for deterministic testing.
  */
 
-import { describe, test, expect, beforeAll, afterAll } from "bun:test";
+import { describe, test, expect, beforeAll, afterAll } from "../test-kit.ts";
 import { chromium, type Browser, type Page } from "playwright";
-import { createMockServer } from "./mock-ws-server";
+import { createMockServer } from "./mock-ws-server.ts";
 
 let browser: Browser;
 let page: Page;

@@ -1,20 +1,20 @@
 {
+  // The server side: src/, the tests, the layout tools - written for Node's type stripping (erasable syntax only,
+  // `.ts` on every relative import, `import type` for types). The browser code has its own: public/tsconfig.json.
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
     "noEmit": true,
     "strict": true,
     "skipLibCheck": true,
-    "types": ["bun-types"],
-    "checkJs": true,
     "allowJs": true,
-    "paths": {
-      "https://esm.sh/codemirror": ["./node_modules/codemirror"],
-      "https://esm.sh/@codemirror/*": ["./node_modules/@codemirror/*"],
-      "https://esm.sh/@lezer/*": ["./node_modules/@lezer/*"]
-    }
+    "checkJs": false,
+    "types": ["node"]
   },
-  "include": ["public/**/*"]
+  "include": ["src/**/*", "tests/**/*", "layout-guidelines/**/*", "playwright-test.ts"]
 }

@@ -8,25 +8,25 @@
  * Imports from: types.ts, config.ts
  */
 
-import { $ } from "bun";
+import { spawn } from "node:child_process";
 import { join } from "path";
 import { readFile, writeFile, rename, unlink, stat, mkdir, realpath } from "fs/promises";
 import { stringify as yamlStringify, parse as yamlParse } from "yaml";
 import {
-  AgentId,
-  BranchName,
+  type AgentId,
+  type BranchName,
   branchNameToMeetingId,
-  Meeting,
-  MeetingId,
+  type Meeting,
+  type MeetingId,
   meetingIdToBranchName,
   meetingIdToTagIdPrefix,
-  MeetingSummary,
-  PerushChange,
-  PerushScope,
+  type MeetingSummary,
+  type PerushChange,
+  type PerushScope,
   SESSION_BRANCH_PREFIX,
-  SpeakerId,
-} from "./types";
-import { MeetingSchema } from "./types";
+  type SpeakerId,
+} from "./types.ts";
+import { MeetingSchema } from "./types.ts";
 import {
   DELIBERATION_DIR,
   MEETINGS_DIR,
@@ -36,7 +36,7 @@ import {
   commitPerushUpdate,
   PERUSH_TRACKED_PATHS,
   PERUSH_ON_MAIN_DISABLED,
-} from "./config";
+} from "./config.ts";
 import {logInfo, logWarn, logError} from "./logs.ts";
 
 // ---------------------------------------------------------------------------
@@ -71,28 +71,50 @@ export function generateMeetingId(title: string, startedAt: Date): MeetingId {
 
 /** Get the root of the git repository (parent of _DELIBERATION-ROOM) */
 async function getGitRoot(): Promise<string> {
-  const result = await $`git -C ${DELIBERATION_DIR} rev-parse --show-toplevel`.quiet();
-  return result.stdout.toString().trim();
+  return (await git(DELIBERATION_DIR, "rev-parse", "--show-toplevel")).trim();
+}
+
+/** What a git command printed, and how it exited */
+export interface GitResult {
+  stdout: string;
+  stderr: string;
+  exitCode: number;
 }
 
 /**
- * Run git with an argument list, and return its stdout (throws on a non-zero exit).
- *
- * Use this - not Bun's $`...` - whenever an argument is written as a literal in the code and may contain
- * non-ASCII text: Bun's shell turns literal Hebrew into "u05E4u05D9..." (Bun 1.3.8), so
- * $`git add פירוש/` fails, while interpolated ${values} are fine.
+ * Run `git -C <gitRoot> <args...>` - an argument list, never a shell command line: Hebrew paths, globs ("*"),
+ * "%(...)" formats and messages reach git exactly as written. Nothing is printed; `input` is fed to its stdin.
  */
-async function git(gitRoot: string, ...args: string[]): Promise<string> {
-  const proc = Bun.spawn(["git", "-C", gitRoot, ...args], { stdout: "pipe", stderr: "pipe" });
-  const [stdout, stderr, exitCode] = await Promise.all([
-    new Response(proc.stdout).text(),
-    new Response(proc.stderr).text(),
-    proc.exited,
-  ]);
+function runGit(gitRoot: string, args: string[], input?: string): Promise<{ stdout: Buffer; stderr: string; exitCode: number }> {
+  return new Promise((resolve, reject) => {
+    const proc = spawn("git", ["-C", gitRoot, ...args], { stdio: [input === undefined ? "ignore" : "pipe", "pipe", "pipe"] });
+    const stdout: Buffer[] = [];
+    const stderr: Buffer[] = [];
+    proc.stdout!.on("data", (chunk: Buffer) => stdout.push(chunk));
+    proc.stderr!.on("data", (chunk: Buffer) => stderr.push(chunk));
+    proc.on("error", reject);
+    proc.on("close", code => resolve({
+      stdout: Buffer.concat(stdout),
+      stderr: Buffer.concat(stderr).toString(),
+      exitCode: code ?? 1,
+    }));
+    if (input !== undefined) proc.stdin!.end(input);
+  });
+}
+
+/** Run git (see runGit), and return its stdout - throws on a non-zero exit */
+export async function git(gitRoot: string, ...args: string[]): Promise<string> {
+  const { stdout, stderr, exitCode } = await gitResult(gitRoot, ...args);
   if (exitCode !== 0) {
     throw new Error(`git ${args.join(" ")} failed (exit ${exitCode}): ${(stderr || stdout).trim()}`);
   }
   return stdout;
+}
+
+/** Run git (see runGit) - never throws on a non-zero exit: the caller checks `exitCode` */
+export async function gitResult(gitRoot: string, ...args: string[]): Promise<GitResult> {
+  const { stdout, stderr, exitCode } = await runGit(gitRoot, args);
+  return { stdout: stdout.toString(), stderr, exitCode };
 }
 
 // ---------------------------------------------------------------------------
@@ -151,8 +173,8 @@ async function scopePathspec(gitRoot: string, scope: PerushScope): Promise<strin
  */
 async function assertMeetingWorktree(worktreePath: string): Promise<void> {
   const expected = await realpath(worktreePath);
-  const toplevel = (await $`git -C ${worktreePath} rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
-  const branch = (await $`git -C ${worktreePath} symbolic-ref --short -q HEAD`.quiet().nothrow()).stdout.toString().trim();
+  const toplevel = (await git(worktreePath, "rev-parse", "--show-toplevel")).trim();
+  const branch = (await gitResult(worktreePath, "symbolic-ref", "--short", "-q", "HEAD")).stdout.trim();
   if (toplevel !== expected || !branch.startsWith(SESSION_BRANCH_PREFIX)) {
     const msg = `Refusing git write: ${worktreePath} is not a meeting worktree (toplevel: ${toplevel}, branch: ${branch || "<detached>"})`;
     logError("meetings-db", msg);
@@ -181,14 +203,14 @@ export async function createMeetingWorktree(meetingId: MeetingId): Promise<strin
   try {
     await stat(worktreePath);
     logWarn("meetings-db", `createMeetingWorktree: existing worktree found, removing: ${worktreePath}`);
-    await $`git -C ${gitRoot} worktree remove --force ${worktreePath}`.quiet();
+    await git(gitRoot, "worktree", "remove", "--force", worktreePath);
   } catch {
     // Doesn't exist — good
   }
 
   // Delete the branch if it already exists (idempotent for re-creation)
   try {
-    await $`git -C ${gitRoot} branch -D ${branchName}`.quiet();
+    await git(gitRoot, "branch", "-D", branchName);
     logWarn("meetings-db", `createMeetingWorktree: deleted existing branch: ${branchName}`);
   } catch {
     // Doesn't exist — good
@@ -197,9 +219,9 @@ export async function createMeetingWorktree(meetingId: MeetingId): Promise<strin
   // Create orphan branch + worktree (compatible with git < 2.42 which lacks --orphan)
   // Step 1: Create a detached worktree. --no-checkout: step 2 empties the tree anyway,
   // so checking out all of main (~200 MB, mostly docs/) would be pure waste (~6s).
-  await $`git -C ${gitRoot} worktree add --detach --no-checkout ${worktreePath}`.quiet();
+  await git(gitRoot, "worktree", "add", "--detach", "--no-checkout", worktreePath);
   // Step 2: Switch to an orphan branch inside the worktree (empties the index)
-  await $`git -C ${worktreePath} switch --orphan ${branchName}`.quiet();
+  await git(worktreePath, "switch", "--orphan", branchName);
 
   logInfo("meetings-db", `createMeetingWorktree: done → ${worktreePath} on ${branchName}`);
   return worktreePath;
@@ -212,8 +234,8 @@ export async function initializeMeeting(worktreePath: string, meeting: Meeting):
   logInfo("meetings-db", `initializeMeeting: ${meeting.meetingId} (${meeting.participants.length} participants)`);
   await assertMeetingWorktree(worktreePath);
   await writeMeetingAtomic(worktreePath, meeting);
-  await $`git -C ${worktreePath} add -A`.quiet();
-  await $`git -C ${worktreePath} commit -m ${COMMIT_INITIAL}`.quiet();
+  await git(worktreePath, "add", "-A");
+  await git(worktreePath, "commit", "-m", COMMIT_INITIAL);
   logInfo("meetings-db", `initializeMeeting: initial commit done`);
 }
 
@@ -226,15 +248,15 @@ export async function endMeeting(meetingId: MeetingId, worktreePath: string): Pr
 
   // Final commit (allow empty in case no changes since last cycle)
   await assertMeetingWorktree(worktreePath);
-  await $`git -C ${worktreePath} add -A`.quiet();
+  await git(worktreePath, "add", "-A");
   try {
-    await $`git -C ${worktreePath} commit -m ${COMMIT_MEETING_ENDED} --allow-empty`.quiet();
+    await git(worktreePath, "commit", "-m", COMMIT_MEETING_ENDED, "--allow-empty");
   } catch {
     // Commit might fail if nothing to commit — that's fine
   }
 
   // Remove the worktree (the branch persists)
-  await $`git -C ${gitRoot} worktree remove ${worktreePath}`.quiet();
+  await git(gitRoot, "worktree", "remove", worktreePath);
   logInfo("meetings-db", `endMeeting: done, worktree removed`);
 }
 
@@ -255,13 +277,13 @@ export async function resumeMeeting(meetingId: MeetingId): Promise<string> {
   try {
     await stat(worktreePath);
     logWarn("meetings-db", `resumeMeeting: stale worktree found, removing: ${worktreePath}`);
-    await $`git -C ${gitRoot} worktree remove --force ${worktreePath}`.quiet();
+    await git(gitRoot, "worktree", "remove", "--force", worktreePath);
   } catch {
     // Doesn't exist — good
   }
 
   // Re-attach worktree to the existing branch
-  await $`git -C ${gitRoot} worktree add ${worktreePath} ${branchName}`.quiet();
+  await git(gitRoot, "worktree", "add", worktreePath, branchName);
 
   logInfo("meetings-db", `resumeMeeting: done → ${worktreePath}`);
   return worktreePath;
@@ -304,8 +326,8 @@ export async function readEndedMeeting(meetingId: MeetingId): Promise<Meeting> {
   logInfo("meetings-db", `readEndedMeeting: ${meetingId}`);
   const branchName = meetingIdToBranchName(meetingId);
   const gitRoot = await getGitRoot();
-  const result = await $`git -C ${gitRoot} show ${branchName}:meeting.yaml`.quiet();
-  return MeetingSchema.parse(yamlParse(result.stdout.toString()));
+  const meetingYaml = await git(gitRoot, "show", `${branchName}:meeting.yaml`);
+  return MeetingSchema.parse(yamlParse(meetingYaml));
 }
 
 // ---------------------------------------------------------------------------
@@ -322,10 +344,10 @@ export async function commitCycle(
 ): Promise<void> {
   logInfo("meetings-db", `commitCycle: cycle ${cycleNumber}, speaker: ${speaker}`);
   await assertMeetingWorktree(worktreePath);
-  await $`git -C ${worktreePath} add -A`.quiet();
+  await git(worktreePath, "add", "-A");
   const message = commitCycleMessage(cycleNumber, speaker);
   try {
-    await $`git -C ${worktreePath} commit -m ${message}`.quiet();
+    await git(worktreePath, "commit", "-m", message);
   } catch {
     logInfo("meetings-db", `commitCycle: nothing to commit (cycle ${cycleNumber})`);
   }
@@ -355,16 +377,10 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
   logInfo("meetings-db", `listMeetings`);
   const gitRoot = await getGitRoot();
 
-  // Use Bun.spawn because Bun's shell template interprets %(...) as syntax
   const formatStr = "%(refname:short)|%(committerdate:iso)|%(subject)";
-  const proc = Bun.spawn(
-    ["git", "-C", gitRoot, "branch", "--list", `${SESSION_BRANCH_PREFIX}*`, "--sort=-committerdate", `--format=${formatStr}`],
-    { stdout: "pipe", stderr: "pipe" },
-  );
-  const stdoutText = await new Response(proc.stdout).text();
-  await proc.exited;
-
-  const output = stdoutText.trim();
+  const output = (await gitResult(
+    gitRoot, "branch", "--list", `${SESSION_BRANCH_PREFIX}*`, "--sort=-committerdate", `--format=${formatStr}`,
+  )).stdout.trim();
   if (!output) return [];
 
   // Parse branch listing into raw entries
@@ -379,14 +395,7 @@ export async function listMeetings(): Promise<MeetingSummary[]> {
   // Batch-read all meeting.yaml files in a SINGLE git process using cat-file --batch.
   // This avoids spawning N separate `git show` processes (which was the bottleneck).
   const batchInput = rawEntries.map(e => `${e.branch}:meeting.yaml`).join("\n") + "\n";
-  const catFileProc = Bun.spawn(
-    ["git", "-C", gitRoot, "cat-file", "--batch"],
-    { stdin: "pipe", stdout: "pipe", stderr: "pipe" },
-  );
-  catFileProc.stdin.write(batchInput);
-  catFileProc.stdin.end();
-  const batchOutput = Buffer.from(await new Response(catFileProc.stdout).arrayBuffer());
-  await catFileProc.exited;
+  const batchOutput = (await runGit(gitRoot, ["cat-file", "--batch"], batchInput)).stdout;
 
   // Parse batch output: each entry is "<sha> blob <size>\n<content>\n" or "<ref> missing\n"
   const yamlContents = new Map<string, string>();
@@ -486,7 +495,7 @@ export async function deleteMeetingsByTitle(title: string): Promise<number> {
     // Remove worktree if it exists
     try {
       await stat(worktreePath);
-      await $`git -C ${gitRoot} worktree remove --force ${worktreePath}`.quiet();
+      await git(gitRoot, "worktree", "remove", "--force", worktreePath);
       logInfo("meetings-db", `deleteMeetingsByTitle: removed worktree ${worktreePath}`);
     } catch {
       // No worktree — fine
@@ -495,16 +504,15 @@ export async function deleteMeetingsByTitle(title: string): Promise<number> {
     // Delete associated tags
     const tagPrefix = meetingIdToTagIdPrefix(meeting.meetingId);
     try {
-      // Not $`...`: Bun's shell would expand the literal "*" as a filename glob (and fail - no file matches)
       const tags = (await git(gitRoot, "tag", "--list", `${tagPrefix}/*`)).trim().split("\n").filter(Boolean);
       for (const tag of tags) {
-        try { await $`git -C ${gitRoot} tag -d ${tag}`.quiet(); } catch {}
+        try { await git(gitRoot, "tag", "-d", tag); } catch {}
       }
     } catch {}
 
     // Delete the branch
     try {
-      await $`git -C ${gitRoot} branch -D ${branchName}`.quiet();
+      await git(gitRoot, "branch", "-D", branchName);
       logInfo("meetings-db", `deleteMeetingsByTitle: deleted branch ${branchName}`);
     } catch {
       logWarn("meetings-db", `deleteMeetingsByTitle: failed to delete branch ${branchName}`);
@@ -512,7 +520,7 @@ export async function deleteMeetingsByTitle(title: string): Promise<number> {
   }
 
   // Prune worktrees
-  await $`git -C ${gitRoot} worktree prune`.quiet();
+  await git(gitRoot, "worktree", "prune");
 
   logInfo("meetings-db", `deleteMeetingsByTitle: deleted ${matching.length} meeting(s)`);
   return matching.length;
@@ -528,7 +536,7 @@ export async function deleteMeetingsByTitle(title: string): Promise<number> {
 export async function cleanupDanglingWorktrees(): Promise<void> {
   logInfo("meetings-db", `cleanupDanglingWorktrees`);
   const gitRoot = await getGitRoot();
-  await $`git -C ${gitRoot} worktree prune`.quiet();
+  await git(gitRoot, "worktree", "prune");
 }
 
 /**
@@ -537,7 +545,7 @@ export async function cleanupDanglingWorktrees(): Promise<void> {
  */
 export async function ensureGitConfig(): Promise<void> {
   const gitRoot = await getGitRoot();
-  await $`git -C ${gitRoot} config core.quotepath false`.quiet();
+  await git(gitRoot, "config", "core.quotepath", "false");
   logInfo("meetings-db", `ensureGitConfig: core.quotepath=false`);
 }
 
@@ -551,9 +559,9 @@ export async function ensureGitConfig(): Promise<void> {
 export async function commitWithMessage(worktreePath: string, message: string): Promise<void> {
   logInfo("meetings-db", `commitWithMessage: "${message}"`);
   await assertMeetingWorktree(worktreePath);
-  await $`git -C ${worktreePath} add -A`.quiet();
+  await git(worktreePath, "add", "-A");
   try {
-    await $`git -C ${worktreePath} commit -m ${message} --allow-empty`.quiet();
+    await git(worktreePath, "commit", "-m", message, "--allow-empty");
   } catch {
     logInfo("meetings-db", `commitWithMessage: nothing to commit`);
   }
@@ -570,8 +578,7 @@ export async function findCycleCommit(
 ): Promise<string | null> {
   const message = commitCycleMessage(cycleNumber, speaker);
   try {
-    const result = await $`git -C ${worktreePath} log --all --format=%H --grep=${message} -1`.quiet();
-    const hash = result.stdout.toString().trim();
+    const hash = (await git(worktreePath, "log", "--all", "--format=%H", `--grep=${message}`, "-1")).trim();
     logInfo("meetings-db", `findCycleCommit: cycle ${cycleNumber} → ${hash || "not found"}`);
     return hash || null;
   } catch {
@@ -676,21 +683,18 @@ export async function resetSessionBranchToCycle(
   await assertMeetingWorktree(worktreePath);
   if (targetCycleNumber === 0) {
     // Roll back to the initial commit
-    const hash = (
-      await $`git -C ${worktreePath} log --format=%H --reverse`.quiet()
-    ).stdout.toString().trim().split("\n")[0];
+    const hash = (await git(worktreePath, "log", "--format=%H", "--reverse")).trim().split("\n")[0];
     if (hash) {
       logInfo("meetings-db", `resetSessionBranchToCycle: resetting to initial commit ${hash.slice(0, 8)}`);
-      await $`git -C ${worktreePath} reset --hard ${hash}`.quiet();
+      await git(worktreePath, "reset", "--hard", hash);
     }
   } else {
     // Use grep with partial match (just "Cycle N:")
     const grepPattern = `Cycle ${targetCycleNumber}:`;
-    const result = await $`git -C ${worktreePath} log --format=%H --grep=${grepPattern} -1`.quiet();
-    const hash = result.stdout.toString().trim();
+    const hash = (await git(worktreePath, "log", "--format=%H", `--grep=${grepPattern}`, "-1")).trim();
     if (!hash) throw new Error(`No commit found for cycle ${targetCycleNumber}`);
     logInfo("meetings-db", `resetSessionBranchToCycle: resetting to ${hash.slice(0, 8)}`);
-    await $`git -C ${worktreePath} reset --hard ${hash}`.quiet();
+    await git(worktreePath, "reset", "--hard", hash);
   }
 }
 

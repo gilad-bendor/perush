@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "./test-kit.ts";
 import { hebrewSearchPattern } from "../public/src/hebrew-search.js";
 
 // The flags CodeMirror compiles a search with (`u` included), case-insensitive.

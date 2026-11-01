@@ -41,8 +41,8 @@
  * Imports from: config.ts, logs.ts
  */
 
-import {Options, query as sdkQuery} from "@anthropic-ai/claude-agent-sdk";
-import {SDK_ENV_VARS_TO_STRIP} from "./config";
+import {type Options, query as sdkQuery} from "@anthropic-ai/claude-agent-sdk";
+import {SDK_ENV_VARS_TO_STRIP} from "./config.ts";
 import {logInfo, logError, logsConfig, logWarn} from "./logs.ts";
 
 // ---------------------------------------------------------------------------

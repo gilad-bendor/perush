@@ -10,7 +10,7 @@
 
 import {join, resolve} from "path";
 import {homedir} from "os";
-import type {MeetingId, SpeakerId} from "./types";
+import type {MeetingId, SpeakerId} from "./types.ts";
 
 // ---------------------------------------------------------------------------
 // Logs
@@ -82,7 +82,7 @@ export const MAX_TURNS_SPEECH = 25;
 // ---------------------------------------------------------------------------
 
 /** This directory: _DELIBERATION-ROOM/ */
-export const DELIBERATION_DIR = resolve(import.meta.dir, "..");
+export const DELIBERATION_DIR = resolve(import.meta.dirname, "..");
 
 /** Root project directory: perush/ (parent of _DELIBERATION-ROOM) */
 export const ROOT_PROJECT_DIR = resolve(DELIBERATION_DIR, "..");
@@ -114,10 +114,14 @@ export const PERUSH_TRACKED_PATHS = ["פירוש/", "נספחים-לפירוש/"
 export const PERUSH_TRACKED_PATHS_SOURCE = "_DELIBERATION-ROOM/src/config.ts (PERUSH_TRACKED_PATHS)";
 
 /**
- * Under tests (NODE_ENV=test - set by `bun test`, and by the E2E tests for the server they spawn) meetings never
- * commit, tag or roll back the perush files on the real main: tests run real cycles.
+ * Running under tests: NODE_ENV=test (set by `npm test`, and by the E2E tests for the server they spawn), or
+ * NODE_TEST_CONTEXT (set by `node --test` in every test file's process) - so a test file run on its own, without
+ * the npm script, is still a test.
  */
-export const PERUSH_ON_MAIN_DISABLED = process.env.NODE_ENV === "test";
+const UNDER_TESTS = process.env.NODE_ENV === "test" || process.env.NODE_TEST_CONTEXT !== undefined;
+
+/** Under tests meetings never commit, tag or roll back the perush files on the real main: tests run real cycles. */
+export const PERUSH_ON_MAIN_DISABLED = UNDER_TESTS;
 
 /** Preface to the commentary — holds the dictionary section, injected via `<!-- @echo dictionary -->` */
 export const DICTIONARY_SOURCE_MD = join(ROOT_PROJECT_DIR, "פירוש", "הקדמה-לפירוש.rtl.md");
@@ -250,7 +254,7 @@ export const ATTENTION_PULSE_MS = 600;
 // ---------------------------------------------------------------------------
 
 /** When true, use the stub SDK instead of the real Agent SDK */
-export const USE_STUB_SDK = process.env.USE_STUB_SDK === "true" || process.env.NODE_ENV === "test";
+export const USE_STUB_SDK = process.env.USE_STUB_SDK === "true" || UNDER_TESTS;
 
 /** Delay between streaming chunks in stub mode (ms) */
 export const STUB_RESPONSE_DELAY_MS = 50;

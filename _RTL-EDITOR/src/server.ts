@@ -1,25 +1,27 @@
-import { file, serve } from "bun";
+import { spawnSync } from "child_process";
 import { join, posix } from "path";
 import { readFile, stat, mkdir } from "fs/promises";
-import { watch } from "fs";
-import { renderScriptFileForEditor } from "./terminal-render";
+import { existsSync, watch } from "fs";
+import { mimeTypeOf, serve } from "./http-server.ts";
+import { renderScriptFileForEditor } from "./terminal-render.ts";
 // The very module the browser loads - so that a table is laid out identically on both sides.
 import { formatTables, isAiGeneratedFile } from "../public/src/tables.js";
-import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes";
-import type { FileSystemChange } from "./fs-changes";
-import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree";
-import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR } from "./html/html-mirror";
-import { PDF_MIRROR_DIR, PdfMirror, pdfPathFor } from "./html/pdf-mirror";
-import { lineEndingOf, toLf, withLineEnding } from "./line-endings";
-import { writeFileSafe } from "./write-file-safe";
+import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "./fs-changes.ts";
+import type { FileSystemChange } from "./fs-changes.ts";
+import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree.ts";
+import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR, takeSiteChanges } from "./html/html-mirror.ts";
+import type { SiteChanges } from "./html/html-mirror.ts";
+import { outputOf } from "./html/layout-module.ts";
+import { PDF_MIRROR_DIR, PdfMirror, pdfPathFor } from "./html/pdf-mirror.ts";
+import { lineEndingOf, toLf, withLineEnding } from "./line-endings.ts";
+import { writeFileSafe } from "./write-file-safe.ts";
 
 const PORT = 4000;
 
 // docs/ - where the HTML/PDF mirrors are written - is a symlink to a worktree of the branch "auto-docs".
 // Make sure it is in place before anything is written there (the script is idempotent, and locked).
-const ensureDocs = Bun.spawnSync([join(import.meta.dir, "..", "..", "scripts", "ensure-docs-worktree.sh")],
-    { stdout: "inherit", stderr: "inherit" });
-if (ensureDocs.exitCode !== 0) {
+const ensureDocs = spawnSync(join(import.meta.dirname, "..", "..", "scripts", "ensure-docs-worktree.sh"), { stdio: "inherit" });
+if (ensureDocs.status !== 0) {
     console.error("scripts/ensure-docs-worktree.sh failed - not starting (the mirrors would be written to the wrong place).");
     process.exit(1);
 }
@@ -92,6 +94,41 @@ function scheduleRescan() {
     }, RESCAN_DEBOUNCE_MS);
 }
 
+// "In sync" lines
+//
+// Each mirror says on the console when it has nothing left to do: once at startup, and after that
+// whenever it wrote or deleted anything since it last said so - the 15 s sweep, finding nothing, stays
+// silent. The PDFs are printed from the pages, so they are in sync only once the pages are too.
+
+const startedAt = Date.now();
+let htmlInSyncSaid = false;
+let pdfInSyncSaid = false;
+
+function inSyncLine(mirror: string, count: number, unit: string, changes: SiteChanges, first: boolean): string | null {
+    if (!first && !changes.written && !changes.deleted) return null;
+    const seconds = (from: number) => `${((Date.now() - from) / 1000).toFixed(1)} s`;
+    const what = changes.written || changes.deleted ? `${changes.written} written, ${changes.deleted} deleted` : "nothing to write";
+    const when = first ? `${seconds(startedAt)} after startup` : `over ${seconds(changes.since!)}`;
+    return `${mirror}: all ${count} ${unit} in sync - ${what}, ${when}`;
+}
+
+function reportMirrorsInSync(): void {
+    if (!htmlMirror || !pdfMirror || htmlMirror.busy) return;
+    const count = htmlMirror.pageCount;
+    if (count === null) return;           // before the first sweep, which is what knows the pages
+    const html = inSyncLine("HTML mirror", count, "pages", takeSiteChanges("html"), !htmlInSyncSaid);
+    if (html) console.log(html);
+    htmlInSyncSaid = true;
+    // The PDFs the pages scheduled are printed in the background - and when they are, the pages must
+    // still be in sync, or the PDFs are not: then the next time the pages are, this is asked again.
+    void pdfMirror.idle().then(() => {
+        if (htmlMirror!.busy) return;
+        const pdf = inSyncLine("PDF mirror", htmlMirror!.pageCount ?? count, "PDFs", takeSiteChanges("pdf"), !pdfInSyncSaid);
+        if (pdf) console.log(pdf);
+        pdfInSyncSaid = true;
+    });
+}
+
 async function startWatchingTree() {
     fsSnapshot = snapshotOfTree(await getMarkdownFiles(MARKDOWN_DIR));
     fsChangeLog.startCovering();
@@ -112,6 +149,7 @@ async function startWatchingTree() {
     htmlMirror = await HtmlMirror.create(MARKDOWN_DIR);
     pdfMirror = await PdfMirror.create(MARKDOWN_DIR);
     htmlMirror.companion = pdfMirror;
+    htmlMirror.onSettled = reportMirrorsInSync;
     const syncHtmlMirror = async () => {
         const { rendered, removed, indexes } = await htmlMirror!.syncTree(fsSnapshot);
         if (rendered || removed || indexes) {
@@ -169,7 +207,7 @@ serve({
         const url = new URL(request.url);
 
         if (url.pathname === "/") {
-            return new Response(await file("./public/index.html").text(), {
+            return new Response(await readFile("./public/index.html", "utf-8"), {
                 headers: { "Content-Type": "text/html" }
             });
         }
@@ -177,7 +215,7 @@ serve({
         if (url.pathname.startsWith("/public/")) {
             const filePath = `.${url.pathname}`;
             try {
-                const content = await file(filePath).arrayBuffer();
+                const content = await readFile(filePath);
                 const mimeType = filePath.endsWith(".css") ? "text/css" :
                     filePath.endsWith(".js") ? "application/javascript" : "text/plain";
                 return new Response(content, {
@@ -196,7 +234,7 @@ serve({
         if (url.pathname.startsWith("/node_modules/")) {
             const filePath = `.${url.pathname}`;
             try {
-                const content = await file(filePath).arrayBuffer();
+                const content = await readFile(filePath);
                 return new Response(content, {
                     headers: { "Content-Type": "application/javascript" }
                 });
@@ -238,8 +276,11 @@ serve({
             } catch (error) {
                 console.error(`Cannot bring the ${asPdf ? "PDF" : "page"} of ${filePath} up to date:`, error);
             }
-            if (!(await file(join(MARKDOWN_DIR, target)).exists())) {
-                return printErrorPage(`הקובץ "${filePath}" לא נמצא.`);
+            if (!existsSync(join(MARKDOWN_DIR, target))) {
+                // A file its layout gives no page (layout-schema.ts's `output: "none"`) is there, and says why.
+                const none = existsSync(join(MARKDOWN_DIR, filePath)) && await outputOf(MARKDOWN_DIR, filePath) === "none";
+                return printErrorPage(none ? `לקובץ "${filePath}" אין דף ואין PDF: העימוד שלו קובע כך (output: "none").`
+                    : `הקובץ "${filePath}" לא נמצא.`);
             }
             return new Response(null, {
                 status: 302,
@@ -260,8 +301,8 @@ serve({
                 }
                 path = posix.join(path, "index.html");
             }
-            const served = file(join(MARKDOWN_DIR, path));
-            if (!(await served.exists())) {
+            const served = join(MARKDOWN_DIR, path);
+            if (!(await stat(served).catch(() => null))?.isFile()) {
                 return new Response("Not found", { status: 404 });
             }
             // A PDF's links lead to GitHub Pages - unless it is read here, when they lead back here.
@@ -274,7 +315,7 @@ serve({
             if (local) {
                 return new Response(local as Uint8Array<ArrayBuffer>, { headers: { "Content-Type": "application/pdf", "Cache-Control": "no-cache" } });
             }
-            return new Response(served, { headers: { "Cache-Control": "no-cache" } });
+            return new Response(await readFile(served), { headers: { "Content-Type": mimeTypeOf(path), "Cache-Control": "no-cache" } });
         }
 
         if (url.pathname.startsWith("/api/file/")) {

@@ -77,21 +77,20 @@ _DELIBERATION-ROOM/
 At meeting start, after generating the meeting ID:
 
 ```typescript
-import { $ } from "bun";
-
 async function createMeetingWorktree(meetingId: MeetingId): Promise<string> {
   const worktreePath = join(DELIBERATION_DIR, ".meetings", meetingId);
   const branchName = `sessions/${meetingId}`;
+  const gitRoot = await getGitRoot();
 
   // Two steps instead of `worktree add --orphan` (which needs git 2.42+)
-  await $`git worktree add --detach --no-checkout ${worktreePath}`;
-  await $`git -C ${worktreePath} switch --orphan ${branchName}`;
+  await git(gitRoot, "worktree", "add", "--detach", "--no-checkout", worktreePath);
+  await git(worktreePath, "switch", "--orphan", branchName);
 
   return worktreePath;
 }
 ```
 
-**`--no-checkout` is essential for speed**: without it, step 1 checks out all of `main` (~2,100 files, ~200 MB, mostly the generated `docs/`), only for `switch --orphan` to delete it all again. That took ~6–7s per meeting (which also blew bun's 5s test timeout); with `--no-checkout` it's ~0.1s.
+**`--no-checkout` is essential for speed**: without it, step 1 checks out all of `main` (~2,100 files, ~200 MB, mostly the generated `docs/`), only for `switch --orphan` to delete it all again. That took ~6–7s per meeting; with `--no-checkout` it's ~0.1s.
 
 This creates:
 - A new orphan branch `sessions/<meeting-id>` (no parent commits, no shared history with `main`).
@@ -151,14 +150,14 @@ After each deliberation cycle completes (speech delivered, assessments recorded,
 ```typescript
 async function commitCycle(worktreePath: string, cycleNumber: number, speaker: SpeakerId): Promise<void> {
   await assertMeetingWorktree(worktreePath);  // see "Worktree guard" below
-  await $`git -C ${worktreePath} add -A`;
-  await $`git -C ${worktreePath} commit -m ${"Cycle " + cycleNumber + ": " + speaker}`;
+  await git(worktreePath, "add", "-A");
+  await git(worktreePath, "commit", "-m", `Cycle ${cycleNumber}: ${speaker}`);
 }
 ```
 
 Each commit is an atomic snapshot of the meeting state after one cycle. **Timing**: Commits happen **between** cycles — after all writes are complete and before the next cycle begins. Since the session manager is the only process that commits to this branch, and it does so sequentially, there's no risk of committing mid-write. No lock files needed.
 
-**Worktree guard (`assertMeetingWorktree`)**: `.meetings/<id>` lives *inside* the main repo's working tree. If that directory exists but is no longer (or never was) a worktree, `git -C <path>` silently walks up to the **main repo**, and `add -A` / `commit` / `reset --hard` would act on `main` and the user's uncommitted work. This happened once: an orphaned async `initializeMeeting` left behind by a timed-out test committed the whole working tree to `main` as "Initial: meeting created". So every mutating worktree-scoped function (`initializeMeeting`, `endMeeting`, `commitCycle`, `commitWithMessage`, `resetSessionBranchToCycle`) first checks that the path is its own `--show-toplevel` and is on a `sessions/*` branch, and throws otherwise. Any new function that writes via `git -C ${worktreePath}` must call it too.
+**Worktree guard (`assertMeetingWorktree`)**: `.meetings/<id>` lives *inside* the main repo's working tree. If that directory exists but is no longer (or never was) a worktree, `git -C <path>` silently walks up to the **main repo**, and `add -A` / `commit` / `reset --hard` would act on `main` and the user's uncommitted work. This happened once: an orphaned async `initializeMeeting` left behind by a timed-out test committed the whole working tree to `main` as "Initial: meeting created". So every mutating worktree-scoped function (`initializeMeeting`, `endMeeting`, `commitCycle`, `commitWithMessage`, `resetSessionBranchToCycle`) first checks that the path is its own `--show-toplevel` and is on a `sessions/*` branch, and throws otherwise. Any new function that writes via `git(worktreePath, ...)` must call it too.
 
 ### The Perush Files on Main
 
@@ -189,7 +188,7 @@ An empty pathspec (no tracked folder holds files git knows or would add) means *
 
 (Meetings created before this design have `session-cycle/<meeting-id>/c<N>/{main,session}` tags; they are no longer created or used - `deleteMeetingsByTitle()` still deletes them.)
 
-**Use the `git()` helper (argument list), not Bun's `` $`...` ``, for any command with literal Hebrew or a literal glob character.** Bun's shell (1.3.8) mangles literal Hebrew (`` $`git add פירוש/` `` passes `u05E4u05D9.../`) and expands a literal `*` as a filename glob (`` $`git tag --list ${prefix}/c*/main` `` fails - no file matches). Interpolated `${values}` are passed intact. Both bugs once made the whole flow - commit, tags, rollback - fail silently; `tests/unit/perush-on-main.test.ts` runs it against a scratch repo with the real Hebrew folder names.
+**Git is always run through `git()` / `gitResult()` in `meetings-db.ts`** - `git(root, ...args)` returns stdout and throws on a non-zero exit; `gitResult()` returns `{ stdout, stderr, exitCode }` and leaves the exit code to the caller. Both pass an **argument list** (`spawn`, no shell), so literal Hebrew (`פירוש/`), a literal `*` (`sessions/*`), `%(...)` formats and commit messages reach git exactly as written - nothing on the way quotes, mangles or globs them. A shell command line once did both - Hebrew passed as `u05E4u05D9.../`, a `*` expanded as a filename glob - and the whole flow (commit, tags, rollback) failed silently; `tests/unit/perush-on-main.test.ts` runs it against a scratch repo with the real Hebrew folder names.
 
 **Under tests (`NODE_ENV=test`) the whole flow is disabled** (`PERUSH_ON_MAIN_DISABLED` in `config.ts`): tests run real cycles, and must never commit to the real `main`. `perush-on-main.test.ts` enables it on a scratch repo via `setPerushGitRootForTests()`.
 
@@ -200,14 +199,13 @@ With meeting data on branches, git itself becomes the database:
 ```typescript
 // List all meetings (sorted by most recent activity)
 async function listMeetings(): Promise<MeetingSummary[]> {
-  const result = await $`git branch --list "sessions/*" --sort=-committerdate --format="%(refname:short)|%(committerdate:iso)|%(subject)"`;
+  const out = await git(await getGitRoot(), "branch", "--list", "sessions/*", "--sort=-committerdate", "--format=%(refname:short)|%(committerdate:iso)|%(subject)");
   // ... parse output
 }
 
 // Read an ended meeting (no worktree needed)
 async function readEndedMeeting(meetingId: MeetingId): Promise<Meeting> {
-  const result = await $`git show ${meetingIdToBranchName(meetingId)}:meeting.yaml`;
-  return yamlParse(result.stdout.toString());
+  return yamlParse(await git(await getGitRoot(), "show", `${meetingIdToBranchName(meetingId)}:meeting.yaml`));
 }
 
 // Read an active meeting (regular file I/O on worktree)
@@ -222,9 +220,9 @@ async function readActiveMeeting(worktreePath: string): Promise<Meeting> {
 
 ```typescript
 async function endMeeting(meetingId: MeetingId, worktreePath: string): Promise<void> {
-  await $`git -C ${worktreePath} add -A`;
-  await $`git -C ${worktreePath} commit -m "Meeting ended" --allow-empty`;
-  await $`git worktree remove ${worktreePath}`;
+  await git(worktreePath, "add", "-A");
+  await git(worktreePath, "commit", "-m", "Meeting ended", "--allow-empty");
+  await git(await getGitRoot(), "worktree", "remove", worktreePath);
 }
 ```
 
@@ -236,7 +234,7 @@ After removal: the branch persists with full commit history; the directory is go
 async function resumeMeeting(meetingId: MeetingId): Promise<string> {
   const worktreePath = join(DELIBERATION_DIR, ".meetings", meetingId);
 
-  await $`git worktree add ${worktreePath} ${meetingIdToBranchName(meetingId)}`;
+  await git(await getGitRoot(), "worktree", "add", worktreePath, meetingIdToBranchName(meetingId));
 
   const meeting = await readActiveMeeting(worktreePath);
   for (const [agentId, sessionId] of Object.entries(meeting.sessionIds)) {

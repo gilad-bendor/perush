@@ -5,9 +5,10 @@
  * Uses Playwright with a mock WebSocket server for deterministic testing.
  */
 
-import { describe, test, expect, beforeAll, afterAll, beforeEach } from "bun:test";
+import { describe, test, expect, beforeAll, afterAll, beforeEach } from "../test-kit.ts";
 import { chromium, type Browser, type Page } from "playwright";
-import { createMockServer } from "./mock-ws-server";
+import { setTimeout as sleep } from "node:timers/promises";
+import { createMockServer } from "./mock-ws-server.ts";
 
 const FILE_A = "פירוש/1-בראשית/1040-בראשית-ד_א-ד_יז-הבל_וקין.rtl.md";
 const FILE_B = "נספחים-לפירוש/נספח.rtl.md";
@@ -87,7 +88,7 @@ describe("uncommitted perush files dialog", () => {
 
     await page.click("#uncommitted-continue");
     await page.waitForFunction(() => document.getElementById("uncommitted-modal")!.classList.contains("hidden"));
-    await Bun.sleep(100);
+    await sleep(100);
     const [first, second] = startRequests();
     expect(first.perushFileDecisions).toBeUndefined();
     expect(second).toMatchObject({ title: "בדיקה", perushFileDecisions: { [FILE_A]: "include", [FILE_B]: "ignore" } });
@@ -108,7 +109,7 @@ describe("uncommitted perush files dialog", () => {
     await page.click("#uncommitted-recheck");
     await page.waitForFunction(() => document.querySelectorAll(".uncommitted-file").length === 2
         && !document.getElementById("uncommitted-modal")!.classList.contains("hidden"));
-    await Bun.sleep(100);
+    await sleep(100);
 
     expect(startRequests().map(request => request.perushFileDecisions)).toEqual([undefined, undefined]);
     expect(await page.isChecked('input[name="uncommitted-0"][value="ignore"]')).toBe(true);
@@ -131,7 +132,7 @@ describe("uncommitted perush files dialog", () => {
     expect(await page.isChecked('input[name="uncommitted-0"][value="include"]')).toBe(false);   // no stale decisions
     await page.click("#uncommitted-all-ignore");
     await page.click("#uncommitted-continue");
-    await Bun.sleep(100);
+    await sleep(100);
 
     const last = mockServer.received.at(-1)!;
     expect(last).toMatchObject({ type: "resume-meeting", meetingId: "2026-01-01--10-00--x",
@@ -142,7 +143,7 @@ describe("uncommitted perush files dialog", () => {
     await submitNewMeeting();
     await page.click("#uncommitted-cancel");
     expect(await page.isHidden("#uncommitted-modal")).toBe(true);
-    await Bun.sleep(100);
+    await sleep(100);
     expect(startRequests()).toHaveLength(1);
   });
 });

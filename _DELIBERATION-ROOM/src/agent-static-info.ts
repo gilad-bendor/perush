@@ -12,10 +12,10 @@
 import { readdir, readFile } from "fs/promises";
 import { join, basename } from "path";
 import matter from "gray-matter";
-import type { AgentDefinition, AgentId } from "./types";
-import { AgentDefinitionSchema } from "./types";
-import { PARTICIPANT_AGENTS_DIR } from "./config";
-import { logInfo } from "./logs";
+import type { AgentDefinition, AgentId } from "./types.ts";
+import { AgentDefinitionSchema } from "./types.ts";
+import { PARTICIPANT_AGENTS_DIR } from "./config.ts";
+import { logInfo } from "./logs.ts";
 
 // ---------------------------------------------------------------------------
 // Agent Discovery

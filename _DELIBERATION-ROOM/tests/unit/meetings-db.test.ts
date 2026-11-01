@@ -7,8 +7,7 @@
  * (create, end, resume) create their own worktrees.
  */
 
-import { describe, test, expect, beforeAll, afterAll } from "bun:test";
-import { $ } from "bun";
+import { describe, test, expect, beforeAll, afterAll } from "../test-kit.ts";
 import { stat, mkdtemp, mkdir, writeFile, rm } from "fs/promises";
 import { tmpdir } from "os";
 import { join } from "path";
@@ -28,9 +27,12 @@ import {
   detectPerushChanges,
   defaultPerushScope,
   resetSessionBranchToCycle,
+  git,
+  gitResult,
 } from "../../src/meetings-db.ts";
-import { createFormattedTime, MeetingId, meetingIdToBranchName } from "../../src/types";
-import type { Meeting } from "../../src/types";
+import { DELIBERATION_DIR } from "../../src/config.ts";
+import { createFormattedTime, type MeetingId, meetingIdToBranchName } from "../../src/types.ts";
+import type { Meeting } from "../../src/types.ts";
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -51,10 +53,10 @@ function makeTestMeeting(id: MeetingId): Meeting {
 
 async function cleanupMeeting(meetingId: MeetingId): Promise<void> {
   try {
-    const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
+    const gitRoot = (await git(DELIBERATION_DIR, "rev-parse", "--show-toplevel")).trim();
     const worktreePath = join(gitRoot, "_DELIBERATION-ROOM/.meetings", meetingId);
-    try { await $`git worktree remove --force ${worktreePath}`.quiet(); } catch {}
-    try { await $`git branch -D ${meetingIdToBranchName(meetingId)}`.quiet(); } catch {}
+    try { await git(DELIBERATION_DIR, "worktree", "remove", "--force", worktreePath); } catch {}
+    try { await git(DELIBERATION_DIR, "branch", "-D", meetingIdToBranchName(meetingId)); } catch {}
   } catch {}
 }
 
@@ -151,7 +153,7 @@ describe("conversation store — read/write", () => {
     await writeMeetingAtomic(worktreePath, updated);
     await commitCycle(worktreePath, 1, "milo");
 
-    const log = (await $`git -C ${worktreePath} log --oneline`.quiet()).stdout.toString();
+    const log = await git(worktreePath, "log", "--oneline");
     expect(log).toContain("Cycle 1: milo");
   });
 
@@ -163,7 +165,7 @@ describe("conversation store — read/write", () => {
   test("commitWithMessage creates a commit", async () => {
     await commitWithMessage(worktreePath, "Custom commit message");
 
-    const log = (await $`git -C ${worktreePath} log --oneline`.quiet()).stdout.toString();
+    const log = await git(worktreePath, "log", "--oneline");
     expect(log).toContain("Custom commit message");
   });
 
@@ -198,7 +200,7 @@ describe("conversation store — lifecycle", () => {
     const s = await stat(worktreePath);
     expect(s.isDirectory()).toBe(true);
 
-    const worktrees = (await $`git worktree list`.quiet()).stdout.toString();
+    const worktrees = await git(DELIBERATION_DIR, "worktree", "list");
     expect(worktrees).toContain(id);
   });
 
@@ -220,7 +222,7 @@ describe("conversation store — lifecycle", () => {
 
     expect(await isMeetingActive(id)).toBe(false);
 
-    const branches = (await $`git branch --list ${meetingIdToBranchName(id)}`.quiet()).stdout.toString();
+    const branches = await git(DELIBERATION_DIR, "branch", "--list", meetingIdToBranchName(id));
     expect(branches).toContain(id);
   });
 
@@ -307,8 +309,8 @@ describe("conversation store — lifecycle", () => {
     expect(ended.cycles[1].orchestratorDecision.statusRead).toBe("Deep discussion");
 
     // Git log should show the full history
-    const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
-    const log = (await $`git -C ${gitRoot} log ${meetingIdToBranchName(id)} --oneline`.quiet()).stdout.toString();
+    const gitRoot = (await git(DELIBERATION_DIR, "rev-parse", "--show-toplevel")).trim();
+    const log = await git(gitRoot, "log", meetingIdToBranchName(id), "--oneline");
     expect(log).toContain("Meeting ended");
     expect(log).toContain("Cycle 2: shalom");
     expect(log).toContain("Cycle 1: milo");
@@ -421,7 +423,7 @@ describe("assertMeetingWorktree guard", () => {
 
   beforeAll(async () => {
     repo = await mkdtemp(join(tmpdir(), "meetings-db-guard-"));
-    await $`git -C ${repo} init -q`.quiet();
+    await git(repo, "init", "-q");
     await writeFile(join(repo, "user-work.txt"), "uncommitted", "utf-8");
     fakeWorktree = join(repo, ".meetings", "gone");
     await mkdir(fakeWorktree, { recursive: true });
@@ -432,7 +434,7 @@ describe("assertMeetingWorktree guard", () => {
   });
 
   const enclosingRepoHasNoCommits = async () =>
-    (await $`git -C ${repo} rev-parse -q --verify HEAD`.quiet().nothrow()).exitCode !== 0;
+    (await gitResult(repo, "rev-parse", "-q", "--verify", "HEAD")).exitCode !== 0;
 
   test("commitWithMessage refuses a directory that is not its own worktree", async () => {
     await expect(commitWithMessage(fakeWorktree, "should not happen")).rejects.toThrow(/not a meeting worktree/);

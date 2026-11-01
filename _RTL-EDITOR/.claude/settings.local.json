@@ -15,7 +15,8 @@
       "Bash(grep:*)",
       "Bash(head:*)",
       "Bash(tail:*)",
-      "Bash(bun:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
       "Bash(node:*)"
     ],
     "deny": []

@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "./test-kit.ts";
 import { headingLineOfAnchor, headingSlug, markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "../public/src/links.js";
 
 describe("markdownLinksInLine", () => {

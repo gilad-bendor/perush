@@ -10,7 +10,7 @@
 
 4. **Director opens**: The Director provides the initial prompt that sets context and scope. The Participant-Agents respond to this opening.
 
-5. **TypeScript + Bun**: Consistent with the project ecosystem. Bun provides native WebSocket support in `Bun.serve()`.
+5. **TypeScript on Node 22+**: Consistent with the project ecosystem (`../_RTL-EDITOR` runs the same way). Node runs the TypeScript as it is - native type stripping, no build step - so imports name their files in full (`./types.ts`) and only erasable syntax is used (no `enum`, no parameter properties). Moved to Node in October 2026.
 
 6. **No JS framework (backend or frontend)**: Custom orchestrator, vanilla HTML/JS frontend with Tailwind CSS. The system has a small, configurable set of Participants with a specific protocol — JS frameworks add complexity without proportional value.
 
@@ -28,7 +28,7 @@
 
 13. **Web server, not tmux**: The deliberation UI runs in the browser on port 4100. Rationale: (a) tmux cannot render Hebrew RTL text correctly; (b) the browser provides proper font rendering, streaming text display, collapsible panels; (c) the browser-based landing page replaces CLI arguments.
 
-14. **WebSocket for communication**: A single WebSocket connection handles all real-time communication. Bun's native WebSocket support makes this zero-dependency.
+14. **WebSocket for communication**: A single WebSocket connection handles all real-time communication. It is served by `ws` (the standard WebSocket server for Node, with no dependencies of its own), attached to the `node:http` server's `upgrade` event - Node has no WebSocket server of its own.
 
 15. **RTL-first design**: The entire page is `dir="rtl"`. CSS uses logical properties exclusively. The layout is designed for Hebrew from the ground up.
 

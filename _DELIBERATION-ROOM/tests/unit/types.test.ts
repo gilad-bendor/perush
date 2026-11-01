@@ -1,4 +1,4 @@
-import { describe, test, expect } from "bun:test";
+import { describe, test, expect } from "../test-kit.ts";
 import {
   createFormattedTime,
   parseFormattedTime,
@@ -11,8 +11,8 @@ import {
   MeetingSchema,
   MeetingSummarySchema,
   ServerMessageSchema,
-  ClientMessageSchema, MeetingSummary, ServerMessage, ClientMessage, Meeting,
-} from "../../src/types";
+  ClientMessageSchema, type MeetingSummary, type ServerMessage, type ClientMessage, type Meeting,
+} from "../../src/types.ts";
 
 // ---------------------------------------------------------------------------
 // FormattedTime

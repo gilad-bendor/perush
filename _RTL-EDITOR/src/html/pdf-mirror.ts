@@ -21,6 +21,9 @@
 //
 // The folder indexes of this mirror are HtmlMirror's work, as they list the very same pages.
 //
+// What a PDF has and its page does not - the page numbers of its index, and a footer on every sheet - is
+// pdf-pages.ts's: it prints the page twice, and the footers apart.
+//
 // **The links are rewritten on the way.** The page is loaded as a file, so every link in it is a
 // file:// URL - which Chrome writes into the PDF as it is, and which leads nowhere once the PDF is
 // shared. A link into docs/ is pointed at the same file on GitHub Pages, and a link to anything else
@@ -34,17 +37,20 @@
 import { dirname, join, posix, resolve } from "path";
 import { open, readdir, readFile, rmdir, stat, unlink } from "fs/promises";
 import type { Stats } from "fs";
+import { execFile } from "child_process";
 import { createHash } from "crypto";
 import { pathToFileURL } from "url";
+import { promisify } from "util";
 import type { Browser } from "playwright";
-import { HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, logSiteChange, PDF_MIRROR_DIR, pdfPathFor } from "./html-mirror";
-import { writeFileSafe } from "../write-file-safe";
+import { HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, logSiteChange, PDF_MIRROR_DIR, pdfPathFor } from "./html-mirror.ts";
+import { writeFileSafe } from "../write-file-safe.ts";
+import { printPages } from "./pdf-pages.ts";
 
 // The PDF mirror's paths are html-mirror.ts's, which lists this mirror in its indexes too.
-export { PDF_MIRROR_DIR, PDF_MIRROR_NAME, pdfPathFor } from "./html-mirror";
+export { PDF_MIRROR_DIR, PDF_MIRROR_NAME, pdfPathFor } from "./html-mirror.ts";
 
 /** The code a PDF depends on besides its page. */
-const RENDERER_FILES = [join(import.meta.dir, "pdf-mirror.ts")];
+const RENDERER_FILES = [join(import.meta.dirname, "pdf-mirror.ts"), join(import.meta.dirname, "pdf-pages.ts")];
 
 /** The document-info key a PDF's stamp is kept under. */
 const STAMP_KEY = "PerushSource";
@@ -76,9 +82,7 @@ export type PublicUrls = {
 export async function publicUrls(root: string): Promise<PublicUrls | null> {
     const run = async (...args: string[]) => {
         try {
-            const git = Bun.spawn(["git", ...args], { cwd: root, stdout: "pipe", stderr: "ignore" });
-            const output = (await new Response(git.stdout).text()).trim();
-            return await git.exited === 0 ? output : null;
+            return (await promisify(execFile)("git", args, { cwd: root, encoding: "utf-8" })).stdout.trim();
         } catch {
             return null;
         }
@@ -122,8 +126,15 @@ export class PdfMirror implements PageCompanion {
      * @param printer  what, besides its page, a PDF is printed by - a change to it reprints them all
      * @param urls     where the links of a PDF are pointed - null leaves them as they are
      */
-    constructor(private readonly root: string, private readonly printer: string,
-                private readonly urls: PublicUrls | null) {}
+    private readonly root: string;
+    private readonly printer: string;
+    private readonly urls: PublicUrls | null;
+
+    constructor(root: string, printer: string, urls: PublicUrls | null) {
+        this.root = root;
+        this.printer = printer;
+        this.urls = urls;
+    }
 
     static async create(root: string): Promise<PdfMirror> {
         const code = await Promise.all(RENDERER_FILES.map(file => readFile(file, "utf-8")));
@@ -185,7 +196,14 @@ export class PdfMirror implements PageCompanion {
         try {
             await tab.goto(pathToFileURL(resolve(pagePath)).href, { waitUntil: "load" });
             await tab.evaluate(pointLinksAt, this.linkTargets());
-            printed = await tab.pdf({ printBackground: true, preferCSSPageSize: true, format: "A4" });
+            // A page that lays itself out for paper (line-rows.ts) does it on beforeprint, which
+            // printing to PDF does not send - and only once its fonts are in, or it measures the wrong ones.
+            await tab.evaluate(async () => {
+                await document.fonts.ready;
+                window.dispatchEvent(new Event("beforeprint"));
+            });
+            // The index's page numbers, and the footers (pdf-pages.ts).
+            printed = (await printPages(tab)).pdf;
         } finally {
             await tab.close();
         }
@@ -306,7 +324,7 @@ export class PdfMirror implements PageCompanion {
     }
 }
 
-/** What a PDF printed from this page, by this code, with its links pointed at `urls`, is stamped with. */
+/** What a PDF printed from this page, by this code (pdf-pages.ts's too), with its links pointed at `urls`, is stamped with. */
 export function sourceStamp(pageHtml: string, printer: string, urls: PublicUrls | null): string {
     return createHash("md5").update(printer).update("\0").update(JSON.stringify(urls))
         .update("\0").update(pageHtml).digest("hex");

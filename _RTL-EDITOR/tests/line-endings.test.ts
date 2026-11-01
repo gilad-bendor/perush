@@ -1,5 +1,5 @@
-import { describe, expect, test } from "bun:test";
-import { lineEndingOf, toLf, withLineEnding } from "../src/line-endings";
+import { describe, expect, test } from "./test-kit.ts";
+import { lineEndingOf, toLf, withLineEnding } from "../src/line-endings.ts";
 
 describe("line endings", () => {
     test("toLf() turns CRLF into LF, and leaves a lone CR alone", () => {

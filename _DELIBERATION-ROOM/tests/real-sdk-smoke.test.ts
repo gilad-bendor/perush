@@ -7,20 +7,23 @@
  *
  *   create meeting → observe 2 cycles → end meeting → verify git state
  *
- * Run:   REAL_SDK_TEST=true bun test tests/real-sdk-smoke.test.ts
+ * Run:   npm run test:smoke   (REAL_SDK_TEST=true node --test tests/real-sdk-smoke.test.ts)
  * Cost:  ~$0.05-0.15 per run (Haiku pricing)
  *
  * Prerequisites:
  *   - `claude` CLI installed and authenticated
- *   - `bun install` completed
+ *   - `npm install` completed
  *   - Port 4199 available
  */
 
-import { describe, test, expect, beforeAll, afterAll } from "bun:test";
-import { $ } from "bun";
+import { describe, test, expect, beforeAll, afterAll } from "./test-kit.ts";
+import { spawn, type ChildProcess } from "node:child_process";
+import { once } from "node:events";
+import { setTimeout as sleep } from "node:timers/promises";
 import { resolve, join } from "path";
+import { git } from "../src/meetings-db.ts";
 
-const DELIBERATION_DIR = resolve(import.meta.dir, "..");
+const DELIBERATION_DIR = resolve(import.meta.dirname, "..");
 const MEETINGS_DIR = join(DELIBERATION_DIR, ".meetings");
 const PORT = 4199;
 const HAIKU_MODEL = "claude-haiku-4-5";
@@ -29,8 +32,8 @@ const HAIKU_MODEL = "claude-haiku-4-5";
 // Guard: skip unless explicitly requested
 // ---------------------------------------------------------------------------
 
-describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () => {
-  let serverProc: ReturnType<typeof Bun.spawn> | null = null;
+describe("real SDK smoke test", { skip: process.env.REAL_SDK_TEST !== "true" }, () => {
+  let serverProc: ChildProcess | null = null;
   let meetingId: string | null = null;
   let ws: WebSocket | null = null;
 
@@ -45,15 +48,15 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
     // - Separate port to avoid dev server conflict
     const env: Record<string, string | undefined> = { ...process.env };
     env.NODE_ENV = "development";
+    delete env.NODE_TEST_CONTEXT;  // set by `node --test` - config.ts would take the server for a test
     delete env.USE_STUB_SDK;
     env.PARTICIPANT_MODEL = HAIKU_MODEL;
     env.ORCHESTRATOR_MODEL = HAIKU_MODEL;
     env.SERVER_PORT = String(PORT);
 
-    serverProc = Bun.spawn(["bun", "run", "src/server.ts"], {
-      env: env as Record<string, string>,
-      stdout: "inherit",
-      stderr: "inherit",
+    serverProc = spawn(process.execPath, ["src/server.ts"], {
+      env,
+      stdio: ["ignore", "inherit", "inherit"],
       cwd: DELIBERATION_DIR,
     });
 
@@ -67,7 +70,7 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
           break;
         }
       } catch {}
-      await Bun.sleep(500);
+      await sleep(500);
     }
 
     if (!ready) {
@@ -84,33 +87,34 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
 
     // Kill server (SIGTERM → graceful shutdown handler runs)
     if (serverProc) {
+      const exited = serverProc.exitCode !== null ? Promise.resolve() : once(serverProc, "exit");
       serverProc.kill();
       try {
-        await serverProc.exited;
+        await exited;
       } catch {}
     }
 
     // Clean up git state for the known meeting
     if (meetingId) {
       try {
-        await $`git worktree remove --force ${join(MEETINGS_DIR, meetingId)}`.quiet();
+        await git(DELIBERATION_DIR, "worktree", "remove", "--force", join(MEETINGS_DIR, meetingId));
       } catch {}
       try {
-        await $`git branch -D sessions/${meetingId}`.quiet();
+        await git(DELIBERATION_DIR, "branch", "-D", `sessions/${meetingId}`);
       } catch {}
     }
 
     // Fallback: clean up any leftover smoke test branches
     try {
-      const branchOutput = await $`git branch --list "sessions/*sdk-smoke-test*"`.text();
+      const branchOutput = await git(DELIBERATION_DIR, "branch", "--list", "sessions/*sdk-smoke-test*");
       for (const line of branchOutput.trim().split("\n").filter(Boolean)) {
         const branchName = line.trim().replace(/^\*?\s*/, "");
         const mid = branchName.replace("sessions/", "");
         try {
-          await $`git worktree remove --force ${join(MEETINGS_DIR, mid)}`.quiet();
+          await git(DELIBERATION_DIR, "worktree", "remove", "--force", join(MEETINGS_DIR, mid));
         } catch {}
         try {
-          await $`git branch -D ${branchName}`.quiet();
+          await git(DELIBERATION_DIR, "branch", "-D", branchName);
         } catch {}
       }
     } catch {}
@@ -334,12 +338,12 @@ describe.skipIf(process.env.REAL_SDK_TEST !== "true")("real SDK smoke test", () 
     console.log("[smoke] Verifying git state...");
 
     // Session branch should exist
-    const branchOutput = await $`git branch --list sessions/${meetingId}`.text();
+    const branchOutput = await git(DELIBERATION_DIR, "branch", "--list", `sessions/${meetingId}`);
     expect(branchOutput.trim()).toContain(meetingId!);
 
     // meeting.yaml should be readable from the branch
     const meetingYamlStr =
-      await $`git show sessions/${meetingId}:meeting.yaml`.text();
+      await git(DELIBERATION_DIR, "show", `sessions/${meetingId}:meeting.yaml`);
     const { parse: yamlParse } = await import("yaml");
     const meeting = yamlParse(meetingYamlStr);
 

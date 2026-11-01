@@ -1,6 +1,6 @@
-import { describe, expect, test } from "bun:test";
-import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "../src/fs-changes";
-import type { FileData } from "../src/markdown-tree";
+import { describe, expect, test } from "./test-kit.ts";
+import { diffSnapshots, FsChangeLog, isIgnoredWatchPath, snapshotOfTree } from "../src/fs-changes.ts";
+import type { FileData } from "../src/markdown-tree.ts";
 
 /** A tree in the shape /api/files answers with. */
 function tree(...entries: FileData[]): FileData[] {

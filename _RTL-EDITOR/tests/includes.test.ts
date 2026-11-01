@@ -1,6 +1,6 @@
-import { describe, expect, test } from "bun:test";
-import { expandIncludes, hasIncludeDirective, parseIncludeLine } from "../src/html/includes";
-import type { EmbedError } from "../src/html/includes";
+import { describe, expect, test } from "./test-kit.ts";
+import { expandIncludes, hasIncludeDirective, parseIncludeLine } from "../src/html/includes.ts";
+import type { EmbedError } from "../src/html/includes.ts";
 
 const loaderFor = (files: Record<string, string>) =>
     async (path: string) => files[path] ?? null;

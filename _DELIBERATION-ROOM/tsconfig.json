@@ -1,15 +1,19 @@
 {
+  // Written for Node's type stripping (erasable syntax only, `.ts` on every relative import, `import type` for
+  // types). The browser code (public/) is plain JavaScript, not checked.
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "target": "ES2023",
+    "lib": ["ES2023", "ESNext.Disposable", "DOM", "DOM.Iterable"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
     "noEmit": true,
     "strict": true,
     "skipLibCheck": true,
-    "types": ["bun-types"],
-    "esModuleInterop": true,
+    "types": ["node"],
     "resolveJsonModule": true
   },
-  "include": ["src/**/*", "tests/**/*", "tailwind.config.ts"]
+  "include": ["src/**/*", "tests/**/*", "tailwind.config.ts", "playwright-test.ts"]
 }

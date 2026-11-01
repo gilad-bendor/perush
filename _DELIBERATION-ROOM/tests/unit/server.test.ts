@@ -5,7 +5,7 @@
  * Uses the stub SDK — no real API calls.
  */
 
-import { describe, test, expect, beforeEach, afterEach } from "bun:test";
+import { describe, test, expect, beforeEach, afterEach } from "../test-kit.ts";
 import { join } from "path";
 import { writeFile, rm, mkdtemp, mkdir } from "fs/promises";
 import { tmpdir } from "os";
@@ -16,18 +16,19 @@ import {
   connectedClients,
   stopDeliberationLoop,
   setupOrchestratorEvents,
-} from "../../src/server";
+  createServer,
+} from "../../src/server.ts";
 import {
   resetOrchestrator,
   getMeeting,
   startMeeting,
   endCurrentMeeting,
-} from "../../src/orchestrator";
-import { resetStubState } from "../../src/stub-sdk";
-import { resetAgentCache } from "../../src/session-manager";
-import { DELIBERATION_DIR } from "../../src/config";
-import {MeetingId, meetingIdToBranchName, MeetingSummary, ServerMessage} from "../../src/types";
-import {generateMeetingId, setPerushGitRootForTests} from "../../src/meetings-db.ts";
+} from "../../src/orchestrator.ts";
+import { resetStubState } from "../../src/stub-sdk.ts";
+import { resetAgentCache } from "../../src/session-manager.ts";
+import { DELIBERATION_DIR } from "../../src/config.ts";
+import {type MeetingId, meetingIdToBranchName, type MeetingSummary, type ServerMessage} from "../../src/types.ts";
+import {generateMeetingId, git, setPerushGitRootForTests} from "../../src/meetings-db.ts";
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -62,11 +63,10 @@ function testId(): MeetingId {
 // Cleanup helper
 async function cleanupMeeting(meetingId: MeetingId): Promise<void> {
   try {
-    const { $ } = await import("bun");
-    const gitRoot = (await $`git rev-parse --show-toplevel`.quiet()).stdout.toString().trim();
+    const gitRoot = (await git(DELIBERATION_DIR, "rev-parse", "--show-toplevel")).trim();
     const worktreePath = join(gitRoot, "_DELIBERATION-ROOM/.meetings", meetingId);
-    try { await $`git worktree remove --force ${worktreePath}`.quiet(); } catch {}
-    try { await $`git branch -D ${meetingIdToBranchName(meetingId)}`.quiet(); } catch {}
+    try { await git(DELIBERATION_DIR, "worktree", "remove", "--force", worktreePath); } catch {}
+    try { await git(DELIBERATION_DIR, "branch", "-D", meetingIdToBranchName(meetingId)); } catch {}
   } catch {}
 }
 
@@ -99,7 +99,7 @@ afterEach(async () => {
 describe("handleHttpRequest", () => {
   test("serves index.html for root path", async () => {
     const req = new Request("http://localhost:4100/");
-    const res = await handleHttpRequest(req, {});
+    const res = await handleHttpRequest(req);
 
     // If index.html exists, should return 200; otherwise 404
     if (res.status === 200) {
@@ -111,13 +111,13 @@ describe("handleHttpRequest", () => {
 
   test("returns 404 for non-existent files", async () => {
     const req = new Request("http://localhost:4100/nonexistent.xyz");
-    const res = await handleHttpRequest(req, {});
+    const res = await handleHttpRequest(req);
     expect(res.status).toBe(404);
   });
 
   test("serves /api/agents endpoint", async () => {
     const req = new Request("http://localhost:4100/api/agents");
-    const res = await handleHttpRequest(req, {});
+    const res = await handleHttpRequest(req);
     expect(res.status).toBe(200);
 
     const body = await res.json();
@@ -132,7 +132,7 @@ describe("handleHttpRequest", () => {
 
   test("serves /api/meetings endpoint", async () => {
     const req = new Request("http://localhost:4100/api/meetings");
-    const res = await handleHttpRequest(req, {});
+    const res = await handleHttpRequest(req);
     expect(res.status).toBe(200);
 
     const body: MeetingSummary[] = await res.json();
@@ -145,7 +145,7 @@ describe("handleHttpRequest", () => {
     try {
       await writeFile(cssPath, "body { color: red; }");
       const req = new Request("http://localhost:4100/_test.css");
-      const res = await handleHttpRequest(req, {});
+      const res = await handleHttpRequest(req);
       expect(res.status).toBe(200);
       expect(res.headers.get("Content-Type")).toContain("text/css");
     } finally {
@@ -158,7 +158,7 @@ describe("handleHttpRequest", () => {
     try {
       await writeFile(jsPath, "console.log('test');");
       const req = new Request("http://localhost:4100/_test.js");
-      const res = await handleHttpRequest(req, {});
+      const res = await handleHttpRequest(req);
       expect(res.status).toBe(200);
       expect(res.headers.get("Content-Type")).toContain("application/javascript");
     } finally {
@@ -166,17 +166,45 @@ describe("handleHttpRequest", () => {
     }
   });
 
-  test("returns 101 intent for /ws path", async () => {
-    // We can't fully test WS upgrade without a real server,
-    // but we can test that the path triggers upgrade attempt
+  test("returns 400 for a plain (non-upgrade) request to /ws", async () => {
+    // A WebSocket upgrade is taken by the server's "upgrade" handler, and never reaches handleHttpRequest
     const req = new Request("http://localhost:4100/ws");
-    const res = await handleHttpRequest(
-        req,
-        {
-          upgrade: () => false, // Simulate failed upgrade
-        },
-    );
-    expect(res.status).toBe(400); // Failed upgrade returns 400
+    const res = await handleHttpRequest(req);
+    expect(res.status).toBe(400);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// The real server: HTTP + WebSocket on one port
+// ---------------------------------------------------------------------------
+
+describe("createServer", () => {
+  test("serves HTTP, and a WebSocket on /ws that answers and is tracked as a client", async () => {
+    const server = await createServer(0);   // any free port
+    try {
+      const res = await fetch(`http://localhost:${server.port}/api/perush-scope`);
+      expect(res.status).toBe(200);
+
+      const ws = new WebSocket(`ws://localhost:${server.port}/ws`);
+      await new Promise((resolve, reject) => { ws.onopen = resolve; ws.onerror = reject; });
+      expect(connectedClients.size).toBe(1);
+
+      // Invalid JSON is answered (on this client only) with an error message
+      const reply = new Promise<ServerMessage>(resolve => { ws.onmessage = (event) => resolve(JSON.parse(event.data)); });
+      ws.send("not json");
+      const message = await reply;
+      expect(message.type).toBe("error");
+      expect((message as { message: string }).message).toBe("Invalid JSON");
+
+      const closed = new Promise(resolve => { ws.onclose = resolve; });
+      ws.close();
+      await closed;
+      // The server sees the close a moment later
+      for (let i = 0; i < 50 && connectedClients.size > 0; i++) await new Promise(r => setTimeout(r, 10));
+      expect(connectedClients.size).toBe(0);
+    } finally {
+      await server.stop();
+    }
   });
 });
 
@@ -425,14 +453,7 @@ describe("uncommitted perush files", () => {
   const FILE_C = "פירוש/1-בראשית/חדש.rtl.md";
   let repo: string;
 
-  async function repoGit(...args: string[]): Promise<string> {
-    const proc = Bun.spawn(["git", "-C", repo, ...args], { stdout: "pipe", stderr: "pipe" });
-    const [stdout, stderr, exitCode] = await Promise.all([
-      new Response(proc.stdout).text(), new Response(proc.stderr).text(), proc.exited,
-    ]);
-    if (exitCode !== 0) throw new Error(`git ${args.join(" ")}: ${stderr}`);
-    return stdout;
-  }
+  const repoGit = (...args: string[]) => git(repo, ...args);
   async function write(file: string, content: string): Promise<void> {
     await mkdir(join(repo, file, ".."), { recursive: true });
     await writeFile(join(repo, file), content);
@@ -461,7 +482,7 @@ describe("uncommitted perush files", () => {
   });
 
   test("/api/perush-scope tells the folders new meetings track, and where they are defined", async () => {
-    const res = await handleHttpRequest(new Request("http://localhost/api/perush-scope"), {} as any);
+    const res = await handleHttpRequest(new Request("http://localhost/api/perush-scope"));
     expect(await res.json()).toEqual({
       trackedPaths: ["פירוש/", "נספחים-לפירוש/", "בלשנות/ניתוחים-לשוניים/"],
       trackedPathsSource: "_DELIBERATION-ROOM/src/config.ts (PERUSH_TRACKED_PATHS)",
