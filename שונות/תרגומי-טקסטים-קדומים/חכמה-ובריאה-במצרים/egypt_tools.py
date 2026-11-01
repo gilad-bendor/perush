@@ -306,7 +306,7 @@ RESERVED = [
     (W + alt("נחם", "ניחם", "נחמתי", "וינחם", "נחמה", "התנחם", "נחמו") + E, None, "the root נחם never (Gen 6:6–7): no Egyptian word for 'regret' in the Cow"),
     (W + alt("התעצב", "ויתעצב", "עצב", "עצבון", "עיצבון") + E, None, "עצב never (Gen 6:6, 3:16–17)"),
     (W + alt("מחה", "אמחה", "ימחה", "נמחה", "מחו", "מחית") + E, None, "the root מחה never (Gen 6:7, 7:4, 23): render the Egyptian verb by its own sense"),
-    (W + alt("שחת", "השחית", "השחיתו", "נשחת", "נשחתה", "משחית", "המשחית", "להשחית", "אשחית", "ישחית", "שחתה", "שחיתות", "השחתה", "שחתו") + E, None, "the root שחת never (Gen 6:11–13, 17, 9:11, 15): render the Cow's verbs of killing by their own sense (smꜣ = הָרַג …)"),
+    (W + alt("שחת", "השחית", "השחיתו", "נשחת", "נשחתה", "משחית", "המשחית", "להשחית", "אשחית", "ישחית", "שחתה", "שחיתות", "השחתה", "שחתו") + E + r"(?<!משחת)", None, "the root שחת never (Gen 6:11–13, 17, 9:11, 15): render the Cow's verbs of killing by their own sense (smꜣ = הָרַג …)"),
     (W + alt("יצר", "יצרו", "יצרה", "יצרי", "וייצר", "יוצר", "יוצרו", "יוצרם", "ייצר", "יצרתי") + E, r"qmꜣ", "the root יצר only for qmꜣ 'create' [equivalent Gen 2:7] (the noun יֵצֶר of Gen 6:5 never; qd 'build' = בָּנָה)"),
     (W + alt("אדמה", "האדמה", "אדמתו") + E, None, "אֲדָמָה never (no Egyptian cognate; tꜣ = אֶרֶץ, ꜣḥ.t = שָׂדֶה)"),
     (W + alt("רוח", "רוחות", "הרוח", "רוחו", "רוחי", "רוחה", "רוחם") + E, r"ṯꜣw|ṯꜣ,w|\bnfw|šw\b|šw,t|ṯꜣ\.wj", "רוּחַ only for ṯꜣw 'breath, wind, air' (the dossier's E130) [equivalent Gen 1:2, 2:7]"),
@@ -346,7 +346,7 @@ RESERVED = [
     (W + alt("טבעת", "הטבעת", "טבעות", "טבעתו") + E, r"ḏbꜥ,t|ḏbꜥ\.t|ḏbꜥt|ḫtm", "טַבַּעַת only for ḏbꜥ.t 'seal' [cognate: loanword, Gen 41:42]; ḏbꜥ 'finger' = אֶצְבַּע"),
     (W + alt("חותם", "החותם", "חתם", "חתום", "חתומה", "נחתם", "חותמו") + E, r"ḫtm|ḫtm,w|ḫtm\.t", "the root חתם only for ḫtm 'seal' [cognate: loanword, Gen 38:18]"),
     (W + alt("שיטה", "שיטים", "עצי שיטים") + E, r"šnḏ|šnḏ,t", "שִׁטָּה only for šnḏ.t 'acacia' [cognate: loanword, Ex 25:5]"),
-    (W + alt("קוף", "קופים", "הקוף", "הקופים") + E, r"\bgf\b|gjf|gfn|ꜥnꜥn", "קוֹף only for gf [cognate: loanword, 1 Kgs 10:22]; the baboon jꜥnꜥ = בַּבּוּן"),
+    (W + alt("קוף", "קופים", "הקוף", "הקופים") + E, r"\bgf\b|gjf|gfn|gwf|ꜥnꜥn", "קוֹף only for gf [cognate: loanword, 1 Kgs 10:22]; the baboon jꜥnꜥ = בַּבּוּן"),
     (W + alt("כתם", "הכתם", "כתמים") + E, r"ktm|kꜣ~tj~mt", "כֶּתֶם 'fine gold' only for ktm.t [cognate: loanword, Job 28:16, Lam 4:1] (AM 18.12)"),
     (W + alt("זרת", "הזרת", "בזרת") + E, None, "זֶרֶת never: ḏr.t 'hand' = יָד"),
     # --- other corpora's reservations, carried over for safety ---

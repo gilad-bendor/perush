@@ -668,3 +668,16 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
 6. **Gates fixed:** `משקוף`, `מרוחה` exempted (the קוף / רוח prefix classes); the `זית` licence takes pNu's spelling `bq`. The
    place names `בָּאחוּ`, `מחֶם`, a name with `חרי` pass by `[היתר שער]`.
 
+### 11.12 Round 5 run 6 – the Shipwrecked Sailor (1–189), merged 2026-11-01 (translator 4)
+1. **Frame and court:** šms.w `מלווה`, ḥꜣ.tj-ꜥ `נגיד` (as Sinuhe); jqr `מצוין` (mnḫ keeps `מעולה`) – one word ties 1, 183, 188.
+2. **The sea:** wꜣḏ-wr `הירוק־הגדול` (literal; `ים` is the Semitic loanword y~mꜥ's, §11.7); nšnj "storm, rage" `רוגז` (`זעם` is
+   qnd.t's; `זעף` would pre-empt Jonah 1:15, left to the apparatus).
+3. **Verbs:** hꜣi̯ `ירד` everywhere (the star "came down", 129–130: no Isa 14:12 `נָפַלְתָּ` in the line); sbṯ `לעג` (as AM 24.9:
+   the corpus precedent wins over the tale gate's licence for `צחק`); rḏj "put" `הוּשַׂם`; zbj-n-sḏ.t `שילוח־לשלהבת`; dp "taste" `טעם`.
+4. **Fixed by the consistency pass against the parallel texts:** zꜣtw `רצפה` (BD 111), sr `הכריז` (BD 50), zb.t `משלוח` (WE's qnj
+   `מטען`), gs.w-pr `בתי־הפולחן`, jbj `אִיבִּי` (transliterated; `משחה` is HC's mrḥ.t), šdj "draw out" `שלף`.
+5. **Repeated passages** copied byte for byte (26–41 = 89–110; 67–71 = 81–85) and the promise / fulfilment pairs (140–141 → 162–163,
+   143–144 → 176, 5 → 171). The colophon (186–189) is the formula of Sinuhe B 311: aligned there.
+6. **Kept:** pḥ and spr both `הגיע` in SS (never in one line; `השיג` stays licensed for pḥ where a translator wants it).
+7. **Gates fixed:** the `קוף` licence takes the spelling gwf (165); the שחת gate no longer reads the construct `משחת` "ointment of".
+
