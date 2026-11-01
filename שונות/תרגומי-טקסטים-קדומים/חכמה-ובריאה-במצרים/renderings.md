@@ -43,7 +43,11 @@ supplied · `{x}` written by the scribe, superfluous · `⸢x⸣` damaged · `x?
 inside a word: the TLA's segmentation (`ḥꜣ,t` "front", `.pl` plural, `.du` dual, `.t` feminine) · `=f` suffix pronoun ·
 `i̯` a weak radical not written · `ṱ` a feminine `t` before a suffix · `~` a group-writing (syllabic) spelling of a
 foreign or Late word. The Hebrew follows the brackets: `[ ]` in the source = `[ ]` in the Hebrew; `( )` / `⟨ ⟩` of the
-source are **not** carried into the Hebrew (the word is read whole); `{ }` is left out of the Hebrew.
+source are **not** carried into the Hebrew (the word is read whole); `{ }` is left out of the Hebrew; the damage mark
+`⸢ ⸣` is **not** carried into the Hebrew either (the word is read as written; a reading in doubt takes `?`) – in every
+file, the fifth-day dossier's WC excerpt included (the lead, 2026-11-02, §11.14). Partial restorations: a restored
+sign, ending or suffix → no bracket; the body of the word written → no bracket; a word half or mostly restored → the
+whole Hebrew word in `[ ]`; a wholly restored article `pꜣ` before a written noun → `[ה]`.
 
 ### 2.2 Egyptian words and names in Hebrew letters
 For names (and for an Egyptian word quoted in a Hebrew note): `ꜣ` → א · `j`, `y` → י (word-initial `j` → א) · `ꜥ` → ע ·
@@ -695,4 +699,21 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
    jdr (SI) and TB's jꜣw.t both `עדר` (two herd words, never in one line); ḏrḏr (SI) = AM's ḏrjḏrj `נכרי`.
 7. **Gates fixed (the coordinator):** `שמחה` no longer read as ש־מחה; the `עור` gate also licenses `עוֹר` "skin" (jnm, dḥr); the
    ba trap no longer fires on bꜣ,t "bush".
+
+### 11.14 2026-11-02 harmonization (the Round 5 finalization; the lead's decisions)
+**2026-11-02 harmonization** (the Round 5 finalization): **one notation for pWestcar 2,21–4,7 in WE and in the
+fifth-day dossier's WC = this corpus's rule (§2.1)**: `⸢ ⸣` is not carried into the Hebrew `>` lines, and the
+partial-restoration rule decides the brackets (checked against the transliteration). Changed `>` lines (both files,
+kept identical by `verify WE`): 2,22 `⸢ו⸣זהב־לבן; *[א]וליד*? … [ש]לח שלי[ח] […]. [ואז] [תפס] [תמ]סח` → `וזהב־לבן;
+*אוליד*? … [שלח] שליח […]. [ואז] [תפס] [תמסח]` (the independent reviewer's proposal); 3,1 `⸢ב⸣[…]` → `ב[…]`; 3,2
+`[אחרי]` → `אחרי` ([m]-ḫt), `[ה]אגם` → `האגם` (p[ꜣ]); 3,5 `שלחה` → `[שלחה]` ([hꜣ]b.n); 3,13 `⸢ל⸣תמסח` → `לתמסח`;
+3,14 `⸢אשר עשה⸣`, `⸢תפס⸣` → plain, `[והרי]` → `והרי` ([j]st); 3,16 `ב⸢*פשע*⸣?`, `⸢עומק⸣`, `⸢נשימה⸣` → plain; 3,21
+`⸢האיש הפשוט⸣` → plain; 3,22 `את האיש` → `את [ה]איש` ([pꜣ] nḏs), `⸢מ⸣[עומק]` → `מ[עומק]`; 3,23 `⸢התמסח⸣` → plain;
+3,24 `⸢אותו⸣` → plain; 3,25 `ואז נתן` → `ואז [נתן]` ([r]ḏi̯.n), `[ל][וֶבָּאוֹנֶר]` → `ל[וֶבָּאוֹנֶר]` (a restored
+preposition written as a Hebrew prefix). WE only (lines between the dossier's): 2,24, 3,9, 3,17, 3,18 – `⸢ ⸣` dropped.
+- **The echo tag on a proper name** (the lead's rule, 2026-11-02; guidelines §6.4): `[cognate]` when the name is the
+  Bible's own name (also as a loan or a transcription), `[equivalent]` only for another name of the same thing (Sinuhe's
+  "Ways of Horus" ↔ `דֶּרֶךְ אֶרֶץ פְּלִשְׁתִּים`, *jꜣb.tjw* ↔ `בְּנֵי קֶדֶם`). Changed: SI B29 Qedem ↔ `אֶרֶץ קֶדֶם`
+  (Gen 25:6, 29:1) [equivalent] → [cognate]; no `>` line changed. The lead then changed SI B29 *Kpny* `כֶּפֶּנִי` ↔ Ezek 27:9 `גְבַל` [equivalent] → [cognate]
+  (Kpny is the Egyptian form of the same name, *Gubla*).
 

@@ -25,6 +25,9 @@ a silver amulet, a potsherd, a limestone tablet.
 | MT | `4-תעריף-הקורבנות/` (`annotated`) | The Marseille tariff (CIS I 165, KAI 69), 4th–3rd c. BCE | Punic | 21 | Cooke 1903 no. 42 (PD) | first draft, reviewed |
 | CT | `4-תעריף-הקורבנות/` (`annotated-carthage`) | The Carthage tariff (CIS I 167, KAI 74), 4th–3rd c. BCE | Punic | 11 | Cooke 1903 no. 43 (PD) | first draft (self-reviewed; its Hebrew copies the reviewed MT) |
 
+**2026-11-02:** the lead's rule for the echo tag on a proper name (`[cognate]` for the Bible's own name, `[equivalent]`
+only for another name of the same thing) applied to every annotated file (7 tags; `renderings.md` §3).
+
 **Recorded, not done** (no open base text reachable on 2026-10-31; details and pointers in
 `../sources/_records-only--Words-in-stone/README.md`): Tell Fekheriye (Aramaic side), the Sefire treaties, the Deir
 ʿAllā Balaam text, Khirbet el-Qom, Ketef Hinnom I, the other ʿAjrud texts (the wall poem), the Punic *mlk* stelae.

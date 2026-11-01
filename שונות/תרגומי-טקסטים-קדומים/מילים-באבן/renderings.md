@@ -39,6 +39,14 @@ and the danger is understanding too much.
 | šmrn, tmn | שֹׁמְרֹן, תֵּמָן | "YHWH of Samaria / of Teman" |
 | ḥlṣbʿl, bdtnt, bdʾšmn | חִלֶּצְבַּעַל, בּוֹדְתִּנִּית, בּוֹדְאֶשְׁמוּן | the Carthaginian suffetes (MT) |
 
+**The echo tag on a proper name** (the lead's rule, 2026-11-02; guidelines §6.4): in a הקבלה tag on a place, a people, a
+person or a god, `[cognate]` when the name is the same word as the Bible's (Mesha / `מֵישַׁע`, Dibon, Medeba, Gad, Kemosh,
+Ataroth, Nebo, Baal-meon, Kiriathaim, Jahaz, Arnon, Hoshaiah …: the same name, even as a loan or a transcription);
+`[equivalent]` only when the Bible names the same thing by another word (Deut 33:2's Sinai / Seir / Paran for ʿAjrud's
+Teman). **2026-11-02 harmonization** (the Round 5 finalization): applied to every tag of the corpus – changed from
+[equivalent] to [cognate]: MS 1 (Mesha, 2 Kgs 3:4), MS 2 (Dibon, Num 32:34), MS 8 (Medeba, Josh 13:9), MS 9 (Baal-meon,
+Num 32:38), MS 10 (Kiriathaim, Jer 48:1), MS 19 (Jahaz, Num 21:23), MH 7 (Hoshaiah, Neh 12:32); no `>` line changed.
+
 ## 4. Punic translation: renderings and gates (mode `translation`; `RESERVED_PUN`, `TRAPS_PUN` in the tool)
 **Cognates kept (the meaning matches), each reserved for its Punic word:** `kll` `כָּלִיל` [cognate]; `šlm` `שֶׁלֶם`
 (`שֶׁלֶם כָּלִיל`); `khn` `כֹּהֵן`; `zbḥ` `זֶבַח` / `זָבַח`, `bʿl hzbḥ` `בַּעַל הַזֶּבַח`; `mnḥt` `מִנְחָה`; `ʿrt` `עוֹר`;
