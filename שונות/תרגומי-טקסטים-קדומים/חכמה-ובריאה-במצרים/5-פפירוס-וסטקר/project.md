@@ -256,4 +256,65 @@ into the prophecy); 9,20's rations echo the decree's list (noted).
 - A repeated block (three births) is safest fixed at its first copy and then copied by eye against the source line by
   line; the variants of the Egyptian (an omitted ⟨m nbw⟩, a changed order) are where the copies must differ.
 
+## Independent fidelity review (2026-11-01)
+
+Pass "a" by a fresh reader over all 305 lines: every `>` line against the transliteration and the per-word data (`data WE`), the base XML's `<gap/>`s, the TLA's German (`tr`) read afterwards. **43 lines changed** (some for more than one reason):
+
+- **Damage marks (25 lines):** `⸢ ⸣` is not carried into the Hebrew (brief §3, §9; no other Egyptian file carries it); removed from every non-dossier line that had it. The dossier lines (2,21–4,7) keep them (the dossier's own convention; byte-identity). The legend of `annotated-WE.rtl.md` now says so.
+- **Other brackets (5):** 2,15, 2,19, 4,24, 4,25, 5,23.
+- **Voice / verb form (5):** 4,21, 5,2, 5,12, 6,10, 12,16.
+- **Omitted words (4):** 7,25 (*ḫ,t*), 9,13 (*jri̯.tw*), 12,15 (*jri̯*); and 12,21 / 9,13 a written word put in `( )`.
+- **Editor's ⟨ ⟩ rendered as `( )` (4):** 9,5, 9,15, 10,18, 12,5.
+- **Preposition / object (2):** 10,7 (*ḥnꜥ*), 11,9 (*sw*).
+- **Article (2):** 5,17, 8,15. **Uncertainty marks (3):** 5,22, 9,16, 9,18. **Hebrew agreement (1):** 11,14.
+- No negation or person errors found; the gaps of the XML are all represented (`[…]`); the decrees (1,12–1,17, 4,12–4,17, 6,17–6,22) were not touched; the births block (10,7–11,3) changed only at 10,7 (outside the copied part, the locked room) and 10,18 (now identical with the other copies).
+- **The dossier lines (2,21–4,7):** no `>` line edited. One pending dossier revision, written in the WE entry as `- **לתיק:**`: **2,22** – `⸢ו⸣זהב־לבן; *אוליד*? … [שלח] שליח […]. [ואז] [תפס] [תמסח]` (sub-word brackets against the corpus's rule: a restored suffix `[א]וליד`, half-restored `[ש]לח`, a written stem `שלי[ח]`, a mostly restored `[תמ]סח`). For the lead: the dossier's `⸢ ⸣` in its 9 WE lines (its own convention) differ from the Egyptian corpus's rule.
+- **Left as they are (recorded):** 5,2 / 8,10 *pr-ꜥꜣ* `פַּרְעֹה` for the palace (the §4.2 rule, explained in the notes); 7,12 `והונח לו` for *snḏm.n=f* "he sat at ease" (an idiom; `ישב` is ḥmsj's); 9,14 *ḏd.n=j* read as a main verb (TLA: relative form); 12,11 *r? … zp-2?* (uncertainty explained in the parse, not marked in the line); the bracketed restored article `[ה]` (2,2, 2,4, 2,12; the dossier's practice).
+
+**Every changed line** (label: old → new – reason):
+
+- 1,19: `נֶבְּקָה אמיתי־הקול: נוסע היה אל ⸢בית־האל⸣ של [פְּתָח]` → `נֶבְּקָה אמיתי־הקול: נוסע היה אל בית־האל של [פְּתָח]` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 1,21: `[של] [פְּתָח] […] […], הוד מלכותו הוא העושה ⸢את מלאכת⸣ [הַדְּבִיר] [של] [פְּתָח]` → `[של] [פְּתָח] […] […], הוד מלכותו הוא העושה את מלאכת [הַדְּבִיר] [של] [פְּתָח]` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 2,3: `[ואחרי] ימים [שעברו] ⸢על⸣ [זה] – [והרי] היה ביתן` → `[ואחרי] ימים [שעברו] על [זה] – [והרי] היה ביתן` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 2,6: `[באגם]. ואז [אמרה] [האשה]: ⸢ראו⸣, נעשה שעה בו` → `[באגם]. ואז [אמרה] [האשה]: ראו, נעשה שעה בו` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 2,9: `[בכל] [דבר] [טוב]. [שָׁטָה] ⸢היא⸣ (לשם), בילתה שם את היום בשתייה` → `[בכל] [דבר] [טוב]. [שָׁטָה] היא (לשם), בילתה שם את היום בשתייה` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 2,15: `[ואחרי] – האירה הארץ, ויום שני [נהיה] – [שָׁט]` → `[ואחרי] – האירה הארץ, ו[יום] שני [נהיה] – [שָׁט]` – *h[rw]* is mostly restored: `[יום]` (brackets).
+- 2,19: `באגמך. [ואז] העמיד הוא את עצמו לאדונו [וֶבָּאוֹנֶר] [ב־]` → `באגמך. [ואז] העמיד הוא את עצמו ל[אדונו] [וֶבָּאוֹנֶר] [ב־]` – *nb* "lord" wholly restored: `ל[אדונו]` (brackets).
+- 4,10: `אש בה, [ואז] [היתה] ל⸢מושלך⸣ של היאור. ראה, פלא` → `אש בה, [ואז] [היתה] למושלך של היאור. ראה, פלא` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 4,17: `של דעת. אז עשו כמצוות הוד מלכותו, כולן. קם בָּאוּפְ⸢רַא⸣` → `של דעת. אז עשו כמצוות הוד מלכותו, כולן. קם בָּאוּפְרַא` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 4,19: `בימי אביך סְנֶפְרוּ ⸢אמיתי־הקול⸣, ⸢כמעשה⸣` → `בימי אביך סְנֶפְרוּ אמיתי־הקול, כמעשה` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 4,21: `[זיכרון] ⸢שבח⸣ […] יום; אלה של … לא ⸢עשה⸣? ⸢גרם⸣ שיהיה` → `[זיכרון] משובח […] יום; אלה אשר לא נעשו? (ולא) נגרם שיהיו` – *ḥsi̯* and *tm* are passive participles (TLA): "praised", "(things) not done"; the Hebrew had a noun and an active 3 m. sg. (`שבח … לא עשה? גרם`); the stray `…` (for the particle *jw*) and `של` (*nꜣ n* "these") dropped (form/voice); ⸢ ⸣ dropped.
+- 4,23: `[מקום־רענון]?, [ולא] [מצא] [אותו]. [אז] [אמר] [הוד מלכותו]: לך, הבא לי את ⸢הכוהן־הקורא⸣ החרטום` → `[מקום־רענון]?, [ולא] [מצא] [אותו]. [אז] [אמר] [הוד מלכותו]: לך, הבא לי את הכוהן־הקורא החרטום` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 4,24: `סופר־[המגילה] [גָ׳אגָ׳אאֶמְ]⸢עַנְח⸣! אז הביאו אותו [אליו] מיד. אז אמר לו` → `סופר־[המגילה] [גָ׳אגָ׳אאֶמְעַנְח]! אז הביאו אותו [אליו] [מיד]. אז אמר לו` – the name is mostly restored: bracket the Hebrew word whole; *ḥr-[ꜥ.w]j* mostly restored: `[מיד]` (brackets); ⸢ ⸣ dropped.
+- 4,25: `⸢הוד⸣ מלכותו: [סבבתי] [את] [כל] [חדרי] ⸢בית־המלכות⸣, [חיים, שלום, בריאות], לבקש לי מקום־רענון,` → `הוד מלכותו: [סבבתי] [את] [כל] [חדרי] בית־המלכות, [חיים], שלום, בריאות, לבקש לי מקום־רענון,` – of the written signs of the abbreviation *ꜥnḫ-(w)ḏꜣ-s(nb)* only *ꜥnḫ* is restored: `[חיים], שלום, בריאות` (brackets); ⸢ ⸣ dropped.
+- 5,2: `ייסע הוד מלכותך אל אגם פַּרְעֹה, חיים, שלום, בריאות! צייד לך סירה` → `ייסע הוד מלכותך אל אגם פַּרְעֹה, חיים, שלום, בריאות! תצויד לך סירה` – *ꜥpr* is a passive *sḏm=f* (TLA: passive, "ausgestattet worden ist"), not an imperative (voice).
+- 5,12: `עשרים, וכן לתת את הרשתות האלה לנשים האלה, ויניחו את בגדיהן.` → `עשרים, וכן לתת את הרשתות האלה לנשים האלה, ויונחו בגדיהן.` – *wꜣḥ* is a passive *sḏm=f* (TLA) – the clothes "laid aside", not "they will lay aside" (voice).
+- 5,13: `ואז נעשה כמצוות הוד מלכותו, כולן. ⸢ואז⸣ היו ⸢הן⸣ חותרות` → `ואז נעשה כמצוות הוד מלכותו, כולן. ואז היו הן חותרות` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 5,16: `[…] בצמתה, ואז תליון־הדג ⸢של⸣ טורקיז` → `[…] בצמתה, ואז תליון־הדג של טורקיז` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 5,17: `החדש נפל אל המים. ואז שתקה היא, בלי לחתור,` → `חדש נפל אל המים. ואז שתקה היא, בלי לחתור,` – no article in the Egyptian (*mfkꜣ.t mꜣw.t*), as at 6,3 and 6,6 (article).
+- 5,21: `[מדוע]? ואז אמרה היא: ⸢תליון־הדג⸣ [של] [טורקיז] חדש` → `[מדוע]? ואז אמרה היא: תליון־הדג [של] [טורקיז] חדש` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 5,22: `⸢נפל⸣ אל המים. ⸢ואז⸣ [שם] הוא [אותה] [אל] [משוט־הקצב]. [אז] [אמר] [הוד מלכותו] לה: רוצה אני` → `נפל אל המים. ואז [שם] הוא [אותה] [אל] [משוט־הקצב]. [אז] [אמר] [הוד מלכותו] לה: רוצה? אני` – *mri̯?* is marked uncertain in the base: `רוצה?` (uncertainty); ⸢ ⸣ dropped.
+- 5,23: `[לתת] [לך] [כמוהו] כ[תמורה]. ואז [אמרה] [היא]: [רוצה] אני בחפץ שלי` → `[לתת] [לך] [כמוהו] כתמורה. ואז [אמרה] [היא]: [רוצה] אני בחפץ שלי` – *ḏb[ꜣ,w]*: the stem is written, only the last sign and the ending restored – no bracket (brackets).
+- 6,10: `מונח על חרס […] חרס. ואז הביא הוא אותו, ונתן (אותו) לבעלתו. והרי, הנה` → `מונח על חרס […] חרס. ואז הביא הוא אותו, וניתן לבעלתו. והרי, הנה` – *rḏi̯* is a passive *sḏm=f* (TLA: "es wurde seiner Herrin gegeben"); the Hebrew had "and he gave (it)" (voice).
+- 6,23: `לדבר, אומר הוא: [דבר] של ⸢מעשה⸣ [הוא] [של] [פלא] [שעבר], כידיעת אלה אשר עברו; ⸢לא⸣` → `לדבר, אומר הוא: [דבר] של מעשה [הוא] [של] [פלא] [שעבר], כידיעת אלה אשר עברו; לא` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 6,24: `יודעים אמת [מן] ⸢כזב⸣. [יש] [תחת] הוד מלכותך, בזמנך שלך,` → `יודעים אמת [מן] כזב. [יש] [תחת] הוד מלכותך, בזמנך שלך,` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 7,25: `⸢מעמדך⸣ בין הישישים! ייאבק הכָּא שלך נגד האויב, ידע הבָּא שלך` → `מעמדך בין הישישים! ייאבק הכָּא שלך (על) דבר נגד האויב, ידע הבָּא שלך` – *ḫ,t* "matter" was not rendered: `(על) דבר`, as at 12,9 (omitted word); ⸢ ⸣ dropped.
+- 8,15: `אז אמר הוד מלכותו: תן שיביאו לי את האסיר אשר בבית־הכלא, ויוטל` → `אז אמר הוד מלכותו: תן שיביאו לי אסיר אשר בבית־הכלא, ויוטל` – *ḫnrj* has no article: "a prisoner" (article).
+- 9,2: `את מספר החדרים הנעולים של ⸢דביר⸣ [תְּחוּת]? אז אמר גֶ׳דִי: משובח אתה –` → `את מספר החדרים הנעולים של דביר [תְּחוּת]? אז אמר גֶ׳דִי: משובח אתה –` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 9,5: `של צור, בחדר ששמו "הביקורת", באוֹן; (ראה), הוא בארגז. אז אמר גֶ׳דִי:` → `של צור, בחדר ששמו "הביקורת", באוֹן; ראה, הוא בארגז. אז אמר גֶ׳דִי:` – ⟨m⟩=⟨k⟩: the editor's supplement is rendered without marks (brief §3; the corpus's practice, e.g. AM) – not `( )` = "added for sense" (marks).
+- 9,13: `גֶ׳דִי: מה זה הלב (הזה), הו הריבון, חיים, שלום, בריאות, אדוני? האם בגלל` → `גֶ׳דִי: מה זה הלב הזה, הו הריבון, חיים, שלום, בריאות, אדוני? האם נעשה (זה) בגלל` – *jri̯.tw* "is it done" was not rendered: `האם נעשה (זה) בגלל`; *pꜣ* "this" (TLA "dieser") is in the Egyptian: `הלב הזה` without `( )` (omitted word).
+- 9,15: `תלד היא – מתי, רוּדְגֶ׳דֶת? (אז אמר גֶ׳דִי): תלד היא בחודש הראשון של פֶּרֶת, ביום החמישה־עשר. אז אמר` → `תלד היא – מתי, רוּדְגֶ׳דֶת? אז אמר גֶ׳דִי: תלד היא בחודש הראשון של פֶּרֶת, ביום החמישה־עשר. אז אמר` – ⟨ḏd.jn⟩ ⟨Ḏdj⟩: the editor's supplement without marks, as 9,5 (marks).
+- 9,16: `הוד מלכותו: והרי שרטונות תעלת־שני־הדגים כרותים! *אדרוך*? אני עליהם בעצמי, ואז` → `הוד מלכותו: והרי שרטונות תעלת־שני־הדגים? כרותים! *אדרוך*? אני עליהם בעצמי, ואז` – *ꜥꜣḏ.du?* is marked uncertain in the base (uncertainty).
+- 9,18: `שיהיו מים של ארבע אמות על שרטונות תעלת־שני־הדגים. נסע הוד מלכותו אל ארמונו.` → `שיהיו מים של ארבע אמות על שרטונות תעלת־שני־הדגים?. נסע הוד מלכותו אל ארמונו.` – as 9,16 (uncertainty).
+- 10,7: `ואז נעלו הן את החדר אחריה ואחריהן […] העלייה שלה עמה. ואז העמידה אִיסִיס את עצמה לפניה,` → `ואז נעלו הן את החדר אחריה ועמהן […] העלייה שלה עמה. ואז העמידה אִיסִיס את עצמה לפניה,` – *ḥnꜥ=s⟨n⟩* is "with them", not "behind them" (preposition).
+- 10,18: `כילד של אמה אחת, עצמותיו מוצקות, עיטור איבריו (מזהב), כיסוי־ראשו מספיר` → `כילד של אמה אחת, עצמותיו מוצקות, עיטור איבריו מזהב, כיסוי־ראשו מספיר` – ⟨m⟩ ⟨nbw⟩ without marks (as 9,5); the births block is now identical with 10,10 and 10,25 here (marks).
+- 11,9: `אותה חְנוּם, את השעורה. נסעו הן אל המ⸢קום⸣` → `חְנוּם (על) עצמו את השעורה. נסעו הן אל המקום` – *jwh sw m* "loaded himself with" (TLA "belud sich"): *sw* is Khnum, not the barley (object); ⸢ ⸣ dropped.
+- 11,14: `שעורה. ואז גרמו הן שיבוא השמים בסערה ובגשם.` → `שעורה. ואז גרמו הן שיבואו השמים בסערה ובגשם.` – Hebrew agreement: `שמים` is plural (grammar).
+- 11,18: `ואז נטהרה רוּדְגֶ׳דֶת ב⸢טהרה⸣ של ימים` → `ואז נטהרה רוּדְגֶ׳דֶת בטהרה של ימים` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+- 12,5: `(אותו) בארגז, אשר הונח בתוך מכל־נעול אחר, כרוך בְּעוֹר; ושמה היא אותו` → `אותו בארגז, אשר הונח בתוך מכל־נעול אחר, כרוך בְּעוֹר; ושמה היא אותו` – ⟨sw⟩ without marks, as 9,5 (marks).
+- 12,15: `ואז היתה היא שונה לו את הדבר ⸢הזה⸣. ואז אמר לה אחיה: האם אכן` → `ואז היתה היא שונה לו את הדבר הזה. ואז אמר לה אחיה: האם ייעשה אכן` – *jri̯ (js)* "shall (it) be done" was not rendered (TLA "Sollte denn wirklich gemacht werden") (omitted word); ⸢ ⸣ dropped.
+- 12,16: `(זה) אשר תעשי: לבוא אלי, ואני אתחבר ל[הלשנה]? ואז נטל הוא` → `אשר תעשי: לבוא אלי, ואני מתחבר ל[הלשנה]? ואז נטל הוא` – `(זה)` no longer needed after 12,15; *jw=j ḥr snsn* is the progressive (ḥr + infinitive → participle, §3a), not a future (form).
+- 12,21: `לבה רע מכל דבר. ואז ⸢אמר⸣ הוא לה: גבירתי, (את) עושה את הלב` → `לבה רע מכל דבר. ואז אמר הוא לה: גבירתי, את עושה את הלב` – *jrr=t*: the pronoun *=t* is written – `את` without `( )` (marks); ⸢ ⸣ dropped.
+- 12,23: `היא הלכה, לאמור: אלך ואלשין! ואז הוריד הוא את ⸢ראשו⸣` → `היא הלכה, לאמור: אלך ואלשין! ואז הוריד הוא את ראשו` – `⸢ ⸣` dropped (damage marks are not carried into the Hebrew).
+
 ## Parallels index
