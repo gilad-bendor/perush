@@ -568,8 +568,8 @@ byte (`verify WE` checks it); the dossier is **not** edited from here: a revisio
 | nmḥ; ꜥwꜣ "rob"; nḥm "take away; save" | `דַּל` (§4.3); `גָּזַל`; the translator fixes nḥm (precedent AM 1.11 `להצילו`), by sense if needed, recorded | |
 | wsḫ.t (hall) n.t Mꜣꜥ.tj | `אוּלַם שְׁתֵּי הָאֱמֶת` | "the Two Truths": a note |
 | ḥsb qd.w "the reckoning of characters" | `חֶשְׁבּוֹן הַמִּדּוֹת` | |
-| ḫꜣs.t | `מִדְבָּר` (HC); ḫꜣs.wt "foreign lands" `אַרְצוֹת־הַנֵּכָר` | split by sense (a desert hill / a foreign country), recorded at the lines |
-| the seven species (SI B81–83) | dꜣb `תְּאֵנָה`, jꜣrr.t `עֲנָבִים`, jrp `יַיִן`, bj.t `דְּבַשׁ`, bꜣq `שֶׁמֶן־זַיִת`? / ḏd.t `זַיִת`, jt `שְׂעוֹרָה`, bd.t `כֻּסֶּמֶת` | Deut 8:8 [equivalent]: each word gated to its Egyptian word |
+| ḫꜣs.t | `אֶרֶץ־נֵכָר` (TB, SI); `מִדְבָּר` where the sense is desert (HC) | split by sense, recorded at the lines (§11.13.1) |
+| the seven species (SI B81–83) | dꜣb `תְּאֵנָה`, jꜣrr.t `עֲנָבִים`, jrp `יַיִן`, bj.t `דְּבַשׁ`, bꜣq `עֲצֵי־הַשֶּׁמֶן` (§11.13.4) / ḏd.t `זַיִת`, jt `שְׂעוֹרָה`, bd.t `כֻּסֶּמֶת` | Deut 8:8 [equivalent]: each word gated to its Egyptian word |
 | tꜣ pw nfr (SI B81) | `אֶרֶץ טוֹבָה הִיא` | nfr = `טוֹב` (§5.2): Deut 8:7 `אֶרֶץ טוֹבָה` [equivalent] |
 | qrs "bury", qrs.w "burial", wt "coffin" | `קָבַר`, `קְבוּרָה`, `אָרוֹן` | Gen 50:26 `וַיִּישֶׂם בָּאָרוֹן` [equivalent]; Gen 47:30, 50:5 (burial in the homeland); ḏbꜣ.t (chest, coffin) = `תֵּבָה` only (§4.2) |
 | jꜣw.t "old age"; ḥꜣ.t-zp / rnp.t | `זִקְנָה`; `שָׁנָה` | Djedi's 110 years (WE 7,2): Gen 50:26 `בֶּן מֵאָה וָעֶשֶׂר שָׁנִים` [equivalent: the Egyptian ideal life span] |
@@ -680,4 +680,19 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
    143–144 → 176, 5 → 171). The colophon (186–189) is the formula of Sinuhe B 311: aligned there.
 6. **Kept:** pḥ and spr both `הגיע` in SS (never in one line; `השיג` stays licensed for pḥ where a translator wants it).
 7. **Gates fixed:** the `קוף` licence takes the spelling gwf (165); the שחת gate no longer reads the construct `משחת` "ointment of".
+
+### 11.13 Round 5 run 6 – Sinuhe (R1–R23, B1–B311), merged 2026-11-01 (translator 5)
+1. **Places and peoples:** ḫꜣs.t `ארץ־נכר` (as TB; `מדבר` only where the sense is desert: the §11.3 row is amended so),
+   Stt.jw `הַסֶּטְיוּ`, Nmj.w-šꜥ `חוצי־החול` (the pun of B294); Qedem `קֶדֶם` ★ at B29, B182, B219 (the TLA reads Qatna: open).
+2. **Verbs:** wḏꜣ `נסע` (death as a journey, TB 19,7), mnj `עגן` (the marriage B78 and "the day of mooring" B310), thj `התעה`
+   (Gen 20:13 `הִתְעוּ`), ḥtp `נוח ל־` / the noun `נחת`, snḏ `יראה`, ḥr.yt `אימה`, zbj `הוביל`, fḫ `ניתק`.
+3. **War:** pr.y `אלוף` (champion; `אִישׁ הַבֵּנַיִם` only in the apparatus), ḫpš `כתף` (as AM).
+4. **Yaa:** bꜣq `עצי־השמן` (moringa, the TLA; not `זית`: Deut 8:8 [divergence] in the note; the §11.3 row amended). B81 `tꜣ pw nfr`
+   `ארץ טובה היא` [equivalent Deut 8:7].
+5. Loanwords tagged: ḫtm `חותם`, jtrw `יאור`, šsr `שֵׁשׁ` (Gen 41:42). Repeated passages copied (B227 = B41, B255 = B39, B229 = B156,
+   B263 = B236, B290 = B247); B311 copies SS 186–187 (pḥ.wj `קץ`).
+6. **Kept, for the lead:** dmj `עיירה` in SI (where nʾ.t is `עיר`, B66) against AM 8.5 and TB's dmj `עיר` – a split by text;
+   jdr (SI) and TB's jꜣw.t both `עדר` (two herd words, never in one line); ḏrḏr (SI) = AM's ḏrjḏrj `נכרי`.
+7. **Gates fixed (the coordinator):** `שמחה` no longer read as ש־מחה; the `עור` gate also licenses `עוֹר` "skin" (jnm, dḥr); the
+   ba trap no longer fires on bꜣ,t "bush".
 

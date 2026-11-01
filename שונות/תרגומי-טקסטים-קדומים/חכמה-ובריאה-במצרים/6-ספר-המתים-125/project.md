@@ -186,4 +186,19 @@ tbj `נעול`, HC 83 sꜣt `פגם`; MT 8 šnṯ.t `ריב`; TB 5,5 sbꜣ `דל
   text's place names before drafting.
 - In a dialogue text, `tr`'s sentence division shows who speaks; the TLA corrected two speaker assignments here (105, 108).
 
+## Independent fidelity review (2026-11-01)
+Pass (a) by a fresh reader: all 115 lines compared with the transliteration and the per-word data (`data BD`), then with the TLA's German (`tr BD`). Brackets: none needed changing (the base has no `[ ]` restorations; its four `<gap/>`s are the four `[…]` of 2, 63, 108; the `⸢ ⸣` of 96 rightly unbracketed). The 42 denials, the formula and the denial verbs (§11.11) checked line by line: one Hebrew verb per Egyptian verb, no Ps 15 / 24 or Decalogue wording in the lines.
+
+**7 lines changed** (tense 1; omitted word 3 – 75, 103, 104; genitive for a preposition 2; ambiguous spelling 1; brackets 0):
+- **9** (tense): `מעבר למה שנעשה לי` → `מעבר למה שייעשה לי` – *jri̯.tn=j* is the prospective relative form ("what should be done for me", as the parse itself said); the past `שנעשה` contradicted it.
+- **16** (genitive for a preposition): `המועדים של הנתחים הנבחרים` → `המועדים בעניין הנתחים הנבחרים` – *sw.w ḥr stp.wt*: *ḥr* "concerning", not a genitive (TLA "bezüglich").
+- **75** (omitted word): `בבית *הפוער־פה*?` → `בבית (אשר) סביב *הפוער־פה*?` – *ḥꜣ* "around" was in the parse but not in the line.
+- **79** (ambiguous spelling): `קדמתי` → `קִדְמָתִי` – *ḥꜣ.t=j* "my front" (a noun), which unvocalized reads as the verb "I preceded".
+- **84** (genitive for a preposition): `העיר הצפונית של הזית` → `העיר הצפונית לזית` – *nʾ.t mḥ.tj.t bq* "the city north of the olive" (TLA "nördlich des Ölbaums").
+- **103–104** (omitted word): 103 `"למה באת?"` → `"למה באת?" "באתי`; 104 `"הנה, כדי שיוגד עליי."` → `הנה כדי שיוגד עליי."` – the answer's *jy.n=j* "I have come" stands at the end of 103 and had been left out (the notes had said the Egyptian lacks it); the parse and notes of 103–104 corrected.
+
+Undecided (left): 114 `מעל שולחן־הקרבנות` for *ḥr ḫꜣw.t* "on the altar" (Hebrew `מעל` can read "from upon"); 50 `לא נמהרתי לב` keeps the idiom though *jb=j* is the subject (`לא נמהר לבי` would be closer).
+
+`build BD`, `verify BD --strict` (0 problems), `check_bible_quotes.py` on the annotated and translation-BD files (0 problems).
+
 ## Parallels index

@@ -174,4 +174,14 @@ Files: `annotated-SS.rtl.md`, `translation--intro-SS.rtl.md`, the generated `tra
 - **Parallel translators collide in the common words** (jqr, sr, zꜣtw, nšnj, mnmn here): a lemma → Hebrew survey of
   the whole new text against every drafted line, before drafting, saves a pass.
 
+## Independent fidelity review (2026-11-01)
+Pass (a) by a fresh reader: all 191 lines compared with the transliteration and the per-word data (`data SS`), then with the TLA's German (`tr SS`). The base has no `<gap/>`; its restorations (182 `[n] [rʾ]`, 185 `[n]`, 188 `[m]`, 189 `J[m]n,y`) are marked as the tales' convention has it (a restored preposition rendered by a Hebrew prefix unbracketed, as TB / WE; a restored sign none). The repeated passages (26–41 = 89–110, 67–71 = 81–85) and the promise / fulfilment pairs checked against each other: identical where the Egyptian is, different only where it differs (37 `s(j)?` `אותו?` / 106 `s(j)` `אותו`; 39 `rḏi̯.kw` / 109 `jni̯.kwj`).
+
+**1 line changed** (tense 1; brackets 0):
+- **170** (tense): `ואז קורא אני אל הצבא` → `ואז קראתי אל הצבא` – *ꜥḥꜥ.n=j ḥr jꜣš* is the narrative "then I called" (§3a, as *wn.jn=f ḥr sḏm*; TLA "Da rief ich"), not a present participle.
+
+Undecided (left): 145 `wšn.n=j` (*sḏm.n=f*) rendered as a future `אמלוק` within the sailor's list of promises; the TLA's "nachdem ich … geopfert habe" (a prior circumstantial) is the alternative – the parse records it.
+
+`build SS`, `verify SS --strict` (0 problems), `check_bible_quotes.py` on the annotated and translation-SS files (0 problems).
+
 ## Parallels index

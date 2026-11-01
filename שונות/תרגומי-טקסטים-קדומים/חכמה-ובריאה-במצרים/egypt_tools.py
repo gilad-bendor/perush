@@ -325,7 +325,7 @@ RESERVED = [
     (W + alt("פלס", "הפלס", "פלסים") + E, r"jws|jwsw|jws,w|jwsꜣ", "פֶּלֶס only for jws(w) 'the hand-balance' [equivalent Prov 16:11, Isa 40:12]"),
     (W + alt("מאזנים", "מאזני", "המאזנים", "מאזניו", "מאזניים") + E, r"mḫꜣ|mḫꜣy|mḫꜣ,t|mḫꜣ\(y\)", "מֹאזְנַיִם only for mḫꜣ.t 'the balance' [equivalent Lev 19:36, Prov 16:11, 11:1]"),
     (W + alt("שחד", "השחד", "שוחד") + E, None, "שֹׁחַד never: fqꜣ 'reward' = שָׂכָר (Ex 23:8, Deut 16:19 in the apparatus)"),
-    (W + alt("עור", "עיוור", "עוור", "העור", "העיוור", "העוור", "עורים", "עיוורים", "עוורים") + E, r"kꜣmn|kꜣmꜣn|špw|bꜣk", "עִוֵּר only for kꜣmn 'blind' [equivalent Lev 19:14, Deut 27:18]"),
+    (W + alt("עור", "עיוור", "עוור", "העור", "העיוור", "העוור", "עורים", "עיוורים", "עוורים") + E, r"kꜣmn|kꜣmꜣn|špw|bꜣk|jnm|dḥr", "עִוֵּר (and `עוֹר` 'skin': jnm, dḥr) only for kꜣmn 'blind' [equivalent Lev 19:14, Deut 27:18]"),
     (W + alt("פסח", "הפסח", "פסחים", "פיסח") + E, r"qbqb", "פִּסֵּחַ only for qbqb 'lame' [equivalent Lev 21:18]"),
     (W + alt("גר", "הגר", "גרים", "לגר", "גרך") + E, None, "גֵּר never (Amenemope's stranger ḏrjḏrj = נָכְרִי; Deut 24:19 in the apparatus)"),
     (W + alt("גואל", "גאל", "גואלו", "גואלם", "הגואל", "גואלי", "גאלם") + E, None, "גֹּאֵל never (the wisdom corpus's reservation; Prov 23:11 in the apparatus)"),
@@ -404,7 +404,7 @@ TRAPS = [
     (RW + r"(?:אלים|אלי|אלה|אלת|אלתו|אלתי)" + RE_, r"nṯr", "'gods' / 'god of' / 'goddess' must be vocalized אֵלִים / אֵלֵי / אֵלָה / אֵלַת"),
     (RW + r"(?:און)" + RE_, r"jwnw|jwn,w|ꜣwnw", "Heliopolis must be vocalized אוֹן ('strength', 'iniquity')"),
     (RW + r"(?:מף|נף)" + RE_, r"mn-nfr|ḥw,t-kꜣ-ptḥ|jnb-ḥḏ|jnb.w-ḥḏ", "Memphis must be vocalized מֹף"),
-    (RW + r"(?:בא)" + RE_, r"\bbꜣ\b|bꜣ=|bꜣ\.", "the ba must be vocalized בָּא ('came')"),
+    (RW + r"(?:בא)" + RE_, r"\bbꜣ\b(?!,)|bꜣ=|bꜣ\.", "the ba must be vocalized בָּא ('came')"),
     (RW + r"(?:כא)" + RE_, r"\bkꜣ\b|kꜣ=|kꜣ\.", "the ka must be vocalized כָּא"),
     (RW + r"(?:נון)" + RE_, r"nwn|nw,w|nnw", "Nun must be vocalized נוּן (the primeval water; Joshua's father)"),
     (RW + r"(?:נות)" + RE_, r"nw,t|nwt", "Nut must be vocalized נוּת"),
@@ -460,7 +460,7 @@ def check_line(key, lab, heb, body, fixed, out):
     bad = 0
     plain = strip_marks(heb)
     # whole words that a gate's prefix class misreads (TB 6,3 `לברוח` "to flee", 8,7 `מרוח` "smeared"): not the gated word
-    plain = re.sub(r"(?<![א-ת])(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי)(?![א-ת])", " ", plain)   # + BD 90–91, 111
+    plain = re.sub(r"(?<![א-ת])[ובלכה]?(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי|שמחה|שמחת|שמחתי|שמחתו|השמחה)(?![א-ת])", " ", plain)   # + BD 90–91, 111; SI B70 (`שמחה` ≠ ש־מחה)
     if re.search(r"ḥmsi̯|ḥms\b|ḥmsj|ḥms\.", license_text(key, lab)):   # `לשבת` "to sit" (ḥmsj), not the root שבת (WE 3,8)
         plain = re.sub(r"(?<![א-ת])ו?לשבת(?![א-ת])", " ", plain)
     src = plain_src((row(key, lab) or {}).get("text", ""))
