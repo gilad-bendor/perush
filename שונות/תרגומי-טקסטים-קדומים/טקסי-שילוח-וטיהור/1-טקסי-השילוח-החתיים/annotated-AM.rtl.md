@@ -848,14 +848,13 @@
 > […]… תן!
 - **פירוק:** `[ … ]-iauwar` – lost + a verbal noun in *-war* ("[…]…"); `pāi` – pai- "give", imper. 2sg ("תן").
 - **תרגומים:** Christiansen (HPM): "„Und [ … ] gib,"
-- **הערות:** [סטייה מן הנוסחה: F8 is the Laws' 3sg *pāi* "he shall give" = `ייתן`; here *pāi* is the imperative 2sg "give!" = `תן`]
 
 ### 118
 `IGI{ḪI.A}-aš=mu uwātar pāi`
 > לעיניי – ראייה תן לי!
 - **פירוק:** `IGI{ḪI.A}-aš` – IGI "eye", pl., d.-l. ("לעיניי"); `=mu` – "to me" ("לי"); `uwātar` – uwatar "sight, inspection", acc. ("ראייה"); `pāi` – pai- "give", imper. 2sg ("תן").
 - **תרגומים:** Christiansen (HPM): "meinen Augen gib Sehkraft!" – "Sehkraft" ל־*uwātar*; אנו `ראייה`.
-- **הערות:** [סטייה מן הנוסחה: F8 (*pāi* "he shall give" = `ייתן`) does not apply: *pāi* is the imperative 2sg] בקשה אישית של הזקנה: ראייה לעיניה. הטקס, שנעשה בעבור האדונים, נעשה גם בעבורה.
+- **הערות:** בקשה אישית של הזקנה: ראייה לעיניה. הטקס, שנעשה בעבור האדונים, נעשה גם בעבורה.
 
 ### 119
 `[m]ān peran idālu damaiš [mem]ai`
