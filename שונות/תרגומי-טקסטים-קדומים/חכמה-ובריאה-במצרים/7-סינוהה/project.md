@@ -96,4 +96,26 @@ SS 186–187 (the colophon) copied in B311 except dwꜣ.w "in the morning" (not 
 - A gate's prefix class reads a common word as prefix + reserved root: `שמחה` (joy) = ש + `מחה` (Gen 6:7) – write the prefix classes so that they do not split a frequent noun; and a gate written for one word (`עִוֵּר`) blocks its homograph (`עוֹר` "skin"): license by the homograph's source word too (here *jnm*).
 - In a narrative with a letter and a reply that answer each other, draft the first text's key strings with the later copy in view (B39 / B255, B41 / B227, B156 / B229, B236 / B263): the copies then show the tale's design.
 
+## Independent fidelity review (2026-11-01)
+Pass "a" by a fresh reader: all 334 lines (R1–R23, B1–B311) compared with the transliteration and the per-word data (`data SI`), the TLA's German read after each section; the base XMLs checked for `<gap/>` (R1–R23: none; B: only B74, rendered `[…]`). The repeated passages (B227 = B41, B255 = B39, B229 = B156, B263 = B236, B290 = B247, B311 = SS 186–187) are untouched and still identical; no SS change is needed. `build SI`, `verify SI --strict` (0 problems) and `check_bible_quotes.py` (0 problems) pass.
+
+**14 lines changed:** wrong sense / subject 3 (B7, B29, B273); tense / mood / form 4 (B212, B282, B296, B70); preposition 1 (B172); brackets (the editor's `⟨ ⟩` words, which the file's own convention leaves unmarked, as B36, B43, B238) 4 (B38, B148, B246, B269 – B269 also restores the `ḏd.jn X` formula); clarity of a negation / an ambiguous form 2 (B114, B103).
+
+- **B7:** `לא אמרתי (שיהיו) חיים אחריו` → `לא אמרתי לחיות אחריו` – *ꜥnḫ* is an infinitive whose subject is Sinuhe ("I did not think to live after him"; TLA "ich meinte nicht, nach ihm zu leben"); the bracketed addition made the "life" impersonal. `אמר ל־` + infinitive = "intend, think to".
+- **B29:** `שבתי אל קֶדֶם` → `נקלעתי אל קֶדֶם` – *ḥzj* "turn, get to" (TLA "geriet nach"); `שבתי` says "I returned", but Sinuhe had never been there.
+- **B273:** `ממך את העניים מרעה` → `לך את העניים מרעה` – *n=k* is the ethic dative "for yourself"; `ממך` ("remove the poor from you") contradicted the line's own reading (*sḥr X m Y* "keep X from Y": protect the poor from harm).
+- **B212:** `תחזור יראתך` → `יחזרו על יראתך` – *wḥm* passive *sḏm=f* "be repeated, proclaimed" (TLA "möge wiederholt werden"), as impersonal (§3a), like B38 `וחזרו לי`; `תחזור` meant "return".
+- **B282:** `נסעו` → `סְעוּ` – the imperative plural (*wḏꜣ tn*, "go!"), vocalized; `נסעו` reads as a past "they went".
+- **B296:** `כאשר הוא ברשות רע` → `כאשר היה ברשות רע` – *m wn.t* "as (a house) which was in a courtier's possession": a past participle, as the parse's own literal rendering had it.
+- **B70:** `מה (גדולה) שמחת הארץ הזאת` → `מה שְׂמֵחָה הארץ הזאת` – *ršw=wj* is the participle with the admirative ending ("how joyful is"); the noun and the added `(גדולה)` were a workaround for the old `מחה` gate, fixed since (§11.13.7).
+- **B172:** `תאמר לי אפוא (דבר) טוב על ילדיה` → `תאמר לי אפוא: טוב לילדיה` – *nfr n ms.w=s* "it is well with her children" (TLA): *n* is "to / for", not "about"; the addition dropped.
+- **B38:** `וחזרו לי (על הדבר)` → `וחזרו לי על הדבר` – `⟨st⟩` is the editor's supplement, unmarked.
+- **B148:** `האל (זאת)` → `האל זאת` – `⟨nn⟩`, the same.
+- **B246:** `קיבלתי (את הדרך)` → `קיבלתי את הדרך` – `⟨wꜣ.t⟩`, the same (`(מפרש)` stays: it is ours).
+- **B269:** `(ואמרו לפני הוד מלכותו)` → `; אז אמרו לפני הוד מלכותו` – `⟨ḏd.jn=sn ḫft ḥm=f⟩` is the editor's supplement (unmarked), and *ḏd.jn X* is `אז אמר X` (§11.5).
+- **B114:** `הלא אינני חברו` → `הן אינני חברו` – *n jnk tr* "I am surely not his ally" (TLA "Ich bin doch nicht"); `הלא` with the negation reads as a question.
+- **B103:** `את מקנה` → `את מִקְנֶהָ` – "its (the land's) cattle", vocalized: unvocalized it reads as the bare noun.
+
+**Checked and kept:** the participles of the four contrasts (B149–B155: a general present, as the TLA); the *n sḏm.n=f* of the eulogy (B54 `לא יקשרו`, B55 `לא עמדו`, B58–B59 `לא נתן`: both readings of the general negation are defensible); B170 `ללוות את הלב; עייף (הלב)` (the idiom *šms jb*, with the TLA's other division recorded); B204 `הדיווח על הצו` (Hebrew idiom for "the reply to"); B248 / B259 `(פעמיים)` for *zp-sn.wj* (the corpus's practice for the *zp-N* marker, BD); Yaa (B81–B84): no species beyond the Egyptian's, *bꜣq* `עצי־השמן`; the duel (B109–B143) and the burial (B190–B198, B300–B311) carry no wording from 1 Sam 17 or Gen 50 beyond the tagged equivalents. **Undecided (for the lead):** B114 `הן` now shares the word with *grt* (B47, B51) – particles are not kept one-per-lemma in SI; B29 `נקלעתי` is new in the corpus.
+
 ## Parallels index
