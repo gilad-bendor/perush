@@ -384,7 +384,7 @@ RESERVED = [
     (W + alt("תאנה", "תאנים", "התאנים", "תאנתו", "תאני") + E, r"dꜣb|dꜣb\.w|nḥ,t|nh,t", "תְּאֵנָה only for dꜣb 'fig' [equivalent Deut 8:8]", TALES),
     (W + alt("גפן", "הגפן", "גפנים", "ענבים", "הענבים", "ענב", "ענבי") + E, r"jꜣrr|jꜣrr,t|jrp|jꜣ~jr", "גֶּפֶן / עֲנָבִים only for jꜣrr.t 'grapes, vine' [equivalent Deut 8:8]", TALES),
     (W + alt("דבש", "הדבש", "דבשה", "דבשו") + E, r"bj,t|bj\.t|bj\b|bjt", "דְּבַשׁ only for bj.t 'honey' [equivalent Deut 8:8; Ex 3:8]", TALES),
-    (W + alt("זית", "זיתים", "הזית", "הזיתים", "זיתי") + E, r"ḏd,t|ḏd\.t|ḏdt|bꜣq|bꜣq,t", "זַיִת only for ḏd.t / bꜣq 'olive' [equivalent Deut 8:8]", TALES),
+    (W + alt("זית", "זיתים", "הזית", "הזיתים", "זיתי") + E, r"ḏd,t|ḏd\.t|ḏdt|bꜣq|bꜣq,t|\bbq\b|bq,t", "זַיִת only for ḏd.t / bꜣq 'olive' [equivalent Deut 8:8]", TALES),
     (r"(?<![א-ת])ו?" + alt("זבת", "זבה") + E, None, "`זָבַת חָלָב וּדְבָשׁ` never (Ex 3:8)", TALES),
     # the serpent (the dossier rule: `נָחָשׁ` the comparison word for every culture's serpent)
     (W + alt("נחש", "נחשים", "הנחש", "הנחשים", "נחשי", "נחשה") + E, r"ḥfꜣ|ḥfꜣw|ḥfꜣ,w|ꜥꜣpp|ḏdf|nḥꜣ|nꜣw|ꜥpp|sꜣ-tꜣ|ḏd\b|ḏd,t|ꜥrꜥr", "נָחָשׁ only for a serpent word (ḥfꜣw …) [equivalent Gen 3:1, Ex 7:9–12]", TALES),
@@ -460,7 +460,7 @@ def check_line(key, lab, heb, body, fixed, out):
     bad = 0
     plain = strip_marks(heb)
     # whole words that a gate's prefix class misreads (TB 6,3 `לברוח` "to flee", 8,7 `מרוח` "smeared"): not the gated word
-    plain = re.sub(r"(?<![א-ת])(?:לברוח|מרוח)(?![א-ת])", " ", plain)
+    plain = re.sub(r"(?<![א-ת])(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי)(?![א-ת])", " ", plain)   # + BD 90–91, 111
     if re.search(r"ḥmsi̯|ḥms\b|ḥmsj|ḥms\.", license_text(key, lab)):   # `לשבת` "to sit" (ḥmsj), not the root שבת (WE 3,8)
         plain = re.sub(r"(?<![א-ת])ו?לשבת(?![א-ת])", " ", plain)
     src = plain_src((row(key, lab) or {}).get("text", ""))

@@ -655,3 +655,16 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
    `קולר־מנת`, `מנענעים`; ꜥfd.t and pds both `ארגז` (kept: never in one line).
 5. Gate traps (no change; vocalize): `בְּעוֹר` "in leather" (the עִוֵּר gate), `הָאֵלֶּה` "these" in a line with nṯr, `ייטב` (write another form).
 
+### 11.11 Round 5 run 6 – BD 125 (1–115), merged 2026-11-01 (translator 3)
+1. **The formula** `הו X, היוצא מ־Y: לא …` on the 40 lines with pri̯ m; 58 and 62 (no pri̯ m in Nu) `הו X: לא …`.
+2. **The denial verbs** (one Hebrew per Egyptian verb in both confessions; the full table in `6-ספר-המתים-125/project.md`):
+   jri̯ `עשה`, smꜣ `הרג`, ṯꜣw `גנב`, ꜥwꜣ `גזל`, ḏd grg `אמר כזב`, nk `שכב עם` (nkk `נשכב`), dꜣdꜣ `זנה`, thj `עבר על` (Deut 26:13
+   `לֹא עָבַרְתִּי` [equivalent]), ḫbj `גרע`, ḥḏj `הזיק` (AM 17.19), nḥm `נטל` / "save" `הציל`, ꜥwn `בצע` (AM 10.10), šnṯ `גידף` (šnṯ.t
+   `ריב`), sꜣt `פגם` (HC 83), ꜥm-jb `בלע לב`; smj `הגיד (על)`; ḥrw "fear" `פחד`; tꜣ "be hot" `רתח` (the `חם` gate is šmm's).
+3. **The judges** as hyphenated names without the article (`רחב־צעדים`, `חובק־להבה`, `בולע־צללים` …); opaque names transliterated.
+4. **Purity:** wꜥb `טהור`, ꜥbw `זוך`, twr `מזוקק` (three words). **The door:** `דלת`, `מזוזות`, `משקוף`, `בריחים`, `שוער`, `רצפה`.
+5. **Settled (the coordinator):** Herakleopolis Nn-nsw = `חָנֵס` (the Cow's form, §10.10.2; BD 18, 29 changed from `נֶן־נֶסוּ`);
+   qd.w `חשבון המידות` beside dbḥ `מִדָּה` (AM) kept – one Hebrew for two lemmas, never in one line (open for the lead).
+6. **Gates fixed:** `משקוף`, `מרוחה` exempted (the קוף / רוח prefix classes); the `זית` licence takes pNu's spelling `bq`. The
+   place names `בָּאחוּ`, `מחֶם`, a name with `חרי` pass by `[היתר שער]`.
+
