@@ -318,16 +318,10 @@ mid. "stand" `עָמַד`; *eš-* "sit" `יָשַׁב` / "be" `הָיָה`; *ḫ
 | `(?<![֑-ׇא-ת])[ובלמהכש]?(?:פורה)(?![֑-ׇא-ת])` | `.` | Purra `פּוּרָּה` ("fruitful"; SR, translator 3) |
 
 ## H8. The fifth-day dossier's Illuyanka excerpt: revisions pending for the lead (machine-read)
-`verify IL` checks that IL 8–17 equal the dossier's KBo 3.7 i 9–20 (`../מיתוסים-אוגריתיים/3-תיק-היום-החמישי/annotated-IL.rtl.md`)
-after these replacements are applied to the dossier's joined Hebrew. The lead applies them to the dossier at the round's
-finalization (then deletes the rows). This run does not edit the dossier.
+Applied to the dossier on 2026-11-02 (the Round 5 finalization); no revision pending.
 
-| The dossier's string | Ours | Why |
-|---|---|---|
-| `ואל הסערה – את כל האלים` | `וְאֵל הַסְּעָרָה – אֶת כָּל הָאֵלִים` | KBo 3.7 i 12 = IL 10 (DINGIR.MEŠ): unvocalized `ואל` / `האלים` read as "and to" / "these"; the Hittite tools' trap (law renderings §H6) requires `אֵל` / `אֵלִים` vocalized in a line with DINGIR. |
-| `ואִינָרָה [… ל]זִיגָּרָתָּה` | `ואִינָרָה [ל]זִיגָּרָתָּה` | KBo 3.7 i 19 = IL 16 (Round 5 run 2, translator 1): the gap between the goddess's name (preserved in KBo 3.7 i and ms D `{d}i-na-ra-a[š`) and the town holds only the preposition (TLHdig `_ (_)`, one or two signs; HPM restores *INA*): the dossier's `[…` suggests a lost word. |
-| `והכינה הכול בשפע:` | `וערכה הכול לָרֹב:` | KBo 3.7 i 14 = IL 13 (consistency pass, 2026-10-31): *ḫandai-* is `עָרַךְ` in every myth text (UL 2:129, 3.1:4, HE 26:30, 27:13, TE 247); *mekki* `לָרֹב` / `הַרְבֵּה` (root רבב, IL 106, HE 26:30) – the dossier's `בשפע` gave *mekki* the root of *iyatar* `שֶׁפַע` (IL 15): two source words in one Hebrew root. |
-| `כלי יין, כלי מַרְנוּוַנְט, כלי וַלְחִי – ובכלים` | `דוד יין, דוד מַרְנוּוַנְט, דוד וַלְחִי – ובדודים` | KBo 3.7 i 15–17 = IL 14–15 (consistency pass, 2026-10-31): {DUG}*palḫi-* is `דּוּד` in HE 27:14 and TE 235 (and IL 33 now); `כלי` is the Hebrew of TUKUL / UNŪTU. |
+| Key | The dossier's string | Ours | Why |
+|---|---|---|---|
 
 ## H9. Selftest (myth lines; `hittite_tools.py selftest`)
 | Line | Expect | Hebrew |
@@ -341,3 +335,8 @@ finalization (then deletes the rows). This run does not edit the dossier.
 | IL 9 | ok | `גבר הנחש על אֵל הַסְּעָרָה.` |
 | IL 9 | err | `גבר התנין על אֵל הַסְּעָרָה.` |
 | HE 1:77 | ok | `קם חיש` |
+| KU 126 | ok | `"תן לי את [הי]לד!` |
+| AP 1:17 | ok | `וכל אחד לבנו [לחם] וגם שומן נותן,` |
+| SR 10.1.2 | ok | `[…] אַל טובה, אַל` |
+| HE 25:17 | ok | `"ואת הארץ – הכֹּפֶר מחזיק.` |
+| HE 25:16 | err | `[…] הכופר […]` |

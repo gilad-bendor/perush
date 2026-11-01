@@ -11,7 +11,7 @@ the law and ritual corpora's Hittite tables (every Hittite text).
 | Project | KEY | Text | Base | Lines |
 |---|---|---|---|---|
 | `1-אילויאנקה-וחדמו/` | IL | The Illuyanka myth (CTH 321), both versions, with the priest Kella's frame; IL 8–17 = the fifth-day dossier's excerpt (KBo 3.7 i 9–20), kept identical by `verify IL` | HPM, Rieken et al. (CC BY-SA) | 128 |
-| | HE | The Song of Ḫedammu (CTH 348.I.1–29: the 29 fragments as HPM edits them, in its order) | HPM | 698 |
+| | HE | The Song of Ḫedammu (CTH 348.I.1–29: the 29 fragments as HPM edits them, in its order); HE 6:13–19, 21:12–16, 2:5–22, 4:10–39 (60 lines) = the fifth-day dossier's excerpt HD (`../מיתוסים-אוגריתיים/3-תיק-היום-החמישי/annotated-HD.rtl.md`, copied 2026-11-02), kept identical by `verify HE` | HPM | 698 |
 | `2-מחזור-קומרבי/` | KU | The Song of Emergence ("Kingship in Heaven", CTH 344) | HPM | 296 |
 | | UL | The Song of Ullikummi (CTH 345.I.1–3.2 = tablets 1–3, and the fragments 345.I.4–10) | HPM | 812 |
 | `3-שירת-השחרור/` | SR | The Song of Release (CTH 789), **the Hittite side only** (the Hurrian lines of the bilingual are out of scope): the main tablets KBo 32.13 (Allani's banquet), 32.14–16 (the parables), 32.19 (the assembly of Ebla), and the fragments 32.10, 32.17 | our composite from TLHdig 0.3 (CC BY 4.0), `composite-SR.tsv` | 422 |
@@ -42,5 +42,6 @@ IL → HE (the serpents; the dossier) → KU → UL (the Kumarbi cycle: kingship
 **First draft complete (2026-10-31, Round 5 run 2):** all nine texts, 3,164 lines – drafted by four translators, three
 review passes (fidelity, consistency, Hebrew), intros, built clean translations (`translation.rtl.md` per project), print
 stubs in `../הדפסה/מיתוסים-חתיים-וחוריים/`, the parallels index (216 rows, key findings at its top). Not yet reviewed by
-the user. Pending for the lead: Ḫedammu into the fifth-day dossier; the dossier revisions of `renderings.md` §H8; the
-splits of `renderings.md` M3. Details per text: each `project.md`.
+the user. Pending for the lead: the splits of `renderings.md` M3. Done at the Round 5 finalization (2026-11-02): the four dossier
+revisions of `renderings.md` §H8 applied to the dossier's IL (the table is empty now); Ḫedammu in the dossier (key HD:
+60 lines of HE, copied byte for byte; `hittite_tools.py verify HE` keeps them identical, as `verify IL` does for IL 8–17). Details per text: each `project.md`.

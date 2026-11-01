@@ -14,13 +14,15 @@ corpus's projects 1–2 and are referred to, not repeated, here.
 | AP | pBremner-Rhind (pBM EA 10188, c. 310 BCE): the Book of Overthrowing Apophis 26,8–26,20 (Apophis sent down into "the lake of Nun"; "the book of repelling Apophis, done in the morning": cut, burned, cursed with childlessness, nameless; the rubric: a wax Apophis burned before Re daily) and the Names of Apophis 32,43–32,45, 32,50 (a serpent drawn with its tail in its mouth; a figure with a crocodile's face, "Wild-face") | Middle Egyptian (Ptolemaic copy) | `AED-TEI/Bremner-Rhind--4-Overthrowing-Apophis/`, `…--5-Names-of-Apophis/` | CC BY-SA 4.0 | 17 |
 | TH | Hesiod, Theogony 237–239, 270, 295–300, 333–336, 820–828: Keto, daughter of the Sea, and her monstrous brood; Echidna; the serpent of the golden apples; Typhoeus with a hundred serpent heads | Greek | `Perseus--Hesiod/` (Evelyn-White 1914) | PD text, CC BY-SA markup | 23 |
 | IL | The Illuyanka myth (CTH 321), version 1, KBo 3.7 i 9–20: the serpent defeats the storm god; Inara's feast | Hittite | `TLHdig/CTH-321/KBo 3.7.xml` (TLHdig 0.3) | CC BY 4.0 | 12 |
+| HD | The Song of Ḫedammu (CTH 348.I), in the story's order: 6:13–6:19 (the Sea gives Kumarbi his daughter, a DANNA wide), 21:12–21:16 (Kumarbi goes down to the sea; the son lifted onto his knees), 2:5–2:22 (Ḫedammu reared in oil and water; he eats cattle, horses and river fish by the thousand), 4:10–4:39 (Ištar's love-potion in the sea; the serpent drinks and sleeps; her naked body; his size – 70 cities in his belly; the floods; he comes down "from the throne, from the sea") | Hittite (from Hurrian) | `HPM/MYTH--CTH-348.I.<n>/edition.json` (HPM, Rieken et al. 2009), read through `../../tools/hittite_tools.py` (its key HE) | CC BY-SA 4.0 | 60 |
 | RV | Rigveda 1.32.1, 2, 4, 5, 8, 11: Indra slays the serpent (Vr̥tra) and frees the waters | Vedic Sanskrit | `VedaWeb/rv_1.032--zurich.tsv` (the Zurich text and morphology) | CC BY 4.0 | 24 |
 | HY | Hymiskviða 22–24 (Codex Regius, c. 1270): Thor hooks the World Serpent, "the girdle of all lands" | Old Norse | `Bugge-1867--Saemundar-Edda/hymis.html` | PD | 22 |
 | KJ | Kojiki (712), Book 1: the eight-headed serpent Yamata-no-Orochi, made drunk and cut up; the river runs blood | Old Japanese in kanbun | `Wikisource-zh--Kojiki/kojiki-jokan.html` (Shinpukuji tradition) | PD text (CC BY-SA page) | 12 |
 
 **Not done from the original, and why** (world list §5A):
-- *Ḫedammu* (Hurro-Hittite, CTH 348): very fragmentary; a composite would have to be built from TLHdig's manuscripts – a
-  task for the Hittite run (Round 4 run 6).
+- *Ḫedammu* (Hurro-Hittite, CTH 348): left in Round 4 (very fragmentary; no composite); the whole song was translated
+  in Round 5 run 2 from the HPM edition (`../../מיתוסים-חתיים-וחוריים/`, key HE), and its sea-serpent passages joined
+  the dossier at the Round 5 finalization (KEY HD, below).
 - *The Deir ʿAllā bird list*: no open edition (Hoftijzer & van der Kooij 1976 ©; DEAPS has no record yet).
 - *Anaximander's first humans inside fish*: only indirect testimonia (Censorinus in Latin, ps.-Plutarch in Greek); a
   candidate for a later "Greek beginnings" dossier.
@@ -73,6 +75,36 @@ becomings of Re": Khepri, "when I came into being, being came into being") is **
   `dossier_tools.py verify` gates the loanwords and key words of WC/AP by their source word (`LICENSED`: `תמסח` – msḥ,
   `חרטום` – ḥry-tp, `הבנים` – hbnj, `שעווה` – mnḥ, `נחש` – ḥf/ḥfꜣw, `פרעה` – pr-ꜥꜣ) and traps an unvocalized `רא`.
 
+## Ḫedammu (HD; the Round 5 finalization, 2026-11-02)
+
+- **Copied, not re-translated.** The 60 lines are the myth corpus's own (`../../מיתוסים-חתיים-וחוריים/1-אילויאנקה-וחדמו/annotated-HE.rtl.md`,
+  translated and reviewed in Round 5 run 2): `dossier_tools.py` reads the base through `hittite_tools.py` (`rows("HE")`:
+  the same HPM clauses and TLHdig glosses, the labels `<fragment>:<clause>`), and `hittite_tools.py verify HE` checks that
+  every HD entry's transliteration and `>` line equal HE's, byte for byte (as `verify IL` checks IL 8–17 against this
+  dossier's IL). A revision is made in both files at once, or recorded in the myth renderings §H8 (`| HE | … |`) for the
+  lead. The פירוק and תרגומים bullets are HE's; the הקבלה and הערות were rewritten for the dossier (Gen 1:20–22 and the
+  other excerpts' serpents); the corpus's references to its own tables were re-pointed.
+- **Selection** (60 lines, the brief's upper bound): the four passages that bear on Gen 1:21 – the serpent's parents
+  (Kumarbi and the Sea's daughter, 6:13–19), his birth in the Sea's house (21:12–16; the reading "birth" is HPM's and
+  uncertain), his rearing and appetite (2:5–22), and Ištar's seduction at the sea with his cosmic size and the floods
+  (4:10–39). Left out: fragment 1 (the famine, Ea's speech – Gen 6–8 rather than 1:21), fragment 8 (Ḫedammu sees Ištar
+  again: the same scene as 4:23, more broken). The order is the story's (HPM numbers the fragments otherwise; their order
+  is uncertain beyond fragment 1).
+- **No `נָחָשׁ` in the lines**: the Hittite writes the name with the determinative MUŠ "snake" ({MUŠ}*ḫedammu*), which is
+  not translated (as Akkadian determinatives); the dossier's comparison word stays for the generic word, and the intro and
+  notes call him "נחש הים". No dossier never-word (§11) occurs in the 60 lines; no gate was bent.
+- **Key findings.** (1) The sea monster has **parents**: a god and the Sea's daughter, a bride a DANNA wide (6:16–18) –
+  against Gen 1:21, where the `תַּנִּינִם` are created, and close to Hesiod's Keto (TH 238), the Sea's daughter and mother of
+  monsters. (2) He is begotten as a **weapon** in the war for kingship in heaven, not blessed to be fruitful (21:14 ↔ Gen
+  1:22). (3) His **appetite** is the measure of his monstrosity: cattle and horses by the thousand, kids and lambs "without
+  number" (2:14 ↔ Ps 104:25, where it is the sea's creatures that are without number), and the river's fish (2:19) – in Gen
+  1:21–22 the `תַּנִּינִם` and the fish are created and blessed together, and Gen 1:30 gives all living things plants to eat.
+  (4) His **size** is counted in cities (4:27–29 ↔ the "great" `תַּנִּינִם`; the Norse world serpent HY 22.7–8). (5) The
+  **drink** that overcomes the serpent is shared with Illuyanka (IL i14–18) and Japan (KJ 9–10); the **naked goddess**
+  who seduces the serpent (4:23) reverses Gen 3:1, where the serpent persuades the woman. (6) The serpent pours **floods**
+  on the land and comes down "from the throne, from the sea" (4:38–39): the sea as a kingdom whose waters break their
+  bounds, against Job 38:11 and Isa 27:1's `הַתַּנִּין אֲשֶׁר בַּיָּם`.
+
 ## Progress log
 
 - 2026-10-23: base texts secured (AED-TEI Merikare files; Perseus Theogony; VedaWeb 1.32 (Zurich layer only committed);
@@ -95,6 +127,14 @@ becomings of Re": Khepri, "when I came into being, being came into being") is **
   line (828; the corpus line ends `;`). The glosses of the פירוק and the notes that named the old Hebrew were updated
   (238, 239, 295, 300, 334, 336, the head). `dossier_tools.py verify --strict` 0 problems (no dossier gate blocked a
   corpus rendering), `build` done, `check_bible_quotes` 0.
+
+- 2026-11-02 (the Round 5 finalization): **IL** – the four revisions recorded by the myth corpus (its renderings §H8)
+  applied: i12 `ואל הסערה – את כל האלים` → `וְאֵל הַסְּעָרָה – אֶת כָּל הָאֵלִים` (the Hittite trap: unvocalized "and to" /
+  "these"); i15 `והכינה הכול בשפע:` → `וערכה הכול לָרֹב:` (*ḫandai-* `עָרַךְ`; *mekki* `לָרֹב`, `שֶׁפַע` being *iyatar*'s, i18);
+  i16–17 `כלי … כלי … כלי – ובכלים` → `דוד … דוד … דוד – ובדודים` ({DUG}*palḫi-* `דּוּד`); i19 `ואִינָרָה [… ל]זִיגָּרָתָּה` →
+  `ואִינָרָה [ל]זִיגָּרָתָּה` (the gap holds only the preposition); the פירוק glosses and notes updated. **HD** (Ḫedammu)
+  added, 60 lines (section above); `build`, `verify --strict` 0, `hittite_tools.py verify HE --strict` / `verify IL
+  --strict` identical, `check_bible_quotes` 0.
 
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand. (The dossier joined the builder on 2026-10-30; until then it had a hand-made table of the key Egyptian rows.)
