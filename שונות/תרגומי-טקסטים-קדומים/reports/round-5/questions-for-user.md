@@ -61,3 +61,12 @@ same word, else `[equivalent]`) goes to the lead's harmonization at the end of t
 
 No question for the user. The cruxes are translated with a choice and noted under each project's open decisions, for
 the user's review of the drafts.
+
+## Run 6 – Egyptian tales (report: `run-6.md`)
+
+**Settled by the orchestrator (minor):** the six optional readings stay as drafted, each with its alternative in the
+note – Sinuhe's Qedem (`קֶדֶם`) against Qatna, bꜣq `עצי־השמן` (neutral), B291 "dressed" (the base), TB 4,6 `תחבושת?`,
+WE 1,20 `דביר`, SS 129 "through wisdom" (the base, marked `?`). The dossier's Westcar notation goes to the lead's
+finalization.
+
+No question from run 6 needs the user.
