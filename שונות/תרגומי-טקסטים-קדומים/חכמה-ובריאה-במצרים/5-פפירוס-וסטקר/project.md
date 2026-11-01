@@ -128,7 +128,7 @@ The AED-TEI base through `egypt_tools.py data`; the TLA's German (`tr WE`) after
 Labels `4,18`–`7,26` (89 entries): Baufre's wonder (Snefru's boredom, the rowing girls, the lost fish-pendant,
 Djadjaemankh folds half the lake on the other half, the third decree 6,17–6,22), Hordjedef's critique of past wonders
 and the introduction of Djedi (6,23–7,8), Hordjedef's journey to Djedi (7,9–7,16), the exchange of greetings (7,17–7,26). Placeholder now
-`<!-- טרם תורגם: 8,1–12,25 -->`. Review passes not yet done (next session).
+`<!-- טרם תורגם: 8,1–12,25 -->` (since removed: part 3 below). Review passes: see part 3.
 
 ### Decisions
 - **The third decree** (6,17–6,22) copies §11.8.1; the Egyptian's own changes kept: `להוד מלכות` before the king (6,19),
@@ -170,5 +170,90 @@ and the introduction of Djedi (6,23–7,8), Hordjedef's journey to Djedi (7,9–
 - [equivalent] Gen 50:26 `בֶּן מֵאָה וָעֶשֶׂר שָׁנִים` – Djedi's 110 years (7,2).
 - [equivalent] Gen 15:15 `תָּבוֹא אֶל אֲבֹתֶיךָ` – "lead you to your fathers" in a good old age (7,22).
 - [equivalent] Esth 1:10 `כְּטוֹב לֵב הַמֶּלֶךְ` – the king's heart made good (5,14).
+
+## WE 8,1–12,25 (part 3) and the review passes over the whole WE (Round 5 run 6, range B, translator 1)
+
+### Scope
+Labels `8,1`–`12,25` (131 entries): Djedi at court (the goose, the duck, the ox; the refusal "not to people"), Thoth's
+chambers and the prophecy of Ruddjedet's three sons (8,15–9,21), the goddesses as musicians at the birth (9,22–11,4),
+the barley and the three crowns (11,5–11,17), the maid's betrayal and the crocodile (11,18–12,25, where the papyrus
+breaks off). WE is now complete: 305 entries, no placeholder. No decree follows Djedi's wonder (the tale moves straight
+into the prophecy); 9,20's rations echo the decree's list (noted).
+
+### Decisions
+- **Court forms:** j (j)ty ꜥnḫ-wḏꜣ-snb nb=j = `הו הריבון, חיים, שלום, בריאות, אדוני` (jty `ריבון`; `שליט` is ḥqꜣ); njs.w pw
+  jy.y `הנקרא – הוא הבא`; rmṯ `בני האדם`, ꜥw.t `צאן` (MK E130's `בְּנֵי הָאָדָם, צֹאן הָאֵל`), šps `נכבד`.
+- **Words:** smn `אווז`, wꜣḫj `אולם־העמודים`, gbꜣ `צד`, ḫnrj / ḫnr.t `אסיר` / `בית־הכלא` (`סֹהַר` gated), nkn `עונש`;
+  qꜣqꜣw `ספינת־נהר`, wsḫ `ספינת־המשא`, jz.t `צוות`; ẖrd `ילד` throughout WE (8,3 included; AM 25.9's `נער` – a split by
+  sense: infants and unborn here); zẖꜣ.w `כתבים`; ꜥfd.t `ארגז` (pds also `ארגז` – two box words, never in one line);
+  wꜥb (title) `טהור` (9,9), the verb `נטהר` / noun `טהרה` (11,18; 2,25's `רחץ` kept, a split); wr-mꜣw `גדול־הרואים`;
+  jꜣ.t `משרה`, mnḫ `מעולה`; Jwnw `אוֹן`; ṯs.w `שרטונות`, ꜥꜣḏ.wj `תעלת־שני־הדגים`; ḥtp.w-nṯr `קורבנות־האל`; rʾ-pr `היכל`,
+  ḫꜣw.t `מזבח`, wḏḥw `שולחן־הקורבן`; the goddesses `אִיסִיס`, `נֶפְתִּיס`, `מֶסְחֶנֶת`, `חֶקֶת`, `חְנוּם`; Rꜥ-wsr `רַאוֹסֶר`,
+  Sꜣḫbw `סָחְבּוּ`; mnj.t `קולר־מֶנַת`, sḫm `מְנַעַנְעִים` (2 Sam 6:5); ḏb.t `לבנה` (Ex 1:16's `הָאָבְנָיִם` in the note);
+  ẖpꜣ `טבור`, jꜥj `שטף`, šꜥd `נחתך`, swḏꜣ `השלים` (the wḏꜣ of `שלום`), ḫsbd `ספיר` (TB, HC); jt "barley" `שעורה` (AM);
+  ḫꜥw `כתר`; ḏꜥ / ḥwy.t `סערה` / `גשם`; ḫtm verb `נעל` / ḫtm "seal" `חוֹתָם` [loanword] / ḫtm "lockable box" `מכל־נעול`;
+  hnw `קיתון`; ẖꜣr `שק`; dḥr `עור` (12,5 `בְּעוֹר` with `[היתר שער]`: the עִוֵּר gate reads it as "blind").
+- **The three births (10,7–11,3)** are one repeated block: fixed at 10,7–10,14, copied at 10,14–10,22 and 10,22–11,3,
+  changing only the name, the pun verb and the Egyptian's own variants (⟨m nbw⟩ 10,18; `גופו` / `איבריו`; 11,2's order).
+  The puns: wsr `תתחזק` ~ Wsr-r=f `וֹסֶר־רֶף` (the tale's spelling of `וֹסֶרְכָּאֶף`), sꜣḥ `תבעט` ~ `סָאחוּרַא`, kkw `תחשיך`
+  ~ Kkw `כָּאכָּאי` – the sound is lost in Hebrew, the notes give it.
+- **msj** stays `ילד`/`הוליד` even for the crowns (11,13 `הולידו הן שלושה כתרים`): `יָצַר` is qmꜣ's (§5.2), and the verb of the
+  births binds crowns and kings.
+- wꜥr (the children "rush out") `מיהר` (TB's `ברח` – a split by sense); wḏꜣ imperative to women `לְכְנָה` (10,6).
+- **n sḏm.t=f** at 5,11 corrected to `טרם` (pass a).
+
+### Progress log (part 3 and the passes)
+- Drafting 8,1–12,25 in seven sections, `fill` + `verify WE` after each; gate hits fixed: 9,2 `ייטב` (טוב gate; → `משובח
+  אתה`), 9,27 / 11,4 / 11,10 `האלה` "these" read as "goddess" (→ `הָאֵלֶּה`), 12,5 `בעור` (→ `[היתר שער]`). TLA compared
+  after each section (8,1 / 7,20 "of a king's son / of a revered one", 8,15 purpose `ויוטל`, 11,17 `מן הנגינה`, 12,11 the
+  maid's question – corrected).
+- **Pass (a) fidelity, whole WE:** brackets at 1,22 (`[הכוהן־הקורא] החרטום`), 2,19 (`באגמך`), 4,20, 4,25, 5,22, 5,24
+  (`(את)`), 6,25, 6,26; tense / negation: 5,11 `טרם`, 5,19 `אינכן חותרות`, 5,20 and 6,5 `אינך חותרת – מדוע?` (not a
+  prohibitive: tm=t sḏm is the subject of "why").
+- **Pass (b) consistency:** the three decrees compared word by word (1,12–1,17 = 4,12–4,17 = 6,17–6,22 with the
+  Egyptian's own changes); a lemma scan (šꜣs, wḏꜣ, nḏs, ḥrj-pr, šzp.t, msḥ, bjꜣ.yt, ḥkꜣ.w, jṯj, gmj, ḏd.jn / ꜥḥꜥ.n ḏd.n …):
+  only 5,5–5,6 changed (the verb mꜣꜣ now in its own line, `ואתה רואה`). `verify WE --strict`: 0 problems.
+- **Pass (c) Hebrew:** the clean text read through; 9,12 `בגלל זה`, 10,3 `ואז היו הן מגישות`, 12,21 the emphatic "why".
+- Final: `build WE` 305 lines, 6 footnotes; `check_bible_quotes.py` on the three files: 0 problems; dossier lines
+  identical (27), no `[סטייה מן התיק]`.
+
+### The text on its own terms (part 3)
+- The magician refuses to test death on a man: people are "the noble flock" of the god (8,16–8,17; Merikare E130), and
+  the king accepts – animals are used instead (8,18–8,26).
+- Severed and rejoined: body in the west, head in the east of the hall, reunited by speech (8,18–8,22).
+- Knowledge has limits: Djedi knows where Thoth's secret is, not its number, and that it is not he who will bring it
+  (9,3–9,7) – the future belongs to the unborn kings.
+- Divine kingship told as folk tale: Re fathers three kings on a priest's wife; the goddesses deliver them, name them by
+  pun, fix their fate (Meskhenet) and make their bodies whole (Khnum); the children have bodies of gold and lapis
+  (10,9–11,3).
+- The goddesses must leave a "wonder" behind (11,11): the crowns sing in the barley sack (12,1) – the frame's word enters
+  the tale.
+- Household loyalty: the beaten maid tries to betray, her own brother punishes her, and a crocodile takes her (12,9–12,25)
+  – the second crocodile closes the circle with Webaoner's.
+
+### Key parallels (part 3)
+- [divergence] Gen 9:6 – man's special worth, here to spare a condemned man a test (8,16).
+- [equivalent] Ps 100:3 `וְצֹאן מַרְעִיתוֹ` – mankind as the god's flock (8,17).
+- [divergence] Ex 1:15–16 – a king and midwives; here a god sends midwife goddesses to deliver the future kings
+  (9,23; 10,12 `הָאָבְנָיִם`).
+- [equivalent] Gen 35:16–17 – a hard birth and the midwife's good news (9,22; 11,5).
+- [equivalent] Gen 29:32 – the name given at birth by a pun (10,9).
+- [equivalent] Lev 12:4 – the days of the mother's purification (11,18).
+- [equivalent] 1 Kgs 18:42 – the head between the knees (12,20).
+
+### Lines shared with other texts
+- None outside the dossier lines; inside WE: the birth block ×3, the court address ×5, "he said what he said in magic"
+  (6,8, 6,12, 8,20, 8,25), the ox "behind him, its leash on the ground" (7,5 ≈ 8,26).
+
+### Proposals for the shared renderings
+- The court address `הו הריבון, חיים, שלום, בריאות, אדוני` and jty `ריבון` (Sinuhe will need it).
+- ẖrd `ילד` in the tales (AM's `נער` kept for AM); msj `ילד` / `הוליד` also for "create" (crowns), never `יצר`.
+- ḫtm: verb `נעל`, noun "seal" `חוֹתָם` [loanword], "lockable box" `מכל־נעול`.
+- **Gates:** (1) the עִוֵּר gate catches `בעור` "in leather"; (2) the goddess trap catches the demonstrative `האלה`
+  "these" in a line with nṯr (vocalize `הָאֵלֶּה`, or teach the trap the demonstrative); (3) the טוב gate catches `ייטב`.
+
+### Lessons for the guidelines
+- A repeated block (three births) is safest fixed at its first copy and then copied by eye against the source line by
+  line; the variants of the Egyptian (an omitted ⟨m nbw⟩, a changed order) are where the copies must differ.
 
 ## Parallels index

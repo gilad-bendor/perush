@@ -645,3 +645,13 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
 4. **Kept (the coordinator):** wsr "oar" (WE) and AM's ḥmw "steering oar" both `משוט` – never in one line; to be reviewed at the lead's harmonization.
 5. Gate trap: `ולבסוף` "finally" trips the סוף gate – write `ובאחרונה` (no gate change: `סוף` must stay licensed by ṯwfj).
 
+### 11.10 Round 5 run 6 – WE part 3 (8,1–12,25) and the three passes over WE, merged 2026-11-01 (translator 2)
+1. No decree after Djedi's wonder (the tale moves to the prophecy); his rations (9,20) repeat the decree's list.
+2. The three births (10,7–11,3) fixed at the first copy and copied twice; the name puns kept in the lines (wsr `תתחזק` /
+   `וֹסֶר־רֶף`, sꜣḥ `תבעט` / `סָאחוּרַא`, kkw `תחשיך` / `כָּאכָּאי`).
+3. Court address `הו הריבון, חיים, שלום, בריאות, אדוני` (jty `ריבון`); rmṯ `בני האדם`, ꜥw.t `צאן` (Merikare E130); ẖrd `ילד` in the
+   tales (AM's `נער` stays); msj `ילד` / `הוליד` (`יצר` only qmꜣ); ḫtm: the verb `נעל`, the noun `חותם` [loanword].
+4. Words: `אווז`, `אולם־העמודים`, `אסיר` / `בית־הכלא`, ḫsbḏ `ספיר` (lapis, the cross-corpus rule), jt `שעורה`, `כתר`, `לבנה`,
+   `קולר־מנת`, `מנענעים`; ꜥfd.t and pds both `ארגז` (kept: never in one line).
+5. Gate traps (no change; vocalize): `בְּעוֹר` "in leather" (the עִוֵּר gate), `הָאֵלֶּה` "these" in a line with nṯr, `ייטב` (write another form).
+
