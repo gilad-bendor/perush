@@ -1,0 +1,148 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.14",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.14 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ap]ēdani[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... a-p]é?-⸢e-da-ni⸣[ ... ]"
+]
+],
+"tr": "[ ... d]em [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -a]z parā [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... -a]z pa-ra-a x[ ... ]"
+]
+],
+"tr": "[ ... ] hervor [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ri",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]x-ri"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=aš n[epi?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"na-aš n[e?-pí- ... ]"
+]
+],
+"tr": "Er [ ... ] Hi[mmel? ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {MUŠ}ḫ]edammuš",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... {MUŠ}ḫ]é-⸢dam⸣-mu-uš"
+]
+],
+"tr": "[ ... der Ḫ]edammu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"nu x[ ... ]"
+]
+],
+"tr": "Und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... arun]i? anda [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... a-ru?-n]i an-da x[ ... ]"
+]
+],
+"tr": "[ ... ] im [Mee]r? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

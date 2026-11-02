@@ -174,3 +174,27 @@ Insert it **above** the line `## Parallels index` (do not rewrite earlier sectio
   belongs, build the clean translation for what is done, and say exactly where you stopped.
 - Your final message to the coordinator (short): labels done, the main decisions, the strongest parallels and the
   strongest "ancient mind" findings, open decisions, problems.
+
+## 9. The epics and the rituals (Round 5 run 3, 2026-10-31)
+
+Read `renderings.md` §12 before your first line (names, key terms, the gates added for the epics). Then:
+- **Read §5.2 of the guidelines again for the newest lessons** (Round 5 runs 1–2): the literature's famous details are
+  often wrong (Aqhat's "bow of Anat", the eagles, Kirta's "Huriya the fair": check every one against the tablet);
+  **never quote a rank-3 wording from memory** – the modern translations (Pardee in *COS* I; Parker et al., *Ugaritic
+  Narrative Poetry*; Wyatt; Greenstein for Kirta and Aqhat; Margalit 1989 for Aqhat; Ginsberg in *ANET*) are not in the
+  folder: name the reading in a few words or say "the usual reading"; for **Kirta, EUPT's own English and German
+  translation and commentary are in the folder** (`ugarit_tools.py eupt KEY LABEL`), read *after* your own rendering.
+- **The epics repeat even more than the cycle**: the son's duties (four copies in 1.17), the seven-day feasts and
+  sacrifices (1.17 I–II, 1.22), Kirta's dream and its execution (1.14 II–IV: the command copied by the execution word for
+  word), the messages, the march of the army, the "lift up your eyes" scene (1.17 V, 1.19). Fix the first copy carefully
+  and copy it (`pars`); `verify` lists every difference: justify each in the entry or fix it.
+- **The Bible to keep in view for the epics:** Gen 1:2 (`מְרַחֶפֶת`) and Deut 32:11 for *rḫp*; Gen 9:20–27 (the son who
+  takes his drunk father's hand); Ezek 14:14, 20 (Danel); Gen 15:2–4, 18:1–15, 30:1 (the childless man, the son promised
+  by a god, the guests fed); Gen 4:10 and Deut 21:1–9 (the blood that cries out, the unsolved killing: Danel's curse on
+  the towns, 1.19 III–IV); 2 Sam 1:21 (`הָרֵי בַגִּלְבֹּעַ אַל-טַל וְאַל-מָטָר`: Danel's curse on the rain, 1.19 I 42–46);
+  Gen 9:13 (the bow); Deut 20:7, 24:5 (the newly married man); Deut 21:15–17, Gen 48 (the firstborn); Gen 28:20–22 (a
+  vow); Ex 22:21, Deut 10:18 (the widow and the orphan); Deut 2:11, 3:11, Isa 14:9, 26:14, Ps 88:11 (the Rephaim); Lev
+  4–5, 16 and Ps 51 for KTU 1.40. Print every verse first (★).
+- **For Kirta (1.14–1.16), EUPT is rank 1 for readings** (renderings §12.3): look at `ugarit_tools.py eupt KEY LABEL`
+  for each line *before* you translate the reading (its transliteration only), and at its translation and notes after.
+  Where EUPT reads differently from the backticked CUC line, translate EUPT's reading and say so in the פירוק.

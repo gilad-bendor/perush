@@ -1,0 +1,201 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.21",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.21 (TX 2009-08-27, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... {d}]kumarbiš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ _ _ _ {d}]ku-mar-bi-iš x[ ... ]"
+]
+],
+"tr": "Kumarbi [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-az šarā tiyat",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ _ _ (_) ]x-az ša-ra-a ti-⸢ya-at⸣"
+]
+],
+"tr": "[ ... ] stand auf.",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] pippeškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ] pí-⸢ip⸣-pé-eš-ke-ez-zi"
+]
+],
+"tr": "[ ... ] stürzt [ ... ] um.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=za PĀNI ZI-Š[U ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"nu-za PA-NI ZI-Š[U ... ]"
+]
+],
+"tr": "Und zu sich selbst [sprach ... ]:",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "karuwiliuš=wa kwit memi[š- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"ka-ru-ú-i-li-uš-wa ku-it me-mi-i[š- ... ]"
+]
+],
+"tr": "„Was die Uralten sag[en ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "mān=wa=za addaš DUMU-an UR.SAG-i[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"ma-a-an-wa-za ad-da-aš DUMU-an UR.SAG-i[n ... ]"
+]
+],
+"tr": "‘Wenn sich der Vater den Sohn, den Helde[n, ... ],",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=war=aš ANA LIM KARAŠ ḫa-[ ... ] ēšdu",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"nu-wa-ra-aš A-NA LI-IM KARAŠ ḫa-[ ... ] e-eš-du"
+]
+],
+"tr": "soll er den tausend Heeren [ ... ] sein!",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "mān šašza UR.MAḪ ḫu-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"ma-⸢a⸣-an ša-⸢aš⸣-za UR.MAḪ ḫu-x[ ... ]"
+]
+],
+"tr": "Wenn das Bett (des) Löwen [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] UR.SAG-in ḫāši",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ] UR.SAG-in ḫa-a-ši"
+]
+],
+"tr": "zeugt er einen Helden [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=war=aš ANA [ ... ]-walduwi ḫantiu-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"nu-wa-ra-aš A-NA x[ ... ] [ (_) ]x-u-al-du-u-i ḫa-an-ti-ú-x[ ... ] ¬¬¬"
+],
+[
+"A",
+"",
+"Unterer Tafelrand"
+]
+],
+"tr": "Er [ ... ] zu [ ... ]’“",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

@@ -8,10 +8,13 @@ Two kinds are read:
              glosses (German, from TLHdig) and an Italian translation inside; § titles "(HL n)".
   - BESRIT : the "Beschwörungsrituale" editions (txhet_besrit), one partitur page per §, a separate translatio
              page (German or English).
+  - MYTH   : the "Mythen der Hethiter" editions (Rieken et al., txhet_myth; 2026-10-30, Round 5 run 2): the same page
+             format as BESRIT (ED = "E. Rieken et al.", LG = DE).
 
 Usage (run with python3 -I):
   hpm2md.py fetch CHIL "CTH 291.1" OUTDIR            # raw HTML into OUTDIR/raw/
   hpm2md.py fetch BESRIT "CTH 394" OUTDIR [ED] [LG]   # ED = the editor string of the HPM index, LG = DE/EN/FR
+  hpm2md.py fetch MYTH "CTH 348.I.1" OUTDIR "E. Rieken et al." DE
   hpm2md.py parse OUTDIR                              # OUTDIR/edition.json + reading-edition.md + translation-rank3.md
 
 edition.json: {"kind", "cth", "citation", "sections": [{"id","title","hl"}], "clauses": [{"n","sec","master",
@@ -63,10 +66,11 @@ def fetch(kind, cth, out, ed="", lg="DE"):
         get(f"{BASE}txhet_chil/intro.php?xst={urllib.parse.quote(cth.rsplit('.', 1)[0])}&lang=EN&praep=1",
             os.path.join(raw, "intro.html"))
     else:
+        proj = {"BESRIT": "txhet_besrit", "MYTH": "txhet_myth"}[kind]
         e = urllib.parse.quote(ed)
         x = urllib.parse.quote(cth)
-        intro = get(f"{BASE}txhet_besrit/intro.php?xst={x}&prgr=&lg={lg}&ed={e}", os.path.join(raw, "intro.html"))
-        p0 = get(f"{BASE}txhet_besrit/partitur.php?xst={x}&prgr=&lg={lg}&ed={e}", os.path.join(raw, "partitur-index.html"))
+        intro = get(f"{BASE}{proj}/intro.php?xst={x}&prgr=&lg={lg}&ed={e}", os.path.join(raw, "intro.html"))
+        p0 = get(f"{BASE}{proj}/partitur.php?xst={x}&prgr=&lg={lg}&ed={e}", os.path.join(raw, "partitur-index.html"))
         prgs = []
         for m in re.finditer(r'partitur\.php\?xst=[^&]*&prgr=(.+?)&lg=', p0):
             p = html.unescape(m.group(1))
@@ -74,9 +78,9 @@ def fetch(kind, cth, out, ed="", lg="DE"):
                 prgs.append(p)
         meta["paragraphs"] = prgs
         for i, p in enumerate(prgs):
-            get(f"{BASE}txhet_besrit/partitur.php?xst={x}&prgr={urllib.parse.quote(p)}&lg={lg}&ed={e}",
+            get(f"{BASE}{proj}/partitur.php?xst={x}&prgr={urllib.parse.quote(p)}&lg={lg}&ed={e}",
                 os.path.join(raw, f"partitur-{i:03d}.html"))
-        get(f"{BASE}txhet_besrit/translatio.php?xst={x}&expl=&lg={lg}&ed={e}", os.path.join(raw, "translatio.html"))
+        get(f"{BASE}{proj}/translatio.php?xst={x}&expl=&lg={lg}&ed={e}", os.path.join(raw, "translatio.html"))
     json.dump(meta, open(os.path.join(out, "fetch-meta.json"), "w"), ensure_ascii=False, indent=1)
     print("fetched", cth, "into", out)
 
@@ -197,7 +201,7 @@ def parse_besrit(out):
                 c["tr"], c["trlang"] = trs[c["n"]]
         for fn in re.finditer(r"<span class='FnSymT'>(\d+)</span>.*?<div class=\"FNO\">(.*?)</div>", t, re.S):
             notes["T" + fn.group(1)] = clean_frag(fn.group(2), "B")
-    return {"kind": "BESRIT", "cth": meta["cth"], "citation": cit, "sections": sections, "clauses": clauses, "notes": notes}
+    return {"kind": meta["kind"], "cth": meta["cth"], "citation": cit, "sections": sections, "clauses": clauses, "notes": notes}
 
 
 def parse(out):

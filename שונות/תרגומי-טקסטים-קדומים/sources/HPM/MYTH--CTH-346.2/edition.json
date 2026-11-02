@@ -1,0 +1,387 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.2",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.2 (TX 2009-08-27, TRde 2009-08-21)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"[ ... ]x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] tepawēškeḫḫāri",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"[ ... ] ⸢te?⸣-pa-⸢u-e?⸣-⸢eš-ke⸣-eḫ-ḫa-a-ri1"
+]
+],
+"tr": "Ich werde gering [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2'",
+"x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "LUGAL-uš=za? {URU}kummiy[a]š ANA {d}ANU[M ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3'",
+"⸢LUGAL?⸣-uš-za {URU}kum-mi-y[a-a]š A-NA ⸢{d}?A⸣-NU[M ... ]"
+]
+],
+"tr": "Der König von Kumm[e ... ] zu Anu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] DINGIR{MEŠ}-aš attaš LÚ-aš ḫašta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3'",
+"[ ... ] DINGIR{MEŠ}-aš at-ta-aš LÚ?2-aš (Rasur) ḫa-aš-ta"
+]
+],
+"tr": "Der Vater der Götter (und?) der Menschen zeugte [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "šalla-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 4'",
+"šal-la-[ ... ]"
+]
+],
+"tr": "[ ... ] groß[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "7-anki=mu dankui KI-pi menaḫ[ḫanda ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 5'",
+"7-an-ki-mu da-an-ku-i KI-pí me-na-aḫ-[ḫa-an-da ... ]"
+]
+],
+"tr": "Siebenmal [ ... ] mir in der dunklen Erde entg[egen],",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu tēkan SUD-nun",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6'",
+"nu te-e-kán SUD-nu-un"
+]
+],
+"tr": "und ich zog die Erde.",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "7-anki=ma[=mu ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6'",
+"7-an-ki-ma-[mu ... ]"
+]
+],
+"tr": "Siebenmal aber [ ... mir ... ],",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu AN-iš SUD-nun",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 7'",
+"nu AN-iš SUD-nu-un"
+]
+],
+"tr": "und ich zog den Himmel.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "7-anki=ma=⸢mu⸣ [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 7'",
+"7-an-ki-ma-⸢mu⸣ [ ... ]"
+]
+],
+"tr": "Siebenmal aber [ ... ] mir [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=kan 7-anki ḪUR.SAG{MEŠ}-aš ÍD[{MEŠ}-aš ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 8'",
+"nu-kán 7-an-ki ḪUR.SAG{MEŠ}-aš ⸢ÍD⸣[{MEŠ}-aš ... ]"
+]
+],
+"tr": "siebenmal [ ... ] in den Bergen (und) Flü[ssen ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 1'",
+"hl": "",
+"master": "GE6{ḪI.A}-ēš=mu KI{ḪI.A}-aš ḫašt[a]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 9'",
+"GE6{ḪI.A}-e-eš-mu KI{ḪI.A}-aš ḫa-aš-t[a] ¬¬¬"
+]
+],
+"tr": "und geba[r] mich die dunkle Erde.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2'",
+"hl": "",
+"master": "piyēr=ma=mu ŠA {d}NARA ḫa[t]tā[tar]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 10'",
+"pí-i-e-er-ma-mu ŠA {d}NA-RA ḫa-[at]-⸢ta-a⸣-[tar]"
+]
+],
+"tr": "Sie gaben mir aber Naras Ve[r]st[and].",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] ḫattātar piyēr",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 10'",
+"[ ... ] ḫa-at-ta-a3-tar pí-i-e-er"
+]
+],
+"tr": "[ ... ] gaben [ ... ] Verstand.",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 2'",
+"hl": "",
+"master": "ḫarmi=ma=at [ ... ] GALGA-tarr=a",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 11'",
+"ḫar-mi-ma-at [ ... ] GALGA-tar-ra"
+]
+],
+"tr": "Ich habe sie aber, [ ... ] und Verstand.1",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 2'",
+"hl": "",
+"master": "ŠA {d}ANU LÚ-tar ḫarmi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 12'",
+"ŠA {d}A-NU LÚ-tar ḫar-mi"
+]
+],
+"tr": "Des Anu Männlichkeit habe ich.",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 2'",
+"hl": "",
+"master": "ŠA [ ... ] UR.SAG-tar GALGA-tarr=a ḫarmi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 12'",
+"ŠA [ ... ] ⸢UR.SAG⸣-tar GALGA-tar-ra ḫar-mi ¬¬¬"
+]
+],
+"tr": "Des [ ...] Heldenhaftigkeit und Verstand habe ich.",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 3'",
+"hl": "",
+"master": "ḫarmi=ma=at ḫaštaliyatar GALGA-tarr[=a?]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 14'",
+"⸢ḫar⸣-mi-ma-at ḫa-aš-ta-li-ya-tar GALGA-tar-r[a?]"
+]
+],
+"tr": "Ich aber habe sie, Heldenhaftigkeit [und?] Verstand.",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] išḫiyan",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 14'",
+"[ ... ] ⸢iš?⸣-ḫi-ya-an"
+]
+],
+"tr": "[ ... ] gebunden [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 3'",
+"hl": "",
+"master": "⸢ŠAPAL? ⸣ ḪUR.SAG{ḪI.A}-aš? Í[D{ḪI.A}-aš? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 15'",
+"⸢ŠA-PAL? ḪUR?.SAG?⸣{ḪI.A}-aš Í[D!?{ḪI.A}-aš ... ]"
+]
+],
+"tr": "Unter? den Bergen (und) den Fl[üssen ... ]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 16'",
+"[ _ ]x[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "So liest auch Neu, StBoT 5, 1968, 172.",
+"§ 1':2": "Nach Kollation am Foto wohl über Rasur.",
+"§ 2':3": "Lesung des Zeichens -a- nach Kollation am Foto; es ist in der Autographie vergessen.",
+"T1": "Vgl. Kolon 19."
+}
+}

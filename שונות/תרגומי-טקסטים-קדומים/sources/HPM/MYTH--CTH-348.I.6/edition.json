@@ -1,0 +1,748 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.6",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.6 (TX 2009-09-08, TRde 2009-09-08)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4''",
+"title": "§ 4''",
+"hl": ""
+},
+{
+"id": "§ 5'''",
+"title": "§ 5'''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] arḫ[a ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x ⸢ar⸣-ḫ[a ... ]"
+]
+],
+"tr": "[ ... ] for[t ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... =w]ar=an ⸢eter?⸣",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... -w]a-ra-an ⸢e-te?-er?⸣"
+]
+],
+"tr": "„[ ... ] aßen? ihn.“",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ _ ]x x[ ... ] [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] dagān UL mau[š- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ] da-ga-a-an Ú-UL ma-u[š- ... ]"
+]
+],
+"tr": "[ ... ] fie[l- ... ] nicht zu Boden.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "arḫa=ma=an eter",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"ar-ḫa-ma-an e-te-er"
+]
+],
+"tr": "Sie aßen ihn aber auf.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... tak]nī kattanta pai[t]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ...? ] [ ... ták]-ni-i kat-ta-an-ta pa-i[t] ¬¬¬"
+]
+],
+"tr": "[ ... ] gin[g] hinunter zur [Er]de [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] IŠME",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]"
+],
+[
+"B",
+"Vs. I 1",
+"[ ... ]x IŠ-ME"
+]
+],
+"tr": "[ ... ] hörte,",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "n[u]=šši=kan ZI-anza anda [ ... ]-yattat",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[nu-uš-š]i-kán ZI-an-za an-da x[ ... ]"
+],
+[
+"B",
+"Vs. I 1",
+"n[u-u]š-ši-kán [ ... ] [ ... ]x-⸢ya⸣-at-ta-at"
+]
+],
+"tr": "[ ...] in ihm [ ... ]te die Seele.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=kan GÌR-an ANA {GI[}Š. ... ]-at",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]-at"
+],
+[
+"B",
+"Vs. I 2",
+"nu-kán GÌR-an A-NA {GI[}Š. ... ]"
+]
+],
+"tr": "Er [ ... ]te den Fuß auf [ ... ]1",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=kan aruni BIBRÛ ŠU-ši dāer",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"nu-kán a-ru-ni BI-IB-R[U ... ]"
+],
+[
+"B",
+"Vs. I 3",
+"[ _ _ ]⸢a⸣-ru-ni BI-IB-RU ŠU-ši da-a-er"
+]
+],
+"tr": "Man legte dem Meer ein Rhyton in seine Hand.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2'",
+"hl": "",
+"master": "šall[iš arunaš uddā]r ANA {d}kumarbi EGIR-pa memi[škiuwan dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ] [ ... ]"
+],
+[
+"B",
+"Vs. I 3",
+"šal-l[i-iš ... ] [ud-da-a]-ar A-NA {d}ku-mar-bi EGIR-pa me-mi-i[š-ki-u-wa-an ... ]"
+]
+],
+"tr": "D[as] gro[ße Meer begann, die Wort]e dem Kumarbi zu antw[orten]:",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-aš ašanza memiaš {d}kumarbi DINGIR{MEŠ}-[aš at]taš",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... at]-⸢ta⸣-aš"
+],
+[
+"B",
+"Vs. I 5",
+"[ ... ]x-aš a-ša-an-za me-mi-aš {d}ku-mar-bi DINGIR{MEŠ}-[aš ... ]"
+]
+],
+"tr": "„Die Angelegenheit (ist) wahr,2 Kumarbi, [Va]ter [der] Gött[er].",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=⸢mu⸣ INA UD 7{KAM} INA É-YA eḫu",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"nu-⸢mu⸣ [ ... ] [ ... ]"
+],
+[
+"B",
+"Vs. I 6",
+"[ _ _ ]⸢I⸣-NA UD 7{KAM} I-NA É-YA e-ḫu"
+]
+],
+"tr": "Komm am siebten Tag zu mir in mein Haus,",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=a[n ... {d}še]rtapšuruḫin DUMU.MUNUS-YA",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+],
+[
+"B",
+"Vs. I 6",
+"na-a[n ... ] [{d}še-e]r-tap-šu-ru-ḫi-in DUMU.MUNUS-YA"
+]
+],
+"tr": "und [ ... ] si[e, die Še]rtapšuruḫi, meine Tochter.3",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 2'",
+"hl": "",
+"master": "dalugašti=ya[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 7",
+"da-lu-ga-aš-ti-ya[ ... ]"
+]
+],
+"tr": "Und in der Länge [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 2'",
+"hl": "",
+"master": "[palḫ]ašti=ma=aš 1 DANNA",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 8'",
+"[pal-ḫ]a-aš-ti-ma-aš 1 DANNA"
+]
+],
+"tr": "in der [Brei]te aber (ist) sie eine Meile (groß).",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=an GA.KU7 GIM-an [ ... {d}š]ert[ap]šuruḫin",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 8",
+"na-an GA.KU7 GIM-an x[ ... ] [{d}š]e-⸢er⸣-t[ap]-šu-ru-ḫi-in"
+]
+],
+"tr": "[ ... ] sie wie süße Milch, die [Š]ert[ap]šuruḫi.“",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 2'",
+"hl": "",
+"master": "mān {d}kumarbiš IŠME",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 9",
+"ma-a-an {d}ku-mar-bi-iš IŠ-ME"
+]
+],
+"tr": "Als Kumarbi (dies) hörte,",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu-[ ... an]da duš[k]attat",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 9",
+"nu-x[ ... ] [an]-da du-uš-[k]at-ta-at"
+]
+],
+"tr": "fre[u]te er sich [i]m [Innern].4",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 2'",
+"hl": "",
+"master": "nekuzz=a meḫur tīyat",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 10",
+"ne-ku-uz-za me-ḫur ti-i-ya-at"
+]
+],
+"tr": "Es wurde Nacht.5",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 2'",
+"hl": "",
+"master": "[nu=k]an GAL-in arunan {d}ku[ma]rbiyaza É-erza IŠTU [ ... a]rkammiyaza [galgaltū]riyaza ZABAR U IŠTU BIBRÎ{ḪI.A} ⸢ZABAR⸣ [pa]rā uwat[er]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 11",
+"[nu-k]án GAL-in ⸢a⸣-ru-⸢na-an⸣ {d}ku-[ma]r-bi-ya-za É-er-za IŠ-TU x x[ ... ] [a]r-kam-mi-ya-za [gal-gal-tu-u]-⸢ri-ya⸣-za ZABAR Ù IŠ-TU BI-IB-RI{ḪI.A} ⸢ZABAR⸣ [pa]-ra-a ú-wa-t[e-er]"
+]
+],
+"tr": "[Man] brach[te] das große Meer von Ku[ma]rbi, aus (seinem) Haus,6 mit einer [L]eier, [einem galgaltu]ri-Instrument aus Bronze und mit Rhyta aus Bronze [hin]aus",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... IN]A É-ŠU arḫa pēḫuter",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 13",
+"[ _ _ I-N]A É-ŠÚ ar-ḫa pé-e-ḫu-te-er"
+]
+],
+"tr": "[und] brachte [ihn] fort [i]n sein Haus.",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=aš=za=kan IN[A ... ]-aš {GIŠ}ŠÚ.A-ki SIG5-anti ešat",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 14",
+"na-aš-za-kán I-N[A ... ]-aš {GIŠ}ŠÚ.A-ki SIG5-an-ti e-⸢ša-at⸣"
+]
+],
+"tr": "Er setzte sich [ ... ] a[uf] einen [ ... ] guten Stuhl.7",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=kan aruna[š {d}kumarb]in INA UD 7{KAM} IGI-anda ušket",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 15",
+"nu-kán a-⸢ru-na⸣1-[aš {d}ku-mar-bi-i]n I-NA UD 7{KAM} IGI-an-da uš-ke-et ¬¬¬"
+]
+],
+"tr": "Das Mee[r] blickte [Kumarb]i sieben Tage lang entgegen.8",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 3'",
+"hl": "",
+"master": "{d}kumarbi[š uddār] ANA {LÚ}SUKKAL-ŠU memiškiuwan da[iš]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 16",
+"{d}ku-mar-bi-i[š ... ] A-NA {LÚ}SUKKAL-ŠÚ me2-⸢mi-iš-ki-u⸣-wa-an ⸢da⸣-[iš]"
+]
+],
+"tr": "Kumarbi beg[ann, die Worte] zu seinem Wesir zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 3'",
+"hl": "",
+"master": "{d}mukišan[u {LÚ}SUKKAL-YA]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 17",
+"{d}mu-ki-ša-n[u ... ]"
+]
+],
+"tr": "„Mukišan[u, mein Wesir,]",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 3'",
+"hl": "",
+"master": "[udd]ar=t[a kwe temi]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 17",
+"[ud-d]a-ar-ta3 [ ... ]"
+]
+],
+"tr": "die [Wort]e, [die ich] di[r sage,]",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Vs. I 17",
+"[ ... ] x x x[ ... ]x x[ ... ]"
+],
+[
+"B",
+"",
+"Vs. I bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ]{MEŠ}[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 1'",
+"[ _ ]⸢{MEŠ}⸣[ ... ]"
+]
+],
+"tr": "[ ... ] die [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 4''",
+"hl": "",
+"master": "arun[a(-) ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 2'",
+"a-ru-n[a(-) ... ]"
+]
+],
+"tr": "[ ... ] Mee[r ... ]",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 4''",
+"hl": "",
+"master": "ḫatt[e- ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 3'",
+"ḫa-at-t[e- ... ]"
+]
+],
+"tr": "[ ... ] schlag[-... ]",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 4''",
+"hl": "",
+"master": "ḫuitt[i- ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 4'",
+"ḫu-it-t[i- ... ]"
+]
+],
+"tr": "[ ... ] zieh[-... ]",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... a]nda [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 4'",
+"[ ... ] [a]n-da x[ ... ]"
+]
+],
+"tr": "[ ... i]n [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "36",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ]-aš [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 6'",
+"[ (_) ]x-aš x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "37",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ]=ma[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 7'",
+"[ (_) ]x-ma[ ... ]"
+]
+],
+"tr": "[ ... ] aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "38",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 8'",
+"[ _ ]x[ ... ]"
+],
+[
+"B",
+"",
+"KUB 33.94 bricht ab. Lücke von etwa 3 Zeilen"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "39",
+"sec": "§ 5'''",
+"hl": "",
+"master": "[ ... ḫe]da[mmu? ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 1''",
+"[ ... ḫé?]-da[m?-mu? ... ]"
+]
+],
+"tr": "[ ... Ḫe]da[mmu ... ]",
+"trlang": "DE"
+},
+{
+"n": "40",
+"sec": "§ 5'''",
+"hl": "",
+"master": "[ ... ] ⸢DUB 1{KAM}?⸣ U[L QATI]",
+"words": [],
+"mss": [
+[
+"B",
+"Rs. IV 2''",
+"[ ... ] ⸢DUB 1{KAM}⸣4 Ú!-U[L ... ] ¬¬¬"
+],
+[
+"B",
+"",
+"Ende von Rs. IV."
+]
+],
+"tr": "Erste Tafel [ ... ], nic[ht vollendet.]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2':1": "Ein Vergleich der Autographien KUB 33.94 und KBo 26.70 ergibt, dass offenbar zwischenzeitlich an dieser Stelle etwas von der Tafel abgebrochen ist.",
+"§ 3':2": "Auf dem Foto ist das Zeichen komplett erhalten.",
+"§ 3':3": "Auf dem Foto ist das Zeichen komplett erhalten.",
+"§ 5''':4": "Nach Kollation am Foto ist DUB 1{KAM} über Rasur geschrieben.",
+"T1": "Vgl. dazu die Ergänzung von Hoffner, Myths2 1998, 51: „[The Sea God (?)] heard, and his mind within rejoiced (?). He [propped(?)] his foot on a stool.“",
+"T2": "So nach Siegelová, StBoT 14, 1971, 39; ebenso Pecchioli Daddi – Polvani 1990, 138.",
+"T3": "Vgl. zu einer möglichen Ergänzung Pecchioli Daddi – Polvani 1990, 138: „e ti darò lei, Š., mia figlia, ...“ Ebenso Hoffner, Myths2 1998, 51: „[I will give you]...“.",
+"T4": "So der Vorschlag von Neu, StBoT 5, 1968, 181; ebenso Siegelová, StBoT 14, 1971, 39; Hoffner, Myths2 1998, 51; Pecchioli Daddi – Polvani 1990, 138.",
+"T5": "Wörtl.: „Die Zeit der Nacht trat ein.“",
+"T6": "Sowohl Hoffner, Myths2 1998, 51 als auch Pecchioli Daddi – Polvani 1990, 138, übersetzen „Kumarbis Haus“.",
+"T7": "Vgl. dazu Hoffner, Myths2 1998, 51: „he sat down on a good chair made of [ ... ].“",
+"T8": "Wohl ein idiomatischer Ausdruck für „warten“; vgl. Hoffner, Myths2 1998, 51, und Pecchioli Daddi – Polvani 1990, 138."
+}
+}

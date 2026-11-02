@@ -1,0 +1,614 @@
+{
+"kind": "MYTH",
+"cth": "CTH 342.2.3",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 342.2.3 (TX 2009-08-27, TRde 2009-08-22)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+},
+{
+"id": "§ 5'",
+"title": "§ 5'",
+"hl": ""
+},
+{
+"id": "§ 6''",
+"title": "§ 6''",
+"hl": ""
+},
+{
+"id": "§ 7''",
+"title": "§ 7''",
+"hl": ""
+},
+{
+"id": "§ 8''",
+"title": "§ 8''",
+"hl": ""
+},
+{
+"id": "§ 9'''",
+"title": "§ 9'''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[namma]=an=ma=⸢wa⸣[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 1'",
+"[nam?-ma?]-an-ma-⸢wa⸣[ ... ] ¬¬¬"
+]
+],
+"tr": "„[Dann] aber [ ... ] ihn [ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 2'",
+"hl": "",
+"master": "[{d}k]umarbiya[š MUL{ḪI.A} uwandu]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 2'",
+"[{d}k]u-mar-bi-ya-a[š ... ]"
+]
+],
+"tr": "[Die Sterne des K]umarbi [sollen kommen]!",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 2'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[n]u=wa NINDA-an GU7-d[u]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 3'",
+"[n]u-wa NINDA-an GU7-d[u]"
+]
+],
+"tr": "Sie s[oll(en)] Brot essen!",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 3'",
+"[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 3'",
+"hl": "",
+"master": "{d}išḫaraš MUL{ḪI.A} uw[andu]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 4'",
+"{d}iš-ḫa-ra-aš MUL{ḪI.A} ú-w[a-an-du]"
+]
+],
+"tr": "Die Sterne der Išḫara [sollen] komm[en]!",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 4'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3'",
+"hl": "",
+"master": "nu=wa NINDA-an adandu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 5'",
+"nu-wa NINDA-an a-da-an-du"
+]
+],
+"tr": "Sie sollen Brot essen",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3'",
+"hl": "",
+"master": "GEŠTIN-a[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 5'",
+"GEŠTIN-a[n ... ] ¬¬¬"
+]
+],
+"tr": "(und) Wei[n trinken]!",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 4'",
+"hl": "",
+"master": "{d}NIN.É.GAL-aš MUL{ḪI.A} uw[andu]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 6'",
+"⸢{d}⸣NIN.É.GAL-aš MUL{ḪI.A} ú-w[a-an-du]"
+]
+],
+"tr": "Die Sterne der NIN.É.GAL [sollen] komm[en]!",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 6'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 4'",
+"hl": "",
+"master": "Ì-itt?=a=za iškandu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs 7'",
+"⸢Ì?⸣-it-ta-za iš-kán-du"
+]
+],
+"tr": "und mit Öl sollen sie sich salben,",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 4'",
+"hl": "",
+"master": "NINDA-a[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 7'",
+"NINDA-a[n ... ]"
+]
+],
+"tr": "(und) Bro[t essen]!",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]-ni=an? LUGAL-waš parna",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 8'",
+"[ _ ]-ni?-an LUGAL-wa-aš pár-na"
+]
+],
+"tr": "Er [ ... ] zum Haus des Königs",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 4'",
+"hl": "",
+"master": "n=a[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 8'",
+"na-a[n ... ] ¬¬¬"
+]
+],
+"tr": "und [ ... ] ih[n ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 5'",
+"hl": "",
+"master": "{d}ZA.BA4.[BA4 ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 9'",
+"⸢{d}ZA.BA4⸣.[BA4 ... ]"
+],
+[
+"A",
+"",
+"Die Vs. bricht ab."
+]
+],
+"tr": "Zaba[ba ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ]-an [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 1'",
+"[ _ ]x-⸢an⸣ [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ] ešari",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 1'",
+"[ ... ] e-ša-ri"
+]
+],
+"tr": "[ ... ] setzt sich",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 6''",
+"hl": "",
+"master": "⸢nu⸣=k[an ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 2'",
+"⸢nu⸣-k[án ... ]"
+]
+],
+"tr": "und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ] ZAG-ni ŠU-i ḫ[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 2'",
+"[ ... ] ZAG-ni ŠU-i ḫ[a- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] in der rechten Hand [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 7''",
+"hl": "",
+"master": "nu=kan {MUNUS}ŠU.GI 1 {D[}UG ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 4'",
+"nu-kán {MUNUS}ŠU.GI 1 {D[}UG ... ]"
+]
+],
+"tr": "Die Beschwörerin [ ... ] ein [ ...-]Gefäß [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 7''",
+"hl": "",
+"master": "taknaš {d}UTU-waš ⸢LÚ⸣ [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 5'",
+"ták-na-aš {d}UTU-wa-aš ⸢LÚ⸣ x[ ... ]"
+]
+],
+"tr": "Der Mann der Sonnengottheit der Erde [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 7''",
+"hl": "",
+"master": "nu=šši=kan tu-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 6'",
+"nu-uš-ši-kán tu-x[ ... ]"
+]
+],
+"tr": "[ ... ] ihm [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 7''",
+"hl": "",
+"master": "našma=kan {d}U[TU ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 7'",
+"na-aš-ma-kán {d}U[TU ... ] ¬¬¬"
+]
+],
+"tr": "Oder [ ... ] Sonn[engottheit ... ]",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 8''",
+"hl": "",
+"master": "našma=šši=ka[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 8'",
+"na-aš-ma-aš-ši-ká[n ... ]"
+]
+],
+"tr": "Oder [ ... ] ihm [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 8''",
+"hl": "",
+"master": "{d}kunirš[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 9'",
+"{d}ku-ni-⸢ir⸣-š[a- ... ]"
+]
+],
+"tr": "Kunirš[a ... ]",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 8''",
+"hl": "",
+"master": "ḪUL-mu-u[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 10'",
+"ḪUL-mu-u[š ... ]"
+]
+],
+"tr": "[ ... ] die schlecht[en ... ]",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 8''",
+"hl": "",
+"master": "[ ... ] A.BÁR-aš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 10'",
+"[ ... ] A.BÁR-aš [ ... ]"
+]
+],
+"tr": "[ ... ] aus Blei [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 8''",
+"hl": "",
+"master": "[ ... ] ⸢parā⸣ [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 11'",
+"[ ... ] ⸢pa-ra-a⸣ x[ ... ]"
+],
+[
+"A",
+"",
+"Die Rs. bricht ab."
+]
+],
+"tr": "[ ... ] hin [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 9'''",
+"hl": "",
+"master": "[ ... BA]L-anti",
+"words": [],
+"mss": [
+[
+"A",
+"lk. Rd. 1",
+"[ ... BA]L-⸢an-ti⸣"
+]
+],
+"tr": "[ ... li]biert [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 9'''",
+"hl": "",
+"master": "NINDA.GUR4.RA=ma ma-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"lk. Rd. 1",
+"NINDA.GUR4.RA-ma ma-[ ... ]"
+]
+],
+"tr": "Das Dickbrot aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 9'''",
+"hl": "",
+"master": "[ ... ] awan arḫa ti[ttanu- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"lk. Rd. 2",
+"[ ... ]x a-wa-an ar-ḫa ti-i[t- ... ]"
+]
+],
+"tr": "[ ... ] ganz weg ste[ll- ... ]",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 9'''",
+"hl": "",
+"master": "[ ... Ḫ]UL-ušš?=a Ù{MEŠ}-uš [ ... ] ⸢BAL-anti⸣",
+"words": [],
+"mss": [
+[
+"A",
+"lk. Rd. 3",
+"[ ... Ḫ]UL?!-uš-ša Ù{MEŠ}-uš [ ...? ] [ ... ]x ⸢BAL-an-ti⸣"
+]
+],
+"tr": "[ ... ] libiert [ ... ] und die [sch]lechten? Träume.",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 9'''",
+"hl": "",
+"master": "3 NINDA.GUR4.R[A ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"lk. Rd. 4",
+"3 NINDA.GUR4.R[A ...? ] [ ... ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Ende des Textes."
+]
+],
+"tr": "Drei Dickbrot[e ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

@@ -1,0 +1,173 @@
+{
+"kind": "MYTH",
+"cth": "CTH 342.2.4",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 342.2.4 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -š]argašat? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... -š]ar?-ga-ša-at x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ni weriyat",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x-ni ú-e-ri-ya-⸢at⸣"
+]
+],
+"tr": "[ ... ] rief [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "⸢nu?⸣ [ ... manninkuwa]nduš? MU{ḪI.A}-uš manninkuwandu[š? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"⸢nu?⸣ x[ ... ] [ ...? ma-an-ni-in-ku-wa?-a]n-du-uš MU{ḪI.A}-uš ma-an-ni-⸢in⸣-ku-⸢wa-an-du?⸣-[uš? ...? ] [ ...? ]"
+]
+],
+"tr": "[ ... ] die [kurz]en Jahre (und) die kurze[n ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... k]ar(a)š parā appeškeši",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... k]ar-aš pa-ra-a ap-pé-eš-ke-ši"
+]
+],
+"tr": "Du hälst das [Ge]treide [ ... ] hin.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "našma [ ... U]R.BAR.RA KA5.A MUŠ GÍR.TAB [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"na-aš-ma x[ ... ] [ ... U]R.BAR.RA KA5.A MUŠ GÍR.TAB x[ ... ] ¬¬¬"
+]
+],
+"tr": "Oder [ ... W]olf, Fuchs, Schlange, Skorpion [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... GU]L-za? parā appeškeši",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... GU]L?-za? pa-ra-a ap-pé-eš-ke-ši"
+]
+],
+"tr": "Du hältst 1[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "kin[un- ... ]-ši SISKUR-mi paiš",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"⸢ki⸣-n[u- ... ] [ ... ]x-ši SISKUR-mi1 pa-iš"
+]
+],
+"tr": "Jet[zt] gab er ... Ritual [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=za kī? [ ... ] MU{ḪI.A}-uš NI-uš ITU{ḪI.A}-uš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"nu-za ⸢ki?-i?⸣ [ ... ] [ ... ] MU{ḪI.A}-uš NI-uš2 ITU{ḪI.A}-uš [ ... ]"
+]
+],
+"tr": "[ ... ] diese? Jahre ... , Monate [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] UR.BAR.RA ⸢KA5.A⸣ M[UŠ? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]x UR.BAR.RA ⸢KA5.A⸣ M[UŠ? ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ] Wolf, Fuchs, Sch[lange ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2':1": "Lesung am Foto kollationiert. Unklar.",
+"§ 2':2": "Lesung am Foto kollationiert. Unklar.",
+"T1": "Eventuell könnte GUL zu {NA₄}GUG „Karneol“, {GIŠ}NÍG.GUL „Drechsel“ oder SAG.GUL eine Keule ergänzt werden."
+}
+}

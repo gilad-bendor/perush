@@ -1,0 +1,203 @@
+{
+"kind": "MYTH",
+"cth": "CTH 345.I.5",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 345.I.5 (TX 2009-08-23, TRde 2009-08-29)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]x du-x[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x du-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... memiš]kiwan dai[š]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... me-mi-iš]-ki-u-an da-i[š]"
+]
+],
+"tr": "[ ... beg]ann, [ ... zu spre]chen.",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... nep]iši šarā pait",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ne-p]í-ši ša-ra-a pa-it"
+]
+],
+"tr": "„[ ... ] ging in den [Him]mel hinauf.",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]x-x-x-aš(-)šallēšzi",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]x-x-x-aš(-)šal-le-e-eš-zi"
+]
+],
+"tr": "[ ... ] wird groß.1",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... =w]a=kan kwiš paizzi",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... -w]a-kán ku-iš pa-iz-zi"
+]
+],
+"tr": "[ ... ], welcher [ ... ] geht,",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ](-)mešiššureškeddu",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ](-)me?-ši-iš-šu-re-eš-ke-ed-du ¬¬¬"
+]
+],
+"tr": "[ ... ] soll ...!“",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]UL kwiški memai",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... Ú]-UL ku-iš-ki me-ma-i"
+]
+],
+"tr": "[ ... n]iemand spricht.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]{d}ašdabiš ḫadugaš DINGIR-LIM-i[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]⸢{d}⸣aš-da-bi-iš ḫa-du-ga-aš DINGIR-LIM-i[š] [ ... ]"
+]
+],
+"tr": "[ ... ] Aštabi, der schreckliche Gott, [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]x {d}10-aš iwar {GIŠ}ḫurkiyaš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]x {d}10-aš i-wa-ar {GIŠ}ḫur-ki-ya-aš [ ... ]"
+]
+],
+"tr": "[ ... ] wie der Wettergott [ ... ] des Rades [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-ninkišmi",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ]-ni-in-ki-iš-mi"
+]
+],
+"tr": "[ ...]-e ich.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "KUR-e=ma [ ... ]-mi",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"KUR-e-ma [ ... ]-mi ¬¬¬"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "Das Land aber [ ...]-e ich.",
+"trlang": "DE"
+}
+],
+"notes": {
+"T1": "Vgl. dazu CHD Š 105."
+}
+}

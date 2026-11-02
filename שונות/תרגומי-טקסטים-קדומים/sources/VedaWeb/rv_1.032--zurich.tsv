@@ -1,6 +1,6 @@
 # Rigveda 1.32 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
 # label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
-# Made by dossier_tools.py rvtsv from ../VedaWeb/rv_1.032--extract.tei (rv_book_01.tei, 2026-10-23).
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_01.tei.
 1a	índrasya nú vīryā̀ṇi prá vocaṃ	`índrasya` – índra- (nominal stem; GEN.M.SG) ‖ `nú` – nú (invariable) ‖ `vīryā̀ṇi` – vīryà- (nominal stem; ACC.N.PL) ‖ `prá` – prá (invariable; LP) ‖ `vocam` – √vac- (root; SG.1.INJ.AOR.ACT)
 1b	yā́ni cakā́ra prathamā́ni vajrī́	`yā́ni` – yá- (pronoun; ACC.N.PL) ‖ `cakā́ra` – √kr̥- (root; SG.3.IND.PRF.ACT) ‖ `prathamā́ni` – prathamá- (nominal stem; ACC.N.PL) ‖ `vajrī́` – vajrín- (nominal stem; NOM.M.SG)
 1c	áhann áhim ánv apás tatarda	`áhan` – √han- (root; SG.3.IND.IPRF.ACT) ‖ `áhim` – áhi- (nominal stem; ACC.M.SG) ‖ `ánu` – ánu (invariable; LP) ‖ `apáḥ` – áp- (nominal stem; ACC.F.PL) ‖ `tatarda` – √tr̥d- (root; SG.3.IND.PRF.ACT)

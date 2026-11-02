@@ -1,0 +1,217 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.10",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.10 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ .. -l]āiš ap-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ .. -l]a-⸢a-iš ap⸣-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {MU]}Šḫedammu ar[u- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... {MU]}Šḫé-dam-mu a-r[u- ... ]"
+]
+],
+"tr": "[ ... ] Ḫedammu [ ... ] Me[er ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] {d}šertapš[uruḫi(-) ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]x {d}še-er-ta-ap-š[u-ru-ḫi(-) ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] Šertapš[uruḫi ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... {M]}UŠḫedammu ḫar-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... {M]}UŠḫé-dam-mu ḫar-x[ ... ]"
+]
+],
+"tr": "[ ... ] Ḫedammu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-an daiš",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]-an da-iš"
+]
+],
+"tr": "[ ... ] begann, [ ... ] zu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "iš-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"iš-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... U]R.SAG-in DINGIR-i[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... U]R.SAG-in DINGIR-i[n ... ]"
+]
+],
+"tr": "[ ... ] den [held]enhaften Gott [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... -e]l šunnez[i]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... -e]l šu-un-né-z[i]"
+]
+],
+"tr": "[ ... ] füll[t ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-ta",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ] [ ... ]x-ta"
+]
+],
+"tr": "[ ... -]te(n).",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=za AMA-YA[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"nu-za AMA-⸢YA⸣[ ... ] [ ... ]"
+]
+],
+"tr": "Meine Mutter [ ... ] sich [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "[z]ik=ma=kan[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[z]i-ik-ma-kán[ ... ]"
+]
+],
+"tr": "[D]u aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ](-)⸢ēš⸣(-)[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ]x(-)⸢e-eš⸣(-)[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

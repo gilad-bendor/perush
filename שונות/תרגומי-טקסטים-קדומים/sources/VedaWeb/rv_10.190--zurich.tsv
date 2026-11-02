@@ -1,0 +1,15 @@
+# Rigveda 10.190 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_10.tei.
+1a	r̥táṃ ca satyáṃ cābhī̀ddhāt	`r̥tám` – r̥tá- (nominal stem; NOM.N.SG) ‖ `ca` – ca (invariable) ‖ `satyám` – satyá- (nominal stem; NOM.N.SG) ‖ `ca` – ca (invariable) ‖ `abhī̀ddhāt` – √idh- 1 (root; ABL.N.SG.PTCP-ta.LP)
+1b	tápasó 'dhy ajāyata	`tápasaḥ` – tápas- (nominal stem; ABL.N.SG) ‖ `ádhi` – ádhi (invariable; LP) ‖ `ajāyata` – √janⁱ- (root; SG.3.IND.IPRF.MED)
+1c	táto rā́try ajāyata	`tátas` – tátas (invariable) ‖ `rā́trī` – rā́trī- (nominal stem; NOM.F.SG) ‖ `ajāyata` – √janⁱ- (root; SG.3.IND.IPRF.MED)
+1d	tátaḥ samudró arṇaváḥ	`tátas` – tátas (invariable) ‖ `samudráḥ` – samudrá- (nominal stem; NOM.M.SG) ‖ `arṇaváḥ` – arṇavá- (nominal stem; NOM.M.SG)
+2a	samudrā́d arṇavā́d ádhi	`samudrā́t` – samudrá- (nominal stem; ABL.M.SG) ‖ `arṇavā́t` – arṇavá- (nominal stem; ABL.M.SG) ‖ `ádhi` – ádhi (invariable; LP)
+2b	saṃvatsaró ajāyata	`saṃvatsaráḥ` – saṃvatsará- (nominal stem; NOM.M.SG) ‖ `ajāyata` – √janⁱ- (root; SG.3.IND.IPRF.MED)
+2c	ahorātrā́ṇi vidádhad	`ahorātrā́ṇi` – ahorātrá- (nominal stem; ACC.N.PL) ‖ `vidádhat` – √dhā- 1 (root; NOM.M.SG.PRS.ACT.PTCP.LP)
+2d	víśvasya miṣató vaśī́	`víśvasya` – víśva- (nominal stem; GEN.N.SG) ‖ `miṣatáḥ` – √miṣ- (root; GEN.N.SG.PRS.ACT.PTCP) ‖ `vaśī́` – vaśín- (nominal stem; NOM.M.SG)
+3a	sūryācandramásau dhātā́	`sūryācandramásau` – sūryācandramás- (nominal stem; ACC.M.DU) ‖ `dhātā́` – dhātár- (nominal stem; NOM.M.SG)
+3b	yathāpūrvám akalpayat	`yathāpūrvám` – yathāpūrvám (invariable) ‖ `akalpayat` – √kl̥p- (root; SG.3.IND.IPRF.ACT.CAUS)
+3c	dívaṃ ca pr̥thivī́ṃ ca-	`dívam` – dyú- ~ div- (nominal stem; ACC.M.SG) ‖ `ca` – ca (invariable) ‖ `pr̥thivī́m` – pr̥thivī́- (nominal stem; ACC.F.SG) ‖ `ca` – ca (invariable)
+3d	-antárikṣam átho svàḥ	`antárikṣam` – antárikṣa- (nominal stem; ACC.N.SG) ‖ `átha` – átha (invariable) ‖ `u` – u (invariable) ‖ `svàr` – svàr- (nominal stem; ACC.N.SG)

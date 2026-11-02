@@ -20,10 +20,14 @@ python3 -I -B from any folder.
                                                           corpus in the folder), with the source line
     python3 -I -B ugarit_tools.py dulat '<regex>'          CUC's DULAT-based lexicon (lexeme, DULAT page, POS, gloss):
                                                           the dictionary's headwords and short senses, per word
+    python3 -I -B ugarit_tools.py eupt KEY [FROM [TO]] [--tr]  EUPT's edition of Kirta (1.14–1.16): transliteration,
+                                                          epigraphy, vocalization, morphology; --tr adds its German /
+                                                          English translation and notes (read them after drafting)
     python3 -I -B ugarit_tools.py gates                    print the reserved / gated words, traps and formulas
     python3 -I -B ugarit_tools.py selftest                 run the gates on the test lines of renderings.md §9
 
-KEY = a KTU tablet number (1.1 … 1.6, 1.23, 1.24, 1.114, 1.100, 1.107, 1.108, 1.82, 1.83); its annotated file is
+KEY = a KTU tablet number (1.1 … 1.6, 1.23, 1.24, 1.114, 1.100, 1.107, 1.108, 1.82, 1.83; Round 5 run 3: 1.17–1.19
+Aqhat, 1.14–1.16 Kirta, 1.20–1.22 + 1.161 the Rephaim, 1.40, 1.119, 1.39 the rituals); its annotated file is
 <project>/annotated-<KEY>.rtl.md. Labels are CUC's (= KTU's): "III:38" (column:line) or "62" (one-column tablets).
 
 The base text is the Copenhagen Ugaritic Corpus (../sources/CUC/, git-ignored; restore with
@@ -61,6 +65,10 @@ CACHE = os.path.join(ROOT, "sources", "CUC", "text", "_lines.json")   # git-igno
 
 P1 = "1-מחזור-בעל"
 P2 = "2-מיתוסים-ולחשים"
+P4 = "4-אקהת"
+P5 = "5-כרתא"
+P6 = "6-הרפאים"
+P7 = "7-טקסים"
 UNITS = {
     "1.1": (P1, "מחזור בעל, לוח א (KTU 1.1)"),
     "1.2": (P1, "מחזור בעל, לוח ב (KTU 1.2)"),
@@ -76,8 +84,23 @@ UNITS = {
     "1.108": (P2, "רָפִא, מלך עולם (KTU 1.108)"),
     "1.82": (P2, "לחש נגד הנחש והתנין (KTU 1.82)"),
     "1.83": (P2, "התנין הכבול (KTU 1.83)"),
+    "1.17": (P4, "אַקְהָת, לוח א (KTU 1.17)"),
+    "1.18": (P4, "אַקְהָת, לוח ב (KTU 1.18)"),
+    "1.19": (P4, "אַקְהָת, לוח ג (KTU 1.19)"),
+    "1.14": (P5, "כִּרְתָּא, לוח א (KTU 1.14)"),
+    "1.15": (P5, "כִּרְתָּא, לוח ב (KTU 1.15)"),
+    "1.16": (P5, "כִּרְתָּא, לוח ג (KTU 1.16)"),
+    "1.20": (P6, "הָרְפָאִים, לוח א (KTU 1.20)"),
+    "1.21": (P6, "הָרְפָאִים, לוח ב (KTU 1.21)"),
+    "1.22": (P6, "הָרְפָאִים, לוח ג (KTU 1.22)"),
+    "1.161": (P6, "טקס הרפאים: הלוויית המלך (KTU 1.161)"),
+    "1.40": (P7, "טקס הכפרה (KTU 1.40)"),
+    "1.119": (P7, "תפילה לבעל בעת מצור (KTU 1.119)"),
+    "1.39": (P7, "רשימת זבחים (KTU 1.39)"),
 }
-PROJECT_TITLES = {P1: "מחזור בעל (KTU 1.1–1.6)", P2: "מיתוסים ולחשים קצרים מאוגרית"}
+PROJECT_TITLES = {P1: "מחזור בעל (KTU 1.1–1.6)", P2: "מיתוסים ולחשים קצרים מאוגרית",
+                  P4: "אַקְהָת (KTU 1.17–1.19)", P5: "כִּרְתָּא (KTU 1.14–1.16)",
+                  P6: "הָרְפָאִים (KTU 1.20–1.22)", P7: "טקסים מאוגרית (KTU 1.40 …)"}
 NIQ = "֑-ֽֿ-ׇ"
 
 
@@ -147,6 +170,8 @@ def license_text(key, lab):
     if not r:
         return ""
     words = plain_src(r["text"]).replace("ˤ", "ʿ")
+    # a deletion inside a word (1.161:20 k{i}sih = ksih) must not split the word for the licence
+    words += " " + plain_src(re.sub(r"(?<=\w)\{[^}]*\}(?=\w)", "", re.sub(r"[\[\]⸢⸣⟨⟩]", "", r["text"] or ""))).replace("ˤ", "ʿ")
     # a word split across two lines (1.4 VII:25–26 ḥ | ln): license it in both lines by joining the edge tokens
     rs = rows(key)
     i = rs.index(r)
@@ -159,7 +184,22 @@ def license_text(key, lab):
         for part in (p[2] or "").split(";"):
             if part.strip() and part.strip() != "?":
                 lems.append(_norm_lemma(part))
+    # Kirta: EUPT is rank 1 for readings (renderings §12.3), so its transliteration licenses too (1.14 III:59 ṣr → ʿṣr)
+    e = _eupt_line(key, lab)
+    if e:
+        words += " " + re.sub(r"[\[\]⸢⸣{}<>()!?]|\(Text:[^)]*\)", "", e).replace("ˁ", "ʿ").replace(" . ", " ")
     return (words + " | " + " ".join(sorted(set(lems)))).lower()
+
+
+_EUPT_CACHE = {}
+
+
+def _eupt_line(key, lab):
+    """EUPT's transliteration of a line (Kirta only), or ''."""
+    if key not in _EUPT_CACHE:
+        p = os.path.join(ROOT, "sources", "EUPT", "text", f"KTU-{key}.json")
+        _EUPT_CACHE[key] = json.load(open(p, encoding="utf-8"))["lines"] if os.path.exists(p) else {}
+    return (_EUPT_CACHE[key].get(lab) or {}).get("translit", "")
 
 
 # ---------------------------------------------------------------- annotated files
@@ -274,7 +314,7 @@ RESERVED = [
     (W + alt("צלם", "צלמו", "צלמים", "דמות", "דמותו", "בדמות", "כדמות") + E, r"ṣlm|\bdmt|šdmt", "צֶלֶם / דְּמוּת never without ṣlm / dmt (Gen 1:26)"),
     (W + alt("טוב", "טובה", "טובים", "טובות", "היטיב", "ייטב", "יטב", "טובו", "טובי", "טובתו", "טובתי", "מיטב") + E, r"ṭb|ṭyb|ṭāb",
      "טוֹב only for ṭb [cognate] (Gen 1); nʿm = נָעִים"),
-    (W + alt("גדול", "גדולה", "גדולים", "גדולות", "הגדול", "הגדולים", "גדל", "גדלה") + E, r"gdl", "גָּדוֹל never without gdl: rb = רַב (Gen 1:21's `הַגְּדֹלִים` in the apparatus)"),
+    (W + alt("גדול", "גדולה", "גדולים", "גדולות", "הגדול", "הגדולים", "גדל", "גדלה") + E, r"gdl|mdgl", "גָּדוֹל never without gdl (mdgl: 1.119:12, metathesis of mgdl 'tower', `מגדל`): rb = רַב (Gen 1:21's `הַגְּדֹלִים` in the apparatus)"),
     (W + alt("יצר", "ייצר", "יוצר", "יצרו", "וייצר", "יצרה", "יצרתי") + E, r"yṣr", "the root יצר never without yṣr (Gen 2:7)"),
     (W + alt("עשה", "עשו", "עשתה", "עשיתי", "עשית", "יעשה", "תעשה", "אעשה", "נעשה", "עושה", "עושים", "עשות", "לעשות", "עשוי", "עשויה", "מעשה", "מעשי") + E, r"ʿšy|ʿśy",
      "the root עשה never without ʿšy (Gen 1:7, 16, 25, 26, 31): render pʿl, škn, bny by their own sense"),
@@ -309,9 +349,19 @@ RESERVED = [
     (W + alt("ממשלה", "ממשלת", "ממשל", "משל", "ימשול", "משלה", "ממשלתו", "המושל", "מושל") + E, r"mšl", "the root משל never without mšl (Gen 1:16, 18; 3:16)"),
     (W + alt("שרט", "שרטת", "קרחה", "יתגודדו", "התגודד", "גדוד") + E, r"qrḥ|gdd|šrṭ", "the mourning words of Lev 19:28, 21:5, Deut 14:1 only for their cognates"),
     (W + alt("ידיד", "ידידי", "ידידו", "ידידות", "ידידת") + E, r"ydd|\byd\b|ddym", "יְדִיד only for ydd [cognate] (Deut 33:12): mdd = חֲבִיב"),
-    (W + alt("גד", "גדי", "הגדי", "גדיים", "גדיה") + E, r"\bgd\b|gdy|gdm", "גַּד (coriander) only for gd [cognate] (Ex 16:31): the 'kid' reading of KTU 1.23:14 is rejected"),
-    (W + alt("אור", "האור", "אורו", "אורה", "אורות", "מאור", "מאורות", "המאור") + E, r"\bar\b|\bir\b|ảr|\bủr\b|ỉr|ảr|nyr|\bnr\b", "אוֹר only for ar 'light' [cognate] (Gen 1:3): nrt = נֵר; מָאוֹר never (Gen 1:14–16)"),
+    (W + alt("גד", "גדי", "הגדי", "גדיים", "גדיה") + E, r"\bgd\b|gdy|gdm|npṣ", "גַּד (coriander) only for gd [cognate] (Ex 16:31): the 'kid' reading of KTU 1.23:14 is rejected"),
+    (W + alt("אור", "האור", "אורו", "אורה", "אורות", "מאור", "מאורות", "המאור") + E, r"\bar\b|\bir\b|ảr|\bủr\b|\bur\b|ỉr|ảr|nyr|\bnr\b", "אוֹר only for ar 'light' [cognate] (Gen 1:3): nrt = נֵר; מָאוֹר never (Gen 1:14–16)"),
     (W + alt("חושך", "חשך", "החושך", "חשכה", "חשיכה", "חשכת") + E, r"ḥšk|ẓlm|ġlm", "חֹשֶׁךְ only for ḥšk / ẓlm (Gen 1:2)"),
+    # Round 5 run 3 (the epics: Aqhat, Kirta, the Rephaim, KTU 1.40)
+    (W + alt("נשר", "נשרים", "הנשר", "הנשרים", "נשרי", "כנשר") + E, r"nšr", "נֶשֶׁר only for nšr [cognate] (Deut 32:11, the eagle that `יְרַחֵף`)"),
+    (W + alt("אלמנה", "אלמנות", "האלמנה", "אלמנת", "אלמנתו") + E, r"almn", "אַלְמָנָה only for almnt [cognate] (Ex 22:21, Deut 10:18)"),
+    (W + alt("יתום", "יתומים", "היתום", "היתומים", "יתומה", "יתומי") + E, r"ytm", "יָתוֹם only for ytm [cognate] (Ex 22:21, Deut 10:18)"),
+    (W + alt("מצבה", "מצבת", "מצבות", "מצבתו", "המצבה") + E, r"nṣb|skn", "מַצֵּבָה only for nṣb / skn (Gen 28:18, 35:14, 20)"),
+    (W + alt("קשת", "הקשת", "קשתו", "קשתי", "קשתך", "קשתות") + E, r"qšt|qšṯ", "קֶשֶׁת only for qšt [cognate] (Gen 9:13: the bow in the cloud)"),
+    (W + alt("בכור", "בכורה", "הבכור", "בכורי", "בכורו", "בכורת", "בכורות", "בכרתי", "אבכר", "יבכר") + E, r"bkr", "בְּכוֹר / בִּכֵּר only for bkr [cognate] (Deut 21:15–17, Gen 48–49)"),
+    (W + alt("כפר", "כיפר", "כפרה", "כפורים", "כיפורים", "יכפר", "לכפר", "מכפר", "כפרת", "כופר", "כפרו") + E, r"kpr",
+     "the root כפר only for kpr (henna, `כֹּפֶר`): KTU 1.40's npy is not kpr – Lev 16's `כִּפֶּר` is the finding"),
+    (W + alt("נדר", "נדרו", "נדרה", "נדרי", "ידור", "אדור", "נודר", "נדרים", "נדרתי") + E, r"ndr|mḏr|nḏr", "נֶדֶר / נָדַר only for ndr (and the noun mḏr, 1.119:30) [cognate] (Gen 28:20)"),
 ]
 
 V = NIQ
@@ -377,6 +427,9 @@ FORMULAS = [
     (r"\bšlyṭ d šbʿt rašm\b", r"(?:ה)?שליט אשר לו שבעה ראשים", "šlyṭ d šbʿt rašm = `הַשַּׁלִּיט אֲשֶׁר לוֹ שִׁבְעָה רָאשִׁים` (§6.8)"),
     (r"\bḥln\b.*\bbhtm\b", r"חלון (?:ב)?בית", "ḥln b bhtm = `חַלּוֹן בַּבַּיִת` (§6.9)"),
     (r"\burbt b qrb hkl", r"ארו?בה בקרב (?:ה)?היכל", "urbt b qrb hklm = `אֲרֻבָּה בְּקֶרֶב הַהֵיכָל` (§6.9)"),
+    (r"\b[ayt]?r[ḫḥ]p(?:n|t)?\b|\btrḫpn\b", r"רי?ח[פף]", "rḫp = the root רחף (`רִחֵף`, `מְרַחֶפֶת`) [cognate] Gen 1:2, Deut 32:11 (renderings §12)"),
+    (r"\bmt rpi\b", r"אי?ש[ \-־]רפא", "mt rpi = `אִישׁ רָפִא` (renderings §12)"),
+    (r"\bmt hrnmy\b", r"אי?ש[ \-־](?:ה)?הרנמי", "mt hrnmy = `אִישׁ הַהַרְנַמִּי` (renderings §12)"),
     (r"\bbdqt ʿrpt\b", r"בדק (?:ב)?ענני?ם?|בדק בעננים", "bdqt ʿrpt = `בֶּדֶק בָּעֲנָנִים` (§6.9)"),
 ]
 
@@ -680,6 +733,44 @@ def cmd_grep(pat, every=False):
                 print(f"{os.path.relpath(f, ROOT)} {lab}: {ln[2:].strip()[:140]}   ‹{(srcl or '')[:100]}›")
 
 
+EUPT_DIR = os.path.join(ROOT, "sources", "EUPT", "text")
+
+
+def cmd_eupt(key, a=None, b=None, tr=False):
+    """EUPT's edition (Kirta, KTU 1.14–1.16; rank 1 for readings): per CUC line the transliteration, the epigraphic
+    notes, the vocalization and morphology of its unit; with --tr also the German / English translation and the
+    philological notes (rank 3–4: read them only after drafting the line)."""
+    p = os.path.join(EUPT_DIR, f"KTU-{key}.json")
+    if not os.path.exists(p):
+        sys.exit(f"no EUPT edition for KTU {key} (EUPT has 1.14–1.16; run ../tools/eupt2md.py convert)")
+    d = json.load(open(p, encoding="utf-8"))
+    labs = order(key) + [l for l in d["lines"] if l.startswith("(")]
+    if a:
+        i = labs.index(a)
+        j = labs.index(b) if b else i
+        labs = labs[i:j + 1]
+    seen = set()
+    for lab in labs:
+        r = row(key, lab)
+        e = d["lines"].get(lab)
+        print(f"### {lab}")
+        print(f"- CUC:  `{r['text'] if r else '-'}`")
+        print(f"- EUPT: `{e['translit'] if e else '(no EUPT line)'}`")
+        for n in (e or {}).get("epi", []):
+            print(f"  - epigraphy ({n[1]}): {n[2]}")
+        for u in d["units"]:
+            if lab in u["lines"] and u["id"] not in seen:
+                seen.add(u["id"])
+                print(f"- unit {', '.join(u['lines'])} voc: {u['voc']}")
+                print(f"  morph: {' | '.join(u['morph'])}")
+                if tr:
+                    print(f"  de: {u['de']}")
+                    print(f"  en: {u['en']}")
+                    for n in u["notes"]:
+                        print(f"  - note [{n[0]}] {n[1]}: {n[2]}")
+        print()
+
+
 def cmd_dulat(pat):
     p = os.path.join(CUC_DIR, "lexicon_and_grammar", "ugaritic_lexicon.txt")
     rx = re.compile(pat)
@@ -808,7 +899,7 @@ def build(keys=None):
     for k in pk:
         build_one(k)
     bad = 0
-    for proj in (P1, P2):
+    for proj in PROJECT_TITLES:
         ks = [k for k in present_keys() if UNITS[k][0] == proj]
         if not ks:
             continue
@@ -855,6 +946,10 @@ def main():
         sys.exit(0 if build(rest) else 1)
     if cmd == "grep" and rest:
         return cmd_grep(rest[0], "--all" in a)
+    if cmd == "eupt" and rest:
+        tr = "--tr" in a
+        rest = [x for x in rest if x != "--tr"]
+        return cmd_eupt(*rest[:3], tr=tr)
     if cmd == "dulat" and rest:
         return cmd_dulat(rest[0])
     if cmd == "gates":

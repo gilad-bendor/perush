@@ -1,0 +1,100 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.17",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.17 (TX 2009-08-27, TRde 2009-08-24)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... p]arā ḫa-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... p]a-⸢ra-a ḫa⸣-[ ... ]"
+]
+],
+"tr": "[ ... hi]naus [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {URU}ku]mmiyaš? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... {URU}?ku]m?-mi-ya-aš x[ ... ]"
+]
+],
+"tr": "[ ... Ku]mme? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]uttar? {d}10-ni[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]⸢ut?⸣-tar {d}10-ni[ ... ]"
+]
+],
+"tr": "[ ... ] Wort? zum Wettergott:",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ar]una[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... a-r]u-na-a[š ... ]"
+]
+],
+"tr": "[Das M]ee[r ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

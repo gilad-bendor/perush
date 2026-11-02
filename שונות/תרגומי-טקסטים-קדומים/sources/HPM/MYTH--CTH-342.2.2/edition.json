@@ -1,0 +1,617 @@
+{
+"kind": "MYTH",
+"cth": "CTH 342.2.2",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 342.2.2 (TX 2009-08-27, TRde 2009-06-26)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+},
+{
+"id": "§ 5''",
+"title": "§ 5''",
+"hl": ""
+},
+{
+"id": "§ 6''",
+"title": "§ 6''",
+"hl": ""
+},
+{
+"id": "§ 7''",
+"title": "§ 7''",
+"hl": ""
+},
+{
+"id": "§ 8''",
+"title": "§ 8''",
+"hl": ""
+},
+{
+"id": "§ 9''",
+"title": "§ 9''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] ⸢iškandu⸣",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 1'",
+"[ ... ]x ⸢iš-kán-du⸣ ¬¬¬"
+]
+],
+"tr": "[ ... ] sollen [ ... ] salben!",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 2'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "[kē]danda? A-it ārrandu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 2'",
+"[ke?-e?]-⸢da⸣-an-da A-it a-ar-ra-an-du"
+]
+],
+"tr": "Sie sollen (sich) mit [di]esem? Wasser waschen!",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... -a]ndu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 3'",
+"[ ... -a]n-du ¬¬¬"
+]
+],
+"tr": "Sie sollen [ ... ]!",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 4'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 3'",
+"hl": "",
+"master": "[k]ēdanda A-it ārrandu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 4'",
+"[ke]-⸢e⸣-da-an-da A-it a-ar-ra-an-du"
+]
+],
+"tr": "Sie sollen (sich) mit [d]iesem Wasser waschen!",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3'",
+"hl": "",
+"master": "[GEŠT]IN-an=ma? akuwandu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5'",
+"[GEŠT]IN?-an-ma a-ku-wa-an-du"
+]
+],
+"tr": "[Wei]n aber sollen sie trinken!",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3'",
+"hl": "",
+"master": "n=an lē tarnatteni",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5'",
+"na-an le-e tar-na-at-te-ni"
+]
+],
+"tr": "Ihr sollt ihn nicht loslassen!",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-u? apel GÌR-it tiyaddu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 6'",
+"[ ... ]-⸢ú?⸣ a-pé-el GÌR-it ti-ya-ad-du ¬¬¬"
+]
+],
+"tr": "Er soll sich mit seinen Füßen [ ... ] stellen!",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 7'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 4'",
+"hl": "",
+"master": "[k]ēdanda A-it ārrandu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 7'",
+"[ke]-⸢e⸣-da-an-da A-it a-ar-ra-an-du"
+]
+],
+"tr": "Sie sollen (sich) mit [d]iesem Wasser waschen!",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 4'",
+"hl": "",
+"master": "[G]EŠTIN-an=ma akuwandu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8'",
+"[G]EŠTIN-an-ma a-ku-wa-an-du"
+]
+],
+"tr": "[W]ein aber sollen sie trinken!",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 4'",
+"hl": "",
+"master": "n=aš tiyaddu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8'",
+"na-aš ti-ya-ad-du"
+]
+],
+"tr": "Er soll sich hinstellen!",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 4'",
+"hl": "",
+"master": "{d}ZA.BA4.BA4-aš [ ... -R]A{MEŠ} {GIŠ}ŠUKUR {GIŠ}BAN ḪUL UḪ7-tar takkišzi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8'",
+"{d}ZA.BA4.BA4-aš [ ... -R]A{MEŠ} {GIŠ}ŠUKUR {GIŠ}BAN ḪUL UḪ7-tar ták-⸢ki-iš-zi⸣"
+]
+],
+"tr": "Zababa fügt die [ ... ], den Speer, den Bogen, das Schlechte (und) die Zauberei zusammen.",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... -y]addu",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 10'",
+"[ ... -y]a-ad-du ¬¬¬"
+],
+[
+"A",
+"",
+"Vs. II bricht ab."
+]
+],
+"tr": "Er soll [ ... ]!",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ... -z]i?",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1'",
+"[ ... -z]i?"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 5''",
+"hl": "",
+"master": "n=a-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1'",
+"na-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ... GEŠT]IN-nann=a? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 2'",
+"[ ... GEŠT]IN?-na-an-na [ ... ]"
+]
+],
+"tr": "[ ... ] und den [Wei]n? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ... and]a? ḫamanka[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3'",
+"[ ... an?-d]a? ḫa-ma-an-ká[n ... ]"
+]
+],
+"tr": "[ ... a]n [ ... ] bind[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ... NINDA.GU]R4.RA tarnaš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4'",
+"[ ... NINDA.GU]R4.RA tar-na-aš"
+]
+],
+"tr": "[ ... ] legte [ ... Dickbr]ot hin.",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 5''",
+"hl": "",
+"master": "n=[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4'",
+"n[a1- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... E]N? SISKUR wezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 5'",
+"[ ... E]N?2 SISKUR ú-ez-zi"
+]
+],
+"tr": "Der Ritual[he]rr kommt.",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 5'",
+"[ ...? ] [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ]-iel=ma=kan AN[A ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 6'",
+"[ ... ]x-i-el-ma-kán A-N[A ... ]x ¬¬¬"
+]
+],
+"tr": "[ ... ] aber [ ... ] z[u ... ]",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... {d}elkunirš]aš EN Ù GE6-aš KI-aš DUMU-aš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 7'",
+"[ ... {d}el-ku-ni-ir-š]a-aš EN Ù3 GE6-aš ⸢KI⸣-aš DUMU-aš [ ... ]"
+]
+],
+"tr": "[Elkunirš]a, der Herr des Traumes1, Sohn der dunklen Erde, [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... E]N SISKUR kwitki TUKU.TUKU-ešta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 8'",
+"[ ... E]N SISKUR ku-it-ki TUKU.TUKU-eš-ta4"
+]
+],
+"tr": "[ ... ] war [dem] Ritual[her]rn wegen irgendetwas zornig.",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... ]-ni? weriyat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 9'",
+"[ ... ]-ni? ú-e-ri-ya-at ¬¬¬"
+]
+],
+"tr": "[ ... ] rief [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 8''",
+"hl": "",
+"master": "[ ... ]-it",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 10'",
+"[ ... ]x-it"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 8''",
+"hl": "",
+"master": "nu=šši=kan tuk [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 10'",
+"nu-uš-ši-kán tu-uk [ ... ]"
+]
+],
+"tr": "[ ... ] ihm dich [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 8''",
+"hl": "",
+"master": "[ ... {d}elkun]iršaš EN ⸢Ù⸣ ḪUL-muš Ù-uš [ ... I]TU{ḪI.A}-uš manninkuwanduš UD{ḪI.A}-uš [ ... ]-aḫliwanda GE6-ya munduwanda [ ... parā5] appeškeši",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 11'",
+"[ ... {d}el-ku-n]i-ir-ša6-aš EN ⸢Ù⸣ ḪUL-mu-uš Ù-uš [ ... I]TU{ḪI.A}-uš ma-an-ni-in-ku-wa-an-du-uš UD{ḪI.A}-uš [ ... ]-aḫ-li-wa-an-da GE6-ya mu-un-du-wa-an-da [ ... ] ap-pé-eš-ke-ši ¬¬¬"
+]
+],
+"tr": "[Elkun]irša, Herr des Traumes, du hälst schlechte Träume, [ ... ] Monate, kurze Tage, die [ ... ], die dunklen [ ... ] hin.",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 9''",
+"hl": "",
+"master": "[ ... ]-kan iš-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 15'",
+"[ ... ]-⸢kán iš⸣-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 9''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 16'",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Rs. III bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 5'':1": "Nach Kollation am Foto ist das Zeichen eindeutig na.",
+"§ 6'':2": "Mouton, Rêves hittites, 2007, 156, liest: BE-E]L?.",
+"§ 7'':3": "Mouton, Rêves hittites, 2007, 156, liest: EN LIBIR. Siehe dort auch Anm. 168.",
+"§ 7'':4": "Vgl. zu einer möglichen Ergänzung Mouton, Rêves hittites, 2007, 156.",
+"§ 8'':5": "Ergänzung nach Bo 3300 6' (CTH 342.2.4).",
+"§ 8'':6": "Fehlkopie, am Foto ist das Zeichen eindeutig -ša- nicht -ta-.",
+"T1": "Mouton, Rêves hittites, 2007, 157, übersetzt: „le vieux seigneur“ mit Anm. 168 auf S. 156."
+}
+}

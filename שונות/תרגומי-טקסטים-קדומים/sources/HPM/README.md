@@ -14,6 +14,12 @@
     `BESRIT--CTH-407` (Puliša, B.-J. Collins, English), `BESRIT--CTH-391.1` and `BESRIT--CTH-391.2` (Ambazzi and its second
     version, B. Christiansen, German): the project "Beschwörungsrituale der Hethiter" (txhet_besrit).
   - The Instructions for Temple Personnel (CTH 264) have **no HPM edition** (2026-10-24): composite ours, from TLHdig.
+  - `MYTH--CTH-<n>` (added 2026-10-30, Round 5 run 2): **"Mythen der Hethiter"** (E. Rieken et al., Marburg, 2009–;
+    `txhet_myth`, German), the same page format as BESRIT: CTH 321 (Illuyanka), 324.1–9 (Telipinu), 342.1.1–2.5
+    (Elkunirša), 344 (the Song of Emergence), 345.I.1–10 (Ullikummi), 346.1–21 (Kumarbi fragments), 348.I.1–29 (Ḫedammu),
+    360.1–4 (Appu). Fetch: `python3 -I tools/hpm2md.py fetch MYTH "CTH 348.I.1" sources/HPM/MYTH--CTH-348.I.1 "E. Rieken et
+    al." DE`, then `parse`. The index: `https://hethport.net/txhet_myth/textindex.php?g=myth&x=`. Not in HPM: the Tale of
+    Zalpa (CTH 3) and the Song of Release (CTH 789): our composites from TLHdig.
 - **URL:** `https://hethport.net/txhet_chil/partitur.php?xst=CTH%20291.2&lang=EN&praep=1`;
   `https://hethport.net/txhet_besrit/partitur.php?xst=CTH%20394&prgr=§1&lg=DE&ed=A.%20Chrzanowska` (one page per §) and
   `…/translatio.php?…`.

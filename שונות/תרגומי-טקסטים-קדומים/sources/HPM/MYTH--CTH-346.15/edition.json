@@ -1,0 +1,188 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.15",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.15 (TX 2009-08-27, TRde 2009-08-24)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] DIM4 i[t- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x DIM4 i[t- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] Malz [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... {d}kuma]rbi pait",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... {d}ku?-ma]r?-bi pa-⸢it⸣"
+]
+],
+"tr": "[ ... ] ging [zu Kuma]rbi.",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... {d}k]umarbin",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ] [ ... {d}k]u-⸢mar-bi⸣-in"
+]
+],
+"tr": "[ ... ], den [K]umarbi.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=an [ ... kar]uššiyazzi",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"na-an x[ ... ] [ ... ka?-r]u-uš-ši-ya-az-zi"
+]
+],
+"tr": "Er ist ihm gegenüber [ ... ru]hig.1",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... -a]zzi",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ] [ ... -a]z-zi"
+]
+],
+"tr": "[ ... -]t.",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu {d}kumarb[i ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"nu {d}ku-mar-b[i ... ] [ ... ]"
+]
+],
+"tr": "Kumarb[i ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[n]=aš=⸢kan?⸣ arḫa [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[n]a-⸢aš-kán?⸣ ar-ḫa x[ ... ]"
+]
+],
+"tr": "Er [ ... ] fort [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-mila?-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x-mi-la?-[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-ri [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]-ri1 x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2':1": "Oder a]r.",
+"T1": "Vgl. zu Konstruktionen mit diesem Verb HED 4, 116f."
+}
+}

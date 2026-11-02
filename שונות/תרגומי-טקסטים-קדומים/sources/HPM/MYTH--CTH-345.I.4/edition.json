@@ -1,0 +1,217 @@
+{
+"kind": "MYTH",
+"cth": "CTH 345.I.4",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 345.I.4 (TX 2009-08-23, TRde 2009-08-29)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -r]i? a[n-? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... -r]i? a[n?- ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -d]u?",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... -d]u?"
+]
+],
+"tr": "[ ... sol]l? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=[a]t x[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"na-[a]t x[ ... ]"
+]
+],
+"tr": "und es[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -]unut",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... -]⸢ú⸣-nu-ut"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=za ku?-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"nu-za ku?-[ ... ]"
+]
+],
+"tr": "Und [ ... ] sich [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {GIŠ}BALA]G.DI? galgaltū[ri ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... {GIŠ}BALA]G?.⸢DI?⸣ gal-gal-tu-⸢ú?⸣-[ri ... ]"
+]
+],
+"tr": "[ ... BALA]G.DI- (und) galgaltu[ri-Instrument ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]x",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=aš=kan {URU}n[enuwaza? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"na-aš-kán {URU}n[e-nu-wa-za? ... ]"
+]
+],
+"tr": "Und er [ ... aus] N[inive ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]x aruni parā [pait?]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]x a-ru-ni pa-ra-[a ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] zum Meer [ging? er] hinaus.",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... aruni? p]arā ār(a)š",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... a-ru-ni? p]a-ra-a a-ar-aš[ ...? ]"
+]
+],
+"tr": "[ ... ] gelangte [zum Meer? hi]naus.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]x GÙB-laz[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x ⸢GÙB⸣-la-az[ ... ]"
+]
+],
+"tr": "[ ... ] links [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]x[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

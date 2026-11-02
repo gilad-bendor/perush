@@ -1,0 +1,413 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.20",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.20 (TX 2009-09-08, TRde 2009-09-08)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]arḫ[a ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]ar-ḫ[a ... ]"
+]
+],
+"tr": "[ ... ] for[t ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[n]=an išḫ[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[n]a-an iš-ḫ[a- ... ]"
+]
+],
+"tr": "[ ... ] Her[r ... ] ihn [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... u]ttar ištama-[ _ ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... u]t-tar iš-⸢ta-ma⸣-[ _ ]"
+]
+],
+"tr": "[ ... ] die [R]ede hör[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[k]uwattar? liḫi? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[k]u-wa-at-tar li?-ḫi?1 (Rasur) [ ... ]"
+]
+],
+"tr": "[ ... ] Stärke?1 [ … ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] GE6-i KI-pi kattanda pēter",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... G]E6-i KI-pí kat-ta-an-da pé-e-te-er"
+],
+[
+"B2",
+"5'",
+"[ ... ] GE6-i KI-pí kat-ta-[an-da ... ]"
+]
+],
+"tr": "Sie schafften [ ... ] in die dunkle Erde hinunter.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=z[a ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"nu-z[a ... ]"
+],
+[
+"B",
+"5'",
+"[ ... ] [ ... ]"
+]
+],
+"tr": "Und s[ich ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]{d}kumarbiš ḫāliyaš uttar IGI-and[a ... ]-ta",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]⸢{d}⸣ku-mar-bi-iš ḫa-⸢a⸣-li-ya-aš ut-tar IGI-an-d[a ... ]"
+],
+[
+"B",
+"6'",
+"[ ... ]-ta"
+]
+],
+"tr": "Kumarbi [ ...]te die Angelegenheit der (Schaf)hürden2 gegenübe[r ... ].",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "[n]=aš karūššiyattat=pat",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[na]-aš ka-ru-ú-uš-ši-ya-⸢at⸣-ta-at-pát"
+],
+[
+"B",
+"6'",
+"na-aš ka-[ru-ú-uš-ši-ya-at-ta-at-pát]"
+]
+],
+"tr": "Er war ganz gleichgültig",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=šš[i ... IG]I-anda UL memai",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"nu-uš-š[i ... ] [IG]I-an-da Ú-UL me-ma-i"
+],
+[
+"B",
+"7'",
+"[ ... ]"
+]
+],
+"tr": "und spricht ih[m ... geg]enüber nicht.",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=kan {d}kumarb[iš] arunazza [š]arā iyannieš",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"nu-kán {d}ku-mar-b[i-iš ... ] [š]a-ra-a i!-ya-an-ni-eš"
+],
+[
+"B",
+"7'",
+"[ ... {d}ku-mar-bi-i]š? a-ru-na-az-za[ ... ]"
+]
+],
+"tr": "Kumarb[i] lief vom Meer [hi]nauf.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 1'",
+"hl": "",
+"master": "{d}kumarbiš=kan [ ... ] UGU GÌR-an dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"{d}ku-mar-bi-iš-kán [ ... ] UGU GÌR-an da-a-iš"
+],
+[
+"B",
+"8'",
+"[ ... ]"
+]
+],
+"tr": "Kumarbi setzte den Fuß oben auf [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=šši=kan {d}10-aš {URU}[kummiyaš U]R.SAG-liš LUGAL-uš IGI-anda pait",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"nu-uš-ši-kán {d}10-aš (Rasur) [ ... ] [U]R.SAG-li-iš LUGAL-uš IGI-an-da pa-it"
+],
+[
+"B",
+"8'",
+"[nu-uš-ši]-⸢kán? {d}?10? {URU}?⸣[kum-mi-ya-aš ... ]"
+],
+[
+"B",
+"",
+"Text bricht ab."
+]
+],
+"tr": "Der Wettergott, der [hel]denhafte König der Stadt [Kumme] ging ihm entgegen,",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu [ ... ] ANA {d}kumarbi memiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"nu x[ ... ] ⸢A⸣-NA {d}ku-mar-bi me-mi-iš-ki-u-wa-an da-a-iš"
+]
+],
+"tr": "und [ ... ] begann, zu Kumarbi zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... DINGIR{M]}EŠ-aš addaš",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"[ ... ] [DINGIR{M]}EŠ-aš ad-da-aš"
+]
+],
+"tr": "„[ ... ], Vater der [Gött]er,",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 1'",
+"hl": "",
+"master": "kuwapi=za ēšta ma-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"ku-wa-pí-za e-eš-ta ma-x[3 _ ]x[ ... ]"
+]
+],
+"tr": "wo warst du,3 a[ls? ... ]?",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 1'",
+"hl": "",
+"master": "[kw]iš=aš KÚR-aš",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"[ku]-⸢i⸣-ša-aš (Rasur) KÚR-aš ¬¬¬"
+]
+],
+"tr": "[We]r ist er, der Feind?“",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 2'",
+"hl": "",
+"master": "[{d}k]umarbiš uddār {d}10-ni EGI[R-pa memiškiuwan dāi]š",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"[{d}k]u-mar-bi-iš ud-da-a-ar {d}10-ni EGI[R-pa ... ] [da-a-i]š"
+]
+],
+"tr": "[K]umarbi [bega]nn, dem Wettergott die Worte zu ant[worten]:",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 2'",
+"hl": "",
+"master": "{ḪUR.SAG}ḫūršanaza=kan [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"{ḪUR.SAG}ḫu-u-ur-ša-na-za-kán x[ ... ]"
+]
+],
+"tr": "„[ ... ] vom Berg Ḫuršana [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 2'",
+"hl": "",
+"master": "[{MUŠ}e]lliyankun [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"17'",
+"[{MUŠ}e]l-li-ya-an-ku-un x x[ ... ] ==="
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[Die S]chlange [ ... ]“",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Auch nach Kollation am Original ist nicht klar, was zu lesen ist.",
+"§ 1':2": "Die ersten vier Zeilen von Text B (1' [ ... UR?].SAG-i[n ... ] 2' me-mi-aš-ma-w[a?- ... ] 3' [ ... ]x ḫa-aš-ta-a-i ú-[ ... ] 4' [ ... ]x-te-er {d}A.A-an[ ... ]) lassen sich nicht mit Text A zu einem kohärenten Text zusammenfügen.",
+"§ 1':3": "Eventuell als maḫḫan zu lesen.",
+"T1": "Vgl. dazu HED 4, 313f.",
+"T2": "Vgl. allerdings KUB 13.4 II 73-74, wo ḫaliy[aš] uddanī mit „matter of the night watch“ übersetzt wird, siehe Hoffner – Melchert 2008, 363.",
+"T3": "Aufgrund der Partikel -za dürfte es sich um einen Satz mit einer 2.Sg. handeln. Vgl. dazu Hoffner – Melchert 2008, 362f."
+}
+}

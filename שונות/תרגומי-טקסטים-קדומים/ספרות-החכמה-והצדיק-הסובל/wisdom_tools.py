@@ -109,6 +109,11 @@ RESERVED = [
      "the root כבד only for the kabātu family (Ex 20:11 `כַּבֵּד אֶת אָבִיךָ`) and kabattu 'liver'"),
     (W + r"(?:יאריך|יאריכו|האריך|הארכת|תאריך|אורך|ארוך|ארוכים|ארוכה|ארך)" + E, ["arāku", "arku", "urruku", "arkatu", "arkiš", "urruk", "mūrak", "nūru", "gid2["],
      "the root ארך only for its cognate arāku (Ex 20:11, Deut 5:15, 25:15 in the repository's numbering); `אורך` 'your light' is licensed by nūru"),
+    # Round 5, run 5 (2026-10-31): the Poor Man of Nippur and the fables (renderings §12.3)
+    (W + r"(?:נקם|נקמה|נקמת|נקמתי|ינקום|אנקום|נקמו|התנקם)" + E, None, "no Akkadian nqm: gimilla turru = הֵשִׁיב גְּמוּל, riābu = גָּמַל; נָקַם (Judg 16:28) only in the apparatus"),
+    (W + r"(?:אטד|האטד)" + E, None, "אָטָד (Judg 9:14) only in the apparatus"),
+    (W + r"(?:כבשה|כבשת|הכבשה|כבשתו)" + E, ["puḫādu", "puhādu", "kalūmu", "immertu", "ḫurāpu", "hurāpu", "sila4[", "u8[", "sila₄", "kir11["], "כִּבְשָׂה (2 Sam 12:3) only for a lamb word"),
+    (W + r"(?:עכביש|עכבישים|העכביש)" + E, ["ettūtu"], "עַכָּבִישׁ (Job 8:14) only for ettūtu"),
 ]
 
 # Unvocalized strings that read as another word. (regex on the RAW line, lemma prefixes that make the hit an

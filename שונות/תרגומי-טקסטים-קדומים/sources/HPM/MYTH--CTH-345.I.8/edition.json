@@ -1,0 +1,212 @@
+{
+"kind": "MYTH",
+"cth": "CTH 345.I.8",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 345.I.8 (TX 2009-08-29, TRde 2009-08-29)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -r]iš? {d}10-an x-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"",
+"1' [ ... r]i?-⸢iš?⸣ {d}10-an x-[ ... ]"
+]
+],
+"tr": "[ ... ] den Wettergott [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]{d}impallūr[i ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]⸢{d}⸣im-pa-al-lu-u-r[i ... ]"
+]
+],
+"tr": "[ ... ] Impallur[i ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -a]n? dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... -a]n? da-a-iš"
+]
+],
+"tr": "[ ... ] setzte/begann [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "šume[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"šu-me-e[š ... ]"
+]
+],
+"tr": "Ih[r ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]x-ti",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]x-ti"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu DINGIR{MEŠ}-eš x[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"nu DINGIR{MEŠ}-eš x[ ... ]"
+]
+],
+"tr": "Die Götter [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]x uwawanzi [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x ú-wa-u-an-⸢zi⸣ [ ... ]"
+]
+],
+"tr": "[ ... ] zu sehen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-x-rezz[i]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]-x-re-ez-z[i]"
+]
+],
+"tr": "[ ... ]-t er.",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]{d}impa[llūri ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]{d}im-pa-a[l-lu-u-ri ... ]"
+]
+],
+"tr": "[ ... ] Impa[lluri ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-yanni-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]-ya-an-ni-[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-x{MEŠ}? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]-x⸢{MEŠ}?⸣ [ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

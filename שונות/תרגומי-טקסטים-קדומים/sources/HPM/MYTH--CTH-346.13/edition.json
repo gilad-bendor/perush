@@ -1,0 +1,199 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.13",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.13 (TX 2009-08-27, TRde 2009-08-24)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] šanez[zi ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ] ⸢ša-né-ez⸣-[zi1 ... ]"
+]
+],
+"tr": "[ ... ] erstkla[ssig .... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[{d}kuma]rbi?=ma [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[{d}ku-ma]r?-bi-ma2 (Rasur) [ ... ]x"
+]
+],
+"tr": "[Kuma]rbi? aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "{d}kumarbi=ma [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"{d}ku-mar-bi-ma [ ... ]"
+]
+],
+"tr": "Kumarbi aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] {GIŠ}ŠÚ.A [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]x {GIŠ}ŠÚ.A [ ... ]"
+]
+],
+"tr": "[ ... ] Stuhl [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... E]N? GI ṬUPPI [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... E]N? GI ṬUP-PÍ [ ... ]"
+]
+],
+"tr": "[ ... He]rr? des Griffels, Tafel [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -z]iš ēšzi",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... -z]i?-iš e-eš-zi"
+]
+],
+"tr": "[ ... ] ist [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] NÍ.TE{MEŠ}-aš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x NÍ.TE{MEŠ}-aš [ ... ]"
+]
+],
+"tr": "[ ... ] den Gliedern [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -ta]rr=a ēšzi",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... -ta]r-ra e-eš-⸢zi⸣"
+]
+],
+"tr": "[ ... ] und [ ... ] ist [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ]x-x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Lesung nach Kollation am Original.",
+"§ 1':2": "Nach Kollation am Original über Rasur."
+}
+}

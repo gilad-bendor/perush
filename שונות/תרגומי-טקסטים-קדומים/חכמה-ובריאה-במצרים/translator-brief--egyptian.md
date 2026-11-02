@@ -176,3 +176,29 @@ English (Bible quotations in Hebrew, vocalized):
   belongs, build the clean translation for what is done, and say exactly where you stopped.
 - Your final message to the coordinator (short): labels done, the main decisions, the strongest parallels and the
   strongest "ancient mind" findings, open decisions, problems.
+
+## 9. The tales and Book of the Dead 125 (Round 5 run 6, 2026-10-31)
+The corpus now also holds five narrative and ritual texts (projects 4–8; `renderings.md` §11 binds them): the Two
+Brothers (TB, Late Egyptian), pWestcar (WE), BD 125 (BD), Sinuhe (SI), the Shipwrecked Sailor (SS) (Middle Egyptian).
+- **Read `renderings.md` §11 before the first line**: the names, the key terms, the tale gates (`TALES`: Gen 39's
+  words, Ex 14's, the Decalogue's, Ps 15 / 24's, Deut 26:13–14's, Deut 8:8's seven species, `נָחָשׁ`), the formulas.
+  The texts most famous for a parallel are where the translator reaches for the Bible's wording: Potiphar's wife
+  (TB 3,5–5,4), the parted lake (WE 6,x), the land of Yaa (SI B 81–84), the 42 denials (BD 21–62). Render the Egyptian
+  verb by verb; let the הקבלה bullet quote the verse.
+- **Narrative:** the tale's "then" (`ꜥḥꜥ.n`, `wn.jn=f ḥr`, `sḏm.jn=f`) = `וְאָז` / `אָז` + past (no vav-consecutive);
+  `ḏd.jn X` = `אָז אָמַר X`; speeches in the direct form, the speech-introduction kept as the Egyptian has it. Repeated
+  narrative (a command and its execution; Westcar's royal decree after each wonder; BD's 42 address lines; Sinuhe's
+  epithets): the later copy copies the first copy's Hebrew, changing only what the Egyptian changes; vocalize an
+  imperative spelt like its past execution (`עֲלֵה`) so the clean text tells them apart.
+- **WE 2,21–4,7 is the fifth-day dossier's excerpt**: copy its `>` lines byte for byte from
+  `../מיתוסים-אוגריתיים/3-תיק-היום-החמישי/annotated-WC.rtl.md` (and its apparatus, adapted and extended), and never edit
+  the dossier. If a line must differ (a reading error), write the revised Hebrew in WE and put `[סטייה מן התיק: <reason>]`
+  in that entry: `verify WE` then lists it as a pending dossier revision (for the lead) instead of an error.
+- **Brackets (the fidelity reviewers' commonest fix, Round 5 runs 2–3):** a Hebrew word is in `[ ]` when the
+  Egyptian word, or most of it, is restored; a sign or an ending restored → no bracket; a word half restored → bracket
+  the Hebrew word whole. Decide each case from the transliteration, not from the German.
+- **Quotations of rank-3 translations:** only the TLA's German (`tr`), quoted from the tool's output; every other
+  translation in a few words of your own with the scholar's name, or "the usual reading" (translators quoted Griffith,
+  Geldner and Lichtheim from memory wrongly in earlier runs). Bible verses: `` `…` (ספר פרק:פסוק) `` only, printed first.
+- **The tool:** `egypt_tools.py data <KEY> [FROM [TO]] [--wit]` (SI: labels `R1`…`R23`, `B1`…`B311`; `--wit` shows the
+  Ashmolean ostracon; BD: pJuja and pMaiherperi), `tr`, `lex`, `grep --all`, `fill`, `verify <KEY>`, `build`.

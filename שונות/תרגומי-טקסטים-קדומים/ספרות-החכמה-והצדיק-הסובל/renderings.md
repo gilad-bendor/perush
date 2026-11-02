@@ -314,3 +314,91 @@ All proposals of `6-הוראות-שורופך/project.md` § SU (143–280) are 
 2026-10-23 harmonization, batch C (rows 19, revised, and 24): *bâʾu* "pass along, go" = `צעד` in every corpus (the Šamaš Hymn's choice, 28, 30, 169; `עבר` stays for its cognate *ebēru*, the Theodicy 17 `עוברים`; `חלף` is *etēqu*'s): Ludlul I 80 `ברחוב עובר אני` → `ברחוב צועד אני`, IV c+16 `בשחרור עברתי` → `בשחרור צעדתי` (the reversal of I 80 keeps the same verb; its footnote and the notes that quote I 80 too); the Theodicy 291 `עברתי בנחת` → `צעדתי בנחת`. *miṭirtu* = `תעלה` (`פֶּלֶג` is now *palgu*'s, row 7): the Theodicy 245 `מושך בפלג` → `מושך בתעלה`. New overlaps, recorded: `תעלה` now renders both *miṭirtu* (245) and *atappu* (Th1 138) in the Theodicy; `צעד` renders both *bâʾu* and *akāšu* (the Theodicy 65 `את המסילה שצעדו אלה`). The Šamaš Hymn 172 *bâʾu* II "come" keeps `באים`; Counsels of Wisdom's *šadāḫu* keeps `פסע`.
 
 - **2026-10-30 harmonization** (`../harmonization--2026-10-30.md`, rows 5, 6, 9): *siparru* "bronze" = `אָרָד` (was `נְחֹשֶׁת`, which stays *erû* "copper", the Šamaš Hymn 94); *ṣubātu* "garment" = `שִׂמְלָה` (was `בֶּגֶד`); *uggatu* "fury" = `קֶצֶף` (§5's anger row; was `חֵמָה`, now *imtu*'s; = Enūma eliš II 78, Adapa). Changed lines: Ludlul IV a+21 `הבהיק [את חלודתי] כנחושת.` → `הבהיק [את חלודתי] כְּאָרָד.` (and the a+13–a+23 heading, the note, the Tablet IV introduction); II 71 `אַלּוּ את גווי עטף (כ)בגד,` → `אַלּוּ את גווי עטף (כ)שמלה,`; I 5 `שממה חמתו` → `שממה קִצְפּוֹ` (vocalized: unvocalized `קצפו` reads as the verb); I 37 `אֲגַלֶּה את חמתו` → `אֲגַלֶּה את קצפו` (and the 37–40 heading, the Tablet I introduction, the notes at III 56, IV a+5 and V 70 that quote I 5 / I 37); their glosses and notes, project.md's anger list and parallels rows (I 5, II 71, IV a+21), the parallels index rebuilt. Jer 23:19's `חֵמָה` (I 5) and Ezek 1:7's `נְחֹשֶׁת` (IV a+21) stay [equivalent].
+
+## 12. Round 5, run 5 (2026-10-31): the Poor Man of Nippur and the fables (contest literature)
+**Why this corpus** (the coordinator's decision, under the user's rule): the fables are Babylonian wisdom in eBL's own
+classification (`L/2/8`–`L/2/13`, beside Ludlul, the Theodicy, Counsels and the Dialogue) and Lambert's *BWL* "fables
+or contest literature"; the Poor Man of Nippur (`L/1/11`, a narrative) is a moral tale of the wronged poor and his
+threefold requital, with this corpus's own vocabulary (*riābu* `גָּמַל`, *ṭātu* `שֹׁחַד`, the poor and the powerful,
+Šamaš's justice). `קולות-היום-יום/` would fit the Poor Man's comedy too, but its tool reads no eBL; here `wisdom_tools.py`
+reads eBL natively (`fill`, `pars`, `lemma`, lemma-gated verify).
+
+### 12.1 Files and translators (one at a time; one translator per group, resumed part by part)
+| Key | Project | Text | eBL | Labels |
+|---|---|---|---|---|
+| PM | `7-העני-מניפור/` | the Poor Man of Nippur | `L/1/11`, `../sources/eBL/Poor-Man-of-Nippur/` (ed. Jiménez et al.; tr. Foster) | 161 |
+| PV | `8-משלי-המחלוקת/` | Palm and Vine | `L/2/12`, `Fable-Palm-and-Vine/` (ed. and tr. Jiménez) | 54 |
+| PO | 〃 | the Series of the Poplar | `L/2/8`, `Fable-Poplar/` | 82 |
+| OH | 〃 | the Series of Ox and Horse | `L/2/9`, `Fable-Ox-and-Horse/` | 217 |
+| SP | 〃 | the Series of the Spider | `L/2/11`, `Fable-Spider/` | 59 |
+| WR | 〃 | the Story of the Poor, Forlorn Wren | `L/2/13`, `Fable-Wren/` | 42 |
+Order (the plan: Palm and Vine and the Poplar first, Judg 9:8–15): PM; then PV, PO; then OH; then SP, WR.
+
+### 12.2 Look for (both purposes; "look for", never "translate as")
+- **The Poor Man:** 2 Sam 12:1–4 (the poor man and the powerful who takes his animal: here a goat, *enzu* `עֵז`
+  [cognate]); Exod 22:25–26, Deut 24:12–13 (the poor man's only garment: "a garment with none to change"); Qoh 9:13–16
+  (the poor wise man); Prov 22:22–23, 28:3; Judg 16:28 and Gen 4:24 (a threefold / sevenfold requital); 1 Sam 25 (a
+  gift to a great man, a meal refused); Esth 6 (dressed as the king's man). The mayor *ḫazannu*: grep (Hebrew `חַזָּן`
+  is its descendant through Aramaic `חַזָּנָא`: [cognate], a note); the gatekeeper; the king's chariot; the physician.
+  *gimilla turru* = `הֵשִׁיב גְּמוּל` (Enūma eliš, Gilgameš); *riābu* = `גָּמַל`; `נָקַם` / `נְקָמָה` reserved (no
+  Akkadian *nqm*: the apparatus only).
+- **The fables:** **Judg 9:8–15** (the trees choose a king: the palm "the king of trees", "come, take refuge in my
+  shade" – *ṣillu* `צֵל` [cognate] –, the vine "that cheers gods and men", Ps 104:15); 2 Kgs 14:9 (the thistle and the
+  cedar); Ezek 17 (the eagle, the vine, the *ṣarbatu* `צַפְצָפָה` of Ezek 17:5: Etana's precedent); the Wren and the
+  Eagle against Etana (`נֶשֶׁר`, `קֵן`, `אֶפְרוֹחַ` – Obad 1:4, Job 39:27); the spider (Job 8:14, Isa 59:5); ox and horse
+  (Isa 1:3, Prov 14:4, Job 39:19–25, Ps 32:9); the contest form (Job's dialogues; Prov 30:24–28). For the ancient mind:
+  the disputation genre (Sumerian *a-da-man-dug₄-ga*: Summer and Winter, Hoe and Plough – the creation corpus §9–§10:
+  copy their contest formulas where the Akkadian matches), what each tree or animal does for gods and men, the
+  verdict of a god, humour.
+
+### 12.3 Renderings to follow (grep first: ★)
+- *riābu* `גָּמַל`; *ṭātu* `שֹׁחַד`; *annû* `הֵן`; *dumqu* `חֶסֶד` (§11, Cuthaean §11.6.2); *lemuttu* `רָעָה`; *ṭābu* `טוֹב`
+  (gated); *ellu* `טָהוֹר`; *karābu* `ברך`; *šamaš* `שַׁמַשׁ` ★ (`שֶׁמֶשׁ` the sun, both vocalized where both occur); *erû*
+  (eagle) `נֶשֶׁר`, *watmu* `אֶפְרוֹחַ`, *qinnu* `קֵן`; *ṣarbatu* `צַפְצָפָה`; *gišimmaru* – grep (`תָּמָר` / `דֶּקֶל`), *karānu*
+  – grep (wine / vine; Hebrew `כֶּרֶם` is the cognate of *karmu*? check); *šikaru* `שֵׁכָר` [cognate]; *ṣillu* `צֵל`
+  [cognate]; *alpu* – grep (`שׁוֹר`; the cognate `אֲלָפִים` in a note), *sīsû* `סוּס` [cognate]; *ettūtu* "spider" –
+  `עַכָּבִישׁ` (gated: only *ettūtu*); *enzu* `עֵז`; *ḫazannu* – grep; *nādinānu* / *maḫīru* (market) – grep (Cuthaean
+  *maḫīru* `מְחִיר`).
+- The contest formulas (Sumerian disputations, creation corpus §9–§10) and the speech formulas of the wisdom corpus:
+  the first translator of each formula fixes it at its first copy and copies it exactly after.
+- **Reserved in this run** (checked by `wisdom_tools.py verify`): `נָקַם` / `נְקָמָה`; `אָטָד` (Judg 9:14); `כִּבְשָׂה`
+  only for a lamb word (*puḫādu*, *kalūmu*, *immertu*); `עַכָּבִישׁ` only for *ettūtu*; plus §8 and §11.6.
+
+### 12.4 Merged from the translators
+(The coordinator adds one record per part.)
+#### 12.4.1 PM (the Poor Man, 161 labels), 2026-10-31
+The tale's repeated scenes fixed at the first copy and copied (strings in `7-העני-מניפור/project.md`, Proposals): `עם לבו
+העלוב – הוא נמלך:`; `שמלה אשר אין לה חליפה`; `אל שער חזן ניפור – הוא צעד.`; `אל השוער, מחזיק השער, דבר דיבר:`;
+`גימיל־נינורתה, בצאתו את השער,`; `'בעבור המשא האחד אשר השתת עליי,`; the count `על אחד – שלושה תגמולים אגמלך!'"` …
+`שלוש פעמים תגמולים גמלתיך!"`; `את מידותיו הכה, אנקה השית עליו.` Terms: *ḫazannu* `חַזָּן` [cognate] (kept; the
+modern "cantor" in a note), *laputtû* `ממונה`; *malku* `נסיך` (kept apart from *šarru* `מלך`); *ina ṭēmi šarri* `בְּטַעַם
+המלך` [cognate, Jonah 3:7]; *riābu* `גמל`, *rību* `תגמול`; *šulmānu* `שַׁלְמוֹן` [cognate, Isa 1:23]; *kadrû* `מתנה`;
+*qīštu* `תשורה`; *lummunu* `עלוב`; *šulušītu* `משולשת` (Gen 15:9); *biltu* `משא`; *emēdu* `השית` / N `נצמד`; *kidinnu*
+`חסות`; *kūm* `חֵלֶף`; *gipāru* `מכלאה` (a split by sense: Erra `מרעה`, Enūma eliš `אחו`). The coordinator keeps the
+translator's open choices as drafted (minor). Tool note: `pars` does not resolve eBL's bare "L I.11 16" links (no stage
+or chapter); `verify`'s identical-normalization check covered them.
+#### 12.4.2 PV, PO (Palm and Vine 54, the Poplar 82), 2026-10-31
+Formulas: `אני – X,` (*anākū-ma*); `פתח את פיו, ואליו דיבר:` (*īpuš-ma pâšu izzakkar ana šuāši*); `X פתח(ה) את פיו
+(פיה), ואל Y דבר דיבר(ה):`; `X אל Y דבר דיבר:` (as PM 27); `בוא, אוֹמְרָה לך` (*gana luqbīka*, Theodicy 1); `סובא
+מובחר – נפש האנשים –` (Theodicy 32). The contestants are names without the article: *arhānû* `דֶּקֶל` (`תָּמָר` stays
+*gišimmaru*'s; **a split for the lead**: Sum. *ĝišimmar* is `דקל` in Gudea, Lipit-Ištar and EWO), *karānu* `יַיִן` (the
+text is "Palm and Wine", `הדקל והיין`), *ṣarbatu* `צַפְצָפָה`, *martû* `מַרְתּוּ` ★; *šaššūgu* `שַׁשּׁוּגוּ`, *adāru*
+`אֲדָרוּ`. *ṣillu ṭābu* `צל טוב` [cognate twice, Hos 4:13]; *emēdu* "lean" `נשען` (not `חסה`: Jiménez's "seeks refuge"
+would make Judg 9:15); *ṣulūlu* `סכך`; *šanānu* `התחרה`, *šitnuntu* `התחרות`; *alālu* Gt `התהלל` [cognate]; *ḫaṭṭu*
+`מקל`; *ušurtu* `מַעַשְׂרוֹת?` (eBL "group of ten"; open); *rukūbu* `רְכוּב`, *birtu* `בירה`, *marru* "spade" `מָרָא`
+[cognates]; *lulīmu* `יַחְמוּר`; *arāmu* `עטה` / *katāmu* `כיסה`. eBL slips reported in `8-משלי-המחלוקת/project.md`.
+#### 12.4.3 OH (Ox and Horse, 217), 2026-10-31
+Formulas: `שור פתח את פיו ואמר, אל סוס, הנאדר בקרב, דיבר:` (Gilgameš's speech formula; the epithet from Gilg. VI 53) /
+`סוס פתח את פיו ואמר, אל שור המושלם דבר דיבר:` (*gitmālu* `מושלם`, Theodicy). Contestants *alpu* `שׁוֹר`, *sīsû* `סוּס`
+[cognate], no article. *tāḫāzu* `מלחמה`, *qablu* `קרב`, *tuqumtu* `תגרה`; the opening flood is *mīlu* `גאות` (no *abūbu*:
+no `מבול`), *gapāšu* `גאה`, *nagbu* `המעמקים`, *natbāku* `זרם` (`שטף` stays *raḫāṣu*'s), *ugāru* `שדמה`, *bamātu* `במות`
+[cognate], *urû* `אורווה` [cognate], *nādu* `נאד` [cognate], *katappû* `רסן`, *appātu* `מושכות`, *agālu* `עַיִר`,
+*tupšikku* `סל`, *rubṣu* `גללים`, *šimtu* (brand) `תו`. Kept as drafted (minor): `הנאדר בקרב` for the horse's *naʾdu*
+epithet; *qablu* `קרב` beside *qerbu* (vocalized); *emēdu* by sense (`השית`, `נשען`, `עמוס`).
+#### 12.4.4 SP, WR (the Spider 59, the Wren 42), 2026-10-31
+*ettūtu* `עַכָּבִישׁ` (gated); *ḫamānīru* `חַמָּנִירוּ` ★, *ešqapīzu* `אֶשְׁקַפִּיזוּ` ★; Ninšiku `נִינְשִׁיכּוּ`, Utaʾūlu
+`אוּתָאוּלוּ`; the creation words as the creation corpus (*bašāmu* `תכן`, *eṣēru* `צר`, *uṣurtu* `צורה`, *burūmû*
+`רום־השמים` – never `רקיע`; *nabû* `קָרָא`); *šiknat napišti* `בעלי הנפש` (Erra); *zubbu* `זבוב`, *pīru* `פיל`. The Wren:
+`גִּדְרוֹן` and `נֶשֶׁר` as names, the epithet `התשוש והדל` (*akû lapnu*); *qinna qanānu* `קינן קן` (Gilgameš), *watmu*
+`אפרוח` (Etana), *surdû* `נֵץ`, *dayyān kitti* `דיין האמת`, *ṣabābu* `הניף` (not `רחף`). Jiménez's "master of flies"
+(SP 19) is not Baal-zebub: *bēl arni* … *lāʾiṭ zubbī* (a false echo of the English, corrected).

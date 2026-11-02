@@ -26,6 +26,8 @@ SHA = "3-התפילה-הגדולה-לשמש"
 COU = "4-עצות-חכמה"
 DIA = "5-דו-שיח-הפסימיות"
 SHU = "6-הוראות-שורופך"
+PMN = "7-העני-מניפור"
+FAB = "8-משלי-המחלוקת"
 ETCSL = os.path.join(ROOT, "sources", "ETCSL")
 
 TEXTS = [
@@ -42,12 +44,19 @@ TEXTS = [
     ("CW", COU, "Counsels-of-Wisdom-SB", "3", "-", None, None, "עצות חכמה"),
     ("DP", DIA, "Dialogue-of-Pessimism-SB", "4", "-", None, None, "דו־שיח הפסימיות"),
     ("SU", SHU, "5.6.1--Instructions-of-Shuruppag", "5.6.1", "-", None, None, "הוראות שׁוּרוּפַּךְ"),
+    # Round 5, run 5 (2026-10-31): the Poor Man of Nippur (eBL L/1/11) and the fables (contest literature, L/2/8–13)
+    ("PM", PMN, "Poor-Man-of-Nippur", "11", "-", None, None, "העני מִנִּיפּוּר"),
+    ("PV", FAB, "Fable-Palm-and-Vine", "12", "-", None, None, "הדקל והיין"),
+    ("PO", FAB, "Fable-Poplar", "8", "-", None, None, "סדרת הצפצפה"),
+    ("OH", FAB, "Fable-Ox-and-Horse", "9", "-", None, None, "סדרת השור והסוס"),
+    ("SP", FAB, "Fable-Spider", "11", "-", None, None, "סדרת העכביש"),
+    ("WR", FAB, "Fable-Wren", "13", "-", None, None, "מעשה בגִּדְרוֹן העני והעזוב"),
 ]
-CAT = {"SH": "III"}                 # eBL category (L II = wisdom, L III = hymns and prayers); default "II"
+CAT = {"SH": "III", "PM": "I"}                 # eBL category (L II = wisdom, L III = hymns and prayers); default "II"
 ETCSL_KEYS = {"SU"}                 # files whose base text is an ETCSL composite (Sumerian)
 # Files whose backticked source line must equal the base text exactly (written as `@` and filled by
 # `wisdom_tools.py fill KEY`; ★ rule, guidelines §5.2). The files of runs 1–6 copied eBL's N by hand and are not checked.
-FILLED = {"SH", "CW", "DP", "SU"}
+FILLED = {"SH", "CW", "DP", "SU", "PM", "PV", "PO", "OH", "SP", "WR"}
 # Lines another corpus translated first: (key, labels, path of that annotated file, the `## ` heading that starts its
 # section). The Hebrew must be identical (verify checks it).
 COPIES = [

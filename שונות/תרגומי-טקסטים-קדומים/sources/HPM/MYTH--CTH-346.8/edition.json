@@ -1,0 +1,148 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.8",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.8 (TX 2009-08-27, TRde 2009-08-24)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 1'",
+"x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "iyan-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 2'",
+"i-ya-an-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "DINGIR{MEŠ}-š=an namma[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 3'",
+"DINGIR{MEŠ}-ša-an nam-⸢ma⸣[ ... ]"
+]
+],
+"tr": "Die Götter [ ... ] ihn ferner [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "š=an namma {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 4'",
+"ša-an nam-ma {d}x[ ... ]"
+]
+],
+"tr": "[ ... ] ihn ferner [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] lukkatta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 4'",
+"[ ... ] lu-uk-kat-ta"
+]
+],
+"tr": "Es wurde hell [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "kūš?[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 5'",
+"ku-u-⸢uš?⸣[ ... ]"
+]
+],
+"tr": "[ ... ] diese? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "arunaš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 6'",
+"a-ru-na-aš x[ ... ]"
+]
+],
+"tr": "Das Meer [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] išparza-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 6'",
+"[ ... ] iš-pár-⸢za⸣-[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ] flieh[- ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

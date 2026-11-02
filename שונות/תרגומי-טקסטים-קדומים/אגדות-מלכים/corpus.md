@@ -46,6 +46,7 @@ Translate, complete, two legends that the ancient Near East told about its kings
 |---|---|---|---|---|---|
 | 1 | `1-אנמרכר-ואדון-ארטה/` | Enmerkar and the Lord of Aratta | ETCSL 1.8.2.3 (`../sources/ETCSL/1.8.2.3--…/`); ORACC Q000369 lemma + morph; Mittermayer 2009 (open access) | 641 (1–636 with 11A, 106A, 185A, 185B, 365B and the alternative lines A–D of one manuscript for 400–403; ETCSL has no 369, 608–610) | `annotated-1.rtl.md` (1–155), `annotated-2.rtl.md` (156–307), `annotated-3.rtl.md` (308–469), `annotated-4.rtl.md` (470–636) |
 | 2 | `2-אגדת-הולדת-סרגון/` | The Sargon Birth Legend | King 1907 vol. II pp. 87–96, transcribed from the page images (`../sources/King-1907--…/`); eBL catalogue | 49 (King's col. I 1–32, col. II 1–17) | `annotated.rtl.md` |
+| 4 | `4-אגדת-כותה/` | The Cuthaean Legend of Narām-Sîn (Round 5, run 5, 2026-10-31) | eBL L/1/12 (`../sources/eBL/Cuthaean-*/`): five chapters – OB I, OB II, MB A, MB B (Ḫattuša), SB; ed. Mitto et al., tr. Foster | 345 (`SB.80`, `OBI.b+12`, `MBA.c+3`) | `annotated-OBI.rtl.md`, `-OBII`, `-MBA`, `-MBB`, `-SB` |
 | 3 | `3-אגדת-אתנה/` | Etana (Round 3, run 2, 2026-10-22) | eBL L/1/9 (`../sources/eBL/Etana-*/`): six chapters – OB Morgan, OB Susa, MA Aššur, SB I–III; ed. Földi et al., tr. Foster | 585 (eBL labels with the chapter key: `OBM.7`, `MA.c+3`, `II.142`) | `annotated-OBM.rtl.md`, `-OBS`, `-MA`, `-I`, `-II`, `-III` (one per eBL chapter) |
 
 Rank 3: ETCSL's English and Mittermayer 2009's German (EA); King 1907's English and the few lines of Westenholz 1997
@@ -98,6 +99,7 @@ and pushed after each), one part at a time (quotas: guidelines §5.1).
 | # | Project | Status |
 |---|---|---|
 | 1 | Enmerkar and the Lord of Aratta | **complete** (2026-10-21): 641 entries in four parts, three review passes each; `translation.rtl.md` built; open decisions in `project.md` (EA1–EA4) |
+| 4 | The Cuthaean Legend | **complete (first draft)** (2026-10-31): 345 entries in four parts (CL1 SB 1–93, CL2 SB 94–180, CL3 MB A–B, CL4 OB I–II), one translator resumed part by part, three passes each; `verify CL --strict` OK; `translation.rtl.md` built; renderings §11; brief `translator-brief--cuthaean.md` |
 | 3 | Etana | **complete** (2026-10-22): 585 entries in four parts (ET1–ET4), three review passes each; `translation.rtl.md` built; open decisions in `project.md` |
 | 2 | The Sargon Birth Legend | **complete on King 1907** (2026-10-21): 49 entries, three review passes; `translation.rtl.md` built; **to be checked against Westenholz 1997 and K 7249** (not reachable) |
 

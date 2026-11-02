@@ -1,0 +1,231 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.10",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.10 (TX 2009-08-30, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {LÚ}]DAM.GÀR {MUNUS}?[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... {LÚ}]⸢DAM⸣.GÀR ⸢{MUNUS}?⸣x[ ... ]"
+]
+],
+"tr": "[ ... ] Kaufmann [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] LÚ {URU}šimm[urra ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ] LÚ {URU}ši-im-m[u-ur-ra ... ]"
+]
+],
+"tr": "[ ... ] Mann von Šimm[urra ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -y]at {d}takidu l[ē? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... -y]a?-at {d}ta-ki-du ⸢le⸣-[e? ... ]"
+]
+],
+"tr": "[ ... ] Takidu [ ... ] nic[ht ... ]!",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "{URU}šimmura=wa {d}ḫ[epat ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4",
+"{URU}ši-im-mu-ra-wa {d}ḫ[é-pát ... ]"
+]
+],
+"tr": "Ḫ[epat ... ] Šimmurra [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[{URU}ši]mmurra=wa INIM{ḪI.A} [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[{URU}ši-i]m-mu-ur-ra-wa!1 INIM{ḪI.A} x[ ... ]"
+]
+],
+"tr": "[ ... Ši]mmurra [ ... ] Worte [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-taya ŠA {URU}šimmu[rra ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]-ta-ya ŠA {URU}ši-im-mu-[ur-ra ... ]"
+]
+],
+"tr": "[ ... ] von Šimmu[rra ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ḫa]ppinanti=war=aš[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ḫa-a]p-pí-na-an-ti-wa-ra-aš[ ... ]"
+]
+],
+"tr": "Er [ ... ] dem [re]ichen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "[S]IG5=ma=war=aš {MUNUS}É.G[I4 ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[S]IG5-ma-wa-ra-aš {MUNUS}É.G[I4 ... ]"
+]
+],
+"tr": "Er [ ... ] die [g]ute Braut/Schwiegerto[chter] aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]=⸢wa⸣=ššan [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]x-⸢wa⸣-aš-ša-an [ ... ]"
+]
+],
+"tr": "[ ... ]1",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] MU[NUS? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ]x[ _ (_) ] MU[NUS?. ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ] Fr[au? ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Text: -ši.",
+"T1": "Mindestens von Kolon 5 bis 12 ist eine direkte Rede gesichert bzw. wahrscheinlich."
+}
+}

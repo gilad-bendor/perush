@@ -18779,6 +18779,1148 @@
      "c845a23223bb9461eeb215f5ede0e223c8871473873c6123eadaeb72114fcd36"
     ]
    }
+  },
+  {
+   "id": "VedaWeb/rv_book_01.tei",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/VedaWebProject/vedaweb-data/main/rigveda/TEI/rv_book_01.tei",
+   "note": "VedaWeb TEI (Round 5 run 1); the TSVs are made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_book_01.tei": [
+     43847826,
+     "c5c18d89a415ea16917f0f63616ee9fff7e32c4828b67f1e7647d2d023bc984c"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_book_07.tei",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/VedaWebProject/vedaweb-data/main/rigveda/TEI/rv_book_07.tei",
+   "note": "VedaWeb TEI (Round 5 run 1); the TSVs are made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_book_07.tei": [
+     18936506,
+     "b182a5b4752f5aa2c02ae07828c9810015a1f30d12f7ffce7687051b36677fce"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_book_10.tei",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/VedaWebProject/vedaweb-data/main/rigveda/TEI/rv_book_10.tei",
+   "note": "VedaWeb TEI (Round 5 run 1); the TSVs are made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_book_10.tei": [
+     40017181,
+     "e2e4deebb0cb418fd6b10c48c08967353de2d5d70114042af93418c4e2907060"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/sbm002.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/sbm/sbm002.htm",
+   "note": "TITUS ŚB (local only)",
+   "files": {
+    "TITUS/sbm002.htm": [
+     201861,
+     "29fd941b7257ca163bc809c39eb186a890dacfa963c5cc36768d123e79e5f1c0"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/sbm008.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/sbm/sbm008.htm",
+   "note": "TITUS ŚB (local only)",
+   "files": {
+    "TITUS/sbm008.htm": [
+     176800,
+     "43335ac6083e4084d32ba175f7bb85b18d72502d2fcd4bb7a1e4e93f2d94a054"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab236.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab236.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab236.htm": [
+     19090,
+     "eb3f72bb0d396068c1400b4ce14e728aa7385e35100feeae4dd6a4cf2ea8615f"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab237.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab237.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab237.htm": [
+     19689,
+     "5c0600667eb50147c181e2275680d971501c509a9a455e57844f6e39cb5fb107"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab238.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab238.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab238.htm": [
+     24452,
+     "c671611a17dc0474f568a1f4217927cb9baef579fcfbab143b4f19176bef5512"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab239.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab239.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab239.htm": [
+     23527,
+     "3f4566cd9ed9ebc8e20518e4655f49ee01a80c9cb12c8f8392321af75a939b1e"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab240.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab240.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab240.htm": [
+     24862,
+     "4e07e9dee5ca952abca3097b7631253e2b4d387e63a5251359c9713449554150"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab241.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab241.htm",
+   "note": "TITUS AB 7.13–18 (local only)",
+   "files": {
+    "TITUS/ab241.htm": [
+     20018,
+     "7d1aa93a092d5654d73e72e76cf5ef367732dcb97007ab61490f52ee7a6100c6"
+    ]
+   }
+  },
+  {
+   "id": "GRETIL/mbh_03_u.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_03_u.htm",
+   "note": "GRETIL MBh 3 (reference only)",
+   "files": {
+    "GRETIL/mbh_03_u.htm": [
+     1980413,
+     "018668ae4468c0e14d557e4380e409144f68a53d3b76f941b345b7dba57884b8"
+    ]
+   }
+  },
+  {
+   "id": "GRETIL/sb_01_u.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/2_bra/satapath/sb_01_u.htm",
+   "note": "GRETIL ŚB 1 (reference only)",
+   "files": {
+    "GRETIL/sb_01_u.htm": [
+     239590,
+     "50aefd5a364efa688e3767ec407f143b5174726e79ed94f3bc65b9ce5526ab5b"
+    ]
+   }
+  },
+  {
+   "id": "CAB/cab_corpus_plain.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://cab.geschkult.fu-berlin.de/exist/apps/cab/modules/get_corpus_plain.xql",
+   "note": "CAB linguistic corpus",
+   "files": {
+    "CAB/cab_corpus_plain.txt": [
+     1302672,
+     "3533a77dc1ffd964e7a901a09d769000ccb3331ad3ee9de76b05c68dba30ba6b"
+    ]
+   }
+  },
+  {
+   "id": "CAB/cab_corpus.xml",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://cab.geschkult.fu-berlin.de/exist/apps/cab/modules/get_corpus_xml.xql",
+   "note": "CAB linguistic corpus (XML)",
+   "files": {
+    "CAB/cab_corpus.xml": [
+     2483582,
+     "be30e486d8f905e97aebe4bb6c3c5daf4e47824f43e0fd8e185a510a0d5de117"
+    ]
+   }
+  },
+  {
+   "id": "CAB/cab_corpus.json",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://cab.geschkult.fu-berlin.de/exist/apps/cab/modules/get_corpus_json.xql",
+   "note": "CAB linguistic corpus (JSON)",
+   "files": {
+    "CAB/cab_corpus.json": [
+     2249854,
+     "47085d3e9739a5152ff0949af11659ab105de601e7dd8d37a854ffb25e3d8add"
+    ]
+   }
+  },
+  {
+   "id": "Sanskrit-lexicon--csl-orig/gra.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02/gra/gra.txt",
+   "note": "Grassmann",
+   "files": {
+    "Sanskrit-lexicon--csl-orig/gra.txt": [
+     6339693,
+     "991cfc16b8524bbac0d11d11832e0a8c15e571df2d969c6a54cc6cfce6554874"
+    ]
+   }
+  },
+  {
+   "id": "Sanskrit-lexicon--csl-orig/mw.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02/mw/mw.txt",
+   "note": "Monier-Williams",
+   "files": {
+    "Sanskrit-lexicon--csl-orig/mw.txt": [
+     50163993,
+     "e4641dc4384de459408368a9b34b2a13c90a19b0ecd4671f92c055b7578d0129"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/I.1-99-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/I.1-99-9-25-26.pdf",
+   "note": "Jamison commentary (©, local)",
+   "files": {
+    "Jamison--Rigveda-commentary/I.1-99-9-25-26.pdf": [
+     1256408,
+     "9596b57d712d4d5305c8913eb82de9ef5827087a0bbd8ae4a83708ec08a3e70a"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/I.1-99-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "I.1-99-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/I.1-99-9-25-26.txt": [
+     653310,
+     "2a7ac332354b1db2edf8f2dd6830cbf438f7f0fbc3257cc1d9fd399627df36f9"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/VII.56–104-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/VII.56%E2%80%93104-9-25-26.pdf",
+   "note": "Jamison commentary (©, local)",
+   "files": {
+    "Jamison--Rigveda-commentary/VII.56–104-9-25-26.pdf": [
+     800778,
+     "6a977ec71f715d8566907f9ed02cedbc240d6e0cdecfdd811bfec052ad6e3aab"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/VII.56–104-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "VII.56–104-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/VII.56–104-9-25-26.txt": [
+     428694,
+     "f84350b4f788280968e973a67a55ed441939ded8559019cadaa0770f7727d13f"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/X.1–60-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/X.1%E2%80%9360-9-25-26.pdf",
+   "note": "Jamison commentary (©, local)",
+   "files": {
+    "Jamison--Rigveda-commentary/X.1–60-9-25-26.pdf": [
+     2013888,
+     "1dc5c4e398bdda7d0f88fdec4ca0bdb6d8330cd992a81ea25084108b19659018"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/X.1–60-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "X.1–60-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/X.1–60-9-25-26.txt": [
+     1172385,
+     "8046a46c142c5dd83b2836e34b7a01ded11bff7c7b878c9c42af16c2ad436e30"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/X.61–191-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/X.61%E2%80%93191-9-25-26.pdf",
+   "note": "Jamison commentary (©, local)",
+   "files": {
+    "Jamison--Rigveda-commentary/X.61–191-9-25-26.pdf": [
+     1948536,
+     "38cb6059b7b49eb15bb88c5f869ed4146564eacecf955263fdfb3483cea4ce31"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/X.61–191-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "X.61–191-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/X.61–191-9-25-26.txt": [
+     1190264,
+     "05784076a292baa3e8e32f24a67b72334d3f1f6526c0f559c8f7f7226dde2c38"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Eggeling-1882--SBE-12_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/in.ernet.dli.2015.238711/2015.238711.The-Satapatha-brahmana_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Eggeling-1882--SBE-12_djvu.txt": [
+     1081912,
+     "51a668876b18e9a3777b733f36095837c42a130558e2b14aa7250857f43afe8b"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Keith-1920--HOS-25_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/rigvedabrahmana00keitgoog/rigvedabrahmana00keitgoog_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Keith-1920--HOS-25_djvu.txt": [
+     1909025,
+     "f66017dd5ed275afb7c78170a5b80b9ba29c671ab302821edf4f9291392f3e99"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Darmesteter-1880--SBE-4_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/TheZendAvestaPart1TheVendidad/TheZendAvestaPart1TheVendidad_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Darmesteter-1880--SBE-4_djvu.txt": [
+     625919,
+     "7195851f730b255befe04abe9ba631c75868e0643c29a17ed7118471b77ed077"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Hume-1921--Upanishads_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/thirteenprincipa00hume/thirteenprincipa00hume_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Hume-1921--Upanishads_djvu.txt": [
+     1291813,
+     "ec0e1158460a6d8b547970f72308aa625009f5a08929fcf22bda742bfb96802b"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Ganguli--vol02_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/mahabharataofkri02royp/mahabharataofkri02royp_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Ganguli--vol02_djvu.txt": [
+     3021584,
+     "b1045baba131a8e26f99f09615178a594f7fb3b7127f920dad682d9f0ecea9a2"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Ganguli--vol03_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/mahabharataofkri03royp/mahabharataofkri03royp_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Ganguli--vol03_djvu.txt": [
+     2055934,
+     "6e00a0fcd2a581c0933382d15033d9501de7a5ebc158f345a4e18227110f4cff"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Bartholomae-1904_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/altiranischeswr00bartgoog/altiranischeswr00bartgoog_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Bartholomae-1904_djvu.txt": [
+     0,
+     "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/sb_1.8.1.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "TITUS/sb_1.8.1.tsv": [
+     3139,
+     "7a103677caabe823b615c5a516ded33ffd8f52415822952a606c0c382fea6dab"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/sb_1.2.3.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "TITUS/sb_1.2.3.tsv": [
+     1626,
+     "9a72c25d6a2b4f27b36858c46e5ba6e53cc5377dba4bcb3f15a2418ad849b625"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/ab_7.13-18.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "TITUS/ab_7.13-18.tsv": [
+     15322,
+     "470843484e7a6e328f5f9e87516b36c3da1ada23b93e004d8e51b9882ccd41a1"
+    ]
+   }
+  },
+  {
+   "id": "GRETIL/mbh_3.185.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "GRETIL/mbh_3.185.tsv": [
+     7035,
+     "b28783afa3b1785080640fb895d482d1a8220f8eba82d17c2dd94673f0d7d835"
+    ]
+   }
+  },
+  {
+   "id": "CAB/vd_2.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "CAB/vd_2.tsv": [
+     12513,
+     "ebf3ac73199971178f5e4955080980aab1264deb4cfd772a160bcbb3616d66e8"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_1.032--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_1.032--translations.tsv": [
+     20443,
+     "c015d8046e82d2e24d44f4be0c65e0597ef04c42f0f30e589b356b01e2a6b73c"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.010--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.010--translations.tsv": [
+     13552,
+     "a221216395037246d692e6a83b9df20282ecbeb24303aa7426303f2164151bd3"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.014--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.014--translations.tsv": [
+     15992,
+     "b5fe9ebc72df1e70108bd8b1f2b78acd0e1efb78b2aab3c0833b31aeae0b51b4"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.015--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.015--translations.tsv": [
+     13599,
+     "a55c181c9425030469c07afb4ebfea6ccbea5bce334c57f91026f745ad7ebdbf"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.016--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.016--translations.tsv": [
+     15030,
+     "ceeb41b43368761de4f73aab393da842a41c2110bfba85d0aaf0e931072874ea"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.017--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.017--translations.tsv": [
+     12877,
+     "4f2937f084212ea7707efcc3bb5b3ee24f9ce7c1fbfb2b043a3e55083495dcf8"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.018--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.018--translations.tsv": [
+     15159,
+     "37d4cdd28dd7e744b1a42278bcc1f4a9733bc97e06d58365af2d87f6aad8ca0d"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.034--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.034--translations.tsv": [
+     15886,
+     "e888ee92b70ac069459b70cb9fd8aff4087f43935f08eba7183afd9ef08e0455"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.072--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.072--translations.tsv": [
+     6215,
+     "2b63e1520dd2daa2d51b46e419bd97c8c06a60eb5069f0e2a4a95042c5cf30bc"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.090--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.090--translations.tsv": [
+     12390,
+     "5a03dea5a1b67e7b1080aefa535a394ef33543c3062651cf684721690367bdc8"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.121--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.121--translations.tsv": [
+     9528,
+     "0f78d1b387a398944c2b0456aa877661c48c47e05d8492258b724f14f96629c4"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.129--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.129--translations.tsv": [
+     7768,
+     "1e95aff68c28ca2737c4a9af95c4cbf8f0e90dc41b3d9524796df6cf758de73a"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_10.190--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_10.190--translations.tsv": [
+     2079,
+     "57b82b5090129a77097cb6a2c4f40d67d65aacfde545fb59b4ac361845a4f174"
+    ]
+   }
+  },
+  {
+   "id": "VedaWeb/rv_7.103--translations.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_7.103--translations.tsv": [
+     11360,
+     "948d4b9375cd0389e186dde222872a0de7344bc6905225ee1717ffc78a8e4db6"
+    ]
+   }
+  },
+  {
+   "id": "Merlo-1994--Kuntillet-Ajrud/Merlo-1994.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://hal.science/hal-04399146v1/file/05merlo2.pdf",
+   "note": "Merlo 1994, HAL (open access)",
+   "files": {
+    "Merlo-1994--Kuntillet-Ajrud/Merlo-1994.pdf": [
+     2252226,
+     "25aa57386b067e081d449a9205b549630f3c505ed480ad5ebb3f683c7b5baec8"
+    ]
+   }
+  },
+  {
+   "id": "Finkelstein-Naaman-Roemer-2019--Mesha-line-31/FNR-2019.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://hal.science/hal-03819192/document",
+   "note": "Finkelstein, Naaman, Roemer 2019, HAL",
+   "files": {
+    "Finkelstein-Naaman-Roemer-2019--Mesha-line-31/FNR-2019.pdf": [
+     2415701,
+     "cad2c8578ae9ff5d76c664d8b4b57a83ed233aab483687bd86fb69d248e2e4df"
+    ]
+   }
+  },
+  {
+   "id": "eBL/Cuthaean-MB-A/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "12",
+    "Middle Babylonian",
+    "A"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Cuthaean-MB-A/_raw/chapter-display.json": [
+     778075,
+     "7afb871beb4bdf6e850f0bee242415b9bec74335252c292493a2eee4c9340bf3"
+    ],
+    "eBL/Cuthaean-MB-A/bibliography.md": [
+     2116,
+     "f4dc927760cdc09e0069297db5b49e856401c146bc48c6ccf76da066cd92cf9a"
+    ],
+    "eBL/Cuthaean-MB-A/chapter.atf": [
+     11147,
+     "cfbdd368e835815950099f25e2352982d706440df966c5b655848dd1a6a4dc5a"
+    ],
+    "eBL/Cuthaean-MB-A/glossary.md": [
+     39752,
+     "4727ec61fb04d6bb427ddeaf6872ecff0e2ac7907b65c98f054478192e54bb6d"
+    ],
+    "eBL/Cuthaean-MB-A/manuscripts.md": [
+     715,
+     "e1d4929e118514092c35e0598fd8e740a2734863affd8c97d43fb8837b13b1c7"
+    ],
+    "eBL/Cuthaean-MB-A/reading-edition.md": [
+     26140,
+     "16eeb7bbc9cb806ed12692c87d0b7d6c861983658cf9f2c0dd69fa3fdd37a1fa"
+    ]
+   },
+   "raw_files": 127
+  },
+  {
+   "id": "eBL/Cuthaean-MB-B/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "12",
+    "Middle Babylonian",
+    "B"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Cuthaean-MB-B/_raw/chapter-display.json": [
+     141819,
+     "676bad1097d4bab897026319f697edcc11553a0bf4ac4e91eb018efe703519fe"
+    ],
+    "eBL/Cuthaean-MB-B/bibliography.md": [
+     2116,
+     "3f789c72e589bc5b6d6437703b2389c1eea95f638bca0cccd48353e4890e91ae"
+    ],
+    "eBL/Cuthaean-MB-B/chapter.atf": [
+     1819,
+     "5d8d6dfac260f3cb7613ce32f70ea989e00b34739ee3198de08dea169e178ff6"
+    ],
+    "eBL/Cuthaean-MB-B/glossary.md": [
+     4906,
+     "b8c681c0864d8e7d74b1de2b31d6c552d2e4bbf1f158c047729d682ba27c5a1f"
+    ],
+    "eBL/Cuthaean-MB-B/manuscripts.md": [
+     714,
+     "0ada092b1c7a3e8bc1e5eb0cf6c3783afeefbb18007c95916bafb55e834bcded"
+    ],
+    "eBL/Cuthaean-MB-B/reading-edition.md": [
+     3735,
+     "d686712601015c614ab7053bdedcf9e5f0110e2a05d57d50c3332b694e9c50ef"
+    ]
+   },
+   "raw_files": 22
+  },
+  {
+   "id": "eBL/Cuthaean-OB-I/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "12",
+    "Old Babylonian",
+    "I"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Cuthaean-OB-I/_raw/chapter-display.json": [
+     720057,
+     "a43751ba4de02d855cb798e8c78d50446ef9d4e4ddacff6e507391ae55764a6e"
+    ],
+    "eBL/Cuthaean-OB-I/bibliography.md": [
+     2110,
+     "ac101f2c0dbefa4032837d1717be8cc05f4969c36c5ca83ea2e91889cd2f3672"
+    ],
+    "eBL/Cuthaean-OB-I/chapter.atf": [
+     11057,
+     "794fd5061eb427939a005bf087d5b9847ce77f2a9fe77d34b547211b2f5ca8dc"
+    ],
+    "eBL/Cuthaean-OB-I/glossary.md": [
+     38317,
+     "0e16625ab92947d77634e0d980b8a43f6fb1611211df4b1806bf09fda8dd1e68"
+    ],
+    "eBL/Cuthaean-OB-I/manuscripts.md": [
+     701,
+     "69bd82459778c2b0402715b77df29cb2c33d60e02ac4ff76683763ed7eea5aec"
+    ],
+    "eBL/Cuthaean-OB-I/reading-edition.md": [
+     27697,
+     "041940637bcb117ac2918d8292a2e514dbba4620699a7c16831425a71ea73922"
+    ]
+   },
+   "raw_files": 116
+  },
+  {
+   "id": "eBL/Cuthaean-OB-II/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "12",
+    "Old Babylonian",
+    "II"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Cuthaean-OB-II/_raw/chapter-display.json": [
+     91015,
+     "81855498c14bf0cacc4c6f6419b91477dc05fa734d4a1e741f48ccbd05b01bcf"
+    ],
+    "eBL/Cuthaean-OB-II/bibliography.md": [
+     2127,
+     "42b90be50b16cffd29af54885e6aadf1a0af5f0e380dd52bdddff42757fb62bf"
+    ],
+    "eBL/Cuthaean-OB-II/chapter.atf": [
+     971,
+     "749707dcde5809bfbaa6d63f6eac7f9dc8e18d9fdc0a71318eb33672f780caf2"
+    ],
+    "eBL/Cuthaean-OB-II/glossary.md": [
+     2637,
+     "511fcb0bb4b22e7fa3c21fbd26f30a956c7a0439592146c000fca95c797600fb"
+    ],
+    "eBL/Cuthaean-OB-II/manuscripts.md": [
+     718,
+     "58673d1f60303f09d32e06ae356a616d6701f99066b6d5eb058c616490398bc7"
+    ],
+    "eBL/Cuthaean-OB-II/reading-edition.md": [
+     2332,
+     "b06f9637ff7e0e0cf887e7d4bfcebf9b608fc8862b881f2eff92c33afacd2d17"
+    ]
+   },
+   "raw_files": 19
+  },
+  {
+   "id": "eBL/Cuthaean-SB/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "12",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Cuthaean-SB/_raw/chapter-display.json": [
+     4718518,
+     "a10f9eb08a8c4a0fec89d4cd636a1836b1782e002e94409972a8eff92b38d93a"
+    ],
+    "eBL/Cuthaean-SB/bibliography.md": [
+     2158,
+     "29fb2041f2325aa8100737d8670dee7242bf699be74950b515b7c777ecae25d8"
+    ],
+    "eBL/Cuthaean-SB/chapter.atf": [
+     58767,
+     "aaa55d9bb8f6b23d880c893489d738843d42851a5ff243d758912a0d90995acf"
+    ],
+    "eBL/Cuthaean-SB/glossary.md": [
+     118819,
+     "995f1c7419533e3608621cda141ec522831966a18ee3236d425bc87050de569f"
+    ],
+    "eBL/Cuthaean-SB/manuscripts.md": [
+     3067,
+     "5aa2a48268b7dc8e51b65049678a6b15c553aa198dd24881b20126753ab31dd6"
+    ],
+    "eBL/Cuthaean-SB/reading-edition.md": [
+     125198,
+     "d71177843c4fc28a0ff8134e59917d922974dd85ff50ffa4a288317e88ac1719"
+    ]
+   },
+   "raw_files": 377
+  },
+  {
+   "id": "eBL/Fable-Ox-and-Horse/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "9",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Fable-Ox-and-Horse/_raw/chapter-display.json": [
+     2310284,
+     "35483e19088946e780c6b1e660721d808c47eb5beccb8e81c88e9d842a182cf9"
+    ],
+    "eBL/Fable-Ox-and-Horse/bibliography.md": [
+     1658,
+     "86e118662930e8537d9f7324419cafb93d7eb0c28b9fc3cd1b66a142b5ad6268"
+    ],
+    "eBL/Fable-Ox-and-Horse/chapter.atf": [
+     33733,
+     "a2360477f800b392f23f0244b7a0c6343e2afc15a34737befe99f6ad53938104"
+    ],
+    "eBL/Fable-Ox-and-Horse/glossary.md": [
+     95575,
+     "6e772aa1e572ffe06e97d24e46ab37f2c0f4a8cb2843c5d2626e19a1be36e1fc"
+    ],
+    "eBL/Fable-Ox-and-Horse/manuscripts.md": [
+     1276,
+     "85566e3f902b93bacf80c304c474d0b140f14071d8f73986f1bb11a2ba426c65"
+    ],
+    "eBL/Fable-Ox-and-Horse/reading-edition.md": [
+     78146,
+     "0031bd573722a684be84d7fbe07c5ec5627749a623ae68f65f3ba06cd38f7279"
+    ]
+   },
+   "raw_files": 279
+  },
+  {
+   "id": "eBL/Fable-Palm-and-Vine/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "12",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Fable-Palm-and-Vine/_raw/chapter-display.json": [
+     890449,
+     "ee0c44f4cc89659c1bb7a7358633f889012047b5e87b2d7be1b3921f00d43e2e"
+    ],
+    "eBL/Fable-Palm-and-Vine/bibliography.md": [
+     970,
+     "ecb6ebf3ca57417f0d97b7121c15882ae67b8a2fa1d6763c5d719486c2e4acfe"
+    ],
+    "eBL/Fable-Palm-and-Vine/chapter.atf": [
+     13955,
+     "1adb5f2b8d2a1fb603cf88b5547f5c67047eaf3d5c8999e4a90598128f9d15be"
+    ],
+    "eBL/Fable-Palm-and-Vine/glossary.md": [
+     68608,
+     "fa281865eac096fff36ed81400f669484c7ef835323f5d823b069e658962dd26"
+    ],
+    "eBL/Fable-Palm-and-Vine/manuscripts.md": [
+     848,
+     "9213a27f3196cc75f39529c2b8e915f2564670e7e762abf762b5c1353227ecb8"
+    ],
+    "eBL/Fable-Palm-and-Vine/reading-edition.md": [
+     31989,
+     "b2e4e500e6d6b595d49f51a502058096c489d4985fdb09b1640b9d83cd0db7e2"
+    ]
+   },
+   "raw_files": 204
+  },
+  {
+   "id": "eBL/Fable-Poplar/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "8",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Fable-Poplar/_raw/chapter-display.json": [
+     1027794,
+     "102bd8c0a57433d2f49342a090fb6b5d52e583319f513354576d280b22376837"
+    ],
+    "eBL/Fable-Poplar/bibliography.md": [
+     825,
+     "e22b47703944ac6aeeb4f846e49c6bc23eaa132307ff7527ca19339593759857"
+    ],
+    "eBL/Fable-Poplar/chapter.atf": [
+     15073,
+     "92dc10e5b0d3fe3344de7a84601eb724ec78730384997e78eae04331daf8f218"
+    ],
+    "eBL/Fable-Poplar/glossary.md": [
+     59192,
+     "6acdfd0e94ea46bf18c848d940a8644f43ffe5781a2e3baca023fd4980a892a4"
+    ],
+    "eBL/Fable-Poplar/manuscripts.md": [
+     1113,
+     "ab3181d2fb5fe955e6373bd010ef0b1f58df7f156c44f60a9465a3d183480f19"
+    ],
+    "eBL/Fable-Poplar/reading-edition.md": [
+     33450,
+     "5c4c7ad3c9c25b9a5181a3a248e885236d2112d8d7812f806d7cb118befec0a7"
+    ]
+   },
+   "raw_files": 170
+  },
+  {
+   "id": "eBL/Fable-Spider/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "11",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Fable-Spider/_raw/chapter-display.json": [
+     791430,
+     "d0343b7fdf9cec8279b5ab43b5df42f809e0369a3ad1bf844abb66eb00f3a80f"
+    ],
+    "eBL/Fable-Spider/bibliography.md": [
+     1744,
+     "6291f865f0156e38b767aeda33d779be89c5a09fda7764ff1fdec6c88b922759"
+    ],
+    "eBL/Fable-Spider/chapter.atf": [
+     11797,
+     "447fb09cbf94979c2fbe2c836d1a2301d72ac0e7171382a448f302fc4a445fc0"
+    ],
+    "eBL/Fable-Spider/glossary.md": [
+     34378,
+     "d7ac8ce098e2e0e061900bc6c961682ec9f5c47bea81aa87fb3006b2afdfc3ea"
+    ],
+    "eBL/Fable-Spider/manuscripts.md": [
+     687,
+     "c51e08723a61cb67e16e6bea5c9ba082917081b1ddb8fc30e3d020a297865d4c"
+    ],
+    "eBL/Fable-Spider/reading-edition.md": [
+     25218,
+     "5afb6210b74b009298f39b74be50cb85cd35c2391d8e7463fe1798804975e9e8"
+    ]
+   },
+   "raw_files": 123
+  },
+  {
+   "id": "eBL/Fable-Wren/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "2",
+    "13",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Fable-Wren/_raw/chapter-display.json": [
+     607103,
+     "a2fb56d4cc00eaffe771ce66a9783b53857dbad38434e40e1d89d4e76f2441e4"
+    ],
+    "eBL/Fable-Wren/bibliography.md": [
+     895,
+     "239d0cf51cb1637044f37f43c4cc644f743d7ae2af82af906ba1daebc3242f5d"
+    ],
+    "eBL/Fable-Wren/chapter.atf": [
+     8310,
+     "fc8889c4ba4e41555eb5ba01ba7afc3e955c3f6b39ea3ec495f046a26e593688"
+    ],
+    "eBL/Fable-Wren/glossary.md": [
+     26960,
+     "257626107d9a009c9a48e0cace0d723b83d06c32f708eebcd31d82d84e2171c0"
+    ],
+    "eBL/Fable-Wren/manuscripts.md": [
+     1000,
+     "d0b9656047d8194a8b7050058786aa5d18ed4b19208737caedb13a60810083db"
+    ],
+    "eBL/Fable-Wren/reading-edition.md": [
+     21526,
+     "d927bc73eb4d8a25ca1a9c746bf85973a75220418d33774c77e6f6e5636d52a0"
+    ]
+   },
+   "raw_files": 80
+  },
+  {
+   "id": "eBL/Poor-Man-of-Nippur/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "11",
+    "Standard Babylonian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Poor-Man-of-Nippur/_raw/chapter-display.json": [
+     2494833,
+     "f3c0b2bd5aa85f7e5bd8848a7c1ecc24692d42e71a1cd4ca89d369d1b47745cd"
+    ],
+    "eBL/Poor-Man-of-Nippur/bibliography.md": [
+     2181,
+     "4376bb02a453a53b89bdaef805a3cadee103572e97aa0632e588419225529c7a"
+    ],
+    "eBL/Poor-Man-of-Nippur/chapter.atf": [
+     40467,
+     "67176a39031efd728e157ed3041ebc5e8e217cd375ab4e965cf83617c1a24ac5"
+    ],
+    "eBL/Poor-Man-of-Nippur/glossary.md": [
+     104162,
+     "750558bec25ed427f16ae3e0909034f1940196d2d9766cbbecc16faa7fcf19cd"
+    ],
+    "eBL/Poor-Man-of-Nippur/manuscripts.md": [
+     1169,
+     "a440d7577001f266b69a22abde5c0e9769a85910236dd3677a0dc0f5fa6a7214"
+    ],
+    "eBL/Poor-Man-of-Nippur/reading-edition.md": [
+     96108,
+     "cb6aaab930268d813f2cf5e276cf122d5ae34424556ff9a9e97f8b75f8f7c088"
+    ]
+   },
+   "raw_files": 322
   }
  ]
 }

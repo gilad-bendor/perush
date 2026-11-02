@@ -1,0 +1,231 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.22",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.22 (TX 2009-09-08, TRde 2009-09-08)",
+"sections": [
+{
+"id": "§ 1",
+"title": "§ 1",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1",
+"hl": "",
+"master": "[{d}kumarbiš] ⸢uddār ANA⸣ {d}[mukišanu {LÚ}SUKKAL-ŠU memišk]iuwan dā[i]š",
+"words": [],
+"mss": [
+[
+"A",
+"1",
+"[ ... ] ⸢ud-da-a-ar A-NA⸣ ⸢{d}⸣[mu-ki-ša-nu ... ] [me-mi-iš-k]i-u-wa-[a]n ⸢da-a⸣-[i]š"
+]
+],
+"tr": "[Kumarbi] beg[an]n, die Worte zu [Mukišanu, seinem Wesir,] zu [sprec]hen:",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1",
+"hl": "",
+"master": "{d}mukiš[anu {LÚ}SUKKAL-YA?]",
+"words": [],
+"mss": [
+[
+"A",
+"2",
+"{d}⸢mu⸣-ki-š[a-nu ... ]"
+]
+],
+"tr": "„Mukiš[anu, mein Wesir?,]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1",
+"hl": "",
+"master": "[udd]ār=⸢ta⸣ kwe temi",
+"words": [],
+"mss": [
+[
+"A",
+"3",
+"[ud-da]-⸢a⸣-ar-⸢ta⸣ ku-e te-mi"
+]
+],
+"tr": "Die [Wor]te, die ich dir sage,",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1",
+"hl": "",
+"master": "nu=mu udd[anaš GEŠTU-an parā lagan ḫar(a)k]",
+"words": [],
+"mss": [
+[
+"A",
+"3",
+"nu-mu ud-d[a-na-aš ... ]"
+]
+],
+"tr": "[halte] meinen Wor[ten (dein) Ohr geneigt!]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... ]-da-[...-š]an uššandur[i]t [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4",
+"[ _ ]x-da-x-[š]a-an uš-ša-an-du-r[i-i]t x[ ... ]"
+]
+],
+"tr": "[ ... ] mit [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1",
+"hl": "",
+"master": "[Š]ŪŠI {LÚ.MEŠ}GURUŠ=ma=kan {URU}duddulaz [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5",
+"[Š]U-⸢ŠI {LÚ.MEŠ}⸣GURUŠ-ma-kán {URU}du-ud-du-⸢la⸣-[a]z x[ ... ]"
+]
+],
+"tr": "[Se]chzig Jünglinge aus der Stadt Duddula aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1",
+"hl": "",
+"master": "ANA ŠŪŠI {LÚ.MEŠ}GURUŠ=⸢ma⸣ {GIŠ}TUKUL{ḪI.A} IŠTU {MUŠ}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6",
+"⸢A⸣-NA ŠU-ŠI {LÚ.MEŠ}GURUŠ-⸢ma⸣ {GIŠ}TUKUL{ḪI.A} IŠ-TU {MUŠ}[ ... ]"
+]
+],
+"tr": "[ ... ] den sechzig Jünglingen aber Waffen von der Schlange [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1",
+"hl": "",
+"master": "[Š]ŪŠI {MUNUS.MEŠ}KI.SIKIL=ma=⸢kan⸣ {URU}duddulaz [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7",
+"[Š]U-ŠI {MUNUS.MEŠ}KI.SIKIL-ma-⸢kán {URU}du⸣-ud-du-la-⸢az⸣ x[ ... ]"
+]
+],
+"tr": "[Se]chzig junge Frauen aus der Stadt Duddula aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1",
+"hl": "",
+"master": "[DU]G{ḪI.A} GEŠTIN=⸢ma=šmaš⸣ {NA4}ZA.GÌN-aš pāi",
+"words": [],
+"mss": [
+[
+"A",
+"8",
+"[DU]G{ḪI.A}1 GEŠTIN-⸢ma-aš-ma-aš⸣ {NA4}ZA.GÌN-aš pa-a-i"
+]
+],
+"tr": "Gib ihnen aber Wein[gefä]ße aus Lapislazuli!",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1",
+"hl": "",
+"master": ":pūri=š[i ... ]-yanteš ašandu",
+"words": [],
+"mss": [
+[
+"A",
+"8",
+":pu-u-ri-š[i ... ] [ _ ]x-⸢ya⸣-an-te-eš a-ša-an-du"
+]
+],
+"tr": "An ih[rer] Öffnung sollen sie ge[- ... -]t sein!",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1",
+"hl": "",
+"master": "ŠŪŠI {MUNUS.MEŠ}KI.SIKIL=m[a ... ]-it ⸢anda⸣ [a]ppanteš ašan[du]",
+"words": [],
+"mss": [
+[
+"A",
+"9",
+"ŠU-ŠI {MUNUS.MEŠ}KI.SIKIL-m[a ... ] [ _ _ ]-it ⸢an-da⸣ [a]p-pa-an-⸢te⸣-eš a-ša-an-[du]"
+]
+],
+"tr": "Die sechzig jungen Frauen ab[er] sollen [ ... ] am [ ... ] festgehalten sein!",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... ]-ait",
+"words": [],
+"mss": [
+[
+"A",
+"10",
+"[ ... ] [ _ ]x-a-⸢it⸣"
+]
+],
+"tr": "[ ... ]te.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 1",
+"hl": "",
+"master": "⸢šalli?⸣ aruni pē-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"11",
+"⸢šal?-li?⸣ a-⸢ru⸣-ni pé-⸢e⸣-[ ... ]2"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ] dem [großen] Meer [ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1:1": "Siegelová, StBoT 14, 1971, 70 ergänzt: KU-KU-B]I{ḤI.A}. Wenn man annimmt, dass zum Kolumnenanfang kaum mehr als ein Zeichen fehlt, ist diese Ergänzung aus Platzgründen problematisch.",
+"§ 1:2": "Oder zum vorherigen Kolon? Es ist unklar, ob ]x-a-⸢it⸣ der Ausgang einer Verbalform oder eines Substantivs im Instrumental ist."
+}
+}

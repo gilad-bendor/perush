@@ -1,0 +1,384 @@
+{
+"kind": "MYTH",
+"cth": "CTH 360.2",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 360.2 (TX 2009-08-30, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4''",
+"title": "§ 4''",
+"hl": ""
+},
+{
+"id": "§ 5''",
+"title": "§ 5''",
+"hl": ""
+},
+{
+"id": "§ 6''",
+"title": "§ 6''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "[{LÚ}ḪUL-aš ŠE]Š-aš {LÚ}NÍG.SI.SÁ [ŠEŠ-ši memiškiuw]an dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ŠE]Š-aš {LÚ}NÍG.SI.SÁ [ ... ] [me-mi-iš-ki-u-wa]-an da-a-iš"
+]
+],
+"tr": "[Bru]der [Schlecht] begann, zu [seinem Bruder] Gerecht zu [spreche]n:",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "e-[ ... a]rputta ani-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"e-x[ ... ] [ ... a]r-pu1-ut-ta a-ni-x[ ... ]"
+]
+],
+"tr": "„[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-šawazaš anda tiyawe[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ _ (_) ]x-x-ša-wa-za-aš an-da2 ti-ya-u-⸢e⸣-[en ... ]"
+]
+],
+"tr": "[ ... ] wir tret[en ... ] ein.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-⸢ni⸣ ḫar(a)škiwe[n]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ (_) ]x-⸢ni⸣ ḫar-aš-ki-u-e-[en] ¬¬¬"
+]
+],
+"tr": "[ ... ] wir pflüg[en ... ].“",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3'",
+"hl": "",
+"master": "[{L]}ÚḪUL-aš [Š]EŠ-aš {LÚ}NÍG.SI.⸢SÁ⸣ [ŠEŠ-ši] memiškiu[wa]n ⸢dāiš⸣",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[{L]}ÚḪUL-aš [Š]EŠ-aš {LÚ}NÍG.SI.⸢SÁ⸣ [ ... ] me-mi-iš-ki-u-[wa-a]n ⸢da-a-iš⸣"
+]
+],
+"tr": "[Br]uder Schlecht begann, zu [seinem Bruder] Gerecht zu spre[ch]en:",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] {GIŠ}APIN-an e-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"x[ ... ] {GIŠ}APIN-an e-[ ... ]"
+]
+],
+"tr": "„[ ... ] den Pflug [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3'",
+"hl": "",
+"master": "wātar eku(-)[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"wa-a-tar e-ku(-)x[ ... ]"
+]
+],
+"tr": "Wasser trink[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3'",
+"hl": "",
+"master": "ekutta(-)[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"e-ku-ut-ta(-)x[ ... ]"
+]
+],
+"tr": "Er trank [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-⸢an⸣ [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"x-⸢an⸣ [ ... ]"
+]
+],
+"tr": "[ ... ] ihn? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 4''",
+"hl": "",
+"master": "[mān=w]ar=⸢an⸣ katt[a ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1''",
+"[ma-a-an-w]a-⸢ra-an⸣ kat-t[a ... ]"
+]
+],
+"tr": "„[Wie ... ] ihn unte[n ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... -m]az=ma=wa=ka[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2''",
+"[ ... -m]a-az-ma-wa-ká[n ... ]"
+]
+],
+"tr": "[ ... ] aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 4''",
+"hl": "",
+"master": "[mā]n=war=an k[atta ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3''",
+"[ma-a-a]n-wa-ra-an k[at-ta ... ] ¬¬¬"
+]
+],
+"tr": "[Wi]e [ ... ] ihn u[nten ... ]“",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ...? ]⸢{d}⸣UTU-uš IŠME",
+"words": [],
+"mss": [
+[
+"A",
+"4''",
+"[ ...? ]⸢{d}⸣UTU-uš IŠ-ME"
+]
+],
+"tr": "Der Sonnengott hörte (dies).",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 5''",
+"hl": "",
+"master": "nu=ka[n ... tiy]at",
+"words": [],
+"mss": [
+[
+"A",
+"4''",
+"nu-ká[n ... ] [ ... ti?-y]a-at"
+]
+],
+"tr": "[ ... tr]at [ ... ].",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 5''",
+"hl": "",
+"master": "nu {LÚ}ḪUL-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5''",
+"nu {LÚ}ḪUL-[ ... ]"
+]
+],
+"tr": "Schlech[t ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 5''",
+"hl": "",
+"master": "[{GI]}ŠḪAŠḪUR-lu=ma=wa=za=kan[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6''",
+"[{GI]}ŠḪAŠḪUR-lu-ma-wa-za-kán[ ... ]"
+]
+],
+"tr": "Einen Apfelbaum aber [ ... ] sich [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ... ]-an SAG.DU-an[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7''",
+"[ ... ]x-an SAG.DU-an[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] den Kopf [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... {LÚ}N]ÍG.SI.SÁ iyan[niš? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8''",
+"[ ... {LÚ}N]ÍG.SI.SÁ ⸢i-ya⸣-an-[ni-iš? ... ]"
+]
+],
+"tr": "[Ge]recht gi[ng? ... ]",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... -r]eš-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9''",
+"[ ... -r]e?-eš-x-x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2':1": "pu über Rasur.",
+"§ 2':2": "Über Rasur."
+}
+}

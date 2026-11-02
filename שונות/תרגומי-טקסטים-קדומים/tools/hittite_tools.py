@@ -48,8 +48,13 @@ verify checks, per file:
   5. NAMES (renderings §H2): a source name in the line → its Hebrew in the line; first occurrence vocalized;
   6. TRAPS: unvocalized strings that read as another Hebrew word;
   7. FORMULAS (renderings §H5): where the composite has a formula, the Hebrew has its fixed rendering;
-  8. repeated lines (identical composite, 3+ words) with different Hebrew are listed (justify or fix).
+  8. repeated lines (identical composite, 3+ words) with different Hebrew are listed (justify or fix);
+  9. the fifth-day dossier's copies (`DOSSIER`): `verify IL` – our IL 8–17 = the dossier's annotated-IL (KBo 3.7 i 9–20,
+     the Hebrew joined); `verify HE` – every entry of the dossier's annotated-HD (Ḫedammu) = our HE line of the same label
+     (transliteration and `>` line, byte for byte); both after the pending revisions of the myth renderings §H8
+     (`| KEY | the dossier's string | ours | why |`; an empty table = nothing pending).
 Escapes, written in the entry: `[סטייה מן הנוסחה: <reason>]` (7), `[היתר שם: <name>]` (5), `[היתר שער: <word>]` (4).
+A formula whose Note says `[keys: K1 K2 …]` applies to those KEYs only (F8, the Laws' *pāi* `ייתן`: HL1 HL2 HLPT).
 """
 import csv
 import difflib
@@ -71,6 +76,20 @@ RIT = "טקסי-שילוח-וטיהור"
 P_HL = os.path.join(LAWS, "8-החוקים-החתיים")
 P_IN = os.path.join(LAWS, "9-הוראות-לאנשי-בית-האל")
 P_RIT = os.path.join(RIT, "1-טקסי-השילוח-החתיים")
+MYTH = "מיתוסים-חתיים-וחוריים"  # Round 5 run 2 (2026-10-30): the Hurro-Hittite and Old Anatolian myths
+P_SER = os.path.join(MYTH, "1-אילויאנקה-וחדמו")
+P_KUM = os.path.join(MYTH, "2-מחזור-קומרבי")
+P_SR = os.path.join(MYTH, "3-שירת-השחרור")
+P_TALE = os.path.join(MYTH, "4-זלפה-אפו-ואלקונירשה")
+P_TE = os.path.join(MYTH, "5-טליפינו")
+
+
+def _hpm_myth(cth, parts=None):
+    """The base of a myth KEY: one HPM "Mythen der Hethiter" edition, or several (a list of (label prefix, folder)):
+    the fragments of one composition (Ḫedammu's 29, Ullikummi's tablets) become one text, labelled `<prefix>:<clause>`."""
+    if not parts:
+        return f"HPM/MYTH--CTH-{cth}"
+    return [(p, f"HPM/MYTH--CTH-{cth}.{p}") for p in parts]
 # key: (project dir, title, kind, base, TLHdig CTH folder for glosses)
 UNITS = {
     "HL1": (P_HL, "החוקים החתיים, הלוח הראשון: \"אם איש\" (CTH 291, נוסח התקן)", "chil", "HPM/CHiL--CTH-291.2", ""),
@@ -82,13 +101,37 @@ UNITS = {
     "PU": (P_RIT, "טקס פולישה נגד מגפה שהובאה מארץ האויב (CTH 407)", "besrit", "HPM/BESRIT--CTH-407", "CTH-407"),
     "AM": (P_RIT, "טקס אמבזי (CTH 391.1)", "besrit", "HPM/BESRIT--CTH-391.1", "CTH-391"),
     "AM2": (P_RIT, "טקס אמבזי, נוסח שני (CTH 391.2)", "besrit", "HPM/BESRIT--CTH-391.2", "CTH-391"),
+    # the myths (Round 5 run 2): HPM "Mythen der Hethiter" (Rieken et al., CC BY-SA), else our TLHdig composites
+    "IL": (P_SER, "מיתוס אִילוּיַנְקָה (CTH 321)", "myth", _hpm_myth("321"), "CTH-321"),
+    "HE": (P_SER, "שירת חֶדַמּוּ (CTH 348.I)", "myth", _hpm_myth("348.I", [str(i) for i in range(1, 30)]), "CTH-348"),
+    "KU": (P_KUM, "שירת ההתהוות: המלכות בשמים (CTH 344)", "myth", _hpm_myth("344"), "CTH-344"),
+    "UL": (P_KUM, "שירת אוּלִּיקוּמִּי (CTH 345.I)", "myth",
+           _hpm_myth("345.I", ["1", "2", "3.1", "3.2", "4", "5", "6", "7", "8", "9", "10"]), "CTH-345"),
+    "SR": (P_SR, "שירת השחרור, הצד החתי (CTH 789)", "comp", "composite-SR.tsv", "CTH-789"),
+    "ZA": (P_TALE, "סיפור זַלְפָּה (CTH 3.1)", "comp", "composite-ZA.tsv", "CTH-3"),
+    "AP": (P_TALE, "סיפור אַפּוּ ובניו (CTH 360)", "myth", _hpm_myth("360", ["1", "2", "3", "4"]), "CTH-360"),
+    "EL": (P_TALE, "אֶלְקוּנִירְשָׁא ואַשֶּׁרְתּוּ (CTH 342)", "myth",
+           _hpm_myth("342", ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "2.4", "2.5"]), "CTH-342"),
+    "TE": (P_TE, "מיתוס תֶּלִיפִּינוּ, הנוסח הראשון (CTH 324.1)", "myth", _hpm_myth("324.1"), "CTH-324"),
 }
-PROJECT_ORDER = {P_HL: ["HL1", "HL2", "HLPT"], P_IN: ["IN"], P_RIT: ["AS", "UH", "PU", "AM", "AM2"]}
+PROJECT_ORDER = {P_HL: ["HL1", "HL2", "HLPT"], P_IN: ["IN"], P_RIT: ["AS", "UH", "PU", "AM", "AM2"],
+                 P_SER: ["IL", "HE"], P_KUM: ["KU", "UL"], P_SR: ["SR"], P_TALE: ["ZA", "AP", "EL"], P_TE: ["TE"]}
 WITNESSES_HL1 = {"291.1": "HPM/CHiL--CTH-291.1", "291.3": "HPM/CHiL--CTH-291.3", "291.4": "HPM/CHiL--CTH-291.4",
                  "291.5": "HPM/CHiL--CTH-291.5"}
 NIQ = "֑-ֽֿ-ׇ"
 RITUAL_GLOSS_FOLDERS = ["CTH-394", "CTH-410", "CTH-407", "CTH-391", "CTH-757"]
-REND = [os.path.join(ROOT, LAWS, "renderings.md"), os.path.join(ROOT, RIT, "renderings.md")]
+REND = [os.path.join(ROOT, LAWS, "renderings.md"), os.path.join(ROOT, RIT, "renderings.md"),
+        os.path.join(ROOT, MYTH, "renderings.md")]
+MYTH_KEYS = ("IL", "HE", "KU", "UL", "SR", "ZA", "AP", "EL", "TE")  # the myth renderings' H-tables apply to these only;
+# the law and ritual files' H-tables apply to every Hittite text (2026-10-30, Round 5 run 2)
+DOSSIER_DIR = os.path.join(ROOT, "מיתוסים-אוגריתיים", "3-תיק-היום-החמישי")
+# The fifth-day dossier's excerpts copied from the myth corpus (checked by `verify <KEY>`): KEY → (the dossier's annotated
+# file, span). IL: the dossier's KBo 3.7 i 9–20 (tablet lines, TLHdig) = our clauses 8–17, compared with the Hebrew joined
+# (a clause may span two tablet lines). HE: the dossier's key HD (the Round 5 finalization, 2026-11-02) has our own labels
+# and base lines, so each of its entries is compared line by line (the transliteration and the `>` line, byte for byte).
+DOSSIER = {"IL": (os.path.join(DOSSIER_DIR, "annotated-IL.rtl.md"), (("i9", "i20"), ("8", "17"))),
+           "HE": (os.path.join(DOSSIER_DIR, "annotated-HD.rtl.md"), None)}
+DOSSIER_IL = DOSSIER["IL"][0]
 
 
 def pdir(key):
@@ -205,36 +248,11 @@ def rows(key):
         return _DATA[key]
     proj, title, kind, base, cth = UNITS[key]
     out = []
-    if kind in ("chil", "besrit"):
-        d = json.load(open(os.path.join(SRC, base, "edition.json"), encoding="utf-8"))
-        secs = {s["id"]: s for s in d["sections"]}
+    if kind in ("chil", "besrit", "myth"):
+        parts = base if isinstance(base, list) else [("", base)]
         idx = form_index(cth) if cth else {}
-        for c in d["clauses"]:
-            words = []
-            if c["words"]:
-                words = [(w[0], w[2] if len(w) > 2 else "", w[1]) for w in c["words"] if w[0] not in ("…", "[…]", "[…", "…]")]
-            elif idx:
-                seen = set()
-                for sig, lab, tx in c["mss"]:
-                    for fm in tx.split():
-                        pf = _plainform(fm)
-                        if pf in idx and pf not in seen:
-                            seen.add(pf)
-                            words.append((fm, "", " | ".join(idx[pf][:3])))
-            s = secs.get(c["sec"], {})
-            sec = c["sec"]
-            hl = c.get("hl") or s.get("hl", "")
-            lab = c["n"]
-            if kind == "chil" and not sec and out:
-                # the colophons: CHiL numbers each one's clauses from 1 again (HL1: 1, 1, 2, 3), so give them
-                # unique labels col1, col2 … in the edition's order (fixed 2026-10-25, Round 4 run 6 sub 1)
-                ncol = sum(1 for o in out if o["label"].startswith("col")) + 1
-                lab, hl, sec = "col%d" % ncol, "colophon", "colophon"
-                s = {"title": "Colofone"}
-            elif kind == "chil" and not sec and key == "HL1":
-                hl = "1"  # CHiL has no heading before HL 1
-            out.append({"label": lab, "sec": sec, "hl": hl, "sectitle": s.get("title", sec), "text": c["master"],
-                        "words": words, "mss": c["mss"], "tr": c["tr"], "trlang": c.get("trlang", "")})
+        for pre, b in parts:
+            out += _hpm_rows(key, kind, pre, b, idx, out)
     else:
         for r in read_comp(key):
             words = []
@@ -257,6 +275,43 @@ def rows(key):
             out.append({"label": r["label"], "sec": r["sec"], "hl": r["sec"], "sectitle": r["sec"], "text": r["text"],
                         "words": words, "mss": mss, "tr": "", "trlang": "", "note": r["note"]})
     _DATA[key] = out
+    return out
+
+
+def _hpm_rows(key, kind, pre, base, idx, done):
+    """The rows of one HPM edition (CHiL, BESRIT, MYTH); `pre` = the label prefix of a multi-edition KEY."""
+    out = []
+    d = json.load(open(os.path.join(SRC, base, "edition.json"), encoding="utf-8"))
+    secs = {s["id"]: s for s in d["sections"]}
+    for c in d["clauses"]:
+        words = []
+        if c["words"]:
+            words = [(w[0], w[2] if len(w) > 2 else "", w[1]) for w in c["words"] if w[0] not in ("…", "[…]", "[…", "…]")]
+        elif idx:
+            seen = set()
+            for sig, lab, tx in c["mss"]:
+                for fm in tx.split():
+                    pf = _plainform(fm)
+                    if pf in idx and pf not in seen:
+                        seen.add(pf)
+                        words.append((fm, "", " | ".join(idx[pf][:3])))
+        s = secs.get(c["sec"], {})
+        sec = c["sec"]
+        hl = c.get("hl") or s.get("hl", "")
+        lab = c["n"]
+        if kind == "chil" and not sec and (done or out):
+            # the colophons: CHiL numbers each one's clauses from 1 again (HL1: 1, 1, 2, 3), so give them
+            # unique labels col1, col2 … in the edition's order (fixed 2026-10-25, Round 4 run 6 sub 1)
+            ncol = sum(1 for o in done + out if o["label"].startswith("col")) + 1
+            lab, hl, sec = "col%d" % ncol, "colophon", "colophon"
+            s = {"title": "Colofone"}
+        elif kind == "chil" and not sec and key == "HL1":
+            hl = "1"  # CHiL has no heading before HL 1
+        if pre:
+            lab, sec = f"{pre}:{lab}", f"{pre} {sec}"
+            s = {"title": f"{pre} {s.get('title', c['sec'])}"}
+        out.append({"label": lab, "sec": sec, "hl": hl, "sectitle": s.get("title", sec), "text": c["master"],
+                    "words": words, "mss": c["mss"], "tr": c["tr"], "trlang": c.get("trlang", "")})
     return out
 
 
@@ -348,11 +403,21 @@ def nopunct(h):
 
 
 # ---------------------------------------------------------------- renderings tables (hittite-renderings.md)
+_TCACHE = {}
+
+
+def _rend_for(key):
+    return REND if (key is None or key in MYTH_KEYS) else REND[:2]
+
+
 def _table(section_prefix, paths=None):
     out = []
     for path in (paths or REND):
         if os.path.exists(path):
-            out += _table1(section_prefix, path)
+            ck = (section_prefix, path, os.path.getmtime(path))
+            if ck not in _TCACHE:
+                _TCACHE[ck] = _table1(section_prefix, path)
+            out += _TCACHE[ck]
     return out
 
 
@@ -376,10 +441,10 @@ def _bt(c):
     return m.group(1) if m else c
 
 
-def names():
+def names(key=None):
     """[(source regex on flat composite, Hebrew vocalized, Hebrew plain, ★)] from renderings §H2."""
     out = []
-    for cells in _table("H2."):
+    for cells in _table("H2.", _rend_for(key)):
         if len(cells) < 3 or cells[0].lower().startswith("source") or not cells[1].strip("` "):
             continue
         heb = cells[1].strip().strip("`").replace(" ★", "")
@@ -387,11 +452,11 @@ def names():
     return out
 
 
-def reserved():
+def reserved(key=None):
     """[(Hebrew regex, licence regex or None, why)] from §3 (reserved: licence 'NEVER') and §4 (gated)."""
     out = []
     for sec in ("H3.", "H4."):
-        for cells in _table(sec):
+        for cells in _table(sec, _rend_for(key)):
             if len(cells) < 3 or cells[0].lower().startswith("hebrew"):
                 continue
             hx = _bt(cells[0])
@@ -402,19 +467,30 @@ def reserved():
     return out
 
 
-def traps():
+def traps(key=None):
     out = []
-    for cells in _table("H6."):
+    for cells in _table("H6.", _rend_for(key)):
         if len(cells) < 3 or cells[0].lower().startswith("unvocalized"):
             continue
         out.append((_bt(cells[0]), _bt(cells[1]), cells[2]))
     return out
 
 
-def formulas():
+def formula_scope(note):
+    """The KEYs a formula is scoped to, from `[keys: HL1 HL2 HLPT]` in its Note cell (None = every key that reads the
+    table). F8, *pāi* `ייתן`, is the Laws' formula: in the myths and rituals *pāi* is also "give!" and the narrative
+    present (the Round 5 finalization, 2026-11-02)."""
+    m = re.search(r"\[keys: ([A-Z0-9 ]+)\]", note)
+    return m.group(1).split() if m else None
+
+
+def formulas(key=None):
     out = []
-    for cells in _table("H5."):
+    for cells in _table("H5.", _rend_for(key)):
         if len(cells) < 4 or not re.match(r"^F\d+$", cells[0]):
+            continue
+        sc = formula_scope(cells[3])
+        if key is not None and sc is not None and key not in sc:
             continue
         out.append((cells[0], _bt(cells[1]), _bt(cells[2]), cells[3]))
     return out
@@ -456,7 +532,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
     plain = strip_marks(heb)
     r = row(key, lab) or {"text": "", "words": []}
     sfs = src_forms(key, r["text"])
-    for rx, allow, why in reserved():
+    for rx, allow, why in reserved(key):
         try:
             m = re.search(rx, plain)
         except re.error as e:
@@ -468,7 +544,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
                 continue
             out.append(f"RESERVED {key} {lab}: «{m.group(0).strip()}» – {why}\n    {heb}\n    src: {r['text']}")
             bad += 1
-    for srx, hv, hp, star in names():
+    for srx, hv, hp, star in names(key):
         if not any(re.search(srx, f) for f in sfs):
             continue
         if not _heb_has(plain, hp) and "[היתר שם: " not in body:
@@ -479,11 +555,11 @@ def check_line(key, lab, heb, body, out, first_seen=None):
             if not re.search(rf"[{NIQ}]", _find_word(heb, hp)):
                 out.append(f"VOCALIZE {key} {lab}: the first occurrence of {hv} in the file must be vocalized\n    {heb}")
                 bad += 1
-    for rx, cond, why in traps():
+    for rx, cond, why in traps(key):
         if re.search(rx, heb) and (not cond or cond == "." or re.search(cond, license_text(key, lab))):
             out.append(f"UNVOCALIZED {key} {lab}: {why}\n    {heb}")
             bad += 1
-    for fid, grx, hrx, _ in formulas():
+    for fid, grx, hrx, _ in formulas(key):
         if any(re.search(grx, f) for f in sfs) and not re.search(hrx, nopunct(plain)) and "[סטייה מן הנוסחה" not in body:
             out.append(f"FORMULA {key} {lab}: {fid} `{grx}` → `{hrx}` (renderings §H5)\n    {heb}\n    src: {r['text']}")
             bad += 1
@@ -585,8 +661,116 @@ def verify(keys, strict=False):
             print(f"- {nk}")
             for k2, lab, h in hs:
                 print(f"    {k2} {lab}: {h}")
+    for dk in DOSSIER:
+        if dk in keys or not keys:
+            bad += dossier_check(dk)
     print(f"\n{nd} repeated-line difference(s); problems: {bad}")
     return bad == 0
+
+
+# ---------------------------------------------------------------- the fifth-day dossier's excerpts (IL, HE)
+IL_DOSSIER_SPAN = DOSSIER["IL"][1]  # KBo 3.7 i 9–20 (the dossier's tablet lines) = HPM CTH 321 clauses 8–17
+
+
+def _join_heb(heb, seq, a, b):
+    i, j = seq.index(a), seq.index(b)
+    return re.sub(r"\s+", " ", " ".join(heb[x] for x in seq[i:j + 1])).strip()
+
+
+def dossier_revisions(key="IL"):
+    """[(the dossier's string, our string, why)] from the myth renderings §H8: revisions of a dossier excerpt made here
+    and recorded for the lead (who applies them to the dossier and deletes the rows). A row is `| KEY | dossier | ours |
+    why |` (KEY = IL or HE); a three-column row (the table before 2026-11-02) is IL's. An empty table = nothing pending."""
+    out = []
+    for cells in _table("H8.", [REND[2]]):
+        if len(cells) >= 4 and cells[0] in DOSSIER and cells[1].startswith("`"):
+            if cells[0] == key:
+                out.append((_bt(cells[1]), _bt(cells[2]), cells[3]))
+        elif len(cells) >= 3 and cells[0].startswith("`") and key == "IL":
+            out.append((_bt(cells[0]), _bt(cells[1]), cells[2]))
+    return out
+
+
+def _read_dossier(path):
+    """The dossier file's entries: ({label: `>` line}, [labels], {label: the backticked base line})."""
+    dh, dseq, dsrc = {}, [], {}
+    cur = None
+    for l in open(path, encoding="utf-8"):
+        l = l.rstrip("\n")
+        m = re.match(r"^### (\S+)\s*$", l)
+        if m:
+            cur = m.group(1)
+            dseq.append(cur)
+        elif l.startswith("## ") or l.startswith("# "):
+            cur = None
+        elif cur and l.startswith("> "):
+            dh[cur] = l[2:].strip()
+        elif cur and l.startswith("`") and cur not in dsrc and cur not in dh:
+            dsrc[cur] = l.strip()
+    return dh, dseq, dsrc
+
+
+def dossier_check(key):
+    """The dossier's copy of our KEY's lines must equal ours, after the pending revisions of §H8 are applied to the
+    dossier's text. IL: our IL 8–17 = the dossier's KBo 3.7 i 9–20, the Hebrew joined. HE: every entry of the dossier's
+    annotated-HD has our label, and its transliteration and `>` line equal ours, byte for byte. Returns the problems."""
+    path, span = DOSSIER[key]
+    tag = f"{key} ↔ dossier ({os.path.basename(path)})"
+    if not os.path.exists(path) or not os.path.exists(annotated_path(key)):
+        return 0
+    dh, dseq, dsrc = _read_dossier(path)
+    heb, seq, src, _, _ = read_annotated(key)
+    revs = dossier_revisions(key)
+    if span:
+        (da, db), (oa, ob) = span
+        if oa not in seq or ob not in seq or any(not heb.get(x) for x in seq[seq.index(oa):seq.index(ob) + 1]):
+            print(f"{tag}: {oa}–{ob} not drafted yet")
+            return 0
+        d = _join_heb(dh, dseq, da, db)
+        for a, b, why in revs:
+            if a not in d:
+                print(f"{tag}: the pending revision's dossier string is not in the dossier (applied already?): «{a}»")
+                return 1
+            d = d.replace(a, b, 1)
+        o = _join_heb(heb, seq, oa, ob)
+        if d != o:
+            sm = difflib.SequenceMatcher(None, d, o)
+            print(f"{tag}: {oa}–{ob} differ from the dossier's {da}–{db} (+ §H8 revisions):")
+            for op, i1, i2, j1, j2 in sm.get_opcodes():
+                if op != "equal":
+                    print(f"    {op}: dossier «{d[max(0, i1 - 15):i2 + 15]}» / ours «{o[max(0, j1 - 15):j2 + 15]}»")
+            return 1
+        print(f"{tag}: identical ({len(revs)} pending revision(s) for the lead, renderings §H8)")
+        return 0
+    bad = 0
+    used = set()
+    for lab in dseq:
+        if lab not in seq:
+            print(f"{tag}: the dossier's entry {lab} is not one of our labels")
+            bad += 1
+            continue
+        if dsrc.get(lab) != src.get(lab):
+            print(f"{tag} {lab}: transliteration differs\n    dossier: {dsrc.get(lab)}\n    ours:    {src.get(lab)}")
+            bad += 1
+        d = dh.get(lab, "")
+        for n, (a, b, why) in enumerate(revs):
+            if a in d:
+                d = d.replace(a, b, 1)
+                used.add(n)
+        if d != heb.get(lab, ""):
+            print(f"{tag} {lab}: '>' line differs (+ §H8 revisions)\n    dossier: {d}\n    ours:    {heb.get(lab, '')}")
+            bad += 1
+    for n, (a, b, why) in enumerate(revs):
+        if n not in used:
+            print(f"{tag}: the pending revision's dossier string is not in the dossier (applied already?): «{a}»")
+            bad += 1
+    if not bad:
+        print(f"{tag}: {len(dseq)} entries identical ({len(revs)} pending revision(s) for the lead, renderings §H8)")
+    return bad
+
+
+def dossier_il_check():
+    return dossier_check("IL")
 
 
 # ---------------------------------------------------------------- data, tr, fill, lemma, lexmap, grep
@@ -647,7 +831,7 @@ def cmd_units():
 def cmd_data(key, a=None, b=None):
     corpus = _corpus()
     allh = all_hebrew()
-    nm, fs, rs_ = names(), formulas(), reserved()
+    nm, fs, rs_ = names(key), formulas(key), reserved(key)
     sp = _span(key, a, b)
     print(f"# {key} ({UNITS[key][1]}): line data {sp[0]['label']}–{sp[-1]['label']}\n")
     print("Words: form – lemma \"German gloss\" morphology (CHiL / TLHdig: a machine-assisted annotation, often "

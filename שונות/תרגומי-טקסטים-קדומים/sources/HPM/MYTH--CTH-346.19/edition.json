@@ -1,0 +1,240 @@
+{
+"kind": "MYTH",
+"cth": "CTH 346.19",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 346.19 (TX 2009-08-30, TRde 2009-08-24)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -i]š šiya-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... -i]š ši-⸢ya⸣-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -i]š lē wi-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ _ -i]š le1-e ú-i-x[ ... ]"
+]
+],
+"tr": "[ ... ] nicht [ ... ]!",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "lē=man=ta DINGIR{MEŠ} pi-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"⸢le⸣-e-ma-an-ta DINGIR{MEŠ} pí-[ ... ] ¬¬¬"
+]
+],
+"tr": "Die Götten [sollen] dir nicht [ ... ]!",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "mān parkuwatta=m[a ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"⸢ma⸣-a-an pár-ku-wa-at-ta-m[a ... ]"
+]
+],
+"tr": "Als [ ... ] ab[er] gereinigt hatte,",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[k]wiš=wa=mu DINGIR-LUM ú-e[t]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[k]u-iš-wa-mu DINGIR-LUM ú-e[t]"
+]
+],
+"tr": "„Welche Gottheit ka[m] zu mir?",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ...]"
+]
+],
+"tr": "[ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[{U]}RUkummiyaš? šarku[š LUGAL-uš? ... z]innet",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[{U]}RU⸢kum⸣-mi-ya-⸢aš?⸣ šar-ku-u[š ... ] [z]i-in-né-et"
+]
+],
+"tr": "[Der] mächtig[e König?] der Stadt Kumme [hö]rte auf [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=aš [ ... ] yanniš",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"na-aš x[ ... ] ⸢ya⸣-an-ni-iš"
+]
+],
+"tr": "und er ging [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "UD{KAM}-t[i ... ]-kiškanzi",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"UD{KAM}-t[i ... ] [ _ ]-⸢ki⸣-iš-kán-zi"
+]
+],
+"tr": "Sie [ ...]en [am] Tag [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"nu [ ... ] ¬¬¬"
+]
+],
+"tr": "und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] {d}10-an[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ _ _ _ ]x {d}10-an[ ... ]"
+]
+],
+"tr": "[ ... ] den Wettergott [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]-an[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ ... ]x-⸢an⸣[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "\"Gelehrte\" Zeichenform."
+}
+}

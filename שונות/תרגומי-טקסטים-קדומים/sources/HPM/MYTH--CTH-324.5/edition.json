@@ -1,0 +1,534 @@
+{
+"kind": "MYTH",
+"cth": "CTH 324.5",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 324.5 (TX 2009-08-26, TRde 2009-08-26)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+},
+{
+"id": "§ 4'",
+"title": "§ 4'",
+"hl": ""
+},
+{
+"id": "§ 5''",
+"title": "§ 5''",
+"hl": ""
+},
+{
+"id": "§ 6''",
+"title": "§ 6''",
+"hl": ""
+},
+{
+"id": "§ 7''",
+"title": "§ 7''",
+"hl": ""
+},
+{
+"id": "§ 8''",
+"title": "§ 8''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"¬¬¬ [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-law[a? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2'",
+"[ ... ]x-at1-w[a?] [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -m]an [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3'",
+"[ ... -m]a-an [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... GU4]{ḪI.A} UDU{ḪI.A} [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 4'",
+"[ ... GU4]⸢{ḪI⸣}.A UDU{ḪI.A} [ ... ]"
+]
+],
+"tr": "[ ... Rind]er, Schafe [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] parḫuwan daiš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 5'",
+"[ ... ]x pár-⸢ḫu⸣-wa-an da-iš ¬¬¬"
+]
+],
+"tr": "[ ... ] begann zu jagen.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... me]m[i]škiuwan? dāi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6'",
+"[ ... me]-m[i]2-iš-ki-u-wa-an3 da-a-i"
+]
+],
+"tr": "[ ... ] beginnt zu [sp]r[e]chen?:",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] kar(a)pta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 7'",
+"[ ... ]x kar-ap-ta"
+]
+],
+"tr": "„[ ... ] hob [ ... ] auf.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-ān kwitman [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 8'",
+"[ ... ]-⸢a⸣-an ku-it-ma-an [ ... ]"
+]
+],
+"tr": "[ ... ] solange [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}telipinušš=a [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 9'",
+"⸢{d}⸣te-li-pí-nu-uš-ša [ ... ] ¬¬¬"
+]
+],
+"tr": "Auch Telipinu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]{MEŠ}-ŠU! paiš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 11'",
+"[ ... ]-x{MEŠ}-⸢ŠU!4⸣ pa-iš"
+]
+],
+"tr": "[ ... ] gab seine? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... LU]GAL? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 12'",
+"[ ... LU]GAL? [ ... ]"
+]
+],
+"tr": "[ ... Kö]nig? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3'",
+"hl": "",
+"master": "nu gimri [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 13'",
+"nu gi-im-ri [ ... ] ¬¬¬"
+]
+],
+"tr": "Auf dem Feld [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... ]-i",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 15'",
+"[ ... ]x-i"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 4'",
+"hl": "",
+"master": "[ ... -z]i",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 16'",
+"[ ... -z]i"
+],
+[
+"A",
+"",
+"Vs. I bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 1'",
+"x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 5''",
+"hl": "",
+"master": "nu [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 2'",
+"nu [ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 3'",
+"x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 4'",
+"x x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ]-ka[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5'",
+"x-ka5[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 6''",
+"hl": "",
+"master": "GI.DUR5? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5'",
+"⸢GI⸣ .DUR5? x [ ... ]"
+]
+],
+"tr": "[ ... ] Schilfrohr? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 7''",
+"hl": "",
+"master": "nu=za ēt š[anezzi]6",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 7'",
+"nu-za e-⸢et⸣ š[a-ne-ez-zi]"
+]
+],
+"tr": "Iss Ers[tklassiges]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 7''",
+"hl": "",
+"master": "[nu=za išpāi]7",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 7'",
+"[ ... ]"
+]
+],
+"tr": "[und stille deinen Hunger!]",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 7''",
+"hl": "",
+"master": "[nu=za eku šanezzi]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 7'",
+"[ ... ]"
+]
+],
+"tr": "[Trink Erstklassiges]",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 7''",
+"hl": "",
+"master": "nu=za ning(a)",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8'",
+"nu-za ni-in-ga"
+]
+],
+"tr": "und stille deinen Durst!",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 7''",
+"hl": "",
+"master": "[ ... ] EGIR-pa ḫan[daḫḫut]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8'",
+"[ ... ] EGIR-pa ḫa-an-[da-aḫ-ḫu-ut] ¬¬¬"
+]
+],
+"tr": "[ ... ] ko[mm] wieder in Ordnung!",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 8''",
+"hl": "",
+"master": "nu=tta [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 10'",
+"nu-ut-ta x8[ ... ]"
+]
+],
+"tr": "Dir [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 8''",
+"hl": "",
+"master": "wa[r?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 11'",
+"wa-a[r?9- ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 8''",
+"hl": "",
+"master": "{GIŠ}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 12'",
+"⸢{GIŠ}⸣x-[ ... ]"
+],
+[
+"A",
+"",
+"Vs. II bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Zeichen ist nach Kollation am Original eher -at- als -la.",
+"§ 2':2": "Nach Kollation am Original ist die Lesung des Zeichens als -mi- sehr wahrscheinlich.",
+"§ 2':3": "Mazoyer 2003, 67: ša-an-ḫ]i-iš-ki-u-wa-an.",
+"§ 3':4": "Nach Kollation am Original sieht das Zeichen wie QA aus. Mazoyer 2003, 67: -uš?.",
+"§ 6'':5": "Nach Kollation am Original ist eine Lesung möglich ⸢kán⸣-ka-[ti , ist aber sehr unsicher.",
+"§ 7'':6": "Vgl. zur Ergänzung KUB 33.8 Rs. III 15' (CTH 324.3).",
+"§ 7'':7": "Vgl. zur Ergänzung KUB 33.11 Vs. II 11'ff. (CTH 324.4).",
+"§ 8'':8": "Das Original hat nur noch unlesbare Reste.",
+"§ 8'':9": "Nach Kollation am Original ist nur ein Winkelhaken vorhanden."
+}
+}

@@ -1,0 +1,937 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.4",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.4 (TX 2009-09-08, TRde 2009-09-08)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2''",
+"title": "§ 2''",
+"hl": ""
+},
+{
+"id": "§ 3''",
+"title": "§ 3''",
+"hl": ""
+},
+{
+"id": "§ 4''",
+"title": "§ 4''",
+"hl": ""
+},
+{
+"id": "§ 5''",
+"title": "§ 5''",
+"hl": ""
+},
+{
+"id": "§ 6''",
+"title": "§ 6''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "{URU}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1'",
+"{URU}x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "n[a?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 2'",
+"n[a?- ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3'",
+"nu[ ... ]"
+]
+],
+"tr": "und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4'",
+"x[ ... ]"
+],
+[
+"A",
+"",
+"Rs. III bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ]-šaz [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 1'",
+"[ ... ]x-ša-⸢az⸣ x[ _ ]x[ ... ]"
+]
+],
+"tr": "[ ... ] aus dem [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ]-ān(a)štat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 2'",
+"[ ... ]-a-an-aš-ta-at ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 3'",
+"[ ... ]x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3''",
+"hl": "",
+"master": "[nepi]ši=za=kan alpuš [ ... ]-uš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 3'",
+"[ne-pí]-ši-za-kán al-p[u]1-uš [ ... ]x-uš"
+],
+[
+"B",
+"1",
+"[ ... ]x x[ ... ]"
+]
+],
+"tr": "[ ... ] sich im [Himm]el die Wolken [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3''",
+"hl": "",
+"master": "n=a-[ ... ]-ḫuni [ ... dašš]awaz? A{ḪI.A}-naza [ ... ]-waz [ ... -n]u? iyat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 4'",
+"na-x[ ... da-aš?-š]a?-u-az A{ḪI.A}-⸢na-za⸣ x[ _ ]-wa-az [ ... -n]u? i-ya-at"
+],
+[
+"B",
+"1",
+"[ ... ] [ ... ]x-ḫu-ni x[ ... ]"
+]
+],
+"tr": "[ ... ] machte [ ... ] aus den [schwe]ren Wassern1 [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3''",
+"hl": "",
+"master": "ma[ḫḫan {d}IŠTAR-i]š {URU}nenuwaš MUNUS.LUGAL-aš [ ... ] malāet",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 5'",
+"ma-a[ḫ-ḫa-an {d}IŠTAR-i]š {URU}ne-nu-wa-aš MUNUS.LUGAL-aš [ ... ]"
+],
+[
+"B",
+"3",
+"[ ... ]x2 ma-la-a-et"
+]
+],
+"tr": "A[ls Ištar], die Königin von Ninive, [ ... ] zustimmte,2",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=⸢kan⸣ āššiyatar {GIŠ}šaḫin {GI[}Šparnull]inn=a daššawaš A{ḪI.A}-naš šunniyat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 6'",
+"[ ... a-aš-ši-ya]-tar {GIŠ}ša-ḫi-in {GI[}Špár-nu-ul-l]i-in-na3 da-aš-ša-u-aš A{ḪI.A}-na-aš [ ... ]"
+],
+[
+"B",
+"3",
+"nu-⸢kán a-aš-ši-ya⸣-[tar ... ] [ ... ] šu-un-ni!-ya-at"
+]
+],
+"tr": "schüttete sie die Liebe3, das šaḫi-Holz und das [parnull]i-Holz in die schweren Wasser.4",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=kan A{ḪI.A}-aš anda āššiyatar {GIŠ}š[aḫiš {GI]}Šparnulli waršiyet",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 7'",
+"[ ... a]n-da a-aš-ši-ya-⸢tar⸣ {GIŠ}š[a-ḫi-iš {GI]}Špár-nu-ul-li wa-ar-ši-i-et"
+],
+[
+"B",
+"4",
+"nu-kán A{ḪI.A}-aš an-d[a ... ] [wa-a]r-ši-i-et"
+]
+],
+"tr": "In den Wassern wischte sie die Liebe, das š[aḫi]-Holz und das parnulli-Holz ab.5",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu GIM-an {MUŠ}ḫedammuš wa[rš]ulan KAŠ ištaḫta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 8'",
+"[ ... wa-ar-š]u-la-an KAŠ iš-taḫ-ta"
+],
+[
+"B",
+"5",
+"nu GIM-an {MUŠ}ḫé-dam-mu-⸢uš wa?⸣-[ar-šu-la-an ... ] te-eš-ḫa-aš e-ep-ta"
+]
+],
+"tr": "Als Ḫedammu den Duft6, (nämlich) das Bier, gekostet hatte,7",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 3''",
+"hl": "",
+"master": "[nu=ka]n ANA {MUŠ}ḫedammu tarḫuili ZI{ḪI.A}-Š[U šanezziš] tešḫaš ēpta",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 8'",
+"nu-kán [ _ _ {M]}UŠḫé-dam-mu tar-ḫu-u-i-li [ ... ] te-eš-ḫa-aš e-ep-ta"
+],
+[
+"B",
+"6",
+"[nu-ká]n A-NA {MUŠ}ḫé-dam-mu UR.SAG-li ZI{ḪI.A}-Š[U ... ]"
+]
+],
+"tr": "ergriff ein [süßer] Traum des mächtigen Ḫedammu Seele.8",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 3''",
+"hl": "",
+"master": "n=aš GU4-aš ANŠE-ašš=a iwar šupparianza [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 9'",
+"na-aš GU4-aš ⸢ANŠE⸣-[aš-š]a i-wa-ar šu-up-pa-ri-an-za [ ... ]"
+],
+[
+"B",
+"7",
+"[ ... ] GU4-aš ANŠE-aš-ša ⸢i-wa⸣-ar šu-up-pa-ri-an-za x[ ... ]"
+]
+],
+"tr": "Nach Art der Rinder und Pferde schlafend [ ... ].9",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... UL?4] kwitki kanišzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 10'",
+"[ ... ] ku-⸢it⸣-ki ka-ni-iš-zi"
+],
+[
+"B",
+"7",
+"[ ... ] [ku-it-k]i ka-né-eš-zi"
+]
+],
+"tr": "[ ... ] erkennt [nicht]s wieder",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=za BIL.ZA.ZA ḫarziyalušš=a GU7-ezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 10'",
+"nu BIL.ZA.ZA ḫar-zi-ya-lu-uš-ša GU7-ez-zi ¬¬¬"
+],
+[
+"B",
+"8",
+"n[u]-za BIL.ZA.ZA ḫar-zi-y[a-lu-uš-ša ... ] ¬¬¬"
+]
+],
+"tr": "und isst die Frösche und Schnecken?10.",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 4''",
+"hl": "",
+"master": "[{d}IŠTAR-i]š ANA {MUŠ}ḫedammu memiškiuwan daiš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 11'",
+"[ ... ] me-mi-iš-ki-u-an da-iš"
+],
+[
+"B",
+"9",
+"[{d}IŠTAR-i]š A-NA {MUŠ}ḫé-dam-mu me-mi-iš-ki-u-[wa-an ... ]"
+]
+],
+"tr": "[Ištar] begann, zu Ḫedammu zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 4''",
+"hl": "",
+"master": "šarā=kan namma e[ḫu]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 11'",
+"ša-ra-a-kán nam-ma ⸢e⸣-[ḫu]"
+],
+[
+"B",
+"10",
+"[ ... na]m-⸢ma⸣ [e-ḫ]u"
+]
+],
+"tr": "„K[omm] wieder nach oben!",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 4''",
+"hl": "",
+"master": "⸢nu=kan⸣ daššawa[z A{Ḫ]}I.A-naza [ ... t]arrawašš=a takšan? ištarna? eḫu",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 11'",
+"[ ... ] ⸢da⸣-[aš-ša-u-az] ⸢A⸣[{Ḫ]}I.A!5-na-za [ ... t]ar-ra-u-aš-ša ták-ša-[a]n? iš!?-tar6-na e-ḫu"
+],
+[
+"B",
+"10",
+"⸢nu-kán da⸣-aš-ša-u-a[z ... ] [ ... ]x x[ ... ]"
+]
+],
+"tr": "Komm in der Mitte zwischen [ ... ] und den [M]ächtigen au[s] den schwere[n Wass]ern herbei!“11",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 4''",
+"hl": "",
+"master": "9? SIG7-aš=kan? ḫa[r- ... ]A",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 12'",
+"9!? SIG7-aš-kán!? ḫa[r- ... ]x[ (_) ]A"
+],
+[
+"B",
+"12",
+"[ ... ]x[ ... ]"
+],
+[
+"B",
+"",
+"Text bricht ab."
+]
+],
+"tr": "Neunzigtausend? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ] pēdan taknaza šallannai",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 13'",
+"[ ...]x pé-e-da-an ták-na-za šal-la-an-na-i"
+]
+],
+"tr": "Er zieht einen [ ... ] Ort aus der Erde.12",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 4''",
+"hl": "",
+"master": "{d}IŠTAR-iš=ma=k[an ANA {MUŠ}ḫedammu IGI-anda NÍ.TE{MEŠ} nekuman]da parā appiškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 13'",
+"{d}IŠTAR-iš-ma-k[án ... ] [ ... ne-ku-ma-an]-⸢da⸣ pa-ra-a ap-pí-iš-ke-ez-zi"
+]
+],
+"tr": "Ištar aber hält [dem Ḫedammu (ihre) nack]ten [Glieder entge]gen.",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 4''",
+"hl": "",
+"master": "{MUŠ}ḫedammuš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 14'",
+"{MUŠ}ḫé-dam-mu-uš [ ... ]"
+]
+],
+"tr": "Ḫedammu [ ... ]13",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ...? ] LÚ-natar parā watkuškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 15'",
+"[ ... ] LÚ-na-tar pa-ra-a wa-at-⸢ku⸣-uš-ke-ez-zi"
+]
+],
+"tr": "[ ...? ] die Mannheit springt hervor",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 4''",
+"hl": "",
+"master": "nu LÚ-nata[r ... ]{ḪI.A} armaḫḫiškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 15'",
+"nu LÚ-na-ta[r ... ] [ ... ]x x{ḪI.A} ar-ma-aḫ-ḫi-iš-⸢ke⸣-ez-zi"
+]
+],
+"tr": "und die Mannheit schwängert [ ... ]14",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 4''",
+"hl": "",
+"master": "1 ME 30 URU{DIDLI.ḪI.A} [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 16'",
+"1 ME 30 URU{DIDLI.ḪI.A} x[ ... ]"
+]
+],
+"tr": "Einhundertdreißig Städte [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... -r]ittaet",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 17'",
+"[ ... -r]i-it-⸢ta⸣-et"
+]
+],
+"tr": "[ ...]te [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 4''",
+"hl": "",
+"master": "{UZU}šarḫuwantit=ma 70 URU{DIDLI.ḪI.A}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 17'",
+"{UZU}šar-ḫu-wa-an-ti-it-ma 70 URU{DIDLI.ḪI.A}[ ... ]"
+]
+],
+"tr": "Mit dem Bauch aber [ ... ] siebzig Städte [ ... ]15",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ] INA IGI-[ ... ]-ya{ḪI.A}=za arḫa irḫāitta[t]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 18'",
+"[ ... ] I-NA IGI-x7-ya{ḪI.A}-za ar-ḫa ir-ḫa-a-it-ta-a[t]"
+]
+],
+"tr": "[ ... ] machte die Runde16.",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 18'",
+"x x[ ... ] [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... =k]an ḫarpuš SAG.DU-aš [ḫ]arpiya[t?]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 19'",
+"[ ... -k]án ḫar-pu-uš SAG.DU-aš [ḫ]ar-pí-⸢ya⸣-a[t?] ¬¬¬"
+]
+],
+"tr": "[ ... h]äuft[e] einen Haufen von Köpfen auf.",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ... -ka]n paššuwi wal(a)ḫtat",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 20'",
+"[ ... -ká]n pa-aš-šu-u-i wa-al-aḫ-ta-[a]t"
+]
+],
+"tr": "[ ... ] wurde auf den Felsen?17 geschlagen.18",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 5''",
+"hl": "",
+"master": "{d}IŠTAR-iš {URU}nenuwaš MUNUS.LUGAL-aš INA 2-E [ ... ANA {MUŠ}ḫedam]mu GAM-an ār(a)š",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 20'",
+"{d}IŠTAR-iš {URU}ne-nu-wa-aš MUNUS.LUGAL-aš I-NA 2-E x[ ... ] [ ... {MUŠ}ḫé-dam]-mu (Rasur) GAM-an a-ar-aš"
+]
+],
+"tr": "Ištar, die Königin von Ninive, gelangte in zwei [ ... ] hinunter [zu Ḫedam]mu,",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§ 5''",
+"hl": "",
+"master": "n=aš=ši? peran iyattari {d}IŠTAR-iš {URU}nenuw[aš MUNUS.LUGAL]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 21'",
+"na-aš-ši? pé-ra-an i-ya-at-⸢ta⸣-ri {d}IŠTAR-iš {URU}ne-nu-w[a-aš ... ]"
+]
+],
+"tr": "und sie ging ihm? voran, Ištar, [die Königin] von Niniv[e].",
+"trlang": "DE"
+},
+{
+"n": "36",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ... ā]r(a)š {d}IŠTAR-iš",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 22'",
+"[ ... a-a]r-aš {d}IŠTAR-⸢iš⸣"
+]
+],
+"tr": "Sie [gel]angte [ ... ], die Ištar.19",
+"trlang": "DE"
+},
+{
+"n": "37",
+"sec": "§ 5''",
+"hl": "",
+"master": "EGIR-an=ma=šši {MUŠ}ḫedammuš [ ... ]-laš maḫḫan ḫat[u?- ... -i]t arḫa laḫuiškezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 22'",
+"EGIR-an-⸢ma-aš⸣-ši {MUŠ}ḫé-dam-mu-uš x-x-⸢la⸣-aš ma-aḫ-ḫa-an ḫa-t[u?- ... ] [ ... -i]t ar-ḫa la-ḫu-iš-ke-ez-zi"
+]
+],
+"tr": "Hinter ihr aber gießt Ḫedammu wie ein [ ... ] mit schr[ecklichem ... ] aus.",
+"trlang": "DE"
+},
+{
+"n": "38",
+"sec": "§ 5''",
+"hl": "",
+"master": "n=at dagān ḫatugauš kariddu[š ... ]-šanzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 23'",
+"na-⸢at⸣ da-ga-a-an ḫa-tu-ga-uš ka-ri-id-du-[uš ...? ] [ ... ]x-ša-an-zi"
+]
+],
+"tr": "Sie [ ...]en es (als?) schreckliche Flut[en] zu Boden.",
+"trlang": "DE"
+},
+{
+"n": "39",
+"sec": "§ 5''",
+"hl": "",
+"master": "{GIŠ}ŠÚ.A-z=ašta arunaza katta wet {MUŠ}ḫedammuš tarḫuil[iš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 24'",
+"{GIŠ}ŠÚ.A-za-aš-⸢ta a⸣-ru-na-za kat-ta ú-et {MUŠ}ḫé-dam-mu-uš tar-ḫu-i-l[i-iš]"
+]
+],
+"tr": "Vom Thron herunter aus dem Meer kam Ḫedammu, der Mächti[ge].",
+"trlang": "DE"
+},
+{
+"n": "40",
+"sec": "§ 5''",
+"hl": "",
+"master": "[ ... ] arḫa ḫadan-[ ... ] wet",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 24'",
+"[ ...? ] [ ... ] ar-ḫa ḫa-da-an-x[ ... ] ú-et ¬¬¬"
+]
+],
+"tr": "[ ... ] kam [ ... ] weg [ ... ]20",
+"trlang": "DE"
+},
+{
+"n": "41",
+"sec": "§ 6''",
+"hl": "",
+"master": "[{MUŠ}ḫedamm]uš ANA {d}IŠTAR [memiškiwan dai]š",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 26'",
+"[{MUŠ}ḫé-dam-m]u-uš A-NA {d}IŠTAR [ ... da-i]š"
+]
+],
+"tr": "[Ḫedamm]u [bega]nn, zu Ištar [zu sprechen]:",
+"trlang": "DE"
+},
+{
+"n": "42",
+"sec": "§ 6''",
+"hl": "",
+"master": "{MUNUS}KI.SIKIL",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 26'",
+"{MUNUS}KI.SIKIL"
+]
+],
+"tr": "„Mädchen,",
+"trlang": "DE"
+},
+{
+"n": "43",
+"sec": "§ 6''",
+"hl": "",
+"master": "mān=du=za=kan āššiy[atar ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 26'",
+"ma-a-⸢an⸣-du-za-kán a-aš-ši-y[a-tar ...? ] [ ...? ]"
+]
+],
+"tr": "wenn dir die Lie[be ... ],",
+"trlang": "DE"
+},
+{
+"n": "44",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ] āššiyata[r ... ] pāi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 27'",
+"[ ... ]x a-aš-ši-ya-ta[r ... ]x pa-a-i"
+]
+],
+"tr": "gib [ ... ] Lieb[e]!",
+"trlang": "DE"
+},
+{
+"n": "45",
+"sec": "§ 6''",
+"hl": "",
+"master": "nu=kan eḫu daššawaš [A{ḪI.A}-naš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 27'",
+"nu-kán e-ḫu da-aš-ša-u-aš [ ... ]"
+]
+],
+"tr": "Komm in die schweren [Wasser]!",
+"trlang": "DE"
+},
+{
+"n": "46",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 28'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "47",
+"sec": "§ 6''",
+"hl": "",
+"master": "[{d}IŠTAR-iš ANA {MUŠ}ḫeda]mmu EGIR-pa memiš[k]iwan [daiš]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 28'",
+"[ ... {MUŠ}ḫé-da]m-mu EGIR-pa me-mi-iš-[k]i-u-an [ ... ]"
+]
+],
+"tr": "[Ištar begann, Ḫeda]mmu zu antw[o]rten:",
+"trlang": "DE"
+},
+{
+"n": "48",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ]-eššauš maḫḫan aš[a?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 29'",
+"[ ... ]x-eš-ša-⸢uš⸣ ma-aḫ-ḫa-an a?-š[a?- ... ]"
+]
+],
+"tr": "„[ ... ] wie [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "49",
+"sec": "§ 6''",
+"hl": "",
+"master": "[ ... ]-ša-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. IV 30'",
+"[ ... ]x[ _ _]x x x-⸢ša⸣-x[ ... ]"
+],
+[
+"A",
+"",
+"Rs. IV bricht ab."
+]
+],
+"tr": "[ ... ]“",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 3'':1": "Das Zeichen -uš ist an den rechten Kolumnenrand ausgerückt. Davor ist die Oberfläche beschädigt. Nach Kollation am Original hat dort aber nichts mehr gestanden.",
+"§ 3'':2": "Siegelová, StBoT 14, 1971, 58: -r]a(?). Nach Kollation am Foto ist das gut möglich.",
+"§ 3'':3": "Zeichen über Rasur.",
+"§ 3'':4": "Nach Siegelová, StBoT 14, 1971, 58.",
+"§ 4'':5": "Nach Kollation am Original kein -za wie in der Autographie, sondern ein leicht verschriebenes A.",
+"§ 4'':6": "ták-ša-[a]n? iš!?-tar- über Rasur.",
+"§ 4'':7": "Nach Kollation am Foto wahrscheinlich Rasur.",
+"T1": "Vgl. HEG III, 260 mit Hinweis auf Siegelová, StBoT 14, 1971, 60f., dass damit die unergründlichen Tiefen des Meeres gemeint seien.",
+"T2": "Vgl. Hoffner, Myths2 1998, 55: „When [Sauska], Queen of Nineveh, had approved [the ...],“. Pecchioli Daddi – Polvani 1990, 142: „Quando IŠTAR, la regina di Ninive, fu d'accordo,...“.",
+"T3": "Vgl. dazu Pecchioli Daddi – Polvani 1990, 141 Anm. 8.",
+"T4": "Vgl. HEG II, 1168; ebenso Pecchioli Daddi – Polvani 1990, 142; Hoffner, Myths2 1998, 55.",
+"T5": "Hoffner, Myths2 1998, 55: „smelled(?)“.",
+"T6": "Zu waršula- „Duft“ siehe zuletzt Kloekhorst, Etymological Dictionary 2008, 975-978.",
+"T7": "Eventuell liegt ein mit waršuli ekuzi „er schnuppert“ vergleichbarer idiomatischer Ausdruck vor; vgl. die Übersetzungen von Hoffner, Myths2 1998, 55: „Now when Hedammu had tasted the aroma, namely, the beer, ...“; Pecchioli Daddi – Polvani 1990, 142: „appena Hedammu inghiottì una sola [goc]cia di birra, ...“.",
+"T8": "Wörtl.: „dem Ḫedammu seine Seele“. Vgl. Hoffner, Myths2 1998, 55: „...[sweet] sleep overcame the mind of the valient Hedammu.“; Pecchioli Daddi – Polvani 1990, 142: „.... (IŠTAR) prese al forte Hedammu il suo animo, i [dolci] sonni ...“.",
+"T9": "Nach Mouton, Rêves 2007, 11f. bezeichnet šuppariya- häufiger„schlafen“ als „träumen“.",
+"T10": "Vgl. Haas, Materia Magica 2003, 473f.: „Echse?, Molch?, Salamander?“ und hier die Anmerkung zu KUB 8.67 Kolon 16 (CTH 348.2).",
+"T11": "Siehe die vergleichbare Konstruktion von takšan (ohne ištarna) in KBo 3.46 Vs. 13'f. und ihre Deutung bei Neu, IBS V 23, 15. Anders HEG III, 237: „und komm halbwegs auf der Mitte des t. (o.ä.)“; Hoffner, Myths2 1998, 55: „[Come(?)] from the strong waters. Come through the midst of [ ... ]“; Pecchioli Daddi – Polvani 1990, 142: „e dalle impetuose [acqu]e, con forza vieni nel mezzo!“.",
+"T12": "Vgl. dazu CHD Š, 85b.",
+"T13": "Vgl. zu einer möglichen Ergänzung Hoffner, Myths2 1998, 55: „Hedammu [sees(?) the beautiful goddess], ...“",
+"T14": "Nach Hoffner, Myths2 1998, 55. Anders CHD Š, 253b: „His manhood [ ... ]. He repeatedly starts to impregnate [ ...-]s.“",
+"T15": "Vgl. CHD Š, 253b.",
+"T16": "Vgl. HED 1, 131: „is finished“.",
+"T17": "Vgl. zu den möglichen Bedeutungen CHD P, 211f.",
+"T18": "Vgl. Hoffner, Myths2 1998, 55, zu einer anderen Kolon-Aufteilung.",
+"T19": "Anders Siegelová, StBoT 14, 1971, 61: „... wurde auf dem Felsen geschlagen. Istar, die Königin von Ninive, gelangte in zwei[ ... zu Heda]mmu herab und geht ihm voran. Istar, [die Königin von] Ninive, [ ... ge]langte Istar und hinter ihr Hedammu wie ... schr[ecklich(?) ... ] ... gießt aus und sie am Boden fruchtbare Flut[en ... auslö]sen.“",
+"T20": "Vgl. zu einer möglichen Ergänzung Hoffner, Myths2 1998, 55: „He came out onto the dry land [ ... ].“"
+}
+}

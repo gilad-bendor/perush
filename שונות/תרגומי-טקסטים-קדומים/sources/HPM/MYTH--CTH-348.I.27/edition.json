@@ -1,0 +1,474 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.27",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.27 (TX 2009-09-01, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-tat",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x-ta-⸢at⸣1"
+]
+],
+"tr": "[ ... ]te.",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=a-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"na-2[ ... ]"
+]
+],
+"tr": "Und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... MU]Š{ḪI.A}? šammanaz[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... MU]Š?⸢{ḪI⸣}.A ša-am-ma-na-az3[ ... ]"
+]
+],
+"tr": "[ ... ] die [Schlan]gen? aus dem Fundament [ ... ]1",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ku]ttaz lalawan-[ ...4 arḫa wiy]a[t]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ku-u]t-ta-az la-la-wa-an-[ ... ] [u-i-y]a-a[t]"
+]
+],
+"tr": "[ ... vertr]ie[b ... ] von der [Wa]nd, um zu löse[n? 2... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-az {GIŠ}GAG-za ḫuwimpa[z ... arḫa w]iya[t]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ _ _ _ ]x-az {GIŠ}GAG-za ḫu-u-im-pa-[az ... ] [ ... u]-⸢i-ya⸣-a[t]"
+]
+],
+"tr": "[ ... ver]trie[b ... ] vom Nagel (und) vom ḫuwimpa-Gebäudeteil3 [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-naza=ma=kan ḫantezziya[za ... -e]r?",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ _ _ _ ]x-⸢na-za-ma-kán⸣ ḫa-an-⸢te⸣-ez-⸢zi-ya⸣-[za ... ] [ ... -e]r?"
+]
+],
+"tr": "Aus dem vorderen [ ... ] aber [ ...]te man [ ... ].",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "par[ā ...-m]a? azūpankuš? IŠTU GI[Š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"pa-r[a-a _ _ (_) -m]a? a-zu-u-⸢pa-an-ku?⸣-[u]š IŠ-TU GI[Š5 ... ]"
+]
+],
+"tr": "Hervo[r ... ] aber? die azūpanku4 aus Hol[z ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[{URU}kum]miyaz=m[a kwiē]š {GIŠ}AB{MEŠ}-uš aranteš e[šer]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[{URU}kum]-mi-ya-⸢az⸣-m[a ku-i-e-e]š {GIŠ}AB{MEŠ}-uš a-ra-an-te-eš ⸢e⸣-[šir]"
+]
+],
+"tr": "Die Fenster, [di]e von [Kum]me aus ab[er] (offen) stand[en],5",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "[n=aš=ka]n anda ⸢ištapper⸣",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[na-aš-ká]n an-da ⸢iš-tap-pé-er⸣"
+]
+],
+"tr": "die verschlossen sie.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "{URU}ninuwaz=ma kwe {GIŠ}[IG{ḪI.A} {GIŠ}AB{Ḫ]}I.A-ušš=a aranteš ešer",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"{URU}ni-nu-wa-az-ma ku-e {GIŠ}[IG{ḪI.A}] [{GIŠ}AB{Ḫ]}I.⸢A⸣-uš-ša a-ra-an-te-eš e-šir"
+]
+],
+"tr": "Die [Tür]en (und) [Fenst]er, die aber von Ninive aus (offen) standen,",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=aš=kan {URU}kuppi[laš GADA-it anda] ištapper",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"na-aš-kán {URU}ku-up-pí-[la-aš ... ] [ ... ] iš-tap-⸢pé⸣-er"
+]
+],
+"tr": "die verschlossen sie [mit einem Tuch aus] der Stadt Kuppi[la].",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 1'",
+"hl": "",
+"master": "ŠÀ É-TI=ma=kan adanna akuw[anna mekki ḫand]āet",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"ŠÀ É-TI-ma-kán a-da-an-na ⸢a⸣-ku-w[a-an-na ... ] [ḫa-an-d]a-a-⸢et⸣"
+]
+],
+"tr": "Im Innern des Hauses aber [bere]itete er [viel] zum Essen (und) Trin[ken] vor.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 1'",
+"hl": "",
+"master": "{DUG}palḫiuš=ma IŠTU KAŠ.GEŠTIN šunn[aš]",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"{DUG}pal-ḫi-uš-ma IŠ-TU KAŠ.GEŠTIN šu-un-n[a-aš]"
+]
+],
+"tr": "Kessel aber füll[te er] mit Bier.",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 1'",
+"hl": "",
+"master": "[{GIŠ}BANŠ]UR{ḪI.A}-uš=ma unuwanduš IŠTU NINDA ḫarpay[er]",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"[{GIŠ}BANŠ]UR{ḪI.A}-uš-ma ú-nu-wa-an-du-uš IŠ-TU NINDA ḫar-pa-⸢i⸣-[er]"
+]
+],
+"tr": "Die gedeckten [Tisc]he aber überhäuft[e man] mit Brot",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 1'",
+"hl": "",
+"master": "[{d}muk]išanuš=kan {d}kumarbiyaš uddār ašš[anut]",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"[{d}mu-k]i-ša-nu-uš-kán {d}ku-mar-bi-ya-aš ud-da-a-ar aš-š[a?-nu-ut]"
+]
+],
+"tr": "[Muk]išanu füh[rte] Kumarbis Worte aus",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 1'",
+"hl": "",
+"master": "[nu EG]IR-pa {d}kumarbiya memiyan pēda[š]",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"[ ... EG]IR-pa {d}ku-mar-bi-ya me-mi-ya-an pé-e-da-[aš] ¬¬¬"
+]
+],
+"tr": "und bracht[e] die Nachricht zu Kumarbi [zur]ück.",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 2'",
+"hl": "",
+"master": "[{d}mukiš]anuš uddār ANA {d}kumarbi memi[škiwan daiš]",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"[{d}mu-ki-š]a-nu-uš ud-da-a-ar A-NA {d}ku-mar-bi me-mi-i[š-ki-u-an ... ]"
+]
+],
+"tr": "[Mukiš]anu [begann], die Worte zu Kumarbi [zu] spre[chen]:",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 2'",
+"hl": "",
+"master": "[piy]at=mu kuwapi",
+"words": [],
+"mss": [
+[
+"A",
+"17'",
+"[pí-y]a-[a]t-mu ku-wa-pí"
+]
+],
+"tr": "„Wohin du mich [schic]ktest,",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=kan ḫūman ašš[anunun apiya=pat]",
+"words": [],
+"mss": [
+[
+"A",
+"17'",
+"nu-kán ḫu-u-ma-an aš-š[a-nu-nu-un ... ]"
+]
+],
+"tr": "[genau dort] ric[htete ich] alles her.",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ŠÀ] É-TI=ya=kan adanna akuwanna [ḫandānun]",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"[ ... ] ⸢É⸣-TI-ya-kán a-⸢da⸣-an-na a-ku-wa-an-na [ ... ]"
+]
+],
+"tr": "Und [im Innern] des Hauses [bereitete ich] Essen (und) Trinken vor,",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 2'",
+"hl": "",
+"master": "[GIM-an ŠA] EN-YA ZI-aš taparriyan [ḫarta]",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"[ ... ] [ ... ] EN-YA ZI-aš ta-pár-ri-ya-an [ ... ] ¬¬¬"
+]
+],
+"tr": "[wie] (es) der Wille mein[es] Herr[n] bestimmt [hatte].“",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 3'",
+"hl": "",
+"master": "[{d}kum]arbiš uddār ANA {d}muki[šanu memiškiwan daiš]",
+"words": [],
+"mss": [
+[
+"A",
+"20'",
+"[{d}ku-m]ar-bi-iš ud-da-⸢a⸣-ar A-NA {d}⸢mu-ki⸣-[ša-nu ... ]"
+]
+],
+"tr": "[Kum]arbi [begann], die Worte zu Muki[šanu zu sprechen]:",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... -z]i?",
+"words": [],
+"mss": [
+[
+"A",
+"21'",
+"[ ... -z]i?"
+]
+],
+"tr": "„[ ... ]t",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 3'",
+"hl": "",
+"master": "ni-[ ... ]-a 1-anki [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"21'",
+"ni-x[ _ _ ]-a 1-⸢an-ki⸣6 [ ... ]"
+]
+],
+"tr": "[ ... ] einmal [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] ⸢EZEN4⸣ [ ...]-šitar? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"22'",
+"[ ... ]x ⸢EZEN4⸣ x[ _ _ ]x-⸢ši?-tar⸣ x[ ... ]"
+]
+],
+"tr": "[ ... ] Fest [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]{MEŠ}-ni[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"23'",
+"[ ... ]x⸢{MEŠ}-ni⸣[ _ _ ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Dijkstra, UF 37, 2005, 324, liest: e]-ep-ta-ma.",
+"§ 1':2": "Dijkstra, UF 37, 2005, 324, ergänzt : na-[aš.",
+"§ 1':3": "Dijkstra, UF 37, 2005, 324, ergänzt: ša-am-ma-na-az-[ma-kán ku-ut-ta-az]. Auch das zu Beginn der nächsten Zeile ergänzte Verb ar-ḫa u-i-ya-at verbindet sie mit diesem Kolon. Vgl. die Übersetzung.",
+"§ 1':4": "Dijkstra, UF 37, 2005, 326, ergänzt: lalawan[zi {GIŠ}tar-ma-za ku-ut-ta-az.",
+"§ 1':5": "Dijkstra, UF 37, 2005, 326, ergänzt: {GIŠ}[IG{ḪI.A}?.",
+"§ 3':6": "Dijkstra, UF 37, 2005, 326, ergänzt: 1-an-ki-[ya-aš šar-ra-at-ta? .",
+"T1": "Vgl. die Ergänzung von Dijkstra, UF 37, 2005, 325: „[and walls he took away]“.",
+"T2": "Die Übersetzung folgt Groddek, 2000/2001, 26; vgl. Dijkstra, UF 37, 2005, 327: „in order] to free the walls“. Vgl. den Kommentar von Groddek, 2000/2001, 29, zu der Ergänzung von lalawanzi mit Verweis auf CHD L-N 25f.",
+"T3": "Vgl. Groddek, 2000/2001, 29, mit weiterer Literatur.",
+"T4": "Hapax legomenon nach Groddek 2000/2001, 29.",
+"T5": "Die Übersetzung folgt Dijkstra, UF 37, 2005, 325 und Groddek 2000/2001, 26, mit einer Übersetzung „(offen)stehen“. Der Ausdruck ist unklar. Eine Ableitung von ar- „stehen“, ar-/er- „ankommen, erreichen“ oder arai-, ariya- „(hoch)heben“ sind möglich. Nach CHD L-N 89a findet sich in Zusammenhang mit Fenster öffnen das Verb ḫaš- „öffnen“. Vgl. auch CTH 348.26."
+}
+}

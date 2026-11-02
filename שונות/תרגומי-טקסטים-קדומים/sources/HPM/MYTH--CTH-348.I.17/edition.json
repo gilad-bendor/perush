@@ -1,0 +1,173 @@
+{
+"kind": "MYTH",
+"cth": "CTH 348.I.17",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 348.I.17 (TX 2009-09-08, TRde 2009-09-01)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu[n-1 ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"nu-u[n- ... ]"
+]
+],
+"tr": "Und? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "nun-2[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"nu-un-x[ ... ]"
+]
+],
+"tr": "Und? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "{MUŠ}ḫe[dammu- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"{MUŠ}ḫé-[dam-mu- ... ]"
+]
+],
+"tr": "Ḫe[dammu ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "aur[i- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"a-ú-r[i- ... ]"
+]
+],
+"tr": "[ ... ] Gren[zwache ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=wa=za [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"nu-wa-za [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "alp[u- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"al-p[u- ... ]"
+]
+],
+"tr": "[ ... ] Wol[ken ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"x x3[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Oder nu[=n-?",
+"§ 1':2": "Oder nu=n-x[?",
+"§ 2':3": "Siegelová, StBoT 14, 1971, 66: n[a?. Nach Kollation am Foto ist die Lesung möglich."
+}
+}
