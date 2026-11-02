@@ -242,6 +242,8 @@ Each Sumerian legal formula takes the Hebrew of its standard Akkadian equivalent
 
 - **2026-10-30 harmonization** (`../harmonization--2026-10-30.md`, rows 5, 6): *siparru* (ZABAR) "bronze" = `אָרָד` (§4's row; vocalized at its first occurrence in each text; was `נְחֹשֶׁת`, which stays *erû* / URUDU "copper": LE 16–17, the Hittite texts); *ṣubātu* "garment" = `שִׂמְלָה` in Akkadian (MAL A's row; was `בגד`; the Hittite TÚG, incl. the Instructions' TÚG-TUM, keeps `בגד`). Changed lines: EST 530 `מתוך שמים של נחושת` → `מתוך שמים של אָרָד` (and the §64 heading `שמי אָרָד`, the footnote, the notes; Deut 28:23 stays [equivalent]), 649 `שַׁמַשׁ רשת של נחושת עליכם` → `שַׁמַשׁ רשת של ארד עליכם` (and the 651 footnote's wording), the part 5–7 introductions and fixed-words lists, the note at 440 (part 5); LH 2612′ `באיזמל נחושת` → `באיזמל אָרָד`, 2616′, 2631′, 2635′, 2641′, 2645′ → `באיזמל ארד`; MAL A r v 48 `בין בגד, בין […]` → `בין שמלה, בין […]`; LE's note at 16–17 and its open decision 2 (settled); project.md rows and decision lists of EST, LH, MAL A; §7's ZABAR remark; the parallels index rebuilt.
 
+- **2026-11-02 harmonization** (the Round 5 finalization): *aggu* "furious" = `קוֹצֵף` / `קֶצֶף` (the root קצף, the adjective of *agāgu*; Gilgameš VII 149, X 307, SAA 9 1 iv 7, the Theodicy 50), not `זעם`, which is *ezēzu*'s. Changed line: LH 3545′ `הזועם,` → `הקוצף,` (and its gloss and note). And by the lead: EST 475 *aggiš* `מארה נמרצת בזעם` → `בקצף` (the adverb of *aggu*; with its gloss, footnote and the project.md row).
+
 ## 7. The Hittite texts: the Laws (project 8) and the Instructions for Temple Personnel (project 9) (fixed 2026-10-24 by the Round 4 run 6 coordinator, before drafting)
 **Binding for every Hittite text of the folder** (`tools/hittite_tools.py` keys HL1, HL2, HLPT, IN) and, for the tables
 §H2–§H9, for the Hittite rituals too (`../טקסי-שילוח-וטיהור/`): the tool reads the H-tables of both corpus files. The
@@ -520,7 +522,7 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:נגח\|ינגח\|נגחן\|נגף\|ינגוף)(?![א-ת])` | NEVER | Exod 21:28–36 (no Hittite counterpart) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:ברית\|תורה\|חוקה\|חקה)(?![א-ת])` | NEVER | *išḫiul* = `חובה` |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:חפשי\|לחפשי)(?![א-ת])` | NEVER | *ELLUM* = `בן חורין` |
-| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:כופר\|כפר\|כיפר\|יכפר\|כפרה\|כפורים\|לכפר\|מכפר)(?![א-ת])` | NEVER | Exod 21:30, Lev 16: no Hittite counterpart (*šarnikzel* = `פיצוי`) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:כופר\|כפר\|כיפר\|יכפר\|כפרה\|כפורים\|לכפר\|מכפר)(?![א-ת])` | `\bkupr\|\bku-up-r` | Exod 21:30, Lev 16: no Hittite counterpart (*šarnikzel* = `פיצוי`). The one licence: *kupri-* "bitumen" (the Akkadian loan *kupru*; HE 25:15, 25:17 `kupri=kkan`, `kupriyanza`, ms `ku-up-ri-`) = `כֹּפֶר` [cognate] ↔ `וְכָפַרְתָּ אֹתָהּ מִבַּיִת וּמִחוּץ בַּכֹּפֶר` (בראשית ו:יד) – added at the Round 5 finalization (2026-11-02) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:שעיר\|שעירים\|עזאזל)(?![א-ת])` | NEVER | Lev 16 (*MÁŠ.GAL* = `תיש`) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:מדבר\|מדברה\|המדברה)(?![א-ת])` | NEVER | Lev 16:10, 21–22 (the rituals send to the enemy's land, or *gimra-* `בָּר`) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:זר\|זרים\|זרה)(?![א-ת])` | NEVER | Num 18:4, 7; Lev 22:10 |
@@ -594,7 +596,7 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | F5 | `^n=aš aki$\|^naš aki$` | `וימות` | "and he dies" (the case's second clause) |
 | F6 | `(?:qa-as-sú\|qāssu\|šu-aš=ššet\|šu-aš\|kešš?[ai]r\S*) waštai` | `ידו חוטאת` | "his hand errs" (the unintended killing) |
 | F7 | `\bḫurkel\b\|\bḫurk[ei]l\b` | `תועבה` | |
-| F8 | `^(?:\S+ ){0,6}p[āa]i$` | `(?:^\| )ו?י?יתן(?: \|$)\|(?:^\| )ו?תיתן(?: \|$)\|(?:^\| )ו?יתנו(?: \|$)` | *pāi* "he gives" closing a clause = `ייתן` |
+| F8 | `^(?:\S+ ){0,6}p[āa]i$` | `(?:^\| )ו?י?יתן(?: \|$)\|(?:^\| )ו?תיתן(?: \|$)\|(?:^\| )ו?יתנו(?: \|$)` | *pāi* "he gives" closing a clause = `ייתן` – the law formula [keys: HL1 HL2 HLPT] (scoped at the Round 5 finalization, 2026-11-02: elsewhere *pāi* is also the imperative "give!" (KU 126, HE 4:44, 22:9, AM 117–118) and the narrative present `נותן` (AP 1:17–19); IN has no clause-final *pāi*) |
 | F9 | `\b[td][aā]y[ae]zzi\b\|\b[td][aā][iy][aei]z?zi\b` | `יגנוב\|יגנב` | "steals" |
 | F10 | `^umma\b` | `(?:^\| )כה(?: \|$)` | *UMMA X* "thus (says) X" = `כֹּה (אוֹמֵר) X` (rituals) |
 | F11 | `\b(?:ul\|natta) ḫaratar\b` | `אין(?: זו)? עברה` | *UL / natta ḫaratar* "it is no offence" = `אֵין עֲבֵרָה` (HL2, the sexual laws; §7.1) |
@@ -651,6 +653,8 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | HL1 35 | ok | `לפנים היו נותנים מנה כסף,` |
 | HL1 36 | ok | `ועתה עשרים שקל כסף ייתן,` |
 | HL1 36 | err | `אבל עכשיו עשרים שקל כסף ייתן,` |
+| HL1 40 | ok | `עשרה שקלים כסף ייתן,` |
+| HL1 40 | err | `עשרה שקלים כסף נותן,` |
 | HL2 187.1 | ok | `אם איש יחטא עם שור – תועבה: ימות.` |
 | HL2 187.1 | err | `אם איש ישכב עם שור – תועבה: ימות.` |
 | HL2 193.1 | err | `ישכב,` |

@@ -537,6 +537,7 @@ compares them.
 | | {D}IŠKUR (Tarḫunna) | `אֵל הַסְּעָרָה` | by meaning (the logogram's Hittite reading is debated): a note |
 | | DINGIR{MEŠ} | `הָאֵלִים` | |
 | | Inara, Ḫupašiya, Kiškilušša, Ziggaratta | `אִינָרָה`, `חוּפַּשִׁיָּה`, `כִּישְׁכִּילוּשָּׁה`, `זִיגָּרָתָּה` | |
+| Hittite (Hurrian song; HD, 2026-11-02) | {MUŠ}*ḫedammu*; {D}*Šertapšuruḫi*; {D}*Kumarbi*; {D}IŠTAR; *aruna-*; {D}*aruna-* | `חֶדַמּוּ` (the determinative MUŠ untranslated: no `נחש` in the line); `שֶׁרְתַּפְּשׁוּרוּחִי`; `קוּמַרְבִּי`; `אִשְׁתַּר`; `יָם` (the Sea as a person without the determinative: `הַיָּם הַגָּדוֹל`); `אֵל הַיָּם` | HD's lines are the myth corpus's (`../מיתוסים-חתיים-וחוריים/renderings.md` binds them; `hittite_tools.py verify HE` keeps them identical) |
 | Vedic | *áhi-* | `נָחָשׁ` | |
 | | *vr̥trá-* | `וְרִטְרָה` | "the Obstacle, the Encloser" (a note) |
 | | *vájra-* | `וַגְ'רָה` | the thunder-club (a note) |

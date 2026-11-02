@@ -537,7 +537,14 @@ the MB refrain `שישה מלכים הם, שותפים, מו[פיעים], ושש
 `בִּקֵּשׁ`, *kibru* `קָצֶה`, *kāru* `נָמָל`, *abullu* `שַׁעַר`, *ṣâlu* `רָב`; Akkad `אַכַּד`. Open: *zummû* `*שְׁכוֹל*`,
 *šumšu lū zikir* `שמו יהי לְזֵכֶר`.
 
+### 11.7 2026-11-02 harmonization (the Round 5 finalization)
+**2026-11-02 harmonization** (the Round 5 finalization): *aggu* "furious" = `קוֹצֵף` / `קֶצֶף` (the root קצף: the
+adjective of *agāgu* `קצף`, as in Gilgameš VII 149, X 307, SAA 9 1 iv 7, the Theodicy 50, the Poplar d+14), not `זעם`,
+which is *ezēzu*'s (OB I c+14 `בזעם האלים` stays). Changed: SB.132 `לזעם לב אֶנְלִיל` → `לקצף לב אֶנְלִיל` (no other
+version has the line).
+
 ## Changelog
+- 2026-11-02: §11.7 the 2026-11-02 harmonization (*aggu* `קֶצֶף`).
 - 2026-10-31: §11 the Cuthaean Legend (project 4) – names, grammar, formulas, reserved and gated words; fixed by the Round 5 run 5 coordinator before the first part.
 - 2026-10-23: the 2026-10-23 harmonization applied to Etana (end of §10); §10.3–§10.4 quotations corrected.
 - 2026-10-23: the 2026-10-23 harmonization applied to Enmerkar (end of §9.6).

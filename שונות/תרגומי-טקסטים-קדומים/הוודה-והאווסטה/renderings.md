@@ -270,8 +270,8 @@ where the fire-offering is near.
 | F1 | `kasmai devaya havisa vidhema` | `לאיזה אל נכבד במנחה` | RV 10.121.1–9 (the refrain: "To which god shall we do honour with an oblation?") |
 | F2 | `ahann ahim` | `הרג את הנחש` | RV 1.32.1c, 2a (the dossier) |
 | F3 | `peresat zarathustro ahurem mazdam` | `שאל זרתושטרה את אהורה מזדה` | Vd 2.1 (the question formula) |
-| F4 | `ahura mazda mainiio spenista datare gaethanam astuuaitinam asaum` | `אהורה מזדה, הרוח הנדיבה ביותר, עושה בעלי החיים בעלי העצמות, נאמן הסדר` | Vd 2.1 (fixed by the VD translator, §11.3) |
-| F4b | `datare gaethanam astuuaitinam asaum` | `עושה בעלי החיים בעלי העצמות, נאמן הסדר` | Vd 2.39, 42, 43 (the short address) |
+| F4 | `ahura mazda mainiio spenista datare gaethanam astuuaitinam asaum` | `אהורה מזדה, הרוח הנדיבה ביותר, מעמיד בעלי החיים בעלי העצמות, נאמן הסדר` | Vd 2.1 (fixed by the VD translator, §11.3; *dātar* `מעמיד` since 2026-11-02, §11.9) |
+| F4b | `datare gaethanam astuuaitinam asaum` | `מעמיד בעלי החיים בעלי העצמות, נאמן הסדר` | Vd 2.39, 42, 43 (the short address) |
 | F5 | `sa hovaca` | `אמר` | ŚB, AB: "he said" |
 
 
@@ -334,7 +334,7 @@ where the fire-offering is near.
   where the source has *iva* / *ná* with a cattle word.
 
 ### 11.3 The flood: ŚB 1.8.1, MBh 3.185, Vd 2 (translator 2; merged 2026-10-30)
-- F4 fixed: `אֲהוּרָה מַזְדָּה, הרוח הנדיבה ביותר, עושה בעלי החיים בעלי העצמות, נאמן הסדר!`; F4b the short address
+- F4 fixed: `אֲהוּרָה מַזְדָּה, הרוח הנדיבה ביותר, עושה בעלי החיים בעלי העצמות, נאמן הסדר!` (*dātar* `עושה` → `מעמיד`, 2026-11-02, §11.9); F4b the short address
   (2.39, 42, 43). Av. *spəṇta* `נדיב` (not the root קדש: `הרוח הקדושה` would echo Ps 51:13 – open for the user);
   *aṣ̌auuan* `נאמן הסדר`; *mrū-* `אמר`, *aog-* `דיבר`, *paiti-aog-* `השיב`, *pərəs-* mid. `נועץ`; *yazata* `ראויי
   הזבח`, *māzdaiiasni* `זובחי מזדה` (Av. *yaz-* = Skt *yaj* = `זבח`); *frād-* / *vard-* `הצמיח` / `הגדיל` (not
@@ -422,7 +422,7 @@ except where the god speaks or is invoked, AB 7.16–17 –, Indra, Varuṇa, Pr
 
 **Splits checked and kept** (each has a line in its apparatus; the five marked + got it in this review):
 - *nár* `אנשים` in VD2 41 (a pair of man and woman); *zam* `ארץ` (and `אדמה` as material, VD2 31) against RV *kṣám*
-  `תבל` (+ VD2 8); Av. *dātar* / *dā-* `עושה` (F4) against Skt *dhātár* `הַמַּעֲמִיד`, Av. *maṣ̌iia* `אדם` (§5.3) against
+  `תבל` (+ VD2 8); Av. *dā-* `עושה` (by sense; *dātar* = `מעמיד` since 2026-11-02, §11.9) beside Skt *dhātár* `הַמַּעֲמִיד`, Av. *maṣ̌iia* `אדם` (§5.3) against
   *mártya*, Av. *mainiiu* `רוח` against *manyú* `כעס` (+ VD2 1); Av. *ahu-* "existence" `הקיום` against *ásu* (+ VD2 22);
   Av. *pasu* `צאן` against *paśú* `בהמה` (§5.3).
 - *páyas* `לשד` (RV 10.17.14) beside *médha* `לשד הזבח` (+ RV10.17 14a); *suvidátra* `נדיב` (RV 10.14–10.17) beside Av.
@@ -443,8 +443,18 @@ the real hidden echoes are written and tagged (`חושך`, `רוח`, `זרע`, `
 
 **Open (for the user):**
 - Av. *dā-* / *dātar* against Skt *dhā* / *dhātár*: the cognate rule (*aša* = *r̥tá*) would give `מעמיד`, but F4's
-  `עושה` follows the Avestan sense "create"; kept, open.
-- `עושה` is then both Av. *dātar* and √*kr̥* / Av. *kar-* (`עשה`); `נדיב` both *spəṇta* and *suvidátra*; `לשד` both
+  `עושה` follows the Avestan sense "create"; kept, open. **Settled 2026-11-02** (§11.9): *dātar* = `מעמיד`.
+- `עושה` was then both Av. *dātar* and √*kr̥* / Av. *kar-* (`עשה`; settled 2026-11-02: *dātar* `מעמיד`); `נדיב` both *spəṇta* and *suvidátra*; `לשד` both
   *páyas* and *médha*'s head word – each recorded, none a reserved word.
 - RV 10.10.13d / 14b (the one repeated-line difference `verify` lists: `תחבק` / `יחבק`) is justified by the change of
   subject.
+
+### 11.9 2026-11-02 harmonization (the Round 5 finalization; the lead's decision)
+**2026-11-02 harmonization** (the Round 5 finalization): Av. *dātar* (Ahura Mazdā's epithet) = `מַעֲמִיד` – the Hebrew of
+its Sanskrit cognate *dhātár* `הַמַּעֲמִיד` (RV 10.190.3; RV 10.18), by the cousin-cognate principle (*aša* = *r̥tá* `סדר`;
+guidelines §6.7, 2026-10-30, principle 3), and because `עושה` also renders Av. *kar-* / √*kr̥* in the same text
+(`שעשה יִימָה`), which hid that the Avestan uses two verbs. Meaning: "establisher, creator". The verb *dā-* itself stays
+by sense (*daδuuā̊* `העושה`, Vd 2.20–21; *dātō* "I was made"). Changed: F4 → `אֲהוּרָה מַזְדָּה, הרוח הנדיבה ביותר,
+מעמיד בעלי החיים בעלי העצמות, נאמן הסדר`, F4b → `מעמיד בעלי החיים בעלי העצמות, נאמן הסדר` (§8); Vd 2.1, 2.39, 2.42,
+2.43 (`עושה בעלי החיים` → `מעמיד בעלי החיים`, with their glosses and the note of 2.1). The open item of §11.8 is settled.
+

@@ -24,6 +24,12 @@ KEYs and base texts (all under ../../sources/):
   TH  Greek: Hesiod, Theogony 237–239, 270, 295–300, 333–336, 820–828 (Perseus, Evelyn-White 1914, PD text,
       CC BY-SA markup: Perseus--Hesiod/)
   IL  Hittite: the Illuyanka myth (CTH 321), version 1, KBo 3.7 i 9–20 (TLHdig 0.3, CC BY 4.0: TLHdig/CTH-321/)
+  HD  Hittite (from Hurrian): the Song of Ḫedammu (CTH 348.I), HPM (Rieken et al., CC BY-SA 4.0: HPM/MYTH--CTH-348.I.<n>/),
+      read through ../../tools/hittite_tools.py (its key HE: the same lines, labels `<fragment>:<clause>`), in the story's
+      order: 6:13–6:19 (the Sea gives Kumarbi his daughter), 21:12–21:16 (the son lifted onto Kumarbi's knees), 2:5–2:22
+      (Ḫedammu reared; his food), 4:10–4:39 (Ištar's potion in the sea; her naked body; the serpent's size; the floods).
+      The corpus's own file (../../מיתוסים-חתיים-וחוריים/1-אילויאנקה-וחדמו/annotated-HE.rtl.md) holds the same
+      transliteration and `>` lines: `hittite_tools.py verify HE` checks the identity (as `verify IL` does for IL).
   RV  Vedic Sanskrit: Rigveda 1.32.1, 2, 4, 5, 8, 11 (VedaWeb, the Zurich text and morphology, CC BY 4.0: VedaWeb/)
   HY  Old Norse: Hymiskviða 22–24 (Bugge 1867, PD: Bugge-1867--Saemundar-Edda/)
   KJ  Old Japanese / Classical Chinese (kanbun): Kojiki, Book 1, the Yamata-no-Orochi episode (zh.wikisource,
@@ -48,6 +54,7 @@ UNITS = {
     "AP": ("פפירוס ברמנר־רינד: ספר הכרעת אַפּוֹפִּיס (מצרית)", "Middle Egyptian (Ptolemaic copy)"),
     "TH": ("הֶסִיּוֹדוֹס, תולדות האלים: קֵטוֹ וצאצאיה, טִיפוֹאֶוּס (יוונית)", "Greek"),
     "IL": ("אִילוּיַנְקָה: הנחש ואל הסערה (חתית)", "Hittite"),
+    "HD": ("שירת חֶדַמּוּ: נחש הים ואשתר (חתית, מחורית)", "Hittite (from Hurrian)"),
     "RV": ("רִיגְוֵדָה א 32: אִינְדְּרָה והנחש (סנסקריט ודית)", "Vedic Sanskrit"),
     "HY": ("הִימִיסְקְוִידָה 22–24: תּוֹר והנחש (נורדית עתיקה)", "Old Norse"),
     "KJ": ("קוֹגִ'יקִי: הנחש שמונה־הראשים (יפנית עתיקה בכתב סיני)", "Old Japanese (kanbun)"),
@@ -214,6 +221,41 @@ def base_IL():
     return [(l.replace("Vs. I ", "i"), rows[l][0], rows[l][1]) for l in IL_LINES]
 
 
+# HD: the Song of Ḫedammu, read from the same HPM editions (and TLHdig glosses) as hittite_tools.py's key HE, so that
+# the dossier's lines are the corpus's lines (labels `<fragment>:<clause>`); the ranges in the story's order (HPM's
+# fragment numbers are kept as labels; the order of the fragments is the usual reconstruction, not HPM's numbering).
+HD_RANGES = [("6:13", "6:19"), ("21:12", "21:16"), ("2:5", "2:22"), ("4:10", "4:39")]
+
+
+def _hittite():
+    sys.path.insert(0, os.path.join(ROOT, "tools"))
+    import hittite_tools
+    return hittite_tools
+
+
+def _hd_rows():
+    rs = _hittite().rows("HE")
+    labs = [r["label"] for r in rs]
+    out = []
+    for a, b in HD_RANGES:
+        out += rs[labs.index(a):labs.index(b) + 1]
+    return out
+
+
+def base_HD():
+    out = []
+    for r in _hd_rows():
+        info = [f"`{w[0]}` – {w[1]} \"{w[2]}\"" if w[1] else f"`{w[0]}` – {w[2]}" for w in r["words"]]
+        info += [f"ms {sig} {lab}: `{tx}`" for sig, lab, tx in r["mss"]]
+        out.append((r["label"], r["text"], [f"HPM CTH 348.I.{r['sectitle']}"] + info))
+    return out
+
+
+def tr_HD():
+    """The HPM editors' German translation of each line (rank 3: read only after drafting)."""
+    return [f"[{r['label']}] {r['tr'] or '(none)'}" for r in _hd_rows()]
+
+
 RV_STANZAS = [1, 2, 4, 5, 8, 11]
 
 
@@ -301,7 +343,7 @@ def make_rv_tsv(tei, out):
     print(out, len(rows))
 
 
-BASE = {"MK": base_MK, "WC": lambda: base_aed("WC"), "AP": lambda: base_aed("AP"), "TH": base_TH, "IL": base_IL, "RV": base_RV, "HY": base_HY, "KJ": base_KJ}
+BASE = {"MK": base_MK, "WC": lambda: base_aed("WC"), "AP": lambda: base_aed("AP"), "TH": base_TH, "IL": base_IL, "HD": base_HD, "RV": base_RV, "HY": base_HY, "KJ": base_KJ}
 _CACHE = {}
 
 
@@ -455,6 +497,10 @@ def cmd_data(key, tr=False):
     if tr and key in ("MK", "WC", "AP"):
         print("## AED's German sentence translations (after drafting only)")
         for x in (tr_MK() if key == "MK" else tr_aed(key)):
+            print("-", x)
+    if tr and key == "HD":
+        print("## The HPM editors' German translation (after drafting only)")
+        for x in tr_HD():
             print("-", x)
 
 

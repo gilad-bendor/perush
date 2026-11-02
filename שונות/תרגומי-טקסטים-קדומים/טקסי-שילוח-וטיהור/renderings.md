@@ -174,6 +174,8 @@ the blood and the evil `הכניס`; QATI `תַּם`; *pāi* as a command `תן`
 escapes are kept rather than narrowing F8, which the Laws need). **Cruxes for the review:** AM 191 *laḫḫiya*, 216–220, 228 DAM "my
 wife" in a woman's prayer, 235, 248 *šuppa-*, 257; AM2 17 *arḫa arai-*.
 
+- **2026-11-02 harmonization** (the Round 5 finalization, `../harmonization--2026-11-02.md`): no ritual `>` line changed; F8 no longer applies to the rituals (AM 117–118's escapes removed); F18 requires *aššuli* in its formula; SISKUR `טקס` kept (Ḫedammu's offerings `מנחה`, by sense).
+
 ## H2. Names (machine-read; the ritual texts)
 | Source (regex) | Hebrew | ★ | Note |
 |---|---|---|---|
@@ -206,7 +208,7 @@ wife" in a woman's prayer, 235, 248 *šuppa-*, 257; AM2 17 *arḫa arai-*.
 | F | Composite (regex, flat) | Hebrew (regex on the unvocalized line without punctuation) | Note |
 |---|---|---|---|
 | F17 | `kuiš(?:=wa)?(?:=kan)? dingir-l[iu]m` | `איזה אל` | "whichever god (made this plague)" = `אֵיזֶה אֵל אֲשֶׁר …` (R1a) |
-| F18 | `aššul` | `בטובה` | *aššuli nai-* "turn in favour" = `בְּטוֹבָה פָּנָה` (R1a) |
+| F18 | `[aā]ššuli` | `בטובה` | *aššuli nai-* "turn in favour" = `בְּטוֹבָה פָּנָה` (R1a); also *aššuli tarna-* "release in favour" (SR 16.10.4, 19.1.1, 19.15.3). The d.-l. *aššuli* only (the Round 5 finalization, 2026-11-02: the bare `aššul` fired on the noun *aššul* "favour" in the Song of Release's curse, SR 10.1.2 `אַל טובה`) |
 | F19 | `lukkatta karūwari[wu]ar ḫūd[aā]k` | `כשעולה השחר בהשכמה מיד` | the dawn of the second–fourth days (AS 42, 74, 87) |
 | F21 | `(?<![\w=])kāša(?![\w])` | `הנה` | *kāša* "here, behold" (not *kāš* "this one") |
 
@@ -238,6 +240,8 @@ wife" in a woman's prayer, 235, 248 *šuppa-*, 257; AM2 17 *arḫa arai-*.
 | AS 17 | err | `"איזה אלוהים עשה את המגפה הזאת –` |
 | AS 17 | err | `"מי הָאֵל אֲשֶׁר עָשָׂה אֶת הַמַּגֵּפָה הַזֹּאת –` |
 | AS 17 | err | `"איזה אל אשר עשה את המגפה הזאת –` |
+| UH 26 | ok | `ואילו אל ארץ חַתִּי – פְּנֵה פנימה בטובה!"` |
+| UH 26 | err | `ואילו אל ארץ חַתִּי – פְּנֵה פנימה לטובה!"` |
 | AS 11 | ok | `ואותם יחד שוזר;` |
 | AS 20 | ok | `ובשחר אני מסיע אותם אל הבָּר.` |
 | AS 20 | err | `ובשחר אני מסיע אותם אל המדבר.` |

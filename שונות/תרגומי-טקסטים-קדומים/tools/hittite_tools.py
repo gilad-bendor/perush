@@ -48,8 +48,13 @@ verify checks, per file:
   5. NAMES (renderings §H2): a source name in the line → its Hebrew in the line; first occurrence vocalized;
   6. TRAPS: unvocalized strings that read as another Hebrew word;
   7. FORMULAS (renderings §H5): where the composite has a formula, the Hebrew has its fixed rendering;
-  8. repeated lines (identical composite, 3+ words) with different Hebrew are listed (justify or fix).
+  8. repeated lines (identical composite, 3+ words) with different Hebrew are listed (justify or fix);
+  9. the fifth-day dossier's copies (`DOSSIER`): `verify IL` – our IL 8–17 = the dossier's annotated-IL (KBo 3.7 i 9–20,
+     the Hebrew joined); `verify HE` – every entry of the dossier's annotated-HD (Ḫedammu) = our HE line of the same label
+     (transliteration and `>` line, byte for byte); both after the pending revisions of the myth renderings §H8
+     (`| KEY | the dossier's string | ours | why |`; an empty table = nothing pending).
 Escapes, written in the entry: `[סטייה מן הנוסחה: <reason>]` (7), `[היתר שם: <name>]` (5), `[היתר שער: <word>]` (4).
+A formula whose Note says `[keys: K1 K2 …]` applies to those KEYs only (F8, the Laws' *pāi* `ייתן`: HL1 HL2 HLPT).
 """
 import csv
 import difflib
@@ -119,7 +124,14 @@ REND = [os.path.join(ROOT, LAWS, "renderings.md"), os.path.join(ROOT, RIT, "rend
         os.path.join(ROOT, MYTH, "renderings.md")]
 MYTH_KEYS = ("IL", "HE", "KU", "UL", "SR", "ZA", "AP", "EL", "TE")  # the myth renderings' H-tables apply to these only;
 # the law and ritual files' H-tables apply to every Hittite text (2026-10-30, Round 5 run 2)
-DOSSIER_IL = os.path.join(ROOT, "מיתוסים-אוגריתיים", "3-תיק-היום-החמישי", "annotated-IL.rtl.md")
+DOSSIER_DIR = os.path.join(ROOT, "מיתוסים-אוגריתיים", "3-תיק-היום-החמישי")
+# The fifth-day dossier's excerpts copied from the myth corpus (checked by `verify <KEY>`): KEY → (the dossier's annotated
+# file, span). IL: the dossier's KBo 3.7 i 9–20 (tablet lines, TLHdig) = our clauses 8–17, compared with the Hebrew joined
+# (a clause may span two tablet lines). HE: the dossier's key HD (the Round 5 finalization, 2026-11-02) has our own labels
+# and base lines, so each of its entries is compared line by line (the transliteration and the `>` line, byte for byte).
+DOSSIER = {"IL": (os.path.join(DOSSIER_DIR, "annotated-IL.rtl.md"), (("i9", "i20"), ("8", "17"))),
+           "HE": (os.path.join(DOSSIER_DIR, "annotated-HD.rtl.md"), None)}
+DOSSIER_IL = DOSSIER["IL"][0]
 
 
 def pdir(key):
@@ -464,10 +476,21 @@ def traps(key=None):
     return out
 
 
+def formula_scope(note):
+    """The KEYs a formula is scoped to, from `[keys: HL1 HL2 HLPT]` in its Note cell (None = every key that reads the
+    table). F8, *pāi* `ייתן`, is the Laws' formula: in the myths and rituals *pāi* is also "give!" and the narrative
+    present (the Round 5 finalization, 2026-11-02)."""
+    m = re.search(r"\[keys: ([A-Z0-9 ]+)\]", note)
+    return m.group(1).split() if m else None
+
+
 def formulas(key=None):
     out = []
     for cells in _table("H5.", _rend_for(key)):
         if len(cells) < 4 or not re.match(r"^F\d+$", cells[0]):
+            continue
+        sc = formula_scope(cells[3])
+        if key is not None and sc is not None and key not in sc:
             continue
         out.append((cells[0], _bt(cells[1]), _bt(cells[2]), cells[3]))
     return out
@@ -638,14 +661,15 @@ def verify(keys, strict=False):
             print(f"- {nk}")
             for k2, lab, h in hs:
                 print(f"    {k2} {lab}: {h}")
-    if "IL" in keys or not keys:
-        bad += dossier_il_check()
+    for dk in DOSSIER:
+        if dk in keys or not keys:
+            bad += dossier_check(dk)
     print(f"\n{nd} repeated-line difference(s); problems: {bad}")
     return bad == 0
 
 
-# ---------------------------------------------------------------- the fifth-day dossier's Illuyanka excerpt (IL)
-IL_DOSSIER_SPAN = (("i9", "i20"), ("8", "17"))  # KBo 3.7 i 9–20 (the dossier's tablet lines) = HPM CTH 321 clauses 8–17
+# ---------------------------------------------------------------- the fifth-day dossier's excerpts (IL, HE)
+IL_DOSSIER_SPAN = DOSSIER["IL"][1]  # KBo 3.7 i 9–20 (the dossier's tablet lines) = HPM CTH 321 clauses 8–17
 
 
 def _join_heb(heb, seq, a, b):
@@ -653,52 +677,100 @@ def _join_heb(heb, seq, a, b):
     return re.sub(r"\s+", " ", " ".join(heb[x] for x in seq[i:j + 1])).strip()
 
 
-def dossier_revisions():
-    """[(the dossier's string, our string, why)] from the myth renderings §H8: revisions of the dossier's Illuyanka
-    excerpt made here and recorded for the lead (who applies them to the dossier at the round's finalization)."""
+def dossier_revisions(key="IL"):
+    """[(the dossier's string, our string, why)] from the myth renderings §H8: revisions of a dossier excerpt made here
+    and recorded for the lead (who applies them to the dossier and deletes the rows). A row is `| KEY | dossier | ours |
+    why |` (KEY = IL or HE); a three-column row (the table before 2026-11-02) is IL's. An empty table = nothing pending."""
     out = []
     for cells in _table("H8.", [REND[2]]):
-        if len(cells) >= 3 and cells[0].startswith("`"):
+        if len(cells) >= 4 and cells[0] in DOSSIER and cells[1].startswith("`"):
+            if cells[0] == key:
+                out.append((_bt(cells[1]), _bt(cells[2]), cells[3]))
+        elif len(cells) >= 3 and cells[0].startswith("`") and key == "IL":
             out.append((_bt(cells[0]), _bt(cells[1]), cells[2]))
     return out
 
 
-def dossier_il_check():
-    """IL 8–17 (our text) must equal the dossier's KBo 3.7 i 9–20, the Hebrew joined (a clause may span two tablet
-    lines), after the pending revisions of §H8 are applied to the dossier's text. Returns the number of problems."""
-    if not os.path.exists(DOSSIER_IL) or not os.path.exists(annotated_path("IL")):
-        return 0
-    dh, dseq = {}, []
+def _read_dossier(path):
+    """The dossier file's entries: ({label: `>` line}, [labels], {label: the backticked base line})."""
+    dh, dseq, dsrc = {}, [], {}
     cur = None
-    for l in open(DOSSIER_IL, encoding="utf-8"):
+    for l in open(path, encoding="utf-8"):
+        l = l.rstrip("\n")
         m = re.match(r"^### (\S+)\s*$", l)
         if m:
             cur = m.group(1)
             dseq.append(cur)
+        elif l.startswith("## ") or l.startswith("# "):
+            cur = None
         elif cur and l.startswith("> "):
             dh[cur] = l[2:].strip()
-    heb, seq, _, _, _ = read_annotated("IL")
-    (da, db), (oa, ob) = IL_DOSSIER_SPAN
-    if oa not in seq or ob not in seq or any(not heb.get(x) for x in seq[seq.index(oa):seq.index(ob) + 1]):
-        print("IL ↔ dossier: IL 8–17 not drafted yet")
+        elif cur and l.startswith("`") and cur not in dsrc and cur not in dh:
+            dsrc[cur] = l.strip()
+    return dh, dseq, dsrc
+
+
+def dossier_check(key):
+    """The dossier's copy of our KEY's lines must equal ours, after the pending revisions of §H8 are applied to the
+    dossier's text. IL: our IL 8–17 = the dossier's KBo 3.7 i 9–20, the Hebrew joined. HE: every entry of the dossier's
+    annotated-HD has our label, and its transliteration and `>` line equal ours, byte for byte. Returns the problems."""
+    path, span = DOSSIER[key]
+    tag = f"{key} ↔ dossier ({os.path.basename(path)})"
+    if not os.path.exists(path) or not os.path.exists(annotated_path(key)):
         return 0
-    d = _join_heb(dh, dseq, da, db)
-    revs = dossier_revisions()
-    for a, b, why in revs:
-        if a not in d:
-            print(f"IL ↔ dossier: the pending revision's dossier string is not in the dossier (applied already?): «{a}»")
+    dh, dseq, dsrc = _read_dossier(path)
+    heb, seq, src, _, _ = read_annotated(key)
+    revs = dossier_revisions(key)
+    if span:
+        (da, db), (oa, ob) = span
+        if oa not in seq or ob not in seq or any(not heb.get(x) for x in seq[seq.index(oa):seq.index(ob) + 1]):
+            print(f"{tag}: {oa}–{ob} not drafted yet")
+            return 0
+        d = _join_heb(dh, dseq, da, db)
+        for a, b, why in revs:
+            if a not in d:
+                print(f"{tag}: the pending revision's dossier string is not in the dossier (applied already?): «{a}»")
+                return 1
+            d = d.replace(a, b, 1)
+        o = _join_heb(heb, seq, oa, ob)
+        if d != o:
+            sm = difflib.SequenceMatcher(None, d, o)
+            print(f"{tag}: {oa}–{ob} differ from the dossier's {da}–{db} (+ §H8 revisions):")
+            for op, i1, i2, j1, j2 in sm.get_opcodes():
+                if op != "equal":
+                    print(f"    {op}: dossier «{d[max(0, i1 - 15):i2 + 15]}» / ours «{o[max(0, j1 - 15):j2 + 15]}»")
             return 1
-        d = d.replace(a, b, 1)
-    o = _join_heb(heb, seq, oa, ob)
-    if d != o:
-        sm = difflib.SequenceMatcher(None, d, o)
-        print("IL ↔ dossier: IL 8–17 differs from the dossier's KBo 3.7 i 9–20 (+ §H8 revisions):")
-        for op, i1, i2, j1, j2 in sm.get_opcodes():
-            if op != "equal":
-                print(f"    {op}: dossier «{d[max(0, i1 - 15):i2 + 15]}» / ours «{o[max(0, j1 - 15):j2 + 15]}»")
-        return 1
-    print(f"IL ↔ dossier: identical ({len(revs)} pending revision(s) for the lead, renderings §H8)")
-    return 0
+        print(f"{tag}: identical ({len(revs)} pending revision(s) for the lead, renderings §H8)")
+        return 0
+    bad = 0
+    used = set()
+    for lab in dseq:
+        if lab not in seq:
+            print(f"{tag}: the dossier's entry {lab} is not one of our labels")
+            bad += 1
+            continue
+        if dsrc.get(lab) != src.get(lab):
+            print(f"{tag} {lab}: transliteration differs\n    dossier: {dsrc.get(lab)}\n    ours:    {src.get(lab)}")
+            bad += 1
+        d = dh.get(lab, "")
+        for n, (a, b, why) in enumerate(revs):
+            if a in d:
+                d = d.replace(a, b, 1)
+                used.add(n)
+        if d != heb.get(lab, ""):
+            print(f"{tag} {lab}: '>' line differs (+ §H8 revisions)\n    dossier: {d}\n    ours:    {heb.get(lab, '')}")
+            bad += 1
+    for n, (a, b, why) in enumerate(revs):
+        if n not in used:
+            print(f"{tag}: the pending revision's dossier string is not in the dossier (applied already?): «{a}»")
+            bad += 1
+    if not bad:
+        print(f"{tag}: {len(dseq)} entries identical ({len(revs)} pending revision(s) for the lead, renderings §H8)")
+    return bad
+
+
+def dossier_il_check():
+    return dossier_check("IL")
 
 
 # ---------------------------------------------------------------- data, tr, fill, lemma, lexmap, grep

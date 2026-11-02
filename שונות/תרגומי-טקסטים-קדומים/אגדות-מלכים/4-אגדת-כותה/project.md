@@ -386,7 +386,7 @@ header paragraph "חלק CL2"; the מספור sentence updated).
 | *Dilbat* | `דִּלְבַּת` | – | Venus (Ištar) | 128 |
 | *ezib … lā tuḫallaq* | `עֲזֹב! … לא תְאַבֵּד.` | – | *lā* + present = `לא` + future | 130 |
 | *arkât ūmī*; *rēša našû* | `הימים הבאים`; `נָשָׂא רֹאשׁ` | [equivalent] | `אַחֲרִית הַיָּמִים` kept for *aḫrât ūmī* | 131 |
-| *aggu*; *quʾʾû* | `זַעַם`; `קִוָּה` [cognate] | | | 132 |
+| *aggu*; *quʾʾû* | `קֶצֶף` (2026-11-02; was `זַעַם`); `קִוָּה` [cognate] | | | 132 |
 | *naqāru* N; *qamû*; *lawû*; *kalbu*; *tabāku* N | `נֶהֱרַס`; `בִּעֵר`; `סוֹבֵב`; `כֶּלֶב`; `נִשְׁפַּךְ` | | | 133–135 |
 | *išpiku*; *gišimmaru*; *biltu*; *maṭû* D | `יְבוּל`; `תָּמָר`; `מַשָּׂא`; `הִמְעִיט` | | | 136 |
 | *ālu itti āli bītu itti bīti inakkir* | `עיר עם עיר, בית עם בית – יתנכר;` | – | *nakāru* G (hostility) = `הִתְנַכֵּר` | 138 |
@@ -579,7 +579,8 @@ introduction to the whole legend); `translation.rtl.md` built.
 ### Open decisions
 1. **SB.132 *aggu* vs OB I c+14 *ezēzu*:** both now in the root זעם (`לזעם לב אֶנְלִיל`; `בזעם האלים`). *ezēzu* = `זָעַם`
    is the Erra / Ludlul precedent; *aggu* (adjective "fierce") could move to another word (e.g. `עַז`, but *ezzu* may
-   hold it in Gilgameš) – for the lead.
+   hold it in Gilgameš) – for the lead. **Settled 2026-11-02** (the lead): *aggu* = `קוֹצֵף` / `קֶצֶף` (the root קצף, the
+   adjective of *agāgu*; Gilgameš VII 149, X 307, SAA 9 1 iv 7, the Theodicy 50): SB.132 `לקצף לב אֶנְלִיל`; *ezēzu* keeps `זעם`.
 2. ***ešertu*** = `בֵּית־אֵל` / `בתי האלים` (c+2): `מִקְדָּשׁ` is gated to *eš₃* in this corpus (Enūma eliš has
    `מקדשים` for *ešertu*).
 3. ***šulputu*** (c+3, *lapātu* Š) = `הֻשְׁחַת` by sense, not the G's `נָגַע`.

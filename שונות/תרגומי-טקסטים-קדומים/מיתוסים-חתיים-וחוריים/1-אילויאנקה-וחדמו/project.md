@@ -16,7 +16,12 @@ Labels and numbering: `../corpus.md` § Labels. Rank 3 (after drafting only): th
 - **IL 8–17 = the fifth-day dossier's excerpt** (`../../מיתוסים-אוגריתיים/3-תיק-היום-החמישי/annotated-IL.rtl.md`, KBo 3.7
   i 9–20, on TLHdig): copied, its Hebrew joined clause by clause (a clause may span two tablet lines: IL 8 = i 9–10, IL 10–11
   = i 12–13, IL 14–15 = i 16–18); `verify IL` checks the identity; revisions are recorded in `../renderings.md` §H8 for the
-  lead (this run does not edit the dossier). Ḫedammu enters the dossier at the lead's finalization, not here.
+  lead (this run does not edit the dossier). The four rows were applied to the dossier at the Round 5 finalization
+  (2026-11-02), and §H8 is empty.
+- **HE 6:13–19, 21:12–16, 2:5–22, 4:10–39 = the dossier's excerpt HD** (`../../מיתוסים-אוגריתיים/3-תיק-היום-החמישי/annotated-HD.rtl.md`,
+  60 lines, added at the Round 5 finalization, 2026-11-02): the dossier copies these lines – the transliteration and the
+  `>` line byte for byte (its bullets are adapted to the dossier) – and `verify HE` checks the identity line by line. A
+  revision of one of these lines is made in both files at once, or recorded in `../renderings.md` §H8 as a `| HE | … |` row.
 - HE's fragments follow HPM's numbering (348.I.1 … I.29); their order in the story is uncertain beyond fragment 1: each
   fragment's heading says what it contains.
 

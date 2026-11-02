@@ -28,7 +28,7 @@ UNITS += [('1.17', '4-אקהת'), ('1.18', '4-אקהת'), ('1.19', '4-אקהת')
 # The fifth-day dossier (2026-10-30, the Round 4 finalization): its excerpts, in the dossier's own order; label = the name
 # used in the tables (the KTU tablets are labelled "KTU <n>").
 DOSSIER = [('MK', 'Merikare'), ('WC', 'pWestcar'), ('AP', 'pBremner-Rhind (Apophis)'), ('TH', 'Hesiod, Theogony'),
-           ('IL', 'Illuyanka'), ('RV', 'Rigveda 1.32'), ('HY', 'Hymiskviða'), ('KJ', 'Kojiki')]
+           ('IL', 'Illuyanka'), ('HD', 'Ḫedammu'), ('RV', 'Rigveda 1.32'), ('HY', 'Hymiskviða'), ('KJ', 'Kojiki')]
 UNITS += [(k, '3-תיק-היום-החמישי') for k, _ in DOSSIER]
 NAME = dict(DOSSIER)
 
