@@ -17,9 +17,12 @@ Work branch: `<the child's branch, e.g. translation-round-5-run-2>` (your parent
 Agents: <1 | 2 | 3> – the most Claude agents you may have working at once, when the gate allows that many (§5.1).
 
 You are a child session, started by the parent session `<parent session id>`, which orchestrates Round <N> on the
-user's behalf. Run this run exactly as `STATUS.md` §5 ("The run brief") and the plan row in
-`curated-translation-candidates.md` ("Round <N> plan", run <M>) describe, under `translation-guidelines.md` – read them
-first, in full (start `python3 -I tools/sources_sync.py fetch` in the background before you read: §5.1).
+user's behalf. Run this run exactly as `STATUS.md` §5 ("The run brief") and the plan row describe – for Rounds 1–7 in
+`curated-translation-candidates.md` ("Round <N> plan", run <M>); for Rounds 8–27 in `translation-program.md` ("Round <N>",
+run <M>), whose last column names the candidates: read each one's entry in
+`curation-surveys/program-2026-11/region--<region>.md` (base, dictionaries, tools, risks, set-up) – under
+`translation-guidelines.md`. Read them first, in full (start `python3 -I tools/sources_sync.py fetch` in the background
+before you read: §5.1).
 
 Rules for a child session (guidelines §5.1–§5.1c):
 1. **Never interact with the user** – no questions, no waiting for input, no AskUserQuestion. Decide minor things
@@ -51,7 +54,7 @@ Rules for a child session (guidelines §5.1–§5.1c):
 4. **When the run is done:**
    1. write the report to **`<report path, e.g. שונות/תרגומי-טקסטים-קדומים/reports/round-5/run-1.md>`** (English),
       with these sections: *Done* (texts, lines, files); *Verification* (every verifier and `check_bible_quotes.py`,
-      with their results); *Key findings* (for the Bible, and for the ancient mind); *Decisions taken* (minor, by you);
+      with their results); *Key findings* (what the texts show of the ancient mind; then the Bible parallels the apparatus records); *Decisions taken* (minor, by you);
       *Questions for the user*; *Problems and skipped items* (with any quota stop); *Cross-corpus splits left for the
       lead*; and commit it;
    2. squash your branch into your parent's: `python3 -I tools/branches.py finish -m "Ancient-texts translations:

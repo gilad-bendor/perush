@@ -58,3 +58,40 @@ en.wikisource.org
 en.wikipedia.org
 hal.science
 www.persee.fr
+# Added 2026-11-02 (the program of Rounds 8–27, `translation-program.md`; each host checked from the cloud that day).
+# Egypt: Allen 2013's Pyramid Texts concordance (the Unas run); the TLA's glossed sentence sets (optional).
+isac-idb-static.uchicago.edu
+huggingface.co
+# Akkadian: Rozzi 2024, the Great Hymns and Prayers (CC BY 4.0) and its repository record.
+edizionicafoscari.unive.it
+phaidra.unipd.it
+# Hieroglyphic Luwian: the eDiAna remake (the base of the Luwian run).
+www.ediana-remake.gwi.uni-muenchen.de
+# South Arabia (Sabaweb is http only), Classical Arabic (Lane's Lexicon), Safaitic (OCIANA, optional).
+sabaweb.uni-jena.de
+ejtaal.net
+arabiclexicon.hawramani.com
+ociana.osu.edu
+# Pali and Prakrit: the PTS Pali dictionary (DSAL), the Gāndhārī versions of Aśoka's edicts.
+dsal.uchicago.edu
+gandhari.org
+# Classical Chinese and Old Japanese: Wiktionary (glosses), the NDL scans (checks).
+en.wiktionary.org
+dl.ndl.go.jp
+# Greek: DAMOS (Linear B), IGCyr (the Cyrene law), CHS (the gold tablets).
+damos.hf.uio.no
+igcyr.unibo.it
+chs.harvard.edu
+# Old Norse: heimskringla.no (texts), the Germanic Lexicon Project and Septentrionalia (dictionaries, PD scans).
+heimskringla.no
+www.germanic-lexicon-project.org
+www.septentrionalia.net
+# The Pacific: Te Aka (Māori), Pukui–Elbert (Hawaiian; a Cloudflare wall on 2026-11-02), Gutenberg (Fornander, Emerson).
+maoridictionary.co.nz
+www.wehewehe.org
+www.gutenberg.org
+# The Americas (the Popol Vuh run): Mesoweb (Christenson's control text), FAMSI (the K'iche' dictionary).
+www.mesoweb.com
+www.famsi.org
+# ETCSL's live site (optional; the OTA zip on llds has the same files).
+etcsl.orinst.ox.ac.uk

@@ -2,6 +2,12 @@
 
 > **The project is now global** (the user, 2026-10-22): "This translation project should become 'globalized' – focusing on the
 > 'essence of antiquity'" (guidelines §1). From Round 5 on, candidates are ranked with that focus first.
+>
+> **Since 2026-11-02 the Bible is not a selection criterion at all** (the user: the translations "stand in their own right –
+> unrelated to the Bible: their goal is to somehow convey the essence of the ancients"). The "Bible" ratings, the
+> commentary units and the dossiers keyed to Bible verses below are records of the earlier ranking: rank by the essence
+> alone (guidelines §1). Very short or highly damaged texts are not candidates; a very long text whole needs the user's
+> approval.
 
 Compiled 2026-10-21, in a Claude Cloud session, at the user's request: "Up until now, we focused solely on translating
 ancient *Mesopotamian* texts. But what about the rest of the world? … I am primarily focused on really ancient texts, or
@@ -36,14 +42,12 @@ before a project starts.
 
 ## 1. How this list is ordered
 
-The two purposes of guidelines §1, equal in standing:
-1. **The Bible**: the commentary's priorities. (1) Gen 1–3, now Gen 1:20–23, the fifth day and the *tanninim*;
-   (2) Gen 8:20–11:26, which has no commentary yet; (3) the rest of Genesis and the Exodus narrative; (4) law and ritual.
-2. **The soul of the ancients**: a window onto how people saw the world, prayed, mourned, loved, judged and joked.
+**The criterion (guidelines §1, 2026-11-02): the essence of the ancients** – how a text lets us know the ancient mind. The
+Bible plays no part in the ranking (the earlier "two purposes" ordering below each entry is kept as a record).
 
-Within both, the user's preferences:
+Within it, the user's preferences:
 - **Antiquity.** The older the better, or a later text that records an old oral tradition. Each entry gives both dates.
-- **Condition, and size.** Texts in good condition; medium or large texts, or a corpus of short ones.
+- **Condition, and size.** Texts in good condition; medium or large texts, or a corpus of short ones. **Very short or highly damaged texts are never interesting** (the user, 2026-11-02): they are not candidates (guidelines §1).
 - **No purchases** (the standing rule). Paid sources are recorded, not used.
 
 What this list adds to the Mesopotamian one is **feasibility from the original language**: an open base text in the
