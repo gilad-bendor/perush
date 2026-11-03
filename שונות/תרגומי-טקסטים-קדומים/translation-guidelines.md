@@ -242,9 +242,14 @@ session commits and pushes only on its own branch**, a finished branch goes into
   commit, run it again), pushes the child's branch, and pushes one commit - the child's tree on top of the parent's
   tip, its body listing the child's commits - to the parent's branch. Then the child messages the parent (with the
   printed hash), and the parent runs `branches.py sync`.
-- **Finishing a round** - its very last step, after the lead's finalization: `branches.py finish --into-main -m
-  "Ancient-texts translations: Round <N> – <summary>"`: one commit on `main`. The round's and runs' branches stay on
-  origin as the detailed history (the git proxy refuses to delete branches anyway).
+- **Finishing a round** (the user, 2026-11-03) - its last git step, after the lead's finalization, once the round is
+  done in its own branch: `branches.py finish --into-main -m "Ancient-texts translations: Round <N> – <summary>"`. It
+  pushes the round's branch, then **cherry-picks all the round's commits** (`origin/main..translation-round-<N>`, the
+  merges of `main` left out) onto `main`'s tip, in a separate worktree, and **squashes them into one commit on `main`**
+  (its body lists them); the round's branch itself is not touched. A cherry-pick conflict falls back to a squash merge;
+  a conflict there stops before any push (merge `origin/main` into the round's branch by hand, keep both sides, run it
+  again). The round's and runs' branches stay on origin as the detailed history (the git proxy refuses to delete
+  branches anyway). **Then the round's session launches the next round's session** (§5.1c, step 7).
 - **`main` moves meanwhile** (the user's own work). It reaches a round at each `new-child` and at the round's finish -
   so a rule the user changes on `main` mid-round (e.g. in the quota script) reaches running sessions only when told:
   the orchestrator merges `origin/main` into the round's branch and tells its children to `git merge` it.
@@ -277,8 +282,20 @@ its parent and re-title itself (the smoke test of 2026-10-23, `history.md`).
      questions (the user's rule, STATUS §6), copy the questions only the user can answer into
      `reports/round-<N>/questions-for-user.md`, archive the child, and start the next run at once;
   6. after the last run: the lead's finalization on the round's branch (the cross-corpus harmonization, §5.2 "A
-     harmonization pass"; every verifier; STATUS, history), `branches.py finish --into-main` (§5.1b), the title
-     `Round<N>/Done: <what>`, then **one** message to the user: the results and `questions-for-user.md`.
+     harmonization pass"; every verifier; STATUS, history), `branches.py finish --into-main` (§5.1b: the round's
+     commits cherry-picked and squashed into one commit on `main`), the title `Round<N>/Done: <what>`, then **one**
+     message to the user: the results, `questions-for-user.md`, and the next round's session (step 7);
+  7. **then it launches the next round** (the user, 2026-11-03: "once that is done – launch a new session for the next
+     round, and so on"): only after the squash commit is on `main`, `create_session` with `source_url:
+     https://github.com/gilad-bendor/perush`, `source_revision: main`, `model: claude-opus-5-5`, the title
+     `Round<N+1>: <what>` and the prompt `ancient-translations: orchestrate Round <N+1>` (the new session reads its
+     plan from `main`: `curated-translation-candidates.md` for Rounds 6–7, `translation-program.md` for Rounds 8–27).
+     The new session is a top session: it starts its branch at once (`start-round`), prepares, and waits for the next
+     range with its own `send_later` (§5.1) – the chain never works outside the ranges. It runs only what the user
+     has approved: a run whose plan waits for the user's approval (a very long text, an open question in
+     `reports/program-2026-11--for-approval.md`) is skipped and listed in its `questions-for-user.md`, and the round
+     goes on with the rest. **The chain stops** (no new session; the message to the user says why) when there is no
+     next round in the plans, when no run of the next round is approved, or when the user has said to stop.
 - **Pausing and resuming - the parent holds the slots.** A gate's `WAIT`:
   - **inside the same range** (a 5-hour reset): the session schedules its own `send_later` at the printed time;
   - **into another range**: a child pushes, sends its parent `RUN PAUSED – <title> – resume at <time> – <what is

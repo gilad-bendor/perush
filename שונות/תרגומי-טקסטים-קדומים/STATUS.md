@@ -8,7 +8,7 @@ Last updated: 2026-11-02 (**Round 5 complete**: the lead's finalization – the 
 
 ## 1. Starting a session (local or Claude Cloud)
 
-**To run a whole round from one prompt** (Claude Cloud): start a session with `ancient-translations: orchestrate Round <N>`. It becomes the parent (title `Round<N>: …`), creates the round's branch `translation-round-<N>`, and runs each run as its own child session (`Round<N>/Run<M>: …`) on its own branch, within the quota's time ranges, as guidelines §5.1–§5.1c describe (reports in `reports/round-<N>/`); at the end it squashes the round into `main` as one commit, and you hear from it. To run a single run yourself instead: `ancient-translations: Round <N>, run <M>`.
+**To run a whole round from one prompt** (Claude Cloud): start a session with `ancient-translations: orchestrate Round <N>`. It becomes the parent (title `Round<N>: …`), creates the round's branch `translation-round-<N>`, and runs each run as its own child session (`Round<N>/Run<M>: …`) on its own branch, within the quota's time ranges, as guidelines §5.1–§5.1c describe (reports in `reports/round-<N>/`); at the end it cherry-picks the round's commits and squashes them into `main` as one commit, you hear from it, and **it launches a new session for the next round** (`Round<N+1>: …`), and so on – each round within the quota's ranges, skipping what waits for your approval (the user's rule of 2026-11-03; guidelines §5.1b, §5.1c step 7). To run a single run yourself instead: `ancient-translations: Round <N>, run <M>`.
 
 1. **Sync with origin** – on `main`, or on the session's work branch (§5.1b; a resumed cloud session wakes up on an old checkout: the session operator's report says so). Then run `../../claude/quota-related-instructions.ts` and follow it (§5.1).
 2. **Restore the git-ignored sources:** most raw sources are not in git, since the repo is public (guidelines §8).
@@ -46,7 +46,8 @@ Last updated: 2026-11-02 (**Round 5 complete**: the lead's finalization – the 
   itself. For real translator chains, make the session itself the coordinator, or launch sub-sessions (§5.1c).
 - **Git:** every session works and pushes only on its own branch (`translation-round-<N>`, `…-run-<M>`,
   `…-run-<M>-sub-<K>`; `tools/branches.py`), commits locally often, pushes seldom, and squashes into its parent's
-  branch when done; `main` gets one commit per round. Round 4 finishes on `main`. Never commit `docs/` at the repo
+  branch when done; `main` gets one commit per round (the round's commits cherry-picked and squashed), after which the
+  round's session launches the next round's session (2026-11-03). Round 4 finishes on `main`. Never commit `docs/` at the repo
   root (the RTL editor regenerates it; the user commits it).
 
 ## 3. What is done

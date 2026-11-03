@@ -5,7 +5,8 @@ Every session works and pushes on its own branch only, named by its place in the
     translation-round-N                 the round (the orchestrator's session) – branched from origin/main
     translation-round-N-run-M           a run (a child session)                – branched from the round's branch
     translation-round-N-run-M-sub-K     a sub-session of a run                 – branched from the run's branch
-A finished branch is squashed into its parent as ONE commit (the round, as the round's last step, into main). The
+A finished branch is squashed into its parent as ONE commit (the round, as the round's last step, into main: its
+commits cherry-picked onto main's tip and squashed – the user's rule of 2026-11-03). The
 branches stay on origin as the detailed history (the git proxy refuses to delete branches anyway).
 
 Usage (python3 -I, from anywhere inside the repo):
@@ -18,18 +19,27 @@ Usage (python3 -I, from anywhere inside the repo):
   branches.py checkout BRANCH         check out BRANCH, tracking origin/BRANCH (a session that did not land on it)
   branches.py sync                    fetch this branch; fast-forward, or rebase local commits onto origin
   branches.py push                    sync, then push this branch (the only branch a session pushes during its work)
-  branches.py finish -m "SUBJECT" [--into-main]
-                                      squash this branch into its parent as one commit: first merge the parent's
-                                      new commits into this branch (a conflict stops here: resolve, commit, re-run),
-                                      push this branch, then push one commit – this branch's tree on top of the
-                                      parent's tip – to the parent. A round goes into main only with --into-main.
+  branches.py finish -m "SUBJECT"     a run / sub-session: squash this branch into its parent as one commit: first
+                                      merge the parent's new commits into this branch (a conflict stops here:
+                                      resolve, commit, re-run), push this branch, then push one commit – this
+                                      branch's tree on top of the parent's tip – to the parent.
+  branches.py finish --into-main -m "SUBJECT"
+                                      a round (its last step; the user's rule of 2026-11-03): push the round's
+                                      branch, then cherry-pick ALL the round's own commits (origin/main..round, no
+                                      merges) onto main's tip in a separate worktree, squash them into ONE commit
+                                      (its body lists them) and push it to main. The round's branch is not touched
+                                      (no merge of main into it). A cherry-pick conflict falls back to a squash
+                                      merge; a conflict there stops (nothing is pushed). main moved meanwhile: it
+                                      retries on the new tip.
                                       Prints the new commit on the parent.
 
 It never force-pushes, never deletes a branch, and never rewrites a commit that is on origin.
 """
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 PREFIX = "translation-round-"
@@ -212,6 +222,74 @@ def cmd_new_child(child):
     return 0
 
 
+def _squash_onto_main(b, subject):
+    """One commit on origin/main's tip = the cherry-pick of all of b's own (non-merge) commits; returns its sha."""
+    fetch("main")
+    if not ancestor("origin/main", "HEAD") and not ok("merge-base", "origin/main", "HEAD"):
+        sys.exit("ERROR: no common history between origin/main and this branch (deepen the clone)")
+    base = out("rev-parse", "origin/main")
+    commits = out("rev-list", "--reverse", "--no-merges", "origin/main..HEAD").split()
+    if not commits:
+        return None, []
+    tip = out("rev-parse", "HEAD")
+    tmp = tempfile.mkdtemp(prefix="round-squash-")
+    wt = str(Path(tmp) / "wt")
+    git("worktree", "add", "-q", "--detach", wt, base)
+    try:
+        r = subprocess.run(["git", "-C", wt, "cherry-pick", "--no-commit", "--allow-empty", *commits],
+                           capture_output=True, text=True)
+        how = "cherry-pick"
+        if r.returncode:
+            subprocess.run(["git", "-C", wt, "cherry-pick", "--abort"], capture_output=True)
+            git("worktree", "remove", "--force", wt)
+            git("worktree", "add", "-q", "--detach", wt, base)
+            print("NOTE: the cherry-pick conflicted – falling back to a squash merge of the round's branch")
+            r = subprocess.run(["git", "-C", wt, "merge", "--squash", tip], capture_output=True, text=True)
+            how = "squash merge"
+            if r.returncode:
+                sys.exit(f"CONFLICT squashing {b} onto main (nothing was pushed):\n{(r.stdout + r.stderr).strip()}\n"
+                         "Merge origin/main into the round's branch by hand (keep both sides of a shared file), "
+                         "commit, push, and run finish --into-main again.")
+        if subprocess.run(["git", "-C", wt, "diff", "--cached", "--quiet"]).returncode == 0:
+            return None, commits
+        subjects = [out("log", "-1", "--format=%s", c) for c in commits]
+        body = (f"Squash of {b} ({len(commits)} commits, by {how} onto main):\n"
+                + "\n".join(f"- {s}" for s in subjects))
+        subprocess.run(["git", "-C", wt, "commit", "-q", "-F", "-"], input=f"{subject}\n\n{body}\n",
+                       text=True, check=True)
+        sha = subprocess.run(["git", "-C", wt, "rev-parse", "HEAD"], capture_output=True, text=True,
+                             check=True).stdout.strip()
+        # Files the round changed whose content on main now differs from the round's tip (main changed them too).
+        touched = set(out("diff", "--name-only", base, sha).splitlines())
+        differ = [f for f in out("diff", "--name-only", sha, tip).splitlines() if f in touched]
+        if differ:
+            print("NOTE: these files differ from the round's tip (main changed them too – check them):\n  "
+                  + "\n  ".join(differ[:30]))
+        return sha, commits
+    finally:
+        git("worktree", "remove", "--force", wt, check=False)
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def cmd_finish_into_main(b, subject):
+    if parent_of(b) != "main":
+        sys.exit(f"ERROR: --into-main is for a round's branch; {b} goes into {parent_of(b)}")
+    if not clean():
+        sys.exit("ERROR: commit first")
+    cmd_push()
+    for _ in range(3):
+        sha, commits = _squash_onto_main(b, subject)
+        if not sha:
+            print(f"nothing to squash: {b} has no changes beyond main")
+            return 0
+        r = git("push", "-q", "origin", f"{sha}:refs/heads/main", check=False)
+        if not r.returncode:
+            print(f"squashed {b} into main ({len(commits)} commits cherry-picked): {sha[:9]} {subject}")
+            return 0
+        print("NOTE: the push to main was rejected (it moved?) – retrying on the new tip")
+    sys.exit("ERROR: the push to main was rejected three times – run finish --into-main again")
+
+
 def cmd_finish(argv):
     subject, into_main = None, "--into-main" in argv
     if "-m" in argv:
@@ -224,6 +302,8 @@ def cmd_finish(argv):
         sys.exit(f"ERROR: {b} is not a translation-round branch")
     if p == "main" and not into_main:
         sys.exit("ERROR: a round goes into main only as the round's last step – add --into-main")
+    if into_main:
+        return cmd_finish_into_main(b, subject)
     if not clean():
         sys.exit("ERROR: commit first")
     if not fetch(p):
