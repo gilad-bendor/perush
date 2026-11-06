@@ -521,7 +521,7 @@ that it now holds the tales too.
 |---|---|---|---|---|
 | TB | The Tale of the Two Brothers, pD'Orbiney (pBM EA 10183) recto, Late Egyptian, c. 1200 BCE (Seti II) | `AED-TEI/Two-Brothers--pDOrbiney-BM-EA-10183/` | 185 (page,line `1,1`–`19,10`, the colophon `20,1`) | `4-מעשה-בשני-האחים/` |
 | WE | The Tales of pWestcar (pBerlin P 3033), the end of a tale, the tales of Nebka's and Snefru's time, Djedi, the birth of the three kings | `AED-TEI/Westcar--pBerlin-P-3033/` | 305 (`1,1-11`, `1,12` … `12,25`) | `5-פפירוס-וסטקר/` |
-| BD | The Book of the Dead, chapter 125 (the hall of the Two Truths, the negative confession), pNu (pBM EA 10477), 18th dynasty | `AED-TEI/BD-125--pNu-BM-EA-10477/` (+ pJuja, pMaiherperi: `data BD --wit`) | 115 (`1`–`115`) | `6-ספר-המתים-125/` |
+| BD | The Book of the Dead, chapter 125 (the hall of the Two Truths, the negative confession), pNu (pBM EA 10477), 18th dynasty | `AED-TEI/BD-125--pNu-BM-EA-10477/` (+ pJuja, pMaiherperi: `data BD --wit`) | 115 (`1`–`115`) | `6-ספר-המתים-של-נו/` |
 | SI | The Story of Sinuhe: R 1–23 (pBerlin P 10499, the opening lost in B), then B 1–311 (pBerlin P 3022) | `AED-TEI/Sinuhe--pBerlin-P-10499-R/`, `…-3022-B/` (+ the Ashmolean ostracon AOS: `--wit`) | 334 (`R1`–`R23`, `B1`–`B311`) | `7-סינוהה/` |
 | SS | The Shipwrecked Sailor, pPetersburg 1115 | `AED-TEI/Shipwrecked-Sailor--pPetersburg-1115/` | 191 (`1`–`189`, `30-31`, `40-41`) | `8-המלח-הנטרף/` |
 
@@ -661,7 +661,7 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
 
 ### 11.11 Round 5 run 6 – BD 125 (1–115), merged 2026-11-01 (translator 3)
 1. **The formula** `הו X, היוצא מ־Y: לא …` on the 40 lines with pri̯ m; 58 and 62 (no pri̯ m in Nu) `הו X: לא …`.
-2. **The denial verbs** (one Hebrew per Egyptian verb in both confessions; the full table in `6-ספר-המתים-125/project.md`):
+2. **The denial verbs** (one Hebrew per Egyptian verb in both confessions; the full table in `6-ספר-המתים-של-נו/project.md`):
    jri̯ `עשה`, smꜣ `הרג`, ṯꜣw `גנב`, ꜥwꜣ `גזל`, ḏd grg `אמר כזב`, nk `שכב עם` (nkk `נשכב`), dꜣdꜣ `זנה`, thj `עבר על` (Deut 26:13
    `לֹא עָבַרְתִּי` [equivalent]), ḫbj `גרע`, ḥḏj `הזיק` (AM 17.19), nḥm `נטל` / "save" `הציל`, ꜥwn `בצע` (AM 10.10), šnṯ `גידף` (šnṯ.t
    `ריב`), sꜣt `פגם` (HC 83), ꜥm-jb `בלע לב`; smj `הגיד (על)`; ḥrw "fear" `פחד`; tꜣ "be hot" `רתח` (the `חם` gate is šmm's).
@@ -717,3 +717,102 @@ preposition written as a Hebrew prefix). WE only (lines between the dossier's): 
   (Gen 25:6, 29:1) [equivalent] → [cognate]; no `>` line changed. The lead then changed SI B29 *Kpny* `כֶּפֶּנִי` ↔ Ezek 27:9 `גְבַל` [equivalent] → [cognate]
   (Kpny is the Egyptian form of the same name, *Gubla*).
 
+
+## 12. The Book of the Dead of Nu, BD 175 and Merikare (Round 6 run 2, 2026-11-06; fixed by the coordinator before the first line)
+
+**Scope** (the plan's Round 6 run 2; guidelines §1 "completing means the whole text"): project 6 becomes **the Book of the
+Dead of Nu** (`6-ספר-המתים-של-נו/`, renamed from `6-ספר-המתים-125/`): all 136 AED chapter texts of pNu (pBM EA 10477,
+c. 1400 BCE) in the papyrus's order, BD 125 (KEY BD, Round 5 run 6) in its place, and **BD 175** from pCha (pTurin 8438;
+not in Nu) as an appendix. **Merikare** gets its own project (`9-מוסר-למריכרע/`, KEY MR, all 149 lines of pPetersburg
+1116A verso); its E 130–138 are project 2's MK, byte for byte (`verify MR`), and MK's E 130–136 are the fifth-day
+dossier's MK, byte for byte (`verify MK`): a revision goes to all copies at once, by the coordinator.
+
+### 12.1 The texts (KEYs)
+| KEY | Chapters (papyrus order) | Lines | Labels |
+|---|---|---|---|
+| NU1 | 17, 18, 18 PS | 159 | `17.1` … (`<chapter>.<TLA line>`) |
+| NU2 | 1, 22, 23, 25, 26, 28, 28-2 (= CT 389), 27, 30A, 30B, 43, 24, 31, 33, 34, 35, 74, 45, 93, 91, 41, 42 | 153 | |
+| NU3 | 14, 68, 92, 63A, 105, 95, 72, 71, 106, 40, 90, 108, 47, 104, 103, 51, 119, 36, 37 | 140 | |
+| NU4 | 79, 117, 118, 21, 12, 122-1, 122-2, 98, 76, 85, 82, 77, 86, 124 | 127 | |
+| NU5 | 83, 84, 81A, 87, 88, 132, 148, 52, 53, 61, 56, 57, 54, 38B, 55, 29, 46, 109, 9, 132-2, 94, 63B, 8, 64L | 180 | `64L` = Tb 64 long version |
+| NU6 | 2, 3, 152, 75, 78, 65, 67, 179, 123, 141 (= 141/143), 190 | 230 | |
+| NU7 | 133, 136A, 134, 130, 131, 89, 154, 115, 116, 112, 113, 138, 187, 189 | 222 | |
+| NU8 | 44, 50, 188, 4, 96 (= 96/97), 153A, 153B, 64K, 11, 6, 5, 99B, 7, 176 | 173 | `64K` = the short version; `7.2b` (a repeated TLA label) |
+| BD | 125 (Round 5 run 6) | 115 | `1`–`115` |
+| NU9 | 126, 145, 144, 137A, 151, 101, 156, 155, 100, 102 | 228 | `126.x` (the TLA's `?`), `151.1,1` |
+| NU10 | 136A2, 136B, 149, 150 | 166 | `149.S1` (the TLA's "1. Stätte", the mound headings), `150.D1` ("Darstellung"), `149.58b` |
+| CH | BD 175, pCha (Kha, TT 8, Amenhotep III) | 65 | `1`–`65` |
+| MR | the Instruction for Merikare, pPetersburg 1116A verso (E = the n-th line) | 149 | `E1`–`E149` |
+
+**The order** is the Bonn Totenbuch-Projekt's object record (TM 134299, "Inhalt"), matched to AED's 136 texts
+(`../sources/AED-TEI/README.md`). Where the record and AED do not map one to one: 18 PS, 28-2 (CT 389), 30B and 122-2
+follow the text they belong to; the record names 132, 64, 136/136A and 151 twice – the second 132 is AED's 132-2, the
+second 136/136A is 136A2; for 64 AED has a long and a short version (`64L` placed first, `64K` second: an assumption,
+recorded in the project); AED has one 151 (placed at its first position) and one 50 (placed at the record's "50", not
+its "50B"). 125A–D are BD.
+
+### 12.2 Names (★ = always vocalized; the corpus's §3 and §11.2 hold)
+- The owner: **Nu** (Nw) `נוּ` – the TLA leaves his name out (`[…]` in the base): the Hebrew has `[…]` wherever the base
+  does (BD 125's practice), and `Wsjr […]` = `אוֹסִירִיס […]` ("the Osiris N": the dead man as an Osiris, §11.2). His
+  titles where written (jm.j-rʾ pr n jm.j-rʾ ḫtm.t "the steward of the overseer of the seal"): by sense, fixed by the
+  first translator.
+- New gods and places: each translator fixes them at first occurrence, transliterated by §2.2 unless the name is an
+  ordinary word (then translated as a name without the article, as BD 125's judges: `רחב־צעדים`), and lists them in
+  its Proposals; the coordinator merges them here (§12.6). The known ones keep §3: `רַא` ★, `אָתוּם`, `חֶפְּרִי`,
+  `אוֹסִירִיס`, `וֶנֶּפֶר`, `אִיסִיס`, `חוֹרוּס`, `סֵת` ★, `נֶפְתִּיס`, `תְּחוּת`, `חַתְחוֹר`, `אַנוּבִּיס`, `שׁוּ` ★, `תֶּפְנוּת`,
+  `גֶּבּ` ★, `נוּת` ★, `נוּן` ★, `פְּתָח` ★, `אַפּוֹפִּיס`, `אוֹן` ★, `חֶמְנוּ`, `גֶ׳דוּ` (Busiris), `אַבְּגֶ׳ו`, `רֶא־סְטָאוּ`,
+  `חָנֵס` (Herakleopolis), `הַדּוּאַת`.
+- Kha (pCha) `חַע`; Merikare `מֶרִיכָּרֶע` (§3.3).
+
+### 12.3 Key terms (one Hebrew per lemma; BD 125's choices bind: `6-ספר-המתים-של-נו/project.md`, §11.11)
+| Egyptian | Hebrew | Note |
+|---|---|---|
+| rʾ "spell, chapter" (also "mouth") | `לַחַשׁ` (spell) / `פֶּה` (mouth) | BD 125 and HC 44; split by sense |
+| pri̯.t m hrw "going out by day" | `יְצִיאָה בַּיּוֹם` / `לָצֵאת בַּיּוֹם` | the book's own name (rʾ.w nw pri̯.t m hrw `לַחֲשֵׁי הַיְּצִיאָה בַּיּוֹם`) |
+| ẖr(.t)-nṯr "necropolis" | `חֶלְקַת־הָאֵל` | the 2026-10-30 harmonization (`נַחֲלָה` is Ugaritic *nḥlt*'s) |
+| dwꜣ.t | `הַדּוּאַת` | §3.2; `שְׁאוֹל` never |
+| ꜣḫ (the transfigured spirit) / sꜣḫ "transfigure" | `אָח` (§4.1) / `הִפְלִיא לְאָח`? – the first translator fixes the verb | |
+| bꜣ / kꜣ / šw.t (shadow) / ḫꜣ.t (corpse) / sꜥḥ (mummy) | `בָּא` ★ / `כָּא` ★ / `צֵל` / `גְּוִיָּה` / `חֲנוּט`? (the first translator fixes) | |
+| mꜣꜥ-ḫrw / smꜣꜥ-ḫrw | `אֲמִתִּי־הַקּוֹל` / `אִמֵּת אֶת קוֹל X` | `הִצְדִּיק` never (צדק, §5.1) |
+| ḫftj "enemy" | `אוֹיֵב` | HC 35 |
+| sḫm "have power over" | `שָׁלַט בְּ־` | AM 20.15; sḫm (noun) `שִׁלְטוֹן` (MT 54) |
+| ḏꜣḏꜣ.t "council, tribunal" | `מוֹעָצָה`? – the first translator fixes (SI B209 has `הוועד` for a crown's "head" sense: check) | |
+| ḥḥ "a million" | `אַלְפֵי אֲלָפִים` | HC 41, BD 115 |
+| nḥḥ / ḏ.t | `נֶצַח` / `עַד` | §4.4; `עוֹלָם` never |
+| ḥsb / jp | `חֶשְׁבּוֹן` / `מִפְקָד` | BD 6, 68 |
+| wsḫ.t (n.t Mꜣꜥ.tj) | `אוּלַם (שְׁתֵּי הָאֱמֶת)` | §11.3 |
+| zḫ.t-jꜣr.w / zḫ.t-ḥtp | `שְׂדֵה הַקָּנִים` / `שְׂדֵה הַנַּחַת`? (`ḥtp` = `נָח` / `נַחַת`, §4.4, SI) | the first translator who meets them fixes |
+| wjꜣ "the bark" / mskt.t / mꜥnḏ.t (the night / day barks) | `הַסִּירָה`? / transliterated | the first translator fixes |
+| Nu's food taboos (bw.t, ḥs "excrement", wzšt "urine") | `תּוֹעֵבָה`, `צוֹאָה`, `שֶׁתֶן` | BD 125 bw.t `תועבה` |
+
+### 12.4 Formulas (enforced by `egypt_tools.py verify` in the Book of the Dead keys)
+1. **The title** `rʾ n X` (a chapter's first line) = `לַחַשׁ לְ־X` (an infinitive or a noun: `לחש לפתיחת הפה` /
+   `לחש לפתוח את הפה` – the first translator fixes the style and keeps it); `rʾ n tm X` = `לַחַשׁ לִבְלִי` + infinitive
+   (`לחש לבלי להירקב`); `ky rʾ (n X)` = `לַחַשׁ אַחֵר (לְ־X)`.
+2. `ḏd-mdw jn X` = `דְּבָרִים לֵאמֹר, בְּפִי X:` (BD 2); with Nu's lost name `דברים לאמר, בפי […] אמיתי־הקול:`.
+3. `mꜣꜥ-ḫrw` = `אֲמִתִּי־הַקּוֹל` (fem. `אֲמִתִּית־הַקּוֹל`, pl. `אֲמִתִּיֵּי־הַקּוֹל`); `smꜣꜥ-ḫrw X r ḫftj.w=f` = `אִמֵּת אֶת קוֹל X
+   נֶגֶד אוֹיְבָיו` (participle `הַמְאַמֵּת`); BD 18's litany (`j Ḏḥwtj smꜣꜥ-ḫrw Wsjr r ḫftj.w=f …`) is fixed by its first
+   line and copied (§7 after NU1).
+4. `ẖr-nṯr` = `חֶלְקַת־הָאֵל`.
+5. `jnk X` = `אֲנִי X`; `jw=j rḫ.kw X` = `יוֹדֵעַ אֲנִי X` (§3a: a stative); `ḏd n=j rn=j j.n X` (the ferryman's and the
+   door's questions, BD 99B, 122, 125) = `אֱמֹר לִי אֶת שְׁמִי, אוֹמֵר X` – the first copy fixes the rest of the dialogue.
+6. The rubrics: `šs-mꜣꜥ ḥḥ n zp` = `דָּבָר נָכוֹן בֶּאֱמֶת, אַלְפֵי אֲלָפִים פְּעָמִים` (BD 115); `jr rḫ rʾ pn` = `מִי שֶׁיּוֹדֵעַ
+   אֶת הַלַּחַשׁ הַזֶּה` (`jr` topicalization: `הִנֵּה`/`מִי ש־` by sense, §3a); `ḏd.tw rʾ pn ḥr X` = `יֵאָמֵר הַלַּחַשׁ הַזֶּה עַל X`
+   (HC 44).
+7. The denial `n jri̯=j X` = `לֹא עָשִׂיתִי X` and BD 125's verbs (§11.11.2) wherever a chapter repeats them; Nu's food
+   formula (BD 52–53, 102, 189 …) `bw.t=j pw ḥs, nn wnm=j sw` = `תּוֹעֲבָתִי הִיא צוֹאָה – לֹא אֹכַל אוֹתָהּ` (the first
+   copy fixes it; the later ones copy).
+
+### 12.5 Reserved and gated (added)
+The tale gates (§11.4: the Decalogue's, Ps 15 / 24's, Deut 26:13–14's words …) now apply to the Book of the Dead keys,
+CH and MR as well (`TALES` in `egypt_tools.py`); §5.1 everywhere (`שְׁאוֹל`, `מַבּוּל`, `תְּהוֹם`, the roots ברא, נחם,
+עצב, מחה, שחת …). **Look for** (the brief says "look for", never "translate as"): BD 17 (Atum alone in Nun, Gen 1:2;
+"yesterday … tomorrow"); BD 30B (the heart that must not witness against its owner; Ps 139, Jer 17:10); BD 175 (Atum
+will destroy what he made and the earth return to Nun as at first: Gen 6:7, 8:21–22, 9:11; render the Egyptian verbs by
+their own sense: the Cow's gates bind); BD 99B (the ferryman's interrogation); BD 151–154 (the body that does not decay:
+Ps 16:10); BD 64's rubric (a text found under a god's feet in Hermopolis: 2 Kgs 22:8); Merikare E 53–57 (the judges of
+the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside him), E 91–98 (the Asiatic, §11.2
+`הָעַאמוּ`), E 128–129 ("more acceptable is the character of the straight-hearted than the ox of the evildoer": 1 Sam
+15:22, Prov 21:3, 15:8, Hos 6:6 – no `זֶבַח` unless the Egyptian has an offering word; mꜣꜥ-jb by the `אֱמֶת` family).
+
+### 12.6 Proposals merged (filled by the coordinator after each translator)
