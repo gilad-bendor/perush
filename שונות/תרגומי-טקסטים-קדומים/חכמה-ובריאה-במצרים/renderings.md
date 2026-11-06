@@ -867,3 +867,15 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
 4. **Gates fixed:** the place Bꜣẖ.w licenses `באחו`; `המושבות` no longer read as the root שבת.
 5. **For the lead's harmonization:** mjḥ.w (here) / AM's ḥmw both `משוט`; jm.j-rʾ and ns both `לשון`; ꜥb.w `עבֵרה` / NU1's jw
    `עבירות`; sẖp `גמע` = BD 125's swallowing verb; ṯꜣy `גבר` / TB's `אשת איש`.
+#### 12.6.4 NU4 (BD 79 … 124), translator 4, merged 2026-11-06 (full tables in project.md, "NU4")
+1. **Becoming:** `rʾ n ḫpr m X` = `לחש להיות ל־X` (ḫpr infinitive `לִהְיוֹת`, as the future `יִהְיֶה`); `jri̯.t ḫpr.w m X`
+   §12.6.1.3.
+2. **The gate / ferry interrogation (BD 122; for BD 99B in NU8):** `מי אפוא אתה? אתה – מי? היכן נהיית? – אני אחד מכם.`;
+   named parts `"X" – שמו / שמה / שמם של Y`; "on what do you live?" `על מה אפוא אתה חי?` – `חי אני על X` (NU1's ꜥnḫ m).
+3. **Food formula:** 82.3 = NU3 51.2 with `אותה` for *sw*; 124.3–5 copy NU3 51.2–3 (only ḫmi̯ `לא אֵהָרֵס בה` differs).
+4. **Terms:** `jri̯ n=j wꜣ.t` = `עֲשֵׂה לי אורח` (wꜣ.t `אֹרַח`; NU2 has `דרך`: a split for the lead); mnj `עגן` (the moor /
+   die pun; SI); ḏꜣj `צלח` / `הסיע` / `חסם` by sense; pꜣj `עף`, jṯṯ `דאה`, ngg `קרקר`; mn.t "swallow" `סנונית`; wꜥr.t `אפיק`;
+   jp `מנה` / ṯnw `ספר`; ḥt.yt `גרגרת`; pꜣw.tj.w `הראשונים` (tp.jw-ꜥ `הקדמונים`); sꜣḫ.w `לחשי־אָח`; ḏ.t "body" `גְּוִיָּה`
+   (the MT's) / ḏ.t "eternity" `עַד` – the pun kept (85.9–10 = 85.14–15).
+5. **For the lead:** wꜣ.t `דרך` / `אורח`; jꜣḫ.w `זיו` (NU1) / `אורה` (NU2, NU4); wḏꜥ `הקצה` / `שפט` (by sense); jꜥn.w `הידד` /
+   `צער`; ꜣḫ.t `תועלת` (AM) hides the akh-sense; wsr.w `משוטי־החתירה` / AM's ḥp.t.

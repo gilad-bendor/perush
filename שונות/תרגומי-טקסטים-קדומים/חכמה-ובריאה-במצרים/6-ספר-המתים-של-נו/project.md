@@ -863,6 +863,223 @@ parts: `שלום לפניך/לפניכם`, `שור־המערב`, `אדון־הא
 - The TLA's lemma gloss and its sentence translation can disagree (68.3 *sti̯* "knüpfen" vs "losgebunden"; 105.7 *kꜣ*
   "Opferstier" vs "Esel"): read both, and say which one the Hebrew follows.
 
+## NU4 79.1–124.20 (Round 6 run 2, translator 4; 2026-11-06)
+
+### Scope
+KEY NU4 = 14 chapter texts of pNu in the papyrus's order – BD 79, 117, 118, 21, 12, 122-1, 122-2, 98, 76, 85, 82, 77, 86,
+124 – 127 lines (`79.1`–`124.20`), all drafted, filled, verified, compared with the TLA's German and passed three times; the
+clean translation built (`translation-NU4.rtl.md`; intro `translation--intro-NU4.rtl.md`). One `## ` heading per chapter
+(13: 122-1 and 122-2 under one heading). Preservation: good; restorations only at 12.2, 82.10, 86.7, 124.12, 124.13, 124.17;
+`[…]` is mostly the owner's name. The text: most of the transformation spells (become the Great One of the tribunal 79, any
+form 76, a living ba 85, Ptah 82, a golden falcon 77, a swallow 86, the benu 124's title), the Rosetau spells (117, 118),
+the mouth (21), going in and out (12, 122 with the ferry interrogation), the ferry in the sky (98), and BD 124 (going down
+to Osiris's tribunal) – which in Nu carries the title of BD 83 ("transformation into a benu"): noted at 124.1.
+
+### Sources consulted
+AED-TEI pNu (`data NU4`); the TLA's German (`tr NU4`), read after each of the four drafting saves (79–118 / 21–98 /
+76–82 / 77–124), each call restricted to the labels just drafted; it changed about 75 drafted lines (each listed in the
+entry's **תרגומים** bullet, "הטיוטה הראשונה … תוקנה"). No other witness in the folder; Faulkner, Allen, Quirke, Lapp: from
+memory only, never quoted. Every Bible verse printed with `check_bible_quotes.py --show` before quoting; the checker reports
+0 problems on the three files.
+
+### Decisions
+**Formulas (fixed or applied here):**
+
+| Egyptian | Hebrew | Lines | Reason |
+|---|---|---|---|
+| `rʾ n ḫpr m X` (title, intransitive "become") | `לחש להיות ל־X` / `להיות ב־` | 79.1, 76.1 | *ḫpr* = `נִהְיָה` (§4.4) has no living infinitive; as its future is `יִהְיֶה` (§10.3.4), its infinitive is `לִהְיוֹת`; *ḫpr m* = `נִהְיָה לְ־` (§10.13) |
+| `rʾ n jri̯.t ḫpr.w m X` | `לחש לעשות צורה של X` | 85.1, 82.1, 77.1, 86.1, 124.1 | §12.6.1.3, applied |
+| the gate interrogation `nm tr ṯw / ntk zy / ḫpr.n=k ṯnj` – answer `jnk wꜥ jm=ṯn` | `מי אפוא אתה? אתה – מי? היכן נהיית? – אני אחד מכם.` | 122-1.2 | *tr* = `אפוא` (NU1 17.84 `מי אפוא הוא?`), *zy* `מי` (BD 125), *ṯnj* `היכן` (NU2); for BD 99B (NU8) |
+| `X rn n Y` (the ferry's parts named) | `"X" – שמו / שמה / שמם של Y` | 122-1.2–122-1.4 | NU2 31.3's `"שליח" – שמו של האחד`; gender/number of the Hebrew noun |
+| `jy.n=k ṯnj` / `ꜥnḫ=k jrf m m / jšs.t` – `ꜥnḫ=j m X` | `"מאין באת?" – "באתי מ־…"`; `"על מה אפוא אתה חי?" – "חי אני על X"` | 98.6–98.8, 82.4–82.5 | *ꜥnḫ m* = `חי על` (NU1 17.71); one Hebrew for both interrogatives (*m*, *jšs.t*) |
+| the food formula (§12.4.7) | `תועבתי (פעמיים) – לא אֹכַל אותה; תועבתי היא צואה – לא אֹכַל אותה.` | 82.3; 124.3–124.5 copies NU3 51.2–51.3 | NU3 51.2's first copy; 82.3 changes only `את תועבתי` → `אותה` (the Egyptian has *sw*); 124.4 *ḫmi̯* (TLA) for 51.3's *ḫnd*: `לא אֵהָרֵס בה` |
+| `jri̯ n=j wꜣ.t` | `עֲשֵׂה לי אורח` (pl. `עשו לי אורח`, 86.10) | 117.4, 76.3, 122-2.3, 86.10–11 | *wꜣ.t* = `אֹרַח` (§10.3.1, NU1 `אורחות`); NU2 41 wrote `עשו לי דרך` – an existing split, for the lead |
+| the rubric `jr rḫ rʾ pn jw=f pri̯=f m hrw nn šnꜥ=f ḥr sbꜣ nb m ẖr-nṯr` | `מי שיודע את הלחש הזה – יצא הוא ביום, לא ימנעו אותו בשום דלת בחלקת־האל` | 86.13–14 | §12.4.6; BD 125, 114 `לא ימנעו אותו בשום דלת של המערב` |
+| `bꜣ=j pw bꜣ.w nṯr.w nḥḥ ḏ.t=j pw ḏ.t` | `הבָּא שלי – הוא הבָּאִים של אֵלֵי הנצח; גוויתי – היא העַד` | 85.9–10 = 85.14–15 | the pun *ḏ.t* "body" `גְּוִיָּה` (MT) / *ḏ.t* "eternity" `עַד` (§4.4), kept in both copies |
+| `ḏd-mdw jn […]` without *mꜣꜥ-ḫrw* | `דברים לאמר, בפי […]:` | 118.1, 12.1, 124.2 | the bracket and the words follow the base |
+| `šs-mꜣꜥ ḥḥ n zp`, `zp-2`, `zp 4`, `ky-ḏd` | as NU1 | 86.14, passim, 82.10, 122-2.1 | |
+
+**Key terms (new or settled here):**
+
+| Egyptian | Hebrew | Lines | Reason / rejected |
+|---|---|---|---|
+| ḥꜣp (pass. ptcp.) / jmn "hidden" / štꜣ "secret" | `מוסתר` / `נעלם` / `נסתר` | 79.3–4, 85.13, 86.12 | three lemmas in two lines: AM's ḥꜣp `הסתיר`, NU1's štꜣ `נסתר`; jmn (Amun's name) `נעלם` |
+| ḫm "shrine" | `דביר` | 79.4 | MT 60 |
+| qbḥ.w "cool-water region" | `מי־הצינה` | 79.5 | TB 8,5 qbḥ `צוננים` |
+| nṯri̯ (stative) | `אֵלִי` (vocalized) | 79.6 | NU2 nṯr.j `האֵלִית` |
+| ḥzmn "natron" / pꜣḏ "pellet" | `נתרון` / `כדור` | 79.7 | bd is `נתר` (NU3) / `בורית` (HC): another lemma, another word; pꜣḏ = WE 1,14 `כדורים` |
+| sṯꜣ "jug" | `פך` | 79.13 | ds `כד` (BD 114), ḏwjw `קנקן` (WE) taken |
+| ḥꜥꜥ.wt / ḥꜥj | `עליצה` / `עלז` | 79.11–15 | SI B66 `עולזת`; ṯḥḥ `הריע` |
+| ṯꜣ.tj (dual) | `שני גוזליכם` | 79.12 | ṯꜣ `גוזל` (NU1, NU3) |
+| sꜥḥ "dignity" | `אצילות` | 79.14, 118.2 | the noun of sꜥḥ `אציל` (NU3, BD 74) |
+| ꜣḫ.t (tla217) "glory, useful thing" | `תועלת` | 118.2 | AM 6.17; the akh-pun in the note |
+| jꜣ.t.j "mound" / jꜣ.t "standard" | `תל` / `מוט` | 118.3, 82.3, 85.18 / 79.11, 85.7, 117.2 | NU1 17.27 / BD 77 (an existing split by lemma) |
+| wnḫ "clothe" / ḥbs (verb) "cover" | `הלביש`, `לבש` / `כיסה` | 117.2, 82.7 / 124.15 | kept apart |
+| snḏm "make pleasant" | `הנעים` | 117.3 | causative of nḏm `נעים` (AM 9.7) |
+| mn.t "suffering" / mn.t "swallow" | `מכאוב` / `סנונית` | 117.3 / 86 | BD 125, 11 / new; two lemmas |
+| wḏꜥ "assign" | `הקצה` | 117.3 | split by sense from NU2's wḏꜥ "judge" `שפט` |
+| jp "count, assign" / ṯnw "count" | `מנה` (`מנוי`) / `ספר` (`ספור`) | 85.8, 82.11, 86.8 | NU3 jp `מנה`; Hebrew `מָנָה` also "assign" |
+| ḏꜣj "cross (water)" / ḏꜣj "ferry X" / ḏꜣj "oppose" | `צלח` / `הסיע` / `חסם` | 98.4, 85.13 / 122-1.4 / 124.12 | §10.8.3 `צָלַח` (PT) for the intransitive; NU2's `הסיע` for the transitive; the homonym "oppose" by sense |
+| mnj "moor; die" | `עגן` | 98.2–3, 85.5 | NU1 17.78; the euphemism explained in the notes |
+| ngg "cackle" | `קרקר` | 98.3, 82.2 | |
+| pꜣj / jṯṯ "fly" | `עף` / `דאה` | 82.2, 77.2, 76.3 / 98.3 | two lemmas, two verbs |
+| wꜥr.t (tla44780) "waterway in the beyond" | `אפיק` | 98.2, 86.9 | NU3's wꜥr.t "district" `מחוז` is another lemma (the TLA's sentence says "Bezirk": noted) |
+| mꜣq.t / rmn.wj "supports" | `סולם` / `משענות` | 98.5 | rmn "upper arm" `קיבורת` (NU3) is another lemma |
+| j.ḫm.w-wrḏ | `בלתי־היגעים` | 98.5 | wrḏ `יגע` (NU2); as j.ḫm.w-sk `בלתי־כלה` (§10.8.4) |
+| gm wš (the ancient copyist's lacuna mark) | `"נמצא־פגום"` | 98.8 | literal; the TLA prints "Lücke" |
+| jmw / sqdj | `כלי־שיט` / `שט` (`אשוט`) | 98.8 / 98.10 | §10.5.2 (AM); MK E133; `הפליג` is ḫdi̯'s (NU3) |
+| wsr.w "oars" / ḥmw "steering oar" / ḥꜣ.tt / mḏꜣb.t | `משוטי־החתירה` / `משוט` / `החבל הקדמי` / `מצקת` | 122-1.3–4 | AM ḥp.t `משוט־חתירה` and wsr.w now share a Hebrew (never in one text: for the lead); AM ḥmw `משוט`; SS 4 `החבל הקדמי` |
+| šns, ds, pzn, wr n jwf | `לחם־שֶׁנֶס`, `כד`, `ככר־פֶּסֶן`, `נתח גדול של בשר` | 122-1.5 | BD 125, 113–114, copied |
+| mhn "milk jug" | `צנצנת` | 122-1.4 | |
+| bjk / smn | `בז` / `אווז` | passim | SI; WE 8,18 |
+| ḫpr-ḏs=f; ḫpr.n=j ḏs=j ḥnꜥ Nw | `נהיה־מעצמו`; `נהייתי מעצמי עם הנוּן` | 79.2, 85.4 | NU1, NU2 |
+| Ḥw | `חוּ` | 85.2–3 | §3.1 |
+| ḫb.t (dꜣ.t) | `הגרדום (של הַדּוּאַת)` | 85.1, 85.5 | NU1 18.28 |
+| ꜣḫ.w "power" | `גבורות` | 85.5 | §10.12.1 |
+| jm.j.w jḫ.t / mr.t | `בעלי־הרכוש` / `הנתינים` | 85.5–6 | jḫ.t "property" `רכוש` (NU1 split by sense) |
+| sms.w / pꜣw.tj.w / pꜣw.t / tp.j.w-ꜥ | `הבכור` / `הראשונים` / `ראשית־הזמן` / `הקדמונים` | 85.9, 77.5, 124.12–14 | `הקדמונים` is tp.jw-ꜥ's (MT 2, HC 8) |
+| ḥqꜣ ḏ.t; ḥr.t; ḏr.w | `שליט העד`; `המרום`; `קצה` | 85.11 | §11.2, §10.10.3 |
+| qmꜣ kk.w | `יוצר החושך` | 85.11 | qmꜣ `יצר` (§4.4) – Isa 45:7 in the apparatus |
+| jꜣr.t; bjꜣ; fnṯ | `שרביט`; `ימת־השמים`; `תולעים` | 85.12–13 | NU2 30A.5; NU1 17.65 (`רָקִיעַ` reserved) |
+| ḥwn / jd | `עלם` / `בחור` | 85.15–16 | TB `העלם`; `נַעַר` is AM's ẖrd |
+| zš "nest, thicket" / swḥ.t | `סבך` / `ביצה` | 85.17 | NU1/WE `סבך` kept; NU2 22.1 |
+| ḥn / ḫwj | `מחוסה` / `מוגן` | 85.18 | ḫwj `הֵגֵן` (PT600) |
+| sfḫ "relieve oneself" | `התרוקן` | 82.1 | split by sense from sfḫ "loosen" `התיר` (NU3, 79.8) |
+| pḥ.wj; ḥꜣb; jmꜣ; ḥnw.t; wꜣḥ.yt; Tꜣy.t | `אחוריים`; `חג`; `שיזף`; `בעלת`; `דגן`; `תָּאיִת` | 82 | HC 53; NU3 68.10; WE 6,10; SI B192 |
+| ḥt.yt "throat" | `גרגרת` | 82.10, 77.9 | `גרון` is AM's jḥdjy |
+| nhp / sqbb / ḫꜥ.w / wꜣḥ tp | `מחסה` / `צינן` / `כתרים` / `השפיל ראש` | 82.12 | `הרכין` is AM's ḫꜣb |
+| kꜣ "bull" / ꜣ.t "power" / nk | `שור` / `עוז` / `שכב` (licensed) | 82.13 | NU3 14.2 `עוז`; BD 125 nk `שכב עם` |
+| ꜥfḏ.t "box, cabin" | `ארגז` | 77.4 | NU1 17.102 (the same lemma) |
+| wꜣḏ "green stone"; ks.w; bꜥḥ; šzp jb; Nprj | `אבן ירוקה`; `השתחוויה`; `שופע`; `מרוצה לבי`; `נֶפֶּרִי` | 77 | |
+| sḫ.tj-ḥtp (dual) | `שני שדות־הקורבנות` | 77.8 | §12.6.1.4 |
+| Ḥdd.t; sṯj "scent"; wrš; wpw.t; smj (noun) | `חֶדֶדֶת`; `ריח`; `בילה את היום`; `שליחות`; `ידיעה` | 86.2–4 | NU3 90.4 `שליחות`; smj verb `הגיד` (BD 125) |
+| swn "open" | `פִּנָּה (דרך)` | 86.4 | wn `פתח`, wpi̯ `פילח`, wbꜣ `פער`, zn `פרץ` taken |
+| ḫrp-n-wjꜣ; ḫrp | `מנהיג־הצִי`; `הנהיג` | 86.5, 85.12 | SI B229 `מנהיג` |
+| sjp "inspect" / "hand over" | `בדק` / `הפקיד` | 86.6–7 / 124.12–14 | NU2's two senses (`בדיקה`, `הפקיד`); `מסר` is swḏ's |
+| qꜣḥ | `כפף` | 86.7 | |
+| ḫnr.t; skꜣ; mꜣmꜣ | `מתחם`; `חרש`; `דּוּם` | 124.2–3 | AM 8.17 `חרוש` |
+| ḫr.t / ẖr.t "needs" | `מחיה` | 124.6, 124.15 | §10.2.3 |
+| sꜣḫ.w | `לחשי־אָח` | 124.7 | NU1's suggestion (§12.6.1.4) adopted |
+| jꜥr.wt | `פתנים` | 124.7 | BD 125 `פתן` |
+| sḥtp-tꜣ.wj (epithet) | `"מניח־דעת־שתי־הארצות"` | 124.7 | sḥtp `הניח את דעת` (NU3) |
+| jꜣḫ.w "radiance" (also as a god's epithet) | `אורה` (`"האורה"`) | 98.4, 86.11, 85.18, 124.9, 124.15 | NU2 74.3 `האורה`; NU1 17.66 has `זיו` for the same lemma (an existing split, for the lead) |
+| tmꜣ; dhn; nrw | `מחצלת`; `מצח`; `מורא` | 124.17–18 | WE 7,15; NU1 |
+| ꜣḫ ꜥpr | `אָח ערוך` | 124.19–20 | NU2 `ערוך` |
+
+**Names (first occurrence vocalized):** `נָאיֶת` (nꜣy.t), `האָבִּית` (ꜣb.yt, a bird), `תֶּפֶן` (Tpn), `כָּאָא` (Kꜣꜣ), `סְוֵן` (swn
+water), `וֶנוּ` (Wnw, Hermopolis), `חֶם` (Letopolis, BD/NU1), `תָּא־טֶבּוּ`, `חֶדֶדֶת`, `נֶפֶּרִי`, `תָּאיִת` (SI), `מֶחֶת־וֶרֶת` (NU1),
+`גֶ׳דוּ`, `פֶּה`, `האִיבִּיס` (AM), `אַבְּגֶ׳ו`; translated names: `מאסף־הבָּאִים` (the ferryman), `*מסרק־השיער*?`, `מה־ער!`,
+`רעה־היא?`, `נכון־בדיוק` (the ferry's parts), `אל־השחר` (nṯr-dwꜣ.y), `"האורה"`, `בָּא־של־רַא`.
+
+**Rejected (gates and echoes):** `רָקִיעַ` for bjꜣ (85.13: `ימת־השמים`, the TLA's "Firmament" in the apparatus); `תְּהוֹם` for Nun
+(85.2, 85.4: Gen 1:2 in the apparatus only); `בָּרָא` for qmꜣ (85.11: Isa 45:7 `וּבוֹרֵא חֹשֶׁךְ` in the apparatus); `נְקִי כַפַּיִם`
+(79.6: Ps 24:4 in the apparatus); `מסר` for sjp (swḏ's); `נער` for jd (ẖrd's); `גרון` for ḥt.yt (jḥdjy's); `הקדמונים` for
+pꜣw.tj.w (tp.jw-ꜥ's); `ספינה` for jmw (sk.tj's); `הפליג` for sqdj (ḫdi̯'s); `עף` for jṯṯ (pꜣj's); `בסס` for srwḏ (`חיזק`, NU2/NU3).
+
+### Open decisions for the user
+1. **ḫpr infinitive `לִהְיוֹת`** (79.1, 76.1) beside the past `נִהְיָה`: the alternative `להיהפך ל־` would take the meaning
+   "turn into" from ḫpr's own root-sense; `להיות ל־` keeps one Hebrew root with the future `יִהְיֶה` (§10.3.4).
+2. **ꜣḫ.t (tla217) `תועלת`** (118.2, AM 6.17): "usefulness" hides the akh-sense ("glory, akh-power"); a coined `אָחוּת` was rejected
+   (reads "sisterhood / brotherhood").
+3. **BD 124's title** (124.1–2): Nu writes BD 83's title ("transformation into a benu") over BD 124's text; the Hebrew follows
+   the papyrus, the `## ` heading takes the content ("going down to Osiris's tribunal").
+4. **jꜣḫ.w as a god's name** (124.9, 124.15): `"האורה"` (NU2's noun, quoted as a name); NU1 17.66 has `זיו` for the lemma.
+5. **wsr.w `משוטי־החתירה`** shares AM's ḥp.t `מְשׁוֹט־חֲתִירָה` (two lemmas, one Hebrew, never in one text).
+6. **82.11** (Geb's wife, "whose head passes away", "do not repeat it – woe!") and **98.10 jꜣꜣ** remain cruxes, marked `*…*?`.
+
+### Progress log
+- Drafted in four saves (79, 117, 118 / 21, 12, 122, 98 / 76, 85, 82 / 77, 86, 124), each filled and verified at once; `tr NU4`
+  read after each save over exactly the drafted labels, and the **תרגומים** bullet written: about 75 lines changed after the
+  TLA – mood and tense (79.13–14, 85.6, 85.8, 85.16–17, 86.9–11, 98.3, 117.3, 118.2–3, 124.2–9, 124.11, 124.16), voice and
+  person (21.2–21.3: the god's statives, not the dead man's; 124.4, 124.7), number (79.12 dual, 77.8 dual, 122-2.2–3,
+  124.7), syntax and segmentation (79.3–79.6: each "hail" opens the next address; 85.11, 85.13, 85.15–16 the name formula,
+  117.3–4 *wr* vocative, 124.13), a word's sense (77.7 *bnw* stone, 77.9 *m* of identity, 82.9–82.10, 98.6 *n Tpn*).
+- Pass (a) fidelity: a script listed every bracketed source token against the Hebrew brackets (6 lines; 124.13 *sn[,w]* –
+  ending restored → no bracket, fixed); every negation and tense rechecked with the TLA comparison (85.8, 85.16, 98.3 *n sḏm=f*
+  past; 85.3 *nn sḏm.n=f*).
+- Pass (b) consistency: every new Hebrew word grepped in the corpus; changed: jṯṯ `עף` → `דאה` (pꜣj's), srwḏ `ביסס` → `חיזק`
+  (NU2/NU3), jmw `ספינות` → `כלי־שיט` (AM), sqdj `הפליג` → `שט` (MK; ḫdi̯'s), jd `נער` → `בחור` (AM's ẖrd), ḥnw.t `גבירה` →
+  `בעלת` (WE), ḥt.yt `גרון` → `גרגרת` (AM's jḥdjy), sjp "hand over" `מסר` → `הפקיד` (swḏ's / NU2), ḥbs `הלביש` → `כיסה` (wnḫ's),
+  pꜣw.tj.w `הקדמונים` → `הראשונים` (tp.jw-ꜥ's), pꜣḏ `גלולה` → `כדור` (WE), sṯꜣ `כד` → `פך` (ds's), jꜣḫ.w epithet `הזוהר` →
+  `"האורה"` (ꜥḏ / psḏ have `זוהר`); *ꜥnḫ m* aligned to `חי על` in 85.3, 98.7–8, 82.4; nṯr / nṯr.t vocalized (`אֵלִים`, `אֵלָה`);
+  the two hearts in the plural (`לִבּוֹת` 79.8, 124.12; `לְבָבוֹת` 124.10). `verify` reports 0 repeated-line differences.
+- Pass (c) Hebrew: the clean text read through; the quotation marks of the 98.6–98.8 dialogue closed; 82.6's answer marked by a
+  dash; register even, no vav-consecutive.
+- `verify NU4 --strict`: 0 problems; `check_bible_quotes.py` on the annotated, intro and translation files: 0 problems;
+  `build NU4` done.
+
+### The text on its own terms
+- **To survive is to change form** (76, 77, 82, 85, 86): the dead man "makes the form" (*ḫpr.w*) of a falcon, a swallow, a
+  god; *ḫpr* "become" is Khepri's name – the beetle that seems to come into being of itself – so every transformation repeats
+  the sunrise (85.4 "in which I come into being every day").
+- **Self-creation without a beginning before the water** (85.4, 79.2): "I came into being of myself, together with Nun" –
+  the creator does not precede the primeval water; he becomes inside it, and becomes again each morning.
+- **Body = eternity** (85.10, 85.15): *ḏ.t* "body" and *ḏ.t* "eternity" are one word; the mummy *is* the changeless eternity,
+  and the changing forms are *nḥḥ*, the cyclic eternity of the sun.
+- **The ba as a bird with a nest** (85.17): "my nest will not be seen, my egg will not be broken" – the soul as a hidden bird.
+- **Death as mooring** (98.2–3, 85.5): *mnj* "to moor" is the euphemism for dying; "my abomination is mooring" – the dead
+  man's horror of death is a sailor's horror of the journey's end.
+- **Knowledge as the passport** (79.9, 122-1.2–4, 86.12): to know the gods' names, the ferryman's name and the name of every
+  part of his boat is to pass; the gate interrogation is an examination.
+- **The diet of the blessed** (82.3–82.7, 124.3–124.6, 98.7–98.8): "On what do you live?" – white emmer bread, red-barley beer,
+  under Hathor's tree; never excrement – the horror of a world turned upside down.
+- **The body as gods** (82.9–82.10): head Re and Atum, tongue Ptah, throat Hathor – the speaking organs are the creator's.
+- **A scribe's honesty** (98.8): *gm wš* "found destroyed" – the copyist marks the gap of his exemplar instead of inventing.
+- **Inversion of judgement** (79.8): the dead man "loosens the wrong" in the gods' hearts and brings them *maat*.
+- **The dead as mediator** (124.18–124.19): seated on Osiris's mat, he tells the god the words of men and repeats to him the
+  words of the gods – and, an "equipped akh", equips all the akhs.
+- **Justice as measure for measure** (86.6): Seth lies in the fetters he made for the dead man.
+
+### Key parallels
+- [divergence] Gen 1:2 `וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם; וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל פְּנֵי הַמָּיִם` ↔ 85.2: the ba of Re comes *out of* Nun.
+- [divergence] Ex 3:14 `אֶהְיֶה אֲשֶׁר אֶהְיֶה` and Gen 1:1 ↔ 85.4: a god defined by the verb of becoming – but the becoming is
+  renewed daily and happens *with* the primeval water.
+- [divergence] Isa 45:7 `יוֹצֵר אוֹר וּבוֹרֵא חֹשֶׁךְ` ↔ 85.11 "I am he who formed darkness" (qmꜣ = `יָצַר`).
+- [equivalent] Isa 44:24 `אָנֹכִי יְהוָה עֹשֶׂה כֹּל נֹטֶה שָׁמַיִם לְבַדִּי` ↔ 79.2: the creator's self-predication in participles.
+- [equivalent] Gen 28:12 `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה` ↔ 98.5: a ladder between earth and sky.
+- [equivalent] Isa 38:14 `כְּסוּס עָגוּר כֵּן אֲצַפְצֵף` ↔ 86.1: the dying likened to a swallow; here the dead *become* one.
+- [equivalent] Job 6:2 `בְּמֹאזְנַיִם יִשְׂאוּ-יָחַד` ↔ 12.2: the same verb "lift / carry" (fꜣj `נשא`) for weighing on scales.
+- [equivalent] Ps 7:16 `בּוֹר כָּרָה וַיַּחְפְּרֵהוּ; וַיִּפֹּל בְּשַׁחַת יִפְעָל` ↔ 86.6: Seth in his own fetters.
+- [equivalent] Gen 40:13 `יִשָּׂא פַרְעֹה אֶת רֹאשֶׁךָ` ↔ 124.8: "lifting the head" as restoration.
+- [divergence] Gen 16:8 ↔ 122-1.2: the question "where from?" – here an examination answered by identity and names.
+
+### Lines shared with other texts
+Copied: 21.1 = NU2 22.1's title (`לחש לתת את פיו של […] אמיתי־הקול`); 79.11 `הגבוה על מוטו` = BD 125, 77; 122-1.5 = BD 125,
+113–114's food list; 124.3–124.5 = NU3 51.2–51.3 (food formula; the one different verb *ḫmi̯* / *ḫnd* noted); 82.3 = NU3 51.2
+with `אותה` for `את תועבתי` (the Egyptian *sw*); 124.5 `לחמי – מכוסמת לבנה, ושֵׁכָרִי – משעורה אדומה` = NU3 68.9; 86.14
+`דבר נכון באמת, אלפי אלפים פעמים` = BD 115. Inside NU4: 85.9–10 = 85.14–15 (the bꜣ / ḏ.t refrain); 82.2 / 77.2–3 / 98.3
+(fly – cackle – alight); 98.7 / 82.4 (the "on what do you live" question). For NU8 (BD 99B): the interrogation strings of
+122-1.2 and the "X – שמו של Y" pattern.
+
+### Proposals for the shared renderings
+| Egyptian | Hebrew | Lines | Reason |
+|---|---|---|---|
+| `rʾ n ḫpr m X` | `לחש להיות ל־X` | 79.1, 76.1 | ḫpr's infinitive `לִהְיוֹת` (as its future `יִהְיֶה`, §10.3.4) |
+| gate interrogation | `מי אפוא אתה? אתה – מי? היכן נהיית? – אני אחד מכם.` | 122-1.2 | for BD 99B (NU8) and every door dialogue |
+| `X rn n Y` | `"X" – שמו של Y` | 122-1.2–4 | NU2 31.3 |
+| `ꜥnḫ=k jrf m m/jšs.t` – `ꜥnḫ=j m X` | `על מה אפוא אתה חי?` – `חי אני על X` | 98.7–8, 82.4–5 | NU1 *ꜥnḫ m* `חי על` |
+| `jri̯ n=j wꜣ.t` | `עֲשֵׂה לי אורח` | 117.4, 76.3, 122-2.3, 86.10 | *wꜣ.t* = `אֹרַח` (§10.3.1); NU2's `דרך` for the lead |
+| mnj | `עגן` | 98.2–3, 85.5 | NU1; the "moor / die" pun |
+| ḏꜣj (intr. "cross") / (tr. "ferry") / ("oppose") | `צלח` / `הסיע` / `חסם` | 98.4, 85.13 / 122-1.4 / 124.12 | §10.8.3 + NU2 |
+| pꜣj / jṯṯ; ngg; ḫni̯ | `עף` / `דאה`; `קרקר`; `נחת` | 82.2, 77.2, 98.3 | the bird verbs of the transformation spells (NU5: BD 83, 84, 81A, 87, 88; NU6: BD 78) |
+| bjk; smn; mn.t; bn.w | `בז`; `אווז`; `סנונית`; `בֶּנוּ` | 77, 82, 86, 122-2, 124 | |
+| wꜥr.t (tla44780) | `אפיק` | 98.2, 86.9 | kept apart from wꜥr.t "district" `מחוז` |
+| j.ḫm.w-wrḏ | `בלתי־היגעים` | 98.5 | |
+| sꜣḫ.w | `לחשי־אָח` | 124.7 | NU1's suggestion confirmed |
+| jp / ṯnw | `מנה` / `ספר` | 85.8, 86.8, 82.11 | |
+| sjp | `בדק` / `הפקיד` (by sense) | 86.6–7 / 124.12–14 | NU2's two senses |
+| ḥt.yt | `גרגרת` | 82.10, 77.9 | AM's jḥdjy has `גרון` |
+| pꜣw.tj.w / tp.jw-ꜥ | `הראשונים` / `הקדמונים` | 85.9 / 124.12 | |
+| jꜣḫ.w | `אורה` (NU2); NU1 17.66 `זיו` – for the lead | | |
+| gm wš | `"נמצא־פגום"` | 98.8 | the copyists' lacuna mark, wherever Nu has it |
+| names | the list above | | |
+
+### Lessons for the guidelines
+- The TLA's sentence and its lemma can disagree on a word's identity (98.2 *wꜥr.t*: lemma "water", sentence "Bezirk"; 124.9
+  *jꜣḫ.w*: "Glanz" as a god's name): follow the lemma for the Hebrew word, quote the sentence.
+- A copy shared with an earlier part (124.3–5 = NU3 51.2–3) is worth checking word by word against the data: one verb differed
+  (*ḫmi̯* / *ḫnd*), and only it changed in the Hebrew.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
@@ -993,6 +1210,29 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | 108.15 | sšm,pl? jḫ[,t] ḫsf ꜥꜣpp ḥr =s jw =j rḫ.kw bꜣ.w jmn,tj.w Jtm,w pw Sbk pw nb Bꜣẖ,w | את *מלוות* הדבר שבו נהדף אַפּוֹפִּיס. יודע אני את הבָּאוֹת של המערביים: אָתוּם הוא, סוֹבֶּךְ הוא, אדון בָּאחוּ, | `אַתָּה פוֹרַרְתָּ בְעָזְּךָ יָם שִׁבַּרְתָּ רָאשֵׁי תַנִּינִים עַל-הַמָּיִם` (תהלים עד:יג) | divergence | האל המנצח את מפלצת המים; במצרים המאבק באַפּוֹפִּיס אינו מעשה אחד בראשית, אלא מלחמה שחוזרת בכל יום, והמת משתתף בה בידיעה. |
 | 119.3 | ṯw wꜥb rḏw sṯꜣ jm =k jri̯.y rn =f m Rʾ-sṯꜣ,w wsr =k jm m Ꜣbḏ,w ṯzi̯ ṯw jr =k Wsjr | אותך. טהורה ההפרשה שנזלה ממך, אשר נעשה שמו לרֶא־סְטָאוּ. חזק אתה שם באַבְּגֶ׳ו. הרם אתה את עצמך, אוֹסִירִיס, | `לֹא-תִתֵּן חֲסִידְךָ לִרְאוֹת שָׁחַת` (תהלים טז:י) | divergence | הגוף שאינו נרקב; כאן ההפרשות של גוף אוסיריס, שנזלו בזמן ריקבונו, הם "טהורים" ונותנים שם למקום – הריקבון עצמו מקודש. |
 | 119.5 | sꜥḥ nṯr ḏd =j ḫpr nn ḫsf =j ḥr =k Wsjr | אציל־האל; אומר אני – ונהיה. לא אֵהָדֵף מפניך, אוֹסִירִיס. | `כִּי הוּא אָמַר וַיֶּהִי הוּא-צִוָּה וַיַּעֲמֹד` (תהלים לג:ט) | equivalent | הדיבור שמתקיים מיד. במזמור – האל הבורא; כאן המת, שנעשה "אציל־האל", מקבל את כוח הדיבור היוצר. |
+
+### Parallels index (NU4)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 79.2 | jnk Jtm,w jri̯ p,t qmꜣ wnn,t pri̯ m tꜣ sḫpr sṯ,yt nb n,tt msi̯ nṯr.pl nṯr ḫpr-ḏs≡f | אני אָתוּם, אשר עשה את השמים, אשר יצר את ההווה, אשר יצא מן הארץ, אשר חולל את הזרע, אדון היש, אשר ילד את הָאֵלִים, האל נהיה־מעצמו, | `אָנֹכִי יְהוָה עֹשֶׂה כֹּל נֹטֶה שָׁמַיִם לְבַדִּי רֹקַע הָאָרֶץ` (ישעיהו מד:כד) | equivalent | הצגה עצמית של האל הבורא בגוף ראשון ובשרשרת בינונים ("אני … העושה … הנוטה") |
+| 79.2 | jnk Jtm,w jri̯ p,t qmꜣ wnn,t pri̯ m tꜣ sḫpr sṯ,yt nb n,tt msi̯ nṯr.pl nṯr ḫpr-ḏs≡f | אני אָתוּם, אשר עשה את השמים, אשר יצר את ההווה, אשר יצא מן הארץ, אשר חולל את הזרע, אדון היש, אשר ילד את הָאֵלִים, האל נהיה־מעצמו, | `וַיִּיצֶר יְהוָה אֱלֹהִים אֶת הָאָדָם` (בראשית ב:ז) | divergence | *qmꜣ* = `יָצַר` (§4.4), אבל כאן נוצר "ההווה" כולו, ובעברית – האדם. |
+| 79.6 | j⁝nḏ-ḥr =ṯn psḏ,t jm,j.t-ẖnw n nn,t m =ṯn wj jy.kw ḫr =ṯn wꜥb.kw nṯri̯.kw | שלום לפניכם, התשיעייה אשר בתוך שמי־המטה! הנה, באתי אליכם, טהור, אֵלִי, | `מִי-יַעֲלֶה בְהַר-יְהוָה; וּמִי-יָקוּם בִּמְקוֹם קָדְשׁוֹ` (תהלים כד:ג); `נְקִי כַפַּיִם וּבַר-לֵבָב` (תהלים כד:ד) | equivalent | הבא אל מקום האל מכריז על טהרתו; כאן הטהרה היא מצב ("טהור, אֵלִי") ולא מעשים, והמילים של מזמור כד אינן בתרגום (`renderings.md` §11.4). |
+| 79.9 | nfr,t s(j)ꜥr.n =j n =ṯn mꜣꜥ,t jw =j rḫ.kw ṯn rḫ.kw rn.w =ṯn rḫ.kw | טובה; העליתי לכם את האמת. יודע אני אתכם, יודע אני את שמותיכם, יודע אני | `יְדַעְתִּיךָ בְשֵׁם` (שמות לג:יב) | equivalent | ידיעת השם כקרבה; כאן הכיוון הפוך: האדם יודע את שמות האלים, ובידיעה זו כוחו. |
+| 12.2 | [ḥr] [sb]ꜣ.w ḥr wsr,t twy n.t Gbb ḥr mḫꜣ,t twy n.t Rꜥ,w fꜣi̯ =f mꜣꜥ,t jm =s | [על] [הדלתות], על המוט הזה של גֶּבּ, על המאזניים האלה של רַא, אשר הוא נושא בהם את האמת | `בְּמֹאזְנַיִם יִשְׂאוּ-יָחַד` (איוב ו:ב) | equivalent | אותו פועל "נשא" לשקילה במאזניים |
+| 12.2 | [ḥr] [sb]ꜣ.w ḥr wsr,t twy n.t Gbb ḥr mḫꜣ,t twy n.t Rꜥ,w fꜣi̯ =f mꜣꜥ,t jm =s | [על] [הדלתות], על המוט הזה של גֶּבּ, על המאזניים האלה של רַא, אשר הוא נושא בהם את האמת | `יִשְׁקְלֵנִי בְמֹאזְנֵי-צֶדֶק` (איוב לא:ו) | equivalent | האל שוקל את האדם; כאן רַא שוקל את מַאַת עצמה. |
+| 122-1.2 | wn n =j nm tr ṯw ntk zy ḫpr.n =k ṯnj jnk wꜥ jm =ṯn sꜣq-bꜣ,pl rn n mẖn,tj | פתח לי! מי אפוא אתה? אתה – מי? היכן נהיית? – אני אחד מכם. "מאסף־הבָּאִים" – שמו של המעבורתן; | `אֵי מִזֶּה בָאת וְאָנָה תֵלֵכִי` (בראשית טז:ח) | divergence | שאלת המוצא והיעד של הנודדת; כאן החקירה בשער היא מבחן של ידיעה, והתשובה היא זהות ("אני אחד מכם") ושמות. |
+| 122-2.2 | m bjk pri̯.n =j m bn,w nṯr-dwꜣ,y jri̯ n […] ꜥq =(j) m-ḥtp m jmn,t nfr.t n wj š n Wsjr | כבז, יצאתי כבֶּנוּ. אל־השחר, עשה ל־[…]; אכנס בשלום אל המערב היפה – שייך אני לאגם אוֹסִירִיס. | `אֵיךְ נָפַלְתָּ מִשָּׁמַיִם הֵילֵל בֶּן-שָׁחַר` (ישעיהו יד:יב) | divergence | כוכב השחר כדימוי; בישעיהו הוא נופל, כאן המת יוצא ועולה כ"אל־השחר". |
+| 98.2 | j⁝nḏ-ḥr =ṯ wꜥr,t twy jm,j.t p,t mḥ,t(j).t m š ꜥꜣ mꜣꜣ ṯn ⟨n⟩ mnj =f ꜥḥꜥ ḥr =ṯ ḫꜥi̯ =f m nṯr mꜣꜣ.n =j | שלום לפנייך, האפיק הזה אשר בשמים הצפוניים, באגם הגדול! החוזה בך – לא יעגון; העומד עלייך – יופיע כאל. חזיתי | `כִּי לֹא יִרְאַנִי הָאָדָם וָחָי` (שמות לג:כ) | divergence | ראיית הקדוש וגורלו של הרואה; כאן הכיוון הפוך: מי שרואה את מי השמים – לא ימות. |
+| 98.5 | ḥr rmn.wj m(ꜣ)q,t s(j)ꜥr.t j{w}⁝ḫm.w-wrḏ ḥri̯.w r ḥsq jni̯.n =j nw-n ḫsf.w | על שתי *משענות* הסולם, המעלה את בלתי־היגעים, הרחוקים מן הכריתה. הבאתי את אלה, הדוחים | `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה` (בראשית כח:יב) | equivalent | סולם בין הארץ לשמים; כאן המת עצמו עולה בו, ובבראשית – מלאכים עולים ויורדים, ויעקב רואה בחלום. |
+| 98.9 | ꜥḥꜥ =j m wjꜣ sšmi̯ =j mw ꜥḥꜥ =j m wjꜣ sšmi̯ =j nṯr ꜥḥꜥ =j mdwi̯ =j | אעמוד בצִי, אנחה את המים; אעמוד בצִי, אנחה את האל; אעמוד, אדבר: | `וְצִי אַדִּיר לֹא יַעַבְרֶנּוּ` (ישעיהו לג:כא) | equivalent | המלה `צִי` לספינה (§10.10.3); כאן ספינת האל, ובישעיהו ספינת מלחמה שאינה עוברת. |
+| 85.2 | jnk bꜣ-n-Rꜥ,w pri̯ m Nw,w bꜣ =j pw nṯr qmꜣ Ḥw bw,t =j pw jzf,t | אני בָּא־של־רַא, אשר יצא מן הנוּן; הבָּא שלי – הוא האל אשר יצר את חוּ. תועבתי היא העוול, | `וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם; וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל פְּנֵי הַמָּיִם` (בראשית א:ב) | divergence | רוח אלוהים מעל המים הראשונים; כאן הבָּא של רַא *יוצא מתוך* הנוּן, המים הראשונים (`תהום` אינו בתרגום, `renderings.md` §5.1). |
+| 85.4 | pwy n bꜣ ḫpr.n =j ḏs =j ḥnꜥ Nw,w m rn =j pwy n Ḫprj ḫpr.n =j jm =f rꜥ,w-nb jnk nb | זה של בָּא. נהייתי מעצמי עם הנוּן, בשמי זה של חֶפְּרִי, אשר בו אני נהיה בכל יום. אני אדון | `אֶהְיֶה אֲשֶׁר אֶהְיֶה` (שמות ג:יד) | divergence | אל שמגדיר את עצמו בפועל ההיות; כאן *ḫpr* "להיהפך, להיווצר", ושמו של האל (חֶפְּרִי, "המתהווה") הוא הפועל עצמו – אך ההתהוות חוזרת "בכל יום", כזריחת השמש, ואינה קיום שאינו משתנה. |
+| 85.4 | pwy n bꜣ ḫpr.n =j ḏs =j ḥnꜥ Nw,w m rn =j pwy n Ḫprj ḫpr.n =j jm =f rꜥ,w-nb jnk nb | זה של בָּא. נהייתי מעצמי עם הנוּן, בשמי זה של חֶפְּרִי, אשר בו אני נהיה בכל יום. אני אדון | `בְּרֵאשִׁית בָּרָא אֱלֹהִים` (בראשית א:א) | divergence | בבראשית הבורא קודם למים ואינו "נהיה"; כאן הבורא נהיה "מעצמו" *עם* הנוּן, המים הקדומים. |
+| 85.11 | ḥqꜣ ḏ,t jnk qmꜣ kk,w jri̯ s,t =f m-ḏr,w ḥr,t mrr! =j pḥ ḏr,w =sn | שליט העַד. אני יוצר החושך, אשר עשה את מושבו בקצות המרום. כשאחפוץ להגיע אל קצותיהם – | `יוֹצֵר אוֹר וּבוֹרֵא חֹשֶׁךְ` (ישעיהו מה:ז) | divergence | האל שיוצר את החושך; בישעיהו האל האחד יוצר את האור ואת החושך יחד, ואילו כאן החושך הוא מקום מושבו של הבורא בקצות השמים. *qmꜣ* = `יָצַר` (§4.4), ו`בָּרָא` אינו בתרגום. |
+| 86.1 | rʾ n jri̯.t ḫpr,w m mn,t ḏd-mdw jn […] mꜣꜥ-ḫrw | לחש לעשות צורה של סנונית. דברים לאמר, בפי […] אמיתי־הקול: | `כְּסוּס עָגוּר כֵּן אֲצַפְצֵף` (ישעיהו לח:יד) | equivalent | הנוטה למות מדמה את עצמו לסנונית (`סוּס`) המצפצפת; כאן המת עצמו *נעשה* סנונית ויוצא ביום. |
+| 86.6 | jw Stš pf zꜣ Nw,t ẖr jnṯ,t jri̯.tn =f r =j jw sjp.n =j n,tj m Ḫm | וסֵת ההוא, בן נוּת, נתון בכבלים אשר עשה לי. בדקתי את אשר בחֶם, | `בּוֹר כָּרָה וַיַּחְפְּרֵהוּ; וַיִּפֹּל בְּשַׁחַת יִפְעָל` (תהלים ז:טז) | equivalent | הרשע נלכד במלכודת שהכין לאחר; סֵת כבול בכבלים "אשר עשה לי". |
+| 124.2 | bn,w ḏd-mdw jn […] qd.n bꜣ =j ḫnr,t m Ḏd,w wꜣḏ =j m P(j) | בֶּנוּ. דברים לאמר, בפי […]: בנה הבָּא שלי מתחם בגֶ׳דוּ; אהיה רענן בפֶּה! | `בָּנֹה בָנִיתִי בֵּית זְבֻל לָךְ` (מלכים א ח:יג) | equivalent | בניית בית לאל; כאן הבָּא בונה לעצמו מתחם בעיר האל. |
+| 124.8 | nw-n jr,w.pl ḥtp,t ḏi̯! =k fꜣi̯.y{.n}? =j smꜣ,w wn | את עושי הקורבנות האלה! תן שיורם לי הקודקוד?, ויפתח | `יִשָּׂא פַרְעֹה אֶת רֹאשֶׁךָ וַהֲשִׁיבְךָ עַל כַּנֶּךָ` (בראשית מ:יג) | equivalent | "נשיאת ראש" כהשבה למעמד; כאן *fꜣj* `נשא` והקודקוד, אך המובן הוא הזקיפה הגופנית של הראש. |
 
 ### Parallels index (BD)
 | Line | Source | Hebrew rendering | Bible | Tag | Comment |
