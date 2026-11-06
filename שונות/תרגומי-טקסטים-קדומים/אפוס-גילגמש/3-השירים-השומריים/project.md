@@ -170,3 +170,61 @@ Translator: Round 6 run 1, part 1 (2026-11-06). The whole of Bilgameš and Ḫuw
 | 190 | *ninda gu₇-zu-ne-ne-a ḫe₂-gu₇-e* | מן הלחם שאתם אוכלים – יאכל | `וְאָכַל לֶחֶם תָּמִיד לְפָנָיו כָּל יְמֵי חַיָּיו` (מלכים ב כה:כט) | [equivalent] | The captive who eats the king's bread: protection and honour. |
 | 193 | *me-lem₄* | זוהרו | `וְאֵת לַהַט הַחֶרֶב הַמִּתְהַפֶּכֶת לִשְׁמֹר אֶת דֶּרֶךְ עֵץ הַחַיִּים` (בראשית ג:כד) | [equivalent] | The guardian's radiance (corpus §4); in HA the guardian dies and his auras are spread through the world: [divergence] in the outcome. |
 | 167 | *unug{ki}* | אוּרוּךְ | `וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל וְאֶרֶךְ` (בראשית י:י) | [cognate] | Unug = biblical Erech (a proper name: [cognate], §6.4.3). |
+
+## Part 2 (HB 1–168)
+Translator: Round 6 run 1, part 2 (2026-11-06), the same translator as part 1.
+
+### Progress
+- **138 / 138 entries drafted** (all the preserved lines of 1–168), with header paragraphs and seven `## ` section headings, in `annotated-HB.rtl.md`. HA's Hebrew is copied letter for letter wherever the Sumerian is the same (1–3 = HA 130–132; 27 = HA 11; 43 = HA 42; 67 = HA 64; 69 = HA 148NN; 81 = HA 78; 85 = HA 73; 92 = HA 102; 133 = HA 152a; the oath, the ranges formula, the felling refrain, the praise), and differs exactly where the Sumerian differs: each difference is noted at its line ("A: …").
+- Three passes: (a) **fidelity** (fixes: bracket rule applied to 6, 7, 8, 21, 43, 48, 65, 110, 112, 113, 139, 142, 158 – restored signs inside a preserved word unbracketed; 95 `(כנגדו)` → `(מולו)`, a reserved string); (b) **consistency** – a script grouping HA and HB by identical cleaned transliteration: every identical Sumerian line has identical Hebrew in both files; (c) **Hebrew** – read aloud.
+- `python3 -I bilgames_tools.py verify HB`: **OK** (0 problems). `check_bible_quotes.py annotated-HB.rtl.md project.md`: 0 problems.
+
+### Open decisions
+11. ***kur* in 11–13 = `הארץ`** (the netherworld: *irigal* "the great city", "the land of submission"), against `ההר` everywhere else in HA/HB: the same word, two worlds, inside one poem. With it *irigal* = `העיר הגדולה` (translated; the note names Akk. *irkallu* `אִירְכַּלָּה`, its derivative).
+12. ***sud* (12) = `ארוך`** – the word of the Akkadian (DP 83 *arku* `ארוך`), against HA 28 *sukud* `גבוה`. Kept apart deliberately: it is the finding (below).
+13. **The father in the oath**: *a-a ugu-ĝa₂* (86, 109) = `ואבי הורי` (*ugu* `הורה`, Gen 49:26 `הוֹרַי`); *a-a tud-da-ĝu₁₀* (165) = `אבי מולידי` (*tud* `ילד`, causative). HA's form (`ואבי`) where B has *a-a-ĝu₁₀* (15, 99).
+14. ***diĝir-ĝu₁₀* = `אֵלִי`, *diĝir-zu* = `אֵלְךָ`** (always vocalized; `אֱלֹהֶיךָ` reserved).
+15. **Uncertain, in italics**: *nam-gu₂-ka* `*הכניעה*` (11), *gib* `*יחסום*` (12), *ĝiri₃-bal* `*מעברות־הרגל*` (48; ORACC "flooding", ETCSL "destructive weather"), *te* `*נעץ*` (72), *KA-za … e₃* `*בפיך* הוציא` (100, 110; 139 `מפיך הוצאת` – swearing), *šu si sa₂* `יד *ישרת*` (137), *aškud₂* `*מרפקיו*` (134, 141), *ĝiri₃ kur-ra* `*שבילי* ההר` (157; *ĝiri₃* `רגל` elsewhere – a sense split).
+16. ORACC slips noted at their lines: 8 *a-a* lemmatized "father" (it is "in the water"); 53 *dam zu-še₃* lemmatized *zu* "know" (it is "your").
+
+### Proposals for the corpus renderings
+New fixed strings (for the later texts, and for `verify` if wanted): the B oath `"חֵי אמי הורתי, נִינְסוּן, ואבי הורי, לוּגַלְבַּנְדָּה הטהור!` + `אֵלִי, אֶנְקִי, האדון נוּדִימּוּד` (and in Ḫuwawa's mouth `חֵי אמך הורתך, … ואביך …` / `אֵלְךָ, …`); the stars `הם – כוכבי השמים הם; בארץ – את האורח יודעים הם;` and `… יודעים הם` (45–49); the muster `"עיר! מי שיש לו אישה – אל אשתך! מי שיש לו בן – אל בנך!` / `מי שאין לו אישה, מי שאין לו בן –`; `גיבור – ישיבתך בהר – תיוודע!`; the shoes `לרגליך הקטנות – נעליים קטנות אכן נעשו לי!` (and `הגדולות`); `גיבור – שקר הנחת! … שבועה כרתָּ –`; the mockery as statements `גיבור אחוז – משוחרר הוא?!` / `כוהנת־אֵן אחוזה – אל הגִּפָּר שבה?!` / `כוהן־גּוּדוּג אחוז – אל חֵנוֹ שב?!`; `"אמי יולדתי – מערת ההר; / אבי מולידי – מערת הרמה;`.
+Words: *ur₅* `כָּבֵד` (vocalized; laments); *irigal* `העיר הגדולה`; *taka₄* `עזב`; *zag* `גבול`; *ed₃* `עלה`; *suḫ₁₀* `נזר`; *keše₂* `קשר`; *mul* `כוכב`; *kaskal* `דרך` (and *ḫar-ra-an* `אורח`, as *urḫu* / *ḫarrānu*); *dam-gar₃* `תַּגָּר`; *tum₁₂* `יונה`; *ab-lal* `נקב` (GEN 241); *dam* `אישה`; *zig₃ ĝar* `קימה שָׂם` (levy); *ĝiri₃ dab₅* `את הרגל אחז` (take the road); *šu-gur* `רומח`; *eme* `לשון`; *šarag* `יבש`; *usu* `כוח`; *nam-erim₂ kud* `כרת שבועה` (`בְּרִית` reserved); *kilib₃* `כל`; *ḫurrum* `מערה`; *aratta* `אָרַטָּה`; *Nudimmud* `נוּדִימּוּד`.
+
+### Key findings
+**What B changes against A – the ancient mind of a second telling:**
+- **The opening**: B begins with the praise lines that A gives to Ḫuwawa and to Enkidu in mid-poem (HA 130–132, 164–167): the catalogue title *i₃-a lum-lum* is A's flattery made into B's hymnic incipit.
+- **The lament goes down**: where A says "the tall man does not stretch to heaven, the wide man does not cover the mountain" (HA 28–29), B speaks of "the great city, the land of submission, that lets no man go" and says "the long one does not block the land (*kur*), the wide one does not cover the land" (11–13): the limit is below, the netherworld, not above. **The Akkadian saying draws on both traditions**: DP 83 *ayyu arku* "who is long" = B's *sud* (not A's *sukud* "tall"); DP 84 *erṣeta ugammeru* "encompass the earth/netherworld" = B's *kur* as netherworld; but DP 83 *ana šamê elû* "to heaven" = A's *an-še₃*. The Hebrew shows it: `ארוך`, `הארץ`, `רחב` are B's and DP's words; `אל השמים` is A's and DP's.
+- The man in the water is still "a man" (*lu₂*), not "a corpse" (8; HA 26); the liver (*ur₅*), not the heart, is struck (5, 9).
+- **Personal religion**: B adds "my god Enki, lord Nudimmud" to the oath (16, 87, 100, 110), and Ḫuwawa throws it back: "you swore by your mother and father, by your god Enki" (137–139).
+- **The seven are stars**, said in so many words (45–46), who know the road to Aratta, like merchants and like doves in the mountain clefts (47–49) – the knowledge of the road, not force.
+- **The muster** sends home "who has a wife … who has a son" (53–55) – closer to Deut 20:7 and 24:5 than A's "house" and "mother".
+- **Gilgameš wakes himself** (83–84; in A, Enkidu wakes him).
+- **The guardian's power is *me-lem₄* "aura"** in B (72, 130), *ni₂ te* "terror" in A (HA 67, 145–149) – kept apart in the Hebrew (`זוהר` / `אימה`, §23.6).
+- **The gifts are shoes "made" for him** (*dim₂*, 102–103, 112–113), small and big together; **the blow is to the ear, without the feigned kiss** (131; HA 150–151).
+- **Ḫuwawa's accusation** (137–141): "you laid down a lie, you cut an oath" – B makes the broken oath explicit, where A has only "hero, … falsehood" (HA 152B). Gilgameš's pity follows the accusation (142).
+- **The reason for mercy is use** (144–146): Ḫuwawa will be a guide who "knows" the stations of the road, and carry all Gilgameš's things; Enkidu's answer: he will blur the mountain paths, and "we will not return to the city, the mother who bore (us)" (157–158; A: "you").
+- **The orphan of the rock** (164–166): "my mother who bore me – a cave in the mountain; my father who begot me – a cave in the range; Utu, you made me dwell alone in the mountain" – A's "I never knew mother or father … you raised me" (HA 155–156) turned into an image, and Utu no longer a foster father but the one who set him there alone.
+- **Variants of A that are B's main text**: HA 24 (2 mss. *šag₄ ḫul*) = HB 6; HA 43 (1 ms. *a₂-bi*) = HB 44; HA 152 (1 ms. *saĝ-ki … guru₅-uš*) = HB 132; HA 152a–b (2 mss.) = HB 133–134; HA 174A–B (1 ms.) = HB 152–154. The two versions were not sealed off from each other: copyists of A borrowed B's lines.
+**The Bible** (shared motifs): Deut 20:7, 24:5 (the husband exempted, 53); Num 10:31 (the stranger who knows the road as guide, 145); Josh 9:15, 19 (an oath to the deceived/deceiver that binds the stronger, 137); "cutting" an oath ~ `כרת ברית` (137); Num 30:3 (the oath "that goes out of the mouth", 139); Song 2:14, Jer 48:28 (the dove in the rock clefts, 49); Judg 5:20 (the stars, 45); Jer 2:27 (parents who are rock and wood, 164); Lam 3:28 (to sit alone, 166); Job 7:9 (no return from the land of the dead, 11).
+
+### Parallels index (Tablet HB)
+| Line | Sumerian | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 4 | *unug{ki}* | אוּרוּךְ | `וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל וְאֶרֶךְ` (בראשית י:י) | [cognate] | Unug = Erech. |
+| 11 | *irigal kur nam-gu₂-ka … lu₂ la-ba-an-da₁₃-da₁₃-a* | העיר הגדולה, ארץ *הכניעה* – איש לא תעזוב | `כָּלָה עָנָן וַיֵּלַךְ; כֵּן יוֹרֵד שְׁאוֹל לֹא יַעֲלֶה` (איוב ז:ט) | [equivalent] | The land of no return; B's lament turns to the netherworld (HA has no such line). |
+| 12 | *sud-da kur-ra la-ba-an-gib-be₂-a* | הארוך – את הארץ לא *יחסום* | `מִי יַעֲלֶה לָּנוּ הַשָּׁמַיְמָה` (דברים ל:יב) | [divergence] | B's limit is below (the netherworld), the Bible's question and HA 28 look up; DP 83's "long" is B's word. |
+| 29 | *suḫ₁₀ za-gin₃* | נזר של סַפִּיר | `וְתַחַת רַגְלָיו כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר וּכְעֶצֶם הַשָּׁמַיִם לָטֹהַר` (שמות כד:י) | [equivalent] | Lapis as the colour of the sky; the rising sun's crown. |
+| 45 | *e-ne-ne an-na mul-la-me-eš ki-a ḫar-ra-an zu-me-eš* | הם – כוכבי השמים הם; בארץ – את האורח יודעים הם | `מִן שָׁמַיִם נִלְחָמוּ; הַכּוֹכָבִים מִמְּסִלּוֹתָם נִלְחֲמוּ עִם סִיסְרָא` (שופטים ה:כ) | [divergence] | The stars as allies on their courses; in HB guides, in Judges fighters. |
+| 49 | *tum₁₂{mušen}-gin₇ ab-lal kur-ra zu-me-eš* | כיונים – את נקב ההר יודעים הם | `יוֹנָתִי בְּחַגְוֵי הַסֶּלַע בְּסֵתֶר הַמַּדְרֵגָה` (שיר השירים ב:יד) | [equivalent] | The rock dove in the clefts. |
+| 49 | (same) | (same) | `וִהְיוּ כְיוֹנָה תְּקַנֵּן בְּעֶבְרֵי פִי פָחַת` (ירמיהו מח:כח) | [equivalent] | Same. |
+| 53 | *dam tuku dam-zu-še₃ dumu tuku dumu-zu-še₃* | מי שיש לו אישה – אל אשתך! מי שיש לו בן – אל בנך | `וּמִי הָאִישׁ אֲשֶׁר אֵרַשׂ אִשָּׁה וְלֹא לְקָחָהּ יֵלֵךְ וְיָשֹׁב לְבֵיתוֹ` (דברים כ:ז) | [equivalent] | The husband exempted; B closer to Deut than HA 50 (house, mother). |
+| 53 | (same) | (same) | `כִּי יִקַּח אִישׁ אִשָּׁה חֲדָשָׁה לֹא יֵצֵא בַּצָּבָא` (דברים כד:ה) | [equivalent] | Same. |
+| 86 | *a-a ugu-ĝa₂* | ואבי הורי | `בִּרְכֹת אָבִיךָ גָּבְרוּ עַל בִּרְכֹת הוֹרַי` (בראשית מט:כו) | [equivalent] | `הוֹרַי` "my begetters" for *ugu* of the father. |
+| 137 | *nam-erim₂ mu-e-kud* | שבועה כרתָּ | `וַיִּכְרְתוּ שְׁנֵיהֶם בְּרִית` (בראשית כא:כז) | [equivalent] | "To cut" an oath / a covenant – the same image in two unrelated languages. |
+| 137 | *lul mu-e-sig₁₀ … nam-erim₂ mu-e-kud* | שקר הנחת … שבועה כרתָּ | `וַיַּעַשׂ לָהֶם יְהוֹשֻׁעַ שָׁלוֹם וַיִּכְרֹת לָהֶם בְּרִית לְחַיּוֹתָם; וַיִּשָּׁבְעוּ לָהֶם נְשִׂיאֵי הָעֵדָה` (יהושע ט:טו) | [divergence] | An oath granting life, with deceit; in Joshua the deceivers are the weak and the oath is kept. |
+| 137 | (same) | (same) | `אֲנַחְנוּ נִשְׁבַּעְנוּ לָהֶם בַּיהוָה אֱלֹהֵי יִשְׂרָאֵל; וְעַתָּה לֹא נוּכַל לִנְגֹּעַ בָּהֶם` (יהושע ט:יט) | [divergence] | The oath by one's god that binds the stronger; Ḫuwawa invokes Gilgameš's oath by his god Enki. |
+| 139 | *KA-za mu-e-ni-e₃* | מפיך הוצאת | `אוֹ הִשָּׁבַע שְׁבֻעָה לֶאְסֹר אִסָּר עַל נַפְשׁוֹ לֹא יַחֵל דְּבָרוֹ:  כְּכָל הַיֹּצֵא מִפִּיו יַעֲשֶׂה` (במדבר ל:ג) | [equivalent] | The oath "that goes out of the mouth" binds. |
+| 145 | *lu₂ zu-me ḫe₂-a dur₂ kaskal-la igi me-eb-du₈-de₃-a* | איש יודע לנו יהיה – את מושבי הדרך יראה לנו | `כִּי עַל כֵּן יָדַעְתָּ חֲנֹתֵנוּ בַּמִּדְבָּר וְהָיִיתָ לָּנוּ לְעֵינָיִם` (במדבר י:לא) | [equivalent] | The stranger who "knows" the stations of the road as a guide; here the captive enemy. |
+| 164 | *ama tud-da-ĝu₁₀ ḫur-ru-um kur-ra* | אמי יולדתי – מערת ההר | `אֹמְרִים לָעֵץ אָבִי אַתָּה` (ירמיהו ב:כז) | [equivalent] | Parents who are part of nature; Jeremiah's mockery, Ḫuwawa's orphanhood. |
+| 166 | *{d}utu dili-ĝu₁₀-ne kur-ra mu-un-de₃-en-tuš-en* | אוּתוּ – לבדי בהר הושבת אותי | `יֵשֵׁב בָּדָד וְיִדֹּם כִּי נָטַל עָלָיו` (איכה ג:כח) | [equivalent] | Sitting alone as a lot laid on a person. |
