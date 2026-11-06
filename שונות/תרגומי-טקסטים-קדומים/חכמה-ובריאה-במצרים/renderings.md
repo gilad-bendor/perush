@@ -919,3 +919,16 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
 4. **Gates fixed:** `קוף` licensed by gꜣf, `נחש` by ḥfy.t (spellings of gf, ḥfꜣ.t).
 5. **For the lead:** šꜥd / ḥsq both `כרת`; jꜣ.w / dwꜣ both `הלל`; sk / zjn both `ניגב`; rri̯ / šꜣj both `חזיר`; nrw / SI's ḥr.yt
    both `אימה`; 189.3 ḫmi̯ `מישוש` against NU4 124.4 `לא אֵהָרֵס בה`.
+#### 12.6.8 NU8 (BD 44 … 176), translator 8, merged 2026-11-07 (full table in project.md, "NU8")
+1. **BD 99B's frame** (completing §12.4.5; 99B.10–30): `אמור לי את שמי, אומר / אומרת / אומרים X.` – `"Y" – שמך / שמכם /
+   שמותיכם.` (NU4's 122, BD 125's door).
+2. **The nets** (Egyptian words, [equivalent]): jꜣd.t `רשת` (WE), ḥꜣm.t `חרם` (Hab 1:15), jss.t `מָצוֹד` (Job 19:6); `מְצוֹדָה`
+   stays ḥꜣd's (NU1, NU7); `מכמורת` not used. Verbs: ḥꜣm `דג`, jss `תפס`, sḫt `צד` (AM; BD 125, 14 `לכד ברשת`: a split for the
+   lead), ḏsf `שלה`, nḏri̯ `לכד`.
+3. **The leg:** rd `רגל`, mn.t `ירך`, ḫpš `שוק`, sbq `כֶּרַע` ★, ḫnd `קרסל`, wꜥr.t `גַּפָּה`.
+4. **The shabti (BD 6):** wšb.tj `וֶשֶׁבְּתִי`; m=k wj `הנה אני!` (HC 60; `הִנֵּנִי` only in the apparatus).
+5. **Others:** mẖn.t `מעבורת`, ṯz "sandbank" `שרטון`, ḫrp.w `מקבת` (SS), ꜣw.t-ꜥ `מתנה` (SI B175), ḫm `בַּעַר` (AM); 64K copies
+   NU5's 64L wherever the Egyptian is the same; 176.2–3 copy NU1 17.99.
+6. **Gates fixed:** `עור` licensed by mskꜣ "hide"; `בער` licensed by ḫm "ignoramus" (AM's word).
+7. **For the consistency review (NU5 and NU8 together):** twr `מזוקק` (BD 125) / `מטוהר` (NU5, NU8); mꜣꜥ "see" `חזה` / NU5 64L.3
+   `רואים`; ṯz `קשר` / NU5 64L.12 `מחוברת`; 64K.13 / 64L, 64K.10 / 64L.21 read differently.

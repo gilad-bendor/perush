@@ -517,7 +517,7 @@ RESERVED = [
     (W + alt("פלס", "הפלס", "פלסים") + E, r"jws|jwsw|jws,w|jwsꜣ", "פֶּלֶס only for jws(w) 'the hand-balance' [equivalent Prov 16:11, Isa 40:12]"),
     (W + alt("מאזנים", "מאזני", "המאזנים", "מאזניו", "מאזניים") + E, r"mḫꜣ|mḫꜣy|mḫꜣ,t|mḫꜣ\(y\)", "מֹאזְנַיִם only for mḫꜣ.t 'the balance' [equivalent Lev 19:36, Prov 16:11, 11:1]"),
     (W + alt("שחד", "השחד", "שוחד") + E, None, "שֹׁחַד never: fqꜣ 'reward' = שָׂכָר (Ex 23:8, Deut 16:19 in the apparatus)"),
-    (W + alt("עור", "עיוור", "עוור", "העור", "העיוור", "העוור", "עורים", "עיוורים", "עוורים") + E, r"kꜣmn|kꜣmꜣn|špw|bꜣk|jnm|dḥr", "עִוֵּר (and `עוֹר` 'skin': jnm, dḥr) only for kꜣmn 'blind' [equivalent Lev 19:14, Deut 27:18]"),
+    (W + alt("עור", "עיוור", "עוור", "העור", "העיוור", "העוור", "עורים", "עיוורים", "עוורים") + E, r"kꜣmn|kꜣmꜣn|špw|bꜣk|jnm|dḥr|mskꜣ", "עִוֵּר (and `עוֹר` 'skin': jnm, dḥr) only for kꜣmn 'blind' [equivalent Lev 19:14, Deut 27:18]"),
     (W + alt("פסח", "הפסח", "פסחים", "פיסח") + E, r"qbqb", "פִּסֵּחַ only for qbqb 'lame' [equivalent Lev 21:18]"),
     (W + alt("גר", "הגר", "גרים", "לגר", "גרך") + E, None, "גֵּר never (Amenemope's stranger ḏrjḏrj = נָכְרִי; Deut 24:19 in the apparatus)"),
     (W + alt("גואל", "גאל", "גואלו", "גואלם", "הגואל", "גואלי", "גאלם") + E, None, "גֹּאֵל never (the wisdom corpus's reservation; Prov 23:11 in the apparatus)"),
@@ -572,7 +572,7 @@ RESERVED = [
     (W + alt("בר", "ובר") + r"\s+" + alt("לבב", "לב") + E, None, "`בַּר לֵבָב` never (Ps 24:4)", TALES),
     (W + alt("נשך", "בנשך", "הנשך", "תרבית") + E, None, "נֶשֶׁךְ / תַּרְבִּית never (Ps 15:5; Lev 25:36–37)", TALES),
     (W + alt("אוני", "באוני", "בעוני") + E, None, "`בְאֹנִי` never (Deut 26:14)", TALES),
-    (W + alt("בער", "ביער", "בערתי", "ביערתי", "תבער", "יבער", "בוער", "בוערת", "בערה", "הבערה") + E, None, "the root בער never (Deut 26:13–14 `בִּעַרְתִּי`): the fire / removal verbs by their own sense", TALES),
+    (W + alt("בער", "ביער", "בערתי", "ביערתי", "תבער", "יבער", "בוער", "בוערת", "בערה", "הבערה") + E, r"(?<![\w,.-])ḫm(?![\w,-])", "the root בער never (Deut 26:13–14 `בִּעַרְתִּי`): the fire / removal verbs by their own sense", TALES),
     # Deut 8:8 (Sinuhe's land of Yaa): the seven species only for their Egyptian words
     (W + alt("תאנה", "תאנים", "התאנים", "תאנתו", "תאני") + E, r"dꜣb|dꜣb\.w|nḥ,t|nh,t", "תְּאֵנָה only for dꜣb 'fig' [equivalent Deut 8:8]", TALES),
     (W + alt("גפן", "הגפן", "גפנים", "ענבים", "הענבים", "ענב", "ענבי") + E, r"jꜣrr|jꜣrr,t|jrp|jꜣ~jr", "גֶּפֶן / עֲנָבִים only for jꜣrr.t 'grapes, vine' [equivalent Deut 8:8]", TALES),
