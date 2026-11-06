@@ -837,3 +837,19 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
 7. **Open (for the user, from NU1):** zš `סבך` (WE's word) for the pools of purification (`בצות` would suit both);
    `ועד` sounds like modern "committee"; the gloss question `מה` against the TLA's "Wer"; ḫꜣw.t `שולחן־הקרבנות` / WE's
    `מזבחות` (a kept split).
+#### 12.6.2 NU2 (BD 1 … 42), translator 2, merged 2026-11-06 (full table in project.md, "NU2")
+1. **Titles:** `rʾ n rḏi̯.t X n N` = `לחש לתת את X של N … לו`; `rʾ n tm rḏi̯.t sḏm.tw=f` = `לחש לבלי לתת ש־` + future;
+   passive titles `לחש לבלי להינשך / להיאכל … בידי X`; `rʾ n ḫsf X` = `לחש להדוף X`.
+2. **The heart (30A / 30B):** mtr.w `עֵד` ★ (always vocalized: `עַד` is ḏ.t; BD 125 69, 75 vocalized by the coordinator);
+   ꜥḥꜥ r `עמד נגד` (MT, HC; not Deut 19's `קום`); sḫsf `התנגד`; rqi̯ `צרר`, rq.w `איבה`; the plurals keep the two hearts
+   apart (`לבות` / `לבבות`).
+3. **Verbs and nouns:** wn `פתח`, wpi̯ `פילח` (SS 67/81 wpi̯ rʾ `פתח`: a kept split by sense), wbꜣ `פער`; wḏꜥ(-mdw) `שפט`;
+   znj `עבר`; ḏꜣi̯ `הסיע`; ḫnḏ `כרע`; qꜥḥ `שכם`; ṯpḥ.t `מחילה`; ḫnj `נעל`; ḥkꜣ `קסם` / `קסמים`; wrḏ `יגע`, nni̯ `נלאה`; pzḥ
+   `נשך` (verb only); ḫfꜥ `לפת`, ꜣmm `אחז`, nḏri̯ `לכד`; mki̯ `הַנּוֹצֵר`; ḥqꜣ (verb) `משל`; jsr `אֵשֶׁל`; wnb `ציץ`; sḫpr
+   `חולל`; ḏbꜥ "seal" `הטביע`, ḏbꜥ.w "reproach" `תוכחה`; qfdn.w `בבון` (= AM's jꜥnꜥ: two baboon words, one Hebrew – kept).
+4. **Gates fixed (the coordinator):** the שיטה gate no longer reads the verb `משיט(ים)` / `השיט`; the חם gate no longer
+   reads `לוחם(ים)`; the "better than" formula no longer fires on ꜣḫ.kw r ("more akh than"); the `אלה` trap no longer
+   fires on ẖr-nṯr. **Rule (the coordinator):** where a base line has `ḏd-mdw jn mꜣꜥ-ḫrw` without `[…]`, the Hebrew has no
+   `[…]` either (`דברים לאמר, בפי אמיתי־הקול:`) – the bracket follows the base.
+5. **Older splits noted for the lead's harmonization** (not changed now): sḏ.t `שלהבת` (NU1) / `להבה` (BD); nḏ and zꜣu̯ both
+   `שמר` (NU1); `זוהר` ꜥḏ (HC) / psḏ (NU1); jꜣ.t `נֵס` (MT) / `מוט` (BD 77); ṯꜣi̯ and nḥm both `נטל`.

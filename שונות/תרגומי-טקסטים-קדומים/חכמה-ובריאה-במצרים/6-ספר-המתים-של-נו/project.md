@@ -427,6 +427,209 @@ chapters); 17.11 / 17.61 (`ביום ההוא אשר הושמדו בו אויבי
 - A bracket script (source tokens with `[ ]` against the Hebrew brackets, line by line) catches what a reading misses
   in a heavily restored opening.
 
+## NU2 1.1–42.29 (Round 6 run 2, translator 2; 2026-11-06)
+
+### Scope
+KEY NU2 = 22 chapter texts of pNu in the papyrus's order – BD 1, 22, 23, 25, 26, 28, 28-2 (= CT 389), 27, 30A, 30B, 43,
+24, 31, 33, 34, 35, 74, 45, 93, 91, 41, 42 – 153 lines (`1.1`–`42.29`; 30B starts at the TLA's `30B.2`), all drafted,
+filled, verified, compared with the TLA's German and passed three times; the clean translation built
+(`translation-NU2.rtl.md`; intro `translation--intro-NU2.rtl.md`). One `## ` heading per chapter (22). Preservation: good
+on the whole; restorations sporadic (1.14, 1.16–1.19, 22.3–22.4, 23.1–23.3, 26.2, 26.4–26.5, 28.2–28.8, 30A.4–30A.5,
+24.3–24.7, 31.1, 35.3, 45.2, 93.5, 42.13, 42.18); `[…]` mostly the owner's name, which the TLA leaves out; a few words
+the TLA itself does not identify (42.2 *tw*, 42.3 *wjs*, 42.4 *jn*, 42.29 *bꜣꜣ*) are `…` or `*…*?`. The text: the funeral
+procession and the lawcourt of Thoth (BD 1), the spells that give the dead his mouth, name and heart and keep his heart
+and head (22–30B, 43), and the spells of magic and protection against crocodiles, snakes, decay, being carried off and
+slaughter (24, 31–45, 93, 91, 41), ending with the identification of every limb with a god (42).
+
+### Sources consulted
+AED-TEI pNu (`data NU2`, the base and per-word lemmas/glosses); the TLA's German (`tr NU2`), read after each of the six
+drafting saves (1 / 22–26 / 28–30B / 43–35 / 74–41 / 42) – it changed about 60 drafted lines (each listed in the entry's
+**תרגומים** bullet, "הטיוטה הראשונה … תוקנה"). Exception, recorded: the `tr` call for 43–45 also printed 74 and 45,
+which were read in the German before their entries were written (their readings had been planned beforehand; 74.4 and
+45.3 were rechecked against the transliteration). No other witness in the folder; Faulkner, Allen, Quirke, Lapp: from
+memory only, never quoted. Every Bible verse printed with `check_bible_quotes.py --show` before quoting; the checker
+reports 0 problems on the three files.
+
+### Decisions
+**Chapter titles** (§12.6.1.3, enforced): `rʾ n rḏi̯.t X n N n=f` = `לחש לתת את X של N … לו בחלקת־האל` (22, 25, 26: the
+series "mouth / memory / heart" kept parallel); `rʾ n tm rḏi̯.t sḏm.tw=f X` = `לחש לבלי לתת ש־` + future (28, 28-2, 27,
+30A, 43, 93); `rʾ n tm X` with a passive sense and the dead as patient = `לחש לבלי + נפעל infinitive` with the name set off
+(`לחש לבלי להינשך – […] אמיתי־הקול – בידי נחש`, 34; `לחש לבלי להיאכל`, 35; `לחש לבלי להירקב`, 45; `לחש לבלי לנעול`,
+91); `rʾ n ḫsf X` = `לחש להדוף X` (31, 33, 41, 42). `ḏd=f` = `אומר הוא:`; `ḏd-mdw jn N` = `דברים לאמר, בפי N:` (§12.4.2).
+Where the base has `ḏd-mdw jn mꜣꜥ-ḫrw` without `[…]` (none in NU2: every occurrence has `[…]`), no bracket would be added.
+
+**Key terms (new or settled here):**
+
+| Egyptian | Hebrew | Lines | Reason / rejected |
+|---|---|---|---|
+| mtr.w "witness" | `עֵד` (always vocalized) | 30A.2, 30B.3–4 | AM 20.11 `עֵדֶיךָ`; BD 69, 75 wrote it unvocalized (reads "eternity" `עַד`, ḏ.t's word): propose vocalizing BD's too |
+| ꜥḥꜥ r "stand against" | `עמד נגד` | 23.5, 30A.2, 30B.3, 33.2 | ꜥḥꜥ = `עמד` (MT, HC); not Deut 19:15's `קום` (the parallel goes to the apparatus); ꜥḥꜥ.w "those standing up" `העומדים` (30B.6, 35.4) |
+| sḫsf "oppose" | `התנגד` | 30A.1, 30B.3–4 | causative of ḫsf `הדף`; a separate verb so that the two stand apart |
+| rqi̯ / rq.w | `צרר` / `איבה` | 27.6 / 30B.4 | AM 15.14 `צורר` |
+| jb.pl / ḥꜣ.tj.w | `לִבּוֹת` / `לְבָבוֹת` (vocalized) | 26.1–2, 27.2, 42.27 | the two hearts keep two Hebrew words in the plural too |
+| bsk "entrails" | `קרביים` | 30A.4 | NU1, BD |
+| jṯi̯ "seize, rob" | `תפס` (28-2.1 `יובילו`, "carry off" by sense) | 27–28, 31, 93.3 | NU1 17.106; the split recorded at 28-2.1 |
+| ḫsf / šnꜥ / nḥm | `הדף` / `מנע` / `נטל` (take) – `הציל` (save) | 1.20, 23.3, titles / 1.20 / 28.6, 43.3 | BD 125 |
+| ḥkꜣ "magic" | `קסם` / `קסמים`; verb ḥkꜣ `קסם` (23.1) | 23.5, 24, 31 | §3.1, §11.3 |
+| ḫnj "lock up" | `נעל` | 1.4, 26.7, 91 | NU1 18.23 (HC 77's tbj `נעול` is another lemma: an existing split) |
+| wn / wpi̯ / wbꜣ "open" | `פתח` / `פילח` / `פער` | 1.18–19, 23.4, 41.6, 42.18, 42.27 / 41.5 | BD 1 sets wn and wpi̯ in parallel: one Hebrew would erase the pair; `פילח` "cleave" suits the adze of the Opening of the Mouth (23.4); SS 67/81 has wpi̯ rʾ `פתח` (a split, for the lead) |
+| wḏꜥ-mdw / wḏꜥ "judge" | `שפט` (`השפיטה`, `השופט`) | 1.3, 1.6, 30B.6, 35.4 | `מִשְׁפָּט` stays reserved; the root unused so far in the corpus |
+| psš "divide" | `חילק` | 22.3, 26.4, 35.4 | BD 75 `חלוקת` |
+| znj "pass by" | `עבר (על פני)` | 35.3, 42.22, 42.24, 42.27 | HC 82, SS 9 (`חלף` is BD 125's swꜣ) |
+| ḏꜣi̯ "ferry across" | `הסיע` | 93.1, 93.6 | `השיט` was read by the `שיטה` gate; `העביר` would take znj's root |
+| dmḏ "join, assemble" | `צירף` | 23.6, 24.3, 24.5 | NU1 17.91 |
+| jꜥi̯ "wash" | `שטף` | 1.9 | WE 10,11, BD 51 |
+| šꜥd "cut off" | `חתך` | 43 | WE 10,11 |
+| ḫnḏ / ḫnd "leg" (Osiris's relic) | `כרע` (fem.) | 28.8, 28-2.2 | `שוק` is ḫpš's (NU1, HC 55); the biblical word for an animal's leg (Lev 1:9; Amos 3:12 [divergence]) |
+| qꜥḥ "shoulder, upper arm" | `שכם` | 1.10, 41.6 | `כתף` is ḫpš's (NU1 18.32), `זרוע` ꜥ's |
+| ṯpḥ.t "hole, cavern" | `מחילה` | 1.9, 28.7 | `מערה` is BD 125's qrr.t |
+| nsr / nbj.t / hh "flame / blast" | `להבה` / `שביב` / `להט` | 22.3, 25.2, 43.2 / 34.2 / 42.26 | NU1 Nsr.t `הלהבה`; sḏ.t has `שלהבת` (NU1) and `להבה` (BD): an existing split, for the lead |
+| psḏ "shine" / ꜥḏ / (j)ꜣḫ.w "light" | `זהר` (`המזהיר` transitive, 42.23) / `נוגה` / `אורה` | 34.2, 74.2, 42.23 / 41.3 / 74.3 | NU1 17.65 psḏ `הזוהר`; HC has ꜥḏ `זוהר`: a split, for the lead |
+| wrḏ / nni̯ "be weary" | `יגע` (`יגע־הלב`) / `נלאה` | 1.9, 45.2 / 74.3 | SS 20 swrd `מייגע`; NU1's bdš is `העייפה` |
+| ḥwꜣ "rot" | `נרקב` / `רקוב` | 33.3, 45 | §12.6.1.3's example; NU1 ḥwꜣꜣ.t `הרקב` |
+| pzḥ "bite" | `נשך` (verb only) | 34.1 | the natural snake verb (Gen 49:17); the gate is on the noun `נֶשֶׁךְ` |
+| ḥfꜣw / ꜥrꜥr.t / mzḥ / swy | `נחש` / `פתן` / `תמסח` / `סוּאִי` (transliterated) | 33–35 / 34.2 / 31 / 31.2 | §11.4, BD 94, §4.2; swy kept apart from msḥ |
+| wnm "eat" | `אכל` (wnm.yt "the devouring fire" `האוכלת`) | 1.11, 26.2, 33.2, 35 | Deut 4:24 `אֵשׁ אֹכְלָה` [equivalent] in the apparatus |
+| nḏ / zꜣu̯ / mki̯ "protect, guard" | `שמר על` / `שמר` / `נצר` (`הַנּוֹצֵר`, vocalized) | 1.10 / 28-2.2 / 42.19 | nḏ and zꜣu̯ both `שמר` in NU1 already (a split, for the lead); `סוכך` is PT600's dnḫnḫ, `מגונן` AM's stꜣ |
+| ḫfꜥ / ꜣmm / nḏri̯ "grasp" | `לפת` / `אחז` / `לכד` | 42.11, 42.26 / 42.11 / 93.6 | `תפס` is jṯi̯'s; AM 7.9 mḥ `היאחז` (another binyan) |
+| ḥqꜣ (verb) | `משל` | 42.15, 42.18, 42.27 | sḫm = `שלט` (§12.3); NU1 used `לשלוט` for the noun ḥqꜣ.t (an existing overlap) |
+| zbi̯ "go" / zbi̯ ḥr "stand up for" | `צעד` / `התייצב למען` | 42.13 / 1.5 | HC 34 `[צעד]`; the idiom by sense |
+| sḫpr "bring into being" | `חולל` | 27.2–3, 30A.3 | BD 78 `המחוללים` |
+| grg "found; equip" / grg.w "equipment" | `כונן` / `ציוד` | 27.3 / 31.4 | HC 40 `אצייד` (split by sense) |
+| ḏbꜥ "seal" / ḏbꜥ.w "reproach" | `הטביע` / `תוכחה` | 27.3 / 27.4 | the Egyptian pun kept in the note; `טבעת` (ḏbꜥ.t) stays the loanword |
+| ꜥpr "equip, make ready" | `ערוך` | 91.4, 42.3 | `מצויד` would take grg's root |
+| sjp "assign" / sjp.w "inspection" | `הפקיד` / `בדיקה` | 28.4 / 42.13 | NU1 18.23 `הבדיקה` |
+| swḏ "hand over" | `מסר` | 30A.5 | SI's `הוריש` is for property: split by sense |
+| ḫnp "present" | `הגיש` | 28.5 | NU1 17.84 `החוטף` ("snatch"): split by sense |
+| ṯꜣi̯ "take" | `נטל` | 74.4 | NU1 17.93, AM 4.7 (BD 125's nḥm also `נטל`: an existing overlap) |
+| wni̯ "hurry" | `החיש` | 74.1 | AM's "neglect" `הזניח`: split by sense |
+| jꜣ.t "standard (pole)" / jꜣ.t "back" / psḏ "back, spine" | `מוט` / `גו` (`גֵוִי`) / `גב` (`גַּבִּי`) | 34.2, 42.2 / 42.9 / 42.7 | BD 77 `מוטו` (MT 9 has `נֵס`: an existing split) |
+| šnꜥ / šnb.t "breast" | `חזה` / `בית־חזה` | 42.7 / 42.8 | two lemmas, two words |
+| msḏr "ear" | `אוזניים` | 42.6 | the same Hebrew as AM's ꜥnḫ.wj (never in one text: recorded) |
+| sst "calf" | `סובך` | 42.9 | `שוק` is ḫpš's |
+| jbḥ / nḥḏ.t "tooth" | `שיניים` / `ניבים` | 31.4, 42.6–7 | BD 35 `לבן־שיניים`; SS 164 nḥḏ.t "tusk" in a compound |
+| qfdn.w "ape, baboon" | `בבון` | 42.28 | `קוֹף` is gated to gf; AM's jꜥnꜥ is also `בַּבּוּן` (two baboon words, never in one text) – open for the lead |
+| jsr "tamarisk" | `אֵשֶׁל` (vocalized) | 42.4–5 | Gen 21:33 [equivalent] |
+| wnb "flower" | `ציץ` | 28.2, 42.24 | `פרח` is TB's ḥrrw |
+| rw / Rw.tj | `אריה` / `שני־אריות` | 28.2, 28-2.1 / 41.1 | NU1 |
+| sd.yw / ḥnsk.ty.w / štꜣ.w-jb | `בעלי־הזנבות` / `בעלי־הצמות` / `נסתרי־הלב` | 28.3 / 30A.4 / 28.4 | descriptive names translated (BD 125's practice) |
+| jm.j-wr.t, Sꜣḥ.yt, Rrk, Zkzk, Mꜣfd.t, Ḥzꜣ.t, Tbj, Ḫꜣs, Dnp.w, gꜣy, Ḏw.f.t, nwr | `אִימִית־וֶרֶת`, `סָאחִית`, `רֶרֶק`, `זֶקְזֶק`, `מַאפְדֶת`, `חֶסָאת`, `טֶבִּי`, `חָאס`, `דֶּנֶפּוּ`, `גָּאִי`, `גֶ׳וּפֶת`, `נוּר` | first occurrences | transliterated (§2.2) |
+| pꜥ.t / rḫ.yt / ḥnmm.t (the three words for mankind) | `הפָּעַת` / `העם` / `החֶנְמֶמֶת` | 42.12 | rḫ.yt as NU1; the other two transliterated, a note |
+| pr-wr / pr-nzr; ḥw.t-sr; jw-nsrsr | `בית־הגדול` / `בית־הלהבה`; `בית־השר`; `אי־הלהבות` | 25.2; 1.6; 22.3, 24.4 | translated: transparent names |
+| ḏd.y "the Busirite"; ḫy "child"; jbw "calf" | `הגֶ׳דִּי`; `עולל`; `עגל` | 1.6, 35.2; 42.3, 42.18; 42.3 | `תינוק` is a BD 125 judge's name |
+| ḥz.wt "favour" | `חן` | 42.4 | AM 16.11 |
+| nṯr.j "divine" | `האֵלִית` (vocalized) | 26.6, 42.7 | BD 36 `של אֵל` (a genitive there) |
+| bjn ḏw (adverbial pair) | `ברע וברעה` | 93.4, 42.17 | §4.3 bjn `רע`, ḏw `רעה` |
+| zp-2 / zp-4 | `(פעמיים)` / `(ארבע פעמים)` | passim | NU1 |
+
+**Formula departures recorded:** 41.1 and 91.4 carry `[סטייה מן הנוסחה]` (ꜣḫ … r is a comparison "more akh than" / a noun
+plus a preposition, not "better X than Y").
+
+**Rejected (gates and echoes):** `קום` for ꜥḥꜥ in the witness lines (the corpus has `עמד`; Deut 19:15–16 and Ps 27:12 in the
+apparatus); `תנין` (Ex 7:12 in the apparatus only); `שוק` for ḫnḏ / sst; `השיט` (the `שיטה` gate); `הלוחמים` (read by the
+`חם` gate: `הנלחמים`); `מגילה` for mḏꜣ.t "chisel" (another lemma: `מפסלת`); `אלוהית` for nṯr.j (`האֵלִית`).
+
+### Open decisions for the user
+1. **`עֵד` "witness" vs `עַד` "eternity"**: NU2 vocalizes both where they occur (30A–30B `כְּעֵד`; 26.8 `לעד ולנצח`, 27.3 `העַד`);
+   BD 125 (69, 75) has an unvocalized `עד` for mtr.w – proposed: vocalize it there too.
+2. **Two "open" verbs in BD 1** (wn `פתח`, wpi̯ `פילח`): a split from SS 67/81 (wpi̯ rʾ `פתח`). Alternative: wpi̯ `פתח` everywhere,
+   and lose BD 1's pair.
+3. **qfdn.w `בבון`** beside AM's jꜥnꜥ `בַּבּוּן`: two Egyptian words in one Hebrew (no text has both). Alternative: transliterate
+   `קְפֶדְנוּ`.
+4. **sḫsf `התנגד`** against `התקומם`: chosen for "oppose (in court)"; 30B's famous line reads "אל תעמוד נגדי כעֵד, אל תתנגד לי בוועד".
+5. **mꜣꜥ-ḫrw without `[…]`**: no case in NU2, but later NU parts have `ḏd-mdw jn mꜣꜥ-ḫrw` with no gap marked in the base; the
+   brief's bracket rule would then give `בפי אמיתי־הקול` (no `[…]`), §12.4.2 shows `בפי […] אמיתי־הקול` – the coordinator decides.
+
+### Progress log
+- Drafted in six saves (1.1–1.21; 22–26; 28–30B; 43, 24, 31, 33, 34, 35; 74, 45, 93, 91, 41; 42), each filled and verified at
+  once; `tr NU2` read after each save (74 and 45 early, see Sources) and the **תרגומים** bullet written; about 60 lines changed
+  after the TLA – speaker and quotation structure (1.7–1.8: the formula is a report, "so spoke Re … so spoke the Maker to
+  me, Thoth"), tense and mood (22.1, 22.4, 26.2, 26.6–7, 27.3, 31.2, 41.4, 42.15–16, 42.18), syntax (22.3, 23.5–6, 28.3–28.8,
+  28-2.2, 30A.3, 30B.6, 31.4–5, 35.2–3, 42.2–3, 42.13, 42.19, 42.21–27), a word's sense (24.3 "in" not "from", 25.4, 28.6
+  nḥm "save", 28.7 kꜣ.w "the kas", 93.5 ndb "gore", 42.20 nbi̯ "gild", 42.29).
+- Pass (a) fidelity: a script compared every bracketed source token with the Hebrew brackets: 3 lines fixed (22.3 `[המדרגה]`,
+  24.7 `[ב]כל` – *nb* is written, 30A.5 `ל[נֶחֶבְּכָּאוּ]` – half the name restored); every negation and tense rechecked with the
+  TLA comparison.
+- Pass (b) consistency: every new Hebrew word grepped in the corpus; changed: znj `חלף` → `עבר` (HC, SS; `חלף` is swꜣ's),
+  dmḏ `איחד` → `צירף` (NU1), ḫfꜥ `אחז` → `לפת` (AM's mḥ), mki̯ `סוכך` → `נצר` (PT600's dnḫnḫ, AM's stꜣ), sst `שוק` → `סובך`
+  (ḫpš), ḏꜣi̯ `השיט` → `הסיע` (gate), jꜥi̯ `רחץ` → `שטף` (WE); the 30A.2 / 30B.3 pair, the 34.1 / 35.1 titles and 24.3 / 24.5 / 24.7
+  aligned word for word (`[מקבילה]` notes); `verify` reports 0 repeated-line differences.
+- Pass (c) Hebrew: the clean text read through; `וייהיה` → `ויהיה` (93.6); heading 93 aligned (`שיסיעו`); register even, no
+  vav-consecutive.
+- `verify NU2 --strict`: 0 problems; `check_bible_quotes.py` on the annotated, intro and translation files: 0 problems;
+  `build NU2` done.
+
+### The text on its own terms
+- **The heart is a witness and a separate person** (26–30B): it weeps for itself before Osiris (28.4), holds the "annals" of the
+  man (28.7), "will not say what I did" (27.5), can "stand against me as a witness" (30A.2, 30B.3) – and the dead man must
+  become its master (27.6 "I am your lord"). Two hearts, *jb* and *ḥꜣ.tj*, and the entrails, are greeted as interlocutors
+  (30A.3–4).
+- **The heart is the product of one's deeds** (27.2): demons "bring a man's heart into being according to what he does" – the
+  moral record is an organ.
+- **The dead man is assembled from parts** – mouth (22–23), name (25), heart (26–30B), head (43), magic (24), ba and shadow (91,
+  26.8) – each restored by its own spell; personhood is plural.
+- **The Opening of the Mouth** (23): Ptah's metal adze that "opened the mouth of the gods" is the tool of the funerary ritual:
+  making a statue live and making a mummy live are one rite.
+- **Every limb a god** (42.5–42.10): hair Nun, face the sun-disk, eyes Hathor … toes falcons, "no limb of mine is without a god"
+  – divinization by enumeration, the body as a pantheon; and therefore "I shall not die again" (42.20), the "second death".
+- **Myth as lawsuit, the dead as court official** (1): the dead man is Thoth, the scribe who wrote the verdict for Osiris, and a
+  list of priests in Egypt's cult towns; his reward is free entry and exit, "praised and beloved", with an empty balance (1.21).
+- **Death as a daily sunset** (41.4–41.5): "I live after my death, like Re every day"; entering and leaving the tomb (1.10,
+  41.4) mirrors the sun's cycle.
+- **Magic as a living, hunted power** (24): gathered "faster than a greyhound, swifter than a shadow" from every place and person,
+  and robbed by crocodiles (31) – magic is life itself ("the crocodile who lives by magic", 31.5).
+- **Threatening the gods** (93.4–93.6): if the dead man is carried off, Re's phallus swallows Osiris's head and Khepri's horns
+  gore – the cosmic order is held hostage to the safety of one man.
+- **Names are power** (25, 31.2–3, 42.25): to name a demon before the great god is to deliver him; to be unknown ("none knows me,
+  none will know me") is to be safe.
+- **Food taboos and purity** (28.2, 33.2–3): "my abomination is the god's slaughterhouse"; the snake that ate a mouse and the bones
+  of a rotten cat is outside the order of Re.
+- **Recitation is written into the text** (zp-2, zp-4, ṯz-pẖr, "to be said over it" 30B.2): the papyrus is a script for performance.
+
+### Key parallels
+- [equivalent] Deut 19:16 `כִּי יָקוּם עֵד חָמָס בְּאִישׁ` (also Deut 19:15, Ps 27:12) ↔ 30A.2, 30B.3 "do not stand against me as a
+  witness": the courtroom idiom of a witness "standing" against a man; here the witness is one's own heart.
+- [divergence] Ps 139:23 `חָקְרֵנִי אֵל וְדַע לְבָבִי` ↔ 30B.3: the psalmist asks God to search his heart; the Egyptian asks his heart not
+  to testify. [equivalent] Jer 17:10 ↔ 27.2 (the heart "made" according to one's deeds).
+- [equivalent] Job 27:6 `לֹא-יֶחֱרַף לְבָבִי מִיָּמָי` ↔ 27.4: the heart that might reproach its owner.
+- [equivalent] Job 31:6 `יִשְׁקְלֵנִי בְמֹאזְנֵי-צֶדֶק` ↔ 1.21, 30B.4: weighed in the balance and found clear; [divergence] Dan 5:27.
+- [equivalent] Ex 5:21 `הִבְאַשְׁתֶּם אֶת רֵיחֵנוּ בְּעֵינֵי פַרְעֹה` ↔ 30B.5 "do not make my name stink before the court".
+- [divergence] Amos 3:12 `שְׁתֵּי כְרָעַיִם` ↔ 28.8, 28-2.2: a leg saved from the lion / the slaughter-house – Osiris's relic.
+- [equivalent] Ps 121:8, Deut 28:6 ↔ 1.10, 1.20: "going out and coming in" as the whole of life's movement, "praised … beloved".
+- [equivalent] Deut 4:24 `אֵשׁ אֹכְלָה` ↔ 1.11 *wnm.yt* "the devouring (fire)".
+- [divergence] Song 5:11 ↔ 42.5–42.10: a body described limb by limb – in the Song each limb is like a precious thing, in BD 42 each is a god.
+- [divergence] Isa 25:8 `בִּלַּע הַמָּוֶת לָנֶצַח` ↔ 41.5, 42.20: not the end of death, but its daily repetition and the avoidance of a
+  "second death".
+
+### Lines shared with other texts
+None copied. Inside NU2: 30B.3 copies 30A.2's Hebrew where the Egyptian is the same (`לבי של אמי (פעמיים)! … אל תעמוד נגדי
+כְּעֵד`); 27.1 copies 28.1's title; 35.1 copies 34.1's frame; 24.5 and 24.7 copy 24.3. Strings reused from NU1 / BD 125:
+`אשר אימת את קול … נגד אויביו`, `ביום ההוא של`, `הוֹ`, `שלום לפניכם`, `אחורה … סור`, `בית־המטבחיים`, `טבח`,
+`שוער`, `דלת`, `גזל`, `אמר כזב`, `סכר`, `דרך`, `שתי־גדות־הכובסים`, `חֶרְעַחָא`, `סָאוּ`, `שני־אריות`, `נֶחֶבְּכָּאוּ`, `צִי`, `זכרות`,
+`יראת־כבוד`, `מורא`, `טרדה`, `הכתר־הגדול`.
+
+### Proposals for the shared renderings
+1. **Title formulas** (to §12.4.1/§12.6.1.3): `rʾ n rḏi̯.t X n N n=f` = `לחש לתת את X של N … לו`; `rʾ n tm rḏi̯.t sḏm.tw=f` =
+   `לחש לבלי לתת ש־` + future; passive `rʾ n tm X N jn Y` = `לחש לבלי + נפעל, – N –, בידי Y`; `rʾ n ḫsf X` = `לחש להדוף X`.
+2. **The heart chapters' fixed strings:** `לבי של אמי (פעמיים)!`, `אל תעמוד נגדי כְּעֵד`, `אל תתנגד לי בוועד`, `ממונה־המאזניים`,
+   `שלום לפניך, לבי / לבבי`; mtr.w `עֵד` always vocalized (and BD 69, 75 to be vocalized).
+3. **Key terms:** the table above, especially ꜥḥꜥ `עמד`, sḫsf `התנגד`, rqi̯ `צרר` / rq.w `איבה`, ḥkꜣ `קסם`, ḫnj `נעל`, wpi̯ `פילח`,
+   wḏꜥ(-mdw) `שפט`, znj `עבר`, ḏꜣi̯ `הסיע`, ḫnḏ `כרע`, qꜥḥ `שכם`, ṯpḥ.t `מחילה`, nbj.t `שביב`, ꜥḏ `נוגה`, wrḏ `יגע` / nni̯ `נלאה`,
+   pzḥ `נשך` (verb), ḫfꜥ `לפת` / ꜣmm `אחז` / nḏri̯ `לכד`, mki̯ `נצר`, ḥqꜣ (verb) `משל`, jsr `אשל`, wnb `ציץ`, qfdn.w `בבון` (open).
+4. **Names:** the list above (first occurrences vocalized).
+5. **Splits for the lead** (existing before NU2, met here): sḏ.t `שלהבת` (NU1) / `להבה` (BD); nḏ and zꜣu̯ both `שמר` (NU1);
+   ꜥḏ `זוהר` (HC) / psḏ `זוהר` (NU1); (j)ꜣ.t `נֵס` (MT) / `מוט` (BD 77); ṯꜣi̯ and nḥm both `נטל`.
+6. **Gates (for the coordinator; the tool was not edited):** (a) the `שיטה` gate reads verbs of שוט (`משיטים`, `השיט`); (b) the `חם`
+   gate reads `הלוחמים` (ה־ל־ו + חמים); (c) the "better than" formula fires on ꜣḫ.kw r ("more akh than", 41.1) and on ꜣḫ=f … r
+   (91.4); (d) the trap `אלה` fires on "these" whenever ẖr-nṯr is in the line (24.5: vocalized `אֵלֶּה`) – the licence could
+   exclude ẖr-nṯr.
+
+### Lessons for the guidelines
+- Restrict `tr` to the section just drafted (`tr KEY FROM TO` with TO = the last drafted label): a range one chapter too wide
+  shows the German of undrafted lines.
+- In a book of spells the quotative frame (*ḫrw-fj*, *j.n*, *ḏd=f*) often follows the quotation: draft the speaker structure
+  only after reading the whole sentence across the line breaks.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 

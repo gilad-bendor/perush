@@ -593,7 +593,7 @@ TRAPS = [
     (RW + r"(?:גב)" + RE_, r"gb\b|gbb", "Geb must be vocalized גֶּבּ ('back')"),
     (RW + r"(?:מין)" + RE_, r"mnw\b|mnw\{tj\}|mnw", "Min must be vocalized מִין ('kind', Gen 1:21 `לְמִינֵהוּ`)"),
     (RW + r"(?:חם|החם)" + RE_, r"šmm", "the hot man must be vocalized הַחַם (Ham, Gen 9:18; Ps 105:23 `בְּאֶרֶץ חָם`)"),
-    (RW + r"(?:אלים|אלי|אלה|אלת|אלתו|אלתי)" + RE_, r"nṯr", "'gods' / 'god of' / 'goddess' must be vocalized אֵלִים / אֵלֵי / אֵלָה / אֵלַת"),
+    (RW + r"(?:אלים|אלי|אלה|אלת|אלתו|אלתי)" + RE_, r"(?<![-\w])nṯr", "'gods' / 'god of' / 'goddess' must be vocalized אֵלִים / אֵלֵי / אֵלָה / אֵלַת"),
     (RW + r"(?:און)" + RE_, r"jwnw|jwn,w|ꜣwnw", "Heliopolis must be vocalized אוֹן ('strength', 'iniquity')"),
     (RW + r"(?:מף|נף)" + RE_, r"mn-nfr|ḥw,t-kꜣ-ptḥ|jnb-ḥḏ|jnb.w-ḥḏ", "Memphis must be vocalized מֹף"),
     (RW + r"(?:בא)" + RE_, r"\bbꜣ\b(?!,)|bꜣ=|bꜣ\.", "the ba must be vocalized בָּא ('came')"),
@@ -611,7 +611,7 @@ TRAPS = [
 FORMULAS = [
     (r"^ḥw,t mḥ-1?\d\.t$|^ḥw,t mḥ-2\d\.t$|^ḥw,t mḥ-30\.t$|ḥw,t tp\.t", r"(?:^|\s)הבית ה", "ḥw.t mḥ-N.t = `הַבַּיִת הָ…` (§6.1; the chapter heading, 'house')"),
     (r"(?:^|\s)m-jri̯(?=\s|$)", r"(?:^|\s)[ו]?אל ", "m-jri̯ X = `אַל` + future (§6.2)"),
-    (r"\bꜣḫ\b(?!,).*(?<![-\w])r(?![-\w])", r"(?:^|\s)[ו]?מוטב ", "ꜣḫ X r Y (better X than Y) = `מוּטָב X מִ־Y` (§6.3)"),
+    (r"\bꜣḫ\b(?![,.]).*(?<![-\w])r(?![-\w])", r"(?:^|\s)[ו]?מוטב ", "ꜣḫ X r Y (better X than Y) = `מוּטָב X מִ־Y` (§6.3)"),
     (r"\bpꜣ šmm\b|\bpꜣyw =k šmm\b", r"(?:^|\s)[ו]?[ל]?(?:ה)?חם(?:\s|$|[,.;:])", "pꜣ šmm = `הַחַם` (§6.4)"),
     (r"\bgr mꜣꜥ\b", r"(?:ה)?שותק (?:ה)?(?:אמיתי|באמת)", "gr mꜣꜥ = `הַשּׁוֹתֵק הָאֲמִתִּי` (§6.4)"),
     (r"\bn ḫpr\.t\b|\bn ḫp\[?r\]?\.t\b", r"(?:^|\s)[ו]?טרם ", "n ḫpr.t X = `טֶרֶם נִהְיָה X` (§6.5)"),
@@ -660,7 +660,7 @@ def check_line(key, lab, heb, body, fixed, out):
     bad = 0
     plain = strip_marks(heb)
     # whole words that a gate's prefix class misreads (TB 6,3 `לברוח` "to flee", 8,7 `מרוח` "smeared"): not the gated word
-    plain = re.sub(r"(?<![א-ת])[ובלכה]?(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי|שמחה|שמחת|שמחתי|שמחתו|השמחה)(?![א-ת])", " ", plain)   # + BD 90–91, 111; SI B70 (`שמחה` ≠ ש־מחה)
+    plain = re.sub(r"(?<![א-ת])[ובלכה]?(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי|שמחה|שמחת|שמחתי|שמחתו|השמחה|משיט|משיטה|משיטים|המשיטים|להשיט|השיט|לוחם|לוחמים|הלוחמים|הלוחם|ללוחמים)(?![א-ת])", " ", plain)   # + BD 90–91, 111; SI B70 (`שמחה` ≠ ש־מחה)
     if re.search(r"ḥmsi̯|ḥms\b|ḥmsj|ḥms\.", license_text(key, lab)):   # `לשבת` "to sit" (ḥmsj), not the root שבת (WE 3,8)
         plain = re.sub(r"(?<![א-ת])ו?לשבת(?![א-ת])", " ", plain)
     plain = re.sub(r"(?<![א-ת])[ובלמהכש]?רא־סטאו(?![א-ת])", " ", plain)   # Rosetau (Rʾ-sṯꜣ.w), not the root ברא (NU1 18.34)
