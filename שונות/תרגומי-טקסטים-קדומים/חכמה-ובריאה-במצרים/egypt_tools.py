@@ -530,7 +530,7 @@ RESERVED = [
     (W + alt("תבה", "תיבה", "התבה", "התיבה", "תבת", "תיבת", "תבתו", "תיבתו", "תבתך", "תיבתך") + E, r"ḏbꜣ|ḏb\(ꜣ\)|ḏbꜣ,t|ṯbt|db\.t", "תֵּבָה only for ḏbꜣ.t 'chest, coffin' [cognate: Egyptian loanword, Gen 6:14, Ex 2:3]"),
     (W + alt("יאור", "היאור", "יאורים", "היאורים", "יאורי", "יאוריהם", "יאר") + E, r"jtrw|jtr\b|jwtr|jtwr|jwtwr|jtr,w|jꜣtr|\bjtrw", "יְאֹר only for jtrw 'river' [cognate: Egyptian loanword, Gen 41:1, Ex 2:3]"),
     (W + alt("סוף", "הסוף", "בסוף", "כסוף") + E, r"ṯwf|ṯwfj|twfj", "סוּף only for ṯwfj 'papyrus thicket' [cognate: loanword, Ex 2:3]; 'end' = קֵץ / אַחֲרִית"),
-    (W + alt("אחו", "האחו", "באחו") + E, r"ꜣḫ\b|ꜣḫ,w|ꜣḫ-w|ꜣḫw", "אָחוּ only for ꜣḫ(w) 'reed meadow' [cognate: loanword, Gen 41:2]"),
+    (W + alt("אחו", "האחו", "באחו") + E, r"ꜣḫ\b|ꜣḫ,w|ꜣḫ-w|ꜣḫw|bꜣẖ|bꜣḫ", "אָחוּ only (the place Bꜣẖ.w `בָּאחוּ` licensed: BD 108, 125) for ꜣḫ(w) 'reed meadow' [cognate: loanword, Gen 41:2]"),
     (W + alt("פרעה", "פרעו", "לפרעה", "הפרעה") + E, r"pr-ꜥꜣ|pr-ꜥꜣ", "פַּרְעֹה only for pr-ꜥꜣ 'the Great House' [cognate]; nsw = מֶלֶךְ, ḥm=f = הוֹד מַלְכוּתוֹ"),
     (W + alt("חרטם", "חרטמים", "החרטם", "החרטמים", "חרטמי") + E, r"ḥr,j-tp|ḥry-tp|ḥr\(,j\)-tp|ḥrj-tp", "חַרְטֹם only for ḥry-tp [cognate: loanword, Gen 41:8, Ex 7:11]"),
     (W + alt("שש", "השש", "בשש") + E, r"šs\b|šs,w|\bšsr|šsꜣ", "שֵׁשׁ 'linen' only for šs [cognate] (always vocalized: 'six')"),
@@ -660,7 +660,7 @@ def check_line(key, lab, heb, body, fixed, out):
     bad = 0
     plain = strip_marks(heb)
     # whole words that a gate's prefix class misreads (TB 6,3 `לברוח` "to flee", 8,7 `מרוח` "smeared"): not the gated word
-    plain = re.sub(r"(?<![א-ת])[ובלכה]?(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי|שמחה|שמחת|שמחתי|שמחתו|השמחה|משיט|משיטה|משיטים|המשיטים|להשיט|השיט|לוחם|לוחמים|הלוחמים|הלוחם|ללוחמים)(?![א-ת])", " ", plain)   # + BD 90–91, 111; SI B70 (`שמחה` ≠ ש־מחה)
+    plain = re.sub(r"(?<![א-ת])[ובלכה]?(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי|שמחה|שמחת|שמחתי|שמחתו|השמחה|משיט|משיטה|משיטים|המשיטים|להשיט|השיט|לוחם|לוחמים|הלוחמים|הלוחם|ללוחמים|מושבות|המושבות|במושבות|למושבות)(?![א-ת])", " ", plain)   # + BD 90–91, 111; SI B70 (`שמחה` ≠ ש־מחה)
     if re.search(r"ḥmsi̯|ḥms\b|ḥmsj|ḥms\.", license_text(key, lab)):   # `לשבת` "to sit" (ḥmsj), not the root שבת (WE 3,8)
         plain = re.sub(r"(?<![א-ת])ו?לשבת(?![א-ת])", " ", plain)
     plain = re.sub(r"(?<![א-ת])[ובלמהכש]?רא־סטאו(?![א-ת])", " ", plain)   # Rosetau (Rʾ-sṯꜣ.w), not the root ברא (NU1 18.34)

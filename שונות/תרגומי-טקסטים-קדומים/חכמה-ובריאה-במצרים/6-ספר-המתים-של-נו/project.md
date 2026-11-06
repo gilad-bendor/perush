@@ -630,8 +630,369 @@ None copied. Inside NU2: 30B.3 copies 30A.2's Hebrew where the Egyptian is the s
 - In a book of spells the quotative frame (*ḫrw-fj*, *j.n*, *ḏd=f*) often follows the quotation: draft the speaker structure
   only after reading the whole sentence across the line breaks.
 
+## NU3 14.1–37.3 (Round 6 run 2, translator 3; 2026-11-06)
+
+### Scope
+KEY NU3 = 19 chapter texts of pNu in the papyrus's order – BD 14, 68, 92, 63A, 105, 95, 72, 71, 106, 40, 90, 108, 47, 104,
+103, 51, 119, 36, 37 – 140 lines (`14.1`–`37.3`; the TLA skips 71.17), all drafted, filled, verified, compared with the TLA's
+German and passed three times; the clean translation built (`translation-NU3.rtl.md`; intro `translation--intro-NU3.rtl.md`).
+One `## ` heading per chapter (19). Preservation: good; restorations sporadic (68.3, 92.2–92.5, 105.5–105.7, 71.4–71.8, 71.13,
+108.1–108.2, 108.12–108.13); `[…]` mostly the owner's name; BD 40, 90 and 92 are textually obscure (the TLA itself marks
+several readings with "?"). The text: short spells that each open one way for the dead – appeasing an angry god (14),
+the doors of sky and earth and mastery over body and elements (68), opening the tomb for ba and shadow (92, 72, 71), water
+and fire (63A), the ka's food and purification (105, 106), Thoth's knife (95), repelling snakes, a beetle and a speech-
+demon (40, 36, 37, 90), the serpent of Mount Bakhu (108), throne, seat, Hathor's retinue, not walking upside down (47,
+104, 103, 51), leaving Rosetau (119).
+
+### Sources consulted
+AED-TEI pNu (`data NU3`); the TLA's German (`tr NU3`), read after each of the five drafting saves (14–68 / 92–95 / 72–106 /
+40–108 / 47–37), each call restricted to the labels just drafted; it changed about 75 drafted lines (each listed in the
+entry's **תרגומים** bullet, "הטיוטה הראשונה … תוקנה"). No other witness in the folder. Faulkner, Allen, Quirke, Lapp: from
+memory only, never quoted. Every Bible verse printed with `check_bible_quotes.py --show` before quoting; the checker reports
+0 problems on the three files.
+
+### Decisions
+**Formulas and refrains (fixed here):**
+
+| Egyptian | Hebrew | Lines | Reason |
+|---|---|---|---|
+| BD 71's refrain `swḏꜣ=k wj mj swḏꜣ=k ṯw ḏs=k wḥꜥ sw sfḫ sw jmi̯ sw r tꜣ jmi̯ mr.wt=f j.n nb ḥr wꜥ r=j` | `תשלים אותי כשם שהשלמת את עצמך – שחררו אותו, התירו אותו, תנו אותו לארץ, תנו את אהבתו – אומר אדון־פנים־אחד עליי.` | 71.2–71.3, 71.4–71.5, 71.7–71.8, 71.9–71.10, 71.10–71.11 (without "תנו את אהבתו", as the Egyptian), 71.18–71.19 | swḏꜣ = WE 10,14 `השלים`; the imperatives plural with the TLA (the god commands his servants); copied byte for byte in every copy |
+| BD 68's litany `sḫm=j m X` | `שולט אני ב־X` | 68.4–68.15 | §12.3 `שָׁלַט בְּ־`; 68.12–68.14 copy 68.5–68.8 word for word |
+| the food formula `bw.t=j pw ḥs, nn wnm=j sw` | `תועבתי היא צואה – לא אֹכַל אותה` (51.2); with bread `תועבתי הוא, לא אֹכַל אותו` (68.9) | 51.2, 68.9 | §12.4.7, its first copy in the book (gender follows the Hebrew noun) |
+| `jr rḫ mḏꜣ.t tn` / `jr rḫ rʾ pn` | `מי שיודע את המגילה הזאת` / `מי שיודע את הלחש הזה` | 68.16, 72.12 | §12.4.6 |
+| `ḏd-mdw=j jn nṯr` (14.3) | `אמירה עליי בפי אל` | 14.3 | the formula's `אמירה` variant (§6.5), the suffix as object (TLA) |
+| `rʾ n ḫsf X` / `rʾ n tm rḏi̯.t sḏm.tw=f` | `לחש להדוף X` / `לחש לבלי לתת ש־` | 40, 36, 37 / 47 | NU2's titles |
+| `ṯz-pẖr`, `zp-2`, `ky-ḏd`, `jw=j rḫ.kw` | `ולהפך`, `(פעמיים)`, `נוסח אחר:`, `יודע אני` | 40.3, 90.8; 103.2, 51.2; 71.8, 105.8; 72.6, 108.14 | NU1 |
+
+**Key terms (new or settled here):**
+
+| Egyptian | Hebrew | Lines | Reason / rejected |
+|---|---|---|---|
+| špt "anger" (noun and verb) | `זַעַף` / `זועף` | 14.1, 14.3, 14.5 | HC 70 `זעוף־הלב`; the roots חרה, נחם never (Ex 32:12, Ps 85:5 in the apparatus) |
+| sḥtp "appease"; sḥtp.yw (offerings) | `הניח את דעת`; `מניחי־הדעת` | 14.5, 105.1, 71.6 | AM 8.11 `מניחים את דעת האל`; first draft `פייס` changed in pass (b); keeps the ḥtp `נח` / ḥtp.w `קרבנות` pun visible |
+| ꜣ.t (tla6) "power" / ꜣ.t "moment" | `עוז` / `רגע` | 14.2 / 71.8 | two lemmas; AM 9.3 `רגע` |
+| nkn "injury" (noun; verb 90.7) | `חבלה` / `פגוע` (passive) | 14.3, 90.7 | `נזק` is AM's wgꜣ, `פגע` AM's thꜣ, `פצע` AM's sẖy |
+| sḏb "mishap" | `תקלה` | 14.4 | |
+| gn "mighty one" | `תקיף` | 14.4 | `שליט` is ḥqꜣ |
+| ꜥꜣ.wj "door-leaves" / sbꜣ "door" / qꜣr.t "bolt" | `כנפי־הדלת` / `דלת` / `נגר` | 68.2, 72.8 | NU1 17.31; BD 125; qꜣr.t ≠ BD 125's ḥpt `בריחים` |
+| zn "open (a way)" | `פרץ` (stative `פרוץ`) | 68.3–68.4 | wn `פתח`, wpi̯ `פילח`, wbꜣ `פער` (NU2) taken |
+| sfḫ "loosen" / wḥꜥ "release" / mr "bind" / sti̯ "?" | `התיר` / `שחרר` / `אסר` / `*שלף*` | 68.3, 71 refrain | SI B274 `שמוט` was an imperative of sfḫ (a kept split); `פתר` for wḥꜥ rejected (Gen 40–41 echo) |
+| ḥn.t "pelican" | `שקנאי` | 68.4 | `קָאַת` rejected (an uncertain biblical bird; false precision) |
+| wḫꜣ "shake out" / ḫmw "dust" | `ניער` / `אבק` | 68.15 | `עפר` avoided (echo control: the verb already carries Isa 52:2) |
+| jm.j-rʾ "tongue" | `לשון` | 68.15 | ns `לשון` (§4.1) – two lemmas, one Hebrew, never in one text (recorded) |
+| sšm.w "guide" | `מַנְחֶה` (vocalized) | 68.16 | NU1 sšmi̯ `הנחה`; BD 111's sšm.w "image" is another lemma |
+| ski̯ "perish" | `אבד` | 68.16 | NU1's ski̯ "spend (time)" `בלה` – another sense |
+| jmꜣ (tree) | `שיזף` | 68.10 | Ziziphus |
+| jz "tomb" | `קבר` | 92.1 | qrs.w `קבורה` (§11.3) |
+| šw.t "shadow" | `צל` | 92.1, 92.7 | §12.3 (first met here in NU) |
+| ḫtm "seal, lock" (BD) | `חתם` (loanword, licensed) | 92.2, 92.9, 72.8, 90.5 | §4.2 |
+| šdi̯ "rescue, take out" | `חילץ` | 92.2, 92.5 | PT571 |
+| jp "count" | `מנה` / `מניין` | 92.5, 92.7, 71.12 | NU2 42.14; `מפקד` stays jp.t (BD 68) |
+| ẖkr.w "adornment" | `עדי` | 92.6 | SI B270 |
+| sḏr "the sleeper" | `השוכב` | 92.2 | the שכב gate licensed by sḏr |
+| nfr.w "beauty" | `יופי` | 92.3 | `טוב` stays the adjective nfr (72.11) |
+| ꜥwg "roast" / nwḫ "boil, scorch" | `נצלה` / `נכווה` | 63A.1, 63A.3 | |
+| mjḥ.w "oar" | `משוט` | 63A.2 | = AM's ḥmw (steering oar): two lemmas, one Hebrew, never in one text (for the lead) |
+| nḥm "prevent" | `עצר` | 63A.5 | a third sense beside `נטל` / `הציל`; `מנע` is šnꜥ |
+| bd "natron" / snṯr "incense" / swꜥb "purify" / ntnt "sweat" | `נתר` / `קטורת` / `טיהר` / `זיעה` | 105.3 | HC 75 `קטורת`; wꜥb `טהור` |
+| ꜥb.w "sin" | `עבֵרה` | 105.4 | BD 125's ꜥbw "purity" `זוך` is another lemma; jw "wrong" `עבירות` (NU1) – shared root, recorded |
+| wꜣḏ (amulet) | `קמע־הוָאגֶ׳` | 105.4 | BD 86 |
+| rmn "upper arm" | `קיבורת` | 105.6 | `זרוע` ꜥ, `כתף` ḫpš, `שכם` qꜥḥ, `אציל` sꜥḥ (119.5) all taken |
+| mꜣꜣ in the pair "seeing eye, hearing ear" | `רואה` | 105.7 | NU1's mꜣꜣ `חזה` elsewhere (92.4, 71.16, 90.2); a split by idiom (Prov 20:12's fixed pair) |
+| šwi̯ m "free of" | `חף מ־` | 72.2 | the `יבשה` / `חרבה` gate is for šwi̯ "dry"; Job 33:9 in the apparatus |
+| ḥn.tj (ḏ.t) | `תכלית (העד)` | 72.2 | SI B212 |
+| jrw "form" | `מראה` | 72.3 | NU2 42.20; ḫpr.w stays `צורה` |
+| ꜣṯp "laden" | `טעון` | 72.3 | AM 12.8 |
+| ꜣw.t-ꜥ | `מתנות` | 72.5 | SI B175 |
+| ḫni̯ "alight" / rwj "depart" | `נחת` / `הסתלק` | 72.7 | hꜣi̯ `ירד` (NU1) |
+| ẖnm "unite with" / zmꜣ "join, gather" | `התאחד עם` / `התחבר`, `חיבר` | 72.12 / 14.4, 72.9 | SI R7 / SI B114, B121 (first draft `אחבור`, `איחדו` changed in pass (b)) |
+| mn "remain" | `קבוע` | 72.11 | SI B138 (first draft `קיים` changed) |
+| ḫdi̯ / ḫnti̯ | `הפליג צפונה` / `העפיל דרומה` | 72.11 | SI B271 |
+| qrs.w "coffin" | `ארון־קבורה` | 72.12 | §11.3 qrs.w `קבורה` + `ארון` (wt) as the head of a compound: noted |
+| dbn "encircle" | `הקיף` (`המוקף`) | 71.10, 108.14, 119.4 | first draft `הסובב` (pẖr's, AM 17.10) changed |
+| pẖr / pnꜥ | `סובב` / `הפנה` | 90.3, 47.2 / 108.6 | AM's msnḥ is `הפך` |
+| ṯꜣ (young) | `גוזל` | 71.9 | NU1 17.57 (AM's crocodile ṯꜣ `גור`: a kept split) |
+| ḏꜣjs.w "counsellor" | `יועץ` | 71.11 | |
+| znj/znn "cut off (heads)" / jww "sever" / ḥsq "cut off" | `התיז` / `ניתק` / `כרת` | 71.12, 90.2–90.5 | ḥsq = WE, NU1, NU2 |
+| wḏꜣ.t "the Udjat eye" | `הוּגָ׳את` | 71.12 | AM 1.15 (the same word as a measure) |
+| ḫfꜥ "fist" / wꜣs "dominion" | `אגרוף` / `שררה` | 71.15 | ḫfꜥ verb `לפת` (NU2); BD 86's wꜣs-sceptre is the object |
+| tp.j rʾ rnp.t "New Year" | `פֶּתַח השנה` | 71.15 | rʾ "opening" `פֶּתַח` (NU2 1.9); `ראש השנה` rejected (Ezek 40:1 / Jewish festival echo) |
+| šzp "image, statue" / šzp "upper lip" | `דיוקן` / `שפם` | 71.16 / 108.10 | `צלם` gated to snn/twt/tjt; `שפה` is sp.t (36.2) |
+| sꜥḥ "noble (dead)" | `אציל` | 119.5 | BD 74 `האצילים` (NU1's suggested `חנוט` not adopted) |
+| mẖn.tj "ferryman" | `מעבורתן` | 106.3 | AM 12.9 |
+| zbi̯ "conduct, convey" | `הוביל` (passive `מובל`) | 106.4, 36.2 | NU2's zbi̯ "go" `צעד` – another lemma per the TLA; `מוסר` is gated (sbꜣ.yt), `מסר` is swḏ |
+| wꜥr.t "district" | `מחוז` | 106.4 | SI R1 |
+| ds "flint knife" | `מאכלת` | 95.2, 108.5 | WE 1,13's ds "jar" is a homonym |
+| nšnj "rage, storm" | `רוגז` | 95.2, 95.3, 71.6 | SS 31 (`סערה` is ḏꜥ, AM) |
+| nrw "the Terrible" (epithet) | `הנורא` | 95.2, 71.8 | NU1's nrw noun `מורא` |
+| swḫꜣ "mis-speaking" | `שיבוש` | 90 | TLA "Unwirksamkeit"; `כזב` is grg |
+| ḫti̯ "retreat" | `נרתע` | 90.6 | the root סוג reserved |
+| bjꜣ "metal" | `מתכת` | 108.8–108.9 | NU2 23.4 `של מתכת`; first draft `ברזל` changed (the TLA's "Erz") |
+| mtꜣ "spear" / sẖp "slurp" / bši̯ "vomit" | `רומח` / `גמע` / `הקיא` | 108.7–108.8 | AM 14.17 `הקאת`; BD 125 `גומע` (another lemma: a shared Hebrew, noted) |
+| ḥw.t-nṯr "temple" | `בית האל` | 72.9, 108.4 | AM 6.1, WE 1,19 (`מקדש` is kꜣr, 92.7) |
+| ḥrs.t "carnelian" | `קרנליאן` | 108.4 | `אֹדֶם` (Ex 28:17) is HC's ddj "red ochre" |
+| ḫt (100 cubits) / mḥ "cubit" | `חֵת` (transliterated) / `אמה` | 108.3–108.4 | |
+| sqd.wt "crew" / sqd.wt "sailing" | `צוות` / `שיט` | 108.7 / 108.9 | two lemmas |
+| ṯꜣy "male" | `גבר` | 108.10 | TB's `אשת איש` (ḥm.t ṯꜣy) is a fixed idiom: a split by sense |
+| ẖ.t in šm-ḥr-ẖ.t=f | `ההולך־על־בטנו` | 108.12 | ẖ.t `בטן` (§4.1); Gen 3:14 `גחון` only in the apparatus |
+| jnṯ.t "fetter" | `כבלים` | 108.14 | |
+| rḏw "efflux" / sṯꜣ "flow" | `הפרשה` / `נזל` | 119.3 | `זרם` is nwy (68.7) |
+| s.t "seat" / ns.t "throne" | `מושב` / `כס` | 47.1–47.2, 92.8 | NU2 91.3 `כסאו`; AM 2.17 has s.t `כסא` (a kept split by sense) |
+| šms.wt "retinue" | `פמליה` | 103.2 | AM's šmsw.t |
+| ꜥpšꜣy (beetle) | `העַפְּשָׁאִי` (transliterated) | 36.1 | species uncertain |
+| Mr.tj; rḥ.tj | `שתי המֶרְתִּי`; `שתי הָרֵעוֹת` (vocalized: "evils") | 37.1 | |
+
+**Names (first occurrence vocalized):** `האִמְחֶת` (jmḥ.t), `תֶּכֶם` (Tkm), `בָּאחוּ` (Bꜣẖ.w, BD 125's form), `הזועם` (ꜣd.w),
+`בולע־החמור` (ꜥm-ꜥꜣ), `אדון־פנים־אחד` (nb ḥr wꜥ), `שוכן־בלהטו` (the Bakhu serpent's name), `ההולך־על־בטנו`,
+`גדול־הקסמים` (wr-ḥkꜣ.w, Seth), `האָכֶרוּ` (ꜣkr.w), `אריה־הפנים` (mꜣj-ḥr), `אָטוֹן־וֶסֶח` (jtn-wsḫ), `הרואה` (ptr.j), `הסֶשֶׁדֶת`
+(sšd.t), `נֶבֶּח` (nbḥ), `שֶׁנוּ` (šn), `מֶסְקְטֶת` (sk.tt, NU1's suggestion adopted), `מֶסְקֶת` (msq.t, NU1), `נֶסֶרֶת` (NU1),
+`אי־נֶסֶרֶת`, `פֶּה` / `דֶּף`, `שור־המערב` (NU2), `בָּבִי`, `סוֹבֶּךְ`, `שני־אריות` (BD 125, NU1), `בית־כָּא־פְּתָח` (BD 125).
+
+**Rejected (gates and echoes):** `נחם`, `חרה` (Ex 32:12 only in the apparatus); `עפר` (68.15); `קָאַת`; `ברזל` (108.8);
+`אֹדֶם` (108.4); `ראש השנה` (71.15); `צלם` for šzp; `גחון` for ẖ.t; `פתר` for wḥꜥ; `היסוג` for ḫti̯ (first draft, the
+root סוג reserved); `מוסר` for zbi̯ (the gate caught it, 36.2); `תנין` / `לויתן` (Isa 27:1, Ps 74:13 in the apparatus only).
+Gate permits written (`[היתר שער]`): `המושבות` (92.8, 92.10: the שבת gate reads ה־מו־שבות), `באחו` (108.2, 108.3, 108.15:
+the `אחו` gate reads ב־אחו; as BD 125).
+
+### Open decisions for the user
+1. **sḥtp `הניח את דעת`** (AM's precedent) over the more natural `פייס` (14.5, 105.1, 71.6): consistency kept the
+   ḥtp / ḥtp.w / sḥtp family visible; `מניחי־הדעת` as a name of offerings is heavy.
+2. **BD 71's refrain in the plural** (`שחררו … התירו … תנו`): the imperatives are unmarked; the TLA reads plural (the god's
+   servants); a singular reading (addressed to the god himself) is possible.
+3. **BD 105.7 negation**: `לא שלי עין רואה, אוזן שומעת` (TLA: the dead is not a sacrificial animal) against the first
+   draft's rhetorical question `הלא שלי …?`; the sense of the passage (head and foreleg cut "from me", 105.6) supports the
+   TLA. Prov 20:12 is then a [divergence].
+4. **72.12–72.13 `rʾ-pw` "or"**: kept where the Egyptian puts it (`– או –` at the head of 72.13); a smoother Hebrew would
+   move it to 72.12.
+5. **Two-lemma, one-Hebrew pairs** recorded for the lead: mjḥ.w / AM ḥmw `משוט`; jm.j-rʾ / ns `לשון`; ꜥb.w `עבֵרה` / NU1 jw
+   `עבירות`; sẖp `גמע` / BD 125's "swallow" `גומע`; ṯꜣy `גבר` / TB's `אשת איש`.
+
+### Progress log
+- Drafted in five saves (14–68; 92, 63A, 105, 95; 72, 71, 106; 40, 90, 108; 47, 104, 103, 51, 119, 36, 37), each filled and
+  verified at once; `tr NU3` read after each save over exactly the drafted labels, and the **תרגומים** bullet written:
+  about 75 lines changed after the TLA – mood and tense (68.2–68.4 statives, 92.2, 92.4–92.5, 63A.3–63A.4, 72.4, 104.2,
+  119.2–119.3, 90.5 negated past, 90.7 wish), voice (40.6, 71.10, 108.8, 119.4), speaker and syntax (14.3, 40.2–40.5, 92.8,
+  51.2, 72.9, 72.12), a word's sense (105.2, 105.7, 106.4).
+- Pass (a) fidelity: a script listed every bracketed source token against the Hebrew brackets: 3 lines fixed (68.8, 108.14:
+  a restored suffix only → no bracket; 108.12 likewise); every negation and tense rechecked with the TLA comparison (105.7,
+  63A.3, 90.5 reversed).
+- Pass (b) consistency: every new Hebrew word grepped in the corpus; changed: sḥtp `פייס` → `הניח את דעת` (AM), dbn `סובב` →
+  `הקיף` (pẖr's), pnꜥ `סובב` → `הפנה`, mn `קיים` → `קבוע` (SI), ẖnm `חבר` → `התאחד` (SI R7) and zmꜣ `איחד` → `חיבר`, ḫpr
+  `קורה` → `נהיה` (§4.4), šzp "lip" `שפה` → `שפם` (sp.t's), rmn `אציל` → `קיבורת` (sꜥḥ's), rḏw/sṯꜣ `נוזל`/`זרם` → `הפרשה`/`נזל`
+  (nwy's), zbi̯ `מוסר` → `מוביל` (gate); BD 71's refrain set to the plural in all copies; `verify` reports 0 repeated-line
+  differences.
+- Pass (c) Hebrew: the clean text read through; `הָרֵעוֹת` vocalized (37.1); heading 71 aligned; 72.15 `כָּאֵלִים הָאֵלֶּה`
+  vocalized (trap); register even, no vav-consecutive.
+- `verify NU3 --strict`: 0 problems; `check_bible_quotes.py` on the annotated, intro and translation files: 0 problems;
+  `build NU3` done.
+
+### The text on its own terms
+- **Knowledge is power** (72.5–72.6, 71.13–71.14, 108.5, 108.15): "I know you, I know your names"; "may you know me as I know
+  your number" – to name the guardian, the judge, the serpent is to bind him; the rubrics promise the same to "whoever knows
+  this book" (68.16, 72.12).
+- **Mastery as the opposite of death** (68.4–68.15): "I have power over my heart, my arms, my legs, my mouth … over water,
+  air, the river, its banks" – the corpse whose limbs do not obey becomes a body that rules every element.
+- **Resurrection as a morning** (68.14–68.15): the dead turns on his left side, on his right, sits up, stands, shakes off his
+  dust – the gestures of waking.
+- **The mummy as a bound man** (68.3, 71 refrain): "release him, loosen him, give him to the earth" – the wrappings that
+  preserve the body are also the fetters to undo; the god who guarded him is the one who unties him.
+- **An angry god without a confession** (14): the anger is "in the god's heart" and is removed by offerings that "set his
+  mind at rest" and on which god and dead "live" together; wrong is "drowned" rather than confessed.
+- **The ka cared for like a temple statue** (105): natron, incense, washing of its "sweat"; the dead identifies with the
+  green amulet on Re's neck – and insists he is not a sacrificial animal whose head and foreleg are cut off.
+- **A daily cosmic battle** (108): a 30-cubit serpent on the eastern mountain stares down the sun, drinks the water under its
+  bark and stops it; Seth, in the bow, spears it, makes it vomit, and speaks to it "in magic" – Seth, Osiris's murderer, is
+  here the sun's champion.
+- **The inverted world of the dead** (51, 68.9): walking upside down and eating excrement – the dead man's horror of a world
+  turned over, and his claim to temple food (white emmer bread, red-barley beer).
+- **Speech that creates** (119.5): "I speak, and it comes into being" – the power of creative utterance claimed by the dead;
+  and its opposite (90): a demon who "puts mis-speaking into the mouth", so that the spells fail.
+- **Puns and aetiologies** (119.3, 14.4–14.5, 108.13): Rosetau is "where (Osiris's) efflux flowed" (*sṯꜣ*); the offerings
+  (*ḥtp.w*) "set at rest" (*ḥtp*) the god; the sun "rests" (*ḥtp*) = sets in the evening.
+- **Recitation as part of the text** (40.3, 90.8, 103.2): "and vice versa", "twice" – 90.8 shows the method: say it with
+  "Osiris", then again with "me".
+
+### Key parallels
+- [equivalent] Ps 78:23 `וְדַלְתֵי שָׁמַיִם פָּתָח` ↔ 68.2 "the door-leaves of the sky are open to me"; [divergence] Gen 7:11
+  (the windows of heaven opened for destruction).
+- [equivalent] Gen 3:14 `עַל גְּחֹנְךָ תֵלֵךְ` ↔ 108.12 "he who goes on his belly" – a serpent's epithet, not a curse.
+- [equivalent] Isa 27:1 ↔ 108.7: a deity spears the menacing serpent; [divergence] Job 40:23 (the monster drinking the river)
+  and Job 20:15, Jonah 2:11 (the swallower made to vomit) ↔ 108.7–108.8.
+- [divergence] Prov 20:12 `אֹזֶן שֹׁמַעַת וְעַיִן רֹאָה` ↔ 105.7: the same pair, here denied of the sacrificial head.
+- [equivalent] Ps 33:9 `כִּי הוּא אָמַר וַיֶּהִי` ↔ 119.5 "I speak, and it comes into being".
+- [equivalent] Isa 38:5 `הִנְנִי יוֹסִף עַל יָמֶיךָ` ↔ 71.15 "he will add many years to my years of life".
+- [equivalent] Gen 2:7 `וַיִּפַּח בְּאַפָּיו` ↔ 71.16 "air to my nose".
+- [equivalent] Ps 85:5, Ex 32:12 ↔ 14.1–14.4: removing the god's anger.
+- [equivalent] Isa 52:2 `הִתְנַעֲרִי מֵעָפָר קוּמִי` ↔ 68.15 "I stand up, I shake off my dust".
+- [cognate] Gen 41:1 `הַיְאֹר` ↔ 68.7, 68.13 (jtrw, the loanword).
+
+### Lines shared with other texts
+None copied from other files. Inside NU3: 68.12–68.14 copy 68.5–68.8; BD 71's refrain copied in all six copies; 92.11 copies
+92.8–92.9 (`אין שומרים את הַבָּאוֹת, את האָחִים, החותמים על המת והמתה`); 92.7 copies 92.4 (`פתח דרך לבָּא שלי … שיחזה את האל
+הגדול`). 71.1 = NU5 64L.1 (`לחש לצאת ביום. דברים לאמר, בפי […] אמיתי־הקול:`) – for NU5 to copy. Strings reused from earlier
+parts: `שלום לפניך/לפניכם`, `שור־המערב`, `אדון־האמת`, `אי האמיתיים`, `שדה־האגמונים`, `שדה־הקורבנות`, `שולחן־הקרבנות`,
+`יציאות־לקול`, `בעלי־העוול`, `צִי`, `מֶסְקֶת`, `נֶסֶרֶת`, `נָארֶף`, `שני־אריות`, `בָּבִי`, `סוֹבֶּךְ`, `בָּאחוּ`, `בית־כָּא־פְּתָח`,
+`דבר נכון באמת, אלפי אלפים פעמים`.
+
+### Proposals for the shared renderings
+| Egyptian | Hebrew | Lines | Reason |
+|---|---|---|---|
+| BD 71's refrain (above) | `תשלים אותי כשם שהשלמת את עצמך – שחררו אותו, התירו אותו, תנו אותו לארץ, תנו את אהבתו – אומר אדון־פנים־אחד עליי.` | 71 | a fixed line for §7 (six copies) |
+| the food formula, first copy | `תועבתי היא צואה – לא אֹכַל אותה` | 51.2 | §12.4.7 for BD 52–53, 102, 189 |
+| sḫm m X (litany) | `שולט אני ב־X` | 68.4–68.15 | §12.3 |
+| sḥtp / sḥtp.yw | `הניח את דעת` / `מניחי־הדעת` | 14.5, 105.1, 71.6 | AM 8.11 |
+| špt | `זעף` / `זועף` | 14 | HC 70 |
+| zn / wḥꜥ / sfḫ / mr | `פרץ` / `שחרר` / `התיר` / `אסר` | 68.3, 71 | the "open/loose/bind" family beside wn `פתח`, wpi̯ `פילח`, wbꜣ `פער` |
+| dbn / pẖr / pnꜥ | `הקיף` / `סובב` / `הפנה` | 71.10, 108.14, 119.4 / 90.3, 47.2 / 108.6 | |
+| ẖnm / zmꜣ | `התאחד (עם)` / `התחבר`, `חיבר` | 72.12 / 14.4, 72.9 | SI R7 / SI B121 |
+| šw.t | `צל` | 92 | §12.3 confirmed |
+| sk.tt / mꜥnḏ.t | `מֶסְקְטֶת` / (`מַעַנְגֶ׳ת`) | 104.2, 37.2 | NU1's suggestion adopted |
+| sꜥḥ | `אציל` | 119.5 | BD 74; NU1's `חנוט` not adopted |
+| ds | `מאכלת` | 95.2, 108.5 | |
+| nšnj | `רוגז` | 95, 71.6 | SS 31 |
+| bjꜣ | `מתכת` | 108 | NU2 23.4 |
+| ḫtm (BD) | `חתם` (licensed) | 92, 72, 90 | §4.2 |
+| ꜣw.t-jb / nb-jmꜣḫ | `שמחת־לב` / `בעל־הכבוד` | 106.1 | NU1 / SI |
+| names | the list above | | |
+| **Gates (for the coordinator; the tool was not edited)** | (a) the `שבת` gate reads `המושבות` (ה־מו־שבות; s.t "seats"): exempt the whole word; (b) the `אחו` gate reads the place name `באחו` (Bꜣẖ.w) – license *Bꜣẖ* (BD 125 and NU3 108 need `[היתר שער]`) | | |
+
+### Lessons for the guidelines
+- A long refrain with one changing word (BD 71's addressee) is best fixed once and pasted by script; a later change of one
+  feature (singular → plural imperatives) must be applied to every copy at once, including the copies split across line
+  breaks.
+- The TLA's lemma gloss and its sentence translation can disagree (68.3 *sti̯* "knüpfen" vs "losgebunden"; 105.7 *kꜣ*
+  "Opferstier" vs "Esel"): read both, and say which one the Hebrew follows.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
+
+### Parallels index (NU1)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 17.3 | […] m-ḫt mn[j] =[f] ⸢jw⸣ ꜣḫ n jrr! st tp tꜣ ḫpr mdw […] [nb-tm],w | […] אחרי עגינתו. מועיל הוא לעושה אותו על הארץ. נהיה הדיבור […] [אדון־השלמות]: | `וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר` (בראשית א:ג) | divergence | כאן "נהיה הדיבור" פותח את דבריו של אל הבריאה, אבל הדיבור עצמו הוא ש"נהיה", לא העולם מכוחו |
+| 17.3 | […] m-ḫt mn[j] =[f] ⸢jw⸣ ꜣḫ n jrr! st tp tꜣ ḫpr mdw […] [nb-tm],w | […] אחרי עגינתו. מועיל הוא לעושה אותו על הארץ. נהיה הדיבור […] [אדון־השלמות]: | `וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר` (בראשית א:ג) | absent | אין כאן ציווי בריאה. |
+| 17.4 | jnk Jtm,w m wnn =j wꜥi̯.{w}kw [m] [Nw],w jnk Rꜥ,w m ḫꜥ,w =[f] [m] | אֲנִי אָתוּם בהיותי לבדי [בְּנוּן]; אני רַא בהופעותיו, [כאשר] | `וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל פְּנֵי הַמָּיִם` (בראשית א:ב) | divergence | `וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם` …  – מוטיב משותף: לפני הבריאה יש רק מים קדמונים ואל אחד; אבל כאן האל עצמו נמצא **בתוך** המים, לבדו, ואינו "מרחף" מעליהם, והעולם ייוולד ממנו ("נהיה מעצמו", 17.7) ולא ייאמר מבחוץ. נוּן הוא המים, לא `תְּהוֹם` (`renderings.md` §3.1, §5.1). |
+| 17.5 | [š]ꜣꜥ =f ḥqꜣ,t jri̯.tn =f šꜣꜥ Rꜥ,w pw ḫꜥi̯.t m nswt [jri̯.tn] =[f] [m] wnn n ḫpr.t sṯz,w Šw [jw] =[f] [ḥr] | החל לשלוט במה שעשה. החל רַא הוא – להופיע כמלך [על מה שעשה], [ב]עוד טרם נהיו הֲרָמוֹת שׁוּ, [והוא] [על] | `וְכֹל שִׂיחַ הַשָּׂדֶה טֶרֶם יִהְיֶה בָאָרֶץ` (בראשית ב:ה) | equivalent | אותו "טרם נהיה" של טקסטי הפירמידות (`renderings.md` §6.5): הבריאה מתוארת דרך מה שעוד לא היה |
+| 17.5 | [š]ꜣꜥ =f ḥqꜣ,t jri̯.tn =f šꜣꜥ Rꜥ,w pw ḫꜥi̯.t m nswt [jri̯.tn] =[f] [m] wnn n ḫpr.t sṯz,w Šw [jw] =[f] [ḥr] | החל לשלוט במה שעשה. החל רַא הוא – להופיע כמלך [על מה שעשה], [ב]עוד טרם נהיו הֲרָמוֹת שׁוּ, [והוא] [על] | `וַיַּעַשׂ אֱלֹהִים אֶת הָרָקִיעַ` (בראשית א:ז) | divergence | הפרדת השמים מן הארץ: במצרים היא מעשה של שׁוּ, שמרים את השמים (נוּת) מעל האדמה (גֶּבּ), ו"ההרמות" הן מקום ההרמה. |
+| 17.7 | […] […] [ḫpr]-[ḏ]s≡f mw pw […] […] qmꜣ | […] […] [נהיה־מעצמו]; המים הם […] […] יצר | `בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ` (בראשית א:א) | divergence | אל שאין לו ראשית מחוצה לו, אבל המצרי "נהיה מעצמו" (*ḫpr ḏs=f*) – יש לו ראשית, והוא עצמו גרם לה; המקרא אינו מספר על היווצרות האל. |
+| 17.8 | […] [ptr] rf sw Rꜥ,w pw qmꜣ =f rn n ꜥ,t.pl =[f] [ḫpr] [nn] [pw] [n] [nṯr.pl] [jm,j].w-ḫt =f | […] [מה] הוא? רַא הוא, כשיצר את שמות אבריו; [כך] [נהיו] [הָאֵלִים] [הָאֵלֶּה], [ההולכים] אחריו. | `וַיִּקְרָא הָאָדָם שֵׁמוֹת לְכָל הַבְּהֵמָה` (בראשית ב:כ) | divergence | מתן שמות כמעשה של בריאה וסידור; כאן האל נותן שמות לאבריו שלו, וכל שם נעשה אל: האלים הם חלקי גופו של הבורא. |
+| 17.10 | [n.t] [p,t] [jnk] [sf] jw =j rḫ.kw dwꜣ,w ptr rf sw jr sf Wsjr pw jr dwꜣ,w Rꜥ,w pw | [של] [השמים]. [אני] [אתמול], יודע אני את מחר. מה הוא? אשר לאתמול – אוֹסִירִיס הוא; אשר למחר – רַא הוא. | `אֲנִי רִאשׁוֹן וַאֲנִי אַחֲרוֹן וּמִבַּלְעָדַי אֵין אֱלֹהִים` (ישעיהו מד:ו) | divergence | אל המכריז על עצמו כמי שמקיף את הזמן כולו; אבל כאן "אתמול" ו"מחר" הם שני אלים שונים (אוסיריס ורַא), והמת מתאחד עם שניהם |
+| 17.10 | [n.t] [p,t] [jnk] [sf] jw =j rḫ.kw dwꜣ,w ptr rf sw jr sf Wsjr pw jr dwꜣ,w Rꜥ,w pw | [של] [השמים]. [אני] [אתמול], יודע אני את מחר. מה הוא? אשר לאתמול – אוֹסִירִיס הוא; אשר למחר – רַא הוא. | `מַגִּיד מֵרֵאשִׁית אַחֲרִית וּמִקֶּדֶם אֲשֶׁר לֹא נַעֲשׂוּ` (ישעיהו מו:י) | divergence | הידיעה של העתיד כסימן האלוהות. |
+| 17.15 | rn =f bꜣ pw n Rꜥ,w [nk] =[f] [jm] =[f] [ḏs] =[f] [jn]k bn,w pwy n,tj m [Jw]⸢n,w⸣ jr,j-[sjp] ⸢n⸣ n,tj wnn ptr rf | שמו; הבָּא של רַא הוא, [אשר] [שוכב] [עמו] [הוא] [עצמו]. [אני] הַבֶּנוּ ההוא אשר [בְּאוֹן], אחראי־[הבדיקה] של אשר ישנו. מה | `וַיִּתֶּן לוֹ אֶת אָסְנַת בַּת פּוֹטִי פֶרַע כֹּהֵן אֹן לְאִשָּׁה` (בראשית מא:מה) | cognate | *Jwnw*, הליופוליס, היא `אֹן` של המקרא (`renderings.md` §3.2): עיר השמש, שבה ישב הבֶּנוּ. |
+| 17.16 | sw Wsjr pw jr n,[tj] [wnn] [s]ṯꜣ,pl =f pw ky-ḏd [ẖꜣ,t] =⸢f⸣ ⸢pw⸣ [ky-ḏd] nḥḥ pw ḥnꜥ ḏ,t jr nḥḥ | הוא? אוֹסִירִיס הוא. אשר ל"[אשר] [ישנו]" – מכותיו הן. נוסח אחר: [גופתו] היא. [נוסח] [אחר]: נֶצַח הוא, יחד עם עַד. אשר לנצח | `כִּי כֹה אָמַר רָם וְנִשָּׂא שֹׁכֵן עַד וְקָדוֹשׁ שְׁמוֹ` (ישעיהו נז:טו) | equivalent | "עַד" כשם עצם, נצח שהוא מקום מושבו של האל; גם העברית מצרפת שתי מלות נצח (`נֶצַח` ו`עַד`), אבל אינה מבחינה ביניהן כ"יום" ו"לילה". |
+| 17.17 | pw hrw pw jr [ḏ,t] [gr]ḥ pw jnk Mn,w […] […] [šw,t.j] =⸢j⸣ ⸢m⸣ [tp] =⸢j⸣ [ptr] [rf] | הזה – היום הוא; אשר ל[עד] – [הלילה] הוא. אני מִין […] […] [שתי־נוצותיי] [בראשי]. [מה] | `וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה` (בראשית א:ה) | divergence | מוטיב משותף: היום והלילה כשני חלקי הזמן הראשונים; אבל כאן הם "נצח" ו"עד", שני פני הנצח, ולא חלוקה של זמן שנברא. |
+| 17.29 | […] sḫ,t-jꜣr,w pw msi̯.t ḏfꜣ.w | […] שדה־האגמונים הוא, אשר ילד את המזון | `וַיִּטַּע יְהוָה אֱלֹהִים גַּן בְּעֵדֶן מִקֶּדֶם` (בראשית ב:ח) | divergence | מוטיב משותף: מקום פורה "במזרח", שבו המזון ניתן בשפע; אבל שדה האגמונים הוא יעד למת, לא מקום שממנו גורש האדם. |
+| 17.40 | nw pw n nwi̯,t n.t p,t ky-ḏd twt pw n jr,t-Rꜥ,w dwꜣ r ms,(w)t =f rꜥ,w-nb jr g[r,t] [Mḥ,t]-wr,t wḏꜣ,t | גל השמים הזה הוא. נוסח אחר: דמות עין־רַא היא, המהוללת בלידתו בכל יום. ואשר ל[מֶחֶת־וֶרֶת] – הוּגָ׳את | `וַיֹּאמֶר אֱלֹהִים נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ כִּדְמוּתֵנוּ` (בראשית א:כו) | divergence | *twt* "דמות" הוא המלה המצרית לצלם ולדמות (`renderings.md` §4.4); כאן הדמות היא של עין האל, השמש, ולא של אדם. |
+| 17.47 | ⸢Qbḥ⸣[-sn,pl]≡f nꜣ pw n,tj m-sꜣ pꜣ ḫpš m p,t mḥ,t(j).t […] | [קֶבֶּחְסֶנוּף]. אלה הם, אשר מאחורי "השוק" בשמים הצפוניים […] | `עֹשֶׂה-עָשׁ כְּסִיל וְכִימָה` (איוב ט:ט) | equivalent | גם המקרא מכיר שמות לקבוצות כוכבים, ו`עָשׁ` מזוהה לעתים עם הדובה הגדולה; מוטיב משותף, בלי קשר ישיר. |
+| 17.65 | r-ḏr =f j Rꜥ,w ⸢jm,j⸣-swḥ,t≡f psḏ m jtn =f wbn m ꜣḫ,t =f nbb! ḥr [bjꜣ,w] =[f] […] | כולה. הוֹ רַא, שׁוֹכֵן־בֵּיצָתוֹ, הזוהר מתוך אָטוֹנוֹ, הזורח באופקו, השוחה על [ימת־שמיו] […] | `וַיַּבְדֵּל בֵּין הַמַּיִם אֲשֶׁר מִתַּחַת לָרָקִיעַ וּבֵין הַמַּיִם אֲשֶׁר מֵעַל לָרָקִיעַ` (בראשית א:ז) | divergence | מוטיב משותף: מים שמעל לשמים; אבל אצל המצרים השמש "שוחה" או שטה בהם בסירה, ואין "רקיע" המפריד ביניהם (`רָקִיעַ` שמור, `renderings.md` §5.1). |
+| 17.66 | […] sqdd! ḥr sṯz,w-Šw ḏḏ! ṯꜣw.pl m hh n rʾ =f sḥḏ tꜣ,du m [jꜣḫ,w] =[f] | […] השט על הֲרָמוֹת־שׁוּ, הנותן רוחות בלהט פיו, המאיר את שתי הארצות ב[זיוו]: | `בִּדְבַר יְהוָה שָׁמַיִם נַעֲשׂוּ וּבְרוּחַ פִּיו כָּל-צְבָאָם` (תהלים לג:ו) | equivalent | הרוח היוצאת מפי האל ונותנת חיים או סדר; אבל אצל המצרים זהו האוויר שהשמש נושפת לבני האדם, לא דבר הבורא. |
+| 17.68 | m-ꜥ nṯr pwy ꜥꜣ štꜣ jrw wnn jnḥ.du =fj ⸢m⸣ ⸢rmn.wj⸣ mḫꜣ,t [grḥ] [pf] | מיד האל ההוא הגדול, נסתר־המראה, אשר גבותיו הן שני קני המאזניים, [בלילה] [ההוא] | `תְּקֵל תְּקִילְתָּ בְמֹאזַנְיָא וְהִשְׁתְּכַחַתְּ חַסִּיר` (דניאל ה:כז) | equivalent | האדם נשקל במאזני הדין; כאן המאזניים הם חלק מגופו של האל השופט. |
+| 17.72 | wꜥ ẖr mꜣꜥ,t ky ẖr jzf,t ḏḏ! =f jzf,t n jr[r!] [sj] mꜣꜥ,t n jy ẖr =s ky-ḏd Ḥr,w pw | האחד – תחת האמת, והאחר – תחת העוול; נותן הוא עוול לעושהו ואמת לבא עמה. נוסח אחר: חוֹרוּס הוא, | — | equivalent | `עִם-חָסִיד תִּתְחַסָּד; עִם-גְּבַר תָּמִים תִּתַּמָּם` (תהילים יח:כו) – האל המשיב לכל אדם כדרכו |
+| 17.72 | wꜥ ẖr mꜣꜥ,t ky ẖr jzf,t ḏḏ! =f jzf,t n jr[r!] [sj] mꜣꜥ,t n jy ẖr =s ky-ḏd Ḥr,w pw | האחד – תחת האמת, והאחר – תחת העוול; נותן הוא עוול לעושהו ואמת לבא עמה. נוסח אחר: חוֹרוּס הוא, | `וְלָתֵת לְאִישׁ כִּדְרָכָו כִּפְרִי מַעֲלָלָיו` (ירמיהו יז:י) | equivalent | גמול לפי המעשים. |
+| 17.81 | twt pw n jr,t-Rꜥ,w ḥnꜥ twt n jr,t-Ḥr,w j Rꜥ,w Jtm,w nb ḥw,t-ꜥꜣ.t jty | דמות עין־רַא היא, עם דמות עין־חוֹרוּס. הוֹ רַא־אָתוּם, אדון הבית־הגדול, ריבון | `וַיֹּאמֶר אֱלֹהִים נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ כִּדְמוּתֵנוּ` (בראשית א:כו) | divergence | "דמות" (*twt*) של שתי עיני האל, כב־17.40. |
+| 17.89 | rḏi̯.y n =f wrr,t ꜣw,t-jb m-ḫnt Nn-nsw,t ptr rf sw jr rḏi̯.y n =f wr[r,t] [ꜣw,t]-jb | אשר ניתן לו הכתר־הגדול, ושמחת־לב בקרב חָנֵס. מה הוא? אשר ל"אשר ניתן לו [הכתר־הגדול], [ושמחת]־לב | `כִּי הָיוּ בְצֹעַן שָׂרָיו; וּמַלְאָכָיו חָנֵס יַגִּיעוּ` (ישעיהו ל:ד) | cognate | *Nn-nsw.t*, הרקליאופוליס, היא חָנֵס של ישעיהו (`renderings.md` §11.11.5; הזיהוי מקובל, לא ודאי). |
+| 17.93 | m-ꜥ nṯr pwy ṯꜣi̯.y bꜣ.pl nsb jwt,w ꜥnḫ m ḥwꜣꜣ,t jr,j kkw ⸢jm,j⸣ ⸢snk,t⸣ | מיד האל ההוא, הנוטל בָּאִים, הלוחך את הרקב, החי על הצחנה, איש החושך, השוכן בעלטה, | `וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם` (בראשית א:ב) | equivalent | החושך כמקומם של כוחות התוהו; כאן החושך הוא ביתו של אל מאכל־רקב, לא מצב שלפני הבריאה. |
+| 17.94 | snḏ.w n =f jm,j.w-bꜣgi̯ ptr rf sw ⸢Swtj⸣ ⸢pw⸣ ky-ḏd smꜣ-wr pw | אשר חוששים מפניו שוכני־הרפיון. מה הוא? סֵת הוא. נוסח אחר: הראם־הגדול הוא, | — | equivalent | `וַתָּרֶם כִּרְאֵים קַרְנִי` (תהילים צב:יא) – `רְאֵם`, שור הבר, כסמל כוח; כאן כינוי של אל. |
+| 17.99 | ḥꜣd.w =sn nn jri̯ =tw n =j (j)ḫ,t m nw-n bw,t nṯr.pl ḥr-n,tt jnk swꜣ wꜥb(.w) ḥr,j-jb msq,t jni̯.y | מצודותיהם; לא ייעשה לי דבר מֵאֵלֶּה, תועבת האֵלִים, כי אני החולף, הטהור, אשר בתוך מֶסְקֶת, אשר מובאת | `כִּי תוֹעֲבַת יְהוָה אֱלֹהֶיךָ כָּל עֹשֵׂה אֵלֶּה` (דברים כה:טז) | equivalent | "תועבת האל" כצירוף; כאן "תועבת האלים" הם דברים שהאלים מואסים בהם (17.102: צואה וכזב). |
+| 17.102 | ⸢ḥs⸣ ⸢pw⸣ [grg] pw jr swꜣ wꜥb(.w) ḥr,j-jb msq,t Jnp,w pw jw =f m-sꜣ ꜥfḏ,t n,t(j).t ẖr mẖt,w | צואה היא, [כזב] הוא. אשר ל"החולף, הטהור, אשר בתוך מֶסְקֶת" – אַנוּבִּיס הוא, והוא מאחורי הארגז אשר בו המעיים | `תּוֹעֲבַת יְהוָה שִׂפְתֵי-שָׁקֶר` (משלי יב:כב) | equivalent | השקר כתועבת האל |
+| 17.102 | ⸢ḥs⸣ ⸢pw⸣ [grg] pw jr swꜣ wꜥb(.w) ḥr,j-jb msq,t Jnp,w pw jw =f m-sꜣ ꜥfḏ,t n,t(j).t ẖr mẖt,w | צואה היא, [כזב] הוא. אשר ל"החולף, הטהור, אשר בתוך מֶסְקֶת" – אַנוּבִּיס הוא, והוא מאחורי הארגז אשר בו המעיים | `תּוֹעֲבַת יְהוָה שִׂפְתֵי-שָׁקֶר` (משלי יב:כב) | divergence | כאן הכזב עומד לצד הצואה: התועבה היא טומאה של הגוף ושל הדיבור כאחת. |
+| 17.108 | n mꜣ!.ntw =f m ⸢zꜣ⸣ ⸢wj⸣ jnk Ꜣs,t gmi̯.n =k wj [pzḫ] n =j šnj{nj} =j | ואין חוזים אותו. אל תדחה אותי! אני אִיסִיס; מצאת אותי כשהיה [פרוע] לי שערי | `רָאשֵׁיכֶם אַל תִּפְרָעוּ וּבִגְדֵיכֶם לֹא תִפְרֹמוּ` (ויקרא י:ו) | equivalent | פריעת השיער כמנהג אבלות; כאן אִיסִיס האבלה על אוסיריס. |
+| 18.3 | jm,j.t Wsjr m ḏꜣḏꜣ,t ꜥꜣ.t jm,j.t Jwn,w grḥ pwy n (j)ḫ,t-ḫꜣwj m Jwn,w grḥ | אשר אצל אוֹסִירִיס, בוועד הגדול אשר באוֹן, בלילה ההוא של דברי־הערב באוֹן, בלילה | — | equivalent | `תִּכּוֹן תְּפִלָּתִי קְטֹרֶת לְפָנֶיךָ; מַשְׂאַת כַּפַּי מִנְחַת-עָרֶב` (תהילים קמא:ב) – קורבן הערב כמועד קבוע של פולחן; במצרים – לילה של משפט וקרב. |
+| 18.12 | n =f jwꜥ,wt m (j)ḫ,t jti̯ =f Wsjr j[r] ⸢ḏꜣḏꜣ,t⸣ ꜥꜣ.t jm,j.t Pi̯ ⸢Dp{w}⸣ ⸢Ḥr,w⸣ pw ꜣs,t | לו את ירושתו מרכוש אביו אוֹסִירִיס. אשר לוועד הגדול אשר בפֶּה ובדֶּף – חוֹרוּס הוא, אִיסִיס | `אִישׁ כִּי יָמוּת וּבֵן אֵין לוֹ וְהַעֲבַרְתֶּם אֶת נַחֲלָתוֹ לְבִתּוֹ` (במדבר כז:ח) | equivalent | דיני הירושה מאב לבן; כאן ירושת המלוכה מאוסיריס לחוֹרוּס, שהוכרעה בבית דין של אלים. |
+| 18.36 | Ḥr,w pw ꜣs,t pw jw Ḥr,w jb =f nḏm(.w) jw Wsjr jb =f ꜣwi̯(.w) jw jtr,tj ḥtp.y ḥr =s jn rf [Ḏḥwtj] | חוֹרוּס הוא, אִיסִיס היא. לב חוֹרוּס – נעים, לב אוֹסִירִיס – שמח, ושתי־שורות־המקדשים נחות בכך. [תְּחוּת] הוא | `וַיָּנַח בַּיּוֹם הַשְּׁבִיעִי` (שמות כ:י) | equivalent | *ḥtp* "לנוח, לשקוט" הוא פועל המנוחה המצרי (`renderings.md` §4.4); כאן כל מקדשי מצרים "נחים" כשהמשפט הוכרע. |
+
+### Parallels index (NU2)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 1.3 | nṯr.pl ḏꜣḏꜣ,t smꜣꜥ.t-ḫrw Wsjr r ḫftj.w =[f] hrw wḏꜥ-mdw n-wj wnḏw,t =k Wsjr | הָאֵלִים של הוועד, אשר אימת את קול אוֹסִירִיס נגד אויביו ביום השפיטה. שייך אני לקרוביך, אוֹסִירִיס; | `שָׁפְטֵנִי אֱלֹהִים וְרִיבָה רִיבִי` (תהלים מג:א) | divergence | שתי המסורות מדמות את הצלת המתפלל למשפט שבו האל "רב את ריבו"; אבל כאן השופטים הם ועד של אלים, והמשפט – משפט מיתי בין אוסיריס לסֵת, שהמת נכנס בו כצד. |
+| 1.6 | Ḥr,w r ḫftj.w =f hrw pw [n] wḏꜥ-mdw m ḥw,t-sr wr.t jm,j.t Jwn,w jnk ḏd,y m Ḏd,w wnn =j ḥnꜥ | חוֹרוּס נגד אויביו ביום ההוא [של] השפיטה בבית־השר הגדול אשר באוֹן. אני הגֶ׳דִּי בגֶ׳דוּ; הייתי עם | `אֹן` (בראשית מא:מה) | cognate | אוֹן היא העיר של שמה המצרי *Jwnw*, הליופוליס. |
+| 1.10 | m Rʾ-sṯꜣ,w wn! =j ḥnꜥ Ḥr,w m nḏ =tw qꜥḥ pwy jꜣb,j n Wsjr jm,j Ḫm pri̯ =j ꜥq =j | ברֶא־סְטָאוּ. הייתי עם חוֹרוּס כששומרים על השכם השמאלי ההוא של אוֹסִירִיס אשר בחֶם. יוצא אני ונכנס אני | `יְהוָה יִשְׁמָר-צֵאתְךָ וּבוֹאֶךָ` (תהלים קכא:ח) | equivalent | אותו צמד "יציאה וכניסה" כביטוי לכל תנועות החיים; כאן הוא מתאר את חופש התנועה של המת בין הקבר לעולם. |
+| 1.11 | m wnm,yt hrw dr sbj.w m Ḫm wn! =j ḥnꜥ Ḥr,w hrw jri̯.t ḥ(ꜣ)b.w n.w Wsjr n jri̯.t ꜥꜣb,t.pl | באוכלת, ביום הרחקת המורדים בחֶם. הייתי עם חוֹרוּס ביום עשיית החגים של אוֹסִירִיס, של עשיית המנחות | `כִּי יְהוָה אֱלֹהֶיךָ אֵשׁ אֹכְלָה הוּא` (דברים ד:כד) | equivalent | גם במצרית האש "אוכלת": *wnm.yt* היא אש שנקראת על שם האכילה, ובה נשרפים המורדים; זהו דימוי משותף, לא ציטוט. |
+| 1.15 | jnk šzp ḫbsy,t hrw n ḫbs-tꜣ m Nn-nsw,t j stkn.wy ⸢bꜣ.pl⸣ ⸢mnḫ.w⸣ m pr,w | אני המקבל את המעדר ביום עידור־הארץ בחָנֵס. הוֹ המקרבים את הבָּאִים המעולים אל בית | `חָנֵס` (ישעיהו ל:ד) | cognate | חָנֵס היא העיר המצרית *Nn-nsw* (הרקלאופוליס). |
+| 1.20 | pri̯ =f m-ḥtp,w m pr,w Wsjr nn ḫsf sw nn šnꜥ(.w) sw ꜥq =f ḥzi̯.w pri̯ =f mri̯.w ⸢jw⸣ […] | ויצא בשלום מבית אוֹסִירִיס. אין הודף אותו, אין מונע אותו. ייכנס משובח, ויצא אהוב; […] | `בָּרוּךְ אַתָּה בְּבֹאֶךָ וּבָרוּךְ אַתָּה בְּצֵאתֶךָ` (דברים כח:ו) | equivalent | אותו צמד "בואך וצאתך" כברכה שלמה; במצרית הברכה היא "משובח" ו"אהוב". |
+| 1.21 | jri̯.w wḏ =f m pr,w Wsjr šmi̯.n =j ꜥꜣ n gmi̯ wn =j ⸢m⸣ḫꜣ,t šwi̯.y m zp =[j] | כשצוויו נעשה בבית אוֹסִירִיס. הלכתי לכאן – לא נמצא בי דופי, המאזניים ריקים מכל עניין שלי. | `יִשְׁקְלֵנִי בְמֹאזְנֵי-צֶדֶק וְיֵדַע אֱלוֹהַּ תֻּמָּתִי` (איוב לא:ו) | equivalent | הנשקל במאזניים יוצא נקי מאשמה |
+| 1.21 | jri̯.w wḏ =f m pr,w Wsjr šmi̯.n =j ꜥꜣ n gmi̯ wn =j ⸢m⸣ḫꜣ,t šwi̯.y m zp =[j] | כשצוויו נעשה בבית אוֹסִירִיס. הלכתי לכאן – לא נמצא בי דופי, המאזניים ריקים מכל עניין שלי. | `תְּקֵל תְּקִילְתָּ בְמֹאזַנְיָא וְהִשְׁתְּכַחַתְּ חַסִּיר` (דניאל ה:כז) | divergence | שם נמצא המלך חסר; כאן המאזניים "ריקים" – אין עליהם שום עניין נגד המת. |
+| 22.2 | jw rḏi̯ n =j rʾ =j mdwi̯ =j jm =f m-bꜣḥ nṯr nb […] […] ꜥ =j m ḏꜣḏꜣ,t n.t nṯr nb jnk | ניתן לי פי, לדבר בו לפני כל אל […] […] זרועי בוועד של כל אל. אני | `מִי שָׂם פֶּה לָאָדָם` (שמות ד:יא) | equivalent | גם המקרא רואה בפה מתנה של האל |
+| 22.2 | jw rḏi̯ n =j rʾ =j mdwi̯ =j jm =f m-bꜣḥ nṯr nb […] […] ꜥ =j m ḏꜣḏꜣ,t n.t nṯr nb jnk | ניתן לי פי, לדבר בו לפני כל אל […] […] זרועי בוועד של כל אל. אני | `אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ` (תהלים נא:יז) | divergence | שם האל פותח את הפה לתפילה; כאן הפה ניתן למת כדי שיוכל לטעון לפני בית הדין. |
+| 23.1 | rʾ n wn rʾ n […] r ḥkꜣ =f r ẖr-nṯr ḏd-mdw jn […] [mꜣꜥ-ḫrw] | לחש לפתוח את פיו של […], כדי שיקסום בחלקת־האל. דברים לאמר, בפי […] [אמיתי־הקול]: | `וַיַּגַּע עַל פִּי` (ישעיהו ו:ז; ירמיהו א:ט) | divergence | פתיחת הפה של הנביא במגע; במצרים פותחים את פי המת (או הפסל) בטקס, בכלי של נגר, כדי שיחזור לנשום, לאכול ולדבר. |
+| 23.5 | ꜥꜣ.t n.t p,t jnk Sꜣḥ,yt wr.t ḥr(,j).t-jb bꜣ,pl-Jwn,w jr ḥkꜣ nb md,t nb.t ḏd r =j swt ꜥḥꜥ nṯr.pl r =sn psḏ,t | הגדולה של השמים. אני סָאחִית הגדולה, אשר בקרב בָּאֵי־אוֹן. אשר לכל קסם ולכל דבר אשר ייאמרו נגדי – הוא, יעמדו נגדו הָאֵלִים והתשיעייה | `כָּל כְּלִי יוּצַר עָלַיִךְ לֹא יִצְלָח וְכָל לָשׁוֹן תָּקוּם אִתָּךְ לַמִּשְׁפָּט תַּרְשִׁיעִי` (ישעיהו נד:יז) | divergence | גם שם כל דבר הנאמר נגד המוגן נכשל; אבל שם האל עצמו מבטיח זאת, וכאן האלים "עומדים נגד" הלחשים העוינים כצד בקרב של קסם בקסם. |
+| 25.1 | rʾ n rḏi̯.t sḫꜣ,w n […] mꜣꜥ-ḫrw n =f m ẖr-nṯr | לחש לתת את זכרונו של […] אמיתי־הקול לו בחלקת־האל. | `וְכֹל אֲשֶׁר יִקְרָא לוֹ הָאָדָם נֶפֶשׁ חַיָּה הוּא שְׁמוֹ` (בראשית ב:יט) | divergence | השם כמהות; אך כאן השם הוא שם האדם עצמו, שעליו לזכור אותו כדי להתקיים. |
+| 26.1 | rʾ n rḏi̯.t jb n […] mꜣꜥ-ḫrw n =f m ẖr-nṯr ḏd =f jb =j n =j m pr jb.pl ḥꜣ,tj =j n =j | לחש לתת את לבו של […] אמיתי־הקול לו בחלקת־האל. אומר הוא: לבי – שלי הוא בבית הַלִּבּוֹת; לבבי – שלי הוא | `וְנָתַתִּי לָכֶם לֵב חָדָשׁ` (יחזקאל לו:כו) | equivalent | "נתינת לב" לאדם |
+| 26.1 | rʾ n rḏi̯.t jb n […] mꜣꜥ-ḫrw n =f m ẖr-nṯr ḏd =f jb =j n =j m pr jb.pl ḥꜣ,tj =j n =j | לחש לתת את לבו של […] אמיתי־הקול לו בחלקת־האל. אומר הוא: לבי – שלי הוא בבית הַלִּבּוֹת; לבבי – שלי הוא | `וְנָתַתִּי לָכֶם לֵב חָדָשׁ` (יחזקאל לו:כו) | divergence | שם הלב החדש מחליף את לב האבן, וכאן המת מקבל בחזרה את **לבו שלו** – זהותו וזכרונו. |
+| 26.4 | ꜥ.wj =j r sḫr.t ḫftj.w =j wn n =j ⸢ꜥꜣ.du⸣ [p,t] ⸢psš⸣ ⸢Gbb⸣ ꜥr,t.j =f r =j wn =f jr,t.du =j šdn.tw | זרועותיי להפיל את אויביי. נפתחות לי שתי כנפות־הדלת של [השמים]; מחלק גֶּבּ את לסתותיו מעליי, פותח הוא את עיניי העצומות, | `וְדַלְתֵי שָׁמַיִם פָּתָח` (תהלים עח:כג) | equivalent | "דלתות השמים" הנפתחות; כאן הן נפתחות לפני המת העולה. |
+| 26.8 | šw,t =j ḥr sbꜣ.w n.w jmn,t ḏ,t r-nḥḥ | צלי מדלתות המערב, לעד ולנצח. | `יְהוָה יִמְלֹךְ לְעֹלָם וָעֶד` (שמות טו:יח) | equivalent | צמד מלות נצח בסוף משפט; המצרית מבחינה בין שתי "נצחים" (*ḏ.t*, *nḥḥ*), והעברית שומרת על שתי מלים (`עַד`, `נֶצַח`; `עוֹלָם` אינו בשימוש, §5.1). |
+| 28.4 | pn rmi̯ =f sw ḏs =f m-bꜣḥ Wsjr dbḥ =f m-ꜥ =j jw rḏi̯.n =j n =f jw sjp.n =j [n] =[f] štꜣ.w-jb | זה, ובוכה הוא על עצמו לפני אוֹסִירִיס, מבקש הוא ממני. נתתי לו; הפקדתי [לו] את נסתרי־הלב | `עָקֹב הַלֵּב מִכֹּל וְאָנֻשׁ הוּא מִי יֵדָעֶנּוּ` (ירמיהו יז:ט) | divergence | הלב כמקום הנסתר שבאדם; אבל כאן הלב עצמו "בוכה" לפני השופט, והמת "מפקיד" לו את "נסתרי הלב" – הלב הוא עד וגם בעל דין (ראו 30B). |
+| 28.8 | Swtj [n] [rḏi̯].n =f n =j sw ḥꜣ,tj =j pn jri̯.n [jb] =[f] [m] [ḏꜣḏꜣ,t] jm,j.t ẖr-nṯr ḫnḏ ḥbs gmi̯.n =sn | של סֵת. [הלא] [ייתן] הוא לי אותו, את לבבי זה, אשר עשה [לבו] [ב][ועד] אשר בחלקת־האל? כרע לבושה – היא אשר מצאו, | `כַּאֲשֶׁר יַצִּיל הָרֹעֶה מִפִּי הָאֲרִי שְׁתֵּי כְרָעַיִם` (עמוס ג:יב) | divergence | אותו דימוי של כרע שנשארה מן הטרף והוצלה; במצרית זו כרעו של אוסיריס, שסֵת קרע את גופו, והאלים מצאו אותה וקברו אותה (28־2.2). |
+| 27.2 | jb.pl nkn.yw ḥꜣ,t(j).w sḫpr.yw jb n z m jrr! =f m ẖr-nṯr jsṯ smḫ.n =f sw m-ꜥ =ṯn jnḏ-ḥr =ṯn | לִבּוֹת, הפוצעים לבבות, המחוללים את לבו של אדם במעשהו בחלקת־האל! והרי שוכח הוא את עצמו בגללכם. שלום לפניכם, | `וְלָתֵת לְאִישׁ כִּדְרָכָו כִּפְרִי מַעֲלָלָיו` (ירמיהו יז:י) | equivalent | הלב "מחולל" לאדם כמעשיו: הלב שבעולם הבא הוא תוצאת מעשיו בחייו; במקרא האל נותן לאדם כפרי מעלליו. |
+| 27.4 | jb =j pn ḏbꜥ,w pn ḏw r =j ḥr-n,tt jr jb =j pn jb pw n ꜥꜣ rn.w nṯr-ꜥꜣ mdwi̯ | לבי זה תוכחה זו הרעה נגדי – כי אשר ללבי זה, לבו הוא של רב־השמות, האל הגדול המדבר | `לֹא-יֶחֱרַף לְבָבִי מִיָּמָי` (איוב כז:ו) | equivalent | הלב כמי שעלול לחרף ולהוכיח את בעליו; איוב מכריז שלבבו אינו מחרף אותו, והמת מבקש שלבו לא יחולל נגדו "תוכחה רעה". |
+| 27.5 | m ꜥ,t.pl =f h[ꜣb].n =f jb =f ḫnt,j ẖ,t =f mꜣṯ jb =f r nṯr.pl jb =j n =j sḫm.kw jm =f nn ḏd =f jri̯.tn =j | באבריו. שלח הוא את לבו אשר בבטנו, הוגה לבו על הָאֵלִים. לבי – שלי הוא; שולט אני בו; לא יאמר הוא את אשר עשיתי. | `יְהוָה חֲקַרְתַּנִי וַתֵּדָע` (תהלים קלט:א) | equivalent | האל יודע את אשר בלב |
+| 27.5 | m ꜥ,t.pl =f h[ꜣb].n =f jb =f ḫnt,j ẖ,t =f mꜣṯ jb =f r nṯr.pl jb =j n =j sḫm.kw jm =f nn ḏd =f jri̯.tn =j | באבריו. שלח הוא את לבו אשר בבטנו, הוגה לבו על הָאֵלִים. לבי – שלי הוא; שולט אני בו; לא יאמר הוא את אשר עשיתי. | `יְהוָה חֲקַרְתַּנִי וַתֵּדָע` (תהלים קלט:א) | divergence | כאן הלב יכול "לומר את אשר עשיתי" לפני האל – והלחש מבקש שישתוק. |
+| 30A.2 | jb =j n mw,t =j zp-2 ḥꜣ,tj =j n wnn =j tp tꜣ m ꜥḥꜥ r =j m mtr,w m-bꜣḥ nb,w-(j)ḫ,t.pl | לבי של אמי (פעמיים)! לבבי של היותי על הארץ! אל תעמוד נגדי כְּעֵד לפני אדוני־הדברים; | `כִּי יָקוּם עֵד חָמָס בְּאִישׁ לַעֲנוֹת בּוֹ סָרָה` (דברים יט:טז) | equivalent | "עד" ש"קם/עומד" נגד אדם בבית הדין: אותו צירוף, ואותו משפט |
+| 30A.2 | jb =j n mw,t =j zp-2 ḥꜣ,tj =j n wnn =j tp tꜣ m ꜥḥꜥ r =j m mtr,w m-bꜣḥ nb,w-(j)ḫ,t.pl | לבי של אמי (פעמיים)! לבבי של היותי על הארץ! אל תעמוד נגדי כְּעֵד לפני אדוני־הדברים; | `כִּי קָמוּ-בִי עֵדֵי-שֶׁקֶר וִיפֵחַ חָמָס` (תהלים כז:יב) | equivalent |  |
+| 30A.3 | m ḏd r =j jri̯.n =f st r wn! mꜣꜥ r jri̯.tn =j m sḫpr.w (j)ḫ,t.pl r =j m-bꜣḥ nṯr-ꜥꜣ nb-jmn,t j⁝nḏ-ḥr =k jb =j | אל תאמר עליי: "עשה זאת באמת", בעניין מה שעשיתי. אל תחולל דברים נגדי לפני האל הגדול, אדון המערב! שלום לפניך, לבי; | `וְהַשָּׂטָן עֹמֵד עַל יְמִינוֹ לְשִׂטְנוֹ` (זכריה ג:א) | divergence | גם שם עומד מקטרג לפני השופט; אבל במצרית המקטרג האפשרי הוא לבו של האדם עצמו. |
+| 30B.3 | jb =j n mw,t =j zp-2 ḥꜣ,tj =j n ḫpr,w =j m ꜥḥꜥ r =j m mtr,w m sḫsf | לבי של אמי (פעמיים)! לבבי של צורותיי! אל תעמוד נגדי כְּעֵד, אל תתנגד | `לֹא יָקוּם עֵד אֶחָד בְּאִישׁ לְכָל עָוֹן וּלְכָל חַטָּאת` (דברים יט:טו) | equivalent | "עד ש־יקום באיש" הוא לשון בית הדין במקרא ובמצרית גם יחד |
+| 30B.3 | jb =j n mw,t =j zp-2 ḥꜣ,tj =j n ḫpr,w =j m ꜥḥꜥ r =j m mtr,w m sḫsf | לבי של אמי (פעמיים)! לבבי של צורותיי! אל תעמוד נגדי כְּעֵד, אל תתנגד | `חָקְרֵנִי אֵל וְדַע לְבָבִי` (תהלים קלט:כג) | divergence | המשורר מבקש שהאל יחקור את לבבו; המת המצרי מבקש שלבבו לא יעיד עליו – אל אחד בוחן את הלב, והלב המצרי הוא עד בפני עצמו. |
+| 30B.4 | r =j m mtr,w m sḫsf r =j m ḏꜣḏꜣ,t m jri̯ rq(,w) =k r =j m-bꜣḥ jr,j-mḫꜣ,t | לי כְּעֵד, אל תתנגד לי בוועד, אל תעשה את איבתך נגדי לפני ממונה־המאזניים! | `יִשְׁקְלֵנִי בְמֹאזְנֵי-צֶדֶק` (איוב לא:ו) | equivalent | השקילה במאזניים לפני השופט. |
+| 30B.5 | ntk kꜣ =j jm,j ẖ,t =j H̱nm,w swḏꜣ ꜥ,t.pl =j pri̯ =k r b(w) nfr ḥn n =n jm m sḫnš rn =j n šn,yt | אתה הכָּא שלי אשר בבטני, חְנוּם המשלים את אבריי. תצא אל המקום הטוב אשר הוקצה לנו שם; אל תבאיש את שמי לפני החצר | `אֲשֶׁר הִבְאַשְׁתֶּם אֶת רֵיחֵנוּ בְּעֵינֵי פַרְעֹה` (שמות ה:כא) | equivalent | "להבאיש" את שמו של אדם לפני חצר השליט: אותה מטפורה של ריח רע כשם רע. |
+| 30B.6 | jrr!.yw r(m)ṯ.pl m ꜥḥꜥ.w nfr n =n nfr n sḏm ꜣwi̯-jb n wḏꜥ-md,t m ḏd grg r =j | העושה את בני האדם לעומדים. טוב לנו, טוב לשומע, משמח־לב לשופט. אל תאמר כזב נגדי | `לֹא תַעֲנֶה בְרֵעֲךָ עֵד שָׁקֶר` (שמות כ:יב) | equivalent | העד שאומר שקר נגד אדם; כאן העד הוא הלב, והמת מבקש שלא "יאמר כזב נגדו". הלשון המצרית היא לשון ספר המתים 125 ("לא אמרתי כזב"), ולא לשון הדיברות (`renderings.md` §11.4). |
+| 43.4 | mꜣ(w)i̯.kw rnpj.kw jnk Wsjr | חדש אני, מתחדש אני; אני אוֹסִירִיס. | `תִּתְחַדֵּשׁ כַּנֶּשֶׁר נְעוּרָיְכִי` (תהלים קג:ה) | equivalent | חידוש הנעורים כחסד |
+| 43.4 | mꜣ(w)i̯.kw rnpj.kw jnk Wsjr | חדש אני, מתחדש אני; אני אוֹסִירִיס. | `תִּתְחַדֵּשׁ כַּנֶּשֶׁר נְעוּרָיְכִי` (תהלים קג:ה) | divergence | כאן חידוש הנעורים הוא גורלו של אוסיריס, שהמת לובש אותו בזהות. |
+| 31.1 | rʾ n ḫsf mzḥ jy r jṯi̯.t ḥ[kꜣ] n […] mꜣꜥ-ḫrw m-ꜥ =f m ẖr-nṯr ḏd =f | לחש להדוף את התמסח הבא לתפוס את [הקסם] של […] אמיתי־הקול ממנו בחלקת־האל. אומר הוא: | `וַיִּהְיוּ לְתַנִּינִם; וַיִּבְלַע מַטֵּה אַהֲרֹן אֶת מַטֹּתָם` (שמות ז:יב) | divergence | גם שם תמסחים (או נחשים) הם חלק מתחרות של קסם; כאן התמסח בא "לתפוס את הקסם" של המת – הקסם הוא רכוש שאפשר לגזול. `תַּנִּין` אינו בשימוש (`renderings.md` §4.2). |
+| 33.1 | rʾ n ḫsf ḥfꜣ,w ḏd-mdw jn […] mꜣꜥ-ḫrw | לחש להדוף נחש. דברים לאמר, בפי […] אמיתי־הקול: | `וַיְשַׁלַּח יְהוָה בָּעָם אֵת הַנְּחָשִׁים הַשְּׂרָפִים וַיְנַשְּׁכוּ אֶת הָעָם` (במדבר כא:ו) | equivalent | הנחש כסכנה יומיומית של המדבר |
+| 33.1 | rʾ n ḫsf ḥfꜣ,w ḏd-mdw jn […] mꜣꜥ-ḫrw | לחש להדוף נחש. דברים לאמר, בפי […] אמיתי־הקול: | `וַיְשַׁלַּח יְהוָה בָּעָם אֵת הַנְּחָשִׁים הַשְּׂרָפִים וַיְנַשְּׁכוּ אֶת הָעָם` (במדבר כא:ו) | divergence | שם הנחשים נשלחים כעונש ומרפאים אותם בנחש הנחושת; כאן הודפים אותם בלחש. |
+| 34.1 | rʾ n tm pzḥ […] mꜣꜥ-ḫrw jn ḥfꜣ,w m ẖr-nṯr | לחש לבלי להינשך – […] אמיתי־הקול – בידי נחש בחלקת־האל. | `הַנֹּשֵׁךְ עִקְּבֵי סוּס` (בראשית מט:יז) | equivalent | הנחש הנושך; `נשך` הוא הפועל העברי הטבעי לנחש, וכאן הוא מתרגם את *pzḥ* (השם `נֶשֶׁךְ` "ריבית" אינו בשימוש, `renderings.md` §11.4). |
+| 34.2 | ḏd =f ꜥrꜥr,t jnk nbj,t psḏ.t m wp,t ḥḥ.pl jꜣ,t dnp,w ky-ḏd jꜣ,t rnp,yt ḥri̯.tj | אומר הוא: פתן! אני השביב הזוהר בקדקוד אלפי־האלפים, מוט הדֶּנֶפּוּ – נוסח אחר: מוט הצמחים הרעננים. רחקי | `עַל-שַׁחַל וָפֶתֶן תִּדְרֹךְ` (תהלים צא:יג) | equivalent | הפתן כסכנה שהמוגן גובר עליה. |
+| 74.3 | p,t pri̯ =j r p,t ḥfd =j ḥr (j)ꜣḫ,w j nni̯.kw zp-2 šmi̯ =j nni̯ […] | (ב)שמים, כשאני יוצא אל השמים, כשאני מטפס על האורה. הוֹ, נלאה אני (פעמיים)! הולך אני נלאה […] | `יָרוּצוּ וְלֹא יִיגָעוּ יֵלְכוּ וְלֹא יִיעָפוּ` (ישעיהו מ:לא) | divergence | העולים אל על בלי עייפות; המת המצרי, לעומתם, מתלונן: "נלאה אני" – ולכן הוא זקוק ללחש לרגליו. |
+| 45.1 | rʾ n tm ḥwꜣ m ẖr-nṯr ḏd-mdw jn […] mꜣꜥ-ḫrw […] | לחש לבלי להירקב בחלקת־האל. דברים לאמר, בפי […] אמיתי־הקול […]: | `לֹא-תִתֵּן חֲסִידְךָ לִרְאוֹת שָׁחַת` (תהלים טז:י) | equivalent | הבקשה שהגוף לא יראה את הריקבון |
+| 45.1 | rʾ n tm ḥwꜣ m ẖr-nṯr ḏd-mdw jn […] mꜣꜥ-ḫrw […] | לחש לבלי להירקב בחלקת־האל. דברים לאמר, בפי […] אמיתי־הקול […]: | `לֹא-תִתֵּן חֲסִידְךָ לִרְאוֹת שָׁחַת` (תהלים טז:י) | divergence | במצרים זו מטרת החניטה והלחש גם יחד: הגוף נשמר כדי שהבָּא ישוב אליו. |
+| 41.3 | m ṯꜣw sšmi̯ =j jm,j ꜥḏ wr r wjꜣ Ḫprj mdwi̯ =j n jz,t Jtm,w jm,j.t mšr,w | מן הרוח. מנחה אני את השוכן בנוגה הגדול אל צִי חֶפְּרִי; מדבר אני אל צוות אָתוּם אשר בערב. | `וַיִּפַּח בְּאַפָּיו נִשְׁמַת חַיִּים` (בראשית ב:ז) | equivalent | "חי אני מן הרוח" (41.2–41.3): החיים מן האוויר הנשאף; במצרית זו רוחו של המת, שאוכל ונושם כאחד. |
+| 41.5 | mt =j mj Rꜥ,w rꜥ,w-nb j jnn!-ḥtp.w wbꜣ{ꜣ} rʾ =f sḫntj ṯms,w smn nṯr,t.pl jnk Wsjr | מותי, כרַא בכל יום. הוֹ מביא־הקרבנות, הפוער את פיו, המקדם את העוון, המקיים את האֵלוֹת! אני אוֹסִירִיס, | `בִּלַּע הַמָּוֶת לָנֶצַח` (ישעיהו כה:ח) | divergence | ניצחון על המוות; כאן המוות אינו מבוטל אלא נעשה מחזורי: "חי אני אחרי מותי, כרַא בכל יום" – השמש מתה בכל ערב וקמה בכל בוקר. |
+| 42.4 | ⸢Rꜥ,w⸣ mn ḥz,wt jnk ṯz,t nṯr m-ẖnw jsr nfr ,wj jn? ḫr =f zp-4 jnk Rꜥ,w mn ḥz,wt | רַא, קיים־החן. אני חוליית האל בתוך האֵשֶׁל. מה טוב …! אצלו (ארבע פעמים). אני רַא, קיים־החן; | `וַיִּטַּע אֶשֶׁל בִּבְאֵר שָׁבַע` (בראשית כא:לג) | equivalent | האשל כעץ קדוש; במצרים **אשל** (*jsr*) מגן על גופת אוסיריס – ובמסורת אחרת, עמוד השדרה שלו (*ṯz.t*) נמצא בתוכו. |
+| 42.5 | jnk ṯz,t nṯr m-ẖnw jsr wḏꜣ =j wḏꜣ hrw pn šnj =j m Nw,w ḥr =j m jtn jw jr,t.du =j m | אני חוליית האל בתוך האֵשֶׁל. שלם אני, שלם היום הזה. שערי – נוּן, פניי – אָטוֹן, עיניי – | `רֹאשׁוֹ כֶּתֶם פָּז קְוֻצּוֹתָיו תַּלְתַּלִּים שְׁחֹרוֹת כָּעוֹרֵב` (שיר השירים ה:יא) | divergence | תיאור גוף אבר אחר אבר; בשיר השירים כל אבר דומה לחומר יקר או לטבע, וכאן כל אבר **הוא** אל. |
+| 42.10 | Ptḥ jw sꜣḥ.w =j m bjk.w […] šwi̯.t(j) m nṯr jw Ḏḥwtj m-ḥr jwf =j | פְּתָח; אצבעות־רגליי – בזים […] ריק מאל. ותְּחוּת – לפני בשרי | `כָּל עַצְמוֹתַי תֹּאמַרְנָה יְהוָה מִי כָמוֹךָ` (תהלים לה:י) | divergence | כל עצם מעידה על האל; במצרית כל אבר **הוא** אל, "אין אבר ריק מאל". |
+| 42.13 | pri̯ w[ḏꜣ(.w]) [ḫmi̯].w rn =f jnk sf mꜣꜣ ḥḥ n rnp[,t.pl] [rn] =j zbi̯ zp-2 m wꜣ,t.pl ḥr,jw sjp.w | היוצא [שלם], אשר [לא נודע] שמו. אני אתמול; "חוזה אלפי אלפים שנים" – [שמי], הצועד (פעמיים) בדרכי ממוני־הבדיקה. | `כִּי אֶלֶף שָׁנִים בְּעֵינֶיךָ כְּיוֹם אֶתְמוֹל` (תהלים צ:ד) | equivalent | "אתמול" ו"אלף שנים" בדבר אחד על האל שמעבר לזמן; כאן "אני אתמול, החוזה אלפי אלפים שנים". |
+| 42.20 | mḥ,tj.w jꜣb,tj.w jmn,tj.w snḏ =j m ẖ,t.pl =ṯn jnk nbi̯ m jr,t =f nn mt =j m-wḥm ꜣ,t =j m ẖ,t.pl =ṯn jrw =j | הצפוניים, המזרחיים, המערביים – יראתי בבטנכם. אני מוזהב־העין; לא אמות שוב. כוחי בבטנכם, מראי | `בִּלַּע הַמָּוֶת לָנֶצַח` (ישעיהו כה:ח) | divergence | סוף המוות; במצרית "לא אמות **שוב**": המוות הראשון כבר קרה, והחשש הוא מן "המוות השני" בעולם הבא. |
+| 42.24 | jr,t =f znj zp-2 zni̯.t zp-2 m =k ḏd.n =j n =k jnk wnb pri̯ m Nw,w mw,t =j pw Nw,t j qmꜣ | המגיע לו. עובר (פעמיים) מה שעובר (פעמיים)! הנה, אמרתי לך: אני הציץ היוצא מנוּן; אמי היא נוּת. הוֹ יוצר | `גָּלְמִי רָאוּ עֵינֶיךָ` (תהלים קלט:טז) | divergence | "יוצר" האדם רואה את גלמו לפני שנולד; כאן הדובר הוא ציץ היוצא מן המים הקדמונים ופונה אל יוצרו. |
+
+### Parallels index (NU3)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 14.1 | rʾ n dr špt m jb n nṯr r […] mꜣꜥ-ḫrw | לחש להרחיק זעף מלב אל נגד […] אמיתי־הקול. | `שׁוּב מֵחֲרוֹן אַפֶּךָ וְהִנָּחֵם עַל הָרָעָה לְעַמֶּךָ` (שמות לב:יב) | equivalent | בקשה להשיב את כעס האל מעל האדם. במצרית האל "מרחיק" את הזעף מלבו; בעברית האל "שב" מחרון אפו ו"מתנחם" (`נחם` ו`חרה` אינם בתרגום, `renderings.md` §5.1, §11.4). |
+| 14.3 | ḏd-mdw =j jn nṯr špt r =j mḥi̯ jzf,t ḫr =s ḥr-ꜥ,wj nb-mꜣꜥ,t ḏr dr =⸢ṯn⸣ nkn | אמירה עליי בפי אל הזועף עליי. הצף את העוול! ייפול הוא לפני אדון־האמת, כי מרחיקים אתם את החבלה | `יִכְבֹּשׁ עֲוֹנֹתֵינוּ; וְתַשְׁלִיךְ בִּמְצֻלוֹת יָם כָּל חַטֹּאותָם` (מיכה ז:יט) | divergence | החטא מוטבע במים. במיכה האל עצמו משליך את החטאים לים; כאן העוול "מוצף" ונופל לפני אדון האמת, בלי וידוי ובלי רחמים. |
+| 14.4 | jm =j ḏw zmꜣ nṯr r mꜣꜥ,t ḥtp n =j nṯr pn dr =f [sḏb] =j n ky j nb-ḥtp.w m gn wr | ממני, הרעה. יתחבר האל אל האמת! ינוח אליי האל הזה, ירחיק הוא את [תקלתי] של האחר. הוֹ אדון־הקרבנות, בתור תקיף גדול! | `שׁוּבֵנוּ אֱלֹהֵי יִשְׁעֵנוּ וְהָפֵר כַּעַסְךָ עִמָּנוּ` (תהלים פה:ה) | equivalent | בקשה שהאל יפר את כעסו מעל המתפלל; כאן "ינוח" האל, ו*ḥtp* הוא גם שמם של הקרבנות שמפייסים אותו (14.5). |
+| 14.5 | m =k jni̯.n =j n =k sḥtp.yw ꜥnḫ =k jm =f ꜥnḫ =j […] dr špt nb n,tj m jb =k r =j | הנה, הבאתי לך מניחי־הדעת; תחיה בהם, ואחיה אני […]. הרחק כל זעף אשר בלבך נגדי! | `וַיָּרַח יְהוָה אֶת-רֵיחַ הַנִּיחֹחַ` (בראשית ח:כא) | divergence | קרבן שמניח את כעס האל; גם `נִיחֹחַ` גזור מן "נוח". כאן הקרבנות עצמם נקראים "מניחי־הדעת", והאל "חי בהם". |
+| 68.2 | m hrw ḏd-mdw jn […] mꜣꜥ-ḫrw wn [n] =j ꜥꜣ.du p,t wn n =j ꜥꜣ.du tꜣ wn n =j qꜣr,t.pl Gbb | ביום. דברים לאמר, בפי […] אמיתי־הקול: פתוחות [לי] שתי כנפי־הדלת של השמים, פתוחות לי שתי כנפי־הדלת של הארץ, פתוחים לי נגרי גֶּבּ, | `וַיְצַו שְׁחָקִים מִמָּעַל וְדַלְתֵי שָׁמַיִם פָּתָח` (תהלים עח:כג) | equivalent | לשמים יש דלתות שנפתחות |
+| 68.2 | m hrw ḏd-mdw jn […] mꜣꜥ-ḫrw wn [n] =j ꜥꜣ.du p,t wn n =j ꜥꜣ.du tꜣ wn n =j qꜣr,t.pl Gbb | ביום. דברים לאמר, בפי […] אמיתי־הקול: פתוחות [לי] שתי כנפי־הדלת של השמים, פתוחות לי שתי כנפי־הדלת של הארץ, פתוחים לי נגרי גֶּבּ, | `וַאֲרֻבֹּת הַשָּׁמַיִם נִפְתָּחוּ` (בראשית ז:יא) | divergence | בבראשית נפתחים השמים למים שמשמידים; כאן נפתחים השמים והארץ למעבר המת. |
+| 68.3 | zn [n] =[j] ḥw,t [tp(,j].t) [pt]{r}j jn zꜣu̯ wj [sfḫ] wj jn mr ꜥ =f jm =j sti̯ ꜥ =f jm =j | פרוץ [לי] הבית [הקדמון] של [הרואה]. השומר אותי – הוא [התיר] אותי; זה שאסר את ידו בי – הוא *שלף* את ידו ממני. | `הַפַּח נִשְׁבָּר וַאֲנַחְנוּ נִמְלָטְנוּ` (תהלים קכד:ז) | divergence | שחרור מן הקשר; כאן מי שקשר הוא גם מי שמתיר. |
+| 68.7 | m nwy sḫm =j m jtr,w sḫm =j m wḏb.w sḫm =j m jrr!.yw | בזרם, שולט אני ביאור, שולט אני בגדות, שולט אני בעושים | `וְהִנֵּה עֹמֵד עַל-הַיְאֹר` (בראשית מא:א) | cognate | *jtrw* "הנהר" הוא מקור המלה העברית `יְאֹר` (שאילה מן המצרית): הנילוס, שבו שולט המת. |
+| 68.9 | ꜥnḫ =f js m tʾ Gbb bw,t =j ⟨pw⟩ nn wnm =j sw ꜥnḫ =j m tʾ n btj ḥḏ.t ḥ(n)q,t =j m jt dšr | "חי הוא בלחם גֶּבּ!" – תועבתי הוא, לא אֹכַל אותו. חי אני בלחם של כוסמת לבנה, ושכרי – משעורה אדומה | `וְנָחָשׁ עָפָר לַחְמוֹ` (ישעיהו סה:כה) | divergence | העפר כלחם; "לחם גֶּבּ", כלומר לחם האדמה, הוא אולי העפר, מזונם של המתים האומללים – והמת דוחה אותו. |
+| 68.10 | n Ḥꜥpj m bw wꜥb ḥmsi̯ =j ḥr ẖr,j.w zmꜣ.w jmꜣ n Ḥw,t-Ḥr,w ḫnt,j.t jtn-wsḫ | של חַעְפִּי, מן המקום הטהור. יושב אני על (המקומות) אשר תחת ענפי השיזף של חַתְחוֹר, אשר בראש אָטוֹן־וֶסֶח. | `וְיָשְׁבוּ אִישׁ תַּחַת גַּפְנוֹ וְתַחַת תְּאֵנָתוֹ` (מיכה ד:ד) | equivalent | הישיבה תחת העץ כתמונת שלווה ושפע; אצל המצרי העץ הוא עץ האלה, שנותנת למת לחם ומים. |
+| 68.11 | jw =s wḏꜣ =s r Jwn,w ẖr zẖꜣ,w n mdw-nṯr mḏꜣ,t n.t Ḏḥwtj sḫm =j m jb =j sḫm =j m ḥꜣ,tj =j | והיא נוסעת אל אוֹן, נושאת את כתב דברי־האל, מגילת תְּחוּת. שולט אני בלבי, שולט אני בלבבי, | `כֹּהֵן אֹן` (בראשית מא:מה) | cognate | העיר אוֹן, הליופוליס, *Jwnw*. |
+| 68.15 | sṯz (=j) wj ḥr wnm,j =j ḏi̯! (=j) wj ḥmsi̯.kw ꜥḥꜥ =j wḫꜣ =j ḫmw =j jm,j-rʾ =j r =j | מרים אני את עצמי על ימיני, נותן אני את עצמי (להיות) יושב. קם אני, מנער אני את אבקי; לשוני – עמי | `הִתְנַעֲרִי מֵעָפָר קוּמִי` (ישעיהו נב:ב) | equivalent | ניעור העפר וקימה. בישעיהו ירושלים קמה מן השפלות; כאן המת קם מן הקבר. אין קשר ספרותי – מוטיב משותף של קימה. |
+| 92.2 | wn.t wn.tj ḫtm.t ḫtm.tj sḏr wn.t wn.tj n bꜣ jm,j =s jr,t-Ḥr,w šdi̯.t wj ⸢smn⸣[.t] […] | הפתוחה – פתוחה, החתומה – חתומה, (הוֹ) השוכב! הפתוחה – פתוחה לבָּא אשר בה. עין־חוֹרוּס, אשר חילצה אותי, אשר קבעה […] | `וּפָתַח וְאֵין סֹגֵר וְסָגַר וְאֵין פֹּתֵחַ` (ישעיהו כב:כב) | divergence | צמד הפתיחה והסגירה כביטוי של שליטה בשער; כאן המת מכריז שהפתוח פתוח והחתום חתום – כלומר שאיש לא ישנה את מצבו. |
+| 63A.1 | rʾ n zw{r}j mw tm ꜥwg | לחש לשתות מים ולבלי להיצלות | `עַל-מֵי מְנֻחוֹת יְנַהֲלֵנִי` (תהלים כג:ב) | divergence | המים כמתנת החיים למי שהאל מוביל אותו. כאן המת דואג לשתות מים ולא להישרף באש של העולם התחתון; את המים הוא משיג בכוח הזהות עם משוטו של רַא, לא בהשגחת רועה. |
+| 105.3 | sḫm.kw jni̯.n =j n =k bd snṯr swꜥb =j ṯw jm =sn swꜥb =j ntnt =k jm =sn | שולט. הבאתי לך נתר וקטורת: אטהר אותך בהם, אטהר את זיעתך בהם. | `וְהִקְטִיר עָלָיו אַהֲרֹן קְטֹרֶת סַמִּים` (שמות ל:ז) | equivalent | הקטורת כחלק מן הפולחן היומי; כאן היא מטהרת את הכָּא, כמו את פסל האל במקדש. |
+| 105.4 | ṯz pwy ḏw ḏd.n =j ꜥb,w pwy ḏw jri̯.n =j n rḏi̯.y n =j ḥr-n,tt jnk wꜣḏ pwy | המאמר הרע ההוא שאמרתי, העבֵרה הרעה ההיא שעשיתי – לא יינתנו לי, כי אני קמע־הוָאגֶ׳ ההוא | `חַטֹּאות נְעוּרַי וּפְשָׁעַי אַל-תִּזְכֹּר` (תהלים כה:ז) | divergence | בקשה שהחטאים לא ייזקפו לאדם. במזמור – בקשה מן האל; כאן – הכרזה, שהדבר הרע "לא יינתן" למת, משום שהוא זהה לקמע. |
+| 105.6 | fꜣi̯ m mḫꜣ,t qꜣi̯ mꜣꜥ,t r ⸢fnḏ⸣ n Rꜥ,w […] […] tp =j rmn jm =[j] | השוקל במאזניים. עולה האמת אל אפו של רַא […] […] ראשי, הקיבורת – ממני. | `יִשְׁקְלֵנִי בְמֹאזְנֵי-צֶדֶק וְיֵדַע אֱלוֹהַּ תֻּמָּתִי` (איוב לא:ו) | equivalent | השקילה במאזניים כמבחן האדם; כאן השוקל הוא כנראה תחות או הקמע עצמו, ו"האמת" עולה אל אפו של רַא כמו ריח קרבן. |
+| 105.7 | n nnk js jr[,t] mꜣꜣ.tj msḏr sḏm.w n{n} jnk js kꜣ-n-ḫr,yt n pr.w,t-r-ḫrw jm [=j] | לא שלי עין רואה, אוזן שומעת; לא אני שור־הטבוחים, לא יציאות־לקול ממני. | `אֹזֶן שֹׁמַעַת וְעַיִן רֹאָה יְהוָה עָשָׂה גַם-שְׁנֵיהֶם` (משלי כ:יב) | divergence | אותו צמד, "עין רואה ואוזן שומעת". במשלי – האל עשה את שתיהן; כאן המת שולל אותן מן הקרבן הנשחט, שאין לו עין רואה ואוזן שומעת – והוא, המת, אינו קרבן. מוטיב משותף, בלי קשר ספרותי מוכח. |
+| 72.2 | j⁝nḏ-ḥr =ṯn nb.w-mꜣꜥ,t šwi̯.y m jzf,t wnn.yw ꜥnḫ(.w) r-nḥḥ ḥn,tj-ḏ,t wbꜣ =j | שלום לפניכם, אדוני־האמת, החפים מעוול, ההווים חיים לנצח, עד תכלית העד! פוער אני (דרך) | `חַף אָנֹכִי; וְלֹא עָוֹן לִי` (איוב לג:ט) | equivalent | "חף מ־" ככינוי למי שאין בו עוון; כאן תואר האלים השופטים, באיוב – טענת האדם על עצמו. |
+| 72.5 | jm =f jw rḏi̯.tw n =j ꜣw,t-ꜥ m-bꜣḥ =ṯn ḥr-n,tt ⸢wj⸣ [rḫ.kw] ṯn rḫ.kw rn.w =ṯn | בו. נותנים לי מתנות לפניכם, כי [יודע] אני אתכם, יודע אני את שמותיכם; | `וְאָמְרוּ לִי מַה שְּׁמוֹ מָה אֹמַר אֲלֵהֶם` (שמות ג:יג) | divergence | ידיעת שם האל כתנאי לשליחות ולגישה; בשמות השם נמסר מן האל, וכאן המת יודע את שמות השומרים ושולט בהם בכוח הידיעה. |
+| 72.14 | jw =f pri̯ =f r sḫ,t-jꜣr,w jw ḏi̯!.tw n =f jt btj jm wnn.ḫr =f wꜣḏ(.w) mj wnn =f tp tꜣ jw =f jri̯ =f | יוצא הוא אל שדה־האגמונים, ונותנים לו שם שעורה וכוסמת, והרי יהיה רענן כפי שהיה על פני הארץ; ועושה הוא | `עוֹד יְנוּבוּן בְּשֵׂיבָה דְּשֵׁנִים וְרַעֲנַנִּים יִהְיוּ` (תהלים צב:טו) | equivalent | הרעננות כשכר הישר, גם בזקנה; במצרים – גם אחרי המוות. |
+| 71.3 | wḥꜥ sw sfḫ sw jmi̯ sw r tꜣ jmi̯ mr,wt =f j.n nb ḥr wꜥ r =j jnk bjk m-ẖnw | שחררו אותו, התירו אותו, תנו אותו לארץ, תנו את אהבתו – אומר אדון־פנים־אחד עליי. אני הבז שבתוך | `הַפַּח נִשְׁבָּר וַאֲנַחְנוּ נִמְלָטְנוּ` (תהלים קכד:ז) | divergence | שחרור מן הקשר; כאן אין צייד, אלא תחבושות המומיה, שהאל מצווה להתיר. |
+| 71.11 | sw sfḫ sw jmi̯ sw r tꜣ j.n nb ḥr wꜥ r =j j ḏꜣjs,w ⸢7⸣ jpw rmni̯.w mḫꜣ,t | אותו, התירו אותו, תנו אותו לארץ – אומר אדון־פנים־אחד עליי. הוֹ שבעת היועצים האלה, הנושאים את המאזניים | `יִשְׁקְלֵנִי בְמֹאזְנֵי-צֶדֶק וְיֵדַע אֱלוֹהַּ תֻּמָּתִי` (איוב לא:ו) | divergence | המאזניים של משפט המתים; כאן נושאים אותם שבעה יועצים אלים, ובאיוב – האל לבדו. |
+| 71.15 | jm,j ḫfꜥ =ṯn n wꜣs jm,j ꜥ =ṯn swḏ =ṯn wj n [ꜥ]nḫ tp(,j) rʾ n rnp,t ḏi̯! =f rnp,t.pl ꜥšꜣ.t.pl ḥr rnp,t.pl =j n.t ꜥnḫ ḏi̯! =f ⸢hrw.pl⸣ | אשר באגרופכם, לשררה אשר בזרועכם; תמסרו אותי לחיים בפֶּתַח השנה. ייתן הוא שנים רבות על שנות חיי, ייתן הוא ימים | `הִנְנִי יוֹסִף עַל יָמֶיךָ חֲמֵשׁ עֶשְׂרֵה שָׁנָה` (ישעיהו לח:ה) | equivalent | האל מוסיף שנים על שנות החיים; אצל חזקיהו – בחיים, אצל המת המצרי – אחרי המוות. |
+| 71.16 | ꜥšꜣ.pl ḥr hrw[.pl] =j n.w ꜥnḫ ḏi̯! =f grḥ.pl ꜥšꜣ.pl ḥr grḥ.pl =j n.w ꜥnḫ r pri̯.t =j wbn =j r šzp =j ṯꜣw r fnḏ =j jr,t.du =j mꜣꜣ =sn m-m nw-n jm,j.w-ꜣḫ,t grḥ pwy n ḥsb ꜥwꜣ(,y) | רבים על ימי חיי, ייתן הוא לילות רבים על לילות חיי, עד צאתי וזרחי אל דיוקני, רוח לאפי; ועיניי – יחזו הן בין שוכני־האופק האלה – בלילה ההוא של חשבון הגזלן. | `וַיִּפַּח בְּאַפָּיו נִשְׁמַת חַיִּים` (בראשית ב:ז) | equivalent | נשימה באף כראשית החיים; אצל המת המצרי "רוח לאפי" היא שובם של החיים, בכל זריחה. |
+| 40.5 | jzf,tj.w jṯi̯ m ꜥwꜣi̯.yw nn jzf,t =j r-ꜥ zẖꜣ,w ṯms,w nn ꜥwꜣi̯,w […] m | בעלי־העוול, התופס כגזלן! אין עוול בי בצד סופר־העוונות; אין גזל […] ב־ | `יִשְׁקְלֵנִי בְמֹאזְנֵי-צֶדֶק וְיֵדַע אֱלוֹהַּ תֻּמָּתִי` (איוב לא:ו) | equivalent | הצהרת חפות לפני השופט |
+| 40.5 | jzf,tj.w jṯi̯ m ꜥwꜣi̯.yw nn jzf,t =j r-ꜥ zẖꜣ,w ṯms,w nn ꜥwꜣi̯,w […] m | בעלי־העוול, התופס כגזלן! אין עוול בי בצד סופר־העוונות; אין גזל […] ב־ | `וַיִּכָּתֵב סֵפֶר זִכָּרוֹן לְפָנָיו` (מלאכי ג:טז) | divergence | ספר הזיכרון של המעשים; כאן "סופר העוונות" רושם את החטאים, והמת טוען שאין לו מה לרשום. |
+| 108.4 | m jꜣb(,t) ḏw pf jw ḥw,t-nṯr =f m ḥrs,t jw ḥfꜣ,w ḥr wp,t n.t ḏw pf n-sw mḥ 30 m ꜣw =f mḥ 8 m-ḥꜣ,t =f | במזרח ההר ההוא, ובית האל שלו – מקרנליאן. ונחש על פסגת ההר ההוא, שלושים אמה אורכו, שמונה אמות מחזיתו | `וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה` (בראשית ג:א) | equivalent | נחש בעל כוח על־טבעי; כאן הנחש הוא מפלצת שמאיימת על השמש, לא מפתה בדיבור. |
+| 108.7 | ꜥꜣ.t m-ẖnw sqd.w,t sẖp.ḫr =f mḥ 7 m mw ꜥꜣ rḏi̯.ḫr Swtj wꜥr(.w) mtꜣ | גדולה בתוך הצוות; וגומע הוא שבע אמות מן המים הגדולים. אז נועץ סֵת, (כשהוא) נס, רומח | `הֵן יַעֲשֹׁק נָהָר לֹא יַחְפּוֹז יִבְטַח כִּי-יָגִיחַ יַרְדֵּן אֶל-פִּיהוּ` (איוב מ:כג) | divergence | המפלצת השותה את הנהר (בהמות) |
+| 108.7 | ꜥꜣ.t m-ẖnw sqd.w,t sẖp.ḫr =f mḥ 7 m mw ꜥꜣ rḏi̯.ḫr Swtj wꜥr(.w) mtꜣ | גדולה בתוך הצוות; וגומע הוא שבע אמות מן המים הגדולים. אז נועץ סֵת, (כשהוא) נס, רומח | `בַּיּוֹם הַהוּא יִפְקֹד יְהוָה בְּחַרְבּוֹ הַקָּשָׁה וְהַגְּדוֹלָה וְהַחֲזָקָה עַל לִוְיָתָן נָחָשׁ בָּרִחַ` (ישעיהו כז:א) | equivalent | האל דוקר את הנחש המאיים. במצרים הדוקר הוא סֵת, שעומד בחרטום ספינת השמש – לא האל העליון – והנחש אינו מת: רק מקיא את מה שבלע. |
+| 108.8 | r =f n bjꜣ rḏi̯.ḫr =f bši̯ =f ꜥm.tn =f nb.t rḏi̯.ḫr sw Stš m-ḏr,j =f ḏd.ḫr =f m ḥkꜣ.w | של מתכת נגדו, ואז גורם הוא שיקיא את כל אשר בלע. אז מציב סֵת את עצמו מולו, ואומר הוא בקסמים: | `חַיִל בָּלַע וַיְקִאֶנּוּ מִבִּטְנוֹ יֹרִשֶׁנּוּ אֵל` (איוב כ:טו) | divergence | הבולע שמקיא את מה שבלע בכוח האל |
+| 108.8 | r =f n bjꜣ rḏi̯.ḫr =f bši̯ =f ꜥm.tn =f nb.t rḏi̯.ḫr sw Stš m-ḏr,j =f ḏd.ḫr =f m ḥkꜣ.w | של מתכת נגדו, ואז גורם הוא שיקיא את כל אשר בלע. אז מציב סֵת את עצמו מולו, ואומר הוא בקסמים: | `וַיֹּאמֶר יְהוָה לַדָּג וַיָּקֵא אֶת יוֹנָה אֶל הַיַּבָּשָׁה` (יונה ב:יא) | divergence | מפלצת מים שמקיאה בצו האל. |
+| 108.12 | pwy šm-ḥr-ẖ,t≡f pḥ,tj =fj n ṯz =f m =k wj šmi̯.kw r =k pḥ,tj =kj m-ꜥ =[j] [jnk] | ההן, ההולך־על־בטנו, אשר כוחו – לשרטונו? הנה, הלכתי נגדך, וכוחך – בידי! [אני] | `עַל גְּחֹנְךָ תֵלֵךְ וְעָפָר תֹּאכַל כָּל יְמֵי חַיֶּיךָ` (בראשית ג:יד) | equivalent | הנחש "ההולך על בטנו". בבראשית זו קללה שמשפילה את הנחש; כאן זהו פשוט כינויו של הנחש, ו"כוחו" נלקח ממנו בכוח הקסם. מוטיב משותף, בלי קשר ספרותי; המלה המצרית *ẖ.t* היא `בֶּטֶן`, לא `גָּחוֹן`. |
+| 108.15 | sšm,pl? jḫ[,t] ḫsf ꜥꜣpp ḥr =s jw =j rḫ.kw bꜣ.w jmn,tj.w Jtm,w pw Sbk pw nb Bꜣẖ,w | את *מלוות* הדבר שבו נהדף אַפּוֹפִּיס. יודע אני את הבָּאוֹת של המערביים: אָתוּם הוא, סוֹבֶּךְ הוא, אדון בָּאחוּ, | `אַתָּה פוֹרַרְתָּ בְעָזְּךָ יָם שִׁבַּרְתָּ רָאשֵׁי תַנִּינִים עַל-הַמָּיִם` (תהלים עד:יג) | divergence | האל המנצח את מפלצת המים; במצרים המאבק באַפּוֹפִּיס אינו מעשה אחד בראשית, אלא מלחמה שחוזרת בכל יום, והמת משתתף בה בידיעה. |
+| 119.3 | ṯw wꜥb rḏw sṯꜣ jm =k jri̯.y rn =f m Rʾ-sṯꜣ,w wsr =k jm m Ꜣbḏ,w ṯzi̯ ṯw jr =k Wsjr | אותך. טהורה ההפרשה שנזלה ממך, אשר נעשה שמו לרֶא־סְטָאוּ. חזק אתה שם באַבְּגֶ׳ו. הרם אתה את עצמך, אוֹסִירִיס, | `לֹא-תִתֵּן חֲסִידְךָ לִרְאוֹת שָׁחַת` (תהלים טז:י) | divergence | הגוף שאינו נרקב; כאן ההפרשות של גוף אוסיריס, שנזלו בזמן ריקבונו, הם "טהורים" ונותנים שם למקום – הריקבון עצמו מקודש. |
+| 119.5 | sꜥḥ nṯr ḏd =j ḫpr nn ḫsf =j ḥr =k Wsjr | אציל־האל; אומר אני – ונהיה. לא אֵהָדֵף מפניך, אוֹסִירִיס. | `כִּי הוּא אָמַר וַיֶּהִי הוּא-צִוָּה וַיַּעֲמֹד` (תהלים לג:ט) | equivalent | הדיבור שמתקיים מיד. במזמור – האל הבורא; כאן המת, שנעשה "אציל־האל", מקבל את כוח הדיבור היוצר. |
 
 ### Parallels index (BD)
 | Line | Source | Hebrew rendering | Bible | Tag | Comment |
@@ -697,7 +1058,7 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | 64 | ṯn rḫ.kw rn.w =ṯn nn ḫr =j n šꜥ,t =ṯn n sjꜥr =ṯn bjn =j n nṯr pn n,tj =ṯn m-ḫt =f | אתכם, יודע אני את שמותיכם. לא אפול לטבחכם, לא תעלו את רָעִי אל האל הזה אשר אתם (הולכים) אחריו, | `מִי-יַעֲלֶה בְהַר-יְהוָה` (תהלים כד:ג) | equivalent | שם האדם "עולה" לפני האל; כאן השופטים "מעלים" את חטאו – פעולה הפוכה באותה תמונה. |
 | 65 | nn jwt! zp =j ḥr =ṯn ḏd =ṯn mꜣꜥ,t r =j m-bꜣḥ nb-r-ḏr ḥr-n,tt jri̯.n =j mꜣꜥ,t m Tꜣ-mrj | לא יבוא עניני לפניכם. תאמרו אמת עליי לפני אדון הכל, כי עשיתי אמת בתָּא־מֶרִי; | `וְדֹבֵר אֱמֶת בִּלְבָבוֹ` (תהלים טו:ב) | equivalent |  |
 | 67 | jw,tj.w grg m ẖ,t =sn ꜥnḫ.yw m mꜣꜥ,t sꜥm.yw m mꜣꜥ,t m-bꜣḥ Ḥr,w | אשר אין כזב בבטנם, החיים על האמת, הגומעים מן האמת לפני חוֹרוּס | `וְדֹבֵר אֱמֶת בִּלְבָבוֹ` (תהלים טו:ב) | equivalent | האמת בפנים, בבטן או בלבב. |
-| 69 | m =ṯn wj jy.kw ḫr =ṯn nn jzf,t =j nn ḫbn,t =j nn ḏw,t =j nn mtr,w =j | הנה אני בא אליכם; אין לי עוול, אין לי אשמה, אין לי רעה, אין לי עד, | `לֹא-יָקוּם עֵד אֶחָד בְּאִישׁ לְכָל-עָוֹן` (דברים יט:טו) | equivalent | אין עד, אין משפט. |
+| 69 | m =ṯn wj jy.kw ḫr =ṯn nn jzf,t =j nn ḫbn,t =j nn ḏw,t =j nn mtr,w =j | הנה אני בא אליכם; אין לי עוול, אין לי אשמה, אין לי רעה, אין לי עֵד, | `לֹא-יָקוּם עֵד אֶחָד בְּאִישׁ לְכָל-עָוֹן` (דברים יט:טו) | equivalent | אין עד, אין משפט. |
 | 71 | ḥr =s jw =j sḥtp.n =j nṯr m mrr!.t =f jw rḏi̯.n =j tʾ n ḥqr,w mw n jbi̯.w mnḫ,t n ḥꜣw{j} | בו. ריציתי את האל במה שהוא אוהב: נתתי לחם לרעב, מים לצמא, בגד לערום, | `לַחְמוֹ לְרָעֵב יִתֵּן וְעֵירֹם יְכַסֶּה בָּגֶד` (יחזקאל יח:ז) | equivalent | אותה רשימה, באותו סדר: לחם לרעב, בגד לערום |
 | 71 | ḥr =s jw =j sḥtp.n =j nṯr m mrr!.t =f jw rḏi̯.n =j tʾ n ḥqr,w mw n jbi̯.w mnḫ,t n ḥꜣw{j} | בו. ריציתי את האל במה שהוא אוהב: נתתי לחם לרעב, מים לצמא, בגד לערום, | `הֲלוֹא פָרֹס לָרָעֵב לַחְמֶךָ … כִּי תִרְאֶה עָרֹם וְכִסִּיתוֹ` (ישעיהו נח:ז) | equivalent |  |
 | 71 | ḥr =s jw =j sḥtp.n =j nṯr m mrr!.t =f jw rḏi̯.n =j tʾ n ḥqr,w mw n jbi̯.w mnḫ,t n ḥꜣw{j} | בו. ריציתי את האל במה שהוא אוהב: נתתי לחם לרעב, מים לצמא, בגד לערום, | `אִם-אֶרְאֶה אוֹבֵד מִבְּלִי לְבוּשׁ; וְאֵין כְּסוּת לָאֶבְיוֹן` (איוב לא:יט) | equivalent |  |

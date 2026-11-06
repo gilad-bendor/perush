@@ -853,3 +853,17 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
    `[…]` either (`דברים לאמר, בפי אמיתי־הקול:`) – the bracket follows the base.
 5. **Older splits noted for the lead's harmonization** (not changed now): sḏ.t `שלהבת` (NU1) / `להבה` (BD); nḏ and zꜣu̯ both
    `שמר` (NU1); `זוהר` ꜥḏ (HC) / psḏ (NU1); jꜣ.t `נֵס` (MT) / `מוט` (BD 77); ṯꜣi̯ and nḥm both `נטל`.
+#### 12.6.3 NU3 (BD 14 … 37), translator 3, merged 2026-11-06 (full tables in project.md, "NU3")
+1. **BD 71's refrain** (six copies, across line breaks: 71.2, 71.4, 71.7, 71.9, 71.10, 71.18): `תשלים אותי כשם שהשלמת את
+   עצמך – שחררו אותו, התירו אותו, תנו אותו לארץ, תנו את אהבתו – אומר אדון־פנים־אחד עליי.` (byte for byte; the
+   imperatives plural, as the TLA).
+2. **Formulas:** BD 68's litany sḫm=j m X `שולט אני ב־X`; the food formula's first copy (51.2) `תועבתי היא צואה – לא אֹכַל
+   אותה` (§12.4.7: the later copies copy it).
+3. **Terms:** špt `זעף`; sḥtp `הניח את דעת` (AM 8.11; the offerings `מניחי־הדעת`); zn `פרץ`, wḥꜥ `שחרר`, sfḫ `התיר`, mr
+   `אסר`; dbn `הקיף`, pẖr `סובב`, pnꜥ `הפנה`; ẖnm `התאחד עם`, zmꜣ `התחבר`; šw.t `צל`; sꜥḥ `אציל`; mskt.t `מֶסְקְטֶת`; ds
+   `מאכלת`; nšnj `רוגז` (SS); bjꜣ `מתכת`; ḥw.t-nṯr `בית האל`; šzp "image" `דיוקן` (`צלם` gated), šzp "upper lip" `שפם`; rmn
+   "upper arm" `קיבורת`. Names: `תֶּכֶם`, `האִמְחֶת`, `בולע־החמור`, `אדון־פנים־אחד`, `ההולך־על־בטנו` (Gen 3:14 in the
+   apparatus), `האָכֶרוּ`, `בָּאחוּ`.
+4. **Gates fixed:** the place Bꜣẖ.w licenses `באחו`; `המושבות` no longer read as the root שבת.
+5. **For the lead's harmonization:** mjḥ.w (here) / AM's ḥmw both `משוט`; jm.j-rʾ and ns both `לשון`; ꜥb.w `עבֵרה` / NU1's jw
+   `עבירות`; sẖp `גמע` = BD 125's swallowing verb; ṯꜣy `גבר` / TB's `אשת איש`.
