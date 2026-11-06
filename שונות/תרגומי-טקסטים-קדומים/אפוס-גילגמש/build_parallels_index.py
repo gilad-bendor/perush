@@ -16,7 +16,8 @@ import sys
 
 A = os.path.dirname(os.path.abspath(__file__))
 SOURCES = [("SB", os.path.join(A, "1-הנוסח-הבבלי-התקני", "project.md")),
-           ("OB", os.path.join(A, "2-הנוסח-הבבלי-הקדום", "project.md"))]
+           ("OB", os.path.join(A, "2-הנוסח-הבבלי-הקדום", "project.md")),
+           ("SUM", os.path.join(A, "3-השירים-השומריים", "project.md"))]   # Round 6 run 1: the Sumerian poems (HA HB BH AG DB)
 OUT = os.path.join(A, "parallels-index.md")
 G = {'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9, 'י': 10, 'כ': 20, 'ל': 30, 'מ': 40, 'נ': 50,
      'ס': 60, 'ע': 70, 'פ': 80, 'צ': 90, 'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400}
@@ -25,7 +26,8 @@ BOOKS = ['בראשית', 'שמות', 'ויקרא', 'במדבר', 'דברים', '
          'זכריה', 'מלאכי', 'תהלים', 'משלי', 'איוב', 'שיר השירים', 'רות', 'איכה', 'קהלת', 'אסתר', 'דניאל', 'עזרא', 'נחמיה',
          'דברי הימים א', 'דברי הימים ב']
 TABLET_ORDER = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII',
-                'OB-II', 'OB-III', 'OB-VA+BM', 'OB-Schoyen2', 'OB-Nippur', 'OB-Harmal1', 'OB-Ishchali', 'OB-Harmal2', 'OB-IM']
+                'OB-II', 'OB-III', 'OB-VA+BM', 'OB-Schoyen2', 'OB-Nippur', 'OB-Harmal1', 'OB-Ishchali', 'OB-Harmal2', 'OB-IM',
+                'SUM-HA', 'SUM-HB', 'SUM-BH', 'SUM-AG', 'SUM-DB']
 refre = re.compile(r'(?:(%s)[\s\-]+)?([א-ת]{1,3}):([א-ת]{1,3})' % '|'.join(
     b.replace(' ', '[ \\-]') for b in sorted(BOOKS, key=len, reverse=True)))
 
@@ -84,11 +86,13 @@ def main():
     n = 0
     for proj, path in SOURCES:
         for key, c in tables(path):
+            if proj == 'SUM':
+                key = 'SUM-' + key
             line, akk, heb, bible, tag, com = c[:6]
             rs = refs(strip_quotes(bible)) or [(99, 0, 0, '—', '', '')]
             gen = [r for r in rs if r[0] == 0]
             k = min(gen) if gen else min(rs)
-            label = ('SB ' + key) if proj == 'SB' else key.replace('OB-', 'OB ')
+            label = ('SB ' + key) if proj == 'SB' else key.replace('OB-', 'OB ').replace('SUM-', 'Sum. ')
             groups.setdefault(k[:3], []).append((k, key, label, line, akk, heb, bible, tag, com))
     order = {k: i for i, k in enumerate(TABLET_ORDER)}
     out, cur = [], None
