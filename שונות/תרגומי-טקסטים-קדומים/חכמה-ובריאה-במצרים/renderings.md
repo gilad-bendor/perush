@@ -907,3 +907,15 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
    root); `בגדה` "bank" avoided (`בשפת־המים`).
 4. **Open (for the user):** `האציל` for sꜥḥ (the Num 11:17 root is ours); ꜥḥꜣ "watch over" against "fight"; ḏsr `קידש` against
    "clear (the way)"; 65.11–13's cosmic threat rendered literally.
+#### 12.6.7 NU7 (BD 133 … 189), translator 7, merged 2026-11-06 (full table in project.md, "NU7")
+1. **Copies:** 189.2–13 copy NU5 52.1–7, NU4 82.2–4 / 124.3–5, NU3 51.2–3 where the Egyptian is the same; 133.1, 133.20,
+   136A.21–22 copy NU6 190.107 / 112–113; 116.6 the food formula in the third person `תועבתו היא צואה`; `jr rḫ rʾ pn` =
+   `מי שיודע את הלחש הזה`.
+2. **BD 154's decay verbs** (one Hebrew each; `שחת` never): zbi̯ `גווע`, ẖnn `התעפש`, jmk `נמק`, snsn `הבאיש`, ḥwꜣ `נרקב`,
+   ski̯ `אבד`, ḥtm `נשמד`.
+3. **Terms:** nꜥi̯ `הפליג`; dp.w `משוט־ההגה`; ḥp.wt `משוט־חתירה`; ḫꜣbꜣs.w `הנוצצים`; bjꜣ "sky-water" `הבִּיָא`; qmꜣ II "throw"
+   `השליך`; sk `ניגב`; smꜣ.yw `שאר`; ḏdf.t `זוחל`; mj.tj `עמית`; ḫrp `הנהיג`; mꜥbꜣ `רומח`; `בָּאֵי X` (the bas of a city);
+   Pe `פֶּה` ★; Apis `אַפִּיס`; ḏbꜣ.t (a tree) `גֶ׳בָּאת`.
+4. **Gates fixed:** `קוף` licensed by gꜣf, `נחש` by ḥfy.t (spellings of gf, ḥfꜣ.t).
+5. **For the lead:** šꜥd / ḥsq both `כרת`; jꜣ.w / dwꜣ both `הלל`; sk / zjn both `ניגב`; rri̯ / šꜣj both `חזיר`; nrw / SI's ḥr.yt
+   both `אימה`; 189.3 ḫmi̯ `מישוש` against NU4 124.4 `לא אֵהָרֵס בה`.
