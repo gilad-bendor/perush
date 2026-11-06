@@ -901,8 +901,7 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
    141.17–28 copy NU5 148's names).
 2. **Terms:** sꜥḥ (verb) `האציל` / `מואצל` (Num 11:17 `וְאָצַלְתִּי` in the apparatus; the root link is ours); ḏsr (verb) `קידש`,
    relics `הקדשים`; sqꜣi̯ `רומם`; ṯni̯ `הבליט` / `בולט`; jṯi̯ `לקח`; wsr.t `מפרקת`; wsr.w `חוסן`; sḫm (epithet) `האדיר`, the
-   sceptre `שרביט־הסֶחֶם`; nms `נֶמֶס`; jz.t `פלוגה`; ḥꜣ.t `בית־הקבר`; zḥ `ביתן` (NU1 `zḥ` "hall"? – checked: different
-   sense); ḥꜣw-mr `האספסוף`. Names: Swnw `סְוֵנֵה` [cognate Ezek 29:10]; **Rw.tj `שני־אריות` everywhere** (the coordinator: NU5's
+   sceptre `שרביט־הסֶחֶם`; nms `נֶמֶס`; jz.t `פלוגה`; ḥꜣ.t `בית־הקבר`; zḥ `ביתן`; ḥꜣw-mr `האספסוף`. Names: Swnw `סְוֵנֵה` [cognate Ezek 29:10]; **Rw.tj `שני־אריות` everywhere** (the coordinator: NU5's
    `רוּטִי` changed, 53.2, 55.2, 109.x); about 35 new names (project.md).
 3. **Gates:** `ברַא` (b + Re) and `ברֶא־חֶנֶת` read as ברא – passed with `[היתר שער]` (kept: an exemption keyed to Re could hide the
    root); `בגדה` "bank" avoided (`בשפת־המים`).
