@@ -816,3 +816,24 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
 15:22, Prov 21:3, 15:8, Hos 6:6 – no `זֶבַח` unless the Egyptian has an offering word; mꜣꜥ-jb by the `אֱמֶת` family).
 
 ### 12.6 Proposals merged (filled by the coordinator after each translator)
+#### 12.6.1 NU1 (BD 17, 18, 18 PS), translator 1, merged 2026-11-06 (binding for NU2–NU10 and CH; full tables in `6-ספר-המתים-של-נו/project.md`, "NU1")
+1. **BD 17's glosses:** `ptr rf sw / st` = `מה הוא? / מה היא?`; `pw tr rf sw` = `מי אפוא הוא?`; `X pw` = `X הוא / היא / הם`;
+   `ky-ḏd` = `נוסח אחר:` (as HC); `jr X` = `אשר ל־X –`, `jr gr.t X` = `ואשר ל־X –`.
+2. **Formulas:** `nḥm=k N mꜣꜥ-ḫrw m-ꜥ X` = `תציל את N אמיתי־הקול מיד X`; smꜣꜥ-ḫrw: participle `אשר אימת את קול X נגד
+   אויביו`, wish `תאמת`, prospective `יאמת`, infinitive `לאמת`, passive `אימתו` (no unvocalized imperative `אמת`: it
+   reads "truth"); BD 18's refrain: `הוֹ תְּחוּת, אשר אימת את קול אוֹסִירִיס נגד אויביו, תאמת את קול` + `נגד אויביו
+   בוועד הגדול אשר ב־X`; `ṯz-pẖr` `ולהפך`; `zp-2` `(פעמיים)`; days / nights `ביום / בלילה ההוא של X`; the rubric `יאמר
+   אדם את הלחש הזה (כשהוא) טהור`; pri̯.t m hrw (noun) `יציאה ביום`.
+3. **The chapter title:** `rʾ n` + infinitive = `לחש ל־` + Hebrew infinitive (`לחש לצאת ביום`, `לחש לבלי להירקב`); + noun
+   `לחש ל־` + noun; `rʾ n jri̯.t ḫpr.w m X` = `לחש לעשות צורה של X` (ḫpr.w `צורה`).
+4. **Key terms (replacing §12.3's suggestions):** ḏꜣḏꜣ.t `ועד` (as SI B209; `מועצה` is AM's qnb.t); wjꜣ `צִי` ★ (HC);
+   sḫ.t-jꜣr.w `שְׂדֵה־הָאַגְמוֹנִים` (HC 40), sḫ.t-ḥtp `שְׂדֵה־הַקּוֹרְבָּנוֹת` (PT527); ẖꜣ.t `גופה` (`גוויה` is MT's ḏ.t);
+   šw.tj "plumes" `שתי־נוצות`; ḥnn `זכרות`; ḫry.t `הטבוחים`; sṯꜣ.w `מכות`. Suggested for their first translator: sꜣḫ
+   `עשה לאָח`, sꜣḫ.w `לחשי־אָח`; šw.t `צֵל`; sꜥḥ `חנוט`?; mskt.t / mꜥnḏ.t `מֶסְקְטֶת` / `מַעַנְגֶ׳ת`.
+5. **Names:** about 40 gods and places (the list in project.md, NU1 "Decisions"); Letopolis `חֶם`, Rosetau `רֶא־סְטָאוּ`,
+   Herakleopolis `חָנֵס` [cognate Isa 30:4], On `אוֹן` ★.
+6. **Gates fixed (the coordinator):** the `חם` gate licenses the place name Ḫm; `רא־סטאו` (Rosetau) is no longer read as
+   the root ברא; the "better than" formula no longer fires on the noun ꜣḫ,w. (The `[היתר שער]` notes already written stay.)
+7. **Open (for the user, from NU1):** zš `סבך` (WE's word) for the pools of purification (`בצות` would suit both);
+   `ועד` sounds like modern "committee"; the gloss question `מה` against the TLA's "Wer"; ḫꜣw.t `שולחן־הקרבנות` / WE's
+   `מזבחות` (a kept split).

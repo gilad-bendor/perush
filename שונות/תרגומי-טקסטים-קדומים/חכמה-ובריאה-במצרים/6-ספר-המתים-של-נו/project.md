@@ -225,6 +225,208 @@ Undecided (left): 114 `מעל שולחן־הקרבנות` for *ḥr ḫꜣw.t* "
 
 `build BD`, `verify BD --strict` (0 problems), `check_bible_quotes.py` on the annotated and translation-BD files (0 problems).
 
+## NU1 17.1–18PS.3 (Round 6 run 2, translator 1; 2026-11-06)
+
+### Scope
+KEY NU1 = BD 17, BD 18 and the rubric 18 PS of pNu, 159 lines (`17.1`–`17.119` without 17.22 and 17.25, which the TLA does
+not count; `18.1`–`18.39`; `18PS.1`–`18PS.3`), all drafted, filled, verified, compared with the TLA's German and passed
+three times; the clean translation built (`translation-NU1.rtl.md`; intro `translation--intro-NU1.rtl.md`).
+Preservation: the papyrus's opening is damaged – 17.1–17.24 carry many `[ ]` restorations and `[…]` (several lines more
+restoration than text); from 17.26 on the restorations are sporadic; `[…]` also marks the owner's name wherever the TLA
+leaves it out. BD 17 (the identity chapter with its ancient glosses, "What is it? It is …", "Variant: …") in eight
+sections: the title (17.1–17.3), Atum alone in Nun (17.4–17.14), the Benu, eternity and Min (17.15–17.31), the blood of
+Re and the Eye (17.32–17.41), the sons of Horus and the seven akhs (17.42–17.56), the two bas in Mendes and the great cat
+(17.57–17.64), the prayer "save N from …" (17.65–17.103), the closing identities (Atum, Isis, Wadjet; 17.104–17.119).
+BD 18: the litany to Thoth before the tribunals (18.1–18.39, nine named + the summary "these ten"), then the rubric.
+
+### Sources consulted
+AED-TEI pNu (base; `data NU1`); the TLA's German (`tr NU1`), read after each of the seven drafting saves – it changed
+about 45 drafted lines (listed per line in the **תרגומים** bullets, "הטיוטה הראשונה … תוקנה"); no other witness in the
+folder. Faulkner, Allen, Quirke, Lapp: from memory only, never quoted. Every Bible verse printed with
+`check_bible_quotes.py --show` before quoting; the checker reports 0 problems on the three files.
+
+### Decisions
+**Recurring formulas of the Book of the Dead (fixed here for the later NU parts):**
+
+| Egyptian | Hebrew | Lines | Reason |
+|---|---|---|---|
+| `ptr rf sw` / `ptr rf st` (the gloss question) | `מה הוא?` / `מה היא?` (split over a line break: `מה` / `הוא?`) | 17.8 … 17.118 | literal; *sw* masc., *st* neuter-fem.; not "who" (the answers are places and things too); the TLA's "Wer ist denn das?" in the apparatus |
+| `pw tr rf sw` (the other question) | `מי אפוא הוא?` | 17.84 | a different particle chain, kept apart |
+| `X pw` (the gloss answer) | `X הוא` / `היא` / `הם` / `הן` (gender of the Hebrew noun) | passim | nominal sentence (§3a) |
+| `ky-ḏd` | `נוסח אחר:` | passim | the Heavenly Cow's precedent (HC 47) |
+| `jr X, Y pw` / `jr gr.t X …` | `אשר ל־X – Y הוא` / `ואשר ל־X – …` | passim | §3a allows `אֲשֶׁר לְ־` "where it reads well": it does in every gloss; *gr.t* = `ו` |
+| `nḥm=k N mꜣꜥ-ḫrw m-ꜥ X` | `תציל את N אמיתי־הקול מיד X` | 17.67/68, 74/75, 82, 92/93, 95/96 | *nḥm* "save" = `הציל` (BD 125); *sḏm=f* of wish = Hebrew future |
+| `smꜣꜥ-ḫrw X r ḫftj.w=f` | participle (past) `אשר אימת את קול X נגד אויביו`; wish `תאמת את קול`; prospective `יאמת`; infinitive `לאמת`; passive `אימתו את קול X` (impersonal) | BD 18 | §12.4.3; the forms chosen so that `verify`'s regex reads them (the imperative `אַמֵּת` would read "truth" unvocalized and is not in the regex) |
+| **BD 18's refrain** `j Ḏḥwtj smꜣꜥ-ḫrw Wsjr r ḫftj.w=f smꜣꜥ-ḫrw NN mꜣꜥ-ḫrw r ḫftj.w=f m ḏꜣḏꜣ.t ꜥꜣ.t jm.j.t X` | `הוֹ תְּחוּת, אשר אימת את קול אוֹסִירִיס נגד אויביו, תאמת את קול […] אמיתי־הקול` + `נגד אויביו בוועד הגדול אשר ב־X` | 18.1–2, 6–7, 10–11, 14–15, 17–18, 20–21, 24–25, 29–30, 33–34 | fixed by the first copy; the four identical lines (18.6, 18.10, 18.17, 18.33) identical; 18.36–37 is the declarative variant `[תְּחוּת] הוא / אשר יאמת … ; יאמת הוא את קול […]` |
+| `grḥ pwy n X` / `hrw pwy n X` | `בלילה ההוא של X` / `ביום ההוא של X` | 17.11, 17.61, BD 18 | the demonstrative kept |
+| `ḫpr X pw` (aetiology) | `כך נהיה X` | 17.8, 17.63 | HC §10.10.1 |
+| `jw=j rḫ.kw X` | `יודע אני X` | 17.10, 17.14, 17.76 | §12.4.5 |
+| `ṯz-pẖr` (recitation note "and vice versa") | `ולהפך` | 17.39, 17.106 | |
+| `zp-2` | `(פעמיים)` | 17.106 | PT `(ארבע פעמים)` |
+| `šs-mꜣꜥ ḥḥ n zp` | `דבר נכון באמת, אלפי אלפים פעמים.` | 18PS.2 | BD 115's string |
+| rubric `ḏd z rʾ pn wꜥb.w` | `יאמר אדם את הלחש הזה (כשהוא) טהור – …` | 18PS.1 | BD 109's `יאמרו את הלחש הזה (כשהוא) טהור` |
+| `pri̯.t m hrw` (noun) | `יציאה ביום` | 18PS.1 | §12.3 |
+| `jri̯.t ḫpr.w (nb mrr jb=f)` | `עשיית (כל) צורה (אשר יחפוץ לבו)` | 17.2, 18PS.1, 18.27 | *ḫpr.w* = `צורה` (TB 15,1, WE 9,27) |
+
+**Key terms (new or settled here):**
+
+| Egyptian | Hebrew | Lines | Reason / rejected |
+|---|---|---|---|
+| ḏꜣḏꜣ.t "council, tribunal" | `וַעַד` (`הוועד`) | 17.42, 17.46, 17.55, 17.73, BD 18 | Sinuhe B209's `הוועד` for the same lemma (tla182390); `מוֹעָצָה` rejected: AM's qnb.t is `מוֹעֶצֶת־הַשּׁוֹפְטִים` (§10.4.2); unvocalized without a prefix `ועד` reads "and until": always with the article or a preposition here |
+| wjꜣ "the sun's bark" | `צִי` ★ (`צִיּוֹ`) | 17.95, 17.100 | the Heavenly Cow's word (HC 47, §10.10.3), not §12.3's `הסירה?` (one lemma, one Hebrew) |
+| sḫ.t-jꜣr.w "Field of Reeds" | `שְׂדֵה־הָאַגְמוֹנִים` | 17.28–29 | HC 40's precedent; §12.3's `שדה הקנים` not adopted; sḫ.t-ḥtp stays `שְׂדֵה־הַקּוֹרְבָּנוֹת` (PT527, HC 39) for the next translators |
+| ẖꜣ.t "corpse" | `גּוּפָה` | 17.16, 17.84 | §12.3's `גְּוִיָּה` is MT's ḏ.t "body" (§10.9.3; also used here 17.95); `פֶּגֶר` rejected (contempt) |
+| ḏ.t "body" | `גְּוִיָּה` | 17.95 | MT's; the pun ḏ.t "body" / ḏ.t "eternity" noted |
+| šw.tj "the double plume" | `שתי־נוצות` | 17.17 | (not šw.t "shadow": that stays §12.3's `צֵל`, not met) |
+| ꜣḫ "akh" / ꜣḫ "useful" / ꜣḫ.w "power" / ꜣḫ verb "be an akh" | `אָח` / `מוֹעִיל` / `גְּבוּרוֹת` / `היות אָח` | 17.1, 17.3, 17.44, 17.96 | §4.1, §4.3, §10.12.1 |
+| sṯz / ṯzi̯ "raise" | `הֲרָמָה` (`הֲרָמוֹת־שׁוּ`) / `הֵרִים` | 17.1, 17.5, 17.30, 17.36–37, 17.66 | one root for the causative and its base; PT's ṯsj `הֵקִים` is a split by sense |
+| nb-tm | `אֲדוֹן־הַשְּׁלֵמוּת` | 17.3 | kept apart from nb-r-ḏr `אֲדוֹן הַכֹּל` |
+| jm.j-X (epithet) | `שׁוֹכֵן־X` | 17.6, 17.9, 17.65 | BD 125's `שוכן־מערה` |
+| jm.j.w-bꜣḥ | `אשר לפנים` | 17.32–33 | `הקדמונים` is HC 8's tp.jw-ꜥ |
+| jm.j.w-ḫt | `ההולכים־אחרי` | 17.8, 17.41, 17.43, 17.48, 17.75 | |
+| hꜣi̯ "descend" / ḫr "fall" | `ירד` / `נפל` | 17.1, 17.32, 17.76, 17.98, 18.28 / 17.86 | one verb each |
+| mꜣꜣ | `חָזָה` (passive `ואין חוזים אותו`) | passim | §10.12.1 |
+| jḫ.t | `דבר` / `רכוש` / `השרידים` (Osiris's relics) | 17.74, 18.12, 18.23, 18.34 | split by sense; `jḫ.t-ḫꜣwj` = `דברי־הערב` (`תקרובת` is WE's mꜣꜥ, `מנחה` TB's ꜥꜣb.t) |
+| ḫry.t "slaughter-victims" / šꜥ.t "slaughter" / zfṯ "slaughter" / nm.t | `הטבוחים` / `טֶבַח` / `שחט` / `בית־המטבחיים` | 17.70, 17.83 / 17.33, 17.43, 17.88 / 18.28 / 17.70, 17.88, 17.98 | `שחיטה` is SS 185's sfṯ (= zfṯ) |
+| sṯꜣ.w "wounds, blows" | `מכות` | 17.16, 17.35, 17.75, 17.84 | `פצע` is AM's sẖy |
+| ḥsq / dn / bḥn | `כרת` (WE 7,4) / `קטע` / `גדע` | 17.75 / 17.70 / 17.110 | |
+| zš "marsh, pool" | `סבך` | 17.23 | WE 5,5's word for the same lemma; see Open decisions |
+| ḥqꜣ.t / sḥqꜣ | `שליטה` / `הִשְׁלִיט` | 17.5, 17.11, 17.90 | ḥqꜣ = `שַׁלִּיט` (§11.2) |
+| ḥtm "destroy" | `השמיד` | 17.11, 17.61, 18.5 | |
+| dr / ḫsr / sḥri̯ | `הרחיק` (MK E130) / `גירש` / `סילק` | 17.21, 17.44, 18.39 / 17.21 / 17.21 | |
+| jw "wrong" | `עבירות` | 17.21 | (BD 125's jw.yt `חטא`, ṯms `עוון`, jzf.t `עוול`) |
+| jzf.tj "evil-doer" | `בעלי־העוול` | 17.43, 17.70, 17.92 | the root of jzf.t `עָוֶל` kept |
+| twt "image" | `דְּמוּת` [gated, licensed] | 17.40, 17.81 | §4.4 |
+| ḥnn "phallus" | `זכרות` | 17.32, 17.116 | PT527's word |
+| ḥmi̯ "retreat" | `סר` | 17.107 | HC 52; the root סוג/נסג reserved |
+| tkn "approach, touch" | `נגע` | 17.118–119 | AM 4.6 |
+| rḫ.yt / wnḏw.t | `העם` / `קרובים` (`אנשי אויביי`) | 17.111 | AM 1.12 / BD 125, 7 |
+| snḏ (noun) / nrw / šfšf.t | `יראה` / `מורא` / `יראת־כבוד` | 17.113 / 17.87, 17.110 / 17.110 | |
+| kkw / snk.t | `חושך` / `עלטה` | 17.93 | BD 125's knm.t `אפלה` kept free |
+| pḥ.tj | `כוח` | 17.107 | AM 21.7 |
+| ꜥꜣb.t "offering" | `מנחה` | 17.78 | TB 15,4 |
+| ḫꜣw.t "offering table" | `שולחן־הקרבנות` | 17.79–80 | BD 114 (WE 9,26 has `מזבחות`: an existing split, noted for the lead) |
+| jty | `ריבון` | 17.81 | WE 8,14 |
+| ḫpš | `השוק` (the constellation) / `כתף` (Osiris's limb) | 17.47 / 18.32 | §10.12.2 split |
+
+**Names (first occurrence vocalized):** Imsety `אִימְסֶתִי`, Hapi `חָפִּי` (≠ the Inundation `חַעְפִּי`), Duamutef `דּוּאָמוּתֶף`
+(HC 55), Qebehsenuf `קֶבֶּחְסֶנוּף`, Isdes `אִיסְדֶס`, Mekhenti-en-irti `חוֹרוּס־מְחֶנְתִי־אֶן־אִירְתִי`, Harendotes `[חוֹרוּס־]שומר־אביו`,
+Methyer `מֶחֶת־וֶרֶת`, Hu / Sia `חוּ` / `סִיא` (§3.1), Nefertem `נֶפֶרְתֵּם` (MT), Bastet `בָּאסְטֶת`, Nehebkau `נֶחֶבְּכָּאוּ`
+(BD 125), Shesmu `שֶׁסְמוּ`, Medjed `מֶגֶ׳ד` (TLA "the Sure-shot"), Babi `בָּבִי` (BD 125), Hemen `חֶמֶן`, Wadjet `וָאגֶ׳ת`
+(§3.1), Neseret `נֶסֶרֶת`, Bentj `בֶּנְתִּי`, Wepwawet `וֶפְּוָאוֶת` (MT), Sobek pl. `סוֹבֶּכִים`, the Benu `הַבֶּנוּ` (PT600),
+"the Children of the Weary One" `בני־העייפה` (ms.w-bdš.t), the double lion Ruti `שני־אריות` (BD 125's judge name),
+the goddess Ḥtp=s-ḫwi̯=s `נחה־היא־מגינה־היא`. Places: Naref `נָארֶף`, Mendes `גֶ׳דֶת` (≠ Busiris `גֶ׳דוּ`), Letopolis
+`חֶם` (BD 125; `[היתר שער]`), Herakleopolis `חָנֵס` (§11.11.5), Kheraha `חֶרְעַחָא` (BD 125), Sepa `סֶפָּא`, Pe and Dep
+`פֶּה` / `דֶּף` (vocalized: "mouth", "page"), the Washer-folk's Banks `שתי־גדות־הכובסים`, Abydos `אַבְּגֶ׳ו`, This `תְּנִי`,
+Rosetau `רֶא־סְטָאוּ` (`[היתר שער]` for the ב prefix), Wenet `וֶנֶת`, Shenyt `שֶׁנְיֶת` (not "שנית"), Meseqet `מֶסְקֶת`,
+Tjenenet `צְ׳נֶנֶת`, Qerqeret `קֶרְקֶרֶת`, the Island of the Justified `אי האמיתיים`, the Lake of Fire `אגם־השלהבת`, the
+roads of the dead `אורחות־המתים`, the Hacking of the Earth `עידור־הארץ` (`אדמה` reserved). The festivals: Haker
+`הָאקֶר`, "We-are-enduring" `"קיימים־אנו"`, "Uniting the Two Lands" `"איחוד־שתי־הארצות"` (MT's *smꜣ* `אחד`).
+
+**Rejected (gates and echoes):** `רָקִיעַ` for bjꜣ.w (17.65: `ימת־שמיו`, the TLA's "Firmament" in the apparatus); the root
+בקע for pšn (17.60: `שיסע`); `יבערו` for sti̯ (17.113: `ילהטו`); `תבה` for ꜥfḏ.t (17.102: `ארגז`); `אלים` "violent" for
+mds (17.86: `עריץ`, to avoid "gods"); `חרטום` for ḥr.j-tp tꜣ.wj (17.87: `ראש`, the loanword's link noted).
+
+### Open decisions for the user
+1. **zš `סבך`** (17.23): WE 5,5 fixed `סבכים` "thickets" for this lemma; in BD 17 the two zš are pools of purification
+   (the TLA: "Seen"). `בִּצּוֹת` would suit both; changing WE is the lead's decision.
+2. **ḏꜣḏꜣ.t `ועד`**: Modern Hebrew hears "committee"; the alternative `מוֹעָצָה` collides with AM's qnb.t. Kept `ועד`
+   (Mishnaic "assembly"); the later NU parts follow it.
+3. **The gloss question `מה הוא?`** against the TLA's "Wer ist denn das?": the answers are places, days and things as
+   often as gods; `מי` only for *pw tr rf sw*.
+4. **17.1 sḫꜣ.w!! `זכרונות`** follows the TLA's lemma; the other witnesses have *sꜣḫ.w* "akh-spells" (title "praises and
+   transfigurations").
+5. **ḫꜣw.t**: BD 114 `שולחן־הקרבנות` vs WE 9,26 `מזבחות` (an existing split, for the lead).
+
+### Progress log
+- Drafted in seven saves (17.1–23, 17.24–41, 17.42–66, 17.67–83, 17.84–103, 17.104–119, 18.1–18PS.3), each filled and
+  verified at once; `tr NU1` read after each save and the **תרגומים** bullet written; about 45 lines changed after the
+  TLA (tense/voice: 17.21, 17.23, 17.50, 17.64, 17.112, 18.39, 18PS.2; segmentation: 17.5, 17.11, 17.34, 17.55, 17.111,
+  17.113–115, 18.37; the referent of a pronoun: 17.13, 17.41, 18.5; a word: 17.6, 17.53, 17.89, 17.95, 18.23, 18.26,
+  18.28, 18.32, 18.34, 18.38).
+- Pass (a) fidelity: a script listed every bracketed source token against the Hebrew brackets; 12 lines fixed (17.17
+  `[בראשי]`, 17.45 `[מה]`, 17.69, 17.80, 17.113, 17.114, 18.18 (`ההוא`, `הָאקֶר` unbracketed: one sign restored;
+  `[המתים]`), 18.28 `[ואז]`, 18.36 `[תְּחוּת]`, 18PS.1 `[כל]? … [אשר יחפוץ]?`); hꜣi̯ unified to `ירד` (17.32, 17.76).
+- Pass (b) consistency: every new Hebrew word grepped in the corpus: `תקרובת` (WE's mꜣꜥ) → `דברי־הערב`; `שחיטה` (SS's
+  sfṯ) → ḫry.t `הטבוחים`; `הקדמונים` (HC's tp.jw-ꜥ) → jm.j.w-bꜣḥ `אשר לפנים`; `jr` / `jr gr.t` checked by script
+  (`אשר ל` / `ואשר ל`, 12 lines aligned); the quoted gloss of 17.118 aligned with 17.114 (`חסרון בהם`); the BD 18
+  refrain identical in all copies (`verify`: 0 repeated-line differences).
+- Pass (c) Hebrew: the clean text read through; heading 17.32 aligned (`הדם שירד`); register even, no vav-consecutive.
+- `verify NU1 --strict`: 0 problems; `check_bible_quotes.py` on the annotated, intro and translation files: 0 problems;
+  `build NU1` done.
+
+### The text on its own terms
+- **Commentary inside scripture** (passim): BD 17 is already an old, obscure text for its scribes, who gloss it line by
+  line ("What is it? It is …"; "Variant: …") and leave rival readings side by side – one of the oldest commentaries on
+  a sacred text, as authoritative as the text itself.
+- **To be saved is to be the creator** (17.4–17.9, 17.105–17.106): the dead man says "I am Atum when I was alone in Nun":
+  identity with the god at the first moment, not prayer to him, is the way out of death.
+- **Time has two eternities** (17.10, 17.16–17.17): *nḥḥ*, the cycling time of the sun, is "day" and Re ("tomorrow");
+  *ḏ.t*, the fixed time of the mummy, is "night" and Osiris ("yesterday"); the dead man is both.
+- **Re and Osiris are one** (17.56–17.60): the setting sun enters Mendes, finds Osiris and embraces him; together they
+  become "the one with two bas" – the solar–Osirian union of New Kingdom theology in a single scene.
+- **Creation by the body** (17.8, 17.32–17.33): the gods are the names of Re's limbs; Utterance and Perception (Hu and
+  Sia) come from the blood of his self-inflicted cut – the creator's word is a part of his body.
+- **Puns are theology** (17.62–17.63, 17.95): Re is "Cat" (*mjw*) because Sia said he is "like" (*mjw*) what he made;
+  the creator's body (*ḏ.t*) is eternity (*ḏ.t*).
+- **The judge's face is the balance** (17.68, 17.72): eyebrows like the arms of the scales; a double-headed god returns
+  wrong to the wrong-doer and truth to him who comes with it – justice as reflection, not mercy.
+- **The beyond is a slaughterhouse with names** (17.70–17.98, 18.26–18.28): lassos, knives, cauldrons, a lake of fire,
+  Shesmu of the wine-press; knowing each demon's name is the protection.
+- **Myth as lawsuit** (BD 18): the Horus–Seth conflict is an inheritance case heard by tribunals in Egypt's oldest cult
+  towns; Thoth, the scribe, "makes Osiris true of voice" – the cosmos is restored by a verdict, and the dead man asks
+  for the same verdict in the same courts.
+- **Mourning and birth in one person** (17.108–17.109, 18.15–18.16): the dead man is Isis with dishevelled hair, who
+  conceived, and Nephthys, who bore; Isis lies awake in mourning for her brother.
+- **The rubric's personal witness** (18PS.2–3): "I have seen it; great things came to pass through me" – the spell is
+  vouched for like a remedy.
+
+### Key parallels
+- [divergence] Gen 1:2 `וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם` / `וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל פְּנֵי הַמָּיִם` ↔ 17.4: the god alone in the primeval
+  water – but *inside* it, and self-originating (17.7), not hovering over it.
+- [equivalent] Gen 2:5 `טֶרֶם יִהְיֶה` ↔ 17.5 `טרם נהיו הרמות שׁוּ` (the Pyramid Texts' "not yet", §6.5); [divergence] Gen 1:7
+  the separation of sky and earth – Shu's "raisings".
+- [divergence] Isa 44:6 `אֲנִי רִאשׁוֹן וַאֲנִי אַחֲרוֹן`, Isa 46:10 ↔ 17.10 "I am yesterday, I know tomorrow": a god who
+  encloses time – split by the gloss into two gods.
+- [divergence] Gen 1:5 day and night ↔ 17.16–17: *nḥḥ* is the day, *ḏ.t* the night; [equivalent] Isa 57:15 `שֹׁכֵן עַד`.
+- [divergence] Gen 2:20 (naming) ↔ 17.8: the creator names his own limbs and they become gods.
+- [equivalent] Ps 33:6 `וּבְרוּחַ פִּיו` ↔ 17.66: the sun gives the winds by the breath of its mouth.
+- [equivalent] Ps 18:26, Jer 17:10 ↔ 17.72: the judge returns wrong to the wrong-doer, truth to the truthful.
+- [equivalent] Dan 5:27 ↔ 17.68: the judge's eyebrows are the arms of the balance.
+- [equivalent] Ps 141:2 `מִנְחַת-עָרֶב` ↔ 18.3: the evening offering as a fixed time of cult.
+- [cognate] Gen 41:45 `אֹן` ↔ 17.15 (Heliopolis); Isa 30:4 `חָנֵס` ↔ 17.89 (Herakleopolis).
+
+### Lines shared with other texts
+None copied. Shared strings: 17.61 = 18.3–4 (`בלילה ההוא של הקרב ושל עשיית המשמר על המורדים`, the same night in both
+chapters); 17.11 / 17.61 (`ביום ההוא אשר הושמדו בו אויבי אדון הכל`); BD 125's words reused (`שוער`, `בית־המטבחיים`,
+`מביא־זרועו`, `בָּבִי`, `נֶחֶבְּכָּאוּ`, `חֶרְעַחָא`, `היוצא אחורנית`, `שני־אריות`, `מזוקק`, `קיצץ`, `פגם`, `דרך`, `מפקד`,
+`שולחן־הקרבנות`, `הגיד`, `בלע`, `קרובים`, `דבר נכון באמת, אלפי אלפים פעמים`, `יאמרו את הלחש הזה (כשהוא) טהור`).
+
+### Proposals for the shared renderings
+1. **The formulas table above** as a §12.4 row set for NU2–NU10 and CH: the gloss (`מה הוא?` / `מה היא?`, `X הוא`,
+   `נוסח אחר:`, `אשר ל־X –` / `ואשר ל־X –`), `תציל את N אמיתי־הקול מיד X`, the smꜣꜥ-ḫrw forms, BD 18's refrain (two
+   fixed strings: `הוֹ תְּחוּת, אשר אימת את קול אוֹסִירִיס נגד אויביו, תאמת את קול` and `נגד אויביו בוועד הגדול אשר ב־X`),
+   `ṯz-pẖr` `ולהפך`, `zp-2` `(פעמיים)`, the rubric `יאמר אדם את הלחש הזה (כשהוא) טהור`.
+2. **The chapter title** (not met in NU1; fixed here for the next translators): `rʾ n` + infinitive = `לחש ל־` + Hebrew
+   infinitive (`לחש לצאת ביום`, `לחש לבלי להירקב`); + a noun = `לחש ל־` + noun; `rʾ n jri̯.t ḫpr.w m X` = `לחש לעשות צורה
+   של X` (*ḫpr.w* `צורה`); `pri̯.t m hrw` as a noun `יציאה ביום` (18PS.1).
+3. **Key terms:** ḏꜣḏꜣ.t `ועד`; wjꜣ `צִי` ★ (not `הסירה`); sḫ.t-jꜣr.w `שְׂדֵה־הָאַגְמוֹנִים` (HC 40) and sḫ.t-ḥtp
+   `שְׂדֵה־הַקּוֹרְבָּנוֹת` (PT527) – not §12.3's `שדה הקנים` / `שדה הנחת`; ẖꜣ.t `גופה` (not `גוויה`, MT's ḏ.t); the rest of
+   the key-terms table above. **Not met in NU1** (left to their first translator, with these suggestions): sꜣḫ "make an
+   akh" `עשה לאָח` / sꜣḫ.w "akh-spells" `לחשי־אָח`; šw.t "shadow" `צֵל` (§12.3); sꜥḥ "the noble dead, mummy" `חנוט`?;
+   the night and day barks mskt.t / mꜥnḏ.t transliterated `מֶסְקְטֶת` / `מַעַנְגֶ׳ת`.
+4. **Names:** the list above.
+5. **Gate licences (for the coordinator; the tool was not edited):** (a) the `חם` gate should license the place name
+   *Ḫm* (Letopolis) – BD 125 (27, 45) and NU1 (17.73, 18.7–18.9) need `[היתר שער]` for it; (b) the `ברא` gate
+   reads `ברא־סטאו` (b + Rosetau) as the root (18.34–35): license *Rʾ-sṯꜣ.w*; (c) the "better than"
+   formula fires on `ꜣḫ,w r jri̯.t` (17.96: a noun "power" + "in order to"): it needs `\bꜣḫ\b(?!,)`.
+
+### Lessons for the guidelines
+- A glossed text needs its gloss formulas fixed before the first line (question, answer, variant, topicalizer), and a
+  script to check them (`jr` / `jr gr.t` against `אשר ל` / `ואשר ל`): the drafts drifted on 12 lines.
+- A bracket script (source tokens with `[ ]` against the Hebrew brackets, line by line) catches what a reading misses
+  in a heavily restored opening.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 

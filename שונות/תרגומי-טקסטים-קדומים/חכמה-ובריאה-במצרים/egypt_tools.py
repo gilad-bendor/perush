@@ -524,7 +524,7 @@ RESERVED = [
     (W + alt("מוסר", "המוסר", "מוסרי", "מוסרו") + E, r"sbꜣ|sbꜣ,yt|sbꜣyt|sbꜣ,y\(t\)|sbꜣ\.yt|sbꜣ,tj", "מוּסָר only for sbꜣ.yt [equivalent Prov 1:8, 23:12]"),
     (W + alt("שלושים", "שלשים", "שלישים", "השלושים", "השלשים") + E, r"\b30\b|mꜥbꜣ|mꜥbꜣ,yt", "שְׁלֹשִׁים only for the number 30 / the Thirty (Prov 22:20)"),
     (W + r"(?<!ל)" + alt("חם", "החם", "חמים", "החמים", "חמם") + E,  # (?<!ל): `לחם` "bread" (+ prefixes) is not the hot man (AM 5.5)
-     r"šmm|šmw|\bšm\b|šmmt|srf", "the hot man: pꜣ šmm = הַחַם (always vocalized: Ham, Gen 9:18)"),
+     r"šmm|šmw|\bšm\b|šmmt|srf|(?<![\w,.-])ḫm(?![\w,-])", "the hot man (and the place name Ḫm, Letopolis `חֶם`: BD): pꜣ šmm = הַחַם (always vocalized: Ham, Gen 9:18)"),
     (W + alt("כסיל", "הכסיל", "כסילים", "אויל", "האויל", "אוילים", "נבל", "הנבל") + E, r"wḫꜣ|\bḫm\b|ḫm,w", "the fool words of Proverbs only for the Egyptian fool words: wḫꜣ = כְּסִיל, ḫm 'the ignorant' = הַבּוּר? (renderings §4.3)"),
     # --- Egyptian loanwords in Hebrew (renderings §4.2): only for their Egyptian source ---
     (W + alt("תבה", "תיבה", "התבה", "התיבה", "תבת", "תיבת", "תבתו", "תיבתו", "תבתך", "תיבתך") + E, r"ḏbꜣ|ḏb\(ꜣ\)|ḏbꜣ,t|ṯbt|db\.t", "תֵּבָה only for ḏbꜣ.t 'chest, coffin' [cognate: Egyptian loanword, Gen 6:14, Ex 2:3]"),
@@ -611,7 +611,7 @@ TRAPS = [
 FORMULAS = [
     (r"^ḥw,t mḥ-1?\d\.t$|^ḥw,t mḥ-2\d\.t$|^ḥw,t mḥ-30\.t$|ḥw,t tp\.t", r"(?:^|\s)הבית ה", "ḥw.t mḥ-N.t = `הַבַּיִת הָ…` (§6.1; the chapter heading, 'house')"),
     (r"(?:^|\s)m-jri̯(?=\s|$)", r"(?:^|\s)[ו]?אל ", "m-jri̯ X = `אַל` + future (§6.2)"),
-    (r"\bꜣḫ\b.*(?<![-\w])r(?![-\w])", r"(?:^|\s)[ו]?מוטב ", "ꜣḫ X r Y (better X than Y) = `מוּטָב X מִ־Y` (§6.3)"),
+    (r"\bꜣḫ\b(?!,).*(?<![-\w])r(?![-\w])", r"(?:^|\s)[ו]?מוטב ", "ꜣḫ X r Y (better X than Y) = `מוּטָב X מִ־Y` (§6.3)"),
     (r"\bpꜣ šmm\b|\bpꜣyw =k šmm\b", r"(?:^|\s)[ו]?[ל]?(?:ה)?חם(?:\s|$|[,.;:])", "pꜣ šmm = `הַחַם` (§6.4)"),
     (r"\bgr mꜣꜥ\b", r"(?:ה)?שותק (?:ה)?(?:אמיתי|באמת)", "gr mꜣꜥ = `הַשּׁוֹתֵק הָאֲמִתִּי` (§6.4)"),
     (r"\bn ḫpr\.t\b|\bn ḫp\[?r\]?\.t\b", r"(?:^|\s)[ו]?טרם ", "n ḫpr.t X = `טֶרֶם נִהְיָה X` (§6.5)"),
@@ -663,6 +663,7 @@ def check_line(key, lab, heb, body, fixed, out):
     plain = re.sub(r"(?<![א-ת])[ובלכה]?(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי|שמחה|שמחת|שמחתי|שמחתו|השמחה)(?![א-ת])", " ", plain)   # + BD 90–91, 111; SI B70 (`שמחה` ≠ ש־מחה)
     if re.search(r"ḥmsi̯|ḥms\b|ḥmsj|ḥms\.", license_text(key, lab)):   # `לשבת` "to sit" (ḥmsj), not the root שבת (WE 3,8)
         plain = re.sub(r"(?<![א-ת])ו?לשבת(?![א-ת])", " ", plain)
+    plain = re.sub(r"(?<![א-ת])[ובלמהכש]?רא־סטאו(?![א-ת])", " ", plain)   # Rosetau (Rʾ-sṯꜣ.w), not the root ברא (NU1 18.34)
     src = plain_src((row(key, lab) or {}).get("text", ""))
     for ent in RESERVED:
         rx, allow, why = ent[:3]
