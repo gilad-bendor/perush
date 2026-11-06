@@ -20,6 +20,7 @@ The user's standing decisions apply: partial niqqud (guidelines §6.2); Uruk = `
 | # | Project folder | Text | Base text | Lines |
 |---|---|---|---|---|
 | 1 | `1-הנוסח-הבבלי-התקני/` | **The Standard Babylonian epic** ("He who saw the Deep", attributed to Sîn-lēqi-unninni): Tablets I–X, XI 209–328, XII | eBL `L/1/4`, *Poem of Gilgameš*, ed. A. R. George (rev. G. Rozzi, E. Jiménez, 2026), George's translation: `../sources/eBL/Gilgamesh-SB-<T>/` | I 300, II 187, III 209, IV 175, V 274, VI 183, VII 219, VIII 206, IX 137, X 325, XI 209–328 (120), XII 139 |
+| 3 | `3-השירים-השומריים/` | **The Sumerian Bilgameš poems** (Round 6 run 1, 2026-11-06): Bilgameš and Ḫuwawa A and B, the Bull of Heaven, Aga, the Death of Bilgameš (all recensions); Bilgameš, Enkidu and the Netherworld stays in `../העולם-התחתון/4-…/` (pointed to) | ETCSL 1.8.1.1–1.8.1.5.1 + ORACC Q000361–Q000366 (lemma + morph); `bilgames_tools.py` | HA 305, HB 138, BH 277, AG 117, DB 495 (= 1,332) |
 | 2 | `2-הנוסח-הבבלי-הקדום/` | **The Old Babylonian tablets** (*šūtur eli šarrī*, c. 1800–1700 BCE): OB II (Penn), OB III (Yale), OB VA+BM (Sippar: Šiduri's speech), then Schøyen₂, Nippur, Harmal₁, Ishchali, Harmal₂, IM | eBL `L/1/4` "Old Babylonian" chapters: `../sources/eBL/Gilgamesh-OB-<name>/`; SEAL (Streck's translation) as second opinion | II 145, III 219, VA+BM 87; Schøyen₂ 94, Nippur 26, Harmal₁ 21, Ishchali 47, Harmal₂ 59, IM 45 |
 
 **Reading order for the commentary:** SB I (Enkidu's creation and humanization; Gen 2–3, 6:1–4) → OB II (the same, older and fuller: bread, beer, clothing) → SB VII (the curse and blessing of the harlot; the house of dust; Gen 3:14–19) → SB VI (Ištar, the Bull of Heaven, seven years of chaff; Gen 41) → SB X + OB VA+BM (the quest for life, Šiduri's carpe diem; Gen 3:22, Qoh 9:7–9) → SB XI 209–328 (the plant and the snake; Gen 3) → II–V (the forest and its guardian; Gen 3:24) → VIII, IX, XII (lament, the jewel garden, the ghost; Deut 18:11).
@@ -37,7 +38,8 @@ The user's standing decisions apply: partial niqqud (guidelines §6.2); Uruk = `
 | `parallels_for.py KEY [--all]` | Before drafting a tablet: every line that repeats a line elsewhere (eBL parallels, identical normalizations), with the Hebrew already given to the other copy (XI 1–208 from the flood corpus). |
 | `verify.py [KEY …] [--strict]` | Entries against eBL's line list, translation = annotated `>` lines, reserved strings, unvocalized name traps, I 1–28 against the flood copy, every eBL exact parallel (identical Hebrew). |
 | `build_translation.py` | The combined reading translations of both projects (XI 1–208 embedded from the flood corpus). |
-| `build_parallels_index.py` | `parallels-index.md` from the per-tablet tables. |
+| `build_parallels_index.py` | `parallels-index.md` from the per-tablet tables (projects 1–3). |
+| `bilgames_tools.py` | Project 3 (Sumerian): `verify KEY\|all [--strict]`, `build`, `lines`, `rel`, `grep`, `excerpt`, `skel` – built on `../העולם-התחתון/netherworld_tools.py`. |
 
 ## Status
 See the project files; summary kept here by the coordinator.
@@ -45,6 +47,7 @@ See the project files; summary kept here by the coordinator.
 | # | Project | Status |
 |---|---|---|
 | 1 | SB I–X, XI 209–328, XII | **complete (first draft), 2026-10-18**: 2,474 labels; `1-הנוסח-הבבלי-התקני/translation.rtl.md` (whole epic, XI 1–208 embedded); print stub `../הדפסה/אפוס-גילגמש/1-הנוסח-הבבלי-התקני.rtl.md`. Open decisions: its `project.md`. |
+| 3 | The Sumerian poems | **complete (first draft), 2026-11-06**: 1,332 entries, three translators + an independent fidelity review (39 fixes); `3-השירים-השומריים/translation.rtl.md` (five texts, a pointer to GEN); print stub `../הדפסה/אפוס-גילגמש/3-השירים-השומריים.rtl.md`; `bilgames_tools.py verify all --strict`. The flood references' Death excerpt (§3) kept identical by `verify DB`. |
 | 2 | OB tablets | **complete (first draft), 2026-10-18**: VA+BM, II, III, Schøyen₂, Nippur, Harmal₁, Ishchali, Harmal₂, IM (743 labels); `2-הנוסח-הבבלי-הקדום/translation.rtl.md`; print stub `../הדפסה/אפוס-גילגמש/2-הנוסח-הבבלי-הקדום.rtl.md`. |
 
 `parallels-index.md`: 1,808 rows from 21 tablet indexes (2026-10-21, after the cross-corpus harmonization, `renderings.md` §22), with the coordinator's key findings at the top. Harmonization: `verify.py` lists every eBL exact parallel whose Hebrew differs (417 pairs, plus 478 in marks only); each tablet section's "Lines shared" justifies its differences by the Akkadian or records a false eBL link; a coordinator check of identical normalizations across the corpus found only person/gender/gap differences and the vocalized-first-occurrence spellings.

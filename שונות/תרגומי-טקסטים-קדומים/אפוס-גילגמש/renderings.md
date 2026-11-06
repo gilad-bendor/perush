@@ -462,3 +462,65 @@ The user delegated these to the coordinator ("use your judgment"). Binding from 
 2026-10-23 harmonization, batch C (`../harmonization--2026-10-23.md` row 19, revised): *bâʾu* "pass along, go" → `צָעַד` (`עָבַר` is reserved for its cognate *ebēru* "cross", `חָלַף` is *etēqu*'s); changed line: SB VI 19 `עִירְךָ – במשא יעבור את הפִּרְדָּה!` → `עִירְךָ – במשא יצעד לפני הפִּרְדָּה!` (*bâʾu* with an accusative, "pass by, outpace": `צעד לפני`). XI 106 and 111 (the flood corpus's file, read here) changed with that corpus: `צועדת`. No other *bâʾu* in this corpus. Collision: OB II 144, 200–201 render *akāšu* `צעד` (`צעדה אליו`, `צעד ובא`), recorded, not changed.
 
 - **2026-10-30 harmonization** (`../harmonization--2026-10-30.md`, row 5): *siparru* "bronze" = `אָרָד` (vocalized; was `נְחֹשֶׁת`, which stays *erû* "copper": V 133, VIII 67, VIII 163). Changed line: SB I 25 `[התר] את בריחיה של נחושת,` → `[התר] את בריחיה של אָרָד,` (gloss; identical in the flood references copy, `../סיפורי-המבול-המסופוטמיים/6-אזכורי-המבול/`).
+
+## 23. Project 3: the Sumerian Bilgameš poems (Round 6 run 1, 2026-11-06; fixed by the coordinator before the first line)
+`3-השירים-השומריים/` – Bilgameš and Ḫuwawa A and B, the Bull of Heaven, Aga, the Death of Bilgameš (ETCSL 1.8.1.1–1.8.1.5.1; `bilgames_tools.py`). §0–§22 bind as far as the Akkadian and the Sumerian name the same thing; in addition, in this order:
+
+### 23.1 What binds
+1. **Bilgameš, Enkidu and the Netherworld (GEN)**, as translated in `../העולם-התחתון/4-…/` and its renderings (`../העולם-התחתון/renderings.md` §11.1–§11.14): the same names, the speech formulas, the shared vocabulary (*dab₅* `אחז`, *tug₂* `שׂמלה`, *gidim* `אִט`, *ra* `מחץ`, *kalam* – see 23.3, *ad gi₄* `נמלך`, *tab-ba* `חבר`, *i-lu* `נְהִי`, *a-nir* `אֲנָחָה`, *kur lu₂ til₃-la* `ארץ האיש החי` …). `python3 -I bilgames_tools.py rel KEY FROM TO` prints the near-identical Sumerian lines of GEN and of this project with their Hebrew: copy where the Sumerian is the same.
+2. **The other Sumerian corpora** for the words they fixed (Enmerkar: *me-lem₄* `זוֹהַר`, *ni₂* `אֵימָה`, Eana `אֵאַנָּה`; the laments, Gudea, Inana's Descent; the guidelines §6.7): grep first (`python3 -I ../העולם-התחתון/netherworld_tools.py grep all '<regex>'`).
+3. **The Akkadian epic** where the Akkadian word is the Sumerian word's standard equivalent (a formula takes the same Hebrew across languages, guidelines §5.2): *erin* = *erēnu* `אֶרֶז` [cognate]; *tir* = *qištu* `יַעַר` (grep the epic first); *me-lem₄* = *melammu* `זוֹהַר`; *gud an-na* = *alû* `שׁוֹר הַשָּׁמַיִם`; *mu ĝar* = *šuma šakānu* `שָׂם שֵׁם`; *mu gub* = *šuma šuzuzzu* `הֶעֱמִיד שֵׁם`; *nu₂* = *nâlu* `שָׁכַב`; *ma-mu₂* / *u₃-sa₂* = *šuttu* `חֲלוֹם`; *Ḫuwawa* `חוּוָוָה` (OB form, §1). Where an Akkadian line adapts a Sumerian one (OB III 140–160 ↔ HA 20–33; SB VI ↔ BH), compare and record the difference; do not force the wording.
+4. **The flood references' excerpt** (`../סיפורי-המבול-המסופוטמיים/6-אזכורי-המבול/annotated.rtl.md` §3 = DB MT.F 3–41, 123–128): prefilled in `annotated-DB-2.rtl.md`; identical by `verify DB`. Its renderings are revised where these rules require (below), in both files at once.
+
+### 23.2 Names (★ = vocalized at every occurrence; `verify` checks the traps)
+| Sumerian | Hebrew | Notes |
+|---|---|---|
+| {d}gilgameš₂ (read Bilgames) | גִּלְגָּמֶשׁ (plain `גילגמש` after the first in each text) | As GEN and the corpus; the first note of each text: the Sumerian reading *Bilgames* "the old man (is) a young man"? (the meaning is disputed – say so). |
+| Enkidu; Ninsun(-ak) | אֶנְקִידוּ; נִינְסוּן | GEN; corpus §1. |
+| Ḫuwawa ★ | ★ חוּוָוָה | Unvocalized `חווה` reads "Eve" (Gen 3:20!) and "farm": always vocalized. The excerpt F12 `חֻוָוָה` → `חוּוָוָה`. |
+| Utu ★; Inana ★; An ★; Enlil; Enki; Nanna; Ereškigala ★ | ★ אוּתוּ; ★ אִינַנָּה; ★ אַן; אֶנְלִיל; אֶנְקִי; נַנָּה; ★ אֶרֶשְׁכִּיגַל | GEN; netherworld §11.2. |
+| Lugalbanda; Ninĝišzida; Dumuzid ★; Namtar ★; Ziusudra; Nungal; Neti ★ | לוּגַלְבַּנְדָּה; נִינְגִּשְׁזִידָה; ★ דּוּמוּזִי; ★ נַמְתָּר; זִיוּסוּדְרָה; נוּנְגַּל; ★ נֵטִי | Corpus §1; flood references. |
+| Aga ★; Enmebaragesi; Kiš ★; Birḫurture; Zabardibunuga; Lugalgabagal | ★ אַגָּא; אֶנְמֶבָּרָגֶסִי; ★ כִּישׁ; בִּירְחוּרְטוּרֶה; זַבַּרְדִּיבּוּנוּגָּה; לוּגַלְגַּבַּגַּל | `אגא`/`כיש` unvocalized read as nothing / "Kish" (1 Sam 9:1). |
+| Unug; Kulaba; Eana; Nibru; Ekur; *kur lu₂ til₃-la* | אוּרוּךְ; כֻּלַּבָּה; אֵאַנָּה; נִיפּוּר; אֵכּוּר; `ארץ האיש החי` | GEN, Enmerkar (Unug = `אוּרוּךְ`: the corpus's rule, guidelines §6.4.6). |
+| Sumer (*ki-en-gi*) ★; *kalam* | ★ שׁוּמֶר; `הַמּוֹלֶדֶת` where `הארץ` would read as the netherworld (GEN ruling 1), else `הָאָרֶץ` | The translator records which. |
+
+### 23.3 Key terms
+| Sumerian | Hebrew | Tag / notes |
+|---|---|---|
+| *kur* | `הָהָר` / `הֶהָרִים` (the mountains of the cedar, HA, HB) – `הָאָרֶץ` (the netherworld, DB) | One word, two worlds: the note at the first of each. |
+| *ḫur-saĝ* | `הַר` / `רֶכֶס` (the translator; grep) | |
+| *erin* / *{ĝiš}erin* | `אֶרֶז` [cognate, through Akk. *erēnu*] | Gated (*erin*). |
+| *ĝiš* (tree, wood) | `עֵץ` (gated: *ĝiš*) | |
+| *me-lem₄* (the auras), *ni₂* (terror), *ni₂ te* | `זוֹהַר` / `זְהָרִים`; `אֵימָה` / `אֵימוֹת` | Enmerkar; corpus §4 (*melammu* `זֹהַר`, *puluḫtu* `אֵימָה`). [equivalent?] ↔ `לַהַט הַחֶרֶב הַמִּתְהַפֶּכֶת` (בראשית ג:כד) – look, never force. |
+| *mu ĝar* / *mu gub* | `שָׂם (אֶת) שֵׁם` / `הֶעֱמִיד (אֶת) שֵׁם` | Fixed: HA 5 `אשים את שמי`, HA 6–7 `אעמיד` (formula check). [equivalent] ↔ `וְנַעֲשֶׂה לָּנוּ שֵׁם` (בראשית יא:ד). |
+| *nu₂* ; *zi* (rise) | `שָׁכַב`; `קָם` | The Death's refrain *ba-nu₂ ḫur nu-mu-e-da-an-zi-zi* = `– שָׁכַב, וְלֹא יָקוּם עוֹד.` (the first translator of DB fixes the exact form at A1–A14 and N2; `עוֹלָם` is reserved). [equivalent] ↔ `וְאִישׁ שָׁכַב וְלֹא יָקוּם` (איוב יד:יב). |
+| *nam-tar*; *ĝiš-nu₂ nam-tar-ra* | `גּוֹרָל`; `עֶרֶשׂ הַגּוֹרָל` (the excerpt F4) | `נַמְתָּר` the demon ★. |
+| *nam-til₃*; *zi* (life); *til₃* | `חַיִּים`; `נֶפֶשׁ` / `חַיִּים` by context; `חַי` | |
+| *ug₅* / *uš₂* / *ba-uš₂* | `מֵת` | |
+| *ma-mu₂*, *u₃-sa₂* | `חֲלוֹם`; *u₃-sa₂* `שֵׁנָה` if it is "sleep" | |
+| *ab-ba (uru)*; *ĝuruš*; *šul*; *ki-sikil* | `זִקְנֵי (הָעִיר)`; `בַּחוּר` (GEN); `עֶלֶם` (GEN, of a god or a hero); `עַלְמָה` | `זקנים` gated (*ab-ba*, *šu-gi*, *um-ma*); `ילדים` gated (*dumu*, *tud*, *di₄-di₄*). AG's two councils: [divergence] ↔ `וַיִּוָּעַץ הַמֶּלֶךְ רְחַבְעָם אֶת הַזְּקֵנִים` / `הַיְלָדִים` (מלכים א יב:ו–ח); `עצה` gated (*ad gi₄*, *na de₅* …). |
+| *ad gi₄* | `נִמְלַךְ` (GEN MT.A13) | |
+| *unken* (assembly) | `אֲסֵפָה` (the excerpt; flood corpus *puḫru*) | |
+| *en*; *lugal*; *ur-saĝ*; *arad* | `אָדוֹן`; `מֶלֶךְ`; `גִּיבּוֹר` (GEN); `עֶבֶד` | |
+| *gu₃ … de₂*; *inim … gi₄* | `X פּוֹנֶה אֶל Y:`; `X מֵשִׁיב לוֹ דָּבָר:` | GEN; checked. |
+| *a-nir*; *i-lu*; *er₂* | `אֲנָחָה`; `נְהִי`; `בָּכָה` (gated) | GEN, laments. |
+| *ĝiš-tukul*; *ĝiš-ḫur*; *me* | `כְּלִי נֶשֶׁק` (grep); `צוּרָה`; ★ `הַ־מֶה` | corpora. |
+| *a-ma-ru* (if it occurs) | `מַבּוּל` [equivalent] | flood corpus. |
+
+### 23.4 Reserved and gated (added in `bilgames_tools.py` RESERVED_B to netherworld_tools' corpus-wide list)
+**Never:** `עוֹלָם` (corpus-wide; *ud ul-li₂-a-še₃* = `לימים רחוקים`, the excerpt's F16 `לעולמים` is revised), `שְׁאוֹל`, `טֶרֶם`, `אֱלֹהִים`, `כָּבוֹד`, `קִינָה`, `בָּרָא`, `יָצַר`, `רָקִיעַ`, `הִבְדִּיל`, `מַלְאָךְ`, `תֵּבָה`, `כְּרוּב`, `עֵדֶן`, `פָּתַר`, `הֶבֶל`, `שָׁמַר` (any form), `חֶמְדָּה`, `עֵזֶר` / `כְּנֶגְדּוֹ`, `נְשָׁמָה`, `צֶלֶם` / `דְּמוּת`, `נְפִילִים` / `אַנְשֵׁי הַשֵּׁם`. **Gated:** `נָחָשׁ` (*muš*), `גַּן` (*kiri₆*), `עָפָר` (*saḫar*), `טִיט` (*im*), `שׁוּב` (*gi₄*, *gur*), `יָדַע` (*zu*), `טוֹב` (*dug₃*), `לָקַח` (*ti*), `בָּכָה` (*er₂*), `הֵיכָל` (*e₂-gal*), `אָרַר` (*aš₂*), `עֵץ` (*ĝiš*), `אֶרֶז` (*erin*), `זְקֵנִים` (*ab-ba* …), `יְלָדִים` (*dumu* …), `עֵצָה` (*ad gi₄* …), `מַבּוּל` / `אֵד` (*a-ma-ru*).
+
+### 23.5 Formulas (checked by `verify`)
+`gu₃ mu-na-de₂-e` → `פונה אל`; `inim … gi₄-gi₄` → `משיב … דבר`; `mu-ĝu₁₀ ga-am₃-ĝar` → `אשים את שמי`; `en kul-aba₄{ki}` → `אדון כֻּלַּבָּה`; Ninsun → `נינסון`. The first translator of each text fixes its own refrains before drafting them (HA: the seven warriors, the axe and the cutting, the auras given one by one with the gifts – a command / execution chain; BH: Inana's request and An's refusal, the bull's grazing; AG: the message of Aga's envoys, the two councils – the same question twice; DB: the dream told twice (Me-Turan F 1–41 ≈ F 100–134), the gifts to the netherworld gods one by one) and lists them under "Proposals" for `verify`.
+
+### 23.6 Merged after part 1 (HA, 305 entries, 2026-11-06)
+The part 1 tables (`3-השירים-השומריים/project.md`, "Part 1 … Proposals": the formulas and the ~120 shared words) **bind HB and the later texts** wherever the Sumerian is the same. **Rulings on its open decisions:** 1. Magan `מָגָן` licenses the `גן` gate (in `bilgames_tools.py`, this project only; the kings corpus's precedent). 2. plural *ur-saĝ* = `לוחמים` (`גיבורים … הם` would make Gen 6:4); the singular stays `גיבור` (GEN): accepted, HB follows. 3. *ur₂* = `חיק` in the Ḫuwawa poems (the mother's lap / the mountain's foot pun), a split from GEN's `שֹׁרֶשׁ` (the tree's root): accepted, recorded. 4.–7. the sense splits (*la₂* `מתח` / `כפת`; *gub* `הציב` / `העמיד` / `עמד` by construction; *dim₂* `אֵעָשֶׂה`, *zi … pad₃* `נשבע`; *umun₂* and *uš₂* both `דם`): accepted, each noted at its lines. 8.–10. the uncertain words in italics; 27 as a statement; *inga-* by context: accepted. Ḫuwawa's terrors *ni₂* (`אימה`, handed over with *ba* `חלק`) and his auras *me-lem₄* (`זוהר`, given out by Enlil with *šum₂* `נתן`) are two words, kept apart in every text.
+
+### 23.7 Merged after part 2 (HB, 138 entries, 2026-11-06)
+HB copies HA letter for letter wherever the Sumerian is the same; every difference is marked at its line. **Rulings:** 11. *kur* = `הארץ` in HB 11–13 (the netherworld; *irigal* `העיר הגדולה`), against HA's mountain: accepted – the two versions' worlds differ, and the Dialogue of Pessimism 84 follows B. 12. *sud* `ארוך` / *sukud* `גבוה`: accepted (DP 83 follows B). 13. the father: *ugu* `הורי`, *tud* `מולידי`: accepted. 14. `אֵלִי` / `אֵלְךָ` always vocalized (the wisdom corpus's rule): accepted. 15.–16. as listed. The Part 2 strings (the B oath with Enki, the star lines, the muster, the accusation, the cave lines) bind any later copy.
+
+### 23.8 Merged after parts 3–4 (BH 277, AG 117 entries, 2026-11-06)
+The Part 3–4 tables (`project.md`) bind DB and any later copy. **Rulings:** 17. the `שוב` gate also licensed by *gi* / *gi-gi* (ORACC *gi[turn]*), in `bilgames_tools.py`. 18. *ḫazin* (loan of Akk. *ḫaṣṣinnu*, the epic's `גרזן`) = `גרזן`; HA 55 *aga-silig* keeps `גרזן` too (*a₂-aš-ĝar* holds `קרדום`): a split of two Sumerian axe words in one Hebrew, recorded at HA 55 and BH B99. 19. *uzu* `בשר` beside HA's *su* `בשר`: accepted (one Hebrew concept; noted). 20. *e₂-la₂* `חֻפָּה` with its note: accepted. 21. the minstrel keeps each version's form (`לוּגַלְגַּבַּגַּר` Me-Turan, `לוּגַלְגַּבַּגַּל` the variants; §23.2 amended). 22.–35. accepted as listed; notably AG: no word for "counsel" in the poem (`עצה` stays out), *di₄-di₄-la₂* `קטנים`, the young men `בחורים`. For DB MT.F40 the translator of DB decides `לשפוט משפט` / `לחרוץ משפט` in both copies.
+
+### 23.9 Merged after parts 5–6 (DB 495 entries, 2026-11-06): all five texts drafted (1,332)
+The Part 5–6 tables bind any later copy. **The excerpt:** 25 MT.F lines revised (Part 6 "Excerpt revisions"), applied by the coordinator to the flood references' §3 (`annotated.rtl.md` `>` lines, `translation.rtl.md` lines, and Enki `אנכי` → `אנקי` in the §3 apparatus); `verify DB` now checks the identity: 0 differences. **Rulings:** 36. the gifts *la₂* `שקל`; 37. *ḫalam* `כחד` throughout (the *me*, the seed, the name); 38. *šagina* `מצביא` (AG) beside *ensi₂* `מושל`; 39. *di ku₅* `שפט משפט` (BH precedent) in F40, F85, F133, N-G22 – the law corpus's *di* `דין` noted at F40, left to the lead's harmonization; 40.–46. as listed (*a-ra₂* `דרך`, *ba* there `מסר`; *kar* `נמלט` / `חוטפת`; F11 *ga-* read as a quoted vow). *engur* `מצולה` (`תְּהוֹם` reserved). The refrain `X – שכב, ולא יקום עוד.` [equivalent ↔ Job 14:12].
