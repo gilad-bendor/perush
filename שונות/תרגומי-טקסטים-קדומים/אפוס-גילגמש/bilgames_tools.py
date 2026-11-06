@@ -107,6 +107,10 @@ FORMULAS_B = [
     ('HA HB BH AG DB', r'\{d\}nin-sumun₂?', r'נינסון', 'Ninsun = נִינְסוּן'),
 ]
 
+# In this tool only: Magan `מָגָן` (HA 113; the kings corpus's licence) licenses the corpus-wide `גן` gate.
+for _k in list(nw.RESERVED):
+    if '(גן|גנה' in _k:
+        nw.RESERVED[_k] = nw.RESERVED[_k] + [r'ma₂-gan|magan']
 nw.RESERVED_KEY.update({k: RESERVED_B for k in TEXTS})
 nw.TRAPS_KEY.update({k: TRAPS_B for k in TEXTS})
 for keys, trx, hrx, what in FORMULAS_B:
