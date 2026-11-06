@@ -196,6 +196,7 @@ Draft from the form, not from the German. The TLA's morphology (`data`) names th
 | gstj "palette" | `קֶסֶת` | Ezek 9:2 |
 | ktm.t "fine gold" (Amen. 18.12) | `כֶּתֶם` ★ | Job 28:16, Lam 4:1 (always vocalized: "stain") |
 | ḫsbḏ "lapis lazuli" | `סַפִּיר` | not a loanword: the cross-corpus rule (*uqnû* = `סַפִּיר` [equivalent], guidelines §6.7) |
+| zšn / sšn "lotus" (NU5 81A) | `שׁוֹשָׁן` / `שׁוֹשַׁנָּה` | Song 2:1–2, 1 Kgs 7:19, 22 (added 2026-11-06, Round 6 run 2) |
 | msḥ "crocodile" | `תִּמְסָח` | Arabic *timsāḥ* < Coptic < Egyptian msḥ; Modern Hebrew `תִּמְסָח`. `תַּנִּין` never (the dossier rule; Ex 7:9–12 in the apparatus) |
 
 ### 4.3 Amenemope and the Torah / Proverbs (fixed before drafting; see also §8)
@@ -879,3 +880,17 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
    (the MT's) / ḏ.t "eternity" `עַד` – the pun kept (85.9–10 = 85.14–15).
 5. **For the lead:** wꜣ.t `דרך` / `אורח`; jꜣḫ.w `זיו` (NU1) / `אורה` (NU2, NU4); wḏꜥ `הקצה` / `שפט` (by sense); jꜥn.w `הידד` /
    `צער`; ꜣḫ.t `תועלת` (AM) hides the akh-sense; wsr.w `משוטי־החתירה` / AM's ḥp.t.
+#### 12.6.5 NU5 (BD 83 … 64L), translator 5, merged 2026-11-06 (full table in project.md, "NU5")
+1. **Loanword added (§4.2, gated):** zšn "lotus" = `שׁוֹשָׁן` [cognate: loanword].
+2. **Terms:** jd.t (cow) `עגלה` (HC; Gen 41's `פָּרוֹת`, `יְפוֹת מַרְאֶה` only in the apparatus); šr.t `נחיר`; ssn `נשם`; the
+   winds `משב־הצפון / הדרום / המערב / המזרח` (`רוּחַ` is ṯꜣw's); the breath formula `תתן לי / תן לי את הרוח הנעימה אשר
+   בנחיריך`; wḥm ꜥnḫ m-ḫt mt `אחזור על החיים אחרי המוות`; sḏfꜣ / ḏfꜣ.w / kꜣ.w `כלכל` / `מזון` / `צידה`; mk.t `הגנה`; mꜥwḥ.w
+   `משוט` (= NU3's mjḥ.w); BD 64's light words sšp `אור`, šw `שמש`, stw.t `קרני־אור`, mꜣw.t `אלומות`, wꜣwꜣ `בוהק`, jꜣḫ.w
+   `אורה`; rʾ-pr `היכל` / jwꜣ.y `קודש`. Names: `מֶנְכָּאוּרַא`, `חוֹרְגֶ׳דֶף`, `סָאח` (Orion), `סֶשָׁאת`, `רוּטִי`, `חוֹנְסוּ`,
+   `חַיִת`, `נֶדוּ`; the seven cows, the bull and the four rudders translated as names.
+3. **Copy for the later parts:** 64L.19, .32, .35, .41 ↔ 64K (NU8); 109.3–5, 109.7 ↔ BD 149 (NU10); 52.3–7 ↔ BD 189 (NU7):
+   copy where the Egyptian is the same (`data` lists them).
+4. **Gates:** `כתיבה` no longer read as ־תיבה; `לשאול` "to ask" stays passed line by line with `[היתר שער]` (an exemption
+   could hide a real "to Sheol").
+5. **Open (for the user):** 84.5–6 `n rḫ=j` kept as a negation ("I did not know") against the TLA's rhetorical question;
+   BD 109's "northern" gate as Nu writes it (the TLA: sic); BD 83, 84, 124's shifted titles in Nu.

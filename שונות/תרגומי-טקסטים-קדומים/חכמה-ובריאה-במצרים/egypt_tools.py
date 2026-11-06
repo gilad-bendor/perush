@@ -540,6 +540,7 @@ RESERVED = [
     (W + alt("שיטה", "שיטים", "עצי שיטים") + E, r"šnḏ|šnḏ,t", "שִׁטָּה only for šnḏ.t 'acacia' [cognate: loanword, Ex 25:5]"),
     (W + alt("קוף", "קופים", "הקוף", "הקופים") + E, r"\bgf\b|gjf|gfn|gwf|ꜥnꜥn", "קוֹף only for gf [cognate: loanword, 1 Kgs 10:22]; the baboon jꜥnꜥ = בַּבּוּן"),
     (W + alt("כתם", "הכתם", "כתמים") + E, r"ktm|kꜣ~tj~mt", "כֶּתֶם 'fine gold' only for ktm.t [cognate: loanword, Job 28:16, Lam 4:1] (AM 18.12)"),
+    (W + alt("שושן", "השושן", "שושנים", "שושנה", "השושנה", "שושנת", "שושני") + E, r"zšn|sšn|zššn|sššn", "שׁוֹשָׁן / שׁוֹשַׁנָּה only for zšn 'lotus' [cognate: loanword, Song 2:1–2, 1 Kgs 7:19] (NU5)"),
     (W + alt("זרת", "הזרת", "בזרת") + E, None, "זֶרֶת never: ḏr.t 'hand' = יָד"),
     # --- other corpora's reservations, carried over for safety ---
     (W + alt("צדק", "צדיק", "צדקה", "הצדיק", "הצדק", "צדקתו", "צדיקים") + E, None, "צֶדֶק / צַדִּיק never: mꜣꜥ.t = אֱמֶת, mꜣꜥ-ḫrw = אֲמִתִּי־קוֹל (renderings §4.1)"),
@@ -660,7 +661,7 @@ def check_line(key, lab, heb, body, fixed, out):
     bad = 0
     plain = strip_marks(heb)
     # whole words that a gate's prefix class misreads (TB 6,3 `לברוח` "to flee", 8,7 `מרוח` "smeared"): not the gated word
-    plain = re.sub(r"(?<![א-ת])[ובלכה]?(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי|שמחה|שמחת|שמחתי|שמחתו|השמחה|משיט|משיטה|משיטים|המשיטים|להשיט|השיט|לוחם|לוחמים|הלוחמים|הלוחם|ללוחמים|מושבות|המושבות|במושבות|למושבות)(?![א-ת])", " ", plain)   # + BD 90–91, 111; SI B70 (`שמחה` ≠ ש־מחה)
+    plain = re.sub(r"(?<![א-ת])[ובלכה]?(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי|שמחה|שמחת|שמחתי|שמחתו|השמחה|משיט|משיטה|משיטים|המשיטים|להשיט|השיט|לוחם|לוחמים|הלוחמים|הלוחם|ללוחמים|מושבות|המושבות|במושבות|למושבות|כתיבה|הכתיבה|בכתיבה|לכתיבה|כתיבת)(?![א-ת])", " ", plain)   # + BD 90–91, 111; SI B70 (`שמחה` ≠ ש־מחה)
     if re.search(r"ḥmsi̯|ḥms\b|ḥmsj|ḥms\.", license_text(key, lab)):   # `לשבת` "to sit" (ḥmsj), not the root שבת (WE 3,8)
         plain = re.sub(r"(?<![א-ת])ו?לשבת(?![א-ת])", " ", plain)
     plain = re.sub(r"(?<![א-ת])[ובלמהכש]?רא־סטאו(?![א-ת])", " ", plain)   # Rosetau (Rʾ-sṯꜣ.w), not the root ברא (NU1 18.34)
