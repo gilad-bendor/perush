@@ -639,3 +639,60 @@ Every changed line of the flood references §3 (`../../סיפורי-המבול-�
 - **The dream and its solver** (H8–H9) ↔ Gen 41:8 [equivalent], with *bur₂* = `פשר` [cognate via *pašāru*] and `פָּתַר` reserved.
 - **Corrections of ETCSL / the excerpt that matter**: F11 is a cohortative (a quoted vow), not a past; F25's "advice" is *a-ra₂* "way", and the excerpt's `אנכי` was "I", not Enki; F39 `העולם התחתון` → `הארץ`; H12–H13 "Unug, arise! Open up the Euphrates!" are narrative (the levy *zig₃-ga*, ḫamṭu), not the herald's imperatives; H20 "receded" is "rose away"; H9 "no one but" is two clauses; F143–F144 have "brought to you" (*tum₃*), not "you were told"; K6, K11 *ud ul-la-ta* "since distant days", not "for future days".
 - **What each recension keeps, adds, drops**: Nibru alone keeps the household and gifts lists in full (N2), the six-day illness (B4), the umbilical "was told you" (E17–E18), Sisig's light as a wish (E5) and the final praise of Bilgameš (N2.42); Me-Turan alone keeps the whole dream twice, the flood oath, the river burial, and the closing consolation and praise of Ereškigala; Me-Turan adds "who knew how" (A9), "the man by night" (A18), "alone" (F126); Nibru has the gazelle in a trap where Me-Turan has a goat (A19 / MT.A17), the bound fish where Me-Turan has a fish in a well (A18 / MT.A16), "skirmish" where Me-Turan has "evil" (E24 / F150).
+
+## Independent fidelity review (2026-11-06)
+A separate read of all 1,332 entries against the transliteration and the ORACC lemma + morph (`bilgames_tools.py lines`), after the translators' three passes: every content word, brackets (guidelines §6.8: whole restored words in `[ ]`, a sign or ending restored inside a word unbracketed, `?` where the edition has one), person, aspect, modal prefixes, negations, genitives; the apparatus checked where a fix touched it. **39 lines fixed** (HA 4, HB 3, BH 12, AG 1, DB-1 8, DB-2 11); by kind: brackets 23, uncertainty `?` missing 6, an omitted (read) word 3, person 2, genitive read as apposition 1, an added preposition / possessive 2, an ellipsis with no sign behind it 2. No ruling of §23 changed; the excerpt (MT.F3–F41, F123–F128) untouched (notes at the end). `verify all`: 0 problems; `check_bible_quotes.py`: 0 problems.
+
+### HA (4)
+- 20: `ההר – מה הוא לך?` → `ההר – מה אתה לו?` (person: *kur-ra a-na-bi-me-en* "what are you of the mountain", 2nd person – as the פירוק already said; ETCSL's "what would you want with" turns the subject; תרגומים updated)
+- 61B: `[את] הרמה` → `את הרמה` (bracket: *⸢ḫur⸣-[saĝ]* is partly preserved; `את` has no source sign)
+- 61D: `הארז [אל לבו] לא נפל` → `הארז אל לבו לא נפל` (bracket: *šag₄-⸢ga⸣-[a-ni]* – only the ending restored)
+- 128: `הגדולה – … [(…)] –` → `הגדולה – רגל [(…)] –` (omitted word: the damaged *⸢ĝiri₃⸣* is read, and the פירוק translates it)
+
+### HB (3)
+- 43: `בחזה ההר` → `בחזה [ההר]` (bracket: *[kur]-⸢ra⸣* – the word is restored in this copy; A 42 has it whole)
+- 157: `יעמם לנו!` → `יעמם לך!` (person: *mu-e-de₃-eb-* – *-e-* 2nd person + *-da-*; no "us" in the chain; פירוק extended)
+- 158: `[אל העיר], האם היולדת` → `[אל עיר] האם היולדת` (genitive read as apposition: *iri ama u₃-tud-da* "the city of the mother who bore", as A 174 `עיר אמך יולדתך`; פירוק extended)
+
+### BH (12)
+- B23: `גילגמש […]` → `גילגמש` (bracket: nothing lost after the name)
+- B40: `השור הגדול – לגילגמש משוחרר –` → `השור הגדול – (על) גילגמש – משוחרר –` (added preposition: no dative in *gud gal {d}gilgameš₂ šu bar-ra*; the פירוק's own `(על)`)
+- B67A: `מזמ[רו …]` → `מזמרו […]` (bracket inside a word)
+- B88: `עפר העטה עליהם` → `עפר העטה? עליהם` (*dul₅?*)
+- MT.A36: `משפט [שופט] (אתה) – [לא] אשחררך שם!` → `משפט שופט (אתה) – לא אשחררך שם!` (bracket: *nu-mu-ni-bar-re* is preserved whole; *mu-un-[kud-de₃]* partly preserved, as MT.A37)
+- MT.C5: `עין [הניח עליו].` → `עין הניח (עליו).` (bracket: *im-ma-an-[sig₁₀]* partly preserved; `עליו` has no source sign)
+- MT.D28, MT.D29, MT.D31: `[יתנו]!` → `יתנו!` (bracket: *ḫe₂-em-⸢ma⸣-[ab-šum₂-mu]* etc. partly preserved)
+- MT.D46: `ב[גרזן] של שבעה כיכרים` → `בגרזן? של שבעה כיכרים?` (bracket inside a word; *[ḫa-zi]-⸢in?⸣*, *gu₂?-un?* carry `?`)
+- U3.A15: `את העודף [שלו – *כאגמון* … …] … – [במים אכן] כיסה [לו].` → `את העודף שלו – [*כאגמון* … …] … – [במים] אכן כיסה לו.` (brackets: *dirig-[bi]* and *[ḫu-mu-na-ab]-⸢šum₂⸣* are partly preserved words; only *gazi AM₃ GAN* and *a-a* are whole restored words)
+- U3.B2: `[אַל] תבוא!` → `אַל תבוא!` (bracket: *[nam-ba-ni-in]-ku₄-ku₄* is one word, partly preserved)
+
+### AG (1)
+- 39: `לעמוד מול עינינו` → `לעמוד מול העין (שלנו)` (added possessive: no first person in *igi nu-mu-un-da-ru-gu₂-uš*; ETCSL's "us" is its sense; הערות updated)
+
+### DB-1 (8)
+- A3: `נאה־האיברים? … [… – שכב, ולא יקום עוד].` → `נאה־האיברים? [(…) – שכב, ולא יקום עוד].` (one optional lost sign, not two gaps)
+- H18: `אשר ימצא? …` → `אשר ימצא? –` (an ellipsis with no sign behind it)
+- H22: `[… אשר הוא] אוהב –` → `[…] אשר הוא אוהב –` (bracket: *[… ki aĝ₂]-⸢ĝa₂-ni⸣* – the verb word is partly preserved; the old bracket fell on the wrong words)
+- N2.2: `אשר הוא אוהב,` → `[אשר הוא אוהב],` (bracket: *ki [aĝ₂-ĝa₂-ni]* – the verb word is restored whole)
+- N2.3: `את המשקה, … [` → `את המשקה, יד? [` (omitted word: *⸢šu?⸣* is read, as the פירוק has it)
+- N2.23: `לכוהני־האֵן המתים` → `[לכוהני־האֵן] המתים` (bracket: *[en]* restored)
+- N2.28: `את מַתָּתָם [שקל].` → `את מַתָּתָם שקל.` (bracket: *ba-an-[la₂]* partly preserved)
+- N2.34: `אנשי … [… …] עירו …` → `אנשי [… …] עירו? –` (two ellipses with no signs behind them; *⸢iri?⸣*)
+
+### DB-2 (11; none in the excerpt lines)
+- MT.F72: `אשר המלך [` → `אשר המלך? [` (*⸢lugal-e?⸣*)
+- MT.F79: `אבן־החן שלך` → `אבן־החן? שלך` (*za?-⸢zu⸣*)
+- MT.F95: `… … […] …` → `יום … […] …` (omitted word: *ud* is read; the פירוק has `"יום"`)
+- MT.F98: `אשר יד אין לו` → `אשר [יד] אין לו` (bracket: *[šu nu]-⸢tuku⸣* – *šu* is a whole restored word)
+- MT.F119: `אֶנְקִי [משיב]:` → `אֶנְקִי משיב:` (bracket: *⸢im⸣-[ma-ni-ib-gi₄-gi₄]* partly preserved)
+- MT.F133: `[שופט משפט], פסק־דין פוסק,` → `שופט [משפט], פסק־דין פוסק,` (bracket: *[di-da]* restored whole, *[mu-un-kud]-da₂* partly preserved)
+- MT.F135: `[בעת] ההיא` → `[בעת ההיא]` (bracket: *[ud-bi-a]* is one word, restored whole)
+- MT.F137: `[הכָּבֵד – אַל] ימות;` → `[הכָּבֵד] – אַל ימות;` (bracket: *[nam-ba]-⸢ug₅-ga⸣* partly preserved; *ur₅* restored whole)
+- MT.F163: `מוצא,` → `מוצא (?),` (*al-pad₃?-de₃-eš*)
+- MT.H20: `מימיו קמו מעליו` → `מימיו קמו? מעליו` (*ba-da-⸢zig₃?⸣*)
+- MT.H32: `בית חזק` → `בית? חזק` (*⸢e₂?⸣*)
+
+### Not changed (for the coordinator)
+- **The excerpt** (kept identical with the flood references; the same bracket rule would change): MT.F3 `[בעת] ההיא` → `בעת ההיא` (*[ud]-⸢bi⸣-a* is one word, partly preserved); MT.F8 `[התקרב]` → `התקרב` (*mu-⸢ni⸣-[te-a-ba]*); MT.F125 `[והיו] חיים(?)` → `(היו) חיים(?)` (*nam-til₃-[am₃]*: only the copula ending is restored, and the verb `והיו` has no other source); MT.F35 `[(לנצח)]` fills an unread *[(X)]* with a guess – better `[(…)]`, the guess in the apparatus. F135 / I8 and F1 / C9 differ in brackets only (`verify` notes them; each copy follows its manuscript).
+- Borderline readings left as drafted (the apparatus argues them): HA 124A *nam-ma-sud-[su₃]-ud* `לא יאריך` (the *na-* with a reduplicated base read as a negative; ETCSL agrees); HA 159 *dumu-gir₁₅-ra* (genitive: "the heart of the freeborn", rendered as an apposition); AG 53 *igi mu-un-suḫ-suḫ-u₃-ne* `יבחרו!` (a jussive for a plain *marû*; the variant has the imperative); DB-1 E11 / MT.F140 *nam-ba-an-ĝa₂-ĝa₂* `אַל ישים` (the prohibitive default where ETCSL reads "there would be no light"); MT.H16 *ba-ra-an-zal* `בַּל עבר` (ORACC *bara-*; *ba-ta-* "passed" is also possible).
+- **Coordinator, after the review:** the four excerpt fixes the reviewer proposed (MT.F3 `בעת ההיא`, F8 `התקרב` unbracketed – signs restored inside a partly preserved word; F35 `[(לנצח)]` → `[…]`, the guess kept in the note; F125 `(היו) חיים(?)` – only the copula ending is restored) applied to both copies (here and the flood references §3, annotated + translation); `verify DB` identical. The borderline readings (HA 124A, 159; AG 53; DB E11 / F140; H16) stay as drafted, defended in their apparatus.
