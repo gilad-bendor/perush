@@ -111,6 +111,8 @@ FORMULAS_B = [
 for _k in list(nw.RESERVED):
     if '(גן|גנה' in _k:
         nw.RESERVED[_k] = nw.RESERVED[_k] + [r'ma₂-gan|magan']
+    if '(שוב|שבה' in _k:   # *gi₄* also written *gi* / *gi-gi* (ORACC gi[turn]; BH B50, MT.D22)
+        nw.RESERVED[_k] = nw.RESERVED[_k] + [r'gi-gi|\bgi\[turn|-in-gi\b|-ni-gi\b']
 nw.RESERVED_KEY.update({k: RESERVED_B for k in TEXTS})
 nw.TRAPS_KEY.update({k: TRAPS_B for k in TEXTS})
 for keys, trx, hrx, what in FORMULAS_B:
