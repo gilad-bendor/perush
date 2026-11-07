@@ -177,5 +177,125 @@ and "such a charm" (8). No modern translation quoted.
 - A compound or a formula fixed in one poem (TH 657 `מגן מפני פורענות`) can collide with a title word fixed later
   (ἀσπίς `מָגֵן`): fix the shared words of a new text against the whole corpus before its first line.
 
+## Translator SH, part 2 (139–480)
+
+### Scope
+SH 139–480 (341 entries; the base has no 298): the shield (139–320), the encounter and Athena's counsel (321–349),
+Heracles' speech and the clash (350–412), Cycnus' death (413–423), Heracles against Ares (424–466), the spoils, the
+burial and the Anauros (467–480). Thirteen `## ` headings. The poem is now drafted whole (479 entries); the placeholder
+is gone.
+
+### Sources consulted
+As in part 1 (`data`, `lexmap`, LSJ by knowledge, the LXX tool, every verse printed with `--show`). The Iliad parallels
+are named by book and line only, never quoted.
+
+### Decisions
+- **ἐν δέ "ועליה"** – the ekphrasis's formula (on the `צִנָּה`, feminine), kept throughout.
+- **The personified figures** (translated names, no article, the Greek gender, renderings §3.2):
+  Φόβος `בֶּהָלָה` (m.), Δεῖμος `אֵימָה` (TH 934), Ἔρις `מָדוֹן`, Κήρ `קֵר` / Κῆρες `הַקֵּרוֹת` (table), and new:
+  Προΐωξις `מִרְדָּף`, Παλίωξις `מִרְדַּף־נֶגֶד` (154), Ὅμαδος `הֲמֻלָּה` (155; the common noun at 257 also `הֲמֻלָּה`),
+  Ἀνδροκτασίη `הֶרֶג־אֲנָשִׁים` (155), Κυδοιμός `מְבוּכָה` (156; Isa 22:5's triad in the note), Ἀχλύς `עֲרָפֶל` (264, f.).
+  The common noun κλόνος (148) `מְבוּסָה`.
+- **Metals and materials:** ἤλεκτρον `חַשְׁמַל` ★ (142) – the LXX's word for `חַשְׁמַל` (Ezek 1:4, kind a); κύανος `כְּחֹל`;
+  τίτανος `סִיד`; ἐλέφας `שֶׁנְהָב`; κασσίτερος `בְּדִיל` (TH); χρυσός `זָהָב`.
+- **Arms (with part 1):** κόρυς `כּוֹבַע` (417), κυνέη `קוֹבַע`, τρυφάλεια `קַסְדָּה` (199) – three helmet words; αἰχμή
+  `כִּידוֹן` (193; "blade, point" `חוֹד` at 289, a sense split); δόρυ `חֲנִית`, ἔγχος `רֹמַח`, μελίη `חֲנִית־הַמֵּילָה`
+  (renderings' `מֵילָה`); ἄορ `חֶרֶב`; τελαμών `רְצוּעָה`; **ἀσπίς `מָגֵן` at 417** (its only occurrence), beside σάκος `צִנָּה`.
+- Others: κέγχρος `דֹּחַן` (398; LXX Ezek 4:9, kind a); ἀλαλητός `תְּרוּעָה` (382; LXX ἀλαλαγμός, a sister word);
+  λίς `לַיִשׁ` ★ (172; λέων `אַרְיֵה`); αἰγυπιός `נֶשֶׁר`; τέττιξ `צִיקָדָה` (WD); φόρμιγξ `כִּנּוֹר` (κιθαρίζω `נִגֵּן`;
+  Gen 4:21 LXX κιθάρα in the note); αὐλός `חָלִיל`, σῦριγξ `חֲלִיל־קָנֶה`; ὑμέναιος `שִׁיר־נִשּׂוּאִים` (`כַּלָּה` gated);
+  ἑκατόμβη `זֶבַח־מֵאָה`; σῆμα `אוֹת` (385) / `צִיּוּן` (477, the grave marker; sense split); τάφος `קֶבֶר`; ἀκτή Δημήτερος
+  `גַּרְעִינֵי דֶּמֶטֶר` (290, F25 without ἱερήν); ἀγλαΐη `הָדָר`; ἔναρα `שָׁלָל` (ἐναρίζω `שָׁלַל`; σκυλεύω `בָּזַז`);
+  μένος `זַעַף` (TH); ἀκόρητος `שֶׁאֵינוֹ יוֹדֵעַ שֹׂבַע` (≠ ἄατος `שֶׁאֵינוֹ שָׂבֵעַ`); μεγαλήτωρ `רַם־הַלֵּב`; κλειτός `נוֹדָע`
+  (κλυτός `מְהֻלָּל`); κελαινός / ἐρεμνός `אָפֵל` (synonyms); ἰός / ὀιστός `חֵץ` (synonyms, recorded); λοιγός `שׁוֹאָה`;
+  πέρθω `בָּזַז`; βροτολοιγός `מַשְׁמִיד־הָאֱנוֹשׁ` (`מכלה` hits the `כלה` gate).
+- **Gate-driven choices:** γυμνόω `חָשׂוּף` (334, 418, 460; `עָרֹם` stays γυμνός's); πλευρά `צַד` (`צֵלָע` never); πόλις
+  "their city" `העיר שלהם` (`עירם` = the `ערם` gate); ἀρέσκω `רָווּ` (not `השביעו`); "never" `אַף פַּעַם` (310);
+  `על המרכבה` for ἐς δίφρον in a θεά-line (the `אל` trap).
+- **Sense splits recorded:** αἰδώς "respect" `יִרְאַת־כָּבוֹד` (354; renderings' `בּוּשָׁה` does not fit); νόημα "thought"
+  `מַחֲשָׁבָה` (222; 88 `הבנה`); ὄζος "branch" `עָנָף` (394; 181 `נֵצֶר`); ἀμέρδω "deprive" `קִפַּח` (331; TH 698 `סנוור`);
+  τεύχω passive "become" `נַעֲשָׂה` (366); κτυπέω of Zeus' thunder `הִרְעִים` (383; 61 `הלמו`); ἐπέχω `כִּוֵּן` / `עָצַר`
+  (350 / 446); χαλεπός "hard" `קָשֶׁה` (386; 44 `אָנוּשׁ`); σχέτλιος `אַכְזָר` (149; 92 `אֻמְלָל`); ἀμαιμάκετος `שֶׁאֵין לוֹ
+  מַעֲצוֹר` (207; TH 319 `בלתי נכבשת`); φράζω middle `הִתְבּוֹנֵן` (218); παῖς of a married daughter `בַּת` (356).
+- Infinitives for imperatives: `הַשְׁאֵר`, `פָּצוֹעַ`, `וְסוֹג` (332, 335–336).
+- The suspected lines: 204, 210 `{חשודה}`; 203, 205, 209, 211 `{חשודה בחלקה}` with the bracketed words' Hebrew in `⟦ ⟧`.
+
+### New names (for §14.1 and the table)
+| Greek | Hebrew | Note |
+|---|---|---|
+| Λαπίθαι | הַלַּפִּיתִים | |
+| Καινεύς, Δρύας, Πειρίθοος, Ὅπλευς, Ἐξάδιος, Φάληρος, Πρόλοχος | קַיְנֵאוּס, דְּרִיָּאס, פֵּירִיתוֹאוֹס, הוֹפְּלֵאוּס, אֶקְסָדִיּוֹס, פָלֵרוֹס, פְּרוֹלוֹכוֹס | the Lapiths (179–180) |
+| Μόψος, Ἀμπυκίδης, Τιταρήσιος | מוֹפְּסוֹס, בֶּן־אַמְפִּיקְס, הַטִּיטָרֵסִי | 181 |
+| Θησεύς, Αἰγείδης | תֵּזֵאוּס, בֶּן־אַיְגֵאוּס | the familiar form |
+| Κένταυρος | הַקֶּנְטָאוּרִים | |
+| Πετραῖος, Ἄσβολος, Ἄρκτος, Οὔρειος, Μίμας, Πευκεΐδαι, Περιμήδης, Δρύαλος | פֶּטְרָאיוֹס, אַסְבּוֹלוֹס, אַרְקְטוֹס, אוּרֵיאוֹס, מִימָס, בְּנֵי־פֶּאוּקֵאוּס, פֶּרִימֵדֵס, דְּרִיָּאלוֹס | the Centaurs (treebank: ἄρκτος, Πευκεί) |
+| Περσεύς, Δανάη, Δαναΐδης | פֶּרְסֵאוּס, דָּנָאָה, בֶּן־דָּנָאָה | |
+| Ἀμφιτρυωνιάδης | בֶּן־אַמְפִיטְרִיּוֹן | |
+| Λυγκεύς | לִינְקֵאוּס | |
+| Τραχίς, Κῆυξ, Θεμιστονόη | טְרָכִיס, קֵאִיקְס, תֶּמִיסְטוֹנוֹאָה | |
+| Πύλος | פִּילוֹס | |
+| Ἐνυάλιος | אֶנִיָּאלִיּוֹס | Ares' name |
+| Μυρμιδόνες, Ἰαωλκός, Ἄρνη, Ἑλίκη, Ἄνθεια, Ἄνθη | הַמִּירְמִידוֹנִים, יָאוֹלְקוֹס, אַרְנָה, הֶלִיקָה, אַנְתֵיאָה, אַנְתָה | |
+| Ἄναυρος | אַנָאוּרוֹס | the river |
+| Λητοΐδης | בֶּן־לֵטוֹ | |
+| Πυθώ | פִּיתוֹ | Delphi |
+| Σείριος (lower case in the treebank) | סִירִיּוּס | WD's form |
+| Προΐωξις, Παλίωξις, Ὅμαδος, Ἀνδροκτασίη, Κυδοιμός, Ἀχλύς | מִרְדָּף, מִרְדַּף־נֶגֶד, הֲמֻלָּה, הֶרֶג־אֲנָשִׁים, מְבוּכָה, עֲרָפֶל | (T) translated names; lower case in the treebank |
+
+### Open decisions / problems for the coordinator
+1. **Tool:** `verify SH --strict` reports one problem, SH 166 `REQUIRED δράκων = דְּרָקוֹן`: the plural `הדרקונים` fails
+   because the REQUIRED regex is `דרקון` (final nun), while the gate regex already allows `דרקונים`. Suggested fix in
+   `hesiod_tools.py` line 319: `r"דרקו[ןנ]"`. Not edited (the brief forbids editing the tool's lists). At 233 the dual is
+   `דרקון ודרקון`, which passes.
+2. αἰδώς at 354 rendered `יראת־כבוד` (not `בּוּשָׁה`) – confirm the split.
+3. The three helmet words and the two arrow words (above) – confirm.
+4. 258–260 (the Moirai) and 282–283, 293/296 (doublets) are suspected by many editors though not bracketed by
+   Evelyn-White: noted in the entries.
+
+### Progress log
+- 2026-11-07, 09:30–09:52 UTC: 139–480 drafted in eight saved chunks (each followed by `fill`, `verify`,
+  `check_bible_quotes`).
+- Review (a) fidelity, on the `>` lines: 334–336 (doubled "see"; infinitives as imperatives), 413 (an added
+  "(seeking)" removed), 429 (passive), 425, 349, 451. (b) consistency: lexmap on every recurring lemma; formulas F3/F5,
+  F24, F28, F32, F34 in place; near-repeats copied (150=163, 297≈313, 333≈425, 334≈460, 279≈348, 380≈474, 414≈453).
+  (c) Hebrew: gate homographs fixed (`עירם`, `מכלה`, `אל`), vocalization of `אַתֵנָה` / `הָאֵל(ִים)` / `אֵלוֹת`.
+- `verify SH --strict`: 1 problem (the tool issue above). `check_bible_quotes.py` on the annotated file and project.md:
+  0 problems (one remembered quotation, Josh 7:6, corrected after the check).
+- The clean translation (`translation--intro-SH.rtl.md`, `build`) not made.
+
+### The text on its own terms
+- The shield as a world of terror first (144–177: Phobos, Eris, Ker, snakes, boars and lions), then of peace (270–313).
+- The images move and sound: "as if alive" (189, 194, 244); clattering teeth (164), the ringing shield (232), the
+  shrieking hubs (309).
+- Perseus hovering, touching nothing (216–222): the marvel of a god's craftsmanship.
+- The Keres drinking blood (249–257) and Achlys (264–270): the most physical images of death in Archaic Greek.
+- The city at peace: wedding, dances, ploughing, harvest, vintage, games (270–313) – the farmer's year of WD.
+- Zeus himself marvels (318): the shield is his gift to his son.
+- The cicada and Sirius date the battle (393–401), as in WD 582–588.
+- Ares wounded twice by a mortal with Athena's help (359–367, 455–466), as Diomedes in Iliad 5.
+- The ending: Cycnus' grave washed away by the Anauros at Apollo's command (477–480): the robber of the pilgrims to
+  Pytho loses even his memorial.
+
+### Key parallels
+- 142 ἤλεκτρον = the LXX's word for `חַשְׁמַל` (Ezek 1:4) – kind (a).
+- 398 κέγχρος = the LXX's `דֹחַן` (Ezek 4:9) – kind (a).
+- 382 ἀλαλητός ~ the LXX's ἀλαλαγμός for `תְרוּעָה` (Ps 89:16).
+- 243 laceration of the cheeks in mourning (Lev 19:28, Jer 16:6); 269 dust on the head (Josh 7:6).
+- 202 Apollo's lyre and Jubal's `כִּנּוֹר` (Gen 4:21; LXX κιθάρα).
+- 281 lyre and pipe at the feast (Isa 5:12).
+
+### Lines shared with other texts
+Internal near-repeats listed in the log; with the Iliad (named, not quoted): 156–159 ≈ Il. 18.535–538; 314 ≈ Il.
+18.607; 384 ≈ Il. 11.53–55, 16.459; 421–423 ≈ Il. 13.389–391, 16.482–484; 466 ≈ Il. 5.855–867.
+
+### Proposals for the shared renderings
+ἤλεκτρον `חַשְׁמַל` ★; κέγχρος `דֹּחַן`; λίς `לַיִשׁ` ★; κόρυς `כּוֹבַע`; τρυφάλεια `קַסְדָּה`; αἰχμή `כִּידוֹן`; δόρυ `חֲנִית`;
+φόρμιγξ `כִּנּוֹר`; ἀλαλητός `תְּרוּעָה`; τέττιξ `צִיקָדָה`; ὑμέναιος `שִׁיר־נִשּׂוּאִים`; ἑκατόμβη `זֶבַח־מֵאָה`; the names
+and translated names above; the REQUIRED regex fix for δράκων.
+
+### Lessons for the guidelines
+- The REQUIRED checks should accept the Hebrew plural with medial letters (`דרקונ`): a plural is not a departure.
+- In an ekphrasis, fix the anaphora (`ועליה`) and the gender of the object (here `צִנָּה`, f.) before the first line.
+
 ## Parallels index
 Generated into `../parallels-index.md` by `../build_parallels_index.py`.
