@@ -678,7 +678,14 @@ Full list: `6-לוגלבנדה-וציפור-האנזוד/project.md` ("Part LZ2"
 - **Words:** *nu-gig* `הנּוּגִיג` transliterated (the law corpora's `קְדֵשָׁה` is blocked by the `קדש` reservation: a split for the lead); *eme sig gu₇* `לשון שפלה אכל` (Šuruppag); *zi … pad₃* `בחֵי … נשבע` (the Bilgameš poems); *gi₄* `שלח` (send) / `שב` (return); *dim-dim* `עמודים` (not `מגדל`); *banšur* `שולחן`; Martu `מַרְטוּ` [cognate `הָאֱמֹרִי`].
 - **Rulings:** all seven open decisions kept as drafted. **Tool:** `data` / `skel` take the base order (A–F follow 353): call `203 F`, then `354 417`.
 
+#### 12.6.5 Part ES (ES 1–283, 52A, 54A–D, B1–B7), 2026-11-07
+Full list: `7-אנמרכר-ואנסוחגירנה/project.md` ("Part ES"); ES complete (295 entries, `verify ES --strict` OK, `translation.rtl.md` built); the cycle complete.
+- **EA's messenger formulas held** (53–55, 54A–D = EA 178–179, 186); the running messenger 45–47 = LC 273–275 (varying with the Sumerian). Fixed in ES: the message 25–38 → 56–69 → reversed in 78–113; the sorcerer 140–149 → 153–162; cow 172–184 → goat 185–197; one frame for the five river contests; the herdsmen's complaint 220 → Saĝburu's sentence 265.
+- **Words:** *nam-maš-maš* `מְלַחֲשׁוּת` (coined; `מלאכת` reserved); *kur-gi₄* "goose" `אווז` (EA 436 and LZ 220 have `אווז(?)` for the uncertain *u₅*: **a recorded split** – *u₅* stays with its `?`); *suḫ₁₀* `עטרה` (an overlap with Etana's Akk. *meānu*: for the lead); *i₃* (dairy) `שמן` (LC; note "clarified butter"); *dim₂-ma* `תבונה` (Ur lament); *ma-na* `מָנֶה` [cognate]; *zi nam-til₃* `נשימת החיים` (not Gen 2:7's `נשמה`); by sense: *dag* `שוטט`, *la₂* `הושיט` / `המעיט` / `תלה`, *ĝiri₃* "path" `משעול`, *kud* `קטע`, *amar* `עגל` / `גוזל` / `עֹפֶר`; *ur* (126–127) `כלב` (EA's dog contest).
+- **Rulings:** the 13 open decisions kept as drafted (80 without a subject: both readings open). **Tool:** licences for Aruru (the `ארור` gate) and *šudu₃* (the `ברך` gate).
+
 ## Changelog
+- 2026-11-07: §12.6.1–§12.6.5 merged after each part (LC1, LC2, LZ1, LZ2, ES); *alan* reversed to `פֶּסֶל` (§12.6.3).
 - 2026-11-07: §12 the Uruk cycle (projects 5–7: LC, LZ, ES) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed by the Round 6 run 3 coordinator before the first part.
 - 2026-11-02: §11.7 the 2026-11-02 harmonization (*aggu* `קֶצֶף`).
 - 2026-10-31: §11 the Cuthaean Legend (project 4) – names, grammar, formulas, reserved and gated words; fixed by the Round 5 run 5 coordinator before the first part.

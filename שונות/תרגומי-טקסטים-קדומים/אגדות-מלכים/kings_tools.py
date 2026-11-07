@@ -254,6 +254,10 @@ for _k in list(RESERVED_CY):   # homographs (LC2): *ur₅* "liver" = כָּבֵ�
         RESERVED_CY[_k] = RESERVED_CY[_k] + [r'ur\[liver']
     if 'זקן|זקנה' in _k:
         RESERVED_CY[_k] = RESERVED_CY[_k] + [r'sun₄|sun\[beard']
+    if 'ארור|ארר' in _k:                  # Aruru `אֲרוּרוּ` (ES 94; always vocalized: TRAPS)
+        RESERVED_CY[_k] = RESERVED_CY[_k] + [r'aruru|a-ru-ru']
+    if 'ברך|ברכ' in _k:                    # *šudu₃* (ETCSL's spelling of *šud₃*; ES 258, Gudea's formula)
+        RESERVED_CY[_k] = RESERVED_CY[_k] + [r'šudu₃']
 for _k in ('LC', 'LZ', 'ES'):
     RESERVED[_k] = RESERVED_CY
 
