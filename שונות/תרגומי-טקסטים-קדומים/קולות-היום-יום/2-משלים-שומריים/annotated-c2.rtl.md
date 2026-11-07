@@ -9,6 +9,122 @@
 
 ---
 
+### A1
+`ki gul-la-ba ki ḫe₂-en-gul`
+> טרם תורגם
+
+### A2
+`ki nu-gul-la-ba gu₂-ĝiri₃ ḫe₂-en-ĝal₂`
+> טרם תורגם
+
+### A3
+`ki-ni ki lu-ub₂{sar} kud-da ḫe₂-a`
+> טרם תורגם
+
+### A4
+`ĝarza-bi ĝiri₃ ba-da-kur₂`
+> טרם תורגם
+
+### A5
+`di-ir-ga-a ki ba-e-gul`
+> טרם תורגם
+
+### A6
+`me-bi ba-da-ḫa-lam`
+> טרם תורגם
+
+### A7
+`ĝarza-bi ĝiri₃ na-ab-ta-ab-kur₂-ru-de₃-en-ze₂-en`
+> טרם תורגם
+
+### A8
+`di-ir-ga-a ki nam-ba-e-gul-lu-de₃-en-ze₂-en`
+> טרם תורגם
+
+### A9
+`me-bi na-ab-ta-ab-ḫa-lam-e-en-ze₂-en`
+> טרם תורגם
+
+### A10
+`gud-de₃ ki-gub-ba na-ab-ta-ab-kur₂-ru-de₃-en-ze₂-en`
+> טרם תורגם
+
+### A11
+`nam-tar-ĝu₁₀ ga-am₃-dug₄ in-na-am₃`
+> טרם תורגם
+
+### A12
+`pa ga-am₃-e₃ su-lum mar-am₃`
+> טרם תורגם
+
+### A13
+`nam-tar-ĝu₁₀ ušur-ĝa₂ ga-na-ab-dug₄`
+> טרם תורגם
+
+### A14
+`in-na ma-ĝa₂-ĝa₂`
+> טרם תורגם
+
+### A15
+`a-a igi i-ni-in-bar nam-tar-ĝu₁₀ ba-dib-ba`
+> טרם תורגם
+
+### A16
+`ud nam-tar gig-ga-ka ba-tu-ud-de₃-en`
+> טרם תורגם
+
+### A17
+`nam-tar-ĝu₁₀ gu₃-nam ama-ĝu₁₀ mu-da-an-kur₂`
+> טרם תורגם
+
+### A18
+`zu-a ur₃-ra mu-un-ne-e-ed₃`
+> טרם תורגם
+
+### A19
+`ušur ama-ĝu₁₀ e₂-a-na zi mu-un-di-ni-gi₄`
+> טרם תורגם
+
+### A20
+`nam nu-tar-re ki-gul-la gaba ba-an-⸢ri⸣-[me-en]`
+> טרם תורגם
+
+### A21
+`lu₂ kug la₂ zu-me-en igi-za ga-gub ma-an-dug₄-e-še`
+> טרם תורגם
+
+### A22
+`nam nu-tar-re a₂-sag₃-e gaba ba-an-ri-me-en`
+> טרם תורגם
+
+### A23
+`kug niĝ₂-gur₁₁ zu-me-en igi-za ga-gub ma-an-dug₄-e-še`
+> טרם תורגם
+
+### A24
+`nam-tar ur-ra-am₃ zu₂ mu-un-da-an-kud`
+> טרם תורגם
+
+### A25
+`tug₂-mu-dur₇-ra-gin₇ im-ma-tab-tab`
+> טרם תורגם
+
+### A26
+`a-ba-am₃ lu₂-ĝu₁₀ ḫu-mu-un-da-an-zu`
+> טרם תורגם
+
+### A27
+`nam-tar tug₂-ga-am₃ edin-na mu-un-na-an-la₂`
+> טרם תורגם
+
+### A28
+`nam-tar ud ḫuš kalam-ma ri-a`
+> טרם תורגם
+
+### A29
+`du-lum (*1 ms. has instead:* nam-tar) ur-gir₁₅-ra-am₃ eĝer-ra-na mu-un-DU`
+> טרם תורגם
+
 ## 2.15–2.34: העני
 
 ### A30
@@ -60,6 +176,10 @@
 - **פירוק:** `ud? buru₁₄-ka` "ביום הקציר"; `šu ga-rig₂ am₃-du₃-du₃-e` – *šu … du₃* "לשים יד" + ga-rig₂ "מסרק (לצמר)" {V.m:~;e}.
 - **הערות:** בקציר הוא מסרק צמר – עבודה של עני, כי אין לו שדה לקצור.
 
+### A37
+`[X] X X niĝ₂-na e₂ šar₂-ra [X] X X X BAR`
+> טרם תורגם
+
 ### A38
 `ukur₃-re ⸢al⸣-ĝal₂-la X X`
 > העני – כשיש לו … …
@@ -83,6 +203,18 @@
 `gi₁₆-sa da-ri₂-še₃ nu-mu-[X]`
 > אוצר לעד – לא […]
 - **פירוק:** `gi₁₆-sa` "אוצר"; `da-ri₂-še₃` "לעד"; `nu-mu-[X]` – שבור.
+
+### A42
+`ukur₃-re niĝ₂-tuku-na sun₇?-na [X X]`
+> טרם תורגם
+
+### A43
+`[…] X X [X X]`
+> טרם תורגם
+
+### A44
+`e₂-e₂? ⸢ukur₃?⸣-ukur₃?-ra? teš₂-e la-ba-gam-e`
+> טרם תורגם
 
 ### A45
 `inim ukur₃-ra-še₃ šu la-ba-ši-in-ti`
@@ -140,6 +272,10 @@
 - **פירוק:** `ka-ta kar-ra` "מה שנמלט מן הפה (שנחסך)"; `ur₅-ra ab-su-su` – sug₆ "להחזיר, לשלם" {V.b:~} (מוכפל).
 - **הערות:** *sug₆* "להחזיר, להשלים" = `פָּרַע` (`שִׁלֵּם` שמור ל־*šullumu*, קורפוס החוקים). מה שהעני חוסך מפיו – הולך לחוב.
 
+### A54
+`ukur₃ kug tukur₂`
+> טרם תורגם
+
 ### A55
 `ukur₃ si-ig kalam-ma-ka`
 > העני – החלש שבארץ.
@@ -172,6 +308,34 @@
 - **פירוק:** `gaba ud-da-kam` "חזה הסערה הוא"; `i₃?-tuš-tuš-u₃-de₃` – tuš "לשבת" (מוכפל, שם הפועל); `i-ni-in-ĝar` – ĝar {V.i.n:~}.
 - **הערות:** *ud* = `סְעָרָה`. העני יושב תמיד מול הסערה.
 
+### A60
+`du-du nam-ukur₃-re a₂ bi₂-ib₂-ĝar`
+> טרם תורגם
+
+### A61
+`lu₂ du-du-ra ninda? ga?-na-⸢šum₂⸣`
+> טרם תורגם
+
+### A62
+`lu₂ nu-du-du-⸢ra⸣ me-ta ga-mu-na-ab-tum₃`
+> טרם תורגם
+
+### A63
+`lu₂ di-di-ra ninda ga-na-ab-šum₂`
+> טרם תורגם
+
+### A64
+`lu₂ nu-di-di-ra me-ta [da]-mu-na-i-ir`
+> טרם תורגם
+
+### A65
+`[…] ⸢šag₄?⸣ dub-ba […]`
+> טרם תורגם
+
+### A66
+`⸢dub-sar ni₂-te⸣-a-⸢ni⸣ X X X […]`
+> טרם תורגם
+
 ## 2.37–2.54: הסופר
 
 ### A67
@@ -192,12 +356,48 @@
 > (אם) ידו נאה ונאה – הוא הסופר!
 - **פירוק:** `[šu]-ni ḫe₂-sag₉-sag₉` – sag₉ {ḫa:~} (מוכפל); `e-ne-am₃ dub-sar-re` "הוא – הסופר".
 
+### A70
+`nar-re en₃-du 1(DIŠ)-am₃ ḫe₂-en-zu`
+> טרם תורגם
+
+### A71
+`ad ša₄-am₃ ḫe₂-en-sag₉ e-ne-am₃ nar-ra`
+> טרם תורגם
+
 ### A72
 `dub-sar šu ka-ta sa₂-a e-ne-am₃ dub-sar-ra-am₃`
 > סופר שידו משתווה לפה – הוא הסופר!
 - **פירוק:** `dub-sar šu ka-ta sa₂-a` – "סופר (ש)ידו מן הפה משתווה" (כותב כפי שמכתיבים לו); `e-ne-am₃ dub-sar-ra-am₃`.
 - **תרגומים:** ETCSL: "A scribe whose hand can follow dictation is indeed a scribe!" – כמונו.
 - **הערות:** *sa₂* = `הִשְׁתַּוָּה` (1.1).
+
+### A73
+`nar za-pa-aĝ₂ nu-dug₃-ga ḫu-ru-um nar-e-ne`
+> טרם תורגם
+
+### A74
+`dub-sar ḫu-ru a-[ga-aš gi₄] e₂-dub-ba-X`
+> טרם תורגם
+
+### A75
+`dub-sar šu nu-a nar ĝili₃ nu-a`
+> טרם תורגם
+
+### A76
+`dub-sar an-ta-me-en lu₂ ki-ta nu-me-en`
+> טרם תורגם
+
+### A77
+`dumu um-mi-a {na₄}gug-gin₇ ti-ba un-buru₃`
+> טרם תורגם
+
+### A78
+`e-ne dub-sar-ra-am₃`
+> טרם תורגם
+
+### A79
+`ti-ba un-buru₃ {na₄}za-gin₃-na-am₃`
+> טרם תורגם
 
 ### A80
 `dub-sar eme-gir₁₅ nu-mu-un-zu-a a-na-am₃ nam-dub-sar-ra-ni`
@@ -206,11 +406,27 @@
 - **תרגומים:** ETCSL: "What kind of a scribe is a scribe who does not know Sumerian?" – כמונו.
 - **הערות:** *eme-gir₁₅* "הלשון הילידית" – השומרית, שבימי בבל הקדומה הייתה כבר שפת ספר ולא שפת דיבור. *nam-dub-sar* = `סוֹפְרוּת`.
 
+### A81
+`lu₂ a-a nu-mu-un-da-ak-da-am₃ eme kaš₄-kaš₄ me-da ḫe₂-en-tum₃`
+> טרם תורגם
+
 ### A82
 `dub-sar eme-gir₁₅ nu-mu-un-zu-a inim bal-e me-da ḫe₂-en-tum₃`
 > סופר שאינו יודע שומרית – תרגום מאין יביא?
 - **פירוק:** `dub-sar eme-gir₁₅ nu-mu-un-zu-a`; `inim bal-e` "לתרגם" (1.36); `me-da ḫe₂-en-tum₃` – tum₃ {ḫa.V.n:~} "מאין יביא".
 - **תרגומים:** ETCSL: "A scribe who does not know Sumerian -- from where will he produce a translation?" – כמונו.
+
+### A83
+`dub-sar šudum-ma im-ma ba-an-lal`
+> טרם תורגם
+
+### A84
+`dub-sar [im]-⸢ma⸣ šudum-e ba-an-lal`
+> טרם תורגם
+
+### A85
+`dub-sar šag₄-ba-me-en KA […]`
+> טרם תורגם
 
 ### A86
 `dub-sar lu₂ gu₃ ra-aḫ nam-tag-ga-ni ab-gu-⸢ul⸣`
@@ -268,6 +484,22 @@
 > בנאי שנטמא – של נושא־הטיט.
 - **פירוק:** `šidim pe-el-la₂` "בנאי"; `im-BU-BU-kam` "של נושא הטיט".
 
+### A96
+`kindagal eme-gir₁₅ ba-an-zu-a`
+> טרם תורגם
+
+### A97
+`[…] lu₂ eme-⸢gir₁₅⸣ […]`
+> טרם תורגם
+
+### A98
+`dub-sar šag₄ dab₅-ba nu-un-zu-a inim bal-e me-da ḫe₂-em-tum₃`
+> טרם תורגם
+
+### A99
+`nar za-pa-aĝ₂ ḫe₂-en-dug₃ e-ne-am₃ nar-am₃`
+> טרם תורגם
+
 ## 2.58–2.69: השועל
 
 ### A100
@@ -277,12 +509,36 @@
 - **תרגומים:** ETCSL: "The fox lies (?) even to Enlil." – כמונו.
 - **הקבלה:** *ka₅-a* = `שׁוּעָל` [equivalent].
 
+### A101
+`X TU-re ⸢bar?⸣ igi? X`
+> טרם תורגם
+
+### A102
+`ka₅-a-a šag₄ ba-ab-si ubur-bi (*1 ms. has instead:* ubur ama-bi) ga ba-an-ḫad₂`
+> טרם תורגם
+
 ### A103
 `⸢ka₅⸣-a-a ama-a-bi ka₅-a ab-dirig`
 > של השועל – על אמו בשועליות עולה.
 - **פירוק:** `ka₅-a-a ama-a-bi` "השועל – (על) אמו"; `ka₅-a ab-dirig` – "שועל – עולה על" {V.b:~}.
 - **תרגומים:** ETCSL: "Each fox is even more of a fox than its mother." – כמונו.
 - **הערות:** *dirig* = `עוֹלֶה עַל` (ההשוואה בלי "טוב").
+
+### A104
+`ka₅-a-a ĝeštug₂-bi al-gig ĝiri₃-bi al-guz-e`
+> טרם תורגם
+
+### A105
+`ka₅-a kun-bi al-dugud`
+> טרם תורגם
+
+### A106
+`{ĝiš}gana₂-ur₃ la₂-am₃-me-e-[še]`
+> טרם תורגם
+
+### A107
+`ka₅-a {ĝiš}si-ĝar-bi ĝiš-ur₃-am₃`
+> טרם תורגם
 
 ### A108
 `ka₅-a-a e₂-a-ni nu-mu-da-an-⸢du₃⸣`
@@ -296,12 +552,32 @@
 - **פירוק:** `e₂ gu₅-li-na-še₃` "אל בית רעהו"; `al-tar-re ba-gub` – al-tar "עבודת בנייה" + gub "לעמוד" {ba:~}.
 - **הערות:** *e₂* = `בַּיִת`, *du₃* = `בָּנָה` (קורפוס המקדש).
 
+### A110
+`al-lub e₂-a-ni a ab-si e₂ ma-la-ga-ni-še₃ girid₂-de₃ i₃-ĝen`
+> טרם תורגם
+
+### A111
+`ka₅-a-a a-numun₂ še šu bi₂-in-dug₄`
+> טרם תורגם
+
+### A112
+`niĝ₂ nam tar-ra umuš-bi kur₂-ra-am₃-e-še`
+> טרם תורגם
+
 ### A113
 `ka₅-a ĝiri₃-suḫub₂ am-ma-ke₄ ĝiri₃-ni bi₂-in-gub nu-ub-sig₁₀-e-še`
 > השועל – על פרסת הראם – את רגלו העמיד: "לא כאב!"
 - **פירוק:** `ka₅-a` "השועל"; `ĝiri₃-suḫub₂ am-ma-ke₄` "פרסת הפר"; `ĝiri₃-ni bi₂-in-gub` "את רגלו העמיד"; `nu-ub-sig₁₀-e-še` – "לא … (אומרים)".
 - **תרגומים:** ETCSL: "A fox trod on the hoof of a wild bull: It didn't hurt (?)!" – כמונו.
 - **הערות:** השועל המתרברב, ש"דרך" על רגל השור כאילו הכאיב לו. *am* = `רְאֵם` (1.30).
+
+### A114
+`ka₅-a-a ĝidru an-da-ĝal₂ a-ba-am₃ an-tud₂-de₃-en`
+> טרם תורגם
+
+### A115
+`kišib an-ši-la₂ a-na-am₃ ab-gur-re-en`
+> טרם תורגם
 
 ### A116
 `ka₅-a-a a-ab-ba-še₃ ĝiš₃-a-ni u₃-bi₂-in-sur`
@@ -370,6 +646,10 @@
 - **פירוק:** `iri{ki}-da niĝ₂-ḫul-e` "מן העיר, הדבר הרע"; `šeg₁₁ am₃-da-gi₄-gi₄`.
 - **הערות:** השועל שהתרברב לבלוע את אורוך – בורח מנביחת הכלבים. (השוו 1.65: "בעיר שאין בה כלבים – השועל מפקח".)
 
+### A127
+`kug-zu ka₅-a šu-lu₂{mušen} šeg₁₁? ba-an-[gi₄]`
+> טרם תורגם
+
 ## 2.71–2.93: שקר, חמור ושור
 
 ### A128
@@ -388,6 +668,18 @@
 - **הקבלה:** [equivalent] *ra-gaba* = `צִיר`: `מַלְאָךְ רָשָׁע יִפֹּל בְּרָע;    וְצִיר אֱמוּנִים מַרְפֵּא` (משלי יג:יז); `כְּצִנַּת שֶׁלֶג בְּיוֹם קָצִיר צִיר נֶאֱמָן לְשֹׁלְחָיו;    וְנֶפֶשׁ אֲדֹנָיו יָשִׁיב` (משלי כה:יג) – משלי מעמיד את הציר הנאמן מול השליח הרשע; המשל השומרי מעמיד מולנו את הציר המשקר. [divergence] במשלי הציר אחראי לשולחיו; כאן – אין מי שיבדוק את דבריו.
 - **הערות:** השליח הבא מרחוק יכול לספר כל דבר – אין מי שיבדוק. *ra-gaba* = `צִיר` (ההכרעה בין הקורפוסים, 2026-10-21: מלת המקרא לשליח; `שָׁלִיחַ` = *kiĝ₂-gi₄-a*; קודם כאן `רוכב (שליח)`), מנוקד תמיד (`צירי` בלא ניקוד – "צירי לידה").
 
+### A130
+`anše al-dug₄-dug₄-ge barag al-ḫuĝ-ḫuĝ-e`
+> טרם תורגם
+
+### A131
+`anše ḫu-nu-zu kaš₄-ta e₃-a`
+> טרם תורגם
+
+### A132
+`{d}en-lil₂ lu₂ ḫu-nu-zu lirum-ta e₃-a`
+> טרם תורגם
+
 ### A133
 `anše-ĝu₁₀ kaš₄ kar-re-de₃ nu-mu-un-tum₂`
 > חמורי – לרוץ מהר – לא היה ראוי;
@@ -398,6 +690,30 @@
 `eme ak-da mu-un-tum₂`
 > לנעור – היה ראוי!
 - **פירוק:** `eme ak-da` "לעשות לשון (לנעור)"; `mu-un-tum₂` {mu.n:~}.
+
+### A135
+`anše gu₃ an-mur lugal anše-ke₄ pa-aĝ₂ an-ze₂`
+> טרם תורגם
+
+### A136
+`ba-da-ra-ab-ed₃-de₃-en-de₃-en kaš₄-a ĝen-na-e-še`
+> טרם תורגם
+
+### A137
+`anše ki-nu₂ ni₂-ba-a gu₇-gu₇`
+> טרם תורגם
+
+### A138
+`anše ĝiš₃-a-ni šag₄-ga-ni ra-ra`
+> טרם תורגם
+
+### A139
+`anše ze₂ nu-a anše naĝa dub₂ nu-a`
+> טרם תורגם
+
+### A140
+`anše nu-mu-un-su-a še₁₀ dur₂-re pad₃-da`
+> טרם תורגם
 
 ### A141
 `anše-gin₇ dam mu 3-am₃ nu-mu-un-tuku-tuku`
@@ -419,6 +735,50 @@
 - **פירוק:** `al-ĝen` – ĝen {al:~}; `ud za-ḫa-al ak-e` "את היום העלים (בזבז)"; `ul-tuš` – tuš {u.al:~} ("שישב"); `šer₇-da-am₃` "עבירה הוא".
 - **הערות:** *šer₇-da* "עבירה, פשע" = `עֲבֵרָה`.
 
+### A144
+`gud DU-am₃ {ĝiš}tukul a-ab-am₃`
+> טרם תורגם
+
+### A145
+`gu₄-zi-in-bu saĝ us₂-sa nu₂-nu₂`
+> טרם תורגם
+
+### A146
+`gud sur₁₂-ta kar-ra-gin₇ lul ab-sig₉-ge`
+> טרם תורגם
+
+### A147
+`gud sur₁₂-ra ab-sin₂-bi al-sag₉-sag₉`
+> טרם תורגם
+
+### A148
+`gud sur₁₂ us₂-sa numun nu-ĝa₂-ĝa₂`
+> טרם תורגם
+
+### A149
+`buru₁₄-da gu₇-e lag nu-bur₁₂-re`
+> טרם תורגם
+
+### A150
+`šu i₃-bur₁₂-ra numun nu-ĝa₂-ĝa₂`
+> טרם תורגם
+
+### A151
+`gud-sumun₂ gu₇-a-gin₇ giri₁₇ gu₄-ud-e-za`
+> טרם תורגם
+
+### A152
+`gud-de₃ saḫar ub-ak igi ni₂-ba zid₂-am₃`
+> טרם תורגם
+
+### A153
+`gud-de₃ al-ur₁₁-ru ur-re sur₃ an-tag`
+> טרם תורגם
+
+### A154
+`gud šag₄ sur še₁₀ sila sud-⸢am₃⸣`
+> טרם תורגם
+
 ### A155
 `gud kur₂-ra u₂ gu₇-gu₇`
 > שור נכרי – עשב אוכל ואוכל;
@@ -430,6 +790,162 @@
 `gud ni₂-ĝa₂ u₂-šim-e ba-nu₂`
 > שורי שלי – ברעב שוכב.
 - **פירוק:** `gud ni₂-ĝa₂` "השור של עצמי"; `u₂-šim-e ba-nu₂` – u₂-šim "רעב" + nu₂ "לשכב" {ba:~}.
+
+### A157
+`am-da kar-ra-ĝu₁₀-ne immal₂-e gaba ba-an-ri-en`
+> טרם תורגם
+
+### A158
+`[X X] ⸢gud⸣-da ri-a`
+> טרם תורגם
+
+### A159
+`gud kur₂-ra gud-da ri-me-e-še`
+> טרם תורגם
+
+### A160
+`ga ab-kar-re ga ba-kar-re an-us₂-sa`
+> טרם תורגם
+
+### A161
+`gala-e gana₂ e₂-e us₂-sa`
+> טרם תורגם
+
+### A162
+`gala du₅ {ĝiš}ma₂-kam`
+> טרם תורגם
+
+### A163
+`gala-e dumu-ni a ḫa-ba-an-da-ra-ra (*1 ms. has instead:* dumu-na a-a ba-da-ze₂-eĝ₃)`
+> טרם תורגם
+
+### A164
+`iri{ki} ĝe₂₆-gin₇ ḫe₂-du₃ kalam ĝe₂₆-gin₇ ḫe₂-en-til₃`
+> טרם תורגם
+
+### A165
+`gala-e bid₃-da-ni ḫa-ba-an-da-ze₂-er`
+> טרם תורגם
+
+### A166
+`aĝ₂ ga-ša-an-an-na ga-ša-an-ĝu₁₀ ba-ra-zi-zi-de₃-en-e-še`
+> טרם תורגם
+
+### A167
+`gala-e ur-maḫ-e edin-na u₃-mu-ni-in-te`
+> טרם תורגם
+
+### A168
+`ḫe₂-en-du ERIM₃?{ki}-a kan₄ {d}inana-še₃`
+> טרם תורגם
+
+### A169
+`ur šika-da-ke₄ ĝiš-a?-ni ⸢ra⸣`
+> טרם תורגם
+
+### A170
+`šeš-zu edin-na ta-am₃ mu-un-ak-e-še`
+> טרם תורגם
+
+### A171
+`X gala e₂?-ni-še₃? ga?-ab-⸢ḪAR?⸣ […] ⸢SI?⸣`
+> טרם תורגם
+
+### A172
+`[…] X {d}en-[X] NA`
+> טרם תורגם
+
+### A173
+`[…] MU e₂? lu₂?-ra X [X]-an-SI`
+> טרם תורגם
+
+### A174
+`gala-e {ĝiš}ma₂ še-ka-ni ḫa-ba-da-an-su`
+> טרם תורגם
+
+### A175
+`bar-rim₄-ma ba-e-ĝen`
+> טרם תורגם
+
+### A176
+`[…] X X (X)`
+> טרם תורגם
+
+### A177
+`ninda gala-kam lag-ga ab-gu-ul ki-la₂-bi al-tur`
+> טרם תורגם
+
+### A178
+`arad gala-a-ke₄ tilla₂ šeg₁₁ al-gi₄-gi₄`
+> טרם תורגם
+
+### A179
+`kurum₆-ma-ĝu₁₀ lag-ga ab-gu-ul ki-la₂-bi al-tur`
+> טרם תורגם
+
+### A180
+`lag kurum₆-ma-ĝu₁₀ ga-ab-dug₄`
+> טרם תורגם
+
+### A181
+`dag-gi₄-a {ĝiš}šukur mu-te-te`
+> טרם תורגם
+
+### A182
+`gala mu₇-mu₇ nu-dug₃-ga un₃ gala-e-ne`
+> טרם תורגם
+
+### A183
+`ur šub₆-ba saĝ KA.DU ḫa-ḫa-za`
+> טרם תורגם
+
+### A184
+`me-še₃ gi₄-mu-un-ze₂-en gub-ba`
+> טרם תורגם
+
+### A185
+`ur galam-galam igi-kal lu₂ teš₂ nu-tuku-am₃`
+> טרם תורגם
+
+### A186
+`ur si-im-si-im e₂-e₂-a ku₄-ku₄`
+> טרם תורגם
+
+### A187
+`ur niĝ₂-u₂-zug₄ gu₇-a`
+> טרם תורגם
+
+### A188
+`ur niĝ₂ ud zal-le nu-taka₄-a`
+> טרם תורגם
+
+### A189
+`ur X gu₇ tilla₂-a šaḫ₂ in-gu₇ {dug}šaĝan SI X […]`
+> טרם תורגם
+
+### A190
+`ur simug-ke₄ {na₄}šu-min₃-e nu-mu-un-zig₃ pisaĝ₂ dug-a i-im-zig₃`
+> טרם תורגם
+
+### A191
+`ur lul-la gu₂ sag₉-sag₉ gu₂-tar sag₉`
+> טרם תורגם
+
+### A192
+`ur ki-tuš-bi nu-mu-zu-a`
+> טרם תורגם
+
+### A193
+`ur ni₂-bi-še₃ kug-⸢zu⸣-a lugal-bi-ir SA um-ra`
+> טרם תורגם
+
+### A194
+`ur al-ed₃-de₃ {ĝiš}šukur al-ed₃-⸢de₃⸣ ba-ni-ib-sig₁₀-ge`
+> טרם תורגם
+
+### A195
+`ur-gir₁₅ ĝiš₃ bir₂-bi eme šub₆-be₂`
+> טרם תורגם
 
 ### A196
 `⸢iri⸣ nu ⸢ur-gir₁₅⸣ ka₅-a nu-banda₃-am₃`
@@ -444,6 +960,10 @@
 - **פירוק:** `iri ad₄-e-ne-ka` "בעיר החיגרים"; `ba-za lu₂-kaš₄-a-kam` "הנכה – של הרץ הוא".
 - **תרגומים:** ETCSL: "In the city of the lame, the cripple is a courier." – כמונו.
 - **הערות:** = 1.66 (B13), אותה עברית.
+
+### A198
+`ba-za a-na-am₃ gub-ba-⸢bi⸣`
+> טרם תורגם
 
 ## 2.121–2.124: טוב ורע, נישואים וגירושים
 
@@ -481,6 +1001,74 @@
 - **הקבלה:** [equivalent] `כִּי יִקַּח אִישׁ אִשָּׁה וּבְעָלָהּ; וְהָיָה אִם לֹא תִמְצָא חֵן בְּעֵינָיו כִּי מָצָא בָהּ עֶרְוַת דָּבָר וְכָתַב לָהּ סֵפֶר כְּרִיתֻת` (דברים כד:א) – הלקיחה והשילוח.
 - **הערות:** *tuku* = `לָקַח` (אשה), *taka₄* = `עָזַב` (גירושים, 1.127). הנישואים מן הרגש, הגירושים מן השכל.
 
+### A204
+`sag₉-ga-ne-ne ḫul-ne-ne`
+> טרם תורגם
+
+### A205
+`ḫul-ne-ne sag₉-ga-ne-ne`
+> טרם תורגם
+
+### A206
+`lu₂ ur₃-ra al-til₃-la`
+> טרם תורגם
+
+### A207
+`lu₂ e₂-a-ra al-zalag-zalag-ga-e-še`
+> טרם תורגם
+
+### B1
+`a-šag₄ na-[ab-daĝal-e]`
+> טרם תורגם
+
+### B2
+`še mu-na-[X]`
+> טרם תורגם
+
+### B3
+`KA×A?-ba […] u₂ de₅-ga ba-[X]`
+> טרם תורגם
+
+### B4
+`u₂ de₅-de₅-[ga] kalag-ga-še₃`
+> טרם תורגם
+
+### B5
+`sig₉-ga bar-rim₄-[ma] mu-na-an-[tuš]`
+> טרם תורגם
+
+### B6
+`[saĝ sar-ra] ⸢siki⸣ ba-an-tuku-tuku`
+> טרם תורגם
+
+### B7
+`u₂ de₅-de₅-ga {d}ezina₃ ba-an-dirig-dirig-e-še`
+> טרם תורגם
+
+### B8
+`[e₂ gul-gul]-la gi gul?-⸢la⸣`
+> טרם תורגם
+
+### B9
+`[e₂ gul]-⸢la⸣ kug-sig₁₇ gul-⸢la⸣`
+> טרם תורגם
+
+### B10
+`[…] ⸢nu⸣-gur-am₃ a nu-ĝar-ra-ba`
+> טרם תורגם
+
+### B11
+`[X]-bi nu-gu₇`
+> טרם תורגם
+
+### B12
+`[en]-⸢gin₇⸣ DU saĝ-ki DU`
+> טרם תורגם
+
+### B13
+`⸢saĝ⸣-gin₇ DU en-gin₇ DU`
+> טרם תורגם
+
 ## 2.138–2.146: הבית
 
 ### B14
@@ -495,6 +1083,14 @@
 > בטן אל בטן הוספה – בית אדם נהרס.
 - **פירוק:** `šag₄-gal šag₄-gal-e ba-ab-taḫ` – šag₄-gal "מזון, בטן"; `e₂ lu₂ al-gul-e` – gul {al:~;e}.
 - **הערות:** ידיים עובדות בונות; פיות אוכלים הורסים. *gul* = `כָּלָה` (A60) – כאן `נהרס` כניגוד ל"נבנה".
+
+### B16
+`{ĝiš}al u₂ nu-kud {ĝiš}kibir₂ u₂ nu-kud`
+> טרם תורגם
+
+### B17
+`e₂ ĝuruš gal-gal-e-ne-ka {ĝiš}al {ĝiš}dusu al-ur₁₁-⸢ru⸣`
+> טרם תורגם
 
 ### B18
 `ama ĝuruš 8-e tu-ud-da niĝ₂ sig-ga ba-nu₂`
@@ -512,6 +1108,26 @@
 - **הקבלה:** [divergence] `בֵּית רְשָׁעִים יִשָּׁמֵד;    וְאֹהֶל יְשָׁרִים יַפְרִיחַ` (משלי יד:יא) – משלי מבטיח שבית הרשע יישמד; המשל השומרי רואה את השקרן הורס את בית הנאמן.
 - **הערות:** *lu₂ zid* = `אִישׁ אֱמֶת` (לא `צַדִּיק`, השמור).
 
+### B20
+`e₂-a lu₂ zu-bi mu-un-gul`
+> טרם תורגם
+
+### B21
+`en₃-bi-a ba-tar-re-[(X)]`
+> טרם תורגם
+
+### B22
+`e₂-e kislaḫ ḫe₂-eb₂-us₂`
+> טרם תורגם
+
+### B23
+`a-šag₄-ga sur₁₂ ḫe₂-eb₂-⸢us₂⸣`
+> טרם תורגם
+
+### B24
+`e₂-a-ni e₂ zag iri-gin₇ ab-ba ḫe₂-[X]`
+> טרם תורגם
+
 ### B25
 `e₂ dam-e gu₃ nu-de₂-dam`
 > בית אשר בו האשה אינה מדברת –
@@ -527,6 +1143,54 @@
 `⸢šag₄? nu-ši⸣-ib-⸢kuš₂?⸣-u₃`
 > לב לא יינוח בו?
 - **פירוק:** `šag₄? nu-ši-ib-kuš₂?-u₃` – kuš₂ "להתעייף; להירגע" {nu.V.ši.b:~}.
+
+### B28
+`[…] X`
+> טרם תורגם
+
+### B29
+`[…] X X`
+> טרם תורגם
+
+### B30
+`[…] nu-gi₄`
+> טרם תורגם
+
+### B31
+`⸢a⸣-da ab-tuš kur-šag₄-še₃ igi du₈`
+> טרם תורגם
+
+### B32
+`⸢ni₂⸣-bi-še₃ igi nu-du₈`
+> טרם תורגם
+
+### B33
+`a-da-be₂ niĝ₂ im-[ba nu-zu]`
+> טרם תורגם
+
+### B34
+`kur-šag₄-ge ⸢kur?⸣ […]`
+> טרם תורגם
+
+### B35
+`id₂ […]`
+> טרם תורגם
+
+### B36
+`[(X)] X X […]`
+> טרם תורגם
+
+### B37
+`⸢lu₂⸣ id₂-⸢da?⸣ […]`
+> טרם תורגם
+
+### B38
+`e₂-gal gud-de₃ kun-[bi ḫe₂-dab₅]`
+> טרם תורגם
+
+### B39
+`e₂-gal id₂ maḫ-[am₃] šag₄-bi [gud] ⸢du₇-du₇⸣-[dam]`
+> טרם תורגם
 
 ## 2.155–2.160: ההיכל
 
@@ -548,6 +1212,10 @@
 > אוּתוּ – את ידי האריכה!
 - **פירוק:** `{d}utu?` "אותו"; `šu-ĝu₁₀ gid₂-i-ma-ni-ib` – *šu gid₂* "להאריך יד; לקבל תפילה" (ציווי).
 - **הערות:** "האריכה את ידי" – קבל את תחינתי (ETCSL "accept my prayer"). אותו, אל הצדק, נגד ההיכל המסוכן.
+
+### B43
+`[e₂]-⸢gal⸣ ki-ma-an-ze₂-er nu-⸢um?⸣-zu dab₅-dab₅-be₂`
+> טרם תורגם
 
 ### B44
 `e₂-gal a-ri-a nu-da₁₃-da₁₃`
@@ -605,3 +1273,191 @@
 - **תרגומים:** ETCSL: "May you be a household built up by twin sons." – כמונו.
 - **הקבלה:** [equivalent] `יִתֵּן יְהוָה אֶת הָאִשָּׁה הַבָּאָה אֶל בֵּיתֶךָ כְּרָחֵל וּכְלֵאָה אֲשֶׁר בָּנוּ שְׁתֵּיהֶם אֶת בֵּית יִשְׂרָאֵל` (רות ד:יא) – "בנו את הבית": ברכת נישואים ובנים.
 - **הערות:** ברכה: "בניית בית" בבנים, כמו בעברית (`בֵּן` / `בָּנָה`; גם בשומרית *dumu* ו־*du₃* מצטלצלים).
+### B53
+`e₂-še₃ ga-ĝen-na saĝ a-ab-kal`
+> טרם תורגם
+
+### B54
+`e₂ kur₉-ra-ni 50-am₃`
+> טרם תורגם
+
+### B55
+`e₂ numun til-til-la-še₃ a-ba-am₃ mu-un-tum₃-me-en`
+> טרם תורגם
+
+### B56
+`e₂ lugal-bi nu-tuš-a šag₄-bi-a nu-gur-re-en`
+> טרם תורגם
+
+### B57
+`[…] X i₃-bal […] ḪAR?`
+> טרם תורגם
+
+### C1
+`⸢ud?⸣ ma-da an-šum₂-⸢ma?⸣ en ki pa-rim₄-bi-im`
+> טרם תורגם
+
+### C2
+`mušen an-na um{mušen}-e dug₃-ga`
+> טרם תורגם
+
+### C3
+`ku₆ engur-ra eštub{ku₆} gi dug₃-ga`
+> טרם תורגם
+
+### C4
+`niĝ₂-ur₂-limmu₂ peš₂-ĝiš-gi dug₃-ga`
+> טרם תורגם
+
+### C5
+`mušen ba-dal-dal ama dili-bi ba-an-tuš`
+> טרם תורגם
+
+### C6
+`mušen ba-dal-dal {d}nin-a-zu ḫa-la-zu-e-še`
+> טרם תורגם
+
+### C7
+`mušen-du₃ ĝiš-pap-ḫal-la-ka niĝ₂ al-gu₇-e`
+> טרם תורגם
+
+### C8
+`mušen ku₆ gu₇-e u₃ nu-um-ši-ku-[ku]`
+> טרם תורגם
+
+### C9
+`⸢mušen⸣ KA.DUB.ŠEŠ a-na-am₃ ab-⸢ak?⸣`
+> טרם תורגם
+
+### C10
+`um{mušen} gu₃ de₂ […] nu-⸢sag₉?⸣ (*1 ms. has instead:* [X]-a gu-du gid₂ […])`
+> טרם תורגם
+
+### C11
+`um{mušen} saĝ-ki [(X)] nu-X [(X)]`
+> טרם תורגם
+
+### C12
+`um{mušen}-gin₇ a am₃-gir₅-gir₅-⸢e⸣`
+> טרם תורגם
+
+### C13
+`ir₇-saĝ{mušen} gu₃ de₂-de₂ {ĝiš}kiri₆ me-te-bi`
+> טרם תורגם
+
+### C14
+`[dar{mušen} gu₃] de₂ a-šag₄-ga me-te-⸢bi⸣-[im]`
+> טרם תורגם
+
+### C15
+`[… gu₃] ⸢de₂⸣ [e₂]-⸢gal⸣-la me-te-⸢bi⸣-[im]`
+> טרם תורגם
+
+### D1
+`diĝir sizkur-ra me-te-bi-im`
+> טרם תורגם
+
+### D2
+`[X]{mušen} ku₆ engur-ra-ke₄ […] ba-ab-taḫ`
+> טרם תורגם
+
+### D3
+`[a-ra₂]-⸢bu⸣{mušen} niĝ₂ a₂-ba-ka nu-gu₇`
+> טרם תורגם
+
+### D4
+`[…] UŠ?-ta I NE-NE […] (*1 ms. has instead:* [X]{mušen} DU ⸢IM?⸣ […])`
+> טרם תורגם
+
+### D5
+`[X] TUM?-ba nu-gur-re {im}šu-rin-na-ta ba-gur-re (*1 ms. has instead:* […] ⸢DU?⸣ X-ba nu-nir-ra)`
+> טרם תורגם
+
+### D6
+`[…] ⸢saĝ⸣-du suḫur{ku₆} saĝ-du maš₂-gur-ra-ŠEŠ{ku₆} (*1 ms. has instead:* [X]{mušen}-ra) ḫe₂-da-gu₇-e`
+> טרם תורגם
+
+### D7
+`⸢a₂⸣-še ĝiš-gi-a nam-mu-nu₂-de₃-en peš₂-ĝiš-gi-a [i₃]-⸢gu₇⸣-e-en`
+> טרם תורגם
+
+### D8
+`[…] ⸢na⸣-an-de₂-e-en ⸢ĝiri₃?⸣ gub-gub-e an-DU`
+> טרם תורגם
+
+### D9
+`⸢id₂⸣-da a na-de₂-en peš₂-bi am₃-ed₃-de₃`
+> טרם תורגם
+
+### D10
+`[X] u₅{mušen}`
+> טרם תורגם
+
+### D11
+`[X]-ta ku₅-ra₂`
+> טרם תורגם
+
+### D12
+`su-din{mušen} 1(DIŠ)-am₃ ab-tum₃`
+> טרם תורגם
+
+### D13
+`[…] u₂-bi X`
+> טרם תורגם
+
+### D14
+`X{mušen}-gin₇ ib₂?-ba-ta sun₄-za ga-bi₂-ib-tud₂-de₃-en`
+> טרם תורגם
+
+### D15
+`[X X (X)] X ⸢gir⸣-ra-bi`
+> טרם תורגם
+
+### D16
+`[…] AM₃-bi`
+> טרם תורגם
+
+### D17
+`2 e-sig{mušen} 2 gu₂-sur-ra{ku₆} (*1 ms. has instead:* gu₂-⸢sur-ra⸣{mušen}) 3 suḫur{ku₆}`
+> טרם תורגם
+
+### D18
+`2 eštub{ku₆} 2 suḫur{ku₆} (*1 ms. adds:* 2) ku₆-ab-ba{ku₆}`
+> טרם תורגם
+
+### D19
+`{ĝiš}banšur {d}en-lil₂-la₂-ka ba-ĝal₂-la`
+> טרם תורגם
+
+### D20
+`pisaĝ-ninda-ĝar {d}en-lil₂-la₂-ka`
+> טרם תורגם
+
+### D21
+`i₃ ku₆ i₃ mušen-na-ka gu₂-zu-še₃? SAR-re-eš₂ ḫe₂-em-DU`
+> טרם תורגם
+
+### D22
+`a-ba-am₃ saḫar mu-un-de₆ (*1 ms. has instead:* mu-un-zig₃)`
+> טרם תורגם
+
+### D23
+`a-ba-am₃ {ĝiš}ma₂ bi₂-in-du₈`
+> טרם תורגם
+
+### D24
+`[a]-ba-am₃ šir₃-e dur₂-dur₂-ru-da mu-un-[X]`
+> טרם תורגם
+
+### D25
+`[…] X še? ze₂-ze₂ še-zu X X […]`
+> טרם תורגם
+
+### D26
+`[…] X NA lum-⸢lum⸣ […]`
+> טרם תורגם
+
+### D27
+`[…] X […]`
+> טרם תורגם
+

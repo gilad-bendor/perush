@@ -7,7 +7,7 @@ Written 2026-10-21 (round 2, run 5), adapted from ../קינות-על-ערים/la
 wisdom_tools.py (Akkadian eBL texts). Add a project as a PROJECTS entry.
 
 Usage (from any directory):
-  python3 -I netherworld_tools.py verify KEY [--strict]   KEY = IS | IN | NE | GEN | ER. Checks (exit 1 on an error):
+  python3 -I netherworld_tools.py verify KEY [--strict]   KEY = IS | IN | NE | GEN | ER | DD. Checks (exit 1 on an error):
       1. every entry `### <label>` has exactly one `> ` Hebrew line and one backticked source line, which equals the
          base text's line (IS: the eBL normalization, metrical bars ignored; IN: ETCSL's transliteration, notes in
          *…* and variant parentheses ignored); no label is duplicated;
@@ -60,6 +60,11 @@ PROJECTS = {
     # yet). Lines 126–162 are fixed (renderings §12.6) and shared with the flood references (FLOOD_REF).
     'ER': dict(dir='5-ארה-ואישום', annotated=['annotated.rtl.md'], kind='ebl',
                ebl=[('', 'eBL/Erra-SB-I/reading-edition.md')]),
+    # Round 6 run 4 (2026-11-07). DD: Dumuzid's Dream, ETCSL 1.4.3 (from the live ETCSL page, tools/etcslhtml2md.py)
+    # + ORACC Q000347, aligned by content (align='content'), since ORACC holds variant and unlabelled lines.
+    'DD': dict(dir='6-חלומו-של-דומוזיד', annotated=['annotated-1.rtl.md', 'annotated-2.rtl.md'], kind='etcsl',
+               etcsl='ETCSL/1.4.3--Dumuzids-Dream/transliteration.md',
+               oracc='ORACC/epsd2-literary--Q000347--Dumuzids-Dream/Q000347--lemmatised-morph.md', align='content'),
 }
 
 NIQQUD = re.compile('[֑-ֽֿ-ׇ]')  # keeps the maqaf U+05BE
@@ -418,11 +423,37 @@ def source(key):
         return [(lab, n, n + ' ' + lem) for lab, n, lem in ebl_lines(P)]
     src = etcsl_lines(P['etcsl'], P.get('versions'))
     lem = oracc_lem(P['oracc'])
+    if P.get('align') == 'content':
+        return [(lab, t, t + ' ' + extra) for (lab, t), extra in zip(src, align_content(src, lem))]
     out = []
     for i, (lab, t) in enumerate(src):
         extra = lem[i][1] if i < len(lem) else ''
         out.append((lab, t, t + ' ' + extra))
     return out
+
+
+def align_content(src, lem):
+    """For each ETCSL line, the lemma line of the most similar ORACC line (difflib; ORACC's ŋ read as ĝ), searched
+    near the expected position (2026-11-07, DD)."""
+    import difflib
+    def key(x):
+        x = re.sub(r'\*\*[^*]+\*\*', '', x).replace('ŋ', 'ĝ')
+        return re.sub(r'[\[\]⸢⸣?!«»⟨⟩()*]|\s+', ' ', clean_tr(x)).strip()
+    ok = [key(o) for o, _ in lem]
+    res, j = [], 0
+    for lab, t in src:
+        k = key(t)
+        best, bi = 0.0, None
+        for i in range(max(0, j - 6), min(len(lem), j + 12)):
+            r = difflib.SequenceMatcher(None, k, ok[i]).ratio()
+            if r > best:
+                best, bi = r, i
+        if bi is not None and best >= 0.6:
+            res.append(lem[bi][1])
+            j = bi + 1
+        else:
+            res.append('')
+    return res
 
 
 def clean_tr(s):
