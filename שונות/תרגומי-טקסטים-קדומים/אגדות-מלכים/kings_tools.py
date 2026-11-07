@@ -327,7 +327,13 @@ FORMULAS = {'EA': [
 
 # The Uruk cycle shares Enmerkar's formulas (the messenger, the journey, the glad foot); its own are added in §12.3
 # (FORMULAS_CY: fixed by the first copy, then checked in every text of the cycle).
-FORMULAS_CY = [
+FORMULAS_CY = [  # renderings.md §12.6 (fixed by the first copy)
+    (r'an-še₃ igi ḫe₂-em-ši-ib-il₂', r'השמימה – עיניים אכן נשא', 'LC the prayer 1 (§12.6.1)'),
+    (r'^a-a tud-da-na-gin₇ er₂ ba-ši-in-pad₃$', r'^כמו אל אביו מולידו – דמעות אליו מצא;$', 'LC the prayer 2 (§12.6.1)'),
+    (r'šu sag₉-sag₉-ga-ni ḫur-ru-um kur-ra-kam mu-na-ab-zi', r'^את ידיו הנאות – במערת ההר – אליו מרים:$', 'LC the prayer 3 (§12.6.1)'),
+    (r'er₂-(ra-)?na šu ba-an-ši-in-ti', r'את דמעותיו לקח', 'LC "accepted his tears" (§12.6.1)'),
+    (r'nam-ba-tur₅-tur₅-de₃(-en)?$', r'– אל אחלה!$', 'LC the refrain (§12.6.1)'),
+    (r'^\{kuš\}maš-li-um-e niĝ₂-si-sa₂-e$', r'^בדליי־העור – \(הכול\) במישרים,$', 'LC the provisions (§12.6.1)'),
 ]
 for _k in ('LC', 'LZ', 'ES'):
     FORMULAS[_k] = FORMULAS['EA'] + FORMULAS_CY

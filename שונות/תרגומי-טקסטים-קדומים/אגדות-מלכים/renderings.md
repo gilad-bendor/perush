@@ -649,7 +649,14 @@ at the first copy.
 | ES | ES 1–283, 52A–54D, B1–B7 | `7-…/annotated.rtl.md` | T-ES |
 
 ### 12.6 Merged from the parts
-(after each part)
+#### 12.6.1 Part LC1 (LC 1–263), 2026-11-07
+Full list: `5-לוגלבנדה-במערת-ההר/project.md` ("Part LC1", "Proposals"). Binding for LC2, LZ, ES (copy the strings):
+- **The prayer** (148–150 = 180–182 = 212–214 = 237–239; only the god changes): `כאשר אל X – השמימה – עיניים אכן נשא,` / `כמו אל אביו מולידו – דמעות אליו מצא;` / `את ידיו הנאות – במערת ההר – אליו מרים:` (`אביו`, `אליו` kept for Inana too: the formula). **The tears:** *er₂ šu ti* `X – את דמעותיו לקח;` (= HA 34, run 1; a recorded split from EA's *šu ti* `קיבל`, which stays for other objects). **The refrain** *nam-ba-tur₅-tur₅-de₃(-en)* `– אַל אחלה!`; the greeting *silim … dug₄* `שלום אוֹמְרָה לך`; `גיבור, בן נִינְגַּל`.
+- **The provisions** (98–100 → 279–281): `בדליי־העור – (הכול) במישרים,` / `בשקי־העור – *(כל) דבר כמידתו* –` / `אחיו, רעיו –`. **The drinks** (104–105 → 377–378): `שֵׁכָר שחור, סובא מובחר, (שֵׁכָר) כוסמת לבן,` / `יין לשתייה, *גּוּמֶזֶה* – טוב הוא –`. **The weapons** (110–113 → 353–354, 363–364): `גרזנו – מתכתו בדיל –` / `מהַרְרֵי זוּבִּי – לידיים נמסר –` / `פגיון־חיקו – ברזל־*סוּג* הוא –`; *dur₁₀-gag* `כַּשִּׁיל`.
+- **Repeated lines:** 126 = 227 `לרגלו – רגל הדובקת בארץ – הוסיף.`; 124 ≈ 236 `האל אשר מחצו – הצידה עמד`; 179 / 211 / 232B `… – במערת ההר – אור לו שָׂם.`; `במערת ההר`, `לוגלבנדה הטהור`, `ליד ראשו`; the levy 24–29 = DB MT.H10–H15 (`קימת אוּרוּךְ – מבול היא;`).
+- **Words:** *ḫur-ru-um* `מערה`; *niĝ₂-si-sa₂* `מישרים` (= *mīšaru*), *niĝ₂-erim₂* `עוולה`; *us₂* `דבק`; *la₂* `תלה`; *šurum* `פֶּרֶשׁ`; *an-bar* `ברזל` [cognate through *parzillu*]; *nagga* `בדיל`; *ki kug ki kal-kal* `המקום הטהור, המקום היקר`; *nam-sumun* `שֵׂיבָה` ★; *i-lu* `שיר־האִילוּ` (transliterated here); *ḫal* (oil) `נמרח` (not `נמשח`); *gig* / *tur₅* `חלה`; names Uraš `אוּרַשׁ`, Ningal `נִינְגַּל`, the Gig mountains `הררי גִּיג`.
+- **Rulings (the coordinator):** (1) *na-* in narrative = affirmative (ETCSL "na-ĝa₂-ĝa₂", "na-an-ĝen"): a plain verb, no `אל` – a rule for the cycle (§12.2); (2) plural *ur-saĝ* = `לוחמים` (run 1's rule: `גיבורים … הם` would make Gen 6:4) – LC 62 changed by the translator in part 2's resume; (3) *er₂ šu ti* `לקח` kept (the formula as in HA); (4) *amar* `עגל` (a calf) / `גוזל` (a bird) – a split by animal, recorded; (5)–(8) as drafted (*ed₃* by direction; *muš₃ tum₂* `כלה` with `*…*`; *i-lu* transliterated; 98 `במישרים`).
+- **Tool:** FORMULAS_CY (the prayer, the tears, the refrain, the provisions). The translator's finding about `check_bible_quotes.py` (only the backtick group just before a reference is checked: write one group per quotation) goes into the report.
 
 ## Changelog
 - 2026-11-07: §12 the Uruk cycle (projects 5–7: LC, LZ, ES) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed by the Round 6 run 3 coordinator before the first part.
