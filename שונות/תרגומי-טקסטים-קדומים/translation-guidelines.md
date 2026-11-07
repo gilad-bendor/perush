@@ -461,6 +461,9 @@ Each rule was learned the hard way on a real run; the run is named in brackets, 
 **The Sumerian companions** [Round 6 run 4]
 - **Find every line already translated before the first draft, across the whole folder**: `tools/sumerian_rel.py <annotated file>` (difflib over every annotated `>` entry) showed Dumuzid's Dream 111–118 = Inana's Descent 297–305B, the waking formula shared with Lugalbanda and Ḫuwawa, and collection 2–3 proverbs repeating collection 1: run it on every new skeleton and put its output in the translator's hands. **A gate licensed by one spelling of a verb forces a paraphrase on another** (*nam … kud* beside *nam … ku₅*: LSU and the proverbs both hit it; `גורל חתך` was written to pass the gate): license each gate by every spelling of its verb, and treat a translator's paraphrase "because the gate forbids" as a gate bug. **Completing a selection means re-cutting its sections**: generate the full skeleton with the drafted entries kept verbatim in base order (scratch `prov_merge.py`), remove the `select` list, and let the translator re-cut the headings so every unit is under one.
 
+**The Shield of Heracles** [Round 6 run 5]
+- **One edition's mark can mean two things**: Evelyn-White's in-line brackets are a papyrus restoration in WD 169a–d but suspected words in the Shield – give the tool a per-key tag (`MARK_TAG_KEY`) before the first line, and count the base's labels, not only its lines (no SH 298). **Write REQUIRED regexes for the plural and the construct** (`דרקו[ןנ]`). **A fast draft needs the consistency pass most**: the second reviewer's `lexmap` script found one Hebrew for two lemmas and drift from the earlier poems in 24 of 32 fixes.
+
 ## 6. Translation principles
 
 ### 6.1 Unit and structure
