@@ -47,6 +47,9 @@ Translate, complete, two legends that the ancient Near East told about its kings
 | 1 | `1-אנמרכר-ואדון-ארטה/` | Enmerkar and the Lord of Aratta | ETCSL 1.8.2.3 (`../sources/ETCSL/1.8.2.3--…/`); ORACC Q000369 lemma + morph; Mittermayer 2009 (open access) | 641 (1–636 with 11A, 106A, 185A, 185B, 365B and the alternative lines A–D of one manuscript for 400–403; ETCSL has no 369, 608–610) | `annotated-1.rtl.md` (1–155), `annotated-2.rtl.md` (156–307), `annotated-3.rtl.md` (308–469), `annotated-4.rtl.md` (470–636) |
 | 2 | `2-אגדת-הולדת-סרגון/` | The Sargon Birth Legend | King 1907 vol. II pp. 87–96, transcribed from the page images (`../sources/King-1907--…/`); eBL catalogue | 49 (King's col. I 1–32, col. II 1–17) | `annotated.rtl.md` |
 | 4 | `4-אגדת-כותה/` | The Cuthaean Legend of Narām-Sîn (Round 5, run 5, 2026-10-31) | eBL L/1/12 (`../sources/eBL/Cuthaean-*/`): five chapters – OB I, OB II, MB A, MB B (Ḫattuša), SB; ed. Mitto et al., tr. Foster | 345 (`SB.80`, `OBI.b+12`, `MBA.c+3`) | `annotated-OBI.rtl.md`, `-OBII`, `-MBA`, `-MBB`, `-SB` |
+| 5 | `5-לוגלבנדה-במערת-ההר/` | Lugalbanda in the Mountain Cave (Round 6 run 3, 2026-11-07) | ETCSL 1.8.2.1 (the web page, `tools/etcslhtml2md.py`; ETCSL lemmas); ORACC Q000367 lemma + morph | 509 (1–499 with 232A–B, 325A–B; B1–B7) | `annotated-1.rtl.md` (1–263), `annotated-2.rtl.md` (264–499, B1–B7) |
+| 6 | `6-לוגלבנדה-וציפור-האנזוד/` | Lugalbanda and the Anzud Bird (Round 6 run 3) | ETCSL 1.8.2.2; ORACC Q000368 | 422 (1–417; A–F instead of 350–353) | `annotated-1.rtl.md` (1–202), `annotated-2.rtl.md` (203–417, A–F) |
+| 7 | `7-אנמרכר-ואנסוחגירנה/` | Enmerkar and En-suḫgir-ana (Round 6 run 3) | ETCSL 1.8.2.4 (no ORACC text: the form index) | 295 (1–283 with 52A, 54A–D; B1–B7) | `annotated.rtl.md` |
 | 3 | `3-אגדת-אתנה/` | Etana (Round 3, run 2, 2026-10-22) | eBL L/1/9 (`../sources/eBL/Etana-*/`): six chapters – OB Morgan, OB Susa, MA Aššur, SB I–III; ed. Földi et al., tr. Foster | 585 (eBL labels with the chapter key: `OBM.7`, `MA.c+3`, `II.142`) | `annotated-OBM.rtl.md`, `-OBS`, `-MA`, `-I`, `-II`, `-III` (one per eBL chapter) |
 
 Rank 3: ETCSL's English and Mittermayer 2009's German (EA); King 1907's English and the few lines of Westenholz 1997
@@ -85,6 +88,15 @@ Deut 32:11, Ezek 17 (the eagle). Its renderings: `renderings.md` §10 (fixed bef
 fixed). It was translated by four sub-agent translators in sequence (ET2 → ET1 → ET3 → ET4; the coordinator merged
 and pushed after each), one part at a time (quotas: guidelines §5.1).
 
+**The Uruk cycle (projects 5–7, added 2026-11-07, Round 6 run 3):** with Enmerkar and the Lord of Aratta, the four
+Enmerkar–Lugalbanda poems. Reading order: EA (the contest of Uruk and Aratta), LC (the march on Aratta; Lugalbanda's
+sickness in the cave, his prayers to the sun, the evening star and the moon; the plants and water of life; fire and
+bread; the hunt, the dream and the night offering), LZ (the Anzud bird, the destiny decreed and the gifts refused; the
+siege, the lone messenger, Enmerkar's complaint to Inana, the tamarisk and the fish), ES (the boast about Inana's bed;
+the sorcerer from Ḫamazu, the cow and the goat that speak, the old woman Saĝburu's five victories at the river; En-
+suḫgir-ana yields). Renderings §12 (fixed before drafting; §12.6 what each part fixed). One translator per text,
+resumed part by part (LC, LZ in two parts each), one agent at a time; tool keys LC, LZ, ES of `kings_tools.py`.
+
 ## Tools (in this folder)
 | Script | What |
 |---|---|
@@ -93,6 +105,7 @@ and pushed after each), one part at a time (quotas: guidelines §5.1).
 | `kings_tools.py grep KEY\|all '<regex>'`; `lines KEY FROM-TO`; `pars KEY FROM TO` | How a Hebrew string was used so far (all = + the lament, temple and creation corpora's Sumerian texts); the base lines; the earlier copies of a repeated line with their Hebrew. |
 | `kings_tools.py conc EA [out]`; `data EA FROM TO out` | ETCSL ↔ ORACC concordance; a translator's line data (ETCSL, ORACC lemma + morph, ETCSL and Mittermayer at the line). |
 | `kings_tools.py data ET FROM TO out`; `pars ET FROM TO` | Etana: a translator's line data (the eBL block of each line + its related lines in all six versions with the Hebrew already given); the related lines of a range. `verify ET` licenses the reserved words by the eBL lemma (RESERVED_ET); `build ET` prints the eBL label under each version's heading. |
+| `kings_tools.py data LC\|LZ\|ES FROM TO out`; `skel KEY FILE FROM TO`; `pars KEY FROM TO` | The Uruk cycle: ETCSL line, ETCSL's lemmas, ORACC lemma + morph aligned by content (LC, LZ) or each verb's parses from the form index (ES), the near-identical lines of all four poems with their Hebrew; a skeleton; the related lines across the cycle. Gates licensed by the transliteration + ETCSL and ORACC lemmas (RESERVED_CY); FORMULAS_CY. |
 | `build_parallels_index.py` | `parallels-index.md` from the per-file tables. |
 
 ## Status
@@ -101,6 +114,9 @@ and pushed after each), one part at a time (quotas: guidelines §5.1).
 | 1 | Enmerkar and the Lord of Aratta | **complete** (2026-10-21): 641 entries in four parts, three review passes each; `translation.rtl.md` built; open decisions in `project.md` (EA1–EA4) |
 | 4 | The Cuthaean Legend | **complete (first draft)** (2026-10-31): 345 entries in four parts (CL1 SB 1–93, CL2 SB 94–180, CL3 MB A–B, CL4 OB I–II), one translator resumed part by part, three passes each; `verify CL --strict` OK; `translation.rtl.md` built; renderings §11; brief `translator-brief--cuthaean.md` |
 | 3 | Etana | **complete** (2026-10-22): 585 entries in four parts (ET1–ET4), three review passes each; `translation.rtl.md` built; open decisions in `project.md` |
+| 5 | Lugalbanda in the Mountain Cave | **complete** (2026-11-07): 509 entries in two parts, three passes each; `verify LC --strict` OK; `translation.rtl.md` built |
+| 6 | Lugalbanda and the Anzud Bird | **complete** (2026-11-07): 422 entries in two parts; `verify LZ --strict` OK; built |
+| 7 | Enmerkar and En-suḫgir-ana | **complete** (2026-11-07): 295 entries; `verify ES --strict` OK; built |
 | 2 | The Sargon Birth Legend | **complete on King 1907** (2026-10-21): 49 entries, three review passes; `translation.rtl.md` built; **to be checked against Westenholz 1997 and K 7249** (not reachable) |
 
-Print stubs: `../הדפסה/אגדות-מלכים/1-אנמרכר-ואדון-ארטה.rtl.md`, `../הדפסה/אגדות-מלכים/2-אגדת-הולדת-סרגון.rtl.md`, `../הדפסה/אגדות-מלכים/3-אגדת-אתנה.rtl.md`. Hand-off: `handoff--round2-run6.md`.
+Print stubs: `../הדפסה/אגדות-מלכים/1-אנמרכר-ואדון-ארטה.rtl.md`, `../הדפסה/אגדות-מלכים/2-אגדת-הולדת-סרגון.rtl.md`, `../הדפסה/אגדות-מלכים/3-אגדת-אתנה.rtl.md`, and one per project 4–7. Hand-off: `handoff--round2-run6.md`.
