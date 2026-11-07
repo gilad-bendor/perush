@@ -318,3 +318,32 @@ Noted, not changed: 5 ἔριζε `התגרתה` (the corpus's fixed rendering o
 δέ, as Evelyn-White "for"); 393–394 `על (ענף) רענן … על ענף` (χλοερῷ … ὄζῳ split across the lines; the gloss doubles
 the noun – a style point for the coordinator). After the review: `verify SH --strict` 0 problems; `check_bible_quotes.py`
 0 problems.
+
+## Review passes (b) consistency and (c) Hebrew (2026-11-07)
+Second reviewer, 09:59–10:09 UTC. **Lines reviewed: all 479** (in the order 321–480, 139–320, 1–138), each `>` line
+against the Greek and the treebank parse (`data`), with `lexmap` / `lemma` for every recurring lemma and a scripted pass
+over the whole `lexmap` (Hebrew words shared by two SH lemmas; SH renderings that differ from every TH/WD rendering of
+the same lemma). **32 lines changed** (the `>` line and its פירוק gloss): fidelity 2, consistency inside SH 8,
+consistency with TH/WD 16, Hebrew 6. Formulas, repeated lines and near-repeats were already in place.
+- Fidelity: **211**: `ושני דולפינים` → `ושניים` (δελφῖνες is 212's subject; the noun was added and doubled 212);
+  **333**: αὐτός restored – `ואתה` → `ואתה עצמך` (as 425 `והוא עצמו`).
+- Consistency inside SH: **335, 461**: οὐτάω / οὐτάζω `דָּקַר` with 363 `נדקרה` (`פָּצוֹעַ` → `דְּקוֹר`, `פצע` → `דקר`; the
+  note at 332 follows); **442**: ἐμμαπέως `בזריזות` → `ללא דיחוי` (`בזריזות` is ὀτραλέως, 410); **240**: πέρθω `לבוז` →
+  `להחריב` (`בָּזַז` is σκυλεύω, 468); **89, 149**: ἐξαιρέω middle `שלל(ה)` → `נטל(ה)` (`שָׁלַל` is ἐναρίζω; TH 443
+  ἀφείλετο `נטלה`); **316**: ἠπύω `צעקו` → `השמיעו קול גדול` (`צָעַק` is ἰάχω); **243**: βοάω `צעקו` → `זעקו` (WD 511).
+- Consistency with TH/WD: **241, 251, 306**: δῆρις `מריבה` → `קטטה` (WD 14, 33; `ריב` is νεῖκος); **458**: κρατερόφρων
+  `עז־הלבב` → `קשה־הלב` (TH 509, WD 147); **205, 312**: ἀγών `כינוס` → `קהל` (TH 91); **422**: ἠλίβατος `נישא` → `נשגב`
+  (TH 483, 675, 786); **393**: ἠχέτης `המהדהדת` → `המצלצלת` (WD 582, the same cicada) and so **232**: ἰάχω (the shield)
+  `מצלצלת` → `מהדהדת`; **413**: ὑπερμενής `רב־העוצמה` → `עצום־הכוח` (TH 534); **421, 423**: ἐρείπω `צנח` → `קרס` (TH 704,
+  858); **444**: ἐρεμνός `האפלה` → `הכהה` (TH 334, 758; `אפל` stays κελαινός, 429); **352**: κέλευθος `הדרך` → `הנתיב`
+  (WD 580); **270**: μυδαλέος `רטובה מדמעות` → `ספוגה דמעות` (WD 556); **260**: πρέσβυς `הבכירה` → `הבכורה שבהן` (TH 234,
+  363, 777).
+- Hebrew: **324**: `ישר` → `יישר` (plene; WD 7, 9, 263); **193**: `הָרַגְלִים` (the foot-soldiers, not "the feet");
+  **77, 323, 307, 372**: ἡνίοχος vocalized `רַכָּב(וֹ / ִים)`, since unvocalized `רכבו` / `רכבים` read as ἅρμα `רֶכֶב`
+  (307–309 have both).
+Noted, not changed (for the coordinator): ἰάχω / ἰαχή `צעק(ה)` in SH against TH 69, 708 `הריע / תרועה` (ἀλαλητός took
+`תרועה`), and ἀυτέω (309) also `צעקו`; ποδώκης 191 `מהירי־הרגליים` against TH `קלת־רגליים` (ὠκύπους has `קל־הרגליים`);
+μεγαλήτωρ 450 `רם־הלב` against TH `גדול־הלב` (= μεγάθυμος); δέρκομαι and ὁράω (426) both `הביט` (as in TH); κυρέω 426 and
+ἀντιβολέω 439 both `נקרה`; the κυανο- compounds split `כחול־` (120, TH 278) / `כהת־` (356, 393); χλωρός `חיוור` (231, 265)
+against TH/WD `ירוק` (a sense split); 168, 177 χλούνης and σῦς together `חזירי־פרא`. After the review:
+`verify SH --strict` 0 problems; `check_bible_quotes.py` (the annotated file and project.md) 0 problems.
