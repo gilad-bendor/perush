@@ -74,8 +74,7 @@ reference).
 1. Narrative *na-* (20, 22, 23, 33, 34, 200): read as affirmative and rendered by the plain verb (no `אַל`, no
    `אכן`), as ETCSL; renderings §2 knows only the prohibitive *na-*. Proposed: a rule "narrative *na-* = plain verb,
    noted at the line".
-2. Plural *ur-saĝ* in 62 kept `גיבורים הם` (the Bilgameš rule §23.6 ruling 2 gives `לוחמים` to avoid Gen 6:4); here a
-   predicate of seven god-born brothers – the coordinator may align to `לוחמים`.
+2. Plural *ur-saĝ* in 62: now `לוחמים הם` (coordinator's ruling, run 1's rule; Gen 6:4); the singular stays `גיבור`.
 3. *šu ti* in the tears formula = `לקח` (HA 34, the identical formula) against EA's *šu ti* `קיבל`: kept HA's (a split
    recorded at 171).
 4. *amar* (202) = `עגל` (of cattle) against the corpus's *amar* `גוזל` (of birds): a split by animal.
