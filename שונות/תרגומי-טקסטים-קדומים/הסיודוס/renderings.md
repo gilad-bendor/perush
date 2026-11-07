@@ -942,3 +942,24 @@ Hephaistos `הֵפַיְסְטוֹס`; Αἰθήρ `אֶתֶר` ★; the winds �
   translator fixes their Hebrew at the first occurrence and records it.
 - The LXX tool (`../tools/lxx_verses.py`) has only Genesis, Exodus, Isaiah and 4 Kingdoms: describe the LXX of other
   books (Job, Proverbs, Psalms, Judges) in words, never quote it from memory.
+
+## 14. The Shield of Heracles (SH; Round 6 run 5, 2026-11-07; project `3-מגן-הרקלס/`)
+
+The third text of the corpus binds itself to §1–§13 (names, conventions, key terms, the LXX layer, the gates, the
+formulas, the repeated lines). What is particular to it:
+1. **The base's marks** (§1 above, for SH): whole lines in `<del>` (204, 210) open with `{חשודה}`; the half-lines
+   Evelyn-White brackets inside 203, 205, 209, 211 are suspected words, not a papyrus restoration: the `>` line opens
+   with **`{חשודה בחלקה}`** and the suspected Hebrew words stand in **`⟦ ⟧`** (the tool's `MARK_TAG_KEY`; the gates read
+   through `⟦ ⟧`). `[ ]` keeps its meaning "restored" and is not used in SH.
+2. **Title:** `מָגֵן הֵרַקְלֵס` – ἀσπίς is the round battle shield: `מָגֵן` [equivalent] (LXX ἀσπίς renders `מָגֵן` and
+   `צִנָּה`; the translators check the verses before any note); σάκος (the great shield, a synonym in this poem) gets
+   its own Hebrew, fixed by the first translator and recorded here (one Greek lemma = one Hebrew word).
+3. **The models:** the shield's ekphrasis (139–320) follows Iliad 18.478–608; the poem's lines shared with the Iliad,
+   the Odyssey, the Theogony and the Works and Days are noted (the corpus's own repeats: `hesiod_tools.py data SH`,
+   "repeats"); 1–56 are a Catalogue *ehoie* (fr. 195 M-W): `ἢ οἵη` "or like her who" – the Catalogue's formula,
+   rendered once and kept.
+4. **The new names** (not in §3.1): each translator transcribes by §2.3, vocalizes the first occurrence, and lists them
+   in its section of `project.md`; the coordinator merges them into §14.1 below and into §3.1 (so `verify` checks them).
+
+### 14.1 Names and terms fixed for SH (merged from the translators)
+(filled at each merge)
