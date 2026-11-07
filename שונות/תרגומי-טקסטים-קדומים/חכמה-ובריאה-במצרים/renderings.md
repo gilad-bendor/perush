@@ -666,7 +666,7 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
    jri̯ `עשה`, smꜣ `הרג`, ṯꜣw `גנב`, ꜥwꜣ `גזל`, ḏd grg `אמר כזב`, nk `שכב עם` (nkk `נשכב`), dꜣdꜣ `זנה`, thj `עבר על` (Deut 26:13
    `לֹא עָבַרְתִּי` [equivalent]), ḫbj `גרע`, ḥḏj `הזיק` (AM 17.19), nḥm `נטל` / "save" `הציל`, ꜥwn `בצע` (AM 10.10), šnṯ `גידף` (šnṯ.t
    `ריב`), sꜣt `פגם` (HC 83), ꜥm-jb `בלע לב`; smj `הגיד (על)`; ḥrw "fear" `פחד`; tꜣ "be hot" `רתח` (the `חם` gate is šmm's).
-3. **The judges** as hyphenated names without the article (`רחב־צעדים`, `חובק־להבה`, `בולע־צללים` …); opaque names transliterated.
+3. **The judges** as hyphenated names without the article (`רחב־צעדים`, `חובק־שלהבת`, `בולע־צללים` …); opaque names transliterated.
 4. **Purity:** wꜥb `טהור`, ꜥbw `זוך`, twr `מזוקק` (three words). **The door:** `דלת`, `מזוזות`, `משקוף`, `בריחים`, `שוער`, `רצפה`.
 5. **Settled (the coordinator):** Herakleopolis Nn-nsw = `חָנֵס` (the Cow's form, §10.10.2; BD 18, 29 changed from `נֶן־נֶסוּ`);
    qd.w `חשבון המידות` beside dbḥ `מִדָּה` (AM) kept – one Hebrew for two lemmas, never in one line (open for the lead).
@@ -913,7 +913,7 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
    `מי שיודע את הלחש הזה`.
 2. **BD 154's decay verbs** (one Hebrew each; `שחת` never): zbi̯ `גווע`, ẖnn `התעפש`, jmk `נמק`, snsn `הבאיש`, ḥwꜣ `נרקב`,
    ski̯ `אבד`, ḥtm `נשמד`.
-3. **Terms:** nꜥi̯ `הפליג`; dp.w `משוט־ההגה`; ḥp.wt `משוט־חתירה`; ḫꜣbꜣs.w `הנוצצים`; bjꜣ "sky-water" `הבִּיָא`; qmꜣ II "throw"
+3. **Terms:** nꜥi̯ `הפליג`; dp.w `משוט־ההגה`; ḥp.wt `משוט־חתירה`; ḫꜣbꜣs.w `הנוצצים`; bjꜣ "sky-water" `ימת־השמים` (§12.6.13); qmꜣ II "throw"
    `השליך`; sk `ניגב`; smꜣ.yw `שאר`; ḏdf.t `זוחל`; mj.tj `עמית`; ḫrp `הנהיג`; mꜥbꜣ `רומח`; `בָּאֵי X` (the bas of a city);
    Pe `פֶּה` ★; Apis `אַפִּיס`; ḏbꜣ.t (a tree) `גֶ׳בָּאת`.
 4. **Gates fixed:** `קוף` licensed by gꜣf, `נחש` by ḥfy.t (spellings of gf, ḥfꜣ.t).
@@ -979,3 +979,14 @@ mood (n sḏm=f read as a future; relative forms without .n read as past), perso
 (spḥ "reach" / "lasso"), one word read as two. **Applied to all copies at once (the coordinator, review 3's proposal):**
 Merikare E132 `הרג את אויב[יו]` → `הרג את אויביו` (only the suffix =[f] is restored: no bracket, §2.1) – in MR, MK and
 the fifth-day dossier's MK (`verify MK`, `verify MR`, `dossier_tools.py verify` pass).
+#### 12.6.13 The consistency pass over the book (2026-11-07; 108 `>` lines in NU1–NU10, BD, CH; the full list in `6-ספר-המתים-של-נו/project.md`, "Consistency pass")
+One Hebrew per lemma across the parts (superseding the earlier rows where they differ): wꜣ.t `אורח` (NU2–NU3 aligned);
+jꜣḫ.w `אורה`; twr `מזוקק`; ṯni̯ `בולט` / `הבליט`; the food formula's ḫmi̯ (tla117020) `לא אֵהָרֵס בה` (NU4, NU7, NU9); nwy
+`זרם`; sḏ.t `שלהבת` (BD 125's six lines aligned, the judge `חובק־שלהבת`); jṯi̯ `לקח` (not reserved in an Egyptian line,
+guidelines §6.7 principle 1; `תפס` is jss's); bjꜣ "sky-water" `ימת־השמים`; wdn `זבח` (`הקריב` is mꜣꜥ's); šꜥd `חתך` (`כרת`
+ḥsq's); ḏꜥr "search" `חקר`; mꜣꜣ `חזה` (25 lines); ḏd `אמר` (`הגיד` is smj's); wsr `חסין` (`חזק` nḫt's); snḏ verb `חשש` /
+noun `יראה`; ꜥḥꜥ r `עמד נגד`; ꜥꜣ "door-leaf" `כנף־הדלת`; jrw `מראה`; sšmi̯ `הנחה`; ṯz `קשר`; pr.t-r-ḫrw `יציאות־לקול`;
+šfšf.t `יראת־הכבוד`. **Splits kept, by sense:** wḏꜥ (`שפט` / `הקצה` / `הפריד`), ḏꜥr "care for" `דרש`, jꜥn.w `צער` (NU4 82.11),
+nḥm, mri̯, ski̯ (`אבד` / `כילה` / "spend time" `בלה`), ꜥḥꜥ "rise", ḫsf "go to meet", dndn (two lemmas). **For the lead (two
+lemmas, one Hebrew):** jꜣ.w / dwꜣ (`הלל`), sk / zjn (`ניגב`), nḏ / zꜣu̯, ꜥḏ / psḏ, ṯꜣi̯ / nḥm, the oar words, jm.j-rʾ / ns,
+rri̯ / šꜣj, nrw / ḥr.yt, sḫt; bs (`לפיד` / `שביב`).
