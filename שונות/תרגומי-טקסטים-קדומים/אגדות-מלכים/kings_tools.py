@@ -246,7 +246,7 @@ RESERVED_CY.update({
     B + r'ו?ה?ל?(כשף|כשפים|מכשף|מכשפה|מכשפים|כישוף|כשפיו|כשפיה)' + E: [],      # Akk. *kašāpu* family only (Maqlû)
     B + P + r'(סולם|סלם)' + E: [],
     B + r'ו?ה?ל?(הבדיל|הבדילו|יבדיל|מבדיל|נבדל|נבדלו|הבדלה|להבדיל|בדל)' + E: [],  # Gen 1:4–7 (`בדיל` "tin" allowed)
-    B + P + r'(צלם|צלמים|צלמך|צלמי|צלמיך|צלמו|צלמיו)' + E: [r'alan|ṣalm'],     # *alan* = *ṣalmu* = צֶלֶם
+    B + P + r'(צלם|צלמים|צלמך|צלמי|צלמיך|צלמו|צלמיו)' + E: [r'ṣalm'],     # Sum. *alan* = `פסל` (EA, Gudea, laments; §12.6.3)
     B + P + r'(דמות|דמותו|כדמות|בדמות)' + E: [],                               # Gen 1:26: the apparatus only
 })
 for _k in list(RESERVED_CY):   # homographs (LC2): *ur₅* "liver" = כָּבֵד (DB E16, laments); *sun₄* "beard" = זָקָן (HB 74, EA 209)
@@ -341,6 +341,8 @@ FORMULAS_CY = [  # renderings.md §12.6 (fixed by the first copy)
     (r'dili du-e \{d\}šakkan₂-na-ke₄ ḫur-saĝ', r'עיר הולך־לבדו של שכן – את ההררים', 'the running animals 1 (§12.6.2)'),
     (r'uru₁₆ gal-gin₇ kušum', r'עיר נישא, כגדול – ', 'the running animals 2 (§12.6.2)'),
     (r'sal-la kaš₄-e kiĝ₂-ĝa₂-am₃', r'עיר דק, המבקש לרוץ הוא', 'the running animals 3 (§12.6.2)'),
+    (r'lu₂ numun-e ki aĝ₂-am₃ šu nu-um', r'^לוגלבנדה – איש אוהב הזרע הוא – יד אינו פושט\.$', 'LZ the refrain (§12.6.3)'),
+    (r'gud₃-bi-ta inim nu-um-ma-ni-ib-gi₄', r'גוזלו – מקנו – דבר לא השיב', 'LZ the unanswered call (§12.6.3)'),
     (r'^\{kuš\}maš-li-um-e niĝ₂-si-sa₂-e$', r'^בדליי־העור – \(הכול\) במישרים,$', 'LC the provisions (§12.6.1)'),
 ]
 for _k in ('LC', 'LZ', 'ES'):

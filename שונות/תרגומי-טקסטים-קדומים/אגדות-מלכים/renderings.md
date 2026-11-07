@@ -573,7 +573,7 @@ elsewhere: mark the analysis "ניתוח שלנו" after checking it).
    *aga* / *men* `כתר`, *ki-sig₁₀* `סְעוּדַת הַמֵּתִים`, *nam-tag* `עָוֹן`, *taraḫ* `יָעֵל`, *šeg₉* `אַיִל־בָּר`,
    *udug sag₉* `רוּחַ־הַמָּגֵן הַנָּאָה`, *lamma* `אֵלַת־הַמָּגֵן`, *diĝir-ĝu₁₀* `אֵלִי` ★, *saĝ gig₂* `שחורי הראש`.
 4. **A Sumerian word takes the Hebrew of its Akkadian equivalent** (§0.3): *maš-maš* (= *mašmaššu*) `מְלַחֵשׁ` (wisdom,
-   Maqlû); *alan* (= *ṣalmu*) `צֶלֶם` [cognate through the Akkadian; Gen 1:26–27 in the apparatus]; *nam-tar* (=
+   Maqlû); *alan* `פֶּסֶל` (**revised 2026-11-07, §12.6.3**: the Sumerian precedent – EA 318, Gudea, the laments – wins over the Akkadian-equivalent rule; *ṣalmu* ~ `צֶלֶם` and Gen 1:26 stay in the apparatus); *nam-tar* (=
    *šīmtu*) `גורל`; *um-ma* `הזקנה`.
 
 ### 12.1 Names (★ = vocalized at every occurrence; `verify` checks the traps it knows)
@@ -663,6 +663,13 @@ Full list: `5-לוגלבנדה-במערת-ההר/project.md` ("Part LC2", "Propo
 - **The running animals** (273–275 → ES 45–47): `עַיִר הולך־לבדו של שַׁכַּן – את ההררים *מפלח*;` / `עַיִר נישא, כגדול – *דוהר*;` / `עַיִר דק, המבקש לרוץ הוא – ריצה בוקע.` (*dur₃* `עַיִר` vocalized; FORMULAS_CY). The bread, the hunt, the dream's command and execution, the banquet, the night beings' refrain: the strings in project.md.
 - **Words:** *barag* (ETCSL "altar") `דוכן`; *ka-inim-ma* `דבר־הפה` (not `לחש` / `כשף`); *ensi* `שואל` (temple corpus `שואלת`); *zig₃* (361, "rose", not "awoke") `קם`; *ur₅* "liver" `כָּבֵד` and *sun₄* "beard" `זָקָן` (homograph licences added); by context: *du₈* `אפה` (bread) / `פרש`, *ra* `הקיש` (flints) / `מחץ`, *la₂* `כפת` (binding) / `תלה`; *galam* `נישא` here (EA `בתחכום`: a recorded split by sense – "lofty", of an animal), *uru₁₆* also `נישא` (two words, one Hebrew: recorded).
 - **Rulings:** 353 kept `לקח` as 363 (the same form; ETCSL's future is an interpretation); the rest as drafted.
+
+#### 12.6.3 Part LZ1 (LZ 1–202), 2026-11-07
+Full list: `6-לוגלבנדה-וציפור-האנזוד/project.md` ("Part LZ1", "Proposals"). Binding for LZ2 and ES:
+- **Fixed:** the speech opener `אנזוד – אל לוגלבנדה הטהור – פונה:` (134 = 161 = 184); `"לכה נא, לוגלבנדה שלי!` (135 = 162); the call to the nest (70–77) `כשהציפור – אל קנו – שאגה השיב,` / `גוזלו – מקנו – דבר לא השיב.` (75 `דבר היה משיב;`); the nest decorated 58–60 = 94–96; the refrain (141 = 148 = 154 = 158) `לוגלבנדה – איש אוהב הזרע הוא – יד אינו פושט.` (*šu gid₂* `יד פשט`, Gudea); the request 168–183 ↔ the grant 185–200, line for line, varying only person and mood.
+- **Words:** *nam tar* `גזר גורל` (LZ2 213 `הגורל אשר גזרתי לך`); *šu bal* `הפך`; *ki-gub ak* `מקום עמידה עשה`; *mi₂ dug₄* `חיבה אמר`; *zag-še* `כתף`; *tab* `הידק`; *gu₂ gur* `אוגר` (Gudea); *aš₂ dug₄* `קללה אמר` (Šuruppag); *gur* (measure) `כֹּר` [cognate, *kurru*]; *a-ru* (31) `אָרוּ` transliterated; *šag₄-ge guru₇* `כמלוא כרי לבך` (proverbs). Names: Anzud `אַנְזוּד` **without the article** (as Gudea; §12.1's `גוזל האנזוד` → `גוזל אנזוד`), Ninguena `נִינְגּוּאֵנָה`, Ninkasi `נִינְכַּסִי`, Lulubi `לוּלוּבִּי`, Niraḫ `נִירָח`, Ninurta `נִינוּרְתָּה`.
+- **Rulings:** (1) *na-* in speech read as affirmative where the context requires it (107, 128, 177, 194); the prohibitive stays `אַל`; (2) 8–10 first-person inner speech: kept; (3) **Sum. *alan* = `פֶּסֶל`, not `צֶלֶם`** (the coordinator's pre-set reversed: five Sumerian precedents, EA 318 among them; the cognate *ṣalmu* / `צֶלֶם` and Gen 1:26 stay in the הקבלה) – LZ 181, 198 changed by the translator at LZ2's start; the `צלם` gate no longer licensed by *alan*; (4)–(8) as drafted (Anzud without the article; *zag-še* `כתף` with ORACC; *a-ru* transliterated; the italicized uncertain words; 62 narrative).
+- **Tool:** FORMULAS_CY + the refrain and the unanswered call.
 
 ## Changelog
 - 2026-11-07: §12 the Uruk cycle (projects 5–7: LC, LZ, ES) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed by the Round 6 run 3 coordinator before the first part.
