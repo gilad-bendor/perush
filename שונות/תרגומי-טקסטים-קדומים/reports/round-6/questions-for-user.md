@@ -16,3 +16,6 @@ None.
 
 ## Run 4 (the Lament for Sumer and Urim, Dumuzid's Dream, proverbs 2–3)
 None.
+
+## Run 5 (Hesiod's Shield of Heracles)
+None.
