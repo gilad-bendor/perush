@@ -202,3 +202,22 @@ Brothers (TB, Late Egyptian), pWestcar (WE), BD 125 (BD), Sinuhe (SI), the Shipw
   Geldner and Lichtheim from memory wrongly in earlier runs). Bible verses: `` `…` (ספר פרק:פסוק) `` only, printed first.
 - **The tool:** `egypt_tools.py data <KEY> [FROM [TO]] [--wit]` (SI: labels `R1`…`R23`, `B1`…`B311`; `--wit` shows the
   Ashmolean ostracon; BD: pJuja and pMaiherperi), `tr`, `lex`, `grep --all`, `fill`, `verify <KEY>`, `build`.
+
+## 10. The Book of the Dead of Nu, BD 175 and Merikare (Round 6 run 2, 2026-11-06)
+**Read `renderings.md` §12 before the first line** (the KEYs, the order, the names, the key terms, the formulas, the
+"look for" list), then BD 125 (`6-ספר-המתים-של-נו/annotated-BD.rtl.md` and its section in `project.md`): its choices
+bind every chapter (the denial verbs, the door's parts, the judges as names, purity words, `[…]` for Nu's name).
+- **Labels** are `<chapter>.<TLA line>` (`17.1`, `64L.3`, `149.S1`); write a `## ` heading at every chapter:
+  `## פרק <n>: <its title in Hebrew> (<first>–<last>)` (the title from the chapter's own first line, shortened), and
+  inside a long chapter more `## ` headings by content (BD 17's glosses, BD 149's mounds).
+- **The spells are liturgy, full of repetition**: a refrain (BD 18's "O Thoth, who made Osiris true of voice against
+  his enemies"), a litany of gods or gates (BD 144–149), a dialogue (BD 99B, 122, 125's door) – fix the first copy and
+  copy it byte for byte; `data` shows "identical" / "similar" lines with the Hebrew already given (also BD 125's).
+- **BD 17 carries ancient glosses** ("What is it? It is …", `pw` / `ptr rf sw`): keep each gloss as the papyrus writes
+  it (`מהו? הוא …`), and say in the הערות that they are the Egyptian commentators' own explanations.
+- **The rubrics** (red in the papyrus: instructions, titles) are text like the rest; say in the הערות where a line is a
+  rubric if the base or the German marks it.
+- **BD 175 (CH)** and **Merikare (MR)** are their own files; Merikare's E 130–138 must be copied byte for byte from
+  `2-בריאה-במצרים/annotated-MK.rtl.md` (`verify MR` checks it; do not edit MK or the dossier: propose a revision in your
+  final message instead).
+- Witnesses: Merikare `data MR --wit` (pMoscow 4658, pCarlsberg VI); the Nu chapters have none in the folder.

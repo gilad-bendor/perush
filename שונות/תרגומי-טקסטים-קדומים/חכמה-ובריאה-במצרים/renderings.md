@@ -196,6 +196,7 @@ Draft from the form, not from the German. The TLA's morphology (`data`) names th
 | gstj "palette" | `קֶסֶת` | Ezek 9:2 |
 | ktm.t "fine gold" (Amen. 18.12) | `כֶּתֶם` ★ | Job 28:16, Lam 4:1 (always vocalized: "stain") |
 | ḫsbḏ "lapis lazuli" | `סַפִּיר` | not a loanword: the cross-corpus rule (*uqnû* = `סַפִּיר` [equivalent], guidelines §6.7) |
+| zšn / sšn "lotus" (NU5 81A) | `שׁוֹשָׁן` / `שׁוֹשַׁנָּה` | Song 2:1–2, 1 Kgs 7:19, 22 (added 2026-11-06, Round 6 run 2) |
 | msḥ "crocodile" | `תִּמְסָח` | Arabic *timsāḥ* < Coptic < Egyptian msḥ; Modern Hebrew `תִּמְסָח`. `תַּנִּין` never (the dossier rule; Ex 7:9–12 in the apparatus) |
 
 ### 4.3 Amenemope and the Torah / Proverbs (fixed before drafting; see also §8)
@@ -521,7 +522,7 @@ that it now holds the tales too.
 |---|---|---|---|---|
 | TB | The Tale of the Two Brothers, pD'Orbiney (pBM EA 10183) recto, Late Egyptian, c. 1200 BCE (Seti II) | `AED-TEI/Two-Brothers--pDOrbiney-BM-EA-10183/` | 185 (page,line `1,1`–`19,10`, the colophon `20,1`) | `4-מעשה-בשני-האחים/` |
 | WE | The Tales of pWestcar (pBerlin P 3033), the end of a tale, the tales of Nebka's and Snefru's time, Djedi, the birth of the three kings | `AED-TEI/Westcar--pBerlin-P-3033/` | 305 (`1,1-11`, `1,12` … `12,25`) | `5-פפירוס-וסטקר/` |
-| BD | The Book of the Dead, chapter 125 (the hall of the Two Truths, the negative confession), pNu (pBM EA 10477), 18th dynasty | `AED-TEI/BD-125--pNu-BM-EA-10477/` (+ pJuja, pMaiherperi: `data BD --wit`) | 115 (`1`–`115`) | `6-ספר-המתים-125/` |
+| BD | The Book of the Dead, chapter 125 (the hall of the Two Truths, the negative confession), pNu (pBM EA 10477), 18th dynasty | `AED-TEI/BD-125--pNu-BM-EA-10477/` (+ pJuja, pMaiherperi: `data BD --wit`) | 115 (`1`–`115`) | `6-ספר-המתים-של-נו/` |
 | SI | The Story of Sinuhe: R 1–23 (pBerlin P 10499, the opening lost in B), then B 1–311 (pBerlin P 3022) | `AED-TEI/Sinuhe--pBerlin-P-10499-R/`, `…-3022-B/` (+ the Ashmolean ostracon AOS: `--wit`) | 334 (`R1`–`R23`, `B1`–`B311`) | `7-סינוהה/` |
 | SS | The Shipwrecked Sailor, pPetersburg 1115 | `AED-TEI/Shipwrecked-Sailor--pPetersburg-1115/` | 191 (`1`–`189`, `30-31`, `40-41`) | `8-המלח-הנטרף/` |
 
@@ -661,11 +662,11 @@ their Egyptian word: the root שכב (sḏr, nk), `בֶּגֶד` (ḥbs …), th
 
 ### 11.11 Round 5 run 6 – BD 125 (1–115), merged 2026-11-01 (translator 3)
 1. **The formula** `הו X, היוצא מ־Y: לא …` on the 40 lines with pri̯ m; 58 and 62 (no pri̯ m in Nu) `הו X: לא …`.
-2. **The denial verbs** (one Hebrew per Egyptian verb in both confessions; the full table in `6-ספר-המתים-125/project.md`):
+2. **The denial verbs** (one Hebrew per Egyptian verb in both confessions; the full table in `6-ספר-המתים-של-נו/project.md`):
    jri̯ `עשה`, smꜣ `הרג`, ṯꜣw `גנב`, ꜥwꜣ `גזל`, ḏd grg `אמר כזב`, nk `שכב עם` (nkk `נשכב`), dꜣdꜣ `זנה`, thj `עבר על` (Deut 26:13
    `לֹא עָבַרְתִּי` [equivalent]), ḫbj `גרע`, ḥḏj `הזיק` (AM 17.19), nḥm `נטל` / "save" `הציל`, ꜥwn `בצע` (AM 10.10), šnṯ `גידף` (šnṯ.t
    `ריב`), sꜣt `פגם` (HC 83), ꜥm-jb `בלע לב`; smj `הגיד (על)`; ḥrw "fear" `פחד`; tꜣ "be hot" `רתח` (the `חם` gate is šmm's).
-3. **The judges** as hyphenated names without the article (`רחב־צעדים`, `חובק־להבה`, `בולע־צללים` …); opaque names transliterated.
+3. **The judges** as hyphenated names without the article (`רחב־צעדים`, `חובק־שלהבת`, `בולע־צללים` …); opaque names transliterated.
 4. **Purity:** wꜥb `טהור`, ꜥbw `זוך`, twr `מזוקק` (three words). **The door:** `דלת`, `מזוזות`, `משקוף`, `בריחים`, `שוער`, `רצפה`.
 5. **Settled (the coordinator):** Herakleopolis Nn-nsw = `חָנֵס` (the Cow's form, §10.10.2; BD 18, 29 changed from `נֶן־נֶסוּ`);
    qd.w `חשבון המידות` beside dbḥ `מִדָּה` (AM) kept – one Hebrew for two lemmas, never in one line (open for the lead).
@@ -717,3 +718,275 @@ preposition written as a Hebrew prefix). WE only (lines between the dossier's): 
   (Gen 25:6, 29:1) [equivalent] → [cognate]; no `>` line changed. The lead then changed SI B29 *Kpny* `כֶּפֶּנִי` ↔ Ezek 27:9 `גְבַל` [equivalent] → [cognate]
   (Kpny is the Egyptian form of the same name, *Gubla*).
 
+
+## 12. The Book of the Dead of Nu, BD 175 and Merikare (Round 6 run 2, 2026-11-06; fixed by the coordinator before the first line)
+
+**Scope** (the plan's Round 6 run 2; guidelines §1 "completing means the whole text"): project 6 becomes **the Book of the
+Dead of Nu** (`6-ספר-המתים-של-נו/`, renamed from `6-ספר-המתים-125/`): all 136 AED chapter texts of pNu (pBM EA 10477,
+c. 1400 BCE) in the papyrus's order, BD 125 (KEY BD, Round 5 run 6) in its place, and **BD 175** from pCha (pTurin 8438;
+not in Nu) as an appendix. **Merikare** gets its own project (`9-מוסר-למריכרע/`, KEY MR, all 149 lines of pPetersburg
+1116A verso); its E 130–138 are project 2's MK, byte for byte (`verify MR`), and MK's E 130–136 are the fifth-day
+dossier's MK, byte for byte (`verify MK`): a revision goes to all copies at once, by the coordinator.
+
+### 12.1 The texts (KEYs)
+| KEY | Chapters (papyrus order) | Lines | Labels |
+|---|---|---|---|
+| NU1 | 17, 18, 18 PS | 159 | `17.1` … (`<chapter>.<TLA line>`) |
+| NU2 | 1, 22, 23, 25, 26, 28, 28-2 (= CT 389), 27, 30A, 30B, 43, 24, 31, 33, 34, 35, 74, 45, 93, 91, 41, 42 | 153 | |
+| NU3 | 14, 68, 92, 63A, 105, 95, 72, 71, 106, 40, 90, 108, 47, 104, 103, 51, 119, 36, 37 | 140 | |
+| NU4 | 79, 117, 118, 21, 12, 122-1, 122-2, 98, 76, 85, 82, 77, 86, 124 | 127 | |
+| NU5 | 83, 84, 81A, 87, 88, 132, 148, 52, 53, 61, 56, 57, 54, 38B, 55, 29, 46, 109, 9, 132-2, 94, 63B, 8, 64L | 180 | `64L` = Tb 64 long version |
+| NU6 | 2, 3, 152, 75, 78, 65, 67, 179, 123, 141 (= 141/143), 190 | 230 | |
+| NU7 | 133, 136A, 134, 130, 131, 89, 154, 115, 116, 112, 113, 138, 187, 189 | 222 | |
+| NU8 | 44, 50, 188, 4, 96 (= 96/97), 153A, 153B, 64K, 11, 6, 5, 99B, 7, 176 | 173 | `64K` = the short version; `7.2b` (a repeated TLA label) |
+| BD | 125 (Round 5 run 6) | 115 | `1`–`115` |
+| NU9 | 126, 145, 144, 137A, 151, 101, 156, 155, 100, 102 | 228 | `126.x` (the TLA's `?`), `151.1,1` |
+| NU10 | 136A2, 136B, 149, 150 | 166 | `149.S1` (the TLA's "1. Stätte", the mound headings), `150.D1` ("Darstellung"), `149.58b` |
+| CH | BD 175, pCha (Kha, TT 8, Amenhotep III) | 65 | `1`–`65` |
+| MR | the Instruction for Merikare, pPetersburg 1116A verso (E = the n-th line) | 149 | `E1`–`E149` |
+
+**The order** is the Bonn Totenbuch-Projekt's object record (TM 134299, "Inhalt"), matched to AED's 136 texts
+(`../sources/AED-TEI/README.md`). Where the record and AED do not map one to one: 18 PS, 28-2 (CT 389), 30B and 122-2
+follow the text they belong to; the record names 132, 64, 136/136A and 151 twice – the second 132 is AED's 132-2, the
+second 136/136A is 136A2; for 64 AED has a long and a short version (`64L` placed first, `64K` second: an assumption,
+recorded in the project); AED has one 151 (placed at its first position) and one 50 (placed at the record's "50", not
+its "50B"). 125A–D are BD.
+
+### 12.2 Names (★ = always vocalized; the corpus's §3 and §11.2 hold)
+- The owner: **Nu** (Nw) `נוּ` – the TLA leaves his name out (`[…]` in the base): the Hebrew has `[…]` wherever the base
+  does (BD 125's practice), and `Wsjr […]` = `אוֹסִירִיס […]` ("the Osiris N": the dead man as an Osiris, §11.2). His
+  titles where written (jm.j-rʾ pr n jm.j-rʾ ḫtm.t "the steward of the overseer of the seal"): by sense, fixed by the
+  first translator.
+- New gods and places: each translator fixes them at first occurrence, transliterated by §2.2 unless the name is an
+  ordinary word (then translated as a name without the article, as BD 125's judges: `רחב־צעדים`), and lists them in
+  its Proposals; the coordinator merges them here (§12.6). The known ones keep §3: `רַא` ★, `אָתוּם`, `חֶפְּרִי`,
+  `אוֹסִירִיס`, `וֶנֶּפֶר`, `אִיסִיס`, `חוֹרוּס`, `סֵת` ★, `נֶפְתִּיס`, `תְּחוּת`, `חַתְחוֹר`, `אַנוּבִּיס`, `שׁוּ` ★, `תֶּפְנוּת`,
+  `גֶּבּ` ★, `נוּת` ★, `נוּן` ★, `פְּתָח` ★, `אַפּוֹפִּיס`, `אוֹן` ★, `חֶמְנוּ`, `גֶ׳דוּ` (Busiris), `אַבְּגֶ׳ו`, `רֶא־סְטָאוּ`,
+  `חָנֵס` (Herakleopolis), `הַדּוּאַת`.
+- Kha (pCha) `חַע`; Merikare `מֶרִיכָּרֶע` (§3.3).
+
+### 12.3 Key terms (one Hebrew per lemma; BD 125's choices bind: `6-ספר-המתים-של-נו/project.md`, §11.11)
+| Egyptian | Hebrew | Note |
+|---|---|---|
+| rʾ "spell, chapter" (also "mouth") | `לַחַשׁ` (spell) / `פֶּה` (mouth) | BD 125 and HC 44; split by sense |
+| pri̯.t m hrw "going out by day" | `יְצִיאָה בַּיּוֹם` / `לָצֵאת בַּיּוֹם` | the book's own name (rʾ.w nw pri̯.t m hrw `לַחֲשֵׁי הַיְּצִיאָה בַּיּוֹם`) |
+| ẖr(.t)-nṯr "necropolis" | `חֶלְקַת־הָאֵל` | the 2026-10-30 harmonization (`נַחֲלָה` is Ugaritic *nḥlt*'s) |
+| dwꜣ.t | `הַדּוּאַת` | §3.2; `שְׁאוֹל` never |
+| ꜣḫ (the transfigured spirit) / sꜣḫ "transfigure" | `אָח` (§4.1) / `הִפְלִיא לְאָח`? – the first translator fixes the verb | |
+| bꜣ / kꜣ / šw.t (shadow) / ḫꜣ.t (corpse) / sꜥḥ (mummy) | `בָּא` ★ / `כָּא` ★ / `צֵל` / `גְּוִיָּה` / `חֲנוּט`? (the first translator fixes) | |
+| mꜣꜥ-ḫrw / smꜣꜥ-ḫrw | `אֲמִתִּי־הַקּוֹל` / `אִמֵּת אֶת קוֹל X` | `הִצְדִּיק` never (צדק, §5.1) |
+| ḫftj "enemy" | `אוֹיֵב` | HC 35 |
+| sḫm "have power over" | `שָׁלַט בְּ־` | AM 20.15; sḫm (noun) `שִׁלְטוֹן` (MT 54) |
+| ḏꜣḏꜣ.t "council, tribunal" | `מוֹעָצָה`? – the first translator fixes (SI B209 has `הוועד` for a crown's "head" sense: check) | |
+| ḥḥ "a million" | `אַלְפֵי אֲלָפִים` | HC 41, BD 115 |
+| nḥḥ / ḏ.t | `נֶצַח` / `עַד` | §4.4; `עוֹלָם` never |
+| ḥsb / jp | `חֶשְׁבּוֹן` / `מִפְקָד` | BD 6, 68 |
+| wsḫ.t (n.t Mꜣꜥ.tj) | `אוּלַם (שְׁתֵּי הָאֱמֶת)` | §11.3 |
+| zḫ.t-jꜣr.w / zḫ.t-ḥtp | `שְׂדֵה הַקָּנִים` / `שְׂדֵה הַנַּחַת`? (`ḥtp` = `נָח` / `נַחַת`, §4.4, SI) | the first translator who meets them fixes |
+| wjꜣ "the bark" / mskt.t / mꜥnḏ.t (the night / day barks) | `הַסִּירָה`? / transliterated | the first translator fixes |
+| Nu's food taboos (bw.t, ḥs "excrement", wzšt "urine") | `תּוֹעֵבָה`, `צוֹאָה`, `שֶׁתֶן` | BD 125 bw.t `תועבה` |
+
+### 12.4 Formulas (enforced by `egypt_tools.py verify` in the Book of the Dead keys)
+1. **The title** `rʾ n X` (a chapter's first line) = `לַחַשׁ לְ־X` (an infinitive or a noun: `לחש לפתיחת הפה` /
+   `לחש לפתוח את הפה` – the first translator fixes the style and keeps it); `rʾ n tm X` = `לַחַשׁ לִבְלִי` + infinitive
+   (`לחש לבלי להירקב`); `ky rʾ (n X)` = `לַחַשׁ אַחֵר (לְ־X)`.
+2. `ḏd-mdw jn X` = `דְּבָרִים לֵאמֹר, בְּפִי X:` (BD 2); with Nu's lost name `דברים לאמר, בפי […] אמיתי־הקול:`.
+3. `mꜣꜥ-ḫrw` = `אֲמִתִּי־הַקּוֹל` (fem. `אֲמִתִּית־הַקּוֹל`, pl. `אֲמִתִּיֵּי־הַקּוֹל`); `smꜣꜥ-ḫrw X r ḫftj.w=f` = `אִמֵּת אֶת קוֹל X
+   נֶגֶד אוֹיְבָיו` (participle `הַמְאַמֵּת`); BD 18's litany (`j Ḏḥwtj smꜣꜥ-ḫrw Wsjr r ḫftj.w=f …`) is fixed by its first
+   line and copied (§7 after NU1).
+4. `ẖr-nṯr` = `חֶלְקַת־הָאֵל`.
+5. `jnk X` = `אֲנִי X`; `jw=j rḫ.kw X` = `יוֹדֵעַ אֲנִי X` (§3a: a stative); `ḏd n=j rn=j j.n X` (the ferryman's and the
+   door's questions, BD 99B, 122, 125) = `אֱמֹר לִי אֶת שְׁמִי, אוֹמֵר X` – the first copy fixes the rest of the dialogue.
+6. The rubrics: `šs-mꜣꜥ ḥḥ n zp` = `דָּבָר נָכוֹן בֶּאֱמֶת, אַלְפֵי אֲלָפִים פְּעָמִים` (BD 115); `jr rḫ rʾ pn` = `מִי שֶׁיּוֹדֵעַ
+   אֶת הַלַּחַשׁ הַזֶּה` (`jr` topicalization: `הִנֵּה`/`מִי ש־` by sense, §3a); `ḏd.tw rʾ pn ḥr X` = `יֵאָמֵר הַלַּחַשׁ הַזֶּה עַל X`
+   (HC 44).
+7. The denial `n jri̯=j X` = `לֹא עָשִׂיתִי X` and BD 125's verbs (§11.11.2) wherever a chapter repeats them; Nu's food
+   formula (BD 52–53, 102, 189 …) `bw.t=j pw ḥs, nn wnm=j sw` = `תּוֹעֲבָתִי הִיא צוֹאָה – לֹא אֹכַל אוֹתָהּ` (the first
+   copy fixes it; the later ones copy).
+
+### 12.5 Reserved and gated (added)
+The tale gates (§11.4: the Decalogue's, Ps 15 / 24's, Deut 26:13–14's words …) now apply to the Book of the Dead keys,
+CH and MR as well (`TALES` in `egypt_tools.py`); §5.1 everywhere (`שְׁאוֹל`, `מַבּוּל`, `תְּהוֹם`, the roots ברא, נחם,
+עצב, מחה, שחת …). **Look for** (the brief says "look for", never "translate as"): BD 17 (Atum alone in Nun, Gen 1:2;
+"yesterday … tomorrow"); BD 30B (the heart that must not witness against its owner; Ps 139, Jer 17:10); BD 175 (Atum
+will destroy what he made and the earth return to Nun as at first: Gen 6:7, 8:21–22, 9:11; render the Egyptian verbs by
+their own sense: the Cow's gates bind); BD 99B (the ferryman's interrogation); BD 151–154 (the body that does not decay:
+Ps 16:10); BD 64's rubric (a text found under a god's feet in Hermopolis: 2 Kgs 22:8); Merikare E 53–57 (the judges of
+the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside him), E 91–98 (the Asiatic, §11.2
+`הָעַאמוּ`), E 128–129 ("more acceptable is the character of the straight-hearted than the ox of the evildoer": 1 Sam
+15:22, Prov 21:3, 15:8, Hos 6:6 – no `זֶבַח` unless the Egyptian has an offering word; mꜣꜥ-jb by the `אֱמֶת` family).
+
+### 12.6 Proposals merged (filled by the coordinator after each translator)
+#### 12.6.1 NU1 (BD 17, 18, 18 PS), translator 1, merged 2026-11-06 (binding for NU2–NU10 and CH; full tables in `6-ספר-המתים-של-נו/project.md`, "NU1")
+1. **BD 17's glosses:** `ptr rf sw / st` = `מה הוא? / מה היא?`; `pw tr rf sw` = `מי אפוא הוא?`; `X pw` = `X הוא / היא / הם`;
+   `ky-ḏd` = `נוסח אחר:` (as HC); `jr X` = `אשר ל־X –`, `jr gr.t X` = `ואשר ל־X –`.
+2. **Formulas:** `nḥm=k N mꜣꜥ-ḫrw m-ꜥ X` = `תציל את N אמיתי־הקול מיד X`; smꜣꜥ-ḫrw: participle `אשר אימת את קול X נגד
+   אויביו`, wish `תאמת`, prospective `יאמת`, infinitive `לאמת`, passive `אימתו` (no unvocalized imperative `אמת`: it
+   reads "truth"); BD 18's refrain: `הוֹ תְּחוּת, אשר אימת את קול אוֹסִירִיס נגד אויביו, תאמת את קול` + `נגד אויביו
+   בוועד הגדול אשר ב־X`; `ṯz-pẖr` `ולהפך`; `zp-2` `(פעמיים)`; days / nights `ביום / בלילה ההוא של X`; the rubric `יאמר
+   אדם את הלחש הזה (כשהוא) טהור`; pri̯.t m hrw (noun) `יציאה ביום`.
+3. **The chapter title:** `rʾ n` + infinitive = `לחש ל־` + Hebrew infinitive (`לחש לצאת ביום`, `לחש לבלי להירקב`); + noun
+   `לחש ל־` + noun; `rʾ n jri̯.t ḫpr.w m X` = `לחש לעשות צורה של X` (ḫpr.w `צורה`).
+4. **Key terms (replacing §12.3's suggestions):** ḏꜣḏꜣ.t `ועד` (as SI B209; `מועצה` is AM's qnb.t); wjꜣ `צִי` ★ (HC);
+   sḫ.t-jꜣr.w `שְׂדֵה־הָאַגְמוֹנִים` (HC 40), sḫ.t-ḥtp `שְׂדֵה־הַקּוֹרְבָּנוֹת` (PT527); ẖꜣ.t `גופה` (`גוויה` is MT's ḏ.t);
+   šw.tj "plumes" `שתי־נוצות`; ḥnn `זכרות`; ḫry.t `הטבוחים`; sṯꜣ.w `מכות`. Suggested for their first translator: sꜣḫ
+   `עשה לאָח`, sꜣḫ.w `לחשי־אָח`; šw.t `צֵל`; sꜥḥ `חנוט`?; mskt.t / mꜥnḏ.t `מֶסְקְטֶת` / `מַעַנְגֶ׳ת`.
+5. **Names:** about 40 gods and places (the list in project.md, NU1 "Decisions"); Letopolis `חֶם`, Rosetau `רֶא־סְטָאוּ`,
+   Herakleopolis `חָנֵס` [cognate Isa 30:4], On `אוֹן` ★.
+6. **Gates fixed (the coordinator):** the `חם` gate licenses the place name Ḫm; `רא־סטאו` (Rosetau) is no longer read as
+   the root ברא; the "better than" formula no longer fires on the noun ꜣḫ,w. (The `[היתר שער]` notes already written stay.)
+7. **Open (for the user, from NU1):** zš `סבך` (WE's word) for the pools of purification (`בצות` would suit both);
+   `ועד` sounds like modern "committee"; the gloss question `מה` against the TLA's "Wer"; ḫꜣw.t `שולחן־הקרבנות` / WE's
+   `מזבחות` (a kept split).
+#### 12.6.2 NU2 (BD 1 … 42), translator 2, merged 2026-11-06 (full table in project.md, "NU2")
+1. **Titles:** `rʾ n rḏi̯.t X n N` = `לחש לתת את X של N … לו`; `rʾ n tm rḏi̯.t sḏm.tw=f` = `לחש לבלי לתת ש־` + future;
+   passive titles `לחש לבלי להינשך / להיאכל … בידי X`; `rʾ n ḫsf X` = `לחש להדוף X`.
+2. **The heart (30A / 30B):** mtr.w `עֵד` ★ (always vocalized: `עַד` is ḏ.t; BD 125 69, 75 vocalized by the coordinator);
+   ꜥḥꜥ r `עמד נגד` (MT, HC; not Deut 19's `קום`); sḫsf `התנגד`; rqi̯ `צרר`, rq.w `איבה`; the plurals keep the two hearts
+   apart (`לבות` / `לבבות`).
+3. **Verbs and nouns:** wn `פתח`, wpi̯ `פילח` (SS 67/81 wpi̯ rʾ `פתח`: a kept split by sense), wbꜣ `פער`; wḏꜥ(-mdw) `שפט`;
+   znj `עבר`; ḏꜣi̯ `הסיע`; ḫnḏ `כרע`; qꜥḥ `שכם`; ṯpḥ.t `מחילה`; ḫnj `נעל`; ḥkꜣ `קסם` / `קסמים`; wrḏ `יגע`, nni̯ `נלאה`; pzḥ
+   `נשך` (verb only); ḫfꜥ `לפת`, ꜣmm `אחז`, nḏri̯ `לכד`; mki̯ `הַנּוֹצֵר`; ḥqꜣ (verb) `משל`; jsr `אֵשֶׁל`; wnb `ציץ`; sḫpr
+   `חולל`; ḏbꜥ "seal" `הטביע`, ḏbꜥ.w "reproach" `תוכחה`; qfdn.w `בבון` (= AM's jꜥnꜥ: two baboon words, one Hebrew – kept).
+4. **Gates fixed (the coordinator):** the שיטה gate no longer reads the verb `משיט(ים)` / `השיט`; the חם gate no longer
+   reads `לוחם(ים)`; the "better than" formula no longer fires on ꜣḫ.kw r ("more akh than"); the `אלה` trap no longer
+   fires on ẖr-nṯr. **Rule (the coordinator):** where a base line has `ḏd-mdw jn mꜣꜥ-ḫrw` without `[…]`, the Hebrew has no
+   `[…]` either (`דברים לאמר, בפי אמיתי־הקול:`) – the bracket follows the base.
+5. **Older splits noted for the lead's harmonization** (not changed now): sḏ.t `שלהבת` (NU1) / `להבה` (BD); nḏ and zꜣu̯ both
+   `שמר` (NU1); `זוהר` ꜥḏ (HC) / psḏ (NU1); jꜣ.t `נֵס` (MT) / `מוט` (BD 77); ṯꜣi̯ and nḥm both `נטל`.
+#### 12.6.3 NU3 (BD 14 … 37), translator 3, merged 2026-11-06 (full tables in project.md, "NU3")
+1. **BD 71's refrain** (six copies, across line breaks: 71.2, 71.4, 71.7, 71.9, 71.10, 71.18): `תשלים אותי כשם שהשלמת את
+   עצמך – שחררו אותו, התירו אותו, תנו אותו לארץ, תנו את אהבתו – אומר אדון־פנים־אחד עליי.` (byte for byte; the
+   imperatives plural, as the TLA).
+2. **Formulas:** BD 68's litany sḫm=j m X `שולט אני ב־X`; the food formula's first copy (51.2) `תועבתי היא צואה – לא אֹכַל
+   אותה` (§12.4.7: the later copies copy it).
+3. **Terms:** špt `זעף`; sḥtp `הניח את דעת` (AM 8.11; the offerings `מניחי־הדעת`); zn `פרץ`, wḥꜥ `שחרר`, sfḫ `התיר`, mr
+   `אסר`; dbn `הקיף`, pẖr `סובב`, pnꜥ `הפנה`; ẖnm `התאחד עם`, zmꜣ `התחבר`; šw.t `צל`; sꜥḥ `אציל`; mskt.t `מֶסְקְטֶת`; ds
+   `מאכלת`; nšnj `רוגז` (SS); bjꜣ `מתכת`; ḥw.t-nṯr `בית האל`; šzp "image" `דיוקן` (`צלם` gated), šzp "upper lip" `שפם`; rmn
+   "upper arm" `קיבורת`. Names: `תֶּכֶם`, `האִמְחֶת`, `בולע־החמור`, `אדון־פנים־אחד`, `ההולך־על־בטנו` (Gen 3:14 in the
+   apparatus), `האָכֶרוּ`, `בָּאחוּ`.
+4. **Gates fixed:** the place Bꜣẖ.w licenses `באחו`; `המושבות` no longer read as the root שבת.
+5. **For the lead's harmonization:** mjḥ.w (here) / AM's ḥmw both `משוט`; jm.j-rʾ and ns both `לשון`; ꜥb.w `עבֵרה` / NU1's jw
+   `עבירות`; sẖp `גמע` = BD 125's swallowing verb; ṯꜣy `גבר` / TB's `אשת איש`.
+#### 12.6.4 NU4 (BD 79 … 124), translator 4, merged 2026-11-06 (full tables in project.md, "NU4")
+1. **Becoming:** `rʾ n ḫpr m X` = `לחש להיות ל־X` (ḫpr infinitive `לִהְיוֹת`, as the future `יִהְיֶה`); `jri̯.t ḫpr.w m X`
+   §12.6.1.3.
+2. **The gate / ferry interrogation (BD 122; for BD 99B in NU8):** `מי אפוא אתה? אתה – מי? היכן נהיית? – אני אחד מכם.`;
+   named parts `"X" – שמו / שמה / שמם של Y`; "on what do you live?" `על מה אפוא אתה חי?` – `חי אני על X` (NU1's ꜥnḫ m).
+3. **Food formula:** 82.3 = NU3 51.2 with `אותה` for *sw*; 124.3–5 copy NU3 51.2–3 (only ḫmi̯ `לא אֵהָרֵס בה` differs).
+4. **Terms:** `jri̯ n=j wꜣ.t` = `עֲשֵׂה לי אורח` (wꜣ.t `אֹרַח`; NU2 has `דרך`: a split for the lead); mnj `עגן` (the moor /
+   die pun; SI); ḏꜣj `צלח` / `הסיע` / `חסם` by sense; pꜣj `עף`, jṯṯ `דאה`, ngg `קרקר`; mn.t "swallow" `סנונית`; wꜥr.t `אפיק`;
+   jp `מנה` / ṯnw `ספר`; ḥt.yt `גרגרת`; pꜣw.tj.w `הראשונים` (tp.jw-ꜥ `הקדמונים`); sꜣḫ.w `לחשי־אָח`; ḏ.t "body" `גְּוִיָּה`
+   (the MT's) / ḏ.t "eternity" `עַד` – the pun kept (85.9–10 = 85.14–15).
+5. **For the lead:** wꜣ.t `דרך` / `אורח`; jꜣḫ.w `זיו` (NU1) / `אורה` (NU2, NU4); wḏꜥ `הקצה` / `שפט` (by sense); jꜥn.w `הידד` /
+   `צער`; ꜣḫ.t `תועלת` (AM) hides the akh-sense; wsr.w `משוטי־החתירה` / AM's ḥp.t.
+#### 12.6.5 NU5 (BD 83 … 64L), translator 5, merged 2026-11-06 (full table in project.md, "NU5")
+1. **Loanword added (§4.2, gated):** zšn "lotus" = `שׁוֹשָׁן` [cognate: loanword].
+2. **Terms:** jd.t (cow) `עגלה` (HC; Gen 41's `פָּרוֹת`, `יְפוֹת מַרְאֶה` only in the apparatus); šr.t `נחיר`; ssn `נשם`; the
+   winds `משב־הצפון / הדרום / המערב / המזרח` (`רוּחַ` is ṯꜣw's); the breath formula `תתן לי / תן לי את הרוח הנעימה אשר
+   בנחיריך`; wḥm ꜥnḫ m-ḫt mt `אחזור על החיים אחרי המוות`; sḏfꜣ / ḏfꜣ.w / kꜣ.w `כלכל` / `מזון` / `צידה`; mk.t `הגנה`; mꜥwḥ.w
+   `משוט` (= NU3's mjḥ.w); BD 64's light words sšp `אור`, šw `שמש`, stw.t `קרני־אור`, mꜣw.t `אלומות`, wꜣwꜣ `בוהק`, jꜣḫ.w
+   `אורה`; rʾ-pr `היכל` / jwꜣ.y `קודש`. Names: `מֶנְכָּאוּרַא`, `חוֹרְגֶ׳דֶף`, `סָאח` (Orion), `סֶשָׁאת`, `רוּטִי`, `חוֹנְסוּ`,
+   `חַיִת`, `נֶדוּ`; the seven cows, the bull and the four rudders translated as names.
+3. **Copy for the later parts:** 64L.19, .32, .35, .41 ↔ 64K (NU8); 109.3–5, 109.7 ↔ BD 149 (NU10); 52.3–7 ↔ BD 189 (NU7):
+   copy where the Egyptian is the same (`data` lists them).
+4. **Gates:** `כתיבה` no longer read as ־תיבה; `לשאול` "to ask" stays passed line by line with `[היתר שער]` (an exemption
+   could hide a real "to Sheol").
+5. **Open (for the user):** 84.5–6 `n rḫ=j` kept as a negation ("I did not know") against the TLA's rhetorical question;
+   BD 109's "northern" gate as Nu writes it (the TLA: sic); BD 83, 84, 124's shifted titles in Nu.
+#### 12.6.6 NU6 (BD 2 … 190), translator 6, merged 2026-11-06 (full table in project.md, "NU6")
+1. **Refrains:** BD 78 `יחששו ממני אֵלֵי הַדּוּאַת, ישגיחו הם על שעריהם בעדי` (×6; ꜥḥꜣ "watch over", the TLA's "achthaben";
+   "fight" `נלחם` for the other sense); BD 78's mission `האציל אותי חוֹרוּס בבָּא שלו, כדי לקחת את עניינו לאוֹסִירִיס אל
+   הַדּוּאַת` (×3); BD 65 / 179's victory `נתון הוא לי, גמור הוא תחתיי בוועד`; the litany frame `n X` = `ל־X;` (one item a line;
+   141.17–28 copy NU5 148's names).
+2. **Terms:** sꜥḥ (verb) `האציל` / `מואצל` (Num 11:17 `וְאָצַלְתִּי` in the apparatus; the root link is ours); ḏsr (verb) `קידש`,
+   relics `הקדשים`; sqꜣi̯ `רומם`; ṯni̯ `הבליט` / `בולט`; jṯi̯ `לקח`; wsr.t `מפרקת`; wsr.w `חוסן`; sḫm (epithet) `האדיר`, the
+   sceptre `שרביט־הסֶחֶם`; nms `נֶמֶס`; jz.t `פלוגה`; ḥꜣ.t `בית־הקבר`; zḥ `ביתן`; ḥꜣw-mr `האספסוף`. Names: Swnw `סְוֵנֵה` [cognate Ezek 29:10]; **Rw.tj `שני־אריות` everywhere** (the coordinator: NU5's
+   `רוּטִי` changed, 53.2, 55.2, 109.x); about 35 new names (project.md).
+3. **Gates:** `ברַא` (b + Re) and `ברֶא־חֶנֶת` read as ברא – passed with `[היתר שער]` (kept: an exemption keyed to Re could hide the
+   root); `בגדה` "bank" avoided (`בשפת־המים`).
+4. **Open (for the user):** `האציל` for sꜥḥ (the Num 11:17 root is ours); ꜥḥꜣ "watch over" against "fight"; ḏsr `קידש` against
+   "clear (the way)"; 65.11–13's cosmic threat rendered literally.
+#### 12.6.7 NU7 (BD 133 … 189), translator 7, merged 2026-11-06 (full table in project.md, "NU7")
+1. **Copies:** 189.2–13 copy NU5 52.1–7, NU4 82.2–4 / 124.3–5, NU3 51.2–3 where the Egyptian is the same; 133.1, 133.20,
+   136A.21–22 copy NU6 190.107 / 112–113; 116.6 the food formula in the third person `תועבתו היא צואה`; `jr rḫ rʾ pn` =
+   `מי שיודע את הלחש הזה`.
+2. **BD 154's decay verbs** (one Hebrew each; `שחת` never): zbi̯ `גווע`, ẖnn `התעפש`, jmk `נמק`, snsn `הבאיש`, ḥwꜣ `נרקב`,
+   ski̯ `אבד`, ḥtm `נשמד`.
+3. **Terms:** nꜥi̯ `הפליג`; dp.w `משוט־ההגה`; ḥp.wt `משוט־חתירה`; ḫꜣbꜣs.w `הנוצצים`; bjꜣ "sky-water" `ימת־השמים` (§12.6.13); qmꜣ II "throw"
+   `השליך`; sk `ניגב`; smꜣ.yw `שאר`; ḏdf.t `זוחל`; mj.tj `עמית`; ḫrp `הנהיג`; mꜥbꜣ `רומח`; `בָּאֵי X` (the bas of a city);
+   Pe `פֶּה` ★; Apis `אַפִּיס`; ḏbꜣ.t (a tree) `גֶ׳בָּאת`.
+4. **Gates fixed:** `קוף` licensed by gꜣf, `נחש` by ḥfy.t (spellings of gf, ḥfꜣ.t).
+5. **For the lead:** šꜥd / ḥsq both `כרת`; jꜣ.w / dwꜣ both `הלל`; sk / zjn both `ניגב`; rri̯ / šꜣj both `חזיר`; nrw / SI's ḥr.yt
+   both `אימה`; 189.3 ḫmi̯ `מישוש` against NU4 124.4 `לא אֵהָרֵס בה`.
+#### 12.6.8 NU8 (BD 44 … 176), translator 8, merged 2026-11-07 (full table in project.md, "NU8")
+1. **BD 99B's frame** (completing §12.4.5; 99B.10–30): `אמור לי את שמי, אומר / אומרת / אומרים X.` – `"Y" – שמך / שמכם /
+   שמותיכם.` (NU4's 122, BD 125's door).
+2. **The nets** (Egyptian words, [equivalent]): jꜣd.t `רשת` (WE), ḥꜣm.t `חרם` (Hab 1:15), jss.t `מָצוֹד` (Job 19:6); `מְצוֹדָה`
+   stays ḥꜣd's (NU1, NU7); `מכמורת` not used. Verbs: ḥꜣm `דג`, jss `תפס`, sḫt `צד` (AM; BD 125, 14 `לכד ברשת`: a split for the
+   lead), ḏsf `שלה`, nḏri̯ `לכד`.
+3. **The leg:** rd `רגל`, mn.t `ירך`, ḫpš `שוק`, sbq `כֶּרַע` ★, ḫnd `קרסל`, wꜥr.t `גַּפָּה`.
+4. **The shabti (BD 6):** wšb.tj `וֶשֶׁבְּתִי`; m=k wj `הנה אני!` (HC 60; `הִנֵּנִי` only in the apparatus).
+5. **Others:** mẖn.t `מעבורת`, ṯz "sandbank" `שרטון`, ḫrp.w `מקבת` (SS), ꜣw.t-ꜥ `מתנה` (SI B175), ḫm `בַּעַר` (AM); 64K copies
+   NU5's 64L wherever the Egyptian is the same; 176.2–3 copy NU1 17.99.
+6. **Gates fixed:** `עור` licensed by mskꜣ "hide"; `בער` licensed by ḫm "ignoramus" (AM's word).
+7. **For the consistency review (NU5 and NU8 together):** twr `מזוקק` (BD 125) / `מטוהר` (NU5, NU8); mꜣꜥ "see" `חזה` / NU5 64L.3
+   `רואים`; ṯz `קשר` / NU5 64L.12 `מחוברת`; 64K.13 / 64L, 64K.10 / 64L.21 read differently.
+#### 12.6.9 NU9 (BD 126 … 102), translator 9, merged 2026-11-07 (full table in project.md, "NU9")
+1. **The three openings:** sbḫ.t `מָבוֹא` (new; NU6 141.56 aligned by the coordinator, `למבואות הַדּוּאַת`; MT 63's `שער` is
+   another text: kept), ꜥrr.yt `שער` (NU5–NU7), sbꜣ `דלת` (BD 125) – all three in 144.44.
+2. **BD 145's portal frame** (×14; 11–14 changed where the Egyptian changes): `בהגיעו אל המבוא ה־N של (בית) אוֹסִירִיס: עֲשֵׂה
+   לי אורח! יודע אני אותך, יודע אני את שמך, יודע אני את שם האל השומר אותך. "…" – שמך; "…" – שמו של שוערו.` **BD 144's
+   gate frame** (×7): `השער ה־N: "X" – אשר־על השער ה־N;` / `"Y" – שמו של השומר אותו;` / `"Z" – שמו של המגיד שבו.`
+3. **Refrains:** 137A `עין־חוֹרוּס – חסותך; תפרוש היא את חסותה עליך, תפיל היא לך את כל אויביך, ואויביך נופלים לך.`; 101 `אם
+   שלם אתה – שלם הוא. הוֹ רַא, בשמך זה של רַא:`.
+4. **Terms:** tkꜣw `אֲבוּקָה`; zꜣ `חסות` (PT571); sjn `טִין`; ḏb.t `לבנה`; bb.t `גומחה`; sꜣw.t `קיר`; zmꜣ-tꜣ `ההתאחדות־עם־הארץ`;
+   tp.j-rnp.t `ראשית־השנה`; ḏd `גֶ׳ד`; tj.t `תִּית`; ḫnm.t `יָשְׁפֵה`; ṯḥn.t `פָּיַנְס`; wꜣḏ `קמע`; šs-nsw `שֵׁשׁ־המלך`; bs `שביב`;
+   pꜥw `יקוד`; rkḥ `הצית`; ꜣḫ jqr `האָח המצוין`; mꜣr `הַדַּךְ`; jrw `מראה`; about 40 portal / gate names.
+5. **Gate fixed:** the "better X than Y" formula (§6.3) is Amenemope's saying: no longer checked in the Book of the Dead
+   keys (it misfired on ꜣḫ "akh" + r "to" ten times in NU1–NU9; the `[סטייה מן הנוסחה]` notes written stay).
+6. **For the lead / the review:** 102.4 / NU4 124.4 / NU7 189.3 – one formula line (`nn ḫmi̯ jm=f`) with three renderings
+   (`לא אזון ממנה` / `לא אֵהָרֵס בה` / `אין מישוש בה`); splits by sense ḫsr, sṯꜣ, dnj; dndn `זעם` / NU5's `השוחט`.
+#### 12.6.10 NU10 (BD 136A2, 136B, 149, 150) and CH (BD 175), translator 10, merged 2026-11-07 (project.md, "NU10 … and CH")
+1. **BD 149's mound frame** (×14, and BD 150's captions): `התל ה־N – ירוק.`; `האל אשר בו: X`; `הוֹ התל הזה של X`; jꜣ.t `תל`
+   (BD 77's jꜣ.t `מוט` / MT's `נֵס` are other senses); qnj.t (the paint) `צהוב` / HC's `זרניך` (the substance): by sense.
+2. **Copies:** NU5 109.2–9 → 149.6–19 (twice: BD 149 repeats it); NU3 108.3, 108.9–14 → 149.26–33; NU7 136A.1–5 → 136A2;
+   NU4 82.2 → 149.79–80.
+3. **Water words, one each:** nwy `זרם`, nwi̯.t `גל`, wꜣ.w `נחשול`, jtrw `יְאֹר` [loanword], ḥꜥpi̯ `חַעְפִּי`. Others: ꜣḫ.t
+   "flame" `אוּר` ★, qꜣḥ `בוץ`, npr `דגן`, pꜣq `רקיק`, mn.w `אנדרטאות`, srḫ `סֶרֶח`, gbꜣ `סנוור`.
+4. **BD 175:** ḥḏi̯ `הזיק` / `היזק` (the dossier's MK E132 binds; "destroy" is the usual reading – open for the user: a change
+   would go to MK, AM and CH at once); zjn `ניגוב` (`מחה` reserved); Nww `נוּן` ★; ḥḥ.wt `מֵי־חֶח` (HC's `אֵלֵי־חֶח`; `מבול`,
+   `שיטפון`, `תהום` avoided); zpi̯ `נותר`; tp.t-ꜥ `כמעמדה מקדם`; wjꜣ-n-ḥḥ `צִי־אלפי־האלפים`; a change of speaker marked by a dash.
+5. **Gates fixed:** `קוף` licensed by gfw; the root שכב by the TLA lemma tla150740 (sḏr written ḫr).
+6. **For the lead:** the horizon god `רַא־חַרְאַחְתִּי` (TB) / `חוֹרוּס־אָחְתִּי` (NU5) – two TLA lemmas, each kept; wḏꜥ `הפריד` /
+   `הקצה` / `שפט` (by sense); ḫsf `הדף` / `בא לקראת`.
+#### 12.6.11 MR (the Instruction for Merikare, E1–E149), translator 11, merged 2026-11-07 (`9-מוסר-למריכרע/project.md`)
+1. **E130–E138** copied byte for byte from MK (`verify MR`); no revision proposed (E134's singular "supporter" in the TLA is
+   an alternative reading, not an error).
+2. **Speech:** md.t `דבר`, mdw.tj `דברן`, tꜣḥ `מסית`, ẖnn `איש־המהומה`, shꜣ `התסיס` / `תסיסה`; ḫpš "strength" `עוז` (E31 `עוזו
+   של מלך – לשונו; תקיף הדבר מכל קרב`).
+3. **Punishment and justice:** sfn `ריחם`; ḫsf "punish" `ייסר` (WE) / "ward off" `הדף` (MK) – by sense; nmꜥ `נטה`; nf `זדון`;
+   sqr `קטל`; ḏꜣḏꜣ.t `ועד`, wḏꜥ `שפט`.
+4. **The poor:** šwꜣ.w `רָשׁ` (twꜣ `עני`; both in E27; AM's one šwꜣ.w `עני`: for the lead); ẖsj `עלוב`; ꜥꜣm.w `הָעַאמוּ`.
+5. **Character:** ꜥqꜣ(-jb) `ישר` / `ישר־הלב` / `יושר־הלב` (the base has ꜥqꜣ, not mꜣꜥ); qd.w `המידות`; bjꜣ.t `תכונה`; jwn `טבע`.
+6. **Others:** mr.w "following" `חבורה` (SI `אנשים`: for the lead); mnj `עגן`; mn.w `אנדרטה`; wdḥw `שולחן־הקרבן`; jwꜣ `שור`; no
+   `זבח` in a line.
+7. **Open (for the user):** E119 the base "through what I did" against pCarlsberg "not through what I did" (the base kept);
+   E128 `ככר?` (the TLA's lemma) against the usual "character" (the colophon's same word is "character").
+#### 12.6.12 The three independent fidelity reviews (2026-11-07; sections in the two project.md files)
+Review 1 (NU1–NU3) 22 lines, review 2 (NU4–NU7) 22 + 3 copies in NU10, review 3 (NU8–NU10, CH, MR) 26 – mostly tense and
+mood (n sḏm=f read as a future; relative forms without .n read as past), person / number, brackets, a homonym lemma
+(spḥ "reach" / "lasso"), one word read as two. **Applied to all copies at once (the coordinator, review 3's proposal):**
+Merikare E132 `הרג את אויב[יו]` → `הרג את אויביו` (only the suffix =[f] is restored: no bracket, §2.1) – in MR, MK and
+the fifth-day dossier's MK (`verify MK`, `verify MR`, `dossier_tools.py verify` pass).
+#### 12.6.13 The consistency pass over the book (2026-11-07; 108 `>` lines in NU1–NU10, BD, CH; the full list in `6-ספר-המתים-של-נו/project.md`, "Consistency pass")
+One Hebrew per lemma across the parts (superseding the earlier rows where they differ): wꜣ.t `אורח` (NU2–NU3 aligned);
+jꜣḫ.w `אורה`; twr `מזוקק`; ṯni̯ `בולט` / `הבליט`; the food formula's ḫmi̯ (tla117020) `לא אֵהָרֵס בה` (NU4, NU7, NU9); nwy
+`זרם`; sḏ.t `שלהבת` (BD 125's six lines aligned, the judge `חובק־שלהבת`); jṯi̯ `לקח` (not reserved in an Egyptian line,
+guidelines §6.7 principle 1; `תפס` is jss's); bjꜣ "sky-water" `ימת־השמים`; wdn `זבח` (`הקריב` is mꜣꜥ's); šꜥd `חתך` (`כרת`
+ḥsq's); ḏꜥr "search" `חקר`; mꜣꜣ `חזה` (25 lines); ḏd `אמר` (`הגיד` is smj's); wsr `חסין` (`חזק` nḫt's); snḏ verb `חשש` /
+noun `יראה`; ꜥḥꜥ r `עמד נגד`; ꜥꜣ "door-leaf" `כנף־הדלת`; jrw `מראה`; sšmi̯ `הנחה`; ṯz `קשר`; pr.t-r-ḫrw `יציאות־לקול`;
+šfšf.t `יראת־הכבוד`. **Splits kept, by sense:** wḏꜥ (`שפט` / `הקצה` / `הפריד`), ḏꜥr "care for" `דרש`, jꜥn.w `צער` (NU4 82.11),
+nḥm, mri̯, ski̯ (`אבד` / `כילה` / "spend time" `בלה`), ꜥḥꜥ "rise", ḫsf "go to meet", dndn (two lemmas). **For the lead (two
+lemmas, one Hebrew):** jꜣ.w / dwꜣ (`הלל`), sk / zjn (`ניגב`), nḏ / zꜣu̯, ꜥḏ / psḏ, ṯꜣi̯ / nḥm, the oar words, jm.j-rʾ / ns,
+rri̯ / šꜣj, nrw / ḥr.yt, sḫt; bs (`לפיד` / `שביב`).
