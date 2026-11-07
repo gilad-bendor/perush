@@ -17,7 +17,7 @@ import re
 import sys
 
 A = os.path.dirname(os.path.abspath(__file__))
-UNITS = [('TH', '1-תולדות-האלים'), ('WD', '2-מעשים-וימים')]
+UNITS = [('TH', '1-תולדות-האלים'), ('WD', '2-מעשים-וימים'), ('SH', '3-מגן-הרקלס')]
 PROJECTS = [(k, os.path.join(A, p), [f'annotated-{k}.rtl.md']) for k, p in UNITS
             if os.path.exists(os.path.join(A, p, f'annotated-{k}.rtl.md'))]
 OUT = os.path.join(A, 'parallels-index.md')

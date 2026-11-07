@@ -22,7 +22,8 @@
                                                           traps, the formulas and the names
     python3 -I -B hesiod_tools.py selftest                 run the checks on the test lines of renderings.md §10
 
-KEYs: TH (the Theogony, 1-תולדות-האלים/), WD (the Works and Days, 2-מעשים-וימים/); labels are the base's line numbers
+KEYs: TH (the Theogony, 1-תולדות-האלים/), WD (the Works and Days, 2-מעשים-וימים/), SH (the Shield of Heracles,
+3-מגן-הרקלס/, Round 6 run 5); labels are the base's line numbers
 ("116", "929a", "169b"). Annotated file: <project>/annotated-<KEY>.rtl.md.
 
 Base (../sources/): Perseus--Hesiod/ (Evelyn-White 1914, PD; Perseus markup CC BY-SA) and Perseus-Treebank--Hesiod/ (AGDT
@@ -65,14 +66,24 @@ import perseus2md as P  # noqa: E402
 SRC = os.path.join(ROOT, "sources")
 P1 = "1-תולדות-האלים"
 P2 = "2-מעשים-וימים"
+P3 = "3-מגן-הרקלס"
 UNITS = {
     "TH": (P1, "הסיודוס, תולדות האלים (Θεογονία)", "Perseus--Hesiod/tlg0020.tlg001.perseus-grc2.xml",
            "Perseus-Treebank--Hesiod/tlg0020.tlg001.perseus-grc1.tb.xml"),
     "WD": (P2, "הסיודוס, מעשים וימים (Ἔργα καὶ Ἡμέραι)", "Perseus--Hesiod/tlg0020.tlg002.perseus-grc2.xml",
            "Perseus-Treebank--Hesiod/tlg0020.tlg002.perseus-grc1.tb.xml"),
+    "SH": (P3, "הסיודוס (המיוחס), מגן הרקלס (Ἀσπὶς Ἡρακλέους)", "Perseus--Hesiod/tlg0020.tlg003.perseus-grc2.xml",
+           "Perseus-Treebank--Hesiod/tlg0020.tlg003.perseus-grc1.tb.xml"),
 }
-PROJECT_TITLES = {P1: "הסיודוס, תולדות האלים", P2: "הסיודוס, מעשים וימים"}
+PROJECT_TITLES = {P1: "הסיודוס, תולדות האלים", P2: "הסיודוס, מעשים וימים", P3: "הסיודוס (המיוחס), מגן הרקלס"}
 MARK_TAG = {"del": "{חשודה}", "add": "{גלנוס}", "part": "{פפירוס}"}
+# In the Shield, Evelyn-White's square brackets inside a line mark suspected words (not a papyrus): the Hebrew line
+# opens with {חשודה בחלקה} and the suspected words stand in ⟦ ⟧ (renderings §14, 2026-11-07).
+MARK_TAG_KEY = {"SH": {"part": "{חשודה בחלקה}"}}
+
+
+def mark_tag(key, mark):
+    return MARK_TAG_KEY.get(key, {}).get(mark) or MARK_TAG.get(mark)
 NIQ = "֑-ֽֿ-ׇ"
 fl = P.norm  # diacritic-free, lower case, σ for ς, letters only
 
@@ -198,7 +209,7 @@ def strip_marks(s):
     """Hebrew without the line tags, brackets, editorial marks, footnote refs, quotes and niqqud (keeps the maqaf)."""
     s = re.sub(r"\[\^[^\]]+\]", "", s)
     s = re.sub(r"\{[^}]*\}", "", s)
-    s = re.sub(r"[\[\]⟨⟩*?\"'“”״]", "", s)
+    s = re.sub(r"[\[\]⟨⟩⟦⟧*?\"'“”״]", "", s)
     s = re.sub(rf"[{NIQ}]", "", s)
     return re.sub(r"\s+", " ", s).strip()
 
@@ -305,7 +316,7 @@ REQUIRED = [
     (r"^(?:πλασσω|συμπλασσω)$", r"יצר|ייצר|יוצר|יצור", "πλάσσω = יָצַר (§5, LXX Gen 2:7)"),
     (r"^γυμνοσ$", r"ערום|ערם|עירום|עירם", "γυμνός = עָרֹם (§5, LXX Gen 2:25)"),
     (r"^οφισ$", r"נחש", "ὄφις = נָחָשׁ (§5, LXX Gen 3:1)"),
-    (r"^δρακων$", r"דרקון", "δράκων = דְּרָקוֹן (§5)"),
+    (r"^δρακων$", r"דרקו[ןנ]", "δράκων = דְּרָקוֹן (§5)"),
     (r"^τικτω$", r"ילד|יולד|תלד|ילדה|ילדו|ללדת|יולדת|ילוד|נולד", "τίκτω = יָלַד (§5)"),
     (r"^γεινομαι$", r"הוליד|הולידה|הולידו|מוליד|יוליד|תוליד|להוליד|הולד|נולד|נולדו|נולדה", "γείνομαι = הוֹלִיד (§5; passive senses נוֹלַד)"),
     (r"^δικαιοσ$", r"צדיק|צדק", "δίκαιος = צַדִּיק (§5, LXX Gen 6:9)"),
@@ -440,11 +451,11 @@ def check_line(key, lab, heb, body, out, first_seen=None):
     src = r["text"]
     srcf = flat(src)
     # 3. the mark
-    tag = MARK_TAG.get(r.get("mark", ""))
+    tag = mark_tag(key, r.get("mark", ""))
     if tag and not heb.lstrip().startswith(tag) and not (r["mark"] == "del" and lab == "929s" and "{חשודה}" in heb):
         out.append(f"MARK {key} {lab}: the base marks this line ({r['mark']}): the Hebrew opens with {tag}\n    {heb}")
         bad += 1
-    if not tag and re.match(r"^\{(?:חשודה|גלנוס|פפירוס)\}", heb.strip()):
+    if not tag and re.match(r"^\{(?:חשודה|חשודה בחלקה|גלנוס|פפירוס)\}", heb.strip()):
         out.append(f"MARK {key} {lab}: a tag on a line the base does not mark\n    {heb}")
         bad += 1
     # 5. reserved
@@ -648,7 +659,7 @@ def cmd_data(key, a=None, b=None):
     print("Words: form – treebank lemma (the parse decoded; the relation) – a machine-checked annotation, not a reading: "
           "check every form that carries a tense, a parallel or a gate (LSJ: `lsj <lemma>`).\n")
     for r in sp:
-        mk = f"   [base mark: {r['mark']} → the Hebrew opens with {MARK_TAG[r['mark']]}]" if r["mark"] else ""
+        mk = f"   [base mark: {r['mark']} → the Hebrew opens with {mark_tag(key, r['mark'])}]" if r["mark"] else ""
         print(f"### {r['label']}{mk}")
         print(f"`{r['text']}`")
         for w in r["words"]:

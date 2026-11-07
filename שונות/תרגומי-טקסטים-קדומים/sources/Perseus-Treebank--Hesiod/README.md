@@ -18,3 +18,4 @@
   Ἑλικωνιάδες as a plural lemma.
 - **Usefulness:** high: lemma and morphology for every word, so the translators parse from data, not from memory; the
   corpus tool's gates and checks license by the lemmas.
+- **Added 2026-11-07 (Round 6 run 5):** the Shield of Heracles (`tlg0020.tlg003`; from the same repository path, `tlg003`), for `../../הסיודוס/3-מגן-הרקלס/`. The TEI has 479 lines, labelled 1–480 without 298, with Evelyn-White's brackets as `<del>` on whole lines 204 and 210 and inside lines 203, 205, 209 and 211 (suspected words). The treebank has 3,315 words: all are aligned, but its line cites run one ahead in 139 and 304–309.

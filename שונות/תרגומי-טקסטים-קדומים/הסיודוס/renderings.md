@@ -232,7 +232,7 @@ the Greek word is capitalized in the base.
 | Κύπρος | קַפְרִיסִין |  |  |
 | Κύθηρα | קִיתֵרָה |  |  |
 | Τροία | טְרוֹיָה |  |  |
-| Θήβη | תֵּבַּאי |  | Boeotian Thebes |
+| Θήβη / Θῆβαι | תֵּבַּאי |  | Boeotian Thebes |
 | Αἰθίοψ | כּוּשׁ |  | biblical name (§2.3): the land / people `כּוּשׁ` (`מֶלֶךְ כּוּשׁ`, `בְּנֵי כּוּשׁ`); not the plural `כּוּשִׁים`, a slur in Modern Hebrew (§11.7) |
 | Νεῖλος | נִילוּס |  | never `יְאֹר` |
 | Ἄσκρη | אַסְקְרָה |  | Hesiod's village (WD 640) |
@@ -245,6 +245,24 @@ the Greek word is capitalized in the base.
 | Βορέας | בּוֹרֵאָס |  | the north wind (god and wind) |
 | Ζέφυρος / Νότος | זֶפִירוֹס / נוֹטוֹס |  | the west wind, the south wind |
 | Ἑωσφόρος | (T) `מֵבִיא־הַשַּׁחַר` |  | the morning star (Isa 14:12 `הֵילֵל בֶּן שָׁחַר`: LXX ὁ ἑωσφόρος – a note) |
+| Ἀμφιτρύων | אַמְפִיטְרִיּוֹן |  | SH (2026-11-07): Alcmene's husband |
+| Ἠλεκτρύων / Ἠλεκτρύον | אֵלֶקְטְרִיּוֹן |  | SH: Alcmene's father |
+| Κύκνος | קִיקְנוֹס |  | SH: "Swan", son of Ares (the speaking name in a note) |
+| Ἰόλαος | יוֹלָאוֹס |  | SH: Heracles' charioteer |
+| Ἰφικλέης | אִיפִיקְלֵס |  | SH: Heracles' twin |
+| Εὐρυσθεύς | אֶוּרִיסְתֵאוּס |  | SH |
+| Κρείων | קְרֵאוֹן |  | SH |
+| Τίρυνς | טִירִינְס |  | SH (TH 292 `טירינס`) |
+| Κῆυξ | קֵאִיקְס |  | SH: king of Trachis |
+| Τραχίς | טְרָכִיס |  | SH |
+| Περσεύς | פֶּרְסֵאוּס |  | SH 216 (not Perses of WD, `פֶּרְסֵס`) |
+| Δανάη | דָּנָאָה |  | SH |
+| Θησεύς | תֵּזֵאוּס |  | SH: the familiar form |
+| Πειρίθοος | פֵּירִיתוֹאוֹס |  | SH |
+| Καινεύς | קַיְנֵאוּס |  | SH |
+| Μόψος | מוֹפְּסוֹס |  | SH |
+| Ἄναυρος | אַנָאוּרוֹס |  | SH: the river |
+| Πυθώ | פִּיתוֹ |  | SH: Delphi |
 
 ### 3.2 Speaking names translated (T)
 **Rule (decided 2026-10-24, §12):** where a god's name **is** an ordinary Greek noun of Hesiod's language – the cosmic
@@ -942,3 +960,40 @@ Hephaistos `הֵפַיְסְטוֹס`; Αἰθήρ `אֶתֶר` ★; the winds �
   translator fixes their Hebrew at the first occurrence and records it.
 - The LXX tool (`../tools/lxx_verses.py`) has only Genesis, Exodus, Isaiah and 4 Kingdoms: describe the LXX of other
   books (Job, Proverbs, Psalms, Judges) in words, never quote it from memory.
+
+## 14. The Shield of Heracles (SH; Round 6 run 5, 2026-11-07; project `3-מגן-הרקלס/`)
+
+The third text of the corpus binds itself to §1–§13 (names, conventions, key terms, the LXX layer, the gates, the
+formulas, the repeated lines). What is particular to it:
+1. **The base's marks** (§1 above, for SH): whole lines in `<del>` (204, 210) open with `{חשודה}`; the half-lines
+   Evelyn-White brackets inside 203, 205, 209, 211 are suspected words, not a papyrus restoration: the `>` line opens
+   with **`{חשודה בחלקה}`** and the suspected Hebrew words stand in **`⟦ ⟧`** (the tool's `MARK_TAG_KEY`; the gates read
+   through `⟦ ⟧`). `[ ]` keeps its meaning "restored" and is not used in SH.
+2. **Title:** `מָגֵן הֵרַקְלֵס` – ἀσπίς is the round battle shield: `מָגֵן` [equivalent] (LXX ἀσπίς renders `מָגֵן` and
+   `צִנָּה`; the translators check the verses before any note); σάκος (the great shield, a synonym in this poem) gets
+   its own Hebrew, fixed by the first translator and recorded here (one Greek lemma = one Hebrew word).
+3. **The models:** the shield's ekphrasis (139–320) follows Iliad 18.478–608; the poem's lines shared with the Iliad,
+   the Odyssey, the Theogony and the Works and Days are noted (the corpus's own repeats: `hesiod_tools.py data SH`,
+   "repeats"); 1–56 are a Catalogue *ehoie* (fr. 195 M-W): `ἢ οἵη` "or like her who" – the Catalogue's formula,
+   rendered once and kept.
+4. **The new names** (not in §3.1): each translator transcribes by §2.3, vocalizes the first occurrence, and lists them
+   in its section of `project.md`; the coordinator merges them into §14.1 below and into §3.1 (so `verify` checks them).
+
+### 14.1 Names and terms fixed for SH (merged from the translators, 2026-11-07)
+- **Names:** the main ones are now rows of §3.1 (checked by `verify`); the full lists (patronymics, the Lapiths and
+  Centaurs, places) are in `3-מגן-הרקלס/project.md`, the translator's two "New names" tables. The base has **no line 298**
+  (labels 1–297, 299–480: 479 lines). Θῆβαι joins the Θήβη row.
+- **The two shields:** ἀσπίς `מָגֵן` (the title; 417); σάκος `צִנָּה` ★ (always vocalized: `צינה` "cold"); φερεσσακής
+  `נוֹשְׂאֵי־הַצִּנָּה`. The biblical pair (1 Kgs 10:16–17) is an [equivalent] noted at the lines.
+- **Arms:** θώραξ `שִׁרְיוֹן`; τεῦχος `נֶשֶׁק` in SH (**a recorded split**: TH 186, 929t, WD 150 have `שריון`, which SH needs
+  for θώραξ); κνημίς `מִצְחָה`; κόρυς `כּוֹבַע`, κυνέη `קוֹבַע`, τρυφάλεια `קַסְדָּה`; ἔγχος `רֹמַח`, δόρυ `חֲנִית`, αἰχμή
+  `כִּידוֹן`, μελίη `חֲנִית־הַמֵּילָה`, ἄορ `חֶרֶב`; φαρέτρα `אַשְׁפָּה` ★; ὀιστός / ἰός `חֵץ`; ὀρείχαλκος `נְחֹשֶׁת־הֶהָרִים`.
+- **Chariots:** ἡνίοχος `רַכָּב` (vocalized where `רכב` "chariot" stands near), δίφρος `מֶרְכָּבָה`, ἅρμα `רֶכֶב`.
+- **Personified figures (T, §3.2):** Προΐωξις `מִרְדָּף`, Παλίωξις `מִרְדַּף־נֶגֶד`, Ὅμαδος `הֲמֻלָּה`, Ἀνδροκτασίη
+  `הֶרֶג־אֲנָשִׁים`, Κυδοιμός `מְבוּכָה`, Ἀχλύς `עֲרָפֶל`; Φόβος `בֶּהָלָה`, Δεῖμος `אֵימָה`, Ἔρις `מָדוֹן`, Κῆρες `הַקֵּרוֹת`.
+- **The LXX layer:** ἤλεκτρον `חַשְׁמַל` ★ (Ezek 1:4 LXX), κέγχρος `דֹּחַן` (Ezek 4:9); ἀλαλητός `תְּרוּעָה`.
+- **Others:** the Catalogue formula ἢ οἵη `או כמו זו אשר`; ἀλκτήρ `הוֹדֵף` (TH 657's `מגן מפני פורענות` collides with
+  ἀσπίς: left for the next harmonization); ἀρήιος `לוֹחֵם`; ἆθλος `מְשִׂימָה`; τέμενος `תְּחוּם`; ἄλσος `חֹרְשָׁה`; λίς `לַיִשׁ` ★;
+  φόρμιγξ `כִּנּוֹר`; ἑκατόμβη `זֶבַח־מֵאָה`; αἰδώς `יראת־כבוד` at 354 (a sense split from §3.2's `בּוּשָׁה`).
+- **Splits noted by the reviewers, kept for the next harmonization:** ἰάχω / ἰαχή `צעק` in SH, `הריע` / `תרועה` in TH;
+  χλωρός `חיוור` (SH) / `ירוק` (TH, WD); the κυανο- compounds `כחול־` / `כהת־` (project.md, the review sections).
