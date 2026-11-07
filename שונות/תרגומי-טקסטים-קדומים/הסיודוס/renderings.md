@@ -232,7 +232,7 @@ the Greek word is capitalized in the base.
 | Κύπρος | קַפְרִיסִין |  |  |
 | Κύθηρα | קִיתֵרָה |  |  |
 | Τροία | טְרוֹיָה |  |  |
-| Θήβη | תֵּבַּאי |  | Boeotian Thebes |
+| Θήβη / Θῆβαι | תֵּבַּאי |  | Boeotian Thebes |
 | Αἰθίοψ | כּוּשׁ |  | biblical name (§2.3): the land / people `כּוּשׁ` (`מֶלֶךְ כּוּשׁ`, `בְּנֵי כּוּשׁ`); not the plural `כּוּשִׁים`, a slur in Modern Hebrew (§11.7) |
 | Νεῖλος | נִילוּס |  | never `יְאֹר` |
 | Ἄσκρη | אַסְקְרָה |  | Hesiod's village (WD 640) |
@@ -245,6 +245,24 @@ the Greek word is capitalized in the base.
 | Βορέας | בּוֹרֵאָס |  | the north wind (god and wind) |
 | Ζέφυρος / Νότος | זֶפִירוֹס / נוֹטוֹס |  | the west wind, the south wind |
 | Ἑωσφόρος | (T) `מֵבִיא־הַשַּׁחַר` |  | the morning star (Isa 14:12 `הֵילֵל בֶּן שָׁחַר`: LXX ὁ ἑωσφόρος – a note) |
+| Ἀμφιτρύων | אַמְפִיטְרִיּוֹן |  | SH (2026-11-07): Alcmene's husband |
+| Ἠλεκτρύων / Ἠλεκτρύον | אֵלֶקְטְרִיּוֹן |  | SH: Alcmene's father |
+| Κύκνος | קִיקְנוֹס |  | SH: "Swan", son of Ares (the speaking name in a note) |
+| Ἰόλαος | יוֹלָאוֹס |  | SH: Heracles' charioteer |
+| Ἰφικλέης | אִיפִיקְלֵס |  | SH: Heracles' twin |
+| Εὐρυσθεύς | אֶוּרִיסְתֵאוּס |  | SH |
+| Κρείων | קְרֵאוֹן |  | SH |
+| Τίρυνς | טִירִינְס |  | SH (TH 292 `טירינס`) |
+| Κῆυξ | קֵאִיקְס |  | SH: king of Trachis |
+| Τραχίς | טְרָכִיס |  | SH |
+| Περσεύς | פֶּרְסֵאוּס |  | SH 216 (not Perses of WD, `פֶּרְסֵס`) |
+| Δανάη | דָּנָאָה |  | SH |
+| Θησεύς | תֵּזֵאוּס |  | SH: the familiar form |
+| Πειρίθοος | פֵּירִיתוֹאוֹס |  | SH |
+| Καινεύς | קַיְנֵאוּס |  | SH |
+| Μόψος | מוֹפְּסוֹס |  | SH |
+| Ἄναυρος | אַנָאוּרוֹס |  | SH: the river |
+| Πυθώ | פִּיתוֹ |  | SH: Delphi |
 
 ### 3.2 Speaking names translated (T)
 **Rule (decided 2026-10-24, §12):** where a god's name **is** an ordinary Greek noun of Hesiod's language – the cosmic
@@ -961,5 +979,21 @@ formulas, the repeated lines). What is particular to it:
 4. **The new names** (not in §3.1): each translator transcribes by §2.3, vocalizes the first occurrence, and lists them
    in its section of `project.md`; the coordinator merges them into §14.1 below and into §3.1 (so `verify` checks them).
 
-### 14.1 Names and terms fixed for SH (merged from the translators)
-(filled at each merge)
+### 14.1 Names and terms fixed for SH (merged from the translators, 2026-11-07)
+- **Names:** the main ones are now rows of §3.1 (checked by `verify`); the full lists (patronymics, the Lapiths and
+  Centaurs, places) are in `3-מגן-הרקלס/project.md`, the translator's two "New names" tables. The base has **no line 298**
+  (labels 1–297, 299–480: 479 lines). Θῆβαι joins the Θήβη row.
+- **The two shields:** ἀσπίς `מָגֵן` (the title; 417); σάκος `צִנָּה` ★ (always vocalized: `צינה` "cold"); φερεσσακής
+  `נוֹשְׂאֵי־הַצִּנָּה`. The biblical pair (1 Kgs 10:16–17) is an [equivalent] noted at the lines.
+- **Arms:** θώραξ `שִׁרְיוֹן`; τεῦχος `נֶשֶׁק` in SH (**a recorded split**: TH 186, 929t, WD 150 have `שריון`, which SH needs
+  for θώραξ); κνημίς `מִצְחָה`; κόρυς `כּוֹבַע`, κυνέη `קוֹבַע`, τρυφάλεια `קַסְדָּה`; ἔγχος `רֹמַח`, δόρυ `חֲנִית`, αἰχμή
+  `כִּידוֹן`, μελίη `חֲנִית־הַמֵּילָה`, ἄορ `חֶרֶב`; φαρέτρα `אַשְׁפָּה` ★; ὀιστός / ἰός `חֵץ`; ὀρείχαλκος `נְחֹשֶׁת־הֶהָרִים`.
+- **Chariots:** ἡνίοχος `רַכָּב` (vocalized where `רכב` "chariot" stands near), δίφρος `מֶרְכָּבָה`, ἅρμα `רֶכֶב`.
+- **Personified figures (T, §3.2):** Προΐωξις `מִרְדָּף`, Παλίωξις `מִרְדַּף־נֶגֶד`, Ὅμαδος `הֲמֻלָּה`, Ἀνδροκτασίη
+  `הֶרֶג־אֲנָשִׁים`, Κυδοιμός `מְבוּכָה`, Ἀχλύς `עֲרָפֶל`; Φόβος `בֶּהָלָה`, Δεῖμος `אֵימָה`, Ἔρις `מָדוֹן`, Κῆρες `הַקֵּרוֹת`.
+- **The LXX layer:** ἤλεκτρον `חַשְׁמַל` ★ (Ezek 1:4 LXX), κέγχρος `דֹּחַן` (Ezek 4:9); ἀλαλητός `תְּרוּעָה`.
+- **Others:** the Catalogue formula ἢ οἵη `או כמו זו אשר`; ἀλκτήρ `הוֹדֵף` (TH 657's `מגן מפני פורענות` collides with
+  ἀσπίς: left for the next harmonization); ἀρήιος `לוֹחֵם`; ἆθλος `מְשִׂימָה`; τέμενος `תְּחוּם`; ἄλσος `חֹרְשָׁה`; λίς `לַיִשׁ` ★;
+  φόρμιγξ `כִּנּוֹר`; ἑκατόμβη `זֶבַח־מֵאָה`; αἰδώς `יראת־כבוד` at 354 (a sense split from §3.2's `בּוּשָׁה`).
+- **Splits noted by the reviewers, kept for the next harmonization:** ἰάχω / ἰαχή `צעק` in SH, `הריע` / `תרועה` in TH;
+  χλωρός `חיוור` (SH) / `ירוק` (TH, WD); the κυανο- compounds `כחול־` / `כהת־` (project.md, the review sections).
