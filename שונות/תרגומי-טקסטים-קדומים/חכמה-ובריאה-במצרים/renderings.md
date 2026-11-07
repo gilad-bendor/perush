@@ -932,3 +932,18 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
 6. **Gates fixed:** `עור` licensed by mskꜣ "hide"; `בער` licensed by ḫm "ignoramus" (AM's word).
 7. **For the consistency review (NU5 and NU8 together):** twr `מזוקק` (BD 125) / `מטוהר` (NU5, NU8); mꜣꜥ "see" `חזה` / NU5 64L.3
    `רואים`; ṯz `קשר` / NU5 64L.12 `מחוברת`; 64K.13 / 64L, 64K.10 / 64L.21 read differently.
+#### 12.6.9 NU9 (BD 126 … 102), translator 9, merged 2026-11-07 (full table in project.md, "NU9")
+1. **The three openings:** sbḫ.t `מָבוֹא` (new; NU6 141.56 aligned by the coordinator, `למבואות הַדּוּאַת`; MT 63's `שער` is
+   another text: kept), ꜥrr.yt `שער` (NU5–NU7), sbꜣ `דלת` (BD 125) – all three in 144.44.
+2. **BD 145's portal frame** (×14; 11–14 changed where the Egyptian changes): `בהגיעו אל המבוא ה־N של (בית) אוֹסִירִיס: עֲשֵׂה
+   לי אורח! יודע אני אותך, יודע אני את שמך, יודע אני את שם האל השומר אותך. "…" – שמך; "…" – שמו של שוערו.` **BD 144's
+   gate frame** (×7): `השער ה־N: "X" – אשר־על השער ה־N;` / `"Y" – שמו של השומר אותו;` / `"Z" – שמו של המגיד שבו.`
+3. **Refrains:** 137A `עין־חוֹרוּס – חסותך; תפרוש היא את חסותה עליך, תפיל היא לך את כל אויביך, ואויביך נופלים לך.`; 101 `אם
+   שלם אתה – שלם הוא. הוֹ רַא, בשמך זה של רַא:`.
+4. **Terms:** tkꜣw `אֲבוּקָה`; zꜣ `חסות` (PT571); sjn `טִין`; ḏb.t `לבנה`; bb.t `גומחה`; sꜣw.t `קיר`; zmꜣ-tꜣ `ההתאחדות־עם־הארץ`;
+   tp.j-rnp.t `ראשית־השנה`; ḏd `גֶ׳ד`; tj.t `תִּית`; ḫnm.t `יָשְׁפֵה`; ṯḥn.t `פָּיַנְס`; wꜣḏ `קמע`; šs-nsw `שֵׁשׁ־המלך`; bs `שביב`;
+   pꜥw `יקוד`; rkḥ `הצית`; ꜣḫ jqr `האָח המצוין`; mꜣr `הַדַּךְ`; jrw `מראה`; about 40 portal / gate names.
+5. **Gate fixed:** the "better X than Y" formula (§6.3) is Amenemope's saying: no longer checked in the Book of the Dead
+   keys (it misfired on ꜣḫ "akh" + r "to" ten times in NU1–NU9; the `[סטייה מן הנוסחה]` notes written stay).
+6. **For the lead / the review:** 102.4 / NU4 124.4 / NU7 189.3 – one formula line (`nn ḫmi̯ jm=f`) with three renderings
+   (`לא אזון ממנה` / `לא אֵהָרֵס בה` / `אין מישוש בה`); splits by sense ḫsr, sṯꜣ, dnj; dndn `זעם` / NU5's `השוחט`.

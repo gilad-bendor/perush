@@ -1826,6 +1826,195 @@ B57/B230 use `עורף` in idioms of sꜣ "back": noted); psḏ "back" `גַּב
 - **`check_bible_quotes.py` reads any backticked word followed by a bare chapter:verse as a quotation**, even inside a
   sentence (a backticked word, a dash, then a book name with a bare chapter and verse): write such allusions without backticks or without the reference.
 
+## NU9 126.x–102.9 (Round 6 run 2, translator 9; 2026-11-07)
+
+### Scope
+BD 126, 145, 144, 137A, 151, 101, 156, 155, 100, 102 of pNu, in the papyrus's order: 228 lines (`126.x` = the TLA's
+`[Tb 126 ?]`, `126.2` … `102.9`; BD 151 in two columns, `151.1,1`–`151.1,6` and `151.2,2`–`151.2,17`). All lines
+drafted, filled, verified, compared with the TLA's German and revised. The base has no lacunae beyond the owner's name
+(`[…]`); the editor's `⟨ ⟩`, `( )` and `!` corrections are not carried into the Hebrew; no `[ ]` restorations, so no
+Hebrew brackets. Files: `annotated-NU9.rtl.md`, `translation--intro-NU9.rtl.md`, generated `translation-NU9.rtl.md`.
+The group: the four baboons who judge and refresh the gods with the fire of their mouths (126); 14 named portals of
+Osiris's house (145) and 7 gates with keeper, guard and herald (144) with the rubric of their painted images and
+offerings; the four torches for the ka and the Hordjedef find-legend (137A); the mummy mask and the four magic bricks
+(151); the linen band on the throat (101); the tyet and djed amulets (156, 155); embarking in Re's bark (100, 102).
+
+### Sources consulted
+AED-TEI line data (`egypt_tools.py data NU9`), the TLA's German (`tr NU9`, read after each save only; every disagreement
+recorded in the entry's **תרגומים** bullet), the corpus renderings (§3–§5, §11, §12 with §12.6.1–8), the earlier NU files
+and BD 125 for every recurring word (`lex`, `grep --all`): NU7 136A.12–18 (copied into 144.28–37), NU4 124.3–6 / NU5
+52.1–3 (the food formula, 102.3–5), BD 125, 114 (the doors), NU6 78 (ꜥrr.yt `שער`), NU8 99B (the name frame). No other
+rank-3 translation was quoted. Bible verses all printed first (`check_bible_quotes.py --show`).
+
+### Decisions
+**The three openings (one Hebrew word each; checked with `lex` / `grep --all`):**
+
+| Egyptian | Hebrew | Lines | Reason |
+|---|---|---|---|
+| sbḫ.t (TLA "Portikus, Pforte") | `מָבוֹא` (pl. `מבואות`) | 126.10, 126.13, 145 passim, 144.44, 137A.35 | new: ꜥrr.yt keeps `שער` (HC 83, NU5 64L.14, NU6 78 ×8, NU7 136A.16–17, which 144.35–36 copy) and sbꜣ keeps `דלת` (BD 125, TB); 144.44 has all three in one line. MT 63 and NU6 141.56 had sbḫ.t `שער` – a split for the lead. Ezek 46:19, Prov 8:3 `מְבוֹא פְתָחִים` in the apparatus |
+| ꜥrr.yt | `שער` | 144 passim, 137A.34 | precedent |
+| sbꜣ | `דלת` | 137A.26, 144.44 | precedent (BD 125, 114) |
+
+**The portal frame (BD 145; fixed at 145.2–6, copied in all 14 portals, breaking where each line breaks):**
+`דברים לאמר, בפי […] אמיתי־הקול, בהגיעו אל המבוא ה־N של (בית) אוֹסִירִיס: עֲשֵׂה לי אורח! יודע אני אותך, יודע אני את שמך,
+יודע אני את שם האל השומר אותך. "…" – שמך; "…" – שמו של שוערו.` – ḫft spr=f r `בהגיעו אל`; jri̯ n=j wꜣ.t `עֲשֵׂה לי אורח` (NU4,
+§12.6.4.4); rḫ.kw `יודע אני` (§12.4.5); zꜣw `שמר` (NU1, HC); `X rn=ṯ` `"X" – שמך` and `X rn n jr.j-ꜥꜣ=s` `"X" – שמו של שוערו`
+(NU8 99B / NU4 122 frame; jr.j-ꜥꜣ `שוער`, BD 125). Portals 11–14: `יודע אני את אשר בתוכך` and `והוא תחת בדיקתו של "מכסה־הרפה"`
+(sjp `בדיקה`, NU1/NU8; ḥbs bꜣgi̯ `מכסה־הרפה`, WE 7,26). The Hebrew noun is masculine, so the verbs and suffixes are
+masculine (`עֲשֵׂה`, `שוערו`, `והוא`); the portals' names, being names, stay feminine (`גבירת־…`). Ordinals with the
+article (`המבוא האחד־עשר` … `הארבעה־עשר`).
+
+**The gate frame (BD 144; fixed at 144.1–3, copied in all 7):** `השער ה־N: "X" – אשר־על השער ה־N;` / `"Y" – שמו של השומר
+אותו;` / `"Z" – שמו של המגיד שבו.` – jr.j ꜥrr.yt `אשר־על השער` (NU7 136A.17 `אשר־על שעריהם`), zꜣꜣ sj `השומר אותו`, smj jm=s
+`המגיד שבו` (smj `הגיד`, BD 125; NU1 17.77). 144.4 alone writes `rn n jr.j …` (`שמו של אשר־על`), kept.
+
+**Other terms and formulas:**
+
+| Egyptian | Hebrew | Lines | Reason / rejected |
+|---|---|---|---|
+| tkꜣw "torch" | `אֲבוּקָה` | 137A passim, 151.2,9 | `לַפִּיד` is BD 125's bsw (85) |
+| zꜣ "(magical) protection" | `חסות` (stp zꜣ `פרש חסות`) | 137A, 151.2, 156.2 | PT571 `חסות רַא`; `הגנה` = mk.t, `שמירה` = nḏ.t (137A.20–21), `מגן` = ḫwi̯ (AM 2.1) |
+| the 137A refrain | `עין־חוֹרוּס – חסותך; תפרוש היא את חסותה עליך, תפיל היא לך את כל אויביך, ואויביך נופלים לך.` | 137A.8–24 | fixed at 137A.8–9, copied; variants only where the Egyptian varies (`חסותה עליך`, `שמירתך`, `כולם` at a line break) |
+| 101 refrain | `אם שלם אתה – שלם הוא. הוֹ רַא, בשמך זה של רַא:` | 101.4–8 | ×3, punctuated as the TLA (the vocative opens the next condition) |
+| sjn "clay" | `טִין` (`טין לח` = sjn wꜣḏ) | 137A.1, 144.47, 151.2 | `טִיט` is AM's ꜥmꜥ.t, `חֹמֶר` avoided (§4.3), `חרס` = fired clay |
+| ḏb.t | `לבנה` | 151.2 | WE 10,12; Ex 5:7 [equivalent] in the apparatus |
+| ḏd (pillar) / tj.t | `גֶ׳ד` (`עמוד־הגֶ׳ד`) / `תִּית` | 151, 155 / 156 | transliterated; NU6 75.4 `התִּית` |
+| ḫnm.t | `יָשְׁפֵה` | 156.1–2 | the natural word for the red stone, tagged [equivalent] Ex 28:20 (open: carnelian) |
+| ṯḥn.t | `פָּיַנְס` | 151.2,3 | BD 125, 86 (NU1's `צְ׳חֶנֶת` is a name reading) |
+| wꜣḏ (amulet) | `קמע` | 101.10, 155.3, 156.4 | BD 86 `קמע־וָאגֶ׳` |
+| šs-nsw | `שֵׁשׁ־המלך` | 101.9 | §4.2 loanword [cognate], Gen 41:42 |
+| ẖ.tj-n-nh.t | `סיב־השִּׁקְמָה` | 155.3, 156.3 | nh.t `שִׁקְמָה` (NU5 52.4) |
+| zmꜣ-tꜣ | `ההתאחדות־עם־הארץ` | 101.10, 155.3, 156.3 | NU5 64L.20 (TLA "Begräbnis"); NU8 has it as a name |
+| tp.j-rnp.t | `ראשית־השנה` | 155.4 | Deut 11:12 `מֵרֵשִׁית הַשָּׁנָה` [equivalent]; `ראש השנה` avoided (the Jewish feast) |
+| hꜣi̯ r wjꜣ | `ירד אל הצִי` | 100.1, 102.1, 100.11 | literal; Jonah 1:3, Ps 107:23 [equivalent] |
+| sqd.wt | `שיט` / `השטים` | 102.3, 102.9 | NU7 136A.21; the TLA's "Fahrt" / "Mannschaft" |
+| jḫm.w-wrḏ / jḫm.w-sk | `בלתי־היגעים` / `בלתי־הכלים` | 102.3 / 137A.29 | NU6 78.37 / NU8 44.3 |
+| ꜣḫ jqr | `האָח המצוין` | 101, 155.4 | NU5 148.8 (`מעולה` is mnḫ: 137A.25) |
+| mꜣr | `הַדַּךְ` | 126.4 | `דל`/`עני`/`אומלל` taken (§4.3), `מסכן` an Akkadian loan, `אביון` Ugaritic's, `נדכא` NU6's ꜣh |
+| ḫmꜥ "grasp" | `קמץ` | 126.8, 12 | `אחז`, `לפת`, `תפס` taken |
+| fire words | ḫ.t `אש`, sḏ.t `שלהבת`, hh `להט`, bs `שביב`, pꜥw `יקוד`, rkḥ `הצית`/`הצתה`, ḏꜣf `שרף` (`השרוף`), wbd `שורפת` | 145, 144 | the root בער is gated (§11.4): rkḥ's first draft `בערה` failed it |
+| jrw "form" | `מראה` | 144.1, 137A.27, 33 | `צורה` is ḫpr.w (NU1), `דמות` twt |
+| Names (145) | `מטיל־מורא` (nr.y), `"*נולד־לתקוף*?"` (msi̯ pḥ), `מַזְהִיר` (sbꜣq, MT 1a), `שור־קרן` (ngꜣw), `חוסם־הצורר`, `חבר` (zmꜣ.tj), `שוכן־מערה` (BD), `מגן־גוויתו`, `שולה` (ḏsf, NU8), `אופף־גדול` (zḫn-wr, NU5), `מכסה־הרפה` | | translated as names (§12.2) |
+| Names (144) | `הפוך־פנים, רב־מראות`, `מצותת` (smt; BD's smtmt `צותת`), `מילל־קול`, `זוקף־מצח`, `מסב־פנים`, `לוהט` (ꜣsb, NU1), `אוכל־צחנת־אחוריו`, `ער־פנים`, `מחרף` (AM), `הודף־פנים, מרבה־קול`, `ער־לב`, `גדול־פנים, הודף־הזועם`, `חי־על־תולעים`, `זולל` (NU8), `פני־היפופוטם, סוער־כוח`, `חוטף־לחם, סוער־קול`, `מביא־פנים`, `עריץ־פנים, אשר־באגם` (mds, NU1), `עורץ־אותם`, `גדול־קול`, `הודף־ההורסים` (NU7) | | `סוס־היאור` avoided (`יאור` = jtrw), `בהמות` avoided (Job 40:15) |
+| Other names | `האִמְחֶת`, `מֶנְקֶת`, `סוֹפְּדֶת` (Sirius), `וֶנוּת`, `נֶבֶּגֶ׳` (NU7), `צְ׳חֶנוּ` (SI), `עץ־אִימָא`, `עַנְחִימִי`, `דג־האַבְּגֶ׳וּ`, `הוֶסֶרֶת`, `שמן־סֶפֶט`, `לחם־סְטִי`, `עוגות־חֶנֶף`, `לחם־חֶבֶּנֶנֶת`, `כדי־שֶׁפֶּנֶת`, `העֲרוּ` | | transliterated |
+
+**Splits by sense (recorded, for the lead):** ḫsr `גירש` (126.12; NU1, NU4) / `פינה` (the way, 100.3); sṯꜣ `גרר` (100.3; NU6) /
+`פשט` (arms, 145.53) / `הובא` (137A.26; NU7 `מובל`); dnj `סכר` (water, BD 125) / `עצר` (a person, 100.8–9); dndn `זעם` (145.58,
+TLA "zornig") / NU5 83.6 `השוחט`; zꜣ `חסות` / `שמירת גופו` (156.4, stylistic).
+
+**Gate / formula passes (recorded in the entries):** the "better X than Y" formula fired on the noun ꜣḫ "akh" + r "to"
+in 144.44, 100.1, 101.2, 101.9, 155.3, 156.3 – each marked `[סטייה מן הנוסחה: …]`; 144.50 is a real comparison (`מוטב הוא
+לאָח מכל מה שעושים לו`, §6.3). Trap fixes: the demonstrative `אֵלֶּה` / `הָאֵלֶּה` vocalized in every line (the verifier
+reads `אלה` as "goddess"). No `[היתר שער]` was needed.
+
+### Open decisions for the user
+- **sbḫ.t `מבוא`** (a new word beside ꜥrr.yt `שער`, sbꜣ `דלת`); MT 63 / NU6 141.56 have `שער` for sbḫ.t. Alternatives:
+  `פילון` (the Egyptological "pylon", a Greek loan) or `שער` for sbḫ.t and another word for ꜥrr.yt (but NU5–NU7 have ꜥrr.yt
+  `שער` a dozen times).
+- **126.2 jpw**: read as the demonstrative ("these four baboons") against the TLA's participle "the counted".
+- **102.4 nn ḫmy jm=f**: translated by the TLA's lemma ("consume": `לא אזון ממנה`), departing from NU4 124.4 `לא אֵהָרֵס
+  בה` (ḫmi̯ "destroy"); NU7 189.3 has `אין מישוש בה` – three renderings of one formula line, for the lead.
+- **ḫnm.t `יָשְׁפֵה`** (156): jasper or carnelian; the Hebrew stone name carries Ex 28:20.
+- Uncertain lines kept literal and marked: 126.8 ḫmꜥ, 145.9 (`*נולד־לתקוף*?`), 145.23 znk.t, 145.50 qꜣḥ.yt, 101.1 (`לחש
+  התועבה?`), 144.46 (`אשר לא חדל לבבו?`), 144.47 ḥmw, 137A.23 (no negation, against 137A.20's *m*: read positively with
+  the TLA), 102.6–7.
+
+### Progress log
+- Drafted in ten saves (126; 145.1–29; 145.30–59; 144.1–22; 144.23–50; 137A.1–24; 137A.25–40; 151; 101 + 156 + 155;
+  100 + 102), each `fill`ed and `verify`-ed; `tr` read after each save only, and the TLA bullets added afterwards.
+- The TLA changed (after drafting): 145.19–20 (ršw.t an adjective), 145.23 (*r* comparative), 145.24 (the relative form
+  refers to the portal), 145.32 (`השרוף`, without the TLA's added negation), 145.38, 145.50 (ꜣḫ.w `האָחִים`), 145.58–59
+  (*jw* "sins": `ביום שמיעת / העבירות`), 144.25, 144.26 (*dbn* a verb), 144.31 (ꜥpr active), 144.41 (dual / plural),
+  144.43–45 (imperative `זְבַח`, `מאלה`, `על כל שער`), 144.50, 137A.16, 137A.20, 137A.22–23 (imperatives; positive wish),
+  137A.26–29, 137A.31–32, 137A.37–39 (the cleft "Hordjedef is the one who found it"; `הַעְתֵּק`), 151.1,5–6 (purpose
+  clauses), 151.2,2, 151.2,4–5, 151.2,8, 151.2,14, 101.3, 101.4–7 (punctuation), 101.5 (`וחצי`), 156.4, 100.9, 102.4,
+  102.6–7 (*n* a negation: `לא עייפתי`), 102.9.
+- Pass (a) fidelity: every line against the transliteration and the TLA's morphology; brackets (none needed); 145.25's
+  missing *rn=ṯ* kept, the quotation closed; 145.27's dittography kept; 145.7's scribal *=s* noted.
+- Pass (b) consistency: the portal and gate frames diffed by eye across all copies; sjn unified to `טין` (137A.1, 144.47 had
+  `חרס`); `קורבנות` (plene, as NU7) for ḥtp.w / ḥtp.t, `שולחן־הקרבנות` kept as the fixed compound; 144.33–37 against NU7
+  136A.15–18; 102.3–5 against NU4 124.3–6 and NU5 52.1–3; every new Hebrew string grepped (`grep --all`).
+- Pass (c) Hebrew: the clean text read through; register even; no vav-consecutive; prepositions moved off line ends.
+- `check_bible_quotes.py` on the three files: 0 problems (two slips fixed: Ps 9:10 quoted inside a sentence, Job 40:15
+  `בְהֵמוֹת`; one remembered phrase replaced by the printed Isa 64:3); `verify NU9 --strict`: 0 problems; `build NU9` done
+  (5 footnotes).
+
+### The text on its own terms
+- **The fire that judges and refreshes** (126.2–7): the baboons "satisfy the gods with the blast of their mouths" and
+  judge "between the wretched and the powerful"; the same fire punishes and soothes.
+- **Removal, not forgiveness** (126.8, 126.12–13): "remove my evil, grasp my wrong" – and the baboons answer in the same
+  words: evil is a thing that can be taken away and "cast to the earth".
+- **Knowledge is passage** (145 passim, 144.23): at each portal the dead man says "I know you, I know your name, I know
+  the name of the god who guards you"; Job is asked whether he has seen the gates of death, the Egyptian answers that he
+  knows them by name.
+- **Architecture is divine** (145): a gateway is a goddess with a name of a dozen epithets – walls, fire, knives, a
+  mother "who bore her lord", "350 rods in circumference".
+- **The underworld guarded by the inverted** (144.1–21): face upside-down, eating the rot of its own hindquarters,
+  living on worms – the guards embody the reverse of the pure dead man whose "abomination is excrement" (102.4).
+- **Ritual by drawing** (144.42–48, 151.2, 101.9, 100.9–10): images painted in ochre, bricks of raw clay, a linen band
+  written in myrrh, green frit on blank papyrus – the made object works in the beyond.
+- **Secrecy as power** (137A.31–32, 144.49, 156.5, 101.2): "do not let any man's eye see it"; only father and son.
+- **Old books found, not written** (137A.37–38): the rite was found by Hordjedef "in a secret box, in the god's own
+  writing" in Hermopolis.
+- **Purity of the maker** (151.2,14–15): no small cattle or fish, no women.
+- **The dead man as Re's crewman and physician** (100, 102): he ferries the benu east, ties the ropes, repels Apophis,
+  is counted by Thoth "in going out and coming down", and heals the god's thigh by spitting.
+- **Body-parts as gods** (151.1,3–4): the mask's eyes are the two solar barks, the brows the Ennead, the fingers Thoth.
+
+### Key parallels
+- [divergence] `נְהַר דִּי נוּר נָגֵד וְנָפֵק מִן קֳדָמוֹהִי` (Dan 7:10) and `וּלְשׁוֹנוֹ כְּאֵשׁ אֹכָלֶת` (Isa 30:27) ↔ 126.2–4: fire before the divine judge; in Egypt the fire of the baboons' mouths also refreshes the gods.
+- [divergence] `פִּתְחוּ-לִי שַׁעֲרֵי-צֶדֶק` / `זֶה-הַשַּׁעַר לַיהוָה; צַדִּיקִים יָבֹאוּ בוֹ` (Ps 118:19–20), `שְׂאוּ שְׁעָרִים רָאשֵׁיכֶם` (Ps 24:7) ↔ 145.1, 145.47, 144.1: a gate liturgy – the Egyptian gate opens to names, not to righteousness.
+- [divergence] `הֲנִגְלוּ לְךָ שַׁעֲרֵי-מָוֶת` (Job 38:17) ↔ 145.3: the knowledge Job is denied is the dead man's passport.
+- [equivalent] `קְנֵה הַמִּדָּה … קָנֶה אֶחָד` (Ezek 40:5) ↔ 145.37: a measured divine gateway.
+- [equivalent] `אַל תִּגְּשׁוּ אֶל אִשָּׁה` (Ex 19:15), 1 Sam 21:5 ↔ 151.2,15: sexual abstinence before contact with the holy.
+- [divergence] `סֵפֶר הַתּוֹרָה מָצָאתִי בְּבֵית יְהוָה` (2 Kgs 22:8) ↔ 137A.37–38: a sacred text found in a temple.
+- [equivalent] `נֵר יְהוָה נִשְׁמַת אָדָם` (Prov 20:27) ↔ 137A.30: the torch that makes the akh grow.
+- [cognate] `שֵׁשׁ` (Gen 41:42) ↔ 101.9: *šs-nsw*, "royal linen", the loanword in its own context.
+- [equivalent] `וַיֵּרֶד בָּהּ` (Jonah 1:3), `יוֹרְדֵי הַיָּם בָּאֳנִיּוֹת` (Ps 107:23) ↔ 100.1: "going down" into a ship.
+- [equivalent] `לֹא תֹאכַל כָּל תּוֹעֵבָה` (Deut 14:3) ↔ 102.3: abomination as forbidden food.
+
+### Lines shared with other texts
+- **144.28–37 ↔ NU7 136A.12–18**: 144.34 (second half) = 136A.15, 144.35 ≈ 136A.16 (`אוֹסִירִיס […] אמיתי־הקול` at the start,
+  `שערי האופק` for *ꜥrrw.wt ꜣḫ.t*, no `[…]`), 144.36 = 136A.17 (with `אל אוֹסִירִיס […] אמיתי־הקול` at the start), 144.37 (first half) =
+  136A.18; 144.28 and 144.40 echo 136A.12–13 (`הגנת …`, `עֲשֵׂה אורח לאוֹסִירִיס […]`).
+- **102.3–5 ↔ NU5 52.1–3, NU4 124.3–6**: copied; 102.4 differs at *nn ḫmy jm=f* (see Open decisions).
+- **126.11 / 126.14 ↔ NU4 122-1.5, NU8 99B.39, BD 114** (`לחם־שֶׁנֶס, כד, ככר־פֶּסֶן`); **137A.26 ↔ BD 114** (the doors of the
+  West); **151.2,16 ↔ BD 114, NU7 136A.22**; **145.3 ↔ NU4 79.9** (`יודע אני אתכם, יודע אני את שמותיכם`); **155.1 ↔ NU5 148.1** etc.
+  (the title + ḏd-mdw formula); **137A.37 ↔ MT 2** (`העתיק … את הכתב הזה`).
+
+### Proposals for the shared renderings
+
+| Egyptian | Hebrew | Lines | Reason |
+|---|---|---|---|
+| sbḫ.t | `מָבוֹא` | 126, 145, 144.44, 137A.35 | third opening word beside ꜥrr.yt `שער`, sbꜣ `דלת` (MT 63, NU6 141.56 to align) |
+| BD 145 portal frame | `בהגיעו אל המבוא ה־N של אוֹסִירִיס: עֲשֵׂה לי אורח! יודע אני אותך, יודע אני את שמך, יודע אני את שם האל השומר אותך. "…" – שמך; "…" – שמו של שוערו.` | 145.2–59 | for BD 146 / 147 if they come; NU10's 149–150 |
+| BD 144 gate frame | `השער ה־N: "X" – אשר־על השער ה־N; "Y" – שמו של השומר אותו; "Z" – שמו של המגיד שבו.` | 144.1–21 | jr.j ꜥrr.yt / zꜣꜣ sj / smj jm=s |
+| zꜣ (magical protection) / stp zꜣ | `חסות` / `פרש חסות` | 137A, 151, 156 | PT571; mk.t `הגנה`, nḏ.t `שמירה`, ḫwi̯ `מגן` |
+| tkꜣw | `אֲבוּקָה` | 137A, 151.2,9 | bsw keeps `לפיד` |
+| sjn | `טִין` (sjn wꜣḏ `טין לח`) | 137A.1, 144.47, 151.2 | ꜥmꜥ.t keeps `טיט` |
+| ḏb.t / bb.t / sꜣw.t | `לבנה` / `גומחה` / `קיר` | 151.2 | jnb keeps `חומה` |
+| ḏd (pillar) / tj.t / ḫnm.t / ṯḥn.t | `גֶ׳ד` / `תִּית` / `יָשְׁפֵה` / `פָּיַנְס` | 151, 155, 156 | amulet words |
+| wꜣḏ (amulet) | `קמע` | 101, 155, 156 | BD 86 |
+| zmꜣ-tꜣ "burial" | `ההתאחדות־עם־הארץ` | 101.10, 155.3, 156.3 | NU5 |
+| tp.j-rnp.t | `ראשית־השנה` | 155.4 | Deut 11:12 |
+| šs-nsw | `שֵׁשׁ־המלך` | 101.9 | §4.2 |
+| ꜣḫ jqr | `האָח המצוין` | 101, 155 | NU5 148.8; mnḫ `מעולה` |
+| mꜣr | `הַדַּךְ` | 126.4 | see Decisions |
+| jrw "form" | `מראה` | 144.1, 137A | ḫpr.w `צורה`, twt `דמות` |
+| the fire words | bs `שביב`, pꜥw `יקוד`, rkḥ `הצית` / `הצתה` | 145.19, 145.32 | the בער gate |
+| ḥtp.w / ḥtp.t | `קורבנות` (plene) | 126.5, 144.33, 144.39 | NU7's spelling; `שולחן־הקרבנות` stays as the fixed compound (BD, NU8) |
+| **For the lead** | sbḫ.t `שער` (MT 63, NU6 141.56) vs `מבוא`; ḫmy / ḫmi̯ in the food formula (NU4 124.4 `לא אֵהָרֵס בה`, NU7 189.3 `אין מישוש בה`, NU9 102.4 `לא אזון ממנה`); dndn `זעם` (145.58) vs NU5 83.6 `השוחט`; ḫsr / sṯꜣ / dnj splits by sense | | |
+
+### Lessons for the guidelines
+- **A litany whose units break at different points needs the frame fixed as a string of segments**, not as lines: the
+  portal frame of BD 145 falls across 2–4 lines with a different break in every portal; copying the segments (and the
+  scribe's omissions: 145.13's missing *mꜣꜥ-ḫrw*, 145.25's missing *rn=ṯ*) kept the 14 copies identical where the
+  Egyptian is.
+- **The "better than" formula's regex misfires on ꜣḫ "akh" before *r* "to/on"** six times in one group (rubrics: "placed
+  on the akh at his throat"): a gate that reads the noun ꜣḫ needs the TLA lemma (tla203 "Verklärter", not the adjective "nützlich").
+- **The demonstrative `אלה` trips the "goddess" trap only in lines whose source has *nṯr***: vocalize it everywhere from
+  the first draft, so the trap and the reader agree.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
@@ -2222,3 +2411,36 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | 110 | ṯb.w m ḥḏ,t.j sdm.w m msdm,t wrḥ.w m ꜥntj,w wdn n =f jḥ.pl ꜣpd.pl snṯr tʾ ḥnq,t | נעול סנדלים לבנים, מכוחל בפוך, משוח במור. זְבַח לו בקר, עופות, קטורת, לחם, שֵׁכָר, | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ` (מלכים ב ט:ל) | equivalent | הפוך כאיפור העיניים. |
 | 112 | n,tj n ḫnd šꜣj ꜥw,t ḥr =f jr jrr! mḏꜣ,t tn ḥr =f wnn =f wꜣḏ(.w) ms.pl =f | אשר לא דרכו עליה חזיר וצאן. הנה מי שעושה את המגילה הזאת עליו – יהיה רענן, וילדיו | `וְאֶת הַחֲזִיר … טָמֵא הוּא לָכֶם` (ויקרא יא:ז) | equivalent | החזיר כבהמה מטמאת, המרחיקה מן הקודש |
 | 112 | n,tj n ḫnd šꜣj ꜥw,t ḥr =f jr jrr! mḏꜣ,t tn ḥr =f wnn =f wꜣḏ(.w) ms.pl =f | אשר לא דרכו עליה חזיר וצאן. הנה מי שעושה את המגילה הזאת עליו – יהיה רענן, וילדיו | `דְּשֵׁנִים וְרַעֲנַנִּים יִהְיוּ` (תהלים צב:טו) | equivalent | שכר הצדיק – רעננות. |
+
+### Parallels index (NU9)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 126.2 | j jꜥnꜥ.w fdw jpw ḥms.w m ḥꜣ,t wjꜣ n | הוֹ ארבעת הבבונים הָאֵלֶּה, היושבים בחזית הצִי של | `נְהַר דִּי נוּר נָגֵד וְנָפֵק מִן קֳדָמוֹהִי` (דניאל ז:י) | divergence | בחזון דניאל יוצא נהר של אש מלפני היושב בדין, ואלפי אלפים משמשים אותו; כאן ארבעה בבונים בחזית ספינת השמש, שופטים ומלהטים אש מפיהם (126.4). מוטיב משותף של אש ודין לפני האל העליון, לא מקור (ראו גם 126.4). |
+| 126.3 | Rꜥ,w sꜥr.w mꜣꜥ,t n nb-r-ḏr wpp.w | רַא, המעלים את האמת אל אדון הכל, הפוסקים | `חֶסֶד וֶאֱמֶת יְקַדְּמוּ פָנֶיךָ` (תהלים פט:טו) | equivalent | בתהלים האמת "מקדמת" את פני המלך האלוהי; כאן הבבונים "מעלים" את האמת אל אדון הכל. העלאת *מַאַת* היא פעולה פולחנית קבועה: המלך מגיש לאל צלמית קטנה של האלה מַאַת, וכך מקיים את הסדר. מוטיב משותף של האמת כמנחה לפני כס האל, לא מקור. |
+| 126.4 | mꜣr ḥnꜥ wsr sḥtp.w nṯr.w m hh n | בין הַדַּךְ לבין החסין; המניחים את דעת הָאֵלִים בלהט | `וּלְשׁוֹנוֹ כְּאֵשׁ אֹכָלֶת` (ישעיהו ל:כז); `אֵשׁ לְפָנָיו תֵּלֵךְ` (תהלים צז:ג) | divergence | אצל ישעיהו האש היוצאת מפי האל היא אש של זעם; כאן "להט פיהם" של הבבונים **מניח את דעת** הָאֵלִים – אש שהיא מנחה ומרגוע. ראו גם . |
+| 126.7 | mꜣꜥ,t jb jw.t grg bw.t =sn jzf.t | מן האמת; אשר לבם – אין בו כזב, ותועבתם היא העוול. | `כִּי-אֱמֶת יֶהְגֶּה חִכִּי; וְתוֹעֲבַת שְׂפָתַי רֶשַׁע` (משלי ח:ז) | equivalent | אותו זוג, האמת מול התועבה, והתועבה היא העוול; כמו ב־NU8 153B.14. |
+| 145.1 | ḥꜣ,t-ꜥ,w-m rʾ.pl n ꜥq ḥr sbḫ,t.pl štꜣ.yt n.t pr,w Wsjr m sḫ,t-jꜣr,w | ראשית הלחשים להיכנס דרך המבואות הנסתרים של בית אוֹסִירִיס בשְׂדֵה־הָאַגְמוֹנִים. | `פִּתְחוּ-לִי שַׁעֲרֵי-צֶדֶק; אָבֹא-בָם אוֹדֶה יָהּ` (תהלים קיח:יט) | divergence | גם במזמור הבא מבקש להיכנס בשערים אל בית האל; שם השער הוא "שער הצדק" ונכנסים בו הצדיקים (`זֶה-הַשַּׁעַר לַיהוָה; צַדִּיקִים יָבֹאוּ בוֹ`, תהלים קיח:כ), וכאן נכנס מי שיודע את **שם** המבוא ואת שם שוערו. מוטיב משותף של ליטורגיית שער, לא מקור. |
+| 145.3 | n.t Wsjr jri̯ n =j wꜣ,t jw =j rḫ.kw ṯn rḫ.kw rn =ṯ rḫ.kw | של אוֹסִירִיס: עֲשֵׂה לי אורח! יודע אני אותך, יודע אני את שמך, יודע אני | `הֲנִגְלוּ לְךָ שַׁעֲרֵי-מָוֶת; וְשַׁעֲרֵי צַלְמָוֶת תִּרְאֶה` (איוב לח:יז) | divergence | האל שואל את איוב אם ראה את שערי המוות, והתשובה היא שלא; המת המצרי אומר על כל מבוא "יודע אני אותך, יודע אני את שמך". הידיעה שאיוב נשלל ממנה היא כאן הכרטיס לעבור. |
+| 145.32 | ṯn rkḥ.t bs.w ꜥḫm.t ḏꜣf.w spd.t pꜥw | אותך. "המציתה את השביב, המכבה את השרוף, חדת־היקוד, | `כִּי תֵלֵךְ בְּמוֹ אֵשׁ לֹא תִכָּוֶה וְלֶהָבָה לֹא תִבְעַר בָּךְ` (ישעיהו מג:ב) | divergence | אצל ישעיהו האל מבטיח לעובר באש שלא ייכווה; כאן האש עצמה היא המבוא, והיא גם מציתה וגם מכבה – והמת עובר בה משום שהוא יודע את שמה. |
+| 145.37 | ṯn jm,jt-ḥꜣ,t nb,t wsr hru̯.t-jb msw,tj.t nb =s ḫt 350 m dbn =s stj.wt | אותך. "אשר־בחזית, גבירת־החוסן, שלוות־הלב, היולדת את אדוניה; שלוש מאות וחמישים קנים בהיקפה, הקורנת | `וּבְיַד הָאִישׁ קְנֵה הַמִּדָּה … וַיָּמָד אֶת רֹחַב הַבִּנְיָן קָנֶה אֶחָד וְקוֹמָה קָנֶה אֶחָד` (יחזקאל מ:ה) | equivalent | בחזון יחזקאל נמדדים שערי המקדש בקנה; כאן מידתו של מבוא אוֹסִירִיס נתונה ב"מוטות". מוטיב משותף של שער אלוהי מדוד, לא מקור; גם במצרית יחידת המידה היא "עץ, מוט". |
+| 145.47 | n j{w}ḫḫ,w rn =ṯ jw =s ẖr sjp n ḥbs bꜣgi̯ | הדמדומים" – שמך; והוא תחת בדיקתו של "מכסה־הרפה". | `זֶה-הַשַּׁעַר לַיהוָה; צַדִּיקִים יָבֹאוּ בוֹ` (תהלים קיח:כ) | divergence | השער שייך לאל ונכנסים בו רק הראויים; כאן ארבעת המבואות האחרונים "תחת בדיקתו" של אל אחד, והבדיקה היא של ידיעת השמות. |
+| 144.1 | ꜥrr,yt tp,j.t sḫd ḥr ꜥšꜣ jrw jr,j ꜥrr,yt tp,j.t | השער הראשון: "הפוך־פנים, רב־מראות" – אשר־על השער הראשון; | `שְׂאוּ שְׁעָרִים רָאשֵׁיכֶם וְהִנָּשְׂאוּ פִּתְחֵי עוֹלָם; וְיָבוֹא מֶלֶךְ הַכָּבוֹד` (תהלים כד:ז) | divergence | במזמור השערים הם שמתבקשים לפתוח לאל הנכנס; כאן לכל שער שלושה שומרים בשמותיהם, והנכנס הוא המת היודע אותם. |
+| 144.29 | rn wr jri̯ ṯn ꜥꜣ r =ṯn ḥr wꜣ,t mꜣꜥ,t bw,t Wsjr […] mꜣꜥ-ḫrw n ḫb(ꜣ).w mk,t Wsjr […] mꜣꜥ-ḫrw | גדול־השם, אשר עשה אתכם, גדול מכם על אורח האמת. תועבתו של אוֹסִירִיס […] אמיתי־הקול – הגריעה. הגנת אוֹסִירִיס […] אמיתי־הקול – | `הוֹרֵנִי יְהוָה דַּרְכֶּךָ אֲהַלֵּךְ בַּאֲמִתֶּךָ` (תהלים פו:יא) | equivalent | "אורח האמת" במצרית (*wꜣ.t mꜣꜥ.t*) ו"ללכת באמת" בתהלים: האמת כדרך שהולכים בה. ביטוי משותף, לא מקור. |
+| 144.44 | nṯr.pl jpn ḫsf šnꜥ =f pw ḥr sbḫ,t.pl dꜣ,t jri̯ r =k ḥr twt n ꜣḫ pn m-bꜣḥ =sn rḏi̯ spr =f r sbꜣ nb | הָאֵלִים הָאֵלֶּה; הדיפת מניעתו היא, מן המבואות של הַדּוּאַת. תעשה (זאת) על דמות של האָח הזה לפניהם; לגרום שיגיע אל כל דלת | `לְיַד-שְׁעָרִים לְפִי-קָרֶת; מְבוֹא פְתָחִים תָּרֹנָּה` (משלי ח:ג) | equivalent | גם בעברית שלוש מלים לפתחים ("שערים", "מבוא", "פתחים"); כאן *sbḫ.t* `מבוא`, *ꜥrr.yt* `שער` (144.45) ו־*sbꜣ* `דלת` בשורה אחת. |
+| 144.47 | jꜥb 4 š n sjn mḥ(.w) m jrṯ,t n.t ḥm,t ḥḏ.t 4 sm,w wꜣḏ b(ꜣ)q wꜣḏ mrḥ,t ḥmw msdm,t ḥꜣ,tt | – ארבעה ספלים; אגני־טין מלאים בחלב של פרה לבנה – ארבעה; עשב רענן, שמן־בָּאק רענן, משחה, *חֶמוּ*?, פוך, שמן־משובח, | `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ` (מלכים-ב ט:ל) | equivalent | *msdm.t*, הכחל השחור, הוא ה`פּוּךְ` של איזבל (ספר המתים 125, 110 תורגם כך). ציוד קוסמטי כמנחה לאלים. |
+| 137A.30 | n =f rʾ pn n ski̯.n =f nḥḥ wnn bꜣ n ꜥnḫ r nḥḥ srd tkꜣw pn ꜣḫ mj Wsjr-Ḫntj,w-Jmntj,w | לו את הלחש הזה – לא יאבד לנצח, יהיה הבָּא בחיים לנצח. מצמיחה האבוקה הזאת את האָח כאוֹסִירִיס־אשר־בראש־המערביים. | `נֵר יְהוָה נִשְׁמַת אָדָם` (משלי כ:כז) | equivalent | גם במשלי הנר הוא נפש האדם; כאן האבוקה "מצמיחה" את האָח, הרוח המוארת: האור והנפש קשורים בשתי התרבויות. מוטיב משותף, לא מקור. |
+| 137A.32 | m zꜣ =k r-nt.t štꜣ,w pw ꜥꜣ n jmn,t bz-štꜣ n dwꜣ,t ḏr-nt.t mꜣꜣ sw nṯr.w ꜣḫ.w mt.w | ובידי בנך; כי סוד גדול של המערב הוא, חדירה־אל־הסוד של הַדּוּאַת; כי יחזו בו הָאֵלִים, האָחִים והמתים | `כְּבֹד אֱלֹהִים הַסְתֵּר דָּבָר; וּכְבֹד מְלָכִים חֲקֹר דָּבָר` (משלי כה:ב) | divergence | במשלי ההסתרה היא כבוד האל; כאן הלחש הוא סוד שאסור לגלות, כדי שלא יאבד מכוחו – סוד של טקס, לא של חוכמה. |
+| 137A.37 | ꜣḫ pn sjqr twr wpi̯ rʾ =f m bjꜣ spẖr zš pn ḫft gmi̯.t m zš zꜣ nsw,t Ḥr,w-ḏḏ-f | האָח הזה, מקודם, מזוקק, פיו פתוח במתכת. הַעְתֵּק את הכתב הזה כפי שנמצא בכתב! בן־המלך חוֹרְגֶ׳דֶף – | `סֵפֶר הַתּוֹרָה מָצָאתִי בְּבֵית יְהוָה` (מלכים-ב כב:ח) | divergence | גם כאן ספר קדוש "נמצא" במקדש וחוזר לשימוש; אצל חוֹרְגֶ׳דֶף הוא כתוב "בכתב האל עצמו" (137A.38), כלומר מקורו אלוהי, ולא "נשכח" אלא "סודי". השוו ספר המתים 64 (NU5 64L; NU8 64K) ו־MT 2 ("העתיק הוד מלכותו את הכתב הזה"). |
+| 151.1,3 | ḥr nfr jm,j nṯr.pl jr,t =k wnm,(j).t m (m)sk,tt jr,t =k jꜣb,(j).t m (m)ꜥnḏ,t jw jnḥ.du =kj m psḏ,t jw wp,t =k m Jnp,w jw | יפה־הפנים בין הָאֵלִים! עינך הימנית – הַמֶּסְקְטֶת, עינך השמאלית – הַמַּעַנְגֶ׳ת, גבותיך – התשיעייה, קדקודך – אַנוּבִּיס, | `וַיְצַו יוֹסֵף אֶת עֲבָדָיו אֶת הָרֹפְאִים לַחֲנֹט אֶת אָבִיו` (בראשית נ:ב) | divergence | החניטה המצרית מופיעה במקרא פעם אחת, ליעקב וליוסף, כמעשה רופאים; כאן החניטה והמסכה הן הפיכה לאל, וכל איבר מזוהה עם אל. |
+| 151.2,3 | jrf ꜥḥꜥ ḥꜣ ḏd hrw ḫsf šꜥ,t jw =j m zꜣ Wsjr ḏd =tw rʾ pn ḥr ḏd n ṯḥn,t smn.w ḥr ḏb,t | הוא, אפוא, העומד מאחורי עמוד־הגֶ׳ד ביום הדיפת הטבח; אני חסות אוֹסִירִיס. ייאמר הלחש הזה על גֶ׳ד של פָּיַנְס, קבוע על לבנה | `לִלְבֹּן הַלְּבֵנִים` (שמות ה:ז) | equivalent | הלבנה של טין מעורב בתבן, חומר הבנייה של מצרים; כאן היא "לבנה מאגית" של טין לח, שעליה נחרת הלחש. אותו חפץ, תפקיד אחר. |
+| 151.2,15 | twr{j}(.w) nn wnm ꜥw,t mḥ,yt nn tkn m ḥm,t.pl jsṯ wdn.n =k tʾ ḥnq,t snṯr ḥr sḏ,t n nn n | ומזוקק, ולא אכל צאן ודגים ולא נגע בנשים. והרי הקרבת לחם ושֵׁכָר, קטורת על השלהבת | `אַל תִּגְּשׁוּ אֶל אִשָּׁה` (שמות יט:טו); `אִם נִשְׁמְרוּ הַנְּעָרִים אַךְ מֵאִשָּׁה` (שמואל-א כא:ה) | equivalent | גם במעמד סיני ההיטהרות לפני מגע בקודש כוללת הימנעות מאשה, וכן , לפני אכילת לחם הקודש. מוטיב משותף של טהרה פולחנית, לא מקור; כאן נוסף איסור אכילת צאן ודגים. |
+| 151.2,17 | Wsjr m b(w) nb ḏꜣi̯ =f jm šs-mꜣꜥ ḥḥ n zp | אוֹסִירִיס בכל מקום אשר יצלח הוא שם. דבר נכון באמת, אלפי אלפים פעמים. | `לֹא-תִתֵּן חֲסִידְךָ לִרְאוֹת שָׁחַת` (תהלים טז:י) | divergence | המשורר מבקש שהאל לא יניח לו לראות את הקבר; המצרי מקיף את גופו בקבר בארבע לבנים, כדי שיחיה בו כאל. מוטיב משותף של הגוף שלא יירקב (§12.5), שתי תשובות הפוכות. |
+| 101.2 | ꜣḫ r ḫḫj =f n pri̯ r-ḥꜣ n rḫ ḥꜣ,(j).w n mꜣꜣ jr,t n sḏm msḏr j ꜣṯ n mw | לאָח על צווארו – לא ייצא החוצה, לא ידעו אותו אשר סביב, לא תראה עין, לא תשמע אוזן. הוֹ דורך המים, | `לֹא שָׁמְעוּ לֹא הֶאֱזִינוּ; עַיִן לֹא רָאָתָה` (ישעיהו סד:ג) | divergence | אצל ישעיהו אוזן לא שמעה ועין לא ראתה את מעשי האל למחכים לו; כאן "לא תראה עין, לא תשמע אוזן" את הקמע הסודי – אותו צמד, הפוך במגמתו: הסוד אינו נפלא מדי לראות, אלא אסור לגלותו. |
+| 101.2 | ꜣḫ r ḫḫj =f n pri̯ r-ḥꜣ n rḫ ḥꜣ,(j).w n mꜣꜣ jr,t n sḏm msḏr j ꜣṯ n mw | לאָח על צווארו – לא ייצא החוצה, לא ידעו אותו אשר סביב, לא תראה עין, לא תשמע אוזן. הוֹ דורך המים, | `שִׂימֵנִי כַחוֹתָם עַל לִבֶּךָ כַּחוֹתָם עַל זְרוֹעֶךָ` (שיר-השירים ח:ו) | equivalent | קמע או חותם שנושאים על הגוף כשמירה. |
+| 101.9 | wḏꜣ =f ḥꜥ =k Rꜥ,w ḏd.w m rʾ ḏd-mdw ḥr sšd n šs-nswt n rʾ pn ḥr =f m ꜥntj,w rḏi̯ n ꜣḫ jqr r ḫḫ =f | שלם הוא; גופך, רַא, מתמיד בלחש. דברים לאמר על סרט של שֵׁשׁ־המלך, אשר הלחש הזה עליו במור, הנתון לאָח המצוין על צווארו | `וַיַּלְבֵּשׁ אֹתוֹ בִּגְדֵי-שֵׁשׁ` (בראשית מא:מב) | cognate | *šs* "פשתן משובח" הוא המלה המצרית שנשאלה לעברית כ`שֵׁשׁ` (§4.2): בגדי יוסף בחצר פרעה, ובגדי הכהונה והמשכן (שמות כה:ד). כאן "שֵׁשׁ המלך" – הפשתן המשובח ביותר, לתכריכים ולקמעות. |
+| 156.1 | rʾ n tj,t n.t ḫnm,t ḏd-mdw jn […] mꜣꜥ-ḫrw znf =ṯ n =ṯ Ꜣs,t ꜣḫ,w =ṯ n =ṯ Ꜣs,t ḥkꜣ =ṯ n =ṯ Ꜣs,t | לחש לתִּית של יָשְׁפֵה. דברים לאמר, בפי […] אמיתי־הקול: דמך לך, אִיסִיס; גבורותייך לך, אִיסִיס; קסמייך לך, אִיסִיס, | `וְהַטּוּר הָרְבִיעִי תַּרְשִׁישׁ וְשֹׁהַם וְיָשְׁפֵה` (שמות כח:כ) | equivalent | `יָשְׁפֵה` היא אבן החושן; כאן *ḫnm.t*, אבן אדומה (יָשְׁפֵה או קרנליאן), שממנה עשו את קמע התִּית. זיהוי האבנים העתיקות אינו ודאי בשתי השפות. |
+| 155.2 | ṯzi̯ ṯw Wsjr ḏi̯ =k ṯw ḥr gs =k ḏi̯ =j mw ẖr =k jni̯.n =j n =k ḏd n nbw ḥꜥi̯.y =k jm =f ḏd-mdw ḥr ḏd n nbw mnḫ.w ḥr | התרומם, אוֹסִירִיס! שים את עצמך על צדך; אתן מים תחתיך. הבאתי לך גֶ׳ד של זהב, שתעלוז בו. דברים לאמר על גֶ׳ד של זהב, מושחל על | `וּקְשַׁרְתָּם לְאוֹת עַל יָדֶךָ; וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ` (דברים ו:ח) | equivalent | דבר כתוב או חפץ קדוש הקשור על הגוף; כאן קמע של זהב תלוי בצוואר המת. מוטיב משותף של "אות" על הגוף, שתפקידו שונה: במקרא זיכרון, כאן שמירה מאגית. |
+| 155.4 | jqr jm,j ẖr-nṯr hrw n tp,j-rnp,t mj jm,j.w-ḫt Wsjr šs-mꜣꜥ ḥḥ n zp | מצוין אשר בחלקת־האל ביום ראשית־השנה, כההולכים־אחרי אוֹסִירִיס. דבר נכון באמת, אלפי אלפים פעמים. | `מֵרֵשִׁית הַשָּׁנָה וְעַד אַחֲרִית שָׁנָה` (דברים יא:יב) | equivalent | *tp.j-rnp.t*, מילולית "ראש השנה" (היום הראשון של השנה המצרית, עם עליית סוֹפְּדֶת והשיטפון); `רֵאשִׁית־השנה` של דברים ולא `ראש השנה`, כדי לא לשייך את היום לחג העברי. |
+| 100.1 | mḏꜣ,t n.t sjqr ꜣḫ rḏi̯.t hꜣi̯ =f r wjꜣ n Rꜥ,w ḥnꜥ jm,j.w-ḫt =f | המגילה לקידום האָח, לתת שירד הוא אל הצִי של רַא עם ההולכים־אחריו. | `וַיִּמְצָא אֳנִיָּה … וַיִּתֵּן שְׂכָרָהּ וַיֵּרֶד בָּהּ` (יונה א:ג) | equivalent | גם בעברית "יורדים" אל הספינה (`יוֹרְדֵי הַיָּם בָּאֳנִיּוֹת`, תהלים קז:כג); במצרית *hꜣi̯ r wjꜣ*, "לרדת אל הצִי" – אותו ביטוי של עלייה לספינה. ביטוי משותף של עמי הנהר והים, לא מקור. |
+| 100.2 | ḏd-mdw jn […] mꜣꜥ-ḫrw ḏꜣi̯.n =j bn,w r jꜣb,tt Wsjr r Ḏd,w | דברים לאמר, בפי […] אמיתי־הקול: הסעתי את הַבֶּנוּ אל המזרח, את אוֹסִירִיס אל גֶ׳דוּ; | `וְכַחוֹל אַרְבֶּה יָמִים` (איוב כט:יח) | divergence | המסורת היהודית קראה כאן את העוף ה"חול" שחי שנים רבות ומתחדש (עוף הפניקס של היוונים); הַבֶּנוּ המצרי, אנפה קדושה של אוֹן, הוא מקורו של הפניקס. אצל איוב – משל לאורך ימים; כאן – הבָּא של רַא, שהמת מסיע אל המזרח, מקום הזריחה. |
+| 102.3 | sqd,wt =k m jr(,j).{t}pl =k jptn n,tj m j{w}ḫm.w-wrḏ bw,t =j zp-2 nn wnm =j bw,t =j | את שיטך בין אֵלֶּה שלך אשר בבלתי־היגעים. תועבתי (פעמיים) – לא אֹכַל את תועבתי; | `לֹא תֹאכַל כָּל תּוֹעֵבָה` (דברים יד:ג) | equivalent | "תועבה" כמאכל אסור, באותה מלה; אצל המצרים התועבה האישית של המת היא הצואה ("אכילת צואה" היא העונש של העולם ההפוך), בתורה – בעלי החיים הטמאים. |
