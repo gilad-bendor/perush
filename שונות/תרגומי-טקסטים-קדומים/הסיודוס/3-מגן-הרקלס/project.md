@@ -299,3 +299,22 @@ and translated names above; the REQUIRED regex fix for δράκων.
 
 ## Parallels index
 Generated into `../parallels-index.md` by `../build_parallels_index.py`.
+
+## Independent fidelity review (2026-11-07)
+Lines 1–480 reviewed against the Greek (and the treebank parse where a form carries tense, mood, person or number):
+every content word, additions outside `( )`, tense/mood/voice, person/number, negations, participles, similes, image
+order, the marks (203–205, 209–211) and echo control. **8 lines changed** (the `>` line and its פירוק gloss): tense 5
+(present for a Greek present 1; the general present of a simile – gnomic aorist / aorist subjunctive – 4), person 2,
+agreement 1. No additions, omissions, negations, marks or biblical echoes needed correction.
+- 105: ῥύεταί present – `וגונן` (past) → `ומגונן`.
+- 308: τὰ … ἐπικροτέοντα (the chariots, 309 `הרכבים`, m.) – `והן, מקשקשות` → `והם, מקשקשים`.
+- 350: ἐπίσχετον is 2nd person **dual** ("you two", Cycnus and Ares, against νῶιν "us two") – `אתה מכוון` → `אתם מכוונים`.
+- 351: εἰμεν 1st pl ("who **we** are skilled") – `בקיאים` → `בקיאים אנו`.
+- 409: ἀπαλήσεται, aor. subj. in the general simile – `נדד` → `נודד`.
+- 410: ἐνόησαν, gnomic aorist in the simile (beside μάχονται 406) – `הבחינו` → `מבחינים`.
+- 411: ἔθεντο, gnomic aorist – `ערכו` → `עורכים`.
+- 432: ἔτλη, gnomic aorist in the lion simile (beside πίμπλαται, γλάφει) – `לא העז` → `אינו מעז`.
+Noted, not changed: 5 ἔριζε `התגרתה` (the corpus's fixed rendering of ἐρίζω, TH 534, 928); 353 δέ τοι `כי` (explanatory
+δέ, as Evelyn-White "for"); 393–394 `על (ענף) רענן … על ענף` (χλοερῷ … ὄζῳ split across the lines; the gloss doubles
+the noun – a style point for the coordinator). After the review: `verify SH --strict` 0 problems; `check_bible_quotes.py`
+0 problems.
