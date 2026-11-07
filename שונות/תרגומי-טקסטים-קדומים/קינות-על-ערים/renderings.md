@@ -131,3 +131,6 @@ Full list: `2-קללת-אכד/project.md` ("Proposals", run 5) and `2-קללת-�
 - 2026-10-19: §9.2 merged after run 2 (LU 171–329); the curse check accepts *na-aĝ₂ … kud*.
 - 2026-10-19: §3 (41/44/73/74, 45–46…, 149) revised and §9.1 merged after run 1 (LU 1–170).
 - 2026-10-19: written before the first run, from the creation corpus's Sumerian renderings (§5–§8 there), the law corpus's rule "Sumerian = the Hebrew of its Akkadian equivalent", and a survey of both texts (ORACC lemma frequencies; the refrains of the Lament for Ur; the curses of Agade).
+
+## 10. Round 6 run 4 (2026-11-07): project 3, the Lament for Sumer and Urim
+The project's `3-הקינה-על-שומר-ואור/renderings.md` binds its own terms; merged here as corpus rules: *bala* (a reign as a term of office) = `תְּקוּפָה` in every lament (LU 113's `תקופת שלטון` stays until the lead's harmonization – a split, recorded); the decree chain = `לְ` + infinitive (positive), `שֶׁלֹּא` + future (negative); *kaskal* = `מְסִלָּה` beside *ḫar-ra-an* `דֶּרֶךְ` (a split with the kings corpus's *kaskal* `דרך`, for the lead); *nam-en* = `אַדְנוּת`; *ĝiri₃ kur₂ dab₅* = `דרך נכריה תפס`; *dumu-gir₁₅* of a goddess = `בת־החורין` (`בַּת` + city stays reserved); the bolts *si-ĝar* `בריח`, *ig-šu-ur₂* `סוגר`, *saĝ-kul* `נגר`, *suḫub₄* `מנעול`. `lament_tools.py`: the `ארר` licence and formula accept *nam … kud* (LSU 26, 239).

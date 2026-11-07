@@ -595,3 +595,6 @@ Accepted from the translator's proposals (`5-ארה-ואישום/project.md`, wi
 - 2026-10-22: §11.12 merged after project 4, part 3 (254–303 and the Urim versions).
 - 2026-10-22: §11.13 merged after project 3, part 4 (MB): project 3 complete.
 - 2026-10-22: §11.14 merged after project 4, part 4 (Me-Turan): project 4 complete; XII_CONC extended to Me-Turan.
+
+## 13. Round 6 run 4 (2026-11-07): project 6, Dumuzid's Dream
+The project's `6-חלומו-של-דומוזיד/renderings.md` (names, ~60 terms, the fixed repeated passages) binds the project. Corpus rules: Inana's Descent's Hebrew for the *galla* (`שֵׁדֵי־גַּלָּה`, the list 297–305B = DD 111–118); *bur₂* (a dream) = `פרש` (Akk. *pašāru* ~ Aram. `פְּשַׁר` in the apparatus; `פתר` reserved); *pad₃* "find" `מצא`, "disclose (a place)" `גילה`; *šu-du₃* `כבלי־יד`, *a₂-la₂* `כבלי־זרוע` (*ĝiš-šu* keeps `אזיקים`). **Splits for the lead:** *tum₂* / *de₆* `נשא` (as Inana 283) beside *gur₃* `נושא` (Inana 371); *sig₉* and *niĝ₂-me-ĝar* both `דממה`; *an-za-am* `גביע` (Akk. *assammu* `גביעים` in the OB Gilgameš: one word across the languages – confirm).

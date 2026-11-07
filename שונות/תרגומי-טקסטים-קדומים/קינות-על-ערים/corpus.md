@@ -44,3 +44,5 @@ Rank 3: ETCSL's English (both). Rank 5: Kramer 1940 (`../sources/Kramer-1940--AS
 | 2 | The Curse of Agade | **complete (first draft), 2026-10-20**: 284 OB lines + 37 Ur III lines in two files (runs 4–5); `2-קללת-אכד/translation.rtl.md` (generated); print stub `../הדפסה/קינות-על-ערים/2-קללת-אכד.rtl.md`. Open decisions: its `project.md` (runs 4–5). |
 
 `parallels-index.md`: 475 rows from five file indexes (Lamentations first), with the coordinator's key findings at the top. Five sequential translators (LU 1–170; 171–329; 330–438; CA 1–148; 149–281 + A1–F7), the renderings merged after each run (`renderings.md` §9).
+
+**Project 3, the Lament for Sumer and Urim** (ETCSL 2.2.3, Round 6 run 4, 2026-11-07): **complete (first draft)**, 524 entries in two files (1–284, 289–519), one translator, three passes and an independent fidelity review; base from the live ETCSL page (`tools/etcslhtml2md.py`) + ORACC Q000380; `lament_tools.py` key LSU; `3-הקינה-על-שומר-ואור/translation.rtl.md` (generated); print stub `../הדפסה/קינות-על-ערים/3-הקינה-על-שומר-ואור.rtl.md`. Its terms: the project's `renderings.md`; decisions: its `project.md`; merged here: `renderings.md` §10.
