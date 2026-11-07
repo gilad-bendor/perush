@@ -307,7 +307,7 @@
 
 ### 39
 `en-me-er-kar₂-ra ur₅-gin₇ inim mu-na-ab-[be₂]`
-> לאנמרכר – כך – דבר אומר.
+> לאנמרכר – כך – דבר [אומר].
 - **פירוק:** `en-me-er-kar₂-ra` – אנמרכר + *-ra* (דטיב); `ur₅-gin₇` "כך"; `inim mu-na-ab-[be₂]` – *inim … e* + *mu-* + *-na-* "לו" + *-b-*, מַרוּ. ניתוח שלנו (מפתח הצורות: `{mu.na.b:~;b°e₂}`).
 - **תרגומים:** ETCSL: "This is what he said to Enmerkar" – ETCSL בעבר; הצורה מַרוּ.
 - **הערות:** *ur₅-gin₇* = `כך` (EA). השורה סוגרת את דברי השולח – והשליח, בשורות הבאות, נושא אותם לאנמרכר.
@@ -1699,7 +1699,7 @@
 
 ### 226
 `[iri{ki} nam] tar-ra an {d}en-lil₂-la₂ […] ĝiri₃ bi₂-in-gub`
-> [העיר אשר] אַן ואנליל [גזרו את גורלה] […] – רגל הציבה;
+> [העיר אשר] אַן ואנליל גזרו את [גורלה] […] – רגל הציבה;
 - **פירוק:** `[iri{ki} nam] tar-ra` – "העיר (ש)גורלה נגזר"; `an {d}en-lil₂-la₂` – "של אן ואנליל"; `[…]`; `ĝiri₃ bi₂-in-gub` – *ĝiri₃ … gub* "להציב רגל" + *bi₂-* + *-n-*. ניתוח שלנו.
 - **תרגומים:** ETCSL: "She made her way to the city whose destiny was decreed by An and Enlil" – כמונו.
 - **הערות:** *nam tar* = `גזר גורל` (renderings §12.6.3); כ־252, שבו השורה שלמה. *ĝiri₃ gub* = `רגל הציב` (171).
@@ -1722,14 +1722,14 @@
 
 ### 229
 `maš-maš-e suḫur{ku₆} gal a-⸢ta⸣ im-ta-an-[e₃] (*1 ms. has instead:* im-ta-an-⸢ed₃⸣)`
-> המלחש – דג־סוּחוּר גדול – מן המים הוציא;
+> המלחש – דג־סוּחוּר גדול – מן המים [הוציא];
 - **פירוק:** `maš-maš-e` – מלחש + ארגטיב; `suḫur{ku₆} gal` – *suḫur* (סוג קרפיון) + *gal*; `a-⸢ta⸣` "מן המים"; `im-ta-an-[e₃]` – *imma-* + *-ta-* "מן" + *-n-* + *e₃* "להוציא". ניתוח שלנו.
 - **תרגומים:** ETCSL: "The sorcerer made a giant carp come out from the water" – כמונו.
 - **הערות:** *suḫur* = `דג־סוּחוּר` (תעתיק, כ־LZ `סוּחוּרְמַשׁ`); *e₃* היוצא = `הוציא`. **נוסח אחר**: *im-ta-an-⸢ed₃⸣* "העלה" (מן המים) – וכך בכל ההוצאות של 229–242 בכתב יד אחד.
 
 ### 230
 `um-ma saĝ-bur-ru [ḫu-ri₂]-in{mušen} a-ta im-ta-an-[e₃] (*1 ms. has instead:* im-ta-an-⸢ed₃⸣)`
-> הזקנה סַגְבּוּרוּ – [נשר] – מן המים הוציאה;
+> הזקנה סַגְבּוּרוּ – [נשר] – מן המים [הוציאה];
 - **פירוק:** `um-ma saĝ-bur-ru` – "הזקנה סגבורו" (ארגטיב חסר); `[ḫu-ri₂]-in{mušen}` "נשר"; `a-ta im-ta-an-[e₃]` כ־229. ניתוח שלנו.
 - **תרגומים:** ETCSL: "Wise Woman Saĝburu, however, made an eagle come out from the water" – ETCSL מוסיף "however".
 - **הערות:** *ḫu-ri₂-in* = `נשר` (מותר רק בעבורו; EA 245). נשר מן המים – הפך הטבע: הזקנה מוציאה מן הנהר את טורף הדגים.
@@ -1751,14 +1751,14 @@
 
 ### 233
 `maš-maš-e u₈ sila₄-bi a-ta im-ta-an-[e₃] (*1 ms. has instead:* im-ta-an-ed₃)`
-> המלחש – רחל וטלהּ – מן המים הוציא;
+> המלחש – רחל וטלהּ – מן המים [הוציא];
 - **פירוק:** `maš-maš-e`; `u₈ sila₄-bi` – *u₈* "רחל" + *sila₄* "טלה" + *-bi*; `a-ta im-ta-an-[e₃]` כ־229.
 - **תרגומים:** ETCSL: "The sorcerer made a ewe and its lamb come out from the water" – כמונו.
 - **הערות:** *u₈* = `רחל` (EA §9.1); *sila₄* = `טלה`. המלחש מוציא מן המים דווקא את בעלי החיים של הרפת והדיר שפגע בהם – אולי ניסיון להחזיר את החלב, ואולי לעג.
 
 ### 234
 `um-ma saĝ-bur-ru ur-bar-ra a-ta im-ta-an-[e₃] (*1 ms. has instead:* im-ta-an-ed₃)`
-> הזקנה סַגְבּוּרוּ – זאב – מן המים הוציאה;
+> הזקנה סַגְבּוּרוּ – זאב – מן המים [הוציאה];
 - **פירוק:** כ־230, *ur-bar-ra* "זאב".
 - **תרגומים:** ETCSL: "Wise Woman Saĝburu, however, made a wolf come out" – כמונו.
 - **הערות:** *ur-bar-ra* = `זאב` (49).
