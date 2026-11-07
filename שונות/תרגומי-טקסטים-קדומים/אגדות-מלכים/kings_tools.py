@@ -249,6 +249,11 @@ RESERVED_CY.update({
     B + P + r'(צלם|צלמים|צלמך|צלמי|צלמיך|צלמו|צלמיו)' + E: [r'alan|ṣalm'],     # *alan* = *ṣalmu* = צֶלֶם
     B + P + r'(דמות|דמותו|כדמות|בדמות)' + E: [],                               # Gen 1:26: the apparatus only
 })
+for _k in list(RESERVED_CY):   # homographs (LC2): *ur₅* "liver" = כָּבֵד (DB E16, laments); *sun₄* "beard" = זָקָן (HB 74, EA 209)
+    if 'כבד|כבדה' in _k:
+        RESERVED_CY[_k] = RESERVED_CY[_k] + [r'ur\[liver']
+    if 'זקן|זקנה' in _k:
+        RESERVED_CY[_k] = RESERVED_CY[_k] + [r'sun₄|sun\[beard']
 for _k in ('LC', 'LZ', 'ES'):
     RESERVED[_k] = RESERVED_CY
 
@@ -333,6 +338,9 @@ FORMULAS_CY = [  # renderings.md §12.6 (fixed by the first copy)
     (r'šu sag₉-sag₉-ga-ni ḫur-ru-um kur-ra-kam mu-na-ab-zi', r'^את ידיו הנאות – במערת ההר – אליו מרים:$', 'LC the prayer 3 (§12.6.1)'),
     (r'er₂-(ra-)?na šu ba-an-ši-in-ti', r'את דמעותיו לקח', 'LC "accepted his tears" (§12.6.1)'),
     (r'nam-ba-tur₅-tur₅-de₃(-en)?$', r'– אל אחלה!$', 'LC the refrain (§12.6.1)'),
+    (r'dili du-e \{d\}šakkan₂-na-ke₄ ḫur-saĝ', r'עיר הולך־לבדו של שכן – את ההררים', 'the running animals 1 (§12.6.2)'),
+    (r'uru₁₆ gal-gin₇ kušum', r'עיר נישא, כגדול – ', 'the running animals 2 (§12.6.2)'),
+    (r'sal-la kaš₄-e kiĝ₂-ĝa₂-am₃', r'עיר דק, המבקש לרוץ הוא', 'the running animals 3 (§12.6.2)'),
     (r'^\{kuš\}maš-li-um-e niĝ₂-si-sa₂-e$', r'^בדליי־העור – \(הכול\) במישרים,$', 'LC the provisions (§12.6.1)'),
 ]
 for _k in ('LC', 'LZ', 'ES'):

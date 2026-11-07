@@ -9,7 +9,7 @@
 `c.1.8.2.1.html`, `t.1.8.2.1.html` (the saved pages); `transliteration.md` (the composite, the format of `etcsl2md.py`); `lemmas.tsv` (ETCSL's own lemmatisation per word, from the page's tooltips: label, form, citation form, POS, gloss); `translation.md` (ETCSL's English prose by paragraph).
 
 ## Line numbering
-ETCSL composite numbers, 509 entries (1–495 with 232A–B, 325A–B; segment B, a fragment that may not belong to the poem: B1–B7). The labels of a second segment carry its letter (B1 …), since its numbering restarts.
+ETCSL composite numbers, 509 entries (1–499 with 232A–B, 325A–B; segment B, a fragment that may not belong to the poem: B1–B7). The labels of a second segment carry its letter (B1 …), since its numbering restarts.
 
 ## Usefulness
 **Base text** (rank 1) for `אגדות-מלכים/5-לוגלבנדה-במערת-ההר/` (Round 6 run 3); ETCSL's English is the rank-3 check.

@@ -658,6 +658,12 @@ Full list: `5-לוגלבנדה-במערת-ההר/project.md` ("Part LC1", "Propo
 - **Rulings (the coordinator):** (1) *na-* in narrative = affirmative (ETCSL "na-ĝa₂-ĝa₂", "na-an-ĝen"): a plain verb, no `אל` – a rule for the cycle (§12.2); (2) plural *ur-saĝ* = `לוחמים` (run 1's rule: `גיבורים … הם` would make Gen 6:4) – LC 62 changed by the translator in part 2's resume; (3) *er₂ šu ti* `לקח` kept (the formula as in HA); (4) *amar* `עגל` (a calf) / `גוזל` (a bird) – a split by animal, recorded; (5)–(8) as drafted (*ed₃* by direction; *muš₃ tum₂* `כלה` with `*…*`; *i-lu* transliterated; 98 `במישרים`).
 - **Tool:** FORMULAS_CY (the prayer, the tears, the refrain, the provisions). The translator's finding about `check_bible_quotes.py` (only the backtick group just before a reference is checked: write one group per quotation) goes into the report.
 
+#### 12.6.2 Part LC2 (LC 264–499, B1–B7), 2026-11-07
+Full list: `5-לוגלבנדה-במערת-ההר/project.md` ("Part LC2", "Proposals"); LC complete (509 entries, `verify LC --strict` OK, `translation.rtl.md` built). Binding for LZ and ES:
+- **The running animals** (273–275 → ES 45–47): `עַיִר הולך־לבדו של שַׁכַּן – את ההררים *מפלח*;` / `עַיִר נישא, כגדול – *דוהר*;` / `עַיִר דק, המבקש לרוץ הוא – ריצה בוקע.` (*dur₃* `עַיִר` vocalized; FORMULAS_CY). The bread, the hunt, the dream's command and execution, the banquet, the night beings' refrain: the strings in project.md.
+- **Words:** *barag* (ETCSL "altar") `דוכן`; *ka-inim-ma* `דבר־הפה` (not `לחש` / `כשף`); *ensi* `שואל` (temple corpus `שואלת`); *zig₃* (361, "rose", not "awoke") `קם`; *ur₅* "liver" `כָּבֵד` and *sun₄* "beard" `זָקָן` (homograph licences added); by context: *du₈* `אפה` (bread) / `פרש`, *ra* `הקיש` (flints) / `מחץ`, *la₂* `כפת` (binding) / `תלה`; *galam* `נישא` here (EA `בתחכום`: a recorded split by sense – "lofty", of an animal), *uru₁₆* also `נישא` (two words, one Hebrew: recorded).
+- **Rulings:** 353 kept `לקח` as 363 (the same form; ETCSL's future is an interpretation); the rest as drafted.
+
 ## Changelog
 - 2026-11-07: §12 the Uruk cycle (projects 5–7: LC, LZ, ES) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed by the Round 6 run 3 coordinator before the first part.
 - 2026-11-02: §11.7 the 2026-11-02 harmonization (*aggu* `קֶצֶף`).
