@@ -64,7 +64,7 @@ RESERVED = {
     r'אלהים|אלוהים': [],
     r'נטש|נוטש': [r'muš₃'],
     r'עזב|עוזב': [r'taka₄|tag₄|da₁₃|\bšub|-šub'],
-    r'ארר|ארור|אורר': [r'nam\b.*ku₅|nam-ku₅|nam ku₅|na-aĝ₂\b.*kud'],
+    r'ארר|ארור|אורר': [r'nam\b.*ku₅|nam-ku₅|nam ku₅|na-aĝ₂\b.*kud|nam\b.*kud'],
     r'קלל|קללה|קללת': [r'aš₂?\b.*bal|aš₂?-bal'],
     B + r'ו?[לב]?ה?(תל|תלים|תלי|תלה)' + E: [r'du₆'],
     B + r'ו?[לבמהשכ]{0,2}(ה?תנכר|ינכר|נכר|נוכר|ניכר)': [r'kur₂'],
@@ -95,7 +95,7 @@ FORMULAS = [
     (r'mu(-un)?-na-te er₂ gig i₃-še₈-še₈$', r'ני?גשה אליו – דמעות מרות היא בוכה\.$', 'LU 81–83 (renderings §3)'),
     (r'en₃-še₃', r'עד מתי', '*en₃-še₃* = עד מתי'),
     (r'me-li-e-a', r'אוי לי', '*me-li-e-a* = אוי לי'),
-    (r'nam\b.*ku₅|nam-ku₅|nam ku₅|na-aĝ₂\b.*kud', r'אר(ר|ור|רה|רו)', '*nam … ku₅* = ארר'),
+    (r'nam\b.*ku₅|nam-ku₅|nam ku₅|na-aĝ₂\b.*kud|nam\b.*kud', r'אר(ר|ור|רה|רו)', '*nam … ku₅* = ארר'),
     # the cross-corpus harmonization (2026-10-21): one Hebrew per source word in all corpora
     (r'za-gin₃', r'ספיר', '*za-gin₃* = סַפִּיר (decision 1)'),
     (r'šu-ur₂-men', r'שורבין', '*šu-ur₂-men* = שׁוּרְבִּין (decision 3)'),
