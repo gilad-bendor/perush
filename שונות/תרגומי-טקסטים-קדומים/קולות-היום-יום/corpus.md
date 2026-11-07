@@ -31,3 +31,5 @@ Reading order: the love songs (project 1, ordered from the courtly divine songs 
 
 ## Status
 **First draft complete (2026-10-21):** project 1 835 lines, project 2 500 lines, project 3 178 lines – all drafted, three review passes each, `kol_tools.py verify LOVE PROV LET` OK, `check_bible_quotes.py` clean, translations built, `parallels-index.md` (492 rows; 506 after the 2026-10-21 harmonization), print stubs in `../הדפסה/קולות-היום-יום/`. Details: each `project.md` ("Progress", "Open decisions", "Key findings") and `handoff--round2-run7.md`.
+
+**Round 6 run 4 (2026-11-07): the proverb collections 2 (+6) and 3 are complete** – 214 + 287 new entries beside the Round 2 selection (306 and 347 entries in all; the `select` lists of `kol_tools.py` P2/P3 removed), the section headings re-cut by theme, one translator, three passes and an independent fidelity review; `translation.rtl.md` rebuilt (1,001 lines). Two Round 2 lines corrected (2.69: *ĝen* imperative `לכי`). Terms: the project's `renderings.md`; merged: `renderings.md` §9 (Round 6 run 4).

@@ -106,6 +106,9 @@ Vocalized at the first occurrence in each annotated file; afterwards plain spell
 
 **2026-10-23 harmonization** (`harmonization--2026-10-23.md` row 18): *nissatu* = `יָגוֹן`, *ašuštu* = `דַּאֲבוֹן`; changed lines: LAOS 4 16 r.iv.9 `ומעצב – אינה יתרה עליי.` → `ומדאבון – אינה יתרה עליי.` (the table's `ודאבון – אינו יתר עליי` read `ומעצב` as the noun `מַעֲצֵב`; but *u ašuštim* still depends on *eli* of r.iv.8 – "more than sleeplessness and distress" – and the subject is `אהבתך`, so the comparative מ־ and the feminine `אינה יתרה` stay). No *nissatu* in this corpus.
 
+### 9.x Round 6 run 4 (2026-11-07): proverb collections 2–3 completed
+The project's `2-משלים-שומריים/renderings.md` (21 rows added) binds. Corpus rules: *ĝen* imperative `לֵךְ` / `לְכִי` (`בוא` stays for *ku₄*: 2.69 corrected); *gala* `מקונן`; *me-te* `עֲדִי` (not ETCSL's "glory"); *mar-tu* transliterated `המַרְתּוּ` (Gen 15:16 in the apparatus); *lag* `רגב` (field) / `גוש` (bread, loads); *nam … kud* = *nam … ku₅* `ארר` (3.59; the gate widened); `שמאל` licensed by *gab₂-bu* too. Open for a later session: *uru₄* "plough" rendered `זרע` after collection 1's precedent (2.91, 2.140) – a review point.
+
 ## Changelog
 - 2026-10-23: the 2026-10-23 harmonization applied (§9, last paragraph: LAOS 4 16 r.iv.9).
 - 2026-10-21: created by the run-7 coordinator before drafting.
