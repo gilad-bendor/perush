@@ -960,3 +960,16 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
 5. **Gates fixed:** `קוף` licensed by gfw; the root שכב by the TLA lemma tla150740 (sḏr written ḫr).
 6. **For the lead:** the horizon god `רַא־חַרְאַחְתִּי` (TB) / `חוֹרוּס־אָחְתִּי` (NU5) – two TLA lemmas, each kept; wḏꜥ `הפריד` /
    `הקצה` / `שפט` (by sense); ḫsf `הדף` / `בא לקראת`.
+#### 12.6.11 MR (the Instruction for Merikare, E1–E149), translator 11, merged 2026-11-07 (`9-מוסר-למריכרע/project.md`)
+1. **E130–E138** copied byte for byte from MK (`verify MR`); no revision proposed (E134's singular "supporter" in the TLA is
+   an alternative reading, not an error).
+2. **Speech:** md.t `דבר`, mdw.tj `דברן`, tꜣḥ `מסית`, ẖnn `איש־המהומה`, shꜣ `התסיס` / `תסיסה`; ḫpš "strength" `עוז` (E31 `עוזו
+   של מלך – לשונו; תקיף הדבר מכל קרב`).
+3. **Punishment and justice:** sfn `ריחם`; ḫsf "punish" `ייסר` (WE) / "ward off" `הדף` (MK) – by sense; nmꜥ `נטה`; nf `זדון`;
+   sqr `קטל`; ḏꜣḏꜣ.t `ועד`, wḏꜥ `שפט`.
+4. **The poor:** šwꜣ.w `רָשׁ` (twꜣ `עני`; both in E27; AM's one šwꜣ.w `עני`: for the lead); ẖsj `עלוב`; ꜥꜣm.w `הָעַאמוּ`.
+5. **Character:** ꜥqꜣ(-jb) `ישר` / `ישר־הלב` / `יושר־הלב` (the base has ꜥqꜣ, not mꜣꜥ); qd.w `המידות`; bjꜣ.t `תכונה`; jwn `טבע`.
+6. **Others:** mr.w "following" `חבורה` (SI `אנשים`: for the lead); mnj `עגן`; mn.w `אנדרטה`; wdḥw `שולחן־הקרבן`; jwꜣ `שור`; no
+   `זבח` in a line.
+7. **Open (for the user):** E119 the base "through what I did" against pCarlsberg "not through what I did" (the base kept);
+   E128 `ככר?` (the TLA's lemma) against the usual "character" (the colophon's same word is "character").
