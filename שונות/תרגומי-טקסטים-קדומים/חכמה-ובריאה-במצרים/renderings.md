@@ -973,3 +973,9 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
    `זבח` in a line.
 7. **Open (for the user):** E119 the base "through what I did" against pCarlsberg "not through what I did" (the base kept);
    E128 `ככר?` (the TLA's lemma) against the usual "character" (the colophon's same word is "character").
+#### 12.6.12 The three independent fidelity reviews (2026-11-07; sections in the two project.md files)
+Review 1 (NU1–NU3) 22 lines, review 2 (NU4–NU7) 22 + 3 copies in NU10, review 3 (NU8–NU10, CH, MR) 26 – mostly tense and
+mood (n sḏm=f read as a future; relative forms without .n read as past), person / number, brackets, a homonym lemma
+(spḥ "reach" / "lasso"), one word read as two. **Applied to all copies at once (the coordinator, review 3's proposal):**
+Merikare E132 `הרג את אויב[יו]` → `הרג את אויביו` (only the suffix =[f] is restored: no bracket, §2.1) – in MR, MK and
+the fifth-day dossier's MK (`verify MK`, `verify MR`, `dossier_tools.py verify` pass).
