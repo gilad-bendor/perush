@@ -13,3 +13,6 @@ with its reason in its entry. Two go to the round's harmonization, where the lea
 
 ## Run 3 (the Uruk cycle)
 None.
+
+## Run 4 (the Lament for Sumer and Urim, Dumuzid's Dream, proverbs 2–3)
+None.
