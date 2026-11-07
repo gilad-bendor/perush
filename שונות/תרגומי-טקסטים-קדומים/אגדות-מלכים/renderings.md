@@ -671,6 +671,13 @@ Full list: `6-לוגלבנדה-וציפור-האנזוד/project.md` ("Part LZ1"
 - **Rulings:** (1) *na-* in speech read as affirmative where the context requires it (107, 128, 177, 194); the prohibitive stays `אַל`; (2) 8–10 first-person inner speech: kept; (3) **Sum. *alan* = `פֶּסֶל`, not `צֶלֶם`** (the coordinator's pre-set reversed: five Sumerian precedents, EA 318 among them; the cognate *ṣalmu* / `צֶלֶם` and Gen 1:26 stay in the הקבלה) – LZ 181, 198 changed by the translator at LZ2's start; the `צלם` gate no longer licensed by *alan*; (4)–(8) as drafted (Anzud without the article; *zag-še* `כתף` with ORACC; *a-ru* transliterated; the italicized uncertain words; 62 narrative).
 - **Tool:** FORMULAS_CY + the refrain and the unanswered call.
 
+#### 12.6.4 Part LZ2 (LZ 203–417, A–F), 2026-11-07
+Full list: `6-לוגלבנדה-וציפור-האנזוד/project.md` ("Part LZ2"); LZ complete (422 entries, `verify LZ --strict` OK, `translation.rtl.md` built). Binding for ES:
+- **EA's formulas held:** 211–212 = EA 69–70; 344 the journey; 346 the glad foot; 358 `"אחיך – מה אמר, מה הוסיף –`; 417 `לוגלבנדה הטהור – תהילה!`. The delivery 360–387 = the message 294–321 (only the quotation level changes). GEN's `בשאלה ושאלה יגעו:` (226, 234).
+- **Fixed:** provisions 203 = 340 `את לחם הדרך שלו – אשר לא אכל –`, weapons 341 `את כלי נשקו – אחד אחד – ביד לקח.`; the land of no return 231 = 335 `ההררים הגדולים, אשר איש לבדו אינו הולך בם,` / 232 = 336 `אשר איש מהם אל האנשים אינו שב – …`; the refrain 272–283 `איש – "אני אל העיר אלכה!" – אינו אומר לו;`; 286 = 328 `אל כולבה – לבדי – אלכה; איש עמי אַל ילך!`.
+- **Words:** *nu-gig* `הנּוּגִיג` transliterated (the law corpora's `קְדֵשָׁה` is blocked by the `קדש` reservation: a split for the lead); *eme sig gu₇* `לשון שפלה אכל` (Šuruppag); *zi … pad₃* `בחֵי … נשבע` (the Bilgameš poems); *gi₄* `שלח` (send) / `שב` (return); *dim-dim* `עמודים` (not `מגדל`); *banšur* `שולחן`; Martu `מַרְטוּ` [cognate `הָאֱמֹרִי`].
+- **Rulings:** all seven open decisions kept as drafted. **Tool:** `data` / `skel` take the base order (A–F follow 353): call `203 F`, then `354 417`.
+
 ## Changelog
 - 2026-11-07: §12 the Uruk cycle (projects 5–7: LC, LZ, ES) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed by the Round 6 run 3 coordinator before the first part.
 - 2026-11-02: §11.7 the 2026-11-02 harmonization (*aggu* `קֶצֶף`).
