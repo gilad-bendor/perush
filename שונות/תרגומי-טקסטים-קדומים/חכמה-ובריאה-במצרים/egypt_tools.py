@@ -538,7 +538,7 @@ RESERVED = [
     (W + alt("טבעת", "הטבעת", "טבעות", "טבעתו") + E, r"ḏbꜥ,t|ḏbꜥ\.t|ḏbꜥt|ḫtm", "טַבַּעַת only for ḏbꜥ.t 'seal' [cognate: loanword, Gen 41:42]; ḏbꜥ 'finger' = אֶצְבַּע"),
     (W + alt("חותם", "החותם", "חתם", "חתום", "חתומה", "נחתם", "חותמו") + E, r"ḫtm|ḫtm,w|ḫtm\.t", "the root חתם only for ḫtm 'seal' [cognate: loanword, Gen 38:18]"),
     (W + alt("שיטה", "שיטים", "עצי שיטים") + E, r"šnḏ|šnḏ,t", "שִׁטָּה only for šnḏ.t 'acacia' [cognate: loanword, Ex 25:5]"),
-    (W + alt("קוף", "קופים", "הקוף", "הקופים") + E, r"\bgf\b|gjf|gfn|gwf|gꜣf|ꜥnꜥn", "קוֹף only for gf [cognate: loanword, 1 Kgs 10:22]; the baboon jꜥnꜥ = בַּבּוּן"),
+    (W + alt("קוף", "קופים", "הקוף", "הקופים") + E, r"\bgf\b|gjf|gfn|gwf|gꜣf|gfw|ꜥnꜥn", "קוֹף only for gf [cognate: loanword, 1 Kgs 10:22]; the baboon jꜥnꜥ = בַּבּוּן"),
     (W + alt("כתם", "הכתם", "כתמים") + E, r"ktm|kꜣ~tj~mt", "כֶּתֶם 'fine gold' only for ktm.t [cognate: loanword, Job 28:16, Lam 4:1] (AM 18.12)"),
     (W + alt("שושן", "השושן", "שושנים", "שושנה", "השושנה", "שושנת", "שושני") + E, r"zšn|sšn|zššn|sššn", "שׁוֹשָׁן / שׁוֹשַׁנָּה only for zšn 'lotus' [cognate: loanword, Song 2:1–2, 1 Kgs 7:19] (NU5)"),
     (W + alt("זרת", "הזרת", "בזרת") + E, None, "זֶרֶת never: ḏr.t 'hand' = יָד"),
@@ -550,7 +550,7 @@ RESERVED = [
     # --- the tales and BD 125 (renderings §11; Round 5 run 6): scoped to TALES (the 4th element) ---
     # Gen 39 (the Two Brothers): the words of Joseph and Potiphar's wife only for their Egyptian counterparts
     (W + alt("שכב", "שכבה", "שכבי", "שכבו", "ישכב", "תשכב", "נשכב", "אשכב", "לשכב", "שוכב", "שוכבת", "שכבנו", "שכבתי", "משכב", "משכבה", "משכבו") + E,
-     r"sḏr|nk\b|nk\.|nk=|nkk|nkj|nki̯|ẖdr|ḫdr|wnm-ẖdr|sḏr\.t", "the root שכב only for sḏr 'lie, sleep' / nk 'copulate' [equivalent Gen 39:7, 12, 14 `שִׁכְבָה עִמִּי`]", TALES),
+     r"sḏr|tla150740\b|nk\b|nk\.|nk=|nkk|nkj|nki̯|ẖdr|ḫdr|wnm-ẖdr|sḏr\.t", "the root שכב only for sḏr 'lie, sleep' / nk 'copulate' [equivalent Gen 39:7, 12, 14 `שִׁכְבָה עִמִּי`]", TALES),
     (W + alt("בגד", "בגדו", "בגדים", "בגדיו", "הבגד", "הבגדים", "בגדי", "בגדה", "בגדיה") + E,
      r"ḥbs|dꜣj|mnḫ|šs\b|šsr|ḥꜣ,tj|sḏꜣ|dꜣjw|jfd|sšd|ḥbs\.w", "בֶּגֶד only for a garment word (ḥbs, dꜣjw, mnḫ.t …) [Gen 39:12–18: the garment left in her hand]", TALES),
     (W + alt("צחק", "לצחק", "צחוק", "מצחק", "צחקה", "צחקו", "ויצחק", "יצחק", "ותצחק") + E, r"sbṯ|zbṯ|sbt", "the root צחק only for sbṯ 'laugh' (Gen 39:14, 17 `לְצַחֶק בָּנוּ`; Gen 18:12–15)", TALES),

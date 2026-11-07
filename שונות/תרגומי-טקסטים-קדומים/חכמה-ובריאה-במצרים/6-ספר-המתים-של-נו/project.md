@@ -2015,6 +2015,191 @@ reads `אלה` as "goddess"). No `[היתר שער]` was needed.
 - **The demonstrative `אלה` trips the "goddess" trap only in lines whose source has *nṯr***: vocalize it everywhere from
   the first draft, so the trap and the reader agree.
 
+## NU10 136A2.1–150.D15 and CH 1–65 (Round 6 run 2, translator 10; 2026-11-07)
+
+### Scope
+- **NU10** – the last chapters of pNu, 166 lines: BD 136A (second copy, "136A2", 4 lines: a short first-person version of NU7's
+  136A.1–5), 136B (18: the bark and "the court of fire"), 149 (130: the fourteen mounds, `149.S1`–`149.S14` the vignette
+  headings, the 6th mound labelled `149.S5b`; `149.58b`, `149.66b`, `149.73b`, `149.90b` are repeated TLA labels; there is no
+  `149.100`), 150 (15 captions of the mound map, `150.D1`–`150.D15`). Preservation: complete except 149.57 (`[nm,t] [nṯr] […]`)
+  and 149.67 (`[wꜣḏ,t]`), and the owner's name (`[…]`). The papyrus closes with BD 149's colophon (149.112 `jwi̯=s pw m ḥtp`).
+- **CH** – BD 175 from the papyrus of Kha (pTurin 8438, TT 8, Amenhotep III), 65 lines: Atum's complaint to Thoth about
+  "Nut's children" (1–10, with a rubric over a faience Thoth figure), the dialogue of Osiris and Atum (11–40: the airless,
+  waterless netherworld; Atum's prophecy that he will "damage all he made", the land coming into Nun as at first, he and
+  Osiris remaining as serpents; the requests of the dead), the Herakleopolis aetiologies (41–60: Seth's nosebleed and "the
+  hacking of the earth", Osiris's swollen head under the atef crown and the "pool", Herishef, the name of Herakleopolis), and
+  the rubric over a lapis figure of "[…]" (61–65). Only `[…]` at 61 (the owner's name, the TLA's "NN").
+- Files: `annotated-NU10.rtl.md`, `translation--intro-NU10.rtl.md`, `annotated-CH.rtl.md`, `translation--intro-CH.rtl.md`;
+  generated `translation-NU10.rtl.md`, `translation-CH.rtl.md` (and the project's `translation.rtl.md`).
+
+### Sources consulted
+AED-TEI line data (`data NU10`, `data CH`); the TLA's German (`tr`), read after each save (one slip: see the Progress log),
+every disagreement recorded in the entry's **תרגומים** bullet; `renderings.md` §3–§5, §11, §12 with §12.6.1–9; the earlier
+NU files for every recurring word (`lex` by TLA lemma id, `grep --all`): NU5 109.2–109.9 (copied into 149.6–149.19), NU3
+108.3–108.14 (into 149.26–149.33), NU7 136A.1–5 (136A2), NU4 82.2 (149.79–80), NU1, NU2, NU6–NU9; the dossier's MK E132
+(ḥḏi̯ `הזיק`); HC (`חֶרְיְשֶׁף`, `אֵלֵי־חֶח`, `טקס`, `זרניך`). No other rank-3 translation quoted. Every verse printed first.
+
+### Decisions
+**BD 149's frame** (fixed at the first mound, copied in all fourteen): the heading `התל ה־N – ירוק.` (*jꜣ.t* `תל`, as HC 58,
+NU1, NU3, NU4; *wꜣḏ.w* the green paint `ירוק`, as NU5 148.15; *qnj.t* `צהוב` at the 9th and 14th – HC 46 has `זרניך` for
+the substance: a split by sense) + name / `האל אשר בו: X`; the address `הוֹ התל הזה של X`; `דברים לאמר, בפי […]
+אמיתי־הקול:` (also at the end of a mound, as the base writes it). The captions of BD 150 copy the mound names.
+
+**Copied passages:** 149.6–149.19 ← NU5 109.2–109.9 (the Field of Reeds; 149.7–9 and 149.16–19 are two copies in BD 149
+itself; only the Egyptian's differences changed: `שלו` for *jt=s*, `קנה – חמש אמות` in 149.18 against 149.9's "four",
+`כל אחד?` for *jr.j*); 149.26 ← NU3 108.3 (`שלוש מאות חֵת אורכו, מאה וחמישים חֵת רוחבו`); 149.28–33 ← NU3 108.9–14 (149.28
+`אני הגבר המכסה את ראשך` – a participle with the TLA, against 108.10's imperative); 136A2.2–4 ← NU7 136A.1–5; 149.79–80 ← NU4
+82.2. 149.2 = 149.42 = 150.D15 (`חיים בו על לחם־שֶׁנֶס וקנקנים`, `חִשְׂפוּ את כיסויי־ראשכם בהתקרבותי`); 149.3 = 149.43.
+
+**Terms (one Hebrew per lemma; new ones grepped):**
+
+| Egyptian | Hebrew | Lines | Reason / rejected |
+|---|---|---|---|
+| jꜣ.t "mound" | `תל` | 149 passim | HC 58, NU1, NU3, NU4 |
+| nwy (81240) | `זרם` | 149.96–109 | BD 125, NU3 68.7; 149.109's *nwy* (TLA 81260) kept `זרם` by its spelling |
+| nwi̯.t / nꜣy.t (81260) | `גל` | 149.52, 149.95 | NU1 17.40, SS 35 |
+| wꜣ.w (42650) | `נחשול` | 149.91 | SS |
+| jtrw | `יְאֹר` [cognate] | 149.95, 150.D13 | §4.2 loanword |
+| ḥꜥpi̯ | `חַעְפִּי` | 149.99–106, 150.D12 | §3.1 (the TLA's "Nil") |
+| ḥḥ.wt (CH 21, TLA "Überschwemmungswasser", lemma ḥḥ "million") | `מֵי־חֶח` | CH 21 | new; Heh's name kept (HC `אֵלֵי־חֶח`); `מבול` never, `שיטפון` = HC's mḥw.yt, `שטף` = NU7's mḥ.yw, `תהום` never |
+| Nww | `נוּן` ★ | CH 21 | §3.1 |
+| ḥḏi̯ "damage, destroy" | `הזיק` (noun `היזק`) | CH 3, 6, 7, 21 | the binding dossier precedent MK E132 `הזיק` (AM 10.21, 13.12); `הרס` = ḫmi̯, `השמיד` = ḥtm, `שחת`/`מחה` never (open: the strength) |
+| zjn "rub out, erase" | `ניגב` / `ניגוב` | CH 8, 10 | NU7 189.28; `מחה` reserved (Gen 6:7 in the apparatus) |
+| zpi̯ "remain" | `נותר` | CH 22 | SS 38, 107 |
+| ḫpr.w | `צורה` (`עשיתי את צורתי ל־`) | CH 22, 39 | §12.6.1.3 |
+| tp.t-ꜥ | `כמעמדה מקדם` | CH 22 | SI B186 |
+| wjꜣ-n-ḥḥ | `צִי־אלפי־האלפים` | CH 16, 25 | ḥḥ `אלפי אלפים` (§12.3) |
+| ẖnnw | `מהומה` | CH 2 | AM 19.19 |
+| ḫrw (120090) "strife" | `ריב` | CH 1 | new |
+| ꜥḥꜥ.w | `משך ימים` | CH 19–20, 34 | AM, HC |
+| mn.w "monuments" | `אנדרטאות` | CH 26, 28 | new; `מַצֵּבָה` avoided (wḏ is not `מצבה`, §4.3) |
+| srḫ | `הסֶרֶח` (vocalized) | CH 27, 34 | transliterated (the serekh) |
+| Ḥr.j-š=f | `חֶרְיְשֶׁף` | CH 52 | HC 94 |
+| ḫbs-tꜣ / ḫbꜣ | `עידור־הארץ` / `גרע` | CH 43 | NU1 18.26 / AM, BD, NU7 (the pun noted) |
+| ꜣtf | `כתר־האָטֶף` | CH 44, 47 | |
+| ḏbꜣ.t "shrine" | `תֵּבוֹת` [cognate] | 136B.4 | §4.2; NU6 75.2 |
+| gfw | `קוף` [cognate] | 136A2.3 | = gf; gate misfire passed (below) |
+| ḫsf | `הדף` / `בא לקראת` | 136B.11, 149.103 / 136A2.4 | split by sense with the TLA ("entgegengehen") |
+| wḏꜥ | `הפריד` | 136A2.2, 136B.8 | a third sense beside `הקצה` / `שפט` (TLA "trennen") |
+| nm.t; qbḥ.w; ḫm | `בית־המטבחיים`; `מי־הצינה`; `דבירים` | 149.57, 82, 56 | NU1; NU4 79.5; NU4 79.4 |
+| ꜣḫ.t "flame" (223) | `אוּר` (vocalized) | 149.21, 92 | new: ḫ.t `אש`, sḏ.t `שלהבת`, hh `להט`, bs `שביב`, ns(r) `להבה` taken |
+| qꜣḥ | `בוץ` | 149.67, 150.D8 | new: `טִין` sjn, `טִיט` ꜥmꜥ.t, `אֲדָמָה` reserved |
+| npr "grain" | `דגן` | 149.109 | new: `שְׂעוֹרָה` is jt |
+| pꜣq | `רקיק` | 149.43 | new |
+| ḥn.t "waters" | `מקווים` | 149.109 | new |
+| mꜣq.t | `סולם` | 149.83 | NU4 98.5, NU8 153A.34; Gen 28:12 [equivalent] |
+| wdn | `זבח` | 149.71 | TB 16,7 (an offering word: §12.5) |
+| gbꜣ "dazzle, blind" | `סנוור` | 149.48 | `עִוֵּר` is kꜣmn's (the gate caught the first draft) |
+| sḫ.t-ḥtp | `שְׂדֵה־הַקּוֹרְבָּנוֹת` | 136B.17, 149.81 | §12.6.1.4 |
+| Names | `מנגב־פנים` (sk-ḥr), `יורה־מאכלות`, `כופף־הנדל?`, `הקוטלים` (ḫꜣy.tj.w), `הפוגעים` (ḏꜣy.tj.w), `יורד־נח` (hꜣi̯-ḥtp), `מביט־ולוקח` / `חוזה־ולוקח`, `המכניע` (jdi̯.w), `משמידים`, `פוער־פיו`, `מפיל־הדגים`, `נושא־כירי־האש`, `גדול־האדירים`, `משמיד־הַבָּאוֹת` | | translated (§12.2) |
+| Names | `אִיסֶס`, `אִיכְּסִי`, `וֶנֶת`, `אִיסְגֶ׳דֶת?`, `נַעוּ`, `עַפְתִּית?`, `הסֶגֶ׳ח`, `יֵב` (HC 17), `סֶרְקֶת` (NU2), `רַא־חַרְאַחְתִּי` (TB; 70002) beside `חוֹרוּס־אָחְתִּי` (NU5; 107800) | | transliterated |
+
+**Formulas:** `ky rʾ n sqd.wt` `לחש אחר לשיט`; `ḏd-mdw jn […] mꜣꜥ-ḫrw` (§12.4.2; the bracket follows the base, 149.66b has it);
+`jšs.t pw … X pw` `מה הוא? X הוא` (149.30, as BD 17's glosses); `ḏd-mdw ḥr twt n X` `דברים לאמר על דמות של X` (NU7 136A.20;
+CH 8, 60); `šs-mꜣꜥ ḥḥ n zp` (CH 65); `ꜥnḫ-wḏꜣ-snb` (CH 34); `ḫpr X pw` `כך נהיה X` (CH 43, 49, 51, 58); `ḏd.jn X` `אז אמר X`;
+`ḫrw-fj X` `– אומר X` (CH 4, 14, 20); the speaker changes of BD 175 marked by a dash, as the TLA's quotation marks.
+
+### Open decisions for the user
+1. **CH 21 ḥḏi̯ `אזיק`** – the binding precedent (MK E132) gives the weaker "damage"; the usual reading is "destroy". An
+   unreserved strong verb (`אחריב`?) would need a corpus-wide change of MK, AM and CH together.
+2. **CH 21 ḥḥ.wt `מֵי־חֶח`** – a transliteration (Heh, the infinite) instead of a Hebrew flood word; alternatives considered:
+   `שיטפון` (HC's mḥw.yt), `מבול` (reserved), `מים עצומים`.
+3. **CH 21 `תבוא אל נוּן`** – the verb kept as "come", not "return" (the TLA's "(zurück)kommen" is its supplement).
+4. **qnj.t `צהוב`** against HC 46 `זרניך`; **wḏꜥ `הפריד`** beside `הקצה` / `שפט`; **ḫsf** `הדף` / `בא לקראת`; **twt** in
+   149.3 / 149.43 (TLA noun "statue" / verb "be like") with one Hebrew `דמות`.
+5. **Two forms of the sun god of the horizon** in one chapter (`רַא־חַרְאַחְתִּי` 149.S2, 150.D1 / `חוֹרוּס־אָחְתִּי` 149.10), each
+   by its own TLA lemma and precedent; the lead may unify.
+6. Uncertain lines kept literal and marked: 136A2.2 (*nwd*), 136B.15 (*ꜥft.t*), 149.5, 149.19, 149.22, 149.S10, 149.S12,
+   149.104 (*ḫꜣ*), 150.D7 (*sr.t*, the TLA "es komme das Angekündigte"), CH 16 (*ẖr.w*), CH 32 (*qnm.t*), CH 48 (*jrw*), CH 53.
+
+### Progress log
+- NU10 drafted in seven saves (136A2+136B; 149.S1–33; S5–51; S8–66; S10–84; S12–112; 150), CH in two (1–30; 31–65); each
+  `fill`ed, `verify`-ed, then compared with `tr` and revised. **Process slip:** the TLA of BD 150 (15 captions) was printed
+  before the entries were written (the renderings had been planned in the line data first, and were kept); and the TLA
+  sentence of CH 30 runs on to 33, so 31–33 were seen with it.
+- The TLA changed (after drafting): 136A2.3–4 ("as the monkey", ḫsf "approach"), 136B.4 (participles), 136B.6–9 (stative /
+  passive; "who is the bearer? – the kite of Isis"; *mtr* opens 136B.9), 136B.12–15, 136B.18; 149.4–5 (imperative; the
+  quoted statives), 149.21–23, 149.27–30 (149.30 a gloss question), 149.37, 149.47–50 (statives, "your fever lie"), 149.S8,
+  149.52–53 ("who descended at rest"), 149.68–72, 149.79–84, 149.86, 149.93, 149.95, 149.103–112; CH 4, 7, 9–10, 12–19
+  (the dialogue's turns), 21 (`אל נוּן`), 34–35, 38, 47, 51, 53–54 (*kꜣ* the ka, not "bull"), 57.
+- Pass (a) fidelity: brackets and `[…]` counted by script against every base line (149.66b's `[…]` restored after the
+  check; 149.67 `[הירק]` bracketed whole); every negation and tense checked against the morphology.
+- Pass (b) consistency: the mound frame across all fourteen; the copies of NU5 109 / NU3 108 / NU7 136A / NU4 82 diffed;
+  every new word grepped (`lex`, `grep --all`); the trap words vocalized (`אֵלֶּה`, `אֵלִים`, `מאֵלֵיכֶם`, `הָאֵלִים`).
+- Pass (c) Hebrew: both clean texts read through; headings fixed (`יורד־נח`); speaker dashes in CH; no vav-consecutive.
+- `build NU10`, `build CH`; `verify NU10 CH --strict`: 0 problems, 0 repeated-line differences; `check_bible_quotes.py` on
+  the six files: 0 problems (fixed before: 1 Kgs 10:22 `וְקֹפִים`, Ex 2:3, Ps 115:13, Ps 140:4, Prov 10:7, Gen 7:22, Gen 2:5,
+  Job 10:22 `עֵפָתָה`; a remembered non-biblical quotation removed).
+
+### The text on its own terms
+- **The beyond is a landscape, mapped** (149, 150): fourteen mounds, each with its colour, its god, its dangers – a field of
+  giant barley (149.7), a mountain bearing the sky (149.25), a lake of fire whose water no one can drink (149.91–94), the
+  Nile's source caves (149.105); the dead man needs a map as a traveller does.
+- **Names, knowledge and self-assertion are the passport**: at each mound "I am the great of magic", "I am the divine
+  falcon", "I am one of the imperishable ones: my name will not perish" (149.29, 149.70, 149.87–88).
+- **The fears are bodily**: breath (149.61–62, 149.65 "I will breathe air in it"), thirst (149.92–94), a severed head
+  (149.4), the eaten shadow (149.35, 149.70), the second death of "those who are lost" (149.82).
+- **The dead feed the monsters, and the monsters are inverted**: a serpent that "lives on beheading the akhs and the dead"
+  (149.27), mound-dwellers who "live on the shadows of the weary" (149.35), demons "rotting at the sight of their eyes" (149.68).
+- **Fire as a barrier the akh can cross**: "the fire is the one that quenches the fire!" (136B.13).
+- **The bark is a court of law**: the dead man calls witnesses – Isis, Maat, the father – to pass the ring of fire (136B.7–14).
+- **Osiris's body is the source of the waters** (149.96, 149.112): the Nile is "the efflux that comes out of Osiris".
+- **The creator foresees the end** (CH 21–23): everything made returns into Nun "as at first", and only the creator and the
+  god of the dead remain, as serpents unknown to men and unseen by gods – the beginning and the end are the same water.
+- **The god of the dead complains** (CH 11–15): no water, no air, no love-making – and worst, "not to see your face"; the
+  answer is not a denial but a substitution: power, breath and contentment instead of bread and beer.
+- **Myth as aetiology of place and rite** (CH 41–58): Seth's nosebleed becomes "the hacking of the earth", Osiris's headache
+  under his crown becomes the sacred pool of Herakleopolis, Re's word becomes the town's name.
+- **Puns as theology**: *kꜣ* "ka" / *kꜣ* "bull" (CH 53–54), *ḏ.t* "body" / *ḏ.t* "eternity" (149.102), *jḫm.w-sk* /
+  *ski̯* (149.88), *ꜣḫ* "akh" / *ꜣḫ.w* "power" / *ꜣḫ.t* "flame" (149.21, 149.37).
+- **The book ends with a scribe's "it has come in peace"** (149.112), and the map's last caption returns to the first mound,
+  "the beautiful West of the gods" (150.D15).
+
+### Key parallels
+- [equivalent] `אֶמְחֶה אֶת הָאָדָם אֲשֶׁר בָּרָאתִי מֵעַל פְּנֵי הָאֲדָמָה` (בראשית ו:ז) ↔ CH 21: the creator decides to undo what he
+  made – the Egyptian verb is *ḥḏi̯* `הזיק`, and the undoing is a return into Nun, not a punishment followed by a covenant.
+- [divergence] `וַיִּשָּׁאֶר אַךְ נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה` (בראשית ז:כג) ↔ CH 22: "I am the one who remains, with Osiris" – the
+  survivors are the creator and the god of the dead, as serpents, with no new world after.
+- [divergence] `וְלֹא יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ` (בראשית ט:יא) ↔ CH 21: the opposite promise – the waters will come.
+- [divergence] `הֵמָּה יֹאבֵדוּ וְאַתָּה תַעֲמֹד` (תהלים קב:כז), `וְהָאָרֶץ כַּבֶּגֶד תִּבְלֶה` (ישעיהו נא:ו) ↔ CH 21: heaven and earth
+  pass, the god remains – in Egypt not alone.
+- [divergence] `וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם` (בראשית א:ב) ↔ CH 12: dark and deep – the netherworld, and the world's future, as
+  its beginning.
+- [equivalent] `וְהָיוּ יָמָיו מֵאָה וְעֶשְׂרִים שָׁנָה` (בראשית ו:ג) ↔ CH 5: shortening the years of the rebels.
+- [equivalent] `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה` (בראשית כח:יב) ↔ 149.83: the dead man ties the ladder to heaven.
+- [cognate] `תֵּבַת גֹּמֶא` (שמות ב:ג), `וְקֹפִים` (מלכים א י:כב), `הַיְאֹר` (בראשית מא:א), `קֶסֶת הַסֹּפֵר` (יחזקאל ט:ב) – the loanwords
+  *ḏbꜣ.t*, *gf*, *jtrw*, *gstj* in their own contexts (136B.4, 136A2.3, 149.95, CH 6).
+- [equivalent] `שֶׁבַע שִׁבֳּלִים עֹלוֹת בְּקָנֶה אֶחָד` (בראשית מא:ה) ↔ 149.7: the Field of Reeds' giant ears and stalks.
+
+### Lines shared with other texts
+NU5 109.2–109.9 (149.10–149.19, 149.6–149.9: copied; differences only where the Egyptian differs); NU3 108.3, 108.9–108.14
+(149.26, 149.28–149.33; 149.28 a participle against 108.10's imperative, by the TLA); NU7 136A.1–5 (136A2.1–4: first person,
+`כקוף`, `אורחות נוּת`); NU4 82.2 (149.79–80); NU7 136A.11–12 (136B.16); BD 125, 72 (149.104 `קרבנות־אֵל`); NU5 148.14 (149.38,
+CH 63); within NU10: 149.2 = 149.42 = 150.D15, 149.3 = 149.43, 149.S2 = 150.D1, 149.20 / 149.34 / 149.90b, 149.59 / 149.74.
+
+### Proposals for the shared renderings
+| Egyptian | Hebrew | Lines | Reason |
+|---|---|---|---|
+| BD 149 mound frame | `התל ה־N – ירוק.` / `האל אשר בו: X` / `הוֹ התל הזה של X` | 149, 150 | for any later BD 149 / 150 copy |
+| ḥḥ.wt (the primeval flood water) | `מֵי־חֶח` | CH 21 | Heh's name; `מבול` never; `שיטפון` is HC's mḥw.yt |
+| ḥḏi̯ | `הזיק` / `היזק` (as MK E132) | CH 3–7, 21 | binding; the lead may reconsider the strength for all three texts |
+| zpi̯ | `נותר` | CH 22 | SS |
+| wjꜣ-n-ḥḥ | `צִי־אלפי־האלפים` | CH 16, 25 | |
+| ꜣḫ.t "flame" | `אוּר` ★ (vocalized: unvocalized `אור` = light) | 149.21, 149.92 | the fire words are all taken |
+| qꜣḥ "mud, field soil" | `בוץ` | 149.67, 150.D8 | |
+| npr "grain" | `דגן` | 149.109 | |
+| mn.w "monuments" | `אנדרטאות` | CH 26, 28 | avoids `מַצֵּבָה` |
+| srḫ | `סֶרֶח` ★ | CH 27, 34 | trap: unvocalized `סרח` |
+| gbꜣ | `סנוור` | 149.48 | `עִוֵּר` = kꜣmn |
+| qnj.t (yellow paint) | `צהוב` | 149.S9, S14 | beside HC's `זרניך` (substance) |
+| **Gate fixes (for the coordinator)** | the קוף gate should license *gfw* (as *gꜣf*, NU7); the שכב gate should license tla150740 written *ḫr* (149.50) | | both passed with `[היתר שער]` |
+
+### Lessons for the guidelines
+- **A copied passage that occurs twice inside the new text** (BD 149 quotes BD 109 twice, with different numbers): copy the
+  earlier file's Hebrew into both, and let the differences show exactly where the two Egyptian copies differ.
+- **A dialogue without speaker marks needs the TLA's quotation marks checked before the Hebrew is final**: in BD 175 the
+  first draft gave two of Atum's answers to Osiris; a dash per change of speaker makes the clean text readable.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
@@ -2444,3 +2629,43 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | 100.1 | mḏꜣ,t n.t sjqr ꜣḫ rḏi̯.t hꜣi̯ =f r wjꜣ n Rꜥ,w ḥnꜥ jm,j.w-ḫt =f | המגילה לקידום האָח, לתת שירד הוא אל הצִי של רַא עם ההולכים־אחריו. | `וַיִּמְצָא אֳנִיָּה … וַיִּתֵּן שְׂכָרָהּ וַיֵּרֶד בָּהּ` (יונה א:ג) | equivalent | גם בעברית "יורדים" אל הספינה (`יוֹרְדֵי הַיָּם בָּאֳנִיּוֹת`, תהלים קז:כג); במצרית *hꜣi̯ r wjꜣ*, "לרדת אל הצִי" – אותו ביטוי של עלייה לספינה. ביטוי משותף של עמי הנהר והים, לא מקור. |
 | 100.2 | ḏd-mdw jn […] mꜣꜥ-ḫrw ḏꜣi̯.n =j bn,w r jꜣb,tt Wsjr r Ḏd,w | דברים לאמר, בפי […] אמיתי־הקול: הסעתי את הַבֶּנוּ אל המזרח, את אוֹסִירִיס אל גֶ׳דוּ; | `וְכַחוֹל אַרְבֶּה יָמִים` (איוב כט:יח) | divergence | המסורת היהודית קראה כאן את העוף ה"חול" שחי שנים רבות ומתחדש (עוף הפניקס של היוונים); הַבֶּנוּ המצרי, אנפה קדושה של אוֹן, הוא מקורו של הפניקס. אצל איוב – משל לאורך ימים; כאן – הבָּא של רַא, שהמת מסיע אל המזרח, מקום הזריחה. |
 | 102.3 | sqd,wt =k m jr(,j).{t}pl =k jptn n,tj m j{w}ḫm.w-wrḏ bw,t =j zp-2 nn wnm =j bw,t =j | את שיטך בין אֵלֶּה שלך אשר בבלתי־היגעים. תועבתי (פעמיים) – לא אֹכַל את תועבתי; | `לֹא תֹאכַל כָּל תּוֹעֵבָה` (דברים יד:ג) | equivalent | "תועבה" כמאכל אסור, באותה מלה; אצל המצרים התועבה האישית של המת היא הצואה ("אכילת צואה" היא העונש של העולם ההפוך), בתורה – בעלי החיים הטמאים. |
+
+### Parallels index (NU10)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 136A2.3 | wḫr,t.pl nṯr.pl šdi̯ =j wjꜣ n ḫꜣ r tp =f pri̯ =j r p,t sqdi̯ =j jm =f ḥnꜥ Rꜥ,w m gfw | את מספנות הָאֵלִים. אשלוף את הצִי, זה של עלה־הלוטוס על חזיתו; אצא אל השמים, אשוט בו עם רַא כקוף | `וְקֹפִים` (מלכים א י:כב) | cognate | *gf* "קוף", מלה מצרית ששאלה העברית; כאן חבורת הבבונים־הקופים המשבחים את השמש בזריחה (כמו NU7 136A.5). |
+| 136B.4 | jw mꜣꜣ.n =j zbj n Mꜣꜥ,t ḫf(t) Rw,tj jr,j.w =sn j jm,j ḏbꜣ,wt ꜥšꜣ sw jꜣr,w jw | ראיתי את המובילים אל מַאַת לפני שני־אריות, אשר־להם. הוֹ השוכן בתֵבוֹת, רב־צמחי־סוּ ואגמונים! והרי | `תֵּבַת גֹּמֶא` (שמות ב:ג) | cognate | *ḏbꜣ.t* "תיבה, ארון, היכל קטן" היא המלה המצרית ש"תֵּבָה" העברית שאולה ממנה; כאן היכלי האלים (תיבות הפסלים), לא תיבת נח ולא תיבת משה. |
+| 136B.5 | mꜣꜣ.n =j jm jw =n ḥꜥi̯ =n jw wr.w =sn m ḥꜥꜥ,wt šrr.yw =sn m nfr,w jri̯.n =j | ראיתי שם: "עולזים אנו!" – גדוליהם בעליצה, קטניהם בטוב. עשיתי | `הַקְּטַנִּים עִם-הַגְּדֹלִים` (תהלים קטו:יג) | equivalent | הצמד "קטנים וגדולים" ככלל כל הציבור; כאן כל הפמליה, מגדוליה עד קטניה, עולזת לפני הצִי. |
+| 136B.11 | dmḏ.n =j n =f ꜥšꜣ,t.pl =f jw ḫsf.n =j n =f ꜥꜣpp psg.n =j n =f nzp,w jri̯ n =j wꜣ,t swꜣ =j | צירפתי לו את המון (איבריו), הדפתי בשבילו את אַפּוֹפִּיס, ירקתי לו על החבורות. עֲשֵׂה לי אורח, ואחלוף | `וְיָרְקָה בְּפָנָיו` (דברים כה:ט) | divergence | בתנ"ך הרקיקה היא ביזוי; כאן ההפך: רוק של ריפוי, כרוקו של תְּחוּת על עין חוֹרוּס. |
+| 149.3 | m ḫsf,w =j twt js n wr jm,j =ṯn ṯz =f qs.pl =j smn =f ꜥ,t.pl =j | בהתקרבותי! דמות הגדול אשר בכם (אני). יקשור הוא את עצמותיי, יקבע הוא את איבריי; | `וְהִנֵּה רַעַשׁ וַתִּקְרְבוּ עֲצָמוֹת עֶצֶם אֶל עַצְמוֹ` (יחזקאל לז:ז) | divergence | בחזון יחזקאל העצמות קרבות זו לזו בדבר הנביא, וחיים נכנסים בהן; כאן אל קושר את עצמות המת ומקבע את איבריו – חידוש הגוף אחרי המוות, לא תחיית עם. מוטיב משותף, לא מקור. |
+| 149.7 | twy jw jnb.pl =s m bjꜣ jw qꜣ(,w) n jt =s m mḥ 5 jw ẖms.pl =s | הזה, אשר חומותיו – מתכת; גובה השעורה שלו – חמש אמות, שיבוליה – | `שֶׁבַע שִׁבֳּלִים עֹלוֹת בְּקָנֶה אֶחָד` (בראשית מא:ה) | equivalent | שיבולים וקנה, שפע התבואה של מצרים; כמו ב־NU5 109.7. |
+| 149.26 | p,t ḥr =f n-sw ḫt 300 m ꜣw =f ḫt 150 m wsḫ =f jw ḥfꜣ,w ḥr =f stt! ds.pl rn =f n-sw | השמים עליו; שלוש מאות חֵת אורכו, מאה וחמישים חֵת רוחבו; ונחש עליו, "יורה־מאכלות" שמו; לו | `וְהַנָּחָשׁ הָיָה עָרוּם` (בראשית ג:א) | divergence | אין כאן שום קשר של עלילה: הנחש של התל הוא שומר מפלצתי, לא מפתה; המלה `נָחָשׁ` היא הרגילה ל־*ḥfꜣ.w* (§11.4), והמגע מצוין רק משום שזו המלה. |
+| 149.30 | jm jšs,t pw ꜣḫ pw{y} šmi̯ ḥr ẖ,t =f pḥ,tj =f r ḏw =f m =k wj | שם. מה הוא? אָח הוא – ההולך־על־בטנו, אשר כוחו – כהרו. הנה, | `עַל גְּחֹנְךָ תֵלֵךְ` (בראשית ג:יד) | equivalent | הנחש "ההולך על בטנו"; כמו ב־NU3 108.12 (§12.6.3.3). כאן הנחש הוא שומר ההר, ו"ההולך על בטנו" הוא שמו, לא קללה. |
+| 149.49 | jr,t.pl =fj sḏ qs.pl =k bdš mtw,t =k nn jwt! =k r =j nn hꜣb mtw,t =k | עיניו! שבורות עצמותיך, רפה ארסך! לא תבוא אליי, אין שילוח ארסך | `חֲמַת עַכְשׁוּב תַּחַת שְׂפָתֵימוֹ` (תהלים קמ:ד) | divergence | בתהלים ארס הנחש הוא דימוי ללשון הרשעים; כאן ארס ממשי, שהלחש מבטל. מוטיב משותף, לא מקור. |
+| 149.50 | jm =j ḫr ḫr šmm,t =k m tꜣ sp,t.j =kj m bꜣbꜣ,w ḫr | בי. נפול! ישכב חומך בארץ, שפתיך – במאורה! ייפול | `וְעָפָר תֹּאכַל כָּל יְמֵי חַיֶּיךָ` (בראשית ג:יד) | divergence | הנחש המושפל אל העפר; כאן "שפתיך – במאורה", לחש להשכיב את הנחש בחורו. מוטיב משותף של השפלת הנחש, לא מקור. |
+| 149.59 | r nṯr.pl snḏ n =s ꜣḫ.w r rḫ rn =s jw,t(j).t pri̯.t ꜥq.yw r =s wp(w)-ḥr nṯr pwy | מאֵלִים, אשר חוששים ממנה האָחִים לדעת את שמה, אשר אין יציאה לנכנסים אליה – מלבד האל ההוא, | `כָּל-בָּאֶיהָ לֹא יְשׁוּבוּן` (משלי ב:יט) | divergence | במשלי, על בית הזרה; כאן אִיכְּסִי, מקום בעולם התחתון "אשר אין יציאה לנכנסים אליה". מוטיב משותף של מקום שאין ממנו חזרה, לא מקור. |
+| 149.61 | jw wn =s m sḏ,t jw ṯꜣw =s ḥtm(.w) r fnḏ.w rʾ.pl jri̯.n =f st r jm,j.w-ḫt =f | פתחה – שלהבת, ורוחה – משמידה לאפים ולפיות. עשה הוא אותה בשביל ההולכים־אחריו, | `נִשְׁמַת רוּחַ חַיִּים בְּאַפָּיו` (בראשית ז:כב) | divergence | רוח באפים כסימן חיים; כאן הרוח של אִיכְּסִי "משמידה לאפים ולפיות", ואין בה נשימה לאיש מלבד האל (149.62). מוטיב משותף, לא מקור. |
+| 149.70 | nn sḫm.tw m šw,t =j jnk bjk nṯr,j ḫnp.tw n =j snṯr ḥsq.tw | לא ישלטו בצלי. אני הבז האֵלִי. תוגש לי קטורת, ייכרתו | `יָשִׂימוּ קְטוֹרָה בְּאַפֶּךָ` (דברים לג:י) | equivalent | קטורת לפני האל; כאן המת, כ"בז אֵלִי", מקבל קטורת וזבחים כאל. |
+| 149.83 | ṯz =j mꜣq,t r p,t m-m nṯr.pl jnk wꜥ,w jm =sn mdwi̯.n =j | קושר אני את הסולם אל השמים בין הָאֵלִים; אני אחד מהם. דיברתי | `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה` (בראשית כח:יב) | equivalent | הסולם אל השמים: אצל יעקב מלאכים עולים ויורדים בו, כאן המת "קושר" אותו כדי לעלות ולהיות "אחד מהם", מן הָאֵלִים. *mꜣq.t* היא המלה הרגילה לסולם, ו`סולם` היא המלה הטבעית; מוטיב משותף (סולם השמים של המתים מוכר כבר מכתבי הפירמידות), לא מקור. |
+| 149.88 | m j{w}ḫm.w-sk jm,j =ṯ nn ski̯ =j nn ski̯ rn =j | מבלתי־הכלים אשר בך: לא אובד, לא יאבד שמי. | `וְשֵׁם רְשָׁעִים יִרְקָב` (משלי י:ז) | divergence | גורל השם אחרי המוות: במשלי שם הרשעים נרקב וזכר הצדיק לברכה; כאן המת מבטיח שלא יאבד שמו, בזכות ההימנות בין הכוכבים שאינם שוקעים. |
+| 149.95 | jb.pl =sn n-mrw,t tm tkn jm =sn mḥ.t jtr,w ꜣḫy mj nꜣy,t | לבותיהם, כדי שלא יתקרבו אליהם. מלא היאור צמחים, כמו הגל | `וְהִנֵּה עֹמֵד עַל הַיְאֹר` (בראשית מא:א) | cognate | *jtrw* "הנהר" היא המלה המצרית ש"יְאֹר" העברית שאולה ממנה; כאן נהר העולם הבא, שמתמלא מן ההפרשה של אוֹסִירִיס (149.96). |
+| 149.99 | jy.n =j ḫr =k ḏi̯ =k sḫm =j m mw zwr{j} =j m nwy mj jri̯.tn =k n nṯr pwy ꜥꜣ jy.n n =f ḥꜥpi̯ ḫpr.n n =f sm,w | באתי אליך: תן שאשלוט במים, שאשתה מן הזרם, כפי שעשית לאל הגדול ההוא, אשר בא אליו חַעְפִּי, אשר נהיה לו העשב, | `וְכָל עֵשֶׂב הַשָּׂדֶה טֶרֶם יִצְמָח` (בראשית ב:ה) | equivalent | העשב הצומח מן המים: בבראשית הוא ממתין למטר, כאן הוא "נהיה" לאל שבא אליו חַעְפִּי, ההצפה. מוטיב משותף של צמיחה מן המים, לא מקור (§4.4: `עֵשֶׂב`). |
+| 150.D13 | jtr,w ns(r) =f m sḏ,t | היאור – מתלקח הוא בשלהבת. | — | cognate | `יְאֹר` – *jtrw*, מקור המלה העברית; כאן נהר של אש בעולם הבא (ראו 149.95). |
+
+### Parallels index (CH)
+| Line | Source | Hebrew rendering | Bible | Tag | Comment |
+|---|---|---|---|---|---|
+| 2 | šdi̯⟨.n⟩ =sn ẖnn,w jri̯.n =sn jzf,t qmꜣ.n =sn sb(j),t jri̯.n =sn šꜥd,t | הוציאו הם מהומה, עשו הם עוול, יצרו הם מרד, עשו הם טבח; | `וַתִּמָּלֵא הָאָרֶץ חָמָס` (בראשית ו:יא) | equivalent | בבראשית הארץ מלאה "חמס" לפני ההחלטה להשמיד; כאן ילדי נוּת "עשו עוול, יצרו מרד, עשו טבח", ואָתוּם יחליט להזיק לכל אשר עשה (21). המבנה משותף – עוול של הברואים ואחריו גזרת הבורא – אבל כאן החוטאים הם אלים, לא בני אדם, ו`חָמָס` אינו המלה (*jzf.t* = `עָוֶל`, §4.1). |
+| 5 | nn wḫd =k sḥꜥw.pl rnp,t.pl =sn {n}⟨s⟩tkn ꜣbd.pl =sn ḥr-n,tt | לא תסבול! קצר את שנותיהם, קרב את חודשיהם! כי | `וְהָיוּ יָמָיו מֵאָה וְעֶשְׂרִים שָׁנָה` (בראשית ו:ג) | equivalent | קיצור ימי הברואים כעונש, לפני ההחלטה להשמיד: בבראשית קוצבים את ימי האדם; כאן תְּחוּת, אל הזמן והחשבון, מצווה "לקצר את שנותיהם, לקרב את חודשיהם". מוטיב משותף, לא מקור. |
+| 6 | jri̯.n =sn ḥḏi̯.t jmn.t m jri̯.tn =k nb.t jnk gstj =k Ḏḥw,tj s(j)ꜥr.n =j | עשו הם היזק נעלם בכל אשר עשית. אני הקֶסֶת שלך, תְּחוּת; הגשתי | `וְקֶסֶת הַסֹּפֵר בְּמָתְנָיו` (יחזקאל ט:ב) | cognate | *gstj* "לוח הסופר" היא המלה המצרית ש"קֶסֶת" העברית שאולה ממנה; אצל יחזקאל הסופר הלבוש בדים רושם את המסומנים לפני ההשמדה בירושלים; כאן מי שמדבר הוא "הקֶסֶת של תְּחוּת" – כלי הכתיבה של סופר האלים, שעליו נרשמים ימי הברואים. (מגע של מלה ושל תפקיד, לא של מקור.) |
+| 8 | m(w)t zjn jm =j ḏd-mdw ḥr twt n | מוות וניגוב בי. דברים לאמר על דמות של | `אֶמְחֶה אֶת הָאָדָם אֲשֶׁר בָּרָאתִי מֵעַל פְּנֵי הָאֲדָמָה` (בראשית ו:ז) | equivalent | *zjn* "לנגב, למחוק (כתובת, צבע)" הוא המקביל המצרי ל"מחייה"; כאן הדובר מבקש שהמחיקה לא תשלוט בו. המלה העברית `מחה` שמורה לבראשית (§5.1), ולכן `ניגוב` – המלה הקבועה ל־*zjn*. |
+| 12 | n(n) mw =s nn ṯꜣw =s n,tj =s mḏ.tj zp-2 kk.tj zp-2 ꜥnḫ =tw jm =s m ḥtp jb | אין בו מים, אין בו רוח; עמוק הוא (פעמיים), חשוך הוא (פעמיים). – חיים בו על נחת־לב. | `וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם` (בראשית א:ב); `אֶרֶץ עֵפָתָה כְּמוֹ אֹפֶל צַלְמָוֶת וְלֹא סְדָרִים` (איוב י:כב) | divergence | חושך ועומק: בבראשית זה מצב העולם לפני הבריאה, כאן זה העולם התחתון אחרי המוות – ובסוף הפרק גם עתידו של העולם כולו (21–22). ראו גם . |
+| 20 | m ꜥnḫ ḫrw-fj Wsjr jw =k n ḥḥ n ḥḥ.du ꜥḥꜥ,w ꜥꜣ ḥḥ.pl | בחיים? – אומר אוֹסִירִיס. – אתה לאלפי אלפים, לשני אלפי־אלפים – משך ימים ארוך של אלפי אלפים. | `וְאַתָּה הוּא וּשְׁנוֹתֶיךָ לֹא יִתָּמּוּ` (תהלים קב:כח) | divergence | בתהלים זה תואר האל הנצחי, מול שמים וארץ שיבלו; כאן הבורא מבטיח לאוֹסִירִיס "מיליוני מיליונים" של שנים – זמן עצום, אבל ספור (ראו 21–23). |
+| 21 | jw (=j) gr,t r ḥḏi̯.t jri̯.tn =j nb.t jw tꜣ pn r jy.t m Nw,w m ḥḥ,wt | ואני אף אזיק לכל אשר עשיתי; הארץ הזאת תבוא אל נוּן, אל מֵי־חֶח, | `וַיֹּאמֶר יְהוָה אֶמְחֶה אֶת הָאָדָם אֲשֶׁר בָּרָאתִי מֵעַל פְּנֵי הָאֲדָמָה` (בראשית ו:ז) | equivalent | הבורא מחליט להשמיד את מה שעשה: זה המגע החזק ביותר של הפרק עם סיפור המבול. ההבדלים: בבראשית ההחלטה היא תגובה לרעת האדם, ונח ניצל; כאן אמנם קודם לה "מרד" של ילדי נוּת (1–6), אבל אָתוּם מנבא את הסוף כחלק מסדר הזמן ("מיליוני מיליונים" ואחר כך), והניצולים הם שניים: הוא ואוֹסִירִיס (22). הפועל המצרי *ḥḏi̯* הוא "להזיק, להשחית" – לא `מחה` (*zjn*, 8) ולא `שחת` (§5.1). |
+| 21 | jw (=j) gr,t r ḥḏi̯.t jri̯.tn =j nb.t jw tꜣ pn r jy.t m Nw,w m ḥḥ,wt | ואני אף אזיק לכל אשר עשיתי; הארץ הזאת תבוא אל נוּן, אל מֵי־חֶח, | `וְהִנְנִי מַשְׁחִיתָם אֶת הָאָרֶץ` (בראשית ו:יג) | divergence | "קץ כל בשר" בבראשית; כאן "הארץ הזאת" עצמה חוזרת אל המים, כמו "לפני הבריאה". |
+| 21 | jw (=j) gr,t r ḥḏi̯.t jri̯.tn =j nb.t jw tꜣ pn r jy.t m Nw,w m ḥḥ,wt | ואני אף אזיק לכל אשר עשיתי; הארץ הזאת תבוא אל נוּן, אל מֵי־חֶח, | `וְלֹא יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ` (בראשית ט:יא); `וְלֹא אֹסִף עוֹד לְהַכּוֹת אֶת כָּל חַי כַּאֲשֶׁר עָשִׂיתִי` (בראשית ח:כא) | divergence | בבראשית ההבטחה היא שהמבול לא ישוב; כאן ההבטחה הפוכה: המים הקדמונים ישובו ויכסו הכל. ראו גם . |
+| 21 | jw (=j) gr,t r ḥḏi̯.t jri̯.tn =j nb.t jw tꜣ pn r jy.t m Nw,w m ḥḥ,wt | ואני אף אזיק לכל אשר עשיתי; הארץ הזאת תבוא אל נוּן, אל מֵי־חֶח, | `וְהָאָרֶץ כַּבֶּגֶד תִּבְלֶה` (ישעיהו נא:ו); `הֵמָּה יֹאבֵדוּ וְאַתָּה תַעֲמֹד` (תהלים קב:כז) | divergence | ו – הבורא נשאר כשהבריאה כלה; כאן אָתוּם נשאר, אבל לא לבדו (22). |
+| 22 | mj tp,t-ꜥ =f jnk zpi̯.t(j) ḥnꜥ Wsjr jri̯.n =j ḫpr,w m | כמעמדה מקדם. אני הוא הנותר, עם אוֹסִירִיס, אחרי שעשיתי את צורתי ל | `וַיִּשָּׁאֶר אַךְ נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה` (בראשית ז:כג) | divergence | "הנותר" אחרי שהמים מכסים הכל: בבראשית נח ומשפחתו ובעלי החיים, כדי שהעולם יתחיל שוב; כאן הבורא עצמו ואוֹסִירִיס, בדמות נחשים, בתוך המים – ואין סיפור על עולם חדש. |
+| 23 | k(y).t ḥf(ꜣ),t n,tj n rḫ sj r(m)ṯ n mꜣꜣ sj nṯr.pl nfr ,wj jri̯.tn =j Wsjr | נחש אחר, אשר אין בני האדם יודעים אותו, אין הָאֵלִים חוזים בו. מה טוב אשר עשיתי לאוֹסִירִיס, | `וְהַנָּחָשׁ הָיָה עָרוּם` (בראשית ג:א) | divergence | הנחש בבראשית הוא יצור מפתה; כאן הנחש הוא צורתו האחרונה של הבורא – הנחש הקדמון של המים, שאיש אינו מכיר. `נָחָשׁ` היא המלה הרגילה ל־*ḥfꜣ.t* (§11.4), ולא בחירה כדי לרמוז. |
+| 55 | nn jri̯.n =j n =k n jri̯ =tw n =j m-mj,tt-jr,j ḏd.jn Wsjr jri̯.n =j st m ḥw | אלה אשר עשיתי לך, ולי אין עושים כמו כן! אז אמר אוֹסִירִיס: עשיתי אותם במאמר | `בִּדְבַר יְהוָה שָׁמַיִם נַעֲשׂוּ` (תהלים לג:ו) | equivalent | עשייה במאמר: אוֹסִירִיס עשה את המנחות *m ḥw*, ב"מאמר" הבורא, הכוח המגשים של הדיבור (חוּ, השט עם רַא בצִי). מוטיב משותף של בריאה בדבר (ראו גם התאולוגיה הממפית, MT), לא מקור. |
+| 61 | twt n […] jri̯.w m ḫsbḏ ḏi̯!.w n z r ḫḫ =f | דמות של […], עשויה ספיר, הנתונה לאדם על גרונו. | `וְתַחַת רַגְלָיו כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר` (שמות כד:י) | equivalent | "ספיר" כשמה המקראי של האבן הכחולה (כנראה הלפיס לזולי, כאן *ḫsbḏ*); כלל הקורפוס (§4.2). |

@@ -947,3 +947,16 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
    keys (it misfired on ꜣḫ "akh" + r "to" ten times in NU1–NU9; the `[סטייה מן הנוסחה]` notes written stay).
 6. **For the lead / the review:** 102.4 / NU4 124.4 / NU7 189.3 – one formula line (`nn ḫmi̯ jm=f`) with three renderings
    (`לא אזון ממנה` / `לא אֵהָרֵס בה` / `אין מישוש בה`); splits by sense ḫsr, sṯꜣ, dnj; dndn `זעם` / NU5's `השוחט`.
+#### 12.6.10 NU10 (BD 136A2, 136B, 149, 150) and CH (BD 175), translator 10, merged 2026-11-07 (project.md, "NU10 … and CH")
+1. **BD 149's mound frame** (×14, and BD 150's captions): `התל ה־N – ירוק.`; `האל אשר בו: X`; `הוֹ התל הזה של X`; jꜣ.t `תל`
+   (BD 77's jꜣ.t `מוט` / MT's `נֵס` are other senses); qnj.t (the paint) `צהוב` / HC's `זרניך` (the substance): by sense.
+2. **Copies:** NU5 109.2–9 → 149.6–19 (twice: BD 149 repeats it); NU3 108.3, 108.9–14 → 149.26–33; NU7 136A.1–5 → 136A2;
+   NU4 82.2 → 149.79–80.
+3. **Water words, one each:** nwy `זרם`, nwi̯.t `גל`, wꜣ.w `נחשול`, jtrw `יְאֹר` [loanword], ḥꜥpi̯ `חַעְפִּי`. Others: ꜣḫ.t
+   "flame" `אוּר` ★, qꜣḥ `בוץ`, npr `דגן`, pꜣq `רקיק`, mn.w `אנדרטאות`, srḫ `סֶרֶח`, gbꜣ `סנוור`.
+4. **BD 175:** ḥḏi̯ `הזיק` / `היזק` (the dossier's MK E132 binds; "destroy" is the usual reading – open for the user: a change
+   would go to MK, AM and CH at once); zjn `ניגוב` (`מחה` reserved); Nww `נוּן` ★; ḥḥ.wt `מֵי־חֶח` (HC's `אֵלֵי־חֶח`; `מבול`,
+   `שיטפון`, `תהום` avoided); zpi̯ `נותר`; tp.t-ꜥ `כמעמדה מקדם`; wjꜣ-n-ḥḥ `צִי־אלפי־האלפים`; a change of speaker marked by a dash.
+5. **Gates fixed:** `קוף` licensed by gfw; the root שכב by the TLA lemma tla150740 (sḏr written ḫr).
+6. **For the lead:** the horizon god `רַא־חַרְאַחְתִּי` (TB) / `חוֹרוּס־אָחְתִּי` (NU5) – two TLA lemmas, each kept; wḏꜥ `הפריד` /
+   `הקצה` / `שפט` (by sense); ḫsf `הדף` / `בא לקראת`.
