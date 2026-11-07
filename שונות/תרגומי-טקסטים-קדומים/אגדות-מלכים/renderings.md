@@ -543,7 +543,116 @@ adjective of *agāgu* `קצף`, as in Gilgameš VII 149, X 307, SAA 9 1 iv 7, th
 which is *ezēzu*'s (OB I c+14 `בזעם האלים` stays). Changed: SB.132 `לזעם לב אֶנְלִיל` → `לקצף לב אֶנְלִיל` (no other
 version has the line).
 
+## 12. The Uruk cycle (projects 5–7; Round 6 run 3, 2026-11-07) – fixed before the first part
+Lugalbanda in the Mountain Cave (**LC**, ETCSL 1.8.2.1, 509 entries; `5-לוגלבנדה-במערת-ההר/`), Lugalbanda and the
+Anzud Bird (**LZ**, 1.8.2.2, 422; `6-לוגלבנדה-וציפור-האנזוד/`), Enmerkar and En-suḫgir-ana (**ES**, 1.8.2.4, 295;
+`7-אנמרכר-ואנסוחגירנה/`) – with Enmerkar and the Lord of Aratta (EA, project 1) the four poems of the cycle. Fixed by the
+coordinator from a reading of the three texts (ETCSL's English and the transliterations) and the earlier corpora. **A
+translator may revise a pre-set row at its first occurrence, with the reason in `project.md`; after that it binds.**
+Base: the ETCSL web pages (the OTA bulk zip was unreachable: `tools/etcslhtml2md.py`); ETCSL's own lemmas per word;
+ORACC Q000367 (LC) and Q000368 (LZ) lemma + morph; ES has no ORACC text (the form index gives each verb's parses
+elsewhere: mark the analysis "ניתוח שלנו" after checking it).
+
+### 12.0 What binds, in this order
+1. **This file §0–§9: Enmerkar and the Lord of Aratta's Hebrew binds the cycle** – the names (§1), grammar (§2), the
+   formulas (§3: the commission, "say to him!", the journey, the glad foot, "has sent me to you", "what is it to me",
+   *gu₃ de₂* `פונה`), §9.1–§9.4 (EA's words: *ud-ba* `אז`, *kur* `הר` / `ארץ X`, *ḫur-saĝ* `הררים`, *erin₂* `החיל`,
+   *uĝ₃* `העם`, *muš* `נחש`, *ĝiri₂* `עקרב`, *ur-bar-ra* `זאב`, *piriĝ* `לביא`, *ur-maḫ* `אריה`, *ḫu-ri₂-in* `נשר`,
+   *buru₅* `דרור?`, *sa-par₄* `מכמורת`, *ĝiš-bur₂* `פח`, *a-ma-ru* `מבול`, *a nam-til₃* `מֵי החיים`, *me-lem₄* `זוהר`,
+   *um-ma* `הזקנה`, *ĝiškim* `אוֹת`, *im* `טיט`, *ka-ni dugud* `פיו כבד` …). `kings_tools.py data KEY …` prints for every
+   line the near-identical lines of all four poems with their Hebrew: **copy where the Sumerian is the same**.
+2. **The Sumerian Bilgameš poems (`../אפוס-גילגמש/renderings.md` §23, Round 6 run 1) and GEN (`../העולם-התחתון/`
+   §11)** for the Uruk names and their shared words: Lugalbanda `לוּגַלְבַּנְדָּה`, Ninsumun `נִינְסוּן`, *dab₅* `אחז`,
+   *ad gi₄* `נמלך`, *ma-mu₂* `חלום`, *nu₂* `שכב`, *zi* (rise) `קם`, *nam-tar* `גורל`, *ab-ba* `זקנים` (gated),
+   *ḫazin* `גרזן`, *ur-saĝ* `גיבור` (plural `לוחמים`), **GEN's prologue *an ki-ta bad* = `הפריד שמים מארץ`** (`הִבְדִּיל`
+   is reserved). Search: `python3 -I ../העולם-התחתון/netherworld_tools.py grep all '<regex>'`,
+   `python3 -I ../אפוס-גילגמש/bilgames_tools.py grep all '<regex>'`, and `python3 -I kings_tools.py grep all '<regex>'`.
+3. The temple, lament and creation corpora and guidelines §6.7 (the cross-corpus harmonizations): *za-gin₃* `סַפִּיר`,
+   *šembi* `פּוּךְ`, *šu-ur₂-men* `שׁוּרְבִּין`, *li* `בְּרוֹשׁ`, *ra-gaba* `צִיר` ★, *sizkur₂* `תְּפִלָּה`, *šudu₃* `בְּרָכָה`,
+   *a-ra-zu* `תַּחֲנוּן`, *mušen* `צִפּוֹר`, *amar* (Sum.) `גוזל`, *nam-šub* / *tu₆* `קֶסֶם`, *mu₇* `לַחַשׁ`, *barag* `דוכן`,
+   *aga* / *men* `כתר`, *ki-sig₁₀* `סְעוּדַת הַמֵּתִים`, *nam-tag* `עָוֹן`, *taraḫ* `יָעֵל`, *šeg₉* `אַיִל־בָּר`,
+   *udug sag₉* `רוּחַ־הַמָּגֵן הַנָּאָה`, *lamma* `אֵלַת־הַמָּגֵן`, *diĝir-ĝu₁₀* `אֵלִי` ★, *saĝ gig₂* `שחורי הראש`.
+4. **A Sumerian word takes the Hebrew of its Akkadian equivalent** (§0.3): *maš-maš* (= *mašmaššu*) `מְלַחֵשׁ` (wisdom,
+   Maqlû); *alan* (= *ṣalmu*) `צֶלֶם` [cognate through the Akkadian; Gen 1:26–27 in the apparatus]; *nam-tar* (=
+   *šīmtu*) `גורל`; *um-ma* `הזקנה`.
+
+### 12.1 Names (★ = vocalized at every occurrence; `verify` checks the traps it knows)
+| Source | Hebrew | Notes |
+|---|---|---|
+| Lugalbanda (*{d}lugal-ban₃-da*) | לוּגַלְבַּנְדָּה (plain `לוגלבנדה`) | Run 1. "The junior king"? (note). Father of Bilgameš (run 1's poems). |
+| Enmerkar; En-suḫgir-ana (*en-suḫ-gir₁₁-an-na*) | אֶנְמֶרְכַּר; אֶנְסוּחְגִּירְאַנָּה | Older reading Ensuḫkešdana (note at the first occurrence). |
+| Ansiga-ria; Namena-tuma | אַנְסִיגַּרִיָּה; נַמְאֶנַּתוּמָה | The two viziers (*sukkal* `וְזִיר`). |
+| Ur-ĝirinuna; Ḫamazu (*ḫa-ma-zu*); Saĝburu (*{d}saĝ-bur-ru*); Ereš (*ereš₂{ki}*); Maš-gula; Ur-edina | אוּר־גִּירִינוּנָּה; חַמָזוּ; סַגְבּוּרוּ; ★ אֵרֵשׁ; מַשׁ־גּוּלָּה; אוּר־אֶדִינָּה | Ḫamazu = EA's Ḫamazi `חַמָזִי` (the same city; ES spells -zu: keep the spelling, a note). `ארש` unvocalized reads "betroth". |
+| Uruk; Kulaba; Aratta; E-ana; *ĝipar*; E-zagin; Eridu; Abzu | אוּרוּךְ; כּוּלַבָּה (plain `כולבה`; run 1 vocalizes `כֻּלַּבָּה`: the same plain spelling); אָרַטָּה; אֵאַנָּה; גִּיפָּר; אֵזַגִּין; אֶרִידוּ; הָאַפְּסוּ | §1. *unug kul-aba₄* `אוּרוּךְ־כּוּלַבָּה`; *šeg₁₂ kul-aba₄* `לְבֵנַת כּוּלַבָּה` (§3). |
+| Utu ★; Inana ★; An ★; Enlil; Enki; Ninḫursaĝa; Nanna; Suen ★; Ningal; Ninlil; Iškur; Nintur; the Anuna | ★ אוּתוּ; ★ אִינַנָּה; ★ אַן; אֶנְלִיל; אֶנְקִי; נִין־חוּרְסַגָּה; נַנָּה; ★ סוּאֵן; נִינְגַּל; נִינְלִיל; אִישְׁכּוּר; נִינְתּוּר; הָאֲנוּנָּה | Creation and temple corpora. `סואן` unvocalized reads "noisy". |
+| Šara ★; Uraš; Zangara; Ninkasi; Ninguena; Ninurta; Niraḫ; Laḫama; Nisaba; Aruru ★; Šakkan ★; Dumuzid; Ama-ušumgal-ana | ★ שַׁרָא; אוּרַשׁ; זַנְגָּרָה; נִינְכַּסִי; נִינְגּוּאֵנָה; נִינוּרְתָּה; נִירָח; לַחָמָה; נִיסַבָּה; ★ אֲרוּרוּ; ★ שַׁכַּן; דּוּמוּזִי; אַמָא־אוּשׁוּמְגַּל־אַנָּה | Šara as the laments (`שרה` = Sarah!). Niraḫ the snake god, vocalized. *laḫama* (plural, the Abzu's creatures) `יצורי הלחמה`? – the translator. |
+| Anzud (*{d}anzud₂{mušen}*) | אַנְזוּד (Akk. Anzû `אַנְזוּ`) | The lion-headed eagle. *amar anzud₂* `גוזל האנזוד`; *anzud₂ dam-a-ni* `האנזוד – אשתו`. |
+| Sumer ★; Akkad (*ki-uri*); Martu; Anšan ★; Zabu ★ (*za-bu*); Lulubi; Zubi ★; the Euphrates (*buranun*) | ★ שׁוּמֶר; אֶרֶץ אַכַּד; מַרְטוּ; ★ אַנְשָׁן; ★ זַבּוּ; לוּלוּבִּי; ★ זוּבִּי; פְּרָת | `זבו` reads "(they) flowed". |
+
+### 12.2 Grammar
+§2 binds (narrative marû = participle; ḫamṭu = past; *ḫe₂-* + ḫamṭu in report = `אָכֵן`; *ga-* = cohortative; *u₃-* =
+`כְּשֶׁ־`; *na-* = `אַל` / "lest"; *nu-* = `לֹא`). LZ narrates long stretches in the marû ("Lugalbanda lies idle …"):
+keep the participle. Prayers and wishes (*ḫe₂-* + marû) are jussive; the refrains of LC's prayers decide their form
+at the first copy.
+
+### 12.3 Formulas and repeated passages (the first copy fixes the Hebrew; later copies follow it; FORMULAS_CY in the tool after the merge)
+| Where | What | Rule |
+|---|---|---|
+| EA ↔ LZ 343–345 | *ḫur-saĝ 5 ḫur-saĝ 6 ḫur-saĝ 7 …*; *šeg₁₂ kul-aba₄ … ĝiri₃ ḫul₂(-la) … gub* | **EA's Hebrew** (§3): `הררים חמישה, הררים שישה, הררים שבעה – חצה.`; `בלבנת כולבה – רגל שמחה הציב.` (vary only the person). |
+| EA ↔ ES 52–58 | *lugal-ĝu₁₀ … mu-e-ši-in-gi₄*; *lugal-za a-na bi₂-in-dug₄ …*; *lugal-ĝu₁₀ a-na bi₂-in-dug₄ …* | EA's Hebrew (§3). |
+| LC 148–150 ↔ 180–182 ↔ 211–214 ↔ 237–239 | the prayer: eyes lifted to the god, "wept as to his own father", "raised his fair hands in the mountain cave" | LC1 fixes at 148–150; copies identical except the god's name. |
+| LC 171 ↔ 197 ↔ 226 | "X accepted his tears" (*er₂-ra-ni šu ba-an-ši-in-ti*) | LC1 fixes. |
+| LC 151–170 | "let me be ill no longer" refrain | LC1 fixes once. |
+| LC 87–122 ↔ 279–282; 107 ↔ 376 | the provisions; the drinks list | LC1 fixes; LC2 copies. |
+| LC 300–313 ↔ 314–325 | the wild bull and the goats grazing (*šim-gig … še-gin₇ …*) | LC2 fixes 300–313, copies in 314–325. |
+| LC 351–360 ↔ 361–370 | the dream's command and its execution | LC2: command and execution in the same words (guidelines §5.2: word order too). |
+| LC 270–275 ↔ ES 44–48 | the running animals (Šakkan's wild ass, the large donkey, the slim donkey) | LC2 fixes; ES copies. |
+| LZ 141 ↔ 148 ↔ 154 ↔ 158 | "Lugalbanda, who loves the seed, will not accept it" | LZ1 fixes. |
+| LZ 167–183 ↔ 184–202 | the request and the grant | LZ1: the grant = the request in the second person. |
+| LZ 203 ↔ 341; 230 ↔ 338 | provisions and weapons; "where no one goes alone, whence no one returns" | LZ1 fixes; LZ2 copies. |
+| LZ 272–283 | "no one said to him: I will go to the city / to Kulaba" | LZ2 fixes. |
+| LZ 291–321 ↔ 357–387 | Enmerkar's message and its delivery | LZ2: the delivery copies the message exactly. |
+| ES 25–39 ↔ 56–69 ↔ 77–113 | En-suḫgir-ana's message; its delivery; Enmerkar's answer (the same images reversed) | ES fixes 25–39; 56–69 copies; 77–113 echoes. |
+| ES 138–150 ↔ 151–162; 170–184 ↔ 185–197; 198 ↔ 206; 228–248 | the sorcerer's speech; the cow and the goat; "house of silence"; the five contests | ES fixes the first copy of each. |
+
+### 12.4 Echo control (look for – never "translate as"); reserved and gated (RESERVED_CY, checked by `verify`)
+- **Never in a `>` line** (the apparatus only): `מִזְבֵּחַ`, `נִיחוֹחַ` (Gen 8:20–21: the gods smelling the offering,
+  LC 360, 369, 380); `חַרְטֻמִּים`, `לְהָטִים` (Exod 7:11, 22: the contest of the sorcerer and the wise woman, ES
+  228–248); `כשף` and its family (Akk. *kašāpu* only); `סֻלָּם`; `הִבְדִּיל` / `בדל` verbs (Gen 1:4–7; *an ki-ta bad*
+  = `הפריד שמים מארץ`, GEN; tin *nagga* is `בְּדִיל` and allowed); and RESERVED_COMMON (§5: the Babel and Exod 2 words,
+  `עולם`, `טרם`, `בָּרָא`, `קדש`, `מלאך` …).
+- **Gated (only with the source word):** `נֶשֶׁר` (*ḫu-ri₂-in*); `מְלַחֵשׁ` (*maš-maš*); `זָקֵן` / `זְקֵנִים` / `הזקנה`
+  (*ab-ba*, *šu-gi*, *um-ma*, *bur-šu-um*); `גּוֹרָל` (*nam-tar*); `רֵיחַ` (*ir*); with §5's `טוֹב` (*dug₃*), `ברך`
+  (*šud₃*), `שׁוּב` (*gi₄*, *gur*), `עָף` (*dal*), `עבד` (*kiĝ₂*, *arad₂*), `מִקְדָּשׁ` (*eš₃*), `הֵיכָל` (*e₂-gal*),
+  `אָרַר` (*nam … kud*), `נָכְרִי` (*kur₂*), `הִשְׁלִיךְ` (*šub*, *ri*), `נָהָר` (*id₂*), `קָרָא` (naming: *sa₄*), `כָּבֵד`
+  (*dugud*), `לְבֵנָה` (*šeg₁₂*), `טִיט` (*im*).
+- **Look for:** the abandoned sick hero in a cave and the god's help (1 Kgs 19:4–9: Elijah, the cave, the cake baked on
+  coals `עֻגַת רְצָפִים`, the strength to go on); "he awoke – it was a dream" (Gen 41:7 `וַיִּיקַץ … וְהִנֵּה חֲלוֹם`; Gen
+  28:16) – only as far as the Sumerian has it; the dream that commands a sacrifice; the blood poured into a pit (Lev
+  17:13; 1 Sam 14:32–34); the gods consuming the best of the offering (Gen 8:21; Lev 3:16); the eagle and its nest
+  (Deut 32:11; Exod 19:4); the blessing / fate the eagle decrees and its refusals (Gen 27; Gen 49); swiftness (2 Sam
+  2:18; 1 Kgs 18:46); the oath by heaven and earth (Deut 4:26); *alan* `צֶלֶם` (Gen 1:26) and "your name will be
+  famous" (Gen 12:2); Enmerkar's taunt to the goddess, the city that hates and loves; the sorcerers' contest at the
+  river (Exod 7–8), the wise woman (2 Sam 14, 20), the sin that "cannot be forgiven" (*nam-tag*); the older brother
+  (Gen 25:23, 27:29). Tag each [cognate] / [equivalent] / [divergence] / [absent]; most are shared motifs, say so.
+- **ETCSL's English manufactures echoes:** "holy" (*kug* `טָהוֹר` / `זך`), "righteous" (*zid* `נאמן` / `אמת`),
+  "temple" (*e₂* `בית`), "altar", "sacrifice", "sin", "blessed", "created", "the heavens were separated", "made
+  famous", "statues"; check each word against the Sumerian (§4 of this file).
+
+### 12.5 The plan of the parts (one translator per text, resumed part by part; the coordinator merges proposals here in §12.6 after each part)
+| Part | Lines | File | Translator |
+|---|---|---|---|
+| LC1 | LC 1–263 | `5-…/annotated-1.rtl.md` | T-LC |
+| LC2 | LC 264–499, B1–B7 | `5-…/annotated-2.rtl.md` | T-LC (resumed) |
+| LZ1 | LZ 1–202 | `6-…/annotated-1.rtl.md` | T-LZ |
+| LZ2 | LZ 203–417, A–F | `6-…/annotated-2.rtl.md` | T-LZ (resumed) |
+| ES | ES 1–283, 52A–54D, B1–B7 | `7-…/annotated.rtl.md` | T-ES |
+
+### 12.6 Merged from the parts
+(after each part)
+
 ## Changelog
+- 2026-11-07: §12 the Uruk cycle (projects 5–7: LC, LZ, ES) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed by the Round 6 run 3 coordinator before the first part.
 - 2026-11-02: §11.7 the 2026-11-02 harmonization (*aggu* `קֶצֶף`).
 - 2026-10-31: §11 the Cuthaean Legend (project 4) – names, grammar, formulas, reserved and gated words; fixed by the Round 5 run 5 coordinator before the first part.
 - 2026-10-23: the 2026-10-23 harmonization applied to Etana (end of §10); §10.3–§10.4 quotations corrected.
