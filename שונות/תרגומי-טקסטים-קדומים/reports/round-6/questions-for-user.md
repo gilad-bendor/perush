@@ -10,3 +10,6 @@ None for the user. The run listed seven rendering questions (`run-2.md`, "Questi
 them on 2026-11-07 under the user's standing rule (minor things are decided, not asked): **all kept as drafted**, each
 with its reason in its entry. Two go to the round's harmonization, where the lead may change them in every copy at once:
 ḥḏi̯ `הזיק` (BD 175 / Merikare E132 / the dossier's MK / Amenemope) and `האציל` for sꜥḥ (BD 78; Num 11:17's root).
+
+## Run 3 (the Uruk cycle)
+None.
