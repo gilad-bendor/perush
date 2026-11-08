@@ -206,5 +206,39 @@ All the rows of **Decisions** above are proposed as binding for Book 7. In parti
 - Every unvocalized `אל` / `אלה` in a line whose neighbours have a *deva* word is flagged; vocalize `אֶל` / `אַל` /
   `אֵלֶּה` from the first draft in the Agni hymns.
 
+## Review of part 1 (RV 7.1–7.9; independent reviewer)
+All 350 pādas read against the Zurich text and morphology (`data`), with `tr` and Jamison where a line was in doubt,
+plus a lemma ↔ Hebrew map of the part's פירוק bullets in both directions. **9 lines changed** (and their פירוק /
+notes; two intros aligned). The draft is careful: its readings follow Jamison's emended translations closely, and its
+moods (subjunctive → future, optative → `נא`, injunctive with *mā́*) are almost everywhere right.
+- **One Hebrew for two lemmas (consistency, 4):**
+  - 7.3.4a *ví áśret* (√*śri*) `התפרש` → `נפתח לרווחה`: `התפרש` / `פרש` is √*tan*'s (7.2.1d, 7.5.4c; RV 10.90); as
+    7.2.5b *ví … áśiśrayuḥ* `פתחו לרווחה`.
+  - 7.3.8b *nr̥vátīḥ* `הגבריים` → `רבי־הגברים`: `גברי` is *nárya*'s (7.1.21d, 7.7.6b).
+  - 7.3.9a *pūtā́* (√*pū*) `מלוטש` → `מטוהר`: √*pū* `טהר` (*pāvaká* `מטהר` in 9d of the same stanza: the pun is now
+    visible; precedent RV 10.17.10d `מטוהר`). Intro 7.3 aligned.
+  - 7.9.6c *jarasva* (√*jar* "be awake") `התעורר` → `היה ער`: `התעורר` is √*budh*'s (7.9.1a, 4d); `ער` as
+    *jāgr̥vánt* 7.5.1d (and 7.10.1d), the same root.
+- **Mood / voice / sense (3):**
+  - 7.2.1d *tatanaḥ* (perfect subjunctive) `התפרש` (imperative) → `תתפרש`, as the part's other subjunctives (7.1.20b).
+  - 7.5.3a *āyan* (√*i* "go") `באו` → `הלכו`: the black clans went off in fear (Griffith, Jamison "went off"), not came.
+  - 7.7.1d *vivide* `נמצא (הדרך)` (a passive with an object) → `מצא (את הדרך)` (Geldner "hat … (den Weg) gefunden").
+- **Ambiguity of the unvocalized line (2):** 7.1.17b *juhuyāma* `נסוך נא` (reads as the imperative) → `נִסּוֹךְ נא`;
+  7.5.1d *jāgr̥vádbhiḥ* `הערים` (reads "the cities") → `הָעֵרִים`.
+- **Intros:** 7.3 `כגרזן מטוהר`; 7.4 quoted the pre-pass-(b) wording (`נעים`, `ביתו`) → the line's `חביב`, `מעונו`.
+- Checked and kept (defensible): 7.1.1c *atharyú* `המבקש את הדרך (?)` and 7.7.3d / 7.4.2b *yátas* `מיד כש` (Jamison);
+  7.5.4a *tridhā́tu* (Jamison's adverbial reading); 7.8.1a *aryáḥ* in apposition (Geldner, Renou; the Zurich lemma
+  says genitive); 7.4.6d *ápsavaḥ*, *áduvaḥ* (Jamison, noted as uncertain); 7.2.7b `אני חושב אתכם … לזבוח` ("deem").
+- `build RV7.1-9`; `verify RV7.1-9 --strict`: 0 problems; `check_bible_quotes.py` on the annotated, intro and generated
+  files: 0 problems. The three tagged parallels (Exod 29:39, Ps 118:5, 2 Sam 22:2) are sound and say "shared motif".
+- **For the coordinator:**
+  - *śū́ra* "hero" has `גיבור` (precedent RV 1.32.12c, the dossier; here 7.1.10a), the word of *vīrá* (7.1, the part's
+    explicit *nár* / *vīrá* split): a corpus collision to settle before the Indra hymns (22 *śū́ra* in Book 7).
+  - *rathī́* (7.5.5c) and *rathirá* (7.7.4a) share `רוכב־המרכבה`; √*vī* has `ביקש` (7.1.18c, *vītátama* 7.1.18a) and
+    `רדף` (7.6.3c); √*i* and √*yā* both `בא`; *manuṣyà* and *mā́nuṣa* (as a noun, 7.7.4b) both `בני־האנוש` – near
+    synonyms, left as they are; record or split at the harmonization.
+  - `build` lists one repeated-line difference outside Book 7 (RV 10.10.13d `תחבק` / 14b `יחבק`): justified by the
+    context (another woman / another man embraces) and noted in that file; the tool lists it all the same.
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
