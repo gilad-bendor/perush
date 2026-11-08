@@ -251,8 +251,8 @@ The Hebrew regex is matched on the bracket-free, unvocalized, punctuation-free l
 | F7 | `\bgaro demana\w*\|\bdemana\w* garo` | `בית השירה` | *garō dəmāna* |
 | F7b | `\bdrujo demana\w*` | `בית השקר` | *drūjō dəmāna* |
 | F8 | `\bahu\w* astuuat\w*\|\bastuuat\w* \S* ?ahu` | `קיומ?\S*(?: \S+){0,3} בעלי? העצמות` | *ahu astuuaṇt* |
-| F9 | `\btat thba peresa eres moi vaoca ahura\b` | `זאת אני שואל אותך אמור לי נכונה אהורה` | the refrain of Y 44.1–19 (`זֹאת אֲנִי שׁוֹאֵל אוֹתְךָ – אֱמֹר לִי נְכוֹנָה, אֲהוּרָה:`) |
-| F10 | `\bahmai yahmai usta kahmaicit\b` | `לו לכל מי ש` | Y 43.1a (the Uštavaitī's name line) – fixed by the translator of Y 43, then copied |
+| F9 | `\btat thba peresa eres moi vaoca ahura\b` | `זאת אני שואל אותך אמור לי נכונה אהורה` | the refrain of Y 44.1–19 (`זֹאת אֲנִי שׁוֹאֵל אוֹתְךָ – אֱמוֹר לִי נְכוֹנָה, אֲהוּרָה:`) |
+| F10 | `\bahmai yahmai usta kahmaicit\b` | `לו לכל מי ש` | Y 43.1a (the Uštavaitī's name line): `כרצון לו – לכל מי ש(הוא) – כרצון לכל אחד!` |
 | F12 | `\basat haca\b` | `לפי הסדר` | *aṣ̌āt̰ hacā* "in accordance with Aša" |
 
 ## 9. Repeated lines
@@ -307,6 +307,16 @@ YH 35.2 = 41.7 (the latter is outside the scope).
   `זרע`; *aṣ̌i* "eye" (32.10b) is a homonym of *aṣ̌i* `גמול`; *vaēda* `מוצא` / `ממצא`; *xᵛīti* `הצלחה` / *fradaϑa*
   `לקדם`.
 - **Tool fix after part 2:** the `טוב` gate licensed by *vax́ii-* (the comparative).
+
+### 11.3 Y 43–44 (T1, part 3a; merged 2026-11-09)
+- **Fixed strings:** F10 Y 43.1a `כרצון לו – לכל מי ש(הוא) – כרצון לכל אחד!` (Y 44.16e echoes it); F9 written plene
+  `אֱמוֹר` (the vocalized `אֱמֹר` strips to `אמר`); the Y 43 refrain (43.5/7/9/11/13/15) `נדיב חשבתי אותך, מַזְדָּה
+  אֲהוּרָה,` / `כאשר בא אליי במחשבה הטובה,`.
+- **New rows (accepted):** *dāmi* "founding" `הכינון` (the agent noun keeps `מכונן`); *vərəϑrəm.jan* `הורג החוסם`
+  (the cousin corpus's *vr̥tra* `החוסם`); *huuāpah* `אומן טוב`; *nabah* `שחקים`; *vāta* `רוח` (the wind);
+  *xᵛafna* `שינה` (30.3a "dreams": a split by sense); *taxma* `גיבור`; *friia* `רע`; *uzəma* `מוקיר`; *ząϑa*
+  `הולדה`; *irixta* `אחרית`; *spāda* `צבא`; *vananā* `ניצחון`; *zrazdāiti* `אמונה`; *tušnā.maiti* `ההרהור השקט`;
+  *daxšāra* `אות`; *ādišti* `ציווי`; *āskəti* `קרבה`; *yaōš dā-* `טיהר`; *hātąm* fem. `הקיימות`.
 
 ## 12. Cross-corpus choices for the lead (Avestan words whose Vedic cognate the cousin corpus has not rendered yet)
 Each pair below gets one Hebrew under the cousin-language rule; this corpus's choice is given, for the lead to align
