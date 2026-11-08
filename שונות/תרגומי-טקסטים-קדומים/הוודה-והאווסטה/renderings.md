@@ -128,7 +128,7 @@ rendered).
 | Vaiśvānara (RV 7) | ` vaisvanar` | `וַאישְׁוָנָרָה` |  | "belonging to all men", Agni's epithet, transliterated |
 | Jātavedas (RV 7) | ` jatavedas` | `יודע־הנולדים` |  | Agni's epithet, translated (precedent RV 10.16) |
 | Apāṃ Napāt (RV 7) | ` apam napat` | `נכד המים` |  | the fire in the waters, translated (7.34–35, 47) |
-| Mitra (RV 7) | ` mitr(?!avarun)` | `מִיטְרָה` | ★ | alone (the god); the common noun *mitrá* "ally" takes `[היתר שם: …]` (part 1) |
+| Mitra (RV 7) | ` mitr(?:a\|ah\|o\|am\|asya\|aya\|ena\|e\|au\|as\|ayoh)\b` | `מִיטְרָה` | ★ | alone (the god); the common noun *mitrá* "ally" takes `[היתר שם: …]` (part 1) |
 | Bhāratī (RV 7) | ` bharati` | `בְּהָארַטִי` |  | the goddess of the Āprī hymns (7.2.8) |
 | Nahus (RV 7) | ` nahus` | `נַהוּשׁ` |  | an ancestral people / king (7.6.5) |
 | Jarūtha (RV 7) | ` jaruth` | `גָ'רוּתָה` |  | a demon slain by Agni (7.1.7, 7.9.6) |
