@@ -80,14 +80,9 @@ UNITS = {
                title='אוסף המשלים 1 (ETCSL 6.1.01)', files=['annotated-c1-1.rtl.md', 'annotated-c1-2.rtl.md',
                                                          'annotated-c1-3.rtl.md'], proverbs=True),
     'P2': dict(proj='PROV', kind='sux', etcsl='6.1.02--Proverbs-Collection-2-6', q='Q000796--Proverbs-Collection-2-6',
-               title='מבחר מאוסף 2 (ETCSL 6.1.02)', files=['annotated-c2.rtl.md'], proverbs=True,
-               select='2.15 2.16 2.17 2.18 2.19 2.20 2.22 2.23 2.27 2.28 2.29 2.30 2.32 2.33 2.34 2.37 2.38 2.40 2.47 '
-                      '2.49 2.52 2.53 2.54 2.58 2.60 2.62 2.65 2.67 2.68 2.69 2.71 2.72 2.75 2.81 2.82 2.93 2.118 '
-                      '2.119 2.121 2.122 2.123 2.124 2.138 2.141 2.142 2.146 2.155 2.157 2.158 2.159 2.160'),
+               title='אוסף המשלים 2 (ETCSL 6.1.02)', files=['annotated-c2.rtl.md'], proverbs=True),  # complete since Round 6 run 4
     'P3': dict(proj='PROV', kind='sux', etcsl='6.1.03--Proverbs-Collection-3', q='Q000797--Proverbs-Collection-3',
-               title='מבחר מאוסף 3 (ETCSL 6.1.03)', files=['annotated-c3.rtl.md'], proverbs=True,
-               select='3.5 3.6 3.9 3.13 3.15 3.16 3.17 3.22 3.23 3.33 3.41 3.44 3.55 3.64 3.69 3.86 3.97 3.103 '
-                      '3.112 3.114 3.118 3.127 3.134 3.159 3.160 3.170 3.171 3.175 3.176 3.177 3.183 3.190'),
+               title='אוסף המשלים 3 (ETCSL 6.1.03)', files=['annotated-c3.rtl.md'], proverbs=True),  # complete since Round 6 run 4
     # --- project 3: the letters
     'LUD': dict(proj='LET', kind='sux', etcsl='5.5.1--Message-of-Ludigira-to-his-mother', q='Q000775--Message-of-Ludigira-to-his-mother',
                 title='שליחותו של לוּ־דִּינְגִּירָה אל אמו (ETCSL 5.5.1)', files=['annotated-ludigira.rtl.md']),
@@ -143,7 +138,7 @@ RESERVED = {
     r'חבק|חיבק': [r'habābu|ḫabābu'],
     B + r'ו?[ילתנ]?(לפת|לפתה|לפתי|לופת|לופתת|לפתו|אלפת|לפתני|לפתנו)' + E: [r'edēru'],
     B + P + r'(נשק|נשקה|נשקי|ינשק|תנשק|נשיקה|נשיקות|נשקו)' + E: [r'našāqu|kakku|su-ub|su-ub'],
-    r'שמאל': [r'šumēlu|gub₃'],
+    r'שמאל': [r'šumēlu|gub₃|gab₂-bu'],
     B + r'ו?(קום|קומי|קומה|קומו)' + E: [r'tebû|zig₃|gana'],
     B + r'ו?(לכה|לכי|לכו)' + E: [r'alāku|ĝen|ŋen|(^|\s)du(\s|$)'],
     B + r'ו?(בוא|בואי|בואה|בואו)' + E: [r'erēbu|bâʾu|ku₄|kur\[enter\]|ĝen|ŋen|men\[go\]|ĝa₂-nu'],
@@ -154,7 +149,7 @@ RESERVED = {
     B + P + r'(טוב|טובה|טובים|טובות|טובו)' + E: [r'dug₃|du₁₀|ṭābu|ṭiābu|ṭūbu|ṭâbu|dug[good]'],
     B + r'ו?(ה|י|ת|א|נ|ל)?שוב' + E + '|' + B + r'ו?(ה|י|ת|א|נ|ל)שיב|' + B + r'ו?(ישובו|ישוב|תשוב|שבה|שבו|שבתי|שבת)' + E: [r'gi₄|\bgur|-gur|târu|tuāru|tūru|gi[turn]|gur[turn]'],
     B + r'ו?[לבמה]?(ברך|בירך|ברכה|ברכת|ברכו|ברכה|בירכה|בירכו|יברך|תברך|אברך|נברך|מבורך|יבורך|בורך|ברוך|ברכות)' + E: [r'karābu|ikribu|šud₃|šudu₃|kiriš'],
-    r'ארר|ארור|אורר': [r'arāru|nam\b.*ku₅|nam-ku₅|a-ru-ru|Aruru'],
+    r'ארר|ארור|אורר': [r'arāru|nam\b.*ku₅|nam\b.*kud|nam-ku₅|a-ru-ru|Aruru'],
     r'קלל': [r'aš₂|(^|\s)aš(\s|$)|aš[curse]|arratu'],
     B + r'ו?[לבמהשכ]{0,2}(נכרי|נכריה|נכריים|נכרים|נכר|התנכר)' + E: [r'kur₂|nakru|lukur|nakāru'],
     B + P + r'(עבד|עבדו|עבדי|עבדך|עבדים)' + E: [r'arad|wardu|ir₃|ARAD|IR₃'],

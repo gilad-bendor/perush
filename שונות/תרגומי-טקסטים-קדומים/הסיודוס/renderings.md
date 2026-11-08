@@ -232,7 +232,7 @@ the Greek word is capitalized in the base.
 | Κύπρος | קַפְרִיסִין |  |  |
 | Κύθηρα | קִיתֵרָה |  |  |
 | Τροία | טְרוֹיָה |  |  |
-| Θήβη | תֵּבַּאי |  | Boeotian Thebes |
+| Θήβη / Θῆβαι | תֵּבַּאי |  | Boeotian Thebes |
 | Αἰθίοψ | כּוּשׁ |  | biblical name (§2.3): the land / people `כּוּשׁ` (`מֶלֶךְ כּוּשׁ`, `בְּנֵי כּוּשׁ`); not the plural `כּוּשִׁים`, a slur in Modern Hebrew (§11.7) |
 | Νεῖλος | נִילוּס |  | never `יְאֹר` |
 | Ἄσκρη | אַסְקְרָה |  | Hesiod's village (WD 640) |
@@ -245,6 +245,24 @@ the Greek word is capitalized in the base.
 | Βορέας | בּוֹרֵאָס |  | the north wind (god and wind) |
 | Ζέφυρος / Νότος | זֶפִירוֹס / נוֹטוֹס |  | the west wind, the south wind |
 | Ἑωσφόρος | (T) `מֵבִיא־הַשַּׁחַר` |  | the morning star (Isa 14:12 `הֵילֵל בֶּן שָׁחַר`: LXX ὁ ἑωσφόρος – a note) |
+| Ἀμφιτρύων | אַמְפִיטְרִיּוֹן |  | SH (2026-11-07): Alcmene's husband |
+| Ἠλεκτρύων / Ἠλεκτρύον | אֵלֶקְטְרִיּוֹן |  | SH: Alcmene's father |
+| Κύκνος | קִיקְנוֹס |  | SH: "Swan", son of Ares (the speaking name in a note) |
+| Ἰόλαος | יוֹלָאוֹס |  | SH: Heracles' charioteer |
+| Ἰφικλέης | אִיפִיקְלֵס |  | SH: Heracles' twin |
+| Εὐρυσθεύς | אֶוּרִיסְתֵאוּס |  | SH |
+| Κρείων | קְרֵאוֹן |  | SH |
+| Τίρυνς | טִירִינְס |  | SH (TH 292 `טירינס`) |
+| Κῆυξ | קֵאִיקְס |  | SH: king of Trachis |
+| Τραχίς | טְרָכִיס |  | SH |
+| Περσεύς | פֶּרְסֵאוּס |  | SH 216 (not Perses of WD, `פֶּרְסֵס`) |
+| Δανάη | דָּנָאָה |  | SH |
+| Θησεύς | תֵּזֵאוּס |  | SH: the familiar form |
+| Πειρίθοος | פֵּירִיתוֹאוֹס |  | SH |
+| Καινεύς | קַיְנֵאוּס |  | SH |
+| Μόψος | מוֹפְּסוֹס |  | SH |
+| Ἄναυρος | אַנָאוּרוֹס |  | SH: the river |
+| Πυθώ | פִּיתוֹ |  | SH: Delphi |
 
 ### 3.2 Speaking names translated (T)
 **Rule (decided 2026-10-24, §12):** where a god's name **is** an ordinary Greek noun of Hesiod's language – the cosmic
@@ -942,3 +960,66 @@ Hephaistos `הֵפַיְסְטוֹס`; Αἰθήρ `אֶתֶר` ★; the winds �
   translator fixes their Hebrew at the first occurrence and records it.
 - The LXX tool (`../tools/lxx_verses.py`) has only Genesis, Exodus, Isaiah and 4 Kingdoms: describe the LXX of other
   books (Job, Proverbs, Psalms, Judges) in words, never quote it from memory.
+
+## 14. The Shield of Heracles (SH; Round 6 run 5, 2026-11-07; project `3-מגן-הרקלס/`)
+
+The third text of the corpus binds itself to §1–§13 (names, conventions, key terms, the LXX layer, the gates, the
+formulas, the repeated lines). What is particular to it:
+1. **The base's marks** (§1 above, for SH): whole lines in `<del>` (204, 210) open with `{חשודה}`; the half-lines
+   Evelyn-White brackets inside 203, 205, 209, 211 are suspected words, not a papyrus restoration: the `>` line opens
+   with **`{חשודה בחלקה}`** and the suspected Hebrew words stand in **`⟦ ⟧`** (the tool's `MARK_TAG_KEY`; the gates read
+   through `⟦ ⟧`). `[ ]` keeps its meaning "restored" and is not used in SH.
+2. **Title:** `מָגֵן הֵרַקְלֵס` – ἀσπίς is the round battle shield: `מָגֵן` [equivalent] (LXX ἀσπίς renders `מָגֵן` and
+   `צִנָּה`; the translators check the verses before any note); σάκος (the great shield, a synonym in this poem) gets
+   its own Hebrew, fixed by the first translator and recorded here (one Greek lemma = one Hebrew word).
+3. **The models:** the shield's ekphrasis (139–320) follows Iliad 18.478–608; the poem's lines shared with the Iliad,
+   the Odyssey, the Theogony and the Works and Days are noted (the corpus's own repeats: `hesiod_tools.py data SH`,
+   "repeats"); 1–56 are a Catalogue *ehoie* (fr. 195 M-W): `ἢ οἵη` "or like her who" – the Catalogue's formula,
+   rendered once and kept.
+4. **The new names** (not in §3.1): each translator transcribes by §2.3, vocalizes the first occurrence, and lists them
+   in its section of `project.md`; the coordinator merges them into §14.1 below and into §3.1 (so `verify` checks them).
+
+### 14.1 Names and terms fixed for SH (merged from the translators, 2026-11-07)
+- **Names:** the main ones are now rows of §3.1 (checked by `verify`); the full lists (patronymics, the Lapiths and
+  Centaurs, places) are in `3-מגן-הרקלס/project.md`, the translator's two "New names" tables. The base has **no line 298**
+  (labels 1–297, 299–480: 479 lines). Θῆβαι joins the Θήβη row.
+- **The two shields:** ἀσπίς `מָגֵן` (the title; 417); σάκος `צִנָּה` ★ (always vocalized: `צינה` "cold"); φερεσσακής
+  `נוֹשְׂאֵי־הַצִּנָּה`. The biblical pair (1 Kgs 10:16–17) is an [equivalent] noted at the lines.
+- **Arms:** θώραξ `שִׁרְיוֹן`; τεῦχος `נֶשֶׁק` (the whole corpus since the 2026-11-09 harmonization: TH 186, 929t, WD 150 moved from
+  `שריון`, which is θώραξ's; ὅπλα TH 853 `כְּלֵי־נֶשֶׁק`); κνημίς `מִצְחָה`; κόρυς `כּוֹבַע`, κυνέη `קוֹבַע`, τρυφάλεια `קַסְדָּה`; ἔγχος `רֹמַח`, δόρυ `חֲנִית`, αἰχμή
+  `כִּידוֹן`, μελίη `חֲנִית־הַמֵּילָה`, ἄορ `חֶרֶב`; φαρέτρα `אַשְׁפָּה` ★; ὀιστός / ἰός `חֵץ`; ὀρείχαλκος `נְחֹשֶׁת־הֶהָרִים`.
+- **Chariots:** ἡνίοχος `רַכָּב` (vocalized where `רכב` "chariot" stands near), δίφρος `מֶרְכָּבָה`, ἅρμα `רֶכֶב`.
+- **Personified figures (T, §3.2):** Προΐωξις `מִרְדָּף`, Παλίωξις `מִרְדַּף־נֶגֶד`, Ὅμαδος `הֲמֻלָּה`, Ἀνδροκτασίη
+  `הֶרֶג־אֲנָשִׁים`, Κυδοιμός `מְבוּכָה`, Ἀχλύς `עֲרָפֶל`; Φόβος `בֶּהָלָה`, Δεῖμος `אֵימָה`, Ἔρις `מָדוֹן`, Κῆρες `הַקֵּרוֹת`.
+- **The LXX layer:** ἤλεκτρον `חַשְׁמַל` ★ (Ezek 1:4 LXX), κέγχρος `דֹּחַן` (Ezek 4:9); ἀλαλητός `תְּרוּעָה` (LXX ἀλαλαγμός, Ps 89:16; ἠλάλαξαν = `הֵרִיעוּ`, Judg 15:14; also TH 686 since the
+  2026-11-09 harmonization).
+- **Others:** the Catalogue formula ἢ οἵη `או כמו זו אשר`; ἀλκτήρ `הוֹדֵף` (TH 657 too, since the 2026-11-09
+  harmonization); ἀρήιος `לוֹחֵם`; ἆθλος `מְשִׂימָה`; τέμενος `תְּחוּם`; ἄλσος `חֹרְשָׁה`; λίς `לַיִשׁ` ★;
+  φόρμιγξ `כִּנּוֹר`; ἑκατόμβη `זֶבַח־מֵאָה`; αἰδώς `יראת־כבוד` at 354 (a sense split from §3.2's `בּוּשָׁה`).
+- **Splits noted by the reviewers:** settled by the 2026-11-09 harmonization (below).
+
+2026-11-09 harmonization (Round 6, batch C; the rows 25–28 of `reports/round-6/final--plan.md`; surveyed with
+`tools/harmonize_survey.py` and `hesiod_tools.py lemma`, both ways):
+- **ἀλκτήρ** = `הוֹדֵף` (SH 29, 128): TH 657 `ומגן … מפני פורענות` → `ולבני־האלמוות הודף פורענות מקפיאה נהיית` (`מָגֵן`
+  is ἀσπίς; ἀλκτήρ is from ἀλέξω, whose ἀπαλέξω is already `הָדַף`, TH 527; the Egyptian and Akkadian `הודף` lines are other
+  languages).
+- **τεῦχος** = `נֶשֶׁק` in all three poems (θώραξ keeps `שִׁרְיוֹן`, SH 124): TH 186 `זוהרים בשריונם` → `זוהרים בנשקם` (= SH
+  60, the same half-line), TH 929t `כשהיא לבושה שריון של מלחמה` → `כשהיא אוחזת נשק מלחמה` (= SH 238 πολεμήια τεύχεʼ ἔχ-),
+  WD 150 `שריונות` → `נשק`; the notes of TH 50, 186, 929t, WD 150, SH 60. ὅπλα (TH 853) stays `כְּלֵי־נֶשֶׁק`.
+- **ἀλαλητός** = `תְּרוּעָה` (the LXX layer: ἀλαλαγμός = `תְּרוּעָה`, Ps 89:16; ἀλαλάζω = `הֵרִיעַ`, Judg 15:14): TH 686
+  `בקריאת קרב גדולה` → `בתרועה גדולה`. Hence the root רוע belongs to ἀλαλητός, and **ἰάχω / ἰαχή** (no LXX) move off
+  TH's `הריע` / `תרועה` (SH 382 has both words in one line) and off SH's `צעק` (`צְעָקָה` is ἐνοπή, TH 708, and ἀυτή /
+  ἀυτέω, SH 309, 346, 433, 459) to **`צָרַח` / `צְרִיחָה`** (free in the corpus; Zeph 1:14 `צֹרֵחַ שָׁם גִּבּוֹר`): TH 69
+  `הריעה` → `צרחה`, TH 678 (περιιάχω) `הריע סביב` → `צרח סביב`, TH 708 `תרועה` → `צריחה`, SH 232 `מהדהדת` → `צורחת`
+  (`הדהד` is ἠχέω), SH 382 `צעקו` → `צרחו`, SH 404 `וצעקה` → `וצריחה`, SH 436, 441, 451 `בצעקה` → `בצריחה`.
+- **The epithets** (one form each, the Theogony / Works and Days precedent): ποδώκης = `קַל־רַגְלַיִם` (TH 320; = ὠκύπους, WD
+  816, SH 96: synonyms, one Hebrew): SH 191 `מהירי־הרגליים` → `קלי־הרגליים`; μεγαλήτωρ = `גְּדוֹל־הַלֵּב` (WD 656; = μεγάθυμος;
+  `רָם לֵב` is pride in Hebrew): SH 450 `רם־הלב` → `גדול־הלב`; the κυανο- compounds = `כְּחֹל־` (κυανοχαίτης TH 278, SH 120,
+  κυανόπεπλος TH 406): SH 356 κυανῶπις `כהת־העיניים` → `כחולת־העיניים`, SH 393 κυανόπτερος `כהת־הכנף` → `כחולת־הכנף`
+  (κυάνεος stays `כָּחֹל־כֵּהֶה` everywhere, κύανος SH 143 `כָּחָל`).
+- **Kept (recorded):** χλωρός by sense – of wood and plants `יָרֹק` (WD 743; LXX Ezek 17:24 ξύλον χλωρόν = `עֵץ לַח`), of
+  a face or metal `חִוֵּר` (SH 231 the adamant, 265 Achlys); χλοερός `רַעֲנָן` (SH 393) is another lemma. δέρκομαι and
+  ὁράω both `הִבִּיט` (δέρκομαι TH 828, 910, 911, SH 145, 160, 169, 236, 262; ὁράω §11.1): one sense, kept. κυρέω = `נִתְקַל`
+  (WD 691, 755): SH 426 `כאריה שנקרה אל גוויה` → `כאריה שנתקל בגוויה`, so `נִקְרָה` stays ἀντιβολέω's (SH 439; WD 784
+  `לבוא לידי` by sense). Left: ἐνοπή (TH 708) and ἀυτή (SH) share
+  `צְעָקָה` (ἀυτή as `צַעֲקַת־הַקְּרָב`): a near-synonym pair for a later pass.

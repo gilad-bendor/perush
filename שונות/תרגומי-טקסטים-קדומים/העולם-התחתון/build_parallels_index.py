@@ -29,6 +29,7 @@ PROJECTS = [
      ['annotated-1.rtl.md', 'annotated-2.rtl.md', 'annotated-3.rtl.md', 'annotated-4.rtl.md']),
     # Round 4, run 5 (2026-10-24)
     ('ER', os.path.join(A, '5-ארה-ואישום'), ['annotated.rtl.md']),
+    ('DD', os.path.join(A, '6-חלומו-של-דומוזיד'), ['annotated-1.rtl.md', 'annotated-2.rtl.md']),
 ]
 OUT = os.path.join(A, 'parallels-index.md')
 G = {'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9, 'י': 10, 'כ': 20, 'ל': 30, 'מ': 40, 'נ': 50,

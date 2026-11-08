@@ -63,11 +63,176 @@ P3 = "3-ספר-הפרה-השמימית"
 # the tales and Book of the Dead 125 (Round 5 run 6, 2026-10-31)
 P4 = "4-מעשה-בשני-האחים"
 P5 = "5-פפירוס-וסטקר"
-P6 = "6-ספר-המתים-125"
+P6 = "6-ספר-המתים-של-נו"
 P7 = "7-סינוהה"
 P8 = "8-המלח-הנטרף"
-PROJECTS = (P1, P2, P3, P4, P5, P6, P7, P8)
-TALES = {"TB", "WE", "BD", "SI", "SS"}   # the gates scoped to the tales (RESERVED entries with a key set)
+# the Instruction for Merikare, whole (Round 6 run 2, 2026-11-06)
+P9 = "9-מוסר-למריכרע"
+PROJECTS = (P1, P2, P3, P4, P5, P6, P7, P8, P9)
+NU_KEYS = {f"NU{i}" for i in range(1, 11)}
+BOOK = NU_KEYS | {"BD", "CH"}   # the Book of the Dead keys (formulas scoped to them: renderings §12)
+# the gates scoped to the tales (RESERVED entries with a key set); since Round 6 run 2 also the Book of the Dead and
+# Merikare (the Decalogue / Ps 15 / Ps 24 / Deut 26 words concern them as much as BD 125)
+TALES = {"TB", "WE", "BD", "SI", "SS"} | BOOK | {"MR"}   # the gates scoped to the tales (RESERVED entries with a key set)
+
+# The Book of the Dead of Nu (pBM EA 10477), whole (Round 6 run 2, 2026-11-06): the papyrus's 136 AED chapter texts in
+# the papyrus's order (the Bonn Totenbuch-Projekt's object record TM 134299, "Inhalt"; ../sources/AED-TEI/README.md),
+# as (chapter token, AED title, TLA id). The chapter token opens every label: "17.1", "64L.3", "149.S1". Chapter 125
+# is the KEY BD (Round 5 run 6), in its place between NU8 and NU9.
+NU_ORDER = [
+    ("17", "Tb 017", "AWPP4QCZNZF5NDZE5HKLKRNOJQ"),
+    ("18", "Tb 018", "LSNPRWLZ6FA3HIRAJQHDZ2XIYU"),
+    ("18PS", "Tb 018 PS", "TVKHE2O6IBB2JBAHS4EOLVPM74"),
+    ("1", "Tb 001", "DDC4MLXQWVF6FLF7M2ENAZOWR4"),
+    ("22", "Tb 022", "OJMES7QCI5CJVCB2I4NVS34PJY"),
+    ("23", "Tb 023", "URNTUB6RTFAPNPWQBY3MM3TCFI"),
+    ("25", "Tb 025", "3CM4IU3AKZDZJFCB4I5BF7CUWM"),
+    ("26", "Tb 026", "2OOJ5QQXXFGHPOHII6H6MKUMII"),
+    ("28", "Tb 028", "73ZVNKAMGRB3FPDD4VWU4EK6RY"),
+    ("28-2", "Tb 028-2 = CT 389", "SCQ4JJSUZNF5PN5UY3XYCKUXKE"),
+    ("27", "Tb 027", "TEKPYHYHOJD6PCYR2ALJ6PV424"),
+    ("30A", "Tb 030 A", "TLR7GLYQANF3NHQDPCCEVDNUBI"),
+    ("30B", "Tb 030 B", "WBZLKJJAHZAWNJ4N7KEFMAMGLQ"),
+    ("43", "Tb 043", "U3K2U3NCGRGXBF2EASR53LYKBA"),
+    ("24", "Tb 024", "SSIS7RUORJEFFHTOHW47U6WRV4"),
+    ("31", "Tb 031", "ZV2MBVJVWRFAFJG2OVQNBBKMBI"),
+    ("33", "Tb 033", "YFEGAIA5UNFUJIQ3ZYQ37EO2DU"),
+    ("34", "Tb 034", "2ZTBXFWTWVEXRBSEEYH5DWXQ5U"),
+    ("35", "Tb 035", "RRKRR7W46BCJZCPEUD5JGHSFPA"),
+    ("74", "Tb 074", "5LZXDD5PTFFOPP5Y2TDEAEHQBM"),
+    ("45", "Tb 045", "ZWGRFLAZJFDZNNN35UWWVOEGU4"),
+    ("93", "Tb 093", "XPAYFLR4SZEQFPILYUJ2VFODL4"),
+    ("91", "Tb 091", "UP3GUM2PMRGL5JEAMTIQCP6RRA"),
+    ("41", "Tb 041", "MZPUIGAVHNGHPFNFNO5CRIFEK4"),
+    ("42", "Tb 042", "5GPTF4PVHJASXFVEWJJNDIA7SQ"),
+    ("14", "Tb 014", "KWS6FZ2OTJFSPAGDTFNBJTZOJY"),
+    ("68", "Tb 068", "4QJMZPUUWJGODOC345NPAGF3UY"),
+    ("92", "Tb 092", "OV732TT5YFF3LA6OVVDT6UUGK4"),
+    ("63A", "Tb 063 A", "OEIEWZPZ2BCWXCGLRZ2GAYG4YY"),
+    ("105", "Tb 105", "V75RR7XESVBSLN47PKGL3BEUXU"),
+    ("95", "Tb 095", "5IAS63YBXZH7JGRYKP6IN6YTOY"),
+    ("72", "Tb 072", "4TKG2ZWABZE7HBIC73DWKMAGSE"),
+    ("71", "Tb 071", "TVFBR4K2ZVFKFJT6N3E5QP54GM"),
+    ("106", "Tb 106", "23BCOHFITJDVXJD4YDFX7N3GWE"),
+    ("40", "Tb 040", "TI4SI4LX2VGVVN7VPE657LWHOA"),
+    ("90", "Tb 090", "OLDKJKF3QFAZFJVAZQAWC2EX5Q"),
+    ("108", "Tb 108", "T7VEP7GOHNEOXHWF4HBMJ3SWHE"),
+    ("47", "Tb 047", "ABJO66DOWJH4NPQIN5XDC7OK5A"),
+    ("104", "Tb 104", "QOIFMPVD5NH6RNUNU5LZDXYK5A"),
+    ("103", "Tb 103", "L6MXA7BVA5CD5INER4KK72WZWU"),
+    ("51", "Tb 051", "IUC7LBO6NJEKJEQTD2KHCTLDA4"),
+    ("119", "Tb 119", "R47P6SBCSNDHFI67A4DXSMWAMY"),
+    ("36", "Tb 036", "DQJIM5P6UJDYZKHBGC376GD6PQ"),
+    ("37", "Tb 037", "ABAJJMIXXZCBPOCHPWSGPZJP7Y"),
+    ("79", "Tb 079", "GNUKGWOQ5RARBDTGPZYA77TE3U"),
+    ("117", "Tb 117", "3LXGC77HEJCCJLEP3QG4DAHBIE"),
+    ("118", "Tb 118", "H7GC6KNNHJEPRJHJ4MSFF4EMOA"),
+    ("21", "Tb 021", "QUDZVGFXRBFYJMJL5FDURFWUYM"),
+    ("12", "Tb 012", "NW6UJ3FO2RDM3C7QKWGOMGPUVA"),
+    ("122-1", "Tb 122-1", "WZYEGCMRCFH4ZCASRHIU74L7XM"),
+    ("122-2", "Tb 122-2", "DRZYUZBUNZFPXGFGZRQROZT2XM"),
+    ("98", "Tb 098", "S6ETVPT6GBGJZGNHS4HX3G6U4M"),
+    ("76", "Tb 076", "P5QMAOANFBCYLK4TPWG2SPJVMU"),
+    ("85", "Tb 085", "OW4JOXQCIBE7BEUKXPUPKT2FAQ"),
+    ("82", "Tb 082", "RRW4HCFOXRG7JDLNEUFEKCDQTI"),
+    ("77", "Tb 077", "UE4L6DQB65BK3O66UP2ARMVYVM"),
+    ("86", "Tb 086", "FT43SAQ7YREIFJWSRNCGCKMJE4"),
+    ("124", "Tb 124", "MNSSM7LZYRFZTDQXOGA5FICY4Y"),
+    ("83", "Tb 083", "GT3FC5L4OBDABE7HTO2BUJAV4A"),
+    ("84", "Tb 084", "OSHBAUMEIVBGXHYQ2GZQNS3J74"),
+    ("81A", "Tb 081 (A)", "SONIFMW3G5G3HBLTVIZGH364S4"),
+    ("87", "Tb 087", "M54YPZO6WZCHZA2SHTQQIA3L3Q"),
+    ("88", "Tb 088", "JEPX3TH5IVA2PM5DHYXGXE4V6A"),
+    ("132", "Tb 132", "V6P3P44F7NFSVMS737V63OB2VY"),
+    ("148", "Tb 148", "DRKTOFUL2JGV3F5HQP6EDQM6UM"),
+    ("52", "Tb 052", "7XFXDWDXH5GDNNG7VJCYPMMZGI"),
+    ("53", "Tb 053", "BEED7FJS2ZDD7D2O6KZXW3EQ7U"),
+    ("61", "Tb 061", "PLFPG64MERH6TPBOQ53AVDTHHI"),
+    ("56", "Tb 056", "ZPMVBNZR4VBQBHBMEFCNJYB4SM"),
+    ("57", "Tb 057", "MPMFO6QMH5HBTOFUOQHEM7ZWGU"),
+    ("54", "Tb 054", "7KO5SB3AYZAENKJRRJHMKT5DC4"),
+    ("38B", "Tb 038 B", "YOFPFCHNKRH2FGQD24ANWNKPOY"),
+    ("55", "Tb 055", "R27OZ7DSLZEB7MY72V642KKW5A"),
+    ("29", "Tb 029", "SIR5SGY4IJC73BTYXKAOFVRTI4"),
+    ("46", "Tb 046", "DF3OONREXVH35IZZRX55PYXRN4"),
+    ("109", "Tb 109", "J62VBIGVJZGRXHHGOIUWZA3AK4"),
+    ("9", "Tb 009", "KH5UON5JPNBFBLDB4JATIYZHSA"),
+    ("132-2", "Tb 132-2", "TRQ2FDOOSNAB3E7QZQPYFDCHPA"),
+    ("94", "Tb 094", "XBS7TQCJFZHHVKGDKYTBX6COWA"),
+    ("63B", "Tb 063 B", "4RORK3YIO5AM7GJXASD66OEDQY"),
+    ("8", "Tb 008", "TAAEKFD2UBGSXK7EA46MVUSW5U"),
+    ("64L", "Tb 064 Lf", "E4M7JKU4OFED3H6VYMDZ2BYLF4"),
+    ("2", "Tb 002", "RBAKILT47BFMDC2NG3GXRW73KQ"),
+    ("3", "Tb 003", "56BJTNTNTNGHXI75PM7QOTA76U"),
+    ("152", "Tb 152", "SR254KKWCJETPDQFEGHQWFH3M4"),
+    ("75", "Tb 075", "HY2JGXM6YJAAVN6AOEH6WBNXBQ"),
+    ("78", "Tb 078", "FNLR4FF2C5BILO2RYM2QDHUWYM"),
+    ("65", "Tb 065", "2L63DPS52RHJXBHNOPVSPR3JCY"),
+    ("67", "Tb 067", "V6W2DXOQLBC6FCU6JXRFOFB5KA"),
+    ("179", "Tb 179", "ILT3F4K5XNH3NNE25JS4FNELJA"),
+    ("123", "Tb 123", "CARCFGVMAJDDTBGLI3HMIIF5JU"),
+    ("141", "Tb 141/2", "VVCNA4HTPVAMVNFMN7ZMW6YIOQ"),
+    ("190", "(Tb 190)", "NGTS46MXHRFIDFF2LCWTZGCL6E"),
+    ("133", "Tb 133", "BNSVBQ734FAQRNNHEMQNPYILHE"),
+    ("136A", "Tb 136 A", "YTSXIARWD5GVLEYJLKVB4T6OSQ"),
+    ("134", "Tb 134", "TF5Z3233M5BB5ONVM3TOLFYZUA"),
+    ("130", "Tb 130", "QHJY7DEBQ5B3NP75SLSRBJ3N2A"),
+    ("131", "Tb 131", "355SDK6JENBCJI5PFRAEXIXL7Q"),
+    ("89", "Tb 089", "SHKHBCVWZFEY5OKOWCXEH5N4EE"),
+    ("154", "Tb 154", "NKA525SNHJERLDARM7M3HIY4YA"),
+    ("115", "Tb 115", "POXPDOUH6NDB7KIV2IONZGUE7M"),
+    ("116", "Tb 116", "KITFEAWDU5AKXPGZLCEQIHB6ZU"),
+    ("112", "Tb 112", "63CTJOSBLFGS7FKJODQOR7A2DA"),
+    ("113", "Tb 113", "HX75DGQCGRDNNAHBEO3O7DQ4FM"),
+    ("138", "Tb 138", "6YDRVLFSGVHODF5UBTBBIMHJRU"),
+    ("187", "Tb 187", "56UMRAATEJFULKLZ3YLFQQST74"),
+    ("189", "Tb 189", "62TYYXJ3XZDJFIOJZJMWNPTBIU"),
+    ("44", "Tb 044", "SQRXBMS2VJCQ7FPT4YTU3ZQOJM"),
+    ("50", "Tb 050", "MTKWLR7MAZDQJF5T3M2YG45V3M"),
+    ("188", "Tb 188", "MCGN43SLPZENNINRWAC6F4NLRI"),
+    ("4", "Tb 004", "TRXKYS74DJG4HJYU7CARZZHX54"),
+    ("96", "Tb 096/97", "LJIQSTCU7RF5BBLZL5ZJIARKRI"),
+    ("153A", "Tb 153 A", "FVPTCO7KDJFNFDV2NWLQ5WHNSY"),
+    ("153B", "Tb 153 B", "HQIAM6PDI5AGXJ63DSXVQH3HRU"),
+    ("64K", "Tb 064 Kf", "VITT2PFH5BDIFK7B2ACD4IL36Q"),
+    ("11", "Tb 011", "L7AH4MGX6VHQPIVPHHSAY3M6NA"),
+    ("6", "Tb 006", "2QKUJZQYDJDA7OAU6RDWNMBWQY"),
+    ("5", "Tb 005", "W2XP3LBO25FERELBNCM7P6WCZM"),
+    ("99B", "Tb 099 B", "5FK4PWIID5BXLCPHBJGFFCKRLE"),
+    ("7", "Tb 007", "QE3O7RNQBNEHVEZHDV727MMYQA"),
+    ("176", "Tb 176", "C7RSKT76WNCQJKBHNFJIFHGKUQ"),
+    ("125", "Tb 125", "FGGZPRDYGBHV3AFOH5EXBPKDQY"),
+    ("126", "Tb 126", "22KFZT5KHNAAPNYPHCFYK2DZXU"),
+    ("145", "Tb 145", "3G54CQSW6RB6FNWBPTOHAUKHTE"),
+    ("144", "Tb 144", "UHIG6K4CANGTLKUB32BFPPLHKA"),
+    ("137A", "Tb 137 A", "A53RUQ76BRCDXHH6VCRW4UQYWI"),
+    ("151", "Tb 151", "O5ZWL4BU6VAJXLNKTOH3XSVDLA"),
+    ("101", "Tb 101", "OLCI3ICQTFDETAQ26FLLD6JQFU"),
+    ("156", "Tb 156", "2IQLG7L5S5ADBJ3UTWYBDGPMQY"),
+    ("155", "Tb 155", "N3M2DQQGC5AWFBGYDOIL6M6G4A"),
+    ("100", "Tb 100", "6IU6S6WE2VDJXAN5GH76EWOIEA"),
+    ("102", "Tb 102", "BMH7LRITC5CN7B2MKZ75AYCTEA"),
+    ("136A2", "Tb 136 A2", "HFGIR2U5EJBFROAETW4AQ3PNIE"),
+    ("136B", "Tb 136 B", "YZ437D6NRBC77AQJKMJA4ABNOM"),
+    ("149", "Tb 149", "HD2WQFQ6VNBYTJPMJIBVXJHRZM"),
+    ("150", "Tb 150", "HYWHYT7WVZC3FIQ2OSVW7YGIWA"),
+]
+NU_DIR = "BD--pNu-BM-EA-10477"
+# the parts (KEYs) of the papyrus: (first chapter token, last chapter token), contiguous, in order
+NU_PARTS = {"NU1": ("17", "18PS"), "NU2": ("1", "42"), "NU3": ("14", "37"), "NU4": ("79", "124"), "NU5": ("83", "64L"),
+            "NU6": ("2", "190"), "NU7": ("133", "189"), "NU8": ("44", "176"), "NU9": ("126", "102"), "NU10": ("136A2", "150")}
+
+
+def nu_chapters(key):
+    toks = [c[0] for c in NU_ORDER]
+    a, b = NU_PARTS[key]
+    return NU_ORDER[toks.index(a):toks.index(b) + 1]
+
+
+def _nu_title(key):
+    ch = nu_chapters(key)
+    return f"ספר המתים של נוּ, פרקים {ch[0][0]}–{ch[-1][0]}"
+
 # KEY: (project, Hebrew title, kind, file, selection)
 UNITS = {
     "AM": (P1, "מוּסַר אֲמֶנֶמוֹפֶּה", "aed", "Amenemope--pBM-EA-10474/5JO44VJZERAB3HQUHMFSMNXH6I.xml", None),
@@ -80,14 +245,26 @@ UNITS = {
     "HC": (P3, "ספר הפרה השמימית (קבר סֵתִי הראשון)", "aed", "Heavenly-Cow--KV17-Seti-I/WHEOIX5P5ZAVVFU4BGO6OWASV4.xml", None),
     "TB": (P4, "מעשה בשני האחים (פפירוס ד׳אורביני)", "aed", "Two-Brothers--pDOrbiney-BM-EA-10183/C6HNRC4K7FAYBHNDS3LV24EANI.xml", None),
     "WE": (P5, "סיפורי פפירוס וֶסְטְקָר", "aed", "Westcar--pBerlin-P-3033/J4EXGHLCL5DR7JHSPDWTVEKMDY.xml", None),
-    "BD": (P6, "ספר המתים, פרק 125 (פפירוס נוּ)", "aed", "BD-125--pNu-BM-EA-10477/FGGZPRDYGBHV3AFOH5EXBPKDQY.xml", None),
     "SI": (P7, "סיפור סִינוּהֶה", "aed-SI", ("Sinuhe--pBerlin-P-10499-R/QZCOZWR7YVAGNLPTMZIMHL6TYQ.xml",
                                            "Sinuhe--pBerlin-P-3022-B/JIPPXMXOTNCQDIKJIQVYWMKOWU.xml"), (1, 23)),
     "SS": (P8, "סיפור המלח הנטרף (פפירוס פטרבורג 1115)", "aed", "Shipwrecked-Sailor--pPetersburg-1115/QUFWZTEPLRE4NHKCPAJXGSAOSQ.xml", None),
+    "NU1": (P6, _nu_title("NU1"), "aed-NU", None, None),
+    "NU2": (P6, _nu_title("NU2"), "aed-NU", None, None),
+    "NU3": (P6, _nu_title("NU3"), "aed-NU", None, None),
+    "NU4": (P6, _nu_title("NU4"), "aed-NU", None, None),
+    "NU5": (P6, _nu_title("NU5"), "aed-NU", None, None),
+    "NU6": (P6, _nu_title("NU6"), "aed-NU", None, None),
+    "NU7": (P6, _nu_title("NU7"), "aed-NU", None, None),
+    "NU8": (P6, _nu_title("NU8"), "aed-NU", None, None),
+    "BD": (P6, "ספר המתים, פרק 125 (פפירוס נוּ)", "aed", "BD-125--pNu-BM-EA-10477/FGGZPRDYGBHV3AFOH5EXBPKDQY.xml", None),
+    "NU9": (P6, _nu_title("NU9"), "aed-NU", None, None),
+    "NU10": (P6, _nu_title("NU10"), "aed-NU", None, None),
+    "CH": (P6, "ספר המתים, פרק 175 (פפירוס חַע, טורינו 8438): נספח", "aed", "BD-175--pCha-Turin-8438/PHHTCP56KNFFXCKMBRE6SCOCGU.xml", None),
+    "MR": (P9, "המוסר למֶרִיכָּרֶע (פפירוס פטרבורג 1116A)", "aed-E", "Merikare--pPetersburg-1116A/YZSISQLOINELTMJDPXQ45O5IUU.xml", (1, 149)),
 }
 PROJECT_TITLES = {P1: "מוסר אמנמופה", P2: "בריאת העולם במצרים: מריכרע, התאולוגיה של מֹף, טקסטי הפירמידות",
                   P3: "ספר הפרה השמימית", P4: "מעשה בשני האחים", P5: "סיפורי פפירוס וסטקר",
-                  P6: "ספר המתים, פרק 125: הווידוי השלילי", P7: "סיפור סינוהה", P8: "סיפור המלח הנטרף"}
+                  P6: "ספר המתים של נוּ", P9: "המוסר למריכרע", P7: "סיפור סינוהה", P8: "סיפור המלח הנטרף"}
 # the variant witnesses a translator consults (printed by `data KEY --wit`)
 WITNESSES = {
     "AM": ["Amenemope--tLouvre-E-17173/J54RCGRIM5CYLB5T27RUS5G7D4.xml", "Amenemope--oKairo-SR-1840/WWBWAINUHFAXBCPM4JT7CR4EZA.xml",
@@ -98,6 +275,7 @@ WITNESSES = {
     "PT571": ["PT-571--West-wall-south/PFW6EIFCGRBQ5KWI44CEVLMVAI.xml"],
     "PT486": ["PT-486--East-wall/43NPRIN3UJGCJN7UOHQKGNYJLA.xml"],
     "BD": ["BD-125--pJuja-CG-51189/ZJ45MN6I2BEBXIOF4E2OH4PK64.xml", "BD-125--pMaiherperi-CG-24095/S4KP2OGKXFCPPK7Q5MHFEE6R7A.xml"],
+    "MR": ["Merikare--pMoskau-4658/Z3IP3NIFJVGTNIV47MWEMXKQJQ.xml", "Merikare--pCarlsberg-VI/FTVMO4SFGBHHBA4RTMZITSRNAM.xml"],
     "SI": ["Sinuhe--oAshmolean-1945.40-AOS/RP2F6BGNDBAARDBNDHGFSFPIEM.xml"],
 }
 # pWestcar 2,21–4,7: the fifth-day dossier's excerpt (WC). Its `>` lines are the dossier's, kept identical by verify
@@ -146,6 +324,20 @@ def rows(key):
                 continue
             c = l.rstrip("\n").split("\t")
             out.append({"label": c[0].strip(), "text": c[1].strip(), "words": [], "sents": [], "orig": c[0].strip()})
+    elif kind == "aed-NU":
+        for tk, title, tid in nu_chapters(key):
+            seen = set()
+            for ln in aed2md.parse(os.path.join(AED, NU_DIR, tid + ".xml")):
+                lab = ln["label"].strip()
+                m = re.match(r"^(\d+)\. (Stätte|Darstellung)$", lab)
+                if m:
+                    lab = ("S" if m.group(2) == "Stätte" else "D") + m.group(1)
+                lab = {"?": "x"}.get(lab, lab).replace(" ", "")
+                while lab in seen:   # a label the TLA repeats inside a chapter (Tb 7, Tb 149): b, c …
+                    lab += "b"
+                seen.add(lab)
+                out.append({"label": f"{tk}.{lab}", "text": " ".join(w["surf"] for w in ln["words"]), "words": ln["words"],
+                            "sents": ln["sents"], "orig": f"{title} {ln['label']}", "chapter": tk, "tid": tid})
     elif kind == "aed-SI":
         # Sinuhe: R 1–23 (pBerlin 10499; the beginning, lost in B), then B 1–311 (pBerlin 3022). B's Amherst
         # fragments (labels Am., An., …: the lost start of B, parallel to R) and its '?' line are left to the apparatus.
@@ -325,20 +517,20 @@ RESERVED = [
     (W + alt("פלס", "הפלס", "פלסים") + E, r"jws|jwsw|jws,w|jwsꜣ", "פֶּלֶס only for jws(w) 'the hand-balance' [equivalent Prov 16:11, Isa 40:12]"),
     (W + alt("מאזנים", "מאזני", "המאזנים", "מאזניו", "מאזניים") + E, r"mḫꜣ|mḫꜣy|mḫꜣ,t|mḫꜣ\(y\)", "מֹאזְנַיִם only for mḫꜣ.t 'the balance' [equivalent Lev 19:36, Prov 16:11, 11:1]"),
     (W + alt("שחד", "השחד", "שוחד") + E, None, "שֹׁחַד never: fqꜣ 'reward' = שָׂכָר (Ex 23:8, Deut 16:19 in the apparatus)"),
-    (W + alt("עור", "עיוור", "עוור", "העור", "העיוור", "העוור", "עורים", "עיוורים", "עוורים") + E, r"kꜣmn|kꜣmꜣn|špw|bꜣk|jnm|dḥr", "עִוֵּר (and `עוֹר` 'skin': jnm, dḥr) only for kꜣmn 'blind' [equivalent Lev 19:14, Deut 27:18]"),
+    (W + alt("עור", "עיוור", "עוור", "העור", "העיוור", "העוור", "עורים", "עיוורים", "עוורים") + E, r"kꜣmn|kꜣmꜣn|špw|bꜣk|jnm|dḥr|mskꜣ", "עִוֵּר (and `עוֹר` 'skin': jnm, dḥr) only for kꜣmn 'blind' [equivalent Lev 19:14, Deut 27:18]"),
     (W + alt("פסח", "הפסח", "פסחים", "פיסח") + E, r"qbqb", "פִּסֵּחַ only for qbqb 'lame' [equivalent Lev 21:18]"),
     (W + alt("גר", "הגר", "גרים", "לגר", "גרך") + E, None, "גֵּר never (Amenemope's stranger ḏrjḏrj = נָכְרִי; Deut 24:19 in the apparatus)"),
     (W + alt("גואל", "גאל", "גואלו", "גואלם", "הגואל", "גואלי", "גאלם") + E, None, "גֹּאֵל never (the wisdom corpus's reservation; Prov 23:11 in the apparatus)"),
     (W + alt("מוסר", "המוסר", "מוסרי", "מוסרו") + E, r"sbꜣ|sbꜣ,yt|sbꜣyt|sbꜣ,y\(t\)|sbꜣ\.yt|sbꜣ,tj", "מוּסָר only for sbꜣ.yt [equivalent Prov 1:8, 23:12]"),
     (W + alt("שלושים", "שלשים", "שלישים", "השלושים", "השלשים") + E, r"\b30\b|mꜥbꜣ|mꜥbꜣ,yt", "שְׁלֹשִׁים only for the number 30 / the Thirty (Prov 22:20)"),
     (W + r"(?<!ל)" + alt("חם", "החם", "חמים", "החמים", "חמם") + E,  # (?<!ל): `לחם` "bread" (+ prefixes) is not the hot man (AM 5.5)
-     r"šmm|šmw|\bšm\b|šmmt|srf", "the hot man: pꜣ šmm = הַחַם (always vocalized: Ham, Gen 9:18)"),
+     r"šmm|šmw|\bšm\b|šmmt|srf|(?<![\w,.-])ḫm(?![\w,-])", "the hot man (and the place name Ḫm, Letopolis `חֶם`: BD): pꜣ šmm = הַחַם (always vocalized: Ham, Gen 9:18)"),
     (W + alt("כסיל", "הכסיל", "כסילים", "אויל", "האויל", "אוילים", "נבל", "הנבל") + E, r"wḫꜣ|\bḫm\b|ḫm,w", "the fool words of Proverbs only for the Egyptian fool words: wḫꜣ = כְּסִיל, ḫm 'the ignorant' = הַבּוּר? (renderings §4.3)"),
     # --- Egyptian loanwords in Hebrew (renderings §4.2): only for their Egyptian source ---
     (W + alt("תבה", "תיבה", "התבה", "התיבה", "תבת", "תיבת", "תבתו", "תיבתו", "תבתך", "תיבתך") + E, r"ḏbꜣ|ḏb\(ꜣ\)|ḏbꜣ,t|ṯbt|db\.t", "תֵּבָה only for ḏbꜣ.t 'chest, coffin' [cognate: Egyptian loanword, Gen 6:14, Ex 2:3]"),
     (W + alt("יאור", "היאור", "יאורים", "היאורים", "יאורי", "יאוריהם", "יאר") + E, r"jtrw|jtr\b|jwtr|jtwr|jwtwr|jtr,w|jꜣtr|\bjtrw", "יְאֹר only for jtrw 'river' [cognate: Egyptian loanword, Gen 41:1, Ex 2:3]"),
     (W + alt("סוף", "הסוף", "בסוף", "כסוף") + E, r"ṯwf|ṯwfj|twfj", "סוּף only for ṯwfj 'papyrus thicket' [cognate: loanword, Ex 2:3]; 'end' = קֵץ / אַחֲרִית"),
-    (W + alt("אחו", "האחו", "באחו") + E, r"ꜣḫ\b|ꜣḫ,w|ꜣḫ-w|ꜣḫw", "אָחוּ only for ꜣḫ(w) 'reed meadow' [cognate: loanword, Gen 41:2]"),
+    (W + alt("אחו", "האחו", "באחו") + E, r"ꜣḫ\b|ꜣḫ,w|ꜣḫ-w|ꜣḫw|bꜣẖ|bꜣḫ", "אָחוּ only (the place Bꜣẖ.w `בָּאחוּ` licensed: BD 108, 125) for ꜣḫ(w) 'reed meadow' [cognate: loanword, Gen 41:2]"),
     (W + alt("פרעה", "פרעו", "לפרעה", "הפרעה") + E, r"pr-ꜥꜣ|pr-ꜥꜣ", "פַּרְעֹה only for pr-ꜥꜣ 'the Great House' [cognate]; nsw = מֶלֶךְ, ḥm=f = הוֹד מַלְכוּתוֹ"),
     (W + alt("חרטם", "חרטמים", "החרטם", "החרטמים", "חרטמי") + E, r"ḥr,j-tp|ḥry-tp|ḥr\(,j\)-tp|ḥrj-tp", "חַרְטֹם only for ḥry-tp [cognate: loanword, Gen 41:8, Ex 7:11]"),
     (W + alt("שש", "השש", "בשש") + E, r"šs\b|šs,w|\bšsr|šsꜣ", "שֵׁשׁ 'linen' only for šs [cognate] (always vocalized: 'six')"),
@@ -346,8 +538,9 @@ RESERVED = [
     (W + alt("טבעת", "הטבעת", "טבעות", "טבעתו") + E, r"ḏbꜥ,t|ḏbꜥ\.t|ḏbꜥt|ḫtm", "טַבַּעַת only for ḏbꜥ.t 'seal' [cognate: loanword, Gen 41:42]; ḏbꜥ 'finger' = אֶצְבַּע"),
     (W + alt("חותם", "החותם", "חתם", "חתום", "חתומה", "נחתם", "חותמו") + E, r"ḫtm|ḫtm,w|ḫtm\.t", "the root חתם only for ḫtm 'seal' [cognate: loanword, Gen 38:18]"),
     (W + alt("שיטה", "שיטים", "עצי שיטים") + E, r"šnḏ|šnḏ,t", "שִׁטָּה only for šnḏ.t 'acacia' [cognate: loanword, Ex 25:5]"),
-    (W + alt("קוף", "קופים", "הקוף", "הקופים") + E, r"\bgf\b|gjf|gfn|gwf|ꜥnꜥn", "קוֹף only for gf [cognate: loanword, 1 Kgs 10:22]; the baboon jꜥnꜥ = בַּבּוּן"),
+    (W + alt("קוף", "קופים", "הקוף", "הקופים") + E, r"\bgf\b|gjf|gfn|gwf|gꜣf|gfw|ꜥnꜥn", "קוֹף only for gf [cognate: loanword, 1 Kgs 10:22]; the baboon jꜥnꜥ = בַּבּוּן"),
     (W + alt("כתם", "הכתם", "כתמים") + E, r"ktm|kꜣ~tj~mt", "כֶּתֶם 'fine gold' only for ktm.t [cognate: loanword, Job 28:16, Lam 4:1] (AM 18.12)"),
+    (W + alt("שושן", "השושן", "שושנים", "שושנה", "השושנה", "שושנת", "שושני") + E, r"zšn|sšn|zššn|sššn", "שׁוֹשָׁן / שׁוֹשַׁנָּה only for zšn 'lotus' [cognate: loanword, Song 2:1–2, 1 Kgs 7:19] (NU5)"),
     (W + alt("זרת", "הזרת", "בזרת") + E, None, "זֶרֶת never: ḏr.t 'hand' = יָד"),
     # --- other corpora's reservations, carried over for safety ---
     (W + alt("צדק", "צדיק", "צדקה", "הצדיק", "הצדק", "צדקתו", "צדיקים") + E, None, "צֶדֶק / צַדִּיק never: mꜣꜥ.t = אֱמֶת, mꜣꜥ-ḫrw = אֲמִתִּי־קוֹל (renderings §4.1)"),
@@ -357,7 +550,7 @@ RESERVED = [
     # --- the tales and BD 125 (renderings §11; Round 5 run 6): scoped to TALES (the 4th element) ---
     # Gen 39 (the Two Brothers): the words of Joseph and Potiphar's wife only for their Egyptian counterparts
     (W + alt("שכב", "שכבה", "שכבי", "שכבו", "ישכב", "תשכב", "נשכב", "אשכב", "לשכב", "שוכב", "שוכבת", "שכבנו", "שכבתי", "משכב", "משכבה", "משכבו") + E,
-     r"sḏr|nk\b|nk\.|nk=|nkk|nkj|nki̯|ẖdr|ḫdr|wnm-ẖdr|sḏr\.t", "the root שכב only for sḏr 'lie, sleep' / nk 'copulate' [equivalent Gen 39:7, 12, 14 `שִׁכְבָה עִמִּי`]", TALES),
+     r"sḏr|tla150740\b|nk\b|nk\.|nk=|nkk|nkj|nki̯|ẖdr|ḫdr|wnm-ẖdr|sḏr\.t", "the root שכב only for sḏr 'lie, sleep' / nk 'copulate' [equivalent Gen 39:7, 12, 14 `שִׁכְבָה עִמִּי`]", TALES),
     (W + alt("בגד", "בגדו", "בגדים", "בגדיו", "הבגד", "הבגדים", "בגדי", "בגדה", "בגדיה") + E,
      r"ḥbs|dꜣj|mnḫ|šs\b|šsr|ḥꜣ,tj|sḏꜣ|dꜣjw|jfd|sšd|ḥbs\.w", "בֶּגֶד only for a garment word (ḥbs, dꜣjw, mnḫ.t …) [Gen 39:12–18: the garment left in her hand]", TALES),
     (W + alt("צחק", "לצחק", "צחוק", "מצחק", "צחקה", "צחקו", "ויצחק", "יצחק", "ותצחק") + E, r"sbṯ|zbṯ|sbt", "the root צחק only for sbṯ 'laugh' (Gen 39:14, 17 `לְצַחֶק בָּנוּ`; Gen 18:12–15)", TALES),
@@ -379,7 +572,7 @@ RESERVED = [
     (W + alt("בר", "ובר") + r"\s+" + alt("לבב", "לב") + E, None, "`בַּר לֵבָב` never (Ps 24:4)", TALES),
     (W + alt("נשך", "בנשך", "הנשך", "תרבית") + E, None, "נֶשֶׁךְ / תַּרְבִּית never (Ps 15:5; Lev 25:36–37)", TALES),
     (W + alt("אוני", "באוני", "בעוני") + E, None, "`בְאֹנִי` never (Deut 26:14)", TALES),
-    (W + alt("בער", "ביער", "בערתי", "ביערתי", "תבער", "יבער", "בוער", "בוערת", "בערה", "הבערה") + E, None, "the root בער never (Deut 26:13–14 `בִּעַרְתִּי`): the fire / removal verbs by their own sense", TALES),
+    (W + alt("בער", "ביער", "בערתי", "ביערתי", "תבער", "יבער", "בוער", "בוערת", "בערה", "הבערה") + E, r"(?<![\w,.-])ḫm(?![\w,-])", "the root בער never (Deut 26:13–14 `בִּעַרְתִּי`): the fire / removal verbs by their own sense", TALES),
     # Deut 8:8 (Sinuhe's land of Yaa): the seven species only for their Egyptian words
     (W + alt("תאנה", "תאנים", "התאנים", "תאנתו", "תאני") + E, r"dꜣb|dꜣb\.w|nḥ,t|nh,t", "תְּאֵנָה only for dꜣb 'fig' [equivalent Deut 8:8]", TALES),
     (W + alt("גפן", "הגפן", "גפנים", "ענבים", "הענבים", "ענב", "ענבי") + E, r"jꜣrr|jꜣrr,t|jrp|jꜣ~jr", "גֶּפֶן / עֲנָבִים only for jꜣrr.t 'grapes, vine' [equivalent Deut 8:8]", TALES),
@@ -387,7 +580,7 @@ RESERVED = [
     (W + alt("זית", "זיתים", "הזית", "הזיתים", "זיתי") + E, r"ḏd,t|ḏd\.t|ḏdt|bꜣq|bꜣq,t|\bbq\b|bq,t", "זַיִת only for ḏd.t / bꜣq 'olive' [equivalent Deut 8:8]", TALES),
     (r"(?<![א-ת])ו?" + alt("זבת", "זבה") + E, None, "`זָבַת חָלָב וּדְבָשׁ` never (Ex 3:8)", TALES),
     # the serpent (the dossier rule: `נָחָשׁ` the comparison word for every culture's serpent)
-    (W + alt("נחש", "נחשים", "הנחש", "הנחשים", "נחשי", "נחשה") + E, r"ḥfꜣ|ḥfꜣw|ḥfꜣ,w|ꜥꜣpp|ḏdf|nḥꜣ|nꜣw|ꜥpp|sꜣ-tꜣ|ḏd\b|ḏd,t|ꜥrꜥr", "נָחָשׁ only for a serpent word (ḥfꜣw …) [equivalent Gen 3:1, Ex 7:9–12]", TALES),
+    (W + alt("נחש", "נחשים", "הנחש", "הנחשים", "נחשי", "נחשה") + E, r"ḥfꜣ|ḥfꜣw|ḥfꜣ,w|ḥfy|ḥfj|ꜥꜣpp|ḏdf|nḥꜣ|nꜣw|ꜥpp|sꜣ-tꜣ|ḏd\b|ḏd,t|ꜥrꜥr", "נָחָשׁ only for a serpent word (ḥfꜣw …) [equivalent Gen 3:1, Ex 7:9–12]", TALES),
 ]
 
 V = NIQ
@@ -401,7 +594,7 @@ TRAPS = [
     (RW + r"(?:גב)" + RE_, r"gb\b|gbb", "Geb must be vocalized גֶּבּ ('back')"),
     (RW + r"(?:מין)" + RE_, r"mnw\b|mnw\{tj\}|mnw", "Min must be vocalized מִין ('kind', Gen 1:21 `לְמִינֵהוּ`)"),
     (RW + r"(?:חם|החם)" + RE_, r"šmm", "the hot man must be vocalized הַחַם (Ham, Gen 9:18; Ps 105:23 `בְּאֶרֶץ חָם`)"),
-    (RW + r"(?:אלים|אלי|אלה|אלת|אלתו|אלתי)" + RE_, r"nṯr", "'gods' / 'god of' / 'goddess' must be vocalized אֵלִים / אֵלֵי / אֵלָה / אֵלַת"),
+    (RW + r"(?:אלים|אלי|אלה|אלת|אלתו|אלתי)" + RE_, r"(?<![-\w])nṯr", "'gods' / 'god of' / 'goddess' must be vocalized אֵלִים / אֵלֵי / אֵלָה / אֵלַת"),
     (RW + r"(?:און)" + RE_, r"jwnw|jwn,w|ꜣwnw", "Heliopolis must be vocalized אוֹן ('strength', 'iniquity')"),
     (RW + r"(?:מף|נף)" + RE_, r"mn-nfr|ḥw,t-kꜣ-ptḥ|jnb-ḥḏ|jnb.w-ḥḏ", "Memphis must be vocalized מֹף"),
     (RW + r"(?:בא)" + RE_, r"\bbꜣ\b(?!,)|bꜣ=|bꜣ\.", "the ba must be vocalized בָּא ('came')"),
@@ -419,12 +612,20 @@ TRAPS = [
 FORMULAS = [
     (r"^ḥw,t mḥ-1?\d\.t$|^ḥw,t mḥ-2\d\.t$|^ḥw,t mḥ-30\.t$|ḥw,t tp\.t", r"(?:^|\s)הבית ה", "ḥw.t mḥ-N.t = `הַבַּיִת הָ…` (§6.1; the chapter heading, 'house')"),
     (r"(?:^|\s)m-jri̯(?=\s|$)", r"(?:^|\s)[ו]?אל ", "m-jri̯ X = `אַל` + future (§6.2)"),
-    (r"\bꜣḫ\b.*(?<![-\w])r(?![-\w])", r"(?:^|\s)[ו]?מוטב ", "ꜣḫ X r Y (better X than Y) = `מוּטָב X מִ־Y` (§6.3)"),
+    (r"\bꜣḫ\b(?![,.]).*(?<![-\w])r(?![-\w])", r"(?:^|\s)[ו]?מוטב ", "ꜣḫ X r Y (better X than Y) = `מוּטָב X מִ־Y` (§6.3)", set(UNITS) - BOOK),
     (r"\bpꜣ šmm\b|\bpꜣyw =k šmm\b", r"(?:^|\s)[ו]?[ל]?(?:ה)?חם(?:\s|$|[,.;:])", "pꜣ šmm = `הַחַם` (§6.4)"),
     (r"\bgr mꜣꜥ\b", r"(?:ה)?שותק (?:ה)?(?:אמיתי|באמת)", "gr mꜣꜥ = `הַשּׁוֹתֵק הָאֲמִתִּי` (§6.4)"),
     (r"\bn ḫpr\.t\b|\bn ḫp\[?r\]?\.t\b", r"(?:^|\s)[ו]?טרם ", "n ḫpr.t X = `טֶרֶם נִהְיָה X` (§6.5)"),
     (r"\bḏ\(d\)-mdw\b|\bḏd-mdw\b", r"(?:^|\s)[ו]?(?:דברים לאמר|נאמר)|אמירה", "ḏd-mdw = `דְּבָרִים לֵאמֹר:` (§6.5)"),
-    (r"^j \S.* pri̯ m \S+.* n \S", r"^הו .*היוצא", "BD 125: j X pri̯ m Y n sḏm=j Z = `הוֹ X, הַיּוֹצֵא מִ־Y: לֹא …` (§11.5.1)"),
+    (r"^j \S.* pri̯ m \S+.* n \S", r"^הו .*היוצא", "BD 125: j X pri̯ m Y n sḏm=j Z = `הוֹ X, הַיּוֹצֵא מִ־Y: לֹא …` (§11.5.1)", {"BD"}),
+    # --- the Book of the Dead of Nu, BD 175 (renderings §12.4; Round 6 run 2) ---
+    (r"ḏd-mdw jn\b", r"דברים לאמר,? בפי", "ḏd-mdw jn X = `דְּבָרִים לֵאמֹר, בְּפִי X:` (§12.4.2)", BOOK),
+    (r"(?<![\w-])mꜣꜥ-ḫrw", r"אמית\S*[־ ]?הקול|אמית\S*[־ ]קול", "mꜣꜥ-ḫrw = `אֲמִתִּי־הַקּוֹל` (§4.1, §12.4.3)", BOOK | {"MR"}),
+    (r"smꜣꜥ-ḫrw", r"(?:אימת|מאמת|יאמת|לאמת|אאמת|תאמת|מאמתים|אימתו|אימתת)\S* .*קול", "smꜣꜥ-ḫrw (X) = `אִמֵּת אֶת קוֹל X` (§12.4.3)", BOOK),
+    (r"ẖr-nṯr|ẖr,t-nṯr", r"חלקת[־ ]האל", "ẖr(.t)-nṯr = `חֶלְקַת־הָאֵל` (the 2026-10-30 harmonization; §12.4.4)", BOOK | {"MR"}),
+    (r"šs-mꜣꜥ", r"נכון באמת", "šs-mꜣꜥ (ḥḥ n zp) = `דָּבָר נָכוֹן בֶּאֱמֶת, אַלְפֵי אֲלָפִים פְּעָמִים` (BD 115; §12.4.6)", BOOK),
+    (r"^(?:ky )?rʾ n tm\b", r"לחש (?:אחר )?לבלי ", "rʾ n tm X = `לַחַשׁ לִבְלִי` + infinitive (§12.4.1)", BOOK),
+    (r"^ky rʾ\b", r"(?:^|\s)לחש אחר", "ky rʾ = `לַחַשׁ אַחֵר` (§12.4.1)", BOOK),
 ]
 
 
@@ -460,9 +661,10 @@ def check_line(key, lab, heb, body, fixed, out):
     bad = 0
     plain = strip_marks(heb)
     # whole words that a gate's prefix class misreads (TB 6,3 `לברוח` "to flee", 8,7 `מרוח` "smeared"): not the gated word
-    plain = re.sub(r"(?<![א-ת])[ובלכה]?(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי|שמחה|שמחת|שמחתי|שמחתו|השמחה)(?![א-ת])", " ", plain)   # + BD 90–91, 111; SI B70 (`שמחה` ≠ ש־מחה)
+    plain = re.sub(r"(?<![א-ת])[ובלכה]?(?:לברוח|מרוח|מרוחה|משקוף|המשקוף|משקופי|שמחה|שמחת|שמחתי|שמחתו|השמחה|משיט|משיטה|משיטים|המשיטים|להשיט|השיט|לוחם|לוחמים|הלוחמים|הלוחם|ללוחמים|מושבות|המושבות|במושבות|למושבות|כתיבה|הכתיבה|בכתיבה|לכתיבה|כתיבת)(?![א-ת])", " ", plain)   # + BD 90–91, 111; SI B70 (`שמחה` ≠ ש־מחה)
     if re.search(r"ḥmsi̯|ḥms\b|ḥmsj|ḥms\.", license_text(key, lab)):   # `לשבת` "to sit" (ḥmsj), not the root שבת (WE 3,8)
         plain = re.sub(r"(?<![א-ת])ו?לשבת(?![א-ת])", " ", plain)
+    plain = re.sub(r"(?<![א-ת])[ובלמהכש]?רא־סטאו(?![א-ת])", " ", plain)   # Rosetau (Rʾ-sṯꜣ.w), not the root ברא (NU1 18.34)
     src = plain_src((row(key, lab) or {}).get("text", ""))
     for ent in RESERVED:
         rx, allow, why = ent[:3]
@@ -477,12 +679,19 @@ def check_line(key, lab, heb, body, fixed, out):
         if re.search(rx, heb) and lic(cond, key, lab):
             out.append(f"UNVOCALIZED {key} {lab}: {why}\n    {heb}")
             bad += 1
-    for srx, hrx, what in FORMULAS:
+    for ent in FORMULAS:
+        srx, hrx, what = ent[:3]
+        if len(ent) > 3 and key not in ent[3]:
+            continue
         if re.search(srx, src) and not re.search(hrx, nopunct(plain)):
             if "[סטייה מן הנוסחה" in body:
                 continue
             out.append(f"FORMULA {key} {lab}: {what}\n    {heb}\n    src: {src}")
             bad += 1
+    if key in NU_KEYS | {"CH"} and re.match(r"^\S+\.1$|^1$", lab) and re.match(r"^rʾ n ", src) and not re.match(r"^לחש", nopunct(plain)) \
+            and "[סטייה מן הנוסחה" not in body:
+        out.append(f"FORMULA {key} {lab}: a chapter title rʾ n X = `לַחַשׁ לְ־X` (§12.4.1)\n    {heb}\n    src: {src}")
+        bad += 1
     if (key, lab) in fixed:
         fh = fixed[(key, lab)][1]
         if nopunct(strip_marks(fh)) != nopunct(plain) and "[סטייה מן הקבוע" not in body:
@@ -535,6 +744,40 @@ def check_dossier_wc(heb, body):
             bad += 1
     n = len([l for l in dossier_wc() if l in heb])
     print(f"WE: {n} line(s) shared with the dossier's WC checked" + (f"; pending dossier revisions: {', '.join(pend)}" if pend else ""))
+    return bad
+
+
+DOSSIER_MK = os.path.join(ROOT, "מיתוסים-אוגריתיים", "3-תיק-היום-החמישי", "annotated-MK.rtl.md")
+
+
+def gt_lines(path):
+    """{label: `>` line} of any annotated file."""
+    out, cur = {}, None
+    if not os.path.exists(path):
+        return out
+    for l in open(path, encoding="utf-8"):
+        l = l.rstrip("\n")
+        m = re.match(r"^### (\S+)\s*$", l)
+        if m:
+            cur = m.group(1)
+        elif cur and l.startswith("> "):
+            out[cur] = l[2:].strip()
+            cur = None
+    return out
+
+
+def check_excerpt(name, heb, other, other_name):
+    """An excerpt kept identical to the whole (guidelines §1): every label of `other` present in `heb` must be equal,
+    byte for byte (a revision goes to both files at once)."""
+    bad, n = 0, 0
+    for lab, oh in other.items():
+        if lab not in heb:
+            continue
+        n += 1
+        if heb[lab] != oh:
+            print(f"{name} {lab}: differs from {other_name}\n    {other_name}: {oh}\n    {name}: {heb[lab]}")
+            bad += 1
+    print(f"{name}: {n} line(s) shared with {other_name} checked")
     return bad
 
 
@@ -593,6 +836,10 @@ def verify(keys, strict=False):
             print(m)
         if key == "WE":
             bad += check_dossier_wc(heb, body)
+        if key == "MK":   # Merikare E 130–136: the fifth-day dossier's excerpt (MK), identical to project 2's
+            bad += check_excerpt("MK", heb, gt_lines(DOSSIER_MK), "the dossier's MK")
+        if key == "MR":   # Merikare whole: E 130–138 = project 2's MK (the hymn), identical
+            bad += check_excerpt("MR", heb, gt_lines(annotated_path("MK")), "project 2's MK")
         tr = translation_lines(key)
         if tr is not None:
             tl, tseq = tr
@@ -708,7 +955,10 @@ def cmd_tr(key, a=None, b=None):
         for r in _span(key, a, b):
             print(f"[{r['label']}] {de.get(r['label'], '(none)')}")
         return
-    fs = UNITS[key][3] if isinstance(UNITS[key][3], tuple) else (UNITS[key][3],)
+    if UNITS[key][2] == "aed-NU":
+        fs = tuple(f"{NU_DIR}/{c[2]}.xml" for c in nu_chapters(key))
+    else:
+        fs = UNITS[key][3] if isinstance(UNITS[key][3], tuple) else (UNITS[key][3],)
     trs = {}
     for f in fs:   # Sinuhe: R and B (their sentence ids are distinct)
         trs.update(aed2md.translations(os.path.join(AED, f)))
@@ -807,8 +1057,10 @@ def cmd_gates():
     for rx, cond, why in TRAPS:
         print(f"  {rx}  [{cond}]  {why}")
     print("\nFORMULAS:")
-    for s, h, w in FORMULAS:
-        print(f"  {s}  →  {h}   ({w})")
+    for ent in FORMULAS:
+        s, h, w = ent[:3]
+        scope = f" [only {', '.join(sorted(ent[3]))}]" if len(ent) > 3 else ""
+        print(f"  {s}  →  {h}   ({w}){scope}")
 
 
 def cmd_selftest():

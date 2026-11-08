@@ -31,5 +31,28 @@ Words used only in this project (the corpus `../renderings.md` binds first). Tab
 | *lu₂-ki-inim-ma* | `עֵד` | ↔ שמות כ:יב | | 3.118 |
 | *nu-banda₃*; *aĝrig*; *ugula*; *niĝir* | `מְפַקֵּחַ`; `הַמְּמֻנֶּה`; `מְנַהֵל־עֲבוֹדָה`; `כָּרוֹז` | *aĝrig* ↔ "אשר על הבית" | | 1.65, 1.33, 1.97, 1.32 |
 | *ra-gaba*; *guru₇*; *en₃-du*; *šembi* | `צִיר` ★; `כְּרִי`; `זִמְרָה` (`זִמְרָתָהּ`); `פּוּךְ` ★ | *ra-gaba* [equivalent] ↔ משלי יג:יז; כה:יג; *guru₇* [cognate via *karû*]; *šembi* [equivalent] ↔ מלכים ב ט:ל; ירמיהו ד:ל | harmonization 2026-10-21 (were `רוכב (שליח)`, `אסם`, `זמירות`, `כָּחָל`); `צִיר` and `פּוּךְ` always vocalized | 2.72 (A129); 1.146 (D14); 1.70 (B19); 1.150 (D22) |
+| *nam-tar* (noun); *du-lum* | `גּוֹרָל`; `עָמָל` | | Round 6; the laments `גורלה שנגזר`; *nam tar* (verb) `גזר גורל` | 2.2–2.14, 3.176; 2.14 |
+| *ušur*; *zu-a*; *ma-la* | `שָׁכֵן`; `מַכָּר`; `רֵעָה` | | | 2.3, 2.8; 2.7; 2.63 |
+| *ĝarza*; *me*; *ki-gub* | `פּוּלְחָן`; `הַ־מֶה` ★; `מקום עמידה` | | the lament vocabulary of 2.1 | 2.1 |
+| *gala*; *nar*; *mu₇-mu₇*; *um-mi-a*; *kindagal*; *a-a* | `מְקוֹנֵן`; `זמר`; `לַחַשׁ`; `אוּמָּן`; `גַּלָּב`; `"אָ־אָ"` | | the scribe and the singer, the lamentation priest | 2.36–2.57, 2.97–2.106 |
+| *za-pa-aĝ₂*; *en₃-du*; *šeg₁₁ gi₄* | `הֶמְיָה`; `זִמְרָה`; `השמיע יללה` | | | 2.41, 2.57; 2.39; 2.69, 2.70, 2.105 |
+| *{na₄}gug*; *za-gin₃* | `אֹדֶם`; `סַפִּיר` | *za-gin₃* [equivalent] ↔ שמות כד:י | | 2.45–2.46 |
+| *si-ĝar*; *ki-nu₂*; *kiri₆* | `בְּרִיחַ`; `מִשְׁכָּב`; `גַּן` | gates licensed | | 2.61B; 2.77, 3.163; 2.c13, 3.166 |
+| *umuš*; *ĝalga* | `תְּבוּנָה`; `שיקול דעת` | | two words | 2.64; 2.124 |
+| *kug-zu*; *igi-ĝal₂* | `חָכָם`; `נָבוֹן` | *kug-zu* ↔ משלי ג:ז | `חכם` only *kug-zu* | 2.70, 2.115, 3.11; 3.162 |
+| *ur-maḫ*; *piriĝ*; *peš₂*; *niĝ₂-gilim*; *ka₅-a*; *ur(-gir₁₅)* | `אַרְיֵה`; `לָבִיא`; `עכבר`; `חולדה`; `שׁוּעָל`; `כֶּלֶב` | | | 2.101; 3.70, 3.82; 2.c4, 2.d7; 3.82 |
+| *lag* | `רגב` / `גוש` | | by sense (open decision 4) | 2.88, 3.154 / 2.104, 3.117 |
+| *ur₁₁* (*uru₄*) | `חרש` (harmonization 2026-11-09, the creation corpus's binding *uru₄* `חָרַשׁ`; was `זרע`); `זרע` kept only where the object is grain (c2 A32) | | | 2.17, 2.20, 2.91, 2.140, 3.74 |
+| *me-te* | `עֲדִי` | | temple corpus; ETCSL "glory" | 2.c13–2.d1 |
+| *niĝ₂-gig X* (not a god) | `תועבת X` / `תועבה היא` | ↔ משלי יא:א | the plough, the necromancer, one's god; 3.161 | 3.14, 3.161, 3.168, 3.169 |
+| *eme sig gu₇* | `אכל קֻרְצֵי` | [cognate via *karṣī akālu*] ↔ דניאל ג:ח | | 3.18 |
+| *lu₂-gidim-ma* | `איש־רוחות־המתים` | [equivalent] ↔ שמואל א כח:ז | | 3.168 |
+| *mar-tu*; *elam*; *uri* | `מַרְתּוּ`; `עֵילָם`; `אוּרִי` (=אכד) | *mar-tu* [cognate via *Amurru*] ↔ בראשית טו:טז | | 3.140; 3.138–3.139; 3.81 |
+| *dam-gar₃*; *aĝrig*; *ugula*; *saĝĝa* | `תַּגָּר`; `הַמְּמֻנֶּה`; `מְנַהֵל־עֲבוֹדָה`; `סַנְגָּה` | | | 3.64–3.66; 3.60; 3.62, 3.89, 3.91 |
+| *ga-til₃*; *kadra*; *kug-du₈* | `נדר`; `מתנה`; `כסף פדיון` | *kadra* [divergence] ↔ שמות כג:ח | | 3.37, 3.107; 3.123; 3.38 |
+| *kur* (netherworld); *abula* | `הארץ`; `שער` | | netherworld corpus | 3.31; 3.29 |
+| *nam … kud*; *gab₂-bu*; *ma* "go" | `גורל חתך`; `זרועך האחרת`; `תלכי` | | forced by the gates: open decisions 11–13 (proposals) | 3.59; 3.123; 2.69 |
 
 2026-10-21 harmonization (the lead's cross-corpus decisions; `../renderings.md` §9): the row above; kept: *niĝ₂-gig* `תּוֹעֵבָה` (also *an-zil*'s, in the laments), *šudu₃* `בְּרָכָה` (B64), *uĝ₃* by sense.
+
+2026-11-07 (Round 6, run 4): the rows from *nam-tar* on were added when collections 2 and 3 were completed (`project.md`, "Part P2–P3").

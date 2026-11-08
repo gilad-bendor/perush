@@ -31,6 +31,10 @@ Usage (from any directory; run with python3 -I):
   kings_tools.py data EA FROM TO <out>    a translator's line-data file: ETCSL transliteration, ORACC lemma + morph,
       the ETCSL translation paragraph at its first line, and Mittermayer 2009's German line (from the OCR; check the
       PDF page before relying on it).
+  kings_tools.py data LC|LZ|ES FROM TO <out>  the Uruk cycle (Round 6 run 3): ETCSL line, ETCSL's own lemmas, the ORACC
+      lemma + morph aligned by content (LC, LZ) or each verb's parses from the epsd2-literary form index (ES), the
+      near-identical lines of all four poems (EA LC LZ ES) with their Hebrew, ETCSL's English paragraph.
+  kings_tools.py skel KEY FILE FROM TO  append a skeleton (`### label`, the ETCSL line, `> טרם תורגם`) to FILE.
   kings_tools.py pars KEY FROM TO         for each line of the range, the other lines of the text with the same or a
       near-identical transliteration (ratio >= 0.75) and the Hebrew already given to them: the "earlier copies" table
       for a translator of a repeated passage.
@@ -71,6 +75,21 @@ CL_CHAPTERS = [
 ]
 PROJECTS['CL'] = dict(dir='4-אגדת-כותה', annotated=[f'annotated-{c}.rtl.md' for c, _, _ in CL_CHAPTERS], base='ebl',
                       chapters=CL_CHAPTERS, textno='12')
+# The Uruk cycle (Round 6 run 3, 2026-11-07): the other three Enmerkar–Lugalbanda poems, ETCSL from the live web page
+# (tools/etcslhtml2md.py; ETCSL's English and ETCSL's own lemmas per word in lemmas.tsv); ORACC lemma + morph where
+# epsd2-literary has the text (Q000367, Q000368; Q000370 is catalogued without a text: the form index serves ES).
+_E = 'ETCSL/1.8.2.{0}--{1}/'
+for _k, _d, _n, _slug, _files, _q in (
+        ('LC', '5-לוגלבנדה-במערת-ההר', 1, 'Lugalbanda-in-the-Mountain-Cave', ['annotated-1.rtl.md', 'annotated-2.rtl.md'],
+         'ORACC/epsd2-literary--Q000367--Lugalbanda-in-the-Mountain-Cave/Q000367--lemmatised-morph.md'),
+        ('LZ', '6-לוגלבנדה-וציפור-האנזוד', 2, 'Lugalbanda-and-the-Anzud-Bird', ['annotated-1.rtl.md', 'annotated-2.rtl.md'],
+         'ORACC/epsd2-literary--Q000368--Lugalbanda-and-the-Anzud-Bird/Q000368--lemmatised-morph.md'),
+        ('ES', '7-אנמרכר-ואנסוחגירנה', 4, 'Enmerkar-and-En-suhgir-ana', ['annotated.rtl.md'], None)):
+    PROJECTS[_k] = dict(dir=_d, annotated=_files, base='etcsl', etcsl=_E.format(_n, _slug) + 'transliteration.md',
+                        etcsl_tr=_E.format(_n, _slug) + 'translation.md', lemmas=_E.format(_n, _slug) + 'lemmas.tsv',
+                        oracc=_q, cycle=True)
+PROJECTS['EA']['cycle'] = True
+CYCLE = ['EA', 'LC', 'LZ', 'ES']
 EXTRA_GREP_AKK = ['אפוס-גילגמש/1-הנוסח-הבבלי-התקני/annotated-*.rtl.md', 'אפוס-גילגמש/2-הנוסח-הבבלי-הקדום/annotated-*.rtl.md',
                   'סיפורי-המבול-המסופוטמיים/*/annotated*.rtl.md', 'סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/annotated-*.rtl.md',
                   'סיפורי-הבריאה-המסופוטמיים/2-טקסטי-בריאה-ועדן/annotated-1-Adapa.rtl.md',
@@ -213,6 +232,34 @@ RESERVED_CL.update({
 for _k in [k for k in RESERVED_CL if '(גן|גנה|' in k]:
     RESERVED_CL[_k] = RESERVED_CL[_k] + [r'magan']          # Magan = מָגָן (CL1, SB.60)
 RESERVED['CL'] = RESERVED_CL
+# The Uruk cycle (renderings.md §12.4): Enmerkar's gates, plus the cycle's own (licensed by the transliteration + ETCSL
+# and ORACC lemmas: licence()).
+RESERVED_CY = dict(RESERVED_COMMON)
+RESERVED_CY.update({
+    B + P + r'(נשר|נשרים|הנשר|נשרי)' + E: [r'ḫu-ri₂-in|hu-ri₂-in|hurin\['],
+    B + P + r'(מלחש|המלחש|מלחשים|מלחשת)' + E: [r'maš-maš|mašmaš'],      # = Akk. *mašmaššu* (wisdom, Maqlû)
+    B + P + r'(זקן|זקנה|זקנים|זקני|זקנות)' + E: [r'ab-ba|šu-gi|um-ma|bur-šu-um|abba\[|šugi\[|umma\[|buršum'],
+    B + P + r'(גורל|גורלו|גורלך|גורלי|גורלות)' + E: [r'nam-tar|\bnam\b|namtar'],
+    B + P + r'(ריח|ריחם|ריחו|ריחה)' + E: [r'(^|[\s-])ir(-|\s|$)|ir-si-im|ir\[|ir-ra|ir-bi|ir-ba'],
+    B + P + r'(מזבח|מזבחות|מזבחי|ניחוח|הניחוח)' + E: [],                    # Gen 8:20–21: the apparatus only
+    B + P + r'(חרטום|חרטומים|חרטמי|להטים|לטים|בלטיהם|בלהטיהם)' + E: [],      # Exod 7:11, 22: the apparatus only
+    B + r'ו?ה?ל?(כשף|כשפים|מכשף|מכשפה|מכשפים|כישוף|כשפיו|כשפיה)' + E: [],      # Akk. *kašāpu* family only (Maqlû)
+    B + P + r'(סולם|סלם)' + E: [],
+    B + r'ו?ה?ל?(הבדיל|הבדילו|יבדיל|מבדיל|נבדל|נבדלו|הבדלה|להבדיל|בדל)' + E: [],  # Gen 1:4–7 (`בדיל` "tin" allowed)
+    B + P + r'(צלם|צלמים|צלמך|צלמי|צלמיך|צלמו|צלמיו)' + E: [r'ṣalm'],     # Sum. *alan* = `פסל` (EA, Gudea, laments; §12.6.3)
+    B + P + r'(דמות|דמותו|כדמות|בדמות)' + E: [],                               # Gen 1:26: the apparatus only
+})
+for _k in list(RESERVED_CY):   # homographs (LC2): *ur₅* "liver" = כָּבֵד (DB E16, laments); *sun₄* "beard" = זָקָן (HB 74, EA 209)
+    if 'כבד|כבדה' in _k:
+        RESERVED_CY[_k] = RESERVED_CY[_k] + [r'ur\[liver']
+    if 'זקן|זקנה' in _k:
+        RESERVED_CY[_k] = RESERVED_CY[_k] + [r'sun₄|sun\[beard']
+    if 'ארור|ארר' in _k:                  # Aruru `אֲרוּרוּ` (ES 94; always vocalized: TRAPS)
+        RESERVED_CY[_k] = RESERVED_CY[_k] + [r'aruru|a-ru-ru']
+    if 'ברך|ברכ' in _k:                    # *šudu₃* (ETCSL's spelling of *šud₃*; ES 258, Gudea's formula)
+        RESERVED_CY[_k] = RESERVED_CY[_k] + [r'šudu₃']
+for _k in ('LC', 'LZ', 'ES'):
+    RESERVED[_k] = RESERVED_CY
 
 TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     'אותו': ('Utu (אוּתוּ)', r'\{d\}utu\b'), 'איננה': ('Inana (אִינַנָּה)', r'inana|inanna'),
@@ -224,10 +271,14 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     # Etana (renderings §10.1): names that read as Hebrew words unvocalized
     'אתנה': ('Etana (אֵתָנָה; "I will give")', r'etan'), 'שמש': ('Šamaš / the sun (שַׁמַשׁ / שֶׁמֶשׁ)', r'šamaš|šamš'),
     'אנו': ('Anu (אָנוּ; "we")', r'(^|[\s|(\[])(anu|anim|ānim|ani|anum)\b'), 'סין': ('Sîn (סִין; the desert of Sin)', r'sîn|sīn'),
-    'שכן': ('Šakkan (שַׁכַּן)', r'šakkan'), 'ברו': ('*bēru* (בֵּרוּ)', r'bēr[au]\b|bēri\b'), 'אט': ('*eṭemmu* (אִט; "slowly")', r'eṭemm'),
+    'שכן': ('Šakkan (שַׁכַּן)', r'šakkan|šakan₂|\{d\}šakan'), 'ברו': ('*bēru* (בֵּרוּ)', r'bēr[au]\b|bēri\b'), 'אט': ('*eṭemmu* (אִט; "slowly")', r'eṭemm'),
     # the Cuthaean Legend (renderings §11.1)
     'מגן': ('Magan (מָגָן)', r'magan'), 'מלוחה': ('Meluḫḫa (מֵלוּחָה)', r'meluhh'), 'כותה': ('Kutha (כּוּתָה)', r'kut[eiû]'),
     'בלת': ('Bēlet-ilī (בֵּלֶת־אִילִי)', r'bēlet'), 'נרם': ('Narām-Sîn (נָרָם־סִין)', r'narām'),
+    # the Uruk cycle (renderings §12.1)
+    'שרא': ('Šara (שַׁרָא)', r'šara₂|šara\b'), 'שרה': ('Šara (שַׁרָא; "Sarah")', r'šara₂|šara\b'),
+    'ארש': ('Ereš (אֵרֵשׁ; "betroth")', r'ereš\{ki\}|ereš₂|\beresh?\b'), 'ארורו': ('Aruru (אֲרוּרוּ)', r'aruru'),
+    'סואן': ('Suen (סוּאֵן; "noisy")', r'\{d\}suen|suen-'), 'זבו': ('Zabu (זַבּוּ; "they flowed")', r'za-bu'),
     'ציר': ('*ra-gaba* (צִיר)', r'ra₂?-gaba'), 'צירי': ('*ra-gaba* (צִירִי)', r'ra₂?-gaba'), 'צירה': ('*ra-gaba* (צִירָהּ)', r'ra₂?-gaba'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
@@ -281,6 +332,25 @@ FORMULAS = {'EA': [
     (r'kīam aqbi ana libbīya umma lū anākū-ma', r'^כך אמרתי אל לבי, לאמור – אני עצמי:$', '"thus I said to my heart" (§11.6.1)'),
     (r'ina libbīšunu ištēn balṭu ul ittūra', r'ומתוכם אחד חי לא שב', '"not one returned alive" (§11.6.1)'),
 ]}
+
+
+# The Uruk cycle shares Enmerkar's formulas (the messenger, the journey, the glad foot); its own are added in §12.3
+# (FORMULAS_CY: fixed by the first copy, then checked in every text of the cycle).
+FORMULAS_CY = [  # renderings.md §12.6 (fixed by the first copy)
+    (r'an-še₃ igi ḫe₂-em-ši-ib-il₂', r'השמימה – עיניים אכן נשא', 'LC the prayer 1 (§12.6.1)'),
+    (r'^a-a tud-da-na-gin₇ er₂ ba-ši-in-pad₃$', r'^כמו אל אביו מולידו – דמעות אליו מצא;$', 'LC the prayer 2 (§12.6.1)'),
+    (r'šu sag₉-sag₉-ga-ni ḫur-ru-um kur-ra-kam mu-na-ab-zi', r'^את ידיו הנאות – במערת ההר – אליו מרים:$', 'LC the prayer 3 (§12.6.1)'),
+    (r'er₂-(ra-)?na šu ba-an-ši-in-ti', r'את דמעותיו לקח', 'LC "accepted his tears" (§12.6.1)'),
+    (r'nam-ba-tur₅-tur₅-de₃(-en)?$', r'– אל אחלה!$', 'LC the refrain (§12.6.1)'),
+    (r'dili du-e \{d\}šakkan₂-na-ke₄ ḫur-saĝ', r'עיר הולך־לבדו של שכן – את ההררים', 'the running animals 1 (§12.6.2)'),
+    (r'uru₁₆ gal-gin₇ kušum', r'עיר נישא, כגדול – ', 'the running animals 2 (§12.6.2)'),
+    (r'sal-la kaš₄-e kiĝ₂-ĝa₂-am₃', r'עיר דק, המבקש לרוץ הוא', 'the running animals 3 (§12.6.2)'),
+    (r'lu₂ numun-e ki aĝ₂-am₃ šu nu-um', r'^לוגלבנדה – איש אוהב הזרע הוא – יד אינו פושט\.$', 'LZ the refrain (§12.6.3)'),
+    (r'gud₃-bi-ta inim nu-um-ma-ni-ib-gi₄', r'גוזלו – מקנו – דבר לא השיב', 'LZ the unanswered call (§12.6.3)'),
+    (r'^\{kuš\}maš-li-um-e niĝ₂-si-sa₂-e$', r'^בדליי־העור – \(הכול\) במישרים,$', 'LC the provisions (§12.6.1)'),
+]
+for _k in ('LC', 'LZ', 'ES'):
+    FORMULAS[_k] = FORMULAS['EA'] + FORMULAS_CY
 
 
 def strip(s):
@@ -337,7 +407,7 @@ def sections(paths):
 def etcsl_lines(rel):
     out = []
     for ln in open(os.path.join(SRC, rel), encoding='utf-8'):
-        m = re.match(r'^(\d+[A-Za-z]*|[A-D])\. (.*?)\s*$', ln.rstrip('\n'))
+        m = re.match(r'^(\d+[A-Za-z]*|[A-Z]\d*)\. (.*?)\s*$', ln.rstrip('\n'))
         if m:
             out.append((m.group(1), m.group(2)))
     return out
@@ -416,7 +486,12 @@ def base_lines(key):
 
 
 def licence(key):
-    """{label: text searched by the RESERVED licensing regexes}: the transliteration, plus (eBL) the lemmas."""
+    """{label: text searched by the RESERVED licensing regexes}: the transliteration, plus (eBL) the lemmas, plus (the
+    Uruk cycle) ETCSL's lemmas and the ORACC lemma line aligned by content."""
+    if PROJECTS[key]['base'] == 'etcsl' and PROJECTS[key].get('lemmas'):
+        lem = etcsl_lemmas(key)
+        orc = oracc_by_content(key)
+        return {k: ' '.join(c for _, c, _, _ in lem.get(k, [])) + ' || ' + orc.get(k, ('', ''))[1] for k, _ in base_lines(key)}
     if PROJECTS[key]['base'] != 'ebl':
         return {}
     order, res = ebl_all(key)
@@ -524,7 +599,7 @@ def verify(key, strict=False):
             if ln.startswith('## '):
                 for tok in re.split(r'[\s,.;:!?"\'()\[\]–—]+', ln[3:]):
                     base = PREFIX.sub('', strip(tok), count=1)
-                    if base in ('אותו', 'איננה', 'אן', 'שומר', 'אכי', 'אשתר', 'אתנה', 'שמש', 'אנו', 'מגן', 'מלוחה', 'סין', 'בלת') and not NIQQUD.search(tok):
+                    if base in ('אותו', 'איננה', 'אן', 'שומר', 'אכי', 'אשתר', 'אתנה', 'שמש', 'אנו', 'מגן', 'מלוחה', 'סין', 'בלת', 'שרא', 'שרה', 'ארש', 'ארורו', 'סואן', 'זבו', 'שכן') and not NIQQUD.search(tok):
                         problems.append(f'heading "{ln.strip()}": unvocalized "{tok}"')
     if pending:
         (problems if strict else notes).append(f'{pending} entries not yet drafted')
@@ -761,6 +836,8 @@ def data(key, a, b, out):
     P = PROJECTS[key]
     if P['base'] == 'ebl':
         return et_data(key, a, b, out)
+    if key != 'EA' and P.get('cycle'):
+        return cycle_data(key, a, b, out)
     orc = oracc_aligned(key)
     par = etcsl_paragraphs(P['etcsl_tr'])
     mitt = mitt_lines(P['mitt'])
@@ -798,6 +875,8 @@ def pars(key, a, b):
                 for k2, why in rel.items():
                     print(f'    {k2} ({why}): `{res[k2]["N"]}`\n         > {heb.get(k2, "(not yet drafted)")}')
         return
+    if P.get('cycle'):
+        return cycle_pars(key, a, b)
     src = base_lines(key)
     d = os.path.join(HERE, P['dir'])
     order, ent = parse_annotated([os.path.join(d, x) for x in P['annotated']], [])
@@ -815,6 +894,176 @@ def pars(key, a, b):
             print(f'{k}: `{t}`')
             for r, k2, t2, heb in sorted(hits, key=lambda x: -x[0]):
                 print(f'    {r:.2f} {k2}: `{t2}`\n         > {heb}')
+
+
+# ---- the Uruk cycle (LC, LZ, ES; Round 6 run 3): ETCSL lemmas, ORACC by content, the form index, cycle-wide parallels
+_CACHE = {}
+
+
+def etcsl_lemmas(key):
+    """{label: [(form, cf, pos, gloss)]} from ETCSL's own lemmatisation (lemmas.tsv, tools/etcslhtml2md.py)."""
+    if ('lem', key) not in _CACHE:
+        res = {}
+        rel = PROJECTS[key].get('lemmas')
+        if rel and os.path.exists(os.path.join(SRC, rel)):
+            for ln in open(os.path.join(SRC, rel), encoding='utf-8').read().split('\n')[1:]:
+                f = ln.split('\t')
+                if len(f) == 5:
+                    res.setdefault(f[0], []).append((f[1], f[2], f[3], f[4]))
+        _CACHE[('lem', key)] = res
+    return _CACHE[('lem', key)]
+
+
+def _fold(s):
+    s = clean_tr(s).replace('ŋ', 'ĝ').replace('Ŋ', 'Ĝ')
+    return re.sub(r'[\[\]⸢⸣?!«»⟨⟩()<>|…]', '', s).strip()
+
+
+def oracc_by_content(key):
+    """{ETCSL label: (ORACC transliteration, lem)}: ORACC lines aligned to ETCSL by content (difflib), since ORACC
+    holds ETCSL's variant lines as lines of their own and leaves some unlabelled (the method of bilgames_tools.py)."""
+    if ('orc', key) in _CACHE:
+        return _CACHE[('orc', key)]
+    P = PROJECTS[key]
+    res = {}
+    if P.get('oracc'):
+        src = etcsl_lines(P['etcsl'])
+        lem = oracc_entries(P['oracc'])
+        etr = [_fold(t) for _, t in src]
+        otr = [_fold(t) for _, t, _ in lem]
+        sm = difflib.SequenceMatcher(None, etr, otr, autojunk=False)
+        for tag, i1, i2, j1, j2 in sm.get_opcodes():
+            if tag == 'equal':
+                for d in range(i2 - i1):
+                    res[src[i1 + d][0]] = (lem[j1 + d][1], lem[j1 + d][2])
+            elif tag == 'replace':
+                for i in range(i1, i2):
+                    best, bj = 0, None
+                    for j in range(j1, j2):
+                        r = difflib.SequenceMatcher(None, etr[i], otr[j], autojunk=False).ratio()
+                        if r > best:
+                            best, bj = r, j
+                    if bj is not None and best >= 0.5:
+                        res[src[i][0]] = (lem[bj][1], lem[bj][2])
+    _CACHE[('orc', key)] = res
+    return res
+
+
+def _workbench():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('swb', os.path.join(ROOT, 'tools', 'sumerian_workbench.py'))
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def form_morph(forms):
+    """{form: [ 'cf[gw]POS {morph;base}  n×' ]} from the epsd2-literary form index (sumerian_workbench.py)."""
+    try:
+        wb = _workbench()
+        idx = wb.load_index()
+    except Exception as e:  # the zip is missing
+        return {f: [f'(form index unavailable: {e})'] for f in forms}
+    from collections import Counter
+    out = {}
+    for f in forms:
+        k = wb.key(re.sub(r'[\[\]⸢⸣?!]', '', f))
+        hits = idx.get(k) or []
+        c = Counter(wb.fmt(h).split('  ')[0] for h in hits)
+        out[f] = [f'{a}  {n}×' for a, n in c.most_common(3)]
+    return out
+
+
+def cycle_hebrew():
+    """{(key, label): Hebrew} for every drafted line of the cycle."""
+    res = {}
+    for k in CYCLE:
+        P = PROJECTS[k]
+        order, ent = parse_annotated([os.path.join(HERE, P['dir'], x) for x in P['annotated']], [])
+        for lab in order:
+            if ent[lab]['heb'] and 'טרם תורגם' not in ent[lab]['heb'][0]:
+                res[(k, lab)] = ent[lab]['heb'][0]
+    return res
+
+
+def cycle_related(key, lab, t, heb, minr=0.72):
+    """Near-identical lines (difflib on the folded transliteration) in every text of the cycle, with their Hebrew."""
+    a = norm_tr(t)
+    if len(a.split()) < 3:
+        return []
+    if 'cyc' not in _CACHE:
+        _CACHE['cyc'] = {k: [(l, norm_tr(x), x) for l, x in base_lines(k)] for k in CYCLE}
+    hits = []
+    for k2, rows in _CACHE['cyc'].items():
+        for l2, n2, t2 in rows:
+            if k2 == key and l2 == lab:
+                continue
+            if abs(len(n2) - len(a)) > 0.5 * max(len(a), 1):
+                continue
+            r = difflib.SequenceMatcher(None, a, n2, autojunk=False).ratio()
+            if r >= minr:
+                hits.append((r, k2, l2, t2, heb.get((k2, l2), '(not yet drafted)')))
+    return sorted(hits, key=lambda x: -x[0])[:8]
+
+
+def cycle_data(key, a, b, out):
+    P = PROJECTS[key]
+    lem = etcsl_lemmas(key)
+    orc = oracc_by_content(key)
+    par = etcsl_paragraphs(P['etcsl_tr'])
+    heb = cycle_hebrew()
+    rows = _range(etcsl_lines(P['etcsl']), a, b)
+    fm = {}
+    if not P.get('oracc'):
+        verbs = sorted({f for k, _ in rows for f, c, pos, g in lem.get(k, []) if pos.startswith('V')})
+        fm = form_morph(verbs)
+    L = [f'# Translator data {key} {a}–{b} ({P["dir"]})', '',
+         'Per line: ETCSL label and transliteration (copy it exactly into the annotated file: `ETCSL:`); ETCSL\'s own',
+         'lemmas (form = citation form (POS) gloss); ' + ('the ORACC lemma + {morph;base} line (aligned by content);'
+         if P.get('oracc') else 'for each verb, its ORACC parses elsewhere in epsd2-literary (the form index: no ORACC text of this poem exists – a parse that is not this line\'s own is "ניתוח שלנו" after you check it);'),
+         '"Related" = near-identical lines in the four poems of the cycle (EA, LC, LZ, ES) with the Hebrew already given',
+         '(copy it where the Sumerian is the same; vary only where it varies). Rank 3, read only AFTER your own reading:',
+         'the ETCSL translation paragraph at its first line.', '']
+    for k, t in rows:
+        L.append(f'## {k}')
+        L.append(f'ETCSL: `{t}`')
+        if k in lem:
+            L.append('lemmas: ' + '; '.join(f'{f} = {c} ({p}) {g}' for f, c, p, g in lem[k]))
+        if k in orc:
+            L.append(f'ORACC: {orc[k][0]}')
+            L.append(f'lem: {orc[k][1]}')
+        elif fm:
+            for f, c, p, g in lem.get(k, []):
+                if p.startswith('V') and fm.get(f):
+                    L.append(f'morph {f}: ' + ' | '.join(fm[f]))
+        for r, k2, l2, t2, h in cycle_related(key, k, t, heb):
+            L.append(f'related {k2} {l2} ({r:.2f}): `{t2}` → > {h}')
+        if k in par:
+            L.append(f'> ETCSL tr. [{par[k][0]}]: {par[k][1]}')
+        L.append('')
+    open(out, 'w', encoding='utf-8').write('\n'.join(L) + '\n')
+    print(f'{out}: {len(rows)} lines')
+
+
+def cycle_pars(key, a, b):
+    heb = cycle_hebrew()
+    for k, t in _range(base_lines(key), a, b):
+        hits = cycle_related(key, k, t, heb)
+        if hits:
+            print(f'{k}: `{t}`')
+            for r, k2, l2, t2, h in hits:
+                print(f'    {r:.2f} {k2} {l2}: `{t2}`\n         > {h}')
+
+
+def skel(key, fname, a, b):
+    """Append to the project's annotated file a skeleton for the range: `### label`, the ETCSL line, `> טרם תורגם`."""
+    P = PROJECTS[key]
+    p = os.path.join(HERE, P['dir'], fname)
+    rows = _range(base_lines(key), a, b)
+    with open(p, 'a', encoding='utf-8') as f:
+        for k, t in rows:
+            f.write(f'\n### {k}\n`{t}`\n> טרם תורגם\n')
+    print(f'{p}: {len(rows)} skeleton entries appended ({a}–{b})')
 
 
 def fill(key):
@@ -860,6 +1109,9 @@ def main():
         return
     if a[0] == 'data' and len(a) > 4:
         data(a[1], a[2], a[3], a[4])
+        return
+    if a[0] == 'skel' and len(a) > 4:
+        skel(a[1], a[2], a[3], a[4])
         return
     if a[0] == 'fill':
         fill(a[1])

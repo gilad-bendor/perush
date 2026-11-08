@@ -1,4 +1,4 @@
-# The Hesiod corpus: the Theogony and the Works and Days (`הסיודוס/`)
+# The Hesiod corpus: the Theogony, the Works and Days, the Shield of Heracles (`הסיודוס/`)
 
 Round 4, run 4 (2026-10-24): the folder's **first Archaic Greek corpus** (the fifth-day dossier of the Ugaritic corpus
 already had Th. 237–336 and 820–828, and the flood corpus has Berossus' Hellenistic Greek). The plan row:
@@ -11,8 +11,9 @@ Tier 1 #3; the survey: `../curation-surveys/world-survey--greek-aegean-italic--2
 |---|---|---|---|---|
 | `1-תולדות-האלים/` | **The Theogony** (1,022 lines + the 20 lines Galen quotes after 929) | c. 730–680 BCE (oral-traditional; one poet with a name, Th. 22) | **Gen 1:1–5** (the Gap first; Night bears Day), **1:21** (Keto, whose name is the LXX's κήτη; Typhoeus the δράκων), 1:6–8 (Sky lying on Earth), 2:7, 2:22 (the first woman moulded from earth), **6:1–4** (the gods' unions with mortals, the Titans), 8:20–21 (the sacrifice at Mekone), the succession myth's Near Eastern antecedents (Kumarbi, Enūma eliš, Ugarit's Baal and Zaphon) | a cosmos born by sex and violence that ends in a just king; the poet called by the Muses; the gods' honours and their oath |
 | `2-מעשים-וימים/` | **The Works and Days** (828 lines) | c. 700 BCE | **Gen 2–3** (Pandora and the jar; "before, men lived without toil"; WD 289's sweat ↔ Gen 3:19), **6:1–4** (the race of heroes, "demigods", WD 159–160), Lev 26 / Deut 28 (the just and the unjust city, WD 225–247), Gen 2:3 (the holy seventh day, WD 770), Gen 8:22 (the farmer's year), Job 9:9, 38:31, Amos 5:8 (the Pleiades and Orion), Proverbs (the neighbour, WD 342–346), Judg 9:8–15 (the fable of the hawk) | the first Greek "I": a farmer quarrelling with his brother, fearing debt, trusting Zeus' justice against bribe-eating kings; the five races; work as the human condition; the calendar of a peasant's year and its taboos |
+| `3-מגן-הרקלס/` | **The Shield of Heracles** (479 lines; Round 6 run 5, 2026-11-07) | early 6th c. BCE (transmitted as Hesiod's; doubted since antiquity); 1–56 a Catalogue *ehoie* | 1 Sam 17:5–7 (the same Aegean armour as Goliath's), the mourning gestures (Lev 19:28, Josh 7:6), ἤλεκτρον = the LXX's `חַשְׁמַל` (Ezek 1:4), the war-cry `תְּרוּעָה` | a hero's fight told around a work of art: the shield's moving, sounding images (terror and death-spirits, the city at peace and the city at war, the farmer's year), a god wounded by a man, a robber's grave washed away |
 
-Reading order: the Theogony (the gods), then the Works and Days (men).
+Reading order: the Theogony (the gods), then the Works and Days (men), then the Shield (a hero).
 
 ## Base texts (`../sources-registry.md`)
 - **Evelyn-White 1914** (Loeb; public domain), as encoded by the Perseus Digital Library (`canonical-greekLit`, markup CC

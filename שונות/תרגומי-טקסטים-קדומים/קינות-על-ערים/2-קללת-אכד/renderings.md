@@ -192,7 +192,7 @@ Words used only in this text (the shared terms are in `../renderings.md`). Table
 | *a uru₂-ĝu₁₀ / a lu₂-bi / a e₂-kur nu-ĝa₂-ĝa₂* | `את "הוי עירי!" / "הוי אנשיה!" / "הוי האכור!" אינו שָׂם (בצד)` | [equivalent] Jer 22:18 | open decision 5 | 202–204 |
 | *siki šab*; *ĝiri₂ saga₁₁* | `תלישת השיער`; `*לחיצת* הסכין` | [equivalent] Ezra 9:3; 1 Kgs 18:28; Deut 14:1 | no `גדד` | 205–206 |
 | *er₂ ama a-a {d}en-lil₂* | `דמעות האם והאב של אנליל` | [equivalent] Jer 31:14 | = the ancestors | 207 |
-| *du₆ kug*; *su zig₃ gur₃-ru*; *dub₃ kug* | `התל הטהור`; `נושא החלחלה`; `ברכי … הטהורות` | [cognate] *tīlu* ~ `תל` | `תל`, `ברך` licensed | 208 |
+| *du₆ kug*; *su zig₃ gur₃-ru*; *dub₃ kug* | `התל הטהור`; `טעון החלחלה` (harmonization 2026-11-09; was `נושא החלחלה`); `ברכי … הטהורות` | [cognate] *tīlu* ~ `תל` | `תל`, `ברך` licensed | 208 |
 | *nam-bi-še₃*; *šag₄-ka-tab* | `בשל כך`; `צום` | [equivalent] 2 Sam 12:16; Dan 6:19 | | 209 |
 | *a sed₄ … sed₄*; *a-ra-zu-ta … e* | `במים קרים – מצננים`; `בתחנון אומרים` | [equivalent] Prov 25:25; Exod 32:12 | | 211 |
 | *iri iri-zu im-ḫul-a* | `העיר – הרוח הרעה של עירך` | | ORACC: genitive "the evil storm of your city" | 212 |

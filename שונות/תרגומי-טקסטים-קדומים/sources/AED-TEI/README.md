@@ -41,8 +41,13 @@
 | `Shipwrecked-Sailor--pPetersburg-1115/` | Die Geschichte des Schiffbrüchigen | QUFWZTEPLRE4NHKCPAJXGSAOSQ | 191 | project 8 (SS) |
 | `BD-125--pNu-BM-EA-10477/` | Tb 125 (pNu) | FGGZPRDYGBHV3AFOH5EXBPKDQY | 115 | project 6 (BD) |
 | `BD-125--pJuja-CG-51189/`, `BD-125--pMaiherperi-CG-24095/` | Tb 125 (pJuja; pMaiherperi) | ZJ45MN6I2BEBXIOF4E2OH4PK64, S4KP2OGKXFCPPK7Q5MHFEE6R7A | 121, 98 | witnesses (BD) |
+| `BD--pNu-BM-EA-10477/` | the other 135 TLA texts of pNu (Tb 1 … Tb 189, (Tb 190); TLA titles `pLondon BM EA 10477 (pNu)//Tb NNN`), each `<ID>.xml` + `_st` + `_wt`; retrieved 2026-11-06 (Round 6 run 2) | see `concordance_name_text_id.csv` | 1,778 (each text numbered from 1; Tb 149: "N. Stätte" headings; Tb 150: "N. Darstellung"; Tb 151: `1,1`…) | project 6 (NU1–NU10; the papyrus's order: `חכמה-ובריאה-במצרים/renderings.md` §12.1) |
+| `BD-175--pCha-Turin-8438/` | Tb 175 (pTurin Museo Egizio 8438, pCha) | PHHTCP56KNFFXCKMBRE6SCOCGU | 65 | project 6 (CH, the appendix) |
 | `Bremner-Rhind--4-Overthrowing-Apophis/`, `Bremner-Rhind--5-Names-of-Apophis/` | pBM 10188: the Book of Overthrowing Apophis; the Names of Apophis | A2PTGDCYB5E4XK6OORW6V4QHOE, 2Z3OHH5EKZEUTAFMAIWR2PXTGE | 264, 60 | (the Apophis spells: for the fifth-day dossier) |
 
+- **The order of pNu's chapters** (not in AED: each chapter is its own text): the Bonn Totenbuch-Projekt's object record
+  TM 134299 (`https://totenbuch.awk.nrw.de/objekt/tm134299`, field "Inhalt"; retrieved 2026-11-06 with curl – the site's
+  lists load by JavaScript, but an object page is plain HTML), matched to AED in `egypt_tools.py` `NU_ORDER`.
 - **Line numbering:** the `<lb n="[…]"/>` of each manuscript (page.line for papyri; columns for the Cow; the wall,
   register and line for the Pyramid Texts, e.g. `[P/V/W 34 = 663]`, which the corpus tool shortens to `P/V/W.34`).
 - **Markup:** see `../../tools/aed2md.py` (`[ ]` lost, `( )` defective writing, `⟨ ⟩` omitted, `{ }` superfluous,

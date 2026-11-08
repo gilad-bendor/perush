@@ -49,6 +49,7 @@ RESERVED = [
 RAW_FORBIDDEN = [
     (r"(?<![\u0591-\u05C7א-ת])[ובלמהכש]?שמחת(?![\u0591-\u05C7א-ת])", "Šamḫat must be vocalized שַׁמְחַת (unvocalized it reads 'joy of')"),
     (r"(?<![\u0591-\u05C7א-ת])[ובלמהכש]?ארורו(?![\u0591-\u05C7א-ת])", "Aruru must be vocalized אֲרוּרוּ (false friend of אָרוּר)"),
+    (r"(?<![\u0591-\u05C7א-ת])[ובלמהכש]?חוו?וה(?![\u0591-\u05C7א-ת])", "Ḫuwawa is always vocalized חוּוָוָה, as in the Sumerian poems (harmonization 2026-11-09; unvocalized חווה reads 'Eve')"),
 ]
 
 

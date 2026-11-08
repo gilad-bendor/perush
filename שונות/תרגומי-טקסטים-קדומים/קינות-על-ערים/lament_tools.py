@@ -4,7 +4,7 @@ Written 2026-10-19, adapted from ../סיפורי-הבריאה-המסופוטמי
 ETCSL segment labels (the Agade Ur III fragments, "## Segment A" … in transliteration.md) become `A1`, `A2` … here.
 
 Usage (from any directory):
-  python3 -I lament_tools.py verify KEY [--strict]   KEY = LU | CA. Checks (exit 1 on an error):
+  python3 -I lament_tools.py verify KEY [--strict]   KEY = LU | CA | LSU. Checks (exit 1 on an error):
       1. every entry `### <label>` has exactly one `> ` Hebrew line and one backticked transliteration line, which
          equals ETCSL's line (notes in *…* and variant parentheses ignored); no label is duplicated;
       2. coverage: the labels equal the ETCSL line list, in order (a not-yet-written file is a note; --strict: error,
@@ -32,6 +32,11 @@ PROJECTS = {
                etcsl='ETCSL/2.2.2--Lament-for-Ur/transliteration.md'),
     'CA': dict(dir='2-קללת-אכד', annotated=['annotated-1.rtl.md', 'annotated-2.rtl.md'],
                etcsl='ETCSL/2.1.5--Curse-of-Agade/transliteration.md'),
+    # Round 6 run 4 (2026-11-07): the Lament for Sumer and Urim, from the live ETCSL page (tools/etcslhtml2md.py);
+    # ETCSL numbers it 1–519 straight through its segments (kirugus), so the labels carry no segment letter.
+    'LSU': dict(dir='3-הקינה-על-שומר-ואור', annotated=['annotated-1.rtl.md', 'annotated-2.rtl.md'],
+                etcsl='ETCSL/2.2.3--Lament-for-Sumer-and-Urim/transliteration.md',
+                oracc='ORACC/epsd2-literary--Q000380--Lament-for-Sumer-and-Urim/Q000380--lemmatised-morph.md'),
 }
 EXTRA_GREP = [os.path.join(CRE, x) for x in (
     '2-טקסטי-בריאה-ועדן/annotated-2-Enki-Ninhursag.rtl.md', '2-טקסטי-בריאה-ועדן/annotated-3-Enki-Ninmah.rtl.md',
@@ -59,7 +64,7 @@ RESERVED = {
     r'אלהים|אלוהים': [],
     r'נטש|נוטש': [r'muš₃'],
     r'עזב|עוזב': [r'taka₄|tag₄|da₁₃|\bšub|-šub'],
-    r'ארר|ארור|אורר': [r'nam\b.*ku₅|nam-ku₅|nam ku₅|na-aĝ₂\b.*kud'],
+    r'ארר|ארור|אורר': [r'nam\b.*ku₅|nam-ku₅|nam ku₅|na-aĝ₂\b.*kud|nam\b.*kud'],
     r'קלל|קללה|קללת': [r'aš₂?\b.*bal|aš₂?-bal'],
     B + r'ו?[לב]?ה?(תל|תלים|תלי|תלה)' + E: [r'du₆'],
     B + r'ו?[לבמהשכ]{0,2}(ה?תנכר|ינכר|נכר|נוכר|ניכר)': [r'kur₂'],
@@ -90,7 +95,7 @@ FORMULAS = [
     (r'mu(-un)?-na-te er₂ gig i₃-še₈-še₈$', r'ני?גשה אליו – דמעות מרות היא בוכה\.$', 'LU 81–83 (renderings §3)'),
     (r'en₃-še₃', r'עד מתי', '*en₃-še₃* = עד מתי'),
     (r'me-li-e-a', r'אוי לי', '*me-li-e-a* = אוי לי'),
-    (r'nam\b.*ku₅|nam-ku₅|nam ku₅|na-aĝ₂\b.*kud', r'אר(ר|ור|רה|רו)', '*nam … ku₅* = ארר'),
+    (r'nam\b.*ku₅|nam-ku₅|nam ku₅|na-aĝ₂\b.*kud|nam\b.*kud', r'אר(ר|ור|רה|רו)', '*nam … ku₅* = ארר'),
     # the cross-corpus harmonization (2026-10-21): one Hebrew per source word in all corpora
     (r'za-gin₃', r'ספיר', '*za-gin₃* = סַפִּיר (decision 1)'),
     (r'šu-ur₂-men', r'שורבין', '*šu-ur₂-men* = שׁוּרְבִּין (decision 3)'),
