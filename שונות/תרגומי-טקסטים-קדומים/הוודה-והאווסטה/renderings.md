@@ -48,7 +48,7 @@ In the apparatus, Sanskrit and Avestan words are written in Latin transliteratio
   §7 at every occurrence.
 
 ## 3. Names (binding; checked by script: where the source regex matches the folded line, the Hebrew must be in it)
-The regex is matched on the **folded** source (`vedic_tools.py` `fold`: lower case, no accents or diacritics, ś/ṣ/š =
+Rows marked **(RV 7)** apply to the Rigveda Book 7 project only (Round 7 run 1). The regex is matched on the **folded** source (`vedic_tools.py` `fold`: lower case, no accents or diacritics, ś/ṣ/š =
 s, ṛ = r, ϑ = th, ə = e, spaces around words). A name used as a common noun in another text (Agni = fire, Mitra =
 friend, Vṛtra = obstacle) is written here only for the texts where it is a name (§3.2 says how the common noun is
 rendered).
@@ -103,6 +103,31 @@ rendered).
 | Mārtāṇḍa | ` martand` | `מָארְטָאנְדָּה` |  | (10.72.8–9) "from the dead egg" |
 | Ārmaiti | ` a?ra?mait` | `אָרְמַאִיטִי` |  | (Vd 2.10) the earth's goddess, "Right-mindedness" |
 | Airyana Vaējah | ` airii?ene vaejah` | `אַירְיָנֶם וַאֵגָ'ה` |  | (Vd 2.20) "the Aryan Expanse" |
+| Aryaman (RV 7) | ` aryam` | `אַרְיַמַן` |  | the Āditya of hospitality and of the bride's escort (Round 7 run 1) |
+| Bhaga (RV 7) | ` bhag(?:a\|ah\|o\|am\|asya\|aya\|ena\|e)\b` | `בְּהַגָה` |  | the Āditya "Portion, Fortune" (7.41); the common noun *bhága* "portion" takes `[היתר שם: …]` |
+| the Ādityas (RV 7) | ` aditya` | `אָדִיטְיָה` |  | Aditi's sons (Mitra, Varuṇa, Aryaman, Bhaga …); `הָאָדִיטְיָה` |
+| the Maruts (RV 7) | ` marut` | `מַרוּטִים` | ★ | the storm troop, Rudra's sons (`מרוטים` "plucked": always vocalized) |
+| the Aśvins (RV 7) | ` asvin` | `אַשְׁוִינִים` |  | the twin horsemen (precedent `האשוינים`, AB, RV 10.17) |
+| Nāsatya (RV 7) | ` nasaty` | `נָאסַטְיָה` |  | the Aśvins' name ("the Nāsatyas") |
+| Viṣṇu (RV 7) | ` visnu` | `וִישְׁנוּ` |  | the god of the three strides (precedent KU 3.9b) |
+| Sudās (RV 7) | ` sudas(?!am\b)` | `סוּדָאס` |  | the Tṛtsu-Bharata king, Vasiṣṭha's patron (7.18, 7.33, 7.83) |
+| the Tṛtsus (RV 7) | ` trts` | `טְרִטְסוּ` |  | Sudās's clan |
+| the Bharatas (RV 7) | ` bharat(?!i)` | `בְּהַרַטָה` |  | Sudās's people (Agni Bhārata) |
+| Divodāsa (RV 7) | ` divodas` | `דִּיווֹדָאסָה` |  | Sudās's ancestor |
+| Paijavana (RV 7) | ` paijavan` | `פַּיְגַ'וַנָה` |  | Sudās's patronymic |
+| Agastya (RV 7) | ` agasty` | `אַגַסְטְיָה` |  | the seer (7.33) |
+| Urvaśī (RV 7) | ` urvas` | `אוּרְוַשִׁי` |  | the apsaras, Vasiṣṭha's mother (7.33) |
+| Kutsa (RV 7) | ` kuts` | `קוּטְסָה` |  | Indra's charioteer-companion |
+| Śambara (RV 7) | ` sambar` | `שַׁמְבַּרָה` |  | the Dāsa chief of the ninety-nine forts |
+| Paruṣṇī (RV 7) | ` parusn` | `פַּרוּשְׁנִי` |  | the river of the battle of the ten kings (7.18) |
+| Yamunā (RV 7) | ` yamun` | `יַמוּנָה` |  | the river (7.18.19) |
+| Dadhikrā(van) (RV 7) | ` dadhikr` | `דַּדְהִיקְרָא` |  | the divine racehorse (7.44) |
+| Vāstoṣpati (RV 7) | ` vastospat` | `וָאסְטוֹשְׁפַּתִי` |  | "Lord of the dwelling" (7.54–55) |
+| the Ṛbhus (RV 7) | ` rbhu` | `רִבְּהוּ` |  | the three craftsmen-gods (7.48) |
+| Sarasvant (RV 7) | ` sarasvan` | `סַרַסְוַנְט` |  | Sarasvatī's male counterpart (7.96) |
+| Vaiśvānara (RV 7) | ` vaisvanar` | `וַאישְׁוָנָרָה` |  | "belonging to all men", Agni's epithet, transliterated |
+| Jātavedas (RV 7) | ` jatavedas` | `יודע־הנולדים` |  | Agni's epithet, translated (precedent RV 10.16) |
+| Apāṃ Napāt (RV 7) | ` apam napat` | `נכד המים` |  | the fire in the waters, translated (7.34–35, 47) |
 
 ### 3.2 Common nouns that are names elsewhere
 - *agní* outside the RV (ŚB, AB, KU, MBh): `אֵשׁ` (the fire), and `אַגְנִי` only where the text speaks of the god.
@@ -243,6 +268,53 @@ the Bible passages the corpus is compared with (Gen 1–3, 6–9, 22; Lev 18): *
 | *√yaj* (with the son as victim) | `זָבַח` | `הֶעֱלָה לְעֹלָה` | AB's *tena yajasva* "sacrifice with him" |
 | *várа* (KU, a boon) | `מַשְׁאָלָה` |  | Naciketas's three boons |
 
+### 5.5 The Rigveda, Book 7 (Round 7 run 1; pre-set by the coordinator before the first line, from the book's commonest lemmas: `vedic_tools.py freq RV7`)
+The book is a **hymnal of one priestly family** (the Vasiṣṭhas): most of its words are the words of praise, gift and
+help that every hymn uses. One Hebrew per lemma, from the first line to the last (★); the precedents of RV 10 / 1.32 /
+the Brāhmaṇas hold where they exist (`freq` prints them). Pre-set here (translator 1 may revise a row, with a reason, in
+its Proposals; later translators follow the merged table):
+| Source | Hebrew | Why / note |
+|---|---|---|
+| *svastí* | `שָׁלוֹם` | precedent (KU 1.9b, RV 10.14.11d, *svastidā́* `נותן השלום`); the book's refrain F6 |
+| √*pā* "protect" | `שָׁמַר` (`שמר על`) | precedent RV 10.17.4; √*pā* "drink" `שָׁתָה` (another root) |
+| *sádā* | `תָּמִיד` |  |
+| *śám* | `אֹשֶׁר` (*śáṃ naḥ* … *bhavatu* `לאושר יהיה לנו …`) | 7.35's refrain; not `שלום` (= *svastí*) nor `טוב` (gated) |
+| *vásu* | `טוּב` (n., goods) / `טוֹב` (adj.) | licensed by the gate; the gods *vásavaḥ* `הַוַּסוּ` (a name, transliterated) |
+| *rayí* | `עֹשֶׁר` | precedent |
+| *rā́dhas* | `מַתָּת` | "bounty, the patron's gift" |
+| *rátna* | `אוֹצָר` | precedent *suratna* `רבות־האוצרות` |
+| *vā́ja* | `פְּרָס` | "prize, the stake of the contest"; *vājín* `זוכה־הפרס` (the horse: `סוס זוכה־הפרס`); not `שלל` (Akk. *šallatu*'s cognate) |
+| *maghávan* | `בַּעַל־הַשֶּׁפַע` | precedent; of the patrons too (pl. `בעלי־השפע`) |
+| *sūrí* | `נַדְבָן` | "patron (of the sacrifice)"; not `נדיב` (= *suvidátra*, Av. *spəṇta*) |
+| √*av*, *ávas* | `עָזַר`, `עֶזְרָה` | precedent `יעזרו` (RV 10.15.1d); *ūtí* `סִיּוּעַ` |
+| *śárman* | `מַחְסֶה` | "shelter, refuge" |
+| *áṃhas* | `מְצוּקָה` | "narrowness, distress" |
+| √*pr̥* caus. (*piprtam*), √*tr̥̄* | `הֶעֱבִיר` | precedent *pāraya-*; "carry across (troubles)" |
+| √*mr̥ḍ* | `רִחֵם` | precedent RV 10.34.14a; F7 |
+| *sumatí* | `רָצוֹן טוֹב` | precedent RV 10.14.6c |
+| *bráhman* (n.) | `נֹסַח` | precedent; *brahmakŕ̥ti* `עשיית הנוסח` |
+| *dhī́* | `הֲגוּת` | precedent RV 10.10.1d; *dhītí* `הגייה` |
+| *gír* | `שִׁיר` |  |
+| *stóma*, √*stu*, *stotár* | `שֶׁבַח`, `שִׁבֵּחַ`, `מְשַׁבֵּחַ` | one root for the family |
+| √*gr̥̄* "sing, praise", *jaritár* | `הִלֵּל`, `מְהַלֵּל` | precedent `הללו` (RV 10.15.6b) |
+| √*juṣ* | `הִתְעַנֵּג` (`התענג על`) | precedent RV 10.15 |
+| √*mad*, *máda* | `הִתְבַּסֵּם`, `הִתְבַּסְּמוּת` | soma's exhilaration (precedent RV 10.14.4d); not `שכרון` (Ugaritic *škrn*'s cognate) |
+| *námas* | `קִדָּה` | "homage, the bow" (precedent AB 7.16.8d) |
+| *havyá* | `תִּקְרֹבֶת` | "the offering"; *havís* keeps `מִנְחָה` |
+| *adhvará* | `טֶקֶס` | "the (sacrificial) ceremony" |
+| *hótar* | `כֹּהֵן־הַקְּרִיאָה` | precedent (AB) |
+| *dūtá* | `שָׁלִיחַ` | Agni the messenger |
+| *ródasī* | `שְׁתֵּי הַמַּחֲצוֹת` | "the two world-halves" (heaven and earth as a pair); *dyā́vāpr̥thivī́* keeps `שמים וארץ` |
+| *sáhas*, *sūnúḥ sáhasaḥ* | `עֹז`, `בֶּן הָעֹז` | Agni "son of strength" |
+| *śávas* | `עָצְמָה` | *bála* keeps `כוח` |
+| *ŕ̥tāvan* | `נֶאֱמַן הַסֵּדֶר` | the cousin-cognate of Av. *aṣ̌auuan* (§11.3; guidelines §6.7) |
+| *amŕ̥ta* (a god, adj.) | `בֶּן־אַלְמָוֶת` | the noun *amŕ̥ta* / *amr̥tatvá* keeps `אלמוות` (plene) |
+| *jyótis* | `אוֹר` | *svàr* keeps `האור` (the sun-world: noted where both meet) |
+| *ā́rya* | `אָרְיָה` ★ | transliterated with a note ("the Ārya", the poets' own people; never "Aryan" in its modern sense); `אריה` "lion": always vocalized |
+| *dā́sa* / *dásyu* | `דָּאסָה` / `דַּסְיוּ` | transliterated with a note (the poets' enemies, human and demonic) |
+| *rakṣás*, *yātudhā́na* | `רַקְשָׁס`, `קוֹסֵם` | 7.104: the demons and the sorcerers; not the root כשף (Akk. *kaššāpu*'s cognate, Maqlû) |
+| *vr̥trá* (not the name), *vr̥trahán* | `מַחְסוֹם`, `הוֹרֵג־וְרִטְרָה` | the name Vṛtra keeps §3.1 where the text means the serpent |
+
 ## 6. (reserved for the LXX layer – not applicable: no Greek)
 
 ## 7. Reserved and gated words, and traps (checked by `vedic_tools.py verify`; `gates` prints the regexes)
@@ -273,6 +345,9 @@ where the fire-offering is near.
 | F4 | `ahura mazda mainiio spenista datare gaethanam astuuaitinam asaum` | `אהורה מזדה, הרוח הנדיבה ביותר, מעמיד בעלי החיים בעלי העצמות, נאמן הסדר` | Vd 2.1 (fixed by the VD translator, §11.3; *dātar* `מעמיד` since 2026-11-02, §11.9) |
 | F4b | `datare gaethanam astuuaitinam asaum` | `מעמיד בעלי החיים בעלי העצמות, נאמן הסדר` | Vd 2.39, 42, 43 (the short address) |
 | F5 | `sa hovaca` | `אמר` | ŚB, AB: "he said" |
+| F6 | `yuyam pata svastibhih sada nah` | `אתם, שמרו עלינו בשלום תמיד` | RV 7, the Vasiṣṭha refrain closing 76 hymns ("Do you protect us always with well-being"; Round 7 run 1) |
+| F7 | `mrla suksatra mrlaya` | `רחם, טוב־השלטון, רחם` | RV 7.89.1–4c (the refrain to Varuṇa) |
+| F8 | `ta apo devir iha mam avantu` | `המים האלה, האלות, יעזרו לי כאן` | RV 7.49.1–4d |
 
 
 ## 9. Repeated lines and the dossier

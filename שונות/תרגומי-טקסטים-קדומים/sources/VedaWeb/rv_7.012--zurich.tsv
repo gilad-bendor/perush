@@ -1,0 +1,15 @@
+# Rigveda 7.12 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_07.tei.
+1a	áganma mahā́ námasā yáviṣṭhaṃ	`áganma` – √gam- (root; PL.1.IND.AOR.ACT) ‖ `mahā́` – máh- (nominal stem; INS.N.SG) ‖ `námasā` – námas- (nominal stem; INS.N.SG) ‖ `yáviṣṭham` – yáviṣṭha- (nominal stem; ACC.M.SG.SUP)
+1b	yó dīdā́ya sámiddhaḥ své duroṇé	`yáḥ` – yá- (pronoun; NOM.M.SG) ‖ `dīdā́ya` – √dī- 1 (root; SG.3.IND.PRF.ACT) ‖ `sámiddhaḥ` – √idh- 1 (root; NOM.M.SG.PTCP-ta.LP) ‖ `své` – svá- (pronoun; LOC.N.SG) ‖ `duroṇé` – duroṇá- (nominal stem; LOC.N.SG)
+1c	citrábhānuṃ ródasī antár urvī́	`citrábhānum` – citrábhānu- (nominal stem; ACC.M.SG) ‖ `ródasī` – ródasī- (nominal stem; ACC.F.DU) ‖ `antár` – antár (invariable; LP) ‖ `urvī́` – urú- (nominal stem; ACC.F.DU)
+1d	svā̀hutaṃ viśvátaḥ pratyáñcam	`svā̀hutam` – svā̀huta- (nominal stem; ACC.M.SG) ‖ `viśvátas` – viśvátas (invariable) ‖ `pratyáñcam` – pratyáñc- (nominal stem; ACC.M.SG)
+2a	sá mahnā́ víśvā duritā́ni sāhvā́n	`sá` – sá- ~ tá- (pronoun; NOM.M.SG) ‖ `mahnā́` – mahimán- (nominal stem; INS.M.SG) ‖ `víśvā` – víśva- (nominal stem; ACC.N.PL) ‖ `duritā́ni` – duritá- (nominal stem; ACC.N.PL) ‖ `sāhvā́n` – √sah- (root; NOM.M.SG.PRF.ACT.PTCP)
+2b	agní ṣṭave dáma ā́ jātávedāḥ	`agníḥ` – agní- (nominal stem; NOM.M.SG) ‖ `stave` – √stu- (root; SG.3.IND.PRS.MED) ‖ `dáme` – dáma- (nominal stem; LOC.M.SG) ‖ `ā́` – ā́ (invariable; LP) ‖ `jātávedāḥ` – jātávedas- (nominal stem; NOM.M.SG)
+2c	sá no rakṣiṣad duritā́d avadyā́d	`sá` – sá- ~ tá- (pronoun; NOM.M.SG) ‖ `naḥ` – ahám (pronoun; ACC.PL) ‖ `rakṣiṣat` – √rakṣⁱ- (root; SG.3.SBJV.AOR.ACT) ‖ `duritā́t` – duritá- (nominal stem; ABL.N.SG) ‖ `avadyā́t` – avadyá- (nominal stem; ABL.N.SG)
+2d	asmā́n gr̥ṇatá utá no maghónaḥ	`asmā́n` – ahám (pronoun; ACC.PL) ‖ `gr̥ṇatáḥ` – √gr̥̄- 1 (root; ACC.M.PL.PRS.ACT.PTCP) ‖ `utá` – utá (invariable) ‖ `naḥ` – ahám (pronoun; GEN.PL) ‖ `maghónaḥ` – maghávan- (nominal stem; ACC.M.PL)
+3a	tváṃ váruṇa utá mitró agne	`tvám` – tvám (pronoun; NOM.SG) ‖ `váruṇaḥ` – váruṇa- (nominal stem; NOM.M.SG) ‖ `utá` – utá (invariable) ‖ `mitráḥ` – mitrá- (nominal stem; NOM.M.SG) ‖ `agne` – agní- (nominal stem; VOC.M.SG)
+3b	tvā́ṃ vardhanti matíbhir vásiṣṭhāḥ	`tvā́m` – tvám (pronoun; ACC.SG) ‖ `vardhanti` – √vr̥dh- (root; PL.3.IND.PRS.ACT) ‖ `matíbhiḥ` – matí- (nominal stem; INS.F.PL) ‖ `vásiṣṭhāḥ` – vásiṣṭha- (nominal stem; NOM.M.PL.SUP)
+3c	tvé vásu suṣaṇanā́ni santu	`tvé` – tvám (pronoun; LOC.SG) ‖ `vásu` – vásu- (nominal stem; NOM.N.PL) ‖ `suṣaṇanā́ni` – suṣaṇaná- (nominal stem; NOM.N.PL) ‖ `santu` – √as- 1 (root; PL.3.IMP.PRS.ACT)
+3d	yūyám pāta svastíbhiḥ sádā naḥ	`yūyám` – tvám (pronoun; NOM.PL) ‖ `pāta` – √pā- 1 (root; PL.2.IMP.PRS.ACT) ‖ `svastíbhiḥ` – svastí- (nominal stem; INS.PL) ‖ `sádā` – sádā (invariable) ‖ `naḥ` – ahám (pronoun; ACC.PL)

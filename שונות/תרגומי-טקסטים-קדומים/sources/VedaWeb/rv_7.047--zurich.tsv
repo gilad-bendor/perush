@@ -1,0 +1,19 @@
+# Rigveda 7.47 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_07.tei.
+1a	ā́po yáṃ vaḥ prathamáṃ devayántaḥ-	`ā́paḥ` – áp- (nominal stem; VOC.F.PL) ‖ `yám` – yá- (pronoun; ACC.M.SG) ‖ `vaḥ` – tvám (pronoun; GEN.PL) ‖ `prathamám` – prathamá- (nominal stem; ACC.SG) ‖ `devayántaḥ` – √devay- (root; NOM.M.PL.PRS.ACT.PTCP.DEN)
+1b	indrapā́nam ūrmím ákr̥ṇvateḷáḥ	`indrapā́nam` – indrapā́na- (nominal stem; ACC.M.SG) ‖ `ūrmím` – ūrmí- (nominal stem; ACC.M.SG) ‖ `ákr̥ṇvata` – √kr̥- (root; PL.3.IND.IPRF.MED) ‖ `iḷáḥ` – íḍ- (nominal stem; GEN.F.SG)
+1c	táṃ vo vayáṃ śúcim ariprám adyá	`tám` – sá- ~ tá- (pronoun; ACC.M.SG) ‖ `vaḥ` – tvám (pronoun; GEN.PL) ‖ `vayám` – ahám (pronoun; NOM.PL) ‖ `śúcim` – śúci- (nominal stem; ACC.M.SG) ‖ `ariprám` – ariprá- (nominal stem; ACC.M.SG) ‖ `adyá` – adyá (invariable)
+1d	ghr̥taprúṣam mádhumantaṃ vanema	`ghr̥taprúṣam` – ghr̥taprúṣ- (nominal stem; ACC.M.SG) ‖ `mádhumantam` – mádhumant- (nominal stem; ACC.M.SG) ‖ `vanema` – √vanⁱ- (root; PL.1.OPT.AOR.ACT)
+2a	tám ūrmím āpo mádhumattamaṃ vo	`tám` – sá- ~ tá- (pronoun; ACC.M.SG) ‖ `ūrmím` – ūrmí- (nominal stem; ACC.M.SG) ‖ `āpaḥ` – áp- (nominal stem; VOC.F.PL) ‖ `mádhumattamam` – mádhumattama- (nominal stem; ACC.M.SG.SUP) ‖ `vaḥ` – tvám (pronoun; GEN.PL)
+2b	-apā́ṃ nápād avatv āśuhémā	`apā́m` – áp- (nominal stem; GEN.F.PL) ‖ `nápāt` – nápat- (nominal stem; NOM.M.SG) ‖ `avatu` – √avⁱ- (root; SG.3.IMP.PRS.ACT) ‖ `āśuhémā` – āśuhéman- (nominal stem; NOM.M.SG)
+2c	yásminn índro vásubhir mādáyāte	`yásmin` – yá- (pronoun; LOC.M.SG) ‖ `índraḥ` – índra- (nominal stem; NOM.M.SG) ‖ `vásubhiḥ` – vásu- (nominal stem; INS.M.PL) ‖ `mādáyāte` – √mad- (root; SG.3.SBJV.PRS.MED.CAUS)
+2d	tám aśyāma devayánto vo adyá	`tám` – sá- ~ tá- (pronoun; ACC.M.SG) ‖ `aśyāma` – √aś- (root; PL.1.OPT.AOR.ACT) ‖ `devayántaḥ` – √devay- (root; NOM.M.PL.PRS.ACT.PTCP.DEN) ‖ `vaḥ` – tvám (pronoun; GEN.PL) ‖ `adyá` – adyá (invariable)
+3a	śatápavitrāḥ svadháyā mádantīr	`śatápavitrāḥ` – śatápavitra- (nominal stem; NOM.F.PL) ‖ `svadháyā` – svadhā́- (nominal stem; INS.F.SG) ‖ `mádantīḥ` – √mad- (root; NOM.F.PL.PRS.ACT.PTCP)
+3b	devī́r devā́nām ápi yanti pā́thaḥ	`devī́ḥ` – devī́- (nominal stem; NOM.F.PL) ‖ `devā́nām` – devá- (nominal stem; GEN.M.PL) ‖ `ápi` – ápi (invariable; LP) ‖ `yanti` – √i- 1 (root; PL.3.IND.PRS.ACT) ‖ `pā́thaḥ` – pā́thas- (nominal stem; ACC.N.SG)
+3c	tā́ índrasya ná minanti vratā́ni	`tā́ḥ` – sá- ~ tá- (pronoun; NOM.F.PL) ‖ `índrasya` – índra- (nominal stem; GEN.M.SG) ‖ `ná` – ná (invariable) ‖ `minanti` – √mī- (root; PL.3.IND.PRS.ACT) ‖ `vratā́ni` – vratá- (nominal stem; ACC.N.PL)
+3d	síndhubhyo havyáṃ ghr̥távaj juhota	`síndhubhyaḥ` – síndhu- (nominal stem; DAT.M.PL) ‖ `havyám` – havyá- (nominal stem; ACC.N.SG) ‖ `ghr̥távat` – ghr̥távant- (nominal stem; ACC.N.SG) ‖ `juhota` – √hu- (root; PL.2.IMP.PRS.ACT)
+4a	yā́ḥ sū́ryo raśmíbhir ātatā́na	`yā́ḥ` – yá- (pronoun; ACC.F.PL) ‖ `sū́ryaḥ` – sū́rya- (nominal stem; NOM.M.SG) ‖ `raśmíbhiḥ` – raśmí- (nominal stem; INS.M.PL) ‖ `ātatā́na` – √tan- (root; SG.3.IND.PRF.ACT.LP)
+4b	yā́bhya índro áradad gātúm ūrmím	`yā́bhyaḥ` – yá- (pronoun; DAT.F.PL) ‖ `índraḥ` – índra- (nominal stem; NOM.M.SG) ‖ `áradat` – √rad- (root; SG.3.IND.IPRF.ACT) ‖ `gātúm` – gātú- (nominal stem; ACC.M.SG) ‖ `ūrmím` – ūrmí- (nominal stem; ACC.M.SG)
+4c	té sindhavo várivo dhātanā no	`té` – sá- ~ tá- (pronoun; NOM.M.PL) ‖ `sindhavaḥ` – síndhu- (nominal stem; VOC.M.PL) ‖ `várivaḥ` – várivas- (nominal stem; ACC.N.SG) ‖ `dhātana +` – √dhā- 1 (root; PL.2.IMP.AOR.ACT) ‖ `naḥ` – ahám (pronoun; DAT.PL)
+4d	yūyám pāta svastíbhiḥ sádā naḥ	`yūyám` – tvám (pronoun; NOM.PL) ‖ `pāta` – √pā- 1 (root; PL.2.IMP.PRS.ACT) ‖ `svastíbhiḥ` – svastí- (nominal stem; INS.PL) ‖ `sádā` – sádā (invariable) ‖ `naḥ` – ahám (pronoun; ACC.PL)

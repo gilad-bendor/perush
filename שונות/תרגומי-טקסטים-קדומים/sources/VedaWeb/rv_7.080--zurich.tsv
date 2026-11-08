@@ -1,0 +1,15 @@
+# Rigveda 7.80 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_07.tei.
+1a	práti stómebhir uṣásaṃ vásiṣṭhāḥ-	`práti` – práti (invariable; LP) ‖ `stómebhiḥ` – stóma- (nominal stem; INS.M.PL) ‖ `uṣásam` – uṣás- (nominal stem; ACC.F.SG) ‖ `vásiṣṭhāḥ` – vásiṣṭha- (nominal stem; NOM.M.PL.SUP)
+1b	gīrbhír víprāsaḥ prathamā́ abudhran	`gīrbhíḥ` – gír- ~ gīr- (nominal stem; INS.F.PL) ‖ `víprāsaḥ` – vípra- (nominal stem; NOM.M.PL) ‖ `prathamā́ḥ` – prathamá- (nominal stem; NOM.M.PL) ‖ `abudhran` – √budh- (root; PL.3.IND.AOR.MED)
+1c	vivartáyantīṃ rájasī sámante	`vivartáyantīm` – √vr̥t- (root; ACC.F.SG.PRS.ACT.PTCP.CAUS.LP) ‖ `rájasī` – rájas- (nominal stem; ACC.N.DU) ‖ `sámante` – sámanta- (nominal stem; ACC.N.DU)
+1d	āviṣkr̥ṇvatī́m bhúvanāni víśvā	`āviṣkr̥ṇvatī́m` – √kr̥- (root; ACC.F.SG.PRS.ACT.PTCP) ‖ `bhúvanāni` – bhúvana- (nominal stem; ACC.N.PL) ‖ `víśvā` – víśva- (nominal stem; ACC.N.PL)
+2a	eṣā́ syā́ návyam ā́yur dádhānā	`eṣā́` – eṣá (pronoun; NOM.F.SG) ‖ `syā́` – syá- ~ tyá- (pronoun; NOM.F.SG) ‖ `návyam` – návya- (nominal stem; ACC.N.SG) ‖ `ā́yuḥ` – ā́yus- (nominal stem; ACC.N.SG) ‖ `dádhānā` – √dhā- 1 (root; NOM.F.SG.PRS.MED.PTCP)
+2b	gūḍhvī́ támo jyótiṣoṣā́ abodhi	`gūḍhvī́` – √guh- (root; CVB) ‖ `támaḥ` – támas- (nominal stem; ACC.N.SG) ‖ `jyótiṣā` – jyótis- (nominal stem; INS.N.SG) ‖ `uṣā́ḥ` – uṣás- (nominal stem; NOM.F.SG) ‖ `abodhi` – √budh- (root; SG.3.IND.AOR.PASS)
+2c	ágra eti yuvatír áhrayāṇā	`ágre` – ágra- (nominal stem; LOC.N.SG) ‖ `eti` – √i- 1 (root; SG.3.IND.PRS.ACT) ‖ `yuvatíḥ` – yuvatí- (nominal stem; NOM.F.SG) ‖ `áhrayāṇā` – áhrayāṇa- (nominal stem; NOM.F.SG)
+2d	prā́cikitat sū́ryaṃ yajñám agním	`prá` – prá (invariable; LP) ‖ `acikitat` – √cit- (root; SG.3.IND.AOR.ACT) ‖ `sū́ryam` – sū́rya- (nominal stem; ACC.M.SG) ‖ `yajñám` – yajñá- (nominal stem; ACC.M.SG) ‖ `agním` – agní- (nominal stem; ACC.M.SG)
+3a	áśvāvatīr gómatīr na uṣā́so	`áśvāvatīḥ` – áśvāvant- (nominal stem; NOM.F.PL) ‖ `gómatīḥ` – gómant- (nominal stem; NOM.F.PL) ‖ `naḥ` – ahám (pronoun; DAT.PL) ‖ `uṣā́saḥ` – uṣás- (nominal stem; NOM.F.PL)
+3b	vīrávatīḥ sádam uchantu bhadrā́ḥ	`vīrávatīḥ` – vīrávant- (nominal stem; NOM.F.PL) ‖ `sádam` – sádam (invariable) ‖ `uchantu` – √vas- 1 (root; PL.3.IMP.PRS.ACT) ‖ `bhadrā́ḥ` – bhadrá- (nominal stem; NOM.F.PL)
+3c	ghr̥táṃ dúhānā viśvátaḥ prápītāḥ-	`ghr̥tám` – ghr̥tá- (nominal stem; ACC.N.SG) ‖ `dúhānāḥ` – √duh- (root; NOM.F.PL.PRS.MED.PTCP) ‖ `viśvátas` – viśvátas (invariable) ‖ `prápītāḥ` – √pī- 1 (root; NOM.F.PL.PTCP-ta.LP)
+3d	yūyám pāta svastíbhiḥ sádā naḥ	`yūyám` – tvám (pronoun; NOM.PL) ‖ `pāta` – √pā- 1 (root; PL.2.IMP.PRS.ACT) ‖ `svastíbhiḥ` – svastí- (nominal stem; INS.PL) ‖ `sádā` – sádā (invariable) ‖ `naḥ` – ahám (pronoun; ACC.PL)

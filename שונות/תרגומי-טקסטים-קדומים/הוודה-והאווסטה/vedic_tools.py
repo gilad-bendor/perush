@@ -16,6 +16,9 @@
     python3 -I -B vedic_tools.py avelemma LEMMA           the CAB glossary + Bartholomae's lemma for an Avestan lemma
     python3 -I -B vedic_tools.py lemma '<regex>'          every Rigveda line with a Zurich lemma matching the regex
     python3 -I -B vedic_tools.py lexmap ['<regex>']       Hebrew ↔ lemma, from the פירוק bullets of every drafted file
+    python3 -I -B vedic_tools.py freq KEY…                the commonest lemmas of the KEYs, with their Hebrew so far
+                                                          (KEY may be RV7 = all of Book 7, or RV7.1-17 = a range; also
+                                                          for verify and build)
     python3 -I -B vedic_tools.py verify [KEY…] [--strict]
     python3 -I -B vedic_tools.py build [KEY…]             translation-<KEY>.rtl.md + each project's translation.rtl.md
     python3 -I -B vedic_tools.py grep '<regex>' [--all]   the unvocalized `>` lines of this corpus (--all: every corpus)
@@ -75,8 +78,13 @@ P3 = "3-המבול"
 P4 = "4-העקדה"
 P5 = "5-יאמה-והמתים"
 P6 = "6-המהמר-והצפרדעים"
+P7 = "7-ריגוודה-ספר-ז"
 PROJECT_TITLES = {P1: "מזמורי הראשית של הריגוודה", P2: "אינדרה והנחש (ריגוודה א 32)", P3: "המבול ההודו־איראני",
-                  P4: "העקדה: שונהשפה, הקרבן המחליף, נצ'יקטס", P5: "יאמה והמתים", P6: "המהמר והצפרדעים"}
+                  P4: "העקדה: שונהשפה, הקרבן המחליף, נצ'יקטס", P5: "יאמה והמתים", P6: "המהמר והצפרדעים",
+                  P7: "הריגוודה, ספר ז: ספר בית וסישטהה"}
+# a project whose clean translation also embeds a text that lives in another project (Round 7 run 1: RV 7.103, the
+# frogs, moved into the whole Book 7; project 6 keeps its title and embeds it)
+PROJECT_EMBEDS = {P6: ["RV10.34", "RV7.103"]}
 
 # KEY: (project, Hebrew title, kind, source spec)
 UNITS = {
@@ -99,8 +107,51 @@ UNITS = {
     "RV10.17": (P5, "ריגוודה י 17: סַרַנְיוּ, פּוּשָׁן, המים", "rv", (10, 17)),
     "RV10.18": (P5, "ריגוודה י 18: אל אמא האדמה", "rv", (10, 18)),
     "RV10.34": (P6, "ריגוודה י 34: המהמר", "rv", (10, 34)),
-    "RV7.103": (P6, "ריגוודה ז 103: הצפרדעים", "rv", (7, 103)),
 }
+
+# Rigveda Book 7 whole (Round 7 run 1): the addressees of VedaWeb's TEI (the Anukramaṇī), as fallback headings
+B7_ADDRESSEES = (
+    "אל אגני|שירי האפרי|אל אגני|אל אגני|אל אגני ואישוונרה|אל אגני ואישוונרה|אל אגני|אל אגני|אל אגני|אל אגני|"
+    "אל אגני|אל אגני|אל אגני ואישוונרה|אל אגני|אל אגני|אל אגני|אל אגני|אל אינדרה: מלחמת עשרת המלכים|אל אינדרה|אל אינדרה|"
+    "אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|"
+    "אל אינדרה|אל אינדרה|וסישטהה ובניו|אל כל האלים|אל כל האלים|אל כל האלים|אל כל האלים|אל סויטר ואלים אחרים|אל כל האלים|אל כל האלים|"
+    "אל בהגה ואלים אחרים|אל כל האלים|אל כל האלים|אל דדהיקרא|אל סויטר|אל רודרה|אל המים|אל הרבהו|אל המים|לאלים שונים|"
+    "אל האדיטיה|אל האדיטיה|אל שמים וארץ|אל ואסטושפתי|לחש שינה|אל המרוטים|אל המרוטים|אל המרוטים|אל המרוטים|אל מיטרה ווָרונה|"
+    "אל מיטרה ווָרונה|אל השמש, מיטרה ווָרונה|אל השמש, מיטרה ווָרונה|אל מיטרה ווָרונה|אל מיטרה ווָרונה|אל מיטרה ווָרונה, האדיטיה והשמש|אל האשווינים|אל האשווינים|אל האשווינים|אל האשווינים|"
+    "אל האשווינים|אל האשווינים|אל האשווינים|אל האשווינים|אל השחר|אל השחר|אל השחר|אל השחר|אל השחר|אל השחר|"
+    "אל השחר|אל אינדרה וורונה|אל אינדרה וורונה|אל אינדרה וורונה|אל אינדרה וורונה|אל ורונה|אל ורונה|אל ורונה|אל ורונה|אל הרוח (ואיו) ואינדרה|"
+    "אל הרוח (ואיו) ואינדרה|אל הרוח (ואיו)|אל אינדרה ואגני|אל אינדרה ואגני|אל סרסוותי וסרסוונט|אל סרסוותי וסרסוונט|אל אינדרה וברהספתי|אל אינדרה|אל וישנו ואינדרה|אל וישנו|"
+    "אל פרג'ניה|אל פרג'ניה|הצפרדעים|אל אינדרה וסומה, נגד השדים").split("|")
+assert len(B7_ADDRESSEES) == 104
+B7_NUM = {1: "א", 2: "ב", 3: "ג", 4: "ד", 5: "ה", 6: "ו", 7: "ז", 8: "ח", 9: "ט"}
+
+
+def _heb_num(n):
+    """1..199 in Hebrew letters (15 = טו, 16 = טז)."""
+    h = "ק" if n >= 100 else ""
+    n %= 100
+    tens = {1: "י", 2: "כ", 3: "ל", 4: "מ", 5: "נ", 6: "ס", 7: "ע", 8: "פ", 9: "צ"}
+    if n in (15, 16):
+        return h + {15: "טו", 16: "טז"}[n]
+    return h + (tens[n // 10] if n >= 10 else "") + (B7_NUM[n % 10] if n % 10 else "")
+
+
+for _h in range(1, 105):
+    UNITS[f"RV7.{_h}"] = (P7, f"ריגוודה ז {_heb_num(_h)}: {B7_ADDRESSEES[_h - 1]}", "rv", (7, _h))
+B7_KEYS = [f"RV7.{_h}" for _h in range(1, 105)]
+
+
+def expand_keys(ks):
+    """'RV7' (or 'B7') = all of Book 7; 'RV7.1-17' = a range of its hymns."""
+    out = []
+    for k in ks:
+        m = re.fullmatch(r"(?:RV7|B7)(?:\.(\d+)-(\d+))?", k)
+        if m:
+            a, b = (int(m.group(1)), int(m.group(2))) if m.group(1) else (1, 104)
+            out += [f"RV7.{h}" for h in range(a, b + 1)]
+        else:
+            out.append(k)
+    return out
 
 
 # ---------------------------------------------------------------- folding (licences, repeated lines)
@@ -515,6 +566,8 @@ TRAPS = [
     (RW + r"(?:מות)" + RE_, r"mrtyu|mrty|mrt|mar", "מָוֶת / מוֹת / מוּת: vocalize the unvocalized מות"),
     (RW + r"(?:אדיטי|אדיתי)" + RE_, r"aditi", "Aditi: always vocalized אַדִיטִי"),
     (RW + r"(?:אורה|אורא)" + RE_, r"ahur|ahura", "Ahura: write אֲהוּרָה, vocalized"),
+    (RW + r"(?:מרוטים)" + RE_, r"marut", "the Maruts: always vocalized מַרוּטִים ('plucked')"),
+    (RW + r"(?:אריה|אריים|אריות)" + RE_, r" ary", "ā́rya: always vocalized אָרְיָה ('lion')"),
 ]
 
 
@@ -617,7 +670,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
             out.append(f"RESERVED {key} {lab}: «{m.group(0).strip()}» – {why}\n    {heb}\n    src: {src}")
             bad += 1
     for rx, hv, hp, star, what in names():
-        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv"):
+        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv") or ("(RV 7)" in what and UNITS[key][0] != P7):
             continue
         if not _heb_has(plain, hp):
             if f"[היתר שם: " in body:
@@ -959,6 +1012,49 @@ def cmd_lemma(pat):
 _PIRUK = re.compile(r"`([^`]+)`\s*–\s*\*?([^\s(\"„“,;*]+)\*?[^;]*?\(\"([^\"]+)\"\)")
 
 
+def lexmap_dict():
+    """{folded lemma: {Hebrew: [KEY:label …]}} from the פירוק bullets of every drafted file."""
+    m = {}
+    for k in present_keys():
+        heb, seq, src, body, _ = read_annotated(k)
+        for lab in seq:
+            for l in body[lab].split("\n"):
+                if not l.startswith("- **פירוק:**"):
+                    continue
+                for seg in re.split(r";\s+(?=`)", l[len("- **פירוק:**"):]):
+                    mm = _PIRUK.search(seg)
+                    if mm:
+                        lem = fold_lemma(mm.group(2))
+                        hb = strip_marks(mm.group(3))
+                        if lem:
+                            m.setdefault(lem, {}).setdefault(hb, []).append(f"{k}:{lab}")
+    return m
+
+
+def cmd_freq(keys, top=150):
+    """The commonest Zurich lemmas of KEYs (RV only), each with its count there, in Book 7 and in the drafted files'
+    Hebrew (lexmap): the shared words a translator must keep one Hebrew for (Round 7 run 1)."""
+    from collections import Counter
+    here, b7 = Counter(), Counter()
+    for k in B7_KEYS:
+        for r in rows(k):
+            for w in r["words"]:
+                b7[fold_lemma(w["lemma"])] += 1
+    shown = {}
+    for k in keys:
+        for r in rows(k):
+            for w in r["words"]:
+                fl = fold_lemma(w["lemma"])
+                here[fl] += 1
+                shown.setdefault(fl, w["lemma"])
+    lm = lexmap_dict()
+    print(f"# The commonest lemmas of {keys[0]}…{keys[-1]} ({len(keys)} text(s)): lemma – count here / in Book 7 – the Hebrew of the drafted files\n")
+    for fl, n in here.most_common(int(top)):
+        hs = lm.get(fl, {})
+        h = "; ".join(f"{hb} ×{len(v)} ({v[0]})" for hb, v in sorted(hs.items(), key=lambda x: -len(x[1]))[:4]) or "—"
+        print(f"- {shown[fl]} – {n} / {b7[fl]} – {h}")
+
+
 def cmd_lexmap(pat=None):
     m = {}
     for k in present_keys():
@@ -1103,7 +1199,7 @@ def build(keys=None):
         done[k] = build_one(k)
     # each project's translation.rtl.md: its head + its texts, in the UNITS order
     for proj in PROJECT_TITLES:
-        ks = [k for k in UNITS if UNITS[k][0] == proj and os.path.exists(translation_path(k))]
+        ks = [k for k in (PROJECT_EMBEDS.get(proj) or [k for k in UNITS if UNITS[k][0] == proj]) if os.path.exists(translation_path(k))]
         if not ks:
             continue
         pdir = os.path.join(HERE, proj)
@@ -1126,6 +1222,8 @@ def main():
     if not a:
         sys.exit(__doc__)
     cmd, rest = a[0], [x for x in a[1:] if not x.startswith("--")]
+    if cmd in ("verify", "build"):
+        rest = expand_keys(rest)
     if cmd == "convert":
         return cmd_convert()
     if cmd == "units":
@@ -1148,6 +1246,8 @@ def main():
         return cmd_avelemma(rest[0])
     if cmd == "lemma" and rest:
         return cmd_lemma(rest[0])
+    if cmd == "freq" and rest:
+        return cmd_freq(expand_keys(rest))
     if cmd == "lexmap":
         return cmd_lexmap(rest[0] if rest else None)
     if cmd == "verify":

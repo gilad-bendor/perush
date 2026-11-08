@@ -1,0 +1,15 @@
+# Rigveda 7.14 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_07.tei.
+1a	samídhā jātávedase	`samídhā` – samídh- (nominal stem; INS.F.SG) ‖ `jātávedase` – jātávedas- (nominal stem; DAT.M.SG)
+1b	devā́ya deváhūtibhiḥ	`devā́ya` – devá- (nominal stem; DAT.M.SG) ‖ `deváhūtibhiḥ` – deváhūti- (nominal stem; INS.F.PL)
+1c	havírbhiḥ śukráśociṣe namasvíno	`havírbhiḥ` – havís- (nominal stem; INS.N.PL) ‖ `śukráśociṣe` – śukráśocis- (nominal stem; DAT.M.SG) ‖ `namasvínaḥ` – namasvín- (nominal stem; NOM.M.PL)
+1d	vayáṃ dāśemāgnáye	`vayám` – ahám (pronoun; NOM.PL) ‖ `dāśema` – √dāś- (root; PL.1.OPT.PRS.ACT) ‖ `agnáye` – agní- (nominal stem; DAT.M.SG)
+2a	vayáṃ te agne samídhā vidhema	`vayám` – ahám (pronoun; NOM.PL) ‖ `te` – tvám (pronoun; DAT.SG) ‖ `agne` – agní- (nominal stem; VOC.M.SG) ‖ `samídhā` – samídh- (nominal stem; INS.F.SG) ‖ `vidhema` – √vidh- 1 (root; PL.1.OPT.AOR.ACT)
+2b	vayáṃ dāśema suṣṭutī́ yajatra	`vayám` – ahám (pronoun; NOM.PL) ‖ `dāśema` – √dāś- (root; PL.1.OPT.PRS.ACT) ‖ `suṣṭutī́` – suṣṭutí- (nominal stem; INS.F.SG) ‖ `yajatra` – yájatra- (nominal stem; VOC.M.SG)
+2c	vayáṃ ghr̥ténādhvarasya hotar	`vayám` – ahám (pronoun; NOM.PL) ‖ `ghr̥téna` – ghr̥tá- (nominal stem; INS.N.SG) ‖ `adhvarasya` – adhvará- (nominal stem; GEN.M.SG) ‖ `hotar` – hótar- (nominal stem; VOC.M.SG)
+2d	vayáṃ deva havíṣā bhadraśoce	`vayám` – ahám (pronoun; NOM.PL) ‖ `deva` – devá- (nominal stem; VOC.M.SG) ‖ `havíṣā` – havís- (nominal stem; INS.N.SG) ‖ `bhadraśoce` – bhadraśoci- (nominal stem; VOC.M.SG)
+3a	ā́ no devébhir úpa deváhūtim	`ā́` – ā́ (invariable; LP) ‖ `naḥ` – ahám (pronoun; PL) ‖ `devébhiḥ` – devá- (nominal stem; INS.M.PL) ‖ `úpa` – úpa (invariable; LP) ‖ `deváhūtim` – deváhūti- (nominal stem; ACC.F.SG)
+3b	ágne yāhí váṣaṭkr̥tiṃ juṣāṇáḥ	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `yāhí` – √yā- 1 (root; SG.2.IMP.PRS.ACT) ‖ `váṣaṭkr̥tim` – váṣaṭkr̥ti- (nominal stem; ACC.F.SG) ‖ `juṣāṇáḥ` – √juṣ- (root; NOM.M.SG.AOR.MED.PTCP)
+3c	túbhyaṃ devā́ya dā́śataḥ syāma	`túbhyam` – tvám (pronoun; DAT.SG) ‖ `devā́ya` – devá- (nominal stem; DAT.M.SG) ‖ `dā́śataḥ` – √dāś- (root; NOM.M.PL.PRS.ACT.PTCP) ‖ `syāma` – √as- 1 (root; PL.1.OPT.PRS.ACT)
+3d	yūyám pāta svastíbhiḥ sádā naḥ	`yūyám` – tvám (pronoun; NOM.PL) ‖ `pāta` – √pā- 1 (root; PL.2.IMP.PRS.ACT) ‖ `svastíbhiḥ` – svastí- (nominal stem; INS.PL) ‖ `sádā` – sádā (invariable) ‖ `naḥ` – ahám (pronoun; ACC.PL)
