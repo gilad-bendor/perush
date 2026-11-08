@@ -363,12 +363,12 @@ RESERVED = [
     (W + alt("עולה", "העולה", "עולות", "קרבן", "קורבן", "הקרבן", "מזבח", "המזבח", "ניחוח") + E, None, "the Temple's offering words never: yasna = זֶבַח (the cousin corpus), zaōθra = נֶסֶךְ"),
     (W + alt("נשמה", "נשמת", "נשמתו", "נשמות", "הנשמה", "נשמתי") + E, None, "נְשָׁמָה never: uruuan = נֶפֶשׁ"),
     (W + alt("תורה", "התורה", "תורת", "תורתו", "תורתי") + E, None, "תּוֹרָה never: dāta = דָּת, sə̄ṇgha = הוֹרָאָה, mąθra = מַנְתְּרָה"),
-    (W + alt("צלם", "בצלם", "צלמו", "בצלמו", "דמות", "בדמות", "כדמות", "דמותו") + E, None, "צֶלֶם / דְּמוּת never: kəhrp = גּוּף"),
+    (W + alt("צלם", "בצלם", "צלמו", "בצלמו", "דמות", "בדמות", "כדמות", "דמותו") + E, None, "צֶלֶם / דְּמוּת never: kəhrp = צוּרָה, tanū = גּוּף"),
     (W + alt("שבת", "השבת", "שבתו", "שביתה", "וישבות") + E, None, "the root שבת never"),
     (r"(?<![א-ת])ו?(?:נח|נוח|ינוח|לנוח)(?![א-ת])", None, "נָח never (the string of Noah)"),
     (W + alt("אשרי", "אשריו", "אשרינו", "אשריך", "אשריהם") + E, None, "אַשְׁרֵי never: uštā = רָצוֹן / כִּרְצוֹן (Ps 1:1 in the apparatus)"),
     # --- only for their source counterpart (renderings §7.2) ---
-    (W + alt("רוח", "רוחות", "הרוח", "הרוחות", "רוחו", "ברוח", "רוחי", "לרוח", "שהרוח", "רוחך") + E, r"mainii|mainy|maini|manii|vat|vaii|vay", "רוּחַ only for mainiiu (and vāta / vaiiu, the wind)"),
+    (W + alt("רוח", "רוחות", "הרוח", "הרוחות", "רוחו", "ברוח", "רוחי", "לרוח", "שהרוח", "רוחך") + E, r"mainii|mainy|maini|manii|maniu|vat|vaii|vay", "רוּחַ only for mainiiu (and vāta / vaiiu, the wind)"),
     (W + alt("חושך", "חשך", "החושך", "החשך", "חשכה", "חשיכה", "בחושך", "בחשך", "מחושך") + E, r"tem|tqm|tam", "חֹשֶׁךְ only for təmah (Vedic támas: the cousin corpus)"),
     (W + alt("אור", "האור", "אורות", "האורות", "באור", "לאור", "מאור", "אורו", "אורם") + E, r"raoc|raok|rao|ruc|bami|bama|xvar|huuar|hvar|suc|aoc", "אוֹר only for raōcah / its kin (Gen 1:3–5, Isa 45:7 in the apparatus)"),
     (W + alt("זרע", "הזרע", "זרעו", "זרעים", "זרעה", "זרעם", "לזרע", "מזרע") + E, r"taox|tauxm|ciϑr|cithr|ciθr", "זֶרַע only for taoxman (the cousin corpus) / ciϑra 'seed, lineage'"),
@@ -377,7 +377,7 @@ RESERVED = [
     (W + alt("ברך", "בירך", "ברכה", "ברכת", "מבורך", "יברך", "ברוך", "ברכו", "ברכם", "ברכות", "ברכתי") + E, r"(?!)", "the root ברך never (no Old Avestan counterpart: āfrī- / āšī- by sense); `בֶּרֶךְ` 'knee' needs a [היתר שער]"),
     (W + alt("ארור", "ארורה", "ארר", "אורר", "מארה", "ארורים") + E, None, "the root ארר never"),
     (W + alt("אמת", "האמת", "אמתו", "אמיתי", "באמת", "אמיתית") + E, r"haith|haiϑ|hai|arez|erez|ered|arsh|ars", "אֱמֶת only for haiϑiia (Vedic satyá: the cousin corpus) and ərəš 'truly'"),
-    (W + alt("שקר", "השקר", "שקרים", "השקרים", "בשקר", "לשקר", "שקרו", "משקר", "המשקר") + E, r"druj|druz|druxs|drug|draog|druz|drao|druj", "שֶׁקֶר only for druj / draōga (Vedic druh: the cousin corpus)"),
+    (W + alt("שקר", "השקר", "שקרים", "השקרים", "בשקר", "לשקר", "שקרו", "משקר", "המשקר") + E, r"druj|druz|druxs|drug|draog|drao|dreg|drig|druu", "שֶׁקֶר only for druj / draōga (Vedic druh: the cousin corpus)"),
     (W + alt("סדר", "הסדר", "בסדר", "לסדר", "סדרו", "מסדר", "וסדר", "שבסדר") + E, r"as|ara|ere|erer", "סֵדֶר only for aša (and its compounds; Vedic r̥tá: the cousin corpus)"),
     (W + alt("נדיב", "הנדיב", "הנדיבה", "נדיבה", "נדיבים", "הנדיבים", "נדיבות", "הנדיבות") + E, r"spen|span|spe", "נָדִיב only for spəṇta / spə̄ništa (the cousin corpus)"),
     (W + alt("גשר", "הגשר", "בגשר", "לגשר", "גשרו") + E, r"peret|perat|pere", "גֶּשֶׁר only for pərətu"),
@@ -398,9 +398,7 @@ RE_ = rf"(?![{V}א-ת])"
 # (regex on the RAW line, condition regex on the licence text: if it matches, the unvocalized string is an error; why)
 TRAPS = [
     (RW + r"(?:אל|אלים|אלה|אלות|אלי|אלת)" + RE_, r" daeu| daev| dev", "daēuua: אֵל / אֵלִים always vocalized ('to', 'these')"),
-    (RW + r"(?:אהורה|אהורא)" + RE_, r"ahur", "Ahura: vocalized אֲהוּרָה at its first occurrence in each file (the name check)"),
     (RW + r"(?:ימה)" + RE_, r"yim", "Yima: always vocalized יִימָה ('to the sea')"),
-    (RW + r"(?:מזדה)" + RE_, r"(?!)", "Mazdā: the name check vocalizes its first occurrence"),
     (RW + r"(?:דת)" + RE_, r"dat", "דָּת (dāta): always vocalized ('religion' in modern Hebrew)"),
     (RW + r"(?:עד)" + RE_, r"yauu|yau|yav", "yauua 'duration': עַד vocalized where it could be read as the preposition"),
 ]
@@ -539,7 +537,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
             out.append(f"UNVOCALIZED {key} {lab}: {why}\n    {heb}")
             bad += 1
     for fid, grx, hrx, _ in formulas():
-        if re.search(grx, srcf) and not re.search(nopunct(hrx), nopunct(plain)) and "[סטייה מן הנוסחה" not in body:
+        if re.search(grx, srcf) and not re.search(hrx, re.sub(r"[()]", "", nopunct(plain))) and "[סטייה מן הנוסחה" not in body:
             out.append(f"FORMULA {key} {lab}: {fid} `{grx}` → `{hrx}` (renderings §8)\n    {heb}\n    src: {src}")
             bad += 1
     return bad

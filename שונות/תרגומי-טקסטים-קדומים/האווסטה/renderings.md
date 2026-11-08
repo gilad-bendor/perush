@@ -58,8 +58,8 @@ needs `[היתר שם: …]` in the entry when the Hebrew cannot keep the singul
 ### 3.1 The table
 | Source name | folded-source regex | Hebrew | ★ | note |
 |---|---|---|---|---|
-| Mazdā | ` mazd(?!aiiasn\|ayasn)` | `מַזְדָּה` |  | "Wise (one)": the god's name, alone or with Ahura, in either order (the Gāthās prefer *mazdā ahura*, the YH *ahura mazdā*); the Hebrew keeps the source's order |
-| Ahura | ` ahur(?!angh)` | `אֲהוּרָה` |  | "Lord" (= Vedic *ásura*, the cousin corpus's `אַסוּרָה` + note); the plural *ahurā̊ŋhō* "the Lords" is a common noun (`הָאֲהוּרִים`, §5) |
+| Mazdā | ` mazd(?!aiiasn\|ayasn\|atha)` | `מַזְדָּה` |  | "Wise (one)": the god's name, alone or with Ahura, in either order (the Gāthās prefer *mazdā ahura*, the YH *ahura mazdā*); the Hebrew keeps the source's order |
+| Ahura | ` ahur(?!a?angh)` | `אֲהוּרָה` |  | "Lord" (= Vedic *ásura*, the cousin corpus's `אַסוּרָה` + note); the plural *ahurā̊ŋhō* "the Lords" is a common noun (`הָאֲהוּרִים`, §5) |
 | Zaraϑuštra | ` zarathustr` | `זָרָתוּשְׁטְרָה` |  | (Vd 2's form) |
 | Spitāma | ` spitam` | `סְפִּיתָמָה` |  | Zaraϑuštra's clan; *spitamā̊ŋhō* "the Spitāmas" (`[היתר שם]` for `הַסְּפִּיתָמִים`) |
 | Vīštāspa | ` vistasp` | `וִישְׁטָסְפָּה` |  | the *kauui* who received the teaching |
@@ -242,7 +242,7 @@ The Hebrew regex is matched on the bracket-free, unvocalized, punctuation-free l
 
 | F | folded-source regex | Hebrew regex | lines |
 |---|---|---|---|
-| F1 | `\b(?:vohu\|vanheus\|vohu)\b (?:manangha\|manangho\|mano\|manah\|manahi\|manangham)\b` | `מחשבה הטובה` | *vohu manah* adjacent (any case): `הַמַּחֲשָׁבָה הַטּוֹבָה` with its prepositions |
+| F1 | `\b(?:vohu\|vangheus\|vanheus)\b (?:manangha\|manangho\|mano\|manah\|manahi\|manangham)\b` | `מחשבה הטובה` | *vohu manah* adjacent (any case): `הַמַּחֲשָׁבָה הַטּוֹבָה` with its prepositions |
 | F2 | `\bas(?:a\|em\|ahe\|ahiia\|at\|ai\|aat\|ahe\|ai)\b (?:vahist\w*)` | `סדר הטוב ביותר` | *aṣ̌a vahišta* adjacent |
 | F3 | `\bspent\w* mainii\w*\|\bmainii\w* spent\w*` | `רוח\S* \S*נדיב` | *spəṇta mainiiu* adjacent |
 | F4 | `\bangr\w* mainii\w*\|\bmainii\w* angr\w*` | `רוח\S* \S*מזיק` | *aŋra mainiiu* adjacent |
@@ -250,7 +250,7 @@ The Hebrew regex is matched on the bracket-free, unvocalized, punctuation-free l
 | F6 | `\bcinuuat\w* \S*pere\w*\|\bpere\w* cinuuat` | `גשר\S* הבורר` | *cinuuat̰ pərətu* |
 | F7 | `\bgaro demana\w*\|\bdemana\w* garo` | `בית השירה` | *garō dəmāna* |
 | F7b | `\bdrujo demana\w*` | `בית השקר` | *drūjō dəmāna* |
-| F8 | `\bahu\w* astuuat\w*\|\bastuuat\w* \S* ?ahu` | `קיום\S* בעל העצמות` | *ahu astuuaṇt* |
+| F8 | `\bahu\w* astuuat\w*\|\bastuuat\w* \S* ?ahu` | `קיומ?\S*(?: \S+){0,3} בעלי? העצמות` | *ahu astuuaṇt* |
 | F9 | `\btat thba peresa eres moi vaoca ahura\b` | `זאת אני שואל אותך אמור לי נכונה אהורה` | the refrain of Y 44.1–19 (`זֹאת אֲנִי שׁוֹאֵל אוֹתְךָ – אֱמֹר לִי נְכוֹנָה, אֲהוּרָה:`) |
 | F10 | `\bahmai yahmai usta kahmaicit\b` | `לו לכל מי ש` | Y 43.1a (the Uštavaitī's name line) – fixed by the translator of Y 43, then copied |
 | F12 | `\basat haca\b` | `לפי הסדר` | *aṣ̌āt̰ hacā* "in accordance with Aša" |
@@ -272,6 +272,25 @@ YH 35.2 = 41.7 (the latter is outside the scope).
 | Y28 28.1b | err | שֶׁל הָרוּחַ, מַזְדָּה, הָרִאשׁוֹנָה – הַנְּדִיבָה, בְּצֶדֶק – כָּל הַמַּעֲשִׂים |
 
 ## 11. Merged from the translators (numbered by part; the coordinator)
+### 11.1 PR, Y 28–30 (T1, part 1; merged 2026-11-09)
+- **Fixed strings:** Ahuna Vairya *ahū vairiiō* `אדון נבחר`, *ratuš* `מכריע`, *aṣ̌āt̰cīt̰ hacā* `לפי הסדר עצמו`
+  (Y 29.6b copies: `לא נמצא אדון אחד, וגם לא מכריע לפי הסדר עצמו`); the Ašəm Vohū `הסדר טוב, הטוב ביותר הוא; /
+  כרצון הוא, כרצון – לו, / אשר לסדר הטוב ביותר – סדר.`; imperatives vocalized.
+- **New rows (accepted):** *aṣ̌i* `גְּמוּל` (apart from *mīžda* `שָׂכָר`); *hant-* / *hātąm* `הַקַּיָּמִים` (the root
+  of *ahu* `קיום`); *rafnah* `עֶזְרָה`, *auuah* `סִיּוּעַ` (*rafəδra* keeps `סַעַד`); *ϑβars-* / *ϑβōrəštar* `חָצַב` /
+  `הַחוֹצֵב` (*taš-* keeps `חִשֵּׁל`: Y 29.1a `למי חצבתם אותי? מי חישל אותי?`); *vi-ci-* `הִבְחִין`, *vīciϑa*
+  `הַבְחָנָה`, *vīcira* `מַבְחִין` (*var-* keeps `בָּחַר`); *kāma* `חֵשֶׁק` (the cousin corpus); *vid-* "find" `מָצָא`;
+  *iš́iia* `נִכְסָף`; *aēšma* `זַעַם`; *xrafstra* `טורף`; *sraōša* `הַקְשָׁבָה`; *frī-* `פִּיֵּס`; *xšnu-* `רִצָּה`;
+  *āiiapta* `הֶשֵּׂג`, *āpana* `הַשָּׂגָה`; *uruuāta* `תַּקָּנָה`; *xšā-* `מָלַךְ`; *mə̄ṇ … dā-* `שָׂם על לב`;
+  *ā.dəbaōman* `תעתוע`; *maga* `שותפות?`; *ādāna* `פרעון`; *kaēnā* `נקמה`; *hudāh* / *duždāh* `טובי־הנתינה` /
+  `רעי־הנתינה`; *pərəs-* middle `נועץ` (Vd 2).
+- **Settled by the coordinator:** *tanū* `גּוּף` (the cousin corpus's Vedic *tanū́*: the cognate keeps it); *kəhrp*
+  `צוּרָה` (the gate note corrected). *srauuah* split by sense (`הדברים` 28.10c "words" / `בשם הטוב` 30.10c "fame"),
+  recorded. *fraša* stays `מפואר` (CAB's "lush" in the apparatus). *ahura* as a title (Y 29.2c) `אֲהוּרָה` + note.
+- **Tool fixes after part 1:** the Ahura trap removed (the name check vocalizes the first occurrence); the `שקר` gate
+  licensed by *drəgu-*; the `רוח` gate by *mańiuu-*; the Mazdā regex skips *mazdāϑā*; F1 reads the folded
+  *vaŋhə̄uš* (`vangheus`); F8 allows the dual and words between; formulas are matched without stripping the regex.
+
 
 ## 12. Cross-corpus choices for the lead (Avestan words whose Vedic cognate the cousin corpus has not rendered yet)
 Each pair below gets one Hebrew under the cousin-language rule; this corpus's choice is given, for the lead to align
