@@ -669,3 +669,5 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | IN 11.4 | ok | `למישהו יש – אל המשמרת ילך!` |
 | IN 15.3 | err | `או מה שהוא מן הביכורים אשר אתם, האיכרים, לָאֵלִים` |
 | IN 12.1 | err | `ואתם, הכוהנים, המְשׁוּחִים, אמות האל` |
+
+2026-11-09 harmonization: Sum. *alan* = `פֶּסֶל` (Ur-Namma prologue 3, 24 and the notes; [equivalent]): the Sumerian word is not the cognate of `צֶלֶם`, which stays reserved for Akk. *ṣalmu* (guidelines §6.7, the Round 6 rule). Sum. *bala* stays `שלטון` here (LI 16, UN e009, e018), after its Akkadian equivalent *palû* (LH 3389′, 3498′) – a recorded split with the laments' and flood references' `תקופה`.
