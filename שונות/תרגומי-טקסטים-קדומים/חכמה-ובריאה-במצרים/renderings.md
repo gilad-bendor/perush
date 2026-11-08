@@ -896,16 +896,16 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
    BD 109's "northern" gate as Nu writes it (the TLA: sic); BD 83, 84, 124's shifted titles in Nu.
 #### 12.6.6 NU6 (BD 2 … 190), translator 6, merged 2026-11-06 (full table in project.md, "NU6")
 1. **Refrains:** BD 78 `יחששו ממני אֵלֵי הַדּוּאַת, ישגיחו הם על שעריהם בעדי` (×6; ꜥḥꜣ "watch over", the TLA's "achthaben";
-   "fight" `נלחם` for the other sense); BD 78's mission `האציל אותי חוֹרוּס בבָּא שלו, כדי לקחת את עניינו לאוֹסִירִיס אל
+   "fight" `נלחם` for the other sense); BD 78's mission `הידר אותי חוֹרוּס בבָּא שלו, כדי לקחת את עניינו לאוֹסִירִיס אל
    הַדּוּאַת` (×3); BD 65 / 179's victory `נתון הוא לי, גמור הוא תחתיי בוועד`; the litany frame `n X` = `ל־X;` (one item a line;
    141.17–28 copy NU5 148's names).
-2. **Terms:** sꜥḥ (verb) `האציל` / `מואצל` (Num 11:17 `וְאָצַלְתִּי` in the apparatus; the root link is ours); ḏsr (verb) `קידש`,
+2. **Terms:** sꜥḥ (verb) `הידר` / `הָדוּר` (2026-11-09 harmonization, §12.7; was `האציל` / `מואצל`; Num 11:17 an [equivalent] of the concept only); ḏsr (verb) `קידש`,
    relics `הקדשים`; sqꜣi̯ `רומם`; ṯni̯ `הבליט` / `בולט`; jṯi̯ `לקח`; wsr.t `מפרקת`; wsr.w `חוסן`; sḫm (epithet) `האדיר`, the
    sceptre `שרביט־הסֶחֶם`; nms `נֶמֶס`; jz.t `פלוגה`; ḥꜣ.t `בית־הקבר`; zḥ `ביתן`; ḥꜣw-mr `האספסוף`. Names: Swnw `סְוֵנֵה` [cognate Ezek 29:10]; **Rw.tj `שני־אריות` everywhere** (the coordinator: NU5's
    `רוּטִי` changed, 53.2, 55.2, 109.x); about 35 new names (project.md).
 3. **Gates:** `ברַא` (b + Re) and `ברֶא־חֶנֶת` read as ברא – passed with `[היתר שער]` (kept: an exemption keyed to Re could hide the
    root); `בגדה` "bank" avoided (`בשפת־המים`).
-4. **Open (for the user):** `האציל` for sꜥḥ (the Num 11:17 root is ours); ꜥḥꜣ "watch over" against "fight"; ḏsr `קידש` against
+4. **Open (for the user):** `האציל` for sꜥḥ (settled 2026-11-09, §12.7: `הידר` / `הָדוּר`); ꜥḥꜣ "watch over" against "fight"; ḏsr `קידש` against
    "clear (the way)"; 65.11–13's cosmic threat rendered literally.
 #### 12.6.7 NU7 (BD 133 … 189), translator 7, merged 2026-11-06 (full table in project.md, "NU7")
 1. **Copies:** 189.2–13 copy NU5 52.1–7, NU4 82.2–4 / 124.3–5, NU3 51.2–3 where the Egyptian is the same; 133.1, 133.20,
@@ -990,3 +990,24 @@ noun `יראה`; ꜥḥꜥ r `עמד נגד`; ꜥꜣ "door-leaf" `כנף־הדל
 nḥm, mri̯, ski̯ (`אבד` / `כילה` / "spend time" `בלה`), ꜥḥꜥ "rise", ḫsf "go to meet", dndn (two lemmas). **For the lead (two
 lemmas, one Hebrew):** jꜣ.w / dwꜣ (`הלל`), sk / zjn (`ניגב`), nḏ / zꜣu̯, ꜥḏ / psḏ, ṯꜣi̯ / nḥm, the oar words, jm.j-rʾ / ns,
 rri̯ / šꜣj, nrw / ḥr.yt, sḫt; bs (`לפיד` / `שביב`).
+
+### 12.7 2026-11-09 harmonization (the Round 6 finalization; the lead's batch B, rows 5–9 of `../reports/round-6/final--plan.md`)
+2026-11-09 harmonization: **changed** – (row 9) sꜥḥ (verb) = `הידר`, its stative = `הָדוּר` (vocalized: `הדור` is "generation",
+NU7 112.12, 113.9, 133.10): the hiphil `האציל` has one biblical sense, Num 11:17 and `וַיָּאצֶל מִן הָרוּחַ` (במדבר יא:כה), and "האציל אותי חוֹרוּס
+בבָּא שלו" re-made that verse in Hebrew, while sꜥḥ is "honour, invest with rank" (the TLA's "auszeichnen"); `עיטר` is ḏbꜣ's (NU7
+130.5, 130.36, NU8 96.7, NU10 136B.6), `רומם` sqꜣi̯'s, `מכובד` jmꜣḫ.y's (WE 7,20), `מפואר` ꜣḫ's (NU5 8.2); the root הדר was free, and
+HC 91 already renders the noun sꜥḥ `הדר השמים` (the noun stays `אציל` / `אצילות` in BD). Changed lines: NU6 78.13 `מואצל` →
+`הָדוּר`, 78.19 `האציל` → `הידר`, 78.21 `הרי מואצל אתה` → `הרי הָדוּר אתה`, 78.32 and 78.39 `האציל אותי חוֹרוּס` → `הידר אותי
+חוֹרוּס` (the refrain stays byte-identical in its three copies), the NU6 intro; Num 11:17 stays an [equivalent] of the concept
+(78.13). (Row 7) the horizon god: two TLA lemmas, two names – Rꜥ-Ḥr.w-ꜣḫ.tj (tla70002) `רַא־חַרְאַחְתִּי`, Ḥr.w-ꜣḫ.tj
+(tla107800) `חוֹרוּס־אָחְתִּי`, both kept; but NU6 141.3 had a third form for tla70002, `לרַא־חוֹרוּס־אשר־באופק;` → `לרַא־חַרְאַחְתִּי;`
+(as TB, NU10 149.S2, 150.D1). **Kept** – (row 8) ḥḏi̯ `הזיק` / `היזק`: of its 33 tokens (31 lines: AM ×10, MK E132, WE 6,4, BD 11,
+26, NU9 137A.26, 145.16, CH 3, 6, 7, 21, MR ×13) the great majority is "harm, damage" (speech, colour, the heart, measures,
+cakes, a monument, a city, the sick man's days, "hidden harm" in BD 175); "destroy" fits only CH 21, E132 (MR = MK = the
+dossier), NU9 145.16 and perhaps MR E84 – no change in any copy; WE 6,4 `הפריעה` (the rowing girl's stroke) is a narrative
+split by sense. (Row 5) the two-lemma pairs of §12.6.13 (jꜣ.w / dwꜣ `הלל`, sk / zjn `ניגב`, nḏ / zꜣu̯ `שמר`, ꜥḏ / psḏ `זוהר`, ṯꜣi̯ /
+nḥm `נטל`, the oar words, jm.j-rʾ / ns `לשון`, rri̯ / šꜣj `חזיר`, nrw / ḥr.yt `אימה`, qfdn.w / jꜥnꜥ `בבון`): synonyms in a
+non-Semitic corpus (guidelines §6.7, principle 1); they share texts but no line renders the two lemmas alike (NU4 122-1.3
+keeps wsr.w `משוטי־החתירה` apart from ḥmw `המשוט`); twꜣ is `עני` throughout; šwꜣ.w `רָשׁ` (MR E27, E42, beside twꜣ `עני`) /
+SI B309 `מסכן` by text, AM 26.13 a double analysis (šwꜣ / twꜣ) `עני`. (Row 6) mr.w, sḫt, jꜣ.t, qnj.t, ḫꜣw.t, wpi̯: by text and
+sense, as §12.6.10–12.6.11 record.
