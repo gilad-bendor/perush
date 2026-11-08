@@ -57,7 +57,7 @@ The corpus `../renderings.md` binds (names §1, Emesal §2, refrains §3, key te
 | *u₂-šim* | `כָּפָן` | | *šag₄-ĝar* keeps `רעב` | 312 |
 | *šukur₂*; *ĝa₂-nun*; *kaš*; *e₂-lunga*; *munu₄* | `מנת־מזון`; `אסם`; `שֵׁכָר`; `בית־השֵׁכָר`; `לתת` | | | 291, 304, 306, 308 |
 | *nesaĝ* | `ביכורים` | [equivalent] | the first-fruits offering | 325, 343 |
-| *ma₂-gur₈*; *ne-mur*; *ušumgal*; *ĝidru*; *suḫ* | `ספינת־מַגּוּר`; `רמץ`; `דרקון`; `שרביט`; `עטרה` | | precedents in other corpora | 322, 338, 423, 440, 458 |
+| *ma₂-gur₈*; *ne-mur*; *ušumgal*; *ĝidru*; *suḫ* | `ספינת־מַגּוּר`; `רמץ`; `דרקון`; `שרביט`; `נזר` (harmonization 2026-11-09; was `עטרה`) | | precedents in other corpora | 322, 338, 423, 440, 458 |
 | *gidim* | `אִטִּים` | [cognate / loan, Isa 19:3] | as Gilgameš XII | 405 |
 | *u₆ di* | `פליאה` | [absent `כָּבוֹד`] | ETCSL "glory" | 426 |
 | *si-ĝar*; *ig-šu-ur₂*; *saĝ-kul*; *suḫub₄* | `בריח`; `סוגר`; `נגר`; `מנעול` | `בריח` ↔ Lam 2:9 | | 404; 60; 432 |

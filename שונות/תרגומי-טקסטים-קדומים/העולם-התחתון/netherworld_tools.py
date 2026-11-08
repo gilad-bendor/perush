@@ -172,6 +172,13 @@ RESERVED_KEY = {'ER': {
     B + P + r'(דלת|דלתות|דלתו)' + E: [r'dalt'],
     B + P + r'(אות|אותות)' + E: [r'\bittu|\bittāt|\bitti\b'],
     B + P + r'(קרא|קראו|יקרא|ויקרא|קורא|קראתי|קראה)' + E: [r'nabû|ittabi|ibbi|nibīt|\bnabi'],
+},
+    # Round 6 run 4 (DD's proposals, project.md "Proposals"; applied in the harmonization of 2026-11-09)
+    'DD': {
+    B + P + r'(מקוה|מקווה)' + E: [],                                         # Gen 1:10
+    r'ערב רב': [],                                                           # Exod 12:38 (110: אנשים מעורבבים)
+    B + P + r'(פתר|פותר|פותרת|פתרה|פתרו|פתרון|פתרונו|פתרונה)' + E: [],       # Gen 40–41 (*bur₂* = פרש)
+    B + P + r'(איילות|אילות|איילתי|אילותי)' + E: [],                          # Ps 18:34; Hab 3:19 (*maš-da₃* = צבי)
 }}
 TRAPS_KEY = {'ER': {
     'אישום': ('Išum (אִישׁוּם; unvocalized "indictment")', r'īšum|išum'),
@@ -184,6 +191,15 @@ TRAPS_KEY = {'ER': {
     'אמנים': ('*ummânu* (אֻמָּנִים)', r'ummân'),
     'נס': ('*urinnu* (נֵס; unvocalized "miracle")', r'urinn'),
     'שמש': ('the sun / Šamaš (שֶׁמֶשׁ / שַׁמַשׁ)', r'šamš|šamaš'),
+},
+    'DD': {
+    'מנו': ('*ma-nu* (מָנוּ; unvocalized "from us")', r'ma-nu|manu\['),
+    'רע': ('*gu₅-li* (רֵעַ; unvocalized "evil")', r'gu₅-li|guli\['),
+    'רעי': ('*gu₅-li* (רֵעִי; unvocalized "my evil")', r'gu₅-li|guli\['),
+    'רעו': ('*gu₅-li* (רֵעוֹ; unvocalized "his evil")', r'gu₅-li|guli\['),
+    'רעך': ('*gu₅-li* (רֵעֲךָ; unvocalized "your evil")', r'gu₅-li|guli\['),
+    'שמים': ('*ĝar* (שָׂמִים; unvocalized "heaven")', r'ĝar|ĝa₂-ĝa₂|ŋar\['),
+    'אלה': ('*diĝir* of a goddess (אֵלָה; unvocalized "these")', r'diĝir|diŋir\['),
 }}
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
 FN = re.compile(r'\[\^[^\]]+\]')
@@ -267,6 +283,48 @@ FORMULAS = [
     ('ER', r'būl šakkan', r'בהמת שכן', '*būl šakkan* = בהמת שַׁכַּן'),
     ('ER', r'\bimat\b', r'חמת', '*imat* = חֲמַת'),
     ('ER', r'abūb', r'מבול', '*abūbu* = מבול'),
+    # Round 6 run 4: Dumuzid's Dream (DD's proposals; renderings §3 of the project), applied 2026-11-09
+    # the dream (27–40) and its interpretation (44–68): the image in the dream's own words (1st / 2nd person)
+    ('DD', r'\{u₂\}numun₂ ma-ra-(an-)?zi-zi', r'חלפה – (לי|לך) קמה; חלפה – (לי|לך) צומחת', 'the rushes (27 = 44)'),
+    ('DD', r'gi dili du₃-e saĝ', r'קנה בודד, נטוע – ראש (לי|לך) מניע', 'the single reed (28 = 46)'),
+    ('DD', r'gi dili-dili du₃-e dili', r'קנים בודדים, נטועים – אחד (ממני|ממך) מורחק', 'the reeds (29 = 48)'),
+    ('DD', r'\{ĝiš\}tir-ra ĝiš an', r'עצי היער – כשמים – מעצמם (לי|לך) (קמו|קמים)', 'the trees (30 = 50)'),
+    ('DD', r'ne-mur kug-', r'על (רמצי|רמצך) הטהור – מים שפכו', 'the embers (31 = 52)'),
+    ('DD', r'TUN₃-bi', r'מכסה (לך )?הורחק', 'the churn\'s lid (32 = 54 = 255)'),
+    ('DD', r'\{ĝiš\}gag-ta la₂-a \{ĝiš\}gag-ta', r'התלוי על היתד – מן היתד הורד', 'the cup on the peg (33 = 56 = 257)'),
+    ('DD', r'\{ĝiš\}ma-nu-(ĝu₁₀|zu) u₂-gu', r'מקל־המנו (שלי|שלך) – אבד (לי|לך)', 'the stick (34 = 58)'),
+    ('DD', r'nin-ninna₂\{mušen\}-ta-e ĝa₂ udu-ka sila₄', r'ציפור־הנינננה – בבית־הצאן – טלה לקחה', 'the bird (35 = 60)'),
+    ('DD', r'sur₂-du₃\{mušen\}-e gi dub-ba', r'הנץ – בקני־הגדר – דרור לקח', 'the falcon (36 = 62)'),
+    ('DD', r'maš₂-ud₅-da-(ĝu₁₀|zu) sun₄', r'תיש־העזים (שלי|שלך) – את זקנו הספירי בעפר (לי|לך) גורר', 'the goats (37 = 66)'),
+    ('DD', r'udu-utua₂-(ĝu₁₀|zu) a₂ gur-gur', r'איל־ההרבעה (שלי|שלך) – בזרועותיו העבות ארץ (לי|לך) שורט', 'the rams (38 = 68)'),
+    ('DD', r'\{dug\}šakir₃ i₃-dur₂-dur₂ ga nu-un-de₂', r'המחבצה – שוכבת; חלב אינו נשפך', 'the end 1 (39 = 259)'),
+    ('DD', r'an-za-am i₃-dur₂-dur₂ \{d\}dumu-zid nu-(un-)?til₃', r'הגביע – שוכב; דומוזי אינו חי; הדיר – של משב בנוי', 'the end 2 (40 = 64 = 260)'),
+    # the seizure 156–163 = 183–190 = 218–225
+    ('DD', r'a-niĝin₂ ba-ni-in-du₈', r'^האנשים סבבו אותו; את הבריכה – פתחו;$', 'the seizure 1'),
+    ('DD', r'sa mu-un-na-keše₂', r'^חבל לו שוזרים, רשת לו קושרים;$', 'the seizure 2'),
+    ('DD', r'zi-ip-pa-tum', r'^חבל־זיפתום לו שוזרים;$', 'the seizure 3'),
+    ('DD', r'ḫur-ru-ne$', r'^מקל־מנו לו שורטים;$', 'the seizure 4'),
+    ('DD', r'lu₂ igi-na-ke₄', r'^זה שלפניו – דבר מוחץ;$', 'the seizure 5'),
+    ('DD', r'murgu-na-ke₄', r'^זה שמאחוריו – \*כאמה אחת\* פורש;$', 'the seizure 6'),
+    ('DD', r'šu-ni šu-du₃-a ba-e-dab₅', r'^ידיו – בכבלי־יד נתפסות;$', 'the seizure 7'),
+    ('DD', r'a₂-la₂-a ba-e-la₂', r'^זרועותיו – בכבלי־זרוע נכבלות\.$', 'the seizure 8'),
+    # the prayer 164–173 = 191–199 = 226–234 (the destination varies) and its granting 174–179 = 200–204 = 235–238
+    ('DD', r'\{d\}utu-ra an-še₃ šu-ni ba-ni-in-zig₃', r'^הבחור – אל אותו, אל השמים – את ידיו הרים:$', 'the prayer 1'),
+    ('DD', r'murum₅-ĝu₁₀-me-en', r'^"אותו, אחי־אשתי אתה; אני – בעל־אחותך!$', 'the prayer 2'),
+    ('DD', r'u₂ gur₃-', r'^אל אאנה – עשב אני טוען;$', 'the prayer 3 (*gur₃* = טען, 2026-11-09)'),
+    ('DD', r'niĝ₂-mussa\S* ak-(a-)?me-en', r'^אל אורוך – שי־כלולות עשיתי;$', 'the prayer 4'),
+    ('DD', r'nundum kug-ge', r'^את השפתיים הטהורות – נשקתי;$', 'the prayer 5'),
+    ('DD', r'e-ne di dug₄', r'^על הברכיים הטהורות, ברכי איננה – שיחקתי\.$', 'the prayer 6'),
+    ('DD', r'šu-ĝu₁₀ šu maš-da₃', r'^את ידי – לידי צבי תניח,$', 'the prayer 7'),
+    ('DD', r'ĝiri₃-ĝu₁₀ ĝiri₃ maš-da₃', r'^את רגלי – לרגלי צבי תניח;$', 'the prayer 8'),
+    ('DD', r'ga-ba-da-an-ze₂-er', r'^משדי־גלה שלי אשתמטה,$', 'the prayer 9'),
+    ('DD', r'zi-ĝu₁₀ ga-ba-ši-(in-)?de₆', r' – את חיי אשא!"$', 'the prayer 10 (*de₆* = נשא)'),
+    ('DD', r'er₂-na .*šu ba-ši-(ni-)?(in-)?ti', r'^אותו – את דמעותיו לקח;$', 'the granting 1 (LC 171)'),
+    ('DD', r'arḫuš-a-gin₇ arḫuš', r'^כאיש רחמים – רחמים עשה\.$', 'the granting 2 (HA 35)'),
+    ('DD', r'šu-ni šu maš-da₃', r'^את ידיו – לידי צבי הניח[,;]$', 'the granting 3'),
+    ('DD', r'ĝiri₃-ni ĝiri₃ maš-da₃', r'^את רגליו – לרגלי צבי הניח;$', 'the granting 4'),
+    ('DD', r'-e-ne (im-ma|ba)-da-an-ze₂-er', r'^משדי־גלה – השתמט;$', 'the granting 5'),
+    ('DD', r'zi-ni ba-ši-in-(de₆|tum₃)', r' – את חייו נשא\.$', 'the granting 6'),
 ]
 
 # Round 4, run 5: Erra I 126–162 are fixed (renderings §12.6) and shared with the flood references (§7 there).
@@ -500,6 +558,8 @@ def check_formulas(key, label, heb, tr, problems):
     t = re.sub(r'[⸢⸣]', '', clean_tr(tr))   # half-brackets hid formulas (2026-10-22, GEN MT.B68)
     if key == 'ER':   # 2026-10-24: ER's source regexes are written for the bar-free normalization
         t = re.sub(r'[\[\]?]', '', clean_norm(t))
+    elif key == 'DD':   # 2026-11-09: the repeated passages are partly broken in their later copies
+        t = re.sub(r'[\[\]]', '', t)
     for k, trx, hrx, what in FORMULAS:
         if k not in (key, '*'):
             continue

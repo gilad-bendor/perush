@@ -42,7 +42,7 @@ Words used only in this project (the corpus `../renderings.md` binds first). Tab
 | *kug-zu*; *igi-ĝal₂* | `חָכָם`; `נָבוֹן` | *kug-zu* ↔ משלי ג:ז | `חכם` only *kug-zu* | 2.70, 2.115, 3.11; 3.162 |
 | *ur-maḫ*; *piriĝ*; *peš₂*; *niĝ₂-gilim*; *ka₅-a*; *ur(-gir₁₅)* | `אַרְיֵה`; `לָבִיא`; `עכבר`; `חולדה`; `שׁוּעָל`; `כֶּלֶב` | | | 2.101; 3.70, 3.82; 2.c4, 2.d7; 3.82 |
 | *lag* | `רגב` / `גוש` | | by sense (open decision 4) | 2.88, 3.154 / 2.104, 3.117 |
-| *ur₁₁* (*uru₄*) | `זרע` | | also "plough" (open decision 3) | 2.17, 2.20, 2.91, 2.140, 3.74 |
+| *ur₁₁* (*uru₄*) | `חרש` (harmonization 2026-11-09, the creation corpus's binding *uru₄* `חָרַשׁ`; was `זרע`); `זרע` kept only where the object is grain (c2 A32) | | | 2.17, 2.20, 2.91, 2.140, 3.74 |
 | *me-te* | `עֲדִי` | | temple corpus; ETCSL "glory" | 2.c13–2.d1 |
 | *niĝ₂-gig X* (not a god) | `תועבת X` / `תועבה היא` | ↔ משלי יא:א | the plough, the necromancer, one's god; 3.161 | 3.14, 3.161, 3.168, 3.169 |
 | *eme sig gu₇* | `אכל קֻרְצֵי` | [cognate via *karṣī akālu*] ↔ דניאל ג:ח | | 3.18 |

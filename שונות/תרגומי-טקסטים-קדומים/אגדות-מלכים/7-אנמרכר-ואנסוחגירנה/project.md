@@ -116,7 +116,7 @@ the intro and this file.
    (e.g. `עוף־המים`? – but `עוף` is gated) or keep the split, noted. `בַּרְבֻּר` (1 Kgs 5:3, fattened fowl) stays in the
    apparatus.
 4. ***suḫ₁₀* "crown" = `עטרה`** (89, 178, 191): `צָנִיף` is Gudea's *gur* (and Gilgameš's *parsīgu*), `נֵזֶר` is EA's *saĝ
-   muš₃*, `כתר` is *aga* / *men*; `עטרה` is Etana's Akkadian *meānu* (OBM 7, 11) – a cross-language overlap to confirm.
+   muš₃*, `כתר` is *aga* / *men*; `עטרה` is Etana's Akkadian *meānu* (OBM 7, 11) – a cross-language overlap to confirm. **Harmonization 2026-11-09:** *suḫ₁₀* = `נזר` (the creation corpus's rule, LC 2, 410, HB 29, BH MT.A33); EA 274 *saĝ muš₃* moved to `עטרת ארטה`.
 5. ***nam-maš-maš* = `מְלַחֲשׁוּת`** (138, 250, 254), a coined abstract of `מְלַחֵשׁ` (`מְלָאכָה` is reserved; `כשף` is
    *kašāpu*'s family only).
 6. ***i₃* (of the dairy) = `שמן`** (LC: *i₃* `שמן`, *i₃-nun* `חמאה`): in 175–197, 220, 265–268 it is clarified butter; kept

@@ -283,7 +283,7 @@ Strings exactly as used (ES and any later Uruk text):
   `"אחיך – מה אמר, מה הוסיף –`; the message/delivery 294–321 = 360–387 (FORMULAS_CY candidate: `ḫi-li-ĝu₁₀ ba-til` → `חִני
   תם`, `a-na-aš am₃-da-la₂-e` → `למה היא תולה`).
 - **Words:** *an-ta* / *ki-ta* `מן השמים` / `מן הארץ`; *pa e₃* (reveal) `הוציא לאור`; *sag₉* `נאה` (not `טוב`); *šu niĝin₂*
-  `סב`; *u₅* `אווז?`; *la-ḫa-ma* `הַלַּחַמָּה`; *gu₃ ra* `קול הכה`; *en₃ tar* `שאל`; *ĝiš ra* `הוכה בעץ`; *ga luḫ* `חלב
+  `סב`; *u₅* `אווז?` (→ `שקנאי?`, harmonization 2026-11-09); *la-ḫa-ma* `הַלַּחַמָּה`; *gu₃ ra* `קול הכה`; *en₃ tar* `שאל`; *ĝiš ra* `הוכה בעץ`; *ga luḫ* `חלב
   רחוץ`; *ḫe₂-nun* `שובע` (`שפע` = *ḫe₂-ĝal₂*); *peš₁₀* `גדה`; *gum₂-ga-am₃ za* `נהמה השמיע`; *tum₁₂-gur₄* `יונת־בר`;
   *allānum* `בלוט`; *de₅* (peck) `ליקט`; *ne su-ub* `*נישק*`; *gam₃-gam₃* `ציפור־הגַּמְגַּם`; *zar* `אלומה`; *danna* `דַּנָּה`;
   *dim-dim* `עמודים`; *gi-bar-bar* `חיצי־קנים`; *im šeĝ₃* `כמטר הומטר`; *im-dug* `אבני־הקלע`; *mu ama-bi-ir gi₄* `שנה אל

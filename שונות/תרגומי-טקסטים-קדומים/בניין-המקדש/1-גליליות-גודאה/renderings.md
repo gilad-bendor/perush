@@ -88,7 +88,7 @@ Words and formulas used in this text only (the shared ones are in `../renderings
 | *udu-i₃ gukkal maš₂ niga*; *{f}ešgar ĝiš nu-zu*; *kuš … durun* | `כבש שמן, כבש־אַלְיָה, גדי מפוטם`; `גדייה שלא ידעה זכר`; `על עורה – הושיב` | equivalent ↔ ויקרא ג:ט; במדבר לא:יח | | A.viii.8–9 |
 | *du₆-du₆ … sig*; *inim-ĝar*; *aḫ dug₄-ga* | `את התלים – שיטח`; `קוֹל־דָּבָר`; `רוק המאמר` | equivalent ↔ ישעיהו מ:ד | *inim-ĝar* fixed here (renderings §3); `בת קול` avoided. | A.viii.4–5, xiii.11 |
 | *ki ḫuš*; *ḫuš* | `המקום הנורא`; `נורא` | equivalent ↔ בראשית כח:יז | *ḫuš* = `נורא` always; *sumur* `זועף`, *mir* `זעם`. | A.viii.6, 15; ix.16, 20, 25; x.3, 19; xiv.14 |
-| *di kud*; *di … si sa₂* | `דין נחתך`; `את דין … מיישר` | equivalent ↔ תהלים ט:ט | *kud* = `חתך` (also xii 9). | A.viii.6, x.26 |
+| *di kud*; *di … si sa₂* | `דן דין` (harmonization 2026-11-09; was `דין נחתך`); `את דין … מיישר` | equivalent ↔ תהלים ט:ט | *kud* = `חתך` (also xii 9). | A.viii.6, x.26 |
 | *igi … ĝal₂* | `עין … נתונה` | equivalent ↔ דברי הימים ב טז:ט | | A.viii.7 |
 | *dib*; *zal* | `עבר`; `העביר` | | Two verbs of time kept apart. | A.viii.2–3; xiii.29 |
 | *a ḫuš gi₄-a* | `שהשיב את המים הנוראים` | equivalent ↔ תהלים קד:ט; איוב לח:יא | Ninurta's damming of the waters. | A.viii.15, ix.20 |
@@ -148,7 +148,7 @@ Words and formulas used in this text only (the shared ones are in `../renderings
 | *u₅ bur₃ eše₃*; *u₅ … sikil* | `שטח של בּוּר ואֵשֶׁה`; `את השטח … מזככת` | equivalent ↔ יחזקאל מה:א | 24 *iku*. | A.xiii.24–25 |
 | *zig₃-ga … ĝar / ĝal₂*; *im-ru-a*; *ma-da*; *a₂-dam* | `הקמה שָׂם`, `הקמה לו היתה`; `משפחה`; `מדינה`; `נָוֶה` | equivalent ↔ מלכים א ה:כז; במדבר ב:לד | `מס` avoided; `יישוב` blocked by the `שוב` check (open decision 2). | A.xiv.7–26 |
 | *saĝ-bi-a mu-gub* | `לראשה עמד` | equivalent ↔ במדבר י:יד | | A.xiv.18, 23, 27 |
-| *u₅ kug*; *aš-me*; *erin₂* (team); *gu maš₂-anše edin-na la₂-a* | `*הקָּאָת הטהורה*`; `עיגול־השמש`; `צמד`; `חבל־הבהמות הנמתח בערבה` | divergence ↔ ויקרא יא:יח | *gu … maš₂-anše … edin … la₂* as the Curse of Agade 159. | A.xiv.23–27 |
+| *u₅ kug*; *aš-me*; *erin₂* (team); *gu maš₂-anše edin-na la₂-a* | `*השקנאי הטהור*` (harmonization 2026-11-09; was `*הקָּאָת הטהורה*`); `עיגול־השמש`; `צמד`; `חבל־הבהמות הנמתח בערבה` | divergence ↔ ויקרא יא:יח | *gu … maš₂-anše … edin … la₂* as the Curse of Agade 159. | A.xiv.23–27 |
 
 ## Run 3 (A xv–xxii)
 | Sumerian | Hebrew | Tag | Notes | Lines |
@@ -308,7 +308,7 @@ Words and formulas used in this text only (the shared ones are in `../renderings
 | *še-er-zid*; *i₃-ti* | `זיו`; `אור הירח` | equivalent ↔ שיר השירים ו:י | | A.xxvii.10; xxviii 1; xxx 8 |
 | *igi-bi*; *šag₄-bi*; *bar-bi* | `פניו`; `תוכו`; `חוצו` | | | A.xxvii.11–13 |
 | *nam-šub šir₃ ḫa-mun*; *im ḫa-mun* | `קסם ושיר תואמים`; `טיט תואם` | equivalent ↔ תהלים כט:ט; divergence ↔ דברים יח:י | 2026-10-21 harmonization: *nam-šub* = `קֶסֶם` (was `לחש`). | A.xxvii.12, 20 |
-| *gu₂-en*; *ki di kud {d}a-nun* | `לשכת־המועצה`; `מקום שבו הָאֲנוּנָּה חותכים דין` | equivalent ↔ מלכים א ז:ז; תהלים פב:א | | A.xxvii.14–15 |
+| *gu₂-en*; *ki di kud {d}a-nun* | `לשכת־המועצה`; `מקום שבו הָאֲנוּנָּה דנים דין` | equivalent ↔ מלכים א ז:ז; תהלים פב:א | | A.xxvii.14–15 |
 | *a-lal₃*; *inim šudu₃*; *šukur₂* | `ה…`; `דבר ברכה`; `מנה` | equivalent ↔ מלאכי ג:י | | A.xxvii.16–17; xxviii 9 |
 | *urin … sig₉*; *anzud₂ … a₂ … bad* | `הנֵסים … התקועים`; `אַנְזוּד … כנף פרש` | equivalent; divergence ↔ שמות כה:כ; מלכים א ו:כז | `כרוב` reserved. | A.xxvii.18–19 |
 | {id₂}*edin* | `נהר אֵדִין` | | `עדן` reserved. | A.xxvii.21 |

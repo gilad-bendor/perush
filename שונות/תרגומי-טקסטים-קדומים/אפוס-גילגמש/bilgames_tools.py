@@ -103,7 +103,7 @@ FORMULAS_B = [
     ('HA HB BH AG DB', r'gu₃ mu-(un-)?na-de₂-e$|gu₃ mu-(un-)?na-de₂-[\[]?e', r'(פונה|פנה|פנתה|פונים|פנו|פונות) אל', '*gu₃ de₂* = פונה אל (GEN)'),
     ('HA HB BH AG DB', r'inim mu-(un-)?(na-)?(ni-)?ib-gi₄-gi₄$', r'(משיב|משיבה|משיבים|השיב|השיבה|השיבו) .*דבר', '*inim gi₄* = משיב … דבר (GEN 176)'),
     ('HA HB', r'mu-ĝu₁₀ ga-am₃-ĝar', r'אשים את שמי|שמי אשים', '*mu-ĝu₁₀ ga-am₃-ĝar* = אשים את שמי (*šuma šakānu*)'),
-    ('HA HB AG DB', r'en kul-aba₄\{ki\}', r'אדון כ(ו)?לבה', '*en kul-aba₄{ki}* = אדון כֻּלַּבָּה'),
+    ('HA HB AG DB', r'en kul-aba₄\{ki\}', r'אדון כ(ו)?לבה', '*en kul-aba₄{ki}* = אדון כּוּלַבָּה'),
     ('HA HB BH AG DB', r'\{d\}nin-sumun₂?', r'נינסון', 'Ninsun = נִינְסוּן'),
 ]
 

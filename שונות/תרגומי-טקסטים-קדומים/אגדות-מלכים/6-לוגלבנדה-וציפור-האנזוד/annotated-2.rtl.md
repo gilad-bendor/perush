@@ -148,10 +148,10 @@
 
 ### 220
 `u₅{mušen} ĝiš-gi kug-ta e₃-a-gin₇`
-> כאווז היוצא מסבך־הקנים הטהור,
-- **פירוק:** `u₅{mušen}` "אווז?" (ORACC goose); `ĝiš-gi kug-ta` – *ĝiš-gi* "סבך קנים" + *kug* "טהור" + *-ta*; `e₃-a-gin₇` – *e₃* "לצאת" + *-a-gin₇*.
-- **תרגומים:** ETCSL: "Like a pelican emerging from the sacred reedbed" – "pelican" זיהוי אחר; "sacred" הוא *kug* "טהור".
-- **הערות:** *u₅* = `אווז?` (EA 436); *kug* = `טהור`. שלושה דימויים (220–222) להופעה פתאומית – מן המים, מן התהום, מן השמים.
+> כשקנאי? היוצא מסבך־הקנים הטהור,
+- **פירוק:** `u₅{mušen}` "שקנאי?" (ETCSL pelican; ORACC goose); `ĝiš-gi kug-ta` – *ĝiš-gi* "סבך קנים" + *kug* "טהור" + *-ta*; `e₃-a-gin₇` – *e₃* "לצאת" + *-a-gin₇*.
+- **תרגומים:** ETCSL: "Like a pelican emerging from the sacred reedbed" – "pelican" כמונו; "sacred" הוא *kug* "טהור".
+- **הערות:** *u₅* = `שקנאי?` (EA 436; אנקי וסדר העולם 297, 418; הרמוניזציה 2026-11-09: `אווז` שמור ל־*kur-gi₄*, ES); *kug* = `טהור`. שלושה דימויים (220–222) להופעה פתאומית – מן המים, מן התהום, מן השמים.
 
 ### 221
 `la-ḫa-ma abzu-ta re₇-e-gin₇`

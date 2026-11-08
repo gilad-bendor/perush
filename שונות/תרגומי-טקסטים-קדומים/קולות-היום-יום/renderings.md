@@ -117,3 +117,4 @@ The project's `2-משלים-שומריים/renderings.md` (21 rows added) binds.
 - 2026-10-21: §9 project 3 merged.
 - 2026-10-21: the lead's cross-corpus harmonization applied (§9, last paragraph; §0.1–§0.2, §3.1–§3.3, §6 updated).
 - 2026-10-23 harmonization, batch C (`../harmonization--2026-10-23.md` row 19): *bâʾu* "go along" = `צָעַד` (LAOS 4 16 r.iii.22 `עבר` → `צעד`); of lightning "flash by" by sense `חָלַף` (01 o.i.10 `ועוברים` → `וחולפים`, o.i.12 `עבר הברק` → `חלף הברק`): `עָבַר` is reserved for its cognate *ebēru*.
+- 2026-11-09 harmonization (Round 6 finalization, batch A): *uru₄* (*ur₁₁*) = `חרש` (the creation corpus's binding *uru₄* `חָרַשׁ`): proverbs c2 A35 `לא זרע` → `לא חרש`, A153 `השור – זורע` → `השור – חורש`, B17 `זורעים` → `חורשים`, c3 A143 `הזריעה` → `החרישה`; kept `זרע` in c2 A32 (the object is grain); *u₅{mušen}* = `שקנאי?` (c2 D10 `אווז?` → `שקנאי?`); *gur₃* = `טען` (c3 A296 `הסובל את השמים` → `הטוען את השמים`).

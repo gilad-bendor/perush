@@ -705,8 +705,8 @@
 
 ### 274
 `saĝ muš₃ aratta{ki}-ke₄`
-> נזר ארטה –
-- **פירוק:** `saĝ muš₃` "נזר, כתר" (?; ORACC muš[space]); `aratta{ki}-ke₄` "של ארטה" (ארגטיב).
+> עטרת ארטה –
+- **פירוק:** `saĝ muš₃` "עטרה, כתר" (?; ORACC muš[space]; הרמוניזציה 2026-11-09: `נזר` הוא *suḫ₁₀* בכל הקורפוסים השומריים); `aratta{ki}-ke₄` "של ארטה" (ארגטיב).
 - **תרגומים:** Mittermayer: "und wenn (schliesslich Innana), das Diadem Aratas"; ETCSL: "the ...... of Aratta".
 
 ### 275

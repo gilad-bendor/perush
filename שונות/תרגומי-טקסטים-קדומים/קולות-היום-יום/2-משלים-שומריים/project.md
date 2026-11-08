@@ -114,7 +114,7 @@ Translator: a Round 6 run-4 sub-agent (range A), working from `reports/round-6/r
 ### Open decisions (with my rulings)
 1. *nam-tar* (noun) = `גּוֹרָל` (as *nam*; the laments `גורלה שנגזר`); *nam tar* (verb) = `גזר גורל` as before. Ruled: kept.
 2. *gala* = `מְקוֹנֵן` (Round 2's 2.54), not the transliterated `גָּלָה` of the creation corpus; *nar* = `זמר`; *mu₇-mu₇* = `לַחַשׁ`. Ruled: kept for the project.
-3. *ur₁₁* (*uru₄*) = `זרע` throughout (Round 2's 2.17, 2.20), also where ETCSL says "plough" (2.91, 2.140, 3.74). Ruled: kept; the note says the verb covers ploughing and sowing.
+3. *ur₁₁* (*uru₄*) = `זרע` throughout (Round 2's 2.17, 2.20), also where ETCSL says "plough" (2.91, 2.140, 3.74). Ruled: kept; the note says the verb covers ploughing and sowing. **Harmonization 2026-11-09:** `חרש` (the creation corpus's binding *uru₄*), except A32 (grain object: `זרע`).
 4. *lag* = `רגב` in the field (2.88, 3.154), `גוש` of bread and loads (2.104–2.105, 3.117): sense split noted.
 5. *me-te* "what befits, ornament" = `עֲדִי` (as the temple corpus), against ETCSL "glory" (`כבוד` reserved).
 6. *niĝ₂-gig* without a god = `תועבה היא` (3.161, as 1.23); with a non-divine possessor `תועבת X` (the plough, the necromancer).
