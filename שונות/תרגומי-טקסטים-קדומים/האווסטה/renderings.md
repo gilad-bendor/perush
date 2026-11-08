@@ -292,6 +292,22 @@ YH 35.2 = 41.7 (the latter is outside the scope).
   *vaŋhə̄uš* (`vangheus`); F8 allows the dual and words between; formulas are matched without stripping the regex.
 
 
+### 11.2 Y 31–34 (T1, part 2; merged 2026-11-09)
+- **New rows (accepted):** *dāmi* `מְכוֹנֵן` (apart from *dātar* `מַעֲמִיד`); *ərəši* `חוֹזֶה` (the cousin corpus's
+  *ŕ̥ṣi*); *zrazdā* `בעל אמונה` (cognate of Vedic *śraddhā́* `אמונה`); *dāta* `הַדָּתוֹת` [cognate] (Esth 1:13, Ezra
+  7:12), its homographs *dātā* "give!" / "given" told apart; *miϑah* / *miϑahuuacah* `כוזב` / `בעל הדיבור הכוזב`;
+  *ərəzu* / *razišta* `ישר` / `הישר ביותר`; *mərəd-* `שיבש`; *dab-* `רימה`; *van-* `הביס` (*zā-* `ניצח`, *tar-* `גבר
+  על`); *vaxš-* `צמח` / `הצמיח`; *frād-* `קידם` (*frādat̰.gaēϑa* `המקדם את בעלי החיים`); *fradaxš-* / *fradaxštar*
+  `הורה` / `מורה`; *ϑrā-* `הגן`; *sā-* `חתך`; *pā-* `שמר`; *maraka* `כליה`; *xᵛarəϑa* `מזון`; *rāiti* `מתת`;
+  *dāϑra* `מתנה`; *draōnah* `חלק`; *asti* `אורח`; *uruuaϑa* `ידיד`; *arədra* `דבק`; *tarōmaiti* `בוז`; *asrušti*
+  `אי־ההקשבה`; *frasā* `שאלה`; *ham.paršti* `היוועצות`; *daxšta* `אות`; *miiazda* `סעודת הזבח`; *būmī* `אֲדָמָה`;
+  *šōiϑra* `יישוב`; *vīs* `שבט`; *huxratu* / *hudānu* / *hucisti* `טוב התבונה` / `טוב השכל` / `טוב הבינה`; *maṇtu*
+  `יועץ`; *dūti* `שליחות`; *maēϑā* always uncertain (`*רעועה*`).
+- **Recorded splits (by sense):** *hazah* `אלימות` (29.1b) / `עוצמה` (33.12c); *ciϑra* "evident" `גלוי` / "seed"
+  `זרע`; *aṣ̌i* "eye" (32.10b) is a homonym of *aṣ̌i* `גמול`; *vaēda* `מוצא` / `ממצא`; *xᵛīti* `הצלחה` / *fradaϑa*
+  `לקדם`.
+- **Tool fix after part 2:** the `טוב` gate licensed by *vax́ii-* (the comparative).
+
 ## 12. Cross-corpus choices for the lead (Avestan words whose Vedic cognate the cousin corpus has not rendered yet)
 Each pair below gets one Hebrew under the cousin-language rule; this corpus's choice is given, for the lead to align
 with Round 7 run 1 (the Rigveda, Book 7) at the finalization:
@@ -302,4 +318,5 @@ with Round 7 run 1 (the Rigveda, Book 7) at the finalization:
 `קַוִי`; *uxδa* / *ukthá* `מִלָּה` (the cousin corpus: `שִׁירֵי־הַשֶּׁבַח`, a split by sense); *vīra* / *vīrá*
 `אַנְשֵׁי חַיִל`; *garah* / *gír* `שִׁירָה`; *vahišta* / *vásiṣṭha*; *daēnā* `הַשְׁקָפָה` against Vd 2's `דָּת` (the
 loanword rule gives `דָּת` to *dāta*); *ahura* / *ásura*; *zaotar* / *hótar* `מְנַסֵּךְ`; *usig* / *uśíj*; Airiiaman
-/ Aryaman. The translators add to this list (§11).
+/ Aryaman; *ərəši* / *ŕ̥ṣi* `חוֹזֶה` and *zrazdā* / *śraddhā́* `אמונה` (both follow the cousin corpus);
+*miiazda* / *miyédha* `סעודת הזבח`. The translators add to this list (§11).

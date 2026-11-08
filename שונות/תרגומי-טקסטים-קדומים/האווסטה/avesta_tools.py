@@ -373,7 +373,7 @@ RESERVED = [
     (W + alt("אור", "האור", "אורות", "האורות", "באור", "לאור", "מאור", "אורו", "אורם") + E, r"raoc|raok|rao|ruc|bami|bama|xvar|huuar|hvar|suc|aoc", "אוֹר only for raōcah / its kin (Gen 1:3–5, Isa 45:7 in the apparatus)"),
     (W + alt("זרע", "הזרע", "זרעו", "זרעים", "זרעה", "זרעם", "לזרע", "מזרע") + E, r"taox|tauxm|ciϑr|cithr|ciθr", "זֶרַע only for taoxman (the cousin corpus) / ciϑra 'seed, lineage'"),
     (W + alt("טוב", "טובה", "טובים", "טובות", "הטוב", "הטובה", "הטובים", "הטובות", "טובו", "טובת", "מיטב", "היטיב", "וטוב", "בטוב", "שטוב", "כטוב", "בטובה") + E,
-     r"vohu|vanh|vaŋh|vahis|vahi|vohv|vahy|vang|\bhu|srir|sraes|srest|vah|hv", "טוֹב only for vohu / vaŋhu / vahiiah / vahišta / hu- (the cousin corpus)"),
+     r"vohu|vanh|vaŋh|vahis|vahi|vohv|vahy|vax|vang|\bhu|srir|sraes|srest|vah|hv", "טוֹב only for vohu / vaŋhu / vahiiah / vahišta / hu- (the cousin corpus)"),
     (W + alt("ברך", "בירך", "ברכה", "ברכת", "מבורך", "יברך", "ברוך", "ברכו", "ברכם", "ברכות", "ברכתי") + E, r"(?!)", "the root ברך never (no Old Avestan counterpart: āfrī- / āšī- by sense); `בֶּרֶךְ` 'knee' needs a [היתר שער]"),
     (W + alt("ארור", "ארורה", "ארר", "אורר", "מארה", "ארורים") + E, None, "the root ארר never"),
     (W + alt("אמת", "האמת", "אמתו", "אמיתי", "באמת", "אמיתית") + E, r"haith|haiϑ|hai|arez|erez|ered|arsh|ars", "אֱמֶת only for haiϑiia (Vedic satyá: the cousin corpus) and ərəš 'truly'"),
