@@ -985,15 +985,41 @@ formulas, the repeated lines). What is particular to it:
   (labels 1–297, 299–480: 479 lines). Θῆβαι joins the Θήβη row.
 - **The two shields:** ἀσπίς `מָגֵן` (the title; 417); σάκος `צִנָּה` ★ (always vocalized: `צינה` "cold"); φερεσσακής
   `נוֹשְׂאֵי־הַצִּנָּה`. The biblical pair (1 Kgs 10:16–17) is an [equivalent] noted at the lines.
-- **Arms:** θώραξ `שִׁרְיוֹן`; τεῦχος `נֶשֶׁק` in SH (**a recorded split**: TH 186, 929t, WD 150 have `שריון`, which SH needs
-  for θώραξ); κνημίς `מִצְחָה`; κόρυς `כּוֹבַע`, κυνέη `קוֹבַע`, τρυφάλεια `קַסְדָּה`; ἔγχος `רֹמַח`, δόρυ `חֲנִית`, αἰχμή
+- **Arms:** θώραξ `שִׁרְיוֹן`; τεῦχος `נֶשֶׁק` (the whole corpus since the 2026-11-09 harmonization: TH 186, 929t, WD 150 moved from
+  `שריון`, which is θώραξ's; ὅπλα TH 853 `כְּלֵי־נֶשֶׁק`); κνημίς `מִצְחָה`; κόρυς `כּוֹבַע`, κυνέη `קוֹבַע`, τρυφάλεια `קַסְדָּה`; ἔγχος `רֹמַח`, δόρυ `חֲנִית`, αἰχμή
   `כִּידוֹן`, μελίη `חֲנִית־הַמֵּילָה`, ἄορ `חֶרֶב`; φαρέτρα `אַשְׁפָּה` ★; ὀιστός / ἰός `חֵץ`; ὀρείχαλκος `נְחֹשֶׁת־הֶהָרִים`.
 - **Chariots:** ἡνίοχος `רַכָּב` (vocalized where `רכב` "chariot" stands near), δίφρος `מֶרְכָּבָה`, ἅρμα `רֶכֶב`.
 - **Personified figures (T, §3.2):** Προΐωξις `מִרְדָּף`, Παλίωξις `מִרְדַּף־נֶגֶד`, Ὅμαδος `הֲמֻלָּה`, Ἀνδροκτασίη
   `הֶרֶג־אֲנָשִׁים`, Κυδοιμός `מְבוּכָה`, Ἀχλύς `עֲרָפֶל`; Φόβος `בֶּהָלָה`, Δεῖμος `אֵימָה`, Ἔρις `מָדוֹן`, Κῆρες `הַקֵּרוֹת`.
-- **The LXX layer:** ἤλεκτρον `חַשְׁמַל` ★ (Ezek 1:4 LXX), κέγχρος `דֹּחַן` (Ezek 4:9); ἀλαλητός `תְּרוּעָה`.
-- **Others:** the Catalogue formula ἢ οἵη `או כמו זו אשר`; ἀλκτήρ `הוֹדֵף` (TH 657's `מגן מפני פורענות` collides with
-  ἀσπίς: left for the next harmonization); ἀρήιος `לוֹחֵם`; ἆθλος `מְשִׂימָה`; τέμενος `תְּחוּם`; ἄλσος `חֹרְשָׁה`; λίς `לַיִשׁ` ★;
+- **The LXX layer:** ἤλεκτρον `חַשְׁמַל` ★ (Ezek 1:4 LXX), κέγχρος `דֹּחַן` (Ezek 4:9); ἀλαλητός `תְּרוּעָה` (LXX ἀλαλαγμός, Ps 89:16; ἠλάλαξαν = `הֵרִיעוּ`, Judg 15:14; also TH 686 since the
+  2026-11-09 harmonization).
+- **Others:** the Catalogue formula ἢ οἵη `או כמו זו אשר`; ἀλκτήρ `הוֹדֵף` (TH 657 too, since the 2026-11-09
+  harmonization); ἀρήιος `לוֹחֵם`; ἆθλος `מְשִׂימָה`; τέμενος `תְּחוּם`; ἄλσος `חֹרְשָׁה`; λίς `לַיִשׁ` ★;
   φόρμιγξ `כִּנּוֹר`; ἑκατόμβη `זֶבַח־מֵאָה`; αἰδώς `יראת־כבוד` at 354 (a sense split from §3.2's `בּוּשָׁה`).
-- **Splits noted by the reviewers, kept for the next harmonization:** ἰάχω / ἰαχή `צעק` in SH, `הריע` / `תרועה` in TH;
-  χλωρός `חיוור` (SH) / `ירוק` (TH, WD); the κυανο- compounds `כחול־` / `כהת־` (project.md, the review sections).
+- **Splits noted by the reviewers:** settled by the 2026-11-09 harmonization (below).
+
+2026-11-09 harmonization (Round 6, batch C; the rows 25–28 of `reports/round-6/final--plan.md`; surveyed with
+`tools/harmonize_survey.py` and `hesiod_tools.py lemma`, both ways):
+- **ἀλκτήρ** = `הוֹדֵף` (SH 29, 128): TH 657 `ומגן … מפני פורענות` → `ולבני־האלמוות הודף פורענות מקפיאה נהיית` (`מָגֵן`
+  is ἀσπίς; ἀλκτήρ is from ἀλέξω, whose ἀπαλέξω is already `הָדַף`, TH 527; the Egyptian and Akkadian `הודף` lines are other
+  languages).
+- **τεῦχος** = `נֶשֶׁק` in all three poems (θώραξ keeps `שִׁרְיוֹן`, SH 124): TH 186 `זוהרים בשריונם` → `זוהרים בנשקם` (= SH
+  60, the same half-line), TH 929t `כשהיא לבושה שריון של מלחמה` → `כשהיא אוחזת נשק מלחמה` (= SH 238 πολεμήια τεύχεʼ ἔχ-),
+  WD 150 `שריונות` → `נשק`; the notes of TH 50, 186, 929t, WD 150, SH 60. ὅπλα (TH 853) stays `כְּלֵי־נֶשֶׁק`.
+- **ἀλαλητός** = `תְּרוּעָה` (the LXX layer: ἀλαλαγμός = `תְּרוּעָה`, Ps 89:16; ἀλαλάζω = `הֵרִיעַ`, Judg 15:14): TH 686
+  `בקריאת קרב גדולה` → `בתרועה גדולה`. Hence the root רוע belongs to ἀλαλητός, and **ἰάχω / ἰαχή** (no LXX) move off
+  TH's `הריע` / `תרועה` (SH 382 has both words in one line) and off SH's `צעק` (`צְעָקָה` is ἐνοπή, TH 708, and ἀυτή /
+  ἀυτέω, SH 309, 346, 433, 459) to **`צָרַח` / `צְרִיחָה`** (free in the corpus; Zeph 1:14 `צֹרֵחַ שָׁם גִּבּוֹר`): TH 69
+  `הריעה` → `צרחה`, TH 678 (περιιάχω) `הריע סביב` → `צרח סביב`, TH 708 `תרועה` → `צריחה`, SH 232 `מהדהדת` → `צורחת`
+  (`הדהד` is ἠχέω), SH 382 `צעקו` → `צרחו`, SH 404 `וצעקה` → `וצריחה`, SH 436, 441, 451 `בצעקה` → `בצריחה`.
+- **The epithets** (one form each, the Theogony / Works and Days precedent): ποδώκης = `קַל־רַגְלַיִם` (TH 320; = ὠκύπους, WD
+  816, SH 96: synonyms, one Hebrew): SH 191 `מהירי־הרגליים` → `קלי־הרגליים`; μεγαλήτωρ = `גְּדוֹל־הַלֵּב` (WD 656; = μεγάθυμος;
+  `רָם לֵב` is pride in Hebrew): SH 450 `רם־הלב` → `גדול־הלב`; the κυανο- compounds = `כְּחֹל־` (κυανοχαίτης TH 278, SH 120,
+  κυανόπεπλος TH 406): SH 356 κυανῶπις `כהת־העיניים` → `כחולת־העיניים`, SH 393 κυανόπτερος `כהת־הכנף` → `כחולת־הכנף`
+  (κυάνεος stays `כָּחֹל־כֵּהֶה` everywhere, κύανος SH 143 `כָּחָל`).
+- **Kept (recorded):** χλωρός by sense – of wood and plants `יָרֹק` (WD 743; LXX Ezek 17:24 ξύλον χλωρόν = `עֵץ לַח`), of
+  a face or metal `חִוֵּר` (SH 231 the adamant, 265 Achlys); χλοερός `רַעֲנָן` (SH 393) is another lemma. δέρκομαι and
+  ὁράω both `הִבִּיט` (δέρκομαι TH 828, 910, 911, SH 145, 160, 169, 236, 262; ὁράω §11.1): one sense, kept. κυρέω = `נִתְקַל`
+  (WD 691, 755): SH 426 `כאריה שנקרה אל גוויה` → `כאריה שנתקל בגוויה`, so `נִקְרָה` stays ἀντιβολέω's (SH 439; WD 784
+  `לבוא לידי` by sense). Left: ἐνοπή (TH 708) and ἀυτή (SH) share
+  `צְעָקָה` (ἀυτή as `צַעֲקַת־הַקְּרָב`): a near-synonym pair for a later pass.
