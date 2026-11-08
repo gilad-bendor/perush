@@ -634,7 +634,8 @@ def _heb_has(plain, h):
             for part in w.split("־"):
                 for k in range(0, 4):
                     stem = part[k:] if k <= len(part) else ""
-                    if stem == c or (stem.startswith(c) and stem[len(c):] in ("ים", "ות", "ית", "יות", "יים", "ה", "י", "ן")):
+                    if stem == c or (stem.startswith(c) and stem[len(c):] in ("ים", "ות", "ית", "יות", "יים", "ה", "י", "ן")) \
+                            or (c.endswith("י") and stem == c + "ם"):  # a name in -י with the plural -ים (אגני → אגנים)
                         if re.fullmatch(r"[ובלמהכש]{0,3}", part[:k]):
                             return True
     return False
@@ -655,6 +656,20 @@ def _find_word(heb, hp):
     return ""
 
 
+# whole words that contain a gated string but are another word (guidelines §5.2: exempt them, do not make translators
+# write around them); Round 7 run 1: the forms of בִּקֵּשׁ contain קשת
+EXEMPT_WORDS = {"מבקשת", "בקשת", "ביקשת", "מבקשות", "בקשתי", "ביקשתי", "בקשתם", "ביקשתם", "ובקשת", "ומבקשת"}
+
+
+def _whole_word(s, m):
+    a, b = m.start(), m.end()
+    while a > 0 and "\u05d0" <= s[a - 1] <= "\u05ea":
+        a -= 1
+    while b < len(s) and "\u05d0" <= s[b] <= "\u05ea":
+        b += 1
+    return s[a:b].strip()
+
+
 def check_line(key, lab, heb, body, out, first_seen=None):
     """Run the gates on one entry; append messages to out; return the number of errors."""
     bad = 0
@@ -663,7 +678,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
     src = r["text"]
     srcf = " " + fold(src) + " "
     for rx, allow, why in RESERVED:
-        m = re.search(rx, plain)
+        m = next((x for x in re.finditer(rx, plain) if _whole_word(plain, x) not in EXEMPT_WORDS), None)
         if m and not lic(allow, key, lab):
             if re.search(r"\[היתר שער: [^\]]*" + re.escape(m.group(0).strip()), body):
                 continue

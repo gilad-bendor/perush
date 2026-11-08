@@ -128,6 +128,10 @@ rendered).
 | Vaiśvānara (RV 7) | ` vaisvanar` | `וַאישְׁוָנָרָה` |  | "belonging to all men", Agni's epithet, transliterated |
 | Jātavedas (RV 7) | ` jatavedas` | `יודע־הנולדים` |  | Agni's epithet, translated (precedent RV 10.16) |
 | Apāṃ Napāt (RV 7) | ` apam napat` | `נכד המים` |  | the fire in the waters, translated (7.34–35, 47) |
+| Mitra (RV 7) | ` mitr(?!avarun)` | `מִיטְרָה` | ★ | alone (the god); the common noun *mitrá* "ally" takes `[היתר שם: …]` (part 1) |
+| Bhāratī (RV 7) | ` bharati` | `בְּהָארַטִי` |  | the goddess of the Āprī hymns (7.2.8) |
+| Nahus (RV 7) | ` nahus` | `נַהוּשׁ` |  | an ancestral people / king (7.6.5) |
+| Jarūtha (RV 7) | ` jaruth` | `גָ'רוּתָה` |  | a demon slain by Agni (7.1.7, 7.9.6) |
 
 ### 3.2 Common nouns that are names elsewhere
 - *agní* outside the RV (ŚB, AB, KU, MBh): `אֵשׁ` (the fire), and `אַגְנִי` only where the text speaks of the god.
@@ -533,3 +537,10 @@ by sense (*daδuuā̊* `העושה`, Vd 2.20–21; *dātō* "I was made"). Chang
 מעמיד בעלי החיים בעלי העצמות, נאמן הסדר`, F4b → `מעמיד בעלי החיים בעלי העצמות, נאמן הסדר` (§8); Vd 2.1, 2.39, 2.42,
 2.43 (`עושה בעלי החיים` → `מעמיד בעלי החיים`, with their glosses and the note of 2.1). The open item of §11.8 is settled.
 
+### 11.10 RV 7.1–7.9 (Book 7, translator 1 = part 1; merged 2026-11-09)
+- **Binding for Book 7:** every row of the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 1). §5.5 confirmed in real lines, with **one refinement:** √*tr̥̄* simplex "cross, overcome" `עבר` (precedent 1.32.14d); `העביר` only for the causative / *prá* (as √*pr̥* caus.).
+- New (selection): √*śaṃs* `קילס` (*praśastá* `מקולס`, *nárāśáṃsa* `קילוס־הגברים`) kept apart from √*stu* `שיבח` and √*gr̥̄* `הילל`; √*īḍ* `התפלל אל`, *īḷénya* `ראוי־לתפילה`; √*idh* `הצית`; *samídh* `זרד`; *ghr̥tá* `חמאה מזוקקת`; *suvr̥ktí* `שזירה טובה`, √*vr̥j* `שזר`; *arká* `זמר`, √*arc* `זימר`; *mántra* `מימרה`; *matí* `רעיון`; *vácas* `דיבור`; √*vand* `הוקיר`; *íṣ* `רענון`; *śrávas* `תהילה`; *rātí* `מתנה`; *dráviṇa* `נכסים`; √*dāś* `הגיש`; *dyumná* `הדר`; *ketú* `משואה`; *bhānú* `זיו`; *bhā́s* `נהרה`; *pā́jas* `נגה`; √*dī* `האיר`; √*śuc* `בער`, *śocís* `בערה`; √*bhā* `זרח`; √*ruc* `נצץ`; *ánīka* `פנים`; *prátīka* `חזות`; *pāvaká* `מטהר`; *śukrá* `בוהק`; *mandrá* `משמח`; *vípra* `נלהב`; *krátu* `רצון`; *cétas* `קשב`; *gr̥hápati* `אדון־הבית`; *viśpáti* `אדון־השבט`; *yáviṣṭha* `הצעיר ביותר`; *átithi* `אורח`; *sahasāvan* / *sáhasvant* `בעל־העוז`; *suvī́ra* `רב־גיבורים`; *śéṣas* `נצר`; *tánaya* `תולדה`; *ápatya* `ולד`; *púr* `מבצר`; *paṇí* `הַפַּנִי` (always vocalized); *arí* `אָרִי`; √*uruṣy* `הרחיב (ל־)`; √*hū* `קרא`; the plural *agnáyaḥ* `אַגְנִים` (the fire is the god).
+- For the later parts (not met in 7.1–9; confirm in real lines): *ukthá* `אמירה`; *purohita* `המועמד־בראש`; *ŕ̥tvij* `כוהן־העונה`; *yúvan* `צעיר`; *stóma* `שבח`; *manīṣā́* `תבונה`; *ūtí* `סיוע`.
+- **Recorded split** (for the round's harmonization): *havyá* `תקרובת` in Book 7 (§5.5) against `מנחה` in RV 10.14–16 (where it shares *havís*'s word).
+- Names added to §3.1 (RV 7): Mitra alone, Bhāratī, Nahus, Jarūtha; Pūru `פּוּרוּ`, Iḷā `אִילָה`, Puraṃdhi `פּוּרַמְדְהִי`, Āyu `אָיוּ` are kept in the files only (their regexes would catch *purú* "much", *íḷā* "refreshment", *puraṃdhí* "plenitude", *āyú* "living").
+- Tool fixes (2026-11-09): a name in -י now matches its plural -ים (`אגני` → `אגנים`); the forms of בִּקֵּשׁ (`מבקשת` …) are exempt from the `קשת` gate (`EXEMPT_WORDS`).
