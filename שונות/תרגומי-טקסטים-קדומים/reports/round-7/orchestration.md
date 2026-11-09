@@ -7,7 +7,7 @@ Parent session: `session_01UnH1L2b1uMRsvSVD1ihmJY` (title `Round7: India and Ira
 
 | Run | Texts | Branch | Child session | Agents | Started | State |
 |---|---|---|---|---|---|---|
-| 1 | The Rigveda, Book 7, whole (`הוודה-והאווסטה/`, a new project; 7.103 moves into it) | `translation-round-7-run-1` | `session_01UnH1L5KxNWGbiZsgGNz96H` | 2 | 2026-11-08 22:35 UTC | running |
+| 1 | The Rigveda, Book 7, whole (`הוודה-והאווסטה/`, a new project; 7.103 moves into it) | `translation-round-7-run-1` | `session_01UnH1L5KxNWGbiZsgGNz96H` | 2 | 2026-11-08 22:35 UTC | **done** 2026-11-09 06:12 UTC: 3,190 pādas, commit 4265d2d; session archived |
 | 2 | The Old Avestan corpus, whole: the Gāthās, the Yasna Haptaŋhāiti, the four prayers (the new corpus `האווסטה/`) | `translation-round-7-run-2` | `session_01UnH1L5b3UfHXV7fzPBXPMM` | 1 | 2026-11-08 22:35 UTC | **done** 2026-11-09 01:13 UTC: 1,020 lines, commit 92398eb; session archived |
 | 3 | The Kaṭha Upaniṣad, whole (out of `4-העקדה/` into its own project in `הוודה-והאווסטה/`) | – | – | – | after run 1 | waiting for run 1 |
 
@@ -27,3 +27,7 @@ finalization.
 - 2026-11-09 03:10 UTC – run 1's turn failed on the 5-hour limit (`rejected`, reset 03:20 UTC), about 4h35m into the
   round, during part 5's fixes (two runs had worked in parallel until 01:13). Resumed by the parent at 03:45 UTC
   (gate: GO, range B). Nothing lost (run 1 pushes after each part).
+- 2026-11-09 06:12 UTC – run 1 done (`reports/round-7/run-1.md`): Book 7 whole, 3,190 pādas, verifiers clean. Its
+  seven questions: 1–4 (renderings with a biblical or sensitive weight) copied to `questions-for-user.md`, the drafts
+  standing; 5–7 (readings and minor renderings) settled by the lead: kept as drafted. Its cognate splits with
+  `האווסטה/` and the proposed reservation of חטא / `פשע` / `סליחה` / `וידוי` / `חרון` go to the finalization.
