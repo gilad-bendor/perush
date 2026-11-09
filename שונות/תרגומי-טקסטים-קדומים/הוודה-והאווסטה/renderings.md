@@ -83,7 +83,7 @@ rendered).
 | Agni (RV) | ` agn` | `אַגְנִי` |  | **RV only**: the fire is the god; elsewhere *agní* "fire" = `אֵשׁ` (§3.2) |
 | Manu | ` man(?:u\|uh\|ur\|um\|una\|ave\|oh\|or)\b` | `מָנוּ` | ★ | the first sacrificer, father of mankind; the flood's survivor (`מנו` "they counted") |
 | Hariścandra | ` hariscandr` | `הַרִישְׁצַנְדְּרָה` |  | the king (AB 7.13) |
-| Rohita | ` rohit` | `רוֹהִיטָה` |  | his son |
+| Rohita (AB) | ` rohit` | `רוֹהִיטָה` |  | his son |
 | Nārada | ` narad(?!h)` | `נָארַדָה` |  | the sage |
 | Śunaḥśepa | ` sunahsep` | `שׁוּנַהְשֵׁפָּה` |  | "Dog's Tail" (a note) |
 | Ajīgarta | ` ajigart` | `אַגִ'יגַרְטָה` |  | his father; Sauyavasi `סָאוּיַוַסִי` |
@@ -112,7 +112,7 @@ rendered).
 | Viṣṇu (RV 7) | ` visnu` | `וִישְׁנוּ` |  | the god of the three strides (precedent KU 3.9b) |
 | Sudās (RV 7) | ` sudas(?!am\b)` | `סוּדָאס` |  | the Tṛtsu-Bharata king, Vasiṣṭha's patron (7.18, 7.33, 7.83) |
 | the Tṛtsus (RV 7) | ` trts` | `טְרִטְסוּ` |  | Sudās's clan |
-| the Bharatas (RV 7) | ` bharat(?:a\|ah\|asya\|aya\|anam\|am\|ebhyah\|aih\|an\|as)\b` | `בְּהַרַטָה` |  | Sudās's people (Agni Bhārata) |
+| the Bharatas (RV 7) | ` bharat(?:ah\|asya\|aya\|anam\|am\|ebhyah\|aih\|an\|as)\b` | `בְּהַרַטָה` |  | Sudās's people (Agni Bhārata) |
 | Divodāsa (RV 7) | ` divodas` | `דִּיווֹדָאסָה` |  | Sudās's ancestor |
 | Paijavana (RV 7) | ` paijavan` | `פַּיְגַ'וַנָה` |  | Sudās's patronymic |
 | Agastya (RV 7) | ` agasty` | `אַגַסְטְיָה` |  | the seer (7.33) |
@@ -564,3 +564,8 @@ by sense (*daδuuā̊* `העושה`, Vd 2.20–21; *dātō* "I was made"). Chang
 - For the final consistency pass: √*nud* / √*cud*; √*rāj* / √*kṣā* (`מלך`); *dyukṣá* (`שמימית` 7.31.2b / `שוכן־השמים`); *suvitá* / *yós* (`רווחה`); *puraetár* (AB `מנהיג`) / *yantár*; *gábhasti* / *hásta* (`יד`); *nadī́* / *síndhu* (`נהר`); *sūnŕ̥tā* (KU `נועם דיבור` / `נדיבות`).
 - Tool fix: the `טוב` licence covers *vásyas*.
 - Review of part 4 (9 lines; the helper-script grammar checked pair by pair, all correct). *jánman* `לידה` (KU, AB; 7.33.10c changed). For the final pass: 7.10.2c *jánman* `התולדות`; *perú* / *pā́rya* `המעביר`; *dūrá* `מרחוק` / *āré* `רחוק`; *arbhaká* `הקטנטנים` (AB `קטנים` = *kánīyas*); √*ās* / √*sad* `ישב`.
+
+### 11.14 RV 7.38–7.55 (Book 7, translator 5 = part 5; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 5; ~150 new words). √*sū* "impel" `האיץ`, *savá* `האצה` (√*jū* `המריץ`, √*cyu* `הניע`); *amáti* "form" `מראה` (*amáti* "poverty" `דלות`); *bhága* (common noun) `חלק`, √*bhaj* `חילק`, *bhágavant* `בעל־חלק`; √*yā* 2 "beg" `התחנן` (7.39.2b `ממהרים (?)` a recorded split); *didyút* `רומח`, *r̥ṣṭí* `כידון`; √*car* `נדד`; √*brū* `אמר`; the 7.50 refrain `אַל ימצא אותי הזוחל בפגע של הרגל`; 7.55 `הֵרָדֵם היטב!`; *anamīvá* `חסר־מחלה` (*ámīvā* `מחלה`).
+- For the final pass: √*sū* / √*jū*; √*ās* / √*sad* `ישב`; √*sru* / √*kṣar* `זרם`; *jñātí* / *bándhu* `קרוב`; *śáṃtama* `המאושר ביותר` (RV 10 `נעים`).
+- Tool fixes: the Bharata regex skips the imperative *bharata*; the name Rohita applies to AB only ("(AB)" rows).

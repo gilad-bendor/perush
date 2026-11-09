@@ -38,10 +38,10 @@
 
 ### 2a
 `sá hí kṣáyeṇa kṣámyasya jánmanaḥ`
-> כי הוא, בדירתו, (שם לב) לתולדה של התבל,
-- **פירוק:** `sá` – sá- ~ tá-, נושא ("הוא"); `hí` – hí ("כי"); `kṣáyeṇa` – kṣáya- "דירה", יחסת הכלי ("בדירתו"); `kṣámyasya` – kṣámya-, נייטרי יחסת הקניין ("של התבל"); `jánmanaḥ` – jánman- "תולדה", נייטרי יחסת הקניין ("לתולדה").
+> כי הוא, בדירתו, (שם לב) ללידה של התבל,
+- **פירוק:** `sá` – sá- ~ tá-, נושא ("הוא"); `hí` – hí ("כי"); `kṣáyeṇa` – kṣáya- "דירה", יחסת הכלי ("בדירתו"); `kṣámyasya` – kṣámya-, נייטרי יחסת הקניין ("של התבל"); `jánmanaḥ` – jánman- "לידה", נייטרי יחסת הקניין ("ללידה").
 - **תרגומים:** גריפית': "He through his lordship thinks on beings of the earth, on heavenly beings through his high imperial sway. Come willingly to our doors that gladly welcome thee, and heal all sickness, Rudra., in our families."; גלדנר: "Denn vermöge seines Wohnsitzes hat er acht auf das irdische Geschlecht"; ג'מיסון: הצירוף *ávann ávantīḥ* "עוזר – אל (הדלתות) העוזרות" בולט, אבל לא ברור מה הן "דלתות עוזרות" – אולי המנחות שבני האדם נותנים לאלים בתמורה לעזרתם.
-- **הערות:** *kṣáya* `דירה` (renderings §11.10), כמו גלדנר; גריפית' וגרסמן – "שלטון" (הומונים של √*kṣi*). *kṣámya* "של התבל, הארצי" (*kṣám* `תבל`; חדש); *jánman* `תולדה` (ז 33).
+- **הערות:** *kṣáya* `דירה` (renderings §11.10), כמו גלדנר; גריפית' וגרסמן – "שלטון" (הומונים של √*kṣi*). *kṣámya* "של התבל, הארצי" (*kṣám* `תבל`; חדש); *jánman* `לידה` – כאן "הלידה, הגזע" של בני התבל (קטה א 1.17a; ז 33.10c, לפי המבקר של חלק 4: `תולדה` היא של *tánaya*).
 
 ### 2b
 `sā́mrājyena divyásya cétati`

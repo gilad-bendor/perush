@@ -687,7 +687,8 @@ def check_line(key, lab, heb, body, out, first_seen=None):
             out.append(f"RESERVED {key} {lab}: «{m.group(0).strip()}» – {why}\n    {heb}\n    src: {src}")
             bad += 1
     for rx, hv, hp, star, what in names():
-        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv") or ("(RV 7)" in what and UNITS[key][0] != P7):
+        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv") or ("(RV 7)" in what and UNITS[key][0] != P7) \
+                or ("(AB)" in what and UNITS[key][2] != "titus_ab"):
             continue
         if not _heb_has(plain, hp):
             if f"[היתר שם: " in body:

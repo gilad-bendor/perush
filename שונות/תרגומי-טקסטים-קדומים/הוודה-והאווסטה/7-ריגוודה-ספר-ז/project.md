@@ -887,5 +887,182 @@ corrected, one intro aligned.
     (7.20.7b, 7.32.24b).
   - √*ās* and √*sad* both `ישב` (7.32.2b, 7.33.14c / 7.33.9d, 7.34.16b); *niṇyá* `סתר` beside KU's *guhā́*.
 
+## RV7.38–7.55 (part 5: Savitṛ, Bhaga, the All-Gods, Dadhikrā, Rudra, the Waters, the Ṛbhus, the Ādityas, Heaven and Earth, Vāstoṣpati, the sleep charm; translator 5, Round 7 run 1)
+
+### Scope
+RV 7.38–7.55: 18 hymns, 391 pādas (7.50.4e and 7.55's five-pāda stanzas 2–4 included). One annotated file and one intro
+per hymn; `build RV7.38-55` generated the clean files.
+
+### Sources consulted
+- Base: VedaWeb Zurich text and morphology (`data`); the dictionaries (`mw`, `gra`) for the hapaxes.
+- After drafting each hymn: `tr` (Griffith, Geldner, Grassmann, Elizarenkova, Renou; Griffith quoted from `tr`, Geldner
+  only a few words) and Jamison's commentary (`VII.1–55-9-25-26.txt`, VII.38–VII.55), cited where it discusses a stanza.
+- The binding precedents: renderings §5.5, §11.10–§11.13, parts 1–4 Decisions/Proposals and the part 1–4 reviews
+  (`freq RV7.38-55`, `lexmap`, `grep --all`); the Old Avestan cognate list (renderings §11.12, last bullet).
+- Bible verses printed before quoting (`check_bible_quotes.py --show`): Gen 1:2, Ps 33:13, Lam 5:7.
+
+### Decisions
+- **Savitṛ's verb:** √*sū* 1 "impel" `האיץ` (*savá* `האצה`; *prá* √*sū* `האיץ`, *nís* √*sū* `האיץ החוצה`). `המריץ` was
+  the natural word but is √*jū*'s (7.20.10b, 7.21.5a; 7.40.3c keeps it for √*jū*); `הניע` is √*cyu* caus. (7.19.1b).
+  The note on 7.38.1a explains the pun *savitár* / *savá*.
+- **Savitṛ's "form":** *amáti* (7.38.1b, 2c; 7.45.3c) `מראה` – a homonym of *amáti* "poverty" (7.1.19b `דלות`): split
+  by sense; `דמות` is reserved. √*śri* `השעין` (7.38.1b, 7.39.1a keep the echo Jamison points out; *ví* √*śri*
+  `השעין לרווחה`).
+- **Bhaga and the pun on *bhága*:** the god `בְּהַגָה`; the common noun *bhága* "portion" `חלק` (RV 10.17.9c; 7.41.2d with
+  `[היתר שם]`), and √*bhaj* `חילק`, so the king's words *bhágam bhakṣi* are `"חַלֵּק חלק!"`; *bhágavant* `בעל־חלק` (7.41.4a,
+  5ab: the pun on the name is noted) against the later honorific `נכבד` (ŚB, MBh): a split by sense and period.
+- **√*yā* 2 "beg"** `התחנן` (7.38.6b, 6d; 7.52.3b; 7.54.1c *ī́mahe*); 7.39.2b *iyāte* is lemmatized √*yā* 2 but means
+  "hasten" (Geldner, Renou, Jamison): `ממהרים (?)`, a split noted. **√*yā* 1** keeps the precedent `בא` (also "go home",
+  7.38.8d `בּוֹאוּ`; the Aśvins' circuit 7.40.5d `בּוֹאוּ … בסבב`).
+- **7.38.6b = 7.52.3b** (identical folded text): the Hebrew is copied; only the number changes (`מתחנן` / `מתחננים`:
+  *iyānáḥ* sg. / *iyānā́ḥ* pl., the accent lost in folding) – justified in the apparatus; the one repeated-line difference.
+- **The repeated pādas fixed here (first copies):** 7.39.7a–c = 7.40.7a–c (`עתה משובחות שתי המחצות בידי בני וַסִישְׁטְהָה,
+  / נאמני הסדר – וַרוּנָה, מִיטְרָה, אַגְנִי. / יושיטו לנו הבהירים את הזמר העילאי;` – the models for 7.62.3bc); 7.40.5d
+  `בּוֹאוּ, אַשְׁוִינִים, בסבב עמוס־המזון.` (model for 7.67.10b, 7.69.8b); 7.41.7a–c (model for 7.80.3a–c); F8 in
+  7.49.1d–4d `המים הָאֵלֶּה, האֵלוֹת, יעזרו לי כאן.`; the 7.50 refrain 1d = 2d = 3d `אַל ימצא אותי הזוחל בפגע של הרגל.`;
+  7.55.2e = 3e = 4e `הֵרָדֵם היטב!`, 3c–d = 4c–d. F6 in 15 hymns.
+- **The *śám* frame of 7.35** applied in 7.38.7a (`לאושר יהיו לנו זוכי־הפרס, בקריאות,` – Jamison: almost = 7.35.9b) and
+  7.54.1d (`לאושר הֱיֵה לנו – לבעל שתי הרגליים, ולאושר – לבעל ארבע הרגליים.`).
+- **Gates and names:** *áhi* `נחש` (7.38.5c Ahi Budhnya `הנחש של המעמקים`, after 7.34; 7.38.7c a real snake); *vā́ta*
+  / *vāyú* `רוח` (7.39.2d, 7.40.2d, 6d); *bhū́man* `אדמה` (7.45.1d, as 7.34); *jīvá* in *jīvaśaṃsá* `החיים` (7.46.4c);
+  *sādhú* / *bhadrá* `טוב` (7.43.2c, 7.41.7b); *dhánus* in *sthirádhanvan* `קשת` (7.46.1a). No *rétas* or *púruṣa* in
+  the range. 7.42.2b *rohítaḥ* "red mares" and 7.46.1d *bharata* "bring!" needed `[היתר שם]` (the name regexes of Rohita
+  and the Bharatas catch the common words). *aṣṭhīvánt* "knee" `ארכובה` (7.50.2b), because the root ברך is gated to
+  *jā́nu*; *púṇyagandha* `נעים־הריח`, not `ניחוח` (reserved). 7.49.3b *jánānām* `האנשים` (a first draft `בני האדם`
+  slipped through the `אדם` gate only because *nr* in *satyānr̥té* licensed it – a false licence; fixed).
+- **Vāstoṣpati** split in two words (*vā́stoṣ pate*, 7.54.1a, 2a, 3a, 7.55.1a) is still transcribed as the name
+  `וָאסְטוֹשְׁפַּתִי` (renderings §3.1), the meaning "Lord of the house-site" in the notes; *vā́stu* is not *vástu*
+  "morning" (7.1.6b).
+- **The Ṛbhus' names (7.48):** *r̥bhukṣán* `שליט־הרִבְּהוּ`, voc. *vā́jāḥ* / *vā́jaḥ* the Ṛbhu `וָאגַ'ה` (part 4), and the
+  third, *víbhvan* `וִיבְּהְוַן`, its plural *vibhú* `הוִיבְּהוּ` (7.48.2b; KU 2.22b's *vibhú* `המקיפה` is the adjective:
+  split); the pun *vā́jo … vā́jasātau* is kept as name + `בזכייה בפרס`. 7.48.2d *vr̥trám* `המחסום` with `[היתר שם]`.
+- **7.50 and 7.55 (charms):** the afflictions *śipadá*, *śimidā́*, *ajakāvá*, the tree *śalmalí* transcribed; *tsáru*
+  `הזוחל`. 7.55: √*sas* `ישן` (5a–d) apart from √*svap* `נרדם` / caus. `הרדים`; the dog *sārameyá* `בן סַרַמָא` (RV 10.14.10a);
+  √*rā* 2 "bark" `נבח`; √*dr̥* intens. `הבקיע שוב ושוב` (7.18.13b); *sám* √*han* (eyes) `הצמיד`.
+- **Moods:** imperatives that read as past are vocalized (`עֲמוֹד`, `שְׁמַע`, `עִזְרוּ`, `שְׁתוּ`, `הִתְבַּסְּמוּ`, `בּוֹאוּ`, `הוֹבֵל`,
+  `זְבַח`, `רְתוֹם`, `שִׂימוּ`, `הַצִּיעוּ`, `גוֹנְנוּ`, `חַלֵּק`, `חוֹנֵן`, `שְׁמוֹר`, `נְבַח`, `הֵרָדֵם`, `הַבְקַע`); *mā́* + injunctive `אַל`
+  (vocalized); `אֶל` and `הָאֵלֶּה` vocalized beside the deva words.
+- **Readings against the literature:** 7.38.4d *mitrā́saḥ* `מִיטְרָה (וחבריו)` (Jamison: pun on "allies"); 7.38.5ab with
+  Jamison (the Gift Escorts "also greet" Savitṛ; *vanús* "eager" `להוטים`, a split from 7.21.9d `החומסים`); 7.38.6b
+  *iyānáḥ* active with Geldner (Jamison passive, noted); 7.38.7–8 the *vājínaḥ* left as "prize-winners" (horses or the
+  Maruts, both noted); 7.39.1d *r̥tám* `את הסדר` with Jamison's "truth = hymn" in the note; 7.39.2a passive (Geldner)
+  against Jamison's active; 7.39.2b *bī́riṭa* left untranslated (`ב… (?)`, Jamison); 7.40.5a *avayā́* "propitiation"
+  (Oldenberg, Jamison); 7.44.3c *mām̐ścatú* `מסתיר־הירח (?)` with Jamison's alternatives; 7.53.2b *sádane* dual (Zurich,
+  Geldner) against Jamison's loc. sg. (noted).
+- **Consistency pass corrections (after `lexmap`, before the hand-off):** *didyút* `רומח` (7.25.1c), so *r̥ṣṭí*
+  `כידון`; √*car* `נדד` (not `משוטט`); √*brū* `אמר`; *pūrvajá* `הנולדים־לפנים` (RV 10.14.15c); *rāyáskāma* `חושק־העושר`
+  (7.32.3a); √*sru* `זרם` (RV 1.32.14c); *yájatra* `ראוי לזבח` against *yajñíya* `ראוי הזבח`; *jánman* `לידה`
+  (the part 4 review).
+
+### Open decisions for the user
+- √*sū* "impel" `האיץ` (Savitṛ) – the Hebrew is a little technical ("speed up"); `המריץ` would be better if √*jū* (parts
+  3–4) moved to another word.
+- 7.55's frame: the lover's-charm reading of the older literature (AV 4.5 is a parallel sleep charm, with the thousand-horned bull) against a plain household lullaby-charm
+  (the intro leaves it open).
+- *anamīvá* `חסר־מחלה` (7.46.2d, 7.54.1b) keeps Book 7's *ámīvā* `מחלה` visible; RV 10.14–18 have `בלי־חולי`.
+
+### Progress log
+- Drafted hymn by hymn, each saved, `fill`ed and `verify`ed before the next (7.38 → 7.55); a compact spec per hymn
+  assembled by the part 4 script (`gen.py`: the Zurich forms, lemmas and morphology copied into the פירוק, the segments
+  counted against the tokens), every override of a grammar description written by hand where Zurich's tag lacks the
+  tense (the reduplicated aorist *áśiśret*, the precative *maṃsīṣṭa*, the *-si* imperatives *yakṣi*, *bhakṣi*) or the
+  form needs a note (gerundives, the intensive).
+- Pass (a) fidelity: every line read against the base after the translations; negations and moods checked (the *mā́*
+  prohibitives, the optatives `נא`, the subjunctives as futures). Rank-3 quotations: one stanza of Griffith/Geldner in
+  7.41 had been written from memory in the draft and was replaced from `tr` before saving (see Lessons).
+- Pass (b) consistency: the lemma ↔ Hebrew map of the part against every drafted file (both directions); 13 lines changed
+  (above), plus vocalization and the `אֶל` / `הָאֵלֶּה` fixes the verifier asked for.
+- Pass (c) Hebrew: all 391 lines read in sequence.
+- `build RV7.38-55`; `verify RV7.38-55 --strict`: **0 problems**, one repeated-line difference (7.38.6b / 7.52.3b,
+  justified); `check_bible_quotes.py` on the 54 annotated, intro and generated files: 0 problems.
+
+### The text on its own terms
+- **Savitṛ, the god of the daily rhythm** (7.38.1–4, 7.45): he lifts his golden arms and "golden form", "impels" men to
+  their food in the morning and "makes the earth enter (rest)" at night (7.45.1d); even the Sun yields to him (7.45.2d).
+- **The economy of portions** (7.38.6, 7.40.1d, 7.41): Bhaga is the share-giver; the weak and the strong, the poor man
+  and the king all ask him "apportion a portion!", and Bhaga himself must "have a portion" before he can give (7.41.5ab).
+- **The All-Gods hymns as a ritual sequence** (7.39, 7.42–43): the fire rises, the pressing stones set out "like two
+  charioteers", the barhis is twisted, the gods sit on it "like children carried on their mother's lap" (7.43.3a), the
+  hymns branch out "like the branches of a tree" (7.43.1d).
+- **Fear of Rudra** (7.46): a prayer to be passed by – his dart "roams the earth", he holds "a thousand remedies"; the
+  worshippers ask for children free of illness and a share "in the praise of the living".
+- **The Waters as goddesses** (7.47, 7.49): drink of Indra, carried by Apāṃ Napāt; flowing out of the primeval *salilá*,
+  never resting; Varuṇa walks among them, "looking down on the truth and the untruth of men" (7.49.3b).
+- **Village medicine** (7.50): swellings that "nest", rashes on the paired joints, the poison of the silk-cotton tree, of
+  rivers and plants, and "the creeper" that strikes the foot.
+- **Inherited guilt** (7.52.2c): "may we not pay for an offense against you born of another".
+- **Heaven and Earth asked to move** (7.53.2): Jamison's point – Father Heaven's immobility as a reason for his eclipse.
+- **The house** (7.54–55): the god of the house-site "easy to enter", good "to the two-footed and the four-footed", in
+  rest and on the road; then the night: the dog barking at "Indra's praisers", the whole household put to sleep line by
+  line, the eyes of every watcher shut "as this house is shut", the women on their cots and litters.
+
+### Key parallels
+- 7.49.1a [divergence] Gen 1:2 – primeval waters in both, but here active, flowing, purifying goddesses (the *salilá* of
+  RV 10.129.3 kept as `נחשול`, not `תהום`).
+- 7.49.3b [equivalent] Ps 33:13 – the god who looks down on all men and tells truth from falsehood; here Varuṇa from
+  within the waters.
+- 7.52.2c [equivalent] Lam 5:7 – the fear of bearing another's sin; the source does not say "fathers" (cf. Ezek 18).
+
+### Proposals for the shared renderings
+- **Words** (lemma → Hebrew; binding for Book 7 if accepted): √*sū* 1 `האיץ`, *savá* `האצה`; *amáti* (form) `מראה`; √*śri*
+  `השעין`; *hiraṇyáya* `זהוב`; *híraṇyapāṇi* `בעל כפות־הזהב`; *prábhr̥ti*, *prabhr̥thá* `הבאה`; *cánas* `עונג`; √*sap*
+  `שירת`; *vanús* (eager) `להוט`; *ékadhenu* `בעלת־הפרה־האחת`; *ánu* √*man* `אישר`; *jā́spáti* `אדון־המשפחה`; √*yā* 2
+  `התחנן`; *ánugra* `שאינו עז`; √*jambh* `מעך`; *vŕ̥ka* `זאב`; *sánemi* `לגמרי`; *devayā́na* (adj.) `ההולך־אל־האלים`;
+  *jūrṇí* `גחלת`; *iṣitá* / *iṣádhyai* `מוזעק` / `להזעיק`; *suprayā́* / *sugá* `קל־לדריכה`; *niyútvant* `בעל־הצמד`;
+  *śubhrá* `מבריק`; *urujrí* `רחב־המהלך`; *ū́ma* `עוזר`; *ásinvant* `רעבתן`; *avidasyá* `שאינו אוזל`; *sadāsā́*
+  `זוכה־תמיד`; *dyúbhakta* `המחולק מן השמים`; √*diś* `הקצה`; √*yu* 1 `קשר`; *pŕ̥ṣadaśva* `בעל־הסוסים־המנומרים`;
+  *paryetár* `עוקף`; *anarvá* `שאין לו מתקיף`; *áriṣṭa* `שלא ניזוק`; *avayā́* `ריצוי`; *eṣá* `חפוז`; *rudríya*
+  `רוּדְרִי`; *vartís* `סבב`; √*irasy* `קינא`; *mayobhū́* `מביא־ההנאה`; *vr̥ṣṭí* `גשם`; *ratnín* `בעל־האוצרות`;
+  *prātár* `בבוקר`; *prātarjít* `מנצח־הבוקר`; *praṇetár* `המוביל־קדימה`; *idā́nīm* `עתה`; *prapitvá* `התקדמות`;
+  *bhágavant* `בעל־חלק`; *vasuvíd* `מוצא־הטוב`; *krandanú* `שאגה`; *udaprút* `שוחה־במים`; *péśas* `עיטור`;
+  *sánavitta* `שנמצא מאז ומעולם`; *rohít* `אדמדמה`; *vīraváh* `נושא־הגיבורים`; *purvaṇīka* `רב־הפנים`; *syonaśī́*
+  `שוכב־הרכות`; *súprīta* `מרוצה־היטב`; *íyant* `כזה`; *viśvápsnya* `של כל־הצורות`; √*prath* (trans.) `הפיץ`; *ásama*
+  `שאין כמותו`; *víṣvañc* `לכל עבר`; *śā́khā* `ענף`; *hétva* / √*hi* `שמזרזים אותו` / `זירז`; *sápti* `סוס־מרוץ`;
+  *sámanas* `אחיד־המחשבה`; *víbhr̥tra* `נישא בזרועות`; *viśvā́cī* `הפונה־לכל־עבר`; *mŕ̥dhas* `ביזיון`; *jóṣa*
+  `התענגות`; *yáti* `כמה`; *ā́skra* `מלוכד`; √*budh* caus. `עורר`; *bradhná* `נחושתי`; *mām̐ścatú* `מסתיר־הירח (?)`;
+  *śárdhas* `גדוד`; *mahiṣá* `תאו`; *antarikṣaprā́* `ממלא־חלל־האוויר`; *śithirá* `רפוי`; √*pan* `התפעל`; *apasyā́*
+  `פעלתנות`; *sahā́van* `בעל־העוז`; *vásupati* `אדון־הטוּב`; *sujihvá* `טוב־הלשון`; *pūrṇágabhasti* `מלא־היד`;
+  *sthirá* `איתן`; *kṣipréṣu* `בעל־החץ־המהיר`; *tigmā́yudha* `בעל־הנשק־החד`; *sā́mrājya* `מלכות־עליונה`; *kṣámya* `של
+  התבל`; *jā́* `ילד`; *svapivāta* `טוב־ההבנה`; *bheṣajá* `תרופה`; √*vadh* `קטל`; *párā* √*dā* `הפקיר`; *jīvaśaṃsá*
+  `קילוס החיים`; *indrapā́na* `משקה־אִינְדְּרָה`; *íḍ* `רוויה`; *ariprá* `נקי־מכתם`; *ghr̥taprúṣ* `מתיז־החמאה`;
+  *mádhumant* `מתוק`; *āśuhéman* `מזרז־המהירים`; *śatápavitra* `בעל מאה המסננות`; √*rad* `חפר`; *samudrájyeṣṭha*
+  `שהים גדולן`; *ániviśamāna* `שאינו שוקע`; *khanítrima* `חפור`; *svayaṃjā́* `ילוד־מעצמו`; *samudrā́rtha* `שמגמתו
+  הים`; *satyānr̥tá* `האמת ואי־הסדר`; *madhuścút* `נוטף־הדבש`; *kulāyáyant* `מקנן`; *tsáru* `זוחל`; *pádya* `של
+  הרגל`; *vándana* (rash) `פריחה`; *vijā́man* / *párus* `פרק התאום` / `פרק`; *aṣṭhīvánt* `ארכובה`; *kulphá* `קרסול`;
+  √*dih* `מרח`; *viṣá* `רעל`; *pravát* / *nivát* / *udvát* `מדרון` / `שקע` / `גובה`; *udanvánt* / *anudaká* `רב־המים` /
+  `חסר־המים`; *nū́tana* `חדש`; *śáṃtama* `המאושר ביותר`; *anāgāstvá* `חוסר־אשמה`; *adititvá* / *áditi* (noun)
+  `חוסר־גבולות` / `חסר־גבולות`; *rájiṣṭha* `הישר ביותר`; *devatrā́* / *martyatrā́* `בקרב האלים` / `בקרב בני התמותה`;
+  √*maṃh* `נדב`; √*bhuj* 2 `שילם על`; *anyájāta* `שנולד אצל אחר`; √*ci* 2 `העניש`; *turaṇyú* `חש`; *deváputra*
+  `שבניהן אֵלִים`; *pitárā* (du.) `שני ההורים`; *sádana* `מושב`; *áskr̥dhoyu* `בלתי־מקוצר`; *svāveśá* `קל־הכניסה`;
+  *pratáraṇa* `מעביר הלאה`; *gayasphā́na* `מרבה־הנחלה`; *śagmá* `מועיל`; *raṇvá* `עליז`; *gātumánt* `רב־הנתיבים`;
+  *kṣéma* / *yóga* `מנוחה` / `רתימה` (KU 2.2b's later idiom "acquiring and keeping" is a split); *amīvahán*
+  `הורג־המחלות`; *árjuna* `לבן`; *piśáṅga* `אדמוני`; *r̥ṣṭí* `כידון`; √*bhrāj* `הבזיק`; *srákva* `לסת`; √*bhas* `לעס`;
+  *stená* `גנב`; *táskara* `שודד`; √*rā* 2 `נבח`; *punaḥsara* `הרץ־לאחור`; √*duchunāy* `איים`; *sūkará* `חזיר־בר`; √*sas*
+  `ישן`; *jñātí* `קרוב`; *abhítas* `מסביב`; *harmyá* `טירה`; *sahásraśr̥ṅga* `בעל אלף הקרניים`; *úd* √*car* `עלה`;
+  *proṣṭheśayá* / *vahyeśayá* / *talpaśī́van* `השוכבת על הספסל` / `באפריון` / `במיטה`; *púṇyagandha* `נעים־הריח`.
+- **Names** (vocalized at the first occurrence in each file; in the files only): Vibhvan `וִיבְּהְוַן`, the Vibhus
+  `הוִיבְּהוּ`; Saramā `סַרַמָא` (*sārameyá* `בן סַרַמָא`, after RV 10.14.10a); *ajakāvá* `אַגַ'קָאוָה`; *śalmalí*
+  `שַׁלְמַלִי`; *śipadá* `שִׁיפַּדָה`, *śimidā́* `שִׁימִידָה`. Brahmaṇaspati split in two words (*bráhmaṇas pátim*, 7.41.1c,
+  7.44.1c) translated `אדון הנוסח` with the name in the note.
+- **Formulas and repeated lines** (for the later parts): the 7.39.7 / 7.40.7 closing stanza (= 7.62.3bc), 7.40.5d (=
+  7.67.10b, 7.69.8b), 7.41.7a–c (= 7.80.3a–c) as given under Decisions.
+- **For the harmonization:** √*sū* / √*jū* (`האיץ` / `המריץ`); *anamīvá* `חסר־מחלה` (Book 7) / `בלי־חולי` (RV 10);
+  *śáṃtama* `המאושר ביותר` / RV 10.15.4c `נעים`; √*ās* / √*sad* `ישב` (7.55.6a, as part 4); √*sru* `זרם` / √*kṣar* `זרם`
+  (part 4); *jñātí* / *bándhu* `קרוב`; *nā́rī* / *strī́* `אישה` (both, after RV 10); √*sas* `ישן` / KU's √*śī* `יישן`;
+  *sū́ra* "sun" `שמש` beside *sū́rya*; *ágre* `בתחילת` used of place (7.44.4b, as 7.8.1d).
+
+### Lessons for the guidelines
+- **Fetch the rank-3 text before writing the תרגומים bullet, for every stanza, not only the doubtful ones**: in a long
+  run a remembered Griffith line slipped into a draft (7.41, two stanzas) and was caught only because the stanza was
+  printed later; the safe order is `tr` for the hymn first, then the spec.
+- **A gate's licence list can be satisfied by an unrelated word of the same pāda**: `בני האדם` for *jánānām* passed the
+  `אדם` gate because *nr* (licence of *nár*) occurs inside *satyānr̥té*. The verifier could match licences on the Zurich
+  lemmas of the line instead of on substrings of the folded pāda.
+- **Name regexes still catch common words**: *bharata* "bring!" (√*bhr̥*, 7.46.1d) and *rohítaḥ* "red mares" (7.42.2b)
+  need licences; the Bharata regex could exclude the 2nd pl. imperative where Zurich tags √*bhr̥*.
+- The part 4 assembly script, kept from run to run in the scratchpad, made an 18-hymn part manageable in one session;
+  `lexmap` both ways before the hand-off found 13 silent collisions, most with parts 2–4 (*didyút*, √*car*, √*brū*,
+  *rāyáskāma*), none visible in the renderings tables.
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
