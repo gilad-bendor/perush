@@ -73,7 +73,7 @@ needs `[היתר שם: …]` in the entry when the Hebrew cannot keep the singul
 | Vīuuaŋhan | ` viuuangh` | `וִיוַנְגְהְוַנְט` |  | Yima's father (Vd 2: `בן וִיוַנְגְהְוַנְט`); = Vedic Vivasvant |
 | Bəṇduua | ` bendu` | `בֶּנְדְוָה` |  | an opponent (Y 49.1–2) |
 | Grəhma | ` grehm` | `גְּרֶהְמָה` |  | an opponent (Y 32.12–14) |
-| Friiāna | ` friian` | `פְרִיָאנָה` |  | the Turanian clan that befriended the teaching (Y 46.12) |
+| Friiāna | ` friian(?!mah)` | `פְרִיָאנָה` |  | the Turanian clan that befriended the teaching (Y 46.12) |
 | Tūra | ` tura(?:hiia\|he)?\b` | `טוּרָה` |  | the Turanians (Y 46.12) |
 | Airiiaman (the god) | ` airiiema ` | `אַאִירְיָמָן` |  | the god of the alliance in the prayer Y 54.1 (= Vedic Aryaman); the common noun *airiiaman* is `הַחֲבוּרָה` (§5.4) |
 
@@ -359,6 +359,19 @@ YH 35.2 = 41.7 (the latter is outside the scope).
   *vaŋhəuuī* / *hu.aŋhuuī* `הקיום הטוב`; *yezuuī* `הצעירה` (supports 31.8a *yezīm* "youngest"); *aṣ̌āunī* `נאמנת הסדר`.
 - **Tool fix after part 5:** the Mazdā regex skips the verb *mązdazdūm*.
 
+### 11.7 YH (T1, part 6; merged 2026-11-09)
+- **Decisions:** *aməṣ̌a spəṇta* `בני האלמוות הנדיבים` (39.3b), *aməṣ̌a* `בן אלמוות`; *frauuaṣ̌i* `פְרַוַשִׁיּוֹת`
+  (transliterated); *yazata* `הראוי לזבח`; *mąϑran* pl. `בעלי מַנְתְּרָה` (41.5a `משבחים שלך ובעלי מַנְתְּרָה`).
+- **New rows (accepted):** *agəniiā* `שאין להרגן`; *parəṇdi* `שפע`; *gənā̊* `נשים`; *yaōšti* `טוהר?`; *frašti*
+  `שאילה?`; *išūidiia-* `*מתחייבים*`; *jarətar* `מקלס`; *sairi* / *sarah* `חיבור`; *rap-* `תמך`; *aiδiiu* `שאינו
+  מזיק`; *daitika* `חיות הבר`; *īžiia* `שופע`; *bəzuuaṇt* `איתן`; *humāiiu* `רב־התושייה`; *hudāstəma* `טוב־הנתינה
+  ביותר`; *xᵛaētāt* `השתייכות`; *astəṇtāt* `גשמיות`; *aṣ̌acinah* `חושק בסדר`; *aṣ̌a.hac* `הדבק בסדר`; *xrap-*
+  `מתגבש?`; *mazdąm kar-* `זְכוֹר`.
+- **To align at review:** *rafnah* is `סעד` in YH but `עזרה` in the Gāthās (§11.1, where *rafəδra* has `סעד`): the
+  Gāthās' `עזרה` stands.
+- **Tool fixes after part 6:** the Friiāna regex skips the verb *friiąnmahī*; the `חי` gate licenses `חיות הבר`
+  (*daitika*).
+
 ## 12. Cross-corpus choices for the lead (Avestan words whose Vedic cognate the cousin corpus has not rendered yet)
 Each pair below gets one Hebrew under the cousin-language rule; this corpus's choice is given, for the lead to align
 with Round 7 run 1 (the Rigveda, Book 7) at the finalization:
@@ -370,4 +383,4 @@ with Round 7 run 1 (the Rigveda, Book 7) at the finalization:
 `אַנְשֵׁי חַיִל`; *garah* / *gír* `שִׁירָה`; *vahišta* / *vásiṣṭha*; *daēnā* `הַשְׁקָפָה` against Vd 2's `דָּת` (the
 loanword rule gives `דָּת` to *dāta*); *ahura* / *ásura*; *zaotar* / *hótar* `מְנַסֵּךְ`; *usig* / *uśíj*; Airiiaman
 / Aryaman; *ərəši* / *ŕ̥ṣi* `חוֹזֶה` and *zrazdā* / *śraddhā́* `אמונה` (both follow the cousin corpus);
-*miiazda* / *miyédha* `סעודת הזבח`; *vərəϑrəm.jan* / *vr̥trahán* `הורג החוסם` (follows the cousin corpus's *vr̥tra*); *gənā* / *gnā́* `אשה`; *miϑra* "contract" `הסכם` / Vedic *mitrá*; *īžā* / *íḍā* `רוויה`. The translators add to this list (§11).
+*miiazda* / *miyédha* `סעודת הזבח`; *vərəϑrəm.jan* / *vr̥trahán* `הורג החוסם` (follows the cousin corpus's *vr̥tra*); *gənā* / *gnā́* `אשה`; *miϑra* "contract" `הסכם` / Vedic *mitrá*; *īžā* / *íḍā* `רוויה`; *aməṣ̌a* / *amŕ̥ta* `בן אלמוות`; *yazata* / *yajatá* `הראוי לזבח`. The translators add to this list (§11).

@@ -387,7 +387,7 @@ RESERVED = [
     (W + alt("אש", "האש", "באש", "לאש", "אשך", "ואש", "אשו", "מאש") + E, r"ata|atr|ater|aϑr|athr|athro", "אֵשׁ only for ātar"),
     (W + alt("שכר", "השכר", "שכרו", "שכרם", "שכרך", "בשכר", "לשכר") + E, r"mizd|mizh|mizda|mizdem|mizdai", "שָׂכָר only for mīžda (Vedic mīḍhá)"),
     (W + alt("פרה", "הפרה", "פרות", "הפרות", "לפרה", "בפרה", "הבקר", "בקר", "לבקר") + E, r"gav|geu|gao|gau|go|gam|gai|ga|azi|vastr|pasu|staor", "פָּרָה / בָּקָר only for gav (and the cattle words by sense)"),
-    (W + alt("חי", "חיה", "חיים", "החיים", "חית", "חיות", "חייו", "חייה") + E, r"jiia|jiu|jva|gaiia|gaii|gaya|gaeth|gaet|ji|juu|jy|uštan|ustan|ust|gay|gae|ahu", "חַי / חַיִּים only for jīuua / gaiia / uštāna / gaēϑā"),
+    (W + alt("חי", "חיה", "חיים", "החיים", "חית", "חיות", "חייו", "חייה") + E, r"daitik|jiia|jiu|jva|gaiia|gaii|gaya|gaeth|gaet|ji|juu|jy|uštan|ustan|ust|gay|gae|ahu", "חַי / חַיִּים only for jīuua / gaiia / uštāna / gaēϑā"),
     (W + alt("מות", "מותו", "ימות", "מתים") + E, r"mer|mar|mere|mere|merat|mareθ|mareϑ|meres|ameret|amere", "the root מות only for mar- / mərəϑiiu / amərətāt (the 'deathlessness')"),
     (W + alt("עולם", "העולם", "לעולם", "עולמים", "לעולמים", "עולמו") + E, r"(?!)", "עוֹלָם never (ahu = הַקִּיּוּם; yauua = עַד, vīspāi yauuē = לְכָל הָעִדָּן)"),
 ]
