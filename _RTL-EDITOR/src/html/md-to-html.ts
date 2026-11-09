@@ -96,7 +96,7 @@ type Env = {
     errors?: EmbedError[];
     /** What each `<תוכן-העניינים>` line stands for, by its token's position - they differ. */
     indexesByToken?: Map<number, string>;
-    /** A right-to-left page drops its line-delimited HTML comments - see commentBlockRule(). */
+    /** A right-to-left page drops the HTML comments that have their lines to themselves - see commentBlockRule(). */
     isRtl?: boolean;
     /** Set by lineRowsRule() when the page has lines that share rows - and so needs its script. */
     hasLineRows?: boolean;
@@ -193,9 +193,10 @@ function dedentEndsParagraphRule(state: StateBlock, startLine: number, _endLine:
     return silent && state.sCount[startLine] >= 0 && state.sCount[startLine] < state.blkIndent;
 }
 
-// An HTML comment whose `<!--` and `-->` each stand on a line of their own - whitespace aside - is
-// dropped from a right-to-left page, with everything between them: it is a note to whoever edits
-// the file (`GENERATED FILE. Do not edit by hand.`), not text for the reader. Any other comment -
+// An HTML comment that has its lines to itself - whitespace aside - is dropped from a right-to-left
+// page, with everything between its markers: a note to whoever edits the file, not text for the
+// reader. Either `<!--` and `-->` each stand on a line of their own (`GENERATED FILE. Do not edit by
+// hand.` between them), or the whole comment is one line (`<!-- text: HB -->`). Any other comment -
 // one sharing a line with text, or never closed - is shown as text, as raw HTML always is here.
 // Being a block rule, it leaves a comment inside a code fence alone.
 markdown.block.ruler.before("code", "comment_block", commentBlockRule, { alt: ["paragraph", "reference", "blockquote", "list"] });
@@ -203,13 +204,23 @@ markdown.block.ruler.before("code", "comment_block", commentBlockRule, { alt: ["
 function commentBlockRule(state: StateBlock, startLine: number, endLine: number, silent: boolean): boolean {
     if (!(state.env as Env).isRtl) return false;
     if (state.sCount[startLine] - state.blkIndent >= 4) return false;
-    if (lineText(state, startLine).trimEnd() !== "<!--") return false;
+    const first = lineText(state, startLine).trimEnd();
+    if (isOneLineComment(first)) {
+        if (!silent) state.line = startLine + 1;
+        return true;
+    }
+    if (first !== "<!--") return false;
     let line = startLine + 1;
     while (line < endLine && lineText(state, line).trim() !== "-->") line++;
     if (line >= endLine) return false;
     if (silent) return true;
     state.line = line + 1;
     return true;
+}
+
+/** `<!-- ... -->` and nothing else - its first `-->` the one that ends the line. */
+function isOneLineComment(text: string): boolean {
+    return text.startsWith("<!--") && text.endsWith("-->") && text.indexOf("-->", 4) === text.length - 3;
 }
 
 // A paragraph with a list right under it - no blank line between them - is the list's own heading line,

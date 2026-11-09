@@ -461,10 +461,26 @@ describe("HTML comments on lines of their own", () => {
         expect(html).toContain("שורה ב");
     });
 
+    test("so is a comment that is a whole line of its own", () => {
+        const html = body("שורה א\n  <!-- text: HB -->  \nשורה ב\n\n<!--הערה-->\n\n## כותרת");
+        expect(html).not.toContain("text: HB");
+        expect(html).not.toContain("הערה");
+        expect(html).not.toContain("&lt;!--");
+        expect(html).toContain("שורה א");
+        expect(html).toContain("שורה ב");
+        expect(html).toContain("כותרת");
+    });
+
     test("a comment sharing a line with anything else stays", () => {
         expect(body("<!-- הערה\n-->\n\nשורה")).toContain("הערה");
         expect(body("<!--\nהערה -->\n\nשורה")).toContain("הערה");
-        expect(body("<!-- הערה -->\n\nשורה")).toContain("הערה");
+        expect(body("<!-- א --> הערה <!-- ב -->\n\nשורה")).toContain("הערה");
+        expect(body("שורה <!-- הערה -->")).toContain("הערה");
+    });
+
+    test("a one-line comment in a code fence, or on a left-to-right page, stays", () => {
+        expect(body("```\n<!-- הערה -->\n```\n\nשורה")).toContain("הערה");
+        expect(body("Line\n\n<!-- note -->\n", "a.md")).toContain("note");
     });
 
     test("an unclosed comment stays", () => {
