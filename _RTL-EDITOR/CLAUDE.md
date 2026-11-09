@@ -839,8 +839,8 @@ where a row should break - is the business of the modules and the code they impo
 | `publish` | `"page-and-pdf"` (the default), `"page-only"`, `"embedded-only"` (neither: read and printed only in a book that embeds it) - whatever the `output`, but `"none"` | the mirrors |
 | `groups` | which lines share printed rows (`LineGroup`: from, to, row starts or `"auto"`, margin note lengths) | its page, and books embedding it |
 | `pageBreakBefore` | which headings start a sheet - `SchemaValue<HeadingContext, boolean \| null>` | its own page |
-| `page` | `fontSize` (pt), `marginInline`, `marginBlock` (mm) | its own page |
-| `pdf` | `indexDepth` (0 none, 1 `#`, ... 6 all; the default), `footerTitle` - `SchemaValue<FooterContext, string>` (default: the outermost heading) | its own PDF |
+| `page` | `fontSize` (pt), `marginInline`, `marginBlock` (mm) | its own page, and a book made of it alone |
+| `pdf` | `indexDepth` (0 none, 1 `#`, ... 6 all; the default), `footerTitle` - `SchemaValue<FooterContext, string>` (default: the outermost heading) | its own PDF, and a book made of it alone |
 | `attention` | messages for a layout session - `layout-status` lists them | the tools |
 | `data` | anything modules and their tools pass along (plain data); the editor only passes it on | the tools |
 | `sourceMd5` | a file's own only | the tools |
@@ -875,7 +875,18 @@ the file changed since).
 - **It reaches the page through the text**: `applyLayout()` puts the marks of `layout-marks.ts` into it - the groups'
   (see "Lines that share rows"), and `PAGE_BREAK_MARK` / `NO_PAGE_BREAK_MARK` right after a heading's `#`s, which the
   `page_breaks` core rule turns into `.page-break-before` / `.no-page-break-before`. Page breaks and `page` go to the
-  file's own page only (`ownPage`): a book embedding the file has its own.
+  file's own page only (`ownPage`): a book embedding the file has its own - but see the next point.
+- **A book made of one whole file prints with that file's `page` and `pdf`.** A file that is nothing but one
+  `<כלול-בהדפסה>` of a whole file - no `מ`, no `עד`, nothing else but blank lines (`bookOf()`) - is that file in print:
+  every book of `../שונות/תרגומי-טקסטים-קדומים/הדפסה/`, whose translation is published only there. So `layoutFor()`, for
+  the book's own page, runs the embedded file's chain too (`inheritedPrint()`, and on through a book of a book) and
+  merges its `page` and `pdf` *beneath* the book's own chain, field by field - whatever the book's chain says still
+  wins. A `כותרות` shift is carried over: `indexDepth` moves with the headings (0 stays 0), and a `footerTitle` function
+  is asked with the chain at the file's own levels and with the file as `file` - what it was written for. One that goes
+  wrong for its file is left out (the book's page already says so, as it lays that file out to embed it). The file's
+  modules, and what they import, are the book's dependencies - so an edit to a translation's layout re-renders its
+  book, and reprints its PDF. Being in `layoutFor()`, the layout tools (`rows -- resolve`, `layout-status`) see the
+  same. A book of several files, or of a part of one, takes nothing: whose settings would it be?
 - **What goes wrong is shown, never thrown**: a refused import, a syntax error, a function that throws, an answer
   of the wrong shape. The page is made without what that module would have said - the rest of the chain still
   counts - and opens with a `שגיאה-N` saying why: the same list a faulty `<כלול-בהדפסה>` gets (`errorMarkerLine()`).

@@ -146,6 +146,87 @@ describe("a layout module", () => {
         expect(resolved!.pdf.footerTitle([{ level: 1, text: "x" }])).toBe("root");
     });
 
+    describe("a book made of one whole file", () => {
+        const TITLE = `({ chain, file }: { chain: { level: number, text: string }[], file: { path: string } }) =>
+            chain.filter(h => h.level <= 2).map(h => h.level + h.text).join(" / ") + " @" + file.path`;
+        const translation = async (pdf = `{ indexDepth: 2, footerTitle: ${TITLE} }`) => {
+            await module("lib/title.ts", `export const title = ${TITLE};`);
+            await module("t/translation.layout.ts", `import { title } from "../lib/title.ts";
+                export default () => ({ sourceMd5: "${MD5}", page: { fontSize: 10 }, pdf: { ...${pdf}, footerTitle: title } });`);
+            await writeFile(join(dir, "t/translation.md"), TEXT);
+        };
+
+        test("prints with that file's page and pdf - its footer asked with that file - and depends on its modules", async () => {
+            await translation();
+            const book = await layoutFor(dir, "books/b.md", '\n<כלול-בהדפסה מקור="../t/translation.md">\n', true);
+            expect(book.problems).toEqual([]);
+            expect(book.resolved!.page).toEqual({ fontSize: 10 });
+            expect(book.resolved!.pdf.indexDepth).toBe(2);
+            expect(book.resolved!.pdf.footerTitle([{ level: 1, text: "לוח" }, { level: 2, text: "סוף" }, { level: 3, text: "x" }]))
+                .toBe("1לוח / 2סוף @t/translation.md");
+            expect(book.layoutPaths).toContain("t/translation.layout.ts");
+            expect(book.layoutPaths).toContain("lib/title.ts");
+            // Embedded in another page, the file is that page's - nothing is taken from it.
+            expect((await layoutFor(dir, "books/b.md", '<כלול-בהדפסה מקור="../t/translation.md">', false)).resolved).toBeNull();
+        });
+
+        test("whatever the book's own chain says wins - field by field", async () => {
+            await translation();
+            await module("books/.layout.ts", 'export default () => ({ page: { marginBlock: 30 }, pdf: { footerTitle: "ספר" } });');
+            const { resolved } = await layoutFor(dir, "books/b.md", '<כלול-בהדפסה מקור="../t/translation.md">', true);
+            expect(resolved!.page).toEqual({ fontSize: 10, marginBlock: 30 });
+            expect(resolved!.pdf.indexDepth).toBe(2);
+            expect(resolved!.pdf.footerTitle([{ level: 1, text: "לוח" }])).toBe("ספר");
+        });
+
+        test("shifts what it takes by the headings' shift, and asks the footer at its file's own levels", async () => {
+            await translation();
+            const { resolved } = await layoutFor(dir, "books/b.md", '<כלול-בהדפסה מקור="../t/translation.md" כותרות="+1">', true);
+            expect(resolved!.pdf.indexDepth).toBe(3);
+            expect(resolved!.pdf.footerTitle([{ level: 2, text: "לוח" }, { level: 3, text: "סוף" }, { level: 4, text: "x" }]))
+                .toBe("1לוח / 2סוף @t/translation.md");
+            await translation("{ indexDepth: 0 }");
+            expect((await layoutFor(dir, "books/b.md", '<כלול-בהדפסה מקור="../t/translation.md" כותרות="+1">', true)).resolved!.pdf.indexDepth).toBe(0);
+        });
+
+        test("takes it through a book of a book, and a cycle ends", async () => {
+            await translation();
+            await writeFile(join(dir, "inner.md"), '<כלול-בהדפסה מקור="t/translation.md" כותרות="+1">');
+            const { resolved, layoutPaths } = await layoutFor(dir, "outer.md", '<כלול-בהדפסה מקור="inner.md" כותרות="+1">', true);
+            expect(resolved!.pdf.indexDepth).toBe(4);
+            expect(resolved!.pdf.footerTitle([{ level: 3, text: "לוח" }])).toBe("1לוח @t/translation.md");
+            expect(layoutPaths).toContain("inner.layout.ts");
+            expect(layoutPaths).toContain("t/translation.layout.ts");
+            await writeFile(join(dir, "a.md"), '<כלול-בהדפסה מקור="b.md">');
+            await writeFile(join(dir, "b.md"), '<כלול-בהדפסה מקור="a.md">');
+            expect((await layoutFor(dir, "a.md", '<כלול-בהדפסה מקור="b.md">', true)).resolved).toBeNull();
+        });
+
+        test("is only that: a book embedding a part of a file, or more than one, or with text of its own, takes nothing", async () => {
+            await translation();
+            for (const book of [
+                '<כלול-בהדפסה מקור="../t/translation.md" מ="סוף">',
+                '<כלול-בהדפסה מקור="../t/translation.md">\n<כלול-בהדפסה מקור="../t/translation.md">',
+                '# ספר\n<כלול-בהדפסה מקור="../t/translation.md">',
+                '<כלול-בהדפסה מקור="../t/missing.md">',
+                '<כלול-בהדפסה מקור="/t/translation.md">',
+            ]) {
+                expect((await layoutFor(dir, "books/b.md", book, true)).resolved).toBeNull();
+            }
+        });
+
+        test("does without a footer title that goes wrong for its file - which the page embedding that file says", async () => {
+            await module("t/translation.layout.ts", `export default () => ({ sourceMd5: "${MD5}",
+                pdf: { indexDepth: 1, footerTitle: ({ chain }: { chain: unknown[] }) => chain.length ? 5 : "" } });`);
+            await writeFile(join(dir, "t/translation.md"), TEXT);
+            const { resolved, problems } = await layoutFor(dir, "books/b.md", '<כלול-בהדפסה מקור="../t/translation.md">', true);
+            expect(problems).toEqual([]);
+            expect(resolved!.pdf.indexDepth).toBe(1);
+            expect(resolved!.pdf.footerTitle([{ level: 1, text: "לוח" }])).toBe("לוח");
+            expect((await layoutFor(dir, "t/translation.md", TEXT, false)).problems[0].message).toContain("not a string");
+        });
+    });
+
     test("an answer of the wrong shape is said what is wrong with", async () => {
         const problem = async (answer: string, own = true) => {
             await module(own ? "w.layout.ts" : "sub/.layout.ts", `export default () => (${answer});`);

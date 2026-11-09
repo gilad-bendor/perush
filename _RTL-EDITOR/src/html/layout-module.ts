@@ -5,6 +5,7 @@
 //     loadLayoutModule()   a module, loaded with what it imports, checked
 //     layoutFileOf()       what a module is told about a file (LayoutFile) - read lazily
 //     runChain()           what each module of the chain answers, checked, and merged
+//     bookOf()             the one whole file a book is made of - whose `page` and `pdf` it takes (inheritedPrint())
 //     resolveLayout()      the merged answer with every function in it called - plain data (ResolvedLayout)
 //     applyLayout()        the file's text with the marks of layout-marks.ts in it
 //     layoutFor()          all of it, for the mirror and the layout tools alike
@@ -17,16 +18,16 @@
 
 import { createHash } from "crypto";
 import { readFileSync, statSync } from "fs";
-import { stat } from "fs/promises";
+import { readFile, stat } from "fs/promises";
 import { registerHooks } from "module";
 import { dirname, posix, resolve } from "path";
 import { fileURLToPath, pathToFileURL } from "url";
 import { isRtlFile } from "../../public/src/tables.js";
-import { fenceScanner } from "./includes.ts";
+import { fenceScanner, parseIncludeLine, sourcePathOf } from "./includes.ts";
 import { GROUP_MARK, LINE_MARK, MARGIN_MARK, NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, ROW_MARK, stripLayoutMarks } from "./layout-marks.ts";
 import type {
     FileLayout, FolderLayout, FooterContext, Heading, HeadingContext, LayoutEntries, LayoutFile, LayoutOfFile, LayoutOfFolder,
-    LineGroup, Output, PageSettings, RunningHeading, Static,
+    LineGroup, Output, PageSettings, PdfSettings, RunningHeading, Static,
 } from "./layout-schema.ts";
 import { paragraphRanges, repeatedFootnotes } from "./md-to-html.ts";
 import { measureAt } from "./text-measure.ts";
@@ -428,6 +429,71 @@ export async function outputOf(root: string, mdPath: string): Promise<Output> {
 const publications = new Map<string, { stamp: string, publication: Publication }>();
 
 // ------------------------------------------------------------------------------------------------
+// A book made of one file
+//
+// A file that is nothing but one `<כלול-בהדפסה>` of a whole file - a book of הדפסה/, whose translation is published
+// only in it - prints what that file is: its `page` and `pdf` are the book's, beneath what the book's own chain says.
+
+/** The file a book is made of, and the `כותרות` shift it is embedded with. */
+export type BookSource = { path: string, headingShift: number };
+
+/**
+ * The file this one is made of - when its text is a single `<כלול-בהדפסה>` of a whole file (no `מ`, no `עד`), and
+ * nothing else but blank lines. Null for any other file - one that embeds several, or a part of one, or adds text of
+ * its own - and for a directive that is faulty: the page says what is wrong with it.
+ */
+export function bookOf(mdPath: string, content: string): BookSource | null {
+    const lines = content.split(/\r\n?|\n/).filter(line => line.trim());
+    if (lines.length !== 1) return null;
+    const parsed = parseIncludeLine(lines[0]);
+    if (parsed.kind !== "include" || parsed.directive.from !== undefined || parsed.directive.to !== undefined) return null;
+    const target = sourcePathOf(mdPath, parsed.directive.source);
+    return "path" in target ? { path: target.path, headingShift: parsed.directive.headingShift } : null;
+}
+
+/** What a book takes from the file it is made of - and the files that decided it, for the book's page to depend on. */
+type InheritedPrint = { entries: Pick<LayoutEntries, "page" | "pdf">, files: string[] };
+
+/**
+ * The `page` and `pdf` the book `mdPath` takes from the file it is made of (bookOf()), as that file's chain merges them -
+ * over what that file takes in turn, should it be a book too. Null when it is no such book, or the file cannot be read.
+ *
+ * Its levels are the book's: with `כותרות="+1"` an `indexDepth` of 2 is 3 in the book, and a `footerTitle` function is
+ * asked with the headings at its own file's levels - and with its own file, whose headings it may fall back on.
+ * A `footerTitle` that goes wrong for its own file is left out - and said on the book's page, which lays that file
+ * out to embed it.
+ *
+ * @param seen  the books that led here, for a cycle to end in
+ */
+async function inheritedPrint(root: string, mdPath: string, content: string, seen: readonly string[] = [mdPath]): Promise<InheritedPrint | null> {
+    const book = bookOf(mdPath, content);
+    if (!book || seen.includes(book.path)) return null;
+    const text = await readFile(posix.join(root, book.path), "utf-8").catch(() => null);
+    if (text === null) return null;
+
+    const file = layoutFileOf(book.path, text);
+    const chain = await runChain(root, file);
+    const deeper = await inheritedPrint(root, book.path, text, [...seen, book.path]);
+    const files = [...new Set([...layoutChainFor(book.path), ...chain.files, ...deeper?.files ?? []])];
+    const { page, pdf } = merge([deeper?.entries ?? {}, chain.merged]);
+
+    const fails = typeof pdf?.footerTitle === "function" && "error" in resolveLayout({ ...chain, merged: { ...chain.merged, pdf } });
+    const title = fails ? undefined : pdf?.footerTitle;
+    const shift = book.headingShift;
+    const shifted: PdfSettings = {
+        ...pdf?.indexDepth !== undefined && { indexDepth: pdf.indexDepth && Math.max(0, Math.min(DEEPEST_HEADING, pdf.indexDepth + shift)) },
+        ...title !== undefined && {
+            footerTitle: typeof title === "string" ? title
+                : ({ chain: headings }: FooterContext) => title({ chain: headings.map(h => ({ ...h, level: h.level - shift })), file }),
+        },
+    };
+    const entries: { page?: PageSettings, pdf?: PdfSettings } = {};
+    if (page && Object.keys(page).length) entries.page = page;
+    if (Object.keys(shifted).length) entries.pdf = shifted;
+    return { entries, files };
+}
+
+// ------------------------------------------------------------------------------------------------
 // The answer, resolved
 
 /**
@@ -583,7 +649,14 @@ export type PageLayout = {
  */
 export async function layoutFor(root: string, mdPath: string, content: string, ownPage: boolean, ownPath?: string): Promise<PageLayout> {
     const chain = await runChain(root, layoutFileOf(mdPath, content), ownPath);
-    const layoutPaths = [...new Set([...layoutChainFor(mdPath), ...chain.files])];
+    // A book made of one file prints it with that file's `page` and `pdf`, beneath its own chain's - its own page only,
+    // as `page` and `pdf` are a page's own.
+    const inherited = ownPage ? await inheritedPrint(root, mdPath, content) : null;
+    if (inherited && Object.keys(inherited.entries).length) {
+        chain.merged = merge([inherited.entries, chain.merged]);
+        chain.answered = true;
+    }
+    const layoutPaths = [...new Set([...layoutChainFor(mdPath), ...chain.files, ...inherited?.files ?? []])];
     const obsolete = chain.own !== null && chain.own.sourceMd5 !== md5Of(content);
     const none: PageLayout = { content, layoutPaths, resolved: null, problems: chain.problems, obsolete };
     if (!chain.answered) return none;

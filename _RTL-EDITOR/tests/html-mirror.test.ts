@@ -293,6 +293,30 @@ describe("HtmlMirror", () => {
         expect(await rows("book.rtl.md")).toBe(4);
     });
 
+    test("a book made of one file prints with that file's page and pdf - and follows its layout module", async () => {
+        const text = "# ספר\n\n## פרק א\n\nא\n\n### סעיף\n\nב\n\n## פרק ב\n\nג";
+        await write("t/translation.rtl.md", text);
+        await write("t/title.ts", 'export const title = ({ chain }: { chain: { level: number, text: string }[] }) => chain.map(h => h.level + h.text).join(" / ");');
+        await write("t/translation.rtl.layout.ts", `import { title } from "./title.ts";
+export default () => ({ sourceMd5: "${md5Of(text)}", page: { fontSize: 10 }, pdf: { indexDepth: 2, footerTitle: title } });`);
+        await write("book.rtl.md", '<כלול-בהדפסה מקור="t/translation.rtl.md" כותרות="+1">');
+        const m = mirror();
+        await m.syncTree(["t/", "t/translation.rtl.md", "book.rtl.md"]);
+        let html = await readFile(page("book.rtl.md"), "utf-8");
+        expect(html).toContain("font-size: 10pt");
+        expect(html).toContain(".index li.index-level-4");              // the ### of the file is a #### in the book
+        expect(html).not.toContain(".index li.index-level-3");
+        expect(html).toContain('data-running-title="1ספר / 2פרק א / 3סעיף"');
+
+        // An edit to what the file's module imports reaches the book.
+        await write("t/title.ts", 'export const title = () => "כותרת";');
+        m.scheduleSync("t/title.ts");
+        await sleep(600);
+        html = await readFile(page("book.rtl.md"), "utf-8");
+        expect(html).toContain('data-running-title="כותרת"');
+        expect(html).not.toContain("1ספר");
+    });
+
     test("a layout that goes wrong is ignored, and said so at the top of the page", async () => {
         await write("t/translation.rtl.md", "**1** א,\n**2** ב,");
         await write("t/.layout.ts", 'import { x } from "fontkit";\nexport default () => null;');

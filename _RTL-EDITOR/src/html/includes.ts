@@ -598,7 +598,7 @@ export async function expandIncludes(
 }
 
 /** The path `מקור` names, or what to say about it not being one. */
-function sourcePathOf(fromFilePath: string, source: string): { path: string } | { message: string } {
+export function sourcePathOf(fromFilePath: string, source: string): { path: string } | { message: string } {
     if (source.startsWith("/")) {
         return { message: `הנתיב שבתכונה "${SOURCE}" חייב להיות יחסי, ולא להתחיל ב-"/": "${source}"` };
     }

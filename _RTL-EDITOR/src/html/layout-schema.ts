@@ -40,6 +40,13 @@
 // - **Static values are plain data** (Static) - never a function, so a function in an entry can only be
 //   the dynamic form of SchemaValue.
 //
+// BOOKS. A file that embeds others (`<כלול-בהדפסה>`) is a book, laid out by its own chain: the files it embeds bring
+// their `groups` into it, and nothing else. But a book that is nothing but one `<כלול-בהדפסה>` of a whole file (no
+// `מ`, no `עד`, no other text) prints that file - as every book of שונות/תרגומי-טקסטים-קדומים/הדפסה/ does - and so
+// takes that file's `page` and `pdf`, field by field beneath whatever the book's own chain says. Its `כותרות` shift is
+// carried over: `indexDepth` moves with the headings, and `footerTitle` is asked with the headings at the file's own
+// levels, and with the file (FooterContext.file). The book's page depends on that file's modules, and what they import.
+//
 // This file holds types (and nothing else that runs), so that a layout module type-checks against it alone.
 
 // ------------------------------------------------------------------------------------------------
@@ -115,9 +122,10 @@ export type FooterContext = {
      * shallower one above that - `[# חוקי אשנונה, ## מחירים ושכר, ### §3 – שכירות עגלה]`. A heading standing at
      * the very top of the sheet counts. Empty before the first heading. Only the page's own headings, as an
      * index has them - not one inside a pseudo-tag, a quote or a list. A book's include those of the files it
-     * embeds.
+     * embeds. In a book made of one file (see BOOKS above) the levels are that file's own, `כותרות` undone.
      */
     readonly chain: readonly RunningHeading[];
+    /** The file whose layout this is - in a book made of one file, that file, not the book. */
     readonly file: LayoutFile;
 };
 
@@ -224,9 +232,12 @@ export type LayoutEntries = {
     readonly output?: Output;
     /** How much of the file is published on its own - left out, a page and a PDF. See Publish. */
     readonly publish?: Publish;
-    /** Applies to the file's own page only - not to a book that embeds it, which has its own. */
+    /**
+     * Applies to the file's own page - and to a book made of it alone (see BOOKS below). Any other book that embeds
+     * it has its own.
+     */
     readonly page?: PageSettings;
-    /** Its PDF's index and footers. The file's own PDF only - a book that embeds it has its own. */
+    /** Its PDF's index and footers: the file's own PDF - and a book made of it alone (see BOOKS below). */
     readonly pdf?: PdfSettings;
     /**
      * Which of its lines share printed rows. Applies wherever the file is printed - its own page, and a
