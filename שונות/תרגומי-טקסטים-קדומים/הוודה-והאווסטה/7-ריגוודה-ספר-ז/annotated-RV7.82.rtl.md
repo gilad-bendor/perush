@@ -40,7 +40,7 @@
 `samrā́ḷ anyáḥ svarā́ḷ anyá ucyate vām`
 > מלך עליון – האחד, מושל בעצמו – האחר, נאמר עליכם;
 - **פירוק:** `samrā́ṭ` – samrā́j- "מלך עליון", נושא ("מלך עליון"); `anyáḥ` – anyá- "אחר", נושא ("האחד"); `svarā́ṭ` – svarā́j- "מושל בעצמו", נושא ("מושל בעצמו"); `anyáḥ` – anyá- "אחר", נושא ("האחר"); `ucyate` – √vac "אמר", הווה סביל 3 יחיד ("נאמר"); `vām` – tvám "אתם", זוגי יחסת הקניין ("עליכם").
-- **תרגומים:** גריפית': "O Indra-Varuṇa, mighty and very rich One of you is called Monarch and One Autocrat. All Gods in the most lofty region of the air have, O ye Steers, combined all power and might in you."; גלדנר: "Allherr wird der eine, Selbstherr der andere von euch beiden genannt"; רנו: "L'un de vous deux (Varuṇa) s'appelle le souverain; l'autre (Indra) roi-autonome".
+- **תרגומים:** גריפית': "O Indra-Varuṇa, mighty and very rich One of you is called Monarch and One Autocrat. All Gods in the most lofty region of the air have, O ye Steers, combined all power and might in you."; גלדנר: "Allherr wird der eine, Selbstherr der andere von euch beiden genannt"; רנו: "L'un de vous deux (Varuṇa) s'appelle le souverain; l'antre (Indra) roi-autonome".
 - **הערות:** *samrā́j* `המלך העליון` (ז 58.4c) – וַרוּנָה; *svarā́j* `המושל בעצמו` (ז 66.6a) – אִינְדְּרָה; *anyá … anyá* "האחד … האחר" – המבנה החוזר של המזמור (5cd, 6cd); √*vac* בסביל `נאמר`.
 
 ### 2b
@@ -244,7 +244,7 @@
 `asmé índro váruṇo mitró aryamā́`
 > לנו – אִינְדְּרָה, וַרוּנָה, מִיטְרָה, אַרְיַמַן –
 - **פירוק:** `asmé` – ahám "אנחנו", רבים יחסת הנתינה ("לנו"); `índraḥ` – índra- "אינדרה", נושא ("אִינְדְּרָה"); `váruṇaḥ` – váruṇa- "ורונה", נושא ("וַרוּנָה"); `mitráḥ` – mitrá- "מיטרה", נושא ("מִיטְרָה"); `aryamā́` – áryaman- "ארימן", נושא ("אַרְיַמַן").
-- **תרגומים:** גריפית': "May Indra, Varuna, Mitra, and Aryaman vouchsafe us glory and great shelter spreading far. We think of the beneficent light of Aditi, and Savitar's song of praise, the God who strengthens Law."; גלדנר: "die Wahrheitsmehrer der Aditi unzerstörbares Licht! Wir gedenken des Mahnrufs des Gottes Savitr̥"; ג'מיסון: 10c שייך ל־10ab (אולדנברג, גלדנר); *manāmahe* "נהרהר".
+- **תרגומים:** גריפית': "May Indra, Varuṇa, Mitra, and Aryaman vouchsafe us glory and great shelter spreading far. We think of the beneficent light of Aditi, and Savitar's song of praise, the God who strengthens Law."; גלדנר: "die Wahrheitsmehrer der Aditi unzerstörbares Licht! Wir gedenken des Mahnrufs des Gottes Savitr̥"; ג'מיסון: 10c שייך ל־10ab (אולדנברג, גלדנר); *manāmahe* "נהרהר".
 - **הערות:** **אַרְיַמַן** – האָדִיטְיָה של הכנסת האורחים ושל ליווי הכלה (renderings §3.1). הבית חוזר כבית החותם של ז 83 [מקבילה: RV7.83 10a].
 
 ### 10b

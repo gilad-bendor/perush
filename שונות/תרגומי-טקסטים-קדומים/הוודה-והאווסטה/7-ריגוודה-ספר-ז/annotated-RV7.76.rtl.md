@@ -119,7 +119,7 @@
 `samāná ūrvé ádhi sáṃgatāsaḥ`
 > במכלאה משותפת מאוחדים,
 - **פירוק:** `samāné` – samāná- "משותף", יחסת המקום ("משותפת"); `ūrvé` – ūrvá- "מכלאה", יחסת המקום ("במכלאה"); `ádhi` – ádhi "על", תחילית ("–"); `sáṃgatāsaḥ` – √gam "התאחד", בינוני עבר סביל, רבים נושא ("מאוחדים").
-- **תרגומים:** גריפית': "Meeting together in the same enclosure, they strive not, of one mind, one with another. They never break the Gods' eternal statutes, and injure none, in rivalry with Vasus."; גלדנר: "Um die gemeinsame (eingesperrte) Herde versammelt vertragen sie sich"; ג'מיסון: הנושא נשאר בכוונה לא מפורש – גם האבות (המכלאה היא מערת וַלָה) וגם בני וַסִישְׁטְהָה של היום (המכלאה היא מקום הזבח).
+- **תרגומים:** גריפית': "Meeting together in the same enclosure, they strive not, ofone mind, one with another. They never break the Gods' eternal statutes, and injure none, in rivalry with Vasus."; גלדנר: "Um die gemeinsame (eingesperrte) Herde versammelt vertragen sie sich"; ג'מיסון: הנושא נשאר בכוונה לא מפורש – גם האבות (המכלאה היא מערת וַלָה) וגם בני וַסִישְׁטְהָה של היום (המכלאה היא מקום הזבח).
 - **הערות:** *samāná* `משותף` (ז 26.3c); *ūrvá* `מכלאה` (ז 16.7d; *vrajá* גם הוא `מכלאה` – צמד לבדיקה הסופית); *sám* √*gam* `התאחד` (renderings §11.5), בבינוני העבר `מאוחד`.
 
 ### 5b

@@ -1532,14 +1532,20 @@ Ps 90:10, Jonah 2:4, Ps 113:9) are sound and say "shared motif". **12 `>` lines 
 ### Scope
 RV 7.75–7.88: 14 hymns, 332 pādas – Uṣas, the Dawn, 7.75 (32), 7.76 (28), 7.77 (24), 7.78 (20), 7.79 (20), 7.80 (12),
 7.81 (24); Indra–Varuṇa 7.82 (40), 7.83 (40), 7.84 (20), 7.85 (20); Varuṇa 7.86 (32), 7.87 (28), 7.88 (28). One
-annotated file and one intro per hymn; `build RV7.75-88` generates the clean files. (In progress.)
+annotated file and one intro per hymn; `build RV7.75-88` generated the clean files. No F6 in 7.81 (pragāthas).
 
 ### Sources consulted
 - Base: VedaWeb Zurich text and morphology (`data`); `gra` / `mw` for new words; `freq RV7.75-88`, `lexmap`, `grep`,
   the part 4–7 spec assembler (`gen.py`) and look-up script (`lk.py`: every lemma of a hymn against all drafted files),
   copied to my scratch folder.
 - After drafting each hymn: `tr` (Griffith, Grassmann, Geldner, Elizarenkova, Renou) and Jamison's commentary
-  (`VII.56–104-9-25-26.txt`).
+  (`VII.56–104-9-25-26.txt`; for 7.82–88 "SJ on JPB", with her 2007 analysis of 7.86–88 as three "omphalos" hymns built on
+  the grammatical person of poet and god, adopted in the notes and intros). Every quoted fragment of Griffith / Geldner /
+  Renou / Macdonell checked by script against `tr` (`chkq.py`); several fragments of 7.86 first written from memory were
+  wrong and were replaced (see Lessons).
+- Bible verses printed before quoting: Gen 1:4, 1:28; Song 6:10; Ps 104:2, 22–23; Isa 66:13; 1 Sam 5:12; Ps 20:8;
+  Ps 79:8; Job 13:23, 10:2; Ps 38:4; Ps 32:5; Ps 116:16; Lam 5:7; Ps 19:13, 19:6; Ps 18:16; Zech 4:10; Ps 130:3–4;
+  Ps 89:50; Jer 1:5; Ps 107:14; Ps 104:2 (checked: Isa 34:6, remembered wrongly, was not used).
 
 ### Decisions
 - **Uṣas as a name:** *uṣás* where she is the goddess (the addressee and subject of 7.75–81) = `שַׁחַר` without the
@@ -1569,20 +1575,151 @@ annotated file and one intro per hymn; `build RV7.75-88` generates the clean fil
   (7.16.7d) = *vrajá* `מכלאה` (for the final pass); *yajatá* `הראוי לזבח` and *yájatra* `ראוי לזבח` share one Hebrew
   (precedents; the etymological figure of 7.75.7b kept); *ágra* `בתחילה` also where it means "in front" (7.80.2c).
 - **7.80.3a–c** copied from 7.41.7a–c (identical).
+- **The coordinator's consistency rulings of 2026-11-09 applied** (they arrived while 7.83 was drafted): *suvitá* `הליכה
+  טובה` (7.75.2a, 7.79.3b, 7.85.4d), *śubhrá* `נאה` (7.75.6c), √*cud* `דרבן` (7.77.4d, 7.79.5a; *codayitrī́* `מדרבנת`
+  7.81.6c), √*nud* `דחף` (7.86.1c), *árṇas* `מִשְׁבָּר` (7.87.1b), *drúh* `שקר`, *turá* `נמרץ` (7.86.4d), *sahasrín* /
+  *sahásrāmagha* `בעל־אלף(־השפע)`, *prá* √*vac* `הכריז` (7.86.4c), √*iṣ* 1 `הזעיק` (7.87.3d), *pári* √*vr̥j* `עקף`
+  (7.84.2c).
+- **Indra–Varuṇa (7.82–85):** *índrāváruṇā* `אִינְדְּרָה וְוַרוּנָה` (7.35.1b; as `מִיטְרָה וְוַרוּנָה`); the names of 7.83
+  as part 2 / 4 wrote them: Sudās `סוּדָאס`, the Tṛtsus `הטְרִטְסוּ`, Bheda `בְּהֵדָה`, *dāśarājñá* `קרב עשרת המלכים`,
+  *dáśa rā́jānaḥ* `עשרה מלכים`; *śvityáñc* `לבנבן`, *kapardín* `בעל־הצמה` (7.33.1a). 7.83.1–3 and 5–6ab set as quoted
+  battle speech in `" "` (Geldner, Jamison). *vr̥trá* (common noun, pl.) `מחסום` with `[היתר שם: וְרִטְרָה]` (7.83.1c, 9a;
+  7.85.3d), as parts 2–3. New: *dīrgháprayajyu* `ארוך־הזבח (?)`; √*vanuṣy* `חמד`; *dūḷhī́* `רע־ההגות`; *mahā́vasu*
+  `גדול־הטוב`; *khá* `פתח`; *prabhú* `ריבון`; *apít* `שלא גודש` (the pun on √*pinv* `הגדיש` kept); *mitájñu*
+  `נעוץ־הברכיים`; *prasavá* `האצה` (*savá*; AB's `הנעות` older); *majmán* `עוצמה`; *śulká* `מס (?)` (Jamison: "tribute",
+  not yet "bride-price"); *tvíṣ* `התלקחות`; *dabhrá* `מעט`; *bhū́yaṃs* `רב יותר`; *párihvr̥ti* `סטייה`; *mārḍīká*
+  `רחמים`; *kr̥ṣṭyojas* `בעל חוסן־האומות`; *spŕ̥dh* `תחרות`; *avadhrá* `שאינו נהרס`; *pr̥thupárśu* `רחב־החזה` (not
+  `צלעות`: the reserved `צֵלָע`); *kr̥tádhvaj* `מקים־הדגל`, *dhvajá* `דגל`; *dhvasirá* `מאובק`; *árāti* `איבה`
+  (RV 10.34.14c; 7.5.1b / 7.10.3d `הסוכן` older); *havanaśrút* `שומע־ההזמנה`; *vadhánā* `כלי־מוות`; *úpastuti*
+  `שבח־הקריאה`; *admasád* `יושב־הסעודה`; *dhī́vant* `בעל־הגות`; *samithá* `עימות`; √*inv* `קידם`; *setár* `כובל`, √*si*
+  `כבל`, *arajjú* `שאינו חבל`; *héḷas* `רוגז` (not `חרון`, the Bible's word for God's wrath); *arakṣás* `שאין בו
+  רַקְשָׁס`; *ghr̥tápratīka* `שחזותו חמאה מזוקקת`; *párāñc* `נסוג לאחור`; *devátā* `אלים` (7.1.23c, AB); *právikta*
+  (√*vij*) `נסער`; *r̥tacít* `מבחין־הסדר`; *devahū́ya* `קריאה לאלים` (= *deváhūti*).
+- **Varuṇa (7.86–88), the reserve-word control** (precedents checked with `lk.py` / `lexmap` / `grep --all` before each
+  word was fixed): *ā́gas* `אשמה` (RV 10.15.6d, 7.57.4b), *ánāgas* `חסר־אשמה`; *énas* `עוון` (7.20.1d, 7.52.2c, 7.58.5d,
+  AB 7.18.13c), *anenás* `חף־מעוון` (7.28.4c), *énasvant* `בעל־עוון`; √*muc* `שחרר` (7.88.7b); √*mr̥ḍ* `רחם`, *mr̥ḷīká*
+  `רחמים`; *dāsá* "servant, slave" `עבד` (7.86.7a: free in the corpus; the note ties it to *dā́sa* `דָּאסָה`, the enemy
+  who became the slave), tagged [equivalent] Ps 116:16. **No word of the `חטא` family, no `פשע`, `שגגה`, `סליחה`,
+  `וידוי` / `התוודה`, `חרון` in a line:** the Sanskrit has none of them (Griffith's "sin / sinner", Geldner's "Sünde /
+  Sünder" are named in the notes as theirs). New: √*hr̥̄* "be angry" `זעף`, *áhr̥ṇāna* `שאינו זועף` (*manyú* keeps `כעס`);
+  *sákhi* `חבר`, *sakhyá* `חברות`, *āpí* `ידיד` (7.8.6c), *ā́pya* `ידידות`; *drugdhá* `שקר` (√*druh*, the Avestan
+  cognate rule); *dákṣa* `כשרון` (precedent; "conscious intent", the note); *dhrúti* `הטעיה`; *súrā* `שֵׁכָר` (always
+  vocalized: not `שָׂכָר`, *mīḍhá*); *vibhī́daka* `וִיבְּהִידַקָה` (RV 10.34); *ácitti* `חוסר־הבחנה`; *svápna* `שינה`;
+  *prayotár* `מסיר`; *upārá* `מעידה`; *jyéṣṭha* `הגדול` (AB "eldest": keeps Jamison's double sense "gravest / oldest",
+  7.86.4a), *jyā́yaṃs* / *kánīyaṃs* `הגדול` / `הקטן` (7.86.6c); *paśutŕ̥p* `שבע־בהמות`; *tāyú* `גנב`; *dā́man* `רצועה`;
+  *didŕ̥kṣu* `בתשוקה לראות`; *antár váruṇe* `בתוך וַרוּנָה` (7.86.2b) answered by `בוַרוּנָה` (7.87.7b), Jamison's ring;
+  *tanū́* `גוף` kept literally in 7.86.2a ("with my own body", = myself) because it rings with 5b; *bhū́rṇi* `נחפז`;
+  *kavítara* `מי שמשורר יותר` (not `טוב`); *gŕ̥tsa* `פיקח` (Varuṇa, with Jamison); *aváni* `אפיק`; *árvatī* `סוסה`;
+  *r̥tāy* `נהג בסדר`; √*nu* intens. `שאג`; *smádiṣṭa* `בעל־השליחות (?)`; *yajñádhīra* `חכם־הזבח`; *médhira* `בעל־דעת`;
+  *ṣáḍvidhāna* `שש חלוקות`; *preṅkhá* `נדנדה`, √*īṅkhay* `התנדנד`; *vimā́na* `מודד`; *gambhīráśaṃsa* `עמוק־הקילוס`;
+  *supārákṣatra* `ששלטונו מעביר היטב`; √*r̥dh* `הגשים`; *śundhyú* `מצוחצח`; *saṃdŕ̥ś* `הופעה`; *áśman* `צור`; *adhipā́*
+  `שליט`; *ándhas* 1 "darkness" `אופל`; *svápas* `טוב־המלאכה` (gate licence); *sudinatvá* `בהירות`; *yā́t* `כל עוד`;
+  *avr̥ká* `בלי זאב`; *mā́na* 2 `בניין`; *sahásradvār* `בעל אלף הדלתות`; *yakṣin* `בעל־התעתועים (?)`; *naú* `סְפִינָה`.
+- **Recorded splits (for the harmonization):** √*bhuj* 2 `ניזון` (7.81.5d, "feed on") / `נשלם` (7.88.6c, "pay for", as
+  7.52.2c); *úpara* `מאוחר` (7.87.4d) / `תחתון` (5b); *antár* `בתוך` / `בין` (7.87.2c); *bhū́man* `אזור` (7.86.1d, as part 7)
+  vs 7.34.7b `אדמה`; *mr̥ḷīká* and *mārḍīká* both `רחמים` (one root); *yajatá* / *yájatra*; *devahū́ya* / *deváhūti*.
+- **Gate licences written** (`[היתר שער: …]`, each with its source word): `טוב` for *saúbhaga* (7.75.2b), *ántivāma*
+  (7.77.4a), *svápas* (7.88.4b); `לשאול` "to ask" (7.86.3b, *vipŕ̥cham*) against the `שְׁאוֹל` gate – a false positive of
+  the gate (the infinitive of `שאל`), reported.
 
 ### Open decisions for the user
+- 7.86.7d: with Jamison, "he who is more a poet (Vasiṣṭha) spurs the clever one (Varuṇa)"; most interpreters invert the
+  roles. The note gives both.
+- 7.87.4c: *ná* "like" (`כסודות יאמר`) or "not" (Oldenberg: "he will not speak the secrets"); Jamison holds the ambiguity
+  deliberate. The line has "like", marked `(?)`.
+- 7.86.4a *jyéṣṭha* `הגדולה`: "gravest" or "oldest" (an ancestral offense) – the Hebrew keeps both.
+- *dāsá* `עבד` (7.86.7a) [equivalent, Ps 116:16]: the natural word, but it is also the Bible's "servant of God". The
+  alternative (transliterating `דָּאסָה`) would make him an "enemy".
+- *súrā* `שֵׁכָר`: the right sense (a grain liquor, not soma) and a common Semitic word (Akk. *šikaru*); [equivalent], no
+  echo is built on it.
+- 7.83.1b *pr̥thupárśu* "broad-ribbed / broad-chested" (Geldner, Renou, Jamison) or "with broad axes" (Griffith,
+  Macdonell) or two tribe names; and 7.82.6a *śulká* `מס (?)`.
 
 ### Progress log
-- 7.75–7.81 drafted hymn by hymn, each saved, filled and verified (0 problems) before the next; `tr` and Jamison read
-  after each draft; one change carried back (7.75.1c `הסירה` → `חשפה`, the precedent of 7.27.2d).
+- Drafted hymn by hymn (7.75 → 7.88) from compact specs (`gen.py`), each saved, `fill`ed and `verify`ed (0 problems)
+  before the next; `tr` and Jamison after each draft; the section written as I went.
+- Pass (a) fidelity: every line read against its Zurich tokens in the spec (the token count is enforced by `gen.py`);
+  moods checked (optatives `נא`, subjunctives future, injunctives by context, *mā́* prohibitives); the quoted battle speech
+  of 7.83 and the person-shifts of 7.86–88 kept as in the source (7.88.7a `אותך` left without a verb, as Vasiṣṭha
+  leaves it).
+- Pass (b) consistency: my lemma ↔ Hebrew map against every drafted file (`cons8.py`); changes: 7.75.1c `הסירה` → `חשפה`
+  (7.27.2d), 7.85.3b `לאלוהות` → `לאֵלִים` (7.1.23c), the coordinator's 14 rulings (above); all repeated pādas copied
+  (7.80.3a–c = 7.41.7; 7.84.5c = 7.85.5c = 7.67.6d; 7.84.3d ≈ 7.58.3d; 7.82.10 = 7.83.10, first copy here;
+  7.84.5 = 7.85.5, first copy here); F6 in 13 hymns.
+- Pass (c) Hebrew: the 14 generated files read in sequence; vocalized for sense `הֲנָאָה` (7.81.3d, not "the fair one"),
+  `נִזּוֹן` (7.81.5d), `שָׂמָה` / `שָׂמוּ` / `שׂם`, `מְרֻנֶּנֶת`, `אֶל` / `הָאֵל` / `אֵלֶּה` beside *devá* lines; annotated headers and
+  intros re-read against the final lines (7.75, 7.78, 7.79, 7.81, 7.85 aligned).
+- `build RV7.75-88`; `verify RV7.75-88 --strict`: **0 problems**, 0 repeated-line differences in the range;
+  `check_bible_quotes.py` on the 42 annotated, intro and generated files: **0 problems** (the checker tested on a planted
+  error with a verse range: it catches it).
 
 ### The text on its own terms
+- **The goddess who is the morning** (7.75–81): Uṣas is a young woman, "daughter of Heaven", "mistress of the world",
+  "young woman of the Sun", who comes "close" like a girl and "not like one who goes back" (7.76.3d); she is also "old",
+  bringing old age (7.75.5c) – and she "lengthens our lives" (7.77.5b).
+- **Dawn is the cosmic order made visible** (7.75.1a, 3c): she dawns "by the order", her beams "beget the divine
+  ordinances", and she drives away "the deceits" with the darkness (7.75.1c).
+- **The word begets the dawn** (7.76.4): the ancestral poets, "whose formulas are true", found the hidden light and "begot
+  Dawn"; their heirs, the Vasiṣṭhas, wake "first" to her every day (7.76.6, 7.80.1).
+- **The Vala myth under every sunrise** (7.75.7, 7.79.3–4): the cows of light locked in the rock, released "with the bull's
+  roar"; Dawn is "most Aṅgiras-like", "most Indra-like".
+- **The morning sends life on its way** (7.77.1b): "impelling every living thing to move"; the fire is kindled, the patrons
+  are spurred to give (7.79.5a, 7.81.6c).
+- **The two faces of rule** (7.82–85): "sovereign – the one, self-ruler – the other" (7.82.2a); Indra kills the obstacles in
+  battle, Varuṇa guards the ordinances in peace (7.83.9); both are asked for "mercy" because of "friendship" (7.82.8).
+- **A battle won by the rite** (7.83): the ten kings "who do not sacrifice" fail; "the gods were present at their
+  invocations of the gods" – the Vasiṣṭha priests in white with braided hair win the war for Sudās.
+- **Fetters without ropes** (7.84.2b, 7.86.5, 7.88.7b): Varuṇa binds the offender (in disease and death) and releases the
+  one who bows: offense is a tie that the god can untie.
+- **Not knowing one's offense** (7.86.3–4): the poet knows that the god is angry, not why; he asks the god to *declare* it.
+- **Responsibility shared and deflected** (7.86.5–6): "the deceits of the fathers", "the elder within the misstep of the
+  younger", and the forces outside the self – liquor, anger, dice, thoughtlessness, even sleep.
+- **Grammar as theology** (Jamison): in 7.86 and 7.88 the meeting of "I" and "you" happens once, at the centre, and the
+  poet then retreats into the plural and the third person – the shape of the hymns is the shape of the broken bond.
+- **The cosmos inside the god** (7.87.5): "three heavens are placed within him"; and the poet longs to be "within Varuṇa"
+  (7.86.2b) – answered at the end: "may we be in Varuṇa without offense" (7.87.7b).
+- **The poet made by the god** (7.88.3–4): a journey together in a boat, "swinging in the swing", and Varuṇa "made him a
+  seer" – then the lament: "where have those friendships of us two gone?" (7.88.5a).
 
 ### Key parallels
+- 7.86.3a [equivalent] Job 13:23 – the sufferer asks God to make known his offense (shared motif; Vasiṣṭha does not claim
+  innocence, he seeks to know in order to be released).
+- 7.86.4d [equivalent] Ps 32:5 – acknowledging the offense before the god as the way to its removal (shared motif; the
+  Sanskrit has the bow, not a confession).
+- 7.86.5a [equivalent] Ps 79:8 (and Lam 5:7) – the offense of the fathers resting on the sons (shared motif).
+- 7.86.6b [equivalent] Ps 19:13 – offense without intent or knowledge (shared motif; here external forces: drink, anger,
+  dice).
+- 7.88.5a [equivalent] Ps 89:50 – "where are your former …?": the lost closeness with the god (shared motif; here a
+  personal friendship).
+- 7.87.7a [equivalent] Ps 130:3–4 – the god who shows mercy even to the offender (shared motif; mercy, not forgiveness).
+- 7.77.1b [equivalent] Ps 104:22–23 – the sunrise sends living beings to their work (shared motif).
+- 7.83.7d [equivalent] Ps 20:8 – the battle decided by invoking the god (shared motif; here by the "true" sacrifice).
+- 7.88.3a [absent] – god and man sailing together on the sea has no biblical counterpart (and the boat is not a flood ark).
 
 ### Proposals for the shared renderings
+- **For §3.2:** *uṣás* the goddess = `שַׁחַר` without the article, feminine agreement (7.75–81; AB precedent); the plural and
+  the common noun keep `השחר(ים)`.
+- **Words (binding for Book 7 if accepted):** every word under Decisions; for the later parts and RV 7.89 especially:
+  *ā́gas* `אשמה`, *énas* `עוון`, *énasvant* `בעל־עוון`, *anenás* `חף־מעוון`, √*hr̥̄* `זעף`, *héḷas* `רוגז`, *mr̥ḷīká* /
+  *mārḍīká* `רחמים`, *dāsá* `עבד`, *súrā* `שֵׁכָר`, *setár* `כובל`, *naú* `סְפִינָה`, *preṅkhá* `נדנדה`, *saṃdŕ̥ś* `הופעה`,
+  *ántivāma* `קרובת־הטוב`, *vibhātī́* `זורחת־לרווחה`, *netrī́* `מנהיגה`, *yuvatí* `צעירה`.
+- **Reserve list (for renderings §7 / the tool):** no word of the root חטא, nor `פשע`, `שגגה`, `סליחה`, `וידוי`, `חרון`
+  in a Vedic line unless the source has its counterpart (Book 7 has none): the Varuṇa hymns are where they would creep in.
+- **Repeated lines** (first copies here): 7.82.10 = 7.83.10; 7.84.5 = 7.85.5.
+- **Tool:** the `שְׁאוֹל` gate fires on `לשאול` "to ask" (licensed in 7.86.3b) – an exemption of the forms of `שאל` (as for
+  `בִּקֵּשׁ` and `קשת`) would avoid it; the `טוב` licence could take *saú-* (vr̥ddhi of *su-*) and *sv-* before a vowel
+  (*svápas*) and compounds with *vāmá* as second member.
 
 ### Lessons for the guidelines
+- **Never quote a rank-3 translation from memory, even a famous one:** for 7.86, the best-known hymn of the book, I wrote
+  Griffith's and Geldner's wording from memory before running `tr`, and 8 of 9 fragments were wrong (a remembered Renou
+  too); a 15-line script that checks every quoted fragment against `tr` found them all. Run `tr` first and copy.
+- **Check every remembered Bible verse with `--show`, also in passing notes:** a half-remembered Isa 34:6 ("הִתְדַּשְּׁנָה
+  מֵחֵלֶב") was in fact `הֻדַּשְׁנָה`; it never reached the file because the verse was printed first.
+- **A quote checker with a "no Latin letters" rule cannot be tested with a Latin marker:** test it with a Hebrew error.
+- **The reserve list must be fixed before the confession hymns:** the rank-3 translators say "sin", "sinner", "Sünde" on
+  every line of 7.86–88, where the Sanskrit has *ā́gas*, *énas* and *drugdhá*; fixing `אשמה` / `עוון` / `שקר` from the
+  precedents before the first line kept every `חטא` out.
 
 ## Consistency pass, RV 7.1–7.74 (Round 7 run 1)
 
