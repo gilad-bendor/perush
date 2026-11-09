@@ -243,7 +243,7 @@ The Hebrew regex is matched on the bracket-free, unvocalized, punctuation-free l
 | F | folded-source regex | Hebrew regex | lines |
 |---|---|---|---|
 | F1 | `\b(?:vohu\|vangheus\|vanheus)\b (?:manangha\|manangho\|mano\|manah\|manahi\|manangham)\b` | `מחשבה הטובה` | *vohu manah* adjacent (any case): `הַמַּחֲשָׁבָה הַטּוֹבָה` with its prepositions |
-| F2 | `\bas(?:a\|em\|ahe\|ahiia\|at\|ai\|aat\|ahe\|ai)\b (?:vahist\w*)` | `סדר הטוב ביותר` | *aṣ̌a vahišta* adjacent |
+| F2 | `\bas(?:a\|em\|ahe\|ahiia\|at\|ai\|aat\|ahe\|ai)\b (?:vahist(?!\w*ca\b)\w*)` | `סדר הטוב ביותר` | *aṣ̌a vahišta* adjacent |
 | F3 | `\bspent\w* mainii\w*\|\bmainii\w* spent\w*` | `רוח\S* \S*נדיב` | *spəṇta mainiiu* adjacent |
 | F4 | `\bangr\w* mainii\w*\|\bmainii\w* angr\w*` | `רוח\S* \S*מזיק` | *aŋra mainiiu* adjacent |
 | F5 | `\bhumata\w* \S* ?huxta\w*` | `מחשב\S* \S*טוב\S* \S*דיבור\S* \S*טוב` | the triad *humata hūxta huuaršta* |
@@ -336,6 +336,19 @@ YH 35.2 = 41.7 (the latter is outside the scope).
   occurrence per file; at every *saōšiiaṇt* and eschatological term the later Jewish comparison as the scholars'
   comparison; `אֲהוּרָה` may be vocalized everywhere; `לָעַד` vocalized.
 
+### 11.5 Y 47–50 (T1, part 4; merged 2026-11-09)
+- **Revisions of earlier lines:** *guš-* `האזין` (29.8a, 31.18a, 31.19a); CAB's run-together *yə̄gūšahuuā* /
+  *yaϑāgūšahuuā* read as *gūšahuuā tū* "listen, you!" (the clear 49.7b): 29.7c, 44.2c, 49.6c `הַאֲזֵן (אתה)!`;
+  44.6c *dəbązaitī* `מבססת?` (*dəbązah* `ביסוס`).
+- **Key lines:** Y 47.1 the Aməṣ̌a Spəṇtas all in the instrumental (`ב־`); 48.1b *ąsaš́utā* `…`; 48.9b copies 32.16b;
+  50.8b `אבוא, מַזְדָּה, בידיים פרושות,` (28.1a, 28.2a).
+- **New rows (accepted):** *t̰kaēša* `פוסק`; *aṇtarə.mrū-* `התנער מ־`; *haxman* `חברות`; *īžā* `רוויה` (Vedic
+  *íḍā*); *pada* `רגל (שיר)`; *auruuaṇt* `סוס דהירה`; *ϑrātar* `מגן`; *raiϑi* `רכב?`; *gūzra* `נסתר`; *ušti* `רצון`;
+  *yaōždā* `טיהור`; *mada* `משקה משכר`; *mūϑra* `לכלוך`; *fraēšta* `האהוב ביותר`; *frasasti* `פרסום`; *hunarətāt*
+  `כשרון`; *ašiiah* `רע יותר`; *nanā* `נבדל`; *ākərəti* `השלמה`; *pərəϑa* `מעבר?`; *pərəϑu* `רחב`; *ugra* `חזק`;
+  *aōša* `סוף`.
+- **Tool fix after part 4:** F2 skips a *vahišt-* word with *-cā* (50.4b: it qualifies *manaŋhā*).
+
 ## 12. Cross-corpus choices for the lead (Avestan words whose Vedic cognate the cousin corpus has not rendered yet)
 Each pair below gets one Hebrew under the cousin-language rule; this corpus's choice is given, for the lead to align
 with Round 7 run 1 (the Rigveda, Book 7) at the finalization:
@@ -347,4 +360,4 @@ with Round 7 run 1 (the Rigveda, Book 7) at the finalization:
 `אַנְשֵׁי חַיִל`; *garah* / *gír* `שִׁירָה`; *vahišta* / *vásiṣṭha*; *daēnā* `הַשְׁקָפָה` against Vd 2's `דָּת` (the
 loanword rule gives `דָּת` to *dāta*); *ahura* / *ásura*; *zaotar* / *hótar* `מְנַסֵּךְ`; *usig* / *uśíj*; Airiiaman
 / Aryaman; *ərəši* / *ŕ̥ṣi* `חוֹזֶה` and *zrazdā* / *śraddhā́* `אמונה` (both follow the cousin corpus);
-*miiazda* / *miyédha* `סעודת הזבח`; *vərəϑrəm.jan* / *vr̥trahán* `הורג החוסם` (follows the cousin corpus's *vr̥tra*); *gənā* / *gnā́* `אשה`; *miϑra* "contract" `הסכם` / Vedic *mitrá*. The translators add to this list (§11).
+*miiazda* / *miyédha* `סעודת הזבח`; *vərəϑrəm.jan* / *vr̥trahán* `הורג החוסם` (follows the cousin corpus's *vr̥tra*); *gənā* / *gnā́* `אשה`; *miϑra* "contract" `הסכם` / Vedic *mitrá*; *īžā* / *íḍā* `רוויה`. The translators add to this list (§11).
