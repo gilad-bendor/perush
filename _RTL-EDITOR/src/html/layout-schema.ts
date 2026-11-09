@@ -188,6 +188,17 @@ export type LayoutFile = {
 export type Output = "laid-out" | "plain" | "none";
 
 /**
+ * How much of a file the mirrors make of it, as a file of its own - whatever its Output (which `"none"` overrides):
+ * - `"page-and-pdf"`: an HTML page and a PDF - the mirror's own;
+ * - `"page-only"`: a page, and no PDF;
+ * - `"embedded-only"`: neither - the file is read only in a book that embeds it (`<כלול-בהדפסה>`), and printed in
+ *   the book's PDF: a translation whose book is its only edition, say.
+ * Unlike `output: "none"`, it says nothing of whether the file should have a layout of its own: a `"laid-out"` file
+ * published only in a book is still listed by the layout tools, and its layout is used in the book.
+ */
+export type Publish = "page-and-pdf" | "page-only" | "embedded-only";
+
+/**
  * Consecutive lines of one paragraph that share printed rows (line-rows.ts): side by side, a thin bar
  * between them, each kept whole; a row's first line shows its margin note.
  */
@@ -211,6 +222,8 @@ export type LineGroup = {
 /** What a module may say of a file. Every entry may be left out, and is then taken from the modules before it. */
 export type LayoutEntries = {
     readonly output?: Output;
+    /** How much of the file is published on its own - left out, a page and a PDF. See Publish. */
+    readonly publish?: Publish;
     /** Applies to the file's own page only - not to a book that embeds it, which has its own. */
     readonly page?: PageSettings;
     /** Its PDF's index and footers. The file's own PDF only - a book that embeds it has its own. */

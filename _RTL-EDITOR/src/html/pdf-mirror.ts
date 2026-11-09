@@ -45,12 +45,13 @@ import type { Browser } from "playwright";
 import { HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, logSiteChange, PDF_MIRROR_DIR, pdfPathFor } from "./html-mirror.ts";
 import { writeFileSafe } from "../write-file-safe.ts";
 import { printPages } from "./pdf-pages.ts";
+import { publicationOf } from "./layout-module.ts";
 
 // The PDF mirror's paths are html-mirror.ts's, which lists this mirror in its indexes too.
 export { PDF_MIRROR_DIR, PDF_MIRROR_NAME, pdfPathFor } from "./html-mirror.ts";
 
 /** The code a PDF depends on besides its page. */
-const RENDERER_FILES = [join(import.meta.dirname, "pdf-mirror.ts"), join(import.meta.dirname, "pdf-pages.ts")];
+const RENDERER_FILES = ["pdf-mirror.ts", "pdf-pages.ts", "pdf-sheets.ts"].map(file => join(import.meta.dirname, file));
 
 /** The document-info key a PDF's stamp is kept under. */
 const STAMP_KEY = "PerushSource";
@@ -180,7 +181,8 @@ export class PdfMirror implements PageCompanion {
     private async print(mdPath: string): Promise<PdfOutcome> {
         const pagePath = join(this.root, htmlPathFor(mdPath));
         const pdfPath = join(this.root, pdfPathFor(mdPath));
-        const page = isMirroredFile(mdPath) ? await statOrNull(pagePath) : null;
+        // A file its layout gives no PDF (`publish: "page-only"`, `"embedded-only"`) has none - a page, maybe.
+        const page = isMirroredFile(mdPath) && await this.printsPdf(mdPath) ? await statOrNull(pagePath) : null;
         if (!page?.isFile()) {
             return await this.removePdf(pdfPath) ? "removed" : "absent";
         }
@@ -202,8 +204,15 @@ export class PdfMirror implements PageCompanion {
                 await document.fonts.ready;
                 window.dispatchEvent(new Event("beforeprint"));
             });
-            // The index's page numbers, and the footers (pdf-pages.ts).
-            printed = (await printPages(tab)).pdf;
+            // The index's page numbers, and the footers (pdf-pages.ts) - and a page with footnotes laid out in sheets.
+            const result = await printPages(tab);
+            printed = result.pdf;
+            if (result.sheets && "error" in result.sheets) {
+                console.error(`PDF mirror: ${mdPath} is printed with its notes at its end - laying it out in sheets failed:`, result.sheets.error);
+            }
+            for (const warning of result.sheets && "warnings" in result.sheets ? result.sheets.warnings : []) {
+                console.error(`PDF mirror: ${mdPath}: ${warning}`);
+            }
         } finally {
             await tab.close();
         }
@@ -211,6 +220,15 @@ export class PdfMirror implements PageCompanion {
         logSiteChange(this.root, "wrote", pdfPath);
         this.stamps.delete(pdfPath);
         return "printed";
+    }
+
+    /** Whether a file gets a PDF of its own, as its layout says - a file whose layout cannot be asked does. */
+    private async printsPdf(mdPath: string): Promise<boolean> {
+        try {
+            return (await publicationOf(this.root, mdPath)).pdf;
+        } catch {
+            return true;
+        }
     }
 
     private linkTargets(): LinkTargets {
@@ -228,13 +246,15 @@ export class PdfMirror implements PageCompanion {
         return stamp;
     }
 
-    /** Schedules every file, and deletes the PDFs whose file has no page any more. */
+    /** Schedules every file, and deletes the PDFs whose file has no page any more - or is to have no PDF. */
     async sweep(mdPaths: string[]): Promise<void> {
         // An empty tree is far likelier a walk that failed than a project that was deleted.
         if (!mdPaths.length) return;
-        for (const mdPath of mdPaths) this.schedule(mdPath);
+        const printed: string[] = [];
+        for (const mdPath of mdPaths) if (isMirroredFile(mdPath) && await this.printsPdf(mdPath)) printed.push(mdPath);
+        for (const mdPath of printed) this.schedule(mdPath);
 
-        const wanted = new Set(mdPaths.filter(isMirroredFile).map(pdfPathFor));
+        const wanted = new Set(printed.map(pdfPathFor));
         for (const pdfPath of await this.listPdfFiles()) {
             if (!wanted.has(pdfPath)) await this.removePdf(join(this.root, pdfPath));
         }

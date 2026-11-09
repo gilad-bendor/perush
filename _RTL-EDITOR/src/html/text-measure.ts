@@ -86,12 +86,55 @@ export function textWidthEm(text: string, face: FontFace = "regular"): number {
 
 const inline = new MarkdownIt({ html: false, breaks: true, linkify: false, typographer: false });
 
+// ------------------------------------------------------------------------------------------------
+// Footnote references
+//
+// On paper a reference (`[^1]`) is a superscript box of a fixed width (md-to-html.ts, footnotes.ts): the PDF
+// numbers the notes of every sheet from 1 (pdf-sheets.ts), and a number written into a box of its own width moves
+// nothing - the trick the index's page numbers use. So a line's width on paper does not depend on the number.
+
+/** A reference's size, relative to the text around it. */
+export const FOOTNOTE_REF_SCALE = 0.75;
+
+const round = (em: number) => Math.round(em * 1000) / 1000;
+
+/**
+ * The box a reference reserves on paper, in em of its own (smaller) size, on a right-to-left page - in the page's
+ * fonts: room for two digits (no sheet has 99 notes), and for a further reference to a note on an earlier sheet,
+ * `99 (עמ' 999)`. A little air after it, too. A left-to-right page is set in the machine's fonts, which these were
+ * not measured in - it gets a fifth more.
+ */
+export const FOOTNOTE_REF_EM = {
+    first: round(textWidthEm("99") + 0.1),
+    again: round(textWidthEm("99 (עמ' 999)") + 0.1),
+    firstLtr: round((textWidthEm("99") + 0.1) * 1.2),
+    againLtr: round((textWidthEm("99 (p. 999)") + 0.1) * 1.2),
+};
+
+/** `[^label]` - a footnote reference, as Markdown writes it. */
+const FOOTNOTE_REF = /\[\^([^\]\s]+)\]/g;
+
+/**
+ * A reference's width on paper, in em of the line: a note referred to more than once reserves the room of a
+ * reference to an earlier sheet at every reference - its first included, which reserves less on paper (only its
+ * further ones do), but a line is measured alone, and does not say which reference it holds.
+ */
+function footnoteRefWidthEm(label: string, repeated: ReadonlySet<string>): number {
+    return (repeated.has(label) ? FOOTNOTE_REF_EM.again : FOOTNOTE_REF_EM.first) * FOOTNOTE_REF_SCALE;
+}
+
 /**
  * The width of a line's Markdown as the page sets it, in em: `**bold**` in the bold face, `*italic*` in
  * the italic one, whitespace collapsed and trimmed as a browser does. Code is set in the regular face -
  * a page's code is in another font, which lines of a translation hardly ever hold.
  */
-export function markdownWidthEm(markdown: string): number {
+export function markdownWidthEm(markdown: string, repeatedNotes: ReadonlySet<string> = new Set()): number {
+    // A footnote reference is the box it is on paper, whatever its label.
+    let references = 0;
+    markdown = markdown.replace(FOOTNOTE_REF, (_, label: string) => {
+        references += footnoteRefWidthEm(label, repeatedNotes);
+        return "";
+    });
     const pieces: { text: string, face: FontFace }[] = [];
     let bold = 0, italic = 0;
     const faceNow = (): FontFace => bold && italic ? "boldItalic" : bold ? "bold" : italic ? "italic" : "regular";
@@ -118,7 +161,7 @@ export function markdownWidthEm(markdown: string): number {
         pieces[i].text = pieces[i].text.replace(/ $/, "");
         if (pieces[i].text) break;
     }
-    return pieces.reduce((sum, piece) => sum + textWidthEm(piece.text, piece.face), 0);
+    return pieces.reduce((sum, piece) => sum + textWidthEm(piece.text, piece.face), 0) + references;
 }
 
 const PX_PER_MM = 96 / 25.4;
@@ -130,8 +173,10 @@ export const ROW_SAFETY_PX = 1;
 /**
  * Widths on the printed page at these settings, as the page's CSS sets them (md-to-html.ts, line-rows.ts) -
  * in CSS pixels. See layout-schema.ts's Measure.
+ *
+ * @param repeatedNotes  the labels of the notes the file refers to more than once - see footnoteRefWidthEm()
  */
-export function measureAt(page?: PageSettings): Measure {
+export function measureAt(page?: PageSettings, repeatedNotes: ReadonlySet<string> = new Set()): Measure {
     const em = (page?.fontSize ?? PRINT_FONT_SIZE_PT) * PX_PER_PT;
     const column = (210 - 2 * (page?.marginInline ?? PRINT_MARGIN_INLINE_MM)) * PX_PER_MM;
     const ch = textWidthEm("0") * em;
@@ -139,7 +184,7 @@ export function measureAt(page?: PageSettings): Measure {
     return {
         text: markdown => {
             let width = widths.get(markdown);
-            if (width === undefined) widths.set(markdown, width = markdownWidthEm(markdown) * em);
+            if (width === undefined) widths.set(markdown, width = markdownWidthEm(markdown, repeatedNotes) * em);
             return width;
         },
         // The margin: `--margin-width` - the widest note's characters × 1.1 ch - and 0.5 em beside it.

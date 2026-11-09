@@ -51,6 +51,9 @@ later), which runs the TypeScript as it is - there is no build step.
    numbers, and a footer on every sheet - see "The PDF's pages"
 - Two buttons beside the help button open the current file in a tab of its own: the printer its PDF,
    the `</>` to its left its HTML page
+- Footnotes - `text[^a]`, `[^a]: the note` - are numbered superscript links on the page, the notes at its end; in
+   the PDF every note stands at the foot of the sheet it is first referred to on, the numbers starting from 1 on every
+   sheet. See "Footnotes" below
 
 ## Setup
 
@@ -98,6 +101,8 @@ layout"), and every edit of one - or of the translations' layout code - would re
 - `src/html/folder-index.ts` - The `index.html` of every folder of `../docs/_HTML-FROM-MD`
 - `src/html/pdf-mirror.ts` - Every page of the HTML mirror printed to `../docs/_PDF-FROM-MD`, by Playwright's Chromium
 - `src/html/pdf-pages.ts` - What a PDF has and its page does not: the index's page numbers, and the footers
+- `src/html/footnotes.ts` - Footnotes on the page: markdown-it-footnote's markup, and the style of a page that has them
+- `src/html/pdf-sheets.ts` - A page with footnotes laid out by itself in the sheets of its PDF, every note at the foot of its sheet
 - `src/rebuild-whole-html-folder.ts` - `npm run rebuild-whole-html-folder`
 - `layout-guidelines/` - What a layout session (a Claude session deciding how pages are laid out) works with,
    whatever it lays out: its prompt, `claude-layout-guidelines.md`, and the general tools. The code that *applies* a
@@ -134,8 +139,8 @@ layout"), and every edit of one - or of the translations' layout code - would re
 - `tests/line-rows.test.ts` / `tests/layout-module.test.ts` - Unit tests for `line-rows.ts` / the layout modules, their
    loading, measuring and marks (`npm test`). The translations' layout logic has its own, beside it, which `npm test`
    runs too: `../שונות/תרגומי-טקסטים-קדומים/layout/tests/`
-- `tests/pdf-mirror.test.ts` / `tests/pdf-pages.test.ts` - Unit tests for the PDF mirror and its pages - these print
-   real PDFs, in Chromium
+- `tests/pdf-mirror.test.ts` / `tests/pdf-pages.test.ts` / `tests/pdf-sheets.test.ts` - Unit tests for the PDF mirror,
+   its pages and its sheets of footnotes - these print real PDFs, in Chromium
 
 ## API Endpoin
 - `GET /api/files` - `{files, serverTimestamp}`: the whole tree, and a cursor to poll changes with
@@ -633,6 +638,8 @@ from `style.css` and the editor's `HighlightStyle` - change one, check the other
 - `*` / `**` inside inline code are bold, stars removed.
 - **Lines a layout gathers into groups share printed rows.** See "Lines that share rows" below.
 - `` `a`\`b` `` is two code spans with a backslash between them - see "A backslash between code spans".
+- **Footnotes** (`[^a]`, `[^a]: ...`) are numbered superscript links, and the notes are gathered at the page's end -
+  see "Footnotes" below.
 - **An index** goes where the file's `<תוכן-העניינים>` line stands, and nowhere else (`renderIndexes()`):
   a collapsible `<nav class="index">` of the headings of `#`..`###` **below** it (on paper as deep as the file's layout
   says, with page numbers - see "The PDF's pages"), titled
@@ -720,6 +727,13 @@ so is an `INDEX.md`'s, in any case: macOS's disk ignores case, and takes `INDEX.
 new and not yet added (`git ls-files --cached --others --exclude-standard`) - and only the folders holding
 one; a folder with none gets no index. The pages of ignored files are still made, just not listed. When
 git cannot be asked (not a work tree) everything is listed.
+
+**A file its layout publishes only in a book** (`publish: "embedded-only"`) gets no page and no PDF, and is in no
+index - but is embedded, and laid out, as ever: every file of `../שונות/תרגומי-טקסטים-קדומים/` but its `הדפסה/`,
+whose books are each a `<כלול-בהדפסה>` of one of them. Unlike `output: "none"`, it leaves `"laid-out"` alone, so the
+layout tools still list the translations. `publish: "page-only"` keeps the page and drops the PDF, from the PDF
+mirror's indexes too. The print and HTML buttons say why there is nothing to show. `publicationOf()`
+(layout-module.ts) is what both mirrors ask - the page and the PDF; `outputOf()` is the Output alone.
 
 **A file its layout gives no output** (`output: "none"` - see "A file's layout") gets no page and no PDF, and so
 is in no index: the editor's own folders (`_RTL-EDITOR/` and the like), by the root's `.layout.ts`. That replaced a
@@ -810,6 +824,7 @@ where a row should break - is the business of the modules and the code they impo
 | Entry | What it decides | Applies to |
 |---|---|---|
 | `output` | `"laid-out"` (a page, and a layout of its own made by a session), `"plain"` (a page; the default), `"none"` (no page, no PDF) | the mirrors, the tools |
+| `publish` | `"page-and-pdf"` (the default), `"page-only"`, `"embedded-only"` (neither: read and printed only in a book that embeds it) - whatever the `output`, but `"none"` | the mirrors |
 | `groups` | which lines share printed rows (`LineGroup`: from, to, row starts or `"auto"`, margin note lengths) | its page, and books embedding it |
 | `pageBreakBefore` | which headings start a sheet - `SchemaValue<HeadingContext, boolean \| null>` | its own page |
 | `page` | `fontSize` (pt), `marginInline`, `marginBlock` (mm) | its own page |
@@ -838,7 +853,7 @@ the file changed since).
   or the mirror's freshness test would be wrong. That one cannot be checked.
 - **It is loaded again only when one of its files changes** - each is `stat`ed, nothing more, as long as none has.
   The path is made absolute first: `import()` takes a relative one to be relative to `layout-module.ts`, and the
-  server's root is `..`. **`outputOf()`**, asked of every file at every sweep, keeps its answer until the file or a
+  server's root is `..`. **`publicationOf()`** (and `outputOf()` on it), asked of every file at every sweep, keeps its answer until the file or a
   module of its chain changes - the translations' module reads and parses its file to answer.
 - **`resolveLayout()` calls every function** and checks every answer's shape (types are gone at run time), giving a
   `ResolvedLayout` with no function in it - but `pdf.footerTitle`, whose context (the headings at the top of a sheet,
@@ -906,6 +921,10 @@ Three things follow from expanding *text* rather than tokens, and each is worth 
   it, or wrapped in `<>`, is left exactly as written, and so is a bare `#anchor`.
 - **A code fence is left alone** - a directive or a heading drawn inside one is sample text. Every scan
   in the module goes through `fenceScanner()` for that reason.
+- **An embedded file's footnotes are its own**: every label of the block - reference and definition - gets a prefix
+  of the embedding's (`embeddedFootnotes()`, the sentinel around a number, which no file can write), so two files'
+  `[^1]` are two notes; and a part of a file (`מ`, `עד`) brings along the notes it refers to, wherever in the file
+  they are written. Inline code is left as written.
 
 **An error is shown, not thrown.** A file with a typo in a directive still renders: the faulty line
 becomes a `שגיאה-N` block where it stood, and the page opens with the list of them all, each linking to
@@ -1122,6 +1141,60 @@ Why not CSS: Chromium numbers pages in `@page` margin boxes, but has neither `st
 sheet, with no way to know the heading in force there.
 
 Three prints instead of one: a PDF takes some three times as long to make, which the background queue absorbs.
+
+A page with footnotes first lays itself out in sheets (see "Footnotes"), and Chromium then breaks nowhere else: the
+steps above run on those sheets unchanged.
+
+### Footnotes
+
+`text[^a]` and, anywhere in the file, `[^a]: the note` (indented lines going on with it) - markdown-it-footnote parses
+them, `src/html/footnotes.ts` says how they look. Its `^[inline]` notes are switched off: they would turn text that
+only looks like one into a note, on pages that have no footnotes. A page without footnotes is exactly what it was -
+their style goes only into a page that has them.
+
+**On the page**: the references are numbered 1, 2, 3... through the page, superscript links (`sup.footnote-ref`,
+`data-footnote` the number, `data-label` the label as written), and the notes are gathered at the page's end
+(`section.footnotes`), each linking back to its references - numbered, when there are several. A reference inside a
+grouped line (see "Lines that share rows") is part of that line; one inside a heading is left out of the index
+entries and the footer titles.
+
+**On paper a reference is a box of a fixed width** (`FOOTNOTE_REF_EM`, in `text-measure.ts`): room for two digits,
+and for a further reference to the same note (`.again`) room for `99 (עמ' 999)`. Writing the number in moves
+nothing - the trick the index's page numbers use - so the sheets can be decided before the numbers are known. The
+box is the same under `html.measuring-print`, where the layout tools measure a page as the PDF prints it, and
+`markdownWidthEm()` counts it in place of the `[^label]` text: a line with a reference is measured as printed, and is
+never wider than it used to be measured. A line is measured alone, so a note referred to more than once is measured
+with the wider box at each reference - its first included, which prints narrower (`repeatedFootnotes()` tells the
+measure which; a reference in a dropped HTML comment is none). The rows tool's `measureGroups()` reads a reference
+back as `[^label]`, so that what a line's text ends with is still its punctuation.
+
+**In the PDF every note stands at the foot of the sheet it is first referred to on** - which Chromium cannot do
+(`float: footnote` is not there), and which is circular: a sheet's notes take room from its text, and may push the
+reference itself on to the next sheet. So `printPages()` has a page with footnotes lay itself out in sheets first
+(`paginateSheets()`, `src/html/pdf-sheets.ts`, run in the tab under print media), each decided once:
+
+- **A sheet is a box of the printed page's size** (`.pdf-sheet`, a forced break after it): its text at the top, its
+  notes at the foot (`.pdf-notes`), under a short rule. The page's blocks are moved into the sheets one by one and
+  measured where they stand, with the notes of every reference placed so far. A block that does not fit is split at
+  the last place that does - between its blocks, between the rows of a line group, between the lines of a paragraph,
+  between a list's items or a table's rows - found by trying (split, measure, put back), not estimated. A split
+  element goes on in a copy of itself: a numbered list keeps counting, an item split in two loses its marker, a table
+  repeats its head.
+- **What Chromium honours, this honours**, read off the computed style: a forced break before a block (every `#` but
+  the first, a layout's `pageBreakBefore` - read while the blocks still stand in `<main>`, as `main > ...` rules
+  decide some of them), a heading kept with what follows it, a block kept whole if a sheet can hold it, orphans and
+  widows. The top margin of a sheet's first block is dropped, as Chromium drops it after a break of its own - but not
+  after a forced one, nor on the first sheet.
+- **The numbers start from 1 on every sheet.** A further reference on the same sheet has the note's number; one on a
+  later sheet says where the note is - `3 (עמ' 42)`, a link to the note.
+- **A note too long for the room left** is kept whole by moving the line that refers to it - with the note - to the
+  next sheet, if that leaves no more than a fifth of the sheet empty (`KEEP_NOTE_WHOLE_EMPTY_SHARE`); otherwise it is
+  split by its lines - two at least stay - and goes on, unnumbered, at the head of the next sheet's notes.
+- **What goes wrong is not thrown**: the page is put back as it was and printed with its notes at its end, and
+  `PdfMirror` logs why - as it logs a sheet whose text runs into its notes, or a PDF whose page count is not its sheets'.
+
+Once the page is in sheets the rest is "The PDF's pages" as it was: the index's page numbers read from the print, the
+footers laid over it. A page with no footnotes never goes through any of this, so its PDF comes out as before.
 
 ### The print and HTML buttons
 

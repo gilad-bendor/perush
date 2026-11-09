@@ -88,7 +88,11 @@ export async function measureGroups(html: string): Promise<MeasuredGroup[]> {
                         const width = element.getBoundingClientRect().width;
                         element.style.whiteSpace = element.style.maxWidth = "";
                         const note = element.querySelector(".line-margin")?.textContent ?? "";
-                        return { sourceLine: Number(element.dataset.sourceLine), width, text: element.textContent!.slice(note.length).trim(), rowStart: i === 0 };
+                        // A footnote reference is measured as its box on paper, and read as written - `[^label]` - so
+                        // that what a line's text ends with is still its punctuation.
+                        const written = element.cloneNode(true) as HTMLElement;
+                        written.querySelectorAll<HTMLElement>(".footnote-ref").forEach(ref => ref.replaceWith(`[^${ref.dataset.label ?? ""}]`));
+                        return { sourceLine: Number(element.dataset.sourceLine), width, text: written.textContent!.slice(note.length).trim(), rowStart: i === 0 };
                     });
                 });
                 const wrapped = rows.filter(row => row.querySelectorAll(":scope > .grouped-line.row-start").length > 1)

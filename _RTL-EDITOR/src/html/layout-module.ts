@@ -8,7 +8,7 @@
 //     resolveLayout()      the merged answer with every function in it called - plain data (ResolvedLayout)
 //     applyLayout()        the file's text with the marks of layout-marks.ts in it
 //     layoutFor()          all of it, for the mirror and the layout tools alike
-//     outputOf()           only whether the file gets a page at all - cheap
+//     publicationOf()      only what the file is published as - a page, a PDF - cheap (outputOf(): its Output alone)
 //
 // The editor knows nothing of what the file is about: it hands the modules elementary capabilities, and
 // takes back elementary decisions (layout-schema.ts). What goes wrong - an import that is not a file of
@@ -28,7 +28,7 @@ import type {
     FileLayout, FolderLayout, FooterContext, Heading, HeadingContext, LayoutEntries, LayoutFile, LayoutOfFile, LayoutOfFolder,
     LineGroup, Output, PageSettings, RunningHeading, Static,
 } from "./layout-schema.ts";
-import { paragraphRanges } from "./md-to-html.ts";
+import { paragraphRanges, repeatedFootnotes } from "./md-to-html.ts";
 import { measureAt } from "./text-measure.ts";
 
 /** A folder's layout module - for every file under it. */
@@ -206,6 +206,7 @@ export function layoutFileOf(mdPath: string, content: string | (() => string)): 
         });
         return found;
     });
+    const repeated = once(() => repeatedFootnotes(text(), isRtlFile(mdPath, text())));
     const measures = new Map<string, ReturnType<typeof measureAt>>();
     return {
         path: mdPath,
@@ -218,7 +219,7 @@ export function layoutFileOf(mdPath: string, content: string | (() => string)): 
         measure: page => {
             const key = JSON.stringify(page ?? {});
             let measure = measures.get(key);
-            if (!measure) measures.set(key, measure = measureAt(page));
+            if (!measure) measures.set(key, measure = measureAt(page, repeated()));
             return measure;
         },
         helpers,
@@ -228,11 +229,12 @@ export function layoutFileOf(mdPath: string, content: string | (() => string)): 
 // ------------------------------------------------------------------------------------------------
 // What the chain answers
 
-const ENTRIES = new Set(["output", "page", "pdf", "groups", "pageBreakBefore", "attention", "data"]);
+const ENTRIES = new Set(["output", "publish", "page", "pdf", "groups", "pageBreakBefore", "attention", "data"]);
 const FILE_ENTRIES = new Set([...ENTRIES, "sourceMd5"]);
 const OUTPUTS = new Set(["laid-out", "plain", "none"]);
 const PAGE_ENTRIES = new Set(["fontSize", "marginInline", "marginBlock"]);
 const PDF_ENTRIES = new Set(["indexDepth", "footerTitle"]);
+const PUBLISH = new Set(["page-and-pdf", "page-only", "embedded-only"]);
 /** The deepest heading there is - an index that deep lists them all. */
 export const DEEPEST_HEADING = 6;
 
@@ -274,6 +276,7 @@ function shapeError(answer: unknown, own: boolean): string | null {
         return "\"sourceMd5\" must be the MD5 of the Markdown file, 32 hex digits";
     }
     if (layout.output !== undefined && !OUTPUTS.has(layout.output as string)) return `"output" must be one of ${[...OUTPUTS].join(", ")}`;
+    if (layout.publish !== undefined && !PUBLISH.has(layout.publish as string)) return `"publish" must be one of ${[...PUBLISH].join(", ")}`;
     if (layout.page !== undefined) {
         if (typeof layout.page !== "object" || layout.page === null) return "\"page\" must be an object";
         for (const [key, value] of Object.entries(layout.page)) {
@@ -387,30 +390,42 @@ export async function runChain(root: string, file: LayoutFile, ownPath?: string)
     };
 }
 
+/** What becomes of a file: its Output, and whether it gets a page and a PDF of its own (`publish`, and `output: "none"`). */
+export type Publication = { output: Output, page: boolean, pdf: boolean };
+
 /**
- * Whether the file gets a page and a PDF, and should have a layout of its own (layout-schema.ts's Output).
- * Reads the file only if a module asks for more of it than its path.
+ * What becomes of a file: whether it gets a page and a PDF, and should have a layout of its own (layout-schema.ts's
+ * Output). Reads the file only if a module asks for more of it than its path.
  */
-export async function outputOf(root: string, mdPath: string): Promise<Output> {
+export async function publicationOf(root: string, mdPath: string): Promise<Publication> {
     // Asked of every file at every sweep: the answer stands until the file or a module of its chain changes.
     const source = await stat(posix.join(root, mdPath)).catch(() => null);
     const stamps = await Promise.all(layoutChainFor(mdPath).map(path => moduleStamp(posix.join(root, path))));
     const key = `${resolve(root)}|${mdPath}`, stamp = `${source?.mtimeMs}|${stamps.join("|")}`;
-    const known = outputs.get(key);
-    if (known?.stamp === stamp) return known.output;
+    const known = publications.get(key);
+    if (known?.stamp === stamp) return known.publication;
 
     const file = layoutFileOf(mdPath, () => readFileSync(posix.join(root, mdPath), "utf-8"));
-    let output: Output;
+    let publication: Publication;
     try {
-        output = (await runChain(root, file)).merged.output ?? "plain";
+        const { merged } = await runChain(root, file);
+        const output = merged.output ?? "plain";
+        const publish = merged.publish ?? "page-and-pdf";
+        const page = output !== "none" && publish !== "embedded-only";
+        publication = { output, page, pdf: page && publish === "page-and-pdf" };
     } catch {
-        output = "plain";
+        publication = { output: "plain", page: true, pdf: true };
     }
-    outputs.set(key, { stamp, output });
-    return output;
+    publications.set(key, { stamp, publication });
+    return publication;
 }
 
-const outputs = new Map<string, { stamp: string, output: Output }>();
+/** The file's Output - see publicationOf(). */
+export async function outputOf(root: string, mdPath: string): Promise<Output> {
+    return (await publicationOf(root, mdPath)).output;
+}
+
+const publications = new Map<string, { stamp: string, publication: Publication }>();
 
 // ------------------------------------------------------------------------------------------------
 // The answer, resolved

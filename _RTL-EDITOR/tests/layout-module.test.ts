@@ -4,10 +4,10 @@ import { tmpdir } from "os";
 import { dirname, join, relative } from "path";
 import {
     applyLayout, DEFAULT_PDF_SETTINGS, folderLayoutPathsFor, isFolderLayoutFile, isLayoutFile, layoutChainFor, layoutFileOf, layoutFor,
-    layoutPathFor, loadLayoutModule, md5Of, outputOf, resolveLayout, runChain, type ResolvedLayout,
+    layoutPathFor, loadLayoutModule, md5Of, outputOf, publicationOf, resolveLayout, runChain, type ResolvedLayout,
 } from "../src/html/layout-module.ts";
 import type { LayoutOfFile } from "../src/html/layout-schema.ts";
-import { markdownWidthEm, measureAt, textWidthEm } from "../src/html/text-measure.ts";
+import { FOOTNOTE_REF_EM, FOOTNOTE_REF_SCALE, markdownWidthEm, measureAt, textWidthEm } from "../src/html/text-measure.ts";
 import { markdownToHtml, renderMarkdownPage } from "../src/html/md-to-html.ts";
 import { GROUP_MARK, LINE_MARK, MARGIN_MARK, NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, ROW_MARK } from "../src/html/layout-marks.ts";
 import { isIgnoredWatchPath } from "../src/fs-changes.ts";
@@ -123,6 +123,19 @@ describe("a layout module", () => {
         // A change to the module changes the answer.
         await module(".layout.ts", "export default () => null;");
         expect(await outputOf(dir, "tech/never-written.md")).toBe("plain");
+    });
+
+    test("a file may be published as a page alone, or only in a book that embeds it - and still be laid out", async () => {
+        await module(".layout.ts", `export default (file: { path: string }) => file.path.startsWith("books/") ? null
+            : { output: "laid-out", publish: file.path.startsWith("p/") ? "page-only" : "embedded-only" };`);
+        expect(await publicationOf(dir, "books/b.md")).toEqual({ output: "plain", page: true, pdf: true });
+        expect(await publicationOf(dir, "p/x.md")).toEqual({ output: "laid-out", page: true, pdf: false });
+        expect(await publicationOf(dir, "t/translation.md")).toEqual({ output: "laid-out", page: false, pdf: false });
+        expect(await outputOf(dir, "t/translation.md")).toBe("laid-out");
+        await module(".layout.ts", 'export default () => ({ output: "none", publish: "page-and-pdf" });');
+        expect(await publicationOf(dir, "x.md")).toEqual({ output: "none", page: false, pdf: false });
+        await module(".layout.ts", 'export default () => ({ publish: "pdf" });');
+        expect((await layoutFor(dir, "x.md", TEXT, true)).problems[0].message).toBe('"publish" must be one of page-and-pdf, page-only, embedded-only');
     });
 
     test("pdf is merged field by field, the nearer module the stronger", async () => {
@@ -261,6 +274,21 @@ describe("measuring text", () => {
         expect(textWidthEm("š")).toBeGreaterThan(0.3);
         expect(textWidthEm("š")).toBeLessThan(0.6);
         expect(textWidthEm("⟨", "bold")).toBeGreaterThan(0.2);
+    });
+
+    test("a footnote reference is the box it is on paper, whatever its label - a wider one for a note referred to again", () => {
+        const box = FOOTNOTE_REF_EM.first * FOOTNOTE_REF_SCALE;
+        expect(markdownWidthEm("למים,[^RV1.32-1]")).toBeCloseTo(markdownWidthEm("למים,") + box, 5);
+        expect(markdownWidthEm("למים,[^1]")).toBeCloseTo(markdownWidthEm("למים,[^RV1.32-1]"), 5);
+        expect(markdownWidthEm("למים,[^1]", new Set(["1"]))).toBeCloseTo(markdownWidthEm("למים,") + FOOTNOTE_REF_EM.again * FOOTNOTE_REF_SCALE, 5);
+        // Narrower than the label it stands for, so a line with a reference only ever gets narrower.
+        expect(box).toBeLessThan(textWidthEm("[^1]"));
+    });
+
+    test("a file's measure knows the notes it refers to more than once - not counting a reference in a comment it drops", () => {
+        const text = "<!--\n[^a] in a comment\n-->\n\n**1** א[^a]\n**2** ב[^b] ושוב[^b]\n\n[^a]: א\n[^b]: ב";
+        const measure = layoutFileOf("x.rtl.md", text).measure();
+        expect(measure.text("א[^b]")).toBeGreaterThan(measure.text("א[^a]"));
     });
 
     test("the page's geometry: a separator, a gap, a safety margin", () => {

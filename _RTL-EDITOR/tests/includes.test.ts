@@ -329,3 +329,28 @@ describe("hasIncludeDirective", () => {
         expect(hasIncludeDirective("```\n<כלול-בהדפסה מקור=\"b.md\">\n```")).toBe(false);
     });
 });
+
+describe("footnotes of an embedded file", () => {
+    test("are the block's own: two files' [^1] are two notes, and the book's own [^1] a third", async () => {
+        const { text } = await expand("book.md", {
+            "book.md": '<כלול-בהדפסה מקור="a.md">\n<כלול-בהדפסה מקור="b.md">\nשלי[^1]\n\n[^1]: של הספר',
+            "a.md": "א[^1]\n\n[^1]: של א",
+            "b.md": "ב[^1] `[^1]`\n\n[^1]: של ב",
+        });
+        const labels = [...text.matchAll(/\[\^([^\]]+)\]/g)].map(match => match[1]);
+        expect(new Set(labels).size).toBe(3);
+        // A reference is renamed with its definition; code is left as written: the book's [^1] twice, and b's code.
+        expect(text).toContain("`[^1]`");
+        expect(labels.filter(label => label === "1")).toHaveLength(3);
+    });
+
+    test("a part of a file brings the notes it refers to, from wherever in the file they are written", async () => {
+        const { text } = await expand("book.md", {
+            "book.md": '<כלול-בהדפסה מקור="a.md" מ="שני" עד="שלישי">',
+            "a.md": "## ראשון\nא[^1]\n\n## שני\nב[^2]\n\n## שלישי\nג\n\n[^1]: אחת\n[^2]: שתיים\n    ועוד שורה שלה",
+        });
+        expect(text).toMatch(/ב\[\^([^\]]+)\]\n\[\^\1\]: שתיים\n    ועוד שורה שלה$/);      // (blank lines not shown)
+        expect(text).not.toContain("אחת");
+    });
+});
+

@@ -11,7 +11,7 @@ import type { FileSystemChange } from "./fs-changes.ts";
 import { exclusions, getMarkdownFiles, MARKDOWN_DIR } from "./markdown-tree.ts";
 import { HtmlMirror, HTML_MIRROR_DIR, htmlPathFor, isMirroredFile, SITE_DIR, takeSiteChanges } from "./html/html-mirror.ts";
 import type { SiteChanges } from "./html/html-mirror.ts";
-import { outputOf } from "./html/layout-module.ts";
+import { publicationOf } from "./html/layout-module.ts";
 import { PDF_MIRROR_DIR, PdfMirror, pdfPathFor } from "./html/pdf-mirror.ts";
 import { lineEndingOf, toLf, withLineEnding } from "./line-endings.ts";
 import { writeFileSafe } from "./write-file-safe.ts";
@@ -277,9 +277,12 @@ serve({
                 console.error(`Cannot bring the ${asPdf ? "PDF" : "page"} of ${filePath} up to date:`, error);
             }
             if (!existsSync(join(MARKDOWN_DIR, target))) {
-                // A file its layout gives no page (layout-schema.ts's `output: "none"`) is there, and says why.
-                const none = existsSync(join(MARKDOWN_DIR, filePath)) && await outputOf(MARKDOWN_DIR, filePath) === "none";
-                return printErrorPage(none ? `לקובץ "${filePath}" אין דף ואין PDF: העימוד שלו קובע כך (output: "none").`
+                // A file its layout gives no page (layout-schema.ts's `output: "none"`, `publish: "embedded-only"`), or
+                // no PDF (`publish: "page-only"`), is there, and says why.
+                const publication = existsSync(join(MARKDOWN_DIR, filePath)) ? await publicationOf(MARKDOWN_DIR, filePath) : null;
+                return printErrorPage(publication?.output === "none" ? `לקובץ "${filePath}" אין דף ואין PDF: העימוד שלו קובע כך (output: "none").`
+                    : publication && !publication.page ? `לקובץ "${filePath}" אין דף ואין PDF משלו: העימוד שלו קובע כך (publish: "embedded-only") - הוא מודפס בספר שמכליל אותו.`
+                    : publication && !publication.pdf ? `לקובץ "${filePath}" אין PDF: העימוד שלו קובע כך (publish: "page-only").`
                     : `הקובץ "${filePath}" לא נמצא.`);
             }
             return new Response(null, {

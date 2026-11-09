@@ -21,6 +21,10 @@
 // rather than thrown: it becomes a `שגיאה-N` block where the directive was, and the page opens with
 // the list of them. That way a file with a typo still renders, and says what is wrong with it.
 //
+// An embedded file's footnotes (`[^a]`, `[^a]: ...`) come along: their labels are made its own - two files may well
+// both have a `[^1]` - and an embedding of part of a file (`מ`, `עד`) brings the notes that part refers to, wherever
+// in the file they are written.
+//
 // Pure but for the loader it is handed: which file's text comes back for a path is html-mirror.ts's
 // business, and so is what to do with the dependencies this reports.
 
@@ -429,6 +433,70 @@ function rootedTarget(fromFilePath: string, rawTarget: string): string | null {
 }
 
 // ------------------------------------------------------------------------------------------------
+// Footnotes of an embedded file
+
+/** A footnote reference, or the start of a definition: `[^label]`. */
+const FOOTNOTE_LABEL = /\[\^([^\]\s]+)\]/g;
+/** A line that defines a footnote: `[^label]: the note`. */
+const FOOTNOTE_DEFINITION = /^ {0,3}\[\^([^\]\s]+)\]:/;
+
+/** Every footnote definition of a file, by label: its line, and the indented lines that go on with it. */
+function footnoteDefinitions(lines: string[]): Map<string, string[]> {
+    const definitions = new Map<string, string[]>();
+    const inFence = fenceScanner();
+    let current: string[] | null = null;
+    lines.forEach(line => {
+        if (inFence(line)) {
+            current = null;
+            return;
+        }
+        const definition = FOOTNOTE_DEFINITION.exec(line);
+        if (definition) {
+            current = [line];
+            if (!definitions.has(definition[1])) definitions.set(definition[1], current);
+        } else if (current && (/^( {4}|\t)/.test(line) || !line.trim())) {
+            current.push(line);
+        } else {
+            current = null;
+        }
+    });
+    for (const definition of definitions.values()) {
+        while (definition.length > 1 && !definition[definition.length - 1].trim()) definition.pop();
+    }
+    return definitions;
+}
+
+/** The labels these lines refer to or define - outside code. */
+function footnoteLabelsIn(lines: string[]): Set<string> {
+    const labels = new Set<string>();
+    relabelFootnotes(lines, label => {
+        labels.add(label);
+        return label;
+    });
+    return labels;
+}
+
+/** These lines with every footnote label - of a reference or a definition - renamed; code is left alone. */
+function relabelFootnotes(lines: string[], rename: (label: string) => string): string[] {
+    const inFence = fenceScanner();
+    return lines.map(line => inFence(line) ? line : line.split(/(`+[^`]*`+)/).map((piece, i) =>
+        i % 2 ? piece : piece.replace(FOOTNOTE_LABEL, (_, label: string) => `[^${rename(label)}]`)).join(""));
+}
+
+/**
+ * The footnotes of a block embedded from `sourceLines`: the notes it refers to and does not hold brought from the
+ * rest of the file, and every label made the block's own - `prefix` before it.
+ */
+function embeddedFootnotes(block: string[], sourceLines: string[], prefix: string): string[] {
+    const used = footnoteLabelsIn(block);
+    if (!used.size) return block;
+    const held = new Set(footnoteDefinitions(block).keys());
+    const brought = [...footnoteDefinitions(sourceLines)].filter(([label]) => used.has(label) && !held.has(label));
+    const whole = brought.length ? [...block, ...brought.flatMap(([, definition]) => ["", ...definition])] : block;
+    return relabelFootnotes(whole, label => prefix + label);
+}
+
+// ------------------------------------------------------------------------------------------------
 // Expanding
 
 /**
@@ -446,6 +514,7 @@ export async function expandIncludes(
     const errors: EmbedError[] = [];
     const dependencies = new Set<string>([filePath]);
     const loaded = new Map<string, string[] | null>();
+    let embeddings = 0;
 
     /** Records an error and gives back the line that stands for it in the expanded text. */
     const fail = (file: string, lineIndex: number, message: string): string => {
@@ -510,7 +579,9 @@ export async function expandIncludes(
                 sourceLines.slice(range.from, range.to),
                 [...stack, target.path],
             );
-            const shifted = shiftHeadings(rewriteLinks(expanded, target.path), directive.headingShift, target.path);
+            // The block's footnotes are its own: a label no other file can write - the sentinel cannot be in a file.
+            const noted = embeddedFootnotes(expanded, sourceLines, `${SENTINEL}${++embeddings}${SENTINEL}`);
+            const shifted = shiftHeadings(rewriteLinks(noted, target.path), directive.headingShift, target.path);
             if ("message" in shifted) {
                 out.push(fail(path, index, shifted.message));
                 continue;

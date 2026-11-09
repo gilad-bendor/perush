@@ -21,8 +21,12 @@
 // CSS can number pages (`@page { @bottom-right { content: counter(page) } }`), but not say what heading a
 // sheet opens under, nor put a heading's page number in an index (`target-counter()`): Chromium has
 // neither. Hence the two prints.
+//
+// A page with footnotes lays itself out in its sheets first (pdf-sheets.ts) - every note at the foot of its sheet -
+// and Chromium then breaks nowhere but between them; the rest is the same.
 
 import type { Page } from "playwright";
+import { KEEP_NOTE_WHOLE_EMPTY_SHARE, paginateSheets, type SheetsResult } from "./pdf-sheets.ts";
 
 /** How every PDF of the mirror is printed. */
 export const PRINT_OPTIONS = { printBackground: true, preferCSSPageSize: true, format: "A4" } as const;
@@ -55,6 +59,8 @@ export type PrintedPages = {
     titles: string[];
     /** Every index entry's page number, in order - "" for an entry whose heading was not printed. */
     indexNumbers: string[];
+    /** What laying a page with footnotes out in sheets did (pdf-sheets.ts) - none for a page without. */
+    sheets?: SheetsResult;
 };
 
 /**
@@ -66,6 +72,9 @@ export type PrintedPages = {
 export async function printPages(tab: Page): Promise<PrintedPages> {
     // The headings' margins are read as paper has them.
     await tab.emulateMedia({ media: "print" });
+    // A page with footnotes, made for the PDF, lays itself out in sheets - and should that go wrong, is printed as it is.
+    const hasNotes = await tab.evaluate(hasFootnotes);
+    const sheets = hasNotes ? await tab.evaluate(paginateSheets, KEEP_NOTE_WHOLE_EMPTY_SHARE) : undefined;
     const probe = await tab.evaluate(probePage);
     if (!probe) return { pdf: await tab.pdf(PRINT_OPTIONS), titles: [], indexNumbers: [] };
 
@@ -83,15 +92,18 @@ export async function printPages(tab: Page): Promise<PrintedPages> {
 
     const { PDFDocument } = await import("pdf-lib");
     const document = await PDFDocument.load(pdf, { updateMetadata: false });
-    const sheets = document.getPageCount();
-    const titles = sheetTitles(probe, places, sheets);
+    const count = document.getPageCount();
+    const titles = sheetTitles(probe, places, count);
     await tab.evaluate(makeFooters, { titles, marginInline: probe.marginInline, marginBlock: probe.marginBlock });
     const footers = await PDFDocument.load(await tab.pdf(PRINT_OPTIONS));
-    if (footers.getPageCount() < sheets) throw new Error(`the footers came out ${footers.getPageCount()} sheets, not ${sheets}`);
-    const forms = await document.embedPdf(footers, [...Array(sheets).keys()]);
+    if (footers.getPageCount() < count) throw new Error(`the footers came out ${footers.getPageCount()} sheets, not ${count}`);
+    const forms = await document.embedPdf(footers, [...Array(count).keys()]);
     document.getPages().forEach((page, i) => page.drawPage(forms[i], { x: 0, y: 0, ...page.getSize() }));
+    if (sheets && "sheets" in sheets && sheets.sheets !== count) {
+        sheets.warnings.push(`laid out in ${sheets.sheets} sheets, but printed on ${count}`);
+    }
     // No object streams - pdf-mirror.ts's stamp has to stay readable at the head of the file.
-    return { pdf: await document.save({ useObjectStreams: false }), titles, indexNumbers };
+    return { pdf: await document.save({ useObjectStreams: false }), titles, indexNumbers, ...sheets ? { sheets } : {} };
 }
 
 /** The title of each sheet's footer: that of the last heading before its top - or at it. */
@@ -171,6 +183,11 @@ function probePage(): Probe | null {
         emptyTitle: document.querySelector<HTMLElement>("main")?.dataset.runningTitle ?? "",
         marginInline: Number(body.dataset.marginInline), marginBlock: Number(body.dataset.marginBlock),
     };
+}
+
+/** Runs in the page: whether it is made for the PDF (RenderOptions.pdf), and has footnotes. */
+function hasFootnotes(): boolean {
+    return !!document.body.dataset.marginInline && !!document.querySelector("main > section.footnotes");
 }
 
 /** Runs in the page: puts its page number into every index entry - in probe()'s order. */

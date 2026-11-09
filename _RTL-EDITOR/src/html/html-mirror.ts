@@ -23,7 +23,7 @@
 // folder-index.ts). An index depends only on which pages exist, so it is rewritten whenever its
 // content would change, rather than by date - and removed, with its folder, once no page is left under it.
 // The indexes list only the pages whose file git does not ignore. A file whose layout says `output: "none"`
-// (layout-schema.ts) - a technical one - gets no page at all. docs/index.html, the page GitHub Pages
+// (layout-schema.ts) - a technical one - or `publish: "embedded-only"` gets no page at all. docs/index.html, the page GitHub Pages
 // opens with, is the root's index again.
 //
 // Whatever `companion` is set to (the PDF mirror - see pdf-mirror.ts) hears of every page synced, and
@@ -40,7 +40,7 @@ import type { Stats } from "fs";
 import { renderMarkdownPage } from "./md-to-html.ts";
 import type { Breadcrumb } from "./md-to-html.ts";
 import { errorMarkerLine, expandIncludes, hasIncludeDirective } from "./includes.ts";
-import { DEFAULT_PDF_SETTINGS, layoutChainFor, layoutFor, outputOf } from "./layout-module.ts";
+import { DEFAULT_PDF_SETTINGS, layoutChainFor, layoutFor, publicationOf } from "./layout-module.ts";
 import { FONT_FACES, FONT_FILES, FONTS_DIR } from "./text-measure.ts";
 
 import { FOLDER_INDEX_NAME, folderIndexPages, mirrorSummary, siteIndexPage } from "./folder-index.ts";
@@ -334,8 +334,9 @@ export class HtmlMirror {
                 this.recordDependencies(mdPath, null);
                 return await this.removePage(pagePath) ? "removed" : "absent";
             }
-            // A file its layout gives no page - which it watches still, as a change to it may give one.
-            if (await outputOf(this.root, mdPath) === "none") {
+            // A file its layout gives no page (`output: "none"`, `publish: "embedded-only"`) - which it watches still, as a
+            // change to it may give one.
+            if (!(await publicationOf(this.root, mdPath)).page) {
                 this.recordDependencies(mdPath, new Set([mdPath, ...layoutChainFor(mdPath)]));
                 return await this.removePage(pagePath) ? "removed" : "absent";
             }
@@ -465,7 +466,7 @@ export class HtmlMirror {
         const unpublished: string[] = [];
         for (const path of treePaths) {
             if (path.endsWith("/") || !isMirroredFile(path)) continue;
-            (await outputOf(this.root, path) === "none" ? unpublished : mdPaths).push(path);
+            ((await publicationOf(this.root, path)).page ? mdPaths : unpublished).push(path);
         }
         let rendered = 0;
         let removed = 0;
@@ -508,13 +509,16 @@ export class HtmlMirror {
         const listing = await gitListing(this.root);
         const listed = [...this.pagedFiles].filter(mdPath => !listing || listing.has(mdPath));
 
-        // The PDF mirror holds the same pages as this one, so its indexes are these very lists - it
-        // gets them here rather than working them out again. A PDF not printed yet is listed a moment early.
+        // The PDF mirror holds the same pages as this one - but those whose layout gives them no PDF (`publish:
+        // "page-only"`) - so its indexes are these very lists, less those; it gets them here
+        // rather than working them out again. A PDF not printed yet is listed a moment early.
+        const printed: string[] = [];
+        for (const mdPath of listed) if ((await publicationOf(this.root, mdPath).catch(() => null))?.pdf !== false) printed.push(mdPath);
         let changed = 0;
         const mirrors: MirrorSummary[] = [];
-        for (const [mirrorDir, pathFor] of [[HTML_MIRROR_DIR, htmlPathFor], [PDF_MIRROR_DIR, pdfPathFor]] as const) {
+        for (const [mirrorDir, pathFor, files] of [[HTML_MIRROR_DIR, htmlPathFor, listed], [PDF_MIRROR_DIR, pdfPathFor, printed]] as const) {
             const pageOf = (mdPath: string) => posix.relative(mirrorDir, pathFor(mdPath));
-            const pages = listed.map(pageOf);
+            const pages = files.map(pageOf);
             const name = posix.basename(mirrorDir);
             changed += await this.syncMirrorIndexes(mirrorDir, folderIndexPages(pages, name, SITE_TITLE));
             mirrors.push(mirrorSummary(pages, name));

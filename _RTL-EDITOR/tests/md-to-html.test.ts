@@ -1,6 +1,7 @@
 import { describe, expect, test } from "./test-kit.ts";
 import { markdownToHtml, PAGE_STYLE, readablePath, readableUrl, renderMarkdownPage } from "../src/html/md-to-html.ts";
 import type { EmbedError } from "../src/html/includes.ts";
+import { GROUP_MARK, LINE_MARK, MARGIN_MARK } from "../src/html/layout-marks.ts";
 
 const html = (markdown: string) => markdownToHtml(markdown).trim();
 
@@ -534,3 +535,47 @@ describe("what the page carries for its PDF", () => {
         expect(renderMarkdownPage(BOOK, "a.rtl.md", { pdf: joined })).not.toContain("<style>@media print { .index");
     });
 });
+
+describe("footnotes", () => {
+    const md = "# כותרת[^h]\n\nשורה[^a] ועוד[^b]\nושוב[^a]\n\n[^a]: הערה א\n[^b]: הערה ב\n[^h]: בכותרת\n";
+
+    test("references numbered through the page, as superscript links; a further one marked as such", () => {
+        const out = markdownToHtml(md);
+        expect(out).toContain('שורה<sup class="footnote-ref" data-footnote="2" data-label="a"><a href="#fn-2" id="fnref-2">2</a></sup>');
+        expect(out).toContain('ושוב<sup class="footnote-ref again" data-footnote="2" data-label="a"><a href="#fn-2" id="fnref-2-2">2</a></sup>');
+    });
+
+    test("the notes at the page's end, each linking back to its references", () => {
+        const out = markdownToHtml(md);
+        expect(out).toMatch(/<section class="footnotes">\n<ol class="footnotes-list">\n<li id="fn-1" class="footnote-item" data-footnote="1"><p>בכותרת <a href="#fnref-1"/);
+        expect(out).toContain('<a href="#fnref-2" class="footnote-backref">\u21a9\uFE0E<sup>1</sup></a> <a href="#fnref-2-2" class="footnote-backref">\u21a9\uFE0E<sup>2</sup></a>');
+        // The definitions are no paragraphs of the text.
+        expect(out).not.toContain("[^a]:");
+    });
+
+    test("a heading's reference stays out of its index entry and its footer's title", () => {
+        const pdf = { indexDepth: 6, footerTitle: (chain: readonly { text: string }[]) => chain.map(h => h.text).join(" / ") };
+        const page = renderMarkdownPage(`<תוכן-העניינים>\n\n${md}\n## שני`, "x.rtl.md", { pdf });
+        expect(page).toMatch(/<span class="index-text">כותרת<\/span>/);
+        expect(page).toContain('data-running-title="כותרת"');
+    });
+
+    test("in a line group too - the reference is part of its line", () => {
+        const out = markdownToHtml(`${GROUP_MARK} **1** ${MARGIN_MARK} אחת[^a]\n${LINE_MARK} **2** ${MARGIN_MARK} שתיים\n\n[^a]: א`);
+        expect(out).toMatch(/<span class="grouped-line"><span class="line-margin"><strong>1<\/strong><\/span>אחת<sup class="footnote-ref"[^]*?<\/sup><span class="line-sep"/);
+    });
+
+    test("only a page with footnotes gets their style; text that only looks like one is left as it is", () => {
+        expect(renderMarkdownPage(md, "x.rtl.md")).toContain(".footnote-ref {");
+        const plain = renderMarkdownPage("טקסט ^[לא הערה] ו-[^x] בלי הגדרה", "y.rtl.md");
+        expect(plain).not.toContain("footnote");
+        expect(plain).toContain("^[לא הערה] ו-[^x]");
+    });
+
+    test("on paper - and where the layout tools measure for it - a reference is a box of a fixed width", () => {
+        const style = renderMarkdownPage(md, "x.rtl.md");
+        expect(style).toMatch(/@media print \{\n    \.footnote-ref \{ display: inline-block;/);
+        expect(style).toMatch(/html\.measuring-print body\.rtl \.footnote-ref\.again \{ width: [\d.]+em; \}/);
+    });
+});
+

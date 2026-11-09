@@ -169,4 +169,37 @@ describe("PdfMirror", () => {
         expect(existsSync(join(root, pdfPathFor("a.md")))).toBe(true);
         expect(existsSync(join(root, pdfPathFor("orphan.md")))).toBe(false);
     });
+
+    test("a file its layout publishes as a page alone has no PDF, nor a place in the PDFs' index; one published only in a book, neither", { timeout: 30_000 }, async () => {
+        await write("t/a.md", "# a");
+        await write("e/b.md", "# b");
+        await write("book.md", '<כלול-בהדפסה מקור="e/b.md">');
+        await write(".layout.ts", 'export default (file: { path: string }) => ({ publish: file.path.startsWith("t/") ? "page-only" : file.path.startsWith("e/") ? "embedded-only" : "page-and-pdf" });');
+        const htmlMirror = new HtmlMirror(root, 1_000_000);
+        htmlMirror.companion = mirror;
+        const tree = ["t/a.md", "e/b.md", "book.md", ".layout.ts"];
+        await htmlMirror.syncTree(tree);
+        await mirror.idle();
+        expect(existsSync(join(root, "docs/_HTML-FROM-MD/t/a.html"))).toBe(true);
+        expect(existsSync(join(root, pdfPathFor("t/a.md")))).toBe(false);
+        expect(existsSync(join(root, "docs/_PDF-FROM-MD/t/index.html"))).toBe(false);
+        expect(await readFile(join(root, "docs/_HTML-FROM-MD/t/index.html"), "utf-8")).toContain("a.html");
+        expect(existsSync(join(root, "docs/_HTML-FROM-MD/e/b.html"))).toBe(false);
+        expect(existsSync(join(root, pdfPathFor("e/b.md")))).toBe(false);
+        expect(await readFile(join(root, "docs/_HTML-FROM-MD/book.html"), "utf-8")).toContain("<h1");
+        expect(existsSync(join(root, pdfPathFor("book.md")))).toBe(true);
+
+        // What was made before the layout said so is deleted.
+        await write(".layout.ts", "export default () => null;");
+        await htmlMirror.syncTree(tree);
+        await mirror.idle();
+        expect(existsSync(join(root, pdfPathFor("e/b.md")))).toBe(true);
+        await write(".layout.ts", 'export default () => ({ publish: "embedded-only" });');
+        await utimes(join(root, ".layout.ts"), new Date(), new Date(Date.now() + 5000));
+        await htmlMirror.syncTree(tree);
+        await mirror.idle();
+        expect(existsSync(join(root, "docs/_HTML-FROM-MD/e/b.html"))).toBe(false);
+        expect(existsSync(join(root, pdfPathFor("e/b.md")))).toBe(false);
+    });
 });
+

@@ -19,6 +19,8 @@
 // - Lines a file's layout gathers into groups share printed rows (line-rows.ts).
 // - `<תוכן-העניינים>`, alone on its line, becomes an index of the headings below it - titled
 //   "תוכן העניינים" in an RTL page, "Contents" in an LTR one. A file without that line gets none.
+// - Footnotes - `text[^a]`, and `[^a]: the note` - are numbered superscript links, and the notes are gathered at
+//   the page's end (footnotes.ts). On paper they stand at the foot of their sheets (pdf-sheets.ts).
 //
 // Pure: content in, HTML out. Which file goes where, and when, is html-mirror.ts's business.
 
@@ -28,6 +30,7 @@ import { isRtlFile, parseTables } from "../../public/src/tables.js";
 import { INDEX_TAG_NAME, isVoidPseudoTag } from "../../public/src/pseudo-tags.js";
 import { headingSlug } from "../../public/src/links.js";
 import { errorLineIndex } from "./includes.ts";
+import { FOOTNOTES_SCRIPT, footnoteReferenceCounts, footnotesStyle, hasFootnotes, useFootnotes, withoutFootnoteRefs } from "./footnotes.ts";
 import type { EmbedError } from "./includes.ts";
 import { LINE_ROWS_SCRIPT, LINE_ROWS_STYLE, lineRowsRule, PRINT_FONT_SIZE, PRINT_MARGIN_BLOCK_MM, PRINT_MARGIN_INLINE_MM } from "./line-rows.ts";
 import { NO_PAGE_BREAK_MARK, PAGE_BREAK_MARK, stripLayoutMarks } from "./layout-marks.ts";
@@ -133,6 +136,8 @@ export function readableUrl(url: string): string {
 export function readablePath(path: string): string {
     return path.replace(/[%#?\u0000-\u0020\u007f"<>\\^`{|}]/g, character => encodeURIComponent(character));
 }
+
+useFootnotes(markdown);
 
 // Every link of a page is written the readable way. markdown-it's own normalizeLink() percent-encodes
 // every non-ASCII character, and punycodes a host name - neither of which a reader wants to see.
@@ -555,6 +560,16 @@ export function paragraphRanges(content: string): { from: number, to: number }[]
         .map(token => ({ from: token.map![0], to: token.map![1] - 1 }));
 }
 
+/**
+ * The labels of the footnotes a document refers to more than once - as its page is made: a reference in an HTML
+ * comment that a right-to-left page drops (commentBlockRule()) is none.
+ */
+export function repeatedFootnotes(content: string, isRtl: boolean): Set<string> {
+    const env: Env = { isRtl };
+    markdown.parse(content, env);
+    return new Set([...footnoteReferenceCounts(env)].filter(([, count]) => count > 1).map(([label]) => label));
+}
+
 /** The body of the page - exported for the tests. */
 export function markdownToHtml(content: string, options: RenderOptions = {}): string {
     const { tokens, env } = prepareDocument(content, isRtlFile("x.md", content), options);
@@ -588,11 +603,11 @@ export function renderMarkdownPage(content: string, filePath: string, options: R
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escape(title)}</title>
 <style>${PAGE_STYLE}</style>
-${isRtl && options.fonts ? `<style>${fontsStyle(options.fonts)}</style>\n` : ""}${options.page ? `<style>${pageSettingsStyle(options.page)}</style>\n` : ""}${pdfCss ? `<style>${pdfCss}</style>\n` : ""}</head>
+${hasFootnotes(env) ? `<style>${footnotesStyle()}</style>\n` : ""}${isRtl && options.fonts ? `<style>${fontsStyle(options.fonts)}</style>\n` : ""}${options.page ? `<style>${pageSettingsStyle(options.page)}</style>\n` : ""}${pdfCss ? `<style>${pdfCss}</style>\n` : ""}</head>
 <body class="${isRtl ? "rtl" : "ltr"}"${options.pdf ? pdfAttributes(options.page ?? {}) : ""}>
 <main${options.pdf ? ` data-running-title="${escape(footerTitleOf(options.pdf, []))}"` : ""}>
 ${trail}${pageIndex}${errors}${printIndexHtml}${body}</main>
-${env.hasLineRows ? `<script>${LINE_ROWS_SCRIPT}</script>\n` : ""}</body>
+${env.hasLineRows ? `<script>${LINE_ROWS_SCRIPT}</script>\n` : ""}${hasFootnotes(env) ? `<script>${FOOTNOTES_SCRIPT}</script>\n` : ""}</body>
 </html>
 `;
 }
@@ -688,7 +703,8 @@ function documentHeadings(tokens: Token[], env: Env): HeadingEntry[] {
         const level = Number(token.tag.slice(1));
         if (token.level !== 0) return;
         // The entry is a link itself, so a link inside the heading keeps its text and loses its <a>.
-        const inline = children.filter(child => child.type !== "link_open" && child.type !== "link_close");
+        // A footnote reference stays in the heading, not in its entry.
+        const inline = withoutFootnoteRefs(children).filter(child => child.type !== "link_open" && child.type !== "link_close");
         const html = markdown.renderer.renderInline(inline, markdown.options, env).trim();
         const text = children.filter(child => child.type === "text" || child.type === "code_inline")
             .map(child => child.content).join("").replace(/\s+/g, " ").trim();
