@@ -65,8 +65,8 @@
 
 ### 3a
 `etā́ u tyā́ḥ práty adr̥śran purástāj`
-> אלה הן – נראו לקראת (עינינו) מלפנים,
-- **פירוק:** `etā́ḥ` – eṣá "זה", נקבה רבים נושא ("אלה"); `u` – u "–" ("–"); `tyā́ḥ` – syá- ~ tyá- "ההוא", נקבה רבים נושא ("הן"); `práti` – práti "לקראת", תחילית ("לקראת (עינינו)"); `adr̥śran` – √dr̥ś "נראה", אאוריסט בינוני 3 רבים ("נראו"); `purástāt` – purástāt "מלפנים" ("מלפנים").
+> אֵלֶּה הן – נראו לקראת (עינינו) מלפנים,
+- **פירוק:** `etā́ḥ` – eṣá "זה", נקבה רבים נושא ("אֵלֶּה"); `u` – u "–" ("–"); `tyā́ḥ` – syá- ~ tyá- "ההוא", נקבה רבים נושא ("הן"); `práti` – práti "לקראת", תחילית ("לקראת (עינינו)"); `adr̥śran` – √dr̥ś "נראה", אאוריסט בינוני 3 רבים ("נראו"); `purástāt` – purástāt "מלפנים" ("מלפנים").
 - **תרגומים:** גריפית': "Apparent eastward are those lights of Morning, sending out lustre, as they rise, around them. She hath brought forth Sun, sacrifice, and Agni, and far away hath fled detested darkness."; גלדנר: "Sie haben die Sonne, das Opfer, den Agni hervorgebracht"; ג'מיסון: הבית היחיד במזמור שמדבר על השחרים ברבים; *práty adr̥śran* חוזר אל פתח 1a.
 - **הערות:** *purástāt* `מלפנים` – במזרח. [מקבילה: RV7.78 1a] (דומה: אותו פועל).
 
