@@ -1991,5 +1991,49 @@ their פירוק), 7 notes / tags in 7.86 and 7.83, 5 intros aligned. F6, the re
   `הִתְדַּשֵּׁנָּה (?)` and *dāsá* `עבד` [equivalent, Ps 116:16] stay open for the user, as the translator wrote.
 - `build RV7.75-88`; `verify RV7.75-88 --strict`: 0 problems, 0 repeated-line differences.
 
+## Review of part 9 (RV 7.89–7.97; independent reviewer)
+All 246 pādas read against the Zurich text and morphology, each Hebrew line beside its Zurich tags and its פירוק
+glosses (side-by-side script); every optative, subjunctive, injunctive, imperative and *mā́* listed by script and
+checked; the part's lemmas with more than one Hebrew in the corpus (`lexmap_dict`) judged one by one; the intros'
+quotations checked against the lines by script. **7.89 word by word, with its notes, intro and parallels, for biblical
+idiom of sin and forgiveness:** the lines are clean (*énas* `עוון`, √*mr̥ḍ* `רחם`, *ácitti* `חוסר־הבחנה`; no word of the
+חטא family, `סליחה`, `מחילה`, `פשע`, `שגגה`); the slips were one biblical phrase in a line and two glosses. **18 `>`
+lines changed** (and their פירוק / notes), 4 notes / parallel glosses, 4 intros aligned. F6 ×6, F7 ×4, 7.90.7 = 7.91.7,
+7.97.9c = 7.64.5c exact; 7.97.10 (first copy of 7.98.7) untouched.
+- **Biblical idiom (7.89):** 5b *abhidrohám … cárāmasi* `השקר שאנו … הולכים בו` → `נוהגים בו` (`הלך בשקר` is Jer 23:14;
+  √*car* with an object = "practise", RV 10.34.14b `תנהגו`; note and intro aligned); 3a note "הוא מודה שהלך 'נגד'" →
+  "הוא אומר" (confession language; the Sanskrit only states it); 5c Ps 19:13 gloss "שהאדם מבקש שלא ייענש עליה" bent the
+  psalm's `נַקֵּנִי` toward the Sanskrit → "הבקשה שונה: בתהלים 'נקני' – שיינקה ממנה; כאן (5d) רק שהעוון לא יזיק".
+  Also 7.93.7c note "האשמה היא חוב" (*ā́gas* is not *r̥ṇá*) → "אין סליחה: האל מתבקש לרחם, ואריימן ואדיטי – להתיר את
+  האשמה כקשר"; 7.97.2c (Ps 19:14) "בלי אשמה (חוב)" → "בלי אשמה (*ā́gas*, 'עבירה')"; 7.97.2d Ps 103:13 gloss "האל כאב
+  נותן ורחום" → "האל כאב" (the mercy is the psalm's, not the line's; the note already says so).
+- **Mood (1):** 7.93.8b *abhy àśyāma* (optative) `נשיג` → `נשיג נא`.
+- **Added outside `( )` (3):** 7.93.3b, 4a *prámatim* `את השגחתכם` → `את ההשגחה (שלכם)` (no *vām* in the pāda);
+  7.93.3d `קוראים לכם` → `קוראים (לכם)`.
+- **A reading that misleads (2):** 7.93.4b *ī́ṭṭe rayím* `מתפלל אל עושר` ("prays to wealth") → `מתפלל לעושר` (as 7.91.2d
+  `מתפלל לרחמים`); 7.97.3c *máhi* (neuter, cannot agree with *ślókaḥ*) `השמע הגדול, האלוהי` → `השמע האלוהי ילווה נא
+  (במידה) גדולה` (adverb: Geldner "recht", Renou "puissamment", Elizarenkova "мощно").
+- **Vocalization (8):** 7.93.5d *hatam* `הִכּוּ` (the past "they smote") → `הַכּוּ` (imperative), and 7.94.12c–d `הכו` →
+  `הַכּוּ`; 7.92.1c *ayāmi* `הושט` → `הוּשַׁט` (part 7's precedent 7.64.5b; intro aligned); 7.92.3c `חבר` (reads "friend") →
+  `חַבֵּר`; 7.96.5c `היה` (reads "he was") → `הֱיֵה`; 7.92.4b *aryáḥ* `הארים` (reads "the lions") → `האָרִיִּים`, 7.97.9d `הארי`
+  → `האָרִי` (Book 7's `האָרִי`).
+- **One Hebrew per lemma (3; the translator's "new" missed a precedent):** 7.94.5c *sabā́dhas* `בלחץ` → `בדחיפות`
+  (7.8.1c, 26.2c, 53.1b, 61.6b); 7.94.8b *dhūrtí* `הפגיעה` → `העקמומיות` (7.1.13b – the same collocation with
+  *áraruṣaḥ* "the niggard"; intro aligned); 7.97.3b *suśéva* `הנעים` → `החביב` (7.7.3d, 7.55.1c).
+- **Intros / apparatus:** intro 7.95 `"פותח לרווחה"` → `"פתח לרווחה"` (6b *ví āvar*, aorist), `לבני נַהוּשׁ` → `"לבן־נַהוּשׁ"`
+  (2d, singular); 7.95.6c פירוק `("הגדילי (אותו)")` → `("הגדילי")` (as the line); 7.97.2d note completed (it ended in a
+  colon); intro 7.94 `"במכה הַכּוּ"`.
+- **Checked and kept (defensible, documented):** 7.89.1a `בית החומר` [equivalent, Job 4:19] and 5b *abhidrohá* `שקר`
+  (open for the user, as the translator wrote); 7.89.4b Ps 63:2 [divergence]; 7.94.1c Deut 32:2; 7.90.1c *ácha* with
+  *niyútaḥ* (Jamison's "our teams"); 7.97.1c *sunvé* passive (Jamison); 7.96.2a *ándhasī* "banks" (open); 7.96.2b
+  `יושבים` and 7.97.4d `שלמים` (precedents `שוכן`, `שלא ניזוקו`; the translator's notes say "for the Hebrew"); 7.95.4b
+  subjunctive with `נא` (a wish); 7.94.11 (Griffith's construal, against Zurich's 3rd dual).
+- **For the coordinator:** *prámati* `השגחה` (7.93.3b, 4a) against 7.29.4d `דאגתנו` – an unrecorded split, noted in 3b, left
+  for the consistency pass (`השגחה` reads better in both places); *mithatí* 7.48.3d `בתחרות ()` (empty brackets, part 4's
+  line) beside 7.93.5a `מתנגשות`; *saparyú* 7.2.4a `משרתים!` beside 7.94.10c `המכבדים`; *dakṣā́yya* 7.1.2c / 7.97.8c
+  paraphrased differently. `build`'s book-wide check still lists the 2 old differences (RV10.10 13d/14b; 7.38.6b / 7.52.3b).
+- `build RV7.89-97`; `verify RV7.89-97 --strict`: 0 problems, 0 repeated-line differences; `check_bible_quotes.py` on the
+  27 annotated, intro and generated files: 0 problems.
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)

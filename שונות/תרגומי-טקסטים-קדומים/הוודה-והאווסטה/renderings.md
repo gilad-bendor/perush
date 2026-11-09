@@ -591,4 +591,5 @@ by sense (*daδuuā̊* `העושה`, Vd 2.20–21; *dātō* "I was made"). Chang
 
 ### 11.19 RV 7.89–7.97 (Book 7, translator 9 = part 9; merged 2026-11-09)
 - **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 9). 7.89: *mr̥nmáya gr̥há* `בית החומר` (Job 4:19 tagged; open), F7 first copies, *dīnátā* `חולשה`, *tŕ̥ṣṇā* `צמא`, *abhidrohá* `שקר` (the √*druh* family; open); *vāyú* `רוּחַ` without the article (masc.), *indra-vāyú* `אִינְדְּרָה ורוח`, *niyút* `צמד`, *śucipā́* `שותה־הצח`; *indrāgní* `אִינְדְּרָה ואַגְנִי`; *prámati* `השגחה`; √*śrath* `התיר`; *stána* `שַׁד`; *yóni* `קן` in 7.97; names Dhiṣaṇā `דְּהִישַׁנָה`, Jamadagni `גַ'מַדַגְנִי`, *nā́huṣa* `בן־נַהוּשׁ`. First copies for part 10: 7.97.10 = 7.98.7.
+- Review of part 9 (18 lines; 7.89.5b √*car* + object `נהג ב־`, not "walk in" – Jer 23:14). For the last consistency pass: *prámati* `השגחה` / 7.29.4d `דאגתנו`; 7.48.3d `בתחרות ()` (empty brackets); *saparyú* `משרתים` (7.2.4a) / `המכבדים` (7.94.10c).
 - Tool fix: the Sarasvatī regex no longer matches *sárasvataḥ* (Sarasvant's genitive).
