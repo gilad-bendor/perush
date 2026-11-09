@@ -266,6 +266,25 @@ All seven eBL chapters of the plan row were fetched again (eleven chapters: the 
     fetch had not restored yet (eBL, CUC) – rerun after it. The rows tool needed `npm ci` in `_RTL-EDITOR` and the
     cloud's own Playwright (`tools.md`).
 
+### Learned on Round 7 run 1 – the Rigveda, Book 7, whole (2026-11-08/09, `הוודה-והאווסטה/7-ריגוודה-ספר-ז/`)
+The first whole Vedic book: 104 hymns, 3,190 pādas, one KEY and file per hymn (`RV7.1` … `RV7.104`), in one range B
+(22:35 → 07:00 UTC). The coordinator extended `vedic_tools.py` (Book 7 keys, `freq`, `RV7` / `RV7.a-b` ranges, the
+7.103 embedding), measured the book's commonest lemmas and its 69 repeated pādas, and pre-set §5.5 (≈40 terms), 25
+names and three refrains (F6, the family refrain that closes 76 hymns) before the first line. Ten translators then
+drafted one after another (≈25–45 minutes per part of 250–390 pādas, with the full פירוק of every word), and an
+independent reviewer read each finished part beside the next translator (two agents at a time); the coordinator merged
+each part's proposals into the renderings (§11.10–§11.20) and passed the reviewers' rulings to the running translator.
+The reviewers fixed 6–18 lines per part (≈110 in all): one Hebrew for two lemmas, moods (optatives without `נא`),
+unvocalized words that read as another word (`נהיה`, `הערים`, `שמים`, `הזו`), Hebrew agreement, words added outside
+`( )`, intros quoting an earlier wording of their lines – and, in the Varuṇa hymns, biblical idiom of confession and
+forgiveness that had crept into the notes though not into the lines. Two consistency passes (7.1–74: 52 lines;
+7.75–97: 23 lines), run in the reviewer slot while a translator drafted other hymns, aligned the drift between parts.
+The stricter licence check (a 1–3-letter licence must start a word) found one real slip and three missing compound
+licences. **The 5-hour limit stopped everything at 03:10 UTC** (after ≈1,900 lines and ≈4.5 hours of work); the VM
+restarted; the parent's RESUME came at 03:46 (range B, a weekly warning – the run went on); nothing was lost (translator
+6 had finished its part on disk). The Old Avestan run (run 2) finished meanwhile; its cognate list was merged into the
+brief from part 5 on (the cousin-language rule), nine pairs left to the lead.
+
 ### Learned on Round 7 run 2 – the Old Avestan corpus (2026-11-09, the new corpus `האווסטה/`)
 One coordinator, one agent at a time (the run's share in range B, beside run 1). Setup took about 70 minutes: CAB's
 plain corpus has no verse lines, its XML does; the converter drops the liturgical repetitions by script (a line equal
@@ -412,3 +431,4 @@ The accounts, as they stood in §5.1:
 - 2026-11-07 (Round 6 run 5): the Shield of Heracles whole (`הסיודוס/3-מגן-הרקלס/`, 479 lines; base Perseus tlg0020.tlg003 + the AGDT treebank); `hesiod_tools.py` KEY SH, `MARK_TAG_KEY`, the δράκων REQUIRED plural; renderings §14 and 18 names in §3.1; guidelines §5.2 ("The Shield of Heracles").
 - 2026-11-09 (the lead): **Round 6 finalized** – the cross-corpus harmonization of the five runs' splits (`harmonization--2026-11-09.md`: 17 changes, the rest kept with reasons; one new rule in §6.7: a cognate's Hebrew is not lent to a non-cognate equivalent in another language), applied by three agents at once in range B on disjoint corpora; every verifier (51 runs) and `check_bible_quotes.py` over the folder passed; `reports/round-6/final.md`. The first round finished under the rule of 2026-11-03: `branches.py finish --into-main` (cherry-pick + squash), then the Round 7 session launched. Learned: the Vedic verifier needs `vedic_tools.py convert` after `sources_sync.py fetch` (its TITUS tables are adhoc items the fetch skips).
 - 2026-11-09 (Round 7 run 2): the Old Avestan corpus whole – the new corpus `האווסטה/` (the Gāthās Y 28–34, 43–51, 53: 869 lines; the Yasna Haptaŋhāiti: 112; the four prayers: 12), `avesta_tools.py` and its parallels-index builder; sources: CAB XML verse lines, TITUS Y 27, Mills 1887, Moulton 1913; guidelines §5.2 (Old Avestan lesson) and §6.7 (the Avestan corpus row); report `reports/round-7/run-2.md`.
+- 2026-11-09 (Round 7 run 1): **the Rigveda, Book 7, whole** – `הוודה-והאווסטה/7-ריגוודה-ספר-ז/` (104 hymns, 3,190 pādas; 7.103 moved in from project 6, which embeds it), ten translators and ten independent reviews, two consistency passes; `vedic_tools.py` (Book 7 keys, `freq`, ranges, `PROJECT_EMBEDS`, `EXEMPT_WORDS` / `EXEMPT_RX`, the plural-name rule, stricter short licences in Book 7, "(RV 7)" / "(AB)" name rows); renderings §5.5, §8 F6–F8, §11.10–§11.20; Jamison VII.1–55 added; guidelines §5.2 (a Book 7 lesson); report `reports/round-7/run-1.md`.

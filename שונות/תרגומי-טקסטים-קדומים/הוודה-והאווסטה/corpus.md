@@ -24,7 +24,8 @@ for three thousand years), the Brāhmaṇas' ritual thinking, and Zoroastrian Ir
 |  |  | KU1 | Kaṭha Upaniṣad, adhyāya 1 (vallīs 1–3): Naciketas given to Death | 143 | Gen 22 (a father gives his son) |
 | 5 | `5-יאמה-והמתים/` | RV10.10 | 10.10 Yamī and Yama | 56 | Gen 4–5 (Cain's wife), 19:30–38; Lev 18:9 |
 |  |  | RV10.14–18 | the funeral hymns | 288 | Gen 3:19; 5 |
-| 6 | `6-המהמר-והצפרדעים/` | RV10.34, RV7.103 | the gambler; the frogs | 96 | (the soul); Ex 7:26–8:11 (the frogs) |
+| 6 | `6-המהמר-והצפרדעים/` | RV10.34, (RV7.103) | the gambler; the frogs (7.103 lives in project 7 since Round 7 and is embedded here) | 96 | (the soul); Ex 7:26–8:11 (the frogs) |
+| 7 | `7-ריגוודה-ספר-ז/` | RV7.1 … RV7.104 | **the Rigveda, Book 7, whole** – the Vasiṣṭha family book (Round 7 run 1) | 3,190 | Varuṇa 7.86–89 (Ps 32, 51; Job 4:19); 7.18 (Judg 5:21); 7.104 (Ps 109, 58) |
 
 ## Bases and tools
 - `vedic_tools.py` (this folder): `convert` builds the line data from the raw sources; `data`, `tr`, `fill`, `mw`, `gra`,
