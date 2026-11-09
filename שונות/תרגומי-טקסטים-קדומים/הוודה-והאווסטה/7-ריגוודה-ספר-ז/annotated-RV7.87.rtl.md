@@ -39,11 +39,11 @@
 
 ### 2a
 `ātmā́ te vā́to rája ā́ navīnot`
-> נפשך – הרוח – שאגה אל המרחב,
-- **פירוק:** `ātmā́` – ātmán- "נפש", נושא ("נפש"); `te` – tvám "אתה", יחסת הקניין ("־ך"); `vā́taḥ` – vā́ta- "רוח", נושא ("הרוח"); `rájaḥ` – rájas- "מרחב", נייטרי יחסת המושא ("המרחב"); `ā́` – ā́ "אל", תחילית ("אל"); `navīnot` – √nu ~ nū "שאג", אינג'נקטיב הווה עוצמה 3 יחיד ("שאגה").
+> נפשך – הרוח – צעקה אל המרחב,
+- **פירוק:** `ātmā́` – ātmán- "נפש", נושא ("נפש"); `te` – tvám "אתה", יחסת הקניין ("־ך"); `vā́taḥ` – vā́ta- "רוח", נושא ("הרוח"); `rájaḥ` – rájas- "מרחב", נייטרי יחסת המושא ("המרחב"); `ā́` – ā́ "אל", תחילית ("אל"); `navīnot` – √nu ~ nū "צעק", אינג'נקטיב הווה עוצמה 3 יחיד ("צעקה").
 - **תרגומים:** גריפית': "The wind, thy breath, hath sounded through the region like a wild beast that seeks his food in pastures. Within these two, exalted Earth and Heaven, O Varuṇa, are all the forms thou lovest."; גלדנר: "Dein Odem schnaubt als Wind in den Luftraum wie ein ungeduldiges Tier, das auf der Weide (den Kampf) gewonnen hat"; ג'מיסון: *yávase* שייך לבהמה ("כבהמה נלהבת במרעה"), ו*sasavā́n* "אחרי שזכתה" – הבהמה פורקת את שמחת ניצחונה.
 - **הקבלה:** [equivalent] `מִגַּעֲרָתְךָ יְהוָה מִנִּשְׁמַת רוּחַ אַפֶּךָ` (תהלים יח:טז) – הרוח כנשימת האל; מוטיב משותף לתרבויות שלא נפגשו, לא מקור. כאן הרוח היא *ātmán* – נפשו של וַרוּנָה, והיא שואגת כבהמה.
-- **הערות:** *ātmán* `נפש` (renderings §7.2); *vā́ta* `רוח` (renderings §7.2, השער מתיר); *rájas* `מרחב` (renderings §5.1); √*nu* בעוצמה "שאג, נהם" (חדש: `שאג`).
+- **הערות:** *ātmán* `נפש` (renderings §7.2); *vā́ta* `רוח` (renderings §7.2, השער מתיר); *rájas* `מרחב` (renderings §5.1); √*nu* בעוצמה "שאג, נהם" (`צעק`, ז 32.22a, 42.1c; `שאג` הוא של √*krand*).
 
 ### 2b
 `paśúr ná bhū́rṇir yávase sasavā́n`

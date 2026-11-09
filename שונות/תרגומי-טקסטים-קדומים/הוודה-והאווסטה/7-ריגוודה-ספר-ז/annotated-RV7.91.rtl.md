@@ -63,10 +63,10 @@
 
 ### 3a
 `pī́voannām̐ rayivŕ̥dhaḥ sumedhā́ḥ`
-> את בעלי המזון השמן, מגדלי העושר – הנבון,
-- **פירוק:** `pī́voannān` – pī́voanna- "בעל מזון שמן", רבים יחסת המושא ("את בעלי המזון השמן"); `rayivŕ̥dhaḥ` – rayivŕ̥dh- "מגדל עושר", רבים יחסת המושא ("מגדלי העושר"); `sumedhā́ḥ` – sumedhás- "נבון", נושא ("הנבון").
+> את בעלי המזון השמן, מגדלי העושר – טוב־הדעת,
+- **פירוק:** `pī́voannān` – pī́voanna- "בעל מזון שמן", רבים יחסת המושא ("את בעלי המזון השמן"); `rayivŕ̥dhaḥ` – rayivŕ̥dh- "מגדל עושר", רבים יחסת המושא ("מגדלי העושר"); `sumedhā́ḥ` – sumedhás- "טוב דעת", נושא ("טוב־הדעת").
 - **תרגומים:** גריפית': "Wise, bright, arranger of his teams, he seeketh men with rich food whose treasures are abundant"; גלדנר: "Der einsichtsvolle, weiße Oberherr der Niyutgespanne sucht diejenigen auf, die fette Speisen haben und ihre Reichtümer mehren".
-- **הערות:** *pī́voanna* "בעל מזון שמן" (חדש: `בעל המזון השמן`) – בעלי הזבח העשירים; *rayivŕ̥dh* (חדש: `מגדל העושר`); *sumedhás* "בעל תבונה טובה" (חדש: `נבון`).
+- **הערות:** *pī́voanna* "בעל מזון שמן" (חדש: `בעל המזון השמן`) – בעלי הזבח העשירים; *rayivŕ̥dh* (חדש: `מגדל העושר`); *sumedhás* "בעל תבונה טובה" (`טוב־הדעת`; *médhira* `בעל־הדעת`, ז 87.4a; `נבון` הוא של *vedhás*).
 
 ### 3b
 `śvetáḥ siṣakti niyútām abhiśrī́ḥ`

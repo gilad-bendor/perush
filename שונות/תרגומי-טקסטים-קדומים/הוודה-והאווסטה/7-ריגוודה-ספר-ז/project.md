@@ -2035,5 +2035,64 @@ lines changed** (and their פירוק / notes), 4 notes / parallel glosses, 4 in
 - `build RV7.89-97`; `verify RV7.89-97 --strict`: 0 problems, 0 repeated-line differences; `check_bible_quotes.py` on the
   27 annotated, intro and generated files: 0 problems.
 
+## Consistency pass 2, RV 7.75–7.97 (Round 7 run 1)
+
+The first pass's lemma map, rebuilt over 7.1–97 (13,087 פירוק bullets; 2,671 in 7.75–97; scripts in the scratch folder
+`consistency/pass2/`: `cmp.py` = each lemma of 7.75–97 whose Hebrew shares no stem with its renderings in 7.1–74,
+`inv3.py` = a Hebrew word of 7.75–97 that an earlier lemma already holds), read against renderings §5.5, §11.10–§11.19
+and the first pass's rulings (§11.17). The same rule: the renderings' row, else the first and commonest Hebrew; one moved
+word where a binding row or a precedent holds the other. **23 `>` lines changed in 15 hymns** (with their פירוק and
+notes); 2 intros aligned (7.88, 7.93). `build` of the touched hymns; `verify RV7.1-97 --strict`: 0 problems (the one
+listed repeat, 7.38.6b / 7.52.3b, differs by number as the source does); `check_bible_quotes.py` on the 32 touched
+annotated, generated and intro files: 0 problems. Translator 10's files (7.98–104) not touched.
+
+### Changes
+| Lemma | Old Hebrew | New Hebrew | Lines | Reason |
+|---|---|---|---|---|
+| *prámati* | `השגחה` | `דאגה` | 7.93.3b, 93.4a | open item (§11.19): 7.29.4d `דאגתנו` first; `משגיח` is *ádhyakṣa*'s (RV 10.129.7c) |
+| *mithatí* | `בתחרות (?)`, `המתנגשות` | `בְּמַצָּה`, `הַנִּצּוֹת` | 7.48.3d, 93.5a | open item: the line's doubtful brackets dropped (the doubt stays in the note); `תחרות` is *spŕ̥dh* / √*spr̥dh*'s, `התנגש` *sám* √*r̥*'s (7.25.1b); Isa 58:4 `לְרִיב וּמַצָּה`, Ex 2:13 `נִצִּים` |
+| *saparyú* | `המכבדים` | `המשרתים` | 7.94.10c | open item: 7.2.4a `משרתים!` first; √*sap* `שירת` (one family); `כיבד` is √*vidh*'s |
+| *purā́* | `מקדם` | `לפנים` | 7.56.23b | the precedent RV 10.10.4a; 7.88.5b, 91.1b (KU 1.21a `מקדם`: cross-corpus, below) |
+| *sadhástha* | `מושבו` | `משכנו` | 7.97.6c | 7.39.4b, 60.3a |
+| √*kṣi* | `יושבים` | `שוכנים` | 7.96.2b | 7.18.2a, 74.6d, 88.7a; `ישב` is √*ās* / √*sad*'s |
+| *áriṣṭa* | `שלמים` | `שלא ניזוקו` | 7.97.4d | 7.40.4d, 43.5c (the same frame: "carry us across … unharmed") |
+| *ví* √*sthā* | `התפשטו` | `עמדו לרווחה` | 7.75.3d | 7.3.2b; `התפשט` is √*prath*'s |
+| √*prath* (tr.) | `פרש` | `הפיץ` | 7.86.1d | 7.42.6c; `פרש` is √*tan*'s |
+| √*tan* | `יימתחו` | `ייפרשו` | 7.88.4d (and its intro) | 7.2.1d, 5.4c, 33.9c … `פרש` |
+| *medhásāti* | `בזכיית־הסעודה` | `בזכייה בלשד הזבח` | 7.94.6c | 7.66.8c; *médha* `לשד הזבח` (§11.8), *miyédha* `סעודת הזבח` |
+| √*han* | `הַכּוּ` | `הִרְגוּ` | 7.93.5d, 94.12c, 94.12d (and the 7.93 intro) | `הרג` (§11.12; 7.59.8d "במכה … הִרְגוּ"); `ריסק` only with forts or a weapon as object |
+| √*īr* | `שולחים` | `מניעים` | 7.94.4b | 7.5.8a, 79.5b, 82.3b, 88.3b |
+| √*śru* | `תקשיב` | `תשמע` | 7.95.4b | `שמע` (30 lines) |
+| √*tr̥̄* | `גבר על` | `עבר על` | 7.82.6c | §11.10 (√*tr̥̄* simplex "cross, overcome" `עבר`; 7.4.5b `עבר על`); `גבר` is *nár*'s (1.32.6c `גבר`: cross-corpus) |
+| √*nu* | `שאגה` | `צעקה` | 7.87.2a | 7.31.4b, 32.22a, 42.1c; `שאג` is √*krand*'s |
+| √*yu* 1 | `יקשרו` | `יחברו` | 7.40.2d | 7.91.5a, 92.3c; `קשר` is *bándhana*'s (7.59.12c) |
+| *sumedhás* | `הנבון` | `טוב־הדעת` | 7.91.3a | `נבון` is *vedhás*'s (7.26.3b, 37.6a, 46.1c); *médhira* `בעל־הדעת` (7.87.4a) |
+| *ā́deva* | `נאמני־האלים` | `דבקי־האֵלִים` | 7.92.4b | `נאמן` is *ŕ̥tāvan* `נאמן הסדר`'s (fixed); *devayú* `שוחר־האלים` |
+
+### Splits kept (with the reason)
+- **Sense, homographs, preverbs:** √*bhuj* 2 `שילם` (7.52.2c, 88.6c, "pay for (a sin)") / 7.81.5d `ניזון` ("enjoy");
+  *úpara* 7.87.4d `מאוחר` / 87.5b `תחתון` (later / lower); √*yat* `יישר` (7.36.2d, 79.2b) / middle "vie" `נאבק`
+  (7.76.5b, 93.5b); √*vr̥t* `סובב` / `פנה`, but "roll (up, apart)" `גלגל` (7.79.2c, 80.1c); *vanús* / √*vanuṣ* 7.82.1c
+  `חומד` (as the first pass's `להוטים`); √*yā* 1 `נסע` (7.75.6c, 78.2c: the family's word, *yā́tar* `נוסע`, *yā́man*)
+  beside `בא` with *ā́*; *pári* √*gā* `סובב` (7.75.4b, 84.1d; as *pári* √*yā* 7.69.5b); *prá* √*tr̥̄* + *ā́yus*
+  `האריך` (7.77.5b); *iṣṭí* 1 / 2 (`חיפוש` 7.92.3b / `הקרבה` 93.8a); *ándhas* 2 "herb" 7.96.2a; *pátnī* `גבירה`
+  (7.75.4d, "mistress") / `רעיה`; *dyú* "day" 7.83.5d; *samídh* 7.77.1c (infinitive, `להצתה`, √*idh* `הצית`).
+- **Already split in 7.1–74 (the first pass kept it):** √*yā* 2 `התחנן` / `ביקש` (7.25.5b, 29.1d, 32.5a; here 7.91.2c,
+  94.9b, 95.4c `ביקש`, 81.4c `התחנן`) – for the lead.
+- **One Hebrew, kept** (no free word, or one family): √*sr̥* `זרם` (7.90.4d, 95.1a; the precedent 1.32.12d, and 7.101.4b
+  `זרמו המים` in part 10) beside √*sru* `זרם` – `זרם` already serves the flowing words (√*dhu* 7.18.15b, *sravát*,
+  *dhénā*); √*naś* / √*aś* `השיג` (one root, as in 7.1–74); √*mand* / √*mad* `התבסם`; *jīrá* `זריז` (7.81.3b, 92.2a)
+  beside *ajirá* `זריז` (§11.11) and *írya* 7.13.3b `הזריז`; *samithá* 7.83.9a `עימותים` / *samīká* 7.21.9c `עימות`;
+  *sámita* 7.83.7a / *ā́skra* 7.43.5b `מלוכדים`; *dīnátā* `חולשה` (§11.19) / *ādhrá* `חלש`; *abhidrohá* / *drúh* `שקר`
+  (§11.19, the √*druh* family).
+- **Open:** *kīrí* 7.21.8a `הדל (?)` / 7.97.10c `למזמר` (an obscure word; 7.97.10 = 7.98.7 is part 10's repeat: not
+  changed here); *dakṣā́yya* 7.1.2c `שמבקשים את כשרונו` / 7.97.8c `לראוי לכשרון` (both keep *dákṣa* `כשרון`; the
+  gerundive paraphrased).
+
+### Cross-corpus splits (for the lead)
+*purā́* `לפנים` (RV 10.10.4a; Book 7 now) / KU 1.21a `מקדם`; √*tr̥̄* "overcome" `עבר על` / 1.32.6c `גבר`; *prámati*
+`דאגה` beside *ádhyakṣa* RV 10.129.7c `המשגיח` (kept apart); *mithatí* `מצה` / RV 10.34.6d *pratidī́van* `יריב` (kept
+apart); √*sr̥* / √*sru* `זרם` (1.32.12d / 14c).
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
