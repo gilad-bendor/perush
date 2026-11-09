@@ -224,7 +224,7 @@ reserved (§7). **The one real lexical contact is the Persian loanword `דָּת
 `רָקִיעַ`, `רֵאשִׁית`; the flood and sea-monster words; `שְׁאוֹל`, `גֵּיהִנֹּם`, `עֵדֶן`, `פַּרְדֵּס`; `מָשִׁיחַ`,
 `מוֹשִׁיעַ`, `גּוֹאֵל`, `גְּאֻלָּה`; `תְּחִיָּה`; `שָׂטָן`; `מַלְאָךְ`; the roots קדש, צדק, רשע, ארר, ברך (with a
 `[היתר שער]` for `בֶּרֶךְ` "knee"); `כָּבוֹד`; `קֵץ`; `עֹלָה`, `קָרְבָּן`, `מִזְבֵּחַ`, `נִיחוֹחַ`; `נְשָׁמָה`; `תּוֹרָה`;
-`צֶלֶם`, `דְּמוּת`; the root שבת; `נָח`; `עוֹלָם`; `אַשְׁרֵי`.
+`צֶלֶם`, `דְּמוּת`; the root שבת; `נָח`; `עוֹלָם`; `אַשְׁרֵי`; `מִשְׁכָּן`; `חֶסֶד`.
 
 ### 7.2 Only for their source counterpart
 `רוּחַ` (*mainiiu*, the wind), `חֹשֶׁךְ` (*təmah*), `אוֹר` (*raōcah* and its kin), `זֶרַע` (*taoxman*, *ciϑra*),
@@ -235,7 +235,7 @@ reserved (§7). **The one real lexical contact is the Persian loanword `דָּת
 
 ### 7.3 Always vocalized (traps)
 `אֵל` / `אֵלִים` (*daēuua*: "to", "these"), `יִימָה` (Yima), `דָּת`, and `עַד` where it renders *yauua* and could be
-read as the preposition.
+read as the preposition; `רֵעַ` (*friia*: unvocalized "bad").
 
 ## 8. Formulas (fixed; checked by script: | F | folded-source regex | Hebrew regex | lines |)
 The Hebrew regex is matched on the bracket-free, unvocalized, punctuation-free line.
@@ -371,6 +371,19 @@ YH 35.2 = 41.7 (the latter is outside the scope).
   Gāthās' `עזרה` stands.
 - **Tool fixes after part 6:** the Friiāna regex skips the verb *friiąnmahī*; the `חי` gate licenses `חיות הבר`
   (*daitika*).
+
+### 11.8 The independent review and the consistency pass (R1; merged 2026-11-09)
+- **R1's fidelity pass:** 77 lines fixed (words moved back to their own lines; voice, person, tense and mood by the
+  parse; brackets and doubt marks; one Hebrew for two lemmas: `זוהר` kept for *xᵛarənah* only – *sūc* `בבהירות`,
+  *xᵛə̄nuuaṇt* `הקורן`, *diuuamna* `נוגה?`, *aēuru* `הבוהק?`; *hap-* `אוחז`; *humərəti* `בזיכרון הטוב`; *garah* /
+  *vahma* `שירה` / `תהילה` in YH; *xšā-* `מלך`; *van-* `הביס` / *zā-* `ניצח` in YH; *rafnah* `עזרה` everywhere).
+- **The coordinator's decisions, applied by R1 (about 60 lines):** *friia* `רֵעַ` always vocalized (a trap);
+  *aōj-* `דיבר` (*vac-* `אמר`, *fra-vac-* `הכריז`); *ciš-* `הקצה`, *ci-* `ייעד` (by CAB's lemma; *fra-cit-* `סימן`);
+  `השיג` only for *āp-* (*izd-* `השתוקק ל־`, *naš-* `הגיע אל`, *ā-dā-* `קיבל?`, *hū-* `המציא`, *kā-* `חשק`);
+  *varəz-* `פעל` (*kar-* `עשה`; *rād-* `טרח`); *vaēn-* `הביט`, *spas-* `צפה`, *ā-xsā-* `התבונן` (R1's choice,
+  accepted), *dars-* `ראה`, *saṇd-* "appear" `נראה` (the niphal of the same Hebrew root, kept: a recorded overlap);
+  *zbā-* / *zū-* `קרא`; `מִשְׁכָּן` and `חֶסֶד` reserved (never) – `מָעוֹן`, *yāna* `חֵן`; *maēϑā* `*רעועה*`.
+- **New gates:** `מִשְׁכָּן`, `חֶסֶד` (never); the *friia* trap (`רֵעַ` vocalized).
 
 ## 12. Cross-corpus choices for the lead (Avestan words whose Vedic cognate the cousin corpus has not rendered yet)
 Each pair below gets one Hebrew under the cousin-language rule; this corpus's choice is given, for the lead to align
