@@ -266,6 +266,17 @@ All seven eBL chapters of the plan row were fetched again (eleven chapters: the 
     fetch had not restored yet (eBL, CUC) – rerun after it. The rows tool needed `npm ci` in `_RTL-EDITOR` and the
     cloud's own Playwright (`tools.md`).
 
+### Learned on Round 7 run 2 – the Old Avestan corpus (2026-11-09, the new corpus `האווסטה/`)
+One coordinator, one agent at a time (the run's share in range B, beside run 1). Setup took about 70 minutes: CAB's
+plain corpus has no verse lines, its XML does; the converter drops the liturgical repetitions by script (a line equal
+to an earlier one, or to a run of earlier lines written out again) and takes Y 27.13–15 from TITUS. Then one translator
+(T1) drafted all 1,020 lines in six parts, resumed with SendMessage after each merge (about 20–30 minutes a part; its
+context reached ~0.8 M tokens at the end – enough, with a hand-over written in its part 3b report for a successor that
+was not needed). Each report's proposals (≈ 200 rows) and tool bugs (12) were merged before the next part; the gates
+caught slips inside parentheses too. An independent reviewer (R1) read every line and fixed 77 (words moved across line
+ends, voice / person / tense from the parse, brackets, one Hebrew for two lemmas); a second pass, on the coordinator's
+decisions about the clashes R1 listed, changed about 60 more. The verifier stayed at 0 throughout. No quota stop.
+
 ### Learned on Round 6 run 1 – the Sumerian Bilgameš poems (2026-11-06, `אפוס-גילגמש/` project 3)
 Range A, one agent at a time, no quota stop. The coordinator converted ETCSL 1.8.1.1, 1.8.1.2, 1.8.1.5, 1.8.1.5.1 and ORACC Q000361–Q000366 from the local zips (neither server is reachable from the cloud), wrote `bilgames_tools.py` on top of `netherworld_tools.py`, generated skeletons (1,332 entries – not the plan's 1,381: ETCSL's `<l>` count includes the variant lines of its notes) and copied the flood references' 42 Death lines into them, then fixed renderings §23 before the first line. Three translators in sequence (HA then HB resumed; BH + AG; DB in two parts), the coordinator merging each one's proposals (§23.6–§23.9) and widening two gates the translators reported (Magan `מָגָן` in the `גן` gate; *gi* / *gi-gi* in the `שוב` gate) instead of bending the Hebrew; then one independent fidelity reviewer over all 1,332 entries: 39 fixes (23 brackets, 6 missing `?`, 3 omitted words, 2 persons …) and 4 proposed for the excerpt, applied to both copies. The excerpt: 25 of its 42 lines were revised from the whole poem (Enki `אנכי`, `לעולמים`, `העולם התחתון`, …).
 
@@ -400,3 +411,4 @@ The accounts, as they stood in §5.1:
 - 2026-11-07 (Round 6 run 2): the Book of the Dead of Nu whole (project 6 renamed `6-ספר-המתים-של-נו/`; 1,778 new lines in NU1–NU10 + BD 175 from pCha, 65) and the Instruction for Merikare whole (new project `9-מוסר-למריכרע/`, 140 new lines); `egypt_tools.py` NU1–NU10 / CH / MR; guidelines §5.2 (a "Book of the Dead of Nu" block) and §6.7 (one line); renderings §12; sources-registry §4.4t; tools.md; domains.txt (`totenbuch.awk.nrw.de`). Report `reports/round-6/run-2.md`.
 - 2026-11-07 (Round 6 run 5): the Shield of Heracles whole (`הסיודוס/3-מגן-הרקלס/`, 479 lines; base Perseus tlg0020.tlg003 + the AGDT treebank); `hesiod_tools.py` KEY SH, `MARK_TAG_KEY`, the δράκων REQUIRED plural; renderings §14 and 18 names in §3.1; guidelines §5.2 ("The Shield of Heracles").
 - 2026-11-09 (the lead): **Round 6 finalized** – the cross-corpus harmonization of the five runs' splits (`harmonization--2026-11-09.md`: 17 changes, the rest kept with reasons; one new rule in §6.7: a cognate's Hebrew is not lent to a non-cognate equivalent in another language), applied by three agents at once in range B on disjoint corpora; every verifier (51 runs) and `check_bible_quotes.py` over the folder passed; `reports/round-6/final.md`. The first round finished under the rule of 2026-11-03: `branches.py finish --into-main` (cherry-pick + squash), then the Round 7 session launched. Learned: the Vedic verifier needs `vedic_tools.py convert` after `sources_sync.py fetch` (its TITUS tables are adhoc items the fetch skips).
+- 2026-11-09 (Round 7 run 2): the Old Avestan corpus whole – the new corpus `האווסטה/` (the Gāthās Y 28–34, 43–51, 53: 869 lines; the Yasna Haptaŋhāiti: 112; the four prayers: 12), `avesta_tools.py` and its parallels-index builder; sources: CAB XML verse lines, TITUS Y 27, Mills 1887, Moulton 1913; guidelines §5.2 (Old Avestan lesson) and §6.7 (the Avestan corpus row); report `reports/round-7/run-2.md`.

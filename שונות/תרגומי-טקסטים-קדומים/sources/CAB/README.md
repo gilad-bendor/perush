@@ -15,3 +15,7 @@
 - **Note:** the corpus calls itself "without repetitions", but Vd 2 is complete there (its repeated blocks are written out).
 - **Line numbering:** the stanza (`1`…`43`) = Geldner 1896 = Darmesteter's paragraphs.
 - **Usefulness:** high: the current edition's text, with an online per-form analysis.
+
+- **2026-11-09 (Round 7 run 2):** `old_avestan.tsv` – the Old Avestan corpus (Gāthās, Yasna Haptaŋhāiti, Y 54.1; and
+  Y 27.13–15 from TITUS), made by `../../האווסטה/avesta_tools.py convert` from `cab_corpus.xml`, whose `<ab>/<l>`
+  elements hold the Gāthic verse lines (the plain text prints a stanza as one line); Geldner's numbers from `corresp`.
