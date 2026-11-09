@@ -1527,5 +1527,43 @@ Ps 90:10, Jonah 2:4, Ps 113:9) are sound and say "shared motif". **12 `>` lines 
     (7.54.3c, 7.59.2d, KU); *sámbhr̥ta* `מצוידים` (7.73.4b) / MBH *yuj* `מצויד`; *amŕ̥ta*-type hyphenation `בזה שאינו
     בן־תמותה` in 7.1.23b (the only hyphenated copy left).
 
+## RV7.75–7.88 (part 8: Uṣas 7.75–81; Indra–Varuṇa 7.82–85; Varuṇa 7.86–88; translator 8, Round 7 run 1)
+
+### Scope
+RV 7.75–7.88: 14 hymns, 332 pādas – Uṣas, the Dawn, 7.75 (32), 7.76 (28), 7.77 (24), 7.78 (20), 7.79 (20), 7.80 (12),
+7.81 (24); Indra–Varuṇa 7.82 (40), 7.83 (40), 7.84 (20), 7.85 (20); Varuṇa 7.86 (32), 7.87 (28), 7.88 (28). One
+annotated file and one intro per hymn; `build RV7.75-88` generates the clean files. (In progress.)
+
+### Sources consulted
+- Base: VedaWeb Zurich text and morphology (`data`); `gra` / `mw` for new words; `freq RV7.75-88`, `lexmap`, `grep`,
+  the part 4–7 spec assembler (`gen.py`) and look-up script (`lk.py`: every lemma of a hymn against all drafted files),
+  copied to my scratch folder.
+- After drafting each hymn: `tr` (Griffith, Grassmann, Geldner, Elizarenkova, Renou) and Jamison's commentary
+  (`VII.56–104-9-25-26.txt`).
+
+### Decisions
+- **Uṣas as a name:** *uṣás* where she is the goddess (the addressee and subject of 7.75–81) = `שַׁחַר` without the
+  article, with feminine verbs and adjectives (renderings §3.2; the AB precedent `את שַׁחַר`, AB 7.16.12b); the plural
+  *uṣásaḥ* (the dawns of every day) and the common-noun uses keep `השחר` / `השחרים` (precedents 7.5–7.72). *divó duhitā́*
+  `בת השמים` (7.67.2d). √*vas* "dawn" (with or without *ví*) `הפציע` (7.69.5c, 7.72.4a).
+- **7.75, new words:** *divijā́* `ילידת־השמים`; *āvís* √*kr̥* `עשה גלוי`; *ápa* √*vr̥* `הסיר`; *śravasyú* `שואף־תהילה`;
+  *parāká* `מרחקים`; *vayúna* `מנהג`; *pátnī* "mistress" `גבירה` (7.34.20a `רעיות` "wives": a split by sense);
+  *citrā́magha* `מבהיקת־השפע`; *ŕ̥ṣiṣṭuta* `משובחת־החוזים`; √*ruj* `ניפץ` (√*bhid* `בקע`); *usríya* `ורודה` (*usrá*
+  `ורוד`); √*vāś* "bellow" `געה`. *jaráyantī* (5c) `מעירה` with Zurich (√*gr̥* caus.), Griffith's "consumer of our youth"
+  (√*jr̥̄*) in the note. *saúbhaga* `מזל טוב` with the gate licence of 7.3 / 7.21.
+
+### Open decisions for the user
+
+### Progress log
+- 7.75 drafted, filled, verified (0 problems).
+
+### The text on its own terms
+
+### Key parallels
+
+### Proposals for the shared renderings
+
+### Lessons for the guidelines
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
