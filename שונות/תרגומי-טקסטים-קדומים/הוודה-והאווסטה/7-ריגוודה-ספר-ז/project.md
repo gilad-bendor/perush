@@ -437,5 +437,160 @@ closely, and every `?` crux of 7.18 has its alternatives in the note.
     *ví* in 7.19.9c `הרחיקו` beside √*sidh* `הרחיק` (7.15.10a); *ā́s* / *āsyà* both `פה`.
   - 7.19.3bc `עזרת (קדימה)`: the preverb *prá* is in the source, so the parentheses (= added) are not quite right; harmless.
 
+## RV7.20–7.31 (part 3: Indra; translator 3, Round 7 run 1)
+
+### Scope
+RV 7.20–7.31, 316 pādas, all to Indra: 7.20 (40), 7.21 (40; 5d the *śiśnadeva*), 7.22 (28; eight virāj tercets + one
+triṣṭubh), 7.23–25 (24 each), 7.26–30 (20 each; 7.28–30 share the closing stanza), 7.31 (36; nine gāyatrī tercets +
+three long tercets, no family refrain). Twelve annotated files, twelve intros, built (`build RV7.20-31`); `verify
+RV7.20-31 --strict`: no problems; `check_bible_quotes.py` on my annotated files, intros and the generated files: 0
+problems.
+
+### Sources consulted
+The Zurich text and morphology (`data`); `lexmap` / `freq RV7.20-31` / `grep` for every recurring word; after drafting
+each hymn `tr` (Griffith, Geldner, Grassmann, Elizarenkova) and Jamison's commentary on VII.20–31. Her readings
+adopted, with attribution: 7.20.1–2 (the agent nouns with verbal rection), 3c (*ví √as* "scatter"), 6d (*kṣáyat* "rule
+over wealth", gen. *rāyáḥ*), 7ab (*áyat* subjunctive of √*i*; the question in c), 9b (*stāmú* from √*stā* "steal",
+tentatively); 7.21.2 (*gr̥bhá* an agent noun; the pressing stones as subject), 4ab (√*viṣ* "accomplish" with *ápas*; the
+weapons = the stones' soma), 5 (*vándana* "sycophancy", the inner and outer threats to *r̥tá*; *ápi √gā* with a sexual
+nuance), 6d (the end of his *śávas*), 9cd (the *van* figure); 7.22.4a (*ví √pā* = separating the juice), 8–9 (the
+subject of 8b postponed to 9ab; *asmé* locative); 7.23.4c (the teams = our thoughts); 7.24.2a ("your mind has been
+captured"), 3d (*tavásam* of Indra), 5d (*śrómata*); 7.25.4d (the odd *ná mardhīḥ*); 7.26.3d (*ní √mr̥j* "drag down
+forcefully"); 7.27.2c (the *vícetas* pun), 4d (*abhívītā* "enclosed"); 7.28.2c (with ab), 3ab (*sám … ninétha* evoking
+*ví*), 4 (Varuṇa; the *durmitrá* peoples purifying themselves); 7.29.2a (the voc. *bráhman*), 3c (*tatane* subjunctive);
+7.31.2b (the "men" = the Maruts), 6c ("the challengers").
+
+### Decisions
+- **Indra's epithets:** *maghávan* `בעל־השפע` (and *maghá* `שפע`); *háryaśva* `בעל־הסוסים־הצהבהבים`, *hárivant*
+  `בעל־הצהבהבים`, *hári* `צהבהב`; *vájrahasta* `שהוַגְ'רָה בידו`, *vájrabāhu* `שהוַגְ'רָה בזרועו`, *suvájra*
+  `טוב־הוַגְ'רָה`; *vr̥trahán* `הורג־וְרִטְרָה`; *śū́ra* `גיבור` (the ruling, §11.10), *vīrá* `גיבור`; **new:**
+  *śatákratu* `בעל־מאה־הרצונות` (*krátu* `רצון`); *śakrá* `יכול` with √*śak* `יכל` (7.20.9d keeps the pun *śakra …
+  śakaḥ*); *ádrivant* `בעל־האבן` (*ádri* `אבן`, the pressing stone); *suśiprá* `יפה־השפתיים`, *śiprín* `בעל־השפתיים`;
+  *puruhūtá* `שרבים קוראים לו` (7.2); *r̥jīṣín* `בעל־השמרים`; *svadhā́vant* / *svadhā́van* `בעל־הכוח־העצמי`
+  (*svadhā́* `כֹּחַ עַצְמִי`, 10.129); *sváyaśas* `בעל־הכבוד־העצמי` (*yáśas* `כבוד`);
+  *tuvirā́dhas* `רב־המתת`; *śavasín* `בעל־העצמה`, *śáviṣṭha* `העצום ביותר`; *táviṣī* `תוקף`, *túviṣmant*
+  `רב־התוקף`, *táviṣīvant* `בעל־התוקף` (the root of *tavás* `תקיף`); *ójas* `חוסן` (*svójas* `רב־החוסן`; `עוז`
+  stays *sáhas*'s); *śuṣmín* `סוער` (*śúṣma* `סער`); *ugrá* `עז`; *dhr̥ṣṇú* `נועז`; *iná* `אדיר`, *sátvan* `אביר`;
+  *yudhmá* `לוחם`, *puroyodhá* `לוחם־בראש`; *samád* `התגוששות`, *samádvan* `מתגושש` (*pŕ̥tanā* `קרב`, *samaryá*
+  `מערכה`, *yúdh* `מלחמה` kept apart); *tárutra* `מכריע`; *vibhaktár* `המחלק` (7.18); *viśvaminvá* `מפעיל־הכל`;
+  *mahivŕ̥dh* `הגדל־לגדולה`; *nr̥páti* `אדון־הגברים`; *carṣaṇiprā́* `ממלא־העמים`; *ánuttamanyu* `שאין דוחים את
+  כעסו`.
+- **Soma:** √*su* `סחט`, *sutá* `סחוט`, *sotár* `סוחט`, *sávana* `סחיטה` (the pressing), *ásuta* `שלא נסחט`;
+  *ándhas* `עסיס`; *índu* `טיפה`; *mádhu* `דבש`; *ŕ̥jīka* `תוספת`; √*pā* "drink" `שתה`, *somapéya*
+  `שתיית־הסוֹמָה`, *somapā́van* `שותה־הסוֹמָה`; √*mad* / √*mand* `התבסם` (causative `בסם`), *máda* `התבסמות`,
+  *mā́dana* `מבסם`; √*uc* `התרגל`.
+- **Deeds:** √*han* `הרג`, but with forts or a weapon as object (*ví √han*, *jahí vádhar*) `ריסק` – a split by sense
+  like 1.32.7b `הנחית`; *hántar* `הורג`; √*śnath* `דקר`; √*randh* `הכניע`; √*bādh* `לחץ` (7.23.3c: the separation of
+  the world-halves); √*dhū* `ניער`; ápa √*vr̥* `חשף`, pári √*vr̥* `כיסה מסביב` (the root of Vṛtra, noted); *vr̥trá* in
+  the neuter plural `מחסומים` (with `[היתר שם]`), the singular in 7.20.2a, 7.21.6c the name `וְרִטְרָה`; *áhi* `נחש`
+  (7.21.3b, licensed); *ápas* `מפעל` (`מְלָאכָה` stays the Semitic corpora's *šipru*); *ā́yudha* `כלי־נשק`; *didyút*
+  `רומח`; *várman* `שריון`; *kr̥tríma* `עשוי`.
+- **The rite and the poets:** √*vac* `אמר`; √*gā(y)* `שר`; √*nu* `צעק`, √*krand* `שאג`; √*kr̥p* `התחנן`; *ghóṣa*
+  `קול`; *vívāc* `התנצחות` (the verbal contest), *nemádhiti* `התמודדות`; *vā́ṇī* `מקהלה`; *nīthá* `לחן`; *sūktá*
+  `מזמור`; *śūṣá* `שיר־חיזוק`; *āṅgūṣá* `צהלה`; *áraṃkr̥ti* `הכנה`; *śáṃsa* `קילוס` (√*śaṃs*); *sáhūti* `קריאה משותפת`;
+  *ví √hū* `קרא בתחרות`; *hávya* "to be invoked" `ראוי־לקריאה` (kept apart from *havyá* `תקרובת`); *dúvas* `מחווה`;
+  *deṣṇá* `דורון`; *dákṣiṇā* `שכר`; *vedhás* `נבון` (10.10), so *manīṣín* takes `בעל־התבונה` (7.22.6b; KU's `הנבונים`
+  a recorded split); *vípra* / √*vip* `נלהב` / `הלהיב`.
+- **People, gifts, help:** *ánr̥ta* `אי־הסדר` (the root of *r̥tá* kept); *anenás* `חף־מעוון` (*énas* `עוון`); *trātár*
+  `מחלץ`; *avitár* `עוזר`, *áviṣṭha* `העוזר ביותר`; *varūtár* `סוכך`; *várivas* `מרווח`; *prámati* `דאגה`; *āpí*
+  `ידיד`; *sakhyá* `חברות`; *árāvan* `צר־העין` (*áraruṣ* `קמצן`); *ninitsú* `המבקש לגנות` (*níd* `גנאי`); *vanús*
+  `חומס`; *yātú* `קסם` (as *yātumā́vant* `בעל־הקסמים`); *śiśnádeva* `שאֵלָם הוא האבר` (*śiśná* `אבר`); *jaraṇā́*
+  `זקנה`; *vīrávant* `בעל־גיבורים` and *gómant* `בעל־פרות`, *áśvāvant* `בעל־סוסים`, *ráthavant* `בעל־מרכבות`; *vājayú*
+  `תאב־הפרס`, *gavyú* `תאב־הפרות`, *hiraṇyayú* `תאב־הזהב`, *tvāyú* `תאב לך`; *gavéṣaṇa* `מחפש־הפרות`; *vrajá*
+  `מכלאה`; *kṣití* `יישוב`; *puruṣyà* `בני אדם` (7.29.4a, from *púruṣa*: licensed by the gate).
+- **Verbs (new in the book):** √*bhrī* `מעד`; √*śū* `תפח`; √*pī* `גאה`; √*nakṣ* `הגיע`; √*cud* `דחף`; √*tuj* `דחק`;
+  √*nī* `הנהיג` (*práṇīti* `הנהגה`; √*vah* keeps `הוביל`); √*daśasy* `חנן`; √*kā* `השתוקק`; √*grabh* `אחז`; ánu √*mā*
+  `ויתר`, ánu √*man* `הודה ב־`; áva √*sā* `התיר`; abhí √*bhū* `היה עליון`; √*vyac* `הקיף`; práti √*brū* `השיב`;
+  √*śardh* `התגרה` (as the book); √*hr̥ṣ* `עלז`; √*kṣā* `מלך`; √*jū* `המריץ`; √*mr̥ṣ* `שכח`; √*mr̥dh* `הזניח`;
+  √*am* `הסתער`; √*br̥h* caus. `הגביה` (√*mahay* keeps `רומם`); ní √*mr̥j* `גרר מטה` (a split from √*mr̥j* `מירק`).
+- **Readings against the literature:** 7.20.9b *stāmú* `הגנבני (?)` (Geldner's √*stā*, Jamison's "thieving"; Grassmann
+  "sigher" in the note); 7.21.5b *vándana* `החנפנויות (?)` (Jamison; Geldner keeps a name); 7.21.8a *kīrí* `הדל (?)`
+  (Geldner; Grassmann "singer"); 7.25.1c *didyút* `רומח` (not Grassmann's "Blitz", which would be *vidyút* `ברק`);
+  7.27.4d *abhívītā* `(שהיתה) מוקפת (?)` (Jamison) against Geldner's "willkommen"; 7.30.4b *stávanta* passive
+  (Geldner); 7.31.12c *barhaya* 1st sg. subjunctive (the Zurich parse, Geldner) – Jamison's imperative in the note.
+- **The repeated pādas:** F6 in 7.20.10d, 21.10d, 22.9d, 23.6d, 24.6d, 25.6d, 26.5d, 27.5d, 28.5d, 29.5d, 30.5d,
+  copied exactly. **7.20.10 = 7.21.10, 7.24.6 = 7.25.6, 7.28.5 = 7.29.5 = 7.30.5** (the first copy in my range; the
+  later copies copied character for character). Similar lines given the earlier frame: 7.22.2b ← 7.19.4b; 7.24.4a ←
+  7.19.3b; 7.29.2c ← 7.23.5d; 7.31.11b ← 7.22.9b; 7.28.2d ← 7.20.3b. No repeated-line difference.
+
+### Open decisions for the user
+- 7.21.5d *śiśnádeva* rendered literally, `אֵלֶּה שאֵלָם הוא האבר` (*śiśná* `אבר`, a decent but plain word), not
+  Griffith's "the lewd" nor a modern "phallus-worshippers": the reading (foreign phallic cult or an insult) is left to
+  the note.
+- *śakrá* `יכול` (to keep the pun with √*śak*), rather than a grander epithet such as `כביר` (now *mahín*'s).
+- 7.24.1a *yóni* `רחם` (the corpus's word) for the god's "seat" on the ritual ground.
+
+### Progress log
+- 2026-11-09: drafted 7.20–7.31 hymn by hymn; each written, filled (`fill`) and verified (`verify RV7.<n>`) before the
+  next, with its intro. 7.28.5 (the shared closing stanza) drafted first and copied into 7.29 and 7.30 by script.
+- Coordinator's mid-part note applied: imperatives that read as past vocalized (`הָבֵא`, `הִתְעוֹרֵר`, `שְׁתֵה`,
+  `שְׁמַע`, `עֲשֵׂה`, `עֲשׂוּ`, `הִשְׁתַּדֵּל`, `הִתְעַנֵּג`, `הַעֲבֵר`, `הַכְנֵע`, `הַגְדֵּשׁ`, `מַלֵּא`, `דְּקֹר`,
+  `מְדֹד`, `חֲנֹן`, `הוֹשֵׁט`, `הָבִיאוּ`, `שִׁירוּ`), `מְפֵרִים` next to Indra (7.31.11c); *turá* `נמרץ` because
+  *ajirá* now has `זריז`; *vīrávant* `בעל־גיבורים`.
+- Pass (a) fidelity: 7.22.8a re-cut (the postponed subject, Jamison); 7.30.1b `את העושר`; 7.31.8a (the choir named once);
+  7.31.12c √*br̥h* `הגביה` (`רומם` is √*mahay*'s).
+- Pass (b) consistency (a lemma ↔ Hebrew map of my range against all drafted files): *árvan* `סוס־מרוץ` → `סוס דוהר`
+  (`סוס־מרוץ` is *átya*'s, 7.3.5b); *manīṣín* `נבון` → `בעל־התבונה` (`נבון` is *vedhás*'s); aligned to the book's
+  precedents: *sadhamā́da* `משתה משותף`, *dvibárhas* `כפול־העוצמה`, *viśváha* `כל הימים`, *devatrā́* `אצל האֵלִים`,
+  √*hr̥ṣ* `עלז`, √*grabh* `אחז`, √*kṣā* `מלך`, √*śardh* `התגרה`, *nŕ̥pīti* `שמירת הגברים`, *sabā́dhas* `בדחיפות`,
+  *jáni* `בנות־זוג`; the Kutsas `בני קוּטְסָה` (the name check).
+- Pass (c) Hebrew: the generated files read through; vocalizations above; `הָאֵלֶּה` / `אֵלֶּה` where the verifier asked.
+- `build RV7.20-31`; `verify RV7.20-31 --strict`: 0 problems; `check_bible_quotes.py` on 36 files: 0 problems (two
+  verses first quoted from memory were caught by printing them – Num 14:18 replaced by Ps 39:9, Ps 145:1 corrected to
+  `וַאֲבָרְכָה`).
+
+### The text on its own terms
+- The god defined by his deeds as names: "rescuer", "slayer", "maker", "giver" – agent nouns with objects (7.20.1–2).
+- Indra's birth: "a bull begot the bull, a woman bore the manly one" – a god with a father and a mother (7.20.5).
+- Gift exchange as cosmic law: the earlier helps the later, the elder goes to the younger's gift – "would the immortal
+  sit aloof?" (7.20.7); the poet admits that "desire for wealth has come upon your singer" (7.20.9c).
+- The rite as a contest: the families "call him competitively" and he can come to one only – "hear only ours" (7.28.1),
+  the fear of his "wandering mind" (7.25.1d), and the joy that "your mind has been captured" (7.24.2a).
+- The pressing stones as drunken poets, "of wild speech", clattering from afar (7.21.2), "separating" the juice (7.22.4a).
+- The two conditions of the offering: no unpressed soma, no pressing without a formulation (7.26.1–2).
+- The threat to *r̥tá* from inside (sorcery, flattery) and outside (the stranger, "those whose god is the phallus")
+  (7.21.5).
+- Wisdom in a prayer: "no one knows his own lifetime among men" – so carry us across now (7.23.2c–d).
+- The new poet's claim: the ancient seers were only men, and the god heard them; "you are our care, like a father" (7.29.4).
+- Cosmogony in passing: the world-halves pushed apart (7.23.3c), "heaven upon heaven" (7.24.5d); the barren waters
+  swell like barren cows (7.23.4a).
+- Varuṇa breaks into an Indra hymn: the sinless one sees untruth and unbinds us (7.28.4).
+- The choirs (the Maruts' and ours) make Indra king (7.31.12); old age in strength as the patrons' reward (7.30.4d).
+
+### Key parallels
+- 7.21.5d – Ezek 16:17 `צַלְמֵי זָכָר`: polemic against another people's sexual cult (a shared motif; no lexical contact).
+- 7.21.6b – 1 Kgs 8:27: the god whom the world cannot contain.
+- 7.23.2c – Eccl 9:12, Ps 39:5: man does not know his time.
+- 7.23.3c – Gen 1:7 [divergence]: the separation of the world-halves by force, with no "firmament" and no `הבדיל` in the line.
+- 7.26.2c, 7.29.4d – Ps 103:13, Isa 63:16: the god as father; in 7.29 against the ancient seers (as Abraham in Isaiah).
+- 7.28.4c – Ps 90:8, 19:13: the god who sees hidden sin and clears it (Varuṇa; the great parallel is 7.86–88).
+- 7.31.6a, 9c, 12b – Ps 18:3, 86:9, 93:1: the god as armour, the nations bowing, the god made king.
+
+### Proposals for the shared renderings
+- **Words** (lemma → Hebrew, binding for Book 7 if accepted): every row of **Decisions** above; in particular
+  *śatákratu* `בעל־מאה־הרצונות`; *śakrá* `יכול` / √*śak* `יכל`; *ádri* `אבן`, *ádrivant* `בעל־האבן`; *suśiprá*
+  `יפה־השפתיים`, *śiprín* `בעל־השפתיים`; *r̥jīṣín* `בעל־השמרים`; *svadhā́vant* `בעל־הכוח־העצמי`; *ójas* `חוסן`; *táviṣī*
+  `תוקף`; *iná* `אדיר`; *sátvan* `אביר`; *yudhmá* `לוחם`; *samád* `התגוששות`; *yúdh* `מלחמה`; *tárutra* `מכריע`;
+  √*su* `סחט`, *sávana* `סחיטה`, *sotár* `סוחט`; *ándhas* `עסיס`; *índu* `טיפה`; *somapéya* `שתיית־הסוֹמָה`;
+  *ápas* `מפעל`; *ā́yudha* `כלי־נשק`; *várman* `שריון`; *vívāc* `התנצחות`; *vā́ṇī* `מקהלה`; *sūktá* `מזמור`;
+  *hávya* `ראוי־לקריאה`; *dúvas* `מחווה`; *deṣṇá* `דורון`; *dákṣiṇā* `שכר`; *ánr̥ta* `אי־הסדר`; *anenás*
+  `חף־מעוון`; *várivas* `מרווח`; *prámati* `דאגה`; *āpí* `ידיד`; *yātú* `קסם`; *árāvan* `צר־העין`; *vrajá* `מכלאה`;
+  the *-yú* adjectives `תאב־…`; √*han* of forts / weapons `ריסק` (split); √*nī* `הנהיג`; √*daśasy* `חנן`.
+- **Collisions found, for the round's harmonization** (each left as the precedent has it, and noted at my lines):
+  √*san* and √*van* both `זכה` (7.18.1b, 7.17.5a); *vibhaktár* `המחלק` (7.18.24b) and √*day* `חילק` (7.16.7d); *yúdh*
+  `בקרב` (7.18.7d) against *pŕ̥tanā* `קרב` (7.8.4c) – I use *yúdh* `מלחמה`; √*daśasy* `העניק` (7.5.7d) against √*rā*
+  `העניק` (7.18) – I use `חנן`; *turá* `זריז` (7.2.11b) against the ruling *ajirá* `זריז` – I use `נמרץ`; *tū́ya*
+  `מהר` beside *āśú* `מהיר` (one root); √*yam* `הושיט` and 7.23.2a `הורם` (the cry "raised", by sense).
+- **Names:** Kutsa's family `בני קוּטְסָה` (7.25.5a); no new name for §3.1. The verifier's Bharata regex (` bharat(?!i)`)
+  matches the verb *bharate* "is brought" (7.24.2c, escaped with `[היתר שם]`): narrow it (e.g. ` bharat(?:a|ah|asya|an|ebhyah|anam)\b`).
+
+### Lessons for the guidelines
+- A shared closing stanza (7.28–30.5) is best drafted once and copied by script into the later files, with only the
+  apparatus pointers changed: the identity check then passes by construction.
+- Run the lemma ↔ Hebrew map of one's own range against the whole corpus before the hand-off: it found eleven drifts
+  from the book's precedents in words that had looked new (`משתה־היחד`, `נתפסה`, `בכל עת` …).
+- A name regex on the folded text catches verb forms of the same letters (*bharate* / Bharata): test every name regex on
+  the commonest verbs of its root.
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)

@@ -112,7 +112,7 @@ rendered).
 | Viṣṇu (RV 7) | ` visnu` | `וִישְׁנוּ` |  | the god of the three strides (precedent KU 3.9b) |
 | Sudās (RV 7) | ` sudas(?!am\b)` | `סוּדָאס` |  | the Tṛtsu-Bharata king, Vasiṣṭha's patron (7.18, 7.33, 7.83) |
 | the Tṛtsus (RV 7) | ` trts` | `טְרִטְסוּ` |  | Sudās's clan |
-| the Bharatas (RV 7) | ` bharat(?!i)` | `בְּהַרַטָה` |  | Sudās's people (Agni Bhārata) |
+| the Bharatas (RV 7) | ` bharat(?:a\|ah\|asya\|aya\|anam\|am\|ebhyah\|aih\|an\|as)\b` | `בְּהַרַטָה` |  | Sudās's people (Agni Bhārata) |
 | Divodāsa (RV 7) | ` divodas` | `דִּיווֹדָאסָה` |  | Sudās's ancestor |
 | Paijavana (RV 7) | ` paijavan` | `פַּיְגַ'וַנָה` |  | Sudās's patronymic |
 | Agastya (RV 7) | ` agasty` | `אַגַסְטְיָה` |  | the seer (7.33) |
@@ -551,3 +551,8 @@ by sense (*daδuuā̊* `העושה`, Vd 2.20–21; *dātō* "I was made"). Chang
 - New (selection): √*rakṣ* `גונן על` (√*pā* keeps `שמר`; RV 10.14's `שומרים` a recorded split); √*vī* `רדף אחר` (part 1's 7.1.18c `ביקש` open for the harmonization); *havyavā́h* `מוביל־התקרובות`; *uśíj* `החפצים`; *mánman* `הרהור`; *ū́rj* `שובע`; *yáśas* `כבוד`; *śrī́* `תפארת`; *sudína* `ימים בהירים`; *amítra* `שאינם בני־רעות` (*śátru* `אויב`); *śaraṇá* `מקלט` (*śárman* `מחסה`); *vádhrivāc* `מסורסי־הדיבור`.
 - **Rulings after the part 2 review** (7 lines fixed): *āśú* `מהיר`, *ajirá* `זריז` (7.11.2a changed); 7.18.4b keeps the 3rd person (*sasr̥je*). Left for the harmonization: "distribute" (√*day*, *ví* √*dhā*, *ví* √*bhaj* `חילק`).
 - Tool fixes (2026-11-09): every form of בִּקֵּשׁ is exempt from the `קשת` gate (`EXEMPT_RX`); the `טוב` licence takes *su-* before a vowel (*svadhvará*); `tr`/`data` accept a bare stanza number.
+
+### 11.12 RV 7.20–7.31 (Book 7, translator 3 = part 3; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 3). Indra's epithets: *śatákratu* `בעל־מאה־הרצונות`, *śakrá* `יכול` (√*śak* `יכל`), *ádrivant* `בעל־האבן`, *suśiprá* `יפה־השפתיים`, *svadhā́vant* `בעל־הכוח־העצמי`, *vr̥trahán* `הורג־וְרִטְרָה`; *ójas* `חוסן`, *táviṣī* `תוקף`; *samád* `התגוששות`, *yúdh* `מלחמה`, *pŕ̥tanā* `קרב`, *samaryá* `מערכה`; √*su* `סחט`, *sávana* `סחיטה`, *ándhas* `עסיס`, *índu* `טיפה`; *turá* `נמרץ` (7.2.11b changed); *árvan* `סוס דוהר` (*átya* `סוס־מרוץ`); *manīṣín* `בעל־התבונה` (*vedhás* `נבון`); √*daśasy* `חנן`; √*han* `הרג`, but `ריסק` with forts or a weapon as object.
+- For the harmonization: √*san* / √*van* both `זכה`; *yúdh* `בקרב` in 7.18.7d; √*daśasy* `העניק` in 7.5.7d; *tū́ya* `מהר` beside *āśú* `מהיר`.
+- Tool fix: the Bharata regex no longer matches the verb *bharate*.
