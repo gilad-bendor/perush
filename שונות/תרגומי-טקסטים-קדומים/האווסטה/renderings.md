@@ -58,7 +58,7 @@ needs `[היתר שם: …]` in the entry when the Hebrew cannot keep the singul
 ### 3.1 The table
 | Source name | folded-source regex | Hebrew | ★ | note |
 |---|---|---|---|---|
-| Mazdā | ` mazd(?!aiiasn\|ayasn\|atha)` | `מַזְדָּה` |  | "Wise (one)": the god's name, alone or with Ahura, in either order (the Gāthās prefer *mazdā ahura*, the YH *ahura mazdā*); the Hebrew keeps the source's order |
+| Mazdā | ` mazd(?!aiiasn\|ayasn\|atha\|aangh\|angh)` | `מַזְדָּה` |  | "Wise (one)": the god's name, alone or with Ahura, in either order (the Gāthās prefer *mazdā ahura*, the YH *ahura mazdā*); the Hebrew keeps the source's order |
 | Ahura | ` ahur(?!a?angh)` | `אֲהוּרָה` |  | "Lord" (= Vedic *ásura*, the cousin corpus's `אַסוּרָה` + note); the plural *ahurā̊ŋhō* "the Lords" is a common noun (`הָאֲהוּרִים`, §5) |
 | Zaraϑuštra | ` zarathustr` | `זָרָתוּשְׁטְרָה` |  | (Vd 2's form) |
 | Spitāma | ` spitam` | `סְפִּיתָמָה` |  | Zaraϑuštra's clan; *spitamā̊ŋhō* "the Spitāmas" (`[היתר שם]` for `הַסְּפִּיתָמִים`) |
@@ -318,6 +318,24 @@ YH 35.2 = 41.7 (the latter is outside the scope).
   `הולדה`; *irixta* `אחרית`; *spāda* `צבא`; *vananā* `ניצחון`; *zrazdāiti* `אמונה`; *tušnā.maiti* `ההרהור השקט`;
   *daxšāra* `אות`; *ādišti* `ציווי`; *āskəti* `קרבה`; *yaōš dā-* `טיהר`; *hātąm* fem. `הקיימות`.
 
+### 11.4 Y 45–46 (T1, part 3b; merged 2026-11-09) and T1's hand-over
+- **Key lines:** Y 45.2 copies Y 30's two spirits (`שתי הרוחות הראשונות`, *spaniiah* `הנדיבה יותר`); F7 first at
+  45.8e; Y 46.1a `לאיזו ארץ אפנה? לאן אפנה ללכת?`; 46.2a–b `יודע אני מדוע אני חסר אונים, מַזְדָּה: / (כי) מעט צאן
+  לי, וכי מעט אנשים לי.`; F6 at 46.10e, 46.11d; *daēnā* `השקפה` throughout.
+- **New rows (accepted):** *parāhu* `הקיום שמעבר`; *gənā* `אשה` (as *nāirī*); *fšu* `צאן`; *uxšan* `שור?`; *miϑra*
+  "contract" `הסכם` (`בְּרִית` avoided); *afšman* / *anafšman* `שורת שיר` / `שאינן שורות`; *dugədar* `בת`, *brātar*
+  `אח`, *pitar* `אב`; *pāiiu* `שומר`; *sāstar* `מושל`; *spən* / *aspən* `השגשוג` / `הצרה`; *mimaγž-* `להאדיר`;
+  *daṇgra* `נבון`; *ąsta* `שנאה`; *nam-* `פנה`; *guš-* `האזין` / *sru-* `שמע` (29.8a, 31.18a, 31.19a have `שמע` for
+  *guš-*: to align at review); *ahūm.biš* `מרפא הקיום`; *aēnah* `עוולה`; *ąsa* `צד`; *rāna* `יריב`; *xᵛāϑra*
+  `רווחה`; *marc-* `השמיד`; *fra-vac-* `הכריז`; *sąh-* `הודיע`; *fra-sāh-* `לימד`; *garz-* `התלונן`; *yuj-* `רתם`;
+  *hac-* `הלך יחדיו`.
+- **Tool fixes after part 3b:** the מות gate no longer reads `בהמות` as ב + המות; the Mazdā regex skips the verb
+  *mazdā̊ŋhōdūm*.
+- **T1's working habits (for later translators):** draft in a scratch file and merge under the untouched base lines;
+  material in parentheses is gated too; the instrumental of Aša / Vohu Manah `ב־`; the *daēuua* note at the first
+  occurrence per file; at every *saōšiiaṇt* and eschatological term the later Jewish comparison as the scholars'
+  comparison; `אֲהוּרָה` may be vocalized everywhere; `לָעַד` vocalized.
+
 ## 12. Cross-corpus choices for the lead (Avestan words whose Vedic cognate the cousin corpus has not rendered yet)
 Each pair below gets one Hebrew under the cousin-language rule; this corpus's choice is given, for the lead to align
 with Round 7 run 1 (the Rigveda, Book 7) at the finalization:
@@ -329,4 +347,4 @@ with Round 7 run 1 (the Rigveda, Book 7) at the finalization:
 `אַנְשֵׁי חַיִל`; *garah* / *gír* `שִׁירָה`; *vahišta* / *vásiṣṭha*; *daēnā* `הַשְׁקָפָה` against Vd 2's `דָּת` (the
 loanword rule gives `דָּת` to *dāta*); *ahura* / *ásura*; *zaotar* / *hótar* `מְנַסֵּךְ`; *usig* / *uśíj*; Airiiaman
 / Aryaman; *ərəši* / *ŕ̥ṣi* `חוֹזֶה` and *zrazdā* / *śraddhā́* `אמונה` (both follow the cousin corpus);
-*miiazda* / *miyédha* `סעודת הזבח`. The translators add to this list (§11).
+*miiazda* / *miyédha* `סעודת הזבח`; *vərəϑrəm.jan* / *vr̥trahán* `הורג החוסם` (follows the cousin corpus's *vr̥tra*); *gənā* / *gnā́* `אשה`; *miϑra* "contract" `הסכם` / Vedic *mitrá*. The translators add to this list (§11).
