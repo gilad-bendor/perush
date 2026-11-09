@@ -1550,12 +1550,31 @@ annotated file and one intro per hymn; `build RV7.75-88` generates the clean fil
   *parāká* `מרחקים`; *vayúna* `מנהג`; *pátnī* "mistress" `גבירה` (7.34.20a `רעיות` "wives": a split by sense);
   *citrā́magha* `מבהיקת־השפע`; *ŕ̥ṣiṣṭuta* `משובחת־החוזים`; √*ruj* `ניפץ` (√*bhid* `בקע`); *usríya* `ורודה` (*usrá*
   `ורוד`); √*vāś* "bellow" `געה`. *jaráyantī* (5c) `מעירה` with Zurich (√*gr̥* caus.), Griffith's "consumer of our youth"
-  (√*jr̥̄*) in the note. *saúbhaga* `מזל טוב` with the gate licence of 7.3 / 7.21.
+  (√*jr̥̄*) in the note. *saúbhaga* `מזל טוב` with the gate licence of 7.3 / 7.21. *ápa* √*vr̥* "uncover" `חשף` (7.27.2d);
+  *ví* √*vr̥* "open wide" `פתח לרווחה` (7.9.2a; 7.79.1d, 4d).
+- **7.76–81, new words:** *viśvā́nara* (Savitṛ's epithet, not the name Vaiśvānara) `של כל הגברים`; *ámardhant*
+  `שאינו מזניח` (Jamison's active reading, 7.76.2b = 5d); *íṣkr̥ta* `מתוקן`; *bahulá* `מרובה` (*purú* / *bhū́ri* keep `רב`);
+  *satyámantra* `שמימרתו אמת`; *uṣarbúdh* `מתעורר־השחר`; *netrī́* `מנהיגה` (√*nī* `הנהיג`); *vā́japatnī*
+  `גבירת־הפרסים`; *yuvatí* `צעירה` (the feminine of *yúvan* `צעיר`; RV 10.18.10c `עלמה` and 7.1.6a `הנערה` older);
+  *rúśant* `זוהר`; √*śvit* `הלבין`; *híraṇyavarṇa* `זהוב־הצבע`; *sudŕ̥śīkasaṃdr̥ś* `שמראהו יפה לראות`, *sudŕ̥śīka* `יפה
+  לראות`; *ántivāma* `קרובת־הטוב` (gate licence: *vāmá*); *jyótiṣmant* `רב־האור`; *ví* √*bhā* participle *vibhātī́*
+  `זורח־לרווחה` (7.78's signature word); *práti* `לקראת` throughout 7.78 (its ring word) and in 7.80–81; *ukṣán* `שור`
+  (ŚB 1.2.3.6 *gó* `שׁוֹר`: a split between texts); *sám ā́* / *ví* √*vr̥t* caus. `גלגל`; *índratama* `האִינְדְּרָה
+  ביותר` (as *áṅgirastama*); *saní* `זכייה`; *sámanta* `סמוך`; *návya* `חדש`; *áhrayāṇa* `חסר־בושה` (as *áhraya*,
+  7.67.6b); *sūnára* `אדיב`; *nákṣatra* `כוכב`; *arcivánt* `בעל־השלהבות`; *vyúṣ* `הפצעה`; *vánanvant* `רב־החן (?)`;
+  *maṃhánā* `נדבה` (√*maṃh* `נדב`); *ratnabhā́j* `בעל־חלק־באוצר`; √*bhuj* 2 "enjoy (food)" `ניזון` (7.52.2c `נשלם על`
+  another sense); *vasutvaná* `קניין־טובות`; *codayitrī́* `דוחפת` (√*cud* `דחף`); *srídh* `כשלון`; *tilvilāy-* (hapax)
+  `הִתְדַּשֵּׁנָּה (?)` – not `פרה` (Gen 1:28).
+- **Recorded splits:** √*yat* `נאבק` (7.76.5b, "vie") / `התיישר` (7.79.2b, "line up"; 7.36.2d `מיישר`); *ūrvá* `מכלאה`
+  (7.16.7d) = *vrajá* `מכלאה` (for the final pass); *yajatá* `הראוי לזבח` and *yájatra* `ראוי לזבח` share one Hebrew
+  (precedents; the etymological figure of 7.75.7b kept); *ágra* `בתחילה` also where it means "in front" (7.80.2c).
+- **7.80.3a–c** copied from 7.41.7a–c (identical).
 
 ### Open decisions for the user
 
 ### Progress log
-- 7.75 drafted, filled, verified (0 problems).
+- 7.75–7.81 drafted hymn by hymn, each saved, filled and verified (0 problems) before the next; `tr` and Jamison read
+  after each draft; one change carried back (7.75.1c `הסירה` → `חשפה`, the precedent of 7.27.2d).
 
 ### The text on its own terms
 
@@ -1564,6 +1583,82 @@ annotated file and one intro per hymn; `build RV7.75-88` generates the clean fil
 ### Proposals for the shared renderings
 
 ### Lessons for the guidelines
+
+## Consistency pass, RV 7.1–7.74 (Round 7 run 1)
+
+A lemma → Hebrew map of parts 1–7 from the פירוק bullets (10,416 bullets; each lemma's own gloss and its rendering in the
+line, clustered by stem; scripts in the scratch folder `consistency/`), read against renderings §5.5, §11.10–§11.16 and
+the parts' Decisions. **52 `>` lines changed in 34 hymns** (with their פירוק and notes), 7 intros / 1 title aligned;
+`build RV7.1-74`, `verify RV7.1-74 --strict` 0 problems (the one listed repeat, 7.38.6b / 7.52.3b, differs by number as
+the source does), `check_bible_quotes.py` 0 problems on the touched files. The rule applied: the renderings' row, else
+the first and commonest Hebrew; one moved word where a binding row, a precedent (RV 10, 1.32) or the Avestan cognate rule
+(§11.12) holds the other.
+
+### Changes
+| Lemma | Old Hebrew | New Hebrew | Lines | Reason |
+|---|---|---|---|---|
+| *drúh* | `תרמית` | `שקר` | 7.16.8c | the Avestan cognate rule (§11.12); 7.59.8c, 7.61.5c |
+| *dyukṣá* | `שמימית` | `שוכנת־השמים` | 7.31.2b | *divyá* `שמימי`; 7.34.24b |
+| *yúdh* | `בקרב` | `במלחמה` | 7.18.7d | *pŕ̥tanā* `קרב`; 7.21.6d (§11.12) |
+| √*daśasy* | `העניק` | `חנן` | 7.5.7d | part 3's row (§11.12); √*rā* `העניק` |
+| *sarvátāti* | `כליל` | `שלמות` | 7.18.19b | the Avestan cognate rule; 7.57.7b |
+| *vára* | `משאלה` | `מבחר` | 7.54.3c, 7.59.2d | Book 7's first and commonest (7.1.4a, 5.2d, 6.6c, 65.4c, 70.5–6c); KU below |
+| √*vī* | `ביקש` | `רדף אחר` | 7.1.18c | §11.11 |
+| √*nī* | `הוליך` | `הנהיג` | 7.18.7c | the part 6 review's ruling (√*vah* `הוביל`) |
+| *ártha* (*nyarthá*) | `מטרה` | `יעד` (`אובדן־היעד`) | 7.18.9a | the precedent RV 10.18.4b; 7.63.4d |
+| *ādhrá* | `דל` | `חלש` | 7.41.2c | the first, 7.18.17a; `דל` is *amáti* `דלות`'s root |
+| *íḷā* (common noun) | `מנחת־חלב` | `רוויה` | 7.3.7b | the Avestan cognate rule, part 7 (7.64.2c, 65.4b); the goddess keeps `אִילָה` |
+| *śáśvant* | `התדירים` | `לאין ספור` | 7.1.3c | 7.18.18a, 32.27c |
+| *yahvá*, *yahvī́* | `נמרץ`, `נמרצות` | `תוסס`, `תוססות` | 7.6.5c, 8.2b, 56.22b, 70.3b | *turá* `נמרץ` (part 3's row, 8 lines; §11.12) |
+| *sudā́nu* | `טוב־המתנות` | `טוב־המתן` | 7.31.2a, 59.10c, 61.3b, 66.5b | *sudátra* keeps it (first, 7.8.3c); *dā́na* `מתן`; not `טוב־הנתינה` (Av. *hudā̊*) |
+| *jániman* | `תולדות` | `דורות` | 7.2.10d, 42.2d, 60.3d, 62.1b | *tánaya* `תולדה` (§11.10); *jánman* / *janúṣ* `לידה` |
+| *jánman* | `תולדות` | `לידות` | 7.10.2c | *jánman* `לידה` (the part 4 review; KU, AB) |
+| √*cud* | `דחף` | `דרבן` | 7.27.3d, 74.2b | √*nud* `דחף` (first, 7.18.16b); 7.32.15a |
+| √*kṣar* | `זרם` | `ניגר` | 7.34.2b | √*sru* `זרם` (1.32.14c) |
+| *árṇas* | `גל` | `משבר` (`מִשְׁבָּר`) | 7.18.5a, 60.4b, 69.7b | *ūrmí* `גל` (7.47; MBh 3.185); `נחשול` is *salilá*'s |
+| *śubhrá* | `מבריק` | `נאה` | 7.39.3b, 56.8a, 56.16c, 68.1a | √*dyut* `הבריק` (first, 7.8.4d; *vidyút* `ברק`); √*śubh* `התנאה`, *śúbh* `נוי`, *śóbhiṣṭha* `הנאים ביותר` |
+| *suvitá* | `רווחה` | `הליכה טובה` | 7.1.24a, 2.6d, 66.15c | *yós* `רווחה` (RV 10.15.4d; 7.35.1c, 69.5c); 7.35.1c's own word |
+| *yáti*, *yantár* | `מנהיג` | `מרסן` | 7.13.1d (and its title), 16.7c | √*nī* `הנהיג`; both of √*yam* `ריסן` |
+| √*iṣ* 1 | `הואץ`, `נדחף` | `הוזעק` | 7.33.13a, 73.3c | 7.39.1d, 43.1b; `האיץ` is √*sū*'s, `דחף` √*nud*'s |
+| *sahasrín* | `אלפי`, `בן־אלף` | `בעל־אלף` | 7.4.9d, 15.9c, 26.5c | 7.58.4b; *śatín* / *śatasvín* `בעל־מאות` |
+| *abhí* √*bhū* / √*as* | `היה עליון` | `התעלה על` | 7.21.6a, 48.2a, 48.3a, 56.24d | *paramá* `עליון` (§11.12) |
+| *éva* | `מהלך` | `נוהג` | 7.62.2b | the first, 7.6.6b |
+| *ámartya* | `בן־תמותה` | `בן תמותה` | 7.1.23b | *mártya* without the hyphen (12 lines; §11.16) |
+
+Intros aligned: 7.13 (title), 7.18, 7.26, 7.60, 7.62, 7.69, 7.73.
+
+### Splits kept (with the reason)
+- **By a binding row:** *jána* `עם` / `אנשים` / `איש` "by sense" (§5.1) – which also lets *jána* `עמים` share with
+  *carṣaṇí* `עמים` (§11.2): the lead may rule. *havyá* `תקרובת` (§11.10).
+- **Sense, homographs, morphology:** *vanús* `חומס` (7.21.9d, 25.3c) / `להוטים` (7.38.5a; "assailant" / "eager");
+  *ádri* `אבן` / 7.6.2a `סלע` (pressing stone / rock); *pū́rva* `קדמון` / `קודם` / 7.6.3d `ראשון` (ancient / prior);
+  *śáśvant* 7.19.1c `של כל` ("each"); √*vas* 7.8.3a `תזהיר` (transitive) beside *ví* √*vas* `הפציע`; the common nouns
+  and adjectives beside names (*mitrá* 7.18.10b `רעות`, *áditi* 7.52.1a, *étaśa* 7.62.2b, *bhága* `חלק`, *vásiṣṭha*
+  7.1.8b `הטוב ביותר`); homographs merged by the folding (*vándana* 2, √*hā*, √*gā* / √*gai* 7.31.1b, √*vid* 1 / 2,
+  *dyú* "day"); √*śak* desiderative `השתדל`; preverbs (*práti* √*muc* `עטה`, *prá* √*vac* `הכריז`, *pári* √*vr̥j* /
+  *paryetár* `עקף` / `עוקף`, √*ram* caus. `השהה`, the senses of √*r̥*).
+- **One root, two words:** *perú* / *pā́rya* `המעביר` (both √*pr̥* "carry across", `העביר`); *jñātí* `קרובים` /
+  *bándhu* `קרבה`; *śatín* / *śatasvín* `בעל־מאות` (one sense, two suffixes); *dūrá* `מרחוק` / *āré* `רחוק`; *tū́ya*
+  `מהר` (RV 10.10.8c) / *āśú* `מהיר`; *samrā́j* `מלך עליון` (a fixed epithet) beside *paramá* `עליון`.
+- **Open pairs left for the lead** (every free Hebrew collides): *janúṣ* / *jánman* `לידה` (`הולדה` is Av. *ząϑa*'s,
+  `תולדה` *tánaya*'s, `דורות` now *jániman*'s); √*ās* / √*sad* `ישב` (`חנה` is 1.32.15a *ávasita*'s, `שהה` √*ram*'s);
+  √*san* / √*van* `זכה` (the √*san* family is fixed: -*sā́* `זוכה`, -*sāti* `זכייה`; `קנה` ~ RV 10.34 *vittá* `קניין`,
+  `רכש` = *háya* 7.74.4c, `השיג` = √*aś*); "distribute": √*bhaj* (binding), √*day* (7.16.7d, 21.7c, 23.4d, 23.5c,
+  37.2d), *ví* √*dhā* `חילק` (`הקצה` = √*diś* 7.40.2c and *abhikṣattár* 7.21.8d); *vŕ̥ṣan* / *vr̥ṣabhá* `פר` (both
+  precedents: 1.32.7c, 10.10.10c); *bhū́ri* / *purú* `רב`; *gábhasti* / *hásta* `יד` (*pāṇí* `כף`); *nadī́* / *síndhu*
+  `נהר` (1.32.12d; MBh); √*rāj* (= *rā́jan*) / √*kṣā* `מלך` (1.32.15c).
+- **For the later parts:** √*cyu* (part 5's Decisions `הניע`) meets √*r̥* `הניע`; RV 10.17.3a has √*cyu* `הסיע`.
+  Translator 8's files (not edited here): 7.75.2a *suvitá* `לרווחה` → `להליכה טובה`; 7.75.6c *śubhrá* `המבריקה` →
+  `הנאה`; 7.77.4d √*cud* `דחפי` → `דרבני`.
+
+### Cross-corpus splits (for the lead)
+*vára* `מבחר` / KU 1.9b, 1.13b, 3.14a `משאלה`; *jána* `עם` / RV 10.14, KU `אנשים`; *sujániman* RV 10.18.6c `בעל הלידות
+הטובות` / *jániman* `דורות`; *sámr̥ti* 1.32.6c `התנגשות` / 7.60.10a `הסתערות`; *havyá* `תקרובת` / RV 10.14–16 `מנחה`;
+√*kr̥p* / √*nāth*, *sūktá* / *mántra*, *jaraṇā́* / *jarás* (§11.12); *puraetár* `ההולך־בראש` / AB `מנהיג`; *arbhaká*
+`הקטנטנים` / AB `קטנים`; *śáṃtama* `המאושר ביותר` / RV 10 `נעים`; *rohít* `אדום` / RV 10.15 *aruṇá* `האדומות`; *cárman*
+`עור` (7.63.1d) / *tvác* `עור` (ŚB 1.2.3, RV 10.16); *sūnŕ̥tā* `נדיבות` / KU `נועם דיבור`; *sámbhr̥ta* `מצוידים` / MBh;
+√*cyu* (above); the Avestan pairs kept as Book 7 fixed them (§11.12: *krátu*, *mántra*, *hótar*, *ukthá*, *vīrá*,
+*gír*, *kaví*, *uśíj*, *vr̥trahán*); *nírr̥ti* `אבדון` (open for the user).
 
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
