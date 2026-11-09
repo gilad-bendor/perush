@@ -13,7 +13,7 @@
 
 ### 1a
 `samídhā jātávedase`
-> בזרד, ליודע־הנולדים,
+> בזרד, לְיוֹדֵעַ־הַנּוֹלָדִים,
 - **פירוק:** `samídhā` – samídh- "זרד", יחסת הכלי ("בזרד"); `jātávedase` – jātávedas- "יודע הנולדים", יחסת הנתינה ("ליודע־הנולדים").
 - **תרגומים:** גריפית': "WITH reverence and with offered gifts serve we the God whose flame is bright"; גלדנר: "Mit Brennholz wollen wir dem Jātavedas … unter Verbeugung dem Agni aufwarten".
 - **הערות:** **הזרד** (*samídh*): ענף ההצתה שמוסיפים לאש – המנחה הראשונה והפשוטה ביותר (`זרד`, §11.10).
