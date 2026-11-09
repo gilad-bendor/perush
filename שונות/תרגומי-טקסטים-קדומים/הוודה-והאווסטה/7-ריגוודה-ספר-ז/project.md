@@ -1487,5 +1487,45 @@ generated the clean files.
 - **The preposition `אל` beside a *devá* line is flagged** (the `אֵל` trap): vocalize `אֶל` in such lines from the
   first draft.
 
+## Review of part 7 (RV 7.64–7.74; independent reviewer)
+All 344 pādas read against the Zurich text and morphology, each Hebrew line beside its Zurich tags and its פירוק
+glosses (a side-by-side script), with `tr` where a line was in doubt; every optative checked by script (all carry
+`נא`), every subjunctive, injunctive and *mā́* listed and checked; a script listing every lemma of the part that has more
+than one Hebrew in the corpus (`lexmap`), each judged. The draft is careful: moods, voice, case roles and the pāda
+boundaries are right almost everywhere; F6 and the repeated pādas are exact; the four tagged parallels (Eccl 11:7,
+Ps 90:10, Jonah 2:4, Ps 113:9) are sound and say "shared motif". **12 `>` lines changed** (and their פירוק / notes);
+3 intros and 6 annotated headers aligned with the lines.
+- **One Hebrew for two lemmas (1):** 7.66.6b *ádabdha* `שאין להונותה` → `שלא הוּנְתָה`: `שאין להונות־` is *ádābhya*'s
+  (7.66.17a, and earlier parts); *ádabdha* is `שלא הונה` (7.36.2c, 7.60.5d).
+- **Hebrew agreement (2):** 7.65.3b `שקשה לעבור אותן` → `אותם` (the dams, `סכרי`, masc.); 7.68.9c `יגדל אותו הפרה` →
+  `תגדל` (intro already had `תגדל`).
+- **Words that read wrongly (6):** 7.64.4c, 7.65.4b `הזו` (reads "this") → `הַזּוּ` (precedent 7.62); 7.64.5b = 7.65.5b
+  *ayāmi* (aor. passive) `הושט` (reads as the imperative) → `הוּשַׁט`; 7.69.2d `שמים את נסיעתכם` (reads "heaven") →
+  `שָׂמִים` (precedent 7.56, 7.60 `שָׂמִים`).
+- **Added outside `( )` (3):** 7.70.5c *práti prá yātam* `בואו לקראתנו` (no *naḥ*; *prá* untranslated) → `בואו קדימה
+  (אלינו)`; 7.74.3a *úpa bhūṣatam* `התייצבו אצלנו` → `התייצבו (אצלנו)`; 7.67.9c *bándhum* `את קרבתם` → `את הקרבה` (no
+  possessive in the pāda).
+- **Consistency (1):** 7.73.1d `בני־תמותה` → `בני תמותה` (renderings §5.1 / §11.8 `בן תמותה`, no hyphen; as 7.15.10b).
+- **Intros / headers quoting an earlier wording:** intro 7.68 `"מדברת"` → `"אומרת"` (4b); intro and header 7.71 and
+  header 7.72 the hyphenated epithets as in the lines (`בעלת־שלושת־המושבים, רבת־הטוב`; `בעלת־הפרות, בעלת־הסוסים`); intro
+  and header 7.74 `"התעצמו בעצמתם"` → `"בעצמתם שלהם התעצמו"` (6c); header 7.68 `"מעבר לקריאות של הזר"` → `"מעבר להזמנות
+  של האָרִי"` (2c), `"ער בתחילת השחרים"` → `"מתעורר …"` (9b), `בחלבה` → `בלשדיה`; header 7.69 `"כתאואים צמאים אל הברק"` →
+  `"כשני תאואים אל הברק, צמאים"` (6a); header 7.70 the place "prepared" → "proclaimed" (`שהוכרז`, *avāci* 1b), and the
+  quotation trimmed to the line's `"כמו על רחם"`.
+- **Checked and kept (defensible):** 7.64.3a / 7.65.2a *aryá* `האָרְיָה` (one folded lemma with *ā́rya*; RV 10.34.13d
+  `האציל` is the older split); 7.66.4b *ánāgāḥ* nom. sg. placed as in Zurich; 7.66.6b `בעלי` for the genitive of quality
+  (Jamison); 7.66.6c *īśate* dual with a plural subject (noted by the translator); 7.68.1c `המובאות לקראתכם` (*práti*-
+  participle, addressees of the stanza); 7.68.7c *parṣat* future (subjunctive; Geldner past); 7.70.3a *dadhā́the* past;
+  7.73.3d `לקראתכם` (*vām* in 3c); the recorded open items (*járatam*, 7.68.5b, *vásiṣṭha*) left as the translator has
+  them.
+- `build RV7.64-74`; `verify RV7.64-74 --strict`: 0 problems, 0 repeated-line differences; `check_bible_quotes.py` on the
+  33 annotated, intro and generated files: 0 problems.
+- **For the coordinator:**
+  - `build`'s book-wide check lists 2 repeated-line differences outside this part (7.38.6b `מתחנן` / 7.52.3b `מתחננים`:
+    number change, not touched).
+  - Older one-Hebrew-for-two-lemmas pairs met here, left as the precedents have them: *vára* 2 `מבחר` (Book 7) / `משאלה`
+    (7.54.3c, 7.59.2d, KU); *sámbhr̥ta* `מצוידים` (7.73.4b) / MBH *yuj* `מצויד`; *amŕ̥ta*-type hyphenation `בזה שאינו
+    בן־תמותה` in 7.1.23b (the only hyphenated copy left).
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
