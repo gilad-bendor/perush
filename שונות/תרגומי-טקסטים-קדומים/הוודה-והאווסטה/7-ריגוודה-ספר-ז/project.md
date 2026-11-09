@@ -1282,5 +1282,47 @@ RV7.56-63` generated the clean files.
 - **A Dvipadā Virāj hymn has two pādas per stanza in the base**, though it reads as four short lines: count the Zurich
   pādas before cutting the Hebrew.
 
+## Review of part 6 (RV 7.56–7.63; independent reviewer)
+All 299 pādas read against the Zurich text and morphology (`data`), each Hebrew line beside its Zurich tags and its
+פירוק segments (a side-by-side script), with `tr` and Jamison where a line was in doubt; every gated word of the part
+listed with its source token (all licensed by their own word: *su-*, *bhadrá*, *vásu*, *vasavyà*, *vā́ta*, *vāyú*,
+*támas*, *puruṣátā*, *dyā́vābhū́mī*, *védi*, *jīváse*); a script listing every Hebrew word of the part that another lemma
+also has in the corpus. The draft is careful: moods (subjunctive → future, *mā́* + injunctive → `אַל`, imperatives),
+voice and the pāda boundaries are right almost everywhere, F6 and the repeated pādas are exact. **Every hymn's intro
+exists and its section was complete** (the quota stop lost nothing), but **7 intros and 4 annotated headers quoted or
+described lines in a form the lines no longer have** (the pass (b) changes were not carried into them). **9 lines
+changed** (and their פירוק / notes).
+- **One Hebrew for two lemmas (3):** 7.59.1b, 7.60.6d, 7.60.7b √*nī* `מובילים` → `מנהיגים`: part 3 fixed √*nī* `הנהיג`
+  ("√*vah* keeps `הוביל`"), and √*vah* is `מובילות` in 7.60.3b, the same hymn. The Proposals row "√*nī* `הוביל`" is
+  superseded; intro and header 7.60 aligned.
+- **Mood (2):** 7.59.8c *mucīṣṭa* (precative) `יעטה` → `יעטה נא`; 7.62.4a *trā́sīthām* (optative) `חַלְּצוּ` →
+  `חַלְּצוּ נא` (renderings §4; the part 5 review's *dadīran*).
+- **A word that reads wrongly (2):** 7.56.6a `בנוי` (reads "built") → `בְּנוֹי` (intro too); 7.60.2b *ubhé* (fem. dual:
+  the two world-halves) `על שניהם` – read as Mitra and Varuṇa, addressed in 2a – → `על שתי (המחצות)`.
+- **Added outside `( )` (2):** 7.59.4c *abhí … ā́vart* `אלינו פנה` → `(אלינו) פנה` (no *naḥ* in the pāda); 7.61.4b
+  *śúṣmaḥ* `סערם` → `הסער (שלהם)`.
+- **Intros / headers aligned with the lines:** 7.56 `מנחה "צחה"` → `טקס "צח"` (*havyá* / *adhvará*, not *havís*); 7.57
+  `"קישוט אחד"` → `"קישוט משותף"` (3d, changed in pass (b)); 7.59 `"כאווזים כהי־גב"` → `"אווזים כהי־הגב"` (7b has no
+  "like"); 7.60 and 7.61 the sun feminine → masculine, as in the lines (`רתם`, `סוקר`), and 7.60's sun "yoked to" the
+  mares → "having yoked" them (3a); 7.61 the unblinking guardians are the two gods (*rákṣamāṇā*, dual), not the spies;
+  `אות גלוי / מראה מתעה` → `"מבהיק" / "מראה־פלא"` (5b), `ירחיב` → `"יעביר קדימה"` (4d), header `בלי בנים` → `"בלי
+  גיבורים"`; 7.62 `ויתנו שם טוב` → `וישמיעו את שמם` (5c); 7.63 "`עולה` opens the first three stanzas" → the first two
+  (3a opens *vibhrā́jamāna*; *úd* in 3b, 4a), the sun "yoked to Etaśa" → Etaśa draws the wheel (2d), `מלאכתם` →
+  `מפעליהם` (*ápas*, as the line; `מלאכה` would add a Gen 2:2 echo the line does not have), header `גלגל הזמן` → `הגלגל המשותף`.
+- **Checked and kept (defensible):** 7.58.3d *tireta* 3rd sg. middle (Jamison; recorded); 7.61.1a the elliptic dual
+  `וַרוּנָה` (noted); 7.61.3c *dadhāthe* past (Griffith, Geldner, Renou); 7.62.2a *úd gāḥ* past beside 2c *vocaḥ* future
+  (Geldner, Renou, Elizarenkova); 7.60.8c the supplied `(אנו)`; 7.60.9a *yajeta* as a rule (`יסלק`, the priest's task:
+  Geldner "soll"); 7.56.24c *tárema* in a relative clause without `נא`; 7.59.1a *idám-idam* and 11a *ihéha* both `כאן
+  וכאן` (one sense).
+- `build RV7.56-63`; `verify RV7.56-63 --strict`: 0 problems, 0 repeated-line differences; `check_bible_quotes.py` on the
+  24 annotated, intro and generated files: 0 problems. The two tagged parallels (Prov 15:3, Ps 104:23) are sound and say
+  "shared motif".
+- **For the coordinator:**
+  - The next part's 7.64.3b has √*nī* `יובילו` (not touched: another translator's file) – `הנהיג` by part 3.
+  - Older one-Hebrew-for-two-lemmas pairs met here, left as the precedents have them: *árṇas* `גל` (7.18.5a, 7.60.4b) /
+    *ūrmí* `גל` (7.47); √*r̥* `הניע` (7.2.1b, 7.8.3b, 7.61.2b) / √*cyu* `הניע`; *janúṣ* `לידה` (7.4.1c, 7.56.2a,
+    7.58.2a) / *jánman* `לידה` (7.33.10c, the part 4 review); *śubhrá* `מבריק` (7.39.3b, 7.56.8a) / √*dyut* `מבריק`
+    (7.8.4d); √*rad* `חפר` (7.60.4c, 7.62.3a) / ŚB *khan* `חפר`.
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
