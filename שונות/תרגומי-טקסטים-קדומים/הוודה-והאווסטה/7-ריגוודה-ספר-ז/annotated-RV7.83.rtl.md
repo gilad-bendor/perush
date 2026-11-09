@@ -38,7 +38,7 @@
 
 ### 2a
 `yátrā náraḥ samáyante kr̥tádhvajo`
-> (שם) אשר הגברים ייפגשו, מקימי־הדגל,
+> "(שם) אשר הגברים ייפגשו, מקימי־הדגל,
 - **פירוק:** `yátra` – yátra "אשר" ("(שם) אשר"); `náraḥ` – nár- "גבר", רבים נושא ("הגברים"); `samáyante` – √i 2 "נפגש", הווה (סוביונקטיב) בינוני 3 רבים, עם *sám* ("ייפגשו"); `kr̥tádhvajaḥ` – kr̥tádhvaj- "מקים הדגל", רבים נושא ("מקימי־הדגל").
 - **תרגומים:** גריפית': "Where heroes come together with their banners raised, in the encounter where is naught for us to love, Where all things that behold the light are terrified, there did ye comfort us, O Indra-Varuṇa."; גלדנר: "in der Schlacht, wo nichts Liebes geschieht … in dieser seid unsere Verteidiger"; ג'מיסון: *samáyante* הוא במקורו סוביונקטיב ("יתנגשו"), ובתים 2–3 הם המשך הדיבור המצוטט (גלדנר).
 - **הערות:** *sám* √*i* "התכנס, נפגש (בקרב)" (`נפגש`); *kr̥tádhvaj* "שהקימו דגל" (חדש: `מקים־הדגל`).
@@ -116,10 +116,10 @@
 
 ### 5a
 `índrāvaruṇāv abhy ā́ tapanti mā-`
-> אִינְדְּרָה וְוַרוּנָה, לוהטות עליי
+> "אִינְדְּרָה וְוַרוּנָה, לוהטות עליי
 - **פירוק:** `índrāvaruṇau` – índrāváruṇa- "אינדרה וורונה", זוגי קריאה ("אִינְדְּרָה וְוַרוּנָה"); `abhí` – abhí "אל", תחילית ("–"); `ā́` – ā́ "הנה", תחילית ("–"); `tapanti` – √tap "להט", הווה 3 רבים ("לוהטות"); `mā` – ahám "אני", יחסת המושא ("עליי").
 - **תרגומים:** גריפית': "O Indra-Varuṇa, the wickedness of foes and mine assailants' hatred sorely trouble me. Ye Twain are Lords of riches both of earth and heaven: so grant to us your aid on the decisive day."; גלדנר: "so stehet nun am entscheidenden Tage bei!"; ג'מיסון: "הטוב של שני (הצדדים)", כבז 82.4c.
-- **הערות:** *abhí ā́* √*tap* `להט על` (renderings §11.5: √*tap* `להט`).
+- **הערות:** *abhí ā́* √*tap* `להט על` (renderings §11.5: √*tap* `להט`). בתים 5–6ab הם שוב דיבור מצוטט בתוך הסיפור (גלדנר; ג'מיסון: "אולי הפתרון הטוב ביותר"), והסיפור חוזר ב־6cd – כמו 1cd ו־2–3.
 
 ### 5b
 `-aghā́ny aryó vanúṣām árātayaḥ`
@@ -148,7 +148,7 @@
 
 ### 6b
 `índraṃ ca vásvo váruṇaṃ ca sātáye`
-> לאִינְדְּרָה וגם לוַרוּנָה – לזכייה בטוב –
+> לאִינְדְּרָה וגם לוַרוּנָה – לזכייה בטוב" –
 - **פירוק:** `índram` – índra- "אינדרה", יחסת המושא ("לאִינְדְּרָה"); `ca` – ca "וגם" ("–"); `vásvaḥ` – vásu- "טוב", נייטרי יחסת הקניין ("בטוב"); `váruṇam` – váruṇa- "ורונה", יחסת המושא ("לוַרוּנָה"); `ca` – ca "וגם" ("וגם"); `sātáye` – sātí- "זכייה", נקבה יחסת הנתינה ("לזכייה").
 - **הערות:** *sātí* `זכייה`.
 

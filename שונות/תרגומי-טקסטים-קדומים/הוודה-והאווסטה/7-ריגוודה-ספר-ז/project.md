@@ -1684,7 +1684,7 @@ annotated file and one intro per hymn; `build RV7.75-88` generated the clean fil
 ### Key parallels
 - 7.86.3a [equivalent] Job 13:23 – the sufferer asks God to make known his offense (shared motif; Vasiṣṭha does not claim
   innocence, he seeks to know in order to be released).
-- 7.86.4d [equivalent] Ps 32:5 – acknowledging the offense before the god as the way to its removal (shared motif; the
+- 7.86.4d [divergence] Ps 32:5 (changed by the review) – acknowledging the offense before the god as the way to its removal (shared motif; the
   Sanskrit has the bow, not a confession).
 - 7.86.5a [equivalent] Ps 79:8 (and Lam 5:7) – the offense of the fathers resting on the sons (shared motif).
 - 7.86.6b [equivalent] Ps 19:13 – offense without intent or knowledge (shared motif; here external forces: drink, anger,
@@ -1796,6 +1796,92 @@ Intros aligned: 7.13 (title), 7.18, 7.26, 7.60, 7.62, 7.69, 7.73.
 `עור` (7.63.1d) / *tvác* `עור` (ŚB 1.2.3, RV 10.16); *sūnŕ̥tā* `נדיבות` / KU `נועם דיבור`; *sámbhr̥ta* `מצוידים` / MBh;
 √*cyu* (above); the Avestan pairs kept as Book 7 fixed them (§11.12: *krátu*, *mántra*, *hótar*, *ukthá*, *vīrá*,
 *gír*, *kaví*, *uśíj*, *vr̥trahán*); *nírr̥ti* `אבדון` (open for the user).
+
+## RV7.89–7.97 (part 9: Varuṇa 7.89; Vāyu and Indra–Vāyu 7.90–92; Indra–Agni 7.93–94; Sarasvatī and Sarasvant 7.95–96; Indra and Bṛhaspati 7.97; translator 9, Round 7 run 1)
+
+### Scope
+RV 7.89–7.97: 9 hymns, 246 pādas. One annotated file and one intro per hymn (drafting in progress; this section is
+written as I go).
+
+### Sources consulted
+- Base: VedaWeb Zurich text and morphology (`data`); `freq RV7.89-97`, `lexmap`, `grep`; part 8's spec assembler
+  (`gen.py`) and look-up script (`lk.py`), copied to the scratch folder `p9/`.
+- After drafting each hymn: `tr` (Griffith, Grassmann, Geldner, Renou) and Jamison's commentary
+  (`VII.56–104-9-25-26.txt`).
+- Bible verses printed before quoting: Job 4:19; Ps 63:2; Ps 19:13.
+
+### Decisions
+- **7.89 (the last Varuṇa hymn):** part 8's Varuṇa vocabulary kept (*énas* `עוון`, √*mr̥ḍ* `רחם`, *ácitti*
+  `חוסר־הבחנה`); no word of the `חטא` family, no `סליחה` / `מחילה` (Griffith's "spare me", Geldner's "verzeih" named in
+  the note as theirs). F7 `רחם, טוב־השלטון, רחם` ×4 (1c–4c). New: *mr̥nmáya* `(בית) החומר` (with *gr̥há*
+  `בית` moved from 1b to 1a for the Hebrew order; the move is noted in 1b's פירוק); *dīnátā* `חולשה`; *samaha*
+  `איכשהו`; *pratīpá* `נגד (הזרם)`; *tŕ̥ṣṇā* `צמא`; √*dham* `נפוח`; *abhidrohá* `שקר` (the √*druh* family, Avestan
+  cognate rule); √*car* "practise" `הלך (ב־)` ("walk in deceit"); *dhárman* `יסוד` (RV 10.90.16b); √*yup* `מחק`
+  (RV 10.18.2a); *sú* in the prohibitive *mó ṣú* `נא`.
+
+### Open decisions for the user
+- 7.89.1a *mr̥nmáya gr̥há* `בית החומר` [equivalent, Job 4:19 `בָתֵּי-חֹמֶר`]: the natural Hebrew for "house of clay", and
+  the Bible's phrase for the mortal body; kept and tagged (no `עפר`: reserved for *pāṃsú*).
+
+### Progress log
+- 7.89 drafted, `fill`, `verify RV7.89`: 0 problems.
+
+### The text on its own terms
+- **Varuṇa's illness** (7.89.2–4): the punished man is swollen "like a blown-up skin bag", walks "as if jerking", and is
+  thirsty "standing in the midst of the waters" – the dropsy that the lord of the waters sends (Jamison).
+
+### Key parallels
+- 7.89.1a [equivalent] Job 4:19 – "the house of clay" as the frail mortal body / the grave (shared motif).
+
+### Proposals for the shared renderings
+- (in progress)
+
+### Lessons for the guidelines
+- (in progress)
+
+## Review of part 8 (RV 7.75–7.88; independent reviewer)
+All 332 pādas read against the Zurich text and morphology, each Hebrew line beside its Zurich tags and its פירוק
+glosses (side-by-side script); every optative, subjunctive, injunctive, imperative and every *ná* / *mā́* / *caná* listed
+by script and checked; the lemmas of the part with more than one Hebrew in the corpus (`lexmap_dict`) skimmed; the
+intros' quotations checked against the lines by script. **7.86–88 word by word against the Sanskrit and Jamison's
+commentary** (SJ on JPB, incl. her readings of 7.86.3–7, 7.87.1–4, 7.83.2–6, 7.81.4): the lines are faithful – the
+grammatical person, the moods, *ā́gas* `אשמה` / *énas* `עוון` / *drugdhá* `שקר`, √*mr̥ḍ* `רחם`; no word of the חטא
+family, `פשע`, `סליחה`, `וידוי` or `חרון` in a line. The slips were in the notes and the apparatus of 7.86 (biblical
+penitential language: "מודה", "מחילה", "מזמורי התשובה") and in a few lines of 7.81–88. **6 `>` lines changed** (and
+their פירוק), 7 notes / tags in 7.86 and 7.83, 5 intros aligned. F6, the repeated pādas (7.80.3 = 7.41.7; 7.82.10 =
+7.83.10; 7.84.5 = 7.85.5) and the names are exact; the coordinator's rulings (§11.17–§11.18) are applied throughout.
+- **Case role (1):** 7.81.1c *cákṣase* (dative, "for sight") `(מעל) העין` → `– לעין` (the note already said "בשביל העין";
+  intro aligned).
+- **Mood (1):** 7.84.2c *vr̥jyāḥ* (aorist optative = precative, a wish) `יעקוף` → `יעקוף נא` (renderings §4: optative →
+  `נא`; header and intro aligned).
+- **A reading that misleads (1):** 7.88.2b `חשבתי את פני אַגְנִי (לפני) וַרוּנָה` (reads "before Varuṇa") → `(כפני)
+  וַרוּנָה` ("I thought Agni's face (to be the face) of Varuṇa"; intro aligned).
+- **Quoted battle speech of 7.83 completed (3 lines):** the Decision sets 1cd, 2–3 and 5–6ab in `" "`, but 2a lacked the
+  opening mark (3d had the closing one) and 5–6ab had none: `"` added at 2a, 5a and after 6b `לזכייה בטוב"` (Geldner;
+  Jamison ad 2, 3, 5: "may be the best solution"); a note in 5a.
+- **Biblical idiom in the notes of 7.86 (the brief's special care):** 1a Varuṇa "משחרר את מי שמודה" → "את מי שמשתחווה
+  לו" (the Sanskrit has the bow, *námas*, not a confession), and "מזמוריו נקראו תמיד לצד מזמורי התשובה בתנ"ך" → "הושוו
+  פעמים רבות למזמורי התהלים" (an overclaim and a biblical genre label; intro: "נקרא תמיד לצד מזמורי התשובה (תהלים לב,
+  נא; איוב)" → "הושווה פעמים רבות למזמורי התהלים ולאיוב (תהלים לב, לח; איוב יג)", the verses actually tagged); 3a
+  "כדי לבקש מחילה (4d)" → "כדי להשתחרר ממנו (4d–5)" (no forgiveness in the Sanskrit: the god "releases", *áva* √*sr̥j*);
+  4d note "מי שיודע את עוונו ומשתחווה – יוצא ממנו חף" → "מי שמשתחווה לאל – יוצא ממנו חף, גם בלי לדעת מה עוונו" (the
+  poet does *not* know his offense: that is the hymn).
+- **Parallel tags (2):** 7.86.4d Ps 32:5 `[equivalent]` → `[divergence]` (the note itself says the Sanskrit has no
+  confession and no `אוֹדֶה`: the concept differs, only the motif "turning to the god to be rid of the offense" is shared;
+  the gloss "הכרת העוון ... כתנאי למחילה" → "הפנייה אל האל כדרך להיפטר מן העוון"); 7.86.3d Ps 38:4: the link "המורגש
+  בגוף (כאן 'גופי שלי', 2a)" removed (2a is the poet's self-dialogue, not a bodily pain) and the difference stated.
+  Every other tagged parallel checked (Gen 1:4; Song 6:10; Ps 104:2, 22–23; Isa 66:13; 1 Sam 5:12; Ps 20:8; Ps 79:8 ×2;
+  Job 13:23, 10:2; Ps 116:16 ×2; Lam 5:7; Ps 19:13, 19:6; Ps 18:16; Zech 4:10; Ps 130:3–4; Jer 1:5; Ps 89:50; Ps 107:14)
+  and sound; `check_bible_quotes.py` on the 42 files: 0 problems.
+- **Intro wording (1 more):** intro 7.85 `שיר "שחזותו חמאה מזוקקת"` → `תבונה "שחזותה ..."` (as the line, 1c).
+- **Checked and kept (defensible, documented):** 7.81.4c `בעלי־חלק־באוצר` (plural nominative with Jamison / Oldenberg /
+  Renou against Zurich's gen. sg.; the פירוק now says so); 7.87.1b `(זינקו)` intransitive (Jamison's preferred reading,
+  against Zurich's acc.); 7.83.2a `ייפגשו` (Jamison: properly a subjunctive); 7.86.2c optative in a question without
+  `נא` (potential); 7.86.6a `לא היה זה` (past supplied, as Jamison); 7.76.3b *prācī́nam* (Jamison).
+- **For the coordinator:** the `## Parallels index` at the end of this file is empty (the generator has not been run);
+  the part 8 "Key parallels" list above still says 7.86.4d [equivalent] – now [divergence]. The tilvilāy- coinage
+  `הִתְדַּשֵּׁנָּה (?)` and *dāsá* `עבד` [equivalent, Ps 116:16] stay open for the user, as the translator wrote.
+- `build RV7.75-88`; `verify RV7.75-88 --strict`: 0 problems, 0 repeated-line differences.
 
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
