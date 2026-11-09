@@ -55,6 +55,18 @@ let fsSnapshot = new Set<string>();
 let htmlMirror: HtmlMirror | null = null;
 let pdfMirror: PdfMirror | null = null;
 
+// A stop signal ends the server. Node does that by itself - until someone listens for the signal, and Playwright does
+// while its Chromium is up (the PDF mirror's): it closes the browser and leaves the process running, so `npm run dev`
+// (`node --watch`) waited for ever on a restart, "Waiting for graceful termination...". So the server exits itself,
+// after closing Chromium - or without, should that take long. (Not `handleSIGTERM: false` in pdf-mirror.ts: its code
+// is in every PDF's stamp, and any edit to it reprints them all.)
+for (const signal of ["SIGTERM", "SIGINT", "SIGHUP"] as const) {
+    process.once(signal, () => {
+        setTimeout(() => process.exit(0), 3000).unref();
+        void (pdfMirror?.close() ?? Promise.resolve()).catch(() => {}).finally(() => process.exit(0));
+    });
+}
+
 /** How long to let events settle before rescanning - one rescan for a burst of them. */
 const RESCAN_DEBOUNCE_MS = 150;
 /** The safety net, for events the watcher never delivered. */

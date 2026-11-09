@@ -1,8 +1,8 @@
 import { SearchQuery, closeSearchPanel, findNext, findPrevious, getSearchQuery, replaceAll, replaceNext, search, selectMatches, setSearchQuery } from "@codemirror/search"
 import { EditorView, basicSetup } from 'codemirror';
-import { keymap, ViewPlugin, Decoration, MatchDecorator, Direction, gutterLineClass, GutterMarker, runScopeHandlers } from '@codemirror/view';
+import { keymap, ViewPlugin, Decoration, MatchDecorator, Direction, gutterLineClass, GutterMarker, runScopeHandlers, showTooltip } from '@codemirror/view';
 import { markdown, insertNewlineContinueMarkupCommand, deleteMarkupBackward } from '@codemirror/lang-markdown';
-import { Compartment, EditorSelection, EditorState, Facet, RangeSetBuilder, Prec, StateField, Transaction } from '@codemirror/state';
+import { Compartment, EditorSelection, EditorState, Facet, RangeSetBuilder, Prec, StateEffect, StateField, Transaction } from '@codemirror/state';
 import { indentWithTab, isolateHistory } from '@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle, syntaxTree } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
@@ -12,6 +12,7 @@ import { consoleError, consoleWarn, consoleInfo, consoleLog, consoleGroup, conso
 import { TabData } from "./tab-data.js";
 import { editTableAtCursor, formatTables, isAiGeneratedFile, isRtlFile, isTableRuleLine, minimalReplacement, setHeaderAtCursor } from "./tables.js";
 import { headingLineOfAnchor, markdownLinkAt, markdownLinksInLine, resolveMarkdownLink } from "./links.js";
+import { footnoteAt, parseFootnotes, referenceNumeral, referencesTo, unreferencedDefinitions } from "./footnotes.js";
 import { isVoidPseudoTag } from "./pseudo-tags.js";
 import { hebrewSearchPattern } from "./hebrew-search.js";
 import { EditLocations } from "./edit-locations.js";
@@ -543,6 +544,7 @@ export class MarkdownEditor {
             markdownHighlighting,
             listLinePlugin,
             markdownLinkPlugin,
+            footnotesExtension(),
             inlineCodeEmphasisPlugin,
             todoPlugin,
             tableLinePlugin,
@@ -2096,6 +2098,253 @@ const markdownLinkPlugin = ViewPlugin.fromClass(
         decorations: (v) => v.decorations
     },
 );
+
+// Footnotes - `text[^a]` and `[^a]: the note` (footnotes.js). A reference and a definition's marker are coloured
+// like a link, and followed like one, by Cmd+click (Ctrl+click off macOS): a reference selects its note's text, a
+// marker its note's first reference - each scrolled to the middle of the view. Hovering over the marker of a note
+// referred to more than once shows a bar of its references, ➀ ➁ ➂ ..., any of which a click selects.
+//
+// The whole text is parsed on every change - a StateField, not a plugin of the visible lines as markdownLinkPlugin
+// is: a reference and its note are seldom on the screen together.
+
+/**
+ * @typedef {import('./footnotes.js').Footnotes} Footnotes
+ * @typedef {import('./footnotes.js').FootnoteReference} FootnoteReference
+ * @typedef {import('./footnotes.js').FootnoteDefinition} FootnoteDefinition
+ */
+
+const footnoteRefDecoration = Decoration.mark({ class: 'cm-footnote-ref' });
+const footnoteDefDecoration = Decoration.mark({ class: 'cm-footnote-def' });
+/** A reference to a note nothing defines, and a note nothing refers to - mistakes, in red. */
+const footnoteUndefinedDecoration = Decoration.mark({ class: 'cm-footnote-undefined' });
+const footnoteUnreferencedDecoration = Decoration.mark({ class: 'cm-footnote-unreferenced' });
+
+/**
+ * @param {string} text
+ * @returns {{ footnotes: Footnotes, decorations: import('@codemirror/view').DecorationSet }}
+ */
+function footnotesOf(text) {
+    const footnotes = parseFootnotes(text);
+    const unreferenced = new Set(unreferencedDefinitions(footnotes));
+    const ranges = [
+        ...footnotes.references.map(r => footnoteRefDecoration.range(r.from, r.to)),
+        ...footnotes.undefinedReferences.map(r => footnoteUndefinedDecoration.range(r.from, r.to)),
+        ...[...footnotes.definitions.values()].map(d =>
+            (unreferenced.has(d) ? footnoteUnreferencedDecoration : footnoteDefDecoration).range(d.markerFrom, d.markerTo)),
+    ];
+    return { footnotes, decorations: Decoration.set(ranges, true) };
+}
+
+const footnotesField = StateField.define({
+    create: (state) => footnotesOf(state.doc.toString()),
+    update: (value, tr) => tr.docChanged ? footnotesOf(tr.state.doc.toString()) : value,
+    provide: (field) => EditorView.decorations.from(field, (value) => value.decorations),
+});
+
+/**
+ * Selects [from, to), scrolled to the middle of the view - where a footnote link leads.
+ *
+ * @param {EditorView} view
+ * @param {number} from
+ * @param {number} to
+ */
+function selectFootnoteRange(view, from, to) {
+    view.dispatch({
+        selection: EditorSelection.single(from, to),
+        effects: EditorView.scrollIntoView(from, { y: 'center' }),
+        userEvent: 'select',
+    });
+    view.focus();
+}
+
+/**
+ * The footnote under the pointer, as painted: a reference, or a definition's marker.
+ *
+ * @param {EditorView} view
+ * @param {MouseEvent} event
+ * @returns {{ reference: FootnoteReference } | { definition: FootnoteDefinition } | null}
+ */
+function footnoteAtCoords(view, event) {
+    const pos = view.posAtCoords({ x: event.clientX, y: event.clientY });
+    if (pos === null) return null;
+    const { footnotes } = view.state.field(footnotesField);
+    // A click on a character's far half lands after it - which for the last one is the end of the footnote.
+    const hit = footnoteAt(footnotes, pos) ?? footnoteAt(footnotes, pos - 1);
+    if (!hit) return null;
+    const [from, to] = 'reference' in hit ? [hit.reference.from, hit.reference.to] : [hit.definition.markerFrom, hit.definition.markerTo];
+    return coordsWithinRange(view, from, to, event) ? hit : null;
+}
+
+/**
+ * The note whose bar of references is up - its marker's place - or null. Set by footnoteBarPlugin.
+ *
+ * @type {import('@codemirror/state').StateEffectType<{ label: string, markerFrom: number, markerTo: number } | null>}
+ */
+const setFootnoteBar = StateEffect.define();
+
+// The bar is a tooltip of its own, not a hoverTooltip(): CodeMirror hides a tooltip whose anchor is out of the
+// scroller's visible area, and in an RTL line the marker's start is the line's right edge - which CodeMirror takes for
+// the gutter's side, and leaves out of that area. `clip: false` turns the test off, and a hover tooltip loses it on the
+// way (the hover tooltips' host does not pass it on).
+const footnoteBarField = StateField.define({
+    create: () => /** @type {{ label: string, markerFrom: number, markerTo: number } | null} */ (null),
+    update(value, tr) {
+        for (const effect of tr.effects) if (effect.is(setFootnoteBar)) value = effect.value;
+        return value && tr.docChanged ? null : value;
+    },
+    provide: (field) => showTooltip.from(field, (bar) => bar && {
+        pos: bar.markerFrom,
+        end: bar.markerTo,
+        above: true,
+        clip: false,
+        create: (view) => footnoteBarView(view, bar.label),
+    }),
+});
+
+/**
+ * The bar of a note's references: ➀ ➁ ➂ ..., each selecting its reference on a click.
+ *
+ * @param {EditorView} view
+ * @param {string} label
+ * @returns {import('@codemirror/view').TooltipView}
+ */
+function footnoteBarView(view, label) {
+    const references = referencesTo(view.state.field(footnotesField).footnotes, label);
+    const dom = document.createElement('div');
+    dom.className = 'cm-footnote-refs';
+    dom.dir = view.contentDOM.dir || 'ltr';
+    references.forEach((reference, i) => {
+        const button = dom.appendChild(document.createElement('button'));
+        button.type = 'button';
+        button.textContent = referenceNumeral(i + 1);
+        const line = view.state.doc.lineAt(reference.from);
+        button.title = `${line.number}: ${line.text.trim().slice(0, 80)}`;
+        // Keeps the focus in the editor.
+        button.addEventListener('mousedown', (event) => event.preventDefault());
+        button.addEventListener('click', () => {
+            // Read again: the text may have changed while the bar was up.
+            const now = referencesTo(view.state.field(footnotesField).footnotes, label)[i];
+            if (now) selectFootnoteRange(view, now.from, now.to);
+        });
+    });
+    // The pointer on its way from the marker to the bar, or on the bar, keeps it up.
+    const plugin = view.plugin(footnoteBarPlugin);
+    dom.addEventListener('mouseenter', () => plugin?.keep());
+    dom.addEventListener('mouseleave', () => plugin?.hideSoon());
+    return { dom };
+}
+
+/** How long the pointer rests on a marker before its bar shows, and how long the bar stays once the pointer left. */
+const FOOTNOTE_BAR_SHOW_MS = 150;
+const FOOTNOTE_BAR_HIDE_MS = 300;
+
+// Shows the bar of a note referred to more than once while the pointer is on its marker with Cmd held (Ctrl off
+// macOS) - the key that makes footnotes clickable. Once up, it stays while the pointer is on the marker or on the bar,
+// Cmd held or not. Cmd pressed with the pointer already resting on a marker shows it as well.
+const footnoteBarPlugin = ViewPlugin.fromClass(
+    class {
+        constructor(/** @type {EditorView} */ view) {
+            this.view = view;
+            /** @type {ReturnType<typeof setTimeout> | undefined} */
+            this.showTimer = undefined;
+            /** @type {ReturnType<typeof setTimeout> | undefined} */
+            this.hideTimer = undefined;
+            /** Where the pointer was last seen over the text - for Cmd pressed with no move. */
+            this.pointer = /** @type {{ clientX: number, clientY: number } | null} */ (null);
+        }
+
+        /** @param {KeyboardEvent} event */
+        onKey(event) {
+            if (this.pointer && isLinkModifier(event)) {
+                const { clientX, clientY } = this.pointer;
+                this.onMove(/** @type {MouseEvent} */ ({ clientX, clientY, metaKey: event.metaKey, ctrlKey: event.ctrlKey }));
+            }
+        }
+
+        /** @param {MouseEvent} event */
+        onMove(event) {
+            this.pointer = { clientX: event.clientX, clientY: event.clientY };
+            const hit = footnoteAtCoords(this.view, event);
+            const definition = hit && 'definition' in hit ? hit.definition : null;
+            const { footnotes } = this.view.state.field(footnotesField);
+            if (!definition || referencesTo(footnotes, definition.label).length < 2) {
+                clearTimeout(this.showTimer);
+                this.showTimer = undefined;
+                this.hideSoon();
+                return;
+            }
+            const shown = this.view.state.field(footnoteBarField);
+            if (shown?.label !== definition.label && !isLinkModifier(event)) {
+                clearTimeout(this.showTimer);
+                this.showTimer = undefined;
+                this.hideSoon();
+                return;
+            }
+            this.keep();
+            if (shown?.label === definition.label || this.showTimer) return;
+            this.showTimer = setTimeout(() => {
+                this.showTimer = undefined;
+                const { label, markerFrom, markerTo } = definition;
+                this.view.dispatch({ effects: setFootnoteBar.of({ label, markerFrom, markerTo }) });
+            }, FOOTNOTE_BAR_SHOW_MS);
+        }
+
+        keep() {
+            clearTimeout(this.hideTimer);
+            this.hideTimer = undefined;
+        }
+
+        hideSoon() {
+            if (this.hideTimer || !this.view.state.field(footnoteBarField)) return;
+            this.hideTimer = setTimeout(() => {
+                this.hideTimer = undefined;
+                if (this.view.state.field(footnoteBarField)) this.view.dispatch({ effects: setFootnoteBar.of(null) });
+            }, FOOTNOTE_BAR_HIDE_MS);
+        }
+
+        destroy() {
+            clearTimeout(this.showTimer);
+            clearTimeout(this.hideTimer);
+        }
+    },
+    {
+        eventHandlers: {
+            mousemove(event) { this.onMove(event); },
+            keydown(event) { this.onKey(event); },
+            mouseleave() {
+                this.pointer = null;
+                clearTimeout(this.showTimer);
+                this.showTimer = undefined;
+                this.hideSoon();
+            },
+        },
+    },
+);
+
+/** Footnotes followed by a click - see above. */
+function footnotesExtension() {
+    return [
+        footnotesField,
+        footnoteBarField,
+        footnoteBarPlugin,
+        EditorView.domEventHandlers({
+            mousedown: (event, view) => {
+                if (event.button !== 0 || !isLinkModifier(event)) return false;
+                const hit = footnoteAtCoords(view, event);
+                if (!hit) return false;
+                event.preventDefault();
+                if ('reference' in hit) {
+                    const definition = view.state.field(footnotesField).footnotes.definitions.get(hit.reference.label);
+                    if (definition) selectFootnoteRange(view, definition.bodyFrom, definition.bodyTo);
+                } else {
+                    const [first] = referencesTo(view.state.field(footnotesField).footnotes, hit.definition.label);
+                    if (first) selectFootnoteRange(view, first.from, first.to);
+                }
+                return true;
+            },
+        }),
+    ];
+}
 
 // Marks every TODO in the text (.cm-todo: bold, on yellow), so it is hard to miss.
 const todoMatcher = new MatchDecorator({

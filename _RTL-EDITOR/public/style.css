@@ -534,6 +534,51 @@ body {
     text-decoration-thickness: 2px;
 }
 
+/* Footnotes - "[^a]" and "[^a]: ...". Coloured like a link, and followed like one by Cmd+click (Ctrl+click off macOS):
+   a reference to its note, a definition's marker to its reference. Hovering over the marker of a note referred to
+   more than once shows .cm-footnote-refs - see footnotesExtension() in markdown-editor.js. */
+.cm-footnote-ref,
+.cm-footnote-def {
+    color: #0066cc;
+}
+/* A reference to a note nothing defines, and a note nothing refers to - mistakes: the page shows the first as plain
+   text, and the second at its end with nothing leading to it. Neither is followed by a click. The spans inside too:
+   the syntax highlighting colours `[^a]` as a link. */
+.cm-footnote-undefined,
+.cm-footnote-undefined *,
+.cm-footnote-unreferenced,
+.cm-footnote-unreferenced * {
+    color: #d00000;
+}
+.cm-content.cm-links-clickable .cm-footnote-ref,
+.cm-content.cm-links-clickable .cm-footnote-def {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+.cm-tooltip:has(> .cm-footnote-refs) {
+    border-radius: 4px;
+    padding: 1px 2px;
+}
+.cm-footnote-refs {
+    display: flex;
+    gap: 1px;
+}
+.cm-footnote-refs button {
+    border: none;
+    background: none;
+    padding: 0 4px;
+    font: inherit;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #0066cc;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.cm-footnote-refs button:hover {
+    background: rgba(0, 102, 204, 0.12);
+}
+
 /* User-prompts inside ClaudeCode transcripts (*.script.md / *.script.rtl.md) */
 .cm-user-prompt {
     font-weight: bold;

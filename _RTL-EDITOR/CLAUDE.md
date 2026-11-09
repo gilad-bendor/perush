@@ -54,6 +54,9 @@ later), which runs the TypeScript as it is - there is no build step.
 - Footnotes - `text[^a]`, `[^a]: the note` - are numbered superscript links on the page, the notes at its end; in
    the PDF every note stands at the foot of the sheet it is first referred to on, the numbers starting from 1 on every
    sheet. See "Footnotes" below
+- In the editor a footnote is followed by Cmd+click (Ctrl+click off macOS): a reference selects its note, the note's
+   `[^a]` its reference - and hovering with Cmd over the `[^a]` of a note referred to more than once offers them all, `➀ ➁ ➂`.
+   See "Footnotes in the editor" below
 
 ## Setup
 
@@ -76,6 +79,10 @@ npm run rows -- status
 ```
 
 npm passes options on to a script only after a `--` (`npm run rows -- report <file> --text`).
+
+`server.ts` exits by itself on SIGTERM / SIGINT / SIGHUP, closing the PDF mirror's Chromium first: Playwright
+listens for those signals while its Chromium is up, closes the browser and leaves the process running - and a restart
+of `npm run dev` then hung on "Waiting for graceful termination...".
 
 `npm run dev` restarts the server on a change under `src/` or `public/src/` only (`--watch-path`), not on a change
 to any file it imported, as plain `node --watch` would: the server imports the layout modules itself (see "A file's
@@ -120,6 +127,7 @@ layout"), and every edit of one - or of the translations' layout code - would re
 - `public/src/tab-data.js` - Tab state management
 - `public/src/tables.js` - Table parsing/formatting, shared by the browser and the server
 - `public/src/links.js` - Markdown-link parsing/resolution, behind Cmd+click-to-open
+- `public/src/footnotes.js` - The footnotes of the editor's text - references and notes - behind Cmd+click-to-follow
 - `public/src/edit-locations.js` - The edit locations behind Cmd+Shift+Backspace
 - `public/src/pseudo-tags.js` - Which pseudo-tags are void, shared by the browser and the server
 - `public/src/hebrew-search.js` - What a plain Find matches in Hebrew text (niqqud, precomposed letters, shin/sin)
@@ -130,6 +138,7 @@ layout"), and every edit of one - or of the translations' layout code - would re
    `expect()` (see "Unit tests")
 - `tests/tables.test.ts` - Unit tests for `tables.js` (`npm test`)
 - `tests/links.test.ts` - Unit tests for `links.js` (`npm test`)
+- `tests/editor-footnotes.test.ts` - Unit tests for `public/src/footnotes.js` (`npm test`)
 - `tests/hebrew-search.test.ts` - Unit tests for `hebrew-search.js` (`npm test`)
 - `tests/edit-locations.test.ts` - Unit tests for `edit-locations.js` (`npm test`)
 - `tests/fs-changes.test.ts` - Unit tests for `fs-changes.ts` (`npm test`)
@@ -1263,6 +1272,30 @@ free of any editor dependency the way `tables.js` is, so it can be unit-tested o
 - **The new tab goes right after the linking one**, not at the end of the strip: `openFile()` takes
   an `insertAfterFilePath`, inserts the button there and calls `reorderTabsFromDom()` to sort
   `this.tabs` to match - still synchronously, as that Map's order is the stored session order.
+
+### Footnotes in the editor
+
+The page and the PDF have their footnotes from markdown-it (see "Footnotes"); the editor finds them itself, in
+`public/src/footnotes.js` - plain ESM, unit-tested like `links.js` - by the same rules: `[^a]:` at a line's start
+(up to 3 spaces in) defines a note, which goes on over lazy lines and, past a blank line, over lines indented by 4; a
+`[^a]` elsewhere refers to it - only when `a` is defined, and never in code. `footnotesExtension()` in
+`markdown-editor.js` does the rest:
+
+- **The whole text is parsed on every change** (`footnotesField`, a StateField), not the visible lines as for
+  links: a reference and its note are seldom on the screen together. A reference is `.cm-footnote-ref`, a note's
+  `[^a]` `.cm-footnote-def` - link-blue, and underlined while Cmd is held (the links' `cm-links-clickable`).
+- **Cmd+click (Ctrl+click off macOS)** - as for a link; a plain click still puts the cursor there. On a reference it
+  selects the note's text, from its first character to its last, the `[^a]:` left out; on a note's `[^a]` it selects
+  its first reference. Either is scrolled to the middle of the view.
+- **Mistakes are red**: a reference to a label nothing defines (`.cm-footnote-undefined` - plain text on the page),
+  and the `[^a]` of a note nothing refers to (`.cm-footnote-unreferenced`, in place of `.cm-footnote-def`). Neither is followed by a click.
+- **A note referred to more than once** gets a bar when the pointer rests on its `[^a]` with Cmd held (Ctrl off
+  macOS), as for the clicks - and keeps it while the pointer moves onto it, Cmd held or not: `➀ ➁ ➂`, ➀ .. ➉ and then
+  plain numbers, in the file's direction, each selecting its reference (its line is the button's title). It is a
+  tooltip of its own (`footnoteBarField`, `footnoteBarPlugin`), not a `hoverTooltip()`: CodeMirror hides a tooltip
+  whose anchor is out of the scroller's visible area, which in an RTL file leaves out the line's right edge (it takes
+  the gutter to be on that side), and the hover tooltips' host drops the `clip: false` that turns the test off. The
+  pointer may cross from the marker onto the bar - it stays up 300 ms after the pointer left either.
 
 ### Mixed-direction lines
 
