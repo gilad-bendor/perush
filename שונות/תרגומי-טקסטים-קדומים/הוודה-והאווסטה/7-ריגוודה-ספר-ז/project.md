@@ -254,7 +254,7 @@ every recurring word; after drafting each hymn `tr` (Griffith, Geldner, Grassman
 commentary on VII.10–19 (for 7.18 closely: her notes rely on H.-P. Schmidt 1980 and M. Witzel 1995). Her readings adopted,
 with attribution: 7.10.2b (the plural *tanvānā́ḥ* attracted to the simile), 2c (*ā́* "here", *ví vidvā́n* "distinguishing"),
 2d (*devayā́van* "going to the gods"); 7.15.4b (*jījanam* immediate past); 7.15.12c (Diti = "Giving", feminine,
-generated from the verb); 7.16.8d (*dīrghaśrút* possibly of Agni); 7.18.2b (*áva* imperative), 4b (*sasr̥je* 1st person;
+generated from the verb); 7.16.8d (*dīrghaśrút* possibly of Agni); 7.18.2b (*áva* imperative), 4b (*sasr̥je*: Jamison's 1st person discussed, the line keeps the 3rd person – the coordinator, after the review;
 the *vásu … vániṣṭhaḥ* → *vásiṣṭhaḥ* pun), 6b (*mátsya* = tribe and "fish", *ápīva* with "water"), 7cd (the enemies'
 speech: their ally has deserted to the Tṛtsus), 9d (*mā́nuṣe* "in Manu's race"; *vádhrivāc* ↔ 1.32.7), 10b (*citā́saḥ*
 "piled up" against a properly concluded alliance), 13d (*jéṣma* as injunctive past), 14c (Oldenberg: the 66 are Sudās's
@@ -398,6 +398,44 @@ instrumental; *nivéśana* "bringing to rest"), 7a (*páriṣṭi* positive: "yo
   Zurich lemma's analysis) to the licence.
 - In a hymn full of names, run `verify` after each stanza group: the name rules (Mitra, Vṛtra as common nouns) and the
   always-vocalized words (`אֵל` near a *deva* word) are the commonest flags.
+
+## Review of part 2 (RV 7.10–7.19; independent reviewer)
+All 327 pādas read against the Zurich text and morphology (`data`), with Jamison's commentary on VII.18 (vss. 1–25) and
+on the lines in doubt, plus two scripts over the `lexmap` of the whole corpus (lemma → Hebrew in this part against every
+other file, and Hebrew → lemma) and a check that every פירוק Hebrew stands in its line. **7 lines changed** (and their
+פירוק / notes), one פירוק gloss and one intro aligned. The draft is careful: its moods (subjunctive → future, optative →
+`נא`, the injunctive, *mā́ … bhūma* 7.19.7ab), its many names and its 7.18 readings follow Jamison's updated commentary
+closely, and every `?` crux of 7.18 has its alternatives in the note.
+- **Hebrew grammar / ambiguity of the unvocalized line (4):**
+  - 7.16.4d *rā́sva* (aor. imperative) `העניק` (reads as the past) → `הַעֲנֵק`.
+  - 7.19.11b *tanvā̀ vāvr̥dhasva* (intransitive: "grow strong in body", instr.) `הגדל` (hifil, "enlarge") → `גְּדַל`;
+    the transitive 7.8.5d *vardhasva tanvàm* `הגדל את גופך` stays.
+  - 7.18.18d *ní jahi* `הנחת` (reads `הִנַּחְתָּ` "you placed") → `הַנְחֵת`.
+  - 7.18.16c *mimāya* `הפר` (beside Indra, reads "the bull", *vŕ̥ṣan* `הפר`) → `הֵפֵר`.
+- **One Hebrew for two lemmas (consistency, 2):**
+  - 7.15.12a *vīrávant* `רב־גיבורים` → `בעל־גיבורים`: `רב־גיבורים` is *suvī́ra*'s (7.15.8c); *vīrávant* is
+    `בעל־גיבורים` in 7.15.5b (part 1 `בעלי גיבורים`).
+  - 7.18.16d *pánthā* `השביל` → `הדרך` (`מסלול הדרך`): `שביל` is *pathyā̀*'s (7.18.3c, the translator's own pass-(b) split);
+    *pánthā* is `דרך` everywhere else.
+- **פירוק / intro (2):** 7.15.6a the gloss of *váṣaṭkr̥tim* `אֶל קריאת־הוַשַׁט` → `קריאת־הוַשַׁט` (the line has `ירדוף אחר
+  קריאת־הוַשַׁט`); intro 7.16 `מתנות של סוסים` → `שפע של סוסים` (the line 10a, *áśvyā maghā́*).
+- Checked and kept (defensible): 7.16.6c `השחז לנו` for acc. *naḥ* (Jamison now prefers a dative or genitive reading,
+  noted); 7.18.23a *dā́nāḥ* (Grassmann's dā́na 2 m. "gifted horses") `מתנות` – the Hebrew plural of `מתן` (dā́na 1) as well,
+  so no clash with *rātí* `מתנה`; 7.18.5cd, 8a, 9c, 10d, 15c, 16d, 17c, 23b (marked `?`, alternatives in the notes);
+  7.18.13d *jéṣma* past (Jamison's injunctive); 7.18.18 as direct speech (Geldner, Jamison); 7.19.9c *ví … ádāśan*
+  `הרחיקו בהגשה` (Oldenberg's "hinweghuldigen", via Jamison); 7.13.1c *prīṇānáḥ* `מתרצה` (as 7.17.4b `ירצה`).
+- `build RV7.10-19`; `verify RV7.10-19 --strict`: 0 problems, 0 repeated-line differences; `check_bible_quotes.py` on the
+  annotated, intro and generated files: 0 problems. The tagged parallels (Judg 5:21, Ps 66:6, 1 Kgs 22:17, Judg 7:7,
+  2 Sam 22:2) are sound and say "shared motif".
+- **For the coordinator:**
+  - 7.18.4b: the part's Sources list says Jamison's 1st-person *sasr̥je* was adopted, but the line is 3rd person
+    (`שילח וַסִישְׁטְהָה`) and the note only reports her reading. Both are defensible (Geldner, Griffith: 3rd); the record
+    and the line should agree – either `שילחתי, (אני) וַסִישְׁטְהָה,` or drop "1st person" from the Sources list.
+  - Near-synonyms sharing a Hebrew word (left for the harmonization): "distribute" – √*day* `חילק` (7.16.7d), *ví* √*dhā*
+    `חילק` (7.17.7b), *ví* √*bhaj* `חילק` / *vibhaktár* `המחלק` (7.18.13c, 24b), part 1's *vidhartár* `המחלק` (7.7.5b);
+    *ajirá* (7.11.2a) and *āśú* (7.18.9b) both `מהיר` (*āśú* is common in the later hymns: fix one word before part 3+);
+    *ví* in 7.19.9c `הרחיקו` beside √*sidh* `הרחיק` (7.15.10a); *ā́s* / *āsyà* both `פה`.
+  - 7.19.3bc `עזרת (קדימה)`: the preverb *prá* is in the source, so the parentheses (= added) are not quite right; harmless.
 
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
