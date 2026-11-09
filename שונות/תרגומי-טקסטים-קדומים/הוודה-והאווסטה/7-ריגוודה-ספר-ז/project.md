@@ -1800,44 +1800,152 @@ Intros aligned: 7.13 (title), 7.18, 7.26, 7.60, 7.62, 7.69, 7.73.
 ## RV7.89–7.97 (part 9: Varuṇa 7.89; Vāyu and Indra–Vāyu 7.90–92; Indra–Agni 7.93–94; Sarasvatī and Sarasvant 7.95–96; Indra and Bṛhaspati 7.97; translator 9, Round 7 run 1)
 
 ### Scope
-RV 7.89–7.97: 9 hymns, 246 pādas. One annotated file and one intro per hymn (drafting in progress; this section is
-written as I go).
+RV 7.89–7.97: 9 hymns, 246 pādas – Varuṇa 7.89 (16); Vāyu / Indra–Vāyu 7.90 (28), 7.91 (28), 7.92 (20); Indra–Agni
+7.93 (32), 7.94 (37); Sarasvatī 7.95 (24), Sarasvatī and Sarasvant 7.96 (21); Indra and Bṛhaspati 7.97 (40). One
+annotated file and one intro per hymn; `build RV7.89-97` generated the clean files. F6 closes 7.90–93, 95, 97 (not 7.89,
+94, 96); F7 ×4 in 7.89.
 
 ### Sources consulted
-- Base: VedaWeb Zurich text and morphology (`data`); `freq RV7.89-97`, `lexmap`, `grep`; part 8's spec assembler
-  (`gen.py`) and look-up script (`lk.py`), copied to the scratch folder `p9/`.
-- After drafting each hymn: `tr` (Griffith, Grassmann, Geldner, Renou) and Jamison's commentary
-  (`VII.56–104-9-25-26.txt`).
-- Bible verses printed before quoting: Job 4:19; Ps 63:2; Ps 19:13.
+- Base: VedaWeb Zurich text and morphology (`data`); `freq RV7.89-97`; `lexmap` / `grep`; part 8's spec assembler
+  (`gen.py`) and look-up script (`lk.py`: every lemma of a hymn against all drafted files), copied to the scratch
+  folder `p9/`; a lemma-map check of my nine files (one lemma, several Hebrew strings) for pass (b).
+- After drafting each hymn: `tr` (Griffith, Grassmann, Geldner, Renou; every quoted fragment copied from `tr`) and
+  Jamison's commentary (`VII.56–104-9-25-26.txt`: VII.89 – the dropsy symptomology; VII.90 – the two senses of
+  *niyút*; VII.91.1 – the world before the sacrificial compact; VII.92.3 *iṣṭí* "quest"; VII.93 – *vā́ja* as a muted theme;
+  VII.95 – *rathyèva*, the two senses of √*cit*, Sarasvant as the male of 95.3, the "sister rivers" of 95.4d; VII.97 –
+  *sunvé* passive, *maha* = √*mah* "be able" (with Gotō), the covert identification of Bṛhaspati with Indra and Agni
+  (with H.-P. Schmidt), *pastyā̀* "houses").
+- Bible verses printed before quoting: Job 4:19; Ps 63:2; Ps 19:13; Deut 32:2; Ps 19:14; Ps 103:13.
 
 ### Decisions
 - **7.89 (the last Varuṇa hymn):** part 8's Varuṇa vocabulary kept (*énas* `עוון`, √*mr̥ḍ* `רחם`, *ácitti*
-  `חוסר־הבחנה`); no word of the `חטא` family, no `סליחה` / `מחילה` (Griffith's "spare me", Geldner's "verzeih" named in
-  the note as theirs). F7 `רחם, טוב־השלטון, רחם` ×4 (1c–4c). New: *mr̥nmáya* `(בית) החומר` (with *gr̥há*
-  `בית` moved from 1b to 1a for the Hebrew order; the move is noted in 1b's פירוק); *dīnátā* `חולשה`; *samaha*
-  `איכשהו`; *pratīpá* `נגד (הזרם)`; *tŕ̥ṣṇā* `צמא`; √*dham* `נפוח`; *abhidrohá* `שקר` (the √*druh* family, Avestan
-  cognate rule); √*car* "practise" `הלך (ב־)` ("walk in deceit"); *dhárman* `יסוד` (RV 10.90.16b); √*yup* `מחק`
-  (RV 10.18.2a); *sú* in the prohibitive *mó ṣú* `נא`.
+  `חוסר־הבחנה`; *ā́gas* `אשמה` and *ánāgas* `חסר־אשמה` again in 7.93.7c, 7.97.2c); no word of the `חטא` family, no
+  `סליחה` / `מחילה` / `פשע` / `שגגה` in a line (Griffith's "spare me", "sinless", Geldner's "verzeih" named in the notes as
+  theirs). F7 `רחם, טוב־השלטון, רחם` ×4 (1c–4c), the first copies. New: *mr̥nmáya* `(בית) החומר` – *gr̥há* `בית`
+  moved from 1b into 1a for the Hebrew order (the move noted in 1b's פירוק); *dīnátā* `חולשה`; *samaha* `איכשהו`;
+  *pratīpá* `נגד (הזרם)`; *tŕ̥ṣṇā* `צמא`; √*dham* `נפוח`; *abhidrohá* `שקר` (√*druh*, the Avestan cognate rule);
+  √*car* "practise" `הלך (ב־)` ("walk in deceit", the ŚB precedent `הלך`); *dhárman* `יסוד` (RV 10.90.16b); √*yup*
+  `מחק` (RV 10.18.2a); *sú* in the prohibitive *mó ṣú* `נא`.
+- **Vāyu (7.90–92):** *vāyú* the god = `רוּחַ` without the article, masculine (renderings §3.2, the coordinator's
+  instruction); vocalized at the first occurrence in each file. *indra-vāyú* (dual dvandva) `אִינְדְּרָה ורוח` (as
+  `מִיטְרָה וְוַרוּנָה`). *niyút* `צמד` (7.18.10d; Jamison's double sense – Vāyu's teams and "our teams" of thoughts – in
+  the notes of 7.90.1c, 3c). New: *śucipā́* `שותה־הצח`; *vīrayā́* `בתאוות־הגיבורים`; *práhuti* `נסך`; *vásudhiti*
+  `משכן־הטוב`; *pradív* `ימי קדם`; *pūrvapéya* `הלגימה הראשונה`; *agriyá* `ראשון`; *dábha* `רמייה`; *pī́voanna* `בעל
+  המזון השמן`; *rayivŕ̥dh* `מגדל העושר`; *sumedhás* `נבון`; *abhiśrī́* `ראש` (not `אדון`, *páti*'s); *táras* `תנופה`;
+  *ní* √*yu* 1 `חיבר`; *spārhávīra* `בעל הגיבורים הנחשקים`; *subhójas* `שופע־מזון`; *indramā́dana* `מבסם־אִינְדְּרָה`;
+  *ā́deva* 2 `נאמן־האלים`; *nitóśana* `מרעיף` (Geldner "verschwenderisch"); *iṣṭí* 1 "quest" `חיפוש` (Jamison) – *iṣṭí*
+  2 "offering" `הקרבה` (7.93.8a), a homograph split. **Dhiṣaṇā** (7.90.3b, the goddess) `דְּהִישַׁנָה` (new name; the
+  common noun *dhiṣáṇā* "pressing bowl" keeps RV 10.17.12b `קערת־הסחיטה`). √*īḍ* `התפלל אל`, √*yā* 2 `ביקש`, √*iṣ* 2
+  `חיפש` (three verbs of asking kept apart).
+- **Indra–Agni (7.93–94):** *indrāgní* `אִינְדְּרָה ואַגְנִי` (7.35.1a); *vr̥trahán* `הורג־וְרִטְרָה`; *vā́ja* `פרס` (the
+  signature word of 7.93). New: *dhéṣṭha* `הנותן ביותר`; *sānasí* `זוכה` (√*san*, as *-sā́*); *śavasāná* `עז־העצמה`;
+  *sākaṃvŕ̥dh* `גדל־יחד`; √*śū* `תפח`; *ghŕ̥ṣvi* `עליז`; *prámati* `השגחה` (not `חסד`); *pūrvabháj*
+  `נוטל־החלק־הראשון`; *mithatí* `מתנגש`; *tanūrúc* `זוהר־הגוף`; *śū́rasāti* `זכיית־הגיבורים`; *sómasuti*
+  `סחיטת־הסוֹמָה`; *pári* √*man* `זלזל` (*pári* √*khyā* `התעלם`, precedent); *ā́* √*vr̥t* `הפנה`; √*śrath* `התיר`;
+  *ā́* √*śvas* `נשם אל`; *pūrvyástuti* `השבח־הראשון`; *abhrá* `ענן` (*nábhas* `ערפל`, 7.97.6d); *pāpatvá* `רעה`;
+  *ā́* √*īr* `שלח`; *dhénā* `זרמי־דיבור`; *sabā́dhas* `בלחץ`; *vipanyú* `מתפעל`; *medhásāti* `זכיית־הסעודה`; *saniṣyú*
+  `תאב־הזכייה`; *carṣaṇīsáh* `מכריע־העמים`; *duḥśáṃsa* `רע־הקילוס`; *dhūrtí* `פגיעה`; *sáptīvant*
+  `בעל־הסוסים־המהירים`; *saparyú* `מכבד`; *dúrvidvaṃs* `רע־הדעת`; *rakṣasvín* `בעל־הרַקְשָׁסִים`; *ābhogá* `המתפתל (?)`
+  and *udadhí* `אוגר־המים` translated as common nouns (Griffith), Geldner's / Renou's names Ābhoga, Udadhi in the note.
+  `[היתר שם: וְרִטְרָה]` for the plural *vr̥trā́ṇi* `מחסומים` (7.92.4c), as parts 2–3, 8.
+- **Sarasvatī (7.95–96):** `סַרַסְוַתִי`, feminine, and `סַרַסְוַנְט` (renderings §3.1); the unnamed male of 7.95.3 is
+  Sarasvant (Anukramaṇī, Jamison). New: *kṣódas* `שטף`; *dhā́yas* `זרם מזין`; *nā́huṣa* `בן־נַהוּשׁ`; *śaraṇá* `מקלט`
+  (7.19.8b; *śárman* keeps `מחסה`); *úttara* `גבוה`; √*gā(y)* `שר`; *avitrī́* `עוזרת`; *marútsakhi* `חברת־המַרוּטִים`;
+  *ákavāri* `שאינה צרת־עין`; *jamadagnivát* `כמו בידי גַ'מַדַגְנִי` (new name Jamadagni `גַ'מַדַגְנִי`); √*janīy*
+  `שאף לאשה`, √*putrīy* `שאף לבנים`; *ágru* (masc.) `רווק` (7.2.5d fem. `צעירות`); *stána* `שַׁד` (vocalized: not `שֵׁד`);
+  *viśvádarśata* `נראה לכל`. *ándhasī* (7.96.2a) read as the two grassy banks (Griffith; *ándhas* 1 "herb"), `(הגדות)
+  העשבוניות` – a split by sense from *ándhas* 2 `עסיס`. √*cit* intransitive `נגלה` (7.95.2a, 96.3b) / `הבחין` (95.2c), with
+  Jamison.
+- **Bṛhaspati (7.97):** `בְּרִהַסְפַּתִי`; *bráhmaṇas páti* in two words `אדון הנוסח` (7.41.1c, 44.1c precedent). New:
+  √*mah* (?) `מסוגל` (Jamison / Gotō); *parāvát* `מרחק`; *devákr̥ta* `שעשו האלים`; *yóni* `קן` (RV 10.34.11b; not
+  `רחם`, which in this part is √*mr̥ḍ*'s word); *saścát* `רודף`; *júṣṭa* `רצוי`; *śúcikranda* `צח־הקריאה`; *pastyā̀*
+  `בית`; *sahaváh* `נושא־יחד`; *nī́lavant* `כהה`; *nábhas* `ערפל`; √*vas* 2 `לבש`; *śatápatra* `בעל מאה הכנפיים`;
+  *híraṇyavāśī* `בעל גרזן־הזהב`; *svarṣā́* `זוכה־האור`; *āsutí* `משקה`; *káriṣṭha* `העושה ביותר`; *jánitrī* `יולדת`;
+  *sutára* `קל לעבור`, *sugādhá* `קל לחצייה`; *kīrí* `מזמר`. 7.97.9c copied from 7.64.5c; 7.97.10 is the first copy of
+  7.98.7.
+- **Splits recorded:** √*han* `הרג` / `הכה` ("smite", 7.93.5d, 94.12c–d); √*dhā* `שם` / `נתן` (7.90.6a, 95.3c, by sense);
+  *prá* √*bhr̥* `הגיש` (7.91.5c, 6d, 92.2c); √*vas* 2 `לבש` beside √*vyā* `לבש` elsewhere (one Hebrew for two "wear /
+  wrap" roots, for the harmonization); *sadhástha* `משכן` rendered `מושב` in 7.97.6c (Hebrew idiom).
+- **Gate and name licences written:** `טוב` for *vásu* (7.94.9a, 97.10a), *bhadrá* (7.96.3a); `[היתר שם: סַרַסְוַתִי]`
+  at 7.96.6a, where *sárasvataḥ* is the genitive of *sárasvant* – a false positive of the name pattern ` sarasvat`.
 
 ### Open decisions for the user
 - 7.89.1a *mr̥nmáya gr̥há* `בית החומר` [equivalent, Job 4:19 `בָתֵּי-חֹמֶר`]: the natural Hebrew for "house of clay", and
-  the Bible's phrase for the mortal body; kept and tagged (no `עפר`: reserved for *pāṃsú*).
+  the Bible's phrase for the mortal body; kept and tagged (no `עפר`: reserved).
+- 7.89.5b *abhidrohá* `השקר`: Griffith / Geldner "offence / Frevel"; the √*druh* family keeps `שקר` (cognate rule), at
+  the cost of the "against" sense (left to 5a "כלפי").
+- 7.96.2a *ándhasī*: "two grassy banks" (Griffith) against "two juices" (the lemma): the line has the banks.
+- 7.94.12c–d *ābhogá* / *udadhí*: common nouns (Griffith) or demon names (Geldner, Renou).
 
 ### Progress log
-- 7.89 drafted, `fill`, `verify RV7.89`: 0 problems.
+- Drafted hymn by hymn (7.89 → 7.97) from compact specs (`gen.py`), each saved, `fill`ed and `verify`ed (0 problems)
+  before the next; `tr` and Jamison after each draft; the intro of each hymn written with it; this section started after
+  7.89 and finished at the end.
+- Pass (a) fidelity: every line read against its Zurich tokens (the token count is enforced by `gen.py`); moods
+  checked (optatives `נא`, *mā́* + injunctive as prohibitive, subjunctives future); 7.93.6d corrected ("I would turn you
+  hither", not "turn to you").
+- Pass (b) consistency: a lemma → Hebrew map of my nine files; changes: 7.91.3b *abhiśrī́* `אדון` → `ראש` (*páti*
+  `אדון`), 7.94.4a *br̥hánt* `גדולה` → `רמה`, 7.94.4c *dhénā* `דברים` → `זרמי־דיבור` (*vácas* `דיבור`), 7.92.2c
+  `מביאים` → `מגישים`; F6 ×6, F7 ×4, 7.90.7 = 7.91.7 and 7.97.9c = 7.64.5c identical.
+- Pass (c) Hebrew: the nine generated files read in sequence; `אֵל` / `אֵלִים` / `אֵלָה` / `אֵלוֹת` / `אַל` / `אֶל`
+  vocalized on the *devá* lines (the verifier's rule); `הִכּוּ`, `שַׁד`, `הִתְבַּסֵּם` vocalized for sense.
+- `build RV7.89-97`; `verify RV7.89-97 --strict`: **0 problems**, 0 repeated-line differences in the range;
+  `check_bible_quotes.py` on the 27 annotated, intro and generated files: **0 problems** (one remembered verse, Ps 19:14,
+  was wrong and was corrected after `--show`; Ps 78:38 was dropped unprinted).
 
 ### The text on its own terms
 - **Varuṇa's illness** (7.89.2–4): the punished man is swollen "like a blown-up skin bag", walks "as if jerking", and is
   thirsty "standing in the midst of the waters" – the dropsy that the lord of the waters sends (Jamison).
+- **The house of clay** (7.89.1): not a plea for immortality, but not to go *yet* – the prohibitive injunctive.
+- **Weakness, not malice** (7.89.3a, 5c): "through weakness of will", "through thoughtlessness": the family's constant
+  plea that the offense was not willed (as 7.86.6).
+- **Mercy, not forgiveness** (7.89 refrain, 7.93.7c–d): the god is asked to "have mercy" on the offense, and Aryaman and
+  Aditi to "loosen" it – the offense is a knot, not a stain.
+- **The first sip** (7.92.1d): Vāyu's privilege to drink first of the morning soma; the wind is the first to arrive.
+- **The world before the rite** (7.91.1): the gods "were, of old, blameless", and made the first dawn shine "for Vāyu, for
+  Manu" (Jamison: before the sacrificial compact).
+- **Priests as draught horses** (7.90.5): "yoked by their own will", they pull the gods' chariot – the sacrifice as a
+  chariot.
+- **Patrons who give the light** (7.90.6a): the givers "confer the sun on us" with their gifts (Geldner: the light of the
+  *dákṣiṇā*).
+- **The poetic contest as a race** (7.93.3c, 5): poets "like steeds reaching the goal"; two armies clash, and the side
+  that sacrifices better wins.
+- **The song as rain** (7.94.1c): the praise "was born from the thought as rain from a cloud".
+- **A river as a fortress and a cow** (7.95.1–2): Sarasvatī, "a fort of metal", "alone of rivers" running "from the
+  mountains to the sea", milking "ghee and milk" for the Nāhuṣa.
+- **The male of the waters** (7.96.4–6): bachelors who want wives and men who want sons call on Sarasvant, and ask to
+  share in his swelling "breast".
+- **The god-made word** (7.97.3d, 5b): Indra is "king of the formulation made by the gods"; the song itself was "set" by
+  "the immortals born of old".
 
 ### Key parallels
 - 7.89.1a [equivalent] Job 4:19 – "the house of clay" as the frail mortal body / the grave (shared motif).
+- 7.89.5c [equivalent] Ps 19:13 – the offense done unknowingly, not to be punished (shared motif).
+- 7.89.4b [divergence] Ps 63:2 – thirst for God against thirst as the god's punishment.
+- 7.94.1c [equivalent] Deut 32:2 – the poet's word as rain (shared motif).
+- 7.97.2d [equivalent] Ps 103:13 – the god as a giving / merciful father (shared motif).
+- 7.97.2c [divergence] Ps 19:14 – standing "without offense" (Sanskrit "without debt / guilt") versus "clean of
+  transgression".
 
 ### Proposals for the shared renderings
-- (in progress)
+- **For §3.2 / §3.1:** *vāyú* the god = `רוּחַ` without the article, masculine; *indra-vāyú* `אִינְדְּרָה ורוח`;
+  *indrāgní* `אִינְדְּרָה ואַגְנִי` (confirmed). New names: Dhiṣaṇā `דְּהִישַׁנָה` (the goddess), Jamadagni `גַ'מַדַגְנִי`,
+  *nā́huṣa* `בן־נַהוּשׁ`.
+- **Words (binding for Book 7 if accepted):** *śucipā́* `שותה־הצח`; *pūrvapéya* `הלגימה הראשונה`; *niyút* `צמד`;
+  *ní* √*yu* `חיבר`; *iṣṭí* 1 `חיפוש` / *iṣṭí* 2 `הקרבה`; √*iṣ* 2 `חיפש`; *prámati* `השגחה`; *pári* √*man* `זלזל`;
+  √*śrath* `התיר`; *śaraṇá* `מקלט` (beside *śárman* `מחסה`); *abhrá* `ענן`, *nábhas* `ערפל`; *duḥśáṃsa* `רע־הקילוס`;
+  *yóni* `קן` where it is the seat of the fire; *mr̥nmáya* `של חומר`; *tŕ̥ṣṇā* `צמא`; *dhárman* `יסוד`; *stána* `שַׁד`.
+- **Repeated lines** (first copies here): 7.90.7a–c = 7.91.7a–c; 7.97.10 = 7.98.7 (for part 10).
+- **Tool:** the Sarasvatī name pattern ` sarasvat` also catches *sárasvataḥ* (gen. of *sárasvant*): a negative
+  look-ahead for the masculine forms, or ` sarasvat(?!a[hs]\b)`, would avoid the licence.
 
 ### Lessons for the guidelines
-- (in progress)
+- **Print the verse even for a "sure" quotation:** Ps 19:14 was remembered as `נָקִי מִפֶּשַׁע רָב`; the text is
+  `וְנִקֵּיתִי מִפֶּשַׁע רָב`.
+- **The *devá* vocalization rule covers every `אל` on the line,** the negation and the preposition too (`אַל`, `אֶל`):
+  write them vocalized from the first draft on any line with *devá* / *devī́*.
+- **A per-part lemma map of one's own files** (one lemma, several Hebrew strings) catches in a minute the splits that
+  `lk.py` (which looks backward) cannot: the second use of a word one coined oneself.
 
 ## Review of part 8 (RV 7.75–7.88; independent reviewer)
 All 332 pādas read against the Zurich text and morphology, each Hebrew line beside its Zurich tags and its פירוק

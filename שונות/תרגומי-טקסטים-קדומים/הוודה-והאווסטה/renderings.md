@@ -69,7 +69,7 @@ rendered).
 | Saraṇyū | ` saranyu` | `סַרַנְיוּ` |  | Tvaṣṭṛ's daughter, Yama's mother (10.17) |
 | Pūṣan | ` pus(?:a\|an\|anam\|nah\|ne\|nas\|na)\b` | `פּוּשָׁן` |  | guardian of roads and of the dead's way |
 | Savitṛ | ` savit` | `סַוִיטָר` |  | the Impeller |
-| Sarasvatī | ` sarasvat` | `סַרַסְוַתִי` |  | river and goddess |
+| Sarasvatī | ` sarasvat(?:i\|y)` | `סַרַסְוַתִי` |  | river and goddess |
 | Aditi | ` aditi\b\| aditer\b\| aditeh\b` | `אַדִיטִי` | ★ | "Boundlessness", mother of the Ādityas (10.72) |
 | Bṛhaspati | ` brhaspat` | `בְּרִהַסְפַּתִי` |  | Lord of the Formulation |
 | Brahmaṇaspati | ` brahmanaspat` | `בְּרַהְמַנַסְפַּתִי` |  | the same god (10.72.2) |
@@ -588,3 +588,7 @@ by sense (*daδuuā̊* `העושה`, Vd 2.20–21; *dātō* "I was made"). Chang
 - **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 8). Uṣas the goddess `שַׁחַר` without the article, feminine verbs (pl. "dawns" `השחרים`). **The Varuṇa vocabulary (7.86–88; for 7.89 on):** *ā́gas* `אשמה`, *ánāgas* `חסר־אשמה`; *énas* `עוון`, *anenás* `חף־מעוון`; √*muc* `שחרר`; √*mr̥ḍ* `רחם`, *mr̥ḷīká* `רחמים`; √*hr̥̄* "be angry" `זעף`, *héḷas* `רוגז`; *dāsá* "slave" `עבד` (open); *súrā* `שֵׁכָר` (always vocalized; `שָׂכָר` is *mīḍhá*'s); *drugdhá* `שקר`. No word of the root חטא, nor `פשע`, `סליחה`, `וידוי`, `חרון` in Book 7's lines (the translator's proposal to reserve them is for the lead: MBh 3.185 and AB 7 use `חטא` for *pāpá* / *pāpmán*).
 - For the final pass: √*bhuj* `ניזון` / `נשלם`; *úpara* `מאוחר` / `תחתון`; *bhū́man* `אזור` / 7.34.7b `אדמה`; *ūrvá* / *vrajá* `מכלאה`.
 - Tool fixes: `לשאול` "to ask" is exempt from the `שאול` gate; the `טוב` licence covers *saúbhaga*, *svápas*, *ántivāma*.
+
+### 11.19 RV 7.89–7.97 (Book 7, translator 9 = part 9; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 9). 7.89: *mr̥nmáya gr̥há* `בית החומר` (Job 4:19 tagged; open), F7 first copies, *dīnátā* `חולשה`, *tŕ̥ṣṇā* `צמא`, *abhidrohá* `שקר` (the √*druh* family; open); *vāyú* `רוּחַ` without the article (masc.), *indra-vāyú* `אִינְדְּרָה ורוח`, *niyút* `צמד`, *śucipā́* `שותה־הצח`; *indrāgní* `אִינְדְּרָה ואַגְנִי`; *prámati* `השגחה`; √*śrath* `התיר`; *stána* `שַׁד`; *yóni* `קן` in 7.97; names Dhiṣaṇā `דְּהִישַׁנָה`, Jamadagni `גַ'מַדַגְנִי`, *nā́huṣa* `בן־נַהוּשׁ`. First copies for part 10: 7.97.10 = 7.98.7.
+- Tool fix: the Sarasvatī regex no longer matches *sárasvataḥ* (Sarasvant's genitive).
