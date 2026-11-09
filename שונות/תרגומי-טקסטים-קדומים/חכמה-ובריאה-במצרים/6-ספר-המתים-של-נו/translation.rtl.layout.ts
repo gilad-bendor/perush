@@ -55,12 +55,12 @@ function chapter(chain: readonly RunningHeading[], file: LayoutFile): string | u
 const layout: LayoutOfFile = (file, above): FileLayout => ({
     sourceMd5: SOURCE_MD5,
     ...translationLayout(file, above, { rowBreak, repeatedPassages: "alike" }),
-    // The index: the eleven groups of chapters (##) and the chapters (###) - 186 entries. Most chapters are short,
-    // but a chapter (a spell, "פרק 125") is how the Book of the Dead is read and cited, and what a reader looks for.
+    // The index: the eleven groups of chapters (##) only - the 186 chapters (###) took six pages of it. The footer
+    // names the chapter, which is how the Book of the Dead is read and cited ("פרק 125").
     // The footer: the title and the chapter the sheet is in - "ספר המתים של נוּ / פרק 125" - without the chapter's
     // title, which runs to a line of its own.
     pdf: {
-        indexDepth: 3,
+        indexDepth: 2,
         footerTitle: ({ chain }) => {
             const title = chain[0]?.text ?? file.headings[0]?.text ?? "";
             const where = chapter(chain, file);
