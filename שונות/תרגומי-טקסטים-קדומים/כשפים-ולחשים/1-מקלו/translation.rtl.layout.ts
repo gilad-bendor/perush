@@ -16,7 +16,7 @@ import { translationLayout, type BreakContext, type BreakCost, type UnitContext 
 import { endsSentence } from "../../layout/rows.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "f0b14e62c022c96bf3c65554c303638d";
+const SOURCE_MD5 = "0a34818dacac56599e5f3cf02264aea4";
 
 /** A row must not end after a line whose words end so (the words as plainWords() gives them). */
 const KEEP_WITH_NEXT: readonly string[] = [

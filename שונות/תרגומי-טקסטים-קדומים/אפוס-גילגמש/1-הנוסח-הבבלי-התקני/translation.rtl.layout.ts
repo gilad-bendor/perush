@@ -20,7 +20,7 @@ import { lineSimilarity } from "../../layout/numbered-lines.ts";
 import { endsSentence } from "../../layout/rows.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "a190760c7185e9fe395f5d99616405b8";
+const SOURCE_MD5 = "0ee9d9d6738cf54da359dc3090e98440";
 
 /** A row must not end after a line whose words end so (core() of the line: no punctuation at its end - or, if the name ends with punctuation, plainWords()). */
 const KEEP_WITH_NEXT: readonly string[] = [

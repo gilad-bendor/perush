@@ -18,7 +18,7 @@ import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/
 import { translationLayout, type BreakContext, type BreakCost, type NumberedLine, type UnitContext } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "83b34b01a7c45542c92c28ff34770815";
+const SOURCE_MD5 = "be375b3e4d055256550e28ca572e5754";
 
 /** A unit of three lines starts at a line whose words begin so. */
 const TERCET: readonly string[] = [

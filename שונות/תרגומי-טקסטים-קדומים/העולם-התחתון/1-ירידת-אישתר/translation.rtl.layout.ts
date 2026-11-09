@@ -11,7 +11,7 @@ import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/
 import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "7286ef7e827f6a361a5320b581bc075b";
+const SOURCE_MD5 = "03121c4a51428668241e10acaf89f2c3";
 
 /** A row must not end after a line whose words end so (the words as plainWords() gives them). */
 const KEEP_WITH_NEXT: readonly string[] = [
@@ -20,7 +20,7 @@ const KEEP_WITH_NEXT: readonly string[] = [
     "אשר עזבו את כלותיהם,",              // 34-35: I weep for the young men / for the young women - a couplet
     "אל שער כורנוגי שים פניך,",          // 93-94: "go to Kurnugi's gate / its seven gates will open for you"
     "כאשר ינוח לבה, כבדה יאור,",         // 96-97: "when her heart is calm ..." is the clause of "make her swear"
-    "אל הנאד שים את אזנך:",              // 98-99: "set your mind on the waterskin: / saying, '...'"
+    "אל החמת שים את אזנך:",             // 98-99: "set your mind on the waterskin: / saying, '...'"
     "אגדפך גידוף גדול,",                 // 103-103a: I curse you / I decree you a fate - a couplet before the curses
     "על כסא זהב הושב;",                  // 113-114: Ereshkigal's orders two by two -
     "על כסא זהב הושיב;",                 //   and Namtar's carrying them out, alike (115-118)

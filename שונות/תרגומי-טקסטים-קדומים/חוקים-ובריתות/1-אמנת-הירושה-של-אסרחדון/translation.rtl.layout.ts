@@ -12,7 +12,7 @@ import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/
 import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "ea9d8c250e7cb1eceb0c4fe05aad0649";
+const SOURCE_MD5 = "ae34918fa556e1e41641133decdcbc50";
 
 /** Where a row must not end: after a line whose text ends so - named by its words (no markup, no vowel points). */
 const KEEP_WITH_NEXT: readonly string[] = [
