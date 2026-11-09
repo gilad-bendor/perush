@@ -540,7 +540,7 @@ RESERVED = [
     (W + alt("אדמה", "האדמה", "באדמה", "לאדמה", "אדמתו", "מאדמה", "מהאדמה") + E, r"bhum|bhu|zam|zem|kse|ksa|ksm", "אֲדָמָה only for bhū́mi (and Av. zam 'ground' where by sense)"),
     (W + alt("אדם", "האדם", "לאדם", "באדם", "מאדם", "כאדם") + E, r"purus|purs|puru|nar|nr|mas|masy|purusa", "אָדָם only for púruṣa (Av. maṣ̌iia 'man')"),
     (W + alt("טוב", "טובה", "טובים", "טובות", "הטוב", "הטובה", "הטובים", "הטובות", "טובו", "טובת", "מיטב", "היטיב", "וטוב") + E,
-     r"bhadr|vasu|vasv|vasis|vam|sadh|srey|siva|\bsu|vohu|vanh|vahis|srir|sri|hu|sev|sobh|kalya|bhavya|jyes|sres", "טוֹב only for bhadrá / vásu / vāmá / sādhú / su- (Av. vohu, vahišta)"),
+     r"bhadr|vasu|vasv|vasis|vam|sadh|srey|siva|\bsu|\bsvadhvar|vohu|vanh|vahis|srir|sri|hu|sev|sobh|kalya|bhavya|jyes|sres", "טוֹב only for bhadrá / vásu / vāmá / sādhú / su- (Av. vohu, vahišta)"),
     (W + alt("ברך", "בירך", "ברכה", "ברכת", "מבורך", "יברך", "ברוך", "ברכו", "ברכם", "ברכות") + E, r"asis|asir|svast|vand|bhadr|janu|jnu|jnubhih", "the root ברך only for āśís (and `בֶּרֶךְ` 'knee' for jā́nu) ('blessing, wish') / svastí"),
     (W + alt("ארור", "ארורה", "ארר", "אורר", "מארה") + E, r"sap|abhisap|nirrt", "the root ארר only for √śap"),
     (W + alt("שבת", "השבת", "שבתו", "שביתה", "שבתה", "וישבות", "שבות") + E, None, "the root שבת never"),
@@ -658,6 +658,7 @@ def _find_word(heb, hp):
 
 # whole words that contain a gated string but are another word (guidelines §5.2: exempt them, do not make translators
 # write around them); Round 7 run 1: the forms of בִּקֵּשׁ contain קשת
+EXEMPT_RX = r"[ובלמהכש]{0,3}(?:מ|נ|ת|י)?בי?קש(?:ת|תי|תם|תן|ות|תו|תה)"  # every form of בִּקֵּשׁ / בַּקָּשָׁה (קשת)
 EXEMPT_WORDS = {"מבקשת", "בקשת", "ביקשת", "מבקשות", "בקשתי", "ביקשתי", "בקשתם", "ביקשתם", "ובקשת", "ומבקשת"}
 
 
@@ -678,7 +679,8 @@ def check_line(key, lab, heb, body, out, first_seen=None):
     src = r["text"]
     srcf = " " + fold(src) + " "
     for rx, allow, why in RESERVED:
-        m = next((x for x in re.finditer(rx, plain) if _whole_word(plain, x) not in EXEMPT_WORDS), None)
+        m = next((x for x in re.finditer(rx, plain) if _whole_word(plain, x) not in EXEMPT_WORDS
+                  and not re.fullmatch(EXEMPT_RX, _whole_word(plain, x))), None)
         if m and not lic(allow, key, lab):
             if re.search(r"\[היתר שער: [^\]]*" + re.escape(m.group(0).strip()), body):
                 continue
@@ -857,8 +859,15 @@ def cmd_units():
 def _span(key, a=None, b=None):
     rs = rows(key)
     labs = [r["label"] for r in rs]
-    i = labs.index(a) if a else 0
-    j = labs.index(b) if b else (i if a else len(rs) - 1)
+    def _ix(x, last=False):
+        if x in labs:
+            return labs.index(x)
+        cand = [n for n, l in enumerate(labs) if re.match(rf"{re.escape(x)}[a-g]$", l)]  # a bare stanza number
+        if not cand:
+            sys.exit(f"no label {x} in {key}")
+        return cand[-1] if last else cand[0]
+    i = _ix(a) if a else 0
+    j = _ix(b, True) if b else ((_ix(a, True) if a else len(rs) - 1))
     return rs[i:j + 1]
 
 
