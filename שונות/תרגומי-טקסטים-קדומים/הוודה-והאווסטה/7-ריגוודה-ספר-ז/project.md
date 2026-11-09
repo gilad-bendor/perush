@@ -48,6 +48,8 @@ rule for texts of 3,000 lines and more, guidelines §1). Round 7 run 1 (2026-11-
 | 9 | 7.89–7.97 | 246 | 7.89 (the house of clay); Vāyu, Indra–Agni, Sarasvatī, Bṛhaspati |
 | 10 | 7.98–7.104 | 241 | Indra, Viṣṇu, Parjanya, the frogs (7.103: revise to the book's renderings), **7.104 against the demons** |
 
+- **Quota stop (2026-11-09 03:10 UTC):** the 5-hour limit stopped the run (translator 6 had finished part 6 on disk); the VM restarted; resumed 03:46 UTC by the parent's RESUME (range B, a weekly warning – range B goes on).
+
 <!-- The translators insert their sections here, above "## Parallels index". -->
 
 ## RV7.1–7.9 (part 1: Agni; translator 1, Round 7 run 1)
