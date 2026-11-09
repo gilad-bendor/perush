@@ -16,3 +16,7 @@
 - **Line numbering:** ŚB kaṇḍikā + TITUS sentence (`1a`, `1b`); AB khaṇḍa.sentence + line letter (`13.1a`).
 - **Usefulness:** the only accessible e-text of the AB (GRETIL has none); the ŚB with Weber's accents. The text is written
   without word division (Devanāgarī-style sandhi) in the ŚB; the AB is word-divided, with its gāthās marked (verse lines).
+
+- **2026-11-09 (Round 7 run 2):** `avest028.htm` – the TITUS Avestan corpus, Yasna 27 (Geldner's text, Humbach 1991's
+  line division): https://titus.fkidg1.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avest028.htm (one page per
+  chapter, `avest<NNN>.htm`). The base of the prayers Y 27.13–15 (`../../האווסטה/`). Local only.

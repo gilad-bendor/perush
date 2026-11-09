@@ -10,3 +10,7 @@
 - **Retrieved:** 2026-10-30 (Round 5 run 1).
 - **Licence:** public domain (US); the OCR files are large → **git-ignored**, re-downloadable.
 - **Usefulness:** the old translations are dated (rank 5 for readings); the OCR garbles diacritics (ś as `9`, `q`, `f`).
+
+- **2026-11-09 (Round 7 run 2):** `Mills-1887--SBE-31_djvu.txt` (L. H. Mills, *The Zend-Avesta III*, SBE 31: the Gāthās
+  and the Yasna; archive.org `wg931`) and `Moulton-1913--Early-Zoroastrianism_djvu.txt` (J. H. Moulton, the Gāthās in
+  an appendix; archive.org `earlyzoroastrian00mouluoft`): public domain, OCR; rank 5 for `../../האווסטה/` (`pd`).
