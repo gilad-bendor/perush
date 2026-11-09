@@ -1,0 +1,15 @@
+# Rigveda 7.53 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_07.tei.
+1a	prá dyā́vā yajñaíḥ pr̥thivī́ námobhiḥ	`prá` – prá (invariable; LP) ‖ `dyā́vā` – dyú- ~ div- (nominal stem; ACC.F.DU) ‖ `yajñaíḥ` – yajñá- (nominal stem; INS.M.PL) ‖ `pr̥thivī́` – pr̥thivī́- (nominal stem; ACC.F.DU) ‖ `námobhiḥ` – námas- (nominal stem; INS.N.PL)
+1b	sabā́dha īḷe br̥hatī́ yájatre	`sabā́dhaḥ` – sabā́dhas- (nominal stem; ACC.N.SG) ‖ `īḷe` – √īḍ- ~ īḷ- (root; SG.1.IND.PRS.MED) ‖ `br̥hatī́` – br̥hánt- (nominal stem; ACC.F.DU) ‖ `yájatre` – yájatra- (nominal stem; ACC.F.DU)
+1c	té cid dhí pū́rve kaváyo gr̥ṇántaḥ	`té` – sá- ~ tá- (pronoun; ACC.F.DU) ‖ `cit` – cid (invariable) ‖ `hí` – hí (invariable) ‖ `pū́rve` – pū́rva- (nominal stem; NOM.M.PL) ‖ `kaváyaḥ` – kaví- (nominal stem; NOM.M.PL) ‖ `gr̥ṇántaḥ` – √gr̥̄- 1 (root; NOM.M.PL.PRS.ACT.PTCP)
+1d	puró mahī́ dadhiré deváputre	`purás` – purás (invariable) ‖ `mahī́` – máh- (nominal stem; ACC.F.DU) ‖ `dadhiré` – √dhā- 1 (root; PL.3.IND.PRF.MED) ‖ `deváputre` – deváputra- (nominal stem; ACC.F.DU)
+2a	prá pūrvajé pitárā návyasībhir	`prá` – prá (invariable; LP) ‖ `pūrvajé` – pūrvajá- (nominal stem; ACC.F.DU) ‖ `pitárā` – pitár- (nominal stem; ACC.F.DU) ‖ `návyasībhiḥ` – návyas- (nominal stem; INS.F.PL.CMP)
+2b	gīrbhíḥ kr̥ṇudhvaṃ sádane r̥tásya	`gīrbhíḥ` – gír- ~ gīr- (nominal stem; INS.F.PL) ‖ `kr̥ṇudhvam` – √kr̥- (root; PL.2.IMP.PRS.MED) ‖ `sádane` – sádana- 1 (nominal stem; ACC.N.DU) ‖ `r̥tásya` – r̥tá- (nominal stem; GEN.N.SG)
+2c	ā́ no dyāvāpr̥thivī daívyena	`ā́` – ā́ (invariable; LP) ‖ `naḥ` – ahám (pronoun; ACC.PL) ‖ `dyāvāpr̥thivī` – dyā́vāpr̥thivī́- (nominal stem; VOC.F.DU) ‖ `daívyena` – daívya- (nominal stem; INS.M.SG)
+2d	jánena yātam máhi vāṃ várūtham	`jánena` – jána- (nominal stem; INS.M.SG) ‖ `yātam` – √yā- 1 (root; DU.2.IMP.PRS.ACT) ‖ `máhi` – máh- (nominal stem; NOM.N.SG) ‖ `vām` – tvám (pronoun; GEN.DU) ‖ `várūtham` – várūtha- (nominal stem; NOM.N.SG)
+3a	utó hí vāṃ ratnadhéyāni sánti	`utá` – utá (invariable) ‖ `u` – u (invariable) ‖ `hí` – hí (invariable) ‖ `vām` – tvám (pronoun; GEN.DU) ‖ `ratnadhéyāni` – ratnadhéya- (nominal stem; NOM.N.PL) ‖ `sánti` – √as- 1 (root; PL.3.IND.PRS.ACT)
+3b	purū́ṇi dyāvāpr̥thivī sudā́se	`purū́ṇi` – purú- (nominal stem; NOM.N.PL) ‖ `dyāvāpr̥thivī` – dyā́vāpr̥thivī́- (nominal stem; VOC.F.DU) ‖ `sudā́se` – sudā́s- (nominal stem; DAT.M.SG)
+3c	asmé dhattaṃ yád ásad áskr̥dhoyu	`asmé` – ahám (pronoun; PL) ‖ `dhattam` – √dhā- 1 (root; DU.2.IMP.PRS.ACT) ‖ `yát` – yá- (pronoun; NOM.N.SG) ‖ `ásat` – √as- 1 (root; SG.3.SBJV.PRS.ACT) ‖ `áskr̥dhoyu` – áskr̥dhoyu- (nominal stem; NOM.N.SG)
+3d	yūyám pāta svastíbhiḥ sádā naḥ	`yūyám` – tvám (pronoun; NOM.PL) ‖ `pāta` – √pā- 1 (root; PL.2.IMP.PRS.ACT) ‖ `svastíbhiḥ` – svastí- (nominal stem; INS.PL) ‖ `sádā` – sádā (invariable) ‖ `naḥ` – ahám (pronoun; ACC.PL)

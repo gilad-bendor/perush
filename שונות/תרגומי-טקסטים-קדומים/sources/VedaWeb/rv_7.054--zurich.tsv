@@ -1,0 +1,15 @@
+# Rigveda 7.54 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_07.tei.
+1a	vā́stoṣ pate práti jānīhy asmā́n	`vā́stoḥ` – vā́stu- (nominal stem; GEN.N.SG) ‖ `pate` – páti- (nominal stem; VOC.M.SG) ‖ `práti` – práti (invariable; LP) ‖ `jānīhi` – √jñā- (root; SG.2.IMP.PRS.ACT) ‖ `asmā́n` – ahám (pronoun; ACC.PL)
+1b	svāveśó anamīvó bhavā naḥ	`svāveśáḥ` – svāveśá- (nominal stem; NOM.M.SG) ‖ `anamīváḥ` – anamīvá- (nominal stem; NOM.M.SG) ‖ `bhava +` – √bhū- (root; SG.2.IMP.PRS.ACT) ‖ `naḥ` – ahám (pronoun; DAT.PL)
+1c	yát tvémahe práti tán no juṣasva	`yát` – yá- (pronoun; ACC.N.SG) ‖ `tvā` – tvám (pronoun; ACC.SG) ‖ `ī́mahe` – √yā- 2 (root; PL.1.IND.PRS.MED) ‖ `práti` – práti (invariable; LP) ‖ `tát` – sá- ~ tá- (pronoun; ACC.N.SG) ‖ `naḥ` – ahám (pronoun; ACC.PL) ‖ `juṣasva` – √juṣ- (root; SG.2.IMP.AOR.MED)
+1d	śáṃ no bhava dvipáde śáṃ cátuṣpade	`śám` – śám (invariable) ‖ `naḥ` – ahám (pronoun; PL) ‖ `bhava` – √bhū- (root; SG.2.IMP.PRS.ACT) ‖ `dvipáde` – dvipád- (nominal stem; DAT.N.SG) ‖ `śám` – śám (invariable) ‖ `cátuṣpade` – cátuṣpad- (nominal stem; DAT.N.SG)
+2a	vā́stoṣ pate pratáraṇo na edhi	`vā́stoḥ` – vā́stu- (nominal stem; GEN.N.SG) ‖ `pate` – páti- (nominal stem; VOC.M.SG) ‖ `pratáraṇaḥ` – pratáraṇa- (nominal stem; NOM.M.SG) ‖ `naḥ` – ahám (pronoun; DAT.PL) ‖ `edhi` – √as- 1 (root; SG.2.IMP.PRS.ACT)
+2b	gayasphā́no góbhir áśvebhir indo	`gayasphā́naḥ` – gayasphā́na- (nominal stem; NOM.M.SG) ‖ `góbhiḥ` – gáv- ~ gó- (nominal stem; INS.M.PL) ‖ `áśvebhiḥ` – áśva- (nominal stem; INS.M.PL) ‖ `indo` – índu- (nominal stem; VOC.M.SG)
+2c	ajárāsas te sakhyé syāma	`ajárāsaḥ` – ajára- (nominal stem; NOM.M.PL) ‖ `te` – tvám (pronoun; GEN.SG) ‖ `sakhyé` – sakhyá- (nominal stem; LOC.N.SG) ‖ `syāma` – √as- 1 (root; PL.1.OPT.PRS.ACT)
+2d	pitéva putrā́n práti no juṣasva	`pitā́` – pitár- (nominal stem; NOM.M.SG) ‖ `iva` – iva (invariable) ‖ `putrā́n` – putrá- (nominal stem; ACC.M.PL) ‖ `práti` – práti (invariable; LP) ‖ `naḥ` – ahám (pronoun; ACC.PL) ‖ `juṣasva` – √juṣ- (root; SG.2.IMP.AOR.MED)
+3a	vā́stoṣ pate śagmáyā saṃsádā te	`vā́stoḥ` – vā́stu- (nominal stem; GEN.N.SG) ‖ `pate` – páti- (nominal stem; VOC.M.SG) ‖ `śagmáyā` – śagmá- (nominal stem; INS.F.SG) ‖ `saṃsádā` – saṃsád- (nominal stem; INS.F.SG) ‖ `te` – tvám (pronoun; GEN.SG)
+3b	sakṣīmáhi raṇváyā gātumátyā	`sakṣīmáhi` – √sac- (root; PL.1.OPT.AOR.MED) ‖ `raṇváyā` – raṇvá- (nominal stem; INS.F.SG) ‖ `gātumátyā` – gātumánt- (nominal stem; INS.F.SG)
+3c	pāhí kṣéma utá yóge váraṃ no	`pāhí` – √pā- 1 (root; SG.2.IMP.PRS.ACT) ‖ `kṣéme` – kṣéma- (nominal stem; LOC.M.SG) ‖ `utá` – utá (invariable) ‖ `yóge` – yóga- (nominal stem; LOC.M.SG) ‖ `váram` – vára- 2 (nominal stem; ACC.M.SG) ‖ `naḥ` – ahám (pronoun; ACC.PL)
+3d	yūyám pāta svastíbhiḥ sádā naḥ	`yūyám` – tvám (pronoun; NOM.PL) ‖ `pāta` – √pā- 1 (root; PL.2.IMP.PRS.ACT) ‖ `svastíbhiḥ` – svastí- (nominal stem; INS.PL) ‖ `sádā` – sádā (invariable) ‖ `naḥ` – ahám (pronoun; ACC.PL)

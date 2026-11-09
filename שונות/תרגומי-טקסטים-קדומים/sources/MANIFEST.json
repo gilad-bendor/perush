@@ -19067,6 +19067,32 @@
    }
   },
   {
+   "id": "Jamison--Rigveda-commentary/VII.1–55-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/VII.1%E2%80%9355-9-25-26.pdf",
+   "note": "Jamison commentary (©, local)",
+   "files": {
+    "Jamison--Rigveda-commentary/VII.1–55-9-25-26.pdf": [
+     807387,
+     "101e06ef3326a8549d09d34a4824af78959a21ef4b30abc3f5dfcd75756bc563"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/VII.1–55-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "VII.1–55-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/VII.1–55-9-25-26.txt": [
+     440261,
+     "7eae4038b2e36a597608ff0a07f4e01d181f946c7b2c8e6d449a8bdcf6ee923a"
+    ]
+   }
+  },
+  {
    "id": "Jamison--Rigveda-commentary/X.1–60-9-25-26.pdf",
    "kind": "url",
    "tier": "work",

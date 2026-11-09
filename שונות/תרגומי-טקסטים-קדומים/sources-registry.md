@@ -197,6 +197,7 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 | `Perseus--Hesiod/` | Hesiod, *Theogony* (Evelyn-White 1914, PD text; Perseus markup CC BY-SA), committed. |
 | `TLHdig/CTH-321/` | The Illuyanka myth, KBo 3.7 etc., from TLHdig 0.3 (Zenodo 10.5281/zenodo.20328284, **CC BY 4.0**); the 74 MB zip is git-ignored (recipe in `fetch-recipes.tsv`), the CTH 321 files committed. The Hittite run (run 6) uses the same zip. |
 | `VedaWeb/rv_1.032--zurich.tsv` | Rigveda 1.32, the Zurich text and morphology layer (**CC BY 4.0**), extracted by `dossier_tools.py rvtsv` from VedaWeb's `rv_book_01.tei` (ignored: `VedaWeb/*.tei`). |
+| `VedaWeb/rv_7.001…104--zurich.tsv` | The whole of Rigveda Book 7, the Zurich text and morphology (**CC BY 4.0**, committed), made by `הוודה-והאווסטה/vedic_tools.py convert` from `rv_book_07.tei` (Round 7 run 1). |
 | `Bugge-1867--Saemundar-Edda/hymis.html` | *Hýmiskviða* from Bugge 1867 (PD), `etext.old.no`. |
 | `Wikisource-zh--Kojiki/kojiki-jokan.html` | *Kojiki* Book 1 from zh.wikisource (PD text; page CC BY-SA). The Wikimedia API answered 429 to scripts once; the saved page serves. |
 - **Not reached:** ru.wikisource (the Dove Book) answered 429; Ulukau and NZETC (the Kumulipo, Ika-tere) block scripts; ctext.org forbids scraping; DEAPS has no Deir ʿAllā record. The dossier's `project.md` lists every excerpt not done and why.
@@ -251,6 +252,7 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 - **Dictionaries** (`sources/Sanskrit-lexicon--csl-orig/`): Monier-Williams and Grassmann from csl-orig on GitHub raw (the
   Cologne site answers 403); ignored, per word.
 - **Rank 3** (`sources/Jamison--Rigveda-commentary/`, ©, ignored): Jamison's online commentary (2026-09 version), PDFs +
+  Book 7 is complete since Round 7 run 1: `VII.1–55-9-25-26.pdf` / `.txt` added (2026-11-09; recipe + manifest items).
   text; (`sources/Archive-org--PD-translations/`, ignored): Eggeling SBE 12, Keith HOS 25, Darmesteter SBE 4, Hume 1921,
   Ganguli vols. 2–3, Bartholomae 1904 (OCR text).
 - Hebrew translations (Peter 2006, Fridman 2014; ©, Carmel) were not consulted.

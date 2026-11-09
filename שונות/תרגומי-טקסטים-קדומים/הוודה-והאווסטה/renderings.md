@@ -48,7 +48,7 @@ In the apparatus, Sanskrit and Avestan words are written in Latin transliteratio
   §7 at every occurrence.
 
 ## 3. Names (binding; checked by script: where the source regex matches the folded line, the Hebrew must be in it)
-The regex is matched on the **folded** source (`vedic_tools.py` `fold`: lower case, no accents or diacritics, ś/ṣ/š =
+Rows marked **(RV 7)** apply to the Rigveda Book 7 project only (Round 7 run 1). The regex is matched on the **folded** source (`vedic_tools.py` `fold`: lower case, no accents or diacritics, ś/ṣ/š =
 s, ṛ = r, ϑ = th, ə = e, spaces around words). A name used as a common noun in another text (Agni = fire, Mitra =
 friend, Vṛtra = obstacle) is written here only for the texts where it is a name (§3.2 says how the common noun is
 rendered).
@@ -69,7 +69,7 @@ rendered).
 | Saraṇyū | ` saranyu` | `סַרַנְיוּ` |  | Tvaṣṭṛ's daughter, Yama's mother (10.17) |
 | Pūṣan | ` pus(?:a\|an\|anam\|nah\|ne\|nas\|na)\b` | `פּוּשָׁן` |  | guardian of roads and of the dead's way |
 | Savitṛ | ` savit` | `סַוִיטָר` |  | the Impeller |
-| Sarasvatī | ` sarasvat` | `סַרַסְוַתִי` |  | river and goddess |
+| Sarasvatī | ` sarasvat(?:i\|y)` | `סַרַסְוַתִי` |  | river and goddess |
 | Aditi | ` aditi\b\| aditer\b\| aditeh\b` | `אַדִיטִי` | ★ | "Boundlessness", mother of the Ādityas (10.72) |
 | Bṛhaspati | ` brhaspat` | `בְּרִהַסְפַּתִי` |  | Lord of the Formulation |
 | Brahmaṇaspati | ` brahmanaspat` | `בְּרַהְמַנַסְפַּתִי` |  | the same god (10.72.2) |
@@ -83,7 +83,7 @@ rendered).
 | Agni (RV) | ` agn` | `אַגְנִי` |  | **RV only**: the fire is the god; elsewhere *agní* "fire" = `אֵשׁ` (§3.2) |
 | Manu | ` man(?:u\|uh\|ur\|um\|una\|ave\|oh\|or)\b` | `מָנוּ` | ★ | the first sacrificer, father of mankind; the flood's survivor (`מנו` "they counted") |
 | Hariścandra | ` hariscandr` | `הַרִישְׁצַנְדְּרָה` |  | the king (AB 7.13) |
-| Rohita | ` rohit` | `רוֹהִיטָה` |  | his son |
+| Rohita (AB) | ` rohit` | `רוֹהִיטָה` |  | his son |
 | Nārada | ` narad(?!h)` | `נָארַדָה` |  | the sage |
 | Śunaḥśepa | ` sunahsep` | `שׁוּנַהְשֵׁפָּה` |  | "Dog's Tail" (a note) |
 | Ajīgarta | ` ajigart` | `אַגִ'יגַרְטָה` |  | his father; Sauyavasi `סָאוּיַוַסִי` |
@@ -103,6 +103,35 @@ rendered).
 | Mārtāṇḍa | ` martand` | `מָארְטָאנְדָּה` |  | (10.72.8–9) "from the dead egg" |
 | Ārmaiti | ` a?ra?mait` | `אָרְמַאִיטִי` |  | (Vd 2.10) the earth's goddess, "Right-mindedness" |
 | Airyana Vaējah | ` airii?ene vaejah` | `אַירְיָנֶם וַאֵגָ'ה` |  | (Vd 2.20) "the Aryan Expanse" |
+| Aryaman (RV 7) | ` aryam` | `אַרְיַמַן` |  | the Āditya of hospitality and of the bride's escort (Round 7 run 1) |
+| Bhaga (RV 7) | ` bhag(?:a\|ah\|o\|am\|asya\|aya\|ena\|e)\b` | `בְּהַגָה` |  | the Āditya "Portion, Fortune" (7.41); the common noun *bhága* "portion" takes `[היתר שם: …]` |
+| the Ādityas (RV 7) | ` aditya` | `אָדִיטְיָה` |  | Aditi's sons (Mitra, Varuṇa, Aryaman, Bhaga …); `הָאָדִיטְיָה` |
+| the Maruts (RV 7) | ` marut` | `מַרוּטִים` | ★ | the storm troop, Rudra's sons (`מרוטים` "plucked": always vocalized) |
+| the Aśvins (RV 7) | ` asvin` | `אַשְׁוִינִים` |  | the twin horsemen (precedent `האשוינים`, AB, RV 10.17) |
+| Nāsatya (RV 7) | ` nasaty` | `נָאסַטְיָה` |  | the Aśvins' name ("the Nāsatyas") |
+| Viṣṇu (RV 7) | ` visnu` | `וִישְׁנוּ` |  | the god of the three strides (precedent KU 3.9b) |
+| Sudās (RV 7) | ` sudas(?!am\b)` | `סוּדָאס` |  | the Tṛtsu-Bharata king, Vasiṣṭha's patron (7.18, 7.33, 7.83) |
+| the Tṛtsus (RV 7) | ` trts` | `טְרִטְסוּ` |  | Sudās's clan |
+| the Bharatas (RV 7) | ` bharat(?:ah\|asya\|aya\|anam\|am\|ebhyah\|aih\|an\|as)\b` | `בְּהַרַטָה` |  | Sudās's people (Agni Bhārata) |
+| Divodāsa (RV 7) | ` divodas` | `דִּיווֹדָאסָה` |  | Sudās's ancestor |
+| Paijavana (RV 7) | ` paijavan` | `פַּיְגַ'וַנָה` |  | Sudās's patronymic |
+| Agastya (RV 7) | ` agasty` | `אַגַסְטְיָה` |  | the seer (7.33) |
+| Urvaśī (RV 7) | ` urvas` | `אוּרְוַשִׁי` |  | the apsaras, Vasiṣṭha's mother (7.33) |
+| Kutsa (RV 7) | ` kuts` | `קוּטְסָה` |  | Indra's charioteer-companion |
+| Śambara (RV 7) | ` sambar` | `שַׁמְבַּרָה` |  | the Dāsa chief of the ninety-nine forts |
+| Paruṣṇī (RV 7) | ` parusn` | `פַּרוּשְׁנִי` |  | the river of the battle of the ten kings (7.18) |
+| Yamunā (RV 7) | ` yamun` | `יַמוּנָה` |  | the river (7.18.19) |
+| Dadhikrā(van) (RV 7) | ` dadhikr` | `דַּדְהִיקְרָא` |  | the divine racehorse (7.44) |
+| Vāstoṣpati (RV 7) | ` vastospat` | `וָאסְטוֹשְׁפַּתִי` |  | "Lord of the dwelling" (7.54–55) |
+| the Ṛbhus (RV 7) | ` rbhu` | `רִבְּהוּ` |  | the three craftsmen-gods (7.48) |
+| Sarasvant (RV 7) | ` sarasvan` | `סַרַסְוַנְט` |  | Sarasvatī's male counterpart (7.96) |
+| Vaiśvānara (RV 7) | ` vaisvanar` | `וַאישְׁוָנָרָה` |  | "belonging to all men", Agni's epithet, transliterated |
+| Jātavedas (RV 7) | ` jatavedas` | `יודע־הנולדים` |  | Agni's epithet, translated (precedent RV 10.16) |
+| Apāṃ Napāt (RV 7) | ` apam napat` | `נכד המים` |  | the fire in the waters, translated (7.34–35, 47) |
+| Mitra (RV 7) | ` mitr(?:a\|ah\|o\|am\|asya\|aya\|ena\|e\|au\|as\|ayoh)\b` | `מִיטְרָה` | ★ | alone (the god); the common noun *mitrá* "ally" takes `[היתר שם: …]` (part 1) |
+| Bhāratī (RV 7) | ` bharati` | `בְּהָארַטִי` |  | the goddess of the Āprī hymns (7.2.8) |
+| Nahus (RV 7) | ` nahus` | `נַהוּשׁ` |  | an ancestral people / king (7.6.5) |
+| Jarūtha (RV 7) | ` jaruth` | `גָ'רוּתָה` |  | a demon slain by Agni (7.1.7, 7.9.6) |
 
 ### 3.2 Common nouns that are names elsewhere
 - *agní* outside the RV (ŚB, AB, KU, MBh): `אֵשׁ` (the fire), and `אַגְנִי` only where the text speaks of the god.
@@ -243,6 +272,53 @@ the Bible passages the corpus is compared with (Gen 1–3, 6–9, 22; Lev 18): *
 | *√yaj* (with the son as victim) | `זָבַח` | `הֶעֱלָה לְעֹלָה` | AB's *tena yajasva* "sacrifice with him" |
 | *várа* (KU, a boon) | `מַשְׁאָלָה` |  | Naciketas's three boons |
 
+### 5.5 The Rigveda, Book 7 (Round 7 run 1; pre-set by the coordinator before the first line, from the book's commonest lemmas: `vedic_tools.py freq RV7`)
+The book is a **hymnal of one priestly family** (the Vasiṣṭhas): most of its words are the words of praise, gift and
+help that every hymn uses. One Hebrew per lemma, from the first line to the last (★); the precedents of RV 10 / 1.32 /
+the Brāhmaṇas hold where they exist (`freq` prints them). Pre-set here (translator 1 may revise a row, with a reason, in
+its Proposals; later translators follow the merged table):
+| Source | Hebrew | Why / note |
+|---|---|---|
+| *svastí* | `שָׁלוֹם` | precedent (KU 1.9b, RV 10.14.11d, *svastidā́* `נותן השלום`); the book's refrain F6 |
+| √*pā* "protect" | `שָׁמַר` (`שמר על`) | precedent RV 10.17.4; √*pā* "drink" `שָׁתָה` (another root) |
+| *sádā* | `תָּמִיד` |  |
+| *śám* | `אֹשֶׁר` (*śáṃ naḥ* … *bhavatu* `לאושר יהיה לנו …`) | 7.35's refrain; not `שלום` (= *svastí*) nor `טוב` (gated) |
+| *vásu* | `טוּב` (n., goods) / `טוֹב` (adj.) | licensed by the gate; the gods *vásavaḥ* `הַוַּסוּ` (a name, transliterated) |
+| *rayí* | `עֹשֶׁר` | precedent |
+| *rā́dhas* | `מַתָּת` | "bounty, the patron's gift" |
+| *rátna* | `אוֹצָר` | precedent *suratna* `רבות־האוצרות` |
+| *vā́ja* | `פְּרָס` | "prize, the stake of the contest"; *vājín* `זוכה־הפרס` (the horse: `סוס זוכה־הפרס`); not `שלל` (Akk. *šallatu*'s cognate) |
+| *maghávan* | `בַּעַל־הַשֶּׁפַע` | precedent; of the patrons too (pl. `בעלי־השפע`) |
+| *sūrí* | `נַדְבָן` | "patron (of the sacrifice)"; not `נדיב` (= *suvidátra*, Av. *spəṇta*) |
+| √*av*, *ávas* | `עָזַר`, `עֶזְרָה` | precedent `יעזרו` (RV 10.15.1d); *ūtí* `סִיּוּעַ` |
+| *śárman* | `מַחְסֶה` | "shelter, refuge" |
+| *áṃhas* | `מְצוּקָה` | "narrowness, distress" |
+| √*pr̥* caus. (*piprtam*), √*tr̥̄* | `הֶעֱבִיר` | precedent *pāraya-*; "carry across (troubles)" |
+| √*mr̥ḍ* | `רִחֵם` | precedent RV 10.34.14a; F7 |
+| *sumatí* | `רָצוֹן טוֹב` | precedent RV 10.14.6c |
+| *bráhman* (n.) | `נֹסַח` | precedent; *brahmakŕ̥ti* `עשיית הנוסח` |
+| *dhī́* | `הֲגוּת` | precedent RV 10.10.1d; *dhītí* `הגייה` |
+| *gír* | `שִׁיר` |  |
+| *stóma*, √*stu*, *stotár* | `שֶׁבַח`, `שִׁבֵּחַ`, `מְשַׁבֵּחַ` | one root for the family |
+| √*gr̥̄* "sing, praise", *jaritár* | `הִלֵּל`, `מְהַלֵּל` | precedent `הללו` (RV 10.15.6b) |
+| √*juṣ* | `הִתְעַנֵּג` (`התענג על`) | precedent RV 10.15 |
+| √*mad*, *máda* | `הִתְבַּסֵּם`, `הִתְבַּסְּמוּת` | soma's exhilaration (precedent RV 10.14.4d); not `שכרון` (Ugaritic *škrn*'s cognate) |
+| *námas* | `קִדָּה` | "homage, the bow" (precedent AB 7.16.8d) |
+| *havyá* | `תִּקְרֹבֶת` | "the offering"; *havís* keeps `מִנְחָה` |
+| *adhvará* | `טֶקֶס` | "the (sacrificial) ceremony" |
+| *hótar* | `כֹּהֵן־הַקְּרִיאָה` | precedent (AB) |
+| *dūtá* | `שָׁלִיחַ` | Agni the messenger |
+| *ródasī* | `שְׁתֵּי הַמַּחֲצוֹת` | "the two world-halves" (heaven and earth as a pair); *dyā́vāpr̥thivī́* keeps `שמים וארץ` |
+| *sáhas*, *sūnúḥ sáhasaḥ* | `עֹז`, `בֶּן הָעֹז` | Agni "son of strength" |
+| *śávas* | `עָצְמָה` | *bála* keeps `כוח` |
+| *ŕ̥tāvan* | `נֶאֱמַן הַסֵּדֶר` | the cousin-cognate of Av. *aṣ̌auuan* (§11.3; guidelines §6.7) |
+| *amŕ̥ta* (a god, adj.) | `בֶּן־אַלְמָוֶת` | the noun *amŕ̥ta* / *amr̥tatvá* keeps `אלמוות` (plene) |
+| *jyótis* | `אוֹר` | *svàr* keeps `האור` (the sun-world: noted where both meet) |
+| *ā́rya* | `אָרְיָה` ★ | transliterated with a note ("the Ārya", the poets' own people; never "Aryan" in its modern sense); `אריה` "lion": always vocalized |
+| *dā́sa* / *dásyu* | `דָּאסָה` / `דַּסְיוּ` | transliterated with a note (the poets' enemies, human and demonic) |
+| *rakṣás*, *yātudhā́na* | `רַקְשָׁס`, `קוֹסֵם` | 7.104: the demons and the sorcerers; not the root כשף (Akk. *kaššāpu*'s cognate, Maqlû) |
+| *vr̥trá* (not the name), *vr̥trahán* | `מַחְסוֹם`, `הוֹרֵג־וְרִטְרָה` | the name Vṛtra keeps §3.1 where the text means the serpent |
+
 ## 6. (reserved for the LXX layer – not applicable: no Greek)
 
 ## 7. Reserved and gated words, and traps (checked by `vedic_tools.py verify`; `gates` prints the regexes)
@@ -273,6 +349,9 @@ where the fire-offering is near.
 | F4 | `ahura mazda mainiio spenista datare gaethanam astuuaitinam asaum` | `אהורה מזדה, הרוח הנדיבה ביותר, מעמיד בעלי החיים בעלי העצמות, נאמן הסדר` | Vd 2.1 (fixed by the VD translator, §11.3; *dātar* `מעמיד` since 2026-11-02, §11.9) |
 | F4b | `datare gaethanam astuuaitinam asaum` | `מעמיד בעלי החיים בעלי העצמות, נאמן הסדר` | Vd 2.39, 42, 43 (the short address) |
 | F5 | `sa hovaca` | `אמר` | ŚB, AB: "he said" |
+| F6 | `yuyam pata svastibhih sada nah` | `אתם, שמרו עלינו בשלום תמיד` | RV 7, the Vasiṣṭha refrain closing 76 hymns ("Do you protect us always with well-being"; Round 7 run 1) |
+| F7 | `mrla suksatra mrlaya` | `רחם, טוב־השלטון, רחם` | RV 7.89.1–4c (the refrain to Varuṇa) |
+| F8 | `ta apo devir iha mam avantu` | `המים האלה, האלות, יעזרו לי כאן` | RV 7.49.1–4d |
 
 
 ## 9. Repeated lines and the dossier
@@ -458,3 +537,62 @@ by sense (*daδuuā̊* `העושה`, Vd 2.20–21; *dātō* "I was made"). Chang
 מעמיד בעלי החיים בעלי העצמות, נאמן הסדר`, F4b → `מעמיד בעלי החיים בעלי העצמות, נאמן הסדר` (§8); Vd 2.1, 2.39, 2.42,
 2.43 (`עושה בעלי החיים` → `מעמיד בעלי החיים`, with their glosses and the note of 2.1). The open item of §11.8 is settled.
 
+### 11.10 RV 7.1–7.9 (Book 7, translator 1 = part 1; merged 2026-11-09)
+- **Binding for Book 7:** every row of the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 1). §5.5 confirmed in real lines, with **one refinement:** √*tr̥̄* simplex "cross, overcome" `עבר` (precedent 1.32.14d); `העביר` only for the causative / *prá* (as √*pr̥* caus.).
+- New (selection): √*śaṃs* `קילס` (*praśastá* `מקולס`, *nárāśáṃsa* `קילוס־הגברים`) kept apart from √*stu* `שיבח` and √*gr̥̄* `הילל`; √*īḍ* `התפלל אל`, *īḷénya* `ראוי־לתפילה`; √*idh* `הצית`; *samídh* `זרד`; *ghr̥tá* `חמאה מזוקקת`; *suvr̥ktí* `שזירה טובה`, √*vr̥j* `שזר`; *arká* `זמר`, √*arc* `זימר`; *mántra* `מימרה`; *matí* `רעיון`; *vácas* `דיבור`; √*vand* `הוקיר`; *íṣ* `רענון`; *śrávas* `תהילה`; *rātí* `מתנה`; *dráviṇa* `נכסים`; √*dāś* `הגיש`; *dyumná* `הדר`; *ketú* `משואה`; *bhānú* `זיו`; *bhā́s* `נהרה`; *pā́jas* `נגה`; √*dī* `האיר`; √*śuc* `בער`, *śocís* `בערה`; √*bhā* `זרח`; √*ruc* `נצץ`; *ánīka* `פנים`; *prátīka* `חזות`; *pāvaká* `מטהר`; *śukrá* `בוהק`; *mandrá* `משמח`; *vípra* `נלהב`; *krátu* `רצון`; *cétas* `קשב`; *gr̥hápati* `אדון־הבית`; *viśpáti* `אדון־השבט`; *yáviṣṭha* `הצעיר ביותר`; *átithi* `אורח`; *sahasāvan* / *sáhasvant* `בעל־העוז`; *suvī́ra* `רב־גיבורים`; *śéṣas* `נצר`; *tánaya* `תולדה`; *ápatya* `ולד`; *púr* `מבצר`; *paṇí* `הַפַּנִי` (always vocalized); *arí* `אָרִי`; √*uruṣy* `הרחיב (ל־)`; √*hū* `קרא`; the plural *agnáyaḥ* `אַגְנִים` (the fire is the god).
+- For the later parts (not met in 7.1–9; confirm in real lines): *ukthá* `אמירה`; *purohita* `המועמד־בראש`; *ŕ̥tvij* `כוהן־העונה`; *yúvan* `צעיר`; *stóma* `שבח`; *manīṣā́* `תבונה`; *ūtí* `סיוע`.
+- **Recorded split** (for the round's harmonization): *havyá* `תקרובת` in Book 7 (§5.5) against `מנחה` in RV 10.14–16 (where it shares *havís*'s word).
+- Names added to §3.1 (RV 7): Mitra alone, Bhāratī, Nahus, Jarūtha; Pūru `פּוּרוּ`, Iḷā `אִילָה`, Puraṃdhi `פּוּרַמְדְהִי`, Āyu `אָיוּ` are kept in the files only (their regexes would catch *purú* "much", *íḷā* "refreshment", *puraṃdhí* "plenitude", *āyú* "living").
+- **Ruling (the coordinator, after the part 1 review):** *śū́ra* keeps `גיבור`, shared with *vīrá* – the precedent of RV 1.32.12c (the dossier, aligned by script) and the near-synonyms kept in §11.8; *nár* `גבר` stays apart. Review of part 1: 9 lines fixed (one Hebrew for two lemmas ×4, mood / meaning ×3, vocalization ×2).
+- Tool fixes (2026-11-09): a name in -י now matches its plural -ים (`אגני` → `אגנים`); the forms of בִּקֵּשׁ (`מבקשת` …) are exempt from the `קשת` gate (`EXEMPT_WORDS`).
+
+### 11.11 RV 7.10–7.19 (Book 7, translator 2 = part 2; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 2), with its ~35 names (7.18's tribes and kings, 7.19's adversaries and protégés) as written in its files (`אַנוּ` the Anus always vocalized: "we"). Confirmed from part 1: *yúvan* `צעיר`, *stóma* `שבח`, *r̥tvíj* `כוהן־העונה`, *ukthá* `אמירה`, *ūtí* `סיוע`.
+- New (selection): √*rakṣ* `גונן על` (√*pā* keeps `שמר`; RV 10.14's `שומרים` a recorded split); √*vī* `רדף אחר` (part 1's 7.1.18c `ביקש` open for the harmonization); *havyavā́h* `מוביל־התקרובות`; *uśíj* `החפצים`; *mánman* `הרהור`; *ū́rj* `שובע`; *yáśas* `כבוד`; *śrī́* `תפארת`; *sudína* `ימים בהירים`; *amítra* `שאינם בני־רעות` (*śátru* `אויב`); *śaraṇá* `מקלט` (*śárman* `מחסה`); *vádhrivāc* `מסורסי־הדיבור`.
+- **Rulings after the part 2 review** (7 lines fixed): *āśú* `מהיר`, *ajirá* `זריז` (7.11.2a changed); 7.18.4b keeps the 3rd person (*sasr̥je*). Left for the harmonization: "distribute" (√*day*, *ví* √*dhā*, *ví* √*bhaj* `חילק`).
+- Tool fixes (2026-11-09): every form of בִּקֵּשׁ is exempt from the `קשת` gate (`EXEMPT_RX`); the `טוב` licence takes *su-* before a vowel (*svadhvará*); `tr`/`data` accept a bare stanza number.
+
+### 11.12 RV 7.20–7.31 (Book 7, translator 3 = part 3; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 3). Indra's epithets: *śatákratu* `בעל־מאה־הרצונות`, *śakrá* `יכול` (√*śak* `יכל`), *ádrivant* `בעל־האבן`, *suśiprá* `יפה־השפתיים`, *svadhā́vant* `בעל־הכוח־העצמי`, *vr̥trahán* `הורג־וְרִטְרָה`; *ójas* `חוסן`, *táviṣī* `תוקף`; *samád* `התגוששות`, *yúdh* `מלחמה`, *pŕ̥tanā* `קרב`, *samaryá* `מערכה`; √*su* `סחט`, *sávana* `סחיטה`, *ándhas* `עסיס`, *índu* `טיפה`; *turá* `נמרץ` (7.2.11b changed); *árvan* `סוס דוהר` (*átya* `סוס־מרוץ`); *manīṣín* `בעל־התבונה` (*vedhás* `נבון`); √*daśasy* `חנן`; √*han* `הרג`, but `ריסק` with forts or a weapon as object.
+- For the harmonization: √*san* / √*van* both `זכה`; *yúdh* `בקרב` in 7.18.7d; √*daśasy* `העניק` in 7.5.7d; *tū́ya* `מהר` beside *āśú* `מהיר`.
+- Tool fix: the Bharata regex no longer matches the verb *bharate*.
+- Review of part 3 (15 lines fixed). **For Book 7's final consistency pass:** *turá* `נמרץ` vs part 1's *yahvá* `נמרץ`; *vrajá* `מכלאה` vs part 1's *pā́thas* `המכלאה` (move *pā́thas*); *sudā́nu* / *sudátra* `טוב־המתנות`; *abhí √bhū* `היה עליון` vs *paramá* `עליון`; across the book *vŕ̥ṣan* / *vr̥ṣabhá* `פר`, *bhū́ri* / *purú* `רב`, *jána* / *carṣaṇí* `עמים`; with RV 10: √*kr̥p* / √*nāth*, *sūktá* / *mántra*, *jaraṇā́* / *jarás*.
+- **The Old Avestan cognates (Round 7 run 2, `../האווסטה/renderings.md` §12; the cousin-language rule, guidelines §6.7: one Hebrew per cognate pair).** Follow in Book 7 from part 5 on, where Book 7 has not fixed another word: *druh* `שֶׁקֶר`; *arámati* `מְסִירוּת`; *sarvátāt* `שְׁלֵמוּת`; *mīḍhá* `שָׂכָר`; *miyédha* `סעודת הזבח`; *gnā́* `אִשָּׁה`; *íḍā* (common noun) `רוויה`; *yajatá* `הראוי לזבח`; *amr̥tatvá* `אלמוות`, *amŕ̥ta* `בן־אלמוות`, *námas* `קידה`, *ŕ̥ṣi* `חוזה`, *śraddhā́* `אמונה` (already one). **Kept as Book 7 fixed them** (splits for the lead: the report's "Cross-corpus splits"): *krátu* `רצון` (Av. `תבונה`, which is Vedic *manīṣā́*'s), *mántra* `מימרה` (Av. `מנתרה`), *hótar* `כוהן־הקריאה` (Av. `מנסך`; the Vedic precedent of AB), *ukthá* `אמירה` (Av. `מלה`), *vīrá* `גיבור` (Av. `אנשי חיל`), *gír* `שיר` (Av. `שירה`), *kaví* `משורר` (Av. `קוי`), *uśíj* `החפצים`, *vr̥trahán* `הורג־וְרִטְרָה` (Av. `הורג החוסם`).
+
+### 11.13 RV 7.32–7.37 (Book 7, translator 4 = part 4; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 4; ~150 new words). **7.35's *śám* frame:** `לאושר יהיה לנו X` (the copula after `לאושר`, then `לנו`); no verb: `לאושר לנו X`; a second *śám*: `ולאושר`; another verb: `לאושר תנשב עלינו …`; *śambhú* `מביא־האושר`; *śáṃ yóḥ* `לאושר ולרווחה`. *vásiṣṭhāḥ* `בני וַסִישְׁטְהָה`; *apsarás* `אַפְּסַרַס`; Māna `מָאנָה` (always vocalized); *gnā́* `אִשָּׁה` (the Avestan cognate rule); *pā́thas* `נווה` (7.4.9c, 7.5.7b changed by the coordinator: *vrajá* keeps `מכלאה`); *máyas* `הנאה`; *nírr̥ti* `אֲבַדּוֹן` (the RV 10.10.11b precedent; tagged Job 28:22; open for the user).
+- For the final consistency pass: √*nud* / √*cud*; √*rāj* / √*kṣā* (`מלך`); *dyukṣá* (`שמימית` 7.31.2b / `שוכן־השמים`); *suvitá* / *yós* (`רווחה`); *puraetár* (AB `מנהיג`) / *yantár*; *gábhasti* / *hásta* (`יד`); *nadī́* / *síndhu* (`נהר`); *sūnŕ̥tā* (KU `נועם דיבור` / `נדיבות`).
+- Tool fix: the `טוב` licence covers *vásyas*.
+- Review of part 4 (9 lines; the helper-script grammar checked pair by pair, all correct). *jánman* `לידה` (KU, AB; 7.33.10c changed). For the final pass: 7.10.2c *jánman* `התולדות`; *perú* / *pā́rya* `המעביר`; *dūrá* `מרחוק` / *āré* `רחוק`; *arbhaká* `הקטנטנים` (AB `קטנים` = *kánīyas*); √*ās* / √*sad* `ישב`.
+
+### 11.14 RV 7.38–7.55 (Book 7, translator 5 = part 5; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 5; ~150 new words). √*sū* "impel" `האיץ`, *savá* `האצה` (√*jū* `המריץ`, √*cyu* `הניע`); *amáti* "form" `מראה` (*amáti* "poverty" `דלות`); *bhága* (common noun) `חלק`, √*bhaj* `חילק`, *bhágavant* `בעל־חלק`; √*yā* 2 "beg" `התחנן` (7.39.2b `ממהרים (?)` a recorded split); *didyút* `רומח`, *r̥ṣṭí* `כידון`; √*car* `נדד`; √*brū* `אמר`; the 7.50 refrain `אַל ימצא אותי הזוחל בפגע של הרגל`; 7.55 `הֵרָדֵם היטב!`; *anamīvá* `חסר־מחלה` (*ámīvā* `מחלה`).
+- For the final pass: √*sū* / √*jū*; √*ās* / √*sad* `ישב`; √*sru* / √*kṣar* `זרם`; *jñātí* / *bándhu* `קרוב`; *śáṃtama* `המאושר ביותר` (RV 10 `נעים`).
+- Tool fixes: the Bharata regex skips the imperative *bharata*; the name Rohita applies to AB only ("(AB)" rows).
+- Review of part 5 (12 lines). **Tool fix (Book 7 only):** a licence of 1–3 letters must start a word (the *vam* of *tvám*, the *nr* of *satyānr̥té* no longer license), and the Avestan *gaiia* licences no longer apply to Vedic *gáya* "household"; the stricter check found 7.3.1b (*yájiṣṭha* `הזובח ביותר`, as 7.15), and added licences for *viśvā́yu*, *bhójana* (`מחיה`, the book's word) and *svapivāta*. For the final pass: *rohít* `אדום` / RV 10.15 *aruṇá* `האדומות`; pári √*vr̥j* `עקף` / *paryetár* `עוקף`; *jániman* `תולדות` / *tánaya* `תולדה`.
+
+### 11.15 RV 7.56–7.63 (Book 7, translator 6 = part 6; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 6; ~170 words – the Maruts' ornaments and noise, the Ādityas' watching). E.g. *márya* `בחור`, *añjí* `קישוט`, *śúbh* `נוי`, *khādí* `צמיד`, √*cit* `הבחין` (*cetár* `מבחין`), *sumná* `חסד`, *dvéṣas* `שנאה`, *ánāgas* `חסר־אשמה`, *r̥jú* / *vr̥jiná* `ישר` / `עקום`, *spáś* `מרגל`, *tryàmbaka* `טְרְיַמְבַּקָה`, *drúh* `שקר` (the Avestan cognate rule). The part was finished on disk when the 5-hour limit stopped it (2026-11-09 03:10 UTC); its section was complete.
+- Review of part 6 (9 lines; 7 intros aligned with their lines): √*nī* `הנהיג` (part 3; √*vah* `הוביל`) – the part's Proposals row "√*nī* `הוביל`" is superseded. For the final pass also: *árṇas* / *ūrmí* `גל`; √*r̥* / √*cyu* `הניע`; *janúṣ* / *jánman* `לידה`; *śubhrá* / √*dyut* `מבריק`.
+- For the final pass: *drúh* `שקר` vs 7.16.8c `התרמית`; *sarvátāti* `שלמות` vs 7.18.19b `כליל`; *sámr̥ti* `התנגשות` (1.32.6c) / `הסתערות`; *cárman* / *tvác* `עור`; *śatín* / *śatasvín*; √*muc* `שחרר` / *práti* √*muc* `עטה`.
+
+### 11.16 RV 7.64–7.74 (Book 7, translator 7 = part 7; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 7). The Aśvins: *mā́dhvī* `בעל־הדבש`, *dasrá* `עושה־הפלאות`, *vartís* `סבב`, *vartaní* `מסלול`, *omán* `סעד`, *chardís* `סכך`, *usrá* `ורוד`, *vadhū́* `כַּלָּה`; their protégés Atri `אַטְרִי`, Cyavāna `צְ'יַוָאנָה`, Bhujyu `בְּהוּגְ'יוּ`, Pedu `פֵּדוּ`, Jāhuṣa `גָ'אהוּשָׁה`, Sūryā `סוּרְיָא`, Śayu `שַׁיְיוּ` (the double yod: `שיו` is the `שֶׂה` gate). *nirṇíj* `מלבוש`, *gárta* `כס`, *sétu* `סכר`, *íḷā* `רוויה` (Avestan cognate); √*gr̥* "wake" intr. `ניעור`, tr. `העיר` (*járatam* 7.67.10c = 7.69.8c `העירו` after Oldenberg and Jamison, against Zurich's √*jr̥̄*: open); *śíras* `ראש`, *mūrdhán* `פסגה`; *ghraṃsá* `חום` (*tápas* `להט`); *śáru* `שֶׁלַח`; *ánirā* `כפן`; *vásiṣṭha* 7.70.6c, 7.73.3d the name (open).
+- Review of part 7 (12 lines; 3 intros, 6 headers aligned). For the final pass: *vára* `מבחר` / `משאלה` (7.54.3c, 7.59.2d, KU); 7.1.23b `בן־תמותה` (hyphen); *sámbhr̥ta* `מצוידים` / MBh *yuj*.
+- Tool fix (by the translator, accepted): `_find_word` takes the -י → -ים plural, as `_heb_has` does.
+
+### 11.17 Consistency pass, RV 7.1–7.74 (merged 2026-11-09; table in `7-ריגוודה-ספר-ז/project.md`)
+52 lines in 34 hymns aligned. **Binding from now on:** *drúh* `שקר`, *sarvátāti* `שלמות`, *íḷā* (common noun) `רוויה` (the Avestan cognate rule); *yahvá* / *yahvī́* `תוסס` (*turá* `נמרץ`); *sudā́nu* `טוב־המתן` (*sudátra* `טוב־המתנות`); *jániman* `דורות` (*tánaya* `תולדה`, *jánman* `לידה`); √*cud* `דרבן` (√*nud* `דחף`); √*kṣar* `ניגר` (√*sru* `זרם`); *árṇas* `משבר` (*ūrmí* `גל`); *śubhrá* `נאה` (√*dyut* `הבריק`); *suvitá* `הליכה טובה` (*yós* `רווחה`); *abhí* √*bhū* / √*as* `התעלה על` (*paramá* `עליון`); *vára* `מבחר`; *ártha* `יעד`; *yáti* / *yantár* `מרסן`; *sahasrín* `בעל־אלף`; √*cyu* `הסיע` from part 8 on (RV 10.17.3a; √*r̥* `הניע`). **Kept** (every free Hebrew collides): *janúṣ* / *jánman* `לידה`; √*ās* / √*sad* `ישב`; √*san* / √*van* `זכה`; √*bhaj* / √*day* / *ví* √*dhā* `חילק`; *vŕ̥ṣan* / *vr̥ṣabhá* `פר`; *bhū́ri* / *purú* `רב`; *gábhasti* / *hásta* `יד`; *nadī́* / *síndhu* `נהר`; √*rāj* / √*kṣā* `מלך`; *jána* `עם` / `אנשים` by sense (§5.1). Cross-corpus splits for the lead: the report.
+
+### 11.18 RV 7.75–7.88 (Book 7, translator 8 = part 8; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 8). Uṣas the goddess `שַׁחַר` without the article, feminine verbs (pl. "dawns" `השחרים`). **The Varuṇa vocabulary (7.86–88; for 7.89 on):** *ā́gas* `אשמה`, *ánāgas* `חסר־אשמה`; *énas* `עוון`, *anenás* `חף־מעוון`; √*muc* `שחרר`; √*mr̥ḍ* `רחם`, *mr̥ḷīká* `רחמים`; √*hr̥̄* "be angry" `זעף`, *héḷas* `רוגז`; *dāsá* "slave" `עבד` (open); *súrā* `שֵׁכָר` (always vocalized; `שָׂכָר` is *mīḍhá*'s); *drugdhá* `שקר`. No word of the root חטא, nor `פשע`, `סליחה`, `וידוי`, `חרון` in Book 7's lines (the translator's proposal to reserve them is for the lead: MBh 3.185 and AB 7 use `חטא` for *pāpá* / *pāpmán*).
+- For the final pass: √*bhuj* `ניזון` / `נשלם`; *úpara* `מאוחר` / `תחתון`; *bhū́man* `אזור` / 7.34.7b `אדמה`; *ūrvá* / *vrajá* `מכלאה`.
+- Tool fixes: `לשאול` "to ask" is exempt from the `שאול` gate; the `טוב` licence covers *saúbhaga*, *svápas*, *ántivāma*.
+
+### 11.19 RV 7.89–7.97 (Book 7, translator 9 = part 9; merged 2026-11-09)
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 9). 7.89: *mr̥nmáya gr̥há* `בית החומר` (Job 4:19 tagged; open), F7 first copies, *dīnátā* `חולשה`, *tŕ̥ṣṇā* `צמא`, *abhidrohá* `שקר` (the √*druh* family; open); *vāyú* `רוּחַ` without the article (masc.), *indra-vāyú* `אִינְדְּרָה ורוח`, *niyút* `צמד`, *śucipā́* `שותה־הצח`; *indrāgní* `אִינְדְּרָה ואַגְנִי`; *prámati* `השגחה`; √*śrath* `התיר`; *stána* `שַׁד`; *yóni* `קן` in 7.97; names Dhiṣaṇā `דְּהִישַׁנָה`, Jamadagni `גַ'מַדַגְנִי`, *nā́huṣa* `בן־נַהוּשׁ`. First copies for part 10: 7.97.10 = 7.98.7.
+- Review of part 9 (18 lines; 7.89.5b √*car* + object `נהג ב־`, not "walk in" – Jer 23:14). For the last consistency pass: *prámati* `השגחה` / 7.29.4d `דאגתנו`; 7.48.3d `בתחרות ()` (empty brackets); *saparyú* `משרתים` (7.2.4a) / `המכבדים` (7.94.10c).
+- Tool fix: the Sarasvatī regex no longer matches *sárasvataḥ* (Sarasvant's genitive).
+
+### 11.20 Consistency pass 2, RV 7.75–7.97 (merged 2026-11-09; table in `7-ריגוודה-ספר-ז/project.md`)
+23 lines in 15 hymns aligned. **Binding from now on:** *prámati* `דאגה` (*ádhyakṣa* `המשגיח`); *mithatí* `מצה` (*spŕ̥dh* `תחרות`); *saparyú* `משרת` (√*sap* `שירת`; √*vidh* `כיבד`); *purā́* `לפנים`; *sadhástha* `משכן`; √*kṣi* `שכן`; *áriṣṭa* `שלא ניזוק`; √*prath* tr. `הפיץ`; √*tan* `פרש`; √*han* `הרג`; √*īr* `הניע`; *sumedhás* `טוב־הדעת`; *ā́deva* `דבק־האֵלִים`. Kept: √*sr̥* / √*sru* `זרם` (1.32.12d); √*yā* 2 `התחנן` / `ביקש` (for the lead). Open for part 10: *kīrí* (7.97.10 = 7.98.7), *dakṣā́yya*.

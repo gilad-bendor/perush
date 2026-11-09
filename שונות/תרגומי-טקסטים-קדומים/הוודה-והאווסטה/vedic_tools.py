@@ -16,6 +16,9 @@
     python3 -I -B vedic_tools.py avelemma LEMMA           the CAB glossary + Bartholomae's lemma for an Avestan lemma
     python3 -I -B vedic_tools.py lemma '<regex>'          every Rigveda line with a Zurich lemma matching the regex
     python3 -I -B vedic_tools.py lexmap ['<regex>']       Hebrew ↔ lemma, from the פירוק bullets of every drafted file
+    python3 -I -B vedic_tools.py freq KEY…                the commonest lemmas of the KEYs, with their Hebrew so far
+                                                          (KEY may be RV7 = all of Book 7, or RV7.1-17 = a range; also
+                                                          for verify and build)
     python3 -I -B vedic_tools.py verify [KEY…] [--strict]
     python3 -I -B vedic_tools.py build [KEY…]             translation-<KEY>.rtl.md + each project's translation.rtl.md
     python3 -I -B vedic_tools.py grep '<regex>' [--all]   the unvocalized `>` lines of this corpus (--all: every corpus)
@@ -75,8 +78,13 @@ P3 = "3-המבול"
 P4 = "4-העקדה"
 P5 = "5-יאמה-והמתים"
 P6 = "6-המהמר-והצפרדעים"
+P7 = "7-ריגוודה-ספר-ז"
 PROJECT_TITLES = {P1: "מזמורי הראשית של הריגוודה", P2: "אינדרה והנחש (ריגוודה א 32)", P3: "המבול ההודו־איראני",
-                  P4: "העקדה: שונהשפה, הקרבן המחליף, נצ'יקטס", P5: "יאמה והמתים", P6: "המהמר והצפרדעים"}
+                  P4: "העקדה: שונהשפה, הקרבן המחליף, נצ'יקטס", P5: "יאמה והמתים", P6: "המהמר והצפרדעים",
+                  P7: "הריגוודה, ספר ז: ספר בית וסישטהה"}
+# a project whose clean translation also embeds a text that lives in another project (Round 7 run 1: RV 7.103, the
+# frogs, moved into the whole Book 7; project 6 keeps its title and embeds it)
+PROJECT_EMBEDS = {P6: ["RV10.34", "RV7.103"]}
 
 # KEY: (project, Hebrew title, kind, source spec)
 UNITS = {
@@ -99,8 +107,51 @@ UNITS = {
     "RV10.17": (P5, "ריגוודה י 17: סַרַנְיוּ, פּוּשָׁן, המים", "rv", (10, 17)),
     "RV10.18": (P5, "ריגוודה י 18: אל אמא האדמה", "rv", (10, 18)),
     "RV10.34": (P6, "ריגוודה י 34: המהמר", "rv", (10, 34)),
-    "RV7.103": (P6, "ריגוודה ז 103: הצפרדעים", "rv", (7, 103)),
 }
+
+# Rigveda Book 7 whole (Round 7 run 1): the addressees of VedaWeb's TEI (the Anukramaṇī), as fallback headings
+B7_ADDRESSEES = (
+    "אל אגני|שירי האפרי|אל אגני|אל אגני|אל אגני ואישוונרה|אל אגני ואישוונרה|אל אגני|אל אגני|אל אגני|אל אגני|"
+    "אל אגני|אל אגני|אל אגני ואישוונרה|אל אגני|אל אגני|אל אגני|אל אגני|אל אינדרה: מלחמת עשרת המלכים|אל אינדרה|אל אינדרה|"
+    "אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|"
+    "אל אינדרה|אל אינדרה|וסישטהה ובניו|אל כל האלים|אל כל האלים|אל כל האלים|אל כל האלים|אל סויטר ואלים אחרים|אל כל האלים|אל כל האלים|"
+    "אל בהגה ואלים אחרים|אל כל האלים|אל כל האלים|אל דדהיקרא|אל סויטר|אל רודרה|אל המים|אל הרבהו|אל המים|לאלים שונים|"
+    "אל האדיטיה|אל האדיטיה|אל שמים וארץ|אל ואסטושפתי|לחש שינה|אל המרוטים|אל המרוטים|אל המרוטים|אל המרוטים|אל מיטרה ווָרונה|"
+    "אל מיטרה ווָרונה|אל השמש, מיטרה ווָרונה|אל השמש, מיטרה ווָרונה|אל מיטרה ווָרונה|אל מיטרה ווָרונה|אל מיטרה ווָרונה, האדיטיה והשמש|אל האשווינים|אל האשווינים|אל האשווינים|אל האשווינים|"
+    "אל האשווינים|אל האשווינים|אל האשווינים|אל האשווינים|אל השחר|אל השחר|אל השחר|אל השחר|אל השחר|אל השחר|"
+    "אל השחר|אל אינדרה וורונה|אל אינדרה וורונה|אל אינדרה וורונה|אל אינדרה וורונה|אל ורונה|אל ורונה|אל ורונה|אל ורונה|אל הרוח (ואיו) ואינדרה|"
+    "אל הרוח (ואיו) ואינדרה|אל הרוח (ואיו)|אל אינדרה ואגני|אל אינדרה ואגני|אל סרסוותי וסרסוונט|אל סרסוותי וסרסוונט|אל אינדרה וברהספתי|אל אינדרה|אל וישנו ואינדרה|אל וישנו|"
+    "אל פרג'ניה|אל פרג'ניה|הצפרדעים|אל אינדרה וסומה, נגד השדים").split("|")
+assert len(B7_ADDRESSEES) == 104
+B7_NUM = {1: "א", 2: "ב", 3: "ג", 4: "ד", 5: "ה", 6: "ו", 7: "ז", 8: "ח", 9: "ט"}
+
+
+def _heb_num(n):
+    """1..199 in Hebrew letters (15 = טו, 16 = טז)."""
+    h = "ק" if n >= 100 else ""
+    n %= 100
+    tens = {1: "י", 2: "כ", 3: "ל", 4: "מ", 5: "נ", 6: "ס", 7: "ע", 8: "פ", 9: "צ"}
+    if n in (15, 16):
+        return h + {15: "טו", 16: "טז"}[n]
+    return h + (tens[n // 10] if n >= 10 else "") + (B7_NUM[n % 10] if n % 10 else "")
+
+
+for _h in range(1, 105):
+    UNITS[f"RV7.{_h}"] = (P7, f"ריגוודה ז {_heb_num(_h)}: {B7_ADDRESSEES[_h - 1]}", "rv", (7, _h))
+B7_KEYS = [f"RV7.{_h}" for _h in range(1, 105)]
+
+
+def expand_keys(ks):
+    """'RV7' (or 'B7') = all of Book 7; 'RV7.1-17' = a range of its hymns."""
+    out = []
+    for k in ks:
+        m = re.fullmatch(r"(?:RV7|B7)(?:\.(\d+)-(\d+))?", k)
+        if m:
+            a, b = (int(m.group(1)), int(m.group(2))) if m.group(1) else (1, 104)
+            out += [f"RV7.{h}" for h in range(a, b + 1)]
+        else:
+            out.append(k)
+    return out
 
 
 # ---------------------------------------------------------------- folding (licences, repeated lines)
@@ -489,14 +540,14 @@ RESERVED = [
     (W + alt("אדמה", "האדמה", "באדמה", "לאדמה", "אדמתו", "מאדמה", "מהאדמה") + E, r"bhum|bhu|zam|zem|kse|ksa|ksm", "אֲדָמָה only for bhū́mi (and Av. zam 'ground' where by sense)"),
     (W + alt("אדם", "האדם", "לאדם", "באדם", "מאדם", "כאדם") + E, r"purus|purs|puru|nar|nr|mas|masy|purusa", "אָדָם only for púruṣa (Av. maṣ̌iia 'man')"),
     (W + alt("טוב", "טובה", "טובים", "טובות", "הטוב", "הטובה", "הטובים", "הטובות", "טובו", "טובת", "מיטב", "היטיב", "וטוב") + E,
-     r"bhadr|vasu|vasv|vasis|vam|sadh|srey|siva|\bsu|vohu|vanh|vahis|srir|sri|hu|sev|sobh|kalya|bhavya|jyes|sres", "טוֹב only for bhadrá / vásu / vāmá / sādhú / su- (Av. vohu, vahišta)"),
+     r"bhadr|vasu|vasv|vasy|vasis|vam|sadh|srey|siva|\bsu|\bsvadhvar|\bsvapi|\bsvap|saubh|antivam|vohu|vanh|vahis|srir|sri|hu|sev|sobh|kalya|bhavya|jyes|sres", "טוֹב only for bhadrá / vásu / vāmá / sādhú / su- (Av. vohu, vahišta)"),
     (W + alt("ברך", "בירך", "ברכה", "ברכת", "מבורך", "יברך", "ברוך", "ברכו", "ברכם", "ברכות") + E, r"asis|asir|svast|vand|bhadr|janu|jnu|jnubhih", "the root ברך only for āśís (and `בֶּרֶךְ` 'knee' for jā́nu) ('blessing, wish') / svastí"),
     (W + alt("ארור", "ארורה", "ארר", "אורר", "מארה") + E, r"sap|abhisap|nirrt", "the root ארר only for √śap"),
     (W + alt("שבת", "השבת", "שבתו", "שביתה", "שבתה", "וישבות", "שבות") + E, None, "the root שבת never"),
     (W + alt("קדוש", "קדושה", "קדושים", "הקדוש", "קודש", "הקודש", "קדש", "קידש", "מקדש", "המקדש") + E, r"medhy|yajniy|pavitr|puny|suc|yasniy|yazat|spent", "the root קדש only for médhya / yajñíya / Av. spəṇta / yazata"),
     (W + alt("מזבח", "המזבח", "מזבחות", "מזבחו") + E, r"vedi|uttaraved|yup", "מִזְבֵּחַ only for védi (the altar-ground) – yū́pa = עַמּוּד־הַזֶּבַח"),
     (r"(?<![א-ת])ו?(?:נח|נוח|ינוח|לנוח)(?![א-ת])", r"(?!)", "נָח never (the string of Noah): √śī = שָׁכַב, √viś = שָׁקַע"),
-    (W + alt("חי", "חיה", "חיים", "החיים", "חית", "חיות") + E, r"jiv|jiva|asu|ayu|ayus|prana|jav|gaya|gay|gai|gaeth|pasu|svap|mrg|bhu|jan|vaj|ji|vita|stao|pasv|vay|tiryag", "חַי / חַיָּה / חַיִּים only for jīvá / ásu / ā́yus / mr̥gá (animal) / Av. gaiia"),
+    (W + alt("חי", "חיה", "חיים", "החיים", "חית", "חיות") + E, r"jiv|jiva|asu|ayu|ayus|visvayu|bhoj|prana|jav|gaya|gay|gai|gaeth|pasu|svap|mrg|bhu|jan|vaj|ji|vita|stao|pasv|vay|tiryag", "חַי / חַיָּה / חַיִּים only for jīvá / ásu / ā́yus / mr̥gá (animal) / Av. gaiia"),
 ]
 
 V = NIQ
@@ -515,6 +566,8 @@ TRAPS = [
     (RW + r"(?:מות)" + RE_, r"mrtyu|mrty|mrt|mar", "מָוֶת / מוֹת / מוּת: vocalize the unvocalized מות"),
     (RW + r"(?:אדיטי|אדיתי)" + RE_, r"aditi", "Aditi: always vocalized אַדִיטִי"),
     (RW + r"(?:אורה|אורא)" + RE_, r"ahur|ahura", "Ahura: write אֲהוּרָה, vocalized"),
+    (RW + r"(?:מרוטים)" + RE_, r"marut", "the Maruts: always vocalized מַרוּטִים ('plucked')"),
+    (RW + r"(?:אריה|אריים|אריות)" + RE_, r" ary", "ā́rya: always vocalized אָרְיָה ('lion')"),
 ]
 
 
@@ -562,7 +615,17 @@ def formulas():
 
 # ---------------------------------------------------------------- the checks of one line
 def lic(rx, key, lab):
-    return rx is not None and re.search(rx, license_text(key, lab)) is not None
+    if rx is None:
+        return False
+    if UNITS[key][0] == P7:
+        # Book 7 (Round 7 run 1): a short licence (1–3 letters) must start a word – an unrelated word that contains it (the *vam* of
+        # *tvám*, the *nr* of *satyānr̥té*) no longer licenses; the Avestan *gaiia* "life" licences do not apply to Vedic
+        # *gáya* "household"
+        alts = rx.split("|") if "(" not in rx else [rx]
+        alts = [a for a in alts if a not in ("gaya", "gay", "gai", "gaeth")]
+        alts = [(r"(?<![a-z])" + a) if re.fullmatch(r"[a-z]{1,3}", a) else a for a in alts]  # short ones start a word
+        return re.search("|".join(alts), license_text(key, lab)) is not None
+    return re.search(rx, license_text(key, lab)) is not None
 
 
 def _heb_has(plain, h):
@@ -581,7 +644,8 @@ def _heb_has(plain, h):
             for part in w.split("־"):
                 for k in range(0, 4):
                     stem = part[k:] if k <= len(part) else ""
-                    if stem == c or (stem.startswith(c) and stem[len(c):] in ("ים", "ות", "ית", "יות", "יים", "ה", "י", "ן")):
+                    if stem == c or (stem.startswith(c) and stem[len(c):] in ("ים", "ות", "ית", "יות", "יים", "ה", "י", "ן")) \
+                            or (c.endswith("י") and stem == c + "ם"):  # a name in -י with the plural -ים (אגני → אגנים)
                         if re.fullmatch(r"[ובלמהכש]{0,3}", part[:k]):
                             return True
     return False
@@ -597,9 +661,25 @@ def _find_word(heb, hp):
                 if not re.fullmatch(r"[ובלמהכש]{0,3}", p[:k]):
                     continue
                 stem = p[k:]
-                if stem == c or (stem.startswith(c) and stem[len(c):] in ("ים", "ות", "ית", "יות", "יים", "ה", "י", "ן")):
+                if stem == c or (stem.startswith(c) and stem[len(c):] in ("ים", "ות", "ית", "יות", "יים", "ה", "י", "ן")) \
+                        or (c.endswith("י") and stem == c + "ם"):  # as in _heb_has: אגני → אגנים (Round 7 part 7)
                     return w
     return ""
+
+
+# whole words that contain a gated string but are another word (guidelines §5.2: exempt them, do not make translators
+# write around them); Round 7 run 1: the forms of בִּקֵּשׁ contain קשת
+EXEMPT_RX = r"[ובלמהכש]{0,3}(?:מ|נ|ת|י)?בי?קש(?:ת|תי|תם|תן|ות|תו|תה)"  # every form of בִּקֵּשׁ / בַּקָּשָׁה (קשת)
+EXEMPT_WORDS = {"לשאול", "לשאל", "מבקשת", "בקשת", "ביקשת", "מבקשות", "בקשתי", "ביקשתי", "בקשתם", "ביקשתם", "ובקשת", "ומבקשת"}
+
+
+def _whole_word(s, m):
+    a, b = m.start(), m.end()
+    while a > 0 and "\u05d0" <= s[a - 1] <= "\u05ea":
+        a -= 1
+    while b < len(s) and "\u05d0" <= s[b] <= "\u05ea":
+        b += 1
+    return s[a:b].strip()
 
 
 def check_line(key, lab, heb, body, out, first_seen=None):
@@ -610,14 +690,16 @@ def check_line(key, lab, heb, body, out, first_seen=None):
     src = r["text"]
     srcf = " " + fold(src) + " "
     for rx, allow, why in RESERVED:
-        m = re.search(rx, plain)
+        m = next((x for x in re.finditer(rx, plain) if _whole_word(plain, x) not in EXEMPT_WORDS
+                  and not re.fullmatch(EXEMPT_RX, _whole_word(plain, x))), None)
         if m and not lic(allow, key, lab):
             if re.search(r"\[היתר שער: [^\]]*" + re.escape(m.group(0).strip()), body):
                 continue
             out.append(f"RESERVED {key} {lab}: «{m.group(0).strip()}» – {why}\n    {heb}\n    src: {src}")
             bad += 1
     for rx, hv, hp, star, what in names():
-        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv"):
+        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv") or ("(RV 7)" in what and UNITS[key][0] != P7) \
+                or ("(AB)" in what and UNITS[key][2] != "titus_ab"):
             continue
         if not _heb_has(plain, hp):
             if f"[היתר שם: " in body:
@@ -789,8 +871,15 @@ def cmd_units():
 def _span(key, a=None, b=None):
     rs = rows(key)
     labs = [r["label"] for r in rs]
-    i = labs.index(a) if a else 0
-    j = labs.index(b) if b else (i if a else len(rs) - 1)
+    def _ix(x, last=False):
+        if x in labs:
+            return labs.index(x)
+        cand = [n for n, l in enumerate(labs) if re.match(rf"{re.escape(x)}[a-g]$", l)]  # a bare stanza number
+        if not cand:
+            sys.exit(f"no label {x} in {key}")
+        return cand[-1] if last else cand[0]
+    i = _ix(a) if a else 0
+    j = _ix(b, True) if b else ((_ix(a, True) if a else len(rs) - 1))
     return rs[i:j + 1]
 
 
@@ -959,6 +1048,49 @@ def cmd_lemma(pat):
 _PIRUK = re.compile(r"`([^`]+)`\s*–\s*\*?([^\s(\"„“,;*]+)\*?[^;]*?\(\"([^\"]+)\"\)")
 
 
+def lexmap_dict():
+    """{folded lemma: {Hebrew: [KEY:label …]}} from the פירוק bullets of every drafted file."""
+    m = {}
+    for k in present_keys():
+        heb, seq, src, body, _ = read_annotated(k)
+        for lab in seq:
+            for l in body[lab].split("\n"):
+                if not l.startswith("- **פירוק:**"):
+                    continue
+                for seg in re.split(r";\s+(?=`)", l[len("- **פירוק:**"):]):
+                    mm = _PIRUK.search(seg)
+                    if mm:
+                        lem = fold_lemma(mm.group(2))
+                        hb = strip_marks(mm.group(3))
+                        if lem:
+                            m.setdefault(lem, {}).setdefault(hb, []).append(f"{k}:{lab}")
+    return m
+
+
+def cmd_freq(keys, top=150):
+    """The commonest Zurich lemmas of KEYs (RV only), each with its count there, in Book 7 and in the drafted files'
+    Hebrew (lexmap): the shared words a translator must keep one Hebrew for (Round 7 run 1)."""
+    from collections import Counter
+    here, b7 = Counter(), Counter()
+    for k in B7_KEYS:
+        for r in rows(k):
+            for w in r["words"]:
+                b7[fold_lemma(w["lemma"])] += 1
+    shown = {}
+    for k in keys:
+        for r in rows(k):
+            for w in r["words"]:
+                fl = fold_lemma(w["lemma"])
+                here[fl] += 1
+                shown.setdefault(fl, w["lemma"])
+    lm = lexmap_dict()
+    print(f"# The commonest lemmas of {keys[0]}…{keys[-1]} ({len(keys)} text(s)): lemma – count here / in Book 7 – the Hebrew of the drafted files\n")
+    for fl, n in here.most_common(int(top)):
+        hs = lm.get(fl, {})
+        h = "; ".join(f"{hb} ×{len(v)} ({v[0]})" for hb, v in sorted(hs.items(), key=lambda x: -len(x[1]))[:4]) or "—"
+        print(f"- {shown[fl]} – {n} / {b7[fl]} – {h}")
+
+
 def cmd_lexmap(pat=None):
     m = {}
     for k in present_keys():
@@ -1103,7 +1235,7 @@ def build(keys=None):
         done[k] = build_one(k)
     # each project's translation.rtl.md: its head + its texts, in the UNITS order
     for proj in PROJECT_TITLES:
-        ks = [k for k in UNITS if UNITS[k][0] == proj and os.path.exists(translation_path(k))]
+        ks = [k for k in (PROJECT_EMBEDS.get(proj) or [k for k in UNITS if UNITS[k][0] == proj]) if os.path.exists(translation_path(k))]
         if not ks:
             continue
         pdir = os.path.join(HERE, proj)
@@ -1126,6 +1258,8 @@ def main():
     if not a:
         sys.exit(__doc__)
     cmd, rest = a[0], [x for x in a[1:] if not x.startswith("--")]
+    if cmd in ("verify", "build"):
+        rest = expand_keys(rest)
     if cmd == "convert":
         return cmd_convert()
     if cmd == "units":
@@ -1148,6 +1282,8 @@ def main():
         return cmd_avelemma(rest[0])
     if cmd == "lemma" and rest:
         return cmd_lemma(rest[0])
+    if cmd == "freq" and rest:
+        return cmd_freq(expand_keys(rest))
     if cmd == "lexmap":
         return cmd_lexmap(rest[0] if rest else None)
     if cmd == "verify":

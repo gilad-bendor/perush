@@ -1,0 +1,19 @@
+# Rigveda 7.89 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_07.tei.
+1a	mó ṣú varuṇa mr̥nmáyaṃ	`mā́` – mā́ (invariable) ‖ `u` – u (invariable) ‖ `sú` – sú (invariable) ‖ `varuṇa` – váruṇa- (nominal stem; VOC.M.SG) ‖ `mr̥nmáyam` – mr̥nmáya- (nominal stem; ACC.M.SG)
+1b	gr̥háṃ rājann aháṃ gamam	`gr̥hám` – gr̥há- (nominal stem; ACC.M.SG) ‖ `rājan` – rā́jan- (nominal stem; VOC.M.SG) ‖ `ahám` – ahám (pronoun; NOM.SG) ‖ `gamam` – √gam- (root; SG.1.INJ.AOR.ACT)
+1c	mr̥ḷā́ sukṣatra mr̥ḷáya	`mr̥ḷá +` – √mr̥ḍ- (root; SG.2.IMP.PRS.ACT) ‖ `sukṣatra` – sukṣatrá- (nominal stem; VOC.M.SG) ‖ `mr̥ḷáya` – √mr̥ḍ- (root; SG.2.IMP.PRS.ACT.CAUS)
+2a	yád émi prasphuránn iva	`yát` – yá- (pronoun; ACC.N.SG) ‖ `émi` – √i- 1 (root; SG.1.IND.PRS.ACT) ‖ `prasphurán` – √sphr̥̄- (root; NOM.M.SG.PRS.ACT.PTCP.LP) ‖ `iva` – iva (invariable)
+2b	dŕ̥tir ná dhmātó adrivaḥ	`dŕ̥tiḥ` – dŕ̥ti- (nominal stem; NOM.M.SG) ‖ `ná` – ná (invariable) ‖ `dhmātáḥ` – √dhamⁱ- (root; NOM.M.SG.PTCP-ta) ‖ `adrivaḥ` – adrivant- (nominal stem; VOC.M.SG)
+2c	mr̥ḷā́ sukṣatra mr̥ḷáya	`mr̥ḷá +` – √mr̥ḍ- (root; SG.2.IMP.PRS.ACT) ‖ `sukṣatra` – sukṣatrá- (nominal stem; VOC.M.SG) ‖ `mr̥ḷáya` – √mr̥ḍ- (root; SG.2.IMP.PRS.ACT.CAUS)
+3a	krátvaḥ samaha dīnátā	`krátvaḥ` – krátu- (nominal stem; GEN.M.SG) ‖ `samaha` – samaha (invariable) ‖ `dīnátā` – dīnátā- (nominal stem; INS.F.SG)
+3b	pratīpáṃ jagamā śuce	`pratīpám` – pratīpá- (nominal stem; ACC.N.SG) ‖ `jagama +` – √gam- (root; SG.1.IND.PRF.ACT) ‖ `śuce` – śúci- (nominal stem; VOC.M.SG)
+3c	mr̥ḷā́ sukṣatra mr̥ḷáya	`mr̥ḷá +` – √mr̥ḍ- (root; SG.2.IMP.PRS.ACT) ‖ `sukṣatra` – sukṣatrá- (nominal stem; VOC.M.SG) ‖ `mr̥ḷáya` – √mr̥ḍ- (root; SG.2.IMP.PRS.ACT.CAUS)
+4a	apā́m mádhye tasthivā́ṃsaṃ	`apā́m` – áp- (nominal stem; GEN.F.PL) ‖ `mádhye` – mádhya- (nominal stem; LOC.N.SG) ‖ `tasthivā́ṃsam` – √sthā- (root; ACC.M.SG.PRF.ACT.PTCP)
+4b	tŕ̥ṣṇāvidaj jaritā́ram	`tŕ̥ṣṇā` – tŕ̥ṣṇā- (nominal stem; NOM.F.SG) ‖ `avidat` – √vid- 1 (root; SG.3.IND.AOR.ACT) ‖ `jaritā́ram` – jaritár- (nominal stem; ACC.M.SG)
+4c	mr̥ḷā́ sukṣatra mr̥ḷáya	`mr̥ḷá +` – √mr̥ḍ- (root; SG.2.IMP.PRS.ACT) ‖ `sukṣatra` – sukṣatrá- (nominal stem; VOC.M.SG) ‖ `mr̥ḷáya` – √mr̥ḍ- (root; SG.2.IMP.PRS.ACT.CAUS)
+5a	yát kíṃ cedáṃ varuṇa daívye jáne	`yát` – yá- (pronoun; ACC.N.SG) ‖ `kím` – ká- (pronoun; ACC.N.SG) ‖ `ca` – ca (invariable) ‖ `idám` – ayám (pronoun; ACC.N.SG) ‖ `varuṇa` – váruṇa- (nominal stem; VOC.M.SG) ‖ `daívye` – daívya- (nominal stem; LOC.M.SG) ‖ `jáne` – jána- (nominal stem; LOC.M.SG)
+5b	-abhidrohám manuṣyā̀ś cárāmasi	`abhidrohám` – abhidrohá- (nominal stem; ACC.M.SG) ‖ `manuṣyā̀ḥ` – manuṣyà- (nominal stem; NOM.M.PL) ‖ `cárāmasi` – √carⁱ- (root; PL.1.IND.PRS.ACT)
+5c	ácittī yát táva dhármā yuyopimá	`ácittī` – ácitti- (nominal stem; INS.F.SG) ‖ `yát` – yá- (pronoun; ACC.N.SG) ‖ `táva` – tvám (pronoun; GEN.SG) ‖ `dhárma +` – dhárman- (nominal stem; ACC.N.PL) ‖ `yuyopimá` – √yup- (root; PL.1.IND.PRF.ACT)
+5d	mā́ nas tásmād énaso deva rīriṣaḥ	`mā́` – mā́ (invariable) ‖ `naḥ` – ahám (pronoun; ACC.PL) ‖ `tásmāt` – sá- ~ tá- (pronoun; ABL.N.SG) ‖ `énasaḥ` – énas- (nominal stem; ABL.N.SG) ‖ `deva` – devá- (nominal stem; VOC.M.SG) ‖ `rīriṣaḥ` – √riṣ- (root; SG.2.INJ.AOR.ACT)

@@ -186,6 +186,8 @@ Sanskrit-lexicon--csl-orig/gra.txt	url	work	https://raw.githubusercontent.com/sa
 Sanskrit-lexicon--csl-orig/mw.txt	url	work	https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02/mw/mw.txt	Monier-Williams
 Jamison--Rigveda-commentary/I.1-99-9-25-26.pdf	url	work	https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/I.1-99-9-25-26.pdf	Jamison commentary (©, local)
 Jamison--Rigveda-commentary/I.1-99-9-25-26.txt	pdftotext	work	I.1-99-9-25-26.pdf	
+Jamison--Rigveda-commentary/VII.1–55-9-25-26.pdf	url	work	https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/VII.1%E2%80%9355-9-25-26.pdf	Jamison commentary (©, local; Round 7 run 1)
+Jamison--Rigveda-commentary/VII.1–55-9-25-26.txt	pdftotext	work	VII.1–55-9-25-26.pdf	
 Jamison--Rigveda-commentary/VII.56–104-9-25-26.pdf	url	work	https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/VII.56%E2%80%93104-9-25-26.pdf	Jamison commentary (©, local)
 Jamison--Rigveda-commentary/VII.56–104-9-25-26.txt	pdftotext	work	VII.56–104-9-25-26.pdf	
 Jamison--Rigveda-commentary/X.1–60-9-25-26.pdf	url	work	https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/X.1%E2%80%9360-9-25-26.pdf	Jamison commentary (©, local)
