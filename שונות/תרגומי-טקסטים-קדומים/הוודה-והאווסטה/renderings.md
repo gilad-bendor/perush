@@ -98,7 +98,7 @@ rendered).
 | Ahura Mazdā | ` ahur\w* mazd` | `אֲהוּרָה מַזְדָּה` |  | (Vd) "the Wise Lord" |
 | Zaraθuštra | ` zarathustr` | `זָרָתוּשְׁטְרָה` |  | (Vd) |
 | Yima | ` yim(?:a\|o\|ai\|ahe\|em\|om\|e)\b` | `יִימָה` | ★ | (Vd) = Vedic Yama (a cognate pair: the note) |
-| Virāj | ` viraj` | `וִירָאג'` |  | (10.90.5) the female principle born from the Man |
+| Virāj | ` viraj(?!o )` | `וִירָאג'` |  | (10.90.5) the female principle born from the Man |
 | the Sādhyas | ` sadhy` | `הַסָּאדְהְיָה` |  | (10.90) a class of ancient gods |
 | Mārtāṇḍa | ` martand` | `מָארְטָאנְדָּה` |  | (10.72.8–9) "from the dead egg" |
 | Ārmaiti | ` a?ra?mait` | `אָרְמַאִיטִי` |  | (Vd 2.10) the earth's goddess, "Right-mindedness" |
@@ -596,3 +596,9 @@ by sense (*daδuuā̊* `העושה`, Vd 2.20–21; *dātō* "I was made"). Chang
 
 ### 11.20 Consistency pass 2, RV 7.75–7.97 (merged 2026-11-09; table in `7-ריגוודה-ספר-ז/project.md`)
 23 lines in 15 hymns aligned. **Binding from now on:** *prámati* `דאגה` (*ádhyakṣa* `המשגיח`); *mithatí* `מצה` (*spŕ̥dh* `תחרות`); *saparyú* `משרת` (√*sap* `שירת`; √*vidh* `כיבד`); *purā́* `לפנים`; *sadhástha* `משכן`; √*kṣi* `שכן`; *áriṣṭa* `שלא ניזוק`; √*prath* tr. `הפיץ`; √*tan* `פרש`; √*han* `הרג`; √*īr* `הניע`; *sumedhás* `טוב־הדעת`; *ā́deva* `דבק־האֵלִים`. Kept: √*sr̥* / √*sru* `זרם` (1.32.12d); √*yā* 2 `התחנן` / `ביקש` (for the lead). Open for part 10: *kīrí* (7.97.10 = 7.98.7), *dakṣā́yya*.
+
+### 11.21 The Kaṭha Upaniṣad, adhyāya 2 = KU2, vallīs 4–6 (Round 7 run 3, translator 1; merged 2026-11-09)
+- **Kept from KU1 (one Hebrew inside one text):** *ātmán* `נפש`, *bráhman* `נֹסַח` (*brahmaloka* `עולם הנוסח`), *mr̥tyú* `מָוֶת` (a name; *vimr̥tyu* `נטול־מָוֶת`), *dhīra* `חכם`, *amr̥tatva* `אלמוות`, *dhruva* `יציב`, *guhā* `הסתר`, *puruṣa* `אָדָם`, *manas* `מחשבה`, *buddhi* `שכל`, *indriya* `חוש`, *avyakta* `הבלתי־גלוי`, *yoga* `רתימה`, *vidyā* `ידיעה` (also *jñāna*, as KU1), *śarīra* `גוויה`, *agni* `האש` (not the name, as KU1, even in 4.8 = RV 3.29.2); 6.7–6.8 = KU1 3.10–3.11 word for word; 4.4b = KU1 2.22b.
+- **The refrain** *etad vai tat* `זהו, באמת, הדבר ההוא.` (identical in every occurrence).
+- **New:** *svayaṃbhū* `הקיים־מעצמו`; *kha* `פתח`; *parāñc* / *pratyañc* `החוצה` / `פנימה`; *antarātman* `הנפש־שבפנים`; *pāśa* `חבל` (`חבל מָוֶת`); *araṇi* `מקל האש`; *aṅguṣṭhamātra* `בגודל אגודל`; *muni* `המתבודד` (open); *pur* `עיר`, *dvār* `שער`; *haṃsa* `ברבור`; *vyoman* `מרום` (`רקיע` reserved); *apāna* `הנשימה־הנכנסת`; *sukha* `נחת` (`אושר` stays *śám*'s); *śānti* `שקט`; *aśvattha* `עץ האַשְׁוַתְּהָה` (transcribed: not `תאנה`, Gen 3:7); *sarga* `שנוצרו` (ברא is reserved); *nāḍī* `עורק`; *granthi* `קשר`; *virajas* `נקי מאבק` (the Virāj name regex of §3.1 now excludes *virajo*); the full list in `8-קטהה-אופנישד/annotated-KU2.rtl.md`.
+- **Open for the review:** √*śri* `נשען` (5.8c, 6.1c) / `שוכן` (6.14a); *amr̥ta* adj. `בן־אלמוות` written plene unvocalized (the table has it vocalized); the cruxes 4.6a, 5.1b, 5.2b, 6.4, 6.5b, 6.13a (noted in the file).

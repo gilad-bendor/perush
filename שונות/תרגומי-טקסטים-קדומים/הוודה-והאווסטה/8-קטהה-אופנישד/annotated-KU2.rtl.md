@@ -281,3 +281,508 @@
 - **פירוק:** `evam` ("כך"); `muneḥ` – múni- "חכם שותק, מתבודד", יחסת הקניין ("של המתבודד"); `vijānataḥ` – vi-√jñā, בינוני הווה, יחסת הקניין ("המבין"); `ātmā` ("נפשו"); `bhavati` ("נעשית"); `gautama` – gautama-, קריאה ("גָּאוּטַמָה").
 - **תרגומים:** הְיוּם: "So becomes the soul (atman), O Gautama, Of the seer (muni) who has understanding" – *muni* "המתבודד" (הְיוּם "seer").
 - **הערות:** **גָּאוּטַמָה** – שם המשפחה של נַצִ'יקֵטַס ושל אביו (1.10a): הפנייה היחידה בוַלִּי. **מוּנִי**: החכם השותק, הנזיר הנודד – דמות שאינה כוהן הזבח. נפשו נבלעת בנוסח כמים במים.
+
+## העיר בעלת אחד־עשר השערים (5.1–5.5)
+
+### 5.1a
+`puram ekādaśadvāram ajasyāvakracetasaḥ`
+> את העיר בעלת אחד־עשר השערים, של הבלתי־נולד שמחשבתו אינה עקומה –
+- **פירוק:** `puram` – púr- "עיר, מבצר", יחסת המושא ("את העיר"); `ekādaśadvāram` – ekādaśa- "אחד־עשר" + dvā́r- "שער", בהוּבְרִיהִי ("בעלת אחד־עשר השערים"); `ajasya` – a-já- "שלא נולד", יחסת הקניין ("של הבלתי־נולד"); `avakracetasaḥ` – a-vakra- "לא עקום" + cetas- "מחשבה, תודעה", יחסת הקניין ("שמחשבתו אינה עקומה").
+- **תרגומים:** הְיוּם: "By ruling over the eleven-gated citadel Of the Unborn, the Un-crooked-minded one" – הְיוּם מתרגם *anuṣṭhāya* (5.1b) "ruling over"; ראו שם.
+- **הערות:** **העיר**: הגוף, ושעריו – הפתחים (שבעה בראש, שניים למטה, הטבור, ופתח שבקודקוד; הְיוּם לפי אַיְטַרֵיָה אופנישד). "הבלתי־נולד" הוא הנפש (השוו 2.18a). *cetas* "מחשבה" קרוב ל־*manas* `מחשבה`; לא נפרד (?).
+
+### 5.1b
+`anuṣṭhāya na śocati vimuktaś ca vimucyate`
+> כשהוא מטפל (בה) – אינו מצטער, ומשוחרר הוא משתחרר.
+- **פירוק:** `anuṣṭhāya` – anu-√sthā "לעמוד על, לטפל, לנהל", צורת הסיום ("כשהוא מטפל (בה)"); `na` ("אינו"); `śocati` ("מצטער"); `vimuktaḥ` – vi-√muc, בינוני עבר ("משוחרר"); `ca` ("ו־"); `vimucyate` – vi-√muc, סביל הווה 3 יחיד ("הוא משתחרר").
+- **תרגומים:** הְיוּם: "One sorrows not. But when liberated [from the body], he is liberated indeed" – *anu-√sthā* "לטפל, לעבוד" (הְיוּם "ruling over"; שַׁנְקַרַה: "מהרהר"); תרגמנו את המובן הרגיל (?).
+- **הערות:** "משוחרר – משתחרר": מי שכבר משוחרר בחייו משתחרר לגמרי במותו.
+
+### 5.1c
+`etad vai tat`
+> זהו, באמת, הדבר ההוא.
+- **פירוק:** `etat` ("זהו"); `vai` ("באמת"); `tat` ("הדבר ההוא").
+- **הערות:** [מקבילה: KU2 4.3c].
+
+### 5.2a
+`haṃsaḥ śuciṣad vasur antarikṣasad dhotā vediṣad atithir duroṇasat`
+> הברבור היושב בבהיר, הטוב היושב בחלל האוויר, כוהן־הקריאה היושב על המזבח, האורח היושב בבית,
+- **פירוק:** `haṃsaḥ` – haṃsá- "ברבור, אווז בר" ("הברבור"); `śuciṣat` – śúci- "בהיר, טהור" + -sad- "יושב" ("היושב בבהיר"); `vasuḥ` – vásu- "טוב" ("הטוב"); `antarikṣasat` – antárikṣa- + -sad- ("היושב בחלל האוויר"); `hotā` – hótr̥- "כוהן־הקריאה" ("כוהן־הקריאה"); `vediṣat` – védi- "מזבח" + -sad- ("היושב על המזבח"); `atithiḥ` – átithi- "אורח" ("האורח"); `duroṇasat` – duroṇá- "בית" + -sad- ("היושב בבית").
+- **תרגומים:** הְיוּם: "The swan [i. e. sun] in the clear, the Vasu in the atmosphere, The priest by the altar, the guest in the house" – כמונו; הברבור – השמש (הְיוּם). *vasu* – אולי שם האל (הוַסוּ), "הטוב".
+- **הערות:** הבית מצוטט מן הריגוודה (RV 4.40.5), שם הוא שבח השמש (או סוס המרוץ דַדְהִיקְרָה); כאן הוא נקרא על הנפש השוכנת בכל מקום. *hotr̥* `כוהן־הקריאה` כבפרק הראשון; האורח והכוהן – האש היושבת בבית ועל המזבח.
+
+### 5.2b
+`nṛṣad varasad ṛtasad vyomasad abjā gojā ṛtajā adrijā ṛtaṃ bṛhat`
+> היושב בגברים, היושב במובחר, היושב בסדר, היושב במרום; הנולד מן המים, הנולד מן הפרות, הנולד מן הסדר, הנולד מן הסלע – הסדר הגדול.
+- **פירוק:** `nr̥ṣat` – nár- "גבר" + -sad- ("היושב בגברים"); `varasat` – vára- "מובחר" + -sad- ("היושב במובחר"); `r̥tasat` – r̥tá- "סדר" + -sad- ("היושב בסדר"); `vyomasat` – vyóman- "מרום, רום השמים" + -sad- ("היושב במרום"); `abjāḥ` – ap- + -jā- "נולד" ("הנולד מן המים"); `gojāḥ` – go- "פרה" + -jā- ("הנולד מן הפרות"); `r̥tajāḥ` ("הנולד מן הסדר"); `adrijāḥ` – ádri- "סלע, הר" + -jā- ("הנולד מן הסלע"); `r̥tam` – r̥tá- ("הסדר"); `br̥hat` – br̥hánt- "גדול" ("הגדול").
+- **תרגומים:** הְיוּם: "In man, in broad space, in the right (rta), in the sky, Born in water, born in cattle, born in the right, born in rock, is the Right, the Great!" – *vara* "המובחר" (הְיוּם "broad space", מן *varas* "רוחב"?) (?). *vyoman* `מרום` (לא `רקיע`, האסור בקורפוס).
+- **הערות:** *r̥ta* `סדר` – הסדר הקוסמי של הריגוודה. "הנולד מן הפרות": החלב והחמאה של הזבח, או האור (הפרות של השחר).
+
+### 5.3a
+`ūrdhvaṃ prāṇam unnayati apānaṃ pratyag asyati`
+> את הנשימה הוא מוליך למעלה, את הנשימה־הנכנסת הוא משליך פנימה;
+- **פירוק:** `ūrdhvam` – ūrdhvá- "למעלה" ("למעלה"); `prāṇam` – prāṇá- ("את הנשימה"); `unnayati` – ud-√nī "להוליך למעלה", הווה 3 יחיד ("הוא מוליך"); `apānam` – apāná- "הנשימה הנכנסת / היורדת" ("את הנשימה־הנכנסת"); `pratyak` ("פנימה"); `asyati` – √as "להשליך", הווה 3 יחיד ("הוא משליך").
+- **תרגומים:** הְיוּם: "Upwards the out-breath (prana) he leadeth. The in-breath (apana) inwards he casts" – כמונו.
+- **הערות:** *prāṇa* ו־*apāna* – שתי נשימות הגוף, העולה והיורדת. *pratyak* `פנימה` כמו ב־4.1b.
+
+### 5.3b
+`madhye vāmanam āsīnaṃ viśve devā upāsate`
+> לגמד היושב באמצע – כל האֵלִים סוגדים.
+- **פירוק:** `madhye` ("באמצע"); `vāmanam` – vāmana- "גמד, ננס" ("לגמד"); `āsīnam` – √ās "לשבת", בינוני ("היושב"); `viśve` – víśva- "כל" ("כל"); `devāḥ` ("האֵלִים"); `upāsate` – upa-√ās "לשבת ליד, לסגוד", הווה 3 רבים ("סוגדים").
+- **תרגומים:** הְיוּם: "The dwarf who is seated in the middle All the gods (deva) reverence!" – כמונו; האלים – החושים, לפי שַׁנְקַרַה.
+- **הערות:** הגמד – האדם בגודל אגודל של 4.12a.
+
+### 5.4a
+`asya visraṃsamānasya śarīrasthasya dehinaḥ`
+> כשזה, השוכן בגוויה, בעל הגוף, מתפרק –
+- **פירוק:** `asya` – idám, יחסת הקניין ("כשזה"); `visraṃsamānasya` – vi-√sraṃs "להתפרק, להתרופף", בינוני הווה ("מתפרק"); `śarīrasthasya` – śárīra- + -stha- "עומד ב־" ("השוכן בגוויה"); `dehinaḥ` – dehin- "בעל גוף" ("בעל הגוף").
+- **תרגומים:** הְיוּם: "When this incorporate one that stands in the body Is dissolved" – כמונו. יחסות הקניין – מבנה מוחלט ("כאשר …").
+- **הערות:** *śarīra* `גוויה` כבפרק הראשון; *deha* `גוף`.
+
+### 5.4b
+`dehād vimucyamānasya kim atra pariśiṣyate`
+> כשהוא משתחרר מן הגוף – מה נותר כאן?
+- **פירוק:** `dehāt` – deha- "גוף", יחסת מן ("מן הגוף"); `vimucyamānasya` – vi-√muc, סביל בינוני ("כשהוא משתחרר"); `kim atra pariśiṣyate` ("מה נותר כאן") – כמו 4.3b.
+- **תרגומים:** הְיוּם: "And is released from the body, What is there left over here?" – כמונו.
+- **הערות:** [מקבילה: KU2 4.3b] – אותה שאלה, וכאן תשובתה: הוא, "ההוא", נותר.
+
+### 5.4c
+`etad vai tat`
+> זהו, באמת, הדבר ההוא.
+- **פירוק:** `etat` ("זהו"); `vai` ("באמת"); `tat` ("הדבר ההוא").
+- **הערות:** [מקבילה: KU2 4.3c].
+
+### 5.5a
+`na prāṇena nāpānena martyo jīvati kaścana`
+> לא בנשימה ולא בנשימה־הנכנסת חי בן תמותה כלשהו;
+- **פירוק:** `na` ("לא"); `prāṇena` ("בנשימה"); `na` ("ולא"); `apānena` ("בנשימה־הנכנסת"); `martyaḥ` – mártya- ("בן תמותה"); `jīvati` – √jīv, הווה 3 יחיד ("חי"); `kaścana` ("כלשהו").
+- **תרגומים:** הְיוּם: "Not by the out-breath (prana) and the in-breath (apana) Doth any mortal whatsoever live" – כמונו.
+- **הערות:** *martya* `בן תמותה` לפי הקורפוס.
+
+### 5.5b
+`itareṇa tu jīvanti yasminn etāv upāśritau`
+> אלא באחר הם חיים – זה ששתיהן נשענות עליו.
+- **פירוק:** `itareṇa` – itara- "אחר", יחסת הכלי ("באחר"); `tu` "אלא" ("אלא"); `jīvanti` ("הם חיים"); `yasmin` – yá-, יחסת המקום ("עליו"); `etau` – etá-, זוגי ("שתיהן"); `upāśritau` – upa-ā-√śri "להישען", בינוני עבר זוגי ("נשענות").
+- **תרגומים:** הְיוּם: "But by another do men live – Even That whereon both these depend" – כמונו.
+
+## לאן הולכת הנפש (5.6–5.8)
+
+### 5.6a
+`hanta ta idaṃ pravakṣyāmi guhyaṃ brahma sanātanam`
+> הנה, אגיד לך את זה – את הנוסח הנסתר, הקדום,
+- **פירוק:** `hanta` "הנה, הבה" ("הנה"); `te` ("לך"); `idam` ("את זה"); `pravakṣyāmi` – pra-√vac, עתיד 1 יחיד ("אגיד"); `guhyam` – √guh, צורת חובה: "נסתר, סודי" ("הנסתר"); `brahma` – bráhman- ("את הנוסח"); `sanātanam` – sanātana- "עתיק, נצחי" ("הקדום").
+- **תרגומים:** הְיוּם: "Come! I will declare this to you: The hidden, eternal Brahma" – כמונו; *sanātana* "קדום, מאז ומעולם" (הְיוּם "eternal").
+- **הערות:** מָוֶת מדבר שוב אל נַצִ'יקֵטַס. *bráhman* `נֹסַח` כבפרק הראשון (וברנדרינגס).
+
+### 5.6b
+`yathā ca maraṇaṃ prāpya ātmā bhavati gautama`
+> ואיך, אחרי שהגיעה אל המיתה, הנפש נעשית, גָּאוּטַמָה.
+- **פירוק:** `yathā` ("איך"); `ca` ("ו־"); `maraṇam` – maraṇa- "מיתה" ("אֶל המיתה"); `prāpya` – pra-√āp, צורת הסיום ("אחרי שהגיעה"); `ātmā` ("הנפש"); `bhavati` ("נעשית"); `gautama` ("גָּאוּטַמָה").
+- **תרגומים:** הְיוּם: "And how, after it reaches death, The soul (atman) fares, O Gautama!" – *bhavati* "נעשית" (הְיוּם "fares").
+- **הערות:** *maraṇa* `מיתה` כבפרק הראשון, נבדל מן השם מָוֶת. *bhavati* `נעשה` כמו ב־4.15a–b.
+
+### 5.7a
+`yonim anye prapadyante śarīratvāya dehinaḥ`
+> אחדים נכנסים אל רחם, לשם גוויה, (הנפשות) בעלות הגוף;
+- **פירוק:** `yonim` – yóni- "רחם" ("אֶל רחם"); `anye` – anyá- "אחר", רבים ("אחדים"); `prapadyante` – pra-√pad "להיכנס", הווה 3 רבים ("נכנסים"); `śarīratvāya` – śarīra-tva- "היות גוויה", יחסת הלְמַעַן ("לשם גוויה"); `dehinaḥ` – dehin-, רבים ("(הנפשות) בעלות הגוף").
+- **תרגומים:** הְיוּם: "Some go into a womb For the embodiment of a corporeal being" – כמונו.
+- **הערות:** **הלידה מחדש**: הנפש שלא השתחררה נולדת שוב – באדם, בבהמה, או בצמח (5.7b).
+
+### 5.7b
+`sthāṇum anye 'nusaṃyanti yathākarma yathāśrutam`
+> אחרים הולכים אל גדם, לפי המעשה, לפי השמיעה.
+- **פירוק:** `sthāṇum` – sthāṇu- "גדם, עמוד, דבר עומד" ("אֶל גדם"); `anye` ("אחרים"); `anusaṃyanti` – anu-sam-√i "ללכת אל", הווה 3 רבים ("הולכים"); `yathākarma` – yathā + kárman- ("לפי המעשה"); `yathāśrutam` – yathā + śruta- "שמיעה, לימוד" ("לפי השמיעה").
+- **תרגומים:** הְיוּם: "Others go into a stationary thing According to their deeds (karman), according to their knowledge" – *sthāṇu* "גדם" (הְיוּם "stationary thing": צמח). *śruta* `שמיעה` כבפרק הראשון (2.23a).
+- **הערות:** *karman* "מעשה" – החוק שלפיו המעשים קובעים את הלידה הבאה. "שמיעה" – מה שהאדם למד ושמע.
+
+### 5.8a
+`ya eṣa supteṣu jāgarti kāmaṃ kāmaṃ puruṣo nirmimāṇaḥ`
+> זה, האָדָם הער בתוך הישנים, המעצב חשק אחר חשק –
+- **פירוק:** `yaḥ` ("–"); `eṣaḥ` ("זה"); `supteṣu` – √svap, בינוני עבר, רבים יחסת המקום ("בתוך הישנים"); `jāgarti` – √jāgr̥, הווה 3 יחיד ("הער"); `kāmaṃ kāmam` – kā́ma-, כפול ("חשק אחר חשק"); `puruṣaḥ` ("האָדָם"); `nirmimāṇaḥ` – nir-√mā "לעצב, למדוד", בינוני הווה ("המעצב").
+- **תרגומים:** הְיוּם: "He who is awake in those that sleep, The Person who fashions desire after desire" – כמונו.
+- **הערות:** יוצר החלומות: בשינה, הנפש בונה לה עולם של חשקים.
+
+### 5.8b
+`tad eva śukraṃ tad brahma tad evāmṛtam ucyate`
+> הוא הבהיר, הוא הנוסח, הוא נקרא האלמוות.
+- **פירוק:** `tat` ("הוא"); `eva` ("–"); `śukram` – śukrá- "בהיר, זוהר; זרע" ("הבהיר"); `tat` ("הוא"); `brahma` ("הנוסח"); `tat` ("הוא"); `eva` ("–"); `amr̥tam` – amŕ̥ta- ("האלמוות"); `ucyate` – √vac, סביל הווה ("נקרא").
+- **תרגומים:** הְיוּם: "That indeed is the Pure. That is Brahma. That indeed is called the Immortal" – *śukra* "בהיר" (הְיוּם "the Pure").
+- **הערות:** [מקבילה: KU2 6.1b] – השורה חוזרת שם.
+
+### 5.8c
+`tasmiṃl lokāḥ śritāḥ sarve tad u nātyeti kaścana`
+> בו נשענים כל העולמות, ואותו לא עובר איש.
+- **פירוק:** `tasmin` – tá-, יחסת המקום ("בו"); `lokāḥ` – loká-, רבים ("העולמות"); `śritāḥ` – √śri, בינוני עבר ("נשענים"); `sarve` ("כל"); `tat u na atyeti kaścana` ("ואותו לא עובר איש") – כמו 4.9b.
+- **תרגומים:** הְיוּם: "On it all the worlds do rest; And no one soever goes beyond it" – כמונו.
+- **הערות:** [מקבילה: KU2 4.9b] – החצי השני זהה. √*śri* `נשען` כמו *upāśrita* ב־5.5b.
+
+### 5.8d
+`etad vai tat`
+> זהו, באמת, הדבר ההוא.
+- **פירוק:** `etat` ("זהו"); `vai` ("באמת"); `tat` ("הדבר ההוא").
+- **הערות:** [מקבילה: KU2 4.3c].
+
+## האחד שבתוך כל היצורים (5.9–5.13)
+
+### 5.9a
+`agnir yathaiko bhuvanaṃ praviṣṭo rūpaṃ rūpaṃ pratirūpo babhūva`
+> כמו שהאש האחת, משנכנסה אל ההוויה, נעשתה תואמת לכל צורה וצורה,
+- **פירוק:** `agniḥ` – agní- ("האש"); `yathā` ("כמו ש־"); `ekaḥ` – éka- "אחד" ("האחת"); `bhuvanam` – bhúvana- "הוויה, עולם" ("אֶל ההוויה"); `praviṣṭaḥ` – pra-√viś, בינוני עבר ("משנכנסה"); `rūpaṃ rūpam` – rūpá-, כפול ("לכל צורה וצורה"); `pratirūpaḥ` – prati-rūpa- "תואם צורה" ("תואמת"); `babhūva` – √bhū, פרפקט 3 יחיד ("נעשתה").
+- **תרגומים:** הְיוּם: "As the one fire has entered the world And becomes corresponding in form to every form" – כמונו.
+- **הערות:** *agni* `האש` כמו ב־4.8b ובפרק הראשון. *bhuvana* `הוויה` לפי הקורפוס (*loka* `עולם`). האש מקבלת את צורת העץ שהיא בוערת בו.
+
+### 5.9b
+`ekas tathā sarvabhūtāntarātmā rūpaṃ rūpaṃ pratirūpo bahiś ca`
+> כך הנפש־שבפנים האחת של כל היצורים תואמת לכל צורה וצורה – וגם מבחוץ.
+- **פירוק:** `ekaḥ` ("האחת"); `tathā` "כך" ("כך"); `sarvabhūtāntarātmā` – sarva- "כל" + bhūtá- "יצור" + antar-ātmán- ("הנפש־שבפנים … של כל היצורים"); `rūpaṃ rūpam` ("לכל צורה וצורה"); `pratirūpaḥ` ("תואמת"); `bahiḥ` "בחוץ" ("מבחוץ"); `ca` ("וגם").
+- **תרגומים:** הְיוּם: "So the one Inner Soul (Atman) of all things Is corresponding in form to every form, and yet is outside" – כמונו.
+- **הערות:** *antarātman* `הנפש־שבפנים` כמו ב־4.1a. [מקבילה: KU2 5.10b] – זהה.
+
+### 5.10a
+`vāyur yathaiko bhuvanaṃ praviṣṭo rūpaṃ rūpaṃ pratirūpo babhūva`
+> כמו שהרוח האחת, משנכנסה אל ההוויה, נעשתה תואמת לכל צורה וצורה,
+- **פירוק:** `vāyuḥ` – vāyú- "רוח" ("הרוח"); `yathā` ("כמו ש־"); `ekaḥ` ("האחת"); `bhuvanam` ("אֶל ההוויה"); `praviṣṭaḥ` ("משנכנסה"); `rūpaṃ rūpam` ("לכל צורה וצורה"); `pratirūpaḥ` ("תואמת"); `babhūva` ("נעשתה").
+- **תרגומים:** הְיוּם: "As the one wind has entered the world And becomes corresponding in form to every form" – כמונו.
+- **הערות:** [מקבילה: KU2 5.9a] – רק "הרוח" במקום "האש". *vāyu* `רוח` – המילה המותרת לה בקורפוס (הרוח הנושבת).
+
+### 5.10b
+`ekas tathā sarvabhūtāntarātmā rūpaṃ rūpaṃ pratirūpo bahiś ca`
+> כך הנפש־שבפנים האחת של כל היצורים תואמת לכל צורה וצורה – וגם מבחוץ.
+- **פירוק:** כמו 5.9b.
+- **הערות:** [מקבילה: KU2 5.9b].
+
+### 5.11a
+`sūryo yathā sarvalokasya cakṣur na lipyate cākṣuṣair bāhyadoṣaiḥ`
+> כמו שהשמש, עין העולם כולו, אינה נכתמת בפגמי העיניים החיצוניים,
+- **פירוק:** `sūryaḥ` ("השמש"); `yathā` ("כמו ש־"); `sarvalokasya` – sarva-loka- ("העולם כולו"); `cakṣuḥ` – cákṣus- "עין" ("עין"); `na` ("אינה"); `lipyate` – √lip "למרוח, להכתים", סביל הווה ("נכתמת"); `cākṣuṣaiḥ` – cākṣuṣa- "של העין", רבים ("העיניים"); `bāhyadoṣaiḥ` – bāhya- "חיצוני" + doṣa- "פגם" ("בפגמי … החיצוניים").
+- **תרגומים:** הְיוּם: "As the sun, the eye of the whole world, Is not sullied by the external faults of the eyes" – כמונו.
+- **הערות:** השמש היא "עין העולם" (כבר בריגוודה); מה שהעין רואה – לכלוך, מחלה – אינו נוגע בשמש.
+
+### 5.11b
+`ekas tathā sarvabhūtāntarātmā na lipyate lokaduḥkhena bāhyaḥ`
+> כך הנפש־שבפנים האחת של כל היצורים אינה נכתמת בצער העולם, (כי היא) חיצונית.
+- **פירוק:** `ekaḥ` ("האחת"); `tathā` ("כך"); `sarvabhūtāntarātmā` ("הנפש־שבפנים … של כל היצורים"); `na lipyate` ("אינה נכתמת"); `lokaduḥkhena` – loka- + duḥkha- "צער, סבל" ("בצער העולם"); `bāhyaḥ` – bāhya- ("חיצונית").
+- **תרגומים:** הְיוּם: "Is not sullied by the evil in the world, being external to it" – *duḥkha* "צער, סבל" (הְיוּם "evil").
+
+### 5.12a
+`eko vaśī sarvabhūtāntarātmā ekaṃ rūpaṃ bahudhā yaḥ karoti`
+> האחד, השולט, הנפש־שבפנים של כל היצורים, זה העושה את הצורה האחת לרבות –
+- **פירוק:** `ekaḥ` ("האחד"); `vaśī` – vaśin- "שולט" ("השולט"); `sarvabhūtāntarātmā` ("הנפש־שבפנים של כל היצורים"); `ekam` ("האחת"); `rūpam` ("את הצורה"); `bahudhā` "בדרכים רבות" ("לרבות"); `yaḥ` ("זה ה־"); `karoti` – √kr̥ ("עושה").
+- **תרגומים:** הְיוּם: "The Inner Soul (antaratman) of all things, the One Controller, Who makes his one form manifold" – כמונו.
+
+### 5.12b
+`tam ātmasthaṃ ye 'nupaśyanti dhīrās teṣāṃ sukhaṃ śāśvataṃ netareṣām`
+> החכמים הרואים אותו עומד בנפש – להם נחת תמידית, לא לאחרים.
+- **פירוק:** `tam` ("אותו"); `ātmastham` – ātman- + -stha- "עומד בנפש" ("עומד בנפש"); `ye` ("ה־"); `anupaśyanti` – anu-√paś ("הרואים"); `dhīrāḥ` ("החכמים"); `teṣām` ("להם"); `sukham` – sukhá- "נחת, אושר" ("נחת"); `śāśvatam` – śāśvata- "תמידי" ("תמידית"); `na` ("לא"); `itareṣām` ("לאחרים").
+- **תרגומים:** הְיוּם: "The wise who perceive Him as standing in oneself, They, and no others, have eternal happiness!" – כמונו. *sukha* `נחת` (לא `אושר`, השמור ל־*śám*).
+- **הערות:** *ātmastha* – בנפשו של הרואה עצמו. *anu-√paś* `רואה` כמו ב־4.4a.
+
+### 5.13a
+`nityo 'nityānāṃ cetanaś cetanānām eko bahūnāṃ yo vidadhāti kāmān`
+> הקבוע שבין הבלתי־קבועים, המודע שבין המודעים, האחד שבין הרבים, המעניק את החשקים –
+- **פירוק:** `nityaḥ` – nitya- ("הקבוע"); `anityānām` – a-nitya-, רבים יחסת הקניין ("שבין הבלתי־קבועים"); `cetanaḥ` – cetana- "מודע" ("המודע"); `cetanānām` ("שבין המודעים"); `ekaḥ` ("האחד"); `bahūnām` – bahú- ("שבין הרבים"); `yaḥ` ("ה־"); `vidadhāti` – vi-√dhā "להעניק, לסדר" ("מעניק"); `kāmān` ("את החשקים").
+- **תרגומים:** הְיוּם: "Him who is the constant among the inconstant, the intelligent among intelligences, The One among many, who grants desires" – כמונו.
+- **הערות:** *nitya* `קבוע` כבפרק הראשון (2.10).
+
+### 5.13b
+`tam ātmasthaṃ ye 'nupaśyanti dhīrās teṣaṃ śāntiḥ śāśvatī netareṣām`
+> החכמים הרואים אותו עומד בנפש – להם שקט תמידי, לא לאחרים.
+- **פירוק:** כמו 5.12b; `śāntiḥ` – śānti- "שקט, שלווה" ("שקט"); `śāśvatī` ("תמידי").
+- **תרגומים:** הְיוּם: "They, and no others, have eternal peace!" – כמונו.
+- **הערות:** [מקבילה: KU2 5.12b] – "שקט" במקום "נחת". *śānti* `שקט` כמו *śānta* `שקט` בפרק הראשון.
+
+## האור שאחריו הכל מאיר (5.14–5.15)
+
+### 5.14a
+`tad etad iti manyante 'nirdeśyaṃ paramaṃ sukham`
+> "זה הוא ההוא" – כך הם חושבים (את) הנחת העליונה, שאין להצביע עליה.
+- **פירוק:** `tat` ("ההוא"); `etat` ("זה"); `iti` (–); `manyante` – √man, הווה 3 רבים ("הם חושבים"); `anirdeśyam` – a-nir-√diś, צורת חובה ("שאין להצביע עליה"); `paramam` – paramá- "עליון" ("העליונה"); `sukham` ("הנחת").
+- **תרגומים:** הְיוּם: "'This is it!' – thus they recognize The highest, indescribable happiness" – כמונו.
+- **הערות:** *tad etad* – הפזמון בסדר הפוך.
+
+### 5.14b
+`kathaṃ nu tad vijānīyāṃ kim u bhāti vibhāti vā`
+> איך אבין אותו? האם הוא מאיר, או זורח (באור אחר)?
+- **פירוק:** `katham` ("איך"); `nu` ("–"); `tat` ("אותו"); `vijānīyām` – vi-√jñā, אופטטיב 1 יחיד ("אבין"); `kim` ("האם"); `u` ("–"); `bhāti` – √bhā "להאיר", הווה ("הוא מאיר"); `vibhāti` – vi-√bhā ("זורח"); `vā` ("או").
+- **תרגומים:** הְיוּם: "How, now, shall I understand 'this'? Does it shine [of itself] or does it shine in reflection?" – כמונו; ההבחנה בין *bhāti* ו־*vibhāti* אינה ודאית (?).
+
+### 5.15a
+`na tatra sūryo bhāti na candratārakaṃ nemā vidyuto bhānti kuto 'yam agniḥ`
+> שם אין השמש מאירה, לא הירח והכוכבים; הברקים האלה אינם מאירים – ומניין האש הזאת?
+- **פירוק:** `na` ("אין"); `tatra` ("שם"); `sūryaḥ` ("השמש"); `bhāti` ("מאירה"); `na` ("לא"); `candratārakam` – candra- "ירח" + tāraka- "כוכב" ("הירח והכוכבים"); `na` ("אינם"); `imāḥ` ("האלה"); `vidyutaḥ` – vidyút- "ברק", רבים ("הברקים"); `bhānti` ("מאירים"); `kutaḥ` "מניין" ("ומניין"); `ayam` ("הזאת"); `agniḥ` ("האש").
+- **תרגומים:** הְיוּם: "The sun shines not there, nor the moon and stars, These lightnings shine not, much less this (earthly) fire!" – *kutaḥ* "מניין, קל וחומר" (הְיוּם "much less").
+- **הערות:** הבית חוזר במונדקה אופנישד 2.2.10 ובשְׁוֵטָשְׁוַתַרַה 6.14.
+
+### 5.15b
+`tam eva bhāntam anu bhāti sarvaṃ tasya bhāsā sarvam idaṃ vibhāti`
+> אחריו, המאיר, מאיר הכל; בזוהרו זורח כל זה.
+- **פירוק:** `tam` ("אחריו"); `eva` ("–"); `bhāntam` – √bhā, בינוני ("המאיר"); `anu` ("אחריו"); `bhāti` ("מאיר"); `sarvam` ("הכל"); `tasya` ("–"); `bhāsā` – bhā́s- "זוהר", יחסת הכלי ("בזוהרו"); `sarvam idam` ("כל זה"); `vibhāti` ("זורח").
+- **תרגומים:** הְיוּם: "After Him, as He shines, doth everything shine, This whole world is illumined with His light" – כמונו.
+- **הקבלה:** [shared motif] `וְהָיָה לָךְ יְהוָה לְאוֹר עוֹלָם` (ישעיהו ס:יט) – אור שאינו של השמש והירח; בישעיהו האל מחליף את המאורות, כאן הם מאירים רק באורו. מוטיב משותף, לא מקור.
+
+## העץ ששורשו למעלה, והפחד הגדול (6.1–6.3)
+
+### 6.1a
+`ūrdhvamūlo avākśākha eṣo 'śvatthaḥ sanātanaḥ`
+> ששורשו למעלה וענפיו למטה – זהו עץ האַשְׁוַתְּהָה הקדום.
+- **פירוק:** `ūrdhvamūlaḥ` – ūrdhvá- "למעלה" + mū́la- "שורש", בהוּבְרִיהִי ("ששורשו למעלה"); `avākśākhaḥ` – avāñc- "למטה" + śā́khā- "ענף" ("וענפיו למטה"); `eṣaḥ` ("זהו"); `aśvatthaḥ` – aśvatthá- "עץ התאנה הקדושה (Ficus religiosa)" ("עץ האַשְׁוַתְּהָה"); `sanātanaḥ` ("הקדום").
+- **תרגומים:** הְיוּם: "Its root is above, its branches below – This eternal fig-tree!" – *sanātana* `קדום` כמו ב־5.6a.
+- **הערות:** **עץ האַשְׁוַתְּהָה**: התאנה הקדושה של הודו. העולם כעץ הפוך ששורשו בנוסח שלמעלה (גם בהגוודגיטה 15.1–3). השארנו את שם העץ, כדי לא לתת "תאנה" (בראשית ג:ז) בלי צורך.
+
+### 6.1b
+`tad eva śukraṃ tad brahma tad evāmṛtam ucyate`
+> הוא הבהיר, הוא הנוסח, הוא נקרא האלמוות.
+- **פירוק:** כמו 5.8b: `tat eva śukram tat brahma tat eva amr̥tam ucyate` ("הוא הבהיר, הוא הנוסח, הוא נקרא האלמוות").
+- **הערות:** [מקבילה: KU2 5.8b] – זהה.
+
+### 6.1c
+`tasmiṃl lokāḥ śritāḥ sarve tad u nātyeti kaścana`
+> בו נשענים כל העולמות, ואותו לא עובר איש.
+- **פירוק:** כמו 5.8c.
+- **הערות:** [מקבילה: KU2 5.8c] – זהה.
+
+### 6.1d
+`etad vai tat`
+> זהו, באמת, הדבר ההוא.
+- **פירוק:** `etat` ("זהו"); `vai` ("באמת"); `tat` ("הדבר ההוא").
+- **הערות:** [מקבילה: KU2 4.3c].
+
+### 6.2a
+`yad idaṃ kiṃca jagat sarvaṃ prāṇa ejati niḥsṛtam`
+> כל העולם הנע הזה, כל מה שיש – משיצא, הוא רוטט בנשימה.
+- **פירוק:** `yat idaṃ kiṃca` "כל מה שיש" ("כל מה שיש"); `jagat` – jágat- "הנע, העולם החי" ("העולם הנע"); `sarvam` ("כל"); `prāṇe` – prāṇá-, יחסת המקום ("בנשימה"); `ejati` – √ej "לרטוט, לנוע" ("הוא רוטט"); `niḥsr̥tam` – niḥ-√sr̥ "לצאת", בינוני עבר ("משיצא").
+- **תרגומים:** הְיוּם: "This whole world, whatever there is, Was created from and moves in Life (prana)" – *niḥsr̥ta* "יצא (ממנו)"; הְיוּם "created from". *prāṇa* `נשימה`.
+- **הערות:** *prāṇa* כאן הוא הנשימה הקוסמית, ה"ההוא".
+
+### 6.2b
+`mahad bhayaṃ vajram udyataṃ ya etad vidur amṛtās te bhavanti`
+> פחד גדול, וַגְ'רָה מורם – מי שיודעים את זה, בני־אלמוות הם נעשים.
+- **פירוק:** `mahat` ("גדול"); `bhayam` – bhaya- "פחד" ("פחד"); `vajram` – vájra- ("וַגְ'רָה"); `udyatam` – ud-√yam, בינוני עבר "מורם" ("מורם"); `ye` ("מי ש־"); `etat` ("את זה"); `viduḥ` – √vid, פרפקט 3 רבים ("יודעים"); `amr̥tāḥ` – amŕ̥ta-, רבים ("בני־אלמוות"); `te` ("הם"); `bhavanti` ("נעשים").
+- **תרגומים:** הְיוּם: "The great fear, the upraised thunderbolt – They who know That, become immortal" – כמונו.
+- **הערות:** **וַגְ'רָה** – נשקו של אִינְדְּרָה (הברק, האלה). ה"ההוא" מטיל אימה כנשק מורם: ממנו פוחדים כל כוחות העולם (6.3).
+
+### 6.3a
+`bhayād asyāgnis tapati bhayāt tapati sūryaḥ`
+> מפחדו האש לוהטת, מפחד לוהטת השמש;
+- **פירוק:** `bhayāt` – bhaya-, יחסת מן ("מפחד"); `asya` ("ו"); `agniḥ` ("האש"); `tapati` – √tap "ללהוט", הווה ("לוהטת"); `bhayāt` ("מפחד"); `tapati` ("לוהטת"); `sūryaḥ` ("השמש").
+- **תרגומים:** הְיוּם: "From fear of Him fire (Agni) doth burn. From fear the sun (Surya) gives forth heat" – כמונו.
+- **הערות:** √*tap* – השורש של *tapas* `להט`.
+
+### 6.3b
+`bhayād indraś ca vāyuś ca mṛtyur dhāvati pañcamaḥ`
+> מפחד (רצים) אִינְדְּרָה והרוח, ומָוֶת רץ – החמישי.
+- **פירוק:** `bhayāt` ("מפחד"); `indraḥ` – índra- ("אִינְדְּרָה"); `ca` ("ו־"); `vāyuḥ` ("הרוח"); `ca` ("–"); `mr̥tyuḥ` ("ומָוֶת"); `dhāvati` – √dhāv "לרוץ" ("רץ"); `pañcamaḥ` – pañcamá- ("החמישי").
+- **תרגומים:** הְיוּם: "From fear both Indra and Wind (Vayu), And Death (Mrityu) as fifth, do speed along" – כמונו.
+- **הערות:** **אִינְדְּרָה** – אל הסערה והמלחמה של הריגוודה. גם מָוֶת, המדבר בכל האופנישד, הוא רק משרת של ה"ההוא". [הבית חוזר בטַיְתִּירִיָּה אופנישד 2.8.]
+
+## דרגות הראייה (6.4–6.6)
+
+### 6.4a
+`iha ced aśakad boddhuṃ prākśarīrasya visrasaḥ`
+> אם יכול היה לתפוס (אותו) כאן, לפני התפרקות הגוויה –
+- **פירוק:** `iha` ("כאן"); `cet` "אם" ("אם"); `aśakat` – √śak, אאוריסט 3 יחיד ("יכול היה"); `boddhum` – √budh "להתעורר, לתפוס", שם הפועל ("לתפוס"); `prāk` "לפני" ("לפני"); `śarīrasya` ("הגוויה"); `visrasaḥ` – vi-sras- "התפרקות", יחסת הקניין ("התפרקות").
+- **תרגומים:** הְיוּם: "If one has been able to perceive [Him] here on earth Before the dissolution of the body" – כמונו.
+- **הערות:** *visras* מאותו שורש של *visraṃsamāna* "מתפרק" (5.4a).
+
+### 6.4b
+`tataḥ sargeṣu lokeṣu śarīratvāya kalpate`
+> משם הוא נעשה ראוי לגוויה בעולמות שנוצרו.
+- **פירוק:** `tataḥ` ("משם"); `sargeṣu` – sarga- "שילוח, יצירה", רבים יחסת המקום ("שנוצרו"); `lokeṣu` ("בעולמות"); `śarīratvāya` ("לגוויה"); `kalpate` – √kl̥p "להתאים, להיות ראוי" ("הוא נעשה ראוי").
+- **תרגומים:** הְיוּם: "According to that [knowledge] he becomes fitted For embodiment in the world-creations" – הְיוּם מעיר שהבית קשה: שַׁנְקַרַה משלים "(ואם לא)", מקס מילר מוסיף "לא". תרגמנו כלשונו (?).
+- **הערות:** *sarga* (מן √*sr̥j* "לשלח") – "יצירה" של העולמות; לא בשורש ברא, האסור בקורפוס.
+
+### 6.5a
+`yathādarśe tathātmani yathā svapne tathā pitṛloke`
+> כמו בראי – כך בנפש; כמו בחלום – כך בעולם האבות;
+- **פירוק:** `yathā` ("כמו"); `ādarśe` – ādarśa- "ראי" ("בראי"); `tathā` ("כך"); `ātmani` ("בנפש"); `yathā` ("כמו"); `svapne` – svapna- ("בחלום"); `tathā` ("כך"); `pitr̥loke` – pitŕ̥- "אב" + loka- ("בעולם האבות").
+- **תרגומים:** הְיוּם: "As in a mirror, so is it seen in the body (atman); As in a dream, so in the world of the fathers" – *ātman* כאן אולי "הגוף" (הְיוּם); השארנו `נפש`.
+- **הערות:** **עולם האבות**: עולמם של המתים הקדומים (*pitaraḥ*), שאליו הולכים בדרך העשן.
+
+### 6.5b
+`yathāpsu parīva dadṛśe tathā gandharvaloke chāyātapayor iva brahmaloke`
+> כמו במים, כמעט, הוא נראה – כך בעולם הגַּנְדְּהַרְוָה; כמו צל ואור שמש – (כך) בעולם הנוסח.
+- **פירוק:** `yathā` ("כמו"); `apsu` – áp-, רבים יחסת המקום ("במים"); `parīva` – pari + iva ("כמעט") (?); `dadr̥śe` – √dr̥ś, פרפקט סביל ("הוא נראה"); `tathā` ("כך"); `gandharvaloke` – gandharvá- + loka- ("בעולם הגַּנְדְּהַרְוָה"); `chāyātapayoḥ` – chāyā- "צל" + ātapa- "אור שמש", זוגי ("צל ואור שמש"); `iva` ("כמו"); `brahmaloke` ("בעולם הנוסח").
+- **תרגומים:** הְיוּם: "As if in water, so in the world of the Gandharvas (genii); As if in light and shade, so in the world of Brahma" – *parīva* קשה (?).
+- **הערות:** **הגַּנְדְּהַרְוָה** – יצורים שמימיים, מוזיקאי האלים. *brahmaloka* `עולם הנוסח` כבפרק הראשון. ככל שהעולם גבוה, הנפש נראית בו ברור יותר: בעולם הנוסח – כצל ואור, נבדלים בבירור.
+
+### 6.6a
+`indriyāṇāṃ pṛthagbhāvam udayāstamayau ca yat`
+> את היות החושים נפרדים, ואת זריחתם ושקיעתם –
+- **פירוק:** `indriyāṇām` ("החושים"); `pr̥thagbhāvam` – pr̥thak- + bhāva- "היות" ("את היות … נפרדים"); `udayāstamayau` – udaya- "זריחה" + astamaya- "שקיעה", זוגי ("זריחתם ושקיעתם"); `ca` ("ו־"); `yat` ("את").
+- **תרגומים:** הְיוּם: "The separate nature of the senses, And that their arising and setting" – כמונו.
+
+### 6.6b
+`pṛthag utpadyamānānāṃ matvā dhīro na śocati`
+> (שהם) של (דברים) הנולדים לחוד – כשהחכם חושב (זאת), הוא אינו מצטער.
+- **פירוק:** `pr̥thak` ("לחוד"); `utpadyamānānām` – ud-√pad "להיוולד, לקום", בינוני, רבים יחסת הקניין ("של (דברים) הנולדים"); `matvā` ("כשהחכם חושב"); `dhīraḥ` ("החכם"); `na śocati` ("הוא אינו מצטער").
+- **תרגומים:** הְיוּם: "Is of things that come into being apart [from himself], The wise man recognizes, and sorrows not" – כמונו.
+- **הערות:** [מקבילה: KU2 4.4b] – סוף השורה כמוה.
+
+## מעל החושים (6.7–6.9)
+
+### 6.7a
+`indriyebhyaḥ paraṃ mano manasaḥ sattvam uttamam`
+> מעל החושים – המחשבה; מעל המחשבה – המהות, המעולה;
+- **פירוק:** `indriyebhyaḥ` ("מעל החושים"); `param` ("–"); `manaḥ` ("המחשבה"); `manasaḥ` ("מעל המחשבה"); `sattvam` – sattva- "מהות, הוויה" ("המהות"); `uttamam` – uttamá- "עליון, מעולה" ("המעולה").
+- **תרגומים:** הְיוּם: "Higher than the senses (indriya) is the mind (manas); Above the mind is the true being (sattva)" – כמונו.
+- **הערות:** [מקבילה: KU1 3.10a–3.11a] – אותו סולם, ועברִיתו מועתקת; כאן *sattva* במקום *buddhi* (שם `השכל`).
+
+### 6.7b
+`sattvād adhi mahānātmā mahato 'vyaktam uttamam`
+> מעל המהות – הנפש הגדולה; מעל הגדול – הבלתי־גלוי, המעולה.
+- **פירוק:** `sattvāt` ("מעל המהות"); `adhi` ("–"); `mahān` ("הגדולה"); `ātmā` ("הנפש"); `mahataḥ` ("מעל הגדול"); `avyaktam` ("הבלתי־גלוי"); `uttamam` ("המעולה").
+- **תרגומים:** הְיוּם: "Over the true being is the Great Self; Above the Great is the Unmanifest" – כמונו.
+
+### 6.8a
+`avyaktāt tu paraḥ puruṣo vyāpako 'liṅga eva ca`
+> ומעל הבלתי־גלוי – האדם, החודר לכל, ובלי סימן כלל;
+- **פירוק:** `avyaktāt` ("ומעל הבלתי־גלוי"); `tu` ("ו־"); `paraḥ` ("–"); `puruṣaḥ` ("האדם"); `vyāpakaḥ` – vi-āpaka- "חודר לכל" ("החודר לכל"); `aliṅgaḥ` – a-liṅga- "בלי סימן" ("בלי סימן"); `eva` ("כלל"); `ca` ("ו־").
+- **תרגומים:** הְיוּם: "Higher than the Unmanifest, however, is the Person, All-pervading and without any mark (a-linga) whatever" – כמונו.
+
+### 6.8b
+`yaṃ jñātvā mucyate jantur amṛtatvaṃ ca gacchati`
+> שהנולד, משיודע אותו, משתחרר והולך אל האלמוות.
+- **פירוק:** `yam` ("אותו"); `jñātvā` – √jñā, צורת הסיום ("משיודע"); `mucyate` – √muc, סביל ("משתחרר"); `jantuḥ` – jantú- "נולד, יצור" ("הנולד"); `amr̥tatvam` ("אֶל האלמוות"); `ca` ("ו־"); `gacchati` ("הולך").
+- **תרגומים:** הְיוּם: "Knowing which, a man is liberated And goes to immortality" – *jantu* "נולד" (הְיוּם "a man").
+- **הערות:** *jantu* `הנולד` (מן √*jan*), נבדל מ־*bhūta* `יצור`.
+
+### 6.9a
+`na saṃdṛśe tiṣṭhati rūpam asya na cakṣuṣā paśyati kaścanainam`
+> לא לראייה עומדת צורתו; איש אינו רואה אותו בעין.
+- **פירוק:** `na` ("לא"); `saṃdr̥śe` – sam-√dr̥ś, שם הפועל ("לראייה"); `tiṣṭhati` ("עומדת"); `rūpam` ("צורתו"); `asya` ("–"); `na` ("אינו"); `cakṣuṣā` ("בעין"); `paśyati` ("רואה"); `kaścana` ("איש"); `enam` ("אותו").
+- **תרגומים:** הְיוּם: "His form is not to be beheld. No one soever sees Him with the eye" – כמונו.
+
+### 6.9b
+`hṛdā manīṣā manasābhikḷpto ya etad vidur amṛtās te bhavanti`
+> בלב, בתבונה, במחשבה הוא מעוצב; מי שיודעים את זה, בני־אלמוות הם נעשים.
+- **פירוק:** `hr̥dā` – hŕ̥d- "לב" ("בלב"); `manīṣā` – manīṣā́- "תבונה" ("בתבונה"); `manasā` ("במחשבה"); `abhikl̥ptaḥ` – abhi-√kl̥p "לעצב", בינוני עבר ("הוא מעוצב"); `ye etat viduḥ amr̥tāḥ te bhavanti` ("מי שיודעים את זה, בני־אלמוות הם נעשים").
+- **תרגומים:** הְיוּם: "He is framed by the heart, by the thought, by the mind" – כמונו.
+- **הערות:** [מקבילה: KU2 6.2b] – החצי השני זהה. *manīṣā* `תבונה` (*manīṣin* `נבון`, KU1).
+
+## הרתימה (6.10–6.13)
+
+### 6.10a
+`yadā pañcāvatiṣṭhante jñānāni manasā saha`
+> כשחמש הידיעות עומדות (דוממות) יחד עם המחשבה,
+- **פירוק:** `yadā` "כאשר" ("כש־"); `pañca` ("חמש"); `avatiṣṭhante` – ava-√sthā "לעמוד, להיעצר" ("עומדות (דוממות)"); `jñānāni` – jñāna-, רבים ("הידיעות"); `manasā` ("המחשבה"); `saha` ("יחד עם").
+- **תרגומים:** הְיוּם: "When cease the five [Sense-]knowledges, together with the mind" – כמונו.
+- **הערות:** חמש הידיעות – חמשת החושים.
+
+### 6.10b
+`buddhiś ca na viceṣṭati tām āhuḥ paramāṃ gatim`
+> והשכל אינו נע – אותה קוראים המטרה העליונה.
+- **פירוק:** `buddhiḥ` ("והשכל"); `ca` ("ו־"); `na` ("אינו"); `viceṣṭati` – vi-√ceṣṭ "לנוע, לפעול" ("נע"); `tām` ("אותה"); `āhuḥ` – √ah, פרפקט 3 רבים ("קוראים"); `paramām` – paramá- ("העליונה"); `gatim` – gáti- ("המטרה").
+- **תרגומים:** הְיוּם: "And the intellect (buddhi) stirs not – That, they say, is the highest course" – *gati* `מטרה` כמו ב־KU1 3.11b.
+
+### 6.11a
+`tāṃ yogam iti manyante sthirām indriyadhāraṇām`
+> אותה חושבים לרתימה – האחיזה האיתנה בחושים.
+- **פירוק:** `tām` ("אותה"); `yogam` – yóga- ("לרתימה"); `iti` (–); `manyante` ("חושבים"); `sthirām` – sthira- "איתן" ("האיתנה"); `indriyadhāraṇām` – indriyá- + dhāraṇā- "אחיזה" ("האחיזה … בחושים").
+- **תרגומים:** הְיוּם: "This they consider as Yoga – The firm holding back of the senses" – כמונו.
+- **הערות:** *yoga* `רתימה` כבפרק הראשון (3.3–3.9, משל המרכבה): לרתום את החושים כסוסים. זו ההגדרה העתיקה ביותר של "יוֹגָה".
+
+### 6.11b
+`apramattas tadā bhavati yogo hi prabhavāpyayau`
+> אז (כל אחד) נעשה לא־פזיז; כי הרתימה היא מוצא וכליון.
+- **פירוק:** `apramattaḥ` – a-pra-√mad, בינוני עבר ("לא־פזיז"); `tadā` ("אז"); `bhavati` ("נעשה"); `yogaḥ` ("הרתימה"); `hi` ("כי"); `prabhavāpyayau` – prabhava- "מוצא" + apyaya- "כליון", זוגי ("מוצא וכליון").
+- **תרגומים:** הְיוּם: "Then one becomes undistracted. Yoga, truly, is the origin and the end" – כמונו.
+- **הערות:** *pra-√mad* `פזיז` כמו ב־KU1 2.6a (*pramādyantam* "הפזיז").
+
+### 6.12a
+`naiva vācā na manasā prāptuṃ śakyo na cakṣuṣā`
+> לא בדיבור, לא במחשבה אפשר להשיגו, לא בעין;
+- **פירוק:** `na eva` ("לא"); `vācā` – vā́c- ("בדיבור"); `na` ("לא"); `manasā` ("במחשבה"); `prāptum` – pra-√āp, שם הפועל ("להשיגו"); `śakyaḥ` – √śak, צורת חובה ("אפשר"); `na` ("לא"); `cakṣuṣā` ("בעין").
+- **תרגומים:** הְיוּם: "Not by speech, not by mind, Not by sight can He be apprehended" – כמונו.
+
+### 6.12b
+`astīti bruvato 'nyatra kathaṃ tad upalabhyate`
+> מלבד אצל האומר "הוא ישנו" – איך ייקלט?
+- **פירוק:** `asti` – √as ("הוא ישנו"); `iti` (–); `bruvataḥ` – √brū, בינוני, יחסת הקניין ("האומר"); `anyatra` ("מלבד אצל"); `katham` ("איך"); `tat` ("–"); `upalabhyate` – upa-√labh "לקלוט, לתפוס", סביל ("ייקלט").
+- **תרגומים:** הְיוּם: "How can He be comprehended Otherwise than by one's saying 'He is'?" – כמונו.
+
+### 6.13a
+`astīty evopalabdhavyas tattvabhāvena cobhayoḥ`
+> "הוא ישנו" – כך יש לקלוט אותו, ובהיות־האמת – (בדרך) שתיהן;
+- **פירוק:** `asti iti` ("'הוא ישנו' – כך"); `eva` ("–"); `upalabdhavyaḥ` – upa-√labh, צורת חובה ("יש לקלוט אותו"); `tattvabhāvena` – tattva- "אמת, המהות" + bhāva- ("ובהיות־האמת"); `ca` ("ו־"); `ubhayoḥ` – ubhá- ("שתיהן").
+- **תרגומים:** הְיוּם: "He can indeed be comprehended by the thought 'He is' And by [admitting] the real nature of both" – *ubhayoḥ* קשה (?).
+
+### 6.13b
+`astīty evopalabdhasya tattvabhāvaḥ prasīdati`
+> למי שקלט אותו כ"ישנו" – היות־האמת מתבהרת.
+- **פירוק:** `asti iti eva` ("כ'ישנו'"); `upalabdhasya` – upa-√labh, בינוני עבר, יחסת הקניין ("למי שקלט אותו"); `tattvabhāvaḥ` ("היות־האמת"); `prasīdati` – pra-√sad "להיות צלול, שקט" ("מתבהרת").
+
+## קשרי הלב (6.14–6.18)
+
+### 6.14a
+`yadā sarve pramucyante kāmā ye 'sya hṛdi śritāḥ`
+> כשמשתחררים כל החשקים השוכנים בלבו,
+- **פירוק:** `yadā` ("כש־"); `sarve` ("כל"); `pramucyante` – pra-√muc, סביל 3 רבים ("משתחררים"); `kāmāḥ` ("החשקים"); `ye` ("ה־"); `asya` ("ו"); `hr̥di` – hŕ̥d-, יחסת המקום ("בלבו"); `śritāḥ` ("השוכנים").
+- **תרגומים:** הְיוּם: "When are liberated all The desires that lodge in one's heart" – כמונו.
+- **הערות:** √*śri* כאן `שוכן` (ב־5.8c `נשען`): פיצול לפי ההקשר (?). [הבית = בְּרִהַדָאַרַנְיַקַה 4.4.7.]
+
+### 6.14b
+`atha martyo 'mṛto bhavaty atra brahma samaśnute`
+> אז בן התמותה נעשה בן־אלמוות; כאן הוא זוכה בנוסח.
+- **פירוק:** `atha` ("אז"); `martyaḥ` ("בן התמותה"); `amr̥taḥ` ("בן־אלמוות"); `bhavati` ("נעשה"); `atra` ("כאן"); `brahma` ("בנוסח"); `samaśnute` – sam-√aś "להשיג, לזכות" ("הוא זוכה").
+- **תרגומים:** הְיוּם: "Then a mortal becomes immortal! Therein he reaches Brahma!" – כמונו.
+
+### 6.15a
+`yadā sarve prabhidyante hṛdayasyeha granthayaḥ`
+> כשנבקעים כאן כל קשרי הלב,
+- **פירוק:** `yadā` ("כש־"); `sarve` ("כל"); `prabhidyante` – pra-√bhid "לבקוע", סביל ("נבקעים"); `hr̥dayasya` – hŕ̥daya- "לב" ("הלב"); `iha` ("כאן"); `granthayaḥ` – granthi- "קשר" ("קשרי").
+- **תרגומים:** הְיוּם: "When are cut all The knots of the heart here on earth" – כמונו.
+
+### 6.15b
+`atha martyo 'mṛto bhavaty etāvad dhy anuśāsanam`
+> אז בן התמותה נעשה בן־אלמוות; כי עד כאן ההוראה.
+- **פירוק:** `atha martyaḥ amr̥taḥ bhavati` ("אז בן התמותה נעשה בן־אלמוות"); `etāvat` "עד כאן, כזה" ("עד כאן"); `hi` ("כי"); `anuśāsanam` – anu-√śās "להורות" ("ההוראה").
+- **תרגומים:** הְיוּם: "Then a mortal becomes immortal! – Thus far is the instruction" – כמונו.
+- **הערות:** [מקבילה: KU2 6.14b] – החצי הראשון זהה.
+
+### 6.16a
+`śataṃ caikā ca hṛdayasya nāḍyas tāsāṃ mūrdhānam abhiniḥsṛtaikā`
+> מאה ואחד הם עורקי הלב; אחד מהם יוצא אל הקודקוד.
+- **פירוק:** `śatam` ("מאה"); `ca` ("ו־"); `ekā` ("אחד"); `ca` ("–"); `hr̥dayasya` ("הלב"); `nāḍyaḥ` – nāḍī- "צינור, עורק" ("עורקי"); `tāsām` ("מהם"); `mūrdhānam` – mūrdhán- "ראש, קודקוד" ("אֶל הקודקוד"); `abhiniḥsr̥tā` – abhi-niḥ-√sr̥, בינוני עבר ("יוצא"); `ekā` ("אחד").
+- **תרגומים:** הְיוּם: "There are a hundred and one channels of the heart. One of these passes up to the crown of the head" – כמונו.
+
+### 6.16b
+`tayordhvam āyann amṛtatvam eti viṣvaṅṅ anyā utkramaṇe bhavati`
+> בו, בעלותו למעלה, הוא הולך אל האלמוות; האחרים – לכל עבר הם, ביציאה.
+- **פירוק:** `tayā` ("בו"); `ūrdhvam` ("למעלה"); `āyan` – ā-√i, בינוני ("בעלותו"); `amr̥tatvam` ("אֶל האלמוות"); `eti` – √i ("הוא הולך"); `viṣvañc` – "לכל עבר" ("לכל עבר"); `anyāḥ` ("האחרים"); `utkramaṇe` – ut-kramaṇa- "יציאה (מן הגוף)" ("ביציאה"); `bhavanti` ("הם").
+- **תרגומים:** הְיוּם: "Going up by it, one goes to immortality. The others are for departing in various directions" – כמונו.
+- **הערות:** ברגע המוות הנפש יוצאת דרך אחד העורקים; רק העורק של הקודקוד מוביל אל האלמוות.
+
+### 6.17a
+`aṅguṣṭhamātraḥ puruṣo 'ntarātmā sadā janānāṃ hṛdaye saṃniviṣṭaḥ`
+> אדם בגודל אגודל, הנפש־שבפנים, יושב תמיד בלב האנשים;
+- **פירוק:** `aṅguṣṭhamātraḥ puruṣaḥ` ("אדם בגודל אגודל"); `antarātmā` ("הנפש־שבפנים"); `sadā` ("תמיד"); `janānām` – jána- "אדם, אנשים", רבים ("האנשים"); `hr̥daye` ("בלב"); `saṃniviṣṭaḥ` – sam-ni-√viś, בינוני עבר ("יושב").
+- **תרגומים:** הְיוּם: "A Person of the measure of a thumb is the inner soul, Ever seated in the heart of creatures" – *jana* "אנשים" (הְיוּם "creatures").
+- **הערות:** [מקבילה: KU2 4.12a].
+
+### 6.17b
+`taṃ svāc charīrāt pravṛhen muñjād iveṣīkāṃ dhairyeṇa`
+> אותו ישלוף מגוויתו בהתמדה, כמו קנה מתוך עשב המוּנְגָ'ה.
+- **פירוק:** `tam` ("אותו"); `svāt` – svá- "שלו" ("–"); `śarīrāt` ("מגוויתו"); `pravr̥het` – pra-√vr̥h "לשלוף", אופטטיב 3 יחיד ("ישלוף"); `muñjāt` – muñja- "עשב המוּנְגָ'ה", יחסת מן ("מתוך עשב המוּנְגָ'ה"); `iva` ("כמו"); `iṣīkām` – iṣīkā- "קנה, גבעול" ("קנה"); `dhairyeṇa` – dhairya- "התמדה, יציבות", יחסת הכלי ("בהתמדה").
+- **תרגומים:** הְיוּם: "Him one should draw out from one's own body Like an arrow-shaft out from a reed, with firmness" – *muñja* העשב, *iṣīkā* הגבעול שבתוכו.
+- **הערות:** *śarīra* `גוויה` כבפרק הראשון. *dhairya* (מן *dhīra*) – יציבות החכם.
+
+### 6.17c
+`taṃ vidyāc chukram amṛtaṃ taṃ vidyāc chukram amṛtam iti`
+> ידע אותו כבהיר, כאלמוות; ידע אותו כבהיר, כאלמוות.
+- **פירוק:** `tam` ("אותו"); `vidyāt` – √vid, אופטטיב 3 יחיד ("ידע"); `śukram` ("כבהיר"); `amr̥tam` ("כאלמוות"); החצי השני כפול; `iti` (–).
+- **תרגומים:** הְיוּם: "Him one should know as the Pure, the Immortal" – כמונו.
+- **הערות:** הכפילות – סימן לסוף הפרק.
+
+### 6.18a
+`mṛtyuproktāṃ naciketo 'tha labdhvā vidyām etāṃ yogavidhiṃ ca kṛtsnam`
+> אז, אחרי שהשיג נַצִ'יקֵטַס את הידיעה הזאת שאמר מָוֶת, ואת כל סדר הרתימה,
+- **פירוק:** `mr̥tyuproktām` – mr̥tyú- + pra-ukta- "שנאמר", נקבה יחסת המושא ("שאמר מָוֶת"); `naciketaḥ` – naciketas- ("נַצִ'יקֵטַס"); `atha` ("אז"); `labdhvā` – √labh, צורת הסיום ("אחרי שהשיג"); `vidyām` – vidyā́- ("את הידיעה"); `etām` ("הזאת"); `yogavidhim` – yoga- + vidhi- "סדר, כלל" ("סדר הרתימה"); `ca` ("ו־"); `kr̥tsnam` – kŕ̥tsna- "כל" ("את כל").
+- **תרגומים:** הְיוּם: "Then Naciketas, having gained this knowledge declared by Death, And the whole rule of Yoga" – כמונו.
+- **הערות:** *vidyā* `ידיעה` כבפרק הראשון (2.4–2.5); √*labh* `השיג` לפי ההכרעה של §11.4.
+
+### 6.18b
+`brahmaprāpto virajo 'bhūd vimṛtyur anyo 'py evaṃ yo vid adhyātmam eva`
+> הגיע אל הנוסח, נעשה נקי מאבק ונטול־מָוֶת; וכך גם אחר, היודע כך את (מה ש)בנפש.
+- **פירוק:** `brahmaprāptaḥ` – bráhman- + pra-āpta- ("הגיע אל הנוסח"); `virajaḥ` – vi-rajas- "בלי אבק, בלי תשוקה" ("נקי מאבק"); `abhūt` – √bhū, אאוריסט 3 יחיד ("נעשה"); `vimr̥tyuḥ` – vi-mr̥tyu- "בלי מוות" ("ונטול־מָוֶת"); `anyaḥ` ("אחר"); `api` ("גם"); `evam` ("כך"); `yaḥ` ("ה־"); `vit` – vid- "יודע" ("היודע"); `adhyātmam` – adhi-ātmam "על הנפש" ("את (מה ש)בנפש"); `eva` ("–").
+- **תרגומים:** הְיוּם: "Attained Brahma and became free from passion and from death. And so also any other who knows this in regard to the Soul (Atman)" – *viraja* "נקי מאבק" (הְיוּם "free from passion": *rajas* "אבק, להט היצר").
+- **הערות:** סוף הקטהה: הנער שירד אל מָוֶת יוצא "נטול־מָוֶת". *virajas* "נקי מאבק" אינו השם וִירָאג' (Virāj): התראת השם של `verify` בשורה זו היא זיהוי שגוי של הכלי.
