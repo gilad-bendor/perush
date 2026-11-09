@@ -366,6 +366,8 @@ RESERVED = [
     (W + alt("צלם", "בצלם", "צלמו", "בצלמו", "דמות", "בדמות", "כדמות", "דמותו") + E, None, "צֶלֶם / דְּמוּת never: kəhrp = צוּרָה, tanū = גּוּף"),
     (W + alt("שבת", "השבת", "שבתו", "שביתה", "וישבות") + E, None, "the root שבת never"),
     (r"(?<![א-ת])ו?(?:נח|נוח|ינוח|לנוח)(?![א-ת])", None, "נָח never (the string of Noah)"),
+    (W + alt("משכן", "המשכן", "משכנות", "משכנו", "משכנותיו", "במשכן", "במשכנות", "למשכן") + E, None, "מִשְׁכָּן never (the Tabernacle): a dwelling = מָעוֹן"),
+    (W + alt("חסד", "החסד", "חסדו", "חסדך", "בחסד", "חסדים", "בחסדו", "חסדיך") + E, None, "חֶסֶד never (no Old Avestan counterpart: yāna = חֶסֶד? → טוֹבָה / חֵן by sense)"),
     (W + alt("אשרי", "אשריו", "אשרינו", "אשריך", "אשריהם") + E, None, "אַשְׁרֵי never: uštā = רָצוֹן / כִּרְצוֹן (Ps 1:1 in the apparatus)"),
     # --- only for their source counterpart (renderings §7.2) ---
     (W + alt("רוח", "רוחות", "הרוח", "הרוחות", "רוחו", "ברוח", "רוחי", "לרוח", "שהרוח", "רוחך") + E, r"mainii|mainy|maini|manii|maniu|vat|vaii|vay", "רוּחַ only for mainiiu (and vāta / vaiiu, the wind)"),
@@ -397,6 +399,7 @@ RW = rf"(?<![{V}א-ת])[ובלמהכש]?"
 RE_ = rf"(?![{V}א-ת])"
 # (regex on the RAW line, condition regex on the licence text: if it matches, the unvocalized string is an error; why)
 TRAPS = [
+    (RW + r"(?:רע|רעים|רעי|לרע|כרע|הרע)" + RE_, r"friia|friio|friiai|friiaiia|friiaa|frii", "friia 'friend': רֵעַ always vocalized (unvocalized it reads 'bad', aka's word)"),
     (RW + r"(?:אל|אלים|אלה|אלות|אלי|אלת)" + RE_, r" daeu| daev| dev", "daēuua: אֵל / אֵלִים always vocalized ('to', 'these')"),
     (RW + r"(?:ימה)" + RE_, r"yim", "Yima: always vocalized יִימָה ('to the sea')"),
     (RW + r"(?:דת)" + RE_, r"dat", "דָּת (dāta): always vocalized ('religion' in modern Hebrew)"),
