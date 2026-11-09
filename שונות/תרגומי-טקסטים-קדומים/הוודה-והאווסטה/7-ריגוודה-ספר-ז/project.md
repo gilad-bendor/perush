@@ -641,5 +641,210 @@ the slips are of the kinds found in parts 1–2.
   - Book-wide shared words met here: *vŕ̥ṣan* / *vr̥ṣabhá* `פר`; *bhū́ri* / *purú* `רב`; *jána* `עמים` (7.30.2c, as
     7.16) beside *carṣaṇí* `עמים`.
 
+## RV7.32–7.37 (part 4: the last Indra hymn; Vasiṣṭha's birth; the All-Gods; translator 4, Round 7 run 1)
+
+### Scope
+RV 7.32–7.37, 348 pādas: 7.32 (Indra, 106: 27 bṛhatī / satobṛhatī stanzas, 3 a two-pāda stanza), 7.33 (Vasiṣṭha and the
+Vasiṣṭhas, 56), 7.34 (All-Gods, 58: 1–21 dvipadā virāj, 22–25 triṣṭubh), 7.35 (All-Gods, the *śám* litany, 60), 7.36
+(All-Gods, 36), 7.37 (All-Gods: the Ṛbhus and Indra, 32). Six annotated files, six intros, built (`build RV7.32-37`);
+`verify RV7.32-37 --strict`: no problems, 0 repeated-line differences; `check_bible_quotes.py` on my annotated files,
+intros and the generated files: 0 problems.
+
+### Sources consulted
+The Zurich text and morphology (`data`); `freq RV7.32-37`, `lexmap` and a script over the whole corpus's פירוק bullets
+(lemma → Hebrew of my range against every other file, and Hebrew → lemma) for every recurring word; Grassmann and
+Monier-Williams for the rare words; after drafting each hymn `tr` (Griffith, Grassmann, Geldner, Elizarenkova) and
+Jamison's commentary on VII.32–37. Her readings adopted, with attribution: 7.32.2 (*suté sácā* formulaic, after X.50.7),
+3a (the triple pun of *sudákṣiṇa*), 8c/9b (*ávase kr̥ṇudhvam*, *kr̥ṇudhvám … ātúje* as periphrastic causatives), 11a
+(*vājayánt* denominative "seeking the prize"), 17d (*nā́ma bhikṣate* "begs a share in your name"), 18 (*etā́vat*
+adverbial; the short-vowel optatives), 22c (*svardŕ̥ś* "sun-seeing", not Geldner's "whose eye is the sun"), 24 (the
+*bhara* / *bháre-bhare* and *abhī́ ṣatáḥ* … *kánīyasaḥ* word plays); 7.33.1 (Indra speaks, at a rival sacrifice; no
+"pilgrimage"), 2 (Pāśadyumna the deserted sacrificer), 4 (*ákṣam avyayam* = securing the axle, after III.53.19), 10–13
+(Oldenberg's two births: 10 = the second, 11–13 = the first; *viśé* "to the clan"), 12a (loc. *praketé*), 12b (*sádāna*
+"one gift"), 13a (*satré* "at a Sattra"; *Māna* = Agastya), 14 (Agastya speaks; the three priests); 7.34.2 (the waters
+know the birth of Heaven and Earth), 3–4 and 7 (the unaccented *asmai* / *asya* as riddle markers: Indra, Savitṛ, Agni),
+5a (*áhā iva*), 12b (*ádyu* "harmless", after Av. *aidiiu*), 16 (*sī́dan* predicate), 20 (the Wives of the Gods; Tvaṣṭṛ
+and the embryo), 25b (*juṣanta* "enjoy", not "grant"); 7.35 (the template; 5b inside it); 7.36.1 (*ví sasre* from √*sr̥*
+"stretch out", Narten), 2d (*mitrá* = "alliance" when spoken), 3 (*sū́da* "sweetness"; Soma rather than the rains, as an
+alternative), 4 (*aryáman* as Indra's epithet, after Brereton), 5 (√*yaj* with abstract objects; *ví bābadhe* "pushes
+out"), 6 (*vāvaśānā́* from √*vāś* "low"; the verse without a main clause), 8d (*vā́jam* an object of *prá kr̥ṇudhvam*);
+7.37.5 (the *pravátaḥ* are river-courses, as 7.32.27), 6 (*vāsáyasi* "make wait"; *tātyá* "daddy's"), 7 (*tribandhú*
+"having three bonds", not a name; *yám* of a and d a beleaguered man; Indra aged).
+
+### Decisions
+- **7.35, the *śám* litany – one pattern, exact, for the whole hymn** (the coordinator's brief; renderings §5.5 *śám*
+  `אושר`): *śám* = `לאושר` every time; the copula (*astu*, *bhavatu*, *santu*, *bhavantu*, *bhavatām*) = `יהיה` /
+  `תהיה` / `יהיו`, placed right after the `לאושר` of its own clause; *naḥ* = `לנו` after it – `לאושר יהיה לנו X`, and
+  without a verb `לאושר לנו X`; a second *śám* in the pāda `ולאושר` (with *u*) or `לאושר`. Where another verb takes the
+  place of "be" (4d "blow", 6d "hear", 8a "go up"), *naḥ* is its object: `לאושר תנשב עלינו`, `לאושר ישמע אותנו`,
+  `לאושר יעלה לנו`. The rule is stated in the file's header and the note on 1a. *śambhú* `מביא־האושר`; *śáṃ yóḥ*
+  `לאושר ולרווחה` (*yós* `רווחה`, as RV 10.15.4d). The pun *śám* / *śáṃsa* (2a, 2c) is noted, not imitated.
+- **7.33, the family's myth:** the names of 7.18 copied (Sudās `סוּדָאס`, the Tṛtsus `טְרִטְסוּ`, Bheda `בְּהֵדָה`, the
+  Bharatas `בְּהַרַטָה`); *vásiṣṭhāḥ* `בני וַסִישְׁטְהָה` (7.7.7a), the singular `וַסִישְׁטְהָה`; *dāśarājñá* `קרב עשרת
+  המלכים`; *rétas* `זרע` (7a, 13b: the gate licenses it; the seed of Mitra and Varuṇa in the pot); Mitra–Varuṇa
+  `מִיטְרָה וְוַרוּנָה`, *maitrāvaruṇá* `בן מִיטְרָה וְוַרוּנָה`; Urvaśī `אוּרְוַשִׁי`, Agastya `אַגַסְטְיָה`; the
+  *apsarás* `אַפְּסַרַס` (pl. `האַפְּסַרַסוֹת`); Yama `יָמָה` in 9c/12c (*yaména tatám paridhím* "the border stretched by
+  Yama"; √*tan* `פרש`); *drapsá* / √*skand* `טיפה` / `ניתז` (RV 10.17); *púṣkara* `לוטוס`; *satrá* `אספת־הזבח`;
+  *kumbhá* `כד`; *Māna* `מָאנָה` (always vocalized: "refused"); new names Pāśadyumna Vāyata `פָּאשַׁדְּיוּמְנָה
+  וָאיַטָה`, the Pratṛds `בני פְּרַטְרִד`; *śákvarī* `בתי־השַׁקְוַרִי`; *ukthabhŕ̥t* / *sāmabhŕ̥t* `נושא־האמירה` /
+  `נושא־הניגון`; *grā́van* `אבן־הסחיטה` (*ádri* keeps `אבן`).
+- **7.32:** *vāghát* `אנשי־הטקס` (from *adhvará* `טקס`); √*ram* caus. `השהה` (1b, 10b; the simplex `שמח` of KU / RV 10.34
+  is another sense; 7.36.3a middle "come to rest" `נרגע`); Sudās `סוּדָאס` in 10a, with a note on the sense "generous"
+  (Geldner, Griffith translate it); *pā́rye diví* `ביום המעביר` (14c, 21d; after *pā́rya* `המעבירות`, 7.27.1b; `המעבר` is
+  KU's *samparāya*); *śraddhā́* `אמונה` (KU); *máyas* `הנאה` (`נחת` is KU's *sukha*); *áṃśa* `מנה` (`חלק` is *bhāga*);
+  *prásiti* `מתקפה` (a split by sense from 7.3.4c `התקדמותך`); √*cud* `דרבן` (7.27.3d has `ידחוף`; √*nud* keeps `דחף`,
+  7.18.16b, 7.32.25a); √*rāj* `מלך` (with *rā́jan* `מלך`; √*kṣā* `מלך` in part 3 – recorded); √*vr̥* 1 "obstruct"
+  `עצר` (16d); *purūvásu* `רב־הטובות` (`רב־הטוב` is *prabhūvasu*, 7.22.2c); *sanā́t* `מאז ומעולם` (`מקדם` is KU's
+  *purā́*); *táṣṭar* `מחשל` (√*takṣ* `חישל`); *jīvá* `חי` (26d, licensed); *vásyas* `טובה יותר` with `[היתר שער]` (the
+  comparative of *vásu*; the licence does not see it).
+- **7.34:** *janítra* `מולדת`; *ádha* left untranslated in 2b (Jamison); *vr̥tréṣu* `מחסומים` with `[היתר שם]`;
+  *áhi budhnyà* `הנחש של המעמקים` (*áhi* `נחש`, licensed; *budhná* `מעמקים`, as *budhnyà* 7.6.7a); *abjā́*
+  `ילוד־המים`; Apāṃ Napāt `נכד המים` (vocalized at its first occurrence); *pā́thas* `נווה` (renderings §11.12 asks to
+  move it from `מכלאה`, which is *vrajá*'s; 7.4.9c still has `המכלאה`); *nadī́* `נהר` beside *síndhu* `נהר` (near
+  synonyms, one Hebrew); *varuṇānī́* `אשת וַרוּנָה` (the name check passes, and the word is clear); *ródasī* in 22b the
+  dual `שתי המחצות` (accent; the verb is singular by attraction – noted); *dyukṣá* `שוכן־השמים` (7.31.2b had `שמימית`,
+  which is *divyá*'s word: recorded); *sahá* (adj.) `בעל־העוז`; *dharúṇa* `בסיס` (`יסוד` is *dhárman*'s); *pátnī*
+  `רעיה`; *supāṇí* `טוב־הכפות` / *suhásta* (7.35.12c) `טובי־הידיים`.
+- **7.36–37:** *suvr̥ktí* `שזירה טובה`; *dhā́man* `תחום` (RV 10.10.6c); √*yat* `יישר` (not the root of `סדר`); *mitrá*
+  as name and "alliance" (2d, noted); *gnā́* `אִשָּׁה` (7.35.6d, by the Old Avestan cognate list, renderings §11.12);
+  *arámati* `מסירות` (7.1.6c; = Av. *ārmaiti*); *sū́da* `מתיקות (?)`; *ū́dhar* `עטין`; *váyas* `מרץ`; *niṣiktapā́*
+  `שומר־הנצוק` (not `זרע`, gated to *rétas*); *ślóka* `שֵׁמַע` (the root of √*śru*); the Ṛbhus `רִבְּהוּ`,
+  *r̥bhukṣán* `שליט־הרִבְּהוּ`, the voc. *vā́jāḥ* (a Ṛbhu's name) `וָאגַ'ה`, kept apart from *vā́ja* `פרס`; *sūnŕ̥tā*
+  `נדיבות` (KU 1.8a's `נועם דיבור` is the sense "kind speech": a split by sense, recorded); *nírr̥ti* `אֲבַדּוֹן` (the
+  precedent of RV 10.10.11b, here a goddess: vocalized, no article; tagged with Job 28:22); *śarád* `סתיו` (RV 10.90,
+  KU); *tribandhú* `בעל־שלושת־הקשרים` (Jamison; not the name Tribandhu = Vasiṣṭha of Geldner); *ásvaveśa* `חסר־בית`;
+  *gábhasti* `יד` (beside *hásta* `יד`: near synonyms, recorded).
+- **Moods and vocalization:** imperatives that read as past are vocalized (`בּוֹא`, `שְׁמַע`, `הֱיֵה`, `הָבֵא`, `סִחֲטוּ`,
+  `בַּשְּׁלוּ`, `עֲשׂוּ`, `הַפְגִּינוּ`, `דַּרְבֵּן`, `דְּחַף`, `עֲשֵׂה`, `הִשְׁתַּדֵּל`, `שִׂימוּ`, `עִמְדוּ`, `שַׁגְּרוּ`,
+  `עִזְרוּ`, `הָסִירוּ`, `שְׁבוּ`, `שְׁתוּ`, `חַלְּקוּ`, `מַלְּאוּ`); `אֶל` / `אֵלֶּה` / `הָאֵלֶּה` where a *deva* word is near.
+- **The repeated pādas:** F6 in 7.34.25d, 35.15d, 36.9d, 37.8d. **7.34.25a–c is the first copy of 7.56.25a–c** (noted
+  `[מקבילה: RV7.56 25a]` …). 7.32.11c / 25c share the frame `שלנו הֱיֵה עוזר – …`; 7.33.9c / 12c `את הגדר שפרש יָמָה`;
+  7.34.21b copies 7.1.6c's `המסירות … שוחרת־הטוב`; 7.37.4c follows 7.14.3c / 7.17.7a (`לך … נהיה נא מגישים`); 7.36.1a
+  follows 7.34.1a (`קדימה ילך / תלך`). No repeated-line difference.
+
+### Open decisions for the user
+- 7.35: the fixed pattern `לאושר יהיה לנו X` (the copula moved forward to the `לאושר` of its clause) against a closer
+  word order with the verb at the end (`לאושר לנו X יהיה`). Chosen for the renderings' own model and for readability.
+- 7.32.10a *sudā́s*: the name (with the sense "generous" in the note) against Geldner's and Griffith's common noun.
+- 7.37.7a *nírr̥ti* `אֲבַדּוֹן`: the RV 10 precedent keeps a biblical word (Job 26:6, 28:22; Prov 15:11) for the goddess of
+  dissolution; the echo is justified by sense and tagged. A transliteration `נִירְרִטִי` would avoid it.
+- 7.36.4d / 7.37.7c: following Jamison (*aryáman* as Indra's epithet; *tribandhú* "having three bonds") against the
+  readings with a god Aryaman and a person Tribandhu; the names stay in the lines where the base has them.
+
+### Progress log
+- 2026-11-09: drafted 7.32–7.37 hymn by hymn; each written (from a compact draft through a local assembling script that
+  takes the forms, lemmas and morphology from the Zurich TSV, so that every word has its פירוק segment), filled and
+  verified (`verify RV7.<n> --strict`) before the next, with its intro.
+- Mid-part: the brief's new Old Avestan cognate list applied (*gnā́* `אשה` in 7.35.6d; *pā́thas* moved off `מכלאה`).
+- Pass (a) fidelity: 7.33.1b (an over-long addition cut: the object is 1a's *mā*); 7.37.8b (a plural verb with the
+  collective `העושר` made singular, as 7.35.2b); 7.34.8a punctuation; Geldner's / Jamison's construals checked at every
+  `?`.
+- Pass (b) consistency (lemma ↔ Hebrew against the whole corpus): *sukŕ̥t* `עושי־היטב` → `עושי־הטוב` (RV 10.16, 7.9);
+  *śarád* `שנה` → `סתיו`; *yaśás* `מכובד` → `נכבד` (7.21.2c); *sā́nu* `גב` → `רכס` (7.2, 7.7); *dhā́man* `מעמד` → `תחום`
+  (RV 10.10); √*bādh* `דחק` → `לחץ` (7.23.3c); *nírr̥ti* `נִירְרִטִי` → `אֲבַדּוֹן` (RV 10.10.11b); plural *sóma*
+  `(משקאות) הסוֹמָה` → `מנות־הסוֹמָה` (7.24.1d); *máyas* `נחת` → `הנאה` (KU's *sukha*); *áṃśa* `חלק` → `מנה`
+  (*bhāga*); *vaiśantá* `בריכה` → `אגמון` (7.103's *sarasī́*); √*car* `נע` → `נדד` (7.33.9b; `נעים` is KU's *préyas*);
+  *sanā́t* `מקדם` → `מאז ומעולם`; *purūvásu* `רב־הטוב` → `רב־הטובות`; *pā́rya* `המעבר` → `המעביר`; *āré* `הרחק` →
+  `רחוק` (7.22.6c); *yájatra* `ראויי לזבח`.
+- Pass (c) Hebrew: the six generated files read through; the litany checked line by line for the one pattern.
+- `build RV7.32-37`; `verify RV7.32-37 --strict`: 0 problems; `check_bible_quotes.py` on 18 files: 0 problems (all
+  verses printed before quoting; the altar note of 7.35.7d given its verse, Exod 20:20 in the repository's numbering).
+
+### The text on its own terms
+- Gift exchange as the law of the rite: "only the one who fills (the god) is a pleasure to the one who fills" (7.32.8d);
+  "the gods are not for the stingy" (9d); the poet's daring "if I were lord of as much as you, I would never abandon my
+  praiser" (18–19).
+- The competition of priestly families for one god: "let not even (other) cantors keep you far from us" (7.32.1); Indra
+  rising from another's barhis to go to "my Vasiṣṭhas" (7.33.1–2); the poets "like flies on honey" (7.32.2b).
+- The word wins the war: Indra helped Sudās in the battle of the ten kings "through your formulation, Vasiṣṭhas"
+  (7.33.3d); the Tṛtsus, "like cut sticks for driving cows", spread out when Vasiṣṭha went at their head (7.33.6).
+- The family's birth myth: the seed of Mitra and Varuṇa poured into a pot at a Sattra, the drop caught in a lotus,
+  Vasiṣṭha born "from mind" of the apsaras Urvaśī, and received into the clan by Agastya (7.33.10–14) – a seer born
+  without an ordinary father or mother, twice.
+- The sacrifice as weaving: "weaving the border stretched by Yama", the first sacrificer (7.33.9c, 12c).
+- Knowledge as riddles: "three make seed in the worlds …; all these the Vasiṣṭhas know" (7.33.7); the All-God hymn as a
+  string of little riddles, each pointing to a god (7.34).
+- The poem as a crafted vehicle: "well-fashioned like a prize-winning chariot" (7.34.1), the god "bent" with song as a
+  carpenter bends a felloe (7.32.20).
+- The whole world asked to be "for luck": gods, the parts of the rite (soma, stones, posts, the védi) and the powers of
+  nature (sun, mountains, rivers, plants, wind) (7.35).
+- The serpent of the depths – not an enemy here but a minor god to be pacified (7.34.16–17, 7.35.13b).
+- *mitrá*, "alliance": the god who "aligns the people when he is spoken" (7.36.2d).
+- Complaint and old age: the poet "kept waiting" (7.37.6a); Indra, unusually, as one who "has reached old age", a refuge
+  for the man whom Dissolution rules (7.37.7).
+- Light as life: "living, may we attain the light" (7.32.26d).
+
+### Key parallels
+- 7.32.23a–b – 1 Kgs 8:23, Isa 43:10: "none like you, in heaven or on earth; not born, nor to be born" (a shared motif of
+  incomparability; in the RV praise of one god among many).
+- 7.32.26b – Ps 103:13: the god as a father to his sons (here giving *krátu*, resolve).
+- 7.32.26d – Ps 56:14: life as walking in the light.
+- 7.32.27c – Isa 43:2: crossing the waters with the god.
+- 7.33.3d – Exod 17:11: victory in battle hangs on the priest / man of god at the side (the formulation; Moses' hands).
+- 7.33.5d – Ps 118:5: from the narrow siege to the wide (*urú*, *uloká*).
+- 7.34.16a – Amos 9:3 [divergence]: the serpent at the bottom of the waters – God's agent in Amos, a god to be pacified here.
+- 7.35.7d – Exod 20:20: an altar of earth (*védi* `מזבח`, the gate's licensed word).
+- 7.35.15d – Num 6:26 [divergence]: a liturgy of blessing sealed with "peace".
+- 7.37.7a – Job 28:22: Dissolution / Abaddon personified.
+
+### Proposals for the shared renderings
+- **The 7.35 pattern** (for §5.5 or §8, as a formula frame): *śáṃ naḥ* X *astu / bhavatu* = `לאושר יהיה לנו X`;
+  without a verb `לאושר לנו X`; a second *śám* `ולאושר`; *śambhú* `מביא־האושר`; *śáṃ yóḥ* `לאושר ולרווחה`.
+- **Words** (lemma → Hebrew, binding for Book 7 if accepted): *vāghát* `אנשי־הטקס`; √*ram* caus. `השהה`, mid. `נרגע`;
+  *mákṣ* `זבוב`; *dádhyāśir* `מעורב־החלב־הקרוש`; *pītí* `שתייה`; *śrútkarṇa* `בעל־האוזן־השומעת`; *ápratiṣkuta*
+  `שאין דוחים אותו`; *tvā́hata* `מוכה־ידך`; *paktí* `תבשיל`, √*pac* `בישל`; *máyas* `הנאה`; √*sridh* `כשל`; *kavatnú*
+  `כילי`; √*puṣ* `שגשג`; *áṃśa* `מנה`; *ríp* `רמאי`; *ákharva* `לא־קטוע`; *supéśas* `יפה־עיטור`; *prásiti* `מתקפה`;
+  *tvā́vasu* `שאתה טובו`; *pā́rya* `המעביר` (*pā́rye diví* `ביום המעביר`); √*cud* `דרבן`; *avamá* `התחתון`; √*rāj* `מלך`;
+  *dhanadā́* `נותן־ההון`; *ājí* `מרוץ`; *avasyú* `שוחר־העזרה`; √*bhikṣ* `ביקש חלק`; *radāvasu* `חופר־הטוב`; *pāpatvá*
+  `רוע`; *kuhacidvíd* `המוצא בכל מקום`; *táṣṭar* `מחשל`; *sudrú* `טוב־עץ`; *duṣṭutí* `שבח רע`; *suśákti* `יכולת קלה`;
+  *svardŕ̥ś* `רואה־האור`; *purūvásu* `רב־הטובות`; *sanā́t* `מאז ומעולם`; *bhára* `פשיטה`; *suvéda* `קל־למציאה`;
+  *mahādhaná* `ההון־הגדול`; *yā́man* `מסע`; *vr̥jána* `חבורה`; *áśiva* `לא־מיטיב`; 7.33: *śvityáñc* `לבנבן`,
+  *dakṣiṇatáskaparda* `בעל־הצמה־מימין`, *dhiyaṃjinvá* `מפיח־ההגות`, *vaiśantá* `אגמון`, *pā́nta* `משקה`,
+  *dāśarājñá* `קרב עשרת המלכים`, *júṣṭi* `התענגות`, *ákṣa* (axle) `ציר`, √*vyā* `עטף`, *ráva* `תרועה`, *tr̥ṣṇáj* `צמא`,
+  *daṇḍá* `מקל`, *puraetár* `ההולך־בראש` (AB 7.18.6a has `מנהיג`, which part 2 gave *yantár*: for the harmonization),
+  *jyótiragra* `שהאור בראשו`, *vakṣátha* `גאות`, *prajavá* `שעטה`, *sahásravalśa* `בעל־אלף־הענפים`, √*u* 2 / √*vā*
+  "weave" `ארג`, *apsarás* `אַפְּסַרַס`, *satrá* `אספת־הזבח`, *kumbhá* `כד`, *sā́man* `ניגון`, *grā́van* `אבן־הסחיטה`;
+  7.34: *janítra* `מולדת`, √*kṣar* `זרם`, *híraṇyabāhu* `בעל זרועות־הזהב`, *yā́tar* `נוסע`, *pátman* `מעוף`, *bhārá*
+  `משא`, √*sādh* `הגשים`, *sahásracakṣas* `בעל־אלף־העיניים`, *rāṣṭrá* `ממלכה`, *ádyu* `בלתי־מזיק`, *dvíṣ* `שונא`, √*yu* 2
+  `הסיר`, *rápas* `פגע`, *havyā́d* `אוכל־התקרובת`, *abjā́* `ילוד־המים`, *budhná* `מעמקים`, *r̥tāyú* `שוחר־הסדר`,
+  *mahā́sena* `בעל־הצבא־הגדול`, *áma* `הסתערות`, *pátnī* `רעיה`, *supāṇí* `טוב־הכפות`, *rātiṣā́c* `מלווה־המתנה`,
+  *várūtrī* `סוככת`, *suśaraṇá* `טוב־המקלט`, *pā́thas* `נווה`, *dyukṣá* `שוכן־השמים`, *dharúṇa* `בסיס`, *upástha* `חיק`,
+  √*hā* with *ánu* `נענה`; 7.35: *rātáhavya* `שהתקרובת ניתנה לו` (7.19.6b's `נותן־התקרובת` is the human giver: a split by
+  sense), *suvitá* `הליכה טובה` (7.2.6d has `רווחה`, which is *yós*'s: for the harmonization), *dhartár* `מחזיק`,
+  *suháva* `קל־הקריאה`, *jyótiranīka* `שפניו אור`, *iṣirá* `מרענן`, √*vā* "blow" `נשב`, *pūrváhūti* `הקריאה הראשונה`,
+  *jiṣṇú* `מנצח`, *suśáṃsa* `טוב־הקילוס`, *jálāṣa* `מרפא`, *gnā́* `אִשָּׁה`, *sváru* `יתד־הזבח`, *mití* `הצבה`, *prasū́*
+  `נבט`, *védi* `מזבח` (the gate's word), *urucákṣas* `רחב־המבט`, *dhruví* `יציב`, *svarká* `טוב־הזמר`, *bhavítra*
+  `המתהווה`, *kṣétra* `שדה`, *abhiṣā́c* `מתלווה`, *ápya* `מימי`, *suhásta* `טובי־הידיים`, *háva* `קריאה`, *ékapād*
+  `בעל־הרגל־האחת` (*ajá ékapād* `התיש בעל־הרגל־האחת`), *perú* `המעביר`, *devágopā* `שהאלים שומריה`, *gójāta*
+  `ילוד־הפרה`, *r̥tajñā́* `יודע הסדר`, *urugāyá* (noun) `רחב־הצעד`; 7.36: √*sr̥* 2 `השתרע`, *sā́nu* `רכס`, *padavī́* `גשש`,
+  √*yat* `יישר`, √*brū* (bruvāṇá) `נאמר`, √*dhraj* `סחף`, *ityā́* `תנועה`, *sū́da* `מתיקות (?)`, *ū́dhar* `עטין`,
+  *surátha* `טוב־המרכבה`, *dhāyú* `רעב (?)`, ā́ √*vr̥t* `סובב הנה`, *váyas* `מרץ`, *namasvín* `בעל־קידה`, *dhā́man*
+  `תחום`, *pŕ̥kṣ* `מזון־כוח`, *yaśás* `נכבד`, √*vāś* `געה`, *síndhumātar* `שאמה הנהר`, *sudúgha* `טוב־החליבה`,
+  *sudhārá* `טוב־הזרם`, *páyas* `לשד`, pári √*khyā* `התעלם`, *yújya* (adj.) `רתום`, *vidathyà* `של המועצה`, *ślóka*
+  `שֵׁמַע`, *niṣiktapā́* `שומר־הנצוק`; 7.37: *vā́hiṣṭha* `המוביל ביותר`, *ámr̥kta* `שלא נפגע`, *tripr̥ṣṭhá*
+  `משולש־הגב`, *r̥bhukṣán* `שליט־הרִבְּהוּ`, *vibhāgá* `חלוקה`, *árbha* `זעיר`, *gábhasti* `יד`, *sūnŕ̥tā* `נדיבות`,
+  *vasavyà* `הטובות`, *ŕ̥kvan* `מזמר`, *sánitar* `זוכה`, √*viṣ* 2 `פעל`, √*vas* 3 caus. `הושיב`, *tātyá* `של אבא`,
+  *pr̥kṣá* `מזין`, *śarád* `סתיו`, *supŕ̥kṣ* `עשיר־המזון`, *jarádaṣṭi* `מגיע־הזקנה`, *tribandhú*
+  `בעל־שלושת־הקשרים`, *ásvaveśa* `חסר־בית`, *pāyú* `שומר`.
+- **Names** (for §3.1, RV 7; vocalized at the first occurrence): Urvaśī, Agastya, Bheda, the Ṛbhus as in the table;
+  new, in the files only: Pāśadyumna Vāyata `פָּאשַׁדְּיוּמְנָה וָאיַטָה`, the Pratṛds `בני פְּרַטְרִד`, Māna `מָאנָה`
+  (★ always vocalized), the apsaras `אַפְּסַרַס`, Vāja (the Ṛbhu) `וָאגַ'ה` (★), Varuṇānī `אשת וַרוּנָה` (translated),
+  Nirṛti `אֲבַדּוֹן` (translated, after RV 10.10.11b), Aja Ekapād `התיש בעל־הרגל־האחת` (translated).
+- **For the harmonization:** √*nud* `דחף` / √*cud* (7.27.3d `ידחוף`, here `דרבן`); √*rāj* / √*kṣā* `מלך`; *dyukṣá*
+  `שמימית` (7.31.2b) / `שוכן־השמים`; *suvitá* `רווחה` (7.2.6d) / *yós* `רווחה`; *puraetár* (AB `מנהיג`) / *yantár*
+  `מנהיג`; *pā́thas* `המכלאה` (7.4.9c) still to move; *nadī́* / *síndhu* `נהר`; *gábhasti* / *hásta* `יד`; *śarád* /
+  *saṃvatsará*; *sūnŕ̥tā* (KU `נועם דיבור`).
+
+### Lessons for the guidelines
+- A long part goes faster and safer when the translator writes only the Hebrew line and the per-word meaning and
+  Hebrew, and a script copies the forms, lemmas and Zurich morphology into the פירוק (counting the segments against the
+  tokens): no word can be skipped, and a re-run regenerates the file after every change (the `fill` runs after it).
+- A litany needs its pattern written down before the first line (here in the file's header and the note on 1a): sixty
+  pādas of "*śáṃ naḥ*" then follow one rule, and the generated text can be checked against it at a glance.
+- The cross-corpus lemma ↔ Hebrew map found fifteen silent collisions with older texts (KU, RV 10, the Brāhmaṇas) in
+  words that had looked new (`נחת`, `מקדם`, `נעים`, `חלק`, `בריכה`, `המעבר`): run it before the hand-off, against
+  every corpus file, not only Book 7.
+- The `טוב` licence does not cover *vásyas* (the comparative of *vásu*): an escape was needed (7.32.19d).
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
