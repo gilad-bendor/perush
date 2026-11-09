@@ -1292,7 +1292,12 @@ offset 4 (the *start* of "ttt") while the line ends at 7. These patches keep the
   it, so in `אאא [ttt](x.md)` it took `(x.md)` for LTR while the browser paints the parentheses RTL. Every
   Markdown link in Hebrew text was affected: the arrows moved the cursor the wrong way over the `(`, and a
   selection was painted in the wrong place. Upgrading `@codemirror/view` needs the patch carried over (or
-  dropped, if upstream fixed it). The same patch holds two changes to the selection layer, both for the line
+  dropped, if upstream fixed it). **Pinning it holds back whatever needs a newer one**: npm would nest a second
+  `@codemirror/view` under such a package, which the browser never sees - `public/index.html`'s import map has one
+  copy of every package, at the top of `node_modules/` - so the page fails with "does not provide an export named
+  ...". `@codemirror/lint` is pinned for that reason (6.9.5, the last before it asked for view 6.42), a direct
+  dependency with an `overrides` entry, which is what puts it at the top. After an `npm update`, a package a new
+  version imports (`@codemirror/streamparser` came that way) has to be added to the import map too. The same patch holds two changes to the selection layer, both for the line
   start painted at the edge (above):
   - A line a selection only touches - the start of `1. אאא` after Shift+Left from the line above it - gets an
     empty piece, which CodeMirror measured with the selection's side of ±2, from the left of the "1" to the
