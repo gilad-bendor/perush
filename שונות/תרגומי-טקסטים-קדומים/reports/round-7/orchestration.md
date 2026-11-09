@@ -24,3 +24,6 @@ finalization.
   stop, no questions for the user. Its cognate pairs (renderings §12) were sent to run 1 to follow in its remaining
   parts (its own earlier choices go to its report's splits). For the finalization: Vd 2's *daēnā* `דָּת` against
   `האווסטה/`'s *daēnā* `הַשְׁקָפָה` / *dāta* `דָּת`.
+- 2026-11-09 03:10 UTC – run 1's turn failed on the 5-hour limit (`rejected`, reset 03:20 UTC), about 4h35m into the
+  round, during part 5's fixes (two runs had worked in parallel until 01:13). Resumed by the parent at 03:45 UTC
+  (gate: GO, range B). Nothing lost (run 1 pushes after each part).
