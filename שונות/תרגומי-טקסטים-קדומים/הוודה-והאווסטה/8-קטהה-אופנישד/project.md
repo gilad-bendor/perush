@@ -64,8 +64,13 @@ Round 7 run 1.
   voice; *puruṣa* `אָדָם` vocalized in some lines only (both adhyāyas).
 - After each step: `build`, `verify KU1 KU2 --strict` (0 problems), the corpus `verify` (0 problems), the parallels
   index, `check_bible_quotes.py` on every file of the project and on `4-העקדה/translation.rtl.md` (0 problems).
-- 06:44 UTC: paused at the gate's WAIT into range A (Fri 13 Nov 13:24 UTC). **Next (range A, one agent): step 3's
-  passes (b) consistency and (c) Hebrew over KU1 + KU2 as one text; then step 4 (the verifiers, the report, `finish`).**
+- 06:44–06:46 UTC: **pass (b) consistency over KU1 + KU2** (the same reviewer): 7 line changes (`אָדָם` vocalized
+  everywhere – the tables' form and the majority, a coordinator's decision; 1.14b `והבסיס … כמונחת`; 1.22b `לא יושג`
+  (√*labh*); 5.13a `הלא־קבועים`), 3.13a's note corrected (Śaṅkara's reading, `?`); splits by sense kept and logged;
+  log `review--KU-b.md`.
+- 06:47 UTC: paused at the gate's WAIT into range A (Fri 13 Nov 13:24 UTC). **Next (range A, one agent): pass (c)
+  Hebrew over KU1 + KU2 (a read-through of `translation.rtl.md` aloud); then step 4 (every Vedic verifier,
+  `check_bible_quotes.py`, the report with its splits, `finish`, the parent's message).**
 
 ## For the report (collected as the run goes)
 - **Cross-corpus splits with Book 7 (Round 7 run 1), kept as the Kaṭha has them** (one Hebrew inside one text): *vára*

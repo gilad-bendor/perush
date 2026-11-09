@@ -479,8 +479,8 @@
 
 ### 5.13a
 `nityo 'nityānāṃ cetanaś cetanānām eko bahūnāṃ yo vidadhāti kāmān`
-> הקבוע שבין הבלתי־קבועים, המודע שבין המודעים, האחד שבין הרבים, המעניק את החשקים –
-- **פירוק:** `nityaḥ` – nitya- ("הקבוע"); `anityānām` – a-nitya-, רבים יחסת הקניין ("שבין הבלתי־קבועים"); `cetanaḥ` – cetana- "מודע" ("המודע"); `cetanānām` ("שבין המודעים"); `ekaḥ` ("האחד"); `bahūnām` – bahú- ("שבין הרבים"); `yaḥ` ("ה־"); `vidadhāti` – vi-√dhā "להעניק, לסדר" ("מעניק"); `kāmān` ("את החשקים").
+> הקבוע שבין הלא־קבועים, המודע שבין המודעים, האחד שבין הרבים, המעניק את החשקים –
+- **פירוק:** `nityaḥ` – nitya- ("הקבוע"); `anityānām` – a-nitya-, רבים יחסת הקניין ("שבין הלא־קבועים"; כמו *anitya* `לא קבוע` ב־KU1 2.10); `cetanaḥ` – cetana- "מודע" ("המודע"); `cetanānām` ("שבין המודעים"); `ekaḥ` ("האחד"); `bahūnām` – bahú- ("שבין הרבים"); `yaḥ` ("ה־"); `vidadhāti` – vi-√dhā "להעניק, לסדר" ("מעניק"); `kāmān` ("את החשקים").
 - **תרגומים:** הְיוּם: "Him who is the constant among the inconstant, the intelligent among intelligences, The One among many, who grants desires" – כמונו.
 - **הערות:** *nitya* `קבוע` כבפרק הראשון (2.10).
 
@@ -635,8 +635,8 @@
 
 ### 6.8a
 `avyaktāt tu paraḥ puruṣo vyāpako 'liṅga eva ca`
-> ומעל הבלתי־גלוי – האדם, החודר לכל, ובלי סימן כלל;
-- **פירוק:** `avyaktāt` ("ומעל הבלתי־גלוי"); `tu` ("ו־"); `paraḥ` ("–"); `puruṣaḥ` ("האדם"); `vyāpakaḥ` – vi-āpaka- "חודר לכל" ("החודר לכל"); `aliṅgaḥ` – a-liṅga- "בלי סימן" ("בלי סימן"); `eva` ("כלל"); `ca` ("ו־").
+> ומעל הבלתי־גלוי – האָדָם, החודר לכל, ובלי סימן כלל;
+- **פירוק:** `avyaktāt` ("ומעל הבלתי־גלוי"); `tu` ("ו־"); `paraḥ` ("–"); `puruṣaḥ` ("האָדָם"); `vyāpakaḥ` – vi-āpaka- "חודר לכל" ("החודר לכל"); `aliṅgaḥ` – a-liṅga- "בלי סימן" ("בלי סימן"); `eva` ("כלל"); `ca` ("ו־").
 - **תרגומים:** הְיוּם: "Higher than the Unmanifest, however, is the Person, All-pervading and without any mark (a-linga) whatever" – כמונו.
 
 ### 6.8b
@@ -755,8 +755,8 @@
 
 ### 6.17a
 `aṅguṣṭhamātraḥ puruṣo 'ntarātmā sadā janānāṃ hṛdaye saṃniviṣṭaḥ`
-> אדם בגודל אגודל, הנפש־שבפנים, יושב תמיד בלב האנשים;
-- **פירוק:** `aṅguṣṭhamātraḥ puruṣaḥ` ("אדם בגודל אגודל"); `antarātmā` ("הנפש־שבפנים"); `sadā` ("תמיד"); `janānām` – jána- "אדם, אנשים", רבים ("האנשים"); `hr̥daye` ("בלב"); `saṃniviṣṭaḥ` – sam-ni-√viś, בינוני עבר ("יושב").
+> אָדָם בגודל אגודל, הנפש־שבפנים, יושב תמיד בלב האנשים;
+- **פירוק:** `aṅguṣṭhamātraḥ puruṣaḥ` ("אָדָם בגודל אגודל"); `antarātmā` ("הנפש־שבפנים"); `sadā` ("תמיד"); `janānām` – jána- "אדם, אנשים", רבים ("האנשים"); `hr̥daye` ("בלב"); `saṃniviṣṭaḥ` – sam-ni-√viś, בינוני עבר ("יושב").
 - **תרגומים:** הְיוּם: "A Person of the measure of a thumb is the inner soul, Ever seated in the heart of creatures" – *jana* "אנשים" (הְיוּם "creatures").
 - **הערות:** [מקבילה: KU2 4.12a].
 
