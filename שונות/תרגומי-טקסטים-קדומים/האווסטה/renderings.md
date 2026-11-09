@@ -58,7 +58,7 @@ needs `[היתר שם: …]` in the entry when the Hebrew cannot keep the singul
 ### 3.1 The table
 | Source name | folded-source regex | Hebrew | ★ | note |
 |---|---|---|---|---|
-| Mazdā | ` mazd(?!aiiasn\|ayasn\|atha\|aangh\|angh)` | `מַזְדָּה` |  | "Wise (one)": the god's name, alone or with Ahura, in either order (the Gāthās prefer *mazdā ahura*, the YH *ahura mazdā*); the Hebrew keeps the source's order |
+| Mazdā | ` mazd(?!aiiasn\|ayasn\|atha\|aangh\|angh\|azd)` | `מַזְדָּה` |  | "Wise (one)": the god's name, alone or with Ahura, in either order (the Gāthās prefer *mazdā ahura*, the YH *ahura mazdā*); the Hebrew keeps the source's order |
 | Ahura | ` ahur(?!a?angh)` | `אֲהוּרָה` |  | "Lord" (= Vedic *ásura*, the cousin corpus's `אַסוּרָה` + note); the plural *ahurā̊ŋhō* "the Lords" is a common noun (`הָאֲהוּרִים`, §5) |
 | Zaraϑuštra | ` zarathustr` | `זָרָתוּשְׁטְרָה` |  | (Vd 2's form) |
 | Spitāma | ` spitam` | `סְפִּיתָמָה` |  | Zaraϑuštra's clan; *spitamā̊ŋhō* "the Spitāmas" (`[היתר שם]` for `הַסְּפִּיתָמִים`) |
@@ -348,6 +348,16 @@ YH 35.2 = 41.7 (the latter is outside the scope).
   `כשרון`; *ašiiah* `רע יותר`; *nanā* `נבדל`; *ākərəti* `השלמה`; *pərəϑa* `מעבר?`; *pərəϑu* `רחב`; *ugra* `חזק`;
   *aōša* `סוף`.
 - **Tool fix after part 4:** F2 skips a *vahišt-* word with *-cā* (50.4b: it qualifies *manaŋhā*).
+
+### 11.6 Y 51, Y 53 (T1, part 5; merged 2026-11-09)
+- **Key lines:** 51.1 `המלכות הטובה, הנבחרת – החלק המביא את המרב,`; 51.9 the ordeal (`במתכת מותכת`; Mal 3:2 as a
+  shared motif); 51.13b F6; 51.22 aligned with PR 27.15c–e (`אלה אשר היו ואשר ישנם`); Y 53 Pourucistā's marriage
+  (53.3 `הִוָּעֲצִי עם תבונתך`, 53.4 `אבחר`); 53.9d closes on *driγu* `לעני` (the Ahuna Vairya's word).
+- **New rows (accepted):** *bāga* `חלק`; *mərəždikā* `חמלה`; *xᵛarənah* `זוהר`; *hunu* `בן`; *vāza* `בהמת משא`;
+  *zyam* `חורף` (Vd 2's *zima* `חורף`); *paiti* "husband" `בעל`; *kainī* `נערה`; *jəni* `אשה`; *pitu* `מזון`; *vad-*
+  `הוביל`; *sāxᵛan* `עצה`; *pəšō.tanu* `שגופו חייב`; *jə̄nar* / *xrūnar* `הרג` / `שפך דם`; *mərəϑiiu* `מוות`;
+  *vaŋhəuuī* / *hu.aŋhuuī* `הקיום הטוב`; *yezuuī* `הצעירה` (supports 31.8a *yezīm* "youngest"); *aṣ̌āunī* `נאמנת הסדר`.
+- **Tool fix after part 5:** the Mazdā regex skips the verb *mązdazdūm*.
 
 ## 12. Cross-corpus choices for the lead (Avestan words whose Vedic cognate the cousin corpus has not rendered yet)
 Each pair below gets one Hebrew under the cousin-language rule; this corpus's choice is given, for the lead to align
