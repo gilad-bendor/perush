@@ -2094,5 +2094,80 @@ annotated, generated and intro files: 0 problems. Translator 10's files (7.98–
 `דאגה` beside *ádhyakṣa* RV 10.129.7c `המשגיח` (kept apart); *mithatí* `מצה` / RV 10.34.6d *pratidī́van* `יריב` (kept
 apart); √*sr̥* / √*sru* `זרם` (1.32.12d / 14c).
 
+## RV7.98–7.104 (part 10: Indra 7.98; Viṣṇu 7.99–100; Parjanya 7.101–102; the frogs 7.103 (revised); against the demons and sorcerers 7.104; translator 10, Round 7 run 1)
+
+### Scope
+241 pādas: 7.98 (28), 7.99 (28), 7.100 (28), 7.101 (24), 7.102 (9), 7.104 (100) drafted; 7.103 (40, Round 5 run 1) **revised** to Book 7's renderings, not retranslated. Annotated files `annotated-RV7.98…104.rtl.md`, intros `translation--intro-RV7.98…104.rtl.md`; built with `vedic_tools.py build RV7.98-104`. The whole range is drafted; nothing left undrafted.
+
+### Sources consulted
+`vedic_tools.py data/freq/lexmap/grep/tr` (Zurich morphology; Griffith, Grassmann, Geldner, Elizarenkova); Jamison's commentary (VII.98–104, `VII.56–104-9-25-26.txt`: avapā́na 7.98.1, vŕ̥t 7.98.4, 7.98.5 as a variant of 1.32.1, eṣá/śatárcas 7.100.3, dáyate "receive a share" 7.100.1 (with Gotō), the three speeches of 7.101.1, anavāyá / kimīdín / vavrá / párśāna in 7.104); renderings §5.5, §11.6, §11.10–§11.19 and the coordinator's consistency-pass-2 note; the Bible through `check_bible_quotes.py --show`.
+
+### Decisions
+- **7.98.7 = 7.97.10** and **7.100.7 = 7.99.7** copied word for word (7.99.7 is the first copy and the model); F6 closes 7.98–7.101 (not 7.102–7.104, which have no refrain).
+- **7.98.5** is Jamison's variant of 1.32.1 (*prá vocam*): `אכריז` as there, *kr̥tá* `המעשים` (not 1.32's *vīryà* `גבורות`); tagged `[מקבילה: RV1.32 1a]` as a variant, not a copy.
+- **Viṣṇu's epithets:** *urugāyá* `רחב־הצעד` (precedent 7.35.15c, KU) and *urukramá* `רחב־הפסיעה` (√*kram* `פסע`, RV 10.90.4c) kept apart; *śipiviṣṭá* transliterated `שִׁיפִּיוִישְׁטָה` (meaning unknown; 7.100.6 shows the name embarrassed); *váṣaṭ* `וַשַׁט` (the ritual cry); *evayā́van* `הולך־המסלול`; *śatárcas* `בת־מאה־הזמרים` (Jamison; "?" in the note).
+- **7.99.3ab** as Viṣṇu's direct speech to the two world-halves (Geldner, Jamison), in quotation marks.
+- **7.100.1** *dáyate* middle "receives his share" (Jamison, Gotō), `מקבל את חלקו` – √*day* keeps `חילק`; not Griffith's "repent".
+- **7.100.5d** *kṣáyantam* by the Zurich lemma √*kṣā* `מלך` ("ruling over this realm in the distance"; Griffith "dwellest"). The pass-2 ruling √*kṣi* `שכן` was noted; Zurich lemmatizes this form as √*kṣā*, so it stays (open, below).
+- **Parjanya:** *vā́c* `קול` (7.34.9b), the bull *vr̥ṣabhá* `פר`, *gárbha* `עובר`, *retodhā́* `שָׂם־הזרע` (RV 10.129.5c `שָׂמֵי־זרע`, licensed *rétas*), *vr̥ṣṭí* `גשם`, *trivártu* `שלוש־הסבבים` (hapax, "?"), *kóśa* `חבית`, *virapśá* `גודש`, *puruṣī́* `נשות־האנוש` (not `אשה`, which is *gnā́*; *strī́* keeps `אשה`, 7.104.24b).
+- **7.104, the demons:** *rákṣas* `רַקְשָׁס` (§5.5), *yātudhā́na* `קוסם`, *yātú* `קסם` (7.21.5a), *yātumánt* `בעל־הקסם`, *áyātu* `חסר־הקסם`, the bird- and dog-sorcerers *X-yātu* `בעל־קסם־X` (owl, little owl, dog, cuckoo (?), fine-winged (eagle), vulture); *kimīdín* transliterated `קִימִידִין`; *atrín* `טורף`; *drúh* `שקר` (also the plural "deceivers" `השקרים`), *droghavā́c* `דוברי־השקר`; *aśáni* `חזיז` (new: *vidyút* keeps `ברק`); *tápus* `צריבה` (√*tap* `להט`); *párśāna* `נקיק` (never `תהום`; Jamison warns against reading "hell" into it); *vavrá* `בור`; *agháśaṃsa* / *pākaśaṃsá* `מקלס־הרע` / `מקלס־התום` (√*śaṃs* `קילס`); *manyumánt* `מלא־הכעס` (§11.6 *manyú* `כעס`); √*jinv* `עורר` (as 7.103.1c `שעורר פַּרְגַ'נְיָה`); √*vyadh* `השליך` (7.69.7a); *ní* √*śā* `קצץ` (1d) beside *sám* √*śā* `השחיז` (19b, 20c): one root, the preverb changes the act – recorded.
+- **sát / ásat (7.104.8d, 12b–d, 13c):** `יש` / `אַיִן` – the very words of RV 10.129.1a, here as true and untrue speech: "יהיה לאַיִן, אִינְדְּרָה, דובר האַיִן!" – the hearer hears the cosmogony's "non-being" in the liar's speech. Rejected: `שקר` (would merge with *drúh*), `לא־אמת`.
+- **7.104.15ab** Vasiṣṭha's oath: `היום אמות נא, אם קוסם אני, / או אם צרבתי את חיי האדם!` (*pū́ruṣa* `אדם`, *ā́yus* `חיים`, both licensed by the source).
+- **7.104.24d** `את השמש כשהיא עולה` – `העולה` is the `עֹלָה` gate (correctly blocked: the article makes it ambiguous); the bare verb keeps the sense.
+- **Licences used** (each with its reason in the entry): `[היתר שער: הטובה – sauśravasá]` (7.98.4d: the vr̥ddhi *sau-* of *su-*), `[היתר שער: החושך – tamovŕ̥dh]` (7.104.1b: *támas* inside the compound), `[היתר שם: אגני …]` (7.104.2b *agnivánt*, 5b *agnitaptá*: fire as matter), `[היתר שם: פראשרה …]` (7.104.21a *parāśará* "crusher", not the sage).
+- **lexmap format:** a preverb is written after the root, `√r̥ (עם ní)`, so that `lexmap` files the Hebrew under the root, not under the preverb.
+
+**7.103, the frogs – the revision (every change):**
+1. 9a *jugupuḥ* (√*gup*) `שמרו` → `נצרו`: in Book 7 `שמר` is √*pā*'s (F6), so √*gup* gets its own word.
+2. 5c *samŕ̥dhā* `בשלמותו` → `במלואו`: `שלמות` is *sarvátāti*'s (§11.17, the Avestan cognate rule).
+3. Intro heading `## הצפרדעים (ריגוודה ז 103)` → `## ריגוודה ז קג: הצפרדעים` (Book 7's format).
+4. 1b a note recording that *vratacārín* `מקיימי־נדר` stays (§11.6: a person's observance `נדר`, a god's ordinance `תקנה`).
+Checked and kept: *bráhman* `נוסח` (8b), √*mad* `התבסמו` (4b), *vā́cam akrata* `השמיעו קול`, *adhvaryú* `כוהני־המעשה`, *gharmá* `החלב החם`, *vásu* `טובות`, sám √*pr̥c* `מיזג` (= 7.100.2c), *prá tiranta ā́yuḥ* `מאריכות את החיים` (= 7.77.5b), *maṇḍū́ka* `צפרדע` (fem.), *brāhmaṇá* `ברהמין`; F6 does not apply. The Hebrew of the other 38 lines is unchanged.
+
+### Open decisions for the user
+- 7.100.5d *kṣáyantam*: `המולך` (Zurich √*kṣā*) or `השוכן` (pass-2 √*kṣi*; Griffith).
+- *śipiviṣṭá* and *kimīdín* transliterated; *khargálā* `ינשופה` (hapax; `לילית` rejected as a false echo of Isa 34:14).
+- 7.104.3a *vavré antár*: one place with "the darkness without a hold" (most; Norman Brown's Vedic "hell") or the demons' hiding-hole (Jamison) – the line allows both.
+- 7.98.4c *vŕ̥taḥ*: Jamison's "(obstructing) troops" `הגדודים (החוסמים)` against Griffith's *vr̥táḥ* "girt".
+
+### Progress log
+- 2026-11-09 05:43 UTC start; `freq RV7.98-104`; 7.98 → 7.99 → 7.100 → 7.101–102 → 7.104 (in two halves) → 7.103 revision, each saved, filled and verified before the next.
+- Passes: (a) fidelity – 7.98.2a (*yád* as relative, Geldner/Jamison), 7.100.1a (*dáyate*), 7.104.16a (*mā́ áyātum* with Zurich, against Griffith) checked; (b) consistency – urukramá split from urugāyá (7.99.6b changed), √*jinv*, *manyú* aligned with 7.103 / §11.6, lexmap preverb format fixed (55 segments), 7.98.7 checked against 7.97.10 as it now stands (identical); (c) Hebrew – read through the generated files.
+- `verify RV7.98-104 --strict`: 0 problems; `check_bible_quotes.py` on all annotated, intro and generated files: 0 problems (Ps 104:2 `נוֹטֶה` fixed).
+
+### The text on its own terms
+- Indra, born, drinks soma at once and so becomes strong (7.98.3); he beats the buffalo to the drinking-hole (7.98.1) – the god is drawn to the pressing as the beast to water.
+- The poet's craft: 7.98.5 reworks the opening of 1.32 with the same pieces in another order (Jamison) – formulas in the RV are a kit, not a template.
+- Viṣṇu grows "beyond measure"; men know two realms, he alone the highest (7.99.1); he props heaven, pegs the earth like a tent (7.99.2–3), and strides three times to give the earth to Manu as "field" and "wide dwelling" (7.100.3–4): cosmic space made livable.
+- The embarrassing name Śipiviṣṭa and the god's "other form" in battle (7.100.5–6) – a seed of the later avatāras.
+- Parjanya is bull, father and udder; heaven's "milk" (rain) is taken by the mother earth, and by it father and son grow (7.101.3); the hymn thinks in triads (7.101.1–4); the rain makes "the embryo" in plants, cows, mares and women (7.102.2).
+- The rite as a weapon: the pressing-stones kill demons with their clatter (7.104.17d), the dawn "shines away" the demon couple (23b).
+- Truth as being: "the speech that is and the speech that is not" contend, and Soma kills "what is not" (7.104.12); the liar becomes "non-being" (8d).
+- Vasiṣṭha's oath of innocence (7.104.15) and the tradition of Viśvāmitra's accusation; the curse falls on the accuser's "ten heroes" (sons) and "continuation" (10d, 15c).
+- The frogs (7.103): Brahmins at the year-long rite, the student repeating the teacher, the Pravargya's hot milk boiling over (Jamison) – unchanged in substance.
+
+### Key parallels
+- 7.104.15a – Ps 7:4–6: the oath of clearance "if I have done this … let the enemy pursue me": the closest biblical form to Vasiṣṭha's "may I die today if I am a sorcerer" (shared motif).
+- 7.104.24d – Ps 58:9 `בַּל-חָזוּ שָׁמֶשׁ`: the wicked who shall not see the sun, beside "may they dissolve" (24c / Ps 58:9's melting snail).
+- 7.104.14d – Ps 109:2: the falsely accused, "a lying tongue", and the curse on the accusers; 7.104.10d – Ps 109:13: the curse on the wicked man's posterity.
+- 7.104.17c – Ps 140:11: the wicked thrown into pits whence they shall not rise (cf. 7.104.3c).
+- 7.104.3b, 7c – Ps 35:6: "let their way be dark and slippery".
+- 7.101.3c – Job 38:28 `הֲיֵשׁ-לַמָּטָר אָב`: the rain's father – rhetorical "no" in Job, literal "yes" in the Veda (divergence).
+- 7.99.2c – Ps 104:2; 7.99.3c – Gen 1:7 (separation of heaven and earth, without firmament or waters); 7.100.4b – Ps 115:16 (the earth given to men).
+
+### Proposals for the shared renderings
+- *urukramá* `רחב־הפסיעה` (beside *urugāyá* `רחב־הצעד`); *śipiviṣṭá* `שִׁיפִּיוִישְׁטָה`; *váṣaṭ* `וַשַׁט`; *evayā́van* `הולך־המסלול`.
+- Names: Varcin `וַרְצִין` (7.99.5c); *kimīdín* `קִימִידִין` (common noun, transliterated).
+- *yātú* `קסם`, *yātumánt* / *yātumā́vant* `בעל־הקסם`, *X-yātu* `בעל־קסם־X`, *áyātu* `חסר־הקסם`; *aśáni* `חזיז`; *tápus* `צריבה`; *párśāna* `נקיק`; *vavrá* `בור`; *atrín* `טורף`; *droghavā́c* `דובר־השקר`; *agháśaṃsa* / *pākaśaṃsá* `מקלס־הרע` / `מקלס־התום`.
+- *vā́c* `קול`; *retodhā́* `שָׂם־הזרע`; *kóśa* `חבית`; *puruṣī́* `נשות־האנוש`; *kṣétra* `שדה`; *urukṣití* `יישוב רחב`; √*jinv* `עורר`; √*gup* `נצר`; *samŕ̥dh* `מלאות`.
+- *sát* / *ásat* (as speech, 7.104) `יש` / `אַיִן`, one with RV 10.129.
+- √*day* middle "receive a share" `קיבל את חלקו` (7.100.1a), with √*bhaj* middle `נטל חלק` (7.98.6d).
+- For the round's final pass: *ní* √*śā* `קצץ` / √*śā* `השחיז`; *manyú* `כעס` (§11.6) – confirm for Book 7.
+
+### Lessons for the guidelines
+- The gate licences work only as `[היתר שער: <the exact matched string> – reason]`; a licence naming the lemma (`טוב`) does not lift a match on `הטובה`. Worth saying in the brief.
+- A preverb written before the root in the פירוק (`ní √r̥`) makes `lexmap` file the Hebrew under the preverb; write `√r̥ (עם ní)`.
+- The imprecatory psalms are the natural comparison for 7.104, but only as form (oath, curse on posterity, darkness, not seeing the sun); the Hebrew of the lines stays Vedic (`רקשס`, `קוסם`, never כשף, `לילית` or `שאול`).
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
