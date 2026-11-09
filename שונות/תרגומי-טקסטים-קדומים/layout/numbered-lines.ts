@@ -9,8 +9,8 @@
 //   its last digit, at most 24 characters, then a space (isNumberLabel()).
 // - **A run** is a stretch of numbered lines, one right below the other in one paragraph, whose numbering
 //   goes on (continuesLabel()): `o iii 12` → `o iii 13`; a manuscript's extra line, a letter after the
-//   number, `363` → `363א` → `364`; a range standing for its ends, `65` → `66–67` → `68`. A new column
-//   (`A.i.30` → `A.ii.1`) or a gap breaks it. Only a run's lines share rows; a line in no run stands alone.
+//   number, `363` → `363א` → `364` (ETCSL's `148A` … `148AAA` too); a range standing for its ends,
+//   `65` → `66–67` → `68`. A new column (`A.i.30` → `A.ii.1`) or a gap breaks it. Only a run's lines share rows; a line in no run stands alone.
 // - **A line's key** is its label, or `label#n` for the n-th line with that label - the numbering starts
 //   over in every tablet. A layout names lines by it.
 // - **A repeated passage** (echoesOf()): lines that repeat, word for word (or nearly - `"similar"`), an earlier passage of two lines or
@@ -50,11 +50,16 @@ export function labelPieces(label: string): string[] {
  * A letter after the number - Hebrew, or a lowercase Latin one - marks a line that only some manuscripts
  * have, read after the line of that number: `363` → `363א` → `363ב` → … → `364` is a run too, and so is
  * `E 78` → `E 78a` → `E 79`. A range is a line standing for several: `65` → `66–67` → `68`.
+ *
+ * Capital Latin letters are ETCSL's: `148` → `148A` → … → `148Z` → `148AA` → … → `148ZZ` → `148AAA` → `149`,
+ * where a letter may be skipped - an I or a J (`B73H` → `B73J`, `49I` → `49K`). Some editions put such lines
+ * before their number instead (Parpola's treaties): `554` → `555A` → `555B` → `555` → `556`.
  */
 export function continuesLabel(previous: string, next: string): boolean {
     const a = splitVariant(rangeEnds(previous)[1]);
     const b = splitVariant(rangeEnds(next)[0]);
     if (!a.letter && !b.letter) return numbersContinue(a.base, b.base);
+    if (isCapitals(a.letter) || isCapitals(b.letter)) return capitalsContinue(a, b);
     const letters = (a.letter ?? b.letter)!.match(/[a-z]/) ? LATIN_LETTERS : HEBREW_LETTERS;
     if (a.letter && b.letter) return a.base === b.base && letters.includes(b.letter) && letters.indexOf(b.letter) === letters.indexOf(a.letter) + 1;
     if (!a.letter && b.letter) return a.base === b.base && b.letter === letters[0];
@@ -64,10 +69,36 @@ export function continuesLabel(previous: string, next: string): boolean {
 const HEBREW_LETTERS = "אבגדהוזחטיכלמנסעפצקרשת";
 const LATIN_LETTERS = "abcdefghijklmnopqrstuvwxyz";
 
-/** `363ב` → `363` and `ב`, `E 78a` → `E 78` and `a`; a label with no such letter is all base. */
+/**
+ * `363ב` → `363` and `ב`, `E 78a` → `E 78` and `a`, `148AA` → `148` and `AA` (a capital, once or repeated);
+ * a label with no such letter is all base.
+ */
 function splitVariant(label: string): { base: string, letter: string | null } {
-    const match = /^(.*\d)([א-תa-z])$/.exec(label);
+    const match = /^(.*\d)([א-תa-z]|([A-Z])\3{0,2})$/.exec(label);
     return match ? { base: match[1], letter: match[2] } : { base: label, letter: null };
+}
+
+/** Whether a variant's letter is ETCSL's: capitals - `A`, `AA`, `AAA`. */
+function isCapitals(letter: string | null): boolean {
+    return letter !== null && /^[A-Z]+$/.test(letter);
+}
+
+/** ETCSL's letters in order: `A` 0 … `Z` 25, `AA` 26 … `ZZ` 51, `AAA` 52 … */
+function capitalsOrdinal(letter: string): number {
+    return (letter.length - 1) * 26 + letter.charCodeAt(0) - 65;
+}
+
+/** Whether one ETCSL letter follows another: the next one, or the one after a skipped I or J. */
+function nextCapitals(previous: string, next: string): boolean {
+    const step = capitalsOrdinal(next) - capitalsOrdinal(previous);
+    return step === 1 || (step === 2 && /^[IJ]+$/.test(String.fromCharCode(capitalsOrdinal(previous) % 26 + 66)));
+}
+
+/** continuesLabel() where either side has ETCSL's capitals - the lines after their number, or before it. */
+function capitalsContinue(a: { base: string, letter: string | null }, b: { base: string, letter: string | null }): boolean {
+    if (a.letter && b.letter) return isCapitals(a.letter) && isCapitals(b.letter) && a.base === b.base && nextCapitals(a.letter, b.letter);
+    if (b.letter) return capitalsOrdinal(b.letter) === 0 && (a.base === b.base || numbersContinue(a.base, b.base));
+    return numbersContinue(a.base, b.base) || a.base === b.base;
 }
 
 /** A range stands for its first line and its last: `E 66–67` → `E 66`, `E 67`. Any other label for both. */

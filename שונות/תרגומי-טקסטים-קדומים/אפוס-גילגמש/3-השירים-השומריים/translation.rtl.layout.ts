@@ -57,6 +57,8 @@ const BREAK_AFTER: readonly string[] = [
     "המחובב מאורוך", // B 4-8: the address ends; the dead man / the corpse in the river two rows, as in A
     "איש אבד – לב רע שם",
     "הרעה – יד אינה נמלטת ממנה – השיגה אותך", // Death MT.F145-150, see above
+    "עוד אומר לו:",     // Huwawa A 148A-148AAA: each round's "the Nth time he says to him:" a row of its own
+    "משכיבים אותם.",    // ... and its woodcutters' triad ends its row, though its lines are divided otherwise (148I-148K)
 ];
 /** A row must start at a line whose words begin so. */
 const BREAK_BEFORE: readonly string[] = [

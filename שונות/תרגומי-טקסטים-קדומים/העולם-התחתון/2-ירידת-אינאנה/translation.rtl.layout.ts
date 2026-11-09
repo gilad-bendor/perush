@@ -30,6 +30,8 @@ const KEEP_WITH_NEXT: readonly string[] = [
 const BREAK_AFTER: readonly string[] = [
     "העומדים לרגל – הלכה.",                         // 16: the seven me (14-16) end; the garments begin
     "אחותך – אל היכל גנזר נגשה,",                   // 98: Neti's report - its 99-101 a row, as Inana's own 73-75
+    "אחרי ששלושה ימים ושלושה לילות עברו,",          // 173: the three days end; Ninshubur's three epithets (174-174B) a row
+    "לפני אנקי בכתה דמעות.",                        // 325A: Ninshubur's journey ends; "she revived me ... let's go!" a row
 ];
 /** A row must start at a line whose words begin so. */
 const BREAK_BEFORE: readonly string[] = [

@@ -40,6 +40,31 @@ describe("line labels", () => {
         expect(continuesLabel("E 78a", "E 78c")).toBe(false);
     });
 
+    test("ETCSL's extra lines - capitals after the number: A … Z, AA … ZZ, AAA - are read in their place", () => {
+        expect(continuesLabel("148", "148A")).toBe(true);
+        expect(continuesLabel("148A", "148B")).toBe(true);
+        expect(continuesLabel("148Z", "148AA")).toBe(true);
+        expect(continuesLabel("148ZZ", "148AAA")).toBe(true);
+        expect(continuesLabel("148AAA", "149")).toBe(true);
+        expect(continuesLabel("B73A", "B73B")).toBe(true);
+        expect(continuesLabel("B73H", "B73J")).toBe(true);                  // an I skipped
+        expect(continuesLabel("49I", "49K")).toBe(true);                    // a J skipped
+        expect(continuesLabel("148", "148B")).toBe(false);
+        expect(continuesLabel("148A", "148C")).toBe(false);
+        expect(continuesLabel("148A", "148AA")).toBe(false);
+        expect(continuesLabel("148A", "149A")).toBe(false);
+        expect(continuesLabel("148A", "150")).toBe(false);
+        expect(continuesLabel("148a", "148B")).toBe(false);                 // two kinds of letters
+        expect(isNumberLabel("148AAA")).toBe(true);
+    });
+
+    test("ETCSL's capitals may stand before their number (Parpola's treaties)", () => {
+        expect(continuesLabel("554", "555A")).toBe(true);
+        expect(continuesLabel("555B", "555")).toBe(true);
+        expect(continuesLabel("555", "556")).toBe(true);
+        expect(continuesLabel("554", "556A")).toBe(false);
+    });
+
     test("a range is a line standing for several", () => {
         expect(continuesLabel("65", "66–67")).toBe(true);
         expect(continuesLabel("66–67", "68")).toBe(true);
