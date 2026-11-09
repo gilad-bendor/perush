@@ -50,13 +50,22 @@ Round 7 run 1.
    every Vedic verifier; then the report, `finish`, and the parent's message.
 
 ## Progress log
-- 2026-11-09 06:14–06:45 UTC (range B, its last half hour): the move, the converter fix, the project, `build` (P4
-  embeds KU1: its `translation.rtl.md` unchanged), `verify` (only KU1's three new lines 2.15a–c missing, as expected).
-- 2026-11-09 06:21–06:32 UTC: **KU2 drafted whole** (111 lines; one translator sub-agent, vallī 4 then vallīs 5–6;
-  Hume consulted after each line); merged into `../renderings.md` §11.21; intro `translation--intro-KU2.rtl.md` (the
-  coordinator); `verify KU1 KU2 --strict`: no problems (after the Virāj regex fix); `build`; parallels index;
-  `check_bible_quotes.py` on every file: 0 problems. **Plan step 1 done.** Paused at the gate's WAIT into range A
-  (Fri 13 Nov 13:24 UTC): next is step 2 (KU1's revision), then step 3 (the independent review of KU1 + KU2).
+- 2026-11-09 06:14–06:21 UTC (range B, its last 45 minutes): the move, the converter fix (2.15 restored and drafted by
+  the coordinator), the project, `build` (P4 embeds KU1), `verify`.
+- 06:21–06:32 UTC: **plan step 1 done – KU2 drafted whole** (111 lines; one translator sub-agent, vallī 4 then vallīs
+  5–6; Hume consulted after each line); merged into `../renderings.md` §11.21; intro `translation--intro-KU2.rtl.md`
+  (the coordinator); the Virāj name regex fixed (it caught *virajo* "free of dust").
+- 06:34–06:37 UTC: **plan step 2 done** (the same translator): KU1 revised to the current rules – the two dropped
+  references of 2.9a and 3.14b restored, 3.14a `למדו` (*ni-√budh*, as 1.14a), the tags of 1.2a and 2.1a →
+  [divergence]; KU2 harmonized with KU1 (10 lines, listed in `../renderings.md` §11.21; *agni* `אַגְנִי` in 4.8b, 6.3a).
+- 06:39–06:43 UTC: **step 3, pass (a) fidelity** on KU2 then KU1 (an independent reviewer sub-agent): KU2 8 changes (3 in
+  the Hebrew: 4.1b, 6.13b – a passive participle read as active – 6.18b), KU1 7 changes (5 in the Hebrew: 1.7a, 1.15b,
+  1.24b, 2.6b, 3.2b); logs `review--KU2-a.md`, `review--KU1-a.md`. Left open: 1.14b `ובסיסו`, 3.13a *vāṅmanasī*, 2.9a
+  voice; *puruṣa* `אָדָם` vocalized in some lines only (both adhyāyas).
+- After each step: `build`, `verify KU1 KU2 --strict` (0 problems), the corpus `verify` (0 problems), the parallels
+  index, `check_bible_quotes.py` on every file of the project and on `4-העקדה/translation.rtl.md` (0 problems).
+- 06:44 UTC: paused at the gate's WAIT into range A (Fri 13 Nov 13:24 UTC). **Next (range A, one agent): step 3's
+  passes (b) consistency and (c) Hebrew over KU1 + KU2 as one text; then step 4 (the verifiers, the report, `finish`).**
 
 ## For the report (collected as the run goes)
 - **Cross-corpus splits with Book 7 (Round 7 run 1), kept as the Kaṭha has them** (one Hebrew inside one text): *vára*
