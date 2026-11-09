@@ -65,8 +65,8 @@
 
 ### 3a
 `yā́ te didyúd ávasr̥ṣṭā divás pári`
-> הרומח שלך, אשר שולח מטה מן השמים,
-- **פירוק:** `yā́` – yá-, נקבה נושא ("אשר"); `te` – tvám "־ך", יחסת הקניין ("שלך"); `didyút` – didyút- "רומח", נקבה נושא ("הרומח"); `ávasr̥ṣṭā` – √sr̥j "שולח מטה", בינוני עבר סביל, נקבה נושא ("שולח מטה"); `diváḥ` – dyú- ~ div- "שמים", יחסת המוצא ("מן השמים"); `pári` – pári, תחילית ("–").
+> הרומח שלך, אשר שֻׁלַּח מטה מן השמים,
+- **פירוק:** `yā́` – yá-, נקבה נושא ("אשר"); `te` – tvám "־ך", יחסת הקניין ("שלך"); `didyút` – didyút- "רומח", נקבה נושא ("הרומח"); `ávasr̥ṣṭā` – √sr̥j "שולח מטה", בינוני עבר סביל, נקבה נושא ("שֻׁלַּח מטה"); `diváḥ` – dyú- ~ div- "שמים", יחסת המוצא ("מן השמים"); `pári` – pári, תחילית ("–").
 - **תרגומים:** גריפית': "May thy bright arrow which, shot down by thee from heaven, flieth upon the earth, pass us uninjured by. Thou, very gracious God, bast thousand medicines: inflict no evil on our sons or progeny."; גלדנר: "Dein Geschoß, das vom Himmel gesandt auf Erden umgeht, das soll uns verschonen!"; ג'מיסון: בחצי הבית שתי מילות *pári*, וצריכות להיות שלוש: הראשונה "מן" השמים, והשנייה, באמצע 3b, שייכת גם ל"משוטט" וגם ל"יעקוף".
 - **הערות:** *didyút* "חץ בורק, רומח" (`רומח`, ז 25.1c); *áva* √*sr̥j* "לשלח מטה" (√*sr̥j* `שילח`).
 

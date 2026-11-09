@@ -540,14 +540,14 @@ RESERVED = [
     (W + alt("אדמה", "האדמה", "באדמה", "לאדמה", "אדמתו", "מאדמה", "מהאדמה") + E, r"bhum|bhu|zam|zem|kse|ksa|ksm", "אֲדָמָה only for bhū́mi (and Av. zam 'ground' where by sense)"),
     (W + alt("אדם", "האדם", "לאדם", "באדם", "מאדם", "כאדם") + E, r"purus|purs|puru|nar|nr|mas|masy|purusa", "אָדָם only for púruṣa (Av. maṣ̌iia 'man')"),
     (W + alt("טוב", "טובה", "טובים", "טובות", "הטוב", "הטובה", "הטובים", "הטובות", "טובו", "טובת", "מיטב", "היטיב", "וטוב") + E,
-     r"bhadr|vasu|vasv|vasy|vasis|vam|sadh|srey|siva|\bsu|\bsvadhvar|vohu|vanh|vahis|srir|sri|hu|sev|sobh|kalya|bhavya|jyes|sres", "טוֹב only for bhadrá / vásu / vāmá / sādhú / su- (Av. vohu, vahišta)"),
+     r"bhadr|vasu|vasv|vasy|vasis|vam|sadh|srey|siva|\bsu|\bsvadhvar|\bsvapi|vohu|vanh|vahis|srir|sri|hu|sev|sobh|kalya|bhavya|jyes|sres", "טוֹב only for bhadrá / vásu / vāmá / sādhú / su- (Av. vohu, vahišta)"),
     (W + alt("ברך", "בירך", "ברכה", "ברכת", "מבורך", "יברך", "ברוך", "ברכו", "ברכם", "ברכות") + E, r"asis|asir|svast|vand|bhadr|janu|jnu|jnubhih", "the root ברך only for āśís (and `בֶּרֶךְ` 'knee' for jā́nu) ('blessing, wish') / svastí"),
     (W + alt("ארור", "ארורה", "ארר", "אורר", "מארה") + E, r"sap|abhisap|nirrt", "the root ארר only for √śap"),
     (W + alt("שבת", "השבת", "שבתו", "שביתה", "שבתה", "וישבות", "שבות") + E, None, "the root שבת never"),
     (W + alt("קדוש", "קדושה", "קדושים", "הקדוש", "קודש", "הקודש", "קדש", "קידש", "מקדש", "המקדש") + E, r"medhy|yajniy|pavitr|puny|suc|yasniy|yazat|spent", "the root קדש only for médhya / yajñíya / Av. spəṇta / yazata"),
     (W + alt("מזבח", "המזבח", "מזבחות", "מזבחו") + E, r"vedi|uttaraved|yup", "מִזְבֵּחַ only for védi (the altar-ground) – yū́pa = עַמּוּד־הַזֶּבַח"),
     (r"(?<![א-ת])ו?(?:נח|נוח|ינוח|לנוח)(?![א-ת])", r"(?!)", "נָח never (the string of Noah): √śī = שָׁכַב, √viś = שָׁקַע"),
-    (W + alt("חי", "חיה", "חיים", "החיים", "חית", "חיות") + E, r"jiv|jiva|asu|ayu|ayus|prana|jav|gaya|gay|gai|gaeth|pasu|svap|mrg|bhu|jan|vaj|ji|vita|stao|pasv|vay|tiryag", "חַי / חַיָּה / חַיִּים only for jīvá / ásu / ā́yus / mr̥gá (animal) / Av. gaiia"),
+    (W + alt("חי", "חיה", "חיים", "החיים", "חית", "חיות") + E, r"jiv|jiva|asu|ayu|ayus|visvayu|bhoj|prana|jav|gaya|gay|gai|gaeth|pasu|svap|mrg|bhu|jan|vaj|ji|vita|stao|pasv|vay|tiryag", "חַי / חַיָּה / חַיִּים only for jīvá / ásu / ā́yus / mr̥gá (animal) / Av. gaiia"),
 ]
 
 V = NIQ
@@ -615,7 +615,17 @@ def formulas():
 
 # ---------------------------------------------------------------- the checks of one line
 def lic(rx, key, lab):
-    return rx is not None and re.search(rx, license_text(key, lab)) is not None
+    if rx is None:
+        return False
+    if UNITS[key][0] == P7:
+        # Book 7 (Round 7 run 1): a short licence (1–3 letters) must start a word – an unrelated word that contains it (the *vam* of
+        # *tvám*, the *nr* of *satyānr̥té*) no longer licenses; the Avestan *gaiia* "life" licences do not apply to Vedic
+        # *gáya* "household"
+        alts = rx.split("|") if "(" not in rx else [rx]
+        alts = [a for a in alts if a not in ("gaya", "gay", "gai", "gaeth")]
+        alts = [(r"(?<![a-z])" + a) if re.fullmatch(r"[a-z]{1,3}", a) else a for a in alts]  # short ones start a word
+        return re.search("|".join(alts), license_text(key, lab)) is not None
+    return re.search(rx, license_text(key, lab)) is not None
 
 
 def _heb_has(plain, h):

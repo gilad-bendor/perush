@@ -1064,5 +1064,55 @@ per hymn; `build RV7.38-55` generated the clean files.
   `lexmap` both ways before the hand-off found 13 silent collisions, most with parts 2–4 (*didyút*, √*car*, √*brū*,
   *rāyáskāma*), none visible in the renderings tables.
 
+## Review of part 5 (RV 7.38–7.55; independent reviewer)
+All 391 pādas read against the Zurich text and morphology (`data`), each Hebrew line beside its Zurich tags and its
+פירוק segments (a side-by-side script), with `tr` and Jamison where a line was in doubt; every gated word of the part
+listed with the source token that licenses it; `lexmap` for every lemma in doubt. The draft is careful: the moods are
+right almost everywhere (subjunctive → future, optative → `נא`, *mā́* + injunctive → `אַל`), the 7.50 / 7.55 refrains
+and F6 / F8 are exact, and the pāda boundaries are kept. **12 lines changed** (and their פירוק / notes), one פירוק
+corrected, one intro aligned.
+- **One Hebrew for two lemmas (3):**
+  - 7.39.2a *suprayā́* `קל־לדריכה` → `טוב־לדריכה`: `קל לדריכה` is *sugá*'s (7.42.2a; *sugá* recurs in 7.62.6c, 7.63.6c,
+    7.104.7c, so it keeps the word); *su-* `טוב־` as elsewhere in the book (Geldner "angenehm zu betreten"). The
+    translator's Proposals row "*suprayā́* / *sugá* `קל־לדריכה`" is superseded.
+  - 7.42.2b/2c: *rohít* `האדמדמות` → `האדומות`, *aruṣá* `האדומים` → `האדמדמים`: `אדמדם` is *aruṣá*'s word in the book
+    (7.3.3c, 7.16.2a, 3c); the draft moved it to *rohít* and gave *aruṣá* a new one (recorded as a split). Intro 7.42
+    aligned (`הצהבהבות והאדומות`). The Proposals row *rohít* `אדמדמה` becomes `אדומה`.
+  - 7.48.3b *vanvan* (√*van*) `הם מנצחים` → `הם זוכים` (`את כל` → `בכל`): √*van* is `זכה` in all of Book 7 (7.47.1d
+    `נזכה נא` in this part), `ניצח` is √*ji*'s (7.18.13d, 7.32.9c; *prātarjít* `מנצח־הבוקר` 7.41.2a).
+- **Mood / tense (2):** 7.48.4c *dadīran* (optative) `יתנו` → `יתנו נא`; 7.54.1c *ī́mahe* (present indicative)
+  `נתחנן` (reads as a future or as a past 3rd person) → `אנו מתחננים`.
+- **Ambiguity of the unvocalized line (3):** 7.40.1b *dadhīmahi* `נשים נא` (reads "women") → `נָשִׂים נא`; 7.44.4b
+  *bhavati* `הוא נהיה` → `הוא נִהְיָה` (as the part 4 review); 7.46.3a *ávasr̥ṣṭā* `שולח` (reads as the active
+  participle "sends") → `שֻׁלַּח`.
+- **Hebrew agreement (1):** 7.49.2a `שמימיים … זורמים` → `שמימיות … זורמות`: the waters are feminine (goddesses) in
+  every other line of the hymn (1b, 2b–c, 3c, F8 `האֵלוֹת`).
+- **A gated word licensed by an unrelated word (1):** 7.54.2a `מעביר (את החיים) הלאה` → `מעביר הלאה`: `חיים` is
+  gated to *jīvá* / *ā́yus* / *ásu*, none in the pāda; it passed only because the licence text takes the first word of
+  the next pāda, *gayasphā́naḥ*, and *gaya* (licence of Av. *gaiia* "life") matched – Skt. *gáya* is "household,
+  property". The implied "life" is now in the note. The other gated words all have their own source word, with one
+  false-licence pass that is right all the same: 7.46.3c *svapivāta* `טוב־ההבנה` passed by the *vam* inside the
+  lemma *tvám*, but the word itself is *su-api-vāta* (*su-* before a vowel), so `טוב` is licensed in substance.
+- **פירוק only:** 7.40.5c *vidé* – Zurich lemmatizes √*vid* 2 "find" (Griffith "gained"); the line follows Geldner,
+  Grassmann, Renou (√*vid* 1, "knows"), and the פירוק now says so.
+- **Checked and kept (defensible):** 7.40.1d *ratnínaḥ* as gen. sg. (Zurich nom. pl.; Griffith, Geldner); 7.46.2a
+  *kṣáyeṇa* `בדירתו` (Geldner, Elizarenkova, Renou: "Wohnsitz"; Griffith "lordship"); 7.39.1c *bhejā́te* `נטלו` (√*bhaj*
+  middle "take to (the path)", beside `חילק`); 7.43.4a *sīṣapanta* passive; 7.42.3a *mahayan* (injunctive) as a
+  jussive future; 7.44.3b `אני אומר:` (√*brū* `אמר`, *úpa* "address"); 7.42.2d *jánimāni* `לתולדות` (the 7.2.10d
+  precedent for *jániman*).
+- `build RV7.38-55`; `verify RV7.38-55 --strict`: 0 problems, one repeated-line difference (7.38.6b / 7.52.3b, the
+  number of *iyānáḥ* / *iyānā́ḥ*, justified); `check_bible_quotes.py` on the 54 annotated, intro and generated files:
+  0 problems. The three tagged parallels (Gen 1:2, Ps 33:13, Lam 5:7) are sound and say "shared motif".
+- **For the coordinator:**
+  - The verifier's licence text joins the folded pāda, the Zurich lemmas and the neighbouring pādas' edge words as one
+    string, so a licence can match inside an unrelated word (*tvám* → *vam*; *gayasphā́na* → *gaya*; part 5's own
+    *satyānr̥té* → *nr*). Matching licences on whole lemmas (`^...`) of the pāda itself would close it.
+  - *rohít* `אדום` (7.42.2b) now meets *aruṇá* `האדומות` in RV 10.15.7a (another book): settle at the harmonization.
+  - pári √*vr̥j* "avoid" 7.46.3b `יעקוף` beside *paryetár* (pári √*i*) `עוקף` 7.40.3d: two lemmas in one Hebrew root
+    within the part (recorded by the translator); `יחלוף על פנינו` would separate them.
+  - *jániman* `תולדות` (7.2.10d, 7.42.2d) shares `תולדה` with *tánaya*, as *jánman* did before the part 4 review.
+  - √*car* has `נדד` (7.46.3b, 7.55.6a) and, with *úpa*, `סוּר` (7.46.2c); *úd* √*car* `עלה` (7.55.7b): preverb splits,
+    left as they are.
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
