@@ -846,5 +846,46 @@ out"), 6 (*vāvaśānā́* from √*vāś* "low"; the verse without a main claus
   every corpus file, not only Book 7.
 - The `טוב` licence does not cover *vásyas* (the comparative of *vásu*): an escape was needed (7.32.19d).
 
+## Review of part 4 (RV 7.32–7.37; independent reviewer)
+All 348 pādas read against the Zurich text and morphology (`data`), with `tr` and Jamison's commentary on VII.32–37
+where a line was in doubt. Scripts over the part: (1) every Zurich token has its פירוק segment, in order and with the
+same form (no misses); (2) **every grammar description of the assembling script set against its Zurich tag** (all ~230
+tag/description pairs listed and read: the script decoded case, number, gender, tense, mood, voice, person and the
+preverbs faithfully; the only departures are the translator's deliberate readings against Zurich, each explained in its
+note: 7.32.24b *jyā́yaḥ* neuter, not voc.; 7.33.12a *praketé* loc.; 7.34.3b; 7.35.10c *naḥ* gen.); (3) every פירוק Hebrew
+stands in its line; (4) a corpus-wide lemma ↔ Hebrew map of the part in both directions. **7.35's *śám* frame is kept
+in all 60 pādas** (`לאושר` + copula + `לנו` + X; `לאושר לנו X` without a verb; `ולאושר` for *śám u*, `לאושר` without
+*u* in 3c, 4b, 7a, 11d, 13b; the other-verb pādas 4d, 6d, 8a; 10c *naḥ* with *prajā́bhyaḥ* `לצאצאינו`). The moods are
+right throughout (subjunctive → future, optative → `נא` / the conditional `הייתי` of 7.32.18–19, *mā́* + injunctive →
+`אל`, the 3rd-person imperatives as jussive futures). **9 lines changed** (and their פירוק / notes), 7 פירוק segments
+corrected, one intro aligned.
+- **Ambiguity of the unvocalized line (4):** 7.32.13d *bhúvat* and 7.33.6c *ábhavat* `נהיה` (reads "we shall be") →
+  `נִהְיָה`; 7.32.9c, 20a *taráṇi* `החש` → `הֶחָשׁ`, as part 3's 7.26.4b.
+- **One Hebrew for two lemmas / meaning (2):** 7.33.10c *jánma* `תולדתך` → `לידתך`: `תולדה` is *tánaya*'s (renderings
+  §11.10), and in Hebrew it means "offspring, outcome", not "birth" (the two births of Vasiṣṭha); `לידה` is *jánman* in
+  KU 1.17a and AB 7.17.3d. 7.35.6b *suśáṃsa* `טוב־הקילוס` → `בעל הקילוס הטוב` (7.16.6d, part 2; the translator's
+  Proposals list `טוב־הקילוס`: superseded).
+- **Hebrew agreement (2):** 7.34.3b `גיבורות יחשבו (את עצמן), עזות` → `גיבורים יחשבו (את עצמם), עזים` (the waters:
+  masculine in the Hebrew of 2b, 3a); 7.37.5b `אשר בהם` → `אשר בהן` (*yā́bhiḥ* ↔ `ההגויות`).
+- **Mood (1):** 7.37.6d *ní … uhīta* (aor. optative) `יוביל` → `יוביל נא`.
+- **פירוק only:** 7.33.6d `של הטְרִטְסוּ` → `הטְרִטְסוּ`; 7.33.9c, 12c `בידי יָמָה` → `יָמָה`; 7.34.19a `(על) האדמה` →
+  `האדמה`; 7.36.5a `ולמרץ` → `ולמרצו` (the Hebrew of the line); 7.35.14b *kriyámāṇam* the case added; 7.37.7c
+  *jarádaṣṭim* (Zurich: fem. noun) marked as the adjective of Indra the line reads (Geldner, Elizarenkova, Renou).
+  **Intro 7.37:** `"לפי השירים"` → `"לפי הרעיונות"` (the line 2d).
+- **Checked and kept (defensible):** 7.32.10b *páry āsa* `הקיף` (Geldner "hemmt"; Griffith "overturned"); 7.33.11d
+  *tvā̀dadanta* `נתנו אותך` (Griffith "laid"; Geldner "fingen auf"); 7.34.23a *rā́yaḥ* nominative (Geldner, Renou;
+  Jamison objects, noted); 7.34.22b the plural `ישמעו` for *śr̥ṇotu* (noted); 7.34.7b, 19a *bhū́man* `אדמה` (the gate
+  licenses it; one root with *bhū́mi*); 7.36.7d *ávīvr̥dhan* past; 7.37.7 after Jamison (noted as open).
+- `build RV7.32-37`; `verify RV7.32-37 --strict`: 0 problems, 0 repeated-line differences; `check_bible_quotes.py` on the
+  18 annotated, intro and generated files: 0 problems. The ten tagged parallels say "shared motif"; none forced.
+- **For the coordinator (left for the harmonization):**
+  - *jánman*: 7.10.2c (part 2) `בין התולדות` shares `תולדה` with *tánaya*; align with `לידה`.
+  - *perú* `המעביר` (7.35.13c) and *pā́rya* `המעביר` (7.32.14c, 21d; part 3 7.27.1b `המעבירות`): two lemmas of √*pr̥*
+    in one Hebrew within the part.
+  - *dūrá* (7.33.1d, 2a `מרחוק`; KU `רחוקות`; RV 10.16.9a `הרחק`) against *āré* `רחוק` (part 3's ruling).
+  - *arbhaká* 7.33.6b `הקטנטנים` (the pejorative -*ka*-) against AB 7.16.8d `קטנים`, which is *kánīyas*'s word
+    (7.20.7b, 7.32.24b).
+  - √*ās* and √*sad* both `ישב` (7.32.2b, 7.33.14c / 7.33.9d, 7.34.16b); *niṇyá* `סתר` beside KU's *guhā́*.
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)

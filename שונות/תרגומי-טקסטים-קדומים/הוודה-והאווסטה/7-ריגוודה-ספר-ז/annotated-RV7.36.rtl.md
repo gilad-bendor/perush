@@ -121,7 +121,7 @@
 ### 5a
 `yájante asya sakhyáṃ váyaś ca`
 > זובחים לחברותו ולמרצו
-- **פירוק:** `yájante` – √yaj "זבח", הווה בינוני 3 רבים ("זובחים"); `asya` – ayám "שלו", יחסת הקניין ("־ו"); `sakhyám` – sakhyá- "חברות", נייטרי יחסת המושא ("לחברות"); `váyaḥ` – váyas- "מרץ", נייטרי יחסת המושא ("ולמרץ"); `ca` – ca ("ו").
+- **פירוק:** `yájante` – √yaj "זבח", הווה בינוני 3 רבים ("זובחים"); `asya` – ayám "שלו", יחסת הקניין ("־ו"); `sakhyám` – sakhyá- "חברות", נייטרי יחסת המושא ("לחברות"); `váyaḥ` – váyas- "מרץ", נייטרי יחסת המושא ("ולמרצו"); `ca` – ca ("ו").
 - **תרגומים:** גלדנר: "Sie erbitten seine Freundschaft und Lebenskraft demutsvoll, da wo die Wahrheit selbst zur Erscheinung kommt. Von den Männern gepriesen entbindet(?) er die Lebenskräfte: dem Rudra (sei) diese Huldigung die liebste"; ג'מיסון: מושא √*yaj* אינו אל אלא שתי תכונות של האל, החברות והמרץ, העומדות במקומו (גלדנר "erbitten", רנו "משיגים בזבח"); "תחום הסדר" – מקום הזבח; *ví bābadhe* – האל "דוחק החוצה" אלינו את המזונות המחזקים.
 - **הערות:** √*yaj* `זבח` (renderings §5.1); *sakhyá* `חברות` (ז, חלק 3); *váyas* "כוח החיים, המרץ" `מרץ` (חדש).
 
