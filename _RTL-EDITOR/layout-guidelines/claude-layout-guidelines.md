@@ -89,3 +89,4 @@ A kind's own tool - the translations' `npm run rows -- ...` - is described in it
 ### Lessons
 
 (Add one line per lesson that holds for any layout: the date, what you learned.)
+- 2026-11-09: a number range in a Hebrew heading - `(12.1–12.3)` - is printed correctly in the HTML and the PDF: right to left, the first number stands on the right. Text copied out of the PDF (`pdftotext`), or the left-to-right order of a glance, makes it look reversed ("12.3–12.1"); it is not a bug - don't report it.
