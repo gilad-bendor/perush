@@ -661,7 +661,8 @@ def _find_word(heb, hp):
                 if not re.fullmatch(r"[ובלמהכש]{0,3}", p[:k]):
                     continue
                 stem = p[k:]
-                if stem == c or (stem.startswith(c) and stem[len(c):] in ("ים", "ות", "ית", "יות", "יים", "ה", "י", "ן")):
+                if stem == c or (stem.startswith(c) and stem[len(c):] in ("ים", "ות", "ית", "יות", "יים", "ה", "י", "ן")) \
+                        or (c.endswith("י") and stem == c + "ם"):  # as in _heb_has: אגני → אגנים (Round 7 part 7)
                     return w
     return ""
 

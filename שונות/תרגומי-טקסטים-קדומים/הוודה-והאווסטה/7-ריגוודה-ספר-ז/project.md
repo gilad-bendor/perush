@@ -1324,5 +1324,168 @@ changed** (and their פירוק / notes).
     7.58.2a) / *jánman* `לידה` (7.33.10c, the part 4 review); *śubhrá* `מבריק` (7.39.3b, 7.56.8a) / √*dyut* `מבריק`
     (7.8.4d); √*rad* `חפר` (7.60.4c, 7.62.3a) / ŚB *khan* `חפר`.
 
+## RV7.64–7.74 (part 7: Mitra–Varuṇa 7.64–66; the Aśvins 7.67–74; translator 7, Round 7 run 1)
+
+### Scope
+RV 7.64–7.74: 11 hymns, 344 pādas – Mitra–Varuṇa 7.64 (20), 7.65 (20), 7.66 (63: gāyatrī tṛcas with four-pāda stanzas
+10–15, no family refrain); the Aśvins 7.67 (40), 7.68 (29: stanzas 1–7 of three pādas), 7.69 (32), 7.70 (28), 7.71 (24),
+7.72 (20), 7.73 (20), 7.74 (24: pragāthas, no refrain). One annotated file and one intro per hymn; `build RV7.64-74`
+generated the clean files.
+
+### Sources consulted
+- Base: VedaWeb Zurich text and morphology (`data`); `gra` / `mw` for the new words; `freq RV7.64-74`, `lexmap`, `grep`,
+  the part 4–6 spec assembler (`gen.py`, copied to my scratch folder), a look-up of every lemma of each hymn against the
+  drafted files, and a script comparing my morphology overrides with Zurich's tags (it caught 7.65.2d *pīpáyan*, a
+  subjunctive, drafted as an injunctive).
+- After drafting each hymn: `tr` (Griffith, Grassmann, Geldner, Elizarenkova, Renou) and Jamison's commentary
+  (`VII.56–104-9-25-26.txt`, "SJ on JPB" for 7.64–74), cited where it discusses a stanza. Her readings adopted with
+  attribution: 7.64.4a *gárta* "throne" (not necessarily a chariot seat); 7.65.1 the ring *práti vām* (1a, 4c) and 4c
+  "(I call) … according to wish"; 7.65.2a a separate 3rd-person nominal clause; 7.66.12d the praise "You are charioteers
+  of truth!" in quotation marks; 7.66.14d "fit for every eye"; 7.66.15a "each and every head" qualifying the moving;
+  7.67.1a *jarádhyai* intransitive ("to awaken in response to"); 7.67.10c *járatam* "awaken" (with Oldenberg, against
+  Geldner's "make old"); 7.68.4ab the stone "beseeching the gods" and *valgú* "agreeable"; 7.68.8 one barren cow (Śayu's);
+  7.69.3c *yā́damāna* "embracing (with) the bride"; 7.69.4d *váyas* "vitality" (the Atri saga, not a bird); 7.70.1c the
+  ritual fire as subject (with Brereton); 7.70.4b *yogyā́* "undertakings"; 7.71.2c *ánirā* "famine".
+- Bible verses printed before quoting: Eccl 11:7, Ps 90:10, Ps 113:9, Jonah 2:4.
+
+### Decisions
+- **√*nī* `הנהיג`** (part 3; the coordinator's note): 7.64.3b `ינהיגו`; √*vah* keeps `הוביל`.
+- **Mitra–Varuṇa (7.64–66), new words:** *nirṇíj* `מלבוש` (the "garments of ghee"); *gárta* `כס`; *sindhupati*
+  `אדון־הנהרות`; *kṣatríya* (RV adj.) `בעל־השלטון` (AB's caste `קשטריה`: a split by period); *jīrádānu* `זריז־הטיפות`
+  (*jīrá* ~ *ajirá* `זריז`; *dā́nu* "drop"); *sā́dhiṣṭha* `הקולע ביותר` (`ישר` is *r̥jú*); *bhū́ripāśa* `רב־החבלים`;
+  *sétu* `סכר` (KU 3.2a `גשר`: a split by context – the "dams of untruth", 7.65.3a; `סוללות` is *dehī́*, 7.6.5a);
+  *duratyétu* `שקשה לעבור`; *ripú* `נוכל`; *ācít* `מבחין` (not *acít*); *jigatnú* `מהלך` (`חש` is *taráṇi*);
+  *pūtádakṣa* `טהור־הכשרון`; *ákṣita* `שאינו נגרע`; *havyájuṣṭi* `התענגות־התקרובת`; *udán* `מים`; *stipā́* / *tanūpā́*
+  `שומר בני־הבית` / `שומר הגוף`; *dákṣapitar* `שהכשרון אביו`; *prámahas* `נעלה־הגדולה`; *suprāvī́* `חרוץ`; *svarā́j*
+  `המושל בעצמו` (precedent); *anāpyá* `בלתי־מושג`; *r̥tájāta* `יליד הסדר`; *anr̥tadvíṣ* `שונא אי־הסדר`; *chardís* `סכך`
+  (*suchardíṣṭama* `הטוב־הסכך ביותר`; `מחסה` is *śárman*, `סוכך` *varūtár*); *vápus* `מחזה`; *darśatá* `ראוי לראייה`;
+  *pratihvará* `מעלה`; *cákṣas* `עין`; *áram* `ראוי`; *deváhita* `שהאֵלִים העמידו`; *sómapīti* `שתיית הסוֹמָה`; *adrúh*
+  `חסר־שקר`; *ātují* `מזנק`; *hiraṇyayā́* `תשוקת־זהב`; *medhásāti* `זכייה בלשד הזבח`; *páribhūti* `כוח עליון`;
+  *sū́racakṣas* `שהשמש עינו`; *agnijihvá* `שאַגְנִי לשונו`; *śūṣyà* `מחזק`; *námasvant* `בעל־קידה`; *tuvijātá*
+  `רב־הלידה`; *mā́s* `חודש`; *aktú* `לילה`, *ŕ̥c* `פסוק` (precedents).
+- **Precedents re-applied after pass (b):** *pánthā* `דרך` (RV 10.14, 7.4.7d, 7.39.3c; I had drafted `שביל`, which is
+  *pathyā̀*'s: 7.64.3b, 7.65.3c, 7.71.1b, 7.73.3a changed); *śíras* `ראש` with the *āmreḍita* `כל ראש וראש` as 7.18.24b
+  (7.66.15a), so *mūrdhán* `פסגה` (7.70.3c; MBH 3.185.37a `על ראש` a recorded split).
+- *íḷā* (common noun) `רוויה` by the Avestan cognate rule (7.64.2c, 7.65.4b) – 7.3.7b `מנחות־חלב` is the older split.
+- *púraṃdhi* in the plural (7.64.5c = 7.65.5c, 7.67.5c) `הפּוּרַמְדְהִיּוֹת`: the goddess's name kept (as in 7.9, 7.36),
+  plural "the Plenitudes".
+- **The Aśvins (7.67–74), names:** `אַשְׁוִינִים` (vocative and subject; `האַשְׁוִינִים`), Nāsatya `נָאסַטְיָה` (§3.1);
+  their protégés transliterated by §2.3, vocalized at the first occurrence in each file, with a note: Atri `אַטְרִי`,
+  Cyavāna `צְ'יַוָאנָה`, Bhujyu `בְּהוּגְ'יוּ`, Śayu `שַׁיְיוּ` (the doubled yod: `שיו` hits the `שֶׂה` gate and reads
+  "his lamb"), Pedu `פֵּדוּ`, Jāhuṣa `גָ'אהוּשָׁה`, Sūryā (the sun's daughter, their bride) `סוּרְיָא`. 7.70.6c and 7.73.3d
+  *vásiṣṭha* = the name `וַסִישְׁטְהָה` (Zurich: a superlative), by the parallel 7.70.5c and Griffith / Geldner.
+- **The Aśvins, recurring words:** *mā́dhvī* `בעל־הדבש`; *dasrá* `עושה־הפלאות`; *dhíṣṇya* `נערץ`; *vartís* `סבב`
+  (precedent 7.40.5d), *pári* √*yā* `סובב`; *vartaní* `מסלול`; *yuvā́ku* `שלכם`; *nr̥páti* `אדון־הגברים`; *yúvan*
+  `צעיר`; *súhotar* `כוהן־הקריאה הטוב`; *svarvíd* `מוצא־האור`; *vásumant* `רב־הטוב`; *śácī* `יכולת`, *śácīpáti*
+  `אדון־היכולות`, *śacīvasu* `שהיכולות טובו`, √*śak* `יכל`; *omán* `סעד`; *ghraṃsá* `חום` (`להט` is *tápas*); *starī́*
+  `עקרה`; *aghnyā́* `הפרה שאין להורגה`; *daṃsánā* `נפלאות־מעשה`, *purudáṃsa* `רב־הנפלאות`; *patatrín* `מעופף`; *vadhū́*
+  `כַּלָּה`; *yóṣā* `נערה`; *gaurá* `תאו`; *mánojavas* `מהיר־המחשבה`; *trivandhurá* `בעל שלושת המושבים`; *paví* `חישוק`;
+  *hávana* `הזמנה` (*háva* `קריאה`); *usrá* `ורוד` (`אדמדם` is *aruṣá*), *usráyāman* `הנוסע עם הוורודות`; *śáru* `שֶׁלַח`
+  (`חץ` is *íṣu*); *ánirā* `כפן` (`רעב` is *kṣúdh*); *háya* `רכש` (`סוס` is *áśva*); *makṣūyú* `שואף־המהרה`; *yuvayú*
+  `השואף אליכם`; *díviṣṭi* `שאיפת־השמים`; *sūnŕ̥tāvant* `בעל־הנדיבות`; *jenyāvasu* `שטובו אציל`; *nr̥pātár*
+  `שומר־הגברים`; √*śū* `התעצם` (with *śávas* `עצמה`); *pā́ñcajanya* `של חמשת העמים`; *paścā́tāt* / *purástāt* /
+  *adharā́t* / *údaktāt* `מאחור` / `מלפנים` / `מלמטה` / `מלמעלה`; *bhū́man* `אזור` (7.69.2a; 7.34.7b `אדמה`, a gated word, is
+  the older split); √*kan* `רצה` (with *cániṣṭha* `הרצוי ביותר`).
+- **√*gr̥* "awake":** intransitive (*jarádhyai* 7.67.1a; *jarate*, Zurich √*jar*, 7.68.9a, 7.72.4d, 7.73.3d) `ניעור`,
+  transitive `העיר` (7.67.1c); 7.67.10c = 7.69.8c *járatam* `העירו` with Oldenberg and Jamison, though Zurich lemmatizes
+  √*jr̥̄* "make old" (Geldner "lasset … alt werden"): recorded; √*jr̥̄* "grow old" itself `הזקין` (7.68.6a). √*budh* keeps
+  `התעורר`.
+- **Recorded splits by sense:** √*dhr̥* caus. `קבעו` (7.66.2a, "appointed"; elsewhere `החזיק`); √*yam* `ריסן` (7.66.10c,
+  7.69.6d, 7.74.2c, as KU 3.13a; Book 7 mostly `הושיט`, kept in 7.74.5c); √*uh* `הצהיר` (7.66.12c; 7.16.11d `ישים לב`);
+  *kā́vya* "poetic power" `כוחות־המשוררים` (7.66.17a; RV 10.14.3a the Kāvyas `הקויה`); *śarád* `סתיו` kept in 7.66.11a
+  with `(=השנה)`; *iyāná* (Zurich √*yā* 2 "beg") `ממהרת` (7.68.3c, as 7.39.2b); *sū́raḥ* (Zurich: gen. of *svàr*)
+  `השמש` (7.69.4b); *pitárā* (dual) `הוריו` (7.67.1d); *étagva* `סוס מנומר` beside *étaśa* (7.70.2d).
+- **Gates:** `[היתר שם: יָמִי]` for *ayāmi* (7.64.5b = 7.65.5b), `[היתר שם: יָמָה]` for *yā́man* / *yā́mam* / *yaman*
+  (7.66.5b, 7.69.2d, 7.69.6d); 7.66.16a *uccárat* `שעולה` (the string `העולה` hits the `עֹלָה` gate); `אֵלֶּה` / `הָאֵלֶּה`
+  and the preposition `אֶל` vocalized where the line has *devá* (7.66.9ab, 13d; 7.67.6d; 7.69.2c, 7a; 7.72.3c; 7.74.5b).
+- **Repeated pādas:** 7.64.5a–c first copy, copied in 7.65.5a–c (7.64.5c also = 7.97.9c later); 7.66.7a = 7.65.1a
+  without `במזמורים`, 7.66.7b changes only the verb (√*gr̥̄* `הילל` for √*hū*); 7.67.10a–c first copy (10b copied from
+  7.40.5d), copied in 7.69.8a–c; 7.67.6d first copy for 7.84.5c / 7.85.5c (6c ≈ 7.84.5b); 7.70.7a–c first copy, copied in
+  7.71.6a–c (7.70.7b also = 7.73.3b, copied); 7.70.5d copied from 7.57.4d (*vām* for *vo*); 7.72.5a–c first copy, copied in
+  7.73.5a–c; 7.74.3d = 7.73.4d without *śivéna*. F6 in 9 hymns (not 7.66, 7.74).
+
+### Open decisions for the user
+- 7.67.10c = 7.69.8c *járatam*: `העירו` ("awaken the patrons", Oldenberg, Jamison) or Geldner's "let them grow old" (long
+  life); the note gives both.
+- 7.68.5b (Atri) – *máhiṣvant* and *ní … yuyotam* are obscure; the line follows Geldner (`הסירו … את (הלהט) העצום (?)`), the
+  note gives Jamison's "harness … for Atri".
+- 7.70.6c / 7.73.3d: *vásiṣṭha* as the name (Griffith, Geldner) against Zurich's superlative "the best".
+
+### Progress log
+- Drafted hymn by hymn (7.64 → 7.74), each saved, `fill`ed and `verify`ed before the next; the section written as I went.
+- Pass (a) fidelity: the 344 lines re-read in the generated files against the base; 7.64.4c `בחמאה` (instrumental),
+  7.65.2d subjunctive `יגאו`, 7.69.5d `בזבח` (locative), 7.68.4b √*vac* `אומרת` (as 7.67.1d), the 7.72 Griffith quotations
+  re-copied from `tr`.
+- Pass (b) consistency: my lemma ↔ Hebrew map against every drafted file, both directions (a scratch script): 14 lines
+  changed – *pánthā* `דרך` (4), *śíras* / *mūrdhán* (2), *jigatnú* `מהלך`, *usrá* `ורוד`, *sétu* `סכר`, *chardís* `סכך`
+  (2), *ghraṃsá* `חום`, *śáru* `שֶׁלַח`, *ánirā* `כפן`; intros and headers aligned with the final lines (7.65, 7.68, 7.70,
+  7.71, 7.74).
+- Pass (c) Hebrew: the 11 generated files read in sequence; `רְצוּ` vocalized (7.70.4a: "be pleased", not "they ran"),
+  `כַּלָּה` (not `כלה` "destroyer"), `שהאֵלִים` (7.66.16a).
+- `build RV7.64-74`; `verify RV7.64-74 --strict`: **0 problems**, 0 repeated-line differences in the range;
+  `check_bible_quotes.py` on the 33 annotated, intro and generated files: 0 problems.
+- **Tool fix (minimal, it blocked me):** `vedic_tools.py` `_find_word` lacked the "-י → -ים" plural rule that `_heb_has`
+  already had, so a file whose only Agni is the plural `האַגְנִים` (7.72.4d) failed the vocalization check; one clause
+  added, `selftest` 12/12.
+
+### The text on its own terms
+- **The kings of the truth and the water** (7.64.1–2, 7.65.4): Mitra and Varuṇa rule heaven, the airy space and earth,
+  are "lords of rivers", and are asked for rain – "sprinkle the pasture with ghee".
+- **An exchange of ghee** (7.64.1b, 4a–c): men dress the gods in "garments of ghee"; the poet "forges a throne" for them in
+  his mind; the gods "sprinkle him with ghee" in return.
+- **Fetters and dams** (7.65.3): the gods "of many fetters" are dams the deceitful man cannot pass, yet the path of truth
+  carries the faithful over trouble "as waters by a boat".
+- **The stranger's word to the king** (7.64.3c): even the outsider (*arí*) should speak well of the poet to Sudās.
+- **Ordering time** (7.66.11): the Ādityas apportioned the year, the month and the day, the sacrifice, the night and the
+  verse – cosmic and ritual time in one act.
+- **To see the sun is to live** (7.66.16): "may we see a hundred autumns, may we live a hundred autumns" (Eccl 11:7).
+- **Waking the gods** (7.67.1, 10; 7.68.9; 7.72.3–4; 7.73.3): the dawn rite is a mutual awakening – the fire, the hymns
+  and the poet "wake", and the gods are asked to "wake" the patrons.
+- **A son to his parents** (7.67.1d; 7.72.2cd): the bond with the Aśvins is ancestral friendship and "common kinship".
+- **Fertility without shame** (7.67.6): "seed rich in offspring, unabashed" – the Aśvins as gods of procreation; the
+  barren cow made to give milk (7.68.8).
+- **The rescues** (7.68.5–8, 7.69.4, 7, 7.71.5): Atri from the heated pit, Cyavāna rejuvenated, Bhujyu from the sea,
+  Śayu's cow, Pedu's horse, Jāhuṣa set free – the catalogue that makes the Aśvins the gods of emergency.
+- **The chariot and the bride** (7.69.1–4): the golden three-seated chariot, yoked by thought, pressing heaven and earth
+  apart, with Sūryā, who chose the Aśvins "at the turning hour".
+- **Competing sacrifices** (7.68.2c, 7.69.6d, 7.70.6b): the gods are begged to pass over the stranger's invocations and not
+  to be "held back" by others.
+- **Night as a river** (7.73.1a): "we have crossed to the far shore of this darkness".
+- **The patrons' reward** (7.67.9, 7.74.5–6): gifts of cows and horses earn "lasting glory"; the patrons "grew strong by
+  their own strength" and "dwell in a good dwelling".
+
+### Key parallels
+- 7.66.16b [equivalent] Eccl 11:7 – "to see the sun" as a name for being alive (shared motif).
+- 7.66.16c [equivalent] Ps 90:10 – a round number for a full human life: a hundred autumns wished for, seventy years
+  lamented (shared motif).
+- 7.68.7b [divergence] Jonah 2:4 – a man cast "into the heart of the seas" and rescued by divine power (shared motif;
+  Bhujyu is abandoned by companions and saved by two gods with ships or winged horses).
+- 7.68.8d [divergence] Ps 113:9 – the god who makes the barren fruitful; here a barren cow (shared motif).
+
+### Proposals for the shared renderings
+- **Names** (in the files): Atri `אַטְרִי`, Cyavāna `צְ'יַוָאנָה`, Bhujyu `בְּהוּגְ'יוּ`, Śayu `שַׁיְיוּ`, Pedu `פֵּדוּ`, Jāhuṣa
+  `גָ'אהוּשָׁה`, Sūryā `סוּרְיָא` – for §3.1 (RV 7) or the files only (Śayu's regex would need care: ` sayu`; Atri's ` atri`
+  is safe).
+- **Words** (binding for Book 7 if accepted): every word under Decisions; the most recurrent for the later parts:
+  *mā́dhvī* `בעל־הדבש`, *dasrá* `עושה־הפלאות`, *vartís* `סבב`, *vartaní* `מסלול`, *omán* `סעד`, *chardís* `סכך`, *usrá*
+  `ורוד`, *vadhū́* `כַּלָּה`, *sétu* `סכר`, *nirṇíj* `מלבוש`, *gárta* `כס`, *íḷā* `רוויה`, *pánthā* `דרך` (confirmed),
+  √*gr̥* intr. `ניעור` / tr. `העיר`, √*jr̥̄* `הזקין`, √*kan* `רצה`.
+- **Repeated lines** (for the later parts): 7.67.6d `רבי־האוצרות, נלך נא אֶל רדיפת־האֵלִים.` (= 7.84.5c, 7.85.5c); 7.64.5c
+  `עזרו להגויות, העירו את הפּוּרַמְדְהִיּוֹת;` (= 7.97.9c); 7.73.3d ≈ 7.80.1a.
+- **For the harmonization:** *pánthā* `דרך` / *pathyā̀* `שביל` (both present in Book 7: check the later parts);
+  *íḷā* `רוויה` vs 7.3.7b; *bhū́man* `אזור` vs 7.34.7b `אדמה`; *mūrdhán* `פסגה` vs MBH `ראש`; *kṣatríya* RV / AB; *sétu*
+  RV / KU; √*yam* `הושיט` / `ריסן`; *rathī́* and *rathirá* both `רוכב־המרכבה` (older); *jána* `עם` / `אנשים`.
+
+### Lessons for the guidelines
+- **Check the precedents of the plainest words too**: *pánthā* "path" and *śíras* "head" looked too common to look up,
+  and both had a fixed Hebrew in earlier parts that I first missed (pass (b) caught them). A reverse script (each of my
+  Hebrew words → every other lemma that has it) finds such collisions in minutes; run it per hymn, not at the end.
+- **A name transcription can hit a gate**: Śayu `שיו` reads "his lamb" and hits the `שֶׂה` gate; a doubled consonantal yod
+  is the honest fix (not a different name).
+- **The verifier's vocalization rule for a plural-only name** needed the same plural clause as its presence rule
+  (`_find_word`): when a tool gains a rule in one function, grep for its twin.
+- **The preposition `אל` beside a *devá* line is flagged** (the `אֵל` trap): vocalize `אֶל` in such lines from the
+  first draft.
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
