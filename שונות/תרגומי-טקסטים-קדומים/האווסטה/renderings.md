@@ -235,7 +235,7 @@ reserved (§7). **The one real lexical contact is the Persian loanword `דָּת
 
 ### 7.3 Always vocalized (traps)
 `אֵל` / `אֵלִים` (*daēuua*: "to", "these"), `יִימָה` (Yima), `דָּת`, and `עַד` where it renders *yauua* and could be
-read as the preposition; `רֵעַ` (*friia*: unvocalized "bad").
+read as the preposition; `רֵעַ` (*friia*: unvocalized "bad"); `אִשְּׁךָ` ("your fire": unvocalized "testicle").
 
 ## 8. Formulas (fixed; checked by script: | F | folded-source regex | Hebrew regex | lines |)
 The Hebrew regex is matched on the bracket-free, unvocalized, punctuation-free line.

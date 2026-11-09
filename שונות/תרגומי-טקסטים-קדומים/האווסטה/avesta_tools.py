@@ -399,6 +399,7 @@ RW = rf"(?<![{V}א-ת])[ובלמהכש]?"
 RE_ = rf"(?![{V}א-ת])"
 # (regex on the RAW line, condition regex on the licence text: if it matches, the unvocalized string is an error; why)
 TRAPS = [
+    (RW + r"(?:אשך|אשכם)" + RE_, r"ath|atar|atr", "ātar + 'your': אִשְּׁךָ always vocalized (unvocalized 'testicle')"),
     (RW + r"(?:רע|רעים|רעי|לרע|כרע|הרע)" + RE_, r"friia|friio|friiai|friiaiia|friiaa|frii", "friia 'friend': רֵעַ always vocalized (unvocalized it reads 'bad', aka's word)"),
     (RW + r"(?:אל|אלים|אלה|אלות|אלי|אלת)" + RE_, r" daeu| daev| dev", "daēuua: אֵל / אֵלִים always vocalized ('to', 'these')"),
     (RW + r"(?:ימה)" + RE_, r"yim", "Yima: always vocalized יִימָה ('to the sea')"),
