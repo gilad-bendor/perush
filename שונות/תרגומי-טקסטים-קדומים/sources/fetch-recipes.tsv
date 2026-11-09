@@ -176,6 +176,7 @@ TITUS/ab238.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/ai
 TITUS/ab239.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab239.htm	TITUS AB 7.13–18 (local only)
 TITUS/ab240.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab240.htm	TITUS AB 7.13–18 (local only)
 TITUS/ab241.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab241.htm	TITUS AB 7.13–18 (local only)
+TITUS/avest028.htm	url	work	https://titus.fkidg1.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avest028.htm	TITUS Avesta Y 27 (local only)
 GRETIL/mbh_03_u.htm	url	work	https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_03_u.htm	GRETIL MBh 3 (reference only)
 GRETIL/sb_01_u.htm	url	work	https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/2_bra/satapath/sb_01_u.htm	GRETIL ŚB 1 (reference only)
 CAB/cab_corpus_plain.txt	url	work	https://cab.geschkult.fu-berlin.de/exist/apps/cab/modules/get_corpus_plain.xql	CAB linguistic corpus
@@ -198,11 +199,14 @@ Archive-org--PD-translations/Hume-1921--Upanishads_djvu.txt	url	work	https://arc
 Archive-org--PD-translations/Ganguli--vol02_djvu.txt	url	work	https://archive.org/download/mahabharataofkri02royp/mahabharataofkri02royp_djvu.txt	PD OCR text
 Archive-org--PD-translations/Ganguli--vol03_djvu.txt	url	work	https://archive.org/download/mahabharataofkri03royp/mahabharataofkri03royp_djvu.txt	PD OCR text
 Archive-org--PD-translations/Bartholomae-1904_djvu.txt	url	work	https://archive.org/download/altiranischeswr00bartgoog/altiranischeswr00bartgoog_djvu.txt	PD OCR text
+Archive-org--PD-translations/Mills-1887--SBE-31_djvu.txt	url	work	https://archive.org/download/wg931/WG931-1887%20-The%20Sacred%20Books%20of%20East%20-%20Vol%2031%20of%2050%20-Zoroastrianism-Zend%20Avesta%20-Part%203%20of%203_djvu.txt	PD OCR text
+Archive-org--PD-translations/Moulton-1913--Early-Zoroastrianism_djvu.txt	url	work	https://archive.org/download/earlyzoroastrian00mouluoft/earlyzoroastrian00mouluoft_djvu.txt	PD OCR text
 TITUS/sb_1.8.1.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
 TITUS/sb_1.2.3.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
 TITUS/ab_7.13-18.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
 GRETIL/mbh_3.185.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
 CAB/vd_2.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
+CAB/old_avestan.tsv	adhoc	work		made by האווסטה/avesta_tools.py convert
 VedaWeb/rv_1.032--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
 VedaWeb/rv_10.010--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert
 VedaWeb/rv_10.014--translations.tsv	adhoc	work		made by הוודה-והאווסטה/vedic_tools.py convert

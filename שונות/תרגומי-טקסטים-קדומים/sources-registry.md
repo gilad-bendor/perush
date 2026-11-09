@@ -255,6 +255,18 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
   Ganguli vols. 2–3, Bartholomae 1904 (OCR text).
 - Hebrew translations (Peter 2006, Fridman 2014; ©, Carmel) were not consulted.
 
+### 4.4y The Old Avestan corpus (`האווסטה/`; Round 7 run 2, 2026-11-09)
+- **CAB** (`sources/CAB/cab_corpus.xml`, already here): **the XML has the Gāthās' verse lines** (`<ab>`/`<l>` per line;
+  Geldner's numbers in `corresp`); `האווסטה/avesta_tools.py convert` keeps the Old Avestan lines (Y 28–34, 35.2–41.6,
+  43–51, 53, 54.1) and drops the liturgical repetitions, the Middle Persian headings and rubrics, and the Young Avestan
+  frames → `CAB/old_avestan.tsv` (local). CAB's corpus "without repetitions" lacks Y 27.13–15.
+- **TITUS** Avesta (`sources/TITUS/avest028.htm`, local; the page per Yasna chapter is `avest<NNN>.htm`, Y 27 = 028):
+  Geldner's text with Humbach 1991's line division – the base of the prayers Y 27.13–15.
+- **Rank 5, public domain** (`sources/Archive-org--PD-translations/`, ignored): Mills 1887 (SBE 31: the Gāthās, YH;
+  he numbers Y 28 one stanza higher), Moulton 1913 (*Early Zoroastrianism*, the Gāthās in an appendix; the OCR misses
+  many stanzas). Bartholomae 1904's OCR is two-column and garbled (ā as ä): usable by grep only. **Not open:** Insler
+  1975, Humbach 1991 / Humbach & Faiss 2010, Kellens & Pirart, Narten 1986 (YH), West 2010 – not used.
+
 ### 4.4x Northwest Semitic inscriptions (`מילים-באבן/`; Round 5 run 4, 2026-10-31)
 - **`Compston-1919--Mesha-Stele/`** – Compston 1919 (PD; English Wikisource, proofread): the Mesha stele in square script, `mesha.tsv`, committed. **BASE** of project 1.
 - **`Cooke-1903--North-Semitic-Inscriptions/`** – Cooke 1903 (PD; archive.org `textbookofnorths00cookuoft`; page images `…/page/n<leaf-1>_w1100.jpg`, leaf map `…_page_numbers.json`; the OCR is good for the English only): the Marseille tariff (no. 42) and the Carthage tariff (no. 43), read from the page images, committed. **BASE** of project 4. Also holds Mesha (1), Siloam (2), the Phoenician royal and Old Aramaic texts (PD) for later runs.
