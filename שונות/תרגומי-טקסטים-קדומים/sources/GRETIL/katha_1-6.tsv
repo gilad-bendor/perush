@@ -1,4 +1,4 @@
-# Kaṭha Upaniṣad, vallīs 1–3 (= adhyāya 1), GRETIL TEI (the Vienna University Student Team; CC BY-NC-SA 4.0). label = vallī.verse + half; the daṇḍas and verse numbers dropped.
+# Kaṭha Upaniṣad, vallīs 1–6 (= adhyāyas 1–2, the whole), GRETIL TEI (the Vienna University Student Team; CC BY-NC-SA 4.0). label = vallī.verse + half; the daṇḍas and verse numbers dropped.
 # Made by הוודה-והאווסטה/vedic_tools.py convert.
 1.1a	uśan ha vai vājaśravasaḥ sarvavedasaṃ dadau
 1.1b	tasya ha naciketā nāma putra āsa
@@ -88,6 +88,9 @@
 2.13b	sa modate modanīyaṃ hi labdhvā vivṛtaṃ sadma naciketasaṃ manye
 2.14a	anyatra dharmād anyatrādharmād anyatrāsmāt kṛtākṛtāt
 2.14b	anyatra bhūtāc ca bhavyāc ca yat tat paśyasi tad vada
+2.15a	sarve vedā yat padam āmananti tapāṃsi sarvāṇi ca yad vadanti
+2.15b	yad icchanto brahmacaryaṃ caranti tat te padaṃ saṃgraheṇa bravīmi
+2.15c	om ity etat
 2.16a	etad dhy evākṣaraṃ brahma etad dhy evākṣaraṃ param
 2.16b	etad dhy evākṣaraṃ jñātvā yo yad icchati tasya tat
 2.17a	etad ālambanaṃ śreṣṭham etad ālambanaṃ param
@@ -143,3 +146,114 @@
 3.17a	ya imaṃ paramaṃ guhyaṃ śrāvayed brahmasaṃsadi
 3.17b	prayataḥ śrāddhakāle vā tad ānantyāya kalpate
 3.17c	tad ānantyāya kalpata iti
+4.1a	parāñci khāni vyatṛṇat svayaṃbhūs tasmāt parāṅ paśyati nāntarātman
+4.1b	kaścid dhīraḥ pratyag ātmānam aikṣad āvṛttacakṣur amṛtatvam icchan
+4.2a	parācaḥ kāmān anuyanti bālās te mṛtyor yanti vitatasya pāśam
+4.2b	atha dhīrā amṛtatvaṃ viditvā dhruvam adhruveṣv iha na prārthayante
+4.3a	yena rūpaṃ rasaṃ gandhaṃ śabdān sparśīṃś ca maithunān
+4.3b	etenaiva vijānāti kim atra pariśiṣyate
+4.3c	etad vai tat
+4.4a	svapnāntaṃ jāgaritāntaṃ cobhau yenānupaśyati
+4.4b	mahāntaṃ vibhum ātmānaṃ matvā dhīro na śocati
+4.5a	ya imaṃ madhvadaṃ veda ātmānaṃ jīvam antikāt
+4.5b	īśānaṃ bhūtabhavyasya na tato vijugupsate
+4.5c	etad vai tat
+4.6a	yaḥ pūrvaṃ tapaso jātam adbhyaḥ pūrvam ajāyata
+4.6b	guhāṃ praviśya tiṣṭhantaṃ yo bhūtebhir vyapaśyata
+4.6c	etad vai tat
+4.7a	yā prāṇena saṃbhavati aditir devatāmayī
+4.7b	guhāṃ praviśya tiṣṭhantīṃ yā bhūtebhir vyajāyata
+4.7c	etad vai tat
+4.8a	araṇyor nihito jātavedā garbha iva subhṛto garbhiṇībhiḥ
+4.8b	divediva īḍyo jāgṛvadbhir haviṣmadbhir manuṣyebhir agniḥ
+4.8c	etad vai tat
+4.9a	yataś codeti sūryo astaṃ yatra ca gacchati
+4.9b	taṃ devāḥ sarve arpitās tad u nātyeti kaścana
+4.9c	etad vai tat
+4.10a	yad eveha tad amutra yad amutra tad anv iha
+4.10b	mṛtyoḥ sa mṛtyum āpnoti ya iha nāneva paśyati
+4.11a	manasaivedam āptavyaṃ neha nānāsti kiṃcana
+4.11b	mṛtyoḥ sa mṛtyuṃ gacchati ya iha nāneva paśyati
+4.12a	aṅguṣṭhamātraḥ puruṣo madhya ātmani tiṣṭhati
+4.12b	īśāno bhūtabhavyasya na tato vijugupsate
+4.12c	etad vai tat
+4.13a	aṅguṣṭhamātraḥ puruṣo jyotir iva adhūmakaḥ
+4.13b	īśāno bhūtabhavyasya sa evādya sa u śvaḥ
+4.13c	etad vai tat
+4.14a	yathodakaṃ durge vṛṣṭaṃ parvateṣu vidhāvati
+4.14b	evaṃ dharmān pṛthak paśyaṃs tān evānu vidhāvati
+4.15a	yathodakaṃ śuddhe śuddham āsiktaṃ tādṛg eva bhavati
+4.15b	evaṃ muner vijānata ātmā bhavati gautama
+5.1a	puram ekādaśadvāram ajasyāvakracetasaḥ
+5.1b	anuṣṭhāya na śocati vimuktaś ca vimucyate
+5.1c	etad vai tat
+5.2a	haṃsaḥ śuciṣad vasur antarikṣasad dhotā vediṣad atithir duroṇasat
+5.2b	nṛṣad varasad ṛtasad vyomasad abjā gojā ṛtajā adrijā ṛtaṃ bṛhat
+5.3a	ūrdhvaṃ prāṇam unnayati apānaṃ pratyag asyati
+5.3b	madhye vāmanam āsīnaṃ viśve devā upāsate
+5.4a	asya visraṃsamānasya śarīrasthasya dehinaḥ
+5.4b	dehād vimucyamānasya kim atra pariśiṣyate
+5.4c	etad vai tat
+5.5a	na prāṇena nāpānena martyo jīvati kaścana
+5.5b	itareṇa tu jīvanti yasminn etāv upāśritau
+5.6a	hanta ta idaṃ pravakṣyāmi guhyaṃ brahma sanātanam
+5.6b	yathā ca maraṇaṃ prāpya ātmā bhavati gautama
+5.7a	yonim anye prapadyante śarīratvāya dehinaḥ
+5.7b	sthāṇum anye 'nusaṃyanti yathākarma yathāśrutam
+5.8a	ya eṣa supteṣu jāgarti kāmaṃ kāmaṃ puruṣo nirmimāṇaḥ
+5.8b	tad eva śukraṃ tad brahma tad evāmṛtam ucyate
+5.8c	tasmiṃl lokāḥ śritāḥ sarve tad u nātyeti kaścana
+5.8d	etad vai tat
+5.9a	agnir yathaiko bhuvanaṃ praviṣṭo rūpaṃ rūpaṃ pratirūpo babhūva
+5.9b	ekas tathā sarvabhūtāntarātmā rūpaṃ rūpaṃ pratirūpo bahiś ca
+5.10a	vāyur yathaiko bhuvanaṃ praviṣṭo rūpaṃ rūpaṃ pratirūpo babhūva
+5.10b	ekas tathā sarvabhūtāntarātmā rūpaṃ rūpaṃ pratirūpo bahiś ca
+5.11a	sūryo yathā sarvalokasya cakṣur na lipyate cākṣuṣair bāhyadoṣaiḥ
+5.11b	ekas tathā sarvabhūtāntarātmā na lipyate lokaduḥkhena bāhyaḥ
+5.12a	eko vaśī sarvabhūtāntarātmā ekaṃ rūpaṃ bahudhā yaḥ karoti
+5.12b	tam ātmasthaṃ ye 'nupaśyanti dhīrās teṣāṃ sukhaṃ śāśvataṃ netareṣām
+5.13a	nityo 'nityānāṃ cetanaś cetanānām eko bahūnāṃ yo vidadhāti kāmān
+5.13b	tam ātmasthaṃ ye 'nupaśyanti dhīrās teṣaṃ śāntiḥ śāśvatī netareṣām
+5.14a	tad etad iti manyante 'nirdeśyaṃ paramaṃ sukham
+5.14b	kathaṃ nu tad vijānīyāṃ kim u bhāti vibhāti vā
+5.15a	na tatra sūryo bhāti na candratārakaṃ nemā vidyuto bhānti kuto 'yam agniḥ
+5.15b	tam eva bhāntam anu bhāti sarvaṃ tasya bhāsā sarvam idaṃ vibhāti
+6.1a	ūrdhvamūlo avākśākha eṣo 'śvatthaḥ sanātanaḥ
+6.1b	tad eva śukraṃ tad brahma tad evāmṛtam ucyate
+6.1c	tasmiṃl lokāḥ śritāḥ sarve tad u nātyeti kaścana
+6.1d	etad vai tat
+6.2a	yad idaṃ kiṃca jagat sarvaṃ prāṇa ejati niḥsṛtam
+6.2b	mahad bhayaṃ vajram udyataṃ ya etad vidur amṛtās te bhavanti
+6.3a	bhayād asyāgnis tapati bhayāt tapati sūryaḥ
+6.3b	bhayād indraś ca vāyuś ca mṛtyur dhāvati pañcamaḥ
+6.4a	iha ced aśakad boddhuṃ prākśarīrasya visrasaḥ
+6.4b	tataḥ sargeṣu lokeṣu śarīratvāya kalpate
+6.5a	yathādarśe tathātmani yathā svapne tathā pitṛloke
+6.5b	yathāpsu parīva dadṛśe tathā gandharvaloke chāyātapayor iva brahmaloke
+6.6a	indriyāṇāṃ pṛthagbhāvam udayāstamayau ca yat
+6.6b	pṛthag utpadyamānānāṃ matvā dhīro na śocati
+6.7a	indriyebhyaḥ paraṃ mano manasaḥ sattvam uttamam
+6.7b	sattvād adhi mahānātmā mahato 'vyaktam uttamam
+6.8a	avyaktāt tu paraḥ puruṣo vyāpako 'liṅga eva ca
+6.8b	yaṃ jñātvā mucyate jantur amṛtatvaṃ ca gacchati
+6.9a	na saṃdṛśe tiṣṭhati rūpam asya na cakṣuṣā paśyati kaścanainam
+6.9b	hṛdā manīṣā manasābhikḷpto ya etad vidur amṛtās te bhavanti
+6.10a	yadā pañcāvatiṣṭhante jñānāni manasā saha
+6.10b	buddhiś ca na viceṣṭati tām āhuḥ paramāṃ gatim
+6.11a	tāṃ yogam iti manyante sthirām indriyadhāraṇām
+6.11b	apramattas tadā bhavati yogo hi prabhavāpyayau
+6.12a	naiva vācā na manasā prāptuṃ śakyo na cakṣuṣā
+6.12b	astīti bruvato 'nyatra kathaṃ tad upalabhyate
+6.13a	astīty evopalabdhavyas tattvabhāvena cobhayoḥ
+6.13b	astīty evopalabdhasya tattvabhāvaḥ prasīdati
+6.14a	yadā sarve pramucyante kāmā ye 'sya hṛdi śritāḥ
+6.14b	atha martyo 'mṛto bhavaty atra brahma samaśnute
+6.15a	yadā sarve prabhidyante hṛdayasyeha granthayaḥ
+6.15b	atha martyo 'mṛto bhavaty etāvad dhy anuśāsanam
+6.16a	śataṃ caikā ca hṛdayasya nāḍyas tāsāṃ mūrdhānam abhiniḥsṛtaikā
+6.16b	tayordhvam āyann amṛtatvam eti viṣvaṅṅ anyā utkramaṇe bhavati
+6.17a	aṅguṣṭhamātraḥ puruṣo 'ntarātmā sadā janānāṃ hṛdaye saṃniviṣṭaḥ
+6.17b	taṃ svāc charīrāt pravṛhen muñjād iveṣīkāṃ dhairyeṇa
+6.17c	taṃ vidyāc chukram amṛtaṃ taṃ vidyāc chukram amṛtam iti
+6.18a	mṛtyuproktāṃ naciketo 'tha labdhvā vidyām etāṃ yogavidhiṃ ca kṛtsnam
+6.18b	brahmaprāpto virajo 'bhūd vimṛtyur anyo 'py evaṃ yo vid adhyātmam eva

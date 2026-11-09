@@ -28,14 +28,14 @@
 KEYs (see UNITS): RV1.32, RV10.129, … (Rigveda hymns; labels = stanza + pāda: "1a"), SB1.8.1 and SB1.2.3 (Śatapatha
 Brāhmaṇa; labels = kaṇḍikā + TITUS sentence: "1a", "1b"), MBH3.185 (labels = the BORI śloka + half: "1" (a speaker
 line), "1a", "1c", "17e"), VD2 (Vīdēvdād 2; labels = the CAB stanza: "1"…"43"), AB7 (Aitareya Brāhmaṇa 7.13–18;
-labels = khaṇḍa.sentence + line letter: "13.1a"), KU1 (Kaṭha Upaniṣad, vallīs 1–3; labels "1.1a" = vallī 1, verse 1,
+labels = khaṇḍa.sentence + line letter: "13.1a"), KU1, KU2 (Kaṭha Upaniṣad, adhyāya 1 = vallīs 1–3, adhyāya 2 = vallīs 4–6; labels "1.1a" = vallī 1, verse 1,
 first half). Annotated file: <project>/annotated-<KEY>.rtl.md.
 
 Bases (../sources/; the converter and its normalizations are described in ../sources/*/README.md):
   VedaWeb/rv_<B>.<HHH>--zurich.tsv   (committed; the Zurich text and morphology, CC BY 4.0), from rv_book_NN.tei
   TITUS/sb_1.8.1.tsv, sb_1.2.3.tsv, ab_7.13-18.tsv   (local; TITUS forbids republication) – Weber's ŚB, Aufrecht's AB,
                                     accented / unaccented as TITUS has them, aspirate ʰ written h
-  GRETIL/mbh_3.185.tsv (local; the BORI critical text), GRETIL/katha_1-3.tsv (CC BY-NC-SA: committed)
+  GRETIL/mbh_3.185.tsv (local; the BORI critical text), GRETIL/katha_1-6.tsv (CC BY-NC-SA: committed)
   CAB/vd_2.tsv                      (local; the CAB basis edition, licence "CC" without a version)
 
 verify checks, per file:
@@ -79,12 +79,16 @@ P4 = "4-העקדה"
 P5 = "5-יאמה-והמתים"
 P6 = "6-המהמר-והצפרדעים"
 P7 = "7-ריגוודה-ספר-ז"
+P8 = "8-קטהה-אופנישד"
 PROJECT_TITLES = {P1: "מזמורי הראשית של הריגוודה", P2: "אינדרה והנחש (ריגוודה א 32)", P3: "המבול ההודו־איראני",
                   P4: "העקדה: שונהשפה, הקרבן המחליף, נצ'יקטס", P5: "יאמה והמתים", P6: "המהמר והצפרדעים",
-                  P7: "הריגוודה, ספר ז: ספר בית וסישטהה"}
+                  P7: "הריגוודה, ספר ז: ספר בית וסישטהה",
+                  P8: "קטהה אופנישד: נצ'יקטס אצל המוות"}
 # a project whose clean translation also embeds a text that lives in another project (Round 7 run 1: RV 7.103, the
 # frogs, moved into the whole Book 7; project 6 keeps its title and embeds it)
-PROJECT_EMBEDS = {P6: ["RV10.34", "RV7.103"]}
+PROJECT_EMBEDS = {P6: ["RV10.34", "RV7.103"],
+                  # Round 7 run 3: the Kaṭha Upaniṣad lives whole in P8; the binding project embeds its first adhyāya
+                  P4: ["AB7", "SB1.2.3", "KU1"]}
 
 # KEY: (project, Hebrew title, kind, source spec)
 UNITS = {
@@ -99,7 +103,8 @@ UNITS = {
     "VD2": (P3, "וידבדאד 2: יִימָה והמתחם", "vd", (2,)),
     "AB7": (P4, "איתרייה ברהמנה ז 13–18: שׁוּנַהְשֵׁפָּה", "titus_ab", (236, 241)),
     "SB1.2.3": (P4, "שתפתה ברהמנה א 2 3 6–9: עצם הזבח עובר מן האדם לבהמות", "titus_sb", (2, 3, 6, 9)),
-    "KU1": (P4, "קטהה אופנישד, פרק ראשון: נצ'יקטס אצל המוות", "katha", (1, 3)),
+    "KU1": (P8, "קטהה אופנישד, פרק ראשון: נצ'יקטס אצל המוות", "katha", (1, 3)),
+    "KU2": (P8, "קטהה אופנישד, פרק שני", "katha", (4, 6)),
     "RV10.10": (P5, "ריגוודה י 10: יָמִי ויָמָה", "rv", (10, 10)),
     "RV10.14": (P5, "ריגוודה י 14: יָמָה, דרך האבות", "rv", (10, 14)),
     "RV10.15": (P5, "ריגוודה י 15: האבות", "rv", (10, 15)),
@@ -303,18 +308,22 @@ def convert_mbh():
 def convert_katha():
     t = open(os.path.join(SRC, "GRETIL", "sa_kathopaniSad.xml"), encoding="utf-8").read()
     rows = []
-    for lg in re.findall(r"<lg>(.*?)</lg>", t, re.S):
-        ls = [html.unescape(re.sub(r"<[^>]+>", "", x)).strip() for x in re.findall(r"<l>(.*?)</l>", lg, re.S)]
-        m = re.search(r"KaU_(\d+)\.(\d+)", " ".join(ls))
-        if not m or int(m.group(1)) > 3:
+    # a verse is the <l> lines up to the one that carries its number; the refrain "etad vai tat // KaU_4.3 //"
+    # (vallīs 4–5) is a loose <l> after an unnumbered <lg>, and becomes that verse's last line (Round 7 run 3)
+    pending = []
+    for l in re.findall(r"<l>(.*?)</l>", t[t.find("<body"):], re.S):
+        pending.append(html.unescape(re.sub(r"<[^>]+>", "", l)).strip())
+        m = re.search(r"KaU_(\d+)\.(\d+)", pending[-1])
+        if not m:
             continue
+        ls, pending = pending, []
         v, n = m.group(1), m.group(2)
         for i, l in enumerate(ls):
             l = re.sub(r"\s*//\s*KaU_[\d.]+\s*//\s*$", "", l)
-            l = re.sub(r"\s*/\s*$", "", l).strip()
+            l = re.sub(r"\s*/+\s*$", "", l).strip()
             rows.append((f"{v}.{n}{'abcdef'[i]}", l))
-    _write_tsv(os.path.join(SRC, "GRETIL", "katha_1-3.tsv"), rows,
-               "Kaṭha Upaniṣad, vallīs 1–3 (= adhyāya 1), GRETIL TEI (the Vienna University Student Team; CC BY-NC-SA 4.0). label = vallī.verse + half; the daṇḍas and verse numbers dropped.")
+    _write_tsv(os.path.join(SRC, "GRETIL", "katha_1-6.tsv"), rows,
+               "Kaṭha Upaniṣad, vallīs 1–6 (= adhyāyas 1–2, the whole), GRETIL TEI (the Vienna University Student Team; CC BY-NC-SA 4.0). label = vallī.verse + half; the daṇḍas and verse numbers dropped.")
     return len(rows)
 
 
@@ -387,7 +396,8 @@ def rows(key):
     elif kind == "mbh":
         rs = [{"label": c[0], "text": c[1], "words": []} for c in _read_tsv(os.path.join(SRC, "GRETIL", "mbh_3.185.tsv"))]
     elif kind == "katha":
-        rs = [{"label": c[0], "text": c[1], "words": []} for c in _read_tsv(os.path.join(SRC, "GRETIL", "katha_1-3.tsv"))]
+        rs = [{"label": c[0], "text": c[1], "words": []} for c in _read_tsv(os.path.join(SRC, "GRETIL", "katha_1-6.tsv"))
+              if spec[0] <= int(c[0].split(".")[0]) <= spec[1]]
     elif kind == "vd":
         rs = [{"label": c[0], "text": c[1], "words": []} for c in _read_tsv(os.path.join(SRC, "CAB", "vd_2.tsv"))]
     _DATA[key] = rs
