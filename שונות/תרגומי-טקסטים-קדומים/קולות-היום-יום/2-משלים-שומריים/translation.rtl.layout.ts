@@ -6,13 +6,14 @@
 // proverb, mostly a single row. The few that take two rows or more are lists of parallel clauses, or a short
 // fable with speech (the fox and his wife). The rules: a line that ends with a dash leads into the next one,
 // so the row does not end there; a line that ends with a bare "…" (a word lost mid-sentence) is inside its
-// clause; a direct speech keeps rows of its own.
+// clause; a direct speech keeps rows of its own - but a one-line saying shares the row of the short narration
+// ("...:") that introduces it, as two-line proverbs mostly are.
 
 import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/layout-schema.ts";
 import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "41e3a187b1ba69a5f0fc67314fa0a408";
+const SOURCE_MD5 = "b02ed9eba1eece63cf8892cea9890dd4";
 
 /** Where a row must not end: after a line whose text ends so - named by its words, not its number. */
 const KEEP_WITH_NEXT: readonly string[] = [];
@@ -33,7 +34,9 @@ function rowBreak({ line, next, cost }: BreakContext): BreakCost {
     if (BREAK_AFTER.some(words => text.endsWith(words))) return "always";
     // A direct speech: its own rows - break after it closes, and before it opens after a full sentence.
     if (/["”]$/.test(text)) return "always";
-    if (/^["“]/.test(following) && /[.:!]$/.test(text)) return "always";
+    // ... but after a narration's ":" a saying that closes on its own line may share the row (a two-line proverb).
+    if (/^["“]/.test(following) && /[.!]$/.test(text)) return "always";
+    if (/^["“]/.test(following) && /:$/.test(text) && !/^["“][^"”]*["”]/.test(following)) return "always";
     // A line that ends with a dash leads to what follows it (a topic, then what is said of it).
     if (/[–—-]$/.test(text)) return cost + 100;
     // A bare "…" at the end (not "[…]"): a word lost inside the clause.

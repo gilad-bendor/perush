@@ -20,7 +20,7 @@ import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/
 import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "575dccbaaefbe6b1747b454ad89045f2";
+const SOURCE_MD5 = "9a29a7af278c6b5d99c6c8d98c36f2c5";
 
 /** What ending a row after a line costs: the default (punctuation). */
 function rowBreak({ cost }: BreakContext): BreakCost {

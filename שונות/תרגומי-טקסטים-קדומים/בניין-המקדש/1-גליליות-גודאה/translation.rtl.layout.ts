@@ -16,7 +16,7 @@ import { translationLayout, type BreakContext, type BreakCost } from "../../layo
 import { lineSimilarity } from "../../layout/numbered-lines.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "735fe262c1aaa05fc15535a1cd1c70c0";
+const SOURCE_MD5 = "bd2cf5a8856caf116fd5990a0558cd15";
 
 /** A row must not end after a line whose words end so (the words as plainWords() gives them). */
 const KEEP_WITH_NEXT: readonly string[] = [

@@ -21,7 +21,7 @@ import { translationLayout, type BreakContext, type BreakCost, type NumberedLine
 import { endsSentence } from "../../layout/rows.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "f7e0ad38a31092c908b4e227df36253c";
+const SOURCE_MD5 = "52ac06283adc876b5ba99683f820b4a0";
 
 /** A couplet starts at a line whose words begin so (the line before it ends a unit). */
 const PAIR_START: readonly string[] = [

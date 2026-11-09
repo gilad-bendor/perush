@@ -11,7 +11,7 @@ import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/
 import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "ae3aafed67da595bb6564cf51789ee90";
+const SOURCE_MD5 = "8595bca0f2b8472d64754c4672d42c2e";
 
 /** Where a row must not end: after a line whose text ends so - named by its words (no markup, no vowel points). */
 const KEEP_WITH_NEXT: readonly string[] = [
@@ -24,7 +24,7 @@ const KEEP_WITH_NEXT: readonly string[] = [
 /** Where a row must end: after a line whose text ends so. */
 const BREAK_AFTER: readonly string[] = [
     "אדוני בניתי,",          // the dedication: "(when) Nanna's house ... I built," | "and the Magan ship ... I dedicated to him."
-    "לצלם אור־נמה:",         // "for Ur-Namma's statue:" | the list of offerings
+    "לפסל אור־נמה:",         // "for Ur-Namma's statue:" | the list of offerings
     "על גדת כל הנהרות,",     // "on the banks of all the rivers," | "offerings [...] of first fruits ... I offered there."
     "הקרבתי שם.",            // ... | "gardens I planted there, ... the king's chief gardener received (them)."
     "לידם? השבתי.",          // "... I returned to them." | "the seafaring trade, the chief of sailors, the herdsman - ..."

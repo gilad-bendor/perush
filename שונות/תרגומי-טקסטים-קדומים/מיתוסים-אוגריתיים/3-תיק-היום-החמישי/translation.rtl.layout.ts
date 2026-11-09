@@ -19,7 +19,7 @@ import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/
 import { translationLayout, type BreakContext, type BreakCost } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "8470950e46f49465efac9156e5f15bf8";
+const SOURCE_MD5 = "f4c4758aadd54f1459aaf249329aac72";
 
 /** A line's text without footnotes and "(?)" marks. */
 const bare = (t: string) => t.replace(/\[\^[^\]]*\]/g, "").replace(/\(\?\)/g, "").trim();

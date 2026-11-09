@@ -25,7 +25,7 @@ import type { FileLayout, LayoutOfFile } from "../../../../_RTL-EDITOR/src/html/
 import { translationLayout, type BreakContext, type BreakCost, type NumberedLine } from "../../layout/translation-layout.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "c4a80d5ddb196412618060f8b8face4e";
+const SOURCE_MD5 = "aaf45fd57ebb6af3f5ae79fba5d9d646";
 
 /** A line's words: no footnotes, markup or vowel points (the maqaf kept). */
 const plainWords = (t: string) => t.replace(/\[\^[^\]]*\]/g, "").replace(/[֑-ֽֿ-ׇ]/g, "").replace(/[*_]/g, "").replace(/\s+/g, " ").trim();

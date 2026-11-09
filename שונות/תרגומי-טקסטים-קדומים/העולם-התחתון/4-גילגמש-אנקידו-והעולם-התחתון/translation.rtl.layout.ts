@@ -15,7 +15,7 @@ import { translationLayout, type BreakContext, type BreakCost } from "../../layo
 import { lineSimilarity } from "../../layout/numbered-lines.ts";
 
 // The MD5 of translation.rtl.md as this layout was made for it.
-const SOURCE_MD5 = "f0e16bbc8a9bf41ec38680f331e27bf7";
+const SOURCE_MD5 = "80521d679cb2b0163e60093c3541b14e";
 
 /** A row must not end after a line whose words end so (the words as plainWords() gives them). */
 const KEEP_WITH_NEXT: readonly string[] = [
@@ -29,7 +29,7 @@ const BREAK_AFTER: readonly string[] = [
     "כאשר אנקי אל הארץ הפליג –",          // 16 (and 59, 103): the "when" clauses end; the stones (17-20) begin
     "גלגמש לאנקידו דבר השיב:",            // 180: the formula alone; "if you go down ... / advice I give ... / a word I say ..." (181-183) one row
     "אם נינאזו השוכבת –",                 // 199-200: "the sleeping one, Ninazu's mother -" a row; her shoulders / her breast (201-202) the next
-    "זקנות כלבה – בוכים.",                // U60.13: the mourning ends; "when he said - / pushed the son of Girsu - / 'drink pure water!'" a row
+    "זקנות כולבה – בוכים.",                // U60.13: the mourning ends; "when he said - / pushed the son of Girsu - / 'drink pure water!'" a row
 ];
 /** A row must start at a line whose words begin so. */
 const BREAK_BEFORE: readonly string[] = [

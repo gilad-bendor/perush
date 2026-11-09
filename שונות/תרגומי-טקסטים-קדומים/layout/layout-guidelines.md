@@ -235,3 +235,4 @@ And beyond the single break:
   - Give `compare --with=` and `--layout=` an absolute path: a root-relative path made `compare` silently compare against something else.
   - Generated translations (Vedic, Hesiod, Ugaritic, the dossiers) turn OBSOLETE on every rebuild.
   - An in-place word edit can silently orphan a named exception (Ishtar's "הנאד" → "החמת"). When updating an OBSOLETE file's `SOURCE_MD5`, check that every name still matches.
+- 2026-11-09, the post-footnotes update (15 OBSOLETE files): word edits orphaned two names again (כֻּלַּבָּה → כּוּלַבָּה, צלם → פסל) - grep each edited word in the module. Proverbs: a narration ending `:` shares its row with a saying that closes on its own line (a two-line proverb); a longer speech still starts a row of its own.
