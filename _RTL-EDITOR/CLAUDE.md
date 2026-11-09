@@ -57,6 +57,8 @@ later), which runs the TypeScript as it is - there is no build step.
 - In the editor a footnote is followed by Cmd+click (Ctrl+click off macOS): a reference selects its note, the note's
    `[^a]` its reference - and hovering with Cmd over the `[^a]` of a note referred to more than once offers them all, `➀ ➁ ➂`.
    See "Footnotes in the editor" below
+- The scrollbar carries a coloured mark for every place of interest in the whole file, as WebStorm's does: Find's
+   matches, the selection's matches, TODOs, footnote mistakes. See "Marks in the scrollbar" below
 
 ## Setup
 
@@ -128,6 +130,7 @@ layout"), and every edit of one - or of the translations' layout code - would re
 - `public/src/tables.js` - Table parsing/formatting, shared by the browser and the server
 - `public/src/links.js` - Markdown-link parsing/resolution, behind Cmd+click-to-open
 - `public/src/footnotes.js` - The footnotes of the editor's text - references and notes - behind Cmd+click-to-follow
+- `public/src/scrollbar-marks.js` - The marks in the scrollbar: a strip drawn over it, from the sources it is given
 - `public/src/edit-locations.js` - The edit locations behind Cmd+Shift+Backspace
 - `public/src/pseudo-tags.js` - Which pseudo-tags are void, shared by the browser and the server
 - `public/src/hebrew-search.js` - What a plain Find matches in Hebrew text (niqqud, precomposed letters, shin/sin)
@@ -1296,6 +1299,31 @@ The page and the PDF have their footnotes from markdown-it (see "Footnotes"); th
   whose anchor is out of the scroller's visible area, which in an RTL file leaves out the line's right edge (it takes
   the gutter to be on that side), and the hover tooltips' host drops the `clip: false` that turns the test off. The
   pointer may cross from the marker onto the bar - it stays up 300 ms after the pointer left either.
+
+### Marks in the scrollbar
+
+Every place the eye looks for in a file gets a short coloured bar across the scrollbar, at the height its line has in
+the whole document - as WebStorm does. `scrollbarMarks()` in `public/src/scrollbar-marks.js` draws them, knowing
+nothing of what they are; `scrollbarMarksExtension` in `markdown-editor.js` lists the *sources*, each a colour, a
+priority (the higher wins where two meet), the document offsets it marks, and when they may have changed:
+
+| Source | Colour | Marks |
+|---|---|---|
+| Footnote mistakes | red | a reference to an undefined note, the `[^a]` of a note nothing refers to |
+| Find | orange | every match, while the panel is open - `searchMatcher()`'s, the ones it counts |
+| The selection's matches | green | as `highlightSelectionMatches()` (basicSetup) shows them: one non-empty selection of up to 200 characters |
+| TODO | blue | every `TODO` |
+
+- **The whole document, not the screen.** CodeMirror decorates only the visible lines, so every source scans the text
+  itself. A line's height is CodeMirror's (`lineBlockAt()`) - an estimate for a line never drawn - mapped from the
+  scrolled content's height onto the track's.
+- **A canvas laid over the scrollbar** (`.cm-scrollbar-marks`, `pointer-events: none`): the scrollbar is the browser's
+  own, and nothing can be drawn into it. The strip is the scrollbar's width, or 8px over the text's edge where the
+  scrollbar is an overlay that takes no room (macOS's default - and always headless Chromium's). Clicks go through to
+  the scrollbar; a mark itself is not clickable.
+- Redrawn in CodeMirror's measure phase, on any change of a source, of the text, or of the heights. At most 5000 marks
+  a source.
+- A new kind of mark is one more source in the list.
 
 ### Mixed-direction lines
 

@@ -1,4 +1,4 @@
-import { SearchQuery, closeSearchPanel, findNext, findPrevious, getSearchQuery, replaceAll, replaceNext, search, selectMatches, setSearchQuery } from "@codemirror/search"
+import { SearchQuery, closeSearchPanel, findNext, findPrevious, getSearchQuery, replaceAll, replaceNext, search, searchPanelOpen, selectMatches, setSearchQuery } from "@codemirror/search"
 import { EditorView, basicSetup } from 'codemirror';
 import { keymap, ViewPlugin, Decoration, MatchDecorator, Direction, gutterLineClass, GutterMarker, runScopeHandlers, showTooltip } from '@codemirror/view';
 import { markdown, insertNewlineContinueMarkupCommand, deleteMarkupBackward } from '@codemirror/lang-markdown';
@@ -16,6 +16,7 @@ import { footnoteAt, parseFootnotes, referenceNumeral, referencesTo, unreference
 import { isVoidPseudoTag } from "./pseudo-tags.js";
 import { hebrewSearchPattern } from "./hebrew-search.js";
 import { EditLocations } from "./edit-locations.js";
+import { MAX_MARKS_PER_SOURCE, scrollbarMarks } from "./scrollbar-marks.js";
 /** @typedef {import('../../src/server.ts').FileData} FileData */
 
 
@@ -545,6 +546,7 @@ export class MarkdownEditor {
             listLinePlugin,
             markdownLinkPlugin,
             footnotesExtension(),
+            scrollbarMarksExtension,
             inlineCodeEmphasisPlugin,
             todoPlugin,
             tableLinePlugin,
@@ -2345,6 +2347,59 @@ function footnotesExtension() {
         }),
     ];
 }
+
+// The marks in the scrollbar (scrollbar-marks.js): what the eye looks for in the text, over the whole of it. Each
+// source marks what the text shows highlighted - but where the text marks only what is on the screen, these look at
+// the whole document. A higher priority wins where two meet.
+const scrollbarMarksExtension = scrollbarMarks([
+    {
+        // TODO - as todoPlugin marks it.
+        color: '#2f80ed',
+        priority: 0,
+        positions: (state) => [...state.doc.toString().matchAll(/\bTODO/g)].map(match => /** @type {number} */ (match.index)),
+        changed: (update) => update.docChanged,
+    },
+    {
+        // What the selection's text matches elsewhere - as basicSetup's highlightSelectionMatches() shows it: one
+        // non-empty selection range, of at most 200 characters, matched exactly.
+        color: '#4caf50',
+        priority: 1,
+        positions: (state) => {
+            const { ranges, main } = state.selection;
+            if (ranges.length > 1 || main.empty || main.to - main.from > 200) return [];
+            const text = state.doc.toString(), query = state.sliceDoc(main.from, main.to), found = [];
+            for (let at = text.indexOf(query); at >= 0 && found.length < MAX_MARKS_PER_SOURCE; at = text.indexOf(query, at + 1)) {
+                found.push(at);
+            }
+            return found.length > 1 ? found : [];
+        },
+        changed: (update) => update.docChanged || update.selectionSet,
+    },
+    {
+        // The Find panel's matches, while it is open - the very matches it counts (searchMatcher()).
+        color: '#f29900',
+        priority: 2,
+        positions: (state) => {
+            const query = getSearchQuery(state);
+            if (!searchPanelOpen(state) || !query.valid) return [];
+            const matcher = searchMatcher(query);
+            const matches = matcher.matchAll(state, MAX_MARKS_PER_SOURCE) ?? matcher.matchAll(state, Infinity) ?? [];
+            return matches.map(match => match.from);
+        },
+        changed: (update) => update.docChanged || searchPanelOpen(update.startState) !== searchPanelOpen(update.state)
+            || !getSearchQuery(update.startState).eq(getSearchQuery(update.state)),
+    },
+    {
+        // Footnote mistakes - a reference to a note nothing defines, a note nothing refers to: red, as in the text.
+        color: '#d00000',
+        priority: 3,
+        positions: (state) => {
+            const { footnotes } = state.field(footnotesField);
+            return [...footnotes.undefinedReferences.map(r => r.from), ...unreferencedDefinitions(footnotes).map(d => d.markerFrom)];
+        },
+        changed: (update) => update.docChanged,
+    },
+]);
 
 // Marks every TODO in the text (.cm-todo: bold, on yellow), so it is hard to miss.
 const todoMatcher = new MatchDecorator({

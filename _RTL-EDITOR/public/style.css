@@ -235,6 +235,13 @@ body {
 
 }
 
+/* The marks in the scrollbar - see scrollbar-marks.js. Laid over the scrollbar, every mouse event going through to it. */
+.cm-scrollbar-marks {
+    position: absolute;
+    pointer-events: none;
+    z-index: 3;
+}
+
 /* RTL cursor/selection offset fix: see ViewPlugin in markdown-editor.js (rtl scrollbar fix) */
 
 .loading {
