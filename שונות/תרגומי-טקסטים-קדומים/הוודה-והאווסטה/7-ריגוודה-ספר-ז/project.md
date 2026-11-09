@@ -592,5 +592,54 @@ forcefully"); 7.27.2c (the *vícetas* pun), 4d (*abhívītā* "enclosed"); 7.28.
 - A name regex on the folded text catches verb forms of the same letters (*bharate* / Bharata): test every name regex on
   the commonest verbs of its root.
 
+## Review of part 3 (RV 7.20–7.31; independent reviewer)
+All 316 pādas read against the Zurich text and morphology (`data`), with `tr` and Jamison where a line was in doubt;
+three scripts: every Zurich form has its פירוק segment and every פירוק Hebrew stands in its line (no misses), and the
+corpus `lexmap` grouped lemma → Hebrew and Hebrew → lemma for every lemma of the part. **15 lines changed** (with their
+פירוק / notes), one note corrected, three intros aligned. The draft is careful: its moods (subjunctive → future,
+optative → `נא`, *mā́* + injunctive, the imperatives vocalized) and its Jamison readings are almost everywhere right;
+the slips are of the kinds found in parts 1–2.
+- **One Hebrew for two lemmas (consistency, 5 lines):**
+  - 7.20.7c *dūrám* `רחוק` → `הרחק`: `רחוק` is *āré*'s (7.22.6c, 7.25.2c); `הרחק` as RV 10.16.9a *dūrám*.
+  - 7.21.9c *samīké* `בהתנגשות` → `בעימות`: `התנגשות` is *samŕ̥ti*'s (RV 1.32.6c, the dossier) and *sám √r̥*
+    `התנגש` (7.25.1b).
+  - 7.30.3b, 4c *upamá* `העליונה` / `העליון` → `העילאית` / `העילאי`: `עליון` is *paramá*'s (RV 10.129.7c, 7.5.7a, AB,
+    KU).
+  - 7.31.6a *sapráthas* `רחב` → `נרחב`: `רחב` is *urú*'s (7.5.6d); *práthas* is the family of *pr̥thú* `נרחב`
+    (7.5.8d). Intro 7.31 (title and quotation) aligned.
+- **One lemma with two Hebrew (consistency, 2):** 7.27.1d *gómati* `עשירת־הפרות` → `בעלת־הפרות` (*gómant*
+  `בעל־פרות`, 7.23.6c, 7.27.5c; intro aligned); 7.31.6c *yujā́* `השותף לרתמה` → `שותף־הרתימה` (7.1.13c).
+- **Fidelity / mood (5 lines):**
+  - 7.30.3c *ní … sīdat* (injunctive in a chain of subjunctives: 3a *vyuchā́n*, 3b *dádhaḥ*) `ישב` (reads as past) →
+    `יֵשֵׁב` (Griffith "shall sit", Grassmann "sitze", Elizarenkova "пусть займет").
+  - 7.31.7bc *ánu … sáhaḥ mamnā́te*: the verb stood twice (`את העוז הודו … / הודו, …`) and `הודו` at a line head reads
+    as the imperative `הוֹדוּ` (a Psalm's word) → 7b `בעוז – …`, 7c `הִכִּירוּ, …`; *ánu √man* `הכיר ב־`. Intro 7.31
+    aligned (`הכירו בעוזו`).
+  - 7.31.5b `אַל תכניע` → `(ואַל) תכניע`: *mā́* stands once, in 5a.
+  - 7.27.4a *nū́ cit* `לעולם (לא)` → `לעולם לא`: "never" is the particle's meaning, as 7.20.6a, 7.22.8a.
+- **Ambiguity of the unvocalized line / register (3):** 7.26.4b *taráṇi* `החש` → `הֶחָשׁ`; 7.31.10c *cara* `נדוד` (reads
+  as the noun) → `נְדוֹד`; 7.30.1d adverbial *máhi* `בגדול` (slang "big-time") → `מאוד` (Jamison: "greatly").
+- **Note:** 7.21.5d, the Ezek 16:17 parallel: Ezekiel accuses Jerusalem herself, not "others" – the note now says so.
+- **Checked and kept:** 7.21.5d *mā́ śiśnádevā ápi gur r̥táṃ naḥ*: prohibitive *mā́* + aor. injunctive 3 pl., the
+  bahuvrīhi "whose god is the phallus", *ápi √gā* "go into" – the line `אַל – אֵלֶּה שאֵלָם הוא האבר – יחדרו אל
+  הסדר שלנו` is exact (Geldner "Phallusverehrer … eindringen", Elizarenkova "членопоклонники не просочатся"), and
+  `אבר` is a fair decent word for *śiśná*. 7.23.3c *ví bādhiṣṭa syá ródasī mahitvā́*: aor. injunctive middle,
+  "pressed apart" (Geldner "drängte … auseinander", Elizarenkova "раздвинул") – `הוא לחץ לשני עברים` is right, no
+  "firmament", no `הבדיל`; the Gen 1:7 [divergence] is sound. Also kept: 7.24.2a *dvibárhāḥ* `כפולת־העוצמה` agreeing
+  with *mánas* (Jamison); 7.24.4c √*vr̥j* `נוטה` by sense (`שזר` is the hymn's "twisting"); 7.25.2c *śáṃsa* `קילוס`
+  of the reviler (one Hebrew over sense; Jamison "pronouncement"); 7.30.4b *stávanta* passive (Geldner); 7.31.12b
+  *dadhire* `העמידו` (not `שמו … מלך`, Deut 17:15).
+- `build RV7.20-31`; `verify RV7.20-31 --strict`: 0 problems, 0 repeated-line differences; `check_bible_quotes.py` on the
+  36 annotated, intro and generated files: 0 problems.
+- **For the coordinator (near-synonyms or cross-part collisions, left for the harmonization):**
+  - *turá* `נמרץ` (§11.12, binding; 7.2.11b, 7.22.5a) is also *yahvá*'s (7.6.5c, 7.8.2b, part 1): a new collision.
+  - *vrajá* `מכלאה` (7.27.1d) against part 1's *pā́thas* `המכלאה` (7.4.9c, 7.5.7b): *vrajá* is the real cattle-pen;
+    *pā́thas* ("place, station") should move.
+  - *sudā́nu* (7.31.2a) and *sudátra* (7.8.3c) both `טוב־המתנות`; √*kr̥p* `התחנן` (7.20.9b) against √*nāth*
+    `המתחנן` (RV 10.34.3b); *sūktá* `מזמור` (7.29.3a) against RV 10.14.4c *mántra* `מזמורים`; *jaraṇā́* `זקנה` against
+    RV 10.18.6a *jarás*; abhí √*bhū* `היה עליון` (7.21.6a) shares `עליון` with *paramá*.
+  - Book-wide shared words met here: *vŕ̥ṣan* / *vr̥ṣabhá* `פר`; *bhū́ri* / *purú* `רב`; *jána* `עמים` (7.30.2c, as
+    7.16) beside *carṣaṇí* `עמים`.
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
