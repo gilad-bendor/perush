@@ -1114,5 +1114,171 @@ corrected, one intro aligned.
   - √*car* has `נדד` (7.46.3b, 7.55.6a) and, with *úpa*, `סוּר` (7.46.2c); *úd* √*car* `עלה` (7.55.7b): preverb splits,
     left as they are.
 
+## RV7.56–7.63 (part 6: the Maruts; Mitra–Varuṇa and Sūrya; translator 6, Round 7 run 1)
+
+### Scope
+RV 7.56–7.63: 8 hymns, 299 pādas – the Maruts 7.56 (78: stanzas 1–11 Dvipadā Virāj, two pādas each in the base; 12–25
+triṣṭubh), 7.57 (28), 7.58 (24), 7.59 (45: 1–6 bṛhatī / satobṛhatī, 7–8 triṣṭubh, 9–11 gāyatrī, 12 anuṣṭubh); Mitra–
+Varuṇa with Sūrya 7.60 (48), 7.61 (28), 7.62 (24), 7.63 (24). One annotated file and one intro per hymn; `build
+RV7.56-63` generated the clean files.
+
+### Sources consulted
+- Base: VedaWeb Zurich text and morphology (`data`); `mw` / `gra` for the hapaxes.
+- After drafting each hymn: `tr` (Griffith quoted from `tr` only; Geldner a few words) and Jamison's commentary
+  (`VII.56–104-9-25-26.txt`: her own notes on 7.56–59, her notes "on JPB" for 7.60–63), cited where it discusses a
+  stanza; her readings adopted with attribution: 7.56.4b *ū́dhaḥ* acc. ("what Pṛśni bore as udder"), 7.56.15a *stutá* a
+  participle, 7.56.15d *nū́ cid … anyáḥ* a negative indefinite, 7.56.18b *gr̥ṇāná* passive, 7.56.20ab *bhŕ̥mi* a second
+  object, 7.57.3a *anyé* = the other gods, 7.57.5a *raṇanta* preterital, 7.58.3cd the flock as subject, 7.59.6a
+  *sádatā vitā́* (Narten), 7.59.8b *tiráś cittā́ni* "at cross-purposes", 7.60.1a *ánāgāḥ* nom. sg. (with a double
+  reading kept open), 7.60.9a *áva* √*yaj* "rid by sacrifice", 7.61.1d *manyú* "anger", 7.61.3d *yatáḥ* acc. pl. (the
+  spies), 7.61.5d *acít* "the unperceiving" (Scarlata), 7.62.2b *étaśa* pl. "steeds" / sg. the name.
+- Binding precedents: renderings §5.5, §11.10–§11.14, the parts 1–5 Decisions / Proposals and the reviews of parts 1–5
+  (`freq RV7.56-63`, `lexmap`, `grep --all`); the Old Avestan cognate list (§11.12, last bullet).
+- Bible verses printed before quoting (`check_bible_quotes.py --show`): Prov 15:3, Ps 104:2, 22, 23, Isa 34:4.
+
+### Decisions
+- **The Marut vocabulary (new, for the later Marut and Rudra lines):** *márya* `בחור` (*yúvan* keeps `צעיר`);
+  *sánīḷa* `בן קן אחד`; *ví* √*añj* `קישט` (*vyàkta* `מקושט`), *añjí* `קישוט`; √*piś* `עיטר` (as *péśas* `עיטור`;
+  *viśvapíś* `מעוטר־הכל`; 7.18.2c `קשט` is the older split); *śúbh* `נוי`, √*śubh* mid. `התנאה`, *śóbhiṣṭha* `הנאים
+  ביותר` (`פאר` / `פיאר` avoided: RV 10.14.1d *duvasya* `פאר`); *khādí* `צמיד`; *niṣká* `ענק`; *rukmá* `עדי־זהב`
+  (precedent); *didyú* = *didyút* `רומח`; *śárdha* / *śárdhas* `גדוד`; *gaṇá* `להקה`; *dhúni* `שואג`; *múni* `משתגע`
+  (the RV's ecstatic; MBh's sage `החכם` a split by period); *haṃsá* `אווז`; *sākamúkṣ* `המזלף־יחד`; *dhū́ti* `מנער`,
+  √*kṣud* `טלטל`; *yā́ma* `נסיעה`, *yā́man* `מסע` (both need `[היתר שם: יָמָה]`: the Yama regex catches *yāmam*,
+  *yāman*); *gr̥hamedha* / *gr̥hamedhī́ya* `זבח־הבית`; *sā́ṃtapana* `המלהטים`; *mā́ruta* `מַרוּטִי` (vocalized).
+- **Seeing and hiding (7.56–63):** √*cit* `הבחין` throughout (*cetár* `מבחין`, *nicetár* `בוחן`, *acít* `חסר־ההבחנה`,
+  caus. `הביא לידי הבחנה`; *acetás* keeps `חסר־קשב`); *cákṣus* `עין`; *nr̥cákṣas* `צופה הגברים` (precedent),
+  *viśvácakṣas* `צופה־הכל`, *urucákṣas* `רחב־המבט`; *spáś* `מרגל`; *niṇyá* `נסתר`; *sasvár* / *sasvártā* `בחשאי`
+  (not `בסתר`: one root for *niṇyá*); *apīcyà* `טמון`; *ánimiṣ* `בלי מצמוץ`; *r̥jú* / *vr̥jiná* `ישר` / `עקום`;
+  *ánr̥ta* `אי־הסדר` (precedent); *drúh* `שקר` (the Avestan cousin rule: 7.16.8c `התרמית` predates it – for the
+  harmonization); *varuṇadhrút* `משקר־וַרוּנָה`.
+- **The sun (7.60–63):** *sū́rya* / *sū́ra* `שמש` (`שֶׁמֶשׁ` vocalized in the vocative); *úd* √*i* `עלה` (the opening
+  word of 7.61–63); *úd* √*sthā* `קם`, √*ruh* `עלה` (precedent); *harít* `הצהבהבה`, *étaśa* pl. `הסוסים המנומרים`, sg.
+  the name `אֵטַשָׁה`; *prasavītár* `מאיץ` (√*sū* `האיץ`, part 5); *cárman* `עור` (= *tvác* 7.59.11b: recorded split);
+  sám √*vyac* `קיפל`; *ártha* `יעד`, *dūréartha* `רחוק־היעד`; √*dī* 2 "fly" `דאה` (√*dī* 1 keeps `האיר`).
+- **Escapes the gates required (recorded in each entry):** `[היתר שם]` for *yā́mam* / *yā́man* (Yama), *bhāgá* (Bhaga),
+  *vr̥trá* "obstacle" (7.58.4c), *mā́ruta* (preventive); `[היתר שער: בטובות]` for *vasavyà* 7.56.21c – the `טוב`
+  licence reads *vasu* / *vasv* but not *vasavy* (a derivative of *vásu*; 7.37.3d passed only by another word).
+- **Gate hits fixed:** `בשבתו` (7.56.18a, the root שבת) → `לאחר שישב`. Every gated word of the part checked against its
+  own source token: `רוח` (*vā́ta*-, *vāyú*), `חושך` (*támas*), `טוב` (*su-*, *bhadrá*, *vásu*, *vasavyà*), `אדם`
+  (*puruṣátā*, 7.57.4b only), `אדמה` (*dyā́vābhū́mī*), `מזבח` (*védi*) – no false licence.
+- **Repeated pādas:** 7.56.25a–d copied from 7.34.25a–d; 7.57.4b from RV 10.15.6d `על אשמה שנעשה לכם כדרך האדם.`;
+  7.62.3bc from 7.39.7bc / 7.40.7bc; first copies fixed here: 7.60.12a–c (= 7.61.7a–c: `ההעמדה־בראש הזאת, אֵלִים, לכם,
+  / בזבחים, מִיטְרָה וְוַרוּנָה, נעשתה. / את כל המעברים הקשים – העבירו אותנו מעבר (להם);`), 7.62.6a–c (= 7.63.6a–c:
+  `עתה, מִיטְרָה, וַרוּנָה, אַרְיַמַן – לנו, / לעצמנו, לעולל – ישימו מרווח; / קלים לדריכה יהיו לנו כל השבילים
+  הטובים;`). F6 in all 8 hymns. Similar lines noted for the next parts: 7.56.22b ≈ 7.70.3b, 7.57.4d ≈ 7.70.5d, 7.58.3d ≈
+  7.84.3d, 7.63.5c ≈ 7.66.7a.
+- **7.59.9–12 marked as a later addition** in the header, the section titles (`פסוקי הסָאקַמֵדְהָה – תוספת`, `פסוק
+  טְרְיַמְבַּקָה – תוספת`), the notes and the intro: 9–11 Sākamedha verses (Jamison), 12 the *tryambaka* verse in
+  another metre (anuṣṭubh), addressed to Rudra, repeated in the Yajurveda Saṃhitās (VS 3.60; TS 1.8.6) – the tradition
+  treats it as an appendix; today the *mahāmr̥tyuñjaya* mantra. *Tryàmbaka* transcribed `טְרְיַמְבַּקָה`; *urvāruká*
+  `דלעת`; *bándhana* `קשר`; *mr̥tyú* `מָוֶת` (vocalized `מִמָּוֶת`).
+- **Readings against the literature:** 7.56.10b √*vaś* "desire" kept with Zurich and Geldner (Jamison √*vāś* "bellow" in
+  the note); 7.61.5a *ámūrā víśvā* as masc. duals with Zurich / Geldner (Jamison: fem. pl. with *imā́ḥ*, noted);
+  7.60.10a–d the trembling "we" supplied in `( )`.
+
+### Open decisions for the user
+- 7.61.5 – who are the "deceits" (*drúhaḥ*) that follow men's untruths? The Hebrew renders the words (`השקרים`) and the
+  note gives Jamison's / Brereton's reading (Mitra and Varuṇa's invisible spies); a reader may take it as the gods'
+  own "deceits".
+- *múni* `משתגע` (7.56.8b) – the rhyme with `שואג` and the RV sense ("ecstatic") against the later "sage".
+- *cárman* / *tvác* both `עור`.
+
+### Progress log
+- Drafted hymn by hymn (7.56 → 7.63), each saved, `fill`ed and `verify`ed before the next, with the part 4–5 spec
+  assembler (`gen.py`, copied to my own scratch folder) and the Zurich tokens counted per pāda (the Dvipadā Virāj
+  stanzas of 7.56 are two pādas each in the base: stanza 6 re-cut).
+- Pass (a) fidelity: all 299 lines re-read in the generated files against the base; 7.56.17c, 18a reworded.
+- Pass (b) consistency: the lemma ↔ Hebrew map of the part against every drafted file, both directions; 10 lines
+  changed – *sám* √*han* `התנגש` → `התכתש` (7.56.22a: `התנגשות` is *sámr̥ti*, 1.32.6c), *samāná* `אחד` → `משותף` (7.57.3d),
+  *radhrá* `חלש` → `עלוב` (7.56.20a: `חלש` is *adhrá*), *sasvár(tā)* `בסתר` → `בחשאי` (7.58.5c, 7.59.7a, 7.60.10a),
+  *ārā́t* `מרחוק` → `ממרחקים` (7.58.6c: `מרחוק` is *dūrá*), *úd* √*sthā* `עלו` → `קמו` (7.60.4a), *gādhá* → `מעברה`
+  (7.60.7c, as 7.18.5b), *viṣpitá* `מרחב` → `השתרעות` (7.60.7d: `מרחב` is *rájas*'s alone).
+- Pass (c) Hebrew: the 8 generated files read in sequence; `שָׂמִים` vocalized (7.56.19d, 7.60.8c: "heaven").
+- `build RV7.56-63`; `verify RV7.56-63 --strict`: **0 problems**, 0 repeated-line differences in the range;
+  `check_bible_quotes.py` on the 24 annotated, intro and generated files: 0 problems.
+
+### The text on its own terms
+- **Who are they?** (7.56.1–4): the Maruts open with a riddle; no one knows their births, only they themselves, and the
+  wise man who perceives the secret of Pṛśni's udder – the poet presents himself as that man.
+- **Individuals and a troop** (7.56.1–2, 7.57.6–7, 7.59.3): "all your names", "in your totality", "not even the last
+  of you" – Jamison's thread through the cycle.
+- **The poet's craft** (7.56.6, 8): each short line an etymological pair (`בנסיעה – הנוסעים`, `בנוי – הנאים`), and a rare
+  full rhyme *dhúnir múnir*.
+- **Ornament and weather** (7.56.11–13, 7.57.3): bracelets, gold on the chest, spears – the glitter of the troop is the
+  lightning in the rain; "dark-backed geese" are the storm clouds (7.59.7).
+- **The domestic rite of the Maruts** (7.56.14, 16; 7.59.9–11): the Sākamedha – the household offering, the "playful"
+  and the "scorching" Maruts.
+- **Fear and appeasement** (7.56.9, 17; 7.57.4; 7.58.5): the cattle-slaying, man-slaying bolt; "if we sin against you
+  in human fashion"; "whether they were angered in secret or openly".
+- **The economy of the gift** (7.56.21; 7.57.7): "let us not lag behind at the sharing out"; gods help patrons, patrons
+  make the poets grow; rivals' sacrifices are a threat ("do not go elsewhere", 7.59.5).
+- **Land and conflict** (7.56.22–24): men clash over rivers, plants and clans; the tribe crosses waters to a good
+  dwelling.
+- **Death and its release** (7.59.12): to fall from death like a ripe gourd from its stalk – "not from immortality".
+- **The sun as the eye of the moral order** (7.60.1–3, 7.61.1, 7.63.1): it rises over "the still and the moving", sees
+  "the straight and the crooked" in mortals, counts the generations like herds and reports to Mitra and Varuṇa whether
+  men are "without offense" (7.60.1, 7.62.2).
+- **Gods who teach, not only punish** (7.60.5–7): they perceive "the great untruth" and cannot be deceived, yet bring
+  the unperceiving to perception and lead him through distress – "even in a rushing river there is a ford".
+- **Spies and deceits** (7.61.3–5): unwinking spies in field and settlement; invisible "deceits" that dog men's
+  untruths.
+- **The working day** (7.63.4): men, impelled by the sun, go to their goals and do their work.
+
+### Key parallels
+- 7.60.2d [equivalent] Prov 15:3 – the eye that watches the good and the evil of men; here the sun, eye of Mitra and
+  Varuṇa (shared motif; cf. Šamaš in the Mesopotamian corpus, 7.49.3b in part 5).
+- 7.63.4d [equivalent] Ps 104:23 – the rising sun sends men to their work (shared motif; the Egyptian Aten hymn, often
+  compared with Ps 104, is not in this folder).
+- (A note, not a tag) 7.63.1d the darkness "rolled up like a hide" beside the heavens stretched / rolled up as a
+  curtain or scroll (Ps 104:2, Isa 34:4): related imagery, different object.
+
+### Proposals for the shared renderings
+- **Words** (lemma → Hebrew, binding for Book 7 if accepted): *márya* `בחור`; *sánīḷa* `בן קן אחד`; *vyàkta* `מקושט`,
+  *añjí* `קישוט`; √*piś* `עיטר`, *viśvapíś* `מעוטר־הכל`; *śúbh* `נוי`, √*śubh* `התנאה`, *śóbhiṣṭha* `הנאים ביותר`;
+  *khādí* `צמיד`; *niṣká* `ענק`; *áṃsa* `כתף`; *vákṣas* `חזה`; *múni* `משתגע`; *krúdhmi* `זועף`; *sváśva* `טוב־הסוסים`;
+  *svāyudhá* `טוב־כלי־הנשק`; *iṣmín* `נחפז (?)`; *svapū́* `טיהור־מעצמו (?)`; *vā́tasvanas* `בעל קול הרוח`; √*vap* 2
+  `פיזר`; √*spr̥dh* `התחרה`; √*cit* `הבחין` (*cetár* `מבחין`, *nicetár* `בוחן`, *acít* `חסר־הבחנה`); *mithás* `זה … זה`;
+  *tr̥pát* `עד שָׂבְעָה`; *makṣú* `מהרה`; *hávīman* `קריאה`; *práyajyu* `הנזבח־ראשונה`; *sahasríya* `אלפי`; *dámya* `של
+  הבית`; *gr̥hamedha(-ī́ya)* `זבח־הבית`; *bhāgá* `חלק` (as *bhága*); *yakṣá* `מראה־פלא`, *yakṣadŕ̥ś* `בעל מראה־פלא`;
+  *harmyeṣṭhā́* `יושב־טירה`; *prakrīḷín* `שובב`; *payodhā́* `יונק־הלשד`; √*varivasy* `עשה מרווח`; *suméka* `מבוסס
+  היטב`; *gohán* / *nr̥hán* `הורג־הפרות` / `הורג־הגברים`; *sumná* `חסד`; *satrā́ñc* `מאוחד`; *ī́vant* `רב כל־כך`;
+  *ádvayāvin* `חסר־כפל־הלב`; *dvéṣas* `שנאה`; *gurú* `כבד`; *radhrá* `עלוב`; *bhŕ̥mi* `מתערבל`; *dātrá* `שי`; √*dagh*
+  (*paścā́t*) `פיגר`; *sám* √*han* `התכתש`; *yahvī́* `נמרצת` (= the rivers); *sā́ḷhar*, *sáhuri* `גובר`; *abhí* √*as* `היה
+  עליון`; *sukṣití* `דירה טובה`; *mā́ruta* `מַרוּטִי`; *útsa* `מעיין`; √*rej* caus. `הרעיד`; *anavadyá* `חסר־דופי`;
+  √*ran* `עלז`; *ŕ̥dhak* `הצידה`; √*gr̥* "wake" `העיר`; *śatín* `בעל־המאות`, *śatasvín* `בעל־מאות`; *sākamúkṣ* `המזלף־
+  יחד`; √*kṣud* `טלטל`; *dhū́ti* `מנער`; *avaṃśá* `חסר־הקורות`; *tveṣyà* `סערת־אימה (?)`, *tveṣín* `מאיים`;
+  *tuvimanyú* `רב־הכעס`; *ayā́s* `בלתי־נלאה`; *prá* √*as* `בלט`; *yuṣmóta* `הנעזר בכם`; *sasvár(tā)* `בחשאי`; *ārā́t*
+  `ממרחקים`; √*nī* `הוביל`; *caramá* `אחרון`; *pári* √*man* `התעלם`; *kāmín* `חושק`; *pipīṣu* `צמא־לשתות`;
+  *ghr̥ṣvirādhas* `צוהל־המתת`; *anyátra* `למקום אחר`; *ásredhant* `בלי כשל`; *somyá* (of things) `של הסוֹמָה`; *haṃsá*
+  `אווז`; *nī́lapr̥ṣṭha* `כהה־הגב`; *durhr̥ṇāyú* `רע־הזעם`; *cittá* `כוונה`; *práti* √*muc* `עטה`; *hánman* `מכה`;
+  *sā́ṃtapana* `מלהט`; *riśā́das* `אוכל־הזר (?)`; *svátavas* `תקיף־עצמו`; *sū́ryatvac* `עור־השמש`; *tryàmbaka*
+  `טְרְיַמְבַּקָה`; *sugándhi* `טוב־הריח`; *puṣṭivárdhana* `מגדל־השגשוג`; *urvāruká* `דלעת`; *bándhana* `קשר`;
+  *ánāgas* `חסר־אשמה`; *sthātár* `העומד`; *r̥jú* `ישר`; *vr̥jiná* `עקום`; *yuvā́ku* `שלכם`; *yūthá* `עדר`; *cetár* `מבחין`;
+  *dūḷábha* `שקשה להונותו`; *supáth* / *supátha* `שביל טוב`; *ánimiṣ* `בלי מצמוץ`; *pravrājá* `ערוץ`; *gādhá* `מעברה`;
+  *viṣpitá* `השתרעות`; *gopā́vant* `בעל־רועים`; *devahéḷana* `כעס־האֵלִים`; *áva* √*yaj* `סילק בזבח`, *ā́* √*yaj* `משך
+  בזבח`; *varuṇadhrút* `משקר־וַרוּנָה`; *pári* √*vr̥j* `עקף` (as 7.46.3b); *uloká* `עולם פתוח` (precedent); *sámr̥ti*
+  `הסתערות` (1.32.6c `התנגשות`: for the harmonization); *apīcyà* `טמון`; *sudhā́tu* `טוב־היסוד`; *puróhiti* `העמדה־בראש`;
+  *cákṣus* `עין`; *dīrghaśrút* `נשמע־למרחוק` (precedent); *r̥ṣvá* `נישא`; *spáś* `מרגל`; *mā́sa* `חודש`; *áyajvan*
+  `שאינו זובח`; *yajñámanman* `מהרהר־בזבח`; *acít* `חסר־הבחנה`; *samá* `שווה`; *étaśa* `הסוסים המנומרים` / `אֵטַשָׁה`;
+  *éva* `מהלך`; *prá* √*vac* `הכריז`; *dyā́vābhū́mī* `שמים ואדמה`; *héḷa* `כעס`; *prá* √*sr̥* `פשט`; √*śru* caus.
+  `השמיע`; *viśvácakṣas* `צופה־הכל`; *sā́dhāraṇa* `כללי`; *cárman* `עור`; sám √*vyac* `קיפל`; *prasavītár* `מאיץ`;
+  *rebhá* `רונן`; *ánu* √*mad* `קיבל תרועה`; *dūréartha* `רחוק־היעד`; √*dī* 2 `דאה`.
+- **Names** (in the files): Tryambaka `טְרְיַמְבַּקָה`, Etaśa `אֵטַשָׁה`.
+- **Formulas and repeated lines** (for the later parts): 7.60.12a–c (= 7.61.7a–c) and 7.62.6a–c (= 7.63.6a–c) as under
+  Decisions.
+- **For the harmonization:** *drúh* `שקר` here vs 7.16.8c `התרמית`; *sarvátāti* `שלמות` (7.57.7b, the cousin rule) vs
+  7.18.19b `כליל`; *sámr̥ti* `התנגשות` / `הסתערות`; *cárman* / *tvác* `עור`; *śatín* / *śatasvín`; √*muc* `שחרר` /
+  *práti* √*muc* `עטה`; the folding merges √*vaś* / √*vāś* and √*gr̥̄* / √*gr̥* in `lexmap`.
+
+### Lessons for the guidelines
+- **Test the gates on the Hebrew of the drafted words, not only the reserved ones**: `בשבתו` "in his sitting" hit the
+  שבת gate (the infinitive of ישב with a suffix); add `בשבתו` / `בשבתם` to the exempt words, or write `לאחר שישב`.
+- **Name regexes catch homograph stems in a new god's vocabulary**: the Maruts' *yā́ma* / *yā́man* "course" (Yama) and
+  *bhāgá* "share" (Bhaga) need escapes; the Yama regex could skip a long *ā* in the base (*yā́ma-*), if the folding kept
+  it.
+- **The `טוב` licence misses derivatives of *vásu*** (*vasavyà*): add `vasav` to it.
+- **A Dvipadā Virāj hymn has two pādas per stanza in the base**, though it reads as four short lines: count the Zurich
+  pādas before cutting the Hebrew.
+
 ## Parallels index
 (Generated from the הקבלה bullets by `../build_parallels_index.py`.)
