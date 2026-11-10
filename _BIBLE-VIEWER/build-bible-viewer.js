@@ -682,13 +682,13 @@ function encodeWordsWithStrongNumbers(wordsWithStrongNumbers) {
 // ----------------------------------------------------------------------------------
 
 function getSkeletonHtml() {
-    return fs.readFileSync('__bible-viewer.html', 'utf8')
+    return fs.readFileSync(path.join(__dirname, '__bible-viewer.html'), 'utf8')
         // Inline __bible-viewer.css
         .replace(
             /.*<!-- this will we auto-replaced: -->\n.*<link .*href="__bible-viewer.css">/,
             () => // prevent auto-replacements
                 '    <style>\n' +
-                fs.readFileSync('__bible-viewer.css', 'utf8').replace(/^/gm, '        ') +
+                fs.readFileSync(path.join(__dirname, '__bible-viewer.css'), 'utf8').replace(/^/gm, '        ') +
                 '\n    </style>\n'
         )
         // Inline __bible-viewer.js
@@ -696,7 +696,7 @@ function getSkeletonHtml() {
             /.*<!-- this will we auto-replaced: -->\n.*<script .*src="__bible-viewer.js"><\/script>/,
             () => // prevent auto-replacements
                 '<script>\n' +
-                fs.readFileSync('__bible-viewer.js', 'utf8').replace(/^/gm, '    ') +
+                fs.readFileSync(path.join(__dirname, '__bible-viewer.js'), 'utf8').replace(/^/gm, '    ') +
                 '</script>\n'
         );
 }
