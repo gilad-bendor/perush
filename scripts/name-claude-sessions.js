@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/env node
 
 // Give every recorded Claude session under "claude-sessions/" a descriptive title:
 //     claude-sessions/YYYY-MM-DD--HH-MM-SS.script.rtl.md

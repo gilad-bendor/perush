@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/env node
 
 // This script will read all the files `./פירוש/**/*.trl.md` and potentially fix them.
 

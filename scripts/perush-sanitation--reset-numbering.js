@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/env node
 
 // This will reset the naming of the files  ./פירוש/[sequence]-[book-name]-[from-location]-[to-location]-[free-text].rtl.md
 //                                                      |           |            |               |            |

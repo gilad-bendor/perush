@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/env node
 
 // Perform full sanitation by calling all `perush-sanitation--*.js` one after the other.
 

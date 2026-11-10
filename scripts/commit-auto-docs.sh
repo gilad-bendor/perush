@@ -4,24 +4,42 @@
 # The branch is kept at a *single* commit: each run amends it and force-pushes, so that the regenerated HTMLs and
 # PDFs never pile up in the repo's history (GitHub Pages needs only the latest version).
 #
-# It first shows where things stand - the last commit, whether origin has it, what changed since, and how long ago
-# an HTML or a PDF was last written (a few seconds ago: the editor's server may still be printing) - and, when there
+# It first rebuilds docs/bible-viewer.html (_BIBLE-VIEWER/build-bible-viewer.js), and then the HTML and PDF mirrors
+# with their indexes (_RTL-EDITOR's rebuild-whole-html-folder) - and stops if either fails.
+# It then shows where things stand - the last commit, whether origin has it, what changed since, and how long ago
+# an HTML or a PDF was last written (after the build above: the editor's server may still be printing) - and, when there
 # is anything to push, asks before pushing it: one key - Y(es), N(o), or R(echeck), which shows it all again and
 # asks again (to wait for the editor's server to finish writing, say).
 #
-# Usage: scripts/commit-auto-docs.sh [--yes]     (from any folder - or the "COMMIT-AUTO-DOCS" run configuration)
+# Usage: scripts/commit-auto-docs.sh [--yes|--no]     (from any folder - or the "COMMIT-AUTO-DOCS" run configuration)
 #        --yes   push without asking (needed when there is no terminal to ask in)
+#        --no    build and show where things stand - but commit nothing
 
-ASSUME_YES=false
+ANSWER=ask
 for arg in "$@" ; do
     case "$arg" in
-        --yes|-y) ASSUME_YES=true ;;
-        *) echo "Usage: $0 [--yes]" >&2 ; exit 2 ;;
+        --yes|-y) ANSWER=yes ;;
+        --no|-n) ANSWER=no ;;
+        *) echo "Usage: $0 [--yes|--no]" >&2 ; exit 2 ;;
     esac
 done
 
 REPO_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+
+echo "Building docs/bible-viewer.html..."
+"$REPO_ROOT/scripts/build-bible-viewer.sh" || { echo "The Bible viewer's build failed - nothing pushed." >&2 ; exit 1 ; }
+
+echo "Making sure docs/ is in place..."
 "$REPO_ROOT/scripts/ensure-docs-worktree.sh" || exit 1
+
+# The HTML pages, the PDFs and their indexes - every one missing or out of date. The RTL editor's server does the
+# same every 15 s, but it may not be running, or not have got to it yet - and then docs/index.html, say, would be
+# committed without the bible-viewer.html just built.
+echo "Building the HTML pages, the PDFs and their indexes (any missing or out of date)..."
+( cd "$REPO_ROOT/_RTL-EDITOR" && npm run --silent rebuild-whole-html-folder ) \
+    || { echo "The HTML/PDF mirrors' update failed - nothing pushed." >&2 ; exit 1 ; }
+BUILT_AT=$( date +%s )      # whatever is written after it, is written by someone else - the editor's server
+
 WORKTREE="$( dirname "$REPO_ROOT" )/$( basename "$REPO_ROOT" )-auto-docs"
 cd "$WORKTREE" || exit 1
 
@@ -79,12 +97,12 @@ show_state() {
         echo "  Changed since: nothing"
     fi
 
-    # How long ago an HTML or a PDF was last written - if just now, the editor's server is likely still at it.
+    # How long ago an HTML or a PDF was last written - if after the build above, the editor's server is at it.
     NEWEST="$( html_and_pdf_mtimes | sort -n | tail -1 )"
     if [[ -n "$NEWEST" ]] ; then
         AGE=$(( $( date +%s ) - ${NEWEST%% *} ))
         echo "  Last written: $( duration $AGE ) ago - ${NEWEST#* }"
-        (( AGE < 60 )) && echo "                (under a minute ago: the RTL editor may still be writing - pushing now may push half of it)"
+        (( ${NEWEST%% *} > BUILT_AT )) && echo "                (after this script's build: the RTL editor's server may still be writing - pushing now may push half of it)"
     fi
 }
 
@@ -100,8 +118,12 @@ if nothing_to_push ; then
     echo "Nothing to push: docs/ is as committed, and origin has it."
     exit 0
 fi
+if [[ $ANSWER == no ]] ; then
+    echo "--no: nothing committed."
+    exit 0
+fi
 
-if ! $ASSUME_YES ; then
+if [[ $ANSWER == ask ]] ; then
     if ! { exec 3</dev/tty ; } 2>/dev/null ; then
         echo "No terminal to ask in - run it with --yes to push." >&2
         exit 1
