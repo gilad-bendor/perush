@@ -4,7 +4,8 @@
 # The branch is kept at a *single* commit: each run amends it and force-pushes, so that the regenerated HTMLs and
 # PDFs never pile up in the repo's history (GitHub Pages needs only the latest version).
 #
-# It first shows where things stand - the last commit, whether origin has it, what changed since, and how long ago
+# It first rebuilds docs/bible-viewer.html (_BIBLE-VIEWER/build-bible-viewer.js) - and stops if that fails.
+# It then shows where things stand - the last commit, whether origin has it, what changed since, and how long ago
 # an HTML or a PDF was last written (a few seconds ago: the editor's server may still be printing) - and, when there
 # is anything to push, asks before pushing it: one key - Y(es), N(o), or R(echeck), which shows it all again and
 # asks again (to wait for the editor's server to finish writing, say).
@@ -22,6 +23,8 @@ done
 
 REPO_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 "$REPO_ROOT/scripts/ensure-docs-worktree.sh" || exit 1
+echo "Building docs/bible-viewer.html..."
+"$REPO_ROOT/scripts/build-bible-viewer.sh" || { echo "The Bible viewer's build failed - nothing pushed." >&2 ; exit 1 ; }
 WORKTREE="$( dirname "$REPO_ROOT" )/$( basename "$REPO_ROOT" )-auto-docs"
 cd "$WORKTREE" || exit 1
 
@@ -39,11 +42,12 @@ duration() {
 }
 
 # Every HTML and PDF file under docs/, as "<mtime in seconds> <path>" - BSD stat (macOS) or GNU (Linux).
+# Not bible-viewer.html: this script has just built it, so it would always look "just written".
 html_and_pdf_mtimes() {
     if stat -f %m / >/dev/null 2>&1 ; then
-        find docs -type f \( -name '*.html' -o -name '*.pdf' \) -exec stat -f '%m %N' {} +
+        find docs -type f \( -name '*.html' -o -name '*.pdf' \) ! -name bible-viewer.html -exec stat -f '%m %N' {} +
     else
-        find docs -type f \( -name '*.html' -o -name '*.pdf' \) -exec stat -c '%Y %n' {} +
+        find docs -type f \( -name '*.html' -o -name '*.pdf' \) ! -name bible-viewer.html -exec stat -c '%Y %n' {} +
     fi
 }
 
