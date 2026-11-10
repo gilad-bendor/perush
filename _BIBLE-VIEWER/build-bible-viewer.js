@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/env node
 
 /**
  * Builds docs/bible-viewer.html as a self-contained HTML file, accessible publicly via:

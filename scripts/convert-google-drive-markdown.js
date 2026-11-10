@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/env node
 
 // After downloading a Google-Doc as a Markdown file, run this script to convert it to a more suitable format for right-to-left text.
 // The created file's name will end with ".rtl.md"
