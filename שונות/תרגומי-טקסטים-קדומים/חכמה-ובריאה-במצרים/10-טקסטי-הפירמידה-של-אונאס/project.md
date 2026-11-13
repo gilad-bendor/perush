@@ -209,5 +209,178 @@ keys: 215.2 / 217.33 ≈ UN4 222.43 (`data` shows the similarity), 216.1 ≈ UN4
 - In the Pyramid Texts the AED's cut sometimes moves a word across Allen's line boundary (217.11 / 217.12 `jm`;
   217.32 vs Allen 160a; 218.6 / 218.7 `jyi̯`): keep the AED's cut in the Hebrew, and note Allen's in the הערות.
 
+## UN4 (PT 219–224)
+
+Round 8 run 1, translator 2 (2026-11-13). Files: `annotated-UN4.rtl.md`, `translation--intro-UN4.rtl.md`,
+`translation-UN4.rtl.md` (generated), `translation.rtl.md` (generated).
+
+### Scope
+The end of the burial chamber's **south wall** (PT 219, the litany, 219.1–219.110) and its **east wall** (PT 220–221,
+the crown spells; PT 222, the king rising and setting with the sun; PT 223, "stand, sit down to a thousand of bread";
+PT 224): 209 rows (`219.1` … `224.20`). Unas's own wall for every row except PT 224 (20 rows), which the TLA did not
+record from Unas's wall (it is there: B/E) and which is translated from Teti's copy (`{טטי}`, Teti's name kept).
+Preservation: Unas's wall nearly intact – restorations in 219.70, 219.74, 219.77, 221.7, 221.9–221.11, 222.1, 222.3–222.8,
+222.23, 222.25, 222.27. The text in a sentence: the dead king is presented to god after god as Osiris, "as he lives,
+this Unas lives", then made identical with Osiris in body, flesh and bones; he is crowned before the Red Crown, rises
+and sets with the sun into Atum's arms, and is called to stand up, sit down and eat.
+
+### Sources consulted
+- The base: AED-TEI through `egypt_tools.py data UN4` (TLA lemmas, morphology, German glosses); Allen 2013's lines
+  (printed by `data` / `allen`; a check only, never copied).
+- Rank 3: the TLA's German (`tr UN4`), read after each section was drafted (219; 220–221; 222–224). Allen 2005/2015 and
+  Faulkner 1969 only from memory, in a few words, never quoted.
+- Precedents: `lex` / `grep --all` for every recurring lemma (UN3, PT486, PT571, PT600, the Book of the Dead keys, HC,
+  AM, SI, TB, WE, MR).
+- Bible verses printed with `check_bible_quotes.py --show` before quoting: Gen 2:7, 2:23, 5:24, 9:2, 12:1, 15:4,
+  27:19, 31:7; Num 28:2; Deut 11:25; 2 Sam 1:10; 2 Kgs 2:11; Isa 52:2; Ezek 37:6; Amos 5:8; Ps 2:7, 2:9, 21:4, 24:7,
+  118:17, 132:18, 139:13; Gen 49:10; Job 3:3; Ruth 1:16 (printed and not used: Gen 2:5, Ps 24:9, 1 Kgs 22:4).
+
+### Decisions
+- **The litany frame (renderings §13.4.6), fixed on 219.1–219.4 and copied byte for byte** (only the god's name and
+  the kinship word change, as in the Egyptian):
+  `אָתוּם, בנך הוא זה, אוֹסִירִיס, אשר נתת לו *להחלים* ולחיות:` /
+  `חי הוא – חי אונאס זה; לא מת הוא – לא מת אונאס זה;` /
+  `לא כָּלָה הוא – לא כָּלָה אונאס זה; לא *השכים*? הוא – לא *השכים*? אונאס זה;` /
+  `*משכים*? הוא – *משכים*? אונאס זה.` Variants: `אחיך` (Isis, Seth, Nephthys, Thoth), `אביך` (Horus); the Enneads
+  `התשיעייה הגדולה / הקטנה, אוֹסִירִיס הוא זה, אשר נתתם לו …` (the Egyptian changes the order); Seth and Thoth passive
+  `אשר ניתן לו *להחלים* ולחיות – יעניש הוא אותך:`. The refrain appears 24 times; its deviations follow the wall:
+  219.11 (negation omitted by the carver), 219.42–219.43 and 219.46–219.47 (`Wnjs` without `pn`, the negation at the
+  line end: the AED cut), 219.70, 219.74, 219.77 (restorations). The dash keeps the bare juxtaposition `ꜥnḫ=f ꜥnḫ NN`
+  ("as he lives, NN lives") without adding words; "he" is Osiris (note at 219.2).
+- **rḏj** = `נתן` in both its senses: "give" (221.3–221.8, 223.10) and "cause, let" + sḏm=f = `נתן ל־` + infinitive
+  (219.1, 222.12–222.13; Gen 31:7 `וְלֹא נְתָנוֹ אֱלֹהִים לְהָרַע`). The draft's `הניח לו` (TB 5,3) was dropped: its plural
+  `הנחתם` trips the `חתם` loanword gate, and `נתן` is the verb's own sense.
+- **n sḏm=f** past (`לא מת`, `לא כָּלָה`), as UN3 decided; the TLA's future readings noted, not followed.
+- **nhp** (tla0) = `*השכים*?` / `*משכים*?` after HC 21's verb nhp `השכים` (and nhpw "dawn"); the TLA guesses
+  "lebensvoll sein"; the later pyramids have wḏꜥ "judge" here (noted at 219.3).
+- **sḏb** (tla150440, only in this litany) = `*להחלים*` (italic: "revive, recover"; TLA "aufleben").
+- **ski̯** = `כָּלָה`, vocalized (unvocalized `כלה` reads "bride").
+- **The crown spells**: n.t `הכתר־האדום` (NU7), Nzr.t `נֶסֶרֶת` (NU1, NU3), wr.t `הגדולה`, wr.t-ḥkꜣ.w `גדולת־הקסמים`
+  (after wr-ḥkꜣ.w `גדול־הקסמים`, NU3), jn `אִינִי`; ḥtp ḥr `נח על` (ḥtp = `נח`; the crown "rests" on the king and is
+  content with him); ꜥb.w "purity" (tla36740) `זוך` (NU7), ꜥb.w "impurity" (tla36300) `טומאה` (NU3 105.4 has `עבֵרה`
+  for a moral wrong: a sense split); šꜥ.t `בעתה` (PT486), snḏ `יראה`, kj.t `הוקרה`, mrw.t `אהבה`; ꜥbꜣ `שרביט` (UN3),
+  sḫm (sceptre) `שרביט־הסֶחֶם` (NU6), ds `מאכלת` (NU3), rwḏ `איתן` (PT600), zꜣ "protection" `חסות` (NU9), sẖkr `קישט`
+  (SI).
+- **Interjections, one each**: hꜣ `הוֹי` (formula), j `הוֹ` (UN3), **hj `הֵי`** (221.1–221.9, new), **jh `אִיהּ`** (223.2, new).
+- **PT 222**: ḫpr `תהיה` (future of `נהיה`), qꜣj `התרומם`, mꜣꜣ `חזה`, ꜥḥꜥ `עמד` (SI, also 223.3 `עמוד`), nḏr `לכד` (NU),
+  šzp `קיבל`, jꜣq `עלה` (UN3; the TLA's "beherrschen" in 222.13 kept in the note: `לעלות על` holds both), ḥtm `השלים`
+  (219.81, 222.17, 223.5; NU10 `מושלם`), ꜥw.t `מקל־הרועה`, ḫsf `יריב`, ḥzj `שיבח` (WE), šdj `חילץ` (UN3), fḫ `ניתק`,
+  jꜣb `נמנע`, sfḫ `התיר` (SI), wḏꜥ `הפריד` (PT571, NU5), wbn `זרח`, prj `יצא`, hꜣj `ירד`, wpj `פתח` (also the ritual
+  "opening of the mouth", 219.50), wn `פתוח` (NU3: a split with wpj in one Hebrew root; see Open decisions), šnj
+  `הקיף` / `מוקף`, ẖnw-ꜥ.w `חיבוק`, snkwj `אפל` (snkw `אפלה`, UN3), bꜣ.tj (stative) `בעל־בָּא` (NU3, NU4), sḫm.tj
+  `שליט`, jmj-rd `מעכב`, qbb `הצטנן` (UN3), jwr `הוֹרָה` (UN3), Jmn.tt `המערב`, ḥqꜣ-ꜥnḏ `חֶקָא־עַנְג׳`.
+- **PT 223–224**: ḫꜣ m tʾ `אלף לחם`, ꜣšr.t `צלי`, šbtjw `שתי צלעות`, pr nm.t `בית־ספסל־הטבח` (AM `ספסל־הטבח`),
+  tʾ-jtḥ `לחם־אִתֶח`, wsḫ.t `אולם` (BD), ḥtp-nṯr `קורבן־האל` (WE), ḥw.t-sr `בית־השר` (NU), mz `קרב` (PT600), ḥrj
+  `התרחק` (PT600), jz `קבר` (AM), mḏr `נטה`, jp "assign" `מנה` (UN3's jp "examine hearts" `פקד`: a sense split), nḫḫ
+  `*יאריך*`, ꜥꜣ "helper" `עוזר`; nḏ "protect" `הגן` (PT486 / PT600 have `שמר`, but zꜣw "beware" `הישמר` (AM) stands in the
+  same line 224.4); wdn `הקרבה`, sꜥḥ (noun) `הדר` (HC 91), ḫr.t `מחיה` (AM), nš `*גירש*` (MR E46; the TLA leaves 224.3
+  untranslated), ḏr "limit" `קץ` (SI; `גבול` is tꜣš's), wnḫ `הלביש` (NU4), jꜣ.t `תל` (HC, NU1), wḏ mdw n X `תצווה דבר
+  ל־X` (UN3 213.3), šmi̯ n=k `לך לך` (the ethical dative, as in Hebrew), ḥbs `בגד` (licensed), bꜣ "leopard skin"
+  `פרוות־נמר` (`עור` is gated to jnm / dḥr), ḫsdḏ `סינר־*תן*`, wḫꜣ.t `סנדל`, rḫs `שחט` (CH), jḥ `בקר` (TB), md(w)
+  "staff" `מטה` (NU7), nḥb.t `שרביט־הנֶחֶבֶּת` (the TLA: lotus-bud sceptre), ḥtp-ḏj-nswt `קורבן שהמלך נותן` (§13.3),
+  ḥtp-ḏj-Gbb `קורבן שגֶּבּ נותן`.
+- **Names fixed here** (first occurrence vocalized): Ḏdj.t `גֶ׳דִית`; Ꜥnḏ.t `עַנְגֶ׳ת`, Ꜥnḏtj `עַנְגֶ׳תִי`; Srq.t `סֶרְקֶת`
+  (§13.2); ḥḏ-pꜣꜥr `חֶג׳־פָּאעַר`; Sꜣḥ `סָאח` (§13.3); Dp `דֶּפּ`; Wnw `וֶנוּ` (Hermopolis; `חֶמְנוּ` is Ḫmnw); nʾ.t-š.w
+  `עיר־האגמים`; Jḫ.t-wr.t `אִיחֶת־וֶרֶת`, Jḫ.t-wt.t `אִיחֶת־וּטֶת`; Ndj `נֶדִי` (NU5 64L.24 wrote `נֶדוּ`); Pndn `פֶּנְדֶן`,
+  Dndn `דֶּנְדֶן`; smꜣ-wr `הראם־הגדול` (NU1); zḫn-wr `אופף־גדול` (NU9); spd-jbḥ.w `חד־השיניים`; Nbw.t `נוּבֶּת`;
+  Ḥr.w-ḥwntj `חוֹרוּס־בעל־שני־האישונים`; Rpw.t `רֶפּוּת`; Nj.w (Nun) `נוּן`; Wꜣḏ-ꜥn `וָאגֶ׳־עַן`; Ttj `טֶטִי`.
+- **Rejected**: `הניח` for rḏj (gate; see above); `תיבה` for dbn(j) (219.67: `תֵּבָה` is ḏbꜣ.t's; dbn "go round" =
+  `סובב` gives `המסובב?`); `עור־נמר` (gate); `קום` for ꜥḥꜥ (one lemma = `עמד`; Gen 27:19 and Isa 52:2 in the apparatus);
+  `נזר` for nzr.t (a false friend, noted at 220.2); `גבול` for ḏr (gated).
+
+### Open decisions for the user
+- **wn and wpj both `פתח`** (220.1 `פתוחות`, 219.50 / 222.30 `נפתח`, `תפתח`): Hebrew has one verb of opening; the
+  alternatives (`פצה` for the mouth, `פרץ` for the way) each fit only one context.
+- **nhp `*השכים*?`** (36 times in the refrain): a guess from HC 21; the TLA's "lebensvoll sein" or a neutral
+  transliteration are the alternatives.
+- **ꜥb.w "impurity" `טומאה`** (222.25, 222.32) against NU3 105.4's `עבֵרה` for the same TLA lemma: a sense split.
+- **nḏ `הגן`** (223.7, 224.4, 224.18) against PT486 / PT600's `שמר`: chosen because zꜣw `הישמר` stands in the same line.
+- **ꜥḥꜥ `עמד` in "stand up, sit down"** (223.3, 223.12): faithful to the lemma, though Hebrew says `קום`.
+
+### Progress log
+- Drafted PT 219 (110 rows; the refrain copies generated from one source with a script, so that every copy is byte for
+  byte the first), saved, `fill` + `verify` (0 problems after the `הנחתם` gate hit: the frame verb changed to `נתן`);
+  then the TLA's German read and the entries completed (219.55 `אשר מתמיד` and 219.102 past `ניתק` revised after it).
+- Drafted PT 220–221 (22 rows), the same way; then PT 222–224 (77 rows; `עור־נמר` caught by the gate → `פרוות־נמר`);
+  the TLA's German read: 222.15 re-read (the anticipatory pronoun: "he falls – his opponent"), 222.21–222.22 re-cut
+  ("how flourishing is he whom Isis praised").
+- Pass (a) fidelity: every negation and tense against the morphology (n sḏm=f past; 222.38 passives; 223.6 stative 2sg
+  `באת`); brackets checked word by word (222.6, 222.8: the first sign restored → no bracket; 221.9 the suffix `=[ṯ]`
+  restored → no bracket; 221.11 `אִיחֶת־[וּטֶת]`).
+- Pass (b) consistency: the refrain (24 copies) and frame (13 copies) identical except the wall's own deviations;
+  220.10 = 221.12 (`המוקף בחסות עינו`); 222.42–222.44 against UN3 216.9, 217.33, 217.34; 222.38 against UN3 215.10;
+  224.16–224.19 = 224.2–224.5; every new Hebrew string grepped (`lex`, `grep --all`).
+- Pass (c) Hebrew: the generated `translation-UN4.rtl.md` read through; 222.21 punctuation fixed.
+- `build UN4`: 209 lines, 2 footnotes (219.2, 223.1). `check_bible_quotes.py` on the three files: 0 problems.
+  `verify UN4 --strict`: 0 problems, 0 repeated-line differences.
+
+### The text on its own terms
+- **Life by kinship** (219.1–219.48): the dead king is not argued alive; he is introduced to each god as a relative –
+  son of Atum, Shu, Tefnut, Geb, Nut; brother of Isis, Seth, Nephthys, Thoth; father of Horus – and what the family did
+  for Osiris it must do for him.
+- **"As he lives, this Unas lives"** (219.2, 24 times): the king's fate is welded to Osiris's by bare juxtaposition; the
+  litany ends in identity (219.106–219.110: body, flesh, bones, going).
+- **The murderer threatened** (219.25, 219.33): to Seth (and Thoth) the formula turns passive and adds "he will punish
+  you" – Osiris's revival is Seth's punishment.
+- **Osiris everywhere** (219.55–219.100): eleven names "who is in" a place – Heliopolis, Busiris, Orion, Buto, the two
+  Hermopolises – the dead god buried in every shrine of Egypt; Orion "your season in the sky, your season on earth"
+  (219.75) is the star's seventy days of invisibility.
+- **Food as the eye of Horus** (219.101–219.102, 223.10): the god lives by the eye his son tore out for him.
+- **Ritual as birth** (219.49–219.51): the mother wipes the mouth, the son opens it, the gods count the limbs.
+- **The crown is a goddess** (220–221): the king comes "pure and fearful" before her and asks for her terror, fear,
+  respect and love; she bore him and he bore her (221.9).
+- **The sun's cycle as the king's life** (222.33–222.36): going down with Nephthys into darkness, rising with Isis in
+  the morning bark – the two sisters as night and day.
+- **Purity as a pun** (222.25 / 222.40): ꜥb.w "impurity" is shed, ꜥb.w "purity" received – one written word.
+- **Coolness is peace** (222.42): the king "cools down" in his father's arms; heat is danger and anger.
+- **The meal of the risen dead** (223): "stand, sit down to a thousand of bread" – the offering formula of every tomb
+  turned into a call; "do not keep away from the tomb" (223.9) – the ka must come home to eat.
+- **The priest's costume** (224.11–224.12): the leopard skin (bꜣ, a pun on the ba) and the jackal kilt of Anubis.
+
+### Key parallels
+- 219.2 ↔ Ps 118:17 `לֹא-אָמוּת כִּי-אֶחְיֶה` [equivalent]: the same pair, "lives / did not die"; Gen 5:24, 2 Kgs 2:11
+  [divergence]: Enoch and Elijah did not die, Unas did.
+- 219.1, 219.49 ↔ Ps 2:7 `בְּנִי אַתָּה אֲנִי הַיּוֹם יְלִדְתִּיךָ` [divergence / equivalent]: the divine parent's
+  declaration of the royal son ("born to me").
+- 219.106 ↔ Gen 2:23 `עֶצֶם מֵעֲצָמַי וּבָשָׂר מִבְּשָׂרִי` [equivalent]: identity of body (bone and flesh).
+- 219.109 ↔ Ruth 1:16 `כִּי אֶל אֲשֶׁר תֵּלְכִי אֵלֵךְ` [equivalent]: a shared fate as going together.
+- 221.3 ↔ Deut 11:25 `פַּחְדְּכֶם וּמוֹרַאֲכֶם יִתֵּן` [equivalent]: a deity "gives" the terror of its chosen.
+- 220.1 ↔ Ps 24:7 `שְׂאוּ שְׁעָרִים` [divergence]: gates opened to a king.
+- 223.3 ↔ Gen 27:19 `קוּם נָא שְׁבָה וְאָכְלָה מִצֵּידִי` and Isa 52:2 `הִתְנַעֲרִי מֵעָפָר קוּמִי שְּׁבִי` [equivalent].
+- 224.7 ↔ Gen 12:1 `לֶךְ לְךָ` [equivalent]: the same ethical-dative imperative (`šmi̯ n=k`), natural in both languages.
+- 222.14 ↔ Ps 2:9 [equivalent] (the shepherd-king's staff); 219.108 ↔ Ezek 37:6 [divergence]; 222.38 ↔ Job 3:3.
+- **Not found**: "not yet" (n sḏm.t=f, Gen 2:5) does not occur in PT 219–224; the brief's "Nun" at 219.49 is Nut in
+  both the AED and Allen (the feminine suffix decides); Nun does occur, at 222.26 ("the seats of Nun").
+
+### Lines shared with other texts
+- From UN3, copied: 222.42 ≈ UN3 216.9 (second person), 222.43 = UN3 217.33 with `את אונאס זה` for `אותו`, 222.44 =
+  UN3 217.34, 222.38 ≈ UN3 215.10, 220.2–220.3 ≈ UN3 216.1 (`באתי אלייך` → `בא הוא אלייך`), 224.7 ≈ UN3 213.3
+  (`תצווה דבר ל־`).
+- Inside UN4: the litany frame and refrain (above); 220.9 = second half of 220.3; 220.10 ≈ 221.12; 219.81 = 219.86 =
+  219.91 = 219.96 (minus the first word where the AED cut moves it); 222.18 ≈ 222.23, 222.19 ≈ 222.24, 222.2 ≈ 222.27 ≈
+  222.41; 223.2 ≈ 224.6; 224.2–224.5 = 224.16–224.19.
+
+### Proposals for the shared renderings
+1. **The litany** (§13.4.6): the four lines above as the fixed frame and refrain (for the verifier).
+2. **rḏj + sḏm=f** = `נתן ל־` + infinitive (`נתת לו להחלים`, `תתן לאונאס זה ללכוד`); rḏj "give" `נתן`.
+3. **Interjections**: hj `הֵי` (vocalized), jh `אִיהּ`, beside hꜣ `הוֹי` and j `הוֹ`.
+4. **The crown**: n.t `הכתר־האדום`, wr.t-ḥkꜣ.w `גדולת־הקסמים`, jn `אִינִי`, Nzr.t `נֶסֶרֶת`; Jḫ.t-wr.t / Jḫ.t-wt.t
+   `אִיחֶת־וֶרֶת` / `אִיחֶת־וּטֶת`.
+5. **Purity pair**: ꜥb.w (tla36740) `זוך`, ꜥb.w (tla36300) `טומאה` in ritual contexts.
+6. **Statives of ba and power**: bꜣ.tj `בעל־בָּא`, sḫm.tj `שליט` (UN3's `היה לבָּא` for the sḏm=f).
+7. **Names**: as listed under Decisions; Ndj `נֶדִי` or NU5's `נֶדוּ` – one form for the corpus (the lead's call).
+8. **Traps**: `כָּלָה` (ski̯) always vocalized ("bride"); nzr.t ≠ `נֵזֶר` (false friend); bꜣ "leopard skin" ≠ the ba.
+9. **Gate note**: `הנחתם` ("you let") trips the `חתם` loanword gate – worth an exemption for the root נוח
+   (`הנחתם`, `הנחתי`?) if a later text needs it; here avoided by `נתן`.
+
+### Lessons for the guidelines
+- **Generate long litanies from one source**: writing the refrain once and expanding its 68 copies by script (with the
+  wall's deviations as named variants) made byte-identity automatic and left the translator's attention for the 41
+  lines that differ.
+- **A coordinator's "look for" can name a word the text does not have** ("Nun" at 219.49, where the text has Nut): read
+  the transliteration and the suffixes first (guidelines §5.2 ★, again).
+- **A gate on a loanword root can hit an inflected Hebrew verb** (`הנחתם` "you let" = ה+נחתם): test gates on second-
+  person plural verb forms too.
+
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)

@@ -1121,3 +1121,11 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
    jnw `צירים`; ḥwwtj `רצים`; jp (hearts) `פקד`; ṯnj `ייחד` (`הבדיל` never); mḫnt `קלסתר`; zꜣ.tj Jtm `התאומים של אָתוּם`;
    nsw-bjtj `מֶלֶךְ־הַדָּרוֹם־וְהַצָּפוֹן`; ḫwrr transliterated `?`. Mut `מוּת` ★ (unvocalized "die"). ~25 new names in project.md.
 5. **Open (for the user):** zj and šmj both `הלך`; jꜣq `עלה` / sjꜥ `העלה` (one root, two lemmas).
+#### 13.6.2 UN4 (PT 219–224), translator 2, merged 2026-11-13 (full list in `10-…/project.md`, "UN4")
+1. **PT 219's frame** (byte for byte in every copy; only the god and the kinship word change): `X, בנך הוא זה, אוֹסִירִיס,
+   אשר נתת לו *להחלים* ולחיות:` / `חי הוא – חי אונאס זה; לא מת הוא – לא מת אונאס זה;` / `לא כָּלָה הוא – …` / nhp `*השכים*?`
+   (the Cow's; later pyramids have wḏꜥ); Seth and Thoth passive `אשר ניתן לו …`.
+2. **Terms:** causative rḏi̯ + verb `נתן ל־` + infinitive (`הניח`: `הנחתם` trips the `חתם` gate); ski̯ `כָּלָה` ★ ("bride");
+   the Red Crown `הכתר־האדום`, nsr.t `נֶסֶרֶת`, wr.t-ḥkꜣ.w `גדולת־הקסמים`; ḥtp ḥr `נח על`; ꜥb.w "purity" `זוך` / "impurity"
+   `טומאה`; hj `הֵי`, jh `אִיהּ`; nḏ `הגן` (PT486 / PT600 `שמר`: a split for the lead); bꜣ "leopard skin" `פרוות־נמר`.
+3. **Open (for the user):** wn / wpi̯ both `פתח`; nhp `השכים`?; ꜥb.w `טומאה` vs NU3 `עבֵרה`; ꜥḥꜥ `עמוד` (not `קום`); Ndj `נֶדִי` / NU5 `נֶדוּ`.
