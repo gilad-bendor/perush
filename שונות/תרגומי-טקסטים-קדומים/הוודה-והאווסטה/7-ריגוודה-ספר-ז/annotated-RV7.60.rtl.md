@@ -246,7 +246,7 @@
 > כי אף בחשאי מאיימת הסתערותם,
 - **פירוק:** `sasvár` – sasvár "בחשאי" ("בחשאי"); `cit` – cid "אף" ("אף"); `hí` – hí "כי" ("כי"); `sámr̥tiḥ` – sámr̥ti- "הסתערות", נושא ("הסתערות־"); `tveṣī́` – tveṣín- "מאיים", נושא ("מאיימת"); `eṣām` – ayám "אלה", זכר רבים יחסת הקניין ("־ם").
 - **תרגומים:** גריפית': "Hid from our eyes is their resplendent meeting: by their mysterious might they hold dominion. Heroes! we cry trembling in fear before you, even in the greatness of your power have mercy."; גלדנר: "Aus Furcht vor euch, ihr Bullen, zitternd (sagen wir:) Seid uns durch die Macht des Dakṣa gnädig!"; ג'מיסון: בית "מחוספס"; נושא שורה c ("רועדים") – "אנחנו", בלי עוגן בטקסט; ושורה d – דבריהם; המבנה דומה לז 59.7.
-- **הערות:** *sasvár* `בחשאי` (ז 59.7a); *sámr̥ti* "הסתערות, מפגש" (ריגוודה א 32.6c `התנגשות` – כאן `הסתערות`, נרשם); *tveṣín* "מאיים, סוער" (*tveṣyà*, ז 58.2a; חדש).
+- **הערות:** *sasvár* `בחשאי` (ז 59.7a); *sámr̥ti* "הסתערות, מפגש" `הסתערות` (גם ריגוודה א 32.6c, מאז ההרמוניזציה של 2026-11-13); *tveṣín* "מאיים, סוער" (*tveṣyà*, ז 58.2a; חדש).
 
 ### 10b
 `apīcyèna sáhasā sáhante`

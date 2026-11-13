@@ -140,10 +140,10 @@ reserved (§7). **The one real lexical contact is the Persian loanword `דָּת
 | *yesńiia* | `רָאוּי לַזֶּבַח` |  | as Vd 2's *yazata* `רְאוּיֵי־הַזֶּבַח` |
 | *nəmah* | `קִידָה` | `הִשְׁתַּחֲוָיָה`, `תְּפִלָּה` | "homage, bowing" (√*nam* "bend"; Vedic *námas*: §12) |
 | *stu-*, *staōta*, *stūt* | `שִׁבֵּחַ`, `שֶׁבַח`, `מְשַׁבֵּחַ` |  | *staōtar* `מְשַׁבֵּחַ` |
-| *garah* | `שִׁירָה` | `שִׁיר` | "song of praise, welcome"; *garō dəmāna* `בֵּית הַשִּׁירָה` (F7) |
+| *garah* | `שִׁיר` |  | "song of praise, welcome"; *garō dəmāna* `בֵּית הַשִּׁיר` (F7); = Vedic *gír* `שִׁיר` (2026-11-13 harmonization: was `שִׁירָה`, §12) |
 | *vahma* | `תְּהִלָּה` |  | "praise, adoration" |
 | *mąϑra* | `מַנְתְּרָה` (transliterated, vocalized at first occurrence) | `תּוֹרָה`, `לַחַשׁ` | "the formula of thought, the sacred utterance" (= Vedic *mántra*: §12); *mąϑran* `בַּעַל הַמַּנְתְּרָה` |
-| *uxδa* | `מִלָּה` (pl. `מִלִּים`) |  | "utterance" (Vedic *ukthá* `שִׁירֵי־הַשֶּׁבַח`, RV 10.72.1c: a split by sense, §12) |
+| *uxδa* | `אֲמִירָה` (pl. `אֲמִירוֹת`) | `מִלָּה` | "utterance" = Vedic *ukthá* `אֲמִירָה` (RV 7, RV 10.72.1c; 2026-11-13 harmonization: was `מִלָּה`, §12); *hizuuā.uxδa* `אֲמִירוֹת הַלָּשׁוֹן`, *ərəžuxδa* `יְשַׁר הָאֲמִירָה` |
 | *vacah* | `דִּבּוּר` |  | *manah – vacah – š́iiaōϑna* `מַחֲשָׁבָה – דִּבּוּר – מַעֲשֶׂה` |
 | *š́iiaōϑna* | `מַעֲשֶׂה` |  |  |
 | *humata*, *hūxta*, *huuaršta* | `מַחֲשָׁבָה טוֹבָה`, `דִּבּוּר טוֹב`, `מַעֲשֶׂה טוֹב` (F5) |  | the triad |
@@ -153,7 +153,7 @@ reserved (§7). **The one real lexical contact is the Persian loanword `דָּת
 | *ahu* (2) "lord" | `אָדוֹן` |  | the Ahuna Vairya's *ahū*; never the name Ahura |
 | *xratu* | `תְּבוּנָה` |  | "will, intellect, resolve" (Vedic *krátu*: §12) |
 | *cisti* | `בִּינָה` |  |  |
-| *daēnā* | `הַשְׁקָפָה` | `דָּת` (reserved for *dāta*) | "vision, inner view, conscience, the self that sees" (√*dī* "see"); a split from Vd 2's `דָּת` (Young Avestan "religion"), for the lead (§12) |
+| *daēnā* | `הַשְׁקָפָה` | `דָּת` (reserved for *dāta*) | "vision, inner view, conscience, the self that sees" (√*dī* "see"); Vd 2 too since the 2026-11-13 harmonization (Young Avestan "religion", said in Vd 2.1's note; §12) |
 | *dāta* | `דָּת` [cognate] (gated, always vocalized) |  | "law, what is established": the source of the Hebrew loan (Esth 1:8, 13; Ezra 7:12) |
 | *sə̄ṇgha* | `הוֹרָאָה` | `תּוֹרָה` | "pronouncement, teaching" |
 | *sāsnā* | `לִמּוּד` |  | "instruction" |
@@ -175,7 +175,7 @@ reserved (§7). **The one real lexical contact is the Persian loanword `דָּת
 | *uruuan* | `נֶפֶשׁ` (gated) | `נְשָׁמָה` | "soul" |
 | *gav-* | `פָּרָה` (gated) |  | "the cow" (Y 29); *gə̄uš uruuan* `נֶפֶשׁ הַפָּרָה`; Vd 2's collective `בָּקָר` stays for the herds |
 | *pasu*, *staōra* | `צֹאן`, `בְּהֵמָה גַּסָּה` |  | Vd 2 binds |
-| *vīra* | `אַנְשֵׁי חַיִל` |  | "men, warriors" (*pasu vīra* `צֹאן וְאַנְשֵׁי חַיִל`; Vedic *vīrá*: §12) |
+| *vīra* | `גִּבּוֹר` |  | "men, warriors" (*pasu vīra* `צֹאן וְגִבּוֹרִים`; Vedic *vīrá* `גִּבּוֹר`: the cognate pair, settled 2026-11-13; was `אַנְשֵׁי חַיִל`) |
 | *nar*, *nāirī* | `גֶּבֶר`, `אִשָּׁה` |  | the cousin corpus |
 | *maš́iia* | `אָדָם` (gated) |  | Vd 2 binds |
 | *zam* | `אֶרֶץ` |  | Vd 2 binds |
@@ -189,7 +189,7 @@ reserved (§7). **The one real lexical contact is the Persian loanword `דָּת
 | *mīžda* | `שָׂכָר` (gated) |  | Vedic *mīḍhá* (§12) |
 | *cinuuat̰ pərətu* | `גֶּשֶׁר הַבּוֹרֵר` (F6) | `הַמַּבְדִּיל` (Gen 1) | "the bridge of the one who sorts" |
 | *drūjō dəmāna* | `בֵּית הַשֶּׁקֶר` (F7b) | `שְׁאוֹל`, `גֵּיהִנֹּם` |  |
-| *garō dəmāna* | `בֵּית הַשִּׁירָה` (F7) | `גַּן עֵדֶן` |  |
+| *garō dəmāna* | `בֵּית הַשִּׁיר` (F7) | `גַּן עֵדֶן` | (2026-11-13: was `בֵּית הַשִּׁירָה`) |
 | *urvaēsa* | `מִפְנֶה` | `קֵץ` | "the turning point" (of existence) |
 | *fraša* (*fərašəm ahūm kar-*) | `מְפֹאָר` (`לַעֲשׂוֹת אֶת הַקִּיּוּם מְפֹאָר`) | `חָדָשׁ` | "brilliant, wonderful" (the later *frašō.kərəti*: a note) |
 | *saōšiiaṇt* | `הָעָתִיד לְהוֹעִיל` (pl. `הָעֲתִידִים לְהוֹעִיל`) | `מוֹשִׁיעַ`, `מָשִׁיחַ`, `גּוֹאֵל` | "the one who will bring benefit" (*sū-* "benefit, strengthen") – a future participle; the later saviour is a note |
@@ -248,7 +248,7 @@ The Hebrew regex is matched on the bracket-free, unvocalized, punctuation-free l
 | F4 | `\bangr\w* mainii\w*\|\bmainii\w* angr\w*` | `רוח\S* \S*מזיק` | *aŋra mainiiu* adjacent |
 | F5 | `\bhumata\w* \S* ?huxta\w*` | `מחשב\S* \S*טוב\S* \S*דיבור\S* \S*טוב` | the triad *humata hūxta huuaršta* |
 | F6 | `\bcinuuat\w* \S*pere\w*\|\bpere\w* cinuuat` | `גשר\S* הבורר` | *cinuuat̰ pərətu* |
-| F7 | `\bgaro demana\w*\|\bdemana\w* garo` | `בית השירה` | *garō dəmāna* |
+| F7 | `\bgaro demana\w*\|\bdemana\w* garo` | `בית השיר(?![א-ת])` | *garō dəmāna* (`בית השיר` since 2026-11-13) |
 | F7b | `\bdrujo demana\w*` | `בית השקר` | *drūjō dəmāna* |
 | F8 | `\bahu\w* astuuat\w*\|\bastuuat\w* \S* ?ahu` | `קיומ?\S*(?: \S+){0,3} בעלי? העצמות` | *ahu astuuaṇt* |
 | F9 | `\btat thba peresa eres moi vaoca ahura\b` | `זאת אני שואל אותך אמור לי נכונה אהורה` | the refrain of Y 44.1–19 (`זֹאת אֲנִי שׁוֹאֵל אוֹתְךָ – אֱמוֹר לִי נְכוֹנָה, אֲהוּרָה:`) |
@@ -314,7 +314,7 @@ YH 35.2 = 41.7 (the latter is outside the scope).
   אֲהוּרָה,` / `כאשר בא אליי במחשבה הטובה,`.
 - **New rows (accepted):** *dāmi* "founding" `הכינון` (the agent noun keeps `מכונן`); *vərəϑrəm.jan* `הורג החוסם`
   (the cousin corpus's *vr̥tra* `החוסם`); *huuāpah* `אומן טוב`; *nabah* `שחקים`; *vāta* `רוח` (the wind);
-  *xᵛafna* `שינה` (30.3a "dreams": a split by sense); *taxma* `גיבור`; *friia* `רע`; *uzəma* `מוקיר`; *ząϑa*
+  *xᵛafna* `שינה` (30.3a "dreams": a split by sense); *taxma* `אַמִּיץ` (2026-11-13; was `גיבור`, which went to *vīra*); *friia* `רע`; *uzəma* `מוקיר`; *ząϑa*
   `הולדה`; *irixta* `אחרית`; *spāda* `צבא`; *vananā* `ניצחון`; *zrazdāiti* `אמונה`; *tušnā.maiti* `ההרהור השקט`;
   *daxšāra* `אות`; *ādišti* `ציווי`; *āskəti* `קרבה`; *yaōš dā-* `טיהר`; *hātąm* fem. `הקיימות`.
 
@@ -391,9 +391,23 @@ with Round 7 run 1 (the Rigveda, Book 7) at the finalization:
 *aša* / *r̥tá* `סֵדֶר` (already one); *daēuua* / *devá* `אֵל` (already one); *mainiiu* `רוּחַ` / *manyú* `כַּעַס`
 (a recorded split, kept); *druj* / *druh* `שֶׁקֶר`; *haiϑiia* / *satyá* `אֱמֶת` (already one); *ārmaiti* / *arámati*
 `מְסִירוּת`; *hauruuatāt* / *sarvátāt* `שְׁלֵמוּת`; *amərətatāt* / *amr̥tatvá* `אַלְמָוֶת`; *xratu* / *krátu*
-`תְּבוּנָה`; *mąϑra* / *mántra* `מַנְתְּרָה`; *nəmah* / *námas* `קִידָה`; *mīžda* / *mīḍhá* `שָׂכָר`; *kauui* / *kaví*
-`קַוִי`; *uxδa* / *ukthá* `מִלָּה` (the cousin corpus: `שִׁירֵי־הַשֶּׁבַח`, a split by sense); *vīra* / *vīrá*
-`אַנְשֵׁי חַיִל`; *garah* / *gír* `שִׁירָה`; *vahišta* / *vásiṣṭha*; *daēnā* `הַשְׁקָפָה` against Vd 2's `דָּת` (the
+`תְּבוּנָה`; *mąϑra* / *mántra* `מַנְתְּרָה` (settled 2026-11-13); *nəmah* / *námas* `קִידָה`; *mīžda* / *mīḍhá* `שָׂכָר`; *kauui* / *kaví*
+`קַוִי`; *uxδa* / *ukthá* `אֲמִירָה` (settled 2026-11-13; was `מִלָּה` here, `שִׁירֵי־הַשֶּׁבַח` in RV 10.72.1c); *vīra* / *vīrá*
+`גִּבּוֹר` (settled 2026-11-13 by the lead: the cognate keeps the Hebrew, *taxma* moved to `אַמִּיץ`); *garah* / *gír* `שִׁיר` (settled 2026-11-13; was `שִׁירָה`); *vahišta* / *vásiṣṭha*; *daēnā* `הַשְׁקָפָה`, Vd 2 too (settled 2026-11-13; the
 loanword rule gives `דָּת` to *dāta*); *ahura* / *ásura*; *zaotar* / *hótar* `מְנַסֵּךְ`; *usig* / *uśíj*; Airiiaman
 / Aryaman; *ərəši* / *ŕ̥ṣi* `חוֹזֶה` and *zrazdā* / *śraddhā́* `אמונה` (both follow the cousin corpus);
 *miiazda* / *miyédha* `סעודת הזבח`; *vərəϑrəm.jan* / *vr̥trahán* `הורג החוסם` (follows the cousin corpus's *vr̥tra*); *gənā* / *gnā́* `אשה`; *miϑra* "contract" `הסכם` / Vedic *mitrá*; *īžā* / *íḍā* `רוויה`; *aməṣ̌a* / *amŕ̥ta* `בן אלמוות`; *yazata* / *yajatá* `הראוי לזבח`. The translators add to this list (§11).
+
+**2026-11-13 harmonization** (the Round 7 finalization; the lead's table A, `../harmonization--2026-11-13.md`; settled pairs):
+- *mąϑra* / *mántra* `מַנְתְּרָה` – **settled**: the Vedic lines follow this corpus (RV 7.7.6b, 7.32.13a, 7.76.4d *satyámantra*,
+  RV 10.14.4c); no Avestan line changed.
+- *uxδa* / *ukthá* `אֲמִירָה` – **settled** (Book 7's word; RV 10.72.1c follows too). Changed here: Y 28.6b, 31.19b
+  (*ərəžuxδa*), 32.9c, 33.14c, 43.5c, 43.11c, 44.8c, 44.10d, 44.19c (*ərəžuxδa*), 45.2d, 45.8c, 46.14e, 47.2b
+  (*hizuuā.uxδa*), 51.3b (*hizuuā.uxδa*), 51.20b, 51.21a, 53.1d, 53.2a; YH 35.9a, 35.10b.
+- *garah* / *gír* `שִׁיר` – **settled** (Book 7's word). Changed: Y 28.4a, 34.2c, 45.8e, 50.4d, 51.15b; YH 41.1a; F7
+  `בית השיר` (§8) and the notes and the Y 45 intro that say "בית השירה". The verb *vaf-* keeps `שר` / `אשיר`.
+- *daēnā* `הַשְׁקָפָה` – **settled**: Vd 2 (the cousin corpus) follows this corpus (Vd 2.1, 2, 3, 4, 42); `דָּת` stays
+  *dāta*'s.
+- *vīra* / *vīrá* `גִּבּוֹר` – settled by the lead (2026-11-13): the cognate pair keeps the Hebrew (principle 3 of
+  2026-10-30), and *taxma* moves to `אַמִּיץ` (Y 43.4a `לאמיץ`). Changed: Y 31.15c `ולגיבורים`, 45.9d `ואת הגיבורים`, the
+  note at 45.9d.

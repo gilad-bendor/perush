@@ -278,7 +278,7 @@
 - **פירוק:** `asmā́kam` – ahám, רבים יחסת הקניין ("שלנו"); `śūra` – śū́ra-, קריאה ("גיבור"); `nr̥ṇā́m` – nár- "גבר", רבים יחסת הקניין ("של הגברים").
 - **הערות:** *śū́ra* `גיבור` (renderings §11.10); *nár* `גבר`.
 
-## חלקו עודף: המימרה והאמונה (12–17)
+## חלקו עודף: המַנְתְּרָה והאמונה (12–17)
 
 ### 12a
 `úd ín nv àsya ricyate-`
@@ -307,10 +307,10 @@
 
 ### 13a
 `mántram ákharvaṃ súdhitaṃ supéśasaṃ`
-> מימרה לא־קטועה, מונחת היטב, יפת־עיטור,
-- **פירוק:** `mántram` – mántra-, יחסת המושא ("מימרה"); `ákharvam` – ákharva- "לא קטוע", יחסת המושא ("לא־קטועה"); `súdhitam` – súdhita- "מונח היטב", יחסת המושא ("מונחת היטב"); `supéśasam` – supéśas- "בעל עיטור יפה", יחסת המושא ("יפת־עיטור").
+> מַנְתְּרָה לא־קטועה, מונחת היטב, יפת־עיטור,
+- **פירוק:** `mántram` – mántra-, יחסת המושא ("מַנְתְּרָה"); `ákharvam` – ákharva- "לא קטוע", יחסת המושא ("לא־קטועה"); `súdhitam` – súdhita- "מונח היטב", יחסת המושא ("מונחת היטב"); `supéśasam` – supéśas- "בעל עיטור יפה", יחסת המושא ("יפת־עיטור").
 - **תרגומים:** גלדנר: "Machet ein nicht zu kurzes, wohlgesetztes, zierliches Dichterwort auf die opferwürdigen (Götter). Auch viele Angriffe bemeistern den nicht, der sich durch Opferdienst bei Indra in Gunst setzt"; גריפית': "Even many snares and bonds subdue not him who dwells with Indra through his sacrifice".
-- **הערות:** **אומנות המשורר:** שלוש תכונות של מימרה טובה – שלמה ("לא קטועה", *ákharva*), מונחת במקומה (*súdhita*, `מונח היטב`, ז 7.3a), מקושטת (*supéśas*, חדש). *mántra* `מימרה` (renderings §11.10).
+- **הערות:** **אומנות המשורר:** שלוש תכונות של מנתרה טובה – שלמה ("לא קטועה", *ákharva*), מונחת במקומה (*súdhita*, `מונח היטב`, ז 7.3a), מקושטת (*supéśas*, חדש). *mántra* `מַנְתְּרָה` (= אווסטית *mąϑra*: ההרמוניזציה של 2026-11-13; קודם `מימרה`).
 
 ### 13b
 `dádhāta yajñíyeṣv ā́`

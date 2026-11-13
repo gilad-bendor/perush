@@ -560,6 +560,25 @@ RESERVED = [
     (W + alt("חי", "חיה", "חיים", "החיים", "חית", "חיות") + E, r"jiv|jiva|asu|ayu|ayus|visvayu|bhoj|prana|jav|gaya|gay|gai|gaeth|pasu|svap|mrg|bhu|jan|vaj|ji|vita|stao|pasv|vay|tiryag", "חַי / חַיָּה / חַיִּים only for jīvá / ásu / ā́yus / mr̥gá (animal) / Av. gaiia"),
 ]
 
+# --- the Rigveda only (the 2026-11-13 harmonization, table A row 8): the biblical vocabulary of sin, forgiveness and
+# confession never in a Rigveda line (the RV keys of projects 1, 2, 5, 6, 7 = kind "rv"; AB 7 and MBh 3.185 keep `חטא` for
+# pāpá / pāpmán). The Varuṇa hymns ask for loosening and mercy: ā́gas `אשמה`, énas `עוון`, √muc `שחרר`, √mr̥ḍ `רחם`.
+# Anchored at a word start (W); the verbal prefixes are a separate optional group after W, so no class swallows the
+# root's first letter (ח, פ, ס, ת, ו); words that merely contain the letters are exempt (RV_EXEMPT).
+VP = r"(?:[יתאנ]|הת|נת|מת|לה|ה|מ)?"   # imperfect / participle / infinitive / hitpael prefixes, after the W prefixes
+RV_RESERVED = [
+    (W + VP + r"ח[וי]?ט[יו]?א", None, "the root חטא never in the Rigveda (ā́gas = אשמה, énas = עוון; 2026-11-13, row 8)"),
+    (W + alt("חיטוי", "חטוי") + E, None, "the root חטא never in the Rigveda (2026-11-13, row 8)"),
+    (W + VP + r"פו?ש[וי]?ע", None, "פשע never in the Rigveda (2026-11-13, row 8)"),
+    (W + VP + r"סו?ל[יו]?ח", None, "סלח / סליחה never in the Rigveda (√mr̥ḍ = רִחֵם; 2026-11-13, row 8)"),
+    (W + alt("וידוי", "וידויים", "וידויו", "ווידוי", "ווידויים") + E, None, "וידוי never in the Rigveda (2026-11-13, row 8)"),
+    (W + r"(?:[יתאנ]|מ|לה|ה)?תוו?ד(?:ה|ו|ות|ים|ינו|תי|ית|ת|תם)" + E, None, "התוודה never in the Rigveda (2026-11-13, row 8)"),
+    (W + r"חרו[ןנ]", None, "חרון (אף) never in the Rigveda (√hr̥̄ = זעף, héḷas = רוגז; 2026-11-13, row 8)"),
+]
+# whole words that contain a gated string of RV_RESERVED but are another word
+RV_EXEMPT_RX = r"[ובלמהכש]{0,3}(?:מפשע(?:ה|ות|תו|תה)|תודה|תודות|התודה|לתודה|בתודה|אסלוחי)"  # groin, thanks, Asalluḫi
+
+
 V = NIQ
 RW = rf"(?<![{V}א-ת])[ובלמהכש]?"
 RE_ = rf"(?![{V}א-ת])"
@@ -699,9 +718,11 @@ def check_line(key, lab, heb, body, out, first_seen=None):
     r = row(key, lab) or {"text": "", "words": []}
     src = r["text"]
     srcf = " " + fold(src) + " "
-    for rx, allow, why in RESERVED:
+    rv = UNITS[key][2] == "rv"
+    for rx, allow, why in RESERVED + (RV_RESERVED if rv else []):
         m = next((x for x in re.finditer(rx, plain) if _whole_word(plain, x) not in EXEMPT_WORDS
-                  and not re.fullmatch(EXEMPT_RX, _whole_word(plain, x))), None)
+                  and not re.fullmatch(EXEMPT_RX, _whole_word(plain, x))
+                  and not (rv and re.fullmatch(RV_EXEMPT_RX, _whole_word(plain, x)))), None)
         if m and not lic(allow, key, lab):
             if re.search(r"\[היתר שער: [^\]]*" + re.escape(m.group(0).strip()), body):
                 continue
@@ -1157,6 +1178,9 @@ def cmd_grep(pat, every=False):
 def cmd_gates():
     print("RESERVED (Hebrew regex | licensed by | why):")
     for rx, allow, why in RESERVED:
+        print(f"  {rx}\n      ← {allow or 'NEVER'}  ({why})")
+    print("\nRESERVED in the Rigveda keys only (kind rv; exempt words: " + RV_EXEMPT_RX + "):")
+    for rx, allow, why in RV_RESERVED:
         print(f"  {rx}\n      ← {allow or 'NEVER'}  ({why})")
     print("\nTRAPS:")
     for rx, cond, why in TRAPS:

@@ -415,7 +415,7 @@
 > כאשר יתכתשו בכעסיהם האנשים,
 - **פירוק:** `sám` – sám "יחד", תחילית ("–"); `yát` – yá- "כאשר", נייטרי יחסת המושא ("כאשר"); `hánanta` – √han "היכה זה בזה", סוביונקטיב הווה בינוני 3 רבים ("יתכתשו"); `manyúbhiḥ` – manyú- "כעס", רבים יחסת הכלי ("בכעסיהם"); `jánāsaḥ` – jána- "אנשים", רבים נושא ("האנשים").
 - **תרגומים:** גריפית': "What time the men in fury rush together for running streams, for pastures, and for houses. Then, O ye Maruts, ye who spring from Rudra, be our protectors in the strife with foemen."; גלדנר: "die Tapferen um Flüsse, Pflanzen, Ansiedelungen"; ג'מיסון (בעקבות פרופרס): נהרות, צמחים ושבטים היו משאבים שנאבקו עליהם – מוקדי הסכסוך בין הקבוצות.
-- **הערות:** *sám* √*han* "היכו זה בזה" `התכתש` (צירוף; √*han* לבדו `הרג`; `התנגשות` היא *sámr̥ti*, ריגוודה א 32.6c); *manyú* `כעס` (renderings §11.6); *jána* `אנשים` (renderings §5.1).
+- **הערות:** *sám* √*han* "היכו זה בזה" `התכתש` (צירוף; √*han* לבדו `הרג`; `התנגש` הוא *sám* √*r̥*, ז 25.1b; *sámr̥ti* `הסתערות`, ריגוודה א 32.6c); *manyú* `כעס` (renderings §11.6); *jána* `אנשים` (renderings §5.1).
 
 ### 22b
 `śū́rā yahvī́ṣv óṣadhīṣu vikṣú`

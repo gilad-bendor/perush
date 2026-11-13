@@ -12,3 +12,5 @@
      that are words (Matsya "fish", Aja "goats"), *śakrá* `יכול`.
   (Its questions 5–7 – disputed readings, the 7.35 *śám* pattern, √*sū*, the framing of 7.55 – were settled by the lead:
   kept as drafted.)
+- Run 3 (the Kaṭha Upaniṣad): none.
+- The finalization: none (`harmonization--2026-11-13.md` was decided by the lead under the user's delegation).

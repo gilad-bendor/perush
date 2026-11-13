@@ -251,7 +251,7 @@ the Bible passages the corpus is compared with (Gen 1–3, 6–9, 22; Lev 18): *
 | Av. *taoxman* | `זֶרַע` (gated) |  | Vd 2.25–28 |
 | Av. *zima* | `חֹרֶף` |  | ↔ Gen 8:22 `וְקַיִץ וָחֹרֶף` |
 | Av. *xšaϑra* | `מַלְכוּת` |  |  |
-| Av. *daēnā* | `דָּת` (vocalized `דָּת`/`דַּת`) |  |  |
+| Av. *daēnā* | `הַשְׁקָפָה` | `דָּת` (*dāta*'s) | as the Gāthās (`../האווסטה/renderings.md` §5.2); in Young Avestan "religion" (Vd 2.1's note). Was `דָּת` until the 2026-11-13 harmonization (§11.22): `דָּת` belongs to *dāta*, the source of the Hebrew loan |
 | Av. *gaēϑā* | `בַּעֲלֵי הַחַיִּים` | the root יצר | "the living beings, the living world"; *astuuant* "bony, material" = `בַּעַל עֲצָמוֹת` |
 | Av. *maṣ̌iia* | `אָדָם` |  | "man, mortal" |
 | Av. *pasu* / *staora* | `צֹאן` / `בְּהֵמָה גַּסָּה` |  | small / large cattle |
@@ -335,6 +335,16 @@ the root שבת; `נָח` (the string of Noah: write `שָׁכַב`, `שָׁקַ
 the root ברך (*āśís*, *svastí*), the root ארר (*√śap*), the root קדש (*médhya*, *yajñíya*, Av. *spəṇta*), `מִזְבֵּחַ`
 (*védi*), `חַי` / `חַיִּים` / `חַיָּה` (*jīvá*, *ásu*, *ā́yus*, *mr̥gá*, Av. *gaiia*).
 
+### 7.4 Never in a Rigveda line (the 2026-11-13 harmonization, table A row 8)
+The root חטא (every form: `חֵטְא`, `חַטָּאת`, `חוֹטֵא`, `חָטָא`, `הֶחֱטִיא`, `חִטֵּא` …), `פֶּשַׁע` (and the verb), `סְלִיחָה` / `סָלַח`,
+`וִדּוּי` / `הִתְוַדָּה`, `חֲרוֹן` (אַף) – never in a `>` line of the Rigveda keys (kind `rv`: projects 1, 2, 5, 6, 7). The Varuṇa
+hymns ask for loosening and mercy, never for forgiveness or confession, and the Bible's vocabulary of sin would make
+Psalms of them: *ā́gas* `אַשְׁמָה`, *énas* `עָוֹן`, √*muc* `שִׁחְרֵר`, √*mr̥ḍ* `רִחֵם`, √*hr̥̄* `זָעַף`, *héḷas* `רֹגֶז`. The prose texts
+(AB 7, MBh 3.185, also ŚB, KU, Vd 2) are not gated: they keep `חטא` for *pāpá* / *pāpmán* (a later, nearer notion).
+Checked by `vedic_tools.py verify` (`RV_RESERVED`, anchored at a word start; the verbal prefixes are a separate group
+after the W prefixes; exempt: `מִפְשָׂעָה`, `תּוֹדָה` / `תּוֹדוֹת`, Asalluḫi `אסלוחי`); tested on every `>` line of the
+folder (no false hit) and on bracketed forms (`ח[טא]`); selftest §10.
+
 ### 7.3 Always vocalized (traps)
 `אֵל` / `אֵלִים` / `אֵלָה` / `אֵלוֹת` (gods: "to", "these"), `יָמָה` (Yama), `יִימָה` (Yima), `יָמִי` (Yamī), `מָנוּ`
 (Manu), `סוֹמָה` (Soma), `מִיטְרָה` (Mitra), `אַדִיטִי` (Aditi), `מָוֶת` (and every `מות`), `אֲהוּרָה`, `אִשָּׁה` / `אִשֶּׁה`
@@ -377,6 +387,13 @@ where the fire-offering is near.
 | SB1.8.1 1b | err | `אל מנו הביאו מים בבוקר, והנה דג בתבה` |
 | SB1.8.1 4b | err | `בשנה פלונית יבוא המבול` |
 | SB1.8.1 4b | ok | `בשנה פלונית יבוא השטף` |
+| RV7.86 4a | ok | `מה הייתה האשמה, וַרוּנָה, הגדולה,` |
+| RV7.86 4a | err | `מה היה החטא, וַרוּנָה, הגדול,` |
+| RV7.86 4d | err | `מטה אליך אלך נא – בלי ח[טא], בקידה, נמרץ.` |
+| RV7.86 3d | err | `"וַרוּנָה הזה, בחרון אפו, זועף עליך."` |
+| RV7.88 6c | err | `סלח לנו, (אנו) בעלי־העוון, כלפיך, בעל־התעתועים (?) –` |
+| RV7.86 3c | ok | `אותו הדבר אכן אומרים לי המשוררים האחרונים:` |
+| AB7 15.2e | ok | `שוכבים כל חטאיו, הרוגים ביגיעה שבדרך.` |
 
 ## 11. Merged from the translators (numbered by part; the coordinator)
 ### 11.1 RV 10.129, 10.121, 10.72, 10.190 (translator 1; merged 2026-10-30)
@@ -602,3 +619,34 @@ by sense (*daδuuā̊* `העושה`, Vd 2.20–21; *dātō* "I was made"). Chang
 - **The refrain** *etad vai tat* `זהו, באמת, הדבר ההוא.` (identical in every occurrence).
 - **New:** *svayaṃbhū* `הקיים־מעצמו`; *kha* `פתח`; *parāñc* / *pratyañc* `החוצה` / `פנימה`; *antarātman* `הנפש־שבפנים`; *pāśa* `חבל` (`חבל מָוֶת`); *araṇi* `מקל האש`; *aṅguṣṭhamātra* `בגודל אגודל`; *muni* `המתבודד` (open); *pur* `עיר`, *dvār* `שער`; *haṃsa* `ברבור`; *vyoman* `מרום` (`רקיע` reserved); *apāna* `הנשימה־הנכנסת`; *sukha* `נחת` (`אושר` stays *śám*'s); *śānti* `שקט`; harmonized with KU1 in the revision: *sanātana* `הנצחי`, *duḥkha* `סבל`, *vaśin* `המושל`, *jantu* `היצור`, pra-√*vr̥h* `הפריד`, *pūrvam* `קודם`, √*iṣ* `רצה`, pra-√*arth* `ביקש`; KU1 3.14a *ni-√budh* `למד` (as 1.14a); *aśvattha* `עץ האַשְׁוַתְּהָה` (transcribed: not `תאנה`, Gen 3:7); *sarga* `שנוצרו` (ברא is reserved); *nāḍī* `עורק`; *granthi* `קשר`; *virajas* `נקי מאבק` (the Virāj name regex of §3.1 now excludes *virajo*); the full list in `8-קטהה-אופנישד/annotated-KU2.rtl.md`.
 - **Open for the review:** √*śri* `נשען` (5.8c, 6.1c) / `שוכן` (6.14a); *amr̥ta* adj. `בן־אלמוות` written plene unvocalized (the table has it vocalized); the cruxes 4.6a, 5.1b, 5.2b, 6.4, 6.5b, 6.13a (noted in the file).
+
+### 11.22 2026-11-13 harmonization (the Round 7 finalization; the lead's table A, `../harmonization--2026-11-13.md`)
+The cousin-language rule of 2026-11-02 (one Hebrew per Sanskrit / Avestan cognate pair) and one Hebrew per source word
+inside the corpus; the generated files rebuilt. **Settled pairs** (also `../האווסטה/renderings.md` §12):
+- *mántra* = Av. *mąϑra* `מַנְתְּרָה` (was `מימרה` in Book 7, `המזמורים` in RV 10.14.4c): RV7.7 6b, RV7.32 13a (and its
+  section heading), RV7.76 4d (*satyámantra* `שמַּנְתְּרָתָם אמת`), RV10.14 4c; the intros of 7.7 and 7.76. The verbs
+  *ā́-mantraya-* / *upa-mantraya-* (AB 7) are another word ("address, invite") and keep `קרא` / `מזמין`.
+- *ukthá* = Av. *uxδa* `אֲמִירָה`: RV10.72 1c (was `שירי־השבח`; the same sense, the hotar's recitation); the Gāthās and
+  YH followed (20 lines, there). Note: Book 7's *ucátha* (7.18.5c) also has `אמירה` – a split inside Book 7, for the lead.
+- *gír* = Av. *garah* `שִׁיר`: the Gāthās and YH followed (6 lines and F7 `בית השיר`, there); no Vedic line changed.
+- Av. *daēnā* `הַשְׁקָפָה` (§5.3): VD2 1, 2, 3, 4, 42 (was `דָּת`), the section heading, the notes (2.1 now says that in
+  Young Avestan the word means "religion", and that `דָּת` is kept for *dāta*, the source of the Hebrew loan), the intro.
+- *purā́* `לְפָנִים`: KU1 1.21a (was `מקדם`). *purājā́* (Book 7 `הנולדים מקדם`) is another lemma and keeps it (`הנולדים
+  לפנים` is *pūrvajá*'s).
+- Not applied: *vīrá* = Av. *vīra* `גִּבּוֹר` – in the Gāthās `גיבור` is already *taxma*'s (Y 43.4a); left for the lead.
+
+**Inside the corpus: the earlier projects against Book 7** (table A row 7; the same lemma in the same sense takes Book 7's
+Hebrew):
+- *havyá* `תִּקְרֹבֶת` (*havís* keeps `מנחה`): RV10.14 15b, RV10.15 4b, 12b, RV10.16 9d, 11c (was `מנחה`).
+- √*tr̥̄* "overcome" `עבר (על)` and *sámr̥ti* `הסתערות`: RV1.32 6c (was `גבר על התנגשות`; not a dossier pāda); the notes
+  of 7.21.9c, 7.56.22a, 7.60.10a (`התנגש` is *sám* √*r̥*'s, 7.25.1b).
+- *rakṣitár* (√*rakṣ* `גונן`) `מגונן`: RV10.14 11a (was `השומרים`; `שמר` is √*pā*'s).
+- *puraetár* `ההולך־בראש`: AB7 18.6a (was `מנהיג`, which is √*nī*'s: *netrī́* `מנהיגה`).
+- *śáṃtama* `המאושר ביותר`: RV10.15 4c (was `הנעים ביותר`; `נעים` is the Kaṭha's *préyas*).
+- *anamīvá* `חסר־מחלה`: RV10.14 11d (a noun: `חוסר־מחלה`), RV10.17 8d, RV10.18 7c (was `בלי־חולי`).
+- Kept (another lemma or sense, or already one Hebrew): √*sr̥* / √*sru* `זרם` (1.32.12d, 14c as Book 7); *arbhaká*
+  `הקטנטנים` / AB *kánīyas* `קטנים` (two lemmas); *rohít* / *aruṇá* `אדום` in both books; *sujániman* `בעל הלידות
+  הטובות` (RV 10.18.6c = 7.62.4b) / *jániman* `דורות`; *jaraṇā́* / *jarás* `זקנה` in both books; √*kr̥p* / √*nāth*
+  `התחנן` in both books; *sūktá* `מזמור` (AB 7.16.9e as Book 7) – *mántra* is now `מנתרה`; *sámbhr̥ta* `מצוידים` (7.73.4b)
+  / RV 10.90.8b `נאספה` (another sense: "gathered") / MBh *yukta* `מצויד` (another lemma – a collision for the lead).
+- **The Rigveda reserves** the root חטא, `פשע`, `סליחה`, `וידוי`, `חרון` (§7.4; the gate `RV_RESERVED`, selftest §10).
