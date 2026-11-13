@@ -1707,5 +1707,84 @@ bracketed): each reads well with what follows. Echo control: no new biblical phr
   question).
 - 258-259.20 sḏr `שוכב (את הלילה)` beside UN9's `לן` (already open).
 
+## Independent review: UN8, UN9
+
+Round 8 run 1, the independent fidelity reviewer (2026-11-13; did not draft these files). **Checked:** every `>` line of
+UN8 (127 rows, PT 277–301) and UN9 (198 rows, PT 302–321) against `egypt_tools.py data` (the base words, the TLA
+morphology, Allen's line as a check), then against `tr`: words omitted or moved across lines; person, number, gender,
+voice, tense and mood (passive sḏm=f and sḏm.w=f – 291.1–2, 305.1–2, 306.10, 310.1–4, 316.3; prospective and
+subjunctive sḏm=f; relative forms – 302.3, 305.11, 309.2, 311.4; the sḏm.tj=fj of 295.3; negations – n sḏm=f, n
+sḏm.n=f, jmi̯=k + infinitive, m + infinitive, n…js 305.15, jw.tj 307.6); the `⟨ ⟩` and `( )` rule; brackets against
+the base (§2.1: 299.2–299.5, 306.17–18, 310.1–2, 310.9, 313.1–313.4); the witness tags (`{טטי}` PT 277, 280, 283, 289,
+290, 292, 318; `{פפי ב}` PT 299, 304; `{מרנרא}` PT 306; `{נית}` PT 308; `{פפי א}` PT 310; `{אלן}` PT 281, 284, 303:
+present on every row); one Hebrew per lemma inside the two keys and against UN1–UN7 (`lex`, `grep --all`; the earlier
+reviewers' points: sꜥḥ in UN9 320.2 is the verb `מהדרים`, smsw 303.8 `הבכיר`, ḫsf `הדף`; no ꜣms, kꜣp or tr in these
+keys); the refrains and copies (277.2 = 289.2 = 314.2 = UN5 229.3; 294.4 = 294.6; 299.5 = UN7 273-274.45; 301.2 / 301.4;
+307.15 = UN7 270.4; `verify`: 0 repeated-line differences); the coordinator's scripted `דְּבָרִים לֵאמֹר:` openings
+(UN8 277.1–301.1, 20 spells; UN9 304.1–321.1, 15 spells): each reads well with what follows (UN8 299.1 keeps the
+translator's own unvocalized `דברים לאמר:`, the same words). Echo control: no new biblical phrase; the reserved words pass
+`verify`. `build UN8 UN9`, `check_bible_quotes.py` on the annotated and translation files (0 problems), `verify UN8 UN9
+--strict` (0 problems).
+
+**Lines changed: 4** (UN8 1, UN9 3); the פירוק (and where needed the תרגומים / הערות) of each was updated.
+- UN8 280.1: `*פועל־הרע*?!` → `*פועל (הרע)*?!` – jr.tj is "doer" only; "evil" is the TLA's own bracketed supplement
+  ("(Übel)täter"), so it goes in `( )`.
+- UN9 310.1: `[יושבע] [אָתוּם]` → `[יושבע] אָתוּם` – `[(J]tm[,w)]`: Atum's tm is written, only the J is restored (the UN4
+  reviewer's ruling at 222.1).
+- UN9 310.4: `ייבלם פפי זה … – ייבלם אָתוּם` → `ייהדף פפי זה … – ייהדף אָתוּם` – ḫsbb is tla854535, the lemma ḫsf (the
+  TLA's spelling ḫsb, as UN8 301.9 `תהדפו`); the draft's note took it for another word.
+- UN9 318.1: `טֶטִי הוא המתפתל,` → `טֶטִי הוא המתפתל, הַמְנַחֶה,` – `⟨j:sšmi̯⟩` was left untranslated by a misreading of
+  §2.1: the `⟨ ⟩` mark is not carried, but the supplied word is translated whole (sšm = `מְנַחֶה`, 319.4).
+
+**Left as drafted (noted for the coordinator):**
+- mꜣ(j) "lion" (UN8 287.3) and rw "lion" (285.5, 294.2, UN5 243.2) are both `אריה` – a corpus-wide collision already in
+  WE / SS (mꜣj) and NU (rw); the lead may give one of them `לביא`.
+- UN9 306.17 j:mn imperative `הישאר` beside 306.18 the stative of the same lemma `[קבוע]` (the stative precedent of SI,
+  UN7; the pun with jmn.w `הנשאר` is kept in the first).
+- UN8 278.2 ḫsfi̯ stative read passive `*נהדף*?` against the TLA's active "having approached" (reasoned, marked).
+- UN9 320.1 ḏsr "clear (the way)" `קידש` – the lemma's `קדוש` of 295.2, 316.2; the TLA's "freimachen" would be `פינה`:
+  kept as a sense choice, for the lead.
+
+## Independent review: UN1, UN2
+
+Round 8 run 1, the independent fidelity reviewer (2026-11-13; did not draft these files). **Checked:** every `>` line of
+UN1 (217 rows, PT 23–116) and UN2 (143 rows, PT 117–171) against `egypt_tools.py data` (the base words, the TLA
+morphology, Allen's line as a check), then against `tr`: words omitted or moved across lines (77.4–5 `ḏi̯=ṯ | sḫm=f`
+kept at the wall's break); person, number, gender, voice, tense and mood (the relative forms of the frame `jr.t-Ḥr.w
+X.t.n=f`, the passives 142.1, 143.1, the prospectives, n sḏm=f / n sḏm.n=f 32.5, 56.3, 127.1, 142.1, 157.1); brackets
+against the base (§2.1), above all in the Pepi I and Neith rows (37.2, 38.2, 41.2, 53.2, 57.2, 75.2, 87.2, 90.1–92.3,
+96.2, 118.2–118.3, 126.1–126.2, 147.1, 152.1–152.3, 162.1–163.3), with the `ḏ(d)-mdw` split (`[ḏ(d]-mdw)` = `דברים
+[לאמר]`: ḏd is `לאמר`, mdw `דברים`); the `⟨ ⟩` supplements (25.8, 76.2) translated whole; the witness tags (`{נית}`,
+`{פפי א}`, `{אלן}`) on every non-W row; one Hebrew per lemma inside the two keys and against UN3–UN9 (`lex`, `grep
+--all`; the earlier reviewers' points: no sꜥḥ, smsw, ḫsf, ꜣms, kꜣp or tr in these keys; snṯr `קטורת`, nṯr.j `נתר`, bd
+`בורית`); the frame and the rubrics: all copies grouped by their Egyptian (`verify`: 0 repeated-line differences – the
+frame `קח לך את עין־חוֹרוּס, אשר …!`, `קבץ לך אותה אל פיך!`, `הגן – פן …`, `השלם את עצמך בליחה היוצאת ממך!`, Neith's
+`לנֵית זה. הגשה, ארבע פעמים.` (25 copies), Pepi's `לפֶּפִּי זה. הרמה, ארבע פעמים.`, Allen's `לאונאס זה. הרמת הגשה, ארבע
+פעמים.` (Allen's own fꜣt ḥnkt), PT 23–25 and 32 = UN5's copies); the rubrics as list lines with the count's gender
+(`עוגה, ארבע`, `צלע, ארבע`); the `דְּבָרִים לֵאמֹר:` openings (the translators', not scripted here: the Neith rows
+35.1, 45.1, 50.1, 81.1, 94.1 are the base's own one-word lines): each reads well with what follows. Echo control: no
+new biblical phrase (wdn `זבח`, 46.6, is the corpus's word); the reserved words pass `verify`. `build UN1 UN2`,
+`check_bible_quotes.py` on the annotated and translation files (0 problems), `verify UN1 UN2 --strict` (0 problems).
+
+**Lines changed: 6** (UN1 5, UN2 1); the פירוק of each was updated.
+- UN1 37.2: `את [לסתותיך]` → `את לסתותיך` – `⸢ꜥr⸣,[t.du]=[k]`: the body ꜥr is written (damaged), only the ending and
+  the suffix are restored – no bracket (§2.1).
+- UN1 38.2: `[פתחתי] לך [את] [פיך]` → `[פתחתי] [לך] [את] [פיך]` – the second `[n]=[k]` is restored as the first is;
+  the draft's פירוק had misread it as written.
+- UN1 75.2: `את [עין]־חוֹרוּס` → `את [עין־חוֹרוּס]` – `[jr(,t]-Ḥr,w)`: jr is restored and `,t-Ḥr,w` is inside the
+  editor's ( ), i.e. not written: nothing of the word is on the wall (as 96.2 has it; contrast UN2 126.1 `[jr(,t])-Ḥr,w`
+  `[עין]־חוֹרוּס`, where Horus is written).
+- UN1 87.2: `אל [פיך]` → `אל פיך` – `rʾ=[k]`: the noun is written, only the suffix restored.
+- UN1 93.7: `אשר בעין־חוֹרוּס` → `אשר הוא עין־חוֹרוּס` – jm.j here is "being (as)" (TLA "das das Horusauge ist"): the
+  bread is the Eye, the ritual's equation; the draft said "which is in the Eye" while claiming to follow the TLA.
+- UN2 136.1: `את ראשי אשר אחרי סֵת` → `את רָאשֵׁי (אלה) אשר אחרי סֵת` – unvocalized `ראשי` before `אשר` reads "my head";
+  vocalized as an ambiguous word, with `(אלה)` so the construct reads "the heads of those who follow Seth" (TLA).
+
+**Left as drafted (noted for the coordinator):**
+- UN2 131.1 j:sšꜣ.w=k `תְּסַשֵּׁא?` – a Hebrew verb coined from the Egyptian sound (the TLA's "bring to land (?)"); the
+  translator keeps it for the pun with ꜣšr.t (131.3); the lead may prefer a transliteration or `*תעגון*?`.
+- ꜥ (the measure) `ספל` vs ḥnw.t `קערה` is kept by the wall's words; Allen-only rows (167.3, 169.3) follow Allen's ḥnwt
+  `קערות` – consistent with the lemma, though the Neith rows of the same items read ꜥ `ספלים`.
+
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)
