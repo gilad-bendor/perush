@@ -1171,3 +1171,13 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
 5. **Open (for the user):** nꜣš.wtj (a name that sounds like `נחש`) kept transliterated; the unidentified words of PT 281,
    284, 285–286 (Steiner 2011 might read some); 300.3–4 the AED's "our brother (?)" against Allen's "these two brothers";
    Sobek `סֻבֶּךְ` / NU7 `סוֹבֶּךְ` (for the lead).
+#### 13.6.7 UN9 (PT 302–321), translator 7, merged 2026-11-13 (full list in `10-…/project.md`, "UN9")
+1. **The ladder:** mꜣq.t `סֻלָּם` (304.2, 305.1–2, 306.9 `בשמה זה, "סולם"`); ṯꜣz "tie" `קשר` (the ladder is tied); Gen 28:12
+   written out at 305.1. **Copied:** 307.15 = UN7 270.4; 314.2 = UN5 229.3.
+2. **Collisions settled:** `סגריר`, `שליחה`, `מְנַחֶה` ★, `מסכן` (≠ twꜣ `עני`).
+3. **The coordinator's fix (2026-11-13): the composite had dropped every word of an AED record before the first or after
+   the last word the alignment matched** – the opening rubric `ḏ(d)-mdw` of 83 spells (each first line now opens
+   `דְּבָרִים לֵאמֹר:`, applied by script to UN3–UN9, a note in each פירוק) and the tail of 302.24 ("people, Unas flies away
+   from you", now translated). `make_composite.py` extends each occurrence's first and last rows to the record's edges.
+4. **Open (for the user):** sḏr `לן` (UN5 `שכב`); ḥꜣj `עירומות` (NU8 `חשוף`); 311.3 / 311.7 keep both layers of the wall
+   (first person and its correction); 321.1 sfr.t ḥtp.t; ty `ציה?`.

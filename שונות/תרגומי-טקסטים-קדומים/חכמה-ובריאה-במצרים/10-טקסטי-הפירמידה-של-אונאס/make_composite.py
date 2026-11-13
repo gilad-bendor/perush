@@ -235,6 +235,24 @@ for r in rows:
     used_labels.add(lab)
     path = (DIRS.get(sig, 'PT--Unas-parallels') + '/' + tid + '.xml') if tid else ''
     out.append([unkey(spell, wall), lab, spell, n, pyr, wall, sig, path, i, j, lb])
+# The alignment keeps only the words it matched: words of the record before the first or after the last matched word
+# of an occurrence were dropped (a line's tail lost: 302.24 "people, Unas flies away from you"; Round 8 run 1, UN9).
+# Extend each occurrence's first row back, and its last row forward, up to the next row of the same record (or its end).
+from collections import defaultdict
+byrec = defaultdict(list)
+for r in out:
+    if r[7]: byrec[r[7]].append(r)
+for path, rs in byrec.items():
+    n = len(words_of(os.path.basename(path)[:-4]))
+    occs = defaultdict(list)
+    for r in rs: occs[(r[2], r[5], r[10] if r[6] == 'A' else '')].append(r)
+    starts = sorted({int(r[8]) for r in rs}); ends = sorted({int(r[9]) for r in rs})
+    for key_, orows in occs.items():
+        last = max(orows, key=lambda r: int(r[9])); first = min(orows, key=lambda r: int(r[8]))
+        nxt = [x for x in starts if x >= int(last[9])]
+        last[9] = str(nxt[0] if nxt else n)
+        prv = [x for x in ends if x <= int(first[8])]
+        first[8] = str(prv[-1] if prv else 0)
 with open(OUT, 'w', encoding='utf-8') as f:
     f.write('# The Pyramid Texts of Unas: the composite (Round 8 run 1, 2026-11-13; made by make_composite.py).\n'
             '# One row per line of Allen 2013 (A New Concordance of the Pyramid Texts I) of each Unas wall occurrence, in'

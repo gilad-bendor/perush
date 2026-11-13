@@ -1102,5 +1102,184 @@ king's crossing, and the great left Eye of Horus brought back "sound", named as 
 - **A pun chain (PT 301's "in its name of X") is explained, not imitated**: a Hebrew pun of one's own (`ערב` /
   `עֲרָבָה`) would add what the Egyptian does not say.
 
+## UN9 (PT 302–321)
+
+Round 8 run 1, translator 7 (2026-11-13). Files: `annotated-UN9.rtl.md`, `translation--intro-UN9.rtl.md`,
+`translation-UN9.rtl.md` (generated), `translation.rtl.md` (generated).
+
+### Scope
+The antechamber's **north wall** (PT 302–312) and the **corridor** (PT 313–321): 198 rows, labels `302.1` … `321.3`.
+Witnesses: Unas's own wall for 129 rows; **PT 303** read from Allen (`{אלן}`, 12 rows; the backticked line is the tool's
+reference); **PT 304** from Pepi II (`{פפי ב}`, 13); **PT 306** from Merenre (`{מרנרא}`, 18; 306.17–306.18 partly
+restored); **PT 308** from Neith (`{נית}`, 9); **PT 310** from Pepi I (`{פפי א}`, 9; 310.1–310.2, 310.9 partly
+restored); **PT 318** from Teti (`{טטי}`, 8). PT 313.2–313.4 has restorations on Unas's wall. The text in a sentence:
+the king flies up from mankind as falcon, goose and kite; the gods watch "how beautiful the sight!"; Re and Horus tie
+a ladder for him, one on each side, and he climbs between them ("akh to the sky, corpse to the earth"); strange
+guardians (Anubis's daughter on the ladder's uprights, an ostrich, a four-horned bull, a two-faced ferryman) are asked
+to open the way; he is a Heliopolitan, a wild bull, Re's secretary who seals his rolls; in the corridor the doors of
+the sky open, he is the screeching baboon, Sobek rising with the flood, lord of semen, Babi lord of the night – and
+in the pyramid's last line he spreads his protection over Re.
+
+### Sources consulted
+- The base: AED-TEI through `egypt_tools.py data UN9` (lemmas, morphology, glosses); Allen 2013's line under each row
+  (a check, never copied; PT 303 from it, the פירוק quoting only the words it parses).
+- Rank 3: the TLA's German (`tr UN9`), read after drafting each group (302, 303–304, 305–306, 307–308, 309–310,
+  311–312, 313–317, 318–321; nothing for PT 303). Allen 2005/2015 and Faulkner 1969 from memory only, in a few words,
+  never quoted (the first draft of 302 had English glosses attributed to Allen: removed in pass (a)).
+- Precedents: the scratch lemma→Hebrew index (TLA id → the Hebrew in the פירוק bullets of every drafted file, rebuilt
+  with UN8), then `lex` / `grep --all` for every new word.
+- Bible verses printed with `check_bible_quotes.py --show` before quoting: Gen 3:19, 5:24, 6:2, 28:12, 28:13, 28:17,
+  28:18, 35:14, 38:18; Ex 19:4; Deut 32:11; 2 Sam 12:9; 2 Kgs 2:11; Isa 6:2, 14:13, 14:14, 40:31; Amos 9:2; Ps 24:7,
+  24:9, 55:7, 139:8; Prov 23:5; Job 28:13, 39:26; Eccl 12:7; Dan 4:30 (used: Gen 3:19, 6:2, 28:12, 38:18; 2 Sam 12:9;
+  Isa 40:31; Ps 24:7; Eccl 12:7; Dan 4:30).
+
+### Decisions
+- **The ladder** (304.2, 305.1–305.2, 306.9): mꜣq.t = `סֻלָּם` (gated; licensed by the line); mꜥꜣꜥ.wj "the two uprights"
+  `שני זקפי הסולם`; ṯꜣz "tie" `קשר` (the ladder is *knotted*, not "set up"); 306.9 `בשמה זה, "סולם"` (UN8's name
+  formula: the sky itself "in its name of Ladder"). PT 310 (Pepi I) has **no** ladder word – it is a ferry spell; the
+  ladder spells of the wall are 304–306 (and UN7 271).
+- **Copies**: 307.15 = UN7 270.4 `בא אונאס אליך,` byte for byte (renderings §13.6.5.1); 307.17 begins with it; 314.2 =
+  UN5 229.3 / UN8 277.2 `נְפוֹל! זְחַל!`; 302.21 = 302.7 (only the god and m-ꜥb / mm differ); 307.11 / .12 / .14 and
+  308.6–308.9 litanies; 310.1–310.4.
+- **Witness forms kept**: Pepi II `פֶּפִּי נֶפֶרְכָּרֶע` (first occurrence vocalized), Pepi I `פֶּפִּי`, Teti `טֶטִי`, Neith
+  `נֵית` (the queen and the goddess, 308.8); Merenre's PT 306 has "the father" (jt) where Unas has his name (noted).
+- **⟨ ⟩ not carried**: 318.1 `⟨j:sšmi̯⟩` (a whole word the editor supplies) is left out of the Hebrew, per the brief.
+- **n sḏm=f**: past by UN3's rule (302.12), but **future in the curse of 307.9–307.14** (the TLA's reading; the context
+  is a curse on a god who blocks the king) and in 302.4–302.5 (a promise); noted in each entry.
+- **Terms fixed here** (each grepped): dḫ `התחבא`; qfn `רכן` (`כופף` is qꜥḥ's); sḏr "spend the night" `לן` (UN5's
+  `שכב` kept for "lie"; a sense split, noted); ḥtm "perish" `נשמד` (NU's השמיד); ḫbn.t `אשמה` (MT's ḫnb.t); wḫꜣ.w
+  `טפרים`; smn `אווז` (WE); ḏr.t `דַּיָּה` (UN5); ḥnk.t `המקורבת`; ptr.w `אשנבים`; njw `יען`; bjk.t `עיר־הבז` (NU6); snḫ
+  `טיפח` (`גידל` is ꜣṯj's); šwꜣ `מסכן` (SI; `עני` is twꜣ's); mꜣw "sight" `מחזה` (`מראה` is jrw's); jwnwj `בן־אוֹן` /
+  `בת־אוֹן`; ty `ציה?` (`עֲרָבָה` is the willow, UN8); hꜣb.t `שליחה` (`משלוח` zb.t, `שליחות` wpw.t); ḥtmwt `החֶתֶמוּת?`;
+  hnw (boxes) `ארגז` (NU9); mḏꜣ.t `מגילה`; ḫsbb `נבלם` (`הדף` is ḫsf's); šnṯ `גידף` (BD 125); nfꜥ `הניס` (`הרחיק` is
+  ḏr's); šꜣp.t `סגריר` (`סופה` is AM's pḫpḫ); jgp `ענן־הגשם`; bḫḫw `שרב` (`להט` is ꜣm's / hh's); ngꜣ "slaughter" `קטע`
+  (`שחט` rḫs, `קטל` mds, `טבח` sšm); ꜥr.t `שֵׁת` (vocalized; `פי־הטבעת` would trip the טבעת gate; `אחוריים` is pḥ.wj's);
+  jmꜣḫ `חוט־השדרה`; mḥy.t `שיטפון` (HC); ḥꜣj "naked" `עירומות` (NU8 96.9 `חשוף`, but `חשף` is kfj's: a split for the
+  lead); ꜥntjw `מור` (SI); wsr.wt `חוסן`; zbj `הוביל` (WE, SI; `שלח` is hꜣb's); ḏsr `קידש` (NU6); ḫsbḏ `סַפִּיר`
+  (renderings §4.2); šmšm.t `קנבוס?`; ꜥqꜣ `חבלי־הספינה`; qnj-ḥr `צהוב־הפנים`; šsꜣ.t `רדת־הלילה`; stp zꜣ `פרש חסות`
+  (NU9); sšmj `מְנַחֶה` (vocalized: unvocalized it reads ꜥꜣb.t's `מנחה`).
+- **Names fixed here** (first occurrence vocalized): msḫtjw `מֶסְחֶתְיוּ` (the Big Dipper); Jtꜣ(tj) `האִיתָאתִי?`;
+  qbḥw `קְבֶחוּ` (UN7); ḥwt-ḥrw `חַתְחוֹר` (HC); Nfr-tm `נֶפֶרְתֵּם` (renderings §11.11); bꜣw P / Nḫn `בָּאֵי פֶּה` / `בָּאֵי
+  נֶחֶן`; Dwꜣw `דּוּאָו`; jmnw "the Enduring (bull)" `הנשאר` (pun with j:mn `הישאר`, 306.17); Jꜣrw `האגמון`;
+  twt.tj-jb `שתי שוות־הלב`; ḏḥꜣj `הגֶ׳חָאִי?`; Nḥ.t-nṯrw `נֶחֶת־הָאֵלִים?`; Ḥr=f-m-ḫnt=f / Ḥr=f-m-mḥꜣ=f
+  `פניו־לפניו` / `פניו־באחורי־ראשו`; Ḥꜣ=f-m-ḥꜣ=f `אחורי־ראשו־מאחוריו`; the ferry j:pꜣ=s-ḫnn=s `עפה־ונוחתת`;
+  jwj.t `המשאירה־בלי־סירה`; khꜣw `הקֶהָאוּ?`; jzkn `אִיזְקֶן?`; pꜣṯṯ `פָּאצֶ׳צֶ׳`; ḥmj `חֶמִי?`; ꜥbš `העַבֶּשׁ`;
+  ḏsr.t `הקדושה`; jkn.t `האִיקֶנֶת?`.
+- **Rejected**: `סופה`, `משלוח`, `עני`, `מראה`, `גידל`, `כופף`, `הדף`, `הרחיק`, `שחט`, `טבח`, `קטל`, `להט`, `חשף` for
+  the new lemmas (each taken by an earlier key); `בכור` (smsw `בכיר`, 303.8, UN7's rule); `מלאך` (gated; wpwtj
+  `שליח`); `עֲרָבָה` for ty; `פי־הטבעת` (the טבעת gate).
+
+### Open decisions for the user
+- **sḏr** `לן` (302.10, "spend the night", the TLA's gloss) beside UN5's `שכב` for the same lemma – a sense split.
+- **ḥꜣj** `עירומות` (308.5) vs NU8 96.9 `חשוף` (one lemma, two words; `חשף` is kfj's in SS, AM and 302.8).
+- **The ladder of PT 310**: the coordinator's brief lists 310 among the ladder spells; Pepi I's copy (the base) has
+  no mꜣq.t – it is the ferry spell of Face-in-front / Face-behind. Nothing to translate as `סולם` there.
+- **302.24**: the composite cuts the line after `pꜣ pꜣ`; the AED record (and Unas's wall) continues `rmṯ pꜣ r=f Wnjs =j
+  m-ꜥ=ṯn` ("people, Unas flies away from you"). The Hebrew follows the base line, the rest is in the note and a
+  footnote. A tool problem (below).
+- **311.3, 311.7**: the AED gives two layers of the wall (1st person and its correction to 3rd); both are translated
+  in sequence. Keep, or translate only the corrected layer?
+- **321.1** sfr.t ḥtp.t (TLA: one unexplained object) – `הסֶפֶרֶת?, *הנחה*?`; Allen's later variants have "Content of
+  Form, Khnum's eye".
+- **ty** `ציה?`, **jmnw** `הנשאר`, **mn** `נשאר` (AM) / stative `קבוע` (SI, UN7): the pun of 306.16–306.18 uses both.
+
+### Progress log
+- Drafted 302 (24 rows), saved, `fill` + `verify` (0 problems), then `tr`, then the תרגומים bullets (the first draft's
+  English glosses ascribed to Allen were replaced by the TLA's German; the הקבלה tag "[shared motif]" corrected to
+  [divergence]); 303–304 (25 rows); 305–306 (33); 307–308 (27); 309–310 (16); 311–312 (19); 313–317 (26); 318–321
+  (28). `verify UN9`: 0 problems after each group.
+- Readings changed after the TLA: 304.12–13 (three appositions, not a nominal sentence); 307.1–307.2 (*m* "in"); 307.5
+  (Nefertem at the head of the people); **307.7–307.14** (a curse on the god who raises his arm, not a description of
+  Unas: future tense); 311.10–311.11 (one long sentence: the four khꜣw "who speak in painful roar … so that they not
+  stretch out their arm"); 311.13–311.14 (concessive "even if"); 313.2–313.3 (*wn* active, Unas its subject); 314.1
+  (the bull "to be slaughtered"); 318.5–318.7 (purpose clauses).
+- Pass (a) fidelity: brackets of 306.17–306.18, 310.1–310.2, 310.9, 313.1–313.4 checked word by word (a restored suffix
+  or prefix not bracketed; a half-restored word bracketed whole); 303.4 `ו` removed (not in the Egyptian); 303.11 `jw`
+  given its `ו`; 318.1 ⟨ ⟩ omitted; every negation checked (n … js 305.15; n sḏm=f / n sḏm.n=f).
+- Pass (b) consistency: collisions found by `grep` after drafting and fixed: `סופה` (AM pḫpḫ) → `סגריר`; `משלוח` (SS
+  zb.t) → `שליחה`; `מנחה` → vocalized `מְנַחֶה`; first `אוּנָאס` vocalized (302.2); the copies above byte for byte.
+- Pass (c) Hebrew: the `>` lines read through as a sequence; quotation marks added for the dialogues (305.8–305.9,
+  306.1, 306.10, 310.8–310.9).
+- `build UN9`: 198 lines, 3 footnotes. `check_bible_quotes.py` on the three files: 0 problems. `verify UN9 --strict`:
+  0 problems, 0 repeated-line differences.
+
+### The text on its own terms
+- **Ascent is flight** (302.6–302.24): men hide, gods fly; the king's face is falcons, his wings birds, his nails a
+  raptor's; he "takes his arms as a goose" and "beats a wing as a kite" – the kite being Isis and Nephthys mourning
+  Osiris (302.10, 302.23): the mourners' wings carry the dead up. "The flier flies – people, Unas flies from you!"
+- **No case against him** (302.16–302.19): before he can rise, no claim may remain against him on earth or in the
+  sky; he "removes his word" – the dead, too, can be sued.
+- **The ladder is tied, not set up** (305.1–305.5): Re and Horus knot it, "one on this side, one on that", and the king
+  climbs between them; Anubis's daughter sits on its uprights (304.2); and the sky itself becomes a ladder "in its name
+  of Ladder" (306.9) – naming makes it so.
+- **"Akh to the sky, corpse to the earth"** (305.10): death as a division of the person; the body stays and is kept,
+  the akh acts above.
+- **The scribe's afterlife** (305.13–305.15, 309.3–309.7, 303.11–303.12): a heir without a document is poor; the king
+  writes "with the big finger, not the little"; he opens Re's chests, breaks the seals of his decrees, seals his rolls
+  and sends tireless messengers – heaven as a palace chancery.
+- **A curse on a blocking god** (307.7–307.14): any god who stretches out his arm against the king will have no bread
+  among the gods, no messenger, no door of the sun-barks opened to him, no hearing in his city.
+- **Identity as a magical bond** (310.1–310.4): "should Pepi be conjured, Atum is conjured; should Pepi be struck, Atum
+  is struck" – an attack on the king is an attack on the creator.
+- **The two-faced ferryman** (310.7–310.9, 321.1): "Face-in-front, Face-behind", asking "which ferry shall I bring you?"
+  – answer: "She flies up and alights".
+- **The wall corrected** (311.3, 311.7): the scribes copied a first-person spell and corrected it on the stone to the
+  third person; the AED keeps both layers.
+- **The body in full** (315.2, 317.10–317.11): the baboon's contorted dance; the king eats, urinates and copulates –
+  life is a body that works, not a pale shade; "lord of semen, who takes wives from their husbands".
+- **The Nile flood as resurrection** (317.1–317.7): the king comes as Sobek at the head of the inundation, makes the
+  horizon's banks green, brings faience to the great Eye.
+- **The last word** (321.3): after asking along every wall to be received by Re, the king ends by spreading his
+  protection over Re.
+
+### Key parallels
+- 305.1 ↔ Gen 28:12 `וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה` [equivalent] (with [divergence]): the
+  same instrument between earth and sky, a divinity beside it; but in Genesis angels go up *and down*, no one is named
+  as setting it up (`מֻצָּב`), and Jacob only dreams and stays on earth; here Re and Horus knot it for one man, who
+  climbs once and does not return. Also 304.2 [equivalent], 306.9 [divergence] (the sky itself is the ladder).
+- 305.10 ↔ Eccl 12:7 `וְיָשֹׁב הֶעָפָר עַל הָאָרֶץ כְּשֶׁהָיָה; וְהָרוּחַ תָּשׁוּב אֶל הָאֱלֹהִים אֲשֶׁר נְתָנָהּ` [equivalent]
+  / [divergence]: the same division of the person at death; Qohelet's is every man's lot and the spirit "returns",
+  Unas's akh is himself, acting above. Gen 3:19 [divergence] (only the dust).
+- 313.2 ↔ Ps 24:7 `שְׂאוּ שְׁעָרִים רָאשֵׁיכֶם` [divergence]: heavenly doors opened to a king who enters – in the Psalm
+  YHWH, here the dead king.
+- 302.23 ↔ Isa 40:31 `יַעֲלוּ אֵבֶר כַּנְּשָׁרִים` [divergence]; 309.6 ↔ Isa 40:31 `יֵלְכוּ וְלֹא יִיעָפוּ` [divergence]: wings
+  and tireless strength, a metaphor of renewal there, a real ascent and real messengers here.
+- 302.16 ↔ Dan 4:30 `שַׂעְרֵהּ כְּנִשְׁרִין רְבָה וְטִפְרוֹהִי כְצִפְּרִין` [divergence]: a man whose body becomes a bird's – in
+  Daniel a degradation, here deification.
+- 317.11 ↔ Gen 6:2 `וַיִּקְחוּ לָהֶם נָשִׁים מִכֹּל אֲשֶׁר בָּחָרוּ` and 2 Sam 12:9 [divergence]: a divine (or royal) taker of
+  wives – in Genesis a step toward the flood, in Samuel a sin, in the pyramid a royal prerogative.
+- 309.5 ↔ Gen 38:18 `חֹתָמְךָ` [cognate]: ḫtm is the source of Hebrew `חוֹתָם` (a loanword).
+- 2 Kgs 2:11 (Elijah taken up) and Isa 14:13: printed and considered; not attached to a line – the corridor's ascent
+  has no chariot and no hubris (the king succeeds, as in UN3's 214.12 note).
+
+### Lines shared with other texts
+- 307.15 = UN7 270.4 (`בא אונאס אליך,`; the Egyptian has jr=k for ḫr=k); 307.17 opens with it.
+- 314.2 = UN5 229.3, UN8 277.2 / 289.2 (`נְפוֹל! זְחַל!`).
+- 313.6 ≈ 310.5 (`אונאס הוא חוֹרוּס.` / `פפי הוא חוֹרוּס;`).
+- 310.7 Face-behind and 321.1 Back-of-head-behind continue UN7's ferryman `פניו־מאחוריו` (270.1) with their own names.
+- Inside UN9: 302.7 ≈ 302.21; 304.3 ≈ 304.5 ≈ 304.8; 305.1 ≈ 305.2; 307.1 ≈ 307.2; 307.11 ≈ 307.12 ≈ 307.14;
+  308.1 ≈ 308.2; 308.6–308.9; 310.1–310.4; 320.4 / 320.6 (`אדון רדת־הלילה`).
+
+### Proposals for the shared renderings
+1. **Terms**: ṯꜣz (the ladder) `קשר`; mꜥꜣꜥ.wj `זקפי הסולם`; jwnwj / jwnwt `בן־אוֹן` / `בת־אוֹן`; šwꜣ `מסכן`; mꜣw
+   `מחזה`; hꜣb.t `שליחה`; ḫsbb `נבלם`; šnṯ `גידף`; nfꜥ `הניס`; šꜣp.t `סגריר`; bḫḫw `שרב`; ngꜣ `קטע`; ꜥr.t `שֵׁת`
+   (vocalized); mḥy.t `שיטפון`; ḏsr `קידש`; zbj `הוביל`; stp zꜣ `פרש חסות`; snḫ `טיפח`; qfn `רכן`; dḫ `התחבא`.
+2. **Traps worth adding**: `מנחה` for sšmj must be vocalized (`מְנַחֶה`; else ꜥꜣb.t's "offering"); `שֵׁת` (buttocks)
+   vocalized beside Seth `סֵת`; `אֵל` vocalized when it is a vocative "O god" (else the prohibitive `אַל`).
+3. **Names**: the Big Dipper msḫtjw `מֶסְחֶתְיוּ`; Hathor `חַתְחוֹר` (HC's form) for the PT keys; the ferry
+   `עפה־ונוחתת`; the ferrymen `פניו־לפניו`, `פניו־באחורי־ראשו`, `אחורי־ראשו־מאחוריו`.
+4. **Tool problem (for the lead)**: `composite-UN.tsv` cuts the last row of some AED records short (302.24 ends at word
+  149 of 157; also UN1 32.7, 34.8, 35.6, 43.4, 79-80.7, 81.10, 95.2, 110.3, UN2 170.3 – the word range of the last row
+  stops before the record's last words). Worth checking in `make_composite.py` before UN1–UN2 are drafted.
+
+### Lessons for the guidelines
+- **A curse can masquerade as a description**: a chain of negated sḏm=f lines (307.9–307.14) read as statements about
+  the king until the TLA's single long sentence showed they are the punishments of a hostile god; read a litany of
+  negations against the sentence it hangs from before choosing the tense.
+- **The AED sometimes keeps two layers of the wall** (a 1st-person spell corrected on the stone to the 3rd person, 311.3,
+  311.7): the TLA marks them with {{ }} / [[ ]] in its translation only; check `tr` for such marks when a line repeats
+  itself oddly.
+- **Check the composite's last row of each record against the AED word count** (302.24 lost half its words).
+
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)
