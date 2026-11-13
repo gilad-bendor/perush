@@ -461,6 +461,64 @@ tense/mood/person 0, omissions 0.
 **Checked and kept:** open decisions 1 (SA 28 `את הרגל – אכן הפניתי?`: *ĝiri₃* beside *kaskal* may be "path" –
 `את השביל`; the `?` stays, the doubt is the reading), 2 (SA 64, the image), 3 (*nir-ĝal₂* split), 4, 5.
 
+## Review R2 (EL KH EJ)
+Independent review (Round 8 run 2, 2026-11-13), three read-throughs of all 466 lines (EL 171, KH 165, EJ 130): fidelity
+against ETCSL + the ORACC morph line by line (aspect, the modal prefixes, persons, brackets, the **פירוק**'s Hebrew
+against the `>` line – also by script); consistency – `lexmap` over all twelve texts, `rel`/`verify`, the corpus
+formulas, every corpus's grep for the formulas touched; Hebrew read aloud, every **הקבלה** tag and verse checked.
+T2's three texts are accurate and the refrains are kept letter for letter; the fixes are a mood (the Keš closing), two
+tenses, two brackets, a misread *an* and two tags.
+
+**Lines changed:** EL 1 (brackets 1: 57); KH 6 (tense/mood/person 4: 128–131; brackets 1: 58O; wording/consistency 1:
+6) + apparatus (128 tag, the header, the section heading, the intro); EJ 4 (tense 3: 15, 19, 20; wording/consistency 1:
+126) + apparatus 1 (24 tag). Omissions 0. Total 11 lines.
+
+**Notable fixes**
+- **KH 128–131** *lu₂ te-a na-te*: `האיש הנגש – אַל יגש!` → `האיש הנגש – לֹא נִיגַּשׁ!` (coordinator's task; decision 13):
+  see "The *na-* + ḫamṭu question" below. Header, `## 128–134` heading, 133's note, the intro and EJ 123's note follow.
+- **KH 6** *an ub-da 4*: `אַן, ארבע הפינות` → `ארבע הפינות` – *an* is "heaven" in the fixed phrase "the four corners
+  (of heaven)", not the god (the line had the ★ name); = SA 4, 92, LB 5 after R1, EL 68.
+- **KH 58O** *[keš₃]⸢{ki}⸣-gin₇*: `כְּכֵשׁ` → `[כְּכֵשׁ]` – the name's only sign is restored (just the determinative
+  survives): a restored word, bracketed like 58P `[כגיבורה]` (§6.8).
+- **EJ 15** *gud-gin₇ mur im-ša₄*: `כשור נוהמת` → `כשור נָהֲמָה` – the finite form of the corpus formula `כשור נהם` (the
+  Song of the Hoe 73, the same form; §5.5); the non-finite *mur ša₄* keeps the participle `נוהם` (KH 28, EJ 40).
+- **EJ 19–20** *im-ma-ĝen*: `הולך` → `הלך` – singular "go" is *ĝen* only in ḫamṭu (marû *du*); the marû verbs beside it
+  (*gu₃ … de₂-e*, *šum₂-mu*) keep their participles.
+- **EJ 126** *teš₂*: `כאחד` → `יחד` (= EJ 40, SA 64; `כאחד` stays *dili-a*'s, EJ 103). **EL 57** *lagar?*: `?` added.
+- **EJ 24** Tigris `חִדֶּקֶל`: [equivalent] → [cognate] (the same name via Akk. *idiqlat*: §6.4's rule for names).
+  **KH 128** Exod 19:12: [equivalent] → [divergence] (a prohibition there, a statement here).
+
+**The *na-* + ḫamṭu question (KH 128–131; EB 30–35)**
+- In the drafts both texts already read the prefix as negative (KH `אַל` – prohibitive; EB `לא` – a negated fact); T2's
+  "affirmative" reading was for KH 1–3 and EJ 80, 89 (narrative *nam-ta-ab-e₃* "came out", *na-zig₃*, *nam-du₈*): right,
+  the narrative affirmative *na-* (Thomsen §§ on *na-*; Jagersma 2010 ch. 24; Attinger's "na- affirmatif"), kept.
+  KH 54 *na-nam* (copula) – affirmative, kept. NI 19–20, 28–30 (*nam-mi-in-*) – narrative affirmative, kept.
+- The grammars put the prohibitive *na-* with **marû** (*na-ab-be₂-en*, *na-te-ĝe₂₆-e*); *na-* with **ḫamṭu** is either the
+  affirmative of narrative or – in Old Babylonian literary texts – a plain negation of a fact (= *nu-*). (These are the
+  standard positions of Thomsen, Jagersma and Attinger as I know them; the books are not in the repository, so no
+  paragraph numbers are cited.) **KH 128–131**: *na-te* is ḫamṭu (*te*, not *te-ĝe₂₆*) and 3rd person, so not a regular
+  prohibitive; the affirmative gives a tautology ("the one who approaches does approach") in a coda that is not
+  narrative; the negation of fact fits the hymn's refrain of the unattainable ("who has seen?"). Hence `לא` + past:
+  "the man who approaches – has not approached", i.e. does not reach it – still a paradox, and the Hebrew repeats the
+  root as the Sumerian does (`הנגש` / `ניגש`). **EB 30–35** *na-ma-ra-ab-ak(-a-gin₇)*: ḫamṭu, the parallel 157–158 has
+  *nu-* for the same clauses, and only a negation gives Inana a reason to attack – **EB (T3's `לא` + past) is right**;
+  no change proposed. The two texts now render the same construction with the same particle.
+
+**Checked and kept:** EL 8 *mu-un-na-sun₅-sun₅-ne-eš* `משתפלים` (the OB marû 3rd plural *-e-ne-eš*); EL 158
+*ba-e-de₃-tuku-dam* `אשר קנית לך` (*-ed-am* could be prospective, "whom you were to take"; ETCSL's past kept); KH 80
+*nam-en mu-un-na-ak* `עושה` (ḫamṭu in a descriptive house list, stative); KH 28 `כשור נוהם` (non-finite); open decisions
+11–12 (gate workarounds), 14 (closed by R1), 15–17; the cognates through the Akkadian equivalent (*saḫar*, *u₈*,
+*niĝ₂-si-sa₂*) follow the folder's convention (§5.2 "a formula takes the same Hebrew across languages").
+
+**For the coordinator**
+1. `../renderings.md` §5.5: the closing string `האיש הנגש – אַל יגש!` should read `האיש הנגש – לא ניגש!` (decision 13
+   closed as above); §5.5's `כשור נהם` is the finite form, the participle `נוהם` the non-finite one.
+2. *us₂* "adjoin" is `צמוד` / `הצמיד` (KH 58F, 98; EJ 39, 56, 107) beside `מגיע` (reach) and `דבק` (attend): a third
+   split by sense, recorded here.
+3. *dili*: `יחיד` (EL 100) / `בייחוד` (EJ 100) / `כאחד` (EJ 103); *teš₂*: `יחד`, *teš₂-bi* "all of it" `כולו` (EJ 6) –
+   splits by sense, recorded.
+4. *muš₃* `*מראה*` (T2) vs `*במה*` (T3): see the Tetrad's Review R2.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 

@@ -320,3 +320,9 @@ Coordinator: 25 – the workarounds stand (EB 174 `תוף` for *ub*; NG 113–11
 - *tur₃* = `רֶפֶת`, *amaš* = `דִּיר` (SA 51, LA 45).
 - *an-e us₂* = `לשמים … מגיע` (the corpus formula; ID 33); *us₂* "attend, follow" keeps `דבק` (a split by sense).
 
+### 5.9 Review R2 (merged 2026-11-13)
+- The Keš hymn's close (KH 128–131): *na-te* is ḫamṭu, so not a prohibitive: `האיש הנגש – לא ניגש` (was `אַל יגש!`; §5.5's fixed string superseded). *na-* + ḫamṭu: narrative affirmative in KH 1–3, EJ 80, 89; negation in KH 128–131 and EB 30–35 (with *nu-* in EB 157–158).
+- *muš₃* = `מראה` (T2's, the first; T3's `במה` lines are aligned by review R3).
+- KH 6 *an-ub-da limmu₂*: *an* is "heaven" in the fixed phrase, not the god: `ארבע הפינות`.
+- Splits by sense recorded: *us₂* `צמוד` / `דבק` / `מגיע` (in *an-e us₂*), *dili*, *teš₂* (`יחד`).
+
