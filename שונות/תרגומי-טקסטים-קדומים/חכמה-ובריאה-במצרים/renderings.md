@@ -1074,11 +1074,11 @@ Hymn" 273–274, east wall PT 277–301, north wall PT 302–312) and the corrid
 | wjꜣ; mskt.t / mꜥnḏ.t | `צִי` ★; `מֶסְקְטֶת` / `מַעַנְגֶ׳ת` | §12.6.1 |
 | jr.t-Ḥr.w (also the offering "Eye of Horus") | `עין־חוֹרוּס` | project 2, BD |
 | ḥtp.w / ḥtp-dj-nsw | `קורבנות` / `קורבן שהמלך נותן` | |
-| qbḥ.w (libation, the cool water) | `מי־הקירור`? – translator 1 fixes (UN1) | |
+| qbḥ.w (libation, the cool water) | `מי־הצינה` (the Book of the Dead's word; §13.6.1) | |
 | snṯr (incense); nṯr.j (natron); bd (natron, another word) | `קטורת` (translator 1 confirms); `נֶתֶר` (gated) [cognate: loanword – Egyptian nṯr.j > Hebrew `נֶתֶר`, Greek νίτρον]; `בֹּרִית` | Jer 2:22 `כִּי אִם תְּכַבְּסִי בַּנֶּתֶר וְתַרְבִּי לָךְ בֹּרִית` (ירמיהו ב:כב) holds both words of the ritual's two natrons |
 | mꜣꜥ-ḫrw | `אֲמִתִּי־הַקּוֹל` | §4.1 (`verify` FORMULA) |
 | nb-r-ḏr | `אֲדוֹן הַכֹּל` | §3.1 |
-| nsw / bjtj | `מֶלֶךְ` / `מלך־הדבורה`? – translator of UN3 fixes (nsw-bjtj "the dual king") | |
+| nsw / nsw-bjtj | `מֶלֶךְ` / `מֶלֶךְ־הַדָּרוֹם־וְהַצָּפוֹן` (HC, WE) | §13.6.1 |
 | ḥqꜣ "rule"; sḫm "have power" | `משל`; `שלט בְּ־` | §12.6.2 |
 | ḫftj; sbj | `אויב`; `מרד` / `מורד` | §4.4 |
 | ḏ.t / nḥḥ | `עַד` / `נֶצַח` | `עוֹלָם` never |
@@ -1109,3 +1109,15 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
 1–7: [divergence] – food for the dead king, not for a god); Nun and "not yet" (Gen 1:2, 2:5).
 
 ### 13.6 Proposals merged (filled by the coordinator after each translator)
+#### 13.6.1 UN3 (PT 204–218), translator 1, merged 2026-11-13 (binding for UN1–UN9; full list in `10-…/project.md`, "UN3", Proposals)
+1. **Address:** `hꜣ Wnjs` `הוֹי אונאס`; `Wnjs pn` `אונאס זה`; `j` `הוֹ`; the emphatic `r=f` / `jr=k` / `jr=ṯn` `אפוא`; mn "So-and-so" `פלוני`.
+2. **Refrains (copied byte for byte):** PT 217 `אָתוּם, בא אליך אונאס זה, אָח בלתי־כלה, …`; `בָּא אפוא אונאס זה, אָח בלתי־כלה:`
+   (the verb vocalized in all copies); `X, לכו, הודיעו לאֵלֵי Y ולאָחִים שלהם:`; `אשר יחפוץ שיחיה – יחיה הוא; …`; 213.1
+   `הוֹי אונאס, לא הלכת מת – הלכת חי!`.
+3. **The offering vocabulary (UN1–UN2 follow it):** tʾ `לחם`, ḥnq.t `שֵׁכָר`, jt `שעורה`, bd.t `כוסמת`, jrp `יין`, (j)ḫ.t `מנה`,
+   jš.tt `ארוחה`, ꜥꜣb.t `מנחה`, ḥtp.t `קורבנות`, ḏfꜣw `מזון`, qbḥ `מי־הצינה`, wdpw `מֶלְצַר`, sšm `טבח`; the rubric as a list
+   line (`שוק עם עוגת־סָאשֶׁרֶת! ארבעה חופני מים!`); bw.t `תועבה`, bwi̯ `תיעב`, ḥs `צואה`, wzš.t `שתן`, twri̯ `נִזָּר מ־`.
+4. **Terms:** bꜣ (verb) `היה לבָּא` beside ꜣḫ `היה לאָח`; j:ḫm-sk `בלתי־כלה` / `הבלתי־כלים`; wpw.t `שליחויות` (`שליח` = wpwtj);
+   jnw `צירים`; ḥwwtj `רצים`; jp (hearts) `פקד`; ṯnj `ייחד` (`הבדיל` never); mḫnt `קלסתר`; zꜣ.tj Jtm `התאומים של אָתוּם`;
+   nsw-bjtj `מֶלֶךְ־הַדָּרוֹם־וְהַצָּפוֹן`; ḫwrr transliterated `?`. Mut `מוּת` ★ (unvocalized "die"). ~25 new names in project.md.
+5. **Open (for the user):** zj and šmj both `הלך`; jꜣq `עלה` / sjꜥ `העלה` (one root, two lemmas).
