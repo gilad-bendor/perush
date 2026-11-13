@@ -88,5 +88,60 @@ to the Sumerian word that is its real counterpart (guidelines §5.2):
 - traps: Keš `כֵּשׁ`, Dagan `אִידִּין־דָּגָן`, Nanna `נַנָּה`, Agade `אַגָּדֶה`, Ebiḫ `אֶבִּיחַ` (+ the corpus-wide traps:
   Inana, Utu, Urim, An, Sumer, *me* `הַ־מֶה` …).
 
-## 5. Translators' proposals (merged by the coordinator, by part)
-(none yet)
+## 5. Translators' proposals (merged by the coordinator, by part; binding for the later texts)
+
+### 5.1 Part 1 – T1, LB and ID (merged 2026-11-13)
+Coordinator's decisions: the `קדש` gate now lets *eš₃* `מִקְדָּשׁ` (and its prefixed forms) pass (`canon_tools.py`; T1's open decision 1) – ID 66's stopgap `כִּמְעוֹן` is to become `כמקדש`; the intros avoid `מזמור` (reserved).
+
+**Formulas (copy letter for letter):**
+- **Second-person praise** *X-me-en* = `X אתה` (at the line end, like the copula): `ליפית־אישתר, בן אנליל אתה;`
+  (LB 25 = 57), `מלך שׁוּמֶר ואכד אתה`, `רועה לבו אתה`. **Self-praise** (Šulgi A, Enlil-bāni A) *X-me-en* = `X אני`
+  (the laws' `בן אנליל, אני`; Grain and Sheep `בת אנליל אני`). *za-e-me-en* = `אתה הוא` (LB 42); *ĝe₂₆-e-me-en* =
+  `אני הוא` (Bird and Fish). *-zu-um* "your … is" = `… שלך הוא` (LB 44–45). *ḫe₂-me-en* = `אכן … אתה` (ID 43).
+- **Doxology** *X za₃-mi₂* = `X – תְּהִלָּה!` (LB 63); *za₃-mi₂-zu* = `תהילתך`; *me-teš₂ i-i* = `שבח יעלה` (ID 17;
+  laments, Lugalbanda); *i-i* alone = `יעלה (שבח)` (LB 60); *ar₂* = `קִלּוּס` (LB 61: three praise words, three
+  Hebrews: `תְּהִלָּה` / `שֶׁבַח` / `קִלּוּס`).
+- *muš₃ nam-ba-an-tum₂-mu* = `אַל יחדל!` (LB 61; ID 44 `אַל יחדלו!`, ID 65 `אַל תחדל!`); *silig* = `פָּסַק` (ID 66).
+- *su kalam-ma … dug₃* = `את בשר הארץ הֵיטַבְתָּ` (LB 39 = ID 25; the laws' `את בשר שומר ואכד הֵיטַבְתִּי`).
+- *niĝ₂-si-sa₂ … ĝar* = `מישרים … שָׂם` (LB 38; laws); *X ka-ga₁₄ ĝar* = `X – בפה – שַׂמְתָּ` (ID 26); *X ka-ga₁₄ ĝal₂*
+  = `X – בפה – הניח` (LB 58, ID 52).
+- *suḫuš-bi mu-ra-an-ge-en* = `את יסוד X – לך כונן` (LB 54, ID 72).
+- *a₂ nun … te-ĝal₂* = `זרוע־נסיך תהי לך!` (LB 14 = ID 46).
+- *inim dug₄-ga an {d}en-lil₂-la₂-ta* = `בדבר שנאמר מאת אַן ואנליל` (LB 55, = the laments); short forms `בנאמר מאת
+  אנליל` (ID 35), `בנאמר ונאמר מאת אַן ואנליל` (ID 73), `בדבר הנאה מאת אַן ואנליל` (ID 46).
+- *igi-bi … ši ĝal₂* = `עינם אליך (תהי) נתונה` (ID 22, 42, 59); *igi zid bar* = `בעין נאמנה הביט` (ID 5, = Gudea);
+  *gu₃ zid de₂* = `השמיע קול נאמן` (ID 6, 13; laments); *igi dug₃ du₈* = `בעין טובה ראה` (ID 63).
+- *en nam tar-tar-re-de₃* = `האדון הגוזר את הגורלות` (ID 60, = the laws); *nam tar* = `גזר גורל`.
+- *u₆ dug₃-ge-eš e* = `בהתפעלות טובה התפעל` (ID 19, = Enmerkar); *gu₂ (an-še₃) zig₃* = `צוואר (אל השמים) הרים`
+  (ID 29, 79; laments); *ki-bal du₇-du₇* = `ארץ המרי … נוגח ונוגח` (ID 50, = Gudea); *niĝ₂-du₇ pa e₃* = `את הדבר
+  הראוי – הופיע` (ID 27, = Gudea); *šu-luḫ si sa₂* = `את הטָהֳרָה יישר` (ID 30, = Gudea).
+**Key terms (new or confirmed):**
+- King and court: *saĝ il₂* `נושא ראש`; *nun* `נסיך`, *nam-nun* `נסיכות` (laws); *ḫe₂-du₇* `תִּפְאֶרֶת`; *isimu₂*
+  `יוֹנֶקֶת` (Bilgameš poems; `נֵצֶר` / `צֶמַח` / `חֹטֶר` only in the apparatus); *men* `עֲטָרָה`; *šibir* `מקל־רועים`;
+  *gu₂-tuku* `אדיר` (`הרועה האדיר`, = Gudea); *ibila* `יורש`; *a₂-tuku* `בעל־זרוע`; *kalag* `חָזָק` (`המלך החזק` = LH's
+  *šarrum dannum*); *dam* `בן־זוג`; *maškim* `ממונה`; *sukkal(-maḫ)* `וזיר (נשגב)`; *a₂-taḫ* `עוזר`; *išib* `אִישִׁיבּ`;
+  *saĝ us₂* `*המשרת הדבק*`; *us₂* `דָּבַק`.
+- Fitness words, one Hebrew each: *me-te-ĝal₂* `הולם` (Lugalbanda, Enmerkar), *tum₂* "suitable" `יָאֶה`, *du₇*
+  `רָאוּי` (*niĝ₂-du₇* `הדבר הראוי`), *sag₉* `נָאֶה` / `נָאָה` / `נָאוּת`.
+- Wisdom: *ĝeštug₂ daĝal* `בינה רחבה`; *igi-ĝal₂* `פִּקְחוּת`, *igi-ĝal₂-tuku* `פִּקֵּחַ`; *gal-zu* `רַב־הַדַּעַת`; *umuš*
+  `תבונה`; *ad gi₄* `נמלך`; *niĝ₂-nam zu* `היודע כל דבר`.
+- Justice: *niĝ₂-zid* `נֶאֱמָנוּת`, *niĝ₂-gen₆-na* `נְכוֹנָה` (never `צדק` / `משפט` – ETCSL's "justice and
+  righteousness", "righteousness"); *niĝ₂-si-sa₂* `מישרים`; *di* `דין`; *ka-aš bar* `הכריע הכרעה`; *uĝ₃ si sa₂*
+  `יישר את העם`; *lu₂-erim₂* `אויב` (laments); *šer₇-da* `עֲבֵרָה` (proverbs; `חטא` stays gated); *nam-tag* `עָווֹן`;
+  *garaš₂* `אסון`; *lul* / *zid* `שקר` / `נאמן`; *sig₉* "weak" `חַלָּשׁ` and *kalag* `חָזָק` (= LH's *enšum* / *dannum*);
+  *ḫeš₅* `עָשׁוּק`; *sa gaz* `שׁוֹד`.
+- Trust: *ĝiškim-til₃* `סָמַךְ` / `סְמִיכָה` (= *tukultu*; `מִשְׁעָן` is Akk. *nēmedu*); *nir ĝal₂* `בָּטַח` (AG, Bird
+  and Fish, Lugalbanda); *nir-ĝal₂* as an adjective of food `*נעלה*` (open decision 5).
+- Shepherd's world: *an-dul₃ (daĝal)* `סכך (רחב)` (Gudea), *ĝissu* `צל`; *ni₂ dub₂* `נרגע` (= *pašāḫu*); *u₂-sal*
+  `אָחוּ` (Agade, Gudea), *nu₂* `שכב`; *ḫe₂-ĝal₂* `שפע`; *lu* `רָבָה` (tagged), *daĝal* `רָחַב`; *ud zal* `בִּלָּה יום`.
+- The school: *e₂-dub-ba-a* `בית הטבלה`; *dub* `לוח`; *le-um* `לוח־העץ`; *gu-šum₂* `יָתֵד` ("כתב היתדות"); *gi-dub-ba*
+  `חרט` (Gudea); *gi-diš-nindan eš₂-gana₂ za-gin₃* `קנה־המידה, חבל־המידה של ספיר` (Inana's Descent); *aslum*
+  `מוט־המדידה`; *dub-sar(-tur)* `סופר (צעיר)`; *nam-dub-sar* `סופרוּת`; *sar* `כתב`; *šu daĝal (dug₄)* `יד רחבה`;
+  *šu bad* `פתח יד`.
+- Others: *alim* `תְּאוֹ`; *še-er-zid* `זיו`; *gun₃* `מנומר`; *ul* `צהלה`; *u₅* `רוכב`; *dalla* `בהירות`; *i-lu*
+  `אִילוּ` (song; `נְהִי` in a lament); *bala* `תקופה`; *uru₁₆* `נישא`; *dirig* `עלה על`; *du₁₇* `ריב`; *kiĝ₂*
+  `מלאכה`; *a₂ aĝ₂* `ציווה`; *dim₂* `עיצב` (`יצר` reserved); *tak₄* (written *da₁₃*) `זנח`; *ka ba* `שיחה`; *silim*
+  `בריא`; *til₃* `החיה`; *nidba* `קרבן`; *šeg₁₂* `לבנה`; *gu₂-erim₂-ĝal₂* `עוין`; *sa₂ dug₄* `השיג`; *in-dub* `תחום`;
+  *eĝer* `סוף`; *kur* "foreign highland" `ההר`, *kur-kur* `הארצות`.
+- Names: Išme-Dagan `אִישְׁמֶה־דָּגָן` and Dagan `דָּגָן` always vocalized (trap `דגן`); Šu-ilīšu `שׁוּ־אִילִישׁוּ`;
+  Nin-Isina `נִין־אִיסִינָה`; Nuska `נוּסְכּוּ`.

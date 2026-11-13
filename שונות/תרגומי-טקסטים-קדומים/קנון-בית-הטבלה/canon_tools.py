@@ -125,6 +125,13 @@ for _k in list(nw.RESERVED):
         nw.RESERVED[_k] = nw.RESERVED[_k] + [r'gi-gi|\bgi\[turn|-in-gi\b|-ni-gi\b']
 
 strip, FN = nw.strip, nw.FN
+# *eš₃* `מִקְדָּשׁ` (renderings §2): the corpus-wide `קדש` gate read `מקדש` as מ + קדש; here a temple word passes
+# (2026-11-13, T1's open decision 1). `קדוש`, `קודש`, `הקדיש` stay reserved.
+for _k in list(nw.RESERVED):
+    if _k.startswith('קדשה|'):
+        _v = nw.RESERVED.pop(_k)
+        nw.RESERVED[B + r'(?!ו?[הבלכש]{0,2}מקדש)' + P + r'(קדש|קדשה|קדשים|קדשות)' + E] = _v
+
 
 
 def etcsl_lines(rel, versions=None):
