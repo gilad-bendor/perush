@@ -238,3 +238,22 @@ Coordinator: *ulutim₂* = `תואר` in every text (LA 13 changed from `דמו�
   *niĝ₂-me-ĝar sug₄* `דממה מלאה`; *gu suḫ₃* `חוט סבוך`; *gilim* `שזור בהצלבה`; *nam-diĝir* `אלוהות`; *muš₃* `מראה`; *tuku*
   (a wife) `קנה`; *ulutim₂* `תואר`; *i₃ li* `שמן רענן`; *til₃* `שכן`. Names: Nunamnir `נוּנַמְנִיר`, Nuska `נוּסְכּוּ`, Uraš
   `אוּרַשׁ`, lu₂-maḫ `הַלּוּמַח`, nin-diĝir `הַנִּין־דִּינְגִּיר`.
+
+### 5.5 Part 5 – T2, KH and EJ (merged 2026-11-13)
+Coordinator: decisions 11–12 – the workarounds stand (vocalized `בּוּרִים` for the area unit *bur₃*; `הכוהן־לָל`), noted for the gate tables; 14 – *gaz* split by sense (`שחט` of animals, Šulgi A 52; `הרג` of people, EJ 93), left for the consistency review to confirm; 13, 15–17 stand.
+
+- **Fixed strings:** the Keš refrain and the section lines (above); the closing paradox `האיש הנגש – אַל יגש!`;
+  *e₂ N-kam-ma* = `הבית ה…` (ordinal); *an-še₃ … ki-še₃* = `למעלה … למטה`; *gud-gin₇ mur ša₄* = `כשור נהם`;
+  *gu₃ nun di* = `קול נסיכי השמיע`; *an-ne₂ us₂* = `לשמים מגיע`; *temen … abzu-a sig₉* = `מסדו – בָּאַפְסוּ תקוע`;
+  *gaba-šu-ĝar nu-tuku* = `יריב אין לו`; *ĝiri₃ (dili) gub* = `את רגלו (לבדו) הציב`.
+- **Terms:** *rib* `נעלה`; *ma₂-gur₈* `ספינת־המַגּוּר`; *ninda₂* `פר־ההרבעה`; *lipiš* `רוגז`; *ib-gal* `מתחם גדול`; *šar₂* (area)
+  `שַׁר`, *bur₃* `בּוּר`(ים); *lulim* `אַיָּל`; *taraḫ-maš* `תיש־יעל`; *muš-gu₇{mušen}* `ציפור־אוכלת־הנחש`; *iti₆* `אור־הירח`;
+  *barag₂* `השתרע`; *šita₂* `מַפֵּץ`; *idim* (spring) `מעיין`; *zag-ĝar* `חדרי־האל`; *nu-ka-aš* `מכריע`; *ĝa₂-nun* `בית־הגנזים`;
+  *gi-gun₄* `הגִּיגוּנָה`; *la-ḫa-ma* `הַלַּחַמָּה`; *saĝ-kul* `בריח`, *si-ĝar* `מסגר`, *zag-du₈* `מזוזה`, *aškud₂* `מחסום`,
+  *kun₄* `מדרגה`, *ĝiš-ur₃* `קורה`, *nir-gam-ma* `קמרון`, *gi-kid* `מחצלת`, *gi-sal* `מחיצת־הקנים`, *gi dub-ba-an* `גדר־קנים`;
+  *ur-maḫ* `אריה` (≠ *piriĝ* `לביא`, *ug* `לַיִשׁ`); *agrun* `החדר`; *ĝiri₂ la₂* `תולה הפגיון`; *a₂-la₂* `תוף־האָלָא`; *ub₃
+  zabar* `תוף־הארד`; *al-ĝar-sur₉* `מקלות־התוף`; *{ĝiš}za₃-mi₂* (instrument) `הַזַּמִּי` (not `תהילה`); *zabar* `ארד`;
+  *kaš* `שֵׁכָר`, *kurun₂* `סובא`, *ulušin* `שֵׁכַר־האֻלֻּשִׁין`, *duḫ* `מחית`; *a-da-min₃* `תחרות`; *akkil* `המולה`; *kar₂*
+  `זרח`; *kad₅* `קשור`; *ḫaš₄ ĝar* `שם ירך` (brood); *niĝir* `כרוז`; *pisaĝ* `טנא`; *nam-šub* `קסם`. Names: Ašgi
+  `אַשְׁגִּי`, Šulpae `שׁוּלְפָּאֶה`, Urumaš `אוּרוּמָשׁ`, Isimud `אִיסִימוּד`, Niraḫ `נִירָח`, Ubšu-unkena `אוּבְּשׁוּאוּנְכֵּנָה`,
+  E-engura `אֵ־אֶנְגּוּרָה`.

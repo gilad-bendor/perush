@@ -188,6 +188,83 @@ Translator T2, Round 8 run 2, 2026-11-13.
   "the Anuna enter" (8) follows a variant lemma, the main text has *sun₅* "humble themselves"; "you are greatly suited
   for the abzu" (75) misplaces the *-zu* of a possessed place.
 
+## Part 5 (KH 1–134, EJ 1–129)
+Translator T2, Round 8 run 2, 2026-11-13.
+
+### Progress
+- **KH** (165 entries: 1–134 with 58A–58R and 103A–103L) and **EJ** (130 entries, with 45A) drafted whole: headers,
+  `## ` sections (KH 10: one per "house", the one-manuscript houses their own; EJ 9), `translation--intro-KH.rtl.md`,
+  `translation--intro-EJ.rtl.md`.
+- **The refrain fixed before the first copy**, from the transliteration, and copied letter for letter into all nine
+  copies (18–20, 41–43, 55–57, 58O–Q, 71–73, 84–86, 100–102, 103I–K, 124–126; brackets and `⟨ ⟩` per copy):
+  `כְּכֵשׁ הנעלה – הֲגַם איש יוביל?` / `כגיבורה, אַשְׁגִּי, הנעלה – הֲגַם אם תלד?` / `את הנעלה כגבירתה, נִינְתּוּר – מי ראה?`;
+  the section lines `הבית הראשון.` … `הבית השמיני.`; the "X / בית כֵּשׁ X" pairs (13–14, 22–23, 59–60, 75–76, 104–105,
+  120–121, 128–129) and KH 29–30 = 91–92, 61 = 77, 63 ≈ 83 copied; the closing `אל העיר … – האיש הנגש – אַל יגש!`
+  (128–131) and the doxologies `כֵּשׁ הבנויה, אשגי – תְּהִלָּה!` / `כֵּשׁ המחובבת, נינתור – תְּהִלָּה!`.
+- Lines copied from other corpora where the Sumerian is the same: EJ 1 (Enmerkar 6), 5 = 45A (ID 60), 15 and KH 28
+  (the Hoe 73 `כשור נהם`), 22 (= KH 36), 79 (EWO 165), 93 (Hoe and Plough 25), 96, 107 (Gudea), 129 (Bird and Fish
+  190); EJ 117 in the corpus formula `פונה אל`.
+- Three passes: (a) fidelity – *na-* + ḫamṭu affirmative (KH 1–3; EJ 80, 89), *ḫe₂-* + ḫamṭu `אכן` (EJ 65, 67), number
+  and person, brackets (half-restored words unbracketed: 58O, 58Q, 45A); (b) consistency – grepped every new word
+  in all corpora; fixed *ĝal₂* `מניח` (not `שָׂם`, *ĝar*'s), *si-ĝar* `מסגר` (`מנעול` is *suḫub₄*'s), *mur ša₄* `נהם`,
+  *ĝa₂-nun* `בית־הגנזים`, *ug* `לַיִשׁ`, *šita₂* `מַפֵּץ`, *lulim* `אַיָּל`; (c) Hebrew – gate-safe phrasing where a
+  harmless word matched a gate (`כמו פר־ההרבעה`, `אשר בו`), unvocalized names in the doxologies.
+- `verify KH`, `verify EJ`: OK; `check_bible_quotes.py`: 0 problems (it caught one quotation form, EJ 24).
+
+### Open decisions
+11. **Gate problem, `בור`:** the area unit *bur₃* (KH 46) cannot be transliterated `בּוּר`: the corpus-wide `בור` gate
+    (`netherworld_tools.py`, reserved outright) blocks it, so the line has the plural `בּוּרִים` (the singular `שַׁר`
+    beside it). Suggest licensing `בור` by `bur₃`.
+12. **Gate problem, `הלל`:** the *lal₃* priest (KH 112) with the article (`הַלָּל`) is read as the reserved `הלל`; the line
+    has `הכוהן־לָל`. Suggest a licence by `lal₃` or keeping the circumlocution.
+13. **KH 128–131 *lu₂ te-a na-te*** = `האיש הנגש – אַל יגש!` (*na-* prohibitive, ETCSL's sense); an affirmative *na-*
+    ("the one who approaches does approach") is possible. The paradox of approach is the hymn's last word.
+14. **gaz:** EJ 93 copies Hoe and Plough 25 (`שוורים הורג, צאן שוחט`: *gaz* `הרג`, *šar₂* `שחט`); SA 52 (T1) has *gaz*
+    `שחט`. One of them should move.
+15. **Splits by sense, recorded:** *sur* `קלע` (KH 11, a net of words) / `סחט` (EJ 100, beer); *idim* `כובד` (EL 143) /
+    `מעיין` (KH 53); *sig₇* `הוריק` (vegetation) / `מהודר` (beauty: KH 49–50, = EL 96 `התהדר`); *kug* `טהור` / `כסף`
+    (the metal: EJ 6, 11, 124, 128); *aga* `כתר` / `כלי־האַגָּה` (EJ 111); *ad gi₄* `נמלך` kept even for the river's
+    "echo" (EJ 91).
+16. **KH 13–14 *aratta*** `*נכבד*` (ETCSL "important"; ORACC reads the name Aratta); *muš₃* `*מראה*` (ETCSL "platform").
+17. **New particle:** *ša-* + *-nga-* in a rhetorical question = `הֲגַם` (the refrain), not `הֲרֵי` (*ša-* alone).
+
+### Proposals for the corpus renderings
+- **Fixed strings:** the Keš refrain and the section lines (above); the closing paradox `האיש הנגש – אַל יגש!`;
+  *e₂ N-kam-ma* = `הבית ה…` (ordinal); *an-še₃ … ki-še₃* = `למעלה … למטה`; *gud-gin₇ mur ša₄* = `כשור נהם`;
+  *gu₃ nun di* = `קול נסיכי השמיע`; *an-ne₂ us₂* = `לשמים מגיע`; *temen … abzu-a sig₉* = `מסדו – בָּאַפְסוּ תקוע`;
+  *gaba-šu-ĝar nu-tuku* = `יריב אין לו`; *ĝiri₃ (dili) gub* = `את רגלו (לבדו) הציב`.
+- **Terms:** *rib* `נעלה`; *ma₂-gur₈* `ספינת־המַגּוּר`; *ninda₂* `פר־ההרבעה`; *lipiš* `רוגז`; *ib-gal* `מתחם גדול`; *šar₂* (area)
+  `שַׁר`, *bur₃* `בּוּר`(ים); *lulim* `אַיָּל`; *taraḫ-maš* `תיש־יעל`; *muš-gu₇{mušen}* `ציפור־אוכלת־הנחש`; *iti₆* `אור־הירח`;
+  *barag₂* `השתרע`; *šita₂* `מַפֵּץ`; *idim* (spring) `מעיין`; *zag-ĝar* `חדרי־האל`; *nu-ka-aš* `מכריע`; *ĝa₂-nun* `בית־הגנזים`;
+  *gi-gun₄* `הגִּיגוּנָה`; *la-ḫa-ma* `הַלַּחַמָּה`; *saĝ-kul* `בריח`, *si-ĝar* `מסגר`, *zag-du₈* `מזוזה`, *aškud₂* `מחסום`,
+  *kun₄* `מדרגה`, *ĝiš-ur₃* `קורה`, *nir-gam-ma* `קמרון`, *gi-kid* `מחצלת`, *gi-sal* `מחיצת־הקנים`, *gi dub-ba-an* `גדר־קנים`;
+  *ur-maḫ* `אריה` (≠ *piriĝ* `לביא`, *ug* `לַיִשׁ`); *agrun* `החדר`; *ĝiri₂ la₂* `תולה הפגיון`; *a₂-la₂* `תוף־האָלָא`; *ub₃
+  zabar* `תוף־הארד`; *al-ĝar-sur₉* `מקלות־התוף`; *{ĝiš}za₃-mi₂* (instrument) `הַזַּמִּי` (not `תהילה`); *zabar* `ארד`;
+  *kaš* `שֵׁכָר`, *kurun₂* `סובא`, *ulušin* `שֵׁכַר־האֻלֻּשִׁין`, *duḫ* `מחית`; *a-da-min₃* `תחרות`; *akkil* `המולה`; *kar₂*
+  `זרח`; *kad₅* `קשור`; *ḫaš₄ ĝar* `שם ירך` (brood); *niĝir* `כרוז`; *pisaĝ* `טנא`; *nam-šub* `קסם`. Names: Ašgi
+  `אַשְׁגִּי`, Šulpae `שׁוּלְפָּאֶה`, Urumaš `אוּרוּמָשׁ`, Isimud `אִיסִימוּד`, Niraḫ `נִירָח`, Ubšu-unkena `אוּבְּשׁוּאוּנְכֵּנָה`,
+  E-engura `אֵ־אֶנְגּוּרָה`.
+
+### Key findings
+- **The ancient mind.** The Keš hymn, already copied at Abū Ṣalābīḫ around 2600 BCE, is pure praise of a building:
+  no god acts in it but Enlil, who looks and praises, and Nisaba, who writes the praise down (9–12). The temple is a
+  barge in the sky, a roaring bull, a rainbow, a mountain and a spring at once, measured in impossible fields "above"
+  and "below" (45–54); it is a city whose inside no one knows (59–60), and the hymn ends in a paradox of holiness: "to
+  the city – the man who approaches – let him not approach!" (128–131). Enki's Journey makes the temple alive – its
+  bricks speak and take counsel, its reed screen roars – and turns a building story into a family one: the son builds,
+  sails to his father with beer and a feast, seats the gods in their order, and the father proclaims "my son has built
+  a house" before the assembly.
+- **The Bible (shared motifs).** The refrain's rhetorical birth questions ↔ Isa 66:8 (`מִי שָׁמַע כָּזֹאת מִי רָאָה
+  כָּאֵלֶּה`, Zion in labour) and Ps 87:5; the sanctuary one may not approach ↔ Exod 19:12, Ps 24:3 (KH 128, EJ 123); the
+  building whose head reaches heaven ↔ Gen 11:4 (a [divergence]: pride there, praise here); the measured house ↔ Ezek
+  42:20; "Jerusalem, the built one" ↔ KH 132; the horn in the cult ↔ Ps 150:3; the son who builds the house and the
+  father who confirms it ↔ 2 Sam 7:13; Enki's unchangeable word (EJ 68) ↔ Ps 89:35; no one may look inside (EJ 47) ↔
+  Exod 33:20. [cognate]: the Euphrates `פְרָת` (EJ 24).
+- **ETCSL corrected:** "Draw near … but do not draw near" (KH 128) adds an imperative the Sumerian lacks; "the king
+  places stone bowls" (108) makes an intransitive *gub* transitive; "was erected for Nudimmud" (EJ 10) is a plural
+  "stand before him"; "Enlil was made happy" (EJ 116) is "brought joy" (= EJ 82); "holy" is *kug* "pure"; "lord" for
+  *lugal* "king" (EJ 35, 45).
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
