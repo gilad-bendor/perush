@@ -605,7 +605,7 @@ RESERVED = [
     (W + alt("הסיג", "תסיג", "מסיג", "תסג", "יסיג", "הסגת", "נסוג", "נסג") + E, None, "the root סוג / נסג never (Deut 19:14, 27:17, Prov 22:28): rmni̯ = הֵזִיז / נָשָׂא, hꜣd = פָּלַשׁ"),
     (W + alt("השיג", "תשיג", "ישיג", "אשיג", "השיגו", "משיג") + E, r"pḥ", "השיג (נשג 'reach') only for pḥ 'reach' (MK E138, HC 29); it shares the letters of the reserved הִסִּיג"),
     (W + alt("אלמנה", "אלמנות", "אלמנת", "האלמנה", "אלמנתו") + E, r"ḫꜣr|ḫꜣrj|ḫꜣ\(rj\)|ḫꜣrt", "אַלְמָנָה only for ḫꜣr.t [equivalent Prov 23:10 (the emendation `גבול אלמנה`), Deut 24:19–21]"),
-    (W + alt("יתום", "יתומים", "היתום", "יתומה", "יתומי") + E, None, "יָתוֹם never: nmḥ = דַּל (Late Egyptian 'poor man'; Prov 23:10 `יְתוֹמִים` in the apparatus)"),
+    (W + alt("יתום", "יתומים", "היתום", "יתומה", "יתומי") + E, r"\btfn|tfn,t|tfn\.t", "יָתוֹם only for the PT word tfn 'orphan' (Round 8 run 1; Ps 82:3); else never: nmḥ = דַּל (Late Egyptian 'poor man'; Prov 23:10 `יְתוֹמִים` in the apparatus)"),
     (W + alt("איפה", "האיפה", "איפות", "איפת", "ואיפה") + E, r"jp,t|jp\.t|\bjpt|jp\b", "אֵיפָה only for jp.t (the oipe) [cognate: an Egyptian loanword, Deut 25:14–15, Lev 19:36, Prov 20:10]"),
     (W + alt("פלס", "הפלס", "פלסים") + E, r"jws|jwsw|jws,w|jwsꜣ", "פֶּלֶס only for jws(w) 'the hand-balance' [equivalent Prov 16:11, Isa 40:12]"),
     (W + alt("מאזנים", "מאזני", "המאזנים", "מאזניו", "מאזניים") + E, r"mḫꜣ|mḫꜣy|mḫꜣ,t|mḫꜣ\(y\)", "מֹאזְנַיִם only for mḫꜣ.t 'the balance' [equivalent Lev 19:36, Prov 16:11, 11:1]"),

@@ -1140,3 +1140,15 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
 3. **Gate fixed (the coordinator):** the `נשך` "interest" gate now licenses the verb by pzḥ (tla62220).
 4. **Open (for the user):** hjw transliterated; sḏr `שכב` beside nk `שכב עם`; sṯ `ריח` (TB) / MK E134 `בושם`; `מָאפְדֶת` /
    NU `מַאפְדֶת`.
+#### 13.6.4 UN6 (PT 247–260; the whole of PT 260), translator 4, merged 2026-11-13 (full list in `10-…/project.md`, "UN6")
+1. **Fixed for later copies:** PT 254.7 `אשר ימצא אונאס בדרכו – יאכל הוא אותו לו, *נָא*?.` (the Cannibal Hymn's line:
+   UN7 273-274.45 and UN8 299.5 copy it); PT 260.1 `הוֹ גֶּבּ, שור נוּת! חוֹרוּס הוא אונאס, יורש אביו.` (PT 260 is UN6's
+   whole; UN7 begins at 261.1).
+2. **Terms:** jꜥr.t (uraeus) `פתן` (BD); ꜣḫ.t (uraeus) `הָאָחֶת` ★ ("one"); zššn `שׁוֹשָׁן`, zšzš transliterated, nḫb `ניצן`;
+   wḏꜥ "separate" `הפריד`, wḏꜥ mdw `דן (דין)`; wpi̯ `פלח`; ḏꜣḏꜣ.t `ועד`; mꜣꜥ.tj `שתי האמת`; mtrw `עֵד`; snḏ `יראה`, nrw
+   `אימה`, sdꜣ `רעד`, snhd `הבעית`; bjꜣ `ימת־השמים` (`רקיע` never); pšn `סדק`; ꜣm `להט`; pḥ.wj `אחרית`; Jmn.t nfr.t
+   `המערב־היפה`; `ברַא` "with Re" → `את רַא` (the ברא gate); `האלה` "these" vocalized `הָאֵלֶּה`.
+3. **Ruling (the coordinator):** tfn / tfn.t "orphan" (260.5) = `יָתוֹם` / `יְתוֹמָה` – the natural word; avoiding it would
+   hide an echo (guidelines §6.4): the `יתום` gate now licenses tfn; the UN6 reviewer replaces the draft's `חסר־האב`.
+4. **Open (for the user):** bḏ / pꜣḏ both `כדור`; šꜣs / swꜣ `חלף`; ḥnw.t / ꜥb both `קרן`; `הָאָחֶת` (a coinage); 247.15,
+   252.7 partly unintelligible.

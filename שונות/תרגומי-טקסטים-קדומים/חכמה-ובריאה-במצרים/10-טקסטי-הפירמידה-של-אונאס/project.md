@@ -563,5 +563,177 @@ shoulder and a ram standing at the head of the gods.
 - **Lines in a possibly foreign language**: translate only what the TLA identifies, transliterate the rest with `?`,
   and keep the scholarly hypothesis in one cautious note per spell group – never let it shape the Hebrew.
 
+## UN6 (PT 247–260)
+
+Round 8 run 1, translator 4 (2026-11-13). Files: `annotated-UN6.rtl.md`, `translation--intro-UN6.rtl.md`,
+`translation-UN6.rtl.md` (generated), `translation.rtl.md` (generated).
+
+### Scope
+The antechamber's **west gable** (PT 247–253) and **west wall** (PT 254–260): 206 rows, labels `247.1` … `260.25`
+(`258-259.1` … `258-259.21`; Allen's 258–259.8 is not on Unas's wall, so no row). **The whole of PT 260 (260.1–260.25)
+is in UN6** in the composite (all 25 rows have `A/W`), not only 260.1 as the brief said; UN7 begins with PT 261.1.
+Unas's own wall for all rows except PT 255–256 (Teti, `{טטי}`, 25 rows). Preservation: almost intact; restorations
+only in 254.46, 254.49, 254.53, 254.56, 254.59. The text in a sentence: Horus wakes his father, who is reborn of the
+Ennead as a star, rises as the lotus at Re's nose, becomes Sia (Perception), is purified in the Field of Reeds; then the
+long spell of the king's terror (254) closes heaven and earth to all but him and has the Beautiful West embrace him as a
+mother; he inherits Geb and Atum (Teti's 255–256), takes the horizon (257), rises from the dust in the wind (258–259),
+and is vindicated before the Two Truths, going forth with Maat (260).
+
+### Sources consulted
+- The base: AED-TEI through `egypt_tools.py data UN6` (TLA lemmas, morphology, glosses); Allen 2013's lines (printed
+  by `data`; a check only, never copied).
+- Rank 3: the TLA's German (`tr UN6`), read after drafting each group (247–253, 254, 255–260). Allen 2005/2015 and
+  Faulkner 1969 from memory only, in a few words (247.15).
+- Precedents: a lemma index of every UN6 lemma against all drafted keys (scratch script over `egypt_tools.rows` +
+  `all_hebrew`), then `lex` / `grep` for each new word.
+- Bible verses printed with `check_bible_quotes.py --show` before quoting: Gen 2:7, 3:19, 5:24, 28:12; Ex 12:9, 15:15,
+  23:27; Num 23:24, 24:17; Deut 10:18, 11:25, 32:39; 1 Kgs 7:19, 10:22; 2 Kgs 2:11; Isa 14:12–13; Ezek 37:7; Joel 2:10;
+  Ps 2:7, 24:7, 72:2, 82:3, 91:13, 139:15; Song 2:1.
+
+### Decisions
+- **Address forms (§13.6.1)**: `Wnjs pj` / `pn` `אונאס זה`; `j` `הוֹ`; `r=f` `אפוא`; the cleft `jn X sḏm` `X הוא ה…`;
+  `pj` / `pw` as copula `אונאס הוא …`; the kꜣ-form (*sḏm.kꜣ=f*, 254.5, 255.9–255.13) `… אז` ("then he will …").
+- **The PT 247 wake-up** (247.7–247.11): `אונאס זה, אונאס, חזה! / ראה! / שמע! / היה שם! / זקוף את עצמך על צדך!` – mꜣꜣ
+  `חזה` (UN3), ptr `ראה` (§3a), ṯzj `זקף` (kept apart from wṯz `הרים`, UN3).
+- **The lotus**: zššn (249.9) `שׁוֹשָׁן` [cognate: loanword] only; zšzš (249.2, another flower) transliterated `פרח־הסֶשְׁסֶשׁ`;
+  nḫb "lotus bud" (260.21) `ניצן`. 249.4 / 249.9 copy BD 81A's `השייך לנחירי רַא` (šr.t `נחיר`).
+- **Snakes and fire**: jꜥr.t (249.7) `פתן` (the BD precedent, NU2/NU4); ꜣḫ.t "uraeus" (tla220; 256.4, 260.19) `הָאָחֶת`
+  (feminine of ꜣḫ `אָח`; always vocalized: `אחת` = "one"); Rnn.wtt `רֶנֶנוּטֶת`, Ḏnn.wtt `גֶ׳נֶנוּטֶת`, Ḥkn.wtt `המריעה` (ḥkn
+  `הריע`, UN5); nsr `להבה`, hh `להט`, ḫfḫf.t `פרץ`, ꜣm `להט` (the root בער is a TALES gate).
+- **Terror**: snḏ `יראה` (UN4), nrw `אימה` (UN3), sdꜣ `רעד`, snhd `הבעית`, nrj `חרד` (UN5), ḥꜣꜥ.wt `מבוכה`.
+- **The king as judge**: wḏꜥ "separate" `הפריד` (UN4; 251.6) but the legal phrase wḏꜥ mdw / wḏꜥ X ḥnꜥ Y `דן (דין)`
+  (252.5, 254.43, 260.5) – a sense split; wpj "separate, judge" `פלח` (UN5's `פלח`: 252.6 `הפולח (בין) שני האֵלִים`,
+  257.10 `פולח המהומה`); ḏꜣḏꜣ.t `ועד` (NU1); mꜣꜥ.tj `שתי האמת` (BD); mtrw `עֵד`; mꜣꜥ-ḫrw `אֲמִתִּי־הַקּוֹל` (260.4).
+- **tfn / tfn.t "orphan"** (260.5) `חסר־האב` / `חסרת־האב`: `יָתוֹם` is reserved "never" (renderings §5.1) although it
+  is exactly the Egyptian word and Ps 82:3 / Deut 10:18 are the parallels – **a gate that blocks the right word**
+  (reported; the Hebrew was not bent: `חסר־האב` is a precise description, and the apparatus quotes the verses).
+- **Banks and fields**: jdb `גדה`, wḏb `חוף`, jḫm.t `שפת־המים`; sḫ.t `שדה` (in the names), ꜣḥ.t `אחוזה`.
+- **Others fixed here**: šꜥ.t `סכין` / ds `מאכלת` (UN4); ḥnw.t and ꜥb both `קרן` (NU6 / UN5 precedents); dꜣ `דיכא`, jdj
+  "be subservient" `נכנע`, jdj "offer" `*מעניק*?`; dmḏ `חיבר` (UN3) / zmꜣ `איחד`; ḏbꜣ `עיטר` (UN3); sšwj `הגבה` (Shu's
+  pun); swꜣ `חלף` (NU1); ḫsf `הוחזר` (UN5); ꜣgb `הצפה` (UN3); bjꜣ "the sky's metal / water" `ימת־השמים` (NU4; never
+  `רקיע`); pšn `סדק` (the root בקע is a TALES gate); ḥtm `השמיד` (NU1), but 258-259.3 "come to an end" `פוסק` (sense
+  split); sḥtm `הוכחד`; ḏꜣj `חצה` (UN3) but 258-259.21 "oppose" `נחסם` (sense split); zḫn `ביקר` (NU5 wrote `פגש`);
+  sḥtp `הניח את דעת` (NU3); sꜥḥꜥ `העמיד`; smn `קבע`; ẖnm `עטף` (jnq `חיבק`); mkj `נצר`, mk.t / mkw.t `מחסה`, nh.t `מגן`,
+  nḏ `הגן`; nḫt (noun) `עוז` / nḫt (verb) `חזק`, wsr (noun) `חוסן`, ꜣ.t `כוח`; šbw `סעודה` (BD 11 had `מזון`, which is
+  ḏfꜣw's), ms.wt `ארוחת־ערב`; šwꜣ.t `מחסור` (not `דלות`, nmḥ.w's); pꜣḏ "round loaf" `עוגה` (AM) vs pꜣḏ "ball" `כדור`
+  (UN5) – and bḏ "ball" (254.14) also `כדור` (a collision, see Open); hny `צהלה`, hy `רינה`; nb-tm `אדון־הכלל` (kept
+  apart from nb-r-ḏr `אֲדוֹן הַכֹּל`); Nḥḥ `הנֶּצַח`; Ḥw `חוּ`, Sjꜣ `סִיא`, sꜣj `החכם`, sꜣ `*החוכמה*?`; mwmw `*נָא*?`
+  (Ex 12:9's word: vocalized).
+- **Names fixed here** (first occurrence vocalized): Ndj.t `נֶדִית`; Šzm.tt `שֶׁסְמֶתֶת`; Nfr-tm `נֶפֶרְתֶּם` (BD 54); Nḫn
+  `נֶחֶן`, Ḥr.w-nḫnj `חוֹרוּס־של־נֶחֶן`; Wr-skꜣ.t `וֶר־סֶכָּאת`; jꜣd `יָאד` (a star); Knz.t `כֶּנְזֶת` (UN3); Msq.t `מֶסְקֶת`
+  (NU1); Ḥp `אַפִּיס` (NU7); Ḏdw / Ḏd.t / Ḏd.wt `גֶ׳דוּ` / `גֶ׳דֶת` / `גֶ׳דוּת`; Mḥ.t-wr.t `מֶחֶת־וֶרֶת` (NU1); Tbj `טֶבִּי`;
+  Gsꜣ `גֶּסָא`; Ḥr.w-smsw `חוֹרוּס־הבכור` (NU8); Jmn.t nfr.t `המערב־היפה` (a goddess: feminine verbs); translated
+  epithets `אשר־על־צמחו`, `אשר־בראש־יתדו`, `קושר־הראש`, `אשר־על־ייחודו?`, `אדון־היחיד` (NU6), `הכוח־הגדול`; transliterated
+  with `?`: `העולים?` (jꜣꜣ.wj), `הפֶּסְגֶ׳תִי?` (the second pelican), `מִיז?`, `סְצֶ׳תֶת?`, `חֶצָא?`, `נֶנוּ` (rendered `הפונה?`).
+- **Traps met**: `ברַא` ("with Re", 254.29) reads as the reserved root ברא → `את רַא`; `האלה` ("these") must be
+  `הָאֵלֶּה` (the verifier reads "goddess"); `פֶּה` (Pe) always vocalized; `הָאָחֶת`.
+- **Rejected**: `יתום` (gate), `מבול` for ꜣgb, `רקיע` for bjꜣ, `בקע` for pšn, `בער` for ꜣm, `סוף` for pḥ.wj (`אחרית`),
+  `שושן` for nḫb / zšzš, `ברא` in any form, `שבת` (252.6 `מושבו`, not a form of the root שבת), `סֻלָּם` for rwd ("stairs"
+  `מדרגות`).
+
+### Open decisions for the user
+- **tfn / tfn.t** `חסר־האב`: the `יתום` gate blocks the exact word; the lead may license `יתום` for tfn (tla171830,
+  tla171870) in the UN keys, as `נחש` is licensed for ḥfꜣw.
+- **bḏ "ball"** (254.14) and pꜣḏ "incense ball" (UN5 200.3) both `כדור`; a second Hebrew word for one of them?
+- **šꜣs** (UN3 217.3 `חלף ב־`) and swꜣ (NU1 `החולף`, here 251.2, 254.11, 254.24, 254.32) share the root חלף; 260.22
+  renders šꜣs `הילוך` to avoid a third use. One verb should move (proposal: šꜣs `שוטט`? but ḫnz has it).
+- **ḥnw.t** and **ꜥb** both `קרן` (precedents NU6 / UN5).
+- **ꜣḫ.t "uraeus" `הָאָחֶת`**: a coinage from ꜣḫ `אָח`; the alternative is `האוראוס` or `הפתנית`.
+- **n sḏm=f**: UN3's rule (past) followed, except where the context is a prohibition or promise (258-259.2, 260.25:
+  future, explained in the entries).
+- **252.7** and **247.15** are partly unintelligible; the guesses are italic with `?`.
+
+### Progress log
+- Built a lemma→precedent index for all 206 rows (scratch), then drafted 247–253 (62 rows), read `tr`, wrote the
+  entries, `fill` + `verify` (0 gate problems); 254 (59 rows) the same way (verify: the `ברַא` trap fixed); 255–260
+  (85 rows) the same way (verify: `האלה` → `הָאֵלֶּה`).
+- Pass (a) fidelity: brackets of 254.46–254.59 checked word by word (`j[r]=[f]` read whole; `[(פעמיים)]` for the restored
+  `zp 2`); every *sḏm.kꜣ=f* rendered with `אז`; the TLA's passive in 251.8 not followed (the morphology is active);
+  247.15 and 252.7 marked as guesses.
+- Pass (b) consistency: dmḏ moved to `חיבר` (draft `איחד`, which is zmꜣ's); dꜣ moved to `דיכא` (jdj has `נכנע`); jns
+  `בד־האודם` (NU7); ds `מאכלת` (251.5 draft `סכין`, šꜥ.t's); 257.6 s.t back to `מקום`; the refrains 253.1 = 253.3, 255.1 =
+  255.5, 255.3 ≈ 254.2, 254.47 ≈ 254.48, 260.13 ≈ 260.24, 260.15 ≈ 260.16 checked.
+- Pass (c) Hebrew: the generated `translation-UN6.rtl.md` read through; the Beautiful West as a name (`המערב־היפה`)
+  so that its feminine verbs read naturally.
+- `build UN6`: 206 lines. `check_bible_quotes.py` on the three files: 0 problems (after one fix: 1 Kgs 10:22 had been
+  quoted from memory; now from the printed verse). `verify UN6 --strict`: 0 problems, 0 repeated-line differences.
+
+### The text on its own terms
+- **The son wakes the father** (247.1, 247.7–247.14): "Your son Horus has acted for you … see! look! hear! be there!
+  raise yourself from your side" – the senses come back one by one; the son's duty to the dead father is the whole
+  religion in a line.
+- **Birth again, from gods and lionesses** (247.4, 248.1–248.2): created by Geb, born of the Ennead "between its
+  thighs", conceived by Sekhmet – the tomb is a womb.
+- **The king as a star and as a flower** (248.3–248.4, 249.2, 249.9): a sharp-fronted, long-striding star; the lotus
+  that rises from the mud like the sun and is held to Re's nose – smell gives life (the same words as BD 81A, a
+  thousand years later).
+- **Maat in place of isfet** (249.6, 260.13, 260.24): the dead king does in heaven what the living king does on earth –
+  sets order where chaos was, and "brings Maat, who is with him".
+- **The mind as a god** (250): the king becomes Sia, Perception, "carrier of the god's book at Re's right"; with Hu
+  (Utterance, 255.16, 257.13) he holds the two powers by which the creator creates.
+- **Terror as a royal attribute** (254, 255–256): if no place is made for him, the earth will be struck dumb and Shu's
+  arms struck from under the sky; roads hidden, stairs destroyed, stars trembling; "whom he finds on his way he eats
+  raw" – the Cannibal Hymn's first line, a wall before it.
+- **Death as a woman** (254.21–254.25): the Beautiful West comes to meet him "with her beautiful tresses", says "here
+  comes the one I bore", and embraces him.
+- **The body kept whole** (254.33–254.35, 258-259.4–258-259.6, 260.9): the head tied to the neck, the bones and the
+  "secret limbs" joined, the corpse's fluid left in the earth – Osiris's dismemberment undone.
+- **The enemy punished as a sacrifice** (254.46–254.55): those who would take his meal, his supper, the breath from his
+  nose – their entrails to the sky, their blood to the earth, their heirs to want, their houses to fire.
+- **Disgust for the earth** (258-259.2): "his abomination is the earth; he will not enter Geb" – the same word (bw.t)
+  as the dung he will not eat (UN3 210).
+- **The lament turns to joy** (258-259.7–258-259.11): his sister weeps, and her words are "to the sky, to the sky, on
+  the wind!"
+- **A trial with witnesses** (260): the Two Truths hear, Shu is witness, the case of the orphan boy and girl is judged,
+  the matter is "brought to its end in Heliopolis" – the king is "true of voice by what he did".
+- **Puns**: zwr "bowl" / zwr "drink" (254.36); rmn "shoulder" / rmnj "lean" (255.13); mꜣ "see" / mꜣw.t "new" (257.2);
+  Šw / sšwj "lift" (253.6); psḏ.tj "pelican" / psḏ.t "Ennead" (254.8–254.9); Ḏdw / Ḏd.t / Ḏd.wt (254.39); tfn / Tfn.t
+  (260.5).
+
+### Key parallels
+- 248.4 ↔ Isa 14:13 `הַשָּׁמַיִם אֶעֱלֶה מִמַּעַל לְכוֹכְבֵי אֵל אָרִים כִּסְאִי` [divergence]: the king's place among the
+  stars – hubris punished in Isaiah, fulfilment here; 248.3 ↔ Num 24:17 `דָּרַךְ כּוֹכָב מִיַּעֲקֹב` [equivalent].
+- 249.9 ↔ Song 2:1 `שׁוֹשַׁנַּת הָעֲמָקִים`, 1 Kgs 7:19 [cognate: loanword] – zšn > `שׁוֹשָׁן`.
+- 252.1 ↔ Ps 24:7 `שְׂאוּ שְׁעָרִים רָאשֵׁיכֶם … וְיָבוֹא מֶלֶךְ הַכָּבוֹד` [divergence].
+- 254.18, 256.5 ↔ Deut 11:25 `פַּחְדְּכֶם וּמוֹרַאֲכֶם יִתֵּן`, Ex 23:27 `אֶת אֵימָתִי אֲשַׁלַּח לְפָנֶיךָ` [equivalent]: "giving
+  terror" into hearts.
+- 254.12 ↔ Gen 28:12 [divergence]: stairs to heaven destroyed for all but the king (not the ladder word).
+- 254.7 ↔ Ex 12:9 `נָא` [divergence], Num 23:24 [equivalent].
+- 258-259.9 ↔ 2 Kgs 2:11 `וַיַּעַל אֵלִיָּהוּ בַּסְעָרָה הַשָּׁמָיִם` [equivalent]; 258-259.1 ↔ Gen 3:19 [divergence].
+- 260.5 ↔ Ps 82:3 `שִׁפְטוּ-דַל וְיָתוֹם`, Deut 10:18 [equivalent]: judging the orphan as the mark of the just ruler.
+- 260.9 ↔ Ezek 37:7 [equivalent]; 258-259.19 ↔ Deut 32:39 `מָחַצְתִּי וַאֲנִי אֶרְפָּא` [equivalent].
+- 254.32 ↔ 1 Kgs 10:22 `קֹפִים` [cognate: loanword gf / gjf.t].
+
+### Lines shared with other texts
+- **For later keys (binding)**: 254.7 `אשר ימצא אונאס בדרכו – יאכל הוא אותו לו, *נָא*?.` is the first copy of UN7
+  273-274.45 (`wr gmi̯.y=f m wꜣ.t=f wnm=f n=f sw mwmw`) and UN8 299.5 (Pepi II's copy): copy it, changing only the subject.
+  249.8 ≈ UN9 311.12 (`ꜣgb.w-wr pri̯ m wr.t` `ההצפה הגדולה, היוצאת מן הגדולה`).
+- Inside UN6: 253.1 = 253.3; 255.1 = 255.5 (≈ 255.2); 255.3 ≈ 254.2 (+ the suffix); 255.7 ≈ 255.8 ≈ 255.15; 254.47 ≈
+  254.48; 254.46 ≈ 254.58 (`העושים זאת נגדו`); 260.13 ≈ 260.24; 260.15 ≈ 260.16; 250.2 ≈ 250.5 ≈ 250.8.
+- With earlier files: 249.4 / 249.9 = BD 81A.3's `השייך לנחירי רַא`; 258-259.18 ≈ UN3 218.2 (`ייטול … יקצה … הכָּאִים`);
+  252.4 = UN4 224.7's `ציווה דבר ל־`; 247.3 = PT486 / UN5's `שלום לפניך`.
+- **PT 260.1 for UN7**: 260 is wholly here; its first line is `הוֹ גֶּבּ, שור נוּת! חוֹרוּס הוא אונאס, יורש אביו.` – if UN7
+  meets Geb "bull of Nut" or "Horus, heir of his father" it should copy these words.
+
+### Proposals for the shared renderings
+1. **Formulas**: the kꜣ-form `sḏm.kꜣ=f` = `… אז` (`יעשה אונאס …` / `יבוא אז טטי זה`); `jr tm=k X` = `אם לא תעשה X`;
+   `j jn X` / `j.t jn X` (quotation after the words) = `– אומר X` / `– אומרת X`; `jw NN r p.t` = `אונאס – אל השמים`.
+2. **Terms**: zššn `שׁוֹשָׁן` (gated, confirmed), nḫb `ניצן`, zšzš transliterated; ꜣḫ.t "uraeus" `הָאָחֶת` (TRAP: always
+   vocalized); jꜥr.t `פתן` (BD); wḏꜥ mdw `דן דין`; tfn `חסר־האב` (or license `יתום`); jdb `גדה` / wḏb `חוף` / jḫm.t
+   `שפת־המים`; bjꜣ `ימת־השמים` (never `רקיע`); snḏ `יראה` / nrw `אימה` / sdꜣ `רעד` / snhd `הבעית`; Jmn.t nfr.t
+   `המערב־היפה`; nb-tm `אדון־הכלל`; mwmw `נָא` (vocalized: TRAP).
+3. **Names**: as under Decisions (נֶדִית, שֶׁסְמֶתֶת, נֶפֶרְתֶּם, נֶחֶן, וֶר־סֶכָּאת, יָאד, טֶבִּי, גֶּסָא, גֶ׳דוּ / גֶ׳דֶת / גֶ׳דוּת,
+   רֶנֶנוּטֶת, גֶ׳נֶנוּטֶת).
+4. **TRAPS to add**: `ברַא` (b + Re) trips the ברא gate – write `את רַא` / `לרַא`; `פֶּה` (Pe) always vocalized.
+
+### Lessons for the guidelines
+- **Check the composite before the brief's line counts**: the brief gave UN6 "the start of PT 260 (260.1)", but the
+  composite puts all 25 rows of PT 260 in UN6 (`unas_wall` A/W) – the key's 206 rows include them.
+- **A lemma→precedent index built once for the whole key** (every TLA id of the key with its earlier Hebrew in all
+  keys) made the one-lemma-one-Hebrew check a lookup rather than a hunt, and showed collisions (dmḏ/zmꜣ, jdj/dꜣ,
+  šꜣs/swꜣ) before drafting.
+- **A Hebrew preposition prefixed to a vocalized name can rebuild a reserved root** (`ב` + `רַא` = ברא): gates on
+  prefixed god names.
+
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)
