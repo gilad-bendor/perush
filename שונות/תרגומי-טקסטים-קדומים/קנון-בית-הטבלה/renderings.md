@@ -257,3 +257,34 @@ Coordinator: decisions 11–12 – the workarounds stand (vocalized `בּוּר�
   `זרח`; *kad₅* `קשור`; *ḫaš₄ ĝar* `שם ירך` (brood); *niĝir* `כרוז`; *pisaĝ* `טנא`; *nam-šub* `קסם`. Names: Ašgi
   `אַשְׁגִּי`, Šulpae `שׁוּלְפָּאֶה`, Urumaš `אוּרוּמָשׁ`, Isimud `אִיסִימוּד`, Niraḫ `נִירָח`, Ubšu-unkena `אוּבְּשׁוּאוּנְכֵּנָה`,
   E-engura `אֵ־אֶנְגּוּרָה`.
+
+### 5.6 Part 6 – T3, IB (merged 2026-11-13)
+Coordinator: 23 – `canon_tools.py` now licenses from the transliteration without ETCSL's italic catalogue notes (IB 1's Urim trap); 20 – *u₃-sumun₂* and *immal₂* both `פרת־הבר` in the kings and everyday corpora already: a kept split of two near-synonyms (wild cow), listed for the lead's harmonization; 18, 19, 21, 22 stand (19: *nam-en* `כהונת־האֵן` of the office of a priestess, `אדנות` of a king's lordship – a split by sense).
+
+- **Formulas (copy letter for letter):** the refrain *X ḫe₂-zu-am₃* = `שX – יִוָּדַע!` (123–133), opened by *ḫe₂-zu
+  ḫe₂-zu-am₃* = `יִוָּדַע! יִוָּדַע!` (122); *{d}nanna li-bi₂-in-dug₄-ga za-a-kam bi₂-in-dug₄-ga* = `אשר נַנָּה לא אמר,
+  אשר "שלָּךְ הוא!" אמר` (122 = 134); *-me-en* to a goddess = `X את` (12, 112, 114), *za-e-me-en* = `את היא` (6);
+  Enheduana's self-naming `האֵן אני, אֶנְחֶדּוּאַנָּה אני` (67), `אֶנְחֶדּוּאַנָּה אני` (81), `האֵן הצחה של נַנָּה אני`
+  (120); *šag₄ … ḫa-ma-sed-de₃* = `לבך – יתקרר לי!` (80, 121; 138 `הלא יתקרר לי?`); *šag₄ … ki-bi gi₄* = `אל מקומו
+  ישוב לי!` / `אל מקומו שָׁב לה` (110 ↔ 146); *{d}a-nun-na diĝir gal-gal-e-ne* = `הָאֲנוּנָּה, האלים הגדולים` (34,
+  115; = EWO); *kur gul-gul* = `הורסת ההר` (17, 153); *nin X dirig-ga a-ba ki-za ba-an-tum₃* = `גבירה העולה על X – מי
+  ממקומך הביא?` (42 = 59); *u₃-ma gub* = `בעוז עומד` (104, 133); *ga-am₃-dug₄* = `אומרה` (63, 136).
+- **Terms (new or confirmed):** *nin me šar₂-ra* `גבירת כל הַ־מֶה` (pre-set, used); *ud* "daylight" `אור־יום` (1, 70,
+  147; *ud* storm `סערה`); *nu-gig* `נוּגִיג` (= Inana's Descent); *suḫ-gir₁₁* `צְפִירָה`; *nam-en* `כהונת־האֵן`; *uš₁₁*
+  `ארס`; *a-ma-ru* `מבול`; *izi* `אש`; *biluda* `טקסים`; *za-pa-aĝ₂* `שאון`; *niĝ₂-me-ĝar* `דממה`; *šu ti* `לקח` (=
+  Akk. *leqû*: 23, 145); *i-dub* `סף`; *ĝal₂ taka₄* `פתח`; *sig* `*מוטל*`; *gu₃ ra* `הכה קול`; *im-ḫul* `הרוח הרעה`;
+  *su-din* `עטלף`; *ib₂* `זעף`; *mir* (adj.) `זעם` (*mir* wind `רוח הצפון`); *te-en* `צינן` / `הצטנן`; *sed* `התקרר`,
+  *sed₄* `קירר`; *ḫul-ĝal₂* `רע`; *ḫur-saĝ* `הררים`; *gid₂* `האריך`; *abul* `שער`; *de₂* (liquids) `יצק`; *laḫ₅*
+  `הוביל`; *sil* `פילח`; *ki-e-ne-di* `מקום משחק`; *sar* `רדף`; *zir* `נשבר`; *bur₂* (reveal) `חשף`; *u₃-sumun₂*
+  `פרת־הבר`; *ĝipar* `גִּיפַּר`; *masab* `סל־המַסַּבּ`; *asil* `רִנָּה`; *ki-sig₁₀* `סעודת־המתים` (= Inana's Descent);
+  *lal₃* `דבש`; *uḫ* `רוק`; *saḫar … gi₄* `לעפר שב`; *kar* `נטל` (= Lugalbanda); *nam … kud* `אָרַר`; *er₂ pad₃*
+  `מצא דמעות`; *ma₂* `ספינה`; *ug₅* `מת`; *en₃ tar* `דרש`; *ki-lul-la* `מקום־הרצח`; *nam-ĝu₁₀* (idiom) `מה לי?` (=
+  Enmerkar and Ensuḫgirana); *sim* `סנונית` (= Gudea); *ab* `חלון`; *kiši₁₆ kur-ra* `חוח ההר` (= the Ur lament);
+  *ĝiri₂ ba-da-ra* `פגיון וסכין`; *tab* (companion) `שותף`; *ninim* `קנאה`; *an-ur₂ an-pa* `שורש השמים, רום השמים` (=
+  Lugalbanda); *gu₂ ĝiš ĝar* `צוואר לעץ שָׂם`; *banda* `צעיר`; *a-gin₇* `אֵיךְ`; *ki su-ub* `נשק את הארץ`; *nundum*
+  `שפה`; *di kur₂* `דין נכרי`; *niĝin₂* `סבב`; *ĝiš-nu₂ gi-rin-na* `מיטת־הפרחים` (= Enmerkar); *uru₁₆* `נישא`; *še-g*
+  `שמע (לקול)`; *ne-mur* `רמץ`; *dub* (heap) `צבר`; *UN-gal* `שליט`; *gala* `גָּלָה` (no article); *an-bar₇* `צהריים`;
+  *dab₅* `אחז`; *gu₂-en* `אולם־האספה`; *la-la* `עתרת` (= S&W); *ma-az* `גואה`; *iti₆* `אור־הירח`; *šudu₃ ša₄* `ברכה …
+  בירך` (= Gudea); *ĝiš-kan₄* `עמוד־הפתח`; *ba* `חילק`. Names: Uraš `אוּרַשׁ`, Iškur `אִישְׁכּוּר`, Lugal-ane
+  `לוּגַל־אַנֶּה`, Ašimbabbar `אַשִׁימְבַּבַּר`, Ušumgal-ana `אוּשׁוּמְגַּל־אַנָּה`, Ningal `נִינְגַּל`, E-ešdam-kug
+  `אֵאֶשְׁדַּמְכּוּג`, E-ana `אֵאַנָּה`, Enheduana `אֶנְחֶדּוּאַנָּה`.

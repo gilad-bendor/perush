@@ -265,6 +265,100 @@ Translator T2, Round 8 run 2, 2026-11-13.
   "stand before him"; "Enlil was made happy" (EJ 116) is "brought joy" (= EJ 82); "holy" is *kug* "pure"; "lord" for
   *lugal* "king" (EJ 35, 45).
 
+## Part 6 (IB 1–154)
+Translator T3, Round 8 run 2, 2026-11-13.
+
+### Progress
+- **IB 1–154** drafted whole (154 entries): header, 12 `## ` sections, `translation--intro-IB.rtl.md`.
+- Three passes: (a) fidelity – every verbal chain against the ORACC morph: *ḫe₂-/ḫa-* + ḫamṭu affirmative `אכן`
+  (53–54, 66, 86, 89–90, 98, 101), + marû wish (75, 80, 91, 93–95, 110, 121, 141); *na-* + marû `אַל` (55–57, 84, 96);
+  *bara-* `בַּל` (87–88, 100, 102); the first-person passages parsed by agent marking (ḫamṭu without *-n-* = "I did":
+  68, 105b, 118, 137, 139; *-n-* … *-en* = "he did to me": 101, 104–106, 108); ORACC's *bara* (negative) for
+  *ba-ra-* in 104–105 rejected (= *ba-ta-*, "out": the expulsion stands); person/number of the land (masc.) and the
+  city (fem.) aligned (43–57); (b) consistency – `lexmap IB` reviewed; every new word grepped in all corpora; four
+  collisions fixed (`צָנִיף` is Gudea's *gur* → *suḫ-gir₁₁* `צְפִירָה`; `גיל` is *ul* in Lugalbanda and Anzud → *asil*
+  `רִנָּה`; `נעקר` is *bur₁₂* → *zir* `נשבר`; `הקצה` → *ba* `חילק`, = Akk. *zâzu*); *gur₃* one word `טעון` (68
+  `טָעַנְתִּי`, not `נשא` = *il₂*); lines shared with other texts copied (7–8 Inana's Descent; 34, 115 EWO; 66
+  Enmerkar and Ensuḫgirana; 112 Lugalbanda; 127 Lugalbanda; 145 Lugalbanda's *šu ba-an-ši-in-ti*); (c) Hebrew –
+  `עִמִּי`, `יָאֹר`, `שׂוּמָה` (not `הוּשְׂמָה`), `אֵלָה`, `גָּלָה` without the article, `בריאה את!` (not bare `בריאה`,
+  "creation"), `טָעַנְתִּי`.
+- `canon_tools.py verify IB`: OK; `check_bible_quotes.py`: 0 problems.
+
+### Open decisions
+18. **ur split by sense:** 14 *nin ur-ra u₅-a* `הרוכבת על *החיה*` (Inana's lion?), 128 *ur-gin₇ ad₆ gu₇* `ככלב`. One
+    lemma; if the corpus wants one word, `כלב` in both.
+19. **nam-en = `כהונת־האֵן`** (IB 4 = 107, Enheduana's crown), while EN has `אדנות` (a king's lordship): a split by
+    sense (*en* `אֵן` for the office, renderings §2).
+20. **u₃-sumun₂ = `פרת־הבר`** (58, 91; = Enmerkar and Ensuḫgirana's *u₃-sumun₂ zid* `פרת־הבר הנאמנה`), which collides
+    with NI's *immal₂* `פרת־בר`: one should move (for the lead).
+21. **Splits recorded:** *bur₂* "reveal" `חשף` (57, 119) / "interpret (a dream)" `פשר` (temple corpus); *du₈* `התיר`
+    (75–76) / "spread" `פרש` (147); *šu la₂* `מתח יד` (118, = the Ur lament) / *la₂* `תלה` (7); *gu₃ de₂* "shout" `השמיע
+    קול` (126) – the formula `פונה אל` kept for the address form only; *la-la* `עתרת` (= S&W), which LH has for
+    *nuḫšum* (a cross-language overlap for the lead).
+22. **Uncertain person / mood, marked in the lines:** 70–71 (the form says "the light came near", ETCSL "I
+    approached"); 84 `אַשִׁימְבַּבַּר – אַל תתייגע!?` (vocative; ETCSL "do not be anxious about A."; 1st person
+    possible); 98 *ḫe₂-* + ḫamṭu read affirmative `אכן נזנחה` (ETCSL a wish); 105b `אכלתי` (no *-n-*; or impersonal);
+    138 *na-* + marû as a negative question `הלא יתקרר לי?`; 76 *mu-e-du₈-e* (2nd-person *-e-*; object left out).
+23. **Gate problem (report, not edited):** ETCSL's catalogue note in IB 1's backticked line ("OB catalogue from Urim")
+    licenses the Urim trap, so `אור־יום` had to be vocalized there (`אוֹר־יוֹם`). The verifier should strip the
+    italic `*Cited in …*` notes before the trap and gate checks.
+
+### Proposals for the corpus renderings
+- **Formulas (copy letter for letter):** the refrain *X ḫe₂-zu-am₃* = `שX – יִוָּדַע!` (123–133), opened by *ḫe₂-zu
+  ḫe₂-zu-am₃* = `יִוָּדַע! יִוָּדַע!` (122); *{d}nanna li-bi₂-in-dug₄-ga za-a-kam bi₂-in-dug₄-ga* = `אשר נַנָּה לא אמר,
+  אשר "שלָּךְ הוא!" אמר` (122 = 134); *-me-en* to a goddess = `X את` (12, 112, 114), *za-e-me-en* = `את היא` (6);
+  Enheduana's self-naming `האֵן אני, אֶנְחֶדּוּאַנָּה אני` (67), `אֶנְחֶדּוּאַנָּה אני` (81), `האֵן הצחה של נַנָּה אני`
+  (120); *šag₄ … ḫa-ma-sed-de₃* = `לבך – יתקרר לי!` (80, 121; 138 `הלא יתקרר לי?`); *šag₄ … ki-bi gi₄* = `אל מקומו
+  ישוב לי!` / `אל מקומו שָׁב לה` (110 ↔ 146); *{d}a-nun-na diĝir gal-gal-e-ne* = `הָאֲנוּנָּה, האלים הגדולים` (34,
+  115; = EWO); *kur gul-gul* = `הורסת ההר` (17, 153); *nin X dirig-ga a-ba ki-za ba-an-tum₃* = `גבירה העולה על X – מי
+  ממקומך הביא?` (42 = 59); *u₃-ma gub* = `בעוז עומד` (104, 133); *ga-am₃-dug₄* = `אומרה` (63, 136).
+- **Terms (new or confirmed):** *nin me šar₂-ra* `גבירת כל הַ־מֶה` (pre-set, used); *ud* "daylight" `אור־יום` (1, 70,
+  147; *ud* storm `סערה`); *nu-gig* `נוּגִיג` (= Inana's Descent); *suḫ-gir₁₁* `צְפִירָה`; *nam-en* `כהונת־האֵן`; *uš₁₁*
+  `ארס`; *a-ma-ru* `מבול`; *izi* `אש`; *biluda* `טקסים`; *za-pa-aĝ₂* `שאון`; *niĝ₂-me-ĝar* `דממה`; *šu ti* `לקח` (=
+  Akk. *leqû*: 23, 145); *i-dub* `סף`; *ĝal₂ taka₄* `פתח`; *sig* `*מוטל*`; *gu₃ ra* `הכה קול`; *im-ḫul* `הרוח הרעה`;
+  *su-din* `עטלף`; *ib₂* `זעף`; *mir* (adj.) `זעם` (*mir* wind `רוח הצפון`); *te-en* `צינן` / `הצטנן`; *sed* `התקרר`,
+  *sed₄* `קירר`; *ḫul-ĝal₂* `רע`; *ḫur-saĝ* `הררים`; *gid₂* `האריך`; *abul* `שער`; *de₂* (liquids) `יצק`; *laḫ₅*
+  `הוביל`; *sil* `פילח`; *ki-e-ne-di* `מקום משחק`; *sar* `רדף`; *zir* `נשבר`; *bur₂* (reveal) `חשף`; *u₃-sumun₂*
+  `פרת־הבר`; *ĝipar* `גִּיפַּר`; *masab* `סל־המַסַּבּ`; *asil* `רִנָּה`; *ki-sig₁₀* `סעודת־המתים` (= Inana's Descent);
+  *lal₃* `דבש`; *uḫ* `רוק`; *saḫar … gi₄* `לעפר שב`; *kar* `נטל` (= Lugalbanda); *nam … kud* `אָרַר`; *er₂ pad₃*
+  `מצא דמעות`; *ma₂* `ספינה`; *ug₅* `מת`; *en₃ tar* `דרש`; *ki-lul-la* `מקום־הרצח`; *nam-ĝu₁₀* (idiom) `מה לי?` (=
+  Enmerkar and Ensuḫgirana); *sim* `סנונית` (= Gudea); *ab* `חלון`; *kiši₁₆ kur-ra* `חוח ההר` (= the Ur lament);
+  *ĝiri₂ ba-da-ra* `פגיון וסכין`; *tab* (companion) `שותף`; *ninim* `קנאה`; *an-ur₂ an-pa* `שורש השמים, רום השמים` (=
+  Lugalbanda); *gu₂ ĝiš ĝar* `צוואר לעץ שָׂם`; *banda* `צעיר`; *a-gin₇* `אֵיךְ`; *ki su-ub* `נשק את הארץ`; *nundum*
+  `שפה`; *di kur₂* `דין נכרי`; *niĝin₂* `סבב`; *ĝiš-nu₂ gi-rin-na* `מיטת־הפרחים` (= Enmerkar); *uru₁₆* `נישא`; *še-g*
+  `שמע (לקול)`; *ne-mur* `רמץ`; *dub* (heap) `צבר`; *UN-gal* `שליט`; *gala* `גָּלָה` (no article); *an-bar₇* `צהריים`;
+  *dab₅* `אחז`; *gu₂-en* `אולם־האספה`; *la-la* `עתרת` (= S&W); *ma-az* `גואה`; *iti₆* `אור־הירח`; *šudu₃ ša₄* `ברכה …
+  בירך` (= Gudea); *ĝiš-kan₄* `עמוד־הפתח`; *ba* `חילק`. Names: Uraš `אוּרַשׁ`, Iškur `אִישְׁכּוּר`, Lugal-ane
+  `לוּגַל־אַנֶּה`, Ašimbabbar `אַשִׁימְבַּבַּר`, Ušumgal-ana `אוּשׁוּמְגַּל־אַנָּה`, Ningal `נִינְגַּל`, E-ešdam-kug
+  `אֵאֶשְׁדַּמְכּוּג`, E-ana `אֵאַנָּה`, Enheduana `אֶנְחֶדּוּאַנָּה`.
+
+### Key findings
+- **The ancient mind.** Inana B is the Decad's one text in a named author's voice, and its shape is a lawsuit: a
+  priestess robbed of her house (69 "the funerary meal is set; I – I am not alive"), whose own god does not try her
+  case (100–102), appeals over his head to his daughter, and wins. The hymn's theology is political: a city is
+  punished not for a deed but for a sentence it did not say ("the land is yours!", 51–52), and the punishment reaches
+  the bed – the wife will not talk sweetly to her husband at night (55–57). The great goddess is praised precisely for
+  what is terrible in her – "that you eat corpses like a dog – let it be known!" (128) –, and the prayer's answer is
+  told in the prayer's own words: "may your heart return to its place for me" (110) → "the heart of Inana returned
+  to its place for her" (146). The poem also tells its own transmission: the song "spoken at night" is to be repeated
+  by a *gala* singer "at noon" (139–141) – as the school repeated it.
+- **The Bible (shared motifs; the strongest contacts).** The betraying companion who "entered as a partner and
+  approached in envy" (90) ↔ Ps 55:13–15 (`וְאַתָּה אֱנוֹשׁ כְּעֶרְכִּי`), Ps 41:10; "my own case is not finished; an
+  alien case surrounds my eyes" (117) ↔ Ps 43:1 `וְרִיבָה רִיבִי`; the refrain "let it be known" after the enemies'
+  ruin (122–133) ↔ Ps 83:19, 59:14 `וְיֵדְעוּ כִּי`; "she took her prayer" (145, *šu ti* = Akk. *leqû*) ↔ Ps 6:10
+  `יְהוָה תְּפִלָּתִי יִקָּח` – the same verb with the same object; "returned to dust" (73, *saḫar* + *gi₄*) ↔ Gen
+  3:19, Ps 104:29 (the gift of soothing, not man, returns to dust); the gods fleeing like bats to the ruin mounds (35) ↔
+  Isa 2:20–21; fire rained on the land (13) ↔ Ps 11:6; the river turned to blood that the people cannot drink (45) ↔
+  Exod 7:20–21; tears as drink (82) ↔ Ps 102:10; counted with the dead while alive (69) ↔ Ps 88:5; the swallow (105) ↔
+  Isa 38:14; prayer at night and at noon (140–141) ↔ Ps 55:18; lofty as heaven, broad as earth (123–124) ↔ Job
+  11:8–9; the gods kissing the ground (116) ↔ Ps 72:9, Isa 49:23; the mountain and the flood at her feet (78) ↔ Ps
+  29:10. All shared motifs: Sumer never met Israel.
+- **ETCSL corrected:** "righteous" (2, 60) and "good" (65, 91) are *zid* "true"; "holy" is *kug*; "not yet" (117,
+  122, 134) is not in the Sumerian; "Mistress of heaven" (3) is the untranslated title *nu-gig*; "my ability to soothe
+  moods vanished" (73) hides "returned to dust"; "may your ship … be abandoned" (98) is an affirmative past; "the
+  greatest deity" (87) is "the god, the great man"; "offerings" (145) is *sizkur₂* "prayer"; "everyone's speech" (152)
+  adds "everyone"; ORACC's machine parse reads the expulsion lines (104–105) as negated.
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 

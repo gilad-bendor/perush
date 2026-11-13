@@ -191,7 +191,8 @@ def source(key):
         T = TEXTS[key]
         src = etcsl_lines(T['etcsl'], T.get('versions'))
         lem = oracc_aligned(key, src)
-        _SRC[key] = [(lab, t, t + ' ' + lem[i]) for i, (lab, t) in enumerate(src)]
+        # the licence omits ETCSL's italic notes ("*Cited in OB catalogue from Urim …*" tripped the Urim trap: IB 1)
+        _SRC[key] = [(lab, t, nw.clean_tr(t) + ' ' + lem[i]) for i, (lab, t) in enumerate(src)]
     return _SRC[key]
 
 
