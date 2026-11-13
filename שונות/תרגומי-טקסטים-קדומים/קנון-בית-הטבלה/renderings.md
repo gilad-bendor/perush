@@ -145,3 +145,24 @@ Coordinator's decisions: the `קדש` gate now lets *eš₃* `מִקְדָּשׁ
   *eĝer* `סוף`; *kur* "foreign highland" `ההר`, *kur-kur* `הארצות`.
 - Names: Išme-Dagan `אִישְׁמֶה־דָּגָן` and Dagan `דָּגָן` always vocalized (trap `דגן`); Šu-ilīšu `שׁוּ־אִילִישׁוּ`;
   Nin-Isina `נִין־אִיסִינָה`; Nuska `נוּסְכּוּ`.
+
+### 5.2 Part 2 – T1, EN (merged 2026-11-13)
+Coordinator: EN addresses the king in the second person (the brief's "first person" was wrong): its *-me-en* = `X אתה`; T1's open decisions 6–8 stand.
+
+- New: *šu dug₄* `מגע־יד` (4); *gu₂ e₃* "wear (round the neck)" `עטה` (9); *me šar₂* `כל הַ־מֶה`; *šar₂* `רבבה`;
+  *zag an ki* `גבול שמים וארץ`; *me-dim₂* `מבנה`; *ešgiri₂* `מטה`; *mas-su* `מנהיג`; *niĝ₂-zi-ĝal₂* `בעל נפש`; *maḫ-di*
+  `מפואר`; *bur-šu-um* `קשישה`, *šu-gi* `זקן`; *ušbar* `חותן/חותנת` (by sense; `חם` in Inana's Descent); *saĝ-tun₃*
+  `רושם`; *im nam-til₃* `טיט החיים`; *ad gi₄-gi₄* (noun) `הנמלכות`, *ba-an-gi₄* `תשובה`; *pad₃* "find" `מצא` (but
+  "choose" `בחר`); *sa₂* `תושייה` (*na de₅* `עצה`); *ĝalga* `שכל` (*umuš* `תבונה`); *šag₄ kuš₂* `יגע־הלב`; *kug-zu* `חכם`;
+  *nu-ĝar-ra* `זדוני`; *tam* `ברר`; *si sa₂* (noun) `יושר`, *si nu-sa₂* `הלא־ישר`; *zalag* `האיר`; *niĝ₂ kur₂ di* `הדובר
+  דבר נכרי`; *gul* `הרס`; *tur₅* `חולי`; *du₈* "loosen" `התיר`; *ĝiš ra* `הכה בעץ`; *šag₄-la₂ sug₄* `הרחום`; *ne-saĝ*
+  `ראשית`; *šagina* `מושל הצבא`; *erin₂* `חיל`; *a₂ ĝar* `זרוע שָׂם`; *gaba-ri* (rival) `שכנגד`; *gam* `כופף`;
+  *barag-barag* (rulers) `בעלי הדוכנים`; *nam-gi₄-me-eš₃* `רעוּת`; *zi gi₄* `השיב נפש`; *gug* `אודם`; *ša-* `הֲרֵי`; *ki
+  su-ub* `נשק את הארץ`; *še* `שעורה`; *ud šu₂-uš* `יום־יום`; *mu sa₄* `קרא בשם`; *niĝ₂-u₄-rum* `קניין`; *u₃-na*
+  "triumph" `עוז` / *ĝi₆ u₃-na* `בלילה, בעומקו`; *du₆* `תל`; *en₃-dur kud* `כריתת טבור`; *nam-en* `אדנות`; *saĝ du₃*
+  `בנה ראש`; *taḫ* `הוסיף`; *ĝiš-šub* `חלק`; *ki-nu₂* `משכב`; *ki … tag* `נגע בקרקע`; *di-kud* `דיין`; *u₃-luḫ*
+  `נצר`; *itid* `ירח`; *giri₁₇-zal* `חדווה`; *an-ta-ĝal₂* `רם`; *mi₂ dug₄* `חיבב`; *umun₂* `בקיאות`; *ĝa₂-la dag*
+  `הרפה`. Names: Enlil-bāni `אֶנְלִיל־בָּאנִי`, Asarluḫi `אַסַרְלוּחִי`, Nanibgal `נַנִּיבְּגַל`, E-zagin `אֵ־זַגִּין`,
+  E-kišnuĝal `אֵ־כִּישְׁנוּגַל`, Diĝirmaḫ `דִּינְגִּירְמַח`, Nudimmud `נוּדִימּוּד`, E-ana `הָאֵאַנָּה`.
+- Copied from Part 1 and other corpora: `ארבע הפינות`, `בבהירות הוציא`, `לגורל – לך גזר`, `על ראשך / בידך לך כונן`,
+  `אשר אינו חדל`, `הגיבור החזק של אנליל` (laws), `בעין טובה`, `סכך רחב`, `מקל־רועים`.

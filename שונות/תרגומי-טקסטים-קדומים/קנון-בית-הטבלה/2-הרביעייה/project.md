@@ -135,6 +135,65 @@ Translator T1, Round 8 run 2, 2026-11-13.
   support" (ID 40) reverses subject and dative and so hides Ps 21:8 (the king relies on the god); "holy" (*kug*) is
   "pure"; "cosmic bond" (ID 7) is *us₂-saĝ* "stake".
 
+## Part 2 (EN 1-3–184)
+Translator T1, Round 8 run 2, 2026-11-13.
+
+### Progress
+- **EN 1-3–184** drafted whole (171 entries, the range labels included): header, 8 `## ` sections,
+  `translation--intro-EN.rtl.md`. ID 66 as the coordinator changed it (`כמקדש היולד דבר`): agreed.
+- Three passes: (a) fidelity – persons against the morph (2nd person throughout), *ḫe₂-* / *na-* / *ša-*, brackets
+  (whole restored words only: 140 `[גזרה]`, 171 `[בירח]`); (b) consistency – every Part 1 formula and term
+  (`../renderings.md` §5.1) followed, `lexmap EN LB ID` clean (only segmentation artifacts); (c) Hebrew – one-word
+  lines kept below the vocalization threshold, punctuation.
+- `canon_tools.py verify EN`: OK; `check_bible_quotes.py`: 0 problems (it caught two quotations from memory, fixed).
+
+### Open decisions
+6. **EN is not in the first person.** The brief (and this file's "The ancient mind") expected Enlil-bāni speaking of
+   himself; the transliteration is 2nd person throughout (*mu-ra-* "for you", *-zu* "your", *mu-e-zu* / *ba-e-zu* "you
+   know", *-e-en* 2sg), and ETCSL translates it so. Its *-me-en* lines (29, 115–123, 174) are therefore `X אתה`. The
+   self-praise formula `X אני` is still unused (Šulgi A will be the first).
+7. **EN 183–184** *ĝa₂-la … nam-ba-an-dag-ge* (one compound across two lines) = `הרפֵּה / אל יַרפֶּה!`: `חָדַל` is
+   already *muš₃ tum₂*'s (EN 119), and Lugalbanda 1 has `חדל` for *ĝa₂-la dag* – one of the two corpora will need to
+   move if they are harmonized.
+8. **EN 165** *u₃-luḫ* = `נֵצֶר` (Lugalbanda, the Bilgameš poems): the shepherd's switch the king receives, which puts
+   `נֵצֶר` (Isa 11:1) in a royal line; kept as the Sumerian precedent, the difference recorded as a [divergence].
+
+### Proposals for the corpus renderings
+- New: *šu dug₄* `מגע־יד` (4); *gu₂ e₃* "wear (round the neck)" `עטה` (9); *me šar₂* `כל הַ־מֶה`; *šar₂* `רבבה`;
+  *zag an ki* `גבול שמים וארץ`; *me-dim₂* `מבנה`; *ešgiri₂* `מטה`; *mas-su* `מנהיג`; *niĝ₂-zi-ĝal₂* `בעל נפש`; *maḫ-di*
+  `מפואר`; *bur-šu-um* `קשישה`, *šu-gi* `זקן`; *ušbar* `חותן/חותנת` (by sense; `חם` in Inana's Descent); *saĝ-tun₃*
+  `רושם`; *im nam-til₃* `טיט החיים`; *ad gi₄-gi₄* (noun) `הנמלכות`, *ba-an-gi₄* `תשובה`; *pad₃* "find" `מצא` (but
+  "choose" `בחר`); *sa₂* `תושייה` (*na de₅* `עצה`); *ĝalga* `שכל` (*umuš* `תבונה`); *šag₄ kuš₂* `יגע־הלב`; *kug-zu* `חכם`;
+  *nu-ĝar-ra* `זדוני`; *tam* `ברר`; *si sa₂* (noun) `יושר`, *si nu-sa₂* `הלא־ישר`; *zalag* `האיר`; *niĝ₂ kur₂ di* `הדובר
+  דבר נכרי`; *gul* `הרס`; *tur₅* `חולי`; *du₈* "loosen" `התיר`; *ĝiš ra* `הכה בעץ`; *šag₄-la₂ sug₄* `הרחום`; *ne-saĝ*
+  `ראשית`; *šagina* `מושל הצבא`; *erin₂* `חיל`; *a₂ ĝar* `זרוע שָׂם`; *gaba-ri* (rival) `שכנגד`; *gam* `כופף`;
+  *barag-barag* (rulers) `בעלי הדוכנים`; *nam-gi₄-me-eš₃* `רעוּת`; *zi gi₄* `השיב נפש`; *gug* `אודם`; *ša-* `הֲרֵי`; *ki
+  su-ub* `נשק את הארץ`; *še* `שעורה`; *ud šu₂-uš* `יום־יום`; *mu sa₄* `קרא בשם`; *niĝ₂-u₄-rum* `קניין`; *u₃-na*
+  "triumph" `עוז` / *ĝi₆ u₃-na* `בלילה, בעומקו`; *du₆* `תל`; *en₃-dur kud* `כריתת טבור`; *nam-en* `אדנות`; *saĝ du₃*
+  `בנה ראש`; *taḫ* `הוסיף`; *ĝiš-šub* `חלק`; *ki-nu₂* `משכב`; *ki … tag* `נגע בקרקע`; *di-kud* `דיין`; *u₃-luḫ*
+  `נצר`; *itid* `ירח`; *giri₁₇-zal* `חדווה`; *an-ta-ĝal₂* `רם`; *mi₂ dug₄* `חיבב`; *umun₂* `בקיאות`; *ĝa₂-la dag*
+  `הרפה`. Names: Enlil-bāni `אֶנְלִיל־בָּאנִי`, Asarluḫi `אַסַרְלוּחִי`, Nanibgal `נַנִּיבְּגַל`, E-zagin `אֵ־זַגִּין`,
+  E-kišnuĝal `אֵ־כִּישְׁנוּגַל`, Diĝirmaḫ `דִּינְגִּירְמַח`, Nudimmud `נוּדִימּוּד`, E-ana `הָאֵאַנָּה`.
+- Copied from Part 1 and other corpora: `ארבע הפינות`, `בבהירות הוציא`, `לגורל – לך גזר`, `על ראשך / בידך לך כונן`,
+  `אשר אינו חדל`, `הגיבור החזק של אנליל` (laws), `בעין טובה`, `סכך רחב`, `מקל־רועים`.
+
+### Key findings
+- **The ancient mind.** The most detailed portrait of the judge-king in the Tetrad: he "cleanses" the malice hidden
+  in the heart as a smith refines metal (73–75), polishes justice "like gold" (76–77), knows how to "loosen sin and
+  its illness" (82–83: sin as a bond that causes disease, released together), and "does not strike a head with wood"
+  for a transgression (85) – mercy as a royal virtue (88). Every god gives one gift; the gods' gifts follow the life
+  of the king: his fate decreed when the midwife-goddess cuts his navel cord (139–142), his name written by Nisaba "on
+  the clay of life" (47–48), the crown "of life" (145), the night in Inana's bed (155–158), the switch to shepherd the
+  people (165–167). The school closes it again: "the house that gives counsel to the Land" (180).
+- **The Bible (shared motifs).** "the clay of life" with the king's name ↔ the "book of life" (Ps 69:29, Isa 4:3);
+  "whom Enlil called by name" ↔ Isa 43:1; "you are Ninlil's property" ↔ Exod 19:5 (`סגלה`); the navel cord cut at
+  birth ↔ Ezek 16:4; "loosen sin and its illness" ↔ Ps 103:3; "restore the life (*zi gi₄*)" ↔ Ps 23:3 `נפשי ישובב`;
+  staff and shepherd's rod ↔ Ps 23:4; the kings who kiss the ground and bring gold and stones ↔ Ps 72:9–11; the
+  crown and "life" ↔ Ps 21:4–5; the broad heart ↔ 1 Kgs 5:9; Nisaba's house of wisdom "to find counsel" ↔ Prov 8:14.
+- **ETCSL's echoes, corrected:** "Created by An" (4) is *šu dug₄* "touched by the hand"; "your divine creator" (148)
+  is "who built your head"; "the just" (89) is "the true man"; "sceptre which brings to justice" (165–166) is "the
+  switch … leading truly"; "holy" (*kug*) is "pure".
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
