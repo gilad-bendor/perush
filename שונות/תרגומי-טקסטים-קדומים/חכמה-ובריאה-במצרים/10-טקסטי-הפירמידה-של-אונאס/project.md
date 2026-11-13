@@ -1621,5 +1621,39 @@ punning on the dish's name, each followed by the rubric (recitation note, item, 
 - **A vocalized word must strip to its plene form**: piel forms with a doubled vav (`יְעַוֵּל` → `יעול`) cannot be
   vocalized without the extra vav; write them plene.
 
+## Independent review: UN3, UN4
+
+Round 8 run 1, the independent fidelity reviewer (2026-11-13; did not draft these files). **Checked:** every `>` line of
+UN3 (184 rows, PT 204–218) and UN4 (209 rows, PT 219–224) against `egypt_tools.py data` (the base words, the TLA
+morphology, Allen's line as a check), then against `tr`: words omitted or moved across lines; person, number, gender,
+voice, tense and mood (passive sḏm=f, prospective sḏm.w=f, relative forms, negations, statives); brackets against the
+base (§2.1); the witness tags (`{פפי ב}` PT 211, `{פפי א}` PT 212, `{טטי}` PT 224); one Hebrew per lemma (`lex`,
+`grep --all`) inside the two keys and against the other UN keys; PT 217–218's refrains and PT 219's litany frame (all
+24 copies grouped by their Egyptian: every identical source line has identical Hebrew, every deviation follows the
+wall); the coordinator's scripted `דְּבָרִים לֵאמֹר:` openings (UN3 205.1, 207.1, 209.1, 210.1, 211.1, 212.1, 216.1,
+217.1, 218.1; UN4 219.1, 222.1, 223.1): each reads well with what follows (223.1 is the rubric alone, as the AED
+line is). Echo control: no new biblical phrase found; the reserved words pass `verify`. `build UN3 UN4`,
+`check_bible_quotes.py` (0 problems), `verify UN3 UN4 --strict` (0 problems).
+
+**Lines changed: 9** (UN3 3, UN4 6); the פירוק of each was updated.
+- UN3 210.9: `שני הרעים האלה` → `שני הָרֵעִים האלה` – rḥ.wj "the two companions": unvocalized it reads "the two evil ones".
+- UN3 213.4: `מקל, מטך – בידך:` → `מקל, שרביט־הנֶחֶבֶּת שלך – בידך:` – nḥb.t is `שרביט־הנֶחֶבֶּת` in UN4 224.14, where
+  `מטך` is md(w): two lemmas in one Hebrew.
+- UN3 214.11: `צועקת לך ההֶנְמֶמֶת` → `תצעק לך ההֶנְמֶמֶת` – kj.w is a prospective sḏm.w=f (TLA "werden … aufschreien").
+- UN4 219.67: `"אשר־בקטורת"` → `"אשר־בעישון"` – kꜣp "fumigation"; `קטורת` is snṯr's (§13.3).
+- UN4 219.75: `עונתך בשמים, עונתך בארץ` → `עתך בשמים, עתך בארץ` – tr (tla172700) is `עת` in the whole corpus (UN3 218.11,
+  SI, NU).
+- UN4 222.1: `[היוצאת] [מאָתוּם]` → `[היוצאת] [מ]אָתוּם` – `[(J]tm[,w)]`: the god's tm is written (J and w are never
+  written); only the preposition m is restored.
+- UN4 222.27: `עם [אביך] [אָתוּם]` → `עם [אביך] אָתוּם` – the same: Atum's tm is written.
+- UN4 224.13: `בכל הדרך` → `בכל הֲדָרְךָ` – sꜥḥ "dignity": unvocalized it reads "the road".
+- UN4 224.20: `בכל הדרך` → `בכל הֲדָרְךָ` – the same.
+
+**Left as drafted (noted for the coordinator):** UN4 222.6 `[j]t(j)=f` `אביו` unbracketed (one of two signs restored:
+the translator's reasoned choice, on the line of §2.1); the n sḏm=f lines in UN3 read as general / future (204.5,
+209.1–2, 215.35 `לא תכלה`) beside UN4's past refrain `לא כָּלָה הוא` – both defensible for Old Egyptian, each context
+by its own TLA reading; UN4 222.15 wr "great water" `אגם (גדול)` beside UN3 214.1 šj `האגם` (a near-collision, kept by
+sense).
+
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)
