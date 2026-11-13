@@ -1129,3 +1129,14 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
    the Red Crown `הכתר־האדום`, nsr.t `נֶסֶרֶת`, wr.t-ḥkꜣ.w `גדולת־הקסמים`; ḥtp ḥr `נח על`; ꜥb.w "purity" `זוך` / "impurity"
    `טומאה`; hj `הֵי`, jh `אִיהּ`; nḏ `הגן` (PT486 / PT600 `שמר`: a split for the lead); bꜣ "leopard skin" `פרוות־נמר`.
 3. **Open (for the user):** wn / wpi̯ both `פתח`; nhp `השכים`?; ꜥb.w `טומאה` vs NU3 `עבֵרה`; ꜥḥꜥ `עמוד` (not `קום`); Ndj `נֶדִי` / NU5 `נֶדוּ`.
+#### 13.6.3 UN5 (PT 226–243, 199, 32, 23, 25, 200, 244–246), translator 3, merged 2026-11-13 (full list in `10-…/project.md`, "UN5")
+1. **The passage's copies of PT 32, 23–24, 25 bind UN1's** (UN1 changes only what its Egyptian changes): `האלה, אוֹסִירִיס,
+   מי־הצינה שלך האלה, הוֹי אונאס, יצאו מאת בנך, יצאו מאת חוֹרוּס.`; `הלך ההולך עם הכָּא שלו; …`. Rubrics: an action =
+   verbal noun + full stop (`נתינת מי־הצינה.`, `ניסוך.`), an item = the bare noun (`קטורת.`).
+2. **The serpents (bind UN8's PT 277, 289, 297–299):** ḥfꜣw `נחש` (the only licensed serpent word); nꜥw / nꜥ.t `המתפתל` /
+   `המתפתלת`; kꜣ "male snake" `הזכר`; ḏ.t "cobra" `המזדקפת`; srq.t `עקרב`; zpꜣ `נַדָּל`; hjw `הִיוּ` ★ (TRAP added);
+   j:ḫr zbn `נְפוֹל! זְחַל!`; šnj "encircle" `הוקף` / "conjure" `הושבע`; tf `ריר`, jšw `רוק`, ṯf `פלוט` (psg `ירק`); ḫm `התנכר`
+   / `לא הכיר`; bdd `בושם` (`ניחוח` avoided); the possibly foreign words transliterated with `?`, one note on Steiner 2011.
+3. **Gate fixed (the coordinator):** the `נשך` "interest" gate now licenses the verb by pzḥ (tla62220).
+4. **Open (for the user):** hjw transliterated; sḏr `שכב` beside nk `שכב עם`; sṯ `ריח` (TB) / MK E134 `בושם`; `מָאפְדֶת` /
+   NU `מַאפְדֶת`.

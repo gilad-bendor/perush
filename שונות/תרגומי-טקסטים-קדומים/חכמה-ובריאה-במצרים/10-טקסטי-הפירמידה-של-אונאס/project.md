@@ -382,5 +382,186 @@ and sets with the sun into Atum's arms, and is called to stand up, sit down and 
 - **A gate on a loanword root can hit an inflected Hebrew verb** (`הנחתם` "you let" = ה+נחתם): test gates on second-
   person plural verb forms too.
 
+## UN5 (PT 226–243, 199, 32, 23, 25, 200, 244–246)
+
+Round 8 run 1, translator 3 (2026-11-13). Files: `annotated-UN5.rtl.md`, `translation--intro-UN5.rtl.md`,
+`translation-UN5.rtl.md` (generated), `translation.rtl.md` (generated).
+
+### Scope
+The burial chamber's **west gable** (the serpent spells PT 226–243, 66 rows) and the **passage** to the antechamber
+(PT 199; the 4th copy of PT 32, the 2nd of PT 23–24, the 3rd of PT 25; PT 200; PT 244–246: 58 rows): 124 rows, all from
+Unas's own wall (W). Preservation: intact except PT 199.1–199.3 (mostly restored) and 244.1 (`[Ḥr,w] [rwḏ.t]`). The text
+in a sentence: short commands, names and sound-plays that make the snakes and scorpions fall, slither off, bite each
+other and be swallowed by earth, crown and goddess; then a piece of the offering ritual (offering reversion, libation,
+seizing the king's slanderers, censing, breaking the red pots) and the king's ascent as the lone star on Nut's
+shoulder and a ram standing at the head of the gods.
+
+### Sources consulted
+- The base: AED-TEI through `egypt_tools.py data UN5` (TLA lemmas, morphology, German glosses); Allen 2013's lines (a
+  check only, never copied).
+- Rank 3: the TLA's German (`tr UN5`), read after drafting 226–243 and after drafting the passage. Allen 2005/2015,
+  Faulkner 1969 and Steiner 2011 from memory, never quoted; Steiner only for the general claim (no single reading cited).
+- Precedents: `lex` / `grep --all` for every recurring lemma (UN3, UN4, PT486, PT571, PT600, the Book of the Dead keys,
+  HC, AM, TB, WE, SI, MK).
+- Bible verses printed with `check_bible_quotes.py --show` before quoting: Gen 3:1, 3:14, 3:15, 8:21, 22:13, 49:17;
+  Num 6:26, 21:6, 21:9; Deut 8:15; Isa 14:12, 14:13, 65:25; Jer 19:10; Amos 5:19; Mic 7:17; Ps 2:9, 24:7, 58:6, 91:13,
+  140:4; Job 21:5, 29:9, 40:31; Eccl 10:11; Ex 30:34 (printed, not used: Ps 58:5, Jer 8:17, Deut 32:24, Lev 1:9, 2:1,
+  Num 5:17, Isa 53:7).
+
+### Decisions
+- **The serpent words, each by its own sense** (renderings §13.5): ḥfꜣw (tla104390) `נחש` – the only serpent lemma here
+  that the gate licenses (226.5, 242.2); nꜥw (tla80510 god / tla852793) `המתפתל`, nꜥ.t `המתפתלת` ("the Coiler"); hjw
+  (tla97860, "evil snake") `הִיוּ` transliterated and **always vocalized** (unvocalized "היו" = "were"); kꜣ "male snake"
+  `הזכר` (227.1; kꜣ "bull" `שור`, 238.3); ḏ.t "cobra (the rearing one)" `המזדקפת`; srq.t `עקרב`; ḫsr-nṯr `מגורש־האל`;
+  zpꜣ `נַדָּל`; names transliterated: hpnw `הֶפֶּנוּ`, jkn-hy `אִיכֶּן־הִי`, Ḥjfg.t `חִיפְגֶת`; epithets translated:
+  jm(,j)-nꜣw.t≡f `אשר־בשיחו`, jm(,j)-ṯpḥ.t≡f `אשר־במערתו`, ḥkn.t-m-ḥr.wj≡s-snwj `המריעה־בשני־פניה?`, jšw-jnb
+  `רוק־החומה`, qꜣꜥw-ḏb.t `קיא־הַלְּבֵנָה`. `שרף` nowhere.
+- **The serpent verbs**: pzḥ `נשך` – never in the bare form `נשך` (the `נֶשֶׁךְ` gate blocks it, see Problems): participle
+  `הנושך`, passive `ננשך`, imperative `נשוך`, 230.7 `לא נְשָׁכוֹ אונאס` (the suffixed form of Amos 5:19); zbn "slither"
+  `זחל` (and the noun zbn "path" `נתיב`, 240.3, pun noted); ḫr "fall" `נפל`, imperative `נְפוֹל`; the refrain j:ḫr zbn
+  `נְפוֹל! זְחַל!` (229.3 = 233.3, for UN8 277.2, 289.2); sḏr `שכב` (TB precedent; see Open decisions); pnꜥ `התהפך`;
+  ḫbḫ `השתחל`; šnj "encircle" (tla155450) `הוקף` vs šnj "conjure" (tla854559) `הושבע` (the pun noted; `לחש` avoided
+  because rʾ "spell" is `לחש` in the BD keys); nsb `לחך` (NU); ꜥm `בלע`; ṯꜣz "tie" `קשר`, ṯꜣz "knot" `קשר`, ṯꜣz
+  "vertebra" `חוליה`, bqsw `שדרה`.
+- **The three spit words**: tf "saliva" `ריר` (237.1), jšw "spittle" `רוק` (241.1), ṯf "spit out" `פלוט` (243.4) – UN3's
+  psg keeps `ירק`.
+- **ḫm "not know"** = the root נכר/הכיר (AM 9.11, 19.13 `מכירים`): 232.3 `אל תתנכר לי`, 240.3 `לא הכיר אונאס, לא ידע
+  אונאס` (rḫ `ידע`).
+- **Other terms**: ꜥn.t `ציפורן` (NU8); ẖnnw `מהומה` (AM); ḏr.tj `שתי הדַּיּוֹת` (NU1); bꜣbꜣ `מאורה` (NU5); šp "blind"
+  `סומא` (`עִוֵּר` is kꜣmn's); rḫ.wt `העם` (AM, SI); jwntjw `בני־הקשת`; sḏ.t `שלהבת` (NU1); tkꜣ `אבוקה` (NU9); ꜥḫm
+  `כיבה` (NU); qs "bone" `עצם` / qs "harpoon point" `חוד־צלצל` / qs "harpoon" `שופד?` (pun noted); jtj "sovereign" `ריבון`
+  (WE); jꜣj `המהולל`; šzp (tla0) `*טפחים*?` (TLA "Augenblick").
+- **The passage – the repeated ritual spells (first copies in UN1, not yet drafted; fixed here, see Proposals)**: qbḥw
+  `מי־הצינה`; rḏw `הפרשה` (NU3, NU5, NU10); prj-ḫrw `הוּצָא לך (קורבן) הקול`; wḏb ḥtp-nṯr `[הפניית] קורבן־האל`; msḏj
+  `שנא` (AM); sfḫḫ (tla852044) `הרפה` (UN4's sfḫ = `התיר`); zꜣṯ `ניסוך`; zj ... ḥnꜥ kꜣ=f `הלך … עם הכָּא שלו`;
+  ḥtm "provide" `השלים` (UN4); pḏpḏ `דבק`; sṯ `ריח` (TB; MK E134 has `בושם` for the same lemma: a split for the lead);
+  bdd `בושם` (not `ניחוח`, so as not to make `רֵיחַ נִיחֹחַ`: the parallel stays in the apparatus); snṯr `קטורת`; mnwr
+  `מֶנְוֶר` (transliterated, kept apart from snṯr); pꜣḏ `כדור` (WE); jnḏ-ḥr `שלום לפניך` (NU4).
+- **The ascent**: wꜥtj `היחיד`; wpj s.t (tla45640) `פלח את מקומו` (NU4 `פלוחים`); ḥri̯ `רחוק` (UN4 `התרחק`); nḫj (tla86930)
+  `התמיד` (UN4's nḫḫ = `*יאריך*`); tm "cease" `תם`; ski̯ `כָּלָה`; bꜣ "ram" (246.2) `בָּא` kept, the pun explained; zj
+  "ram" `איל`, zj.t `כבשה`, wꜣp.t `רחל`; smꜣ `שור־בר` (NU5); ḫsbḏ jr.tj `ספיר־העיניים`; jtr.tj `שני ההיכלים`; sjn
+  `מהיריו` (`רצים` is ḥwwtj's); ḏsr rmn `מרים־הכתף` (rmn = `כתף`, UN3); tp-rd.wj `לרגלי`; zn `פרץ` (NU3); fꜣi̯ ḥr
+  `נשא פנים`; sḏb `תקלה` (NU5); dšr.t `כד אדום`, sḏ `שבר` (NU4); jmjm `חזק`; nri̯ `חרד`; gmḥsw `גֶּמְחֶסוּ`.
+- **Names fixed here** (first occurrence vocalized): Nḥb-kꜣw `נֶחֶבְּכָּאוּ` (NU1); Mꜣfd.t `מָאפְדֶת` (renderings §13.2;
+  NU writes `מַאפְדֶת`); ꜣbw (Elephantine) `אַבּוּ`; Ḥmn `חֶמֶן`; Dwn-ꜥnwj `דּוּן־עַנְוִי`; Nbwtj (Seth) `הנוּבְּתִי`;
+  ḥḏ.t `הכתר־הלבן` (UN4 `הכתר־האדום`); Ḫꜥy-tꜣw `המופיע־בלהבה`; ḥm-psḏ.t `משרת־האור?` (the pelican?).
+- **Rejected**: `נחש` for hjw, nꜥw, kꜣ, ḏ.t (not licensed; each rendered by sense); `פתן`, `צפע`, `שפיפון`, `אפעה`
+  (biblical serpent words would manufacture Ps 58 / Ps 91 / Gen 49 echoes); `לחש` for šnj "conjure"; `ניחוח` for bdd;
+  `לבונה` for mnwr; `ירק` for ṯf (UN3's psg); `עור` was allowed (228.2 jnm licenses it).
+
+### Open decisions for the user
+- **hjw `הִיוּ`** (226.3, 237.2, 240.5; UN8 298.6): transliterated; a translation would need `נחש` (not licensed for it)
+  or a coined word.
+- **sḏr `שכב`** (the snake "lie down") beside UN3's nk `שכב עם` – two Egyptian lemmas in one Hebrew root (the gate
+  licenses both); AM rendered sḏr `ישן`.
+- **The "foreign" lines** (232.1–232.2, 235.1, 236.1, the names of 238): transliterated with `?`; where the TLA gives a
+  lemma (mtj "vessel", hʾ "court", šs "rope") 232.1 follows it (`*עורק*?`), 236.1 does not translate hʾ (a sentence
+  that does not read as Egyptian). A future check against Steiner 2011 may change this.
+- **sṯ** `ריח` (TB, here) vs MK E134 `בושם` for the same lemma, and bdd `בושם` here: the lead may unify.
+- **ḫm** with the root נכר (`התנכר` / `הכיר`), not a separate verb: acceptable?
+
+### Progress log
+- Drafted 226–231 (34 rows), saved, `fill` + `verify` (0 gate problems); 232–243 (32 rows) after reading the TLA's
+  German for 226–243 (230.9 šzp "moment" vs "palm"; 237.1 re-cut into two clauses; 238.2 the TLA's deletion of `n=k`
+  not followed; 240.3 ḫm "unknowingly"); then the passage (58 rows) after reading `tr` for 199–246 (246.7–246.11 read as
+  one sentence: "announce … the going of this One who you are").
+- Pass (a) fidelity: brackets of 199.1–199.4 and 244.1 word by word; every n sḏm=f past per UN3 (32#4.5, 230.7, 230.8,
+  246.17 against the TLA's future); 230.14 `תושבעי אַתְּ עצמך` (ḏs=ṯ is emphatic, not an object); 245.6 `לך` removed
+  (not in the Egyptian); 230.6 `את אביו של הנושך` (the construct `אבי` read "my father").
+- Pass (b) consistency: the refrain 229.3 = 233.3; 226.3 / 237.2 / 240.5 `הִיוּ`; 234.1 / 240.4 `על פניך`; 234.2 / 240.4
+  `אשר־בשיחו`; 246.9 / 246.11 second halves identical; every term grepped against UN3, UN4 and the BD keys (above).
+- Pass (c) Hebrew: the generated `translation-UN5.rtl.md` read through; double punctuation `?.` removed (230.11, 243.1).
+- `build UN5`: 124 lines, 4 footnotes (226.1, 232.1, 244.3, 245.7). `check_bible_quotes.py` on the three files: 0
+  problems. `verify UN5 --strict`: 0 problems, 0 repeated-line differences.
+
+### The text on its own terms
+- **The word as a weapon** (227.2–227.4): "I say this against you … I have said this against you" – the spell announces
+  itself and, once said, is done.
+- **The name captures** (227.2–227.3, 236.1 "this is your name"): to name the snake is to rule it; the snakes have many
+  names, each a portrait (the Coiler, the Rearing One, Spittle-of-the-Wall, Vomit-of-the-Brick).
+- **Evil turned back on itself** (226.1, 230.12, 241.2): the Coiler is coiled by the Coiler, the male bitten by the
+  female; "what came out of your mouth is turned back against you".
+- **The earth takes back its own** (226.3, 230.5–230.6, 237.1): "Earth, swallow what came out of you"; Re is to bite the
+  earth, the snake's father; the snake goes back "to its mother's house".
+- **Myth as precedent** (229.1–229.2, 230.15–230.16): Atum's nail on Nehebkau's spine, Horus's knots on the snake's back
+  – what a god did once, the spell does again.
+- **The innocent victim** (230.7–230.8, 240.3): "it was he who came against Unas, Unas did not go against him"; "Unas
+  trod on Horus's path unknowingly" – a legal plea inside a spell.
+- **Sound is power** (228.1 ḥr ḥr r ḥr; 231.1 qs qs qs.t; 243.2 rw rwi̯; 232.1 mtj mtwtj): the spells are built of
+  repeated sounds, and the pun is the magic (the apparatus notes each).
+- **The serpent swallowed into the crown** (239.1–239.2): the White Crown swallows the uraeus – the danger becomes the
+  king's protection.
+- **A foreign tongue?** (232–238): words that are not Egyptian; if Steiner's reading holds, Egypt's oldest snake charms
+  include Canaanite spells.
+- **Food from the dead god** (32#4.5): the libation is the fluid that came out of Osiris's own body, returned to him.
+- **The voice feeds** (32#4.6): "the invocation offering" – food goes out to the dead at the sound of the voice.
+- **Incense as kin of the god** (200.1): snṯr "incense" = sn nṯr "brother of the god".
+- **Breaking the red pots** (244.3): red is Seth's colour; the smashed pot is the smashed enemy.
+- **Not among the dead** (245.7–245.10): the king is the lone star on Nut's shoulder, looking down on Osiris who rules
+  the akhs – "you are not among them".
+- **The name lives** (246.18): among men and among gods – memory and heaven.
+
+### Key parallels
+- 226.3, 229.3 ↔ Gen 3:14 `עַל גְּחֹנְךָ תֵלֵךְ וְעָפָר תֹּאכַל` [divergence]: crawling and earth, but in Unas the earth eats the
+  snake.
+- 227.1, 229.1, 240.3 ↔ Gen 3:15 `הוּא יְשׁוּפְךָ רֹאשׁ וְאַתָּה תְּשׁוּפֶנּוּ עָקֵב` [divergence]: the head cut off, the god's
+  nail on the spine; the treading foot.
+- 230.13, 230.15 ↔ Ps 58:6 `מְלַחֲשִׁים … חוֹבֵר חֲבָרִים` [equivalent]: the snake-charmer and the knot-tier.
+- 240.2 ↔ Ps 91:13 `עַל-שַׁחַל וָפֶתֶן תִּדְרֹךְ` [equivalent]: treading on the snake.
+- 230.14 ↔ Deut 8:15 `נָחָשׁ שָׂרָף וְעַקְרָב` [equivalent]: snake and scorpion as the pair of dangers.
+- 242.2 ↔ Num 21:6 [divergence] (snakes sent by God vs a demon to be repelled); Eccl 10:11 `אִם יִשֹּׁךְ הַנָּחָשׁ בְּלוֹא
+  לָחַשׁ` [divergence].
+- 230.7, 241.1 ↔ Amos 5:19 `וְסָמַךְ יָדוֹ עַל הַקִּיר וּנְשָׁכוֹ הַנָּחָשׁ` [equivalent / divergence]: the snake in the house wall.
+- 244.3 ↔ Ps 2:9 `כִּכְלִי יוֹצֵר תְּנַפְּצֵם`, Jer 19:10 [equivalent]: breaking pots = breaking enemies.
+- 245.7 ↔ Isa 14:13 `אֶעֱלֶה מִמַּעַל לְכוֹכְבֵי אֵל` [divergence]: the king among the stars – hubris in Isaiah, fulfilment here.
+- 246.10 ↔ Job 21:5, 29:9 (hand on mouth) [equivalent]; 246.12 ↔ Ps 24:7 [divergence]; 200.4 ↔ Gen 8:21 `רֵיחַ הַנִּיחֹחַ`
+  [equivalent].
+- **Num 21 without `שרף`**: no Egyptian word here is a "burning" snake; 233.2 (the flame from Nun beside the cobra) is the
+  nearest image, noted but not rendered with `שרף`.
+
+### Lines shared with other texts
+- Inside UN5: 229.3 = 233.3; 237.2 = second half of 226.3; 234.1 / 234.2 ≈ 240.4; 238.1 ≈ 238.2; 227.2 ≈ 227.3; 230.10 ≈
+  230.11; 246.9 ≈ 246.11; 25#3.5 ≈ 25#3.6.
+- With UN3 / UN4: 246.7 ≈ UN3 215.1 (`הולכים ציריך, רצים רציך`; sjn here `מהיריו`); 246.17 ≈ UN4 219.3 (`לא כָּלָה`); 246.12
+  `מי־הצינה` = UN4 222.12; 245.2 = the UN3 formula `בא אליך אונאס זה` (feminine).
+- **For later keys (binding)**: UN1's first copies of PT 32 (32.2–32.6, 32#2, 32#3), PT 23–24 (23-24.2–23-24.5, .7) and
+  PT 25 (25.2–25.8, 25#2) must copy this file's Hebrew, changing only what the Egyptian changes (UN1 25.3 adds `הלך
+  אוֹסִירִיס עם הכָּא שלו`; UN1 25.7 `ḏi̯.n` = `נתתי`; UN1 32.5 `prj` same word; UN1 23-24.6 has no copy here); UN8 299.1
+  ≈ 240.1; UN8's serpent spells (277, 289, 297, 298) take the refrain `נְפוֹל! זְחַל!` and the serpent words above.
+
+### Proposals for the shared renderings
+1. **The fixed lines for UN1** (verify's "identical" check will enforce them):
+   32.1 `מי־הצינה שלך`; 32.2 `האלה, אוֹסִירִיס, מי־הצינה שלך האלה, הוֹי אונאס, יצאו מאת בנך, יצאו מאת חוֹרוּס.`; 32.3
+   `באתי, הבאתי לך את עין־חוֹרוּס – יצטנן לבך בזכותה.`; 32.4 `הבאתי לך אותה תחת כפות רגליך.`; 32.5 `קח לך את ההפרשה היוצאת
+   ממך; לא עייף לבך בזכותה.`; 32.6 `דברים לאמר, ארבע פעמים: בוא! הוּצָא לך (קורבן) הקול!`; 32.7 (rubric) `נתינת
+   מי־הצינה.`;
+   23-24.2 `אוֹסִירִיס, קח לך את כל השונאים את אונאס, המדברים בשמו רעה!`; 23-24.3 `תְּחוּת, לך, קח אותו לאוֹסִירִיס! הבא את
+   המדבר בשם אונאס רעה!`; 23-24.4 `תן לך אותו בידך!`; 23-24.5 `דברים לאמר, ארבע פעמים: אל תרפה ממנו! הישמר, פן תרפה
+   ממנו!`; 23-24.7 `ניסוך.`;
+   25.2 `הלך ההולך עם הכָּא שלו; הלך חוֹרוּס עם הכָּא שלו; הלך סֵת עם הכָּא שלו;`; 25.3 `הלך תְּחוּת עם הכָּא שלו; הלך
+   דּוּן־עַנְוִי עם הכָּא שלו;` (+ `הלך אוֹסִירִיס עם הכָּא שלו;` where UN1 has it); 25.4 `הלך חֶנְתִּי־אִרְתִּי עם הכָּא שלו;
+   הלכת גם אתה עם הכָּא שלך.`; 25.5 `הוֹי אונאס, זרוע הכָּא שלך – לפניך; הוֹי אונאס, זרוע הכָּא שלך – מאחוריך.`; 25.6 (`רגל`
+   for `זרוע`); 25.7 `אוֹסִירִיס אונאס, נתתי לך את עין־חוֹרוּס – השלם בה את פניך!`; 25.8 `ידבק ריח עין־חוֹרוּס בך!`.
+2. **The ritual frame**: `ḏd-mdw zp 4` at a line's start `דברים לאמר, ארבע פעמים:` (UN4's usage); `zp 2` `(פעמיים)`; the
+   rubric of an action as a verbal noun with a full stop (`נתינת מי־הצינה.`, `ניסוך.`, `[הפניית] קורבן־האל.`, `שבירת
+   הכדים־האדומים.`), the rubric of an item as the bare noun (`קטורת.`).
+3. **The serpent vocabulary** (for UN8's spells 277–299 and the antechamber): as under Decisions; the refrain `נְפוֹל!
+   זְחַל!`; **add hjw (tla97860), nꜥw (tla80510, tla852793), nꜥ.t (tla857388), kꜣ (tla162950), ḏ.t (tla181340) to the `נחש`
+   licence?** – the lead's call; this file renders them by sense either way (`הִיוּ`, `המתפתל`, `הזכר`, `המזדקפת`).
+4. **Gate problem**: the `נשך` NEVER pattern (meant for `נֶשֶׁךְ` "interest") also blocks the verb `נָשַׁךְ` "he bit" (and
+   `הנשך`, `ונשך`, `שנשך`); the serpent spells needed it (230.7, avoided by `נְשָׁכוֹ`). Proposal: license the bare form by
+   pzḥ (tla62220) in the UN keys.
+5. **Always vocalized (TRAPS)**: `הִיוּ` (hjw; "were"), `בָּא` for the ram (already trapped by bꜣ).
+6. **Names**: `אַבּוּ` (Elephantine), `חֶמֶן`, `דּוּן־עַנְוִי`, `הנוּבְּתִי`, `נֶחֶבְּכָּאוּ`, `הֶפֶּנוּ`, `אִיכֶּן־הִי`, `חִיפְגֶת`,
+   `מָאפְדֶת` (§13.2) vs NU's `מַאפְדֶת` (one form for the corpus).
+
+### Lessons for the guidelines
+- **A gate written for a noun also blocks its verb**: `נשך` "interest" (Ps 15:5) blocks `נָשַׁךְ` "bit"; a serpent text
+  shows it at once. Test each NEVER string as a verb form too (cf. UN4's `הנחתם`).
+- **A gate licence list should be built from the lemma ids of the text's own serpent words** (`lemma` / `lex` on the
+  key), not from a list of the familiar ones: five of the six serpent lemmas of PT 226–243 were not licensed.
+- **Lines in a possibly foreign language**: translate only what the TLA identifies, transliterate the rest with `?`,
+  and keep the scholarly hypothesis in one cautious note per spell group – never let it shape the Hebrew.
+
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)

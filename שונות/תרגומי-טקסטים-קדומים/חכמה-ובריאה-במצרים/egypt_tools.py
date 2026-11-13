@@ -663,7 +663,7 @@ RESERVED = [
     (W + alt("חמד", "חמדתי", "תחמד", "חומד", "חמדה", "יחמד") + E, None, "the root חמד never (Ex 20:17)", TALES),
     (W + alt("נקי", "נקיה", "נקיים", "נקיתי", "ונקי", "נקיון", "ניקיון") + E, None, "נָקִי never (Ps 24:4 `נְקִי כַפַּיִם`; the wisdom corpus's reservation): wꜥb = טָהוֹר", TALES),
     (W + alt("בר", "ובר") + r"\s+" + alt("לבב", "לב") + E, None, "`בַּר לֵבָב` never (Ps 24:4)", TALES),
-    (W + alt("נשך", "בנשך", "הנשך", "תרבית") + E, None, "נֶשֶׁךְ / תַּרְבִּית never (Ps 15:5; Lev 25:36–37)", TALES),
+    (W + alt("נשך", "בנשך", "הנשך", "תרבית") + E, r"tla62220|pzḥ|p\{n\}⟨z⟩ḥ|psḥ", "נֶשֶׁךְ / תַּרְבִּית never (Ps 15:5; Lev 25:36–37); the verb `נָשַׁךְ` 'bite' licensed by pzḥ (Round 8 run 1)", TALES),
     (W + alt("אוני", "באוני", "בעוני") + E, None, "`בְאֹנִי` never (Deut 26:14)", TALES),
     (W + alt("בער", "ביער", "בערתי", "ביערתי", "תבער", "יבער", "בוער", "בוערת", "בערה", "הבערה") + E, r"(?<![\w,.-])ḫm(?![\w,-])", "the root בער never (Deut 26:13–14 `בִּעַרְתִּי`): the fire / removal verbs by their own sense", TALES),
     # Deut 8:8 (Sinuhe's land of Yaa): the seven species only for their Egyptian words
@@ -688,6 +688,7 @@ RE_ = rf"(?![{V}א-ת])"
 # (regex on the RAW line; condition regex on the licence text: if it matches, the unvocalized string is an error;
 # None = always), why. Renderings §5.3 "Always vocalized".
 TRAPS = [
+    (RW + r"(?:היו)" + RE_, r"tla97860|\bhjw\b", "the serpent Hiu must be vocalized הִיוּ ('were')"),
     (RW + r"(?:אונס)" + RE_, r"wnjs", "Unas is אונאס (plene, with א): `אונס` reads 'rape' (renderings §13.2)"),
     (RW + r"(?:רע|הרע)" + RE_, r"\brꜥ\b|rꜥw|\bRꜥ", "Re is רַא (renderings §3): an unvocalized רע where the source has Rꜥ is a trap ('evil')"),
     (RW + r"(?:פתח)" + RE_, r"ptḥ|pth", "Ptah must be vocalized פְּתָח ('open')"),
