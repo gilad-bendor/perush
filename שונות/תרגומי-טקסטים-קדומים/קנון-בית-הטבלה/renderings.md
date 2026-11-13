@@ -313,3 +313,10 @@ Coordinator: 25 – the workarounds stand (EB 174 `תוף` for *ub*; NG 113–11
   *gal₅-la₂* `גַּלָּה`; *im nam-til₃* `טיט החיים`; *ḫuĝ* (calm) `השקיט`; *luḫ* `רחץ`; *udu-i₃* `כבש־שמן`; *igištu* `*מגוננת*`.
   Names: Elam `עֵילָם`, Subir `שׁוּבִּיר`, Lullubi `לוּלוּבִּי`, Gibil `גִּיבִּיל`, Nungal `נוּנְגַּל`, Nin-egala `נִין־אֵגַלָּה`, Birtum
   `בִּירְתּוּם`, Ig-alim `אִיגְאַלִים`, Ninḫarana `נִין־חַרַנָּה`, Nezila `נֵזִילָה`, Nindimgul `נִין־דִּימְגּוּל`.
+
+### 5.8 Review R1 (merged 2026-11-13)
+- *maškim* = `נְצִיב` (was `ממונה` in LB 44; *nu-banda₃* keeps `ממונה`); the laws (LI epil. 499′) and Gudea (B ix 23) still have `הממונה` for *maškim*: listed for the lead's harmonization. §5.1's *maškim* row is superseded.
+- *gaz* = `הרג` in all lines (SA 52, EJ 93: oxen; the Song of the Hoe 25), *šar₂* = `שחט`; §5.3's "*gaz* (animals) `שחט`" is superseded.
+- *tur₃* = `רֶפֶת`, *amaš* = `דִּיר` (SA 51, LA 45).
+- *an-e us₂* = `לשמים … מגיע` (the corpus formula; ID 33); *us₂* "attend, follow" keeps `דבק` (a split by sense).
+
