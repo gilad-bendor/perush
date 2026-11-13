@@ -1451,5 +1451,175 @@ naming the item and its count.
   rubrics repeat with small changes (vessel, material, count), and a table keeps them aligned across UN1 and UN2.
 - **Allen rows that are only a cross-reference** ("see PT 39") need a convention: here `{אלן} (ראו 39.1)`.
 
+## UN2 (PT 117–171)
+
+Round 8 run 1, translator 9 (2026-11-13). Files: `annotated-UN2.rtl.md`, `translation--intro-UN2.rtl.md`,
+`translation-UN2.rtl.md` (generated), `translation.rtl.md` (generated).
+
+### Scope
+The burial chamber's **north wall, register iii**: the **offering ritual continued** (PT 117–171), 143 rows (`117.1` …
+`171.2`). Witnesses: Unas's own wall 62 rows; Queen Neith (`{נית}`) 66 rows; Pepi I (`{פפי א}`) 15 rows (126, 147,
+152, 162, 163); Allen's transcription (`{אלן}`) 6 rows (PT 167, 169). Preservation: Unas's rows intact (129.3 partly
+restored); Neith's rows mostly intact (118.2–118.3, 124.2–124.3, 127.2–127.3, 128.2–128.3 restored); Pepi I's 147.1,
+152.1–152.3, 162.1–163.2 heavily restored. The text in a sentence: the meal itself, dish after dish – breads and cakes,
+onions, meat cuts (foreleg, thigh-bone, ribs, liver, spleen, roast, brisket), fowl (goose, white-fronted goose, pintail,
+greylag, dove), four beers and four wines, figs, fruits and roasted grain – each "the Eye of Horus", each sentence
+punning on the dish's name, each followed by the rubric (recitation note, item, count); PT 171 closes with a wish
+("may it last for you, with you") and the wall ends on the word "offering".
+
+### Sources consulted
+- The base: AED-TEI through `egypt_tools.py data UN2` (TLA lemmas, morphology, German glosses); Allen 2013's lines (a
+  check; for PT 167 and 169 the source of the translation, never copied: the פירוק parses Allen's words only).
+- Rank 3: the TLA's German (`tr UN2`), read after the readings of all 55 spells were fixed. Allen 2005/2015 and
+  Faulkner 1969 from memory, in a few words, never quoted.
+- Precedents: `lex` for all 152 lemma ids of the key (a batch run), `grep` (Egyptian corpus and `--all`) for every new
+  Hebrew word; UN1's annotated file and its Proposals (renderings §13.6.8); UN4 223 (the offering lines of the east
+  wall); NU9 144.46 (the BD offering list).
+- Bible verses printed with `check_bible_quotes.py --show` before quoting: Lev 1:14, 2:14, 3:4, 3:15 (not used), 7:34,
+  23:14; Deut 8:8, 18:3, 26:14, 32:10; Num 6:19 (not used), 11:5, 28:2; Ex 12:8, 29:22 (not used); Gen 1:29, 2:21 (not
+  used), 18:6; Ruth 2:14; Ps 50:13; Prov 7:2 (not used); 1 Sam 9:24, 17:17 (not used: ketiv `קליא`).
+
+### Decisions
+- **UN1's frame, rubrics and items copied byte for byte** (renderings §13.6.8): `אוֹסִירִיס אונאס, קח לך את
+  עין־חוֹרוּס, אשר …!`; `הגן – פן …` (140.1, 154.1, 161.1–164.1, 168.1); `פתח בה את פיך!` (UN1 54.3 → 153.1, 155.1,
+  156.1); `השלם את עצמך בליחה היוצאת ממך!` (UN1 95.2 → 148.1–151.1); Neith's rubric `{נית} דברים לאמר, ארבע פעמים:
+  לנֵית זה. הגשה, ארבע פעמים.` (UN1 108.2, with each copy's own brackets); identical lines 121.1 = 141.1 = UN1 89.2,
+  124.1 = UN1 112.1, 145.1 ≈ UN1 90.2, 147.1 ≈ UN1 91.2, 129.1/129.3 ≈ UN1 96.2/96.3, 145.3 = UN1 90.3, 147.3 ≈ UN1 91.3,
+  171.1 ≈ UN4 223.11, 170.1 ≈ UN4 223.10. Neith's rows keep the masculine grammar (UN1's open decision).
+- **Unas's own rubric** `ḏ(d)-mdw zp 4` alone (117.2, 130.2, 131.2, 137.2) = `דברים לאמר, ארבע פעמים:` (the formula,
+  colon kept: it introduces the item line). **Pepi's rubric** (`… n Ppy pn fꜣ.t zp 4`) = `דברים לאמר, ארבע פעמים:
+  לפֶּפִּי זה. הרמה, ארבע פעמים.` (fꜣ.t = UN1's `הרמה`); Allen's full rubric (167.2, 169.2) `… לאונאס זה. הרמת הגשה,
+  ארבע פעמים.`; ḥnk.t, the noun (171.2, Allen's *ḥnkt*), = `הגשה` like the verbal noun ḥnk (one Hebrew for the verb and
+  its noun, as ks / ks.w).
+- **The measure word ꜥ** in Neith's rubrics = `ספל` (UN1 108.3), although the TLA lemmatizes it here as tla34360 ("arm;
+  portion", glossed "Portion") and in UN1 as tla34370 ("Napf"): the same word in the same slot of the same wall (Allen's
+  other pyramids have *ḥnw.t* "bowl" there). 125.3 (Unas, TLA "Bündel") likewise. Counts: `ספל אחד` / `שני ספלים`;
+  Allen's *ḥnwt* `קערה` (167.3, 169.3); *ds* `כדים` (151.3, WE's precedent).
+- **Counts** agree with the Hebrew noun (`עוגה, ארבע`, `כתף, אחת`, `יונה, אחת`, `צלע, ארבע`, `[תאנים], [שתיים]`); a
+  transliterated bread or drink takes the masculine (`חֶבֶּנֶנֶת, ארבעה`, as UN1's `דֶּפֶת, ארבעה`).
+- **New items** (Proposals below): breads/cakes transliterated (`אִמִי־תָא`, `חֶנֶף` (NU9), `חֶבֶּנֶנֶת` (NU9), `קֶמַח`,
+  `אִידָאת`, `לחם־צלי`, `לחם־סִיף`, `שַׁעוּת`, `נֶפָּאת`, `מֶסוּת`); meat: ḫpš `כתף` (AM), jwꜥ `עצם־הירך` (NU9), zḫn.w
+  `נתח־סֶחֶן`, spr `צלע`, ꜣšr.t `צלי` (UN4), mjz.t `כָּבֵד` (TB, vocalized), nnšm `טחול`, ḥꜥ `נתח־גוף` (ḥꜥ = `גוף`), ḥꜣ.t
+  jwf `מצח־בשר (החזה)`; fowl: rʾ `אווז`, ṯrp `אווז־צֶ׳רֶפּ`, zꜣ.t `ברווזה` (UN7), srw `אווז־סֶרוּ`, mnw.t `יונה`; drinks:
+  sḫp.t `סֶחֶפֶּת`, pḫꜣ `פֶּחָא`, sšr `שֵׁכָר־סֶשֶׁר`, jꜣ.tt `אִיאָתֶת`, ꜥbš `עֶבֶשׁ`; wines: jrp mḥ.wj `יין של הצפון` (UN1
+  35.6's `של הצפון`), jmtj `אִימֶתִי`, ḥꜣmwj `חָאמִי`, snw `סְנוּ`; fruit and grain: dꜣb `תאנים` (gated, licensed), jšd
+  `פרי־אִישֶׁד`, nbs `שיזף`, wꜥḥ `וַעַח`, sš.t `סֶשֶׁת`, bꜣbꜣ.t `בָּאבָּאת`, zw.t `סוּת` (the grain; homophone of the meat
+  `נתח־סוּת`), ꜥgw.t `קלי` (NU9; `קלי־שעורה`, `קלי־[סוּת]`: the construct reverses the Egyptian order), rnp.wt `צמח רענן`
+  (NU2).
+- **New verbs and words of the sentences:** šzp `קבל` (UN4); tp `ראש`; ḫnf `*סחב*?` (TLA "weggenommen(?)"); ḥbnbn
+  `*גולשת*?` (TLA "schlüpft hinunter (?)"); jbꜣ `רקד`; zf `עוול` (verb `יעוול`: hapax, akin to jzf.t); jwꜥ `יורש` (NU3);
+  zḫn `חבק` (UN1; TLA here "suchst"); j:sšꜣ transliterated `תְּסַשֵּׁא?` (TLA "an Land bringst (?)"; `עגן` is mnj's,
+  `חתר` ẖni̯'s); j:zꜣ `פנה` ("betake oneself"; the TLA's lemma is `המתין` in HC 29 / SI B65 – another sense); šmj `הלך`
+  (relative without .n → `אשר הולך הוא`); jmj-ḫt `אשר אחרי`; srj `גדוע`; ḏr jb `(עד) קץ הלב` (TLA "nach Wunsch (?)");
+  mzꜣ `קירב` (UN4 223.8; WE's mz `נגש`); sr `הכריז` (SS); mn `חלה` (NU1); šꜥ `חתך` (NU8); sjp `מסר` (PT571); szwn
+  `*ציער*?`; sšn `*מעוגל*?` (UN4's j:šn); bš `הקיא` (AM, TB); ꜥm `בלע`; ḥwn.t `אישון`; ḥꜣm `דג` (NU7); snw "separate"
+  `נשמט` (`הפריד` is wḏꜥ's, `נתק` fḫ's); šdj `חילץ` (AM, UN4); sšd `התעטר` (NU8 `עיטר`); zḫz `עקר`; nbꜣbꜣ `*מרפרף*?`
+  (AM's `מפרפרים` is mꜥšꜥfj); nsb `ליחך` (UN5); wn (Allen) `פתח`; mꜣꜣ `חזה`; ꜥḥ `צד` (UN3); sḫt (Allen) `צד` (AM, UN1);
+  bnj `מתוק` (SI); jp `מנה` (UN4 223.10; vocalized `מְנֵה`); dꜣp `מַקְנִים?` (hapax, TLA "darreichen").
+- **Rejected:** `לקח` / `נטל` for ḫnf (jṯi̯'s / nḥm's); `חזה` for ḥꜣ.t jwf (the lemma is UN1's `מצח`; the brisket goes in
+  parentheses and in the apparatus); `מפרפרת` for nbꜣbꜣ (AM's); `תיפרד` / `תינתק` for snw; `העניק` for dꜣp (mnj's in
+  NU8); `כרות` for srj (WE's ḥsq); `יְעַוֵּל` vocalized (would strip to a defective spelling: `יעוול` plene).
+
+### Open decisions for the user
+- **ꜥ in Neith's rubrics = `ספל`** against the TLA's "Portion" (tla34360); the alternative `מנה` collides with (j)ḫ.t
+  `מנה` (UN3).
+- **spr `צלע`** (130.3) beside UN4 223.4's šbtjw `שתי צלעותיך` (two lemmas, one Hebrew): spr is the plain word for
+  "rib"; alternatively šbtjw could move to `נתחי־צלעות`.
+- **ḥꜣ.t jwf `מצח־בשר (החזה)`** – literal (keeps the pun with 134.1–135.1) or `חזה` by sense (Lev 7:34's word).
+- **qmḥ `קֶמַח`** (121.3): the transliteration coincides with Hebrew `קֶמַח` "flour"; tagged [cognate] "uncertain" (a
+  Semitic loan into Egyptian is possible, not proven).
+- **The unidentified verbs** (ḫnf, ḥbnbn, sšꜣ, szwn, sšn, nbꜣbꜣ, dꜣp, ḫpḫ, ḫmḫ) – italic with `?` or transliterated.
+- **j:zꜣ `פנה`** (132.1) – the TLA's lemma tla126320 is `המתין` in HC / SI; `פנה` is also used for other words in PT600,
+  HC, SI, NU3.
+
+### Progress log
+- Read the line data whole; decided every reading before reading the TLA's German; then `tr UN2` (changed: 120.1 / 158.1
+  ḥbnbn from a transliteration to `*גולשת*?`; 137.1 the idiom "as the heart wishes" kept literal with a note; 128.1 the
+  TLA's "suchst" noted against `חבק`).
+- Drafted 117.1–129.3 (32 rows), 130.1–147.3 (46), 148.1–171.2 (65), each group saved, filled and verified (0 problems).
+- Pass (a) fidelity: brackets of the Neith and Pepi rows word by word (118.2 `[ארבע] פעמים: [לנֵית]`; 126.1 `[עין]־חוֹרוּס`;
+  147.1 / 152.1 / 163.1 `דְּבָרִים [לֵאמֹר:]` as UN1 90.1; 162.1 `[הירוקה]; [הגן] – [פן] …`); every n sḏm=f (127.1,
+  142.1, 157.1 "does not / cannot"); relative forms with and without .n (128.1, 133.1 present; the rest past).
+- Pass (b) consistency: the UN1 / UN4 copies and the internal repeats (117.2 = 130.2 = 131.2 = 137.2; the Neith rubric ×19;
+  149.1 = 150.1 = 151.1; 152.2 = 162.2 = 163.2; 163.1 = 164.1; 167.2 = 169.2) – `verify`: 0 differences; every new
+  Hebrew word grepped (collisions listed above and under Open decisions); `יְעַוֵּל` → plene `יעוול`.
+- Pass (c) Hebrew: the generated `translation-UN2.rtl.md` read through; Deut 26:14, Num 28:2, Ps 50:13 added to the
+  apparatus; four footnotes (117.1, 118.1, 123.1, 155.1).
+- `build UN2`: 143 lines, 4 footnotes. `check_bible_quotes.py` on the three files: 0 problems. `verify UN2 --strict`: 0
+  problems, 0 repeated-line differences.
+
+### The text on its own terms
+- **The menu is a myth told dish by dish** (the whole wall): every sentence says what was done to the Eye of Horus – torn
+  out (163–164 zḫz), carried off (119, 159), eaten (145), spat out (154), licked (166), fished out of the water (156),
+  rescued from Seth (160), worn on his forehead (135, 161) – and the dish that follows is named by a word that sounds
+  like the verb. Eating the meal re-enacts the Eye's loss and recovery.
+- **The pun is the rite** (as in UN1): *sbj* / *spr* (130), *šm* / *nnšm* (133), *mn* / *mnw.t* (140), *šꜥ* / *šꜥ.wt*
+  (142), *bš* / *ꜥbš* (154), *ḥꜣm* / *ḥꜣm.wj* (156), *snw* / *snw* (157), *šd* / *jšd* (160), *sšd* / *sš.t* (161), *ꜥḥ*
+  / *wꜥḥ* (168), *nsb* / *nbs* (166, a metathesis), *jwꜥ* "heir" / *jwꜥ* "thigh" (127).
+- **The Eye is a living thing** (120.1, 158.1 "it slips down"; 165.1 "it flutters"; 156.1 fished; 168.1 hunted): it
+  moves, escapes and is caught like a bird or a fish – the fowl and the drinks are its avatars.
+- **Colour passes from the Eye to the food** (161–162): the white Eye → white grain, the green Eye → green grain.
+- **The enemies become food** (130.1 "take those who rebel against you", 136.1 "the severed heads of Seth's followers"):
+  victory over Seth is served at the table.
+- **The god's own fluid** (148–151): the drinks are "the fluid that came out of you" – Osiris's body fluid, the Nile's
+  flood, the source of barley and beer.
+- **Inheritance at the table** (127.1): "Dance! Geb does not wrong his heir" – the meal celebrates the legitimacy of
+  Horus, the son who inherits; the thigh (*jwꜥ*) is literally "the inheritance".
+- **The pupil as a little person** (155.1): Egyptian *ḥwn.t* "maiden" and Hebrew `אִישׁוֹן` "little man" both see the tiny
+  figure reflected in the eye.
+- **A world of produce** (the rubrics): Delta wines named by their vineyards (Buto/Imet, Hamu, Pelusium), the sacred
+  ished-tree of Heliopolis, Christ's-thorn fruit, tiger nuts – the whole land's harvest for the king.
+- **The meal ends with a wish and a word** (171.1–171.2): "may it last for you, with you, with you" – and "offering".
+
+### Key parallels
+- 123.1 ↔ Deut 26:14 `וְלֹא נָתַתִּי מִמֶּנּוּ לְמֵת` [divergence]: feeding the dead is the heart of the Egyptian rite and
+  what the Israelite tithe-giver swears he did not do; Num 28:2 `לַחְמִי לְאִשַּׁי` [divergence] (the god's bread vs the dead
+  king's cake).
+- 126.3 ↔ Deut 18:3 `הַזְּרֹעַ וְהַלְּחָיַיִם וְהַקֵּבָה` [equivalent]: the foreleg as the choice portion (the priest's /
+  the dead king's); Ps 50:13 `הַאוֹכַל בְּשַׂר אַבִּירִים` [divergence]: the psalm denies that God eats meat – here the
+  divinized king eats it.
+- 135.3 ↔ Lev 7:34 `חֲזֵה הַתְּנוּפָה וְאֵת שׁוֹק הַתְּרוּמָה` [equivalent]; 132.3 ↔ Lev 3:4 `הַיֹּתֶרֶת עַל הַכָּבֵד`
+  [divergence] (burnt for God vs eaten by the dead king).
+- 140.3 ↔ Lev 1:14 `מִן הַתֹּרִים אוֹ מִן בְּנֵי הַיּוֹנָה` [equivalent]: the dove as offering.
+- 163.3, 164.3 ↔ Lev 23:14 `וְלֶחֶם וְקָלִי וְכַרְמֶל`, Ruth 2:14 `קָלִי` [equivalent]: roasted grain.
+- 131.3 ↔ Ex 12:8 `צְלִי אֵשׁ` [equivalent]; 125.3 ↔ Num 11:5 `הַבְּצָלִים` [equivalent]; 152.3 ↔ Deut 8:8 `וּתְאֵנָה`
+  [equivalent].
+- 155.1 ↔ Deut 32:10 `כְּאִישׁוֹן עֵינוֹ` [equivalent]: the pupil as the dearest thing, a "little person" in both
+  languages.
+- 170.3 ↔ Gen 1:29 `אֶת כָּל עֵשֶׂב זֹרֵעַ זֶרַע` [divergence]: all plants as food, for the living from the Creator vs
+  for the dead king from the priest.
+- 121.3 ↔ Gen 18:6 `קֶמַח סֹלֶת` [cognate] (uncertain): the bread *qmḥ*.
+
+### Lines shared with other texts
+- **UN1**: 121.1 = 141.1 = UN1 89.2; 124.1 = UN1 112.1; 124.2 / 128.2 = UN1 112.2; the Neith rubric (118.2 … 166.2) =
+  UN1 108.2 (with each copy's brackets); 145.1 = UN1 90.2 (unbracketed); 145.3 = UN1 90.3; 147.1 ≈ UN1 91.2 (Pepi's
+  frame, *ḫḫm* for *ḫmḫ*); 147.3 ≈ UN1 91.3 (count); 129.1 / 129.3 = UN1 96.2 / 96.3 (Unas's frame); 125.1 ≈ UN1 45.2
+  ("his teeth" for "Horus's teeth", `השלמות` for `המשלימות את פיך`); 148.1–151.1 = UN1 95.2 (*ṯw* for *kw*); 153.1,
+  155.1, 156.1 end = UN1 54.3; 133.1 ≈ UN1 39.2 (šmj for zj, present for past).
+- **UN4**: 171.1 = UN4 223.11 + `אוֹסִירִיס אונאס,` and a second `אצלך`; 170.1 ≈ UN4 223.10 (imperative for the
+  sḏm.n=f).
+- **Inside UN2**: 117.2 = 130.2 = 131.2 = 137.2; 119.1 ≈ 159.1; 120.1 ≈ 158.1; 121.1 = 141.1; 149.1 = 150.1 = 151.1;
+  161.1 ≈ 162.1; 163.1 = 164.1; 167.2 = 169.2; 152.2 = 162.2 = 163.2. `verify`: 0 differences.
+
+### Proposals for the shared renderings
+1. **The rubric of the other pyramids**: Neith's `לנֵית זה. הגשה, ארבע פעמים.` (UN1), Pepi's `לפֶּפִּי זה. הרמה, ארבע
+   פעמים.`, Allen's full `לאונאס זה. הרמת הגשה, ארבע פעמים.`; Unas's own `דברים לאמר, ארבע פעמים:` alone.
+2. **ꜥ (the rubric measure) = `ספל`** whatever the TLA's lemma id (tla34360 / tla34370); ḥnw.t `קערה`; ds `כד`.
+3. **The items** listed under Decisions (meat cuts with `נתח־` + transliteration when unidentified; fowl with
+   `אווז־` + transliteration; wines with their place names; grain `קלי־X`).
+4. **Words**: ꜣšr.t `צלי`, mjz.t `כָּבֵד` (vocalized), nnšm `טחול`, mnw.t `יונה`, ḥwn.t `אישון`, nbs `שיזף`, ꜥgw.t `קלי`,
+   spr `צלע` (open), jbꜣ `רקד`, zf `עוול`, srj `גדוע`, snw `נשמט`, sšd `התעטר` / `עיטר`, zḫz `עקר`, nbꜣbꜣ `מרפרף`.
+5. **For the lead (splits found)**: ꜥ tla34360 `ספל` here vs `זרוע` everywhere else (the TLA's lemma for "arm"); ꜥḥ and
+   sḫt both `צד` (UN3 / AM, UN1); jp `פקד` (UN3) vs `מנה` (UN4, here); j:zꜣ `המתין` (HC, SI) vs `פנה` here; mz `קרב`
+   (UN4, here) vs `נגש` (WE); ḏwj.w `כד` (UN1) vs WE `קנקן`, and ds `כד` (WE, here); zḫz `עקר` here vs NU5 `ייסוטו`
+   (bolts); spr / šbtjw `צלע`.
+
+### Lessons for the guidelines
+- **The TLA can lemmatize one rubric word differently in two records of the same wall** (ꜥ "Napf" in UN1's Neith rows,
+  ꜥ "arm / Portion" in UN2's): a lemma-keyed consistency check would split it; key such measure words by their slot,
+  and say so in the renderings.
+- **A vocalized word must strip to its plene form**: piel forms with a doubled vav (`יְעַוֵּל` → `יעול`) cannot be
+  vocalized without the extra vav; write them plene.
+
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)

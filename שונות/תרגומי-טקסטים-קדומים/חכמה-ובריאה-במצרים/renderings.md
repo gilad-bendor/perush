@@ -1193,3 +1193,10 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
    msdm.t `פוך`; breads transliterated after `לחם־`.
 4. **For the lead:** NU3 105.3 bd `נתר` against §13.3 / HC / UN1 `בורית`; the mineral ḥtm `קערת־אבן?` (57.3: the `חתם`
    loanword gate would block `חֶתֶם`).
+#### 13.6.9 UN2 (PT 117–171, the offering ritual iii), translator 9, merged 2026-11-13 (full list in `10-…/project.md`, "UN2")
+1. **Copied from UN1 / UN4:** the frame `קח לך את עין־חוֹרוּס, אשר …!`, `הגן – פן …`, `פתח בה את פיך!`, `השלם את עצמך בליחה
+   היוצאת ממך!`; Neith's rubric `לנֵית זה. הגשה, ארבע פעמים.`; ḥnk.t `הגשה`.
+2. **Items:** ꜣšr.t `צלי`, mjz.t `כָּבֵד`, nnšm `טחול`, ḫpš `כתף`, jwꜥ `עצם־הירך`, spr `צלע`, rʾ `אווז`, zꜣ.t `ברווזה`, mnw.t
+   `יונה`, dꜣb `תאנים`, nbs `שיזף`, ꜥgw.t `קלי`, ḥwn.t (the pupil) `אישון`; ꜥ (measure) `ספל`; wines by their place names.
+3. **For the lead (splits found):** ꜥ tla34360 `ספל` / `זרוע`; ꜥḥ, sḫt both `צד`; jp `פקד` (UN3) / `מנה` (UN4, UN2); mz `קרב` /
+   WE `נגש`; ḏwj.w, ds `כד` / WE `קנקן`; zḫz `עקר` / NU5; spr `צלע` beside UN4's šbtjw `צלעותיך`.
