@@ -1,0 +1,21 @@
+# Rigveda 2.7 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_02.tei.
+1a	śréṣṭhaṃ yaviṣṭha bhārata-	`śréṣṭham` – śréṣṭha- (nominal stem; ACC.M.SG) ‖ `yaviṣṭha` – yáviṣṭha- (nominal stem; VOC.M.SG.SUP) ‖ `bhārata` – bhā́rata- (nominal stem; VOC.M.SG)
+1b	-ágne dyumántam ā́ bhara	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `dyumántam` – dyumánt- (nominal stem; ACC.M.SG) ‖ `ā́` – ā́ (invariable; LP) ‖ `bhara` – √bhr̥- (root; SG.2.IMP.PRS.ACT)
+1c	váso puruspŕ̥haṃ rayím	`váso` – vásu- (nominal stem; VOC.M.SG) ‖ `puruspŕ̥ham` – puruspŕ̥h- (nominal stem; ACC.M.SG) ‖ `rayím` – rayí- ~ rāy- (nominal stem; ACC.M.SG)
+2a	mā́ no árātir īśata	`mā́` – mā́ (invariable) ‖ `naḥ` – ahám (pronoun; ACC.PL) ‖ `árātiḥ` – árāti- (nominal stem; NOM.F.SG) ‖ `īśata` – √īś- (root; SG.3.INJ.AOR.MED)
+2b	devásya mártyasya ca	`devásya` – devá- (nominal stem; GEN.M.SG) ‖ `mártyasya` – mártya- (nominal stem; GEN.M.SG) ‖ `ca` – ca (invariable)
+2c	párṣi tásyā utá dviṣáḥ	`párṣi` – √pr̥- (root; SG.2.IMP-si.ACT) ‖ `tásyāḥ` – sá- ~ tá- (pronoun; ABL.F.SG) ‖ `utá` – utá (invariable) ‖ `dviṣáḥ` – dvíṣ- (nominal stem; ABL.F.SG)
+3a	víśvā utá tváyā vayáṃ	`víśvāḥ` – víśva- (nominal stem; ACC.F.PL) ‖ `utá` – utá (invariable) ‖ `tváyā` – tvám (pronoun; INS.SG) ‖ `vayám` – ahám (pronoun; NOM.PL)
+3b	dhā́rā udanyā̀ iva	`dhā́rāḥ` – dhā́rā- 1 (nominal stem; ACC.F.PL) ‖ `udanyā̀ḥ` – udanyà- (nominal stem; ACC.F.PL) ‖ `iva` – iva (invariable)
+3c	áti gāhemahi dvíṣaḥ	`áti` – áti (invariable; LP) ‖ `gāhemahi` – √gāh- (root; PL.1.OPT.PRS.MED) ‖ `dvíṣaḥ` – dvíṣ- (nominal stem; ACC.F.PL)
+4a	śúciḥ pāvaka vándyaḥ-	`śúciḥ` – śúci- (nominal stem; NOM.M.SG) ‖ `pāvaka` – pāvaká- (nominal stem; VOC.M.SG) ‖ `vándyaḥ` – vándya- (nominal stem; NOM.M.SG.GDV)
+4b	-ágne br̥hád ví rocase	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `br̥hát` – br̥hánt- (nominal stem; ACC.N.SG) ‖ `ví` – ví (invariable; LP) ‖ `rocase` – √ruc- (root; SG.2.IND.PRS.MED)
+4c	tváṃ ghr̥tébhir ā́hutaḥ	`tvám` – tvám (pronoun; NOM.SG) ‖ `ghr̥tébhiḥ` – ghr̥tá- (nominal stem; INS.N.PL) ‖ `ā́hutaḥ` – √hu- (root; NOM.M.SG.PTCP-ta.LP)
+5a	tváṃ no asi bhārata-	`tvám` – tvám (pronoun; NOM.SG) ‖ `naḥ` – ahám (pronoun; GEN.PL) ‖ `asi` – √as- 1 (root; SG.2.IND.PRS.ACT) ‖ `bhārata` – bhā́rata- (nominal stem; VOC.M.SG)
+5b	-ágne vaśā́bhir ukṣábhiḥ	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `vaśā́bhiḥ` – vaśā́- (nominal stem; INS.F.PL) ‖ `ukṣábhiḥ` – ukṣán- (nominal stem; INS.M.PL)
+5c	aṣṭā́padībhir ā́hutaḥ	`aṣṭā́padībhiḥ` – aṣṭā́pad- (nominal stem; INS.F.PL) ‖ `ā́hutaḥ` – √hu- (root; NOM.M.SG.PTCP-ta.LP)
+6a	drvànnaḥ sarpírāsutiḥ	`drvànnaḥ` – drvànna- (nominal stem; NOM.M.SG) ‖ `sarpírāsutiḥ` – sarpírāsuti- (nominal stem; NOM.M.SG)
+6b	pratnó hótā váreṇyaḥ	`pratnáḥ` – pratná- (nominal stem; NOM.M.SG) ‖ `hótā` – hótar- (nominal stem; NOM.M.SG) ‖ `váreṇyaḥ` – váreṇya- (nominal stem; NOM.M.SG.GDV)
+6c	sáhasas putró ádbhutaḥ	`sáhasaḥ` – sáhas- (nominal stem; GEN.N.SG) ‖ `putráḥ` – putrá- (nominal stem; NOM.M.SG) ‖ `ádbhutaḥ` – ádbhuta- (nominal stem; NOM.M.SG)

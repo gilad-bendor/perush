@@ -48,7 +48,7 @@ In the apparatus, Sanskrit and Avestan words are written in Latin transliteratio
   §7 at every occurrence.
 
 ## 3. Names (binding; checked by script: where the source regex matches the folded line, the Hebrew must be in it)
-Rows marked **(RV 7)** apply to the Rigveda Book 7 project only (Round 7 run 1). The regex is matched on the **folded** source (`vedic_tools.py` `fold`: lower case, no accents or diacritics, ś/ṣ/š =
+Rows marked **(RV 7)** or **(RV 2)** apply to the whole-book projects only – Book 7 (Round 7 run 1) and Book 2 (Round 8 run 3) – both kinds to both books. The regex is matched on the **folded** source (`vedic_tools.py` `fold`: lower case, no accents or diacritics, ś/ṣ/š =
 s, ṛ = r, ϑ = th, ə = e, spaces around words). A name used as a common noun in another text (Agni = fire, Mitra =
 friend, Vṛtra = obstacle) is written here only for the texts where it is a name (§3.2 says how the common noun is
 rendered).
@@ -132,6 +132,11 @@ rendered).
 | Bhāratī (RV 7) | ` bharati` | `בְּהָארַטִי` |  | the goddess of the Āprī hymns (7.2.8) |
 | Nahus (RV 7) | ` nahus` | `נַהוּשׁ` |  | an ancestral people / king (7.6.5) |
 | Jarūtha (RV 7) | ` jaruth` | `גָ'רוּתָה` |  | a demon slain by Agni (7.1.7, 7.9.6) |
+| Gṛtsamada (RV 2) | ` grtsamad` | `גְּרִטְסַמַדָה` |  | the poet family of Book 2 (pl. "the Gṛtsamadas" `בני גְּרִטְסַמַדָה`, as *vásiṣṭhāḥ*; Round 8 run 3) |
+| Śuṣṇa (RV 2) | ` susn` | `שׁוּשְׁנָה` |  | the demon "Hisser" slain by Indra (2.14, 2.19) |
+| Dabhīti (RV 2) | ` dabhit` | `דַּבְּהִיטִי` |  | Indra's protégé (2.13, 2.15) |
+| Sinīvālī (RV 2) | ` siniva` | `סִינִיוָאלִי` |  | the goddess of the new moon and of offspring (2.32) |
+| Rākā (RV 2) | ` rak(?:a\|am\|e)\b` | `רָאקָא` |  | the goddess of the full moon (2.32) |
 
 ### 3.2 Common nouns that are names elsewhere
 - *agní* outside the RV (ŚB, AB, KU, MBh): `אֵשׁ` (the fire), and `אַגְנִי` only where the text speaks of the god.
@@ -319,6 +324,27 @@ its Proposals; later translators follow the merged table):
 | *rakṣás*, *yātudhā́na* | `רַקְשָׁס`, `קוֹסֵם` | 7.104: the demons and the sorcerers; not the root כשף (Akk. *kaššāpu*'s cognate, Maqlû) |
 | *vr̥trá* (not the name), *vr̥trahán* | `מַחְסוֹם`, `הוֹרֵג־וְרִטְרָה` | the name Vṛtra keeps §3.1 where the text means the serpent |
 
+### 5.6 The Rigveda, Book 2 (Round 8 run 3; pre-set by the coordinator before the first line, from `vedic_tools.py freq RV2`)
+Book 2 is a hymnal of one family too (the Gṛtsamadas); **Book 7's Hebrew binds every lemma it fixed** (§5.5, §11.10–§11.20,
+§11.22, and its files: `freq` and `lexmap` print them) – one Hebrew per lemma across the two books. Pre-set here, for the
+words Book 2 uses much more than Book 7 or that Book 7 left open (translator 1 may revise a row, with a reason, in its
+Proposals; later translators follow the merged table):
+| Source | Hebrew | Why / note |
+|---|---|---|
+| *bṛhád vadema vidáthe suvī́rāḥ* | `נדבר נא (בקול) רם במועצה, רבי־גיבורים` | the family refrain (F9, 22 hymns): √*vad* `דיבר`, *bṛhánt* `רם` (Book 7), *vidátha* `מועצה` (Book 7; Jamison "ritual distribution" in the note), *suvī́ra* `רב־גיבורים` (Book 7); `(בקול)` for the adverbial neuter |
+| *vidátha* | `מוֹעֵצָה` | Book 7's word (the ritual assembly where the gifts are shared out); *vidathya* `של המועצה` |
+| √*vad* | `דִּבֵּר` | √*vac* keeps `אמר`, √*brū* `אמר` (Book 7) |
+| *ukthyà* | `רָאוּי־לָאֲמִירָה` | 14× in Book 2, absent from Book 7; from *ukthá* `אמירה` (the 2026-11-13 pair) |
+| *dákṣiṇā* | `שְׂכַר־הַכּוֹהֲנִים` | "the priestly gift" (in the Indra closing stanza personified as a cow, *maghónī*); RV 10.18.10c and KU 1.2a precedents; *mīḍhá* keeps the bare `שָׂכָר` (the Avestan cognate rule); *dákṣiṇa* "right / south" `ימין` / `דרום` |
+| *maghónī* | `בַּעֲלַת־הַשֶּׁפַע` | the feminine of *maghávan* `בעל־השפע` |
+| *r̥tú* | `עוֹנָה` | the ritual season (2.36–37 the season-cups; precedent RV 10.18.5b, 7.103.9b); *r̥túbhiḥ* `עם העונות` |
+| *r̥ṇá*, *r̥ṇayā́* | `חוֹב`, `גּוֹבֵה־הַחוֹב` | precedent AB 7.13.4a (2.23.17, 2.27.4, 2.28.9) |
+| *duṣvápnya* | `חֲלוֹם רַע` | 2.28.10 |
+| *bheṣajá*, *jálāṣa* | `תְּרוּפָה`, `מַרְפֵּא` | Rudra 2.33 (precedents 7.46.3c, 7.35.6c) |
+| *ā́gas*, *énas*, √*muc*, √*mr̥ḍ*, √*hr̥̄*, *héḷas*, *pā́śa* | `אשמה`, `עוון`, `שחרר`, `רחם`, `זעף`, `רוגז`, `חבל` | the Varuṇa vocabulary of Book 7 (§11.18); 2.27–29, 2.33; **never** the root חטא, `פשע`, `סליחה`, `וידוי`, `חרון` (§7.4) |
+| *bráhmaṇas páti* | `בְּרַהְמַנַסְפַּתִי` | §3.1 (the name); *bŕ̥haspáti* `בְּרִהַסְפַּתִי` – the same god, two names, kept apart as the hymns keep them |
+| *apā́ṃ nápāt* | `נכד המים` | §3.1 (RV 7) |
+
 ## 6. (reserved for the LXX layer – not applicable: no Greek)
 
 ## 7. Reserved and gated words, and traps (checked by `vedic_tools.py verify`; `gates` prints the regexes)
@@ -362,6 +388,9 @@ where the fire-offering is near.
 | F6 | `yuyam pata svastibhih sada nah` | `אתם, שמרו עלינו בשלום תמיד` | RV 7, the Vasiṣṭha refrain closing 76 hymns ("Do you protect us always with well-being"; Round 7 run 1) |
 | F7 | `mrla suksatra mrlaya` | `רחם, טוב־השלטון, רחם` | RV 7.89.1–4c (the refrain to Varuṇa) |
 | F8 | `ta apo devir iha mam avantu` | `המים האלה, האלות, יעזרו לי כאן` | RV 7.49.1–4d |
+| F9 | `brhad vadema vidathe suvirah` | `נדבר נא \(בקול\) רם במועצה רבי־גיבורים` | RV 2, the Gṛtsamada refrain closing 22 hymns ("May we speak loftily at the ritual distribution, rich in heroes"; Round 8 run 3) |
+| F10 | `somasya ta mada indras cakara` | `בהתבסמות הסומה את אלה עשה אינדרה` | RV 2.15.2–9d ("These things Indra did in the exhilaration of soma") |
+| F11 | `sa janasa indrah` | `הוא אנשים אינדרה` | RV 2.12.1–14d ("He, o peoples, is Indra"; written `הוא – אנשים! – אינדרה`) |
 
 
 ## 9. Repeated lines and the dossier
@@ -393,6 +422,10 @@ where the fire-offering is near.
 | RV7.86 3d | err | `"וַרוּנָה הזה, בחרון אפו, זועף עליך."` |
 | RV7.88 6c | err | `סלח לנו, (אנו) בעלי־העוון, כלפיך, בעל־התעתועים (?) –` |
 | RV7.86 3c | ok | `אותו הדבר אכן אומרים לי המשוררים האחרונים:` |
+| RV2.1 16d | ok | `נדבר נא (בקול) רם במועצה, רבי־גיבורים.` |
+| RV2.1 16d | err | `נדבר נא גדולות במועצה, רבי־גיבורים.` |
+| RV2.12 1d | ok | `הוא – אנשים! – אינדרה.` |
+| RV2.28 5a | err | `התר ממני את החטא כמו חבל;` |
 | AB7 15.2e | ok | `שוכבים כל חטאיו, הרוגים ביגיעה שבדרך.` |
 
 ## 11. Merged from the translators (numbered by part; the coordinator)

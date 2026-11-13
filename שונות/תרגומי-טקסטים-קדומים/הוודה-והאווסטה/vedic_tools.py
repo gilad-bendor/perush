@@ -17,8 +17,8 @@
     python3 -I -B vedic_tools.py lemma '<regex>'          every Rigveda line with a Zurich lemma matching the regex
     python3 -I -B vedic_tools.py lexmap ['<regex>']       Hebrew ↔ lemma, from the פירוק bullets of every drafted file
     python3 -I -B vedic_tools.py freq KEY…                the commonest lemmas of the KEYs, with their Hebrew so far
-                                                          (KEY may be RV7 = all of Book 7, or RV7.1-17 = a range; also
-                                                          for verify and build)
+                                                          (KEY may be RV7 = all of Book 7, or RV7.1-17 = a range; the
+                                                          same for Book 2: RV2, RV2.1-10; also for verify and build)
     python3 -I -B vedic_tools.py verify [KEY…] [--strict]
     python3 -I -B vedic_tools.py build [KEY…]             translation-<KEY>.rtl.md + each project's translation.rtl.md
     python3 -I -B vedic_tools.py grep '<regex>' [--all]   the unvocalized `>` lines of this corpus (--all: every corpus)
@@ -80,10 +80,12 @@ P5 = "5-יאמה-והמתים"
 P6 = "6-המהמר-והצפרדעים"
 P7 = "7-ריגוודה-ספר-ז"
 P8 = "8-קטהה-אופנישד"
+P9 = "9-ריגוודה-ספר-ב"
 PROJECT_TITLES = {P1: "מזמורי הראשית של הריגוודה", P2: "אינדרה והנחש (ריגוודה א 32)", P3: "המבול ההודו־איראני",
                   P4: "העקדה: שונהשפה, הקרבן המחליף, נצ'יקטס", P5: "יאמה והמתים", P6: "המהמר והצפרדעים",
                   P7: "הריגוודה, ספר ז: ספר בית וסישטהה",
-                  P8: "קטהה אופנישד: נצ'יקטס אצל המוות"}
+                  P8: "קטהה אופנישד: נצ'יקטס אצל המוות",
+                  P9: "הריגוודה, ספר ב: ספר בית גְּרִטְסַמַדָה"}
 # a project whose clean translation also embeds a text that lives in another project (Round 7 run 1: RV 7.103, the
 # frogs, moved into the whole Book 7; project 6 keeps its title and embeds it)
 PROJECT_EMBEDS = {P6: ["RV10.34", "RV7.103"],
@@ -145,15 +147,31 @@ for _h in range(1, 105):
     UNITS[f"RV7.{_h}"] = (P7, f"ריגוודה ז {_heb_num(_h)}: {B7_ADDRESSEES[_h - 1]}", "rv", (7, _h))
 B7_KEYS = [f"RV7.{_h}" for _h in range(1, 105)]
 
+# Rigveda Book 2 whole (Round 8 run 3): the addressees of VedaWeb's TEI (the Anukramaṇī), as fallback headings
+B2_ADDRESSEES = (
+    "אל אגני|אל אגני|שיר האפרי|אל אגני|אל אגני|אל אגני|אל אגני|אל אגני|אל אגני|אל אגני|"
+    "אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|"
+    "אל אינדרה|אל אינדרה|אל ברהמנספתי|אל ברהמנספתי|אל ברהמנספתי|אל ברהמנספתי|אל האדיטיה|אל ורונה|אל כל האלים|אל אינדרה ואלים אחרים|"
+    "אל כל האלים|לאלים שונים|אל רודרה|אל המרוטים|אל נכד המים|סבב האלים של העונות|סבב האלים של העונות|אל סויטר|אל האשווינים|אל סומה ופושן|"
+    "לאלים שונים|אל ציפור הסימן|אל ציפור הסימן").split("|")
+assert len(B2_ADDRESSEES) == 43
+for _h in range(1, 44):
+    UNITS[f"RV2.{_h}"] = (P9, f"ריגוודה ב {_heb_num(_h)}: {B2_ADDRESSEES[_h - 1]}", "rv", (2, _h))
+B2_KEYS = [f"RV2.{_h}" for _h in range(1, 44)]
+BOOK_KEYS = {7: B7_KEYS, 2: B2_KEYS}
+# the whole-book projects: their name rows "(RV 7)" / "(RV 2)" and the stricter short licences apply to both
+RV_BOOK_PROJECTS = (P7, P9)
+
 
 def expand_keys(ks):
-    """'RV7' (or 'B7') = all of Book 7; 'RV7.1-17' = a range of its hymns."""
+    """'RV7' (or 'B7') = all of Book 7; 'RV7.1-17' = a range of its hymns; the same for Book 2 ('RV2', 'RV2.1-10')."""
     out = []
     for k in ks:
-        m = re.fullmatch(r"(?:RV7|B7)(?:\.(\d+)-(\d+))?", k)
+        m = re.fullmatch(r"(?:RV|B)([27])(?:\.(\d+)-(\d+))?", k)
         if m:
-            a, b = (int(m.group(1)), int(m.group(2))) if m.group(1) else (1, 104)
-            out += [f"RV7.{h}" for h in range(a, b + 1)]
+            bk = int(m.group(1))
+            a, b = (int(m.group(2)), int(m.group(3))) if m.group(2) else (1, len(BOOK_KEYS[bk]))
+            out += [f"RV{bk}.{h}" for h in range(a, b + 1)]
         else:
             out.append(k)
     return out
@@ -203,7 +221,7 @@ def convert_rv(b, h):
         sid = f"b{b:02d}_h{h:03d}_{st:02d}"
         if f'xml:id="{sid}"' not in hy:
             break
-        for p in "abcdefg":
+        for p in "abcdefghij":  # RV 2.22.1 and 2.22.4 have 8 pādas ("h"; the converter stopped at "g" until Round 8 run 3)
             mm = re.search(rf'<l xml:id="{sid}_zur_{p}">(.*?)</l>', hy)
             if not mm:
                 continue
@@ -646,8 +664,8 @@ def formulas():
 def lic(rx, key, lab):
     if rx is None:
         return False
-    if UNITS[key][0] == P7:
-        # Book 7 (Round 7 run 1): a short licence (1–3 letters) must start a word – an unrelated word that contains it (the *vam* of
+    if UNITS[key][0] in RV_BOOK_PROJECTS:
+        # Book 7 and Book 2 (Round 7 run 1): a short licence (1–3 letters) must start a word – an unrelated word that contains it (the *vam* of
         # *tvám*, the *nr* of *satyānr̥té*) no longer licenses; the Avestan *gaiia* "life" licences do not apply to Vedic
         # *gáya* "household"
         alts = rx.split("|") if "(" not in rx else [rx]
@@ -729,7 +747,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
             out.append(f"RESERVED {key} {lab}: «{m.group(0).strip()}» – {why}\n    {heb}\n    src: {src}")
             bad += 1
     for rx, hv, hp, star, what in names():
-        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv") or ("(RV 7)" in what and UNITS[key][0] != P7) \
+        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv") or (("(RV 7)" in what or "(RV 2)" in what) and UNITS[key][0] not in RV_BOOK_PROJECTS) \
                 or ("(AB)" in what and UNITS[key][2] != "titus_ab"):
             continue
         if not _heb_has(plain, hp):
