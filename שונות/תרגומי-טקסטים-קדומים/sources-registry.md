@@ -197,6 +197,7 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 | `Perseus--Hesiod/` | Hesiod, *Theogony* (Evelyn-White 1914, PD text; Perseus markup CC BY-SA), committed. |
 | `TLHdig/CTH-321/` | The Illuyanka myth, KBo 3.7 etc., from TLHdig 0.3 (Zenodo 10.5281/zenodo.20328284, **CC BY 4.0**); the 74 MB zip is git-ignored (recipe in `fetch-recipes.tsv`), the CTH 321 files committed. The Hittite run (run 6) uses the same zip. |
 | `VedaWeb/rv_1.032--zurich.tsv` | Rigveda 1.32, the Zurich text and morphology layer (**CC BY 4.0**), extracted by `dossier_tools.py rvtsv` from VedaWeb's `rv_book_01.tei` (ignored: `VedaWeb/*.tei`). |
+| `VedaWeb/rv_7.001…104--zurich.tsv` | The whole of Rigveda Book 7, the Zurich text and morphology (**CC BY 4.0**, committed), made by `הוודה-והאווסטה/vedic_tools.py convert` from `rv_book_07.tei` (Round 7 run 1). |
 | `Bugge-1867--Saemundar-Edda/hymis.html` | *Hýmiskviða* from Bugge 1867 (PD), `etext.old.no`. |
 | `Wikisource-zh--Kojiki/kojiki-jokan.html` | *Kojiki* Book 1 from zh.wikisource (PD text; page CC BY-SA). The Wikimedia API answered 429 to scripts once; the saved page serves. |
 - **Not reached:** ru.wikisource (the Dove Book) answered 429; Ulukau and NZETC (the Kumulipo, Ika-tere) block scripts; ctext.org forbids scraping; DEAPS has no Deir ʿAllā record. The dossier's `project.md` lists every excerpt not done and why.
@@ -244,16 +245,29 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 - **TITUS** mirror `titus.fkidg1.uni-frankfurt.de` (`sources/TITUS/`): Weber's accented ŚB (1.2, 1.8) and Aufrecht's AB
   (7.13–18 = pages ab236–241); **no republication** → git-ignored; the only accessible e-text of the AB (GRETIL has none).
 - **GRETIL** (`sources/GRETIL/`): MBh 3 (BORI; "reference only", ignored), ŚB 1 (unaccented; ignored), the Kaṭha TEI
-  (CC BY-NC-SA, committed with its TSV; it lacks KU 2.15).
+  (CC BY-NC-SA, committed with its TSV `katha_1-6.tsv`, the whole text; it does have KU 2.15 – the old converter dropped it: Round 7 run 3).
 - **CAB** (`sources/CAB/`): the Avestan linguistic corpus (Vd 2 complete, Geldner's numbering; licence "CC" without a
   version → ignored) and the online dictionary API (`dictionary-data.xql`, op `word|search|glossary|lemma-words`: per-form
   analyses with Bartholomae's lemmas).
 - **Dictionaries** (`sources/Sanskrit-lexicon--csl-orig/`): Monier-Williams and Grassmann from csl-orig on GitHub raw (the
   Cologne site answers 403); ignored, per word.
 - **Rank 3** (`sources/Jamison--Rigveda-commentary/`, ©, ignored): Jamison's online commentary (2026-09 version), PDFs +
+  Book 7 is complete since Round 7 run 1: `VII.1–55-9-25-26.pdf` / `.txt` added (2026-11-09; recipe + manifest items).
   text; (`sources/Archive-org--PD-translations/`, ignored): Eggeling SBE 12, Keith HOS 25, Darmesteter SBE 4, Hume 1921,
   Ganguli vols. 2–3, Bartholomae 1904 (OCR text).
 - Hebrew translations (Peter 2006, Fridman 2014; ©, Carmel) were not consulted.
+
+### 4.4y The Old Avestan corpus (`האווסטה/`; Round 7 run 2, 2026-11-09)
+- **CAB** (`sources/CAB/cab_corpus.xml`, already here): **the XML has the Gāthās' verse lines** (`<ab>`/`<l>` per line;
+  Geldner's numbers in `corresp`); `האווסטה/avesta_tools.py convert` keeps the Old Avestan lines (Y 28–34, 35.2–41.6,
+  43–51, 53, 54.1) and drops the liturgical repetitions, the Middle Persian headings and rubrics, and the Young Avestan
+  frames → `CAB/old_avestan.tsv` (local). CAB's corpus "without repetitions" lacks Y 27.13–15.
+- **TITUS** Avesta (`sources/TITUS/avest028.htm`, local; the page per Yasna chapter is `avest<NNN>.htm`, Y 27 = 028):
+  Geldner's text with Humbach 1991's line division – the base of the prayers Y 27.13–15.
+- **Rank 5, public domain** (`sources/Archive-org--PD-translations/`, ignored): Mills 1887 (SBE 31: the Gāthās, YH;
+  he numbers Y 28 one stanza higher), Moulton 1913 (*Early Zoroastrianism*, the Gāthās in an appendix; the OCR misses
+  many stanzas). Bartholomae 1904's OCR is two-column and garbled (ā as ä): usable by grep only. **Not open:** Insler
+  1975, Humbach 1991 / Humbach & Faiss 2010, Kellens & Pirart, Narten 1986 (YH), West 2010 – not used.
 
 ### 4.4x Northwest Semitic inscriptions (`מילים-באבן/`; Round 5 run 4, 2026-10-31)
 - **`Compston-1919--Mesha-Stele/`** – Compston 1919 (PD; English Wikisource, proofread): the Mesha stele in square script, `mesha.tsv`, committed. **BASE** of project 1.

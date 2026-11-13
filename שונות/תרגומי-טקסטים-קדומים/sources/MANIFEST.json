@@ -19067,6 +19067,32 @@
    }
   },
   {
+   "id": "Jamison--Rigveda-commentary/VII.1–55-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/VII.1%E2%80%9355-9-25-26.pdf",
+   "note": "Jamison commentary (©, local)",
+   "files": {
+    "Jamison--Rigveda-commentary/VII.1–55-9-25-26.pdf": [
+     807387,
+     "101e06ef3326a8549d09d34a4824af78959a21ef4b30abc3f5dfcd75756bc563"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/VII.1–55-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "VII.1–55-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/VII.1–55-9-25-26.txt": [
+     440261,
+     "7eae4038b2e36a597608ff0a07f4e01d181f946c7b2c8e6d449a8bdcf6ee923a"
+    ]
+   }
+  },
+  {
    "id": "Jamison--Rigveda-commentary/X.1–60-9-25-26.pdf",
    "kind": "url",
    "tier": "work",
@@ -19921,6 +19947,58 @@
     ]
    },
    "raw_files": 322
+  },
+  {
+   "id": "Archive-org--PD-translations/Mills-1887--SBE-31_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/wg931/WG931-1887%20-The%20Sacred%20Books%20of%20East%20-%20Vol%2031%20of%2050%20-Zoroastrianism-Zend%20Avesta%20-Part%203%20of%203_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Mills-1887--SBE-31_djvu.txt": [
+     925590,
+     "44d2413cc0c161c25631c5b84e26772778378628fa894484f744081fd425aeda"
+    ]
+   }
+  },
+  {
+   "id": "Archive-org--PD-translations/Moulton-1913--Early-Zoroastrianism_djvu.txt",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://archive.org/download/earlyzoroastrian00mouluoft/earlyzoroastrian00mouluoft_djvu.txt",
+   "note": "PD OCR text",
+   "files": {
+    "Archive-org--PD-translations/Moulton-1913--Early-Zoroastrianism_djvu.txt": [
+     1066040,
+     "77aeada0cae42d2ef76e26dc276a3986584b18defbbc1f78cf411573e456b207"
+    ]
+   }
+  },
+  {
+   "id": "TITUS/avest028.htm",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://titus.fkidg1.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avest028.htm",
+   "note": "TITUS Avesta Y 27 (local only)",
+   "files": {
+    "TITUS/avest028.htm": [
+     90820,
+     "36049b99da7f1c102a1910eb4414376d45c6027d80c7c4aca05f64e0688b5f45"
+    ]
+   }
+  },
+  {
+   "id": "CAB/old_avestan.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "made by האווסטה/avesta_tools.py convert",
+   "files": {
+    "CAB/old_avestan.tsv": [
+     78831,
+     "69b8bc2418ef2a75376cbf4bfdb297f5c57c884efcbcede5c4ecc670099a7ef6"
+    ]
+   }
   }
  ]
 }

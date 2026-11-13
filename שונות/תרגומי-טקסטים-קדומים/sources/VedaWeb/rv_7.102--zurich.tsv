@@ -1,0 +1,12 @@
+# Rigveda 7.102 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_07.tei.
+1a	parjányāya prá gāyata	`parjányāya` – parjánya- (nominal stem; DAT.M.SG) ‖ `prá` – prá (invariable; LP) ‖ `gāyata` – √gā(y)- (root; PL.2.IMP.PRS.ACT)
+1b	divás putrā́ya mīḷhúṣe	`diváḥ` – dyú- ~ div- (nominal stem; GEN.M.SG) ‖ `putrā́ya` – putrá- (nominal stem; DAT.M.SG) ‖ `mīḷhúṣe` – mīḍhváṃs- (nominal stem; DAT.M.SG)
+1c	sá no yávasam ichatu	`sá` – sá- ~ tá- (pronoun; NOM.M.SG) ‖ `naḥ` – ahám (pronoun; DAT.PL) ‖ `yávasam` – yávasa- (nominal stem; ACC.N.SG) ‖ `ichatu` – √iṣ- 2 (root; SG.3.IMP.PRS.ACT)
+2a	yó gárbham óṣadhīnāṃ	`yáḥ` – yá- (pronoun; NOM.M.SG) ‖ `gárbham` – gárbha- (nominal stem; ACC.M.SG) ‖ `óṣadhīnām` – óṣadhī- (nominal stem; GEN.F.PL)
+2b	gávāṃ kr̥ṇóty árvatām	`gávām` – gáv- ~ gó- (nominal stem; GEN.F.PL) ‖ `kr̥ṇóti` – √kr̥- (root; SG.3.IND.PRS.ACT) ‖ `árvatām` – árvant- (nominal stem; GEN.M.PL)
+2c	parjányaḥ puruṣī́ṇām	`parjányaḥ` – parjánya- (nominal stem; NOM.M.SG) ‖ `puruṣī́ṇām` – puruṣī́- (nominal stem; GEN.F.PL)
+3a	tásmā íd āsyè havír	`tásmai` – sá- ~ tá- (pronoun; DAT.M.SG) ‖ `ít` – íd (invariable) ‖ `āsyè` – āsyà- (nominal stem; LOC.N.SG) ‖ `havíḥ` – havís- (nominal stem; ACC.N.SG)
+3b	juhótā mádhumattamam	`juhóta +` – √hu- (root; PL.2.IMP.PRS.ACT) ‖ `mádhumattamam` – mádhumattama- (nominal stem; ACC.N.SG.SUP)
+3c	íḷāṃ naḥ saṃyátaṃ karat	`íḷām` – íḍā- ~ íḷā- (nominal stem; ACC.F.SG) ‖ `naḥ` – ahám (pronoun; DAT.PL) ‖ `saṃyátam` – saṃyát- (nominal stem; ACC.F.SG) ‖ `karat` – √kr̥- (root; SG.3.SBJV.AOR.ACT)

@@ -21,10 +21,12 @@ for three thousand years), the Brāhmaṇas' ritual thinking, and Zoroastrian Ir
 |  |  | VD2 | Vīdēvdād 2: Yima, the three enlargements of the earth, the winter, the enclosure | 43 | Gen 6:14–7:3, 8:22; 10 |
 | 4 | `4-העקדה/` | AB7 | Aitareya Brāhmaṇa 7.13–18: Śunaḥśepa | 250 | Gen 22; Ex 13:13; Judg 11 |
 |  |  | SB1.2.3 | Śatapatha Brāhmaṇa 1.2.3.6–9: the sacrificial essence passes from man to the animals and the grain | 8 | Gen 22:13; Ex 13:13, 34:20 |
-|  |  | KU1 | Kaṭha Upaniṣad, adhyāya 1 (vallīs 1–3): Naciketas given to Death | 143 | Gen 22 (a father gives his son) |
+|  |  | (KU1) | Kaṭha Upaniṣad, adhyāya 1 (vallīs 1–3): Naciketas given to Death (lives in project 8 since Round 7 run 3 and is embedded here) | 146 | Gen 22 (a father gives his son) |
 | 5 | `5-יאמה-והמתים/` | RV10.10 | 10.10 Yamī and Yama | 56 | Gen 4–5 (Cain's wife), 19:30–38; Lev 18:9 |
 |  |  | RV10.14–18 | the funeral hymns | 288 | Gen 3:19; 5 |
-| 6 | `6-המהמר-והצפרדעים/` | RV10.34, RV7.103 | the gambler; the frogs | 96 | (the soul); Ex 7:26–8:11 (the frogs) |
+| 6 | `6-המהמר-והצפרדעים/` | RV10.34, (RV7.103) | the gambler; the frogs (7.103 lives in project 7 since Round 7 and is embedded here) | 96 | (the soul); Ex 7:26–8:11 (the frogs) |
+| 7 | `7-ריגוודה-ספר-ז/` | RV7.1 … RV7.104 | **the Rigveda, Book 7, whole** – the Vasiṣṭha family book (Round 7 run 1) | 3,190 | Varuṇa 7.86–89 (Ps 32, 51; Job 4:19); 7.18 (Judg 5:21); 7.104 (Ps 109, 58) |
+| 8 | `8-קטהה-אופנישד/` | KU1, KU2 | **the Kaṭha Upaniṣad, whole** (Round 7 run 3): adhyāya 1 (vallīs 1–3, moved from project 4) and adhyāya 2 (vallīs 4–6) | 146 + 111 | Gen 22 (KU 1); Eccl 12:7, Ps 139 (the self) – in progress |
 
 ## Bases and tools
 - `vedic_tools.py` (this folder): `convert` builds the line data from the raw sources; `data`, `tr`, `fill`, `mw`, `gra`,

@@ -1,0 +1,15 @@
+# Rigveda 7.52 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_07.tei.
+1a	ādityā́so áditayaḥ syāma	`ādityā́saḥ` – ādityá- (nominal stem; NOM.M.PL) ‖ `áditayaḥ` – áditi- (nominal stem; NOM.F.PL) ‖ `syāma` – √as- 1 (root; PL.1.OPT.PRS.ACT)
+1b	pū́r devatrā́ vasavo martyatrā́	`pū́ḥ` – púr- (nominal stem; NOM.F.SG) ‖ `devatrā́` – devatrā́ (invariable) ‖ `vasavaḥ` – vásu- (nominal stem; VOC.M.PL) ‖ `martyatrā́` – martyatrā́ (invariable)
+1c	sánema mitrāvaruṇā sánanto	`sánema` – √sanⁱ- (root; PL.1.OPT.AOR.ACT) ‖ `mitrāvaruṇā` – mitrā́váruṇa- (nominal stem; VOC.M.DU) ‖ `sánantaḥ` – √sanⁱ- (root; NOM.M.PL.AOR.ACT.PTCP)
+1d	bhávema dyāvāpr̥thivī bhávantaḥ	`bhávema` – √bhū- (root; PL.1.OPT.PRS.ACT) ‖ `dyāvāpr̥thivī` – dyā́vāpr̥thivī́- (nominal stem; VOC.F.DU) ‖ `bhávantaḥ` – √bhū- (root; NOM.M.PL.PRS.ACT.PTCP)
+2a	mitrás tán no váruṇo māmahanta	`mitráḥ` – mitrá- (nominal stem; NOM.M.SG) ‖ `tát` – sá- ~ tá- (pronoun; ACC.N.SG) ‖ `naḥ` – ahám (pronoun; PL) ‖ `váruṇaḥ` – váruṇa- (nominal stem; NOM.M.SG) ‖ `māmahanta` – √maṃh- (root; PL.3.SBJV.PRF.MED)
+2b	śárma tokā́ya tánayāya gopā́ḥ	`śárma` – śárman- (nominal stem; ACC.N.SG) ‖ `tokā́ya` – toká- (nominal stem; DAT.N.SG) ‖ `tánayāya` – tánaya- (nominal stem; DAT.N.SG) ‖ `gopā́ḥ` – gopā́- (nominal stem; NOM.M.PL)
+2c	mā́ vo bhujemānyájātam éno	`mā́` – mā́ (invariable) ‖ `vaḥ` – tvám (pronoun; GEN.PL) ‖ `bhujema` – √bhuj- 2 (root; PL.1.OPT.AOR.ACT) ‖ `anyájātam` – anyájāta- (nominal stem; ACC.N.SG) ‖ `énaḥ` – énas- (nominal stem; ACC.N.SG)
+2d	mā́ tát karma vasavo yác cáyadhve	`mā́` – mā́ (invariable) ‖ `tát` – sá- ~ tá- (pronoun; ACC.N.SG) ‖ `karma` – √kr̥- (root; PL.1.INJ.AOR.ACT) ‖ `vasavaḥ` – vásu- (nominal stem; VOC.M.PL) ‖ `yát` – yá- (pronoun; ACC.N.SG) ‖ `cáyadhve` – √ci- 2 (root; PL.3.IND.PRS.MED)
+3a	turaṇyávó 'ṅgiraso nakṣanta	`turaṇyávaḥ` – turaṇyú- (nominal stem; NOM.M.PL) ‖ `áṅgirasaḥ` – áṅgiras- (nominal stem; NOM.M.PL) ‖ `nakṣanta` – √nakṣ- (root; PL.3.INJ.PRS.MED)
+3b	rátnaṃ devásya savitúr iyānā́ḥ	`rátnam` – rátna- (nominal stem; ACC.N.SG) ‖ `devásya` – devá- (nominal stem; GEN.M.SG) ‖ `savitúḥ` – savitár- (nominal stem; GEN.M.SG) ‖ `iyānā́ḥ` – √yā- 2 (root; NOM.M.PL.PRS.MED.PTCP)
+3c	pitā́ ca tán no mahā́n yájatro	`pitā́` – pitár- (nominal stem; NOM.M.SG) ‖ `ca` – ca (invariable) ‖ `tát` – sá- ~ tá- (pronoun; ACC.N.SG) ‖ `naḥ` – ahám (pronoun; GEN.PL) ‖ `mahā́n` – mahā́nt- (nominal stem; NOM.M.SG) ‖ `yájatraḥ` – yájatra- (nominal stem; NOM.M.SG)
+3d	víśve devā́ḥ sámanaso juṣanta	`víśve` – víśva- (nominal stem; NOM.M.PL) ‖ `devā́ḥ` – devá- (nominal stem; NOM.M.PL) ‖ `sámanasaḥ` – sámanas- (nominal stem; NOM.M.PL) ‖ `juṣanta` – √juṣ- (root; PL.3.INJ.AOR.MED)
