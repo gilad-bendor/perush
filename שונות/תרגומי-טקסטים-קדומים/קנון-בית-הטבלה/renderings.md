@@ -200,3 +200,41 @@ Coordinator: T1's open decisions 1–5 of project 1 stand as drafted (the *nir-�
   `נִינְסוּמוּן`, Šakkan `שַׁכַּן` ★, Nin-egala `נִין־אֵגַלָּה`, Lugalbanda `לוּגַלְבַּנְדָּה`, Nunamnir `נוּנַמְנִיר`,
   Ĝaĝišua `גַּגִּישׁוּאַה`, Utaulu `אוּתָאוּלוּ`, E-šumeša `אֵשׁוּמֵשָׁה`, E-babbar `אֵבַּבַּר`; festival *eš₃-eš₃* `אֵשְׁאֵשׁ`;
   *saĝ-ur-saĝ* `סַגּוּרְסַג`.
+
+### 5.4 Part 4 – T2, NI and EL (merged 2026-11-13)
+Coordinator: *ulutim₂* = `תואר` in every text (LA 13 changed from `דמות`, which the corpora keep out of translated lines); T2's other open decisions stand; *sa-par₃* `מכמורת` is listed for the lead's harmonization (a cross-language overlap with Akk. *kamāru*).
+
+#### NI
+- **Formulas:** *ḫe₂-me-en* in a speech of blessing = `X תְּהִי!` (52–55; open decision 9); the closing *a-a {d}en-ki
+  za₃-mi₂-zu dug₃-ga-am₃* = `האב אֶנְקִי, תהילתך מתוקה!` (= Enki and Ninmaḫ 141); the *-a-ni* series of a god's deeds =
+  `ב` + infinitive + suffix (40–49, as the Akkadian gloss *ina epēšišu*: `בבנותו`, `בפתחו`, `בעמדו`); *šag₄ kuš₂* = `יִגַּע
+  אֶת הַלֵּב` (verb) / `יגע־הלב` (adjective), = Akk. *mitluku* "deliberate" (the gloss of 42: a reading now proved).
+- **Names:** Uraš `אוּרַשׁ`; Aruru `אֲרוּרוּ` (always vocalized); Kusu `כּוּסוּ`; Ezina `דָּגָן` (always vocalized); Ereš `אֵרֵשׁ`
+  (always vocalized); Aratta `אָרַטָּה`; E-zagin `אֵ־זַגִּין`; E-engura `אֵ־אֶנְגּוּרָה`; Ḫal-an-kug `חַל־אַן־כּוּג`.
+- **Terms:** *mul-an* `כוכבי השמים`; *šu du₈* "hold" `ביד אחז`; *immal₂* `פרת־בר`; *šeg₉-bar* `יחמור`; *naĝa* `בורית`; *ga*
+  `חלב`; *ab-sin₂* `תלם`; *gu* `פשתה` (and `חוט` in "tangled thread": EL 132); *u₆ di* `התפעל`; *namnir* `שררה`; *ne-saĝ*
+  `ראשית`; *kurun* `סובא`; *en* (priest) `אֵן`; *su-ub* `שפשף`; *mur₁₀* `לבש`; *tug₂-ba₁₃* `גלימה?`; *i₃-ḫe-nun* `שמן־השובע`,
+  *ḫe-nun* `שובע` (≠ *ḫe₂-ĝal₂* `שפע`); *saĝ-tun₃* `רושם`; *nam-galam* `תחכום`; *ni₂ gur₃* `טעון־אימה`; *nagar* `נגר`;
+  *taškarin* `תאשור`; *tun₃ bar* `בקרדום פילח`; *abgal* `אַבְּגַּל`; *sila* `רחוב`; *unu₂* `מעון`; *ĝišnimbar* `תמר`; *šita*
+  (weapon) `אַלָּה` – but *šita* (prayer) `עתירה` (EL 59, 108; = the Ur lament, Gudea); *um-me* `מינקת`; *tur₃* `רפת`, *amaš*
+  `דיר`, *gara₂* `שמנת`; *kišib-ĝal₂* `נושא החותם`; *niĝ₂-gur₁₁* `רכוש`; *aĝrig* `סוכן` (= Gudea; Akk. *abarakku*, Gilg. VIII
+  `סוכנת`); *guru₇-du₆ guru₇-maš* `תילי־הכרי וערמות־הכרי`, *gu₂ gur* `אגר`.
+
+#### EL
+- **Formulas and fixed strings:** the refrain *kur gal {d}en-lil₂-da nu-me-a* = `אילולא ההר הגדול, אנליל –` (109 = 124);
+  *kur gal a-a {d}en-lil₂* = `ההר הגדול, האב אנליל` (39, 171; = EWO 200, S&W 318); the closing *za₃-mi₂-zu maḫ-am₃* =
+  `תהילתך נשגבה!`; *niĝ₂ nu-kur₂-ru* = `דבר שאינו משתנה` (2 = 168); *ka-ta e₃* = `מוצא פה` (= ID 34); *an-ne₂ us₂* = `לשמים
+  מגיע` (78, 144; = Gudea); *u-Vmma-teĝ₃* = `כשהוא נגש אל` (146, 148); "Without X" lists: negated marû = `לא` + future.
+- **Terms:** *dug₄* (noun) `אמירה`; *su₃-ra₂* `רחוק`; *ĝiš-nu₁₁* `אור`; *sun₅* (verb) `השתפל`; *dur₂ ĝar* `מושב שָׂם`; *uz₃-saĝ*
+  `*מוט*` (= ID 7); *es₂-ad* `מלכודת`; *pu₂* `באר` (`בור` reserved); *sa* `רשת`; *sa-par₃* `מכמורת`; *ḫurin* `נשר`; *erim₂-ĝal₂*
+  `איבה`; *inim / niĝ₂ kur₂* `דבר / עניין נכרי`; *u₃-nu-ĝar-ra* `זדון`; *niĝ₂-a₂-ĝar* `מרמה`; *sun₇* `יהירות` (= Bird and
+  Fish); *niĝ₂-gig* `תועבה` (= Akk. *ikkibu*); *igi-tum₃ la₂* `חמדה`; *gi₁₆-sa* `אוצר`; *kar* `רציף`; *dugud* `כבד` / `לְכַבֵּד`;
+  *nam-lu₂-ulu₃* `אנושות`; *ĝizzal ak* `קשב עשה`; *nam-ab-ba* `זקנה`; *a₂-dam* `נווה`; *nam-ḫe₂* `שגשוג`; *di-ir-ga* `קשר`;
+  *mu₇* `לחש`; *inim-ĝar* `קול־דבר`; *kal-kal* `יקר`; *lagar* `כוהן־הלַגָּר`, *gudug* `הַגּוּדוּג`, *nu-eš₃* `הַנּוּאֵשׁ`; *šita*
+  (prayer) `עתירה`; *u₃-gul* `בקשה`; *ḫur* `שרטט`; *uš₈* `תשתית` (≠ *suḫuš* `יסוד`, *temen* `מסד`); *idim* `כובד`; *mul* `נצנץ`;
+  *saĝ sag₃* `ראש הכה`; *itima* `החדר הפנימי`; *suḫ₁₀* `נזר`; *maš₂-da-ri-a* `דורון`; *gu₂-un* `משא`; *kisal* `חצר`; *tum₉*
+  `רוח`; *{d}tir-an-na* `טִירַנָּה, הקשת`; *dili* `יחיד`; *kingal* `ראש־המועצה`; *ugula* `משגיח`; *a-eštub* `מי־האֶשְׁתּוּב`;
+  *erim₃* `מחסן`; *gurun* `תנובה`; *u₂-šim* `מספוא`; *a-gar₃* `שדמה`; *niĝ₂-ur₂-4* `ההולכים על ארבע`; *e-ne su₃-ud* `שעשוע ארוך`;
+  *niĝ₂-me-ĝar sug₄* `דממה מלאה`; *gu suḫ₃* `חוט סבוך`; *gilim* `שזור בהצלבה`; *nam-diĝir* `אלוהות`; *muš₃* `מראה`; *tuku*
+  (a wife) `קנה`; *ulutim₂* `תואר`; *i₃ li* `שמן רענן`; *til₃* `שכן`. Names: Nunamnir `נוּנַמְנִיר`, Nuska `נוּסְכּוּ`, Uraš
+  `אוּרַשׁ`, lu₂-maḫ `הַלּוּמַח`, nin-diĝir `הַנִּין־דִּינְגִּיר`.

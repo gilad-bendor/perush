@@ -194,6 +194,69 @@ Translator T1, Round 8 run 2, 2026-11-13.
   is "who built your head"; "the just" (89) is "the true man"; "sceptre which brings to justice" (165–166) is "the
   switch … leading truly"; "holy" (*kug*) is "pure".
 
+## Part 3 (NI)
+Translator T2, Round 8 run 2, 2026-11-13.
+
+### Progress
+- **NI 1–57** (the OB version) and **L.1–L.9** (the Lagaš stone version of the beginning) drafted whole (66 entries):
+  header, 6 `## ` sections (the Lagaš version its own), `translation--intro-NI.rtl.md`. The Lagaš lines copy the OB
+  Hebrew wherever the Sumerian is the same (L.2 = 1b, L.6 = 5, L.7 = 6, L.8 = 8a; L.3, L.4, L.5, L.9 differ by a case
+  ending or a sign, and the Hebrew differs by exactly that).
+- Three passes: (a) fidelity – persons and aspects against the morph (*na-* + ḫamṭu affirmative in 19–30; 33–34 2nd
+  person, as the Akkadian gloss has it), brackets (23 `nam₂-⸢nir⸣-[ra]`: ending restored → none), one redundant dative
+  removed (50); (b) consistency – T1's §5.1–§5.3 words followed (`בעלת זרוע־נסיך` = SA 27, `בית־בינת־ניסבה` = EN 54,
+  `במתנה העניק`, `המחובב בנאמנות`, `יגע־הלב`, `סופר`, `רושם`), the closing copied from Enki and Ninmaḫ 141, lexmap
+  NI EL clean but for the splits below; (c) Hebrew – `שׂוּמָה` (never `הוּשְׂמָה`), `לְרַצּוֹת` / `מְמַנָּה` / `אַתְּ` / `תְּהִי`
+  vocalized against misreading.
+- `canon_tools.py verify NI`: OK; `check_bible_quotes.py`: 0 problems.
+
+### Open decisions
+9. **NI 52–55 *ḫe₂-me-en* = `X תְּהִי!`** (a wish), not the corpus's `אכן … אתה` (ID 43): here it is Enki's speech of
+   blessing and appointment, and the interlinear Akkadian has *lū … atti* (ETCSL "may you be"). If the corpus wants one
+   rendering of *ḫe₂-me-en* everywhere, ID 43 and NI 52–55 must be weighed together.
+10. **NI 27–32: Nisaba is the subject** (`העלמה נִיסָבָּה – לברכה עמדה; … יישרה, … פתחה, … שָׂמָה`), against ETCSL's "He
+    (Enki?) approaches Nisaba … he has opened … placed the tablet on her knees": *gub* is intransitive, Nisaba stands in
+    the absolutive, and the Akkadian gloss addresses her in the 2nd person in 33–34 (*taššakkan*). A reviewer should
+    look again.
+11. **ḫuĝ split by sense**: 23–24 `לְרַצּוֹת` ("pacify", = LA 56 `המרצה`), 25–26 `מְמַנָּה` ("hire, install" – *en ḫuĝ*,
+    ETCSL "appoint"); ORACC lemmatizes all four as "pacify".
+12. **NI 4 / L.5** *gi DI 7* / *gi ŠID 7*: `קני־…` / `קני־המנייה?` – ŠID "counting" may explain the OB line; ORACC reads
+    ŠID as Enlil. *tug₂-ba₁₃* (20, 49; also EL 157) `גלימה?` – perhaps the *pala₃* robe of Inana's Descent (`פַּלָּה`).
+
+### Proposals for the corpus renderings
+- **Formulas:** *ḫe₂-me-en* in a speech of blessing = `X תְּהִי!` (52–55; open decision 9); the closing *a-a {d}en-ki
+  za₃-mi₂-zu dug₃-ga-am₃* = `האב אֶנְקִי, תהילתך מתוקה!` (= Enki and Ninmaḫ 141); the *-a-ni* series of a god's deeds =
+  `ב` + infinitive + suffix (40–49, as the Akkadian gloss *ina epēšišu*: `בבנותו`, `בפתחו`, `בעמדו`); *šag₄ kuš₂* = `יִגַּע
+  אֶת הַלֵּב` (verb) / `יגע־הלב` (adjective), = Akk. *mitluku* "deliberate" (the gloss of 42: a reading now proved).
+- **Names:** Uraš `אוּרַשׁ`; Aruru `אֲרוּרוּ` (always vocalized); Kusu `כּוּסוּ`; Ezina `דָּגָן` (always vocalized); Ereš `אֵרֵשׁ`
+  (always vocalized); Aratta `אָרַטָּה`; E-zagin `אֵ־זַגִּין`; E-engura `אֵ־אֶנְגּוּרָה`; Ḫal-an-kug `חַל־אַן־כּוּג`.
+- **Terms:** *mul-an* `כוכבי השמים`; *šu du₈* "hold" `ביד אחז`; *immal₂* `פרת־בר`; *šeg₉-bar* `יחמור`; *naĝa* `בורית`; *ga*
+  `חלב`; *ab-sin₂* `תלם`; *gu* `פשתה` (and `חוט` in "tangled thread": EL 132); *u₆ di* `התפעל`; *namnir* `שררה`; *ne-saĝ*
+  `ראשית`; *kurun* `סובא`; *en* (priest) `אֵן`; *su-ub* `שפשף`; *mur₁₀* `לבש`; *tug₂-ba₁₃* `גלימה?`; *i₃-ḫe-nun* `שמן־השובע`,
+  *ḫe-nun* `שובע` (≠ *ḫe₂-ĝal₂* `שפע`); *saĝ-tun₃* `רושם`; *nam-galam* `תחכום`; *ni₂ gur₃* `טעון־אימה`; *nagar* `נגר`;
+  *taškarin* `תאשור`; *tun₃ bar* `בקרדום פילח`; *abgal* `אַבְּגַּל`; *sila* `רחוב`; *unu₂* `מעון`; *ĝišnimbar* `תמר`; *šita*
+  (weapon) `אַלָּה` – but *šita* (prayer) `עתירה` (EL 59, 108; = the Ur lament, Gudea); *um-me* `מינקת`; *tur₃* `רפת`, *amaš*
+  `דיר`, *gara₂* `שמנת`; *kišib-ĝal₂* `נושא החותם`; *niĝ₂-gur₁₁* `רכוש`; *aĝrig* `סוכן` (= Gudea; Akk. *abarakku*, Gilg. VIII
+  `סוכנת`); *guru₇-du₆ guru₇-maš* `תילי־הכרי וערמות־הכרי`, *gu₂ gur* `אגר`.
+
+### Key findings
+- **The ancient mind.** The Tetrad's last hymn does not separate Nisaba's two faces: the goddess "speckled like the stars
+  of heaven", holding a lapis tablet, the scribe of An and recorder of Enlil, is also the wild cow among the alkali
+  plants who makes flax and barley "stand up" in the furrow and offers at Enlil's harvest feast. For the school the
+  scribe and the farmer are one person: the tablet counts the grain heap. She puts the tablet on her knees like any
+  pupil and "wearies her heart" over "the tablet of the stars of heaven" (31) – the Akkadian gloss of 42 translates the
+  idiom *mitluku* "to deliberate": thinking is the heart's labour. Enki, in a long chain of "when he built, when he
+  opened the house of wisdom, when he stood at the door of wisdom in its street" (40–49), blesses her into the economy
+  of the palace – oil, cream, seal, steward, grain heap – and the hymn ends with praise of Enki, not of Nisaba: the
+  Tetrad closes at the source of wisdom. The Lagaš stone (Ur III?) shows the hymn two centuries older than the school.
+- **The Bible (shared motifs).** The house of wisdom and its door in the street (29, 45–46) ↔ Prov 9:1, 1:20, 8:34;
+  wisdom "of the gods" ↔ Prov 8:30; the heavenly scribe ↔ Ezek 9:2, Mal 3:16; the written tablet in a god's hand ↔ Exod
+  31:18; the heavens as a book (31) ↔ Isa 34:4; flax and barley as the pair of the field (14, 17) ↔ Exod 9:31; the
+  harvest festival of the chief god (18) ↔ Exod 23:16; the libation of beer (22) ↔ Num 28:7. [cognate]s: *engar* `אִכָּר`,
+  *e₂-gal* `הֵיכָל`.
+- **ETCSL corrected:** "He approaches Nisaba" (27) has Nisaba as subject; "appease" vs "appoint" are one lemma in ORACC,
+  two words in ETCSL (we follow the sense); "holy" is *kug* "pure"; "good woman" is *munus zid* "the true woman".
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
