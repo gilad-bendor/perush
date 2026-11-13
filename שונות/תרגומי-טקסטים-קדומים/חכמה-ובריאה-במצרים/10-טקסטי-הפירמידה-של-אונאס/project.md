@@ -911,5 +911,196 @@ ferryman "Face-behind-him", climbs Re's ladder, stands at the gate of Nun – an
 - **A remembered maqaf is a remembered verse**: four quotations drafted from memory carried Psalms-style hyphens or
   an invented clause (a "Lev 16"-like line that is not in the Bible); `--show` before every quotation caught them.
 
+## UN8 (PT 277–301)
+
+Round 8 run 1, translator 6 (2026-11-13). Files: `annotated-UN8.rtl.md`, `translation--intro-UN8.rtl.md`,
+`translation-UN8.rtl.md` (generated), `translation.rtl.md` (generated).
+
+### Scope
+The antechamber's **east wall** (PT 277–301): 127 rows, labels `277.1` … `301.36` (no rows 278.1, 293.3, 299.4: Allen's
+lines the witness lacks; `278.2b`, `301.35b`: Allen's repeated numbers). Witnesses: Unas's own wall for 98 rows;
+**Teti** (`{טטי}`) for PT 277, 280, 283, 289, 290, 292 (15 rows: the TLA did not record Unas's copies); **Pepi II**
+(`{פפי ב}`) for PT 299 (4 rows, 299.3 and 299.5 almost wholly restored); **Allen 2013** (`{אלן}`) for PT 281 and 284
+(10 rows). The text in a sentence: a second series of serpent and protective spells – mythic precedents (Horus fell
+for his eye, Seth for his testicles), the refrain "fall! slither!", Mafdet leaping on the snake's neck, the nail, the
+black knife, Osiris's sandal-straps and Horus's sandal, threats by the snake's own name – with whole spells of
+unidentified (possibly Semitic) words (281, 285–286); then the ferry spell (300: Kherty, ferryman of the boat Khnum
+made) and PT 301: cakes to the primeval pairs (Nun–Naunet, Amun–Amaunet, Atum–Ruty) so that they will not hinder the
+king's crossing, and the great left Eye of Horus brought back "sound", named as oils, willow and faience.
+
+### Sources consulted
+- The base: AED-TEI through `egypt_tools.py data UN8`; Allen 2013's line under each row (a check; PT 281, 284 from it,
+  never copied: the פירוק quotes only the words it parses).
+- Rank 3: the TLA's German (`tr UN8`), read after drafting each group (277–288, 289–296, 297–299, 300–301; nothing for
+  PT 281, 284 and most of 285–286). Allen 2005/2015, Faulkner 1969, Steiner 2011 only from memory, never quoted
+  (Steiner only for the general claim).
+- Precedents: a scratch lemma→Hebrew index built from the פירוק bullets of every drafted file (TLA id → Hebrew), then
+  `lex` / `grep --all` for every new word (collisions found and fixed: see Progress log).
+- Bible verses printed with `check_bible_quotes.py --show` before quoting: Gen 2:7, 2:22, 3:1, 3:8, 3:14, 3:15, 8:21,
+  49:17; Ex 3:13, 25:5; Num 21:6, 21:9; Deut 32:10, 32:24; 2 Sam 12:30; Isa 1:16; Amos 6:6; Mic 7:17; Nah 3:8; Ps 58:5,
+  58:7, 91:13, 133:2, 140:4; Song 1:3 (printed, not used: Ps 58:6, Ps 2:7, Deut 8:15, 32:33,
+  Isa 14:13, 65:25, Jer 43:13, Job 20:16, Eccl 10:11, Ex 30:25, Gen 22:6, 2 Kgs 18:27).
+
+### Decisions
+- **The serpent vocabulary of UN5 binds** (renderings §13.6.3.2): `נחש` only for ḥfꜣw (298.2, the one occurrence);
+  hjw `הִיוּ` (293.7, 298.6), kꜣ "male snake" `הזכר` (298.6; 299.3 `[זכר]`), ḏ.t `המזדקפת` (285.4, 299.1), zpꜣ `נַדָּל`
+  (284.3, 299.1), the refrain `נְפוֹל! זְחַל!` (277.2, 289.2 byte for byte = UN5 229.3; 297.5 `נְפוֹל! שכב! זְחַל!` with
+  sḏr), sḏr `שכב`, ḫr `נפל`, zbn `זחל` (also in 277.1 "Seth slithered", against the TLA's "strauchelte", so that the
+  myth and the refrain sound alike), tf `ריר` (278.2b). `שרף` nowhere. Every other serpent word by sense or
+  transliterated: ḫꜣz.t `המטפסת` (TLA 'Kletternde'), sḏḥ `הסֶגֶ׳ח` (NU10's form without `נחש`), wfj `וֶפִי`, hkj / hkr.t
+  `הֶכִּי` / `הֶכֶּרֶת`, ṯṯw `צֶ׳צֶ׳וּ`, hmṯ / hmṯ.t `הֶמֶצ׳` / `הֶמְצֶ׳ת`, nꜣš.wtj `נָאשׁוּתִי?` (see Open), jꜣṯrn `אִיאָצֶ׳רֶן?`,
+  nnj-mw.t=f `*דחוי־אמו*?` (TLA), nmj / nmj.t `*הנודד*` / `*הנודדת*`, bꜣꜣj ḥḏ `שוכן־החור הלבן`, fnṯ `תולעת`, jni̯-ḏi̯=f
+  `מביא־מתנתו`, ḏsr-tp `קדוש־הראש` (UN7, NU).
+- **299.5 copies UN7 273-274.45** changing only what the Egyptian changes (no wr; the king's name for =f):
+  `{פפי ב} אשר ימצא [פֶּפִּי] [נֶפֶרְכָּרֶע] [בדרכו] – [יאכל] [הוא] [אותו] [לו], [*נָא*?].` – the result equals UN6 254.7's
+  pattern with Pepi's name; brackets per the AED (⟨gmi̯⟩ and the restored ending `.y` not bracketed). 299.1 = UN5 240.1
+  after Pepi II's `דברים לאמר:`. 293.7 = UN5 237.2; 298.6 follows UN5 226.3 (+ `הזכר,`); 282.4 = the second half of UN5
+  238.3; 290.1 opens like UN5 228.1; 293.6 like UN5 226.4.
+- **Verbs**: ḫsf `הדף` (301.9, SI/MK precedent) – also 278.2's stative, read as passive `*נהדף*?` (TLA: "having
+  approached"); ṯfj / ṯjf `נוּס` (vocalized; `הסתלק` is rwj's, `ברח` wꜥr's); jfn `סוֹב` (`הסתובב` is UN4's nnj);
+  šꜣs `דרס` (`רמס` is NU6's ḫbḫb); jki `אַטֶּה` (נטה = bend and stretch out, like jki); šꜥ `חתך` (NU8); sṯꜣ `משך`
+  (AM); sšr `רוקן`; pꜣḫ `שרט`; bšj `הקיא` (AM); ḫsf / ḥwj / tkk `הדף` / `הכה` / `תקף`; jmn `הסתיר`; jꜥj `נסק` (UN7,
+  also 301.21 where the TLA has "nähern") beside sjꜥ `העלה` (301.32); jꜣq `עלה` (301.20); qd `בנה` (301.13,
+  renderings §4.1); sꜥnḫ `החיה` (vocalized `הַמְחַיֶּה`, `יְחַיֶּה`); wtṯ `הוליד` (MT, NU6); smn `קבע`; sḥtp `הניח את
+  דעת` (AM, NU); wꜥb `טהר`, sꜥb `זיכך` (UN7), sbꜣq `הַזְהֵר` (vocalized; NU9 `מַזְהִיר`); ssn `נשם`; nꜥj `הפליג`; ḫnz
+  `שוטט`; bꜣ (verb) `היה לבָּא`, spd `חד`.
+- **Nouns**: nḥb.t `צוואר` (SI B138; `עורף` is wsr.t's in UN3 and sꜣ's in SI); ḏnj.t `חבית` (`קנקן` is WE's ḏwjw);
+  nm `סכין` vs ds `מאכלת` (UN4, UN6); sḫ.t `מכה` (WE 12,17); nšz `טיפת־ארס`; mtw.t "venom" `ארס` (298.4 – see Open);
+  tp(j).w-rʾ `שיני־פיך`; rwḏ `רצועת־סנדל`, ṯbw.t `סנדל`; ꜥn.t `ציפורן` (UN5); ḥꜣj "Beistand" `סומך` (`מגן` is AM's ḫwj);
+  ḥkn.w "praise" `תהילה` (UN5 238.3) and the verb ḥkn `הלל`, ḥknw-oil `שמן־חֶקֶנוּ` (SS); pꜣ.t `עוגה` (AM); ṯ.wt
+  `שולחן`; šw "shade, shelter" `סוכך` (`צל` is šw.t's, UN7; `מחסה` is mk.wt's, UN6; `בצלם` would trip the צלם gate);
+  jd.t `ניחוח` (a third scent word beside sṯ `ריח` and bdd `בושם`; never next to `ריח`); zmj.t `השממה` (ḫꜣs.t is
+  `המדבר`); ḥw.t "rain" `גשם` (WE); wꜣḏ (stone) `האבן־הירוקה`; ḥꜣ.tt `שמן־משובח` (NU9); ṯḥn.t `צְ׳חֶנֶת` (NU5); ṯr.t
+  `עֲרָבָה` (vocalized); ꜣqs `*גלימה*` (`בגד` is gated to the garment words); wrr.t `הגדולה` (UN7); ꜣꜥꜥ.w
+  `*דוברי־הלשון־הזרה*?`.
+- **Names fixed here** (first occurrence vocalized): Bꜣbj `בָּבִי` (NU1); Ḫntj-Ḫm `אשר־בראש־חֶם` (with `[היתר שער: חם …]`
+  in the entry: the חם gate does not see `Ḫm` after a hyphen); Ḫrtj `חֶרְתִּי`; Nzꜣ.t `נֶסָאת`; jqh.t `האִיקְהֶת`; Ḫnmw
+  `חְנוּם` (AM); Zkr `סוֹכַּר` (NU2); Rʾ-sṯꜣw `רֶא־סְטָאוּ` (NU1); Pḏw `פֶּגֶ׳וּ`; Nn.t `נָאוּנֶת`; Jmn / Jmn.t `אָמוֹן` /
+  `אָמוֹנֶת`; Rwtj `שני־אריות` (NU); mẖnm.tj `המְחֶנְמְתִי?`; Nḥj `נֶחִי`; Šꜣ.t `שָׁאת?`; Šzm.t `שֶׁסְמֶת`; Ḫnz.wt `חֶנְסוּת`;
+  Rnn-wtt `רֶנֶנוּטֶת`; Zḫn-wr `אופף־גדול` (NU9); Sbk `סֻבֶּךְ` (renderings §13.2; NU7 `סוֹבֶּךְ`); Ṯḥnw `צְ׳חֶנוּ` (not
+  `לוּב`: the Bible's Lubim come from the later Rbw); ḥꜥpj `חַעְפִּי` (MR); ḏꜥꜥmjw `גַ׳עַמְיוּ`; Min `מִין` ★, Mafdet
+  `מָאפְדֶת`.
+- **Rejected**: `נחש` for any serpent word but ḥfꜣw (nꜣš.wtj included); `פתן`, `צפע`, `שפיפון`, `אפעה`, `עכשוב`; `רמס`
+  for šꜣs (taken; Ps 91:13 stays in the apparatus); `מבול` / `שטפון` for ḥw.t (`גשם`); `לוב` for Ṯḥnw; `מצבה` for tḫn
+  (284.5, transliterated); `בגד` for ꜣqs; `צל` / `מחסה` for šw.
+
+### Open decisions for the user
+- **mtw.t** (tla854515) is `זרע` in UN3 215.16 and UN4 219.76 (seed) and `ארס` here (298.4, a snake's venom): one
+  Egyptian word for the body's potent fluid; two Hebrew words by context. Unify (and how), or keep the split?
+- **nꜣš.wtj** (297.1), TLA "[eine Schlange (?)]": it sounds like Semitic *nḥš* `נחש`; kept transliterated `נָאשׁוּתִי?`
+  with a hedged [cognate] (hypothesis) row. If the lead wants it licensed for `נחש`, the gate needs tla852810.
+- **ḫsf in 278.2** read as a passive stative `*נהדף*?` (keeping the lemma's `הדף`); the TLA reads an active "having
+  approached". Acceptable?
+- **ṯfj `נוּס`, jfn `סוֹב`, šꜣs `דרס`, nḥb.t `צוואר`, ḏnj.t `חבית`, šw `סוכך`**: each chosen to avoid a collision with an
+  earlier key's word for another lemma; the lead may prefer to re-assign.
+- **PT 281, 284, 285.2–286.4**: mostly unidentified words, transliterated with `?` (Steiner's Semitic readings not
+  used). A check against Steiner 2011 could translate some.
+- **300.3–300.4**: the AED/TLA reading `sn=nj pw` "our brother (?)" followed; Allen reads "these two brothers" (the
+  ferrymen).
+- **jk.t `*התגרות*?`** (282.1) shares `התגרות?` with AM 21.10 (štm, also uncertain).
+
+### Progress log
+- Built the lemma→precedent index (scratch). Drafted 277–284 (26 rows), read `tr`, wrote the entries, `fill` +
+  `verify` (0 problems); 285–292 (27 rows); 293–299 (33 rows); 300–301 (41 rows). `verify UN8`: 0 problems after each.
+- Pass (a) fidelity: brackets of 299.2–299.5 word by word (šꜣ[s]=[f] unbracketed: the body is written; 299.5 ⟨gmi̯⟩
+  unbracketed); the Teti / Pepi / Allen variants noted where Unas's own reading differs (277.1 kꜣ for Seth, 283.1 third
+  person, 289.1, 290.1 sꜣb, 299.1 no ḏd-mdw, 300.3–300.4); every sḏm=f / sḏm.n=f / stative checked (291.1–291.2 and
+  301.18–301.19 statives, 293.5 jmi̯=f "lest"); 301.33 read transitive with the TLA ("purify Unas"); bullet order
+  normalized in every entry; the nꜣš.wtj note softened (no attribution to Steiner).
+- Pass (b) consistency: every new Hebrew word grepped across the corpus; six collisions fixed (ṯfj `ברח`→`נוּס`, jfn
+  `הסתובב`→`סוֹב`, šꜣs `רמס`→`דרס`, nḥb.t `עורף`→`צוואר`, ḏnj.t `קנקן`→`חבית`, šw `מחסה`→`סוכך`); the refrains and
+  copies compared with UN5 / UN7 (above); `אוּנָאס` vocalized at its first line (278.3); `אֵלִים` vocalized throughout
+  (trap).
+- Pass (c) Hebrew: the generated `translation-UN8.rtl.md` read through: 300.3–300.4 punctuation, `הַמְחַיֶּה` / `לֵךְ`
+  vocalized; three footnotes added (281.1 the foreign spells, 299.5 the Cannibal Hymn's line, 301.17 the Eye).
+- `build UN8`: 127 lines, 3 footnotes. `check_bible_quotes.py` on the annotated, intro and translation files: 0
+  problems. `verify UN8 --strict`: 0 problems, 0 repeated-line differences.
+
+### The text on its own terms
+- **Myth as precedent** (277.1, 289.1): "Horus fell because of his eye, Seth slithered because of his testicles" – the
+  gods' own wounds are the pattern the snake must follow: "fall! slither!".
+- **The word that recoils** (283.3, 284.2–284.3, 292.1–292.2): "O taker, do not take!"; "the attacker attacked";
+  "your approaches are for your approacher" – the snake is defined by its act, and the act turns back on it.
+- **The name is the weapon** (287.1, 293.5, 301.10–301.11): the snake fears that Unas will say its name ("Wanderer, son
+  of a Wanderess"); conversely Unas "knows the god's name" – knowing names is power and passport.
+- **Sound as substance** (278.2b, 279.1–279.2, 281, 285–286, 292.1): *hn tf hn tn*, *tkkj tkkj*, *phtj pṯtj*,
+  *kbnw zbnw* – the spells are built of repeated syllables; some may be a foreign tongue, written as heard.
+- **The gaze is contact** (288.2, 293.2): "Eye of Unas, do not look at him"; "do not let Unas see you" – sight joins
+  the two, so it is forbidden both ways.
+- **The snake as a messenger** (288.3): "do not do your mission against Unas" – someone sent it; the spell cancels the
+  errand.
+- **Humiliation** (287.1–287.2, 297.4–297.5): the snake "rejected by its mother", falling in its own excrement and urine
+  before the eyes of its mother Nut.
+- **Animals and goddesses as protectors** (295, 297–298): Mafdet, the small predator, leaps on the snake's neck; her
+  claw is the knife; Re's uraeus rises against the snake of the earth – snake against snake; Renenutet, the cobra
+  goddess of harvest, "loves you" (301.26).
+- **The tread of the king** (298.2, 298.5, 299.2): the snake "under Unas's toes", the four straps of Osiris's sandal,
+  Horus's sandal that tramples.
+- **Rebirth from a jar** (294.3–294.6): Unas sleeps in his jar and comes out; his appearing is at dawn – burial as
+  gestation, the sunrise as birth.
+- **The ferry made by the potter god** (300.1): Khnum, who shapes men on the wheel, made the boat that takes the dead
+  king across.
+- **Feeding the oldest gods** (301.1–301.9): cakes for the primeval pairs, who made, begot and established the gods –
+  and in return they must not hinder the king; the offering is a contract.
+- **The Eye returned whole** (301.17–301.19): the left eye (the moon), torn out by Seth, brought back "sound" (*wḏꜣ.t*,
+  the wedjat) with its water and its red in it.
+- **Names that are things** (301.20–301.25): a pun on every line – ascend / garment, brow / finest oil, rejoice /
+  willow, shine / faience, praise / ḥknw-oil: the name is the nature of the thing, and the sound links them.
+- **The king at the four quarters** (301.14–301.16, 301.29–301.31): three Horuses of the south and east, the crown taken
+  from the Libyans in the west, Sobek sailing in the west, the scents of Shezmet in the east.
+
+### Key parallels
+- 298.3 ↔ Gen 3:15 `הוּא יְשׁוּפְךָ רֹאשׁ` [divergence]: the snake's head cut off now, by a goddess's knife-claw, not a
+  lasting enmity; 298.2, 299.2 ↔ Gen 3:15 `וְאַתָּה תְּשׁוּפֶנּוּ עָקֵב` [divergence]: the snake under the king's toes, the
+  sandal victorious.
+- 298.2 ↔ Ps 91:13 `עַל-שַׁחַל וָפֶתֶן תִּדְרֹךְ` [equivalent]; 299.2 and 298.5 ↔ Ps 91:13 `תִּרְמֹס כְּפִיר וְתַנִּין`
+  [equivalent / divergence]: treading on the serpent.
+- 298.4 ↔ Ps 58:7 `אֱלֹהִים הֲרָס שִׁנֵּימוֹ בְּפִימוֹ` [equivalent]: the snake's teeth pulled from its mouth – Psalm 58's
+  image (after the deaf adder and the charmers, 58:5–6) is here a working spell; 285.1 ↔ Ps 58:5 `חֲמַת-נָחָשׁ`, Ps 140:4
+  [equivalent]: the venom in the mouth.
+- 277.1, 297.5 ↔ Gen 3:14 `עַל גְּחֹנְךָ תֵלֵךְ` [divergence]: falling and crawling – first the gods' fate, then a
+  command, not a curse for all time; 277.2 ↔ Mic 7:17, Deut 32:24 `זֹחֲלֵי` [equivalent]: the crawler's verb.
+- 288.2 ↔ Num 21:9 [divergence]: looking at the bronze serpent heals; here the king's eye must not look at the snake.
+  288.3 ↔ Num 21:6 [divergence]: the snake as a sent agent. 288.1 ↔ Gen 49:17 [divergence]: the snake on the road.
+- 301.13 ↔ Gen 2:22 `וַיִּבֶן` [equivalent]: a god "builds" a living body (qd); 2:7 [divergence].
+- 301.22 ↔ Amos 6:6 `וְרֵאשִׁית שְׁמָנִים` [equivalent]: the finest oil called "first" in both languages.
+- 301.25 ↔ Song 1:3 `שֶׁמֶן תּוּרַק שְׁמֶךָ` [divergence]: name/oil wordplay in both cultures, independently.
+- 301.29 ↔ 2 Sam 12:30 [equivalent]: taking the crown of foreign kings.
+- 294.1 ↔ Ex 25:5 `עֲצֵי שִׁטִּים` [cognate: loanword šnḏ.t]; 297.1 nꜣš.wtj ↔ Gen 3:1 `נָחָשׁ` [cognate, hypothesis only].
+
+### Lines shared with other texts
+- 277.2 = 289.2 = UN5 229.3 (`נְפוֹל! זְחַל!`); 297.5 = the refrain with sḏr (UN5 226.3's `שכב`).
+- 293.7 = UN5 237.2 (`הִיוּ, שכב!`); 298.6 ≈ UN5 226.3 (+ `הזכר,`).
+- 299.1 = `דברים לאמר:` + UN5 240.1; 299.5 = UN7 273-274.45 / UN6 254.7 (changed only for wr and the name; above).
+- 282.3–282.4 ≈ UN5 238.3 (split over two lines; `שורך הוא זה, הנכבד, אשר נעשה זה נגדו.` identical).
+- 290.1 = 290.3 (first half = UN5 228.1); 293.6 ≈ UN5 226.4.
+- Inside UN8: 294.4 = 294.6; 294.3 ≈ 294.5; 291.1 ≈ 291.2; 301.2 = 301.4; 301.1 / 301.3 / 301.5 (`עוגתך – לך, X`);
+  301.14–301.16 (`בא אונאס אליך, X`); 301.18–301.19 (`X בה, שלמה`); 301.20–301.25 (`בשמך זה, "X"` / `בשמה זה, "X"`).
+- With UN7: 301.14 `בא אונאס אליך,` = UN7 270.4; 301.21 jꜥj `נסק` = UN7 267.14. For UN9: the ferry spells may take
+  300.1's `מעבורתן` and Kherty `חֶרְתִּי`.
+
+### Proposals for the shared renderings
+1. **Terms**: ṯfj `נוּס`; jfn `סוֹב`; šꜣs "trample" `דרס`; nḥb.t `צוואר`; ḏnj.t `חבית`; nm "knife" `סכין` (ds `מאכלת`);
+   sḫ.t `מכה`; šw "shade, shelter" `סוכך`; jd.t `ניחוח`; pꜣ.t `עוגה`; ḥkn `הלל` / ḥknw `תהילה`; wtṯ `הוליד`; ḏ.t
+   (body) `גְּוִיָּה` confirmed; ḥꜣj `סומך`; mtw.t: `זרע` / `ארס` by context (Open).
+2. **The name formula of PT 301**: `m rn=k pw n(,j) X` = `בשמך זה, "X"` (fem. `בשמה זה, "X"`), extending UN4's `בשמך "X"`.
+3. **Names**: Kherty `חֶרְתִּי`, Nesat `נֶסָאת`, Naunet `נָאוּנֶת`, Amaunet `אָמוֹנֶת`, Renenutet `רֶנֶנוּטֶת`, Shezmet
+   `שֶׁסְמֶת`, Khensut `חֶנְסוּת`, Nehy `נֶחִי`, Pedju `פֶּגֶ׳וּ`, Tjehenu `צְ׳חֶנוּ` (never `לוב`); Sobek: one form for the
+   corpus (`סֻבֶּךְ` §13.2 vs NU7 `סוֹבֶּךְ`).
+4. **Gate**: the `חם` gate's licence `(?<![\w,.-])ḫm` misses the place name Ḫm after a hyphen (`Ḫnt(,j)-Ḫm`, 278.2);
+   handled here by `[היתר שער: …]`. Proposal: let the hyphen precede (`(?<![\w,.])`) for Letopolis.
+5. **Trap**: `סוֹב` / `נוּס` unvocalized read as other words ("סוב" is rare, "נוס" is fine) – no trap needed; `הַזְהֵר`
+   (sbꜣq) must stay vocalized ("beware!").
+
+### Lessons for the guidelines
+- **A lemma→Hebrew index across the corpus pays for itself in a spell text**: half the words of these spells are new,
+  and six first choices collided with another lemma's Hebrew in an earlier key; `grep --all` on each new word after
+  drafting caught them (the collision list belongs in the pass (b) log).
+- **The rank-3 "parallel" is sometimes just a word's sound**: nꜣš.wtj "sounds like `נחש`"; keep such a word
+  transliterated, tag the contact as a hypothesis, and let the lead decide – never license the biblical word on a
+  sound alone.
+- **A pun chain (PT 301's "in its name of X") is explained, not imitated**: a Hebrew pun of one's own (`ערב` /
+  `עֲרָבָה`) would add what the Egyptian does not say.
+
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)

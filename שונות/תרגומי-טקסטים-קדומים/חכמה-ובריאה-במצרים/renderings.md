@@ -1161,3 +1161,13 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
    `גַּב` vocalized beside `גֶּבּ`.
 3. **Open (for the user):** mds `קוטל` / BD `עורץ`; mšrw.t `סעודת־ערב` / UN6 ms.wt `ארוחת־ערב`; the ḏꜣi̯ split by valence;
    jꜥj / sjꜥ two roots; PT 271's unclear lines (Allen only); 273-274.56 fjw "be disgusted" (TLA), not "rejoice".
+#### 13.6.6 UN8 (PT 277–301), translator 6, merged 2026-11-13 (full list in `10-…/project.md`, "UN8")
+1. **Copied:** 277.2, 289.2 = UN5 229.3 (`נְפוֹל! זְחַל!`; 297.5 `נְפוֹל! שכב! זְחַל!`); 299.5 = UN7 273-274.45; 293.7 = UN5
+   237.2; 299.1 = UN5 240.1.
+2. **Collisions settled in the draft:** ṯfj `נוּס`, jfn `סוֹב`, šꜣs (trample) `דרס`, nḥb.t `צוואר`, ḏnj.t `חבית`, šw (shade)
+   `סוכך`; ḫsf `הדף`; Ṯḥnw `צְ׳חֶנוּ` (not `לוב`); PT 301 "in this your name of X" `בשמך זה, "X"`; šnḏ.t `שִׁטָּה` [cognate].
+3. **Gate fixed (the coordinator):** the `חם` gate licenses Ḫm after a hyphen (`Ḫnt(,j)-Ḫm`).
+4. **Kept by sense (the coordinator):** mtw.t "semen" `זרע` / a snake's "venom" `ארס` (298.4) – one lemma, two senses.
+5. **Open (for the user):** nꜣš.wtj (a name that sounds like `נחש`) kept transliterated; the unidentified words of PT 281,
+   284, 285–286 (Steiner 2011 might read some); 300.3–4 the AED's "our brother (?)" against Allen's "these two brothers";
+   Sobek `סֻבֶּךְ` / NU7 `סוֹבֶּךְ` (for the lead).
