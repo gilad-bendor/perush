@@ -19999,6 +19999,19 @@
      "69b8bc2418ef2a75376cbf4bfdb297f5c57c884efcbcede5c4ecc670099a7ef6"
     ]
    }
+  },
+  {
+   "id": "Allen-2013--New-Concordance-of-the-Pyramid-Texts/PT I (Introduction).pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://isac-idb-static.uchicago.edu/multimedia/301963/PT%20I%20(Introduction).pdf",
+   "note": "Allen 2013, A New Concordance of the Pyramid Texts I (free, ©): the Unas line division and the check (Round 8 run 1); then run egypt_tools.py allen-convert",
+   "files": {
+    "Allen-2013--New-Concordance-of-the-Pyramid-Texts/PT I (Introduction).pdf": [
+     1498813,
+     "9044ad9ef4c4978f983d1a8d4bfd4016e5e66b18156fb090fba4c23dd804dac0"
+    ]
+   }
   }
  ]
 }
