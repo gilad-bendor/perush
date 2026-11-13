@@ -326,3 +326,10 @@ Coordinator: 25 – the workarounds stand (EB 174 `תוף` for *ub*; NG 113–11
 - KH 6 *an-ub-da limmu₂*: *an* is "heaven" in the fixed phrase, not the god: `ארבע הפינות`.
 - Splits by sense recorded: *us₂* `צמוד` / `דבק` / `מגיע` (in *an-e us₂*), *dili*, *teš₂* (`יחד`).
 
+### 5.10 Review R3 and the corpus-wide consistency pass (merged 2026-11-13)
+- *ḫur-saĝ* = `רכס` (singular) / `הררים` (plural; collective) – never `הר`, which is *kur*'s (12 lines aligned).
+- *ḫar-ra-an* = `אורח`; *kaskal* = `דרך` (`מסע` of a campaign, EB 74: a split by sense); `דרך` is shared by *a-ra₂*, *in-di₃*, *ĝiri₃* where the sense is the same "way" (accepted, listed for the lead).
+- *muš₃* = `מראה` everywhere (NG 29 aligned).
+- EB 15, 40, 99: *ḫur-saĝ-ĝa₂* is a locative after the stem's ĝ, not "my" (ORACC's misparse).
+- The splits by sense the reviewer kept are listed in `1-העשירייה/project.md` § Review R3 and accepted by the coordinator.
+
