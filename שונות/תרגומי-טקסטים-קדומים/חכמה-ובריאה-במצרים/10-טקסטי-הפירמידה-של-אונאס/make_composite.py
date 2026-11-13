@@ -160,6 +160,8 @@ for o in occ:
         if not (r['nums'] & kn): continue
         if r['king'] not in SIG: continue
         sig = SIG[r['king']]
+        mm = re.match(r'^(Nt|Jp|Wd|An|Ib)/', r['a'] or '')
+        if mm: sig = mm.group(1)   # a queen's pyramid (dated by her king in AED): Neith, Iput, Wedjebten, Ankhesenpepi
         same = False
         if r['king'] == 'Unas':
             ca = int(re.match(r'\d+', r['a']).group()); cb = int(re.match(r'\d+', r['b']).group())
@@ -187,8 +189,9 @@ for o in occ:
         if c['same']: return (0, 0, 0)
         if c['sig'] == 'W': return (1, -c['sc'], 0)
         good = c['sc'] >= 0.6 and c['lost'] < 0.25
-        if good: return (2, PREF.index(c['r']['king']), 0)
-        return (3 if c['sc'] >= 0.5 else 4, round(c['lost'], 1), PREF.index(c['r']['king']))
+        order = ['T', 'P', 'M', 'N', 'Nt', 'Jp', 'Wd', 'An', 'Ib']   # the kings' copies first (a queen's is feminine)
+        if good: return (2, order.index(c['sig']), 0)
+        return (3 if c['sc'] >= 0.5 else 4, round(c['lost'], 1), order.index(c['sig']))
     cands.sort(key=rank)
     c = cands[0]
     alts = [f"{x['sig']}:{x['r']['tid'][:6]}:{x['sc']:.2f}/{x['lost']:.2f}" for x in cands[1:6]]

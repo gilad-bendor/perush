@@ -247,7 +247,8 @@ UN_PARTS = {"UN1": "חדר הקבורה, הקיר הצפוני (א): טקס הק
             "UN7": "הפרוזדור: הקיר הדרומי וגמלון המזרח", "UN8": "הפרוזדור: הקיר המזרחי",
             "UN9": "הפרוזדור: הקיר הצפוני; המסדרון"}
 # the Hebrew tag that opens a line taken from another witness than Unas's own wall (guidelines §6.8: `{<siglum>}`)
-UN_SIG_HEB = {"T": "{טטי}", "P": "{פפי א}", "M": "{מרנרא}", "N": "{פפי ב}", "A": "{אלן}"}
+UN_SIG_HEB = {"T": "{טטי}", "P": "{פפי א}", "M": "{מרנרא}", "N": "{פפי ב}", "Nt": "{נית}", "Jp": "{איפות}",
+              "Wd": "{ודג׳בתן}", "An": "{ענחספפי}", "A": "{אלן}"}
 ALLEN_DIR = os.path.join(ROOT, "sources", "Allen-2013--New-Concordance-of-the-Pyramid-Texts")
 
 
@@ -672,6 +673,12 @@ RESERVED = [
     (W + alt("זית", "זיתים", "הזית", "הזיתים", "זיתי") + E, r"ḏd,t|ḏd\.t|ḏdt|bꜣq|bꜣq,t|\bbq\b|bq,t", "זַיִת only for ḏd.t / bꜣq 'olive' [equivalent Deut 8:8]", TALES),
     (r"(?<![א-ת])ו?" + alt("זבת", "זבה") + E, None, "`זָבַת חָלָב וּדְבָשׁ` never (Ex 3:8)", TALES),
     # the serpent (the dossier rule: `נָחָשׁ` the comparison word for every culture's serpent)
+    # the Pyramid Texts of Unas (renderings §13.5; Round 8 run 1): the ladder of Gen 28:12 only for mꜣq.t; the
+    # seraphim / the bronze serpent never; the angels never (the netherworld corpus's reservation)
+    (W + alt("נתר", "הנתר", "בנתר") + E, r"nṯr,j|nṯr\(,j\)|nṯrj|tla90510", "נֶתֶר only for nṯr.j 'natron' [cognate: loanword, Jer 2:22]", UNAS),
+    (W + alt("סולם", "הסולם", "סולמות", "בסולם", "סולמו") + E, r"mꜣq,t|mꜣq\.t|mꜣqt|tla67390", "סֻלָּם only for mꜣq.t 'ladder' [equivalent Gen 28:12]", UNAS),
+    (W + alt("שרף", "שרפים", "השרף", "השרפים", "שרפי") + E, None, "שָׂרָף never (Num 21:6–8, Isa 6:2, 14:29, 30:6): the serpent words by their own sense", UNAS),
+    (W + alt("מלאך", "מלאכים", "המלאך", "המלאכים", "מלאכי", "מלאכיו") + E, None, "מַלְאָךְ never (Gen 28:12; the netherworld corpus's reservation): wpw.tj = שָׁלִיחַ", UNAS),
     (W + alt("נחש", "נחשים", "הנחש", "הנחשים", "נחשי", "נחשה") + E, r"ḥfꜣ|ḥfꜣw|ḥfꜣ,w|ḥfy|ḥfj|ꜥꜣpp|ḏdf|nḥꜣ|nꜣw|ꜥpp|sꜣ-tꜣ|ḏd\b|ḏd,t|ꜥrꜥr", "נָחָשׁ only for a serpent word (ḥfꜣw …) [equivalent Gen 3:1, Ex 7:9–12]", TALES),
 ]
 
@@ -681,6 +688,7 @@ RE_ = rf"(?![{V}א-ת])"
 # (regex on the RAW line; condition regex on the licence text: if it matches, the unvocalized string is an error;
 # None = always), why. Renderings §5.3 "Always vocalized".
 TRAPS = [
+    (RW + r"(?:אונס)" + RE_, r"wnjs", "Unas is אונאס (plene, with א): `אונס` reads 'rape' (renderings §13.2)"),
     (RW + r"(?:רע|הרע)" + RE_, r"\brꜥ\b|rꜥw|\bRꜥ", "Re is רַא (renderings §3): an unvocalized רע where the source has Rꜥ is a trap ('evil')"),
     (RW + r"(?:פתח)" + RE_, r"ptḥ|pth", "Ptah must be vocalized פְּתָח ('open')"),
     (RW + r"(?:גב)" + RE_, r"gb\b|gbb", "Geb must be vocalized גֶּבּ ('back')"),
@@ -708,6 +716,8 @@ FORMULAS = [
     (r"\bpꜣ šmm\b|\bpꜣyw =k šmm\b", r"(?:^|\s)[ו]?[ל]?(?:ה)?חם(?:\s|$|[,.;:])", "pꜣ šmm = `הַחַם` (§6.4)"),
     (r"\bgr mꜣꜥ\b", r"(?:ה)?שותק (?:ה)?(?:אמיתי|באמת)", "gr mꜣꜥ = `הַשּׁוֹתֵק הָאֲמִתִּי` (§6.4)"),
     (r"\bn ḫpr\.t\b|\bn ḫp\[?r\]?\.t\b", r"(?:^|\s)[ו]?טרם ", "n ḫpr.t X = `טֶרֶם נִהְיָה X` (§6.5)"),
+    (r"(?:^|\s)hꜣ (?:Wnjs|Ttj|Ppy|Mrj-n-Rꜥ|N\(j\),t|Nj,t)\b", r"(?:^|\s)[ו]?הוי ", "hꜣ NN = `הוֹי` NN (renderings §13.4)", UNAS),
+    (r"(?:^|\s)m n =[kṯ]\b", r"(?:^|\s)[ו]?קח(?:י)? לך", "m n=k X (the offering formula) = `קַח לְךָ` X (renderings §13.4)", UNAS),
     (r"\bḏ\(d\)-mdw\b|\bḏd-mdw\b", r"(?:^|\s)[ו]?(?:דברים לאמר|נאמר)|אמירה", "ḏd-mdw = `דְּבָרִים לֵאמֹר:` (§6.5)"),
     (r"^j \S.* pri̯ m \S+.* n \S", r"^הו .*היוצא", "BD 125: j X pri̯ m Y n sḏm=j Z = `הוֹ X, הַיּוֹצֵא מִ־Y: לֹא …` (§11.5.1)", {"BD"}),
     # --- the Book of the Dead of Nu, BD 175 (renderings §12.4; Round 6 run 2) ---
