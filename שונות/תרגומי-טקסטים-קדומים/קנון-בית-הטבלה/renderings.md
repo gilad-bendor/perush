@@ -288,3 +288,28 @@ Coordinator: 23 – `canon_tools.py` now licenses from the transliteration witho
   בירך` (= Gudea); *ĝiš-kan₄* `עמוד־הפתח`; *ba* `חילק`. Names: Uraš `אוּרַשׁ`, Iškur `אִישְׁכּוּר`, Lugal-ane
   `לוּגַל־אַנֶּה`, Ašimbabbar `אַשִׁימְבַּבַּר`, Ušumgal-ana `אוּשׁוּמְגַּל־אַנָּה`, Ningal `נִינְגַּל`, E-ešdam-kug
   `אֵאֶשְׁדַּמְכּוּג`, E-ana `אֵאַנָּה`, Enheduana `אֶנְחֶדּוּאַנָּה`.
+
+### 5.7 Part 7 – T3, EB and NG (merged 2026-11-13)
+Coordinator: 25 – the workarounds stand (EB 174 `תוף` for *ub*; NG 113–114 `מיטבו`; EB 46, 105 `אשר בו`): recorded as gate lessons; 26 – *nu-banda₃* keeps `ממונה` (the creation corpus's precedent), so T1's *maškim* moves (the consistency review chooses its word after a grep); 24 – the *na-* + ḫamṭu reading of KH (affirmative) and EB (negative) is checked by the review; 27–28 stand.
+
+- **Fixed strings:** the indictment `מאחר שמעצמו לא עשה לי, / מאחר שאת אפו – ארצה – לא קירב לי, / מאחר ששפתיו בעפר לא גרר
+  לי –` (EB 33–35 = 92–94; 2nd person 157–158 `על שאת אפך ארצה לא קירבת, / על ששפתיך בעפר לא גררת –`); `את אימתו לא עשה
+  לי` (*ni₂-bi na-ma-ra-ab-ak*, 30–32); `כעיר שאַן אררה – אל מקומה אַל תשוב! / כאשר אֶנְלִיל מצח האריך – את צווארה אַל
+  ירים!` (49–50 = 108–109); *ka tar … sil* `את תשבחתי יפלח` + *me-teš₂ i-i* `שבח יעלה לי` (EB 52, NG 110–111); *zid-du
+  erim₂-du bar ak* `(להפריד) את הנאמן מן הרשע` (NG 11, 60); *šu/a₂ … nu-e₃* `מידו / מזרועו לא יצא`; *lul zid-bi zu* `את
+  השקר והנאמן שבתוכו – יודע`; *gu₃ … de₂* (address) `פונה אל` (EB 152).
+- **Terms:** *in-nin* `הגבירה`; *a₂-an-kar₂* `אַנְקַר`; *šen-šen* `מלחמה` (*me₃* `קרב`); *ešemen* `חבל־הקפיצה`; *mar-uru₅*
+  (quiver) `אשפה`; *a₂-sag₃* `אבן־קלע`; *ebiḫ₂* `חבל`; *ĝiš-gid₂-da* `רומח`; *niĝ₂-su-ub* `ליטוש`; *ilar* `מקל־קלע`; *ḫa-zi-in*
+  `גרזן`; *ḫul-du* `עושה־הרע`; *a-niĝin₂* `מאגר מים`; *pala₃* `פַּלָּה`; *šer-kan₂ dug₄* `קישט`; *gug* `אודם`; *šita* (weapon)
+  `אַלָּה`; *dur* `רצועה`; *an-usan* `ערב` / `בין־ערביים`; *kan₄* `שער`; *ki-gal* `בסיס`; *mubum* `מוּבּוּם`; *kaskal* `מסע`,
+  *ḫar-ra-an* `אורח`; *gana₂-ur₃* `משדדה`; *kur-ur₂* `שורש ההר`; *muš-saĝ-kal* `הנחש המובחר`; *al dug₄* `שָׁאַל`; *lu₂-tur*
+  `קטן`; *aš₂ dug₄* `קילל`; *allanum* `אלון` [cognate]; *immen* `צמא`; *numun₂(-bur)* `חלפה`; *am-si* `פיל`; *Mullil*
+  `מוּלִּיל`; *kurĝara* `כּוּרְגַּרָּה`; *pilipili* `פִּילִיפִּילִי`; *lilis* `לִילִיס`; *ĝiš-keše₂-ra₂* `סכר`; *e₂-eš₂* `בית־האסורים`
+  (`כֶּלֶא` reserved); *{ĝiš}rab₃* `סד`; *irigal* `אִירִיגַל`; *id₂-lu₂-ru-gu₂* `נהר־המבחן`; *en-nu-uĝ₃* `משמר`; *erim₂-du*
+  `רשע` (= Gudea); *zid-du* `הנאמן`; *bar ak* `הפריד` (`הבדיל` reserved); *kun₄* `מדרגה`; *a-sal-bar* `אַסַלְבָּר`; *dub-la₂*
+  `מגדל־שער`; *ĝiš nu-kuš₂-u₃* `צירי־הדלת`; *suḫub₄* `מנעול`; *umbin* `טופר`; *er₉* `עצום`; *muš₃* `*במה*`; *unken* `אספה`;
+  *ĝiš-bur₂* `פח`; *a-ĝi₆* `גל`; *i-si-iš* `יללה` (`מספד` reserved); *ma₅* `כתש`; *ni₁₀* `החזיר`; *e₂-gi₄-a* `כלה`; *gi-dur kud*
+  `כריתת פתיל־הקנה`; *mi₂ zid dug₄* `טיפוח נאמן`; *ni₂ silim-eš₂ e* `את עצמו, כשלם, משבח` (= Anzud); *kindagal* `גַּלָּב`;
+  *gal₅-la₂* `גַּלָּה`; *im nam-til₃* `טיט החיים`; *ḫuĝ* (calm) `השקיט`; *luḫ* `רחץ`; *udu-i₃* `כבש־שמן`; *igištu* `*מגוננת*`.
+  Names: Elam `עֵילָם`, Subir `שׁוּבִּיר`, Lullubi `לוּלוּבִּי`, Gibil `גִּיבִּיל`, Nungal `נוּנְגַּל`, Nin-egala `נִין־אֵגַלָּה`, Birtum
+  `בִּירְתּוּם`, Ig-alim `אִיגְאַלִים`, Ninḫarana `נִין־חַרַנָּה`, Nezila `נֵזִילָה`, Nindimgul `נִין־דִּימְגּוּל`.

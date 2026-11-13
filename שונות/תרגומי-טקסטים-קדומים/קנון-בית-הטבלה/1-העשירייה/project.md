@@ -359,6 +359,83 @@ Translator T3, Round 8 run 2, 2026-11-13.
   greatest deity" (87) is "the god, the great man"; "offerings" (145) is *sizkur₂* "prayer"; "everyone's speech" (152)
   adds "everyone"; ORACC's machine parse reads the expulsion lines (104–105) as negated.
 
+## Part 7 (EB 1–184, NG 1–121)
+Translator T3, Round 8 run 2, 2026-11-13.
+
+### Progress
+- **EB** (184 entries) and **NG** (121 entries) drafted whole: headers, `## ` sections (EB 9, NG 8),
+  `translation--intro-EB.rtl.md`, `translation--intro-NG.rtl.md`. IB 1 un-vocalized (`אור־יום`) after the decision-23 fix.
+- **Repeated passages fixed before the first copy:** Inana's speech EB 33–52 = 92–111, copied letter for letter, with each
+  Sumerian difference given its own Hebrew (93 no *-ra-*; 98 *UŠ … šub*; 99 *laḫ₅*, *sar-sar*; 101 *ebiḫ₂-bi*; 103 no
+  *-na-*; 106 *tuku*; 110 ⟨ku⟩); the refrains EB 25–26, 30–32, 89–91, 113–115, 176–177, 180–181; the indictment
+  153–158 = 33–35 in the 2nd person; NG 7 / 26 / 39 / 61 / 78 (`מזרועו / מידו לא יצא`), 11 = 60, 82 = 98, 83 = 104, 113 = 114.
+- Three passes: (a) fidelity – *na-* + ḫamṭu in EB 30–35/92–94 read as **negative** (`לא`), proved by the parallel *nu-*
+  in 157–158, against KH's affirmative *na-* (decision 13); EB 159–160 *-ge-en* / *-be₂-en* marû = present (ETCSL past);
+  ORACC's *bara-* for *ba-ra-* (EB 134, 177; NG 82) rejected again; person of 164 (the *-n-* vs the speech context)
+  noted; (b) consistency – `lexmap EB NG` reviewed; lines copied from Lugalbanda (EB 53), Inana's Descent (EB 54
+  `הפַּלָּה`), the Ur lament (EB 47/106 `במאגרי המים … איש הזיכוך`), Enki and Ninḫursaĝa (EB 65), LSU (NG 57), SA 37 (NG
+  112), EWO (NG 18), LB 32 (NG 37, 91), Anzud (NG 62–63); (c) Hebrew – gate-safe wording (`אשר בו` for `שבו`, `שבתוכו`,
+  `מחזיר` for *ni₁₀*, `מיטבו` for `מבחרו`, `תוף` for *ub*), vocalized traps (`שָׁאֲלָה`, `אֵלָה`, `אֵלָתוֹ`, `צִירִי`, `אוֹת`,
+  `גָּלָה`, `גַּלָּה`), fully-vocalized short lines un-vocalized (EB 69, 88, 183–184; NG 121).
+- `verify EB`, `verify NG`, `verify IB`: OK; `check_bible_quotes.py`: 0 problems (it caught one misquote, Ps 7:14).
+
+### Open decisions
+24. **na- + ḫamṭu is negative in EB** (30–35, 92–94: "it did not show me its fear"), affirmative in KH (decision 13):
+    both by context; a corpus note on *na-* would help the reviewers.
+25. **Gate problems (workarounds, for the gate tables):** *ub* (drum) cannot be transliterated (`אוּבּ` hits the `אוב`
+    gate) – EB 174 has `תוף`; `מבחר` is read as מ+`בחר` (NG 113–114 `מיטבו`); `שבו` "in it" (EB 46/105 `אשר בו`).
+26. **Splits by sense:** *sar* `הריץ` (EB 39, 99: the "skipping-rope" game) / `רדף` (IB); *sud* `פשט` (EB 12) / `הרחיק`;
+    *nitalam* `בן־זוג` (NG 85); *si* "fill" `מילא` and "put on (a garment)" (NG 100 `*ימלא*`); *nu-banda₃* `ממונה` (NG 88, =
+    Lugalbanda) collides with T1's *maškim* `ממונה`; *gal₅-la₂* `גַּלָּה` (NG 96, the prison officer; = Gudea) beside the
+    netherworld's *galla* demons; *mar-uru₅* "flood" / *e-mar-uru₅* "quiver" (EB 4, 41, 135–136) – one sign, two words.
+27. **Uncertain lines, marked:** EB 18, 51/110 (*kur-ku*), 63, 72–73, 75, 82, 88, 146, 166; NG 16, 40, 43, 45–46, 50, 71,
+    87 (no negation in the form; `לא` from 75), 100, 102, 116.
+28. **EB 177 *ba-ra-šum₂*** (ORACC "did not give") read as 176 *ba-šum₂* "I gave (my) head" = attacked.
+
+### Proposals for the corpus renderings
+- **Fixed strings:** the indictment `מאחר שמעצמו לא עשה לי, / מאחר שאת אפו – ארצה – לא קירב לי, / מאחר ששפתיו בעפר לא גרר
+  לי –` (EB 33–35 = 92–94; 2nd person 157–158 `על שאת אפך ארצה לא קירבת, / על ששפתיך בעפר לא גררת –`); `את אימתו לא עשה
+  לי` (*ni₂-bi na-ma-ra-ab-ak*, 30–32); `כעיר שאַן אררה – אל מקומה אַל תשוב! / כאשר אֶנְלִיל מצח האריך – את צווארה אַל
+  ירים!` (49–50 = 108–109); *ka tar … sil* `את תשבחתי יפלח` + *me-teš₂ i-i* `שבח יעלה לי` (EB 52, NG 110–111); *zid-du
+  erim₂-du bar ak* `(להפריד) את הנאמן מן הרשע` (NG 11, 60); *šu/a₂ … nu-e₃* `מידו / מזרועו לא יצא`; *lul zid-bi zu* `את
+  השקר והנאמן שבתוכו – יודע`; *gu₃ … de₂* (address) `פונה אל` (EB 152).
+- **Terms:** *in-nin* `הגבירה`; *a₂-an-kar₂* `אַנְקַר`; *šen-šen* `מלחמה` (*me₃* `קרב`); *ešemen* `חבל־הקפיצה`; *mar-uru₅*
+  (quiver) `אשפה`; *a₂-sag₃* `אבן־קלע`; *ebiḫ₂* `חבל`; *ĝiš-gid₂-da* `רומח`; *niĝ₂-su-ub* `ליטוש`; *ilar* `מקל־קלע`; *ḫa-zi-in*
+  `גרזן`; *ḫul-du* `עושה־הרע`; *a-niĝin₂* `מאגר מים`; *pala₃* `פַּלָּה`; *šer-kan₂ dug₄* `קישט`; *gug* `אודם`; *šita* (weapon)
+  `אַלָּה`; *dur* `רצועה`; *an-usan* `ערב` / `בין־ערביים`; *kan₄* `שער`; *ki-gal* `בסיס`; *mubum* `מוּבּוּם`; *kaskal* `מסע`,
+  *ḫar-ra-an* `אורח`; *gana₂-ur₃* `משדדה`; *kur-ur₂* `שורש ההר`; *muš-saĝ-kal* `הנחש המובחר`; *al dug₄* `שָׁאַל`; *lu₂-tur*
+  `קטן`; *aš₂ dug₄* `קילל`; *allanum* `אלון` [cognate]; *immen* `צמא`; *numun₂(-bur)* `חלפה`; *am-si* `פיל`; *Mullil*
+  `מוּלִּיל`; *kurĝara* `כּוּרְגַּרָּה`; *pilipili* `פִּילִיפִּילִי`; *lilis* `לִילִיס`; *ĝiš-keše₂-ra₂* `סכר`; *e₂-eš₂* `בית־האסורים`
+  (`כֶּלֶא` reserved); *{ĝiš}rab₃* `סד`; *irigal* `אִירִיגַל`; *id₂-lu₂-ru-gu₂* `נהר־המבחן`; *en-nu-uĝ₃* `משמר`; *erim₂-du*
+  `רשע` (= Gudea); *zid-du* `הנאמן`; *bar ak* `הפריד` (`הבדיל` reserved); *kun₄* `מדרגה`; *a-sal-bar* `אַסַלְבָּר`; *dub-la₂*
+  `מגדל־שער`; *ĝiš nu-kuš₂-u₃* `צירי־הדלת`; *suḫub₄* `מנעול`; *umbin* `טופר`; *er₉* `עצום`; *muš₃* `*במה*`; *unken* `אספה`;
+  *ĝiš-bur₂* `פח`; *a-ĝi₆* `גל`; *i-si-iš* `יללה` (`מספד` reserved); *ma₅* `כתש`; *ni₁₀* `החזיר`; *e₂-gi₄-a* `כלה`; *gi-dur kud*
+  `כריתת פתיל־הקנה`; *mi₂ zid dug₄* `טיפוח נאמן`; *ni₂ silim-eš₂ e* `את עצמו, כשלם, משבח` (= Anzud); *kindagal* `גַּלָּב`;
+  *gal₅-la₂* `גַּלָּה`; *im nam-til₃* `טיט החיים`; *ḫuĝ* (calm) `השקיט`; *luḫ* `רחץ`; *udu-i₃* `כבש־שמן`; *igištu* `*מגוננת*`.
+  Names: Elam `עֵילָם`, Subir `שׁוּבִּיר`, Lullubi `לוּלוּבִּי`, Gibil `גִּיבִּיל`, Nungal `נוּנְגַּל`, Nin-egala `נִין־אֵגַלָּה`, Birtum
+  `בִּירְתּוּם`, Ig-alim `אִיגְאַלִים`, Ninḫarana `נִין־חַרַנָּה`, Nezila `נֵזִילָה`, Nindimgul `נִין־דִּימְגּוּל`.
+
+### Key findings
+- **The ancient mind.** Ebiḫ is punished for an omission, as the city in Inana B is: it did not put its nose to the dust
+  (EB 34, 157) – and its height, beauty and green slopes are listed as its crimes (153–156). An refuses (the mountain is
+  too terrible even for the gods); Inana acts alone, kills the mountain like a beast (neck, heart, flanks) and then
+  builds a palace and gives the cult performers their instruments – the same "dagger and knife" that Lugal-ane mocked
+  Enheduana with in Inana B 108 are here cult objects (EB 173). Nungal A is a theology of prison: a house that "gives
+  birth to the true man" (56, 60, 103), where the goddess of incarceration is also a midwife (71–72), the ordeal river
+  "does not kill the straight one" (8), and the released prisoner, polished "like silver from the dust", is handed
+  back "to the fair hand of his god" (106–109).
+- **The Bible (shared motifs).** The mountain punished for its height ↔ Isa 2:12–14 (EB 120, 153); "his head in heaven" ↔
+  Gen 11:4 (EB 156, a [divergence]); the warrior sharpening his weapon, arrows ready ↔ Ps 7:13–14 (EB 41, 140); the locust
+  ↔ Joel 1:4 (EB 76); fire in the mountains ↔ Mic 1:4; Elam ↔ Gen 10:22 [cognate]; *allanum* ↔ `אַלּוֹן` [cognate]. NG: the
+  bolt *si-ĝar* `מסגר` ↔ Ps 142:8 / Isa 42:7 `הוֹצִיאָה מִמַּסְגֵּר` (the same word: a Sumerian door-bolt becomes the Bible's
+  prison); `משמר` ↔ Gen 40:3; the stocks ↔ Job 13:27; the ordeal river ↔ Num 5:24; the tablet of life ↔ Ps 69:29; the
+  friends who keep away from the prisoner ↔ Ps 88:9 (`כָּלֻא וְלֹא אֵצֵא`); rescue "from the mouth of disaster" ↔ Job 33:28;
+  refining like silver ↔ Mal 3:3.
+- **ETCSL corrected:** EB "it showed me no respect" is right but its *na-* is negative here, not affirmative; EB 159–160
+  are present, not past; EB 21 "ring out" is *ra* "strike (a song)"; NG "the just / righteous" is *zid-du* `הנאמן` / *si
+  sa₂* `הישר`; NG 45 "naked" is "empty-hearted"; NG 103 "exterminates" is *te-en* "cools"; NG 48 "ineffective" is
+  *niĝ₂-gig* "abomination"; NG 97 "will not be killed" is "his head will not be struck with the stick".
+
 ## Parallels index
 Generated by `../build_parallels_index.py` from the **הקבלה** bullets of the annotated files; merged by Bible verse into `../parallels-index.md`. Do not edit the tables by hand.
 
