@@ -604,7 +604,7 @@ and is vindicated before the Two Truths, going forth with Maat (260).
 - **The king as judge**: wḏꜥ "separate" `הפריד` (UN4; 251.6) but the legal phrase wḏꜥ mdw / wḏꜥ X ḥnꜥ Y `דן (דין)`
   (252.5, 254.43, 260.5) – a sense split; wpj "separate, judge" `פלח` (UN5's `פלח`: 252.6 `הפולח (בין) שני האֵלִים`,
   257.10 `פולח המהומה`); ḏꜣḏꜣ.t `ועד` (NU1); mꜣꜥ.tj `שתי האמת` (BD); mtrw `עֵד`; mꜣꜥ-ḫrw `אֲמִתִּי־הַקּוֹל` (260.4).
-- **tfn / tfn.t "orphan"** (260.5) `חסר־האב` / `חסרת־האב`: `יָתוֹם` is reserved "never" (renderings §5.1) although it
+- **tfn / tfn.t "orphan"** (260.5; **superseded**: the coordinator licensed `יָתוֹם`, renderings §13.6.4.3, applied by the independent review) `חסר־האב` / `חסרת־האב`: `יָתוֹם` is reserved "never" (renderings §5.1) although it
   is exactly the Egyptian word and Ps 82:3 / Deut 10:18 are the parallels – **a gate that blocks the right word**
   (reported; the Hebrew was not bent: `חסר־האב` is a precise description, and the apparatus quotes the verses).
 - **Banks and fields**: jdb `גדה`, wḏb `חוף`, jḫm.t `שפת־המים`; sḫ.t `שדה` (in the names), ꜣḥ.t `אחוזה`.
@@ -1654,6 +1654,58 @@ the translator's reasoned choice, on the line of §2.1); the n sḏm=f lines in 
 209.1–2, 215.35 `לא תכלה`) beside UN4's past refrain `לא כָּלָה הוא` – both defensible for Old Egyptian, each context
 by its own TLA reading; UN4 222.15 wr "great water" `אגם (גדול)` beside UN3 214.1 šj `האגם` (a near-collision, kept by
 sense).
+
+## Independent review: UN5, UN6, UN7
+
+Round 8 run 1, the independent fidelity reviewer (2026-11-13; did not draft these files). **Checked:** every `>` line of
+UN5 (124 rows, PT 226–246: the serpent spells and the passage), UN6 (206 rows, PT 247–260) and UN7 (198 rows, PT
+261–276 with the Cannibal Hymn) against `egypt_tools.py data` (the base words, the TLA morphology, Allen's line as a
+check), then against `tr`: words omitted or moved across lines; person, number, gender, voice, tense and mood (passive
+sḏm=f, sḏm.n=f, the kꜣ-form, prospective sḏm.w=f, relative forms, statives, negations – n sḏm.n=f "cannot" in 254.6,
+n…js in 262.20); brackets against the base (§2.1: 199.1–199.4, 244.1, 254.46–254.59, PT 267); the witness tags
+(`{טטי}` PT 255–256, `{פפי א}` PT 267, `{אלן}` PT 271); one Hebrew per lemma (`lex`, `grep --all`) inside the three keys
+and against UN3, UN4, UN8, UN9; the refrains and copies (229.3 = 233.3, 253.1 = 253.3, PT 262's litany, PT 263's
+formula, 254.7 = 273-274.45, 270.6 / 270.8, 273-274.34–37: `verify` 0 repeated-line differences); the coordinator's
+scripted `דְּבָרִים לֵאמֹר:` openings (UN5 226.1–243.1, sixteen spells; UN6 247.1–253.1, 255.1 after the tag `{טטי}`,
+256.1, 257.1, 258-259.1; UN7 261.1, 262.1, 263.1, 268.1, 269.1, 270.1, 272.1, 275.1, 276.1; 267.1 is the base's own,
+bracketed): each reads well with what follows. Echo control: no new biblical phrase; the reserved words pass `verify`.
+`build UN5 UN6 UN7`, `check_bible_quotes.py` on the annotated and translation files (0 problems), `verify UN5 UN6 UN7
+--strict` (0 problems).
+
+**Lines changed: 11** (UN5 1, UN6 9, UN7 1); the פירוק (and where needed the הערות) of each was updated.
+- UN6 260.5: `דן אונאס בין חסר־האב לחסרת־האב;` → `דן אונאס בין יתום ליתומה;` – the coordinator's ruling (renderings
+  §13.6.4.3): tfn / tfn.t = `יָתוֹם` / `יְתוֹמָה`, the gate now licenses it; the הקבלה keeps Ps 82:3 and Deut 10:18
+  ([equivalent]), the הערות now explain the ruling (the draft's `חסר־האב` recorded there).
+- UN6 255.7: `הנח את הדרך לארץ` → `הנח את הֲדָרְךָ לארץ` – sꜥḥ "dignity": unvocalized it reads "the road" (the UN4
+  reviewer's fix at 224.13, 224.20).
+- UN6 255.8: `(ו)תניח את הדרך לארץ` → `(ו)תניח את הֲדָרְךָ לארץ` – the same.
+- UN6 257.2: `"חוזים אנו (דבר) חדש!"` → `"חזינו (דבר) חדש!"` – mꜣ=n is read past by the TLA and Allen's variants
+  have mꜣ.n.n (sḏm.n=f); the draft's present had no ground (its own note cited both).
+- UN6 257.11: `(הוא) הבכור מן הגדול` → `(הוא) הבכיר מן הגדול` – smsw is `בכיר` in UN7 (263.7, 273-274.20, .39, .47
+  `בכיר מן הבכירים`, renderings §13.6.5: no Ex 12:29 echo); `בכור` stays only in the name `חוֹרוּס־הבכור` (256.2, NU8).
+- UN6 258-259.12: `הבכור שבאֵלִים` → `הבכיר שבאֵלִים` – the same (cf. NU7 136A.7 `הבכיר שבָּאֵלִים`).
+- UN6 252.7: `מניף אונאס את שרביט־האָמֶס` → `מניף אונאס את אַלַּת־הָאַמֶס` – the ꜣms sceptre is `אלת־האַמֶס` in UN7 263.6
+  (the noun; `שרביט־העַבָּא` is ꜥbꜣ's there); vocalized because unvocalized `אלת` trips the "goddess" trap.
+- UN5 246.6: `אשר לא יוחזר הבָּא שלו` → `אשר לא ייהדף הבָּא שלו` – ḫsf (tla854535) is `הדף` in UN7 (262.24,
+  273-274.26, .30), UN8 278.2, the Book of the Dead, SI and MK; UN5/UN6 alone had `החזיר` (AM's idiom "return an
+  answer").
+- UN6 251.9: `לא הוחזרה זרועו` → `לא נהדפה זרועו` – the same.
+- UN6 258-259.21: `לא הוחזר לבו` → `לא נהדף לבו` – the same.
+- UN7 267.14: `רחוק (אתה) מן האישה [ומן הסינר].` → `רחוק (אתה) מן האישה (ומן) [הסינר].` – only šnḏ.wt is restored;
+  "and from" is the translator's addition (no word in the Egyptian), so it goes in `( )`.
+
+**Left as drafted (noted for the coordinator):**
+- n sḏm=f: UN5–UN7 follow UN3's rule (past) with reasoned exceptions (UN5 242.1, 246.6; UN6 258-259.2, 260.25; UN7
+  269.18, 273-274.58, .67 future), while UN6 258-259.10–11 (`לא נפגע הוא`, `לא ישב הוא בוועד האל`) keep the past inside a
+  promise the TLA reads as future – defensible by the rule, but the lead may prefer the future in such contexts.
+- Brackets: UN6 254.46 `j[r]=[f]` `נגדו` and UN7 267.3 `⸢j⸣[r]` `אל` unbracketed (the r of jr restored, the j written;
+  the suffix restored) – the same half-restored case as UN4 222.6 `[j]t(j)=f`, kept for consistency.
+- Collisions (two lemmas, one Hebrew), kept by sense: zwr "drinking bowl" `קערה` (UN6 254.36) beside UN1's ḥnw.t `קערה`
+  (`גביע` is TB's ṯbw); dbn `סבב` and pẖr `סובב` in one line (UN7 273-274.42); pẖr n= "serve" `סובב את` (UN6 257.5) /
+  `מטפל ב־` (UN7 273-274.40, .48); jni̯ "reach the limit" `הגיע` (UN7 275.3) beside pḥ `הגיע` (262.25).
+- UN6 254.18 mds.w (the noun "violent ones") `העריצים` follows NU's `עורץ`, beside UN7's verb mds `קוטל` (UN7's open
+  question).
+- 258-259.20 sḏr `שוכב (את הלילה)` beside UN9's `לן` (already open).
 
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)
