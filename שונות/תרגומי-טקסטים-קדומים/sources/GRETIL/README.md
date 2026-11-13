@@ -9,8 +9,8 @@
   ("restricted download from TITUS": see `../TITUS/`).
 - **Retrieved:** 2026-10-30 (Round 5 run 1).
 - **Licence:** the HTML e-texts say "for reference purposes only; copyright as for source file" → **git-ignored**; the
-  Kaṭha TEI is **CC BY-NC-SA 4.0** → committed (`sa_kathopaniSad.xml`, `katha_1-3.tsv`).
-- **What is here:** the three files; `mbh_3.185.tsv` (local) and `katha_1-3.tsv` (committed) made by
+  Kaṭha TEI is **CC BY-NC-SA 4.0** → committed (`sa_kathopaniSad.xml`, `katha_1-6.tsv`).
+- **What is here:** the three files; `mbh_3.185.tsv` (local) and `katha_1-6.tsv` (committed) made by
   `../../הוודה-והאווסטה/vedic_tools.py convert`.
 - **Line numbering:** MBh: śloka + half (`17e`; a bare number = the speaker line "X uvāca"), the BORI numbering.
   Kaṭha: vallī.verse + half (`1.1a`); the TEI's `KaU_1.1` = vallī 1, verse 1 (adhyāya 1 = vallīs 1–3).

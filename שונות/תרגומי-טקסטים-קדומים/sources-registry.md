@@ -245,7 +245,7 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 - **TITUS** mirror `titus.fkidg1.uni-frankfurt.de` (`sources/TITUS/`): Weber's accented ŚB (1.2, 1.8) and Aufrecht's AB
   (7.13–18 = pages ab236–241); **no republication** → git-ignored; the only accessible e-text of the AB (GRETIL has none).
 - **GRETIL** (`sources/GRETIL/`): MBh 3 (BORI; "reference only", ignored), ŚB 1 (unaccented; ignored), the Kaṭha TEI
-  (CC BY-NC-SA, committed with its TSV; it lacks KU 2.15).
+  (CC BY-NC-SA, committed with its TSV `katha_1-6.tsv`, the whole text; it does have KU 2.15 – the old converter dropped it: Round 7 run 3).
 - **CAB** (`sources/CAB/`): the Avestan linguistic corpus (Vd 2 complete, Geldner's numbering; licence "CC" without a
   version → ignored) and the online dictionary API (`dictionary-data.xql`, op `word|search|glossary|lemma-words`: per-form
   analyses with Bartholomae's lemmas).
