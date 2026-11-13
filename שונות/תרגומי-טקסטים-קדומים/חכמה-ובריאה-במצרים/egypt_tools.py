@@ -68,12 +68,15 @@ P7 = "7-סינוהה"
 P8 = "8-המלח-הנטרף"
 # the Instruction for Merikare, whole (Round 6 run 2, 2026-11-06)
 P9 = "9-מוסר-למריכרע"
-PROJECTS = (P1, P2, P3, P4, P5, P6, P7, P8, P9)
+# the Pyramid Texts of Unas, the whole pyramid (Round 8 run 1, 2026-11-13)
+P10 = "10-טקסטי-הפירמידה-של-אונאס"
+PROJECTS = (P1, P2, P3, P4, P5, P6, P7, P8, P9, P10)
+UNAS = {f"UN{i}" for i in range(1, 10)}
 NU_KEYS = {f"NU{i}" for i in range(1, 11)}
 BOOK = NU_KEYS | {"BD", "CH"}   # the Book of the Dead keys (formulas scoped to them: renderings §12)
 # the gates scoped to the tales (RESERVED entries with a key set); since Round 6 run 2 also the Book of the Dead and
 # Merikare (the Decalogue / Ps 15 / Ps 24 / Deut 26 words concern them as much as BD 125)
-TALES = {"TB", "WE", "BD", "SI", "SS"} | BOOK | {"MR"}   # the gates scoped to the tales (RESERVED entries with a key set)
+TALES = {"TB", "WE", "BD", "SI", "SS"} | BOOK | {"MR"} | UNAS   # the gates scoped to the tales (RESERVED entries with a key set); UNAS since Round 8 run 1
 
 # The Book of the Dead of Nu (pBM EA 10477), whole (Round 6 run 2, 2026-11-06): the papyrus's 136 AED chapter texts in
 # the papyrus's order (the Bonn Totenbuch-Projekt's object record TM 134299, "Inhalt"; ../sources/AED-TEI/README.md),
@@ -233,6 +236,65 @@ def _nu_title(key):
     ch = nu_chapters(key)
     return f"ספר המתים של נוּ, פרקים {ch[0][0]}–{ch[-1][0]}"
 
+# The Pyramid Texts of Unas (Round 8 run 1): the composite of P10 (make_composite.py): one row per line of Allen 2013
+# (A New Concordance of the Pyramid Texts I) of each Unas wall occurrence, in wall order, cut from an AED record –
+# Unas's own (W) or, where AED lacks it, a later copy (T Teti, P Pepi I, M Merenre, N Pepi II); A = not in AED: the
+# line is read from Allen 2013's transcription (©; consulted locally: `allen`). Labels <spell>[#<occurrence>].<line>.
+UN_TSV = os.path.join(HERE, P10, "composite-UN.tsv")
+UN_PARTS = {"UN1": "חדר הקבורה, הקיר הצפוני (א): טקס הקרבנות", "UN2": "חדר הקבורה, הקיר הצפוני (ב): טקס הקרבנות",
+            "UN3": "חדר הקבורה: גמלון המזרח והקיר הדרומי", "UN4": "חדר הקבורה: הליטניה (219) והקיר המזרחי",
+            "UN5": "חדר הקבורה, גמלון המערב (לחשי הנחשים); המעבר", "UN6": "הפרוזדור: גמלון המערב והקיר המערבי",
+            "UN7": "הפרוזדור: הקיר הדרומי וגמלון המזרח", "UN8": "הפרוזדור: הקיר המזרחי",
+            "UN9": "הפרוזדור: הקיר הצפוני; המסדרון"}
+# the Hebrew tag that opens a line taken from another witness than Unas's own wall (guidelines §6.8: `{<siglum>}`)
+UN_SIG_HEB = {"T": "{טטי}", "P": "{פפי א}", "M": "{מרנרא}", "N": "{פפי ב}", "Nt": "{נית}", "Jp": "{איפות}",
+              "Wd": "{ודג׳בתן}", "An": "{ענחספפי}", "A": "{אלן}"}
+ALLEN_DIR = os.path.join(ROOT, "sources", "Allen-2013--New-Concordance-of-the-Pyramid-Texts")
+
+
+def _aed_flat(path):
+    """AED words in document order (gaps included), each with its <lb> and its sentence id."""
+    t = open(path, encoding="utf-8").read()
+    body = t[t.index("<body>"):]
+    gl = aed2md._glosses(path)
+    out, lb, cur = [], "?", None
+    for m in aed2md.TOK.finditer(body):
+        l, sid, wid, lem, inner = m.groups()
+        if l is not None:
+            lb = l.strip("[]").split("=")[0].strip()
+            continue
+        if sid:
+            cur = sid
+            continue
+        if wid is None:
+            out.append({"id": "", "surf": "[…]", "lemma": "", "feats": "gap", "gloss": "", "lb": lb, "sent": cur})
+            continue
+        surf, feats = aed2md._surface(inner)
+        out.append({"id": wid, "surf": surf, "lemma": lem.replace("tla:", ""), "feats": feats, "gloss": gl.get(wid, ""),
+                    "lb": lb, "sent": cur})
+    return out
+
+
+_ALLEN = None
+
+
+def allen_lines():
+    """{(spell, n): [variant lines]} from Allen 2013 vol. I (git-ignored; made by `allen-convert`), or {}."""
+    global _ALLEN
+    if _ALLEN is None:
+        import json
+        p = os.path.join(ALLEN_DIR, "allen-transcription.json")
+        _ALLEN = {}
+        if os.path.exists(p):
+            for k, v in json.load(open(p, encoding="utf-8"))["spells"].items():
+                seen = {}
+                for n, pyr, vs in v["lines"]:
+                    lab = str(n)
+                    while (k, lab) in _ALLEN:
+                        lab += "b"
+                    _ALLEN[(k, lab)] = (pyr, vs)
+    return _ALLEN
+
 # KEY: (project, Hebrew title, kind, file, selection)
 UNITS = {
     "AM": (P1, "מוּסַר אֲמֶנֶמוֹפֶּה", "aed", "Amenemope--pBM-EA-10474/5JO44VJZERAB3HQUHMFSMNXH6I.xml", None),
@@ -262,9 +324,12 @@ UNITS = {
     "CH": (P6, "ספר המתים, פרק 175 (פפירוס חַע, טורינו 8438): נספח", "aed", "BD-175--pCha-Turin-8438/PHHTCP56KNFFXCKMBRE6SCOCGU.xml", None),
     "MR": (P9, "המוסר למֶרִיכָּרֶע (פפירוס פטרבורג 1116A)", "aed-E", "Merikare--pPetersburg-1116A/YZSISQLOINELTMJDPXQ45O5IUU.xml", (1, 149)),
 }
+for _k, _t in UN_PARTS.items():
+    UNITS[_k] = (P10, _t, "aed-UN", None, None)
 PROJECT_TITLES = {P1: "מוסר אמנמופה", P2: "בריאת העולם במצרים: מריכרע, התאולוגיה של מֹף, טקסטי הפירמידות",
                   P3: "ספר הפרה השמימית", P4: "מעשה בשני האחים", P5: "סיפורי פפירוס וסטקר",
-                  P6: "ספר המתים של נוּ", P9: "המוסר למריכרע", P7: "סיפור סינוהה", P8: "סיפור המלח הנטרף"}
+                  P6: "ספר המתים של נוּ", P9: "המוסר למריכרע", P7: "סיפור סינוהה", P8: "סיפור המלח הנטרף",
+                  P10: "טקסטי הפירמידה של אוּנָאס"}
 # the variant witnesses a translator consults (printed by `data KEY --wit`)
 WITNESSES = {
     "AM": ["Amenemope--tLouvre-E-17173/J54RCGRIM5CYLB5T27RUS5G7D4.xml", "Amenemope--oKairo-SR-1840/WWBWAINUHFAXBCPM4JT7CR4EZA.xml",
@@ -338,6 +403,30 @@ def rows(key):
                 seen.add(lab)
                 out.append({"label": f"{tk}.{lab}", "text": " ".join(w["surf"] for w in ln["words"]), "words": ln["words"],
                             "sents": ln["sents"], "orig": f"{title} {ln['label']}", "chapter": tk, "tid": tid})
+    elif kind == "aed-UN":
+        flat = {}
+        for l in open(UN_TSV, encoding="utf-8"):
+            if l.startswith("#") or l.startswith("key\t") or not l.strip():
+                continue
+            c = l.rstrip("\n").split("\t")
+            if c[0] != key:
+                continue
+            k_, lab, spell, n, pyr, wall, sig, aed, i, j, lb = c
+            if sig == "A":
+                out.append({"label": lab, "text": f"[Allen 2013 I, PT {spell} {n}, Pyr. {pyr or '–'}]", "words": [],
+                            "sents": [], "orig": f"PT {spell}, Unas {wall} {lb} (not in AED: Allen)", "spell": spell,
+                            "n": n, "sig": sig, "pyr": pyr, "wall": wall, "tid": ""})
+                continue
+            if aed not in flat:
+                flat[aed] = _aed_flat(os.path.join(AED, aed))
+            ws = flat[aed][int(i):int(j)]
+            sents = []
+            for w in ws:
+                if w["sent"] and w["sent"] not in sents:
+                    sents.append(w["sent"])
+            out.append({"label": lab, "text": " ".join(w["surf"] for w in ws), "words": ws, "sents": sents,
+                        "orig": f"PT {spell}, {sig} {lb}" + ("" if sig == "W" else f" (Unas: {wall})"), "spell": spell,
+                        "n": n, "sig": sig, "pyr": pyr, "wall": wall, "tid": aed})
     elif kind == "aed-SI":
         # Sinuhe: R 1–23 (pBerlin 10499; the beginning, lost in B), then B 1–311 (pBerlin 3022). B's Amherst
         # fragments (labels Am., An., …: the lost start of B, parallel to R) and its '?' line are left to the apparatus.
@@ -392,6 +481,10 @@ def license_text(key, lab):
         return ""
     lems = " ".join(sorted({"tla" + w["lemma"].replace("tla", "") for w in r["words"] if w.get("lemma")}))
     t = plain_src(r["text"])
+    if key in UNAS and r.get("sig") == "A":   # a line read from Allen 2013: his transliteration licenses it (local)
+        al = allen_lines().get((r["spell"], lab.split(".", 1)[1]))
+        if al:
+            t += " " + " ".join(al[1]).translate(str.maketrans({"Ʒ": "ꜣ", "Ƹ": "ꜥ", "ḩ": "ẖ"})).replace(".", "=")
     # a word split across two lines: also join the edge tokens with the neighbours
     rs = rows(key)
     i = rs.index(r)
@@ -512,7 +605,7 @@ RESERVED = [
     (W + alt("הסיג", "תסיג", "מסיג", "תסג", "יסיג", "הסגת", "נסוג", "נסג") + E, None, "the root סוג / נסג never (Deut 19:14, 27:17, Prov 22:28): rmni̯ = הֵזִיז / נָשָׂא, hꜣd = פָּלַשׁ"),
     (W + alt("השיג", "תשיג", "ישיג", "אשיג", "השיגו", "משיג") + E, r"pḥ", "השיג (נשג 'reach') only for pḥ 'reach' (MK E138, HC 29); it shares the letters of the reserved הִסִּיג"),
     (W + alt("אלמנה", "אלמנות", "אלמנת", "האלמנה", "אלמנתו") + E, r"ḫꜣr|ḫꜣrj|ḫꜣ\(rj\)|ḫꜣrt", "אַלְמָנָה only for ḫꜣr.t [equivalent Prov 23:10 (the emendation `גבול אלמנה`), Deut 24:19–21]"),
-    (W + alt("יתום", "יתומים", "היתום", "יתומה", "יתומי") + E, None, "יָתוֹם never: nmḥ = דַּל (Late Egyptian 'poor man'; Prov 23:10 `יְתוֹמִים` in the apparatus)"),
+    (W + alt("יתום", "יתומים", "היתום", "יתומה", "יתומי") + E, r"\btfn|tfn,t|tfn\.t", "יָתוֹם only for the PT word tfn 'orphan' (Round 8 run 1; Ps 82:3); else never: nmḥ = דַּל (Late Egyptian 'poor man'; Prov 23:10 `יְתוֹמִים` in the apparatus)"),
     (W + alt("איפה", "האיפה", "איפות", "איפת", "ואיפה") + E, r"jp,t|jp\.t|\bjpt|jp\b", "אֵיפָה only for jp.t (the oipe) [cognate: an Egyptian loanword, Deut 25:14–15, Lev 19:36, Prov 20:10]"),
     (W + alt("פלס", "הפלס", "פלסים") + E, r"jws|jwsw|jws,w|jwsꜣ", "פֶּלֶס only for jws(w) 'the hand-balance' [equivalent Prov 16:11, Isa 40:12]"),
     (W + alt("מאזנים", "מאזני", "המאזנים", "מאזניו", "מאזניים") + E, r"mḫꜣ|mḫꜣy|mḫꜣ,t|mḫꜣ\(y\)", "מֹאזְנַיִם only for mḫꜣ.t 'the balance' [equivalent Lev 19:36, Prov 16:11, 11:1]"),
@@ -524,7 +617,7 @@ RESERVED = [
     (W + alt("מוסר", "המוסר", "מוסרי", "מוסרו") + E, r"sbꜣ|sbꜣ,yt|sbꜣyt|sbꜣ,y\(t\)|sbꜣ\.yt|sbꜣ,tj", "מוּסָר only for sbꜣ.yt [equivalent Prov 1:8, 23:12]"),
     (W + alt("שלושים", "שלשים", "שלישים", "השלושים", "השלשים") + E, r"\b30\b|mꜥbꜣ|mꜥbꜣ,yt", "שְׁלֹשִׁים only for the number 30 / the Thirty (Prov 22:20)"),
     (W + r"(?<!ל)" + alt("חם", "החם", "חמים", "החמים", "חמם") + E,  # (?<!ל): `לחם` "bread" (+ prefixes) is not the hot man (AM 5.5)
-     r"šmm|šmw|\bšm\b|šmmt|srf|(?<![\w,.-])ḫm(?![\w,-])", "the hot man (and the place name Ḫm, Letopolis `חֶם`: BD): pꜣ šmm = הַחַם (always vocalized: Ham, Gen 9:18)"),
+     r"šmm|šmw|\bšm\b|šmmt|srf|(?<![\w,.-])ḫm(?![\w,-])|-ḫm\b", "the hot man (and the place name Ḫm, Letopolis `חֶם`: BD): pꜣ šmm = הַחַם (always vocalized: Ham, Gen 9:18)"),
     (W + alt("כסיל", "הכסיל", "כסילים", "אויל", "האויל", "אוילים", "נבל", "הנבל") + E, r"wḫꜣ|\bḫm\b|ḫm,w", "the fool words of Proverbs only for the Egyptian fool words: wḫꜣ = כְּסִיל, ḫm 'the ignorant' = הַבּוּר? (renderings §4.3)"),
     # --- Egyptian loanwords in Hebrew (renderings §4.2): only for their Egyptian source ---
     (W + alt("תבה", "תיבה", "התבה", "התיבה", "תבת", "תיבת", "תבתו", "תיבתו", "תבתך", "תיבתך") + E, r"ḏbꜣ|ḏb\(ꜣ\)|ḏbꜣ,t|ṯbt|db\.t", "תֵּבָה only for ḏbꜣ.t 'chest, coffin' [cognate: Egyptian loanword, Gen 6:14, Ex 2:3]"),
@@ -570,7 +663,7 @@ RESERVED = [
     (W + alt("חמד", "חמדתי", "תחמד", "חומד", "חמדה", "יחמד") + E, None, "the root חמד never (Ex 20:17)", TALES),
     (W + alt("נקי", "נקיה", "נקיים", "נקיתי", "ונקי", "נקיון", "ניקיון") + E, None, "נָקִי never (Ps 24:4 `נְקִי כַפַּיִם`; the wisdom corpus's reservation): wꜥb = טָהוֹר", TALES),
     (W + alt("בר", "ובר") + r"\s+" + alt("לבב", "לב") + E, None, "`בַּר לֵבָב` never (Ps 24:4)", TALES),
-    (W + alt("נשך", "בנשך", "הנשך", "תרבית") + E, None, "נֶשֶׁךְ / תַּרְבִּית never (Ps 15:5; Lev 25:36–37)", TALES),
+    (W + alt("נשך", "בנשך", "הנשך", "תרבית") + E, r"tla62220|pzḥ|p\{n\}⟨z⟩ḥ|psḥ", "נֶשֶׁךְ / תַּרְבִּית never (Ps 15:5; Lev 25:36–37); the verb `נָשַׁךְ` 'bite' licensed by pzḥ (Round 8 run 1)", TALES),
     (W + alt("אוני", "באוני", "בעוני") + E, None, "`בְאֹנִי` never (Deut 26:14)", TALES),
     (W + alt("בער", "ביער", "בערתי", "ביערתי", "תבער", "יבער", "בוער", "בוערת", "בערה", "הבערה") + E, r"(?<![\w,.-])ḫm(?![\w,-])", "the root בער never (Deut 26:13–14 `בִּעַרְתִּי`): the fire / removal verbs by their own sense", TALES),
     # Deut 8:8 (Sinuhe's land of Yaa): the seven species only for their Egyptian words
@@ -580,6 +673,12 @@ RESERVED = [
     (W + alt("זית", "זיתים", "הזית", "הזיתים", "זיתי") + E, r"ḏd,t|ḏd\.t|ḏdt|bꜣq|bꜣq,t|\bbq\b|bq,t", "זַיִת only for ḏd.t / bꜣq 'olive' [equivalent Deut 8:8]", TALES),
     (r"(?<![א-ת])ו?" + alt("זבת", "זבה") + E, None, "`זָבַת חָלָב וּדְבָשׁ` never (Ex 3:8)", TALES),
     # the serpent (the dossier rule: `נָחָשׁ` the comparison word for every culture's serpent)
+    # the Pyramid Texts of Unas (renderings §13.5; Round 8 run 1): the ladder of Gen 28:12 only for mꜣq.t; the
+    # seraphim / the bronze serpent never; the angels never (the netherworld corpus's reservation)
+    (W + alt("נתר", "הנתר", "בנתר") + E, r"nṯr,j|nṯr\(,j\)|nṯrj|tla90510", "נֶתֶר only for nṯr.j 'natron' [cognate: loanword, Jer 2:22]", UNAS),
+    (W + alt("סולם", "הסולם", "סולמות", "בסולם", "סולמו") + E, r"mꜣq,t|mꜣq\.t|mꜣqt|tla67390", "סֻלָּם only for mꜣq.t 'ladder' [equivalent Gen 28:12]", UNAS),
+    (W + alt("שרף", "שרפים", "השרף", "השרפים", "שרפי") + E, None, "שָׂרָף never (Num 21:6–8, Isa 6:2, 14:29, 30:6): the serpent words by their own sense", UNAS),
+    (W + alt("מלאך", "מלאכים", "המלאך", "המלאכים", "מלאכי", "מלאכיו") + E, None, "מַלְאָךְ never (Gen 28:12; the netherworld corpus's reservation): wpw.tj = שָׁלִיחַ", UNAS),
     (W + alt("נחש", "נחשים", "הנחש", "הנחשים", "נחשי", "נחשה") + E, r"ḥfꜣ|ḥfꜣw|ḥfꜣ,w|ḥfy|ḥfj|ꜥꜣpp|ḏdf|nḥꜣ|nꜣw|ꜥpp|sꜣ-tꜣ|ḏd\b|ḏd,t|ꜥrꜥr", "נָחָשׁ only for a serpent word (ḥfꜣw …) [equivalent Gen 3:1, Ex 7:9–12]", TALES),
 ]
 
@@ -589,6 +688,8 @@ RE_ = rf"(?![{V}א-ת])"
 # (regex on the RAW line; condition regex on the licence text: if it matches, the unvocalized string is an error;
 # None = always), why. Renderings §5.3 "Always vocalized".
 TRAPS = [
+    (RW + r"(?:היו)" + RE_, r"tla97860|\bhjw\b", "the serpent Hiu must be vocalized הִיוּ ('were')"),
+    (RW + r"(?:אונס)" + RE_, r"wnjs", "Unas is אונאס (plene, with א): `אונס` reads 'rape' (renderings §13.2)"),
     (RW + r"(?:רע|הרע)" + RE_, r"\brꜥ\b|rꜥw|\bRꜥ", "Re is רַא (renderings §3): an unvocalized רע where the source has Rꜥ is a trap ('evil')"),
     (RW + r"(?:פתח)" + RE_, r"ptḥ|pth", "Ptah must be vocalized פְּתָח ('open')"),
     (RW + r"(?:גב)" + RE_, r"gb\b|gbb", "Geb must be vocalized גֶּבּ ('back')"),
@@ -612,17 +713,19 @@ TRAPS = [
 FORMULAS = [
     (r"^ḥw,t mḥ-1?\d\.t$|^ḥw,t mḥ-2\d\.t$|^ḥw,t mḥ-30\.t$|ḥw,t tp\.t", r"(?:^|\s)הבית ה", "ḥw.t mḥ-N.t = `הַבַּיִת הָ…` (§6.1; the chapter heading, 'house')"),
     (r"(?:^|\s)m-jri̯(?=\s|$)", r"(?:^|\s)[ו]?אל ", "m-jri̯ X = `אַל` + future (§6.2)"),
-    (r"\bꜣḫ\b(?![,.]).*(?<![-\w])r(?![-\w])", r"(?:^|\s)[ו]?מוטב ", "ꜣḫ X r Y (better X than Y) = `מוּטָב X מִ־Y` (§6.3)", set(UNITS) - BOOK),
+    (r"\bꜣḫ\b(?![,.]).*(?<![-\w])r(?![-\w])", r"(?:^|\s)[ו]?מוטב ", "ꜣḫ X r Y (better X than Y) = `מוּטָב X מִ־Y` (§6.3)", set(UNITS) - BOOK - UNAS),
     (r"\bpꜣ šmm\b|\bpꜣyw =k šmm\b", r"(?:^|\s)[ו]?[ל]?(?:ה)?חם(?:\s|$|[,.;:])", "pꜣ šmm = `הַחַם` (§6.4)"),
     (r"\bgr mꜣꜥ\b", r"(?:ה)?שותק (?:ה)?(?:אמיתי|באמת)", "gr mꜣꜥ = `הַשּׁוֹתֵק הָאֲמִתִּי` (§6.4)"),
     (r"\bn ḫpr\.t\b|\bn ḫp\[?r\]?\.t\b", r"(?:^|\s)[ו]?טרם ", "n ḫpr.t X = `טֶרֶם נִהְיָה X` (§6.5)"),
+    (r"(?:^|\s)hꜣ (?:Wnjs|Ttj|Ppy|Mrj-n-Rꜥ|N\(j\),t|Nj,t)\b", r"(?:^|\s)[ו]?הוי ", "hꜣ NN = `הוֹי` NN (renderings §13.4)", UNAS),
+    (r"(?:^|\s)m n =[kṯ]\b", r"(?:^|\s)[ו]?קח(?:י)? לך", "m n=k X (the offering formula) = `קַח לְךָ` X (renderings §13.4)", UNAS),
     (r"\bḏ\(d\)-mdw\b|\bḏd-mdw\b", r"(?:^|\s)[ו]?(?:דברים לאמר|נאמר)|אמירה", "ḏd-mdw = `דְּבָרִים לֵאמֹר:` (§6.5)"),
     (r"^j \S.* pri̯ m \S+.* n \S", r"^הו .*היוצא", "BD 125: j X pri̯ m Y n sḏm=j Z = `הוֹ X, הַיּוֹצֵא מִ־Y: לֹא …` (§11.5.1)", {"BD"}),
     # --- the Book of the Dead of Nu, BD 175 (renderings §12.4; Round 6 run 2) ---
     (r"ḏd-mdw jn\b", r"דברים לאמר,? בפי", "ḏd-mdw jn X = `דְּבָרִים לֵאמֹר, בְּפִי X:` (§12.4.2)", BOOK),
-    (r"(?<![\w-])mꜣꜥ-ḫrw", r"אמית\S*[־ ]?הקול|אמית\S*[־ ]קול", "mꜣꜥ-ḫrw = `אֲמִתִּי־הַקּוֹל` (§4.1, §12.4.3)", BOOK | {"MR"}),
-    (r"smꜣꜥ-ḫrw", r"(?:אימת|מאמת|יאמת|לאמת|אאמת|תאמת|מאמתים|אימתו|אימתת)\S* .*קול", "smꜣꜥ-ḫrw (X) = `אִמֵּת אֶת קוֹל X` (§12.4.3)", BOOK),
-    (r"ẖr-nṯr|ẖr,t-nṯr", r"חלקת[־ ]האל", "ẖr(.t)-nṯr = `חֶלְקַת־הָאֵל` (the 2026-10-30 harmonization; §12.4.4)", BOOK | {"MR"}),
+    (r"(?<![\w-])mꜣꜥ-ḫrw", r"אמית\S*[־ ]?הקול|אמית\S*[־ ]קול", "mꜣꜥ-ḫrw = `אֲמִתִּי־הַקּוֹל` (§4.1, §12.4.3)", BOOK | {"MR"} | UNAS),
+    (r"smꜣꜥ-ḫrw", r"(?:אימת|מאמת|יאמת|לאמת|אאמת|תאמת|מאמתים|אימתו|אימתת)\S* .*קול", "smꜣꜥ-ḫrw (X) = `אִמֵּת אֶת קוֹל X` (§12.4.3)", BOOK | UNAS),
+    (r"ẖr-nṯr|ẖr,t-nṯr", r"חלקת[־ ]האל", "ẖr(.t)-nṯr = `חֶלְקַת־הָאֵל` (the 2026-10-30 harmonization; §12.4.4)", BOOK | {"MR"} | UNAS),
     (r"šs-mꜣꜥ", r"נכון באמת", "šs-mꜣꜥ (ḥḥ n zp) = `דָּבָר נָכוֹן בֶּאֱמֶת, אַלְפֵי אֲלָפִים פְּעָמִים` (BD 115; §12.4.6)", BOOK),
     (r"^(?:ky )?rʾ n tm\b", r"לחש (?:אחר )?לבלי ", "rʾ n tm X = `לַחַשׁ לִבְלִי` + infinitive (§12.4.1)", BOOK),
     (r"^ky rʾ\b", r"(?:^|\s)לחש אחר", "ky rʾ = `לַחַשׁ אַחֵר` (§12.4.1)", BOOK),
@@ -692,6 +795,15 @@ def check_line(key, lab, heb, body, fixed, out):
             and "[סטייה מן הנוסחה" not in body:
         out.append(f"FORMULA {key} {lab}: a chapter title rʾ n X = `לַחַשׁ לְ־X` (§12.4.1)\n    {heb}\n    src: {src}")
         bad += 1
+    if key in UNAS:   # the witness tag (renderings §13.1): a line from another pyramid (or from Allen) opens with it
+        r = row(key, lab) or {}
+        tag = UN_SIG_HEB.get(r.get("sig"))
+        if tag and not heb.strip().startswith(tag):
+            out.append(f"WITNESS {key} {lab}: the line is {r.get('sig')}'s (not Unas's own wall): it must open with `{tag}`\n    {heb}")
+            bad += 1
+        if not tag and heb.strip().startswith("{"):
+            out.append(f"WITNESS {key} {lab}: Unas's own line must not open with a witness tag\n    {heb}")
+            bad += 1
     if (key, lab) in fixed:
         fh = fixed[(key, lab)][1]
         if nopunct(strip_marks(fh)) != nopunct(plain) and "[סטייה מן הקבוע" not in body:
@@ -898,6 +1010,61 @@ def _corpus():
     return [(k2, r["label"], plain_src(r["text"])) for k2 in UNITS for r in rows(k2)]
 
 
+def cmd_allen_convert():
+    """Allen 2013 vol. I (the PDF, git-ignored) -> allen-transcription.json beside it (git-ignored): every spell's
+    numbered lines (n, Pyr. §, the variants), read by `data UN…` (a check) and for the lines AED lacks (siglum A)."""
+    import json
+    import subprocess
+    pdf = os.path.join(ALLEN_DIR, "PT I (Introduction).pdf")
+    if not os.path.exists(pdf):
+        sys.exit(f"missing {pdf} (python3 -I tools/sources_sync.py fetch)")
+    txt = os.path.join(ALLEN_DIR, "PT I (Introduction).txt")
+    subprocess.run(["pdftotext", "-layout", pdf, txt], check=True)
+    L = open(txt, encoding="utf-8").read().split("\n")
+    start = [i for i, l in enumerate(L) if re.match(r"^\f?PT 1 \(", l) and i > 1500][0]
+    sp, cur = {}, None
+
+    def nk(k):
+        k = k.replace("-", "–").replace(" ", "")
+        m = re.match(r"^(\d+)–(\d+)$", k)
+        if m and len(m.group(2)) < len(m.group(1)):
+            k = m.group(1) + "–" + m.group(1)[:len(m.group(1)) - len(m.group(2))] + m.group(2)
+        return k
+    for raw in L[start:]:
+        l = raw.replace("\f", "").rstrip()
+        if not l.strip():
+            continue
+        m = re.match(r"^PT (\*?\d+[A-Z]?(?:\s*[–-]\s*\*?\d+[A-Z]?)?)\s*\(([^)]*)\)\s*$", l)
+        if m:
+            cur = nk(m.group(1))
+            sp[cur] = {"sigla": m.group(2), "lines": []}
+            continue
+        if cur is None:
+            continue
+        m = re.match(r"^\s*(\d{1,3})\s+(\d+[a-z]*(?:\s*[–-]\s*\d*[a-z]+)?)?\s+(\S.*)$", l)
+        if m and not re.match(r"^\s*\d+[a-z]", l):
+            sp[cur]["lines"].append([int(m.group(1)), m.group(2) or "", [m.group(3).strip()]])
+            continue
+        m = re.match(r"^\s*(\d+[a-z]+(?:\s*[–-]\s*\d*[a-z]+)?)\s+(\S.*)$", l)
+        if m and not sp[cur]["lines"]:
+            sp[cur]["lines"].append([1, m.group(1), [m.group(2).strip()]])
+            continue
+        if sp[cur]["lines"]:
+            sp[cur]["lines"][-1][2].append(l.strip())
+        else:
+            sp[cur]["lines"].append([1, "", [l.strip()]])
+    json.dump({"spells": sp}, open(os.path.join(ALLEN_DIR, "allen-transcription.json"), "w", encoding="utf-8"),
+              ensure_ascii=False)
+    print(f"allen-transcription.json: {len(sp)} spells")
+
+
+def cmd_allen(key, a=None, b=None):
+    """Allen 2013's lines (all the variants) for a range of an UN key: a check (©, consulted, never copied)."""
+    for r in _span(key, a, b):
+        al = allen_lines().get((r["spell"], r["label"].split(".", 1)[1]))
+        print(f"[{r['label']}] {r['sig']} " + (f"Pyr. {al[0]}: " + " ‖ ".join(al[1]) if al else "(not found)"))
+
+
 def cmd_units():
     for k, u in UNITS.items():
         print(f"{k}\t{u[0]}\t{len(rows(k))} lines\t{u[1]}\t{'drafted' if os.path.exists(annotated_path(k)) else ''}")
@@ -922,6 +1089,15 @@ def cmd_data(key, a=None, b=None, wit=False):
     for r in sp:
         print(f"### {r['label']}" + (f"   (AED: [{r['orig']}])" if r["orig"] != r["label"] else ""))
         print(f"`{r['text']}`")
+        if key in UNAS:
+            al = allen_lines().get((r["spell"], r["label"].split(".", 1)[1]))
+            if r["sig"] != "W":
+                print(f"- WITNESS: {r['sig']} – the Hebrew line opens with `{UN_SIG_HEB[r['sig']]}` (renderings §13)")
+            if al:
+                print(f"- ALLEN 2013 (Pyr. {al[0] or '–'}; ©, a check – the first variant is the oldest pyramid's, mostly Unas's; "
+                      f"never copy it into the file): " + " ‖ ".join(al[1]))
+            elif r["sig"] == "A":
+                print("- ALLEN 2013: not on this machine – run `egypt_tools.py allen-convert` (it needs the PDF: ../sources/sources_sync)")
         for w in r["words"]:
             if w["feats"] == "alt":
                 print("- `/` – AED gives two analyses of the same written word (no text lost)")
@@ -957,6 +1133,8 @@ def cmd_tr(key, a=None, b=None):
         return
     if UNITS[key][2] == "aed-NU":
         fs = tuple(f"{NU_DIR}/{c[2]}.xml" for c in nu_chapters(key))
+    elif UNITS[key][2] == "aed-UN":
+        fs = tuple(dict.fromkeys(r["tid"] for r in _span(key, a, b) if r["tid"]))
     else:
         fs = UNITS[key][3] if isinstance(UNITS[key][3], tuple) else (UNITS[key][3],)
     trs = {}
@@ -1204,6 +1382,10 @@ def main():
     cmd, rest = a[0], [x for x in a[1:] if not x.startswith("--")]
     if cmd == "units":
         return cmd_units()
+    if cmd == "allen-convert":
+        return cmd_allen_convert()
+    if cmd == "allen" and rest:
+        return cmd_allen(*rest[:3])
     if cmd == "data" and rest:
         return cmd_data(*rest[:3], wit="--wit" in a)
     if cmd == "tr" and rest:

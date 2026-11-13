@@ -1011,3 +1011,192 @@ non-Semitic corpus (guidelines §6.7, principle 1); they share texts but no line
 keeps wsr.w `משוטי־החתירה` apart from ḥmw `המשוט`); twꜣ is `עני` throughout; šwꜣ.w `רָשׁ` (MR E27, E42, beside twꜣ `עני`) /
 SI B309 `מסכן` by text, AM 26.13 a double analysis (šwꜣ / twꜣ) `עני`. (Row 6) mr.w, sḫt, jꜣ.t, qnj.t, ḫꜣw.t, wpi̯: by text and
 sense, as §12.6.10–12.6.11 record.
+
+## 13. The Pyramid Texts of Unas, the whole pyramid (Round 8 run 1, 2026-11-13; fixed by the coordinator before the first line)
+
+**Scope** (the plan's Round 8 run 1, egypt-01; guidelines §1 "completing means the whole text"): project 10
+(`10-טקסטי-הפירמידה-של-אונאס/`): every spell on the walls of the pyramid of Unas (Wnjs, last king of the 5th dynasty,
+c. 2350 BCE, Saqqara) in **wall order** – Sethe's columns 1–649, Allen 2013's 231 occurrences of 228 spells: the burial
+chamber (north wall: the offering ritual, PT 23–171; east gable, south and east walls: the resurrection ritual, PT
+204–224 with the litany PT 219; west gable: the serpent spells PT 226–243), the passage (PT 199, 32, 23, 25, 200,
+244–246), the antechamber (west gable and wall PT 247–260, south wall PT 260–272, east gable PT 273–276 with the "Cannibal
+Hymn" 273–274, east wall PT 277–301, north wall PT 302–312) and the corridor (PT 313–321). Project 2's four PT spells
+(571, 486, 527, 600) are not Unas's (Pepi I, Merenre, Pepi II) and stay there; this project points to them in its
+`project.md`.
+
+### 13.1 The base, the keys, the labels, the witness tags
+- **The composite** `10-…/composite-UN.tsv` (made by `10-…/make_composite.py`; `../sources/AED-TEI/README.md`): one row
+  per **line of Allen 2013** (*A New Concordance of the Pyramid Texts* I, the standard numbering: `PT 213.1` …) of each
+  Unas occurrence, cut from an AED-TEI record: **Unas's own (1,232 lines)**, or, where the TLA did not record Unas's copy,
+  the earliest good later copy – Teti (68), Pepi I (61), Merenre (18), Pepi II (26), Queen Neith (142, mostly the
+  offering ritual, where the kings' copies are broken) – or, for the few spells AED lacks or holds only in copies that
+  do not match (PT 39, 40, 44, 52, 86, 167, 169, 271, 281, 284, 303: 58 lines), **Allen's transcription** (©, consulted
+  locally, `egypt_tools.py allen`; the annotated file carries a reference instead of the transliteration line).
+- **Labels** `<spell>[#<occurrence>].<Allen line>`: `213.1`; `23-24.2` (Allen's combined numbers); the ritual's repeated
+  spells `25#2.3`, `32#4.2` (the 2nd … 4th occurrence on the walls); `278.2b`, `301.35b` (Allen's numbering repeats a
+  number). Allen's lines that the witness lacks (most often a rubric of other pyramids) are not rows.
+- **The keys** (one annotated file each, in wall order): UN1 burial chamber north wall, registers i–ii (PT 23–116; 217
+  lines); UN2 north wall register iii (PT 117–171; 143); UN3 east gable and south wall (PT 204–218; 185); UN4 the litany
+  PT 219 and the east wall (PT 220–224; 209); UN5 the west gable (the serpent spells, PT 226–243) and the passage (PT 199,
+  32, 23, 25, 200, 244–246; 124); UN6 antechamber west gable and west wall (PT 247–260; 206); UN7 antechamber south wall
+  and east gable (PT 260–276; 198); UN8 antechamber east wall (PT 277–301; 127); UN9 antechamber north wall and the
+  corridor (PT 302–321; 198).
+- **The witness tag** (guidelines §6.8 `{<siglum>}`): a line from another pyramid opens with `{טטי}` (Teti), `{פפי א}`
+  (Pepi I), `{מרנרא}` (Merenre), `{פפי ב}` (Pepi II), `{נית}` (Neith); a line read from Allen with `{אלן}`. Checked by
+  `verify` (`WITNESS`). **The other king's name is translated as written** (`פֶּפִּי`, `טֶטִי`; Neith's copy speaks of
+  "the Osiris Neith", feminine): the tag tells the reader why; the intro says that Unas's wall has his own name there.
+- `data UN<k> [FROM [TO]]` shows, under each line, **Allen's line** (all the pyramids' variants, the oldest first – a
+  check of the AED cut and of Unas's own reading; never copied into the file) and the witness; `tr` the TLA's German
+  (after drafting); `allen UN<k> [FROM [TO]]` Allen's lines alone.
+
+### 13.2 Names (★ = always vocalized; §3, §11.2, §12.2 hold)
+| Egyptian | Hebrew | Note |
+|---|---|---|
+| Wnjs (Unas, Unis, Wenis) | `אוּנָאס` (plain `אונאס`) | **never `אונס`** ("rape"; a TRAP in `verify`); the Hebrew usage (Wikipedia `אונאס`) |
+| Ttj; Ppy (Pepi I, Mry-Rꜥ); Mrj-n-Rꜥ; Ppy Nfr-kꜣ-Rꜥ (Pepi II) | `טֶטִי`; `פֶּפִּי` (`מְרִירַא`); `מֶרֶנְרַא`; `פֶּפִּי נֶפֶרְכָּרֶע` | as project 2 |
+| N(j).t (Queen Neith; the goddess Neith) | `נֵית` ★ | |
+| Wsjr Wnjs ("the Osiris Unas") | `אוֹסִירִיס אוּנָאס` | the dead king addressed as Osiris (a note at the first occurrence per file) |
+| Jtm(w), Rꜥ, Šw, Tfnwt, Gbb, Nwt, Wsjr, ꜣs.t, Ḥrw, Stš, Nb.t-ḥw.t, Ḏḥwtj, Jnpw, Ḫprj | `אָתוּם`, `רַא` ★, `שׁוּ` ★, `תֶּפְנוּת`, `גֶּבּ` ★, `נוּת` ★, `אוֹסִירִיס`, `אִיסִיס`, `חוֹרוּס`, `סֵת` ★, `נֶפְתִּיס`, `תְּחוּת`, `אַנוּבִּיס`, `חֶפְּרִי` | §3.1 |
+| psḏ.t (ꜥꜣ.t) | `התשיעייה (הגדולה)` | §10.8 |
+| Jwnw; Bꜣẖ.w; Dwꜣ.t; ẖr-nṯr | `אוֹן` ★; `בָּאחוּ`; `הַדּוּאַת`; `חֶלְקַת־הָאֵל` | §3.2, §12 |
+| sḫ.t-jꜣr.w; sḫ.t-ḥtp | `שְׂדֵה־הָאַגְמוֹנִים`; `שְׂדֵה־הַקּוֹרְבָּנוֹת` | §12.6.1 (project 2 wrote `הַקָּרְבָּנוֹת`: the same word) |
+| Ḫntj-jmn.tjw; Wp-wꜣ.wt; Spd(w); Sbk; Mꜣfd.t; Srq.t | `חֶנְתִּי־אִמֶנְתִּיו` ("Foremost of the Westerners"); `וֶפְּוָאוֶת` ("Opener of the Ways"); `סֹפְּדוּ`; `סֻבֶּךְ`; `מָאפְדֶת`; `סֶרְקֶת` | the first translator who meets a new god fixes it by §2.2 and lists it |
+
+### 13.3 Key terms (one Hebrew per lemma; the corpus's precedents bind – grep them: `lex`, `grep --all`)
+| Egyptian | Hebrew | Note |
+|---|---|---|
+| ꜣḫ (spirit); ꜣḫ (be an akh, "effective"); sꜣḫ | `אָח`; `היה לאָח` / `מועיל` by sense; `עשה לאָח` | §4.1, §12.6.1 |
+| ꜣḫ.t (the horizon, the "Akhet") | `הָאֹפֶק` (plain `האופק`) | BD precedent |
+| bꜣ / kꜣ / ḏ.t "body" / ẖꜣ.t "corpse" | `בָּא` ★ / `כָּא` ★ / `גְּוִיָּה` (MT's) / `גופה` | §12.6.1 |
+| j.ḫm-sk (the circumpolar stars, "who know no destruction") | `בלתי־כלה` (pl. `הבלתי־כלים`) | project 2 (`בלתי־כָלֶה`) |
+| sbꜣ "star"; sꜣḥ (Orion); Spd.t (Sothis) | `כוכב`; `סָאח` (Orion); `סוֹפְּדֶת` (Sothis) | names noted (Orion, Sirius) |
+| mꜣq.t "ladder" | `סֻלָּם` (gated) | [equivalent] Gen 28:12 – the only word of the ladder |
+| wjꜣ; mskt.t / mꜥnḏ.t | `צִי` ★; `מֶסְקְטֶת` / `מַעַנְגֶ׳ת` | §12.6.1 |
+| jr.t-Ḥr.w (also the offering "Eye of Horus") | `עין־חוֹרוּס` | project 2, BD |
+| ḥtp.w / ḥtp-dj-nsw | `קורבנות` / `קורבן שהמלך נותן` | |
+| qbḥ.w (libation, the cool water) | `מי־הצינה` (the Book of the Dead's word; §13.6.1) | |
+| snṯr (incense); nṯr.j (natron); bd (natron, another word) | `קטורת` (translator 1 confirms); `נֶתֶר` (gated) [cognate: loanword – Egyptian nṯr.j > Hebrew `נֶתֶר`, Greek νίτρον]; `בֹּרִית` | Jer 2:22 `כִּי אִם תְּכַבְּסִי בַּנֶּתֶר וְתַרְבִּי לָךְ בֹּרִית` (ירמיהו ב:כב) holds both words of the ritual's two natrons |
+| mꜣꜥ-ḫrw | `אֲמִתִּי־הַקּוֹל` | §4.1 (`verify` FORMULA) |
+| nb-r-ḏr | `אֲדוֹן הַכֹּל` | §3.1 |
+| nsw / nsw-bjtj | `מֶלֶךְ` / `מֶלֶךְ־הַדָּרוֹם־וְהַצָּפוֹן` (HC, WE) | §13.6.1 |
+| ḥqꜣ "rule"; sḫm "have power" | `משל`; `שלט בְּ־` | §12.6.2 |
+| ḫftj; sbj | `אויב`; `מרד` / `מורד` | §4.4 |
+| ḏ.t / nḥḥ | `עַד` / `נֶצַח` | `עוֹלָם` never |
+| wnm "eat" (the Cannibal Hymn); ḥkꜣ.w | `אכל`; `קסמים` (the god Ḥkꜣ `חֶקָא`) | |
+| ḥfꜣw and the serpent words | `נחש` (gated) | Gen 3 [divergence] only in the apparatus |
+
+### 13.4 Formulas (checked by `verify` in the UN keys)
+1. `ḏd-mdw` = `דְּבָרִים לֵאמֹר:` (§6.5); `ḏd-mdw zp 4` = `דברים לאמר, ארבע פעמים:` (project 2's PT527 86); `zp 2` =
+   `(פעמיים)`.
+2. `hꜣ NN` = `הוֹי` NN (project 2; `הוי אונאס`) – FORMULA in `verify`.
+3. The offering formula `Wsjr NN m n=k X` = `אוֹסִירִיס אונאס, קח לך X` (fem. `קחי לך`) – FORMULA in `verify`; `jꜥb n=k
+   s(j) r rʾ=k` "join it to your mouth" – the first translator fixes the rest of the offering ritual's frame and lists it
+   (the later copies copy it).
+4. `mꜣꜥ-ḫrw`, `smꜣꜥ-ḫrw`, `ẖr-nṯr` as §12.4 (FORMULAS scoped to the UN keys too).
+5. `n sḏm.t=f` = `טֶרֶם` (§6.5; PT 219's and the "not yet" lines).
+6. PT 219's litany (`ꜥnḫ=f ꜥnḫ NN pn, n mt=f n mt NN pn` "as he lives, this Unas lives …", addressed to god after god):
+   fixed by its first copy (219.1–219.6) and copied byte for byte, changing only the god and his place.
+
+### 13.5 Reserved and gated (added to §5; `UNAS` in `egypt_tools.py`)
+The tale gates (§11.4, `TALES`) apply to the UN keys. Added: `סֻלָּם` only for mꜣq.t (Gen 28:12); `שָׂרָף` never (Num
+21:6–8, Isa 6:2, 14:29, 30:6: the serpent spells render each serpent word by its own sense); `מַלְאָךְ` never (wpw.tj =
+`שָׁלִיחַ`). **Look for** (the brief says "look for", never "translate as"): the ladder and the ascent to the sky (PT
+304–306, 310: Gen 28:12; Elijah 2 Kgs 2:11); the king among the stars (Isa 14:13 "I will ascend above the stars of God" –
+a [divergence]: the Egyptian king succeeds); the gates of heaven opened (PT 220–222: Ps 24:7–9 `שְׂאוּ שְׁעָרִים`); the
+sun's son / the father's embrace (Ps 2:7); the serpent spells (Gen 3:14–15 "dust", the heel; their possible Semitic
+words: Steiner 2011, a note); the Cannibal Hymn (PT 273–274: no biblical parallel – say so, and explain it on its own
+terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:11); the offering ritual's lists (Lev
+1–7: [divergence] – food for the dead king, not for a god); Nun and "not yet" (Gen 1:2, 2:5).
+
+### 13.6 Proposals merged (filled by the coordinator after each translator)
+#### 13.6.1 UN3 (PT 204–218), translator 1, merged 2026-11-13 (binding for UN1–UN9; full list in `10-…/project.md`, "UN3", Proposals)
+1. **Address:** `hꜣ Wnjs` `הוֹי אונאס`; `Wnjs pn` `אונאס זה`; `j` `הוֹ`; the emphatic `r=f` / `jr=k` / `jr=ṯn` `אפוא`; mn "So-and-so" `פלוני`.
+2. **Refrains (copied byte for byte):** PT 217 `אָתוּם, בא אליך אונאס זה, אָח בלתי־כלה, …`; `בָּא אפוא אונאס זה, אָח בלתי־כלה:`
+   (the verb vocalized in all copies); `X, לכו, הודיעו לאֵלֵי Y ולאָחִים שלהם:`; `אשר יחפוץ שיחיה – יחיה הוא; …`; 213.1
+   `הוֹי אונאס, לא הלכת מת – הלכת חי!`.
+3. **The offering vocabulary (UN1–UN2 follow it):** tʾ `לחם`, ḥnq.t `שֵׁכָר`, jt `שעורה`, bd.t `כוסמת`, jrp `יין`, (j)ḫ.t `מנה`,
+   jš.tt `ארוחה`, ꜥꜣb.t `מנחה`, ḥtp.t `קורבנות`, ḏfꜣw `מזון`, qbḥ `מי־הצינה`, wdpw `מֶלְצַר`, sšm `טבח`; the rubric as a list
+   line (`שוק עם עוגת־סָאשֶׁרֶת! ארבעה חופני מים!`); bw.t `תועבה`, bwi̯ `תיעב`, ḥs `צואה`, wzš.t `שתן`, twri̯ `נִזָּר מ־`.
+4. **Terms:** bꜣ (verb) `היה לבָּא` beside ꜣḫ `היה לאָח`; j:ḫm-sk `בלתי־כלה` / `הבלתי־כלים`; wpw.t `שליחויות` (`שליח` = wpwtj);
+   jnw `צירים`; ḥwwtj `רצים`; jp (hearts) `פקד`; ṯnj `ייחד` (`הבדיל` never); mḫnt `קלסתר`; zꜣ.tj Jtm `התאומים של אָתוּם`;
+   nsw-bjtj `מֶלֶךְ־הַדָּרוֹם־וְהַצָּפוֹן`; ḫwrr transliterated `?`. Mut `מוּת` ★ (unvocalized "die"). ~25 new names in project.md.
+5. **Open (for the user):** zj and šmj both `הלך`; jꜣq `עלה` / sjꜥ `העלה` (one root, two lemmas).
+#### 13.6.2 UN4 (PT 219–224), translator 2, merged 2026-11-13 (full list in `10-…/project.md`, "UN4")
+1. **PT 219's frame** (byte for byte in every copy; only the god and the kinship word change): `X, בנך הוא זה, אוֹסִירִיס,
+   אשר נתת לו *להחלים* ולחיות:` / `חי הוא – חי אונאס זה; לא מת הוא – לא מת אונאס זה;` / `לא כָּלָה הוא – …` / nhp `*השכים*?`
+   (the Cow's; later pyramids have wḏꜥ); Seth and Thoth passive `אשר ניתן לו …`.
+2. **Terms:** causative rḏi̯ + verb `נתן ל־` + infinitive (`הניח`: `הנחתם` trips the `חתם` gate); ski̯ `כָּלָה` ★ ("bride");
+   the Red Crown `הכתר־האדום`, nsr.t `נֶסֶרֶת`, wr.t-ḥkꜣ.w `גדולת־הקסמים`; ḥtp ḥr `נח על`; ꜥb.w "purity" `זוך` / "impurity"
+   `טומאה`; hj `הֵי`, jh `אִיהּ`; nḏ `הגן` (PT486 / PT600 `שמר`: a split for the lead); bꜣ "leopard skin" `פרוות־נמר`.
+3. **Open (for the user):** wn / wpi̯ both `פתח`; nhp `השכים`?; ꜥb.w `טומאה` vs NU3 `עבֵרה`; ꜥḥꜥ `עמוד` (not `קום`); Ndj `נֶדִי` / NU5 `נֶדוּ`.
+#### 13.6.3 UN5 (PT 226–243, 199, 32, 23, 25, 200, 244–246), translator 3, merged 2026-11-13 (full list in `10-…/project.md`, "UN5")
+1. **The passage's copies of PT 32, 23–24, 25 bind UN1's** (UN1 changes only what its Egyptian changes): `האלה, אוֹסִירִיס,
+   מי־הצינה שלך האלה, הוֹי אונאס, יצאו מאת בנך, יצאו מאת חוֹרוּס.`; `הלך ההולך עם הכָּא שלו; …`. Rubrics: an action =
+   verbal noun + full stop (`נתינת מי־הצינה.`, `ניסוך.`), an item = the bare noun (`קטורת.`).
+2. **The serpents (bind UN8's PT 277, 289, 297–299):** ḥfꜣw `נחש` (the only licensed serpent word); nꜥw / nꜥ.t `המתפתל` /
+   `המתפתלת`; kꜣ "male snake" `הזכר`; ḏ.t "cobra" `המזדקפת`; srq.t `עקרב`; zpꜣ `נַדָּל`; hjw `הִיוּ` ★ (TRAP added);
+   j:ḫr zbn `נְפוֹל! זְחַל!`; šnj "encircle" `הוקף` / "conjure" `הושבע`; tf `ריר`, jšw `רוק`, ṯf `פלוט` (psg `ירק`); ḫm `התנכר`
+   / `לא הכיר`; bdd `בושם` (`ניחוח` avoided); the possibly foreign words transliterated with `?`, one note on Steiner 2011.
+3. **Gate fixed (the coordinator):** the `נשך` "interest" gate now licenses the verb by pzḥ (tla62220).
+4. **Open (for the user):** hjw transliterated; sḏr `שכב` beside nk `שכב עם`; sṯ `ריח` (TB) / MK E134 `בושם`; `מָאפְדֶת` /
+   NU `מַאפְדֶת`.
+#### 13.6.4 UN6 (PT 247–260; the whole of PT 260), translator 4, merged 2026-11-13 (full list in `10-…/project.md`, "UN6")
+1. **Fixed for later copies:** PT 254.7 `אשר ימצא אונאס בדרכו – יאכל הוא אותו לו, *נָא*?.` (the Cannibal Hymn's line:
+   UN7 273-274.45 and UN8 299.5 copy it); PT 260.1 `הוֹ גֶּבּ, שור נוּת! חוֹרוּס הוא אונאס, יורש אביו.` (PT 260 is UN6's
+   whole; UN7 begins at 261.1).
+2. **Terms:** jꜥr.t (uraeus) `פתן` (BD); ꜣḫ.t (uraeus) `הָאָחֶת` ★ ("one"); zššn `שׁוֹשָׁן`, zšzš transliterated, nḫb `ניצן`;
+   wḏꜥ "separate" `הפריד`, wḏꜥ mdw `דן (דין)`; wpi̯ `פלח`; ḏꜣḏꜣ.t `ועד`; mꜣꜥ.tj `שתי האמת`; mtrw `עֵד`; snḏ `יראה`, nrw
+   `אימה`, sdꜣ `רעד`, snhd `הבעית`; bjꜣ `ימת־השמים` (`רקיע` never); pšn `סדק`; ꜣm `להט`; pḥ.wj `אחרית`; Jmn.t nfr.t
+   `המערב־היפה`; `ברַא` "with Re" → `את רַא` (the ברא gate); `האלה` "these" vocalized `הָאֵלֶּה`.
+3. **Ruling (the coordinator):** tfn / tfn.t "orphan" (260.5) = `יָתוֹם` / `יְתוֹמָה` – the natural word; avoiding it would
+   hide an echo (guidelines §6.4): the `יתום` gate now licenses tfn; the UN6 reviewer replaces the draft's `חסר־האב`.
+4. **Open (for the user):** bḏ / pꜣḏ both `כדור`; šꜣs / swꜣ `חלף`; ḥnw.t / ꜥb both `קרן`; `הָאָחֶת` (a coinage); 247.15,
+   252.7 partly unintelligible.
+#### 13.6.5 UN7 (PT 261–276, the Cannibal Hymn), translator 5, merged 2026-11-13 (full list in `10-…/project.md`, "UN7")
+1. **Copied:** 273-274.45 = PT 254.7 (changing only `wr`, `=f`). **For later copies:** UN8 299.5 copies 273-274.45, UN9
+   307.15 copies 270.4; PT 262's litany `אל תתנכר לאונאס, X: הרי יודע אתה אותו – הרי יודע הוא אותך.`
+2. **The hymn:** wnm `אכל`, ꜥm `בלע`, rḫs `שחט`, ḏꜣd `דקר`, mds `קטל`, fsj `בישל`; wḥꜣ.t `קלחת`, ktj.t `כירה`, kꜣp.t `מוקד`;
+   ḥkꜣ `קסם`, ꜣḫ.w "powers" `גבורות` (BD), sjꜣ `הכרה`; smsw `בכיר` (`בכור` never here: no Ex 12:29 echo, [absent] at
+   273-274.20); jḥy `קדר` (kkw `חושך`); jꜥj `נסק` (jꜣq `עלה`); ḏꜣi̯ intransitive `חצה` / transitive `העביר`; Geb's "back"
+   `גַּב` vocalized beside `גֶּבּ`.
+3. **Open (for the user):** mds `קוטל` / BD `עורץ`; mšrw.t `סעודת־ערב` / UN6 ms.wt `ארוחת־ערב`; the ḏꜣi̯ split by valence;
+   jꜥj / sjꜥ two roots; PT 271's unclear lines (Allen only); 273-274.56 fjw "be disgusted" (TLA), not "rejoice".
+#### 13.6.6 UN8 (PT 277–301), translator 6, merged 2026-11-13 (full list in `10-…/project.md`, "UN8")
+1. **Copied:** 277.2, 289.2 = UN5 229.3 (`נְפוֹל! זְחַל!`; 297.5 `נְפוֹל! שכב! זְחַל!`); 299.5 = UN7 273-274.45; 293.7 = UN5
+   237.2; 299.1 = UN5 240.1.
+2. **Collisions settled in the draft:** ṯfj `נוּס`, jfn `סוֹב`, šꜣs (trample) `דרס`, nḥb.t `צוואר`, ḏnj.t `חבית`, šw (shade)
+   `סוכך`; ḫsf `הדף`; Ṯḥnw `צְ׳חֶנוּ` (not `לוב`); PT 301 "in this your name of X" `בשמך זה, "X"`; šnḏ.t `שִׁטָּה` [cognate].
+3. **Gate fixed (the coordinator):** the `חם` gate licenses Ḫm after a hyphen (`Ḫnt(,j)-Ḫm`).
+4. **Kept by sense (the coordinator):** mtw.t "semen" `זרע` / a snake's "venom" `ארס` (298.4) – one lemma, two senses.
+5. **Open (for the user):** nꜣš.wtj (a name that sounds like `נחש`) kept transliterated; the unidentified words of PT 281,
+   284, 285–286 (Steiner 2011 might read some); 300.3–4 the AED's "our brother (?)" against Allen's "these two brothers";
+   Sobek `סֻבֶּךְ` / NU7 `סוֹבֶּךְ` (for the lead).
+#### 13.6.7 UN9 (PT 302–321), translator 7, merged 2026-11-13 (full list in `10-…/project.md`, "UN9")
+1. **The ladder:** mꜣq.t `סֻלָּם` (304.2, 305.1–2, 306.9 `בשמה זה, "סולם"`); ṯꜣz "tie" `קשר` (the ladder is tied); Gen 28:12
+   written out at 305.1. **Copied:** 307.15 = UN7 270.4; 314.2 = UN5 229.3.
+2. **Collisions settled:** `סגריר`, `שליחה`, `מְנַחֶה` ★, `מסכן` (≠ twꜣ `עני`).
+3. **The coordinator's fix (2026-11-13): the composite had dropped every word of an AED record before the first or after
+   the last word the alignment matched** – the opening rubric `ḏ(d)-mdw` of 83 spells (each first line now opens
+   `דְּבָרִים לֵאמֹר:`, applied by script to UN3–UN9, a note in each פירוק) and the tail of 302.24 ("people, Unas flies away
+   from you", now translated). `make_composite.py` extends each occurrence's first and last rows to the record's edges.
+4. **Open (for the user):** sḏr `לן` (UN5 `שכב`); ḥꜣj `עירומות` (NU8 `חשוף`); 311.3 / 311.7 keep both layers of the wall
+   (first person and its correction); 321.1 sfr.t ḥtp.t; ty `ציה?`.
+#### 13.6.8 UN1 (PT 23–116, the offering ritual i–ii), translator 8, merged 2026-11-13 (full list in `10-…/project.md`, "UN1"; binding for UN2)
+1. **The frame:** `m n=k X` `קח לך X`; `jꜥb n=k s(j) r rʾ=k` `קבץ לך אותה אל פיך!`; `ḫwi̯ … sḏm=f` `הגן – פן …`; PT 23–24, 25, 32
+   = UN5's copies (verify: identical but for the Egyptian's own differences). Neith's rows keep the masculine grammar the
+   Egyptian is written in (`קח לך`, `נֵית זה`; the TLA makes them feminine): open for the user.
+2. **The rubrics:** action = verbal noun + full stop (`ניסוך.`, `הרמה.`); item = bare noun + count (`לחם־וּט, אחד.`, `יין,
+   קנקן־גביש שחור, אחד.`, `בורית, גרגר אחד.`, `מים, שני ספלים.`); Allen's cross-reference rows `{אלן} (ראו 39.1)`.
+3. **The items:** bd `בורית`, nṯr.j `נֶתֶר`, ṯꜣ `גרגר`, snṯr `קטורת`; mnw `גביש`, hꜣṯs `קנקן`, ḥnw.t `קערה`, ꜥ `ספל`, ḏwj.w
+   `כד`; ḥnq `ליחה` / ḥnq.t `שֵׁכָר`; ḥtp-nzw `קורבן־המלך`, ḥtp-wsḫ.t `קורבן־החצר`; the seven oils `ריח־החג`, `חֶקֶנוּ`,
+   `סֶפֶצ׳`, `נֶחֶנֶם`, `תְּוָאוֶת`, `שמן־משובח של ארז`, `שמן־משובח של צְ׳חֶנוּ`; mḏ.t `מרקחת`, mrḥ.t `משחה`; sdm `כחל`,
+   msdm.t `פוך`; breads transliterated after `לחם־`.
+4. **For the lead:** NU3 105.3 bd `נתר` against §13.3 / HC / UN1 `בורית`; the mineral ḥtm `קערת־אבן?` (57.3: the `חתם`
+   loanword gate would block `חֶתֶם`).
+#### 13.6.9 UN2 (PT 117–171, the offering ritual iii), translator 9, merged 2026-11-13 (full list in `10-…/project.md`, "UN2")
+1. **Copied from UN1 / UN4:** the frame `קח לך את עין־חוֹרוּס, אשר …!`, `הגן – פן …`, `פתח בה את פיך!`, `השלם את עצמך בליחה
+   היוצאת ממך!`; Neith's rubric `לנֵית זה. הגשה, ארבע פעמים.`; ḥnk.t `הגשה`.
+2. **Items:** ꜣšr.t `צלי`, mjz.t `כָּבֵד`, nnšm `טחול`, ḫpš `כתף`, jwꜥ `עצם־הירך`, spr `צלע`, rʾ `אווז`, zꜣ.t `ברווזה`, mnw.t
+   `יונה`, dꜣb `תאנים`, nbs `שיזף`, ꜥgw.t `קלי`, ḥwn.t (the pupil) `אישון`; ꜥ (measure) `ספל`; wines by their place names.
+3. **For the lead (splits found):** ꜥ tla34360 `ספל` / `זרוע`; ꜥḥ, sḫt both `צד`; jp `פקד` (UN3) / `מנה` (UN4, UN2); mz `קרב` /
+   WE `נגש`; ḏwj.w, ds `כד` / WE `קנקן`; zḫz `עקר` / NU5; spr `צלע` beside UN4's šbtjw `צלעותיך`.

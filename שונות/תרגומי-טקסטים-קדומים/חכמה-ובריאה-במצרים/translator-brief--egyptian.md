@@ -221,3 +221,31 @@ bind every chapter (the denial verbs, the door's parts, the judges as names, pur
   `2-בריאה-במצרים/annotated-MK.rtl.md` (`verify MR` checks it; do not edit MK or the dossier: propose a revision in your
   final message instead).
 - Witnesses: Merikare `data MR --wit` (pMoscow 4658, pCarlsberg VI); the Nu chapters have none in the folder.
+
+## 11. The Pyramid Texts of Unas, the whole pyramid (Round 8 run 1, 2026-11-13)
+**Read `renderings.md` §13 before the first line** (the composite, the keys UN1–UN9, the labels, the witness tags, the
+names, the key terms, the formulas, the "look for" list), then project 2's PT spells (`2-בריאה-במצרים/annotated-PT*.rtl.md`:
+the same language and the first PT renderings), the Book of the Dead's §12 (its funerary vocabulary binds), and the
+sections of the translators before you in `10-טקסטי-הפירמידה-של-אונאס/project.md`.
+- **The language is Old Egyptian** (c. 2350 BCE): archaic forms, the dual, the old pronouns (`ṯw`, `kw`, `sw`; `pj` /
+  `pw`), `jn` + noun clefts, the prospective `sḏm=f` in wishes ("may he …"), the stative of motion ("he has gone").
+  The TLA's morphology is the guide (check it); Allen 2013's line (printed under each row by `data`) is the check:
+  where the AED cut or the TLA's reading differs from Allen's line, say so in the הערות. **Never copy Allen's
+  transliteration** into the file: the backticked line is the AED base (`fill`); for an `A` row it is the reference the
+  tool fills, and the פירוק quotes only the words it parses.
+- **The witness tag** (§13.1): a row whose witness is not Unas's wall (`data` says `WITNESS: …`) opens its `>` line with
+  the tag (`{טטי}`, `{פפי א}`, `{מרנרא}`, `{פפי ב}`, `{נית}`, `{אלן}`), then the translation of that witness as written
+  (Pepi's or Neith's name and gender stay); say in the הערות where Unas's own wall differs (Allen's first variant).
+- **The king speaks and is spoken to**: the spells shift between "you" (the priest to the king), "he / this Unas"
+  (`Wnjs pn` = `אונאס זה`) and "I"; keep each person as written – it is the text's own drama, not an error.
+- **Repetition is the form**: litanies (PT 219, the offering lists, the ferryman spells), refrains, parallel couplets
+  (`X n=k, Y n=k`). Fix the first copy and copy it byte for byte; `data` shows identical / similar lines with their
+  Hebrew. The offering ritual (UN1–UN2) names one offering per spell, with a rubric (the item and its count, `ṯꜣ 1`,
+  `ḥnw.t 2`): render the rubric as a list line (`לחם, אחד`), the same way every time.
+- **Brackets**: Unas's wall is almost intact (0.8% lost); the later copies are less so – follow the base's brackets
+  (§9 above).
+- **הערות on its own terms**: the king's resurrection and ascent, the sun and the circumpolar stars, Osiris and Horus,
+  Seth the murderer, the ferryman, the Field of Reeds, the gods' food, the dangers of the way (serpents, scorpions), the
+  ka and the akh; explain the puns (Egyptian loves them: `jr.t` "eye" ~ `jri̯` "do"; `snṯr` "incense" ~ `nṯr` "god").
+  The serpent spells (PT 226–243) are the oldest spells against snakes, partly in a foreign tongue (Steiner 2011 reads
+  some as Canaanite: a note, with the caution the reading deserves).
