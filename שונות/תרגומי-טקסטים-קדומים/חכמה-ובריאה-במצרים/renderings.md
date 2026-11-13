@@ -1181,3 +1181,15 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
    from you", now translated). `make_composite.py` extends each occurrence's first and last rows to the record's edges.
 4. **Open (for the user):** sḏr `לן` (UN5 `שכב`); ḥꜣj `עירומות` (NU8 `חשוף`); 311.3 / 311.7 keep both layers of the wall
    (first person and its correction); 321.1 sfr.t ḥtp.t; ty `ציה?`.
+#### 13.6.8 UN1 (PT 23–116, the offering ritual i–ii), translator 8, merged 2026-11-13 (full list in `10-…/project.md`, "UN1"; binding for UN2)
+1. **The frame:** `m n=k X` `קח לך X`; `jꜥb n=k s(j) r rʾ=k` `קבץ לך אותה אל פיך!`; `ḫwi̯ … sḏm=f` `הגן – פן …`; PT 23–24, 25, 32
+   = UN5's copies (verify: identical but for the Egyptian's own differences). Neith's rows keep the masculine grammar the
+   Egyptian is written in (`קח לך`, `נֵית זה`; the TLA makes them feminine): open for the user.
+2. **The rubrics:** action = verbal noun + full stop (`ניסוך.`, `הרמה.`); item = bare noun + count (`לחם־וּט, אחד.`, `יין,
+   קנקן־גביש שחור, אחד.`, `בורית, גרגר אחד.`, `מים, שני ספלים.`); Allen's cross-reference rows `{אלן} (ראו 39.1)`.
+3. **The items:** bd `בורית`, nṯr.j `נֶתֶר`, ṯꜣ `גרגר`, snṯr `קטורת`; mnw `גביש`, hꜣṯs `קנקן`, ḥnw.t `קערה`, ꜥ `ספל`, ḏwj.w
+   `כד`; ḥnq `ליחה` / ḥnq.t `שֵׁכָר`; ḥtp-nzw `קורבן־המלך`, ḥtp-wsḫ.t `קורבן־החצר`; the seven oils `ריח־החג`, `חֶקֶנוּ`,
+   `סֶפֶצ׳`, `נֶחֶנֶם`, `תְּוָאוֶת`, `שמן־משובח של ארז`, `שמן־משובח של צְ׳חֶנוּ`; mḏ.t `מרקחת`, mrḥ.t `משחה`; sdm `כחל`,
+   msdm.t `פוך`; breads transliterated after `לחם־`.
+4. **For the lead:** NU3 105.3 bd `נתר` against §13.3 / HC / UN1 `בורית`; the mineral ḥtm `קערת־אבן?` (57.3: the `חתם`
+   loanword gate would block `חֶתֶם`).

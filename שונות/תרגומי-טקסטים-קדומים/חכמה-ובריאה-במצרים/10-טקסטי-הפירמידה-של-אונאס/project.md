@@ -1281,5 +1281,175 @@ in the pyramid's last line he spreads his protection over Re.
   itself oddly.
 - **Check the composite's last row of each record against the AED word count** (302.24 lost half its words).
 
+## UN1 (PT 23–116)
+
+Round 8 run 1, translator 8 (2026-11-13). Files: `annotated-UN1.rtl.md`, `translation--intro-UN1.rtl.md`,
+`translation-UN1.rtl.md` (generated), `translation.rtl.md` (generated).
+
+### Scope
+The burial chamber's **north wall, registers i–ii**: the **offering ritual** (PT 23–116), 217 rows (labels `23-24.2` …
+`116.3`, with the repeated spells `32#2`, `32#3`, `25#2` in wall order). Witnesses: Unas's own wall for 109 rows; Queen
+Neith (`{נית}`) 67 rows; Pepi I (`{פפי א}`) 21 rows (37, 38, 41, 42, 51, 53, 57, 87, 90, 92, 96); Allen's transcription
+(`{אלן}`) 20 rows (PT 39, 40, 44, 52, 86). Preservation: Unas's rows intact; Pepi I's rows heavily restored (37.2–38.3,
+53.2, 87.2, 90.2, 92.2–92.3, 96.2); Allen's 52.3 lost. The text in a sentence: purification (enemies seized, cool water,
+two natrons, incense), the opening of the mouth (the *psš-kf* knife, "divine metal", the breast of Horus and of Isis),
+then item after item – wine, beer, the "fluid" of Osiris, the seven sacred oils, green and black eye-paint, cloth, the
+altar, the royal and court offerings, breads, a meat cut – each handed over as "the Eye of Horus", each with a rubric
+naming the item and its count.
+
+### Sources consulted
+- The base: AED-TEI through `egypt_tools.py data UN1` (TLA lemmas, morphology, German glosses); Allen 2013's lines (a
+  check; for PT 39, 40, 44, 52, 86 the source of the translation, never copied: the פירוק parses Allen's words only).
+- Rank 3: the TLA's German (`tr UN1`), read after drafting each group (23–36, 37–57, 72–96, 108–116). Allen 2005/2015
+  and Faulkner 1969 from memory, in a few words, never quoted.
+- Precedents: `lex` / `grep --all` for every recurring lemma (a batch lookup of all 180 content lemmas against every
+  drafted key: UN3–UN9, PT600, HC, BD/NU, AM, TB, WE, SS, SI).
+- Bible verses printed with `check_bible_quotes.py --show` before quoting: Jer 2:22; Ps 141:2, 133:2, 50:13 (not used),
+  23:5 (not used); Lev 1:9, 2:1, 3:11, 6:9 (not used); Num 6:26, 19:12, 28:2; Ezek 16:9–10, 23:40; 2 Kgs 9:30; Ex 30:25;
+  Isa 6:7; Deut 26:14, 34:7; Job 28:18; 2 Sam 12:20 (not used).
+
+### Decisions
+- **UN5's passage copies bind** (renderings §13.6.3.1): 23-24.2–23-24.5, 23-24.7, 25.2, 25.4–25.6, 32.1–32.6 copied byte
+  for byte; 25.3 adds `הלך אוֹסִירִיס עם הכָּא שלו;` (the Egyptian adds it); 25.7 *ḏi̯.n* = `נתתי` (UN5 *rḏi̯.n*); 25.8
+  carries the scribe-omitted `⟨ḏd-mdw zp 4⟩` (read whole: `דברים לאמר, ארבע פעמים:`, as 25#2.8 writes it); 32.7's rubric
+  (`qbḥ.w bd ṯꜣ 2`) differs from UN5's (`rḏ.t qbḥ.w`) and is rendered as written; 32#2.7 / 32#3.7 = UN5's `נתינת מי־הצינה.`.
+  `verify`: 0 repeated-line differences.
+- **The formula** `m n=k X` = `קח לך X` everywhere (also for `jṯi̯ n=k`, UN5's precedent), Neith's copy included: Neith's
+  rows keep the template's masculine grammar (`=k`, `pn`, `pw`), so `קח לך`, `נֵית זה`, `פיך`; the TLA emends to the
+  feminine ("diese{m}〈r〉 Neith"), we translate as written and say so (intro, 45.2, 81.5). The frame: `אוֹסִירִיס אונאס,
+  קח לך את עין־חוֹרוּס, <relative clause>!`; `jꜥb n=k s(j) r rʾ=k` = `קבץ לך אותה אל פיך!` (87.2, 110.1; *jꜥb* = UN3's
+  `קבץ`); `ḫwi̯ … sḏm=f` = `הגן – פן …` (88.2, 116.1; *ḫwj* = AM's `הגן`).
+- **Rubrics** (renderings §13.6.3.1): action = verbal noun + full stop (`ניסוך.`, `נתינת מי־הצינה.`, `הרמה.`, `הנחה
+  לפניו.`, `הגשה, ארבע פעמים.`); item = the bare noun, then the count: `לחם־וּט, אחד.`; with a vessel `יין, קנקן־גביש שחור,
+  אחד.` / `שֵׁכָר, קערת־גביש שחור, אחת.`; with pellets `בורית, גרגר אחד.` / `בורית של הדרום, חמישה גרגרים, נֶחֶבּ.`;
+  with bowls `מים, שני ספלים.`; the "meal:" heading `סעודה: שֶׁנֶס, אחד.`; `zp 4` inside a rubric `ארבע פעמים` (108.2) or
+  `(ארבע פעמים)` (95.2, as `zp 2` `(פעמיים)`).
+- **The offering items, fixed once (for UN2):** qbḥ.w `מי־הצינה`; bd `בורית` (plene; vocalized `בֹּרִית`; [equivalent] Jer 2:22),
+  the verb bd `בירר` (109.1 `המבררת`: the Hebrew keeps the Egyptian pun, `בֹּרִית` < `ברר`); nṯr.j `נֶתֶר` (gated; the
+  adjective nṯr.j "divine" `אֵלִי`); ṯꜣ "pellet" `גרגר`; snṯr `קטורת`; ḫ.t "fire" `אש`; zmjn `סְמִין` (unidentified); ḥzmn
+  `התחטא` (HC 76 `מחוטא`); psš-kf `פֶּסֶשׁ־כֶּף`; bjꜣ "metal" `מתכת`; mnḏ `שד`; mnw "quartz" `גביש` (not `בדולח`: Gen 2:12);
+  hꜣṯs `קנקן`; ḥnw.t `קערה`; ꜥ "bowl" `ספל`; ḏwj.w `כד`; ꜥrf `צרור`; jrp `יין`; ḥnq.t `שֵׁכָר`; ḥnq "fluid" `ליחה`; ḥḏ.w
+  "onions" `בצלים`; pꜣ.t `עוגה` (UN8); wdn `זבח` (TB, NU10); ḥtp-ḏi̯-nzw `קורבן שהמלך נותן`; ḥtp-nzw `קורבן־המלך`;
+  ḥtp-wsḫ.t `קורבן־החצר`; ḥtp (noun) `קורבן`, ḥtp.t `קורבנות`, ḥtp (verb) `נח` (sḥtp `הֵנִיחַ`, vocalized `יָנִיחַ`);
+  ḏsr.t (table) `שולחן־גֶ׳סֶרֶת`, ḏsr.t (beer) `גֶ׳סֶרֶת`; ḫnms `חֶנֶמֶס`; ḫꜣw.t `מזבח` (WE); šb.w `סעודה` (UN6); jꜥ.w-rʾ
+  `רחיצת־הפה`; the seven oils sṯj-ḥꜣb `ריח־החג`, ḥkn.w `חֶקֶנוּ`, sfṯ `סֶפֶצ׳`, nẖnm `נֶחֶנֶם`, twꜣ.wt `תְּוָאוֶת`, ḥꜣ.tt ꜥš
+  `שמן־משובח של ארז`, ḥꜣ.tt ṯḥnw `שמן־משובח של צְ׳חֶנוּ` (ḥꜣ.tt = UN8's `שמן־משובח`); mḏ.t `מרקחת` (kept apart from
+  mrḥ.t `משחה`, HC 75); sdm `כחל`, msdm.t `פוך` (BD 110), wꜣḏ.w `ירוק`; wnḫ.wj `שתי רצועות־בד`; breads tʾ `לחם`, tʾ-wt
+  `לחם־וּט`, tʾ-rtḥ `לחם־רֶתֶח`, šns `שֶׁנֶס`, ḥṯꜣ `חֶצֶ׳א`, nḥr.w `נֶחֶר`, dp.t `דֶּפֶת`, pzn `פֶּזֶן`; sw.t `נתח־סוּת`, sw.tt
+  `התמורה?`; ḥnk `הגשה`; fꜣj (rubric) `הרמה`, wꜣḥ `הנחה`.
+- **Other terms:** jšš `עטש` (PT600); dp / dp.t `טעם` (SS, SI); zḥ-nṯr `אוהל־האל` (zḥ = UN3's `אוהל`); šms.w-Ḥr.w `מלוויו של
+  חוֹרוּס`; nb.wj `שני האדונים`; twt `שווה`; psš `חילק` (SI); smn `קבע` (UN6); hp "escape" `נמלט`; nḥm `נטל` (UN3); bjꜣ
+  "go away" `סר`; tj "crush" `כתש`; jtḥ `משך` (UN6); šnm `צירף`; twꜣ "support" `תמך`; sfkk `*התייסר*?` (TLA "gelitten?"),
+  ḫmḫ `חִמְחֲמוּ?` (unknown, transliterated), nšbšb `*התענג*?`; snḏm `הנעים`; ḥꜣ.t "forehead" `מצח`; rs `הקיץ` (UN3);
+  ḥtp.w "peace" `שלום` (UN6); ksj `התכופף` (UN6), ks.w `התכופפות`; ḏwj "call" `קרא`; ḏnd `זעם`; sḫt `ניצוד` (AM `צָד`); jꜥj
+  `רחץ` (UN7); šzp `קבל` (UN4); nḥr "resemble" `דמה`; pꜣz "suffer" `סבל`; zḫn `חבק` (HC 84; UN3's jnq is the piel `חיבק`).
+- **Names fixed here:** נֵית ★ (the queen and the goddess); Nḫb (Elkab) `נֶחֶבּ`; Š.t-p.t `שֶׁתְפֶּת`; Tꜣj.t `תָּאיִת`, Tꜣj.tt
+  `תָּאיִתֶת`; Dp `דֶּפּ`; Ḫnt(j)-jmn.tjw `חֶנְתִּי־אִמֶנְתִּיו` (§13.2); the Two Ladies (nb.tj) `שתי הגבירות`; wr-ꜥ
+  `גדול־האפריון`; wḏꜣ.t `הוּגָ׳את` (§4.3).
+- **Allen-only rows (PT 39, 40, 44, 52, 86):** translated from Allen's line (Unas's variant, his name written); the three
+  rows whose Allen entry is only a cross-reference ("see PT 39/51/85": 40.1, 52.1, 86.1) are `{אלן} (ראו 39.1)` etc.;
+  52.2 and 52.4 (unidentified words) transliterated with `?` (`אָחֶ?` vocalized so as not to read as the akh `אָח`).
+- **Rejected:** `נתר` for bd (NU3 105.3 has it: a split for the lead, below); `איפה` "where?" (gated: `היכן`); `חֶתֶם` for
+  the mineral ḥtm (57.3; the `חתם` gate blocks it – `קערת־אבן?`, see Problems); `בדולח` for mnw; `ניחוח` / `ריח ניחוח` for
+  ḥtp (the Lev 1:9 parallel stays in the apparatus); `קודש` for ḏsr.t; `כוחל` (modern) for msdm.t.
+
+### Open decisions for the user
+- **Neith's masculine grammar** kept as written (`קח לך`, `נֵית זה`); the TLA emends to the feminine. Alternative:
+  feminine Hebrew (`קחי לך`, `נֵית זו`) with a note that the template is masculine.
+- **ḥtp "be content" = `נח`** (the corpus rule) makes `ינוח לך רַא`, `נח הוא בגללה` – faithful to the root shared with
+  the offering (ḥtp), but stiff; the alternative is `רָצָה` / `התפייס` for the verb (one lemma, two Hebrew roots).
+- **jšš `עטש`** (PT600's) for Horus and Seth "spitting out" zmjn (34.4–34.5) reads oddly; `ירק` is psg's (UN3). Keep?
+- **mnw "quartz" `גביש`**, hꜣṯs `קנקן`, ḥnw.t `קערה`: the vessel words are conventional; the TLA calls hꜣṯs and ḥnw.t only
+  "a jug / a vessel".
+- **The unidentified words** (zmjn, zrw, šjkw, ꜣḥꜣḥj, kkj, ꜣḥ, sfkk, ḫmḫ, nšbšb): transliterated or italicized with `?`.
+
+### Progress log
+- Drafted 23-24.2–36.7 (39 rows), saved, `fill` + `verify` (0 problems; the UN5 copies identical), then the TLA's German
+  read (36.3 "your natron is the natron of your natron (?)" confirmed the literal rendering; 34.5–34.6 the TLA's division
+  of *twt* noted, the AED cut kept).
+- Drafted 37.2–43.4 (23 rows), 44.1–57.3 (43), 72.2–96.3 (91), 108.1–116.3 (21), each group saved, filled and verified;
+  `tr` read after each (47.2 hp "escaped"; 74.2 sfkk "suffered?"; 77.7 the sḏm.tj=fj form; 85.2 a wish; 113.1 ḥr=k "upon
+  you", not "your face"; 113.3 the count "2" kept against the TLA's "1").
+- Pass (a) fidelity: brackets of the Pepi I rows word by word (38.2 `ḏ(d)-[mdw]` → `[דְּבָרִים] לֵאמֹר:`; 90.1 / 92.1
+  `[ḏ(d]-mdw)` → `דְּבָרִים [לֵאמֹר:]`; 57.2 `עין־[חוֹרוּס]`; 87.1 Osiris unbracketed – body written); every n sḏm=f / n
+  sḏm.n=f by UN3's rule (32.5 past, 56.3 "cannot"); 81.9 witness tag added (verify).
+- Pass (b) consistency: the UN5 copies and the internal repeats (32#2, 32#3, 25#2; 108.2 = 109.2 ≈ 112.2; 88.3 = 111.3;
+  49.3 = 55.4; 47.1 = 75.1 = 78.1 = 84.1 = 91.1) – `verify`: 0 differences; every term grepped (above); the spell-opening
+  `דְּבָרִים לֵאמֹר:` vocalized throughout, the mid-line `דברים לאמר, ארבע פעמים:` plain (UN5's usage).
+- Pass (c) Hebrew: the generated `translation-UN1.rtl.md` read through; 77.7 `וגם כל אשר ישמע את שמו` (jsṯ moved to the
+  head of the clause); 40.3 double punctuation `?.` removed; 44.2 `יָנִיחַ` vocalized ("give rest", not "put down").
+- `build UN1`: 217 lines, 4 footnotes (23-24.2, 32.7, 35.1, 46.2). `check_bible_quotes.py` on the three files: 0
+  problems. `verify UN1 --strict`: 0 problems, 0 repeated-line differences.
+
+### The text on its own terms
+- **The meal as theology** (the whole wall): every item – water, natron, wine, oil, bread – is "the Eye of Horus", the eye
+  Seth tore out and Thoth healed; to eat is to receive the restored eye, and with it wholeness (25.7, 46.3, 79-80.2).
+- **The pun is the rite** (43.3–43.4 ḥḏ / sḥḏ; 49.2 ḥnq / ḥnq.t; 56.3–56.4 bjꜣ "go away" / bjꜣ "metal"; 73.2 ḥnq /
+  ḥkn.w; 74.2 sfkk / sfṯ; 75.2 šnm / nẖnm; 76.2 twꜣ / twꜣ.wt; 78.2 ḥꜣ.t / ḥꜣ.tt; 88.2 tj / tʾ-wt; 89.2 jtḥ / rtḥ; 114.1
+  nḥr / nḥr.w; 116.1 pꜣz / pzn): each spell says what a god did to the eye in a verb that sounds like the item's name; the
+  rubric then names the item – word and object are one. 109.1 survives into Hebrew: `המבררת` ~ `בורית`.
+- **Natron makes divine** (35–36): *nṯr.j* "natron" sounds like *nṯr* "god"; "your natron is Horus's natron … your
+  natron is the natron of your natron" – purification is becoming a god among "your brothers, the gods" (36.4).
+- **Rebirth as a baby** (35.5, 37–42): the mouth cleansed "like the mouth of a milk-calf on the day it is born", the
+  mouth opened with the knife that cut the umbilical cord, then the breast of Horus and of Isis – the first meal is milk.
+- **The god's own fluids** (32.5, 48.2, 49.2, 55.2, 95.2): the libation and the beer are "the fluid that came out of you
+  / out of Osiris" – the dead god is fed with what flowed from his own body, the source of the Nile's fertility.
+- **The two halves of Egypt** (34.8, 35.6, 38.3, 39.4): southern and northern natron, metal, *zrw* – the whole land
+  purifies the king; Horus and Seth together give the purifying substance and are "of one heart" (34.4–34.6).
+- **Talking to things** (77.2–77.7): "Ointment, ointment, where have you been? – On Horus's forehead; I put you on this
+  Unas's forehead", and the oil is asked to make him an akh and give him power over his body.
+- **The dangerous dead** (93.6): the king calls his ka to protect him "from every wrath of the dead" – the hungry dead
+  who would snatch the food.
+- **A script with stage directions** (39.1, 51.1, 81.10, 93.7, 93.5b, 108.2): "he takes it to his arm, to his mouth",
+  "lifting before his face", "placing before him", "words four times … offering four times".
+- **Morning in the temple** (81.2, 110.3): "awake in peace" is the god's morning greeting, and breakfast is called
+  "washing of the mouth".
+- **A queen as Osiris** (Neith's rows): the masculine template is kept for a woman – the dead queen becomes the (male)
+  Osiris.
+
+### Key parallels
+- 32.7, 35.2, 109.1 ↔ Jer 2:22 `כִּי אִם תְּכַבְּסִי בַּנֶּתֶר וְתַרְבִּי לָךְ בֹּרִית` [cognate (`נֶתֶר` < nṯr.j) / equivalent
+  (`בֹּרִית` = bd)]: the ritual's two natrons are Jeremiah's two cleansers – which, in Jeremiah, cannot cleanse guilt.
+- 46.2 ↔ Deut 26:14 `וְלֹא נָתַתִּי מִמֶּנּוּ לְמֵת` [divergence]: food for the dead is the heart of the Egyptian rite and
+  the thing the Israelite tithe-giver swears he did not do; Num 28:2 `לַחְמִי לְאִשַּׁי` [divergence] (the god's bread vs
+  the dead king's).
+- 44.2 ↔ Lev 1:9 `רֵיחַ נִיחוֹחַ` [equivalent]: ḥtp "offering" and ḥtp "be at rest, content" are one word, as `נִיחוֹחַ`
+  is from `נוח` – the offering pacifies; but here the dead king, not a god, is the receiver.
+- 25.9 ↔ Ps 141:2 `תִּכּוֹן תְּפִלָּתִי קְטֹרֶת לְפָנֶיךָ` [equivalent]: incense as worship.
+- 34.7 ↔ Num 19:12 `יִתְחַטָּא` [equivalent]: purification of/from the dead with a special substance.
+- 79-80.2, 79-80.7 ↔ Ezek 23:40 `כָּחַלְתְּ עֵינַיִךְ`, 2 Kgs 9:30 `וַתָּשֶׂם בַּפּוּךְ עֵינֶיהָ` [equivalent]: eye-paint after
+  washing; msdm.t is the source of Greek στίμμι.
+- 81.10 ↔ Ezek 16:9–10 [equivalent]: washing, oil, clothing – the same sequence.
+- 72.2 ↔ Ex 30:25 `רֹקַח מִרְקַחַת` [equivalent]; 77.2 ↔ Ps 133:2 `כַּשֶּׁמֶן הַטּוֹב עַל-הָרֹאשׁ` [equivalent].
+- 34.2 ↔ Isa 6:7 [divergence]: a substance touching the mouth to purify it.
+
+### Lines shared with other texts
+- **UN5 (the passage)**: 23-24.2–.5, .7 = UN5 23-24#2.x; 25.2, 25.4–25.6 = UN5 25#3.x; 25.3 = UN5 25#3.3 + `הלך אוֹסִירִיס
+  עם הכָּא שלו;`; 25.7 = UN5 25#3.7 (ḏi̯.n / rḏi̯.n); 25.8 = UN5 25#3.8 preceded by `דברים לאמר, ארבע פעמים:`; 32.1–32.6 =
+  UN5 32#4.1–.6; 32#2.7 / 32#3.7 = UN5 32#4.7. `verify`: identical where the Egyptian is identical.
+- **Inside UN1**: 32 ×3, 25 ×2 identical; 36.2–36.3 ≈ 35.2–35.4 (without the rubrics); 36.6 ≈ 25.7; 88.3 = 111.3; 89.2
+  ≈ 112.1; 89.3 ≈ 112.3; 49.3 = 55.4; 108.2 = 109.2 ≈ 112.2; 87.2 ≈ 110.1; 47.2 ≈ 54.2.
+- **For UN2** (PT 117–171): the frame `אוֹסִירִיס אונאס, קח לך את עין־חוֹרוּס, …`, `קבץ לך אותה אל פיך!`, the rubric
+  pattern and the item list above; `data` shows UN2 123.1 ≈ 25.7.
+
+### Proposals for the shared renderings
+1. **The offering frame** (for UN2 and the renderings §13.4.3): `Wsjr NN m n=k jr.t-Ḥr.w X` = `אוֹסִירִיס NN, קח לך את
+   עין־חוֹרוּס, X` (relative clause `אשר …`); `jꜥb n=k s(j) r rʾ=k` = `קבץ לך אותה אל פיך!`; `ḫwi̯ … sḏm=f` = `הגן – פן …`;
+   Neith's rows masculine as written (open, above).
+2. **The rubric pattern**: as under Decisions (item, count; vessel; pellets; `סעודה:`; actions as verbal nouns).
+3. **The item list** (UN2 continues it): every item under Decisions; especially bd `בורית` / nṯr.j `נֶתֶר` / ṯꜣ `גרגר`; mnw
+   `גביש`, hꜣṯs `קנקן`, ḥnw.t `קערה`, ꜥ `ספל`, ḏwj.w `כד`; ḥnq `ליחה` / ḥnq.t `שֵׁכָר`; the seven oils; sdm `כחל` / msdm.t
+   `פוך`; the bread names transliterated after `לחם־` when tʾ is written, bare when not.
+4. **Names**: נֵית ★, נֶחֶבּ, שֶׁתְפֶּת, תָּאיִת, תָּאיִתֶת, דֶּפּ, שתי הגבירות, גדול־האפריון.
+5. **For the lead (splits found)**: NU3 105.3 renders bd `נתר` (now `בורית` in HC 76 and here: §13.3); jšš `עטש` (PT600)
+   vs a "spit" verb; ḫwi̯ `הגן` (AM) vs UN4's nḏ `הגן`.
+
+### Lessons for the guidelines
+- **A gate on a loanword also blocks a transliteration that happens to spell it**: the mineral ḥtm (57.3) would be
+  `חֶתֶם`, which the `חתם` (ḫtm "seal") gate blocks; a transliteration licence (by the line's own lemma) would help.
+- **An offering list is best fixed as a table before drafting** (item → Hebrew, vessel → Hebrew, count pattern): the
+  rubrics repeat with small changes (vessel, material, count), and a table keeps them aligned across UN1 and UN2.
+- **Allen rows that are only a cross-reference** ("see PT 39") need a convention: here `{אלן} (ראו 39.1)`.
+
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)
