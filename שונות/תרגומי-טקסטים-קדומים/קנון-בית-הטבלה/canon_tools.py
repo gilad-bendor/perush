@@ -259,7 +259,7 @@ def verify(key, strict=False):
         nw.check_reserved(k, heb_b, lic + ' ' + lic_b, problems, key)
         nw.check_traps(k, heb_b, lic + ' ' + lic_b, problems, key)
         nw.check_formulas(key, k, heb, tr, problems)
-        if len(re.findall(r'[א-ת]+', heb)) > 2 and re.search(r'[֑-ֽֿ-ׇ]', heb) and len(re.findall(r'[֑-ֽֿ-ׇ]', heb)) > 0.6 * len(re.findall(r'[א-ת]', heb)):
+        if len(re.findall(r'[א-ת]+', strip(heb))) > 2 and re.search(r'[֑-ֽֿ-ׇ]', heb) and len(re.findall(r'[֑-ֽֿ-ׇ]', heb)) > 0.6 * len(re.findall(r'[א-ת]', heb)):
             problems.append(f'{k}: the line looks fully vocalized (draft unvocalized, plene): "{heb}"')
     if pending:
         (problems if strict else notes).append(f'{pending} entries not yet drafted')
