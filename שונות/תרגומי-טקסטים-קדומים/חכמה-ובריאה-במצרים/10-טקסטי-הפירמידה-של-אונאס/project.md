@@ -735,5 +735,181 @@ and is vindicated before the Two Truths, going forth with Maat (260).
 - **A Hebrew preposition prefixed to a vocalized name can rebuild a reserved root** (`ב` + `רַא` = ברא): gates on
   prefixed god names.
 
+## UN7 (PT 261–276)
+
+Round 8 run 1, translator 5 (2026-11-13). Files: `annotated-UN7.rtl.md`, `translation--intro-UN7.rtl.md`,
+`translation-UN7.rtl.md` (generated), `translation.rtl.md` (generated).
+
+### Scope
+The antechamber's **south wall** (PT 261–272) and **east gable** (PT 273–276): 198 rows, labels `261.1` … `276.2`
+(PT 264–266 are not on Unas's walls; no rows 262.3, 267.7–267.10, 270.7: Allen's lines the witness lacks). Witnesses:
+Unas's own wall for 178 rows; **PT 267** from Pepi I (`{פפי א}`, 10 rows, damaged – the TLA did not record Unas's
+copy); **PT 271** read from Allen 2013 (`{אלן}`, 10 rows; the backticked line is the tool's reference). The text in a
+sentence: the king rises as a flame on the wind, demands that the gods "not be ignorant of him", crosses on the sky's
+reed-floats, climbs by stairway, incense smoke and wings, is washed and suckled by the goddesses, browbeats the
+ferryman "Face-behind-him", climbs Re's ladder, stands at the gate of Nun – and in the **Cannibal Hymn** (273–274,
+68 lines) the sky darkens while he hunts, cooks and eats the gods to absorb their magic, power and ba; two short spells
+(falcons and baboon; a snake) close the gable.
+
+### Sources consulted
+- The base: AED-TEI through `egypt_tools.py data UN7` (lemmas, morphology, glosses; Allen's line as a check, never
+  copied); PT 271 from Allen's line printed by `data`.
+- Rank 3: the TLA's German (`tr UN7`), read after drafting each group (261–263, 267–268, 269–270, 271–272, 273–276;
+  `tr` has nothing for PT 271). Allen 2005/2015, Faulkner 1969 and Lichtheim *AEL* I only from memory, in a few
+  words, never quoted.
+- Precedents: a scratch lemma→Hebrew index (TLA id → the Hebrew in the פירוק bullets of every drafted Egyptian file),
+  then `lex` and `grep --all` for every new word.
+- Bible verses printed with `check_bible_quotes.py --show` before quoting: Gen 28:12, 49:25 (dropped); Ex 2:3, 12:9,
+  12:29, 19:4; Lev 16:13; Num 23:24; Deut 32:42; Judg 5:20; 1 Sam 2:14; Isa 14:12–13, 18:2, 49:10, 60:16; Ezek
+  24:4, 24:5, 24:10; Joel 2:10; Mic 3:2–3; Ps 19:7, 110:1, 139:8; Eccl 7:1.
+
+### Decisions
+- **Refrains and copies**: PT 254.7 (UN6) copied into 273-274.45 changing only what the Egyptian changes (`wr` added,
+  `=f` for "Unas"): `גדול אשר ימצא הוא בדרכו – יאכל הוא אותו לו, *נָא*?.`; PT 262's litany fixed by 262.1
+  (`אל תתנכר לאונאס, X: הרי יודע אתה אותו – הרי יודע הוא אותך.` / `אל תתנכר לאונאס, X;` / `ייאמר עליך: "…".`);
+  PT 263 `מונחות שתי רפסודות־הקנים של השמים ל־X, שיחצה בהן …`; 269.3–269.6 pairs; 270.6 = 270.8; 270.9 ≈ 270.10;
+  271.8 / 271.9 as a mirror; 273-274.34–37 (`גדוליהם – למנת־הבוקר שלו` …); 273-274.63 ≈ 273-274.65.
+- **The Cannibal Hymn's violence as written** (the brief): wnm `אכל`, ꜥm `בלע`, nsb `לחך`, wšb `ניזון`, rḫs `שחט` (UN4),
+  ḏꜣd `דקר` (new: "stab a sacrificial animal"), mds `קטל` (new here; NU's `עורץ`/`העריץ` were epithets – see Open),
+  fsj `בישל` (SI), spḥ `לכד בלולאה`, qꜣs `אסר`, ḥsb `ריסק`; the kitchen: wḥꜣ.t `קלחת`, ktj.t `כירה`, kꜣp.t `מוקד`, qrr
+  `הסיק` (with `?`), ḫpš `כרע` (UN6); the meals: (j)ḫ.t `מנה` (UN3) + dwꜣ.t `בוקר` / ḫꜣw `לילה`, mšrw.t `סעודת־ערב`
+  (kept apart from ms.wt `ארוחת־ערב`, UN6); the powers: ḥkꜣ `קסם` / `קסמים` (§13.3), ꜣḫ.w `גבורה` / `גבורות` (the
+  Book of the Dead's), bꜣ `בָּא`, šw.t `צל`, sjꜣ `הכרה` (Sia's word), wsr `חוסן` (UN6; pl. `כוחות־החוסן`), sḫm-wr
+  `הכוח־הגדול` (UN6), sḫm `שלט ב־`, sḫm.w `בעלי־השלטון` (NU2).
+- **smsw "eldest" = `בכיר`** (263.7, 273-274.20, .39, .47), never `בכור`: "the day of slaughtering the firstborn" would
+  manufacture an echo of Ex 12:29; recorded as an [absent] row at 273-274.20.
+- **jḥy (stars darken) = `קדר`**: the natural verb (kkw keeps `חושך`); the Joel 2:10 contact is a shared motif and
+  is tagged so.
+- **jꜥj "ascend" = `נסק`** (261.8, 267.14): jꜣq has `עלה` (UN3); sjꜥ(r) stays `העלה` (UN3), so jꜥ / sjꜥ use two roots.
+- **ḏꜣj by valence**: intransitive `חצה` (UN3), transitive "ferry X / pass X to the mouth" `העביר` (269.15, 270.5,
+  270.11, 270.13); one lemma, the Hebrew binyan follows the syntax.
+- **Other terms fixed here**: ḫm (negative imperative) `התנכר` (UN5) / "not know (a name)" `לא הכיר` (273-274.6); rḫ
+  `ידע`; sṯ (particle) `הרי` (also for sk); zḫn.wj `שתי רפסודות־הקנים`; mẖn.t `מעבורת`, mẖntj `מעבורתן`, hm.t
+  `דמי־המעבר` (AM); tꜣ-rd `מעלות` (not the ladder); mꜣq.t `סֻלָּם` (271.6, gated); ꜣpd `עוף`; ḫprr `חיפושית`; jꜥj "wash"
+  `רחץ`; sꜥb `זיכך` (ꜥb `זוך`, UN4); sfḫ `התיר`; sk `ניגב`; sḫpj `הוליך`; mnḫ `הצטיין`; snq `ינק` / `היניק` (one
+  lemma, one root); ꜣṯj `גידל`; nḏr `תפס` (ꜣm `אחז`, ḫfꜥ `לפת`); sjp `הפקיד`; sbq `פיקח`; sꜣꜣ `חכם`; mnḏ `שד`; jrṯ.t
+  `חלב`; sṯj `ריח` (UN5's open TB / MK split); pꜣq `רקיק`; mn.t `ירך` (UN6); srḫ `טענה`; z.t `ברווזה`; ngꜣ `פר`; sṯp
+  `זינק`; ḏnḥ `כנף`; smꜣ "temple" `רקה`; šnj.t `סערת־ברד`; nhj `חס`; mtr `העיד`; pnq `שאב`; sjꜣ (verb) `זיהה`; nhd
+  `זעם`; šps.w `פאר`; zꜣb.wt `*תבונה*?`; ḥmsw.t `חֶמוּסוֹת`; sšm.wt `המובילה`; nṯb `צרב` (SI); ꜥpr `ערוך` (NU); jꜥb
+  `קיבץ`; ḫꜣꜥ wpwt `הטיל שליחויות`; ꜣw.t `מתנה` (NU); mk.t "place" `מעמד`; ꜥšm `תמונת־אל` (NU) + ꜥšm "inspire awe"
+  `נורא`; wdn `זבח` (NU); ꜥ "document" `כתב־סמכות`; sbn `הוכתר`; wꜣḫ `שגשג`; fjw `נגעל?`; sbš `מבחיל`; ḥꜣw `עודף`;
+  jri.w jr.wt `עושי־המעשים`; ḫbs `עידור` (NU); s.t-jb `מקום־חפץ`; mn `קבוע` (NU); wꜣḥ `הניח`; msd.t `לבוש` (`בגד` is
+  ḥbs's, TALES gate); ḫns `דלת־החֶנֶס`; qrqr.t `מאורה`; jmj-rd `הצורר`; tḫtḫ `בלבל`; jtr.t `שורת־ההיכלים`; ḥḏ
+  `היכל`.
+- **Names fixed here** (first occurrence vocalized): Ꜣkr `אָכֶר` (pl. `האָכֶרוּ`, NU); Wnwnjt `וֶנְוֶנִית`; mnwḥ.wt
+  `המֶנְוֶחֶת?`; ḥnbw `החֶנְבּוּ?`; Ḥr.w-Spd `חוֹרוּס־סֹפְּדוּ`; jmj-dwꜣ.t `אשר־בַּדּוּאַת`; rs-wḏꜣ `המקיץ שלם`; ḥtp-wꜥ `הנח
+  לבדו`; qsn `הקשה`; kꜣ-p.t `שור־השמים`; nḫḫ `*המתמיד*?`; Bꜣ-pf `הבָּא־ההוא`; sḥd `הסֶחֶד?`; Ḥr.w-ꜣḫ.tj
+  `חוֹרוּס־שבאופק`; Nḥb-kꜣ.w `נֶחֶבְּכָּאוּ`; mr-n-ḫꜣ `תעלת־הסכין?`; Nbwtj `הנוּבְּתִי`; Š-zꜣb `אגם־התן`, Š-dwꜣ.tj
+  `אגם־הדּוּאַת`; ḥw.t-ꜥꜣ.t `הבית־הגדול`; qbḥw `קְבֶחוּ`; Jpy `אִיפִּי`; Ḥr=f-ḥꜣ=f `פניו־מאחוריו`; Mꜣ-ḥꜣ=f
+  `החוזה־מאחוריו`; smꜣ.t wr.t `הפרה־הפראית הגדולה`; qꜣj.t-n-dmm=s `הרמה־אשר־לא־תינקב`; Jḫmꜥ-wp.wt-jmj-kḥꜣw
+  `תופס־הקדקודים־אשר־ביורה`; ḏsr-tp `קדוש־הראש` (NU); Ḫnsw `חוֹנְסוּ` (NU5); Šzmw `שֶׁסְמוּ`; Mrr=f-jrr=f /
+  msḏḏ=f-n-jrj.n=f `אם־יחפוץ־יעשה, אם־ישנא־לא־יעשה`; Šd.t `שֶׁדֶת`; zkzk `זַכְזַךְ?`.
+- **Rejected**: `בכור` for smsw (Ex 12:29); `חשך` for jḥy (kkw's); `עלה` for jꜥj (jꜣq's); `עורץ` for the verb mds (see
+  Open); `בגד` for msd.t (TALES gate); `סולם` for tꜣ-rd; `ארוחת־ערב` for mšrw.t (ms.wt's); `סעודה` alone (šbw's).
+
+### Open decisions for the user
+- **mds** "slaughter": here `קוטל` (273-274.28, a verb with an object); NU9 / NU10 have `עורץ` / `העריץ` for the same
+  lemma in names and epithets. One Hebrew for the lemma? (Proposal: `קוטל` in the verb, the NU epithets may stay.)
+- **mšrw.t** `סעודת־ערב` vs ms.wt `ארוחת־ערב` (UN6): two Egyptian words for supper, two Hebrew compounds; `סעודה`
+  alone is šbw's (UN6).
+- **ḏꜣj** `חצה` / `העביר` by valence (above) – acceptable, or one Hebrew verb throughout?
+- **jꜥj** `נסק` beside sjꜥ(r) `העלה` (UN3): the causative and its base now have two roots.
+- **PT 271** (Allen only): 271.1, 271.4, 271.5, 271.8–271.9 are partly unintelligible from the transcription alone; the
+  guesses are italic with `?`.
+- **273-274.56** fjw: "be disgusted" (TLA) or "rejoice" (some translators) – kept the TLA's, with `?` in the note.
+- **262.6 / .9 / .12 / .15 / .18** `ḏd jr=k`: the AED's passive `ייאמר עליך` followed; Allen reads a 1st person
+  ("I say of you").
+
+### Progress log
+- Built the lemma→precedent index (scratch), then drafted 261–263 (52 rows), read `tr`, wrote the entries, `fill` +
+  `verify` (0 problems); 267–270 (57 rows, the same; four remembered verse wordings corrected after `--show`, two
+  speculative הקבלה bullets removed); 271–272 (14 rows); 273–276 (75 rows). `verify UN7`: 0 problems after each group.
+- Pass (a) fidelity: brackets of PT 267 checked word by word (`s[qr]` → `[נתקעו]`; restored suffixes and a damaged
+  `⸢ ⸣` not bracketed); every n / n…js / jn-cleft / passive checked; the TLA's double dšr.t / wꜣḏ.t (273-274.53–54)
+  kept as the AED reads it, Allen's single writing noted.
+- Pass (b) consistency: smsw unified to `בכיר` (263.7 draft `הבכורים`); `צִי` vocalized in 267.13; ḏꜣj valence split
+  applied in all six lines; the litany lines of 262 and the 263 formula compared by eye and by `verify` (0
+  repeated-line differences).
+- Pass (c) Hebrew: the generated `translation-UN7.rtl.md` read through; the hymn's catalogue lines kept terse (`גדוליהם –
+  למנת־הבוקר שלו`), the Geb pun noted as a Hebrew accident (`גַּבּוֹ אל גֶּבּ`).
+- `build UN7`: 198 lines, 3 footnotes. `check_bible_quotes.py` on the annotated, intro and translation files: 0
+  problems. `verify UN7 --strict`: 0 problems, 0 repeated-line differences.
+
+### The text on its own terms
+- **The king as fire and wind** (261.1–261.3, 261.9): a flame carried before the wind to the ends of sky and earth,
+  the agent of the storm.
+- **Recognition as a right** (262.1–262.18): god after god is told "do not be ignorant of Unas – you know him, he knows
+  you"; to know and be known is to belong.
+- **Invited, not self-made** (262.20–262.21): "not of himself did Unas come: it is a message that came for him".
+- **The sky as water** (262.22–263.14, 268.14–268.15, 270): reed-floats, ferry, ferry-fee waived, crews of the
+  horizon and of Qebehu; heaven is crossed like the Nile.
+- **Many ways up** (267, 269.9–269.11, 270.11–270.13, 271.6): a stairway, incense smoke, bird's wings, a beetle's
+  descent, the goddesses' thighs, Thoth's wing, Re's ladder – if one is refused, another is taken.
+- **Rebirth as infancy** (268.5, 269.14–269.16): Isis rears, Nephthys suckles, the hippopotamus mother Ipy gives her
+  "white, bright, sweet" milk – and then "he will not hunger, will not thirst, ever" (269.18).
+- **Animals with a voice** (270.9–270.10): no living, no dead – no duck, no bull – has a complaint against Unas before
+  the ferryman.
+- **Leaving the earthly body behind** (267.14, 275.4): far from wife and kilt; the garment laid on the ground.
+- **The hymn's theology of eating** (273-274.5, .14–.15, .23, .33, .52–.59, .63–.65): what is eaten becomes the eater;
+  the king lives "on his fathers", eats magic, swallows power, the gods' hearts, lungs, perception, ba and shadow.
+- **The young outranks the old** (273-274.8–273-274.9, .20, .47): "he begot him – he is stronger than he"; the eldest is
+  slaughtered and the king becomes "elder than the eldest".
+- **A divine kitchen** (273-274.25–273-274.41): lasso-gods, guards, binders, a stabber (Khonsu, "the wanderer", here a
+  butcher), Shesmu of the press as cook; meals by rank (great ones for breakfast, middle for supper, small for night,
+  the old as fuel); cauldrons heated with the elders' thighs.
+- **Crowns as food** (273-274.53–273-274.54): "the Red" is blood and the Red Crown, "the Green" raw meat and the Green
+  (Wadjet) – to eat them is to swallow kingship.
+- **Hidden names, free will** (273-274.6, .19, .61): a name his mother does not know; the god "whose name is hidden";
+  the epithet "If-he-wishes-he-does, if-he-hates-he-does-not".
+- **Two eternities** (273-274.60–273-274.62, .66): nḥḥ (recurring) and ḏ.t (enduring), mirrored in "appearing,
+  appearing; enduring, enduring".
+- **The tomb's protection** (273-274.67–273-274.68, 276): evildoers shall not hack at his "favourite place among the
+  living"; a snake spell guards the passage.
+
+### Key parallels
+- 273-274.1–273-274.2 ↔ Joel 2:10 `לְפָנָיו רָגְזָה אֶרֶץ רָעֲשׁוּ שָׁמָיִם` / `שֶׁמֶשׁ וְיָרֵחַ קָדָרוּ וְכוֹכָבִים אָסְפוּ נָגְהָם` [equivalent]:
+  the sky darkens and the earth quakes before the coming power; Judg 5:20 `הַכּוֹכָבִים מִמְּסִלּוֹתָם נִלְחֲמוּ` [divergence]
+  (stars as a living host – fighting there, trembling here).
+- 273-274.23 [absent]: no biblical parallel to the hymn's core (a king or god eating gods to absorb their power);
+  eating as a metaphor only (Mic 3:3, Deut 32:42).
+- 273-274.32, .51 ↔ Mic 3:3 `וְאֶת עַצְמֹתֵיהֶם פִּצֵּחוּ וּפָרְשׂוּ כַּאֲשֶׁר בַּסִּיר וּכְבָשָׂר בְּתוֹךְ קַלָּחַת` [equivalent image /
+  divergence of use]: the cooking pot and the broken bones as a prophet's metaphor for oppression.
+- 273-274.39, .64 ↔ Ezek 24:4–5, 10 [equivalent]: thigh and shoulder in the pot, bones as fuel beneath it.
+- 273-274.20 ↔ Ex 12:29 [absent]: smsw "eldest" rendered `בכיר`, not `בכור` – no slaying of the firstborn here.
+- 271.6 ↔ Gen 28:12 `סֻלָּם` [equivalent / divergence]: the ladder (*mꜣq.t*) between earth and sky – made by Re, climbed
+  by the king himself; 267.3 the stairway (*tꜣ-rd*) [divergence].
+- 263.15 ↔ Isa 14:12 `הֵילֵל בֶּן שָׁחַר` [divergence]: the morning star as kin of a ruler in the sky – fallen there,
+  family of the rising king here.
+- 269.14 ↔ Isa 60:16 `וְשֹׁד מְלָכִים תִּינָקִי` [equivalent]: nursing at a royal / divine breast; 269.18 ↔ Isa 49:10 (as UN3
+  204.5).
+- 271.10 ↔ Ps 110:1 `שֵׁב לִימִינִי` [equivalent]: the king seated beside the god.
+- 263.1 ↔ Ex 2:3 `תֵּבַת גֹּמֶא`, Isa 18:2 `וּבִכְלֵי גֹמֶא` [divergence]: Nile reed craft – the sun's and the king's here.
+
+### Lines shared with other texts
+- 273-274.45 = UN6 254.7 (copied; only `wr` and `=f` differ – noted in the entry); UN8 299.5 (Pepi II) should copy
+  the same line, with `wr`? as its Egyptian has it.
+- 269.18 ≈ UN3 204.5 (`לא יצמא אונאס …, לא ירעב אונאס …`; the order of 269.18 follows its own Egyptian).
+- 270.4 `בא אונאס אליך,` = UN9 307.15 (`jyi̯.n Wnjs jr=k`; 307.17 ≈): UN9 should copy it.
+- 271.2 is similar to UN1 52.2 (Allen; not yet drafted).
+- Inside UN7: the 262 litany (262.1 / .4 / .7 / .10 / .13 / .16; 262.5 / .8 / .11 / .14 / .17; the `ייאמר עליך`
+  lines); 263.1–263.4; 263.13 ≈ 263.14; 269.3 ≈ 269.4; 269.5 ≈ 269.6; 270.6 ≈ 270.8; 270.9 ≈ 270.10; 271.8 / 271.9;
+  273-274.34 ≈ .36; 273-274.63 ≈ .65.
+
+### Proposals for the shared renderings
+1. **Terms**: smsw / sms `בכיר` (never `בכור`); jꜥj "ascend" `נסק`; ḏꜣj transitive `העביר`; zḫn.wj `שתי
+   רפסודות־הקנים`; mẖntj `מעבורתן`; tꜣ-rd `מעלות`; wḥꜣ.t `קלחת`, ktj.t `כירה`, kꜣp.t `מוקד`; ḏꜣd `דקר`; mds `קטל`;
+   mšrw.t `סעודת־ערב`; ꜣḫ.w "power" `גבורות` confirmed for the PT keys (BD's); ḥkꜣ `קסם`; šps.w `פאר`; srḫ `טענה`;
+   Ḥr=f-ḥꜣ=f `פניו־מאחוריו` (for UN8–UN9's ferryman spells).
+2. **Formula**: the PT 262 litany `אל תתנכר לאונאס, X: הרי יודע אתה אותו – הרי יודע הוא אותך.` and `ייאמר עליך: "…".`
+3. **Names**: as listed under Decisions; Khonsu `חוֹנְסוּ` (NU5), Shesmu `שֶׁסְמוּ`, Ipy `אִיפִּי`, Nehebkau `נֶחֶבְּכָּאוּ`.
+4. **Trap**: `גב` (back, sꜣ) must be vocalized `גַּב` beside Geb `גֶּבּ` (273-274.18).
+
+### Lessons for the guidelines
+- **A rendering can manufacture a biblical echo through a near-synonym**: "the eldest" (smsw) as `בכור` would have put
+  Ex 12:29 into the Cannibal Hymn; `בכיר` keeps the sense and the distance. Check the famous-verse vocabulary of
+  near-synonyms (`בכור` / `בכיר`) before fixing a word.
+- **A remembered maqaf is a remembered verse**: four quotations drafted from memory carried Psalms-style hyphens or
+  an invented clause (a "Lev 16"-like line that is not in the Bible); `--show` before every quotation caught them.
+
 ## Parallels index
 (generated into `../parallels-index.md` by `../build_parallels_index.py` from the הקבלה bullets)

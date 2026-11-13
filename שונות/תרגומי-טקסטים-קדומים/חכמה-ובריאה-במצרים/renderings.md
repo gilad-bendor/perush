@@ -1152,3 +1152,12 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
    hide an echo (guidelines §6.4): the `יתום` gate now licenses tfn; the UN6 reviewer replaces the draft's `חסר־האב`.
 4. **Open (for the user):** bḏ / pꜣḏ both `כדור`; šꜣs / swꜣ `חלף`; ḥnw.t / ꜥb both `קרן`; `הָאָחֶת` (a coinage); 247.15,
    252.7 partly unintelligible.
+#### 13.6.5 UN7 (PT 261–276, the Cannibal Hymn), translator 5, merged 2026-11-13 (full list in `10-…/project.md`, "UN7")
+1. **Copied:** 273-274.45 = PT 254.7 (changing only `wr`, `=f`). **For later copies:** UN8 299.5 copies 273-274.45, UN9
+   307.15 copies 270.4; PT 262's litany `אל תתנכר לאונאס, X: הרי יודע אתה אותו – הרי יודע הוא אותך.`
+2. **The hymn:** wnm `אכל`, ꜥm `בלע`, rḫs `שחט`, ḏꜣd `דקר`, mds `קטל`, fsj `בישל`; wḥꜣ.t `קלחת`, ktj.t `כירה`, kꜣp.t `מוקד`;
+   ḥkꜣ `קסם`, ꜣḫ.w "powers" `גבורות` (BD), sjꜣ `הכרה`; smsw `בכיר` (`בכור` never here: no Ex 12:29 echo, [absent] at
+   273-274.20); jḥy `קדר` (kkw `חושך`); jꜥj `נסק` (jꜣq `עלה`); ḏꜣi̯ intransitive `חצה` / transitive `העביר`; Geb's "back"
+   `גַּב` vocalized beside `גֶּבּ`.
+3. **Open (for the user):** mds `קוטל` / BD `עורץ`; mšrw.t `סעודת־ערב` / UN6 ms.wt `ארוחת־ערב`; the ḏꜣi̯ split by valence;
+   jꜥj / sjꜥ two roots; PT 271's unclear lines (Allen only); 273-274.56 fjw "be disgusted" (TLA), not "rejoice".
