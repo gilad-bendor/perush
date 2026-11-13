@@ -314,6 +314,10 @@ bibliography ids resolve at `/api/bibliography/<id>` (RN262 = Westenholz 1997, R
 - **ORACC AkkLove** (`akklove`, CC0, 2026-10-21): the zip has the texts and lemmas, Wasserman's translations are only in the per-text HTML view (`https://oracc.museum.upenn.edu/akklove/<id>/html`); both need the `tools/certs/` workaround. The project's MB/MA texts (LAOS 4 08, 09, 11, 12, 19, 21) are in the zip; the Isin incantations (LAOS 4 27–34) are not in the export.
 - **The world survey (2026-10-21)** tested about 150 more hosts (Egyptian, Ugaritic, Hittite, Vedic, Avestan, Greek, Chinese, Japanese, Nahuatl, Arabian …): each `curation-surveys/world-survey--*--2026-10-21.md` has them in its §4, and `curated-translation-candidates--world.md` §10 sums them up. Nothing from it is in `sources/` yet.
 
+
+### 4.4z The Old Babylonian school canon: the Decad and the Tetrad (`קנון-בית-הטבלה/`; Round 8 run 2, 2026-11-13)
+- **`ETCSL/<no>--<slug>/`** for twelve compositions – 2.4.2.01 Šulgi A, 2.5.5.1 Lipit-Eštar A, 4.07.2 Inana B, 4.05.1 Enlil A, 4.80.2 the Keš temple hymn, 1.1.4 Enki's Journey to Nibru, 1.3.2 Inana and Ebiḫ, 4.28.1 Nungal A, 2.5.5.2 Lipit-Eštar B, 2.5.3.2 Iddin-Dagan B, 2.5.8.1 Enlil-bāni A, 4.16.1 Nisaba A (CC BY-NC-SA, committed): c- and t-XML from the local OTA 2518 zip (`ETCSL/_bulk/etcsl.zip`), converted with `tools/etcsl2md.py`; base texts (rank 1), 1,520 entries. Enlil-bāni A has range labels (`1-3`, `101-2`, `103-5`, `136-138`); Nisaba A has a second version (the Lagaš stone tablet, labelled `L.`).
+- **`ORACC/epsd2-literary--Q000{395,481,623,619,751,335,339,736,482,448,499,733}--<slug>/`** (CC0, committed): ePSD2 lemma + morph of the twelve, from the local `ORACC/_bulk/epsd2-literary.zip` (`cdl2md.py --morph`; the ORACC server is unreachable from the cloud); aligned with ETCSL by content.
 ## 9. Paid sources
 
 Buying is the user's decision; ask before assuming. Status as of 2026-10-16, ranked by value for the current work:

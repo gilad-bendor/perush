@@ -8,7 +8,7 @@ divine warrior, the god's word), said so in each row. **Key findings** (Round 8 
   side, lover of justice, the poor's protector); the temple hymns ↔ the Zion songs and Ps 24 (who may approach the
   holy house: the Keš hymn's "the man who approaches – does not approach", KH 128–131).
 - Real lexical contacts are few and recorded as [cognate]: `מֵישָׁרִים` ~ *niĝ₂-si-sa₂* through Akk. *mīšarum* (LB 38,
-  Ps 99:4); `נוֹקֵד` ~ *na-gada* (SA; Amos 1:1); the Tigris.
+  Ps 99:4); `נוֹקֵד` ~ *na-gada* (SA 5, EL 94; Amos 1:1); `אִכָּר` ~ *engar* (a loan); `רָחֵל` ~ *u₈*; `אַלּוֹן` ~ *allanum* (EB 148); the names Tigris (`חִדֶּקֶל`), Euphrates, Elam.
 - Phrases that meet the Bible word for word: Inana B 145 "her prayer – she took" ↔ Ps 6:10 `יְהוָה תְּפִלָּתִי יִקָּח`;
   Enlil A 2 "what comes out of his mouth does not change" ↔ Ps 89:35; Lipit-Eštar A 3 "the cedar's young shoot" ↔
   Ezek 17:22; Nisaba "writing the name on the clay of life" (EN) ↔ the book of life (Ps 69:29); the prison's
