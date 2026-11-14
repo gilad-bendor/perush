@@ -414,7 +414,7 @@
 ## EN.59–EN.72: לַאץ מְבָרֶכֶת אֶת הַמֶּלֶךְ – "תֵּן לַמֶּלֶךְ אֶת הַנֶּשֶׁק הֶחָזָק"
 
 ### EN.59
-`d}_La-az_ " ts="šar-ra-tu-um" me="queen">_šar-ra-t_[_u-um_] x_-ka-am_ " ts="ma-li-a-at" me="full, complete, sated">_ma-li-a-at_`
+`{d}_La-az_ _šar-ra-t_[_u-um_] x_-ka-am_ _ma-li-a-at_`
 > לַאץ, המלכ[ה] – … מלאה.
 - **פירוק:** `{d}La-az` – לאץ; `šar-ra-t[u-um]` – *šarratum* "המלכה"; `x-ka-am` – …; `ma-li-a-at` – *maliat* "מלאה" (סטטיב).
 - **תרגומים:** SEAL: "Que[en] Laz was full of ...".

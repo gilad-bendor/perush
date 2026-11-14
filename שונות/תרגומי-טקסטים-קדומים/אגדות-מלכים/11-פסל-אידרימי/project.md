@@ -12,7 +12,7 @@ ATF alone, and **waits for a check against ORACC's lemmatized edition** when the
 ## Progress
 | Part | Lines | Status |
 |---|---|---|
-| ID1 | 1–104 | – |
+| ID1 | 1–104 | drafted, three passes; independently reviewed (2026-11-14) |
 
 ## Independent review (2026-11-14)
 All 104 lines read against the CDLI ATF (no lemmas). **14 `>` lines changed:**

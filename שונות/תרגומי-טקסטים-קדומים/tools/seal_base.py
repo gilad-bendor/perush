@@ -33,6 +33,13 @@ def sect_code(s):
     return None
 
 
+def clean(s):
+    """SEAL HTML attribute fragments that leak through seal2md.py (Erra and Narām-Sîn 59: `" ts="…" me="…">`)."""
+    s = re.sub(r'"\s*ts="[^"]*"\s*me="[^"]*">', ' ', s)
+    s = re.sub(r'(^|\s)d\}', r'\1{d}', s)
+    return re.sub(r'\s+', ' ', s).strip()
+
+
 def norm_label(s):
     return re.sub(r'\s+', '', s.replace('’', "'").replace('ʼ', "'").replace('′', "'"))
 
@@ -61,10 +68,10 @@ def seal(path):
                 sec = sect_code(lab)
                 i += 1
                 continue
-            row = dict(raw=norm_label(lab), sec=sec, tr=t.strip(), lem='')
+            row = dict(raw=norm_label(lab), sec=sec, tr=clean(t), lem='')
             rows.append(row)
             if i + 1 < len(lines) and lines[i + 1].strip().startswith('lemmas:'):
-                row['lem'] = lines[i + 1].strip()[len('lemmas:'):].strip()
+                row['lem'] = clean(lines[i + 1].strip()[len('lemmas:'):])
                 i += 1
             i += 1
             continue

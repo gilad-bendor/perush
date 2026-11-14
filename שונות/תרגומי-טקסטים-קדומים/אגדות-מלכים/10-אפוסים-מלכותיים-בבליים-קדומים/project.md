@@ -12,7 +12,7 @@ takes the three as one group; its broken lines are entries with `[…]`). Base f
 ## Progress
 | Part | Texts | Status |
 |---|---|---|
-| RE1 | ZL, BZ, GU | – |
+| RE1 | ZL, BZ, GU | drafted, three passes; independently reviewed (2026-11-14) |
 
 ## Independent review (2026-11-14)
 Every entry of ZL, BZ, GU read against SEAL's transliteration and lemmas; repeats checked with `pars RE`, lemmas

@@ -19,9 +19,9 @@ restored by `sources_sync.py`). Rank 4: eBL's notes (Annus 2001, Vogelzang 1988,
 ## Progress
 | Part | Lines | Status |
 |---|---|---|
-| AN1 | SB I | – |
-| AN2 | SB II–III | – |
-| AN3 | OB II, OB III, NA | – |
+| AN1 | SB I | drafted, three passes; independently reviewed (2026-11-14) |
+| AN2 | SB II–III | drafted, three passes; independently reviewed (2026-11-14) |
+| AN3 | OB II, OB III, NA | drafted, three passes; independently reviewed (2026-11-14) |
 
 ## Open decisions
 (see the parts' `project--AN<n>.md`)

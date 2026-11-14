@@ -23,8 +23,8 @@ the folded ATF.
 ## Progress
 | Part | Texts | Status |
 |---|---|---|
-| AK1 | CH, FL, LI, ST | – |
-| AK2 | RA, RB, AP, EN | – |
+| AK1 | CH, FL, LI, ST | drafted, three passes; independently reviewed (2026-11-14) |
+| AK2 | RA, RB, AP, EN | drafted, three passes; independently reviewed (2026-11-14) |
 
 ## Independent review (2026-11-14)
 Every entry of the eight files read against the SEAL / CDLI transliteration (fidelity, brackets, lemma slips, line

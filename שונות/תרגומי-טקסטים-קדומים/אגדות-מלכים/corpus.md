@@ -50,6 +50,10 @@ Translate, complete, two legends that the ancient Near East told about its kings
 | 5 | `5-לוגלבנדה-במערת-ההר/` | Lugalbanda in the Mountain Cave (Round 6 run 3, 2026-11-07) | ETCSL 1.8.2.1 (the web page, `tools/etcslhtml2md.py`; ETCSL lemmas); ORACC Q000367 lemma + morph | 509 (1–499 with 232A–B, 325A–B; B1–B7) | `annotated-1.rtl.md` (1–263), `annotated-2.rtl.md` (264–499, B1–B7) |
 | 6 | `6-לוגלבנדה-וציפור-האנזוד/` | Lugalbanda and the Anzud Bird (Round 6 run 3) | ETCSL 1.8.2.2; ORACC Q000368 | 422 (1–417; A–F instead of 350–353) | `annotated-1.rtl.md` (1–202), `annotated-2.rtl.md` (203–417, A–F) |
 | 7 | `7-אנמרכר-ואנסוחגירנה/` | Enmerkar and En-suḫgir-ana (Round 6 run 3) | ETCSL 1.8.2.4 (no ORACC text: the form index) | 295 (1–283 with 52A, 54A–D; B1–B7) | `annotated.rtl.md` |
+| 8 | `8-אפוס-אנזו/` | The Epic of Anzû, all versions (Round 8 run 4, 2026-11-14) | eBL L/1/10 (`../sources/eBL/Anzu-*/`): OB II, OB III, SB I–III, NA (Sultantepe); ed. Heinrich et al., tr. Foster | 694 (`I.b+86`, `OBII.12`, `NA.a+3`) | `annotated-OBII`, `-OBIII`, `-I`, `-II`, `-III`, `-NA` |
+| 9 | `9-אגדות-מלכי-אכד/` | The OB legends of the kings of Akkade: Sargon the Conquering Hero, in Foreign Lands, the Lion; *šar tamḫāri* (EA 359); the Great Revolt against Narām-Sîn A, B; Narām-Sîn and the Lord of Apišal; Erra and Narām-Sîn (Round 8 run 4) | SEAL nodes 1548, 1547, 7525, 1540, 1542, 7255, 1539; CDLI P270858 (`../sources/SEAL/…/base.tsv`, `../sources/CDLI/…/base.tsv`, by `../tools/seal_base.py`) | 532 (`CH.12`, `FL.ii1`, `RA.r1'`, `ST.29'`) | one `annotated-<text>.rtl.md` per text |
+| 10 | `10-אפוסים-מלכותיים-בבליים-קדומים/` | OB royal epics: Zimrī-Lîm, Bazi, Gulkišar (Round 8 run 4) | SEAL nodes 1552, 1551, 1597 | 321 | `annotated-ZL`, `-BZ`, `-GU` |
+| 11 | `11-פסל-אידרימי/` | The statue inscription of Idrimi of Alalaḫ (Round 8 run 4) | CDLI P500443 (ATF only; ORACC's edition unreachable: to be checked against it) | 104 | `annotated-ID.rtl.md` |
 | 3 | `3-אגדת-אתנה/` | Etana (Round 3, run 2, 2026-10-22) | eBL L/1/9 (`../sources/eBL/Etana-*/`): six chapters – OB Morgan, OB Susa, MA Aššur, SB I–III; ed. Földi et al., tr. Foster | 585 (eBL labels with the chapter key: `OBM.7`, `MA.c+3`, `II.142`) | `annotated-OBM.rtl.md`, `-OBS`, `-MA`, `-I`, `-II`, `-III` (one per eBL chapter) |
 
 Rank 3: ETCSL's English and Mittermayer 2009's German (EA); King 1907's English and the few lines of Westenholz 1997
@@ -97,6 +101,14 @@ the sorcerer from Ḫamazu, the cow and the goat that speak, the old woman Saĝb
 suḫgir-ana yields). Renderings §12 (fixed before drafting; §12.6 what each part fixed). One translator per text,
 resumed part by part (LC, LZ in two parts each), one agent at a time; tool keys LC, LZ, ES of `kings_tools.py`.
 
+**Anzû, the Akkade cycle completed, the OB royal epics, Idrimi (projects 8–11, added 2026-11-14, Round 8 run 4):**
+gods and kings at war. Anzû: the bird steals the Tablet of Destinies, god after god refuses, the mother sends her son,
+the warrior wins back the order of the world and receives the names (Enūma eliš's model). The Akkade legends: Sargon's
+speeches before battle and his march beyond the known world, the merchants' plea, the revolt of all the lands against
+Narām-Sîn, his alliance with Erra. The royal epics: Zimrī-Lîm's war in Mari's own idiom, Bazi, Gulkišar. Idrimi: the
+exile's first-person story. Renderings §13; brief `translator-brief--round8.md`. Reading order: AN (SB I–III, then OB
+II–III and NA) → AK (CH, FL, LI, ST; RB, RA, AP, EN) → RE (ZL, BZ, GU) → ID.
+
 ## Tools (in this folder)
 | Script | What |
 |---|---|
@@ -106,7 +118,9 @@ resumed part by part (LC, LZ in two parts each), one agent at a time; tool keys 
 | `kings_tools.py conc EA [out]`; `data EA FROM TO out` | ETCSL ↔ ORACC concordance; a translator's line data (ETCSL, ORACC lemma + morph, ETCSL and Mittermayer at the line). |
 | `kings_tools.py data ET FROM TO out`; `pars ET FROM TO` | Etana: a translator's line data (the eBL block of each line + its related lines in all six versions with the Hebrew already given); the related lines of a range. `verify ET` licenses the reserved words by the eBL lemma (RESERVED_ET); `build ET` prints the eBL label under each version's heading. |
 | `kings_tools.py data LC\|LZ\|ES FROM TO out`; `skel KEY FILE FROM TO`; `pars KEY FROM TO` | The Uruk cycle: ETCSL line, ETCSL's lemmas, ORACC lemma + morph aligned by content (LC, LZ) or each verb's parses from the form index (ES), the near-identical lines of all four poems with their Hebrew; a skeleton; the related lines across the cycle. Gates licensed by the transliteration + ETCSL and ORACC lemmas (RESERVED_CY); FORMULAS_CY. |
-| `build_parallels_index.py` | `parallels-index.md` from the per-file tables. |
+| `kings_tools.py data\|pars\|fill\|verify\|build AN` | Anzû: the Etana / Cuthaean eBL machinery (six chapters, textno 10). |
+| `kings_tools.py data\|pars\|fill\|verify\|build AK\|RE\|ID` | Projects 9–11: base `base.tsv` per text (SEAL transliteration + SEAL lemmas + SEAL's English line, or CDLI ATF), labels `<text>.<label>`; related lines across all twelve texts; gates RESERVED_R8 licensed by SEAL's lemmas or the folded ATF (renderings §13.4). |
+| `build_parallels_index.py` | `parallels-index.md` from the per-file tables (projects 8–11: the parts' `project--<part>.md`). |
 
 ## Status
 | # | Project | Status |
@@ -117,6 +131,10 @@ resumed part by part (LC, LZ in two parts each), one agent at a time; tool keys 
 | 5 | Lugalbanda in the Mountain Cave | **complete** (2026-11-07): 509 entries in two parts, three passes each; `verify LC --strict` OK; `translation.rtl.md` built |
 | 6 | Lugalbanda and the Anzud Bird | **complete** (2026-11-07): 422 entries in two parts; `verify LZ --strict` OK; built |
 | 7 | Enmerkar and En-suḫgir-ana | **complete** (2026-11-07): 295 entries; `verify ES --strict` OK; built |
+| 8 | Anzû | **complete (first draft)** (2026-11-14): 694 entries in three parts (AN1 SB I, AN2 SB II–III, AN3 OB II, OB III, NA), one translator, then an independent review (33 lines); `verify AN --strict` OK; built |
+| 9 | The OB Akkade legends | **complete (first draft)** (2026-11-14): 532 entries (AK1, AK2), independent review (14 lines); `verify AK --strict` OK; built |
+| 10 | The OB royal epics | **complete (first draft)** (2026-11-14): 321 entries (RE1), independent review (4 lines); built |
+| 11 | Idrimi | **complete (first draft) on the CDLI ATF** (2026-11-14): 104 entries (ID1), independent review (14 lines); built; **to be checked against ORACC's edition** |
 | 2 | The Sargon Birth Legend | **complete on King 1907** (2026-10-21): 49 entries, three review passes; `translation.rtl.md` built; **to be checked against Westenholz 1997 and K 7249** (not reachable) |
 
-Print stubs: `../הדפסה/אגדות-מלכים/1-אנמרכר-ואדון-ארטה.rtl.md`, `../הדפסה/אגדות-מלכים/2-אגדת-הולדת-סרגון.rtl.md`, `../הדפסה/אגדות-מלכים/3-אגדת-אתנה.rtl.md`, and one per project 4–7. Hand-off: `handoff--round2-run6.md`.
+Print stubs: one per project 1–11, e.g. `../הדפסה/אגדות-מלכים/1-אנמרכר-ואדון-ארטה.rtl.md`, `../הדפסה/אגדות-מלכים/2-אגדת-הולדת-סרגון.rtl.md`, `../הדפסה/אגדות-מלכים/3-אגדת-אתנה.rtl.md`, and one per project 4–7. Hand-off: `handoff--round2-run6.md`.
